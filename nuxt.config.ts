@@ -1,22 +1,34 @@
-﻿export default defineNuxtConfig({
+export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', '@vueuse/nuxt'],
+
+  modules: ["@nuxtjs/tailwindcss"],
+
   runtimeConfig: {
+    geminiApiKey: process.env.GEMINI_API_KEY,
     anthropicApiKey: process.env.ANTHROPIC_API_KEY,
+
     public: {
       supabaseUrl: process.env.SUPABASE_URL,
-      supabaseKey: process.env.SUPABASE_KEY
-    }
+      supabaseKey: process.env.SUPABASE_KEY,
+      appUrl: process.env.APP_URL || "http://localhost:3000",
+    },
   },
+
   app: {
     head: {
-      title: 'Know Graph Lab - 知識圖工作室',
+      title: "Know Graph Lab - 知識圖工作室",
       meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' }
-      ]
-    }
+        { charset: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        {
+          name: "description",
+          content: "AI-powered academic visualization tool",
+        },
+      ],
+    },
   },
-  css: ['~/assets/css/main.css'],
-  compatibilityDate: '2024-07-24'
-})
+
+  css: ["~/assets/css/main.css"],
+
+  compatibilityDate: "2024-07-24",
+});
