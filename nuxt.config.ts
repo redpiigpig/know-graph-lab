@@ -1,13 +1,10 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: [
-    "@nuxtjs/tailwindcss",
-    "@nuxtjs/supabase", // 新增
-  ],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/supabase"],
 
   supabase: {
-    redirect: false, // 我們自己處理重導向
+    redirect: false,
   },
 
   runtimeConfig: {
@@ -31,6 +28,7 @@ export default defineNuxtConfig({
           content: "AI-powered academic visualization tool",
         },
       ],
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
   },
 
