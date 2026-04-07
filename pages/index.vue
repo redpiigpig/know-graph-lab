@@ -24,11 +24,17 @@
               class="text-gray-600 hover:text-blue-600 transition"
               >GitHub</a
             >
-            <button
+            <NuxtLink
+              to="/login"
               class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
             >
-              開始使用
-            </button>
+              登入
+            </NuxtLink>
+            <NuxtLink
+              to="/guide"
+              class="text-gray-600 hover:text-blue-600 transition"
+              >使用指南</NuxtLink
+            >
           </div>
         </div>
       </div>
@@ -84,15 +90,16 @@
 
           <!-- CTA 按鈕 -->
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              class="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transform hover:scale-105 transition shadow-lg"
+            <NuxtLink
+              to="/signup"
+              class="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transform hover:scale-105 transition shadow-lg text-center"
             >
               立即開始
-            </button>
+            </NuxtLink>
             <a
               href="https://github.com/redpiigpig/know-graph-lab"
               target="_blank"
-              class="px-8 py-4 border-2 border-gray-300 bg-white text-gray-700 font-semibold rounded-lg hover:border-blue-600 hover:text-blue-600 transform hover:scale-105 transition"
+              class="px-8 py-4 border-2 border-gray-300 bg-white text-gray-700 font-semibold rounded-lg hover:border-blue-600 hover:text-blue-600 transform hover:scale-105 transition text-center"
             >
               查看 GitHub
             </a>
@@ -286,8 +293,50 @@
       </div>
     </section>
 
-    <!-- 技術特色 -->
+    <!-- 使用說明區塊 -->
     <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">如何開始使用</h2>
+          <p class="text-xl text-gray-600">
+            只需三個步驟，立即體驗 AI 圖表工具
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4"
+            >
+              1
+            </div>
+            <h3 class="text-xl font-semibold mb-2">註冊帳號</h3>
+            <p class="text-gray-600">完全免費，只需 Email 即可註冊</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4"
+            >
+              2
+            </div>
+            <h3 class="text-xl font-semibold mb-2">設定 API Key</h3>
+            <p class="text-gray-600">使用你自己的 Gemini API Key，永久免費</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4"
+            >
+              3
+            </div>
+            <h3 class="text-xl font-semibold mb-2">開始創作</h3>
+            <p class="text-gray-600">輸入需求，AI 自動生成專業圖表</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技術特色 -->
+    <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2 class="text-4xl font-bold text-gray-900 mb-4">為什麼選擇我們</h2>
@@ -318,13 +367,14 @@
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-4xl font-bold text-white mb-6">準備好開始了嗎？</h2>
         <p class="text-xl text-blue-100 mb-10">
-          免費使用，無需註冊，立即體驗 AI 驅動的圖表工具
+          免費註冊，設定你的 API Key，立即體驗 AI 驅動的圖表工具
         </p>
-        <button
+        <NuxtLink
+          to="/signup"
           class="inline-block px-10 py-4 bg-white text-blue-600 font-bold text-lg rounded-lg hover:bg-gray-100 transform hover:scale-105 transition shadow-2xl"
         >
           開始創作 →
-        </button>
+        </NuxtLink>
       </div>
     </section>
 
@@ -343,7 +393,14 @@
             <h4 class="text-white font-semibold mb-4">連結</h4>
             <ul class="space-y-2">
               <li>
-                <a href="#" class="hover:text-white transition">關於我們</a>
+                <NuxtLink to="/login" class="hover:text-white transition"
+                  >登入</NuxtLink
+                >
+              </li>
+              <li>
+                <NuxtLink to="/signup" class="hover:text-white transition"
+                  >註冊</NuxtLink
+                >
               </li>
               <li>
                 <a href="#features" class="hover:text-white transition"
@@ -360,8 +417,8 @@
             </ul>
           </div>
           <div>
-            <h4 class="text-white font-semibold mb-4">聯絡</h4>
-            <p class="text-gray-400">歡迎提供建議與回饋</p>
+            <h4 class="text-white font-semibold mb-4">關於</h4>
+            <p class="text-gray-400">開源專案，歡迎貢獻與回饋</p>
           </div>
         </div>
         <div
@@ -381,7 +438,7 @@ useHead({
     {
       name: "description",
       content:
-        "專為學術研究設計的智能圖表工具。支援流程圖、心智圖、地圖、譜系圖，整合 AI 自動生成簡報。",
+        "專為學術研究設計的智能圖表工具。支援流程圖、心智圖、地圖、譜系圖，整合 AI 自動生成簡報。完全免費，使用你自己的 API Key。",
     },
   ],
 });

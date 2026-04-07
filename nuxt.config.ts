@@ -1,11 +1,17 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/supabase", // 新增
+  ],
+
+  supabase: {
+    redirect: false, // 我們自己處理重導向
+  },
 
   runtimeConfig: {
-    geminiApiKey: process.env.GEMINI_API_KEY,
-    anthropicApiKey: process.env.ANTHROPIC_API_KEY,
+    encryptionKey: process.env.ENCRYPTION_KEY,
 
     public: {
       supabaseUrl: process.env.SUPABASE_URL,
