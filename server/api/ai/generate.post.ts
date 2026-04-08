@@ -1,6 +1,4 @@
 import { createClient } from "@supabase/supabase-js";
-import { defineEventHandler, readBody, getHeader, createError } from "h3";
-import { selectBestApiKey, logApiUsage } from "../../utils/smart-api-selector";
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig();
