@@ -1,9 +1,19 @@
 import { createClient } from "@supabase/supabase-js";
+import { defineEventHandler, readBody, getHeader, createError } from "h3";
+import { encryptApiKey } from "../../utils/encryption";
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig();
   const body = await readBody(event);
-  const { gemini_key, claude_key } = body;
+  const { id, provider, api_key, nickname, key_type, priority, usage_limit } =
+    body;
+
+  if (!provider || !api_key) {
+    throw createError({
+      statusCode: 400,
+      message: "provider 和 api_key 為必填",
+    });
+  }
 
   // 從 Authorization header 取得 token
   const token = getHeader(event, "authorization")?.replace("Bearer ", "");
@@ -33,21 +43,48 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 401, message: "Invalid token" });
   }
 
-  // 加密 API keys
-  const encryptedGemini = gemini_key ? encryptApiKey(gemini_key) : null;
-  const encryptedClaude = claude_key ? encryptApiKey(claude_key) : null;
+  // 加密 API key
+  const { encrypted, iv } = encryptApiKey(api_key);
 
-  // 儲存到資料庫
-  const { error } = await supabase.from("user_api_keys").upsert({
-    user_id: user.id,
-    encrypted_gemini_key: encryptedGemini?.encrypted,
-    encrypted_claude_key: encryptedClaude?.encrypted,
-    encryption_iv: encryptedGemini?.iv || encryptedClaude?.iv,
-  });
+  if (id) {
+    // 更新現有 key
+    const { error } = await supabase
+      .from("api_keys")
+      .update({
+        provider,
+        encrypted_key: encrypted,
+        encryption_iv: iv,
+        nickname: nickname || null,
+        key_type: key_type || "free",
+        priority: priority ?? 1,
+        usage_limit: usage_limit || null,
+      })
+      .eq("id", id)
+      .eq("user_id", user.id);
 
-  if (error) {
-    throw createError({ statusCode: 500, message: error.message });
+    if (error) {
+      throw createError({ statusCode: 500, message: error.message });
+    }
+  } else {
+    // 新增 key
+    const { error } = await supabase.from("api_keys").insert({
+      user_id: user.id,
+      provider,
+      encrypted_key: encrypted,
+      encryption_iv: iv,
+      nickname: nickname || null,
+      key_type: key_type || "free",
+      priority: priority ?? 1,
+      usage_limit: usage_limit || null,
+      current_usage: 0,
+      is_active: true,
+      is_exhausted: false,
+    });
+
+    if (error) {
+      throw createError({ statusCode: 500, message: error.message });
+    }
   }
 
-  return { success: true, message: "API keys saved successfully" };
+  return { success: true, message: "API key saved successfully" };
 });
