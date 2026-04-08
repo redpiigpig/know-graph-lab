@@ -1,6 +1,4 @@
 import { createClient } from "@supabase/supabase-js";
-import { defineEventHandler, readBody, getHeader, createError } from "h3";
-import { encryptApiKey } from "../../utils/encryption";
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig();
