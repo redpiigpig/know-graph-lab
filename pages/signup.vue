@@ -15,7 +15,9 @@
         </p>
       </div>
 
-      <div class="bg-white rounded-2xl shadow-xl p-8">
+      <div
+        class="bg-white rounded-2xl shadow-xl p-8 max-h-[80vh] overflow-y-auto"
+      >
         <form @submit.prevent="handleSignup" class="space-y-5">
           <!-- Email -->
           <div>
@@ -45,28 +47,33 @@
             />
           </div>
 
-          <!-- 學術領域 -->
+          <!-- 學術領域（複選） -->
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2">
-              學術專業領域
+              學術專業領域 <span class="text-gray-500 text-xs">（可複選）</span>
             </label>
-            <select
-              v-model="formData.academicField"
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+
+            <div
+              class="grid grid-cols-2 gap-2 p-4 border border-gray-300 rounded-lg bg-gray-50 max-h-60 overflow-y-auto"
             >
-              <option value="">請選擇...</option>
-              <option value="computer_science">資訊科學</option>
-              <option value="engineering">工程學</option>
-              <option value="natural_sciences">自然科學</option>
-              <option value="social_sciences">社會科學</option>
-              <option value="humanities">人文學科</option>
-              <option value="medicine">醫學</option>
-              <option value="business">商學</option>
-              <option value="education">教育學</option>
-              <option value="arts">藝術</option>
-              <option value="law">法律</option>
-              <option value="other">其他</option>
-            </select>
+              <label
+                v-for="field in academicFields"
+                :key="field.value"
+                class="flex items-center space-x-2 p-2 hover:bg-white rounded cursor-pointer transition"
+              >
+                <input
+                  type="checkbox"
+                  :value="field.value"
+                  v-model="formData.academicFields"
+                  class="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
+                />
+                <span class="text-sm text-gray-700">{{ field.label }}</span>
+              </label>
+            </div>
+
+            <p class="text-xs text-gray-500 mt-2">
+              已選擇 {{ formData.academicFields.length }} 個領域
+            </p>
           </div>
 
           <!-- 年齡層 -->
@@ -92,14 +99,58 @@
             <label class="block text-sm font-medium text-gray-700 mb-2">
               密碼 <span class="text-red-500">*</span>
             </label>
-            <input
-              v-model="formData.password"
-              type="password"
-              required
-              minlength="6"
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
-              placeholder="至少 6 個字元"
-            />
+            <div class="relative">
+              <input
+                v-model="formData.password"
+                :type="showPassword ? 'text' : 'password'"
+                required
+                minlength="6"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition pr-12"
+                placeholder="至少 6 個字元"
+              />
+              <button
+                type="button"
+                @click="showPassword = !showPassword"
+                class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
+              >
+                <!-- 顯示圖示（眼睛開） -->
+                <svg
+                  v-if="showPassword"
+                  class="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                  />
+                </svg>
+                <!-- 隱藏圖示（眼睛關） -->
+                <svg
+                  v-else
+                  class="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"
+                  />
+                </svg>
+              </button>
+            </div>
             <p class="text-xs text-gray-500 mt-1">密碼必須至少 6 個字元</p>
           </div>
 
@@ -108,13 +159,55 @@
             <label class="block text-sm font-medium text-gray-700 mb-2">
               確認密碼 <span class="text-red-500">*</span>
             </label>
-            <input
-              v-model="formData.confirmPassword"
-              type="password"
-              required
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
-              placeholder="再次輸入密碼"
-            />
+            <div class="relative">
+              <input
+                v-model="formData.confirmPassword"
+                :type="showConfirmPassword ? 'text' : 'password'"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition pr-12"
+                placeholder="再次輸入密碼"
+              />
+              <button
+                type="button"
+                @click="showConfirmPassword = !showConfirmPassword"
+                class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
+              >
+                <svg
+                  v-if="showConfirmPassword"
+                  class="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                  />
+                </svg>
+                <svg
+                  v-else
+                  class="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
 
           <!-- 同意條款 -->
@@ -198,16 +291,53 @@
 </template>
 
 <script setup lang="ts">
+// 學術領域選項
+const academicFields = [
+  { value: "computer_science", label: "資訊科學" },
+  { value: "engineering", label: "工程學" },
+  { value: "natural_sciences", label: "自然科學" },
+  { value: "physics", label: "物理學" },
+  { value: "chemistry", label: "化學" },
+  { value: "biology", label: "生物學" },
+  { value: "mathematics", label: "數學" },
+  { value: "social_sciences", label: "社會科學" },
+  { value: "psychology", label: "心理學" },
+  { value: "sociology", label: "社會學" },
+  { value: "economics", label: "經濟學" },
+  { value: "political_science", label: "政治學" },
+  { value: "humanities", label: "人文學科" },
+  { value: "history", label: "歷史學" },
+  { value: "philosophy", label: "哲學" },
+  { value: "literature", label: "文學" },
+  { value: "linguistics", label: "語言學" },
+  { value: "medicine", label: "醫學" },
+  { value: "nursing", label: "護理學" },
+  { value: "pharmacy", label: "藥學" },
+  { value: "business", label: "商學" },
+  { value: "management", label: "管理學" },
+  { value: "finance", label: "財務金融" },
+  { value: "education", label: "教育學" },
+  { value: "arts", label: "藝術" },
+  { value: "design", label: "設計" },
+  { value: "law", label: "法律" },
+  { value: "architecture", label: "建築" },
+  { value: "agriculture", label: "農業" },
+  { value: "environmental_science", label: "環境科學" },
+  { value: "other", label: "其他" },
+];
+
 const formData = ref({
   email: "",
   displayName: "",
-  academicField: "",
+  academicFields: [] as string[],
   ageRange: "",
   password: "",
   confirmPassword: "",
   agreedToTerms: false,
 });
 
+const showPassword = ref(false);
+const showConfirmPassword = ref(false);
 const loading = ref(false);
 const error = ref("");
 const success = ref("");
@@ -244,19 +374,22 @@ async function handleSignup() {
         email: formData.value.email,
         password: formData.value.password,
         displayName: formData.value.displayName,
-        academicField: formData.value.academicField || null,
+        academicFields:
+          formData.value.academicFields.length > 0
+            ? formData.value.academicFields
+            : null,
         ageRange: formData.value.ageRange || null,
       },
     });
 
     success.value =
-      "註冊成功！請檢查您的 Email 收件匣，點擊驗證連結以啟用帳號。";
+      "註冊成功！我們已發送驗證郵件到你的信箱，請點擊郵件中的連結以啟用帳號。";
 
     // 清空表單
     formData.value = {
       email: "",
       displayName: "",
-      academicField: "",
+      academicFields: [],
       ageRange: "",
       password: "",
       confirmPassword: "",
