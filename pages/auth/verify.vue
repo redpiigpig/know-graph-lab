@@ -37,7 +37,7 @@
           </p>
           <NuxtLink
             to="/login"
-            class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+            class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold"
           >
             前往登入
           </NuxtLink>
@@ -64,13 +64,29 @@
           </div>
           <h2 class="text-2xl font-bold text-gray-900 mb-2">驗證失敗</h2>
           <p class="text-gray-600 mb-6">{{ error }}</p>
-          <NuxtLink
-            to="/signup"
-            class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-          >
-            重新註冊
-          </NuxtLink>
+          <div class="space-y-3">
+            <NuxtLink
+              to="/signup"
+              class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold"
+            >
+              重新註冊
+            </NuxtLink>
+            <br />
+            <NuxtLink to="/login" class="text-sm text-blue-600 hover:underline">
+              已有帳號？直接登入
+            </NuxtLink>
+          </div>
         </div>
+      </div>
+
+      <!-- 返回首頁 -->
+      <div class="text-center mt-6">
+        <NuxtLink
+          to="/"
+          class="text-sm text-gray-600 hover:text-blue-600 transition"
+        >
+          ← 返回首頁
+        </NuxtLink>
       </div>
     </div>
   </div>
@@ -86,7 +102,7 @@ onMounted(async () => {
   const token = route.query.token as string;
 
   if (!token) {
-    error.value = "缺少驗證 token";
+    error.value = "缺少驗證 token，請檢查 Email 中的連結是否完整";
     loading.value = false;
     return;
   }
@@ -99,9 +115,13 @@ onMounted(async () => {
 
     success.value = true;
   } catch (err: any) {
-    error.value = err.data?.message || "驗證失敗，請聯絡客服";
+    error.value = err.data?.message || "驗證失敗，請聯絡客服或重新註冊";
   } finally {
     loading.value = false;
   }
+});
+
+useHead({
+  title: "驗證 Email - Know Graph Lab",
 });
 </script>
