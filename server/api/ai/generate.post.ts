@@ -1,4 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
+import { defineEventHandler, readBody, getHeader, createError } from "h3";
+import { selectBestApiKey, logApiUsage } from "../../utils/smart-api-selector";
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig();
@@ -31,25 +33,22 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 401, message: "Invalid token" });
   }
 
-  // 從資料庫取得加密的 API key
-  const { data: keyData, error: keyError } = await supabase
-    .from("user_api_keys")
-    .select("encrypted_gemini_key, encryption_iv")
-    .eq("user_id", user.id)
-    .single();
+  // 從 api_keys 表智能選擇最佳 Gemini key
+  const result = await selectBestApiKey(
+    user.id,
+    "gemini",
+    config.public.supabaseUrl,
+    config.public.supabaseKey,
+  );
 
-  if (keyError || !keyData?.encrypted_gemini_key) {
+  if (!result) {
     throw createError({
       statusCode: 400,
-      message: "Please set your API key in settings",
+      message: "Please set your Gemini API key in settings",
     });
   }
 
-  // 解密 API key
-  const geminiKey = decryptApiKey(
-    keyData.encrypted_gemini_key,
-    keyData.encryption_iv,
-  );
+  const { key: geminiKey, keyId } = result;
 
   // 呼叫 Gemini API
   const response = await fetch(
@@ -71,15 +70,33 @@ export default defineEventHandler(async (event) => {
     },
   );
 
+  const success = response.ok;
+  let errorMessage: string | null = null;
+  let data: any = null;
+
   if (!response.ok) {
-    const error = await response.json();
-    throw createError({
-      statusCode: response.status,
-      message: error.error?.message || "Gemini API error",
-    });
+    const errData = await response.json();
+    errorMessage = errData.error?.message || "Gemini API error";
+  } else {
+    data = await response.json();
   }
 
-  const data = await response.json();
+  // 記錄使用
+  await logApiUsage(
+    keyId,
+    user.id,
+    "/api/ai/generate",
+    0,
+    success,
+    errorMessage,
+    config.public.supabaseUrl,
+    config.public.supabaseKey,
+  );
+
+  if (!success) {
+    throw createError({ statusCode: 502, message: errorMessage! });
+  }
+
   const content = data.candidates[0].content.parts[0].text;
 
   return {
