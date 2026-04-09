@@ -25,6 +25,14 @@
               >GitHub</a
             >
             <NuxtLink
+              v-if="user"
+              to="/settings"
+              class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+            >
+              進入工作室
+            </NuxtLink>
+            <NuxtLink
+              v-else
               to="/login"
               class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
             >
@@ -91,10 +99,10 @@
           <!-- CTA 按鈕 -->
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <NuxtLink
-              to="/signup"
+              :to="user ? '/settings' : '/signup'"
               class="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transform hover:scale-105 transition shadow-lg text-center"
             >
-              立即開始
+              {{ user ? '進入工作室' : '立即開始' }}
             </NuxtLink>
             <a
               href="https://github.com/redpiigpig/know-graph-lab"
@@ -370,10 +378,10 @@
           免費註冊，設定你的 API Key，立即體驗 AI 驅動的圖表工具
         </p>
         <NuxtLink
-          to="/signup"
+          :to="user ? '/settings' : '/signup'"
           class="inline-block px-10 py-4 bg-white text-blue-600 font-bold text-lg rounded-lg hover:bg-gray-100 transform hover:scale-105 transition shadow-2xl"
         >
-          開始創作 →
+          {{ user ? '進入工作室 →' : '開始創作 →' }}
         </NuxtLink>
       </div>
     </section>
@@ -432,6 +440,8 @@
 </template>
 
 <script setup lang="ts">
+const user = useSupabaseUser();
+
 useHead({
   title: "Know Graph Lab - AI 驅動的知識圖表工具",
   meta: [
