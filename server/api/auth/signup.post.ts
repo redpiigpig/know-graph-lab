@@ -2,9 +2,15 @@ import { createClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
 import crypto from "crypto";
 
-export default defineEventHandler(async (event) => {
+export default defineEventHandler(async (_event) => {
+  throw createError({
+    statusCode: 403,
+    message: "此為私人專案，不開放公開註冊。",
+  });
+
+  // 以下程式碼已停用
   const config = useRuntimeConfig();
-  const body = await readBody(event);
+  const body = await readBody(_event);
 
   const { email, password, displayName, academicFields, ageRange } = body;
 

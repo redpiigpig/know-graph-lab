@@ -99,10 +99,10 @@
           <!-- CTA 按鈕 -->
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <NuxtLink
-              :to="user ? '/settings' : '/signup'"
+              :to="user ? '/excerpts' : '/login'"
               class="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transform hover:scale-105 transition shadow-lg text-center"
             >
-              {{ user ? '進入工作室' : '立即開始' }}
+              {{ user ? '進入書摘庫' : '登入' }}
             </NuxtLink>
             <a
               href="https://github.com/redpiigpig/know-graph-lab"
@@ -378,10 +378,10 @@
           免費註冊，設定你的 API Key，立即體驗 AI 驅動的圖表工具
         </p>
         <NuxtLink
-          :to="user ? '/settings' : '/signup'"
+          :to="user ? '/excerpts' : '/login'"
           class="inline-block px-10 py-4 bg-white text-blue-600 font-bold text-lg rounded-lg hover:bg-gray-100 transform hover:scale-105 transition shadow-2xl"
         >
-          {{ user ? '進入工作室 →' : '開始創作 →' }}
+          {{ user ? '進入書摘庫 →' : '登入 →' }}
         </NuxtLink>
       </div>
     </section>
@@ -406,8 +406,8 @@
                 >
               </li>
               <li>
-                <NuxtLink to="/signup" class="hover:text-white transition"
-                  >註冊</NuxtLink
+                <NuxtLink to="/excerpts" class="hover:text-white transition"
+                  >書摘庫</NuxtLink
                 >
               </li>
               <li>

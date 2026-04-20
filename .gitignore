@@ -1,4 +1,4 @@
-﻿# Nuxt
+# Nuxt
 .nuxt
 .output
 .data
@@ -46,3 +46,6 @@ scripts/raw_data/
 *.tmp
 uploads/
 temp/
+
+# Raw data files (large CSV/Excel, imported via scripts)
+stores/

@@ -32,7 +32,7 @@ export default defineNuxtConfig({
           content: "AI-powered academic visualization tool",
         },
       ],
-      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+      link: [{ rel: "icon", type: "image/jpeg", href: "/logo_image.jpg" }],
     },
   },
 
