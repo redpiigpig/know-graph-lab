@@ -3,7 +3,7 @@ export default defineEventHandler(async (event) => {
   const supabase = getAdminClient();
   const { categoryId } = getQuery(event) as { categoryId?: string };
 
-  // When filtering by category, also include books from child categories
+  // When filtering by a parent category, also include child categories
   let categoryIds: string[] | null = null;
   if (categoryId) {
     const { data: children } = await supabase
@@ -16,7 +16,7 @@ export default defineEventHandler(async (event) => {
 
   let query = supabase
     .from("books")
-    .select("id, title, author, translator, publish_place, publisher, publish_year, edition, category_id, book_categories(id, name, parent_id)")
+    .select("id, title, author, translator, publish_place, publisher, publish_year, edition, category_id")
     .order("author");
 
   if (categoryIds) {

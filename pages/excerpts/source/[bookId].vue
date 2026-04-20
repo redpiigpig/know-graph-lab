@@ -3,85 +3,104 @@
     <!-- 導航欄 -->
     <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <div class="flex items-center space-x-2 text-sm text-gray-500">
+        <div class="flex justify-between items-center h-14">
+          <div class="flex items-center gap-2 text-sm text-gray-500">
             <NuxtLink to="/excerpts" class="hover:text-blue-600 transition">書摘庫</NuxtLink>
             <span>›</span>
-            <NuxtLink to="/excerpts?tab=書摘" class="hover:text-blue-600 transition">圖書館</NuxtLink>
+            <span class="text-gray-400">圖書館</span>
             <span>›</span>
             <span class="font-medium text-gray-900 truncate max-w-xs">{{ book?.title ?? '載入中…' }}</span>
           </div>
-          <button @click="handleLogout" class="text-gray-600 hover:text-red-600 transition text-sm">登出</button>
+          <button @click="handleLogout" class="text-gray-500 hover:text-red-600 transition text-sm">登出</button>
         </div>
       </div>
     </nav>
 
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <!-- 載入中 -->
-      <div v-if="loading" class="space-y-4">
-        <div class="bg-white rounded-2xl border border-gray-200 p-8 animate-pulse">
-          <div class="h-8 bg-gray-200 rounded w-1/2 mb-3"></div>
-          <div class="h-4 bg-gray-200 rounded w-1/3 mb-2"></div>
-          <div class="h-4 bg-gray-200 rounded w-1/4"></div>
-        </div>
+
+      <!-- 載入骨架 -->
+      <div v-if="loading" class="space-y-4 animate-pulse">
+        <div class="bg-white rounded-2xl p-8 h-36"></div>
+        <div class="bg-white rounded-xl p-6 h-24"></div>
+        <div class="bg-white rounded-xl p-6 h-24"></div>
       </div>
 
-      <div v-else-if="book">
-        <!-- 書籍資訊卡 -->
-        <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+      <template v-else-if="book">
+        <!-- ── 書籍資訊卡 ── -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 mb-8 shadow-sm">
           <div class="flex items-start gap-5">
-            <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">📚</div>
+            <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0 select-none">📚</div>
             <div class="flex-1">
-              <h1 class="text-2xl font-bold text-gray-900 mb-1">{{ book.title }}</h1>
-              <p class="text-gray-600 mb-3">{{ book.author }}</p>
-
-              <!-- 書籍詳細資訊（供查詢）-->
-              <div class="flex flex-wrap gap-x-6 gap-y-1 text-sm text-gray-500">
+              <h1 class="text-2xl font-bold text-gray-900 leading-tight">{{ book.title }}</h1>
+              <p class="text-base text-gray-600 mt-0.5 mb-3">{{ book.author }}</p>
+              <div class="flex flex-wrap gap-x-5 gap-y-1 text-sm text-gray-500">
                 <span v-if="book.translator">譯者：{{ book.translator }}</span>
-                <span v-if="book.publisher">出版社：{{ book.publisher }}</span>
                 <span v-if="book.publish_place">出版地：{{ book.publish_place }}</span>
-                <span v-if="book.publish_year">出版年：{{ book.publish_year }}</span>
-                <span v-if="book.edition">版次：{{ book.edition }}</span>
+                <span v-if="book.publisher">出版社：{{ book.publisher }}</span>
+                <span v-if="book.publish_year">{{ book.publish_year }}</span>
+                <span v-if="book.edition">{{ book.edition }}</span>
               </div>
-
-              <div class="mt-4 flex items-center gap-4">
-                <span class="text-sm font-medium text-blue-600">{{ book.excerpts?.length ?? 0 }} 筆摘文</span>
-                <span class="text-sm text-gray-400">·</span>
-                <span class="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full font-medium">書摘</span>
-              </div>
+              <p class="mt-3 text-sm text-blue-600 font-medium">共 {{ book.excerpts?.length ?? 0 }} 筆摘文</p>
             </div>
           </div>
         </div>
 
-        <!-- 摘文列表 -->
-        <h2 class="text-lg font-semibold text-gray-800 mb-4">所有摘文</h2>
-        <div v-if="book.excerpts?.length === 0" class="text-center py-12 text-gray-400">
-          <p>此書尚無摘文</p>
+        <!-- ── 空狀態 ── -->
+        <div v-if="!book.excerpts?.length" class="text-center py-16 text-gray-400">
+          <p class="text-lg">此書尚無摘文</p>
         </div>
-        <div v-else class="space-y-3">
-          <NuxtLink
-            v-for="excerpt in book.excerpts" :key="excerpt.id"
-            :to="`/excerpts/${excerpt.id}`"
-            class="group block bg-white rounded-xl border border-gray-200 p-5 hover:border-blue-300 hover:shadow-md transition-all duration-200"
-          >
-            <div class="flex items-start justify-between">
-              <div class="flex-1 min-w-0">
-                <div class="flex items-center gap-2 mb-1.5 flex-wrap">
-                  <h3 class="font-semibold text-gray-900 group-hover:text-blue-700 transition text-sm">
-                    {{ excerpt.title ?? '（無標題）' }}
-                  </h3>
-                  <span v-if="excerpt.chapter" class="text-xs bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded">{{ excerpt.chapter }}</span>
-                  <span v-if="excerpt.page_number" class="text-xs text-gray-400">p.{{ excerpt.page_number }}</span>
-                </div>
-                <p class="text-sm text-gray-600 line-clamp-2 leading-relaxed">{{ excerpt.content }}</p>
+
+        <!-- ── 按項目分組顯示 ── -->
+        <template v-else>
+          <!-- 項目分組 tabs -->
+          <div class="flex flex-wrap gap-2 mb-6">
+            <button
+              @click="activeProject = null"
+              :class="['px-4 py-1.5 rounded-full text-sm font-medium border transition',
+                !activeProject ? 'bg-gray-900 text-white border-gray-900' : 'bg-white text-gray-600 border-gray-200 hover:border-gray-400']"
+            >全部（{{ book.excerpts.length }}）</button>
+            <button
+              v-for="proj in projectGroups" :key="proj.name"
+              @click="activeProject = proj.name"
+              :class="['px-4 py-1.5 rounded-full text-sm font-medium border transition',
+                activeProject === proj.name ? projStyle(proj.name).active : projStyle(proj.name).idle]"
+            >{{ proj.name }}（{{ proj.items.length }}）</button>
+          </div>
+
+          <!-- 摘文列表 -->
+          <div class="space-y-3">
+            <template v-for="proj in visibleGroups" :key="proj.name">
+              <!-- 分組標題（全部模式才顯示） -->
+              <div v-if="!activeProject" class="flex items-center gap-3 pt-2 pb-1">
+                <span :class="['text-xs font-semibold px-2.5 py-0.5 rounded-full', projStyle(proj.name).badge]">{{ proj.name }}</span>
+                <div class="flex-1 h-px bg-gray-200"></div>
               </div>
-              <svg class="w-4 h-4 text-gray-300 group-hover:text-blue-400 transition flex-shrink-0 ml-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </div>
-          </NuxtLink>
-        </div>
-      </div>
+
+              <NuxtLink
+                v-for="excerpt in proj.items" :key="excerpt.id"
+                :to="`/excerpts/${excerpt.id}`"
+                class="group block bg-white rounded-xl border border-gray-200 p-4 hover:border-blue-300 hover:shadow-md transition-all duration-200"
+              >
+                <div class="flex items-start justify-between gap-3">
+                  <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 mb-1.5 flex-wrap">
+                      <h3 class="font-semibold text-sm text-gray-900 group-hover:text-blue-700 transition leading-snug">
+                        {{ excerpt.title ?? '（無標題）' }}
+                      </h3>
+                      <span v-if="excerpt.chapter" class="text-xs bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded">{{ excerpt.chapter }}</span>
+                      <span v-if="excerpt.page_number" class="text-xs text-gray-400">p.{{ excerpt.page_number }}</span>
+                    </div>
+                    <p class="text-sm text-gray-600 line-clamp-2 leading-relaxed">{{ excerpt.content }}</p>
+                  </div>
+                  <svg class="w-4 h-4 text-gray-300 group-hover:text-blue-400 transition flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </NuxtLink>
+            </template>
+          </div>
+        </template>
+      </template>
 
       <div v-else class="text-center py-20 text-gray-400">找不到此書</div>
     </div>
@@ -96,15 +115,73 @@ const router = useRouter();
 const route = useRoute();
 const bookId = route.params.bookId as string;
 
+type Excerpt = {
+  id: string; title: string | null; content: string;
+  chapter: string | null; page_number: string | null; created_at: string;
+  projects: { id: string; name: string; type: string }[];
+};
 type Book = {
   id: string; title: string; author: string;
   translator?: string; publish_place?: string; publisher?: string;
-  publish_year?: number; edition?: string;
-  excerpts: { id: string; title: string | null; content: string; chapter: string | null; page_number: string | null }[];
+  publish_year?: number; edition?: string; category_id?: string;
+  excerpts: Excerpt[];
 };
 
 const loading = ref(true);
 const book = ref<Book | null>(null);
+const activeProject = ref<string | null>(null);
+
+// Group excerpts by project name
+const projectGroups = computed(() => {
+  if (!book.value?.excerpts) return [];
+  const map = new Map<string, Excerpt[]>();
+
+  for (const ex of book.value.excerpts) {
+    if (ex.projects.length === 0) {
+      const key = "書摘";
+      map.set(key, [...(map.get(key) ?? []), ex]);
+    } else {
+      for (const p of ex.projects) {
+        map.set(p.name, [...(map.get(p.name) ?? []), ex]);
+      }
+    }
+  }
+
+  const order = ["待寫著作", "待寫文章", "書摘"];
+  return [...map.entries()]
+    .sort(([a], [b]) => (order.indexOf(a) ?? 99) - (order.indexOf(b) ?? 99))
+    .map(([name, items]) => ({ name, items }));
+});
+
+const visibleGroups = computed(() => {
+  if (!activeProject.value) return projectGroups.value;
+  return projectGroups.value.filter((g) => g.name === activeProject.value);
+});
+
+function projStyle(name: string) {
+  const styles: Record<string, { active: string; idle: string; badge: string }> = {
+    "待寫著作": {
+      active: "bg-purple-600 text-white border-purple-600",
+      idle: "bg-white text-purple-600 border-purple-200 hover:border-purple-400",
+      badge: "bg-purple-100 text-purple-700",
+    },
+    "待寫文章": {
+      active: "bg-green-600 text-white border-green-600",
+      idle: "bg-white text-green-600 border-green-200 hover:border-green-400",
+      badge: "bg-green-100 text-green-700",
+    },
+    "書摘": {
+      active: "bg-blue-600 text-white border-blue-600",
+      idle: "bg-white text-blue-600 border-blue-200 hover:border-blue-400",
+      badge: "bg-blue-100 text-blue-700",
+    },
+  };
+  return styles[name] ?? {
+    active: "bg-gray-600 text-white border-gray-600",
+    idle: "bg-white text-gray-600 border-gray-200 hover:border-gray-400",
+    badge: "bg-gray-100 text-gray-700",
+  };
+}
 
 async function fetchBook() {
   const { data: { session } } = await supabase.auth.getSession();
@@ -121,5 +198,5 @@ async function handleLogout() {
 }
 
 onMounted(fetchBook);
-useHead({ title: computed(() => book.value ? `${book.value.title} - 書摘` : "書摘") });
+useHead({ title: computed(() => book.value ? `${book.value.title} — 書摘` : "書摘") });
 </script>
