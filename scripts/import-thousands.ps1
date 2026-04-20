@@ -69,7 +69,7 @@ $excel = New-Object -ComObject Excel.Application
 $excel.Visible = $false
 $totalOK = 0; $totalFail = 0
 
-foreach ($chKey in @("ch11","ch12","ch13","ch14","ch15","ch16","ch17","ch18","ch19","ch20")) {
+foreach ($chKey in @("ch21","ch22","ch23","ch24","ch25","ch26","ch27","ch28")) {
   $filePath = "c:\Users\user\Desktop\know-graph-lab\stores\$([char]0x5343)$([char]0x9762)$([char]0x4E0A)$([char]0x5E1D)\$chKey.csv"
   Write-Host "`n=== $chKey ==="
 
@@ -137,6 +137,14 @@ foreach ($chKey in @("ch11","ch12","ch13","ch14","ch15","ch16","ch17","ch18","ch
     "ch18" = "chr(31532)||chr($TEN)||chr(20843)||chr(31456)"
     "ch19" = "chr(31532)||chr($TEN)||chr(20061)||chr(31456)"
     "ch20" = "chr(31532)||chr(20108)||chr($TEN)||chr(31456)"
+    "ch21" = "chr(31532)||chr(20108)||chr($TEN)||chr(19968)||chr(31456)"
+    "ch22" = "chr(31532)||chr(20108)||chr($TEN)||chr(20108)||chr(31456)"
+    "ch23" = "chr(31532)||chr(20108)||chr($TEN)||chr(19977)||chr(31456)"
+    "ch24" = "chr(31532)||chr(20108)||chr($TEN)||chr(22235)||chr(31456)"
+    "ch25" = "chr(31532)||chr(20108)||chr($TEN)||chr(20116)||chr(31456)"
+    "ch26" = "chr(31532)||chr(20108)||chr($TEN)||chr(20845)||chr(31456)"
+    "ch27" = "chr(31532)||chr(20108)||chr($TEN)||chr(19971)||chr(31456)"
+    "ch28" = "chr(31532)||chr(20108)||chr($TEN)||chr(20843)||chr(31456)"
   }
   $chapterChrExpr = $chExprMap[$chKey]
 
