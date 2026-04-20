@@ -82,51 +82,94 @@
 
       <!-- ===== 書摘（圖書館）===== -->
       <div v-else-if="activeTab === '書摘'">
-        <!-- 搜尋 -->
+
+        <!-- 搜尋列 -->
         <div class="relative mb-6">
           <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
-          <input v-model="bookSearch" type="text" placeholder="搜尋書名或作者..."
+          <input v-model="bookSearch" type="text" placeholder="搜尋書名或作者…（搜尋時顯示全部結果）"
             class="w-full pl-12 pr-4 py-3 bg-white border border-gray-200 rounded-xl shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition" />
+          <button v-if="bookSearch" @click="bookSearch = ''" class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">✕</button>
         </div>
 
-        <div v-if="booksLoading" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          <div v-for="i in 8" :key="i" class="bg-white rounded-xl border border-gray-200 p-4 animate-pulse">
-            <div class="h-5 bg-gray-200 rounded w-3/4 mb-2"></div>
-            <div class="h-4 bg-gray-200 rounded w-1/2 mb-3"></div>
-            <div class="h-3 bg-gray-200 rounded w-1/4"></div>
-          </div>
-        </div>
-
-        <div v-else-if="filteredBooks.length === 0" class="text-center py-20 text-gray-400">
-          <svg class="w-16 h-16 mx-auto mb-4 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-          </svg>
-          <p class="text-lg font-medium">找不到符合的書籍</p>
-        </div>
-
-        <div v-else>
-          <p class="text-sm text-gray-500 mb-4">共 {{ filteredBooks.length }} 本書</p>
+        <!-- 搜尋結果模式 -->
+        <template v-if="bookSearch.trim()">
+          <p class="text-sm text-gray-500 mb-4">搜尋「{{ bookSearch }}」：共 {{ filteredBooks.length }} 本</p>
           <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            <NuxtLink
-              v-for="book in filteredBooks" :key="book.id"
-              :to="`/excerpts/source/${book.id}`"
-              class="group bg-white rounded-xl border border-gray-200 p-4 hover:border-blue-300 hover:shadow-md transition-all duration-200"
-            >
-              <div class="flex items-start gap-3">
-                <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0 text-lg">📚</div>
-                <div class="flex-1 min-w-0">
-                  <h3 class="font-semibold text-gray-900 text-sm leading-tight mb-1 group-hover:text-blue-700 transition line-clamp-2">
-                    {{ book.title }}
-                  </h3>
-                  <p class="text-xs text-gray-500 truncate">{{ book.author }}</p>
-                  <p class="text-xs text-blue-600 font-medium mt-1.5">{{ book.excerpt_count }} 筆摘文</p>
-                </div>
-              </div>
+            <NuxtLink v-for="book in filteredBooks" :key="book.id" :to="`/excerpts/source/${book.id}`"
+              class="group bg-white rounded-xl border border-gray-200 p-4 hover:border-blue-300 hover:shadow-md transition-all">
+              <BookCard :book="book" />
             </NuxtLink>
           </div>
-        </div>
+          <p v-if="filteredBooks.length === 0" class="text-center py-12 text-gray-400">找不到符合的書籍</p>
+        </template>
+
+        <!-- 分類瀏覽模式 -->
+        <template v-else>
+          <div v-if="catsLoading" class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-3 mb-6">
+            <div v-for="i in 9" :key="i" class="h-20 bg-white rounded-xl border border-gray-200 animate-pulse"></div>
+          </div>
+
+          <!-- 頂層分類橫向捲動列 -->
+          <div v-else class="flex flex-wrap gap-2 mb-6">
+            <button
+              @click="selectTopCat(null)"
+              :class="[
+                'px-4 py-2 rounded-xl text-sm font-medium border transition',
+                !selectedTopCat ? 'bg-blue-600 text-white border-blue-600 shadow' : 'bg-white text-gray-600 border-gray-200 hover:border-blue-300 hover:text-blue-700'
+              ]"
+            >全部（{{ allBooks.length }}）</button>
+            <button
+              v-for="cat in categoryTree" :key="cat.id"
+              @click="selectTopCat(cat)"
+              :class="[
+                'px-4 py-2 rounded-xl text-sm font-medium border transition',
+                selectedTopCat?.id === cat.id ? 'bg-blue-600 text-white border-blue-600 shadow' : 'bg-white text-gray-600 border-gray-200 hover:border-blue-300 hover:text-blue-700'
+              ]"
+            >
+              {{ cat.name }}
+              <span class="ml-1 text-xs opacity-70">({{ totalBooks(cat) }})</span>
+            </button>
+          </div>
+
+          <!-- 子分類（若有） -->
+          <div v-if="selectedTopCat && selectedTopCat.children.length > 0" class="flex flex-wrap gap-2 mb-6 pl-1 border-l-2 border-blue-200">
+            <button
+              @click="selectedSubCat = null; loadBooks(selectedTopCat?.id)"
+              :class="[
+                'px-3 py-1.5 rounded-lg text-xs font-medium border transition',
+                !selectedSubCat ? 'bg-blue-100 text-blue-700 border-blue-300' : 'bg-white text-gray-500 border-gray-200 hover:border-blue-200'
+              ]"
+            >全部 {{ selectedTopCat.name }}</button>
+            <button
+              v-for="sub in selectedTopCat.children" :key="sub.id"
+              @click="selectSubCat(sub)"
+              :class="[
+                'px-3 py-1.5 rounded-lg text-xs font-medium border transition',
+                selectedSubCat?.id === sub.id ? 'bg-blue-100 text-blue-700 border-blue-300' : 'bg-white text-gray-500 border-gray-200 hover:border-blue-200'
+              ]"
+            >{{ sub.name }} ({{ sub.book_count }})</button>
+          </div>
+
+          <!-- 書籍格 -->
+          <div v-if="booksLoading" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <div v-for="i in 8" :key="i" class="bg-white rounded-xl border border-gray-200 p-4 animate-pulse h-24"></div>
+          </div>
+          <template v-else>
+            <p class="text-sm text-gray-500 mb-4">
+              {{ selectedSubCat ? selectedSubCat.name : (selectedTopCat ? selectedTopCat.name : '全部') }}
+              ・共 {{ displayedBooks.length }} 本
+            </p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              <NuxtLink v-for="book in displayedBooks" :key="book.id" :to="`/excerpts/source/${book.id}`"
+                class="group bg-white rounded-xl border border-gray-200 p-4 hover:border-blue-300 hover:shadow-md transition-all">
+                <BookCard :book="book" />
+              </NuxtLink>
+            </div>
+            <p v-if="displayedBooks.length === 0" class="text-center py-12 text-gray-400">此分類尚無書籍</p>
+          </template>
+        </template>
       </div>
 
       <!-- ===== 待寫文章 ===== -->
@@ -147,6 +190,13 @@ definePageMeta({ middleware: "auth" });
 const supabase = useSupabaseClient();
 const router = useRouter();
 
+// ── Auth helper ──
+async function getToken() {
+  const { data: { session } } = await supabase.auth.getSession();
+  if (!session) { router.push("/login"); return null; }
+  return session.access_token;
+}
+
 const activeTab = ref("待寫著作");
 const tabs = [
   { key: "待寫著作", label: "📖 待寫著作" },
@@ -160,18 +210,23 @@ const writingOverview = ref<{ title: string; total: number; chapters: { name: st
 
 async function fetchWritingOverview() {
   writingLoading.value = true;
-  const { data: { session } } = await supabase.auth.getSession();
-  if (!session) { router.push("/login"); return; }
+  const token = await getToken(); if (!token) return;
   writingOverview.value = await $fetch("/api/writing/overview", {
-    headers: { Authorization: `Bearer ${session.access_token}` },
+    headers: { Authorization: `Bearer ${token}` },
   }).catch(() => null) as any;
   writingLoading.value = false;
 }
 
 // ── 書摘圖書館 ──
+interface Category { id: string; name: string; parent_id: string | null; book_count: number; children: Category[] }
+const catsLoading = ref(false);
 const booksLoading = ref(false);
-const allBooks = ref<any[]>([]);
+const categoryTree = ref<Category[]>([]);
+const allBooks = ref<any[]>([]);       // ALL books (for search)
+const displayedBooks = ref<any[]>([]);  // books in selected category
 const bookSearch = ref("");
+const selectedTopCat = ref<Category | null>(null);
+const selectedSubCat = ref<Category | null>(null);
 
 const filteredBooks = computed(() => {
   if (!bookSearch.value.trim()) return allBooks.value;
@@ -181,20 +236,54 @@ const filteredBooks = computed(() => {
   );
 });
 
-async function fetchBooks() {
+function totalBooks(cat: Category): number {
+  return cat.book_count + cat.children.reduce((s, c) => s + c.book_count, 0);
+}
+
+async function fetchCategories() {
+  catsLoading.value = true;
+  const token = await getToken(); if (!token) return;
+  categoryTree.value = await $fetch<Category[]>("/api/books/categories", {
+    headers: { Authorization: `Bearer ${token}` },
+  }).catch(() => []);
+  catsLoading.value = false;
+}
+
+async function loadBooks(catId?: string) {
   booksLoading.value = true;
-  const { data: { session } } = await supabase.auth.getSession();
-  if (!session) { router.push("/login"); return; }
-  allBooks.value = await $fetch<any[]>("/api/books", {
-    headers: { Authorization: `Bearer ${session.access_token}` },
+  const token = await getToken(); if (!token) return;
+  displayedBooks.value = await $fetch<any[]>("/api/books" + (catId ? `?categoryId=${catId}` : ""), {
+    headers: { Authorization: `Bearer ${token}` },
   }).catch(() => []);
   booksLoading.value = false;
+}
+
+async function fetchAllBooks() {
+  const token = await getToken(); if (!token) return;
+  allBooks.value = await $fetch<any[]>("/api/books", {
+    headers: { Authorization: `Bearer ${token}` },
+  }).catch(() => []);
+}
+
+function selectTopCat(cat: Category | null) {
+  selectedTopCat.value = cat;
+  selectedSubCat.value = null;
+  loadBooks(cat?.id);
+}
+function selectSubCat(sub: Category) {
+  selectedSubCat.value = sub;
+  loadBooks(sub.id);
+}
+
+async function initLibrary() {
+  await Promise.all([fetchCategories(), fetchAllBooks()]);
+  displayedBooks.value = allBooks.value;
 }
 
 // ── Tab 切換載入 ──
 watch(activeTab, async (tab) => {
   if (tab === "待寫著作" && !writingOverview.value) await fetchWritingOverview();
-  if (tab === "書摘" && allBooks.value.length === 0) await fetchBooks();
+  if (tab === "書摘" && allBooks.value.length === 0) await initLibrary();
 });
 
 async function handleLogout() {

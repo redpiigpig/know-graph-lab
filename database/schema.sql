@@ -3,6 +3,15 @@
 -- 在 Supabase SQL Editor 執行此檔案
 -- ============================================================
 
+-- 圖書館分類（樹狀，parent_id = NULL 為頂層）
+create table if not exists book_categories (
+  id uuid primary key default gen_random_uuid(),
+  name text not null unique,
+  parent_id uuid references book_categories(id) on delete cascade,
+  display_order int default 0,
+  created_at timestamptz default now()
+);
+
 -- 書籍
 create table if not exists books (
   id uuid primary key default gen_random_uuid(),
@@ -13,6 +22,7 @@ create table if not exists books (
   publisher text,           -- 出版社，例如「聯經」
   publish_year int,         -- 出版年份，例如 2021
   edition text,             -- 版次，例如「第二版」（選填）
+  category_id uuid references book_categories(id) on delete set null,
   created_at timestamptz default now()
 );
 
