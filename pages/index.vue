@@ -37,13 +37,23 @@
         </NuxtLink>
 
         <!-- 電子圖書館 -->
-        <NuxtLink :to="user ? '/excerpts?tab=書摘' : '/login'" class="tool-card group bg-gradient-to-br from-violet-950 to-violet-900 border border-violet-800 hover:border-violet-500">
+        <NuxtLink :to="user ? '/ebook' : '/login'" class="tool-card group bg-gradient-to-br from-violet-950 to-violet-900 border border-violet-800 hover:border-violet-500">
           <div class="tool-icon bg-violet-800 text-violet-300">🏛️</div>
           <div class="tool-body">
             <h2 class="tool-title">電子圖書館</h2>
             <p class="tool-desc">依分類瀏覽書籍，宗教、歷史、哲學等多領域分類</p>
           </div>
           <span class="tool-badge bg-violet-800 text-violet-300">可用</span>
+        </NuxtLink>
+
+        <!-- AI 研究助理 -->
+        <NuxtLink :to="user ? '/ai' : '/login'" class="tool-card group bg-gradient-to-br from-cyan-950 to-cyan-900 border border-cyan-800 hover:border-cyan-500">
+          <div class="tool-icon bg-cyan-800 text-cyan-300">🤖</div>
+          <div class="tool-body">
+            <h2 class="tool-title">AI 研究助理</h2>
+            <p class="tool-desc">書摘 RAG 問答、拍照 OCR 建摘文，本地 Ollama 驅動</p>
+          </div>
+          <span class="tool-badge bg-cyan-800 text-cyan-300">可用</span>
         </NuxtLink>
 
         <!-- 論文寫作系統 -->
