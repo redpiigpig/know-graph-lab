@@ -12,6 +12,10 @@ export default defineNuxtConfig({
     encryptionKey: process.env.ENCRYPTION_KEY,
     supabaseServiceRoleKey: process.env.SUPABASE_SERVICE_ROLE_KEY,
     resendApiKey: process.env.RESEND_API_KEY,
+    r2AccessKey: process.env.R2_ACCESS_KEY,
+    r2SecretKey: process.env.R2_SECRET_KEY,
+    r2Endpoint: process.env.R2_ENDPOINT,
+    r2Bucket: process.env.R2_BUCKET,
 
     // 公開配置（前端和後端都可用）
     public: {

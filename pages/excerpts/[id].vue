@@ -14,7 +14,10 @@
             <span class="font-medium">返回書摘庫</span>
           </button>
           <div class="flex items-center space-x-4">
-            <NuxtLink to="/excerpts" class="text-gray-600 hover:text-blue-600 transition text-sm">書摘庫</NuxtLink>
+            <NuxtLink to="/excerpts" class="text-gray-600 hover:text-blue-600 transition text-sm flex items-center gap-1.5">
+              <img src="/logo_image.jpg" alt="logo" class="w-5 h-5 rounded object-cover" />
+              <span>書摘庫</span>
+            </NuxtLink>
             <NuxtLink to="/settings" class="text-gray-600 hover:text-blue-600 transition text-sm">API Keys</NuxtLink>
           </div>
         </div>
@@ -95,7 +98,14 @@
           <template v-for="(section, index) in contentSections" :key="index">
             <!-- 頁碼標記區塊 -->
             <div :data-page="pageForSection(index)">
-              <p class="text-gray-700 leading-relaxed whitespace-pre-wrap text-[1.05rem] selection:bg-blue-100">{{ section }}</p>
+              <div class="space-y-1.5">
+                <div
+                  v-for="(line, li) in renderSection(section)"
+                  :key="`${index}-${li}`"
+                  :class="line.className"
+                  v-html="line.html"
+                ></div>
+              </div>
             </div>
 
             <!-- 虛線分頁線（除了最後一頁） -->
@@ -172,6 +182,91 @@ const contentSections = computed(() => {
   if (!excerpt.value?.content) return [];
   return excerpt.value.content.split(/\n---\n|\n-{3,}\n/);
 });
+
+type RenderLine = { html: string; className: string };
+
+function renderSection(section: string): RenderLine[] {
+  return section
+    .split(/\r?\n/)
+    .map((raw) => raw ?? "")
+    .map((line) => renderLine(line));
+}
+
+function renderLine(rawLine: string): RenderLine {
+  const t = rawLine.trim();
+  if (!t) return { html: "&nbsp;", className: "text-gray-700 leading-relaxed min-h-[1.2em]" };
+
+  // Quote block: > 引用文字
+  if (/^>\s+/.test(t)) {
+    const body = t.replace(/^>\s+/, "");
+    return {
+      html: formatInline(body),
+      className: "text-gray-700 italic leading-relaxed text-[1.03rem] border-l-4 border-gray-300 pl-3 py-1 bg-gray-50 rounded-r",
+    };
+  }
+
+  // Bullet list
+  if (/^[-*•]\s+/.test(t)) {
+    const body = t.replace(/^[-*•]\s+/, "");
+    return {
+      html: `• ${formatInline(body)}`,
+      className: "text-gray-700 leading-relaxed text-[1.05rem] pl-4",
+    };
+  }
+
+  // Number list
+  const num = t.match(/^(\d+)[.)、]\s+(.*)$/);
+  if (num) {
+    return {
+      html: `${num[1]}. ${formatInline(num[2])}`,
+      className: "text-gray-700 leading-relaxed text-[1.05rem] pl-4",
+    };
+  }
+
+  // Heading line: no first-line indent
+  if (isHeadingLine(t)) {
+    return {
+      html: formatInline(t),
+      className: "text-gray-900 font-semibold leading-relaxed text-[1.06rem] mt-1",
+    };
+  }
+
+  // Normal paragraph: first line indent 2 chars
+  return {
+    html: formatInline(t),
+    className: "text-gray-700 leading-relaxed text-[1.05rem] [text-indent:2em]",
+  };
+}
+
+function isHeadingLine(t: string): boolean {
+  if (/^第[一二三四五六七八九十百千0-9]+[章節回部卷篇]/.test(t)) return true;
+  if (/^[一二三四五六七八九十]+[、.．]/.test(t)) return true;
+  if (/^[（(][一二三四五六七八九十0-9]+[)）]/.test(t)) return true;
+  if (/^#{1,6}\s+/.test(t)) return true;
+  if ((t.endsWith("：") || t.endsWith(":")) && t.length <= 30) return true;
+  return false;
+}
+
+function formatInline(text: string): string {
+  let s = escapeHtml(text);
+  // **bold**
+  s = s.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+  // *italic*
+  s = s.replace(/(^|[^*])\*(?!\s)(.+?)(?<!\s)\*(?!\*)/g, "$1<em>$2</em>");
+  // [kai]標楷體[/kai]
+  s = s.replace(
+    /\[kai\]([\s\S]+?)\[\/kai\]/gi,
+    "<span style=\"font-family:'DFKai-SB','BiauKai',serif;\">$1</span>"
+  );
+  return s;
+}
+
+function escapeHtml(text: string): string {
+  return text
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;");
+}
 
 // 起始頁碼（預設 1）
 const startPage = computed(() => {

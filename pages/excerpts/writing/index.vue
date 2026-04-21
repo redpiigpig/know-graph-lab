@@ -4,11 +4,17 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-14">
           <div class="flex items-center gap-2 text-sm text-gray-500">
-            <NuxtLink to="/excerpts" class="hover:text-blue-600 transition">書摘庫</NuxtLink>
+            <NuxtLink to="/excerpts" class="hover:text-blue-600 transition flex items-center gap-1.5">
+              <img src="/logo_image.jpg" alt="logo" class="w-5 h-5 rounded object-cover" />
+              <span>書摘庫</span>
+            </NuxtLink>
             <span>›</span>
-            <span class="font-semibold text-purple-700">待寫著作</span>
+            <span class="font-semibold text-purple-700">著作書摘</span>
           </div>
-          <button @click="handleLogout" class="text-gray-500 hover:text-red-600 transition text-sm">登出</button>
+          <div class="flex items-center gap-2">
+            <button @click="showCreate = true" class="text-xs px-3 py-1.5 rounded-lg bg-purple-600 text-white hover:bg-purple-500 transition">+ 新增著作頁面</button>
+            <button @click="handleLogout" class="text-gray-500 hover:text-red-600 transition text-sm">登出</button>
+          </div>
         </div>
       </div>
     </nav>
@@ -17,7 +23,7 @@
       <div class="flex items-center gap-4 mb-8">
         <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center text-3xl">📖</div>
         <div>
-          <h1 class="text-3xl font-bold text-gray-900">待寫著作</h1>
+          <h1 class="text-3xl font-bold text-gray-900">著作書摘</h1>
           <p class="text-sm text-gray-500 mt-0.5">管理各部著作的寫作素材</p>
         </div>
       </div>
@@ -36,7 +42,7 @@
         >
           <div class="flex items-start justify-between mb-4">
             <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-2xl">📖</div>
-            <span class="text-xs bg-purple-50 text-purple-600 font-medium px-2.5 py-1 rounded-full">待寫著作</span>
+            <span class="text-xs bg-purple-50 text-purple-600 font-medium px-2.5 py-1 rounded-full">著作書摘</span>
           </div>
           <h2 class="text-xl font-bold text-gray-900 mb-1 group-hover:text-purple-700 transition">{{ proj.name }}</h2>
           <p v-if="proj.description" class="text-sm text-gray-400 mb-3 line-clamp-2">{{ proj.description }}</p>
@@ -50,8 +56,20 @@
       <!-- 空狀態 -->
       <div v-else class="text-center py-24 text-gray-400">
         <div class="text-5xl mb-4">📖</div>
-        <p class="text-lg font-medium text-gray-500">尚無待寫著作項目</p>
-        <p class="text-sm mt-1">可在資料庫中新增 book_projects（type=待寫著作）</p>
+        <p class="text-lg font-medium text-gray-500">尚無著作書摘項目</p>
+        <p class="text-sm mt-1">可點右上角「新增著作頁面」建立</p>
+      </div>
+    </div>
+
+    <div v-if="showCreate" class="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4">
+      <div class="w-full max-w-md bg-white rounded-2xl border border-gray-200 p-5">
+        <h3 class="text-lg font-bold text-gray-900 mb-3">新增著作頁面</h3>
+        <input v-model="newName" class="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm mb-2" placeholder="名稱（例如：千面上帝）" />
+        <textarea v-model="newDesc" class="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm mb-3" rows="3" placeholder="描述（可選）" />
+        <div class="flex justify-end gap-2">
+          <button class="px-3 py-1.5 text-sm text-gray-500" @click="showCreate=false">取消</button>
+          <button class="px-3 py-1.5 text-sm bg-purple-600 text-white rounded-lg" @click="createProject">建立</button>
+        </div>
       </div>
     </div>
   </div>
@@ -65,6 +83,9 @@ const router = useRouter();
 type Project = { id: string; name: string; type: string; description: string | null; excerpt_count: number; book_count: number };
 const loading = ref(true);
 const projects = ref<Project[]>([]);
+const showCreate = ref(false);
+const newName = ref("");
+const newDesc = ref("");
 
 async function fetchProjects() {
   const { data: { session } } = await supabase.auth.getSession();
@@ -76,7 +97,22 @@ async function fetchProjects() {
 }
 
 async function handleLogout() { await supabase.auth.signOut(); router.push("/login"); }
+async function createProject() {
+  if (!newName.value.trim()) return;
+  const { data: { session } } = await supabase.auth.getSession();
+  if (!session) return;
+  const created = await $fetch<Project>("/api/projects", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${session.access_token}` },
+    body: { name: newName.value, description: newDesc.value, type: "待寫著作" },
+  }).catch(() => null);
+  if (!created) return;
+  showCreate.value = false;
+  newName.value = "";
+  newDesc.value = "";
+  await fetchProjects();
+}
 
 onMounted(fetchProjects);
-useHead({ title: "待寫著作 — 書摘庫" });
+useHead({ title: "著作書摘 — 書摘庫" });
 </script>

@@ -10,14 +10,13 @@
               <span>書摘庫</span>
             </NuxtLink>
             <span>›</span>
-            <NuxtLink to="/excerpts/library" class="hover:text-blue-600 transition">書摘圖書館</NuxtLink>
+            <NuxtLink to="/excerpts/journal" class="hover:text-amber-600 transition">期刊書摘</NuxtLink>
             <span>›</span>
-            <span class="font-medium text-gray-900 truncate max-w-xs">{{ book?.title ?? '載入中…' }}</span>
+            <span class="font-medium text-gray-900 truncate max-w-xs">{{ ja?.title ?? '載入中…' }}</span>
           </div>
           <div class="flex items-center gap-2">
-            <button class="px-3 py-1.5 text-xs rounded-lg bg-blue-600 text-white hover:bg-blue-500" @click="showCreate = true">+ 新增文摘</button>
-            <button class="px-3 py-1.5 text-xs rounded-lg border border-blue-300 text-blue-700 hover:bg-blue-50" @click="showOCR = true">上傳照片</button>
-            <button class="px-3 py-1.5 text-xs rounded-lg border border-blue-300 text-blue-700 hover:bg-blue-50" @click="showCSV = true">上傳 CSV</button>
+            <button class="px-3 py-1.5 text-xs rounded-lg bg-amber-600 text-white hover:bg-amber-500" @click="showCreate = true">+ 新增文摘</button>
+            <button class="px-3 py-1.5 text-xs rounded-lg border border-amber-300 text-amber-800 hover:bg-amber-50" @click="showCSV = true">上傳 CSV</button>
             <button @click="handleLogout" class="text-gray-500 hover:text-red-600 transition text-sm">登出</button>
           </div>
         </div>
@@ -32,94 +31,45 @@
         <div class="bg-white rounded-xl p-6 h-24"></div>
       </div>
 
-      <template v-else-if="book">
-        <!-- ── 書籍資訊卡 ── -->
+      <template v-else-if="ja">
+        <!-- ── 篇目資訊卡 ── -->
         <div class="bg-white rounded-2xl border border-gray-200 p-6 mb-8 shadow-sm">
           <div class="flex items-start gap-5">
-            <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0 select-none">📚</div>
+            <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0 select-none">📰</div>
             <div class="flex-1">
-              <!-- 書名（可編輯） -->
               <h1 class="text-2xl font-bold text-gray-900 leading-tight mb-0.5">
-                <InlineEdit :value="book.title" placeholder="書名" @save="(v) => saveBookField('title', v)" />
+                <InlineEdit :value="ja.title" placeholder="篇名" @save="(v) => saveJournalField('title', v)" />
               </h1>
-              <!-- 作者（可編輯） -->
-              <p class="text-base text-gray-600 mb-3">
-                <InlineEdit :value="book.author ?? ''" placeholder="作者" @save="(v) => saveBookField('author', v)" />
+              <p class="text-base text-gray-600 mb-2">
+                <InlineEdit :value="ja.author ?? ''" placeholder="作者" @save="(v) => saveJournalField('author', v)" />
               </p>
-
-              <!-- 中文版資訊 -->
-              <div class="flex flex-wrap gap-x-5 gap-y-1 text-sm text-gray-500 mb-3">
-                <span v-if="book.translator">譯者：{{ book.translator }}</span>
-                <span v-if="book.publisher">中文出版社：{{ book.publisher }}</span>
-                <span v-if="book.publish_year">中文出版年：{{ book.publish_year }}</span>
-                <span v-if="book.edition">{{ book.edition }}</span>
+              <div class="flex flex-wrap gap-x-5 gap-y-1 text-sm text-gray-500">
+                <span v-if="ja.venue">刊名：{{ ja.venue }}</span>
+                <span v-if="ja.issue_label">{{ ja.issue_label }}</span>
+                <span v-if="ja.publish_year">年份：{{ ja.publish_year }}</span>
               </div>
-
-              <!-- 原書資訊（翻譯書才顯示） -->
-              <div v-if="book.translator" class="border-t border-dashed border-gray-200 pt-3 mt-1">
-                <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1.5">原書資訊</p>
-                <div class="flex flex-wrap gap-x-5 gap-y-1 text-sm text-gray-600">
-                  <span class="flex items-center gap-1">
-                    <span class="text-gray-400 text-xs">原作者：</span>
-                    <InlineEdit
-                      :value="book.original_author ?? ''"
-                      placeholder="待填寫"
-                      class="text-gray-700"
-                      @save="(v) => saveBookField('original_author', v)"
-                    />
-                  </span>
-                  <span class="flex items-center gap-1">
-                    <span class="text-gray-400 text-xs">原書名：</span>
-                    <InlineEdit
-                      :value="book.original_title ?? ''"
-                      placeholder="待填寫"
-                      class="text-gray-700"
-                      @save="(v) => saveBookField('original_title', v)"
-                    />
-                  </span>
-                  <span class="flex items-center gap-1">
-                    <span class="text-gray-400 text-xs">原出版社：</span>
-                    <InlineEdit
-                      :value="book.original_publisher ?? ''"
-                      placeholder="待填寫"
-                      class="text-gray-700"
-                      @save="(v) => saveBookField('original_publisher', v)"
-                    />
-                  </span>
-                  <span class="flex items-center gap-1">
-                    <span class="text-gray-400 text-xs">原出版年：</span>
-                    <InlineEdit
-                      :value="book.original_publish_year ? String(book.original_publish_year) : ''"
-                      placeholder="待填寫"
-                      class="text-gray-700"
-                      @save="(v) => saveBookField('original_publish_year', Number(v) || null)"
-                    />
-                  </span>
-                </div>
-              </div>
-
-              <p class="mt-3 text-sm text-blue-600 font-medium">共 {{ book.excerpts?.length ?? 0 }} 筆摘文</p>
+              <p class="mt-3 text-sm text-amber-700 font-medium">共 {{ ja.excerpts?.length ?? 0 }} 筆摘文</p>
             </div>
           </div>
         </div>
 
         <!-- ── 空狀態 ── -->
-        <div v-if="!book.excerpts?.length" class="text-center py-16 text-gray-400">
-          <p class="text-lg">此書尚無摘文</p>
+        <div v-if="!ja.excerpts?.length" class="text-center py-16 text-gray-400">
+          <p class="text-lg">此篇目尚無摘文</p>
         </div>
 
         <!-- ── 按章節分組顯示 ── -->
         <template v-else>
           <div class="mb-4 flex gap-2 max-w-xl">
-            <select v-model="searchField" class="px-3 py-2 border border-gray-200 rounded-lg text-sm bg-white outline-none focus:ring-2 focus:ring-blue-400">
+            <select v-model="searchField" class="px-3 py-2 border border-gray-200 rounded-lg text-sm bg-white outline-none focus:ring-2 focus:ring-amber-400">
               <option value="all">全部</option>
               <option value="content">內容</option>
               <option value="title">標題</option>
             </select>
             <input
               v-model="searchQ"
-              placeholder="搜尋此書"
-              class="flex-1 px-3 py-2 border border-gray-200 rounded-lg text-sm outline-none focus:ring-2 focus:ring-blue-400"
+              placeholder="搜尋此篇目"
+              class="flex-1 px-3 py-2 border border-gray-200 rounded-lg text-sm outline-none focus:ring-2 focus:ring-amber-400"
             />
           </div>
           <template v-for="group in chapterGroups" :key="group.chapter ?? '__none__'">
@@ -141,7 +91,7 @@
               <template v-for="excerpt in group.items" :key="excerpt.id">
                 <div
                   :data-excerpt-card-id="excerpt.id"
-                  class="bg-white rounded-xl border border-gray-200 p-5 hover:border-blue-200 transition-all duration-150 cursor-pointer relative"
+                  class="bg-white rounded-xl border border-gray-200 p-5 hover:border-amber-200 transition-all duration-150 cursor-pointer relative"
                   @click="toggleExpand(excerpt.id)"
                 >
                   <div class="absolute right-3 top-3 z-10" @click.stop>
@@ -192,12 +142,11 @@
                   </div>
 
                   <p class="text-xs text-gray-400 mb-3">
-                    <span v-if="book?.author">{{ book.author }}</span>
-                    <span v-if="book?.author && (book?.original_publish_year ?? book?.publish_year)">
-                      （{{ book.original_publish_year ?? book.publish_year }}）
-                    </span>
-                    <span v-if="book?.title" class="mx-1">·</span>
-                    <span v-if="book?.title">《{{ book.title }}》</span>
+                    <span v-if="ja?.author">{{ ja.author }}</span>
+                    <span v-if="ja?.publish_year">（{{ ja.publish_year }}）</span>
+                    <span v-if="ja?.venue" class="mx-1">·</span>
+                    <span v-if="ja?.venue">《{{ ja.venue }}》</span>
+                    <span v-if="ja?.issue_label" class="ml-1">· {{ ja.issue_label }}</span>
                     <span v-if="excerpt.page_number" class="ml-1">
                       · {{ formatPageLabel(excerpt.page_number, excerpt.content || excerpt.title || "") }}
                     </span>
@@ -245,7 +194,7 @@
         </template>
       </template>
 
-      <div v-else class="text-center py-20 text-gray-400">找不到此書</div>
+      <div v-else class="text-center py-20 text-gray-400">找不到此篇目</div>
     </div>
 
     <div v-if="showCreate" class="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4">
@@ -259,19 +208,7 @@
         <textarea v-model="form.content" rows="6" placeholder="內文" class="w-full px-3 py-2 border rounded-lg text-sm mb-3" />
         <div class="flex justify-end gap-2">
           <button class="px-3 py-1.5 text-sm text-gray-500" @click="showCreate=false">取消</button>
-          <button class="px-3 py-1.5 text-sm bg-blue-600 text-white rounded-lg" @click="createExcerpt">建立</button>
-        </div>
-      </div>
-    </div>
-
-    <div v-if="showOCR" class="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4">
-      <div class="w-full max-w-md bg-white rounded-2xl border border-gray-200 p-5">
-        <h3 class="text-lg font-bold mb-3">上傳照片 OCR</h3>
-        <input type="file" accept="image/*" @change="onPickImage" class="w-full text-sm mb-2" />
-        <input v-model="ocrStartPage" placeholder="起始頁碼（預設1）" class="w-full px-3 py-2 border rounded-lg text-sm mb-3" />
-        <div class="flex justify-end gap-2">
-          <button class="px-3 py-1.5 text-sm text-gray-500" @click="showOCR=false">取消</button>
-          <button class="px-3 py-1.5 text-sm bg-blue-600 text-white rounded-lg" @click="uploadOCR">送出</button>
+          <button class="px-3 py-1.5 text-sm bg-amber-600 text-white rounded-lg" @click="createExcerpt">建立</button>
         </div>
       </div>
     </div>
@@ -282,7 +219,7 @@
         <input type="file" accept=".csv,text/csv" @change="onPickCSV" class="w-full text-sm mb-3" />
         <div class="flex justify-end gap-2">
           <button class="px-3 py-1.5 text-sm text-gray-500" @click="showCSV=false">取消</button>
-          <button class="px-3 py-1.5 text-sm bg-blue-600 text-white rounded-lg" @click="uploadCSV">送出</button>
+          <button class="px-3 py-1.5 text-sm bg-amber-600 text-white rounded-lg" @click="uploadCSV">送出</button>
         </div>
       </div>
     </div>
@@ -295,32 +232,31 @@ definePageMeta({ middleware: "auth" });
 const supabase = useSupabaseClient();
 const router = useRouter();
 const route = useRoute();
-const bookId = route.params.bookId as string;
+const journalId = route.params.id as string;
 
 type Excerpt = {
   id: string; title: string | null; content: string;
   chapter: string | null; chapterName: string; page_number: string | null; created_at: string;
   projects: { id: string; name: string; type: string }[];
 };
-type Book = {
-  id: string; title: string; author: string;
-  translator?: string; publish_place?: string; publisher?: string;
-  publish_year?: number; edition?: string; category_id?: string;
-  original_author?: string; original_title?: string; original_publisher?: string; original_publish_year?: number;
+type JournalArt = {
+  id: string;
+  title: string;
+  venue: string | null;
+  author: string | null;
+  publish_year: number | null;
+  issue_label: string | null;
   excerpts: Excerpt[];
   chapterNameMap: Record<string, string>;
 };
 
 const loading = ref(true);
-const book = ref<Book | null>(null);
+const ja = ref<JournalArt | null>(null);
 const searchQ = ref("");
 const searchField = ref<"all" | "content" | "title">("all");
 const showCreate = ref(false);
-const showOCR = ref(false);
 const showCSV = ref(false);
-const ocrFile = ref<File | null>(null);
 const csvFile = ref<File | null>(null);
-const ocrStartPage = ref("1");
 const form = ref({ title: "", chapter: "", page_number: "", content: "" });
 const projectTargets = ref<{ id: string; name: string; type: string }[]>([]);
 const importTargetByExcerpt = ref<Record<string, string>>({});
@@ -330,22 +266,25 @@ const expandedExcerptId = ref<string | null>(null);
 const overflowById = ref<Record<string, boolean>>({});
 const contentBoxRefs = new Map<string, HTMLElement>();
 
-// Chapter ordering helper
-const CHAPTER_ORDER = Array.from({ length: 30 }, (_, i) => {
-  const nums = ["一","二","三","四","五","六","七","八","九","十","十一","十二","十三","十四","十五","十六","十七","十八","十九","二十","二十一","二十二","二十三","二十四","二十五","二十六","二十七","二十八","二十九","三十"];
-  return `第${nums[i]}章`;
-});
+const TOPIC_ORDER = [
+  "人間佛教",
+  "印順學",
+  "星雲法師與佛光山",
+  "聖嚴法師與法鼓山",
+  "證嚴法師與慈濟",
+  "趙樸初居士",
+];
 
-// Group excerpts by chapter, ordered by chapter code
+// Group excerpts by chapter, ordered by topic
 const chapterGroups = computed(() => {
-  if (!book.value?.excerpts) return [];
+  if (!ja.value?.excerpts) return [];
   const map = new Map<string, { chapter: string | null; chapterName: string; items: Excerpt[] }>();
   const NONE = "__none__";
 
   const q = searchQ.value.trim().toLowerCase();
   const source = !q
-    ? book.value.excerpts
-    : book.value.excerpts.filter((e) =>
+    ? ja.value.excerpts
+    : ja.value.excerpts.filter((e) =>
       searchField.value === "title"
         ? (e.title || "").toLowerCase().includes(q)
         : searchField.value === "content"
@@ -358,7 +297,7 @@ const chapterGroups = computed(() => {
     if (!map.has(key)) {
       map.set(key, {
         chapter: ex.chapter,
-        chapterName: ex.chapterName ?? (ex.chapter ? (book.value.chapterNameMap?.[ex.chapter] ?? "") : ""),
+        chapterName: ex.chapterName ?? (ex.chapter ? (ja.value.chapterNameMap?.[ex.chapter] ?? "") : ""),
         items: [],
       });
     }
@@ -367,8 +306,8 @@ const chapterGroups = computed(() => {
 
   return [...map.entries()]
     .sort(([a], [b]) => {
-      const ai = CHAPTER_ORDER.indexOf(a);
-      const bi = CHAPTER_ORDER.indexOf(b);
+      const ai = TOPIC_ORDER.indexOf(a);
+      const bi = TOPIC_ORDER.indexOf(b);
       if (a === NONE) return 1;
       if (b === NONE) return -1;
       if (ai === -1 && bi === -1) return a.localeCompare(b);
@@ -439,9 +378,9 @@ async function getToken() {
   return session.access_token;
 }
 
-async function fetchBook() {
+async function fetchJournal() {
   const token = await getToken(); if (!token) return;
-  book.value = await $fetch<Book>(`/api/books/${bookId}`, {
+  ja.value = await $fetch<JournalArt>(`/api/journal-articles/${journalId}`, {
     headers: { Authorization: `Bearer ${token}` },
   }).catch(() => null);
   projectTargets.value = await $fetch<any[]>("/api/projects", {
@@ -461,7 +400,7 @@ async function importToProject(excerptId: string) {
   importTargetByExcerpt.value[excerptId] = "";
   importPanelByExcerpt.value[excerptId] = false;
   importQueryByExcerpt.value[excerptId] = "";
-  await fetchBook();
+  await fetchJournal();
 }
 function toggleImportPanel(excerptId: string) {
   importPanelByExcerpt.value[excerptId] = !importPanelByExcerpt.value[excerptId];
@@ -483,11 +422,8 @@ async function saveExcerptField(id: string, field: "title" | "content", value: s
     headers: { Authorization: `Bearer ${token}` },
     body: { [field]: value },
   }).catch(console.error);
-  const ex = book.value?.excerpts.find((e) => e.id === id);
+  const ex = ja.value?.excerpts.find((e) => e.id === id);
   if (ex) (ex as any)[field] = value;
-}
-function onPickImage(e: Event) {
-  ocrFile.value = (e.target as HTMLInputElement).files?.[0] || null;
 }
 function onPickCSV(e: Event) {
   csvFile.value = (e.target as HTMLInputElement).files?.[0] || null;
@@ -497,32 +433,17 @@ async function createExcerpt() {
   await $fetch("/api/excerpts", {
     method: "POST",
     headers: { Authorization: `Bearer ${token}` },
-    body: { ...form.value, book_id: bookId },
+    body: { ...form.value, book_id: null, journal_article_id: journalId },
   }).catch(() => null);
   showCreate.value = false;
   form.value = { title: "", chapter: "", page_number: "", content: "" };
-  await fetchBook();
-}
-async function uploadOCR() {
-  const token = await getToken(); if (!token || !ocrFile.value) return;
-  const fd = new FormData();
-  fd.append("image", ocrFile.value);
-  fd.append("bookId", bookId);
-  fd.append("startPage", ocrStartPage.value || "1");
-  await $fetch("/api/ai/ocr", {
-    method: "POST",
-    headers: { Authorization: `Bearer ${token}` },
-    body: fd,
-  }).catch(() => null);
-  showOCR.value = false;
-  ocrFile.value = null;
-  await fetchBook();
+  await fetchJournal();
 }
 async function uploadCSV() {
   const token = await getToken(); if (!token || !csvFile.value) return;
   const fd = new FormData();
   fd.append("file", csvFile.value);
-  fd.append("bookId", bookId);
+  fd.append("journalArticleId", journalId);
   await $fetch("/api/excerpts/import-csv", {
     method: "POST",
     headers: { Authorization: `Bearer ${token}` },
@@ -530,7 +451,7 @@ async function uploadCSV() {
   }).catch(() => null);
   showCSV.value = false;
   csvFile.value = null;
-  await fetchBook();
+  await fetchJournal();
 }
 function highlightText(text: string): string {
   const q = searchQ.value.trim();
@@ -557,14 +478,14 @@ function formatPageLabel(rawPage: string, contextText: string): string {
   return isChinese ? `頁${cleaned}` : `p. ${cleaned}`;
 }
 
-async function saveBookField(field: string, value: unknown) {
+async function saveJournalField(field: string, value: unknown) {
   const token = await getToken(); if (!token) return;
-  await $fetch(`/api/books/${bookId}`, {
+  await $fetch(`/api/journal-articles/${journalId}`, {
     method: "PATCH",
     headers: { Authorization: `Bearer ${token}` },
     body: { [field]: value },
   }).catch(console.error);
-  if (book.value) (book.value as any)[field] = value;
+  if (ja.value) (ja.value as any)[field] = value;
 }
 
 async function handleLogout() {
@@ -573,11 +494,11 @@ async function handleLogout() {
 }
 
 onMounted(() => {
-  const saved = localStorage.getItem("excerpts-library-search-field");
+  const saved = localStorage.getItem("excerpts-journal-search-field");
   if (saved && ["all", "content", "title"].includes(saved)) {
     searchField.value = saved as any;
   }
-  fetchBook();
+  fetchJournal();
   document.addEventListener("click", onGlobalClick);
   window.addEventListener("resize", recomputeOverflow);
   nextTick(recomputeOverflow);
@@ -588,7 +509,7 @@ onBeforeUnmount(() => {
 });
 watch([chapterGroups, expandedExcerptId], () => nextTick(recomputeOverflow));
 watch(searchField, (v) => {
-  localStorage.setItem("excerpts-library-search-field", v);
+  localStorage.setItem("excerpts-journal-search-field", v);
 });
-useHead({ title: computed(() => book.value ? `${book.value.title} — 書摘` : "書摘") });
+useHead({ title: computed(() => ja.value ? `${ja.value.title} — 期刊書摘` : "期刊書摘") });
 </script>

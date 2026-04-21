@@ -4,11 +4,17 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-14">
           <div class="flex items-center gap-2 text-sm text-gray-500">
-            <NuxtLink to="/excerpts" class="hover:text-blue-600 transition">書摘庫</NuxtLink>
+            <NuxtLink to="/excerpts" class="hover:text-blue-600 transition flex items-center gap-1.5">
+              <img src="/logo_image.jpg" alt="logo" class="w-5 h-5 rounded object-cover" />
+              <span>書摘庫</span>
+            </NuxtLink>
             <span>›</span>
             <span class="font-semibold text-blue-700">書摘圖書館</span>
           </div>
-          <button @click="handleLogout" class="text-gray-500 hover:text-red-600 transition text-sm">登出</button>
+          <div class="flex items-center gap-2">
+            <button @click="showCreateBook = true" class="text-xs px-3 py-1.5 rounded-lg bg-blue-600 text-white hover:bg-blue-500 transition">+ 新增書籍</button>
+            <button @click="handleLogout" class="text-gray-500 hover:text-red-600 transition text-sm">登出</button>
+          </div>
         </div>
       </div>
     </nav>
@@ -98,6 +104,20 @@
         </template>
       </template>
     </div>
+
+    <div v-if="showCreateBook" class="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4">
+      <div class="w-full max-w-md bg-white rounded-2xl border border-gray-200 p-5">
+        <h3 class="text-lg font-bold text-gray-900 mb-3">新增書籍</h3>
+        <input v-model="newBook.title" class="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm mb-2" placeholder="書名（必填）" />
+        <input v-model="newBook.author" class="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm mb-2" placeholder="作者" />
+        <input v-model="newBook.publisher" class="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm mb-2" placeholder="出版社" />
+        <input v-model.number="newBook.publish_year" type="number" class="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm mb-3" placeholder="出版年份" />
+        <div class="flex justify-end gap-2">
+          <button class="px-3 py-1.5 text-sm text-gray-500" @click="showCreateBook=false">取消</button>
+          <button class="px-3 py-1.5 text-sm bg-blue-600 text-white rounded-lg" @click="createBook">建立</button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -116,6 +136,10 @@ const displayedBooks = ref<any[]>([]);
 const bookSearch = ref("");
 const selectedTopCat = ref<Category | null>(null);
 const selectedSubCat = ref<Category | null>(null);
+const showCreateBook = ref(false);
+const newBook = ref<{ title: string; author: string; publisher: string; publish_year: number | null }>({
+  title: "", author: "", publisher: "", publish_year: null,
+});
 
 const filteredBooks = computed(() => {
   const q = bookSearch.value.trim().toLowerCase();
@@ -168,6 +192,19 @@ function selectSubCat(sub: Category) {
 }
 
 async function handleLogout() { await supabase.auth.signOut(); router.push("/login"); }
+async function createBook() {
+  if (!newBook.value.title.trim()) return;
+  const token = await getToken(); if (!token) return;
+  const created = await $fetch<any>("/api/books", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${token}` },
+    body: newBook.value,
+  }).catch(() => null);
+  if (!created) return;
+  showCreateBook.value = false;
+  newBook.value = { title: "", author: "", publisher: "", publish_year: null };
+  await Promise.all([fetchAllBooks(), loadBooks(selectedSubCat.value?.id || selectedTopCat.value?.id)]);
+}
 
 onMounted(async () => {
   await Promise.all([fetchCategories(), fetchAllBooks()]);

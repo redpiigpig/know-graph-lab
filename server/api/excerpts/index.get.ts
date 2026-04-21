@@ -2,8 +2,9 @@ export default defineEventHandler(async (event) => {
   await requireAuth(event);
   const supabase = getAdminClient();
 
-  const { search, type, chapter, bookId } = getQuery(event) as {
+  const { search, searchField, type, chapter, bookId } = getQuery(event) as {
     search?: string;
+    searchField?: string;
     type?: string;
     chapter?: string;
     bookId?: string;
@@ -14,6 +15,7 @@ export default defineEventHandler(async (event) => {
     .select(
       `id, title, content, chapter, page_number, created_at,
        books(id, title, author),
+       journal_articles(id, title, venue, author),
        excerpt_book_projects(book_project_id, book_projects(id, name, type))`
     )
     .order("chapter")
@@ -33,12 +35,20 @@ export default defineEventHandler(async (event) => {
   if (search?.trim()) {
     const q = search.trim().toLowerCase();
     result = result.filter(
-      (e) =>
-        e.title?.toLowerCase().includes(q) ||
-        e.content?.toLowerCase().includes(q) ||
-        (e.books as any)?.title?.toLowerCase().includes(q) ||
-        (e.books as any)?.author?.toLowerCase().includes(q) ||
-        e.chapter?.toLowerCase().includes(q)
+      (e) => {
+        const inTitle = e.title?.toLowerCase().includes(q);
+        const inContent = e.content?.toLowerCase().includes(q);
+        const inBook = (e.books as any)?.title?.toLowerCase().includes(q);
+        const inAuthor = (e.books as any)?.author?.toLowerCase().includes(q);
+        const ja = e.journal_articles as any;
+        const inJournal = ja?.title?.toLowerCase().includes(q) || ja?.venue?.toLowerCase().includes(q);
+        const inJaAuthor = ja?.author?.toLowerCase().includes(q);
+        if (searchField === "title") return inTitle;
+        if (searchField === "content") return inContent;
+        if (searchField === "book") return inBook || inJournal;
+        if (searchField === "author") return inAuthor || inJaAuthor;
+        return inTitle || inContent || inBook || inAuthor || inJournal || inJaAuthor || e.chapter?.toLowerCase().includes(q);
+      }
     );
   }
 
