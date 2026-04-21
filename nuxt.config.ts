@@ -18,6 +18,7 @@ export default defineNuxtConfig({
       supabaseUrl: process.env.SUPABASE_URL,
       supabaseKey: process.env.SUPABASE_KEY,
       appUrl: process.env.APP_URL || "http://localhost:3000",
+      allowedEmail: process.env.ALLOWED_EMAIL || "redpiigpig@gmail.com",
     },
   },
 
