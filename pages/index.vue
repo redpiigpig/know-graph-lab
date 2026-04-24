@@ -86,25 +86,25 @@
           <span class="tool-badge bg-emerald-50 text-emerald-600">可用</span>
         </NuxtLink>
 
-        <!-- 互動地圖 -->
-        <NuxtLink :to="user ? '/map' : '/login'" class="tool-card group border-teal-100 hover:border-teal-300 hover:shadow-teal-100">
-          <div class="tool-icon bg-teal-50 text-teal-600">🗺️</div>
-          <div class="flex-1">
-            <h2 class="tool-title">互動地圖</h2>
-            <p class="tool-desc">AI 識別地理區域，精確到縣級，自訂標記與圖層</p>
-          </div>
-          <span class="tool-badge bg-teal-50 text-teal-600">可用</span>
-        </NuxtLink>
-
-        <!-- 譜系圖繪製 -->
-        <NuxtLink :to="user ? '/canvas?type=genealogy' : '/login'" class="tool-card group border-amber-100 hover:border-amber-300 hover:shadow-amber-100">
+        <!-- 族譜繪製 -->
+        <NuxtLink :to="user ? '/genealogy' : '/login'" class="tool-card group border-amber-100 hover:border-amber-300 hover:shadow-amber-100">
           <div class="tool-icon bg-amber-50 text-amber-600">🌳</div>
           <div class="flex-1">
-            <h2 class="tool-title">譜系圖繪製</h2>
-            <p class="tool-desc">層級關係視覺化，適合組織架構、家族譜系</p>
+            <h2 class="tool-title">族譜繪製</h2>
+            <p class="tool-desc">AI 解析譜系文字，自動生成樹狀族譜，支援手動連線、16 色標注與匯出</p>
           </div>
           <span class="tool-badge bg-amber-50 text-amber-600">可用</span>
         </NuxtLink>
+
+        <!-- 架構層級表 -->
+        <div class="tool-card border-orange-100 opacity-50 cursor-not-allowed">
+          <div class="tool-icon bg-orange-50 text-orange-400">🗂️</div>
+          <div class="flex-1">
+            <h2 class="tool-title text-gray-400">架構層級表</h2>
+            <p class="tool-desc">組織架構、制度層級視覺化，支援多維度關係與自訂群組</p>
+          </div>
+          <span class="tool-badge bg-orange-50 text-orange-400">開發中</span>
+        </div>
 
         <!-- 智能表格 -->
         <NuxtLink :to="user ? '/canvas?type=table' : '/login'" class="tool-card group border-rose-100 hover:border-rose-300 hover:shadow-rose-100">

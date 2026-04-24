@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/supabase"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/supabase", "@vueuse/nuxt"],
 
   supabase: {
     redirect: false, // 我們自己處理重導向
@@ -41,7 +41,9 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ["~/assets/css/main.css"],
+  css: [
+    "~/assets/css/main.css",
+  ],
 
   compatibilityDate: "2024-07-24",
 });
