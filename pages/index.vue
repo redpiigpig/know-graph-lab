@@ -96,6 +96,16 @@
           <span class="tool-badge bg-amber-50 text-amber-600">可用</span>
         </NuxtLink>
 
+        <!-- 實驗網站 -->
+        <NuxtLink :to="user ? '/Hsuan_Chuang_Studies' : '/login'" class="tool-card group border-orange-100 hover:border-orange-300 hover:shadow-orange-100">
+          <div class="tool-icon bg-orange-50 text-orange-500">🧪</div>
+          <div class="flex-1">
+            <h2 class="tool-title">實驗網站</h2>
+            <p class="tool-desc">客製化專屬研究網站的展示模板，可依需求替換主題與內容</p>
+          </div>
+          <span class="tool-badge bg-orange-50 text-orange-500">示範</span>
+        </NuxtLink>
+
         <!-- 架構層級表 -->
         <div class="tool-card border-orange-100 opacity-50 cursor-not-allowed">
           <div class="tool-icon bg-orange-50 text-orange-400">🗂️</div>
