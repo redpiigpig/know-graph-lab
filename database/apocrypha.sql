@@ -99,24 +99,29 @@ INSERT INTO biblical_people (name_zh, name_en, gender, sort_order, children, not
    '瑪加比一書 2:3；次子（實際排行長子）；約納堂死後執政；主前 141 年正式取得猶大獨立；主前 135 年遭暗殺');
 
 -- 若望·依爾卡諾（第67代）
+-- 子女名稱使用完整父名「若望依爾卡諾」以便 autolink LIKE 匹配
 INSERT INTO biblical_people (name_zh, name_en, gender, sort_order, children, notes) VALUES
   ('若望依爾卡諾（西門之子）', 'John Hyrcanus I', '男', 888,
-   '亞里斯托布魯一世（依爾卡諾之子）、亞歷山大雅內（依爾卡諾之子）',
+   '亞里斯托布魯一世（若望依爾卡諾之子）、亞歷山大雅內（若望依爾卡諾之子）',
    '瑪加比一書 16:23；主前 135-104 年統治；對以土買人強制行割禮；擴張版圖至撒瑪利亞；法利賽人與撒都該人分裂始於其任內');
 
 -- 第68代
 INSERT INTO biblical_people (name_zh, name_en, gender, sort_order, notes) VALUES
-  ('亞里斯托布魯一世（依爾卡諾之子）', 'Aristobulus I', '男', 889,
-   '主前 104-103 年統治；第一位正式自稱「王」的哈斯蒙君主；加利利地猶太化；任期僅一年便病逝'),
-  ('亞歷山大雅內（依爾卡諾之子）', 'Alexander Jannaeus', '男', 890,
+  ('亞里斯托布魯一世（若望依爾卡諾之子）', 'Aristobulus I', '男', 889,
+   '主前 104-103 年統治；第一位正式自稱「王」的哈斯蒙君主；加利利地猶太化；任期僅一年便病逝');
+
+INSERT INTO biblical_people (name_zh, name_en, gender, sort_order, children, notes) VALUES
+  ('亞歷山大雅內（若望依爾卡諾之子）', 'Alexander Jannaeus', '男', 890,
+   '許爾加諾二世（亞歷山大雅內之子）、阿里斯托布魯二世（亞歷山大雅內之子）',
    '主前 103-76 年統治；大祭司兼王；鎮壓法利賽人叛亂，殘忍處決八百人；哈斯蒙領土達最大版圖');
 
 -- 第69代（亞歷山大雅內之子）
+-- 使用完整父名「亞歷山大雅內」以便 autolink LIKE 匹配
 INSERT INTO biblical_people (name_zh, name_en, gender, sort_order, children, notes) VALUES
-  ('許爾加諾二世（亞歷山大之子）', 'Hyrcanus II', '男', 891,
+  ('許爾加諾二世（亞歷山大雅內之子）', 'Hyrcanus II', '男', 891,
    '安提哥諾（許爾加諾二世之子）',
    '主前 76-67、63-40 年數度在位；性格柔弱，倚靠安提帕特（大希律之父）；主前 63 年龐培征服耶路撒冷後淪為附庸；主前 30 年被希律處決'),
-  ('阿里斯托布魯二世（亞歷山大之子）', 'Aristobulus II', '男', 892, NULL,
+  ('阿里斯托布魯二世（亞歷山大雅內之子）', 'Aristobulus II', '男', 892, NULL,
    '主前 67-63 年；與兄爭位引發龐培介入（主前 63 年）；哈斯蒙王朝政治獨立事實上終結');
 
 -- 第70代
