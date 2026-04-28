@@ -322,6 +322,72 @@ UPDATE biblical_people SET generation = 67 WHERE name_zh IN (
   '耶松（大祭司）', '默乃勞斯（大祭司）', '以利亞匝爾（書記）', '撒羅默（七子之母）'
 ) AND generation IS NULL;
 
+-- ── 偽經與拉比傳統：手動設定代數 ────────────────────────────────
+
+-- 禧年書：亞哇/亞士拉（亞當之女，gen 2）和挪亞姆（塞特之女，gen 3）、
+--   慕阿利拉（以挪士之女，gen 4）可由 autolink 自動取得，無需手動
+-- 以下為父名不在 DB、或使用「之妻」命名無法被 autolink 的人物：
+UPDATE biblical_people SET generation = 5 WHERE name_zh IN (
+  '底娜斯（瑪哈拉列之妻）'
+) AND generation IS NULL;
+UPDATE biblical_people SET generation = 6 WHERE name_zh IN (
+  '以斯尼（雅列之妻）'
+) AND generation IS NULL;
+UPDATE biblical_people SET generation = 7 WHERE name_zh IN (
+  '以底尼（以諾之妻）'
+) AND generation IS NULL;
+-- 拉忽雅（以諾之女）可 autolink 到以諾（gen 7），得 gen 8，無需手動
+UPDATE biblical_people SET generation = 10 WHERE name_zh IN (
+  '以墨拉（挪亞之妻）',
+  '塞達（閃之妻）', '娜阿利瑪圖（含之妻）', '亞達達奈斯（雅弗之妻）'
+) AND generation IS NULL;
+UPDATE biblical_people SET generation = 23 WHERE name_zh IN (
+  '巴特書亞（猶大之妻）'
+) AND generation IS NULL;
+
+-- 以諾書：守望者下降在以諾時代前後（gen 7-9）
+UPDATE biblical_people SET generation = 7 WHERE name_zh IN (
+  '示米哈匝（守望者之首）', '亞薩谷（守望者）',
+  '可加別（守望者）', '巴拉基雅勒（守望者）', '撒姆雅匝（守望者）'
+) AND generation IS NULL;
+UPDATE biblical_people SET generation = 8 WHERE name_zh = '拿非利人' AND generation IS NULL;
+
+-- 死海古卷（馬加比時代前後）
+UPDATE biblical_people SET generation = 66 WHERE name_zh IN (
+  '義師（公義教師）', '邪惡祭司'
+) AND generation IS NULL;
+
+-- 先賢篇：五對傳道師（Zugot，主前 250-30 年）
+UPDATE biblical_people SET generation = 62 WHERE name_zh = '安提哥努斯（科霍人）'           AND generation IS NULL;
+UPDATE biblical_people SET generation = 65 WHERE name_zh IN (
+  '約西·本·約珥（以祿得）', '約西·本·約哈南（耶路撒冷）'
+) AND generation IS NULL;
+UPDATE biblical_people SET generation = 67 WHERE name_zh IN (
+  '約書亞·本·比利加', '尼太（亞拉比利人）'
+) AND generation IS NULL;
+UPDATE biblical_people SET generation = 68 WHERE name_zh IN (
+  '猶大·本·他比', '西緬·本·沙他'
+) AND generation IS NULL;
+UPDATE biblical_people SET generation = 69 WHERE name_zh IN (
+  '示瑪雅', '亞伯他雍'
+) AND generation IS NULL;
+UPDATE biblical_people SET generation = 70 WHERE name_zh = '沙買'                         AND generation IS NULL;
+
+-- 希勒家系根節點（其後代可從名稱括號 autolink 逐代傳播）
+UPDATE biblical_people SET generation = 71 WHERE name_zh = '希勒（長者）'                  AND generation IS NULL;
+
+-- 重要塔納伊姆（非希勒家系）
+UPDATE biblical_people SET generation = 72 WHERE name_zh = '拉比·約哈南·本·匝凱'          AND generation IS NULL;
+UPDATE biblical_people SET generation = 73 WHERE name_zh IN (
+  '拉比·以利以謝·本·許爾加諾', '拉比·約書亞·本·哈拿尼雅'
+) AND generation IS NULL;
+UPDATE biblical_people SET generation = 74 WHERE name_zh IN (
+  '拉比·亞基瓦·本·約瑟', '拉比·以實瑪利·本·以利沙'
+) AND generation IS NULL;
+UPDATE biblical_people SET generation = 75 WHERE name_zh IN (
+  '拉比·米厄爾', '拉比·西緬·巴約哈', '拉比·猶大·本·以萊'
+) AND generation IS NULL;
+
 -- ── 最終再傳播三層（覆蓋歷代志新增人物） ────────────────────────
 UPDATE biblical_people child_p
 SET generation = parent_p.generation + 1
