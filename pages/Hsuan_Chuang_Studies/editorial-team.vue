@@ -20,7 +20,7 @@
 
         <!-- Editor-in-Chief -->
         <div>
-          <p class="font-bold text-base mb-3">{{ lang === 'zh' ? '總編輯' : 'Editor-in-Chief' }}</p>
+          <p class="font-bold text-lg mb-3">{{ lang === 'zh' ? '總編輯' : 'Editor-in-Chief' }}</p>
           <table class="w-full border-collapse text-sm" style="font-family: Arial, '新細明體', sans-serif;">
             <tbody>
               <tr class="border border-gray-300">
@@ -40,7 +40,7 @@
 
         <!-- Editorial Board -->
         <div>
-          <p class="font-bold text-base mb-3">
+          <p class="font-bold text-lg mb-3">
             {{ lang === 'zh' ? '編輯委員（依姓氏筆畫排序）' : 'Editorial Board Members (in stroke order)' }}
           </p>
           <table class="w-full border-collapse text-sm" style="font-family: Arial, '新細明體', sans-serif;">
@@ -59,7 +59,7 @@
                 <td class="border border-gray-300 px-4 py-2">
                   {{ lang === 'zh' ? m.zhInst : m.enInst }}
                 </td>
-                <td class="border border-gray-300 px-4 py-2 text-gray-600 text-xs">
+                <td class="border border-gray-300 px-4 py-2 text-gray-600 text-sm">
                   {{ lang === 'zh' ? m.zhSpec : m.enSpec }}
                 </td>
               </tr>
@@ -82,7 +82,7 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: "編輯委員 — 玄奘佛學研究", link: [{ rel: 'icon', type: 'image/png', href: '/api/xuanzang/logo-icon' }] })
+useHead({ title: "玄奘大學 - 編輯委員", link: [{ rel: 'icon', type: 'image/png', href: '/api/xuanzang/logo-icon' }] })
 const lang = useState<'zh' | 'en'>('xuanzangLang', () => 'zh')
 const toggle = () => { lang.value = lang.value === 'zh' ? 'en' : 'zh' }
 

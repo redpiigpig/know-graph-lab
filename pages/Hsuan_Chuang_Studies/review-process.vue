@@ -17,12 +17,12 @@
       </div>
 
       <!-- ZH -->
-      <div v-if="lang === 'zh'" class="space-y-6 text-[15px] leading-relaxed">
-        <p class="font-bold text-base">壹、審稿流程</p>
+      <div v-if="lang === 'zh'" class="space-y-6 text-[17px] leading-relaxed">
+        <p class="font-bold text-lg">壹、審稿流程</p>
 
         <div>
           <p class="font-semibold mb-2">一、內審</p>
-          <ol class="list-none space-y-2 ml-4 text-sm">
+          <ol class="list-none space-y-2 ml-4 text-base">
             <li>1. 執行編輯先就來稿進行初步檢查：
               <ul class="list-none ml-4 mt-1 space-y-1 text-gray-700">
                 <li>（1）檢查有無中、英文題目、摘要與關鍵詞。</li>
@@ -39,7 +39,7 @@
 
         <div>
           <p class="font-semibold mb-2">二、外審</p>
-          <ol class="list-none space-y-2 ml-4 text-sm">
+          <ol class="list-none space-y-2 ml-4 text-base">
             <li>1. 由編輯委員依該文所屬領域提供審查者建議名單，由執行編輯彙總後，交由主編依建議名單排序，執行編輯依排序名單送交匿名審查。審查意見分為四類：
               <ul class="list-none ml-4 mt-1 space-y-1 text-gray-700">
                 <li>（1）推薦刊登</li>
@@ -54,7 +54,7 @@
 
           <!-- Decision matrix -->
           <div class="mt-4 overflow-x-auto">
-            <table class="w-full border-collapse text-xs text-center" style="font-family: Arial, '新細明體', sans-serif;">
+            <table class="w-full border-collapse text-sm text-center" style="font-family: Arial, '新細明體', sans-serif;">
               <thead>
                 <tr class="bg-gray-100">
                   <th class="border border-gray-400 px-2 py-2"></th>
@@ -100,7 +100,7 @@
 
         <div>
           <p class="font-semibold mb-2">三、後續處理</p>
-          <ol class="list-none space-y-2 ml-4 text-sm">
+          <ol class="list-none space-y-2 ml-4 text-base">
             <li>1. 「同意刊登」之文稿，送編委會認可後，進入刊登程序。</li>
             <li>2. 「修正後刊登」之文稿，作者應於接獲通知後 7–14 天內完成修訂並連同「修訂回應表」寄回編委會，由主編確認後進入刊登程序。</li>
             <li>3. 「修正後再送原審者複審」之文稿，作者應於接獲通知後 7–14 天內完成修訂，並連同「修訂回應表」寄回編委會，由原審者進行複審。</li>
@@ -112,12 +112,12 @@
       </div>
 
       <!-- EN -->
-      <div v-else class="space-y-6 text-[15px] leading-relaxed">
-        <p class="font-bold text-base">I. Review Process</p>
+      <div v-else class="space-y-6 text-[17px] leading-relaxed">
+        <p class="font-bold text-lg">I. Review Process</p>
 
         <div>
           <p class="font-semibold mb-2">1. Internal Review</p>
-          <ol class="list-none space-y-2 ml-4 text-sm">
+          <ol class="list-none space-y-2 ml-4 text-base">
             <li>a. The Executive Editor performs an initial screening:
               <ul class="list-none ml-4 mt-1 space-y-1 text-gray-700">
                 <li>(1) Verify that Chinese and English titles, abstracts, and keywords are provided.</li>
@@ -134,7 +134,7 @@
 
         <div>
           <p class="font-semibold mb-2">2. External Review</p>
-          <ol class="list-none space-y-2 ml-4 text-sm">
+          <ol class="list-none space-y-2 ml-4 text-base">
             <li>a. External reviewers are selected by the editorial board based on field expertise. Manuscripts are sent for anonymous double-blind peer review. Review decisions fall into four categories:
               <ul class="list-none ml-4 mt-1 space-y-1 text-gray-700">
                 <li>(1) Accept</li>
@@ -148,7 +148,7 @@
           </ol>
 
           <div class="mt-4 overflow-x-auto">
-            <table class="w-full border-collapse text-xs text-center" style="font-family: Arial, sans-serif;">
+            <table class="w-full border-collapse text-sm text-center" style="font-family: Arial, sans-serif;">
               <thead>
                 <tr class="bg-gray-100">
                   <th class="border border-gray-400 px-2 py-2"></th>
@@ -194,7 +194,7 @@
 
         <div>
           <p class="font-semibold mb-2">3. Follow-up Procedures</p>
-          <ol class="list-none space-y-2 ml-4 text-sm">
+          <ol class="list-none space-y-2 ml-4 text-base">
             <li>a. Manuscripts accepted for publication are forwarded to the editorial board for final approval before entering the publication process.</li>
             <li>b. Manuscripts requiring minor revisions must be revised and returned with a response letter within 7–14 days of notification.</li>
             <li>c. Manuscripts requiring major revisions must also be returned with a response letter within 7–14 days for re-review by the original reviewer.</li>
@@ -219,7 +219,7 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: "審查流程 — 玄奘佛學研究", link: [{ rel: 'icon', type: 'image/png', href: '/api/xuanzang/logo-icon' }] })
+useHead({ title: "玄奘大學 - 審查流程", link: [{ rel: 'icon', type: 'image/png', href: '/api/xuanzang/logo-icon' }] })
 const lang = useState<'zh' | 'en'>('xuanzangLang', () => 'zh')
 const toggle = () => { lang.value = lang.value === 'zh' ? 'en' : 'zh' }
 </script>

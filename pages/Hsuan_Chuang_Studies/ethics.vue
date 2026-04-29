@@ -17,10 +17,10 @@
       </div>
 
       <!-- ZH -->
-      <div v-if="lang === 'zh'" class="space-y-5 text-[15px] leading-relaxed">
+      <div v-if="lang === 'zh'" class="space-y-5 text-[17px] leading-relaxed">
         <p>《玄奘佛學研究》（Hsuan Chuang Journal of Buddhist Studies）致力於出版佛學學術性的研究論文，刊出之論文均匿名經嚴格審查。舉凡涉及剽竊、一稿多投（重複投稿）、杜撰（假造）資料、捉刀（槍手）著作、掛名與未揭露之利益衝突等任何不當行為之研究論文，本期刊一概不予接受。本期刊採用由 Elsevier 建議之《出版倫理》（Publishing Ethics）規定，摘錄並稍作修改如下：</p>
 
-        <p class="font-bold text-base">壹、編輯者義務</p>
+        <p class="font-bold text-lg" style="padding-left:0.5em">壹、編輯者義務</p>
 
         <p><span class="font-semibold">同儕審查</span>：基於「同儕評審」（peer review）的結果，依據研究議題本身或對其他研究者或讀者的重要性，編輯者可決定是否出版投稿文章。編輯者可授權審查者行使出版決定權。</p>
 
@@ -30,7 +30,7 @@
 
         <p><span class="font-semibold">公開原則</span>：（1）未取得作者之同意，編輯者不得將論文中未發表資料作為個人研究之用。（2）由同儕審查者所提供之相關修改建議與訊息不得挪為私人使用。（3）當編輯者認為與投稿作者、企業與組織構成利益衝突時，必須迴避稿件審查。（4）編輯者需要求所有研究貢獻者公開相關利益衝突資訊。</p>
 
-        <p class="font-bold text-base">貳、審查者義務</p>
+        <p class="font-bold text-lg" style="padding-left:0.5em">貳、審查者義務</p>
 
         <p><span class="font-semibold">審查能力</span>：被委任之審查者，若認為不適任或無法及時完成審查，必須通知編輯委員會，並主動要求撤銷審查委員資格。</p>
 
@@ -40,7 +40,7 @@
 
         <p><span class="font-semibold">公開原則與利益衝突</span>：未取得作者之同意，審查者不得將論文中未發表資料挪為己用。當審查委員認為與其他作者、企業與組織構成利益衝突時，必須要求迴避審查工作。</p>
 
-        <p class="font-bold text-base">參、投稿者（作者）義務</p>
+        <p class="font-bold text-lg" style="padding-left:0.5em">參、投稿者（作者）義務</p>
 
         <p><span class="font-semibold">論文標準</span>：作者需於論文中表達該著作相關研究數據之精確度與重要性，並且明白寫出基本研究資料。研究論文必須包含參考資料與重要細節，以利他人重複實驗。</p>
 
@@ -54,7 +54,7 @@
 
         <p><span class="font-semibold">研究內容之錯誤</span>：當作者發現研究內容含有錯誤或不正確資訊，應迅速通知編輯者，並採取撤回論文或修改內容等相關措施。</p>
 
-        <p class="text-sm text-gray-600 border-t border-gray-200 pt-4">
+        <p class="text-base text-gray-600 border-t border-gray-200 pt-4">
           在評審與發表程序當中，主編、編輯委員會成員與出版者均需遵照
           <a href="https://publicationethics.org/" target="_blank" class="text-blue-700 hover:underline">Committee on Publication Ethics（COPE）</a>
           之指導方針，以確保沒有違反出版倫理與造成任何不當出版之行為。
@@ -62,10 +62,10 @@
       </div>
 
       <!-- EN -->
-      <div v-else class="space-y-5 text-[15px] leading-relaxed">
+      <div v-else class="space-y-5 text-[17px] leading-relaxed">
         <p>The <em>Hsuan Chuang Journal of Buddhism Studies</em> (HCJBS) is committed to publishing peer-reviewed scholarly articles on Buddhist studies. The journal does not accept manuscripts involving plagiarism, duplicate or simultaneous submission, data fabrication, ghost-writing, nominal authorship, or undisclosed conflicts of interest. HCJBS follows the Publishing Ethics guidelines recommended by Elsevier, as summarized below.</p>
 
-        <p class="font-bold text-base">I. Editor Obligations</p>
+        <p class="font-bold text-lg" style="padding-left:0.5em">I. Editor Obligations</p>
 
         <p><span class="font-semibold">Peer Review:</span> Based on peer review results, editors decide whether to publish submitted articles based on the scholarly merit and significance of the work to researchers and readers. Editors may delegate publication decisions to reviewers.</p>
 
@@ -75,7 +75,7 @@
 
         <p><span class="font-semibold">Disclosure:</span> (1) Unpublished data in submitted manuscripts shall not be used for personal research without the author's consent. (2) Information obtained through peer review shall not be used for private purposes. (3) Editors with competing interests must recuse themselves from reviewing related manuscripts. (4) Editors must require full disclosure of conflicts of interest from all contributors.</p>
 
-        <p class="font-bold text-base">II. Reviewer Obligations</p>
+        <p class="font-bold text-lg" style="padding-left:0.5em">II. Reviewer Obligations</p>
 
         <p><span class="font-semibold">Competence:</span> Reviewers who feel unqualified to evaluate a manuscript or unable to complete the review in a timely manner must notify the editorial board and request to be relieved of the assignment.</p>
 
@@ -85,7 +85,7 @@
 
         <p><span class="font-semibold">Disclosure and Conflict of Interest:</span> Reviewers must not use unpublished data from manuscripts for personal use without the author's consent. Reviewers with competing interests must recuse themselves.</p>
 
-        <p class="font-bold text-base">III. Author Obligations</p>
+        <p class="font-bold text-lg" style="padding-left:0.5em">III. Author Obligations</p>
 
         <p><span class="font-semibold">Manuscript Standards:</span> Authors must accurately represent the significance of their research data and clearly describe the basic research materials. Papers must include sufficient references and details to allow replication.</p>
 
@@ -99,7 +99,7 @@
 
         <p><span class="font-semibold">Errors:</span> If an author discovers a significant error or inaccuracy in their published work, they must promptly notify the editors and cooperate in issuing a correction or retraction.</p>
 
-        <p class="text-sm text-gray-600 border-t border-gray-200 pt-4">
+        <p class="text-base text-gray-600 border-t border-gray-200 pt-4">
           All parties involved in the editorial and publication process must adhere to the
           <a href="https://publicationethics.org/" target="_blank" class="text-blue-700 hover:underline">Committee on Publication Ethics (COPE)</a>
           Code of Conduct and Best Practice Guidelines to prevent violations of publication ethics.
@@ -120,7 +120,7 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: "學術倫理 — 玄奘佛學研究", link: [{ rel: 'icon', type: 'image/png', href: '/api/xuanzang/logo-icon' }] })
+useHead({ title: "玄奘大學 - 學術倫理", link: [{ rel: 'icon', type: 'image/png', href: '/api/xuanzang/logo-icon' }] })
 const lang = useState<'zh' | 'en'>('xuanzangLang', () => 'zh')
 const toggle = () => { lang.value = lang.value === 'zh' ? 'en' : 'zh' }
 </script>

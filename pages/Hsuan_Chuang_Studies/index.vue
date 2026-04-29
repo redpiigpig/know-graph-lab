@@ -23,7 +23,7 @@
       <!-- Issues grid -->
       <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:#ccc; border:1px solid #ccc;">
         <a v-for="issue in issues" :key="issue.zh" href="#"
-          style="display:block; padding:14px 10px; background:#fff; font-size:13px; color:#333; text-decoration:none; text-align:center; line-height:1.5;"
+          style="display:block; padding:14px 10px; background:#fff; font-size:15px; color:#333; text-decoration:none; text-align:center; line-height:1.5;"
           onmouseover="this.style.background='#f5f5f5'" onmouseout="this.style.background='#fff'">
           {{ lang === 'zh' ? issue.zh : issue.en }}
         </a>
@@ -35,7 +35,7 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: "玄奘佛學研究", link: [{ rel: 'icon', type: 'image/png', href: '/api/xuanzang/logo-icon' }] })
+useHead({ title: "玄奘大學｜玄奘佛學研究", link: [{ rel: 'icon', type: 'image/png', href: '/api/xuanzang/logo-icon' }] })
 const lang = useState<'zh' | 'en'>('xuanzangLang', () => 'zh')
 const toggle = () => { lang.value = lang.value === 'zh' ? 'en' : 'zh' }
 

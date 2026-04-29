@@ -19,8 +19,8 @@
       </div>
 
       <!-- ZH Content -->
-      <div v-if="lang === 'zh'" class="space-y-6 text-[15px] leading-relaxed">
-        <p class="text-center font-bold text-base">玄奘大學《玄奘佛學研究》徵稿啟事</p>
+      <div v-if="lang === 'zh'" class="space-y-6 text-[17px] leading-relaxed">
+        <p class="text-center font-bold text-xl">玄奘大學《玄奘佛學研究》徵稿啟事</p>
 
         <p>本學報主要刊載有關佛學相關領域之原創性論文，包括與佛教有關之義理、教史、藝術、文學、心理、社會、教育等，歡迎各界投稿，來稿應未曾以任何文字形式出版。本學報每年出版兩期，上半年出刊日為三月三十日，下半年為九月三十日。</p>
 
@@ -28,7 +28,7 @@
 
         <!-- Issues table -->
         <div class="overflow-x-auto">
-          <table class="w-full border-collapse text-sm text-center" style="font-family: Arial, '新細明體', sans-serif;">
+          <table class="w-full border-collapse text-base text-center" style="font-family: Arial, '新細明體', sans-serif;">
             <thead>
               <tr class="bg-gray-100">
                 <th class="border border-gray-400 px-3 py-2">期　數</th>
@@ -50,11 +50,11 @@
 
         <p>作者來稿請依本學報之【學術性論文撰寫格式要點】撰寫，並以 WORD／A4 規格／直式橫書／11pt 新細明體繕打，除特邀稿外，字數以八千至一萬五千字為原則。</p>
 
-        <p class="text-sm text-gray-600">＊聯絡人：0982-215-945　堅意法師</p>
+        <p class="text-base text-gray-600 text-left">＊聯絡人：0982-215-945　堅意法師</p>
 
         <div class="border-t border-gray-200 pt-6">
           <p class="font-bold mb-3">學術性論文撰寫格式要點</p>
-          <ol class="list-none space-y-2 text-sm">
+          <ol class="list-none space-y-2 text-base">
             <li><span class="font-semibold">一、論文篇名（Article Title）</span>：具備中、英文篇名，扼要反應論文內容，包含主要關鍵詞。</li>
             <li><span class="font-semibold">二、作者（Author）</span>：具備作者中、英文姓名及服務機構、職稱。</li>
             <li><span class="font-semibold">三、摘要（Abstracts）</span>：具備中、英文摘要，字數不超過一頁，內容涵蓋研究目的、方法、結果與結論。</li>
@@ -69,15 +69,15 @@
       </div>
 
       <!-- EN Content -->
-      <div v-else class="space-y-6 text-[15px] leading-relaxed">
-        <p class="text-center font-bold text-base">Call for Papers — Hsuan Chuang Journal of Buddhism Studies</p>
+      <div v-else class="space-y-6 text-[17px] leading-relaxed">
+        <p class="text-center font-bold text-xl">Call for Papers — Hsuan Chuang Journal of Buddhism Studies</p>
 
         <p>The <em>Hsuan Chuang Journal of Buddhism Studies</em> (HCJBS) publishes original scholarly articles in Buddhist studies, including Buddhist doctrine, history, art, literature, psychology, sociology, and education. Submissions must not have been previously published in any form. The journal is published twice a year: March 30 (spring) and September 30 (fall).</p>
 
         <p>Submissions are accepted year-round without deadlines. For thematic issues, please indicate the relevant theme when submitting. Upcoming thematic issues are listed below:</p>
 
         <div class="overflow-x-auto">
-          <table class="w-full border-collapse text-sm text-center" style="font-family: Arial, sans-serif;">
+          <table class="w-full border-collapse text-base text-center" style="font-family: Arial, sans-serif;">
             <thead>
               <tr class="bg-gray-100">
                 <th class="border border-gray-400 px-3 py-2">Issue</th>
@@ -103,7 +103,7 @@
 
         <div class="border-t border-gray-200 pt-6">
           <p class="font-bold mb-3">Manuscript Format Guidelines</p>
-          <ol class="list-none space-y-2 text-sm">
+          <ol class="list-none space-y-2 text-base">
             <li><span class="font-semibold">I. Article Title:</span> Provide both Chinese and English titles; include key terms.</li>
             <li><span class="font-semibold">II. Author:</span> Full name, institutional affiliation, and title in both Chinese and English.</li>
             <li><span class="font-semibold">III. Abstract:</span> Both Chinese and English abstracts, max. one page, covering objectives, methods, results, and conclusions.</li>
@@ -131,7 +131,7 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: "投稿指引 — 玄奘佛學研究", link: [{ rel: 'icon', type: 'image/png', href: '/api/xuanzang/logo-icon' }] })
+useHead({ title: "玄奘大學 - 投稿指引", link: [{ rel: 'icon', type: 'image/png', href: '/api/xuanzang/logo-icon' }] })
 const lang = useState<'zh' | 'en'>('xuanzangLang', () => 'zh')
 const toggle = () => { lang.value = lang.value === 'zh' ? 'en' : 'zh' }
 
