@@ -58,6 +58,11 @@ const files = [
   "database/episcopal-succession-spain-2.sql",
   "database/episcopal-succession-africa-2.sql",
   "database/episcopal-succession-latin-america-2.sql",
+  "database/episcopal-succession-germany-2.sql",
+  "database/episcopal-succession-france-2.sql",
+  "database/episcopal-succession-italy-3.sql",
+  "database/episcopal-succession-eastern-europe-2.sql",
+  "database/episcopal-succession-americas-3.sql",
 ];
 
 for (const file of files) {
