@@ -44,6 +44,9 @@ create index if not exists episcopal_sees_see_zh_idx    on episcopal_sees (see_z
 -- RLS
 alter table episcopal_sees enable row level security;
 
+drop policy if exists "episcopal_sees_select" on episcopal_sees;
+drop policy if exists "episcopal_sees_all"    on episcopal_sees;
+
 create policy "episcopal_sees_select" on episcopal_sees
   for select using (auth.role() = 'authenticated');
 

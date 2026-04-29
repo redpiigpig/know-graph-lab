@@ -12,7 +12,7 @@ create table if not exists episcopal_succession (
   succession_number int,                                  -- 第幾任（1、2、3…，NULL 表示不確定）
   start_year        int,                                  -- 就任年（主前為負數）
   end_year          int,                                  -- 卸任年
-  end_reason        text check (end_reason in ('殉道', '自然死亡', '辭職', '廢黜', '不明')),
+  end_reason        text check (end_reason in ('殉道', '自然死亡', '逝世', '辭職', '廢黜', '退休', '調任', '晉升', '流亡', '不明')),
   appointed_by      text,                                 -- 任命者（主要用於第一任，如「使徒彼得」）
   predecessor_id    uuid references episcopal_succession(id) on delete set null,  -- 前任（同一統緒線內）
   status            text not null default '正統'
@@ -40,6 +40,9 @@ create index if not exists episcopal_succession_see_idx
 
 -- RLS
 alter table episcopal_succession enable row level security;
+
+drop policy if exists "episcopal_succession_select" on episcopal_succession;
+drop policy if exists "episcopal_succession_all"    on episcopal_succession;
 
 create policy "episcopal_succession_select" on episcopal_succession
   for select using (auth.role() = 'authenticated');

@@ -41,8 +41,13 @@
         <!-- Tree / search results -->
         <div class="flex-1 overflow-y-auto">
 
+          <!-- Error state -->
+          <div v-if="seesError" class="px-4 py-6 text-xs text-red-500 text-center">
+            {{ seesError }}
+          </div>
+
           <!-- Search results (flat list) -->
-          <template v-if="isSearching">
+          <template v-else-if="isSearching">
             <div v-if="searchResults.length === 0" class="px-4 py-6 text-xs text-gray-400 text-center">無符合結果</div>
             <button
               v-for="s in searchResults"
@@ -55,6 +60,9 @@
               <span class="text-[10px] text-gray-400 mt-0.5">{{ s.church }}</span>
             </button>
           </template>
+
+          <!-- Loading state -->
+          <div v-else-if="seesLoading" class="px-4 py-6 text-xs text-gray-400 text-center">載入中…</div>
 
           <!-- Tree view -->
           <template v-else>
@@ -144,8 +152,9 @@
                     創立 {{ selectedSee.founded_year < 0 ? `主前 ${Math.abs(selectedSee.founded_year)}` : selectedSee.founded_year }} 年
                   </span>
                 </div>
-                <div v-if="selectedSee.current_patriarch" class="mt-1 text-xs text-gray-500">
-                  <span class="text-gray-400">現任：</span>{{ selectedSee.current_patriarch }}
+                <div v-if="selectedSee.current_patriarch_zh" class="mt-1 text-xs text-gray-500">
+                  <span class="text-gray-400">現任：</span>{{ selectedSee.current_patriarch_zh }}
+                  <span v-if="selectedSee.incumbent_since" class="text-gray-400 ml-1">（{{ selectedSee.incumbent_since }}–）</span>
                 </div>
               </div>
               <div class="flex-shrink-0 text-right">
@@ -363,7 +372,9 @@ interface See {
   founded_year: number | null
   abolished_year: number | null
   status: string | null
-  current_patriarch: string | null
+  current_patriarch_zh: string | null
+  current_patriarch_en: string | null
+  incumbent_since: number | null
   location: string | null
   notes: string | null
 }
@@ -388,16 +399,16 @@ interface ChurchGroup  { church: string; sees: See[] }
 interface TraditionGroup { tradition: string; seeCount: number; churches: ChurchGroup[] }
 
 // ── Constants ───────────────────────────────────────────────
-const TRADITION_ORDER = ['未分裂教會', '東正教', '東方正統', '東方天主教', '天主教', '聖公會', '新教']
+const TRADITION_ORDER = ['羅馬公教', '希臘正教', '科普特正教', '敘利亞正教', '亞美尼亞使徒教會', '亞述景教', '基督新教']
 
 const TRAD_COLOR: Record<string, string> = {
-  '未分裂教會': 'bg-stone-100 text-stone-700',
-  '東正教':     'bg-blue-100 text-blue-800',
-  '東方正統':   'bg-teal-100 text-teal-800',
-  '東方天主教': 'bg-amber-100 text-amber-800',
-  '天主教':     'bg-indigo-100 text-indigo-800',
-  '聖公會':     'bg-purple-100 text-purple-800',
-  '新教':       'bg-green-100 text-green-800',
+  '羅馬公教':       'bg-indigo-100 text-indigo-800',
+  '希臘正教':       'bg-blue-100 text-blue-800',
+  '科普特正教':     'bg-amber-100 text-amber-800',
+  '敘利亞正教':     'bg-teal-100 text-teal-800',
+  '亞美尼亞使徒教會': 'bg-red-100 text-red-800',
+  '亞述景教':       'bg-cyan-100 text-cyan-800',
+  '基督新教':       'bg-green-100 text-green-800',
 }
 
 const knownChurches = [
@@ -619,14 +630,22 @@ function statusClass(s: string) {
 }
 
 // ── Load sees on mount ──────────────────────────────────────
+const seesError = ref<string | null>(null)
+
 onMounted(async () => {
   const token = await getToken()
   if (!token) return
   seesLoading.value = true
-  sees.value = await $fetch<See[]>('/api/genealogy/episcopal-sees', {
-    headers: { Authorization: `Bearer ${token}` },
-  })
-  seesLoading.value = false
+  seesError.value = null
+  try {
+    sees.value = await $fetch<See[]>('/api/genealogy/episcopal-sees', {
+      headers: { Authorization: `Bearer ${token}` },
+    })
+  } catch (e: unknown) {
+    seesError.value = e instanceof Error ? e.message : '載入失敗'
+  } finally {
+    seesLoading.value = false
+  }
 })
 </script>
 

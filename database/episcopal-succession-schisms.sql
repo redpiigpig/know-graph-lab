@@ -93,11 +93,11 @@ INSERT INTO episcopal_succession (name_zh, name_en, see, church, succession_numb
  '與安提阿天主教公用同一早期傳承；451年迦克敦後分為兩線'),
 
 -- (B) 敘利亞正教安提阿宗主教（雅各派，Oriental Orthodox）
-('塞維魯', 'Severus of Antioch', '安提阿', '敘利亞正教', 34, 512, 518, '廢黜', '正統',
- 'Eusebius (later sources)', '正統',
+('塞維魯', 'Severus of Antioch', '安提阿', '敘利亞正教', 34, 512, 518, '廢黜', NULL, '正統',
+ 'Eusebius (later sources)',
  '敘利亞正教最重要的早期神學家；被查士丁尼一世廢黜，流亡埃及，死後仍受敘利亞正教尊為聖人'),
-('塞奧多西安一世', 'Theodosius I of Antioch', '安提阿', '敘利亞正教', 35, 519, 521, '廢黜', '正統',
- NULL, '正統',
+('塞奧多西安一世', 'Theodosius I of Antioch', '安提阿', '敘利亞正教', 35, 519, 521, '廢黜', NULL, '正統',
+ NULL,
  '廢黜後敘利亞正教宗主教座長期懸缺'),
 
 -- (C) 馬龍尼特禮宗主教（始終與羅馬共融）

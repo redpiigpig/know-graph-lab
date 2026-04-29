@@ -4,7 +4,7 @@ export default defineEventHandler(async (event) => {
 
   const { data, error } = await supabase
     .from('episcopal_sees')
-    .select('id, see_zh, name_zh, name_en, church, tradition, rite, founded_year, abolished_year, status, current_patriarch, location, notes')
+    .select('id, see_zh, name_zh, name_en, church, tradition, rite, founded_year, abolished_year, status, current_patriarch_zh, current_patriarch_en, incumbent_since, location, notes')
     .order('tradition',    { ascending: true, nullsFirst: true })
     .order('church',       { ascending: true })
     .order('founded_year', { ascending: true, nullsFirst: true })
