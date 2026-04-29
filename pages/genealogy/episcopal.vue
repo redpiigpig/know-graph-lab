@@ -1,135 +1,241 @@
 <template>
   <div class="flex flex-col bg-slate-50" style="height: 100dvh;">
-    <!-- Nav -->
+
+    <!-- ── Nav ────────────────────────────────────────────── -->
     <nav class="flex items-center gap-2 px-4 h-12 bg-white border-b border-gray-100 flex-shrink-0 z-30">
       <NuxtLink to="/genealogy" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
       <div class="w-px h-5 bg-gray-200" />
       <span class="text-sm font-semibold text-gray-900">使徒統緒</span>
-      <span class="text-xs text-gray-400 ml-1">{{ bishops.length > 0 ? `${bishops.length} 位` : '' }}</span>
+      <template v-if="selectedSee">
+        <span class="text-gray-300 text-sm">/</span>
+        <span class="text-xs text-gray-500">{{ selectedSee.tradition }}</span>
+        <span class="text-gray-300 text-sm">/</span>
+        <span class="text-xs font-medium text-gray-700">{{ selectedSee.name_zh }}</span>
+      </template>
       <div class="flex-1" />
       <button
+        v-if="selectedSee"
         class="text-xs px-3 py-1.5 rounded-lg bg-violet-500 hover:bg-violet-600 text-white font-medium transition shadow-sm"
         @click="openAdd"
       >+ 新增主教</button>
     </nav>
 
-    <!-- Filter bar -->
-    <div class="flex items-center gap-2 px-4 h-10 bg-white border-b border-gray-100 flex-shrink-0 flex-wrap">
-      <div class="relative">
-        <span class="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-300 text-[11px] pointer-events-none select-none">🔍</span>
-        <input
-          v-model="search"
-          class="pl-7 pr-3 py-1 text-xs border border-gray-200 rounded-lg outline-none focus:border-violet-400 transition bg-white w-44"
-          placeholder="搜尋姓名…"
-        />
-      </div>
-      <!-- See filter -->
-      <div class="flex gap-1">
-        <button
-          v-for="s in seeOptions"
-          :key="s"
-          class="text-xs px-2.5 py-1 rounded-lg border transition"
-          :class="seeFilter === s
-            ? 'bg-violet-50 border-violet-300 text-violet-700 font-medium'
-            : 'border-gray-200 text-gray-500 hover:bg-gray-50'"
-          @click="seeFilter = s"
-        >{{ s === '' ? '全部' : s }}</button>
-      </div>
-      <div class="w-px h-5 bg-gray-200" />
-      <!-- Status filter -->
-      <div class="flex gap-1">
-        <button
-          v-for="st in statusOptions"
-          :key="st.value"
-          class="text-xs px-2.5 py-1 rounded-lg border transition"
-          :class="statusFilter === st.value
-            ? 'bg-gray-800 border-gray-800 text-white font-medium'
-            : 'border-gray-200 text-gray-500 hover:bg-gray-50'"
-          @click="statusFilter = st.value"
-        >{{ st.label }}</button>
-      </div>
-      <span v-if="search || seeFilter || statusFilter" class="text-xs text-gray-400">{{ filtered.length }} / {{ bishops.length }} 筆</span>
-    </div>
+    <!-- ── Two-panel body ─────────────────────────────────── -->
+    <div class="flex flex-1 min-h-0">
 
-    <!-- Table -->
-    <div class="flex-1 min-h-0 overflow-auto p-4">
-      <div v-if="loading" class="flex items-center justify-center h-32 text-gray-400 text-sm">載入中…</div>
+      <!-- ── Left: tradition tree ──────────────────────────── -->
+      <aside class="w-60 flex-shrink-0 border-r border-gray-100 bg-white flex flex-col min-h-0">
 
-      <div v-else class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <table class="w-full text-sm border-collapse">
-          <thead>
-            <tr class="bg-gray-50 border-b border-gray-200">
-              <th class="px-3 py-2.5 text-left font-medium text-gray-600 whitespace-nowrap">主教座</th>
-              <th class="px-3 py-2.5 text-left font-medium text-gray-600 whitespace-nowrap">教會傳統</th>
-              <th class="px-3 py-2.5 text-left font-medium text-gray-600 whitespace-nowrap">任次</th>
-              <th class="px-3 py-2.5 text-left font-medium text-gray-600 whitespace-nowrap">中文名</th>
-              <th class="px-3 py-2.5 text-left font-medium text-gray-600 whitespace-nowrap">英文名</th>
-              <th class="px-3 py-2.5 text-left font-medium text-gray-600 whitespace-nowrap">身份</th>
-              <th class="px-3 py-2.5 text-left font-medium text-gray-600 whitespace-nowrap">就任年</th>
-              <th class="px-3 py-2.5 text-left font-medium text-gray-600 whitespace-nowrap">卸任年</th>
-              <th class="px-3 py-2.5 text-left font-medium text-gray-600 whitespace-nowrap">卸任原因</th>
-              <th class="px-3 py-2.5 text-left font-medium text-gray-600 whitespace-nowrap">任命者</th>
-              <th class="px-3 py-2.5 text-left font-medium text-gray-600 whitespace-nowrap">出處</th>
-              <th class="px-3 py-2.5 text-left font-medium text-gray-600 whitespace-nowrap">備注</th>
-              <th class="px-3 py-2.5 w-16"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-if="filtered.length === 0">
-              <td colspan="13" class="px-4 py-10 text-center text-gray-400">
-                {{ bishops.length === 0 ? '尚無資料，點擊「新增主教」開始建立' : '沒有符合的搜尋結果' }}
-              </td>
-            </tr>
-            <template v-for="(group, see) in groupedFiltered" :key="see">
-              <!-- See header row -->
-              <tr class="bg-violet-50/60 border-b border-violet-100">
-                <td colspan="13" class="px-3 py-1.5">
-                  <span class="text-xs font-semibold text-violet-700">{{ see }}</span>
-                </td>
-              </tr>
-              <tr
-                v-for="bishop in group"
-                :key="bishop.id"
-                class="border-b border-gray-100 hover:bg-violet-50/20 transition group"
+        <!-- Sidebar search -->
+        <div class="px-3 py-2 border-b border-gray-100 flex-shrink-0">
+          <div class="relative">
+            <span class="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-300 text-[10px] pointer-events-none">🔍</span>
+            <input
+              v-model="sidebarSearch"
+              class="w-full pl-6 pr-3 py-1.5 text-xs border border-gray-200 rounded-lg outline-none focus:border-violet-400 transition bg-white"
+              placeholder="搜尋主教座…"
+            />
+          </div>
+        </div>
+
+        <!-- Tree / search results -->
+        <div class="flex-1 overflow-y-auto">
+
+          <!-- Search results (flat list) -->
+          <template v-if="isSearching">
+            <div v-if="searchResults.length === 0" class="px-4 py-6 text-xs text-gray-400 text-center">無符合結果</div>
+            <button
+              v-for="s in searchResults"
+              :key="s.see_zh + s.church"
+              class="w-full flex flex-col px-4 py-2 text-left hover:bg-violet-50 border-b border-gray-50 transition"
+              :class="selectedSee?.see_zh === s.see_zh && selectedSee?.church === s.church ? 'bg-violet-50' : ''"
+              @click="selectSee(s)"
+            >
+              <span class="text-xs font-medium text-gray-800 leading-tight">{{ s.name_zh }}</span>
+              <span class="text-[10px] text-gray-400 mt-0.5">{{ s.church }}</span>
+            </button>
+          </template>
+
+          <!-- Tree view -->
+          <template v-else>
+            <div v-for="trad in tree" :key="trad.tradition" class="border-b border-gray-50 last:border-0">
+
+              <!-- Tradition header -->
+              <button
+                class="w-full flex items-center gap-2 px-3 py-2 text-left hover:bg-gray-50 transition"
+                @click="toggleTradition(trad.tradition)"
               >
-                <td class="px-3 py-2 text-gray-500 whitespace-nowrap text-xs">{{ bishop.see }}</td>
-                <td class="px-3 py-2 text-gray-600 whitespace-nowrap text-xs max-w-[120px] truncate" :title="bishop.church || ''">{{ bishop.church || '—' }}</td>
-                <td class="px-3 py-2 text-gray-500 whitespace-nowrap text-xs">{{ bishop.succession_number != null ? `第 ${bishop.succession_number} 任` : '—' }}</td>
-                <td class="px-3 py-2 font-medium text-gray-900 whitespace-nowrap">{{ bishop.name_zh }}</td>
-                <td class="px-3 py-2 text-gray-600 whitespace-nowrap text-xs">{{ bishop.name_en || '—' }}</td>
-                <td class="px-3 py-2 whitespace-nowrap">
-                  <span :class="statusClass(bishop.status)" class="px-1.5 py-0.5 rounded text-xs font-medium">
-                    {{ bishop.status }}
-                  </span>
-                </td>
-                <td class="px-3 py-2 text-gray-600 whitespace-nowrap text-xs">{{ formatYear(bishop.start_year) }}</td>
-                <td class="px-3 py-2 text-gray-600 whitespace-nowrap text-xs">{{ formatYear(bishop.end_year) }}</td>
-                <td class="px-3 py-2 text-gray-500 whitespace-nowrap text-xs">{{ bishop.end_reason || '—' }}</td>
-                <td class="px-3 py-2 text-gray-600 whitespace-nowrap text-xs max-w-[120px] truncate" :title="bishop.appointed_by || ''">{{ bishop.appointed_by || '—' }}</td>
-                <td
-                  class="px-3 py-2 max-w-[180px] truncate text-xs"
-                  :class="bishop.sources ? 'text-indigo-600 cursor-pointer hover:text-indigo-800 hover:underline' : 'text-gray-300'"
-                  @click="bishop.sources && openDetail('出處', bishop.sources, bishop.name_zh)"
-                >{{ bishop.sources || '—' }}</td>
-                <td
-                  class="px-3 py-2 max-w-[160px] truncate text-xs"
-                  :class="bishop.notes ? 'text-gray-500 cursor-pointer hover:text-gray-800 hover:underline' : 'text-gray-300'"
-                  @click="bishop.notes && openDetail('備注', bishop.notes, bishop.name_zh)"
-                >{{ bishop.notes || '—' }}</td>
-                <td class="px-3 py-2">
-                  <div class="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition">
-                    <button class="p-1 rounded hover:bg-violet-100 text-violet-600 text-xs" @click="openEdit(bishop)">編輯</button>
-                    <button class="p-1 rounded hover:bg-red-50 text-red-400 text-xs" @click="deleteBishop(bishop.id)">刪除</button>
+                <span class="text-gray-300 text-[10px] w-3 flex-shrink-0 select-none">{{ expandedTraditions.has(trad.tradition) ? '▾' : '▸' }}</span>
+                <span
+                  class="text-[11px] font-semibold px-1.5 py-0.5 rounded"
+                  :class="TRAD_COLOR[trad.tradition] ?? 'bg-gray-100 text-gray-600'"
+                >{{ trad.tradition }}</span>
+                <span class="ml-auto text-[10px] text-gray-300">{{ trad.seeCount }}</span>
+              </button>
+
+              <!-- Churches within tradition -->
+              <div v-if="expandedTraditions.has(trad.tradition)">
+                <div v-for="ch in trad.churches" :key="ch.church">
+
+                  <!-- Church header -->
+                  <button
+                    class="w-full flex items-center gap-2 pl-6 pr-3 py-1.5 text-left hover:bg-gray-50 transition"
+                    @click="toggleChurch(ch.church)"
+                  >
+                    <span class="text-gray-300 text-[10px] w-3 flex-shrink-0 select-none">{{ expandedChurches.has(ch.church) ? '▾' : '▸' }}</span>
+                    <span class="text-[11px] text-gray-600 truncate">{{ ch.church }}</span>
+                    <span class="ml-auto text-[10px] text-gray-300 flex-shrink-0">{{ ch.sees.length }}</span>
+                  </button>
+
+                  <!-- Sees list -->
+                  <div v-if="expandedChurches.has(ch.church)">
+                    <button
+                      v-for="s in ch.sees"
+                      :key="s.see_zh"
+                      class="w-full flex items-center gap-2 pl-10 pr-3 py-1.5 text-left transition border-l-2 ml-3"
+                      :class="selectedSee?.see_zh === s.see_zh && selectedSee?.church === s.church
+                        ? 'border-violet-400 bg-violet-50 text-violet-800'
+                        : 'border-transparent hover:bg-gray-50 text-gray-700'"
+                      @click="selectSee(s)"
+                    >
+                      <span class="text-xs truncate leading-tight">{{ s.name_zh }}</span>
+                    </button>
                   </div>
-                </td>
-              </tr>
-            </template>
-          </tbody>
-        </table>
-      </div>
+
+                </div>
+              </div>
+
+            </div>
+          </template>
+
+        </div>
+      </aside>
+
+      <!-- ── Right: succession list ─────────────────────────── -->
+      <main class="flex-1 min-h-0 overflow-y-auto">
+
+        <!-- Empty state -->
+        <div v-if="!selectedSee" class="flex flex-col items-center justify-center h-full gap-3 text-center px-8">
+          <div class="text-4xl text-gray-200 select-none">✝</div>
+          <p class="text-sm font-medium text-gray-400">選擇左側主教座以查看傳承</p>
+          <p v-if="!seesLoading" class="text-xs text-gray-300">共 {{ sees.length }} 個主教座</p>
+        </div>
+
+        <!-- See content -->
+        <div v-else>
+
+          <!-- See header -->
+          <div class="bg-white border-b border-gray-100 px-5 py-4 sticky top-0 z-10 shadow-sm">
+            <div class="flex items-start gap-3">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-baseline gap-2 flex-wrap">
+                  <h2 class="text-base font-semibold text-gray-900">{{ selectedSee.name_zh }}</h2>
+                  <span v-if="selectedSee.name_en" class="text-xs text-gray-400">{{ selectedSee.name_en }}</span>
+                </div>
+                <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1.5">
+                  <span
+                    class="text-[10px] font-semibold px-1.5 py-0.5 rounded"
+                    :class="TRAD_COLOR[selectedSee.tradition] ?? 'bg-gray-100 text-gray-600'"
+                  >{{ selectedSee.tradition }}</span>
+                  <span class="text-xs text-gray-500">{{ selectedSee.church }}</span>
+                  <span v-if="selectedSee.rite" class="text-xs text-gray-400">{{ selectedSee.rite }}</span>
+                  <span v-if="selectedSee.location" class="text-xs text-gray-400">📍 {{ selectedSee.location }}</span>
+                  <span v-if="selectedSee.founded_year" class="text-xs text-gray-400">
+                    創立 {{ selectedSee.founded_year < 0 ? `主前 ${Math.abs(selectedSee.founded_year)}` : selectedSee.founded_year }} 年
+                  </span>
+                </div>
+                <div v-if="selectedSee.current_patriarch" class="mt-1 text-xs text-gray-500">
+                  <span class="text-gray-400">現任：</span>{{ selectedSee.current_patriarch }}
+                </div>
+              </div>
+              <div class="flex-shrink-0 text-right">
+                <span v-if="!seqLoading" class="text-xs text-gray-400">{{ seeBishops.length }} 任</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Loading -->
+          <div v-if="seqLoading" class="flex items-center justify-center h-32 text-gray-400 text-sm">載入中…</div>
+
+          <!-- Empty succession -->
+          <div v-else-if="seeBishops.length === 0" class="px-5 py-10 text-center text-sm text-gray-400">
+            此主教座尚無傳承資料
+          </div>
+
+          <!-- Succession table -->
+          <div v-else class="p-4">
+            <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+              <table class="w-full text-sm border-collapse">
+                <thead>
+                  <tr class="bg-gray-50 border-b border-gray-200">
+                    <th class="px-3 py-2 text-left font-medium text-gray-500 text-xs w-10">#</th>
+                    <th class="px-3 py-2 text-left font-medium text-gray-500 text-xs">中文名</th>
+                    <th class="px-3 py-2 text-left font-medium text-gray-500 text-xs">英文名</th>
+                    <th class="px-3 py-2 text-left font-medium text-gray-500 text-xs whitespace-nowrap">任期</th>
+                    <th class="px-3 py-2 text-left font-medium text-gray-500 text-xs whitespace-nowrap">卸任原因</th>
+                    <th class="px-3 py-2 text-left font-medium text-gray-500 text-xs">任命者</th>
+                    <th class="px-3 py-2 text-left font-medium text-gray-500 text-xs w-14">身份</th>
+                    <th class="px-3 py-2 w-14"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <template v-for="b in seeBishops" :key="b.id">
+                    <!-- Main row -->
+                    <tr
+                      class="border-b border-gray-100 hover:bg-violet-50/20 transition cursor-pointer group"
+                      :class="expandedRows.has(b.id) ? 'bg-amber-50/30' : ''"
+                      @click="b.notes ? toggleRow(b.id) : undefined"
+                    >
+                      <td class="px-3 py-2.5 text-xs text-gray-400 whitespace-nowrap">
+                        {{ b.succession_number != null ? b.succession_number : '—' }}
+                      </td>
+                      <td class="px-3 py-2.5 font-medium text-gray-900 whitespace-nowrap text-sm">
+                        <div class="flex items-center gap-1.5">
+                          {{ b.name_zh }}
+                          <span v-if="b.notes" class="text-[9px] text-amber-400 opacity-60 group-hover:opacity-100">▾</span>
+                        </div>
+                      </td>
+                      <td class="px-3 py-2.5 text-xs text-gray-500 max-w-[160px] truncate" :title="b.name_en || ''">
+                        {{ b.name_en || '—' }}
+                      </td>
+                      <td class="px-3 py-2.5 text-xs text-gray-600 whitespace-nowrap font-mono">
+                        {{ formatYear(b.start_year) }}{{ b.end_year != null ? `–${formatYear(b.end_year)}` : b.end_reason ? '' : '–' }}
+                      </td>
+                      <td class="px-3 py-2.5 text-xs text-gray-500 whitespace-nowrap">
+                        {{ b.end_reason || '—' }}
+                      </td>
+                      <td class="px-3 py-2.5 text-xs text-gray-500 max-w-[140px] truncate" :title="b.appointed_by || ''">
+                        {{ b.appointed_by || '—' }}
+                      </td>
+                      <td class="px-3 py-2.5 whitespace-nowrap">
+                        <span :class="statusClass(b.status)" class="px-1.5 py-0.5 rounded text-[10px] font-medium">
+                          {{ b.status }}
+                        </span>
+                      </td>
+                      <td class="px-3 py-2.5">
+                        <div class="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition" @click.stop>
+                          <button class="p-1 rounded hover:bg-violet-100 text-violet-600 text-xs" @click="openEdit(b)">編輯</button>
+                          <button class="p-1 rounded hover:bg-red-50 text-red-400 text-xs" @click="deleteBishop(b.id)">刪除</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- Expanded notes row -->
+                    <tr v-if="expandedRows.has(b.id)" class="border-b border-amber-100 bg-amber-50/40">
+                      <td colspan="8" class="px-5 py-3">
+                        <p class="text-xs text-gray-700 leading-relaxed whitespace-pre-wrap">{{ b.notes }}</p>
+                      </td>
+                    </tr>
+                  </template>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </main>
     </div>
 
-    <!-- Detail modal -->
+    <!-- ── Detail modal (notes/sources popup) ─────────────── -->
     <div
       v-if="detail.show"
       class="fixed inset-0 z-50 flex items-center justify-center bg-black/30 px-4"
@@ -144,24 +250,12 @@
           <button class="text-gray-400 hover:text-gray-600 text-lg leading-none" @click="detail.show = false">×</button>
         </div>
         <div class="px-5 py-4 max-h-[60vh] overflow-y-auto">
-          <template v-if="detail.title === '出處'">
-            <ul class="space-y-1.5">
-              <li
-                v-for="(src, i) in detail.body.split(/[;；]/).map(s => s.trim()).filter(Boolean)"
-                :key="i"
-                class="flex items-start gap-2 text-sm text-indigo-700"
-              >
-                <span class="text-indigo-300 mt-0.5 flex-shrink-0">▸</span>
-                <span>{{ src }}</span>
-              </li>
-            </ul>
-          </template>
-          <p v-else class="text-sm text-gray-700 leading-relaxed whitespace-pre-wrap">{{ detail.body }}</p>
+          <p class="text-sm text-gray-700 leading-relaxed whitespace-pre-wrap">{{ detail.body }}</p>
         </div>
       </div>
     </div>
 
-    <!-- Add / Edit modal -->
+    <!-- ── Add / Edit modal ───────────────────────────────── -->
     <div v-if="showModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/30 px-4" @click.self="showModal = false">
       <div class="bg-white rounded-2xl shadow-xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
         <div class="flex items-center justify-between px-5 py-4 border-b border-gray-100">
@@ -181,12 +275,12 @@
             <label class="block text-xs font-medium text-gray-500 mb-1">主教座 *</label>
             <input v-model="form.see" class="field" placeholder="例：羅馬、安提阿" list="see-list" />
             <datalist id="see-list">
-              <option v-for="s in knownSees" :key="s" :value="s" />
+              <option v-for="s in sees" :key="s.see_zh" :value="s.see_zh" />
             </datalist>
           </div>
           <div>
             <label class="block text-xs font-medium text-gray-500 mb-1">教會傳統</label>
-            <input v-model="form.church" class="field" placeholder="例：未分裂教會、東正教" list="church-list" />
+            <input v-model="form.church" class="field" placeholder="例：東正教、天主教" list="church-list" />
             <datalist id="church-list">
               <option v-for="c in knownChurches" :key="c" :value="c" />
             </datalist>
@@ -217,19 +311,22 @@
             <select v-model="form.end_reason" class="field">
               <option value="">—</option>
               <option value="殉道">殉道</option>
-              <option value="自然死亡">自然死亡</option>
+              <option value="逝世">逝世</option>
+              <option value="退休">退休</option>
               <option value="辭職">辭職</option>
               <option value="廢黜">廢黜</option>
+              <option value="調任">調任</option>
+              <option value="流亡">流亡</option>
               <option value="不明">不明</option>
             </select>
           </div>
           <div class="col-span-2">
-            <label class="block text-xs font-medium text-gray-500 mb-1">任命者（第一任適用）</label>
-            <input v-model="form.appointed_by" class="field" placeholder="例：耶穌基督、使徒彼得" />
+            <label class="block text-xs font-medium text-gray-500 mb-1">任命者</label>
+            <input v-model="form.appointed_by" class="field" placeholder="例：耶穌基督、普世牧首" />
           </div>
           <div class="col-span-2">
-            <label class="block text-xs font-medium text-gray-500 mb-1">出處（分號分隔多處）</label>
-            <input v-model="form.sources" class="field" placeholder="例：Eusebius, HE III.3; Irenaeus, AH III.3" />
+            <label class="block text-xs font-medium text-gray-500 mb-1">出處（分號分隔）</label>
+            <input v-model="form.sources" class="field" placeholder="例：Eusebius HE III.3; Irenaeus AH III.3" />
           </div>
           <div class="col-span-2">
             <label class="block text-xs font-medium text-gray-500 mb-1">備注</label>
@@ -246,12 +343,30 @@
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
 <script setup lang="ts">
 definePageMeta({ middleware: 'auth' })
 useHead({ title: '使徒統緒 — Know Graph Lab' })
+
+// ── Types ───────────────────────────────────────────────────
+interface See {
+  id: string
+  see_zh: string
+  name_zh: string
+  name_en: string | null
+  church: string
+  tradition: string
+  rite: string | null
+  founded_year: number | null
+  abolished_year: number | null
+  status: string | null
+  current_patriarch: string | null
+  location: string | null
+  notes: string | null
+}
 
 interface Bishop {
   id: string
@@ -269,6 +384,34 @@ interface Bishop {
   notes: string | null
 }
 
+interface ChurchGroup  { church: string; sees: See[] }
+interface TraditionGroup { tradition: string; seeCount: number; churches: ChurchGroup[] }
+
+// ── Constants ───────────────────────────────────────────────
+const TRADITION_ORDER = ['未分裂教會', '東正教', '東方正統', '東方天主教', '天主教', '聖公會', '新教']
+
+const TRAD_COLOR: Record<string, string> = {
+  '未分裂教會': 'bg-stone-100 text-stone-700',
+  '東正教':     'bg-blue-100 text-blue-800',
+  '東方正統':   'bg-teal-100 text-teal-800',
+  '東方天主教': 'bg-amber-100 text-amber-800',
+  '天主教':     'bg-indigo-100 text-indigo-800',
+  '聖公會':     'bg-purple-100 text-purple-800',
+  '新教':       'bg-green-100 text-green-800',
+}
+
+const knownChurches = [
+  '未分裂教會', '東正教', '俄羅斯正教會', '烏克蘭正教會', '塞爾維亞正教會',
+  '羅馬尼亞正教會', '保加利亞正教會', '格魯吉亞正教會',
+  '亞美尼亞使徒教會', '亞美尼亞使徒教會（基里基亞）',
+  '亞美尼亞使徒教會（君士坦丁堡）', '亞美尼亞使徒教會（耶路撒冷）',
+  '敘利亞正統教會', '科普特正統教會', '衣索比亞正統特瓦赫多教會', '馬蘭卡拉正統敘利亞教會',
+  '天主教', '烏克蘭希臘禮天主教會', '馬龍尼天主教會', '梅勒基特希臘天主教會',
+  '加色丁天主教會', '亞美尼亞天主教會', '敘利亞天主教會', '科普特天主教會',
+  '英格蘭教會', '聖公會',
+]
+
+// ── Auth helper ─────────────────────────────────────────────
 const supabase = useSupabaseClient()
 const router   = useRouter()
 
@@ -278,59 +421,107 @@ async function getToken() {
   return session.access_token
 }
 
-// ── State ──────────────────────────────────────────────────
-const loading   = ref(true)
-const saving    = ref(false)
-const showModal = ref(false)
-const editingId = ref<string | null>(null)
-const bishops   = ref<Bishop[]>([])
-const form      = ref(emptyForm())
+// ── Sidebar state ───────────────────────────────────────────
+const sees          = ref<See[]>([])
+const seesLoading   = ref(true)
+const sidebarSearch = ref('')
 
-// ── Filters ────────────────────────────────────────────────
-const search       = ref('')
-const seeFilter    = ref('')
-const statusFilter = ref('')
+const expandedTraditions = ref(new Set<string>())
+const expandedChurches   = ref(new Set<string>())
 
-const knownSees     = ['羅馬', '君士坦丁堡', '亞歷山大', '安提阿', '耶路撒冷']
-const knownChurches = ['未分裂教會', '東正教', '天主教', '科普特正教', '科普特天主教', '敘利亞正教', '敘利亞天主教', '馬龍尼特禮天主教', '希臘天主教麥勒基特禮', '亞美尼亞正教', '天主教（拉丁禮）', '天主教（亞維農系）', '天主教（比薩系）']
-
-const seeOptions    = computed(() => ['', ...Array.from(new Set(bishops.value.map(b => b.see))).sort()])
-const statusOptions = [
-  { value: '', label: '全部' },
-  { value: '正統', label: '正統' },
-  { value: '對立', label: '對立' },
-]
-
-const filtered = computed(() => {
-  let list = bishops.value
-  if (seeFilter.value)    list = list.filter(b => b.see === seeFilter.value)
-  if (statusFilter.value) list = list.filter(b => b.status === statusFilter.value)
-  if (search.value.trim()) {
-    const q = search.value.trim().toLowerCase()
-    list = list.filter(b =>
-      b.name_zh.toLowerCase().includes(q) ||
-      (b.name_en || '').toLowerCase().includes(q)
-    )
-  }
-  return list
-})
-
-const groupedFiltered = computed(() => {
-  const groups: Record<string, Bishop[]> = {}
-  for (const b of filtered.value) {
-    if (!groups[b.see]) groups[b.see] = []
-    groups[b.see].push(b)
-  }
-  return groups
-})
-
-// ── Detail popup ───────────────────────────────────────────
-const detail = ref({ show: false, title: '', body: '', personName: '' })
-function openDetail(title: string, body: string, personName: string) {
-  detail.value = { show: true, title, body, personName }
+function toggleTradition(t: string) {
+  const s = expandedTraditions.value
+  s.has(t) ? s.delete(t) : s.add(t)
+  expandedTraditions.value = new Set(s)
+}
+function toggleChurch(c: string) {
+  const s = expandedChurches.value
+  s.has(c) ? s.delete(c) : s.add(c)
+  expandedChurches.value = new Set(s)
 }
 
-// ── CRUD ───────────────────────────────────────────────────
+// ── Tree computation ────────────────────────────────────────
+const tree = computed<TraditionGroup[]>(() => {
+  const byTrad = new Map<string, Map<string, See[]>>()
+  for (const s of sees.value) {
+    const trad = s.tradition || '其他'
+    if (!byTrad.has(trad)) byTrad.set(trad, new Map())
+    const byChurch = byTrad.get(trad)!
+    if (!byChurch.has(s.church)) byChurch.set(s.church, [])
+    byChurch.get(s.church)!.push(s)
+  }
+
+  const ordered: TraditionGroup[] = []
+  const remaining = new Set(byTrad.keys())
+
+  for (const t of TRADITION_ORDER) {
+    if (byTrad.has(t)) {
+      const churches: ChurchGroup[] = []
+      byTrad.get(t)!.forEach((seelist, church) => {
+        churches.push({ church, sees: seelist })
+      })
+      ordered.push({ tradition: t, seeCount: churches.reduce((n, c) => n + c.sees.length, 0), churches })
+      remaining.delete(t)
+    }
+  }
+  for (const t of remaining) {
+    const churches: ChurchGroup[] = []
+    byTrad.get(t)!.forEach((seelist, church) => {
+      churches.push({ church, sees: seelist })
+    })
+    ordered.push({ tradition: t, seeCount: churches.reduce((n, c) => n + c.sees.length, 0), churches })
+  }
+  return ordered
+})
+
+const isSearching = computed(() => sidebarSearch.value.trim().length > 0)
+
+const searchResults = computed(() => {
+  if (!isSearching.value) return []
+  const q = sidebarSearch.value.trim().toLowerCase()
+  return sees.value.filter(s =>
+    s.name_zh.toLowerCase().includes(q) ||
+    (s.name_en || '').toLowerCase().includes(q) ||
+    s.see_zh.toLowerCase().includes(q) ||
+    s.church.toLowerCase().includes(q)
+  )
+})
+
+// ── Succession list state ───────────────────────────────────
+const selectedSee  = ref<See | null>(null)
+const seeBishops   = ref<Bishop[]>([])
+const seqLoading   = ref(false)
+const expandedRows = ref(new Set<string>())
+
+async function selectSee(s: See) {
+  selectedSee.value = s
+  expandedRows.value = new Set()
+  seqLoading.value = true
+  try {
+    const token = await getToken()
+    if (!token) return
+    seeBishops.value = await $fetch<Bishop[]>('/api/genealogy/episcopal-succession', {
+      headers: { Authorization: `Bearer ${token}` },
+      query: { see: s.see_zh, church: s.church },
+    })
+  } finally {
+    seqLoading.value = false
+  }
+}
+
+function toggleRow(id: string) {
+  const s = expandedRows.value
+  s.has(id) ? s.delete(id) : s.add(id)
+  expandedRows.value = new Set(s)
+}
+
+// ── Add / Edit modal state ──────────────────────────────────
+const showModal = ref(false)
+const editingId = ref<string | null>(null)
+const saving    = ref(false)
+const form      = ref(emptyForm())
+const detail    = ref({ show: false, title: '', body: '', personName: '' })
+
 function emptyForm() {
   return {
     name_zh: '', name_en: '', see: '', church: '',
@@ -344,19 +535,13 @@ function emptyForm() {
   }
 }
 
-async function load() {
-  loading.value = true
-  const token = await getToken()
-  if (!token) { loading.value = false; return }
-  bishops.value = await $fetch<Bishop[]>('/api/genealogy/episcopal-succession', {
-    headers: { Authorization: `Bearer ${token}` },
-  })
-  loading.value = false
-}
-
 function openAdd() {
   editingId.value = null
   form.value = emptyForm()
+  if (selectedSee.value) {
+    form.value.see    = selectedSee.value.see_zh
+    form.value.church = selectedSee.value.church
+  }
   showModal.value = true
 }
 
@@ -390,18 +575,17 @@ async function save() {
         method: 'PATCH', body: form.value,
         headers: { Authorization: `Bearer ${token}` },
       })
-      const idx = bishops.value.findIndex(b => b.id === editingId.value)
-      if (idx >= 0) bishops.value[idx] = updated
+      const idx = seeBishops.value.findIndex(b => b.id === editingId.value)
+      if (idx >= 0) seeBishops.value[idx] = updated
     } else {
       const created = await $fetch<Bishop>('/api/genealogy/episcopal-succession', {
         method: 'POST', body: form.value,
         headers: { Authorization: `Bearer ${token}` },
       })
-      bishops.value.push(created)
-      bishops.value.sort((a, b) =>
-        a.see.localeCompare(b.see) ||
-        (a.church || '').localeCompare(b.church || '') ||
-        ((a.succession_number ?? 9999) - (b.succession_number ?? 9999))
+      seeBishops.value.push(created)
+      seeBishops.value.sort((a, b) =>
+        (a.succession_number ?? 9999) - (b.succession_number ?? 9999) ||
+        ((a.start_year ?? 9999) - (b.start_year ?? 9999))
       )
     }
     showModal.value = false
@@ -418,22 +602,32 @@ async function deleteBishop(id: string) {
     method: 'DELETE',
     headers: { Authorization: `Bearer ${token}` },
   })
-  bishops.value = bishops.value.filter(b => b.id !== id)
+  seeBishops.value = seeBishops.value.filter(b => b.id !== id)
 }
 
+// ── Helpers ─────────────────────────────────────────────────
 function formatYear(y: number | null) {
-  if (y == null) return '—'
+  if (y == null) return '至今'
   return y < 0 ? `主前 ${Math.abs(y)}` : `${y}`
 }
 
 function statusClass(s: string) {
-  if (s === '正統')    return 'bg-emerald-50 text-emerald-700'
-  if (s === '對立')    return 'bg-red-50 text-red-600'
+  if (s === '正統')       return 'bg-emerald-50 text-emerald-700'
+  if (s === '對立')       return 'bg-red-50 text-red-600'
   if (s === '廢黜後復位') return 'bg-amber-50 text-amber-700'
   return 'bg-gray-100 text-gray-500'
 }
 
-onMounted(load)
+// ── Load sees on mount ──────────────────────────────────────
+onMounted(async () => {
+  const token = await getToken()
+  if (!token) return
+  seesLoading.value = true
+  sees.value = await $fetch<See[]>('/api/genealogy/episcopal-sees', {
+    headers: { Authorization: `Bearer ${token}` },
+  })
+  seesLoading.value = false
+})
 </script>
 
 <style scoped>
