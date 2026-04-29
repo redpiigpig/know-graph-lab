@@ -47,6 +47,13 @@ const files = [
   "database/episcopal-succession-gniezno-esztergom.sql",
   "database/episcopal-succession-catholic-americas.sql",
   "database/episcopal-succession-catholic-asia-africa.sql",
+  "database/episcopal-sees-catholic-europe-2.sql",
+  "database/episcopal-succession-france.sql",
+  "database/episcopal-succession-rhineland.sql",
+  "database/episcopal-succession-iberian.sql",
+  "database/episcopal-succession-central-europe.sql",
+  "database/episcopal-succession-americas-2.sql",
+  "database/episcopal-succession-asia-oceania.sql",
 ];
 
 for (const file of files) {
