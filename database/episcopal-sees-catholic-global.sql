@@ -341,10 +341,10 @@ INSERT INTO episcopal_sees (name_zh, name_en, see_zh, church, tradition, rite, f
  '1959年設主教座；1969年升為大主教座。', 'Catholic Church records; Lusaka archdiocese'),
 
 -- 大洋洲
-('悉尼大主教座',
+('雪梨大主教座',
  'Archdiocese of Sydney',
- '悉尼', '天主教', '天主教', '羅馬禮', 1842, NULL, '現存',
- '大主教安東尼·費舍爾', 'Archbishop Anthony Fisher', 2014, '澳洲悉尼',
+ '雪梨', '天主教', '天主教', '羅馬禮', 1842, NULL, '現存',
+ '大主教安東尼·費舍爾', 'Archbishop Anthony Fisher', 2014, '澳洲雪梨',
  '1842年設主教座；1937年升為大主教座；澳洲天主教首席大主教座；2008年世界青年節在此舉行。',
  'Catholic Church records; Sydney archdiocese'),
 

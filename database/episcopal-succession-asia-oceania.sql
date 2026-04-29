@@ -1,5 +1,5 @@
 -- ============================================================
--- 天主教大主教傳承——亞洲（東京、孟買、河內）及大洋洲（悉尼）
+-- 天主教大主教傳承——亞洲（東京、孟買、河內）及大洋洲（雪梨）
 -- ============================================================
 
 INSERT INTO episcopal_succession
@@ -87,24 +87,24 @@ INSERT INTO episcopal_succession
   (name_zh, name_en, see, church, succession_number, start_year, end_year, end_reason, appointed_by, status, sources, notes) VALUES
 
 -- ==============================
--- 悉尼（Sydney）
+-- 雪梨（Sydney）
 -- 澳大利亞天主教首席大主教區
 -- ==============================
-('若翰·鮑爾', 'John Bede Polding', '悉尼', '天主教', 1, 1835, 1877, '逝世', '教宗額我略十六世', '正統', 'Catholic Hierarchy', '澳大利亞首任主教（1835）及大主教（1842年升格）；本篤會士；英格蘭裔；對原住民抱持同情態度；服務囚犯移民社區'),
-('羅傑·莫利根', 'Roger Bede Vaughan', '悉尼', '天主教', 2, 1877, 1883, '逝世', '教宗庇護九世', '正統', 'Catholic Hierarchy', '本篤會士；反對義務公立教育（主張天主教學校系統）'),
-('帕特里克·莫蘭', 'Patrick Moran', '悉尼', '天主教', 3, 1884, 1911, '逝世', '教宗利奧十三世', '正統', 'Catholic Hierarchy', '樞機；澳大利亞第一位樞機；愛爾蘭裔；推動澳大利亞聯邦（1901）；勞工權利支持者'),
-('邁克爾·凱利', 'Michael Kelly', '悉尼', '天主教', 4, 1911, 1940, '逝世', '教宗庇護十世', '正統', 'Catholic Hierarchy', '一戰、大蕭條期間；推動天主教學校系統擴張'),
-('諾曼·湯馬斯·吉爾羅伊', 'Norman Thomas Gilroy', '悉尼', '天主教', 5, 1940, 1971, '退休', '教宗庇護十二世', '正統', 'Catholic Hierarchy', '樞機；梵二大公會議參與者；澳大利亞工黨天主教移民社區的橋梁'),
-('詹姆斯·弗里曼', 'James Freeman', '悉尼', '天主教', 6, 1971, 1983, '退休', '教宗保羅六世', '正統', 'Catholic Hierarchy', '樞機；梵二後改革推動者'),
-('愛德華·克利夫頓·班奈', 'Edward Clancy', '悉尼', '天主教', 7, 1983, 2001, '退休', '教宗若望保祿二世', '正統', 'Catholic Hierarchy', '樞機；2008年世界青年節（悉尼）的奠基準備工作'),
-('喬治·佩爾', 'George Pell', '悉尼', '天主教', 8, 2001, 2014, '轉任', '教宗若望保祿二世', '正統', 'Catholic Hierarchy', '樞機；2008年世界青年節（WYD Sydney）；後任聖座財政秘書處部長（C9成員）；2018年因性醜聞被定罪、2020年上訴得直後獲釋；2023年逝世'),
-('安東尼·菲舍爾', 'Anthony Fisher', '悉尼', '天主教', 9, 2014, NULL, NULL, '教宗方濟각', '正統', 'Catholic Hierarchy', '多明我會士；生命倫理學家；澳大利亞天主教主教會議主席（2018–）');
+('若翰·鮑爾', 'John Bede Polding', '雪梨', '天主教', 1, 1835, 1877, '逝世', '教宗額我略十六世', '正統', 'Catholic Hierarchy', '澳大利亞首任主教（1835）及大主教（1842年升格）；本篤會士；英格蘭裔；對原住民抱持同情態度；服務囚犯移民社區'),
+('羅傑·莫利根', 'Roger Bede Vaughan', '雪梨', '天主教', 2, 1877, 1883, '逝世', '教宗庇護九世', '正統', 'Catholic Hierarchy', '本篤會士；反對義務公立教育（主張天主教學校系統）'),
+('帕特里克·莫蘭', 'Patrick Moran', '雪梨', '天主教', 3, 1884, 1911, '逝世', '教宗利奧十三世', '正統', 'Catholic Hierarchy', '樞機；澳大利亞第一位樞機；愛爾蘭裔；推動澳大利亞聯邦（1901）；勞工權利支持者'),
+('邁克爾·凱利', 'Michael Kelly', '雪梨', '天主教', 4, 1911, 1940, '逝世', '教宗庇護十世', '正統', 'Catholic Hierarchy', '一戰、大蕭條期間；推動天主教學校系統擴張'),
+('諾曼·湯馬斯·吉爾羅伊', 'Norman Thomas Gilroy', '雪梨', '天主教', 5, 1940, 1971, '退休', '教宗庇護十二世', '正統', 'Catholic Hierarchy', '樞機；梵二大公會議參與者；澳大利亞工黨天主教移民社區的橋梁'),
+('詹姆斯·弗里曼', 'James Freeman', '雪梨', '天主教', 6, 1971, 1983, '退休', '教宗保羅六世', '正統', 'Catholic Hierarchy', '樞機；梵二後改革推動者'),
+('愛德華·克利夫頓·班奈', 'Edward Clancy', '雪梨', '天主教', 7, 1983, 2001, '退休', '教宗若望保祿二世', '正統', 'Catholic Hierarchy', '樞機；2008年世界青年節（雪梨）的奠基準備工作'),
+('喬治·佩爾', 'George Pell', '雪梨', '天主教', 8, 2001, 2014, '轉任', '教宗若望保祿二世', '正統', 'Catholic Hierarchy', '樞機；2008年世界青年節（WYD Sydney）；後任聖座財政秘書處部長（C9成員）；2018年因性醜聞被定罪、2020年上訴得直後獲釋；2023年逝世'),
+('安東尼·菲舍爾', 'Anthony Fisher', '雪梨', '天主教', 9, 2014, NULL, NULL, '教宗方濟각', '正統', 'Catholic Hierarchy', '多明我會士；生命倫理學家；澳大利亞天主教主教會議主席（2018–）');
 
 WITH ranked AS (
   SELECT id, succession_number,
     LAG(id) OVER (PARTITION BY see, church ORDER BY succession_number) AS prev_id
   FROM episcopal_succession
-  WHERE see = '悉尼' AND church = '天主教'
+  WHERE see = '雪梨' AND church = '天主教'
 )
 UPDATE episcopal_succession es
 SET predecessor_id = r.prev_id
