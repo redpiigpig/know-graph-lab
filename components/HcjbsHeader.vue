@@ -51,7 +51,7 @@ const logoUrl = '/xuanzang/header_logo.png'
 const route = useRoute()
 
 useHead({
-  link: [{ rel: 'icon', type: 'image/png', href: '/xuanzang/header_logo.png' }]
+  link: [{ rel: 'icon', type: 'image/png', href: '/xuanzang/logo.png' }]
 })
 
 const nav = [
