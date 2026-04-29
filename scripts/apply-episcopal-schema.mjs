@@ -42,6 +42,11 @@ const files = [
   "database/episcopal-succession-latin-sees.sql",
   "database/episcopal-succession-anglican-provinces.sql",
   "database/episcopal-succession-protestant.sql",
+  "database/episcopal-sees-catholic-europe.sql",
+  "database/episcopal-sees-catholic-global.sql",
+  "database/episcopal-succession-gniezno-esztergom.sql",
+  "database/episcopal-succession-catholic-americas.sql",
+  "database/episcopal-succession-catholic-asia-africa.sql",
 ];
 
 for (const file of files) {
