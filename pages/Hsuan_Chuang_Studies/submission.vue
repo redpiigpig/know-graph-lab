@@ -131,7 +131,7 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: "玄奘大學 - 投稿指引", link: [{ rel: 'icon', type: 'image/png', href: '/api/xuanzang/logo-icon' }] })
+useHead({ title: "玄奘大學 - 投稿指引", link: [{ rel: 'icon', type: 'image/png', href: '/xuanzang/header_logo.png' }] })
 const lang = useState<'zh' | 'en'>('xuanzangLang', () => 'zh')
 const toggle = () => { lang.value = lang.value === 'zh' ? 'en' : 'zh' }
 

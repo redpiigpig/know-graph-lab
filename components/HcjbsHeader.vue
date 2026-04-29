@@ -47,11 +47,11 @@
 defineProps<{ lang: 'zh' | 'en' }>()
 defineEmits(['toggle'])
 
-const logoUrl = '/api/xuanzang/logo'
+const logoUrl = '/xuanzang/header_logo.png'
 const route = useRoute()
 
 useHead({
-  link: [{ rel: 'icon', type: 'image/png', href: '/api/xuanzang/logo-icon' }]
+  link: [{ rel: 'icon', type: 'image/png', href: '/xuanzang/header_logo.png' }]
 })
 
 const nav = [

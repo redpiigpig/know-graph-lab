@@ -40,8 +40,7 @@
 </template>
 
 <script setup lang="ts">
-const logoUrl = '/api/xuanzang/logo'
-const footerLogoUrl = '/api/xuanzang/footer-logo'
+const footerLogoUrl = '/xuanzang/footer_logo.jpg'
 
 const today = new Date().toISOString().slice(0, 10).replace(/-/g, '-')
 const visitorCount = '155123'
