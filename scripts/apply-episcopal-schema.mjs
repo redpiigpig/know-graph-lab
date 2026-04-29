@@ -36,6 +36,12 @@ const files = [
   "database/episcopal-sees-autocephalous.sql",
   "database/episcopal-succession-primates.sql",
   "database/episcopal-succession-primates-oriental.sql",
+  "database/episcopal-sees-latin.sql",
+  "database/episcopal-succession-canterbury.sql",
+  "database/episcopal-succession-york.sql",
+  "database/episcopal-succession-latin-sees.sql",
+  "database/episcopal-succession-anglican-provinces.sql",
+  "database/episcopal-succession-protestant.sql",
 ];
 
 for (const file of files) {
