@@ -3,7 +3,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const TOKEN  = '>[REDACTED_PAT_2]'
+const TOKEN  = '>[REDACTED_PAT_1]'
 const REF    = 'vloqgautkahgmqcwgfuo'
 const URL    = `https://api.supabase.com/v1/projects/${REF}/database/query`
 

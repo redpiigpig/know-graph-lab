@@ -1,7 +1,7 @@
 // Update birth_year (Anno Mundi 創世紀元) for biblical people
 // Source: Genesis 5, 11, 21:5, 25:26 (Masoretic text)
 // AM 1 = year of creation; positive integer stored as-is in birth_year column
-const TOKEN = '>[REDACTED_PAT_2]'
+const TOKEN = '>[REDACTED_PAT_1]'
 const REF   = 'vloqgautkahgmqcwgfuo'
 const URL   = `https://api.supabase.com/v1/projects/${REF}/database/query`
 

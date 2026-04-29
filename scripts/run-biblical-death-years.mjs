@@ -1,6 +1,6 @@
 // Compute death_year = birth_year + lifespan - 1 for biblical patriarchs
 // Sources: Gen 5, 9:29, 11, 23:1, 25:7,17, 35:28, 47:28
-const TOKEN = '>[REDACTED_PAT_2]'
+const TOKEN = '>[REDACTED_PAT_1]'
 const REF   = 'vloqgautkahgmqcwgfuo'
 const URL   = `https://api.supabase.com/v1/projects/${REF}/database/query`
 

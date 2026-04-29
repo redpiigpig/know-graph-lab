@@ -1,4 +1,4 @@
-const TOKEN = '>[REDACTED_PAT_2]'
+const TOKEN = '>[REDACTED_PAT_1]'
 const REF   = 'vloqgautkahgmqcwgfuo'
 const URL   = `https://api.supabase.com/v1/projects/${REF}/database/query`
 

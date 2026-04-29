@@ -19,9 +19,9 @@ async function runSql(label, query) {
   return ok
 }
 
-const remainingOtSql = fs.readFileSync(path.join(__dirname, '../database/biblical-remaining-ot.sql'), 'utf8')
-console.log('=== Step 1: Insert remaining OT people ===')
-await runSql('remaining-ot-seed', remainingOtSql)
+const ntSql = fs.readFileSync(path.join(__dirname, '../database/new-testament.sql'), 'utf8')
+console.log('=== Step 1: Insert New Testament people ===')
+await runSql('nt-seed', ntSql)
 
 const autolinkSql = fs.readFileSync(path.join(__dirname, '../database/biblical-genealogy-autolink.sql'), 'utf8')
 console.log('\n=== Step 2: Autolink + generation recompute ===')
@@ -34,19 +34,36 @@ await runSql('manual-generations', manualSql)
 console.log('\n=== Step 4: Verification ===')
 await runSql('total',    `SELECT COUNT(*) AS total FROM biblical_people`)
 await runSql('null-gen', `SELECT COUNT(*) AS null_gen FROM biblical_people WHERE generation IS NULL`)
-await runSql('prophets-check', `
+await runSql('matthew-chain', `
   SELECT name_zh, generation FROM biblical_people
   WHERE name_zh IN (
-    '何西阿（比利之子）','約珥（毗土利之子）','阿摩司（提哥亞牧人）',
-    '約拿（亞米太之子）','彌迦（摩利沙人）','那鴻（伊勒歌斯人）',
-    '哈巴谷（先知）','西番雅（古實之子）','以西結（布西之子）',
-    '但以理（先知）','哈該（先知）','撒迦利亞（比利家之子）','瑪拉基（先知）'
+    '亞比烏（所羅巴伯之子）','馬但（以利亞撒之子）','雅各（馬但之子）',
+    '約瑟（馬利亞之夫）','耶穌（拿撒勒人）'
   )
   ORDER BY generation NULLS LAST
 `)
-await runSql('job-check', `
+await runSql('jesus-family', `
   SELECT name_zh, generation FROM biblical_people
-  WHERE name_zh IN ('約伯（烏斯人）','以利法（帖曼人）','以利戶（巴拿基勒之子）')
+  WHERE name_zh IN (
+    '馬利亞（耶穌之母）','撒迦利亞（施洗約翰之父）','施洗約翰（撒迦利亞之子）',
+    '雅各（主的兄弟）','拿但（大衛之子）'
+  )
+  ORDER BY generation NULLS LAST
+`)
+await runSql('herod-chain', `
+  SELECT name_zh, generation FROM biblical_people
+  WHERE name_zh IN (
+    '安提帕特（大希律之父）','大希律（安提帕特之子）','希律安提帕（大希律之子）',
+    '亞里斯托布魯（大希律之子）','亞基帕一世（亞里斯托布魯之子）','亞基帕二世（亞基帕一世之子）'
+  )
+  ORDER BY generation NULLS LAST
+`)
+await runSql('apostles', `
+  SELECT name_zh, generation FROM biblical_people
+  WHERE name_zh IN (
+    '西門彼得（約拿之子）','安得烈（約拿之子）','雅各（西庇太之子）',
+    '約翰（西庇太之子）','保羅（使徒）','提摩太（友尼基之子）'
+  )
   ORDER BY generation NULLS LAST
 `)
 await runSql('null-list', `

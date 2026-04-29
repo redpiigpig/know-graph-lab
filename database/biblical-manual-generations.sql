@@ -388,6 +388,118 @@ UPDATE biblical_people SET generation = 75 WHERE name_zh IN (
   '拉比·米厄爾', '拉比·西緬·巴約哈', '拉比·猶大·本·以萊'
 ) AND generation IS NULL;
 
+-- ── 新約：手動設定代數 ────────────────────────────────────────────
+
+-- 馬太後被擄系譜根節點（亞比烏 autolink 到所羅巴伯，其餘逐代傳播）
+-- 亞比烏～雅各～約瑟～耶穌皆可從 CTE 樹自動計算，無需手動
+
+-- 路加拿但支線：拿但（大衛之子）autolink 到大衛，CTE 自動給 gen 34
+-- （David 的 children 欄由 autolink 自動加入「拿但（大衛之子）」）
+
+-- 耶穌家族（非 CTE 可達者）
+-- 撒迦利亞、以利沙白：以祭司後裔估算（施洗約翰父母，比耶穌長一輩）
+UPDATE biblical_people SET generation = 63 WHERE name_zh IN (
+  '撒迦利亞（施洗約翰之父）', '以利沙白（撒迦利亞之妻）', '馬利亞（耶穌之母）'
+) AND generation IS NULL;
+-- 施洗約翰可從 CTE（撒迦利亞 children=施洗約翰）自動取得 gen 64；無需手動
+
+-- 耶穌的兄弟（約瑟 children 中，CTE 應可達；保險起見手動補）
+UPDATE biblical_people SET generation = 64 WHERE name_zh IN (
+  '雅各（主的兄弟）', '約西（主的兄弟）', '猶大（主的兄弟）', '西門（主的兄弟）'
+) AND generation IS NULL;
+
+-- 希律王朝（安提帕特為根節點，其後代由 CTE 自動傳播）
+UPDATE biblical_people SET generation = 63 WHERE name_zh = '安提帕特（大希律之父）' AND generation IS NULL;
+-- 大希律及以下可由 CTE 傳播；保險起見手動補
+UPDATE biblical_people SET generation = 64 WHERE name_zh = '大希律（安提帕特之子）' AND generation IS NULL;
+UPDATE biblical_people SET generation = 65 WHERE name_zh IN (
+  '亞基老（大希律之子）', '希律安提帕（大希律之子）',
+  '腓力（大希律之子）', '亞里斯托布魯（大希律之子）'
+) AND generation IS NULL;
+UPDATE biblical_people SET generation = 66 WHERE name_zh IN (
+  '希羅底（亞里斯托布魯之女）', '亞基帕一世（亞里斯托布魯之子）'
+) AND generation IS NULL;
+UPDATE biblical_people SET generation = 67 WHERE name_zh IN (
+  '撒羅米（希羅底之女）',
+  '亞基帕二世（亞基帕一世之子）', '百尼基（亞基帕一世之女）', '特非拉（亞基帕一世之女）'
+) AND generation IS NULL;
+
+-- 相關權貴（與耶穌同期）
+UPDATE biblical_people SET generation = 63 WHERE name_zh = '亞拿（大祭司）'   AND generation IS NULL;
+UPDATE biblical_people SET generation = 64 WHERE name_zh = '該亞法（亞拿之婿）' AND generation IS NULL;
+
+-- 十二使徒及家人
+UPDATE biblical_people SET generation = 63 WHERE name_zh IN (
+  '約拿（彼得之父）', '西庇太', '亞勒腓（雅各之父）'
+) AND generation IS NULL;
+-- 彼得、安得烈、雅各、約翰等由 CTE 從父代傳播（gen 64）
+-- 其餘無父子鏈的使徒手動補
+UPDATE biblical_people SET generation = 64 WHERE name_zh IN (
+  '腓力（使徒）', '巴多羅買（使徒）', '多馬（使徒）', '馬太（稅吏）',
+  '達太（使徒）', '奮銳黨西門（使徒）', '猶大（加略人）', '馬提亞（使徒）'
+) AND generation IS NULL;
+
+-- 保羅及同工（主後 5-67 年前後活躍，約 gen 64-65）
+UPDATE biblical_people SET generation = 64 WHERE name_zh IN (
+  '保羅（使徒）', '巴拿巴（使徒）', '西拉（保羅同工）',
+  '百基拉（保羅同工）', '亞居拉（保羅同工）'
+) AND generation IS NULL;
+UPDATE biblical_people SET generation = 63 WHERE name_zh = '羅以（提摩太之祖母）' AND generation IS NULL;
+-- 友尼基（羅以之女）由 CTE 自動取得 gen 64；提摩太（友尼基之子）自動取得 gen 65
+UPDATE biblical_people SET generation = 64 WHERE name_zh = '約翰馬可（巴拿巴之甥）' AND generation IS NULL;
+UPDATE biblical_people SET generation = 64 WHERE name_zh = '馬利亞（約翰馬可之母）'  AND generation IS NULL;
+-- 友尼基由 CTE（羅以→友尼基（羅以之女）→提摩太）自動取得 gen 65，無需手動
+
+-- 其他新約人物（耶穌時代同期，gen 64）
+UPDATE biblical_people SET generation = 64 WHERE name_zh IN (
+  '拉撒路（伯大尼）', '馬大（拉撒路之姊）', '馬利亞（拉撒路之姊）',
+  '尼哥德慕', '亞利馬太的約瑟', '撒該（稅吏長）',
+  '馬利亞·抹大拉', '馬利亞（革羅罷之妻）'
+) AND generation IS NULL;
+UPDATE biblical_people SET generation = 65 WHERE name_zh = '約拿單·本·亞拿尼雅' AND generation IS NULL;
+
+-- ── 教會傳統族譜：手動設定代數 ─────────────────────────────────
+
+-- 聖母父母（馬利亞 gen 63，其父母為 gen 62）
+UPDATE biblical_people SET generation = 62 WHERE name_zh IN (
+  '約亞敬（聖母之父）', '亞拿（聖母之母）'
+) AND generation IS NULL;
+
+-- 克洛帕斯家族（克洛帕斯與約瑟同代 gen 63，西默盎可由 CTE 從克洛帕斯 children 自動取得 gen 64）
+UPDATE biblical_people SET generation = 63 WHERE name_zh IN (
+  '克洛帕斯（約瑟之兄）', '馬利亞（克洛帕斯之妻）'
+) AND generation IS NULL;
+
+-- 主血親後裔（猶大 gen 64 → 子 gen 65 → 佐革爾/雅各 gen 66）
+UPDATE biblical_people SET generation = 65 WHERE name_zh = '猶大之子（名不詳）' AND generation IS NULL;
+UPDATE biblical_people SET generation = 66 WHERE name_zh IN (
+  '佐革爾（主血親）', '雅各（主血親後裔）'
+) AND generation IS NULL;
+
+-- 腓力（傳道者）與女兒（腓力 gen 64，女兒可由 CTE 從腓力 children 自動取得 gen 65）
+UPDATE biblical_people SET generation = 64 WHERE name_zh = '腓力（傳道者）' AND generation IS NULL;
+
+-- 古利奈西門及其子（gen 64；子可由 CTE 自動取得 gen 65）
+UPDATE biblical_people SET generation = 64 WHERE name_zh = '古利奈西門（背十字架者）' AND generation IS NULL;
+UPDATE biblical_people SET generation = 65 WHERE name_zh = '魯孚之母（無名）'          AND generation IS NULL;
+
+-- 彼得之女百托尼拉（西門彼得之女，autolink 自動連結至彼得；CTE 自動 gen 65）
+-- 若 autolink 無法匹配（因彼得全名為「西門彼得（約拿之子）」），手動補
+UPDATE biblical_people SET generation = 65 WHERE name_zh = '百托尼拉（西門彼得之女）' AND generation IS NULL;
+
+-- 保羅親屬（羅馬書 16，與保羅同代 gen 64）
+UPDATE biblical_people SET generation = 64 WHERE name_zh IN (
+  '安多尼古（保羅親屬）', '猶尼亞（保羅親屬）',
+  '希羅天（保羅親屬）', '魯基（保羅親屬）', '耶孫（保羅親屬）', '所西巴德（保羅親屬）'
+) AND generation IS NULL;
+
+-- 其他教會傳統人物（gen 64 同期）
+UPDATE biblical_people SET generation = 64 WHERE name_zh IN (
+  '亞里斯多布魯家眷（羅馬）', '拿其數家眷（羅馬）',
+  '斯彼仁底（保羅同工之妻）'
+) AND generation IS NULL;
+UPDATE biblical_people SET generation = 63 WHERE name_zh = '提摩太之父（希臘人）' AND generation IS NULL;
+
 -- ── 最終再傳播三層（覆蓋歷代志新增人物） ────────────────────────
 UPDATE biblical_people child_p
 SET generation = parent_p.generation + 1
