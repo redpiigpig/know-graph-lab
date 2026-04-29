@@ -81,25 +81,25 @@
                 <span class="ml-auto text-[10px] text-gray-300">{{ trad.seeCount }}</span>
               </button>
 
-              <!-- Churches within tradition -->
+              <!-- Sub-groups within tradition -->
               <div v-if="expandedTraditions.has(trad.tradition)">
-                <div v-for="ch in trad.churches" :key="ch.church">
+                <div v-for="sg in trad.subGroups" :key="trad.tradition + '/' + sg.subGroup">
 
-                  <!-- Church header -->
+                  <!-- Sub-group header -->
                   <button
                     class="w-full flex items-center gap-2 pl-6 pr-3 py-1.5 text-left hover:bg-gray-50 transition"
-                    @click="toggleChurch(ch.church)"
+                    @click="toggleSubGroup(trad.tradition + '/' + sg.subGroup)"
                   >
-                    <span class="text-gray-300 text-[10px] w-3 flex-shrink-0 select-none">{{ expandedChurches.has(ch.church) ? '▾' : '▸' }}</span>
-                    <span class="text-[11px] text-gray-600 truncate">{{ ch.church }}</span>
-                    <span class="ml-auto text-[10px] text-gray-300 flex-shrink-0">{{ ch.sees.length }}</span>
+                    <span class="text-gray-300 text-[10px] w-3 flex-shrink-0 select-none">{{ expandedSubGroups.has(trad.tradition + '/' + sg.subGroup) ? '▾' : '▸' }}</span>
+                    <span class="text-[11px] text-gray-600 truncate">{{ sg.subGroup }}</span>
+                    <span class="ml-auto text-[10px] text-gray-300 flex-shrink-0">{{ sg.sees.length }}</span>
                   </button>
 
                   <!-- Sees list -->
-                  <div v-if="expandedChurches.has(ch.church)">
+                  <div v-if="expandedSubGroups.has(trad.tradition + '/' + sg.subGroup)">
                     <button
-                      v-for="s in ch.sees"
-                      :key="s.see_zh"
+                      v-for="s in sg.sees"
+                      :key="s.see_zh + s.church"
                       class="w-full flex items-center gap-2 pl-10 pr-3 py-1.5 text-left transition border-l-2 ml-3"
                       :class="selectedSee?.see_zh === s.see_zh && selectedSee?.church === s.church
                         ? 'border-violet-400 bg-violet-50 text-violet-800'
@@ -395,8 +395,8 @@ interface Bishop {
   notes: string | null
 }
 
-interface ChurchGroup  { church: string; sees: See[] }
-interface TraditionGroup { tradition: string; seeCount: number; churches: ChurchGroup[] }
+interface SubGroupItem { subGroup: string; sees: See[] }
+interface TraditionGroup { tradition: string; seeCount: number; subGroups: SubGroupItem[] }
 
 // ── Constants ───────────────────────────────────────────────
 const TRADITION_ORDER = ['羅馬公教', '希臘正教', '科普特正教', '敘利亞正教', '亞美尼亞使徒教會', '亞述景教', '基督新教']
@@ -409,6 +409,34 @@ const TRAD_COLOR: Record<string, string> = {
   '亞美尼亞使徒教會': 'bg-red-100 text-red-800',
   '亞述景教':       'bg-cyan-100 text-cyan-800',
   '基督新教':       'bg-green-100 text-green-800',
+}
+
+const CATHOLIC_SUBGROUP: Record<string, string> = {
+  '天主教':           '拉丁禮教會',
+  '天主教（拉丁禮）': '拉丁禮教會',
+  '老天主教':         '獨立公教會',
+}
+
+const PROTESTANT_SUBGROUP: Record<string, string> = {
+  '英格蘭教會': '聖公宗', '愛爾蘭教會': '聖公宗', '威爾士教會': '聖公宗', '蘇格蘭聖公會': '聖公宗',
+  '美國聖公會': '聖公宗', '澳洲聖公宗': '聖公宗', '加拿大聖公宗': '聖公宗', '紐西蘭聖公宗': '聖公宗',
+  '北美聖公宗教會': '聖公宗', '亞歷山卓聖公宗': '聖公宗', '蒲隆地聖公宗': '聖公宗', '南錐聖公宗': '聖公宗',
+  '香港聖公宗': '聖公宗', '古巴聖公宗': '聖公宗', '烏干達聖公宗': '聖公宗', '西非聖公宗': '聖公宗',
+  '墨西哥聖公宗': '聖公宗', '中非聖公宗': '聖公宗', '西印度群島聖公宗': '聖公宗', '美拉尼西亞聖公宗': '聖公宗',
+  '東南亞聖公宗': '聖公宗', '巴紐聖公宗': '聖公宗', '坦尚尼亞聖公宗': '聖公宗', '南非聖公宗': '聖公宗',
+  '耶路撒冷及中東聖公宗': '聖公宗', '巴西聖公宗': '聖公宗', '日本聖公宗（日本聖公會）': '聖公宗',
+  '印度洋聖公宗': '聖公宗', '盧安達聖公宗': '聖公宗', '菲律賓聖公宗': '聖公宗', '韓國聖公宗': '聖公宗',
+  '南蘇丹聖公宗': '聖公宗', '緬甸聖公宗': '聖公宗', '蘇丹聖公宗': '聖公宗', '奈及利亞聖公宗': '聖公宗',
+  '肯亞聖公宗': '聖公宗', '耶路撒冷聖公宗': '聖公宗',
+  '拉脫維亞信義會': '信義宗', '芬蘭信義會': '信義宗', '瑞典信義會': '信義宗', '愛沙尼亞信義會': '信義宗',
+  '北印度教會': '聯合教會', '錫蘭教會': '聯合教會', '巴基斯坦教會': '聯合教會',
+  '孟加拉教會': '聯合教會', '南印度教會': '聯合教會',
+}
+
+function getSubGroup(church: string, tradition: string): string {
+  if (tradition === '羅馬公教') return CATHOLIC_SUBGROUP[church] ?? '東儀天主教'
+  if (tradition === '基督新教') return PROTESTANT_SUBGROUP[church] ?? church
+  return church
 }
 
 const knownChurches = [
@@ -438,17 +466,17 @@ const seesLoading   = ref(true)
 const sidebarSearch = ref('')
 
 const expandedTraditions = ref(new Set<string>())
-const expandedChurches   = ref(new Set<string>())
+const expandedSubGroups  = ref(new Set<string>())
 
 function toggleTradition(t: string) {
   const s = expandedTraditions.value
   s.has(t) ? s.delete(t) : s.add(t)
   expandedTraditions.value = new Set(s)
 }
-function toggleChurch(c: string) {
-  const s = expandedChurches.value
-  s.has(c) ? s.delete(c) : s.add(c)
-  expandedChurches.value = new Set(s)
+function toggleSubGroup(key: string) {
+  const s = expandedSubGroups.value
+  s.has(key) ? s.delete(key) : s.add(key)
+  expandedSubGroups.value = new Set(s)
 }
 
 // ── Tree computation ────────────────────────────────────────
@@ -456,10 +484,11 @@ const tree = computed<TraditionGroup[]>(() => {
   const byTrad = new Map<string, Map<string, See[]>>()
   for (const s of sees.value) {
     const trad = s.tradition || '其他'
+    const sg = getSubGroup(s.church, trad)
     if (!byTrad.has(trad)) byTrad.set(trad, new Map())
-    const byChurch = byTrad.get(trad)!
-    if (!byChurch.has(s.church)) byChurch.set(s.church, [])
-    byChurch.get(s.church)!.push(s)
+    const bySG = byTrad.get(trad)!
+    if (!bySG.has(sg)) bySG.set(sg, [])
+    bySG.get(sg)!.push(s)
   }
 
   const ordered: TraditionGroup[] = []
@@ -467,20 +496,22 @@ const tree = computed<TraditionGroup[]>(() => {
 
   for (const t of TRADITION_ORDER) {
     if (byTrad.has(t)) {
-      const churches: ChurchGroup[] = []
-      byTrad.get(t)!.forEach((seelist, church) => {
-        churches.push({ church, sees: seelist })
+      const subGroups: SubGroupItem[] = []
+      byTrad.get(t)!.forEach((seelist, subGroup) => {
+        seelist.sort((a, b) => a.name_zh.localeCompare(b.name_zh, 'zh'))
+        subGroups.push({ subGroup, sees: seelist })
       })
-      ordered.push({ tradition: t, seeCount: churches.reduce((n, c) => n + c.sees.length, 0), churches })
+      ordered.push({ tradition: t, seeCount: subGroups.reduce((n, sg) => n + sg.sees.length, 0), subGroups })
       remaining.delete(t)
     }
   }
   for (const t of remaining) {
-    const churches: ChurchGroup[] = []
-    byTrad.get(t)!.forEach((seelist, church) => {
-      churches.push({ church, sees: seelist })
+    const subGroups: SubGroupItem[] = []
+    byTrad.get(t)!.forEach((seelist, subGroup) => {
+      seelist.sort((a, b) => a.name_zh.localeCompare(b.name_zh, 'zh'))
+      subGroups.push({ subGroup, sees: seelist })
     })
-    ordered.push({ tradition: t, seeCount: churches.reduce((n, c) => n + c.sees.length, 0), churches })
+    ordered.push({ tradition: t, seeCount: subGroups.reduce((n, sg) => n + sg.sees.length, 0), subGroups })
   }
   return ordered
 })

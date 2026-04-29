@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
 
   let q = supabase.from('episcopal_succession').select('*')
   if (see)    q = q.eq('see', see)
-  if (church) q = q.eq('church', church)
+  if (church) q = q.in('church', [church, '未分裂教會'])
 
   const { data, error } = await q
     .order('see',               { ascending: true })
