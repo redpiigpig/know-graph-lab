@@ -16,6 +16,8 @@ export default defineEventHandler(async (event) => {
   const title    = formData.find(f => f.name === "title")?.data.toString() ?? "未命名電子書";
   const author   = formData.find(f => f.name === "author")?.data.toString() ?? null;
   const bookId   = formData.find(f => f.name === "bookId")?.data.toString() ?? null;
+  const category    = formData.find(f => f.name === "category")?.data.toString() ?? null;
+  const subcategory = formData.find(f => f.name === "subcategory")?.data.toString() ?? null;
 
   if (!fileField?.data) throw createError({ statusCode: 400, message: "No file provided" });
 
@@ -39,7 +41,7 @@ export default defineEventHandler(async (event) => {
   // Create ebook record
   const { data: ebook, error: ebookErr } = await supabase
     .from("ebooks")
-    .insert({ title, author, file_type: ext, total_pages: pages.length, book_id: bookId })
+    .insert({ title, author, file_type: ext, total_pages: pages.length, book_id: bookId, category, subcategory })
     .select()
     .single();
 
