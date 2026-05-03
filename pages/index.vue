@@ -97,7 +97,7 @@
         </NuxtLink>
 
         <!-- 實驗網站 -->
-        <NuxtLink :to="user ? '/Hsuan_Chuang_Studies' : '/login'" class="tool-card group border-orange-100 hover:border-orange-300 hover:shadow-orange-100">
+        <NuxtLink :to="user ? '/experiments' : '/login'" class="tool-card group border-orange-100 hover:border-orange-300 hover:shadow-orange-100">
           <div class="tool-icon bg-orange-50 text-orange-500">🧪</div>
           <div class="flex-1">
             <h2 class="tool-title">實驗網站</h2>
