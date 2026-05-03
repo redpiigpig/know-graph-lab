@@ -31,6 +31,8 @@ except ImportError as e:
 
 CHECKLIST = 'data/parse_progress.txt'
 DRIVE_ROOT = 'G:/我的雲端硬碟/資料/電子書'
+CHUNKS_DIR = 'G:/我的雲端硬碟/資料/電子書/_chunks'
+PREVIEW_LEN = 200  # only first N chars stored in DB; full text stays in local JSONL
 
 # ── env loading ────────────────────────────────────────────────
 def load_env():
@@ -81,7 +83,22 @@ def fetch_all_books():
 
 
 def insert_chunks(ebook_id, chunks):
-    """Bulk insert chunks. Returns number inserted."""
+    """Write full content to local JSONL, insert preview rows to DB.
+    Returns number inserted."""
+    # 1. Write full content to local JSONL (source of truth, syncs to Drive)
+    os.makedirs(CHUNKS_DIR, exist_ok=True)
+    jsonl_path = os.path.join(CHUNKS_DIR, f"{ebook_id}.jsonl")
+    with open(jsonl_path, 'w', encoding='utf-8') as f:
+        for i, c in enumerate(chunks):
+            f.write(json.dumps({
+                'chunk_index': i,
+                'chunk_type': c['type'],
+                'page_number': c.get('page'),
+                'chapter_path': c.get('chapter_path'),
+                'content': c['content'],
+            }, ensure_ascii=False) + '\n')
+
+    # 2. Build DB rows with truncated content (preview only)
     rows = []
     for i, c in enumerate(chunks):
         rows.append({
@@ -90,15 +107,29 @@ def insert_chunks(ebook_id, chunks):
             'chunk_type': c['type'],
             'page_number': c.get('page'),
             'chapter_path': c.get('chapter_path'),
-            'content': c['content'],
-            'char_count': len(c['content']),
+            'content': c['content'][:PREVIEW_LEN],  # 200 char preview only
+            'char_count': len(c['content']),  # full length for stats
         })
-    # Insert in batches of 100
-    for i in range(0, len(rows), 100):
-        batch = rows[i:i+100]
-        r = requests.post(f"{URL}/rest/v1/ebook_chunks", headers=H, json=batch, timeout=60)
-        if r.status_code not in (200, 201):
-            raise RuntimeError(f"chunk insert failed: HTTP {r.status_code} {r.text[:300]}")
+
+    # 3. Adaptive batch insert (smaller batches retry on timeout)
+    BATCH_SIZES = [50, 20, 5, 1]
+    i = 0
+    while i < len(rows):
+        succeeded = False
+        for batch_size in BATCH_SIZES:
+            batch = rows[i:i+batch_size]
+            r = requests.post(f"{URL}/rest/v1/ebook_chunks", headers=H, json=batch, timeout=120)
+            if r.status_code in (200, 201):
+                i += len(batch)
+                succeeded = True
+                break
+            text = r.text[:300]
+            if '57014' in text or 'timeout' in text.lower() or r.status_code >= 500:
+                if batch_size > 1:
+                    continue
+            raise RuntimeError(f"chunk insert failed: HTTP {r.status_code} {text}")
+        if not succeeded:
+            raise RuntimeError(f"chunk insert failed even at batch_size=1")
     return len(rows)
 
 

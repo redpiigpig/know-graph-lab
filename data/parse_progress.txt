@@ -1,0 +1,1313 @@
+# Ebook parse progress
+# [ ] not started   [x] parsed   [!] error   [-] skipped (unsupported format)
+# Generated: 2026-05-03T18:58:39.241862
+
+[x] 000f3a29 歷史學\中央界域史\希臘-拜占庭史\菲利普·馬特扎克，古希臘人：在希臘大陸之外.epub  (57 chunks)
+[!] 002484f4 哲學\近代哲學\彼得‧蓋伊，現代主義.pdf  ERROR: no extractable text
+[x] 004ab4d6 世界宗教\基督教\神學原典\Jaroslav Pelikan，The Christian Tradition Vol. 4.pdf  (474 chunks)
+[x] 008c788d 世界宗教\猶太教\聖經研究\遠志明，老子與聖經.pdf  (116 chunks)
+[!] 00fb074a 歷史學\中央界域史\希臘-拜占庭史\瓦爾特‧伯克特，東方化革命：古風時代前期近東對古希臘文化的影響.pdf  ERROR: no extractable text
+[x] 00fb72b8 世界宗教\基督教\教會史\天主教史\Gerald O' Collins，Catholicism- The Story of Catholic Christianity.pdf  (445 chunks)
+[!] 0107f09b 世界宗教\波斯宗教\祆教\Mary Boyce，A History of Zoroastrianism, Vol. III.pdf  ERROR: no extractable text
+[x] 013bb849 社會政治學\名家作品\法蘭西斯‧福山，我們的後人類未來生物科技革命的後果.epub  (29 chunks)
+[x] 014d4217 世界宗教\其他宗教\謝遐齡，砍去自然神論頭顱的大刀──康德《純粹理性批判》導讀.pdf  (52 chunks)
+[-] 019f38c2 人類生物學\魯思·本尼迪克特，菊與刀(增訂版) (漢譯世界學術名著叢書).azw3  (skip: azw3)
+[x] 0209c2b8 宗教學\World Religions系列\猶太教，Martha A. Morrison, Judaism.pdf  (144 chunks)
+[x] 027c5ada 世界宗教\伊斯蘭教\John Renard，Friends of God Islamic Images of Piety, Commitment, and Servanthood.pdf  (362 chunks)
+[x] 028481d2 宗教學\宗教史\馬克斯·韋伯，印度的宗教.pdf  (2 chunks)
+[x] 030c3954 哲學\艾瑞克‧霍布斯邦，如何改變世界.pdf  (2 chunks)
+[x] 0323c4c8 歷史學\威特基，古代世界歷史地圖集.pdf  (1 chunks)
+[!] 03449f19 歷史學\亞太界域史\賀聖達，東南亞的歷史與宗教.pdf  ERROR: no extractable text
+[x] 037378a1 哲學\近代哲學\存在主義\托馬斯·弗林，存在主義簡論.epub  (23 chunks)
+[-] 03ad4857 歷史學\西方界域史\西蒙·溫德爾，日耳曼尼亞.mobi  (skip: mobi)
+[x] 03ade03e 心理學\基蘭‧塞蒂亞，重來也不會好過現在.epub  (33 chunks)
+[!] 044417a8 心理學\生死學\理查德·金格拉斯，活著有多久.pdf  ERROR: no extractable text
+[!] 044ef3b5 文學\薇依 吳雅凌，柏拉圖對話中的神 薇依論古希臘文學.pdf  ERROR: no extractable text
+[x] 04893243 哲學\近代哲學\戴維·麥克萊蘭，馬克思以後的馬克思主義.pdf  (1 chunks)
+[x] 05076693 歷史學\admin，顧頡剛的疑古思想漢儒、孔子與經典.pdf  (24 chunks)
+[!] 0537ef54 世界宗教\猶太教\聖經研究\七十士譯本，Septuagint- The Old Testament in Greek.pdf  ERROR: no extractable text
+[-] 0541cbaf 歷史學\【法】勒內·格魯塞, 趙曉鵬, ePUBw.COM，草原帝國.azw3  (skip: azw3)
+[x] 05843803 心理學\葛詹尼加，我們真的有自由意志嗎？.epub  (15 chunks)
+[x] 05911bd3 歷史學\西方界域史\羅馬史\凱爾‧哈柏，羅馬的命運.epub  (22 chunks)
+[x] 05bc76e1 歷史學\譯文紀實，彼得·沃森（Peter Watson） [Watson）, 彼得·沃森（Peter]，虛無時代.epub  (35 chunks)
+[x] 05d149df 心理學\歐文·亞隆，當尼采哭泣.pdf  (2 chunks)
+[x] 0654c170 世界宗教\猶太教\聖經研究\王曉朝，基督教典外文獻─舊約篇─第2冊.pdf  (350 chunks)
+[x] 065f0fbc 歷史學\東方界域史\中國史\段海蓉，薩都剌傳.pdf  (1 chunks)
+[x] 066719f4 歷史學\東方界域史\楊曾文，中日文化交流史大系.pdf  (4 chunks)
+[-] 06c5e584 歷史學\Lincoln Paine, 陳建軍, 羅燚英，海洋與文明.azw3  (skip: azw3)
+[x] 078efc67 世界宗教\摩門教\約瑟‧斯密，後期聖徒歷史.pdf  (189 chunks)
+[-] 079e0f7d 歷史學\中央界域史\李零，波斯筆記(上下冊).azw3  (skip: azw3)
+[!] 07a5dc25 歷史學\蘇科院歷史所列寧格勒分所   張開，俄國文化史綱 從遠古至1917年 蘇聯叢書 從遠古至1917年.pdf  ERROR: no extractable text
+[x] 0807c54b 歷史學\全球通史\威廉·麥克尼爾，西方的興起.epub  (30 chunks)
+[!] 087a3a41 歷史學\東方界域史\中國史\宮崎市定，東洋的近世.pdf  ERROR: no extractable text
+[x] 08ac6082 歷史學\中央界域史\埃及史\郭丹彤，埃及與東地中海世界的交往.pdf  (1 chunks)
+[!] 08b7a230 世界宗教\基督教\神學\吉萊斯皮，現代性的神學起源.pdf  ERROR: no extractable text
+[!] 08d4d9cb 世界宗教\波斯宗教\祆教\Mary Boyce，A History of Zoroastrianism, Vol. II.pdf  ERROR: no extractable text
+[x] 08e74861 社會政治學\政治學\Raymond Aron，知識分子的鴉片.pdf  (1 chunks)
+[!] 094548bf 歷史學\全球通史\世界文明大系\汝信，世界文明大系11.pdf  ERROR: no extractable text
+[x] 09773058 歷史學\馬婭·亞桑諾夫，帝國邊緣.epub  (21 chunks)
+[!] 0988966d 世界宗教\劉新利，基督教與德意志民族.pdf  ERROR: no extractable text
+[-] 09ac3aae 歷史學\西方界域史\近代歐洲\羅傑·克勞力，財富之城.azw3  (skip: azw3)
+[x] 09bf9cff 世界宗教\基督教\教會史\天主教史\Edward Burman，宗教裁判所.pdf  (2 chunks)
+[x] 0a02906c 世界宗教\印度教\黃寶生，摩訶婆羅多的故事.epub  (4 chunks)
+[-] 0a061ccf 歷史學\西方界域史\羅馬史\特奧多爾·蒙森，羅馬史.azw3  (skip: azw3)
+[-] 0a12e139 文學\托爾斯泰，懺悔錄.azw3  (skip: azw3)
+[x] 0a1cc845 人類生物學\人類大歷史\克斯汀·海斯翠普，他者的歷史.pdf  (3 chunks)
+[x] 0a4b0402 心理學\丹尼爾．列維廷，為什麼傷心的人要聽慢歌.epub  (17 chunks)
+[x] 0a54e559 歷史學\東方界域史\中國史\吳麗娛，禮與中國古代社會.epub  (37 chunks)
+[x] 0a5c09bc 哲學\哲學原典\古代哲學經典\Plato，Euthyphro. Apology. Crito. Phaedo. Phaedrus..pdf  (597 chunks)
+[x] 0a75905d 文學\塔拉·韋斯特弗，你當像鳥飛往你的山.epub  (12 chunks)
+[!] 0ac5fa1d 哲學\哲學原典\近代哲學經典\齊澤克，歡迎來到實在界這個大荒漠.pdf  ERROR: no extractable text
+[x] 0ac75e94 世界宗教\東亞宗教\儒教\盧雪崑，儒家的心性學與道德形上學.pdf  (245 chunks)
+[x] 0af6b10e 歷史學\東方界域史\中國史\中國通史\費正清，劍橋中國史(11冊).epub  (785 chunks)
+[!] 0b2be072 歷史學\史學理論\卡爾·雅斯培，論歷史的起源與目標.pdf  ERROR: no extractable text
+[!] 0b2fcad4 歷史學\劉子健，中國轉向內在.pdf  ERROR: no extractable text
+[x] 0b350d2e 宗教學\宗教對話\Lewis Bernard，Faith and power religion and politics in the Middle East.epub  (21 chunks)
+[x] 0b601f3e 世界宗教\伊斯蘭教\馬歇爾·哈濟生，伊斯蘭文明（上卷）伊斯蘭的古典時期.pdf  (432 chunks)
+[x] 0b8b1206 宗教學\宗教對話\塞日．拉菲特，聖經與古蘭經.epub  (26 chunks)
+[!] 0baac81b 宗教學\彼得·貝格爾，神聖的帷幕.pdf  ERROR: no extractable text
+[x] 0c0199e5 歷史學\中央界域史\埃及史\喬安·弗萊徹，埃及四千年.epub  (26 chunks)
+[!] 0c0d4b9a 歷史學\中央界域史\希臘-拜占庭史\沃爾班克，希臘化世界.pdf  ERROR: no extractable text
+[-] 0c29e6af 世界宗教\東亞宗教\道教\李申，道教簡史.mobi  (skip: mobi)
+[x] 0c39be97 宗教學\World Religions系列\印度教，Madhu Bazaz Wangu, Hinduism.pdf  (144 chunks)
+[-] 0c3bb917 歷史學\東方界域史\中亞-蒙古史\水木森，匈奴簡史.azw3  (skip: azw3)
+[x] 0c45090a 哲學\哲學通史\萊斯莉·萊文，極簡哲學史.epub  (81 chunks)
+[x] 0c4a24cb 歷史學\全球通史\八旗，興亡的世界史\15土肥恆之，搖擺於歐亞間的沙皇們.epub  (18 chunks)
+[x] 0c59cb04 宗教學\神話學\加里·肖，埃及神話.epub  (22 chunks)
+[!] 0cc45700 人類生物學\人類大歷史\哈拉瑞，人類大命運.epub  ERROR: KeyError: "There is no item named 'OEBPS/Styles/Copyrightpage.css' in the archiv
+[x] 0ccbfc2c 哲學\近代哲學\張祥龍，當代西方哲學筆記.pdf  (1 chunks)
+[x] 0cf1d1ee 歷史學\全球通史\八旗，興亡的世界史\11林佳世子，鄂圖曼帝國五百年的和平.epub  (18 chunks)
+[x] 0d427e35 世界宗教\猶太教\Arnold G. Fruchtenbaum，The Footsteps of the Messiah.pdf  (867 chunks)
+[x] 0d4eb427 文學\三毛，撒哈拉的故事（三毛全集·02）.epub  (31 chunks)
+[x] 0ddb5e34 歷史學\中央界域史\美索不達米亞史\Simo Parpola，Assyrian Prophecies.pdf  (109 chunks)
+[!] 0e26781d 世界宗教\伊斯蘭教\王俊榮，天人合一物我還真.pdf  ERROR: no extractable text
+[x] 0e2d834b 世界宗教\其他宗教\Payam Nabarz, Caitlin Matthews，The Mysteries of Mithras The Pagan Belief That Shaped the Christian World.epub  (4 chunks)
+[x] 0e32b067 哲學\哲學原典\古代哲學經典\Plutarch Lives II，Themistocles and Camillus.pdf  (646 chunks)
+[!] 0e34b853 世界宗教\波斯宗教\祆教\元文祺，二元神論.pdf  ERROR: no extractable text
+[!] 0ea6ee85 歷史學\中央界域史\劉文鵬，古代西亞北非文明.pdf  ERROR: no extractable text
+[!] 0ec75a35 社會政治學\名家作品\米歇爾·傅柯，古典時代瘋狂史.pdf  ERROR: no extractable text
+[!] 0ee18386 歷史學\全球通史\商務，世界歷史文庫\(美) 法洛拉，尼日利亞史.pdf  ERROR: no extractable text
+[x] 0f28891d 世界宗教\基督教\聖經研究\王曉朝，基督教典外文獻─新約篇─第1冊.pdf  (320 chunks)
+[x] 0f36a3ad 世界宗教\基督教\教會史\東方教會史\Murray Robert，Symbols of Church and Kingdom- A Study in Early Syriac Tradition.pdf  (411 chunks)
+[x] 0fb4f451 社會政治學\知識社會學\保羅‧約翰遜，所謂的知識分子.pdf  (488 chunks)
+[!] 0fe8c814 歷史學\David Chandler，柬埔寨史.pdf  ERROR: no extractable text
+[x] 1003a239 世界宗教\猶太教\聖經研究\傅和德，舊約背景.pdf  (723 chunks)
+[x] 1041250f 哲學\哲學原典\近代哲學經典\周國平，周國平尼采譯著系列.epub  (150 chunks)
+[x] 10bdcb3d 社會政治學\政治學\沃格林，政治觀念史稿\沃格林，政治觀念史稿(四).pdf  (1 chunks)
+[-] 10c1d0f9 世界宗教\伊斯蘭教\伊斯蘭文化小叢書（11本套裝）.azw3  (skip: azw3)
+[x] 10cdd451 世界宗教\基督教\神學原典\阿奎那，神學大全（第1冊.pdf  (660 chunks)
+[!] 11309ea6 宗教學\神話學\伊萬·斯特倫斯基，二十世紀的四種神話理論.pdf  ERROR: no extractable text
+[!] 115dce07 自然科學\伽利略，關於托勒密和哥白尼兩大世界體系的對話.pdf  ERROR: no extractable text
+[x] 1162c988 哲學\哲學原典\近代哲學經典\亞瑟‧叔本華，人生的智慧.epub  (16 chunks)
+[x] 11b2538c 歷史學\全球通史\商務，世界歷史文庫\杜比，法國史(上).pdf  (1 chunks)
+[!] 1216e14d 哲學\近代哲學\劉小楓，二十世紀西方宗教哲學文選(上).pdf  ERROR: no extractable text
+[x] 12c4854e 歷史學\Antoine Guilland，近代德國及其歷史學家.pdf  (2 chunks)
+[x] 1332fdbc 宗教學\宗教對話\Donald H. Carlson，Jewish-Christian Interpretation of the Pentateuch.pdf  (261 chunks)
+[x] 136135ef 哲學\近代哲學\張慶熊，二十世紀英美哲學.pdf  (1 chunks)
+[!] 13d5f5cd 世界宗教\其他宗教\普魯塔克，論埃及神學與哲學.pdf  ERROR: no extractable text
+[!] 13d6fa42 世界宗教\基督教\神學\李平曄，人的發現.pdf  ERROR: no extractable text
+[x] 14682560 宗教學\神話學\北歐-日耳曼神話\托馬斯‧羅爾斯頓，凱爾特神話傳說.pdf  (332 chunks)
+[x] 149556b8 社會政治學\政治學\班尼迪克‧安德森，想像的共同體.epub  (21 chunks)
+[!] 149e1baf 社會政治學\名家作品\米歇爾·傅柯，性經驗史 第一卷、認知的意志.pdf  ERROR: no extractable text
+[x] 14b57064 世界宗教\基督教\教會史\東方教會史\John McGuckin，The Orthodox Church.pdf  (470 chunks)
+[x] 15a5822d 歷史學\東方界域史\中國史\台灣商務，中國‧歷史的長河\4 金文京，三國志的世界.epub  (16 chunks)
+[-] 15b729dc 世界宗教\基督教\神學原典\奧古斯丁，上帝之城.azw3  (skip: azw3)
+[!] 15c61e00 宗教學\神話學\伊萬‧絲特倫斯基，二十世紀的四種神話理論.pdf  ERROR: no extractable text
+[x] 160ecc10 歷史學\東方界域史\中國史\徐復觀，中國人性論史先秦篇.pdf  (578 chunks)
+[x] 16262998 世界宗教\基督教\神學原典\馬丁·路德，加拉太書註釋.pdf  (1 chunks)
+[x] 16900041 社會政治學\卡爾·施米特，施米特文集.epub  (46 chunks)
+[x] 169981f3 世界宗教\波斯宗教\巴哈伊教\巴哈歐拉，義務祈禱與齋戒之重要性.pdf  (40 chunks)
+[-] 16c69bff 世界宗教\猶太教\聖經研究\Jackie Green，This Dangerous Book How the Bible Has Shaped Our World and Why It Still Matters Today.azw3  (skip: azw3)
+[x] 17053a1b 歷史學\烏麗克．赫爾曼，資本的世界史.epub  (32 chunks)
+[!] 17718319 歷史學\戴維·伯明翰，葡萄牙史.pdf  ERROR: no extractable text
+[x] 17f1009e 世界宗教\佛教\釋印順，印順法師佛學著作全集(上).pdf  (135 chunks)
+[x] 181798a6 人類生物學\人類大歷史\丹尼爾·布爾斯廷，文明的歷史.epub  (181 chunks)
+[x] 1861b8b6 哲學\近代哲學\陳嘉明，現代性與後現代性十五講.pdf  (379 chunks)
+[x] 18a4c9df 哲學\近代哲學\存在主義\高宣揚，存在主義.epub  (52 chunks)
+[x] 18b203f1 世界宗教\其他宗教\Wallis Budge，Legends of the Egyptian Gods.pdf  (179 chunks)
+[x] 18f20046 世界宗教\其他宗教\王曉朝，希臘宗教概論.pdf  (3 chunks)
+[x] 1932ac74 人類生物學\彼得·C. 惠布羅，理性與本能.epub  (20 chunks)
+[!] 193d31c7 世界宗教\基督教\神學\科林‧布朗，基督教與西方思想(卷一).pdf  ERROR: no extractable text
+[x] 1990ee82 哲學\福永光司 (Fukunaga Mitsuji) 陳冠學，莊子 古代中國的存在主義.pdf  (190 chunks)
+[x] 199aed98 世界宗教\猶太教\猶太民族研究\艾森斯塔特，猶太文明.epub  (15 chunks)
+[x] 19a1f305 歷史學\西方界域史\尼古拉·克萊伯，羅馬尼亞史.pdf  (1 chunks)
+[x] 19a5af11 世界宗教\猶太教\Mario Liverani，Israels History and the History of Israel.pdf  (441 chunks)
+[x] 19b339ec 歷史學\全球通史\商務，世界歷史文庫\詹森·湯普森，埃及史.pdf  (1 chunks)
+[!] 19b8ea82 歷史學\近代史\伊格爾斯，二十世紀的歷史學.pdf  ERROR: no extractable text
+[x] 19c44e35 世界宗教\基督教\神學原典\阿奎那，神學大全（第3冊.pdf  (545 chunks)
+[x] 19d3fc99 宗教學\神話學\希臘-羅馬神話\伊迪絲．漢彌敦，希臘羅馬神話.epub  (44 chunks)
+[!] 19e9dcd5 世界宗教\佛教\周貴華，作為佛教的佛教.pdf  ERROR: no extractable text
+[x] 19ee9521 世界宗教\伊斯蘭教\馬歇爾·哈濟生，伊斯蘭文明（下卷）火藥帝國與現代伊斯蘭.pdf  (444 chunks)
+[x] 19ff2446 哲學\黎明，西洋哲學史\柯普斯登，西洋哲學史：菲希特到尼采.pdf  (667 chunks)
+[!] 1a0f0729 社會政治學\名家作品\米歇爾·傅柯，性經驗史 第二卷、快感的享用.pdf  ERROR: no extractable text
+[!] 1a14442f 宗教學\約翰·希克，信仰的彩虹.pdf  ERROR: no extractable text
+[x] 1a282aa9 世界宗教\東亞宗教\儒教\荒木見悟，佛教與儒教.pdf  (567 chunks)
+[!] 1a84e208 社會政治學\劉易斯·A·科瑟，社會學思想名家  歷史背景和社會背景下的思想.pdf  ERROR: no extractable text
+[x] 1a9cbfd7 人類生物學\生物學\約翰·麥克尼爾，大加速.epub  (49 chunks)
+[x] 1aac4c58 哲學\經典與解釋輯刊\劉小楓，蘇格拉底問題.pdf  (2 chunks)
+[x] 1ab1d601 歷史學\全球通史\商務，世界歷史文庫\世界歷史文庫 希臘史，世界歷史文庫 希臘史.pdf  (1 chunks)
+[x] 1b151da9 世界宗教\佛教\陳明，文本與語言.pdf  (1 chunks)
+[-] 1b3713df 歷史學\東方界域史\中國史\劉浦江，正統與華夷.mobi  (skip: mobi)
+[x] 1b52a24d 世界宗教\基督教\神學\弗‧洛斯基，東正教神學導論.pdf  (2 chunks)
+[!] 1bcabbe6 歷史學\東方界域史\中國史\卜正民，為權力祈禱.pdf  ERROR: no extractable text
+[x] 1be56867 世界宗教\印度教\奎師那協會\黃寶生，博伽梵歌精要.pdf  (24 chunks)
+[x] 1bf5ea37 社會政治學\政治學\應奇，從自由主義到後自由主義.pdf  (1 chunks)
+[x] 1c0dc7b5 歷史學\東方界域史\中國史\台灣商務，中國‧歷史的長河\天兒慧，巨龍的胎動.pdf  (493 chunks)
+[!] 1c747cef 哲學\中國思想史\楊祖漢，儒家的心學傳統.pdf  ERROR: FileDataError: Failed to open file 'G:\\我的雲端硬碟\\資料\\電子書\\哲學\\中國思想史\\楊祖漢，儒家的心學傳統.
+[x] 1c8002b1 宗教學\宗教對話\Dan Cohn-Sherbok，Interfaith Theology A Reader.pdf  (263 chunks)
+[x] 1c9db84f 歷史學\瑪喬麗·謝弗，胡椒的全球史.epub  (22 chunks)
+[!] 1cb10cbb 歷史學\商務印書館，商務印書館漢譯歷史套裝（24冊）.epub  ERROR: RuntimeError: chunk insert failed: HTTP 500 {"code":"57014","details":null,"hint
+[x] 1cdae9ef 世界宗教\基督教\神學原典\安波羅修，論基督教信仰.pdf  (518 chunks)
+[!] 1ce44872 歷史學\史學理論\約翰‧布羅，歷史的歷史.pdf  ERROR: no extractable text
+[!] 1d390fcc 世界宗教\印度教\奎師那協會\黃寶生，聖典『博伽梵歌』.pdf  ERROR: RuntimeError: chunk insert failed: HTTP 400 {"code":"22P05","details":"\\u0000 c
+[x] 1db751d4 社會政治學\施路赫特，超釋韋伯百年智慧.pdf  (246 chunks)
+[!] 1dd71395 世界宗教\波斯宗教\祆教\Mary Boyce，A History of Zoroastrianism, Vol. I.pdf  ERROR: no extractable text
+[x] 1dfa7263 哲學\納斯鮑姆，善的脆弱性.pdf  (894 chunks)
+[-] 1e0cb930 歷史學\中央界域史\埃裡克‧克萊因，古地中海文明陷落的關鍵.azw3  (skip: azw3)
+[x] 1e45e9aa 哲學\哲學原典\古代哲學經典\赫西俄德，工作與時日、神譜.epub  (6 chunks)
+[x] 1e7ebf41 哲學\哲學原典\近代哲學經典\馬丁·海德格，存在與時間.pdf  (578 chunks)
+[!] 1e839881 哲學\近代哲學\劉小楓，二十世紀西方宗教哲學文選(下).pdf  ERROR: no extractable text
+[!] 1ea8015f 哲學\中國思想史\餘英時，論天人之際.pdf  ERROR: no extractable text
+[!] 1eb97c7d 自然科學\赫伯特·巴特菲，現代科學的起源.pdf  ERROR: no extractable text
+[x] 1f7d922a 世界宗教\猶太教\聖經研究\遊斌，希伯來聖經的文本歷史與思想世界.pdf  (597 chunks)
+[x] 1fa08c37 歷史學\中央界域史\希臘-拜占庭史\羅傑．克勞利，1453.epub  (26 chunks)
+[x] 1fb4e8d0 人類生物學\羅伯特•賴特，非零和博弈人類命運的邏輯.pdf  (336 chunks)
+[!] 200cd089 世界宗教\伊斯蘭教\陳安全，伊朗伊斯蘭革命及其世界影響.pdf  ERROR: no extractable text
+[x] 2010b0cd 歷史學\史料原典\色諾芬，希臘史.epub  (54 chunks)
+[-] 20be9f2c 哲學\哲學原典\近代哲學經典\保羅·利科，歷史與真理.mobi  (skip: mobi)
+[x] 20ce5ecb 歷史學\東方界域史\中亞-蒙古史\梅天穆，世界歷史上的蒙古征服.epub  (26 chunks)
+[x] 20e1c0b1 世界宗教\摩門教\約瑟‧斯密，復興的基礎.pdf  (139 chunks)
+[x] 211cdb21 世界宗教\猶太教\猶太民族研究\施羅默‧桑德，虛構的猶太民族.pdf  (2 chunks)
+[x] 211e0182 世界宗教\基督教\教會史\東方教會史\John Philip，The Lost History of Christianity.pdf  (321 chunks)
+[x] 218fd41e 世界宗教\波斯宗教\巴哈伊教\巴哈歐拉著作\巴哈歐拉，巴哈歐拉書簡集.pdf  (253 chunks)
+[!] 219d2121 歷史學\全球通史\世界史的拼圖（7冊）.epub  ERROR: RuntimeError: chunk insert failed: HTTP 500 {"code":"57014","details":null,"hint
+[x] 21d42152 宗教學\宗教史\光明日報，世界宗教史\任繼愈，世界宗教史6.pdf  (124 chunks)
+[!] 222731a9 哲學\吳彥(編) 湯沛豐、朱振 等，康德法哲學及其起源.pdf  ERROR: no extractable text
+[-] 22454158 人類生物學\生物學\理查德·道金斯，自私的基因.mobi  (skip: mobi)
+[x] 2298acb9 世界宗教\伊斯蘭教\馬歇爾·哈濟生，伊斯蘭文明（中卷）中期伊斯蘭的擴張.pdf  (626 chunks)
+[x] 22aa92ed 歷史學\亞太界域史\菲利浦．鮑靈，風之帝國.epub  (39 chunks)
+[x] 22d2249a 世界宗教\波斯宗教\巴哈伊教\巴哈歐拉，巴哈伊教育箴言.pdf  (95 chunks)
+[!] 23123b3f 歷史學\亞太界域史\連橫，臺灣通史（下冊）.pdf  ERROR: no extractable text
+[x] 2320d844 世界宗教\基督教\聖經研究\王曉朝，基督教典外文獻─新約篇─第2冊.pdf  (363 chunks)
+[-] 23479c97 人類生物學\人類起源與進化史\加亞‧文斯，人類進化史.azw3  (skip: azw3)
+[x] 2400034a 宗教學\宗教史\Will Durant，The Age of Faith- A History of Medieval Civilization-Christian, Islamic, and Judaic.pdf  (1527 chunks)
+[!] 240cdf3b 歷史學\東方界域史\中國史\度陰山，五大傳奇權謀人物傳記.epub  ERROR: RuntimeError: chunk insert failed: HTTP 500 {"code":"57014","details":null,"hint
+[!] 240e0c98 宗教學\邁克爾·莫洛伊，體驗宗教.pdf  ERROR: no extractable text
+[x] 245c8086 世界宗教\波斯宗教\摩尼教與靈智主義\張新璋，「諾斯」與拯救.pdf  (2 chunks)
+[x] 247434bb 歷史學\全球通史\商務，世界歷史文庫\約翰‧霍爾，日本史.pdf  (1 chunks)
+[-] 24ad5424 文學\韓松，韓松作品.azw3  (skip: azw3)
+[!] 2554837e 人類生物學\人類起源與進化史\凱撒琳‧海爾斯，後人類時代.pdf  ERROR: no extractable text
+[x] 25684091 人類生物學\人類大歷史\賈德‧戴蒙，槍炮、病菌與鋼鐵.epub  (31 chunks)
+[!] 256af94b 歷史學\全球通史\商務，世界歷史文庫\世界歷史文庫 印度史，世界歷史文庫 印度史.pdf  ERROR: no extractable text
+[!] 25854150 哲學\經典與解釋輯刊\弗林斯，舍勒思想評述.pdf  ERROR: no extractable text
+[x] 2585988e 歷史學\史料原典\Delphi Classics\Julius Caesar，Complete Works of Julius Caesar.epub  (99 chunks)
+[x] 259984e8 社會政治學\政治學\戴倫‧艾塞默魯，國家為什麼會失敗.pdf  (457 chunks)
+[x] 25bb4f0f 歷史學\勒內·格魯塞，東方的文明.epub  (43 chunks)
+[!] 2644ef5e 社會政治學\名家作品\漢娜‧鄂蘭，極權主義的起源.pdf  ERROR: no extractable text
+[x] 265acbc0 歷史學\東方界域史\中國史\台灣商務，中國‧歷史的長河\10 菊池秀明，末代王朝與近代中國.epub  (17 chunks)
+[!] 26aeb058 宗教學\新版宗教史叢書（4卷本）.pdf  ERROR: RuntimeError: chunk insert failed: HTTP 400 {"code":"22P05","details":"\\u0000 c
+[x] 26f323f7 宗教學\貝格爾，天使的傳言.pdf  (1 chunks)
+[x] 26f79c95 歷史學\近代史\姜守明，世界盡頭的發現.epub  (70 chunks)
+[!] 2710e898 世界宗教\基督教\神學\安德魯·懷特，基督教世界科學與神學論戰史 （上卷）.pdf  ERROR: no extractable text
+[x] 271c71e0 世界宗教\伊斯蘭教\羅伯特·歐文，伊本·赫勒敦.epub  (20 chunks)
+[x] 27a98829 哲學\近代哲學\彼得‧蓋伊，啟蒙時代.epub  (41 chunks)
+[x] 27b6e504 文學\別爾嘉耶夫，陀思妥耶夫斯基的世界觀.pdf  (1 chunks)
+[x] 2810a9fb 心理學\保羅·薩伽德，心智.pdf  (2 chunks)
+[x] 28126de1 歷史學\近代史\戴維‧雷諾茲，峰會.epub  (17 chunks)
+[x] 28503f7e 歷史學\史料原典\普魯塔克，希臘羅馬名人傳.pdf  (2 chunks)
+[x] 286287bc 世界宗教\東亞宗教\儒教\楊祖漢，儒家的心學傳統.pdf  (318 chunks)
+[x] 287563aa 世界宗教\波斯宗教\祆教\龔方震，祆教史.pdf  (2 chunks)
+[x] 28c53084 世界宗教\猶太教\Jong Matthijs，Isaiah among the ancient Near Eastern prophets a comparative study.pdf  (525 chunks)
+[!] 28d523b7 歷史學\亞太界域史\王賡武，南洋華人簡史.pdf  ERROR: no extractable text
+[x] 28daed1d 世界宗教\佛教\高崎宣道，如來藏思想.pdf  (258 chunks)
+[x] 28eec75b 歷史學\東方界域史\呂正理，另眼看歷史.epub  (39 chunks)
+[x] 29271ce6 哲學\近代哲學\存在主義\賴賢宗，海德格與禪道的跨文化溝通.pdf  (324 chunks)
+[x] 292b30ff 世界宗教\基督教\神學原典\帕利坎，歷代耶穌形象.pdf  (2 chunks)
+[x] 2936dfc8 宗教學\神話學\中國神話\袁珂，中國神話傳說.pdf  (526 chunks)
+[!] 293e4285 世界宗教\東亞宗教\道教\韓明士，道與庶道.pdf  ERROR: no extractable text
+[x] 2978b362 歷史學\威廉．伯恩斯坦，貿易大歷史.epub  (19 chunks)
+[!] 29aa4821 世界宗教\猶太教\諾曼‧所羅門，當代學術入門.pdf  ERROR: no extractable text
+[x] 29d208fa 歷史學\中央界域史\Robert D. Lee，Religion and Politics in the Middle East.pdf  (370 chunks)
+[x] 2a25e0b7 歷史學\西方界域史\近代歐洲\浦洛基，再造失去的王國.epub  (39 chunks)
+[x] 2a2e2c7d 宗教學\宗教對話\James H. Charlesworth，The Messiah Developments in Earliest Judaism and Christianity.pdf  (608 chunks)
+[x] 2a4c9e08 歷史學\中央界域史\希臘-拜占庭史\趙林，古希臘文明的光芒.epub  (75 chunks)
+[x] 2a618ac9 人類生物學\人類大歷史\葛瑞格．詹納，用一天說歷史.epub  (32 chunks)
+[x] 2a9a071c 人類生物學\理查德·道金斯，道金斯科學入門.epub  (16 chunks)
+[-] 2a9a6c32 世界宗教\【德】馬克斯·韋伯, 康樂, 簡惠美，新教倫理與資本主義精神（新版）.mobi  (skip: mobi)
+[!] 2ac4ee11 歷史學\成一農，歐亞大陸上的城市.pdf  ERROR: no extractable text
+[!] 2ade19fc 歷史學\戴維・K.懷亞特，泰國史.pdf  ERROR: no extractable text
+[!] 2ae073fe 歷史學\全球通史\商務，世界歷史文庫\（英）珀金斯，世界歷史文庫  突尼斯史.pdf  ERROR: no extractable text
+[x] 2b0c0006 歷史學\全球通史\八旗，興亡的世界史\18平野聰，大清帝國與中華的混迷.epub  (17 chunks)
+[x] 2b2285ab 歷史學\東方界域史\沙伊斯塔·瓦哈卜，阿富汗史.pdf  (1 chunks)
+[x] 2b7ddd3f 歷史學\全球通史\商務，世界歷史文庫\Robert Bothwell，加拿大史.pdf  (1 chunks)
+[x] 2b87f34d 文學\赫曼‧赫塞，流浪者之歌.epub  (20 chunks)
+[x] 2bb7553b 歷史學\全球通史\八旗，興亡的世界史\01青柳正規，人類文明的黎明與黃昏.epub  (14 chunks)
+[x] 2bcacd80 世界宗教\普洛克羅，柏拉圖的神學.pdf  (639 chunks)
+[!] 2bd018c4 哲學\張君勱，新儒家思想史.pdf  ERROR: no extractable text
+[x] 2c280e25 心理學\羅伯．賴特，令人神往的靜坐開悟.epub  (27 chunks)
+[x] 2c51efde 世界宗教\波斯宗教\祆教\張小貴，祆教史考論與述評.pdf  (1 chunks)
+[x] 2c9dfec1 哲學\哲學原典\古代哲學經典\Cicero，On the Nature of the Gods.pdf  (693 chunks)
+[x] 2c9ecba7 社會政治學\政治學\海倫娜·羅森布拉特，自由主義被遺忘的歷史.epub  (16 chunks)
+[!] 2ce2bd98 哲學\近代哲學\劉小楓，二十世紀西方宗教哲學文選(中).pdf  ERROR: no extractable text
+[x] 2d35d13b 社會政治學\政治學\唐士其，西方政治思想史.pdf  (2 chunks)
+[x] 2dd697f9 世界宗教\猶太教\Laurent Guyénot，From Yahweh to Zion Jealous God, Chosen People, Promised Land...Clash of Civilizations.epub  (19 chunks)
+[x] 2e0ce550 哲學\黎明，西洋哲學史\柯普斯登，西洋哲學史：希臘與羅馬.pdf  (688 chunks)
+[x] 2e10fb97 哲學\哲學原典\近代哲學經典\亞瑟·叔本華，叔本華心靈咒語.epub  (230 chunks)
+[!] 2e51afb6 歷史學\東方界域史\中亞-蒙古史\聯合國教科文組織，中亞文明史4下.pdf  ERROR: no extractable text
+[-] 2e5303c6 歷史學\托尼·朱特 Tony Judt，思慮20世紀.mobi  (skip: mobi)
+[!] 2edea5ec 哲學\經典與解釋輯刊\劉小楓，讀陶淵明集札記.pdf  ERROR: no extractable text
+[x] 2f0a1f32 世界宗教\佛教\德昆，藏傳佛教極簡史.epub  (11 chunks)
+[x] 2f24237a 心理學\阿爾弗雷德·阿德勒，兒童人格教育.epub  (1 chunks)
+[-] 2f38aba7 世界宗教\東亞宗教\申賦漁，中國人的歷史.azw3  (skip: azw3)
+[!] 2fa61da6 歷史學\寺田隆信，鄭和.pdf  ERROR: no extractable text
+[x] 2fd1055a 世界宗教\伊斯蘭教\查爾斯‧利斯特，伊斯蘭國簡論.epub  (12 chunks)
+[x] 300360ab 歷史學\東方界域史\中亞-蒙古史\伯戴克，中部西藏與蒙古人.pdf  (1 chunks)
+[x] 30228b3d 世界宗教\基督教\教會史\本篤十六世，教父.pdf  (208 chunks)
+[x] 30447494 世界宗教\摩門教\約瑟‧斯密，耶穌基督與永恆的福音.pdf  (116 chunks)
+[!] 30afb642 歷史學\東方界域史\中亞-蒙古史\聯合國教科文組織，中亞文明史5.pdf  ERROR: no extractable text
+[x] 30dec16a 世界宗教\Thomas Keating，左婉薇，基督徒的默觀之路 Invitation to Love.pdf  (161 chunks)
+[x] 30f2983f 歷史學\東方界域史\中國史\中國通史\黃仁宇，中國大歷史.epub  (27 chunks)
+[!] 30fdbcba 人類生物學\人類文化-語言學\Peter Burke，文化史的風景.pdf  ERROR: no extractable text
+[x] 30fe3f97 歷史學\東方界域史\印度史\尼赫魯，印度的發現.epub  (135 chunks)
+[!] 31283d08 歷史學\中央界域史\希臘-拜占庭史\古斯塔夫·德羅伊森，希臘化史.pdf  ERROR: no extractable text
+[x] 3173a7ae 歷史學\全球通史\八旗，興亡的世界史\05本村凌二，地中海世界與羅馬帝國.epub  (18 chunks)
+[!] 319a510f 哲學\近代哲學\瑪格麗特‧博登，人工智慧哲學.pdf  ERROR: no extractable text
+[!] 31b23d16 宗教學\宗教對話\金白莉‧帕頓，巫術的蹤影.pdf  ERROR: no extractable text
+[x] 31bb3131 宗教學\神話學\中國神話\郝川，中國經典神話.epub  (81 chunks)
+[!] 31f39f65 世界宗教\基督教\神學原典\比德，英吉利教會史.pdf  ERROR: no extractable text
+[!] 320989c9 歷史學\Patrick Peebles，斯里蘭卡史 The History of Sri Lanka.pdf  ERROR: no extractable text
+[x] 321b16a4 社會政治學\政治學\喬伊斯·阿普爾比，無情的革命.epub  (112 chunks)
+[x] 328143d1 宗教學\詹姆斯·弗雷澤，金枝.epub  (75 chunks)
+[-] 32911ab9 人類生物學\生物學\克里斯托弗·波特，我們人類的宇宙.mobi  (skip: mobi)
+[!] 32efac0e 哲學\哲學通史\彼得·沃森，大分離.pdf  ERROR: no extractable text
+[x] 32fdacd7 歷史學\西方界域史\近代歐洲\理查德‧巴賽特，以上帝和凱撒之名.epub  (40 chunks)
+[!] 333c0453 哲學\近代哲學\馬克·里拉，以賽亞‧伯林的遺產.pdf  ERROR: no extractable text
+[x] 333dcdcf 世界宗教\基督教\聖經研究\基納，新約聖經背景註釋.pdf  (483 chunks)
+[!] 3395406a 世界宗教\猶太教\宋立宏，猶太教基本概念.pdf  ERROR: no extractable text
+[!] 33aa72e5 哲學\米歇爾·福柯 Michel Foucault，懲罰的社會 法蘭西學院演講系列.pdf  ERROR: no extractable text
+[x] 342203a6 世界宗教\胡斯托·L.岡薩雷斯，基督教史.pdf  (1015 chunks)
+[!] 347ed89f 哲學\經典與解釋輯刊\劉小楓，回想托克維爾.pdf  ERROR: no extractable text
+[x] 348c89c2 歷史學\顧衛民，荷蘭海洋帝國史.epub  (18 chunks)
+[!] 349ff164 社會政治學\名家作品\米歇爾·傅柯，性經驗史 第三卷、關注自我.pdf  ERROR: no extractable text
+[!] 34e021f5 世界宗教\基督教\神學\科克倫，信仰與古典文明.pdf  ERROR: no extractable text
+[!] 35065c3d 哲學\經典與解釋輯刊\劉小楓，血氣與政治.pdf  ERROR: no extractable text
+[x] 350824da 歷史學\亞太界域史\周婉窈，臺灣歷史圖說.pdf  (184 chunks)
+[!] 350c30cd 歷史學\近代史\布熱津斯基，大失敗.pdf  ERROR: no extractable text
+[!] 35159093 世界宗教\東亞宗教\儒教\蒙培元，理學的演變.pdf  ERROR: no extractable text
+[-] 3555dce7 哲學\哲學原典\古代哲學經典\西塞羅，論神性.azw3  (skip: azw3)
+[!] 356af6d4 哲學\羅納爾德·威廉遜，希臘化世界中的猶太人.pdf  ERROR: no extractable text
+[x] 35ac0494 世界宗教\基督教\神學原典\Jaroslav Pelikan，The Excellent Empire- The Fall of Rome And the Triumph of the Church.pdf  (132 chunks)
+[x] 35cb075b 人類生物學\生物學\埃爾溫·薛定格，生命是什麼.epub  (19 chunks)
+[x] 35ce96f1 社會政治學\名家作品\恩格斯，家庭、私有制和國家的起源.epub  (14 chunks)
+[!] 35e152b2 自然科學\戴維·林德伯格，西方科學的起源：前600年至1450年宗教、哲學和社會建制大背景下的歐洲科學傳統.pdf  ERROR: no extractable text
+[x] 364f825a 世界宗教\伊斯蘭教\塔米．安薩裡，中斷的天命.epub  (27 chunks)
+[x] 3696314b 宗教學\World Religions系列\新教，Stephen F. Brown, Protestantism.pdf  (144 chunks)
+[!] 36bc7ab9 歷史學\東方界域史\中國史\中國通史\楊照，不一樣的中國史4.pdf  ERROR: no extractable text
+[x] 36be67a9 自然科學\亞歷山大‧誇黑，從封閉世界到無限宇宙.pdf  (315 chunks)
+[-] 36c18786 世界宗教\東亞宗教\儒教\張祥龍，拒秦興漢和應對佛教的儒家哲學.mobi  (skip: mobi)
+[x] 373a2c3d 歷史學\史料原典\Delphi Classics\Ammianus Marcellinus，Complete Works of Ammianus Marcellinus.epub  (39 chunks)
+[!] 374b8f4d 歷史學\西方界域史\近代歐洲\Robert Gerwarth，不曾結束的一戰.pdf  ERROR: no extractable text
+[x] 375ccb45 歷史學\全球通史\八旗，興亡的世界史\20生井英考，空中帝國．美國的二十世紀.epub  (22 chunks)
+[x] 37908c3a 世界宗教\波斯宗教\祆教\Mary Boyce，A History of Zoroastrianism Volume 1.pdf  (360 chunks)
+[x] 37c22800 哲學\近代哲學\徐友漁，「哥白尼式」的革命哲學中的語言轉向.pdf  (411 chunks)
+[-] 37c2f49f 歷史學\東方界域史\中國史\中國通史\哈佛中國史5，掙扎的帝國.mobi  (skip: mobi)
+[x] 37e287d1 歷史學\東方界域史\中亞-蒙古史\芮傳明，內陸歐亞風雲錄.pdf  (1 chunks)
+[x] 37fffb0a 自然科學\博耶，數學史.pdf  (737 chunks)
+[x] 385da182 人類生物學\人類文化-語言學\埃裡克‧克萊因，考古的故事.epub  (38 chunks)
+[x] 3888800c 歷史學\中央界域史\希臘-拜占庭史\馬丁·貝爾納，黑色雅典娜.epub  (456 chunks)
+[!] 38931010 歷史學\東方界域史\中國史\中國通史\楊照，不一樣的中國史1.pdf  ERROR: no extractable text
+[x] 38bfea85 文學\張新穎，20世紀上半期中國文學的現代意識.pdf  (2 chunks)
+[!] 390b2259 哲學\中國思想史\班傑明·史華茲，古代中國的思想世界.pdf  ERROR: no extractable text
+[x] 392d82d5 世界宗教\摩門教\約瑟‧斯密，家譜介紹.pdf  (64 chunks)
+[!] 393ccd66 歷史學\顧衛民，葡萄牙海洋帝國史（1415—1825）.pdf  ERROR: no extractable text
+[!] 39bb1260 世界宗教\伊斯蘭教\王家瑛，伊斯蘭宗教哲學史.pdf  ERROR: no extractable text
+[!] 3a02d9bb 哲學\哲學原典\近代哲學經典\米歇爾·傅柯，不正常的人.pdf  ERROR: no extractable text
+[x] 3a33c391 世界宗教\猶太教\沙亞·科亨，古典時代猶太教導論.epub  (81 chunks)
+[!] 3ad089ff 哲學\海德格爾 (Heidegger, Martin), 孫周興，海德格爾選集.pdf  ERROR: no extractable text
+[x] 3b2ceb14 歷史學\史料原典\迪奧多羅斯，希臘史綱.epub  (95 chunks)
+[x] 3b6f41a8 世界宗教\猶太教\聖經研究\王曉朝，基督教典外文獻─舊約篇─第1冊.pdf  (326 chunks)
+[!] 3bbbd66e 哲學\[英]彼得·溫奇 Peter Winch，社會科學的觀念及其與哲學的關係（經典文庫版）.pdf  ERROR: no extractable text
+[x] 3bc0d4a2 歷史學\近代史\劉擎，2000年以來的西方.epub  (29 chunks)
+[!] 3bdb1c74 歷史學\全球通史\世界文明大系\汝信，世界文明大系04.pdf  ERROR: no extractable text
+[!] 3c187256 宗教學\張光直，美術、神話與祭祀.pdf  ERROR: no extractable text
+[x] 3c47c682 世界宗教\基督教\教會史\新教史\Nicholas Hope，German and Scandinavian Protestantism 1700-1918.pdf  (711 chunks)
+[x] 3c53fcdf 哲學\漢默頓，思想的盛宴 一口氣讀完100部西方思想經典.epub  (12 chunks)
+[!] 3cc2d43e 歷史學\東方界域史\中國史\本傑明·史華滋，古代中國的思想世界.pdf  ERROR: no extractable text
+[!] 3cf1d5d4 歷史學\全球通史\商務，世界歷史文庫\羅伯茲，歐洲史(上).pdf  ERROR: no extractable text
+[!] 3d04bc3a 世界宗教\基督教\神學\威爾肯斯，基督教與西方思想(卷二).pdf  ERROR: no extractable text
+[!] 3dae75db 世界宗教\基督教\神學\麥格拉斯，基督教神學導論.pdf  ERROR: no extractable text
+[x] 3dd08617 歷史學\西方界域史\羅馬史\克里斯多福‧希伯特，羅馬.epub  (26 chunks)
+[x] 3dda0e52 歷史學\史料原典\Delphi Classics\Sophocles，Complete Works of Sophocles.epub  (15 chunks)
+[!] 3e1837ae 社會政治學\政治學\西嶋定生，中國古代帝國的形成與結構.pdf  ERROR: no extractable text
+[!] 3e776638 世界宗教\東亞宗教\李申，中國古代宗教百講.pdf  ERROR: no extractable text
+[!] 3e787b32 世界宗教\基督教\教會史\東方教會史\尼科利斯基，俄國教會史.pdf  ERROR: no extractable text
+[x] 3ea00b16 歷史學\東方界域史\中國史\王磊，古人原來這樣過日子.epub  (68 chunks)
+[x] 3ea5629f 歷史學\全球通史\八旗，興亡的世界史\04粟田伸子，迦太基與海上商業帝國.epub  (20 chunks)
+[!] 3ebbe813 世界宗教\佛教\湯用彤，漢魏兩晉南北朝佛教史.pdf  ERROR: no extractable text
+[x] 3ec24a6f 宗教學\宗教史\光明日報，世界宗教史\任繼愈，世界宗教史5.pdf  (96 chunks)
+[x] 3eef947e 世界宗教\東亞宗教\儒教\李碩，孔子大歷史.pdf  (371 chunks)
+[x] 3f241acf 世界宗教\猶太教\聖經研究\王曉朝，基督教典外文獻─舊約篇─第4冊.pdf  (427 chunks)
+[x] 3fca07f8 文學\梅列日科夫斯基，托爾斯泰與陀思妥耶夫斯基：宗教思想.pdf  (2 chunks)
+[x] 4094d8e9 世界宗教\猶太教\Menachem Mor，Samaritans Past and Present.pdf  (306 chunks)
+[!] 40ec994d 世界宗教\基督教\神學\張百春，當代東正教神學思想.pdf  ERROR: EmptyFileError: Cannot open empty file: filename='G:\\我的雲端硬碟\\資料\\電子書\\世界宗教\\基督教
+[x] 412d2342 宗教學\宗教史\克雷默，世界古代神話.pdf  (2 chunks)
+[!] 4170547c 世界宗教\基督教\教會史\新教史\麥格夫，宗教改革運動思潮.pdf  ERROR: no extractable text
+[!] 418ff71c 世界宗教\東亞宗教\道教\小林正美，中國的道教.pdf  ERROR: no extractable text
+[!] 41b12bc7 歷史學\曹新宇 編，新史學（第十卷） 激辯儒教.pdf  ERROR: no extractable text
+[!] 41b844d5 歷史學\西方界域史\中世紀歐洲\約翰‧赫伊津哈，中世紀的衰落.pdf  ERROR: no extractable text
+[!] 41c19b64 世界宗教\東亞宗教\儒教\餘英時，朱熹的歷史世界(上).pdf  ERROR: no extractable text
+[!] 420b94ac 宗教學\麥克·阿蓋爾，宗教心理學導論.pdf  ERROR: no extractable text
+[-] 423462c7 人類生物學\人類大歷史\李澤厚，人類學歷史本體論.azw3  (skip: azw3)
+[-] 4247d2a0 歷史學\東方界域史\中國史\中國通史\安介生，民族大遷徙.azw3  (skip: azw3)
+[-] 424dc120 社會政治學\李猛 【德】馬克斯·韋伯，科學作為天職.azw3  (skip: azw3)
+[x] 426abc91 世界宗教\基督教\教會史\新教史\裡夫斯，不滅的火焰：宗教改革簡史.pdf  (1 chunks)
+[x] 427e603e 歷史學\全球通史\商務，世界歷史文庫\邁耶‧威廉，墨西哥史(下).pdf  (1 chunks)
+[-] 42c269ee 世界宗教\印度教\姚衛群，印度宗教哲學概論.azw3  (skip: azw3)
+[!] 42d776b9 宗教學\宗教史\約翰·鮑克，神之簡史.pdf  ERROR: no extractable text
+[x] 42f9ef4e 社會政治學\名家作品\法蘭西斯‧福山，國家構建.epub  (31 chunks)
+[x] 43a1c35c 人類生物學\人類大歷史\伊斯特林，文字的歷史.epub  (19 chunks)
+[-] 43a84baf 歷史學\東方界域史\中國史\裴士鋒，天國之秋.azw3  (skip: azw3)
+[x] 43a92aa9 哲學\理查德·德威特，世界觀.epub  (39 chunks)
+[!] 43ac5d82 宗教學\神話學\希臘-羅馬神話\陳中梅，荷馬的啟示.pdf  ERROR: no extractable text
+[!] 43d1ad30 哲學\中國思想史\胡適，中國中古思想史長編.pdf  ERROR: no extractable text
+[!] 43e1f155 歷史學\東方界域史\中國史\中國通史\錢穆，國史大綱.pdf  ERROR: no extractable text
+[x] 43f815a0 歷史學\東方界域史\中國史\中國通史\王柯，從「天下」國家到民族國家.epub  (16 chunks)
+[x] 440e483d 歷史學\全球通史\八旗，興亡的世界史\13網野徹哉，印加與西班牙的交錯.epub  (19 chunks)
+[x] 4442b7fb 世界宗教\伊斯蘭教\Bronwen Neil, Pauline Allen，Conflict and Negotiation in the Early Church Letters from Late Antiquity, Translated from the Greek, Latin, and Syriac.epub  (6 chunks)
+[x] 44b74b8d 歷史學\史料原典\Delphi Classics\Thucydides，Complete Works of Thucydides.epub  (84 chunks)
+[x] 4507f914 世界宗教\基督教\神學原典\Jaroslav Pelikan，The Christian Tradition Vol. 1.pdf  (416 chunks)
+[x] 451a2c36 世界宗教\基督教\教會史\天主教史\Fergus Kerr，二十世紀天主教神學家.pdf  (352 chunks)
+[x] 453fa09b 人類生物學\傑裡米·布萊克，被人類改變和改變人類的10萬年（西點軍校學生必讀歷史通識課，精華版10萬年來人類如何塑造今天的自己，快速重溫人類史） (未讀·思想家).epub  (15 chunks)
+[x] 45475396 哲學\哲學原典\古代哲學經典\Plutarchs Lives，Theseus and Romulus.pdf  (605 chunks)
+[!] 4576d908 宗教學\布魯斯·林肯，死亡、戰爭與獻祭.pdf  ERROR: no extractable text
+[x] 4579e85d 文學\泰戈爾，神性的溫柔.epub  (23 chunks)
+[!] 45a4c20d 歷史學\史料原典\志費尼，世界征服者史 上冊.pdf  ERROR: no extractable text
+[-] 46e738bb 歷史學\東方界域史\印度史\馬勒森，阿克巴大帝時代.mobi  (skip: mobi)
+[!] 46f39226 自然科學\約翰·貝爾納，我們時代裡的自然科學.pdf  ERROR: no extractable text
+[!] 47548e11 歷史學\全球通史\世界文明大系\汝信，世界文明大系10.pdf  ERROR: no extractable text
+[x] 4754f8dc 歷史學\全球通史\八旗，興亡的世界史\16羽田正，東印度公司與亞洲的海洋.epub  (18 chunks)
+[x] 47831da0 宗教學\宗教史\光明日報，世界宗教史\任繼愈，世界宗教史3.pdf  (78 chunks)
+[x] 479df9c2 歷史學\近代史\朱寰，世界近代史(上冊).pdf  (4 chunks)
+[x] 47a266d7 歷史學\東方界域史\中亞-蒙古史\華喆，帝國的背影.pdf  (1 chunks)
+[x] 47c25ad0 歷史學\[意] 路易吉·薩爾瓦託雷利，意大利簡史 從史前到當代.pdf  (1 chunks)
+[x] 47ddb7a6 世界宗教\佛教\釋印順，初期大乘佛教之起源與開展.epub  (4 chunks)
+[x] 47f88566 哲學\近代哲學\李依雲，後現代性.pdf  (1 chunks)
+[x] 4839d135 歷史學\鹽野七生，鹽野七生作品集(33冊).epub  (1245 chunks)
+[x] 486b95fd 宗教學\神話學\中國神話\袁珂，中國神話通論.epub  (106 chunks)
+[x] 489e6448 歷史學\(新西蘭) 史密斯，新西蘭史.pdf  (1 chunks)
+[x] 48be4757 歷史學\全球通史\八旗，興亡的世界史\07小杉泰，伊斯蘭帝國的吉哈德.epub  (20 chunks)
+[x] 48cfaa88 哲學\柏拉圖，柏拉圖哲學作品集（套裝6冊）（漢譯世界學術名著叢書）.epub  (54 chunks)
+[-] 497667ba 世界宗教\基督教\教會史\教會通史\遊斌，基督教史綱.azw3  (skip: azw3)
+[x] 49b26e1c 世界宗教\波斯宗教\摩尼教與靈智主義\約納斯，約納斯，諾斯替宗教.pdf  (2 chunks)
+[!] 49cab614 宗教學\饒宗頤二十世紀學術文集 卷5 宗教學_12430091，饒宗頤二十世紀學術文集 卷5 宗教學_12430091.pdf  ERROR: no extractable text
+[-] 4a12a73c 歷史學\中央界域史\阿拉伯-土耳其史\希提，阿拉伯通史.mobi  (skip: mobi)
+[x] 4a3715c6 哲學\中國思想史\湯一介，中國儒學史.epub  (332 chunks)
+[x] 4a5b1b52 歷史學\王明珂，遊牧者的抉擇：面對漢帝國的北亞遊牧部族.epub  (52 chunks)
+[x] 4a94581d 世界宗教\佛教\釋太虛，佛學入門四書.epub  (41 chunks)
+[!] 4aaf2a71 歷史學\中央界域史\Abulafia，偉大的海.pdf  ERROR: no extractable text
+[x] 4af250fd 歷史學\東方界域史\中國史\史景遷，大汗之國.epub  (19 chunks)
+[!] 4af62d77 社會政治學\彭慕蘭，大分流.pdf  ERROR: no extractable text
+[!] 4afb9d8c 哲學\[意] 吉奧喬·阿甘本（Giorgio Agamben） 著；藍江 譯，語言的聖禮.pdf  ERROR: no extractable text
+[!] 4b43fd6c 世界宗教\基督教\教會史\教會通史\岡薩雷斯，基督教史（下）.pdf  ERROR: no extractable text
+[!] 4ba58b25 哲學\哲學通史\理查德·塔納斯，西方思想史.pdf  ERROR: no extractable text
+[x] 4bb22234 世界宗教\波斯宗教\巴哈伊教\阿博都‧巴哈著作\阿博都‧巴哈，阿博都‧巴哈遺囑.pdf  (68 chunks)
+[x] 4bc6b732 人類生物學\人類大歷史\哈拉瑞，21世紀的21堂課.epub  (31 chunks)
+[x] 4bd46a4e 歷史學\中央界域史\希臘-拜占庭史\李榮添，希臘之歷史行腳.pdf  (255 chunks)
+[x] 4bfd899b 世界宗教\基督教\教會史\東方教會史\J. M. Hussey，The Orthodox Church in the Byzantine Empire.pdf  (289 chunks)
+[x] 4c191629 歷史學\全球通史\蘇珊‧懷斯·鮑爾，世界史的故事.epub  (290 chunks)
+[x] 4c1ef7e2 歷史學\中央界域史\Arthur Goldschmidt，中東史.pdf  (1 chunks)
+[x] 4c40d623 世界宗教\印度教\休‧漢密爾頓，印度哲學祛魅.epub  (113 chunks)
+[x] 4c95a0df 歷史學\王明珂，遊牧者的抉擇.epub  (52 chunks)
+[!] 4cb96ffe 哲學\經典與解釋輯刊\劉小楓，盧梭的蘇格拉底主義.pdf  ERROR: no extractable text
+[x] 4ccbb522 歷史學\[美] 拉爾斯·布朗沃思，諾曼風雲+拜占庭帝國+維京傳奇 歐洲中世紀三部曲+燃燒的遠徵（套裝共4冊）.epub  (146 chunks)
+[x] 4d060507 世界宗教\印度教\姚衛群，古印度六派哲學經典.pdf  (2 chunks)
+[x] 4d06afb2 社會政治學\封面修正版，詹姆斯·斯科特-不被統治的藝術 The Art of Not Being Governed，詹姆斯·斯科特-不被統治的藝術 The Art of Not Being Governed.pdf  (457 chunks)
+[x] 4d49e98f 哲學\朱立安．巴吉尼，你以為你的選擇真的是你的選擇？.epub  (20 chunks)
+[x] 4d535574 哲學\黎明，西洋哲學史\柯普斯登，西洋哲學史：盧梭到康德.pdf  (633 chunks)
+[x] 4d60c584 世界宗教\基督教\神學\劉時工，愛與正義.pdf  (3 chunks)
+[x] 4dbd6a7d 歷史學\全球通史\八旗，興亡的世界史\03林俊雄，草原王權的誕生.epub  (19 chunks)
+[x] 4e1b0591 人類生物學\Alexander Monro [A1exander Monro]，紙的大歷史.epub  (40 chunks)
+[x] 4e1ff7fc 歷史學\中央界域史\希臘-拜占庭史\喬治·格羅特，希臘史.epub  (46 chunks)
+[x] 4e8437cc 歷史學\全球通史\商務，世界歷史文庫\[美] 弗蘭克·阿爾戈特-弗萊雷 D. H. 菲格雷多，加勒比海地區史.pdf  (1 chunks)
+[!] 4eb3e780 世界宗教\猶太教\聖經研究\遊斌，生命言說與社群認同.pdf  ERROR: no extractable text
+[-] 4f0b3ab9 人類生物學\人類起源與進化史\司洋，破解古文字的故事.azw3  (skip: azw3)
+[!] 4f2ff43a 世界宗教\東亞宗教\牟鍾鑑，中國宗教通史.pdf  ERROR: no extractable text
+[x] 4f3e4c57 歷史學\全球通史\西蒙·溫撤斯特，大西洋的故事.epub  (123 chunks)
+[x] 4f4aba64 文學\約翰．薩德蘭，文學的40堂公開課.epub  (42 chunks)
+[x] 4fc9f401 自然科學\克里斯托弗·加爾法德，極簡宇宙史.epub  (58 chunks)
+[!] 4ffaae8a 歷史學\東方界域史\中亞-蒙古史\魏澤福，征服者與眾神.pdf  ERROR: no extractable text
+[!] 50524429 歷史學\中央界域史\希臘-拜占庭史\黃洋，希臘史研究入門.pdf  ERROR: no extractable text
+[x] 50a75d90 世界宗教\波斯宗教\摩尼教與靈智主義\林悟殊，摩尼教及其東漸.pdf  (2 chunks)
+[x] 50ab5fd6 社會政治學\政治學\埃裡克‧沃格林，秩序與歷史(全五卷).epub  (138 chunks)
+[!] 50ec8887 歷史學\東方界域史\中國史\台灣商務，中國‧歷史的長河\2 平勢隆郎，從城市國家到中華.epub  ERROR: OSError: [Errno 22] Invalid argument
+[!] 514605a8 歷史學\西方界域史\中世紀歐洲\亨利·皮朗，穆罕默德和查理曼.pdf  ERROR: no extractable text
+[x] 51a80a8b 世界宗教\基督教\教會史\Anthony Grafton，Christianity and the Transformation of the Book Origen, Eusebius, and the Library of Caesarea.pdf  (380 chunks)
+[!] 51c9dff8 自然科學\加來道雄，超越時空.pdf  ERROR: no extractable text
+[!] 51f1192f 人類生物學\人類大歷史\山崎正和，世界文明史.pdf  ERROR: no extractable text
+[-] 520c695b 心理學\弗洛伊德，弗洛伊德作品集(共四冊).azw3  (skip: azw3)
+[x] 5238d5f2 世界宗教\其他宗教\馮金朋，畢達哥拉斯.pdf  (9 chunks)
+[x] 525ff301 世界宗教\波斯宗教\巴哈伊教\巴哈歐拉，追求靈性─巴哈伊經典選編.pdf  (192 chunks)
+[x] 528805f6 歷史學\史料原典\愛德華·吉本，羅馬帝國衰亡史.epub  (14 chunks)
+[x] 52cac1d1 世界宗教\佛教\郭良鋆，佛陀和原始佛教思想.pdf  (2 chunks)
+[-] 52f64ce4 歷史學\東方界域史\中國史\中國通史\講談社，中國的歷史（全十卷）.azw3  (skip: azw3)
+[x] 52f71c84 世界宗教\基督教\神學原典\奧古斯丁，論四福音的和諧.pdf  (380 chunks)
+[x] 531655dc 宗教學\宗教對話\David Thomas，Christian Doctrines in Islamic Theology.pdf  (391 chunks)
+[!] 53289e14 世界宗教\佛教\龔雋，覺悟與迷情.pdf  ERROR: no extractable text
+[!] 532b0e5a 心理學\生死學\歐文‧亞隆，存在心理治療.epub  ERROR: no extractable text
+[x] 5359d13f 歷史學\西方界域史\伊恩·莫蒂默，歐羅巴一千年.epub  (96 chunks)
+[x] 53625079 哲學\近代哲學\存在主義\羅伯特‧所羅門，尼采到底說了什麼？.pdf  (248 chunks)
+[x] 537e9477 人類生物學\人類文化-語言學\張公瑾，文化語言學教程.pdf  (1 chunks)
+[x] 53951544 世界宗教\海德格爾 奧特劉小楓，海德格爾與神學.pdf  (361 chunks)
+[-] 53a18ed7 歷史學\西方界域史\近代歐洲\馬克·馬佐爾，巴爾幹五百年.azw3  (skip: azw3)
+[x] 5411fa22 自然科學\尤爾根·哈伯瑪斯，在自然主義與宗教之間.epub  (25 chunks)
+[x] 541219a1 哲學\中國思想史\馮友蘭，中國哲學史(v2).pdf  (471 chunks)
+[!] 54378d5c 世界宗教\基督教\神學\奧特，不可言說的言說.pdf  ERROR: no extractable text
+[x] 54862e64 自然科學\（美）普林西比，鍊金術的秘密.pdf  (360 chunks)
+[x] 54bf945c 人類生物學\人類起源與進化史\大衛‧賴克，人類起源的故事.epub  (28 chunks)
+[x] 54c18e07 哲學\朱立安．巴吉尼，世界是這樣思考的.epub  (39 chunks)
+[x] 5508ed5a 哲學\近代哲學\存在主義\吳增定，尼采與柏拉圖主義.pdf  (1 chunks)
+[-] 55152042 歷史學\東方界域史\中國史\中國通史\哈佛中國史3，世界性的帝國.mobi  (skip: mobi)
+[!] 5521d1a9 歷史學\西方界域史\中世紀歐洲\奧斯勒，重構世界.pdf  ERROR: no extractable text
+[!] 552e40a3 歷史學\東方界域史\中國史\中國通史\楊照，不一樣的中國史2.pdf  ERROR: no extractable text
+[!] 55336488 世界宗教\基督教\神學\張旭，上帝已死，神學何為？.pdf  ERROR: no extractable text
+[x] 554a4c92 宗教學\神話學\北歐-日耳曼神話\米蘭達·格林，凱爾特神話.epub  (22 chunks)
+[!] 55766d9e 宗教學\神話學\伊萬‧斯特倫斯基，二十世紀的四神話理論.pdf  ERROR: no extractable text
+[x] 55787a02 人類生物學\人類大歷史\約瑟夫·亨裡奇，人類成功統治地球的秘密.epub  (108 chunks)
+[x] 55b9db85 歷史學\史料原典\Manetho，History of Egypt.pdf  (790 chunks)
+[!] 55dd291e 宗教學\宗教史\羅伯特·斯旺森，歐洲的宗教與虔誠.pdf  ERROR: no extractable text
+[x] 56386605 世界宗教\伊斯蘭教\Robert Hoyland，In Gods Path-The Arab Conquests and the Creation of an Islamic Empire.pdf  (310 chunks)
+[x] 56558030 世界宗教\Carlo Maria Martini，楊成斌，從靜觀到基督徒的美德（上冊）.pdf  (266 chunks)
+[x] 567abcb3 歷史學\中央界域史\埃德加·班克斯，古代世界的七大奇蹟.epub  (11 chunks)
+[!] 57465c68 歷史學\東方界域史\中國史\高明士，中國中古時代的禮儀、宗教與制度.pdf  ERROR: no extractable text
+[!] 577488c8 歷史學\全球通史\世界文明大系\汝信，世界文明大系06.pdf  ERROR: no extractable text
+[x] 577f8693 社會政治學\班納吉，貧窮的本質.epub  (22 chunks)
+[x] 57e48377 哲學\哲學原典\古代哲學經典\Books 1-12，Homer, The Odyssey.pdf  (488 chunks)
+[!] 57f1e3a8 歷史學\中央界域史\埃及史\王海利，法老與學者.pdf  ERROR: no extractable text
+[-] 58d8f3db 心理學\生死學\謝利·卡根，耶魯大學公開課.mobi  (skip: mobi)
+[-] 58f66d85 社會政治學\[德]馬克思•舍勒  劉小楓 主編，舍勒文集.azw3  (skip: azw3)
+[x] 58fbccbe 世界宗教\波斯宗教\巴哈伊教\巴哈歐拉著作\巴哈歐拉，大同聖帳.pdf  (52 chunks)
+[-] 5936b956 歷史學\[英] 奧蘭多·費吉斯，娜塔莎之舞.mobi  (skip: mobi)
+[!] 59ca99da 人類生物學\王明珂，羌在漢藏之間  川西羌族的歷史人類學研究.pdf  ERROR: no extractable text
+[!] 5a29361a 世界宗教\伊斯蘭教\井筒俊彥，伊斯蘭教思想歷程.pdf  ERROR: no extractable text
+[x] 5a457cdb 宗教學\神話學\希臘-羅馬神話\鄭振鐸，希臘神話與英雄傳說.epub  (44 chunks)
+[x] 5a90ff25 歷史學\全球通史\八旗，興亡的世界史\08原聖，凱爾特．最初的歐洲.epub  (19 chunks)
+[!] 5b5471a7 世界宗教\佛教\林鎮國，空性與方法.pdf  ERROR: no extractable text
+[!] 5b7f8e6d 社會政治學\知識社會學\湯姆．尼可斯，專業之死.pdf  ERROR: no extractable text
+[!] 5bb721bf 哲學\[德]伊曼努爾·康德，康德論上帝與宗教.pdf  ERROR: no extractable text
+[!] 5bbe0460 歷史學\全球通史\商務，世界歷史文庫\布拉德福德‧伯恩斯，巴西史.pdf  ERROR: no extractable text
+[!] 5c0d88a4 宗教學\自己的上帝.pdf  ERROR: no extractable text
+[-] 5c34afce 歷史學\中央界域史\西蒙·蒙蒂菲奧裡，耶路撒冷三千年.azw  (skip: azw)
+[x] 5c4ecb6f 哲學\黎明，西洋哲學史\柯普斯登，西洋哲學史：近代哲學（霍布斯到休謨）.pdf  (613 chunks)
+[x] 5c944f41 宗教學\神諭與預言在古希臘社會中的地位及作用，神諭與預言在古希臘社會中的地位及作用.pdf  (7 chunks)
+[x] 5cc6ff0d 世界宗教\佛教\林欣浩，佛祖都說了些什麼.epub  (117 chunks)
+[x] 5d081a9c 歷史學\中央界域史\希臘-拜占庭史\伯克特，東方化革命：古風時代前期近東對古希臘文化的影響.pdf  (3 chunks)
+[x] 5d1b3bff 世界宗教\東亞宗教\道教\陳耀庭，道教神學概論.pdf  (421 chunks)
+[!] 5d9b4ba6 世界宗教\印度教\沙爾瑪，印度教.pdf  ERROR: no extractable text
+[x] 5db06a80 世界宗教\東亞宗教\普鳴，成神.pdf  (515 chunks)
+[x] 5dc71e85 歷史學\近代史\帕爾默·克萊默，現代世界史.epub  (20 chunks)
+[!] 5e4208c6 哲學\經典與解釋輯刊\劉小楓，美德可教嗎.pdf  ERROR: no extractable text
+[x] 5e946861 歷史學\美州界域史\Kim MacQuarrie，安第斯山脈的生與死.epub  (19 chunks)
+[x] 5e96374e 歷史學\全球通史\八旗，興亡的世界史\12石澤良昭，亦近亦遠的東南亞.epub  (20 chunks)
+[x] 5ec30f44 世界宗教\基督教\神學原典\尼古拉・庫薩，論隱秘的上帝.pdf  (2 chunks)
+[!] 5ee3edaa 世界宗教\佛教\蔣維喬，中國佛教史.pdf  ERROR: no extractable text
+[x] 5f6e8ba1 心理學\裡卡多‧曼佐蒂，瀰散的心智.epub  (14 chunks)
+[x] 5f70b6af 歷史學\東方界域史\中國史\中國通史\度陰山，知行合一五千年.epub  (54 chunks)
+[x] 5f717d69 哲學\近代哲學\存在主義\孫周興，存在與超越.pdf  (158 chunks)
+[x] 5fa23d0c 哲學\哲學原典\馬基維利，君主論.epub  (36 chunks)
+[x] 5fcb1e43 哲學\埃裡克·沃格林，段保良，新政治科學.pdf  (1 chunks)
+[!] 602bdf82 世界宗教\[美]艾倫·伍德 Allen Wood 邱文元，康德的理性神學.pdf  ERROR: no extractable text
+[!] 6065811e 文學\劉小楓，柏拉圖的哲學戲劇.pdf  ERROR: no extractable text
+[x] 6075361b 歷史學\中央界域史\查爾斯‧弗里曼，埃及、希臘與羅馬.pdf  (979 chunks)
+[!] 608f45b3 自然科學\理查·道金斯，地球上最偉大的表演.epub  ERROR: KeyError: "There is no item named 'OEBPS/Text/Section0001.xhtml' in the archive"
+[-] 6098729f 社會政治學\嚴飛，穿透 像社會學家一樣思考.mobi  (skip: mobi)
+[!] 60c650bf 哲學\羅伯特·所羅門，大問題.pdf  ERROR: no extractable text
+[x] 6108f172 宗教學\宗教史\光明日報，世界宗教史\任繼愈，世界宗教史9.pdf  (82 chunks)
+[x] 61795723 宗教學\神話學\坎貝爾，英雄之旅.epub  (23 chunks)
+[x] 61c079a2 歷史學\近代史\沃爾特‧米德，上帝與黃金.epub  (31 chunks)
+[!] 620088b8 世界宗教\基督教\教會史\教會通史\岡薩雷斯，基督教思想史.pdf  ERROR: no extractable text
+[x] 6225448a 哲學\近代哲學\讓‧雅克·盧梭，論人類不平等的起源和基礎.epub  (10 chunks)
+[x] 624d9f1a 歷史學\西方界域史\近代歐洲\羅傑‧克勞利，征服者.epub  (32 chunks)
+[x] 62794499 宗教學\宗教對話\Janos Jany，Judging in the Islamic, Jewish and Zoroastrian Legal Traditions.pdf  (242 chunks)
+[x] 62c9acb2 世界宗教\猶太教\聖經研究\Jack Finegan，Handbook of Biblical Chronology.pdf  (457 chunks)
+[!] 62d67956 哲學\近代哲學\傑弗裡‧霍松，啟蒙與絕望.pdf  ERROR: no extractable text
+[x] 633a5973 社會政治學\戴維·邁爾斯，社會心理學.pdf  (9 chunks)
+[!] 6341ddf7 社會政治學\吉登斯，現代性的後果.pdf  ERROR: no extractable text
+[-] 6344a72c 歷史學\東方界域史\楊益，不可不知的朝韓史.azw3  (skip: azw3)
+[!] 63954971 歷史學\中央界域史\埃及史\金觀濤，悲壯的衰落.pdf  ERROR: no extractable text
+[x] 63c140c2 歷史學\全球通史\商務，世界歷史文庫\哈全安，中東史（上、中、下 套裝共3冊）解讀中東千年歷史，理解中東當前困局！.pdf  (2495 chunks)
+[x] 63f92b37 世界宗教\基督教\神學\盧德，聖山沙漠之夜.pdf  (245 chunks)
+[x] 64095aeb 哲學\黃敏，維特根斯坦的《邏輯哲學論》--文本疏義 (經典與解釋).epub  (38 chunks)
+[x] 649490ba 自然科學\[意]托馬斯·馬卡卡羅, SoBooKs.cc，空間簡史.epub  (16 chunks)
+[!] 64b01c3a 哲學\經典與解釋輯刊\劉小楓，荀子的辯說.pdf  ERROR: no extractable text
+[!] 64e0d3ed 宗教學\伊利亞德，神聖的存在.pdf  ERROR: no extractable text
+[!] 64ef6ed3 社會政治學\政治學\阿希斯·南迪，民族主義的不正當性.pdf  ERROR: no extractable text
+[x] 6561ac6c 哲學\近代哲學\何懷宏，道德·上帝與人.pdf  (2 chunks)
+[!] 6574130d 心理學\生死學\阿里耶斯，面對死亡的人（下卷）.pdf  ERROR: no extractable text
+[-] 65992647 世界宗教\佛教\釋印順，原始佛教聖典之集成.mobi  (skip: mobi)
+[!] 65b978b7 世界宗教\基督教\神學原典\馬丁路德，路德和加爾文論世俗權威.pdf  ERROR: no extractable text
+[x] 65df4430 歷史學\John R. Lampe，南斯拉夫史 Yugoslavia as History.pdf  (1 chunks)
+[x] 662627fe 社會政治學\資本主義-社會主義\唐正東，從斯密到馬克思.pdf  (447 chunks)
+[-] 66282862 世界宗教\猶太教\諾曼·所羅門，猶太人與猶太教.mobi  (skip: mobi)
+[x] 663306b1 哲學\近代哲學\二十世紀西方哲學經典（套裝共10冊）.epub  (276 chunks)
+[x] 667bb717 歷史學\西方界域史\尼爾·奧利弗，蘇格蘭史.epub  (20 chunks)
+[x] 66d036fb 文學\阿瑟·克拉克，神的九十億個名字.epub  (20 chunks)
+[x] 66e22853 歷史學\中央界域史\希臘-拜占庭史\瓦西列夫，拜占庭帝國史(324-1453).epub  (23 chunks)
+[x] 671dab52 歷史學\近代史\朱寰，世界近代史(下冊).pdf  (3 chunks)
+[x] 677457f5 人類生物學\人類文化-語言學\弗洛朗斯‧韋伯，人類學簡史.epub  (20 chunks)
+[x] 677de19b 歷史學\馬克·莫里斯，諾曼征服.epub  (33 chunks)
+[!] 67871bb0 世界宗教\朱利安・鮑爾迪，黑色上帝 猶太教、基督教和伊斯蘭教的起源.pdf  ERROR: no extractable text
+[x] 6832b858 歷史學\全球通史\商務，世界歷史文庫\保羅·庫比塞克，烏克蘭史.pdf  (1 chunks)
+[x] 68483387 世界宗教\猶太教\Magnar Kartveit，The Origin of the Samaritans.pdf  (409 chunks)
+[x] 68547d7a 世界宗教\佛教\釋印順，印順法師佛學著作全集(下).pdf  (382 chunks)
+[x] 68687ca1 宗教學\宗教史\凱倫·阿姆斯壯，軸心時代.epub  (47 chunks)
+[!] 689d56b8 人類生物學\人類起源與進化史\奇普·沃爾特，重返人類演化現場.pdf  ERROR: no extractable text
+[x] 68da57d2 哲學\黎明，西洋哲學史\柯普斯登，西洋哲學史：中世紀哲學下（奧坎到蘇亞雷）.pdf  (676 chunks)
+[!] 68dd8b3a 歷史學\東方界域史\中亞-蒙古史\薛宗正，突厥史.pdf  ERROR: no extractable text
+[x] 6921643e 世界宗教\波斯宗教\巴哈伊教\蔡德貴，當代新興巴哈伊教研究.pdf  (337 chunks)
+[x] 693968e0 歷史學\近代史\David Kertzer，教宗與墨索里尼.epub  (53 chunks)
+[x] 693b6b94 歷史學\近代史\傑弗裡‧布萊內，20世紀簡史.epub  (141 chunks)
+[x] 693cb778 宗教學\宗教史\伊利亞德，宗教思想史.pdf  (1309 chunks)
+[x] 694ea592 世界宗教\波斯宗教\巴哈伊教\巴哈歐拉著作\巴哈歐拉，篤信經.pdf  (156 chunks)
+[x] 694fa265 世界宗教\基督教\教會史\天主教史\顧衛民，中國天主教編年史.pdf  (2 chunks)
+[x] 69f5ec66 歷史學\西方界域史\J.M.羅伯茲，歐洲一萬年（三卷本）.epub  (40 chunks)
+[x] 6a47925b 世界宗教\基督教\神學\奧爾森，二十世紀神學評介.pdf  (1 chunks)
+[!] 6a8dfe72 哲學\[以]阿維納瑞 S. Avineri 朱學平(譯) 王興賽，黑格爾的現代國家理論.pdf  ERROR: no extractable text
+[x] 6a915259 世界宗教\波斯宗教\祆教\Rohinton F. Nariman，The Inner Fire Faith, Choice, And Modern-Day Living In Zoroastrianism.epub  (35 chunks)
+[x] 6aa51684 世界宗教\猶太教\聖經研究\房志榮，舊約諸書的形成.pdf  (237 chunks)
+[!] 6ab796eb 歷史學\史料原典\志費尼，世界征服者史 下冊.pdf  ERROR: no extractable text
+[x] 6b0226fc 歷史學\西方界域史\中世紀歐洲\恩斯特·坎託洛維奇，國王的兩個身體.epub  (268 chunks)
+[x] 6b56a445 人類生物學\人類文化-語言學\徐文堪，歐亞大陸語言及其研究說略.pdf  (1 chunks)
+[-] 6b9905ed 歷史學\全球通史\加布裡埃爾‧馬丁內斯，歷史上的大帝國：2000年暴力與和平的全球簡史.mobi  (skip: mobi)
+[x] 6baec4f7 世界宗教\其他宗教\Ken Dowden，European Paganism.pdf  (387 chunks)
+[x] 6bcd419f 歷史學\東方界域史\中國史\王柯，從「天下」國家到民族國家.epub  (4 chunks)
+[x] 6bde6fb9 心理學\湯瑪斯．凱瑟卡，一路笑到掛的生死哲學課.epub  (71 chunks)
+[!] 6bf75303 社會政治學\政治學\沃格林，政治觀念史稿\沃格林，政治觀念史稿(三).pdf  ERROR: no extractable text
+[!] 6c5c942f 哲學\哲學原典\古代哲學經典\荷馬，荷馬史詩.pdf  ERROR: no extractable text
+[x] 6cab33dc 世界宗教\基督教\教會史\東方教會史\殷小平，元代也裡可溫考述.pdf  (1 chunks)
+[x] 6cce3c3e 宗教學\羅納德·德沃金，沒有上帝的宗教.pdf  (2 chunks)
+[x] 6cebf232 世界宗教\摩門教\約瑟‧斯密，復興的基礎教師資料.pdf  (223 chunks)
+[x] 6d143530 世界宗教\基督教\教會史\天主教史\Michaela Puzicha，本篤會規評注.pdf  (1 chunks)
+[x] 6d3ee62d 歷史學\史料原典\Delphi Classics\Aulus Gellius，Complete Works of Aulus Gellius.epub  (96 chunks)
+[!] 6d5498a4 社會政治學\政治學\麥克·奧克肖特，政治思想史.pdf  ERROR: no extractable text
+[x] 6d731f04 世界宗教\波斯宗教\祆教\選編，阿維斯塔.pdf  (10 chunks)
+[!] 6def9f75 世界宗教\基督教\神學原典\優西比烏，君士坦丁傳.pdf  ERROR: no extractable text
+[x] 6e7924b7 世界宗教\猶太教\Bill T. Arnold, Richard S. Hess，Ancient Israels History An Introduction to Issues and Sources.pdf  (557 chunks)
+[!] 6ec10148 社會政治學\知識社會學\彼得．柏克，知識社會史.pdf  ERROR: no extractable text
+[x] 6f3b6af9 世界宗教\從_佛般泥洹經_線索探討漢譯佛經中轉輪王觀念.pdf  (50 chunks)
+[x] 6f48a399 自然科學\保羅⋅戴維斯，宇宙的最後三分鐘.epub  (17 chunks)
+[x] 6f8aa966 社會政治學\伊萊恩‧卡斯凱特，網上遺產.epub  (29 chunks)
+[x] 70028df3 世界宗教\佛教\釋太虛，禪悟菩提.epub  (26 chunks)
+[x] 70464601 世界宗教\東亞宗教\道教\詹石窗，道教文化十五講.pdf  (321 chunks)
+[!] 70543820 歷史學\西方界域史\近代歐洲\羅賓·布里古斯，與巫為鄰.pdf  ERROR: no extractable text
+[x] 70637a0f 歷史學\東方界域史\周偉洲，藏史論考.pdf  (1 chunks)
+[x] 70725365 歷史學\東方界域史\中亞-蒙古史\阿奇舍夫，伊犁河流域塞人和烏孫的古代文明.pdf  (1 chunks)
+[x] 70869e9e 宗教學\World Religions系列\佛教，Madhu Bazaz Wangu, Buddhism.pdf  (144 chunks)
+[!] 709f36f4 哲學\朗佩特，經典與解釋-尼采註疏集-尼采與現時代.pdf  ERROR: no extractable text
+[-] 70ac0e81 世界宗教\猶太教\猶太民族研究\徐新，猶太文化史.azw3  (skip: azw3)
+[!] 70d2f04f 自然科學\根據F.卡普拉的《物理學之道》編譯灌耕編譯，現代物理學和東方神秘主義.pdf  ERROR: no extractable text
+[x] 7107a9df 歷史學\美州界域史\查爾斯·曼恩，1491年.epub  (25 chunks)
+[-] 71441f20 宗教學\神話學\坎貝爾，千面英雄.azw3  (skip: azw3)
+[x] 7167dabf 歷史學\東方界域史\印度史\愛德華·盧斯，不顧諸神.epub  (10 chunks)
+[x] 719fe995 自然科學\丹皮爾，科學史及其與哲學和宗教的關係.pdf  (1098 chunks)
+[x] 7230093d 歷史學\全球通史\八旗，興亡的世界史\09陣內秀信，義大利．海洋城市的精神.epub  (17 chunks)
+[!] 7250472b 社會政治學\安東尼．紀登斯(Anthony Giddens) 簡惠美，資本主義與現代社會理論  馬克斯, 塗爾幹, 韋伯.pdf  ERROR: no extractable text
+[!] 726db72a 世界宗教\基督教\神學\劉小楓，走向十字架上的真.pdf  ERROR: no extractable text
+[!] 72e50311 社會政治學\政治學\沃格林，政治觀念史稿\沃格林，政治觀念史稿(五).pdf  ERROR: no extractable text
+[!] 7352ae42 人類生物學\胡塞爾, Husserl，胡塞爾選集 20世紀人類思想家文庫.pdf  ERROR: no extractable text
+[x] 73a42138 哲學\哲學原典\近代哲學經典\伯特蘭·羅素，西方的智慧.epub  (20 chunks)
+[x] 73a5eeb1 世界宗教\波斯宗教\巴哈伊教\阿博都‧巴哈著作\阿博都‧巴哈，弘揚世界和平.pdf  (540 chunks)
+[x] 73c9df1b 世界宗教\基督教\教會史\彼得‧布朗，穿過針眼.epub  (45 chunks)
+[x] 742102d7 歷史學\史料原典\Delphi Classics\Josephus，Complete Works of Josephus.epub  (813 chunks)
+[!] 7423cb18 歷史學\史學理論\雅克·勒高夫，我們必須給歷史分期嗎？.pdf  ERROR: no extractable text
+[!] 74316959 哲學\經典與解釋輯刊\洛維特，牆上的書寫.pdf  ERROR: no extractable text
+[!] 745dd8d1 心理學\歐文·亞隆，叔本華的治療.pdf  ERROR: no extractable text
+[!] 74b4037b 歷史學\東方界域史\中國史\梁啟超，中國近三百年學術史.pdf  ERROR: no extractable text
+[x] 74c0bbb2 哲學\近代哲學\存在主義\莎拉．貝克威爾，我們在存在主義咖啡館.epub  (21 chunks)
+[!] 74c7f0b4 哲學\哲學原典\近代哲學經典\康德，單純理性限度內的宗教.pdf  ERROR: no extractable text
+[x] 7563e09c 宗教學\嚴德爾，當代宗教哲學導論.pdf  (1 chunks)
+[x] 756d4323 歷史學\史料原典\希羅多德，歷史.epub  (24 chunks)
+[-] 75dc23ed 歷史學\中央界域史\希臘-拜占庭史\Donald Kagan，雅典帝國的覆亡.mobi  (skip: mobi)
+[x] 75ee51cd 歷史學\全球通史\八旗，興亡的世界史\02森谷公俊，亞歷山大的征服與神話.epub  (20 chunks)
+[!] 75fe6c9b 宗教學\神話學\馬麗加‧金芭塔絲，女神的語言.pdf  ERROR: no extractable text
+[x] 76500269 哲學\近代哲學\存在主義\方向紅，時間與存在.pdf  (335 chunks)
+[x] 76538cac 哲學\斯科特·塞謬爾森，關於痛苦的七堂哲學課.epub  (21 chunks)
+[!] 7680f385 哲學\近代哲學\萊澤克·柯拉科夫斯基，走向馬克思主義的人道主義.pdf  ERROR: no extractable text
+[!] 768842fc 世界宗教\東亞宗教\儒教\李卓，「儒教國家」日本的實像.pdf  ERROR: no extractable text
+[-] 76891968 歷史學\郭聖銘，世界文明史綱要(古代部分) (世界歷史文化叢書).azw3  (skip: azw3)
+[x] 769ef520 世界宗教\佛教\栗田功，大美之佛像.pdf  (1 chunks)
+[x] 76b5299e 世界宗教\猶太教\巴巴拉·塔奇曼，聖經與利劍.epub  (31 chunks)
+[x] 76d4b31c 世界宗教\約瑟夫·拉辛格 (Joseph Ratzinger, Pope Benedict XVI)，靜也，基督教導論.pdf  (318 chunks)
+[-] 7793fadf 文學\嘉倩，三毛不在撒哈拉.mobi  (skip: mobi)
+[!] 77abccf7 歷史學\西方界域史\諾裡奇，法蘭西全史.epub  ERROR: AttributeError: 'NoneType' object has no attribute 'find'
+[x] 77e21c32 世界宗教\猶太教\猶太民族研究\維克多‧切利科夫，希臘化文與猶太人.pdf  (1 chunks)
+[!] 77e2693e 歷史學\史景遷，追尋現代中國全集.pdf  ERROR: no extractable text
+[!] 781ad945 哲學\近代哲學\托馬斯·內格爾，心靈和宇宙.pdf  ERROR: no extractable text
+[x] 78249350 世界宗教\猶太教\猶太民族研究\丹尼爾·戈迪斯，以色列.pdf  (545 chunks)
+[x] 783716d0 歷史學\史料原典\修昔底德，伯羅奔尼撒戰爭史.epub  (53 chunks)
+[x] 786a8026 歷史學\史料原典\Delphi Classics\Eusebius，Collected Works of Eusebius.epub  (1380 chunks)
+[x] 78a526a6 哲學\哲學原典\古代哲學經典\Cicero，On Ends.pdf  (544 chunks)
+[-] 78cd0020 哲學\哲學原典\近代哲學經典\伯特蘭‧羅素，西方哲學簡史.azw3  (skip: azw3)
+[x] 78dcd2cd 自然科學\史蒂芬．霍金，霍金大見解.epub  (19 chunks)
+[!] 78fdc1b8 世界宗教\伊斯蘭教\法土拉·葛蘭，蘇菲思想.pdf  ERROR: no extractable text
+[!] 790768a1 世界宗教\猶太教\約瑟夫斯，猶太古史&猶太戰記.pdf  ERROR: no extractable text
+[-] 791f2ce4 歷史學\東方界域史\中亞-蒙古史\杉山正明，忽必烈的挑戰.azw3  (skip: azw3)
+[x] 7933c079 世界宗教\基督教\神學\安德魯·懷特，基督教世界科學與神學論戰史（下卷）.pdf  (4 chunks)
+[x] 79533bf4 世界宗教\伊斯蘭教\Khaled El-Rouayheb，The Oxford Handbook of Islamic Philosophy.pdf  (710 chunks)
+[!] 79570a75 哲學\葉夫格拉弗夫，蘇聯哲學史.pdf  ERROR: no extractable text
+[!] 79a6c015 世界宗教\印度教\姚衛群，印度宗教哲學百問.pdf  ERROR: no extractable text
+[!] 79d3b1ae 哲學\G.S.基爾克 J.E.拉文 M.斯科菲爾德，前蘇格拉底哲學家.pdf  ERROR: no extractable text
+[!] 79e70949 歷史學\美州界域史\李黎明，不可不知的美國史.pdf  ERROR: no extractable text
+[x] 79f1deae 哲學\沃草烙哲學作者群，現代草民哲學讀本.epub  (47 chunks)
+[x] 79f4dd9c 世界宗教\佛教\釋印順，印度佛教思想史.epub  (13 chunks)
+[!] 7a1be23f 歷史學\東方界域史\中亞-蒙古史\聯合國教科文組織，中亞文明史4上.pdf  ERROR: no extractable text
+[!] 7a678a11 自然科學\柯瓦雷，從封閉世界到無限宇宙.pdf  ERROR: no extractable text
+[x] 7ac4d62c 歷史學\全球通史\商務，世界歷史文庫\世界歷史文庫 法國史 中(法) 杜比 商務印書館，世界歷史文庫 法國史 中(法) 杜比 商務印書館.pdf  (1 chunks)
+[x] 7af90133 歷史學\西方界域史\克努特·耶斯佩森，丹麥史.pdf  (1 chunks)
+[x] 7b00207e 人類生物學\生物學\曾志朗，在意識的繁花裡漫步.epub  (32 chunks)
+[x] 7b027191 世界宗教\基督教\聖經研究\提摩太·林，死海古卷概說.epub  (32 chunks)
+[x] 7b28cc52 哲學\羅曉穎，吳小鋒等編譯，菜園哲人伊壁鳩魯.pdf  (2 chunks)
+[x] 7b385d6b 人類生物學\人類大歷史\賈得‧戴蒙，巨變.pdf  (511 chunks)
+[-] 7b510df9 歷史學\東方界域史\中亞-蒙古史\榮新江，絲綢之路與東西文化交流.mobi  (skip: mobi)
+[!] 7b5170c7 歷史學\中央界域史\希臘-拜占庭史\崔艷紅，普羅柯比的世界.pdf  ERROR: no extractable text
+[x] 7b6bcc2f 宗教學\神話學\北歐-日耳曼神話\瓊安．哈莉絲，洛基福音書.epub  (50 chunks)
+[!] 7ba55dba 哲學\近代哲學\索科拉夫斯基，現象學導論.pdf  ERROR: no extractable text
+[!] 7ba82b8c 宗教學\[法]克洛德·列維-斯特勞斯 Claude Lévi-Strauss 周昌忠，神話學.pdf  ERROR: no extractable text
+[x] 7c1e4498 歷史學\全球通史\克羅斯比，哥倫布大交換.epub  (20 chunks)
+[x] 7c1e6431 世界宗教\猶太教\聖經研究\Gale A. Yee，The Pentateuch Fortress Commentary on the Bible Study.pdf  (290 chunks)
+[!] 7c2029d9 歷史學\史學理論\周筱贊，歷史學是什麼.pdf  ERROR: no extractable text
+[!] 7cb3de63 社會政治學\政治學\格雷納，古希臘政治理論.pdf  ERROR: no extractable text
+[x] 7cdf9771 哲學\近代哲學\存在主義\邁克爾‧坦納，尼采(牛津通識讀本).epub  (40 chunks)
+[x] 7d9582be 自然科學\埃裡克‧貝爾，數學大師從芝諾到龐加萊.epub  (42 chunks)
+[x] 7daaeb51 歷史學\東方界域史\中國史\台灣商務，中國‧歷史的長河\6 氣賀澤保規，絢爛的世界帝國.epub  (17 chunks)
+[x] 7db149ee 世界宗教\佛教\沃德爾，印度佛教史.pdf  (5 chunks)
+[x] 7dc5a71e 社會政治學\資本主義-社會主義\柯立安‧斯考森，赤裸裸的共產黨.epub  (25 chunks)
+[x] 7df7d10d 哲學\哲學原典\古代哲學經典\Books1-5，Plato, The Republic.pdf  (555 chunks)
+[x] 7e5aa1f4 世界宗教\伊斯蘭教\John Renard，Islamic theological themes- a primary source reader.pdf  (480 chunks)
+[!] 7ebdc9d9 人類生物學\人類大歷史\許靖華，氣候創造歷史.pdf  ERROR: no extractable text
+[x] 7f131934 歷史學\東方界域史\中國史\台灣商務，中國‧歷史的長河\8 杉山正明，疾馳的草原征服者.epub  (13 chunks)
+[x] 7f2646f6 宗教學\宗教史\託卡列夫，世界宗教簡史.pdf  (2 chunks)
+[x] 7f6285ba 世界宗教\東亞宗教\陶磊，從巫術到數術.pdf  (3 chunks)
+[!] 7fe5f23a 世界宗教\波斯宗教\摩尼教與靈智主義\哈納克，論馬克安.pdf  ERROR: no extractable text
+[!] 8000c9ab 宗教學\神話學\馬昌儀，東方神話傳說(第一卷).pdf  ERROR: no extractable text
+[x] 8031fd2d 哲學\經典與解釋輯刊\劉小楓，猶太教中的柏拉圖門徒.pdf  (353 chunks)
+[-] 80868476 歷史學\中央界域史\埃及史\伊恩·肖，探秘古埃及.azw3  (skip: azw3)
+[x] 80abdd47 歷史學\東方界域史\中國史\榮新江，中古中國與外來文明.pdf  (2 chunks)
+[!] 80be035f 歷史學\東方界域史\中亞-蒙古史\餘太山，西域通史.pdf  ERROR: no extractable text
+[!] 80ccbfe4 歷史學\亞太界域史\連橫，臺灣通史（上冊）.pdf  ERROR: no extractable text
+[!] 80e9bbbb 歷史學\中央界域史\埃及史\郭子林，古埃及托勒密王朝專制王權研究.pdf  ERROR: no extractable text
+[x] 81224d83 社會政治學\資本主義-社會主義\大衛‧哈維，跟大衛·哈維讀《資本論》.pdf  (2 chunks)
+[!] 816b65c0 哲學\近代哲學\莫偉民，二十世紀法國哲學.pdf  ERROR: no extractable text
+[-] 81997b54 歷史學\東方界域史\中國史\中國通史\哈佛中國史4，儒家統治的時代.mobi  (skip: mobi)
+[x] 81b26ec4 世界宗教\教宗本篤十六世  Pope Benedict XVI，教父.pdf  (208 chunks)
+[x] 81db3b73 人類生物學\人類大歷史\斯蒂芬‧平克，人性中的善良天使.epub  (99 chunks)
+[x] 820e26f4 歷史學\西方界域史\中世紀歐洲\馬千，醫院騎士團全史.epub  (16 chunks)
+[!] 8217a294 世界宗教\印度教\室利·阿羅頻多，薄伽梵歌論.pdf  ERROR: no extractable text
+[!] 82912f54 歷史學\全球通史\商務，世界歷史文庫\羅伯茲，歐洲史(下).pdf  ERROR: no extractable text
+[x] 82bed330 宗教學\神話學\中國神話\陳建憲，神祇與英雄.pdf  (1 chunks)
+[x] 82cca251 世界宗教\基督教\聖經研究\王曉朝，基督教典外文獻─新約篇─第4冊.pdf  (299 chunks)
+[x] 82cdf819 哲學\經典與解釋輯刊\劉小楓，閱讀的德性.pdf  (2 chunks)
+[x] 82ede8ef 人類生物學\人類文化-語言學\喬治·史鐸金，人類學家的魔法.pdf  (564 chunks)
+[x] 83061326 世界宗教\猶太教\聖經研究\王曉朝，基督教典外文獻─舊約篇─第5冊.pdf  (487 chunks)
+[x] 83166cc2 世界宗教\教會拉丁文(一) 暑密A_課堂講義_1-2_修1.pdf  (13 chunks)
+[x] 8321b387 哲學\當代哲學\賴俊雄，他者哲學.pdf  (412 chunks)
+[x] 8335686f 世界宗教\基督教\教會史\東方教會史\Aubrey Vine，The Nestorian Churches- A concise history of Nestorian Christianity in Asia.pdf  (223 chunks)
+[x] 83377d73 心理學\趙淳，齊澤克精神分析學文論.pdf  (341 chunks)
+[x] 8364bcd3 人類生物學\[美]羅伯特·賴特，道德動物.epub  (45 chunks)
+[x] 83659d2a 宗教學\宗教史\新版宗教史叢書（4卷本）.epub  (196 chunks)
+[x] 836c21f2 社會政治學\德勒茲 加塔利，資本主義與精神分裂.pdf  (776 chunks)
+[x] 837bc64d 世界宗教\基督教\教會史\東方教會史\Emmanouela Grypeou，The Encounter of Eastern Christianity With Early Islam.pdf  (344 chunks)
+[x] 838e78f8 歷史學\史料原典\Delphi Classics\Aristophanes，Complete Works of Aristophanes.epub  (91 chunks)
+[x] 84159a44 宗教學\神話學\希臘-羅馬神話\赫耳墨斯·特里斯墨吉斯忒斯，赫耳墨斯秘籍.epub  (24 chunks)
+[!] 8464f7bb 社會政治學\政治學\漢娜·鄂蘭，帝國主義.pdf  ERROR: no extractable text
+[!] 84791d07 歷史學\古育安，戰國時代的古史記憶──虞夏之際篇.pdf  ERROR: no extractable text
+[x] 847a2a4d 世界宗教\基督教\神學原典\優西比烏，君士坦丁傳(英).pdf  (141 chunks)
+[x] 848f6108 世界宗教\基督教\神學\薇依，重負與神恩.pdf  (1 chunks)
+[!] 84b29629 世界宗教\東亞宗教\道教\傅勤家，中國道教史.pdf  ERROR: no extractable text
+[x] 84c3e43a 歷史學\不可不知的歷史系列(13冊）.epub  (185 chunks)
+[!] 84dbd342 歷史學\Clive H.ChurchRandolph C.Head，瑞士史.pdf  ERROR: no extractable text
+[x] 84dd6e3a 人類生物學\人類大歷史\Francis Fukuyama，大斷裂.epub  (44 chunks)
+[-] 852c6edb 世界宗教\塔木德智慧全書.mobi  (skip: mobi)
+[x] 85509d5b 歷史學\李碩，翦商  殷周之變與華夏新生.epub  (30 chunks)
+[x] 85aa5337 歷史學\西方界域史\漢斯·宗塔格，德意志帝國全集.epub  (129 chunks)
+[x] 85bab827 歷史學\中央界域史\希臘-拜占庭史\拉爾斯‧布朗沃斯，拜占庭帝國.epub  (33 chunks)
+[x] 86bd9d97 宗教學\神話學\坎貝爾，千面女神.epub  (29 chunks)
+[!] 86ce4450 社會政治學\資本主義-社會主義\大衛·哈維，資本之謎.pdf  ERROR: no extractable text
+[!] 87072688 歷史學\西方界域史\中世紀歐洲\愛德華·格蘭特，近代科學在中世紀的基礎.pdf  ERROR: no extractable text
+[x] 870f17b1 哲學\哲學原典\古代哲學經典\Books 1-12，Homer, The Iliad.pdf  (607 chunks)
+[!] 8731883c 哲學\馬丁·湯姆·迪克 延斯·巴爾策，德勒茲歸來 不可思議的俄耳甫斯之新歷險.pdf  ERROR: no extractable text
+[!] 8763b242 歷史學\西方界域史\瓦克，拉丁文帝國.pdf  ERROR: no extractable text
+[x] 879872fa 歷史學\東方界域史\中國史\王明珂，華夏邊緣.epub  (27 chunks)
+[x] 879ee212 歷史學\全球通史\商務，世界歷史文庫\Milton E. Osborne，東南亞史 Southeast Asia an introductory history.pdf  (1 chunks)
+[x] 87caa356 世界宗教\猶太教\聖經研究\傅和德，舊約詮釋.pdf  (762 chunks)
+[!] 87cf54d0 哲學\經典與解釋輯刊\劉小楓，修昔底德的春秋筆法.pdf  ERROR: no extractable text
+[x] 87f35f57 歷史學\中央界域史\希臘-拜占庭史\伊迪絲·霍爾，古希臘人：從青銅時代的航海者到西方文明的領航員.epub  (33 chunks)
+[!] 88785545 世界宗教\基督教\教會史\天主教史\Eamon Duffy，聖徒與罪人.pdf  ERROR: no extractable text
+[x] 888da9e4 哲學\中國思想史\麗波，五百年來王陽明.epub  (26 chunks)
+[x] 889fcab5 歷史學\王明珂，華夏邊緣--歷史記憶與族群認同.pdf  (2 chunks)
+[x] 88f0d8a4 哲學\哲學通史\黃心川，印度哲學通史.epub  (44 chunks)
+[x] 893f2224 歷史學\全球通史\商務，世界歷史文庫\世界歷史文庫 非洲史，世界歷史文庫 非洲史.pdf  (1 chunks)
+[x] 89740fe8 人類生物學\生物學\愛德華‧威爾森，人類存在的意義.epub  (24 chunks)
+[!] 8975b8fb 歷史學\全球通史\商務，世界歷史文庫\世界歷史文庫 津巴布韋史(津巴布韋)拉夫託帕洛斯 東方出版中心，世界歷史文庫 津巴布韋史(津巴布韋)拉夫託帕洛斯 東方出版中心.pdf  ERROR: no extractable text
+[x] 89ebf2d7 世界宗教\東亞宗教\儒教\詹啟華，製造儒家.epub  (17 chunks)
+[!] 89f3bdd0 歷史學\東方界域史\中國史\田繼周，先秦民族史.pdf  ERROR: no extractable text
+[x] 8a510e93 歷史學\東方界域史\中國史\台灣商務，中國‧歷史的長河\3 鶴間和幸，始皇帝的遺產.epub  (16 chunks)
+[x] 8a6f266d 歷史學\全球通史\八旗，興亡的世界史\14福井憲彥，歐洲霸權的光和影.epub  (18 chunks)
+[!] 8afb2cec 歷史學\東方界域史\中國史\宇文所安，中國「中世紀」的終結.pdf  ERROR: no extractable text
+[x] 8afb8f7b 歷史學\全球通史\商務，世界歷史文庫\菲利普·內勒，北非史.pdf  (1 chunks)
+[!] 8b570733 哲學\Ma, Yue Foucault, Michel Fu, Ke Xie, Qiang，知識考古學 Zhi shi kao gu xue.pdf  ERROR: no extractable text
+[x] 8bb5bf71 歷史學\福維勒‧艾瑪爾，金犀牛.epub  (44 chunks)
+[x] 8bc55c06 哲學\當代哲學\侯世達，我是誰，或什麼.epub  (36 chunks)
+[x] 8bd39032 人類生物學\（英）道金斯，道金斯傳（全2冊）.epub  (77 chunks)
+[!] 8bd496cf 宗教學\宗教史\約翰-布克，劍橋宗教史.pdf  ERROR: no extractable text
+[x] 8d09eda0 人類生物學\人類起源與進化史\安東尼歐．達馬吉歐，意識究竟從何而來？.epub  (18 chunks)
+[x] 8d1742ed 心理學\肖恩·卡羅爾，大圖景.epub  (67 chunks)
+[x] 8d301b5c 世界宗教\印度教\奎師那協會\黃寶生，聖典博伽梵歌－經文篇.pdf  (119 chunks)
+[!] 8d3775aa 歷史學\近代史\達尼埃爾·莫爾內，法國革命的思想起源(1715-1787).pdf  ERROR: no extractable text
+[!] 8e20f3c0 哲學\經典與解釋輯刊\劉小楓，柏拉圖的真偽.pdf  ERROR: no extractable text
+[x] 8f0ca390 世界宗教\猶太教\拜克，猶太教的本質.pdf  (271 chunks)
+[!] 8f2269b0 人類生物學\人類文化-語言學\馬文·哈里斯，文化的起源.pdf  ERROR: no extractable text
+[!] 8f73d493 人類生物學\人類大歷史\黛安娜·阿克曼，人類時代.pdf  ERROR: no extractable text
+[x] 8ff462b3 世界宗教\伊斯蘭教\Seyyed Nasr，Islamic Philosophy- from Its Origin to the Present.pdf  (377 chunks)
+[x] 9046d5a3 世界宗教\猶太教\Gary N. Knoppers，Jews and Samaritans- The Origins and History of Their Early Relations.pdf  (340 chunks)
+[!] 90805c37 宗教學\神話學\中國神話\金麥田，中國古代神話故事全集.pdf  ERROR: no extractable text
+[x] 90973612 歷史學\中央界域史\安德魯‧惠克羅夫特，1683維也納之戰.epub  (26 chunks)
+[x] 90f4157d 哲學\近代哲學\劉擎，西方現代思想講義.epub  (2 chunks)
+[x] 914bf25b 歷史學\西方界域史\近代歐洲\湯瑪士．麥登，威尼斯共和國.epub  (33 chunks)
+[x] 922bf5c3 歷史學\拉爾斯·布朗沃思，燃燒的遠徵十字軍東徵簡史 In Distant Lands A Short History of the Crusades.epub  (28 chunks)
+[x] 927387c5 歷史學\東方界域史\中國史\中國通史\王飛凌，中華秩序.epub  (16 chunks)
+[x] 92c3cb1f 歷史學\全球通史\斯塔夫裡阿諾斯，全球通史.epub  (72 chunks)
+[x] 931d028d 社會政治學\政治學\吳冠軍，現時代的群學.pdf  (1 chunks)
+[x] 93242d39 世界宗教\波斯宗教\祆教\Maneckji Dhalla，History of Zoroastrianism.pdf  (606 chunks)
+[!] 932d45e5 世界宗教\東亞宗教\道教\羅飛，北京道教石刻.pdf  ERROR: no extractable text
+[x] 937575f3 人類生物學\人類大歷史\奧拉夫·斯特普爾頓，人類向何處去.epub  (57 chunks)
+[x] 937d0618 歷史學\東方界域史\中國史\中國通史\劉仲敬，經與史.epub  (14 chunks)
+[-] 939fc8e7 歷史學\詹姆斯·希恩，暴力的衰落.azw3  (skip: azw3)
+[!] 93a7bfdc 歷史學\剑桥插图中国史（The Cambridge Illustrated History of China） by author 伊佩霞（Patricia Buckley Ebrey）, translator赵世瑜     赵世玲      张红艳 (z-lib.org).pdf  ERROR: no extractable text
+[!] 94299183 歷史學\近代史\劉仲敬，近代史的墮落.pdf  ERROR: no extractable text
+[x] 943689fd 世界宗教\基督教\教會史\東方教會史\莫菲特，亞洲基督教史II.pdf  (852 chunks)
+[x] 9464d138 哲學\經典與解釋輯刊\劉小楓，莎士比亞筆下的王者.pdf  (334 chunks)
+[-] 94d2d188 歷史學\東方界域史\中亞-蒙古史\水木森，塞北帝國史系列.azw3  (skip: azw3)
+[x] 950ea6a9 歷史學\Roger Crowley, 陸大鵬，海洋帝國地中海大決戰.epub  (35 chunks)
+[x] 9517fc97 世界宗教\基督教\神學\瑪格麗特·邁爾斯，道成肉身.pdf  (1 chunks)
+[!] 95350108 哲學\劉小楓，政治哲學中的摩西.pdf  ERROR: no extractable text
+[x] 95474792 歷史學\全球通史\菲利普·索薩，極簡海洋文明史.epub  (14 chunks)
+[x] 956107a0 宗教學\趙林，西方宗教文化.pdf  (157 chunks)
+[!] 964a53ed 哲學\哲學原典\近代哲學經典\保羅‧沙特，存在主義是一種人道主義.pdf  ERROR: no extractable text
+[x] 96938620 世界宗教\伊斯蘭教\克里斯多福‧貝萊格，伊斯蘭啟蒙運動：在信仰與理性中掙扎的現代化之路.epub  (10 chunks)
+[!] 96cf6cb3 世界宗教\羅德尼·斯塔克，基督教的興起.pdf  ERROR: no extractable text
+[-] 96cffc77 人類生物學\人類文化-語言學\姚小平，西方語言學史.azw3  (skip: azw3)
+[x] 9708e991 宗教學\神話學\沃利斯·巴奇，巴比倫創世神話.epub  (20 chunks)
+[!] 974cbe95 世界宗教\古正美，從天王傳統到佛王傳統.pdf  ERROR: no extractable text
+[!] 975b6115 世界宗教\基督教\神學原典\但丁，神曲.pdf  ERROR: no extractable text
+[!] 977b2da5 哲學\[古羅馬]揚布里柯,[古羅馬]波愛修,詹文傑,朱東華，哲學規勸錄·哲學的慰藉 —兩希文明哲學經典譯叢.pdf  ERROR: no extractable text
+[x] 979bc9fe 哲學\哲學原典\古代哲學經典\兩希文明哲學經典譯叢，自然與快樂.epub  (4 chunks)
+[x] 97b244c5 歷史學\史學理論\劉仲敬，文明更迭的源代碼.epub  (12 chunks)
+[x] 97d915b9 歷史學\托馬斯·阿斯布里奇，戰爭的試煉.epub  (26 chunks)
+[x] 98876b2a 歷史學\李碩，南北戰爭三百年中國4-6世紀的軍事與政權.epub  (26 chunks)
+[-] 988bdc90 歷史學\東方界域史\中國史\中國通史\哈佛中國史1，早期中華帝國.mobi  (skip: mobi)
+[x] 98ce5997 世界宗教\東亞宗教\儒教\張向榮，祥瑞.epub  (17 chunks)
+[!] 98d1f245 哲學\經典與解釋輯刊\劉小楓，荷爾德林的新神話.pdf  ERROR: no extractable text
+[x] 991065f2 世界宗教\基督教\神學原典\猶斯定，護教篇.pdf  (270 chunks)
+[x] 99b017ab 世界宗教\基督教\神學\約翰‧希克，上帝道成肉身的隱喻.pdf  (2 chunks)
+[x] 99c249ca 世界宗教\基督教\神學\加羅蒂，人的遠景.pdf  (4 chunks)
+[x] 99c36fe0 世界宗教\東亞宗教\山下克明，發現陰陽道.epub  (26 chunks)
+[-] 99cbcf90 歷史學\中央界域史\中東大歷史（共5冊）.mobi  (skip: mobi)
+[x] 99eb47b1 世界宗教\猶太教\猶太民族研究\維爾納·桑巴特，猶太人與現代資本主義.pdf  (337 chunks)
+[x] 99f0fd2c 歷史學\中央界域史\埃及史\約翰·高德特，法老的寶藏.epub  (41 chunks)
+[x] 9a2ec07c 世界宗教\佛教\末木文美士，日本佛教史.pdf  (222 chunks)
+[x] 9a33aa06 世界宗教\東亞宗教\儒教\陳舜臣，儒教三千年.epub  (67 chunks)
+[x] 9abfc7d4 世界宗教\猶太教\Mark S. Smith，The Origins of Biblical Monotheism Israels Polytheistic Background and the Ugaritic Texts.pdf  (343 chunks)
+[x] 9aebb14e 哲學\康德，康德著作集（套裝10冊）（漢譯世界學術名著叢書）.epub  (115 chunks)
+[!] 9b32aac9 社會政治學\[法]D.馬圖切利 姜志輝，現代性社會學.pdf  ERROR: no extractable text
+[!] 9b431a4a 歷史學\東方界域史\中國史\徐中約，中國近代史(上).pdf  ERROR: no extractable text
+[x] 9b706ef1 世界宗教\霍韜晦，絕對與圓融 佛教思想論集 (2nd ed).pdf  (390 chunks)
+[!] 9ba2bce0 歷史學\西方界域史\近代歐洲\瓦爾特·本雅明，巴黎，19世紀的首都.pdf  ERROR: no extractable text
+[x] 9c44fe68 哲學\哲學原典\王陽明，傳習錄（註釋）.epub  (28 chunks)
+[x] 9c8b1fa6 社會政治學\政治學\弗雷德裡克．庫伯，帝國何以成為帝國.epub  (18 chunks)
+[x] 9cac3bac 世界宗教\基督教\教會史\東方教會史\Dietmar W. Winkler，Syriac Churches Encountering Islam.pdf  (263 chunks)
+[x] 9d1f0172 世界宗教\基督教\神學原典\阿奎那，神學大全（第2冊.pdf  (356 chunks)
+[x] 9d2c8582 歷史學\全球通史\商務，世界歷史文庫\【英】理查德·戈特，古巴史.pdf  (1 chunks)
+[x] 9d7606c0 自然科學\［英］理查德·道金斯賈擁民譯，科學的價值.epub  (51 chunks)
+[-] 9d83bf4e 歷史學\中央界域史\Marc Mieroop，A History of the Ancient Near East, 3000-323 BC.azw  (skip: azw)
+[x] 9de14086 世界宗教\猶太教\聖經研究\李熾昌，跨文本閱讀.pdf  (321 chunks)
+[!] 9e26497f 世界宗教\基督教\教會史\教會通史\麥格夫，基督教概論.pdf  ERROR: no extractable text
+[!] 9e34b3da 世界宗教\李進新，新疆伊斯蘭汗朝史略.pdf  ERROR: no extractable text
+[!] 9e7c7a32 歷史學\西方界域史\中世紀歐洲\雅克·勒高夫，試談另一箇中世紀.pdf  ERROR: no extractable text
+[!] 9ebd2dd3 世界宗教\基督教\聖經研究\巴特·埃爾曼，錯引耶穌.pdf  ERROR: no extractable text
+[!] 9ee5147d 宗教學\馬克思‧謬勒，宗教學導論.pdf  ERROR: no extractable text
+[!] 9f30946a 文學\米歇爾·福柯，文字即垃圾.pdf  ERROR: no extractable text
+[x] 9f49b661 歷史學\中央界域史\美索不達米亞史\Bertman，古代美索不達米亞社會生活.pdf  (5 chunks)
+[!] 9f4f15b5 社會政治學\性學\Jacques Courtine，身體的歷史（卷三）目光的傳變.pdf  ERROR: no extractable text
+[x] 9f8e893d 世界宗教\其他宗教\Philip Carr-Gomm，德魯伊教簡介.pdf  (2 chunks)
+[x] 9fd94d42 歷史學\中央界域史\斯圖亞特·戈登，極簡亞洲千年史.epub  (33 chunks)
+[!] a03f9ee0 哲學\近代哲學\張汝倫，二十世紀德國哲學.pdf  ERROR: no extractable text
+[x] a0425893 歷史學\史料原典\甘地，甘地自傳.pdf  (1 chunks)
+[x] a05c5796 世界宗教\猶太教\猶太民族研究\雷蒙德·P‧謝德林，猶太人三千年簡史.epub  (33 chunks)
+[x] a0602e5a 世界宗教\基督教\教會史\東方教會史\莫菲特，亞洲基督教史.pdf  (573 chunks)
+[x] a078bcf1 世界宗教\猶太教\Walton, John H. Wright, N.T.，The Lost World of Adam and Eve Genesis 2-3 and the Human Origins Debate.pdf  (256 chunks)
+[x] a0fac86e 世界宗教\基督教\教會史\東方教會史\Robert Frykenberg，Christianity in India From Beginnings to the Present.pdf  (596 chunks)
+[x] a123949b 世界宗教\基督教\教會史\畢爾麥爾，近代教會史.pdf  (598 chunks)
+[x] a1510ac0 社會政治學\政治學\戴倫．艾塞默魯，自由的窄廊.epub  (41 chunks)
+[!] a15940ac 哲學\Hannah Arendt 蔡佩君 漢娜·阿倫特，政治的承諾.pdf  ERROR: no extractable text
+[x] a1d9d23c 世界宗教\伊斯蘭教\Sabine Schmidtke，The Oxford Handbook of Islamic Theology.pdf  (1013 chunks)
+[!] a237826f 歷史學\西方界域史\中世紀歐洲\Wilhelm von Giesebrecht，德意志皇帝史.pdf  ERROR: no extractable text
+[-] a25261f9 社會政治學\政治學\埃利亞斯‧卡內蒂，群眾與權力.azw3  (skip: azw3)
+[x] a28325f4 世界宗教\其他宗教\亞奇伯德··薩伊斯，古埃及宗教十講.epub  (131 chunks)
+[x] a31d9156 哲學\劉小楓，柏拉圖四書.epub  (8 chunks)
+[!] a33dc700 世界宗教\其他宗教\布奇，埃及亡靈書.pdf  ERROR: no extractable text
+[x] a355d6a7 社會政治學\政治學\James C. Scott，反穀.epub  (12 chunks)
+[x] a367acf3 世界宗教\Carlo Maria Martini，楊成斌，從靜觀到基督徒的美德（下冊）.pdf  (258 chunks)
+[-] a3bd60c6 歷史學\全球通史\郭聖銘，世界文明史綱要(古代部分).azw3  (skip: azw3)
+[!] a3bdc8e8 心理學\朱瑟琳·喬塞爾森，在生命最深處與人相遇.pdf  ERROR: no extractable text
+[x] a44b1583 哲學\哲學原典\近代哲學經典\康德著作集（套裝10冊）.epub  (141 chunks)
+[x] a4671570 社會政治學\名家作品\法蘭西斯·福山，歷史的終結與最後的人.epub  (52 chunks)
+[!] a4a04e17 哲學\經典與解釋輯刊\劉小楓，尼采與古典傳統續篇.pdf  ERROR: no extractable text
+[!] a4acbc11 人類生物學\人類起源與進化史\弗朗斯·德瓦爾，猿形畢露.pdf  ERROR: no extractable text
+[x] a4cc6e46 社會政治學\政治學\許知遠，極權的誘惑.epub  (15 chunks)
+[x] a4f076d8 歷史學\全球通史\格羅斯，歷史上的大帝國：2000年暴力與和平的全球簡史.epub  (62 chunks)
+[!] a4f9dd7b 世界宗教\基督教\教會史\東方教會史\阿克穆爾，1550年前的中國基督教史.pdf  ERROR: no extractable text
+[x] a51a7f9c 哲學\茂木誠，撼動世界史的思想家格鬥.epub  (35 chunks)
+[!] a54fb48e 自然科學\庫恩，哥白尼革命.pdf  ERROR: no extractable text
+[!] a551054c 社會政治學\政治學\傑克·斯奈德，從投票到暴力.pdf  ERROR: no extractable text
+[!] a607f4a8 哲學\經典與解釋輯刊\劉小楓，馬基維利的喜劇.pdf  ERROR: no extractable text
+[!] a656b629 哲學\經典與解釋輯刊\劉小楓，古典傳統與自由教育.pdf  ERROR: no extractable text
+[x] a66b0306 世界宗教\猶太教\聖經研究\約翰‧裡奇斯，聖經縱覽.epub  (25 chunks)
+[!] a6769326 歷史學\P.J.馬歇爾，劍橋插圖大英帝國史.pdf  ERROR: no extractable text
+[!] a6a26a0d 自然科學\克雷格·卡倫德，物理與哲學相遇在普朗克標度.pdf  ERROR: no extractable text
+[-] a6c71175 宗教學\神話學\戴安‧奧斯本，坎貝爾生活美學.azw3  (skip: azw3)
+[x] a6cbbb6b 宗教學\World Religions系列\道教，Paula R. Hartz, Daoism.pdf  (144 chunks)
+[x] a6e734b5 社會政治學\巴巴拉·塔奇曼弗朗西斯·福山納爾遜·曼德拉奧蘭多·費吉斯，理想國譯叢系列 套裝32冊（MIRROR系列）.epub  (942 chunks)
+[!] a7017a40 哲學\恩斯特·卡西爾，人文科學的邏輯.pdf  ERROR: no extractable text
+[x] a778cc57 世界宗教\猶太教\Robert T. Anderson，The Samaritan Pentateuch- An Introduction to Its Origin, History, and Significance for Biblical Studies.pdf  (228 chunks)
+[!] a7e8500d 歷史學\西方界域史\內斯庫，羅馬尼亞通史簡編.pdf  ERROR: no extractable text
+[x] a8085bea 社會政治學\資本主義-社會主義\托馬斯‧皮凱蒂，21世紀資本論.epub  (30 chunks)
+[x] a82d8452 世界宗教\【英】唐·庫比特，神學的奇異迴歸.epub  (28 chunks)
+[x] a8c414cb 歷史學\沙洛姆·瓦爾德，中國和猶太民族.epub  (1 chunks)
+[!] a9b7a9a4 哲學\伏愛華，想像自由 薩特存在主義美學思想研究.pdf  ERROR: no extractable text
+[x] aa03c408 社會政治學\政治學\斯蒂芬·恩格爾，論新帝國主義國家的出現.pdf  (63 chunks)
+[!] aa54b395 歷史學\美州界域史\孫隆基，殺母的文化.pdf  ERROR: no extractable text
+[x] aa5989ce 哲學\中國思想史\馮友蘭，中國哲學史(v1).pdf  (342 chunks)
+[x] aadb1ceb 社會政治學\知識社會學\理查．霍夫士達特，美國的反智傳統.epub  (24 chunks)
+[x] aae1f206 世界宗教\基督教\教會史\東方教會史\Saint Mark to the Arab Conquest，Iris Habib El Masri, The Story of the Copts- From the Foundation of the Church.pdf  (369 chunks)
+[!] ab2a484f 歷史學\西方界域史\中世紀歐洲\350-950，劍橋插圖中世紀史.pdf  ERROR: no extractable text
+[x] ab3d2b07 歷史學\東方界域史\中國史\王明珂，英雄祖先與弟兄民族.pdf  (349 chunks)
+[x] ab4f6279 宗教學\哈內赫拉夫，西方神秘學指津.pdf  (254 chunks)
+[-] ab6ad5a0 人類生物學\人類大歷史\塔米姆·安薩利，人類文明史.mobi  (skip: mobi)
+[x] abbe1aee 世界宗教\基督教\教會史\天主教史\Colin Morris，The Papal Monarchy- The Western Church from 1050 to 1250.pdf  (691 chunks)
+[x] abe336ed 文學\貢布里希，藝術的故事.epub  (30 chunks)
+[!] abe4f3d4 歷史學\湯錦臺，閩南海上帝國 閩南人與南海文明的興起.pdf  ERROR: no extractable text
+[x] ac215364 世界宗教\波斯宗教\巴哈伊教\阿博都‧巴哈著作\阿博都‧巴哈，巴黎談話.pdf  (167 chunks)
+[!] ac2e1f25 人類生物學\郭淑雲，原始活態文化.pdf  ERROR: no extractable text
+[x] ac3775da 歷史學\劉易斯·芒福德，城市發展史──起源、演變和前景.epub  (14 chunks)
+[-] ac4d683c 哲學\哲學通史\聶敏裡，西方思想的起源.mobi  (skip: mobi)
+[x] ac75b0b4 社會政治學\周曉虹，西方社會學歷史與體系.pdf  (3 chunks)
+[x] ac84df51 歷史學\全球通史\商務，世界歷史文庫\福斯特，中美洲史.pdf  (1 chunks)
+[!] ac8804f2 哲學\近代哲學\存在主義\威廉·巴雷特，非理性的人.pdf  ERROR: no extractable text
+[!] acab9291 歷史學\全球通史\世界文明大系\汝信，世界文明大系09.pdf  ERROR: no extractable text
+[x] acba8dbe 歷史學\全球通史\八旗，興亡的世界史\10杉山正明，蒙古帝國的漫長遺緒.epub  (17 chunks)
+[!] acf454b2 哲學\哲學原典\近代哲學經典\米歇爾·傅柯，規訓與懲罰.pdf  ERROR: no extractable text
+[!] ad291e44 心理學\斯蒂芬‧米切爾，弗洛伊德及其後繼者.pdf  ERROR: no extractable text
+[!] ad576e6d 自然科學\維爾澤克，萬物皆數.pdf  ERROR: no extractable text
+[x] ade6e3c4 世界宗教\基督教\教會史\東方教會史\Wilhelm Baum，The Church of the East- A Concise History.pdf  (214 chunks)
+[x] adf96fb0 世界宗教\[美]阿爾文·J.施密特，基督教對文明的影響.pdf  (7 chunks)
+[x] ae1ab34b 哲學\哲學原典\近代哲學經典\尼采，快樂的科學.pdf  (417 chunks)
+[x] ae83c659 文學\托爾斯泰，托爾斯泰最後的日記.epub  (284 chunks)
+[x] aeaf1bbb 世界宗教\基督教\聖經研究\匿名，死海古卷.pdf  (2 chunks)
+[!] aec71592 哲學\哲學通史\希爾貝克，西方哲學史：從古希臘到二十世紀.pdf  ERROR: no extractable text
+[x] af0853ba 自然科學\大衛·加耶，那些聽過卻從未搞明白的問題.pdf  (170 chunks)
+[x] af31356a 歷史學\史料原典\Delphi Classics\Plato，Complete Works of Plato.epub  (360 chunks)
+[!] af5040d2 宗教學\Herfried Münkler，德國人和他們的神話.pdf  ERROR: no extractable text
+[x] afd52255 歷史學\中央界域史\阿拉伯-土耳其史\休·肯尼迪，大征服.epub  (22 chunks)
+[x] b035c464 宗教學\伊利亞德，神聖與世俗.pdf  (2 chunks)
+[x] b03defa9 歷史學\近代史\奧斯特哈默，世界的演變.epub  (34 chunks)
+[x] b0436e70 世界宗教\印度教\黃寶生，摩訶婆羅多.epub  (217 chunks)
+[!] b0893c96 歷史學\全球通史\世界文明大系\汝信，世界文明大系01.pdf  ERROR: no extractable text
+[x] b08bbf79 哲學\孫勝傑，向死而生.epub  (11 chunks)
+[x] b1257d43 歷史學\近代史\Jürgen Habermas，希特勒──永不消散的陰雲.pdf  (424 chunks)
+[!] b14ecaf4 哲學\近代哲學\(編) 劉鵬、王小鋼 等，吳彥，20世紀法哲學發微.pdf  ERROR: no extractable text
+[!] b1762844 社會政治學\田中正人,香月孝史，驚呆了！原來這就是社會學.pdf  ERROR: no extractable text
+[!] b1c2dcce 歷史學\全球通史\商務，世界歷史文庫\Roger Gocking，加納史.pdf  ERROR: no extractable text
+[!] b2774134 世界宗教\波斯宗教\摩尼教與靈智主義\傑弗裡·帕林德爾，世界宗教中的神秘主義.pdf  ERROR: no extractable text
+[!] b2a5e482 哲學\中國思想史\馮友蘭，中國哲學簡史.pdf  ERROR: no extractable text
+[x] b2ca7cb3 世界宗教\基督教\教會史\新教史\卡爾·楚門，路德的人生智慧.epub  (38 chunks)
+[x] b2d649c6 歷史學\西方界域史\企鵝歐洲史系列（套裝7冊）.epub  (504 chunks)
+[!] b2eea187 世界宗教\伊斯蘭教\貝萊格，伊斯蘭啟蒙運動：在信仰與理性中掙扎的現代化之路.epub  ERROR: AttributeError: 'NoneType' object has no attribute 'find'
+[x] b2fe3110 世界宗教\基督教\聖經研究\王曉朝，基督教典外文獻─新約篇─第3冊.pdf  (312 chunks)
+[x] b310b801 世界宗教\東亞宗教\道教\陳鼓應，易傳與道家思想.pdf  (276 chunks)
+[x] b31192c9 哲學\黎明，西洋哲學史\柯普斯登，西洋哲學史：中世紀哲學上（奧古斯丁到斯考特）.pdf  (812 chunks)
+[!] b346504f 世界宗教\基督教\神學\唐·庫比特，終約.pdf  ERROR: no extractable text
+[x] b352beb5 歷史學\中央界域史\阿拉伯-土耳其史\帕特里克·貝爾福，奧斯曼帝國六百年.epub  (55 chunks)
+[x] b3e2e0aa 社會政治學\卡爾・波普，開放社會及其敵人.epub  (44 chunks)
+[x] b43da28e 世界宗教\張憲，啟示的理性 歐洲哲學與基督宗教思想.pdf  (532 chunks)
+[x] b48677e5 世界宗教\焦大衛，神·鬼·祖先 一個臺灣鄉村的民間信仰.pdf  (1 chunks)
+[x] b4eec22a 社會政治學\[英] 亞當·圖茲，理想譯叢045 滔天洪水.epub  (45 chunks)
+[x] b5288f1e 世界宗教\夏金華，緣起佛性成佛.pdf  (301 chunks)
+[!] b52a2a4c 世界宗教\佛教\姚衛群，佛學概論.pdf  ERROR: no extractable text
+[x] b5941af4 宗教學\張彥，中國的靈魂.epub  (51 chunks)
+[x] b6d25bdc 世界宗教\伊斯蘭教\羅伊斯頓·派克，穆罕默德.pdf  (2 chunks)
+[x] b72c5441 世界宗教\其他宗教\皮埃爾·韋爾南，古希臘的神話與宗教.pdf  (2 chunks)
+[x] b736e63e 宗教學\儒學復興與神話重述，儒學復興與神話重述.pdf  (3 chunks)
+[!] b73a55e1 哲學\近代哲學\存在主義\洛維特，從黑格爾到尼采.pdf  ERROR: no extractable text
+[x] b74492c3 世界宗教\佛教\魏道儒，中國華嚴宗通史.pdf  (350 chunks)
+[-] b76317ea 文學\周保松，小王子的領悟.mobi  (skip: mobi)
+[x] b7694db2 歷史學\中央界域史\佈雷斯特德，地中海的衰落文明的征程.epub  (105 chunks)
+[x] b78c6de4 人類生物學\生物學\理查德·道金斯，基因之河.epub  (15 chunks)
+[-] b7abd223 哲學\喬納森‧巴恩斯，亞裡士多德的世界.azw3  (skip: azw3)
+[x] b7dc4934 世界宗教\佛教\廖明活，初唐時期佛性論爭中的一乘問題.pdf  (28 chunks)
+[!] b7f630ac 心理學\丹尼·西格爾，心智的本質.epub  ERROR: EpubException: 'Bad Zip file'
+[!] b816e0d5 哲學\經典與解釋輯刊\劉小楓，政治生活的限度與滿足.pdf  ERROR: no extractable text
+[x] b83b0e35 宗教學\神話學\希臘-羅馬神話\菲利普·馬蒂塞克，希臘羅馬神話.epub  (18 chunks)
+[-] b83b3e6e 哲學\中國思想史\餘英時，東漢生死觀.mobi  (skip: mobi)
+[x] b853ddda 社會政治學\龍佳解，中國人文主義新論.pdf  (236 chunks)
+[x] b89ccd78 世界宗教\其他宗教\Prudence Jones, Nigel Pennick，A History of Pagan Europe.epub  (21 chunks)
+[!] b89ffe1d 宗教學\韋伯，宗教社會學.pdf  ERROR: no extractable text
+[!] b90bc276 世界宗教\徐鳳林，俄羅斯宗教哲學.pdf  ERROR: no extractable text
+[!] b9c31cb6 世界宗教\基督教\神學原典\奧古斯丁，天主之城.pdf  ERROR: no extractable text
+[!] ba1dfebe 人類生物學\人類文化-語言學\圖根德哈特，自我中心性與神秘主義.pdf  ERROR: no extractable text
+[-] ba1f5604 世界宗教\基督教\教會史\東方教會史\任光宣，俄羅斯文學的神性傳統.azw3  (skip: azw3)
+[x] ba24c25a 世界宗教\波斯宗教\巴哈伊教\阿博都‧巴哈著作\阿博都‧巴哈，忠信群英傳.pdf  (221 chunks)
+[x] ba56d505 社會政治學\知識社會學\樊尚·阿祖萊，話語如刀.epub  (29 chunks)
+[x] bad0d59e 歷史學\中央界域史\希臘-拜占庭史\理查德·詹金斯，古典遺產.epub  (46 chunks)
+[!] baedbe7c 世界宗教\伊斯蘭教\沙宗平，伊斯蘭哲學.pdf  ERROR: no extractable text
+[-] baf4c42e 歷史學\東方界域史\中國史\中國通史\哈佛中國史2，分裂的帝國.mobi  (skip: mobi)
+[x] bafbeedd 歷史學\李映洲  主編，敦煌壁畫藝術論.pdf  (1 chunks)
+[!] bb1d63e8 哲學\劉小楓 陳少明 主編，笛卡爾的精靈.pdf  ERROR: no extractable text
+[x] bbb217db 哲學\哲學原典\近代哲學經典\康德，歷史理性批判文集.pdf  (323 chunks)
+[!] bc1481a5 世界宗教\基督教\教會史\新教史\馬丁·林賽，宗教改革史（上冊）.pdf  ERROR: no extractable text
+[x] bc171612 心理學\傑夫‧福斯特，不再試著修補生命.epub  (17 chunks)
+[!] bc236b79 社會政治學\政治學\霍赫斯特拉瑟，早期啟蒙的自然法理論.pdf  ERROR: no extractable text
+[!] bc2e74f9 社會政治學\性學\Alain Corbin，身體的歷史（卷二）從法國大革命到第一次世界大戰.pdf  ERROR: no extractable text
+[!] bc5164bf 社會政治學\名家作品\愛德華·薩義德，文化與抵抗.pdf  ERROR: no extractable text
+[x] bc54f46a 哲學\近代哲學\曼弗雷德·蓋爾，康德的世界.pdf  (3 chunks)
+[x] bcee8ff4 宗教學\神話學\北歐-日耳曼神話\科勒姆，奧丁的子女.epub  (44 chunks)
+[x] bd415113 歷史學\安東尼·艾福瑞特，雅典的勝利.epub  (42 chunks)
+[x] be66e796 世界宗教\波斯宗教\巴哈伊教\阿博都‧巴哈著作\阿博都‧巴哈，神聖計畫書簡集.pdf  (112 chunks)
+[x] be6d5de8 社會政治學\孫歌，尋找亞洲.epub  (27 chunks)
+[x] beb28578 世界宗教\其他宗教\James J. ODonnell，Pagans The End of Traditional Religion and the Rise of Christianity.epub  (33 chunks)
+[x] bf0a0269 人類生物學\人類起源與進化史\史蒂芬·平克，語言與人性.epub  (28 chunks)
+[x] bf5548bc 哲學\黎明，西洋哲學史\柯普斯登，西洋哲學史：笛卡兒到萊布尼茲.pdf  (471 chunks)
+[x] bf75261c 宗教學\神話學\喬瑟夫．坎伯，千面英雄.epub  (64 chunks)
+[x] bf8e3b1c 哲學\吳飛，心靈秩序與世界歷史.pdf  (4 chunks)
+[-] bfb220d8 社會政治學\名家作品\馬克斯·韋伯，新教倫理與資本主義精神.mobi  (skip: mobi)
+[x] bfbb8819 世界宗教\基督教\神學\布爾加科夫，東正教.pdf  (2 chunks)
+[!] c01406d6 歷史學\西方界域史\中世紀歐洲\喬納森·史密斯，十字軍史.pdf  ERROR: no extractable text
+[x] c018e771 世界宗教\基督教\神學原典\Jaroslav Pelikan，Christianity and Classical Culture.pdf  (377 chunks)
+[-] c0262ea5 歷史學\西方界域史\羅馬史\瑪利·比爾德，龐貝.azw3  (skip: azw3)
+[x] c0495661 歷史學\中央界域史\美索不達米亞史\塔比特‧阿卜杜拉，伊拉克史.pdf  (1 chunks)
+[x] c0511969 世界宗教\基督教\聖經研究\Ben Witherington，New Testament History- A Narrative Account.pdf  (427 chunks)
+[!] c092146d 哲學\經典與解釋輯刊\劉小楓，政治哲學中的莎士比亞.pdf  ERROR: no extractable text
+[x] c0ed3b61 宗教學\宗教對話\Yazid Said，The Future of Interfaith Dialogue- Muslim-Christian Encounters Through a Common Word.pdf  (349 chunks)
+[x] c13daa5d 歷史學\東方界域史\印度史\文森特·史密斯，阿育王.epub  (23 chunks)
+[!] c1a4bd47 世界宗教\基督教\教會史\天主教史\徐宗澤，中國天主教傳教史概論.pdf  ERROR: no extractable text
+[!] c1cd2891 文學\歌德，浮士德.pdf  ERROR: no extractable text
+[x] c1e04f7a 世界宗教\波斯宗教\巴哈伊教\阿博都‧巴哈著作\阿博都‧巴哈，已答之問.pdf  (279 chunks)
+[!] c1e351d2 歷史學\波克羅夫斯基，俄國歷史概要 蘇聯叢書.pdf  ERROR: no extractable text
+[!] c1e41c5f 歷史學\西方界域史\中世紀歐洲\約翰‧赫伊津哈，中世紀的衰落.pdf  ERROR: no extractable text
+[!] c2032eb0 社會政治學\赫照田，當社會主義遇到危機.pdf  ERROR: no extractable text
+[x] c217ad0e 哲學\經典與解釋輯刊\劉小楓，詩學解詁.pdf  (3 chunks)
+[x] c25959c4 歷史學\西方界域史\近代歐洲\亞歷山大‧李，文藝復興並不美.epub  (56 chunks)
+[!] c27cd8a5 歷史學\全球通史\世界文明大系\汝信，世界文明大系12.pdf  ERROR: no extractable text
+[x] c2c58233 歷史學\戈利曼，俄蒙關係歷史檔案文獻集（全2冊）.pdf  (1 chunks)
+[x] c396cbc3 哲學\近代哲學\趙林，黑格爾的宗教哲學.pdf  (300 chunks)
+[-] c39d86a9 世界宗教\伊斯蘭教\丁俊，伊斯蘭文化散論.azw3  (skip: azw3)
+[x] c4266ffe 社會政治學\政治學\埃裡克·沃格林，沒有約束的現代性.pdf  (268 chunks)
+[x] c46b4ec1 歷史學\中央界域史\希臘-拜占庭史\理查德·菲德勒，幽靈帝國拜占庭.epub  (22 chunks)
+[x] c4a1c96d 宗教學\宗教史\光明日報，世界宗教史\任繼愈，世界宗教史4.pdf  (142 chunks)
+[x] c55c5c16 歷史學\近代史\尤金．羅根，鄂圖曼帝國的殞落.epub  (24 chunks)
+[!] c5639eac 歷史學\美州界域史\德拉維加，印卡王室述評.pdf  ERROR: no extractable text
+[x] c5694679 世界宗教\基督教\神學原典\Jaroslav Pelikan，Whose Bible Is It- A History of the Scriptures Through the Ages.pdf  (274 chunks)
+[x] c56bc9cd 世界宗教\基督教\教會史\東方教會史\樂峰，東正教史.pdf  (4 chunks)
+[x] c5f93a1e 哲學\近代哲學\史蒂文‧康納，後現代主義文化.pdf  (2 chunks)
+[x] c64a5a9f 歷史學\中央界域史\希臘-拜占庭史\克蘭普頓，保加利亞史.pdf  (1 chunks)
+[x] c665b069 哲學\當代哲學\韓炳哲，他者的消失.epub  (15 chunks)
+[x] c67acd4e 歷史學\全球通史\牛津世界史叢書(4冊).epub  (100 chunks)
+[x] c6b8a833 世界宗教\猶太教\聖經研究\張久宣，次經全書.pdf  (163 chunks)
+[x] c6e9cf5d 歷史學\全球通史\商務，世界歷史文庫\杜比，法國史(下).pdf  (1 chunks)
+[x] c704ddae 歷史學\東方界域史\中國史\魏泓，絲綢之路.epub  (23 chunks)
+[!] c705549e 歷史學\東方界域史\中亞-蒙古史\聯合國教科文組織，中亞文明史6.pdf  ERROR: no extractable text
+[!] c7ace8cd 世界宗教\[美]約翰.L.埃斯波西託  [美]達麗亞·莫格海德   晏瓊英王宇傑李維建 譯，誰為伊斯蘭講話？十幾億穆斯林的真實想法.pdf  ERROR: no extractable text
+[x] c7ae0256 歷史學\中央界域史\諾威奇，地中海史.pdf  (1 chunks)
+[x] c7c47e15 世界宗教\摩門教\約瑟‧斯密，永恆家庭.pdf  (121 chunks)
+[x] c7c6cf2c 社會政治學\資本主義-社會主義\秦暉，社會主義思想史.pdf  (171 chunks)
+[x] c7e94aad 哲學\哲學原典\近代哲學經典\馬丁‧海德格，存在與時間.pdf  (578 chunks)
+[-] c811ff89 世界宗教\基督教\教會史\教會通史\王美秀，基督教史.azw3  (skip: azw3)
+[x] c835653c 歷史學\全球通史\宮崎正勝，從航海圖到世界史.epub  (44 chunks)
+[!] c873c07f 哲學\孫向晨，面對他者.pdf  ERROR: no extractable text
+[x] c87523c2 文學\阿爾貝‧卡謬，卡謬全集（6卷）.epub  (61 chunks)
+[x] c8d6abd6 歷史學\西方界域史\理查德·邁爾斯，迦太基必須毀滅.epub  (95 chunks)
+[!] c8fe4399 世界宗教\波斯宗教\摩尼教與靈智主義\馬小鶴，光明的使者.pdf  ERROR: no extractable text
+[x] c976ac6f 歷史學\東方界域史\中國史\台灣商務，中國‧歷史的長河\9 上田信，海與帝國.epub  (17 chunks)
+[x] c9e2571b 社會政治學\名家作品\米歇爾·傅柯，瘋狂的譜系.pdf  (495 chunks)
+[x] ca1c0f12 歷史學\西方界域史\近代歐洲\斯奈德，民族的重建.epub  (28 chunks)
+[!] ca338714 世界宗教\基督教\神學\梅欽，基督敎與新神學.pdf  ERROR: no extractable text
+[x] ca8956d0 歷史學\文明的衝突與演化(6冊).epub  (349 chunks)
+[x] cb96cf08 人類生物學\人類起源與進化史\麥克‧託馬塞洛，人類思維的自然史.epub  (16 chunks)
+[!] cba582a4 哲學\經典與解釋輯刊\劉小楓，赫爾墨斯的計謀.pdf  ERROR: no extractable text
+[x] cbb5a24a 世界宗教\其他宗教\孟慧英，論原始信仰與薩滿文化.epub  (70 chunks)
+[x] cbc97bda 宗教學\宗教史\光明日報，世界宗教史\任繼愈，世界宗教史8.pdf  (81 chunks)
+[!] cbe194ba 宗教學\達格·恩德斯鳩，性與宗教.pdf  ERROR: no extractable text
+[x] cbecdfa4 世界宗教\基督教\神學原典\使徒教父，使徒教父著作.pdf  (369 chunks)
+[!] cc422903 歷史學\東方界域史\中國史\榮新江，中古中國與粟特文明.pdf  ERROR: no extractable text
+[x] cc47a994 歷史學\克里斯托弗‧哈梅爾，非凡抄本尋訪錄.epub  (107 chunks)
+[!] cc66618a 哲學\經典與解釋輯刊\劉小楓，尼采與古典傳統.pdf  ERROR: no extractable text
+[-] cc7c5122 哲學\經典與解釋輯刊\劉小楓，荷馬筆下的倫理.azw3  (skip: azw3)
+[!] cc9685cd 世界宗教\東亞宗教\道教\許地山，道教史.pdf  ERROR: no extractable text
+[-] cc96c86f 社會政治學\名家作品\西蒙‧波娃，第二性.mobi  (skip: mobi)
+[!] ccb597e8 世界宗教\基督教\教會史\教會通史\岡薩雷斯，基督教史（上）.pdf  ERROR: no extractable text
+[x] ccc89c2d 世界宗教\基督教\神學原典\金口若望，雕像講道詞選集.pdf  (359 chunks)
+[!] cd2c7a8d 世界宗教\基督教\教會史\新教史\Lucien Febvre，馬丁·路德的時運.pdf  ERROR: no extractable text
+[x] cd34b702 世界宗教\伊斯蘭教\萊思麗．海澤爾頓，先知之後.epub  (27 chunks)
+[!] cd81e81e 自然科學\迪厄多內，當代數學.pdf  ERROR: no extractable text
+[x] cdb129ce 社會政治學\〔美〕弗朗西斯·福山著；毛俊傑譯，政治秩序的起源.epub  (58 chunks)
+[x] cdb1dc7e 宗教學\費爾巴哈，宗教的本質.epub  (4 chunks)
+[!] cde1ca44 世界宗教\賴賢宗，康德、費希特和青年黑格爾論倫理神學.pdf  ERROR: FileDataError: Failed to open file 'G:\\我的雲端硬碟\\資料\\電子書\\賴賢宗，康德、費希特和青年黑格爾論倫理神學.p
+[x] cdeb48b2 歷史學\西方界域史\艾瑞克·霍布斯鮑姆，歐洲史選集.epub  (179 chunks)
+[x] ce0c48bd 世界宗教\佛教\釋太虛，觀心金剛經心釋.epub  (13 chunks)
+[x] cedd83be 世界宗教\基督教\神學\劉曉楓，走向十字架上的真.pdf  (473 chunks)
+[x] cee13ca7 社會政治學\性學\珍妮·哈帝，道德浪女.epub  (37 chunks)
+[x] cf183c8a 社會政治學\甘懷真，皇權、禮儀與經典詮釋 中國古代政治史研究.pdf  (284 chunks)
+[!] cf50c537 社會政治學\政治學\愛德華‧莫迪墨，人民、民族、國家.pdf  ERROR: no extractable text
+[x] cf705e59 歷史學\全球通史\加勒特·馬丁利，七大洋上的爭霸戰.epub  (82 chunks)
+[x] cf8ce3f8 文學\聖修伯裡，夜航.pdf  (95 chunks)
+[x] cfb129cc 世界宗教\波斯宗教\巴哈伊教\阿博都‧巴哈著作\阿博都‧巴哈，阿博都‧巴哈文選.pdf  (324 chunks)
+[-] cfefc309 歷史學\東方界域史\中國史\三田村泰助，宦官.mobi  (skip: mobi)
+[-] cff58f15 歷史學\史料原典\聶斯特，往年紀事.azw3  (skip: azw3)
+[-] d003a8d6 哲學\哲學原典\近代哲學經典\馬丁·海德格，物的追問.azw3  (skip: azw3)
+[x] d022c9be 歷史學\東方界域史\狄宇宙，古代中國與其強鄰.epub  (10 chunks)
+[!] d047f590 世界宗教\東亞宗教\呂大吉，中國原始宗教資料叢編.pdf  ERROR: no extractable text
+[x] d0b0a8f4 宗教學\宗教史\鳳凰叢書宗教史叢書（4卷本）.epub  (196 chunks)
+[x] d0f81fbb 世界宗教\猶太教\聖經研究\王曉朝，基督教典外文獻─舊約篇─第3冊.pdf  (429 chunks)
+[x] d1209034 宗教學\休斯頓‧史密斯，人的宗教.epub  (5 chunks)
+[x] d12116ce 文學\尼采，查拉圖斯特拉如是說 (詳注本錢春緒譯).pdf  (419 chunks)
+[x] d12176a6 宗教學\愛彌爾·塗爾幹，宗教生活的基本形式.pdf  (1 chunks)
+[x] d150e558 世界宗教\猶太教\猶太民族研究\李景文，古代開封猶太人.pdf  (1 chunks)
+[x] d1fec30f 人類生物學\人類起源與進化史\理查德·利基，人類的起源.pdf  (121 chunks)
+[x] d1ff5177 哲學\哲學原典\近代哲學經典\亞瑟‧叔本華，作為意志和表象的世界.epub  (83 chunks)
+[x] d209e70b 歷史學\東方界域史\理查德‧霍爾，季風帝國.epub  (69 chunks)
+[x] d257ee06 宗教學\宗教史\光明日報，世界宗教史\任繼愈，世界宗教史2.pdf  (98 chunks)
+[!] d2819b4e 歷史學\東方界域史\中亞-蒙古史\聯合國教科文組織，中亞文明史2.pdf  ERROR: no extractable text
+[x] d2c50b1a 宗教學\神話學\趙樂牲，吉爾加美什.pdf  (2 chunks)
+[x] d338d1cc 世界宗教\基督教\教會史\東方教會史\Tadrous  Malaty，Introduction to the Coptic Orthodox Church.pdf  (357 chunks)
+[-] d3dc422b 人類生物學\人類文化-語言學\阿爾貝特，文化哲學.azw3  (skip: azw3)
+[x] d4321d1d 世界宗教\印度教\奎師那協會\靈魂之旅.pdf  (189 chunks)
+[!] d452b6b0 哲學\哲學原典\近代哲學經典\尼采，不合時宜的沉思.pdf  ERROR: no extractable text
+[x] d460a444 人類生物學\人類起源與進化史\亨利·哈欽森，史前人類.pdf  (228 chunks)
+[!] d4921c3f 世界宗教\李安宅，藏族宗教史之實地研究.pdf  ERROR: no extractable text
+[!] d4942e79 社會政治學\政治學\金觀濤，觀念史研究.pdf  ERROR: FileDataError: Failed to open file 'G:\\我的雲端硬碟\\資料\\電子書\\社會政治學\\政治學\\金觀濤，觀念史研究.p
+[x] d52af111 世界宗教\猶太教\Ingrid Hjelm，The Samaritans and Early Judaism A Literary Analysis.pdf  (318 chunks)
+[!] d5660d10 心理學\Isaac Kramnick, Frederick M. Watkins，意識型態的時代：從1750年到現在的政治思想 (The age of Ideology political thought, 1750 to the present, 2nd. ed.).pdf  ERROR: no extractable text
+[x] d5734de3 文學\梅列日科夫斯基，托爾斯泰與陀思妥耶夫斯基：生平與創作.pdf  (2 chunks)
+[x] d6065ca6 哲學\哲學原典\近代哲學經典\尼采，作為教育家的叔本華.pdf  (2 chunks)
+[x] d6377d30 世界宗教\佛教\姚衛群，佛教思想與文化.epub  (46 chunks)
+[x] d686eb32 世界宗教\波斯宗教\巴哈伊教\巴哈歐拉，巴哈伊禱文.pdf  (252 chunks)
+[x] d69b4292 歷史學\近代史\瑪格麗特‧麥克米倫，締造和平.epub  (41 chunks)
+[x] d69b4315 宗教學\World Religions系列\神道教，Paula R. Hartz, Shinto.pdf  (144 chunks)
+[!] d6c94b84 社會政治學\政治學\沃格林，政治觀念史稿\沃格林，政治觀念史稿(二).pdf  ERROR: no extractable text
+[!] d6e60dca 哲學\經典與解釋輯刊\劉小楓，索福克勒斯與雅典啟蒙.pdf  ERROR: no extractable text
+[x] d74005ab 世界宗教\猶太教\Mark S. Smith, Patrick D. Miller，The Early History of God Yahweh and the Other Deities in Ancient Israel.epub  (116 chunks)
+[x] d7d49343 世界宗教\波斯宗教\巴哈伊教\巴哈歐拉，巴哈伊齋戒.pdf  (68 chunks)
+[!] d7db59b4 歷史學\西方界域史\大衛‧科爾比，芬蘭史.pdf  ERROR: no extractable text
+[x] d7fedb90 世界宗教\波斯宗教\巴哈伊教\巴哈歐拉著作\巴哈歐拉，亞格達斯經.pdf  (279 chunks)
+[!] d7fef009 宗教學\伊利亞德，神聖的存在 比較宗教的範型.pdf  ERROR: no extractable text
+[x] d809bbda 世界宗教\吳根友，道家思想及其現代詮釋.epub  (36 chunks)
+[!] d8995919 世界宗教\基督教\聖經研究\馬文·韋爾森，亞伯拉罕.pdf  ERROR: no extractable text
+[x] d8a2ce1d 人類生物學\生物學\海倫‧斯凱爾斯，魚的好奇心.epub  (17 chunks)
+[!] d8b85fbf 自然科學\戴維·林德伯格，西方科學的起源：公元1450年之前宗教、哲學、體制背景下的歐洲科學傳統.pdf  ERROR: no extractable text
+[x] d953f012 心理學\莫琳·希凱，深度思考.epub  (52 chunks)
+[!] d95fcf5c 歷史學\史料原典\匿名，盎格魯-撒克遜編年史.pdf  ERROR: no extractable text
+[x] d96db753 哲學\米歇爾·福柯 (Michel Foucault)著, 劉北成, 楊遠嬰 譯，瘋癲與文明 理性時代的瘋癲史 Feng dian yu wen meng.pdf  (2 chunks)
+[x] d9cec1a5 宗教學\神話學\斯蒂芬·弗萊，神話.epub  (43 chunks)
+[!] d9d0fda5 社會政治學\政治學\菲利普‧內莫，教會法與神聖帝國的興衰.pdf  ERROR: no extractable text
+[x] d9eee696 心理學\生死學\雪萊‧卡根，令人著迷的生與死.epub  (19 chunks)
+[x] da181e08 哲學\經典與解釋輯刊\劉小楓，《利維坦》.pdf  (214 chunks)
+[!] da2c92d6 心理學\生死學\歐文·亞隆，直視驕陽.pdf  ERROR: no extractable text
+[x] da66c2fd 世界宗教\波斯宗教\巴哈伊教\胡賽因‧阿迪那，覺醒.pdf  (313 chunks)
+[!] da99b3eb 世界宗教\東亞宗教\頓珠拉傑，苯教史綱要.pdf  ERROR: no extractable text
+[!] da9ab103 歷史學\東方界域史\李江琳，重生的觀音.pdf  ERROR: no extractable text
+[x] dab516a6 文學\楊絳，斐多.epub  (8 chunks)
+[!] dae6c72c 世界宗教\東亞宗教\儒教\餘英時，朱熹的歷史世界(下).pdf  ERROR: no extractable text
+[-] db5d5f7f 歷史學\西方界域史\近代歐洲\克里斯托弗·希伯特，美第奇家族的興衰.mobi  (skip: mobi)
+[-] db675f6d 歷史學\中央界域史\埃及史\劉文鵬，古代埃及史.azw3  (skip: azw3)
+[!] db76c51c 自然科學\[法]大衛·呂埃勒 林開亮，數學與人類思維.pdf  ERROR: no extractable text
+[-] dbf85edc 人類生物學\生物學\達爾文，物種起源.mobi  (skip: mobi)
+[x] dc05a2c5 文學\西塞羅，西塞羅散文選.pdf  (2 chunks)
+[!] dc0db39f 歷史學\東方界域史\渡邊浩，東亞的王權與思想.pdf  ERROR: no extractable text
+[x] dc36f2e7 哲學\當代哲學\喬治·萊考夫，肉身哲學.epub  (24 chunks)
+[x] dc3c435d 世界宗教\伊斯蘭教\法魯克，古蘭經的故事.pdf  (252 chunks)
+[!] dc52d43a 世界宗教\蔣維喬，蔣維喬中國佛教史.pdf  ERROR: no extractable text
+[x] dc576446 宗教學\World Religions系列\公教與正教，Khaled Anatolios, Catholicism Orthodox Christianity.pdf  (144 chunks)
+[x] dc61c3c4 心理學\尼克．查特，思考不過是一場即興演出.epub  (31 chunks)
+[!] dcd0ee6e 世界宗教\章雪富，基督教的柏拉圖主義.pdf  ERROR: no extractable text
+[!] dcd71478 社會政治學\知識社會學\愛德華·薩義德，知識份子論.pdf  ERROR: no extractable text
+[x] dcfefe75 宗教學\威廉·詹姆士，宗教經驗之種種——人性之研究.epub  (20 chunks)
+[x] dcff6daf 社會政治學\名家作品\愛德華‧薩義德，東方主義.pdf  (1 chunks)
+[x] dd0b3f56 人類生物學\安德魯·瑪爾大衛·克里斯蒂安辛西婭·斯托克斯·布朗克雷格·本傑明海斯穆恩韋蘭，換個角度讀歷史（套裝共3冊《BBC世界史》《大歷史》《世界史》）.epub  (108 chunks)
+[x] dd41f188 世界宗教\伊斯蘭教\Adam J. Silverstein，Islamic History- A Very Short Introduction.pdf  (170 chunks)
+[-] dd4ecf89 世界宗教\伊斯蘭教\Lewis, Bernard，Islam in History Ideas, People, and Events in the Middle East.mobi  (skip: mobi)
+[x] dd8c74eb 歷史學\科耶夫，科耶夫的新拉丁帝國.pdf  (481 chunks)
+[x] dd99e9a6 社會政治學\傑米·巴特利特，暗網.epub  (19 chunks)
+[x] dda81c7c 世界宗教\佛教\郭建龍，三千佛塔煙雲下.epub  (16 chunks)
+[x] ddb1a735 文學\馬克‧吐溫，湯姆歷險記.epub  (36 chunks)
+[x] ddb56c18 歷史學\約翰·高德特，法老的寶藏.epub  (41 chunks)
+[x] de0b99a3 歷史學\全球通史\彼德‧梵科潘，絲綢之路.epub  (37 chunks)
+[x] de13f8b8 人類生物學\人類文化-語言學\沃倫·法雷爾，男權的神話.pdf  (424 chunks)
+[!] de240559 社會政治學\[德]梅爾 J.-C. Merle 考明凱維奇(英譯) 梅爾(英譯) 布朗(英譯) 邱帥萍，德國觀念論與懲罰的概念.pdf  ERROR: no extractable text
+[x] de5cede8 文學\徐葆耕，西方文學.epub  (102 chunks)
+[-] de718078 世界宗教\任光宣，俄羅斯文學的神性傳統20世紀俄羅斯文學與基督教 (文學論叢·北大歐美文學研究叢書).azw3  (skip: azw3)
+[x] de8a1b47 世界宗教\其他宗教\Abdilahi Nassir，Yazid was Never Amirul Muminin.pdf  (19 chunks)
+[x] dee2e98c 哲學\經典與解釋輯刊\劉小楓，霍布斯的修辭.pdf  (351 chunks)
+[x] df18178f 歷史學\賈雷德·戴蒙德(Jared Diamond)，崩潰社會如何選擇成敗興亡 (世紀人文系列叢書·開放人文).epub  (178 chunks)
+[x] df1f0c82 宗教學\宗教史\光明日報，世界宗教史\任繼愈，世界宗教史7.pdf  (93 chunks)
+[!] df754d5b 世界宗教\基督教\教會史\新教史\劉義，全球靈恩運動與基督教.pdf  ERROR: no extractable text
+[!] df8b9ad9 歷史學\中央界域史\奧姆斯特德，波斯帝國史.pdf  ERROR: no extractable text
+[!] df96dd75 歷史學\東方界域史\中國史\餘英時，士與中國文化.pdf  ERROR: no extractable text
+[x] dfb13d84 哲學\劉小楓，經典與解釋的張力.pdf  (16 chunks)
+[x] dfb346de 世界宗教\波斯宗教\巴哈伊教\阿博都‧巴哈著作\阿博都‧巴哈，神聖文明的隱密.pdf  (90 chunks)
+[!] dfb42a83 歷史學\西方界域史\近代歐洲\大衛·哈維，巴黎城記.pdf  ERROR: no extractable text
+[x] dfb6a6ff 歷史學\上田信，海與帝國.epub  (17 chunks)
+[!] dfc976a8 歷史學\Said A. Adejumobi，埃塞俄比亞史 The History of Ethiopia.pdf  ERROR: no extractable text
+[!] dfd012c4 自然科學\[英]F.哈耶克 馮克利，科學的反革命.pdf  ERROR: no extractable text
+[!] dfd6a8aa 哲學\近代哲學\法蘭西斯・薛華，前車可鑒.pdf  ERROR: no extractable text
+[x] e0159f56 歷史學\近代史\沙希利‧浦洛基，雅爾塔.epub  (46 chunks)
+[x] e0573d5c 世界宗教\佛教\吳汝鈞，佛教的概念與方法.pdf  (552 chunks)
+[!] e06a957a 宗教學\[美]查爾斯·蓋雷 北塔，英美文學和藝術中的古典神話.pdf  ERROR: no extractable text
+[x] e0965e49 宗教學\宗教史\雷薩・阿斯蘭，造神.epub  (36 chunks)
+[x] e0c70d32 人類生物學\生物學\阿德里安‧比贊，為什麼世界不會失控.epub  (28 chunks)
+[x] e0dad35a 歷史學\西方界域史\近代歐洲\賈士蘅，歐洲與沒有歷史的人.epub  (26 chunks)
+[x] e111d9ee 世界宗教\猶太教\聖經研究\王曉朝，基督教典外文獻─舊約篇─第6冊.pdf  (507 chunks)
+[x] e114c56f 人類生物學\生物學\大衛．哈思克，樹之歌.epub  (32 chunks)
+[x] e1265df8 哲學\陳迎年，感應與心物 牟宗三哲學批判.pdf  (561 chunks)
+[x] e1570ee2 世界宗教\猶太教\Jacob Neusner，Judaisms and their Messiahs at the Turn of the Christian Era.pdf  (309 chunks)
+[x] e16d8e01 哲學\哲學通史\羅伯特·希金斯，世界哲學簡史.epub  (82 chunks)
+[x] e1790cc9 歷史學\東方界域史\中亞-蒙古史\杉山正明，遊牧民的世界史.epub  (13 chunks)
+[x] e1f4f10e 人類生物學\人類大歷史\賈德‧戴蒙，動盪.epub  (21 chunks)
+[x] e2337cce 宗教學\宗教對話\Richard Payne，A state of mixture Christians, Zoroastrians, and Iranian political culture in late Antiquity.epub  (20 chunks)
+[!] e27d2d8e 歷史學\西方界域史\羅馬史\科內爾，劍橋插圖羅馬史.pdf  ERROR: no extractable text
+[x] e28c205a 哲學\近代哲學\楊大春，語言、身體、他者.pdf  (402 chunks)
+[!] e2d5ea1e 歷史學\[美]G.伊格爾斯 彭剛(譯) 顧杭，德國的歷史觀.pdf  ERROR: no extractable text
+[!] e2f2a54b 哲學\經典與解釋輯刊\劉小楓，古學經子.pdf  ERROR: no extractable text
+[x] e342f58d 人類生物學\弗朗索瓦・高堤耶（François Gautier），被誤解的印度大歷史.epub  (37 chunks)
+[x] e3440f00 宗教學\伊裡亞德，宇宙與歷史.pdf  (2 chunks)
+[!] e350c139 世界宗教\東亞宗教\王治心，中國宗教思想史大綱.pdf  ERROR: no extractable text
+[x] e35a97b1 世界宗教\基督教\神學原典\優西比烏，教會史.pdf  (554 chunks)
+[x] e37c77de 世界宗教\基督教\教會史\東方教會史\Augustine Casiday，The Orthodox Christian World.pdf  (791 chunks)
+[!] e3b634a5 哲學\西蒙‧布萊克本，我們時代的倫理學.pdf  ERROR: no extractable text
+[x] e3d33c19 宗教學\神話學\馬昌儀，東方神話傳說(第八卷).pdf  (5 chunks)
+[x] e3e23efb 人類生物學\人類大歷史\島崎晉，世界史是走出來的.epub  (28 chunks)
+[!] e4b3a322 世界宗教\基督教\神學\提摩太‧凱勒，為何是他.pdf  ERROR: no extractable text
+[x] e503b141 人類生物學\人類大歷史\格雷戈裡·柯克倫，一萬年的爆發.epub  (13 chunks)
+[x] e5175f96 世界宗教\基督教\神學原典\狄奧尼修斯，神秘神學.pdf  (26 chunks)
+[x] e535b677 歷史學\史學理論\王明珂，反思史學與史學反思.epub  (93 chunks)
+[x] e551e028 世界宗教\猶太教\聖經研究\華爾頓，舊約聖經背景註釋.pdf  (627 chunks)
+[!] e55f84e5 社會政治學\政治學\菲利普‧內莫，羅馬法與帝國的遺產.pdf  ERROR: no extractable text
+[x] e5a2ff95 歷史學\東方界域史\中亞-蒙古史\白桂思，絲綢之路上的帝國.epub  (123 chunks)
+[x] e5f5cf7e 宗教學\神話學\坎貝爾，神話的力量.epub  (136 chunks)
+[x] e6092012 歷史學\西方界域史\羅馬史\安東尼·艾福瑞特，希臘與羅馬兩部曲.epub  (80 chunks)
+[x] e62e97bb 宗教學\宗教史\光明日報，世界宗教史\任繼愈，世界宗教史1.pdf  (135 chunks)
+[!] e64efcfb 自然科學\宋正海，中國古代海洋學史.pdf  ERROR: no extractable text
+[x] e6ec278e 世界宗教\印度教\Hans Torwestern，Vedanta Heart of Hinduism.pdf  (229 chunks)
+[x] e7143106 歷史學\[美]斯文·貝克特，棉花帝國.epub  (24 chunks)
+[!] e71cb862 歷史學\史料原典\世界英雄史詩譯叢共5冊：尼伯龍人之歌，奧德賽,伊利亞特,薩迦,艾達.epub  ERROR: KeyError: "There is no item named 'OEBPS/1/OEBPS/toc.ncx' in the archive"
+[x] e729d59a 文學\韓松，紅色海洋.epub  (37 chunks)
+[x] e72f58d2 歷史學\全球通史\八旗，興亡的世界史\06森安孝夫，絲路、遊牧民與唐帝國.epub  (18 chunks)
+[x] e79d1740 心理學\詹姆斯．克利爾，原子習慣.epub  (38 chunks)
+[x] e7c9b9bf 文學\陀思妥耶夫斯基，陀思妥耶夫斯基全集.pdf  (445 chunks)
+[x] e7cbcdc2 哲學\中國思想史\度陰山，知行合一王陽明.epub  (10 chunks)
+[-] e8018938 歷史學\中央界域史\阿拉伯-土耳其史\哈全安，哈里發國家的浮沉.azw3  (skip: azw3)
+[x] e8c7694b 宗教學\神話學\北歐-日耳曼神話\卡羅琳·拉靈頓，北歐神話.epub  (16 chunks)
+[x] e925450d 世界宗教\東亞宗教\儒教\艾愷，最後的儒家.epub  (21 chunks)
+[x] e93ea795 哲學\哲學通史\斯通普夫，西方哲學史：從蘇格拉底到薩特及其後.pdf  (522 chunks)
+[-] e95237ea 文學\三毛，三毛典藏全集（14本套裝）.azw3  (skip: azw3)
+[!] e957da54 文學\愛德華·薩義德，格格不入.pdf  ERROR: no extractable text
+[x] e9590fc9 歷史學\全球通史\安東尼‧帕戈登，兩個世界的戰爭.epub  (59 chunks)
+[x] e98daedf 宗教學\宗教對話\Robert G. Hoyland，Seeing Islam as Others Saw- It A Survey and Evaluation of Christian, Jewish and Zoroastrian Writings on Early Islam.pdf  (876 chunks)
+[!] e9f56e4c 哲學\中國思想史\貝淡寧，中國新儒家.pdf  ERROR: no extractable text
+[x] eaa1b604 世界宗教\佛教\周貴華，世界佛教通史（14卷）.epub  (177 chunks)
+[-] eab12843 世界宗教\伊斯蘭教\李興華，中國伊斯蘭教史.azw3  (skip: azw3)
+[x] ead066d3 自然科學\加來道雄，愛因斯坦的宇宙.epub  (47 chunks)
+[x] ead8f3ba 文學\巴希薇．納迦瓦尼，先知的鞍囊.epub  (22 chunks)
+[!] eb1f0154 歷史學\東方界域史\中國史\趙鼎新，東周戰爭與儒法國家的誕生.pdf  ERROR: no extractable text
+[!] eb519c61 歷史學\威廉·M.馬奧尼，捷克和斯洛伐克史.pdf  ERROR: no extractable text
+[x] eb62c24f 社會政治學\卡爾．雅思培，論韋伯.pdf  (170 chunks)
+[!] eb689456 哲學\近代哲學\安德烈亞斯·胡伊森，大分野之後.pdf  ERROR: no extractable text
+[x] ec16ee80 世界宗教\猶太教\1250-1050 BCE，Norman Gottwald, Tribes of Yahweh- A Sociology of the Religion of Liberated Israel.pdf  (470 chunks)
+[x] ec6f9187 歷史學\東方界域史\中國史\台灣商務，中國‧歷史的長河\5 川本芳昭，中華的崩潰與擴大.epub  (16 chunks)
+[!] ec732a22 歷史學\東方界域史\中國史\岡田英弘，從蒙古到大清.pdf  ERROR: no extractable text
+[x] ece88ca4 歷史學\全球通史\八旗，興亡的世界史\21大塚柳太郎，人類該往何處去.epub  (13 chunks)
+[x] ecf4c21e 歷史學\東方界域史\中國史\梅爾清，躁動的亡魂.epub  (17 chunks)
+[!] ed4933f4 世界宗教\東亞宗教\道教\任宗權，道教手印研究.pdf  ERROR: no extractable text
+[x] ed71a9e0 歷史學\近代史\尤里·斯萊茲肯，猶太人的世紀.pdf  (351 chunks)
+[x] ede1df78 歷史學\史料原典\Delphi Classics\Manetho，Complete Works of Manetho.epub  (147 chunks)
+[!] ede72fdd 世界宗教\東亞宗教\Richard von Glahn，左道.pdf  ERROR: no extractable text
+[!] edf1853a 歷史學\全球通史\世界文明大系\錢滿素，世界文明大系(全12卷)美國文明.pdf  ERROR: no extractable text
+[x] eec1ad5f 哲學\哲學通史\彼得·沃森，思想史.epub  (47 chunks)
+[x] ef2921a0 哲學\哲學通史\彼得‧沃森，20世紀思想史.epub  (54 chunks)
+[!] ef6e823c 歷史學\東方界域史\中國史\中國通史\楊照，不一樣的中國史3.pdf  ERROR: no extractable text
+[x] ef7b1e17 世界宗教\猶太教\聖經研究\Mark W. Chavalas，Mesopotamia and the Bible.pdf  (400 chunks)
+[x] f000943a 宗教學\施路赫特，現代理性主義的興起.pdf  (412 chunks)
+[x] f02656ad 世界宗教\其他宗教\古斯塔夫‧施瓦布，奧德修斯的故事.epub  (38 chunks)
+[x] f03472c6 社會政治學\〔美〕弗朗西斯·福山著；毛俊傑譯，政治秩序與政治衰敗.epub  (60 chunks)
+[!] f04ba61a 歷史學\東方界域史\中國史\尾形勇，日本人眼中的中國.pdf  ERROR: RuntimeError: chunk insert failed: HTTP 400 {"code":"22P05","details":"\\u0000 c
+[x] f07e6e5d 歷史學\全球通史\八旗，興亡的世界史\17井野瀨久美惠，大英帝國的經驗.epub  (21 chunks)
+[x] f0dca523 世界宗教\基督教\神學\戴維·福特，基督教神學.epub  (43 chunks)
+[x] f0e4e696 歷史學\美州界域史\金·麥誇裡，印加帝國的末日.epub  (28 chunks)
+[!] f10c3cc3 社會政治學\[德]梅爾 J.-C. Merle 考明凱維奇(英譯) 梅爾(英譯) 布朗(英譯) 邱帥萍，德國觀念論與懲罰的概念.pdf  ERROR: no extractable text
+[!] f17662b9 哲學\近代哲學\費爾巴哈，費爾巴哈哲學著作選集.pdf  ERROR: no extractable text
+[!] f1b49360 歷史學\史料原典\特奧多爾‧蒙森，羅馬史.pdf  ERROR: no extractable text
+[!] f1c2fe54 社會政治學\性學\Georges Vigarello，身體的歷史（卷一）從文藝復興到啟蒙運動.pdf  ERROR: no extractable text
+[x] f1d16505 心理學\薩克斯，錯把太太當帽子的人.epub  (37 chunks)
+[x] f1fe01a2 歷史學\全球通史\Jerry Brotton，十二幅地圖中的世界史.epub  (20 chunks)
+[x] f2075553 歷史學\[美] 史蒂芬·貝萊爾，奧地利史.pdf  (1 chunks)
+[!] f2329834 歷史學\近代史\艾森斯塔德，大革命與現代文明.pdf  ERROR: no extractable text
+[!] f24a5127 哲學\經典與解釋輯刊\劉小楓，色諾芬的品味.pdf  ERROR: no extractable text
+[x] f2a55b94 世界宗教\摩門教\約瑟‧斯密，教義和聖約.pdf  (298 chunks)
+[!] f3135c64 自然科學\約翰·洛西，科學哲學的歷史導論.pdf  ERROR: no extractable text
+[!] f32548e9 世界宗教\東亞宗教\馬克斯·韋伯，儒教與道教.pdf  ERROR: no extractable text
+[!] f3327ead 社會政治學\政治學\沃格林，政治觀念史稿\沃格林，政治觀念史稿(六).pdf  ERROR: no extractable text
+[x] f3c2ff46 歷史學\東方界域史\中國史\徐中約，中國近代史(下).pdf  (11 chunks)
+[!] f3fb94f5 世界宗教\波斯宗教\摩尼教與靈智主義\王媛媛，從波斯到中國.pdf  ERROR: no extractable text
+[x] f3fcc789 社會政治學\名家作品\愛德華·薩義德，文化與帝國主義.pdf  (572 chunks)
+[!] f46eb3a2 歷史學\西方界域史\中世紀歐洲\950-1250，劍橋插圖中世紀史.pdf  ERROR: no extractable text
+[x] f474455f 歷史學\（美）阿爾弗雷德•塞耶•馬漢，海權對歷史的影響（1660-1783年）.pdf  (302 chunks)
+[!] f4bbf870 世界宗教\基督教\教會史\新教史\馬丁·林賽，宗教改革史（下冊）.pdf  ERROR: no extractable text
+[x] f4da100c 自然科學\考克斯，為什麼E=mc2.epub  (14 chunks)
+[x] f4e1ad17 世界宗教\基督教\教會史\Adrian Hastings，The Church in Africa, 1450-1950.epub  (713 chunks)
+[x] f50b85bb 世界宗教\基督教\教會史\新教史\邁克爾‧裡夫斯，不滅的火焰：宗教改革簡史.pdf  (1 chunks)
+[x] f5b51289 哲學\近代哲學\存在主義\考夫曼，存在主義：從陀斯妥也夫斯基到沙特.epub  (4 chunks)
+[x] f5f4ff52 世界宗教\蒲慕州，追尋一己之福 中國古代的信仰世界.pdf  (6 chunks)
+[x] f665421e 宗教學\宗教史\光明日報，世界宗教史\任繼愈，世界宗教史10.pdf  (99 chunks)
+[x] f6fe0182 歷史學\東方界域史\中國史\台灣商務，中國‧歷史的長河\7 小島毅，中國思想與宗教的奔流.epub  (18 chunks)
+[x] f7532bb5 歷史學\史料原典\Delphi Classics\Plutarch，Complete Works of Plutarch.epub  (360 chunks)
+[!] f7733673 宗教學\宗教史\馬克斯·韋伯，中國的宗教、宗教與世界.pdf  ERROR: no extractable text
+[!] f788b876 世界宗教\印度教\摩奴，摩奴法論.pdf  ERROR: no extractable text
+[x] f7a962af 宗教學\（法）馬特,吳雅凌，柏拉圖與神話之鏡 從黃金時代到大西島.pdf  (3 chunks)
+[x] f7f9cd74 世界宗教\波斯宗教\巴哈伊教\巴哈歐拉著作\巴哈歐拉，聖秘瑰寶.pdf  (92 chunks)
+[!] f819d9a2 世界宗教\東亞宗教\道教\李申，老子與道家.pdf  ERROR: no extractable text
+[-] f85a838a 世界宗教\東亞宗教\儒教\李申，儒教簡史.azw3  (skip: azw3)
+[x] f8b08597 社會政治學\政治學\菲利普‧內莫，民主與城邦的衰落.pdf  (378 chunks)
+[x] f8cd6eb3 世界宗教\東亞宗教\子安宣邦，國家與祭祀.pdf  (205 chunks)
+[x] f92b42a6 世界宗教\摩門教\約瑟‧斯密，摩爾門經的教導和教義.pdf  (120 chunks)
+[x] f953298a 世界宗教\基督教\神學原典\奧古斯丁，奧古斯丁.pdf  (4 chunks)
+[-] f9649031 世界宗教\伊斯蘭教\哈全安，哈里發國家的浮沉.azw3  (skip: azw3)
+[!] fa02e891 歷史學\西方界域史\近代歐洲\彼得·伯克，文藝復興時期的歷史意識.pdf  ERROR: no extractable text
+[-] fa1a15ee 哲學\丹尼爾·克萊恩，和伊壁鳩魯一起旅行.azw3  (skip: azw3)
+[-] fa5712f4 歷史學\東方界域史\中國史\走，回民國住兩天.mobi  (skip: mobi)
+[x] fae74448 世界宗教\基督教\教會史\天主教史\鄒保祿，歷代教宗簡史.pdf  (431 chunks)
+[x] fb037b7a 社會政治學\泰瑞．伊格頓，散步在華爾街的馬克思.epub  (16 chunks)
+[x] fb119d47 宗教學\中國五大宗教知識讀本.pdf  (6 chunks)
+[-] fbd8d702 社會政治學\資本主義-社會主義\大衛·哈維，世界的邏輯.mobi  (skip: mobi)
+[x] fc339481 世界宗教\東亞宗教\儒教\餘英時，宋明理學與政治文化.pdf  (2 chunks)
+[!] fc7457a8 社會政治學\政治學\沃格林，政治觀念史稿\沃格林，政治觀念史稿(一).pdf  ERROR: no extractable text
+[x] fc8c6b44 歷史學\全球通史\八旗，興亡的世界史\19姜尚中，大日本．滿洲帝國的遺產.epub  (14 chunks)
+[!] fc9cd650 心理學\生死學\阿里耶斯，面對死亡的人（上卷）.pdf  ERROR: no extractable text
+[-] fd5ced43 世界宗教\基督教\神學原典\加爾文，基督教要義.azw3  (skip: azw3)
+[x] fd5eaad7 哲學\經典與解釋輯刊\尼采，偶像的黃昏.pdf  (196 chunks)
+[x] fdb2ed7b 世界宗教\基督教\神學\劉文明，上帝與女性.pdf  (2 chunks)
+[x] fdbb9e71 歷史學\東方界域史\中國史\台灣商務，中國‧歷史的長河\1 宮本一夫，從神話到歷史.epub  (16 chunks)
+[!] fdc59426 世界宗教\東亞宗教\儒教\馬振鐸，儒家文明.pdf  ERROR: no extractable text
+[x] fe030f99 世界宗教\摩門教\約瑟‧斯密，摩門教經典.pdf  (1293 chunks)
+[!] fe56eba6 社會政治學\大衛·哈維 David Harvey，新自由主義簡史.pdf  ERROR: no extractable text
+[x] fe57cd22 哲學\中國思想史\羅崗，啟蒙的自我瓦解.pdf  (409 chunks)
+[-] fe59c29b 歷史學\東方界域史\中國史\中國通史\哈佛中國史6，最後的中華帝國.mobi  (skip: mobi)
+[x] fe8920ca 世界宗教\印度教\奎師那協會\超越涅槃.pdf  (190 chunks)
+[!] ffeac599 哲學\[日]田中正人，驚呆了！哲學這麼好.pdf  ERROR: no extractable text
