@@ -1,0 +1,172 @@
+從同理心到倫理秩序——主體性動物倫理的建構與社會實踐
+
+From Empathy to Moral Order: Constructing a Subjective Animal Ethics for Social Practice
+
+張辰瑋
+Chang, Chen-Wei
+
+第二十三屆「印順導師思想之理論與實踐」國際學術會議
+「佛教與當代動物倫理」
+2025年9月
+
+Abstract
+
+This paper responds to the utilitarian ethical framework proposed by Peter Singer in Animal Liberation, and aims to construct an alternative approach to animal ethics grounded in subjective ethics. Unlike Singer, who takes sentience and the capacity to suffer as the sole basis for moral concern, this paper argues that ethical practice should not rely solely on the calculus of pain, but should be rethought through the lens of subjectivity, intersubjective formation, and the logic of social symbiosis.
+
+Drawing on insights from cognitive science and the role of mirror neurons, the paper highlights the intrinsic connection between altruistic behavior and the cognitive mechanism of "to harm others is to harm oneself." When empathy toward animals is numbed in social practice, it may gradually erode interpersonal trust and moral norms within human society. From a historical and anthropological perspective, the instrumentalization and objectification of animals since the Agricultural Revolution are closely linked to the oppressive structures imposed upon slaves and marginalized human groups. Conversely, the development of modern animal protection laws often reflects and reinforces a society's commitment to democratization and human rights.
+
+In conclusion, while the capacity for suffering remains a significant ethical concern, the deeper issue lies in how humans cultivate empathy and a symbiotic moral attitude, thereby shaping a virtuous and compassionate society. Such responsibility extends beyond animals—it is foundational to the generative and self-sustaining capacity of human ethical life.
+
+Keywords: Subjective Ethics, Animal Liberation, Peter Singer, Mirror Neurons, Symbiotic Society.
+
+摘要
+
+本論文旨在於回應Peter Singer教授在《動物解放》一書中所主張的效益論倫理立場，並試圖建構一套以主體性倫理學為基礎的動物倫理觀。相較於Singer以痛苦感知為道德關懷的關鍵依據，本文主張倫理實踐不應僅止於感知論的計算，而應從主體的生成結構與社會共生邏輯出發，重新思考人與動物之間的倫理關係。
+
+本文援引人類認知科學與鏡像神經元機制，指出人類的利他行為與「不利他，即損己」的內在認知連結密切相關。若在社會實踐中麻痺對動物的同理心與倫理感，將可能反過來侵蝕人與人之間的社會信任與道德規範。從歷史與人類學角度觀之，農業革命以來對動物的工具化與物化，與人類社會中對奴隸與弱勢者的壓迫結構彼此呼應；而近代動物保護法規的進展，則常與民主化與人權觀念的興起相互連動。
+
+最後，本文指出，動物是否感知痛苦固然是倫理考量的一部分，但更根本的，是人類如何透過同理心與共生態度建構出具有德性的社會氛圍。這不僅是對動物的責任，更是人類倫理能力自我保存與生成的根本。
+
+關鍵詞：主體性倫理學、動物解放、Peter Singer、鏡像神經元、共生社會
+
+I. Introduction
+
+In the history of animal ethics advocacy, Peter Singer stands as a paradigmatic and epoch-defining figure. Since the publication of Animal Liberation in 1975, he has not only initiated global academic discourse and public awareness surrounding animal rights, but also established a foundational framework for animal ethics grounded in sentience and utilitarian moral reasoning. This work was the first to systematically introduce the concept of speciesism, arguing that the ethical relationship between humans and non-human animals must be approached from a rational and egalitarian standpoint. Singer exposed the brutal realities of industrialized animal agriculture, and on this basis, advocated for moral vegetarianism and concrete actions for animal liberation.
+
+Yet nearly half a century later, despite the growing prominence of animal ethics as a major theme in contemporary moral philosophy—and despite notable advancements in civil society and institutional development—the actual condition of animals has not necessarily improved. Under the accelerating logic of global capitalist commodification, their suffering has, in many respects, worsened. While public empathy and knowledge about animal suffering have increased, the real-world sites of suffering have become increasingly segregated from daily human life. This has created a widening gap between ethical awareness and ethical practice.
+
+It is in this context that Singer published his new book, Animal Liberation Now, in 2023. This work is not merely a revised edition of the original; it represents an urgent ethical call to action. Singer asserts that the condition of animals today has not improved in proportion to the advancement of moral ideas, and may in fact have deteriorated under the combined forces of technological efficiency and capitalist expansion. Thus, the phrase "liberation now" is not simply a slogan—it constitutes a direct confrontation with the moral failures of contemporary society.
+
+II. The Characteristics of Peter Singer's Animal Ethics
+
+Since the publication of Animal Liberation in 1975, Peter Singer has established the foundational paradigm of contemporary animal ethics. His 2023 revised edition, Animal Liberation Now, further reinforces the urgency of ethical action and addresses the deteriorating conditions of animals under the forces of globalization and capitalism. Across both works, Singer's theoretical arguments remain remarkably consistent, and can be summarized in three core propositions.
+
+First, Singer asserts that all animals possess the capacity to feel pain; therefore, we have a moral obligation to minimize their unnecessary suffering, insofar as it does not conflict with other vital ethical principles. Second, he challenges the notion that species-specific characteristics such as intelligence, rationality, or linguistic ability can serve as legitimate grounds for moral superiority. This line of reasoning, he argues, reflects an anthropocentric bias known as speciesism, which is logically comparable to racism or sexism. Third, drawing on Jeremy Bentham's principle of utilitarianism, Singer maintains that a civilized society ought to be governed by the imperative to "maximize the happiness of the greatest number while minimizing their suffering." Accordingly, he contends that institutional practices such as industrial animal agriculture and animal experimentation fundamentally violate this ethical proportionality.
+
+Based on these three lines of reasoning, Singer not only calls for a comprehensive re-evaluation and reform of institutionalized animal oppression, but also urges concrete moral action. His framework of effective altruism advocates for targeted ethical interventions in areas such as animal testing, factory farming, pet ownership, and ecological conservation. Furthermore, he consistently promotes moral vegetarianism as a strategy to reduce humanity's dependence on animal agriculture and to dismantle the systemic exploitation of animals raised for food.
+
+Singer's approach has proven to be highly influential. His wide-angle perspective and rigorous argumentation have supplied moral philosophy, policy-making, and social movements with a powerful set of justifications. Nevertheless, the utilitarian framework on which his ethics is built risks reducing moral judgment to a matter of objective calculation. In emphasizing moral equality, Singer often abstracts ethical concern from the emotional resonance that motivates real-world moral behavior. This is evident in the latter chapters of Animal Liberation Now, where he devotes substantial effort to rebutting philosophical positions that regard animals as inferior to humans. While these arguments may be logically sound, they do not necessarily evoke a sense of personal moral obligation to alleviate animal suffering.
+
+This problem is not unique to animal ethics. From the long-standing philosophical debate between Confucianism's "graded love" (ai you deng cha) and Mohism's "universal love" (jian ai), we see that even if individuals accept the principle of equality at a theoretical level, they may still choose to allocate moral concern unevenly in practice. In other words, accepting that animals and humans deserve equal moral consideration does not automatically translate into a willingness to assume ethical responsibility for all sentient life. This gap between abstract principle and lived moral practice remains one of the most persistent challenges in advancing animal ethics as a matter of social action.
+
+Thus, this paper proposes an alternative perspective to supplement Singer's approach. Beyond rational argumentation and utilitarian calculation, animal ethics should also be informed by insights from evolutionary biology and psychology. I introduce the ethical principle of to not act altruistically is to harm oneself, which asserts that neglecting animal welfare and engaging in cruel treatment not only causes harm to animals, but also undermines the psychological health of individuals and the moral fabric of human society. From a subjectivity-centered standpoint, treating animals with compassion is not only a moral duty toward others—it is also a path toward safeguarding human well-being and fostering the generative capacity of ethical life.
+
+III. A Subjective Ethics Grounded in Evolutionary Psychology
+
+To understand how humans became "moral animals," the answer must not be confined to philosophical or cultural speculation; it must also be traced to the biological foundations embedded in human evolutionary history. This paper argues that the human capacity for empathy—and the altruistic behaviors it engenders—has its roots in the mirror neuron system as identified in evolutionary psychology. This neural structure enables individuals to imitate the actions of others and to activate pain-related brain regions when witnessing the suffering of others, thereby generating similar emotional and somatic responses. In other words, when we witness the pain of another, we may neurologically "feel" as though we are suffering ourselves. This neurobiological resonance constitutes the embodied foundation of ethical concern.
+
+I conceptualize this phenomenon through the ethical principle: to not act altruistically is to harm oneself. On both physiological and psychological levels, if individuals consistently ignore the suffering of others and suppress innate empathic responses, such avoidance and disconnection may result in damage to their own mental well-being and moral sensitivity. Research has shown that repeated exposure to unaddressed suffering can lead to empathy fatigue, moral disengagement, and in some cases, even post-traumatic stress disorder (PTSD) or subconscious anxiety rooted in repressed guilt.
+
+A concrete manifestation of this ethical distortion can be seen in the context of bullying, common in schools and workplaces. Bullies often derive a sense of power by humiliating or harming others, while bystanders, fearing they might become the next target, choose silence. However, psychological studies suggest that bystanders also experience mental stress due to empathic distress and moral conflict, resulting in what has been termed vicarious trauma or collective anxiety. Through mechanisms such as cognitive avoidance, diffusion of responsibility, or dehumanization, these individuals attempt to suppress empathy and self-blame, thereby constructing a broader structure of moral disengagement at the societal level.
+
+Similarly, the way humans treat animals reflects parallel psychological mechanisms. When confronted with the brutal realities of factory farming or animal experimentation, most people instinctively feel discomfort or aversion—clear evidence of the role played by mirror neurons and moral emotions. Nevertheless, many choose to ignore these realities or rationalize them through appeals to "cultural tradition," "nutritional necessity," or "personal freedom," which function as forms of moral avoidance and psychological dissociation.
+
+Thus, animal ethics is not solely about the suffering of the other—it also functions as a litmus test of our own ethical capacity. If society continues to tolerate systemic cruelty against animals, such a "moral blind spot" risks becoming internalized as a collective unconscious, eroding our ability to perceive and respond to all forms of suffering. From the standpoint of evolutionary psychology, treating animals with compassion benefits not only animals themselves but also safeguards the ethical development and integrity of human society.
+
+IV. Animal Suffering as the Persistent Shadow of Human History
+
+From a longue durée perspective of human society, the suffering of animals has remained a persistent and largely unacknowledged shadow trailing the course of civilization. In hunter-gatherer societies, although humans still hunted animals for food, safety, and ritual purposes, most indigenous cultures demonstrated a deep respect and caution in their interactions with non-human life. As anthropologist Claude Lévi-Strauss observed, many such societies practiced forms of animism and animal totemism, symbolically recognizing animals as other subjects rather than mere resources. These cultures revered the migratory patterns, territorial presence, and environmental agency of animals, and employed ritual practices to mitigate the moral anxiety associated with killing "kin of the forest."
+
+However, this ethic of reverence and co-existence underwent a fundamental transformation with the advent of the Agricultural Revolution. Around 10,000 BCE, the development of sedentary farming led to the large-scale domestication of animals, transforming them into sources of labor, production, and consumption. A central characteristic of this process was the systemic de-subjectification of animals—they were no longer perceived as sentient beings with volition and experience but were instead reduced to economic units of value. As Peter Singer argues, this instrumental view of animals underpins what he terms speciesism, a moral prejudice functionally identical to racism or sexism.
+
+Significantly, archaeologists and social historians have pointed out that this period also witnessed the rise of gender subjugation, slavery, and deepening class divisions. This suggests that the mode of domination developed toward animals may have laid the foundation for later systems of human oppression. In other words, the objectification of animal subjectivity was not merely a cross-species injustice; it also served as a psychological rehearsal space and institutional prototype for intra-human inequalities.
+
+In modern times, the implementation of animal welfare legislation has often been interpreted as a marker of a society's commitment to human rights and ethical civilization. Studies show that countries with higher levels of animal protection tend to score better in areas such as human rights, democracy, education, and public morality. Nevertheless, this narrative of moral progress includes two notable exceptions. The first is the phenomenon of selective empathy—a tendency to morally recognize only certain species, such as pets, while neglecting the rights of farm animals, laboratory animals, and wildlife. The second exception is the case of Nazi Germany. Despite enacting one of Europe's earliest animal protection laws in 1933, the regime simultaneously enacted genocidal policies that subjected Jews, Roma, homosexuals, and the disabled to "livestock-style" management and extermination. This twisted ethical logic is precisely what Singer critiques in Animal Liberation: without the consistent application of moral equality to all sentient beings, what appears as concern for animals may, in reality, be a form of psychological compensation or selective moral preference.
+
+Despite these counterexamples, the broader historical and institutional record suggests a strong correlation between concern for animal welfare and the pursuit of ethical justice and the public good. In short, societies that emphasize animal well-being tend to cultivate more humane, stable, and livable environments. To care for animals is not merely to benefit them—it is also to enact empathy, moral responsibility, and the containment of power within the ethical fabric of human community.
+
+V. Conclusion
+
+The ethical maxim "Do not do unto others what you would not have them do unto you" has held "the Golden Rule" across major religious and philosophical traditions. From the perspective of evolutionary psychology, this golden rule may be understood as the natural expression of the empathy mechanism supported by the mirror neuron system. This paper builds upon that foundation by proposing a further ethical axiom: to not act altruistically is to harm oneself. It underscores the idea that sustained neglect of our innate capacity for empathy can result not only in psychological shadows at the individual level, but also in a collective moral desensitization and ethical decline across society.
+
+Peter Singer's Animal Liberation lays a rigorous rational foundation for the principle that humans and animals should be granted equal moral consideration. However, this paper contends that rational argument and abstract principles of equality are insufficient to confront the structural violence and ethical numbness inflicted upon animals in contemporary society. What is needed is a more expansive ethical vision—one that affirms human-animal symbiosis as a moral imperative. This approach not only insists on respecting the rights and welfare of animals but also reveals that the objectification and neglect of animals ultimately backfire on human society, eroding empathy, responsibility, and the very ethical awareness necessary for maintaining social trust.
+
+In other words, the call to "act now" for animal liberation is not merely a matter of moral conscience—it is a fateful decision about the kind of society we wish to inhabit, and the moral atmosphere in which we desire to live. The answers to these questions are inseparable from how we choose to treat animals today.
+
+This concern is particularly pressing in the present age, where technological and capitalist developments have radically separated the daily lives of humans from the lived realities of animals. With the exception of companion animals, most animals now exist in enclosed, industrialized systems of production, far removed from the sensory awareness and moral accountability of the public. This dissociation has weakened the activation of mirror-neuron-driven empathy, resulting in a new form of de-subjectification. When society becomes numb to the suffering of millions of animals, it risks fostering a broader cultural indifference to human suffering—whether it occurs in contexts of war, famine, or authoritarian oppression—thus reducing moral concern to selective sympathy and passive tolerance.
+
+Ultimately, the way we treat animals will reflect the way we treat ourselves and each other. Only by acknowledging the co-generative structure of human-animal symbiosis, and by reconstructing our ethical relationships through institutions, cultural narratives, and deliberate action, can we foster a society grounded in empathy and justice. Within this ethical framework, kindness to animals is no longer the isolated choice of a morally virtuous few—it becomes the essential pathway through which humanity builds a more compassionate and sustainable moral world.
+
+References
+
+English References
+
+Armstrong, K. A history of God: The 4,000-year quest of Judaism, Christianity and Islam. New York: Ballantine Books, 1993.
+
+Armstrong, K. Twelve steps to a compassionate life. New York: Alfred A. Knopf, 2010.
+
+Bandura, A. "Moral disengagement in the perpetration of inhumanities". Personality and Social Psychology Review, 3(3), 193–209, 1999.
+
+Bentham, J. An introduction to the principles of morals and legislation (Ch. 17). London: T. Payne, 1789.
+
+Calarco, M. Zoographies: The question of the animal from Heidegger to Derrida. Columbia University Press, 2008.
+
+Cambridge Declaration on Consciousness. Cambridge Declaration on Consciousness. Retrieved from https://fcmconference.org/img/CambridgeDeclarationOnConsciousness.pdf, 2012.
+
+Charles, N., & Davies, C. A. "My family and other animals: Pets as kin". Sociological Research Online, 13(5), 1–14, 2008.
+
+Cavalieri, P. The animal question: Why nonhuman animals deserve human rights. Oxford University Press, 2001.
+
+Cochrane, A. Animal rights without liberation: Applied ethics and human obligations. Columbia University Press, 2012.
+
+Decety, J., & Cowell, J. M. "The complex relation between morality and empathy". Trends in Cognitive Sciences, 18(7), 337–339, 2014.
+
+Deemer, D. R., & Lobao, L. M. "Public concern with farm-animal welfare: Religion, politics, and human disadvantage in the food sector". Rural Sociology, 76(2), 167–196, 2011.
+
+Diamond, J. Guns, germs, and steel: The fates of human societies. New York: W. W. Norton, 1997.
+
+Figley, C. R. "Compassion fatigue: Toward a new understanding of the costs of caring." In B. H. Stamm (Ed.), Secondary traumatic stress: Self-care issues for clinicians, researchers, and educators (pp. 3–28). Lutherville, MD: Sidran Press, 1995.
+
+Franklin, A. Animals and modern cultures: A sociology of human–animal relations in modernity. London: SAGE Publications, 1999.
+
+Graeber, D., & Wengrow, D. The dawn of everything: A new history of humanity. New York: Farrar, Straus and Giroux, 2021.
+
+Gruen, L. Ethics and animals: An introduction. Cambridge University Press, 2011.
+
+Herzog, H. "Gender differences in human–animal interactions: A review". Anthrozoös, 20(1), 7–21, 2007.
+
+Hirschberger, G. "Collective trauma and the social construction of meaning". Frontiers in Psychology, 9, 1441, 2018.
+
+Ingold, T. The perception of the environment: Essays on livelihood, dwelling and skill. London: Routledge, 2000.
+
+Lévi-Strauss, C. La pensée sauvage [The savage mind]. Paris: Plon, 1962.
+
+Lerner, G. The creation of patriarchy. New York: Oxford University Press, 1986.
+
+MacAskill, W. Doing good better: Effective altruism and how you can make a difference. New York: Avery, 2015.
+
+Nibert, D. Animal rights/human rights: Entanglements of oppression and liberation. Rowman & Littlefield, 2002.
+
+Nussbaum, M. C. Upheavals of thought: The intelligence of emotions. Cambridge University Press, 2001.
+
+Nussbaum, M. C. Hiding from humanity: Disgust, shame, and the law. Princeton University Press, 2004.
+
+Plous, S. "Psychological mechanisms in the human use of animals". Journal of Social Issues, 49(1), 11–52, 1993.
+
+Reid, J. D. "Empathy and the golden rule". Philosophical Studies, 129(1), 69–77, 2006.
+
+Rizzolatti, G., & Craighero, L. "The mirror-neuron system". Annual Review of Neuroscience, 27, 169–192, 2004.
+
+Singer, P. Animal liberation: A new ethics for our treatment of animals. New York: HarperCollins, 1975.
+
+Singer, P. Animal liberation (Updated ed.). New York: Harper Perennial, 2009.
+
+Singer, P. Animal liberation now: The definitive classic renewed. New York: Harper, 2023.
+
+Staub, E. "The roots of evil: The origins of genocide and other group violence". Political Psychology, 20(1), 175–178, 1999.
+
+Twine, R. Animals as biotechnology: Ethics, sustainability and critical animal studies. Routledge, 2010.
+
+Wattles, J. The golden rule. Oxford University Press, 1996.
+
+Zaki, J. "Empathy: A motivator of moral behavior". Current Directions in Psychological Science, 23(6), 449–453, 2014.
+
+中文參考書目
+
+李竟恒，《愛有等差：先秦儒家與華夏制度文明的構建》。桂林：廣西師範大學出版社，2024。
+
+劉妮，〈墨子與孟子論「兼愛」〉。《東吳哲學學報》，第39期（2019.02），1–21。
+
+彼得‧辛格（Peter Singer）著，孟祥森、錢永祥譯。《動物解放》。台北：關懷生命協會，1996。
+
+彼得‧辛格（Peter Singer）著，吳宗蓉譯。《動物解放：現在就行動》。台北：關懷生命協會，2025。

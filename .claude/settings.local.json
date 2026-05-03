@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/user/Desktop/know-graph-lab/**)",
+      "Bash(xargs -I {} sh -c 'echo \"=== {} ===\"; head -50 \"{}\"')",
+      "Bash(npm install *)",
+      "Bash(node -e \"const d = require\\('./node_modules/docx/package.json'\\); console.log\\(d.version\\)\")",
+      "Bash(node -e \"const { ImageRun } = require\\('docx'\\); console.log\\(typeof ImageRun\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(npm run *)",
+      "Bash(node -e \"console.log\\(require\\('./node_modules/@tiptap/vue-3/package.json'\\).version\\)\")",
+      "Bash(node -e \"const p=require\\('./node_modules/@tiptap/vue-3/package.json'\\); console.log\\('main:', p.main\\); console.log\\('module:', p.module\\); console.log\\('exports keys:', Object.keys\\(p.exports||{}\\).slice\\(0,5\\)\\)\")",
+      "Bash(node -e \"const p=require\\('./node_modules/@tiptap/starter-kit/package.json'\\); console.log\\(p.version, p.peerDependencies\\)\")"
+    ]
+  }
+}

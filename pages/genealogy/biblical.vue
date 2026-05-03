@@ -137,35 +137,18 @@
       </div>
     </div>
 
-    <!-- Tree view (always mounted so canvas stays alive) -->
-    <div v-show="view === 'tree'" class="flex-1 min-h-0 flex flex-col">
-      <!-- Tree controls -->
-      <div class="flex-shrink-0 flex items-center gap-2 px-4 h-10 bg-white border-b border-gray-100">
-        <span class="text-xs text-gray-400">{{ treeStatus }}</span>
-        <div class="flex-1" />
-        <div class="flex items-center gap-0.5 bg-gray-100 rounded-lg p-0.5">
-          <button
-            v-for="d in layoutDirs"
-            :key="d.value"
-            class="text-xs px-2 py-0.5 rounded-md transition"
-            :class="treeDir === d.value ? 'bg-white shadow-sm text-gray-800 font-medium' : 'text-gray-500 hover:text-gray-700'"
-            @click="treeDir = d.value; treeCanvasRef?.applyLayout(treeDir)"
-          >{{ d.label }}</button>
-        </div>
-        <button
-          class="text-xs px-2.5 py-1 border border-gray-200 rounded-lg text-gray-600 hover:bg-gray-50 transition"
-          @click="treeCanvasRef?.fitAll()"
-        >⊡ 適合頁面</button>
-      </div>
-      <!-- VueFlow canvas -->
-      <div class="flex-1 min-h-0">
-        <ClientOnly>
-          <GenealogyCanvas ref="treeCanvasRef" class="w-full h-full" />
-          <template #fallback>
-            <div class="w-full h-full flex items-center justify-center text-gray-300 text-sm">載入中…</div>
-          </template>
-        </ClientOnly>
-      </div>
+    <!-- 族譜圖 (relative parent gives ClientOnly content a defined size) -->
+    <div v-show="view === 'tree'" class="flex-1 min-h-0 relative">
+      <ClientOnly>
+        <GenealogyBiblicalSpineTree
+          :nodes="graphNodes"
+          :edges="graphEdges"
+          @select-person="onSelectPerson"
+        />
+        <template #fallback>
+          <div class="absolute inset-0 flex items-center justify-center text-gray-300 text-sm">載入中…</div>
+        </template>
+      </ClientOnly>
     </div>
 
     <!-- Detail modal (出處 / 備注) -->
@@ -363,44 +346,33 @@ function openDetail(title: string, body: string, personName: string) {
   detail.value = { show: true, title, body, personName }
 }
 
-// ── Tree view ──────────────────────────────────────────────
-const treeCanvasRef = ref()
-const treeDir       = ref<'TB' | 'LR'>('TB')
-const treeStatus    = ref('點擊「族譜圖」載入')
-const treeLoaded    = ref(false)
-const layoutDirs    = [
-  { value: 'TB', label: '↓ 上下' },
-  { value: 'LR', label: '→ 左右' },
-]
+// ── Graph data (shared for tree view) ─────────────────────
+const graphNodes  = ref<any[]>([])
+const graphEdges  = ref<any[]>([])
+const graphLoaded = ref(false)
 
-async function loadTree() {
-  if (treeLoaded.value) return
-  treeLoaded.value = true
-  treeStatus.value = '載入中…'
+async function loadGraph() {
+  if (graphLoaded.value) return
+  graphLoaded.value = true
   try {
     const token = await getToken()
-    if (!token) { treeLoaded.value = false; return }
+    if (!token) { graphLoaded.value = false; return }
     const { nodes, edges } = await $fetch<{ nodes: any[], edges: any[] }>('/api/genealogy/biblical-graph', {
       headers: { Authorization: `Bearer ${token}` },
     })
-    await nextTick()
-    treeCanvasRef.value?.importData(nodes, edges)
-    const pcCount = edges.filter((e: any) => e.data?.relationshipType === 'parentChild').length
-    const spCount = edges.filter((e: any) => e.data?.relationshipType === 'spouse').length
-    treeStatus.value = `${nodes.length} 人`
-    nextTick(() => {
-      treeCanvasRef.value?.applyLayout(treeDir.value)
-      treeStatus.value = `${nodes.length} 人 · ${pcCount} 親子 · ${spCount} 配偶`
-    })
+    graphNodes.value = nodes
+    graphEdges.value = edges
   } catch {
-    treeStatus.value = '載入失敗，請重新整理'
-    treeLoaded.value = false
+    graphLoaded.value = false
   }
 }
 
-watch(view, (val) => {
-  if (val === 'tree') loadTree()
-})
+function onSelectPerson(id: string) {
+  const found = people.value.find(p => p.id === id)
+  if (found) openEdit(found)
+}
+
+watch(view, (val) => { if (val === 'tree') loadGraph() })
 
 // ── CRUD ───────────────────────────────────────────────────
 function emptyForm() {
@@ -471,9 +443,8 @@ async function save() {
       people.value.push(created)
     }
     showModal.value = false
-    // Invalidate tree so it reloads with fresh data
-    treeLoaded.value = false
-    if (view.value === 'tree') loadTree()
+    graphLoaded.value = false
+    if (view.value === 'tree') loadGraph()
   } finally {
     saving.value = false
   }
@@ -488,8 +459,8 @@ async function deletePerson(id: string) {
     headers: { Authorization: `Bearer ${token}` },
   })
   people.value = people.value.filter(p => p.id !== id)
-  treeLoaded.value = false
-  if (view.value === 'tree') loadTree()
+  graphLoaded.value = false
+  if (view.value === 'tree') loadGraph()
 }
 
 function formatYear(y: number | null) {

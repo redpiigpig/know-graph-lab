@@ -57,14 +57,14 @@
         </NuxtLink>
 
         <!-- 論文寫作系統 -->
-        <div class="tool-card border-gray-100 opacity-50 cursor-not-allowed">
-          <div class="tool-icon bg-gray-100 text-gray-400">✍️</div>
+        <NuxtLink to="/writing" class="tool-card group border-purple-100 hover:border-purple-300 hover:shadow-purple-100">
+          <div class="tool-icon bg-purple-50 text-purple-600">✍️</div>
           <div class="flex-1">
-            <h2 class="tool-title text-gray-400">論文寫作系統</h2>
+            <h2 class="tool-title">論文寫作系統</h2>
             <p class="tool-desc">整合書摘素材，AI 輔助論文大綱生成與引用管理</p>
           </div>
-          <span class="tool-badge bg-gray-100 text-gray-400">開發中</span>
-        </div>
+          <span class="tool-badge bg-purple-50 text-purple-600">可用</span>
+        </NuxtLink>
 
         <!-- 流程圖編輯器 -->
         <NuxtLink :to="user ? '/canvas?type=flowchart' : '/login'" class="tool-card group border-sky-100 hover:border-sky-300 hover:shadow-sky-100">
@@ -94,6 +94,16 @@
             <p class="tool-desc">AI 解析譜系文字，自動生成樹狀族譜，支援手動連線、16 色標注與匯出</p>
           </div>
           <span class="tool-badge bg-amber-50 text-amber-600">可用</span>
+        </NuxtLink>
+
+        <!-- AI 對話錄 -->
+        <NuxtLink :to="user ? '/ai-dialogues' : '/login'" class="tool-card group border-indigo-100 hover:border-indigo-300 hover:shadow-indigo-100">
+          <div class="tool-icon bg-indigo-50 text-indigo-600">💬</div>
+          <div class="flex-1">
+            <h2 class="tool-title">AI 對話錄</h2>
+            <p class="tool-desc">Gemini 思想對話存檔，按月份與日期瀏覽，支援自訂分類與線上刪減</p>
+          </div>
+          <span class="tool-badge bg-indigo-50 text-indigo-600">可用</span>
         </NuxtLink>
 
         <!-- 實驗網站 -->
