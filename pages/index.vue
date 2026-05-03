@@ -106,16 +106,6 @@
           <span class="tool-badge bg-orange-50 text-orange-500">示範</span>
         </NuxtLink>
 
-        <!-- 架構層級表 -->
-        <div class="tool-card border-orange-100 opacity-50 cursor-not-allowed">
-          <div class="tool-icon bg-orange-50 text-orange-400">🗂️</div>
-          <div class="flex-1">
-            <h2 class="tool-title text-gray-400">架構層級表</h2>
-            <p class="tool-desc">組織架構、制度層級視覺化，支援多維度關係與自訂群組</p>
-          </div>
-          <span class="tool-badge bg-orange-50 text-orange-400">開發中</span>
-        </div>
-
         <!-- 智能表格 -->
         <NuxtLink :to="user ? '/canvas?type=table' : '/login'" class="tool-card group border-rose-100 hover:border-rose-300 hover:shadow-rose-100">
           <div class="tool-icon bg-rose-50 text-rose-600">📊</div>
@@ -126,14 +116,14 @@
           <span class="tool-badge bg-rose-50 text-rose-600">可用</span>
         </NuxtLink>
 
-        <!-- AI 生成簡報 -->
-        <NuxtLink :to="user ? '/presentation' : '/login'" class="tool-card group border-indigo-100 hover:border-indigo-300 hover:shadow-indigo-100">
-          <div class="tool-icon bg-indigo-50 text-indigo-600">🎞️</div>
+        <!-- 寫作計畫 -->
+        <NuxtLink to="/works" class="tool-card group border-rose-100 hover:border-rose-300 hover:shadow-rose-100">
+          <div class="tool-icon bg-rose-50 text-rose-600">✒️</div>
           <div class="flex-1">
-            <h2 class="tool-title">AI 生成簡報</h2>
-            <p class="tool-desc">一鍵生成專業簡報，支援 PPT 格式導出</p>
+            <h2 class="tool-title">寫作計畫</h2>
+            <p class="tool-desc">書寫計畫管理：構思中的書籍、讀書會影音逐字稿、章節草稿</p>
           </div>
-          <span class="tool-badge bg-indigo-50 text-indigo-600">可用</span>
+          <span class="tool-badge bg-rose-50 text-rose-600">可用</span>
         </NuxtLink>
 
       </div>
