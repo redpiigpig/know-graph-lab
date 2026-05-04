@@ -141,6 +141,16 @@ It will **miss** books that group by other markers like:
 
 If a multi-volume book gets flattened by mistake, **add the missing marker to `VOLUME_MARKERS`** and re-run. Don't try to detect "this looks like a multi-volume set" structurally — the marker check is the only reliable signal in the EPUB TOC.
 
+### Anchor fallback (broken EPUB anchors)
+
+Some EPUBs put `#anchor` fragments in their TOC hrefs but the HTML body never actually emits a matching `id="..."` — `中國儒學史` does this. The script handles it:
+
+1. After `parse_volume_toc()`, every `(file, anchor, title)` entry is validated by reading the doc's HTML and `find(attrs={"id": anchor})`.
+2. If at least one anchor in a doc lands → keep the split-at-anchor behavior.
+3. If **no** anchors in a doc resolve → promote the first declared title to a doc-level volume start. The volume transition still fires, just at doc beginning instead of mid-doc.
+
+Logged as `(N anchored volume(s) had no resolvable id — promoted to doc-level starts)` per book during a batch.
+
 ## Tuning per publisher
 
 The default boilerplate patterns target 上海譯文出版社. Adjust [`HARD_DROP_PATTERNS` and `DEDUPE_PATTERNS`](../../../scripts/standardize_ebook.py) when you find a publisher whose noise pages slip through:

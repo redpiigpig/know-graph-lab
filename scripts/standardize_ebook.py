@@ -290,6 +290,34 @@ def standardize(book):
     print(f"Spine docs: {len(docs)}")
 
     doc_volume_starts, doc_anchor_splits = parse_volume_toc(b)
+
+    # Validate anchored splits: some EPUBs put #anchor in the TOC href but
+    # never actually emit a matching id="…" in the HTML. When that happens
+    # the volume marker would silently never fire. For docs whose anchors
+    # don't resolve, promote the first anchor's title to a doc-level start
+    # so the volume transition still happens (just at doc beginning instead
+    # of mid-doc).
+    if doc_anchor_splits:
+        fname_to_doc = {d.file_name: d for d in docs}
+        promoted_count = 0
+        for fn, lst in list(doc_anchor_splits.items()):
+            d = fname_to_doc.get(fn)
+            if not d:
+                doc_anchor_splits.pop(fn)
+                continue
+            soup_check = BeautifulSoup(d.get_content(), "html.parser")
+            body_check = soup_check.find("body") or soup_check
+            real_anchors = [(a, t) for a, t in lst if body_check.find(attrs={"id": a})]
+            if real_anchors:
+                doc_anchor_splits[fn] = real_anchors
+            else:
+                # No anchor lands → use the first declared title as a doc-level start.
+                doc_volume_starts[fn] = lst[0][1]
+                doc_anchor_splits.pop(fn)
+                promoted_count += 1
+        if promoted_count:
+            print(f"  ({promoted_count} anchored volume(s) had no resolvable id — promoted to doc-level starts)")
+
     multi_volume = bool(doc_volume_starts or doc_anchor_splits)
     if multi_volume:
         all_vols = set(doc_volume_starts.values())
