@@ -347,7 +347,7 @@ function selectAll() {
   activeSubcategory.value = ""
   expandedCategory.value = ""
   expandedGroup.value = ""
-  searchResults.value = []
+  clearSearch()
   loadEbooks()
 }
 
@@ -356,7 +356,7 @@ function clickCategory(cat: CategoryDef) {
   activeSubcategory.value = ""
   expandedCategory.value = expandedCategory.value === cat.value ? "" : cat.value
   expandedGroup.value = ""
-  searchResults.value = []
+  clearSearch()
   loadEbooks()
 }
 
@@ -364,14 +364,14 @@ function clickGroup(catValue: string, child: SubGroup) {
   activeCategory.value = catValue
   activeSubcategory.value = child.group
   expandedGroup.value = expandedGroup.value === child.group ? "" : child.group
-  searchResults.value = []
+  clearSearch()
   loadEbooks()
 }
 
 function selectSub(catValue: string, sub: string) {
   activeCategory.value = catValue
   activeSubcategory.value = sub
-  searchResults.value = []
+  clearSearch()
   loadEbooks()
 }
 
