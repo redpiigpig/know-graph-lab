@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     r2SecretKey: process.env.R2_SECRET_KEY,
     r2Endpoint: process.env.R2_ENDPOINT,
     r2Bucket: process.env.R2_BUCKET,
+    ebookChunksDir: process.env.EBOOK_CHUNKS_DIR,
 
     // 公開配置（前端和後端都可用）
     public: {
