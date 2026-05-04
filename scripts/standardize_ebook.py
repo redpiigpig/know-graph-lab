@@ -60,6 +60,22 @@ PREVIEW_LEN = 200
 CC = opencc.OpenCC("s2tw")  # simplified → traditional (Taiwan idioms)
 
 
+# Titles that look like continuation markers — merged into previous chunk
+# instead of becoming standalone chunks. Matches: single Chinese numeral,
+# single Latin letter, pure digits 1-3 chars, or empty.
+_CONT_RX = re.compile(
+    r"^\s*(?:"
+    r"[一二三四五六七八九十百千]+"          # 一 / 二 / 十一 …
+    r"|[A-Za-z]"                              # A / B / … (e.g. index letters)
+    r"|\d{1,3}"                               # 1 / 23 / …
+    r"|"                                      # empty
+    r")\s*[、。．\.]?\s*$"
+)
+
+def is_continuation_title(title: str) -> bool:
+    return bool(_CONT_RX.match(title or ""))
+
+
 def to_traditional(text: str) -> str:
     """opencc s2tw + post-fix substitutions to correct over-conversion bugs
     (e.g. s2tw turns 历史 → 曆史 when it should be 歷史). The fix table is
@@ -412,6 +428,19 @@ def standardize(book):
 
             first_heading = re.search(r"^#{1,4}\s+(.+)$", md_tw, re.M)
             chapter_title = first_heading.group(1).strip() if first_heading else d.file_name
+
+            # Continuation merge: if this chunk's title is just a numeric/letter
+            # marker (e.g. 後記 split into 「後記」+「二」, or 索引 split into A-Z),
+            # fold its content into the previous chunk instead of creating a new
+            # one. Volume must match — don't merge across volume boundaries.
+            if (chunks and is_continuation_title(chapter_title)
+                    and chunks[-1].get("volume") == volume):
+                # Strip the redundant heading line from md_tw before appending —
+                # it adds nothing and creates "二 / A" mid-paragraph artifacts.
+                stripped_md = re.sub(r"^#{1,4}\s+.+\n+", "", md_tw, count=1).strip()
+                if stripped_md:
+                    chunks[-1]["content"] = chunks[-1]["content"].rstrip() + "\n\n" + stripped_md
+                continue
 
             chunks.append({
                 "chunk_index": len(chunks),
