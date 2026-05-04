@@ -90,39 +90,92 @@
       <!-- 主內容 -->
       <div class="flex-1 min-w-0">
         <!-- 搜尋列 -->
-        <div class="flex gap-3 mb-6">
-          <div class="relative flex-1">
-            <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-            </svg>
-            <input v-model="searchQ" @keyup.enter="runSearch" type="text"
-              placeholder="全文搜尋電子書內容…"
-              class="w-full bg-gray-900 border border-gray-700 rounded-xl pl-11 pr-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm" />
+        <div class="mb-6">
+          <div class="flex gap-3 mb-3">
+            <div class="relative flex-1">
+              <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+              <input v-model="searchQ" @keyup.enter="runSearch" type="text"
+                :placeholder="searchPlaceholder"
+                class="w-full bg-gray-900 border border-gray-700 rounded-xl pl-11 pr-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 text-sm" />
+            </div>
+            <button @click="runSearch" :disabled="!searchQ.trim() || searching"
+              class="px-5 py-2 bg-blue-600 hover:bg-blue-500 disabled:opacity-40 rounded-xl text-sm transition">
+              {{ searching ? '搜尋中…' : '搜尋' }}
+            </button>
           </div>
-          <button @click="runSearch" :disabled="!searchQ.trim()"
-            class="px-5 py-2 bg-blue-600 hover:bg-blue-500 disabled:opacity-40 rounded-xl text-sm transition">搜尋</button>
+          <!-- Search mode tabs -->
+          <div class="flex items-center gap-1 text-sm">
+            <button v-for="m in SEARCH_MODES" :key="m.key"
+              @click="searchMode = m.key; if (searchQ.trim()) runSearch()"
+              :class="['px-3 py-1.5 rounded-lg text-xs transition border',
+                searchMode === m.key
+                  ? 'bg-blue-900 text-blue-200 border-blue-700'
+                  : 'bg-gray-900 text-gray-400 border-gray-800 hover:border-gray-700']">
+              {{ m.label }}
+            </button>
+          </div>
         </div>
 
         <!-- 搜尋結果 -->
-        <template v-if="searchResults.length">
-          <div class="mb-6">
-            <div class="flex items-center justify-between mb-3">
-              <p class="text-sm text-gray-400">找到 {{ searchResults.length }} 個相關段落</p>
-              <button @click="searchResults = []; searchQ = ''" class="text-xs text-gray-500 hover:text-white transition">清除</button>
-            </div>
-            <div class="space-y-3">
-              <NuxtLink v-for="r in searchResults" :key="r.id"
-                :to="`/ebook/${r.ebook_id}?page=${r.page_number}`"
-                class="block bg-gray-900 border border-gray-800 hover:border-blue-600 rounded-xl p-4 transition">
-                <div class="flex items-center gap-2 mb-2">
-                  <span class="text-xs bg-blue-900 text-blue-300 px-2 py-0.5 rounded">第 {{ r.page_number }} 頁</span>
-                  <span class="text-xs text-gray-500">{{ r.ebooks?.title }}</span>
-                  <span v-if="r.matchType === 'semantic'" class="text-xs bg-purple-900 text-purple-300 px-1.5 rounded">語義</span>
+        <template v-if="hasSearchResults">
+          <div class="flex items-center justify-between mb-3">
+            <p class="text-sm text-gray-400">
+              「{{ searchResultQ }}」：
+              <span v-if="searchHits.titleMatches.length">書名 {{ searchHits.titleMatches.length }} 本</span>
+              <span v-if="searchHits.titleMatches.length && searchHits.authorMatches.length"> · </span>
+              <span v-if="searchHits.authorMatches.length">作者 {{ searchHits.authorMatches.length }} 本</span>
+              <span v-if="(searchHits.titleMatches.length || searchHits.authorMatches.length) && searchHits.fulltextMatches.length"> · </span>
+              <span v-if="searchHits.fulltextMatches.length">全文 {{ searchHits.fulltextMatches.length }} 段</span>
+            </p>
+            <button @click="clearSearch" class="text-xs text-gray-500 hover:text-white transition">清除</button>
+          </div>
+
+          <!-- 書名 / 作者 結果（書本卡片） -->
+          <div v-if="bookHits.length" class="mb-6">
+            <p class="text-xs uppercase text-gray-500 tracking-wider mb-2">符合書本</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <NuxtLink v-for="b in bookHits" :key="b.id" :to="`/ebook/${b.id}`"
+                class="group bg-gray-900 border border-gray-800 hover:border-blue-600 rounded-xl p-5 transition">
+                <div class="flex items-start gap-4">
+                  <div :class="['w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0',
+                    b.file_type === 'pdf' ? 'bg-red-950' : 'bg-emerald-950']">
+                    {{ b.file_type === 'pdf' ? '📕' : '📗' }}
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="font-medium text-sm text-white group-hover:text-blue-400 transition line-clamp-2 leading-snug" v-html="highlightMatch(b.title)"></h3>
+                    <p class="text-xs text-gray-500 mt-0.5" v-html="highlightMatch(b.author || '')"></p>
+                    <div class="flex items-center gap-2 mt-2 flex-wrap">
+                      <span v-if="b.matchType === 'title'" class="text-[10px] bg-blue-900 text-blue-300 px-1.5 py-0.5 rounded">書名</span>
+                      <span v-else-if="b.matchType === 'author'" class="text-[10px] bg-purple-900 text-purple-300 px-1.5 py-0.5 rounded">作者</span>
+                      <span class="text-xs text-gray-600">{{ b.total_pages || b.chunk_count || '?' }} 段</span>
+                    </div>
+                  </div>
                 </div>
-                <p class="text-sm text-gray-300 line-clamp-3 leading-relaxed">{{ r.content }}</p>
               </NuxtLink>
             </div>
           </div>
+
+          <!-- 全文結果（段落片段） -->
+          <div v-if="searchHits.fulltextMatches.length" class="mb-6">
+            <p class="text-xs uppercase text-gray-500 tracking-wider mb-2">全文片段</p>
+            <div class="space-y-3">
+              <NuxtLink v-for="r in searchHits.fulltextMatches" :key="r.id"
+                :to="`/ebook/${r.ebook_id}?page=${r.chunk_index + 1}`"
+                class="block bg-gray-900 border border-gray-800 hover:border-blue-600 rounded-xl p-4 transition">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-xs bg-blue-900 text-blue-300 px-2 py-0.5 rounded">{{ r.chapter_path || `第 ${r.chunk_index + 1} 段` }}</span>
+                  <span class="text-xs text-gray-500">{{ r.ebooks?.title }}</span>
+                  <span v-if="r.ebooks?.author" class="text-xs text-gray-600">／{{ r.ebooks.author }}</span>
+                </div>
+                <p class="text-sm text-gray-300 line-clamp-3 leading-relaxed" v-html="highlightMatch(r.content)"></p>
+              </NuxtLink>
+            </div>
+          </div>
+
+          <p v-if="!bookHits.length && !searchHits.fulltextMatches.length"
+            class="text-center py-10 text-gray-500 text-sm">沒有符合的結果</p>
         </template>
 
         <!-- 書架 -->
@@ -326,7 +379,59 @@ function selectSub(catValue: string, sub: string) {
 const loading = ref(true);
 const ebooks = ref<any[]>([]);
 const searchQ = ref("");
-const searchResults = ref<any[]>([]);
+const searchResultQ = ref("");
+const searching = ref(false);
+const searchMode = ref<"all" | "title" | "author" | "fulltext">("all");
+const searchHits = ref<{
+  titleMatches: any[];
+  authorMatches: any[];
+  fulltextMatches: any[];
+}>({ titleMatches: [], authorMatches: [], fulltextMatches: [] });
+
+const SEARCH_MODES = [
+  { key: "all" as const,      label: "綜合（全部）" },
+  { key: "title" as const,    label: "書名" },
+  { key: "author" as const,   label: "作者" },
+  { key: "fulltext" as const, label: "全文" },
+];
+
+const searchPlaceholder = computed(() => {
+  switch (searchMode.value) {
+    case "title":    return "搜尋書名…";
+    case "author":   return "搜尋作者…";
+    case "fulltext": return "搜尋書本內文…";
+    default:         return "搜尋書名、作者、或內文…";
+  }
+});
+
+const hasSearchResults = computed(() => {
+  const h = searchHits.value;
+  return !!searchResultQ.value && (h.titleMatches.length > 0 || h.authorMatches.length > 0 || h.fulltextMatches.length > 0
+    // also show when a search ran but had zero results
+    || true) && !!searchResultQ.value;
+});
+
+const bookHits = computed(() => {
+  // Merge title + author matches, dedupe by id
+  const byId = new Map<string, any>();
+  for (const b of searchHits.value.titleMatches) byId.set(b.id, b);
+  for (const b of searchHits.value.authorMatches) {
+    if (!byId.has(b.id)) byId.set(b.id, b);
+  }
+  return Array.from(byId.values());
+});
+
+function highlightMatch(text: string): string {
+  if (!searchResultQ.value || !text) return escapeHtml(text || "");
+  const escaped = searchResultQ.value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return escapeHtml(text).replace(
+    new RegExp(escaped, "gi"),
+    (m) => `<mark class="bg-yellow-700/40 text-yellow-200 rounded px-0.5">${m}</mark>`
+  );
+}
+function escapeHtml(s: string): string {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
 
 async function loadEbooks() {
   loading.value = true;
@@ -343,10 +448,27 @@ async function loadEbooks() {
 
 async function runSearch() {
   if (!searchQ.value.trim()) return;
-  const token = await getToken(); if (!token) return;
-  searchResults.value = await $fetch<any[]>(`/api/ebooks/search?q=${encodeURIComponent(searchQ.value)}`, {
+  searching.value = true;
+  const token = await getToken(); if (!token) { searching.value = false; return; }
+  const url = `/api/ebooks/search?q=${encodeURIComponent(searchQ.value)}&mode=${searchMode.value}`;
+  const data = await $fetch<any>(url, {
     headers: { Authorization: `Bearer ${token}` },
-  }).catch(() => []);
+  }).catch(() => null);
+  if (data) {
+    searchHits.value = {
+      titleMatches: data.titleMatches ?? [],
+      authorMatches: data.authorMatches ?? [],
+      fulltextMatches: data.fulltextMatches ?? [],
+    };
+    searchResultQ.value = searchQ.value.trim();
+  }
+  searching.value = false;
+}
+
+function clearSearch() {
+  searchQ.value = "";
+  searchResultQ.value = "";
+  searchHits.value = { titleMatches: [], authorMatches: [], fulltextMatches: [] };
 }
 
 // ── 上傳 ──

@@ -1,62 +1,72 @@
 /**
- * GET /api/ebooks/search?q=...&ebookId=...
- * Full-text + semantic search within ebook pages
+ * GET /api/ebooks/search?q=...&mode=title|author|fulltext|all
+ *
+ * - title    → ilike on ebooks.title           (returns book rows)
+ * - author   → ilike on ebooks.author          (returns book rows)
+ * - fulltext → ilike on ebook_chunks.content   (returns chunk hits with snippet)
+ * - all (default) → run all three, label each
+ *
+ * Note: fulltext only covers books whose preview rows are in `ebook_chunks`
+ * (standardized or OCR'd books). Run scripts/repopulate_chunk_previews.py to
+ * back-fill the rest.
  */
-import { ollamaEmbed, ollamaStatus } from "~/server/utils/ollama";
-
 export default defineEventHandler(async (event) => {
   await requireAuth(event);
   const supabase = getAdminClient();
-  const { q, ebookId } = getQuery(event) as { q?: string; ebookId?: string };
+  const { q, mode = "all", ebookId } = getQuery(event) as {
+    q?: string;
+    mode?: string;
+    ebookId?: string;
+  };
+  const query = q?.trim();
+  if (!query) throw createError({ statusCode: 400, message: "Missing query" });
+  // Escape ilike wildcards so user-typed % and _ are treated literally.
+  const safe = query.replace(/[%_]/g, (c) => "\\" + c);
 
-  if (!q?.trim()) throw createError({ statusCode: 400, message: "Missing query" });
+  const wantTitle = mode === "title" || mode === "all";
+  const wantAuthor = mode === "author" || mode === "all";
+  const wantFulltext = mode === "fulltext" || mode === "all";
 
-  const results: any[] = [];
+  const [titleHits, authorHits, fulltextHits] = await Promise.all([
+    wantTitle
+      ? supabase
+          .from("ebooks")
+          .select("id, title, author, file_type, total_pages, chunk_count, category, subcategory")
+          .ilike("title", `%${safe}%`)
+          .order("title")
+          .limit(50)
+      : Promise.resolve({ data: [] as any[], error: null }),
+    wantAuthor
+      ? supabase
+          .from("ebooks")
+          .select("id, title, author, file_type, total_pages, chunk_count, category, subcategory")
+          .ilike("author", `%${safe}%`)
+          .order("title")
+          .limit(50)
+      : Promise.resolve({ data: [] as any[], error: null }),
+    wantFulltext
+      ? (() => {
+          let req = supabase
+            .from("ebook_chunks")
+            .select(
+              "id, ebook_id, chunk_index, page_number, chapter_path, content, ebooks(title, author)"
+            )
+            .ilike("content", `%${safe}%`)
+            .limit(40);
+          if (ebookId) req = req.eq("ebook_id", ebookId);
+          return req;
+        })()
+      : Promise.resolve({ data: [] as any[], error: null }),
+  ]);
 
-  // Try semantic search first
-  const status = await ollamaStatus();
-  if (status.ok && status.models.some(m => m.includes("nomic-embed"))) {
-    const embedding = await ollamaEmbed(q);
-    const { data: matches } = await supabase.rpc("match_pages", {
-      query_embedding: `[${embedding.join(",")}]`,
-      match_count: 10,
-      threshold: 0.25,
-    });
-
-    if (matches?.length) {
-      let pageQuery = supabase
-        .from("book_pages")
-        .select("id, ebook_id, page_number, content, ebooks(title, author)")
-        .in("id", matches.map((m: any) => m.page_id));
-
-      if (ebookId) pageQuery = pageQuery.eq("ebook_id", ebookId);
-
-      const { data: pages } = await pageQuery;
-      results.push(...(pages ?? []).map((p: any) => ({
-        ...p,
-        similarity: matches.find((m: any) => m.page_id === p.id)?.similarity ?? 0,
-        matchType: "semantic",
-      })));
-    }
-  }
-
-  // Full-text fallback or supplement
-  if (results.length < 5) {
-    let ftQuery = supabase
-      .from("book_pages")
-      .select("id, ebook_id, page_number, content, ebooks(title, author)")
-      .ilike("content", `%${q}%`)
-      .order("page_number")
-      .limit(10);
-
-    if (ebookId) ftQuery = ftQuery.eq("ebook_id", ebookId);
-
-    const { data: pages } = await ftQuery;
-    const existing = new Set(results.map(r => r.id));
-    (pages ?? []).forEach((p: any) => {
-      if (!existing.has(p.id)) results.push({ ...p, matchType: "fulltext" });
-    });
-  }
-
-  return results.sort((a, b) => (b.similarity ?? 0) - (a.similarity ?? 0)).slice(0, 10);
+  return {
+    query,
+    mode,
+    titleMatches: (titleHits.data ?? []).map((b: any) => ({ ...b, matchType: "title" })),
+    authorMatches: (authorHits.data ?? []).map((b: any) => ({ ...b, matchType: "author" })),
+    fulltextMatches: (fulltextHits.data ?? []).map((c: any) => ({
+      ...c,
+      matchType: "fulltext",
+    })),
+  };
 });
