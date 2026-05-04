@@ -60,6 +60,77 @@ PREVIEW_LEN = 200
 CC = opencc.OpenCC("s2tw")  # simplified → traditional (Taiwan idioms)
 
 
+def normalize_chapter_title(title: str) -> str:
+    """Cosmetic renames of well-known boilerplate titles. Keeps the chunk
+    content intact — just changes how it's labelled in the sidebar."""
+    t = (title or "").strip()
+    if not t:
+        return t
+    # CIP / 圖書在版編目 → 版權頁
+    if "圖書在版編目" in t or "图书在版编目" in t or t.upper().startswith("CIP"):
+        return "版權頁"
+    # 版權信息 / 版权信息 → 版權頁 (unify the multiple terms publishers use)
+    if t in ("版權信息", "版权信息", "版權頁", "版权页"):
+        return "版權頁"
+    return t
+
+
+# Series-banner phrases that publishers prepend to every front-matter page —
+# bad chapter titles. When the first content line matches, prefer the next.
+_BANNER_RX = re.compile(r"叢書|丛书|名著|系列|文集|文庫|文库|出版社")
+# Real chapter heading patterns — accepted even if longer than the short-line cap.
+_CHAPTER_HEAD_RX = re.compile(
+    r"^第[一二三四五六七八九十百千零〇\d]+(章|卷|編|编|册|冊|部|集|篇|節|节|回|课|課)"
+)
+
+
+def derive_chapter_title(md_tw: str, fallback: str) -> str:
+    """Find a meaningful chapter title:
+       1. Use the first markdown heading if any
+       2. Else look at first 3 non-empty lines and pick the best:
+          a. Any line matching '第N章/卷/編/…' pattern wins
+          b. Else first short (≤30) non-banner line
+       3. Else fall back to file name
+    Then normalize for cosmetic renames (e.g. CIP → 版權頁)."""
+    m = re.search(r"^#{1,4}\s+(.+)$", md_tw, re.M)
+    if m:
+        return normalize_chapter_title(m.group(1))
+
+    candidates = []
+    for line in md_tw.split("\n"):
+        s = line.strip()
+        if not s:
+            continue
+        s = re.sub(r"[*_`]+", "", s).strip()
+        if s:
+            candidates.append(s)
+        if len(candidates) >= 3:
+            break
+
+    # CIP detection — sniff the first few lines
+    for c in candidates:
+        if "圖書在版編目" in c[:50] or "图书在版编目" in c[:50]:
+            return "版權頁"
+
+    # PRIORITY 1: earliest short non-banner line — natural document order wins
+    # so "目錄" beats a later "第一章" inside a TOC chunk's content.
+    for c in candidates:
+        if len(c) <= 30 and not _BANNER_RX.search(c):
+            return normalize_chapter_title(c)
+
+    # PRIORITY 2: explicit chapter heading anywhere — handles long chapter titles
+    # that exceed 30 chars (e.g. 君主論's 「第四章 為什麼亞歷山大大帝...」)
+    for c in candidates:
+        if _CHAPTER_HEAD_RX.match(c):
+            return normalize_chapter_title(c)
+
+    # Last resort: first candidate if reasonable length
+    if candidates and len(candidates[0]) <= 60:
+        return normalize_chapter_title(candidates[0])
+
+    return normalize_chapter_title(fallback)
+
+
 # Titles that look like continuation markers — merged into previous chunk
 # instead of becoming standalone chunks. Matches: single Chinese numeral,
 # single Latin letter, pure digits 1-3 chars, or empty.
@@ -99,10 +170,12 @@ HARD_DROP_PATTERNS = [
 HARD_DROP_RX = [re.compile(p) for p in HARD_DROP_PATTERNS]
 
 # Patterns whose FIRST occurrence is kept, subsequent occurrences dropped.
-# (Matches in plain text, case-insensitive.)
+# (Matches in plain text head; many publishers repeat copyright/CIP per sub-volume.)
 DEDUPE_PATTERNS = [
     r"^版权信息",     # 版权页 — keep one for the whole book
     r"^版權信息",     # already-converted form (defensive)
+    r"圖書在版編目",   # CIP 數據 page (multi-volume sets repeat this per volume)
+    r"图书在版编目",
 ]
 DEDUPE_RX = [re.compile(p) for p in DEDUPE_PATTERNS]
 
@@ -426,8 +499,7 @@ def standardize(book):
             md_tw = to_traditional(md)
             volume = to_traditional(current_volume) if current_volume else None
 
-            first_heading = re.search(r"^#{1,4}\s+(.+)$", md_tw, re.M)
-            chapter_title = first_heading.group(1).strip() if first_heading else d.file_name
+            chapter_title = derive_chapter_title(md_tw, d.file_name)
 
             # Continuation merge: if this chunk's title is just a numeric/letter
             # marker (e.g. 後記 split into 「後記」+「二」, or 索引 split into A-Z),
