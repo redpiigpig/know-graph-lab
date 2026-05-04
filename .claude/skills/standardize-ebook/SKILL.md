@@ -40,8 +40,10 @@ The reader's [`server/utils/ebook-chunks.ts`](../../../server/utils/ebook-chunks
 1. **Read EPUB** with `ebooklib` — iterate spine docs in reading order.
 2. **Parse top-level TOC** (`book.toc`):
    - Strip entries titled `版权信息` / `Digital Lab`
+   - **Filter to volume markers only**: keep only entries whose title contains `卷 / 冊 / 部 / 集 / 篇`. Without this filter, single-volume books promote `目錄 / 插頁 / 出版說明` into fake volume groups (this was a real bug found running the 哲學 batch).
    - Remaining entries with `href` (no `#`) → mark as **volume start at this doc**
    - Entries with `href#anchor` → mark as **volume start at this anchor inside doc** (split point)
+   - If fewer than 2 volume entries remain after filtering → flat (single-volume) layout
 3. For each spine doc:
    - If TOC anchors point inside it, **split body** at those anchor elements into segments
    - Each segment becomes a candidate chunk
@@ -102,6 +104,19 @@ Or open `/ebook/<ebook_id>` in the running dev server (restart first to clear LR
 - Chinese is traditional throughout
 - No `Digital Lab` ad pages
 
+## Current state (snapshot 2026-05-04)
+
+| Book(s) | Standardized? | Notes |
+|---|---|---|
+| 文明的歷史 (`181798a6-42fd-4f55-a4a8-43065dafd6f7`) | ✅ | Reference example. EPUB's K4 anchor is misplaced (mid-上冊 but tagged 下冊 start), so 發現者上冊 only has 3 chunks and 下冊 has 20. Publisher data quirk, not a script bug. |
+| 哲學 category (51 EPUBs) | ⚠ done with **old volume logic** | Single-volume books had 「目錄/插頁/出版說明」 promoted to fake volumes. The fix is in main; **a re-run on the 哲學 category will clean these up** (idempotent). |
+| 9 categories overall | ❌ rest not started | 哲學 done first as the demo. Other categories untouched. |
+
+The 51 哲學 books to look at as samples (post re-run):
+- 《君主論》 — single-volume; should have NO volume groups in sidebar after fix
+- 《人生的智慧》 — single-volume叢書 part; same
+- 《中國儒學史》 — multi-volume; should still group by 「先秦卷／漢代卷／…」 (titles contain 卷)
+
 ## Idempotency
 
 Re-running on the same book is safe — it overwrites:
@@ -111,6 +126,20 @@ Re-running on the same book is safe — it overwrites:
 - `ebooks` row's `chunk_count` / `total_chars` / `parsed_at`
 
 Annotations (`annotations` table) reference `chunk_index` which generally stays stable for the same book — but if you tweak `HARD_DROP_PATTERNS` and re-run, indices shift and existing annotations may land on wrong text. Avoid re-running once users have annotations.
+
+## Volume detection — known limits
+
+The `looks_like_volume()` heuristic is conservative: a TOC entry must contain one of `卷 / 冊 / 部 / 集 / 篇` to be considered a volume. This works for:
+- ✅ 文明的歷史：發現者（上冊） — has 「冊」
+- ✅ 中國儒學史：先秦卷 — has 「卷」
+- ✅ 五燈會元第N部 — has 「部」
+
+It will **miss** books that group by other markers like:
+- ❌ Series titled 「上」「中」「下」 alone (since 「上」 alone is too common in Chinese to safely match)
+- ❌ Latin numerals like 「Volume I / II」 in mixed-language editions
+- ❌ Publishers using 「輯」 or other terms not in the marker set
+
+If a multi-volume book gets flattened by mistake, **add the missing marker to `VOLUME_MARKERS`** and re-run. Don't try to detect "this looks like a multi-volume set" structurally — the marker check is the only reliable signal in the EPUB TOC.
 
 ## Tuning per publisher
 
@@ -155,8 +184,29 @@ Or `ls G:/.../電子書/_chunks/*.jsonl` mtime — recent files were just standa
 - The book is single-language English with a normal structure (s2tw conversion would be a no-op, but boilerplate patterns mostly target Chinese — script still works, just less cleaning)
 - You want to re-parse without re-uploading to R2 (use `--no-r2`)
 
+## Recommended order for "I'm a new agent picking this up"
+
+1. Read this file end-to-end first.
+2. Read the [`ebook-pipeline` SKILL](../ebook-pipeline/SKILL.md) for context on where this fits in the broader system.
+3. Look at the **Current state** table above to see which categories are done vs not.
+4. Re-run the 哲學 batch first to apply the recent volume-marker fix:
+   ```bash
+   python scripts/standardize_ebook.py --category 哲學
+   ```
+5. Pick another category and dry-run to estimate scope:
+   ```bash
+   python scripts/standardize_ebook.py --category <名> --dry-run
+   ```
+6. Look at 3-5 sample chunks before committing to a full batch — different categories have different publisher mixes.
+7. After running, sample chunks visually (snippet in **How to run / Verify**). If you see boilerplate that should be dropped, extend `HARD_DROP_PATTERNS` and re-run — idempotent.
+8. **Don't** re-run `standardize_ebook.py` on books whose IDs have entries in the `annotations` table (re-running can shift `chunk_index`). Check first:
+   ```bash
+   python -c "import requests, ... ; print(requests.get(URL+'/rest/v1/annotations?select=ebook_id', headers=H).json())"
+   ```
+
 ## Related
 
+- [`ebook-pipeline` SKILL](../ebook-pipeline/SKILL.md) — the master/orchestration skill that this slots into
 - [`scripts/parse_worker.py`](../../../scripts/parse_worker.py) — the **first-pass** parser. Produces unstructured per-doc chunks. `standardize_ebook.py` is the **second pass** that converts these into reader-ready format.
 - [`scripts/repopulate_chunk_previews.py`](../../../scripts/repopulate_chunk_previews.py) — back-fills `ebook_chunks` previews from local JSONL for books that were never standardized but need full-text search coverage.
 - [`scripts/ocr_with_gemini.py`](../../../scripts/ocr_with_gemini.py) — for scanned PDFs. Produces JSONL of the same shape but `chunk_type="page"`.
