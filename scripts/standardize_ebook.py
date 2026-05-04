@@ -1,19 +1,25 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Standardize one EPUB into the "reader-ready" format:
+Standardize one or more EPUBs into the "reader-ready" format:
   - Re-parse with HTML structure (h1/h2/h3/b/em → markdown)
   - Drop publisher boilerplate (Digital Lab ads, repeated copyright pages)
   - Convert simplified Chinese → traditional (opencc s2tw)
-  - Re-chunk by chapter (one HTML doc = one chunk; merge orphan front matter)
-  - Push new JSONL to local + R2
+  - Re-chunk by chapter (one HTML doc = one chunk; split at TOC anchors for
+    multi-volume sets)
+  - Push new JSONL to local + R2 + refresh DB previews
 
-Usage:
+Usage — single book:
   python scripts/standardize_ebook.py <ebook_id>
   python scripts/standardize_ebook.py <ebook_id> --dry-run
   python scripts/standardize_ebook.py <ebook_id> --no-r2
 
-Idempotent: re-running overwrites local JSONL and R2 object.
+Usage — batch (auto-skips PDFs):
+  python scripts/standardize_ebook.py --category 哲學
+  python scripts/standardize_ebook.py --category 哲學 --subcategory 近代哲學
+  python scripts/standardize_ebook.py --category 哲學 --limit 5
+
+Idempotent: re-running overwrites local JSONL, R2 object, and DB previews.
 """
 import gzip
 import io
@@ -425,13 +431,116 @@ def update_db(book_id, chunks):
             return
 
 
+def fetch_books_by_category(category: str, subcategory: str = None, limit: int = None):
+    """Return list of parsed EPUB books in a category. Skips PDFs (script can't
+    handle them), books without parsed content, and books missing on disk."""
+    params = (
+        "select=id,title,author,file_type,file_path,parsed_at,chunk_count"
+        f"&category=eq.{requests.utils.quote(category)}"
+        "&parsed_at=not.is.null"
+        "&file_type=eq.epub"
+        "&order=title"
+        "&limit=2000"
+    )
+    if subcategory:
+        params += f"&subcategory=eq.{requests.utils.quote(subcategory)}"
+    r = requests.get(f"{URL}/rest/v1/ebooks?{params}", headers=H_GET, timeout=30)
+    r.raise_for_status()
+    books = r.json()
+    if limit:
+        books = books[:limit]
+    return books
+
+
+def standardize_one(ebook_id: str, dry_run: bool = False, no_r2: bool = False):
+    """Run the full pipeline on a single book. Returns (chunks_count, error_or_None)."""
+    try:
+        book = fetch_book(ebook_id)
+    except Exception as e:
+        return 0, f"fetch failed: {e}"
+    if book["file_type"] != "epub":
+        return 0, f"not an EPUB ({book['file_type']})"
+    if not Path(book["file_path"]).exists():
+        return 0, f"file missing: {book['file_path']}"
+    try:
+        chunks = standardize(book)
+    except Exception as e:
+        return 0, f"parse failed: {str(e)[:200]}"
+    if not chunks:
+        return 0, "no chunks produced"
+    if dry_run:
+        return len(chunks), None
+    try:
+        out = write_jsonl(ebook_id, chunks)
+        if not no_r2:
+            push_to_r2(ebook_id, out)
+        update_db(ebook_id, chunks)
+    except Exception as e:
+        return 0, f"persist failed: {str(e)[:200]}"
+    return len(chunks), None
+
+
+def cmd_batch(category: str, subcategory: str = None, limit: int = None,
+              dry_run: bool = False, no_r2: bool = False):
+    books = fetch_books_by_category(category, subcategory, limit)
+    print(f"Category: {category}{f' / {subcategory}' if subcategory else ''}")
+    print(f"Eligible EPUBs: {len(books)}")
+    if not books:
+        print("Nothing to do.")
+        return
+
+    if dry_run:
+        for b in books[:20]:
+            print(f"  - {b['title'][:50]:50s}  /  {(b.get('author') or '')[:20]}  ({b.get('chunk_count','?')} chunks)")
+        if len(books) > 20:
+            print(f"  ... and {len(books) - 20} more")
+        return
+
+    import time as _time
+    t0 = _time.time()
+    ok = 0
+    failed = []
+    for i, b in enumerate(books, 1):
+        title = (b["title"] or "Untitled")[:40]
+        n, err = standardize_one(b["id"], no_r2=no_r2)
+        elapsed = _time.time() - t0
+        rate = i / elapsed if elapsed else 0
+        eta = (len(books) - i) / rate if rate else 0
+        if err:
+            failed.append((title, err))
+            print(f"  [{i:3d}/{len(books)}] ⚠ {title}: {err[:80]}", flush=True)
+        else:
+            ok += 1
+            print(f"  [{i:3d}/{len(books)}] ✓ {title}: {n} chunks  ETA {int(eta)}s", flush=True)
+
+    print(f"\nDone in {_time.time() - t0:.0f}s. OK: {ok}, Failed: {len(failed)}")
+    if failed:
+        print("Failures:")
+        for n, e in failed[:20]:
+            print(f"  - {n}: {e}")
+
+
 def main():
     if len(sys.argv) < 2:
         print(__doc__); sys.exit(1)
-    ebook_id = sys.argv[1]
-    dry_run = "--dry-run" in sys.argv
-    no_r2 = "--no-r2" in sys.argv
 
+    args = sys.argv[1:]
+    dry_run = "--dry-run" in args
+    no_r2 = "--no-r2" in args
+
+    if "--category" in args:
+        category = args[args.index("--category") + 1]
+        subcategory = None
+        if "--subcategory" in args:
+            subcategory = args[args.index("--subcategory") + 1]
+        limit = None
+        if "--limit" in args:
+            limit = int(args[args.index("--limit") + 1])
+        cmd_batch(category, subcategory, limit, dry_run, no_r2)
+        return
+
+    # Single-book mode
+    ebook_id = args[0]
     book = fetch_book(ebook_id)
     print(f"Book: {book['title']}  ({book['file_type']})")
     print(f"Author: {book.get('author')}")
