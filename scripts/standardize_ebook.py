@@ -173,11 +173,26 @@ def fetch_book(ebook_id):
     return rows[0]
 
 
+VOLUME_MARKERS = ("卷", "冊", "册", "部", "集", "篇")
+
+
+def looks_like_volume(title: str) -> bool:
+    """Heuristic: a TOC top-level entry is a 'volume' (multi-book set) only if
+    its title uses a volume marker like 卷/冊/部. Without this check we'd
+    promote chapters / 目錄 / 插頁 / 出版說明 to volumes, which is wrong for
+    single-volume books."""
+    return any(m in title for m in VOLUME_MARKERS)
+
+
 def parse_volume_toc(book):
     """Returns (doc_volume_starts, doc_anchor_splits):
       - doc_volume_starts: {file_name: volume_title}    — TOC entries with no anchor
       - doc_anchor_splits: {file_name: [(anchor_id, volume_title), ...]}  — TOC entries with anchors
-    Returns ({}, {}) if no multi-volume structure detected."""
+    Returns ({}, {}) if no multi-volume structure detected.
+
+    A TOC top-level entry is considered a volume only when its title contains
+    a volume marker (卷/冊/部/集/篇). This avoids promoting unrelated front
+    matter (目錄, 插頁, 出版說明, 譯者序) into the volume hierarchy."""
     top_entries = []  # [(href_no_anchor, anchor_or_None, title)]
     for it in book.toc:
         if isinstance(it, tuple):
@@ -197,12 +212,15 @@ def parse_volume_toc(book):
             file_name, anchor = href, None
         top_entries.append((file_name, anchor, title.strip()))
 
-    if len(top_entries) < 2:
+    # Filter to entries that look like volume titles. If fewer than 2 remain,
+    # treat as flat (single-volume) book — don't impose a volume hierarchy.
+    volume_entries = [e for e in top_entries if looks_like_volume(e[2])]
+    if len(volume_entries) < 2:
         return {}, {}
 
     starts = {}
     splits = {}
-    for fn, anchor, title in top_entries:
+    for fn, anchor, title in volume_entries:
         if anchor:
             splits.setdefault(fn, []).append((anchor, title))
         else:

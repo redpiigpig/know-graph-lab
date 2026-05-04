@@ -115,7 +115,9 @@ def count_existing_chunks(ebook_id: str) -> int:
 
 
 def insert_previews(ebook_id: str, lines):
-    """Write 200-char preview rows. Deletes existing first (idempotent re-run)."""
+    """Write 200-char preview rows. Deletes existing first (idempotent re-run).
+    Adaptive batch — on 57014 (Supabase IO timeout) shrinks the batch and retries
+    instead of failing the whole book."""
     requests.delete(
         f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{ebook_id}",
         headers=H_GET, timeout=30,
@@ -132,15 +134,51 @@ def insert_previews(ebook_id: str, lines):
             "content": content,
             "char_count": len(c.get("content") or ""),
         })
-    inserted = 0
-    for i in range(0, len(rows), BATCH):
-        batch = rows[i:i+BATCH]
-        r = requests.post(f"{URL}/rest/v1/ebook_chunks", headers=H_INS, json=batch, timeout=60)
-        if r.status_code in (200, 201):
-            inserted += len(batch)
-        else:
-            raise RuntimeError(f"insert failed: HTTP {r.status_code} {r.text[:200]}")
-    return inserted
+
+    BATCH_SIZES = [100, 50, 20, 5, 1]
+    i = 0
+    while i < len(rows):
+        succeeded = False
+        for bs in BATCH_SIZES:
+            batch = rows[i:i+bs]
+            r = requests.post(f"{URL}/rest/v1/ebook_chunks", headers=H_INS, json=batch, timeout=120)
+            if r.status_code in (200, 201):
+                i += len(batch)
+                succeeded = True
+                break
+            text = r.text[:300]
+            # Retry with smaller batch on IO-budget / timeout errors only.
+            if "57014" in text or "timeout" in text.lower() or r.status_code >= 500:
+                if bs > BATCH_SIZES[-1]:
+                    continue
+            raise RuntimeError(f"HTTP {r.status_code} {text}")
+        if not succeeded:
+            raise RuntimeError(f"insert failed at batch_size=1, row {i}")
+    return len(rows)
+
+
+def find_incomplete_books():
+    """Return list of parsed books whose ebook_chunks row count is less than
+    their expected chunk_count. Includes both totally-empty and partially-
+    populated books — both need a retry."""
+    out = []
+    offset = 0
+    while True:
+        params = (f"select=id,title,author,parsed_at,chunk_count"
+                  f"&parsed_at=not.is.null&chunk_count=gt.0"
+                  f"&order=id&limit=1000&offset={offset}")
+        r = requests.get(f"{URL}/rest/v1/ebooks?{params}", headers=H_GET, timeout=30)
+        r.raise_for_status()
+        page = r.json()
+        if not page: break
+        for b in page:
+            actual = count_existing_chunks(b["id"])
+            if actual < b["chunk_count"]:
+                b["_actual"] = actual
+                out.append(b)
+        if len(page) < 1000: break
+        offset += 1000
+    return out
 
 
 def cmd_status():
@@ -210,6 +248,41 @@ def cmd_run(limit=None, force=False, only_book=None):
             print(f"  - {n}: {e}")
 
 
+def cmd_retry_failed():
+    """Find books with chunk_count > existing rows in ebook_chunks and re-run
+    insert_previews on each (with adaptive batches)."""
+    print("Scanning for incomplete books...")
+    books = find_incomplete_books()
+    print(f"Books needing retry: {len(books)}")
+    if not books:
+        print("All caught up.")
+        return
+    t0 = time.time()
+    ok = 0
+    failed = []
+    for i, b in enumerate(books, 1):
+        title = (b["title"] or "Untitled")[:40]
+        lines = load_jsonl_lines(b["id"])
+        if not lines:
+            failed.append((title, "no JSONL"))
+            print(f"  [{i:3d}/{len(books)}] ⚠ no JSONL  {title}", flush=True)
+            continue
+        try:
+            n = insert_previews(b["id"], lines)
+            ok += 1
+            elapsed = time.time() - t0
+            rate = i / elapsed if elapsed else 0
+            eta = (len(books) - i) / rate if rate else 0
+            print(f"  [{i:3d}/{len(books)}] ✓ {n:4d} previews  {title}  ({b['_actual']}→{n})  ETA {int(eta)}s", flush=True)
+        except Exception as e:
+            failed.append((title, str(e)[:120]))
+            print(f"  [{i:3d}/{len(books)}] ❌ {title}: {str(e)[:80]}", file=sys.stderr, flush=True)
+    print(f"\nDone in {time.time() - t0:.0f}s. OK: {ok}, Failed: {len(failed)}")
+    if failed:
+        for n, e in failed[:20]:
+            print(f"  - {n}: {e}")
+
+
 def main():
     if len(sys.argv) < 2:
         print(__doc__); sys.exit(1)
@@ -226,6 +299,8 @@ def main():
             only_book = args[args.index("--book") + 1]
         force = "--force" in args
         cmd_run(limit=limit, force=force, only_book=only_book)
+    elif cmd == "retry-failed":
+        cmd_retry_failed()
     else:
         print(__doc__); sys.exit(1)
 
