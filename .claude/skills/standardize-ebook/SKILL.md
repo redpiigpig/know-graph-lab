@@ -1,11 +1,118 @@
 ---
 name: standardize-ebook
-description: Turn a parsed EPUB into the "reader-ready" format used by /ebook/[id] — re-parsed markdown chunks with simplified-to-traditional Chinese conversion, publisher boilerplate stripped, and (for multi-volume sets) volume hierarchy preserved. Use when wiring a new book into the reader, fixing a book whose TOC looks ugly, or batch-processing books in a category.
+description: Turn a parsed book (EPUB or PDF) into the "reader-ready" format used by /ebook/[id] — markdown chunks with simplified→traditional Chinese, publisher boilerplate stripped, multi-volume hierarchy, smart chapter titles. Branches by file_type — EPUB uses ebooklib + TOC anchors; PDF uses font-size heuristics. Use when wiring a new book into the reader, fixing a book whose TOC looks ugly, batch-processing a category, or extending the pipeline to support a new file type.
 ---
 
 # Standardize Ebook Skill
 
-This skill captures the pipeline that turned 文明的歷史 into the reference reading experience and generalizes it so other books can match. The full implementation is in [`scripts/standardize_ebook.py`](../../../scripts/standardize_ebook.py).
+Turn a parsed book into the reader-ready format. The pipeline **branches on file_type** because EPUB and PDF expose totally different signals — EPUB has semantic HTML + a TOC tree; PDF only has text-on-page coordinates and font sizes. Each branch produces the same output JSONL contract.
+
+## Branch decision (read this first)
+
+| `ebooks.file_type` | Source signals | Standardize script | Status |
+|---|---|---|---|
+| `epub` | `<h1-h4>`, `<b>/<em>`, `<p>`, TOC tree with anchors | [`scripts/standardize_ebook.py`](../../../scripts/standardize_ebook.py) | ✅ implemented |
+| `pdf` (text-extractable) | text + font size + bbox via PyMuPDF | `scripts/standardize_pdf.py` | ⚠ **NOT YET BUILT** — design below |
+| `pdf` (scanned) | image pages → Gemini Vision OCR JSON | [`scripts/ocr_with_gemini.py`](../../../scripts/ocr_with_gemini.py) emits chunks; then run the PDF pipeline on those | ✅ OCR scheduled, PDF pipeline pending |
+
+Both branches write the **same JSONL shape** to `G:/我的雲端硬碟/資料/電子書/_chunks/{ebook_id}.jsonl` so the reader doesn't care which path produced it.
+
+---
+
+## Shared rules — title / boilerplate / merging (both pipelines reuse)
+
+These rules run AFTER the file-specific extraction (HTML walk for EPUB, font heuristics for PDF) and BEFORE persistence. The PDF pipeline must reuse them — they're already implemented in `standardize_ebook.py` and should be factored into a shared module when `standardize_pdf.py` lands.
+
+### Chapter title derivation
+
+Pulled out of `derive_chapter_title()` and `normalize_chapter_title()` in `standardize_ebook.py`. The TOC sidebar's `chapter_path` should always end up looking like one of:
+
+| Cosmetic rename | Triggers |
+|---|---|
+| `版權頁` | content starts with `圖書在版編目` / `图书在版编目`, OR title is literally `CIP數據` / `版權信息` / `版权信息` / `版權頁` / `版权页` |
+| `目錄` (or `目　錄`, original spacing kept) | when chunk content's first short line is "目錄" — picked up automatically by first-line fallback |
+| `後記`, `序言`, `致謝`, `導論`, `索引`, etc. | first short line as-is, no special handling needed |
+
+Selection priority for chapter title (first match wins):
+
+1. **Markdown heading** — `## title` / `### title` … in content (after publisher rename normalization)
+2. **CIP detected anywhere in first 3 lines** → `版權頁`
+3. **Earliest short non-banner line** (≤30 chars, doesn't match `叢書|丛书|名著|系列|文集|文庫|出版社`) — natural document order, so 「目錄」 beats a later「第一章」inside a TOC chunk
+4. **Long chapter heading anywhere** — lines matching `^第N(章|卷|編|册|冊|部|集|篇|節|节|回|课|課)` accepted even if longer than 30 chars (君主論's chapter titles can be 30+ chars)
+5. First candidate ≤60 chars as last resort
+6. Filename fallback (e.g. `text/part0001.html`) — should never reach here for well-formed books
+
+### Drop & dedupe (publisher noise)
+
+- **Hard drop** (chunk is publisher-only ad with no value): currently
+  matches 上海譯文出版社 Digital Lab pages. Pattern set is in
+  `HARD_DROP_PATTERNS`. Add new publishers as they show up — keep patterns
+  *narrow* to avoid eating real content.
+- **Dedupe** (keep first occurrence, drop rest): for sections that publishers
+  repeat per sub-volume:
+  - `^版权信息` / `^版權信息`
+  - `圖書在版編目` / `图书在版编目` (CIP data — multi-volume sets repeat this per volume)
+- **Empty-doc handling**: if a doc has < 5 chars of plain text:
+  - First cover-image-only page (`titlepage.xhtml` or filename contains `cover`) → emit a `## 封面` placeholder once
+  - Later empty pages → drop silently
+
+### Continuation merge — 後記/索引 split fix
+
+EPUBs (and OCR'd PDFs) sometimes split one logical section across multiple
+files whose TOC titles are just `一 / 二 / 三` (續篇) or `A / B / C` (索引
+字母分頁). Merge those into the previous chunk:
+
+```
+Before:  [後記] + [二] + [索引] + [A] + [B] + … + [Z]   ← 27 chunks
+After:   [後記] + [索引]                                 ← 2 chunks, content concatenated
+```
+
+Detection regex (in `is_continuation_title()`):
+- Single Chinese numeral: `[一二三四五六七八九十百千]+`
+- Single Latin letter: `[A-Za-z]`
+- 1-3 digits: `\d{1,3}`
+- Empty after stripping
+
+Merge condition: same `volume` as the previous chunk (don't merge across
+volume boundaries).
+
+### Heading rewrite for cosmetic renames
+
+When `derive_chapter_title()` applied a rename (e.g. CIP→版權頁), also
+rewrite the first markdown heading line in the chunk content so the page's
+own h2 matches the sidebar label. Without this the user sees `版權頁` in
+the TOC but `## 圖書在版編目（CIP）數據` rendered as the page title — the
+reader caught this immediately.
+
+### Simplified → traditional + post-fix
+
+Use `to_traditional()` (in `standardize_ebook.py`):
+1. `opencc.OpenCC("s2tw").convert()` for the heavy lifting
+2. Apply `TRAD_FIXES` table (24 entries — shared with `parse_drive_inventory.py`)
+   to fix s2tw over-conversions: 历史→曆史 (should be 歷史), 託爾斯泰→
+   should be 托爾斯泰, 慄田 should be 栗田, etc.
+
+When you find a new mis-conversion, **add it to `parse_drive_inventory.py:TRAD_FIXES`** (single source of truth — used by both filename parsing and chunk content) and re-run the affected books.
+
+### Volume markers
+
+Multi-volume books are detected by their EPUB top-level TOC entries
+containing one of `卷 / 冊 / 部 / 集 / 篇`. PDF pipeline can build the
+equivalent from `page.get_toc()` (PDF bookmarks) when present.
+
+If anchored TOC entries (`href="part.html#K4"`) point to anchors that don't
+actually exist in the HTML (broken EPUB, like 中國儒學史), fall back to
+treating the doc as a doc-level volume start.
+
+### `ebook_chunks` DB previews
+
+After writing JSONL + R2, refresh `ebook_chunks` rows for this book —
+DELETE existing then INSERT first 200 chars of each chunk's content so
+full-text search via `/api/ebooks/search?mode=fulltext` finds them.
+Adaptive batch size (100 → 50 → 20 → 5 → 1) to handle Supabase IO budget
+57014 timeouts on multi-volume books with 800+ chunks.
+
+---
 
 ## Output contract — the JSONL shape consumers depend on
 
@@ -35,7 +142,9 @@ Each line is one chunk:
 
 The reader's [`server/utils/ebook-chunks.ts`](../../../server/utils/ebook-chunks.ts) `loadToc()` reads this format and produces the sidebar; the reader page renders markdown via its own limited renderer (h1-h4 / bold / em / blockquote / paragraphs).
 
-## Pipeline (what the script does, in order)
+## EPUB pipeline (implemented)
+
+What `standardize_ebook.py` does for EPUB input, in order:
 
 1. **Read EPUB** with `ebooklib` — iterate spine docs in reading order.
 2. **Parse top-level TOC** (`book.toc`):
@@ -103,6 +212,112 @@ Or open `/ebook/<ebook_id>` in the running dev server (restart first to clear LR
 - Headings render bold + sized (h2 centered with rule, h3 left-aligned)
 - Chinese is traditional throughout
 - No `Digital Lab` ad pages
+
+---
+
+## PDF pipeline (TO BE BUILT — design)
+
+PDFs lack the semantic markup EPUBs give us, so we infer structure from
+typography. This is **less reliable than EPUB** but tractable for well-typeset
+print books. Scanned PDFs go through OCR first (which produces text without
+typography signals — see "OCR fallback" below).
+
+### Suggested script: `scripts/standardize_pdf.py`
+
+Uses [PyMuPDF (`fitz`)](https://pymupdf.readthedocs.io/) which is already a
+dependency of `parse_worker.py`.
+
+### Pipeline order
+
+1. **Open PDF**, iterate pages.
+2. **Per-page font analysis** — for each page collect text spans with
+   `(text, font_name, font_size, bbox, flags)`:
+   ```python
+   doc = fitz.open(path)
+   for page in doc:
+       for block in page.get_text("dict")["blocks"]:
+           for line in block.get("lines", []):
+               for span in line["spans"]:
+                   ...  # span["text"], span["size"], span["font"], span["flags"]
+   ```
+3. **Build a global font histogram** — across the whole book, count chars
+   per `font_size` bucket. The most common size is the **body text size**.
+4. **Classify spans by size relative to body**:
+   - `≥ body_size + 6pt` and short (≤ 30 chars) → **h2** (chapter title)
+   - `≥ body_size + 3pt` and short → **h3** (section title)
+   - `≥ body_size + 1pt` → **h4** (subsection)
+   - `flags & 16` (bold) AND short → **h3** (some publishers signal headings only by bold, not size)
+   - Else → body paragraph
+5. **Build markdown content** by emitting each classified span:
+   - Heading spans → `## title` / `### title` / `#### title`
+   - Body spans → join with newlines; merge same-paragraph spans (same y-bbox proximity, no heading between)
+   - Bold/italic body → `**text**` / `*text*`
+6. **Chunking strategy**:
+   - **Per-chapter (preferred)**: start a new chunk at every `h2`. Keeps
+     chunks meaningfully sized; matches EPUB chunk granularity.
+   - **Fallback per-page**: if no headings detected anywhere (very plain PDF),
+     fall back to one chunk per page (`chunk_type="page"`). Already what
+     `parse_worker.py` does today, so re-running this script just upgrades
+     the metadata.
+7. **Reuse the EPUB pipeline's downstream pieces**:
+   - `to_traditional()` for s2tw + TRAD_FIXES (already in `standardize_ebook.py`)
+   - `derive_chapter_title()` for CIP→版權頁 / banner skip / long heading recognition
+   - Continuation-merge for 後記/二, 索引 A-Z
+   - `volume` detection — PDFs rarely have a programmatic volume marker, so
+     usually flat. Could later add a TOC-bookmark reader (`page.get_toc()`)
+     for paginated multi-volume sets like 《文明的歷史(全五卷)》.
+   - Same `write_jsonl` / `push_to_r2` / `update_db` from `standardize_ebook.py`
+     — refactor those into a shared module if the PDF script grows.
+
+### Calibration tips when implementing
+
+- **Body size detection is the linchpin.** Test on 5-10 books from different
+  publishers first. If a book has heavy use of footnotes (small font), they
+  shouldn't drown out the body. Filter by total character count per bucket,
+  not just frequency.
+- **Bold-only signaling is publisher-specific.** Some books (商務印書館 漢譯名著)
+  put chapter titles in bold same-size as body. Only enable bold→heading
+  promotion when font-size signal is weak.
+- **Drop running headers/footers** — text spans appearing at the same y-bbox
+  on most pages (page numbers, book title repeated). Detect by frequency.
+- **Page-spanning paragraphs** — a paragraph that ends on page N and continues
+  on page N+1 should NOT be split. Track "did the previous page end mid-sentence"
+  using `not text.endswith(('。', '!', '?', '」', '）'))`.
+- **Footnotes** — usually appear at bottom of page in smaller font. Either
+  drop them or move to end of chunk as `> [註] ...`. User preference.
+
+### Known PDFs to use as test cases
+
+- 《尼采到底說了什麼？》by 羅伯特·所羅門 (`53625079-…`) — straightforward 哲學 PDF
+- 《從封閉世界到無限宇宙》by 柯瓦雷 — typical philosophy press PDF
+- 《當代數學》— may have heavy formula content; PyMuPDF text extraction will be ugly
+
+### Current scope of哲學 PDF backlog
+
+| Subcategory | PDF count |
+|---|---|
+| 哲學 (overall) | 58 PDFs (vs 51 EPUBs already standardized) |
+| Across all categories | 422 text-extractable PDFs + 391 scanned-pending-OCR |
+
+### OCR fallback for scanned PDFs
+
+Already wired: `scripts/ocr_with_gemini.py` (run daily 16:00 by Windows Task
+Scheduler) writes JSONL with `chunk_type="page"` and `format="text"`. After OCR
+finishes:
+- Re-running `standardize_pdf.py` on those JSONLs would mostly be a no-op
+  (no font signals to work with) — it'd just apply s2tw + TRAD_FIXES + 
+  `derive_chapter_title()` to upgrade them
+- Each OCRed page might already include heading detection via the Gemini
+  prompt — could enhance the prompt to mark heading-line vs body-line if
+  needed (lower priority — current state is "readable but flat")
+
+### When NOT to bother
+
+- One-off book that already reads OK in the current per-page format
+- PDFs with heavy formula / table layout (PyMuPDF mangles those — Gemini
+  Vision is more robust but expensive)
+
+---
 
 ## Current state (snapshot 2026-05-04)
 

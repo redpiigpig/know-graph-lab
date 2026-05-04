@@ -195,9 +195,12 @@ export async function loadToc(ebookId: string): Promise<TocEntry[]> {
     try {
       const c = JSON.parse(lines[i]) as ChunkData;
       const head = (c.content || "").match(/^(#{1,4})\s+(.+)$/m);
+      // Title: chapter_path is the authoritative label (set by standardize
+      // with cosmetic renames like CIP→版權頁). Content heading is fallback
+      // for legacy chunks. Level always derived from content's heading depth.
       out.push({
         chunk_index: i,
-        title: head ? head[2].trim() : (c.chapter_path || `第 ${i + 1} 段`),
+        title: c.chapter_path || (head ? head[2].trim() : `第 ${i + 1} 段`),
         level: head ? head[1].length : 2,
         volume: c.volume ?? null,
       });

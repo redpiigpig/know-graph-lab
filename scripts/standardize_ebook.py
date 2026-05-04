@@ -501,6 +501,17 @@ def standardize(book):
 
             chapter_title = derive_chapter_title(md_tw, d.file_name)
 
+            # If derive_chapter_title applied a cosmetic rename (e.g. CIP →
+            # 版權頁), rewrite the first markdown heading inside content so the
+            # page's h2 matches the sidebar label.
+            head_match = re.match(r"^(#{1,4})\s+(.+)$", md_tw, re.M)
+            if head_match and head_match.group(2).strip() != chapter_title:
+                md_tw = md_tw.replace(
+                    head_match.group(0),
+                    f"{head_match.group(1)} {chapter_title}",
+                    1,
+                )
+
             # Continuation merge: if this chunk's title is just a numeric/letter
             # marker (e.g. 後記 split into 「後記」+「二」, or 索引 split into A-Z),
             # fold its content into the previous chunk instead of creating a new
