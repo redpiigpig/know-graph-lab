@@ -1,0 +1,462 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Standardize one EPUB into the "reader-ready" format:
+  - Re-parse with HTML structure (h1/h2/h3/b/em → markdown)
+  - Drop publisher boilerplate (Digital Lab ads, repeated copyright pages)
+  - Convert simplified Chinese → traditional (opencc s2tw)
+  - Re-chunk by chapter (one HTML doc = one chunk; merge orphan front matter)
+  - Push new JSONL to local + R2
+
+Usage:
+  python scripts/standardize_ebook.py <ebook_id>
+  python scripts/standardize_ebook.py <ebook_id> --dry-run
+  python scripts/standardize_ebook.py <ebook_id> --no-r2
+
+Idempotent: re-running overwrites local JSONL and R2 object.
+"""
+import gzip
+import io
+import json
+import re
+import sys
+from datetime import datetime
+from pathlib import Path
+
+if sys.platform == "win32":
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
+
+try:
+    import requests
+    import ebooklib
+    from ebooklib import epub
+    from bs4 import BeautifulSoup, NavigableString, Tag
+    import opencc
+except ImportError as e:
+    print(f"Missing: {e}. pip install requests ebooklib beautifulsoup4 opencc", file=sys.stderr)
+    sys.exit(1)
+
+sys.path.insert(0, str(Path(__file__).parent))
+from parse_worker import load_env
+
+ENV = load_env()
+URL = ENV["SUPABASE_URL"]
+KEY = ENV["SUPABASE_SERVICE_ROLE_KEY"]
+H_JSON = {"apikey": KEY, "Authorization": f"Bearer {KEY}", "Content-Type": "application/json", "Prefer": "return=minimal"}
+H_GET = {"apikey": KEY, "Authorization": f"Bearer {KEY}"}
+
+CHUNKS_DIR = Path(ENV.get("EBOOK_CHUNKS_DIR") or "G:/我的雲端硬碟/資料/電子書/_chunks")
+PREVIEW_LEN = 200
+
+CC = opencc.OpenCC("s2tw")  # simplified → traditional (Taiwan idioms)
+
+# ── Boilerplate patterns ───────────────────────────────────────
+# Hard drop: chunks dedicated to publisher self-promotion (no content value).
+# Keep these patterns NARROW — they should match only useless filler, never
+# real content like copyright pages (which user wants kept as 出版頁).
+HARD_DROP_PATTERNS = [
+    r"Digital\s*Lab是上海译文出版社",            # the standard "about Digital Lab" page
+    r"我们致力于将优质的资源送到读者手中",         # same page, alt opening
+    r"上海译文出版社\|Digital\s*Lab",            # closing line of that page
+]
+HARD_DROP_RX = [re.compile(p) for p in HARD_DROP_PATTERNS]
+
+# Patterns whose FIRST occurrence is kept, subsequent occurrences dropped.
+# (Matches in plain text, case-insensitive.)
+DEDUPE_PATTERNS = [
+    r"^版权信息",     # 版权页 — keep one for the whole book
+    r"^版權信息",     # already-converted form (defensive)
+]
+DEDUPE_RX = [re.compile(p) for p in DEDUPE_PATTERNS]
+
+
+# ── HTML → Markdown ────────────────────────────────────────────
+def _bool_class(node, substr):
+    """True iff any class contains substr (case-insensitive)."""
+    classes = node.get("class") or []
+    return any(substr in c.lower() for c in classes)
+
+
+def el_to_md(el, depth=0):
+    """Convert a BeautifulSoup element to markdown. Preserves h1-h4, b/strong, em/i, p, blockquote."""
+    if isinstance(el, NavigableString):
+        return str(el)
+
+    name = el.name.lower() if el.name else ""
+
+    # Skip non-content tags
+    if name in ("script", "style", "head", "meta", "link", "svg", "image", "img", "br", "hr"):
+        if name == "br":
+            return "\n"
+        if name == "hr":
+            return "\n\n---\n\n"
+        return ""
+
+    # Footnote refs: drop entirely (they're decorative without target resolution)
+    if name == "sup":
+        return ""
+    if name == "a" and (_bool_class(el, "footnote") or el.find("sup")):
+        return ""
+
+    inner = "".join(el_to_md(c, depth + 1) for c in el.children)
+
+    if name in ("h1",):
+        # parttitle (Volume) → ##  ;  prefacetitle / chaptertitle → ##
+        return f"\n\n## {inner.strip()}\n\n"
+    if name == "h2":
+        return f"\n\n### {inner.strip()}\n\n"
+    if name in ("h3", "h4"):
+        return f"\n\n#### {inner.strip()}\n\n"
+    if name in ("b", "strong"):
+        s = inner.strip()
+        return f"**{s}**" if s else ""
+    if name in ("em", "i"):
+        s = inner.strip()
+        return f"*{s}*" if s else ""
+    if name == "blockquote":
+        lines = inner.strip().split("\n")
+        return "\n\n" + "\n".join(f"> {ln}" for ln in lines if ln.strip()) + "\n\n"
+    if name == "p":
+        s = re.sub(r"[ \t]+", " ", inner).strip()
+        return f"\n\n{s}\n\n" if s else ""
+    if name in ("div", "section", "article", "html", "body"):
+        return inner
+    if name in ("ul", "ol"):
+        return inner
+    if name == "li":
+        return f"\n- {inner.strip()}"
+
+    # Default: pass through inner
+    return inner
+
+
+def html_to_markdown(html_bytes):
+    """Convert chapter HTML to markdown. Returns (markdown, plain_for_detection)."""
+    soup = BeautifulSoup(html_bytes, "html.parser")
+    body = soup.find("body") or soup
+    md = el_to_md(body)
+    # Clean: collapse 3+ newlines to 2; trim
+    md = re.sub(r"\n{3,}", "\n\n", md).strip()
+    # Plain text (markdown stripped) — for boilerplate detection
+    plain = re.sub(r"[#*>_`\[\]\(\)]", "", md)
+    plain = re.sub(r"\s+", " ", plain).strip()
+    return md, plain
+
+
+def is_hard_drop(plain):
+    """True if the plain text is publisher-only filler with no content value."""
+    return any(rx.search(plain) for rx in HARD_DROP_RX)
+
+
+def matched_dedupe_pattern(plain):
+    """Return the regex pattern string if plain text matches a dedupe pattern, else None."""
+    for rx in DEDUPE_RX:
+        if rx.search(plain):
+            return rx.pattern
+    return None
+
+
+# ── Pipeline ───────────────────────────────────────────────────
+def fetch_book(ebook_id):
+    r = requests.get(f"{URL}/rest/v1/ebooks?id=eq.{ebook_id}&select=*", headers=H_GET, timeout=15)
+    r.raise_for_status()
+    rows = r.json()
+    if not rows:
+        raise SystemExit(f"Book not found: {ebook_id}")
+    return rows[0]
+
+
+def parse_volume_toc(book):
+    """Returns (doc_volume_starts, doc_anchor_splits):
+      - doc_volume_starts: {file_name: volume_title}    — TOC entries with no anchor
+      - doc_anchor_splits: {file_name: [(anchor_id, volume_title), ...]}  — TOC entries with anchors
+    Returns ({}, {}) if no multi-volume structure detected."""
+    top_entries = []  # [(href_no_anchor, anchor_or_None, title)]
+    for it in book.toc:
+        if isinstance(it, tuple):
+            section, _children = it
+            title = getattr(section, "title", str(section))
+            href = getattr(section, "href", "")
+        else:
+            title = getattr(it, "title", "")
+            href = getattr(it, "href", "")
+        if not href or not title:
+            continue
+        if any(skip in title for skip in ("版权", "版權", "Digital Lab")):
+            continue
+        if "#" in href:
+            file_name, anchor = href.split("#", 1)
+        else:
+            file_name, anchor = href, None
+        top_entries.append((file_name, anchor, title.strip()))
+
+    if len(top_entries) < 2:
+        return {}, {}
+
+    starts = {}
+    splits = {}
+    for fn, anchor, title in top_entries:
+        if anchor:
+            splits.setdefault(fn, []).append((anchor, title))
+        else:
+            starts[fn] = title
+    return starts, splits
+
+
+def split_body_at_anchors(body, anchor_to_vol):
+    """Split a <body> into ordered segments at elements whose id matches a key in
+    anchor_to_vol. Returns [(html_segment, transition_volume_or_None), ...].
+    The first segment's transition is None (it continues the previous volume).
+    Subsequent segments start with the anchored element and transition to its
+    target volume."""
+    segments = []  # [(list_of_children, vol_or_None)]
+    current = []
+    pending_vol = None  # transition for the segment we're currently building
+
+    for child in body.children:
+        matched = None
+        if isinstance(child, Tag):
+            cid = child.get("id")
+            if cid and cid in anchor_to_vol:
+                matched = cid
+            else:
+                for desc in child.find_all(attrs={"id": True}):
+                    if desc.get("id") in anchor_to_vol:
+                        matched = desc.get("id")
+                        break
+
+        if matched:
+            if current:
+                segments.append((current, pending_vol))
+            current = [child]
+            pending_vol = anchor_to_vol[matched]
+        else:
+            current.append(child)
+    if current:
+        segments.append((current, pending_vol))
+
+    out = []
+    for kids, vol in segments:
+        html = "<body>" + "".join(str(c) for c in kids) + "</body>"
+        out.append((html, vol))
+    return out
+
+
+def standardize(book):
+    """Re-parse EPUB → cleaned markdown chunks."""
+    if book["file_type"] != "epub":
+        raise SystemExit(f"Only epub supported in this script, got file_type={book['file_type']}")
+
+    src = Path(book["file_path"])
+    if not src.exists():
+        raise SystemExit(f"EPUB missing on disk: {src}")
+
+    print(f"Parsing: {src.name}  ({src.stat().st_size//1024} KB)")
+    b = epub.read_epub(str(src))
+
+    # Iterate documents in spine order (preserves reading order)
+    spine_ids = [s[0] for s in b.spine]
+    docs = []
+    for sid in spine_ids:
+        item = b.get_item_with_id(sid)
+        if item and item.get_type() == ebooklib.ITEM_DOCUMENT:
+            docs.append(item)
+
+    print(f"Spine docs: {len(docs)}")
+
+    doc_volume_starts, doc_anchor_splits = parse_volume_toc(b)
+    multi_volume = bool(doc_volume_starts or doc_anchor_splits)
+    if multi_volume:
+        all_vols = set(doc_volume_starts.values())
+        for lst in doc_anchor_splits.values():
+            for _, t in lst:
+                all_vols.add(t)
+        print(f"Detected {len(all_vols)} volume(s): {sorted(all_vols)}")
+    else:
+        print("No volume hierarchy detected — flat TOC.")
+
+    chunks = []
+    seen_dedupe_keys = set()
+    dropped = []
+    current_volume = None  # spine-walk running state
+
+    for i, d in enumerate(docs):
+        # Volume transition that fires at the START of this doc (no anchor).
+        if d.file_name in doc_volume_starts:
+            current_volume = doc_volume_starts[d.file_name]
+
+        # Decide whether to split the doc at internal anchors.
+        anchors_here = doc_anchor_splits.get(d.file_name, [])
+        try:
+            if anchors_here:
+                soup = BeautifulSoup(d.get_content(), "html.parser")
+                body = soup.find("body") or soup
+                segments = split_body_at_anchors(body, dict(anchors_here))
+            else:
+                segments = [(d.get_content(), None)]
+        except Exception as e:
+            print(f"  ⚠ doc {i} ({d.file_name}) split failed: {e}", file=sys.stderr)
+            continue
+
+        for seg_idx, (seg_html, seg_vol_transition) in enumerate(segments):
+            # Transition to the new volume at the anchor.
+            if seg_vol_transition:
+                current_volume = seg_vol_transition
+
+            try:
+                md, plain = html_to_markdown(seg_html)
+            except Exception as e:
+                print(f"  ⚠ doc {i} seg {seg_idx} parse failed: {e}", file=sys.stderr)
+                continue
+
+            seg_label = f"{d.file_name}" if len(segments) == 1 else f"{d.file_name}#seg{seg_idx}"
+
+            if (not plain or len(plain) < 5):
+                is_cover = (i < 3 and d.file_name and "cover" in d.file_name.lower()
+                            or d.file_name == "titlepage.xhtml")
+                if is_cover and seg_idx == 0 and "cover" not in seen_dedupe_keys:
+                    seen_dedupe_keys.add("cover")
+                    chunks.append({
+                        "chunk_index": len(chunks),
+                        "chunk_type": "chapter",
+                        "page_number": None,
+                        "chapter_path": "封面",
+                        "volume": None,
+                        "format": "markdown",
+                        "content": "## 封面\n\n*（書本封面）*",
+                    })
+                    continue
+                dropped.append((i, seg_label, "empty"))
+                continue
+
+            if is_hard_drop(plain):
+                dropped.append((i, seg_label, "publisher boilerplate"))
+                continue
+
+            dedupe_key = matched_dedupe_pattern(plain[:50])
+            if dedupe_key:
+                if dedupe_key in seen_dedupe_keys:
+                    dropped.append((i, seg_label, f"duplicate ({dedupe_key})"))
+                    continue
+                seen_dedupe_keys.add(dedupe_key)
+
+            md_tw = CC.convert(md)
+            volume = CC.convert(current_volume) if current_volume else None
+
+            first_heading = re.search(r"^#{1,4}\s+(.+)$", md_tw, re.M)
+            chapter_title = first_heading.group(1).strip() if first_heading else d.file_name
+
+            chunks.append({
+                "chunk_index": len(chunks),
+                "chunk_type": "chapter",
+                "page_number": None,
+                "chapter_path": chapter_title,
+                "volume": volume,
+                "format": "markdown",
+                "content": md_tw,
+            })
+
+    print(f"Kept: {len(chunks)} chunks, dropped: {len(dropped)}")
+    if dropped[:8]:
+        print("  Dropped (sample):")
+        for i, fn, why in dropped[:8]:
+            print(f"    [{i}] {fn}  — {why}")
+    return chunks
+
+
+def write_jsonl(book_id, chunks):
+    CHUNKS_DIR.mkdir(parents=True, exist_ok=True)
+    out = CHUNKS_DIR / f"{book_id}.jsonl"
+    with out.open("w", encoding="utf-8") as f:
+        for c in chunks:
+            f.write(json.dumps(c, ensure_ascii=False) + "\n")
+    return out
+
+
+def push_to_r2(book_id, jsonl_path):
+    import boto3
+    raw = Path(jsonl_path).read_bytes()
+    buf = io.BytesIO()
+    with gzip.GzipFile(fileobj=buf, mode="wb", compresslevel=6) as gz:
+        gz.write(raw)
+    c = boto3.client("s3", region_name="auto", endpoint_url=ENV["R2_ENDPOINT"],
+                     aws_access_key_id=ENV["R2_ACCESS_KEY"], aws_secret_access_key=ENV["R2_SECRET_KEY"])
+    c.put_object(
+        Bucket=ENV["R2_BUCKET"],
+        Key=f"ebook-chunks/{book_id}.jsonl.gz",
+        Body=buf.getvalue(),
+        ContentType="application/x-ndjson",
+        ContentEncoding="gzip",
+    )
+    return len(buf.getvalue())
+
+
+def update_db(book_id, chunks):
+    total_chars = sum(len(c["content"]) for c in chunks)
+    requests.patch(
+        f"{URL}/rest/v1/ebooks?id=eq.{book_id}",
+        headers=H_JSON,
+        json={
+            "chunk_count": len(chunks),
+            "total_chars": total_chars,
+            "total_pages": len(chunks),
+            "parsed_at": datetime.utcnow().isoformat() + "Z",
+        },
+        timeout=30,
+    )
+
+    # Also refresh ebook_chunks preview rows so search still works.
+    requests.delete(f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{book_id}", headers=H_GET, timeout=30)
+    rows = [{
+        "ebook_id": book_id,
+        "chunk_index": c["chunk_index"],
+        "chunk_type": c["chunk_type"],
+        "page_number": c["page_number"],
+        "chapter_path": c["chapter_path"],
+        "content": c["content"][:PREVIEW_LEN],
+        "char_count": len(c["content"]),
+    } for c in chunks]
+    BATCH = 50
+    for i in range(0, len(rows), BATCH):
+        r = requests.post(f"{URL}/rest/v1/ebook_chunks", headers=H_JSON, json=rows[i:i+BATCH], timeout=60)
+        if not r.ok:
+            print(f"  ⚠ chunk preview insert failed: {r.status_code} {r.text[:120]}", file=sys.stderr)
+            return
+
+
+def main():
+    if len(sys.argv) < 2:
+        print(__doc__); sys.exit(1)
+    ebook_id = sys.argv[1]
+    dry_run = "--dry-run" in sys.argv
+    no_r2 = "--no-r2" in sys.argv
+
+    book = fetch_book(ebook_id)
+    print(f"Book: {book['title']}  ({book['file_type']})")
+    print(f"Author: {book.get('author')}")
+    print()
+
+    chunks = standardize(book)
+
+    if dry_run:
+        print("\n--- DRY RUN — first 3 chunks ---")
+        for c in chunks[:3]:
+            print(f"\n[{c['chunk_index']}] {c['chapter_path']}")
+            print(c["content"][:400])
+        return
+
+    out = write_jsonl(ebook_id, chunks)
+    print(f"\nWrote {out}  ({out.stat().st_size//1024} KB)")
+
+    if not no_r2:
+        gz_size = push_to_r2(ebook_id, out)
+        print(f"Pushed R2: ebook-chunks/{ebook_id}.jsonl.gz  ({gz_size//1024} KB)")
+
+    update_db(ebook_id, chunks)
+    print(f"DB: chunk_count={len(chunks)}, total_chars={sum(len(c['content']) for c in chunks)}")
+    print("\n✓ Done. Open the reader — markdown headings should render.")
+
+
+if __name__ == "__main__":
+    main()

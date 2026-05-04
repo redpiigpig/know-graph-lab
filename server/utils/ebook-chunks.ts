@@ -20,6 +20,8 @@ export interface ChunkData {
   chunk_type: "page" | "chapter" | "section";
   page_number: number | null;
   chapter_path: string | null;
+  volume?: string | null;
+  format?: "markdown" | "text";
   content: string;
 }
 
@@ -171,4 +173,37 @@ export async function loadChunksByIndices(
 export async function chunksExist(ebookId: string): Promise<boolean> {
   const lines = await loadLines(ebookId);
   return !!lines && lines.length > 0;
+}
+
+/**
+ * TOC entry for sidebar nav. Level is derived from the first heading in
+ * the chunk's markdown content (## → 2, ### → 3, #### → 4). Falls back
+ * to chapter_path metadata when content has no heading (e.g. cover page).
+ */
+export interface TocEntry {
+  chunk_index: number;
+  title: string;
+  level: number;
+  volume?: string | null;
+}
+
+export async function loadToc(ebookId: string): Promise<TocEntry[]> {
+  const lines = await loadLines(ebookId);
+  if (!lines) return [];
+  const out: TocEntry[] = [];
+  for (let i = 0; i < lines.length; i++) {
+    try {
+      const c = JSON.parse(lines[i]) as ChunkData;
+      const head = (c.content || "").match(/^(#{1,4})\s+(.+)$/m);
+      out.push({
+        chunk_index: i,
+        title: head ? head[2].trim() : (c.chapter_path || `第 ${i + 1} 段`),
+        level: head ? head[1].length : 2,
+        volume: c.volume ?? null,
+      });
+    } catch {
+      out.push({ chunk_index: i, title: `第 ${i + 1} 段`, level: 2, volume: null });
+    }
+  }
+  return out;
 }

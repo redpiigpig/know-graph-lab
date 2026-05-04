@@ -1,10 +1,10 @@
-import { loadChunk } from "~/server/utils/ebook-chunks";
+import { loadChunk, loadToc } from "~/server/utils/ebook-chunks";
 
 export default defineEventHandler(async (event) => {
   await requireAuth(event);
   const supabase = getAdminClient();
   const id = getRouterParam(event, "id");
-  const { page } = getQuery(event) as { page?: string };
+  const { page, includeToc } = getQuery(event) as { page?: string; includeToc?: string };
 
   const { data: ebook, error } = await supabase
     .from("ebooks")
@@ -16,11 +16,15 @@ export default defineEventHandler(async (event) => {
 
   const totalChunks = ebook.chunk_count ?? ebook.total_pages ?? 0;
   const chunkIndex = Math.max(0, (page ? parseInt(page) : 1) - 1);
-  const chunk = totalChunks > 0 ? await loadChunk(id!, chunkIndex) : null;
+  const [chunk, toc] = await Promise.all([
+    totalChunks > 0 ? loadChunk(id!, chunkIndex) : Promise.resolve(null),
+    includeToc === "1" && totalChunks > 0 ? loadToc(id!) : Promise.resolve(undefined),
+  ]);
 
   return {
     ...ebook,
     total_pages: totalChunks,
+    toc,
     currentPage: chunk
       ? {
           id: `${id}-${chunkIndex}`,
