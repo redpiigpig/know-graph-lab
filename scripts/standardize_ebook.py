@@ -18,6 +18,7 @@ Usage — batch (auto-skips PDFs):
   python scripts/standardize_ebook.py --category 哲學
   python scripts/standardize_ebook.py --category 哲學 --subcategory 近代哲學
   python scripts/standardize_ebook.py --category 哲學 --limit 5
+  python scripts/standardize_ebook.py --all   # every parsed EPUB across all categories
 
 Idempotent: re-running overwrites local JSONL, R2 object, and DB previews.
 """
@@ -45,6 +46,7 @@ except ImportError as e:
 
 sys.path.insert(0, str(Path(__file__).parent))
 from parse_worker import load_env
+from parse_drive_inventory import TRAD_FIXES
 
 ENV = load_env()
 URL = ENV["SUPABASE_URL"]
@@ -56,6 +58,18 @@ CHUNKS_DIR = Path(ENV.get("EBOOK_CHUNKS_DIR") or "G:/我的雲端硬碟/資料/�
 PREVIEW_LEN = 200
 
 CC = opencc.OpenCC("s2tw")  # simplified → traditional (Taiwan idioms)
+
+
+def to_traditional(text: str) -> str:
+    """opencc s2tw + post-fix substitutions to correct over-conversion bugs
+    (e.g. s2tw turns 历史 → 曆史 when it should be 歷史). The fix table is
+    shared with parse_drive_inventory so filename + content stay consistent."""
+    if not text:
+        return text
+    out = CC.convert(text)
+    for wrong, right in TRAD_FIXES:
+        out = out.replace(wrong, right)
+    return out
 
 # ── Boilerplate patterns ───────────────────────────────────────
 # Hard drop: chunks dedicated to publisher self-promotion (no content value).
@@ -393,8 +407,8 @@ def standardize(book):
                     continue
                 seen_dedupe_keys.add(dedupe_key)
 
-            md_tw = CC.convert(md)
-            volume = CC.convert(current_volume) if current_volume else None
+            md_tw = to_traditional(md)
+            volume = to_traditional(current_volume) if current_volume else None
 
             first_heading = re.search(r"^#{1,4}\s+(.+)$", md_tw, re.M)
             chapter_title = first_heading.group(1).strip() if first_heading else d.file_name
@@ -477,17 +491,19 @@ def update_db(book_id, chunks):
             return
 
 
-def fetch_books_by_category(category: str, subcategory: str = None, limit: int = None):
-    """Return list of parsed EPUB books in a category. Skips PDFs (script can't
-    handle them), books without parsed content, and books missing on disk."""
+def fetch_books_by_category(category: str = None, subcategory: str = None, limit: int = None):
+    """Return list of parsed EPUB books, optionally filtered by category. Skips
+    PDFs (script can't handle them), books without parsed content, and books
+    missing on disk. Pass category=None to fetch every parsed EPUB."""
     params = (
-        "select=id,title,author,file_type,file_path,parsed_at,chunk_count"
-        f"&category=eq.{requests.utils.quote(category)}"
+        "select=id,title,author,file_type,file_path,parsed_at,chunk_count,category"
         "&parsed_at=not.is.null"
         "&file_type=eq.epub"
-        "&order=title"
+        "&order=category,title"
         "&limit=2000"
     )
+    if category:
+        params += f"&category=eq.{requests.utils.quote(category)}"
     if subcategory:
         params += f"&subcategory=eq.{requests.utils.quote(subcategory)}"
     r = requests.get(f"{URL}/rest/v1/ebooks?{params}", headers=H_GET, timeout=30)
@@ -526,10 +542,11 @@ def standardize_one(ebook_id: str, dry_run: bool = False, no_r2: bool = False):
     return len(chunks), None
 
 
-def cmd_batch(category: str, subcategory: str = None, limit: int = None,
+def cmd_batch(category: str = None, subcategory: str = None, limit: int = None,
               dry_run: bool = False, no_r2: bool = False):
     books = fetch_books_by_category(category, subcategory, limit)
-    print(f"Category: {category}{f' / {subcategory}' if subcategory else ''}")
+    label = "ALL categories" if not category else f"Category: {category}{f' / {subcategory}' if subcategory else ''}"
+    print(label)
     print(f"Eligible EPUBs: {len(books)}")
     if not books:
         print("Nothing to do.")
@@ -573,6 +590,11 @@ def main():
     args = sys.argv[1:]
     dry_run = "--dry-run" in args
     no_r2 = "--no-r2" in args
+
+    if "--all" in args:
+        limit = int(args[args.index("--limit") + 1]) if "--limit" in args else None
+        cmd_batch(category=None, limit=limit, dry_run=dry_run, no_r2=no_r2)
+        return
 
     if "--category" in args:
         category = args[args.index("--category") + 1]
