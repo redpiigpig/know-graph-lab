@@ -86,15 +86,25 @@ _CHAPTER_HEAD_RX = re.compile(
 
 def derive_chapter_title(md_tw: str, fallback: str) -> str:
     """Find a meaningful chapter title:
-       1. Use the first markdown heading if any
+       1. Use the first markdown heading if any (skip headings whose text is
+          just a numeric/letter marker like "1" / "II" / "Ch.3" — common in
+          academic EPUBs where <h2>1</h2><h1>Real Title</h1> is the pattern)
        2. Else look at first 3 non-empty lines and pick the best:
           a. Any line matching '第N章/卷/編/…' pattern wins
           b. Else first short (≤30) non-banner line
        3. Else fall back to file name
     Then normalize for cosmetic renames (e.g. CIP → 版權頁)."""
-    m = re.search(r"^#{1,4}\s+(.+)$", md_tw, re.M)
-    if m:
-        return normalize_chapter_title(m.group(1))
+    # Collect up to the first 4 headings; prefer the first non-numeric one.
+    # is_continuation_title catches the same noise patterns we want to skip
+    # at the heading level here, so reuse it.
+    headings = re.findall(r"^#{1,4}\s+(.+)$", md_tw, re.M)[:4]
+    for h in headings:
+        h = h.strip()
+        if not is_continuation_title(h):
+            return normalize_chapter_title(h)
+    if headings:
+        # All headings were numeric/letter markers — fall back to the first.
+        return normalize_chapter_title(headings[0].strip())
 
     candidates = []
     for line in md_tw.split("\n"):
@@ -145,6 +155,189 @@ _CONT_RX = re.compile(
 
 def is_continuation_title(title: str) -> bool:
     return bool(_CONT_RX.match(title or ""))
+
+
+# Part-divider regex — matches 第N部/卷/編/集/篇 at start of title (with
+# optional fullwidth/halfwidth space, suffix). Used to detect implicit volume
+# starts that the publisher dropped from the TOC (anonymous TOC group).
+_PART_DIVIDER_RX = re.compile(
+    r"^第[一二三四五六七八九十百千零〇\d]+(部|卷|編|编|冊|册|集|篇)"
+)
+
+
+def promote_implicit_volumes(chunks):
+    """When a multi-volume book's TOC has an anonymous group (publisher
+    forgot to name 第一部 explicitly), the chapters end up flat (vol=None).
+    This walks the chunk list and promotes any 第N部/卷-titled vol=None
+    chunks into proper volume markers, applying that volume to subsequent
+    vol=None chunks until the next explicit volume or another part divider.
+
+    Idempotent — already-volumed chunks are never overwritten."""
+    has_named_vol = any(c.get("volume") for c in chunks)
+    if not has_named_vol:
+        return  # flat book, nothing to promote
+
+    implicit_vol = None  # currently-active synthetic volume name
+    for c in chunks:
+        if c.get("volume"):
+            # Hit an explicit volume — implicit run ends here.
+            implicit_vol = None
+            continue
+        title = c.get("chapter_path") or ""
+        if _PART_DIVIDER_RX.match(title):
+            implicit_vol = title
+            c["volume"] = title
+        elif implicit_vol:
+            c["volume"] = implicit_vol
+
+
+# Patterns to extract publisher metadata from 版權頁 / title-page chunks.
+# Allow optional fullwidth spaces between characters of the field name and
+# either ：or : as the separator.
+_FULL_TITLE_RX = re.compile(
+    r"(?:書\s*名|Title)\s*[：:]\s*([^\n]+)",
+    re.IGNORECASE,
+)
+_ORIG_TITLE_RX = re.compile(
+    r"(?:原\s*文?\s*書\s*名|原\s*書\s*名|原\s*名|英\s*文\s*書\s*名|Original\s*Title)\s*[：:]\s*([^\n]+)",
+    re.IGNORECASE,
+)
+# author + parenthesized English name, e.g. 「作　者：伊迪絲．漢彌敦（Edith Hamilton）」
+_AUTHOR_EN_RX = re.compile(
+    r"(?:作\s*者|Author)\s*[：:]\s*[^\n（(]*[（(]([^）)]+)[）)]",
+    re.IGNORECASE,
+)
+
+
+def _clean_extracted(s: str) -> str:
+    """Strip markdown noise (** _ leading/trailing) from extracted metadata."""
+    if not s:
+        return s
+    s = s.strip()
+    # Iteratively peel off matched bold/em wrappers
+    for _ in range(3):
+        s = s.strip()
+        if s.startswith("**") and s.endswith("**") and len(s) > 4:
+            s = s[2:-2]
+            continue
+        if s.startswith("*") and s.endswith("*") and len(s) > 2:
+            s = s[1:-1]
+            continue
+        break
+    # Strip dangling asterisks/underscores/punctuation tail
+    return s.strip().strip("*_").rstrip("。．.").strip()
+
+
+def _extract_publisher_metadata(chunks):
+    """Scan all chunks for 版權頁-style metadata lines. Returns
+    (full_title, original_title, author_en) — any may be None if not found."""
+    full_title = None
+    orig_title = None
+    author_en = None
+    for c in chunks:
+        content = c.get("content") or ""
+        if not full_title:
+            m = _FULL_TITLE_RX.search(content)
+            if m:
+                cand = _clean_extracted(m.group(1))
+                if cand and len(cand) >= 2:
+                    full_title = cand
+        if not orig_title:
+            m = _ORIG_TITLE_RX.search(content)
+            if m:
+                cand = _clean_extracted(m.group(1))
+                if cand and len(cand) >= 3:
+                    orig_title = cand
+        if not author_en:
+            m = _AUTHOR_EN_RX.search(content)
+            if m:
+                cand = _clean_extracted(m.group(1))
+                if cand and re.search(r"[A-Za-z]", cand):
+                    author_en = cand
+        if full_title and orig_title and author_en:
+            break
+    return full_title, orig_title, author_en
+
+
+def _split_title_subtitle(title: str):
+    """Split a title like 「希臘羅馬神話：永恆的諸神…」 into (main, subtitle).
+    Returns (title, None) if no separator found. Common separators: ：: ——"""
+    if not title:
+        return title, None
+    for sep in ("：", ":", " — ", "——", " - "):
+        if sep in title:
+            main, sub = title.split(sep, 1)
+            main = main.strip()
+            sub = sub.strip()
+            if main and sub:
+                return main, sub
+    return title.strip(), None
+
+
+def build_cover_content(book, chunks) -> str:
+    """Compose a rich 封面 chunk from DB metadata + 版權頁 extraction.
+
+    Layout (markdown):
+        ## 封面
+        # {main title}
+        ## {subtitle}             (only if extractable)
+        **{original_title}**       (only if extractable)
+        {author}
+        *{author_en}*              (only if extractable)
+    """
+    title = (book.get("title") or "").strip()
+    author = (book.get("author") or "").strip()
+    full_title, original_title, author_en = _extract_publisher_metadata(chunks)
+
+    # Prefer the publisher's full-form title when available (it usually contains
+    # the subtitle that DB.title omits); only use it if it starts with DB.title
+    # to avoid hijacking the cover with a different book's metadata.
+    canonical = title
+    if full_title and full_title.startswith(title) and len(full_title) > len(title):
+        canonical = full_title
+    main_title, subtitle = _split_title_subtitle(canonical)
+
+    lines = ["## 封面", ""]
+    if main_title:
+        lines += [f"# {main_title}", ""]
+    if subtitle:
+        lines += [f"## {subtitle}", ""]
+    if original_title:
+        lines += [f"**{original_title}**", ""]
+    if author:
+        # author + author_en on consecutive lines (markdown two-space line break)
+        if author_en:
+            lines += [f"{author}  ", f"*{author_en}*", ""]
+        else:
+            lines += [author, ""]
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def apply_cover_enrichment(chunks, book):
+    """Replace the placeholder 「## 封面 (書本封面)」 chunk with rich metadata,
+    or insert a new cover chunk at index 0 if none exists.
+
+    Idempotent — re-runs produce identical output for the same book."""
+    rich = build_cover_content(book, chunks)
+
+    if chunks and chunks[0].get("chapter_path") == "封面":
+        chunks[0]["content"] = rich
+        chunks[0]["chapter_path"] = "封面"
+        return
+
+    # No cover chunk — synthesize one at the head and shift indices.
+    new_cover = {
+        "chunk_index": 0,
+        "chunk_type": "chapter",
+        "page_number": None,
+        "chapter_path": "封面",
+        "volume": None,
+        "format": "markdown",
+        "content": rich,
+    }
+    for c in chunks:
+        c["chunk_index"] = c["chunk_index"] + 1
+    chunks.insert(0, new_cover)
 
 
 def to_traditional(text: str) -> str:
@@ -516,8 +709,14 @@ def standardize(book):
             # marker (e.g. 後記 split into 「後記」+「二」, or 索引 split into A-Z),
             # fold its content into the previous chunk instead of creating a new
             # one. Volume must match — don't merge across volume boundaries.
+            # Size cap: only merge tiny continuation chunks. Real chapters that
+            # happen to start with <h2>1</h2> markers (academic EPUBs) are big
+            # and must NOT be eaten — they are real content even if the title
+            # derives to a numeric token.
+            CONT_MERGE_MAX_CHARS = 800
             if (chunks and is_continuation_title(chapter_title)
-                    and chunks[-1].get("volume") == volume):
+                    and chunks[-1].get("volume") == volume
+                    and len(plain) <= CONT_MERGE_MAX_CHARS):
                 # Strip the redundant heading line from md_tw before appending —
                 # it adds nothing and creates "二 / A" mid-paragraph artifacts.
                 stripped_md = re.sub(r"^#{1,4}\s+.+\n+", "", md_tw, count=1).strip()
@@ -534,6 +733,12 @@ def standardize(book):
                 "format": "markdown",
                 "content": md_tw,
             })
+
+    # Post-process: promote vol=None chapters that are 第N部 dividers (publisher
+    # forgot to label them in TOC), then enrich the cover chunk with full
+    # title/subtitle/original-title/author/author-en metadata.
+    promote_implicit_volumes(chunks)
+    apply_cover_enrichment(chunks, book)
 
     print(f"Kept: {len(chunks)} chunks, dropped: {len(dropped)}")
     if dropped[:8]:
