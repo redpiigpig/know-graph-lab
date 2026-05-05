@@ -103,8 +103,29 @@ def derive_chapter_title(md_tw: str, fallback: str) -> str:
         if not is_continuation_title(h):
             return normalize_chapter_title(h)
     if headings:
-        # All headings were numeric/letter markers — fall back to the first.
-        return normalize_chapter_title(headings[0].strip())
+        # All headings are numeric/letter markers (e.g. publisher patterns
+        # like <h2>01</h2><p>王權的誕生</p>). Look at the first short non-empty
+        # content line right after the first heading — if it looks like a
+        # chapter subtitle, combine both into "01 王權的誕生".
+        first_h = headings[0].strip()
+        m = re.search(r"^#{1,4}\s+" + re.escape(first_h) + r"\s*$", md_tw, re.M)
+        if m:
+            after = md_tw[m.end():]
+            for raw in after.split("\n"):
+                s = raw.strip()
+                if not s:
+                    continue
+                # Strip markdown wrappers (** / * / # / > / -) before length check
+                s_clean = re.sub(r"^[#>\-]+\s*", "", s)
+                s_clean = re.sub(r"[*_`]+", "", s_clean).strip()
+                if not s_clean:
+                    continue
+                if (len(s_clean) <= 30
+                        and not _BANNER_RX.search(s_clean)
+                        and not is_continuation_title(s_clean)):
+                    return normalize_chapter_title(f"{first_h} {s_clean}")
+                break  # first non-empty line wasn't title-like; give up
+        return normalize_chapter_title(first_h)
 
     candidates = []
     for line in md_tw.split("\n"):
