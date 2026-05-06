@@ -17,7 +17,7 @@ End-to-end pipeline that takes books from a local Drive folder all the way to th
 | DB import (`ebooks` table) | ✅ rolling | 1,326 rows (1,309 initial + 17 ingested 2026-05-06) |
 | First-pass parse (text-extractable) | ✅ done | 900 parsed (478 EPUB + 422 text PDF) |
 | mobi/azw3 → epub conversion | ✅ done | 0 remaining |
-| **OCR scanned PDFs** | 🔄 daily-scheduled | 391 queued, ~1 done; auto-runs 16:00 daily |
+| **OCR scanned PDFs** | 🔄 daily-scheduled | 386 queued; auto-runs 16:00 daily |
 | Local JSONL written | ✅ done for parsed books | `G:/我的雲端硬碟/資料/電子書/_chunks/*.jsonl` |
 | R2 mirror of JSONL | ✅ done | 901 files (out of 900 parsed — 1 was duplicate) |
 | `ebook_chunks` previews in DB | ✅ ~88% | 115K rows; ~107 books need retry-failed |
@@ -37,8 +37,8 @@ End-to-end pipeline that takes books from a local Drive folder all the way to th
 | `parse_worker.py` | 2 — parse | **Main parser** (PyMuPDF + ebooklib). `init` / `run [--limit N] [--retry-errors]` / `status` |
 | `convert_mobi_to_epub.py` | 2 — parse | Calibre wrapper for mobi/azw3 → epub. Already done; keep for new files |
 | `ocr_with_gemini.py` | 3 — OCR (primary) | Gemini Vision OCR for scanned PDFs. Pushes JSONL to R2 inline. Exits with code 2 when daily quota hits (signals fallback) |
-| `ocr_with_qwen.py` | 3 — OCR (fallback) | Local Qwen2.5-VL via Ollama, page-by-page rendering. Same DB/JSONL/R2 contract as Gemini script. Triggered by bat only when Gemini exits 2 |
-| `run_ocr_daily.bat` + Task Scheduler | (orchestrator) | Windows daily runner — now runs **ingest → parse → OCR (gemini → qwen on 429)** in sequence |
+| `ocr_with_qwen.py` | 3 — OCR (fallback, **disabled**) | Local Qwen2.5-VL via Ollama. Code intact; bat trigger commented out — vision compute graph (6.7 GiB) won't fit on 4050 Mobile (6 GiB). Re-enable on better GPU. See Workflow A-2 |
+| `run_ocr_daily.bat` + Task Scheduler | (orchestrator) | Windows daily runner — runs **ingest → parse → OCR (gemini only)** in sequence |
 | `standardize_ebook.py` | 4 — standardize | Re-parse EPUB → markdown chunks, s2tw, drop boilerplate (see `standardize-ebook` skill) |
 | `repopulate_chunk_previews.py` | 5 — DB | Back-fill `ebook_chunks` previews from local JSONL. `run` / `retry-failed` / `status` |
 | `upload_chunks_to_r2.py` | 5 — R2 | One-shot bulk uploader for any books whose JSONL isn't on R2 yet |
@@ -151,9 +151,11 @@ python scripts/ocr_with_gemini.py run --model gemini-2.5-flash-lite --rpm 12  # 
 
 ---
 
-## Workflow A-2 — Local Qwen2.5-VL OCR fallback
+## Workflow A-2 — Local Qwen2.5-VL OCR fallback (DISABLED 2026-05-06)
 
-When Gemini returns 429, [`scripts/ocr_with_qwen.py`](../../../scripts/ocr_with_qwen.py) takes over for the rest of the daily run. Architecture:
+> Smoke-tested on RTX 4050 Mobile (6 GiB VRAM): qwen2.5vl:3b's vision compute graph alone needs **6.7 GiB** — Ollama scaled GPU layers from 20 → 0 trying to fit, then loaded the whole thing on CPU. CPU-mode rate measured ~1 token/min (3 tokens / 292 s) → ~8-15 hours per OCR page. Not viable on this hardware. The bat trigger is commented out; `ocr_with_qwen.py` and the gemini exit-code-2 plumbing stay intact for future hardware (≥ 8 GiB VRAM, or after switching to a smaller VLM like `moondream2`).
+
+When the fallback IS enabled, [`scripts/ocr_with_qwen.py`](../../../scripts/ocr_with_qwen.py) takes over for the rest of the daily run when Gemini returns 429. Architecture:
 
 1. PyMuPDF renders each PDF page at DPI 150 → JPEG bytes
 2. POST image + Chinese-aware OCR prompt to Ollama `/api/generate` (model `qwen2.5vl:3b` by default)
@@ -167,8 +169,8 @@ Per-page Qwen latency on the dev machine (RTX 4050 Mobile, 6 GB VRAM) is ~10-30s
 
 | Model | VRAM (q4) | Chinese OCR quality | Notes |
 |---|---|---|---|
-| `qwen2.5vl:3b` (**default**) | ~3 GB | Decent — handles modern simplified/traditional well | Fits comfortably on 4050 Mobile |
-| `qwen2.5vl:7b` | ~5-6 GB | Notably better, especially on dense traditional text | Tight on 6 GB; may partially CPU-offload |
+| `qwen2.5vl:3b` (**default**) | ~3 GB weights + ~6.7 GB compute graph | Decent — handles modern simplified/traditional well | Doesn't fit on 4050 Mobile 6 GB VRAM (compute graph alone exceeds it) |
+| `qwen2.5vl:7b` | ~6 GB weights + larger graph | Notably better on dense traditional text | Even worse fit on 4050 Mobile |
 | Llama 3.2 Vision | — | **Avoid** — English-heavy training, weak on 繁體 | |
 
 Override with `--model qwen2.5vl:7b` if VRAM permits (close other GPU consumers first).
