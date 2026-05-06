@@ -15,7 +15,7 @@ End-to-end pipeline that takes books from a local Drive folder all the way to th
 | **Daily new-book drop ingest** | ✅ wired into daily scheduler | `ingest_new_books.py` — see Workflow D |
 | File rename in Drive | ✅ done | all renamed to `作者，書名.ext` |
 | DB import (`ebooks` table) | ✅ rolling | 1,326 rows (492 EPUB + 834 PDF) |
-| First-pass parse (text-extractable) | ✅ done | 918 parsed (481 EPUB + 437 text PDF) |
+| First-pass parse (text-extractable) | ✅ done | 921 parsed (484 EPUB + 437 text PDF) — 3 timeout-failed EPUBs retried 2026-05-07 |
 | mobi/azw3 → epub conversion | ✅ done | 0 remaining |
 | **OCR scanned PDFs** | 🔄 daily-scheduled | ~377 queued; auto-runs 16:00 daily (Gemini quota shared across 4 keys in one GCP project — exhausted today) |
 | Local JSONL written | ✅ done for parsed books | `G:/我的雲端硬碟/資料/電子書/_chunks/*.jsonl` |
@@ -24,7 +24,7 @@ End-to-end pipeline that takes books from a local Drive folder all the way to th
 | Frontend reads chunks | ✅ wired | `loadChunk()` from local→R2 fallback |
 | Reader v2 UI (light theme + TOC + highlights + notes panel + bookshelf + tags + bookmarks) | ✅ done | with auto-save, error toasts |
 | Search by title / author / fulltext | ✅ wired | `/api/ebooks/search?mode=…` |
-| **EPUB standardize → markdown reader format** | ✅ done | 481/492 EPUBs incl. all enrichment passes |
+| **EPUB standardize → markdown reader format** | ✅ done | 484/492 EPUBs incl. all enrichment passes (8 remain: corrupted/bad-zip/no-text) |
 | **PDF standardize Plan A (lite)** | ✅ done | 437/437 text-extractable PDFs polished — s2tw, spacing collapse, publisher metadata, `page_number` preserved |
 | **PDF standardize Plan B v0 (TOC-driven)** | ✅ done | `standardize_pdf.py --all` — 152/437 chapter-chunked (OK 152, Skipped 285, Failed 0); Plan B v1 (font-driven, no-TOC subset) deferred |
 | **Online metadata enrichment** | ✅ done | `enrich_book_metadata.py` filled 8 publishers + 11 publish_years on 28-book backlog (89% / 87% coverage now) |
