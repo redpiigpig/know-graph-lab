@@ -104,6 +104,21 @@
             <span class="text-xs text-gray-600">{{ shelfCounts.read }}</span>
           </button>
         </nav>
+
+        <!-- 標籤 — 只在有 tag 時顯示，跨類別、跨書本的網狀組織 -->
+        <template v-if="allTags.length">
+          <p class="text-xs text-gray-500 uppercase tracking-wider mt-6 mb-2 px-2">標籤</p>
+          <nav class="space-y-0.5 pb-8">
+            <button v-for="t in allTags" :key="t.id" @click="selectTag(t.id)"
+              :class="['w-full text-left px-2 py-1.5 rounded-lg text-sm transition flex items-center gap-2',
+                activeTagId === t.id ? 'bg-purple-900/60 text-purple-200'
+                  : 'text-gray-400 hover:bg-gray-800 hover:text-white']">
+              <span>🏷️</span>
+              <span class="flex-1 truncate">{{ t.name }}</span>
+              <span class="text-xs text-gray-600">{{ t.book_count }}</span>
+            </button>
+          </nav>
+        </template>
       </aside>
 
       <!-- 主內容 -->
@@ -355,12 +370,17 @@ async function getToken() {
 const activeCategory    = computed(() => (route.query.category    as string) || "");
 const activeSubcategory = computed(() => (route.query.subcategory as string) || "");
 const activeShelf       = computed(() => (route.query.shelf       as "reading" | "read" | "") || "");
+const activeTagId       = computed(() => (route.query.tag         as string) || "");
 
 // Expansion state stays local — purely a UI toggle, no need for URL.
 const expandedCategory = ref("");
 const expandedGroup = ref("");
 
 const activeLabel = computed(() => {
+  if (activeTagId.value) {
+    const t = allTags.value.find(x => x.id === activeTagId.value);
+    return `🏷️ ${t?.name ?? '標籤'}`;
+  }
   if (activeShelf.value === "reading") return "📖 閱讀中";
   if (activeShelf.value === "read")    return "✅ 已讀";
   if (!activeCategory.value) return "📚 全部";
@@ -410,6 +430,22 @@ function selectShelf(which: "reading" | "read") {
   expandedGroup.value = "";
   clearSearch();
   navigate({ shelf: which });
+}
+
+// ── Tags ──
+interface Tag { id: string; name: string; color: string | null; book_count: number; excerpt_count: number }
+const allTags = ref<Tag[]>([]);
+async function fetchTags() {
+  const token = await getToken(); if (!token) return;
+  allTags.value = await $fetch<Tag[]>("/api/tags", {
+    headers: { Authorization: `Bearer ${token}` },
+  }).catch(() => []);
+}
+function selectTag(tagId: string) {
+  expandedCategory.value = "";
+  expandedGroup.value = "";
+  clearSearch();
+  navigate({ tag: tagId });
 }
 
 // ── 資料 ──
@@ -499,11 +535,12 @@ async function loadBooks() {
     return;
   }
 
-  // Default: category-filtered listing from /api/ebooks.
+  // Default: category- / tag-filtered listing from /api/ebooks.
   const token = await getToken(); if (!token) return;
   const params = new URLSearchParams();
   if (activeCategory.value)    params.set("category",    activeCategory.value);
   if (activeSubcategory.value) params.set("subcategory", activeSubcategory.value);
+  if (activeTagId.value)       params.set("tagId",       activeTagId.value);
   const qs = params.size ? "?" + params.toString() : "";
   ebooks.value = await $fetch<any[]>(`/api/ebooks${qs}`, {
     headers: { Authorization: `Bearer ${token}` },
@@ -619,13 +656,13 @@ function syncExpansionFromRoute() {
 // Re-render the grid whenever the URL changes (browser back/forward, query
 // edits, or our own navigate() pushes).
 watch(
-  () => [route.query.category, route.query.subcategory, route.query.shelf],
+  () => [route.query.category, route.query.subcategory, route.query.shelf, route.query.tag],
   () => { syncExpansionFromRoute(); loadBooks(); },
 );
 
 onMounted(async () => {
   syncExpansionFromRoute();
-  await loadBookshelf();   // populate counts before first paint of the grid
+  await Promise.all([loadBookshelf(), fetchTags()]);
   loadBooks();
 });
 useHead({ title: "電子圖書館 — Know Graph Lab" });

@@ -1,7 +1,7 @@
 export default defineEventHandler(async (event) => {
   await requireAuth(event);
   const supabase = getAdminClient();
-  const { categoryId } = getQuery(event) as { categoryId?: string };
+  const { categoryId, tagId } = getQuery(event) as { categoryId?: string; tagId?: string };
 
   // When filtering by a parent category, also include child categories
   let categoryIds: string[] | null = null;
@@ -12,6 +12,19 @@ export default defineEventHandler(async (event) => {
       .eq("parent_id", categoryId);
     const childIds = (children ?? []).map((c) => c.id);
     categoryIds = [categoryId, ...childIds];
+  }
+
+  // Tag filter — resolve to a set of book_ids upfront so the inner builder
+  // stays sync.
+  let tagFilterIds: string[] | null = null;
+  if (tagId) {
+    const { data, error } = await supabase
+      .from("book_tags")
+      .select("book_id")
+      .eq("tag_id", tagId);
+    if (error) throw createError({ statusCode: 500, message: error.message });
+    tagFilterIds = (data ?? []).map((r) => r.book_id);
+    if (!tagFilterIds.length) return []; // tag has no books → empty result
   }
 
   // Page through both tables — Supabase PostgREST hard-caps responses at
@@ -37,6 +50,7 @@ export default defineEventHandler(async (event) => {
         .select("id, title, author, translator, publish_place, publisher, publish_year, edition, category_id")
         .order("author");
       if (categoryIds) q = q.in("category_id", categoryIds);
+      if (tagFilterIds) q = q.in("id", tagFilterIds);
       return q;
     }),
     pageAll<{ book_id: string }>(() =>
