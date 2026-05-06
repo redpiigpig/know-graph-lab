@@ -7,24 +7,28 @@ description: Operate the Know-Graph-Lab ebook pipeline end-to-end. Use when work
 
 End-to-end pipeline that takes books from a local Drive folder all the way to the reader at `/ebook/[id]`. This file is the **operational hub** — what runs, in what order, how to monitor it, and how to recover when it breaks. For the standardization step specifically (turning EPUBs into reader-ready markdown), see the **`standardize-ebook` skill** which is the detail-level companion.
 
-## Current state (snapshot 2026-05-06)
+## Current state (snapshot 2026-05-06, late-day)
 
 | Stage | Status | Numbers |
 |---|---|---|
 | Drive scan + author/title parse | ✅ done | 1,309 books (initial sweep) |
 | **Daily new-book drop ingest** | ✅ wired into daily scheduler | `ingest_new_books.py` — see Workflow D |
 | File rename in Drive | ✅ done | all renamed to `作者，書名.ext` |
-| DB import (`ebooks` table) | ✅ rolling | 1,326 rows (1,309 initial + 17 ingested 2026-05-06) |
-| First-pass parse (text-extractable) | ✅ done | 900 parsed (478 EPUB + 422 text PDF) |
+| DB import (`ebooks` table) | ✅ rolling | 1,326 rows (492 EPUB + 834 PDF) |
+| First-pass parse (text-extractable) | ✅ done | 918 parsed (481 EPUB + 437 text PDF) |
 | mobi/azw3 → epub conversion | ✅ done | 0 remaining |
-| **OCR scanned PDFs** | 🔄 daily-scheduled | 386 queued; auto-runs 16:00 daily |
+| **OCR scanned PDFs** | 🔄 daily-scheduled | ~377 queued; auto-runs 16:00 daily (Gemini quota shared across 4 keys in one GCP project — exhausted today) |
 | Local JSONL written | ✅ done for parsed books | `G:/我的雲端硬碟/資料/電子書/_chunks/*.jsonl` |
-| R2 mirror of JSONL | ✅ done | 901 files (out of 900 parsed — 1 was duplicate) |
-| `ebook_chunks` previews in DB | ✅ ~88% | 115K rows; ~107 books need retry-failed |
+| R2 mirror of JSONL | ✅ done | mirrored on parse / OCR / standardize |
+| `ebook_chunks` previews in DB | ✅ caught up | back-fill via `repopulate_chunk_previews.py retry-failed` |
 | Frontend reads chunks | ✅ wired | `loadChunk()` from local→R2 fallback |
-| Reader v2 UI (light theme + TOC + highlights + notes panel) | ✅ done | with auto-save, error toasts |
+| Reader v2 UI (light theme + TOC + highlights + notes panel + bookshelf + tags + bookmarks) | ✅ done | with auto-save, error toasts |
 | Search by title / author / fulltext | ✅ wired | `/api/ebooks/search?mode=…` |
-| **Standardize → markdown reader format** | 🔄 in progress | 文明的歷史 + 51 哲學 books done (need re-run after volume fix) |
+| **EPUB standardize → markdown reader format** | ✅ done | 481/492 EPUBs incl. all enrichment passes |
+| **PDF standardize Plan A (lite)** | ✅ done | 437/437 text-extractable PDFs polished — s2tw, spacing collapse, publisher metadata, `page_number` preserved |
+| **PDF standardize Plan B (full)** | 📐 design only | PyMuPDF font-size-driven chapter inference — see `standardize-pdf` skill |
+| **Online metadata enrichment** | ✅ done | `enrich_book_metadata.py` filled 8 publishers + 11 publish_years on 28-book backlog (89% / 87% coverage now) |
+| **books / excerpts library** | ✅ done | `/excerpts/library`, tags, Markdown export, daily bookmark |
 
 ## Pipeline scripts overview (all in `scripts/`)
 
@@ -40,6 +44,8 @@ End-to-end pipeline that takes books from a local Drive folder all the way to th
 | `ocr_with_qwen.py` | 3 — OCR (fallback, **disabled**) | Local Qwen2.5-VL via Ollama. Code intact; bat trigger commented out — vision compute graph (6.7 GiB) won't fit on 4050 Mobile (6 GiB). Re-enable on better GPU. See Workflow A-2 |
 | `run_ocr_daily.bat` + Task Scheduler | (orchestrator) | Windows daily runner — runs **ingest → parse → OCR (gemini only)** in sequence |
 | `standardize_ebook.py` | 4 — standardize | Re-parse EPUB → markdown chunks, s2tw, drop boilerplate (see `standardize-ebook` skill) |
+| `standardize_pdf_lite.py` | 4 — standardize | Plan A polish over per-page JSONL: s2tw + collapse spacing + extract publisher metadata. `page_number` preserved exactly. See `standardize-pdf` skill |
+| `enrich_book_metadata.py` | 4b — backfill | Online lookup (Google Books → Open Library) to fill missing `publisher` / `publish_year` on `books` rows. Idempotent; respects `metadata_locked`. `status` / `run [--limit N] [--dry-run] [--book <id>]` / `probe --book <id>` |
 | `repopulate_chunk_previews.py` | 5 — DB | Back-fill `ebook_chunks` previews from local JSONL. `run` / `retry-failed` / `status` |
 | `upload_chunks_to_r2.py` | 5 — R2 | One-shot bulk uploader for any books whose JSONL isn't on R2 yet |
 | `offload_chunks.py` | (history) | Did the original DB-truncate after JSONL offload. Don't run again |
@@ -446,44 +452,50 @@ click. No backend involved (built client-side from already-loaded
 
 ## Pending TODOs
 
-### Online lookup for books missing publisher / publish_year
+### Online metadata enrichment — ✅ shipped 2026-05-06
 
-`_extract_publisher_metadata()` in standardize_ebook only fills metadata
-that the EPUB's 版權頁 actually contains. Many books — especially Chinese
-originals without a structured copyright page, or older EPUBs — leave
-fields null. Snapshot after the latest re-run (2026-05-06):
+`scripts/enrich_book_metadata.py` reads `books` rows where
+`publisher IS NULL OR publish_year IS NULL` and tries Google Books
+(primary for CJK titles) → Open Library. Each candidate must pass
+title-match + author-match; subtitle-stripped variants are tried
+when the precise query returns nothing. Only **null** fields get
+written, and `metadata_locked = true` blocks all writes — see the
+`metadata_locked` and `metadata_source` columns added in the same
+session.
 
-| Field | Filled / total `books` rows |
-|---|---|
-| `publisher` | 101 / 123 (82%) |
-| `publish_year` | 96 / 123 (78%) |
-| `translator` | 58 / 123 (only translations have these) |
-| `original_title` / `original_author` / `original_publish_year` | 58 / 123 |
+First-pass results on the 28-book backlog:
 
-**TODO**: For books still missing `publisher` or `publish_year` after the
-extraction pass, look these up online and fill them in. Sources to try:
+| Field | Filled / total `books` rows | Δ from extraction-only baseline |
+|---|---|---|
+| `publisher` | 109 / 123 (89%) | +8 |
+| `publish_year` | 107 / 123 (87%) | +11 |
+| `translator` | 58 / 123 | (untouched — 譯者 not online-enrichable) |
+| `original_title` / `original_author` / `original_publish_year` | 58 / 123 | (untouched — same reason) |
 
-- ISBN → Open Library API (`/api/books?bibkeys=ISBN:...`) — free, has
-  publisher + first publish year
-- ISBN → Google Books API — same data, sometimes more complete
-- 國家圖書館書目資料 for Chinese books (`https://aleweb.ncl.edu.tw/`)
-- For 簡體 books: 豆瓣讀書 search by title + author (no public API but
-  scrapeable)
+Remaining 17 no-hits cluster as: article fragments (titled `〈…〉`),
+Chinese-Buddhist works thinly indexed online, and translated Western
+books whose Chinese edition is absent from Google Books while only
+the English original is present (correctly rejected — wrong publisher
+data would be worse than null). These need manual fill via the
+`/excerpts/library/[bookId]` UI.
 
-Implementation sketch when this lands:
-1. New script `scripts/enrich_book_metadata.py` reads `books` rows where
-   `publisher IS NULL OR publish_year IS NULL`
-2. Tries OpenLibrary first (most reliable, free); falls back to Google
-   Books if no hit
-3. PATCH the books row with whatever fields it found
-4. Idempotent — re-runnable, only touches null fields
-5. Manual override: a `metadata_locked` boolean column on books that
-   prevents the script from clobbering manually-edited values
+Re-run is safe:
+```bash
+python scripts/enrich_book_metadata.py status
+python scripts/enrich_book_metadata.py run                  # only nulls + unlocked
+python scripts/enrich_book_metadata.py run --book <uuid>    # single row
+python scripts/enrich_book_metadata.py probe --book <uuid>  # dump raw API responses
+```
 
-Don't bother for `translator` / `original_*` — those only apply to
-translated books and the source publisher already named them in the
-版權頁 if they ever named them anywhere. If 版權頁 didn't have them,
-online sources won't either.
+Lock a manually-edited row so this script won't ever touch its
+nulls again:
+```sql
+UPDATE books SET metadata_locked = true WHERE id = '...';
+```
+
+Optional improvement: set `GOOGLE_BOOKS_API_KEY` in `.env` for higher
+quota (anonymous tier is fine for dozens of rows; useful only if
+re-running over hundreds).
 
 ## See also
 

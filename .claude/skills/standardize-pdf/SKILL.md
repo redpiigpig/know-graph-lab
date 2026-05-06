@@ -199,17 +199,18 @@ chunks. Target script: `scripts/standardize_pdf.py`.
 
 ---
 
-## Current state (snapshot 2026-05-06)
+## Current state (snapshot 2026-05-06, late-day)
 
 | Pipeline | Books | Status |
 |---|---|---|
 | EPUB standardize | 481 / 492 | ✅ shipped, all batches re-run with rich metadata |
-| PDF Plan A (lite) | 0 / 433 parsed | ⏳ ready to run after lite script lands |
-| PDF Plan B (full) | 0 / 433 parsed | 📐 design only — separate session work |
-| PDF OCR queue | 398 books | 🔄 daily 16:00 by `ocr_with_gemini.py` |
+| PDF Plan A (lite) | 437 / 437 parsed | ✅ shipped — s2tw + spacing collapse + publisher metadata extraction; `page_number` preserved |
+| PDF Plan B (full) | 0 / 437 parsed | 📐 design only — separate session work |
+| PDF OCR queue | ~377 books | 🔄 daily 16:00 by `ocr_with_gemini.py` (all 4 keys share one GCP project quota; consider splitting across projects for parallel quota) |
 
-PDF total: 834 books, 436 parsed, 398 queued for OCR. Of the 436 parsed,
-433 have `chunk_type='page'` raw output ready for Plan A.
+PDF total: 834 books, 437 text-extractable + parsed (Plan A complete),
+~377 still queued for OCR. After OCR lands JSONL for those, Plan A is
+re-runnable across the full set in one batch.
 
 ---
 
