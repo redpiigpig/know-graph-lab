@@ -74,13 +74,14 @@ def _find_gemini_keys() -> list[str]:
     without waiting until the next-day reset."""
     raw_values: list[str] = []
     primary_names = ("GEMINI_API_KEY", "Gemini_API_Key", "gemini_api_key", "GOOGLE_API_KEY")
-    # Primary slot
+    # Primary slot (no number suffix)
     for name in primary_names:
         v = os.environ.get(name) or ENV.get(name)
         if v:
             raw_values.append(v); break
-    # Numbered slots — try _2 .. _10
-    for n in range(2, 11):
+    # Numbered slots — _1 through _10 (some users start at _1, some skip
+    # straight to _2 because the primary slot already covers "first key")
+    for n in range(1, 11):
         for base in primary_names:
             v = os.environ.get(f"{base}_{n}") or ENV.get(f"{base}_{n}")
             if v:
