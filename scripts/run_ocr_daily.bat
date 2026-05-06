@@ -28,7 +28,16 @@ python scripts\parse_worker.py run --limit 30 >> "%LOGFILE%" 2>&1
 REM Step 3: OCR scanned PDFs until daily Gemini quota exhausted
 echo --- ocr_with_gemini --- >> "%LOGFILE%"
 python scripts\ocr_with_gemini.py run --rpm 8 >> "%LOGFILE%" 2>&1
+set GEMINI_EXIT=%ERRORLEVEL%
 
-echo === Daily run ended %DATE% %TIME% (exit %ERRORLEVEL%) === >> "%LOGFILE%"
+REM Step 3b: if Gemini hit daily quota (exit 2), fall back to local Qwen2.5-VL.
+REM Qwen is ~10-30s/page on the 4050 mobile, so we cap at --limit 5 to
+REM keep one daily run finite. Tomorrow Gemini comes back with fresh quota.
+if "%GEMINI_EXIT%"=="2" (
+    echo --- gemini quota hit, falling back to ocr_with_qwen --- >> "%LOGFILE%"
+    python scripts\ocr_with_qwen.py run --limit 5 >> "%LOGFILE%" 2>&1
+)
+
+echo === Daily run ended %DATE% %TIME% (gemini-exit %GEMINI_EXIT%) === >> "%LOGFILE%"
 
 endlocal

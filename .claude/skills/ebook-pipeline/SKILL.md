@@ -36,8 +36,9 @@ End-to-end pipeline that takes books from a local Drive folder all the way to th
 | `ingest_new_books.py` | 1 — ingest (**daily**) | Watches `.claude/skills/ebook-pipeline/new-book/`. Parses filename, classifies via Gemini (with keyword fallback), inserts ebooks row, moves file to `G:/.../電子書/{category}/`. See Workflow D |
 | `parse_worker.py` | 2 — parse | **Main parser** (PyMuPDF + ebooklib). `init` / `run [--limit N] [--retry-errors]` / `status` |
 | `convert_mobi_to_epub.py` | 2 — parse | Calibre wrapper for mobi/azw3 → epub. Already done; keep for new files |
-| `ocr_with_gemini.py` | 3 — OCR | Gemini Vision OCR for scanned PDFs. Pushes JSONL to R2 inline |
-| `run_ocr_daily.bat` + Task Scheduler | (orchestrator) | Windows daily runner — now runs **ingest → parse → OCR** in sequence |
+| `ocr_with_gemini.py` | 3 — OCR (primary) | Gemini Vision OCR for scanned PDFs. Pushes JSONL to R2 inline. Exits with code 2 when daily quota hits (signals fallback) |
+| `ocr_with_qwen.py` | 3 — OCR (fallback) | Local Qwen2.5-VL via Ollama, page-by-page rendering. Same DB/JSONL/R2 contract as Gemini script. Triggered by bat only when Gemini exits 2 |
+| `run_ocr_daily.bat` + Task Scheduler | (orchestrator) | Windows daily runner — now runs **ingest → parse → OCR (gemini → qwen on 429)** in sequence |
 | `standardize_ebook.py` | 4 — standardize | Re-parse EPUB → markdown chunks, s2tw, drop boilerplate (see `standardize-ebook` skill) |
 | `repopulate_chunk_previews.py` | 5 — DB | Back-fill `ebook_chunks` previews from local JSONL. `run` / `retry-failed` / `status` |
 | `upload_chunks_to_r2.py` | 5 — R2 | One-shot bulk uploader for any books whose JSONL isn't on R2 yet |
@@ -107,6 +108,8 @@ annotations (
 
 **Rate limits to respect**: Gemini 2.5 Flash free tier — 10 RPM, 250 RPD, 250K TPM. Default `--rpm 8` leaves headroom. Daily quota resets at midnight Pacific Time (≈ Taipei 16:00).
 
+**Quota-exhaustion fallback**: when Gemini returns 429 / `RESOURCE_EXHAUSTED`, [`ocr_with_gemini.py`](../../../scripts/ocr_with_gemini.py) prints "Quota/rate-limit hit. Stopping." and exits with **code 2**. The daily bat catches that exit code and runs [`ocr_with_qwen.py`](../../../scripts/ocr_with_qwen.py) for `--limit 5` books before giving up — see Workflow A-2 below. Tomorrow's daily run starts with Gemini again on the fresh quota.
+
 ### Daily scheduler (set up + running)
 
 The bat is now a **3-stage daily runner**: `ingest_new_books → parse_worker → ocr_with_gemini`.
@@ -141,8 +144,57 @@ python scripts/ocr_with_gemini.py run --model gemini-2.5-flash-lite --rpm 12  # 
 
 - `parse_error: 'no extractable text'` → still in queue (initial failure from `parse_worker`, picked up by `ocr_with_gemini`)
 - `parse_error` starts with `OCR ok but R2 push failed:` → OCR succeeded but R2 write failed; book NOT marked parsed; next OCR run re-tries (cheap — JSONL was kept locally)
-- `parse_error` starts with `OCR:` → permanent OCR failure (model returned 0 usable pages, file too big, etc.). Won't auto-retry; investigate manually.
-- Quota stop: script exits cleanly with "Quota/rate-limit hit. Stopping. Re-run later." — tomorrow's scheduled run picks up
+- `parse_error` starts with `OCR:` → permanent Gemini failure (model returned 0 usable pages, file too big, etc.). Won't auto-retry; investigate manually.
+- `parse_error` starts with `Qwen-OCR:` → permanent Qwen failure (similar; Qwen returned no text, or too many per-page failures).
+- Quota stop: script exits with code 2, "Quota/rate-limit hit. Stopping." → bat falls back to `ocr_with_qwen.py --limit 5` (Workflow A-2)
+- `parse_error: 'file not found: ...'` → DB row references a Drive path that doesn't exist anymore (Drive sync disconnected, file moved/deleted, or rename divergence). Book is removed from OCR queue automatically; investigate by checking if `G:\` is mounted
+
+---
+
+## Workflow A-2 — Local Qwen2.5-VL OCR fallback
+
+When Gemini returns 429, [`scripts/ocr_with_qwen.py`](../../../scripts/ocr_with_qwen.py) takes over for the rest of the daily run. Architecture:
+
+1. PyMuPDF renders each PDF page at DPI 150 → JPEG bytes
+2. POST image + Chinese-aware OCR prompt to Ollama `/api/generate` (model `qwen2.5vl:3b` by default)
+3. Aggregate non-empty pages → same JSONL / R2 / DB-preview path as the Gemini script (helpers imported from `ocr_with_gemini`)
+
+### Why limit 5 per run
+
+Per-page Qwen latency on the dev machine (RTX 4050 Mobile, 6 GB VRAM) is ~10-30s. A 200-page book = 30-100 minutes. Setting `--limit 5` in the bat caps a daily fallback session at a few hours and keeps the laptop usable. The 391-book backlog is **not** meant to be cleared by Qwen — Gemini handles 250 books/day on the free tier when quota holds, so backlog converges in a couple of normal days. Qwen exists so progress doesn't completely stall when Gemini's down.
+
+### Model choice
+
+| Model | VRAM (q4) | Chinese OCR quality | Notes |
+|---|---|---|---|
+| `qwen2.5vl:3b` (**default**) | ~3 GB | Decent — handles modern simplified/traditional well | Fits comfortably on 4050 Mobile |
+| `qwen2.5vl:7b` | ~5-6 GB | Notably better, especially on dense traditional text | Tight on 6 GB; may partially CPU-offload |
+| Llama 3.2 Vision | — | **Avoid** — English-heavy training, weak on 繁體 | |
+
+Override with `--model qwen2.5vl:7b` if VRAM permits (close other GPU consumers first).
+
+### Manual operations
+
+```bash
+# Check Ollama is up + model is pulled
+ollama list | grep qwen2.5vl
+
+# How many books would Qwen target?
+python scripts/ocr_with_qwen.py status
+
+# Run a small batch (default --limit 5)
+python scripts/ocr_with_qwen.py run
+
+# Force a specific model / DPI
+python scripts/ocr_with_qwen.py run --model qwen2.5vl:7b --dpi 200 --limit 3
+```
+
+### Failure modes
+
+- Ollama daemon not running → script exits 1 with `❌ Ollama not reachable`. Launch the Ollama desktop app or run `ollama serve`.
+- Model not pulled → `ollama pull qwen2.5vl:3b`.
+- Per-page errors > 25% of pages → book is marked `parse_error: 'Qwen-OCR: too many page failures'` (won't auto-retry; investigate the PDF).
+- VRAM OOM mid-run → fall back to `--model qwen2.5vl:3b` or close GPU-using apps.
 
 ---
 
@@ -265,7 +317,13 @@ Search returns no fulltext hits but title/author work?
 
 A scanned PDF still shows "此頁無內容" 12+ hours after OCR scheduled?
   → Check scripts/logs/ocr_YYYY-MM-DD.log for errors.
-  → If quota hit, just wait — tomorrow's run picks up.
+  → If quota hit and bat fell back to Qwen, look for "--- gemini quota hit, falling back to ocr_with_qwen ---" line.
+  → If quota hit BUT Qwen also failed, ensure Ollama daemon is running and qwen2.5vl:3b is pulled.
+  → Otherwise: just wait — tomorrow's run picks up.
+
+Many books in OCR queue showing "file not found"?
+  → Probably G: drive (Drive sync) is disconnected. Check: `Get-PSDrive -PSProvider FileSystem` should list G:.
+  → Re-launch Google Drive client. The "file not found" parse_errors stay until you manually flip them back to "no extractable text" once Drive is back.
 
 A new book dropped into new-book/ never showed up in the reader?
   → Check scripts/logs/ocr_YYYY-MM-DD.log "--- ingest_new_books ---" section.

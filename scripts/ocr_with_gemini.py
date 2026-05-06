@@ -413,6 +413,7 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False):
 
     ok = 0
     failed = []
+    quota_hit = False
     for i, b in enumerate(targets, 1):
         src = Path(b["file_path"])
         if not src.exists():
@@ -442,6 +443,7 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False):
                 # Transient error — don't update DB, leave parse_error as-is so it's retried next run
                 if result.get("stop"):
                     print("⚠ Quota/rate-limit hit. Stopping. Re-run later.")
+                    quota_hit = True
                     break
             else:
                 update_book_error(b["id"], f"OCR: {err}")
@@ -451,6 +453,9 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False):
         print("First failures:")
         for n, e in failed[:10]:
             print(f"  - {n[:50]}  {e[:100]}")
+    # Exit code 2 = quota exhausted; the daily bat uses this to switch to Qwen fallback.
+    if quota_hit:
+        sys.exit(2)
 
 
 def main():
