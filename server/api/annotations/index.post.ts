@@ -20,6 +20,7 @@ export default defineEventHandler(async (event) => {
     save_as_excerpt?: boolean;
     excerpt_title?: string;
     page_label?: string;
+    chapter?: string;
   };
 
   if (!body.ebook_id) throw createError({ statusCode: 400, message: "ebook_id required" });
@@ -56,6 +57,7 @@ export default defineEventHandler(async (event) => {
         content: body.selected_text,
         title: body.excerpt_title || null,
         book_id: bookId,
+        chapter: body.chapter || null,
         page_number: body.page_label ?? null,
       })
       .select("id")

@@ -969,7 +969,10 @@ async function confirmSaveExcerpt() {
     color: excerptModal.value.color,
     save_as_excerpt: true,
     excerpt_title: excerptModal.value.title.trim(),
-    page_label: pageChapter.value ?? `第 ${currentPage.value} 段`,
+    // chapter goes to excerpts.chapter so the book page groups by it;
+    // page_label is human-readable section reference for the citation line.
+    chapter: pageChapter.value ?? null,
+    page_label: `第 ${currentPage.value} 段`,
   });
   excerptModal.value.saving = false;
   if (newAnno) {
