@@ -63,20 +63,43 @@ PREVIEW_LEN = 200
 DEFAULT_MODEL = "gemini-2.5-flash"
 DEFAULT_RPM = 8  # under 10 RPM limit on 2.5 flash to leave headroom
 
-def _find_gemini_key():
-    # Accept either casing; try env first, then .env file
-    for name in ("GEMINI_API_KEY", "Gemini_API_Key", "gemini_api_key", "GOOGLE_API_KEY"):
-        v = os.environ.get(name)
-        if v: return v
-    for name in ("GEMINI_API_KEY", "Gemini_API_Key", "gemini_api_key", "GOOGLE_API_KEY"):
-        v = ENV.get(name)
-        if v: return v
-    return None
+def _find_gemini_keys() -> list[str]:
+    """Return ALL configured Gemini keys (in priority order, dedup'd).
 
-API_KEY = _find_gemini_key()
-if not API_KEY:
-    # check env at run-time only; status command doesn't need it
-    pass
+    Supports two formats interchangeably:
+      - Comma-separated single var:  Gemini_API_Key=key1,key2,key3
+      - Numbered vars:               Gemini_API_Key, GEMINI_API_KEY_2, GEMINI_API_KEY_3
+    Either casing accepted. The free-tier daily quota is per-key, so
+    rotating keys lets the OCR run keep going past one key's limit
+    without waiting until the next-day reset."""
+    raw_values: list[str] = []
+    primary_names = ("GEMINI_API_KEY", "Gemini_API_Key", "gemini_api_key", "GOOGLE_API_KEY")
+    # Primary slot
+    for name in primary_names:
+        v = os.environ.get(name) or ENV.get(name)
+        if v:
+            raw_values.append(v); break
+    # Numbered slots — try _2 .. _10
+    for n in range(2, 11):
+        for base in primary_names:
+            v = os.environ.get(f"{base}_{n}") or ENV.get(f"{base}_{n}")
+            if v:
+                raw_values.append(v); break
+
+    # Split each raw value on comma (in case the user put multiple keys
+    # in one slot) and dedupe while preserving order.
+    keys: list[str] = []
+    seen = set()
+    for raw in raw_values:
+        for piece in raw.split(","):
+            k = piece.strip()
+            if k and k not in seen:
+                seen.add(k); keys.append(k)
+    return keys
+
+
+API_KEYS = _find_gemini_keys()
+API_KEY = API_KEYS[0] if API_KEYS else None  # kept for backward compat
 
 
 def fetch_ocr_targets(sort_by_size=True):
@@ -391,14 +414,16 @@ def cmd_status():
 
 
 def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False):
-    if not API_KEY:
+    if not API_KEYS:
         print("❌ Missing GEMINI_API_KEY. Get one at https://aistudio.google.com/app/apikey",
               file=sys.stderr)
-        print("   Then add to .env:  GEMINI_API_KEY=...", file=sys.stderr)
+        print("   Then add to .env:  GEMINI_API_KEY=key1,key2,key3  (comma for rotation)",
+              file=sys.stderr)
         sys.exit(1)
 
     targets = fetch_ocr_targets()
     print(f"OCR candidates: {len(targets)}")
+    print(f"Available Gemini keys: {len(API_KEYS)} (will rotate on quota)")
     if limit:
         targets = targets[:limit]
 
@@ -407,9 +432,23 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False):
             print(f"  {b['title'][:60]}  ({b['file_path']})")
         return
 
-    client = genai.Client(api_key=API_KEY)
+    # Key rotation state — start with first key, advance only when quota hit.
+    key_idx = 0
+    client = genai.Client(api_key=API_KEYS[key_idx])
     min_gap = 60.0 / rpm  # seconds between requests
     last_call = 0.0
+
+    def try_next_key() -> bool:
+        """Advance to the next available Gemini key. Returns True if we
+        switched, False if all keys are exhausted."""
+        nonlocal key_idx, client
+        if key_idx + 1 >= len(API_KEYS):
+            return False
+        key_idx += 1
+        client = genai.Client(api_key=API_KEYS[key_idx])
+        print(f"  ⟳ Quota hit on key #{key_idx}; switched to key #{key_idx + 1} of {len(API_KEYS)}",
+              flush=True)
+        return True
 
     ok = 0
     failed = []
@@ -434,17 +473,28 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False):
               end="", flush=True)
 
         result = process_one(client, b, src, model)
+        # If quota'd, rotate keys and retry the SAME book once per remaining key.
+        # The book that triggered the quota is otherwise lost for this run.
+        while result.get("status") != "ok" and result.get("stop"):
+            if not try_next_key():
+                print("⚠ All Gemini keys exhausted. Stopping. Re-run later.")
+                quota_hit = True
+                break
+            # Reset the inter-call gap so the new key gets its first request promptly
+            last_call = time.time()
+            result = process_one(client, b, src, model)
+        if quota_hit:
+            failed.append((b["title"], "all keys quota-exhausted"))
+            break
+
         if result["status"] == "ok":
             ok += 1
         else:
             err = result["error"]
             failed.append((b["title"], err))
             if result["transient"]:
-                # Transient error — don't update DB, leave parse_error as-is so it's retried next run
-                if result.get("stop"):
-                    print("⚠ Quota/rate-limit hit. Stopping. Re-run later.")
-                    quota_hit = True
-                    break
+                # Transient (non-quota) error — leave parse_error as-is so next run retries
+                pass
             else:
                 update_book_error(b["id"], f"OCR: {err}")
 
