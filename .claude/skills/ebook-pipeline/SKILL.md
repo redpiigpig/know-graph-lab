@@ -444,6 +444,47 @@ Copies to clipboard AND triggers a `<book-title>.md` download in one
 click. No backend involved (built client-side from already-loaded
 `book.value` + `chapterGroups`).
 
+## Pending TODOs
+
+### Online lookup for books missing publisher / publish_year
+
+`_extract_publisher_metadata()` in standardize_ebook only fills metadata
+that the EPUB's 版權頁 actually contains. Many books — especially Chinese
+originals without a structured copyright page, or older EPUBs — leave
+fields null. Snapshot after the latest re-run (2026-05-06):
+
+| Field | Filled / total `books` rows |
+|---|---|
+| `publisher` | 101 / 123 (82%) |
+| `publish_year` | 96 / 123 (78%) |
+| `translator` | 58 / 123 (only translations have these) |
+| `original_title` / `original_author` / `original_publish_year` | 58 / 123 |
+
+**TODO**: For books still missing `publisher` or `publish_year` after the
+extraction pass, look these up online and fill them in. Sources to try:
+
+- ISBN → Open Library API (`/api/books?bibkeys=ISBN:...`) — free, has
+  publisher + first publish year
+- ISBN → Google Books API — same data, sometimes more complete
+- 國家圖書館書目資料 for Chinese books (`https://aleweb.ncl.edu.tw/`)
+- For 簡體 books: 豆瓣讀書 search by title + author (no public API but
+  scrapeable)
+
+Implementation sketch when this lands:
+1. New script `scripts/enrich_book_metadata.py` reads `books` rows where
+   `publisher IS NULL OR publish_year IS NULL`
+2. Tries OpenLibrary first (most reliable, free); falls back to Google
+   Books if no hit
+3. PATCH the books row with whatever fields it found
+4. Idempotent — re-runnable, only touches null fields
+5. Manual override: a `metadata_locked` boolean column on books that
+   prevents the script from clobbering manually-edited values
+
+Don't bother for `translator` / `original_*` — those only apply to
+translated books and the source publisher already named them in the
+版權頁 if they ever named them anywhere. If 版權頁 didn't have them,
+online sources won't either.
+
 ## See also
 
 - [`standardize-ebook` SKILL](../standardize-ebook/SKILL.md) — detail-level skill for the markdown standardize pipeline
