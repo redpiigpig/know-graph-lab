@@ -30,13 +30,14 @@ echo --- ocr_with_gemini --- >> "%LOGFILE%"
 python scripts\ocr_with_gemini.py run --rpm 8 >> "%LOGFILE%" 2>&1
 set GEMINI_EXIT=%ERRORLEVEL%
 
-REM Step 3b: if Gemini hit daily quota (exit 2), fall back to local Qwen2.5-VL.
-REM Qwen is ~10-30s/page on the 4050 mobile, so we cap at --limit 5 to
-REM keep one daily run finite. Tomorrow Gemini comes back with fresh quota.
-if "%GEMINI_EXIT%"=="2" (
-    echo --- gemini quota hit, falling back to ocr_with_qwen --- >> "%LOGFILE%"
-    python scripts\ocr_with_qwen.py run --limit 5 >> "%LOGFILE%" 2>&1
-)
+REM Step 3b: Qwen fallback — DISABLED on this laptop (RTX 4050 Mobile, 6GB VRAM).
+REM qwen2.5vl:3b's vision compute graph needs ~6.7 GiB, doesn't fit, drops to
+REM CPU at ~1 tok/min — unusable for OCR. Plumbing kept (gemini exits 2,
+REM ocr_with_qwen.py exists) so future hardware can re-enable by un-commenting.
+REM if "%GEMINI_EXIT%"=="2" (
+REM     echo --- gemini quota hit, falling back to ocr_with_qwen --- >> "%LOGFILE%"
+REM     python scripts\ocr_with_qwen.py run --limit 5 >> "%LOGFILE%" 2>&1
+REM )
 
 echo === Daily run ended %DATE% %TIME% (gemini-exit %GEMINI_EXIT%) === >> "%LOGFILE%"
 
