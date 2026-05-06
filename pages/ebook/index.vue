@@ -7,16 +7,10 @@
           <span class="text-gray-600">·</span>
           <span class="font-semibold text-sm">電子圖書館</span>
         </div>
-        <div class="flex items-center gap-2">
-          <NuxtLink to="/bookshelf"
-            class="px-3 py-1.5 bg-gray-800 hover:bg-gray-700 rounded-lg text-sm transition flex items-center gap-1.5">
-            <span>📚</span><span>我的書櫃</span>
-          </NuxtLink>
-          <button @click="showUpload = true"
-            class="px-4 py-1.5 bg-blue-600 hover:bg-blue-500 rounded-lg text-sm transition">
-            + 上傳電子書
-          </button>
-        </div>
+        <button @click="showUpload = true"
+          class="px-4 py-1.5 bg-blue-600 hover:bg-blue-500 rounded-lg text-sm transition">
+          + 上傳電子書
+        </button>
       </div>
     </nav>
 
@@ -90,6 +84,25 @@
               </template>
             </div>
           </div>
+        </nav>
+
+        <!-- 我的書櫃 — separate sidebar section, URL-driven like categories -->
+        <p class="text-xs text-gray-500 uppercase tracking-wider mt-6 mb-2 px-2">我的書櫃</p>
+        <nav class="space-y-0.5 pb-8">
+          <button @click="selectShelf('reading')"
+            :class="['w-full text-left px-2 py-1.5 rounded-lg text-sm transition flex items-center gap-2',
+              activeShelf === 'reading' ? 'bg-blue-900/60 text-blue-200' : 'text-gray-400 hover:bg-gray-800 hover:text-white']">
+            <span>📖</span>
+            <span class="flex-1">閱讀中</span>
+            <span class="text-xs text-gray-600">{{ shelfCounts.reading }}</span>
+          </button>
+          <button @click="selectShelf('read')"
+            :class="['w-full text-left px-2 py-1.5 rounded-lg text-sm transition flex items-center gap-2',
+              activeShelf === 'read' ? 'bg-emerald-900/60 text-emerald-200' : 'text-gray-400 hover:bg-gray-800 hover:text-white']">
+            <span>✅</span>
+            <span class="flex-1">已讀</span>
+            <span class="text-xs text-gray-600">{{ shelfCounts.read }}</span>
+          </button>
         </nav>
       </aside>
 
@@ -328,6 +341,7 @@ const CATEGORY_TREE: CategoryDef[] = [
 
 const supabase = useSupabaseClient();
 const router = useRouter();
+const route = useRoute();
 
 async function getToken() {
   const { data: { session } } = await supabase.auth.getSession();
@@ -335,50 +349,67 @@ async function getToken() {
   return session.access_token;
 }
 
-// ── 側欄導航狀態 ──
-const expandedCategory = ref("")
-const expandedGroup = ref("")
-const activeCategory = ref("")
-const activeSubcategory = ref("")
+// ── Sidebar state — driven by URL query so each view has its own URL
+//    (?category=哲學, ?subcategory=哲學/近代哲學, ?shelf=reading|read).
+//    Browser back/forward + bookmarks just work.
+const activeCategory    = computed(() => (route.query.category    as string) || "");
+const activeSubcategory = computed(() => (route.query.subcategory as string) || "");
+const activeShelf       = computed(() => (route.query.shelf       as "reading" | "read" | "") || "");
+
+// Expansion state stays local — purely a UI toggle, no need for URL.
+const expandedCategory = ref("");
+const expandedGroup = ref("");
 
 const activeLabel = computed(() => {
-  if (!activeCategory.value) return "📚 全部"
-  const cat = CATEGORY_TREE.find(c => c.value === activeCategory.value)
-  if (!activeSubcategory.value) return `${cat?.icon} ${activeCategory.value}`
-  return `${cat?.icon} ${activeCategory.value} › ${activeSubcategory.value.split("/").join(" › ")}`
-})
+  if (activeShelf.value === "reading") return "📖 閱讀中";
+  if (activeShelf.value === "read")    return "✅ 已讀";
+  if (!activeCategory.value) return "📚 全部";
+  const cat = CATEGORY_TREE.find(c => c.value === activeCategory.value);
+  if (!activeSubcategory.value) return `${cat?.icon} ${activeCategory.value}`;
+  return `${cat?.icon} ${activeCategory.value} › ${activeSubcategory.value.split("/").join(" › ")}`;
+});
+
+// Push a new query and let the route watcher reload data.
+function navigate(query: Record<string, string | undefined>) {
+  // Strip undefined / empty so the URL stays clean (?category= → no key)
+  const clean: Record<string, string> = {};
+  for (const [k, v] of Object.entries(query)) {
+    if (v) clean[k] = v;
+  }
+  router.push({ path: "/ebook", query: clean });
+}
 
 function selectAll() {
-  activeCategory.value = ""
-  activeSubcategory.value = ""
-  expandedCategory.value = ""
-  expandedGroup.value = ""
-  clearSearch()
-  loadEbooks()
+  expandedCategory.value = "";
+  expandedGroup.value = "";
+  clearSearch();
+  navigate({});
 }
 
 function clickCategory(cat: CategoryDef) {
-  activeCategory.value = cat.value
-  activeSubcategory.value = ""
-  expandedCategory.value = expandedCategory.value === cat.value ? "" : cat.value
-  expandedGroup.value = ""
-  clearSearch()
-  loadEbooks()
+  // Toggle expansion, but keep the category selected.
+  expandedCategory.value = expandedCategory.value === cat.value ? "" : cat.value;
+  expandedGroup.value = "";
+  clearSearch();
+  navigate({ category: cat.value });
 }
 
 function clickGroup(catValue: string, child: SubGroup) {
-  activeCategory.value = catValue
-  activeSubcategory.value = child.group
-  expandedGroup.value = expandedGroup.value === child.group ? "" : child.group
-  clearSearch()
-  loadEbooks()
+  expandedGroup.value = expandedGroup.value === child.group ? "" : child.group;
+  clearSearch();
+  navigate({ category: catValue, subcategory: child.group });
 }
 
 function selectSub(catValue: string, sub: string) {
-  activeCategory.value = catValue
-  activeSubcategory.value = sub
-  clearSearch()
-  loadEbooks()
+  clearSearch();
+  navigate({ category: catValue, subcategory: sub });
+}
+
+function selectShelf(which: "reading" | "read") {
+  expandedCategory.value = "";
+  expandedGroup.value = "";
+  clearSearch();
+  navigate({ shelf: which });
 }
 
 // ── 資料 ──
@@ -439,13 +470,41 @@ function escapeHtml(s: string): string {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
-async function loadEbooks() {
-  loading.value = true;
+// Bookshelf — loaded once; powers both the sidebar counts and the inline
+// 「閱讀中／已讀」 listings.
+const bookshelfItems = ref<Array<{ status: "reading" | "read"; updated_at: string; latest_bookmark_at: string | null; ebook: any }>>([]);
+const shelfCounts = computed(() => ({
+  reading: bookshelfItems.value.filter(i => i.status === "reading").length,
+  read:    bookshelfItems.value.filter(i => i.status === "read").length,
+}));
+
+async function loadBookshelf() {
   const token = await getToken(); if (!token) return;
-  const params = new URLSearchParams()
-  if (activeCategory.value) params.set("category", activeCategory.value)
-  if (activeSubcategory.value) params.set("subcategory", activeSubcategory.value)
-  const qs = params.size ? "?" + params.toString() : ""
+  bookshelfItems.value = await $fetch<any[]>("/api/me/bookshelf", {
+    headers: { Authorization: `Bearer ${token}` },
+  }).catch(() => []);
+}
+
+async function loadBooks() {
+  loading.value = true;
+
+  // Shelf views derive from the already-loaded bookshelf list — no extra
+  // request, and the sidebar counts always stay in sync with the grid.
+  if (activeShelf.value) {
+    const want = activeShelf.value;
+    ebooks.value = bookshelfItems.value
+      .filter(i => i.status === want)
+      .map(i => ({ ...i.ebook, _shelf_updated_at: i.updated_at, _bookmark_at: i.latest_bookmark_at }));
+    loading.value = false;
+    return;
+  }
+
+  // Default: category-filtered listing from /api/ebooks.
+  const token = await getToken(); if (!token) return;
+  const params = new URLSearchParams();
+  if (activeCategory.value)    params.set("category",    activeCategory.value);
+  if (activeSubcategory.value) params.set("subcategory", activeSubcategory.value);
+  const qs = params.size ? "?" + params.toString() : "";
   ebooks.value = await $fetch<any[]>(`/api/ebooks${qs}`, {
     headers: { Authorization: `Bearer ${token}` },
   }).catch(() => []);
@@ -540,7 +599,7 @@ async function doUpload() {
     showUpload.value = false;
     uploadFile.value = null; uploadTitle.value = ""; uploadAuthor.value = "";
     uploadCategory.value = ""; uploadSubcategory.value = ""; uploadSubSubcategory.value = "";
-    await loadEbooks();
+    await Promise.all([loadBookshelf(), loadBooks()]);
     router.push(`/ebook/${result.ebook_id}`);
   } catch (e: any) {
     uploadError.value = e.data?.message ?? e.message ?? "上傳失敗";
@@ -548,6 +607,26 @@ async function doUpload() {
   uploading.value = false;
 }
 
-onMounted(loadEbooks);
+// Auto-expand the active category on first load so the active subcategory
+// chip is visible without an extra click.
+function syncExpansionFromRoute() {
+  if (activeCategory.value) expandedCategory.value = activeCategory.value;
+  if (activeSubcategory.value && activeSubcategory.value.includes("/")) {
+    expandedGroup.value = activeSubcategory.value.split("/")[0];
+  }
+}
+
+// Re-render the grid whenever the URL changes (browser back/forward, query
+// edits, or our own navigate() pushes).
+watch(
+  () => [route.query.category, route.query.subcategory, route.query.shelf],
+  () => { syncExpansionFromRoute(); loadBooks(); },
+);
+
+onMounted(async () => {
+  syncExpansionFromRoute();
+  await loadBookshelf();   // populate counts before first paint of the grid
+  loadBooks();
+});
 useHead({ title: "電子圖書館 — Know Graph Lab" });
 </script>
