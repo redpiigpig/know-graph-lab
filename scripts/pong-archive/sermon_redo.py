@@ -248,9 +248,19 @@ def cmd_status(txt_file: Path) -> None:
             print(f"    {e.date}  {e.title}")
 
 
-def cmd_prepare(txt_file: Path, target_date: str | None) -> None:
+def cmd_prepare(txt_file: Path, target_date: str | None, target_youtube_id: str | None = None) -> None:
     entries = parse_queue(txt_file)
-    if target_date:
+    if target_youtube_id:
+        # Disambiguate by youtube_id (used for Part 1 / Part 2 same-date entries)
+        candidates = [e for e in entries if extract_youtube_id(e.url) == target_youtube_id]
+        if not candidates:
+            print(f"[error] youtube_id {target_youtube_id} not found in {txt_file}", file=sys.stderr)
+            sys.exit(2)
+        entry = candidates[0]
+        if entry.status == "skip":
+            print(f"[error] {entry.date}/{target_youtube_id} is marked 別人 — refusing to process", file=sys.stderr)
+            sys.exit(2)
+    elif target_date:
         # Prefer pending entries when there are duplicates on the same date
         candidates = [e for e in entries if e.date == target_date and e.status == "pending"]
         if not candidates:
@@ -337,11 +347,14 @@ def cmd_prepare(txt_file: Path, target_date: str | None) -> None:
     }, ensure_ascii=False))
 
 
-def cmd_commit(txt_file: Path, date: str, clean_file: Path) -> None:
+def cmd_commit(txt_file: Path, date: str, clean_file: Path, target_youtube_id: str | None = None) -> None:
     entries = parse_queue(txt_file)
-    # Prefer the first pending entry for this date; fall back to any match.
-    pending_matches = [e for e in entries if e.date == date and e.status == "pending"]
-    matches = pending_matches or [e for e in entries if e.date == date]
+    if target_youtube_id:
+        matches = [e for e in entries if extract_youtube_id(e.url) == target_youtube_id]
+    else:
+        # Prefer the first pending entry for this date; fall back to any match.
+        pending_matches = [e for e in entries if e.date == date and e.status == "pending"]
+        matches = pending_matches or [e for e in entries if e.date == date]
     if not matches:
         print(f"[error] date {date} not found in {txt_file}", file=sys.stderr)
         sys.exit(2)
@@ -392,19 +405,21 @@ def main() -> None:
     s = sub.add_parser("prepare")
     s.add_argument("txt_file", type=Path)
     s.add_argument("--date", help="Specific YYYY-MM-DD (default: next pending)")
+    s.add_argument("--youtube-id", help="Pick a specific entry by 11-char YouTube ID (used for Part 1/Part 2 disambiguation)")
 
     s = sub.add_parser("commit")
     s.add_argument("txt_file", type=Path)
     s.add_argument("--date", required=True)
     s.add_argument("--clean-file", required=True, type=Path)
+    s.add_argument("--youtube-id", help="Disambiguate which entry to commit on a multi-entry date")
 
     args = p.parse_args()
     if args.cmd == "status":
         cmd_status(args.txt_file)
     elif args.cmd == "prepare":
-        cmd_prepare(args.txt_file, args.date)
+        cmd_prepare(args.txt_file, args.date, args.youtube_id)
     elif args.cmd == "commit":
-        cmd_commit(args.txt_file, args.date, args.clean_file)
+        cmd_commit(args.txt_file, args.date, args.clean_file, args.youtube_id)
 
 
 if __name__ == "__main__":

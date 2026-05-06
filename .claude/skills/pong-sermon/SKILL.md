@@ -27,6 +27,18 @@ The Whisper output alone is not good enough — it has no punctuation, mixed sim
 
 ## Queue markers in the txt files
 
+The canonical format is **header markers** — one marker line per entry, then the title line, then the URL, separated by blank lines:
+
+```
+# ⏳ 未完成
+2015-01-11 主日證道
+https://www.youtube.com/watch?v=AYlMJhYzk7I
+
+# ⛔ 別人
+2015-03-29 主日證道
+https://www.youtube.com/watch?v=HTkBR9ST37c
+```
+
 | Marker | Meaning | Action |
 |---|---|---|
 | `# ✅ 完成` | Already transcribed + cleaned + in DB | Skip |
@@ -34,6 +46,15 @@ The Whisper output alone is not good enough — it has no punctuation, mixed sim
 | `# ⛔ 別人` | Not 龐牧師 (guest preacher etc.) | **Always skip — never process** |
 
 `(別人)` may also appear inside the title; always skip those too. The `# ⛔ 別人` marker on the line above is the canonical signal.
+
+### Year files that arrive in a different shape — normalize first
+
+Some year files were authored by hand and don't follow the header-marker convention out of the box. Convert them before running `prepare`:
+
+- **2015 (no markers, just date+url pairs)** — add a header marker above every entry. `(別人)` in the title becomes `# ⛔ 別人`; everything else becomes `# ⏳ 未完成`. Keep `Part 1` / `Part 2` suffixes in the title (see "Multi-part sermons" below).
+- **2016 (inline status markers in the title)** — `❌ 未收錄` → `# ⏳ 未完成` (strip from title); `✅ 已收錄` → `# ✅ 完成` (strip from title); `(別人)` → `# ⛔ 別人` (strip from title). 「已收錄」 in the source means the audio was previously archived in *another* system — for our purposes, treat it as already done and don't re-process.
+
+A one-shot Python migration handles both shapes — read the file, detect the entry layout, prepend the right marker line, write back. Trivial enough to inline as a `python - <<'PY'` heredoc when the next "weird year file" appears.
 
 ## DB schema (relevant subset)
 
@@ -161,6 +182,42 @@ This `UPDATE`s `pong_media.transcript` and `pong_sermons.content` (looked up by 
 ### Step 6 — Loop
 
 Go back to Step 1. Stop when `prepare` exits with code 3 ("no pending entries").
+
+## Year-specific quirks
+
+### 2014 — `.mpg` recordings start mid-service
+
+The 2014 entries are titled `…主日.mpg` because they were ripped from raw service tapes that begin **after** the opening hymn / call to worship. The Whisper output therefore typically starts with the **lectionary scripture readings** (今天的經課……), then the **psalter response** (詩篇…起應文), then the **second reading** (新約…), and only *after* that does 龐牧師 begin the actual sermon.
+
+When cleaning a 2014 sermon, **skip the readings prelude entirely** — start the cleaned text at the first sentence that's clearly the sermon proper. Often the first marker is 「今天⋯⋯」 or 「弟兄姊妹⋯⋯」 right after the gospel reading concludes. (Versus 2013, where most recordings already start with 「各位弟兄姊妹平安」.)
+
+The cleaned file should NOT contain the scripture readings — just the sermon body and closing prayer.
+
+### 2015 — Multi-part sermons (Part 1 + Part 2 same date)
+
+Some Sundays in 2015 were uploaded as two separate YouTube videos: `主日證道 Part 1` and `主日證道 Part 2`. The user's instruction is to **combine these into one cleaned sermon** (they're the two halves of the same delivery, not two separate sermons).
+
+Procedure for a Part 1+2 date (e.g. 2015-01-18). Use `--youtube-id` (the 11-char id from the YouTube URL) to disambiguate the two entries:
+
+1. `prepare --date 2015-01-18` — defaults to Part 1 (first pending). Writes `tmp_sermon/2015-01-18_<part1_id>_raw.txt`.
+2. `prepare --youtube-id <part2_id>` — picks Part 2 even though Part 1 is still ⏳. Writes `tmp_sermon/2015-01-18_<part2_id>_raw.txt`.
+3. Read both raw files. Concatenate the sermon-body portions (skip the inter-part welcome / announcements / scripture re-readings) and produce **one** combined cleaned file, e.g. `tmp_sermon/2015-01-18_clean.txt`.
+4. `commit --youtube-id <part1_id> --date 2015-01-18 --clean-file <combined>` — writes the combined transcript to Part 1's `pong_media.transcript` + `pong_sermons.content`. Marks Part 1 ✅ 完成.
+5. `commit --youtube-id <part2_id> --date 2015-01-18 --clean-file <combined>` — same combined file goes to Part 2's `pong_media.transcript` (both videos now carry the full transcript). Marks Part 2 ✅ 完成.
+
+Special case: 2015-01-25 has only `Part 2` listed (no Part 1) — treat as a regular single sermon.
+
+### 2016 — Full worship recordings; extract sermon only
+
+The 2016 audio files are full Sunday worship recordings (~90+ min), not pre-edited sermon clips. After Whisper transcribes them, you'll see the entire service: 詩歌 → 啟應文 → 經課 → 講道 → 詩歌 → 聖餐/奉獻 → 報告事項 → 祝福. The sermon proper is usually somewhere between minute 30 and minute 60.
+
+When cleaning a 2016 file, **extract only the sermon portion**:
+- **Start**: typically 「各位弟兄姊妹平安」 or the first paragraph after the gospel reading concludes.
+- **End**: the closing prayer ending in 「⋯⋯阿們」, immediately before 「我們來唱回應詩歌」 / 「使徒信經來告白我們的信仰」 / 「以下是我們奉獻的時間」.
+
+Drop everything outside that window — readings, hymns, announcements, communion words.
+
+For the `(別人)` weeks in 2016, the user wants the existing `pong_sermons.content` cleared (some had legacy content from a prior pipeline). When converting the txt to header markers, mark these as `# ⛔ 別人` and additionally run a one-off PATCH to set `content = ''` on those `pong_sermons` rows.
 
 ## Status check
 
