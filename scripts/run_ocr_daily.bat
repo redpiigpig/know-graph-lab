@@ -17,6 +17,9 @@ set LOGFILE=%LOGDIR%\ocr_%TODAY%.log
 
 echo === Daily run started %DATE% %TIME% === >> "%LOGFILE%"
 
+REM Notify desktop that today's run is starting (toast notification).
+powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File "%~dp0notify.ps1" -Title "KGLab OCR daily" -Body "Run started %TIME% — ingest -> parse -> OCR" >nul 2>&1
+
 REM Step 1: ingest any new ebooks dropped into .claude/skills/ebook-pipeline/new-book/
 echo --- ingest_new_books --- >> "%LOGFILE%"
 python scripts\ingest_new_books.py run >> "%LOGFILE%" 2>&1
@@ -30,14 +33,15 @@ echo --- ocr_with_gemini --- >> "%LOGFILE%"
 python scripts\ocr_with_gemini.py run --rpm 8 >> "%LOGFILE%" 2>&1
 set GEMINI_EXIT=%ERRORLEVEL%
 
-REM Step 3b: Qwen fallback — DISABLED on this laptop (RTX 4050 Mobile, 6GB VRAM).
-REM qwen2.5vl:3b's vision compute graph needs ~6.7 GiB, doesn't fit, drops to
-REM CPU at ~1 tok/min — unusable for OCR. Plumbing kept (gemini exits 2,
-REM ocr_with_qwen.py exists) so future hardware can re-enable by un-commenting.
-REM if "%GEMINI_EXIT%"=="2" (
-REM     echo --- gemini quota hit, falling back to ocr_with_qwen --- >> "%LOGFILE%"
-REM     python scripts\ocr_with_qwen.py run --limit 5 >> "%LOGFILE%" 2>&1
-REM )
+REM On Gemini daily-quota exhaustion (exit 2): notify desktop + skip fallback.
+REM Qwen fallback DISABLED on this laptop (RTX 4050 Mobile, 6 GB VRAM):
+REM qwen2.5vl:3b's vision compute graph needs ~6.7 GiB, drops to CPU at
+REM ~1 tok/min, unusable. Plumbing kept (ocr_with_qwen.py exists) so
+REM future hardware can re-enable by un-commenting the python line below.
+if "%GEMINI_EXIT%"=="2" (
+    powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File "%~dp0notify.ps1" -Title "KGLab OCR halted" -Body "Gemini daily quota hit at %TIME%. Resumes tomorrow 16:00." >nul 2>&1
+    REM python scripts\ocr_with_qwen.py run --limit 5 >> "%LOGFILE%" 2>&1
+)
 
 echo === Daily run ended %DATE% %TIME% (gemini-exit %GEMINI_EXIT%) === >> "%LOGFILE%"
 

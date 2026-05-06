@@ -118,6 +118,7 @@ Despite the historical name `KGLab-OCR-Daily`, it does more than OCR — see [`s
 | Component | Path |
 |---|---|
 | Bat runner | [`scripts/run_ocr_daily.bat`](../../../scripts/run_ocr_daily.bat) — runs ingest → parse → OCR in sequence; logs to `scripts/logs/ocr_YYYY-MM-DD.log` |
+| Toast helper | [`scripts/notify.ps1`](../../../scripts/notify.ps1) — Windows toast wrapper. Bat fires it twice: at run start, and again if Gemini hits 429 (so user knows when to expect tomorrow's resumption) |
 | Windows Task | `KGLab-OCR-Daily` registered via `Register-ScheduledTask` |
 | Trigger | Daily at 16:00 (Taipei = 0:00 PT, when Gemini quota resets) |
 | Behavior | `WakeToRun` + `StartWhenAvailable` — wakes from sleep, catches up if missed |
