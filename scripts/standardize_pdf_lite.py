@@ -148,6 +148,37 @@ def derive_pdf_chapter_path(content: str) -> str | None:
 
 # ── Standardize one PDF ────────────────────────────────────────────────
 
+def _read_jsonl_robust(path: Path) -> list[dict]:
+    """Tolerate JSONL files where a record's `content` string contains
+    literal newlines that were never escaped during the original parse_worker
+    write. A naive line-by-line parse trips on those records (json hits
+    "Unterminated string"). We accumulate physical lines into a buffer and
+    retry json.loads after each append until parsing succeeds, then start a
+    fresh buffer. Records produced by a well-formed writer parse on the
+    first try, so this is zero-overhead in the common case."""
+    out: list[dict] = []
+    buf = ""
+    bad_runs = 0
+    for raw in path.read_text(encoding="utf-8").split("\n"):
+        if not buf and not raw.strip():
+            continue
+        buf = (buf + "\n" + raw) if buf else raw
+        try:
+            out.append(json.loads(buf))
+            buf = ""
+        except json.JSONDecodeError:
+            # Cap runaway accumulation in case the file is truly malformed
+            # (avoid swallowing the entire file into one buffer)
+            bad_runs += 1
+            if bad_runs > 50 and not out:
+                raise
+            continue
+    if buf.strip():
+        # Trailing fragment that never parsed — log but don't fail the book
+        print(f"  ⚠ trailing fragment in {path.name} ({len(buf)} chars unparsed)", file=sys.stderr)
+    return out
+
+
 def standardize_pdf_chunks(book) -> tuple[list[dict], dict]:
     """Read the existing JSONL for this PDF book and return (cleaned_chunks,
     extracted_metadata). Does NOT write — caller persists."""
@@ -155,7 +186,7 @@ def standardize_pdf_chunks(book) -> tuple[list[dict], dict]:
     if not src.exists():
         raise SystemExit(f"JSONL missing on disk: {src}")
 
-    chunks_in = [json.loads(l) for l in src.read_text(encoding="utf-8").splitlines() if l.strip()]
+    chunks_in = _read_jsonl_robust(src)
     print(f"  read {len(chunks_in)} existing chunks from {src.name}")
 
     cleaned = []
