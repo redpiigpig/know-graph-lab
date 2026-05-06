@@ -7,13 +7,14 @@ description: Operate the Know-Graph-Lab ebook pipeline end-to-end. Use when work
 
 End-to-end pipeline that takes books from a local Drive folder all the way to the reader at `/ebook/[id]`. This file is the **operational hub** — what runs, in what order, how to monitor it, and how to recover when it breaks. For the standardization step specifically (turning EPUBs into reader-ready markdown), see the **`standardize-ebook` skill** which is the detail-level companion.
 
-## Current state (snapshot 2026-05-04)
+## Current state (snapshot 2026-05-06)
 
 | Stage | Status | Numbers |
 |---|---|---|
-| Drive scan + author/title parse | ✅ done | 1,309 books |
+| Drive scan + author/title parse | ✅ done | 1,309 books (initial sweep) |
+| **Daily new-book drop ingest** | ✅ wired into daily scheduler | `ingest_new_books.py` — see Workflow D |
 | File rename in Drive | ✅ done | all renamed to `作者，書名.ext` |
-| DB import (`ebooks` table) | ✅ done | 1,309 rows |
+| DB import (`ebooks` table) | ✅ rolling | 1,326 rows (1,309 initial + 17 ingested 2026-05-06) |
 | First-pass parse (text-extractable) | ✅ done | 900 parsed (478 EPUB + 422 text PDF) |
 | mobi/azw3 → epub conversion | ✅ done | 0 remaining |
 | **OCR scanned PDFs** | 🔄 daily-scheduled | 391 queued, ~1 done; auto-runs 16:00 daily |
@@ -29,13 +30,14 @@ End-to-end pipeline that takes books from a local Drive folder all the way to th
 
 | Script | Phase | Purpose |
 |---|---|---|
-| `local_drive_pipeline.py` | 1 — ingest | Scan Drive, parse `作者，書名.ext`, rename in place |
+| `local_drive_pipeline.py` | 1 — ingest (initial sweep) | Scan Drive, parse `作者，書名.ext`, rename in place |
 | `parse_drive_inventory.py` | 1 — ingest | Library: `parse_filename()`, `to_traditional()`, `TITLE_AUTHOR_OVERRIDES` |
-| `import_local_to_supabase.py` | 1 — ingest | `data/local_inventory.json` → `ebooks` rows |
+| `import_local_to_supabase.py` | 1 — ingest (initial sweep) | `data/local_inventory.json` → `ebooks` rows |
+| `ingest_new_books.py` | 1 — ingest (**daily**) | Watches `.claude/skills/ebook-pipeline/new-book/`. Parses filename, classifies via Gemini (with keyword fallback), inserts ebooks row, moves file to `G:/.../電子書/{category}/`. See Workflow D |
 | `parse_worker.py` | 2 — parse | **Main parser** (PyMuPDF + ebooklib). `init` / `run [--limit N] [--retry-errors]` / `status` |
 | `convert_mobi_to_epub.py` | 2 — parse | Calibre wrapper for mobi/azw3 → epub. Already done; keep for new files |
 | `ocr_with_gemini.py` | 3 — OCR | Gemini Vision OCR for scanned PDFs. Pushes JSONL to R2 inline |
-| `run_ocr_daily.bat` + Task Scheduler | 3 — OCR | Windows daily runner for `ocr_with_gemini.py` |
+| `run_ocr_daily.bat` + Task Scheduler | (orchestrator) | Windows daily runner — now runs **ingest → parse → OCR** in sequence |
 | `standardize_ebook.py` | 4 — standardize | Re-parse EPUB → markdown chunks, s2tw, drop boilerplate (see `standardize-ebook` skill) |
 | `repopulate_chunk_previews.py` | 5 — DB | Back-fill `ebook_chunks` previews from local JSONL. `run` / `retry-failed` / `status` |
 | `upload_chunks_to_r2.py` | 5 — R2 | One-shot bulk uploader for any books whose JSONL isn't on R2 yet |
@@ -107,9 +109,12 @@ annotations (
 
 ### Daily scheduler (set up + running)
 
+The bat is now a **3-stage daily runner**: `ingest_new_books → parse_worker → ocr_with_gemini`.
+Despite the historical name `KGLab-OCR-Daily`, it does more than OCR — see [`scripts/run_ocr_daily.bat`](../../../scripts/run_ocr_daily.bat).
+
 | Component | Path |
 |---|---|
-| Bat runner | [`scripts/run_ocr_daily.bat`](../../../scripts/run_ocr_daily.bat) — wraps the python invocation, logs to `scripts/logs/ocr_YYYY-MM-DD.log` |
+| Bat runner | [`scripts/run_ocr_daily.bat`](../../../scripts/run_ocr_daily.bat) — runs ingest → parse → OCR in sequence; logs to `scripts/logs/ocr_YYYY-MM-DD.log` |
 | Windows Task | `KGLab-OCR-Daily` registered via `Register-ScheduledTask` |
 | Trigger | Daily at 16:00 (Taipei = 0:00 PT, when Gemini quota resets) |
 | Behavior | `WakeToRun` + `StartWhenAvailable` — wakes from sleep, catches up if missed |
@@ -138,6 +143,44 @@ python scripts/ocr_with_gemini.py run --model gemini-2.5-flash-lite --rpm 12  # 
 - `parse_error` starts with `OCR ok but R2 push failed:` → OCR succeeded but R2 write failed; book NOT marked parsed; next OCR run re-tries (cheap — JSONL was kept locally)
 - `parse_error` starts with `OCR:` → permanent OCR failure (model returned 0 usable pages, file too big, etc.). Won't auto-retry; investigate manually.
 - Quota stop: script exits cleanly with "Quota/rate-limit hit. Stopping. Re-run later." — tomorrow's scheduled run picks up
+
+---
+
+## Workflow D — Daily new-book drop ingest
+
+The user drops freshly-acquired ebooks into [`.claude/skills/ebook-pipeline/new-book/`](./new-book/) (a local folder, not on Drive). [`scripts/ingest_new_books.py`](../../../scripts/ingest_new_books.py) processes that folder once per day as part of `run_ocr_daily.bat`. For each ebook file (`.pdf` / `.epub` / `.mobi` / `.azw3`):
+
+1. **Parse filename** → `(author, title, ext)`. Reuses `parse_drive_inventory.parse_filename()` after pre-stripping z-library suffixes like `(z-library.sk, 1lib.sk, z-lib.sk)` (the parent parser only knows the older `(z-lib.org)` form, and the inner commas trip its 全形/半形 comma split).
+2. **Classify** into one of the 9 main categories. Two-tier:
+   - **Keyword fallback first** (free): hits `christ|church|bonhoeffer|syriac|nestorius|cyril|monophysite|chalcedon|ephrem|babai|homilies|patristic|apostolic|gospel|biblical|theology` → `宗教學`; hits `zoroastr|avesta|islam|buddhis` → `世界宗教`.
+   - **Gemini 2.5 Flash** otherwise — strict JSON output, prompt explains the 9 categories. LLM mistakes like "基督教"/"神學" get auto-mapped to 宗教學.
+3. **Insert** an `ebooks` row with `category` set, `parsed_at = NULL`, `file_path` pointing to the *future* Drive location (the move below puts it there).
+4. **Move** local file → `G:/我的雲端硬碟/資料/電子書/{category}/{author}，{title}.{ext}`. Because G: **is** the Drive sync mount, the move IS the upload (Drive client uploads in the background) AND the local-delete in one filesystem rename. No OAuth / Drive API setup needed.
+
+After ingest, the new rows appear in `ebooks` with `parsed_at = NULL`. The next `parse_worker.py run` (triggered by step 2 of the daily bat, or manually) extracts text where possible. If extraction fails (`parse_error LIKE '%no extractable text%'`), `ocr_with_gemini.py` picks it up in step 3.
+
+### Manual operations
+
+```bash
+python scripts/ingest_new_books.py status              # how many ebooks waiting in new-book/
+python scripts/ingest_new_books.py run --dry-run       # preview classification + target paths
+python scripts/ingest_new_books.py run --limit 3       # smoke test 3 books for real
+python scripts/ingest_new_books.py run                 # full sweep
+```
+
+### Failure modes
+
+- **DB insert fails** → file kept in `new-book/`; safe to re-run, no orphan row.
+- **Move fails after DB insert** → file kept in `new-book/`, DB row inserted but file not on Drive. Script prints both paths so you can either move manually or delete the row. Rare on Windows (cross-drive move = copy then delete).
+- **Gemini quota / 429** → that single book is skipped (file kept), other books continue with the keyword fallback. Tomorrow's run picks up the skipped book.
+- **Filename can't be parsed** (no usable title) → logged "SKIP: could not parse title from filename"; file kept; add a manual override to `parse_drive_inventory.TITLE_AUTHOR_OVERRIDES` or rename the file manually.
+- **Target file already exists on Drive** (duplicate book) → skip, file kept in `new-book/`. Manual cleanup needed.
+
+### Tuning notes
+
+- The keyword fallback skews heavily toward Christian-studies content (current user backlog) — if a different research area dominates a future drop, extend `fallback_category()` in [`scripts/ingest_new_books.py`](../../../scripts/ingest_new_books.py).
+- Gemini share the same daily quota with the OCR runner. Order in the bat is **ingest first** (small, ~1-5 calls/day) so OCR's heavy usage can't starve it. RPM is gentle (`time.sleep(0.5)` between books).
+- Junk files in `new-book/` (e.g., `Z-Library-latest.exe`) are silently ignored — only `EBOOK_EXTS` are touched.
 
 ---
 
@@ -223,6 +266,12 @@ Search returns no fulltext hits but title/author work?
 A scanned PDF still shows "此頁無內容" 12+ hours after OCR scheduled?
   → Check scripts/logs/ocr_YYYY-MM-DD.log for errors.
   → If quota hit, just wait — tomorrow's run picks up.
+
+A new book dropped into new-book/ never showed up in the reader?
+  → Check scripts/logs/ocr_YYYY-MM-DD.log "--- ingest_new_books ---" section.
+  → 'CLASSIFY FAILED' = Gemini quota; tomorrow retries automatically.
+  → 'could not parse title' = filename pattern unsupported; rename or extend TITLE_AUTHOR_OVERRIDES.
+  → 'target already exists on Drive' = duplicate book, manual cleanup.
 ```
 
 ---
@@ -244,11 +293,17 @@ A scanned PDF still shows "此頁無內容" 12+ hours after OCR scheduled?
 
 ## Recommended order for "I'm a new agent picking this up"
 
-1. Run `python scripts/repopulate_chunk_previews.py status` and `python scripts/ocr_with_gemini.py status` to see what's queued.
-2. Read [`standardize-ebook` SKILL](../standardize-ebook/SKILL.md) before touching that pipeline.
-3. Don't re-run `standardize_ebook.py` on books with annotations (`annotations` table). Currently only 文明的歷史 has any.
-4. For categorized batch standardize (哲學 → others), use `--dry-run` first, then real run.
-5. Watch the OCR scheduler each afternoon at 16:00 — read the day's log file in `scripts/logs/`.
+1. Run all three status checks to see what's queued:
+   ```bash
+   python scripts/ingest_new_books.py status
+   python scripts/repopulate_chunk_previews.py status
+   python scripts/ocr_with_gemini.py status
+   ```
+2. If `new-book/` has files waiting → run `python scripts/ingest_new_books.py run` (Workflow D).
+3. Read [`standardize-ebook` SKILL](../standardize-ebook/SKILL.md) before touching that pipeline.
+4. Don't re-run `standardize_ebook.py` on books with annotations (`annotations` table). Currently only 文明的歷史 has any.
+5. For categorized batch standardize (哲學 → others), use `--dry-run` first, then real run.
+6. Watch the daily scheduler each afternoon at 16:00 — read the day's log file in `scripts/logs/`. Logs are still named `ocr_YYYY-MM-DD.log` but now also contain ingest + parse output.
 
 ## See also
 

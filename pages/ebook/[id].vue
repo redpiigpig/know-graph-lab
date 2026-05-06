@@ -23,6 +23,22 @@
         <div class="flex items-center gap-2 flex-1 justify-end">
           <input v-model="pageSearch" type="text" placeholder="頁內搜尋…"
             class="hidden sm:block bg-white border border-stone-200 rounded-lg px-3 py-1.5 text-sm w-40 focus:outline-none focus:border-blue-500" />
+          <button @click="cycleReadingStatus"
+            :title="readingStatus === 'reading' ? '點擊：標記已讀'
+                  : readingStatus === 'read'    ? '點擊：從書櫃移除'
+                  :                                '點擊：加入閱讀中'"
+            :class="['hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs transition border',
+              readingStatus === 'reading' ? 'bg-blue-100 border-blue-300 text-blue-800'
+              : readingStatus === 'read'  ? 'bg-emerald-100 border-emerald-300 text-emerald-800'
+              :                              'bg-white border-stone-200 hover:border-blue-300 text-stone-600']">
+            <span>{{ readingStatus === 'reading' ? '📖' : readingStatus === 'read' ? '✅' : '📚' }}</span>
+            <span>{{ readingStatus === 'reading' ? '閱讀中' : readingStatus === 'read' ? '已讀' : '加入書櫃' }}</span>
+          </button>
+          <button v-if="readingStatus === 'reading'" @click="addTodayBookmark"
+            title="標記今日讀到這裡"
+            class="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs transition border bg-white border-stone-200 hover:border-purple-400 text-stone-600">
+            <span>📅</span><span>今日讀到這裡</span>
+          </button>
           <button @click="annotationsPanelOpen = !annotationsPanelOpen"
             :class="['hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs transition border',
               annotationsPanelOpen ? 'bg-amber-100 border-amber-300 text-amber-800' : 'bg-white border-stone-200 hover:border-amber-300 text-stone-600']">
@@ -41,11 +57,20 @@
 
           <!-- Front matter (no volume) -->
           <div v-if="frontMatter.length" class="space-y-0.5 mb-3">
-            <button v-for="entry in frontMatter" :key="entry.chunk_index"
-              @click="goPage(entry.chunk_index + 1)"
-              :class="tocBtnCls(entry)">
-              {{ entry.title }}
-            </button>
+            <div v-for="entry in frontMatter" :key="entry.chunk_index" class="group relative">
+              <button @click="goPage(entry.chunk_index + 1)"
+                :class="[tocBtnCls(entry), 'w-full flex items-center gap-1.5']">
+                <span class="flex-1 text-left truncate">{{ entry.title }}</span>
+                <span v-if="bookmarkByChunk.get(entry.chunk_index)"
+                  class="text-[10px] px-1 py-px rounded bg-purple-100 text-purple-700 font-medium flex-shrink-0">
+                  📅 {{ fmtBookmarkDate(bookmarkByChunk.get(entry.chunk_index)!.created_at) }}
+                </span>
+              </button>
+              <button v-if="bookmarkByChunk.get(entry.chunk_index)"
+                @click.stop="deleteBookmark(bookmarkByChunk.get(entry.chunk_index)!.id)"
+                title="移除書籤"
+                class="absolute right-1 top-1/2 -translate-y-1/2 hidden group-hover:flex w-4 h-4 items-center justify-center rounded text-purple-700 hover:bg-purple-200 text-xs">×</button>
+            </div>
           </div>
 
           <!-- Volumes (collapsible) -->
@@ -57,11 +82,20 @@
               <span class="text-xs text-stone-400">{{ v.entries.length }}</span>
             </button>
             <div v-if="expandedVolumes.has(v.name)" class="space-y-0.5 mt-0.5">
-              <button v-for="entry in v.entries" :key="entry.chunk_index"
-                @click="goPage(entry.chunk_index + 1)"
-                :class="tocBtnCls(entry)">
-                {{ entry.title }}
-              </button>
+              <div v-for="entry in v.entries" :key="entry.chunk_index" class="group relative">
+                <button @click="goPage(entry.chunk_index + 1)"
+                  :class="[tocBtnCls(entry), 'w-full flex items-center gap-1.5']">
+                  <span class="flex-1 text-left truncate">{{ entry.title }}</span>
+                  <span v-if="bookmarkByChunk.get(entry.chunk_index)"
+                    class="text-[10px] px-1 py-px rounded bg-purple-100 text-purple-700 font-medium flex-shrink-0">
+                    📅 {{ fmtBookmarkDate(bookmarkByChunk.get(entry.chunk_index)!.created_at) }}
+                  </span>
+                </button>
+                <button v-if="bookmarkByChunk.get(entry.chunk_index)"
+                  @click.stop="deleteBookmark(bookmarkByChunk.get(entry.chunk_index)!.id)"
+                  title="移除書籤"
+                  class="absolute right-1 top-1/2 -translate-y-1/2 hidden group-hover:flex w-4 h-4 items-center justify-center rounded text-purple-700 hover:bg-purple-200 text-xs">×</button>
+              </div>
             </div>
           </div>
         </div>
@@ -250,6 +284,8 @@ interface Annotation {
   excerpt_id?: string | null;
   created_at?: string;
 }
+interface Bookmark { id: string; chunk_index: number; created_at: string }
+type ReadingStatus = "reading" | "read" | null;
 
 const HIGHLIGHT_COLORS = [
   { name: "yellow", label: "黃", bg: "#FEF08A" },
@@ -286,6 +322,23 @@ const annotationsPanelOpen = ref(false);
 const lastUsedColor = ref<string>("yellow");
 const contentEl = ref<HTMLDivElement | null>(null);
 const scrollEl = ref<HTMLElement | null>(null);
+
+// Bookshelf state — user's reading status for this book + their date bookmarks.
+const readingStatus = ref<ReadingStatus>(null);
+const bookmarks = ref<Bookmark[]>([]);
+// Quick chunk_index → date map for the TOC sidebar badges.
+const bookmarkByChunk = computed(() => {
+  const m = new Map<number, Bookmark>();
+  // bookmarks are pre-sorted desc by created_at server-side; keep latest per chunk.
+  for (const b of bookmarks.value) {
+    if (!m.has(b.chunk_index)) m.set(b.chunk_index, b);
+  }
+  return m;
+});
+function fmtBookmarkDate(iso: string): string {
+  const d = new Date(iso);
+  return `${d.getMonth() + 1}/${d.getDate()}`;
+}
 
 // ── Toast for errors / status ──
 const toast = ref({ show: false, message: "", type: "info" as "info" | "error" });
@@ -520,6 +573,77 @@ async function loadBookAnnotations() {
     `/api/annotations?ebookId=${ebookId}`,
     { headers: { Authorization: `Bearer ${token}` } }
   ).catch(() => []);
+}
+
+// ── Bookshelf + bookmarks ──
+async function loadReadingStatus() {
+  const token = await getToken(); if (!token) return;
+  const data = await $fetch<{ status: ReadingStatus }>(
+    `/api/ebooks/${ebookId}/reading-status`,
+    { headers: { Authorization: `Bearer ${token}` } }
+  ).catch(() => ({ status: null }));
+  readingStatus.value = data?.status ?? null;
+}
+
+async function loadBookmarks() {
+  const token = await getToken(); if (!token) return;
+  bookmarks.value = await $fetch<Bookmark[]>(
+    `/api/ebooks/${ebookId}/bookmarks`,
+    { headers: { Authorization: `Bearer ${token}` } }
+  ).catch(() => []);
+}
+
+// Cycle: null → reading → read → null. Each transition is a single PUT.
+async function cycleReadingStatus() {
+  const next: ReadingStatus =
+    readingStatus.value === null ? "reading" :
+    readingStatus.value === "reading" ? "read" : null;
+  const token = await getToken(); if (!token) return;
+  try {
+    await $fetch(`/api/ebooks/${ebookId}/reading-status`, {
+      method: "PUT",
+      headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+      body: { status: next },
+    });
+    readingStatus.value = next;
+    showToast(
+      next === "reading" ? "已加入閱讀中"
+      : next === "read"  ? "已標記為已讀"
+      :                    "已從書櫃移除"
+    );
+  } catch (e: any) {
+    showToast(`狀態更新失敗：${e?.data?.message ?? e?.message ?? ""}`, "error");
+  }
+}
+
+async function addTodayBookmark() {
+  const token = await getToken(); if (!token) return;
+  try {
+    const created = await $fetch<Bookmark>(`/api/ebooks/${ebookId}/bookmarks`, {
+      method: "POST",
+      headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+      body: { chunk_index: currentPage.value - 1 },
+    });
+    // newest-first ordering matches server response
+    bookmarks.value = [created, ...bookmarks.value];
+    showToast(`已標記今日讀到第 ${currentPage.value} 段`);
+  } catch (e: any) {
+    showToast(`書籤建立失敗：${e?.data?.message ?? e?.message ?? ""}`, "error");
+  }
+}
+
+async function deleteBookmark(id: string) {
+  const token = await getToken(); if (!token) return;
+  try {
+    await $fetch(`/api/bookmarks/${id}`, {
+      method: "DELETE",
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    bookmarks.value = bookmarks.value.filter(b => b.id !== id);
+    showToast("已移除書籤");
+  } catch (e: any) {
+    showToast(`刪除失敗：${e?.data?.message ?? e?.message ?? ""}`, "error");
+  }
 }
 
 const sortedBookAnnotations = computed(() =>
@@ -860,10 +984,26 @@ async function confirmSaveExcerpt() {
 }
 
 // ── Lifecycle ──
-onMounted(() => {
+onMounted(async () => {
+  document.addEventListener("mousedown", hidePopupsOnOutsideClick);
+
+  // Fetch shelf state + bookmarks first so we can decide whether to auto-jump.
+  await Promise.all([loadReadingStatus(), loadBookmarks()]);
+
+  // Auto-jump rule: only when (a) status === 'reading', (b) at least one
+  // bookmark exists, and (c) the user did NOT explicitly request a page via
+  // ?page= in the URL. 'read' books and ad-hoc visits behave normally.
+  const hasExplicitPage = !!route.query.page;
+  if (!hasExplicitPage && readingStatus.value === "reading" && bookmarks.value.length > 0) {
+    const target = bookmarks.value[0].chunk_index + 1;
+    currentPage.value = target;
+    jumpPage.value = target;
+    router.replace({ query: { page: String(target) } });
+    showToast(`接續 ${fmtBookmarkDate(bookmarks.value[0].created_at)} 閱讀進度，第 ${target} 段`);
+  }
+
   loadPage(currentPage.value);
   loadBookAnnotations();
-  document.addEventListener("mousedown", hidePopupsOnOutsideClick);
 });
 onBeforeUnmount(() => {
   document.removeEventListener("mousedown", hidePopupsOnOutsideClick);

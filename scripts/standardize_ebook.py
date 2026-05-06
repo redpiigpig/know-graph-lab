@@ -334,6 +334,71 @@ def build_cover_content(book, chunks) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
+# Titles that count as the table-of-contents page in either language —
+# everything between the cover and this chunk is rolled up into 出版資訊.
+_CONTENTS_TITLE_RX = re.compile(
+    r"^(?:目\s*錄|目\s*次|目\s*录|contents?|table\s*of\s*contents)\s*$",
+    re.IGNORECASE,
+)
+
+
+def consolidate_frontmatter_into_publisher(chunks):
+    """Many EPUBs have noisy pre-CONTENTS frontmatter — dedications, repeated
+    title pages, series banners, epigraphs, multi-line copyright pages — each
+    of which becomes its own sidebar entry. Squash all of them into a single
+    「出版資訊」 chunk between the cover and the CONTENTS page.
+
+    Conservative: only fires when (a) the cover chunk is at index 0,
+    (b) a CONTENTS-style chunk exists in the early frontmatter, and (c) every
+    chunk we'd be merging is in flat (vol=None) territory — never crosses a
+    volume boundary."""
+    if len(chunks) < 3:
+        return
+    if chunks[0].get("chapter_path") != "封面":
+        return
+
+    # Locate the first CONTENTS-style chunk (search the first 12 entries to
+    # avoid pathological "目錄 placed in the middle of body" cases).
+    contents_idx = None
+    for i, c in enumerate(chunks[:12]):
+        title = (c.get("chapter_path") or "").strip()
+        if _CONTENTS_TITLE_RX.match(title):
+            contents_idx = i
+            break
+    if contents_idx is None or contents_idx <= 1:
+        return  # nothing between cover and CONTENTS
+
+    # Safety: don't fold across a volume start
+    middle = chunks[1:contents_idx]
+    if any(c.get("volume") for c in middle):
+        return
+
+    # Build merged content
+    parts = ["## 出版資訊"]
+    for c in middle:
+        body = (c.get("content") or "").strip()
+        if not body:
+            continue
+        # Strip the leading heading line — we already wrote ## 出版資訊
+        body = re.sub(r"^#{1,4}\s+.+\n+", "", body, count=1).strip()
+        if body:
+            parts.append(body)
+    merged = {
+        "chunk_index": 0,  # re-indexed below
+        "chunk_type": "chapter",
+        "page_number": None,
+        "chapter_path": "出版資訊",
+        "volume": None,
+        "format": "markdown",
+        "content": "\n\n---\n\n".join(parts),
+    }
+
+    # Splice: cover + merged + everything from CONTENTS onward
+    chunks[:] = [chunks[0], merged] + chunks[contents_idx:]
+    for i, c in enumerate(chunks):
+        c["chunk_index"] = i
+
+
 def apply_cover_enrichment(chunks, book):
     """Replace the placeholder 「## 封面 (書本封面)」 chunk with rich metadata,
     or insert a new cover chunk at index 0 if none exists.
@@ -755,11 +820,14 @@ def standardize(book):
                 "content": md_tw,
             })
 
-    # Post-process: promote vol=None chapters that are 第N部 dividers (publisher
-    # forgot to label them in TOC), then enrich the cover chunk with full
-    # title/subtitle/original-title/author/author-en metadata.
+    # Post-process. Order matters:
+    #   1. promote_implicit_volumes — fix 第N部 chapters mis-tagged as flat
+    #   2. apply_cover_enrichment   — needs raw 版權頁 chunk to extract metadata
+    #   3. consolidate_frontmatter_into_publisher — runs LAST so the publisher
+    #      page that cover_enrichment just sniffed gets folded into 出版資訊
     promote_implicit_volumes(chunks)
     apply_cover_enrichment(chunks, book)
+    consolidate_frontmatter_into_publisher(chunks)
 
     print(f"Kept: {len(chunks)} chunks, dropped: {len(dropped)}")
     if dropped[:8]:
