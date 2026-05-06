@@ -60,8 +60,8 @@ H = {
 
 CHUNKS_DIR = Path("G:/我的雲端硬碟/資料/電子書/_chunks")
 PREVIEW_LEN = 200
-DEFAULT_MODEL = "gemini-2.5-pro"
-DEFAULT_RPM = 4  # 2.5-pro free tier: 2 RPM; paid: 5+. 4 is conservative middle.
+DEFAULT_MODEL = "gemini-2.5-flash"
+DEFAULT_RPM = 4  # under 10 RPM limit on flash, gentler on the service
 
 def _find_gemini_keys() -> list[str]:
     """Return ALL configured Gemini keys (in priority order, dedup'd).
@@ -154,12 +154,18 @@ def update_book_done(book_id, total_chars, chunk_count, total_pages):
 
 
 def update_book_error(book_id, msg):
-    requests.patch(
-        f"{URL}/rest/v1/ebooks?id=eq.{book_id}",
-        headers=H,
-        json={"parse_error": msg[:500]},
-        timeout=30,
-    )
+    # Tolerant of network blips — Supabase DNS can flap mid-run and a
+    # transient hiccup here shouldn't kill the entire OCR batch.
+    try:
+        requests.patch(
+            f"{URL}/rest/v1/ebooks?id=eq.{book_id}",
+            headers=H,
+            json={"parse_error": msg[:500]},
+            timeout=30,
+        )
+    except Exception as e:
+        print(f"  ⚠ failed to record parse_error for {book_id}: {str(e)[:80]}",
+              file=sys.stderr)
 
 
 def insert_chunk_previews(book_id, chunks):
