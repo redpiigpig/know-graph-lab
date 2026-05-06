@@ -12,6 +12,8 @@
             <span class="font-semibold text-blue-700">書摘圖書館</span>
           </div>
           <div class="flex items-center gap-2">
+            <NuxtLink to="/excerpts/help"
+              class="w-7 h-7 flex items-center justify-center rounded-lg border border-gray-200 text-gray-500 hover:text-blue-600 hover:border-blue-300 text-xs transition" title="使用說明">?</NuxtLink>
             <button @click="showCreateBook = true" class="text-xs px-3 py-1.5 rounded-lg bg-blue-600 text-white hover:bg-blue-500 transition">+ 新增書籍</button>
             <button @click="handleLogout" class="text-gray-500 hover:text-red-600 transition text-sm">登出</button>
           </div>

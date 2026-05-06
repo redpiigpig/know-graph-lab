@@ -7,10 +7,14 @@
           <span class="text-gray-600">·</span>
           <span class="font-semibold text-sm">電子圖書館</span>
         </div>
-        <button @click="showUpload = true"
-          class="px-4 py-1.5 bg-blue-600 hover:bg-blue-500 rounded-lg text-sm transition">
-          + 上傳電子書
-        </button>
+        <div class="flex items-center gap-2">
+          <NuxtLink to="/ebook/help"
+            class="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-800 hover:bg-gray-700 text-sm transition" title="使用說明">?</NuxtLink>
+          <button @click="showUpload = true"
+            class="px-4 py-1.5 bg-blue-600 hover:bg-blue-500 rounded-lg text-sm transition">
+            + 上傳電子書
+          </button>
+        </div>
       </div>
     </nav>
 
