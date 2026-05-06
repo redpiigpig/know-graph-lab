@@ -60,8 +60,8 @@ H = {
 
 CHUNKS_DIR = Path("G:/我的雲端硬碟/資料/電子書/_chunks")
 PREVIEW_LEN = 200
-DEFAULT_MODEL = "gemini-2.5-flash"
-DEFAULT_RPM = 8  # under 10 RPM limit on 2.5 flash to leave headroom
+DEFAULT_MODEL = "gemini-2.5-pro"
+DEFAULT_RPM = 4  # 2.5-pro free tier: 2 RPM; paid: 5+. 4 is conservative middle.
 
 def _find_gemini_keys() -> list[str]:
     """Return ALL configured Gemini keys (in priority order, dedup'd).
