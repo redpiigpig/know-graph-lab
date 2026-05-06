@@ -319,18 +319,63 @@ finishes:
 
 ---
 
-## Current state (snapshot 2026-05-04)
+## Current state (snapshot 2026-05-06)
 
-| Book(s) | Standardized? | Notes |
+All 481 standardized EPUBs have been re-run with the post-processing
+pipeline below. The 5 books that fail consistently have invalid Windows
+file paths (Errno 22) — pre-existing data issue, not a script bug.
+
+| Category | EPUBs | Status |
 |---|---|---|
-| 文明的歷史 (`181798a6-42fd-4f55-a4a8-43065dafd6f7`) | ✅ | Reference example. EPUB's K4 anchor is misplaced (mid-上冊 but tagged 下冊 start), so 發現者上冊 only has 3 chunks and 下冊 has 20. Publisher data quirk, not a script bug. |
-| 哲學 category (51 EPUBs) | ⚠ done with **old volume logic** | Single-volume books had 「目錄/插頁/出版說明」 promoted to fake volumes. The fix is in main; **a re-run on the 哲學 category will clean these up** (idempotent). |
-| 9 categories overall | ❌ rest not started | 哲學 done first as the demo. Other categories untouched. |
+| 哲學 / 宗教學 / 世界宗教 / 心理學 / 人類生物學 / 自然科學 / 文學 / 社會政治學 / 歷史學 | 481 total | ✅ all standardized; 2-3 transient persist errors per batch are auto-handled |
 
-The 51 哲學 books to look at as samples (post re-run):
-- 《君主論》 — single-volume; should have NO volume groups in sidebar after fix
-- 《人生的智慧》 — single-volume叢書 part; same
-- 《中國儒學史》 — multi-volume; should still group by 「先秦卷／漢代卷／…」 (titles contain 卷)
+Reference books to spot-check (after each re-run):
+- 《君主論》 — single-vol; **NO** volume groups in sidebar
+- 《中國儒學史》 — 10-vol; groups by 「先秦卷／漢代卷／…」
+- 《希臘羅馬神話》 (Hamilton) — fake-flat 第一部 promoted via `promote_implicit_volumes`; cover has full subtitle/原書名/作者中英
+- 《A State of Mixture》 (Payne) — chapters separated correctly (no longer eaten by 「Introduction」 super-chunk); 「In honor of beloved Virgil—」 / 「Publisher.xhtml」 / title-page repeats / epigraph / series banner all consolidated into 「出版資訊」
+
+## Post-processing pipeline (runs after the EPUB walk, before persist)
+
+Order matters — see end of `standardize()`:
+
+1. **`promote_implicit_volumes`** — when an EPUB TOC has an unnamed top-level group (e.g. publisher omitted 「第一部」 but properly named 「第二部」+) the chapters end up flat. Scan vol=None chunks for `第N部/卷` dividers in their `chapter_path` and synthesize the missing volume.
+2. **`apply_cover_enrichment`** — replace the placeholder `## 封面 (書本封面)` chunk with structured markdown built from DB title/author + 版權頁 extraction (subtitle / original_title / author_en). Or insert one at index 0 if no cover chunk exists.
+3. **`consolidate_frontmatter_into_publisher`** — when a CONTENTS-style chunk (目錄 / Contents) exists in the first ~12 entries AND no volume starts between cover and CONTENTS, fold all chunks `[1..contents-1]` into one synthesized 「出版資訊」 chunk. Substantive named entries (序 / 致謝 / 譯者序 / 推薦序 / Note on / Acknowledgments) stay separate because they appear AFTER CONTENTS.
+4. **`derive_chapter_title` smart fallback** — already runs per-chunk during the main walk. Skips numeric/single-letter headings (academic EPUBs use `<h2>1</h2><h1>Real Title</h1>`); when only numeric headings exist AND a short content line follows (`<h2>01</h2><p>王權的誕生</p>`), combines into `「01 王權的誕生」`.
+5. **Continuation-merge size cap** — `is_continuation_title` matches still merge tiny `「二」 / 「A」` chunks into the previous chunk, but ONLY if the chunk's plain text is ≤ 800 chars (prevents a 130KB chapter file titled just `「1」` from being eaten).
+
+## Rich publisher metadata extraction (`_extract_publisher_metadata`)
+
+Scans every chunk's content for 版權頁-style key-value lines and writes
+the result to ebooks columns during `update_db()`:
+
+| Field | Regex source | ebooks column |
+|---|---|---|
+| `full_title` (used for subtitle split) | `書名: …` / `Title: …` | `subtitle` (only the post-`：` part) |
+| `original_title` | `原文書名: …` / `原書名: …` / `Original Title: …` | `original_title` |
+| `author_en` | `作者: 中文（English）` parens capture | `author_en` |
+| `translator` | `譯者: …` (stops at `│ | ， ; / 、`) | `translator` |
+| `publisher` | `出版: …` / `出版社: …` / `Published by: …` (rejects `出版日期` / `出版年` / `出版地`) | `publisher` |
+| `publish_year` | `初版: …YYYY` / `初版首刷: YYYY` / `電子書: …YYYY` | `publication_year` |
+| `original_publish_year` + `original_author` | `Copyright © YYYY by AUTHOR` | both |
+
+Field-stop char class `_FIELD_STOP = "\n│|，,；;／/（(、"` keeps regexes
+from greedy-eating siblings on packed lines like
+`作者：X│譯者：Y│出版者：Z│出版日期：YYYY年`.
+
+### Auto-copy to `books` on excerpt creation
+
+`server/api/annotations/index.post.ts` (POST handler with
+`save_as_excerpt: true`) reads the rich columns from `ebooks` and copies
+them into the auto-created `books` row, so books that get created by the
+reader's 「+ 書摘」 button come out matching the richness of manually-
+entered ones — translator / publisher / publish_year / original_title /
+original_author / original_publish_year all populated when extractable.
+
+When you tweak the extraction regexes here, **re-run `--all`** so existing
+ebooks pick up the new fields, then any future excerpt save will produce
+a rich `books` row.
 
 ## Idempotency
 

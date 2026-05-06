@@ -366,6 +366,40 @@ A new book dropped into new-book/ never showed up in the reader?
 5. For categorized batch standardize (哲學 → others), use `--dry-run` first, then real run.
 6. Watch the daily scheduler each afternoon at 16:00 — read the day's log file in `scripts/logs/`. Logs are still named `ocr_YYYY-MM-DD.log` but now also contain ingest + parse output.
 
+## Reader-side features tied to the pipeline
+
+### Bookshelf + reading bookmarks
+
+Per-user reading state. Schema in
+[`database/bookshelf-and-bookmarks.sql`](../../../database/bookshelf-and-bookmarks.sql).
+RLS on; service-role endpoints filter by `user_id`.
+
+- `user_reading_status (user_id, ebook_id, status, updated_at)` — `status ∈ 'reading' | 'read'`. PK enforces one row per user-book.
+- `reading_bookmarks (id, user_id, ebook_id, chunk_index, created_at)` — date-stamped 「今日讀到這裡」 markers; multiple per book.
+
+Endpoints:
+- `PUT /api/ebooks/:id/reading-status` body `{status}` — null removes
+- `GET /api/ebooks/:id/reading-status`
+- `POST/GET /api/ebooks/:id/bookmarks`, `DELETE /api/bookmarks/:id`
+- `GET /api/me/bookshelf` — merged listing for `/bookshelf` page + `/ebook` sidebar counts
+
+Reader UX (`pages/ebook/[id].vue`):
+- Toolbar status pill cycles 📚 → 📖 (reading) → ✅ (read) → 📚
+- 「📅 今日讀到這裡」 button only when status is `reading`
+- TOC sidebar shows date badges next to chunks with bookmarks (hover-× to delete)
+- Auto-jump to latest bookmark on book open if status=`reading` AND no `?page=` in URL; skipped when status=`read`
+
+`/ebook` sidebar has `📖 閱讀中 (n) / ✅ 已讀 (n)` entries below the categories — same URL-driven model as categories (`?shelf=reading|read`). `app/router.options.ts` adds `scrollBehavior(savedPosition)` so browser back from `/ebook/:id` → `/ebook` returns to the previous scroll.
+
+### Excerpts auto-flow (`save_as_excerpt: true` on `POST /api/annotations`)
+
+Reader's 「+ 書摘」 button creates an annotation **and**:
+1. If the ebook's `book_id` is null → auto-creates a `books` row using ALL the rich metadata extracted by standardize (title / author / translator / publisher / publication_year / original_title / original_author / original_publish_year). Writes `book_id` back to ebooks.
+2. Inserts an `excerpts` row with `content` + `title` (required, prompted via modal) + `chapter` (= `pageChapter` from reader) + `page_number` (= `第 N 段`) + the new `book_id`.
+3. Links annotation to excerpt via `excerpt_id`.
+
+Result: the book appears in `/excerpts/library` with rich metadata, excerpts grouped by chapter on `/excerpts/library/[bookId]`, and search results stay fresh because that page refetches `allBooks` on `visibilitychange`.
+
 ## See also
 
 - [`standardize-ebook` SKILL](../standardize-ebook/SKILL.md) — detail-level skill for the markdown standardize pipeline
