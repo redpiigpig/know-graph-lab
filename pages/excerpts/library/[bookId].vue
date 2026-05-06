@@ -18,6 +18,8 @@
             <button class="px-3 py-1.5 text-xs rounded-lg bg-blue-600 text-white hover:bg-blue-500" @click="showCreate = true">+ 新增文摘</button>
             <button class="px-3 py-1.5 text-xs rounded-lg border border-blue-300 text-blue-700 hover:bg-blue-50" @click="showOCR = true">上傳照片</button>
             <button class="px-3 py-1.5 text-xs rounded-lg border border-blue-300 text-blue-700 hover:bg-blue-50" @click="showCSV = true">上傳 CSV</button>
+            <button class="px-3 py-1.5 text-xs rounded-lg border border-emerald-300 text-emerald-700 hover:bg-emerald-50"
+              :disabled="!book?.excerpts?.length" @click="exportMarkdown">📋 匯出 Markdown</button>
             <button @click="handleLogout" class="text-gray-500 hover:text-red-600 transition text-sm">登出</button>
           </div>
         </div>
@@ -99,6 +101,9 @@
               </div>
 
               <p class="mt-3 text-sm text-blue-600 font-medium">共 {{ book.excerpts?.length ?? 0 }} 筆摘文</p>
+              <div class="mt-3">
+                <TagPicker :model-value="bookTagIds" @update:model-value="saveBookTags" />
+              </div>
             </div>
           </div>
         </div>
@@ -202,6 +207,10 @@
                       · {{ formatPageLabel(excerpt.page_number, excerpt.content || excerpt.title || "") }}
                     </span>
                   </p>
+                  <div class="mb-2" @click.stop>
+                    <TagPicker :model-value="excerptTagIds[excerpt.id] ?? []"
+                      @update:model-value="(ids) => saveExcerptTags(excerpt.id, ids)" />
+                  </div>
 
                   <div
                     class="overflow-hidden transition-all duration-200 relative"
@@ -448,6 +457,139 @@ async function fetchBook() {
     headers: { Authorization: `Bearer ${token}` },
   }).catch(() => []);
   loading.value = false;
+  // Tags load in parallel — separate endpoints per entity, kept out of the
+  // main /api/books/:id payload so they refresh independently when changed.
+  loadBookTags();
+  loadAllExcerptTags();
+}
+
+// ── Tags ──
+const bookTagIds = ref<string[]>([]);
+const excerptTagIds = ref<Record<string, string[]>>({});
+
+async function loadBookTags() {
+  const token = await getToken(); if (!token) return;
+  const tags = await $fetch<{ id: string }[]>(`/api/books/${bookId}/tags`, {
+    headers: { Authorization: `Bearer ${token}` },
+  }).catch(() => []);
+  bookTagIds.value = tags.map((t) => t.id);
+}
+
+async function saveBookTags(ids: string[]) {
+  const token = await getToken(); if (!token) return;
+  bookTagIds.value = ids; // optimistic
+  await $fetch(`/api/books/${bookId}/tags`, {
+    method: "PUT",
+    headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+    body: { tag_ids: ids },
+  }).catch(() => null);
+}
+
+async function loadAllExcerptTags() {
+  const ids = (book.value?.excerpts ?? []).map((e: any) => e.id);
+  if (!ids.length) return;
+  const token = await getToken(); if (!token) return;
+  // N small calls — fine for typical books (< ~50 excerpts). If this gets
+  // hot, swap for one bulk endpoint.
+  const results = await Promise.all(ids.map(async (id: string) => {
+    const tags = await $fetch<{ id: string }[]>(`/api/excerpts/${id}/tags`, {
+      headers: { Authorization: `Bearer ${token}` },
+    }).catch(() => []);
+    return [id, tags.map((t) => t.id)] as const;
+  }));
+  excerptTagIds.value = Object.fromEntries(results);
+}
+
+async function saveExcerptTags(excerptId: string, ids: string[]) {
+  const token = await getToken(); if (!token) return;
+  excerptTagIds.value = { ...excerptTagIds.value, [excerptId]: ids };
+  await $fetch(`/api/excerpts/${excerptId}/tags`, {
+    method: "PUT",
+    headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+    body: { tag_ids: ids },
+  }).catch(() => null);
+}
+
+// ── Markdown citation export ──
+function buildMarkdown(): string {
+  const b = book.value as any;
+  if (!b) return "";
+  const lines: string[] = [];
+
+  // Header — full bibliographic record
+  lines.push(`# ${b.title}`);
+  if (b.author) lines.push("");
+  const ch = [
+    b.author,
+    b.translator ? `${b.translator} 譯` : null,
+    b.publish_year ? `(${b.publish_year})` : null,
+  ].filter(Boolean).join(", ");
+  const tail = [b.publisher, b.publish_place].filter(Boolean).join("：");
+  if (ch || tail) lines.push(`**${ch}${tail ? `. ${tail}` : ""}.**`);
+
+  // Original publication line — only when this is a translation
+  const orig = [
+    b.original_author,
+    b.original_title ? `*${b.original_title}*` : null,
+    b.original_publish_year ? `(${b.original_publish_year})` : null,
+    b.original_publisher,
+  ].filter(Boolean);
+  if (orig.length) {
+    lines.push("");
+    lines.push(`> 原書：${orig.join(", ")}`);
+  }
+
+  // Excerpts grouped by chapter (reuse the existing chapterGroups computation)
+  for (const group of chapterGroups.value as any[]) {
+    lines.push("");
+    lines.push("");
+    const chapHeader = group.chapter
+      ? (group.chapterName ? `${group.chapter} · ${group.chapterName}` : group.chapter)
+      : "未分章";
+    lines.push(`## ${chapHeader}`);
+
+    for (const ex of group.items) {
+      lines.push("");
+      if (ex.title) lines.push(`### ${ex.title}`);
+      lines.push("");
+      // Quote the body — prefix every line with > so multi-paragraph
+      // content stays a blockquote.
+      for (const line of (ex.content || "").split("\n")) {
+        lines.push(`> ${line}`);
+      }
+      // Citation tail
+      const cite: string[] = [];
+      cite.push(`《${b.title}》`);
+      if (group.chapter) cite.push(group.chapter);
+      if (ex.page_number) cite.push(formatPageLabel(ex.page_number, ex.content || ex.title || ""));
+      lines.push("");
+      lines.push(`> ——${cite.join("，")}`);
+    }
+  }
+
+  lines.push("");
+  return lines.join("\n");
+}
+
+async function exportMarkdown() {
+  const md = buildMarkdown();
+  if (!md) return;
+  // Try clipboard first; fall back to a download trigger if blocked
+  // (some browsers refuse clipboard writes outside user gestures even
+  // though we ARE in one — better to ALSO offer the download).
+  try {
+    await navigator.clipboard.writeText(md);
+    alert(`已複製到剪貼簿（${md.length} 字元）。同時下載為 .md 檔。`);
+  } catch {
+    alert(`下載 .md 檔（${md.length} 字元）`);
+  }
+  const blob = new Blob([md], { type: "text/markdown;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `${(book.value as any)?.title ?? "book"}.md`;
+  a.click();
+  URL.revokeObjectURL(url);
 }
 async function importToProject(excerptId: string) {
   const projectId = importTargetByExcerpt.value[excerptId];
