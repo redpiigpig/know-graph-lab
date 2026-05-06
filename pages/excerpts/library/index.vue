@@ -206,9 +206,24 @@ async function createBook() {
   await Promise.all([fetchAllBooks(), loadBooks(selectedSubCat.value?.id || selectedTopCat.value?.id)]);
 }
 
+// Re-fetch allBooks whenever the tab is brought back to focus. Without this
+// excerpt counts go stale: if the user creates an excerpt elsewhere (e.g.
+// via the /ebook reader) and returns here, search results still show the
+// pre-creation counts. The browse view stays fresh because clicking a
+// category calls loadBooks() — it's only the search path (filteredBooks
+// reads from allBooks) that needs this poke.
+function refreshOnVisible() {
+  if (document.visibilityState === "visible") fetchAllBooks();
+}
+
 onMounted(async () => {
   await Promise.all([fetchCategories(), fetchAllBooks()]);
   displayedBooks.value = allBooks.value;
+  document.addEventListener("visibilitychange", refreshOnVisible);
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener("visibilitychange", refreshOnVisible);
 });
 useHead({ title: "書摘圖書館 — 書摘庫" });
 </script>
