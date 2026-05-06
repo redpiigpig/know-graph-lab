@@ -1,6 +1,6 @@
 ---
 name: standardize-pdf
-description: Restandardize parsed PDFs into reader-ready chunks. Two flavors — Plan A (lite, implemented) reuses the EPUB pipeline's text helpers on the existing per-page JSONL; Plan B (full, design only) is a from-scratch PyMuPDF rebuild that detects chapters from font sizes and produces EPUB-grade output. Use this skill when EPUB-only standardize won't cut it for a book stuck on raw per-page text.
+description: Restandardize parsed PDFs into reader-ready chunks. Two flavors shipped — Plan A (lite) reuses the EPUB text helpers on the existing per-page JSONL with `page_number` preserved; Plan B (TOC-driven) re-chunks Plan A output into chapter-level chunks using PDF bookmarks, with a `page_range` field for cross-page citations. Plan B v1 (font-size driven, for no-TOC books) is deferred design. Use when EPUB-only standardize won't cut it for a PDF book stuck on raw per-page text or needing chapter sidebar.
 ---
 
 # Standardize PDF Skill
@@ -111,14 +111,108 @@ identically across runs.
 
 ---
 
-## Plan B — Full pipeline (design, not yet built)
+## Plan B — TOC-driven re-chunking (implemented v0)
 
 Plan A is a polish on the existing one-page-one-chunk output. Plan B
-re-parses the PDF source with [PyMuPDF (`fitz`)](https://pymupdf.readthedocs.io/),
-infers structure from typography, and emits EPUB-grade chapter-level
-chunks. Target script: `scripts/standardize_pdf.py`.
+([`scripts/standardize_pdf.py`](../../../scripts/standardize_pdf.py))
+turns those flat per-page chunks into chapter-level chunks driven by
+the PDF's TOC bookmarks. Same source-of-truth (existing JSONL) — no
+PDF text re-extraction — so it inherits Plan A's text exactly while
+re-grouping it.
 
-### Suggested pipeline order
+> **🚧 Why TOC-driven and not font-driven?** The original v0 design
+> proposed font-size analysis (h2/h3 from typographic hierarchy).
+> A 30-PDF probe showed font signal is degenerate on a large fraction
+> of the library — many books are image-based PDFs where PyMuPDF
+> extracts <1% of body text yet PyMuPDF's TOC bookmarks survive. TOC
+> is therefore both more reliable and simpler to implement. Font-driven
+> chapter inference is deferred to Plan B v1 for the no-TOC subset.
+
+### What v0 does
+
+1. Loads the per-page JSONL produced by parse_worker / standardize_pdf_lite.
+2. Reads only the PDF's TOC (`fitz.Document.get_toc()`) — no body re-extract.
+3. Filters TOC entries to `level <= 2`, drops empties, dedupes
+   same-start-page entries, sorts by start page.
+4. For each TOC entry, concatenates the existing JSONL pages from
+   `[entry.start_page, next_entry.start_page - 1]` into one chapter chunk.
+5. Pages BEFORE the first TOC entry become a single `前置內容` chunk
+   so 版權頁 / 序言 still feed `_extract_publisher_metadata`.
+6. Applies `to_traditional()` (s2tw + TRAD_FIXES) and `collapse_cjk_spacing()`
+   per chunk.
+7. Builds hierarchical `chapter_path` from TOC ancestor titles
+   (`祖標題 / 父標題 / 本標題`).
+8. Writes JSONL → R2 mirror → DB previews + ebooks metadata PATCH
+   (chunk_count / total_pages / publisher / publication_year / etc.).
+
+### Per-chunk contract
+
+| Field | Value |
+|---|---|
+| `chunk_type` | `"chapter"` |
+| `chunk_index` | re-numbered from 0 |
+| `page_number` | **first real PDF page in the chapter** — sacred, never re-numbered |
+| `page_range` | `[first, last]` — new field |
+| `chapter_path` | TOC title hierarchy, s2tw'd |
+| `format` | `"text"` |
+| `content` | concatenated page contents joined by `\n\n`, then s2tw + spacing-collapsed |
+
+### Skip conditions (book stays on Plan A output, no change)
+
+| Condition | Threshold |
+|---|---|
+| TOC entries < 3 | `MIN_TOC_ENTRIES` |
+| Page-level TOC (≈1 entry/page) | `total_pages / len(toc) < 1.2` (`MIN_PAGES_PER_ENTRY`) — caught 中東史 (654/661) and 希伯來聖經 (598/598) |
+| Existing annotations on this ebook | hard refuse without `--force` (re-chunking shifts `chunk_index` → breaks references) |
+| JSONL already chapter-chunked | re-run guard (`chunk_type == 'chapter'` or `page_range` present) — must re-run `standardize_pdf_lite` first to revert |
+| PDF file missing on Drive | `file not found:` error |
+
+### How to run
+
+Single book:
+```bash
+python scripts/standardize_pdf.py <ebook_id>
+python scripts/standardize_pdf.py <ebook_id> --dry-run
+python scripts/standardize_pdf.py <ebook_id> --no-r2
+python scripts/standardize_pdf.py <ebook_id> --force        # ignore annotations guard
+```
+
+Batch:
+```bash
+python scripts/standardize_pdf.py --category 哲學
+python scripts/standardize_pdf.py --all --dry-run            # just lists eligible PDFs
+python scripts/standardize_pdf.py --all                      # ~6.5s/book → ~50min for 437
+```
+
+### Realistic hit rate (sample of 20 PDFs)
+
+12 / 20 books got chapter-chunked. The 8 skips broke down as:
+- 7 books had **0 TOC entries** (publisher exported PDF without
+  bookmarks — these are candidates for Plan B v1 font analysis)
+- 1 book reduced to a single TOC chunk (`only N chunks produced` guard)
+
+### Idempotency + safety
+
+- Re-running on a Plan-A book is safe — overwrites JSONL / R2 / DB previews.
+- Re-running on a Plan-B book HARD STOPS — `JSONL already chapter-chunked`.
+  Revert via `python scripts/standardize_pdf_lite.py <id>` first.
+- Annotations guard fires when even one annotation row exists on
+  the ebook. Currently NO PDFs in the library have annotations;
+  if that ever changes, plan a chunk_index migration before
+  re-chunking.
+- `page_number` is preserved exactly. `chunk_index` is re-numbered.
+  PDF citations in 書摘 remain correct because they reference
+  `page_number`, not `chunk_index`.
+
+---
+
+## Plan B v1 — font-driven inference for no-TOC books (deferred)
+
+Original Plan B design — font-size analysis to infer chapter
+boundaries when the PDF has no TOC bookmarks. Worth building when
+the no-TOC subset becomes the bottleneck (≈40% of 437 PDFs).
+
+### Pipeline order
 
 1. **Open PDF**, iterate pages.
 2. **Per-page font analysis** — for each text span collect
@@ -144,22 +238,8 @@ chunks. Target script: `scripts/standardize_pdf.py`.
    - Body spans → join with newlines; merge same-paragraph spans (same y-bbox proximity, no heading between)
    - Bold/italic body → `**text**` / `*text*`
 6. **Chunking**:
-   - **Per-chapter (preferred)**: start a new chunk at every `h2`. Each
-     chunk records the FIRST page it covers as its `page_number` AND
-     keeps a `page_range: [start, end]` so cross-page citations still
-     work. Reader page-jump can index by start of range.
-   - **Fallback per-page** when no headings detected: same as Plan A —
-     one chunk per page, but with the cleanup pass applied.
-7. **Reuse the EPUB downstream**:
-   - `to_traditional()` for s2tw + TRAD_FIXES
-   - `derive_chapter_title()` for cosmetic renames (CIP→版權頁)
-   - `consolidate_frontmatter_into_publisher()` if a CONTENTS chunk exists
-     in the early chunks AND no chapter starts in between
-   - `apply_cover_enrichment()` — synthesize a cover chunk at chunk_index
-     0 BUT do NOT shift downstream `page_number` (insert with
-     `page_number: null` so it doesn't collide with real pagination)
-   - PDF bookmarks (`page.get_toc()`) when present can drive volume
-     detection for paginated multi-volume sets
+   - Start a new chunk at every `h2` (same per-chunk contract as v0
+     above — page_number sacred, page_range new).
 
 ### Calibration tips
 
@@ -177,40 +257,28 @@ chunks. Target script: `scripts/standardize_pdf.py`.
   end mid-sentence" using `not text.endswith(('。', '!', '?', '」', '）'))`.
 - **Footnotes** — usually appear at bottom of page in smaller font.
   Either drop them or move to end of chunk as `> [註] ...`.
-- **Page-number preservation under chunking**: when a chunk spans pages
-  M-N, store `page_number = M` and add a new field
-  `page_range: [M, N]`. Citations stay correct (point to start). The
-  reader can render `第 M-N 頁` if `page_range` is present.
 
-### Known PDFs to use as test cases
+### When NOT to do v1
 
-- 《尼采到底說了什麼？》by 羅伯特·所羅門 — straightforward 哲學 PDF
-- 《從封閉世界到無限宇宙》by 柯瓦雷 — typical philosophy press PDF
-- 《當代數學》— heavy formula content; PyMuPDF text extraction will be
-  ugly; expect this to be the worst case
-- 《希伯來聖經的文本歷史與思想世界》— used for Plan A smoke test;
-  has running headers Plan A couldn't strip
-
-### When NOT to do Plan B
-
-- Book reads OK after Plan A
+- Book reads OK after Plan A or Plan B v0
 - PDFs with heavy formula / table layout (PyMuPDF mangles those — the
   Gemini Vision OCR pipeline is more robust but expensive)
+- Image-based PDFs (run OCR first; v1's font signal will be empty)
 
 ---
 
-## Current state (snapshot 2026-05-06, late-day)
+## Current state (snapshot 2026-05-07)
 
 | Pipeline | Books | Status |
 |---|---|---|
 | EPUB standardize | 481 / 492 | ✅ shipped, all batches re-run with rich metadata |
 | PDF Plan A (lite) | 437 / 437 parsed | ✅ shipped — s2tw + spacing collapse + publisher metadata extraction; `page_number` preserved |
-| PDF Plan B (full) | 0 / 437 parsed | 📐 design only — separate session work |
-| PDF OCR queue | ~377 books | 🔄 daily 16:00 by `ocr_with_gemini.py` (all 4 keys share one GCP project quota; consider splitting across projects for parallel quota) |
+| PDF Plan B v0 (TOC-driven) | **152 / 437 chapter-chunked** | ✅ shipped — full `--all` batch complete (OK 152, Skipped 285, Failed 0). Skips: 0-entry TOC (no bookmarks), per-page TOC, already-chunked re-run guard. |
+| PDF Plan B v1 (font-driven) | 0 / no-TOC subset (~285) | 📐 deferred design — for the ~65% with no usable PDF TOC bookmarks |
+| PDF OCR queue | ~377 books | 🔄 daily 16:00 + 01:00 by `ocr_with_gemini.py`; after OCR → Plan A → Plan B |
 
-PDF total: 834 books, 437 text-extractable + parsed (Plan A complete),
-~377 still queued for OCR. After OCR lands JSONL for those, Plan A is
-re-runnable across the full set in one batch.
+PDF total: 834 books, 437 text-extractable + Plan A complete, 152 chapter-chunked via Plan B,
+~377 still queued for OCR. After OCR lands JSONL, Plan A → Plan B re-runnable in one batch.
 
 ---
 

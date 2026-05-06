@@ -26,7 +26,7 @@ End-to-end pipeline that takes books from a local Drive folder all the way to th
 | Search by title / author / fulltext | ✅ wired | `/api/ebooks/search?mode=…` |
 | **EPUB standardize → markdown reader format** | ✅ done | 481/492 EPUBs incl. all enrichment passes |
 | **PDF standardize Plan A (lite)** | ✅ done | 437/437 text-extractable PDFs polished — s2tw, spacing collapse, publisher metadata, `page_number` preserved |
-| **PDF standardize Plan B (full)** | 📐 design only | PyMuPDF font-size-driven chapter inference — see `standardize-pdf` skill |
+| **PDF standardize Plan B v0 (TOC-driven)** | ✅ done | `standardize_pdf.py --all` — 152/437 chapter-chunked (OK 152, Skipped 285, Failed 0); Plan B v1 (font-driven, no-TOC subset) deferred |
 | **Online metadata enrichment** | ✅ done | `enrich_book_metadata.py` filled 8 publishers + 11 publish_years on 28-book backlog (89% / 87% coverage now) |
 | **books / excerpts library** | ✅ done | `/excerpts/library`, tags, Markdown export, daily bookmark |
 
@@ -45,6 +45,7 @@ End-to-end pipeline that takes books from a local Drive folder all the way to th
 | `run_ocr_daily.bat` + Task Scheduler | (orchestrator) | Windows daily runner — runs **ingest → parse → OCR (gemini only)** in sequence |
 | `standardize_ebook.py` | 4 — standardize | Re-parse EPUB → markdown chunks, s2tw, drop boilerplate (see `standardize-ebook` skill) |
 | `standardize_pdf_lite.py` | 4 — standardize | Plan A polish over per-page JSONL: s2tw + collapse spacing + extract publisher metadata. `page_number` preserved exactly. See `standardize-pdf` skill |
+| `standardize_pdf.py` | 4 — standardize | Plan B TOC-driven re-chunking. Reads existing JSONL + PDF TOC → emits chapter-level chunks with `page_range`. Falls back to Plan A on books without usable TOC. See `standardize-pdf` skill |
 | `enrich_book_metadata.py` | 4b — backfill | Online lookup (Google Books → Open Library) to fill missing `publisher` / `publish_year` on `books` rows. Idempotent; respects `metadata_locked`. `status` / `run [--limit N] [--dry-run] [--book <id>]` / `probe --book <id>` |
 | `repopulate_chunk_previews.py` | 5 — DB | Back-fill `ebook_chunks` previews from local JSONL. `run` / `retry-failed` / `status` |
 | `upload_chunks_to_r2.py` | 5 — R2 | One-shot bulk uploader for any books whose JSONL isn't on R2 yet |
