@@ -33,17 +33,33 @@ export default defineEventHandler(async (event) => {
   if (body.save_as_excerpt) {
     const { data: ebookRow } = await supabase
       .from("ebooks")
-      .select("book_id, title, author")
+      .select(
+        "book_id, title, author, translator, publisher, publisher_location, " +
+        "publication_year, original_title, original_author, original_publish_year",
+      )
       .eq("id", body.ebook_id)
       .single();
 
     // If this ebook has no linked books row yet, auto-create one and persist
     // the link — so the resulting excerpt actually shows up in 書摘圖書館.
+    // Copy whatever publisher metadata standardize_ebook extracted from
+    // 版權頁 so the auto-created book matches the richness of manually-
+    // entered ones.
     let bookId = (ebookRow as any)?.book_id ?? null;
     if (!bookId && ebookRow) {
+      const e = ebookRow as any;
+      const insert: Record<string, any> = { title: e.title, author: e.author };
+      if (e.translator)            insert.translator            = e.translator;
+      if (e.publisher)             insert.publisher             = e.publisher;
+      if (e.publisher_location)    insert.publish_place         = e.publisher_location;
+      if (e.publication_year)      insert.publish_year          = e.publication_year;
+      if (e.original_title)        insert.original_title        = e.original_title;
+      if (e.original_author)       insert.original_author       = e.original_author;
+      if (e.original_publish_year) insert.original_publish_year = e.original_publish_year;
+
       const { data: book, error: bookErr } = await supabase
         .from("books")
-        .insert({ title: (ebookRow as any).title, author: (ebookRow as any).author })
+        .insert(insert)
         .select("id")
         .single();
       if (bookErr) throw createError({ statusCode: 500, message: `book auto-create: ${bookErr.message}` });

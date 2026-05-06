@@ -228,6 +228,30 @@ _AUTHOR_EN_RX = re.compile(
     r"(?:作\s*者|Author)\s*[：:]\s*[^\n（(]*[（(]([^）)]+)[）)]",
     re.IGNORECASE,
 )
+# Field-value stop characters: newline, fullwidth/halfwidth pipe (publishers
+# use 「│」 / 「|」 to pack multiple metadata fields onto one line), comma,
+# semicolon, slash, paren — anything that signals "next field starts here".
+_FIELD_STOP = r"\n│|，,；;／/（(、"
+
+_TRANSLATOR_RX = re.compile(
+    rf"(?:譯\s*者|译\s*者|Translator|Translated\s+by)\s*[：:]\s*([^{_FIELD_STOP}]+)",
+    re.IGNORECASE,
+)
+# 出版 / 出版社 / 出版者 — but NOT 出版日期 / 出版年 / 出版時間 / 出版地
+_PUBLISHER_RX = re.compile(
+    rf"(?:出\s*版(?:社|者)?|Published\s+by|Publisher)(?!\s*(?:日期|年|時間|時期|地))\s*[：:]\s*([^{_FIELD_STOP}]+)",
+    re.IGNORECASE,
+)
+# Find a 4-digit year next to a Chinese print-date label
+_PUBLISH_YEAR_RX = re.compile(
+    r"(?:初\s*版(?:首刷)?|再\s*版|電\s*子\s*書|出\s*版\s*日?\s*期?|出\s*版\s*年|出\s*版\s*時?\s*期|First\s+published|Published)\D{0,12}(\d{4})\s*年?",
+    re.IGNORECASE,
+)
+# 「Copyright © 1942 by Edith Hamilton」 — gives both original year and author
+_ORIG_COPYRIGHT_RX = re.compile(
+    r"Copyright\s*©?\s*(\d{4})\s+by\s+([^\n.,]+)",
+    re.IGNORECASE,
+)
 
 
 def _clean_extracted(s: str) -> str:
@@ -250,34 +274,78 @@ def _clean_extracted(s: str) -> str:
 
 
 def _extract_publisher_metadata(chunks):
-    """Scan all chunks for 版權頁-style metadata lines. Returns
-    (full_title, original_title, author_en) — any may be None if not found."""
-    full_title = None
-    orig_title = None
-    author_en = None
+    """Scan all chunks for 版權頁-style metadata lines. Returns a dict with
+    keys: full_title, original_title, author_en, translator, publisher,
+    publish_year, original_publish_year, original_author. Any value may be
+    None if not present in the source.
+
+    Strategy: 「first hit wins」 per field. Walks chunks in order so the
+    nearest-to-cover 版權頁 page dominates over any later mentions in body
+    text. Also tries the cover chunk's content first since some EPUBs
+    embed structured metadata there too."""
+    out = {
+        "full_title": None,
+        "original_title": None,
+        "author_en": None,
+        "translator": None,
+        "publisher": None,
+        "publish_year": None,
+        "original_publish_year": None,
+        "original_author": None,
+    }
     for c in chunks:
         content = c.get("content") or ""
-        if not full_title:
+        if not content:
+            continue
+        if out["full_title"] is None:
             m = _FULL_TITLE_RX.search(content)
             if m:
                 cand = _clean_extracted(m.group(1))
                 if cand and len(cand) >= 2:
-                    full_title = cand
-        if not orig_title:
+                    out["full_title"] = cand
+        if out["original_title"] is None:
             m = _ORIG_TITLE_RX.search(content)
             if m:
                 cand = _clean_extracted(m.group(1))
                 if cand and len(cand) >= 3:
-                    orig_title = cand
-        if not author_en:
+                    out["original_title"] = cand
+        if out["author_en"] is None:
             m = _AUTHOR_EN_RX.search(content)
             if m:
                 cand = _clean_extracted(m.group(1))
                 if cand and re.search(r"[A-Za-z]", cand):
-                    author_en = cand
-        if full_title and orig_title and author_en:
+                    out["author_en"] = cand
+        if out["translator"] is None:
+            m = _TRANSLATOR_RX.search(content)
+            if m:
+                cand = _clean_extracted(m.group(1))
+                if cand and len(cand) >= 1:
+                    out["translator"] = cand
+        if out["publisher"] is None:
+            m = _PUBLISHER_RX.search(content)
+            if m:
+                cand = _clean_extracted(m.group(1))
+                # Reject if it looks like 'YYYY 年' / '日期…' garbage
+                if cand and len(cand) >= 2 and not re.match(r"^\d{2,}\s*年?$", cand):
+                    out["publisher"] = cand
+        if out["publish_year"] is None:
+            m = _PUBLISH_YEAR_RX.search(content)
+            if m:
+                yr = int(m.group(1))
+                if 1500 <= yr <= 2100:
+                    out["publish_year"] = yr
+        if out["original_publish_year"] is None or out["original_author"] is None:
+            m = _ORIG_COPYRIGHT_RX.search(content)
+            if m:
+                yr = int(m.group(1))
+                ath = _clean_extracted(m.group(2))
+                if 1500 <= yr <= 2100:
+                    out["original_publish_year"] = out["original_publish_year"] or yr
+                if ath and re.search(r"[A-Za-z]", ath):
+                    out["original_author"] = out["original_author"] or ath
+        if all(out.values()):
             break
-    return full_title, orig_title, author_en
+    return out
 
 
 def _split_title_subtitle(title: str):
@@ -308,7 +376,10 @@ def build_cover_content(book, chunks) -> str:
     """
     title = (book.get("title") or "").strip()
     author = (book.get("author") or "").strip()
-    full_title, original_title, author_en = _extract_publisher_metadata(chunks)
+    meta = _extract_publisher_metadata(chunks)
+    full_title     = meta["full_title"]
+    original_title = meta["original_title"]
+    author_en      = meta["author_en"]
 
     # Prefer the publisher's full-form title when available (it usually contains
     # the subtitle that DB.title omits); only use it if it starts with DB.title
@@ -866,15 +937,35 @@ def push_to_r2(book_id, jsonl_path):
 
 def update_db(book_id, chunks):
     total_chars = sum(len(c["content"]) for c in chunks)
+
+    # Build the patch body: always update counts/timestamps, plus any
+    # publisher metadata we managed to extract from 版權頁. Fields are only
+    # included when present so we never overwrite a manually-set value with
+    # null on a later re-run.
+    patch = {
+        "chunk_count": len(chunks),
+        "total_chars": total_chars,
+        "total_pages": len(chunks),
+        "parsed_at": datetime.utcnow().isoformat() + "Z",
+    }
+    meta = _extract_publisher_metadata(chunks)
+    if meta["full_title"]:
+        # subtitle = part after ':'/':' if the full title contains one
+        _, sub = _split_title_subtitle(meta["full_title"])
+        if sub:
+            patch["subtitle"] = sub
+    if meta["original_title"]:        patch["original_title"]        = meta["original_title"]
+    if meta["author_en"]:             patch["author_en"]             = meta["author_en"]
+    if meta["translator"]:            patch["translator"]            = meta["translator"]
+    if meta["publisher"]:             patch["publisher"]             = meta["publisher"]
+    if meta["publish_year"]:          patch["publication_year"]      = meta["publish_year"]
+    if meta["original_publish_year"]: patch["original_publish_year"] = meta["original_publish_year"]
+    if meta["original_author"]:       patch["original_author"]       = meta["original_author"]
+
     requests.patch(
         f"{URL}/rest/v1/ebooks?id=eq.{book_id}",
         headers=H_JSON,
-        json={
-            "chunk_count": len(chunks),
-            "total_chars": total_chars,
-            "total_pages": len(chunks),
-            "parsed_at": datetime.utcnow().isoformat() + "Z",
-        },
+        json=patch,
         timeout=30,
     )
 
