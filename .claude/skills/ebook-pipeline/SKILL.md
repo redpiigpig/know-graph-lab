@@ -400,6 +400,50 @@ Reader's 「+ 書摘」 button creates an annotation **and**:
 
 Result: the book appears in `/excerpts/library` with rich metadata, excerpts grouped by chapter on `/excerpts/library/[bookId]`, and search results stay fresh because that page refetches `allBooks` on `visibilitychange`.
 
+### Tags (`tags` + `book_tags` + `excerpt_tags`)
+
+Cross-cut, network-style organization that complements the existing tree
+categories. Schema in
+[`database/tags.sql`](../../../database/tags.sql), applied via the
+Management API (psycopg2 direct DB blocked by IPv6-only DNS — see the
+auto-memory `reference_supabase_management_api.md`).
+
+- `tags (id, name, color, created_at)` — global, name unique
+  (case-insensitive lookup keeps the picker idempotent)
+- `book_tags (book_id, tag_id)` and `excerpt_tags (excerpt_id, tag_id)`
+  — junction tables, CASCADE on entity delete
+
+Endpoints:
+- `GET/POST /api/tags`, `DELETE /api/tags/:id`
+- `GET/PUT /api/books/:id/tags`, `GET/PUT /api/excerpts/:id/tags`
+- `tagId` query param on `/api/books` and `/api/ebooks` (resolves
+  `book_tags` to a set of book_ids first, then narrows the listing query)
+
+Reusable [`components/TagPicker.vue`](../../../components/TagPicker.vue)
+shows selected tags as chips, typeahead-filters existing tags, creates
+new ones on Enter (server returns the existing row when name collides).
+Wired into:
+- `/excerpts/library/[bookId]` book metadata block (book-level tags)
+- per-excerpt card on the same page (excerpt-level tags)
+
+URL-driven filter `?tag=<id>`:
+- `/excerpts/library` shows a tag chip strip below search bar
+- `/ebook` shows a 「標籤」 sidebar section below 「我的書櫃」 (only
+  rendered when at least one tag exists)
+
+### Markdown citation export
+
+「📋 匯出 Markdown」 button on `/excerpts/library/[bookId]` toolbar.
+Builds a self-contained markdown document:
+- Bibliographic header (title / author / translator / publisher / year
+  + Original publication line for translations)
+- Chapter-grouped excerpt blocks with `> blockquote` content and
+  `——《book》, chapter, page` citation tails
+
+Copies to clipboard AND triggers a `<book-title>.md` download in one
+click. No backend involved (built client-side from already-loaded
+`book.value` + `chapterGroups`).
+
 ## See also
 
 - [`standardize-ebook` SKILL](../standardize-ebook/SKILL.md) — detail-level skill for the markdown standardize pipeline
