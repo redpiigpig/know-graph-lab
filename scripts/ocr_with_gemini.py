@@ -381,6 +381,27 @@ def _haiku_ocr_book(haiku_client, src_path: Path) -> list:
     return all_chunks
 
 
+def _make_anthropic_client():
+    """Create anthropic.Anthropic using API key or Claude Code's OAuth token (whichever is available)."""
+    api_key = ENV.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_API_KEY")
+    if api_key:
+        return _anthropic.Anthropic(api_key=api_key)
+
+    # Fall back to Claude Code's stored OAuth token
+    cred_path = Path(os.environ.get("USERPROFILE", os.environ.get("HOME", ""))) / ".claude" / ".credentials.json"
+    if cred_path.exists():
+        try:
+            with cred_path.open(encoding="utf-8") as f:
+                creds = json.load(f)
+            token = creds.get("claudeAiOauth", {}).get("accessToken", "")
+            if token:
+                return _anthropic.Anthropic(auth_token=token)
+        except Exception:
+            pass
+
+    raise RuntimeError("No Anthropic credentials found. Add ANTHROPIC_API_KEY to .env or sign in to Claude Code.")
+
+
 def process_one_haiku(haiku_client, book: dict, src_path: Path, max_retries: int = 2) -> dict:
     """OCR one book with Haiku. Returns same {status, error?, transient?} dict as process_one."""
     last_err = ""
@@ -654,13 +675,12 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False):
                 failed.append((b["title"], "all keys quota-exhausted"))
                 break
 
-            api_key = ENV.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_API_KEY")
-            if not api_key:
-                print("  ❌ ANTHROPIC_API_KEY missing in .env — cannot fall back to Haiku.", file=sys.stderr)
+            try:
+                haiku_client = _make_anthropic_client()
+            except RuntimeError as e:
+                print(f"  ❌ {e}", file=sys.stderr)
                 failed.append((b["title"], "all keys quota-exhausted"))
                 break
-
-            haiku_client = _anthropic.Anthropic(api_key=api_key)
 
             # Process the current book (that triggered the quota) plus all remaining books.
             remaining = [b] + targets[i:]  # targets[i:] already excludes processed books
