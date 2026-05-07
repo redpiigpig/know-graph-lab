@@ -915,6 +915,86 @@ def split_body_at_anchors(body, anchor_to_vol):
     return out
 
 
+def rebuild_toc_chunk(chunks):
+    """Rebuild the 目錄 chunk's content from the book's actual chapter / section
+    structure (the same data driving the sidebar) so the in-content TOC mirrors
+    the sidebar exactly. Heading is `## <u>目錄</u>` so the user can confirm
+    the right chunk was found.
+
+    Format (when the book has volumes/chapters/sections):
+        ## <u>目錄</u>
+
+        ### 第一卷 …            ← volume row, only if multi-volume
+        **第1章 歐洲的興起**     ← chapter (bold)
+        1. 古代：希臘、羅馬…    ← section (plain line, joined by single newline)
+        2. 中世紀初期…
+        ...
+
+        **第2章 …**
+        5. 14世紀的災難
+        ...
+
+    No-op when there is no 目錄 chunk to rewrite, or when the book has fewer
+    than 3 chapter-like entries to list."""
+    skip_titles = {"目錄", "封面", "版權", "版權頁", "出版資訊", "出版說明",
+                   "出版前言", "前言", "序", "致謝", "扉頁", "書名", "封底",
+                   "Cover", "Title Page"}
+
+    entries = []  # [(volume, title, kind)]  kind ∈ {"chapter", "section"}
+    for c in chunks:
+        cp = (c.get("chapter_path") or "").strip()
+        if not cp or cp in skip_titles:
+            continue
+        # Detect whether this chunk is a chapter or a section by the FIRST
+        # heading depth inside its content (matches how the reader's loadToc
+        # decides level for the sidebar).
+        content = c.get("content") or ""
+        head = re.match(r"^\s*(#{1,4})\s+", content)
+        depth = len(head.group(1)) if head else 2
+        kind = "chapter" if depth <= 2 else "section"
+        entries.append({"volume": c.get("volume"), "title": cp, "kind": kind})
+
+    chap_count = sum(1 for e in entries if e["kind"] == "chapter")
+    if chap_count < 3:
+        return  # too sparse to bother
+
+    # Find the 目錄 chunk to rewrite. Prefer the EARLIEST one.
+    toc_chunk = None
+    for c in chunks:
+        if (c.get("chapter_path") or "").strip() == "目錄":
+            toc_chunk = c
+            break
+    if toc_chunk is None:
+        return
+
+    lines: list[str] = ["## <u>目錄</u>"]
+    last_vol = "<unset>"
+    cur_chapter_block: list[str] = []
+
+    def flush_chapter():
+        if cur_chapter_block:
+            lines.append("")
+            lines.append("\n".join(cur_chapter_block))
+            cur_chapter_block.clear()
+
+    for e in entries:
+        v = e["volume"]
+        if v != last_vol:
+            flush_chapter()
+            if v:
+                lines.append("")
+                lines.append(f"### {v}")
+            last_vol = v
+        if e["kind"] == "chapter":
+            flush_chapter()
+            cur_chapter_block.append(f"**{e['title']}**")
+        else:  # section — append on next line within current chapter block
+            cur_chapter_block.append(e["title"])
+    flush_chapter()
+
+    toc_chunk["content"] = "\n".join(lines)
+
+
 def standardize(book):
     """Re-parse EPUB → cleaned markdown chunks."""
     if book["file_type"] != "epub":
@@ -1164,6 +1244,8 @@ def standardize(book):
     promote_implicit_volumes(chunks)
     apply_cover_enrichment(chunks, book)
     consolidate_frontmatter_into_publisher(chunks)
+    # Rebuild 目錄 chunk (if any) from the now-final chapter/section structure
+    rebuild_toc_chunk(chunks)
 
     print(f"Kept: {len(chunks)} chunks, dropped: {len(dropped)}")
     if dropped[:8]:

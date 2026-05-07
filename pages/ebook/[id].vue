@@ -391,7 +391,9 @@ function escapeHtml(s: string) {
 }
 function inlineFmt(s: string) {
   return s.replace(/\*\*([^*\n]+)\*\*/g, "<strong>$1</strong>")
-          .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, "$1<em>$2</em>");
+          .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, "$1<em>$2</em>")
+          // <u>X</u> survives escapeHtml as &lt;u&gt;X&lt;/u&gt; — restore the tag here
+          .replace(/&lt;u&gt;([^<]+?)&lt;\/u&gt;/g, "<u>$1</u>");
 }
 function renderMarkdown(md: string): string {
   const blocks = md.split(/\n{2,}/);
