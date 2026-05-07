@@ -1,14 +1,14 @@
 /**
  * GET /api/pong/image/{key}
- * Proxy for R2 objects under the pong/ prefix.
- * Only serves keys that start with "pong/" to prevent arbitrary R2 access.
+ * Proxy for R2 objects under the pong-archive/ prefix.
+ * Only serves keys that start with "pong-archive/" to prevent arbitrary R2 access.
  */
 import { GetObjectCommand } from "@aws-sdk/client-s3";
 import { getR2Client } from "~/server/utils/r2";
 
 export default defineEventHandler(async (event) => {
-  const path = (event.context.params?.path as string[] | undefined) ?? [];
-  const key = `pong/${path.join("/")}`;
+  const pathParam = event.context.params?.path ?? "";
+  const key = `pong-archive/${pathParam}`;
 
   const client = getR2Client();
   const config = useRuntimeConfig();
