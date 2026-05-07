@@ -32,6 +32,12 @@ import time
 from pathlib import Path
 from datetime import datetime
 
+try:
+    import json_repair as _json_repair
+    _HAS_JSON_REPAIR = True
+except ImportError:
+    _HAS_JSON_REPAIR = False
+
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
     sys.stderr.reconfigure(encoding="utf-8")
@@ -328,7 +334,25 @@ def process_one(client, book, src_path, model, max_retries=3):
             try: client.files.delete(name=uploaded.name)
             except Exception: pass
 
-            data = json.loads(resp.text)
+            try:
+                data = json.loads(resp.text)
+            except json.JSONDecodeError as json_err:
+                # Gemini truncated the JSON (hit output token limit). Try to salvage
+                # whatever complete page objects were emitted before the cut-off.
+                if _HAS_JSON_REPAIR:
+                    try:
+                        data = _json_repair.loads(resp.text)
+                        if not isinstance(data, dict):
+                            data = {}
+                        salvaged = len(data.get("pages", []))
+                        if salvaged:
+                            print(f"  ⚠ truncated JSON salvaged {salvaged} pages via json_repair")
+                        else:
+                            raise ValueError("json_repair returned 0 pages")
+                    except Exception:
+                        raise json_err
+                else:
+                    raise
             pages = data.get("pages", [])
             non_empty = [p for p in pages if (p.get("text") or "").strip()]
             if not non_empty:

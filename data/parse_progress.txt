@@ -156,7 +156,7 @@
 [!] 1c747cef 哲學\中國思想史\楊祖漢，儒家的心學傳統.pdf  ERROR: FileDataError: Failed to open file 'G:\\我的雲端硬碟\\資料\\電子書\\哲學\\中國思想史\\楊祖漢，儒家的心學傳統.
 [x] 1c8002b1 宗教學\宗教對話\Dan Cohn-Sherbok，Interfaith Theology A Reader.pdf  (263 chunks)
 [x] 1c9db84f 歷史學\瑪喬麗·謝弗，胡椒的全球史.epub  (22 chunks)
-[!] 1cb10cbb 歷史學\商務印書館，商務印書館漢譯歷史套裝（24冊）.epub  ERROR: RuntimeError: chunk insert failed: HTTP 500 {"code":"57014","details":null,"hint
+[x] 1cb10cbb 歷史學\商務印書館，商務印書館漢譯歷史套裝（24冊）.epub  (319 chunks, 4,913,872 chars)
 [x] 1cdae9ef 世界宗教\基督教\神學原典\安波羅修，論基督教信仰.pdf  (518 chunks)
 [!] 1ce44872 歷史學\史學理論\約翰‧布羅，歷史的歷史.pdf  ERROR: no extractable text
 [!] 1d390fcc 世界宗教\印度教\奎師那協會\黃寶生，聖典『博伽梵歌』.pdf  ERROR: RuntimeError: chunk insert failed: HTTP 400 {"code":"22P05","details":"\\u0000 c
@@ -180,7 +180,7 @@
 [x] 211cdb21 世界宗教\猶太教\猶太民族研究\施羅默‧桑德，虛構的猶太民族.pdf  (2 chunks)
 [x] 211e0182 世界宗教\基督教\教會史\東方教會史\John Philip，The Lost History of Christianity.pdf  (321 chunks)
 [x] 218fd41e 世界宗教\波斯宗教\巴哈伊教\巴哈歐拉著作\巴哈歐拉，巴哈歐拉書簡集.pdf  (253 chunks)
-[!] 219d2121 歷史學\全球通史\世界史的拼圖（7冊）.epub  ERROR: RuntimeError: chunk insert failed: HTTP 500 {"code":"57014","details":null,"hint
+[x] 219d2121 歷史學\全球通史\世界史的拼圖（7冊）.epub  (468 chunks, 3,224,135 chars)
 [x] 21d42152 宗教學\宗教史\光明日報，世界宗教史\任繼愈，世界宗教史6.pdf  (124 chunks)
 [!] 222731a9 哲學\吳彥(編) 湯沛豐、朱振 等，康德法哲學及其起源.pdf  ERROR: no extractable text
 [-] 22454158 人類生物學\生物學\理查德·道金斯，自私的基因.mobi  (skip: mobi)
@@ -191,7 +191,7 @@
 [x] 2320d844 世界宗教\基督教\聖經研究\王曉朝，基督教典外文獻─新約篇─第2冊.pdf  (363 chunks)
 [-] 23479c97 人類生物學\人類起源與進化史\加亞‧文斯，人類進化史.azw3  (skip: azw3)
 [x] 2400034a 宗教學\宗教史\Will Durant，The Age of Faith- A History of Medieval Civilization-Christian, Islamic, and Judaic.pdf  (1527 chunks)
-[!] 240cdf3b 歷史學\東方界域史\中國史\度陰山，五大傳奇權謀人物傳記.epub  ERROR: RuntimeError: chunk insert failed: HTTP 500 {"code":"57014","details":null,"hint
+[x] 240cdf3b 歷史學\東方界域史\中國史\度陰山，五大傳奇權謀人物傳記.epub  (67 chunks, 1,411,244 chars)
 [!] 240e0c98 宗教學\邁克爾·莫洛伊，體驗宗教.pdf  ERROR: no extractable text
 [x] 245c8086 世界宗教\波斯宗教\摩尼教與靈智主義\張新璋，「諾斯」與拯救.pdf  (2 chunks)
 [x] 247434bb 歷史學\全球通史\商務，世界歷史文庫\約翰‧霍爾，日本史.pdf  (1 chunks)
