@@ -78,8 +78,8 @@ const { data: reports, pending } = await useAsyncData('pong-reports-list', async
 
 function formatDate(dateStr) {
   if (!dateStr) return ''
-  const d = new Date(dateStr)
-  return `${d.getFullYear()} 年 ${d.getMonth() + 1} 月`
+  const [y, m, d] = dateStr.split('-').map(Number)
+  return d ? `${y} 年 ${m} 月 ${d} 日` : `${y} 年 ${m} 月`
 }
 </script>
 

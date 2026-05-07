@@ -113,10 +113,9 @@ const filteredWritings = computed(() =>
 
 function formatDate(dateStr, approximate) {
   if (!dateStr) return ''
-  const d = new Date(dateStr)
-  const y = d.getFullYear()
-  const m = d.getMonth() + 1
-  return approximate ? `${y} 年` : `${y} 年 ${m} 月`
+  const [y, m, d] = dateStr.split('-').map(Number)
+  if (approximate) return `${y} 年`
+  return d ? `${y} 年 ${m} 月 ${d} 日` : `${y} 年 ${m} 月`
 }
 </script>
 
