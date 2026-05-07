@@ -644,12 +644,34 @@ _CHAPTER_TITLE_RE = re.compile(
     re.I,
 )
 
+# Appendix-style chapters whose sub-entries (節) should NOT be split into
+# individual sidebar items — readers expect ONE collapsed entry per appendix.
+# Matches inside a stripped title.
+_APPENDIX_TITLE_RE = re.compile(
+    r"(索引|附\s*錄|參考(?:資料|文獻|書目)|書目|文獻|"
+    r"延伸閱讀|進一步閱讀|further\s*read|"
+    r"年表|大事記|"
+    r"帝王世系|統治者|皇朝表|"
+    r"致謝|謝詞|致敬|acknowledg|"
+    r"後記|譯後記|譯者後記|跋|"
+    r"glossary|bibliography|index|"
+    r"術語表|名詞解釋|對照表|譯名對照|插圖出處)",
+    re.I,
+)
+
 
 def _is_chapter_title(title: str) -> bool:
     """Heuristic: title looks like a printed-book chapter (single-volume hierarchy)."""
     if not title:
         return False
     return bool(_CHAPTER_TITLE_RE.match(title.strip()))
+
+
+def _is_appendix_title(title: str) -> bool:
+    """Title that should NOT be subdivided — appendix, bibliography, index, etc."""
+    if not title:
+        return False
+    return bool(_APPENDIX_TITLE_RE.search(title.strip()))
 
 
 def parse_toc_hierarchical(book):
@@ -777,7 +799,9 @@ def parse_toc_hierarchical(book):
                             doc_chap_splits.setdefault(f, {})[a] = payload
                         else:
                             doc_chap_starts[f] = payload
-                    # 節 (grandchildren of volume)
+                    # 節 (grandchildren of volume) — skipped for appendix chapters
+                    if _is_appendix_title(chap_title):
+                        continue
                     for sec_t, sec_f, sec_a in _children_anchored(grand_list):
                         payload = (vol_title, sec_t, "####")
                         if sec_a:
@@ -793,7 +817,9 @@ def parse_toc_hierarchical(book):
                 doc_chap_splits.setdefault(file, {})[anchor] = payload
             else:
                 doc_chap_starts[file] = payload
-            # Add 節 splits
+            # Skip 節 splits for appendix-style chapters (索引/附錄/書目/...)
+            if _is_appendix_title(chap_title):
+                continue
             for sec_t, sec_f, sec_a in child_list:
                 sec_payload = (None, sec_t, "###")
                 if sec_a:
@@ -913,6 +939,53 @@ def split_body_at_anchors(body, anchor_to_vol):
         seg_inner = inner[start:end]
         out.append((open_tag + seg_inner + close_tag, anchor_to_vol[anchor]))
     return out
+
+
+def merge_appendix_subentries(chunks):
+    """Fold appendix sub-entries into their parent appendix chunk.
+
+    Many EPUBs put each entry of an appendix (kingdoms list under 統治者和
+    統治年代, per-chapter bibliography under 延伸閱讀, A-Z under 索引, etc.)
+    as its own spine document, so each becomes a separate chunk with its own
+    chapter_path — cluttering the sidebar. The user wants ONE collapsed entry
+    per appendix.
+
+    Heuristic: walk in order. The first chunk whose chapter_path matches
+    `_is_appendix_title` opens "appendix mode". Every later non-appendix-titled
+    chunk gets folded into the most recent appendix. A new appendix-titled
+    chunk starts a fresh appendix and becomes the new fold target.
+
+    The tail of a book is almost always all-appendix (索引/書目/年表/etc.) so
+    once appendix mode opens we stay in it. If a book has body chapters AFTER
+    an appendix (rare), this heuristic would over-merge — acceptable trade-off."""
+    out: list[dict] = []
+    current_appendix_idx: int | None = None
+
+    for c in chunks:
+        cp = (c.get("chapter_path") or "").strip()
+        if _is_appendix_title(cp):
+            out.append(c)
+            current_appendix_idx = len(out) - 1
+        elif current_appendix_idx is not None:
+            # Fold into current appendix — strip the duplicate heading line first
+            cont = c.get("content", "") or ""
+            cont = re.sub(r"^\s*#{1,4}\s+.+\n+", "", cont, count=1).strip()
+            if cont:
+                out[current_appendix_idx]["content"] = (
+                    (out[current_appendix_idx].get("content") or "").rstrip()
+                    + "\n\n"
+                    + cont
+                )
+        else:
+            out.append(c)
+
+    # Renumber chunk_index since we may have removed chunks
+    for i, c in enumerate(out):
+        c["chunk_index"] = i
+
+    # Mutate the input list in place so callers using `chunks` reference see it
+    chunks.clear()
+    chunks.extend(out)
 
 
 def rebuild_toc_chunk(chunks):
@@ -1244,6 +1317,8 @@ def standardize(book):
     promote_implicit_volumes(chunks)
     apply_cover_enrichment(chunks, book)
     consolidate_frontmatter_into_publisher(chunks)
+    # Fold appendix sub-entries into parent appendix BEFORE rebuilding TOC
+    merge_appendix_subentries(chunks)
     # Rebuild 目錄 chunk (if any) from the now-final chapter/section structure
     rebuild_toc_chunk(chunks)
 
