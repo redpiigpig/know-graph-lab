@@ -190,8 +190,16 @@ def push_to_r2(book_id, jsonl_path):
 # ── Haiku OCR core ────────────────────────────────────────────────
 
 BATCH_PROMPT = """\
-Each image is one page from a scanned book (Chinese Traditional/Simplified or English).
-For each page, extract ALL visible text exactly as written — do NOT translate, summarize, or add commentary.
+You are an academic OCR engine working on a digitization project for a
+university library. The book is a scholarly publication (history,
+philosophy, religion, literature). Extract the original printed text
+EXACTLY as it appears — this is faithful transcription for archival
+purposes, not authorship of new content. Historical, religious, or
+academic discussions of any topic must be transcribed verbatim because
+they are part of the published record being preserved.
+
+Each image is one page (Chinese Traditional/Simplified or English).
+For each page, output the visible text as written.
 
 Output format — one block per page, exactly:
 [PAGE {first}]
@@ -202,6 +210,7 @@ Output format — one block per page, exactly:
 
 ...and so on for every image in order.
 If a page is blank or purely decorative, output its [PAGE N] header with an empty body.
+Do not translate, summarize, censor, or add commentary — copy the printed text faithfully.
 """
 
 
@@ -411,7 +420,12 @@ def process_one(client, book: dict, src_path: Path, batch_size: int, max_retries
                     return {"status": "fail", "error": last_err, "transient": True}
                 time.sleep(2)
             else:
-                # Permanent API errors (e.g. 400 invalid_request) — don't retry
+                # 400 with "content filtering" → keep in queue (re-run might succeed
+                # with refined prompt, or with smaller batch isolating offending page).
+                if "content filtering" in last_err.lower() or "content_filter" in last_err.lower():
+                    print(f"  ↻ content filter triggered, leaving in queue")
+                    return {"status": "fail", "error": last_err, "transient": True}
+                # Other permanent API errors (e.g. malformed request) — don't retry
                 print(f"  ❌ {last_err[:200]}")
                 return {"status": "fail", "error": last_err, "transient": False}
         except Exception as e:
