@@ -205,8 +205,10 @@ If a page is blank or purely decorative, output its [PAGE N] header with an empt
 """
 
 
-_ANTHROPIC_IMAGE_MAX = 5 * 1024 * 1024  # 5 MB hard limit on raw image bytes
-_TARGET_IMG_BYTES = 4 * 1024 * 1024     # 4 MB target — 1 MB cushion under the cap
+_ANTHROPIC_IMAGE_MAX = 5 * 1024 * 1024   # 5 MB cap on the BASE64-encoded payload
+# Base64 grows raw bytes by 4/3, so raw must be ≤ ~3.75 MB to stay under 5 MB
+# encoded. Target 3.5 MB raw → ~4.67 MB base64 → 0.33 MB cushion.
+_TARGET_IMG_BYTES = int(3.5 * 1024 * 1024)
 
 
 def _render_page_image(doc, page_idx: int) -> tuple[bytes, str]:
