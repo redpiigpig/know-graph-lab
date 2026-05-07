@@ -7,7 +7,7 @@ description: Operate the Know-Graph-Lab ebook pipeline end-to-end. Use when work
 
 End-to-end pipeline that takes books from a local Drive folder all the way to the reader at `/ebook/[id]`. This file is the **operational hub** — what runs, in what order, how to monitor it, and how to recover when it breaks. For the standardization step specifically (turning EPUBs into reader-ready markdown), see the **`standardize-ebook` skill** which is the detail-level companion.
 
-## Current state (snapshot 2026-05-06, late-day)
+## Current state (snapshot 2026-05-07)
 
 | Stage | Status | Numbers |
 |---|---|---|
@@ -17,7 +17,7 @@ End-to-end pipeline that takes books from a local Drive folder all the way to th
 | DB import (`ebooks` table) | ✅ rolling | 1,326 rows (492 EPUB + 834 PDF) |
 | First-pass parse (text-extractable) | ✅ done | 921 parsed (484 EPUB + 437 text PDF) — 3 timeout-failed EPUBs retried 2026-05-07 |
 | mobi/azw3 → epub conversion | ✅ done | 0 remaining |
-| **OCR scanned PDFs** | 🔄 daily-scheduled | ~377 queued; auto-runs 16:00 daily (Gemini quota shared across 4 keys in one GCP project — exhausted today) |
+| **OCR scanned PDFs** | 🔄 every-6h scheduled | 322 queued; auto-runs every 6 hours (`13 */6 * * *`). Default engine: **Gemini** (`ocr_with_gemini.py`, 4 rotating API keys, `gemini-2.5-pro` @ 4 RPM). Claude Haiku Vision only when user explicitly orders it — strictly one book at a time. |
 | Local JSONL written | ✅ done for parsed books | `G:/我的雲端硬碟/資料/電子書/_chunks/*.jsonl` |
 | R2 mirror of JSONL | ✅ done | mirrored on parse / OCR / standardize |
 | `ebook_chunks` previews in DB | ✅ caught up | back-fill via `repopulate_chunk_previews.py retry-failed` |
@@ -117,9 +117,9 @@ annotations (
 
 **Quota-exhaustion fallback**: when Gemini returns 429 / `RESOURCE_EXHAUSTED`, [`ocr_with_gemini.py`](../../../scripts/ocr_with_gemini.py) prints "Quota/rate-limit hit. Stopping." and exits with **code 2**. The daily bat catches that exit code and runs [`ocr_with_qwen.py`](../../../scripts/ocr_with_qwen.py) for `--limit 5` books before giving up — see Workflow A-2 below. Tomorrow's daily run starts with Gemini again on the fresh quota.
 
-### Daily scheduler (set up + running)
+### Scheduler (set up + running)
 
-The bat is now a **3-stage daily runner**: `ingest_new_books → parse_worker → ocr_with_gemini`.
+The bat is now a **3-stage runner**: `ingest_new_books → parse_worker → ocr_with_gemini`.
 Despite the historical name `KGLab-OCR-Daily`, it does more than OCR — see [`scripts/run_ocr_daily.bat`](../../../scripts/run_ocr_daily.bat).
 
 | Component | Path |
@@ -127,10 +127,19 @@ Despite the historical name `KGLab-OCR-Daily`, it does more than OCR — see [`s
 | Bat runner | [`scripts/run_ocr_daily.bat`](../../../scripts/run_ocr_daily.bat) — runs ingest → parse → OCR in sequence; logs to `scripts/logs/ocr_YYYY-MM-DD.log` |
 | Toast helper | [`scripts/notify.ps1`](../../../scripts/notify.ps1) — Windows toast wrapper. Bat fires it twice: at run start, and again if Gemini hits 429 (so user knows when to expect tomorrow's resumption) |
 | Windows Task | `KGLab-OCR-Daily` registered via `Register-ScheduledTask` |
-| Trigger | Daily at 16:00 (Taipei = 0:00 PT, when Gemini quota resets) |
+| Trigger | **Every 6 hours** — cron `13 */6 * * *` (fires at 00:13, 06:13, 12:13, 18:13 Taipei time). Changed from daily-16:00 on 2026-05-07 to get more throughput per day. |
 | Behavior | `WakeToRun` + `StartWhenAvailable` — wakes from sleep, catches up if missed |
 | Run as | Current user, Interactive logon (no password stored; only fires while logged in) |
 | Cap | 12-hour `ExecutionTimeLimit` |
+
+### OCR engine policy (2026-05-07)
+
+**Default: Gemini** (`ocr_with_gemini.py`) — uses 4 rotating Google API keys; 503 = transient server overload (does NOT overwrite `parse_error`; next run retries); 429 = daily quota exhausted (script exits code 2).
+
+**Claude Haiku Vision**: ONLY when user explicitly orders it. **Always one book at a time** — launching multiple parallel Haiku agents simultaneously exhausted the entire Max subscription token quota with zero books completed (2026-05-07). When Haiku is ordered:
+- Use `Agent(..., model="haiku", ...)` for exactly one book
+- Pass PDF path via `@file` syntax to avoid Windows shell Chinese encoding issues
+- Wait for completion before starting next book
 
 ```powershell
 # Inspect / control

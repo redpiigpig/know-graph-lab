@@ -275,10 +275,10 @@ the no-TOC subset becomes the bottleneck (≈40% of 437 PDFs).
 | PDF Plan A (lite) | 437 / 437 parsed | ✅ shipped — s2tw + spacing collapse + publisher metadata extraction; `page_number` preserved |
 | PDF Plan B v0 (TOC-driven) | **152 / 437 chapter-chunked** | ✅ shipped — full `--all` batch complete (OK 152, Skipped 285, Failed 0). Skips: 0-entry TOC (no bookmarks), per-page TOC, already-chunked re-run guard. |
 | PDF Plan B v1 (font-driven) | 0 / no-TOC subset (~285) | 📐 deferred design — for the ~65% with no usable PDF TOC bookmarks |
-| PDF OCR queue | ~377 books | 🔄 daily 16:00 + 01:00 by `ocr_with_gemini.py`; after OCR → Plan A → Plan B |
+| PDF OCR queue | 322 books | 🔄 every 6h (`13 */6 * * *`) by `ocr_with_gemini.py` (Gemini default, 4 rotating keys); after OCR → Plan A → Plan B |
 
 PDF total: 834 books, 437 text-extractable + Plan A complete, 152 chapter-chunked via Plan B,
-~377 still queued for OCR. After OCR lands JSONL, Plan A → Plan B re-runnable in one batch.
+322 still queued for OCR. After OCR lands JSONL, Plan A → Plan B re-runnable in one batch.
 
 ---
 
