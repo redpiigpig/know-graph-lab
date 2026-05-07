@@ -95,6 +95,13 @@
       </div>
     </header>
 
+    <!-- ── Talk Image (no YouTube) ──────────────────────────── -->
+    <section v-if="!youtubeId && item.thumbnail_url" class="md-image-section">
+      <div class="md-image-inner">
+        <img :src="item.thumbnail_url" :alt="item.title" class="md-talk-image" />
+      </div>
+    </section>
+
     <!-- ── YouTube Player ───────────────────────────────────── -->
     <section v-if="youtubeId" class="md-player-section">
       <div class="md-player-inner">
@@ -527,6 +534,19 @@ onMounted(() => { loadSession() })
 .md-program.md-input { border: 1.5px dashed #C4B89A; width: auto; padding: 3px 10px; }
 
 .md-edit-hint { margin-top: 16px; font-size: 0.7rem; font-weight: 300; color: #A09280; letter-spacing: 0.06em; }
+
+/* ── Talk Image ─────────────────────────────────────────── */
+.md-image-section { padding: 48px 40px; background-color: #F9F8F6; border-bottom: 1px solid #E8E4DC; }
+.md-image-inner { max-width: 800px; margin: 0 auto; }
+.md-talk-image {
+  display: block;
+  max-width: 100%;
+  max-height: 560px;
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: 0 8px 32px rgba(40,30,20,0.14);
+  object-fit: contain;
+}
 
 /* ── Player ─────────────────────────────────────────────── */
 .md-player-section { padding: 48px 40px; background-color: #F9F8F6; border-bottom: 1px solid #E8E4DC; }

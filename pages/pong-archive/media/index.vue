@@ -78,8 +78,8 @@
         >
           <div class="mi-thumb">
             <img
-              v-if="item.youtube_id"
-              :src="`https://img.youtube.com/vi/${item.youtube_id}/mqdefault.jpg`"
+              v-if="item.youtube_id || item.thumbnail_url"
+              :src="item.thumbnail_url || `https://img.youtube.com/vi/${item.youtube_id}/mqdefault.jpg`"
               :alt="item.title"
               loading="lazy"
             />
@@ -89,7 +89,7 @@
                 <polygon points="20,19 20,31 33,25" fill="currentColor" opacity="0.5"/>
               </svg>
             </div>
-            <div class="mi-play-badge">▶</div>
+            <div v-if="item.youtube_id" class="mi-play-badge">▶</div>
           </div>
 
           <div class="mi-card-body">
