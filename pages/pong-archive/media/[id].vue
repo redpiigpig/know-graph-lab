@@ -702,8 +702,13 @@ onMounted(() => { loadSession() })
   color: #3A3530;
   line-height: 2;
   letter-spacing: 0.04em;
-  padding-bottom: 20px;
+  padding: 18px 0 16px;
+  border-bottom: 1px solid #EAE6DE;
 }
+.md-ts-block:last-child { border-bottom: none; }
+/* 章節標題接在 hr 之後時，把多餘的線吃掉 */
+.md-ts-speech:has(+ .md-ts-section),
+.md-ts-block:has(+ .md-ts-section) { border-bottom: none; }
 
 /* ── Proofreader Sign-off ────────────────────────────────── */
 .md-pr-section {
