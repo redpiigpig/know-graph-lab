@@ -59,3 +59,6 @@ stores/
 # Local scheduler / new-book staging inside skill folders (binaries, lock files)
 /.claude/scheduled_tasks.lock
 /.claude/skills/*/new-book/
+# Temp working directories (sermon audio downloads, FHL article scrape)
+/_tmp_audio/
+/tmp_fhl/

@@ -88,25 +88,30 @@ GUEST_INTRO = re.compile(
 
 
 def classify(triage_text):
-    """Apply heuristics. Returns ('skip'|'pong'|'unsure', reason_str)."""
+    """Apply heuristics. Returns ('skip'|'pong'|'unsure', reason_str).
+
+    Default: 'skip' (assume 邱牧師 since most 2020+ sermons are his).
+    Only override to 'pong' on STRONG 龐牧師 signals.
+    """
     t = triage_text
 
-    # 1. Strong 邱 signals
-    m = QIU_SELF_REF.search(t)
-    if m:
-        return "skip", f"邱牧師自述/3人稱龐: 「{m.group(0)}」"
-
-    # 2. 龐 in greeting (preacher addresses 邱牧師 from pulpit)
+    # 1. STRONG 龐 signal: preacher addresses 邱牧師 in greeting
+    #    (means 邱 is in audience, someone else is preaching — usually 龐)
     m = PONG_THIRD_PERSON_GREETING.search(t)
     if m:
         return "pong", f"問候/提到邱牧師: 「{m.group(0)}」"
 
-    # 3. 龐 self-reference (former 會督 service)
+    # 2. STRONG 龐 signal: 龐 self-reference (former 會督 service)
     m = PONG_SELF_REF.search(t)
     if m:
         return "pong", f"龐牧師自述: 「{m.group(0)}」"
 
-    # 4. Other guest preacher
+    # 3. 邱 self-reference signals
+    m = QIU_SELF_REF.search(t)
+    if m:
+        return "skip", f"邱牧師自述/3人稱龐: 「{m.group(0)}」"
+
+    # 4. Other guest preacher (NOT 龐)
     m = GUEST_INTRO.search(t)
     if m:
         return "skip", f"其他客座: 「{m.group(0)}」"
@@ -115,7 +120,8 @@ def classify(triage_text):
     if m and "龐" not in m.group(0):
         return "skip", f"其他客座: 「{m.group(0)}」"
 
-    return "unsure", "無明顯訊號"
+    # Default: assume 邱牧師 (regular senior pastor preaching)
+    return "skip", "預設邱牧師（無強烈龐訊號）"
 
 
 def delete_orphan_rows(sermon_id, media_id):
@@ -224,7 +230,7 @@ def process_entry(entry, txt_path, do_full=False):
         )
         print(f"  [db] sermon={sermon_id} media={media_id}")
 
-        # Download + Whisper FIRST chunk only
+        # Download + extract minutes 25-50 (sermon body + announcement transition)
         with tempfile.TemporaryDirectory() as tmpdir:
             audio_path = Path(tmpdir) / f"{youtube_id}.mp3"
             try:
@@ -232,7 +238,20 @@ def process_entry(entry, txt_path, do_full=False):
             except Exception as e:
                 print(f"  [error] download failed: {e}")
                 return "error"
-            triage_text = transcribe(audio_path, lang="zh", max_chunks=1)
+
+            # Slice mins 25-65 (sermon body + start of announcements)
+            sliced = Path(tmpdir) / f"{youtube_id}_slice.mp3"
+            ffmpeg = r"C:\Users\user\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-8.1-full_build\bin\ffmpeg.exe"
+            r = subprocess.run(
+                [ffmpeg, "-y", "-ss", "1500", "-t", "2400",
+                 "-i", str(audio_path), "-c", "copy", str(sliced)],
+                capture_output=True,
+            )
+            if r.returncode != 0 or not sliced.exists() or sliced.stat().st_size < 1000:
+                print(f"  [slice] fallback to first chunk")
+                triage_text = transcribe(audio_path, lang="zh", max_chunks=1)
+            else:
+                triage_text = transcribe(sliced, lang="zh", max_chunks=2)
         triage_file.write_text(triage_text, encoding="utf-8")
         print(f"  [triage] {len(triage_text)} chars")
 
