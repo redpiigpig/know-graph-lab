@@ -84,7 +84,7 @@ const formatted = computed(() => {
     if (t.startsWith('## ')) { out.push(`<h2 class="t-heading">${esc(t.slice(3))}</h2>`); continue }
     if (t.startsWith('---')) { out.push('<hr class="t-rule">'); continue }
     if (t.startsWith('*') && t.endsWith('*')) { out.push(`<p class="t-note">${esc(t.replace(/^\*+|\*+$/g, ''))}</p>`); continue }
-    out.push(`<p class="t-para">${esc(t)}</p>`)
+    out.push(`<p class="t-para">${esc(t).replace(/\*([^*\n]+)\*/g, '<em>$1</em>')}</p>`)
   }
   return out.join('')
 })
