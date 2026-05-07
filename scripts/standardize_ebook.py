@@ -637,72 +637,117 @@ def looks_like_volume(title: str) -> bool:
     return any(m in title for m in VOLUME_MARKERS)
 
 
+_CHAPTER_TITLE_RE = re.compile(
+    r"^(?:第[\d一二三四五六七八九十百千零兩两]+(?:章|回|课|課|课时|讲|講)|"
+    r"Chapter\s+\d+|"
+    r"\d+[\.、:：]\s*\S)",
+    re.I,
+)
+
+
+def _is_chapter_title(title: str) -> bool:
+    """Heuristic: title looks like a printed-book chapter (single-volume hierarchy)."""
+    if not title:
+        return False
+    return bool(_CHAPTER_TITLE_RE.match(title.strip()))
+
+
 def parse_toc_hierarchical(book):
-    """Detect 2-level TOC structure (top-level Sections each containing ≥2 chapters).
+    """Detect 2-level TOC structure with two possible roles.
 
-    A book is "hierarchical" when at least two top-level entries are
-    Section tuples carrying child entries — e.g. 羅馬帝國衰亡史 has
-    13 such top-level Sections each holding 5–10 chapter Links inside
-    the same spine HTML file. The current `parse_volume_toc` flow misses
-    those because the top titles don't contain volume markers like
-    卷/部/篇, so the entire HTML becomes a single chunk with no
-    volume/chapter structure.
+    Walks book.toc to find top-level Sections that have ≥2 children. Then decides:
 
-    Returns:
-      {'doc_chap_splits': {file: {anchor: (vol_title, chap_title)}},
-       'doc_chap_starts': {file: (vol_title, chap_title)},   # chapter at start of file
-       'flat_links':      [(title, file, anchor), ...]       # top-level Links (front matter)
-      }
-    or None when there's not enough hierarchy to bother (< 2 volumes with ≥2 children each)."""
-    volumes = []  # [(vol_title, [(chap_title, file, anchor), ...])]
+      * **multi-volume** (e.g. 羅馬帝國衰亡史) — top Sections look like volumes
+        (titles aren't 第N章). Split each spine doc at every CHILD anchor;
+        each child becomes a chunk tagged with vol+chapter from TOC.
+
+      * **single-volume hierarchical** (e.g. 現代世界史) — top Sections are
+        themselves chapters (titles match 第N章 / Chapter N / 1. ...).
+        Split at TOP Section anchors only; deeper child entries (節) remain
+        inline as h3/h4 inside each chapter chunk. volume = None.
+
+    Returns dict with keys:
+      role:             "multi_volume" or "single_chapter"
+      volumes:          list of (vol_title, [(chap_title, file, anchor), ...])
+                        — for logging; empty for single_chapter role
+      doc_chap_starts:  {file: (vol_or_None, chap_title)}      # chapter starts at file top
+      doc_chap_splits:  {file: {anchor: (vol_or_None, chap_title)}}  # chapter anchor inside file
+      flat_links:       [(title, file, anchor), ...]           # top-level Links (front matter)
+
+    Returns None when no usable 2-level structure found."""
+    top_sections = []  # [(title, file_no_anchor, anchor_or_None, [(child_title, file, anchor), ...])]
     flat_links = []
 
     for it in book.toc:
         if isinstance(it, tuple):
             section, children = it
-            vol_title = (getattr(section, "title", "") or "").strip()
-            if not vol_title or len(children) < 2:
+            sect_title = (getattr(section, "title", "") or "").strip()
+            sect_href = getattr(section, "href", "")
+            if not sect_title or len(children) < 2:
                 continue
-            if any(skip in vol_title for skip in ("版权", "版權", "Digital Lab")):
+            if any(skip in sect_title for skip in ("版权", "版權", "Digital Lab")):
                 continue
-            chaps = []
+            child_list = []
             for ch in children:
                 if isinstance(ch, tuple):
                     sec2, _gc = ch
                     ct = (getattr(sec2, "title", "") or "").strip()
-                    h = getattr(sec2, "href", "")
-                elif hasattr(ch, "title") and hasattr(ch, "href"):  # Link
+                    ch_h = getattr(sec2, "href", "")
+                elif hasattr(ch, "title") and hasattr(ch, "href"):
                     ct = (ch.title or "").strip()
-                    h = ch.href or ""
+                    ch_h = ch.href or ""
                 else:
                     continue
-                if ct and h:
-                    f, _, a = h.partition("#")
-                    chaps.append((ct, f, a or None))
-            if chaps:
-                volumes.append((vol_title, chaps))
-        elif hasattr(it, "title") and hasattr(it, "href"):  # Link
+                if ct and ch_h:
+                    f, _, a = ch_h.partition("#")
+                    child_list.append((ct, f, a or None))
+            if child_list:
+                f, _, a = sect_href.partition("#") if sect_href else ("", "", "")
+                top_sections.append((sect_title, f or "", a or None, child_list))
+        elif hasattr(it, "title") and hasattr(it, "href"):
             t = (it.title or "").strip()
             if t and it.href:
                 f, _, a = it.href.partition("#")
                 flat_links.append((t, f, a or None))
 
-    if len(volumes) < 2:
+    if len(top_sections) < 2:
         return None
 
-    doc_chap_splits = {}
+    # Decide role: are top Sections chapters or volumes?
+    chap_count = sum(1 for t, _, _, _ in top_sections if _is_chapter_title(t))
+    vol_marker_count = sum(1 for t, _, _, _ in top_sections if looks_like_volume(t))
+    if chap_count >= len(top_sections) * 0.5 and chap_count > vol_marker_count:
+        role = "single_chapter"
+    else:
+        role = "multi_volume"
+
     doc_chap_starts = {}
-    for vol_title, chaps in volumes:
-        for chap_title, file, anchor in chaps:
+    doc_chap_splits = {}
+    volumes_log = []
+
+    if role == "multi_volume":
+        # Split at CHILDREN anchors; each child = one chapter chunk
+        for vol_title, _vol_f, _vol_a, child_list in top_sections:
+            volumes_log.append((vol_title, child_list))
+            for chap_title, file, anchor in child_list:
+                if anchor:
+                    doc_chap_splits.setdefault(file, {})[anchor] = (vol_title, chap_title)
+                else:
+                    doc_chap_starts[file] = (vol_title, chap_title)
+    else:  # single_chapter
+        # Split at TOP Section anchors only; each top Section = one chapter chunk.
+        # The deeper levels (sections within chapters) remain inline as h3/h4.
+        for chap_title, file, anchor, _children in top_sections:
             if anchor:
-                doc_chap_splits.setdefault(file, {})[anchor] = (vol_title, chap_title)
+                doc_chap_splits.setdefault(file, {})[anchor] = (None, chap_title)
             else:
-                doc_chap_starts[file] = (vol_title, chap_title)
+                doc_chap_starts[file] = (None, chap_title)
 
     return {
-        "volumes": volumes,
-        "doc_chap_splits": doc_chap_splits,
+        "role": role,
+        "volumes": volumes_log,
         "doc_chap_starts": doc_chap_starts,
+        "doc_chap_splits": doc_chap_splits,
         "flat_links": flat_links,
     }
 
@@ -819,12 +864,17 @@ def standardize(book):
     hier = parse_toc_hierarchical(b)
     using_hier = bool(hier)
     if using_hier:
-        # Payloads are (vol_title, chap_title) tuples
+        # Payloads are (vol_title, chap_title) tuples; vol_title is None for single_chapter role
         doc_volume_starts = dict(hier["doc_chap_starts"])  # {file: (vol, chap)}
         doc_anchor_splits = {fn: list(amap.items())  # [(anchor, (vol, chap))]
                              for fn, amap in hier["doc_chap_splits"].items()}
-        print(f"Hierarchical TOC detected: {len(hier['volumes'])} volumes "
-              f"× total {sum(len(c) for _, c in hier['volumes'])} chapters")
+        if hier["role"] == "multi_volume":
+            print(f"Hierarchical TOC (multi-volume): {len(hier['volumes'])} volumes "
+                  f"× total {sum(len(c) for _, c in hier['volumes'])} chapters")
+        else:
+            n_chaps = len(hier["doc_chap_starts"]) + sum(len(m) for m in hier["doc_chap_splits"].values())
+            print(f"Hierarchical TOC (single-volume): {n_chaps} chapters; "
+                  f"sub-section entries (節) stay inline as h3/h4")
     else:
         doc_volume_starts, doc_anchor_splits = parse_volume_toc(b)
 
