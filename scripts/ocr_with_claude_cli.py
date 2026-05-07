@@ -225,21 +225,23 @@ def _render_page_png(doc, page_idx: int) -> bytes:
 
 
 def _parse_batch_response(text: str, page_numbers: list) -> list:
+    """Trust the PDF page numbers (page_numbers, in render order), not the [PAGE N]
+    markers Haiku writes — Haiku sometimes echoes the book's printed pagination
+    from the images (e.g. roman numerals, page 821) instead of our requested numbers."""
+    # Drop the preamble before the first [PAGE N], then split bodies by marker.
+    segments = re.split(r'\[PAGE\s+\d+\]', text)
+    bodies = [s.strip() for s in segments[1:]]
     chunks = []
-    parts = re.split(r'\[PAGE\s+(\d+)\]', text)
-    for i in range(1, len(parts) - 1, 2):
-        try:
-            chunks.append({"page": int(parts[i]), "text": parts[i + 1].strip()})
-        except (ValueError, IndexError):
-            continue
-    if not chunks and page_numbers:
-        lines = text.strip().split("\n")
-        for j, pn in enumerate(page_numbers):
-            chunks.append({"page": pn, "text": lines[j] if j < len(lines) else ""})
+    for j, pn in enumerate(page_numbers):
+        body = bodies[j] if j < len(bodies) else ""
+        chunks.append({"page": pn, "text": body})
     return chunks
 
 
-def ocr_book(client: anthropic.Anthropic, src_path: Path, batch_size: int) -> list:
+def ocr_book(client: anthropic.Anthropic, src_path: Path, batch_size: int):
+    """Returns (chunks, pdf_total_pages). pdf_total_pages is the authoritative
+    page count from PyMuPDF — used for total_pages metadata so Haiku can't
+    mislabel it via odd [PAGE N] markers."""
     doc = fitz.open(src_path)
     total = len(doc)
     all_chunks = []
@@ -270,7 +272,7 @@ def ocr_book(client: anthropic.Anthropic, src_path: Path, batch_size: int) -> li
         print(f"    pages {batch_start+1}-{batch_end}/{total}: {len(batch_chunks)} parsed", flush=True)
 
     doc.close()
-    return all_chunks
+    return all_chunks, total
 
 
 def _is_transient_net(err_str: str) -> bool:
@@ -287,7 +289,7 @@ def process_one(client, book: dict, src_path: Path, batch_size: int, max_retries
     for attempt in range(1, max_retries + 1):
         try:
             t0 = time.time()
-            chunks = ocr_book(client, src_path, batch_size)
+            chunks, pdf_total_pages = ocr_book(client, src_path, batch_size)
             non_empty = [c for c in chunks if c.get("text", "").strip()]
             if not non_empty:
                 return {"status": "fail", "error": "model returned 0 usable pages", "transient": False}
@@ -309,7 +311,7 @@ def process_one(client, book: dict, src_path: Path, batch_size: int, max_retries
             if r2_ok:
                 update_book_done(book["id"], total_chars=total_chars,
                                  chunk_count=len(non_empty),
-                                 total_pages=max(c["page"] for c in non_empty))
+                                 total_pages=pdf_total_pages)
                 return {"status": "ok"}
             else:
                 update_book_error(book["id"], f"OCR ok but R2 push failed: {r2_err}")
