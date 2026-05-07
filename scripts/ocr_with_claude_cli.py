@@ -358,6 +358,16 @@ def process_one(client, book: dict, src_path: Path, batch_size: int, max_retries
                 wait = min(2 ** attempt * 10, 120)
                 print(f"  ↻ API {e.status_code}, retry {attempt} after {wait}s")
                 time.sleep(wait)
+            elif e.status_code == 401:
+                # OAuth token rotated mid-run. Reload from .credentials.json
+                # and rebuild the client; retry the same book.
+                print(f"  ↻ 401 auth — reloading OAuth token and retrying", flush=True)
+                try:
+                    client = make_client()
+                except Exception as me:
+                    print(f"  ❌ token reload failed: {me}", file=sys.stderr)
+                    return {"status": "fail", "error": last_err, "transient": True}
+                time.sleep(2)
             else:
                 # Permanent API errors (e.g. 400 invalid_request) — don't retry
                 print(f"  ❌ {last_err[:200]}")
@@ -395,6 +405,10 @@ def cmd_status():
 
 
 def cmd_run(limit=None, batch=DEFAULT_BATCH, one_id=None, dry_run=False):
+    # Build a *function* that returns a fresh client. Long OCR runs (hours)
+    # outlast OAuth tokens — Claude Code refreshes ~/.claude/.credentials.json
+    # every ~hour, so reading the file once at startup leaves us holding a
+    # stale token. Reload before each book.
     client = make_client()
 
     if one_id:
@@ -427,6 +441,12 @@ def cmd_run(limit=None, batch=DEFAULT_BATCH, one_id=None, dry_run=False):
         sz_mb = src.stat().st_size / 1024 / 1024
         title_short = (b["title"] or src.stem)[:40]
         print(f"\n  [{i:3d}/{len(targets)}] OCR  {title_short}  ({sz_mb:.1f} MB)…", flush=True)
+
+        # Re-read the OAuth token before each book so refreshes mid-run pick up.
+        try:
+            client = make_client()
+        except Exception as e:
+            print(f"  ❌ failed to refresh client: {e}", file=sys.stderr)
 
         result = process_one(client, b, src, batch)
         if result["status"] == "ok":
