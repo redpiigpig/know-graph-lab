@@ -33,6 +33,37 @@
 
         <div v-if="pending" class="wr-status">載入中…</div>
 
+        <!-- 刊物文章：依刊物分組 -->
+        <template v-else-if="activeTab === 'periodical'">
+          <template v-if="periodicalGroups.length">
+            <div v-for="group in periodicalGroups" :key="group.pub" class="wr-pub-group">
+              <h2 class="wr-pub-group-title">{{ group.pub }}</h2>
+              <div class="wr-grid">
+                <NuxtLink
+                  v-for="item in group.items"
+                  :key="item.id"
+                  :to="`/pong-archive/writings/${item.id}`"
+                  class="wr-card"
+                >
+                  <div class="wr-card-meta">
+                    <span v-if="item.published_date" class="wr-card-year">
+                      {{ formatDate(item.published_date, item.date_approximate) }}
+                    </span>
+                  </div>
+                  <h2 class="wr-card-title">{{ item.title }}</h2>
+                  <p v-if="item.title_en" class="wr-card-en">{{ item.title_en }}</p>
+                  <div v-if="item.tags && item.tags.length" class="wr-card-tags">
+                    <span v-for="tag in item.tags" :key="tag" class="wr-tag">{{ tag }}</span>
+                  </div>
+                  <div class="wr-card-arrow">→</div>
+                </NuxtLink>
+              </div>
+            </div>
+          </template>
+          <div v-else class="wr-status">此分類尚無收錄文章。</div>
+        </template>
+
+        <!-- 其他分類：平鋪 -->
         <template v-else-if="filteredWritings.length">
           <div class="wr-grid">
             <NuxtLink
@@ -82,7 +113,11 @@ const CATEGORIES = [
   { key: 'journal',      label: '期刊文章' },
   { key: 'conference',   label: '會議文章' },
   { key: 'web',          label: '網站文章' },
+  { key: 'periodical',   label: '刊物文章' },
 ]
+
+// 刊物文章的刊物順序
+const PERIODICAL_ORDER = ['衛神院訊', '衛報']
 
 const writings = ref([])
 const pending  = ref(true)
@@ -110,6 +145,20 @@ const countByCategory = computed(() => {
 const filteredWritings = computed(() =>
   writings.value.filter(w => w.category === activeTab.value)
 )
+
+const periodicalGroups = computed(() => {
+  const items = writings.value.filter(w => w.category === 'periodical')
+  const map = {}
+  for (const item of items) {
+    const pub = item.publication || '其他'
+    if (!map[pub]) map[pub] = []
+    map[pub].push(item)
+  }
+  // Sort groups by PERIODICAL_ORDER, then alphabetically
+  const ordered = PERIODICAL_ORDER.filter(p => map[p])
+  const rest = Object.keys(map).filter(p => !PERIODICAL_ORDER.includes(p)).sort()
+  return [...ordered, ...rest].map(pub => ({ pub, items: map[pub] }))
+})
 
 function formatDate(dateStr, approximate) {
   if (!dateStr) return ''
@@ -242,6 +291,19 @@ function formatDate(dateStr, approximate) {
   font-weight: 300;
   letter-spacing: 0.06em;
   padding: 80px 0;
+}
+
+/* ── Periodical Groups ───────────────────────────────────── */
+.wr-pub-group { margin-bottom: 48px; }
+.wr-pub-group-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #6A5E4A;
+  letter-spacing: 0.18em;
+  margin: 0 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #DDD8CF;
 }
 
 /* ── Card Grid ───────────────────────────────────────────── */

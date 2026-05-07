@@ -49,8 +49,8 @@
             v-for="(para, i) in paragraphs"
             :key="i"
             class="wa-para"
-            :class="{ 'wa-para--heading': isHeading(para), 'wa-para--empty': !para.trim() }"
-          >{{ para }}</p>
+            :class="{ 'wa-para--heading': isHeading(para), 'wa-para--quote': isQuote(para), 'wa-para--empty': !para.trim() }"
+          >{{ displayText(para) }}</p>
         </div>
       </article>
     </template>
@@ -71,6 +71,7 @@ const CATEGORIES = {
   journal:      '期刊文章',
   conference:   '會議文章',
   web:          '網站文章',
+  periodical:   '刊物文章',
 }
 
 const article = ref(null)
@@ -96,8 +97,15 @@ const paragraphs = computed(() => {
 function isHeading(para) {
   const t = para.trim()
   if (!t) return false
-  // Short lines (≤ 20 chars) with no punctuation at end = likely heading
   return t.length <= 20 && !/[，。！？、；：]$/.test(t) && /[一-鿿]/.test(t)
+}
+
+function isQuote(para) {
+  return para.trimStart().startsWith('> ')
+}
+
+function displayText(para) {
+  return isQuote(para) ? para.trimStart().slice(2) : para
 }
 
 function formatDate(dateStr, approximate) {
@@ -271,6 +279,16 @@ function formatDate(dateStr, approximate) {
   margin-top: 1.8em;
   margin-bottom: 0.4em;
   letter-spacing: 0.1em;
+}
+
+.wa-para--quote {
+  font-family: 'Noto Serif TC', 'DFKai-SB', 'BiauKai', serif;
+  font-style: italic;
+  margin-left: 2em;
+  margin-right: 1em;
+  padding-left: 1em;
+  border-left: 3px solid #C4B89A;
+  color: #5A5040;
 }
 
 .wa-para--empty {
