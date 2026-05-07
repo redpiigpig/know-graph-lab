@@ -275,6 +275,34 @@ def ocr_book(client: anthropic.Anthropic, src_path: Path, batch_size: int):
     return all_chunks, total
 
 
+def _run_standardize(book_id: str) -> None:
+    """After successful OCR, run Plan A (lite) then Plan B (TOC chapter chunking).
+    Plan B may skip (no usable TOC) — that's OK, book stays on Plan A output.
+    All errors are logged but don't fail the OCR pipeline."""
+    try:
+        import standardize_pdf_lite as _spl
+        n, err = _spl.standardize_one(book_id)
+        if err:
+            print(f"  ⚠ Plan A: {err[:120]}")
+        else:
+            print(f"  ◆ Plan A: {n} chunks (s2tw + spacing + metadata)")
+    except Exception as e:
+        print(f"  ⚠ Plan A crashed: {str(e)[:120]}")
+        return  # don't try Plan B if Plan A blew up
+
+    try:
+        import standardize_pdf as _spdf
+        n, err = _spdf.standardize_one(book_id)
+        if err:
+            # "skipped: ..." is the common path (no TOC); not really a failure
+            tag = "skipped" if err.startswith("skipped:") else "fail"
+            print(f"  ◆ Plan B: {tag} ({err[:80]})")
+        else:
+            print(f"  ◆ Plan B: {n} chapter chunks")
+    except Exception as e:
+        print(f"  ⚠ Plan B crashed: {str(e)[:120]}")
+
+
 def _is_transient_net(err_str: str) -> bool:
     s = err_str.lower()
     return any(k in s for k in (
@@ -312,6 +340,8 @@ def process_one(client, book: dict, src_path: Path, batch_size: int, max_retries
                 update_book_done(book["id"], total_chars=total_chars,
                                  chunk_count=len(non_empty),
                                  total_pages=pdf_total_pages)
+                # Run standardize-pdf pipeline (Plan A + Plan B) automatically
+                _run_standardize(book["id"])
                 return {"status": "ok"}
             else:
                 update_book_error(book["id"], f"OCR ok but R2 push failed: {r2_err}")
