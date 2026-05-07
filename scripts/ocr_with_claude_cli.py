@@ -205,39 +205,56 @@ If a page is blank or purely decorative, output its [PAGE N] header with an empt
 """
 
 
-_ANTHROPIC_IMAGE_MAX = 5 * 1024 * 1024  # 5 MB hard limit
-_TARGET_IMG_BYTES = int(4.5 * 1024 * 1024)  # leave headroom for base64 transit
+_ANTHROPIC_IMAGE_MAX = 5 * 1024 * 1024  # 5 MB hard limit on raw image bytes
+_TARGET_IMG_BYTES = 4 * 1024 * 1024     # 4 MB target — 1 MB cushion under the cap
 
 
 def _render_page_image(doc, page_idx: int) -> tuple[bytes, str]:
     """Render a PDF page, guaranteeing the final bytes fit Anthropic's 5 MB cap.
 
-    Strategy: try PNG at decreasing DPIs first (lossless preferred). If even
-    72 DPI PNG is still too large (happens for photo-heavy / scanned pages
-    with lots of color), fall back to JPEG at decreasing quality. JPEG is
-    typically 5-10× smaller than PNG for photographic content with no
-    practical OCR-quality loss at quality ≥ 70.
+    Strategy ladder (each step exits early once size ≤ 4 MB target):
+      Pass 1: PNG at 150 → 120 → 100 → 85 → 72 DPI (lossless preferred)
+      Pass 2: JPEG at 120 DPI, quality 85 → 75 → 65 → 55
+      Pass 3: JPEG at 72 DPI, quality 70 → 50 → 40
+      Pass 4: JPEG at 60/48/36/24 DPI, quality 50 → 40 → 30 (huge poster-format pages)
+      Final:  whatever 24 DPI JPEG quality 20 produces — readable enough for OCR
+              and small enough to fit any reasonable page.
 
-    Returns (bytes, media_type) where media_type is 'image/png' or 'image/jpeg'."""
+    Returns (bytes, media_type) — 'image/png' or 'image/jpeg'."""
     page = doc[page_idx]
-    # Pass 1: PNG at descending DPIs
+    # Pass 1: PNG ladder
     for dpi in (DPI, 120, 100, 85, 72):
         mat = fitz.Matrix(dpi / 72, dpi / 72)
         pix = page.get_pixmap(matrix=mat, colorspace=fitz.csRGB)
         png = pix.tobytes("png")
         if len(png) <= _TARGET_IMG_BYTES:
             return png, "image/png"
-    # Pass 2: JPEG at descending quality with the same low-end DPI
+    # Pass 2: JPEG @ 120 DPI
     mat = fitz.Matrix(120 / 72, 120 / 72)
     pix = page.get_pixmap(matrix=mat, colorspace=fitz.csRGB)
     for q in (85, 75, 65, 55):
         jpg = pix.tobytes("jpeg", jpg_quality=q)
         if len(jpg) <= _TARGET_IMG_BYTES:
             return jpg, "image/jpeg"
-    # Last resort: 72 DPI JPEG @ 50 (still readable for OCR)
+    # Pass 3: JPEG @ 72 DPI
     mat = fitz.Matrix(72 / 72, 72 / 72)
     pix = page.get_pixmap(matrix=mat, colorspace=fitz.csRGB)
-    return pix.tobytes("jpeg", jpg_quality=50), "image/jpeg"
+    for q in (70, 50, 40):
+        jpg = pix.tobytes("jpeg", jpg_quality=q)
+        if len(jpg) <= _TARGET_IMG_BYTES:
+            return jpg, "image/jpeg"
+    # Pass 4: keep cutting DPI until it fits
+    for dpi in (60, 48, 36, 24):
+        mat = fitz.Matrix(dpi / 72, dpi / 72)
+        pix = page.get_pixmap(matrix=mat, colorspace=fitz.csRGB)
+        for q in (50, 40, 30):
+            jpg = pix.tobytes("jpeg", jpg_quality=q)
+            if len(jpg) <= _TARGET_IMG_BYTES:
+                return jpg, "image/jpeg"
+    # Final: tiny image — only triggers on absurd page sizes (giant fold-outs)
+    mat = fitz.Matrix(24 / 72, 24 / 72)
+    pix = page.get_pixmap(matrix=mat, colorspace=fitz.csRGB)
+    return pix.tobytes("jpeg", jpg_quality=20), "image/jpeg"
 
 
 def _render_page_png(doc, page_idx: int) -> bytes:
