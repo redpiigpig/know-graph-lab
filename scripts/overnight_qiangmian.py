@@ -44,6 +44,23 @@ POLISH_ONLY_DEFAULT = [3, 4, 5, 6, 8, 9, 10, 11]
 # TRANSCRIBE: 需要 Whisper 重新轉錄（loop / truncated / missing / 503 失敗）
 TRANSCRIBE_DEFAULT  = [2, 7, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
 
+# YouTube 影片 → PPT 章節對應（按章節內容人工比對）
+# 不能用 ppt_files[ep-1] 機械對應，因為某些章節有 PPT 但沒影片，
+# 或者一份 PPT 講三集（如第十二章上）。
+# Key: episode 編號（YouTube playlist 順序）；Value: PPT index（依日期排序，1-based）
+EP_TO_PPT_IDX = {
+    1: 1, 2: 2, 3: 3, 4: 4,
+    5: 6,   # ep 5 = 第六章（跳過 PPT 5 = 第五章，因為沒影片）
+    6: 7, 7: 8, 8: 9, 9: 10, 10: 11, 11: 12, 12: 13,
+    13: 14, 14: 14, 15: 14,  # 第十二章上：三集共用一份 PPT
+    16: 15,
+    17: 16, 18: 17, 19: 18, 20: 19,
+    21: 21,  # 第十五章下（跳過 PPT 20 = 第十五章上，因為沒影片）
+    22: 22,
+    23: 26,  # 第十七章中 ≈ 第十七章下（PPT 沒有「中」這個版本，best guess）
+    24: 28, 25: 29,
+}
+
 # 命令列覆寫（--polish 1,2,3 --transcribe 4-10）
 def _parse_eps(s: str) -> list[int]:
     out: list[int] = []
@@ -393,26 +410,26 @@ def process_episode(client, ep: int, entries: list, ppt_files: list[Path],
 
     print(f"\n[ep {ep}] {raw_title}  (transcribe={do_transcribe})")
 
-    # PPT 對應
+    # PPT 對應（用章節對應表，不可用 ppt_files[ep-1]）
+    ppt_idx = EP_TO_PPT_IDX.get(ep)
     ppt_text = ""
     bibliography = "（PPT 內未找到參考書目）"
-    if ep <= len(ppt_files):
-        ppt_path = ppt_files[ep - 1]
-        print(f"  PPT: {ppt_path.name}")
+    date_str: str | None = None
+    ppt_r2_key: str | None = None
+    if ppt_idx and ppt_idx <= len(ppt_files):
+        ppt_path = ppt_files[ppt_idx - 1]
+        print(f"  PPT [{ppt_idx}]: {ppt_path.name}")
         try:
             ppt_text = load_ppt_text(ppt_path)
             bibliography = load_ppt_bibliography(ppt_path)
         except Exception as e:
             print(f"  PPT read failed: {e}")
+        date_str = ppt_path.name[:10].replace(".", "-")
+        ppt_r2_key = f"qiangmian-ppt/ep{ppt_idx:02d}.pptx"
 
-    # 取得日期
-    if ep <= len(ppt_files):
-        date_str = ppt_files[ep - 1].name[:10].replace(".", "-")
-    else:
+    if not date_str:
         d = entry.get("upload_date", "")
         date_str = f"{d[:4]}-{d[4:6]}-{d[6:]}" if len(d) == 8 else None
-
-    ppt_r2_key = f"qiangmian-ppt/ep{ep:02d}.pptx"
 
     # 取得 raw transcript：Whisper 或 DB
     if do_transcribe:
