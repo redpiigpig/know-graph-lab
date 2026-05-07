@@ -209,7 +209,12 @@ Output format — one block per page, exactly:
 <extracted text>
 
 ...and so on for every image in order.
-If a page is blank or purely decorative, output its [PAGE N] header with an empty body.
+If a page is blank or contains only images/illustrations with no readable
+text, output its [PAGE N] header followed by an EMPTY line — do NOT
+describe the image content (no "[Image shows...]" / "[Blank page]" /
+similar bracketed descriptions). Only transcribe text that is literally
+printed on the page.
+
 Do not translate, summarize, censor, or add commentary — copy the printed text faithfully.
 """
 
