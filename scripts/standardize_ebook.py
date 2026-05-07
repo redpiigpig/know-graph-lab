@@ -988,7 +988,7 @@ def merge_appendix_subentries(chunks):
     chunks.extend(out)
 
 
-def rebuild_toc_chunk(chunks):
+def rebuild_toc_chunk(chunks, book=None):
     """Rebuild the 目錄 chunk's content from the book's actual chapter / section
     structure (the same data driving the sidebar) so the in-content TOC mirrors
     the sidebar exactly. Heading is `## <u>目錄</u>` so the user can confirm
@@ -1012,12 +1012,29 @@ def rebuild_toc_chunk(chunks):
     skip_titles = {"目錄", "封面", "版權", "版權頁", "出版資訊", "出版說明",
                    "出版前言", "前言", "序", "致謝", "扉頁", "書名", "封底",
                    "Cover", "Title Page"}
+    # Title of the book itself — chunks whose chapter_path is just the book
+    # title leak in (publisher repeats the title on title-page / dedication
+    # / etc.). Strip them.
+    book_title_norm = re.sub(r"[\s　]", "", (book.get("title") if book else "") or "")
 
+    seen = set()  # dedupe (volume, title)
     entries = []  # [(volume, title, kind)]  kind ∈ {"chapter", "section"}
     for c in chunks:
         cp = (c.get("chapter_path") or "").strip()
-        if not cp or cp in skip_titles:
+        if not cp:
             continue
+        # Normalize full-width spaces for skip-set lookup ("目　錄" → "目錄")
+        cp_norm = re.sub(r"[\s　]", "", cp)
+        if cp_norm in skip_titles:
+            continue
+        # Drop chunks whose title is just the book title (front-matter repeats)
+        if book_title_norm and cp_norm == book_title_norm:
+            continue
+        # Dedupe (some publishers repeat the same title on multiple front pages)
+        key = (c.get("volume"), cp_norm)
+        if key in seen:
+            continue
+        seen.add(key)
         # Detect whether this chunk is a chapter or a section by the FIRST
         # heading depth inside its content (matches how the reader's loadToc
         # decides level for the sidebar).
@@ -1038,7 +1055,33 @@ def rebuild_toc_chunk(chunks):
             toc_chunk = c
             break
     if toc_chunk is None:
-        return
+        # No existing 目錄 chunk — synthesize one and insert right after the
+        # cover/front-matter. We look for the first chunk that ISN'T pure front
+        # matter (封面 / 出版資訊 / 版權 / 書名 / 扉頁 / Cover) and insert before it.
+        front_titles = {"封面", "出版資訊", "版權", "版權頁", "書名", "扉頁",
+                        "Cover", "Title Page", "出版說明"}
+        insert_at = 0
+        for i, c in enumerate(chunks):
+            cp = (c.get("chapter_path") or "").strip()
+            if cp not in front_titles:
+                insert_at = i
+                break
+        else:
+            insert_at = len(chunks)
+        # Build a stub chunk that the writer below will populate
+        toc_chunk = {
+            "chunk_index": insert_at,
+            "chunk_type": "chapter",
+            "page_number": None,
+            "chapter_path": "目錄",
+            "volume": None,
+            "format": "markdown",
+            "content": "",
+        }
+        chunks.insert(insert_at, toc_chunk)
+        # Renumber chunk_index
+        for i, c in enumerate(chunks):
+            c["chunk_index"] = i
 
     lines: list[str] = ["## <u>目錄</u>"]
     last_vol = "<unset>"
@@ -1319,8 +1362,8 @@ def standardize(book):
     consolidate_frontmatter_into_publisher(chunks)
     # Fold appendix sub-entries into parent appendix BEFORE rebuilding TOC
     merge_appendix_subentries(chunks)
-    # Rebuild 目錄 chunk (if any) from the now-final chapter/section structure
-    rebuild_toc_chunk(chunks)
+    # Rebuild 目錄 chunk (or synthesize one) from the now-final structure
+    rebuild_toc_chunk(chunks, book)
 
     print(f"Kept: {len(chunks)} chunks, dropped: {len(dropped)}")
     if dropped[:8]:
