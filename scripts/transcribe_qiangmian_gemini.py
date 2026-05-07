@@ -107,7 +107,7 @@ def safe_name(s: str) -> str:
     return re.sub(r'[\\/:*?"<>|]', '_', s)[:80].strip()
 
 
-def download_audio(video_id: str, label: str) -> Path | None:
+def download_audio(video_id: str, label: str, max_attempts: int = 3) -> Path | None:
     import yt_dlp
     for ext in ["m4a", "webm", "opus", "mp4"]:
         p = TMP_DIR / f"{label}.{ext}"
@@ -115,19 +115,28 @@ def download_audio(video_id: str, label: str) -> Path | None:
             print(f"  Audio exists: {p.name}")
             return p
     url = f"https://www.youtube.com/watch?v={video_id}"
-    try:
-        with yt_dlp.YoutubeDL({
-            "format": "bestaudio[ext=m4a]/bestaudio/best",
-            "outtmpl": str(TMP_DIR / f"{label}.%(ext)s"),
-            "quiet": False, "noplaylist": True,
-        }) as ydl:
-            ydl.download([url])
-        for ext in ["m4a", "webm", "opus", "mp4"]:
-            p = TMP_DIR / f"{label}.{ext}"
-            if p.exists():
-                return p
-    except Exception as e:
-        print(f"  Download failed: {e}")
+    for attempt in range(1, max_attempts + 1):
+        try:
+            with yt_dlp.YoutubeDL({
+                "format": "bestaudio[ext=m4a]/bestaudio/best",
+                "outtmpl": str(TMP_DIR / f"{label}.%(ext)s"),
+                "quiet": False, "noplaylist": True,
+                "socket_timeout": 30, "retries": 3,
+            }) as ydl:
+                ydl.download([url])
+            for ext in ["m4a", "webm", "opus", "mp4"]:
+                p = TMP_DIR / f"{label}.{ext}"
+                if p.exists():
+                    return p
+        except Exception as e:
+            print(f"  Download attempt {attempt}/{max_attempts} failed: {e}")
+            # Clean partial download
+            for ext in ["m4a", "webm", "opus", "mp4", "part"]:
+                p = TMP_DIR / f"{label}.{ext}"
+                if p.exists():
+                    p.unlink()
+            if attempt < max_attempts:
+                time.sleep(15 * attempt)
     return None
 
 
@@ -245,7 +254,8 @@ def upsert_transcript(episode: int, title: str, content: str,
 
 
 # ── 處理單集 ──────────────────────────────────────────────────
-def process_episode(client, ep_num: int, entry: dict, ppt_files: list[Path]) -> bool:
+def process_episode(genai_module, key_state: dict, ep_num: int,
+                    entry: dict, ppt_files: list[Path]) -> bool:
     video_id   = entry.get("id", "")
     raw_title  = entry.get("title", f"第{ep_num}集")
     upload_date = entry.get("upload_date", "")
@@ -270,11 +280,34 @@ def process_episode(client, ep_num: int, entry: dict, ppt_files: list[Path]) -> 
         print("  Audio download failed, skip")
         return False
 
-    try:
-        transcript = transcribe_with_gemini(client, audio_path, ppt_text, raw_title)
-        print(f"  Transcript: {len(transcript):,} chars")
-    except Exception as e:
-        print(f"  Transcription error: {e}")
+    # 轉錄 with key rotation on 429
+    transcript = None
+    keys_tried = 0
+    total_keys = len(GEMINI_KEYS)
+    while keys_tried < total_keys:
+        try:
+            client = key_state["client"]
+            print(f"  Using Gemini key #{key_state['idx']+1}/{total_keys}")
+            transcript = transcribe_with_gemini(client, audio_path, ppt_text, raw_title)
+            print(f"  Transcript: {len(transcript):,} chars")
+            break
+        except Exception as e:
+            err = str(e)
+            is_quota = "429" in err or "RESOURCE_EXHAUSTED" in err or "quota" in err.lower()
+            if is_quota:
+                keys_tried += 1
+                next_idx = (key_state["idx"] + 1) % total_keys
+                if keys_tried >= total_keys:
+                    print(f"  All {total_keys} keys exhausted, abort ep {ep_num}")
+                    return False
+                print(f"  Key #{key_state['idx']+1} quota exhausted, rotating to #{next_idx+1}")
+                key_state["idx"] = next_idx
+                key_state["client"] = genai_module.Client(api_key=GEMINI_KEYS[next_idx])
+                continue
+            print(f"  Transcription error (non-quota): {e}")
+            return False
+
+    if transcript is None:
         return False
 
     # 日期優先從 PPT 檔名取（YYYY.MM.DD prefix），fallback 到 YouTube upload_date
@@ -350,14 +383,14 @@ def main():
         else:
             targets = [int(ep_str)]
 
-    client = genai.Client(api_key=GEMINI_KEYS[0])
+    key_state = {"idx": 0, "client": genai.Client(api_key=GEMINI_KEYS[0])}
 
     ok_count = 0
     for i, ep_num in enumerate(targets):
         if ep_num < 1 or ep_num > len(entries):
             print(f"Episode {ep_num} out of range (1–{len(entries)}), skip")
             continue
-        success = process_episode(client, ep_num, entries[ep_num - 1], ppt_files)
+        success = process_episode(genai, key_state, ep_num, entries[ep_num - 1], ppt_files)
         if success:
             ok_count += 1
         if i < len(targets) - 1:
