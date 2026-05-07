@@ -180,7 +180,7 @@ def _split_audio(audio_path, chunk_sec, tmpdir):
     return chunks
 
 
-def transcribe(audio_path, lang):
+def transcribe(audio_path, lang, max_chunks=None):
     label = lang if lang != 'auto' else '自動偵測'
     model = get_whisper_model()
 
@@ -190,6 +190,9 @@ def transcribe(audio_path, lang):
         print(f'  音訊長度 {duration/60:.0f} 分鐘，切成 {CHUNK_MINUTES} 分鐘段落轉錄...')
         tmpdir = str(audio_path.parent)
         chunks = _split_audio(audio_path, chunk_sec, tmpdir)
+        if max_chunks is not None:
+            chunks = chunks[:max_chunks]
+            print(f'  [triage 模式] 只轉錄前 {len(chunks)} 段')
         all_lines = []
         for i, chunk in enumerate(chunks, 1):
             print(f'  轉錄第 {i}/{len(chunks)} 段（RTX 4050 GPU large-v3-turbo int8_float16，語言：{label}）...')
