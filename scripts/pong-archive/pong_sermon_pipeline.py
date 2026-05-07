@@ -76,18 +76,25 @@ def extract_youtube_id(url):
 
 def fetch_youtube_metadata(url):
     print(' 取得影片資訊...')
-    result = subprocess.run(
+    # Try with cookies first; fall back to android_vr (no cookies) if n-challenge blocks
+    attempts = [
         [YTDLP_PATH, '--dump-json', '--no-playlist',
          '--sleep-requests', '3', '--min-sleep-interval', '2',
-         *_cookie_args(), url],
-        capture_output=True,
-    )
-    stdout = result.stdout.decode('utf-8', errors='replace')
-    stderr = result.stderr.decode('utf-8', errors='replace')
-    if result.returncode != 0:
-        print(f'  [yt-dlp ERROR] {stderr[-800:].strip()}')
-        raise subprocess.CalledProcessError(result.returncode, result.args,
-                                            stdout, stderr)
+         '--js-runtimes', 'node', *_cookie_args(), url],
+        [YTDLP_PATH, '--dump-json', '--no-playlist',
+         '--extractor-args', 'youtube:player_client=android_vr',
+         '--sleep-requests', '3', '--min-sleep-interval', '2', url],
+    ]
+    for cmd in attempts:
+        result = subprocess.run(cmd, capture_output=True)
+        stdout = result.stdout.decode('utf-8', errors='replace')
+        stderr = result.stderr.decode('utf-8', errors='replace')
+        if result.returncode == 0 and stdout.strip():
+            break
+        print(f'  [yt-dlp WARN] {stderr[-400:].strip()}')
+    else:
+        print(f'  [yt-dlp ERROR] all attempts failed')
+        raise subprocess.CalledProcessError(result.returncode, result.args, stdout, stderr)
     data = json.loads(stdout)
     upload_raw = data.get('upload_date', '')  # YYYYMMDD
     upload_date = (
@@ -114,14 +121,18 @@ def _cookie_args():
 
 def download_audio(url, output_path):
     print('  下載音訊中...')
-    subprocess.run([
-        YTDLP_PATH, '-x', '--audio-format', 'mp3',
-        '--audio-quality', '0',
-        '--ffmpeg-location', FFMPEG_PATH,
-        *_cookie_args(),
-        '-o', str(output_path),
-        '--no-playlist', url
-    ], check=True)
+    base_args = ['-x', '--audio-format', 'mp3', '--audio-quality', '0',
+                 '--ffmpeg-location', FFMPEG_PATH, '-o', str(output_path), '--no-playlist']
+    attempts = [
+        [YTDLP_PATH, *base_args, '--js-runtimes', 'node', *_cookie_args(), url],
+        [YTDLP_PATH, *base_args, '--extractor-args', 'youtube:player_client=android_vr', url],
+    ]
+    for cmd in attempts:
+        result = subprocess.run(cmd)
+        if result.returncode == 0:
+            return
+        print(f'  [yt-dlp WARN] download attempt failed (code {result.returncode}), retrying...')
+    raise subprocess.CalledProcessError(result.returncode, attempts[-1])
 
 
 #  Whisper
