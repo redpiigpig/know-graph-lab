@@ -1,25 +1,24 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-OCR scanned PDFs via Gemini Vision API.
+OCR scanned PDFs via Gemini Vision API, with automatic Haiku fallback.
 
-Targets ebooks where parse_error LIKE '%no extractable text%' (~390 books).
+Targets ebooks where parse_error LIKE '%no extractable text%'.
 For each book:
   1. Upload PDF to Gemini Files API
   2. Request structured JSON output: {pages: [{page: N, text: "..."}]}
   3. Write JSONL to local _chunks/{id}.jsonl + 200-char preview to DB
   4. Mark parsed_at, clear parse_error
 
-Free-tier model picks (2.5 Flash, fallback 2.5 Flash-Lite):
-  - gemini-2.5-flash:       10 RPM, 250 RPD, 250K TPM
-  - gemini-2.5-flash-lite:  15 RPM, 1000 RPD
+Fallback: when all Gemini keys hit 429 quota, the script automatically switches
+to Claude Haiku (via ANTHROPIC_API_KEY). Haiku processes one book at a time,
+printing "完成" confirmation before moving to the next book.
 
-Idempotent: skips books with parsed_at NOT NULL. Resumable via parse_progress.
+Idempotent: skips books with parsed_at NOT NULL.
 
 Usage:
-  export GEMINI_API_KEY=...
   python scripts/ocr_with_gemini.py status
-  python scripts/ocr_with_gemini.py run [--limit N] [--model gemini-2.5-flash] [--rpm 8]
+  python scripts/ocr_with_gemini.py run [--limit N] [--model gemini-2.5-flash] [--rpm 4]
 """
 import gzip
 import io
@@ -48,6 +47,18 @@ try:
 except ImportError:
     print("Missing: pip install google-genai", file=sys.stderr)
     sys.exit(1)
+
+try:
+    import anthropic as _anthropic
+    _HAS_ANTHROPIC = True
+except ImportError:
+    _HAS_ANTHROPIC = False
+
+try:
+    import fitz as _fitz
+    _HAS_FITZ = True
+except ImportError:
+    _HAS_FITZ = False
 
 import requests
 
@@ -297,6 +308,126 @@ def is_quota_stop(err_str: str) -> bool:
     return any(k in low for k in ("quota", "resource_exhausted", "429"))
 
 
+_HAIKU_MODEL = "claude-haiku-4-5-20251001"
+_HAIKU_PAGES_PER_BATCH = 10
+_HAIKU_DPI = 150
+_HAIKU_BATCH_PROMPT = """\
+Each image is one page from a scanned book (Chinese Traditional/Simplified or English).
+For each page, extract ALL visible text exactly as written — do NOT translate, summarize, or add commentary.
+
+Output format — one block per page, exactly:
+[PAGE {first}]
+<extracted text>
+
+[PAGE {next}]
+<extracted text>
+
+...and so on for every image in order.
+If a page is blank or purely decorative, output its [PAGE N] header with an empty body.
+"""
+
+
+def _haiku_render_page(doc, page_idx: int) -> bytes:
+    import base64
+    page = doc[page_idx]
+    mat = _fitz.Matrix(_HAIKU_DPI / 72, _HAIKU_DPI / 72)
+    pix = page.get_pixmap(matrix=mat, colorspace=_fitz.csRGB)
+    return pix.tobytes("png")
+
+
+def _haiku_parse_response(text: str, page_numbers: list) -> list:
+    import re
+    chunks = []
+    parts = re.split(r'\[PAGE\s+(\d+)\]', text)
+    for i in range(1, len(parts) - 1, 2):
+        try:
+            chunks.append({"page": int(parts[i]), "text": parts[i + 1].strip()})
+        except (ValueError, IndexError):
+            continue
+    if not chunks and page_numbers:
+        lines = text.strip().split("\n")
+        for j, pn in enumerate(page_numbers):
+            chunks.append({"page": pn, "text": lines[j] if j < len(lines) else ""})
+    return chunks
+
+
+def _haiku_ocr_book(haiku_client, src_path: Path) -> list:
+    import base64
+    doc = _fitz.open(src_path)
+    total = len(doc)
+    all_chunks = []
+    for batch_start in range(0, total, _HAIKU_PAGES_PER_BATCH):
+        batch_end = min(batch_start + _HAIKU_PAGES_PER_BATCH, total)
+        page_indices = list(range(batch_start, batch_end))
+        page_numbers = [i + 1 for i in page_indices]
+        content = []
+        for pi in page_indices:
+            png = _haiku_render_page(doc, pi)
+            b64 = base64.standard_b64encode(png).decode()
+            content.append({"type": "image", "source": {"type": "base64", "media_type": "image/png", "data": b64}})
+        prompt = _HAIKU_BATCH_PROMPT.format(
+            first=page_numbers[0],
+            next=page_numbers[1] if len(page_numbers) > 1 else page_numbers[0] + 1,
+        )
+        content.append({"type": "text", "text": prompt})
+        resp = haiku_client.messages.create(
+            model=_HAIKU_MODEL,
+            max_tokens=4096,
+            messages=[{"role": "user", "content": content}],
+        )
+        batch_text = resp.content[0].text if resp.content else ""
+        all_chunks.extend(_haiku_parse_response(batch_text, page_numbers))
+    doc.close()
+    return all_chunks
+
+
+def process_one_haiku(haiku_client, book: dict, src_path: Path, max_retries: int = 2) -> dict:
+    """OCR one book with Haiku. Returns same {status, error?, transient?} dict as process_one."""
+    last_err = ""
+    for attempt in range(1, max_retries + 1):
+        try:
+            t0 = time.time()
+            chunks = _haiku_ocr_book(haiku_client, src_path)
+            non_empty = [c for c in chunks if c.get("text", "").strip()]
+            if not non_empty:
+                return {"status": "fail", "error": "haiku returned 0 usable pages", "transient": False}
+
+            total_chars = sum(len(c["text"]) for c in non_empty)
+            jsonl_path = write_jsonl(book["id"], non_empty)
+            insert_chunk_previews(book["id"], non_empty)
+
+            r2_ok, r2_err = True, ""
+            try:
+                push_to_r2(book["id"], jsonl_path)
+            except Exception as e:
+                r2_ok, r2_err = False, str(e)[:200]
+
+            elapsed = time.time() - t0
+            tag = "✓ Haiku" if r2_ok else "⚠ Haiku R2 fail"
+            print(f"  {tag} {len(non_empty)} pages, {total_chars // 1000}K chars, {elapsed:.0f}s")
+
+            if r2_ok:
+                update_book_done(book["id"], total_chars=total_chars,
+                                 chunk_count=len(non_empty),
+                                 total_pages=max(c["page"] for c in non_empty))
+                return {"status": "ok"}
+            else:
+                update_book_error(book["id"], f"OCR ok but R2 push failed: {r2_err}")
+                return {"status": "fail", "error": f"R2: {r2_err}", "transient": True}
+
+        except Exception as e:
+            last_err = str(e)[:300]
+            is_rate = hasattr(e, "status_code") and getattr(e, "status_code", 0) in (429, 529, 503, 502)
+            if is_rate and attempt < max_retries:
+                wait = min(2 ** attempt * 10, 120)
+                print(f"  ↻ Haiku rate limit, retry {attempt} after {wait}s")
+                time.sleep(wait)
+                continue
+            print(f"  ❌ Haiku {last_err[:200]}")
+            return {"status": "fail", "error": last_err, "transient": is_rate}
+    return {"status": "fail", "error": last_err, "transient": True}
+
+
 def process_one(client, book, src_path, model, max_retries=3):
     """Run OCR on one book with retries. Returns dict {status, error?, transient?, stop?}."""
     title = (book["title"] or src_path.stem)[:40]
@@ -505,28 +636,63 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False):
 
         result = process_one(client, b, src, model)
         # If quota'd, rotate keys and retry the SAME book once per remaining key.
-        # The book that triggered the quota is otherwise lost for this run.
         while result.get("status") != "ok" and result.get("stop"):
             if not try_next_key():
-                print("⚠ All Gemini keys exhausted. Stopping. Re-run later.")
                 quota_hit = True
                 break
-            # Reset the inter-call gap so the new key gets its first request promptly
             last_call = time.time()
             result = process_one(client, b, src, model)
+
         if quota_hit:
-            failed.append((b["title"], "all keys quota-exhausted"))
-            break
+            # All Gemini keys exhausted — fall back to Haiku for this book and the rest.
+            print(f"\n⚠ All Gemini keys exhausted. Switching to Haiku fallback (one book at a time).")
+            if not _HAS_ANTHROPIC or not _HAS_FITZ:
+                missing = []
+                if not _HAS_ANTHROPIC: missing.append("anthropic")
+                if not _HAS_FITZ: missing.append("pymupdf")
+                print(f"  ❌ Haiku fallback requires: pip install {' '.join(missing)}", file=sys.stderr)
+                failed.append((b["title"], "all keys quota-exhausted"))
+                break
+
+            api_key = ENV.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_API_KEY")
+            if not api_key:
+                print("  ❌ ANTHROPIC_API_KEY missing in .env — cannot fall back to Haiku.", file=sys.stderr)
+                failed.append((b["title"], "all keys quota-exhausted"))
+                break
+
+            haiku_client = _anthropic.Anthropic(api_key=api_key)
+
+            # Process the current book (that triggered the quota) plus all remaining books.
+            remaining = [b] + targets[i:]  # targets[i:] already excludes processed books
+            for j, hb in enumerate(remaining, 1):
+                hsrc = Path(hb["file_path"])
+                if not hsrc.exists():
+                    print(f"  [H {j}/{len(remaining)}] ⚠ source missing: {hsrc}", file=sys.stderr)
+                    update_book_error(hb["id"], f"file not found: {hsrc}")
+                    failed.append((hb["title"], "source missing"))
+                    continue
+
+                sz_mb = hsrc.stat().st_size / 1024 / 1024
+                title_short = (hb["title"] or hsrc.stem)[:40]
+                print(f"\n  [H {j}/{len(remaining)}] OCR  {title_short}  ({sz_mb:.1f} MB)…",
+                      end="", flush=True)
+
+                hresult = process_one_haiku(haiku_client, hb, hsrc)
+                if hresult["status"] == "ok":
+                    ok += 1
+                    print(f"  → 完成，繼續下一本", flush=True)
+                else:
+                    failed.append((hb["title"], hresult["error"]))
+                    if not hresult["transient"]:
+                        update_book_error(hb["id"], hresult["error"])
+            break  # Haiku loop handled all remaining; exit the Gemini loop
 
         if result["status"] == "ok":
             ok += 1
         else:
             err = result["error"]
             failed.append((b["title"], err))
-            if result["transient"]:
-                # Transient (non-quota) error — leave parse_error as-is so next run retries
-                pass
-            else:
+            if not result["transient"]:
                 update_book_error(b["id"], f"OCR: {err}")
 
     print(f"\nDone. OK: {ok}, Failed: {len(failed)}")
@@ -534,9 +700,6 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False):
         print("First failures:")
         for n, e in failed[:10]:
             print(f"  - {n[:50]}  {e[:100]}")
-    # Exit code 2 = quota exhausted; the daily bat uses this to switch to Qwen fallback.
-    if quota_hit:
-        sys.exit(2)
 
 
 def main():
