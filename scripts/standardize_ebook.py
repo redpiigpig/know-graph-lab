@@ -799,39 +799,59 @@ def parse_volume_toc(book):
 def split_body_at_anchors(body, anchor_to_vol):
     """Split a <body> into ordered segments at elements whose id matches a key in
     anchor_to_vol. Returns [(html_segment, transition_volume_or_None), ...].
-    The first segment's transition is None (it continues the previous volume).
-    Subsequent segments start with the anchored element and transition to its
-    target volume."""
-    segments = []  # [(list_of_children, vol_or_None)]
-    current = []
-    pending_vol = None  # transition for the segment we're currently building
+    Splits at ANY depth, in document order — many publishers wrap the entire
+    chapter list inside one big `<div>` directly under body, so a top-level
+    iteration would only catch the first anchor. We descend, find every match,
+    then string-split the body at the matched elements' positions."""
+    matches = []  # [(elem, anchor_id)] in document order
+    for elem in body.find_all(attrs={"id": True}):
+        cid = elem.get("id")
+        if cid in anchor_to_vol:
+            matches.append((elem, cid))
 
-    for child in body.children:
-        matched = None
-        if isinstance(child, Tag):
-            cid = child.get("id")
-            if cid and cid in anchor_to_vol:
-                matched = cid
-            else:
-                for desc in child.find_all(attrs={"id": True}):
-                    if desc.get("id") in anchor_to_vol:
-                        matched = desc.get("id")
-                        break
+    body_html = str(body)
+    if not matches:
+        return [(body_html, None)]
 
-        if matched:
-            if current:
-                segments.append((current, pending_vol))
-            current = [child]
-            pending_vol = anchor_to_vol[matched]
-        else:
-            current.append(child)
-    if current:
-        segments.append((current, pending_vol))
+    # Open/close tags of <body…>: locate them so we can keep wrappers intact.
+    open_end = body_html.find(">") + 1  # end of "<body …>"
+    close_start = body_html.rfind("</body>")
+    if close_start == -1:
+        close_start = len(body_html)
+    open_tag = body_html[:open_end]
+    close_tag = "</body>"
+    inner = body_html[open_end:close_start]
+
+    # For each anchor, find the start position of its enclosing element in `inner`.
+    # We search for id="X" or id='X' and walk backwards to the <.
+    positions = []  # [(pos_in_inner, anchor_id)]
+    used_pos = set()
+    for elem, anchor in matches:
+        for marker in (f'id="{anchor}"', f"id='{anchor}'"):
+            idx = inner.find(marker)
+            while idx != -1 and idx in used_pos:
+                idx = inner.find(marker, idx + 1)
+            if idx != -1:
+                tag_start = inner.rfind("<", 0, idx)
+                if tag_start != -1:
+                    used_pos.add(idx)
+                    positions.append((tag_start, anchor))
+                break
+    positions.sort()
+    if not positions:
+        return [(body_html, None)]
 
     out = []
-    for kids, vol in segments:
-        html = "<body>" + "".join(str(c) for c in kids) + "</body>"
-        out.append((html, vol))
+    # Pre-anchor segment
+    if positions[0][0] > 0:
+        pre = inner[:positions[0][0]]
+        if pre.strip():
+            out.append((open_tag + pre + close_tag, None))
+    # Each anchored segment
+    for i, (start, anchor) in enumerate(positions):
+        end = positions[i + 1][0] if i + 1 < len(positions) else len(inner)
+        seg_inner = inner[start:end]
+        out.append((open_tag + seg_inner + close_tag, anchor_to_vol[anchor]))
     return out
 
 
@@ -1002,16 +1022,32 @@ def standardize(book):
             # in-content first-heading scan only runs as a fallback.
             chapter_title = hier_chap_tw or derive_chapter_title(md_tw, d.file_name)
 
-            # If derive_chapter_title applied a cosmetic rename (e.g. CIP →
-            # 版權頁), rewrite the first markdown heading inside content so the
-            # page's h2 matches the sidebar label.
+            # In hierarchical mode the reader's TOC sidebar derives nesting
+            # from each chunk's first heading depth. EPUB bodies often use
+            # inconsistent <h1>/<h2>/<h3> for chapter titles (publisher quirk),
+            # which makes some chapters render as level-2 sidebar entries and
+            # others as level-3+ children of preceding chunks. Force a uniform
+            # level for hierarchical chapters: ## when single-volume (no parent
+            # volume groups), ### when multi-volume (## reserved for volume).
+            if hier_chap_tw:
+                target_level = "###" if (volume is not None) else "##"
+            else:
+                target_level = None  # legacy mode — keep original level
+
             head_match = re.match(r"^(#{1,4})\s+(.+)$", md_tw, re.M)
-            if head_match and head_match.group(2).strip() != chapter_title:
-                md_tw = md_tw.replace(
-                    head_match.group(0),
-                    f"{head_match.group(1)} {chapter_title}",
-                    1,
-                )
+            if head_match:
+                desired_level = target_level or head_match.group(1)
+                if (head_match.group(2).strip() != chapter_title
+                        or (target_level and head_match.group(1) != target_level)):
+                    md_tw = md_tw.replace(
+                        head_match.group(0),
+                        f"{desired_level} {chapter_title}",
+                        1,
+                    )
+            elif target_level:
+                # No heading at all in content — prepend one so the reader
+                # sidebar can render this chunk's level correctly.
+                md_tw = f"{target_level} {chapter_title}\n\n{md_tw.lstrip()}"
 
             # Continuation merge: if this chunk's title is just a numeric/letter
             # marker (e.g. 後記 split into 「後記」+「二」, or 索引 split into A-Z),
