@@ -205,9 +205,21 @@ If a page is blank or purely decorative, output its [PAGE N] header with an empt
 """
 
 
+_ANTHROPIC_IMAGE_MAX = 5 * 1024 * 1024  # 5 MB hard limit
+_TARGET_PNG_BYTES = int(4.5 * 1024 * 1024)  # leave ~10% headroom for base64 encoding
+
+
 def _render_page_png(doc, page_idx: int) -> bytes:
+    """Render a PDF page as PNG, auto-downsampling DPI if the result exceeds Anthropic's 5 MB cap."""
     page = doc[page_idx]
-    mat = fitz.Matrix(DPI / 72, DPI / 72)
+    for dpi in (DPI, 110, 90, 72):
+        mat = fitz.Matrix(dpi / 72, dpi / 72)
+        pix = page.get_pixmap(matrix=mat, colorspace=fitz.csRGB)
+        png = pix.tobytes("png")
+        if len(png) <= _TARGET_PNG_BYTES:
+            return png
+    # Last resort: 60 DPI (text may degrade but better than failing)
+    mat = fitz.Matrix(60 / 72, 60 / 72)
     pix = page.get_pixmap(matrix=mat, colorspace=fitz.csRGB)
     return pix.tobytes("png")
 
@@ -261,7 +273,16 @@ def ocr_book(client: anthropic.Anthropic, src_path: Path, batch_size: int) -> li
     return all_chunks
 
 
-def process_one(client, book: dict, src_path: Path, batch_size: int, max_retries: int = 2) -> dict:
+def _is_transient_net(err_str: str) -> bool:
+    s = err_str.lower()
+    return any(k in s for k in (
+        "connection error", "connection reset", "connection refused",
+        "nameresolutionerror", "getaddrinfo", "timeout", "max retries exceeded",
+        "temporarily unavailable", "503", "502", "504",
+    ))
+
+
+def process_one(client, book: dict, src_path: Path, batch_size: int, max_retries: int = 4) -> dict:
     last_err = ""
     for attempt in range(1, max_retries + 1):
         try:
@@ -306,12 +327,19 @@ def process_one(client, book: dict, src_path: Path, batch_size: int, max_retries
                 print(f"  ↻ API {e.status_code}, retry {attempt} after {wait}s")
                 time.sleep(wait)
             else:
+                # Permanent API errors (e.g. 400 invalid_request) — don't retry
                 print(f"  ❌ {last_err[:200]}")
                 return {"status": "fail", "error": last_err, "transient": False}
         except Exception as e:
             last_err = str(e)[:300]
+            if _is_transient_net(last_err) and attempt < max_retries:
+                wait = min(2 ** attempt * 10, 120)
+                print(f"  ↻ network error, retry {attempt} after {wait}s ({last_err[:80]})")
+                time.sleep(wait)
+                continue
             print(f"  ❌ {last_err[:200]}")
-            return {"status": "fail", "error": last_err, "transient": False}
+            return {"status": "fail", "error": last_err,
+                    "transient": _is_transient_net(last_err)}
 
     return {"status": "fail", "error": last_err, "transient": True}
 
