@@ -52,6 +52,9 @@ const formatted = computed(() => {
     if (first) { out.push(`<h1 class="t-title">${esc(t)}</h1>`); first = false; continue }
     if (/^\[.+\]$/.test(t)) { out.push(`<p class="t-note">${esc(t)}</p>`); continue }
     if (/^(Episode|Date):/.test(t)) { out.push(`<p class="t-meta">${esc(t)}</p>`); continue }
+    if (t.startsWith('## ')) { out.push(`<h2 class="t-heading">${esc(t.slice(3))}</h2>`); continue }
+    if (t.startsWith('---')) { out.push('<hr class="t-rule">'); continue }
+    if (t.startsWith('*') && t.endsWith('*')) { out.push(`<p class="t-note">${esc(t.replace(/^\*+|\*+$/g, ''))}</p>`); continue }
     out.push(`<p class="t-para">${esc(t)}</p>`)
   }
   return out.join('')
@@ -71,4 +74,6 @@ const formatted = computed(() => {
 :deep(.t-note)  { font-size:0.8rem; color:#9ca3af; font-style:italic; margin:1rem 0; }
 :deep(.t-para)  { font-size:0.9rem; line-height:2.2; text-indent:2em; margin-bottom:0.5rem; color:#1f2937; }
 :deep(.t-gap)   { height:0.6rem; }
+:deep(.t-heading) { font-size:1rem; font-weight:700; color:#92400e; margin:2rem 0 0.6rem; padding-bottom:0.3rem; border-bottom:1px solid #fde68a; }
+:deep(.t-rule) { border:none; border-top:1px solid #f3f4f6; margin:1.5rem 0; }
 </style>
