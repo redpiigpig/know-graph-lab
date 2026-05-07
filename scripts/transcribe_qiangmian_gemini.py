@@ -220,13 +220,16 @@ import requests as _req
 
 
 def upsert_transcript(episode: int, title: str, content: str,
-                      video_date: str | None, youtube_id: str | None) -> bool:
+                      video_date: str | None, youtube_id: str | None,
+                      ppt_r2_key: str | None = None) -> bool:
     data: dict = {"project_slug": "qiangmian", "episode": episode,
                   "title": title, "content": content}
     if video_date:
         data["video_date"] = video_date
     if youtube_id:
         data["youtube_id"] = youtube_id
+    if ppt_r2_key:
+        data["ppt_r2_key"] = ppt_r2_key
     resp = _req.post(
         f"{SUPABASE_URL}/rest/v1/video_transcripts?on_conflict=project_slug,episode",
         json=data,
@@ -274,10 +277,16 @@ def process_episode(client, ep_num: int, entry: dict, ppt_files: list[Path]) -> 
         print(f"  Transcription error: {e}")
         return False
 
-    if upload_date and len(upload_date) == 8:
-        date_str: str | None = f"{upload_date[:4]}-{upload_date[4:6]}-{upload_date[6:]}"
+    # 日期優先從 PPT 檔名取（YYYY.MM.DD prefix），fallback 到 YouTube upload_date
+    if ep_num <= len(ppt_files):
+        ppt_name = ppt_files[ep_num - 1].name
+        date_str: str | None = ppt_name[:10].replace(".", "-")  # 2021-11-28
+    elif upload_date and len(upload_date) == 8:
+        date_str = f"{upload_date[:4]}-{upload_date[4:6]}-{upload_date[6:]}"
     else:
         date_str = None
+
+    ppt_r2_key = f"qiangmian-ppt/ep{ep_num:02d}.pptx"
 
     full_content = f"{raw_title}\nEpisode: {ep_num}\n"
     if date_str:
@@ -285,7 +294,7 @@ def process_episode(client, ep_num: int, entry: dict, ppt_files: list[Path]) -> 
     full_content += f"\n{transcript}\n"
 
     print(f"  Upserting to Supabase...")
-    ok = upsert_transcript(ep_num, raw_title, full_content, date_str, video_id)
+    ok = upsert_transcript(ep_num, raw_title, full_content, date_str, video_id, ppt_r2_key)
     print(f"  {'✓ OK' if ok else '❌ FAILED'}")
 
     if ok:

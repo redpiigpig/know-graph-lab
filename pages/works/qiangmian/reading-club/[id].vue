@@ -15,10 +15,34 @@
         <p>逐字稿載入失敗</p>
       </div>
       <div v-else-if="data">
-        <div class="mb-8">
+        <!-- 標題區 -->
+        <div class="mb-6">
           <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-amber-100 text-amber-700 mb-3 inline-block">宗教史讀書會 第 {{ data.episode }} 集</span>
-          <h1 class="text-xl font-bold text-gray-900 leading-snug">{{ data.title }}</h1>
+          <h1 class="text-xl font-bold text-gray-900 leading-snug mb-3">{{ data.title }}</h1>
+
+          <!-- 日期 + 連結列 -->
+          <div class="flex flex-wrap items-center gap-3 text-sm">
+            <span v-if="data.video_date" class="text-gray-500">{{ data.video_date }}</span>
+            <a v-if="data.youtube_id"
+               :href="`https://www.youtube.com/watch?v=${data.youtube_id}`"
+               target="_blank" rel="noopener"
+               class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-red-600 hover:bg-red-100 transition text-xs font-medium">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+              YouTube
+            </a>
+            <a v-if="data.ppt_r2_key"
+               :href="`/api/works/ppt-download/${route.params.id}`"
+               class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-700 hover:bg-amber-100 transition text-xs font-medium">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 16V4M12 16l-4-4M12 16l4-4M4 20h16" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              下載投影片
+            </a>
+          </div>
         </div>
+
         <div class="transcript-page">
           <div class="transcript-body" v-html="formatted"></div>
         </div>
@@ -31,9 +55,14 @@
 const route = useRoute()
 const id = route.params.id as string
 
-const { data, pending, error } = await useFetch<{ content: string; title: string; episode: number }>(
-  `/api/works/transcript/${id}`
-)
+const { data, pending, error } = await useFetch<{
+  content: string
+  title: string
+  episode: number
+  video_date: string | null
+  youtube_id: string | null
+  ppt_r2_key: string | null
+}>(`/api/works/transcript/${id}`)
 
 useHead(() => ({ title: `${data.value?.title ?? '逐字稿'} — 宗教史讀書會 — Know Graph Lab` }))
 
