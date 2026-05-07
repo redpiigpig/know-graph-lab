@@ -725,23 +725,81 @@ def parse_toc_hierarchical(book):
     doc_chap_splits = {}
     volumes_log = []
 
+    # Helper: walk one Section's children for grandchildren (sections beneath
+    # chapters, e.g. "1. 古代" beneath "第1章 歐洲的興起"). Used to expose 節 as
+    # sidebar entries indented under their chapter.
+    def _children_anchored(children_iter):
+        out = []
+        for ch in children_iter:
+            if isinstance(ch, tuple):
+                sec, _gc = ch
+                t = (getattr(sec, "title", "") or "").strip()
+                h = getattr(sec, "href", "")
+            elif hasattr(ch, "title") and hasattr(ch, "href"):
+                t = (ch.title or "").strip()
+                h = ch.href or ""
+            else:
+                continue
+            if t and h:
+                f, _, a = h.partition("#")
+                out.append((t, f, a or None))
+        return out
+
     if role == "multi_volume":
-        # Split at CHILDREN anchors; each child = one chapter chunk
+        # Top = volume; depth-1 children = chapters; depth-2 grandchildren = 節.
         for vol_title, _vol_f, _vol_a, child_list in top_sections:
             volumes_log.append((vol_title, child_list))
-            for chap_title, file, anchor in child_list:
-                if anchor:
-                    doc_chap_splits.setdefault(file, {})[anchor] = (vol_title, chap_title)
-                else:
-                    doc_chap_starts[file] = (vol_title, chap_title)
+            # Walk the original tree to get this volume's grandchildren too
+            # (parse_toc_hierarchical only retains depth-1; we need depth-2 for 節).
+            # Re-walk: find this volume's Section node again.
+            for it in book.toc:
+                if not isinstance(it, tuple):
+                    continue
+                sect, ch_list = it
+                if (getattr(sect, "title", "") or "").strip() != vol_title:
+                    continue
+                # For each chapter (depth-1)
+                for ch in ch_list:
+                    if isinstance(ch, tuple):
+                        chap_sec, grand_list = ch
+                        chap_title = (getattr(chap_sec, "title", "") or "").strip()
+                        chap_href = getattr(chap_sec, "href", "") or ""
+                    elif hasattr(ch, "title"):
+                        chap_title = (ch.title or "").strip()
+                        chap_href = ch.href or ""
+                        grand_list = []
+                    else:
+                        continue
+                    if chap_title and chap_href:
+                        f, _, a = chap_href.partition("#")
+                        payload = (vol_title, chap_title, "###")
+                        if a:
+                            doc_chap_splits.setdefault(f, {})[a] = payload
+                        else:
+                            doc_chap_starts[f] = payload
+                    # 節 (grandchildren of volume)
+                    for sec_t, sec_f, sec_a in _children_anchored(grand_list):
+                        payload = (vol_title, sec_t, "####")
+                        if sec_a:
+                            doc_chap_splits.setdefault(sec_f, {})[sec_a] = payload
+                        else:
+                            doc_chap_starts[sec_f] = payload
+                break
     else:  # single_chapter
-        # Split at TOP Section anchors only; each top Section = one chapter chunk.
-        # The deeper levels (sections within chapters) remain inline as h3/h4.
-        for chap_title, file, anchor, _children in top_sections:
+        # Top Sections are chapters; depth-1 children are 節.
+        for chap_title, file, anchor, child_list in top_sections:
+            payload = (None, chap_title, "##")
             if anchor:
-                doc_chap_splits.setdefault(file, {})[anchor] = (None, chap_title)
+                doc_chap_splits.setdefault(file, {})[anchor] = payload
             else:
-                doc_chap_starts[file] = (None, chap_title)
+                doc_chap_starts[file] = payload
+            # Add 節 splits
+            for sec_t, sec_f, sec_a in child_list:
+                sec_payload = (None, sec_t, "###")
+                if sec_a:
+                    doc_chap_splits.setdefault(sec_f, {})[sec_a] = sec_payload
+                else:
+                    doc_chap_starts[sec_f] = sec_payload
 
     return {
         "role": role,
@@ -803,11 +861,13 @@ def split_body_at_anchors(body, anchor_to_vol):
     chapter list inside one big `<div>` directly under body, so a top-level
     iteration would only catch the first anchor. We descend, find every match,
     then string-split the body at the matched elements' positions."""
-    matches = []  # [(elem, anchor_id)] in document order
+    matches = []  # [(elem, anchor_id)] in document order — dedupe by anchor id
+    seen_anchors = set()
     for elem in body.find_all(attrs={"id": True}):
         cid = elem.get("id")
-        if cid in anchor_to_vol:
+        if cid in anchor_to_vol and cid not in seen_anchors:
             matches.append((elem, cid))
+            seen_anchors.add(cid)
 
     body_html = str(body)
     if not matches:
@@ -1008,10 +1068,15 @@ def standardize(book):
                 seen_dedupe_keys.add(dedupe_key)
 
             md_tw = to_traditional(md)
-            # Hierarchical payload: current_volume = (vol, chap) tuple
-            # Legacy payload:       current_volume = vol_title (str)
+            # Hierarchical payload: current_volume = (vol, chap, level) 3-tuple
+            #   (older 2-tuple still accepted for backward compat with hot-loaded code paths)
+            # Legacy payload: current_volume = vol_title (str)
+            hier_level_override = None
             if isinstance(current_volume, tuple):
-                vol_only, hier_chap = current_volume
+                if len(current_volume) >= 3:
+                    vol_only, hier_chap, hier_level_override = current_volume[0], current_volume[1], current_volume[2]
+                else:
+                    vol_only, hier_chap = current_volume[0], current_volume[1]
                 volume = to_traditional(vol_only) if vol_only else None
                 hier_chap_tw = to_traditional(hier_chap) if hier_chap else None
             else:
@@ -1030,7 +1095,8 @@ def standardize(book):
             # level for hierarchical chapters: ## when single-volume (no parent
             # volume groups), ### when multi-volume (## reserved for volume).
             if hier_chap_tw:
-                target_level = "###" if (volume is not None) else "##"
+                # Use payload's level override (when 節 splits are in play)
+                target_level = hier_level_override or ("###" if (volume is not None) else "##")
             else:
                 target_level = None  # legacy mode — keep original level
 
@@ -1063,6 +1129,18 @@ def standardize(book):
                     and len(plain) <= CONT_MERGE_MAX_CHARS):
                 # Strip the redundant heading line from md_tw before appending —
                 # it adds nothing and creates "二 / A" mid-paragraph artifacts.
+                stripped_md = re.sub(r"^#{1,4}\s+.+\n+", "", md_tw, count=1).strip()
+                if stripped_md:
+                    chunks[-1]["content"] = chunks[-1]["content"].rstrip() + "\n\n" + stripped_md
+                continue
+
+            # Hierarchical-mode same-chapter merge: when the previous chunk has
+            # the EXACT same volume + chapter_path, this is a continuation
+            # (cross-spine-doc spillover or multi-page chapter title image).
+            # Strip the duplicate heading and append.
+            if (using_hier and chunks
+                    and chunks[-1].get("volume") == volume
+                    and chunks[-1].get("chapter_path") == chapter_title):
                 stripped_md = re.sub(r"^#{1,4}\s+.+\n+", "", md_tw, count=1).strip()
                 if stripped_md:
                     chunks[-1]["content"] = chunks[-1]["content"].rstrip() + "\n\n" + stripped_md
