@@ -302,7 +302,7 @@ function autoResize(el) {
 // ── Transcript parser ────────────────────────────────────────
 // Recognised speaker-name suffixes — used to gate speaker detection
 // inside a running speech block (so "他告訴我：..." won't be misread).
-const SPEAKER_SUFFIX = /(?:牧師|主席|主持人?|教授|長老|傳道人?|博士|執事|姊妹|弟兄|會友|主教|會督|師母|院長|司會|司琴|敬拜|傳道|同工|傳道師|老師)$/
+const SPEAKER_SUFFIX = /(?:牧師|牧正|主席|主持人?|教授|長老|傳道人?|博士|執事|姊妹|弟兄|會友|主教|會督|師母|院長|司會|司琴|敬拜|傳道|同工|傳道師|老師)$/
 // Function words that real Chinese names never contain — used to reject
 // false-positive "speaker" lines like "這裡有個問題：xxx".
 // 會 is intentionally excluded (legit names like 「龐君華會督」 contain it).
@@ -319,6 +319,27 @@ const parsedTranscript = computed(() => {
   let curParas = []
   let blockParas = []
   let paraBuf = []
+
+  // Pre-pass: scan the whole transcript and pre-register any name that
+  // would already be accepted under the lenient block-mode rules
+  // (suffix match, English, or short ≤6 chars without forbidden chars).
+  // This way a name that first appears INSIDE another speaker's block
+  // (like 「林立峯牧正：…」 mid-speech) is still recognised.
+  for (const rawLine of lines) {
+    const l = rawLine.trim()
+    if (!l || /^【.+】$/.test(l)) continue
+    const m = l.match(/^(.{1,12}?)(?:（[^）]*）)?\s*：\s*(.+)$/)
+    if (!m) continue
+    const candidate = m[1].trim()
+    if (!candidate) continue
+    if (!/^[一-龥A-Za-z·\s]+$/.test(candidate)) continue
+    if (/[，。？！、；]/.test(candidate)) continue
+    if (FORBIDDEN_NAME_CHARS.test(candidate)) continue
+    const passes = SPEAKER_SUFFIX.test(candidate)
+                || /^[A-Za-z][A-Za-z\s]*$/.test(candidate)
+                || candidate.length <= 6
+    if (passes) knownSpeakers.add(candidate)
+  }
 
   const flushSpeech = () => {
     if (curSpeaker !== null && curParas.length)
