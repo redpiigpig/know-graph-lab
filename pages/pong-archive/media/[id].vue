@@ -300,14 +300,19 @@ function autoResize(el) {
 }
 
 // ── Transcript parser ────────────────────────────────────────
+// Recognised speaker-name suffixes — used to gate speaker detection
+// inside a running speech block (so "他告訴我：..." won't be misread).
+const SPEAKER_SUFFIX = /(?:牧師|主席|主持人?|教授|長老|傳道人?|博士|執事|姊妹|弟兄|會友|主教|會督|師母|院長|司會|司琴|敬拜|傳道|同工|傳道師)$/
+
 const parsedTranscript = computed(() => {
   const text = item.value?.transcript
   if (!text) return []
   const lines = text.split('\n')
   const segments = []
+  const knownSpeakers = new Set()
   let curSpeaker = null
+  let pendingSpeaker = null   // speaker declared but no content yet (e.g. lone "龐牧師：" line)
   let curParas = []
-  // paragraphs accumulated within the current section block
   let blockParas = []
   let paraBuf = []
 
@@ -316,14 +321,9 @@ const parsedTranscript = computed(() => {
       segments.push({ type: 'speech', speaker: curSpeaker, paragraphs: [...curParas] })
     curSpeaker = null; curParas = []
   }
-
   const flushPara = () => {
-    if (paraBuf.length) {
-      blockParas.push(paraBuf.join(''))
-      paraBuf = []
-    }
+    if (paraBuf.length) { blockParas.push(paraBuf.join('')); paraBuf = [] }
   }
-
   const flushBlock = () => {
     flushPara()
     if (blockParas.length) {
@@ -332,38 +332,77 @@ const parsedTranscript = computed(() => {
     }
   }
 
+  // Returns { name, role, content } or null. role is the (xxx) suffix if present.
+  const parseSpeakerLine = (line) => {
+    const m = line.match(/^(.{1,12}?)(?:（([^）]*)）)?\s*：\s*(.*)$/)
+    if (!m) return null
+    const name = m[1].trim()
+    if (!name) return null
+    if (!/^[一-龥A-Za-z·\s]+$/.test(name)) return null
+    if (/[，。？！、；]/.test(name)) return null
+    return { name, role: (m[2] || '').trim(), content: m[3].trim() }
+  }
+
+  // Whether this name is "definitely" a speaker (vs e.g. "結論：xxx").
+  const looksLikeName = (name) =>
+    knownSpeakers.has(name) || SPEAKER_SUFFIX.test(name) || /^[A-Za-z][A-Za-z\s]*$/.test(name)
+
   for (const line of lines) {
     const l = line.trim()
 
-    // blank line → paragraph break within block
+    // blank line
     if (!l) {
-      if (curSpeaker !== null) { /* ignore blanks in speech */ }
-      else flushPara()
+      if (curSpeaker === null) flushPara()
       continue
     }
 
     // section header 【xxx】
     if (/^【.+】$/.test(l)) {
       flushBlock(); flushSpeech()
+      pendingSpeaker = null
       segments.push({ type: 'section', text: l.replace(/^【|】$/g, '') })
       continue
     }
 
-    // under a speech block — add to current speaker's paragraphs
-    if (curSpeaker !== null) {
-      curParas.push(l); continue
-    }
+    // Try to detect a speaker line.
+    const sp = parseSpeakerLine(l)
+    const acceptHere = sp && (
+      curSpeaker === null
+        // In block / fresh mode: accept if name looks reasonable
+        ? (looksLikeName(sp.name) || sp.name.length <= 6)
+        // In speech mode: only accept strong matches (avoids false positives)
+        : looksLikeName(sp.name)
+    )
 
-    // speaker line (block mode only) "龐君華牧師：blah" — name ≤ 10 chars, no sentence punctuation
-    const m = l.match(/^(.{1,10}?)(?:（[^）]*）)?\s*：\s*(.*)$/)
-    if (m && m[1].length <= 10 && !/[，。？！、]/.test(m[1])) {
+    if (acceptHere) {
       flushBlock(); flushSpeech()
-      curSpeaker = m[1].trim()
-      if (m[2].trim()) curParas.push(m[2].trim())
+      knownSpeakers.add(sp.name)
+      const display = sp.role ? `${sp.name}（${sp.role}）` : sp.name
+      curSpeaker = display
+      if (sp.content) {
+        curParas.push(sp.content)
+        pendingSpeaker = null
+      } else {
+        // Lone "龐牧師：" line — remember for the next non-section content.
+        pendingSpeaker = display
+        curSpeaker = null
+      }
       continue
     }
 
-    // plain text line → accumulate into current paragraph
+    // pending speaker waiting → start a fresh speech block with this line
+    if (pendingSpeaker !== null && curSpeaker === null) {
+      flushBlock()
+      curSpeaker = pendingSpeaker
+      pendingSpeaker = null
+      curParas.push(l)
+      continue
+    }
+
+    // running speech: add to current speaker
+    if (curSpeaker !== null) { curParas.push(l); continue }
+
+    // plain narrative → block paragraph buffer
     paraBuf.push(l)
   }
   flushBlock(); flushSpeech()
@@ -626,18 +665,45 @@ onMounted(() => { loadSession() })
 }
 .md-ts-section::before, .md-ts-section::after { content: '—'; margin: 0 12px; color: #C4B89A; }
 
-.md-ts-speech { display: grid; grid-template-columns: 80px 1fr; gap: 0 20px; padding: 16px 0; border-bottom: 1px solid #EAE6DE; }
+/* 發言人凸排：標籤獨立一行在內容上方，內容保留原本的 2rem 首行縮排 */
+.md-ts-speech {
+  padding: 18px 0 16px;
+  border-bottom: 1px solid #EAE6DE;
+}
 .md-ts-speech:last-child { border-bottom: none; }
-.md-ts-speaker { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.06em; padding-top: 2px; line-height: 1.8; white-space: nowrap; }
+.md-ts-speaker {
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
 .md-ts-speech--bishop .md-ts-speaker { color: #5B3F2A; }
 .md-ts-speech--host .md-ts-speaker { color: #3A5A4A; }
-.md-ts-content { font-size: 0.92rem; font-weight: 300; color: #3A3530; line-height: 2; letter-spacing: 0.04em; }
-.md-ts-content p { text-indent: 2rem; margin: 0 0 0.5em; }
-.md-ts-content p:last-child { margin-bottom: 0; }
-
-.md-ts-block { font-size: 0.92rem; font-weight: 300; color: #3A3530; line-height: 2; letter-spacing: 0.04em; padding-bottom: 20px; }
-.md-ts-block p { text-indent: 2rem; margin: 0 0 0.5em; }
+.md-ts-content {
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: #3A3530;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
+/* 每段都要有 2rem 首行縮排（含換段後的後續段落） */
+.md-ts-content p,
+.md-ts-block p {
+  text-indent: 2rem;
+  margin: 0 0 0.6em;
+}
+.md-ts-content p:last-child,
 .md-ts-block p:last-child { margin-bottom: 0; }
+
+.md-ts-block {
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: #3A3530;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  padding-bottom: 20px;
+}
 
 /* ── Proofreader Sign-off ────────────────────────────────── */
 .md-pr-section {
@@ -762,7 +828,6 @@ onMounted(() => { loadSession() })
   .md-header { padding: 32px 20px 28px; }
   .md-player-section { padding: 28px 20px; }
   .md-transcript-section { padding: 36px 20px 60px; }
-  .md-ts-speech { grid-template-columns: 60px 1fr; gap: 0 12px; }
   .md-pr-section { padding: 32px 20px 40px; }
   .md-pr-row { flex-direction: column; }
 }
