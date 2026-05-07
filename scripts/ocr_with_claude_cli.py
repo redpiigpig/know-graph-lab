@@ -206,22 +206,45 @@ If a page is blank or purely decorative, output its [PAGE N] header with an empt
 
 
 _ANTHROPIC_IMAGE_MAX = 5 * 1024 * 1024  # 5 MB hard limit
-_TARGET_PNG_BYTES = int(4.5 * 1024 * 1024)  # leave ~10% headroom for base64 encoding
+_TARGET_IMG_BYTES = int(4.5 * 1024 * 1024)  # leave headroom for base64 transit
 
 
-def _render_page_png(doc, page_idx: int) -> bytes:
-    """Render a PDF page as PNG, auto-downsampling DPI if the result exceeds Anthropic's 5 MB cap."""
+def _render_page_image(doc, page_idx: int) -> tuple[bytes, str]:
+    """Render a PDF page, guaranteeing the final bytes fit Anthropic's 5 MB cap.
+
+    Strategy: try PNG at decreasing DPIs first (lossless preferred). If even
+    72 DPI PNG is still too large (happens for photo-heavy / scanned pages
+    with lots of color), fall back to JPEG at decreasing quality. JPEG is
+    typically 5-10× smaller than PNG for photographic content with no
+    practical OCR-quality loss at quality ≥ 70.
+
+    Returns (bytes, media_type) where media_type is 'image/png' or 'image/jpeg'."""
     page = doc[page_idx]
-    for dpi in (DPI, 110, 90, 72):
+    # Pass 1: PNG at descending DPIs
+    for dpi in (DPI, 120, 100, 85, 72):
         mat = fitz.Matrix(dpi / 72, dpi / 72)
         pix = page.get_pixmap(matrix=mat, colorspace=fitz.csRGB)
         png = pix.tobytes("png")
-        if len(png) <= _TARGET_PNG_BYTES:
-            return png
-    # Last resort: 60 DPI (text may degrade but better than failing)
-    mat = fitz.Matrix(60 / 72, 60 / 72)
+        if len(png) <= _TARGET_IMG_BYTES:
+            return png, "image/png"
+    # Pass 2: JPEG at descending quality with the same low-end DPI
+    mat = fitz.Matrix(120 / 72, 120 / 72)
     pix = page.get_pixmap(matrix=mat, colorspace=fitz.csRGB)
-    return pix.tobytes("png")
+    for q in (85, 75, 65, 55):
+        jpg = pix.tobytes("jpeg", jpg_quality=q)
+        if len(jpg) <= _TARGET_IMG_BYTES:
+            return jpg, "image/jpeg"
+    # Last resort: 72 DPI JPEG @ 50 (still readable for OCR)
+    mat = fitz.Matrix(72 / 72, 72 / 72)
+    pix = page.get_pixmap(matrix=mat, colorspace=fitz.csRGB)
+    return pix.tobytes("jpeg", jpg_quality=50), "image/jpeg"
+
+
+def _render_page_png(doc, page_idx: int) -> bytes:
+    """Backward-compat wrapper. Returns just the bytes (assume PNG); callers
+    that need media_type should use _render_page_image directly."""
+    img, _ = _render_page_image(doc, page_idx)
+    return img
 
 
 def _parse_batch_response(text: str, page_numbers: list) -> list:
@@ -252,10 +275,10 @@ def ocr_book(client: anthropic.Anthropic, src_path: Path, batch_size: int):
 
         content = []
         for pi in page_indices:
-            png = _render_page_png(doc, pi)
-            b64 = base64.standard_b64encode(png).decode()
+            img, media_type = _render_page_image(doc, pi)
+            b64 = base64.standard_b64encode(img).decode()
             content.append({"type": "image",
-                             "source": {"type": "base64", "media_type": "image/png", "data": b64}})
+                             "source": {"type": "base64", "media_type": media_type, "data": b64}})
         prompt = BATCH_PROMPT.format(
             first=page_numbers[0],
             next=page_numbers[1] if len(page_numbers) > 1 else page_numbers[0] + 1,
