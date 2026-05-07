@@ -637,6 +637,76 @@ def looks_like_volume(title: str) -> bool:
     return any(m in title for m in VOLUME_MARKERS)
 
 
+def parse_toc_hierarchical(book):
+    """Detect 2-level TOC structure (top-level Sections each containing ≥2 chapters).
+
+    A book is "hierarchical" when at least two top-level entries are
+    Section tuples carrying child entries — e.g. 羅馬帝國衰亡史 has
+    13 such top-level Sections each holding 5–10 chapter Links inside
+    the same spine HTML file. The current `parse_volume_toc` flow misses
+    those because the top titles don't contain volume markers like
+    卷/部/篇, so the entire HTML becomes a single chunk with no
+    volume/chapter structure.
+
+    Returns:
+      {'doc_chap_splits': {file: {anchor: (vol_title, chap_title)}},
+       'doc_chap_starts': {file: (vol_title, chap_title)},   # chapter at start of file
+       'flat_links':      [(title, file, anchor), ...]       # top-level Links (front matter)
+      }
+    or None when there's not enough hierarchy to bother (< 2 volumes with ≥2 children each)."""
+    volumes = []  # [(vol_title, [(chap_title, file, anchor), ...])]
+    flat_links = []
+
+    for it in book.toc:
+        if isinstance(it, tuple):
+            section, children = it
+            vol_title = (getattr(section, "title", "") or "").strip()
+            if not vol_title or len(children) < 2:
+                continue
+            if any(skip in vol_title for skip in ("版权", "版權", "Digital Lab")):
+                continue
+            chaps = []
+            for ch in children:
+                if isinstance(ch, tuple):
+                    sec2, _gc = ch
+                    ct = (getattr(sec2, "title", "") or "").strip()
+                    h = getattr(sec2, "href", "")
+                elif hasattr(ch, "title") and hasattr(ch, "href"):  # Link
+                    ct = (ch.title or "").strip()
+                    h = ch.href or ""
+                else:
+                    continue
+                if ct and h:
+                    f, _, a = h.partition("#")
+                    chaps.append((ct, f, a or None))
+            if chaps:
+                volumes.append((vol_title, chaps))
+        elif hasattr(it, "title") and hasattr(it, "href"):  # Link
+            t = (it.title or "").strip()
+            if t and it.href:
+                f, _, a = it.href.partition("#")
+                flat_links.append((t, f, a or None))
+
+    if len(volumes) < 2:
+        return None
+
+    doc_chap_splits = {}
+    doc_chap_starts = {}
+    for vol_title, chaps in volumes:
+        for chap_title, file, anchor in chaps:
+            if anchor:
+                doc_chap_splits.setdefault(file, {})[anchor] = (vol_title, chap_title)
+            else:
+                doc_chap_starts[file] = (vol_title, chap_title)
+
+    return {
+        "volumes": volumes,
+        "doc_chap_splits": doc_chap_splits,
+        "doc_chap_starts": doc_chap_starts,
+        "flat_links": flat_links,
+    }
+
+
 def parse_volume_toc(book):
     """Returns (doc_volume_starts, doc_anchor_splits):
       - doc_volume_starts: {file_name: volume_title}    — TOC entries with no anchor
@@ -742,7 +812,21 @@ def standardize(book):
 
     print(f"Spine docs: {len(docs)}")
 
-    doc_volume_starts, doc_anchor_splits = parse_volume_toc(b)
+    # First try the rich 2-level path (top-level Sections containing chapter
+    # anchors). If hierarchy is present we can split docs at each chapter
+    # anchor and tag chunks with both volume + chapter from TOC. Otherwise
+    # fall back to the legacy single-level volume-marker detection.
+    hier = parse_toc_hierarchical(b)
+    using_hier = bool(hier)
+    if using_hier:
+        # Payloads are (vol_title, chap_title) tuples
+        doc_volume_starts = dict(hier["doc_chap_starts"])  # {file: (vol, chap)}
+        doc_anchor_splits = {fn: list(amap.items())  # [(anchor, (vol, chap))]
+                             for fn, amap in hier["doc_chap_splits"].items()}
+        print(f"Hierarchical TOC detected: {len(hier['volumes'])} volumes "
+              f"× total {sum(len(c) for _, c in hier['volumes'])} chapters")
+    else:
+        doc_volume_starts, doc_anchor_splits = parse_volume_toc(b)
 
     # Validate anchored splits: some EPUBs put #anchor in the TOC href but
     # never actually emit a matching id="…" in the HTML. When that happens
@@ -771,12 +855,19 @@ def standardize(book):
         if promoted_count:
             print(f"  ({promoted_count} anchored volume(s) had no resolvable id — promoted to doc-level starts)")
 
+    def _vol_label(payload):
+        """Payload is either a str (vol_title) or a tuple (vol_title, chap_title).
+        Return the volume-level title for either."""
+        return payload[0] if isinstance(payload, tuple) else payload
+
     multi_volume = bool(doc_volume_starts or doc_anchor_splits)
     if multi_volume:
-        all_vols = set(doc_volume_starts.values())
+        all_vols = set()
+        for v in doc_volume_starts.values():
+            all_vols.add(_vol_label(v))
         for lst in doc_anchor_splits.values():
             for _, t in lst:
-                all_vols.add(t)
+                all_vols.add(_vol_label(t))
         print(f"Detected {len(all_vols)} volume(s): {sorted(all_vols)}")
     else:
         print("No volume hierarchy detected — flat TOC.")
@@ -847,9 +938,19 @@ def standardize(book):
                 seen_dedupe_keys.add(dedupe_key)
 
             md_tw = to_traditional(md)
-            volume = to_traditional(current_volume) if current_volume else None
+            # Hierarchical payload: current_volume = (vol, chap) tuple
+            # Legacy payload:       current_volume = vol_title (str)
+            if isinstance(current_volume, tuple):
+                vol_only, hier_chap = current_volume
+                volume = to_traditional(vol_only) if vol_only else None
+                hier_chap_tw = to_traditional(hier_chap) if hier_chap else None
+            else:
+                volume = to_traditional(current_volume) if current_volume else None
+                hier_chap_tw = None
 
-            chapter_title = derive_chapter_title(md_tw, d.file_name)
+            # Hierarchical mode wins when TOC gave us a chapter title; the
+            # in-content first-heading scan only runs as a fallback.
+            chapter_title = hier_chap_tw or derive_chapter_title(md_tw, d.file_name)
 
             # If derive_chapter_title applied a cosmetic rename (e.g. CIP →
             # 版權頁), rewrite the first markdown heading inside content so the
