@@ -40,9 +40,38 @@ SERVICE_KEY  = _env["SUPABASE_SERVICE_ROLE_KEY"]
 
 # ── 哪些集要做什麼 ──────────────────────────────────────────
 # POLISH_ONLY: DB 已有完整 Gemini 轉錄，只跑 Haiku 潤稿
-POLISH_ONLY = [3, 4, 5, 6, 8, 9, 10, 11]
+POLISH_ONLY_DEFAULT = [3, 4, 5, 6, 8, 9, 10, 11]
 # TRANSCRIBE: 需要 Whisper 重新轉錄（loop / truncated / missing / 503 失敗）
-TRANSCRIBE  = [2, 7, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+TRANSCRIBE_DEFAULT  = [2, 7, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+
+# 命令列覆寫（--polish 1,2,3 --transcribe 4-10）
+def _parse_eps(s: str) -> list[int]:
+    out: list[int] = []
+    for part in s.split(","):
+        part = part.strip()
+        if not part: continue
+        if "-" in part:
+            a, b = part.split("-", 1)
+            out.extend(range(int(a), int(b) + 1))
+        else:
+            out.append(int(part))
+    return out
+
+POLISH_ONLY = POLISH_ONLY_DEFAULT
+TRANSCRIBE  = TRANSCRIBE_DEFAULT
+_argv = sys.argv[1:]
+i = 0
+while i < len(_argv):
+    if _argv[i] == "--polish" and i + 1 < len(_argv):
+        POLISH_ONLY = _parse_eps(_argv[i+1]); i += 2
+    elif _argv[i] == "--transcribe" and i + 1 < len(_argv):
+        TRANSCRIBE = _parse_eps(_argv[i+1]); i += 2
+    elif _argv[i] == "--no-polish":
+        POLISH_ONLY = []; i += 1
+    elif _argv[i] == "--no-transcribe":
+        TRANSCRIBE = []; i += 1
+    else:
+        i += 1
 
 HAIKU_MODEL = "claude-haiku-4-5-20251001"
 WHISPER_SIZE = "small"
@@ -140,7 +169,8 @@ def upsert_row(episode: int, title: str, content: str,
 # ── Playlist ────────────────────────────────────────────────
 def fetch_playlist() -> list[dict]:
     import yt_dlp
-    with yt_dlp.YoutubeDL({"quiet": True, "extract_flat": True}) as ydl:
+    with yt_dlp.YoutubeDL({"quiet": True, "extract_flat": True,
+                            "cookiesfrombrowser": ("firefox",)}) as ydl:
         info = ydl.extract_info(PLAYLIST_URL, download=False)
     return info.get("entries", [])
 
@@ -165,6 +195,7 @@ def download_audio(video_id: str, label: str, max_attempts: int = 3) -> Path | N
                 "outtmpl": str(TMP_DIR / f"{label}.%(ext)s"),
                 "quiet": False, "noplaylist": True,
                 "socket_timeout": 30, "retries": 3,
+                "cookiesfrombrowser": ("firefox",),
             }) as ydl:
                 ydl.download([url])
             for ext in ["m4a", "webm", "opus", "mp4"]:
