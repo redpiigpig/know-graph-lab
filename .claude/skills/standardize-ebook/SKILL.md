@@ -104,6 +104,86 @@ If anchored TOC entries (`href="part.html#K4"`) point to anchors that don't
 actually exist in the HTML (broken EPUB, like 中國儒學史), fall back to
 treating the doc as a doc-level volume start.
 
+### Hierarchical TOC support — `parse_toc_hierarchical` (preferred over flat)
+
+When `book.toc` exposes top-level Sections with ≥2 child entries each, the
+pipeline switches from the flat single-level path into a richer 2-level
+splitter that exposes both 章 AND 節 in the sidebar.
+
+**Role detection.** A top-level Section can mean either a volume or a
+chapter, decided by title shape:
+
+- **multi_volume** — top Section titles are volume names (羅馬帝國衰亡史:
+  「全譯羅馬帝國衰亡史：1」). Split at child (chapter) anchors AND grandchild
+  (節) anchors. `volume = top_title`, `chapter_path = chap_or_section_title`.
+  Heading levels: chapters get `###` (sidebar `pl-7`), 節 get `####` (`pl-11`).
+
+- **single_chapter** — top Section titles look like printed-book chapters
+  (現代世界史: 「第1章 歐洲的興起」 — matches `_CHAPTER_TITLE_RE`). Split at
+  top (chapter) anchors AND child (節) anchors. `volume = None`,
+  `chapter_path = chap_or_section_title`. Heading levels: chapters get `##`
+  (sidebar `pl-3`), 節 get `###` (`pl-7`).
+
+The decision uses `_is_chapter_title()` vs `looks_like_volume()` counts: if
+≥50% of top Sections match the chapter pattern AND chapter > volume count,
+it's `single_chapter`; else `multi_volume`.
+
+**Payload contract.** Both roles emit 3-tuple anchor payloads
+`(vol_or_None, chap_title, level_str)` so the standardize loop can normalize
+heading depth uniformly via the `target_level` override (see "Heading
+normalization" below).
+
+**Why this matters.** Without hierarchical support, books like 現代世界史
+(27 chapters × ~5 節 each) collapsed into 21 flat chunks; books like 羅馬帝國
+衰亡史 (13 vols × 88 chapters) collapsed into 15 flat per-spine-doc chunks
+with `volume=None` everywhere. After: 201 and 103 chunks respectively, with
+correct nesting. Survey: 283/308 standardized EPUBs (92%) qualified for the
+hierarchical path; 25 fall back to legacy `parse_volume_toc`.
+
+### Anchor splitting — deep walk + per-anchor dedup
+
+`split_body_at_anchors` previously iterated only `body.children` (top-level
+direct children). Many publishers wrap the entire chapter list inside one
+`<div>` directly under body, so the loop only matched the first anchor
+inside it — rest got swallowed (現代世界史: alternating chapters 第1, 第3,
+第5… with even-numbered chapters lost).
+
+The current implementation:
+1. Walks all body descendants in document order, dedupes anchor matches by
+   their `id` value (publishers often emit the same id on both an `<a>` nav
+   target AND a `<h2>` heading — without dedup the same anchor fires twice
+   and creates a phantom chunk).
+2. String-splits the body at each match's tag-start position, preserving
+   the open/close `<body…>` tags around each segment.
+
+### Heading normalization (hierarchical mode only)
+
+The reader's `loadToc` derives sidebar nesting from each chunk's first
+heading depth (`## → level 2 → pl-3`, `### → level 3 → pl-7`, etc.). EPUBs
+use whatever `<h1>/<h2>/<h3>` the publisher chose for chapter titles, which
+varies — making some chapters render as level-2 entries and others as
+level-3+ children of preceding chunks.
+
+In hierarchical mode, the standardize loop forces a uniform heading level:
+
+| Role | Chapter heading | 節 heading |
+|---|---|---|
+| `single_chapter` | `## 第N章 …` (level 2, `pl-3`) | `### N. 節名` (level 3, `pl-7`) |
+| `multi_volume` | `### 第N章 …` (level 3, `pl-7`) — `##` reserved for volume | `#### 節名` (level 4, `pl-11`) |
+
+If the chunk has no `#` heading at all in content, one is prepended at the
+target level. This is what makes the 章/節 indentation visible in the
+reader sidebar.
+
+### Same-chapter cross-spine merge
+
+When the previous chunk has the EXACT same `volume + chapter_path` as the
+current one, it's a continuation — typically cross-spine-doc spillover
+(`current_volume` state carries from doc N's last anchor into doc N+1's
+segment-0, which has no new transition). Strip the duplicate heading and
+append to the previous chunk. Without this rule each chapter's title-image
+spine doc becomes a phantom standalone chunk.
+
 ### `ebook_chunks` DB previews
 
 After writing JSONL + R2, refresh `ebook_chunks` rows for this book —
@@ -319,7 +399,7 @@ finishes:
 
 ---
 
-## Current state (snapshot 2026-05-06)
+## Current state (snapshot 2026-05-08)
 
 All 481 standardized EPUBs have been re-run with the post-processing
 pipeline below. The 5 books that fail consistently have invalid Windows
@@ -328,6 +408,12 @@ file paths (Errno 22) — pre-existing data issue, not a script bug.
 | Category | EPUBs | Status |
 |---|---|---|
 | 哲學 / 宗教學 / 世界宗教 / 心理學 / 人類生物學 / 自然科學 / 文學 / 社會政治學 / 歷史學 | 481 total | ✅ all standardized; 2-3 transient persist errors per batch are auto-handled |
+| Hierarchical re-run | 283/308 EPUBs eligible (92%) | 🔄 batch in progress (`scripts/batch_hier_standardize.py` in tmp); 3 books with annotations excluded |
+
+Reference books that exercise the hierarchical path:
+- 羅馬帝國衰亡史 (吉本) — `multi_volume` role: 13 vols × 88 chapters; was 15 flat → now 103 chunks with proper volume groups
+- 現代世界史 (帕爾默·克萊默) — `single_chapter` role: 27 chapters × ~5 節 each; was 21 flat → now 201 chunks with 章 (`##`) > 節 (`###`) sidebar nesting
+- 卡夫卡著作集 (套裝10冊) — depth-5 TOC; previously fully flat
 
 Reference books to spot-check (after each re-run):
 - 《君主論》 — single-vol; **NO** volume groups in sidebar
