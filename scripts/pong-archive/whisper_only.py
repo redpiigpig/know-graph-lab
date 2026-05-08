@@ -26,7 +26,7 @@ def run(youtube_id, audio_path, lang='zh', start_sec=0):
         language=lang,
         condition_on_previous_text=True,
         vad_filter=True,
-        clip_timestamps=[start_sec] if start_sec else None,
+        clip_timestamps=[start_sec],  # always pass list; faster-whisper rejects None
     )
     parts = [seg.text.strip() for seg in segments]
     text = '\n'.join(p for p in parts if p)
