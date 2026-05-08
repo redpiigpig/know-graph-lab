@@ -109,7 +109,9 @@ def normalize_toc(toc, total_pages: int) -> list[dict] | None:
 
     entries = []
     for level, title, page in toc:
-        title = (title or "").strip()
+        # Some PDFs emit TOC titles with a trailing NUL ("封面\x00"); strip it
+        # at source so JSONL + DB inserts stay clean.
+        title = (title or "").replace("\x00", "").strip()
         if not title:
             continue
         if level > MAX_LEVEL:
@@ -333,15 +335,19 @@ def update_db(book_id: str, chunks: list[dict], metadata: dict) -> None:
 
     # Refresh ebook_chunks previews
     requests.delete(f"{se.URL}/rest/v1/ebook_chunks?ebook_id=eq.{book_id}", headers=se.H_GET, timeout=30)
+    # PostgreSQL JSONB rejects U+0000; scrub before insert. PyMuPDF TOC entries
+    # often carry a trailing NUL on certain PDFs (e.g. "封面\x00"); the OCR text
+    # path can also produce NULs when Haiku encounters undecodable glyphs.
+    def _clean(v):
+        return v.replace("\x00", "") if isinstance(v, str) else v
     rows = [{
         "ebook_id": book_id,
         "chunk_index": c["chunk_index"],
         "chunk_type": c.get("chunk_type") or "chapter",
         "page_number": c.get("page_number"),
-        "chapter_path": c.get("chapter_path"),
-        # PostgreSQL JSONB rejects U+0000; scrub before insert.
-        "content": (c.get("content") or "").replace("\x00", "")[:se.PREVIEW_LEN],
-        "char_count": len((c.get("content") or "").replace("\x00", "")),
+        "chapter_path": _clean(c.get("chapter_path")),
+        "content": _clean(c.get("content") or "")[:se.PREVIEW_LEN],
+        "char_count": len(_clean(c.get("content") or "")),
     } for c in chunks]
     BATCH = 50
     for i in range(0, len(rows), BATCH):
