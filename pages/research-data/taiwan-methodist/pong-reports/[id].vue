@@ -113,6 +113,7 @@
               </figure>
 
               <WeiLanFlowchart v-else-if="b.type === 'flowchart' && b.chartId === 'wei-lan-metro'" />
+              <MethodistGrowthFlowchart v-else-if="b.type === 'flowchart' && b.chartId === 'methodist-growth'" />
 
             </template>
           </div>
