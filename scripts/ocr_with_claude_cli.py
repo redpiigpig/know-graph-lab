@@ -518,6 +518,7 @@ def cmd_run(limit=None, batch=DEFAULT_BATCH, one_id=None, dry_run=False):
 
     ok, failed = 0, []
     consec_rl_fails = 0  # consecutive books that failed with rate-limit
+    cooldowns_used = 0   # number of long-sleep cooldowns already taken this run
     for i, b in enumerate(targets, 1):
         src = Path(b["file_path"])
         if not src.exists():
@@ -559,16 +560,22 @@ def cmd_run(limit=None, batch=DEFAULT_BATCH, one_id=None, dry_run=False):
                 update_book_error(b["id"], result["error"])
             # Persistent rate-limit detection: if 3 books in a row die at the
             # first call to a rate-limit error, the Max subscription's Haiku
-            # quota is burned. process_one's per-book backoff (max ~4 min) is
-            # not enough — sleep 30 min before next book to let the quota
-            # window roll over. Otherwise we churn through the queue marking
-            # every book as transient-fail without making progress.
+            # quota is burned. Cooldown matches the Max plan's 5-hour rolling
+            # window. After a second cooldown in one run, the day's quota is
+            # clearly gone — exit cleanly instead of churning more attempts
+            # (each book burns ~13 min on retries before giving up).
             if result["error"] == "rate limit":
                 consec_rl_fails += 1
                 if consec_rl_fails >= 3:
-                    cooldown = 1800
+                    cooldowns_used += 1
+                    if cooldowns_used >= 2:
+                        print(f"  ⏹ second persistent rate-limit cooldown — "
+                              f"quota clearly exhausted; exiting run.", flush=True)
+                        break
+                    cooldown = 5 * 3600
                     print(f"  ⏸ {consec_rl_fails} consecutive rate-limit fails — "
-                          f"sleeping {cooldown // 60} min for quota to recover…", flush=True)
+                          f"sleeping {cooldown // 60} min (Max plan 5h window)…",
+                          flush=True)
                     time.sleep(cooldown)
                     consec_rl_fails = 0
             else:
