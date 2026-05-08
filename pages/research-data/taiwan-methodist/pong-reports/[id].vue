@@ -101,6 +101,10 @@
 
               <p v-else-if="b.type === 'note'" class="text-xs text-gray-500 italic pl-4 border-l-2 border-gray-200">{{ b.text }}</p>
 
+              <blockquote v-else-if="b.type === 'callout'" class="my-2 mx-2 sm:mx-6 p-4 sm:p-5 rounded-2xl bg-rose-50 border border-rose-200 text-[15px] leading-relaxed text-rose-900 font-medium">
+                <span class="text-rose-300 mr-1">「</span>{{ b.text }}<span class="text-rose-300 ml-1">」</span>
+              </blockquote>
+
               <WeiLanFlowchart v-else-if="b.type === 'flowchart' && b.chartId === 'wei-lan-metro'" />
 
             </template>
