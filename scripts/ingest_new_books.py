@@ -78,10 +78,19 @@ SB_HEADERS = {
 
 
 def _find_gemini_key():
-    for name in ("GEMINI_API_KEY", "Gemini_API_Key", "gemini_api_key", "GOOGLE_API_KEY"):
+    """Return any usable Gemini API key. Supports both bare-name slots
+    (GEMINI_API_KEY / Gemini_API_Key / GOOGLE_API_KEY) and numbered slots
+    (Gemini_API_Key_1 .. _10) — the same .env layout `ocr_with_gemini.py` uses."""
+    primary = ("GEMINI_API_KEY", "Gemini_API_Key", "gemini_api_key", "GOOGLE_API_KEY")
+    for name in primary:
         v = os.environ.get(name) or ENV.get(name)
         if v:
             return v
+    for n in range(1, 11):
+        for base in primary:
+            v = os.environ.get(f"{base}_{n}") or ENV.get(f"{base}_{n}")
+            if v:
+                return v
     return None
 
 
