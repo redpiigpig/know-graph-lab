@@ -35,6 +35,15 @@
           <span class="tool-badge bg-emerald-50 text-emerald-600">可用</span>
         </NuxtLink>
 
+        <NuxtLink to="/research-data/taiwan-methodist/committees" class="tool-card group border-indigo-100 hover:border-indigo-300 hover:shadow-indigo-100">
+          <div class="tool-icon bg-indigo-50 text-indigo-600">👥</div>
+          <div class="flex-1">
+            <h2 class="tool-title">第 XX 屆年議會各部會職員名單</h2>
+            <p class="tool-desc">第 56–59 屆（2019–2022）20 個部會主席、書記、委員等職員結構</p>
+          </div>
+          <span class="tool-badge bg-indigo-50 text-indigo-600">可用</span>
+        </NuxtLink>
+
       </div>
     </div>
   </div>
