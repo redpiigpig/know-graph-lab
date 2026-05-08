@@ -45,9 +45,11 @@ def main():
         "Prefer": "return=representation",
     }
 
-    # Compute church_year (Advent-start)
+    # Compute church_year — Advent-start liturgical year
+    # (matches sermon_redo.py insert_sermon logic):
+    # Dec → cy = current year; everything else → cy = year - 1
     d = _date.fromisoformat(date_iso)
-    church_year = d.year if d.month < 12 else d.year + 1
+    church_year = d.year if d.month == 12 else d.year - 1
 
     body = {
         "id": sermon_id,
