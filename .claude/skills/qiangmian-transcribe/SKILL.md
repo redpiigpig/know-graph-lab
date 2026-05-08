@@ -23,7 +23,7 @@ Supabase video_transcripts upsert
 （選）Gemini 潤稿：刪填充詞 + 加小標
     │
     ▼
-http://localhost:3004/works/qiangmian/reading-club/[id]
+http://localhost:3004/works/million-masks/reading-club/[id]
 ```
 
 PPT 已在初始化時全部上傳到 R2（`qiangmian-ppt/ep{N:02d}.pptx`），轉錄腳本自動從 PPT 檔名取日期並填入 DB。
@@ -143,7 +143,7 @@ print(header + '\n\n' + resp.text.strip())
 import requests
 resp = requests.post(
     f'{SUPABASE_URL}/rest/v1/video_transcripts?on_conflict=project_slug,episode',
-    json={'project_slug': 'qiangmian', 'episode': N, 'title': '...', 'content': polished},
+    json={'project_slug': 'million-masks', 'episode': N, 'title': '...', 'content': polished},
     headers={...Prefer: resolution=merge-duplicates...}
 )
 ```
@@ -175,9 +175,9 @@ r2.upload_file(
 ## Supabase schema
 
 ```sql
--- video_transcripts 欄位（qiangmian 相關）
+-- video_transcripts 欄位（千面上帝 相關）
 id            uuid
-project_slug  text  -- 'qiangmian'
+project_slug  text  -- 'million-masks'（DB slug；URL: /works/million-masks）
 episode       int
 title         text
 content       text  -- 格式見下方
@@ -219,7 +219,7 @@ Date: YYYY-MM-DD
 
 | 端點 | 用途 |
 |---|---|
-| `GET /api/works/qiangmian-readings` | 列出所有集數（index 頁用）|
+| `GET /api/works/million-masks-readings` | 列出所有集數（index 頁用）|
 | `GET /api/works/transcript/[id]` | 單集全文（content + video_date + youtube_id + ppt_r2_key）|
 | `GET /api/works/ppt-download/[id]` | 生成 R2 pre-signed URL（1 小時有效）並 redirect 下載 |
 
@@ -227,8 +227,8 @@ Date: YYYY-MM-DD
 
 ## 頁面
 
-- 列表：`http://localhost:3004/works/qiangmian`
-- 單集：`http://localhost:3004/works/qiangmian/reading-club/[id]`
+- 列表：`http://localhost:3004/works/million-masks`
+- 單集：`http://localhost:3004/works/million-masks/reading-club/[id]`
 
 單集頁標題下方顯示：日期 badge、YouTube 紅色按鈕、投影片下載琥珀色按鈕。
 

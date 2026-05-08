@@ -48,7 +48,7 @@ except ImportError:
 def episode_exists(episode: int) -> bool:
     resp = requests.get(
         f"{SUPABASE_URL}/rest/v1/video_transcripts",
-        params={"project_slug": "eq.qiangmian", "episode": f"eq.{episode}", "select": "id"},
+        params={"project_slug": "eq.million-masks", "episode": f"eq.{episode}", "select": "id"},
         headers={"apikey": SERVICE_ROLE_KEY, "Authorization": f"Bearer {SERVICE_ROLE_KEY}"},
     )
     return resp.status_code == 200 and len(resp.json()) > 0
@@ -56,7 +56,7 @@ def episode_exists(episode: int) -> bool:
 
 def upload_transcript(episode: int, title: str, content: str,
                        video_date: str = None, youtube_id: str = None) -> bool:
-    data = {"project_slug": "qiangmian", "episode": episode,
+    data = {"project_slug": "million-masks", "episode": episode,
             "title": title, "content": content}
     if video_date:
         data["video_date"] = video_date

@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-slate-50">
     <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
       <div class="max-w-5xl mx-auto px-6 h-14 flex items-center gap-4">
-        <NuxtLink to="/works/qiangmian" class="text-gray-400 hover:text-gray-700 transition text-sm">← 千面上帝</NuxtLink>
+        <NuxtLink to="/works/million-masks" class="text-gray-400 hover:text-gray-700 transition text-sm">← 千面上帝</NuxtLink>
         <span class="text-gray-200">|</span>
         <span class="text-sm font-medium text-gray-700 truncate">{{ title }}</span>
       </div>
@@ -71,7 +71,7 @@ useHead(() => ({ title: `${title.value} — 宗教史讀書會 — Know Graph La
 
 onMounted(async () => {
   try {
-    rawText.value = await $fetch<string>(`/content/qiangmian-readings/${filename.value}.txt`) as string
+    rawText.value = await $fetch<string>(`/content/million-masks-readings/${filename.value}.txt`) as string
   } catch {
     error.value = '逐字稿載入失敗，請確認檔案是否存在'
   }

@@ -15,7 +15,7 @@
       </div>
 
       <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <NuxtLink to="/works/qiangmian" class="project-card border-amber-100 hover:border-amber-300 hover:shadow-amber-100">
+        <NuxtLink to="/works/million-masks" class="project-card border-amber-100 hover:border-amber-300 hover:shadow-amber-100">
           <div class="project-icon bg-amber-50 text-amber-600">🌐</div>
           <div>
             <h2 class="project-title">千面上帝</h2>

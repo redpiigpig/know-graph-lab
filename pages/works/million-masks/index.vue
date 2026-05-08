@@ -16,7 +16,7 @@
           <span class="text-xs text-gray-400">構思中</span>
         </div>
         <h1 class="text-xl font-bold text-gray-900 leading-snug mb-1">千面上帝</h1>
-        <p class="text-sm text-gray-400 italic mb-4">The Many Faces of God: A History of Religion in World Perspective</p>
+        <p class="text-sm text-gray-400 italic mb-4">The Million Masks of God</p>
         <p class="text-sm text-gray-600 leading-relaxed max-w-2xl">
           探討世界各大宗教傳統中神明概念的多元面貌，橫跨印度教、佛教、基督宗教、伊斯蘭教、猶太教等傳統，梳理「上帝」或「神明」概念在不同文化與歷史脈絡中的演變。
         </p>
@@ -54,7 +54,7 @@
 
         <div v-else class="grid gap-3 sm:grid-cols-2">
           <NuxtLink v-for="s in sessions" :key="s.id"
-            :to="`/works/qiangmian/reading-club/${s.id}`"
+            :to="`/works/million-masks/reading-club/${s.id}`"
             class="bg-white rounded-xl border border-gray-100 p-4 hover:border-amber-200 hover:shadow-sm transition-all no-underline">
             <div class="flex items-start gap-3">
               <div class="w-9 h-9 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-sm flex-shrink-0 font-bold">
@@ -96,7 +96,7 @@ const tabs = [
 
 onMounted(async () => {
   try {
-    const data = await $fetch<{ sessions: typeof sessions.value }>('/api/works/qiangmian-readings')
+    const data = await $fetch<{ sessions: typeof sessions.value }>('/api/works/million-masks-readings')
     sessions.value = data.sessions ?? []
   } catch {
     sessions.value = []

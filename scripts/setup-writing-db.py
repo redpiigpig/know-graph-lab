@@ -64,7 +64,7 @@ DO $$ BEGIN
 END $$;
 
 INSERT INTO writing_projects (slug, title, description, emoji)
-VALUES ('qiangmian', '千面上帝', '探討世界宗教中神明概念的多元面貌，橫跨印度教、佛教、基督宗教、伊斯蘭教等傳統', '🌐')
+VALUES ('million-masks', '千面上帝', '探討世界宗教中神明概念的多元面貌，橫跨印度教、佛教、基督宗教、伊斯蘭教等傳統', '🌐')
 ON CONFLICT (slug) DO NOTHING;
 """
 
@@ -83,7 +83,7 @@ def run_sql(sql: str):
 def insert_transcript(episode: int, title: str, content: str, video_date: str = None, youtube_id: str = None):
     url = f"{SUPABASE_URL}/rest/v1/video_transcripts"
     data = {
-        "project_slug": "qiangmian",
+        "project_slug": "million-masks",
         "episode": episode,
         "title": title,
         "content": content,
@@ -110,7 +110,7 @@ if __name__ == "__main__":
     run_sql(SQL)
 
     print("2. 上傳現有逐字稿 txt 檔...")
-    txt_dir = Path(__file__).parent.parent / "public" / "content" / "qiangmian-readings"
+    txt_dir = Path(__file__).parent.parent / "public" / "content" / "million-masks-readings"
     txts = sorted(txt_dir.glob("*.txt"))
     if not txts:
         print("  （無 txt 檔，跳過）")

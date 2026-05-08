@@ -155,7 +155,7 @@ import requests as _req
 def fetch_row(episode: int) -> dict | None:
     r = _req.get(
         f"{SUPABASE_URL}/rest/v1/video_transcripts",
-        params={"project_slug": "eq.qiangmian", "episode": f"eq.{episode}",
+        params={"project_slug": "eq.million-masks", "episode": f"eq.{episode}",
                 "select": "id,title,content,video_date,youtube_id,ppt_r2_key"},
         headers={"apikey": SERVICE_KEY, "Authorization": f"Bearer {SERVICE_KEY}"},
         timeout=30,
@@ -167,7 +167,7 @@ def fetch_row(episode: int) -> dict | None:
 def upsert_row(episode: int, title: str, content: str,
                video_date: str | None, youtube_id: str | None,
                ppt_r2_key: str | None) -> bool:
-    data = {"project_slug": "qiangmian", "episode": episode,
+    data = {"project_slug": "million-masks", "episode": episode,
             "title": title, "content": content}
     if video_date:  data["video_date"] = video_date
     if youtube_id:  data["youtube_id"] = youtube_id

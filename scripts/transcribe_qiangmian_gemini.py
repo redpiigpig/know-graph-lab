@@ -231,7 +231,7 @@ import requests as _req
 def upsert_transcript(episode: int, title: str, content: str,
                       video_date: str | None, youtube_id: str | None,
                       ppt_r2_key: str | None = None) -> bool:
-    data: dict = {"project_slug": "qiangmian", "episode": episode,
+    data: dict = {"project_slug": "million-masks", "episode": episode,
                   "title": title, "content": content}
     if video_date:
         data["video_date"] = video_date

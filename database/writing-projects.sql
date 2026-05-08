@@ -46,9 +46,10 @@ CREATE POLICY "service update video_transcripts"
   ON video_transcripts FOR UPDATE TO service_role USING (true);
 
 -- 預先插入千面上帝計畫
+-- NOTE: slug 從 v2 起改為 'million-masks'（URL: /works/million-masks）
 INSERT INTO writing_projects (slug, title, description, emoji)
 VALUES (
-  'qiangmian',
+  'million-masks',
   '千面上帝',
   '探討世界宗教中神明概念的多元面貌，橫跨印度教、佛教、基督宗教、伊斯蘭教等傳統',
   '🌐'
