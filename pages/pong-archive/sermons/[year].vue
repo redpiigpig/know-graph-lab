@@ -140,7 +140,7 @@
     </section>
 
     <!-- ── Scripture Readings ──────────────────────────────── -->
-    <section class="sd-section sd-section--scripture">
+    <section v-if="scriptureReadings.length || isEditing" class="sd-section sd-section--scripture">
       <div class="sd-section-inner">
         <h2 class="sd-section-title">經課</h2>
         <div class="sd-scripture-list">
@@ -150,15 +150,15 @@
             class="sd-reading"
             :class="{ 'sd-reading--open': openReadings.has(i) }"
           >
-            <button class="sd-reading-hd" @click="toggleReading(i)">
+            <button class="sd-reading-hd" :disabled="!reading.text" @click="reading.text && toggleReading(i)">
               <div class="sd-reading-ref">
                 <span class="sd-reading-label">{{ reading.display_label }}</span>
                 <span class="sd-reading-book">{{ reading.book }} {{ reading.reference }}</span>
               </div>
-              <span class="sd-reading-chevron">▾</span>
+              <span v-if="reading.text" class="sd-reading-chevron">▾</span>
             </button>
             <Transition name="sd-reading-expand">
-              <div v-if="openReadings.has(i)" class="sd-reading-body">
+              <div v-if="reading.text && openReadings.has(i)" class="sd-reading-body">
                 <p
                   v-for="(line, j) in parseVerses(reading.text)"
                   :key="j"
@@ -285,10 +285,34 @@ const hasAnyTeamField = computed(() => {
 })
 
 // ── Scripture readings ───────────────────────────────────────
+// Primary source: scripture_readings (JSONB array w/ verse text).
+// Fallback: parse scripture_ref string ("經課一：使徒行傳 2:14-32；啟應文：…")
+// into reference-only entries. Used by older sermons whose verse text was
+// never imported.
+function parseScriptureRef(ref) {
+  if (!ref) return []
+  return ref.split(/[；;]/).map(s => s.trim()).filter(Boolean).map(seg => {
+    // Optional leading label: 經課一/經課二/啟應文/福音書/信息經文/詩篇
+    const labelMatch = seg.match(/^(經課[一二三四]?|啟應文|福音書|信息經文|詩篇經課)\s*[：:]\s*(.+)$/)
+    let label = ''
+    let rest = seg
+    if (labelMatch) {
+      label = labelMatch[1]
+      rest = labelMatch[2].trim()
+    }
+    // Split book name from chapter/verse reference
+    const refMatch = rest.match(/^(.+?)\s*([\d][\d\s:：~∼\-,，;；上下abAB]*)$/)
+    if (refMatch) {
+      return { display_label: label, book: refMatch[1].trim(), reference: refMatch[2].trim(), text: '' }
+    }
+    return { display_label: label, book: rest, reference: '', text: '' }
+  })
+}
+
 const scriptureReadings = computed(() => {
   const r = sermon.value?.scripture_readings
-  if (!r) return []
-  return Array.isArray(r) ? r : []
+  if (Array.isArray(r) && r.length) return r
+  return parseScriptureRef(sermon.value?.scripture_ref)
 })
 
 const openReadings = ref(new Set())
