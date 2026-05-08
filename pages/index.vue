@@ -127,6 +127,16 @@
           <span class="tool-badge bg-rose-50 text-rose-600">可用</span>
         </NuxtLink>
 
+        <!-- 論文資料整理 -->
+        <NuxtLink :to="user ? '/research-data' : '/login'" class="tool-card group border-teal-100 hover:border-teal-300 hover:shadow-teal-100">
+          <div class="tool-icon bg-teal-50 text-teal-600">📚</div>
+          <div class="flex-1">
+            <h2 class="tool-title">論文資料整理</h2>
+            <p class="tool-desc">研究主題資料庫：彙整田野訪談、檔案文獻、報刊史料與年表</p>
+          </div>
+          <span class="tool-badge bg-teal-50 text-teal-600">可用</span>
+        </NuxtLink>
+
       </div>
 
       <div class="mt-12 text-center text-gray-400 text-xs">
