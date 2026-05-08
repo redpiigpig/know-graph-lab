@@ -1,10 +1,53 @@
 """
-2024 龐君華牧師 sermons metadata (per user 2026-05-08).
+2023-2025 龐君華牧師 sermons metadata (per user 2026-05-08).
 
 Used by: sermon_redo.py commit + ad-hoc metadata patches.
 """
 
 # (date, occasion, liturgical_season, worship_leader, scripture_reader, choir)
+SERMONS_2023 = [
+    ("2023-01-08", "主受洗日", "epiphany",
+     "龔祥生弟兄", "黃安妮姊妹", "城中男聲詩班"),
+    ("2023-02-12", "顯現節後第六主日", "epiphany",
+     "龔祥生弟兄", "謝辛美姊妹", "黃威銘弟兄"),
+    ("2023-04-09", "復活主日", "easter",
+     "龔祥生弟兄", "黃安妮姊妹", "城中牧區詩班"),
+    ("2023-05-14", "復活期第六主日", "easter",
+     "龔祥生弟兄", "黃安妮姊妹", "盧思寧姊妹"),
+    ("2023-06-11", "聖靈降臨節後第二主日", "pentecost",
+     "龔祥生弟兄", "黃玲媛姊妹", "城中牧區詩班"),
+    ("2023-07-09", "聖靈降臨節後第六主日", "pentecost",
+     "龔祥生弟兄", "黃安妮姊妹", "城中牧區詩班"),
+    ("2023-07-30", "聖靈降臨節後第九主日", "pentecost",
+     "林盈君姊妹", "簡大鈞弟兄", "城中牧區詩班"),
+    ("2023-08-27", "聖靈降臨節後第十三主日", "pentecost",
+     "卿秀惠傳道", "黃雯華姊妹", "城中小詩班"),
+    ("2023-09-17", "聖靈降臨節後第十六主日", "pentecost",
+     "楊一梅姊妹", "翁嘉慶弟兄", "盧思寧姊妹"),
+    ("2023-10-08", "聖靈降臨節後第十九主日", "pentecost",
+     "龔祥生弟兄", "謝辛美姊妹", "城中牧區詩班"),
+    ("2023-11-19", "聖靈降臨節後第廿五主日", "pentecost",
+     "楊一梅姊妹", "謝辛美姊妹", "城中兒童主日學"),
+    ("2023-12-10", "將臨期第二主日", "advent",
+     "龔祥生弟兄", "簡大鈞弟兄", "城中牧區詩班"),
+]
+
+# 2023-04-07 受難日 special: preacher 龐 only does 默想, 主禮 is 邱
+SERMON_GOOD_FRIDAY_2023 = {
+    "date": "2023-04-07",
+    "occasion": "聖週五受難日晚崇拜（熄燭禮拜：十架七言）",
+    "liturgical_season": "lent",
+    "preacher": "龐君華牧師",
+    "officiant": "邱泰耀牧師",
+    "司琴": "鍾歆宜女士、盧思寧女士、陳芝英女士",
+    "讀經": "卿秀惠女士、黃安妮女士",
+    "攝影": "林盈君女士",
+    "領唱": "林吉晉先生",
+    "招待燈光": "周慶同先生",
+    "詩班": "城中牧區詩班",
+    "_note": "龐牧師為默想 (meditation), 不是傳統證道",
+}
+
 SERMONS_2024 = [
     ("2024-01-14", "顯現節後第二主日", "epiphany",
      "龔祥生弟兄", "簡大鈞弟兄", "城中衛理幼兒園教師"),
@@ -80,7 +123,7 @@ SERMON_CHRISTMAS_EVE_2025 = {
 
 
 METADATA = {}
-for d, occasion, season, leader, reader, choir in SERMONS_2024:
+for d, occasion, season, leader, reader, choir in SERMONS_2023 + SERMONS_2024:
     METADATA[d] = {
         "occasion": occasion,
         "liturgical_season": season,
@@ -90,6 +133,25 @@ for d, occasion, season, leader, reader, choir in SERMONS_2024:
         "officiant": "龐君華牧師",
         "preacher": "龐君華牧師",
     }
+
+# 2023 受難日 — 龐 默想 + 邱 主禮, multi-role personnel in worship_team
+gf = SERMON_GOOD_FRIDAY_2023
+METADATA[gf["date"]] = {
+    "occasion": gf["occasion"],
+    "liturgical_season": gf["liturgical_season"],
+    "preacher": gf["preacher"],
+    "officiant": gf["officiant"],
+    "scripture_reader": gf["讀經"],
+    "choir": gf["詩班"],
+    "worship_team": {
+        "司琴": gf["司琴"],
+        "讀經": gf["讀經"],
+        "攝影": gf["攝影"],
+        "領唱": gf["領唱"],
+        "招待/燈光": gf["招待燈光"],
+        "_note": gf["_note"],
+    },
+}
 
 for d, occasion, season, leader, reader, choir, officiant in SERMONS_2025:
     METADATA[d] = {
