@@ -1,20 +1,11 @@
 <template>
   <div class="min-h-screen bg-slate-50">
 
-    <!-- 頂部導航 -->
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
-      <div class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
-        <NuxtLink to="/" class="flex items-center gap-2.5 hover:opacity-80 transition">
-          <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-sm font-bold text-white">K</div>
-          <span class="font-semibold text-gray-900">Know Graph Lab</span>
-        </NuxtLink>
-        <div class="flex items-center gap-4">
-          <NuxtLink v-if="user" to="/settings" class="text-sm text-gray-500 hover:text-gray-900 transition">設定</NuxtLink>
-          <NuxtLink v-if="!user" to="/login" class="text-sm px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition">登入</NuxtLink>
-          <span v-else class="text-xs text-gray-400">{{ user.email }}</span>
-        </div>
-      </div>
-    </nav>
+    <AppHeader>
+      <template #actions>
+        <NuxtLink v-if="user" to="/settings" class="text-sm text-gray-500 hover:text-gray-900 transition hidden sm:inline">設定</NuxtLink>
+      </template>
+    </AppHeader>
 
     <div class="max-w-7xl mx-auto px-6 py-10">
       <!-- 標題 -->

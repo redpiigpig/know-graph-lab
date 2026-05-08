@@ -1,14 +1,6 @@
 <template>
   <div class="min-h-screen bg-slate-50">
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
-      <div class="max-w-5xl mx-auto px-6 h-14 flex items-center gap-4">
-        <NuxtLink to="/works" class="text-gray-400 hover:text-gray-700 transition text-sm">← 寫作計畫</NuxtLink>
-        <span class="text-gray-200">|</span>
-        <span class="text-sm font-medium text-gray-700">{{ project?.title ?? '千面上帝' }}</span>
-        <span v-if="user" class="ml-auto text-xs text-gray-400">{{ user.email }}</span>
-        <NuxtLink v-else to="/login" class="ml-auto text-xs text-blue-600 hover:underline">登入</NuxtLink>
-      </div>
-    </nav>
+    <AppHeader :title="project?.title ?? '千面上帝'" :back="{ to: '/works', label: '寫作計畫' }" container-class="max-w-5xl" />
 
     <!-- 封面 -->
     <div class="bg-white border-b border-gray-100">
@@ -21,7 +13,7 @@
             <WorksInlineEdit
               tag="span"
               :model-value="project.status"
-              :editable="!!user"
+              :editable="editMode && !!user"
               placeholder-hint="（點擊設定狀態）"
               display-class="text-xs text-gray-400"
               @save="patch({ status: $event })"
@@ -114,15 +106,21 @@
             <h2 class="text-base font-semibold text-gray-900">書摘與構思</h2>
             <p class="text-xs text-gray-500 mt-0.5">章節草稿 · 引用筆記 · 此分頁僅登入者可見</p>
           </div>
-          <span class="text-xs text-gray-400">{{ notesStatus }}</span>
+          <span class="text-xs text-gray-400">{{ editMode ? notesStatus : '檢視中（按右上「編輯」可修改）' }}</span>
         </div>
         <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden" style="min-height: 400px;">
           <ClientOnly>
             <GenealogyRichTextEditor
+              v-if="editMode"
               :key="editorKey"
               v-model="notesHtml"
               @update:model-value="onNotesUpdate"
             />
+            <div v-else-if="notesHtml" class="prose-notes px-6 py-5" v-html="notesHtml"></div>
+            <div v-else class="px-6 py-12 text-center text-gray-400 text-sm">
+              <div class="text-3xl mb-2">📝</div>
+              <p>尚無筆記。按右上「編輯」開始撰寫。</p>
+            </div>
           </ClientOnly>
         </div>
       </div>
@@ -137,6 +135,7 @@ import { useDebounceFn } from '@vueuse/core'
 useHead({ title: '千面上帝 — 寫作計畫 — Know Graph Lab' })
 const user = useSupabaseUser()
 const supabase = useSupabaseClient()
+const editMode = useEditMode()
 
 interface Project {
   id: string
@@ -239,3 +238,13 @@ function onNotesUpdate(html: string) {
 
 watch(notesHtml, () => { lastSavedHtml.value = lastSavedHtml.value || notesHtml.value }, { once: true })
 </script>
+
+<style scoped>
+.prose-notes :deep(p)   { margin: 0 0 0.4em; line-height: 1.75; color: #374151; font-size: 14px; }
+.prose-notes :deep(h1)  { font-size: 1.5rem; font-weight: 700; margin: 0.6em 0 0.3em; color: #111827; }
+.prose-notes :deep(h2)  { font-size: 1.2rem; font-weight: 600; margin: 0.5em 0 0.25em; color: #1f2937; }
+.prose-notes :deep(h3)  { font-size: 1.05rem; font-weight: 600; margin: 0.4em 0 0.2em; color: #374151; }
+.prose-notes :deep(ul)  { list-style: disc; padding-left: 1.4em; margin: 0.3em 0; }
+.prose-notes :deep(ol)  { list-style: decimal; padding-left: 1.4em; margin: 0.3em 0; }
+.prose-notes :deep(blockquote) { border-left: 3px solid #f59e0b; padding-left: 0.8em; color: #6b7280; margin: 0.4em 0; }
+</style>

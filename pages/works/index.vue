@@ -1,14 +1,6 @@
 <template>
   <div class="min-h-screen bg-slate-50">
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
-      <div class="max-w-5xl mx-auto px-6 h-14 flex items-center gap-4">
-        <NuxtLink to="/" class="text-gray-400 hover:text-gray-700 transition text-sm">← 返回主頁</NuxtLink>
-        <span class="text-gray-200">|</span>
-        <span class="text-sm font-medium text-gray-700">寫作計畫</span>
-        <span v-if="user" class="ml-auto text-xs text-gray-400">{{ user.email }}</span>
-        <NuxtLink v-else to="/login" class="ml-auto text-xs text-blue-600 hover:underline">登入</NuxtLink>
-      </div>
-    </nav>
+    <AppHeader title="寫作計畫" :back="{ to: '/', label: '返回主頁' }" container-class="max-w-5xl" />
 
     <div class="max-w-5xl mx-auto px-6 py-12">
       <div class="mb-10 flex items-end justify-between gap-4">
@@ -16,7 +8,7 @@
           <h1 class="text-2xl font-bold text-gray-900 mb-1">寫作計畫</h1>
           <p class="text-sm text-gray-500">書寫計畫管理：構思中的書籍、讀書會影音逐字稿、章節草稿</p>
         </div>
-        <button v-if="user" @click="startCreate" class="px-3 py-1.5 text-sm rounded-lg bg-amber-600 text-white hover:bg-amber-700 transition flex-shrink-0">
+        <button v-if="user && editMode" @click="startCreate" class="px-3 py-1.5 text-sm rounded-lg bg-amber-600 text-white hover:bg-amber-700 transition flex-shrink-0">
           + 新增計畫
         </button>
       </div>
@@ -70,8 +62,8 @@
             </div>
           </div>
 
-          <!-- hover toolbar (only when logged in & not editing) -->
-          <div v-if="user && editingSlug !== p.slug" class="absolute top-2 right-2 hidden group-hover:flex items-center gap-1 bg-white/95 backdrop-blur rounded-lg shadow-sm border border-gray-200 px-1 py-1 z-10">
+          <!-- toolbar — visible when in edit mode and not currently editing this card -->
+          <div v-if="user && editMode && editingSlug !== p.slug" class="absolute top-2 right-2 flex items-center gap-1 bg-white/95 backdrop-blur rounded-lg shadow-sm border border-gray-200 px-1 py-1 z-10">
             <button v-if="idx > 0" @click.stop.prevent="move(idx, -1)" title="上移" class="card-tool">↑</button>
             <button v-if="idx < projects.length - 1" @click.stop.prevent="move(idx, 1)" title="下移" class="card-tool">↓</button>
             <button @click.stop.prevent="startEdit(p)" title="編輯" class="card-tool">✏️</button>
@@ -116,6 +108,7 @@
 <script setup lang="ts">
 useHead({ title: '寫作計畫 — Know Graph Lab' })
 const user = useSupabaseUser()
+const editMode = useEditMode()
 
 const COLORS = ['amber','blue','rose','emerald','violet','sky','indigo','cyan','orange','stone','purple']
 

@@ -111,9 +111,14 @@ const magicEmail = ref(allowedEmail || "");
 const magicLoading = ref(false);
 const magicSent = ref(false);
 
-// 已登入就導回首頁
+// 已登入就導回（優先用 ?redirect=...，否則回首頁）
+const route = useRoute();
+const redirectTo = computed(() => {
+  const r = route.query.redirect;
+  return typeof r === "string" && r.startsWith("/") ? r : "/";
+});
 watchEffect(() => {
-  if (user.value) router.push("/");
+  if (user.value) router.push(redirectTo.value);
 });
 
 async function handleLogin() {
@@ -127,7 +132,7 @@ async function handleLogin() {
   if (e) {
     error.value = e.message === "Invalid login credentials" ? "Email 或密碼錯誤" : e.message;
   } else {
-    router.push("/");
+    router.push(redirectTo.value);
   }
 }
 
