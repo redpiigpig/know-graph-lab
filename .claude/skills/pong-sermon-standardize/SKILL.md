@@ -234,14 +234,15 @@ Process from highest-impact to lowest:
 1. **Markdown bleed-through (2 entries)** — 2020-05-22, 2020-07-18, 2019-12-31. Easy fix, immediately visible improvement.
 2. **Auto-cleaned 2020-2025 (~70 entries)** — fragmentation worst here. Use `/pong-sermon-polish` for content quality + this skill for metadata.
 3. **Pre-2015 missing speaker label (28 entries)** — older recordings, mostly 2014. Prepend `龐君華牧師：\n\n` if missing.
-4. **2002-2007 transcription quality** — these are the OLDEST data and quality is poor (likely from older OCR or manual transcripts with many errors). For correction reference, check the official source:
-   **https://wf.fhl.net/sermon/old.html** — original sermon text from 信望愛 fhl.net archive. Cross-reference and fix Whisper / OCR errors against this source. The transcripts are authoritative.
-   Common issues in 2002-2007:
-   - Missing or corrupted Chinese characters
-   - Run-on paragraphs without breaks
-   - Missing punctuation
-   - Some sermons may be entirely wrong (cross-check title + scripture)
-   When fixing, replace the DB content with the cleaned version from the fhl.net source.
+4. **2002-2007 transcription quality** ✅ **DONE 2026-05-08** — replaced all 38 龐 sermons in this range with authoritative fhl.net text via `scripts/pong-archive/standardize_2002_2007_from_fhl.py`. The script:
+   - Reads `tmp_fhl/index.json` (date → `sermonNNN.html` map, 144 entries from 2002.03-2007.04)
+   - Fetches each fhl page (urllib + big5 decode), parses via `fhl_import.parse_page`
+   - Caches HTML to `tmp_fhl/html_cache/` for re-runs
+   - PATCHes `pong_sermons.content` only (preserves title/preacher/occasion/scripture_ref)
+   - Syncs `pong_media.transcript` if `media_id` is set (no media existed for 2002-2007 era)
+   - Throttle 3s between fetches; logs to `tmp_fhl/standardize_2002_2007_log.txt`
+
+   For future re-runs against other date ranges from the same source: edit the date filter constants. fhl.net source is authoritative; replace whenever parsed body ≥ 500 chars.
 5. **Generic titles (162 entries)** — backfill titles from occasion or raw. Lower priority since `occasion` does most of the displayed work on the year-list page.
 6. **Missing scripture_ref (238 entries)** — from raw if available. Optional/nice-to-have.
 
