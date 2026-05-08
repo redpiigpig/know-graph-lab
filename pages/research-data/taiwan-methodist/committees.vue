@@ -17,7 +17,7 @@
           <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-indigo-100 text-indigo-700">研究資料</span>
           <span class="text-xs text-gray-400">中華基督教衛理公會</span>
         </div>
-        <h1 class="text-2xl font-bold text-gray-900 mb-1">第 XX 屆年議會各部會職員名單</h1>
+        <h1 class="text-2xl font-bold text-gray-900 mb-1">歷屆年議會各部會職員名單</h1>
         <p class="text-sm text-gray-500">
           收錄第 56–59 屆年議會（2019–2022）共四屆各部會職員名單。
         </p>
@@ -103,7 +103,7 @@
 
 <script setup lang="ts">
 definePageMeta({ middleware: 'auth' });
-useHead({ title: '第 XX 屆年議會各部會職員名單 — Know Graph Lab' });
+useHead({ title: '歷屆年議會各部會職員名單 — Know Graph Lab' });
 
 interface Roster { role: string; names: string; }
 interface Committee { number: string; name: string; rosters: Roster[]; }
