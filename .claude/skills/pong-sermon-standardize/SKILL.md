@@ -44,12 +44,14 @@ The renderer splits `pong_sermons.content` by `\n+` and classifies each line:
 
 ## Preacher title era map
 
+只有兩個稱謂：**牧師** (pre-2019-05) 和 **會督** (2019-05 onwards, 包括退休後)。
+
 | Era | Title | DB value |
 |---|---|---|
-| Pre-2014 (early 城中 senior pastor) | 牧師 | `龐君華牧師` |
-| 2014-2018 (衛理 牧職會長) | 牧職會長 | `龐君華牧職會長` |
-| 2018-2022 (衛理 會督) | 會督 | `龐君華會督` |
-| 2022-05 onwards (退休後, occasional preaching) | 牧師 | `龐君華牧師` |
+| Pre-**2019-05** | 牧師 | `龐君華牧師` |
+| **2019-05** onwards (永遠, 退休後仍維持會督稱謂) | 會督 | `龐君華會督` |
+
+⚠️ 沒有「牧職會長」稱謂。退休後 (2022-05+) 仍稱 會督，不退回牧師。
 
 ⚠️ Use the title that 龐 was using **at the time of that sermon**. When inserting a new sermon, look up his role for that date.
 
@@ -232,8 +234,16 @@ Process from highest-impact to lowest:
 1. **Markdown bleed-through (2 entries)** — 2020-05-22, 2020-07-18, 2019-12-31. Easy fix, immediately visible improvement.
 2. **Auto-cleaned 2020-2025 (~70 entries)** — fragmentation worst here. Use `/pong-sermon-polish` for content quality + this skill for metadata.
 3. **Pre-2015 missing speaker label (28 entries)** — older recordings, mostly 2014. Prepend `龐君華牧師：\n\n` if missing.
-4. **Generic titles (162 entries)** — backfill titles from occasion or raw. Lower priority since `occasion` does most of the displayed work on the year-list page.
-5. **Missing scripture_ref (238 entries)** — from raw if available. Optional/nice-to-have.
+4. **2002-2007 transcription quality** — these are the OLDEST data and quality is poor (likely from older OCR or manual transcripts with many errors). For correction reference, check the official source:
+   **https://wf.fhl.net/sermon/old.html** — original sermon text from 信望愛 fhl.net archive. Cross-reference and fix Whisper / OCR errors against this source. The transcripts are authoritative.
+   Common issues in 2002-2007:
+   - Missing or corrupted Chinese characters
+   - Run-on paragraphs without breaks
+   - Missing punctuation
+   - Some sermons may be entirely wrong (cross-check title + scripture)
+   When fixing, replace the DB content with the cleaned version from the fhl.net source.
+5. **Generic titles (162 entries)** — backfill titles from occasion or raw. Lower priority since `occasion` does most of the displayed work on the year-list page.
+6. **Missing scripture_ref (238 entries)** — from raw if available. Optional/nice-to-have.
 
 ## Helper script template
 
@@ -244,11 +254,10 @@ import re, os, requests
 from datetime import date as _date
 
 def derive_preacher_title(d):
-    """龐 title era map."""
-    if d < _date(2014, 1, 1):       return "龐君華牧師"
-    if d < _date(2018, 1, 1):       return "龐君華牧職會長"
-    if d < _date(2022, 5, 1):       return "龐君華會督"
-    return "龐君華牧師"
+    """龐 title era map: 牧師 → 會督 transition at 2019-05."""
+    if d < _date(2019, 5, 1):
+        return "龐君華牧師"
+    return "龐君華會督"  # 2019-05+ permanent (including post-retirement)
 
 def derive_liturgical_season(d):
     """Approximate. Frontend uses this only for color coding."""
