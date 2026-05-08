@@ -3,9 +3,9 @@
 
     <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
       <div class="max-w-6xl mx-auto px-6 h-14 flex items-center gap-4">
-        <NuxtLink to="/research-data" class="text-gray-400 hover:text-gray-700 transition text-sm">← 論文資料整理</NuxtLink>
+        <NuxtLink to="/research-data/taiwan-methodist" class="text-gray-400 hover:text-gray-700 transition text-sm">← 台灣衛理公會研究資料</NuxtLink>
         <span class="text-gray-200">|</span>
-        <span class="text-sm font-medium text-gray-700">台灣衛理公會研究資料</span>
+        <span class="text-sm font-medium text-gray-700">年議會歷屆大會名表</span>
       </div>
     </nav>
 

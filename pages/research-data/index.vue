@@ -22,9 +22,9 @@
           <div class="tool-icon bg-teal-50 text-teal-600">⛪</div>
           <div class="flex-1">
             <h2 class="tool-title">台灣衛理公會研究資料</h2>
-            <p class="tool-desc">年議會歷屆大會名表（1956–2023，共 84 筆）— 出自第六十屆年議會大會會議紀錄</p>
+            <p class="tool-desc">年議會歷屆大會名表、財產清冊；資料來源：第六十屆年議會大會會議紀錄</p>
           </div>
-          <span class="tool-badge bg-teal-50 text-teal-600">可用</span>
+          <span class="tool-badge bg-teal-50 text-teal-600">2 筆資料</span>
         </NuxtLink>
 
       </div>
