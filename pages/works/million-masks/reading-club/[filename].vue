@@ -1,12 +1,6 @@
 <template>
   <div class="min-h-screen bg-slate-50">
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
-      <div class="max-w-5xl mx-auto px-6 h-14 flex items-center gap-4">
-        <NuxtLink to="/works/million-masks" class="text-gray-400 hover:text-gray-700 transition text-sm">← 千面上帝</NuxtLink>
-        <span class="text-gray-200">|</span>
-        <span class="text-sm font-medium text-gray-700 truncate">{{ title }}</span>
-      </div>
-    </nav>
+    <AppHeader :title="title" :back="{ to: '/works/million-masks', label: '千面上帝' }" container-class="max-w-5xl" />
 
     <div class="max-w-3xl mx-auto px-6 py-10">
       <div v-if="loading" class="flex items-center justify-center h-40 text-gray-400 text-sm">載入中⋯</div>
