@@ -561,8 +561,10 @@ const seasonColor = computed(() => {
 /* ── Scripture ────────────────────────────────────────────── */
 .sd-scripture-list { display: flex; flex-direction: column; gap: 0; border: 1px solid #DDD8CF; border-radius: 4px; overflow: hidden; }
 
-/* Static (non-clickable) variant for scripture_ref fallback rows */
-.sd-reading--static .sd-reading-hd--static { cursor: default; background: transparent; }
+/* Static (non-clickable) variant for scripture_ref fallback rows — borderless, plain inline */
+.sd-scripture-list:has(.sd-reading--static) { border: none; border-radius: 0; }
+.sd-reading--static { border-bottom: none; }
+.sd-reading--static .sd-reading-hd--static { cursor: default; background: transparent; padding: 4px 0; }
 .sd-reading--static .sd-reading-hd--static:hover { background: transparent; }
 
 .sd-reading { border-bottom: 1px solid #DDD8CF; }
