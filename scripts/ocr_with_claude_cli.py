@@ -59,7 +59,8 @@ CHUNKS_DIR = Path("G:/我的雲端硬碟/資料/電子書/_chunks")
 PREVIEW_LEN = 200
 MODEL = "claude-haiku-4-5-20251001"
 DPI = 150
-DEFAULT_BATCH = 10
+DEFAULT_BATCH = 15  # was 10 — bigger batch ~30% fewer API calls per book
+DEFAULT_MAX_TOKENS = 12000  # was 4096 — Haiku 4.5 supports up to 32K out
 
 
 # ── Auth ─────────────────────────────────────────────────────────
@@ -319,7 +320,7 @@ def ocr_book(client: anthropic.Anthropic, src_path: Path, batch_size: int):
         content.append({"type": "text", "text": prompt})
 
         resp = client.messages.create(
-            model=MODEL, max_tokens=4096,
+            model=MODEL, max_tokens=DEFAULT_MAX_TOKENS,
             messages=[{"role": "user", "content": content}],
         )
         batch_text = resp.content[0].text if resp.content else ""
