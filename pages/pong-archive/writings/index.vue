@@ -117,7 +117,7 @@ const CATEGORIES = [
 ]
 
 // 刊物文章的刊物順序
-const PERIODICAL_ORDER = ['衛神院訊', '衛報']
+const PERIODICAL_ORDER = ['中華衛訊', '衛神院訊', '衛報']
 
 const writings = ref([])
 const pending  = ref(true)
