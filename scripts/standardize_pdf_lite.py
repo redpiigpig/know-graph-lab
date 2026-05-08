@@ -259,7 +259,6 @@ def update_db(book_id: str, chunks: list[dict], metadata: dict) -> None:
     patch = {
         "chunk_count": len(chunks),
         "total_chars": total_chars,
-        "total_pages": len(chunks),
         "parsed_at": datetime.utcnow().isoformat() + "Z",
     }
     # Same metadata mapping as standardize_ebook.update_db.
