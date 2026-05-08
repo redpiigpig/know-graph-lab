@@ -35,7 +35,7 @@ The renderer splits `pong_sermons.content` by `\n+` and classifies each line:
 ```
 
 **Key rules:**
-1. **Speaker label** on line 1: `龐君華{title}：` where title is `牧師` (default), `會督` (for 衛理公會 會督 era), `牧職會長` (for 牧職會長 era). Determined by date; see "Preacher title era map" below.
+1. **Speaker label** on line 1: `龐君華{title}：` where title is `牧師` (pre-2019-05) or `會督` (2019-05 onwards, permanent). Determined by date; see "Preacher title era map" below. ⚠️ 沒有「牧職會長」稱謂。
 2. **Blank line** after speaker label (`\n\n`).
 3. **Paragraphs** separated by single blank line (`\n\n`). No leading whitespace.
 4. **No markdown**: no `##`, no `*`, no `_`, no `[]()`. Convert headings to `【X】` or delete.
@@ -226,6 +226,25 @@ Visit `http://localhost:3001/pong-archive/sermons/{id}` and verify:
 - Paragraphs flow naturally
 - Title / occasion show in header
 - Scripture refs (if added) visible
+
+## Status snapshot (2026-05-08)
+
+After full standardization pass on 284 龐 sermons:
+
+| Issue | Before | After | Method |
+|---|---|---|---|
+| Missing speaker label | 28 | 0 (excl. 14 empty-content) | `standardize_sermon.py apply --preset missing_label` |
+| Markdown bleed-through | 0 | 0 | (already clean) |
+| Generic title (`主日證道`/`主日崇拜`) | 162 | 27 | `backfill_title.py apply` (153+32 from occasion) |
+| Missing/placeholder occasion | 161+20 | 23+20 | `backfill_occasion.py apply` (138+43 derived from `今天…X主日` cue) |
+| Avg paragraph < 100 chars | 41 | 0 | `regroup_fragmented.py apply` (39 sermons) |
+| Missing scripture_ref | 250 | 250 | **Punted** — auto-extract from raw Whisper too lossy; lectionary table only covers 2025-11-30+ (3 candidates). Future option: RCL Year A/B/C lookup table. |
+| Non-canonical preacher label `龐君華牧職會長：` | 1 (20191231) | 0 | One-off content patch → `龐君華會督：` |
+
+Remaining residual issues (require manual review):
+- 23 sermons where `今天-cue` matched no liturgical-day pattern (mostly 2014 expository series on 出埃及記/創世紀 where pong didn't name the day)
+- 20 sermons where `occasion` is still placeholder `主日證道`/`主日崇拜` (cue matched but no useful day name)
+- Known false positives from auto-occasion: 20131124 (matched `聖誕節`, should be `基督君王主日`; OCR text reads `基督威王祖日`), 20161016 (forward-reference matched `將臨期的第一個主日` from "11月27號是新的教會年曆將臨期的第一個主日")
 
 ## Priority order for processing
 
