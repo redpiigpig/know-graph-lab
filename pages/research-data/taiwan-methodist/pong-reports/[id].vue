@@ -105,6 +105,13 @@
                 <span class="text-rose-300 mr-1">「</span>{{ b.text }}<span class="text-rose-300 ml-1">」</span>
               </blockquote>
 
+              <figure v-else-if="b.type === 'tree'" class="my-3 p-4 sm:p-6 rounded-2xl border border-gray-200 bg-gradient-to-br from-slate-50 to-white overflow-x-auto">
+                <figcaption v-if="b.caption" class="text-sm font-medium text-gray-700 mb-3 text-center">{{ b.caption }}</figcaption>
+                <ul class="text-sm">
+                  <OrgTree :node="b.root" :depth="0" />
+                </ul>
+              </figure>
+
               <WeiLanFlowchart v-else-if="b.type === 'flowchart' && b.chartId === 'wei-lan-metro'" />
 
             </template>
