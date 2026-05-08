@@ -508,6 +508,14 @@ def cmd_run(limit=None, batch=DEFAULT_BATCH, one_id=None, dry_run=False):
                   file=sys.stderr)
             failed.append((b["title"], "source missing — left in queue"))
             continue
+        # Drive "stub" files: ~80-200 bytes containing just metadata, no real
+        # PDF content. fitz.open will fail. Skip without burning ~140s on retries.
+        # User must mark the file 'Available offline' in Drive to materialize it.
+        if src.stat().st_size < 10 * 1024:
+            print(f"  [{i:3d}/{len(targets)}] ⚠ Drive stub ({src.stat().st_size}B, "
+                  f"not yet downloaded): {src.name}", file=sys.stderr)
+            failed.append((b["title"], "Drive stub — left in queue"))
+            continue
 
         sz_mb = src.stat().st_size / 1024 / 1024
         title_short = (b["title"] or src.stem)[:40]
