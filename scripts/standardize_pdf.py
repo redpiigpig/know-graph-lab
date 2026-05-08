@@ -347,8 +347,7 @@ def update_db(book_id: str, chunks: list[dict], metadata: dict) -> None:
     for i in range(0, len(rows), BATCH):
         r = requests.post(f"{se.URL}/rest/v1/ebook_chunks", headers=se.H_JSON, json=rows[i:i+BATCH], timeout=60)
         if not r.ok:
-            print(f"  ⚠ chunk preview insert failed: {r.status_code} {r.text[:120]}", file=sys.stderr)
-            return
+            raise RuntimeError(f"chunk preview insert failed: {r.status_code} {r.text[:200]}")
 
 
 # ── Entry points ───────────────────────────────────────────────
