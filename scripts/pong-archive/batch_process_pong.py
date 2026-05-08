@@ -22,7 +22,8 @@ from sermon_2024_metadata import METADATA
 
 def run(cmd):
     print(f"  $ {' '.join(cmd)}", flush=True)
-    return subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8")
+    return subprocess.run(cmd, capture_output=True, text=True,
+                          encoding="utf-8", errors="replace")
 
 
 def process_date(year_txt, date):
