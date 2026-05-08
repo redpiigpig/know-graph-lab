@@ -291,6 +291,10 @@ def _parse_batch_response(text: str, page_numbers: list) -> list:
     chunks = []
     for j, pn in enumerate(page_numbers):
         body = bodies[j] if j < len(bodies) else ""
+        # PostgreSQL JSONB rejects  ; strip before any downstream consumer
+        # (write_jsonl / insert_chunk_previews / standardize). Haiku occasionally
+        # emits NUL when it OCRs glyphs it can't decode.
+        body = body.replace("\x00", "")
         chunks.append({"page": pn, "text": body})
     return chunks
 

@@ -294,8 +294,9 @@ def update_db(book_id: str, chunks: list[dict], metadata: dict) -> None:
         "chunk_type": c.get("chunk_type") or "page",
         "page_number": c.get("page_number"),
         "chapter_path": c.get("chapter_path"),
-        "content": (c.get("content") or "")[:se.PREVIEW_LEN],
-        "char_count": len(c.get("content") or ""),
+        # PostgreSQL JSONB rejects U+0000; scrub before insert.
+        "content": (c.get("content") or "").replace("\x00", "")[:se.PREVIEW_LEN],
+        "char_count": len((c.get("content") or "").replace("\x00", "")),
     } for c in chunks]
     BATCH = 50
     for i in range(0, len(rows), BATCH):
