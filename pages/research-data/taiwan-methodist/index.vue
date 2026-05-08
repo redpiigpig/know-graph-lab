@@ -44,6 +44,15 @@
           <span class="tool-badge bg-indigo-50 text-indigo-600">可用</span>
         </NuxtLink>
 
+        <NuxtLink to="/research-data/taiwan-methodist/pong-reports" class="tool-card group border-rose-100 hover:border-rose-300 hover:shadow-rose-100">
+          <div class="tool-icon bg-rose-50 text-rose-600">📝</div>
+          <div class="flex-1">
+            <h2 class="tool-title">龐君華牧師歷年事工報告</h2>
+            <p class="tool-desc">摘錄自年議會大會會議紀錄；按屆次分組（一屆可能多份）</p>
+          </div>
+          <span class="tool-badge bg-rose-50 text-rose-600">建置中</span>
+        </NuxtLink>
+
       </div>
     </div>
   </div>
