@@ -183,6 +183,8 @@ class Entry:
             return "done"
         if "別人" in self.marker:
             return "skip"
+        if "無錄影" in self.marker or "📅" in self.marker:
+            return "no_recording"
         return "pending"
 
 
@@ -233,14 +235,15 @@ def rewrite_marker(path: Path, line_no: int, new_marker: str) -> None:
 
 def cmd_status(txt_file: Path) -> None:
     entries = parse_queue(txt_file)
-    counts = {"done": 0, "pending": 0, "skip": 0}
+    counts = {"done": 0, "pending": 0, "skip": 0, "no_recording": 0}
     for e in entries:
-        counts[e.status] += 1
+        counts[e.status] = counts.get(e.status, 0) + 1
     print(f"queue: {txt_file}")
-    print(f"  total   : {len(entries)}")
-    print(f"  done    : {counts['done']}")
-    print(f"  pending : {counts['pending']}")
-    print(f"  skip    : {counts['skip']}")
+    print(f"  total       : {len(entries)}")
+    print(f"  done        : {counts['done']}")
+    print(f"  pending     : {counts['pending']}")
+    print(f"  skip        : {counts['skip']}")
+    print(f"  no_recording: {counts['no_recording']}")
     pending = [e for e in entries if e.status == "pending"]
     if pending:
         print("\n  next pending:")
