@@ -64,7 +64,7 @@ For every published 龐 sermon row, the following fields should ideally be fille
 | `id` | YYYYMMDD | (PK) |
 | `sermon_date` | DATE | (set at insert) |
 | `church_year` | Advent-start liturgical year | `year if month==12 else year-1` |
-| `title` | sermon-specific title or generic | from raw or "{occasion} 主日證道" |
+| `title` | **the sermon theme** (e.g. 「信靠的力量」, 「心靈的聖殿：面對挑戰的內在力量」). When the theme is unknown / undetermined, default to `主日崇拜`. ⚠️ Do NOT copy `occasion` into `title` — occasion goes in its own field. | from raw transcript title slide / bulletin / 講者宣讀 |
 | `occasion` | liturgical occasion | from sermon body 「今天教會的時序來到 X」 |
 | `scripture_ref` | lectionary reading citations | from raw 「經課一/二/福音書」 |
 | `liturgical_season` | epiphany/lent/easter/pentecost/advent/christmas | derived from date |
