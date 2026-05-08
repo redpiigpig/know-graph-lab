@@ -140,10 +140,19 @@
     </section>
 
     <!-- ── Scripture Readings ──────────────────────────────── -->
-    <section v-if="scriptureReadings.length || sermon.scripture_ref || isEditing" class="sd-section sd-section--scripture">
+    <section v-if="scriptureReadings.length || simpleReadings.length || isEditing" class="sd-section sd-section--scripture">
       <div class="sd-section-inner">
         <h2 class="sd-section-title">經課</h2>
-        <p v-if="!scriptureReadings.length && sermon.scripture_ref" class="sd-scripture-text">{{ sermon.scripture_ref }}</p>
+        <div v-if="!scriptureReadings.length && simpleReadings.length" class="sd-scripture-list">
+          <div v-for="(r, i) in simpleReadings" :key="i" class="sd-reading sd-reading--static">
+            <div class="sd-reading-hd sd-reading-hd--static">
+              <div class="sd-reading-ref">
+                <span v-if="r.label" class="sd-reading-label">{{ r.label }}</span>
+                <span class="sd-reading-book">{{ r.body }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
         <div v-else class="sd-scripture-list">
           <div
             v-for="(reading, i) in scriptureReadings"
@@ -290,6 +299,17 @@ const scriptureReadings = computed(() => {
   const r = sermon.value?.scripture_readings
   if (!r) return []
   return Array.isArray(r) ? r : []
+})
+
+// Fallback: parse scripture_ref string ("經課一：使徒行傳 2；啟應文：詩篇 116；…")
+// into {label, body} pairs for display-only rendering. No verse text, no expand.
+const simpleReadings = computed(() => {
+  const ref = sermon.value?.scripture_ref
+  if (!ref) return []
+  return ref.split(/[；;]/).map(s => s.trim()).filter(Boolean).map(seg => {
+    const m = seg.match(/^(經課[一二三四]?|啟應文|福音書|信息經文|詩篇經課)\s*[：:]\s*(.+)$/)
+    return m ? { label: m[1], body: m[2].trim() } : { label: '', body: seg }
+  })
 })
 
 const openReadings = ref(new Set())
@@ -539,8 +559,11 @@ const seasonColor = computed(() => {
 }
 
 /* ── Scripture ────────────────────────────────────────────── */
-.sd-scripture-text { margin: 0; padding: 0.5rem 0; color: #3a3633; line-height: 1.7; }
 .sd-scripture-list { display: flex; flex-direction: column; gap: 0; border: 1px solid #DDD8CF; border-radius: 4px; overflow: hidden; }
+
+/* Static (non-clickable) variant for scripture_ref fallback rows */
+.sd-reading--static .sd-reading-hd--static { cursor: default; background: transparent; }
+.sd-reading--static .sd-reading-hd--static:hover { background: transparent; }
 
 .sd-reading { border-bottom: 1px solid #DDD8CF; }
 .sd-reading:last-child { border-bottom: none; }
