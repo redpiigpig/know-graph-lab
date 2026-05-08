@@ -362,9 +362,15 @@ def _run_standardize(book_id: str) -> None:
 def _is_transient_net(err_str: str) -> bool:
     s = err_str.lower()
     return any(k in s for k in (
+        # network-layer
         "connection error", "connection reset", "connection refused",
         "nameresolutionerror", "getaddrinfo", "timeout", "max retries exceeded",
         "temporarily unavailable", "503", "502", "504",
+        # filesystem — almost always Google Drive sync hiccup, not a real
+        # missing file. Drive reconnects within seconds-to-minutes; treat as
+        # transient so the book's "no extractable text" marker stays in queue.
+        "no such file", "failed to open", "cannot find the path",
+        "system cannot find", "file not found",
     ))
 
 
@@ -494,9 +500,13 @@ def cmd_run(limit=None, batch=DEFAULT_BATCH, one_id=None, dry_run=False):
     for i, b in enumerate(targets, 1):
         src = Path(b["file_path"])
         if not src.exists():
-            print(f"  [{i:3d}/{len(targets)}] ⚠ source missing: {src}", file=sys.stderr)
-            update_book_error(b["id"], f"file not found: {src}")
-            failed.append((b["title"], "source missing"))
+            # Google Drive (G:) often blips offline mid-run. Don't overwrite
+            # parse_error — leave the book in queue for the next run when
+            # Drive comes back. If the file is genuinely gone forever, the
+            # user will see a long-pending entry and can delete the row.
+            print(f"  [{i:3d}/{len(targets)}] ⚠ source missing (Drive blip?): {src}",
+                  file=sys.stderr)
+            failed.append((b["title"], "source missing — left in queue"))
             continue
 
         sz_mb = src.stat().st_size / 1024 / 1024
