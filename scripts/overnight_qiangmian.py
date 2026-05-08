@@ -342,7 +342,7 @@ def polish_with_haiku(client, raw_transcript: str, title: str, ppt_text: str) ->
             chunks: list[str] = []
             with client.messages.stream(
                 model=HAIKU_MODEL,
-                max_tokens=32000,
+                max_tokens=64000,
                 messages=[{"role": "user", "content": prompt}],
             ) as stream:
                 for text in stream.text_stream:
