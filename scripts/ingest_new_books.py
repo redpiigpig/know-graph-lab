@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Daily new-book ingest.
+Daily z-lib ingest.
 
-Watches the skill-local "new-book" drop folder, and for each ebook file:
+Watches the skill-local "z-lib" drop folder, and for each ebook file:
   1. Parses filename -> (author, title) using parse_drive_inventory.parse_filename
      (handles z-library pattern, "by Author", 全形 comma split, etc.)
   2. Asks Gemini to classify into one of the 9 main categories
      (with a fallback rule for English Christian-studies books -> 宗教學).
   3. Inserts an `ebooks` row with category set + future Drive path as file_path.
-  4. Moves the local file from new-book/ to
+  4. Moves the local file from z-lib/ to
      G:/我的雲端硬碟/資料/電子書/{category}/{author}，{title}.{ext}
      Since G: is the Drive sync mount, the move IS the upload (sync client
      uploads in background) AND the local-delete in one filesystem rename.
@@ -40,7 +40,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from parse_drive_inventory import parse_filename, to_traditional, TITLE_AUTHOR_OVERRIDES
 
 
-NEW_BOOK_DIR = Path(__file__).resolve().parent.parent / ".claude" / "skills" / "ebook-pipeline" / "new-book"
+NEW_BOOK_DIR = Path(__file__).resolve().parent.parent / "z-lib"
 DRIVE_ROOT = Path("G:/我的雲端硬碟/資料/電子書")
 EBOOK_EXTS = {".pdf", ".epub", ".mobi", ".azw3", ".azw"}
 INVALID_FNAME_CHARS = {
@@ -198,8 +198,18 @@ def gemini_classify(title: str, author: str) -> dict:
         },
     }
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GEMINI_KEY}"
-    r = requests.post(url, json=body, timeout=30)
-    if r.status_code != 200:
+    # Retry on 503 (UNAVAILABLE — high-demand spike) and 429 (rate limit).
+    # These spikes are usually < 30s; backoff 5/15/30 covers most.
+    for attempt, wait in enumerate((0, 5, 15, 30), start=1):
+        if wait:
+            time.sleep(wait)
+        r = requests.post(url, json=body, timeout=30)
+        if r.status_code == 200:
+            break
+        if r.status_code in (429, 503) and attempt < 4:
+            print(f"    Gemini {r.status_code} — retry {attempt} after {wait + (5 if attempt == 1 else 15)}s",
+                  file=sys.stderr)
+            continue
         raise RuntimeError(f"Gemini HTTP {r.status_code}: {r.text[:200]}")
     data = r.json()
     text = data["candidates"][0]["content"]["parts"][0]["text"].strip()
@@ -275,7 +285,7 @@ def supabase_insert(meta: dict, category: str, subcategory: str | None, target_p
 
 def cmd_status():
     if not NEW_BOOK_DIR.exists():
-        print(f"new-book dir not found: {NEW_BOOK_DIR}")
+        print(f"z-lib dir not found: {NEW_BOOK_DIR}")
         return
     files = [p for p in NEW_BOOK_DIR.iterdir() if p.is_file() and p.suffix.lower() in EBOOK_EXTS]
     junk = [p for p in NEW_BOOK_DIR.iterdir() if p.is_file() and p.suffix.lower() not in EBOOK_EXTS]
@@ -293,7 +303,7 @@ def cmd_status():
 
 def cmd_run(limit: int | None, dry_run: bool):
     if not NEW_BOOK_DIR.exists():
-        print(f"new-book dir missing: {NEW_BOOK_DIR}", file=sys.stderr)
+        print(f"z-lib dir missing: {NEW_BOOK_DIR}", file=sys.stderr)
         return 0
     files = sorted(p for p in NEW_BOOK_DIR.iterdir() if p.is_file() and p.suffix.lower() in EBOOK_EXTS)
     if limit:
@@ -337,7 +347,7 @@ def cmd_run(limit: int | None, dry_run: bool):
 
         ebook_id = supabase_insert(meta, cls["category"], cls.get("subcategory"), target)
         if not ebook_id:
-            print("  ABORT: DB insert failed (file kept in new-book/)")
+            print("  ABORT: DB insert failed (file kept in z-lib/)")
             fail += 1
             continue
         print(f"  db: inserted ebook_id={ebook_id}")
@@ -345,7 +355,7 @@ def cmd_run(limit: int | None, dry_run: bool):
         try:
             shutil.move(str(p), str(target))
         except Exception as e:
-            print(f"  MOVE FAILED: {e} — DB row was inserted, file still in new-book/")
+            print(f"  MOVE FAILED: {e} — DB row was inserted, file still in z-lib/")
             print(f"  manual fix: move file to {target} (Drive will sync), or delete row {ebook_id}")
             fail += 1
             continue

@@ -20,7 +20,7 @@ echo === Daily run started %DATE% %TIME% === >> "%LOGFILE%"
 REM Notify desktop that today's run is starting (toast notification).
 powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File "%~dp0notify.ps1" -Title "KGLab OCR daily" -Body "Run started %TIME% — ingest -> parse -> OCR" >nul 2>&1
 
-REM Step 1: ingest any new ebooks dropped into .claude/skills/ebook-pipeline/new-book/
+REM Step 1: ingest any new ebooks dropped into z-lib/ at the project root
 echo --- ingest_new_books --- >> "%LOGFILE%"
 python scripts\ingest_new_books.py run >> "%LOGFILE%" 2>&1
 

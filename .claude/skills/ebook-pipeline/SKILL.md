@@ -12,7 +12,7 @@ End-to-end pipeline that takes books from a local Drive folder all the way to th
 | Stage | Status | Numbers |
 |---|---|---|
 | Drive scan + author/title parse | ✅ done | 1,309 books (initial sweep) |
-| **Daily new-book drop ingest** | ✅ wired into daily scheduler | `ingest_new_books.py` — see Workflow D |
+| **Daily z-lib drop ingest** | ✅ wired into daily scheduler | `ingest_new_books.py` — see Workflow D |
 | File rename in Drive | ✅ done | all renamed to `作者，書名.ext` |
 | DB import (`ebooks` table) | ✅ rolling | 1,326 rows (492 EPUB + 834 PDF) |
 | First-pass parse (text-extractable) | ✅ done | 921 parsed (484 EPUB + 437 text PDF) — 3 timeout-failed EPUBs retried 2026-05-07 |
@@ -37,7 +37,7 @@ End-to-end pipeline that takes books from a local Drive folder all the way to th
 | `local_drive_pipeline.py` | 1 — ingest (initial sweep) | Scan Drive, parse `作者，書名.ext`, rename in place |
 | `parse_drive_inventory.py` | 1 — ingest | Library: `parse_filename()`, `to_traditional()`, `TITLE_AUTHOR_OVERRIDES` |
 | `import_local_to_supabase.py` | 1 — ingest (initial sweep) | `data/local_inventory.json` → `ebooks` rows |
-| `ingest_new_books.py` | 1 — ingest (**daily**) | Watches `.claude/skills/ebook-pipeline/new-book/`. Parses filename, classifies via Gemini (with keyword fallback), inserts ebooks row, moves file to `G:/.../電子書/{category}/`. See Workflow D |
+| `ingest_new_books.py` | 1 — ingest (**daily**) | Watches `z-lib/` at the project root. Parses filename, classifies via Gemini (with keyword fallback), inserts ebooks row, moves file to `G:/.../電子書/{category}/`. See Workflow D |
 | `parse_worker.py` | 2 — parse | **Main parser** (PyMuPDF + ebooklib). `init` / `run [--limit N] [--retry-errors]` / `status` |
 | `convert_mobi_to_epub.py` | 2 — parse | Calibre wrapper for mobi/azw3 → epub. Already done; keep for new files |
 | `ocr_with_gemini.py` | 3 — OCR (primary) | Gemini Vision OCR for scanned PDFs. Pushes JSONL to R2 inline. Exits with code 2 when daily quota hits (signals fallback) |
@@ -217,9 +217,9 @@ python scripts/ocr_with_qwen.py run --model qwen2.5vl:7b --dpi 200 --limit 3
 
 ---
 
-## Workflow D — Daily new-book drop ingest
+## Workflow D — Daily z-lib drop ingest
 
-The user drops freshly-acquired ebooks into [`.claude/skills/ebook-pipeline/new-book/`](./new-book/) (a local folder, not on Drive). [`scripts/ingest_new_books.py`](../../../scripts/ingest_new_books.py) processes that folder once per day as part of `run_ocr_daily.bat`. For each ebook file (`.pdf` / `.epub` / `.mobi` / `.azw3`):
+The user drops freshly-acquired ebooks into [`z-lib/`](../../../z-lib/) at the project root (a local folder, not on Drive). Filename suffix `(z-library.sk, 1lib.sk, z-lib.sk)` from the source is preserved on disk and stripped during parse. [`scripts/ingest_new_books.py`](../../../scripts/ingest_new_books.py) processes that folder once per day as part of `run_ocr_daily.bat`. For each ebook file (`.pdf` / `.epub` / `.mobi` / `.azw3`):
 
 1. **Parse filename** → `(author, title, ext)`. Reuses `parse_drive_inventory.parse_filename()` after pre-stripping z-library suffixes like `(z-library.sk, 1lib.sk, z-lib.sk)` (the parent parser only knows the older `(z-lib.org)` form, and the inner commas trip its 全形/半形 comma split).
 2. **Classify** into one of the 9 main categories. Two-tier:
@@ -233,7 +233,7 @@ After ingest, the new rows appear in `ebooks` with `parsed_at = NULL`. The next 
 ### Manual operations
 
 ```bash
-python scripts/ingest_new_books.py status              # how many ebooks waiting in new-book/
+python scripts/ingest_new_books.py status              # how many ebooks waiting in z-lib/
 python scripts/ingest_new_books.py run --dry-run       # preview classification + target paths
 python scripts/ingest_new_books.py run --limit 3       # smoke test 3 books for real
 python scripts/ingest_new_books.py run                 # full sweep
@@ -241,17 +241,17 @@ python scripts/ingest_new_books.py run                 # full sweep
 
 ### Failure modes
 
-- **DB insert fails** → file kept in `new-book/`; safe to re-run, no orphan row.
-- **Move fails after DB insert** → file kept in `new-book/`, DB row inserted but file not on Drive. Script prints both paths so you can either move manually or delete the row. Rare on Windows (cross-drive move = copy then delete).
+- **DB insert fails** → file kept in `z-lib/`; safe to re-run, no orphan row.
+- **Move fails after DB insert** → file kept in `z-lib/`, DB row inserted but file not on Drive. Script prints both paths so you can either move manually or delete the row. Rare on Windows (cross-drive move = copy then delete).
 - **Gemini quota / 429** → that single book is skipped (file kept), other books continue with the keyword fallback. Tomorrow's run picks up the skipped book.
 - **Filename can't be parsed** (no usable title) → logged "SKIP: could not parse title from filename"; file kept; add a manual override to `parse_drive_inventory.TITLE_AUTHOR_OVERRIDES` or rename the file manually.
-- **Target file already exists on Drive** (duplicate book) → skip, file kept in `new-book/`. Manual cleanup needed.
+- **Target file already exists on Drive** (duplicate book) → skip, file kept in `z-lib/`. Manual cleanup needed.
 
 ### Tuning notes
 
 - The keyword fallback skews heavily toward Christian-studies content (current user backlog) — if a different research area dominates a future drop, extend `fallback_category()` in [`scripts/ingest_new_books.py`](../../../scripts/ingest_new_books.py).
 - Gemini share the same daily quota with the OCR runner. Order in the bat is **ingest first** (small, ~1-5 calls/day) so OCR's heavy usage can't starve it. RPM is gentle (`time.sleep(0.5)` between books).
-- Junk files in `new-book/` (e.g., `Z-Library-latest.exe`) are silently ignored — only `EBOOK_EXTS` are touched.
+- Junk files in `z-lib/` (e.g., `Z-Library-latest.exe`) are silently ignored — only `EBOOK_EXTS` are touched.
 
 ---
 
@@ -344,7 +344,7 @@ Many books in OCR queue showing "file not found"?
   → Probably G: drive (Drive sync) is disconnected. Check: `Get-PSDrive -PSProvider FileSystem` should list G:.
   → Re-launch Google Drive client. The "file not found" parse_errors stay until you manually flip them back to "no extractable text" once Drive is back.
 
-A new book dropped into new-book/ never showed up in the reader?
+A new book dropped into z-lib/ never showed up in the reader?
   → Check scripts/logs/ocr_YYYY-MM-DD.log "--- ingest_new_books ---" section.
   → 'CLASSIFY FAILED' = Gemini quota; tomorrow retries automatically.
   → 'could not parse title' = filename pattern unsupported; rename or extend TITLE_AUTHOR_OVERRIDES.
@@ -376,7 +376,7 @@ A new book dropped into new-book/ never showed up in the reader?
    python scripts/repopulate_chunk_previews.py status
    python scripts/ocr_with_gemini.py status
    ```
-2. If `new-book/` has files waiting → run `python scripts/ingest_new_books.py run` (Workflow D).
+2. If `z-lib/` has files waiting → run `python scripts/ingest_new_books.py run` (Workflow D).
 3. Read [`standardize-ebook` SKILL](../standardize-ebook/SKILL.md) before touching that pipeline.
 4. Don't re-run `standardize_ebook.py` on books with annotations (`annotations` table). Currently only 文明的歷史 has any.
 5. For categorized batch standardize (哲學 → others), use `--dry-run` first, then real run.
