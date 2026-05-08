@@ -27,39 +27,48 @@
       </button>
     </nav>
 
+    <!-- ── Periodical Sub-Tabs (only when 刊物文章 active) ──── -->
+    <nav v-if="activeTab === 'periodical' && periodicalGroups.length" class="wr-subtabs">
+      <button
+        v-for="group in periodicalGroups"
+        :key="group.pub"
+        class="wr-subtab"
+        :class="{ 'wr-subtab--active': activePeriodical === group.pub }"
+        @click="activePeriodical = group.pub"
+      >
+        {{ group.pub }}
+        <span class="wr-subtab-badge">{{ group.items.length }}</span>
+      </button>
+    </nav>
+
     <!-- ── Card Grid ─────────────────────────────────────── -->
     <section class="wr-section">
       <div class="wr-section-inner">
 
         <div v-if="pending" class="wr-status">載入中…</div>
 
-        <!-- 刊物文章：依刊物分組 -->
+        <!-- 刊物文章：以子 tab 切換 -->
         <template v-else-if="activeTab === 'periodical'">
-          <template v-if="periodicalGroups.length">
-            <div v-for="group in periodicalGroups" :key="group.pub" class="wr-pub-group">
-              <h2 class="wr-pub-group-title">{{ group.pub }}</h2>
-              <div class="wr-grid">
-                <NuxtLink
-                  v-for="item in group.items"
-                  :key="item.id"
-                  :to="`/pong-archive/writings/${item.id}`"
-                  class="wr-card"
-                >
-                  <div class="wr-card-meta">
-                    <span v-if="item.published_date" class="wr-card-year">
-                      {{ formatDate(item.published_date, item.date_approximate) }}
-                    </span>
-                  </div>
-                  <h2 class="wr-card-title">{{ item.title }}</h2>
-                  <p v-if="item.title_en" class="wr-card-en">{{ item.title_en }}</p>
-                  <div v-if="item.tags && item.tags.length" class="wr-card-tags">
-                    <span v-for="tag in item.tags" :key="tag" class="wr-tag">{{ tag }}</span>
-                  </div>
-                  <div class="wr-card-arrow">→</div>
-                </NuxtLink>
+          <div v-if="activePeriodicalItems.length" class="wr-grid">
+            <NuxtLink
+              v-for="item in activePeriodicalItems"
+              :key="item.id"
+              :to="`/pong-archive/writings/${item.id}`"
+              class="wr-card"
+            >
+              <div class="wr-card-meta">
+                <span v-if="item.published_date" class="wr-card-year">
+                  {{ formatDate(item.published_date, item.date_approximate) }}
+                </span>
               </div>
-            </div>
-          </template>
+              <h2 class="wr-card-title">{{ item.title }}</h2>
+              <p v-if="item.title_en" class="wr-card-en">{{ item.title_en }}</p>
+              <div v-if="item.tags && item.tags.length" class="wr-card-tags">
+                <span v-for="tag in item.tags" :key="tag" class="wr-tag">{{ tag }}</span>
+              </div>
+              <div class="wr-card-arrow">→</div>
+            </NuxtLink>
+          </div>
           <div v-else class="wr-status">此分類尚無收錄文章。</div>
         </template>
 
@@ -122,6 +131,7 @@ const PERIODICAL_ORDER = ['中華衛訊', '衛神院訊', '衛報']
 const writings = ref([])
 const pending  = ref(true)
 const activeTab = ref('thesis')
+const activePeriodical = ref('')
 
 onMounted(async () => {
   try {
@@ -159,6 +169,19 @@ const periodicalGroups = computed(() => {
   const rest = Object.keys(map).filter(p => !PERIODICAL_ORDER.includes(p)).sort()
   return [...ordered, ...rest].map(pub => ({ pub, items: map[pub] }))
 })
+
+const activePeriodicalItems = computed(() => {
+  const group = periodicalGroups.value.find(g => g.pub === activePeriodical.value)
+  return group ? group.items : []
+})
+
+// Default activePeriodical to first available group when entering 刊物文章
+watch([activeTab, periodicalGroups], () => {
+  if (activeTab.value === 'periodical' && periodicalGroups.value.length) {
+    const stillExists = periodicalGroups.value.some(g => g.pub === activePeriodical.value)
+    if (!stillExists) activePeriodical.value = periodicalGroups.value[0].pub
+  }
+}, { immediate: true })
 
 function formatDate(dateStr, approximate) {
   if (!dateStr) return ''
@@ -273,6 +296,58 @@ function formatDate(dateStr, approximate) {
   font-size: 0.62rem;
   font-weight: 500;
   letter-spacing: 0;
+}
+
+/* ── Sub-Tabs (刊物切換) ─────────────────────────────────── */
+.wr-subtabs {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 14px 48px;
+  background-color: #FBF8F3;
+  border-bottom: 1px solid #E8E4DC;
+  gap: 6px;
+}
+.wr-subtab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: transparent;
+  border: 1px solid #DDD8CF;
+  border-radius: 16px;
+  cursor: pointer;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: #7A7268;
+  letter-spacing: 0.06em;
+  transition: all 0.18s;
+}
+.wr-subtab:hover {
+  border-color: #C4B89A;
+  color: #3A3025;
+}
+.wr-subtab--active {
+  background-color: #6A5E4A;
+  border-color: #6A5E4A;
+  color: #FFF;
+  font-weight: 500;
+}
+.wr-subtab-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.wr-subtab--active .wr-subtab-badge {
+  background-color: rgba(255, 255, 255, 0.22);
 }
 
 /* ── Section ─────────────────────────────────────────────── */
@@ -412,6 +487,7 @@ function formatDate(dateStr, approximate) {
   .wr-header { padding: 40px 20px 32px; }
   .wr-tabs   { padding: 0 20px; }
   .wr-tab    { padding: 12px 14px; font-size: 0.82rem; }
+  .wr-subtabs { padding: 12px 20px; }
   .wr-section { padding: 32px 20px 60px; }
   .wr-grid   { grid-template-columns: 1fr; gap: 16px; }
   .wr-card   { padding: 22px 20px 18px; }
