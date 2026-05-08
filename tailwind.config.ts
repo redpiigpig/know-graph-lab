@@ -26,5 +26,12 @@ export default {
       },
     },
   },
+  safelist: [
+    {
+      // Dynamic color classes used in /works (writing_projects.color)
+      pattern:
+        /(bg|text|border|hover:bg|hover:border|hover:shadow)-(amber|blue|rose|emerald|violet|sky|indigo|cyan|orange|stone|purple)-(50|100|200|300|500|600|700)/,
+    },
+  ],
   plugins: [],
 } satisfies Config;

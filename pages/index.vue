@@ -146,6 +146,7 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({ middleware: 'auth' });
 const user = useSupabaseUser();
 useHead({ title: "Know Graph Lab — 知識圖工作室" });
 </script>
