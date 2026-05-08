@@ -36,13 +36,23 @@
             <span v-else class="sd-location">{{ sermon.location || '—' }}</span>
           </div>
 
-          <!-- 一般禮拜 YouTube 按鈕：置中於 header -->
+          <!-- 一般禮拜：YouTube 錄影按鈕 / 講章原文連結（依 URL 類型分流） -->
           <div v-if="!isEditing && !isMemorial && sermon.youtube_url" class="sd-yt-header-wrap">
-            <a :href="sermon.youtube_url" target="_blank" rel="noopener noreferrer" class="sd-yt-btn">
+            <a v-if="isVideoUrl" :href="sermon.youtube_url" target="_blank" rel="noopener noreferrer" class="sd-yt-btn">
               <svg class="sd-yt-icon" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M23.8 7.2s-.2-1.7-.9-2.4c-.9-.9-1.9-.9-2.4-1C17.8 3.6 12 3.6 12 3.6s-5.8 0-8.5.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.4-.9 2.4S0 9.1 0 11v1.8c0 1.9.2 3.8.2 3.8s.2 1.7.9 2.4c.9.9 2.1.8 2.6.9C5.2 20 12 20 12 20s5.8 0 8.5-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.4.9-2.4s.2-1.9.2-3.8V11c0-1.9-.2-3.8-.2-3.8zM9.7 15.5V8.4l6.6 3.6-6.6 3.5z"/>
               </svg>
               觀看完整禮拜錄影
+            </a>
+            <a v-else :href="sermon.youtube_url" target="_blank" rel="noopener noreferrer" class="sd-archive-btn">
+              <svg class="sd-archive-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="8" y1="13" x2="16" y2="13"/>
+                <line x1="8" y1="17" x2="16" y2="17"/>
+                <line x1="8" y1="9" x2="10" y2="9"/>
+              </svg>
+              閱讀講章原文
             </a>
           </div>
 
@@ -393,6 +403,11 @@ const youtubeEmbed = computed(() => {
   return `https://www.youtube.com/embed/${v[1]}${t ? `?start=${t[1]}` : ''}`
 })
 
+const isVideoUrl = computed(() => {
+  const url = sermon.value?.youtube_url || ''
+  return /youtube\.com|youtu\.be/.test(url)
+})
+
 const seasonColor = computed(() => {
   const s = sermon.value?.liturgical_season || ''
   if (/將臨/.test(s))                              return SEASON_COLORS.advent
@@ -541,6 +556,26 @@ const seasonColor = computed(() => {
 }
 .sd-yt-btn:hover { background: #AA0000; }
 .sd-yt-icon { width: 15px; height: 15px; flex-shrink: 0; }
+
+/* 講章原文外部連結（非影片）— 與 YouTube 紅色按鈕視覺區隔 */
+.sd-archive-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: transparent;
+  color: #6E5A3F;
+  text-decoration: none;
+  border: 1px solid #6E5A3F;
+  border-radius: 3px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  transition: background 0.2s, color 0.2s;
+}
+.sd-archive-btn:hover { background: #6E5A3F; color: #fff; }
+.sd-archive-icon { width: 15px; height: 15px; flex-shrink: 0; }
 .sd-video-wrap {
   position: relative;
   width: 100%;
