@@ -299,6 +299,40 @@ def _parse_batch_response(text: str, page_numbers: list) -> list:
     return chunks
 
 
+def _ocr_batch(client: anthropic.Anthropic, doc, page_indices: list[int]) -> list:
+    """OCR one batch of pages. On 413 (request_too_large), split the batch in
+    half and recurse — heavy-image pages can blow past Anthropic's overall
+    request size cap even with our per-image 5 MB ceiling."""
+    page_numbers = [i + 1 for i in page_indices]
+    content = []
+    for pi in page_indices:
+        img, media_type = _render_page_image(doc, pi)
+        b64 = base64.standard_b64encode(img).decode()
+        content.append({"type": "image",
+                        "source": {"type": "base64", "media_type": media_type, "data": b64}})
+    prompt = BATCH_PROMPT.format(
+        first=page_numbers[0],
+        next=page_numbers[1] if len(page_numbers) > 1 else page_numbers[0] + 1,
+    )
+    content.append({"type": "text", "text": prompt})
+
+    try:
+        resp = client.messages.create(
+            model=MODEL, max_tokens=DEFAULT_MAX_TOKENS,
+            messages=[{"role": "user", "content": content}],
+        )
+    except anthropic.APIStatusError as e:
+        if e.status_code == 413 and len(page_indices) > 1:
+            mid = len(page_indices) // 2
+            print(f"    ⚠ 413 on {page_numbers[0]}-{page_numbers[-1]}, splitting", flush=True)
+            return (_ocr_batch(client, doc, page_indices[:mid])
+                    + _ocr_batch(client, doc, page_indices[mid:]))
+        raise
+
+    batch_text = resp.content[0].text if resp.content else ""
+    return _parse_batch_response(batch_text, page_numbers)
+
+
 def ocr_book(client: anthropic.Anthropic, src_path: Path, batch_size: int):
     """Returns (chunks, pdf_total_pages). pdf_total_pages is the authoritative
     page count from PyMuPDF — used for total_pages metadata so Haiku can't
@@ -309,26 +343,7 @@ def ocr_book(client: anthropic.Anthropic, src_path: Path, batch_size: int):
     for batch_start in range(0, total, batch_size):
         batch_end = min(batch_start + batch_size, total)
         page_indices = list(range(batch_start, batch_end))
-        page_numbers = [i + 1 for i in page_indices]
-
-        content = []
-        for pi in page_indices:
-            img, media_type = _render_page_image(doc, pi)
-            b64 = base64.standard_b64encode(img).decode()
-            content.append({"type": "image",
-                             "source": {"type": "base64", "media_type": media_type, "data": b64}})
-        prompt = BATCH_PROMPT.format(
-            first=page_numbers[0],
-            next=page_numbers[1] if len(page_numbers) > 1 else page_numbers[0] + 1,
-        )
-        content.append({"type": "text", "text": prompt})
-
-        resp = client.messages.create(
-            model=MODEL, max_tokens=DEFAULT_MAX_TOKENS,
-            messages=[{"role": "user", "content": content}],
-        )
-        batch_text = resp.content[0].text if resp.content else ""
-        batch_chunks = _parse_batch_response(batch_text, page_numbers)
+        batch_chunks = _ocr_batch(client, doc, page_indices)
         all_chunks.extend(batch_chunks)
         print(f"    pages {batch_start+1}-{batch_end}/{total}: {len(batch_chunks)} parsed", flush=True)
 
@@ -502,6 +517,7 @@ def cmd_run(limit=None, batch=DEFAULT_BATCH, one_id=None, dry_run=False):
         return
 
     ok, failed = 0, []
+    consec_rl_fails = 0  # consecutive books that failed with rate-limit
     for i, b in enumerate(targets, 1):
         src = Path(b["file_path"])
         if not src.exists():
@@ -535,11 +551,28 @@ def cmd_run(limit=None, batch=DEFAULT_BATCH, one_id=None, dry_run=False):
         result = process_one(client, b, src, batch)
         if result["status"] == "ok":
             ok += 1
+            consec_rl_fails = 0
             print(f"  → ✓ 完成，繼續下一本", flush=True)
         else:
             failed.append((b["title"], result["error"]))
             if not result["transient"]:
                 update_book_error(b["id"], result["error"])
+            # Persistent rate-limit detection: if 3 books in a row die at the
+            # first call to a rate-limit error, the Max subscription's Haiku
+            # quota is burned. process_one's per-book backoff (max ~4 min) is
+            # not enough — sleep 30 min before next book to let the quota
+            # window roll over. Otherwise we churn through the queue marking
+            # every book as transient-fail without making progress.
+            if result["error"] == "rate limit":
+                consec_rl_fails += 1
+                if consec_rl_fails >= 3:
+                    cooldown = 1800
+                    print(f"  ⏸ {consec_rl_fails} consecutive rate-limit fails — "
+                          f"sleeping {cooldown // 60} min for quota to recover…", flush=True)
+                    time.sleep(cooldown)
+                    consec_rl_fails = 0
+            else:
+                consec_rl_fails = 0
 
     print(f"\nDone. OK: {ok}, Failed: {len(failed)}")
     if failed:
