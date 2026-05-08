@@ -39,7 +39,7 @@
           <div class="tool-icon bg-indigo-50 text-indigo-600">👥</div>
           <div class="flex-1">
             <h2 class="tool-title">歷屆年議會各部會職員名單</h2>
-            <p class="tool-desc">第 37–47 屆（2000–2010）與第 56–59 屆（2019–2022）共 15 屆部會職員結構</p>
+            <p class="tool-desc">第 37–60 屆（2000–2023）共 24 屆部會職員結構</p>
           </div>
           <span class="tool-badge bg-indigo-50 text-indigo-600">可用</span>
         </NuxtLink>
