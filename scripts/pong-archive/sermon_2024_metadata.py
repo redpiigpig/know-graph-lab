@@ -1,10 +1,175 @@
 """
-2023-2025 龐君華牧師 sermons metadata (per user 2026-05-08).
+2020-2025 龐君華牧師 sermons metadata (per user 2026-05-08).
 
 Used by: sermon_redo.py commit + ad-hoc metadata patches.
+
+Note: 2020-2021 龐只在特別節期講道（聖灰日/受難日/聖誕/平安夜）.
 """
 
+# 2020 special services (no regular 主日 龐 sermons listed by user)
+SPECIAL_2020 = [
+    {
+        "date": "2020-02-26",
+        "occasion": "聖灰日禮拜",
+        "liturgical_season": "lent",
+        "preacher": "龐君華牧師",
+        "officiant": "龐君華牧師",
+        "司會": "邱泰耀牧師",
+        "司琴": "鍾歆宜姊妹",
+    },
+    {
+        "date": "2020-04-10",
+        "occasion": "受難日晚崇拜（Service of Tenebrae）",
+        "liturgical_season": "lent",
+        "preacher": "龐君華會督",
+        "officiant": "龐君華會督",
+        "襄禮司會": "邱泰耀牧師",
+        "司琴": "鍾歆宜、石小凡、盧思寧",
+        "領唱": "顧維筠傳道",
+        "長笛": "安德石先生",
+        "讀經": "黃安妮女士、簡大鈞先生",
+        "合唱": "城中牧區詩班",
+        "招待": "李幸真女士、楊秀惠女士",
+    },
+    {
+        "date": "2020-12-24",
+        "occasion": "衛理公會城中牧區平安夜燭光禮拜",
+        "liturgical_season": "advent",
+        "preacher": "龐君華會督",
+        "officiant": "龐君華會督",
+        "襄禮": "邱泰耀牧師",
+        "鋼琴": "陳芝英女士、鍾歆宜女士",
+        "領唱": "顧維筠女士",
+        "指揮": "王微儂女士",
+        "司數": "陳香杏女士、李幸真女士",
+        "獻招待": "楊秀惠女士、李幸真女士",
+        "音光": "林盈君女士",
+        "讀經": "黃安妮女士、謝辛美女士、翁嘉慶先生",
+        "詩班": "拉喇人歌手、城中牧區詩班",
+        "佈置": "陳治旭先生、盧康潔女士",
+        "燭台": "周慶同先生、王怡文女士（燭）、黃于庭女士、楊秀惠女士（台）",
+    },
+]
+
+# 2021 special services (no regular 主日 龐 sermons — 龐 was 衛理會督 still)
+SPECIAL_2021 = [
+    {
+        "date": "2021-02-17",
+        "occasion": "聖灰日聯合禮拜",
+        "liturgical_season": "lent",
+        "preacher": "龐君華牧師",
+        "officiant": "龐君華牧師",
+        "襄禮": "黃寬裕牧師、邱泰耀牧師、李信政牧師、賴玲牧師",
+        "讀經": "彭德全傳道、林裕恩傳道",
+        "總務": "林盈君姊妹",
+        "司琴": "鍾歆宜姊妹、盧思寧姊妹",
+        "獻詩": "城中詩班",
+        "接待": "北一區義務傳道",
+        "四重唱": "王微儂、何和、林盈君、黃威銘",
+        "指揮會前領唱": "王微儂老師",
+    },
+    {
+        "date": "2021-04-02",  # Good Friday 2021
+        "occasion": "衛理公會北區聖週五受難日晚聯合崇拜（熄燭禮拜：十架七言）",
+        "liturgical_season": "lent",
+        "preacher": "龐君華會督",
+        "officiant": "龐君華會督",
+        "司琴": "連明箴姐妹、盧思寧姊妹",
+        "讀經默想": "黃寬裕牧師、邱泰耀牧師、李信政牧師、賴玲牧師、林裕恩傳道、賴明貞傳道、秋郁瑄傳道、侯富寶傳道、顧維筠姊妹、劉世凱弟兄、呂華光弟兄、牛履民弟兄、胡瑠美傳道、羅玉冰姊妹",
+        "詩班": "台北衛理堂詩班（陳詩音指揮）、衛理公會城中牧區詩班、La Lay Singers（王微儂指揮）",
+        "領唱": "王微儂老師、彭德全傳道",
+    },
+    {
+        "date": "2021-11-20",
+        "occasion": "城中教會成立六十週年感恩禮拜",
+        "liturgical_season": "pentecost",
+        "preacher": "龐君華會督",
+        "officiant": "龐君華會督",
+        "襄禮": "邱泰耀牧師",
+        "司會": "周慶同弟兄",
+        "司琴": "盧思寧姊妹",
+        "讀經": "黃玲媛姊妹",
+        "司獻": "楊秀惠姊妹、黃于庭姊妹",
+        "獻詩": "城中牧區詩班",
+        "招待": "招待組",
+    },
+    {
+        "date": "2021-12-24",
+        "occasion": "衛理公會城中牧區平安夜燭光禮拜",
+        "liturgical_season": "advent",
+        "preacher": "邱泰耀牧師",  # 龐 主禮, 邱 證道
+        "officiant": "龐君華會督",
+        "_note": "龐會督主禮, 邱牧師證道",
+        "領唱": "顧維筠女士",
+        "指揮": "王微儂女士",
+        "鋼琴": "盧思寧女士、鍾歆宜女士",
+        "司獻": "王怡文女士、周慶同先生、陳香杏女士、李幸真女士",
+        "藝術": "陳治旭先生、盧康潔女士",
+        "司數": "陳香杏女士、李幸真女士",
+        "讀經": "黃安妮女士、黃熙婷女士、卿秀惠女士",
+        "詩班": "Lalay Singers、城中牧區詩班",
+        "招待": "周慶同先生、王怡文女士（燭）、黃于庭女士、楊秀惠女士（台）",
+    },
+]
+
+
 # (date, occasion, liturgical_season, worship_leader, scripture_reader, choir)
+# Note: 2022-05 龐會督退休前後. 2022 主日 preaching was less frequent.
+SERMONS_2022 = [
+    ("2022-06-12", "聖三一主日", "pentecost",
+     "周慶同弟兄", "卿秀惠傳道", "城中男聲詩班"),
+    ("2022-09-11", "聖靈降臨節後第十四主日", "pentecost",
+     "龔祥生弟兄", "卿秀惠傳道", "城中男聲詩班"),
+    ("2022-10-02", "聖靈降臨節後第十七主日", "pentecost",
+     "周慶同弟兄", "謝辛美姊妹", "城中牧區詩班"),
+    ("2022-11-13", "聖靈降臨節後第廿三主日", "pentecost",
+     "龔祥生弟兄", "黃安妮姊妹", "城中男聲詩班"),
+]
+
+# 2022 special services (multi-role personnel)
+SERMON_ASH_WEDNESDAY_2022 = {
+    "date": "2022-03-02",
+    "occasion": "聖灰日禮拜",
+    "liturgical_season": "lent",
+    "preacher": "龐君華牧師",
+    "officiant": "龐君華牧師",
+    "司會": "邱泰耀牧師",
+    "司琴": "黃熙婷姊妹",
+    "讀經": "簡大鈞弟兄、顧維筠傳道",
+}
+
+SERMON_GOOD_FRIDAY_2022 = {
+    "date": "2022-04-15",
+    "occasion": "聖週五受難日晚崇拜（熄燭禮拜：十架七言）",
+    "liturgical_season": "lent",
+    "preacher": "龐君華會督",
+    "officiant": "龐君華會督",
+    "司會": "邱泰耀牧師",
+    "司琴": "鍾歆宜女士、盧思寧女士",
+    "笛": "安德石先生",
+    "攝影": "林盈君女士",
+    "讀經": "卿秀惠女士、謝辛美女士",
+    "領唱": "王微儂女士",
+    "詩班": "城中牧區詩班、Lalay Singers",
+    "招待燈光": "李幸真女士",
+}
+
+SERMON_CHRISTMAS_EVE_2022 = {
+    "date": "2022-12-24",
+    "occasion": "衛理公會城中牧區平安夜燭光禮拜",
+    "liturgical_season": "advent",
+    "preacher": "龐君華牧師",
+    "officiant": "邱泰耀牧師",
+    "司琴": "鍾歆宜、盧思寧、陳芝英女士",
+    "領唱": "顧維筠女士",
+    "藝術": "陳治旭先生",
+    "指揮": "王微儂女士",
+    "司獻": "陳杏杏女士、李幸真女士、周慶同先生、王怡文女士",
+    "讀經": "黃雯華女士、卿秀惠女士、簡大鈞先生",
+    "點燭": "周慶同先生、王怡文女士（燭）、李幸真女士、楊秀惠女士（台）",
+    "詩班": "Lalay Singers、城中牧區詩班",
+}
+
 SERMONS_2023 = [
     ("2023-01-08", "主受洗日", "epiphany",
      "龔祥生弟兄", "黃安妮姊妹", "城中男聲詩班"),
@@ -184,3 +349,53 @@ METADATA[ce["date"]] = {
         "指揮": ce["指揮"],
     },
 }
+
+
+def _special_to_meta(s):
+    """Convert a special-service dict into pong_sermons fields.
+
+    Maps known fields (司會/讀經/詩班/獻詩) into structured columns,
+    everything else goes into worship_team JSON.
+    """
+    KNOWN = {"date", "occasion", "liturgical_season", "preacher", "officiant"}
+    out = {
+        "occasion": s["occasion"],
+        "liturgical_season": s["liturgical_season"],
+        "preacher": s["preacher"],
+        "officiant": s["officiant"],
+    }
+    if "司會" in s:
+        out["worship_leader"] = s["司會"]
+    if "讀經" in s:
+        out["scripture_reader"] = s["讀經"]
+    if "詩班" in s:
+        out["choir"] = s["詩班"]
+    elif "獻詩" in s:
+        out["choir"] = s["獻詩"]
+    elif "合唱" in s:
+        out["choir"] = s["合唱"]
+    # Everything else goes to worship_team JSON
+    extras = {k: v for k, v in s.items() if k not in KNOWN | {"司會", "讀經", "詩班", "獻詩", "合唱"}}
+    if extras:
+        out["worship_team"] = extras
+    return out
+
+
+# Wire 2022 specials + regular sermons
+for d, occasion, season, leader, reader, choir in SERMONS_2022:
+    METADATA[d] = {
+        "occasion": occasion,
+        "liturgical_season": season,
+        "worship_leader": leader,
+        "scripture_reader": reader,
+        "choir": choir,
+        "officiant": "龐君華牧師",
+        "preacher": "龐君華牧師",
+    }
+
+for s in [SERMON_ASH_WEDNESDAY_2022, SERMON_GOOD_FRIDAY_2022, SERMON_CHRISTMAS_EVE_2022]:
+    METADATA[s["date"]] = _special_to_meta(s)
+
+# Wire 2020-2021 specials (no regular 主日 龐 sermons)
+for s in SPECIAL_2020 + SPECIAL_2021:
+    METADATA[s["date"]] = _special_to_meta(s)
