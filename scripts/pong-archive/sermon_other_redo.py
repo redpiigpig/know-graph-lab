@@ -241,7 +241,7 @@ def find_media_by_youtube_id(yid: str) -> dict | None:
     return rows[0] if rows else None
 
 
-def insert_sermon(meta: dict) -> int:
+def insert_sermon(meta: dict, youtube_url: str | None = None) -> int:
     """Insert pong_sermons row using MANIFEST metadata. Returns sermon id."""
     date_str = meta["date"]
     year, month = int(date_str[:4]), int(date_str[5:7])
@@ -258,6 +258,7 @@ def insert_sermon(meta: dict) -> int:
         "scripture_ref": meta.get("scripture_ref"),
         "scripture_readings": meta.get("scripture_readings"),
         "worship_team": meta.get("worship_team"),
+        "youtube_url": youtube_url,
         "is_published": True,
         "has_recording": True,
     }
@@ -269,14 +270,14 @@ def insert_sermon(meta: dict) -> int:
     return sermon_id
 
 
-def patch_sermon_metadata(sermon_id: int, meta: dict) -> None:
+def patch_sermon_metadata(sermon_id: int, meta: dict, youtube_url: str | None = None) -> None:
     """Backfill missing metadata on an existing row (e.g. preacher=None on the
     100000000-series 台北衛理堂 entries). Doesn't touch fields that are already
     set."""
     sermon = requests.get(
         f"{_sb_url()}/pong_sermons",
         headers=_sb_headers(),
-        params={"select": "id,preacher,location,title,occasion,scripture_ref,scripture_readings,worship_team,is_published",
+        params={"select": "id,preacher,location,title,occasion,scripture_ref,scripture_readings,worship_team,youtube_url,is_published",
                 "id": f"eq.{sermon_id}"},
     ).json()[0]
     patch = {}
@@ -284,6 +285,8 @@ def patch_sermon_metadata(sermon_id: int, meta: dict) -> None:
               "scripture_readings", "worship_team"):
         if not sermon.get(k) and meta.get(k):
             patch[k] = meta[k]
+    if youtube_url and not sermon.get("youtube_url"):
+        patch["youtube_url"] = youtube_url
     if not sermon.get("is_published"):
         patch["is_published"] = True
     if patch:
@@ -452,13 +455,14 @@ def cmd_prepare(txt_file: Path, target_date: str | None, target_youtube_id: str 
     clean_file = TMP_DIR / f"{meta['date']}_clean.txt"
 
     # 1) Ensure pong_sermons row
+    canonical_youtube_url = f"https://www.youtube.com/watch?v={youtube_id}"
     sermon = find_sermon_by_date(meta["date"])
     if sermon:
         sermon_id = sermon["id"]
         print(f"[sermon] existing id={sermon_id}", file=sys.stderr)
-        patch_sermon_metadata(sermon_id, meta)
+        patch_sermon_metadata(sermon_id, meta, youtube_url=canonical_youtube_url)
     else:
-        sermon_id = insert_sermon(meta)
+        sermon_id = insert_sermon(meta, youtube_url=canonical_youtube_url)
         sermon = {"id": sermon_id, "media_id": None}
         print(f"[sermon] created id={sermon_id}", file=sys.stderr)
 
