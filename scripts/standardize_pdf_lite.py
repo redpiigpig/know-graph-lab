@@ -299,11 +299,28 @@ def update_db(book_id: str, chunks: list[dict], metadata: dict) -> None:
         "content": _clean(c.get("content") or "")[:se.PREVIEW_LEN],
         "char_count": len(_clean(c.get("content") or "")),
     } for c in chunks]
-    BATCH = 50
-    for i in range(0, len(rows), BATCH):
-        r = requests.post(f"{se.URL}/rest/v1/ebook_chunks", headers=se.H_JSON, json=rows[i:i+BATCH], timeout=60)
-        if not r.ok:
-            raise RuntimeError(f"chunk preview insert failed: {r.status_code} {r.text[:200]}")
+    # Adaptive batch — on 57014 (Supabase IO timeout) shrink the batch and
+    # retry instead of failing the whole book and leaving ebook_chunks empty
+    # (delete already ran above). Mirrors repopulate_chunk_previews.insert_previews.
+    BATCH_SIZES = [50, 20, 5, 1]
+    i = 0
+    while i < len(rows):
+        succeeded = False
+        for bs in BATCH_SIZES:
+            batch = rows[i:i+bs]
+            r = requests.post(f"{se.URL}/rest/v1/ebook_chunks",
+                              headers=se.H_JSON, json=batch, timeout=120)
+            if r.status_code in (200, 201):
+                i += len(batch)
+                succeeded = True
+                break
+            text = r.text[:300]
+            if "57014" in text or "timeout" in text.lower() or r.status_code >= 500:
+                if bs > BATCH_SIZES[-1]:
+                    continue
+            raise RuntimeError(f"chunk preview insert failed: {r.status_code} {text}")
+        if not succeeded:
+            raise RuntimeError(f"chunk preview insert failed at batch_size=1, row {i}")
 
 
 # ── Entry points ────────────────────────────────────────────────────────
