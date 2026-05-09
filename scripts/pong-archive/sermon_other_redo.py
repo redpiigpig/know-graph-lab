@@ -190,11 +190,12 @@ MANIFEST: dict[str, dict] = {
         "date": "2025-08-31",
         "location": "台灣聖公會聖提摩太堂",
         "preacher": "龐君華牧師",
-        "title": "聖靈降臨後第十二主日 聖餐禮拜",
-        "occasion": "聖靈降臨後第十二主日",
-        "scripture_ref": None,
-        "scripture_readings": None,
+        "title": "心靈的水池",
+        "occasion": "聖靈降臨後第十二主日 聖餐禮拜",
+        "scripture_ref": "路加福音 14:1, 7-14",
+        "scripture_readings": "經課一：耶利米書 2:4-13；啟應文：詩篇 18:1, 10-16；經課二：希伯來書 13:1-8, 15-16；福音書：路加福音 14:1, 7-14",
         "worship_team": None,
+        "worship_songs": "新聖詩 250 首〈著謳咾主上帝〉、新聖詩 370 首〈咱奉獻聲音及才能〉、新聖詩 222 首〈上帝做阮代代幫助〉",
         "is_full_service": True,
     },
 }
@@ -258,6 +259,7 @@ def insert_sermon(meta: dict, youtube_url: str | None = None) -> int:
         "scripture_ref": meta.get("scripture_ref"),
         "scripture_readings": meta.get("scripture_readings"),
         "worship_team": meta.get("worship_team"),
+        "worship_songs": meta.get("worship_songs"),
         "youtube_url": youtube_url,
         "is_published": True,
         "has_recording": True,
@@ -277,12 +279,12 @@ def patch_sermon_metadata(sermon_id: int, meta: dict, youtube_url: str | None = 
     sermon = requests.get(
         f"{_sb_url()}/pong_sermons",
         headers=_sb_headers(),
-        params={"select": "id,preacher,location,title,occasion,scripture_ref,scripture_readings,worship_team,youtube_url,is_published",
+        params={"select": "id,preacher,location,title,occasion,scripture_ref,scripture_readings,worship_team,worship_songs,youtube_url,is_published",
                 "id": f"eq.{sermon_id}"},
     ).json()[0]
     patch = {}
     for k in ("preacher", "location", "title", "occasion", "scripture_ref",
-              "scripture_readings", "worship_team"):
+              "scripture_readings", "worship_team", "worship_songs"):
         if not sermon.get(k) and meta.get(k):
             patch[k] = meta[k]
     if youtube_url and not sermon.get("youtube_url"):
