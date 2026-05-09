@@ -127,8 +127,13 @@
               <span v-else class="sd-team-value">{{ sermon.choir }}</span>
             </div>
           </template>
-          <!-- 其他教會：證道 / 司會 / 敬拜 -->
+          <!-- 其他教會：主禮 / 證道 / 司會 / 敬拜 -->
           <template v-else>
+            <div v-if="isEditing || sermon.officiant" class="sd-team-item">
+              <span class="sd-team-label">主禮</span>
+              <input v-if="isEditing" v-model="local.officiant" class="sd-team-value sd-input" placeholder="主禮" @input="save('officiant', local.officiant)" />
+              <span v-else class="sd-team-value">{{ sermon.officiant }}</span>
+            </div>
             <div v-if="isEditing || sermon.preacher" class="sd-team-item">
               <span class="sd-team-label">證道</span>
               <input v-if="isEditing" v-model="local.preacher" class="sd-team-value sd-input" placeholder="證道者" @input="save('preacher', local.preacher)" />
@@ -301,7 +306,7 @@ const hasAnyTeamField = computed(() => {
   if (!s) return false
   return isChengzhong.value
     ? s.officiant || s.preacher || s.worship_leader || s.scripture_reader || s.song_leader || s.choir
-    : s.preacher || s.worship_leader || s.worship_team
+    : s.officiant || s.preacher || s.worship_leader || s.worship_team
 })
 
 // ── Scripture readings ───────────────────────────────────────
@@ -594,40 +599,54 @@ const seasonColor = computed(() => {
 }
 
 /* ── Scripture ────────────────────────────────────────────── */
-.sd-scripture-list { display: flex; flex-direction: column; gap: 0; border: 1px solid #DDD8CF; border-radius: 4px; overflow: hidden; }
+/* Mirrors worship-songs list-style (no box, 8px row gap), but with the
+   label (經課一 / 啟應文 …) styled separately from the book reference. */
+.sd-scripture-list { display: flex; flex-direction: column; gap: 8px; border: none; border-radius: 0; overflow: visible; padding: 0; margin: 0; }
 
-/* Static (non-clickable) variant for scripture_ref fallback rows — borderless, plain inline */
-.sd-scripture-list:has(.sd-reading--static) { border: none; border-radius: 0; }
-.sd-reading--static { border-bottom: none; }
-.sd-reading--static .sd-reading-hd--static { cursor: default; background: transparent; padding: 4px 0; }
-.sd-reading--static .sd-reading-hd--static:hover { background: transparent; }
-
-.sd-reading { border-bottom: 1px solid #DDD8CF; }
-.sd-reading:last-child { border-bottom: none; }
+.sd-reading { border: none; }
 
 .sd-reading-hd {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
-  padding: 14px 20px;
-  background: #FDFCFA;
+  padding: 0 0 0 16px;
+  background: transparent;
   border: none;
   cursor: pointer;
   text-align: left;
-  transition: background-color 0.15s;
   gap: 12px;
+  position: relative;
 }
-.sd-reading-hd:hover { background-color: #F4F1EC; }
-.sd-reading--open .sd-reading-hd { background-color: #F0EDE6; }
+.sd-reading-hd::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  top: 0.18em;
+  color: #C4B89A;
+  font-size: 0.7rem;
+}
+.sd-reading-hd:hover { background: transparent; }
+.sd-reading--open .sd-reading-hd { background: transparent; }
 
-.sd-reading-ref { display: flex; align-items: center; gap: 12px; min-width: 0; }
+/* Static variant (used when scripture_readings is null and we fall back
+   to parsing scripture_ref) — same layout, just no chevron + not clickable */
+.sd-reading--static .sd-reading-hd--static { cursor: default; }
+
+.sd-reading-ref { display: flex; align-items: baseline; gap: 10px; min-width: 0; flex-wrap: wrap; }
 .sd-reading-label { font-size: 0.65rem; font-weight: 400; color: #A09280; letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; }
-.sd-reading-book { font-family: 'Noto Serif TC', serif; font-size: 0.92rem; font-weight: 500; color: #3A3025; letter-spacing: 0.06em; }
-.sd-reading-chevron { color: #A09280; font-size: 0.75rem; transition: transform 0.2s; flex-shrink: 0; }
-.sd-reading--open .sd-reading-chevron { transform: rotate(180deg); }
+.sd-reading-book { font-family: 'Noto Serif TC', serif; font-size: 0.9rem; font-weight: 400; color: #3A3530; letter-spacing: 0.04em; }
+.sd-reading-chevron { color: #A09280; font-size: 0.7rem; transition: transform 0.2s; flex-shrink: 0; opacity: 0.5; }
+.sd-reading--open .sd-reading-chevron { transform: rotate(180deg); opacity: 1; }
 
-.sd-reading-body { padding: 20px 20px 24px; background-color: #FDFCFA; border-top: 1px solid #EDE8DF; }
+.sd-reading-body {
+  padding: 12px 16px 16px;
+  margin-top: 8px;
+  margin-left: 16px;
+  background: #FDFCFA;
+  border: 1px solid #EDE8DF;
+  border-radius: 4px;
+}
 .sd-reading-expand-enter-active, .sd-reading-expand-leave-active { transition: opacity 0.2s; }
 .sd-reading-expand-enter-from, .sd-reading-expand-leave-to { opacity: 0; }
 
@@ -719,7 +738,7 @@ const seasonColor = computed(() => {
   .sd-topbar { padding: 16px 20px; }
   .sd-header { padding: 40px 20px 36px; }
   .sd-section { padding: 32px 20px; }
-  .sd-reading-hd { padding: 12px 16px; }
-  .sd-reading-body { padding: 16px 16px 20px; }
+  .sd-reading-hd { padding: 0 0 0 14px; }
+  .sd-reading-body { padding: 12px 14px 14px; margin-left: 14px; }
 }
 </style>
