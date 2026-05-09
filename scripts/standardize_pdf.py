@@ -296,18 +296,15 @@ def write_jsonl(book_id: str, chunks: list[dict]) -> Path:
 def update_db(book_id: str, chunks: list[dict], metadata: dict) -> None:
     """Same shape as standardize_pdf_lite.update_db, but:
     - chunk_count = len(chunks) (chapters, not pages)
-    - total_pages stays as the highest page_number seen (real PDF page count)
+    - total_pages NOT touched — preserved from parser/OCR's len(doc).
+      Computing it here from chunk page_numbers misses trailing blank
+      pages dropped during OCR.
     """
     import requests
     total_chars = sum(len(c.get("content") or "") for c in chunks)
-    last_page = max(
-        (c.get("page_range", [c.get("page_number") or 0])[-1] for c in chunks),
-        default=0,
-    )
     patch = {
         "chunk_count": len(chunks),
         "total_chars": total_chars,
-        "total_pages": last_page or len(chunks),
         "parsed_at": datetime.utcnow().isoformat() + "Z",
     }
     if metadata.get("full_title"):
