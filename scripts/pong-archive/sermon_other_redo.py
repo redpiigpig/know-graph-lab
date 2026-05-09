@@ -65,7 +65,7 @@ MANIFEST: dict[str, dict] = {
     "uTYicIP3aeQ": {
         "date": "2024-03-17",
         "location": "台北衛理堂",
-        "preacher": "龐君華牧師",
+        "preacher": "龐君華會督",
         "title": "讓心靈活過來",
         "occasion": "預苦期第五主日",
         "scripture_ref": "約翰福音 12:20-33",
@@ -88,7 +88,7 @@ MANIFEST: dict[str, dict] = {
     "WP6iW2xS8nU": {
         "date": "2025-11-30",
         "location": "台北衛理堂",
-        "preacher": "龐君華牧師",
+        "preacher": "龐君華會督",
         "title": "雙重的來臨",
         "occasion": "將臨期第一主日",
         "scripture_ref": "馬太福音 24:36-44",
@@ -111,7 +111,7 @@ MANIFEST: dict[str, dict] = {
     "sVSduRPjKjo": {
         "date": "2024-05-26",
         "location": "台北衛理堂",
-        "preacher": "龐君華牧師",
+        "preacher": "龐君華會督",
         "title": "神聖的連結",
         "occasion": "三一主日（成人主日）",
         "scripture_ref": "約翰福音 3:1-17",
@@ -122,7 +122,7 @@ MANIFEST: dict[str, dict] = {
     "ExZdgNF14U0": {
         "date": "2023-10-29",
         "location": "台北衛理堂",
-        "preacher": "龐君華牧師",
+        "preacher": "龐君華會督",
         "title": "愛的雙重誡命",
         "occasion": "聖靈降臨後第二十二主日",
         "scripture_ref": "馬太福音 22:34-46",
@@ -133,7 +133,7 @@ MANIFEST: dict[str, dict] = {
     "CjIhO1WUhjo": {
         "date": "2025-03-02",
         "location": "台北衛理堂",
-        "preacher": "龐君華牧師",
+        "preacher": "龐君華會督",
         "title": "攀登榮耀之巔：與神聖相遇",
         "occasion": "登山變相主日",
         "scripture_ref": "路加福音 9:28-36",
@@ -189,7 +189,7 @@ MANIFEST: dict[str, dict] = {
     "3ac370LejWM": {
         "date": "2025-08-31",
         "location": "台灣聖公會聖提摩太堂",
-        "preacher": "龐君華牧師",
+        "preacher": "龐君華會督",
         "title": "心靈的水池",
         "occasion": "聖靈降臨後第十二主日 聖餐禮拜",
         "scripture_ref": "路加福音 14:1, 7-14",
@@ -199,6 +199,43 @@ MANIFEST: dict[str, dict] = {
         "is_full_service": True,
     },
 }
+
+
+# ─── Manifest field normalizers ────────────────────────────────────────────
+# pong_sermons.scripture_readings is a JSONB array of
+#   {display_label, book, reference}; worship_songs is a JSONB array of
+# strings. Manifest values are kept as plain strings for editor friendliness;
+# convert them at write time.
+
+_LABEL_RE = re.compile(r"^(經課[一二三四]?|啟應文|福音書|信息經文|詩篇經課)\s*[：:]\s*(.+)$")
+_BOOK_REF_RE = re.compile(r"^(\S+?)\s+(\d.*)$")
+
+
+def _normalize_readings(value):
+    if not value or isinstance(value, list):
+        return value
+    out = []
+    for seg in re.split(r"[；;]", str(value)):
+        seg = seg.strip()
+        if not seg:
+            continue
+        m = _LABEL_RE.match(seg)
+        if not m:
+            out.append({"display_label": "", "book": "", "reference": seg})
+            continue
+        label, body = m.group(1), m.group(2).strip()
+        m2 = _BOOK_REF_RE.match(body)
+        if m2:
+            out.append({"display_label": label, "book": m2.group(1), "reference": m2.group(2).strip()})
+        else:
+            out.append({"display_label": label, "book": body, "reference": ""})
+    return out
+
+
+def _normalize_songs(value):
+    if not value or isinstance(value, list):
+        return value
+    return [s.strip() for s in re.split(r"[、,]", str(value)) if s.strip()]
 
 
 # ─── Supabase REST helpers ─────────────────────────────────────────────────
@@ -257,9 +294,9 @@ def insert_sermon(meta: dict, youtube_url: str | None = None) -> int:
         "location": meta["location"],
         "occasion": meta.get("occasion"),
         "scripture_ref": meta.get("scripture_ref"),
-        "scripture_readings": meta.get("scripture_readings"),
+        "scripture_readings": _normalize_readings(meta.get("scripture_readings")),
         "worship_team": meta.get("worship_team"),
-        "worship_songs": meta.get("worship_songs"),
+        "worship_songs": _normalize_songs(meta.get("worship_songs")),
         "youtube_url": youtube_url,
         "is_published": True,
         "has_recording": True,
@@ -284,9 +321,13 @@ def patch_sermon_metadata(sermon_id: int, meta: dict, youtube_url: str | None = 
     ).json()[0]
     patch = {}
     for k in ("preacher", "location", "title", "occasion", "scripture_ref",
-              "scripture_readings", "worship_team", "worship_songs"):
+              "worship_team"):
         if not sermon.get(k) and meta.get(k):
             patch[k] = meta[k]
+    if not sermon.get("scripture_readings") and meta.get("scripture_readings"):
+        patch["scripture_readings"] = _normalize_readings(meta["scripture_readings"])
+    if not sermon.get("worship_songs") and meta.get("worship_songs"):
+        patch["worship_songs"] = _normalize_songs(meta["worship_songs"])
     if youtube_url and not sermon.get("youtube_url"):
         patch["youtube_url"] = youtube_url
     if not sermon.get("is_published"):
