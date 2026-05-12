@@ -77,24 +77,36 @@ SB_HEADERS = {
 }
 
 
-def _find_gemini_key():
-    """Return any usable Gemini API key. Supports both bare-name slots
-    (GEMINI_API_KEY / Gemini_API_Key / GOOGLE_API_KEY) and numbered slots
-    (Gemini_API_Key_1 .. _10) — the same .env layout `ocr_with_gemini.py` uses."""
+def _find_gemini_keys() -> list[str]:
+    """Return all usable Gemini API keys (in order). Supports bare-name slots
+    (GEMINI_API_KEY / Gemini_API_Key / GOOGLE_API_KEY), numbered slots
+    (Gemini_API_Key_1 .. _10), and comma-separated multi-key strings — the
+    same .env layout `ocr_with_gemini.py` uses. Free-tier daily quota is
+    per-key, so rotating lets ingest survive a single-key 429 lockout."""
     primary = ("GEMINI_API_KEY", "Gemini_API_Key", "gemini_api_key", "GOOGLE_API_KEY")
+    raw_values: list[str] = []
     for name in primary:
         v = os.environ.get(name) or ENV.get(name)
         if v:
-            return v
+            raw_values.append(v); break
     for n in range(1, 11):
         for base in primary:
             v = os.environ.get(f"{base}_{n}") or ENV.get(f"{base}_{n}")
             if v:
-                return v
-    return None
+                raw_values.append(v); break
+    keys: list[str] = []
+    seen: set[str] = set()
+    for raw in raw_values:
+        for piece in raw.split(","):
+            k = piece.strip()
+            if k and k not in seen:
+                seen.add(k); keys.append(k)
+    return keys
 
 
-GEMINI_KEY = _find_gemini_key()
+GEMINI_KEYS = _find_gemini_keys()
+GEMINI_KEY = GEMINI_KEYS[0] if GEMINI_KEYS else None  # back-compat
+_gemini_key_idx = 0  # index into GEMINI_KEYS — advances only when current key hits 429
 
 
 def sanitize_filename(name: str) -> str:
@@ -186,8 +198,14 @@ CATEGORIZE_PROMPT = """你是書籍分類助手。請將下列書籍歸入恰好
 
 
 def gemini_classify(title: str, author: str) -> dict:
-    """Returns {category, subcategory, confidence}. Raises on hard error."""
-    if not GEMINI_KEY:
+    """Returns {category, subcategory, confidence}. Raises on hard error.
+
+    Rotates through GEMINI_KEYS on 429 — free-tier RPD is per-key, so if
+    key #1 is exhausted from earlier OCR runs, switching to #2/#3/#4 buys
+    a fresh quota window without waiting for daily reset.
+    """
+    global _gemini_key_idx
+    if not GEMINI_KEYS:
         raise RuntimeError("Gemini API key not found in env")
     prompt = CATEGORIZE_PROMPT.format(title=title, author=author or "(unknown)")
     body = {
@@ -197,20 +215,40 @@ def gemini_classify(title: str, author: str) -> dict:
             "responseMimeType": "application/json",
         },
     }
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GEMINI_KEY}"
-    # Retry on 503 (UNAVAILABLE — high-demand spike) and 429 (rate limit).
-    # These spikes are usually < 30s; backoff 5/15/30 covers most.
-    for attempt, wait in enumerate((0, 5, 15, 30), start=1):
-        if wait:
-            time.sleep(wait)
-        r = requests.post(url, json=body, timeout=30)
-        if r.status_code == 200:
-            break
-        if r.status_code in (429, 503) and attempt < 4:
-            print(f"    Gemini {r.status_code} — retry {attempt} after {wait + (5 if attempt == 1 else 15)}s",
-                  file=sys.stderr)
+    base_url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
+    # Per-key budget: 4 attempts with short backoff (transient spike). On
+    # persistent 429 advance to next key and reset attempts.
+    last_err: str | None = None
+    while _gemini_key_idx < len(GEMINI_KEYS):
+        key = GEMINI_KEYS[_gemini_key_idx]
+        url = f"{base_url}?key={key}"
+        rotated = False
+        for attempt, wait in enumerate((0, 5, 15, 30), start=1):
+            if wait:
+                time.sleep(wait)
+            r = requests.post(url, json=body, timeout=30)
+            if r.status_code == 200:
+                break
+            last_err = f"HTTP {r.status_code}: {r.text[:200]}"
+            if r.status_code in (429, 503) and attempt < 4:
+                print(f"    Gemini {r.status_code} on key #{_gemini_key_idx} — "
+                      f"retry {attempt} after {wait + (5 if attempt == 1 else 15)}s",
+                      file=sys.stderr)
+                continue
+            if r.status_code == 429:
+                # Persistent 429 on this key — try the next one.
+                if _gemini_key_idx + 1 < len(GEMINI_KEYS):
+                    _gemini_key_idx += 1
+                    print(f"    ⟳ Gemini 429 on key #{_gemini_key_idx - 1}; "
+                          f"switching to key #{_gemini_key_idx} of {len(GEMINI_KEYS)}",
+                          file=sys.stderr)
+                    rotated = True
+                    break  # re-enter outer while with new key
+                raise RuntimeError(f"Gemini {last_err} (all {len(GEMINI_KEYS)} keys exhausted)")
+            raise RuntimeError(f"Gemini {last_err}")
+        if rotated:
             continue
-        raise RuntimeError(f"Gemini HTTP {r.status_code}: {r.text[:200]}")
+        break
     data = r.json()
     text = data["candidates"][0]["content"]["parts"][0]["text"].strip()
     # Be lenient with markdown fences
