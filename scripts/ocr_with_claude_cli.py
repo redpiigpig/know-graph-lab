@@ -333,17 +333,71 @@ def _ocr_batch(client: anthropic.Anthropic, doc, page_indices: list[int]) -> lis
     return _parse_batch_response(batch_text, page_numbers)
 
 
-def ocr_book(client: anthropic.Anthropic, src_path: Path, batch_size: int):
+def _ocr_batch_with_retry(client: anthropic.Anthropic, doc, page_indices: list[int],
+                          make_client_fn, max_retries: int = 8):
+    """Retry transient API errors at the BATCH level so that previously
+    OCR'd batches survive a mid-book hiccup. The previous design retried the
+    whole book in process_one, which wasted hundreds of pages of Haiku quota
+    every time a 502 hit late in a long book (see books 38/45 on 2026-05-13).
+
+    Retries: rate-limit, 502/503/504/529, network errors, "failed to open file"
+             (Drive sync mid-page), 401 (OAuth refresh).
+    Total cushion: ~10 min per batch with 8 retries at 20/40/80/120×5 s backoff.
+    Raises: content-filter (400 …content_filter…) — surface to caller so book
+            stays in queue; other permanent 4xx; or RuntimeError after retries.
+    Returns: (chunks, possibly_refreshed_client)
+    """
+    last_err = ""
+    for attempt in range(1, max_retries + 1):
+        try:
+            return _ocr_batch(client, doc, page_indices), client
+        except anthropic.RateLimitError:
+            last_err = "rate limit"
+            wait = min(2 ** attempt * 10, 120)
+            print(f"    ↻ rate limit (batch), retry {attempt}/{max_retries} after {wait}s", flush=True)
+            time.sleep(wait)
+        except anthropic.APIStatusError as e:
+            last_err = str(e)[:300]
+            if e.status_code in (529, 503, 502, 504):
+                wait = min(2 ** attempt * 10, 120)
+                print(f"    ↻ API {e.status_code} (batch), retry {attempt}/{max_retries} after {wait}s", flush=True)
+                time.sleep(wait)
+            elif e.status_code == 401 and make_client_fn:
+                print(f"    ↻ 401 auth — refreshing OAuth token", flush=True)
+                try:
+                    client = make_client_fn()
+                except Exception as me:
+                    raise RuntimeError(f"token reload failed: {me}") from e
+                time.sleep(2)
+            else:
+                # content-filter or other permanent 4xx — surface up
+                raise
+        except Exception as e:
+            last_err = str(e)[:300]
+            if _is_transient_net(last_err):
+                wait = min(2 ** attempt * 10, 120)
+                print(f"    ↻ network (batch), retry {attempt}/{max_retries} after {wait}s ({last_err[:60]})", flush=True)
+                time.sleep(wait)
+            else:
+                raise
+    raise RuntimeError(f"batch exhausted {max_retries} retries: {last_err[:200]}")
+
+
+def ocr_book(make_client_fn, src_path: Path, batch_size: int):
     """Returns (chunks, pdf_total_pages). pdf_total_pages is the authoritative
     page count from PyMuPDF — used for total_pages metadata so Haiku can't
-    mislabel it via odd [PAGE N] markers."""
+    mislabel it via odd [PAGE N] markers.
+
+    Takes a make_client factory (not a client instance) so 401 token rotations
+    can be handled inside the per-batch retry without restarting the book."""
+    client = make_client_fn()
     doc = fitz.open(src_path)
     total = len(doc)
     all_chunks = []
     for batch_start in range(0, total, batch_size):
         batch_end = min(batch_start + batch_size, total)
         page_indices = list(range(batch_start, batch_end))
-        batch_chunks = _ocr_batch(client, doc, page_indices)
+        batch_chunks, client = _ocr_batch_with_retry(client, doc, page_indices, make_client_fn)
         all_chunks.extend(batch_chunks)
         print(f"    pages {batch_start+1}-{batch_end}/{total}: {len(batch_chunks)} parsed", flush=True)
 
@@ -394,12 +448,15 @@ def _is_transient_net(err_str: str) -> bool:
     ))
 
 
-def process_one(client, book: dict, src_path: Path, batch_size: int, max_retries: int = 4) -> dict:
+def process_one(book: dict, src_path: Path, batch_size: int, max_retries: int = 3) -> dict:
+    """Outer loop only handles pre-OCR failures (fitz.open / Drive hydration).
+    Transient API errors during OCR are handled per-batch inside ocr_book so
+    accumulated chunks survive — don't retry the whole book on those."""
     last_err = ""
     for attempt in range(1, max_retries + 1):
         try:
             t0 = time.time()
-            chunks, pdf_total_pages = ocr_book(client, src_path, batch_size)
+            chunks, pdf_total_pages = ocr_book(make_client, src_path, batch_size)
             non_empty = [c for c in chunks if c.get("text", "").strip()]
             if not non_empty:
                 return {"status": "fail", "error": "model returned 0 usable pages", "transient": False}
@@ -429,41 +486,27 @@ def process_one(client, book: dict, src_path: Path, batch_size: int, max_retries
                 update_book_error(book["id"], f"OCR ok but R2 push failed: {r2_err}")
                 return {"status": "fail", "error": f"R2: {r2_err}", "transient": True}
 
-        except anthropic.RateLimitError:
-            last_err = "rate limit"
-            wait = min(2 ** attempt * 10, 120)
-            print(f"  ↻ rate limit, retry {attempt} after {wait}s")
-            time.sleep(wait)
         except anthropic.APIStatusError as e:
+            # Batch-level retry already exhausted transient retries; what reaches
+            # here is permanent 4xx (most commonly content-filter).
             last_err = str(e)[:300]
-            if e.status_code in (529, 503, 502):
-                wait = min(2 ** attempt * 10, 120)
-                print(f"  ↻ API {e.status_code}, retry {attempt} after {wait}s")
-                time.sleep(wait)
-            elif e.status_code == 401:
-                # OAuth token rotated mid-run. Reload from .credentials.json
-                # and rebuild the client; retry the same book.
-                print(f"  ↻ 401 auth — reloading OAuth token and retrying", flush=True)
-                try:
-                    client = make_client()
-                except Exception as me:
-                    print(f"  ❌ token reload failed: {me}", file=sys.stderr)
-                    return {"status": "fail", "error": last_err, "transient": True}
-                time.sleep(2)
-            else:
-                # 400 with "content filtering" → keep in queue (re-run might succeed
-                # with refined prompt, or with smaller batch isolating offending page).
-                if "content filtering" in last_err.lower() or "content_filter" in last_err.lower():
-                    print(f"  ↻ content filter triggered, leaving in queue")
-                    return {"status": "fail", "error": last_err, "transient": True}
-                # Other permanent API errors (e.g. malformed request) — don't retry
-                print(f"  ❌ {last_err[:200]}")
-                return {"status": "fail", "error": last_err, "transient": False}
+            if "content filtering" in last_err.lower() or "content_filter" in last_err.lower():
+                print(f"  ↻ content filter triggered, leaving in queue")
+                return {"status": "fail", "error": last_err, "transient": True}
+            print(f"  ❌ {last_err[:200]}")
+            return {"status": "fail", "error": last_err, "transient": False}
         except Exception as e:
             last_err = str(e)[:300]
+            # "batch exhausted N retries" → ~10 min of in-batch retries already
+            # burned; don't restart whole book. Leave in queue for next run.
+            if "batch exhausted" in last_err:
+                print(f"  ❌ {last_err[:200]} — leaving in queue (no whole-book restart)")
+                return {"status": "fail", "error": last_err, "transient": True}
+            # fitz.open or Drive-hydration failure before any batch ran → retry
+            # whole book a few times in case Drive catches up.
             if _is_transient_net(last_err) and attempt < max_retries:
                 wait = min(2 ** attempt * 10, 120)
-                print(f"  ↻ network error, retry {attempt} after {wait}s ({last_err[:80]})")
+                print(f"  ↻ retry whole book {attempt}/{max_retries} after {wait}s ({last_err[:80]})")
                 time.sleep(wait)
                 continue
             print(f"  ❌ {last_err[:200]}")
@@ -492,11 +535,10 @@ def cmd_status():
 
 
 def cmd_run(limit=None, batch=DEFAULT_BATCH, one_id=None, dry_run=False):
-    # Build a *function* that returns a fresh client. Long OCR runs (hours)
-    # outlast OAuth tokens — Claude Code refreshes ~/.claude/.credentials.json
-    # every ~hour, so reading the file once at startup leaves us holding a
-    # stale token. Reload before each book.
-    client = make_client()
+    # Smoke-test that make_client() works before queueing books. The factory
+    # is then passed down into ocr_book; per-batch retry handles 401 token
+    # refresh as Claude Code rotates ~/.claude/.credentials.json (~hourly).
+    make_client()
 
     if one_id:
         r = requests.get(f"{URL}/rest/v1/ebooks?id=eq.{one_id}&select=id,title,file_path",
@@ -543,13 +585,7 @@ def cmd_run(limit=None, batch=DEFAULT_BATCH, one_id=None, dry_run=False):
         title_short = (b["title"] or src.stem)[:40]
         print(f"\n  [{i:3d}/{len(targets)}] OCR  {title_short}  ({sz_mb:.1f} MB)…", flush=True)
 
-        # Re-read the OAuth token before each book so refreshes mid-run pick up.
-        try:
-            client = make_client()
-        except Exception as e:
-            print(f"  ❌ failed to refresh client: {e}", file=sys.stderr)
-
-        result = process_one(client, b, src, batch)
+        result = process_one(b, src, batch)
         if result["status"] == "ok":
             ok += 1
             consec_rl_fails = 0
