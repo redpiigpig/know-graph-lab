@@ -1,7 +1,7 @@
 <template>
   <div class="bl-page">
     <div class="bl-topbar">
-      <NuxtLink to="/pong-archive/sermons" class="bl-back">← 講道集</NuxtLink>
+      <NuxtLink to="/pong-archive/sermons/by/location" class="bl-back">← 按地點瀏覽</NuxtLink>
     </div>
 
     <header class="bl-header">

@@ -36,3 +36,14 @@ export const SERMON_TYPE_ORDER = [
 ] as const
 
 export type SermonType = typeof SERMON_TYPE_ORDER[number]
+
+// Always-show location categories, in display order. The first 4 are 衛理
+// internal locations the user wants surfaced even with 0 sermons (e.g. 陽明山
+// 福音園 has no entries yet but will). External categories show up only when
+// they have data — see `mergeLocationGroups` in by/location/index.vue.
+export const CANONICAL_LOCATIONS = [
+  '台北衛理堂',
+  '衛理公會城中教會',
+  '衛理公會雅各堂',
+  '陽明山衛理福音園',
+] as const
