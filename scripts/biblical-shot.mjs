@@ -61,8 +61,10 @@ if (!actionLink) { console.error('No action_link in response'); process.exit(1) 
 console.log('  action_link:', actionLink.slice(0, 80) + '…')
 
 // ── 2. Launch Playwright ────────────────────────────────────────────
+const viewportW = parseInt(arg('width') || '2800', 10)
+const viewportH = parseInt(arg('height') || '1800', 10)
 const browser = await chromium.launch({ headless: true })
-const context = await browser.newContext({ viewport: { width: 1920, height: 1200 } })
+const context = await browser.newContext({ viewport: { width: viewportW, height: viewportH } })
 const page = await context.newPage()
 
 console.log('→ Following magic link (redirects to prod with tokens in URL hash)…')
@@ -168,15 +170,42 @@ if (expandName) {
   await page.waitForTimeout(1500)
 }
 
-// ── 5. Optional: focus by panning to a card ─────────────────────────
-if (focusName) {
-  console.log(`→ Centering on "${focusName}"`)
+// ── 5. Optional: pan the canvas to bring a card into view ───────────
+// The chart uses CSS transform (not native scroll), so we mutate the
+// transform's translate values directly via DOM.
+async function panTo(target) {
   await page.evaluate((target) => {
+    const vp = document.querySelector('.bg-stone-50') // viewport
+    if (!vp) return
     const cards = Array.from(document.querySelectorAll('.node-card'))
     const card = cards.find(c => c.textContent?.includes(target))
-    if (card) card.scrollIntoView({ block: 'center', inline: 'center' })
-  }, focusName)
-  await page.waitForTimeout(500)
+    if (!card) return
+    // Find the inner canvas div whose style has transform
+    const canvas = vp.querySelector('div[style*="transform"]')
+    if (!canvas) return
+    const m = canvas.style.transform.match(/translate\(([-\d.]+)px,\s*([-\d.]+)px\)\s*scale\(([\d.]+)\)/)
+    if (!m) return
+    const [, pxStr, pyStr, scaleStr] = m
+    const scale = parseFloat(scaleStr)
+    // Card position in canvas (pre-transform)
+    const cardLeft = parseFloat(card.style.left)
+    const cardTop = parseFloat(card.style.top)
+    const cardW = parseFloat(card.style.width)
+    const vpRect = vp.getBoundingClientRect()
+    // Desired: card center == viewport center
+    const newPanX = vpRect.width / 2 - (cardLeft + cardW / 2) * scale
+    const newPanY = vpRect.height / 2 - (cardTop + 26) * scale
+    canvas.style.transform = `translate(${newPanX}px, ${newPanY}px) scale(${scale})`
+  }, target)
+  await page.waitForTimeout(400)
+}
+if (focusName) {
+  console.log(`→ Panning to "${focusName}"`)
+  await panTo(focusName)
+}
+if (expandName) {
+  // After expanding, also pan to it (the card is the anchor of its subtree)
+  await panTo(expandName)
 }
 
 // ── 6. Screenshot ──────────────────────────────────────────────────
