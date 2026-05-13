@@ -377,8 +377,8 @@ const tradition = ref<Tradition>(
 
 const traditionOptions: Array<{ value: Tradition; label: string; activeColor: string }> = [
   { value: 'biblical', label: '聖經',     activeColor: 'text-gray-900' },
-  { value: 'catholic', label: '天主教',   activeColor: 'text-red-600' },
-  { value: 'orthodox', label: '東方教會', activeColor: 'text-yellow-600' },
+  { value: 'catholic', label: '天主教',   activeColor: 'text-purple-600' },
+  { value: 'orthodox', label: '東方教會', activeColor: 'text-emerald-600' },
   { value: 'rabbinic', label: '拉比',     activeColor: 'text-blue-600' },
 ]
 

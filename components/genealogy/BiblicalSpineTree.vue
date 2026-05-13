@@ -136,8 +136,8 @@
         <div class="flex items-center gap-1.5"><span class="w-3 h-0 border-t border-dashed border-gray-400" />虛線：法律關係（約瑟→耶穌）</div>
         <div class="flex items-center gap-1.5"><span class="w-3 h-0 border-t border-dashed border-red-600" />紅虛線：聖靈感孕婚姻（約瑟↔馬利亞）</div>
         <div class="flex items-center gap-1.5 pt-1 mt-1 border-t border-gray-100"><span class="inline-block w-3 h-3 border border-orange-300 bg-orange-50 rounded" />早期教會傳統（東西方共識）</div>
-        <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-red-300 bg-red-50 rounded" />天主教傳統</div>
-        <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-yellow-400 bg-yellow-50 rounded" />東方教會傳統</div>
+        <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-purple-300 bg-purple-50 rounded" />天主教傳統</div>
+        <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-emerald-300 bg-emerald-50 rounded" />東方教會傳統</div>
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-blue-300 bg-blue-50 rounded" />拉比傳統</div>
         <div class="text-gray-400 mt-1 pt-1 border-t border-gray-100">滾輪：上下/左右移動　·　Ctrl+滾輪：縮放　·　拖曳：平移　·　♻ 點擊跳同人</div>
       </div>
@@ -1481,20 +1481,21 @@ function jumpToOther(current: LNode) {
 }
 
 // ── Card styling ──────────────────────────────────────────────────────
-// Tradition colors override spine/gender styling (per skill spec):
-//   early_consensus (橘) — east+west agree
-//   catholic        (紅) — Western tradition only
-//   orthodox        (黃) — Eastern tradition only
-//   rabbinic        (藍) — Rabbinic post-biblical
+// Tradition colors override spine/gender styling. Chosen to avoid clashing
+// with existing spine/female palette (which uses amber + rose + rose-50):
+//   early_consensus (橘 orange) — east+west agree
+//   catholic        (紫 purple) — bishops' colour; avoids red/rose clash
+//   orthodox        (綠 emerald) — Byzantine green; avoids yellow/amber clash
+//   rabbinic        (藍 blue)   — Rabbinic post-biblical
 // Spine bar (amber/rose left edge) stays — it's rendered as a separate div.
 function cardClass(n: LNode) {
   const base = 'shadow-sm hover:shadow-md rounded-xl cursor-pointer'
   if (n.tradition === 'early_consensus')
     return `border border-orange-300 bg-orange-50 ${base}`
   if (n.tradition === 'catholic')
-    return `border border-red-300 bg-red-50 ${base}`
+    return `border border-purple-300 bg-purple-50 ${base}`
   if (n.tradition === 'orthodox')
-    return `border border-yellow-400 bg-yellow-50 ${base}`
+    return `border border-emerald-300 bg-emerald-50 ${base}`
   if (n.tradition === 'rabbinic')
     return `border border-blue-300 bg-blue-50 ${base}`
   if (n.spineKind === 'A' || n.spineKind === 'S' || n.spineKind === 'single')
