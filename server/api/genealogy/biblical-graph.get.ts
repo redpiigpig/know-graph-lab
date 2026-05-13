@@ -43,6 +43,67 @@ export default defineEventHandler(async (event) => {
     return null
   }
 
+  // ── Build parent→child adjacency for tribeCode propagation ────────────
+  const childIdsOf = new Map<string, string[]>()
+  for (const p of people) {
+    if (!p.children) continue
+    const kids: string[] = []
+    for (const raw of p.children.split(/[,，、]/)) {
+      const cid = resolveId(raw, p.name_zh)
+      if (cid && cid !== p.id) kids.push(cid)
+    }
+    if (kids.length) childIdsOf.set(p.id, kids)
+  }
+
+  // ── tribeCode: derive from descent of Jacob's 12 sons (+ Joseph's split) ──
+  // R/S/L/J/D/N/G/A/I/Z/B = 11 of Jacob's sons. Patriarch 約瑟 himself has no
+  // code, but his sons 瑪拿西 / 以法蓮 anchor M and E.
+  const TRIBE_SEEDS: Array<[string, string]> = [
+    ['呂便', 'R'],         // Reuben
+    ['流便', 'R'],         // alternative name
+    ['西緬', 'S'],
+    ['利未', 'L'],
+    ['猶大', 'J'],
+    ['但', 'D'],
+    ['拿弗他利', 'N'],
+    ['迦得', 'G'],
+    ['亞設', 'A'],
+    ['以薩迦', 'I'],
+    ['西布倫', 'Z'],
+    ['便雅憫', 'B'],
+    ['瑪拿西（約瑟之子）', 'M'],
+    ['以法蓮（約瑟之子）', 'E'],
+  ]
+  const tribeCode = new Map<string, string>()
+  for (const [seedName, code] of TRIBE_SEEDS) {
+    const seedId = exactMap.get(seedName)
+    if (!seedId) continue
+    // DFS downward, but skip nodes that already have a code (first-seed wins)
+    const stack: string[] = [seedId]
+    const visited = new Set<string>()
+    while (stack.length) {
+      const cur = stack.pop()!
+      if (visited.has(cur)) continue
+      visited.add(cur)
+      if (!tribeCode.has(cur)) tribeCode.set(cur, code)
+      for (const c of childIdsOf.get(cur) ?? []) {
+        if (!visited.has(c)) stack.push(c)
+      }
+    }
+  }
+
+  // 約瑟 the patriarch should NOT have a tribe code (he's the M/E split point).
+  // Strip any code that got assigned via Joseph (e.g. if M propagated up by mistake).
+  const josephPatriarch = exactMap.get('約瑟')  // patriarch is the bare-named one
+  if (josephPatriarch) tribeCode.delete(josephPatriarch)
+
+  // ── Format generation label: tribeCode + gen (e.g. "L23") or "第N代" ───
+  function genLabel(p: typeof people[0]): string {
+    if (p.generation == null) return ''
+    const tc = tribeCode.get(p.id)
+    return tc ? `${tc}${p.generation}` : `第 ${p.generation} 代`
+  }
+
   const nodes = people.map(p => ({
     id: p.id,
     type: 'person',
@@ -50,7 +111,7 @@ export default defineEventHandler(async (event) => {
     data: {
       name: p.name_zh,
       gender: p.gender === '男' ? 'male' : p.gender === '女' ? 'female' : 'unknown',
-      generation: p.generation != null ? `第 ${p.generation} 代` : '',
+      generation: genLabel(p),
       birthYear: p.birth_year != null
         ? (p.birth_year < 0 ? `前${Math.abs(p.birth_year)}` : `${p.birth_year}`)
         : '',
@@ -60,11 +121,22 @@ export default defineEventHandler(async (event) => {
       notes: p.notes ?? '',
       sortOrder: p.sort_order ?? 9999,
       generationNum: p.generation ?? 0,
+      tribeCode: tribeCode.get(p.id) ?? null,
       shape: 'rectangle',
       borderStyleId: 'solid-md',
       borderColor: '#d1d5db',
     },
   }))
+
+  // ── Edges with relationKind for Joseph→Jesus (legal) vs Mary→Jesus (biological) ──
+  const josephHusbandId = exactMap.get('約瑟（馬利亞之夫）')
+  const maryMotherId    = exactMap.get('馬利亞（耶穌之母）')
+  const jesusId         = exactMap.get('耶穌（拿撒勒人）')
+
+  function relationKind(parentId: string, childId: string): 'legal' | 'biological' {
+    if (childId === jesusId && parentId === josephHusbandId) return 'legal'
+    return 'biological'
+  }
 
   const edges: Record<string, unknown>[] = []
   const seen = new Set<string>()
@@ -77,17 +149,26 @@ export default defineEventHandler(async (event) => {
         const eid = `pc:${p.id}:${childId}`
         if (seen.has(eid)) continue
         seen.add(eid)
+        const kind = relationKind(p.id, childId)
+        const isLegal = kind === 'legal'
         edges.push({
           id: eid,
           source: p.id,
           target: childId,
           type: 'familyTree',
           markerEnd: 'arrowclosed',
-          style: { stroke: '#6b7280', strokeWidth: 1.5 },
+          style: {
+            stroke: '#6b7280',
+            strokeWidth: 1.5,
+            strokeDasharray: isLegal ? '5,4' : '',
+          },
           data: {
             relationshipType: 'parentChild',
+            relationKind: kind,
             color: '#6b7280', strokeWidth: 1.5,
-            strokeDasharray: '', lineType: 'familyTree', dashStyleId: 'solid',
+            strokeDasharray: isLegal ? '5,4' : '',
+            lineType: 'familyTree',
+            dashStyleId: isLegal ? 'dashed' : 'solid',
           },
         })
       }

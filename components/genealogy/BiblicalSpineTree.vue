@@ -9,13 +9,27 @@
     @pointerup="onPointerUp"
     @pointercancel="onPointerUp"
   >
+    <!-- Breadcrumb (recursive view only) -->
+    <div v-if="props.rootId && props.breadcrumb?.length" class="absolute top-0 left-0 right-0 z-40 flex items-center gap-2 px-3 h-10 bg-white/95 border-b border-gray-100 shadow-sm pointer-events-auto">
+      <button class="text-xs px-2 py-1 rounded text-gray-500 hover:bg-gray-50 transition" @click="$emit('closeRecursive')">
+        ← 返回
+      </button>
+      <div class="w-px h-4 bg-gray-200" />
+      <div class="flex items-center gap-1.5 text-xs overflow-x-auto whitespace-nowrap">
+        <template v-for="(b, i) in props.breadcrumb" :key="b.id">
+          <span class="text-gray-400">{{ b.name }}</span>
+          <span v-if="i < props.breadcrumb.length - 1" class="text-gray-300">›</span>
+        </template>
+      </div>
+    </div>
+
     <!-- Loading / error -->
     <div v-if="!ready" class="flex flex-col items-center justify-center h-full gap-2 pointer-events-none">
       <span class="text-gray-400 text-sm">
         {{ props.nodes.length === 0 ? '資料載入中…' : '計算族譜圖…' }}
       </span>
-      <span v-if="props.nodes.length > 0 && spine.length === 0" class="text-xs text-red-400">
-        找不到亞當→耶穌路徑（共 {{ props.nodes.length }} 人）
+      <span v-if="props.nodes.length > 0 && !hasSpine" class="text-xs text-red-400">
+        {{ props.rootId ? '此節點無後代' : '找不到亞當→耶穌路徑' }}（共 {{ props.nodes.length }} 人）
       </span>
     </div>
 
@@ -34,40 +48,46 @@
         <svg class="absolute inset-0 pointer-events-none overflow-visible"
              :width="cv!.w" :height="cv!.h">
 
-          <!-- Spine trunk guide (faint amber) -->
-          <line :x1="cv!.spineCX" :y1="cv!.spineY1"
-                :x2="cv!.spineCX" :y2="cv!.spineY2"
-                stroke="#f59e0b" stroke-width="6" opacity="0.10" stroke-linecap="round" />
+          <!-- Spine trunk guides (faint, behind cards) -->
+          <line v-for="(g, i) in cv!.trunkGuides" :key="'tg'+i"
+                :x1="g.x" :y1="g.y1" :x2="g.x" :y2="g.y2"
+                :stroke="g.color" stroke-width="6" opacity="0.10" stroke-linecap="round" />
 
-          <!-- Marriage lines (red, passes behind person cards) -->
+          <!-- Marriage lines (red) -->
           <line v-for="m in cv!.marriages" :key="m.id"
                 :x1="m.x1" :y1="m.y" :x2="m.x2" :y2="m.y"
                 stroke="#dc2626" stroke-width="2" stroke-linecap="round" />
 
-          <!-- Vertical drops (parent bottom → child/clan top) -->
+          <!-- Vertical drops (parent → child) -->
           <line v-for="(d, i) in cv!.drops" :key="'d'+i"
                 :x1="d.x" :y1="d.y1" :x2="d.x" :y2="d.y2"
-                stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" />
+                :stroke="d.stroke || '#9ca3af'" stroke-width="1.5"
+                stroke-linecap="round"
+                :stroke-dasharray="d.dashed ? '6,4' : ''" />
 
-          <!-- Horizontal bars (when patriarch has spine child + own clan) -->
+          <!-- Horizontal bars -->
           <line v-for="(b, i) in cv!.hbars" :key="'b'+i"
                 :x1="b.x1" :y1="b.y" :x2="b.x2" :y2="b.y"
-                stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" />
+                :stroke="b.stroke || '#9ca3af'" stroke-width="1.5"
+                stroke-linecap="round"
+                :stroke-dasharray="b.dashed ? '6,4' : ''" />
         </svg>
 
-        <!-- ② Person and clan cards (on top of SVG) -->
+        <!-- ② Person and clan cards -->
         <div
           v-for="n in cv!.nodes" :key="n.id"
           class="node-card absolute"
           :class="cardClass(n)"
           :style="cardStyle(n)"
-          @click.stop="n.isClan ? openClan(n) : $emit('selectPerson', n.id)"
+          @click.stop="onCardClick(n)"
         >
-          <div v-if="n.isSpine" class="absolute left-0 top-2 bottom-2 w-[3px] bg-amber-400 rounded-full" />
-          <div class="px-2.5 py-1.5" :class="n.isSpine ? 'pl-4' : ''">
+          <div v-if="n.spineKind === 'A'"      class="absolute left-0 top-2 bottom-2 w-[3px] bg-amber-400 rounded-full" />
+          <div v-else-if="n.spineKind === 'B'" class="absolute left-0 top-2 bottom-2 w-[3px] bg-rose-400 rounded-full" />
+          <div v-else-if="n.spineKind === 'S'" class="absolute left-0 top-2 bottom-2 w-[3px] bg-amber-400 rounded-full" />
+          <div class="px-2.5 py-1.5" :class="n.spineKind ? 'pl-4' : ''">
             <div class="text-[9px] font-medium leading-none mb-0.5 tracking-wide opacity-60"
-                 :class="n.isClan ? 'text-amber-600' : n.isSpine ? 'text-amber-500' : 'text-slate-400'">
-              {{ n.isClan ? `旁支 · ${n.clanCount}人` : `第 ${n.generation} 代` }}
+                 :class="genLabelColor(n)">
+              {{ n.genLabel }}
             </div>
             <div class="text-[12px] font-semibold leading-snug"
                  :class="n.isClan ? 'text-amber-800' : 'text-slate-800'"
@@ -81,70 +101,75 @@
 
       <!-- Controls (viewport-fixed) -->
       <div class="absolute top-3 right-3 z-40 flex flex-col gap-1.5 pointer-events-auto">
-        <button
-          class="w-8 h-8 bg-white/90 border border-gray-200 rounded-lg text-gray-700 hover:bg-gray-50
-                 text-base font-medium shadow-sm transition flex items-center justify-center cursor-default"
-          @click.stop="zoomIn">+</button>
-        <button
-          class="w-8 h-8 bg-white/90 border border-gray-200 rounded-lg text-gray-700 hover:bg-gray-50
-                 text-base font-medium shadow-sm transition flex items-center justify-center cursor-default"
-          @click.stop="zoomOut">−</button>
+        <button class="w-8 h-8 bg-white/90 border border-gray-200 rounded-lg text-gray-700 hover:bg-gray-50
+                       text-base font-medium shadow-sm transition flex items-center justify-center cursor-default"
+                @click.stop="zoomIn">+</button>
+        <button class="w-8 h-8 bg-white/90 border border-gray-200 rounded-lg text-gray-700 hover:bg-gray-50
+                       text-base font-medium shadow-sm transition flex items-center justify-center cursor-default"
+                @click.stop="zoomOut">−</button>
         <div class="text-[9px] text-gray-400 text-center tabular-nums">{{ Math.round(zoom * 100) }}%</div>
-        <button
-          class="px-1 py-1.5 bg-white/90 border border-amber-300 rounded-lg text-amber-600
-                 text-[10px] font-medium shadow-sm hover:bg-amber-50 transition leading-tight
-                 text-center cursor-default"
-          @click.stop="fitSpine">定位<br>主幹</button>
+        <button class="px-1 py-1.5 bg-white/90 border border-amber-300 rounded-lg text-amber-600
+                       text-[10px] font-medium shadow-sm hover:bg-amber-50 transition leading-tight
+                       text-center cursor-default"
+                @click.stop="fitSpine">定位<br>主幹</button>
+      </div>
+
+      <!-- Legend (only at top level) -->
+      <div v-if="!props.rootId" class="absolute bottom-3 left-3 z-40 bg-white/95 border border-gray-200 rounded-lg p-2 text-[10px] text-gray-600 shadow-sm pointer-events-none space-y-0.5">
+        <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-amber-400 rounded-full" />主幹 A：馬太譜系（猶大→所羅門→約瑟）</div>
+        <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-rose-400 rounded-full" />主幹 B：路加譜系（猶大→拿單→馬利亞）</div>
+        <div class="flex items-center gap-1.5"><span class="w-3 h-0 border-t border-dashed border-gray-400" />虛線：法律關係（約瑟→耶穌）</div>
       </div>
     </template>
 
-    <!-- Clan overlay (full-screen, fixed to viewport) -->
+    <!-- Recursive clan overlay (renders this component itself) -->
     <Transition name="ft">
-      <div v-if="activeClan" class="absolute inset-0 z-50 bg-stone-50 flex flex-col">
-        <div class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 shrink-0">
-          <button class="text-sm text-gray-500 hover:text-gray-700 transition"
-                  @click="activeClan = null">← 返回族譜</button>
-          <div class="w-px h-4 bg-gray-200" />
-          <span class="font-semibold text-sm text-gray-900">{{ activeClan.rawName }}</span>
-          <span class="text-xs text-gray-400 ml-1">共 {{ activeClan.clanCount }} 人</span>
-        </div>
-        <div class="flex-1 overflow-auto p-4">
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
-            <div v-for="m in clanMembers" :key="m.id"
-                 class="bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs
-                        cursor-pointer hover:border-amber-300 hover:shadow-sm transition"
-                 @click="$emit('selectPerson', m.id)">
-              <div class="font-semibold text-gray-800">{{ baseName(m.name) }}</div>
-              <div class="text-gray-400 mt-0.5">第 {{ m.generation }} 代</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <BiblicalSpineTree
+        v-if="recursiveRoot"
+        :nodes="props.nodes"
+        :edges="props.edges"
+        :root-id="recursiveRoot.id"
+        :breadcrumb="[...(props.breadcrumb || []), recursiveRoot]"
+        class="absolute inset-0 z-50"
+        @select-person="$emit('selectPerson', $event)"
+        @close-recursive="recursiveRoot = null"
+      />
     </Transition>
   </div>
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{ nodes: any[]; edges: any[] }>()
-const emit  = defineEmits<{ selectPerson: [id: string] }>()
+defineOptions({ name: 'BiblicalSpineTree' })
+
+interface BreadcrumbItem { id: string; name: string }
+
+const props = defineProps<{
+  nodes: any[]
+  edges: any[]
+  rootId?: string                   // when set: recursive single-spine mode
+  breadcrumb?: BreadcrumbItem[]     // navigation crumbs (recursive only)
+}>()
+const emit = defineEmits<{
+  selectPerson:    [id: string]
+  closeRecursive:  []
+}>()
 
 // ── Layout constants ──────────────────────────────────────────────────
-const NW             = 120   // person card width
-const NH             = 52    // person card height
-const CW             = 108   // clan card width
-const CH             = 52    // clan card height
-const MG             = 12    // gap between stacked wives
-const HG             = 20    // horizontal gap
-const VG             = 90    // vertical gap between rows
-const RH             = NH + VG
-const PAD            = 48
-const MAR_GAP        = Math.round(VG / 2)  // 45 – marriage line length (between card edges)
-const SHOW_THRESHOLD = 4                    // show non-spine children individually if ≤ this
+const NW          = 120  // person card width
+const NH          = 52   // person card height
+const CW          = 108  // clan card width
+const CH          = 52
+const MG          = 12   // wife stacking gap
+const HG          = 20   // horizontal gap between cards
+const VG          = 90   // vertical gap between rows
+const RH          = NH + VG
+const PAD         = 48
+const MAR_GAP     = Math.round(VG / 2)
+const DIVERGE_X   = 320  // half-distance between spine A and B center columns
 
 const baseName  = (s: string) => s.split('（')[0].trim()
 const shortName = (s: string) => { const b = baseName(s); return b.length <= 7 ? b : b.slice(0, 6) + '…' }
-const genY      = (g: number) => (g - 1) * RH + PAD
-const marY      = (g: number) => genY(g) + NH / 2
+const rowY      = (row: number) => row * RH + PAD
 
 // ── Graph maps ────────────────────────────────────────────────────────
 const personById = computed(() => {
@@ -152,8 +177,12 @@ const personById = computed(() => {
   for (const n of props.nodes) m.set(n.id, n)
   return m
 })
+const personByName = computed(() => {
+  const m = new Map<string, any>()
+  for (const n of props.nodes) m.set(n.data.name, n)
+  return m
+})
 
-// parentChild edges: source → [targets]
 const childrenOf = computed(() => {
   const m = new Map<string, string[]>()
   for (const e of props.edges) {
@@ -164,8 +193,6 @@ const childrenOf = computed(() => {
   }
   return m
 })
-
-// spouse edges: bidirectional
 const spousesOf = computed(() => {
   const m = new Map<string, string[]>()
   for (const e of props.edges) {
@@ -179,238 +206,574 @@ const spousesOf = computed(() => {
   }
   return m
 })
+const parentsOf = computed(() => {
+  const m = new Map<string, string[]>()
+  for (const e of props.edges) {
+    if (e.data?.relationshipType === 'parentChild') {
+      if (!m.has(e.target)) m.set(e.target, [])
+      m.get(e.target)!.push(e.source)
+    }
+  }
+  return m
+})
 
-// ── Spine: BFS from 亞當 → 耶穌（拿撒勒人） ─────────────────────────
-const spine = computed((): string[] => {
-  const ch = childrenOf.value
-  const adamId  = props.nodes.find(n => n.data?.name === '亞當')?.id ?? ''
-  const jesusId = props.nodes.find(n => n.data?.name === '耶穌（拿撒勒人）')?.id ?? ''
-  if (!adamId || !jesusId) return []
-  const queue: string[][] = [[adamId]]
+const relationKindMap = computed(() => {
+  // edge key "parent|child" → 'legal' | 'biological'
+  const m = new Map<string, string>()
+  for (const e of props.edges) {
+    if (e.data?.relationshipType === 'parentChild' && e.data?.relationKind) {
+      m.set(`${e.source}|${e.target}`, e.data.relationKind)
+    }
+  }
+  return m
+})
+
+// ── Spine path computation ────────────────────────────────────────────
+function bfsPath(src: string, dst: string, ch: Map<string, string[]>): string[] {
+  if (src === dst) return [src]
+  const queue: string[][] = [[src]]
   const vis = new Set<string>()
   while (queue.length) {
     const path = queue.shift()!
     const cur  = path[path.length - 1]
-    if (cur === jesusId) return path
+    if (cur === dst) return path
     if (vis.has(cur)) continue
     vis.add(cur)
     for (const c of ch.get(cur) ?? []) if (!vis.has(c)) queue.push([...path, c])
   }
   return []
+}
+
+function resolveByName(name: string): string | undefined {
+  return personByName.value.get(name)?.id
+}
+
+function spineFromWaypoints(names: string[], ch: Map<string, string[]>): string[] {
+  const ids = names.map(resolveByName).filter(Boolean) as string[]
+  if (ids.length < 2) return []
+  const path: string[] = []
+  for (let i = 0; i < ids.length - 1; i++) {
+    const seg = bfsPath(ids[i], ids[i + 1], ch)
+    if (!seg.length) return []
+    if (i === 0) path.push(...seg)
+    else path.push(...seg.slice(1))
+  }
+  return path
+}
+
+// Longest descent from a root (for recursive/single mode)
+function longestDescent(rootId: string, ch: Map<string, string[]>): string[] {
+  const memo = new Map<string, string[]>()
+  function dfs(id: string, vis: Set<string>): string[] {
+    if (memo.has(id)) return memo.get(id)!
+    if (vis.has(id)) return [id]
+    vis.add(id)
+    let best: string[] = [id]
+    for (const c of ch.get(id) ?? []) {
+      const sub = dfs(c, new Set(vis))
+      if (1 + sub.length > best.length) best = [id, ...sub]
+    }
+    memo.set(id, best)
+    return best
+  }
+  return dfs(rootId, new Set())
+}
+
+// Top-level dual-spine waypoints (use names that exist in DB)
+const SPINE_A_WAYPOINTS = [
+  '亞當', '塞特', '挪亞', '閃', '亞伯拉罕', '以撒', '雅各',
+  '猶大', '大衛（耶西之子）', '所羅門（大衛之子）',
+  '雅各（馬但之子）', '約瑟（馬利亞之夫）', '耶穌（拿撒勒人）',
+]
+const SPINE_B_WAYPOINTS = [
+  '亞當', '塞特', '挪亞', '閃', '亞伯拉罕', '以撒', '雅各',
+  '猶大', '大衛（耶西之子）', '拿單（大衛之子）',
+  '瑪塔（路加 3:24）', '約亞敬（聖母之父）', '馬利亞（耶穌之母）', '耶穌（拿撒勒人）',
+]
+
+const isDualMode = computed(() => !props.rootId)
+
+const spineA = computed(() => isDualMode.value ? spineFromWaypoints(SPINE_A_WAYPOINTS, childrenOf.value) : [])
+const spineB = computed(() => isDualMode.value ? spineFromWaypoints(SPINE_B_WAYPOINTS, childrenOf.value) : [])
+const spineSingle = computed(() => isDualMode.value || !props.rootId ? [] : longestDescent(props.rootId, childrenOf.value))
+
+const jesusId = computed(() => resolveByName('耶穌（拿撒勒人）'))
+
+// Shared trunk (prefix that both A and B agree on)
+const sharedTrunkIds = computed(() => {
+  if (!isDualMode.value) return []
+  const a = spineA.value, b = spineB.value
+  if (!a.length || !b.length) return []
+  const setB = new Set(b)
+  const shared: string[] = []
+  for (const id of a) {
+    if (setB.has(id)) shared.push(id)
+    else break
+  }
+  return shared
 })
 
-const spineSet = computed(() => new Set(spine.value))
+// Spine A unique (after shared trunk, excluding final Jesus)
+const spineAUniqueIds = computed(() => {
+  if (!isDualMode.value) return []
+  const a = spineA.value
+  const sharedLen = sharedTrunkIds.value.length
+  const out: string[] = []
+  for (let i = sharedLen; i < a.length; i++) {
+    if (a[i] === jesusId.value) break
+    out.push(a[i])
+  }
+  return out
+})
+const spineBUniqueIds = computed(() => {
+  if (!isDualMode.value) return []
+  const b = spineB.value
+  const sharedLen = sharedTrunkIds.value.length
+  const out: string[] = []
+  for (let i = sharedLen; i < b.length; i++) {
+    if (b[i] === jesusId.value) break
+    out.push(b[i])
+  }
+  return out
+})
 
-// ── Subtree collector ─────────────────────────────────────────────────
+const hasSpine = computed(() => {
+  if (isDualMode.value) return spineA.value.length > 0 && spineB.value.length > 0
+  return spineSingle.value.length > 0
+})
+
+// All ids on any spine (for non-spine detection)
+const spineMembership = computed(() => {
+  const m = new Map<string, 'A' | 'B' | 'S' | 'single'>()
+  if (isDualMode.value) {
+    for (const id of sharedTrunkIds.value) m.set(id, 'S')
+    for (const id of spineAUniqueIds.value) m.set(id, 'A')
+    for (const id of spineBUniqueIds.value) m.set(id, 'B')
+    if (jesusId.value) m.set(jesusId.value, 'S')
+  } else {
+    for (const id of spineSingle.value) m.set(id, 'single')
+  }
+  return m
+})
+
+// ── Clan collector ────────────────────────────────────────────────────
 function subtreeIds(id: string, vis = new Set<string>()): string[] {
   if (vis.has(id)) return []
   vis.add(id)
   return [id, ...(childrenOf.value.get(id) ?? []).flatMap(c => subtreeIds(c, vis))]
 }
 
-// ── Node type ─────────────────────────────────────────────────────────
+// ── Node interface ────────────────────────────────────────────────────
 interface LNode {
-  id: string; rawName: string; displayName: string
-  generation: number; gender: string
+  id: string
+  rawName: string
+  displayName: string
+  genLabel: string
+  generation: number
+  gender: string
   x: number; y: number; w: number; h: number
-  isSpine: boolean; isClan: boolean
-  clanCount?: number; clanMemberIds?: string[]
+  spineKind: 'A' | 'B' | 'S' | 'single' | null
+  isClan: boolean
+  clanCount?: number
+  clanMemberIds?: string[]
+  clanRootId?: string         // representative person of the clan (for recursive open)
 }
-interface VDrop { x: number; y1: number; y2: number }
-interface HBar  { x1: number; x2: number; y: number }
+interface VDrop { x: number; y1: number; y2: number; stroke?: string; dashed?: boolean }
+interface HBar  { x1: number; x2: number; y: number; stroke?: string; dashed?: boolean }
 interface MLine { id: string; x1: number; x2: number; y: number }
+interface TrunkGuide { x: number; y1: number; y2: number; color: string }
+
+function getGenLabel(p: any): string {
+  // Backend already formats as "L23" / "J33" / "第 N 代" / "" — just use it
+  return p?.data?.generation ?? ''
+}
+
+// ── Helpers for placing a single spine person ─────────────────────────
+interface PlaceParams {
+  centerX: number              // spine column center X
+  row: number                  // row index for this spine person
+  childRow: number             // row index for spine child (next on the spine)
+  wifeSide: 'left' | 'right'
+  clanSide: 'left' | 'right'
+}
 
 // ── Main layout ───────────────────────────────────────────────────────
 const cv = computed(() => {
-  const spn  = spine.value
-  if (!spn.length) return null
+  if (!hasSpine.value) return null
 
-  const spSet = spineSet.value
   const ch    = childrenOf.value
   const sp    = spousesOf.value
   const pMap  = personById.value
-
-  // SPINE_X: enough room for all wives (stacked left) + MAR_GAP
-  const maxWives = Math.max(0, ...spn.map(id => (sp.get(id) ?? []).length))
-  const SPINE_X  = PAD + (maxWives > 0
-    ? MAR_GAP + maxWives * NW + Math.max(0, maxWives - 1) * MG
-    : 0)
-  const spineCX  = SPINE_X + NW / 2
+  const rk    = relationKindMap.value
+  const membership = spineMembership.value
 
   const nodes:     LNode[] = []
   const drops:     VDrop[] = []
   const hbars:     HBar[]  = []
   const marriages: MLine[] = []
+  const trunkGuides: TrunkGuide[] = []
   const shown = new Set<string>()
+  const crossSpineDrawn = new Set<string>()  // dedup cross-spine marriage lines
 
-  // ── Place all spine nodes first ────────────────────────────────────
-  for (const sid of spn) {
+  // Determine: which spine person → row index
+  // For uniform row pitch, use row = (index in spine), starting from 0 for the top of this view.
+  const rowOf = new Map<string, number>()
+
+  let bottomRow = 0
+
+  if (isDualMode.value) {
+    const shared = sharedTrunkIds.value
+    const aUniq  = spineAUniqueIds.value
+    const bUniq  = spineBUniqueIds.value
+
+    // Shared trunk: rows 0..shared.length-1
+    shared.forEach((id, i) => rowOf.set(id, i))
+
+    const sharedEndRow = shared.length - 1
+
+    // Spine A unique: rows continue from sharedEndRow + 1
+    aUniq.forEach((id, i) => rowOf.set(id, sharedEndRow + 1 + i))
+
+    // Spine B unique: rows also continue from sharedEndRow + 1
+    bUniq.forEach((id, i) => rowOf.set(id, sharedEndRow + 1 + i))
+
+    const aBottom = sharedEndRow + aUniq.length
+    const bBottom = sharedEndRow + bUniq.length
+
+    // Jesus row = below both
+    bottomRow = Math.max(aBottom, bBottom) + 1
+    if (jesusId.value) rowOf.set(jesusId.value, bottomRow)
+  } else {
+    // Single spine: rows 0..N-1
+    spineSingle.value.forEach((id, i) => rowOf.set(id, i))
+    bottomRow = spineSingle.value.length - 1
+  }
+
+  // ── Wife counts to size the X canvas ───────────────────────────────
+  const allSpineIds = Array.from(rowOf.keys())
+  const maxWives = Math.max(0, ...allSpineIds.map(id => (sp.get(id) ?? []).length))
+
+  // Wife area width (per side, both spines may have wives outside)
+  const wifeAreaW = maxWives > 0
+    ? MAR_GAP + maxWives * NW + Math.max(0, maxWives - 1) * MG
+    : 0
+
+  // Layout center
+  const PAD_X = PAD + wifeAreaW
+  let SHARED_CX: number, SPINE_A_CX: number, SPINE_B_CX: number, SINGLE_CX: number
+
+  if (isDualMode.value) {
+    SHARED_CX  = PAD_X + DIVERGE_X + NW / 2  // shared trunk center
+    SPINE_A_CX = SHARED_CX + DIVERGE_X
+    SPINE_B_CX = SHARED_CX - DIVERGE_X
+    SINGLE_CX  = SHARED_CX  // unused in dual mode
+  } else {
+    SINGLE_CX  = PAD_X + NW / 2
+    SHARED_CX  = SINGLE_CX
+    SPINE_A_CX = SINGLE_CX
+    SPINE_B_CX = SINGLE_CX
+  }
+
+  const cxOf = (id: string): number => {
+    if (!isDualMode.value) return SINGLE_CX
+    const k = membership.get(id)
+    if (k === 'A') return SPINE_A_CX
+    if (k === 'B') return SPINE_B_CX
+    return SHARED_CX  // 'S' or jesus
+  }
+
+  // ── Trunk guides ───────────────────────────────────────────────────
+  if (isDualMode.value) {
+    const sharedFirst = sharedTrunkIds.value[0]
+    const sharedLast  = sharedTrunkIds.value[sharedTrunkIds.value.length - 1]
+    const aFirst = spineAUniqueIds.value[0]
+    const aLast  = spineAUniqueIds.value[spineAUniqueIds.value.length - 1]
+    const bFirst = spineBUniqueIds.value[0]
+    const bLast  = spineBUniqueIds.value[spineBUniqueIds.value.length - 1]
+    if (sharedFirst && sharedLast) {
+      trunkGuides.push({ x: SHARED_CX, y1: rowY(rowOf.get(sharedFirst)!), y2: rowY(rowOf.get(sharedLast)!) + NH, color: '#f59e0b' })
+    }
+    if (aFirst && aLast) {
+      trunkGuides.push({ x: SPINE_A_CX, y1: rowY(rowOf.get(aFirst)!), y2: rowY(rowOf.get(aLast)!) + NH, color: '#f59e0b' })
+    }
+    if (bFirst && bLast) {
+      trunkGuides.push({ x: SPINE_B_CX, y1: rowY(rowOf.get(bFirst)!), y2: rowY(rowOf.get(bLast)!) + NH, color: '#f43f5e' })
+    }
+  } else {
+    if (spineSingle.value.length) {
+      const first = spineSingle.value[0]
+      const last  = spineSingle.value[spineSingle.value.length - 1]
+      trunkGuides.push({ x: SINGLE_CX, y1: rowY(rowOf.get(first)!), y2: rowY(rowOf.get(last)!) + NH, color: '#f59e0b' })
+    }
+  }
+
+  // ── Place all spine person cards ───────────────────────────────────
+  for (const sid of allSpineIds) {
     const p = pMap.get(sid); if (!p) continue
-    const gen = p.data.generationNum || 0
+    const cx = cxOf(sid)
+    const row = rowOf.get(sid)!
     nodes.push({
-      id: sid, rawName: p.data.name, displayName: shortName(p.data.name),
-      generation: gen, gender: p.data.gender,
-      x: SPINE_X, y: genY(gen), w: NW, h: NH,
-      isSpine: true, isClan: false,
+      id: sid,
+      rawName:     p.data.name,
+      displayName: shortName(p.data.name),
+      genLabel:    getGenLabel(p),
+      generation:  p.data.generationNum || 0,
+      gender:      p.data.gender,
+      x: cx - NW / 2, y: rowY(row), w: NW, h: NH,
+      spineKind:   membership.get(sid) ?? null,
+      isClan:      false,
     })
     shown.add(sid)
   }
 
-  // ── Per-spine-node: wives, children, lines ─────────────────────────
-  for (let si = 0; si < spn.length; si++) {
-    const sid = spn[si]
-    const p   = pMap.get(sid); if (!p) continue
-    const gen = p.data.generationNum || 0
+  // ── Per spine person: wives, clans, child lines ────────────────────
+  // Each spine person has:
+  //  - spine-child(ren) (for layout, just down/diagonal lines)
+  //  - non-spine children → clan card
+  //  - wives → laid out to the outer side (toward outside of dual-spine)
+  function placeOne(sid: string) {
+    const p = pMap.get(sid); if (!p) return
+    const cx = cxOf(sid)
+    const row = rowOf.get(sid)!
+    const k   = membership.get(sid)
 
-    const spineChildId = spn[si + 1] ?? null
-    const scP          = spineChildId ? pMap.get(spineChildId) : null
-    const childGenY    = genY(scP?.data.generationNum || gen + 1)
-    const marLineY     = marY(gen)
+    // Determine wife side & clan side
+    // dual mode: shared/Jesus → wives left, clans right (no other column nearby)
+    //            A → wives right (outside), clans left (inside between A & B)
+    //            B → wives left  (outside), clans right (inside between A & B)
+    // single mode: wives left, clans right (original)
+    let wifeSide: 'left' | 'right' = 'left'
+    let clanSide: 'left' | 'right' = 'right'
+    if (isDualMode.value) {
+      if (k === 'A') { wifeSide = 'right'; clanSide = 'left' }
+      else if (k === 'B') { wifeSide = 'left'; clanSide = 'right' }
+    }
 
-    // ── Place wives LEFT of patriarch ──────────────────────────────
-    const wifeIds = sp.get(sid) ?? []
-    const wifeLX  = new Map<string, number>()   // wid → card left-x
+    // Spine children of this person (could be 0, 1, or 2 for David)
+    const spineChildIds: string[] = []
+    for (const c of ch.get(sid) ?? []) {
+      if (rowOf.has(c)) spineChildIds.push(c)
+    }
+
+    // Wives — split into "regular" (need card placed here) vs "cross-spine"
+    // (already placed on another spine; just draw a direct marriage bridge).
+    const allWifeIds      = sp.get(sid) ?? []
+    const crossSpineWives = allWifeIds.filter(wid => rowOf.has(wid))
+    const wifeIds         = allWifeIds.filter(wid => !rowOf.has(wid))
+    const wifeLX          = new Map<string, number>()
+    const marLineY        = rowY(row) + NH / 2
+
+    // Cross-spine marriages: draw once per pair (dedupe via sorted key)
+    for (const cwid of crossSpineWives) {
+      const pairKey = [sid, cwid].sort().join('|')
+      if (crossSpineDrawn.has(pairKey)) continue
+      crossSpineDrawn.add(pairKey)
+      const partner = nodes.find(n => n.id === cwid)
+      if (!partner) continue
+      const hL = cx - NW / 2, hR = cx + NW / 2
+      const pL = partner.x,   pR = partner.x + partner.w
+      if (pR < hL)       marriages.push({ id: `mscross_${pairKey}`, x1: pR, x2: hL, y: marLineY })
+      else if (pL > hR)  marriages.push({ id: `mscross_${pairKey}`, x1: hR, x2: pL, y: marLineY })
+    }
 
     for (let wi = 0; wi < wifeIds.length; wi++) {
       const wid = wifeIds[wi]
-      // wi=0 nearest: right edge = SPINE_X - MAR_GAP
-      const wx = SPINE_X - MAR_GAP - (wi + 1) * NW - wi * MG
+      let wx: number
+      if (wifeSide === 'left') {
+        wx = (cx - NW / 2) - MAR_GAP - (wi + 1) * NW - wi * MG
+      } else {
+        wx = (cx + NW / 2) + MAR_GAP + wi * (NW + MG)
+      }
       wifeLX.set(wid, wx)
 
       if (!shown.has(wid)) {
         shown.add(wid)
         const wp = pMap.get(wid)
         if (wp) nodes.push({
-          id: wid, rawName: wp.data.name, displayName: shortName(wp.data.name),
-          generation: wp.data.generationNum || gen, gender: wp.data.gender,
-          x: wx, y: genY(gen), w: NW, h: NH,
-          isSpine: false, isClan: false,
+          id: wid,
+          rawName:     wp.data.name,
+          displayName: shortName(wp.data.name),
+          genLabel:    getGenLabel(wp),
+          generation:  wp.data.generationNum || 0,
+          gender:      wp.data.gender,
+          x: wx, y: rowY(row), w: NW, h: NH,
+          spineKind:   null,
+          isClan:      false,
         })
       }
 
-      // Marriage line segment — only the gap between card edges, not through any card
-      if (wi === 0) {
-        // Nearest wife right → patriarch left  (MAR_GAP wide)
-        marriages.push({ id: `ms_${sid}_0`, x1: wx + NW, x2: SPINE_X, y: marLineY })
+      // Marriage line — only the gap between card edges
+      if (wifeSide === 'left') {
+        if (wi === 0) {
+          marriages.push({ id: `ms_${sid}_0`, x1: wx + NW, x2: cx - NW / 2, y: marLineY })
+        } else {
+          const prevWx = wifeLX.get(wifeIds[wi - 1])!
+          marriages.push({ id: `ms_${sid}_${wi}`, x1: wx + NW, x2: prevWx, y: marLineY })
+        }
       } else {
-        // Wife-wi right → wife-(wi-1) left  (MG wide)
-        const prevWx = wifeLX.get(wifeIds[wi - 1])!
-        marriages.push({ id: `ms_${sid}_${wi}`, x1: wx + NW, x2: prevWx, y: marLineY })
+        if (wi === 0) {
+          marriages.push({ id: `ms_${sid}_0`, x1: cx + NW / 2, x2: wx, y: marLineY })
+        } else {
+          const prevWx = wifeLX.get(wifeIds[wi - 1])!
+          marriages.push({ id: `ms_${sid}_${wi}`, x1: prevWx + NW, x2: wx, y: marLineY })
+        }
       }
     }
 
-    // Marriage midpoint X — where all children descend from
-    const midX = wifeIds.length > 0
-      ? SPINE_X - Math.round(MAR_GAP / 2)
-      : spineCX
+    // Marriage midpoint X — only shifts when there are *stacked* wives on this row.
+    // Cross-spine spouses go through their own column, so midX stays at cx.
+    let midX = cx
+    if (wifeIds.length > 0) {
+      if (wifeSide === 'left') midX = cx - NW / 2 - Math.round(MAR_GAP / 2)
+      else                     midX = cx + NW / 2 + Math.round(MAR_GAP / 2)
+    }
 
-    // ── Collect ALL non-spine children (wives + patriarch's own) ───
+    // Non-spine children (excluding spouses themselves)
+    const spineSet = new Set(spineChildIds)
+    const spouseSet = new Set([sid, ...wifeIds])
     const allWifeKidSet = new Set(wifeIds.flatMap(wid => ch.get(wid) ?? []))
-    const unattributed  = (ch.get(sid) ?? []).filter(
-      id => id !== spineChildId && !spSet.has(id) && !allWifeKidSet.has(id),
-    )
+    const ownNonSpineKids = (ch.get(sid) ?? []).filter(c => !spineSet.has(c) && !spouseSet.has(c) && !allWifeKidSet.has(c))
     const wivesNonSpineKids = wifeIds.flatMap(wid =>
-      (ch.get(wid) ?? []).filter(id => id !== spineChildId && !spSet.has(id)),
+      (ch.get(wid) ?? []).filter(c => !spineSet.has(c) && !spouseSet.has(c))
     )
-    const allNonSpineKids = [...new Set([...wivesNonSpineKids, ...unattributed])]
+    const allNonSpine = [...new Set([...wivesNonSpineKids, ...ownNonSpineKids])]
 
-    if (allNonSpineKids.length > 0) {
-      if (allNonSpineKids.length <= SHOW_THRESHOLD) {
-        // ── Show children individually ──────────────────────────────
-        // Place to the RIGHT of the patriarch column to avoid overlapping wives
-        const childStartX = SPINE_X + NW + HG
-        const childCXs: number[] = []
-
-        for (let ci = 0; ci < allNonSpineKids.length; ci++) {
-          const cid = allNonSpineKids[ci]
-          if (shown.has(cid)) continue
-          const cp = pMap.get(cid)
-          const cx = childStartX + ci * (NW + MG)
-          childCXs.push(cx + NW / 2)
-          nodes.push({
-            id: cid,
-            rawName:     cp?.data.name ?? cid,
-            displayName: shortName(cp?.data.name ?? cid),
-            generation:  cp?.data.generationNum || gen + 1,
-            gender:      cp?.data.gender ?? '',
-            x: cx, y: childGenY, w: NW, h: NH,
-            isSpine: false, isClan: false,
-          })
-          shown.add(cid)
-        }
-
-        if (childCXs.length === 1) {
-          // Orthogonal: down from midX → right to child → down
-          if (childCXs[0] !== midX) {
-            const jY = marLineY + Math.round((childGenY - marLineY) * 0.3)
-            drops.push({ x: midX,       y1: marLineY, y2: jY })
-            hbars.push({ x1: Math.min(midX, childCXs[0]), x2: Math.max(midX, childCXs[0]), y: jY })
-            drops.push({ x: childCXs[0], y1: jY,      y2: childGenY })
-          } else {
-            drops.push({ x: midX, y1: marLineY, y2: childGenY })
-          }
-        } else if (childCXs.length > 1) {
-          // T-bar: down from midX → bar → each child
-          const barY = marLineY + Math.round((childGenY - marLineY) * 0.3)
-          drops.push({ x: midX, y1: marLineY, y2: barY })
-          hbars.push({ x1: Math.min(midX, ...childCXs), x2: Math.max(...childCXs), y: barY })
-          for (const ccx of childCXs) drops.push({ x: ccx, y1: barY, y2: childGenY })
-        }
+    // ── Clan card (all non-spine children collapse here) ────────────
+    if (allNonSpine.length > 0) {
+      const allIds   = allNonSpine.flatMap(id => subtreeIds(id))
+      const firstKid = pMap.get(allNonSpine[0])
+      const label    = allNonSpine.length === 1
+        ? `${baseName(firstKid?.data.name ?? '')}支系`
+        : `${baseName(firstKid?.data.name ?? '')}等${allNonSpine.length}支`
+      let clanX: number
+      const clanY = rowY(row + 1)
+      if (clanSide === 'right') {
+        clanX = cx + NW / 2 + HG
       } else {
-        // ── Clan node to the RIGHT of patriarch ────────────────────
-        const allIds   = allNonSpineKids.flatMap(id => subtreeIds(id))
-        const firstKid = pMap.get(allNonSpineKids[0])
-        const label    = `${baseName(firstKid?.data.name ?? '')}等${allNonSpineKids.length}支`
-        const clanX    = SPINE_X + NW + HG
-        const clanCX   = clanX + CW / 2
-        nodes.push({
-          id: `clan_${sid}`, rawName: label, displayName: label,
-          generation: gen + 1, gender: '',
-          x: clanX, y: childGenY, w: CW, h: CH,
-          isSpine: false, isClan: true,
-          clanCount: allIds.length, clanMemberIds: allIds,
-        })
-        // Orthogonal: midX → right to clan → down
-        const jY = marLineY + Math.round((childGenY - marLineY) * 0.3)
-        drops.push({ x: midX,  y1: marLineY, y2: jY })
-        hbars.push({ x1: Math.min(midX, clanCX), x2: Math.max(midX, clanCX), y: jY })
-        drops.push({ x: clanCX, y1: jY, y2: childGenY })
+        clanX = cx - NW / 2 - HG - CW
       }
+      const clanCX = clanX + CW / 2
+      nodes.push({
+        id: `clan_${sid}`,
+        rawName:     label,
+        displayName: label,
+        genLabel:    `旁支 · ${allIds.length}人`,
+        generation:  0,
+        gender: '',
+        x: clanX, y: clanY, w: CW, h: CH,
+        spineKind:   null,
+        isClan:      true,
+        clanCount:   allIds.length,
+        clanMemberIds: allIds,
+        clanRootId:  allNonSpine[0],   // first non-spine child = clan's representative root
+      })
+
+      // Line from midX → clan
+      const jY = marLineY + Math.round((clanY - marLineY) * 0.3)
+      drops.push({ x: midX,  y1: marLineY, y2: jY })
+      hbars.push({ x1: Math.min(midX, clanCX), x2: Math.max(midX, clanCX), y: jY })
+      drops.push({ x: clanCX, y1: jY, y2: clanY })
     }
 
-    // ── Spine child line ───────────────────────────────────────────
-    if (spineChildId) {
-      if (midX === spineCX) {
-        // No wives: straight drop from patriarch bottom
-        drops.push({ x: spineCX, y1: genY(gen) + NH, y2: childGenY })
+    // ── Spine child line(s) ─────────────────────────────────────────
+    for (const cid of spineChildIds) {
+      const ccx = cxOf(cid)
+      const childY = rowY(rowOf.get(cid)!)
+      const isLegal = rk.get(`${sid}|${cid}`) === 'legal'
+      // Color: when parent is on shared trunk, child's spine determines the color
+      // (so David→Solomon is amber, David→Nathan is rose). Otherwise follow parent.
+      const parentKind = membership.get(sid)
+      const childKind  = membership.get(cid)
+      const continuingKind = parentKind === 'S' ? (childKind ?? 'S') : parentKind
+      const lineStroke = isLegal
+        ? '#9ca3af'
+        : continuingKind === 'B' ? '#f43f5e'
+        : continuingKind === 'A' ? '#f59e0b'
+        : continuingKind === 'S' ? '#f59e0b'  // shared trunk = amber
+        : continuingKind === 'single' ? '#f59e0b'
+        : '#6b7280'
+
+      if (midX === ccx) {
+        // Straight drop
+        drops.push({ x: ccx, y1: rowY(row) + NH, y2: childY, stroke: lineStroke, dashed: isLegal })
       } else {
-        // Wives present: orthogonal from marriage midpoint back to spine column
-        // (midX, marLineY) → down → right to spineCX → down
-        const barY = marLineY + Math.round((childGenY - marLineY) * 0.65)
-        drops.push({ x: midX,    y1: marLineY, y2: barY })
-        hbars.push({ x1: Math.min(midX, spineCX), x2: Math.max(midX, spineCX), y: barY })
-        drops.push({ x: spineCX, y1: barY,      y2: childGenY })
+        // Orthogonal: down → across → down
+        const barY = marLineY + Math.round((childY - marLineY) * 0.6)
+        drops.push({ x: midX, y1: marLineY, y2: barY, stroke: lineStroke, dashed: isLegal })
+        hbars.push({ x1: Math.min(midX, ccx), x2: Math.max(midX, ccx), y: barY, stroke: lineStroke, dashed: isLegal })
+        drops.push({ x: ccx, y1: barY, y2: childY, stroke: lineStroke, dashed: isLegal })
       }
     }
   }
 
-  // ── Canvas bounds ──────────────────────────────────────────────────
-  const maxRight = Math.max(...nodes.map(n => n.x + n.w), SPINE_X + NW) + PAD
-  const maxBot   = Math.max(...nodes.map(n => n.y + n.h)) + PAD
+  for (const sid of allSpineIds) placeOne(sid)
 
-  const firstSN = nodes.find(n => n.id === spn[0])
-  const lastSN  = nodes.find(n => n.id === spn[spn.length - 1])
+  // ── Canvas bounds ──────────────────────────────────────────────────
+  const allX = nodes.flatMap(n => [n.x, n.x + n.w])
+  const minX = Math.min(...allX, PAD)
+  const maxX = Math.max(...allX) + PAD
+  const maxY = Math.max(...nodes.map(n => n.y + n.h)) + PAD
+
+  // Shift everything so minX >= PAD
+  const shift = minX < PAD ? (PAD - minX) : 0
+  if (shift > 0) {
+    for (const n of nodes) n.x += shift
+    for (const d of drops) d.x += shift
+    for (const b of hbars) { b.x1 += shift; b.x2 += shift }
+    for (const m of marriages) { m.x1 += shift; m.x2 += shift }
+    for (const g of trunkGuides) g.x += shift
+  }
+
+  // Convergence column X for fitSpine (the shared trunk in dual mode, or single column)
+  const convergeCX = (isDualMode.value ? SHARED_CX : SINGLE_CX) + shift
 
   return {
-    nodes, drops, hbars, marriages,
-    w: maxRight, h: maxBot,
-    spineCX,
-    spineY1: firstSN ? firstSN.y : PAD,
-    spineY2: lastSN  ? lastSN.y + NH : PAD,
+    nodes, drops, hbars, marriages, trunkGuides,
+    w: maxX + shift, h: maxY,
+    convergeCX,
+    topY: PAD,
+    botY: maxY - PAD,
   }
 })
 
 const ready = computed(() => !!cv.value && cv.value.nodes.length > 0)
+
+// ── Card click ────────────────────────────────────────────────────────
+function onCardClick(n: LNode) {
+  if (n.isClan) {
+    // Open recursive view rooted at the clan's representative person
+    if (n.clanRootId) {
+      const p = personById.value.get(n.clanRootId)
+      if (p) recursiveRoot.value = { id: n.clanRootId, name: p.data.name }
+    }
+  } else {
+    emit('selectPerson', n.id)
+  }
+}
+
+const recursiveRoot = ref<BreadcrumbItem | null>(null)
+
+// ── Card styling ──────────────────────────────────────────────────────
+function cardClass(n: LNode) {
+  if (n.isClan)
+    return 'border-2 border-dashed border-amber-300 bg-amber-50/90 hover:bg-amber-100/90 rounded-xl cursor-pointer'
+  if (n.spineKind === 'A' || n.spineKind === 'S' || n.spineKind === 'single')
+    return 'border border-stone-300 bg-white shadow-sm hover:shadow-md rounded-xl cursor-pointer'
+  if (n.spineKind === 'B')
+    return 'border border-rose-300 bg-white shadow-sm hover:shadow-md rounded-xl cursor-pointer'
+  if (n.gender === 'female')
+    return 'border border-rose-200 bg-rose-50/90 hover:shadow-sm rounded-xl cursor-pointer'
+  return 'border border-slate-200 bg-white hover:shadow-sm rounded-xl cursor-pointer'
+}
+function cardStyle(n: LNode) {
+  return { left: n.x + 'px', top: n.y + 'px', width: n.w + 'px', minHeight: n.h + 'px' }
+}
+function genLabelColor(n: LNode) {
+  if (n.isClan) return 'text-amber-600'
+  if (n.spineKind === 'A' || n.spineKind === 'S' || n.spineKind === 'single') return 'text-amber-500'
+  if (n.spineKind === 'B') return 'text-rose-500'
+  return 'text-slate-400'
+}
 
 // ── Pan / zoom ────────────────────────────────────────────────────────
 const viewportRef = ref<HTMLElement | null>(null)
@@ -425,7 +788,7 @@ const ZOOM_MAX = 3.0
 const clamp = (z: number) => Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, z))
 
 function onWheel(e: WheelEvent) {
-  if (activeClan.value) return
+  if (recursiveRoot.value) return
   const vp = viewportRef.value; if (!vp) return
   const { left, top } = vp.getBoundingClientRect()
   const cx = e.clientX - left
@@ -436,26 +799,22 @@ function onWheel(e: WheelEvent) {
   panY.value  = cy - (cy - panY.value) * ratio
   zoom.value  = newZ
 }
-
 function onPointerDown(e: PointerEvent) {
-  if (activeClan.value) return
+  if (recursiveRoot.value) return
   if ((e.target as HTMLElement).closest('.node-card')) return
   isDragging.value = true
   _anchor = { x: e.clientX, y: e.clientY, px: panX.value, py: panY.value }
   ;(e.currentTarget as HTMLElement).setPointerCapture(e.pointerId)
 }
-
 function onPointerMove(e: PointerEvent) {
   if (!isDragging.value) return
   panX.value = _anchor.px + (e.clientX - _anchor.x)
   panY.value = _anchor.py + (e.clientY - _anchor.y)
 }
-
 function onPointerUp() { isDragging.value = false }
 
 function zoomIn()  { zoomAround(zoom.value * 1.25) }
 function zoomOut() { zoomAround(zoom.value / 1.25) }
-
 function zoomAround(newZ: number) {
   const vp = viewportRef.value; if (!vp) return
   const cx = vp.clientWidth  / 2
@@ -471,49 +830,18 @@ function fitSpine() {
   const vw = viewportRef.value.clientWidth
   const vh = viewportRef.value.clientHeight
   const c  = cv.value
-  // Show ~12 generations at a readable size instead of fitting the whole tree
-  const targetH = 12 * RH
+  const targetH = 14 * RH
   const z = clamp(Math.min(vh / targetH, vw / c.w, 0.9))
   zoom.value = z
-  panX.value = vw / 2 - c.spineCX * z
-  panY.value = 40
+  panX.value = vw / 2 - c.convergeCX * z
+  panY.value = props.rootId ? 50 : 40
 }
 
 watch(ready, val => { if (val) nextTick(fitSpine) }, { immediate: true })
 onMounted(() => { if (ready.value) nextTick(fitSpine) })
-
-// ── Clan overlay ──────────────────────────────────────────────────────
-const activeClan = ref<LNode | null>(null)
-
-const clanMembers = computed(() =>
-  (activeClan.value?.clanMemberIds ?? [])
-    .map(id => {
-      const p = personById.value.get(id)
-      return p ? { id, name: p.data.name, generation: p.data.generationNum || 0 } : null
-    })
-    .filter(Boolean)
-    .sort((a, b) => a!.generation - b!.generation) as { id: string; name: string; generation: number }[]
-)
-
-function openClan(n: LNode) { activeClan.value = n }
-
-// ── Card styling ──────────────────────────────────────────────────────
-function cardClass(n: LNode) {
-  if (n.isClan)
-    return 'border-2 border-dashed border-amber-300 bg-amber-50/90 hover:bg-amber-100/90 rounded-xl cursor-pointer'
-  if (n.isSpine)
-    return 'border border-stone-300 bg-white shadow-sm hover:shadow-md rounded-xl cursor-pointer'
-  if (n.gender === 'female')
-    return 'border border-rose-200 bg-rose-50/90 hover:shadow-sm rounded-xl cursor-pointer'
-  return 'border border-slate-200 bg-white hover:shadow-sm rounded-xl cursor-pointer'
-}
-
-function cardStyle(n: LNode) {
-  return { left: n.x + 'px', top: n.y + 'px', width: n.w + 'px', minHeight: n.h + 'px' }
-}
 </script>
 
 <style scoped>
 .ft-enter-active, .ft-leave-active { transition: opacity .15s, transform .15s; }
-.ft-enter-from, .ft-leave-to { opacity: 0; transform: translateY(4px); }
+.ft-enter-from, .ft-leave-to       { opacity: 0; transform: translateY(4px); }
 </style>
