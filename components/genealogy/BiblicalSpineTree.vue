@@ -63,7 +63,7 @@
                 :stroke-dasharray="b.dashed ? '6,4' : ''" />
         </svg>
 
-        <!-- ② Person and clan cards -->
+        <!-- ② Person cards -->
         <div
           v-for="n in cv!.nodes" :key="n.id"
           v-show="!n.hidden"
@@ -80,13 +80,24 @@
                  :class="genLabelColor(n)">
               {{ n.genLabel }}
             </div>
-            <div class="text-[12px] font-semibold leading-snug"
-                 :class="n.isClan ? 'text-amber-800' : 'text-slate-800'"
+            <div class="text-[12px] font-semibold leading-snug text-slate-800"
                  :title="n.rawName">
               {{ n.displayName }}
             </div>
-            <div v-if="n.isClan" class="text-[9px] text-amber-400 mt-0.5">點擊展開 ▶</div>
           </div>
+          <!-- Subtree toggle (▼/▲), only on kids that have descendants -->
+          <button
+            v-if="n.hasSubtree"
+            class="absolute -bottom-2 left-1/2 -translate-x-1/2 z-10
+                   px-1.5 h-4 min-w-[20px] rounded-full bg-white text-[10px] leading-none
+                   border border-amber-300 text-amber-600 hover:bg-amber-50 shadow-sm
+                   cursor-default flex items-center justify-center gap-0.5 tabular-nums"
+            :title="n.subtreeExpanded ? '收起子孫' : `展開 ${n.subtreeSize} 名子孫`"
+            @click.stop="toggleExpand(n.id)"
+          >
+            <span>{{ n.subtreeExpanded ? '▲' : '▼' }}</span>
+            <span v-if="!n.subtreeExpanded" class="text-[9px] opacity-70">{{ n.subtreeSize }}</span>
+          </button>
         </div>
       </div>
 
@@ -352,16 +363,15 @@ interface LNode {
   gender: string
   x: number; y: number; w: number; h: number
   spineKind: 'A' | 'B' | 'S' | 'single' | null
-  isClan: boolean
+  isClan: boolean             // legacy, retained for type compat; in new layout always false
   isExpansionNode?: boolean   // node belongs to an expanded subtree
-  clanCount?: number
-  clanMemberIds?: string[]
-  clanParentId?: string       // spine parent — used to toggle expansion
-  clanCollapsed?: boolean     // for clan cards: shows ▼ when collapsed, ▲ when expanded
+  hasSubtree?: boolean        // true → render a ▼/▲ toggle on the card
+  subtreeExpanded?: boolean
+  subtreeSize?: number        // for tooltip / future use
   hidden?: boolean            // occluded by another expansion → render invisible
 }
-interface VDrop { x: number; y1: number; y2: number; stroke?: string; dashed?: boolean; hidden?: boolean }
-interface HBar  { x1: number; x2: number; y: number; stroke?: string; dashed?: boolean; hidden?: boolean }
+interface VDrop { x: number; y1: number; y2: number; stroke?: string; dashed?: boolean; hidden?: boolean; isExpansionLine?: boolean }
+interface HBar  { x1: number; x2: number; y: number; stroke?: string; dashed?: boolean; hidden?: boolean; isExpansionLine?: boolean }
 interface MLine { id: string; x1: number; x2: number; y: number; hidden?: boolean }
 interface TrunkGuide { x: number; y1: number; y2: number; color: string; hidden?: boolean }
 interface ExpansionBox { x1: number; y1: number; x2: number; y2: number }
@@ -401,126 +411,150 @@ const cv = computed(() => {
   const expansionNodeIds = new Set<string>() // nodes inside expanded subtrees
 
   // ── Subtree layout (used by in-place expansion) ────────────────────
-  const SUB_RH = NH + 40   // tighter row gap inside expansions
-  const SUB_HG = 16
-  const subRowY = (depth: number, startY: number) => startY + depth * SUB_RH
-
+  // Uses the SAME main row pitch (RH) as the spine so a node at generation G
+  // lands at exactly the same Y as a spine node at generation G. Each
+  // recursive subtree is laid out left-to-right; the root sits centered above
+  // the X-range of its children. Lines created here are flagged
+  // `isExpansionLine: true` so the occlusion pass leaves them alone.
   function layoutSubtree(
     rootId: string,
-    depth: number,
     leftX: number,
-    startY: number,
     vis: Set<string>,
-  ): { nodes: LNode[]; drops: VDrop[]; hbars: HBar[]; maxX: number; maxY: number; rootCX: number } {
+  ): { nodes: LNode[]; drops: VDrop[]; hbars: HBar[]; rootCX: number; maxX: number; maxY: number } {
     if (vis.has(rootId)) {
-      return { nodes: [], drops: [], hbars: [], maxX: leftX, maxY: startY, rootCX: leftX }
+      return { nodes: [], drops: [], hbars: [], rootCX: leftX + NW / 2, maxX: leftX + NW, maxY: 0 }
     }
     vis.add(rootId)
     const p = pMap.get(rootId)
     if (!p) {
-      return { nodes: [], drops: [], hbars: [], maxX: leftX, maxY: startY, rootCX: leftX }
+      return { nodes: [], drops: [], hbars: [], rootCX: leftX + NW / 2, maxX: leftX + NW, maxY: 0 }
     }
+    const gen = p.data.generationNum || 1
+    const myY = rowY(gen - 1)   // 1-based gen → 0-based row, same scale as main spine
     const kids = (childrenOf.value.get(rootId) ?? []).filter(c => !vis.has(c))
 
-    const myY = subRowY(depth, startY)
-
-    // Leaf: just place the node
     if (kids.length === 0) {
       const myNode: LNode = {
         id: rootId,
         rawName:     p.data.name,
         displayName: shortName(p.data.name),
         genLabel:    getGenLabel(p),
-        generation:  p.data.generationNum || 0,
+        generation:  gen,
         gender:      p.data.gender,
         x: leftX, y: myY, w: NW, h: NH,
         spineKind:   null,
         isClan:      false,
         isExpansionNode: true,
       }
-      return { nodes: [myNode], drops: [], hbars: [], maxX: leftX + NW, maxY: myY + NH, rootCX: leftX + NW / 2 }
+      return { nodes: [myNode], drops: [], hbars: [], rootCX: leftX + NW / 2, maxX: leftX + NW, maxY: myY + NH }
     }
 
-    // Internal: lay out kids first, then center root above them
+    // Lay out children left-to-right, then center root above their span
     let cursorX = leftX
     const childResults: ReturnType<typeof layoutSubtree>[] = []
     let maxY = myY + NH
     for (const k of kids) {
-      const r = layoutSubtree(k, depth + 1, cursorX, startY, vis)
+      const r = layoutSubtree(k, cursorX, vis)
       childResults.push(r)
-      cursorX = r.maxX + SUB_HG
+      cursorX = r.maxX + HG
       maxY = Math.max(maxY, r.maxY)
     }
-    const rightEdge = cursorX - SUB_HG
-    const childrenWidth = rightEdge - leftX
-    const rootX  = leftX + Math.max(0, childrenWidth - NW) / 2
-    const rootCX = rootX + NW / 2
+    const childCXs = childResults.map(r => r.rootCX)
+    const cmin = Math.min(...childCXs)
+    const cmax = Math.max(...childCXs)
+    const rootCX = (cmin + cmax) / 2
+    const rootX  = rootCX - NW / 2
+    const rightEdge = Math.max(rootX + NW, cursorX - HG)
+
     const myNode: LNode = {
       id: rootId,
       rawName:     p.data.name,
       displayName: shortName(p.data.name),
       genLabel:    getGenLabel(p),
-      generation:  p.data.generationNum || 0,
+      generation:  gen,
       gender:      p.data.gender,
       x: rootX, y: myY, w: NW, h: NH,
       spineKind:   null,
       isClan:      false,
       isExpansionNode: true,
     }
-    // Connector lines: root → bar → each child
+
+    // Connector: root → barY → each child top
     const myDrops: VDrop[] = []
     const myHbars: HBar[]  = []
-    const childCXs = childResults.map(r => r.rootCX)
-    const barY = myY + NH + 12
-    myDrops.push({ x: rootCX, y1: myY + NH, y2: barY })
+    const firstChildY = childResults[0].nodes[0]?.y ?? myY + NH + VG
+    const barY = myY + NH + Math.round((firstChildY - myY - NH) * 0.5)
+    myDrops.push({ x: rootCX, y1: myY + NH, y2: barY, isExpansionLine: true })
     if (childCXs.length === 1) {
-      myHbars.push({ x1: Math.min(rootCX, childCXs[0]), x2: Math.max(rootCX, childCXs[0]), y: barY })
-      myDrops.push({ x: childCXs[0], y1: barY, y2: subRowY(depth + 1, startY) })
+      const cc = childCXs[0]
+      if (Math.abs(rootCX - cc) < 1) {
+        myDrops.push({ x: cc, y1: barY, y2: firstChildY, isExpansionLine: true })
+      } else {
+        myHbars.push({ x1: Math.min(rootCX, cc), x2: Math.max(rootCX, cc), y: barY, isExpansionLine: true })
+        myDrops.push({ x: cc, y1: barY, y2: firstChildY, isExpansionLine: true })
+      }
     } else {
-      myHbars.push({ x1: Math.min(...childCXs), x2: Math.max(...childCXs), y: barY })
+      myHbars.push({ x1: cmin, x2: cmax, y: barY, isExpansionLine: true })
       for (const cc of childCXs) {
-        myDrops.push({ x: cc, y1: barY, y2: subRowY(depth + 1, startY) })
+        myDrops.push({ x: cc, y1: barY, y2: firstChildY, isExpansionLine: true })
       }
     }
+
     return {
       nodes: [myNode, ...childResults.flatMap(r => r.nodes)],
       drops: [...myDrops, ...childResults.flatMap(r => r.drops)],
       hbars: [...myHbars, ...childResults.flatMap(r => r.hbars)],
-      maxX:  rightEdge,
-      maxY,
       rootCX,
+      maxX: rightEdge,
+      maxY,
     }
   }
 
+  // Lay out the subtree(s) starting from `rootIds` (the children of the spine kid
+  // being expanded), then SHIFT everything horizontally so the subtree's overall
+  // center aligns with `centerX` (the spine kid's column position).
   function layoutExpansion(
     rootIds: string[],
-    startX: number,
-    startY: number,
-    _side: 'left' | 'right',
-  ): { nodes: LNode[]; drops: VDrop[]; hbars: HBar[]; bbox: ExpansionBox } {
+    centerX: number,
+  ): { nodes: LNode[]; drops: VDrop[]; hbars: HBar[]; bbox: ExpansionBox; rootCXs: number[]; firstY: number } {
     const vis = new Set<string>()
-    let cursorX = startX
+    let cursorX = 0
     const allNodes: LNode[] = []
     const allDrops: VDrop[] = []
     const allHbars: HBar[]  = []
-    let maxY = startY
+    let maxY = 0
+    const rootCXs: number[] = []
+    let firstY = 0
     for (const rid of rootIds) {
-      const r = layoutSubtree(rid, 0, cursorX, startY, vis)
+      const r = layoutSubtree(rid, cursorX, vis)
       allNodes.push(...r.nodes)
       allDrops.push(...r.drops)
       allHbars.push(...r.hbars)
-      cursorX = r.maxX + SUB_HG
+      rootCXs.push(r.rootCX)
+      cursorX = r.maxX + HG
       maxY = Math.max(maxY, r.maxY)
+      if (firstY === 0 && r.nodes.length > 0) firstY = r.nodes[0].y
     }
-    // Record the bbox for occlusion detection
-    const minX = Math.min(...allNodes.map(n => n.x))
-    const maxX = Math.max(...allNodes.map(n => n.x + n.w))
+    if (rootCXs.length === 0) {
+      return { nodes: [], drops: [], hbars: [], bbox: { x1: 0, y1: 0, x2: 0, y2: 0 }, rootCXs, firstY }
+    }
+    const cmin = Math.min(...rootCXs)
+    const cmax = Math.max(...rootCXs)
+    const overallCenter = (cmin + cmax) / 2
+    const shiftX = centerX - overallCenter
+    for (const n of allNodes) n.x += shiftX
+    for (const d of allDrops) d.x += shiftX
+    for (const b of allHbars) { b.x1 += shiftX; b.x2 += shiftX }
+    const shiftedRootCXs = rootCXs.map(c => c + shiftX)
     for (const n of allNodes) expansionNodeIds.add(n.id)
+    const minX = Math.min(...allNodes.map(n => n.x)) - 8
+    const maxX = Math.max(...allNodes.map(n => n.x + n.w)) + 8
+    const minY = Math.min(...allNodes.map(n => n.y)) - 8
     return {
-      nodes: allNodes,
-      drops: allDrops,
-      hbars: allHbars,
-      bbox: { x1: minX - 8, y1: startY - 8, x2: maxX + 8, y2: maxY + 8 },
+      nodes: allNodes, drops: allDrops, hbars: allHbars,
+      bbox: { x1: minX, y1: minY, x2: maxX, y2: maxY + 8 },
+      rootCXs: shiftedRootCXs,
+      firstY,
     }
   }
 
@@ -859,6 +893,12 @@ const cv = computed(() => {
       const kp = pMap.get(kid)
       if (!kp) continue
       const kxVal = kidX.get(kid)!
+
+      // Does this kid have its own descendants (2nd-gen onwards)?
+      const subtree = subtreeIds(kid).filter(id => id !== kid)
+      const hasSub  = subtree.length > 0
+      const expanded = expandedClans.value.has(kid)
+
       nodes.push({
         id: kid,
         rawName:     kp.data.name,
@@ -869,41 +909,45 @@ const cv = computed(() => {
         x: kxVal - NW / 2, y: childY, w: NW, h: NH,
         spineKind:   null,
         isClan:      false,
+        hasSubtree:  hasSub,
+        subtreeExpanded: expanded,
+        subtreeSize: hasSub ? subtree.length : undefined,
       })
 
-      // 2nd-gen onwards: ▼ clan card directly below, if this kid has any descendants
-      const subtree = subtreeIds(kid).filter(id => id !== kid)
-      if (subtree.length > 0) {
-        const expanded  = expandedClans.value.has(kid)
-        const baseLabel = `${baseName(kp.data.name)}支系`
-        const label     = expanded ? `▲ 收起 ${baseLabel}` : `▼ ${baseLabel}`
-        const clanCardY = childY + NH + 16
-        nodes.push({
-          id: `clan_${kid}`,
-          rawName:     baseLabel,
-          displayName: label,
-          genLabel:    `旁支 · ${subtree.length}人`,
-          generation:  0,
-          gender: '',
-          x: kxVal - CW / 2, y: clanCardY, w: CW, h: CH,
-          spineKind:   null,
-          isClan:      true,
-          clanCount:   subtree.length,
-          clanMemberIds: subtree,
-          clanParentId: kid,
-          clanCollapsed: !expanded,
-        })
-        drops.push({ x: kxVal, y1: childY + NH, y2: clanCardY })
+      // When expanded: render the full subtree directly below, aligned to main row pitch
+      if (hasSub && expanded) {
+        const kidChildren = (ch.get(kid) ?? []).filter(c => !rowOf.has(c))
+        if (kidChildren.length > 0) {
+          const exp = layoutExpansion(kidChildren, kxVal)
+          nodes.push(...exp.nodes)
+          drops.push(...exp.drops)
+          hbars.push(...exp.hbars)
 
-        if (expanded) {
-          const kidChildren = (ch.get(kid) ?? []).filter(c => !rowOf.has(c))
-          if (kidChildren.length > 0) {
-            const exp = layoutExpansion(kidChildren, kxVal - NW, clanCardY + CH + 20, 'right')
-            nodes.push(...exp.nodes)
-            drops.push(...exp.drops)
-            hbars.push(...exp.hbars)
-            expansionBoxes.push(exp.bbox)
+          // Connect kid (parent) down to the subtree's root row
+          const kidBottom = childY + NH
+          const firstChildY = exp.firstY
+          if (firstChildY > kidBottom) {
+            const linkBarY = kidBottom + Math.round((firstChildY - kidBottom) * 0.5)
+            drops.push({ x: kxVal, y1: kidBottom, y2: linkBarY, isExpansionLine: true })
+            if (exp.rootCXs.length === 1) {
+              const cc = exp.rootCXs[0]
+              if (Math.abs(kxVal - cc) < 1) {
+                drops.push({ x: cc, y1: linkBarY, y2: firstChildY, isExpansionLine: true })
+              } else {
+                hbars.push({ x1: Math.min(kxVal, cc), x2: Math.max(kxVal, cc), y: linkBarY, isExpansionLine: true })
+                drops.push({ x: cc, y1: linkBarY, y2: firstChildY, isExpansionLine: true })
+              }
+            } else {
+              const rmin = Math.min(...exp.rootCXs)
+              const rmax = Math.max(...exp.rootCXs)
+              hbars.push({ x1: Math.min(kxVal, rmin), x2: Math.max(kxVal, rmax), y: linkBarY, isExpansionLine: true })
+              for (const cc of exp.rootCXs) {
+                drops.push({ x: cc, y1: linkBarY, y2: firstChildY, isExpansionLine: true })
+              }
+            }
           }
+          // Bbox covers the subtree but NOT the parent row, so the spine T-bar above stays visible
+          expansionBoxes.push(exp.bbox)
         }
       }
     }
@@ -952,14 +996,15 @@ const cv = computed(() => {
   if (expansionBoxes.length > 0) {
     for (const n of nodes) {
       if (n.isExpansionNode) continue
-      // Spine parents whose own clan is expanded — keep them visible (they sit ABOVE the bbox)
       const nBox: ExpansionBox = { x1: n.x, y1: n.y, x2: n.x + n.w, y2: n.y + n.h }
       if (expansionBoxes.some(b => boxOverlap(nBox, b))) n.hidden = true
     }
     for (const d of drops) {
+      if (d.isExpansionLine) continue  // expansion-internal lines are always visible
       if (expansionBoxes.some(b => lineIntersectsBox(d.x, d.y1, d.x, d.y2, b))) d.hidden = true
     }
     for (const b of hbars) {
+      if (b.isExpansionLine) continue
       if (expansionBoxes.some(box => lineIntersectsBox(b.x1, b.y, b.x2, b.y, box))) b.hidden = true
     }
     for (const m of marriages) {
@@ -968,24 +1013,6 @@ const cv = computed(() => {
     for (const g of trunkGuides) {
       if (expansionBoxes.some(box => lineIntersectsBox(g.x, g.y1, g.x, g.y2, box))) g.hidden = true
     }
-  }
-  // Expansion-internal nodes/lines never hidden — they ARE the expansion
-  // (drops/hbars/etc. from the expansion are still in the same arrays, but the
-  //  lineIntersectsBox would mark them; suppress that by skipping if endpoints are expansion nodes.
-  //  Simpler heuristic: any drop/hbar added by layoutExpansion is already inside a bbox, mark it as such.)
-  // We re-walk and unhide anything whose endpoint matches an expansionNodeIds member.
-  function endpointIsExpansion(x: number, y: number): boolean {
-    for (const n of nodes) {
-      if (!n.isExpansionNode) continue
-      if (x >= n.x - 4 && x <= n.x + n.w + 4 && y >= n.y - 8 && y <= n.y + n.h + 16) return true
-    }
-    return false
-  }
-  for (const d of drops) {
-    if (d.hidden && (endpointIsExpansion(d.x, d.y1) || endpointIsExpansion(d.x, d.y2))) d.hidden = false
-  }
-  for (const b of hbars) {
-    if (b.hidden && (endpointIsExpansion(b.x1, b.y) || endpointIsExpansion(b.x2, b.y))) b.hidden = false
   }
 
   // ── Canvas bounds ──────────────────────────────────────────────────
@@ -1031,19 +1058,14 @@ function toggleExpand(spineParentId: string) {
 }
 
 // ── Card click ────────────────────────────────────────────────────────
+// Card body opens the edit modal; the ▼/▲ toggle (separate button) handles
+// subtree expansion via its own @click.stop.
 function onCardClick(n: LNode) {
-  if (n.isClan && n.clanParentId) {
-    // Toggle in-place expansion at the spine parent
-    toggleExpand(n.clanParentId)
-  } else if (!n.isClan) {
-    emit('selectPerson', n.id)
-  }
+  emit('selectPerson', n.id)
 }
 
 // ── Card styling ──────────────────────────────────────────────────────
 function cardClass(n: LNode) {
-  if (n.isClan)
-    return 'border-2 border-dashed border-amber-300 bg-amber-50/90 hover:bg-amber-100/90 rounded-xl cursor-pointer'
   if (n.spineKind === 'A' || n.spineKind === 'S' || n.spineKind === 'single')
     return 'border border-stone-300 bg-white shadow-sm hover:shadow-md rounded-xl cursor-pointer'
   if (n.spineKind === 'B')
@@ -1056,7 +1078,6 @@ function cardStyle(n: LNode) {
   return { left: n.x + 'px', top: n.y + 'px', width: n.w + 'px', minHeight: n.h + 'px' }
 }
 function genLabelColor(n: LNode) {
-  if (n.isClan) return 'text-amber-600'
   if (n.spineKind === 'A' || n.spineKind === 'S' || n.spineKind === 'single') return 'text-amber-500'
   if (n.spineKind === 'B') return 'text-rose-500'
   return 'text-slate-400'
