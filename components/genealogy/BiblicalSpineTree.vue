@@ -40,11 +40,12 @@
                 :x1="g.x" :y1="g.y1" :x2="g.x" :y2="g.y2"
                 :stroke="g.color" stroke-width="6" opacity="0.10" stroke-linecap="round" />
 
-          <!-- Marriage lines (red) -->
+          <!-- Marriage lines (red). Joseph↔Mary is dashed (holy union, see Matt 1:18-25) -->
           <line v-for="m in cv!.marriages" :key="m.id"
                 v-show="!m.hidden"
                 :x1="m.x1" :y1="m.y" :x2="m.x2" :y2="m.y"
-                stroke="#dc2626" stroke-width="2" stroke-linecap="round" />
+                stroke="#dc2626" stroke-width="2" stroke-linecap="round"
+                :stroke-dasharray="m.holy ? '6,4' : ''" />
 
           <!-- Vertical drops (parent → child) -->
           <line v-for="(d, i) in cv!.drops" :key="'d'+i"
@@ -130,6 +131,7 @@
         <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-amber-400 rounded-full" />主幹 A：馬太譜系（猶大→所羅門→約瑟）</div>
         <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-rose-400 rounded-full" />主幹 B：路加譜系（猶大→拿單→馬利亞）</div>
         <div class="flex items-center gap-1.5"><span class="w-3 h-0 border-t border-dashed border-gray-400" />虛線：法律關係（約瑟→耶穌）</div>
+        <div class="flex items-center gap-1.5"><span class="w-3 h-0 border-t border-dashed border-red-600" />紅虛線：聖靈感孕婚姻（約瑟↔馬利亞）</div>
         <div class="text-gray-400 mt-1 pt-1 border-t border-gray-100">滾輪：上下/左右移動　·　Ctrl+滾輪：縮放　·　拖曳：平移</div>
       </div>
     </template>
@@ -296,7 +298,9 @@ const spineA = computed(() => isDualMode.value ? spineFromWaypoints(SPINE_A_WAYP
 const spineB = computed(() => isDualMode.value ? spineFromWaypoints(SPINE_B_WAYPOINTS, childrenOf.value) : [])
 const spineSingle = computed(() => isDualMode.value || !props.rootId ? [] : longestDescent(props.rootId, childrenOf.value))
 
-const jesusId = computed(() => resolveByName('耶穌（拿撒勒人）'))
+const jesusId  = computed(() => resolveByName('耶穌（拿撒勒人）'))
+const josephId = computed(() => resolveByName('約瑟（馬利亞之夫）'))
+const maryId   = computed(() => resolveByName('馬利亞（耶穌之母）'))
 
 // Shared trunk (prefix that both A and B agree on)
 const sharedTrunkIds = computed(() => {
@@ -384,7 +388,7 @@ interface LNode {
 }
 interface VDrop { x: number; y1: number; y2: number; stroke?: string; dashed?: boolean; hidden?: boolean; isExpansionLine?: boolean }
 interface HBar  { x1: number; x2: number; y: number; stroke?: string; dashed?: boolean; hidden?: boolean; isExpansionLine?: boolean }
-interface MLine { id: string; x1: number; x2: number; y: number; hidden?: boolean }
+interface MLine { id: string; x1: number; x2: number; y: number; hidden?: boolean; holy?: boolean }
 interface TrunkGuide { x: number; y1: number; y2: number; color: string; hidden?: boolean }
 interface ExpansionBox { x1: number; y1: number; x2: number; y2: number }
 
@@ -722,17 +726,23 @@ const cv = computed(() => {
     const wifeLX          = new Map<string, number>()
     const marLineY        = rowY(row) + NH / 2
 
-    // Cross-spine marriages: draw once per pair (dedupe via sorted key)
+    // Cross-spine marriages: draw once per pair (dedupe via sorted key).
+    // Joseph↔Mary marked `holy` so the template can render it specially
+    // (dashed red) — per Matt 1:18-25, Joseph took Mary as wife but Jesus'
+    // conception was already by the Holy Spirit; not a typical union.
     for (const cwid of crossSpineWives) {
       const pairKey = [sid, cwid].sort().join('|')
       if (crossSpineDrawn.has(pairKey)) continue
       crossSpineDrawn.add(pairKey)
       const partner = nodes.find(n => n.id === cwid)
       if (!partner) continue
+      const isHoly = josephId.value && maryId.value &&
+        ((sid === josephId.value && cwid === maryId.value) ||
+         (sid === maryId.value   && cwid === josephId.value))
       const hL = cx - NW / 2, hR = cx + NW / 2
       const pL = partner.x,   pR = partner.x + partner.w
-      if (pR < hL)       marriages.push({ id: `mscross_${pairKey}`, x1: pR, x2: hL, y: marLineY })
-      else if (pL > hR)  marriages.push({ id: `mscross_${pairKey}`, x1: hR, x2: pL, y: marLineY })
+      if (pR < hL)       marriages.push({ id: `mscross_${pairKey}`, x1: pR, x2: hL, y: marLineY, holy: !!isHoly })
+      else if (pL > hR)  marriages.push({ id: `mscross_${pairKey}`, x1: hR, x2: pL, y: marLineY, holy: !!isHoly })
     }
 
     // Uniform NW+HG spacing per user spec: 配偶之間 / 兄弟之間 距離一致
