@@ -379,6 +379,7 @@ interface LNode {
   subtreeExpanded?: boolean
   subtreeSize?: number
   samePerson?: boolean        // true → this person also appears at another card; render ♻
+  isExpansionRoot?: boolean   // true → this kid card's own ▼ is expanded; immune to occlusion
   hidden?: boolean
 }
 interface VDrop { x: number; y1: number; y2: number; stroke?: string; dashed?: boolean; hidden?: boolean; isExpansionLine?: boolean }
@@ -981,6 +982,7 @@ const cv = computed(() => {
         hasSubtree:  hasSub,
         subtreeExpanded: expanded,
         subtreeSize: hasSub ? subtree.length : undefined,
+        isExpansionRoot: expanded,  // never occlude the card whose own ▼ is expanded
       })
 
       // Non-spine kid's wives — placed OUTSIDE (away from spine) so they don't
@@ -1145,6 +1147,7 @@ const cv = computed(() => {
 
     for (const n of nodes) {
       if (n.isExpansionNode) continue
+      if (n.isExpansionRoot) continue  // the kid card whose own ▼ is open
       const nBox: ExpansionBox = { x1: n.x, y1: n.y, x2: n.x + n.w, y2: n.y + n.h }
       if (exShapes.some(s => boxOverlap(nBox, s))) n.hidden = true
     }
