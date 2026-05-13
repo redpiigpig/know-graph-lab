@@ -63,3 +63,9 @@ stores/
 /_tmp_audio/
 /tmp_fhl/
 /tmp_methodist/
+/tmp_cmpc/
+/tmp_talk/
+
+# Local-only source material (z-library downloads, 龐牧師事工報告原稿已匯入)
+/z-lib/
+/龐君華牧師歷年事工報告/
