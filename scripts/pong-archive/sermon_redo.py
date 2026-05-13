@@ -99,6 +99,9 @@ def find_media_by_youtube_id(yid: str) -> dict | None:
 
 
 def insert_sermon(date_str: str, title: str) -> int:
+    # Import locally to avoid restructuring the module tree — the classifier
+    # lives next to its sibling helpers in sermon_other_redo.
+    from sermon_other_redo import classify_sermon_type
     year, month = int(date_str[:4]), int(date_str[5:7])
     church_year = year if month == 12 else year - 1
     sermon_id = int(date_str.replace("-", ""))
@@ -111,7 +114,8 @@ def insert_sermon(date_str: str, title: str) -> int:
             "title": title,
             "church_year": church_year,
             "preacher": "龐君華牧師",
-            "location": "城中教會",
+            "location": "衛理公會城中教會",
+            "sermon_type": classify_sermon_type(title, None),
             "is_published": False,
         },
     )

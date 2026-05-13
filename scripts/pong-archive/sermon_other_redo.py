@@ -201,6 +201,60 @@ MANIFEST: dict[str, dict] = {
 }
 
 
+# ─── Sermon-type classifier (mirror of tmp_cmpc/classify_sermons.py) ───────
+# Keep this in sync with the frontend taxonomy + the one-off backfill script
+# at tmp_cmpc/classify_sermons.py — the same rules also apply in the city-
+# church queue and 別的教會 queue.
+
+_ORDINARY_MARKERS = [
+    '聖靈降臨節之後', '聖靈降臨節後', '聖靈降臨後',
+    '顯現節之後', '顯現節後', '顯現後',
+    '顯現期之後', '顯現期後',
+    '復活期之後', '復活期後',
+    '復活節之後', '復活節後',
+]
+_FEAST_KEYWORDS = [
+    '聖誕', '平安夜',
+    '復活主日', '復活節', '復活前夕', '復活期',
+    '受難日', '受難主日', '受難週', '聖週',
+    '棕樹主日', '棕枝主日',
+    '聖灰',
+    '五旬節', '聖靈降臨主日', '聖靈降臨節',
+    '聖三一', '三一主日', '聖三主日',
+    '諸聖節', '普世聖徒', '聖徒主日',
+    '基督升天', '升天節', '升天主日',
+    '基督君王', '基督是王',
+    '登山變相', '登山變像',
+    '將臨期', '將臨主日',
+    '大齋期', '大齋節期', '預苦期',
+    '顯現節', '顯現主日', '主顯',
+    '顯現期的最後',
+    '立約', '主受洗', '受洗主日',
+    '合一祈禱週', '基督徒合一',
+]
+_SPECIAL_SERVICE = [
+    '追思', '安息禮拜', '安息聚會', '婚禮', '按立', '就職禮',
+    '受洗禮拜', '靈修會', '退修會', '培靈', '佈道會',
+    '聖樂崇拜', '感恩禮拜', '紀念禮拜', '紀念崇拜', '主日學日',
+]
+_ANNIVERSARY = ['堂慶', '週年', '立會', '聯合崇拜', '聯合禮拜', '聯合主日', '開堂', '設立']
+
+
+def classify_sermon_type(title: str | None, occasion: str | None) -> str:
+    t = (title or '') + ' ' + (occasion or '')
+    if '年議會' in t or '年會崇拜' in t:
+        return '年議會禮拜'
+    if any(k in t for k in _ANNIVERSARY):
+        return '堂慶與或聯合禮拜'
+    if any(k in t for k in _SPECIAL_SERVICE):
+        return '特殊禮拜'
+    if any(k in t for k in _ORDINARY_MARKERS):
+        return '主日講道'
+    if any(k in t for k in _FEAST_KEYWORDS):
+        return '特殊節日'
+    return '主日講道'
+
+
 # ─── Manifest field normalizers ────────────────────────────────────────────
 # pong_sermons.scripture_readings is a JSONB array of
 #   {display_label, book, reference}; worship_songs is a JSONB array of
@@ -297,6 +351,7 @@ def insert_sermon(meta: dict, youtube_url: str | None = None) -> int:
         "scripture_readings": _normalize_readings(meta.get("scripture_readings")),
         "worship_team": meta.get("worship_team"),
         "worship_songs": _normalize_songs(meta.get("worship_songs")),
+        "sermon_type": meta.get("sermon_type") or classify_sermon_type(meta.get("title"), meta.get("occasion")),
         "youtube_url": youtube_url,
         "is_published": True,
         "has_recording": True,
@@ -328,6 +383,8 @@ def patch_sermon_metadata(sermon_id: int, meta: dict, youtube_url: str | None = 
         patch["scripture_readings"] = _normalize_readings(meta["scripture_readings"])
     if not sermon.get("worship_songs") and meta.get("worship_songs"):
         patch["worship_songs"] = _normalize_songs(meta["worship_songs"])
+    if not sermon.get("sermon_type"):
+        patch["sermon_type"] = meta.get("sermon_type") or classify_sermon_type(meta.get("title"), meta.get("occasion"))
     if youtube_url and not sermon.get("youtube_url"):
         patch["youtube_url"] = youtube_url
     if not sermon.get("is_published"):
