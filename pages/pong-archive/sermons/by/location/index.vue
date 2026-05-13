@@ -32,7 +32,7 @@
 <script setup>
 import { createClient } from '@supabase/supabase-js'
 import { computed } from 'vue'
-import { locationCategory, CANONICAL_LOCATIONS } from '~/composables/usePongSermonTaxonomy'
+import { locationCategory, LOCATION_ORDER, ALWAYS_SHOW_LOCATIONS } from '~/composables/usePongSermonTaxonomy'
 
 definePageMeta({ layout: 'pong-archive' })
 
@@ -56,15 +56,18 @@ const locationGroups = computed(() => {
     const cat = locationCategory(r.location)
     m[cat] = (m[cat] || 0) + 1
   }
-  // Always render the 4 canonical Methodist locations (in fixed order), even
-  // with 0 sermons. External categories appear only when they have data,
-  // ordered by descending count.
-  const canonical = CANONICAL_LOCATIONS.map(name => ({ name, count: m[name] || 0 }))
-  const external = Object.entries(m)
-    .filter(([name]) => !CANONICAL_LOCATIONS.includes(name))
+  // Follow the fixed display order. The 4 衛理 internal locations show even
+  // with 0 sermons; the rest appear only when they have data.
+  const ordered = LOCATION_ORDER
+    .filter(name => ALWAYS_SHOW_LOCATIONS.includes(name) || m[name])
+    .map(name => ({ name, count: m[name] || 0 }))
+  // Anything that doesn't match a known category (e.g. a future denomination
+  // we haven't added a rule for yet) gets appended at the end.
+  const knownSet = new Set(LOCATION_ORDER)
+  const unknown = Object.entries(m)
+    .filter(([name]) => !knownSet.has(name))
     .map(([name, count]) => ({ name, count }))
-    .sort((a, b) => b.count - a.count)
-  return [...canonical, ...external]
+  return [...ordered, ...unknown]
 })
 </script>
 
