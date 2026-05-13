@@ -143,7 +143,7 @@ const sessions: ReportSession[] = [
         id: '39-cheng-zhong',
         title: '城中牧區事工報告',
         unit: '城中牧區',
-        authorRole: '牧師',
+        authorRole: '主任牧師',
         sourcePages: '76-82',
         intro: [
           '為因應台灣新的宣教情勢，教會面對壓力沈重的都會人口，及轉型中的台灣文化，教會在信仰上所要承擔及提供的服務更須具有深度及多元化。要呈現多元化或帶有文化深度的宣教，教會必須要有基本的規模，否則在經濟規模下的教會，在牧養及宣教、服務上將日益艱難。值此，衛理公會各教會正努力嘗試各類的合作，以期在基礎穩固，資源豐沛，人才鼎盛的情況下，發展各類具持續且深度的宣教，以回應台灣社會普遍對基督信仰陌生情況下的宣教。',
@@ -306,7 +306,7 @@ const sessions: ReportSession[] = [
         id: '40-cheng-zhong',
         title: '城中牧區事工報告',
         unit: '城中牧區',
-        authorRole: '牧師',
+        authorRole: '主任牧師',
         sourcePages: '77-78',
         intro: [
           '自第卅九屆年議會後，牧區的主要單位調整為城中教會、東吳佈道所、衛蘭佈道點。原東吳大學城中校區校牧室則回歸由東吳大學本部校牧室負責，牧區不再派同工前往。',
@@ -396,7 +396,7 @@ const sessions: ReportSession[] = [
         id: '41-cheng-zhong',
         title: '城中牧區事工報告',
         unit: '城中牧區',
-        authorRole: '牧師',
+        authorRole: '主任牧師',
         sourcePages: '129-133',
         intro: [],
         sections: [
@@ -533,7 +533,7 @@ const sessions: ReportSession[] = [
         id: '42-cheng-zhong',
         title: '城中牧區事工報告',
         unit: '城中牧區',
-        authorRole: '牧師',
+        authorRole: '主任牧師',
         sourcePages: '108-113',
         intro: [],
         sections: [
@@ -847,7 +847,7 @@ const sessions: ReportSession[] = [
         id: '43-cheng-zhong',
         title: '城中牧區事工報告',
         unit: '城中牧區',
-        authorRole: '牧師',
+        authorRole: '主任牧師',
         sourcePages: '125-132',
         intro: [],
         sections: [
@@ -1218,7 +1218,7 @@ const sessions: ReportSession[] = [
         id: '44-cheng-zhong',
         title: '城中教會事工報告',
         unit: '城中教會（牧區）',
-        authorRole: '牧師',
+        authorRole: '主任牧師',
         sourcePages: '190-200',
         intro: [],
         sections: [
@@ -1417,7 +1417,7 @@ const sessions: ReportSession[] = [
         id: '45-education',
         title: '基督教教育委員會事工報告',
         unit: '基督教教育委員會',
-        authorRole: '牧師（主編）',
+        authorRole: '主席',
         sourcePages: '97-100',
         intro: [],
         sections: [
@@ -1481,7 +1481,7 @@ const sessions: ReportSession[] = [
         id: '45-cheng-zhong',
         title: '城中教會事工報告',
         unit: '城中教會（牧區）',
-        authorRole: '牧師',
+        authorRole: '主任牧師',
         sourcePages: '164-172',
         intro: [],
         sections: [
@@ -1655,7 +1655,7 @@ const sessions: ReportSession[] = [
         id: '46-education',
         title: '基督教教育委員會事工報告',
         unit: '基督教教育委員會',
-        authorRole: '牧師（主編）',
+        authorRole: '主席',
         sourcePages: '88-91',
         intro: [],
         sections: [
@@ -1722,7 +1722,7 @@ const sessions: ReportSession[] = [
         id: '47-education',
         title: '基督教教育委員會事工報告',
         unit: '基督教教育委員會',
-        authorRole: '牧師（主編）',
+        authorRole: '主席',
         sourcePages: '2-76 ~ 2-79',
         intro: [],
         sections: [
@@ -1791,7 +1791,7 @@ const sessions: ReportSession[] = [
         id: '47-cheng-zhong',
         title: '城中教會事工報告',
         unit: '城中教會（牧區）',
-        authorRole: '牧師',
+        authorRole: '主任牧師',
         sourcePages: '2-145 ~ 2-146',
         intro: [
           '本堂今年以「內尋靈性深度，外展社會服務」為實踐目標，以個人的靈性造就為基礎，建構內部的團契，使之成為生活見證與外展事工的基本團隊。',
@@ -1878,7 +1878,7 @@ const sessions: ReportSession[] = [
         id: '48-education',
         title: '基督教教育委員會事工報告',
         unit: '基督教教育委員會',
-        authorRole: '牧師（主編）',
+        authorRole: '主席',
         sourcePages: '48-49',
         intro: [],
         sections: [
@@ -1938,7 +1938,7 @@ const sessions: ReportSession[] = [
         id: '48-cheng-zhong',
         title: '城中教會事工報告',
         unit: '城中教會（牧區）',
-        authorRole: '牧師',
+        authorRole: '主任牧師',
         sourcePages: '92-93',
         intro: [],
         sections: [
@@ -2097,7 +2097,7 @@ const sessions: ReportSession[] = [
         id: '49-education',
         title: '基督教教育委員會事工報告',
         unit: '基督教教育委員會',
-        authorRole: '牧師（主編）',
+        authorRole: '主席',
         sourcePages: '2-53 ~ 2-54',
         intro: [],
         sections: [
@@ -2139,7 +2139,7 @@ const sessions: ReportSession[] = [
         id: '49-cheng-zhong',
         title: '城中教會事工報告',
         unit: '城中教會（牧區）',
-        authorRole: '牧師',
+        authorRole: '主任牧師',
         sourcePages: '2-109 ~ 2-110',
         intro: [
           '本堂今年仍以「內尋靈性深度，外展社會服務」為實踐目標。以個人的靈性造就為基礎，建構內部的團契，使之成為生活見證與外展事工的基本團隊。',
@@ -2336,7 +2336,7 @@ const sessions: ReportSession[] = [
         id: '50-education',
         title: '基督教教育委員會事工報告',
         unit: '基督教教育委員會',
-        authorRole: '牧師（主編）',
+        authorRole: '主席',
         sourcePages: '3-51 ~ 3-52',
         intro: [],
         sections: [
@@ -2380,7 +2380,7 @@ const sessions: ReportSession[] = [
         id: '50-cheng-zhong',
         title: '城中教會事工報告',
         unit: '城中教會（牧區）',
-        authorRole: '牧師',
+        authorRole: '主任牧師',
         sourcePages: '3-108 ~ 3-109',
         intro: [
           '今年適逢本堂 50 週年慶，所以執事會通過將本年訂為「堂慶年」。過去四十週年時我們曾訂出城中牧區的呼召「就是在基督的愛中回應上主的福音」，我們透過崇拜、學習與關顧、服務、傳揚福音來活出基督門徒的身分」，過去十年來都以此來擬定各項事工發展的計畫。',
@@ -2693,7 +2693,7 @@ const sessions: ReportSession[] = [
         id: '51-cheng-zhong',
         title: '城中教會事工報告',
         unit: '城中教會（牧區）',
-        authorRole: '牧師',
+        authorRole: '主任牧師',
         sourcePages: '104-105',
         intro: [
           '城中牧區的呼召「就是在基督的愛中回應上主的福音，我們透過崇拜、學習與關顧、服務、傳揚福音來活出基督門徒的身分」，過去十年來都以此來擬定各項事工發展的計畫。繼五十週年禧年我們提出「成為真實門徒的群體」。今年我們一方面在過去的努力成果下，進一步檢視這些事工與項目；一方面參與造就各級會友的服事，另一方面參與面對地區及城中堂會的處遇，凝聚各堂的核心會友、參與面對地區及城中堂會的處遇。我們積極建立各項事工，當了瞭解的牧者會友，我們新成立分區聚會議將來檢索堂中部的訓練，做為下一個的事工。當引繪當區的服務事工，我們安排各種服務職事的訓練。',
@@ -2757,7 +2757,7 @@ const sessions: ReportSession[] = [
         id: '52-cheng-zhong',
         title: '城中教會事工報告',
         unit: '城中教會（牧區）',
-        authorRole: '牧師',
+        authorRole: '主任牧師',
         sourcePages: '106-109',
         intro: [
           '為落實 50 週年時所提出的理想與目標「建構一個真實的門徒群體」，在 2014-15 年間召開了多次會議凝聚教會務的共識，首先，我們繼續以落實城中牧區的呼召「在基督的愛中回應上主的福音」，我們透過崇拜、學習與關顧、服務、傳揚福音來活出基督門徒的身分」，為集聚晚晚做，所以我們不斷地一步深化崇拜、團契、服務、外展等事工品質；加強核心同工群體的建構與訓練及新成員的教化過程。今年我們主要的事工會提如下：',
@@ -2877,7 +2877,7 @@ const sessions: ReportSession[] = [
         id: '53-cheng-zhong',
         title: '城中教會事工報告',
         unit: '城中教會（牧區）',
-        authorRole: '牧師',
+        authorRole: '主任牧師',
         sourcePages: '3-106 ~ 3-108',
         intro: [
           '成為真實的門徒群體之建構，為落實 50 週年時所提出的理想與目標「建構一個真實的門徒群體」，在今年進行事工如下。',
@@ -3125,7 +3125,7 @@ const sessions: ReportSession[] = [
         id: '54-ministry-committee',
         title: '牧職委員會事工報告',
         unit: '牧職委員會',
-        authorRole: '牧職會長',
+        authorRole: '主席',
         sourcePages: '31',
         intro: [],
         sections: [
@@ -3247,7 +3247,7 @@ const sessions: ReportSession[] = [
         id: '54-cheng-zhong',
         title: '城中教會事工報告',
         unit: '城中教會（牧區）',
-        authorRole: '牧師',
+        authorRole: '主任牧師',
         sourcePages: '101-103',
         intro: [
           '前言：成為真實的門徒群體之建構，為落實 50 週年時所提出的理想與目標「建構一個真實的門徒群體」，也逐步連續「內尋靈性深度，外展生活服務」的信仰實踐，在今年進行事工如下：',
@@ -3354,7 +3354,7 @@ const sessions: ReportSession[] = [
         id: '55-ministry-committee',
         title: '牧職委員會事工報告',
         unit: '牧職委員會',
-        authorRole: '牧職會長',
+        authorRole: '主席',
         sourcePages: '22-23',
         intro: [],
         sections: [
@@ -3474,7 +3474,7 @@ const sessions: ReportSession[] = [
         id: '55-cheng-zhong',
         title: '城中教會事工報告',
         unit: '城中教會（牧區）',
-        authorRole: '牧師',
+        authorRole: '主任牧師',
         sourcePages: '88-90',
         intro: [
           '為達建今年堂會的目標「應念的門徒」，同時也落實本堂於 2012 年時，所提出的願景「建構一個真實的門徒群體」，並逐步連續「內尋靈性深度，外展生活服務」的信仰實踐，今年的事工進行如下：',
@@ -3567,7 +3567,7 @@ const sessions: ReportSession[] = [
         id: '56-ministry-committee',
         title: '牧職委員會事工報告',
         unit: '牧職委員會',
-        authorRole: '牧職會長',
+        authorRole: '主席',
         sourcePages: '2-36 ~ 2-37',
         intro: [],
         sections: [
@@ -3710,7 +3710,7 @@ const sessions: ReportSession[] = [
         id: '56-cheng-zhong',
         title: '城中教會事工報告',
         unit: '城中教會（牧區）',
-        authorRole: '牧師',
+        authorRole: '主任牧師',
         sourcePages: '2-105 ~ 2-107',
         intro: [
           '前言：成為真實的門徒群體之建構——本堂於 50 週年時提出「建構一個真實的門徒群體」的方向與目標。真實的門徒的內涵是「內尋靈性深度、外展生活服務」的信仰實踐。透過幾年的實踐後，我們今年特別建以建構門徒小組事工為新中段的事工綱領一目標，近年總會在指出「無組的門徒，盲目的小組」，所以本堂這幾年「真實的門徒」，因此我們在每年依上述的目標與具體的事工進行各項事工報告：',
@@ -3888,7 +3888,7 @@ const sessions: ReportSession[] = [
         id: '57-board',
         title: '董事會事工報告',
         unit: '董事會',
-        authorRole: '會督',
+        authorRole: '董事長',
         sourcePages: '21',
         intro: [],
         sections: [
@@ -4124,7 +4124,7 @@ const sessions: ReportSession[] = [
         id: '58-board',
         title: '董事會事工報告',
         unit: '董事會',
-        authorRole: '會督',
+        authorRole: '董事長',
         sourcePages: '18',
         intro: [],
         sections: [
@@ -4341,7 +4341,7 @@ const sessions: ReportSession[] = [
         id: '59-board',
         title: '董事會事工報告',
         unit: '董事會',
-        authorRole: '會督',
+        authorRole: '董事長',
         sourcePages: '2-26',
         intro: [],
         sections: [
@@ -4392,7 +4392,7 @@ const sessions: ReportSession[] = [
         id: '59-nomination',
         title: '提名委員會事工報告',
         unit: '提名委員會',
-        authorRole: '會督',
+        authorRole: '主席',
         sourcePages: '2-61',
         intro: [
           '本屆適逢三年一度的選舉年，悉依照衛理法規《5-6 頁 B.第一編》「提名辦法」之規定進行相關提名作業。',
