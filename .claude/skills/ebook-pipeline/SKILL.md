@@ -166,6 +166,22 @@ python scripts/ocr_with_gemini.py run --model gemini-2.5-flash-lite --rpm 12  # 
 - Quota stop: script exits with code 2, "Quota/rate-limit hit. Stopping." → bat falls back to `ocr_with_qwen.py --limit 5` (Workflow A-2)
 - `parse_error: 'file not found: ...'` → DB row references a Drive path that doesn't exist anymore (Drive sync disconnected, file moved/deleted, or rename divergence). Book is removed from OCR queue automatically; investigate by checking if `G:\` is mounted
 
+### Temp-file cleanup policy
+
+The shipped OCR scripts do NOT leave images on disk:
+
+- `ocr_with_claude_cli.py` — renders each page to PNG/JPEG bytes in memory via `pix.tobytes()`, base64-encodes inline. No filesystem writes.
+- `ocr_with_gemini.py` — uses `tempfile.NamedTemporaryFile` (system tmp dir, e.g. `%TEMP%`) and `unlink()` in `finally`. Auto-cleaned.
+
+If you ever spot `ocr_*.png` / `ocr_*.jpg` / book-render PDFs accumulating in `C:\tmp\` (or any working dir), they are leftovers from experimental scripts (e.g. the 2026-05-07 parallel-Haiku-agents attempt that left ~650 PNGs / ~200 MB before being abandoned). **Once the corresponding books are OCR'd + standardized (Plan A / Plan B complete), delete them.** Cleanup command:
+
+```bash
+# Bulk delete after confirming the relevant books are parsed_at IS NOT NULL
+rm /c/tmp/ocr_*.png /c/tmp/ocr_*.jpg /c/tmp/book_*.pdf 2>/dev/null
+```
+
+When writing any new OCR variant: render to memory if possible. If a temp file is unavoidable (e.g. an SDK that requires a file path), put it in `tempfile.TemporaryDirectory()` or `NamedTemporaryFile(delete=True)` so cleanup is automatic — never accumulate in a project-level `tmp/` folder.
+
 ---
 
 ## Workflow A-2 — Local Qwen2.5-VL OCR fallback (DISABLED 2026-05-06)
