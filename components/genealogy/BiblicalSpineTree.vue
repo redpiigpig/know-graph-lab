@@ -955,8 +955,14 @@ const cv = computed(() => {
       const kxVal = kidX.get(kid)!
 
       // Does this kid have its own descendants (2nd-gen onwards)?
+      // BUT: if the kid is also the spouse of a SPINE person, their descendants
+      // are already visible via the spouse's spine line — so hide the ▼ on this
+      // card to avoid redundant 299-person trees (e.g., 撒拉 as 他拉's daughter
+      // shouldn't show a ▼ since her line = 以撒's line = spine A).
+      const kidSpouseIds = sp.get(kid) ?? []
+      const hasSpineSpouse = kidSpouseIds.some(spId => rowOf.has(spId))
       const subtree = subtreeIds(kid).filter(id => id !== kid)
-      const hasSub  = subtree.length > 0
+      const hasSub  = subtree.length > 0 && !hasSpineSpouse
       const expanded = expandedClans.value.has(kid)
 
       nodes.push({
