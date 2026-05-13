@@ -738,94 +738,201 @@ const cv = computed(() => {
       else                     midX = cx + NW / 2 + Math.round(MAR_GAP / 2)
     }
 
-    // Non-spine children (excluding spouses themselves)
-    const spineSet = new Set(spineChildIds)
-    const spouseSet = new Set([sid, ...wifeIds])
-    const allWifeKidSet = new Set(wifeIds.flatMap(wid => ch.get(wid) ?? []))
-    const ownNonSpineKids = (ch.get(sid) ?? []).filter(c => !spineSet.has(c) && !spouseSet.has(c) && !allWifeKidSet.has(c))
-    const wivesNonSpineKids = wifeIds.flatMap(wid =>
-      (ch.get(wid) ?? []).filter(c => !spineSet.has(c) && !spouseSet.has(c))
-    )
-    const allNonSpine = [...new Set([...wivesNonSpineKids, ...ownNonSpineKids])]
+    // ── NEW: Place ALL first-gen kids individually (per user rule) ────
+    // Rules:
+    //   1. Group by mother in marriage order — 大老婆 group goes right, 小老婆 left
+    //   2. Within same mother, 兄右弟左 (canonical order in husband.children = birth order)
+    //   3. Unattributed-to-wife kids appended at the left
+    //   4. Spine kids stay pinned at their spine-column X (current behavior)
+    //   5. Non-spine kids with descendants get a ▼ clan card directly below them
+    //      (click to expand the subtree in-place; ▲ to collapse).
+    //   6. Kids without descendants render as plain cards, no clan attached.
 
-    // ── Clan + optional in-place expansion ──────────────────────────
-    if (allNonSpine.length > 0) {
-      const allIds   = allNonSpine.flatMap(id => subtreeIds(id))
-      const firstKid = pMap.get(allNonSpine[0])
-      const baseLabel = allNonSpine.length === 1
-        ? `${baseName(firstKid?.data.name ?? '')}支系`
-        : `${baseName(firstKid?.data.name ?? '')}等${allNonSpine.length}支`
-      const expanded = expandedClans.value.has(sid)
-      const label    = expanded ? `▲ 收起 ${baseLabel}` : `▼ ${baseLabel}`
+    const spouseSetAll = new Set([sid, ...allWifeIds])
 
-      let clanX: number
-      const clanY = rowY(row + 1)
-      if (clanSide === 'right') {
-        clanX = cx + NW / 2 + HG
-      } else {
-        clanX = cx - NW / 2 - HG - CW
-      }
-      const clanCX = clanX + CW / 2
-
-      nodes.push({
-        id: `clan_${sid}`,
-        rawName:     baseLabel,
-        displayName: label,
-        genLabel:    `旁支 · ${allIds.length}人`,
-        generation:  0,
-        gender: '',
-        x: clanX, y: clanY, w: CW, h: CH,
-        spineKind:   null,
-        isClan:      true,
-        clanCount:   allIds.length,
-        clanMemberIds: allIds,
-        clanParentId: sid,
-        clanCollapsed: !expanded,
-      })
-
-      // Line from midX → clan
-      const jY = marLineY + Math.round((clanY - marLineY) * 0.3)
-      drops.push({ x: midX,  y1: marLineY, y2: jY })
-      hbars.push({ x1: Math.min(midX, clanCX), x2: Math.max(midX, clanCX), y: jY })
-      drops.push({ x: clanCX, y1: jY, y2: clanY })
-
-      // ── If expanded, lay out the full subtree below/beside the clan card
-      if (expanded) {
-        const exp = layoutExpansion(allNonSpine, clanX, clanY + CH + 24, clanSide)
-        nodes.push(...exp.nodes)
-        drops.push(...exp.drops)
-        hbars.push(...exp.hbars)
-        expansionBoxes.push(exp.bbox)
+    // Build raw kid list: husband.children first (canonical order), then wives' kids
+    // not already in the list. allWifeIds is used so we group by ALL wives including
+    // any cross-spine spouse (e.g., Joseph↔Mary).
+    const allKidsRaw: string[] = []
+    for (const c of ch.get(sid) ?? []) {
+      if (!spouseSetAll.has(c)) allKidsRaw.push(c)
+    }
+    for (const wid of allWifeIds) {
+      for (const c of ch.get(wid) ?? []) {
+        if (!spouseSetAll.has(c) && !allKidsRaw.includes(c)) allKidsRaw.push(c)
       }
     }
 
-    // ── Spine child line(s) ─────────────────────────────────────────
-    for (const cid of spineChildIds) {
-      const ccx = cxOf(cid)
-      const childY = rowY(rowOf.get(cid)!)
-      const isLegal = rk.get(`${sid}|${cid}`) === 'legal'
-      // Color: when parent is on shared trunk, child's spine determines the color
-      // (so David→Solomon is amber, David→Nathan is rose). Otherwise follow parent.
-      const parentKind = membership.get(sid)
-      const childKind  = membership.get(cid)
-      const continuingKind = parentKind === 'S' ? (childKind ?? 'S') : parentKind
-      const lineStroke = isLegal
-        ? '#9ca3af'
-        : continuingKind === 'B' ? '#f43f5e'
-        : continuingKind === 'A' ? '#f59e0b'
-        : continuingKind === 'S' ? '#f59e0b'  // shared trunk = amber
-        : continuingKind === 'single' ? '#f59e0b'
-        : '#6b7280'
+    if (allKidsRaw.length === 0) return  // no kids → nothing more to do
 
-      if (midX === ccx) {
-        // Straight drop
-        drops.push({ x: ccx, y1: rowY(row) + NH, y2: childY, stroke: lineStroke, dashed: isLegal })
-      } else {
-        // Orthogonal: down → across → down
-        const barY = marLineY + Math.round((childY - marLineY) * 0.6)
-        drops.push({ x: midX, y1: marLineY, y2: barY, stroke: lineStroke, dashed: isLegal })
-        hbars.push({ x1: Math.min(midX, ccx), x2: Math.max(midX, ccx), y: barY, stroke: lineStroke, dashed: isLegal })
-        drops.push({ x: ccx, y1: barY, y2: childY, stroke: lineStroke, dashed: isLegal })
+    // Attribute each kid → mother (first wife whose children list contains them)
+    const kidMom = new Map<string, string | null>()
+    for (const kid of allKidsRaw) {
+      let mom: string | null = null
+      for (const wid of allWifeIds) {
+        if ((ch.get(wid) ?? []).includes(kid)) { mom = wid; break }
+      }
+      kidMom.set(kid, mom)
+    }
+
+    // Order RTL: first wife's kids first (rightmost), within wife by appearance order
+    const orderedRTL: string[] = []
+    const hasLinkage = Array.from(kidMom.values()).some(v => v !== null)
+    if (hasLinkage) {
+      for (const wid of allWifeIds) {
+        for (const kid of allKidsRaw) {
+          if (kidMom.get(kid) === wid) orderedRTL.push(kid)
+        }
+      }
+      for (const kid of allKidsRaw) {
+        if (kidMom.get(kid) === null) orderedRTL.push(kid)
+      }
+    } else {
+      orderedRTL.push(...allKidsRaw)
+    }
+
+    // Compute X for each kid
+    const KID_GAP = NW + HG
+    const kidX = new Map<string, number>()
+
+    // Spine kids: forced to spine column
+    for (const sk of spineChildIds) kidX.set(sk, cxOf(sk))
+
+    const spineKidIdxs = new Map<string, number>()
+    for (const sk of spineChildIds) spineKidIdxs.set(sk, orderedRTL.indexOf(sk))
+
+    if (spineChildIds.length === 0) {
+      // No spine kid (rare). Center kids around parent cx.
+      orderedRTL.forEach((k, i) => {
+        kidX.set(k, cx + ((orderedRTL.length - 1) / 2 - i) * KID_GAP)
+      })
+    } else {
+      // Has spine kid(s). Non-spine kids fan out around them.
+      const validSpineIdxs = Array.from(spineKidIdxs.values()).filter(i => i >= 0)
+      const minSpineIdx = validSpineIdxs.length ? Math.min(...validSpineIdxs) : 0
+      const maxSpineIdx = validSpineIdxs.length ? Math.max(...validSpineIdxs) : 0
+
+      const spineByX     = [...spineChildIds].sort((a, b) => kidX.get(b)! - kidX.get(a)!)
+      const rightmostSpX = kidX.get(spineByX[0])!
+      const leftmostSpX  = kidX.get(spineByX[spineByX.length - 1])!
+
+      const rightGroup: string[] = []  // natural idx < minSpineIdx → place RIGHT of rightmost spine kid
+      const leftGroup:  string[] = []  // natural idx > maxSpineIdx → place LEFT of leftmost spine kid
+      const betweenGroup: string[] = []
+
+      orderedRTL.forEach((kid, idx) => {
+        if (spineKidIdxs.has(kid)) return
+        if (idx < minSpineIdx) rightGroup.push(kid)
+        else if (idx > maxSpineIdx) leftGroup.push(kid)
+        else betweenGroup.push(kid)
+      })
+
+      // rightGroup: natural order has rightmost-natural FIRST (idx 0 = furthest right).
+      // We want furthest-right kid placed at largest X — so walk rightGroup from the END.
+      for (let i = 0; i < rightGroup.length; i++) {
+        const kid = rightGroup[rightGroup.length - 1 - i]
+        kidX.set(kid, rightmostSpX + (i + 1) * KID_GAP)
+      }
+      // leftGroup: natural order has leftmost-natural LAST. Closest-to-spine = first in leftGroup.
+      for (let i = 0; i < leftGroup.length; i++) {
+        kidX.set(leftGroup[i], leftmostSpX - (i + 1) * KID_GAP)
+      }
+      // betweenGroup: evenly between leftmost and rightmost spine kids
+      if (betweenGroup.length > 0 && rightmostSpX > leftmostSpX) {
+        const span = rightmostSpX - leftmostSpX
+        for (let i = 0; i < betweenGroup.length; i++) {
+          kidX.set(betweenGroup[i], leftmostSpX + ((i + 1) / (betweenGroup.length + 1)) * span)
+        }
+      }
+    }
+
+    // childY: align with spine kid's row if any; else use parent row + 1
+    const childY = spineChildIds.length > 0
+      ? rowY(rowOf.get(spineChildIds[0])!)
+      : rowY(row + 1)
+
+    // Place kid cards (spine kids are already in the nodes array; skip them here)
+    for (const kid of orderedRTL) {
+      if (rowOf.has(kid)) continue  // spine kid already rendered
+      if (shown.has(kid)) continue
+      shown.add(kid)
+      const kp = pMap.get(kid)
+      if (!kp) continue
+      const kxVal = kidX.get(kid)!
+      nodes.push({
+        id: kid,
+        rawName:     kp.data.name,
+        displayName: shortName(kp.data.name),
+        genLabel:    getGenLabel(kp),
+        generation:  kp.data.generationNum || 0,
+        gender:      kp.data.gender,
+        x: kxVal - NW / 2, y: childY, w: NW, h: NH,
+        spineKind:   null,
+        isClan:      false,
+      })
+
+      // 2nd-gen onwards: ▼ clan card directly below, if this kid has any descendants
+      const subtree = subtreeIds(kid).filter(id => id !== kid)
+      if (subtree.length > 0) {
+        const expanded  = expandedClans.value.has(kid)
+        const baseLabel = `${baseName(kp.data.name)}支系`
+        const label     = expanded ? `▲ 收起 ${baseLabel}` : `▼ ${baseLabel}`
+        const clanCardY = childY + NH + 16
+        nodes.push({
+          id: `clan_${kid}`,
+          rawName:     baseLabel,
+          displayName: label,
+          genLabel:    `旁支 · ${subtree.length}人`,
+          generation:  0,
+          gender: '',
+          x: kxVal - CW / 2, y: clanCardY, w: CW, h: CH,
+          spineKind:   null,
+          isClan:      true,
+          clanCount:   subtree.length,
+          clanMemberIds: subtree,
+          clanParentId: kid,
+          clanCollapsed: !expanded,
+        })
+        drops.push({ x: kxVal, y1: childY + NH, y2: clanCardY })
+
+        if (expanded) {
+          const kidChildren = (ch.get(kid) ?? []).filter(c => !rowOf.has(c))
+          if (kidChildren.length > 0) {
+            const exp = layoutExpansion(kidChildren, kxVal - NW, clanCardY + CH + 20, 'right')
+            nodes.push(...exp.nodes)
+            drops.push(...exp.drops)
+            hbars.push(...exp.hbars)
+            expansionBoxes.push(exp.bbox)
+          }
+        }
+      }
+    }
+
+    // T-bar from marriage midpoint to all kids (one drop per kid, colored per relationship)
+    const allKidXs = orderedRTL.map(k => kidX.get(k)!).filter(v => v !== undefined)
+    if (allKidXs.length > 0) {
+      const barY = marLineY + Math.round((childY - marLineY) * 0.5)
+      const minBarX = Math.min(midX, ...allKidXs)
+      const maxBarX = Math.max(midX, ...allKidXs)
+      drops.push({ x: midX, y1: marLineY, y2: barY })
+      hbars.push({ x1: minBarX, x2: maxBarX, y: barY })
+      const parentKind = membership.get(sid)
+      for (const kid of orderedRTL) {
+        const kxVal   = kidX.get(kid)!
+        const isSpKid = rowOf.has(kid)
+        const childKind = membership.get(kid)
+        const isLegal = rk.get(`${sid}|${kid}`) === 'legal'
+        const continuingKind = parentKind === 'S' ? (childKind ?? 'S') : parentKind
+        const lineStroke = isLegal
+          ? '#9ca3af'
+          : !isSpKid                          ? '#9ca3af'
+          : continuingKind === 'B'            ? '#f43f5e'
+          : continuingKind === 'A'            ? '#f59e0b'
+          : continuingKind === 'S'            ? '#f59e0b'
+          : continuingKind === 'single'       ? '#f59e0b'
+          :                                     '#6b7280'
+        const kidActualY = isSpKid ? rowY(rowOf.get(kid)!) : childY
+        drops.push({ x: kxVal, y1: barY, y2: kidActualY, stroke: lineStroke, dashed: isLegal })
       }
     }
   }
