@@ -351,13 +351,23 @@ const graphNodes  = ref<any[]>([])
 const graphEdges  = ref<any[]>([])
 const graphLoaded = ref(false)
 
+// Tradition selection — reads ?tradition= from URL, then defaults to 'biblical'.
+// Allowed values: biblical | catholic | orthodox | rabbinic
+const route = useRoute()
+const tradition = ref<'biblical' | 'catholic' | 'orthodox' | 'rabbinic'>(
+  (['biblical', 'catholic', 'orthodox', 'rabbinic'].includes(route.query.tradition as string)
+    ? route.query.tradition
+    : 'biblical') as 'biblical' | 'catholic' | 'orthodox' | 'rabbinic'
+)
+
 async function loadGraph() {
   if (graphLoaded.value) return
   graphLoaded.value = true
   try {
     const token = await getToken()
     if (!token) { graphLoaded.value = false; return }
-    const { nodes, edges } = await $fetch<{ nodes: any[], edges: any[] }>('/api/genealogy/biblical-graph', {
+    const qs = tradition.value !== 'biblical' ? `?tradition=${tradition.value}` : ''
+    const { nodes, edges } = await $fetch<{ nodes: any[], edges: any[] }>('/api/genealogy/biblical-graph' + qs, {
       headers: { Authorization: `Bearer ${token}` },
     })
     graphNodes.value = nodes
@@ -366,6 +376,12 @@ async function loadGraph() {
     graphLoaded.value = false
   }
 }
+
+// Reload graph when tradition changes
+watch(tradition, () => {
+  graphLoaded.value = false
+  if (view.value === 'tree') loadGraph()
+})
 
 function onSelectPerson(id: string) {
   const found = people.value.find(p => p.id === id)

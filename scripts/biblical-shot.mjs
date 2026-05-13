@@ -37,6 +37,7 @@ function arg(name) {
 }
 const expandName = arg('expand')
 const focusName  = arg('focus')
+const tradition  = arg('tradition')  // catholic | orthodox | rabbinic (default biblical-only)
 const outPath    = arg('out') || `c:/tmp/biblical-${expandName ? 'expand-' + expandName : 'default'}.png`
 const fullPage   = args.includes('--full')
 
@@ -133,8 +134,9 @@ await context.addCookies([{
 }])
 console.log(`→ Cookie set: ${cookieName} (${cookieValue.length} chars)`)
 
-console.log('→ Loading /genealogy/biblical')
-await page.goto(APP_BASE + '/genealogy/biblical', { waitUntil: 'domcontentloaded' })
+const traditionQS = tradition ? `?tradition=${encodeURIComponent(tradition)}` : ''
+console.log(`→ Loading /genealogy/biblical${traditionQS}`)
+await page.goto(APP_BASE + '/genealogy/biblical' + traditionQS, { waitUntil: 'domcontentloaded' })
 await page.waitForLoadState('networkidle').catch(() => {})
 console.log('  landed at:', page.url())
 if (page.url().includes('/login')) {

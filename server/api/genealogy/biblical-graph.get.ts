@@ -2,13 +2,46 @@ export default defineEventHandler(async (event) => {
   await requireAuth(event)
   const supabase = getAdminClient()
 
-  const { data: people, error } = await supabase
+  // ── Tradition filter ─────────────────────────────────────────────────
+  // `?tradition=<key>` where key ∈ { biblical | catholic | orthodox | rabbinic }
+  // Each mode shows: biblical + early_consensus + <selected>
+  // Default (no param) = biblical mode → biblical + early_consensus only
+  const q = getQuery(event)
+  const traditionRaw = String(q.tradition ?? 'biblical').toLowerCase()
+  const selectedTradition = ['catholic', 'orthodox', 'rabbinic'].includes(traditionRaw)
+    ? traditionRaw as 'catholic' | 'orthodox' | 'rabbinic'
+    : null
+  const allowedTraditions = new Set(['biblical', 'early_consensus', ...(selectedTradition ? [selectedTradition] : [])])
+
+  const { data: allPeople, error } = await supabase
     .from('biblical_people')
     .select('*')
     .order('birth_year', { ascending: true, nullsFirst: false })
 
   if (error) throw createError({ statusCode: 500, message: error.message })
-  if (!people?.length) return { nodes: [], edges: [] }
+  if (!allPeople?.length) return { nodes: [], edges: [] }
+
+  const people = allPeople.filter(p => allowedTraditions.has(p.tradition ?? 'biblical'))
+  if (!people.length) return { nodes: [], edges: [] }
+
+  // Apply per-tradition children/spouse merges + hides BEFORE building edges
+  // so the rest of the pipeline (resolveId, tribeCode, edges) sees a unified view.
+  for (const p of people) {
+    if (!selectedTradition) continue
+    const addChildren = (p.tradition_children as Record<string, string> | null)?.[selectedTradition]
+    const addSpouse   = (p.tradition_spouse   as Record<string, string> | null)?.[selectedTradition]
+    const hideChildrenRaw = (p.tradition_hide_children as Record<string, string> | null)?.[selectedTradition]
+    if (addChildren) {
+      p.children = p.children ? `${p.children}、${addChildren}` : addChildren
+    }
+    if (addSpouse) {
+      p.spouse = p.spouse ? `${p.spouse}、${addSpouse}` : addSpouse
+    }
+    if (hideChildrenRaw && p.children) {
+      const hideSet = new Set(hideChildrenRaw.split(/[,，、]/).map(s => s.trim()).filter(Boolean))
+      p.children = p.children.split(/[,，、]/).map((s: string) => s.trim()).filter((s: string) => s && !hideSet.has(s)).join('、')
+    }
+  }
 
   const exactMap = new Map<string, string>()
   const baseMap  = new Map<string, string[]>()
