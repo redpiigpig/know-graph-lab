@@ -455,6 +455,12 @@ const cv = computed(() => {
   const marriages: MLine[] = []
   const trunkGuides: TrunkGuide[] = []
   const shown = new Set<string>()
+  // Person-ids already placed on the chart as a row-level spouse (spine wife,
+  // or one of a spine wife's same-gen extra spouses — Trinubium extension).
+  // Used to suppress duplicate rendering of the same person as a kidWife at
+  // a different row (e.g. 革羅罷-亞拿 sits with 亞拿 at gen 73 and must NOT
+  // also appear as 馬利亞-革羅罷's husband at gen 74).
+  const placedAsRowSpouse = new Set<string>()
   const crossSpineDrawn = new Set<string>()  // dedup cross-spine marriage lines
   const expansionBoxes: ExpansionBox[] = [] // for occlusion detection
   const expansionNodeIds = new Set<string>() // nodes inside expanded subtrees
@@ -655,6 +661,7 @@ const cv = computed(() => {
   const allSpineIds = Array.from(rowOf.keys())
   const maxWives = Math.max(0, ...allSpineIds.map(id => (sp.get(id) ?? []).length))
 
+
   // Wife area width (per side, both spines may have wives outside).
   // Each wife claims one (NW + WIFE_HG) slot from the husband center.
   const wifeAreaW = maxWives > 0
@@ -766,7 +773,28 @@ const cv = computed(() => {
     // (already placed on another spine; just draw a direct marriage bridge).
     const allWifeIds      = sp.get(sid) ?? []
     const crossSpineWives = allWifeIds.filter(wid => rowOf.has(wid))
-    const wifeIds         = allWifeIds.filter(wid => !rowOf.has(wid))
+    const wifeIdsBase     = allWifeIds.filter(wid => !rowOf.has(wid))
+
+    // Trinubium-style extension: a spine wife may have her OWN other spouses
+    // at the same generation (e.g. Catholic mode: 亞拿 → 約亞敬 + 革羅罷 + 撒羅馬).
+    // Append them to the marriage row so they sit adjacent to the wife.
+    // (Visually appears as one stack — the line between extras implies adjacency,
+    // a UI compromise that's clearer than missing cards.)
+    const sidGen = pMap.get(sid)?.data.generationNum
+    const inMarriageRow = new Set<string>([sid, ...wifeIdsBase])
+    const extraSpouses: string[] = []
+    for (const wid of wifeIdsBase) {
+      for (const otherSpId of sp.get(wid) ?? []) {
+        if (inMarriageRow.has(otherSpId) || rowOf.has(otherSpId)) continue
+        const op = pMap.get(otherSpId)
+        if (!op) continue
+        if (sidGen != null && op.data.generationNum != null && op.data.generationNum !== sidGen) continue
+        inMarriageRow.add(otherSpId)
+        extraSpouses.push(otherSpId)
+        placedAsRowSpouse.add(otherSpId)
+      }
+    }
+    const wifeIds = [...wifeIdsBase, ...extraSpouses]
     const wifeLX          = new Map<string, number>()
     const marLineY        = rowY(row) + NH / 2
 
@@ -1068,7 +1096,8 @@ const cv = computed(() => {
       // Non-spine kid's wives — placed OUTSIDE (away from spine) using the marriage
       // SLOT (NW + WIFE_HG = 180px). Wider than sibling gap (HG=20) so the red
       // marriage line is clearly visible — per user spec「配偶線要 3 倍長」.
-      const kidWifeIds = (sp.get(kid) ?? []).filter(w => !rowOf.has(w))
+      // Skip wives already drawn at a higher row as a row-level spouse (Trinubium).
+      const kidWifeIds = (sp.get(kid) ?? []).filter(w => !rowOf.has(w) && !placedAsRowSpouse.has(w))
       if (kidWifeIds.length > 0) {
         // 夫右妻左: wives always on the kid's LEFT, regardless of which side of spine
         // the kid sits on. wi=0 (primary/大老婆/前妻) closest to kid.
@@ -1331,18 +1360,28 @@ const cv = computed(() => {
     if (list.length > 1) for (const n of list) n.samePerson = true
   }
 
-  // Also mark ♻ on people whose PARENT is on the chart but currently collapsed
-  // (so we can't yet see them in the parent's expanded clan). Clicking ♻ on these
-  // will auto-expand the parent's ▼ and pan. E.g., 巴實抹（以實瑪利之女）
-  // appears as 以掃's wife — her father 以實瑪利 is also drawn, but his ▼19 is
-  // collapsed so 巴實抹 only renders ONCE. The marker tells the user there's a
-  // documented parent to jump to.
-  const pids = new Set(visNodes.map(n => n.personId))
+  // Also mark ♻ on WIFE cards (people drawn only as a spouse, not as a parent's
+  // child) when any ancestor in their DB chain is rendered. Click ♻ on these
+  // walks up parent chain, expands the nearest rendered ancestor's ▼ clan and
+  // pans to where the wife appears as her father's daughter.
+  // E.g., 利亞 drawn as 雅各's wife → ancestor chain 拉班 ← 彼土利 ← 拿鶴.
+  // 拿鶴 is rendered (亞伯拉罕's brother). Click expands 拿鶴 → 利亞 appears
+  // as his great-granddaughter, ♻ resolves to that position.
+  const pids = new Set<string>()
+  for (const n of nodes) if (!n.hidden) pids.add(n.personId)
   for (const n of nodes) {
     if (n.hidden || n.samePerson || n.isExpansionNode) continue
-    const parents = parentsOf.value.get(n.personId) ?? []
-    for (const pid of parents) {
-      if (pids.has(pid)) { n.samePerson = true; break }
+    if (!n.id.includes('__wife_of__')) continue  // only wife/spouse cards get ancestry-aware ♻
+    let cur: string | undefined = n.personId
+    const seen = new Set<string>([n.personId])
+    while (cur) {
+      const parents = parentsOf.value.get(cur) ?? []
+      if (parents.length === 0) break
+      const par = parents[0]
+      if (seen.has(par)) break
+      seen.add(par)
+      if (pids.has(par)) { n.samePerson = true; break }
+      cur = par
     }
   }
 
@@ -1415,21 +1454,29 @@ function jumpToOther(current: LNode) {
   )
   if (peers.length > 0) { panToCard(peers[0]); return }
 
-  // No rendered peer — try to expand a parent's clan to bring one in.
-  const parents = parentsOf.value.get(current.personId) ?? []
-  for (const pid of parents) {
-    const parentNode = cv.value.nodes.find(n => n.personId === pid && !n.hidden)
-    if (!parentNode) continue
-    if (!expandedClans.value.has(pid)) toggleExpand(pid)
-    // After Vue re-renders, find the new peer and pan
-    nextTick(() => {
-      if (!cv.value) return
-      const newPeers = cv.value.nodes.filter(o =>
-        o.personId === current.personId && o.id !== current.id && !o.hidden
-      )
-      if (newPeers.length > 0) panToCard(newPeers[0])
-    })
-    return
+  // No rendered peer — walk up parent chain to find the NEAREST rendered
+  // ancestor, expand their clan, then pan to the new peer after re-render.
+  let cur: string | undefined = current.personId
+  const seen = new Set<string>([current.personId])
+  while (cur) {
+    const parents = parentsOf.value.get(cur) ?? []
+    if (parents.length === 0) break
+    const par = parents[0]
+    if (seen.has(par)) break
+    seen.add(par)
+    const ancestorNode = cv.value.nodes.find(n => n.personId === par && !n.hidden)
+    if (ancestorNode) {
+      if (!expandedClans.value.has(par)) toggleExpand(par)
+      nextTick(() => {
+        if (!cv.value) return
+        const newPeers = cv.value.nodes.filter(o =>
+          o.personId === current.personId && o.id !== current.id && !o.hidden
+        )
+        if (newPeers.length > 0) panToCard(newPeers[0])
+      })
+      return
+    }
+    cur = par
   }
 }
 
