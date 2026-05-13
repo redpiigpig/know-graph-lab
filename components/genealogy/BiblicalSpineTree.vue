@@ -809,20 +809,36 @@ const cv = computed(() => {
       kidMom.set(kid, mom)
     }
 
-    // Order RTL: first wife's kids first (rightmost), within wife by appearance order
+    // Order RTL: first wife's kids first (rightmost), within wife by sort_order ASC
+    // (lower sort_order = older = rightmost per 兄右弟左). Fall back to canonical
+    // appearance order when sort_order ties. sort_order overrides DB string order
+    // for cases where biblical listing isn't birth order (e.g., 他拉 lists 亞伯蘭
+    // first by importance, but he's actually the youngest).
+    const origIdx = new Map<string, number>()
+    allKidsRaw.forEach((k, i) => origIdx.set(k, i))
+    function kidSortKey(kidId: string): [number, number] {
+      const p = pMap.get(kidId)
+      const so = (p?.data?.sortOrder !== undefined && p.data.sortOrder !== null && p.data.sortOrder !== 9999)
+        ? p.data.sortOrder : 9999
+      return [so, origIdx.get(kidId) ?? 0]
+    }
+    function sortKidsBirthOrder(group: string[]): string[] {
+      return [...group].sort((a, b) => {
+        const ka = kidSortKey(a), kb = kidSortKey(b)
+        return ka[0] - kb[0] || ka[1] - kb[1]
+      })
+    }
     const orderedRTL: string[] = []
     const hasLinkage = Array.from(kidMom.values()).some(v => v !== null)
     if (hasLinkage) {
       for (const wid of allWifeIds) {
-        for (const kid of allKidsRaw) {
-          if (kidMom.get(kid) === wid) orderedRTL.push(kid)
-        }
+        const group = allKidsRaw.filter(k => kidMom.get(k) === wid)
+        orderedRTL.push(...sortKidsBirthOrder(group))
       }
-      for (const kid of allKidsRaw) {
-        if (kidMom.get(kid) === null) orderedRTL.push(kid)
-      }
+      const unattr = allKidsRaw.filter(k => kidMom.get(k) === null)
+      orderedRTL.push(...sortKidsBirthOrder(unattr))
     } else {
-      orderedRTL.push(...allKidsRaw)
+      orderedRTL.push(...sortKidsBirthOrder(allKidsRaw))
     }
 
     // Compute X for each kid
@@ -861,15 +877,44 @@ const cv = computed(() => {
         else betweenGroup.push(kid)
       })
 
-      // rightGroup: natural order has rightmost-natural FIRST (idx 0 = furthest right).
-      // We want furthest-right kid placed at largest X — so walk rightGroup from the END.
+      // Push-past: if the spine kid has WIVES on the same side that we're placing
+      // siblings, the FIRST sibling on that side has to clear the entire wife
+      // stack (otherwise sibling cards overlap wife cards on the same Y row,
+      // because the spine kid's wives sit at the SAME row as its siblings —
+      // both rendered at gen(spineKid) = gen(siblings)).
+      function wifeReachOnSide(spineKidId: string, side: 'left' | 'right'): number {
+        const spouses = sp.get(spineKidId) ?? []
+        if (spouses.length === 0) return 0
+        let kidWifeSide: 'left' | 'right' = 'left'
+        if (isDualMode.value) {
+          const sk = membership.get(spineKidId)
+          if (sk === 'A') kidWifeSide = 'right'
+          else if (sk === 'B') kidWifeSide = 'left'
+        }
+        if (kidWifeSide !== side) return 0
+        // Total horizontal distance from spine kid's card CENTER to the leftmost/
+        // rightmost wife's outer edge.
+        return NW / 2 + MAR_GAP + spouses.length * NW + Math.max(0, spouses.length - 1) * MG
+      }
+
+      // rightGroup: rightmost-natural first; walk from END so closest-to-spine ends up nearest
+      const rightWifeReach = wifeReachOnSide(spineByX[0], 'right')
+      const firstRightX = Math.max(
+        rightmostSpX + KID_GAP,
+        rightmostSpX + rightWifeReach + HG + NW / 2,
+      )
       for (let i = 0; i < rightGroup.length; i++) {
         const kid = rightGroup[rightGroup.length - 1 - i]
-        kidX.set(kid, rightmostSpX + (i + 1) * KID_GAP)
+        kidX.set(kid, firstRightX + i * KID_GAP)
       }
-      // leftGroup: natural order has leftmost-natural LAST. Closest-to-spine = first in leftGroup.
+      // leftGroup: leftmost-natural last; first kid in leftGroup is closest-to-spine
+      const leftWifeReach = wifeReachOnSide(spineByX[spineByX.length - 1], 'left')
+      const firstLeftX = Math.min(
+        leftmostSpX - KID_GAP,
+        leftmostSpX - leftWifeReach - HG - NW / 2,
+      )
       for (let i = 0; i < leftGroup.length; i++) {
-        kidX.set(leftGroup[i], leftmostSpX - (i + 1) * KID_GAP)
+        kidX.set(leftGroup[i], firstLeftX - i * KID_GAP)
       }
       // betweenGroup: evenly between leftmost and rightmost spine kids
       if (betweenGroup.length > 0 && rightmostSpX > leftmostSpX) {
