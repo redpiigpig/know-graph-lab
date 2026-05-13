@@ -955,14 +955,16 @@ const cv = computed(() => {
       const kxVal = kidX.get(kid)!
 
       // Does this kid have its own descendants (2nd-gen onwards)?
-      // BUT: if the kid is also the spouse of a SPINE person, their descendants
-      // are already visible via the spouse's spine line — so hide the ▼ on this
-      // card to avoid redundant 299-person trees (e.g., 撒拉 as 他拉's daughter
-      // shouldn't show a ▼ since her line = 以撒's line = spine A).
+      // Rules from user:
+      //  • Only MALES get a ▼ toggle (females collapse into a male's expansion)
+      //  • If the kid is a spouse of a SPINE person, their descendants are
+      //    already visible via the spine — hide ▼ to avoid duplicate trees
+      //    (e.g., 撒拉 as 他拉's daughter would otherwise dupe 299 of 以撒's line)
       const kidSpouseIds = sp.get(kid) ?? []
       const hasSpineSpouse = kidSpouseIds.some(spId => rowOf.has(spId))
+      const isFemale = kp.data.gender === 'female'
       const subtree = subtreeIds(kid).filter(id => id !== kid)
-      const hasSub  = subtree.length > 0 && !hasSpineSpouse
+      const hasSub  = subtree.length > 0 && !hasSpineSpouse && !isFemale
       const expanded = expandedClans.value.has(kid)
 
       nodes.push({
