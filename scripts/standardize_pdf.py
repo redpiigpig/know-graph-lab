@@ -152,6 +152,38 @@ def build_chapter_path(entries: list[dict], idx: int) -> str:
     return " / ".join(parts)
 
 
+def _heading_for(chapter_path: str) -> str:
+    """Pick a markdown heading prefix matching the chapter_path's depth.
+
+    The reader's loadToc() reads the first `#{1,4}` heading in content to
+    derive sidebar nesting level (## → pl-3, ### → pl-7, #### → pl-11).
+    Without a heading every chunk collapses to level 2 — the EPUB pipeline
+    forces a normalized heading for the same reason. We match that here.
+
+    Depth = number of ' / ' separators in chapter_path. Cap at 4 (####).
+    Leaf title = the last segment after ' / '.
+    """
+    parts = [p.strip() for p in (chapter_path or "").split(" / ") if p.strip()]
+    if not parts:
+        return ""
+    leaf = parts[-1]
+    depth = min(len(parts) + 1, 4)   # 1 part → ##, 2 → ###, 3+ → ####
+    return f"{'#' * depth} {leaf}"
+
+
+def _prepend_heading(content: str, chapter_path: str) -> str:
+    """Prepend a markdown heading derived from chapter_path. If the content
+    already starts with a `#…` heading line, leave it (don't double up)."""
+    heading = _heading_for(chapter_path)
+    if not heading:
+        return content
+    body = (content or "").lstrip("\n")
+    # Already has a markdown heading on the first line — don't duplicate
+    if body[:5].lstrip().startswith("#"):
+        return content
+    return f"{heading}\n\n{body}" if body else heading
+
+
 # ── Standardize ────────────────────────────────────────────────
 def standardize_pdf_full(book: dict, force: bool = False) -> tuple[list[dict] | None, dict | None, str | None]:
     """Returns (chapter_chunks, metadata, reason_for_fallback).
@@ -233,8 +265,8 @@ def standardize_pdf_full(book: dict, force: bool = False) -> tuple[list[dict] | 
                     "page_number": front_pages[0],
                     "page_range": [front_pages[0], front_pages[-1]],
                     "chapter_path": "前置內容",
-                    "format": "text",
-                    "content": content,
+                    "format": "markdown",
+                    "content": _prepend_heading(content, "前置內容"),
                 })
 
     # 5b. One chunk per TOC entry (chapter granularity)
@@ -270,8 +302,8 @@ def standardize_pdf_full(book: dict, force: bool = False) -> tuple[list[dict] | 
             "page_number": pages_in_range[0],
             "page_range": [pages_in_range[0], pages_in_range[-1]],
             "chapter_path": chapter_path,
-            "format": "text",
-            "content": content,
+            "format": "markdown",
+            "content": _prepend_heading(content, chapter_path),
         })
 
     if len(out) < MIN_TOC_ENTRIES:
