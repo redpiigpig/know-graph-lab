@@ -1170,20 +1170,48 @@ const cv = computed(() => {
       }
 
       // Mother order: wives in DB order (大老婆→小老婆), then cross-spine, then null.
-      // Primary wife (idx 0) gets the LOWEST bar (closest to kids); secondary wives
-      // get progressively higher bars (closer to marriage line). This way each mother's
-      // bar is at its own Y — visually distinct even when X ranges overlap.
       const motherOrder: Array<string | null> = []
       for (const wid of wifeIds)        if (groupedByMom.has(wid))  motherOrder.push(wid)
       for (const cwid of crossSpineWives) if (groupedByMom.has(cwid)) motherOrder.push(cwid)
       if (groupedByMom.has(null))         motherOrder.push(null)
 
+      // Pre-compute each mother's bar X range so we can detect overlap.
+      // Bar spans from min(drop, kidXs) to max(drop, kidXs) at her barY.
+      const motherSpans = new Map<string | null, { minX: number; maxX: number }>()
+      for (const mom of motherOrder) {
+        const groupKids = groupedByMom.get(mom)!
+        const midX_m = mommidX(mom)
+        const kidXs = groupKids.map(k => kidX.get(k)!).filter(v => v !== undefined)
+        if (kidXs.length === 0) continue
+        motherSpans.set(mom, { minX: Math.min(midX_m, ...kidXs), maxX: Math.max(midX_m, ...kidXs) })
+      }
+
+      // If no mother-pair's bar X range overlaps, all bars sit at the SAME midY
+      // (cleaner visual — 亞伯拉罕的 3 妻 各有獨立 X 範圍時，子女線 一樣高 即可).
+      // If any pair overlaps, stagger Ys so they don't visually merge.
+      const spanList = motherOrder.filter(m => motherSpans.has(m))
+      let hasOverlap = false
+      for (let i = 0; i < spanList.length && !hasOverlap; i++) {
+        const a = motherSpans.get(spanList[i])!
+        for (let j = i + 1; j < spanList.length; j++) {
+          const b = motherSpans.get(spanList[j])!
+          if (!(a.maxX < b.minX || b.maxX < a.minX)) { hasOverlap = true; break }
+        }
+      }
+
       const N = motherOrder.length
       const verticalRange = childY - marLineY
       const motherBarY = new Map<string | null, number>()
-      for (let i = 0; i < N; i++) {
-        const fraction = (N - i) / (N + 1)  // primary i=0 → fraction near 1 (bar near kids)
-        motherBarY.set(motherOrder[i], marLineY + Math.round(verticalRange * fraction))
+      if (hasOverlap) {
+        // Stagger: primary (closest-to-husband) at LOWEST bar; secondary higher
+        for (let i = 0; i < N; i++) {
+          const fraction = (N - i) / (N + 1)
+          motherBarY.set(motherOrder[i], marLineY + Math.round(verticalRange * fraction))
+        }
+      } else {
+        // All non-overlapping → single shared barY in the middle
+        const sharedBarY = marLineY + Math.round(verticalRange * 0.5)
+        for (const m of motherOrder) motherBarY.set(m, sharedBarY)
       }
 
       for (const mom of motherOrder) {
