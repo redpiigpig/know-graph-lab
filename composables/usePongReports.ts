@@ -3125,7 +3125,7 @@ const sessions: ReportSession[] = [
         id: '54-ministry-committee',
         title: '牧職委員會事工報告',
         unit: '牧職委員會',
-        authorRole: '主席',
+        authorRole: '牧職會長',
         sourcePages: '31',
         intro: [],
         sections: [
@@ -3354,7 +3354,7 @@ const sessions: ReportSession[] = [
         id: '55-ministry-committee',
         title: '牧職委員會事工報告',
         unit: '牧職委員會',
-        authorRole: '主席',
+        authorRole: '牧職會長',
         sourcePages: '22-23',
         intro: [],
         sections: [
@@ -3567,7 +3567,7 @@ const sessions: ReportSession[] = [
         id: '56-ministry-committee',
         title: '牧職委員會事工報告',
         unit: '牧職委員會',
-        authorRole: '主席',
+        authorRole: '牧職會長',
         sourcePages: '2-36 ~ 2-37',
         intro: [],
         sections: [
