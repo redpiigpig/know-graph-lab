@@ -7,6 +7,19 @@
       <span class="text-sm font-semibold text-gray-900">聖經人物族譜</span>
       <span class="text-xs text-gray-400 ml-1">{{ people.length > 0 ? `${people.length} 人` : '' }}</span>
       <div class="flex-1" />
+      <!-- Tradition toggle (tree view only) -->
+      <div v-show="view === 'tree'" class="flex items-center gap-0.5 bg-gray-100 rounded-lg p-0.5 mr-1">
+        <button
+          v-for="t in traditionOptions"
+          :key="t.value"
+          class="text-xs px-2.5 py-1 rounded-md font-medium transition"
+          :class="tradition === t.value
+            ? `bg-white shadow-sm ${t.activeColor}`
+            : 'text-gray-500 hover:text-gray-700'"
+          @click="setTradition(t.value)"
+        >{{ t.label }}</button>
+      </div>
+
       <!-- View toggle -->
       <div class="flex items-center gap-0.5 bg-gray-100 rounded-lg p-0.5">
         <button
@@ -353,12 +366,27 @@ const graphLoaded = ref(false)
 
 // Tradition selection — reads ?tradition= from URL, then defaults to 'biblical'.
 // Allowed values: biblical | catholic | orthodox | rabbinic
-const route = useRoute()
-const tradition = ref<'biblical' | 'catholic' | 'orthodox' | 'rabbinic'>(
+type Tradition = 'biblical' | 'catholic' | 'orthodox' | 'rabbinic'
+const route  = useRoute()
+const router2 = useRouter()
+const tradition = ref<Tradition>(
   (['biblical', 'catholic', 'orthodox', 'rabbinic'].includes(route.query.tradition as string)
     ? route.query.tradition
-    : 'biblical') as 'biblical' | 'catholic' | 'orthodox' | 'rabbinic'
+    : 'biblical') as Tradition
 )
+
+const traditionOptions: Array<{ value: Tradition; label: string; activeColor: string }> = [
+  { value: 'biblical', label: '聖經',     activeColor: 'text-gray-900' },
+  { value: 'catholic', label: '天主教',   activeColor: 'text-red-600' },
+  { value: 'orthodox', label: '東方教會', activeColor: 'text-yellow-600' },
+  { value: 'rabbinic', label: '拉比',     activeColor: 'text-blue-600' },
+]
+
+function setTradition(t: Tradition) {
+  tradition.value = t
+  // Sync URL — keep history clean (replace, not push)
+  router2.replace({ query: { ...route.query, tradition: t === 'biblical' ? undefined : t } })
+}
 
 async function loadGraph() {
   if (graphLoaded.value) return

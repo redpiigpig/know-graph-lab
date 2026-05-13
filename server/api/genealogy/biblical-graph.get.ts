@@ -155,6 +155,7 @@ export default defineEventHandler(async (event) => {
       sortOrder: p.sort_order ?? 9999,
       generationNum: p.generation ?? 0,
       tribeCode: tribeCode.get(p.id) ?? null,
+      tradition: p.tradition ?? 'biblical',
       shape: 'rectangle',
       borderStyleId: 'solid-md',
       borderColor: '#d1d5db',

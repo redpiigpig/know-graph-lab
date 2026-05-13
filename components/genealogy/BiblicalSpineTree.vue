@@ -77,9 +77,11 @@
           <div v-else-if="n.spineKind === 'B'" class="absolute left-0 top-2 bottom-2 w-[3px] bg-rose-400 rounded-full" />
           <div v-else-if="n.spineKind === 'S'" class="absolute left-0 top-2 bottom-2 w-[3px] bg-amber-400 rounded-full" />
           <div class="px-2.5 py-1.5" :class="n.spineKind ? 'pl-4' : ''">
-            <div class="text-[9px] font-medium leading-none mb-0.5 tracking-wide opacity-60"
+            <!-- Generation label — reserve fixed height even when empty so cards on the
+                 same row align their names regardless of whether the person has gen set -->
+            <div class="text-[9px] font-medium leading-none mb-0.5 tracking-wide opacity-60 min-h-[9px]"
                  :class="genLabelColor(n)">
-              {{ n.genLabel }}
+              {{ n.genLabel || ' ' }}
             </div>
             <div class="text-[12px] font-semibold leading-snug text-slate-800"
                  :title="n.rawName">
@@ -99,15 +101,16 @@
             <span>{{ n.subtreeExpanded ? '▲' : '▼' }}</span>
             <span v-if="!n.subtreeExpanded" class="text-[9px] opacity-70">{{ n.subtreeSize }}</span>
           </button>
-          <!-- Same-person marker — this DB person appears on the chart at another card too -->
-          <div
+          <!-- Same-person marker — click to pan to the OTHER position of this DB person -->
+          <button
             v-if="n.samePerson"
             class="absolute -top-1.5 -right-1.5 z-10 h-4 min-w-[16px] px-1
                    rounded-full bg-indigo-500 text-white text-[9px] leading-4
                    font-medium shadow-sm flex items-center justify-center
-                   pointer-events-none"
-            title="同一人 — 此人在族譜上另有出現"
-          >♻</div>
+                   hover:bg-indigo-600 cursor-default"
+            title="同一人 — 點擊跳到他在族譜上的另一個位置"
+            @click.stop="jumpToOther(n)"
+          >♻</button>
         </div>
       </div>
 
@@ -132,7 +135,11 @@
         <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-rose-400 rounded-full" />主幹 B：路加譜系（猶大→拿單→馬利亞）</div>
         <div class="flex items-center gap-1.5"><span class="w-3 h-0 border-t border-dashed border-gray-400" />虛線：法律關係（約瑟→耶穌）</div>
         <div class="flex items-center gap-1.5"><span class="w-3 h-0 border-t border-dashed border-red-600" />紅虛線：聖靈感孕婚姻（約瑟↔馬利亞）</div>
-        <div class="text-gray-400 mt-1 pt-1 border-t border-gray-100">滾輪：上下/左右移動　·　Ctrl+滾輪：縮放　·　拖曳：平移</div>
+        <div class="flex items-center gap-1.5 pt-1 mt-1 border-t border-gray-100"><span class="inline-block w-3 h-3 border border-orange-300 bg-orange-50 rounded" />早期教會傳統（東西方共識）</div>
+        <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-red-300 bg-red-50 rounded" />天主教傳統</div>
+        <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-yellow-400 bg-yellow-50 rounded" />東方教會傳統</div>
+        <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-blue-300 bg-blue-50 rounded" />拉比傳統</div>
+        <div class="text-gray-400 mt-1 pt-1 border-t border-gray-100">滾輪：上下/左右移動　·　Ctrl+滾輪：縮放　·　拖曳：平移　·　♻ 點擊跳同人</div>
       </div>
     </template>
 
@@ -161,7 +168,8 @@ const NH          = 52   // person card height
 const CW          = 108  // clan card width
 const CH          = 52
 const MG          = 12   // wife stacking gap
-const HG          = 20   // horizontal gap between cards
+const HG          = 20   // horizontal gap between cards (siblings)
+const WIFE_HG     = 60   // horizontal gap for marriage lines (3× sibling gap so the line is visible)
 const VG          = 90   // vertical gap between rows
 const RH          = NH + VG
 const PAD         = 48
@@ -360,10 +368,34 @@ const spineMembership = computed(() => {
 })
 
 // ── Clan collector ────────────────────────────────────────────────────
+// For descendants via marriage: if a person has no own children but does have
+// a spouse, count the spouse's children as hers (e.g., 利百加 沒有 children 欄位，
+// 但是 以撒 .children = 雅各、以掃 — 那 雅各、以掃 算 利百加 的後代). When a person
+// has her own children (e.g., 利亞 with 7), use those directly (don't conflate
+// with other-wife 雅各 kids).
+function effectiveChildIds(id: string): string[] {
+  const direct = childrenOf.value.get(id) ?? []
+  if (direct.length > 0) return direct
+  const result: string[] = []
+  for (const spId of (spousesOf.value.get(id) ?? [])) {
+    const spouseDirectKids = childrenOf.value.get(spId) ?? []
+    const otherWives = (spousesOf.value.get(spId) ?? []).filter(w => w !== id)
+    const otherWivesKids = new Set<string>()
+    for (const ow of otherWives) {
+      for (const c of childrenOf.value.get(ow) ?? []) otherWivesKids.add(c)
+    }
+    for (const c of spouseDirectKids) {
+      if (otherWivesKids.has(c)) continue
+      if (!result.includes(c)) result.push(c)
+    }
+  }
+  return result
+}
+
 function subtreeIds(id: string, vis = new Set<string>()): string[] {
   if (vis.has(id)) return []
   vis.add(id)
-  return [id, ...(childrenOf.value.get(id) ?? []).flatMap(c => subtreeIds(c, vis))]
+  return [id, ...effectiveChildIds(id).flatMap(c => subtreeIds(c, vis))]
 }
 
 // ── Node interface ────────────────────────────────────────────────────
@@ -377,6 +409,7 @@ interface LNode {
   gender: string
   x: number; y: number; w: number; h: number
   spineKind: 'A' | 'B' | 'S' | 'single' | null
+  tradition?: 'biblical' | 'early_consensus' | 'catholic' | 'orthodox' | 'rabbinic'
   isClan: boolean             // legacy, retained for type compat; in new layout always false
   isExpansionNode?: boolean   // node belongs to an expanded subtree
   hasSubtree?: boolean        // true → render a ▼/▲ toggle on the card
@@ -447,7 +480,12 @@ const cv = computed(() => {
     }
     const gen = p.data.generationNum || 1
     const myY = rowY(gen - 1)   // 1-based gen → 0-based row, same scale as main spine
-    const kids = (childrenOf.value.get(rootId) ?? []).filter(c => !vis.has(c))
+    // Follow children via effectiveChildIds (includes via-spouse for women like
+    // 利百加 / 拉班 daughters), BUT cut off at spine nodes — their descendants are
+    // already drawn on the main spine, drawing them again would duplicate.
+    const kids = rowOf.has(rootId)
+      ? []  // spine node — render this card as leaf marker
+      : effectiveChildIds(rootId).filter(c => !vis.has(c))
 
     if (kids.length === 0) {
       const myNode: LNode = {
@@ -460,6 +498,7 @@ const cv = computed(() => {
         gender:      p.data.gender,
         x: leftX, y: myY, w: NW, h: NH,
         spineKind:   null,
+        tradition:   p.data.tradition,
         isClan:      false,
         isExpansionNode: true,
       }
@@ -493,6 +532,7 @@ const cv = computed(() => {
       gender:      p.data.gender,
       x: rootX, y: myY, w: NW, h: NH,
       spineKind:   null,
+      tradition:   p.data.tradition,
       isClan:      false,
       isExpansionNode: true,
     }
@@ -615,9 +655,10 @@ const cv = computed(() => {
   const allSpineIds = Array.from(rowOf.keys())
   const maxWives = Math.max(0, ...allSpineIds.map(id => (sp.get(id) ?? []).length))
 
-  // Wife area width (per side, both spines may have wives outside)
+  // Wife area width (per side, both spines may have wives outside).
+  // Each wife claims one (NW + WIFE_HG) slot from the husband center.
   const wifeAreaW = maxWives > 0
-    ? MAR_GAP + maxWives * NW + Math.max(0, maxWives - 1) * MG
+    ? maxWives * (NW + WIFE_HG)
     : 0
 
   // Layout center
@@ -684,6 +725,7 @@ const cv = computed(() => {
       gender:      p.data.gender,
       x: cx - NW / 2, y: rowY(row), w: NW, h: NH,
       spineKind:   membership.get(sid) ?? null,
+      tradition:   p.data.tradition,
       isClan:      false,
     })
     shown.add(sid)
@@ -700,16 +742,18 @@ const cv = computed(() => {
     const row = rowOf.get(sid)!
     const k   = membership.get(sid)
 
-    // Determine wife side & clan side
-    // dual mode: shared/Jesus → wives left, clans right (no other column nearby)
-    //            A → wives right (outside), clans left (inside between A & B)
-    //            B → wives left  (outside), clans right (inside between A & B)
-    // single mode: wives left, clans right (original)
+    // Placement rule (per user spec):
+    //   夫右妻左         — husband on right, wife on left (universal)
+    //   兄姊右弟妹左     — older siblings right of younger (handled in rightGroup/leftGroup split)
+    //   大老婆右 小老婆左 — primary wife closest to husband (wifeIds[0] = primary, placed at wi=0 = closest)
+    //   前妻前夫右 繼妻繼夫左 — first marriage closest to husband (same as above: wifeIds order)
+    // So wifeSide is ALWAYS 'left' regardless of spine kind. Override only when the
+    // husband has a cross-spine partner (then additional wives align with partner side).
     let wifeSide: 'left' | 'right' = 'left'
-    let clanSide: 'left' | 'right' = 'right'
+    let clanSide: 'left' | 'right' = 'right'  // (legacy, unused — kept for type compat)
     if (isDualMode.value) {
-      if (k === 'A') { wifeSide = 'right'; clanSide = 'left' }
-      else if (k === 'B') { wifeSide = 'left'; clanSide = 'right' }
+      if (k === 'A') clanSide = 'left'
+      else if (k === 'B') clanSide = 'right'
     }
 
     // Spine children of this person (could be 0, 1, or 2 for David)
@@ -725,6 +769,16 @@ const cv = computed(() => {
     const wifeIds         = allWifeIds.filter(wid => !rowOf.has(wid))
     const wifeLX          = new Map<string, number>()
     const marLineY        = rowY(row) + NH / 2
+
+    // If there's a cross-spine spouse, put non-cross-spine wives on the SAME side as
+    // the cross-spine partner so the whole marriage stack lines up in one row.
+    // Orthodox 約瑟 (spine A) + 馬利亞 (cross-spine on B/left) + 撒羅米 (regular):
+    // 撒羅米 should sit BETWEEN 馬利亞 and 約瑟 (= 馬利亞 右邊, 約瑟 左邊).
+    if (crossSpineWives.length > 0) {
+      const csk = membership.get(crossSpineWives[0])
+      if (csk === 'A')      wifeSide = 'right'
+      else if (csk === 'B') wifeSide = 'left'
+    }
 
     // Cross-spine marriages: draw once per pair (dedupe via sorted key).
     // Joseph↔Mary marked `holy` so the template can render it specially
@@ -745,8 +799,9 @@ const cv = computed(() => {
       else if (pL > hR)  marriages.push({ id: `mscross_${pairKey}`, x1: hR, x2: pL, y: marLineY, holy: !!isHoly })
     }
 
-    // Uniform NW+HG spacing per user spec: 配偶之間 / 兄弟之間 距離一致
-    const SLOT = NW + HG  // 140px per slot (each adjacent card edge-to-edge gap = HG)
+    // Spine wife placement: card-to-card gap = WIFE_HG (wider than sibling HG so the
+    // red marriage line is clearly visible — user spec: 「配偶線要 3 倍長」).
+    const SLOT = NW + WIFE_HG  // 180px per slot when WIFE_HG=60
     for (let wi = 0; wi < wifeIds.length; wi++) {
       const wid = wifeIds[wi]
       let wx: number
@@ -771,6 +826,7 @@ const cv = computed(() => {
         gender:      wp.data.gender,
         x: wx, y: rowY(row), w: NW, h: NH,
         spineKind:   null,
+        tradition:   wp.data.tradition,
         isClan:      false,
       })
 
@@ -792,12 +848,18 @@ const cv = computed(() => {
       }
     }
 
-    // Marriage midpoint X — only shifts when there are *stacked* wives on this row.
-    // Cross-spine spouses go through their own column, so midX stays at cx.
+    // Marriage midpoint X — true midpoint between husband center and primary wife center
+    // (which equals the midpoint of the HG-wide marriage line between them). With multi-
+    // wife stacks, drop from the primary marriage so kids look like they come from the
+    // canonical couple. Cross-spine spouses skip this — they're handled below.
     let midX = cx
     if (wifeIds.length > 0) {
-      if (wifeSide === 'left') midX = cx - NW / 2 - Math.round(MAR_GAP / 2)
-      else                     midX = cx + NW / 2 + Math.round(MAR_GAP / 2)
+      const wife0cx = wifeLX.get(wifeIds[0])! + NW / 2
+      midX = (cx + wife0cx) / 2
+    } else if (crossSpineWives.length > 0) {
+      // Cross-spine marriage (Joseph↔Mary): drop from midpoint between the two spine cols
+      const partner = nodes.find(n => n.id === crossSpineWives[0])
+      if (partner) midX = (cx + partner.x + partner.w / 2) / 2
     }
 
     // ── NEW: Place ALL first-gen kids individually (per user rule) ────
@@ -920,20 +982,24 @@ const cv = computed(() => {
           else if (sk === 'B') kidWifeSide = 'left'
         }
         if (kidWifeSide !== side) return 0
-        // Uniform spacing: each wife occupies one (NW + HG) slot from spine kid center
-        return spouses.length * (NW + HG)
+        // Each spine kid's wife claims one (NW + WIFE_HG) marriage slot.
+        return spouses.length * (NW + WIFE_HG)
       }
 
-      // rightGroup: rightmost-natural first; walk from END so closest-to-spine ends up nearest.
-      // Each sibling's own wives also claim (NW+HG) slots, so cursor advances accordingly.
+      // rightGroup: 兄姊右 — older brothers to the right of spine kid (younger).
+      // Each right-sibling has wives on HIS left (夫右妻左). So the sibling card
+      // sits to the RIGHT of his own wife stack. Walk from CLOSEST-to-spine outward:
+      // rightCursor advances rightward through each sibling block (wives then sibling).
       const rightWifeReach = wifeReachOnSide(spineByX[0], 'right')
       const firstRightX = rightmostSpX + rightWifeReach + (NW + HG)
       let rightCursor = firstRightX
       for (let i = 0; i < rightGroup.length; i++) {
-        const kid = rightGroup[rightGroup.length - 1 - i]
-        kidX.set(kid, rightCursor)
+        const kid = rightGroup[rightGroup.length - 1 - i]  // closest-to-spine first
         const myWifeIds = (sp.get(kid) ?? []).filter(w => !rowOf.has(w))
-        rightCursor += (myWifeIds.length + 1) * (NW + HG)
+        const wivesReach = myWifeIds.length * (NW + WIFE_HG)
+        // Sibling card center = rightCursor + wivesReach (sibling sits RIGHT of his wives)
+        kidX.set(kid, rightCursor + wivesReach)
+        rightCursor += wivesReach + (NW + HG)
       }
       // leftGroup: leftmost-natural last; first kid in leftGroup is closest-to-spine
       const leftWifeReach = wifeReachOnSide(spineByX[spineByX.length - 1], 'left')
@@ -943,7 +1009,7 @@ const cv = computed(() => {
         const kid = leftGroup[i]
         kidX.set(kid, leftCursor)
         const myWifeIds = (sp.get(kid) ?? []).filter(w => !rowOf.has(w))
-        leftCursor -= (myWifeIds.length + 1) * (NW + HG)
+        leftCursor -= myWifeIds.length * (NW + WIFE_HG) + (NW + HG)
       }
       // betweenGroup: evenly between leftmost and rightmost spine kids
       if (betweenGroup.length > 0 && rightmostSpX > leftmostSpX) {
@@ -991,6 +1057,7 @@ const cv = computed(() => {
         gender:      kp.data.gender,
         x: kxVal - NW / 2, y: childY, w: NW, h: NH,
         spineKind:   null,
+        tradition:   kp.data.tradition,
         isClan:      false,
         hasSubtree:  hasSub,
         subtreeExpanded: expanded,
@@ -998,23 +1065,19 @@ const cv = computed(() => {
         isExpansionRoot: expanded,  // never occlude the card whose own ▼ is expanded
       })
 
-      // Non-spine kid's wives — placed OUTSIDE (away from spine) using the SAME
-      // uniform NW+HG spacing as siblings, so 配偶間距 == 兄弟間距.
-      // Each wife center is one full slot from the previous card center.
+      // Non-spine kid's wives — placed OUTSIDE (away from spine) using the marriage
+      // SLOT (NW + WIFE_HG = 180px). Wider than sibling gap (HG=20) so the red
+      // marriage line is clearly visible — per user spec「配偶線要 3 倍長」.
       const kidWifeIds = (sp.get(kid) ?? []).filter(w => !rowOf.has(w))
       if (kidWifeIds.length > 0) {
-        const spineMid = spineChildIds.length > 0
-          ? spineChildIds.reduce((s, sk) => s + cxOf(sk), 0) / spineChildIds.length
-          : cx
-        const kidSide: 'left' | 'right' = kxVal < spineMid ? 'left' : 'right'
+        // 夫右妻左: wives always on the kid's LEFT, regardless of which side of spine
+        // the kid sits on. wi=0 (primary/大老婆/前妻) closest to kid.
         const marY = childY + NH / 2
-        const SLOT_K = NW + HG  // same uniform slot as siblings
+        const SLOT_K = NW + WIFE_HG  // marriage gap (vs sibling NW+HG)
         for (let wi = 0; wi < kidWifeIds.length; wi++) {
           const wid = kidWifeIds[wi]
           const wp = pMap.get(wid); if (!wp) continue
-          const wcx = kidSide === 'left'
-            ? kxVal - (wi + 1) * SLOT_K
-            : kxVal + (wi + 1) * SLOT_K
+          const wcx = kxVal - (wi + 1) * SLOT_K
           nodes.push({
             id: `${wid}__wife_of__${kid}`,
             personId: wid,
@@ -1025,16 +1088,13 @@ const cv = computed(() => {
             gender:      wp.data.gender,
             x: wcx - NW / 2, y: childY, w: NW, h: NH,
             spineKind:   null,
+            tradition:   wp.data.tradition,
             isClan:      false,
           })
-          // Marriage line — only the HG gap between facing edges of adjacent cards
-          if (kidSide === 'left') {
-            const prevCx = wi === 0 ? kxVal : kxVal - wi * SLOT_K
-            marriages.push({ id: `nsm_${kid}_${wid}`, x1: wcx + NW / 2, x2: prevCx - NW / 2, y: marY })
-          } else {
-            const prevCx = wi === 0 ? kxVal : kxVal + wi * SLOT_K
-            marriages.push({ id: `nsm_${kid}_${wid}`, x1: prevCx + NW / 2, x2: wcx - NW / 2, y: marY })
-          }
+          // Marriage line — segment between this wife's right edge and the previous
+          // card's left edge (kid for wi=0, prev wife for wi>0).
+          const prevCx = wi === 0 ? kxVal : kxVal - wi * SLOT_K
+          marriages.push({ id: `nsm_${kid}_${wid}`, x1: wcx + NW / 2, x2: prevCx - NW / 2, y: marY })
         }
       }
 
@@ -1076,31 +1136,83 @@ const cv = computed(() => {
       }
     }
 
-    // T-bar from marriage midpoint to all kids (one drop per kid, colored per relationship)
-    const allKidXs = orderedRTL.map(k => kidX.get(k)!).filter(v => v !== undefined)
-    if (allKidXs.length > 0) {
-      const barY = marLineY + Math.round((childY - marLineY) * 0.5)
-      const minBarX = Math.min(midX, ...allKidXs)
-      const maxBarX = Math.max(midX, ...allKidXs)
-      drops.push({ x: midX, y1: marLineY, y2: barY })
-      hbars.push({ x1: minBarX, x2: maxBarX, y: barY })
+    // PER-MOTHER T-bar with STAGGERED barY: each wife gets her own T-bar at a
+    // distinct Y so the bars don't visually merge even when their X ranges overlap.
+    //   • Drop start = midpoint of the marriage SEGMENT between this wife and the
+    //     preceding card (husband for primary, previous wife for later wives).
+    //   • barY: closest-to-husband wife → bar near childY; furthest → bar near
+    //     marLineY. So 利亞 的橫桿在底部，悉帕 在頂部，互不重疊。
+    if (orderedRTL.length > 0) {
       const parentKind = membership.get(sid)
+
+      function mommidX(momId: string | null): number {
+        if (momId !== null) {
+          const wi = wifeIds.indexOf(momId)
+          if (wi >= 0) {
+            const momCX  = wifeLX.get(momId)! + NW / 2
+            const prevCX = wi === 0 ? cx : (wifeLX.get(wifeIds[wi - 1])! + NW / 2)
+            return (momCX + prevCX) / 2
+          }
+          if (crossSpineWives.includes(momId)) {
+            const partner = nodes.find(n => n.id === momId)
+            if (partner) return (cx + partner.x + partner.w / 2) / 2
+          }
+        }
+        return midX
+      }
+
+      // Group kids by mother
+      const groupedByMom = new Map<string | null, string[]>()
       for (const kid of orderedRTL) {
-        const kxVal   = kidX.get(kid)!
-        const isSpKid = rowOf.has(kid)
-        const childKind = membership.get(kid)
-        const isLegal = rk.get(`${sid}|${kid}`) === 'legal'
-        const continuingKind = parentKind === 'S' ? (childKind ?? 'S') : parentKind
-        const lineStroke = isLegal
-          ? '#9ca3af'
-          : !isSpKid                          ? '#9ca3af'
-          : continuingKind === 'B'            ? '#f43f5e'
-          : continuingKind === 'A'            ? '#f59e0b'
-          : continuingKind === 'S'            ? '#f59e0b'
-          : continuingKind === 'single'       ? '#f59e0b'
-          :                                     '#6b7280'
-        const kidActualY = isSpKid ? rowY(rowOf.get(kid)!) : childY
-        drops.push({ x: kxVal, y1: barY, y2: kidActualY, stroke: lineStroke, dashed: isLegal })
+        const mom = kidMom.get(kid) ?? null
+        if (!groupedByMom.has(mom)) groupedByMom.set(mom, [])
+        groupedByMom.get(mom)!.push(kid)
+      }
+
+      // Mother order: wives in DB order (大老婆→小老婆), then cross-spine, then null.
+      // Primary wife (idx 0) gets the LOWEST bar (closest to kids); secondary wives
+      // get progressively higher bars (closer to marriage line). This way each mother's
+      // bar is at its own Y — visually distinct even when X ranges overlap.
+      const motherOrder: Array<string | null> = []
+      for (const wid of wifeIds)        if (groupedByMom.has(wid))  motherOrder.push(wid)
+      for (const cwid of crossSpineWives) if (groupedByMom.has(cwid)) motherOrder.push(cwid)
+      if (groupedByMom.has(null))         motherOrder.push(null)
+
+      const N = motherOrder.length
+      const verticalRange = childY - marLineY
+      const motherBarY = new Map<string | null, number>()
+      for (let i = 0; i < N; i++) {
+        const fraction = (N - i) / (N + 1)  // primary i=0 → fraction near 1 (bar near kids)
+        motherBarY.set(motherOrder[i], marLineY + Math.round(verticalRange * fraction))
+      }
+
+      for (const mom of motherOrder) {
+        const groupKids  = groupedByMom.get(mom)!
+        const groupMidX  = mommidX(mom)
+        const groupKidXs = groupKids.map(k => kidX.get(k)!).filter(v => v !== undefined)
+        if (groupKidXs.length === 0) continue
+        const barY = motherBarY.get(mom)!
+        const minBarX = Math.min(groupMidX, ...groupKidXs)
+        const maxBarX = Math.max(groupMidX, ...groupKidXs)
+        drops.push({ x: groupMidX, y1: marLineY, y2: barY })
+        hbars.push({ x1: minBarX, x2: maxBarX, y: barY })
+        for (const kid of groupKids) {
+          const kxVal     = kidX.get(kid)!
+          const isSpKid   = rowOf.has(kid)
+          const childKind = membership.get(kid)
+          const isLegal   = rk.get(`${sid}|${kid}`) === 'legal'
+          const continuingKind = parentKind === 'S' ? (childKind ?? 'S') : parentKind
+          const lineStroke = isLegal
+            ? '#9ca3af'
+            : !isSpKid                          ? '#9ca3af'
+            : continuingKind === 'B'            ? '#f43f5e'
+            : continuingKind === 'A'            ? '#f59e0b'
+            : continuingKind === 'S'            ? '#f59e0b'
+            : continuingKind === 'single'       ? '#f59e0b'
+            :                                     '#6b7280'
+          const kidActualY = isSpKid ? rowY(rowOf.get(kid)!) : childY
+          drops.push({ x: kxVal, y1: barY, y2: kidActualY, stroke: lineStroke, dashed: isLegal })
+        }
       }
     }
   }
@@ -1231,12 +1343,46 @@ function onCardClick(n: LNode) {
   emit('selectPerson', n.personId)
 }
 
+// ♻ marker click — center the viewport on this person's OTHER card position.
+// Cycles through positions if the person appears more than twice (rare).
+function jumpToOther(current: LNode) {
+  if (!cv.value) return
+  const peers = cv.value.nodes.filter(o =>
+    o.personId === current.personId && o.id !== current.id && !o.hidden
+  )
+  if (peers.length === 0) return
+  // Pick the peer NOT yet centered (closest to "elsewhere" — just take the first).
+  const target = peers[0]
+  const vp = viewportRef.value
+  if (!vp) return
+  const rect = vp.getBoundingClientRect()
+  const targetCX = target.x + target.w / 2
+  const targetCY = target.y + target.h / 2
+  panX.value = rect.width / 2 - targetCX * zoom.value
+  panY.value = rect.height / 2 - targetCY * zoom.value
+}
+
 // ── Card styling ──────────────────────────────────────────────────────
+// Tradition colors override spine/gender styling (per skill spec):
+//   early_consensus (橘) — east+west agree
+//   catholic        (紅) — Western tradition only
+//   orthodox        (黃) — Eastern tradition only
+//   rabbinic        (藍) — Rabbinic post-biblical
+// Spine bar (amber/rose left edge) stays — it's rendered as a separate div.
 function cardClass(n: LNode) {
+  const base = 'shadow-sm hover:shadow-md rounded-xl cursor-pointer'
+  if (n.tradition === 'early_consensus')
+    return `border border-orange-300 bg-orange-50 ${base}`
+  if (n.tradition === 'catholic')
+    return `border border-red-300 bg-red-50 ${base}`
+  if (n.tradition === 'orthodox')
+    return `border border-yellow-400 bg-yellow-50 ${base}`
+  if (n.tradition === 'rabbinic')
+    return `border border-blue-300 bg-blue-50 ${base}`
   if (n.spineKind === 'A' || n.spineKind === 'S' || n.spineKind === 'single')
-    return 'border border-stone-300 bg-white shadow-sm hover:shadow-md rounded-xl cursor-pointer'
+    return `border border-stone-300 bg-white ${base}`
   if (n.spineKind === 'B')
-    return 'border border-rose-300 bg-white shadow-sm hover:shadow-md rounded-xl cursor-pointer'
+    return `border border-rose-300 bg-white ${base}`
   if (n.gender === 'female')
     return 'border border-rose-200 bg-rose-50/90 hover:shadow-sm rounded-xl cursor-pointer'
   return 'border border-slate-200 bg-white hover:shadow-sm rounded-xl cursor-pointer'
