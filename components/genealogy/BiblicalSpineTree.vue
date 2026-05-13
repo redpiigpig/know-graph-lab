@@ -1158,6 +1158,15 @@ const cv = computed(() => {
             if (partner) return (cx + partner.x + partner.w / 2) / 2
           }
         }
+        // null mom (no recorded mother): drop OUTSIDE the wife stack — past the
+        // smallest wife (last in wifeIds). 大衛 耶路撒冷生的 11 子聖經沒記載
+        // 母親 — 應從 以格拉（最小妾）外側延伸出去，不從 拔示巴 婚姻線分支。
+        if (wifeIds.length > 0) {
+          const lastWifeCx = wifeLX.get(wifeIds[wifeIds.length - 1])! + NW / 2
+          return wifeSide === 'left'
+            ? lastWifeCx - (NW + WIFE_HG)
+            : lastWifeCx + (NW + WIFE_HG)
+        }
         return midX
       }
 
@@ -1322,6 +1331,21 @@ const cv = computed(() => {
     if (list.length > 1) for (const n of list) n.samePerson = true
   }
 
+  // Also mark ♻ on people whose PARENT is on the chart but currently collapsed
+  // (so we can't yet see them in the parent's expanded clan). Clicking ♻ on these
+  // will auto-expand the parent's ▼ and pan. E.g., 巴實抹（以實瑪利之女）
+  // appears as 以掃's wife — her father 以實瑪利 is also drawn, but his ▼19 is
+  // collapsed so 巴實抹 only renders ONCE. The marker tells the user there's a
+  // documented parent to jump to.
+  const pids = new Set(visNodes.map(n => n.personId))
+  for (const n of nodes) {
+    if (n.hidden || n.samePerson || n.isExpansionNode) continue
+    const parents = parentsOf.value.get(n.personId) ?? []
+    for (const pid of parents) {
+      if (pids.has(pid)) { n.samePerson = true; break }
+    }
+  }
+
   // ── Canvas bounds ──────────────────────────────────────────────────
   const visNodes = nodes.filter(n => !n.hidden)
   const allX = visNodes.flatMap(n => [n.x, n.x + n.w])
@@ -1372,15 +1396,9 @@ function onCardClick(n: LNode) {
 }
 
 // ♻ marker click — center the viewport on this person's OTHER card position.
-// Cycles through positions if the person appears more than twice (rare).
-function jumpToOther(current: LNode) {
-  if (!cv.value) return
-  const peers = cv.value.nodes.filter(o =>
-    o.personId === current.personId && o.id !== current.id && !o.hidden
-  )
-  if (peers.length === 0) return
-  // Pick the peer NOT yet centered (closest to "elsewhere" — just take the first).
-  const target = peers[0]
+// If no rendered peer exists yet (because parent's ▼ clan is collapsed), expand
+// the parent's clan first; after re-render, pan to the new peer.
+function panToCard(target: LNode) {
   const vp = viewportRef.value
   if (!vp) return
   const rect = vp.getBoundingClientRect()
@@ -1388,6 +1406,31 @@ function jumpToOther(current: LNode) {
   const targetCY = target.y + target.h / 2
   panX.value = rect.width / 2 - targetCX * zoom.value
   panY.value = rect.height / 2 - targetCY * zoom.value
+}
+
+function jumpToOther(current: LNode) {
+  if (!cv.value) return
+  const peers = cv.value.nodes.filter(o =>
+    o.personId === current.personId && o.id !== current.id && !o.hidden
+  )
+  if (peers.length > 0) { panToCard(peers[0]); return }
+
+  // No rendered peer — try to expand a parent's clan to bring one in.
+  const parents = parentsOf.value.get(current.personId) ?? []
+  for (const pid of parents) {
+    const parentNode = cv.value.nodes.find(n => n.personId === pid && !n.hidden)
+    if (!parentNode) continue
+    if (!expandedClans.value.has(pid)) toggleExpand(pid)
+    // After Vue re-renders, find the new peer and pan
+    nextTick(() => {
+      if (!cv.value) return
+      const newPeers = cv.value.nodes.filter(o =>
+        o.personId === current.personId && o.id !== current.id && !o.hidden
+      )
+      if (newPeers.length > 0) panToCard(newPeers[0])
+    })
+    return
+  }
 }
 
 // ── Card styling ──────────────────────────────────────────────────────
