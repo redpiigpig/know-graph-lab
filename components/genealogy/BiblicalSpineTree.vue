@@ -93,11 +93,20 @@
                    border border-amber-300 text-amber-600 hover:bg-amber-50 shadow-sm
                    cursor-default flex items-center justify-center gap-0.5 tabular-nums"
             :title="n.subtreeExpanded ? '收起子孫' : `展開 ${n.subtreeSize} 名子孫`"
-            @click.stop="toggleExpand(n.id)"
+            @click.stop="toggleExpand(n.personId)"
           >
             <span>{{ n.subtreeExpanded ? '▲' : '▼' }}</span>
             <span v-if="!n.subtreeExpanded" class="text-[9px] opacity-70">{{ n.subtreeSize }}</span>
           </button>
+          <!-- Same-person marker — this DB person appears on the chart at another card too -->
+          <div
+            v-if="n.samePerson"
+            class="absolute -top-1.5 -right-1.5 z-10 h-4 min-w-[16px] px-1
+                   rounded-full bg-indigo-500 text-white text-[9px] leading-4
+                   font-medium shadow-sm flex items-center justify-center
+                   pointer-events-none"
+            title="同一人 — 此人在族譜上另有出現"
+          >♻</div>
         </div>
       </div>
 
@@ -355,7 +364,8 @@ function subtreeIds(id: string, vis = new Set<string>()): string[] {
 
 // ── Node interface ────────────────────────────────────────────────────
 interface LNode {
-  id: string
+  id: string                  // unique per render position (one DB person may have several LNodes)
+  personId: string            // DB person id — same person across all their render positions
   rawName: string
   displayName: string
   genLabel: string
@@ -367,8 +377,9 @@ interface LNode {
   isExpansionNode?: boolean   // node belongs to an expanded subtree
   hasSubtree?: boolean        // true → render a ▼/▲ toggle on the card
   subtreeExpanded?: boolean
-  subtreeSize?: number        // for tooltip / future use
-  hidden?: boolean            // occluded by another expansion → render invisible
+  subtreeSize?: number
+  samePerson?: boolean        // true → this person also appears at another card; render ♻
+  hidden?: boolean
 }
 interface VDrop { x: number; y1: number; y2: number; stroke?: string; dashed?: boolean; hidden?: boolean; isExpansionLine?: boolean }
 interface HBar  { x1: number; x2: number; y: number; stroke?: string; dashed?: boolean; hidden?: boolean; isExpansionLine?: boolean }
@@ -435,7 +446,8 @@ const cv = computed(() => {
 
     if (kids.length === 0) {
       const myNode: LNode = {
-        id: rootId,
+        id: `${rootId}__exp`,
+        personId: rootId,
         rawName:     p.data.name,
         displayName: shortName(p.data.name),
         genLabel:    getGenLabel(p),
@@ -467,7 +479,8 @@ const cv = computed(() => {
     const rightEdge = Math.max(rootX + NW, cursorX - HG)
 
     const myNode: LNode = {
-      id: rootId,
+      id: `${rootId}__exp`,
+      personId: rootId,
       rawName:     p.data.name,
       displayName: shortName(p.data.name),
       genLabel:    getGenLabel(p),
@@ -658,6 +671,7 @@ const cv = computed(() => {
     const row = rowOf.get(sid)!
     nodes.push({
       id: sid,
+      personId: sid,
       rawName:     p.data.name,
       displayName: shortName(p.data.name),
       genLabel:    getGenLabel(p),
@@ -730,21 +744,22 @@ const cv = computed(() => {
       }
       wifeLX.set(wid, wx)
 
-      if (!shown.has(wid)) {
-        shown.add(wid)
-        const wp = pMap.get(wid)
-        if (wp) nodes.push({
-          id: wid,
-          rawName:     wp.data.name,
-          displayName: shortName(wp.data.name),
-          genLabel:    getGenLabel(wp),
-          generation:  wp.data.generationNum || 0,
-          gender:      wp.data.gender,
-          x: wx, y: rowY(row), w: NW, h: NH,
-          spineKind:   null,
-          isClan:      false,
-        })
-      }
+      // Always render the wife at this position (even if the same DB person appears
+      // elsewhere — they're the SAME person, but the chart shows multiple roles).
+      // Unique LNode.id keys this render; personId points back to the DB entry.
+      const wp = pMap.get(wid)
+      if (wp) nodes.push({
+        id: `${wid}__wife_of__${sid}`,
+        personId: wid,
+        rawName:     wp.data.name,
+        displayName: shortName(wp.data.name),
+        genLabel:    getGenLabel(wp),
+        generation:  wp.data.generationNum || 0,
+        gender:      wp.data.gender,
+        x: wx, y: rowY(row), w: NW, h: NH,
+        spineKind:   null,
+        isClan:      false,
+      })
 
       // Marriage line — only the gap between card edges
       if (wifeSide === 'left') {
@@ -946,6 +961,7 @@ const cv = computed(() => {
 
       nodes.push({
         id: kid,
+        personId: kid,
         rawName:     kp.data.name,
         displayName: shortName(kp.data.name),
         genLabel:    getGenLabel(kp),
@@ -958,6 +974,56 @@ const cv = computed(() => {
         subtreeExpanded: expanded,
         subtreeSize: hasSub ? subtree.length : undefined,
       })
+
+      // Non-spine kid's wives — placed OUTSIDE (away from spine) so they don't
+      // collide with spine-kid wives or other siblings. Same row Y as the kid
+      // (visually pairs husband+wife at their shared marriage row, even if the
+      // wife's actual gen is one below per uncle-niece etc. — accepting slight
+      // gen inaccuracy for marriage clarity).
+      const kidWifeIds = (sp.get(kid) ?? []).filter(w => !rowOf.has(w))
+      if (kidWifeIds.length > 0) {
+        // Determine which side this kid is on relative to spine — wives go further outward
+        const spineMid = spineChildIds.length > 0
+          ? spineChildIds.reduce((s, sk) => s + cxOf(sk), 0) / spineChildIds.length
+          : cx
+        const kidSide: 'left' | 'right' = kxVal < spineMid ? 'left' : 'right'
+        const marY = childY + NH / 2
+        for (let wi = 0; wi < kidWifeIds.length; wi++) {
+          const wid = kidWifeIds[wi]
+          const wp = pMap.get(wid); if (!wp) continue
+          let wcx: number
+          if (kidSide === 'left') {
+            // wi=0 nearest to husband: husband.left - MAR_GAP - NW/2
+            wcx = (kxVal - NW / 2) - MAR_GAP - NW / 2 - wi * (NW + MG)
+          } else {
+            wcx = (kxVal + NW / 2) + MAR_GAP + NW / 2 + wi * (NW + MG)
+          }
+          nodes.push({
+            id: `${wid}__wife_of__${kid}`,
+            personId: wid,
+            rawName:     wp.data.name,
+            displayName: shortName(wp.data.name),
+            genLabel:    getGenLabel(wp),
+            generation:  wp.data.generationNum || 0,
+            gender:      wp.data.gender,
+            x: wcx - NW / 2, y: childY, w: NW, h: NH,
+            spineKind:   null,
+            isClan:      false,
+          })
+          // Marriage line — between the facing edges
+          if (kidSide === 'left') {
+            const prevWcx = wi === 0 ? kxVal : (kxVal - NW / 2) - MAR_GAP - NW / 2 - (wi - 1) * (NW + MG)
+            const leftEdge  = wcx + NW / 2
+            const rightEdge = wi === 0 ? (kxVal - NW / 2) : (prevWcx - NW / 2)
+            marriages.push({ id: `nsm_${kid}_${wid}`, x1: leftEdge, x2: rightEdge, y: marY })
+          } else {
+            const prevWcx = wi === 0 ? kxVal : (kxVal + NW / 2) + MAR_GAP + NW / 2 + (wi - 1) * (NW + MG)
+            const leftEdge  = wi === 0 ? (kxVal + NW / 2) : (prevWcx + NW / 2)
+            const rightEdge = wcx - NW / 2
+            marriages.push({ id: `nsm_${kid}_${wid}`, x1: leftEdge, x2: rightEdge, y: marY })
+          }
+        }
+      }
 
       // When expanded: render the full subtree directly below, aligned to main row pitch
       if (hasSub && expanded) {
@@ -1060,6 +1126,18 @@ const cv = computed(() => {
     }
   }
 
+  // ── Detect duplicate persons (same DB id rendered at multiple positions) ──
+  const byPid = new Map<string, LNode[]>()
+  for (const n of nodes) {
+    if (n.hidden) continue
+    const arr = byPid.get(n.personId) ?? []
+    arr.push(n)
+    byPid.set(n.personId, arr)
+  }
+  for (const list of byPid.values()) {
+    if (list.length > 1) for (const n of list) n.samePerson = true
+  }
+
   // ── Canvas bounds ──────────────────────────────────────────────────
   const visNodes = nodes.filter(n => !n.hidden)
   const allX = visNodes.flatMap(n => [n.x, n.x + n.w])
@@ -1103,10 +1181,10 @@ function toggleExpand(spineParentId: string) {
 }
 
 // ── Card click ────────────────────────────────────────────────────────
-// Card body opens the edit modal; the ▼/▲ toggle (separate button) handles
-// subtree expansion via its own @click.stop.
+// Card body opens the edit modal (using DB personId — same person across roles).
+// The ▼/▲ toggle (separate button) handles subtree expansion via its own @click.stop.
 function onCardClick(n: LNode) {
-  emit('selectPerson', n.id)
+  emit('selectPerson', n.personId)
 }
 
 // ── Card styling ──────────────────────────────────────────────────────
