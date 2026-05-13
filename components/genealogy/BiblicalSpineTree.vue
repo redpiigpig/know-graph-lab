@@ -735,13 +735,15 @@ const cv = computed(() => {
       else if (pL > hR)  marriages.push({ id: `mscross_${pairKey}`, x1: hR, x2: pL, y: marLineY })
     }
 
+    // Uniform NW+HG spacing per user spec: 配偶之間 / 兄弟之間 距離一致
+    const SLOT = NW + HG  // 140px per slot (each adjacent card edge-to-edge gap = HG)
     for (let wi = 0; wi < wifeIds.length; wi++) {
       const wid = wifeIds[wi]
       let wx: number
       if (wifeSide === 'left') {
-        wx = (cx - NW / 2) - MAR_GAP - (wi + 1) * NW - wi * MG
+        wx = cx - (wi + 1) * SLOT - NW / 2  // wi=0 (closest wife) center at cx - SLOT
       } else {
-        wx = (cx + NW / 2) + MAR_GAP + wi * (NW + MG)
+        wx = cx + (wi + 1) * SLOT - NW / 2
       }
       wifeLX.set(wid, wx)
 
@@ -899,7 +901,7 @@ const cv = computed(() => {
       // because the spine kid's wives sit at the SAME row as its siblings —
       // both rendered at gen(spineKid) = gen(siblings)).
       function wifeReachOnSide(spineKidId: string, side: 'left' | 'right'): number {
-        const spouses = sp.get(spineKidId) ?? []
+        const spouses = (sp.get(spineKidId) ?? []).filter(w => !rowOf.has(w))
         if (spouses.length === 0) return 0
         let kidWifeSide: 'left' | 'right' = 'left'
         if (isDualMode.value) {
@@ -908,29 +910,30 @@ const cv = computed(() => {
           else if (sk === 'B') kidWifeSide = 'left'
         }
         if (kidWifeSide !== side) return 0
-        // Total horizontal distance from spine kid's card CENTER to the leftmost/
-        // rightmost wife's outer edge.
-        return NW / 2 + MAR_GAP + spouses.length * NW + Math.max(0, spouses.length - 1) * MG
+        // Uniform spacing: each wife occupies one (NW + HG) slot from spine kid center
+        return spouses.length * (NW + HG)
       }
 
-      // rightGroup: rightmost-natural first; walk from END so closest-to-spine ends up nearest
+      // rightGroup: rightmost-natural first; walk from END so closest-to-spine ends up nearest.
+      // Each sibling's own wives also claim (NW+HG) slots, so cursor advances accordingly.
       const rightWifeReach = wifeReachOnSide(spineByX[0], 'right')
-      const firstRightX = Math.max(
-        rightmostSpX + KID_GAP,
-        rightmostSpX + rightWifeReach + HG + NW / 2,
-      )
+      const firstRightX = rightmostSpX + rightWifeReach + (NW + HG)
+      let rightCursor = firstRightX
       for (let i = 0; i < rightGroup.length; i++) {
         const kid = rightGroup[rightGroup.length - 1 - i]
-        kidX.set(kid, firstRightX + i * KID_GAP)
+        kidX.set(kid, rightCursor)
+        const myWifeIds = (sp.get(kid) ?? []).filter(w => !rowOf.has(w))
+        rightCursor += (myWifeIds.length + 1) * (NW + HG)
       }
       // leftGroup: leftmost-natural last; first kid in leftGroup is closest-to-spine
       const leftWifeReach = wifeReachOnSide(spineByX[spineByX.length - 1], 'left')
-      const firstLeftX = Math.min(
-        leftmostSpX - KID_GAP,
-        leftmostSpX - leftWifeReach - HG - NW / 2,
-      )
+      const firstLeftX = leftmostSpX - leftWifeReach - (NW + HG)
+      let leftCursor = firstLeftX
       for (let i = 0; i < leftGroup.length; i++) {
-        kidX.set(leftGroup[i], firstLeftX - i * KID_GAP)
+        const kid = leftGroup[i]
+        kidX.set(kid, leftCursor)
+        const myWifeIds = (sp.get(kid) ?? []).filter(w => !rowOf.has(w))
+        leftCursor -= (myWifeIds.length + 1) * (NW + HG)
       }
       // betweenGroup: evenly between leftmost and rightmost spine kids
       if (betweenGroup.length > 0 && rightmostSpX > leftmostSpX) {
@@ -985,29 +988,23 @@ const cv = computed(() => {
         isExpansionRoot: expanded,  // never occlude the card whose own ▼ is expanded
       })
 
-      // Non-spine kid's wives — placed OUTSIDE (away from spine) so they don't
-      // collide with spine-kid wives or other siblings. Same row Y as the kid
-      // (visually pairs husband+wife at their shared marriage row, even if the
-      // wife's actual gen is one below per uncle-niece etc. — accepting slight
-      // gen inaccuracy for marriage clarity).
+      // Non-spine kid's wives — placed OUTSIDE (away from spine) using the SAME
+      // uniform NW+HG spacing as siblings, so 配偶間距 == 兄弟間距.
+      // Each wife center is one full slot from the previous card center.
       const kidWifeIds = (sp.get(kid) ?? []).filter(w => !rowOf.has(w))
       if (kidWifeIds.length > 0) {
-        // Determine which side this kid is on relative to spine — wives go further outward
         const spineMid = spineChildIds.length > 0
           ? spineChildIds.reduce((s, sk) => s + cxOf(sk), 0) / spineChildIds.length
           : cx
         const kidSide: 'left' | 'right' = kxVal < spineMid ? 'left' : 'right'
         const marY = childY + NH / 2
+        const SLOT_K = NW + HG  // same uniform slot as siblings
         for (let wi = 0; wi < kidWifeIds.length; wi++) {
           const wid = kidWifeIds[wi]
           const wp = pMap.get(wid); if (!wp) continue
-          let wcx: number
-          if (kidSide === 'left') {
-            // wi=0 nearest to husband: husband.left - MAR_GAP - NW/2
-            wcx = (kxVal - NW / 2) - MAR_GAP - NW / 2 - wi * (NW + MG)
-          } else {
-            wcx = (kxVal + NW / 2) + MAR_GAP + NW / 2 + wi * (NW + MG)
-          }
+          const wcx = kidSide === 'left'
+            ? kxVal - (wi + 1) * SLOT_K
+            : kxVal + (wi + 1) * SLOT_K
           nodes.push({
             id: `${wid}__wife_of__${kid}`,
             personId: wid,
@@ -1020,17 +1017,13 @@ const cv = computed(() => {
             spineKind:   null,
             isClan:      false,
           })
-          // Marriage line — between the facing edges
+          // Marriage line — only the HG gap between facing edges of adjacent cards
           if (kidSide === 'left') {
-            const prevWcx = wi === 0 ? kxVal : (kxVal - NW / 2) - MAR_GAP - NW / 2 - (wi - 1) * (NW + MG)
-            const leftEdge  = wcx + NW / 2
-            const rightEdge = wi === 0 ? (kxVal - NW / 2) : (prevWcx - NW / 2)
-            marriages.push({ id: `nsm_${kid}_${wid}`, x1: leftEdge, x2: rightEdge, y: marY })
+            const prevCx = wi === 0 ? kxVal : kxVal - wi * SLOT_K
+            marriages.push({ id: `nsm_${kid}_${wid}`, x1: wcx + NW / 2, x2: prevCx - NW / 2, y: marY })
           } else {
-            const prevWcx = wi === 0 ? kxVal : (kxVal + NW / 2) + MAR_GAP + NW / 2 + (wi - 1) * (NW + MG)
-            const leftEdge  = wi === 0 ? (kxVal + NW / 2) : (prevWcx + NW / 2)
-            const rightEdge = wcx - NW / 2
-            marriages.push({ id: `nsm_${kid}_${wid}`, x1: leftEdge, x2: rightEdge, y: marY })
+            const prevCx = wi === 0 ? kxVal : kxVal + wi * SLOT_K
+            marriages.push({ id: `nsm_${kid}_${wid}`, x1: prevCx + NW / 2, x2: wcx - NW / 2, y: marY })
           }
         }
       }
