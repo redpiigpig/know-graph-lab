@@ -1112,25 +1112,55 @@ const cv = computed(() => {
     const minY = Math.min(y1, y2), maxY = Math.max(y1, y2)
     return !(maxX < b.x1 || minX > b.x2 || maxY < b.y1 || minY > b.y2)
   }
+  // ── Occlusion: PER-NODE / PER-LINE (not the big bbox) ──────────────
+  // An expansion card / line claims its own footprint + a 0.5rem (8px) margin.
+  // A non-expansion card or line is hidden ONLY if it actually overlaps that
+  // claim. So 該隱's slim middle column at rows 3-6 won't hide spine cards at
+  // those rows; only at the wide bottom row (where 拉麥's 4 children fan out)
+  // will spine cards at the SAME row that get covered actually disappear.
+  const OCCL_PAD = 8  // 0.5rem
   if (expansionBoxes.length > 0) {
+    const exShapes: ExpansionBox[] = []
+    for (const n of nodes) {
+      if (!n.isExpansionNode) continue
+      exShapes.push({
+        x1: n.x - OCCL_PAD, y1: n.y - OCCL_PAD,
+        x2: n.x + n.w + OCCL_PAD, y2: n.y + n.h + OCCL_PAD,
+      })
+    }
+    for (const d of drops) {
+      if (!d.isExpansionLine) continue
+      exShapes.push({
+        x1: d.x - OCCL_PAD, y1: Math.min(d.y1, d.y2) - OCCL_PAD,
+        x2: d.x + OCCL_PAD, y2: Math.max(d.y1, d.y2) + OCCL_PAD,
+      })
+    }
+    for (const b of hbars) {
+      if (!b.isExpansionLine) continue
+      exShapes.push({
+        x1: Math.min(b.x1, b.x2) - OCCL_PAD, y1: b.y - OCCL_PAD,
+        x2: Math.max(b.x1, b.x2) + OCCL_PAD, y2: b.y + OCCL_PAD,
+      })
+    }
+
     for (const n of nodes) {
       if (n.isExpansionNode) continue
       const nBox: ExpansionBox = { x1: n.x, y1: n.y, x2: n.x + n.w, y2: n.y + n.h }
-      if (expansionBoxes.some(b => boxOverlap(nBox, b))) n.hidden = true
+      if (exShapes.some(s => boxOverlap(nBox, s))) n.hidden = true
     }
     for (const d of drops) {
-      if (d.isExpansionLine) continue  // expansion-internal lines are always visible
-      if (expansionBoxes.some(b => lineIntersectsBox(d.x, d.y1, d.x, d.y2, b))) d.hidden = true
+      if (d.isExpansionLine) continue
+      if (exShapes.some(s => lineIntersectsBox(d.x, d.y1, d.x, d.y2, s))) d.hidden = true
     }
     for (const b of hbars) {
       if (b.isExpansionLine) continue
-      if (expansionBoxes.some(box => lineIntersectsBox(b.x1, b.y, b.x2, b.y, box))) b.hidden = true
+      if (exShapes.some(s => lineIntersectsBox(b.x1, b.y, b.x2, b.y, s))) b.hidden = true
     }
     for (const m of marriages) {
-      if (expansionBoxes.some(box => lineIntersectsBox(m.x1, m.y, m.x2, m.y, box))) m.hidden = true
+      if (exShapes.some(s => lineIntersectsBox(m.x1, m.y, m.x2, m.y, s))) m.hidden = true
     }
     for (const g of trunkGuides) {
-      if (expansionBoxes.some(box => lineIntersectsBox(g.x, g.y1, g.x, g.y2, box))) g.hidden = true
+      if (exShapes.some(s => lineIntersectsBox(g.x, g.y1, g.x, g.y2, s))) g.hidden = true
     }
   }
 
