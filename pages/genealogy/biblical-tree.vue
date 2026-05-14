@@ -8,19 +8,7 @@
       <span v-if="peopleCount" class="text-xs text-gray-400 ml-1">{{ peopleCount }} 人</span>
       <div class="flex-1" />
 
-      <!-- 耶穌弟兄解 toggle -->
-      <div class="flex items-center gap-0.5 bg-gray-100 rounded-lg p-0.5 mr-1">
-        <span class="text-[10px] text-gray-400 px-1.5 select-none">耶穌弟兄</span>
-        <button
-          v-for="t in viewOptions"
-          :key="t.value"
-          class="text-xs px-2.5 py-1 rounded-md font-medium transition"
-          :class="brothersView === t.value
-            ? `bg-white shadow-sm ${t.activeColor}`
-            : 'text-gray-500 hover:text-gray-700'"
-          @click="setBrothersView(t.value)"
-        >{{ t.label }}</button>
-      </div>
+      <!-- 耶穌弟兄詮釋 toggle 已移至族譜圖內浮動 widget（局部按鈕） -->
 
       <!-- View link -->
       <div class="flex items-center gap-0.5 bg-gray-100 rounded-lg p-0.5">
@@ -32,13 +20,15 @@
       </div>
     </nav>
 
-    <!-- 族譜圖 -->
+    <!-- 族譜圖（含浮動耶穌弟兄詮釋 toggle） -->
     <div class="flex-1 min-h-0 relative">
       <ClientOnly>
         <GenealogyBiblicalSpineTree
           :nodes="graphNodes"
           :edges="graphEdges"
+          :brothers-view="brothersView"
           @select-person="onSelectPerson"
+          @update:brothers-view="setBrothersView"
         />
         <template #fallback>
           <div class="absolute inset-0 flex items-center justify-center text-gray-300 text-sm">載入中…</div>
@@ -62,19 +52,14 @@ async function getToken() {
   return session.access_token
 }
 
-// 耶穌弟兄解（馬可 6:3 三派解）— protestant 預設。
-type BrothersView = 'protestant' | 'catholic' | 'orthodox'
+// 耶穌弟兄詮釋（馬可 6:3）— 4 個選項：
+//   protestant（字面）/ early_consensus（前妻說早期版）/ orthodox（前妻說）/ catholic（表親說）
+// 局部按鈕在族譜圖 widget 內；URL 同步 ?view=
+type BrothersView = 'protestant' | 'early_consensus' | 'orthodox' | 'catholic'
+const ALLOWED = ['protestant', 'early_consensus', 'orthodox', 'catholic']
 const brothersView = ref<BrothersView>(
-  (['protestant', 'catholic', 'orthodox'].includes(route.query.view as string)
-    ? route.query.view
-    : 'protestant') as BrothersView
+  (ALLOWED.includes(route.query.view as string) ? route.query.view : 'protestant') as BrothersView
 )
-
-const viewOptions: Array<{ value: BrothersView; label: string; activeColor: string }> = [
-  { value: 'protestant', label: '新教',   activeColor: 'text-gray-900' },
-  { value: 'catholic',   label: '天主教', activeColor: 'text-purple-600' },
-  { value: 'orthodox',   label: '東方',   activeColor: 'text-emerald-600' },
-]
 
 function setBrothersView(v: BrothersView) {
   brothersView.value = v

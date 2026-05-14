@@ -114,6 +114,27 @@
         </div>
       </div>
 
+      <!-- 耶穌弟兄詮釋 — local toggle (top-center, near Holy Family region in spine bottom).
+           Mark 6:3 has 4 traditional interpretations; only catholic/orthodox differ
+           materially. early_consensus 在 Jerome ~393 之前等同 Epiphanian view（東方）.
+           This toggle is "local" — only affects 耶穌's brothers attribution. -->
+      <div
+        v-if="!props.rootId"
+        class="absolute top-3 left-1/2 -translate-x-1/2 z-40 bg-white/95 border border-gray-200 rounded-lg p-1 shadow-sm flex items-center gap-1 pointer-events-auto"
+      >
+        <span class="text-[10px] text-gray-400 px-1.5 select-none leading-none">耶穌弟兄</span>
+        <button
+          v-for="t in brothersOptions"
+          :key="t.value"
+          class="text-[11px] px-2 py-1 rounded-md font-medium transition cursor-default"
+          :class="props.brothersView === t.value
+            ? `bg-gray-100 ${t.activeColor}`
+            : 'text-gray-500 hover:text-gray-700'"
+          :title="t.tooltip"
+          @click.stop="emit('update:brothersView', t.value)"
+        >{{ t.label }}</button>
+      </div>
+
       <!-- Controls (viewport-fixed) -->
       <div class="absolute top-3 right-3 z-40 flex flex-col gap-1.5 pointer-events-auto">
         <button class="w-8 h-8 bg-white/90 border border-gray-200 rounded-lg text-gray-700 hover:bg-gray-50
@@ -151,16 +172,32 @@ defineOptions({ name: 'BiblicalSpineTree' })
 
 interface BreadcrumbItem { id: string; name: string }
 
+type BrothersView = 'protestant' | 'early_consensus' | 'orthodox' | 'catholic'
+
 const props = defineProps<{
   nodes: any[]
   edges: any[]
   rootId?: string                   // when set: recursive single-spine mode
   breadcrumb?: BreadcrumbItem[]     // navigation crumbs (recursive only)
+  brothersView?: BrothersView       // 耶穌弟兄詮釋（馬可 6:3）
 }>()
 const emit = defineEmits<{
-  selectPerson:    [id: string]
-  closeRecursive:  []
+  selectPerson:        [id: string]
+  closeRecursive:      []
+  'update:brothersView': [v: BrothersView]
 }>()
+
+// 耶穌弟兄詮釋按鈕（局部 toggle）— 4 選項：
+//   聖經（字面，5 弟兄為親生）
+//   早期教會（Epiphanian view，~Jerome 之前主流，前妻說）→ API 等同 orthodox
+//   東方（Epiphanian view 完整版）→ orthodox
+//   天主教（Hieronymian view，~Jerome 393 AD 起，表親說）→ catholic
+const brothersOptions: Array<{ value: BrothersView; label: string; activeColor: string; tooltip: string }> = [
+  { value: 'protestant',      label: '聖經',     activeColor: 'text-gray-900',     tooltip: '聖經字面：5 弟兄為約瑟+馬利亞親生' },
+  { value: 'early_consensus', label: '早期教會', activeColor: 'text-orange-700',   tooltip: '早期教會（Jerome 393 前）：前妻撒羅米所生' },
+  { value: 'orthodox',        label: '東方',     activeColor: 'text-emerald-700',  tooltip: '東方教會（Epiphanian）：約瑟前妻撒羅米所生' },
+  { value: 'catholic',        label: '天主教',   activeColor: 'text-purple-700',   tooltip: '天主教（Hieronymian）：馬利亞-革羅罷之子（表親）' },
+]
 
 // ── Layout constants ──────────────────────────────────────────────────
 const NW          = 120  // person card width

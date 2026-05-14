@@ -135,8 +135,8 @@ await context.addCookies([{
 console.log(`→ Cookie set: ${cookieName} (${cookieValue.length} chars)`)
 
 const viewQS = view ? `?view=${encodeURIComponent(view)}` : ''
-console.log(`→ Loading /genealogy/biblical${viewQS}`)
-await page.goto(APP_BASE + '/genealogy/biblical' + viewQS, { waitUntil: 'domcontentloaded' })
+console.log(`→ Loading /genealogy/biblical-tree${viewQS}`)
+await page.goto(APP_BASE + '/genealogy/biblical-tree' + viewQS, { waitUntil: 'domcontentloaded' })
 await page.waitForLoadState('networkidle').catch(() => {})
 console.log('  landed at:', page.url())
 if (page.url().includes('/login')) {
@@ -144,13 +144,7 @@ if (page.url().includes('/login')) {
   console.error('     (cookie format may not match @nuxtjs/supabase expectations)')
 }
 
-// Switch to 族譜圖 view if not already
-console.log('→ Switching to tree view')
-try {
-  await page.click('button:has-text("族譜圖")', { timeout: 3000 })
-} catch (e) {
-  console.log('  (tree view button not found — already there?)')
-}
+// Wait for tree to render (we're already on /genealogy/biblical-tree)
 await page.waitForSelector('.node-card', { timeout: 15000 })
 await page.waitForTimeout(2000) // let layout settle
 

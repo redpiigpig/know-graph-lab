@@ -13,9 +13,11 @@ export default defineEventHandler(async (event) => {
   // protestant 預設：兩派同時有值的欄位（衝突）兩派都不 apply。
   const q = getQuery(event)
   const viewRaw = String(q.view ?? 'protestant').toLowerCase()
+  // early_consensus 等同 orthodox 的耶穌弟兄解（前妻說，Epiphanian view）；
+  // 在 Jerome ~393 之前是早期教會主流。
   const view: 'protestant' | 'catholic' | 'orthodox' =
     viewRaw === 'catholic' ? 'catholic' :
-    viewRaw === 'orthodox' ? 'orthodox' : 'protestant'
+    (viewRaw === 'orthodox' || viewRaw === 'early_consensus') ? 'orthodox' : 'protestant'
 
   const { data: allPeople, error } = await supabase
     .from('biblical_people')
