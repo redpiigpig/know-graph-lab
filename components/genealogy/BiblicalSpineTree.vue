@@ -1413,7 +1413,9 @@ const cv = computed(() => {
       // 不再有 marLineY→barY 的中間段。
       // 例：大衛在耶路撒冷生的 11 個沒記載母親的兒子，T-bar 跟 大衛↔妻 婚姻
       // 紅線同 Y，從 哈及 外側延伸出去，灰色 T-bar + 灰色 drop 往下到每個兒子。
-      if (motherBarY.has(null)) motherBarY.set(null, marLineY)
+      // ⚠️ 只有當「有妻無母」時才適用 — 完全沒記載妻子（如挪亞）時，
+      // 不該硬拉到 marLineY，否則 hbar 會被染紅變成假婚姻線。
+      if (motherBarY.has(null) && wifeIds.length > 0) motherBarY.set(null, marLineY)
 
       for (const mom of motherOrder) {
         const groupKids  = groupedByMom.get(mom)!
