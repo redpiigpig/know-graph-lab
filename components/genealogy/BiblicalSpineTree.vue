@@ -956,7 +956,19 @@ const cv = computed(() => {
         placedAsRowSpouse.add(otherSpId)
       }
     }
-    const wifeIds = [...wifeIdsBase, ...extraSpouses]
+    let wifeIds = [...wifeIdsBase, ...extraSpouses]
+    // Dual-spine 中段：很多妻時只保留「生 spine 子嗣的妻」（per user spec：
+    // 所羅門很多妻 → 只留拿瑪（羅波安之母），其他妻收起，要看可手動 expand）。
+    // spine mom：對每個 spine kid sk，掃 wifeIds 內的妻，找 children 含 sk 的那一位。
+    if (isInDualSpineHideZone(sid) && wifeIds.length > 0 && spineChildIds.length > 0) {
+      const spineMoms = new Set<string>()
+      for (const sk of spineChildIds) {
+        for (const w of wifeIds) {
+          if ((ch.get(w) ?? []).includes(sk)) { spineMoms.add(w); break }
+        }
+      }
+      if (spineMoms.size > 0) wifeIds = wifeIds.filter(w => spineMoms.has(w))
+    }
     const wifeLX          = new Map<string, number>()
     const marLineY        = rowY(row) + NH / 2
 
@@ -1122,7 +1134,6 @@ const cv = computed(() => {
     }
 
     // Dual-spine 中段：把非 spine 兄弟整段過濾掉，只留 spine 主幹 kids。
-    // spine 自己的 wives 在別處（前面 wifeIds 流程）處理，不受影響。
     if (isInDualSpineHideZone(sid)) {
       const onlySpine = orderedRTL.filter(k => rowOf.has(k))
       orderedRTL.length = 0
