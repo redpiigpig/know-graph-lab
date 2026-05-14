@@ -7,46 +7,22 @@
       <span class="text-sm font-semibold text-gray-900">聖經人物族譜</span>
       <span class="text-xs text-gray-400 ml-1">{{ people.length > 0 ? `${people.length} 人` : '' }}</span>
       <div class="flex-1" />
-      <!-- 耶穌弟兄解 toggle (tree view only) — only resolves Mark 6:3 conflict;
-           other tradition figures always visible, colored by source. -->
-      <div v-show="view === 'tree'" class="flex items-center gap-0.5 bg-gray-100 rounded-lg p-0.5 mr-1">
-        <span class="text-[10px] text-gray-400 px-1.5 select-none">耶穌弟兄</span>
-        <button
-          v-for="t in viewOptions"
-          :key="t.value"
-          class="text-xs px-2.5 py-1 rounded-md font-medium transition"
-          :class="brothersView === t.value
-            ? `bg-white shadow-sm ${t.activeColor}`
-            : 'text-gray-500 hover:text-gray-700'"
-          @click="setBrothersView(t.value)"
-        >{{ t.label }}</button>
-      </div>
-
-      <!-- View toggle -->
+      <!-- View link -->
       <div class="flex items-center gap-0.5 bg-gray-100 rounded-lg p-0.5">
-        <button
-          class="text-xs px-2.5 py-1 rounded-md font-medium transition"
-          :class="view === 'table' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-500 hover:text-gray-700'"
-          @click="view = 'table'"
-        >表格</button>
-        <button
-          class="text-xs px-2.5 py-1 rounded-md font-medium transition"
-          :class="view === 'tree' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-500 hover:text-gray-700'"
-          @click="view = 'tree'"
-        >族譜圖</button>
+        <span class="text-xs px-2.5 py-1 rounded-md font-medium bg-white shadow-sm text-gray-900">表格</span>
+        <NuxtLink
+          to="/genealogy/biblical-tree"
+          class="text-xs px-2.5 py-1 rounded-md font-medium transition text-gray-500 hover:text-gray-700"
+        >族譜圖</NuxtLink>
       </div>
       <button
-        v-show="view === 'table'"
         class="text-xs px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-medium transition shadow-sm ml-1"
         @click="openAdd"
       >+ 新增人物</button>
     </nav>
 
-    <!-- Filter bar (table view only) -->
-    <div
-      v-show="view === 'table'"
-      class="flex items-center gap-2 px-4 h-10 bg-white border-b border-gray-100 flex-shrink-0"
-    >
+    <!-- Filter bar -->
+    <div class="flex items-center gap-2 px-4 h-10 bg-white border-b border-gray-100 flex-shrink-0">
       <div class="relative">
         <span class="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-300 text-[11px] pointer-events-none select-none">🔍</span>
         <input
@@ -150,20 +126,6 @@
           </tbody>
         </table>
       </div>
-    </div>
-
-    <!-- 族譜圖 (relative parent gives ClientOnly content a defined size) -->
-    <div v-show="view === 'tree'" class="flex-1 min-h-0 relative">
-      <ClientOnly>
-        <GenealogyBiblicalSpineTree
-          :nodes="graphNodes"
-          :edges="graphEdges"
-          @select-person="onSelectPerson"
-        />
-        <template #fallback>
-          <div class="absolute inset-0 flex items-center justify-center text-gray-300 text-sm">載入中…</div>
-        </template>
-      </ClientOnly>
     </div>
 
     <!-- Detail modal (出處 / 備注) -->
@@ -331,8 +293,7 @@ const editingId = ref<string | null>(null)
 const people    = ref<Person[]>([])
 const form      = ref(emptyForm())
 
-// ── View / search ──────────────────────────────────────────
-const view         = ref<'table' | 'tree'>('table')
+// ── Search ─────────────────────────────────────────────────
 const search       = ref('')
 const genderFilter = ref('')
 const genderOptions = [
@@ -360,64 +321,6 @@ const detail = ref({ show: false, title: '', body: '', personName: '' })
 function openDetail(title: string, body: string, personName: string) {
   detail.value = { show: true, title, body, personName }
 }
-
-// ── Graph data (shared for tree view) ─────────────────────
-const graphNodes  = ref<any[]>([])
-const graphEdges  = ref<any[]>([])
-const graphLoaded = ref(false)
-
-// 耶穌弟兄解（馬可 6:3 三派解）— protestant 預設。
-// 其他「補充性」傳統人物永遠顯示，靠 card 顏色辨識來源。
-// Allowed values: protestant | catholic | orthodox
-type BrothersView = 'protestant' | 'catholic' | 'orthodox'
-const route  = useRoute()
-const router2 = useRouter()
-const brothersView = ref<BrothersView>(
-  (['protestant', 'catholic', 'orthodox'].includes(route.query.view as string)
-    ? route.query.view
-    : 'protestant') as BrothersView
-)
-
-const viewOptions: Array<{ value: BrothersView; label: string; activeColor: string }> = [
-  { value: 'protestant', label: '新教',   activeColor: 'text-gray-900' },
-  { value: 'catholic',   label: '天主教', activeColor: 'text-purple-600' },
-  { value: 'orthodox',   label: '東方',   activeColor: 'text-emerald-600' },
-]
-
-function setBrothersView(v: BrothersView) {
-  brothersView.value = v
-  router2.replace({ query: { ...route.query, view: v === 'protestant' ? undefined : v } })
-}
-
-async function loadGraph() {
-  if (graphLoaded.value) return
-  graphLoaded.value = true
-  try {
-    const token = await getToken()
-    if (!token) { graphLoaded.value = false; return }
-    const qs = brothersView.value !== 'protestant' ? `?view=${brothersView.value}` : ''
-    const { nodes, edges } = await $fetch<{ nodes: any[], edges: any[] }>('/api/genealogy/biblical-graph' + qs, {
-      headers: { Authorization: `Bearer ${token}` },
-    })
-    graphNodes.value = nodes
-    graphEdges.value = edges
-  } catch {
-    graphLoaded.value = false
-  }
-}
-
-// Reload graph when brothers-interpretation changes
-watch(brothersView, () => {
-  graphLoaded.value = false
-  if (view.value === 'tree') loadGraph()
-})
-
-function onSelectPerson(id: string) {
-  const found = people.value.find(p => p.id === id)
-  if (found) openEdit(found)
-}
-
-watch(view, (val) => { if (val === 'tree') loadGraph() })
 
 // ── CRUD ───────────────────────────────────────────────────
 function emptyForm() {
@@ -488,8 +391,6 @@ async function save() {
       people.value.push(created)
     }
     showModal.value = false
-    graphLoaded.value = false
-    if (view.value === 'tree') loadGraph()
   } finally {
     saving.value = false
   }
@@ -504,8 +405,6 @@ async function deletePerson(id: string) {
     headers: { Authorization: `Bearer ${token}` },
   })
   people.value = people.value.filter(p => p.id !== id)
-  graphLoaded.value = false
-  if (view.value === 'tree') loadGraph()
 }
 
 function formatYear(y: number | null) {
