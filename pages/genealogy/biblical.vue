@@ -46,7 +46,7 @@
     </div>
 
     <!-- Table view -->
-    <div v-show="view === 'table'" class="flex-1 min-h-0 overflow-auto p-4">
+    <div class="flex-1 min-h-0 overflow-auto p-4">
       <div v-if="loading" class="flex items-center justify-center h-32 text-gray-400 text-sm">載入中…</div>
 
       <div v-else class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">

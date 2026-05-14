@@ -1404,7 +1404,11 @@ const cv = computed(() => {
         const barY = motherBarY.get(mom)!
         const minBarX = Math.min(groupMidX, ...groupKidXs)
         const maxBarX = Math.max(groupMidX, ...groupKidXs)
-        drops.push({ x: groupMidX, y1: marLineY, y2: barY })
+        // 從婚姻線往 T-bar 的這段 drop：有 mom 的（婚生）用紅色（接續婚姻線），
+        // null mom（無記載生母）用預設灰色。視覺上紅線從婚姻線一路延伸到子女
+        // 那一橫桿，不再「斷線」。
+        const dropStroke = mom !== null ? '#dc2626' : undefined
+        drops.push({ x: groupMidX, y1: marLineY, y2: barY, stroke: dropStroke })
         hbars.push({ x1: minBarX, x2: maxBarX, y: barY })
         for (const kid of groupKids) {
           const kxVal     = kidX.get(kid)!
