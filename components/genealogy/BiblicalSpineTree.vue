@@ -1218,10 +1218,9 @@ const cv = computed(() => {
       }
       const subtree = subtreeCapped(kid).filter(id => id !== kid)
       const hasSub  = subtree.length > 0 && !hasSpineSpouse && !isFemale
-      // 小 clan (≤5 人) 預設展開 — 例如 斯多蘭→{亞拿,蘇比,以利沙白,施洗約翰}
-      // 中型/大型 clan (如 拿鶴 16 人) 暫時保持手動點 ▼，因 auto-expand 規模太大會
-      // 觸發 collision-pass 連鎖位移，整列被拉散（如 謝拉/法勒斯 row 被推到 x=6964）。
-      const expanded = expandedClans.value.has(kid) || (hasSub && subtree.length <= 5)
+      // 中型 clan (≤20 人) 預設展開 — 例如 斯多蘭→{蘇比/以利沙白/...}、
+      // 拿鶴→{烏斯/布斯/.../彼土利}；巨型 clan (~300 人) 仍需手動 ▼。
+      const expanded = expandedClans.value.has(kid) || (hasSub && subtree.length <= 20)
 
       nodes.push({
         id: kid,
