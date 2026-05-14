@@ -1591,66 +1591,6 @@ const cv = computed(() => {
     }
   }
 
-  // ── Collision avoidance: 同 Y row 卡片不可重疊 ────────────────────────
-  // 不同 clan 的 expansion 各自獨立排版，X 軸落點可能撞到（例如 謝拉's expansion
-  // 在 J25 row 放 約巴/撒底，跟 法勒斯's expansion 的 哈母勒/希斯崙 撞在一起 70px
-  // step → 50px 重疊）。post-pass：每個 Y row 內按 X 排序，左→右掃，重疊的右
-  // 卡片往右推 (overlap + MIN_GAP)，連帶把連到 card 中心的 drops/hbars 端點一起
-  // 移動，保留線條完整。
-  {
-    const MIN_GAP = 16
-    function shiftCardAndLines(n: LNode, dx: number) {
-      const oldCx = n.x + n.w / 2
-      n.x += dx
-      const newCx = n.x + n.w / 2
-      for (const d of drops) {
-        if (Math.abs(d.x - oldCx) < 0.5) d.x = newCx
-      }
-      for (const b of hbars) {
-        if (Math.abs(b.x1 - oldCx) < 0.5) b.x1 = newCx
-        if (Math.abs(b.x2 - oldCx) < 0.5) b.x2 = newCx
-      }
-    }
-    const yBuckets = new Map<number, LNode[]>()
-    for (const n of nodes) {
-      if (n.hidden) continue
-      const k = Math.round(n.y)
-      if (!yBuckets.has(k)) yBuckets.set(k, [])
-      yBuckets.get(k)!.push(n)
-    }
-    // spine 卡片位置由 spine column 鎖定，不可被 collision 推開 — 否則 amber/rose
-    // 主幹 guide line 跟卡片就分離了。
-    const isAnchored = (n: LNode) => rowOf.has(n.personId)
-    for (const ns of yBuckets.values()) {
-      // 多輪掃，cascading 收斂上限放寬到 3×ns.length（同 row 同時有 anchored +
-      // 多個非 anchored 互相推擠時，往左 cascade 需要的 pass 數比簡單收斂多）。
-      for (let pass = 0; pass < ns.length * 3 + 4; pass++) {
-        ns.sort((a, b) => a.x - b.x)
-        let anyShift = false
-        for (let i = 1; i < ns.length; i++) {
-          const left = ns[i - 1]
-          const right = ns[i]
-          const overlap = (left.x + left.w + MIN_GAP) - right.x
-          if (overlap <= 0) continue
-          if (!isAnchored(right)) {
-            shiftCardAndLines(right, overlap)
-            anyShift = true
-          } else if (!isAnchored(left)) {
-            // 右側是 spine anchored → 把 left 及其左邊所有非 anchored 卡 一起往
-            // 左推 overlap，cluster 整體位移，避免反覆 ping-pong。
-            for (let j = i - 1; j >= 0; j--) {
-              if (isAnchored(ns[j])) break
-              shiftCardAndLines(ns[j], -overlap)
-            }
-            anyShift = true
-          }
-          // 兩邊都是 spine（罕見）→ 接受重疊
-        }
-        if (!anyShift) break
-      }
-    }
-  }
-
   // ── Canvas bounds ──────────────────────────────────────────────────
   const visNodes = nodes.filter(n => !n.hidden)
   const allX = visNodes.flatMap(n => [n.x, n.x + n.w])
