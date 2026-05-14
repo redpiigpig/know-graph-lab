@@ -158,10 +158,29 @@ A future silent failure now leaves a fingerprint instead of an empty log.
 
 **Default: Gemini** (`ocr_with_gemini.py`) — uses 4 rotating Google API keys; 503 = transient server overload (does NOT overwrite `parse_error`; next run retries); 429 = daily quota exhausted (script exits code 2).
 
-**Claude Haiku Vision**: ONLY when user explicitly orders it. **Always one book at a time** — launching multiple parallel Haiku agents simultaneously exhausted the entire Max subscription token quota with zero books completed (2026-05-07). When Haiku is ordered:
-- Use `Agent(..., model="haiku", ...)` for exactly one book
-- Pass PDF path via `@file` syntax to avoid Windows shell Chinese encoding issues
-- Wait for completion before starting next book
+**Claude Haiku Vision**: ONLY when user explicitly orders it. **Always one book at a time** — launching multiple parallel Haiku agents simultaneously exhausted the entire Max subscription token quota with zero books completed (2026-05-07). Two integration paths exist:
+
+1. **Built-in `--engine haiku`** (2026-05-14, recommended). `ocr_with_gemini.py` now supports `--engine {gemini,haiku}` plus `--book <id>` / `--exclude <id>` (both repeatable). Haiku mode skips Gemini entirely and uses `process_one_haiku()` sequentially over the filtered queue. Authentication via `ANTHROPIC_API_KEY` or, if absent, the Claude Code OAuth token in `~/.claude/.credentials.json`.
+
+2. **Manual Agent** for ad-hoc single-book OCR — `Agent(..., model="haiku", ...)`, pass PDF path via `@file` to avoid Windows shell Chinese encoding issues, wait for completion before starting next.
+
+Quota-exhaustion fallback (Gemini → Haiku) is still wired separately — when all Gemini keys hit 429 mid-run, the script auto-switches to Haiku for the current book and all remaining books in the same run.
+
+**Split-queue pattern (2026-05-14):** when specific books are known-Gemini-only (e.g. Haiku content-filter rejects 哥白尼革命 / 規訓與懲罰), run them in parallel with the rest:
+```bash
+# Gemini for the 2 known-Gemini-only books
+python scripts/ocr_with_gemini.py run --engine gemini \
+  --book acf454b2-b7e4-4dac-8110-17f311ede2ed \
+  --book a54fb48e-0255-4f64-983f-dd5a89b31995
+
+# Haiku for everything else
+python scripts/ocr_with_gemini.py run --engine haiku \
+  --exclude acf454b2-b7e4-4dac-8110-17f311ede2ed \
+  --exclude a54fb48e-0255-4f64-983f-dd5a89b31995
+```
+These two share the OCR queue at the DB layer, but with `--book` / `--exclude` set to disjoint sets they never race on the same book.
+
+**First split-queue run (2026-05-14 ~12:00).** Gemini side finished in 13 minutes (`哥白尼革命` 15 pages / 98K chars; `規訓與懲罰` 55 pages / 66K chars — both books Haiku had refused via content-filter). Haiku side started simultaneously on the remaining 284-book queue; one book at a time means total wall-clock is expected in days, not hours.
 
 ```powershell
 # Inspect / control
