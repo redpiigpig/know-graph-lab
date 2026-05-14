@@ -63,6 +63,20 @@ SET_TITLE_RX = re.compile(
 
 SPLIT_MARKER = "split from set; do not re-standardize"
 
+_HEADING_FIRST_RX = re.compile(r"^(#{1,4})\s+(.+?)(\r?\n|$)", re.M)
+
+
+def flatten_heading_to_h2(content: str) -> str:
+    """After splitting a 套書 into single-volume children, the publisher's
+    `###` / `####` levels that used to mean 「組-內小篇」 become noise — there's
+    no parent volume anymore for them to nest under. Rewrite ONLY the first
+    heading in each chunk so all sidebar entries render at level 2 (siblings).
+    Subsequent in-body headings stay untouched."""
+    m = _HEADING_FIRST_RX.search(content or "")
+    if not m or m.group(1) == "##":
+        return content
+    return content[:m.start(1)] + "##" + content[m.end(1):]
+
 
 def fetch_set_candidates() -> list[dict]:
     """All ebooks whose title matches the 套書 pattern AND have JSONL on disk."""
@@ -279,11 +293,15 @@ def split_one(book: dict, dry_run: bool = False) -> tuple[int, str | None]:
     # Real run — create new rows first, only delete parent at the end
     new_ids: list[str] = []
     for vname, group in groups:
-        # Renumber chunk_index 0..N-1 in the new JSONL
+        # Renumber chunk_index 0..N-1 + flatten heading depth to ## so the
+        # reader sidebar shows all entries as siblings (publisher's `###/####`
+        # nesting inside the original 套書 doesn't carry meaning once the
+        # volume stands alone).
         renum = []
         for new_idx, c in enumerate(group):
             nc = dict(c)
             nc["chunk_index"] = new_idx
+            nc["content"] = flatten_heading_to_h2(nc.get("content") or "")
             renum.append(nc)
         total_chars = sum(len(c.get("content") or "") for c in renum)
 
