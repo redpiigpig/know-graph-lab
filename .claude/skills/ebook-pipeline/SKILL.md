@@ -182,6 +182,26 @@ These two share the OCR queue at the DB layer, but with `--book` / `--exclude` s
 
 **First split-queue run (2026-05-14 ~12:00).** Gemini side finished in 13 minutes (`哥白尼革命` 15 pages / 98K chars; `規訓與懲罰` 55 pages / 66K chars — both books Haiku had refused via content-filter). Haiku side started simultaneously on the remaining 284-book queue; one book at a time means total wall-clock is expected in days, not hours.
 
+**Haiku bulk-mode lesson (2026-05-14 afternoon — DON'T do this).** Right after the split-queue launch, the Haiku side processed book 1 successfully (人的發現, 176 pages, 20 min) and then **the next 283 books all failed within ~25 minutes** — most with `Connection error` from the Anthropic SDK, the rest with PyMuPDF `Failed to open file` after Drive sync hiccuped. None of the failures were recorded in DB because Supabase REST was also unreachable in that same window (`HTTPSConnectionPool ... Max retries exceeded`). Net result: 1 success, 283 untouched-in-DB books still in the queue. The 5/7 Max-subscription-exhaustion incident repeated in a different shape — bulk Haiku just doesn't work.
+
+**Haiku one-at-a-time pattern (the only viable Haiku usage at scale).** Per-book invocation with `--engine haiku --book <id>` succeeds reliably for a small batch:
+
+| Book | Pages | Chars | Time | Quality |
+|---|---|---|---|---|
+| 人的發現 | 176 | 78K | 20 min | ✓ clean |
+| 現代物理學和東方神秘主義 | 221 | 95K | 24 min | ✓ clean |
+| 我們必須給歷史分期嗎？ | 151 | 78K | 17 min | ✓ clean |
+| 生命言說與社群認同 | 156 | 117K | 30 min | ✓ clean |
+| 民族主義的不正當性 | 147–168 | 62–75K | 14 min | ⚠ repetition + scrambled columns (vertical-typography book) |
+
+After ~6 consecutive single-book invocations Anthropic's rolling rate limit kicks in and the next call returns `Connection error`. Cooldown ~30+ minutes. **Effective throughput ~6 books/hour with cooldown, ~50 books/day max** — still worse than Gemini's 250/day. For the foreseeable future:
+
+- **Default for bulk OCR: Gemini** (via the daily 16:00 bat). Sustains 200-250 books/day on free tier.
+- **Haiku via `--engine haiku --book <id>`**: ad-hoc for one book at a time, used when (a) a specific book is known to break Gemini (e.g. 413 / response truncation on large PDFs) or (b) user explicitly orders it.
+- **Vertical-typography Chinese books** (e.g. 民族主義的不正當性, Tagore translation): both Haiku and Gemini struggle — Haiku scrambles column order, Gemini truncates JSON on output. No good fix shipped yet; books standardize-as-best-we-can and may need manual repair in the reader.
+
+Book 5 specifically — we tried Haiku (repetition + scrambled), then Gemini (clean but only 31/187 pages because Gemini's JSON output got truncated), then Haiku again (147 pages, similar repetition). Settled on Haiku 147-page version per user's "rather have 90% coverage with quality issues than 17% clean".
+
 ```powershell
 # Inspect / control
 schtasks /query /tn "KGLab-OCR-Daily" /v /fo list
