@@ -1218,9 +1218,10 @@ const cv = computed(() => {
       }
       const subtree = subtreeCapped(kid).filter(id => id !== kid)
       const hasSub  = subtree.length > 0 && !hasSpineSpouse && !isFemale
-      // 小 clan (≤5 人) 預設展開 — 例如 斯多蘭→{亞拿,蘇比,以利沙白,施洗約翰} 不應藏在 ▼4 底下
-      // 大 clan (如 拿鶴 ~300 人) 仍需手動點 ▼ 展開
-      const expanded = expandedClans.value.has(kid) || (hasSub && subtree.length <= 5)
+      // 中小 clan (≤20 人) 預設展開 — 例如 斯多蘭→{亞拿,蘇比,以利沙白,施洗約翰}
+      // 與 拿鶴→{彼土利,...,拉結,利亞} 都該預設可見
+      // 巨型 clan (亞伯拉罕全族 ~300 人) 仍需手動點 ▼ 展開
+      const expanded = expandedClans.value.has(kid) || (hasSub && subtree.length <= 20)
 
       nodes.push({
         id: kid,
