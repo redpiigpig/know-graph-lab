@@ -1350,9 +1350,15 @@ const cv = computed(() => {
     // ── Stronger pass: hide ANY card/line inside an expansion bbox that isn't
     // part of that expansion's own subtree. User spec: 展開 ▼ 時，bbox 範圍裡的
     // 其他主幹和非主幹卡（如雅各的非主幹兒子 利未/西緬/呂便 夾在以掃 expansion 中）
-    // 都要隱形，否則視覺上很亂。
+    // 都要隱形，否則視覺上很亂。同步遮蔽 drops/hbars/trunkGuides，否則卡片消失
+    // 但連線殘留會留下「幽靈線條」。
     // Spared: isExpansionNode (this expansion's own subtree) + isExpansionRoot
-    // (the card whose ▼ was clicked).
+    // (the card whose ▼ was clicked) + lines flagged isExpansionLine.
+    const lineInAnyBbox = (x1: number, y1: number, x2: number, y2: number): boolean => {
+      const minX = Math.min(x1, x2), maxX = Math.max(x1, x2)
+      const minY = Math.min(y1, y2), maxY = Math.max(y1, y2)
+      return expansionBoxes.some(b => !(maxX < b.x1 || minX > b.x2 || maxY < b.y1 || minY > b.y2))
+    }
     for (const n of nodes) {
       if (n.hidden) continue
       if (n.isExpansionNode || n.isExpansionRoot) continue
@@ -1361,12 +1367,21 @@ const cv = computed(() => {
         n.hidden = true
       }
     }
-    // Trunk guides (the long colored spine bars) — hide segments inside any bbox.
+    for (const d of drops) {
+      if (d.hidden || d.isExpansionLine) continue
+      if (lineInAnyBbox(d.x, d.y1, d.x, d.y2)) d.hidden = true
+    }
+    for (const b of hbars) {
+      if (b.hidden || b.isExpansionLine) continue
+      if (lineInAnyBbox(b.x1, b.y, b.x2, b.y)) b.hidden = true
+    }
+    for (const m of marriages) {
+      if (m.hidden) continue
+      if (lineInAnyBbox(m.x1, m.y, m.x2, m.y)) m.hidden = true
+    }
     for (const g of trunkGuides) {
       if (g.hidden) continue
-      if (expansionBoxes.some(b => g.x >= b.x1 && g.x <= b.x2 && !(g.y2 < b.y1 || g.y1 > b.y2))) {
-        g.hidden = true
-      }
+      if (lineInAnyBbox(g.x, g.y1, g.x, g.y2)) g.hidden = true
     }
   }
 
