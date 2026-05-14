@@ -292,6 +292,20 @@ function buildChurchYear(y) {
     }
   }
 
+  if (y === 2021) {
+    const anniv60 = new Date(2021, 10, 20)
+    if (anniv60 <= end) {
+      specials.push({
+        date:        anniv60,
+        dateStr:     fmtDate(anniv60) + DOW_ZH[anniv60.getDay()],
+        isSpecial:   true,
+        seasonKey:   'pentecost',
+        specialName: '城中教會六十週年感恩禮拜',
+        specialColor:'#B22020',
+      })
+    }
+  }
+
   if (y === 2025) {
     const funeral = new Date(2026, 0, 31)
     specials.push({
