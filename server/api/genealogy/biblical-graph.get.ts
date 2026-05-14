@@ -188,7 +188,15 @@ export default defineEventHandler(async (event) => {
   const maryMotherId    = exactMap.get('馬利亞（耶穌之母）')
   const jesusId         = exactMap.get('耶穌（拿撒勒人）')
 
-  function relationKind(parentId: string, childId: string): 'legal' | 'biological' {
+  // 拉比傳統 parent-child（聖經本文無此 link，只見於 rabbinic sources）：
+  // 以利米勒 = 撒門之弟 = 拿順之子（Bava Batra 91a）— 渲染為藍色連線。
+  const nahshonId    = exactMap.get('拿順（亞米拿達之子）')
+  const elimelechId  = exactMap.get('以利米勒')
+  const rabbinicPC = new Set<string>()
+  if (nahshonId && elimelechId) rabbinicPC.add(`${nahshonId}|${elimelechId}`)
+
+  function relationKind(parentId: string, childId: string): 'legal' | 'biological' | 'rabbinic' {
+    if (rabbinicPC.has(`${parentId}|${childId}`)) return 'rabbinic'
     if (childId === jesusId && parentId === josephHusbandId) return 'legal'
     return 'biological'
   }

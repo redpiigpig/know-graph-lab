@@ -160,6 +160,7 @@
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-purple-300 bg-purple-50 rounded" />天主教傳統</div>
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-emerald-300 bg-emerald-50 rounded" />東方教會傳統</div>
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-blue-300 bg-blue-50 rounded" />拉比傳統</div>
+        <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-blue-500 rounded-full" />拉比傳統親子線（聖經無明文，如 拿順→以利米勒）</div>
         <div class="text-gray-400 mt-1 pt-1 border-t border-gray-100">滾輪：上下/左右移動　·　Ctrl+滾輪：縮放　·　拖曳：平移　·　♻ 點擊跳同人</div>
       </div>
     </template>
@@ -552,6 +553,90 @@ const cv = computed(() => {
     const SLOT_K = NW + WIFE_HG
     const wivesReach = wiveIds.length * SLOT_K
 
+    // 亂倫案例：kid 同時是 wife（羅得長女 = 羅得之女 + 羅得之妻）。
+    // 規則：把 incestKid 從 kids list 拿掉（不畫 daughter 位置卡），
+    // 改為把她的 DB children（摩押 / 便亞米）放到 「她的 wife-marriage 中點」下方。
+    // 視覺上 摩押/便亞米 直接從父+女兒妻子 的婚姻紅線下來，差一列就行。
+    const wiveSet = new Set(wiveIds)
+    const incestKids = kids.filter(k => wiveSet.has(k))
+    const effectiveKids = incestKids.length > 0 ? kids.filter(k => !wiveSet.has(k)) : kids
+
+    // Pre-layout each incest kid's grandchildren at temp positions (leftX=0 throughout).
+    // 之後再依 wife-marriage segment 中點 shift 過去。
+    type IncestGroup = {
+      ik: string
+      wi: number
+      kidResults: { nodes: LNode[]; drops: VDrop[]; hbars: HBar[]; marriages: MLine[]; rootCX: number; maxX: number; maxY: number }[]
+    }
+    const incestGroups: IncestGroup[] = []
+    for (const ik of incestKids) {
+      const wi = wiveIds.indexOf(ik)
+      const wifeKids = (childrenOf.value.get(ik) ?? []).filter(c =>
+        !vis.has(c) && pMap.has(c) && !rowOf.has(c)
+      )
+      if (wifeKids.length === 0) continue
+      let tempCursor = 0
+      const results: IncestGroup['kidResults'] = []
+      for (const wk of wifeKids) {
+        const r = layoutSubtree(wk, tempCursor, vis, gen + 1)
+        results.push(r)
+        tempCursor = r.maxX + HG
+      }
+      incestGroups.push({ ik, wi, kidResults: results })
+    }
+
+    // Helper: turn incestGroups into nodes/drops/hbars/marriages after rootCX is known.
+    function applyIncestGroups(rootCX: number) {
+      const iNodes: LNode[] = []
+      const iDrops: VDrop[] = []
+      const iHbars: HBar[]  = []
+      const iMarriages: MLine[] = []
+      let iMaxY = 0
+      for (const grp of incestGroups) {
+        if (grp.kidResults.length === 0) continue
+        const wcx    = rootCX - (grp.wi + 1) * SLOT_K
+        const prevCx = grp.wi === 0 ? rootCX : rootCX - grp.wi * SLOT_K
+        const segMidX = (wcx + prevCx) / 2
+        const kidCXs = grp.kidResults.map(r => r.rootCX)
+        const kidCMin = Math.min(...kidCXs)
+        const kidCMax = Math.max(...kidCXs)
+        const shift = segMidX - (kidCMin + kidCMax) / 2
+        for (const r of grp.kidResults) {
+          for (const n of r.nodes)     n.x += shift
+          for (const d of r.drops)     d.x += shift
+          for (const b of r.hbars)   { b.x1 += shift; b.x2 += shift }
+          for (const m of r.marriages){ m.x1 += shift; m.x2 += shift }
+          iNodes.push(...r.nodes)
+          iDrops.push(...r.drops)
+          iHbars.push(...r.hbars)
+          iMarriages.push(...r.marriages)
+          iMaxY = Math.max(iMaxY, r.maxY)
+        }
+        const shiftedCXs = kidCXs.map(c => c + shift)
+        const firstChildY = grp.kidResults[0].nodes[0]?.y ?? myY + RH
+        const marYLocal   = myY + NH / 2
+        const barYLocal   = marYLocal + Math.round((firstChildY - marYLocal) * 0.5)
+        iDrops.push({ x: segMidX, y1: marYLocal, y2: barYLocal, isExpansionLine: true })
+        if (shiftedCXs.length === 1) {
+          const cc = shiftedCXs[0]
+          if (Math.abs(segMidX - cc) < 1) {
+            iDrops.push({ x: cc, y1: barYLocal, y2: firstChildY, isExpansionLine: true })
+          } else {
+            iHbars.push({ x1: Math.min(segMidX, cc), x2: Math.max(segMidX, cc), y: barYLocal, isExpansionLine: true })
+            iDrops.push({ x: cc, y1: barYLocal, y2: firstChildY, isExpansionLine: true })
+          }
+        } else {
+          const bMin = Math.min(segMidX, ...shiftedCXs)
+          const bMax = Math.max(segMidX, ...shiftedCXs)
+          iHbars.push({ x1: bMin, x2: bMax, y: barYLocal, isExpansionLine: true })
+          for (const cc of shiftedCXs) {
+            iDrops.push({ x: cc, y1: barYLocal, y2: firstChildY, isExpansionLine: true })
+          }
+        }
+      }
+      return { nodes: iNodes, drops: iDrops, hbars: iHbars, marriages: iMarriages, maxY: iMaxY }
+    }
+
     // Helper: place wives to the LEFT of root center, return their nodes + marriage lines
     function placeWives(rootCX: number): { nodes: LNode[]; marriages: MLine[] } {
       const ns: LNode[] = []
@@ -581,7 +666,7 @@ const cv = computed(() => {
       return { nodes: ns, marriages: ms }
     }
 
-    if (kids.length === 0) {
+    if (effectiveKids.length === 0) {
       // Leaf: root at leftX + wivesReach, wives to its left
       const rootX = leftX + wivesReach
       const rootCX = rootX + NW / 2
@@ -600,10 +685,17 @@ const cv = computed(() => {
         isExpansionNode: true,
       }
       const w = placeWives(rootCX)
+      const ig = applyIncestGroups(rootCX)
+      const incestMaxX = ig.nodes.length > 0
+        ? Math.max(...ig.nodes.map(n => n.x + n.w))
+        : rootX + NW
       return {
-        nodes: [myNode, ...w.nodes],
-        drops: [], hbars: [], marriages: w.marriages,
-        rootCX, maxX: rootX + NW, maxY: myY + NH,
+        nodes: [myNode, ...w.nodes, ...ig.nodes],
+        drops: ig.drops, hbars: ig.hbars,
+        marriages: [...w.marriages, ...ig.marriages],
+        rootCX,
+        maxX: Math.max(rootX + NW, incestMaxX),
+        maxY: Math.max(myY + NH, ig.maxY),
       }
     }
 
@@ -613,7 +705,7 @@ const cv = computed(() => {
     let cursorX = leftX + wivesReach
     const childResults: ReturnType<typeof layoutSubtree>[] = []
     let maxY = myY + NH
-    for (const k of kids) {
+    for (const k of effectiveKids) {
       const r = layoutSubtree(k, cursorX, vis, gen + 1)
       childResults.push(r)
       cursorX = r.maxX + HG
@@ -672,14 +764,18 @@ const cv = computed(() => {
     }
 
     const w = placeWives(rootCX)
+    const ig = applyIncestGroups(rootCX)
+    const incestMaxX = ig.nodes.length > 0
+      ? Math.max(...ig.nodes.map(n => n.x + n.w))
+      : rightEdge
     return {
-      nodes: [myNode, ...w.nodes, ...childResults.flatMap(r => r.nodes)],
-      drops: [...myDrops, ...childResults.flatMap(r => r.drops)],
-      hbars: [...myHbars, ...childResults.flatMap(r => r.hbars)],
-      marriages: [...w.marriages, ...childResults.flatMap(r => r.marriages)],
+      nodes: [myNode, ...w.nodes, ...childResults.flatMap(r => r.nodes), ...ig.nodes],
+      drops: [...myDrops, ...childResults.flatMap(r => r.drops), ...ig.drops],
+      hbars: [...myHbars, ...childResults.flatMap(r => r.hbars), ...ig.hbars],
+      marriages: [...w.marriages, ...childResults.flatMap(r => r.marriages), ...ig.marriages],
       rootCX,
-      maxX: rightEdge,
-      maxY,
+      maxX: Math.max(rightEdge, incestMaxX),
+      maxY: Math.max(maxY, ig.maxY),
     }
   }
 
@@ -968,6 +1064,23 @@ const cv = computed(() => {
       }
     }
     let wifeIds = [...wifeIdsBase, ...extraSpouses]
+    // 多夫 reorder：女性 spine 妻有「前夫」（在 sid 之前的其他丈夫）時，前夫放
+    // 在 sid 與她之間，她自己擠到外側。Mirror of「大老婆右 小老婆左 — primary
+    // wife closest to husband」：對多夫的女人，最近的 1st husband (前夫) 靠她。
+    //   路得：spouseList = [瑪倫, 波阿斯]，sid=波阿斯。前夫=[瑪倫]。
+    //   → wifeIds = [瑪倫(wi=0), 路得(wi=1)] → 視覺 L→R: 路得 — 瑪倫 — 波阿斯
+    //   亞拿：spouseList = [約亞敬, 革羅罷, 撒羅馬]，sid=約亞敬。前夫=[]。不重排。
+    if (wifeIdsBase.length === 1 && extraSpouses.length > 0) {
+      const baseWifeId = wifeIdsBase[0]
+      const wifeSpouseList = sp.get(baseWifeId) ?? []
+      const sidIdx = wifeSpouseList.indexOf(sid)
+      if (sidIdx > 0) {
+        const formerHusbands = wifeSpouseList.slice(0, sidIdx).filter(h => extraSpouses.includes(h))
+        const laterHusbands  = wifeSpouseList.slice(sidIdx + 1).filter(h => extraSpouses.includes(h))
+        // wi=0 closest to sid; reverse formerHusbands so the most-recent 前夫 sits closest to sid.
+        wifeIds = [...formerHusbands.reverse(), baseWifeId, ...laterHusbands]
+      }
+    }
     // Dual-spine 中段：很多妻時只保留「生 spine 子嗣的妻」（per user spec：
     // 所羅門很多妻 → 只留拿瑪（羅波安之母），其他妻收起，要看可手動 expand）。
     // spine mom：對每個 spine kid sk，掃 wifeIds 內的妻，找 children 含 sk 的那一位。
@@ -1508,8 +1621,10 @@ const cv = computed(() => {
           const isSpKid   = rowOf.has(kid)
           const childKind = membership.get(kid)
           const continuingKind = parentKind === 'S' ? (childKind ?? 'S') : parentKind
+          const isRabbinic = rk.get(`${sid}|${kid}`) === 'rabbinic'
           const lineStroke =
-              !isSpKid                          ? '#9ca3af'  // 非主幹子女：一律灰色
+              isRabbinic                        ? '#3b82f6'  // 拉比傳統 parent-child：藍色
+            : !isSpKid                          ? '#9ca3af'  // 非主幹子女：一律灰色
             : continuingKind === 'B'            ? '#f43f5e'
             : continuingKind === 'A'            ? '#f59e0b'
             : continuingKind === 'S'            ? '#f59e0b'
