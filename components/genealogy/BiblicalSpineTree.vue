@@ -1394,6 +1394,12 @@ const cv = computed(() => {
         const sharedBarY = marLineY + Math.round(verticalRange * 0.5)
         for (const m of motherOrder) motherBarY.set(m, sharedBarY)
       }
+      // 沒記載母親的兒子們（mom = null）— bar 直接坐落在 marLineY 上，
+      // 視為婚姻線延伸（從最末妻外側延伸出去）；drop 從 barY 直接到 kid，
+      // 不再有 marLineY→barY 的中間段。
+      // 例：大衛在耶路撒冷生的 11 個沒記載母親的兒子，T-bar 跟 大衛↔妻 婚姻
+      // 紅線同 Y，從 哈及 外側延伸出去，灰色 T-bar + 灰色 drop 往下到每個兒子。
+      if (motherBarY.has(null)) motherBarY.set(null, marLineY)
 
       for (const mom of motherOrder) {
         const groupKids  = groupedByMom.get(mom)!
@@ -1405,7 +1411,9 @@ const cv = computed(() => {
         const maxBarX = Math.max(groupMidX, ...groupKidXs)
         // 婚姻線顏色：只有橫向婚姻線（夫妻之間）是紅色，其他全灰。
         // 例：亞當-夏娃 紅色婚姻線；marLineY→barY drop = 灰、T-bar = 灰、kid drop = 灰。
-        drops.push({ x: groupMidX, y1: marLineY, y2: barY })
+        if (barY !== marLineY) {
+          drops.push({ x: groupMidX, y1: marLineY, y2: barY })
+        }
         hbars.push({ x1: minBarX, x2: maxBarX, y: barY })
         for (const kid of groupKids) {
           const kxVal     = kidX.get(kid)!
