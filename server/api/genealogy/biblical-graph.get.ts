@@ -42,13 +42,20 @@ export default defineEventHandler(async (event) => {
 
   const people = allPeople.filter(p => allowedTraditions.has(p.tradition ?? 'biblical'))
 
-  // Apply per-tradition JSONB merges based on selected view
+  // Apply per-tradition JSONB merges based on selected view.
+  // Track which children were ADDED via tradition_children → so we can tag those
+  // parent-child edges with the matching tradition (for tradition-colored line rendering).
+  const traditionAddedChildName = new Map<string, Map<string, string>>()  // parentId → childName → tradition
   for (const p of people) {
     if (!mergeKey) continue
     const addChildren = (p.tradition_children as Record<string, string> | null)?.[mergeKey]
     const addSpouse   = (p.tradition_spouse   as Record<string, string> | null)?.[mergeKey]
     const hideChildrenRaw = (p.tradition_hide_children as Record<string, string> | null)?.[mergeKey]
     if (addChildren) {
+      const childNames = addChildren.split(/[,，、]/).map(s => s.trim()).filter(Boolean)
+      let tmap = traditionAddedChildName.get(p.id)
+      if (!tmap) { tmap = new Map(); traditionAddedChildName.set(p.id, tmap) }
+      for (const cn of childNames) tmap.set(cn, mergeKey)
       p.children = p.children ? `${p.children}、${addChildren}` : addChildren
     }
     if (addSpouse) {
@@ -195,8 +202,24 @@ export default defineEventHandler(async (event) => {
   const rabbinicPC = new Set<string>()
   if (nahshonId && elimelechId) rabbinicPC.add(`${nahshonId}|${elimelechId}`)
 
-  function relationKind(parentId: string, childId: string): 'legal' | 'biological' | 'rabbinic' {
+  type Kind = 'legal' | 'biological' | 'rabbinic' | 'catholic' | 'orthodox' | 'early_consensus'
+  function relationKind(parentId: string, childId: string, childName: string): Kind {
     if (rabbinicPC.has(`${parentId}|${childId}`)) return 'rabbinic'
+    // Case B: child name added via tradition_children JSONB (catholic / orthodox)
+    const tradMap = traditionAddedChildName.get(parentId)
+    if (tradMap) {
+      const trad = tradMap.get(childName)
+      if (trad === 'catholic' || trad === 'orthodox') return trad
+    }
+    // Case A: parent OR child tagged with a non-biblical tradition.
+    // The link is "this tradition" (Bible doesn't assert this parent-child relationship).
+    // Example: 瑪塔 (biblical) → 約亞敬 (early_consensus) — 早期教會 tradition asserts this link.
+    const parent = idMap.get(parentId)
+    const child  = idMap.get(childId)
+    const tradList = [parent?.tradition, child?.tradition].filter(t =>
+      t === 'early_consensus' || t === 'catholic' || t === 'orthodox' || t === 'rabbinic'
+    )
+    if (tradList.length > 0) return tradList[0] as Kind
     if (childId === jesusId && parentId === josephHusbandId) return 'legal'
     return 'biological'
   }
@@ -207,12 +230,13 @@ export default defineEventHandler(async (event) => {
   for (const p of people) {
     if (p.children) {
       for (const raw of p.children.split(/[,，、]/)) {
-        const childId = resolveId(raw, p.name_zh)
+        const childName = raw.trim()
+        const childId = resolveId(childName, p.name_zh)
         if (!childId || childId === p.id) continue
         const eid = `pc:${p.id}:${childId}`
         if (seen.has(eid)) continue
         seen.add(eid)
-        const kind = relationKind(p.id, childId)
+        const kind = relationKind(p.id, childId, childName)
         const isLegal = kind === 'legal'
         edges.push({
           id: eid,

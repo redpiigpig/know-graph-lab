@@ -160,7 +160,11 @@
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-purple-300 bg-purple-50 rounded" />天主教傳統</div>
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-emerald-300 bg-emerald-50 rounded" />東方教會傳統</div>
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-blue-300 bg-blue-50 rounded" />拉比傳統</div>
-        <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-blue-500 rounded-full" />拉比傳統親子線（聖經無明文，如 拿順→以利米勒）</div>
+        <div class="pt-1 mt-1 border-t border-gray-100 text-gray-500">傳統親子線（非聖經明文）：</div>
+        <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-orange-500 rounded-full" />早期教會（如 約亞敬→馬利亞）</div>
+        <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-purple-500 rounded-full" />天主教（如 馬利亞-革羅罷→雅各）</div>
+        <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-emerald-500 rounded-full" />東正教（如 撒羅米→雅各）</div>
+        <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-blue-500 rounded-full" />拉比傳統（如 拿順→以利米勒）</div>
         <div class="text-gray-400 mt-1 pt-1 border-t border-gray-100">滾輪：上下/左右移動　·　Ctrl+滾輪：縮放　·　拖曳：平移　·　♻ 點擊跳同人</div>
       </div>
     </template>
@@ -746,20 +750,31 @@ const cv = computed(() => {
     const dropStartY = hasWives ? marY : myY + NH
     const barY = dropStartY + Math.round((firstChildY - dropStartY) * 0.5)
     myDrops.push({ x: dropStartX, y1: dropStartY, y2: barY, isExpansionLine: true })
+    // Per-kid drop stroke based on edge relationKind — for tradition-tagged links
+    // (rabbinic/early_consensus/catholic/orthodox) drop is colored; default expansion is gray.
+    function tradStroke(kidId: string): string | undefined {
+      const kind = rk.get(`${rootId}|${kidId}`)
+      if (kind === 'rabbinic')        return '#3b82f6'
+      if (kind === 'catholic')        return '#a855f7'
+      if (kind === 'orthodox')        return '#10b981'
+      if (kind === 'early_consensus') return '#f97316'
+      return undefined
+    }
     if (childCXs.length === 1) {
       const cc = childCXs[0]
+      const ks = tradStroke(effectiveKids[0])
       if (Math.abs(dropStartX - cc) < 1) {
-        myDrops.push({ x: cc, y1: barY, y2: firstChildY, isExpansionLine: true })
+        myDrops.push({ x: cc, y1: barY, y2: firstChildY, isExpansionLine: true, stroke: ks })
       } else {
-        myHbars.push({ x1: Math.min(dropStartX, cc), x2: Math.max(dropStartX, cc), y: barY, isExpansionLine: true })
-        myDrops.push({ x: cc, y1: barY, y2: firstChildY, isExpansionLine: true })
+        myHbars.push({ x1: Math.min(dropStartX, cc), x2: Math.max(dropStartX, cc), y: barY, isExpansionLine: true, stroke: ks })
+        myDrops.push({ x: cc, y1: barY, y2: firstChildY, isExpansionLine: true, stroke: ks })
       }
     } else {
       const barMinX = Math.min(dropStartX, cmin)
       const barMaxX = Math.max(dropStartX, cmax)
       myHbars.push({ x1: barMinX, x2: barMaxX, y: barY, isExpansionLine: true })
-      for (const cc of childCXs) {
-        myDrops.push({ x: cc, y1: barY, y2: firstChildY, isExpansionLine: true })
+      for (let i = 0; i < childCXs.length; i++) {
+        myDrops.push({ x: childCXs[i], y1: barY, y2: firstChildY, isExpansionLine: true, stroke: tradStroke(effectiveKids[i]) })
       }
     }
 
@@ -1621,15 +1636,18 @@ const cv = computed(() => {
           const isSpKid   = rowOf.has(kid)
           const childKind = membership.get(kid)
           const continuingKind = parentKind === 'S' ? (childKind ?? 'S') : parentKind
-          const isRabbinic = rk.get(`${sid}|${kid}`) === 'rabbinic'
+          const tradKind = rk.get(`${sid}|${kid}`)
           const lineStroke =
-              isRabbinic                        ? '#3b82f6'  // 拉比傳統 parent-child：藍色
-            : !isSpKid                          ? '#9ca3af'  // 非主幹子女：一律灰色
-            : continuingKind === 'B'            ? '#f43f5e'
-            : continuingKind === 'A'            ? '#f59e0b'
-            : continuingKind === 'S'            ? '#f59e0b'
-            : continuingKind === 'single'       ? '#f59e0b'
-            :                                     '#6b7280'
+              tradKind === 'rabbinic'         ? '#3b82f6'  // 拉比傳統：藍
+            : tradKind === 'catholic'         ? '#a855f7'  // 天主教：紫
+            : tradKind === 'orthodox'         ? '#10b981'  // 東正教：綠
+            : tradKind === 'early_consensus'  ? '#f97316'  // 早期教會：橘
+            : !isSpKid                        ? '#9ca3af'  // 非主幹子女：灰
+            : continuingKind === 'B'          ? '#f43f5e'
+            : continuingKind === 'A'          ? '#f59e0b'
+            : continuingKind === 'S'          ? '#f59e0b'
+            : continuingKind === 'single'     ? '#f59e0b'
+            :                                   '#6b7280'
           const kidActualY = isSpKid ? rowY(rowOf.get(kid)!) : childY
           drops.push({ x: kxVal, y1: barY, y2: kidActualY, stroke: lineStroke })
         }
