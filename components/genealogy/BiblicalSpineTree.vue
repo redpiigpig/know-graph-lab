@@ -160,11 +160,13 @@
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-purple-300 bg-purple-50 rounded" />天主教傳統</div>
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-emerald-300 bg-emerald-50 rounded" />東方教會傳統</div>
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-blue-300 bg-blue-50 rounded" />拉比傳統</div>
+        <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-teal-300 bg-teal-50 rounded" />次經／第二聖殿時期</div>
         <div class="pt-1 mt-1 border-t border-gray-100 text-gray-500">傳統親子線（非聖經明文）：</div>
         <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-orange-500 rounded-full" />早期教會（如 約亞敬→馬利亞）</div>
         <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-purple-500 rounded-full" />天主教（如 馬利亞-革羅罷→雅各）</div>
         <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-emerald-500 rounded-full" />東正教（如 撒羅米→雅各）</div>
         <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-blue-500 rounded-full" />拉比傳統（如 拿順→以利米勒）</div>
+        <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-teal-500 rounded-full" />次經（如 拿弗他利→阿息耳）</div>
         <div class="text-gray-400 mt-1 pt-1 border-t border-gray-100">滾輪：上下/左右移動　·　Ctrl+滾輪：縮放　·　拖曳：平移　·　♻ 點擊跳同人</div>
       </div>
     </template>
@@ -451,7 +453,7 @@ interface LNode {
   gender: string
   x: number; y: number; w: number; h: number
   spineKind: 'A' | 'B' | 'S' | 'single' | null
-  tradition?: 'biblical' | 'early_consensus' | 'catholic' | 'orthodox' | 'rabbinic'
+  tradition?: 'biblical' | 'early_consensus' | 'catholic' | 'orthodox' | 'rabbinic' | 'apocrypha'
   isClan: boolean             // legacy, retained for type compat; in new layout always false
   isExpansionNode?: boolean   // node belongs to an expanded subtree
   hasSubtree?: boolean        // true → render a ▼/▲ toggle on the card
@@ -758,6 +760,7 @@ const cv = computed(() => {
       if (kind === 'catholic')        return '#a855f7'
       if (kind === 'orthodox')        return '#10b981'
       if (kind === 'early_consensus') return '#f97316'
+      if (kind === 'apocrypha')       return '#14b8a6'
       return undefined
     }
     if (childCXs.length === 1) {
@@ -906,7 +909,11 @@ const cv = computed(() => {
     const g = pMap.get(sid)?.data.generationNum
     if (g == null || g < DUAL_SPINE_HIDE_GEN_START) return false
     const maxGen = k === 'A' ? spineAMaxGen : spineBMaxGen
-    return g < maxGen
+    // Exempt the spine TERMINAL and its IMMEDIATE PARENT (聖家)：
+    //   spine A 終點 = 約瑟 (gen 63)、其父 = 雅各（馬但之子）gen 62
+    //   spine B 終點 = 馬利亞 (gen 74)、其父 = 約亞敬 gen 73
+    // 這兩位 + 他們各自的非 spine 子嗣／妻子的兄弟（如 馬利亞-革羅罷、馬利亞·撒羅米）都要顯示。
+    return g < maxGen - 1
   }
 
   // ── Persons rendered as a SPOUSE on the main chart ─────────────────
@@ -1262,7 +1269,27 @@ const cv = computed(() => {
     const orderedRTL: string[] = []
     const hasLinkage = Array.from(kidMom.values()).some(v => v !== null)
     if (hasLinkage) {
+      // 順序規則：非 spine 妻先（包含 trinubium extras + 前妻 像撒羅米），然後 cross-spine
+      // 主妻，最後無母 unattributed。前妻的子嗣會排在右側（兄右弟左 — 前妻所生較年長）。
+      //   約瑟 (spine A) + 撒羅米 (前妻, orthodox extra) + 馬利亞 (current, cross-spine)
+      //   → orderedRTL = [撒羅米's kids 雅各/約西/..., 耶穌(馬利亞's)] → 撒羅米 kids 右、耶穌 左
+      const seenWid = new Set<string>()
+      for (const wid of wifeIds) {
+        if (seenWid.has(wid)) continue
+        seenWid.add(wid)
+        const group = allKidsRaw.filter(k => kidMom.get(k) === wid)
+        orderedRTL.push(...sortKidsBirthOrder(group))
+      }
+      for (const cwid of crossSpineWives) {
+        if (seenWid.has(cwid)) continue
+        seenWid.add(cwid)
+        const group = allKidsRaw.filter(k => kidMom.get(k) === cwid)
+        orderedRTL.push(...sortKidsBirthOrder(group))
+      }
+      // Fallback：allWifeIds 中還沒處理過的妻（保險）
       for (const wid of allWifeIds) {
+        if (seenWid.has(wid)) continue
+        seenWid.add(wid)
         const group = allKidsRaw.filter(k => kidMom.get(k) === wid)
         orderedRTL.push(...sortKidsBirthOrder(group))
       }
@@ -1403,7 +1430,10 @@ const cv = computed(() => {
       const hasSub  = subtree.length > 0 && !hasSpineSpouse && !isFemale
       // 旁支一律預設收起來（無 auto-expand）。user 按 ▼ 才展開，
       // 展開後跟 spine 重疊的卡片會被 occlude 隱藏（line 1316）。
-      const expanded = expandedClans.value.has(kid)
+      // 例外：耶穌聖家 anchor 鏈（斯多蘭 → 蘇比 → 以利沙白 → 施洗約翰）必須預設展開，
+      // 否則 蘇比 + 施洗約翰 整支看不到。亞拿（聖母之母）的姊妹 蘇比 是 NT key person。
+      const forceExpand = kp.data.name === '斯多蘭（亞拿之父）' || kp.data.name === '蘇比（亞拿之姊）'
+      const expanded = forceExpand || expandedClans.value.has(kid)
 
       nodes.push({
         id: kid,
@@ -1642,6 +1672,7 @@ const cv = computed(() => {
             : tradKind === 'catholic'         ? '#a855f7'  // 天主教：紫
             : tradKind === 'orthodox'         ? '#10b981'  // 東正教：綠
             : tradKind === 'early_consensus'  ? '#f97316'  // 早期教會：橘
+            : tradKind === 'apocrypha'        ? '#14b8a6'  // 次經：青
             : !isSpKid                        ? '#9ca3af'  // 非主幹子女：灰
             : continuingKind === 'B'          ? '#f43f5e'
             : continuingKind === 'A'          ? '#f59e0b'
@@ -1916,6 +1947,7 @@ function jumpToOther(current: LNode) {
 //   catholic        (紫 purple) — bishops' colour; avoids red/rose clash
 //   orthodox        (綠 emerald) — Byzantine green; avoids yellow/amber clash
 //   rabbinic        (藍 blue)   — Rabbinic post-biblical
+//   apocrypha       (青 teal)   — Second Temple / 次經（與 rabbinic 同冷色但區別）
 // Spine bar (amber/rose left edge) stays — it's rendered as a separate div.
 function cardClass(n: LNode) {
   const base = 'shadow-sm hover:shadow-md rounded-xl cursor-pointer'
@@ -1927,6 +1959,7 @@ function cardClass(n: LNode) {
   else if (n.tradition === 'catholic')   border = 'border-2 border-purple-400'
   else if (n.tradition === 'orthodox')   border = 'border-2 border-emerald-400'
   else if (n.tradition === 'rabbinic')   border = 'border-2 border-blue-400'
+  else if (n.tradition === 'apocrypha')  border = 'border-2 border-teal-400'
   else if (n.spineKind === 'B')          border = 'border border-rose-300'
   else if (n.spineKind === 'A' || n.spineKind === 'S' || n.spineKind === 'single')
                                           border = 'border border-stone-300'

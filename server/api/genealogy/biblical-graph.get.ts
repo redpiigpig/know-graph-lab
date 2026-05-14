@@ -21,7 +21,7 @@ export default defineEventHandler(async (event) => {
     viewRaw === 'early_consensus' ? 'early_consensus' :
                                     'protestant'
 
-  const allowedTraditions = new Set<string>(['biblical', 'rabbinic', 'early_consensus'])
+  const allowedTraditions = new Set<string>(['biblical', 'rabbinic', 'early_consensus', 'apocrypha'])
   if (view === 'early_consensus' || view === 'orthodox') allowedTraditions.add('orthodox')
   if (view === 'catholic') allowedTraditions.add('catholic')
 
@@ -202,7 +202,7 @@ export default defineEventHandler(async (event) => {
   const rabbinicPC = new Set<string>()
   if (nahshonId && elimelechId) rabbinicPC.add(`${nahshonId}|${elimelechId}`)
 
-  type Kind = 'legal' | 'biological' | 'rabbinic' | 'catholic' | 'orthodox' | 'early_consensus'
+  type Kind = 'legal' | 'biological' | 'rabbinic' | 'catholic' | 'orthodox' | 'early_consensus' | 'apocrypha'
   function relationKind(parentId: string, childId: string, childName: string): Kind {
     if (rabbinicPC.has(`${parentId}|${childId}`)) return 'rabbinic'
     // Case B: child name added via tradition_children JSONB (catholic / orthodox)
@@ -217,7 +217,7 @@ export default defineEventHandler(async (event) => {
     const parent = idMap.get(parentId)
     const child  = idMap.get(childId)
     const tradList = [parent?.tradition, child?.tradition].filter(t =>
-      t === 'early_consensus' || t === 'catholic' || t === 'orthodox' || t === 'rabbinic'
+      t === 'early_consensus' || t === 'catholic' || t === 'orthodox' || t === 'rabbinic' || t === 'apocrypha'
     )
     if (tradList.length > 0) return tradList[0] as Kind
     if (childId === jesusId && parentId === josephHusbandId) return 'legal'

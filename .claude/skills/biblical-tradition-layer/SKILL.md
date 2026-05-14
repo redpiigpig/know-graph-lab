@@ -172,14 +172,14 @@ per user spec：「就約瑟和馬利亞正常生耶穌就好」(commit `b6aac84
 - **視角機制**：4 個 view，全域 query param `?view=protestant|early_consensus|orthodox|catholic`，預設 protestant
   - 對應到 `/api/genealogy/biblical-graph?view=...`
   - 規則：累進納入更多傳統人物 + JSONB 套用
-    - protestant: biblical + rabbinic + **early_consensus**（後者為了 SPINE_B 必經的 約亞敬/亞拿 anchor；用橘色卡視覺區隔，無 JSONB 套用）
+    - protestant: biblical + rabbinic + **early_consensus** + **apocrypha**（後者為了 SPINE_B 必經的 約亞敬/亞拿 anchor；用橘色卡視覺區隔，無 JSONB 套用；apocrypha 為次經/Second Temple，永遠顯示，teal 色）
     - early_consensus: + orthodox JSONB（Epiphanian view，Jerome 393 前主流）
     - orthodox: + orthodox 全部人物 + orthodox JSONB
     - catholic: + catholic 全部人物 + catholic JSONB
 
 ### UI
 - **耶穌聖家詮釋 toggle**：浮動 widget anchored 到「約瑟（馬利亞之夫）」卡片右側，透過 `josephScreenPos` computed 跟 pan/zoom 同步移動（[BiblicalSpineTree.vue:1708](../../../components/genealogy/BiblicalSpineTree.vue#L1708)）
-- **Card 配色**：早期教會橘 / 天主教紫 / 東方綠 / 拉比藍（避開 spine amber/rose + 女性 rose-50 衝突）
+- **Card 配色**：早期教會橘 / 天主教紫 / 東方綠 / 拉比藍 / **次經青 teal**（2026-05-14 新增；避開 spine amber/rose + 女性 rose-50 衝突）
 - **線條顏色**（重要！）：
   - **紅色 `#dc2626`**：**只有**「夫妻間橫向婚姻線」（亞當↔夏娃式）。
   - **灰色 `#9ca3af`**：婚姻線→T-bar drop / T-bar 本身 / T-bar→子女 drop — 全部灰色。
