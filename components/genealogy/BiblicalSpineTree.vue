@@ -87,6 +87,11 @@
                  :title="n.rawName">
               {{ n.displayName }}
             </div>
+            <div v-if="n.disambig"
+                 class="text-[9px] leading-tight text-slate-400 mt-0.5 max-w-[110px] truncate"
+                 :title="n.disambig">
+              （{{ n.disambig }}）
+            </div>
           </div>
           <!-- Subtree toggle (▼/▲), only on kids that have descendants -->
           <button
@@ -455,6 +460,8 @@ interface LNode {
   samePerson?: boolean        // true → this person also appears at another card; render ♻
   isExpansionRoot?: boolean   // true → this kid card's own ▼ is expanded; immune to occlusion
   hidden?: boolean
+  disambig?: string           // disambiguator (parenthetical 內容), 顯示在名字下方 — 僅當
+                              //   同 baseName 有多個 personId 同時被渲染時 set
 }
 interface VDrop { x: number; y1: number; y2: number; stroke?: string; dashed?: boolean; hidden?: boolean; isExpansionLine?: boolean }
 interface HBar  { x1: number; x2: number; y: number; stroke?: string; dashed?: boolean; hidden?: boolean; isExpansionLine?: boolean }
@@ -1594,6 +1601,22 @@ const cv = computed(() => {
 
   // Convergence column X for fitSpine (the shared trunk in dual mode, or single column)
   const convergeCX = (isDualMode.value ? SHARED_CX : SINGLE_CX) + shift
+
+  // Disambig pass: when 同 baseName 有多個不同 personId 被渲染（例如 馬利亞-耶穌之母
+  // 與 馬利亞-革羅罷 同框），把 rawName 括號內容掛到 disambig 上，讓 card template 多
+  // 顯示一行小字標明哪位「馬利亞」。
+  const baseNamePersons = new Map<string, Set<string>>()
+  for (const n of nodes) {
+    if (n.hidden) continue
+    const bn = baseName(n.rawName)
+    if (!baseNamePersons.has(bn)) baseNamePersons.set(bn, new Set())
+    baseNamePersons.get(bn)!.add(n.personId)
+  }
+  for (const n of nodes) {
+    if ((baseNamePersons.get(baseName(n.rawName))?.size ?? 0) < 2) continue
+    const m = n.rawName.match(/（(.+?)）/)
+    if (m) n.disambig = m[1]
+  }
 
   return {
     nodes, drops, hbars, marriages, trunkGuides,

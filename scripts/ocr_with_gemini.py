@@ -19,6 +19,12 @@ Idempotent: skips books with parsed_at NOT NULL.
 Usage:
   python scripts/ocr_with_gemini.py status
   python scripts/ocr_with_gemini.py run [--limit N] [--model gemini-2.5-flash] [--rpm 4]
+    [--book <ebook_id>]      # target only these books (repeatable)
+    [--exclude <ebook_id>]   # skip these books (repeatable)
+    [--engine gemini|haiku]  # default gemini; 'haiku' makes Haiku PRIMARY for every book in the
+                             # filtered queue (Gemini is skipped entirely). Used when specific
+                             # books are known-Gemini-only (e.g. Haiku content-filter rejects)
+                             # so the user can split the queue: Gemini for those 2 + Haiku for rest.
 """
 import gzip
 import io
@@ -596,8 +602,59 @@ def cmd_status():
             print(f"  {b['title'][:50]}  {sz}")
 
 
-def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False):
-    if not API_KEYS:
+def _run_haiku_primary(targets, dry_run=False):
+    """Run Haiku-only OCR on the given queue (no Gemini at all). One book at a time,
+    matching the 5/7 incident lesson (parallel Haiku exhausts Max-subscription tokens)."""
+    if not _HAS_ANTHROPIC or not _HAS_FITZ:
+        missing = []
+        if not _HAS_ANTHROPIC: missing.append("anthropic")
+        if not _HAS_FITZ: missing.append("pymupdf")
+        print(f"❌ Haiku engine requires: pip install {' '.join(missing)}", file=sys.stderr)
+        sys.exit(1)
+
+    if dry_run:
+        for b in targets[:20]:
+            print(f"  {b['title'][:60]}  ({b['file_path']})")
+        return
+
+    try:
+        haiku_client = _make_anthropic_client()
+    except RuntimeError as e:
+        print(f"❌ {e}", file=sys.stderr)
+        sys.exit(1)
+
+    ok = 0
+    failed = []
+    for i, b in enumerate(targets, 1):
+        src = Path(b["file_path"])
+        if not src.exists():
+            print(f"  [H {i}/{len(targets)}] ⚠ source missing: {src}", file=sys.stderr)
+            update_book_error(b["id"], f"file not found: {src}")
+            failed.append((b["title"], "source missing"))
+            continue
+        sz_mb = src.stat().st_size / 1024 / 1024
+        title_short = (b["title"] or src.stem)[:40]
+        print(f"  [H {i}/{len(targets)}] OCR  {title_short}  ({sz_mb:.1f} MB)…",
+              end="", flush=True)
+        hresult = process_one_haiku(haiku_client, b, src)
+        if hresult["status"] == "ok":
+            ok += 1
+            print(f"  → 完成，繼續下一本", flush=True)
+        else:
+            failed.append((b["title"], hresult["error"]))
+            if not hresult["transient"]:
+                update_book_error(b["id"], hresult["error"])
+    print(f"\nDone. OK: {ok}, Failed: {len(failed)}")
+    if failed:
+        print("First failures:")
+        for n, e in failed[:10]:
+            print(f"  - {n[:50]}  {e[:100]}")
+
+
+def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False,
+            books=None, exclude=None, engine="gemini"):
+    """engine: 'gemini' (default — Haiku only as quota-fallback) | 'haiku' (use Haiku as PRIMARY for every book in the queue, skip Gemini entirely)."""
+    if engine == "gemini" and not API_KEYS:
         print("❌ Missing GEMINI_API_KEY. Get one at https://aistudio.google.com/app/apikey",
               file=sys.stderr)
         print("   Then add to .env:  GEMINI_API_KEY=key1,key2,key3  (comma for rotation)",
@@ -605,10 +662,23 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False):
         sys.exit(1)
 
     targets = fetch_ocr_targets()
-    print(f"OCR candidates: {len(targets)}")
-    print(f"Available Gemini keys: {len(API_KEYS)} (will rotate on quota)")
+    if books:
+        book_set = set(books)
+        targets = [b for b in targets if b["id"] in book_set]
+        missing = book_set - {b["id"] for b in targets}
+        if missing:
+            print(f"⚠ --book ids not in OCR queue (already parsed, or wrong id): {missing}", file=sys.stderr)
+    if exclude:
+        excl_set = set(exclude)
+        targets = [b for b in targets if b["id"] not in excl_set]
+    print(f"OCR candidates: {len(targets)}  (engine={engine})")
+    if engine == "gemini":
+        print(f"Available Gemini keys: {len(API_KEYS)} (will rotate on quota)")
     if limit:
         targets = targets[:limit]
+
+    if engine == "haiku":
+        return _run_haiku_primary(targets, dry_run=dry_run)
 
     if dry_run:
         for b in targets[:20]:
@@ -740,7 +810,31 @@ def main():
         rpm = DEFAULT_RPM
         if "--rpm" in args:
             rpm = float(args[args.index("--rpm") + 1])
-        cmd_run(limit=limit, model=model, rpm=rpm, dry_run="--dry-run" in args)
+        engine = "gemini"
+        if "--engine" in args:
+            engine = args[args.index("--engine") + 1]
+            if engine not in ("gemini", "haiku"):
+                print(f"❌ --engine must be 'gemini' or 'haiku', got {engine!r}", file=sys.stderr)
+                sys.exit(1)
+        books = []
+        # --book can repeat
+        i = 0
+        while i < len(args):
+            if args[i] == "--book" and i + 1 < len(args):
+                books.append(args[i + 1])
+                i += 2
+            else:
+                i += 1
+        exclude = []
+        i = 0
+        while i < len(args):
+            if args[i] == "--exclude" and i + 1 < len(args):
+                exclude.append(args[i + 1])
+                i += 2
+            else:
+                i += 1
+        cmd_run(limit=limit, model=model, rpm=rpm, dry_run="--dry-run" in args,
+                books=books or None, exclude=exclude or None, engine=engine)
     else:
         print(__doc__)
         sys.exit(1)
