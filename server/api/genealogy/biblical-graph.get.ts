@@ -2,16 +2,20 @@ export default defineEventHandler(async (event) => {
   await requireAuth(event)
   const supabase = getAdminClient()
 
-  // ── Tradition filter ─────────────────────────────────────────────────
-  // `?tradition=<key>` where key ∈ { biblical | catholic | orthodox | rabbinic }
-  // Each mode shows: biblical + early_consensus + <selected>
-  // Default (no param) = biblical mode → biblical + early_consensus only
+  // ── 統一視圖 + 衝突解視角 ────────────────────────────────────────────
+  // 所有人物（不分傳統）一律回傳，前端用 card 顏色辨識來源傳統。
+  // `?view=<key>` where key ∈ { protestant | catholic | orthodox }
+  // 只用來解「耶穌弟兄是誰」的衝突（馬可 6:3 三派不同解）。
+  // 規則：對每張 row 的 tradition_X JSONB 欄位：
+  //   - rabbinic 值永遠 apply（無衝突）
+  //   - 若 catholic 與 orthodox 同一欄位都有值 → 視為衝突，依 view 取一
+  //   - 若只有 catholic 或只有 orthodox 有值 → 非衝突，永遠 apply
+  // protestant 預設：兩派同時有值的欄位（衝突）兩派都不 apply。
   const q = getQuery(event)
-  const traditionRaw = String(q.tradition ?? 'biblical').toLowerCase()
-  const selectedTradition = ['catholic', 'orthodox', 'rabbinic'].includes(traditionRaw)
-    ? traditionRaw as 'catholic' | 'orthodox' | 'rabbinic'
-    : null
-  const allowedTraditions = new Set(['biblical', 'early_consensus', ...(selectedTradition ? [selectedTradition] : [])])
+  const viewRaw = String(q.view ?? 'protestant').toLowerCase()
+  const view: 'protestant' | 'catholic' | 'orthodox' =
+    viewRaw === 'catholic' ? 'catholic' :
+    viewRaw === 'orthodox' ? 'orthodox' : 'protestant'
 
   const { data: allPeople, error } = await supabase
     .from('biblical_people')
@@ -21,16 +25,31 @@ export default defineEventHandler(async (event) => {
   if (error) throw createError({ statusCode: 500, message: error.message })
   if (!allPeople?.length) return { nodes: [], edges: [] }
 
-  const people = allPeople.filter(p => allowedTraditions.has(p.tradition ?? 'biblical'))
-  if (!people.length) return { nodes: [], edges: [] }
+  const people = allPeople  // no tradition filter — show everyone, color via UI
 
-  // Apply per-tradition children/spouse merges + hides BEFORE building edges
-  // so the rest of the pipeline (resolveId, tribeCode, edges) sees a unified view.
+  // Merge per-row tradition fields with the conflict-aware rule above.
+  function mergeField(jsonb: Record<string, string> | null | undefined): string {
+    if (!jsonb) return ''
+    const cat = jsonb.catholic
+    const orth = jsonb.orthodox
+    const rab = jsonb.rabbinic
+    const parts: string[] = []
+    if (rab) parts.push(rab)
+    if (cat && orth) {
+      // Conflict — view picks one (protestant picks neither)
+      if (view === 'catholic') parts.push(cat)
+      else if (view === 'orthodox') parts.push(orth)
+    } else {
+      if (cat) parts.push(cat)
+      if (orth) parts.push(orth)
+    }
+    return parts.join('、')
+  }
+
   for (const p of people) {
-    if (!selectedTradition) continue
-    const addChildren = (p.tradition_children as Record<string, string> | null)?.[selectedTradition]
-    const addSpouse   = (p.tradition_spouse   as Record<string, string> | null)?.[selectedTradition]
-    const hideChildrenRaw = (p.tradition_hide_children as Record<string, string> | null)?.[selectedTradition]
+    const addChildren = mergeField(p.tradition_children as Record<string, string> | null)
+    const addSpouse   = mergeField(p.tradition_spouse   as Record<string, string> | null)
+    const hideChildrenRaw = mergeField(p.tradition_hide_children as Record<string, string> | null)
     if (addChildren) {
       p.children = p.children ? `${p.children}、${addChildren}` : addChildren
     }

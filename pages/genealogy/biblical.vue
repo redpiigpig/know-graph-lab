@@ -7,16 +7,18 @@
       <span class="text-sm font-semibold text-gray-900">聖經人物族譜</span>
       <span class="text-xs text-gray-400 ml-1">{{ people.length > 0 ? `${people.length} 人` : '' }}</span>
       <div class="flex-1" />
-      <!-- Tradition toggle (tree view only) -->
+      <!-- 耶穌弟兄解 toggle (tree view only) — only resolves Mark 6:3 conflict;
+           other tradition figures always visible, colored by source. -->
       <div v-show="view === 'tree'" class="flex items-center gap-0.5 bg-gray-100 rounded-lg p-0.5 mr-1">
+        <span class="text-[10px] text-gray-400 px-1.5 select-none">耶穌弟兄</span>
         <button
-          v-for="t in traditionOptions"
+          v-for="t in viewOptions"
           :key="t.value"
           class="text-xs px-2.5 py-1 rounded-md font-medium transition"
-          :class="tradition === t.value
+          :class="brothersView === t.value
             ? `bg-white shadow-sm ${t.activeColor}`
             : 'text-gray-500 hover:text-gray-700'"
-          @click="setTradition(t.value)"
+          @click="setBrothersView(t.value)"
         >{{ t.label }}</button>
       </div>
 
@@ -364,28 +366,27 @@ const graphNodes  = ref<any[]>([])
 const graphEdges  = ref<any[]>([])
 const graphLoaded = ref(false)
 
-// Tradition selection — reads ?tradition= from URL, then defaults to 'biblical'.
-// Allowed values: biblical | catholic | orthodox | rabbinic
-type Tradition = 'biblical' | 'catholic' | 'orthodox' | 'rabbinic'
+// 耶穌弟兄解（馬可 6:3 三派解）— protestant 預設。
+// 其他「補充性」傳統人物永遠顯示，靠 card 顏色辨識來源。
+// Allowed values: protestant | catholic | orthodox
+type BrothersView = 'protestant' | 'catholic' | 'orthodox'
 const route  = useRoute()
 const router2 = useRouter()
-const tradition = ref<Tradition>(
-  (['biblical', 'catholic', 'orthodox', 'rabbinic'].includes(route.query.tradition as string)
-    ? route.query.tradition
-    : 'biblical') as Tradition
+const brothersView = ref<BrothersView>(
+  (['protestant', 'catholic', 'orthodox'].includes(route.query.view as string)
+    ? route.query.view
+    : 'protestant') as BrothersView
 )
 
-const traditionOptions: Array<{ value: Tradition; label: string; activeColor: string }> = [
-  { value: 'biblical', label: '聖經',     activeColor: 'text-gray-900' },
-  { value: 'catholic', label: '天主教',   activeColor: 'text-purple-600' },
-  { value: 'orthodox', label: '東方教會', activeColor: 'text-emerald-600' },
-  { value: 'rabbinic', label: '拉比',     activeColor: 'text-blue-600' },
+const viewOptions: Array<{ value: BrothersView; label: string; activeColor: string }> = [
+  { value: 'protestant', label: '新教',   activeColor: 'text-gray-900' },
+  { value: 'catholic',   label: '天主教', activeColor: 'text-purple-600' },
+  { value: 'orthodox',   label: '東方',   activeColor: 'text-emerald-600' },
 ]
 
-function setTradition(t: Tradition) {
-  tradition.value = t
-  // Sync URL — keep history clean (replace, not push)
-  router2.replace({ query: { ...route.query, tradition: t === 'biblical' ? undefined : t } })
+function setBrothersView(v: BrothersView) {
+  brothersView.value = v
+  router2.replace({ query: { ...route.query, view: v === 'protestant' ? undefined : v } })
 }
 
 async function loadGraph() {
@@ -394,7 +395,7 @@ async function loadGraph() {
   try {
     const token = await getToken()
     if (!token) { graphLoaded.value = false; return }
-    const qs = tradition.value !== 'biblical' ? `?tradition=${tradition.value}` : ''
+    const qs = brothersView.value !== 'protestant' ? `?view=${brothersView.value}` : ''
     const { nodes, edges } = await $fetch<{ nodes: any[], edges: any[] }>('/api/genealogy/biblical-graph' + qs, {
       headers: { Authorization: `Bearer ${token}` },
     })
@@ -405,8 +406,8 @@ async function loadGraph() {
   }
 }
 
-// Reload graph when tradition changes
-watch(tradition, () => {
+// Reload graph when brothers-interpretation changes
+watch(brothersView, () => {
   graphLoaded.value = false
   if (view.value === 'tree') loadGraph()
 })

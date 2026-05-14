@@ -475,14 +475,14 @@ const cv = computed(() => {
     rootId: string,
     leftX: number,
     vis: Set<string>,
-  ): { nodes: LNode[]; drops: VDrop[]; hbars: HBar[]; rootCX: number; maxX: number; maxY: number } {
+  ): { nodes: LNode[]; drops: VDrop[]; hbars: HBar[]; marriages: MLine[]; rootCX: number; maxX: number; maxY: number } {
     if (vis.has(rootId)) {
-      return { nodes: [], drops: [], hbars: [], rootCX: leftX + NW / 2, maxX: leftX + NW, maxY: 0 }
+      return { nodes: [], drops: [], hbars: [], marriages: [], rootCX: leftX + NW / 2, maxX: leftX + NW, maxY: 0 }
     }
     vis.add(rootId)
     const p = pMap.get(rootId)
     if (!p) {
-      return { nodes: [], drops: [], hbars: [], rootCX: leftX + NW / 2, maxX: leftX + NW, maxY: 0 }
+      return { nodes: [], drops: [], hbars: [], marriages: [], rootCX: leftX + NW / 2, maxX: leftX + NW, maxY: 0 }
     }
     const gen = p.data.generationNum || 1
     const myY = rowY(gen - 1)   // 1-based gen → 0-based row, same scale as main spine
@@ -497,7 +497,48 @@ const cv = computed(() => {
       ? []  // spine node or married-out daughter — render as leaf
       : effectiveChildIds(rootId).filter(c => !vis.has(c))
 
+    // Wives to render alongside this subtree root (e.g., 以底特 next to 羅得 in
+    // 哈蘭 expansion). Skip wives already drawn on the main chart (spine妻位).
+    const wiveIds = (spousesOf.value.get(rootId) ?? []).filter(w =>
+      !renderedAsSpouseOnSpine.has(w) && !vis.has(w) && pMap.has(w) && !rowOf.has(w)
+    )
+    for (const w of wiveIds) vis.add(w)
+    const SLOT_K = NW + WIFE_HG
+    const wivesReach = wiveIds.length * SLOT_K
+
+    // Helper: place wives to the LEFT of root center, return their nodes + marriage lines
+    function placeWives(rootCX: number): { nodes: LNode[]; marriages: MLine[] } {
+      const ns: LNode[] = []
+      const ms: MLine[] = []
+      const marY = myY + NH / 2
+      for (let wi = 0; wi < wiveIds.length; wi++) {
+        const wid = wiveIds[wi]
+        const wp = pMap.get(wid)!
+        const wcx = rootCX - (wi + 1) * SLOT_K
+        ns.push({
+          id: `${wid}__exp_wife_of__${rootId}`,
+          personId: wid,
+          rawName:     wp.data.name,
+          displayName: shortName(wp.data.name),
+          genLabel:    getGenLabel(wp),
+          generation:  wp.data.generationNum || 0,
+          gender:      wp.data.gender,
+          x: wcx - NW / 2, y: myY, w: NW, h: NH,
+          spineKind:   null,
+          tradition:   wp.data.tradition,
+          isClan:      false,
+          isExpansionNode: true,
+        })
+        const prevCx = wi === 0 ? rootCX : rootCX - wi * SLOT_K
+        ms.push({ id: `expw_${rootId}_${wid}`, x1: wcx + NW / 2, x2: prevCx - NW / 2, y: marY })
+      }
+      return { nodes: ns, marriages: ms }
+    }
+
     if (kids.length === 0) {
+      // Leaf: root at leftX + wivesReach, wives to its left
+      const rootX = leftX + wivesReach
+      const rootCX = rootX + NW / 2
       const myNode: LNode = {
         id: `${rootId}__exp`,
         personId: rootId,
@@ -506,17 +547,24 @@ const cv = computed(() => {
         genLabel:    getGenLabel(p),
         generation:  gen,
         gender:      p.data.gender,
-        x: leftX, y: myY, w: NW, h: NH,
+        x: rootX, y: myY, w: NW, h: NH,
         spineKind:   null,
         tradition:   p.data.tradition,
         isClan:      false,
         isExpansionNode: true,
       }
-      return { nodes: [myNode], drops: [], hbars: [], rootCX: leftX + NW / 2, maxX: leftX + NW, maxY: myY + NH }
+      const w = placeWives(rootCX)
+      return {
+        nodes: [myNode, ...w.nodes],
+        drops: [], hbars: [], marriages: w.marriages,
+        rootCX, maxX: rootX + NW, maxY: myY + NH,
+      }
     }
 
-    // Lay out children left-to-right, then center root above their span
-    let cursorX = leftX
+    // Lay out children left-to-right, then center root above their span.
+    // Shift kids start by wivesReach so wives can sit to root's left without
+    // extending past leftX (preserves the subtree-x-contract).
+    let cursorX = leftX + wivesReach
     const childResults: ReturnType<typeof layoutSubtree>[] = []
     let maxY = myY + NH
     for (const k of kids) {
@@ -568,10 +616,12 @@ const cv = computed(() => {
       }
     }
 
+    const w = placeWives(rootCX)
     return {
-      nodes: [myNode, ...childResults.flatMap(r => r.nodes)],
+      nodes: [myNode, ...w.nodes, ...childResults.flatMap(r => r.nodes)],
       drops: [...myDrops, ...childResults.flatMap(r => r.drops)],
       hbars: [...myHbars, ...childResults.flatMap(r => r.hbars)],
+      marriages: [...w.marriages, ...childResults.flatMap(r => r.marriages)],
       rootCX,
       maxX: rightEdge,
       maxY,
@@ -584,12 +634,13 @@ const cv = computed(() => {
   function layoutExpansion(
     rootIds: string[],
     centerX: number,
-  ): { nodes: LNode[]; drops: VDrop[]; hbars: HBar[]; bbox: ExpansionBox; rootCXs: number[]; firstY: number } {
+  ): { nodes: LNode[]; drops: VDrop[]; hbars: HBar[]; marriages: MLine[]; bbox: ExpansionBox; rootCXs: number[]; firstY: number } {
     const vis = new Set<string>()
     let cursorX = 0
     const allNodes: LNode[] = []
     const allDrops: VDrop[] = []
     const allHbars: HBar[]  = []
+    const allMarriages: MLine[] = []
     let maxY = 0
     const rootCXs: number[] = []
     let firstY = 0
@@ -598,13 +649,14 @@ const cv = computed(() => {
       allNodes.push(...r.nodes)
       allDrops.push(...r.drops)
       allHbars.push(...r.hbars)
+      allMarriages.push(...r.marriages)
       rootCXs.push(r.rootCX)
       cursorX = r.maxX + HG
       maxY = Math.max(maxY, r.maxY)
       if (firstY === 0 && r.nodes.length > 0) firstY = r.nodes[0].y
     }
     if (rootCXs.length === 0) {
-      return { nodes: [], drops: [], hbars: [], bbox: { x1: 0, y1: 0, x2: 0, y2: 0 }, rootCXs, firstY }
+      return { nodes: [], drops: [], hbars: [], marriages: [], bbox: { x1: 0, y1: 0, x2: 0, y2: 0 }, rootCXs, firstY }
     }
     const cmin = Math.min(...rootCXs)
     const cmax = Math.max(...rootCXs)
@@ -613,13 +665,14 @@ const cv = computed(() => {
     for (const n of allNodes) n.x += shiftX
     for (const d of allDrops) d.x += shiftX
     for (const b of allHbars) { b.x1 += shiftX; b.x2 += shiftX }
+    for (const m of allMarriages) { m.x1 += shiftX; m.x2 += shiftX }
     const shiftedRootCXs = rootCXs.map(c => c + shiftX)
     for (const n of allNodes) expansionNodeIds.add(n.id)
     const minX = Math.min(...allNodes.map(n => n.x)) - 8
     const maxX = Math.max(...allNodes.map(n => n.x + n.w)) + 8
     const minY = Math.min(...allNodes.map(n => n.y)) - 8
     return {
-      nodes: allNodes, drops: allDrops, hbars: allHbars,
+      nodes: allNodes, drops: allDrops, hbars: allHbars, marriages: allMarriages,
       bbox: { x1: minX, y1: minY, x2: maxX, y2: maxY + 8 },
       rootCXs: shiftedRootCXs,
       firstY,
@@ -1183,6 +1236,7 @@ const cv = computed(() => {
           nodes.push(...exp.nodes)
           drops.push(...exp.drops)
           hbars.push(...exp.hbars)
+          marriages.push(...exp.marriages)
 
           // Connect kid (parent) down to the subtree's root row
           const kidBottom = childY + NH
