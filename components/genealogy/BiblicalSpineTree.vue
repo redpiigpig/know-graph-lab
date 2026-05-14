@@ -1722,21 +1722,19 @@ function jumpToOther(current: LNode) {
 // Spine bar (amber/rose left edge) stays — it's rendered as a separate div.
 function cardClass(n: LNode) {
   const base = 'shadow-sm hover:shadow-md rounded-xl cursor-pointer'
-  if (n.tradition === 'early_consensus')
-    return `border border-orange-300 bg-orange-50 ${base}`
-  if (n.tradition === 'catholic')
-    return `border border-purple-300 bg-purple-50 ${base}`
-  if (n.tradition === 'orthodox')
-    return `border border-emerald-300 bg-emerald-50 ${base}`
-  if (n.tradition === 'rabbinic')
-    return `border border-blue-300 bg-blue-50 ${base}`
-  if (n.spineKind === 'A' || n.spineKind === 'S' || n.spineKind === 'single')
-    return `border border-stone-300 bg-white ${base}`
-  if (n.spineKind === 'B')
-    return `border border-rose-300 bg-white ${base}`
-  if (n.gender === 'female')
-    return 'border border-rose-200 bg-rose-50/90 hover:shadow-sm rounded-xl cursor-pointer'
-  return 'border border-slate-200 bg-white hover:shadow-sm rounded-xl cursor-pointer'
+  // 內部填色 = 性別（男白／女粉），無關傳統
+  const fill = n.gender === 'female' ? 'bg-rose-50' : 'bg-white'
+  // 外框 = 傳統；無傳統時用 spineKind 或預設灰
+  let border = 'border border-slate-200'
+  if (n.tradition === 'early_consensus') border = 'border-2 border-orange-400'
+  else if (n.tradition === 'catholic')   border = 'border-2 border-purple-400'
+  else if (n.tradition === 'orthodox')   border = 'border-2 border-emerald-400'
+  else if (n.tradition === 'rabbinic')   border = 'border-2 border-blue-400'
+  else if (n.spineKind === 'B')          border = 'border border-rose-300'
+  else if (n.spineKind === 'A' || n.spineKind === 'S' || n.spineKind === 'single')
+                                          border = 'border border-stone-300'
+  else if (n.gender === 'female')        border = 'border border-rose-200'
+  return `${border} ${fill} ${base}`
 }
 function cardStyle(n: LNode) {
   return { left: n.x + 'px', top: n.y + 'px', width: n.w + 'px', minHeight: n.h + 'px' }
