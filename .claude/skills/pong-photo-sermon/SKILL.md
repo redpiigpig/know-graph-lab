@@ -181,7 +181,9 @@ The year listing page [`/pong-archive/sermons/year/[year].vue`](../../../pages/p
 
 ```js
 // in buildChurchYear(y), after the existing specials:
-if (y === 2021) {                            // <-- match the church year (Advent-start year)
+if (y === 2020) {                            // <-- match the CHURCH YEAR (= Advent-start
+                                             //     year of the row's church_year column),
+                                             //     NOT the calendar year of the date below
   const anniv60 = new Date(2021, 10, 20)     // <-- the service date (month is 0-indexed)
   if (anniv60 <= end) {
     specials.push({
@@ -198,6 +200,8 @@ if (y === 2021) {                            // <-- match the church year (Adven
 
 The renderer looks up `sermonFor(entry.date)` to attach the DB title and link — the special block only needs name + color + date.
 
+**⚠ Critical: church_year vs calendar year mismatch.** The year page at `/sermons/year/Y` loads `pong_sermons WHERE church_year=Y`. A row whose `sermon_date` is November 2021 has `church_year=2020` if it falls before Advent 1 2021 (Nov 28). If you put the `specials.push` block under the wrong `y`, the entry shows up on the calendar but `sermonFor()` returns null → the title is blank, the row isn't clickable, and it looks like nothing is wired up. **Always check the DB row's `church_year` column and match `y === <that value>`**, regardless of the date's calendar year. This is exactly the bug that hit the inaugural 2021-11-20 wire-up.
+
 **Color palette for specialColor** (match existing usages):
 - `#B22020` — 慶典紅 (堂慶 / 60週年 / 就任禮拜)
 - `#8B1818` — 殉道紅 (受難日)
@@ -207,7 +211,12 @@ The renderer looks up `sermonFor(entry.date)` to attach the DB title and link �
 
 **`seasonKey` should match the liturgical_season** the date falls in (pentecost for late Nov ordinary time, lent for Holy Week dates, etc.) — this determines which season group the row appears under.
 
-**Match `church_year` to the Advent-start year**, not the calendar year of the service date. A Saturday in November 2021 falls in church_year 2021 (Advent 2021 starts Nov 28, 2021); a Saturday in early November is still church_year 2020.
+**Computing church_year** — the year that **Advent started**, NOT the calendar year:
+- Advent 1 of year Y is the Sunday closest to Nov 30 of year Y (rule: Sunday in the range Nov 27 – Dec 3)
+- Anything before that Advent Sunday is still in the PREVIOUS church year
+- e.g. 2021-11-20 (Sat) is before Advent 1 2021 (= 2021-11-28), so `church_year = 2020`
+- e.g. 2021-11-28 (Sun, Advent 1) is `church_year = 2021`
+- e.g. 2022-01-15 (early January) is still `church_year = 2021` (since Advent 2022 hasn't started)
 
 ### 5. Commit code changes only when [year].vue actually changed
 
@@ -234,7 +243,7 @@ git push origin master
   - `worship_team` JSON: {襄禮:邱泰耀牧師, 司琴:盧思寧姊妹, 司獻:楊秀惠姊妹、黃于庭姊妹, 招待:招待組}
 - `worship_songs` array of 3 labelled hymns
 - **`content` left untouched** (Whisper-cleaned 龐君華 transcript stays as-is)
-- **Calendar special wired up**: [year].vue has a `y === 2021 → anniv60` block pushing the Nov-20 (Sat) entry as a `specials` row in 聖靈降臨期, color `#B22020`. Without this, the DB row is orphaned — visible at the direct URL `/pong-archive/sermons/20211120` but not findable through the year listing.
+- **Calendar special wired up**: [year].vue has a `y === 2020 → anniv60` block pushing the Nov-20 (Sat) entry as a `specials` row in 聖靈降臨期, color `#B22020`. Note `y===2020` not `y===2021` — the row's `church_year=2020` (date is before Advent 2021). Without this block, the DB row is orphaned; with the wrong `y`, the row appears but has no title and isn't clickable.
 
 ## Notes
 

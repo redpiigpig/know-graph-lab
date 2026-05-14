@@ -292,7 +292,7 @@ function buildChurchYear(y) {
     }
   }
 
-  if (y === 2021) {
+  if (y === 2020) {
     const anniv60 = new Date(2021, 10, 20)
     if (anniv60 <= end) {
       specials.push({
