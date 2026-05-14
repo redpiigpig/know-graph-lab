@@ -375,23 +375,32 @@ onMounted(async () => {
   ro.observe(rootEl.value!)
 
   try {
-    const [adm0Res, adm1Res] = await Promise.all([
+    const [adm0Res, adm1Res, adm1ExtraRes] = await Promise.all([
       fetch('/maps/ne_50m_admin_0_countries.geojson'),
       fetch('/maps/ne_50m_admin_1_subset.geojson'),
+      fetch('/maps/ne_10m_admin_1_extra.geojson'),
     ])
-    const [adm0, adm1] = await Promise.all([adm0Res.json(), adm1Res.json()])
+    const [adm0, adm1, adm1Extra] = await Promise.all([
+      adm0Res.json(), adm1Res.json(), adm1ExtraRes.json(),
+    ])
 
     const entries: FeatureEntry[] = []
 
-    // admin_0: skip Antarctica AND skip countries handled by admin_1 (CHN/RUS/USA/CAN)
+    // admin_0: skip Antarctica AND skip countries handled by admin_1
     for (const f of adm0.features) {
       if (f.properties.ADM0_A3 === 'ATA') continue
       const code = getAdm0Code(f.properties)
       if (COUNTRIES_USING_ADMIN1.has(code)) continue
       entries.push({ feature: f, isAdmin1: false, key: code, countryCode: code })
     }
-    // admin_1
+    // admin_1 (50m, original 4: CHN/RUS/USA/CAN)
     for (const f of adm1.features) {
+      const key = f.properties.iso_3166_2
+      const country = f.properties.adm0_a3
+      entries.push({ feature: f, isAdmin1: true, key, countryCode: country })
+    }
+    // admin_1 (10m extra: LBY/AFG/UKR)
+    for (const f of adm1Extra.features) {
       const key = f.properties.iso_3166_2
       const country = f.properties.adm0_a3
       entries.push({ feature: f, isAdmin1: true, key, countryCode: country })

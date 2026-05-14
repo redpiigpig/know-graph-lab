@@ -625,8 +625,11 @@ export const COUNTRY_NAME_ZH: Record<string, string> = {
   USA: '美國', CAN: '加拿大', GRL: '格陵蘭',
 }
 
-/** 採用 admin_1 子國家行政區細分上色的國家 */
-export const COUNTRIES_USING_ADMIN1 = new Set<string>(['CHN', 'RUS', 'USA', 'CAN'])
+/** 採用 admin_1 子國家行政區細分上色的國家
+ *  CHN/RUS/USA/CAN 用 NE 50m admin_1（檔案：ne_50m_admin_1_subset.geojson）
+ *  LBY/AFG/UKR 用 NE 10m admin_1（檔案：ne_10m_admin_1_extra.geojson）
+ */
+export const COUNTRIES_USING_ADMIN1 = new Set<string>(['CHN', 'RUS', 'USA', 'CAN', 'LBY', 'AFG', 'UKR'])
 
 /** iso_3166_2 → sphere id（次國家行政區歸屬）。文件未指定的省份依預設： */
 export const ADMIN1_SPHERE: Record<string, string> = {
@@ -719,6 +722,65 @@ export const ADMIN1_SPHERE: Record<string, string> = {
   'CA-AB': 'anglo-american', 'CA-BC': 'anglo-american', 'CA-MB': 'anglo-american',
   'CA-NB': 'anglo-american', 'CA-NL': 'anglo-american', 'CA-NS': 'anglo-american',
   'CA-ON': 'anglo-american', 'CA-PE': 'anglo-american', 'CA-SK': 'anglo-american',
+
+  // ---------- 利比亞 (LBY) ----------
+  // 埃及文化圈（中央界域）— 昔蘭尼加（東部）
+  'LY-BU': 'egyptian',  // 布特南省（圖卜魯格）
+  'LY-AJ': 'egyptian',  // 艾季達比亞
+  'LY-KF': 'egyptian',  // 庫夫拉
+  'LY-BA': 'egyptian',  // 班加西
+  'LY-MJ': 'egyptian',  // 邁爾季
+  'LY-JA': 'egyptian',  // 綠山省（傑貝爾艾赫達爾）
+  'LY-QB': 'egyptian',  // 古拜
+  // 拉丁文化圈（西方界域）— 的黎波里塔尼亞 + 費贊（中西部，義屬殖民延伸）
+  'LY-GD': 'latin-cultural', 'LY-NQ': 'latin-cultural', 'LY-MQ': 'latin-cultural',
+  'LY-WS': 'latin-cultural', 'LY-GT': 'latin-cultural', 'LY-MI': 'latin-cultural',
+  'LY-MB': 'latin-cultural', 'LY-TN': 'latin-cultural', 'LY-ZA': 'latin-cultural',
+  'LY-JI': 'latin-cultural', 'LY-MZ': 'latin-cultural', 'LY-JU': 'latin-cultural',
+  'LY-SB': 'latin-cultural', 'LY-WD': 'latin-cultural', 'LY-SR': 'latin-cultural',
+
+  // ---------- 阿富汗 (AFG) ----------
+  // 波斯文化圈（中央界域）— 西部與中部
+  'AF-HER': 'persian', 'AF-FRA': 'persian', 'AF-NIM': 'persian', 'AF-BDG': 'persian',
+  'AF-GHO': 'persian', 'AF-BAM': 'persian', 'AF-KAB': 'persian', 'AF-PAR': 'persian',
+  'AF-WAR': 'persian', 'AF-LOG': 'persian', 'AF-KAP': 'persian',
+  // 印度文化圈（東方界域）— 南部與東部，犍陀羅
+  'AF-KAN': 'indian', 'AF-HEL': 'indian', 'AF-ZAB': 'indian', 'AF-URU': 'indian',
+  'AF-GHA': 'indian', 'AF-PIA': 'indian', 'AF-PKA': 'indian', 'AF-KHO': 'indian',
+  'AF-NAN': 'indian', 'AF-KNR': 'indian', 'AF-NUR': 'indian', 'AF-LAG': 'indian',
+  // 圖蘭-突厥文化圈（北方界域）— 北部
+  'AF-BAL': 'turanian-turkic', 'AF-JOW': 'turanian-turkic', 'AF-FYB': 'turanian-turkic',
+  'AF-SAR': 'turanian-turkic', 'AF-SAM': 'turanian-turkic', 'AF-KDZ': 'turanian-turkic',
+  'AF-TAK': 'turanian-turkic', 'AF-BGL': 'turanian-turkic', 'AF-BDS': 'turanian-turkic',
+
+  // ---------- 烏克蘭 (UKR) ----------
+  // 盧布林文化圈（西方界域）— 西烏 + 基輔以西
+  'UA-07': 'lublin',   // 沃倫
+  'UA-56': 'lublin',   // 羅夫諾
+  'UA-46': 'lublin',   // 利沃夫
+  'UA-26': 'lublin',   // 伊凡諾－弗蘭科夫斯克
+  'UA-61': 'lublin',   // 捷爾諾波爾
+  'UA-68': 'lublin',   // 赫梅利尼茨基
+  'UA-21': 'lublin',   // 外喀爾巴阡
+  'UA-77': 'lublin',   // 切爾諾夫策
+  'UA-05': 'lublin',   // 文尼察
+  'UA-32': 'lublin',   // 基輔州
+  'UA-30': 'lublin',   // 基輔市
+  'UA-18': 'lublin',   // 日托米爾
+  'UA-71': 'lublin',   // 切爾卡瑟
+  // 羅斯-韃靼文化圈（北方界域）— 東烏 + 南烏
+  'UA-63': 'russian-tatar',  // 哈爾科夫
+  'UA-09': 'russian-tatar',  // 盧甘斯克
+  'UA-14': 'russian-tatar',  // 頓內次克
+  'UA-12': 'russian-tatar',  // 第聶伯羅彼得羅夫斯克
+  'UA-23': 'russian-tatar',  // 札波羅熱
+  'UA-48': 'russian-tatar',  // 米科萊夫
+  'UA-65': 'russian-tatar',  // 赫爾松
+  'UA-51': 'russian-tatar',  // 奧德薩
+  'UA-59': 'russian-tatar',  // 蘇梅
+  'UA-53': 'russian-tatar',  // 波爾塔瓦
+  'UA-74': 'russian-tatar',  // 切爾尼戈夫
+  'UA-35': 'russian-tatar',  // 基洛夫格勒
 }
 
 /** Admin_1 名稱對照（繁體中文，用於 tooltip 顯示） */
@@ -766,6 +828,33 @@ export const ADMIN1_NAME_ZH: Record<string, string> = {
   'RU-KO': '科米共和國', 'RU-PER': '彼爾姆邊疆區', 'RU-SVE': '斯維爾德洛夫斯克州',
   'RU-CHE': '車里雅賓斯克州', 'RU-TA': '韃靼斯坦共和國', 'RU-BA': '巴什科爾托斯坦共和國',
   'RU-KYA': '克拉斯諾亞爾斯克邊疆區', 'RU-IRK': '伊爾庫茨克州',
+  // LBY
+  'LY-BU': '布特南（圖卜魯格）', 'LY-AJ': '艾季達比亞', 'LY-KF': '庫夫拉',
+  'LY-BA': '班加西', 'LY-MJ': '邁爾季', 'LY-JA': '傑貝爾艾赫達爾（綠山）', 'LY-QB': '古拜',
+  'LY-GD': '加達米斯', 'LY-NQ': '努加特海姆斯', 'LY-MQ': '穆爾祖格',
+  'LY-WS': '什阿提', 'LY-GT': '加特', 'LY-MI': '米蘇拉塔',
+  'LY-MB': '邁爾蓋卜', 'LY-TN': '塔朱拉', 'LY-ZA': '札維亞',
+  'LY-JI': '吉法拉', 'LY-MZ': '米茲達', 'LY-JU': '朱夫拉',
+  'LY-SB': '塞卜哈', 'LY-WD': '瓦迪哈耶特', 'LY-SR': '蘇爾特',
+  // AFG
+  'AF-BDS': '巴達赫尚', 'AF-TAK': '塔哈爾', 'AF-KDZ': '昆都士', 'AF-BAL': '巴爾赫',
+  'AF-JOW': '朱茲詹', 'AF-FYB': '法利亞布', 'AF-BDG': '巴德吉斯', 'AF-HER': '赫拉特',
+  'AF-NIM': '尼姆魯茲', 'AF-FRA': '法拉', 'AF-KNR': '庫納爾', 'AF-NUR': '努里斯坦',
+  'AF-NAN': '楠格哈爾', 'AF-KHO': '霍斯特', 'AF-PKA': '帕克蒂亞', 'AF-PIA': '帕克蒂卡',
+  'AF-ZAB': '扎布爾', 'AF-KAN': '坎大哈', 'AF-HEL': '赫爾曼德', 'AF-URU': '烏魯茲甘',
+  'AF-GHA': '加茲尼', 'AF-PAR': '帕爾旺', 'AF-KAB': '喀布爾', 'AF-LAG': '拉格曼',
+  'AF-LOG': '洛加爾', 'AF-KAP': '卡比薩', 'AF-WAR': '瓦爾達克', 'AF-BAM': '巴米揚',
+  'AF-SAR': '薩爾普勒', 'AF-GHO': '古爾', 'AF-BGL': '巴格蘭', 'AF-SAM': '薩曼甘',
+  // UKR
+  'UA-74': '切爾尼戈夫州', 'UA-07': '沃倫州', 'UA-56': '羅夫諾州',
+  'UA-18': '日托米爾州', 'UA-32': '基輔州', 'UA-30': '基輔市',
+  'UA-21': '外喀爾巴阡州', 'UA-77': '切爾諾夫策州', 'UA-26': '伊凡諾－弗蘭科夫斯克州',
+  'UA-51': '奧德薩州', 'UA-05': '文尼察州', 'UA-46': '利沃夫州',
+  'UA-59': '蘇梅州', 'UA-63': '哈爾科夫州', 'UA-09': '盧甘斯克州',
+  'UA-14': '頓內次克州', 'UA-65': '赫爾松州', 'UA-23': '札波羅熱州',
+  'UA-48': '米科萊夫州', 'UA-53': '波爾塔瓦州', 'UA-68': '赫梅利尼茨基州',
+  'UA-61': '捷爾諾波爾州', 'UA-12': '第聶伯羅彼得羅夫斯克州', 'UA-71': '切爾卡瑟州',
+  'UA-35': '基洛夫格勒州',
 }
 
 /** 給一個 admin_1 iso_3166_2 代碼，回傳所屬文化圈與界域 */
