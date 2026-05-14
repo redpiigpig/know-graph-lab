@@ -1480,6 +1480,7 @@ const cv = computed(() => {
         // null-mom 的 T-bar 跟 marLineY 同 Y → 視為婚姻線延伸，用紅色（與 marriages 同色）
         const hbarStroke = (mom === null && barY === marLineY) ? '#dc2626' : undefined
         hbars.push({ x1: minBarX, x2: maxBarX, y: barY, stroke: hbarStroke })
+        for (const kid of groupKids) {
           const kxVal     = kidX.get(kid)!
           const isSpKid   = rowOf.has(kid)
           const childKind = membership.get(kid)
