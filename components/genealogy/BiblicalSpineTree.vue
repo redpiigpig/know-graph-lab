@@ -488,10 +488,12 @@ const cv = computed(() => {
     const myY = rowY(gen - 1)   // 1-based gen → 0-based row, same scale as main spine
     // Follow children via effectiveChildIds (includes via-spouse for women like
     // 利百加 / 拉班 daughters), BUT cut off at spine nodes — their descendants are
-    // already drawn on the main spine, drawing them again would duplicate.
+    // already drawn on the main spine, drawing them again would duplicate. Also
+    // skip daughters who are rendered as a spouse on the main chart (彼土利 →
+    // 利百加 跳過，利百加 已在 以撒 旁邊以妻位渲染；descendants 已在父系下方）.
     const kids = rowOf.has(rootId)
       ? []  // spine node — render this card as leaf marker
-      : effectiveChildIds(rootId).filter(c => !vis.has(c))
+      : effectiveChildIds(rootId).filter(c => !vis.has(c) && !renderedAsSpouseOnSpine.has(c))
 
     if (kids.length === 0) {
       const myNode: LNode = {
@@ -660,6 +662,42 @@ const cv = computed(() => {
   // ── Wife counts to size the X canvas ───────────────────────────────
   const allSpineIds = Array.from(rowOf.keys())
   const maxWives = Math.max(0, ...allSpineIds.map(id => (sp.get(id) ?? []).length))
+
+  // ── Persons rendered as a SPOUSE on the main chart ─────────────────
+  // 預先收集所有會被當成「配偶」畫在主圖上的 personId：
+  //   1. spine person 的妻 (spine wife)
+  //   2. spine wife 的「同代且不在 rowOf」其他配偶 (Trinubium 擴展)
+  //   3. 非 spine 兒子（spine person 的旁支兒子）的妻 (kidWife)
+  // 用途：layoutSubtree 在展開 ▼ 時，遇到已在配偶位渲染的女兒就跳過，
+  // 避免「彼土利→利百加」與「以撒-利百加」同一人重覆畫；
+  // 配偶卡的 ♻ 跳同人功能仍可從父親那邊找到她。
+  const renderedAsSpouseOnSpine = new Set<string>()
+  for (const sid of allSpineIds) {
+    const sidGen = pMap.get(sid)?.data.generationNum
+    for (const wid of sp.get(sid) ?? []) {
+      renderedAsSpouseOnSpine.add(wid)
+      const widGen = pMap.get(wid)?.data.generationNum
+      for (const otherSp of sp.get(wid) ?? []) {
+        if (otherSp === sid) continue
+        const op = pMap.get(otherSp)
+        if (!op) continue
+        if (widGen != null && op.data.generationNum != null && op.data.generationNum !== widGen) continue
+        renderedAsSpouseOnSpine.add(otherSp)
+      }
+    }
+    for (const kidId of ch.get(sid) ?? []) {
+      if (rowOf.has(kidId)) continue  // spine kid, skip
+      for (const wid of sp.get(kidId) ?? []) {
+        renderedAsSpouseOnSpine.add(wid)
+      }
+    }
+    // also include spine person's own gen-mate spine spouse (cross-spine like Mary↔Joseph)
+    if (sidGen != null) {
+      for (const otherSp of sp.get(sid) ?? []) {
+        renderedAsSpouseOnSpine.add(otherSp)
+      }
+    }
+  }
 
 
   // Wife area width (per side, both spines may have wives outside).
