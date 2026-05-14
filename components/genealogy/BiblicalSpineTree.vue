@@ -514,6 +514,7 @@ const cv = computed(() => {
     rootId: string,
     leftX: number,
     vis: Set<string>,
+    minGen: number = 0,
   ): { nodes: LNode[]; drops: VDrop[]; hbars: HBar[]; marriages: MLine[]; rootCX: number; maxX: number; maxY: number } {
     if (vis.has(rootId)) {
       return { nodes: [], drops: [], hbars: [], marriages: [], rootCX: leftX + NW / 2, maxX: leftX + NW, maxY: 0 }
@@ -523,7 +524,11 @@ const cv = computed(() => {
     if (!p) {
       return { nodes: [], drops: [], hbars: [], marriages: [], rootCX: leftX + NW / 2, maxX: leftX + NW, maxY: 0 }
     }
-    const gen = p.data.generationNum || 1
+    const dbGen = p.data.generationNum || 1
+    // 視覺世代 = max(DB gen, 父代+1)。處理像 拉班(gen22) → 利亞(gen22) 這種
+    // 「Bible 紀錄同代但實際是父子」的情況，強制把利亞放到 23 列才不會跟 拉班
+    // 擠在同一條 row。samePerson ♻ 仍會 link 兩個位置 (利亞 wife of 雅各 at gen 22)。
+    const gen = Math.max(dbGen, minGen)
     const myY = rowY(gen - 1)   // 1-based gen → 0-based row, same scale as main spine
     // Follow children via effectiveChildIds (includes via-spouse for women like
     // 利百加 / 拉班 daughters), BUT cut off at spine nodes — their descendants are
@@ -609,7 +614,7 @@ const cv = computed(() => {
     const childResults: ReturnType<typeof layoutSubtree>[] = []
     let maxY = myY + NH
     for (const k of kids) {
-      const r = layoutSubtree(k, cursorX, vis)
+      const r = layoutSubtree(k, cursorX, vis, gen + 1)
       childResults.push(r)
       cursorX = r.maxX + HG
       maxY = Math.max(maxY, r.maxY)
@@ -1604,15 +1609,18 @@ const cv = computed(() => {
   }
 
   // ── Detect duplicate persons (same DB id rendered at multiple positions) ──
+  // samePerson ♻ marker — 計算時不過濾 hidden 卡：例如雅各被旁支 expansion 遮掉
+  // 時，利亞 daughter 卡仍應該顯 ♻ 提示「此人在他處（雅各妻位）也有渲染」。
+  // 點 ♻ 的 jumpToOther 會 fallback 往上找 ancestor expand，UX 仍正常。
   const byPid = new Map<string, LNode[]>()
   for (const n of nodes) {
-    if (n.hidden) continue
     const arr = byPid.get(n.personId) ?? []
     arr.push(n)
     byPid.set(n.personId, arr)
   }
   for (const list of byPid.values()) {
-    if (list.length > 1) for (const n of list) n.samePerson = true
+    // 任何 visible 卡片才有資格被標 ♻（hidden 卡反正看不到）
+    if (list.length > 1) for (const n of list) if (!n.hidden) n.samePerson = true
   }
 
   // Also mark ♻ on WIFE cards (people drawn only as a spouse, not as a parent's
