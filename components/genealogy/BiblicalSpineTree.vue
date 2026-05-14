@@ -1317,9 +1317,14 @@ const cv = computed(() => {
         if (momId !== null) {
           const wi = wifeIds.indexOf(momId)
           if (wi >= 0) {
-            const momCX  = wifeLX.get(momId)! + NW / 2
-            const prevCX = wi === 0 ? cx : (wifeLX.get(wifeIds[wi - 1])! + NW / 2)
-            return (momCX + prevCX) / 2
+            const momCX = wifeLX.get(momId)! + NW / 2
+            // Primary wife (wi=0): drop from midpoint of the actual marriage
+            // segment 大衛↔primary（這條才是真婚姻線）.
+            // Non-primary wives (wi>0): drop DIRECTLY from her own center.
+            // 同列共妻之間的「線段中點」不是真婚姻，不該被當成 mother 的 anchor —
+            // 否則 哈及's 兒子 亞多尼雅 會從 「瑪迦↔哈及之間」掉下來而非從哈及本人。
+            if (wi === 0) return (momCX + cx) / 2
+            return momCX
           }
           if (crossSpineWives.includes(momId)) {
             const partner = nodes.find(n => n.id === momId)
