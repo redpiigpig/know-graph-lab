@@ -101,7 +101,7 @@
                    border border-amber-300 text-amber-600 hover:bg-amber-50 shadow-sm
                    cursor-default flex items-center justify-center gap-0.5 tabular-nums"
             :title="n.subtreeExpanded ? '收起子孫' : `展開 ${n.subtreeSize} 名子孫`"
-            @click.stop="toggleExpand(n.personId, !!n.subtreeExpanded)"
+            @click.stop="toggleExpand(n.personId)"
           >
             <span>{{ n.subtreeExpanded ? '▲' : '▼' }}</span>
             <span v-if="!n.subtreeExpanded" class="text-[9px] opacity-70">{{ n.subtreeSize }}</span>
@@ -1218,13 +1218,9 @@ const cv = computed(() => {
       }
       const subtree = subtreeCapped(kid).filter(id => id !== kid)
       const hasSub  = subtree.length > 0 && !hasSpineSpouse && !isFemale
-      // 中型 clan (≤20 人) 預設展開 — 例如 斯多蘭→{蘇比/以利沙白/...}、
-      // 拿鶴→{烏斯/布斯/.../彼土利}；巨型 clan (~300 人) 仍需手動 ▼。
-      // collapsedClans 是 user explicit collapse，可以覆蓋 auto-expand。
-      const autoExpand = hasSub && subtree.length <= 20
-      const expanded = collapsedClans.value.has(kid)
-        ? false
-        : (expandedClans.value.has(kid) || autoExpand)
+      // 旁支一律預設收起來（無 auto-expand）。user 按 ▼ 才展開，
+      // 展開後跟 spine 重疊的卡片會被 occlude 隱藏（line 1316）。
+      const expanded = expandedClans.value.has(kid)
 
       nodes.push({
         id: kid,
@@ -1314,10 +1310,9 @@ const cv = computed(() => {
             }
           }
           // Bbox covers the subtree but NOT the parent row, so the spine T-bar above stays visible.
-          // 只有「手動展開 + 大 clan」才 occlude — 避免 該隱 這種小 clan 被手動 re-expand
-          // 後 bbox 把 塞特 spine 後代誤遮。auto-expanded 小 clan 永遠不 occlude（per
-          // 斯多蘭→{蘇比, 以利沙白, 施洗約翰} 與 鄰近 spine 共存的設計）。
-          if (expandedClans.value.has(kid) && subtree.length > 20) expansionBoxes.push(exp.bbox)
+          // 規則：旁支展開後一律 occlude — 跟 spine 重疊區的 spine 卡片整段隱形，
+          // 讓旁支子嗣有足夠視覺空間。大小 clan 都一視同仁。
+          if (expandedClans.value.has(kid)) expansionBoxes.push(exp.bbox)
         }
       }
     }
@@ -1647,23 +1642,12 @@ const ready = computed(() => !!cv.value && cv.value.nodes.length > 0)
 // ── Expansion state — clan toggles in-place ───────────────────────────
 // Keyed by the spine parent's id (the spine person whose clan we're expanding).
 const expandedClans = ref<Set<string>>(new Set())
-// User 手動 collapse 的 clan — 覆蓋 auto-expand（subtree ≤20 預設展開）規則。
-const collapsedClans = ref<Set<string>>(new Set())
 
-function toggleExpand(spineParentId: string, currentlyExpanded: boolean) {
-  const exp = new Set(expandedClans.value)
-  const col = new Set(collapsedClans.value)
-  if (currentlyExpanded) {
-    // user wants to collapse — record explicit collapse, clear any expand override
-    exp.delete(spineParentId)
-    col.add(spineParentId)
-  } else {
-    // user wants to expand — clear any collapse override, record expand
-    col.delete(spineParentId)
-    exp.add(spineParentId)
-  }
-  expandedClans.value = exp
-  collapsedClans.value = col
+function toggleExpand(spineParentId: string) {
+  const s = new Set(expandedClans.value)
+  if (s.has(spineParentId)) s.delete(spineParentId)
+  else s.add(spineParentId)
+  expandedClans.value = s
 }
 
 // ── Card click ────────────────────────────────────────────────────────
@@ -1705,7 +1689,7 @@ function jumpToOther(current: LNode) {
     seen.add(par)
     const ancestorNode = cv.value.nodes.find(n => n.personId === par && !n.hidden)
     if (ancestorNode) {
-      if (!expandedClans.value.has(par)) toggleExpand(par, false)
+      if (!expandedClans.value.has(par)) toggleExpand(par)
       nextTick(() => {
         if (!cv.value) return
         const newPeers = cv.value.nodes.filter(o =>
