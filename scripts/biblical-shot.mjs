@@ -174,7 +174,13 @@ async function panTo(target) {
     const vp = document.querySelector('.bg-stone-50') // viewport
     if (!vp) return
     const cards = Array.from(document.querySelectorAll('.node-card'))
-    const card = cards.find(c => c.textContent?.includes(target))
+    // Cards typically render only the base name (no parenthetical disambig),
+    // so match by base name and prefer the deepest-Y card (handles multiple).
+    const base = target.split('（')[0].trim()
+    const matches = cards.filter(c => c.textContent?.includes(base))
+    if (!matches.length) return
+    matches.sort((a, b) => parseFloat(b.style.top || '0') - parseFloat(a.style.top || '0'))
+    const card = matches[0]
     if (!card) return
     // Find the inner canvas div whose style has transform
     const canvas = vp.querySelector('div[style*="transform"]')
