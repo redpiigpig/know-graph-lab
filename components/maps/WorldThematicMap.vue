@@ -9,7 +9,6 @@
     >
       <rect :width="width" :height="height" fill="#F1F5F9" />
 
-      <!-- countries -->
       <g v-if="paths.length">
         <path
           v-for="p in paths"
@@ -17,8 +16,8 @@
           :d="p.d"
           :fill="p.fill"
           :fill-opacity="p.opacity"
-          stroke="#FFFFFF"
-          :stroke-width="0.4"
+          :stroke="p.isAdmin1 ? '#FFFFFF' : '#FFFFFF'"
+          :stroke-width="p.isAdmin1 ? 0.25 : 0.5"
           class="cursor-pointer"
           style="transition: fill 200ms, fill-opacity 200ms;"
           @click="onCountryClick(p)"
@@ -29,11 +28,7 @@
 
       <!-- Realm labels (default view) -->
       <g v-if="!selectedRealm && realmLabels.length" pointer-events="none">
-        <g
-          v-for="lbl in realmLabels"
-          :key="lbl.id"
-          :transform="`translate(${lbl.x},${lbl.y})`"
-        >
+        <g v-for="lbl in realmLabels" :key="lbl.id" :transform="`translate(${lbl.x},${lbl.y})`">
           <text
             text-anchor="middle"
             :font-size="lbl.fontSize"
@@ -49,17 +44,13 @@
 
       <!-- Sphere labels (drilled view) -->
       <g v-else-if="selectedRealm && sphereLabels.length" pointer-events="none">
-        <g
-          v-for="lbl in sphereLabels"
-          :key="lbl.id"
-          :transform="`translate(${lbl.x},${lbl.y})`"
-        >
+        <g v-for="lbl in sphereLabels" :key="lbl.id" :transform="`translate(${lbl.x},${lbl.y})`">
           <text
             text-anchor="middle"
             :font-size="lbl.fontSize"
             font-weight="600"
             fill="#FFFFFF"
-            stroke="rgba(0,0,0,0.55)"
+            stroke="rgba(0,0,0,0.6)"
             :stroke-width="lbl.fontSize * 0.2"
             paint-order="stroke fill"
             style="font-family: ui-sans-serif, system-ui;"
@@ -78,14 +69,14 @@
       class="pointer-events-none absolute z-10 px-3 py-2 bg-white border border-gray-200 rounded-lg shadow-md text-xs text-gray-800 max-w-[280px]"
       :style="{ left: tooltipPos.x + 'px', top: tooltipPos.y + 'px' }"
     >
-      <div class="font-semibold text-sm mb-1">{{ hovered.nameZh || hovered.nameEn }}</div>
+      <div class="font-semibold text-sm mb-1">{{ hovered.title }}</div>
       <div v-if="hovered.realm" class="flex items-center gap-1.5 mb-1">
         <span class="inline-block w-2.5 h-2.5 rounded-sm" :style="{ background: hovered.realm.color }"></span>
         <span class="text-gray-600">{{ hovered.realm.index }}. {{ hovered.realm.name_zh }}</span>
       </div>
       <div v-if="hovered.spheres.length" class="text-gray-500 text-[11px] leading-relaxed mt-1">
-        <div v-for="s in hovered.spheres" :key="s.sphere.id">
-          · {{ s.sphere.name_zh }}<span v-if="s.member.note" class="text-gray-400"> — {{ s.member.note }}</span>
+        <div v-for="(s, i) in hovered.spheres" :key="i">
+          · {{ s.name }}<span v-if="s.note" class="text-gray-400"> — {{ s.note }}</span>
         </div>
       </div>
     </div>
@@ -117,18 +108,13 @@
         <span class="text-[12px] font-semibold text-gray-900">{{ selectedRealmInfo?.name_zh }}</span>
       </div>
       <div class="grid grid-cols-1 gap-y-1">
-        <div
-          v-for="s in sphereLegendItems"
-          :key="s.id"
-          class="flex items-start gap-1.5 text-[11px]"
-        >
+        <div v-for="s in sphereLegendItems" :key="s.id" class="flex items-start gap-1.5 text-[11px]">
           <span class="inline-block w-3 h-3 rounded-sm flex-shrink-0 mt-0.5" :style="{ background: s.color }"></span>
           <span class="text-gray-700">{{ s.name_zh }}</span>
         </div>
       </div>
     </div>
 
-    <!-- Top-right hint -->
     <div v-if="selectedRealm" class="absolute right-3 top-3 bg-white/95 backdrop-blur rounded-lg border border-gray-200 px-2.5 py-1 shadow-sm">
       <button
         @click="selectedRealm = null"
@@ -147,15 +133,20 @@ import {
   REALMS,
   SPHERES,
   COUNTRY_REALM,
+  COUNTRY_NAME_ZH,
+  COUNTRIES_USING_ADMIN1,
+  ADMIN1_SPHERE,
+  ADMIN1_NAME_ZH,
   realmById,
   spheresByRealm,
   spheresForCountry,
   primarySphereForCountryInRealm,
+  sphereForAdmin1,
+  realmForAdmin1,
   sphereColorsByRealm,
   type Realm,
   type RealmId,
   type CulturalSphere,
-  type Member,
 } from '~/data/maps/world-religions'
 
 const rootEl = ref<HTMLElement | null>(null)
@@ -169,11 +160,12 @@ interface PathItem {
   d: string
   fill: string
   opacity: number
-  code: string
-  nameZh: string
-  nameEn: string
+  isAdmin1: boolean
   realm?: Realm
-  spheres: { sphere: CulturalSphere; member: Member }[]
+  /** title for tooltip */
+  title: string
+  /** sphere display lines for tooltip */
+  spheres: { name: string; note?: string }[]
 }
 
 interface LabelItem {
@@ -184,7 +176,16 @@ interface LabelItem {
   fontSize: number
 }
 
-const features = ref<any[]>([])
+interface FeatureEntry {
+  feature: any
+  isAdmin1: boolean
+  /** unified key — ISO_A3 (admin_0) or iso_3166_2 (admin_1) */
+  key: string
+  /** parent country code (admin_1's adm0_a3, or same as key for admin_0) */
+  countryCode: string
+}
+
+const featureEntries = ref<FeatureEntry[]>([])
 const paths = ref<PathItem[]>([])
 const realmLabels = ref<LabelItem[]>([])
 const sphereLabels = ref<LabelItem[]>([])
@@ -206,10 +207,48 @@ const sphereLegendItems = computed(() => {
   }))
 })
 
-function getCode(props: any): string {
+function getAdm0Code(props: any): string {
   const iso = props.ISO_A3
   if (iso && iso !== '-99') return iso
   return props.ADM0_A3 || ''
+}
+
+/** Realm + (optional) sphere + tooltip data for an entry. */
+function describeEntry(entry: FeatureEntry, drilling: RealmId | null) {
+  let realm: Realm | undefined
+  let sphere: CulturalSphere | undefined
+  let title = ''
+  const spheresList: { name: string; note?: string }[] = []
+
+  if (entry.isAdmin1) {
+    sphere = sphereForAdmin1(entry.key)
+    realm = sphere ? realmById(sphere.realm_id) : undefined
+    const cn = COUNTRY_NAME_ZH[entry.countryCode] || entry.feature.properties.adm0_a3 || ''
+    const adminName = ADMIN1_NAME_ZH[entry.key] || entry.feature.properties.name || entry.key
+    title = cn ? `${cn}・${adminName}` : adminName
+    if (sphere) {
+      // find the matching member to get its note
+      const m = sphere.members.find(mm => mm.iso_a3 === entry.countryCode && mm.admin1)
+        || sphere.members.find(mm => mm.iso_a3 === entry.countryCode)
+      spheresList.push({ name: sphere.name_zh, note: m?.note })
+    }
+  } else {
+    const code = entry.key
+    const realmId = COUNTRY_REALM[code]
+    realm = realmId ? realmById(realmId) : undefined
+    title = COUNTRY_NAME_ZH[code] || entry.feature.properties.NAME || code
+    // list ALL spheres this country participates in (across realms)
+    const ss = spheresForCountry(code)
+    for (const { sphere: s, member: m } of ss) {
+      spheresList.push({ name: s.name_zh, note: m.note })
+    }
+    // for drill-down, pick this country's primary sphere within selected realm
+    if (drilling && realmId === drilling) {
+      sphere = primarySphereForCountryInRealm(code, drilling)
+    }
+  }
+
+  return { realm, sphere, title, spheres: spheresList }
 }
 
 function makeProjection() {
@@ -219,27 +258,23 @@ function makeProjection() {
 }
 
 function rebuildAll() {
-  if (!features.value.length) return
+  if (!featureEntries.value.length) return
   const projection = makeProjection()
   const path = geoPath(projection)
 
-  // ----- Paths -----
   const drilling = selectedRealm.value
   const sphereColors = drilling ? sphereColorsByRealm(drilling) : null
 
-  paths.value = features.value
-    .map((f, i) => {
-      const code = getCode(f.properties)
-      const realmId = COUNTRY_REALM[code]
-      const realm = realmId ? realmById(realmId) : undefined
-      const spheres = spheresForCountry(code)
+  paths.value = featureEntries.value
+    .map((entry, i) => {
+      const { realm, sphere, title, spheres } = describeEntry(entry, drilling)
 
       let fill = '#E5E7EB'
       let opacity = 1
       if (drilling) {
-        if (realmId === drilling) {
-          const sphere = primarySphereForCountryInRealm(code, drilling)
-          fill = sphere && sphereColors ? sphereColors[sphere.id] : (realm?.color ?? '#9CA3AF')
+        if (realm?.id === drilling) {
+          // colored sub-shade by sphere within drilled realm
+          fill = sphere && sphereColors ? sphereColors[sphere.id] : (realm.color)
           opacity = 1
         } else {
           fill = realm ? realm.color : '#E5E7EB'
@@ -250,40 +285,43 @@ function rebuildAll() {
         opacity = 1
       }
 
+      const d = path(entry.feature as any) || ''
       return {
-        id: `${code || 'x'}-${i}`,
-        d: path(f as any) || '',
+        id: `${entry.isAdmin1 ? 'a1' : 'a0'}-${entry.key || 'x'}-${i}`,
+        d,
         fill,
         opacity,
-        code,
-        nameZh: f.properties.NAME_ZH || f.properties.NAME || '',
-        nameEn: f.properties.NAME || '',
+        isAdmin1: entry.isAdmin1,
         realm,
+        title,
         spheres,
       } as PathItem
     })
     .filter(p => p.d)
 
-  // ----- Realm labels (default view) -----
+  // ----- Realm labels (default view) — fixed positions -----
   realmLabels.value = REALMS.map(r => {
     const xy = projection(r.label_lnglat)
     if (!xy) return null
     return { id: r.id, x: xy[0], y: xy[1], text: r.name_zh, fontSize: 17 }
   }).filter(Boolean) as LabelItem[]
 
-  // ----- Sphere labels (drilled view) -----
+  // ----- Sphere labels (drilled view) — auto centroid per sphere -----
   if (drilling) {
     const realmSpheres = spheresByRealm(drilling)
     sphereLabels.value = realmSpheres.map(s => {
-      // collect features whose code matches a member of this sphere
-      const memberCodes = new Set(s.members.map(m => m.iso_a3))
-      const matches = features.value.filter(f => memberCodes.has(getCode(f.properties)))
+      // collect features assigned to this sphere
+      const matches = featureEntries.value.filter(e => {
+        if (e.isAdmin1) return ADMIN1_SPHERE[e.key] === s.id
+        // admin_0: include if a non-extension non-admin1 member matches AND country isn't using admin_1
+        if (COUNTRIES_USING_ADMIN1.has(e.key)) return false
+        return s.members.some(m => m.iso_a3 === e.key && !m.is_extension && !m.admin1)
+      }).map(e => e.feature)
       if (!matches.length) return null
       let lng = 0, lat = 0
       try {
         const c = geoCentroid({ type: 'FeatureCollection', features: matches } as any)
-        lng = c[0]
-        lat = c[1]
+        lng = c[0]; lat = c[1]
       } catch {
         return null
       }
@@ -303,13 +341,12 @@ function onHover(ev: MouseEvent, p: PathItem) {
   let x = ev.clientX - rect.left + 12
   let y = ev.clientY - rect.top + 12
   if (x + 280 > width.value) x = ev.clientX - rect.left - 290
-  if (y + 120 > height.value) y = ev.clientY - rect.top - 130
+  if (y + 140 > height.value) y = ev.clientY - rect.top - 150
   tooltipPos.value = { x, y }
 }
 
 function onCountryClick(p: PathItem) {
   if (!p.realm) return
-  // toggle: clicking a country in selected realm exits drill; else drill into its realm
   if (selectedRealm.value === p.realm.id) {
     selectedRealm.value = null
   } else {
@@ -338,9 +375,29 @@ onMounted(async () => {
   ro.observe(rootEl.value!)
 
   try {
-    const res = await fetch('/maps/ne_50m_admin_0_countries.geojson')
-    const gj = await res.json()
-    features.value = gj.features.filter((f: any) => f.properties.ADM0_A3 !== 'ATA')
+    const [adm0Res, adm1Res] = await Promise.all([
+      fetch('/maps/ne_50m_admin_0_countries.geojson'),
+      fetch('/maps/ne_50m_admin_1_subset.geojson'),
+    ])
+    const [adm0, adm1] = await Promise.all([adm0Res.json(), adm1Res.json()])
+
+    const entries: FeatureEntry[] = []
+
+    // admin_0: skip Antarctica AND skip countries handled by admin_1 (CHN/RUS/USA/CAN)
+    for (const f of adm0.features) {
+      if (f.properties.ADM0_A3 === 'ATA') continue
+      const code = getAdm0Code(f.properties)
+      if (COUNTRIES_USING_ADMIN1.has(code)) continue
+      entries.push({ feature: f, isAdmin1: false, key: code, countryCode: code })
+    }
+    // admin_1
+    for (const f of adm1.features) {
+      const key = f.properties.iso_3166_2
+      const country = f.properties.adm0_a3
+      entries.push({ feature: f, isAdmin1: true, key, countryCode: country })
+    }
+
+    featureEntries.value = entries
     rebuildAll()
   } catch (e) {
     console.error('地圖資料載入失敗', e)

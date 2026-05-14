@@ -510,9 +510,9 @@ export const COUNTRY_REALM: Record<string, RealmId> = {
 
   // 東方 (Yellow)
   PAK: 'eastern', IND: 'eastern', NPL: 'eastern', LKA: 'eastern', BGD: 'eastern', MDV: 'eastern',
-  CHN: 'eastern',  // 漢地為主，圖博/新疆/內蒙在多文化圈列表
-  TWN: 'eastern',
+  CHN: 'eastern',  // 漢地為主；西藏/青海→東方圖博、新疆/內蒙古/東北→北方，由 ADMIN1_SPHERE 細分
   BTN: 'eastern',
+  // TWN: 'asia-pacific'（黑潮）— 在亞太區段定義
 
   // 拉美 (Red)
   MEX: 'latin-america', GTM: 'latin-america', BLZ: 'latin-america', HND: 'latin-america',
@@ -543,7 +543,7 @@ export const COUNTRY_REALM: Record<string, RealmId> = {
 
   // 亞太 (Blue)
   KHM: 'asia-pacific', VNM: 'asia-pacific', MMR: 'asia-pacific', THA: 'asia-pacific', LAO: 'asia-pacific',
-  PRK: 'asia-pacific', KOR: 'asia-pacific', JPN: 'asia-pacific',
+  PRK: 'asia-pacific', KOR: 'asia-pacific', JPN: 'asia-pacific', TWN: 'asia-pacific',  // 台灣→黑潮文化圈
   IDN: 'asia-pacific', MYS: 'asia-pacific', BRN: 'asia-pacific', SGP: 'asia-pacific',
   PHL: 'asia-pacific', TLS: 'asia-pacific',
   VUT: 'asia-pacific', FJI: 'asia-pacific', WSM: 'asia-pacific', TON: 'asia-pacific',
@@ -569,8 +569,215 @@ export const COUNTRY_REALM: Record<string, RealmId> = {
   BLR: 'northern', RUS: 'northern',
   MNG: 'northern',
 
-  // 北美 (Teal)
+  // 北美 (Teal) — USA/CAN 細分由 ADMIN1_SPHERE 處理（夏威夷→亞太、阿拉斯加/北加→北極、魁北克→西方法蘭西）
   USA: 'north-america', CAN: 'north-america', GRL: 'north-america',
+}
+
+/** 繁體中文國名對照（用於 tooltip，避免 NE 內建 NAME_ZH 是簡體+大陸用詞） */
+export const COUNTRY_NAME_ZH: Record<string, string> = {
+  IRQ: '伊拉克', SYR: '敘利亞', LBN: '黎巴嫩', PSE: '巴勒斯坦', ISR: '以色列', JOR: '約旦',
+  EGY: '埃及', SDN: '蘇丹', LBY: '利比亞',
+  GRC: '希臘', CYP: '賽普勒斯', TUR: '土耳其',
+  IRN: '伊朗', AFG: '阿富汗', TJK: '塔吉克',
+  ARM: '亞美尼亞', GEO: '喬治亞', AZE: '亞塞拜然',
+  YEM: '葉門', SAU: '沙烏地阿拉伯', OMN: '阿曼', BHR: '巴林', QAT: '卡達', ARE: '阿拉伯聯合大公國', KWT: '科威特',
+  PAK: '巴基斯坦', IND: '印度', NPL: '尼泊爾', LKA: '斯里蘭卡', BGD: '孟加拉', MDV: '馬爾地夫',
+  CHN: '中國', TWN: '台灣', BTN: '不丹',
+  MEX: '墨西哥', GTM: '瓜地馬拉', BLZ: '貝里斯', HND: '宏都拉斯', SLV: '薩爾瓦多',
+  NIC: '尼加拉瓜', CRI: '哥斯大黎加', PAN: '巴拿馬',
+  PER: '秘魯', BOL: '玻利維亞', ECU: '厄瓜多', COL: '哥倫比亞',
+  CUB: '古巴', DOM: '多明尼加', HTI: '海地', JAM: '牙買加', BHS: '巴哈馬',
+  VEN: '委內瑞拉', GUY: '蓋亞那', SUR: '蘇利南', GUF: '法屬圭亞那',
+  ATG: '安地卡及巴布達', BRB: '巴貝多', DMA: '多米尼克', GRD: '格瑞那達',
+  KNA: '聖克里斯多福及尼維斯', LCA: '聖露西亞', VCT: '聖文森及格瑞那丁', TTO: '千里達及托巴哥',
+  CHL: '智利', ARG: '阿根廷', PRY: '巴拉圭', URY: '烏拉圭', BRA: '巴西',
+  ITA: '義大利', VAT: '梵蒂岡', SMR: '聖馬利諾', ESP: '西班牙', PRT: '葡萄牙',
+  MLT: '馬爾他', MCO: '摩納哥', AND: '安道爾',
+  MKD: '北馬其頓', BGR: '保加利亞', SRB: '塞爾維亞', ROU: '羅馬尼亞', ALB: '阿爾巴尼亞',
+  BIH: '波士尼亞與赫塞哥維納', HRV: '克羅埃西亞', MNE: '蒙特內哥羅', SVN: '斯洛維尼亞', KOS: '科索沃', MDA: '摩爾多瓦',
+  FRA: '法國',
+  GBR: '英國', IRL: '愛爾蘭', FLK: '福克蘭群島',
+  DEU: '德國', AUT: '奧地利', CHE: '瑞士', CZE: '捷克', HUN: '匈牙利', SVK: '斯洛伐克', POL: '波蘭', LIE: '列支敦斯登',
+  BEL: '比利時', NLD: '荷蘭', LUX: '盧森堡',
+  UKR: '烏克蘭', LTU: '立陶宛', LVA: '拉脫維亞',
+  DNK: '丹麥', SWE: '瑞典', NOR: '挪威', ISL: '冰島', FIN: '芬蘭', EST: '愛沙尼亞',
+  TUN: '突尼西亞', DZA: '阿爾及利亞', MAR: '摩洛哥', ESH: '西撒哈拉',
+  KHM: '柬埔寨', VNM: '越南', MMR: '緬甸', THA: '泰國', LAO: '寮國',
+  PRK: '北韓', KOR: '韓國', JPN: '日本',
+  IDN: '印尼', MYS: '馬來西亞', BRN: '汶萊', SGP: '新加坡', PHL: '菲律賓', TLS: '東帝汶',
+  VUT: '萬那杜', FJI: '斐濟', WSM: '薩摩亞', TON: '東加',
+  PLW: '帛琉', FSM: '密克羅尼西亞聯邦', MHL: '馬紹爾群島', KIR: '吉里巴斯',
+  NRU: '諾魯', TUV: '吐瓦魯', PNG: '巴布亞紐幾內亞', SLB: '索羅門群島',
+  AUS: '澳洲', NZL: '紐西蘭',
+  ETH: '衣索比亞', ERI: '厄利垂亞',
+  MLI: '馬利', SEN: '塞內加爾', NER: '尼日', CPV: '維德角',
+  BFA: '布吉納法索', GIN: '幾內亞', GMB: '甘比亞', GNB: '幾內亞比索', MRT: '茅利塔尼亞', TCD: '查德',
+  SOM: '索馬利亞', KEN: '肯亞', TZA: '坦尚尼亞', MDG: '馬達加斯加', SSD: '南蘇丹',
+  UGA: '烏干達', RWA: '盧安達', BDI: '蒲隆地', DJI: '吉布地', COM: '葛摩', SYC: '塞席爾',
+  NGA: '奈及利亞', GHA: '迦納', LBR: '賴比瑞亞',
+  BEN: '貝南', TGO: '多哥', CIV: '象牙海岸', SLE: '獅子山',
+  COD: '剛果民主共和國', COG: '剛果共和國', CMR: '喀麥隆', CAF: '中非共和國',
+  GAB: '加彭', GNQ: '赤道幾內亞', STP: '聖多美普林西比',
+  ZWE: '辛巴威', MOZ: '莫三比克', ZAF: '南非', AGO: '安哥拉', NAM: '納米比亞',
+  BWA: '波札那', ZMB: '尚比亞', MWI: '馬拉威', LSO: '賴索托', SWZ: '史瓦帝尼',
+  UZB: '烏茲別克', TKM: '土庫曼', KGZ: '吉爾吉斯', KAZ: '哈薩克',
+  BLR: '白俄羅斯', RUS: '俄羅斯', MNG: '蒙古',
+  USA: '美國', CAN: '加拿大', GRL: '格陵蘭',
+}
+
+/** 採用 admin_1 子國家行政區細分上色的國家 */
+export const COUNTRIES_USING_ADMIN1 = new Set<string>(['CHN', 'RUS', 'USA', 'CAN'])
+
+/** iso_3166_2 → sphere id（次國家行政區歸屬）。文件未指定的省份依預設： */
+export const ADMIN1_SPHERE: Record<string, string> = {
+  // ---------- 中國 (CHN) ----------
+  // 圖博文化圈（東方界域）
+  'CN-XZ': 'tibetan',  // 西藏自治區
+  'CN-QH': 'tibetan',  // 青海（藏族高原）
+  // 圖蘭-突厥文化圈（北方界域）
+  'CN-XJ': 'turanian-turkic',  // 新疆維吾爾自治區
+  // 蒙古-滿洲文化圈（北方界域）
+  'CN-NM': 'mongolic-manchurian',  // 內蒙古自治區
+  'CN-HL': 'mongolic-manchurian',  // 黑龍江
+  'CN-JL': 'mongolic-manchurian',  // 吉林
+  'CN-LN': 'mongolic-manchurian',  // 遼寧
+  // 漢地文化圈（東方界域）— 其餘 24 省 / 直轄市 / 自治區
+  'CN-GS': 'han', 'CN-GX': 'han', 'CN-GZ': 'han', 'CN-CQ': 'han', 'CN-BJ': 'han',
+  'CN-FJ': 'han', 'CN-AH': 'han', 'CN-GD': 'han', 'CN-HI': 'han', 'CN-NX': 'han',
+  'CN-SN': 'han', 'CN-SX': 'han', 'CN-HB': 'han', 'CN-HN': 'han', 'CN-SC': 'han',
+  'CN-YN': 'han', 'CN-HE': 'han', 'CN-HA': 'han', 'CN-SD': 'han', 'CN-TJ': 'han',
+  'CN-JX': 'han', 'CN-JS': 'han', 'CN-SH': 'han', 'CN-ZJ': 'han',
+
+  // ---------- 俄羅斯 (RUS) ----------
+  // 高加索文化圈（中央界域）
+  'RU-AD': 'caucasus', 'RU-KC': 'caucasus', 'RU-IN': 'caucasus', 'RU-KB': 'caucasus',
+  'RU-SE': 'caucasus', 'RU-CE': 'caucasus', 'RU-DA': 'caucasus',
+  'RU-STA': 'caucasus', 'RU-KDA': 'caucasus',
+  // 中歐文化圈（西方界域）
+  'RU-KGD': 'central-european',  // 加里寧格勒
+  // 蒙古-滿洲文化圈（北方界域）
+  'RU-BU': 'mongolic-manchurian', 'RU-TY': 'mongolic-manchurian', 'RU-KL': 'mongolic-manchurian',
+  'RU-AMU': 'mongolic-manchurian', 'RU-ZAB': 'mongolic-manchurian', 'RU-PRI': 'mongolic-manchurian',
+  'RU-YEV': 'mongolic-manchurian', 'RU-KHA': 'mongolic-manchurian',
+  'RU-MAG': 'mongolic-manchurian', 'RU-SAK': 'mongolic-manchurian',
+  // 北極文化圈（北美界域）
+  'RU-CHU': 'arctic',  // 楚科奇
+  'RU-SA': 'arctic',   // 薩哈/雅庫特
+  // 羅斯-韃靼文化圈（北方界域）— 歐俄部分
+  'RU-MUR': 'russian-tatar', 'RU-NGR': 'russian-tatar', 'RU-PSK': 'russian-tatar',
+  'RU-LEN': 'russian-tatar', 'RU-SPE': 'russian-tatar', 'RU-BRY': 'russian-tatar',
+  'RU-SMO': 'russian-tatar', 'RU-KR': 'russian-tatar', 'RU-ARK': 'russian-tatar',
+  'RU-IVA': 'russian-tatar', 'RU-VLG': 'russian-tatar', 'RU-KOS': 'russian-tatar',
+  'RU-NIZ': 'russian-tatar', 'RU-TVE': 'russian-tatar', 'RU-YAR': 'russian-tatar',
+  'RU-KLU': 'russian-tatar', 'RU-KRS': 'russian-tatar', 'RU-LIP': 'russian-tatar',
+  'RU-MOW': 'russian-tatar', 'RU-MOS': 'russian-tatar', 'RU-ORL': 'russian-tatar',
+  'RU-ROS': 'russian-tatar', 'RU-TUL': 'russian-tatar', 'RU-VGG': 'russian-tatar',
+  'RU-BEL': 'russian-tatar', 'RU-MO': 'russian-tatar', 'RU-PNZ': 'russian-tatar',
+  'RU-RYA': 'russian-tatar', 'RU-TAM': 'russian-tatar', 'RU-VLA': 'russian-tatar',
+  'RU-VOR': 'russian-tatar', 'RU-BA': 'russian-tatar', 'RU-KIR': 'russian-tatar',
+  'RU-ME': 'russian-tatar', 'RU-UD': 'russian-tatar', 'RU-AST': 'russian-tatar',
+  'RU-CU': 'russian-tatar', 'RU-SAM': 'russian-tatar', 'RU-ORE': 'russian-tatar',
+  'RU-SAR': 'russian-tatar', 'RU-TA': 'russian-tatar', 'RU-ULY': 'russian-tatar',
+  'RU-KO': 'russian-tatar', 'RU-NEN': 'russian-tatar', 'RU-PER': 'russian-tatar',
+  'RU-CHE': 'russian-tatar', 'RU-KGN': 'russian-tatar', 'RU-SVE': 'russian-tatar',
+  // 西伯利亞文化圈（北方界域）— 烏拉以東
+  'RU-YAN': 'siberian', 'RU-KHM': 'siberian',
+  'RU-OMS': 'siberian', 'RU-TYU': 'siberian', 'RU-TOM': 'siberian',
+  'RU-NVS': 'siberian', 'RU-KEM': 'siberian', 'RU-ALT': 'siberian', 'RU-AL': 'siberian',
+  'RU-KK': 'siberian', 'RU-IRK': 'siberian', 'RU-KYA': 'siberian', 'RU-KAM': 'siberian',
+
+  // ---------- 美國 (USA) ----------
+  // 太平洋文化圈（亞太界域）
+  'US-HI': 'pacific',
+  // 北極文化圈（北美界域）
+  'US-AK': 'arctic',
+  // 盎格魯美洲文化圈（北美界域）— 本土 48 州 + DC
+  'US-AL': 'anglo-american', 'US-AR': 'anglo-american', 'US-AZ': 'anglo-american',
+  'US-CA': 'anglo-american', 'US-CO': 'anglo-american', 'US-CT': 'anglo-american',
+  'US-DC': 'anglo-american', 'US-DE': 'anglo-american', 'US-FL': 'anglo-american',
+  'US-GA': 'anglo-american', 'US-IA': 'anglo-american', 'US-ID': 'anglo-american',
+  'US-IL': 'anglo-american', 'US-IN': 'anglo-american', 'US-KS': 'anglo-american',
+  'US-KY': 'anglo-american', 'US-LA': 'anglo-american', 'US-MA': 'anglo-american',
+  'US-MD': 'anglo-american', 'US-ME': 'anglo-american', 'US-MI': 'anglo-american',
+  'US-MN': 'anglo-american', 'US-MO': 'anglo-american', 'US-MS': 'anglo-american',
+  'US-MT': 'anglo-american', 'US-NC': 'anglo-american', 'US-ND': 'anglo-american',
+  'US-NE': 'anglo-american', 'US-NH': 'anglo-american', 'US-NJ': 'anglo-american',
+  'US-NM': 'anglo-american', 'US-NV': 'anglo-american', 'US-NY': 'anglo-american',
+  'US-OH': 'anglo-american', 'US-OK': 'anglo-american', 'US-OR': 'anglo-american',
+  'US-PA': 'anglo-american', 'US-RI': 'anglo-american', 'US-SC': 'anglo-american',
+  'US-SD': 'anglo-american', 'US-TN': 'anglo-american', 'US-TX': 'anglo-american',
+  'US-UT': 'anglo-american', 'US-VA': 'anglo-american', 'US-VT': 'anglo-american',
+  'US-WA': 'anglo-american', 'US-WI': 'anglo-american', 'US-WV': 'anglo-american',
+  'US-WY': 'anglo-american',
+
+  // ---------- 加拿大 (CAN) ----------
+  // 高盧-法蘭西文化圈（西方界域）
+  'CA-QC': 'gallic-french',  // 魁北克
+  // 北極文化圈（北美界域）
+  'CA-NT': 'arctic', 'CA-NU': 'arctic', 'CA-YT': 'arctic',
+  // 盎格魯美洲文化圈（北美界域）— 南方各省
+  'CA-AB': 'anglo-american', 'CA-BC': 'anglo-american', 'CA-MB': 'anglo-american',
+  'CA-NB': 'anglo-american', 'CA-NL': 'anglo-american', 'CA-NS': 'anglo-american',
+  'CA-ON': 'anglo-american', 'CA-PE': 'anglo-american', 'CA-SK': 'anglo-american',
+}
+
+/** Admin_1 名稱對照（繁體中文，用於 tooltip 顯示） */
+export const ADMIN1_NAME_ZH: Record<string, string> = {
+  // CHN
+  'CN-GS': '甘肅省', 'CN-QH': '青海省', 'CN-GX': '廣西壯族自治區', 'CN-GZ': '貴州省',
+  'CN-CQ': '重慶市', 'CN-BJ': '北京市', 'CN-FJ': '福建省', 'CN-AH': '安徽省',
+  'CN-GD': '廣東省', 'CN-XZ': '西藏自治區', 'CN-XJ': '新疆維吾爾自治區', 'CN-HI': '海南省',
+  'CN-NX': '寧夏回族自治區', 'CN-SN': '陝西省', 'CN-SX': '山西省', 'CN-HB': '湖北省',
+  'CN-HN': '湖南省', 'CN-SC': '四川省', 'CN-YN': '雲南省', 'CN-HE': '河北省',
+  'CN-HA': '河南省', 'CN-LN': '遼寧省', 'CN-SD': '山東省', 'CN-TJ': '天津市',
+  'CN-JX': '江西省', 'CN-JS': '江蘇省', 'CN-SH': '上海市', 'CN-ZJ': '浙江省',
+  'CN-JL': '吉林省', 'CN-NM': '內蒙古自治區', 'CN-HL': '黑龍江省',
+  // USA — 全 50 州 + DC，繁體中文
+  'US-AK': '阿拉斯加州', 'US-AL': '阿拉巴馬州', 'US-AR': '阿肯色州', 'US-AZ': '亞利桑那州',
+  'US-CA': '加利福尼亞州', 'US-CO': '科羅拉多州', 'US-CT': '康乃狄克州', 'US-DC': '華盛頓哥倫比亞特區',
+  'US-DE': '德拉瓦州', 'US-FL': '佛羅里達州', 'US-GA': '喬治亞州', 'US-HI': '夏威夷州',
+  'US-IA': '愛荷華州', 'US-ID': '愛達荷州', 'US-IL': '伊利諾州', 'US-IN': '印第安納州',
+  'US-KS': '堪薩斯州', 'US-KY': '肯塔基州', 'US-LA': '路易斯安那州', 'US-MA': '麻薩諸塞州',
+  'US-MD': '馬里蘭州', 'US-ME': '緬因州', 'US-MI': '密西根州', 'US-MN': '明尼蘇達州',
+  'US-MO': '密蘇里州', 'US-MS': '密西西比州', 'US-MT': '蒙大拿州', 'US-NC': '北卡羅萊納州',
+  'US-ND': '北達科他州', 'US-NE': '內布拉斯加州', 'US-NH': '新罕布夏州', 'US-NJ': '紐澤西州',
+  'US-NM': '新墨西哥州', 'US-NV': '內華達州', 'US-NY': '紐約州', 'US-OH': '俄亥俄州',
+  'US-OK': '奧克拉荷馬州', 'US-OR': '奧勒岡州', 'US-PA': '賓夕法尼亞州', 'US-RI': '羅德島州',
+  'US-SC': '南卡羅萊納州', 'US-SD': '南達科他州', 'US-TN': '田納西州', 'US-TX': '德克薩斯州',
+  'US-UT': '猶他州', 'US-VA': '維吉尼亞州', 'US-VT': '佛蒙特州', 'US-WA': '華盛頓州',
+  'US-WI': '威斯康辛州', 'US-WV': '西維吉尼亞州', 'US-WY': '懷俄明州',
+  // CAN
+  'CA-AB': '亞伯達省', 'CA-BC': '不列顛哥倫比亞省', 'CA-MB': '曼尼托巴省', 'CA-NB': '新伯倫瑞克省',
+  'CA-NL': '紐芬蘭與拉布拉多省', 'CA-NS': '新斯科細亞省', 'CA-NT': '西北地區', 'CA-NU': '努納武特地區',
+  'CA-ON': '安大略省', 'CA-PE': '愛德華王子島省', 'CA-QC': '魁北克省', 'CA-SK': '薩克其萬省',
+  'CA-YT': '育空地區',
+  // RUS — 重點區域繁體中文（其他 fallback NE 簡體名稱）
+  'RU-AD': '阿迪格共和國', 'RU-KC': '卡拉恰耶夫切爾克斯共和國', 'RU-IN': '印古什共和國',
+  'RU-KB': '卡巴爾達巴爾卡爾共和國', 'RU-SE': '北奧塞梯共和國', 'RU-CE': '車臣共和國',
+  'RU-DA': '達吉斯坦共和國', 'RU-STA': '斯塔夫羅波爾邊疆區', 'RU-KDA': '克拉斯諾達爾邊疆區',
+  'RU-KGD': '加里寧格勒州', 'RU-CHU': '楚科奇自治區', 'RU-SA': '薩哈共和國（雅庫特）',
+  'RU-BU': '布里亞特共和國', 'RU-TY': '圖瓦共和國', 'RU-KL': '卡爾梅克共和國',
+  'RU-AMU': '阿穆爾州', 'RU-ZAB': '外貝加爾邊疆區', 'RU-PRI': '濱海邊疆區',
+  'RU-YEV': '猶太自治州', 'RU-KHA': '哈巴羅夫斯克邊疆區',
+  'RU-MAG': '馬加丹州', 'RU-SAK': '薩哈林州', 'RU-KAM': '堪察加邊疆區',
+  'RU-MOW': '莫斯科州', 'RU-MOS': '莫斯科', 'RU-SPE': '聖彼得堡',
+  'RU-LEN': '列寧格勒州', 'RU-MUR': '摩爾曼斯克州', 'RU-KR': '卡累利阿共和國',
+  'RU-ARK': '阿爾漢格爾斯克州', 'RU-NEN': '涅涅茨自治區',
+  'RU-KO': '科米共和國', 'RU-PER': '彼爾姆邊疆區', 'RU-SVE': '斯維爾德洛夫斯克州',
+  'RU-CHE': '車里雅賓斯克州', 'RU-TA': '韃靼斯坦共和國', 'RU-BA': '巴什科爾托斯坦共和國',
+  'RU-KYA': '克拉斯諾亞爾斯克邊疆區', 'RU-IRK': '伊爾庫茨克州',
+}
+
+/** 給一個 admin_1 iso_3166_2 代碼，回傳所屬文化圈與界域 */
+export function sphereForAdmin1(iso_3166_2: string): CulturalSphere | undefined {
+  const sphereId = ADMIN1_SPHERE[iso_3166_2]
+  if (!sphereId) return undefined
+  return SPHERES.find(s => s.id === sphereId)
+}
+
+export function realmForAdmin1(iso_3166_2: string): Realm | undefined {
+  const sphere = sphereForAdmin1(iso_3166_2)
+  return sphere ? realmById(sphere.realm_id) : undefined
 }
 
 export function realmById(id: RealmId): Realm {
