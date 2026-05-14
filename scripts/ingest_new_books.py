@@ -379,7 +379,16 @@ def cmd_run(limit: int | None, dry_run: bool):
         # Pre-flight: ensure target dir exists & target file doesn't already exist
         target.parent.mkdir(parents=True, exist_ok=True)
         if target.exists():
-            print("  SKIP: target already exists on Drive")
+            # Duplicate already on Drive — delete the z-lib/ copy so daily runs
+            # don't keep scanning the same dupes. Log sizes for verification.
+            try:
+                z_size = p.stat().st_size
+                t_size = target.stat().st_size
+                print(f"  SKIP: target already exists on Drive "
+                      f"(z-lib={z_size // 1024} KB, drive={t_size // 1024} KB) — deleting z-lib copy")
+                p.unlink()
+            except Exception as e:
+                print(f"  SKIP: target already exists on Drive (delete failed: {e})")
             fail += 1
             continue
 

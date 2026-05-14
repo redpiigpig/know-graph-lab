@@ -261,7 +261,7 @@ python scripts/ingest_new_books.py run                 # full sweep
 - **Move fails after DB insert** → file kept in `z-lib/`, DB row inserted but file not on Drive. Script prints both paths so you can either move manually or delete the row. Rare on Windows (cross-drive move = copy then delete).
 - **Gemini quota / 429** → that single book is skipped (file kept), other books continue with the keyword fallback. Tomorrow's run picks up the skipped book.
 - **Filename can't be parsed** (no usable title) → logged "SKIP: could not parse title from filename"; file kept; add a manual override to `parse_drive_inventory.TITLE_AUTHOR_OVERRIDES` or rename the file manually.
-- **Target file already exists on Drive** (duplicate book) → skip, file kept in `z-lib/`. Manual cleanup needed.
+- **Target file already exists on Drive** (duplicate book) → **auto-delete the `z-lib/` copy** (since 2026-05-14). Logs both file sizes for verification before unlinking. User explicitly asked for this so daily runs stop re-scanning the same dupes.
 
 ### Tuning notes
 
@@ -522,6 +522,84 @@ UPDATE books SET metadata_locked = true WHERE id = '...';
 Optional improvement: set `GOOGLE_BOOKS_API_KEY` in `.env` for higher
 quota (anonymous tier is fine for dozens of rows; useful only if
 re-running over hundreds).
+
+### 套書 splitting — pending (user-requested 2026-05-14)
+
+The library has **34 ebook rows whose title matches a 套書 / 全集 / 套裝
+pattern**. The user has explicitly asked to split these into one ebook
+row per volume so the reader sidebar / bookshelf treats each volume as
+a standalone book.
+
+Two categories by how separable the source is:
+
+**Splittable now (~22 books)** — the EPUB went through the hierarchical
+TOC path during standardize_ebook, so chunks already carry a `volume`
+field naming each volume. Examples:
+- 三毛典藏全集（14本套裝） — 9 volumes (稻草人手記 / 雨季不再來 / 撒哈拉的故事 …)
+- 商務印書館漢譯歷史套裝（24冊） — 18 volumes
+- 理想國譯叢系列 套裝32冊 — 26 volumes
+- 不可不知的歷史系列(13冊) — 12 volumes
+- 美國百年困局與當下危機（套裝共10冊） — 7 volumes
+- 換個角度讀歷史（套裝共3冊） — 3 volumes
+- 諾曼風雲+拜占庭+維京傳奇 套裝共4冊 — 4 volumes
+- 中東大歷史（共5冊） — 5 volumes
+- 康德著作集（套裝10冊） — 10 volumes (2 duplicate ebook entries)
+- 周國平尼采譯著系列 — 5 volumes
+- 塞北帝國史系列 — 3 volumes
+- 世界史的拼圖（7冊） — 7 volumes
+- 柏拉圖哲學作品集（套裝6冊） — 4 volumes
+- 德意志帝國全集 — 4 volumes
+- 撒哈拉的故事（三毛全集·02） — 2 volumes
+
+**Unsplittable without further work (~12 books)** — chunks have `volume=None`
+throughout (either flat-TOC EPUB, OR a PDF with no `volume` metadata at all).
+Need either font-size analysis or LLM-detect-volume-boundaries to make these
+splittable. Examples:
+- 神學大全（第1冊 / 第2冊 / 第3冊）— PDFs, no volume metadata (note: each `冊` is already its own ebook row, just no further split needed)
+- 印順法師佛學著作全集(上)(下) — PDFs
+- 世界佛教通史（14卷）— EPUB, flat-TOC
+- 卡謬全集（6卷）— EPUB
+- 二十世紀西方哲學經典（套裝共10冊）— EPUB
+- 弗洛伊德作品集(共四冊) — EPUB
+
+#### Splitting plan (NOT YET EXECUTED — user approval needed)
+
+For each splittable book:
+1. Read its JSONL
+2. Group chunks by `volume` field; chunks with `volume=None` (cover /
+   出版資訊 / 目錄) fold into the FIRST volume in document order
+3. For each volume group, create a NEW `ebooks` row:
+   - `title` = volume name (e.g. `稻草人手記`)
+   - `author`, `category`, `subcategory` = inherited from original
+   - `file_path` = original (same source EPUB — read-only)
+   - `parse_error` = `'split from set; do not re-standardize'` (marker so
+     re-runs don't regenerate full bundle into one volume's JSONL slot)
+   - `parsed_at` = current UTC
+4. Write per-volume JSONL with renumbered chunk_index (0..N-1)
+5. Push to R2 (gzipped)
+6. Insert `ebook_chunks` previews (200-char per chunk)
+7. **AFTER all new rows for a book are verified** (chunk_count sums to original),
+   delete the original ebook row + its chunks + JSONL (local) + R2 obj
+
+#### Annotation guard
+
+Currently 3 ebooks have annotations:
+- 文明的歷史 (181798a6-…) — 2 annotations
+- A state of mixture (e2337cce-…) — 2 annotations
+- 道教簡史 (0c29e6af-…) — 1 annotation
+
+None are 套書, so safe. **Re-check before running** in case new annotations
+have been added.
+
+#### Implementation
+Future session should write `scripts/split_ebook_set.py` with:
+- `python scripts/split_ebook_set.py status` — list splittable + unsplittable
+- `python scripts/split_ebook_set.py run --book <id> --dry-run` — preview volumes
+- `python scripts/split_ebook_set.py run --book <id>` — split one book
+- `python scripts/split_ebook_set.py run --all` — batch all splittable
+
+DO NOT run `--all` without first running on 1 book and having user
+spot-check the result in the reader UI.
 
 ## See also
 
