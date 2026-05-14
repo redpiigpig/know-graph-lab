@@ -150,6 +150,11 @@
                        text-[10px] font-medium shadow-sm hover:bg-amber-50 transition leading-tight
                        text-center cursor-default"
                 @click.stop="fitSpine">定位<br>主幹</button>
+        <button class="px-1 py-1.5 bg-white/90 border border-teal-300 rounded-lg text-teal-700
+                       text-[10px] font-medium shadow-sm hover:bg-teal-50 transition leading-tight
+                       text-center cursor-default"
+                title="一鍵展開利未→馬加比→希律 + 哈拿尼雅→Exilarch+Hillel-Nasi"
+                @click.stop="expandDynasties">🏛️<br>展開<br>朝代</button>
       </div>
 
       <!-- Legend (only at top level) -->
@@ -1884,6 +1889,21 @@ function toggleExpand(spineParentId: string) {
   const s = new Set(expandedClans.value)
   if (s.has(spineParentId)) s.delete(spineParentId)
   else s.add(spineParentId)
+  expandedClans.value = s
+}
+
+// 一鍵展開朝代線：利未（→ Aaron → 馬加比 → 經 馬利安美一世 嫁入 → 希律）
+// + 哈拿尼雅（所羅巴伯之子，→ 亞乃 → 巴比倫 Exilarch；→ 哈突 → 希勒爾-Nasi）。
+// 兩個 anchor 是各自所在主幹的「first off-spine kid」，所以放入 expandedClans 後
+// recursive layoutSubtree 會自動往下渲染整條 dynasty。
+function expandDynasties() {
+  const anchors = ['利未', '哈拿尼雅（所羅巴伯之子）']
+  const byName = personByName.value
+  const s = new Set(expandedClans.value)
+  for (const name of anchors) {
+    const node = byName.get(name)
+    if (node) s.add(node.id)
+  }
   expandedClans.value = s
 }
 
