@@ -488,12 +488,14 @@ const cv = computed(() => {
     const myY = rowY(gen - 1)   // 1-based gen → 0-based row, same scale as main spine
     // Follow children via effectiveChildIds (includes via-spouse for women like
     // 利百加 / 拉班 daughters), BUT cut off at spine nodes — their descendants are
-    // already drawn on the main spine, drawing them again would duplicate. Also
-    // skip daughters who are rendered as a spouse on the main chart (彼土利 →
-    // 利百加 跳過，利百加 已在 以撒 旁邊以妻位渲染；descendants 已在父系下方）.
-    const kids = rowOf.has(rootId)
-      ? []  // spine node — render this card as leaf marker
-      : effectiveChildIds(rootId).filter(c => !vis.has(c) && !renderedAsSpouseOnSpine.has(c))
+    // already drawn on the main spine, drawing them again would duplicate.
+    // ALSO cut off at married-out daughters (in renderedAsSpouseOnSpine): the
+    // daughter herself shows as a leaf in her father's tree, but her descendants
+    // belong to husband's family tree and shouldn't be counted/drawn here.
+    const isMarriedOut = renderedAsSpouseOnSpine.has(rootId)
+    const kids = rowOf.has(rootId) || isMarriedOut
+      ? []  // spine node or married-out daughter — render as leaf
+      : effectiveChildIds(rootId).filter(c => !vis.has(c))
 
     if (kids.length === 0) {
       const myNode: LNode = {
@@ -1109,7 +1111,15 @@ const cv = computed(() => {
       const kidSpouseIds = sp.get(kid) ?? []
       const hasSpineSpouse = kidSpouseIds.some(spId => rowOf.has(spId))
       const isFemale = kp.data.gender === 'female'
-      const subtree = subtreeIds(kid).filter(id => id !== kid)
+      // Cap subtree at married-out daughters — her descendants are husband's
+      // tree, not this clan's. Otherwise 拿鶴 ▼ would include 利百加→Jacob→Jesus.
+      const subtreeCapped = (id: string, vis = new Set<string>()): string[] => {
+        if (vis.has(id)) return []
+        vis.add(id)
+        if (renderedAsSpouseOnSpine.has(id) && id !== kid) return [id]
+        return [id, ...effectiveChildIds(id).flatMap(c => subtreeCapped(c, vis))]
+      }
+      const subtree = subtreeCapped(kid).filter(id => id !== kid)
       const hasSub  = subtree.length > 0 && !hasSpineSpouse && !isFemale
       const expanded = expandedClans.value.has(kid)
 
