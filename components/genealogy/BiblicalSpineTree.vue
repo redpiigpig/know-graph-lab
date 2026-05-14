@@ -1422,8 +1422,14 @@ const cv = computed(() => {
         const groupKidXs = groupKids.map(k => kidX.get(k)!).filter(v => v !== undefined)
         if (groupKidXs.length === 0) continue
         const barY = motherBarY.get(mom)!
-        const minBarX = Math.min(groupMidX, ...groupKidXs)
-        const maxBarX = Math.max(groupMidX, ...groupKidXs)
+        // null-mom T-bar 要延伸到最後一妻的 center，跟婚姻紅線無縫接上
+        // (例：大衛在耶路撒冷生的 11 子，T-bar 從最左 child 一路紅到哈及)。
+        const barExtremes = [groupMidX, ...groupKidXs]
+        if (mom === null && wifeIds.length > 0) {
+          barExtremes.push(wifeLX.get(wifeIds[wifeIds.length - 1])! + NW / 2)
+        }
+        const minBarX = Math.min(...barExtremes)
+        const maxBarX = Math.max(...barExtremes)
         // 婚姻線顏色：只有橫向婚姻線（夫妻之間）是紅色，其他全灰。
         // 例：亞當-夏娃 紅色婚姻線；marLineY→barY drop = 灰、T-bar = 灰、kid drop = 灰。
         if (barY !== marLineY) {
