@@ -512,7 +512,7 @@ def process_one(client, book, src_path, model, max_retries=3):
                 else:
                     raise
             pages = data.get("pages", [])
-            non_empty = [p for p in pages if (p.get("text") or "").strip()]
+            non_empty = [p for p in pages if isinstance(p, dict) and (p.get("text") or "").strip()]
             if not non_empty:
                 # If model returned no usable text, this is permanent (OCR genuinely failed)
                 return {"status": "fail", "error": "model returned 0 usable pages", "transient": False}
@@ -712,6 +712,18 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False,
             print(f"  [{i:3d}/{len(targets)}] ⚠ source missing: {src}", file=sys.stderr)
             update_book_error(b["id"], f"file not found: {src}")
             failed.append((b["title"], "source missing"))
+            continue
+
+        # Pre-flight: 0-byte files just trigger 400 INVALID_ARGUMENT on Gemini.
+        # Mark permanent so they leave the OCR queue without burning an API call.
+        try:
+            fsize = src.stat().st_size
+        except Exception:
+            fsize = -1
+        if fsize == 0:
+            print(f"  [{i:3d}/{len(targets)}] ⚠ empty file (0 bytes): {src.name}", file=sys.stderr)
+            update_book_error(b["id"], "OCR: source file is empty (0 bytes)")
+            failed.append((b["title"], "empty file"))
             continue
 
         # Rate limit
