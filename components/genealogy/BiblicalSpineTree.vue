@@ -1218,10 +1218,10 @@ const cv = computed(() => {
       }
       const subtree = subtreeCapped(kid).filter(id => id !== kid)
       const hasSub  = subtree.length > 0 && !hasSpineSpouse && !isFemale
-      // 中小 clan (≤20 人) 預設展開 — 例如 斯多蘭→{亞拿,蘇比,以利沙白,施洗約翰}
-      // 與 拿鶴→{彼土利,...,拉結,利亞} 都該預設可見
-      // 巨型 clan (亞伯拉罕全族 ~300 人) 仍需手動點 ▼ 展開
-      const expanded = expandedClans.value.has(kid) || (hasSub && subtree.length <= 20)
+      // 小 clan (≤5 人) 預設展開 — 例如 斯多蘭→{亞拿,蘇比,以利沙白,施洗約翰}
+      // 中型/大型 clan (如 拿鶴 16 人) 暫時保持手動點 ▼，因 auto-expand 規模太大會
+      // 觸發 collision-pass 連鎖位移，整列被拉散（如 謝拉/法勒斯 row 被推到 x=6964）。
+      const expanded = expandedClans.value.has(kid) || (hasSub && subtree.length <= 5)
 
       nodes.push({
         id: kid,
@@ -1623,8 +1623,9 @@ const cv = computed(() => {
     // 主幹 guide line 跟卡片就分離了。
     const isAnchored = (n: LNode) => rowOf.has(n.personId)
     for (const ns of yBuckets.values()) {
-      // 多輪掃，最多 ns.length 次（cascading 收斂上限）
-      for (let pass = 0; pass < ns.length + 2; pass++) {
+      // 多輪掃，cascading 收斂上限放寬到 3×ns.length（同 row 同時有 anchored +
+      // 多個非 anchored 互相推擠時，往左 cascade 需要的 pass 數比簡單收斂多）。
+      for (let pass = 0; pass < ns.length * 3 + 4; pass++) {
         ns.sort((a, b) => a.x - b.x)
         let anyShift = false
         for (let i = 1; i < ns.length; i++) {
@@ -1636,7 +1637,12 @@ const cv = computed(() => {
             shiftCardAndLines(right, overlap)
             anyShift = true
           } else if (!isAnchored(left)) {
-            shiftCardAndLines(left, -overlap)
+            // 右側是 spine anchored → 把 left 及其左邊所有非 anchored 卡 一起往
+            // 左推 overlap，cluster 整體位移，避免反覆 ping-pong。
+            for (let j = i - 1; j >= 0; j--) {
+              if (isAnchored(ns[j])) break
+              shiftCardAndLines(ns[j], -overlap)
+            }
             anyShift = true
           }
           // 兩邊都是 spine（罕見）→ 接受重疊

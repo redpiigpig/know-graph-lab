@@ -39,7 +39,7 @@ await page.waitForTimeout(2000)
 
 const dump = await page.evaluate(() => {
   const cards = Array.from(document.querySelectorAll('.node-card'))
-  const TARGETS = ['拿鶴', '烏斯', '瑪迦', '彼土利', '布斯', '戶斯', '基母利', '基薛', '哈瑣', '必達', '益拉', '他拉', '亞伯拉罕', '哈蘭']
+  const TARGETS = ['法勒斯', '謝拉', '示拉', '俄南', '希斯崙', '哈母勒', '約巴', '撒底', '亞干', '迦勒', '耶拉篾', '亞蘭']
   const matched = cards.filter(c => {
     const t = c.querySelector('[title]')?.getAttribute('title') || c.textContent || ''
     return TARGETS.some(n => t.includes(n))
