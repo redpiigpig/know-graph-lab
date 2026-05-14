@@ -13,6 +13,7 @@
           <span class="wa-cat-badge">{{ categoryLabel }}</span>
           <span v-if="article.publication" class="wa-pub">{{ article.publication }}</span>
           <span v-if="article.published_date" class="wa-date">{{ formatDate(article.published_date, article.date_approximate) }}</span>
+          <span v-if="article.editor" class="wa-editor">編輯：{{ article.editor }}</span>
         </div>
         <h1 class="wa-title">{{ article.title }}</h1>
         <p v-if="article.title_en" class="wa-title-en">{{ article.title_en }}</p>
@@ -183,6 +184,12 @@ function formatDate(dateStr, approximate) {
   font-size: 0.72rem;
   font-weight: 300;
   color: #A09280;
+  letter-spacing: 0.06em;
+}
+.wa-editor {
+  font-size: 0.72rem;
+  font-weight: 300;
+  color: #8A8278;
   letter-spacing: 0.06em;
 }
 

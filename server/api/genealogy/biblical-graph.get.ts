@@ -172,7 +172,11 @@ export default defineEventHandler(async (event) => {
       sortOrder: p.sort_order ?? 9999,
       generationNum: p.generation ?? 0,
       tribeCode: tribeCode.get(p.id) ?? null,
-      tradition: p.tradition ?? 'biblical',
+      // 顏色標籤 — 早期教會 view 把 orthodox-tagged 的 Epiphanian 人物（撒羅米/亞西亞/
+      // 呂底亞/革羅罷-約瑟之弟）以「早期共識橘色」呈現，避免跟東方教會 view 視覺撞色。
+      tradition: (view === 'early_consensus' && p.tradition === 'orthodox')
+        ? 'early_consensus'
+        : (p.tradition ?? 'biblical'),
       shape: 'rectangle',
       borderStyleId: 'solid-md',
       borderColor: '#d1d5db',

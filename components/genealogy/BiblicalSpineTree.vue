@@ -1218,7 +1218,9 @@ const cv = computed(() => {
       }
       const subtree = subtreeCapped(kid).filter(id => id !== kid)
       const hasSub  = subtree.length > 0 && !hasSpineSpouse && !isFemale
-      const expanded = expandedClans.value.has(kid)
+      // 小 clan (≤5 人) 預設展開 — 例如 斯多蘭→{亞拿,蘇比,以利沙白,施洗約翰} 不應藏在 ▼4 底下
+      // 大 clan (如 拿鶴 ~300 人) 仍需手動點 ▼ 展開
+      const expanded = expandedClans.value.has(kid) || (hasSub && subtree.length <= 5)
 
       nodes.push({
         id: kid,
@@ -1274,7 +1276,9 @@ const cv = computed(() => {
 
       // When expanded: render the full subtree directly below, aligned to main row pitch
       if (hasSub && expanded) {
-        const kidChildren = (ch.get(kid) ?? []).filter(c => !rowOf.has(c))
+        // 跳過已在 spine 上以妻位渲染的 children（如 斯多蘭.children=[亞拿, 蘇比]，
+        // 亞拿 已是 約亞敬 的 spine 妻 → 不要在 expansion 再畫一次）
+        const kidChildren = (ch.get(kid) ?? []).filter(c => !rowOf.has(c) && !renderedAsSpouseOnSpine.has(c))
         if (kidChildren.length > 0) {
           const exp = layoutExpansion(kidChildren, kxVal)
           nodes.push(...exp.nodes)
@@ -1421,7 +1425,9 @@ const cv = computed(() => {
         if (barY !== marLineY) {
           drops.push({ x: groupMidX, y1: marLineY, y2: barY })
         }
-        hbars.push({ x1: minBarX, x2: maxBarX, y: barY })
+        // null-mom 的 T-bar 跟 marLineY 同 Y → 視為婚姻線延伸，用紅色（與 marriages 同色）
+        const hbarStroke = (mom === null && barY === marLineY) ? '#dc2626' : undefined
+        hbars.push({ x1: minBarX, x2: maxBarX, y: barY, stroke: hbarStroke })
         for (const kid of groupKids) {
           const kxVal     = kidX.get(kid)!
           const isSpKid   = rowOf.has(kid)
