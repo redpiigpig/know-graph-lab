@@ -243,8 +243,6 @@ export const SPHERES: CulturalSphere[] = [
     id: 'gallic-french', name_zh: '高盧-法蘭西文化圈', name_en: 'Gallic-French', realm_id: 'western',
     members: [
       { iso_a3: 'FRA', label: '法國', order: 1, note: '歐洲本土，羅馬化高盧' },
-      { iso_a3: 'CAN', admin1: 'Quebec', label: '加拿大（魁北克與阿卡迪亞）', order: 2 },
-      { iso_a3: 'USA', admin1: 'New-France', label: '美國（新法蘭西地區）', order: 3, is_extension: true },
     ],
   },
   {
@@ -484,6 +482,13 @@ export const SPHERES: CulturalSphere[] = [
     ],
   },
   {
+    id: 'franco-american', name_zh: '法蘭西美洲文化圈', name_en: 'Franco-American', realm_id: 'north-america',
+    members: [
+      { iso_a3: 'CAN', admin1: 'Quebec-Acadia', label: '加拿大（魁北克與阿卡迪亞）', order: 1, note: '法語族裔大本營，新法蘭西殖民核心' },
+      { iso_a3: 'USA', admin1: 'New-France', label: '美國（新法蘭西／路易斯安那）', order: 2, is_extension: true },
+    ],
+  },
+  {
     id: 'arctic', name_zh: '北極文化圈', name_en: 'Arctic', realm_id: 'north-america',
     members: [
       { iso_a3: 'GRL', label: '丹麥（格陵蘭島）', order: 1, note: '維京人短暫接觸，近代重新殖民' },
@@ -629,7 +634,10 @@ export const COUNTRY_NAME_ZH: Record<string, string> = {
  *  CHN/RUS/USA/CAN 用 NE 50m admin_1（檔案：ne_50m_admin_1_subset.geojson）
  *  LBY/AFG/UKR 用 NE 10m admin_1（檔案：ne_10m_admin_1_extra.geojson）
  */
-export const COUNTRIES_USING_ADMIN1 = new Set<string>(['CHN', 'RUS', 'USA', 'CAN', 'LBY', 'AFG', 'UKR'])
+export const COUNTRIES_USING_ADMIN1 = new Set<string>([
+  'CHN', 'RUS', 'USA', 'CAN',                 // NE 50m subset
+  'LBY', 'AFG', 'UKR', 'SDN', 'ETH', 'NGA', 'GHA',  // NE 10m extra subset
+])
 
 /** iso_3166_2 → sphere id（次國家行政區歸屬）。文件未指定的省份依預設： */
 export const ADMIN1_SPHERE: Record<string, string> = {
@@ -714,13 +722,14 @@ export const ADMIN1_SPHERE: Record<string, string> = {
   'US-WY': 'anglo-american',
 
   // ---------- 加拿大 (CAN) ----------
-  // 高盧-法蘭西文化圈（西方界域）
-  'CA-QC': 'gallic-french',  // 魁北克
+  // 法蘭西美洲文化圈（北美界域）
+  'CA-QC': 'franco-american',  // 魁北克
+  'CA-NB': 'franco-american',  // 新伯倫瑞克（阿卡迪亞核心，法語人口最高的英語區省）
   // 北極文化圈（北美界域）
   'CA-NT': 'arctic', 'CA-NU': 'arctic', 'CA-YT': 'arctic',
-  // 盎格魯美洲文化圈（北美界域）— 南方各省
+  // 盎格魯美洲文化圈（北美界域）— 南方各省（CA-NB 移到 franco-american）
   'CA-AB': 'anglo-american', 'CA-BC': 'anglo-american', 'CA-MB': 'anglo-american',
-  'CA-NB': 'anglo-american', 'CA-NL': 'anglo-american', 'CA-NS': 'anglo-american',
+  'CA-NL': 'anglo-american', 'CA-NS': 'anglo-american',
   'CA-ON': 'anglo-american', 'CA-PE': 'anglo-american', 'CA-SK': 'anglo-american',
 
   // ---------- 利比亞 (LBY) ----------
@@ -781,6 +790,66 @@ export const ADMIN1_SPHERE: Record<string, string> = {
   'UA-53': 'russian-tatar',  // 波爾塔瓦
   'UA-74': 'russian-tatar',  // 切爾尼戈夫
   'UA-35': 'russian-tatar',  // 基洛夫格勒
+
+  // ---------- 蘇丹 (SDN) ----------
+  // 埃及文化圈（中央界域）— 尼羅河谷 + 中部 + 東部 (Funj 蘇丹國 + 鄂圖曼遺產)
+  'SD-NO': 'egyptian',  // 北部省
+  'SD-NR': 'egyptian',  // 尼羅省
+  'SD-RS': 'egyptian',  // 紅海省
+  'SD-KH': 'egyptian',  // 喀土穆
+  'SD-GZ': 'egyptian',  // 杰濟拉
+  'SD-NB': 'egyptian',  // 青尼羅
+  'SD-SI': 'egyptian',  // 森納爾
+  'SD-NW': 'egyptian',  // 白尼羅
+  'SD-KA': 'egyptian',  // 卡薩拉
+  'SD-GD': 'egyptian',  // 加達里夫
+  // 西非-薩赫爾文化圈（南方界域）— 達富爾 + 科爾多凡（Bilad al-Sudan「黑人之地」西部延伸）
+  'SD-DN': 'west-african-sahel',  // 北達富爾
+  'SD-DS': 'west-african-sahel',  // 南達富爾 (NE 10m 以同代碼包含東達富爾)
+  'SD-DE': 'west-african-sahel',  // 中達富爾 (NE 標記為 DE 但實 ISO 為 DC)
+  'SD-DW': 'west-african-sahel',  // 西達富爾
+  'SD-KS': 'west-african-sahel',  // 南科爾多凡
+  'SD-KN': 'west-african-sahel',  // 北科爾多凡
+
+  // ---------- 衣索比亞 (ETH) ----------
+  // 衣索比亞文化圈（南方界域）— 高地基督徒 (Aksumite 後裔，正教東正教徒)
+  'ET-TI': 'ethiopian',  // 提格雷
+  'ET-AM': 'ethiopian',  // 阿姆哈拉
+  'ET-BE': 'ethiopian',  // 本尚古勒-古馬茲
+  'ET-DD': 'ethiopian',  // 德雷達瓦
+  'ET-AA': 'ethiopian',  // 阿迪斯阿貝巴
+  // 東非-斯瓦希里文化圈（南方界域）— 低地穆斯林 (Somali/Afar 為主)
+  'ET-SO': 'east-african-swahili',  // 索馬利州
+  'ET-AF': 'east-african-swahili',  // 阿法爾州
+  'ET-OR': 'east-african-swahili',  // 奧羅米亞 (穆斯林過半)
+  'ET-SN': 'east-african-swahili',  // 南方各族州
+  'ET-GA': 'east-african-swahili',  // 甘貝拉
+  'ET-HA': 'east-african-swahili',  // 哈勒爾
+
+  // ---------- 奈及利亞 (NGA) ----------
+  // 西非-薩赫爾文化圈（南方界域）— 北部 (Sokoto 哈里發遺產，豪薩-富拉尼穆斯林)
+  'NG-SO': 'west-african-sahel', 'NG-ZA': 'west-african-sahel', 'NG-KE': 'west-african-sahel',
+  'NG-NI': 'west-african-sahel', 'NG-KW': 'west-african-sahel', 'NG-KT': 'west-african-sahel',
+  'NG-KN': 'west-african-sahel', 'NG-JI': 'west-african-sahel', 'NG-YO': 'west-african-sahel',
+  'NG-BO': 'west-african-sahel', 'NG-AD': 'west-african-sahel', 'NG-TA': 'west-african-sahel',
+  'NG-BA': 'west-african-sahel', 'NG-GO': 'west-african-sahel', 'NG-PL': 'west-african-sahel',
+  'NG-NA': 'west-african-sahel', 'NG-KO': 'west-african-sahel', 'NG-FC': 'west-african-sahel',
+  'NG-KD': 'west-african-sahel',
+  // 幾內亞灣文化圈（南方界域）— 南部 (優魯巴/伊博基督徒、貝南帝國遺產)
+  'NG-LA': 'gulf-of-guinea', 'NG-OG': 'gulf-of-guinea', 'NG-OY': 'gulf-of-guinea',
+  'NG-OS': 'gulf-of-guinea', 'NG-EK': 'gulf-of-guinea', 'NG-ON': 'gulf-of-guinea',
+  'NG-ED': 'gulf-of-guinea', 'NG-DE': 'gulf-of-guinea', 'NG-BY': 'gulf-of-guinea',
+  'NG-RI': 'gulf-of-guinea', 'NG-AK': 'gulf-of-guinea', 'NG-CR': 'gulf-of-guinea',
+  'NG-AB': 'gulf-of-guinea', 'NG-IM': 'gulf-of-guinea', 'NG-AN': 'gulf-of-guinea',
+  'NG-EN': 'gulf-of-guinea', 'NG-EB': 'gulf-of-guinea', 'NG-BE': 'gulf-of-guinea',
+
+  // ---------- 迦納 (GHA) ----------
+  // 西非-薩赫爾文化圈（南方界域）— 北 3 州 (Zongo 穆斯林移民走廊)
+  'GH-NP': 'west-african-sahel', 'GH-UE': 'west-african-sahel', 'GH-UW': 'west-african-sahel',
+  // 幾內亞灣文化圈（南方界域）— 南 7 州 (Akan/Ashanti/Fante 海岸與森林)
+  'GH-AH': 'gulf-of-guinea', 'GH-BA': 'gulf-of-guinea', 'GH-EP': 'gulf-of-guinea',
+  'GH-CP': 'gulf-of-guinea', 'GH-WP': 'gulf-of-guinea', 'GH-AA': 'gulf-of-guinea',
+  'GH-TV': 'gulf-of-guinea',
 }
 
 /** Admin_1 名稱對照（繁體中文，用於 tooltip 顯示） */
@@ -855,6 +924,32 @@ export const ADMIN1_NAME_ZH: Record<string, string> = {
   'UA-48': '米科萊夫州', 'UA-53': '波爾塔瓦州', 'UA-68': '赫梅利尼茨基州',
   'UA-61': '捷爾諾波爾州', 'UA-12': '第聶伯羅彼得羅夫斯克州', 'UA-71': '切爾卡瑟州',
   'UA-35': '基洛夫格勒州',
+  // SDN
+  'SD-NO': '北部省', 'SD-NR': '尼羅省', 'SD-RS': '紅海省', 'SD-KH': '喀土穆省',
+  'SD-GZ': '傑濟拉省', 'SD-NB': '青尼羅省', 'SD-SI': '森納爾省', 'SD-NW': '白尼羅省',
+  'SD-KA': '卡薩拉省', 'SD-GD': '加達里夫省',
+  'SD-DN': '北達富爾省', 'SD-DS': '南達富爾省', 'SD-DE': '中達富爾省', 'SD-DW': '西達富爾省',
+  'SD-KS': '南科爾多凡省', 'SD-KN': '北科爾多凡省',
+  // ETH
+  'ET-TI': '提格雷州', 'ET-AM': '阿姆哈拉州', 'ET-BE': '本尚古勒-古馬茲州',
+  'ET-DD': '德雷達瓦', 'ET-AA': '阿迪斯阿貝巴', 'ET-SO': '索馬利州',
+  'ET-AF': '阿法爾州', 'ET-OR': '奧羅米亞州', 'ET-SN': '南方各族州',
+  'ET-GA': '甘貝拉州', 'ET-HA': '哈勒爾州',
+  // NGA
+  'NG-SO': '索科托州', 'NG-ZA': '札姆法拉州', 'NG-KE': '凱比州', 'NG-NI': '尼日州',
+  'NG-KW': '夸拉州', 'NG-KT': '卡齊納州', 'NG-KN': '卡諾州', 'NG-JI': '吉加瓦州',
+  'NG-YO': '約貝州', 'NG-BO': '博爾諾州', 'NG-AD': '阿達馬瓦州', 'NG-TA': '塔拉巴州',
+  'NG-BA': '包奇州', 'NG-GO': '貢貝州', 'NG-PL': '高原州', 'NG-NA': '納薩拉瓦州',
+  'NG-KO': '科吉州', 'NG-FC': '聯邦首都區', 'NG-KD': '卡杜納州',
+  'NG-LA': '拉哥斯州', 'NG-OG': '奧貢州', 'NG-OY': '奧約州', 'NG-OS': '奧孫州',
+  'NG-EK': '埃基蒂州', 'NG-ON': '翁多州', 'NG-ED': '埃多州', 'NG-DE': '三角洲州',
+  'NG-BY': '巴耶爾薩州', 'NG-RI': '河流州', 'NG-AK': '阿夸伊博姆州', 'NG-CR': '克羅斯河州',
+  'NG-AB': '阿比亞州', 'NG-IM': '伊莫州', 'NG-AN': '阿南布拉州', 'NG-EN': '埃努古州',
+  'NG-EB': '埃邦伊州', 'NG-BE': '貝努埃州',
+  // GHA
+  'GH-NP': '北部地區', 'GH-UE': '東北地區', 'GH-UW': '西北地區',
+  'GH-AH': '阿散蒂地區', 'GH-BA': '布朗阿哈福地區', 'GH-EP': '東部地區',
+  'GH-CP': '中部地區', 'GH-WP': '西部地區', 'GH-AA': '大阿克拉地區', 'GH-TV': '沃爾特地區',
 }
 
 /** 給一個 admin_1 iso_3166_2 代碼，回傳所屬文化圈與界域 */
