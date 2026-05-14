@@ -13,9 +13,11 @@
           <span class="wa-cat-badge">{{ categoryLabel }}</span>
           <span v-if="article.publication" class="wa-pub">{{ article.publication }}</span>
           <span v-if="article.published_date" class="wa-date">{{ formatDate(article.published_date, article.date_approximate) }}</span>
+          <span v-if="article.page_range" class="wa-pages">頁次：{{ article.page_range }}</span>
         </div>
         <h1 class="wa-title">{{ article.title }}</h1>
         <p v-if="article.title_en" class="wa-title-en">{{ article.title_en }}</p>
+        <p class="wa-byline">龐君華 會督</p>
 
         <div class="wa-header-actions">
           <a
@@ -196,6 +198,12 @@ function formatDate(dateStr, approximate) {
   color: #A09280;
   letter-spacing: 0.06em;
 }
+.wa-pages {
+  font-size: 0.72rem;
+  font-weight: 300;
+  color: #8A8278;
+  letter-spacing: 0.06em;
+}
 /* ── Colophon (版權頁) ───────────────────────────────────── */
 .wa-colophon {
   margin-top: 64px;
@@ -264,6 +272,14 @@ function formatDate(dateStr, approximate) {
   line-height: 1.6;
   margin: 0 0 24px;
 }
+.wa-byline {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #6A5E4A;
+  letter-spacing: 0.18em;
+  margin: 0 0 24px;
+}
 
 .wa-header-actions {
   margin-bottom: 20px;
@@ -329,6 +345,7 @@ function formatDate(dateStr, approximate) {
   color: #2C2C2C;
   margin: 0 0 0.4em;
   text-align: justify;
+  text-indent: 2em;
 }
 
 .wa-para--heading {
@@ -339,6 +356,7 @@ function formatDate(dateStr, approximate) {
   margin-top: 1.8em;
   margin-bottom: 0.4em;
   letter-spacing: 0.1em;
+  text-indent: 0;
 }
 
 .wa-para--quote {
@@ -349,6 +367,7 @@ function formatDate(dateStr, approximate) {
   padding-left: 1em;
   border-left: 3px solid #C4B89A;
   color: #5A5040;
+  text-indent: 0;
 }
 
 .wa-para--empty {
