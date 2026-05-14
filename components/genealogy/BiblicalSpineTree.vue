@@ -460,7 +460,7 @@ interface LNode {
 }
 interface VDrop { x: number; y1: number; y2: number; stroke?: string; dashed?: boolean; hidden?: boolean; isExpansionLine?: boolean }
 interface HBar  { x1: number; x2: number; y: number; stroke?: string; dashed?: boolean; hidden?: boolean; isExpansionLine?: boolean }
-interface MLine { id: string; x1: number; x2: number; y: number; hidden?: boolean; holy?: boolean }
+interface MLine { id: string; x1: number; x2: number; y: number; hidden?: boolean; holy?: boolean; isExpansionLine?: boolean }
 interface TrunkGuide { x: number; y1: number; y2: number; color: string; hidden?: boolean }
 interface ExpansionBox { x1: number; y1: number; x2: number; y2: number }
 
@@ -576,7 +576,7 @@ const cv = computed(() => {
           isExpansionNode: true,
         })
         const prevCx = wi === 0 ? rootCX : rootCX - wi * SLOT_K
-        ms.push({ id: `expw_${rootId}_${wid}`, x1: wcx + NW / 2, x2: prevCx - NW / 2, y: marY })
+        ms.push({ id: `expw_${rootId}_${wid}`, x1: wcx + NW / 2, x2: prevCx - NW / 2, y: marY, isExpansionLine: true })
       }
       return { nodes: ns, marriages: ms }
     }
@@ -641,22 +641,31 @@ const cv = computed(() => {
       isExpansionNode: true,
     }
 
-    // Connector: root → barY → each child top
+    // Connector: root (or marriage midpoint if wives) → barY → each child top.
+    // 子嗣線必須從「婚姻線中點」往下，不能從父卡正下方掉下。否則只看到單卡 →
+    // 子嗣垂線，看不出小孩是 父+妻 的後代。
     const myDrops: VDrop[] = []
     const myHbars: HBar[]  = []
     const firstChildY = childResults[0].nodes[0]?.y ?? myY + NH + VG
-    const barY = myY + NH + Math.round((firstChildY - myY - NH) * 0.5)
-    myDrops.push({ x: rootCX, y1: myY + NH, y2: barY, isExpansionLine: true })
+    const marY  = myY + NH / 2
+    const hasWives = wiveIds.length > 0
+    // 主妻 wi=0 的 wcx = rootCX - SLOT_K → 婚姻線中點 = rootCX - SLOT_K/2
+    const dropStartX = hasWives ? rootCX - SLOT_K / 2 : rootCX
+    const dropStartY = hasWives ? marY : myY + NH
+    const barY = dropStartY + Math.round((firstChildY - dropStartY) * 0.5)
+    myDrops.push({ x: dropStartX, y1: dropStartY, y2: barY, isExpansionLine: true })
     if (childCXs.length === 1) {
       const cc = childCXs[0]
-      if (Math.abs(rootCX - cc) < 1) {
+      if (Math.abs(dropStartX - cc) < 1) {
         myDrops.push({ x: cc, y1: barY, y2: firstChildY, isExpansionLine: true })
       } else {
-        myHbars.push({ x1: Math.min(rootCX, cc), x2: Math.max(rootCX, cc), y: barY, isExpansionLine: true })
+        myHbars.push({ x1: Math.min(dropStartX, cc), x2: Math.max(dropStartX, cc), y: barY, isExpansionLine: true })
         myDrops.push({ x: cc, y1: barY, y2: firstChildY, isExpansionLine: true })
       }
     } else {
-      myHbars.push({ x1: cmin, x2: cmax, y: barY, isExpansionLine: true })
+      const barMinX = Math.min(dropStartX, cmin)
+      const barMaxX = Math.max(dropStartX, cmax)
+      myHbars.push({ x1: barMinX, x2: barMaxX, y: barY, isExpansionLine: true })
       for (const cc of childCXs) {
         myDrops.push({ x: cc, y1: barY, y2: firstChildY, isExpansionLine: true })
       }
@@ -1332,24 +1341,31 @@ const cv = computed(() => {
           hbars.push(...exp.hbars)
           marriages.push(...exp.marriages)
 
-          // Connect kid (parent) down to the subtree's root row
+          // Connect kid (parent) down to the subtree's root row.
+          // 如果 kid 有妻子（已 placed 在他左側），drop 從「kid↔主妻 婚姻線中點」往下，
+          // Y 從婚姻線高度開始，不是從卡片底部。
           const kidBottom = childY + NH
           const firstChildY = exp.firstY
           if (firstChildY > kidBottom) {
-            const linkBarY = kidBottom + Math.round((firstChildY - kidBottom) * 0.5)
-            drops.push({ x: kxVal, y1: kidBottom, y2: linkBarY, isExpansionLine: true })
+            const kidHasWives = kidWifeIds.length > 0
+            const kidMarY = childY + NH / 2
+            // 主妻在 kid 左側、SLOT_K 距離 → 婚姻中點 = kxVal - SLOT_K/2 (SLOT_K = NW+WIFE_HG)
+            const linkDropX = kidHasWives ? kxVal - (NW + WIFE_HG) / 2 : kxVal
+            const linkDropY = kidHasWives ? kidMarY : kidBottom
+            const linkBarY = linkDropY + Math.round((firstChildY - linkDropY) * 0.5)
+            drops.push({ x: linkDropX, y1: linkDropY, y2: linkBarY, isExpansionLine: true })
             if (exp.rootCXs.length === 1) {
               const cc = exp.rootCXs[0]
-              if (Math.abs(kxVal - cc) < 1) {
+              if (Math.abs(linkDropX - cc) < 1) {
                 drops.push({ x: cc, y1: linkBarY, y2: firstChildY, isExpansionLine: true })
               } else {
-                hbars.push({ x1: Math.min(kxVal, cc), x2: Math.max(kxVal, cc), y: linkBarY, isExpansionLine: true })
+                hbars.push({ x1: Math.min(linkDropX, cc), x2: Math.max(linkDropX, cc), y: linkBarY, isExpansionLine: true })
                 drops.push({ x: cc, y1: linkBarY, y2: firstChildY, isExpansionLine: true })
               }
             } else {
               const rmin = Math.min(...exp.rootCXs)
               const rmax = Math.max(...exp.rootCXs)
-              hbars.push({ x1: Math.min(kxVal, rmin), x2: Math.max(kxVal, rmax), y: linkBarY, isExpansionLine: true })
+              hbars.push({ x1: Math.min(linkDropX, rmin), x2: Math.max(linkDropX, rmax), y: linkBarY, isExpansionLine: true })
               for (const cc of exp.rootCXs) {
                 drops.push({ x: cc, y1: linkBarY, y2: firstChildY, isExpansionLine: true })
               }
@@ -1564,6 +1580,7 @@ const cv = computed(() => {
       if (exShapes.some(s => lineIntersectsBox(b.x1, b.y, b.x2, b.y, s))) b.hidden = true
     }
     for (const m of marriages) {
+      if (m.isExpansionLine) continue   // 旁支內的妻位婚姻線是這次 expansion 自己畫的，不該被自己 bbox 遮
       if (exShapes.some(s => lineIntersectsBox(m.x1, m.y, m.x2, m.y, s))) m.hidden = true
     }
     for (const g of trunkGuides) {
@@ -1599,7 +1616,7 @@ const cv = computed(() => {
       if (lineInAnyBbox(b.x1, b.y, b.x2, b.y)) b.hidden = true
     }
     for (const m of marriages) {
-      if (m.hidden) continue
+      if (m.hidden || m.isExpansionLine) continue
       if (lineInAnyBbox(m.x1, m.y, m.x2, m.y)) m.hidden = true
     }
     for (const g of trunkGuides) {
