@@ -114,19 +114,19 @@
         </div>
       </div>
 
-      <!-- 耶穌弟兄詮釋 — local toggle (top-center, near Holy Family region in spine bottom).
-           Mark 6:3 has 4 traditional interpretations; only catholic/orthodox differ
-           materially. early_consensus 在 Jerome ~393 之前等同 Epiphanian view（東方）.
-           This toggle is "local" — only affects 耶穌's brothers attribution. -->
+      <!-- 耶穌聖家詮釋 — local toggle 緊鄰 約瑟 卡片右側（與 pan/zoom 同步）.
+           Mark 6:3 has 4 traditional interpretations. early_consensus 在 Jerome
+           ~393 之前等同 Epiphanian view（東方）. -->
       <div
-        v-if="!props.rootId"
-        class="absolute top-3 left-1/2 -translate-x-1/2 z-40 bg-white/95 border border-gray-200 rounded-lg p-1 shadow-sm flex items-center gap-1 pointer-events-auto"
+        v-if="!props.rootId && josephScreenPos.visible"
+        class="absolute z-40 bg-white/95 border border-gray-200 rounded-lg p-1 shadow-sm flex flex-col items-stretch gap-0.5 pointer-events-auto"
+        :style="{ left: josephScreenPos.x + 'px', top: josephScreenPos.y + 'px' }"
       >
-        <span class="text-[10px] text-gray-400 px-1.5 select-none leading-none">耶穌弟兄</span>
+        <span class="text-[10px] text-gray-400 px-1.5 select-none leading-tight">耶穌聖家</span>
         <button
           v-for="t in brothersOptions"
           :key="t.value"
-          class="text-[11px] px-2 py-1 rounded-md font-medium transition cursor-default"
+          class="text-[11px] px-2 py-1 rounded-md font-medium transition cursor-default text-left"
           :class="props.brothersView === t.value
             ? `bg-gray-100 ${t.activeColor}`
             : 'text-gray-500 hover:text-gray-700'"
@@ -1317,14 +1317,13 @@ const cv = computed(() => {
         if (momId !== null) {
           const wi = wifeIds.indexOf(momId)
           if (wi >= 0) {
-            const momCX = wifeLX.get(momId)! + NW / 2
-            // Primary wife (wi=0): drop from midpoint of the actual marriage
-            // segment 大衛↔primary（這條才是真婚姻線）.
-            // Non-primary wives (wi>0): drop DIRECTLY from her own center.
-            // 同列共妻之間的「線段中點」不是真婚姻，不該被當成 mother 的 anchor —
-            // 否則 哈及's 兒子 亞多尼雅 會從 「瑪迦↔哈及之間」掉下來而非從哈及本人。
-            if (wi === 0) return (momCX + cx) / 2
-            return momCX
+            // 每位妻子的子女 drop 從「她與相鄰卡片（往丈夫方向）的中間點」掉下：
+            //   wi=0 (主妻) → 與丈夫之間的中點（真婚姻線）
+            //   wi>0       → 與前一位妻子之間的中點（同列共妻 stack 視覺一致）
+            // 所有 drop 都坐落在 marLineY 那條紅色婚姻線上，視覺接續清楚。
+            const momCX  = wifeLX.get(momId)! + NW / 2
+            const prevCX = wi === 0 ? cx : (wifeLX.get(wifeIds[wi - 1])! + NW / 2)
+            return (momCX + prevCX) / 2
           }
           if (crossSpineWives.includes(momId)) {
             const partner = nodes.find(n => n.id === momId)
@@ -1404,11 +1403,9 @@ const cv = computed(() => {
         const barY = motherBarY.get(mom)!
         const minBarX = Math.min(groupMidX, ...groupKidXs)
         const maxBarX = Math.max(groupMidX, ...groupKidXs)
-        // 從婚姻線往 T-bar 的這段 drop：有 mom 的（婚生）用紅色（接續婚姻線），
-        // null mom（無記載生母）用預設灰色。視覺上紅線從婚姻線一路延伸到子女
-        // 那一橫桿，不再「斷線」。
-        const dropStroke = mom !== null ? '#dc2626' : undefined
-        drops.push({ x: groupMidX, y1: marLineY, y2: barY, stroke: dropStroke })
+        // 婚姻線顏色：只有橫向婚姻線（夫妻之間）是紅色，其他全灰。
+        // 例：亞當-夏娃 紅色婚姻線；marLineY→barY drop = 灰、T-bar = 灰、kid drop = 灰。
+        drops.push({ x: groupMidX, y1: marLineY, y2: barY })
         hbars.push({ x1: minBarX, x2: maxBarX, y: barY })
         for (const kid of groupKids) {
           const kxVal     = kidX.get(kid)!
@@ -1418,7 +1415,7 @@ const cv = computed(() => {
           const continuingKind = parentKind === 'S' ? (childKind ?? 'S') : parentKind
           const lineStroke = isLegal
             ? '#9ca3af'
-            : !isSpKid                          ? '#9ca3af'
+            : !isSpKid                          ? '#9ca3af'  // 非主幹子女：一律灰色
             : continuingKind === 'B'            ? '#f43f5e'
             : continuingKind === 'A'            ? '#f59e0b'
             : continuingKind === 'S'            ? '#f59e0b'
@@ -1707,6 +1704,20 @@ const panX        = ref(0)
 const panY        = ref(0)
 const isDragging  = ref(false)
 let _anchor = { x: 0, y: 0, px: 0, py: 0 }
+
+// 約瑟（馬利亞之夫）卡片在 viewport 上的螢幕座標 — 給浮動「耶穌聖家詮釋」按鈕用
+const josephScreenPos = computed(() => {
+  if (!cv.value) return { x: 0, y: 0, visible: false }
+  const joseph = cv.value.nodes.find(n => n.rawName === '約瑟（馬利亞之夫）' && !n.hidden)
+  if (!joseph) return { x: 0, y: 0, visible: false }
+  // Toggle 放在約瑟卡片的右側、與卡片頂部對齊
+  const offsetX = joseph.w * zoom.value + 12
+  return {
+    x: joseph.x * zoom.value + panX.value + offsetX,
+    y: joseph.y * zoom.value + panY.value,
+    visible: true,
+  }
+})
 
 const ZOOM_MIN = 0.06
 const ZOOM_MAX = 3.0

@@ -2,22 +2,35 @@ export default defineEventHandler(async (event) => {
   await requireAuth(event)
   const supabase = getAdminClient()
 
-  // ── 統一視圖 + 衝突解視角 ────────────────────────────────────────────
-  // 所有人物（不分傳統）一律回傳，前端用 card 顏色辨識來源傳統。
-  // `?view=<key>` where key ∈ { protestant | catholic | orthodox }
-  // 只用來解「耶穌弟兄是誰」的衝突（馬可 6:3 三派不同解）。
-  // 規則：對每張 row 的 tradition_X JSONB 欄位：
-  //   - rabbinic 值永遠 apply（無衝突）
-  //   - 若 catholic 與 orthodox 同一欄位都有值 → 視為衝突，依 view 取一
-  //   - 若只有 catholic 或只有 orthodox 有值 → 非衝突，永遠 apply
-  // protestant 預設：兩派同時有值的欄位（衝突）兩派都不 apply。
+  // ── View-based tradition filter + conflict resolution ───────────────
+  // 4 個 view 累進納入更多傳統人物 + JSONB 套用：
+  //   protestant      : biblical + rabbinic 永遠
+  //   early_consensus : + early_consensus（亞拿/約亞敬/斯多蘭/蘇比 等）
+  //                     + orthodox JSONB（耶穌弟兄解 = Epiphanian/前妻說，Jerome 前主流）
+  //   orthodox        : + orthodox 全部人物
+  //   catholic        : + early_consensus + catholic + catholic JSONB
+  // rabbinic 傳統人物永遠顯示（不衝突）。
   const q = getQuery(event)
   const viewRaw = String(q.view ?? 'protestant').toLowerCase()
-  // early_consensus 等同 orthodox 的耶穌弟兄解（前妻說，Epiphanian view）；
-  // 在 Jerome ~393 之前是早期教會主流。
-  const view: 'protestant' | 'catholic' | 'orthodox' =
-    viewRaw === 'catholic' ? 'catholic' :
-    (viewRaw === 'orthodox' || viewRaw === 'early_consensus') ? 'orthodox' : 'protestant'
+  const view: 'protestant' | 'catholic' | 'orthodox' | 'early_consensus' =
+    viewRaw === 'catholic'        ? 'catholic' :
+    viewRaw === 'orthodox'        ? 'orthodox' :
+    viewRaw === 'early_consensus' ? 'early_consensus' :
+                                    'protestant'
+
+  const allowedTraditions = new Set<string>(['biblical', 'rabbinic'])
+  if (view === 'early_consensus' || view === 'orthodox' || view === 'catholic') {
+    allowedTraditions.add('early_consensus')
+  }
+  if (view === 'orthodox') allowedTraditions.add('orthodox')
+  if (view === 'catholic') allowedTraditions.add('catholic')
+
+  // Which tradition's JSONB to apply for conflict resolution
+  // (early_consensus + orthodox both use orthodox merges = Epiphanian view)
+  const mergeKey: 'catholic' | 'orthodox' | null =
+    view === 'catholic'                                       ? 'catholic' :
+    (view === 'orthodox' || view === 'early_consensus')       ? 'orthodox' :
+                                                                null
 
   const { data: allPeople, error } = await supabase
     .from('biblical_people')
@@ -27,31 +40,14 @@ export default defineEventHandler(async (event) => {
   if (error) throw createError({ statusCode: 500, message: error.message })
   if (!allPeople?.length) return { nodes: [], edges: [] }
 
-  const people = allPeople  // no tradition filter — show everyone, color via UI
+  const people = allPeople.filter(p => allowedTraditions.has(p.tradition ?? 'biblical'))
 
-  // Merge per-row tradition fields with the conflict-aware rule above.
-  function mergeField(jsonb: Record<string, string> | null | undefined): string {
-    if (!jsonb) return ''
-    const cat = jsonb.catholic
-    const orth = jsonb.orthodox
-    const rab = jsonb.rabbinic
-    const parts: string[] = []
-    if (rab) parts.push(rab)
-    if (cat && orth) {
-      // Conflict — view picks one (protestant picks neither)
-      if (view === 'catholic') parts.push(cat)
-      else if (view === 'orthodox') parts.push(orth)
-    } else {
-      if (cat) parts.push(cat)
-      if (orth) parts.push(orth)
-    }
-    return parts.join('、')
-  }
-
+  // Apply per-tradition JSONB merges based on selected view
   for (const p of people) {
-    const addChildren = mergeField(p.tradition_children as Record<string, string> | null)
-    const addSpouse   = mergeField(p.tradition_spouse   as Record<string, string> | null)
-    const hideChildrenRaw = mergeField(p.tradition_hide_children as Record<string, string> | null)
+    if (!mergeKey) continue
+    const addChildren = (p.tradition_children as Record<string, string> | null)?.[mergeKey]
+    const addSpouse   = (p.tradition_spouse   as Record<string, string> | null)?.[mergeKey]
+    const hideChildrenRaw = (p.tradition_hide_children as Record<string, string> | null)?.[mergeKey]
     if (addChildren) {
       p.children = p.children ? `${p.children}、${addChildren}` : addChildren
     }
