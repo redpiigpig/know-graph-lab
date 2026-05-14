@@ -4,11 +4,11 @@ export default defineEventHandler(async (event) => {
 
   // ── View-based tradition filter + conflict resolution ───────────────
   // 4 個 view 累進納入更多傳統人物 + JSONB 套用：
-  //   protestant      : biblical + rabbinic 永遠
-  //   early_consensus : + early_consensus（亞拿/約亞敬/斯多蘭/蘇比 等）
-  //                     + orthodox JSONB（耶穌弟兄解 = Epiphanian/前妻說，Jerome 前主流）
-  //   orthodox        : + orthodox 全部人物
-  //   catholic        : + early_consensus + catholic + catholic JSONB
+  //   protestant      : biblical + rabbinic + early_consensus（後者僅作為 SPINE_B
+  //                     必經的 約亞敬/亞拿 等 anchor；用橘色卡視覺區隔，無 JSONB 套用）
+  //   early_consensus : + orthodox JSONB（耶穌弟兄解 = Epiphanian/前妻說，Jerome 前主流）
+  //   orthodox        : + orthodox 全部人物 + orthodox JSONB
+  //   catholic        : + catholic 全部人物 + catholic JSONB
   // rabbinic 傳統人物永遠顯示（不衝突）。
   const q = getQuery(event)
   const viewRaw = String(q.view ?? 'protestant').toLowerCase()
@@ -18,10 +18,7 @@ export default defineEventHandler(async (event) => {
     viewRaw === 'early_consensus' ? 'early_consensus' :
                                     'protestant'
 
-  const allowedTraditions = new Set<string>(['biblical', 'rabbinic'])
-  if (view === 'early_consensus' || view === 'orthodox' || view === 'catholic') {
-    allowedTraditions.add('early_consensus')
-  }
+  const allowedTraditions = new Set<string>(['biblical', 'rabbinic', 'early_consensus'])
   if (view === 'orthodox') allowedTraditions.add('orthodox')
   if (view === 'catholic') allowedTraditions.add('catholic')
 
