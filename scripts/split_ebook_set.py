@@ -62,6 +62,9 @@ SET_TITLE_RX = re.compile(
 )
 
 SPLIT_MARKER = "split from set; do not re-standardize"
+# Sister marker written by detect_set_volumes.py for 套書-titled ebooks whose
+# JSONL actually only contains one volume — skip them in status / run.
+NOT_A_SET_MARKER = "not actually a 套書 — single volume"
 
 _HEADING_FIRST_RX = re.compile(r"^(#{1,4})\s+(.+?)(\r?\n|$)", re.M)
 
@@ -348,8 +351,11 @@ def cmd_status():
     already = []
     annotated = []
     for b in cands:
-        if (b.get("parse_error") or "").startswith(SPLIT_MARKER):
+        pe = b.get("parse_error") or ""
+        if pe.startswith(SPLIT_MARKER):
             continue  # already a split child (shouldn't usually match SET_TITLE_RX, but skip)
+        if pe.startswith(NOT_A_SET_MARKER):
+            continue  # detect_set_volumes already confirmed: single volume despite title
         chunks = load_chunks(b["id"])
         if not chunks:
             continue
@@ -390,7 +396,8 @@ def cmd_run(book_id: str | None, do_all: bool, dry_run: bool):
         # Filter: must be splittable (chunks have ≥2 volume markers) and no annotations
         books = []
         for b in all_cands:
-            if (b.get("parse_error") or "").startswith(SPLIT_MARKER):
+            pe = b.get("parse_error") or ""
+            if pe.startswith(SPLIT_MARKER) or pe.startswith(NOT_A_SET_MARKER):
                 continue
             chunks = load_chunks(b["id"])
             if not chunks:
