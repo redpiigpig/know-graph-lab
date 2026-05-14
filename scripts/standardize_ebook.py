@@ -1348,6 +1348,14 @@ def standardize(book):
                 # No heading at all in content — prepend one so the reader
                 # sidebar can render this chunk's level correctly.
                 md_tw = f"{target_level} {chapter_title}\n\n{md_tw.lstrip()}"
+            elif chapter_title:
+                # Legacy (flat-TOC) mode + no heading in content. Without this
+                # the reader's loadToc derives level=2 from nothing, and any
+                # later content line with a `## ...` would mistakenly anchor the
+                # sidebar nesting. Force `##` so single-volume books with no
+                # hierarchical TOC still get consistent sidebar levels — matches
+                # what hierarchical-mode single-volume books emit.
+                md_tw = f"## {chapter_title}\n\n{md_tw.lstrip()}"
 
             # Continuation merge: if this chunk's title is just a numeric/letter
             # marker (e.g. 後記 split into 「後記」+「二」, or 索引 split into A-Z),
