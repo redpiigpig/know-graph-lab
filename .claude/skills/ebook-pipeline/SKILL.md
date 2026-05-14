@@ -129,10 +129,30 @@ Despite the historical name `KGLab-OCR-Daily`, it does more than OCR — see [`s
 | Bat runner | [`scripts/run_ocr_daily.bat`](../../../scripts/run_ocr_daily.bat) — runs ingest → parse → OCR in sequence; logs to `scripts/logs/ocr_YYYY-MM-DD.log` |
 | Toast helper | [`scripts/notify.ps1`](../../../scripts/notify.ps1) — Windows toast wrapper. Bat fires it twice: at run start, and again if Gemini hits 429 (so user knows when to expect tomorrow's resumption) |
 | Windows Task | `KGLab-OCR-Daily` registered via `Register-ScheduledTask` |
-| Trigger | **Every 6 hours** — cron `13 */6 * * *` (fires at 00:13, 06:13, 12:13, 18:13 Taipei time). Changed from daily-16:00 on 2026-05-07 to get more throughput per day. |
+| Trigger | **Daily 16:00** (Taipei time). The "every 6 hours" version was reverted; current state confirmed via `Get-ScheduledTask` 2026-05-14 |
 | Behavior | `WakeToRun` + `StartWhenAvailable` — wakes from sleep, catches up if missed |
 | Run as | Current user, Interactive logon (no password stored; only fires while logged in) |
 | Cap | 12-hour `ExecutionTimeLimit` |
+
+### Bat hardening (2026-05-14) — post-mortem on missing 5/8-5/13 logs
+
+**Symptom.** Between 2026-05-08 and 2026-05-13, `scripts/logs/` got zero new log files even though `Get-ScheduledTaskInfo` reported `LastRunTime = 2026-05-13 16:00:01` with `LastTaskResult = 0`. `scripts/logs/` directory mtime stayed pinned at 2026-05-07 08:05, so the bat literally never created any file during that window.
+
+**Three independent root causes, all fixed in `run_ocr_daily.bat`:**
+
+1. **`wmic os get localdatetime` is being deprecated and unreliable in Task Scheduler's wake-from-sleep context.** When wmic returned nothing, `TODAY` became the literal string `%DT:~0,4%-%DT:~4,2%-%DT:~6,2%`, so `LOGFILE` resolved to a path with `%` characters — every `>> "%LOGFILE%"` then failed silently while bat still finished with exit 0. **Fix:** swap in `powershell -NoProfile -Command "Get-Date -Format yyyy-MM-dd"`.
+2. **`python` on the system `PATH` resolves to `_whisper_venv\Scripts\python.exe` (Apr 29-created Whisper venv) which doesn't have `ebooklib` / `fitz` / `google.genai`.** In Task Scheduler's context the same resolution happens, so each `python scripts\xxx.py` line would `ModuleNotFoundError` and exit fast — no work done, no log lines logged. **Fix:** hardcode `set PY=C:\Users\user\AppData\Local\Python\bin\python.exe` and use `"%PY%"`. Falls back to PATH `python` if that path is gone (preserving install-and-run smoke testing).
+3. **The Write tool that wrote the new bat used LF-only line endings.** `cmd.exe` strictly requires CRLF for `.bat`; with LF-only it ate the first char of each line ("'M' is not recognized" for every `REM`, `etlocal` for `setlocal`, etc.). The original bat happened to have CRLF (committed via VS Code on Windows) so this was a regression introduced by the same-day fix. **Fix:** force CRLF on save. When editing the bat in the future, save with CRLF or run `(Get-Content x.bat) | Set-Content -Encoding utf8 x.bat` to renormalize.
+
+**Added robustness** — each step now logs its own exit code:
+```
+step1 exit=0
+step2 exit=0
+step3 exit=2     # = Gemini quota hit, expected
+```
+A future silent failure now leaves a fingerprint instead of an empty log.
+
+**Verification done 2026-05-14 11:38.** Drained 14-book z-lib backlog (Workflow D, 10 ingested + 4 dupes auto-deleted), then manually re-ran the fixed bat. `scripts/logs/ocr_2026-05-14.log` got written with all expected header lines and exit codes; parse + OCR continued in the background.
 
 ### OCR engine policy (2026-05-07)
 
