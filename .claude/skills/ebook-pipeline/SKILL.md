@@ -51,6 +51,7 @@ End-to-end pipeline that takes books from a local Drive folder all the way to th
 | `enrich_book_metadata.py` | 4b — backfill | Online lookup (Google Books → Open Library) to fill missing `publisher` / `publish_year` on `books` rows. Idempotent; respects `metadata_locked`. `status` / `run [--limit N] [--dry-run] [--book <id>]` / `probe --book <id>` |
 | `detect_set_volumes.py` | 4c — 套書 prep | Haiku-driven volume boundary detection for 套書 lacking volume metadata. Builds a TOC from chunk h2/h3 headings, asks Haiku 4.5 to identify volume boundaries, writes `volume` field into JSONL OR marks `NOT_A_SET_MARKER` if single-volume despite title. `status` / `run --book <id>` / `run --all` |
 | `split_ebook_set.py` | 4d — 套書 split | Split a multi-volume ebook into one row per volume. Idempotent (skips books already marked with `SPLIT_MARKER` / `NOT_A_SET_MARKER` / annotations). `status` / `run --book <id>` / `run --all` |
+| `resplit_giant_chunks.py` | 4e — chunk refinement | Break oversized chunks (>400K chars) by their internal `##` / `###` markdown headings; reduces "1-chunk-per-book" cases to reasonable per-section sizes. Annotation guard. Doesn't help chunks without internal headings (those need LLM/font-size). `status` / `run --book <id>` / `run --all` |
 | `repopulate_chunk_previews.py` | 5 — DB | Back-fill `ebook_chunks` previews from local JSONL. `run` / `retry-failed` / `status` |
 | `upload_chunks_to_r2.py` | 5 — R2 | One-shot bulk uploader for any books whose JSONL isn't on R2 yet |
 | `offload_chunks.py` | (history) | Did the original DB-truncate after JSONL offload. Don't run again |
@@ -564,7 +565,7 @@ If you're a fresh agent picking this up, this is what changed in the
 
 **Remaining TODOs (priority order):**
 
-1. **45 EPUBs with single chunk >400KB** (劍橋中國史 11冊, 摩訶婆羅多, Eusebius Collected Works, 世界佛教通史 14卷, …) — publisher EPUB has no chapter anchors, one volume = one giant chunk. Wait on font-size analysis or LLM chapter-edge detection.
+1. ~~45 EPUBs with single chunk >400KB~~ — ⚠ partial done 2026-05-14 via `resplit_giant_chunks.py`. Internal-heading resplit took 24/61 eligible EPUBs from `61 books × 83 oversized chunks` → `44 books × 75 oversized chunks` (+547 new sub-chunks). Wins: 追逐榮耀 1→10 chunks, 牛津世界史叢書 16→140, 七大洋上的爭霸戰 47→173, 鹽野七生作品集 44→144. **37 EPUBs still resistant** — their giant chunks contain no `##`/`###` markdown headings at all, so this script's deterministic h2/h3 split has nothing to grab. Those need a different strategy (LLM page-boundary detection on the raw text, or going back to the raw EPUB HTML for font-size cues — neither shipped).
 2. ~~16 套書 with `volume=None`~~ — ✅ done 2026-05-14 via `detect_set_volumes.py` (Haiku).
 3. **Content-filter-rejected books** (Haiku OCR refuses) — book 4 `哥白尼革命`, book 44 `規訓與懲罰`. Future Gemini-fallback queue.
 4. ~~`ingest_new_books.py` auto-split-on-ingest~~ — ✅ done 2026-05-14. `standardize_ebook.py` now auto-calls `detect_set_volumes` + `split_ebook_set` on any 套書-titled book at end of standardize. Daily bat also drains via two extra steps (4a + 4b) so any stragglers get processed.
