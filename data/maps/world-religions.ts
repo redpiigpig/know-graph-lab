@@ -20,6 +20,8 @@ export interface Realm {
   name_zh: string
   name_en: string
   color: string
+  /** [lng, lat] — manually picked for stable label position on the map */
+  label_lnglat: [number, number]
   intro?: string
 }
 
@@ -41,19 +43,19 @@ export interface CulturalSphere {
 }
 
 export const REALMS: Realm[] = [
-  { id: 'central',        index: 1, name_zh: '中央界域',   name_en: 'Central Realm',          color: '#16A34A' },
-  { id: 'eastern',        index: 2, name_zh: '東方界域',   name_en: 'Eastern Realm',          color: '#EAB308' },
-  { id: 'latin-america',  index: 3, name_zh: '拉美界域',   name_en: 'Latin American Realm',   color: '#DC2626',
+  { id: 'central',        index: 1, name_zh: '中央界域',   name_en: 'Central Realm',          color: '#16A34A', label_lnglat: [42, 26] },
+  { id: 'eastern',        index: 2, name_zh: '東方界域',   name_en: 'Eastern Realm',          color: '#EAB308', label_lnglat: [95, 32] },
+  { id: 'latin-america',  index: 3, name_zh: '拉美界域',   name_en: 'Latin American Realm',   color: '#DC2626', label_lnglat: [-58, -12],
     intro: '擁有獨立發明的原生文字（馬雅）與古老祭祀文明，儘管現代外觀由伊比利亞重塑，其文明底層極度古老。' },
-  { id: 'western',        index: 4, name_zh: '西方界域',   name_en: 'Western Realm',          color: '#9333EA',
+  { id: 'western',        index: 4, name_zh: '西方界域',   name_en: 'Western Realm',          color: '#9333EA', label_lnglat: [12, 50],
     intro: '承襲希臘羅馬的火種，伴隨拉丁/西里爾字母與基督教會，從地中海向北歐與東歐荒野推進。' },
-  { id: 'asia-pacific',   index: 5, name_zh: '亞太界域',   name_en: 'Asia-Pacific Realm',     color: '#2196F3',
+  { id: 'asia-pacific',   index: 5, name_zh: '亞太界域',   name_en: 'Asia-Pacific Realm',     color: '#2196F3', label_lnglat: [128, -8],
     intro: '位處東方與印度兩大母體邊緣，透過佛教、漢字與伊斯蘭季風貿易，逐步點亮信史。' },
-  { id: 'southern',       index: 6, name_zh: '南方界域',   name_en: 'Southern Realm',         color: '#A0522D',
+  { id: 'southern',       index: 6, name_zh: '南方界域',   name_en: 'Southern Realm',         color: '#A0522D', label_lnglat: [22, 0],
     intro: '從古老的衣索比亞文字，一路隨跨撒哈拉貿易與大航海時代，向中南部無文字部落推進。' },
-  { id: 'northern',       index: 7, name_zh: '北方界域',   name_en: 'Northern Realm',         color: '#7593B5',
+  { id: 'northern',       index: 7, name_zh: '北方界域',   name_en: 'Northern Realm',         color: '#7593B5', label_lnglat: [85, 62],
     intro: '游牧與森林的廣袤邊疆，文字與宗教（東正教/伊斯蘭教/藏傳佛教）多由外部勢力（羅斯人、阿拉伯人、漢人）自中世紀起強勢植入。' },
-  { id: 'north-america',  index: 8, name_zh: '北美界域',   name_en: 'North American Realm',   color: '#2A9D8F',
+  { id: 'north-america',  index: 8, name_zh: '北美界域',   name_en: 'North American Realm',   color: '#2A9D8F', label_lnglat: [-100, 48],
     intro: '現代文明最強大的板塊，卻是全球最晚經歷「原生無文字部落被西歐近代文明徹底覆蓋」的最後邊疆。' },
 ]
 
@@ -592,5 +594,75 @@ export function spheresForCountry(iso_a3: string): { sphere: CulturalSphere; mem
       if (m.iso_a3 === iso_a3) out.push({ sphere, member: m })
     }
   }
+  return out
+}
+
+/**
+ * Within a given realm, pick the country's "primary" sphere for drill-down coloring.
+ * Prefer non-extension membership; fall back to first match.
+ */
+export function primarySphereForCountryInRealm(iso_a3: string, realm: RealmId): CulturalSphere | undefined {
+  const realmSpheres = SPHERES.filter(s => s.realm_id === realm)
+  for (const s of realmSpheres) {
+    if (s.members.some(m => m.iso_a3 === iso_a3 && !m.is_extension)) return s
+  }
+  for (const s of realmSpheres) {
+    if (s.members.some(m => m.iso_a3 === iso_a3)) return s
+  }
+  return undefined
+}
+
+// ---------- Sub-shade generator (same color family) ----------
+
+function hexToHsl(hex: string): { h: number; s: number; l: number } {
+  const v = hex.replace('#', '')
+  const r = parseInt(v.slice(0, 2), 16) / 255
+  const g = parseInt(v.slice(2, 4), 16) / 255
+  const b = parseInt(v.slice(4, 6), 16) / 255
+  const max = Math.max(r, g, b), min = Math.min(r, g, b)
+  const l = (max + min) / 2
+  let h = 0, s = 0
+  if (max !== min) {
+    const d = max - min
+    s = l > 0.5 ? d / (2 - max - min) : d / (max + min)
+    if (max === r) h = ((g - b) / d + (g < b ? 6 : 0)) * 60
+    else if (max === g) h = ((b - r) / d + 2) * 60
+    else h = ((r - g) / d + 4) * 60
+  }
+  return { h, s: s * 100, l: l * 100 }
+}
+
+function hslToHex(h: number, s: number, l: number): string {
+  s /= 100
+  l /= 100
+  const k = (n: number) => (n + h / 30) % 12
+  const a = s * Math.min(l, 1 - l)
+  const f = (n: number) => {
+    const c = l - a * Math.max(-1, Math.min(k(n) - 3, Math.min(9 - k(n), 1)))
+    return Math.round(255 * Math.max(0, Math.min(1, c))).toString(16).padStart(2, '0')
+  }
+  return `#${f(0)}${f(8)}${f(4)}`
+}
+
+/** Generate a sphere shade in the realm's color family.
+ *  idx in 0..total-1 — varies lightness ±14% and a small hue shift ±10° around the realm hex. */
+export function shadeForSphere(realmHex: string, idx: number, total: number): string {
+  if (total <= 1) return realmHex
+  const { h, s, l } = hexToHsl(realmHex)
+  const t = idx / (total - 1)
+  const newL = Math.max(28, Math.min(72, l - 14 + t * 28))
+  const hueShift = -10 + t * 20
+  const newH = (h + hueShift + 360) % 360
+  return hslToHex(newH, s, newL)
+}
+
+/** Build a per-realm sphere->color map keyed by sphere id. */
+export function sphereColorsByRealm(realm: RealmId): Record<string, string> {
+  const r = realmById(realm)
+  const list = SPHERES.filter(s => s.realm_id === realm)
+  const out: Record<string, string> = {}
+  list.forEach((s, i) => {
+    out[s.id] = shadeForSphere(r.color, i, list.length)
+  })
   return out
 }
