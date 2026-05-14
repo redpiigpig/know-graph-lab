@@ -762,6 +762,31 @@ const cv = computed(() => {
   const allSpineIds = Array.from(rowOf.keys())
   const maxWives = Math.max(0, ...allSpineIds.map(id => (sp.get(id) ?? []).length))
 
+  // ── Dual-spine convergence range (hide siblings between spines) ──────
+  // user spec：「所羅門/拿單之後，到聖家之前，雙主幹以外的兄弟全部收起」。
+  // 雙主幹從 David 子嗣 (Solomon=A gen 34 / Nathan=B gen 34) 開始分支，視覺上
+  // 在中間段 (gen 35+) 兩條 spine 距離過近，旁系兄弟會撞在一起。對策：在這段
+  // 把非主幹兄弟整段不渲染，只保留 spine 主幹卡 + 其妻子。
+  //
+  // 範圍：sid.gen >= 34（Solomon/Nathan 開始）且 sid 不是 spine 終點
+  // (spine A 終點 = Joseph gen 63；spine B 終點 = Mary gen 74 — 這兩位
+  // 屬於聖家，他們的子嗣／兄弟都要顯示)。
+  const DUAL_SPINE_HIDE_GEN_START = 34
+  const spineAMaxGen = Math.max(0, ...allSpineIds
+    .filter(id => spineMembership.value.get(id) === 'A')
+    .map(id => pMap.get(id)?.data.generationNum ?? 0))
+  const spineBMaxGen = Math.max(0, ...allSpineIds
+    .filter(id => spineMembership.value.get(id) === 'B')
+    .map(id => pMap.get(id)?.data.generationNum ?? 0))
+  function isInDualSpineHideZone(sid: string): boolean {
+    const k = spineMembership.value.get(sid)
+    if (k !== 'A' && k !== 'B') return false
+    const g = pMap.get(sid)?.data.generationNum
+    if (g == null || g < DUAL_SPINE_HIDE_GEN_START) return false
+    const maxGen = k === 'A' ? spineAMaxGen : spineBMaxGen
+    return g < maxGen
+  }
+
   // ── Persons rendered as a SPOUSE on the main chart ─────────────────
   // 預先收集所有會被當成「配偶」畫在主圖上的 personId：
   //   1. spine person 的妻 (spine wife)
@@ -1094,6 +1119,14 @@ const cv = computed(() => {
       orderedRTL.push(...sortKidsBirthOrder(unattr))
     } else {
       orderedRTL.push(...sortKidsBirthOrder(allKidsRaw))
+    }
+
+    // Dual-spine 中段：把非 spine 兄弟整段過濾掉，只留 spine 主幹 kids。
+    // spine 自己的 wives 在別處（前面 wifeIds 流程）處理，不受影響。
+    if (isInDualSpineHideZone(sid)) {
+      const onlySpine = orderedRTL.filter(k => rowOf.has(k))
+      orderedRTL.length = 0
+      orderedRTL.push(...onlySpine)
     }
 
     // Compute X for each kid
