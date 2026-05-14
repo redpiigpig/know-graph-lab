@@ -1309,8 +1309,11 @@ const cv = computed(() => {
               }
             }
           }
-          // Bbox covers the subtree but NOT the parent row, so the spine T-bar above stays visible
-          expansionBoxes.push(exp.bbox)
+          // Bbox covers the subtree but NOT the parent row, so the spine T-bar above stays visible.
+          // Auto-expanded (subtree ≤5) clans do NOT occlude — small clans like 斯多蘭→{蘇比,
+          // 以利沙白, 施洗約翰} should coexist with neighbouring spine kids (e.g. 約瑟+馬利亞
+          // 的 5 子 西門/猶大 卡片中心位於 expansion bbox 內，但不該被隱藏)。
+          if (expandedClans.value.has(kid)) expansionBoxes.push(exp.bbox)
         }
       }
     }
