@@ -7,27 +7,29 @@ description: Operate the Know-Graph-Lab ebook pipeline end-to-end. Use when work
 
 End-to-end pipeline that takes books from a local Drive folder all the way to the reader at `/ebook/[id]`. This file is the **operational hub** — what runs, in what order, how to monitor it, and how to recover when it breaks. For the standardization step specifically (turning EPUBs into reader-ready markdown), see the **`standardize-ebook` skill** which is the detail-level companion.
 
-## Current state (snapshot 2026-05-07)
+## Current state (snapshot 2026-05-14)
 
 | Stage | Status | Numbers |
 |---|---|---|
 | Drive scan + author/title parse | ✅ done | 1,309 books (initial sweep) |
-| **Daily z-lib drop ingest** | ✅ wired into daily scheduler | `ingest_new_books.py` — see Workflow D |
+| **Daily z-lib drop ingest** | ✅ wired into daily scheduler + **auto-deletes dupes** (2026-05-14) | `ingest_new_books.py` — see Workflow D |
 | File rename in Drive | ✅ done | all renamed to `作者，書名.ext` |
-| DB import (`ebooks` table) | ✅ rolling | 1,326 rows (492 EPUB + 834 PDF) |
-| First-pass parse (text-extractable) | ✅ done | 921 parsed (484 EPUB + 437 text PDF) — 3 timeout-failed EPUBs retried 2026-05-07 |
+| DB import (`ebooks` table) | ✅ rolling | grew to ~1,450 rows after 套書 split (was 1,326) |
+| First-pass parse (text-extractable) | ✅ done | 921 parsed (484 EPUB + 437 text PDF) |
 | mobi/azw3 → epub conversion | ✅ done | 0 remaining |
-| **OCR scanned PDFs** | 🔄 every-6h scheduled | 322 queued; auto-runs every 6 hours (`13 */6 * * *`). Default engine: **Gemini** (`ocr_with_gemini.py`, 4 rotating API keys, `gemini-2.5-pro` @ 4 RPM). Claude Haiku Vision only when user explicitly orders it — strictly one book at a time. |
+| **OCR scanned PDFs (Haiku Vision)** | 🔄 long-running OCR run started 2026-05-13 07:20 | 271-book queue; batch-level retry shipped 2026-05-13 (`89377eb`) so mid-book 502 no longer wastes batches |
+| **OCR scanned PDFs (Gemini)** | 🔄 every-6h scheduled | `13 */6 * * *`; 4 rotating keys; Haiku takes over only when user orders |
 | Local JSONL written | ✅ done for parsed books | `G:/我的雲端硬碟/資料/電子書/_chunks/*.jsonl` |
 | R2 mirror of JSONL | ✅ done | mirrored on parse / OCR / standardize |
 | `ebook_chunks` previews in DB | ✅ caught up | back-fill via `repopulate_chunk_previews.py retry-failed` |
 | Frontend reads chunks | ✅ wired | `loadChunk()` from local→R2 fallback |
 | Reader v2 UI (light theme + TOC + highlights + notes panel + bookshelf + tags + bookmarks) | ✅ done | with auto-save, error toasts |
 | Search by title / author / fulltext | ✅ wired | `/api/ebooks/search?mode=…` |
-| **EPUB standardize → markdown reader format** | ✅ done | 484/492 EPUBs incl. all enrichment passes (8 remain: corrupted/bad-zip/no-text) |
-| **PDF standardize Plan A (lite)** | ✅ done | 437/437 text-extractable PDFs polished — s2tw, spacing collapse, publisher metadata, `page_number` preserved |
-| **PDF standardize Plan B v0 (TOC-driven)** | ✅ done | `standardize_pdf.py --all` — 152/437 chapter-chunked (OK 152, Skipped 285, Failed 0); Plan B v1 (font-driven, no-TOC subset) deferred |
-| **Online metadata enrichment** | ✅ done | `enrich_book_metadata.py` filled 8 publishers + 11 publish_years on 28-book backlog (89% / 87% coverage now) |
+| **EPUB standardize → markdown reader format** | ✅ done + sidebar fixes 2026-05-14 | 505/505 EPUBs format=markdown; 0 filename leaks; 0 chunks below heading-rate threshold (was 21 / 41 / 68) |
+| **PDF standardize Plan A (lite)** | ✅ done | 437/437 text-extractable PDFs polished |
+| **PDF standardize Plan B v0 (TOC-driven)** | ✅ done + sidebar headings ✅ (2026-05-14) | 207 Plan-B PDFs backfilled with `##` / `###` markdown headings via `backfill_pdf_headings.py` so reader sidebar renders nesting; Plan B v1 (font-driven, no-TOC subset) still deferred |
+| **套書 splitting** | ✅ partial done 2026-05-14 | 19 splittable 套書 → 132 child ebooks (after 康德 dedup); 16 unsplittable (`volume=None` throughout) still pending font/LLM detection |
+| **Online metadata enrichment** | ✅ done | 89% publisher / 87% publish_year coverage |
 | **books / excerpts library** | ✅ done | `/excerpts/library`, tags, Markdown export, daily bookmark |
 
 ## Pipeline scripts overview (all in `scripts/`)
@@ -478,6 +480,34 @@ click. No backend involved (built client-side from already-loaded
 
 ## Pending TODOs
 
+### 2026-05-14 session log — sidebar + 套書 + dedup work
+
+If you're a fresh agent picking this up, this is what changed in the
+**2026-05-14 session** so you don't redo finished work:
+
+| Done | Commit | What |
+|---|---|---|
+| ✅ | `89377eb` | OCR `process_one` retries each batch in-place — mid-book 502 no longer wastes accumulated pages |
+| ✅ | `3905933` | PDF Plan B (`standardize_pdf.py`) now prepends `## chapter_title` markdown heading + `format=markdown`. `scripts/backfill_pdf_headings.py` retroactively fixed 207 Plan-B PDFs |
+| ✅ | `6808f7f` | `standardize_ebook.py` — added EN `CHAPTER N` / `BOOK II` regex + content-hash disambiguator on truncate fallback. Re-standardized 41 books with filename leaks |
+| ✅ | `7fc64d1` | `standardize_ebook.py` — legacy flat-TOC mode also prepends `##` so 68 EPUBs at <40% heading rate are now at 100% |
+| ✅ | `609aca4` | `ingest_new_books.py` — when target on Drive already exists, **auto-delete the z-lib/ copy** + log sizes |
+| ✅ | `2a883ed` + `8e8c4c1` | New `scripts/split_ebook_set.py` — split 套書 ebook into per-volume children. Heading levels flattened to `##`. 19 books split into 132 child ebooks |
+
+**End-of-session metrics:**
+- 0 EPUBs format=None (was 21)
+- 0 filename leaks (was 41, 695 leak entries)
+- 0 EPUBs below heading-rate threshold (was 68)
+- 132 child ebooks from 套書 split (across 18 source EPUBs after 康德 dedup)
+- 16 套書 still unsplittable (chunks `volume=None`) — Phase 2 work
+
+**Remaining TODOs (priority order):**
+
+1. **45 EPUBs with single chunk >400KB** (劍橋中國史 11冊, 摩訶婆羅多, Eusebius Collected Works, 世界佛教通史 14卷, …) — publisher EPUB has no chapter anchors, one volume = one giant chunk. Wait on font-size analysis or LLM chapter-edge detection.
+2. **16 套書 with `volume=None`** (see Phase 2 list above) — needs font/LLM volume detection before `split_ebook_set.py` can act.
+3. **Content-filter-rejected books** (Haiku OCR refuses) — book 4 `哥白尼革命`, book 44 `規訓與懲罰`. Future Gemini-fallback queue.
+4. **`ingest_new_books.py` auto-split-on-ingest** — when a freshly-ingested 套書 finishes standardize_ebook, automatically call `split_ebook_set.py` (currently manual).
+
 ### Online metadata enrichment — ✅ shipped 2026-05-06
 
 `scripts/enrich_book_metadata.py` reads `books` rows where
@@ -523,83 +553,76 @@ Optional improvement: set `GOOGLE_BOOKS_API_KEY` in `.env` for higher
 quota (anonymous tier is fine for dozens of rows; useful only if
 re-running over hundreds).
 
-### 套書 splitting — pending (user-requested 2026-05-14)
+### 套書 splitting — ✅ Phase 1 done 2026-05-14, 16 still pending
 
-The library has **34 ebook rows whose title matches a 套書 / 全集 / 套裝
-pattern**. The user has explicitly asked to split these into one ebook
-row per volume so the reader sidebar / bookshelf treats each volume as
-a standalone book.
+The library originally had **35 ebook rows whose title matches a 套書 /
+全集 / 套裝 pattern**. The user explicitly asked to split these into one
+ebook row per volume so the reader sidebar / bookshelf treats each
+volume as a standalone book.
 
-Two categories by how separable the source is:
+**Phase 1 (volume-metadata-driven split) — DONE.** Ran `split_ebook_set.py
+run --all` over the 19 books whose chunks already carried a `volume` field
+(came from the hierarchical-TOC standardize path). Produced **132 child
+ebooks** after dedup. Each child has:
+- `parse_error = 'split from set; do not re-standardize'` (marker so future
+  standardize re-runs don't regenerate the full bundle into one volume's slot)
+- All `##` heading levels (`flatten_heading_to_h2` rewrites the first
+  heading line of each chunk so the reader sidebar renders flat siblings —
+  publisher's `###`/`####` 「組-內小篇」 distinction loses meaning once the
+  volume stands alone)
+- Inherited `author / category / subcategory / file_path` from parent
 
-**Splittable now (~22 books)** — the EPUB went through the hierarchical
-TOC path during standardize_ebook, so chunks already carry a `volume`
-field naming each volume. Examples:
-- 三毛典藏全集（14本套裝） — 9 volumes (稻草人手記 / 雨季不再來 / 撒哈拉的故事 …)
-- 商務印書館漢譯歷史套裝（24冊） — 18 volumes
-- 理想國譯叢系列 套裝32冊 — 26 volumes
-- 不可不知的歷史系列(13冊) — 12 volumes
-- 美國百年困局與當下危機（套裝共10冊） — 7 volumes
-- 換個角度讀歷史（套裝共3冊） — 3 volumes
-- 諾曼風雲+拜占庭+維京傳奇 套裝共4冊 — 4 volumes
-- 中東大歷史（共5冊） — 5 volumes
-- 康德著作集（套裝10冊） — 10 volumes (2 duplicate ebook entries)
-- 周國平尼采譯著系列 — 5 volumes
-- 塞北帝國史系列 — 3 volumes
-- 世界史的拼圖（7冊） — 7 volumes
-- 柏拉圖哲學作品集（套裝6冊） — 4 volumes
-- 德意志帝國全集 — 4 volumes
-- 撒哈拉的故事（三毛全集·02） — 2 volumes
+Dedup handled: 康德著作集 had 2 duplicate parents (`漢譯名著叢書` and a
+bare-titled variant) — kept the 漢譯名著 children, deleted the other 10
+children + the redundant source EPUB on Drive per user choice. Other
+cross-set duplicate titles (理想國 from 商務印書館 vs 柏拉圖套裝, 偶像的
+黃昏 from 周國平 vs 商務印書館) are **legitimate different editions**
+and were not auto-deduplicated.
 
-**Unsplittable without further work (~12 books)** — chunks have `volume=None`
-throughout (either flat-TOC EPUB, OR a PDF with no `volume` metadata at all).
-Need either font-size analysis or LLM-detect-volume-boundaries to make these
-splittable. Examples:
-- 神學大全（第1冊 / 第2冊 / 第3冊）— PDFs, no volume metadata (note: each `冊` is already its own ebook row, just no further split needed)
-- 印順法師佛學著作全集(上)(下) — PDFs
-- 世界佛教通史（14卷）— EPUB, flat-TOC
-- 卡謬全集（6卷）— EPUB
-- 二十世紀西方哲學經典（套裝共10冊）— EPUB
-- 弗洛伊德作品集(共四冊) — EPUB
+**Phase 2 — 16 books still pending, need volume detection.** These have
+chunks with `volume=None` throughout (flat-TOC EPUB, OR PDF without volume
+metadata). `split_ebook_set.py status` lists them:
 
-#### Splitting plan (NOT YET EXECUTED — user approval needed)
+- 伊斯蘭文化小叢書（11本套裝） — EPUB
+- 神學大全（第1冊 / 第2冊 / 第3冊）— PDF (each `冊` is already a separate
+  ebook row — they share the name pattern but DON'T need further splitting)
+- 施米特文集 — EPUB
+- 印順法師佛學著作全集(上)(下) — PDF
+- 世界歷史文庫 希臘史 / 法國史 中 / 非洲史 — PDFs (translated 世界歷史
+  文庫 series, individual volumes already, not actually 套書)
+- 中東史（上、中、下 套裝共3冊） — PDF
+- 二十世紀西方哲學經典（套裝共10冊） — EPUB
+- 歷史理性批判文集 — EPUB
+- 卡謬全集（6卷） — EPUB
+- 陀思妥耶夫斯基全集 — EPUB
+- 世界佛教通史（14卷） — EPUB
 
-For each splittable book:
-1. Read its JSONL
-2. Group chunks by `volume` field; chunks with `volume=None` (cover /
-   出版資訊 / 目錄) fold into the FIRST volume in document order
-3. For each volume group, create a NEW `ebooks` row:
-   - `title` = volume name (e.g. `稻草人手記`)
-   - `author`, `category`, `subcategory` = inherited from original
-   - `file_path` = original (same source EPUB — read-only)
-   - `parse_error` = `'split from set; do not re-standardize'` (marker so
-     re-runs don't regenerate full bundle into one volume's JSONL slot)
-   - `parsed_at` = current UTC
-4. Write per-volume JSONL with renumbered chunk_index (0..N-1)
-5. Push to R2 (gzipped)
-6. Insert `ebook_chunks` previews (200-char per chunk)
-7. **AFTER all new rows for a book are verified** (chunk_count sums to original),
-   delete the original ebook row + its chunks + JSONL (local) + R2 obj
+Approach for Phase 2 (deferred — needs implementation):
+1. **Font-size analysis** for EPUB — detect `<h1>`/big-font headings inside
+   the rendered HTML to find volume boundaries (analogous to PDF Plan B v1)
+2. **LLM-detect** — feed the chunk-content table-of-contents page through
+   Haiku/Sonnet, ask it to identify volume boundary chunk_indices
+3. Then call `split_ebook_set.py` with synthesized `volume` field per chunk
 
-#### Annotation guard
+**Tooling — `scripts/split_ebook_set.py` (shipped 2026-05-14, commit
+`2a883ed`/`8e8c4c1`):**
+- `python scripts/split_ebook_set.py status` — list current state
+- `python scripts/split_ebook_set.py run --book <id> --dry-run` — preview
+- `python scripts/split_ebook_set.py run --book <id>` — split one
+- `python scripts/split_ebook_set.py run --all` — batch all currently
+  splittable (skips books with annotations + already-split children)
 
-Currently 3 ebooks have annotations:
-- 文明的歷史 (181798a6-…) — 2 annotations
-- A state of mixture (e2337cce-…) — 2 annotations
-- 道教簡史 (0c29e6af-…) — 1 annotation
+**Annotation guard — re-check before re-running.** As of 2026-05-14 only
+3 ebooks have annotations (文明的歷史 / A state of mixture / 道教簡史),
+none of which are 套書 candidates. If new annotations appear on a 套書
+parent later, the script's annotations_for() check will refuse to split
+it without `--force`.
 
-None are 套書, so safe. **Re-check before running** in case new annotations
-have been added.
-
-#### Implementation
-Future session should write `scripts/split_ebook_set.py` with:
-- `python scripts/split_ebook_set.py status` — list splittable + unsplittable
-- `python scripts/split_ebook_set.py run --book <id> --dry-run` — preview volumes
-- `python scripts/split_ebook_set.py run --book <id>` — split one book
-- `python scripts/split_ebook_set.py run --all` — batch all splittable
-
-DO NOT run `--all` without first running on 1 book and having user
-spot-check the result in the reader UI.
+**For new 套書 ingested via z-lib drop:** the feedback memory
+`feedback_set_books_split.md` says to split immediately after ingest.
+Currently `ingest_new_books.py` doesn't auto-trigger split — that's a
+future enhancement. For now, after a 套書 lands in `ebooks` and is
+parsed + standardized, manually run `split_ebook_set.py run --book <id>`.
 
 ## See also
 
