@@ -40,28 +40,25 @@
                 :x1="g.x" :y1="g.y1" :x2="g.x" :y2="g.y2"
                 :stroke="g.color" stroke-width="6" opacity="0.10" stroke-linecap="round" />
 
-          <!-- Marriage lines (red). Joseph↔Mary is dashed (holy union, see Matt 1:18-25) -->
+          <!-- Marriage lines (red). 約瑟+馬利亞 視為一般婚姻，不再 dashed。 -->
           <line v-for="m in cv!.marriages" :key="m.id"
                 v-show="!m.hidden"
                 :x1="m.x1" :y1="m.y" :x2="m.x2" :y2="m.y"
-                stroke="#dc2626" stroke-width="2" stroke-linecap="round"
-                :stroke-dasharray="m.holy ? '6,4' : ''" />
+                stroke="#dc2626" stroke-width="2" stroke-linecap="round" />
 
           <!-- Vertical drops (parent → child) -->
           <line v-for="(d, i) in cv!.drops" :key="'d'+i"
                 v-show="!d.hidden"
                 :x1="d.x" :y1="d.y1" :x2="d.x" :y2="d.y2"
                 :stroke="d.stroke || '#9ca3af'" stroke-width="1.5"
-                stroke-linecap="round"
-                :stroke-dasharray="d.dashed ? '6,4' : ''" />
+                stroke-linecap="round" />
 
           <!-- Horizontal bars -->
           <line v-for="(b, i) in cv!.hbars" :key="'b'+i"
                 v-show="!b.hidden"
                 :x1="b.x1" :y1="b.y" :x2="b.x2" :y2="b.y"
                 :stroke="b.stroke || '#9ca3af'" stroke-width="1.5"
-                stroke-linecap="round"
-                :stroke-dasharray="b.dashed ? '6,4' : ''" />
+                stroke-linecap="round" />
         </svg>
 
         <!-- ② Person cards -->
@@ -159,8 +156,6 @@
       <div v-if="!props.rootId" class="absolute bottom-3 left-3 z-40 bg-white/95 border border-gray-200 rounded-lg p-2 text-[10px] text-gray-600 shadow-sm pointer-events-none space-y-0.5">
         <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-amber-400 rounded-full" />主幹 A：馬太譜系（猶大→所羅門→約瑟）</div>
         <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-rose-400 rounded-full" />主幹 B：路加譜系（猶大→拿單→馬利亞）</div>
-        <div class="flex items-center gap-1.5"><span class="w-3 h-0 border-t border-dashed border-gray-400" />虛線：法律關係（約瑟→耶穌）</div>
-        <div class="flex items-center gap-1.5"><span class="w-3 h-0 border-t border-dashed border-red-600" />紅虛線：聖靈感孕婚姻（約瑟↔馬利亞）</div>
         <div class="flex items-center gap-1.5 pt-1 mt-1 border-t border-gray-100"><span class="inline-block w-3 h-3 border border-orange-300 bg-orange-50 rounded" />早期教會傳統（東西方共識）</div>
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-purple-300 bg-purple-50 rounded" />天主教傳統</div>
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-emerald-300 bg-emerald-50 rounded" />東方教會傳統</div>
@@ -1485,22 +1480,19 @@ const cv = computed(() => {
         // null-mom 的 T-bar 跟 marLineY 同 Y → 視為婚姻線延伸，用紅色（與 marriages 同色）
         const hbarStroke = (mom === null && barY === marLineY) ? '#dc2626' : undefined
         hbars.push({ x1: minBarX, x2: maxBarX, y: barY, stroke: hbarStroke })
-        for (const kid of groupKids) {
           const kxVal     = kidX.get(kid)!
           const isSpKid   = rowOf.has(kid)
           const childKind = membership.get(kid)
-          const isLegal   = rk.get(`${sid}|${kid}`) === 'legal'
           const continuingKind = parentKind === 'S' ? (childKind ?? 'S') : parentKind
-          const lineStroke = isLegal
-            ? '#9ca3af'
-            : !isSpKid                          ? '#9ca3af'  // 非主幹子女：一律灰色
+          const lineStroke =
+              !isSpKid                          ? '#9ca3af'  // 非主幹子女：一律灰色
             : continuingKind === 'B'            ? '#f43f5e'
             : continuingKind === 'A'            ? '#f59e0b'
             : continuingKind === 'S'            ? '#f59e0b'
             : continuingKind === 'single'       ? '#f59e0b'
             :                                     '#6b7280'
           const kidActualY = isSpKid ? rowY(rowOf.get(kid)!) : childY
-          drops.push({ x: kxVal, y1: barY, y2: kidActualY, stroke: lineStroke, dashed: isLegal })
+          drops.push({ x: kxVal, y1: barY, y2: kidActualY, stroke: lineStroke })
         }
       }
     }
