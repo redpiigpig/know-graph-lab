@@ -1,60 +1,79 @@
 <template>
   <div ref="rootEl" class="relative w-full h-full bg-slate-50 rounded-xl overflow-hidden">
     <svg
+      ref="svgEl"
       :width="width"
       :height="height"
       :viewBox="`0 0 ${width} ${height}`"
-      class="block"
-      @mouseleave="hovered = null"
+      class="block select-none"
+      :class="selectedRealm ? 'cursor-default' : 'cursor-default'"
     >
-      <rect :width="width" :height="height" fill="#F1F5F9" />
+      <!-- Background catches "click empty space" to deselect -->
+      <rect
+        :width="width"
+        :height="height"
+        fill="#F1F5F9"
+        @click="onBackgroundClick"
+      />
 
-      <g v-if="paths.length">
-        <path
-          v-for="p in paths"
-          :key="p.id"
-          :d="p.d"
-          :fill="p.fill"
-          :fill-opacity="p.opacity"
-          :stroke="p.isAdmin1 ? '#FFFFFF' : '#FFFFFF'"
-          :stroke-width="p.isAdmin1 ? 0.25 : 0.5"
-          class="cursor-pointer"
-          style="transition: fill 200ms, fill-opacity 200ms;"
-          @click="onCountryClick(p)"
-          @mousemove="onHover($event, p)"
-          @mouseenter="onHover($event, p)"
-        />
-      </g>
-
-      <!-- Realm labels (default view) -->
-      <g v-if="!selectedRealm && realmLabels.length" pointer-events="none">
-        <g v-for="lbl in realmLabels" :key="lbl.id" :transform="`translate(${lbl.x},${lbl.y})`">
-          <text
-            text-anchor="middle"
-            :font-size="lbl.fontSize"
-            font-weight="700"
-            fill="#FFFFFF"
-            stroke="rgba(0,0,0,0.55)"
-            :stroke-width="lbl.fontSize * 0.18"
-            paint-order="stroke fill"
-            style="font-family: ui-sans-serif, system-ui;"
-          >{{ lbl.text }}</text>
+      <!-- Zoomable / pannable group -->
+      <g :transform="`translate(${transform.x},${transform.y}) scale(${transform.k})`">
+        <g v-if="paths.length">
+          <path
+            v-for="p in paths"
+            :key="p.id"
+            :d="p.d"
+            :fill="p.fill"
+            :fill-opacity="p.opacity"
+            stroke="#FFFFFF"
+            :stroke-width="p.strokeBase / transform.k"
+            :stroke-opacity="p.opacity"
+            class="cursor-pointer"
+            style="transition: fill 200ms, fill-opacity 200ms;"
+            @click.stop="onCountryClick(p, $event)"
+          />
         </g>
-      </g>
 
-      <!-- Sphere labels (drilled view) -->
-      <g v-else-if="selectedRealm && sphereLabels.length" pointer-events="none">
-        <g v-for="lbl in sphereLabels" :key="lbl.id" :transform="`translate(${lbl.x},${lbl.y})`">
-          <text
-            text-anchor="middle"
-            :font-size="lbl.fontSize"
-            font-weight="600"
-            fill="#FFFFFF"
-            stroke="rgba(0,0,0,0.6)"
-            :stroke-width="lbl.fontSize * 0.2"
-            paint-order="stroke fill"
-            style="font-family: ui-sans-serif, system-ui;"
-          >{{ lbl.text }}</text>
+        <!-- Selected feature outline (drawn above paths so it's visible) -->
+        <path
+          v-if="selectedFeature"
+          :d="selectedFeature.d"
+          fill="none"
+          stroke="#0F172A"
+          :stroke-width="2 / transform.k"
+          pointer-events="none"
+        />
+
+        <!-- Realm labels (default view) -->
+        <g v-if="!selectedRealm && realmLabels.length" pointer-events="none">
+          <g v-for="lbl in realmLabels" :key="lbl.id" :transform="`translate(${lbl.x},${lbl.y})`">
+            <text
+              text-anchor="middle"
+              :font-size="lbl.fontSize / transform.k"
+              font-weight="700"
+              fill="#FFFFFF"
+              stroke="rgba(0,0,0,0.55)"
+              :stroke-width="(lbl.fontSize * 0.18) / transform.k"
+              paint-order="stroke fill"
+              style="font-family: ui-sans-serif, system-ui;"
+            >{{ lbl.text }}</text>
+          </g>
+        </g>
+
+        <!-- Sphere labels (drilled view) -->
+        <g v-else-if="selectedRealm && sphereLabels.length" pointer-events="none">
+          <g v-for="lbl in sphereLabels" :key="lbl.id" :transform="`translate(${lbl.x},${lbl.y})`">
+            <text
+              text-anchor="middle"
+              :font-size="lbl.fontSize / transform.k"
+              font-weight="600"
+              fill="#FFFFFF"
+              stroke="rgba(0,0,0,0.6)"
+              :stroke-width="(lbl.fontSize * 0.2) / transform.k"
+              paint-order="stroke fill"
+              style="font-family: ui-sans-serif, system-ui;"
+            >{{ lbl.text }}</text>
+          </g>
         </g>
       </g>
     </svg>
@@ -63,22 +82,47 @@
       載入世界地圖中…
     </div>
 
-    <!-- Tooltip -->
+    <!-- Selected feature info (only in drilled view) -->
     <div
-      v-if="hovered"
-      class="pointer-events-none absolute z-10 px-3 py-2 bg-white border border-gray-200 rounded-lg shadow-md text-xs text-gray-800 max-w-[280px]"
-      :style="{ left: tooltipPos.x + 'px', top: tooltipPos.y + 'px' }"
+      v-if="selectedFeature && selectedRealm"
+      class="absolute right-3 top-14 z-10 w-[260px] bg-white border border-gray-200 rounded-xl shadow-md p-3 text-xs"
     >
-      <div class="font-semibold text-sm mb-1">{{ hovered.title }}</div>
-      <div v-if="hovered.realm" class="flex items-center gap-1.5 mb-1">
-        <span class="inline-block w-2.5 h-2.5 rounded-sm" :style="{ background: hovered.realm.color }"></span>
-        <span class="text-gray-600">{{ hovered.realm.index }}. {{ hovered.realm.name_zh }}</span>
+      <div class="flex items-start justify-between gap-2 mb-1.5">
+        <div class="font-semibold text-sm text-gray-900 leading-tight">{{ selectedFeature.title }}</div>
+        <button
+          @click="selectedFeature = null"
+          class="text-gray-300 hover:text-gray-700 leading-none -mt-0.5 text-base"
+          aria-label="關閉"
+        >×</button>
       </div>
-      <div v-if="hovered.spheres.length" class="text-gray-500 text-[11px] leading-relaxed mt-1">
-        <div v-for="(s, i) in hovered.spheres" :key="i">
+      <div v-if="selectedFeature.realm" class="flex items-center gap-1.5 mb-1">
+        <span class="inline-block w-2.5 h-2.5 rounded-sm" :style="{ background: selectedFeature.realm.color }"></span>
+        <span class="text-gray-600">{{ selectedFeature.realm.index }}. {{ selectedFeature.realm.name_zh }}</span>
+      </div>
+      <div v-if="selectedFeature.spheres.length" class="text-gray-500 text-[11px] leading-relaxed mt-1 space-y-0.5">
+        <div v-for="(s, i) in selectedFeature.spheres" :key="i">
           · {{ s.name }}<span v-if="s.note" class="text-gray-400"> — {{ s.note }}</span>
         </div>
       </div>
+    </div>
+
+    <!-- Zoom controls -->
+    <div class="absolute right-3 bottom-3 flex flex-col bg-white/95 backdrop-blur rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+      <button
+        @click="zoomBy(1.5)"
+        class="w-8 h-8 flex items-center justify-center text-gray-600 hover:bg-gray-100 hover:text-gray-900 text-lg leading-none border-b border-gray-200"
+        aria-label="放大"
+      >＋</button>
+      <button
+        @click="zoomBy(1/1.5)"
+        class="w-8 h-8 flex items-center justify-center text-gray-600 hover:bg-gray-100 hover:text-gray-900 text-lg leading-none border-b border-gray-200"
+        aria-label="縮小"
+      >−</button>
+      <button
+        @click="resetZoom"
+        class="w-8 h-8 flex items-center justify-center text-gray-500 hover:bg-gray-100 hover:text-gray-900 text-[10px]"
+        aria-label="重置"
+      >⟲</button>
     </div>
 
     <!-- Legend (default: 8 realms) -->
@@ -88,7 +132,7 @@
         <button
           v-for="r in REALMS"
           :key="r.id"
-          @click="selectedRealm = r.id"
+          @click="enterRealm(r.id)"
           class="flex items-center gap-1.5 text-[11px] hover:text-gray-900 transition text-left"
         >
           <span class="inline-block w-3 h-3 rounded-sm flex-shrink-0" :style="{ background: r.color }"></span>
@@ -101,7 +145,7 @@
     <div v-else class="absolute left-3 bottom-3 bg-white/95 backdrop-blur rounded-lg border border-gray-200 px-3 py-2 shadow-sm max-w-[320px]">
       <div class="flex items-center gap-2 mb-2">
         <button
-          @click="selectedRealm = null"
+          @click="exitRealm"
           class="text-[11px] text-gray-500 hover:text-gray-900 px-1.5 py-0.5 rounded border border-gray-200 hover:border-gray-400"
         >← 返回</button>
         <span class="text-[11px] text-gray-400">界域 {{ selectedRealmInfo?.index }}</span>
@@ -113,11 +157,12 @@
           <span class="text-gray-700">{{ s.name_zh }}</span>
         </div>
       </div>
+      <div class="text-[10px] text-gray-400 mt-2 leading-relaxed">點擊國家／行政區查看名稱</div>
     </div>
 
-    <div v-if="selectedRealm" class="absolute right-3 top-3 bg-white/95 backdrop-blur rounded-lg border border-gray-200 px-2.5 py-1 shadow-sm">
+    <div v-if="selectedRealm" class="absolute right-14 top-3 bg-white/95 backdrop-blur rounded-lg border border-gray-200 px-2.5 py-1 shadow-sm">
       <button
-        @click="selectedRealm = null"
+        @click="exitRealm"
         class="text-[11px] text-gray-500 hover:text-gray-900 flex items-center gap-1"
       >
         <span>↩</span> 返回八大界域
@@ -129,6 +174,8 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
 import { geoNaturalEarth1, geoPath, geoCentroid } from 'd3-geo'
+import { zoom as d3zoom, zoomIdentity, type ZoomBehavior } from 'd3-zoom'
+import { select } from 'd3-selection'
 import {
   REALMS,
   SPHERES,
@@ -142,7 +189,6 @@ import {
   spheresForCountry,
   primarySphereForCountryInRealm,
   sphereForAdmin1,
-  realmForAdmin1,
   sphereColorsByRealm,
   type Realm,
   type RealmId,
@@ -150,21 +196,24 @@ import {
 } from '~/data/maps/world-religions'
 
 const rootEl = ref<HTMLElement | null>(null)
+const svgEl = ref<SVGSVGElement | null>(null)
 const width = ref(1200)
 const height = ref(620)
 const loading = ref(true)
 const selectedRealm = ref<RealmId | null>(null)
+
+const transform = ref({ k: 1, x: 0, y: 0 })
+let zoomBehavior: ZoomBehavior<SVGSVGElement, unknown> | null = null
 
 interface PathItem {
   id: string
   d: string
   fill: string
   opacity: number
+  strokeBase: number
   isAdmin1: boolean
   realm?: Realm
-  /** title for tooltip */
   title: string
-  /** sphere display lines for tooltip */
   spheres: { name: string; note?: string }[]
 }
 
@@ -179,9 +228,7 @@ interface LabelItem {
 interface FeatureEntry {
   feature: any
   isAdmin1: boolean
-  /** unified key — ISO_A3 (admin_0) or iso_3166_2 (admin_1) */
   key: string
-  /** parent country code (admin_1's adm0_a3, or same as key for admin_0) */
   countryCode: string
 }
 
@@ -190,8 +237,7 @@ const paths = ref<PathItem[]>([])
 const realmLabels = ref<LabelItem[]>([])
 const sphereLabels = ref<LabelItem[]>([])
 
-const hovered = ref<PathItem | null>(null)
-const tooltipPos = ref({ x: 0, y: 0 })
+const selectedFeature = ref<PathItem | null>(null)
 
 const selectedRealmInfo = computed<Realm | undefined>(() =>
   selectedRealm.value ? realmById(selectedRealm.value) : undefined
@@ -213,7 +259,6 @@ function getAdm0Code(props: any): string {
   return props.ADM0_A3 || ''
 }
 
-/** Realm + (optional) sphere + tooltip data for an entry. */
 function describeEntry(entry: FeatureEntry, drilling: RealmId | null) {
   let realm: Realm | undefined
   let sphere: CulturalSphere | undefined
@@ -227,7 +272,6 @@ function describeEntry(entry: FeatureEntry, drilling: RealmId | null) {
     const adminName = ADMIN1_NAME_ZH[entry.key] || entry.feature.properties.name || entry.key
     title = cn ? `${cn}・${adminName}` : adminName
     if (sphere) {
-      // find the matching member to get its note
       const m = sphere.members.find(mm => mm.iso_a3 === entry.countryCode && mm.admin1)
         || sphere.members.find(mm => mm.iso_a3 === entry.countryCode)
       spheresList.push({ name: sphere.name_zh, note: m?.note })
@@ -237,12 +281,10 @@ function describeEntry(entry: FeatureEntry, drilling: RealmId | null) {
     const realmId = COUNTRY_REALM[code]
     realm = realmId ? realmById(realmId) : undefined
     title = COUNTRY_NAME_ZH[code] || entry.feature.properties.NAME || code
-    // list ALL spheres this country participates in (across realms)
     const ss = spheresForCountry(code)
     for (const { sphere: s, member: m } of ss) {
       spheresList.push({ name: s.name_zh, note: m.note })
     }
-    // for drill-down, pick this country's primary sphere within selected realm
     if (drilling && realmId === drilling) {
       sphere = primarySphereForCountryInRealm(code, drilling)
     }
@@ -273,7 +315,6 @@ function rebuildAll() {
       let opacity = 1
       if (drilling) {
         if (realm?.id === drilling) {
-          // colored sub-shade by sphere within drilled realm
           fill = sphere && sphereColors ? sphereColors[sphere.id] : (realm.color)
           opacity = 1
         } else {
@@ -291,6 +332,7 @@ function rebuildAll() {
         d,
         fill,
         opacity,
+        strokeBase: entry.isAdmin1 ? 0.25 : 0.5,
         isAdmin1: entry.isAdmin1,
         realm,
         title,
@@ -299,21 +341,17 @@ function rebuildAll() {
     })
     .filter(p => p.d)
 
-  // ----- Realm labels (default view) — fixed positions -----
   realmLabels.value = REALMS.map(r => {
     const xy = projection(r.label_lnglat)
     if (!xy) return null
     return { id: r.id, x: xy[0], y: xy[1], text: r.name_zh, fontSize: 17 }
   }).filter(Boolean) as LabelItem[]
 
-  // ----- Sphere labels (drilled view) — auto centroid per sphere -----
   if (drilling) {
     const realmSpheres = spheresByRealm(drilling)
     sphereLabels.value = realmSpheres.map(s => {
-      // collect features assigned to this sphere
       const matches = featureEntries.value.filter(e => {
         if (e.isAdmin1) return ADMIN1_SPHERE[e.key] === s.id
-        // admin_0: include if a non-extension non-admin1 member matches AND country isn't using admin_1
         if (COUNTRIES_USING_ADMIN1.has(e.key)) return false
         return s.members.some(m => m.iso_a3 === e.key && !m.is_extension && !m.admin1)
       }).map(e => e.feature)
@@ -322,9 +360,7 @@ function rebuildAll() {
       try {
         const c = geoCentroid({ type: 'FeatureCollection', features: matches } as any)
         lng = c[0]; lat = c[1]
-      } catch {
-        return null
-      }
+      } catch { return null }
       const xy = projection([lng, lat])
       if (!xy || isNaN(xy[0]) || isNaN(xy[1])) return null
       return { id: s.id, x: xy[0], y: xy[1], text: s.name_zh, fontSize: 12 }
@@ -334,24 +370,49 @@ function rebuildAll() {
   }
 }
 
-function onHover(ev: MouseEvent, p: PathItem) {
-  hovered.value = p
-  const rect = rootEl.value?.getBoundingClientRect()
-  if (!rect) return
-  let x = ev.clientX - rect.left + 12
-  let y = ev.clientY - rect.top + 12
-  if (x + 280 > width.value) x = ev.clientX - rect.left - 290
-  if (y + 140 > height.value) y = ev.clientY - rect.top - 150
-  tooltipPos.value = { x, y }
+function enterRealm(id: RealmId) {
+  selectedRealm.value = id
+  selectedFeature.value = null
 }
 
-function onCountryClick(p: PathItem) {
+function exitRealm() {
+  selectedRealm.value = null
+  selectedFeature.value = null
+}
+
+function onCountryClick(p: PathItem, _ev: MouseEvent) {
   if (!p.realm) return
-  if (selectedRealm.value === p.realm.id) {
-    selectedRealm.value = null
+  if (selectedRealm.value) {
+    // drilled view → toggle selection (does NOT exit drill)
+    if (selectedFeature.value && selectedFeature.value.id === p.id) {
+      selectedFeature.value = null
+    } else {
+      selectedFeature.value = p
+    }
   } else {
+    // default view → click drills into the country's realm
     selectedRealm.value = p.realm.id
   }
+}
+
+function onBackgroundClick() {
+  selectedFeature.value = null
+}
+
+// ----- Zoom controls -----
+
+function applyZoomTransform(t: { k: number; x: number; y: number }) {
+  transform.value = t
+}
+
+function zoomBy(factor: number) {
+  if (!svgEl.value || !zoomBehavior) return
+  select(svgEl.value).transition().duration(200).call(zoomBehavior.scaleBy as any, factor)
+}
+
+function resetZoom() {
+  if (!svgEl.value || !zoomBehavior) return
+  select(svgEl.value).transition().duration(250).call(zoomBehavior.transform as any, zoomIdentity)
 }
 
 let ro: ResizeObserver | null = null
@@ -374,6 +435,17 @@ onMounted(async () => {
   })
   ro.observe(rootEl.value!)
 
+  // Initialize zoom behavior
+  zoomBehavior = d3zoom<SVGSVGElement, unknown>()
+    .scaleExtent([1, 16])
+    .translateExtent([[-200, -200], [width.value + 200, height.value + 200]])
+    .on('zoom', (event: any) => {
+      applyZoomTransform({ k: event.transform.k, x: event.transform.x, y: event.transform.y })
+    })
+  if (svgEl.value) {
+    select(svgEl.value).call(zoomBehavior as any)
+  }
+
   try {
     const [adm0Res, adm1Res, adm1ExtraRes] = await Promise.all([
       fetch('/maps/ne_50m_admin_0_countries.geojson'),
@@ -385,27 +457,22 @@ onMounted(async () => {
     ])
 
     const entries: FeatureEntry[] = []
-
-    // admin_0: skip Antarctica AND skip countries handled by admin_1
     for (const f of adm0.features) {
       if (f.properties.ADM0_A3 === 'ATA') continue
       const code = getAdm0Code(f.properties)
       if (COUNTRIES_USING_ADMIN1.has(code)) continue
       entries.push({ feature: f, isAdmin1: false, key: code, countryCode: code })
     }
-    // admin_1 (50m, original 4: CHN/RUS/USA/CAN)
     for (const f of adm1.features) {
       const key = f.properties.iso_3166_2
       const country = f.properties.adm0_a3
       entries.push({ feature: f, isAdmin1: true, key, countryCode: country })
     }
-    // admin_1 (10m extra: LBY/AFG/UKR)
     for (const f of adm1Extra.features) {
       const key = f.properties.iso_3166_2
       const country = f.properties.adm0_a3
       entries.push({ feature: f, isAdmin1: true, key, countryCode: country })
     }
-
     featureEntries.value = entries
     rebuildAll()
   } catch (e) {
@@ -419,5 +486,7 @@ onBeforeUnmount(() => {
   ro?.disconnect()
 })
 
-watch(selectedRealm, () => rebuildAll())
+watch(selectedRealm, () => {
+  rebuildAll()
+})
 </script>
