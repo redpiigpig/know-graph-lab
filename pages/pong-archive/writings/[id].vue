@@ -13,7 +13,6 @@
           <span class="wa-cat-badge">{{ categoryLabel }}</span>
           <span v-if="article.publication" class="wa-pub">{{ article.publication }}</span>
           <span v-if="article.published_date" class="wa-date">{{ formatDate(article.published_date, article.date_approximate) }}</span>
-          <span v-if="article.editor" class="wa-editor">編輯：{{ article.editor }}</span>
         </div>
         <h1 class="wa-title">{{ article.title }}</h1>
         <p v-if="article.title_en" class="wa-title-en">{{ article.title_en }}</p>
@@ -53,6 +52,17 @@
             :class="{ 'wa-para--heading': isHeading(para), 'wa-para--quote': isQuote(para), 'wa-para--empty': !para.trim() }"
           >{{ displayText(para) }}</p>
         </div>
+
+        <!-- ── Colophon (版權頁) ─────────────────────────── -->
+        <section v-if="article.colophon && article.colophon.lines && article.colophon.lines.length" class="wa-colophon">
+          <h2 class="wa-colophon-title">出版資訊</h2>
+          <dl class="wa-colophon-list">
+            <div v-for="(line, i) in article.colophon.lines" :key="i" class="wa-colophon-row">
+              <dt class="wa-colophon-label">{{ line.label }}</dt>
+              <dd class="wa-colophon-value">{{ line.value }}</dd>
+            </div>
+          </dl>
+        </section>
       </article>
     </template>
 
@@ -186,11 +196,54 @@ function formatDate(dateStr, approximate) {
   color: #A09280;
   letter-spacing: 0.06em;
 }
-.wa-editor {
-  font-size: 0.72rem;
-  font-weight: 300;
+/* ── Colophon (版權頁) ───────────────────────────────────── */
+.wa-colophon {
+  margin-top: 64px;
+  padding: 28px 32px;
+  border: 1px solid #DDD8CF;
+  background-color: #F5F1E8;
+  border-radius: 3px;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.wa-colophon-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6A5E4A;
+  letter-spacing: 0.22em;
+  margin: 0 0 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #DDD8CF;
+  text-align: center;
+}
+.wa-colophon-list {
+  margin: 0;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 18px;
+  row-gap: 6px;
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+.wa-colophon-row {
+  display: contents;
+}
+.wa-colophon-label {
   color: #8A8278;
-  letter-spacing: 0.06em;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-align: right;
+  white-space: nowrap;
+}
+.wa-colophon-label::after {
+  content: '｜';
+  margin-left: 6px;
+  color: #C4B89A;
+}
+.wa-colophon-value {
+  color: #3A3025;
+  margin: 0;
+  letter-spacing: 0.04em;
 }
 
 .wa-title {
@@ -310,5 +363,7 @@ function formatDate(dateStr, approximate) {
   .wa-rule   { margin-left: 20px; margin-right: 20px; }
   .wa-body   { padding: 28px 20px 60px; }
   .wa-title  { font-size: 1.4rem; }
+  .wa-colophon { padding: 22px 18px; margin-top: 48px; }
+  .wa-colophon-list { column-gap: 12px; font-size: 0.78rem; }
 }
 </style>
