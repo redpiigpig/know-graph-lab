@@ -7,7 +7,7 @@ export default defineEventHandler(async (event) => {
 
   const { data, error } = await supabase
     .from('pong_writings')
-    .select('id, title, title_en, category, publication, published_date, date_approximate, source_url, cloudinary_urls, tags, content, editor, colophon, page_range')
+    .select('id, title, title_en, category, publication, published_date, date_approximate, source_url, cloudinary_urls, tags, content, editor, colophon, page_range, author')
     .eq('id', id)
     .eq('is_published', true)
     .single()

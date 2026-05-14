@@ -17,7 +17,7 @@
         </div>
         <h1 class="wa-title">{{ article.title }}</h1>
         <p v-if="article.title_en" class="wa-title-en">{{ article.title_en }}</p>
-        <p class="wa-byline">龐君華 會督</p>
+        <p class="wa-byline">{{ article.author || '龐君華 會督' }}</p>
 
         <div class="wa-header-actions">
           <a

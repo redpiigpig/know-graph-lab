@@ -126,7 +126,7 @@ const CATEGORIES = [
 ]
 
 // 刊物文章的刊物順序
-const PERIODICAL_ORDER = ['中華衛訊', '衛神院訊', '衛報', '衛理公會城中教會六十週年紀念特刊']
+const PERIODICAL_ORDER = ['中華衛訊', '衛神院訊', '衛報', '衛理公會城中教會六十週年紀念特刊', '衛理神學研究院畢業紀念冊']
 
 const writings = ref([])
 const pending  = ref(true)
