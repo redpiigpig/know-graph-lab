@@ -1347,21 +1347,21 @@ const cv = computed(() => {
       if (exShapes.some(s => lineIntersectsBox(g.x, g.y1, g.x, g.y2, s))) g.hidden = true
     }
 
-    // ── Stronger pass for SPINE cards / lines: hide if inside the expansion's
-    // full bbox (not just per-card overlap). User spec: 展開 ▼ 時，bbox 內的
-    // 主幹卡片即使沒被某張展開卡直接覆蓋也要隱形，否則 spine 卡和展開支系混雜。
-    // Non-spine cards keep the conservative per-card rule above.
+    // ── Stronger pass: hide ANY card/line inside an expansion bbox that isn't
+    // part of that expansion's own subtree. User spec: 展開 ▼ 時，bbox 範圍裡的
+    // 其他主幹和非主幹卡（如雅各的非主幹兒子 利未/西緬/呂便 夾在以掃 expansion 中）
+    // 都要隱形，否則視覺上很亂。
+    // Spared: isExpansionNode (this expansion's own subtree) + isExpansionRoot
+    // (the card whose ▼ was clicked).
     for (const n of nodes) {
       if (n.hidden) continue
       if (n.isExpansionNode || n.isExpansionRoot) continue
-      if (!n.spineKind) continue  // spine cards only
       const cx = n.x + n.w / 2, cy = n.y + n.h / 2
       if (expansionBoxes.some(b => cx >= b.x1 && cx <= b.x2 && cy >= b.y1 && cy <= b.y2)) {
         n.hidden = true
       }
     }
-    // Trunk guides (the long colored spine bars) are part of the spine — also
-    // hide their bbox-overlapping segments.
+    // Trunk guides (the long colored spine bars) — hide segments inside any bbox.
     for (const g of trunkGuides) {
       if (g.hidden) continue
       if (expansionBoxes.some(b => g.x >= b.x1 && g.x <= b.x2 && !(g.y2 < b.y1 || g.y1 > b.y2))) {
