@@ -62,6 +62,27 @@
 
         <!-- Sphere labels (drilled view) -->
         <g v-else-if="selectedRealm && sphereLabels.length" pointer-events="none">
+          <!-- Leader lines (drawn first so they're under text) -->
+          <g>
+            <line
+              v-for="lbl in sphereLabels.filter(l => l.hasLeader)"
+              :key="`leader-${lbl.id}`"
+              :x1="lbl.anchorX"
+              :y1="lbl.anchorY"
+              :x2="lbl.x"
+              :y2="lbl.y"
+              stroke="rgba(15,23,42,0.55)"
+              :stroke-width="0.8 / transform.k"
+            />
+            <circle
+              v-for="lbl in sphereLabels.filter(l => l.hasLeader)"
+              :key="`anchor-${lbl.id}`"
+              :cx="lbl.anchorX"
+              :cy="lbl.anchorY"
+              :r="1.4 / transform.k"
+              fill="rgba(15,23,42,0.7)"
+            />
+          </g>
           <g v-for="lbl in sphereLabels" :key="lbl.id" :transform="`translate(${lbl.x},${lbl.y})`">
             <text
               text-anchor="middle"
@@ -157,7 +178,7 @@
           <span class="text-gray-700">{{ s.name_zh }}</span>
         </div>
       </div>
-      <div class="text-[10px] text-gray-400 mt-2 leading-relaxed">點擊國家／行政區查看名稱</div>
+      <div class="text-[10px] text-gray-400 mt-2 leading-relaxed">點國家／行政區看名稱；點海洋空白處退回八大界域</div>
     </div>
 
     <div v-if="selectedRealm" class="absolute right-14 top-3 bg-white/95 backdrop-blur rounded-lg border border-gray-200 px-2.5 py-1 shadow-sm">
@@ -221,8 +242,13 @@ interface LabelItem {
   id: string
   x: number
   y: number
+  /** original anchor (centroid) for drawing leader line if displaced */
+  anchorX: number
+  anchorY: number
   text: string
   fontSize: number
+  /** true if label was pushed away from anchor (draw leader line) */
+  hasLeader: boolean
 }
 
 interface FeatureEntry {
@@ -266,7 +292,7 @@ function describeEntry(entry: FeatureEntry, drilling: RealmId | null) {
   const spheresList: { name: string; note?: string }[] = []
 
   if (entry.isAdmin1) {
-    sphere = sphereForAdmin1(entry.key)
+    sphere = sphereForAdmin1(entry.key, entry.countryCode)
     realm = sphere ? realmById(sphere.realm_id) : undefined
     const cn = COUNTRY_NAME_ZH[entry.countryCode] || entry.feature.properties.adm0_a3 || ''
     const adminName = ADMIN1_NAME_ZH[entry.key] || entry.feature.properties.name || entry.key
@@ -344,14 +370,21 @@ function rebuildAll() {
   realmLabels.value = REALMS.map(r => {
     const xy = projection(r.label_lnglat)
     if (!xy) return null
-    return { id: r.id, x: xy[0], y: xy[1], text: r.name_zh, fontSize: 17 }
+    return {
+      id: r.id, x: xy[0], y: xy[1], anchorX: xy[0], anchorY: xy[1],
+      text: r.name_zh, fontSize: 17, hasLeader: false,
+    }
   }).filter(Boolean) as LabelItem[]
 
   if (drilling) {
     const realmSpheres = spheresByRealm(drilling)
     sphereLabels.value = realmSpheres.map(s => {
       const matches = featureEntries.value.filter(e => {
-        if (e.isAdmin1) return ADMIN1_SPHERE[e.key] === s.id
+        if (e.isAdmin1) {
+          // explicit ADMIN1_SPHERE override wins; otherwise fall back to country default
+          const matched = sphereForAdmin1(e.key, e.countryCode)
+          return matched?.id === s.id
+        }
         if (COUNTRIES_USING_ADMIN1.has(e.key)) return false
         return s.members.some(m => m.iso_a3 === e.key && !m.is_extension && !m.admin1)
       }).map(e => e.feature)
@@ -363,10 +396,57 @@ function rebuildAll() {
       } catch { return null }
       const xy = projection([lng, lat])
       if (!xy || isNaN(xy[0]) || isNaN(xy[1])) return null
-      return { id: s.id, x: xy[0], y: xy[1], text: s.name_zh, fontSize: 12 }
+      return {
+        id: s.id, x: xy[0], y: xy[1], anchorX: xy[0], anchorY: xy[1],
+        text: s.name_zh, fontSize: 12, hasLeader: false,
+      }
     }).filter(Boolean) as LabelItem[]
+    relaxLabelCollisions(sphereLabels.value)
   } else {
     sphereLabels.value = []
+  }
+}
+
+/**
+ * Push overlapping labels apart with simple iterative repulsion.
+ * If a label gets displaced significantly, mark hasLeader so a thin line is drawn
+ * from its original anchor (centroid) to the displaced position.
+ */
+function relaxLabelCollisions(labels: LabelItem[]) {
+  if (labels.length < 2) return
+  const PADDING = 6
+  const ITER = 40
+  const widthOf = (l: LabelItem) => l.text.length * l.fontSize * 1.05
+  const heightOf = (l: LabelItem) => l.fontSize * 1.25
+  for (let iter = 0; iter < ITER; iter++) {
+    let moved = false
+    for (let i = 0; i < labels.length; i++) {
+      for (let j = i + 1; j < labels.length; j++) {
+        const a = labels[i], b = labels[j]
+        const dx = a.x - b.x
+        const dy = a.y - b.y
+        const minDx = (widthOf(a) + widthOf(b)) / 2 + PADDING
+        const minDy = (heightOf(a) + heightOf(b)) / 2 + PADDING
+        const overlapX = minDx - Math.abs(dx)
+        const overlapY = minDy - Math.abs(dy)
+        if (overlapX > 0 && overlapY > 0) {
+          if (overlapX < overlapY) {
+            const push = overlapX / 2 * (dx >= 0 ? 1 : -1)
+            a.x += push; b.x -= push
+          } else {
+            const push = overlapY / 2 * (dy >= 0 ? 1 : -1)
+            a.y += push; b.y -= push
+          }
+          moved = true
+        }
+      }
+    }
+    if (!moved) break
+  }
+  // mark leader if displaced more than a few pixels from anchor
+  for (const l of labels) {
+    const dist = Math.hypot(l.x - l.anchorX, l.y - l.anchorY)
+    l.hasLeader = dist > 6
   }
 }
 
@@ -396,7 +476,14 @@ function onCountryClick(p: PathItem, _ev: MouseEvent) {
 }
 
 function onBackgroundClick() {
-  selectedFeature.value = null
+  // Two-step ESC via background (ocean) click:
+  //   if a feature is selected → only deselect it
+  //   else if drilled into a realm → exit drill (back to 8-realm view)
+  if (selectedFeature.value) {
+    selectedFeature.value = null
+  } else if (selectedRealm.value) {
+    selectedRealm.value = null
+  }
 }
 
 // ----- Zoom controls -----

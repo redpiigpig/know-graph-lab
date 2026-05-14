@@ -635,9 +635,29 @@ export const COUNTRY_NAME_ZH: Record<string, string> = {
  *  LBY/AFG/UKR 用 NE 10m admin_1（檔案：ne_10m_admin_1_extra.geojson）
  */
 export const COUNTRIES_USING_ADMIN1 = new Set<string>([
-  'CHN', 'RUS', 'USA', 'CAN',                 // NE 50m subset
-  'LBY', 'AFG', 'UKR', 'SDN', 'ETH', 'NGA', 'GHA',  // NE 10m extra subset
+  'CHN', 'RUS', 'USA', 'CAN',                            // NE 50m subset
+  'LBY', 'AFG', 'UKR', 'SDN', 'ETH', 'NGA', 'GHA', 'FRA', // NE 10m extra subset
 ])
+
+/**
+ * 對於 admin_1 features 沒有 ADMIN1_SPHERE 顯式對應時，使用本國的「預設文化圈」作為後備。
+ * 例如法國本土 96 個 département 不一一列舉，預設都歸入 gallic-french。
+ * 只有海外省（FR-GF/MQ/GP/RE/YT 等）顯式覆寫到別的圈。
+ */
+export const COUNTRY_DEFAULT_SPHERE: Record<string, string> = {
+  CHN: 'han',
+  RUS: 'russian-tatar',
+  USA: 'anglo-american',
+  CAN: 'anglo-american',
+  FRA: 'gallic-french',
+  LBY: 'egyptian',
+  AFG: 'persian',
+  UKR: 'lublin',
+  SDN: 'egyptian',
+  ETH: 'ethiopian',
+  NGA: 'gulf-of-guinea',
+  GHA: 'gulf-of-guinea',
+}
 
 /** iso_3166_2 → sphere id（次國家行政區歸屬）。文件未指定的省份依預設： */
 export const ADMIN1_SPHERE: Record<string, string> = {
@@ -850,6 +870,16 @@ export const ADMIN1_SPHERE: Record<string, string> = {
   'GH-AH': 'gulf-of-guinea', 'GH-BA': 'gulf-of-guinea', 'GH-EP': 'gulf-of-guinea',
   'GH-CP': 'gulf-of-guinea', 'GH-WP': 'gulf-of-guinea', 'GH-AA': 'gulf-of-guinea',
   'GH-TV': 'gulf-of-guinea',
+
+  // ---------- 法國海外省（FRA） ----------
+  // 加勒比文化圈（拉美界域）
+  'FR-GF': 'caribbean',  // 法屬圭亞那
+  'FR-MQ': 'caribbean',  // 馬丁尼克
+  'FR-GP': 'caribbean',  // 瓜德羅普
+  // 東非-斯瓦希里文化圈（南方界域）— 印度洋克里奧爾島群
+  'FR-RE': 'east-african-swahili',  // 留尼旺
+  'FR-YT': 'east-african-swahili',  // 馬約特
+  // 本土 96 département + 科西嘉預設由 COUNTRY_DEFAULT_SPHERE['FRA'] = 'gallic-french' 接手
 }
 
 /** Admin_1 名稱對照（繁體中文，用於 tooltip 顯示） */
@@ -950,17 +980,25 @@ export const ADMIN1_NAME_ZH: Record<string, string> = {
   'GH-NP': '北部地區', 'GH-UE': '東北地區', 'GH-UW': '西北地區',
   'GH-AH': '阿散蒂地區', 'GH-BA': '布朗阿哈福地區', 'GH-EP': '東部地區',
   'GH-CP': '中部地區', 'GH-WP': '西部地區', 'GH-AA': '大阿克拉地區', 'GH-TV': '沃爾特地區',
+  // FRA 海外省 + 科西嘉
+  'FR-GF': '法屬圭亞那', 'FR-MQ': '馬丁尼克', 'FR-GP': '瓜德羅普',
+  'FR-RE': '留尼旺', 'FR-YT': '馬約特',
+  'FR-2A': '南科西嘉', 'FR-2B': '上科西嘉',
 }
 
-/** 給一個 admin_1 iso_3166_2 代碼，回傳所屬文化圈與界域 */
-export function sphereForAdmin1(iso_3166_2: string): CulturalSphere | undefined {
-  const sphereId = ADMIN1_SPHERE[iso_3166_2]
-  if (!sphereId) return undefined
-  return SPHERES.find(s => s.id === sphereId)
+/** 給一個 admin_1 iso_3166_2 代碼，回傳所屬文化圈與界域。沒有顯式對應時用 COUNTRY_DEFAULT_SPHERE 後備。 */
+export function sphereForAdmin1(iso_3166_2: string, parentCountry?: string): CulturalSphere | undefined {
+  const explicit = ADMIN1_SPHERE[iso_3166_2]
+  if (explicit) return SPHERES.find(s => s.id === explicit)
+  if (parentCountry) {
+    const fallback = COUNTRY_DEFAULT_SPHERE[parentCountry]
+    if (fallback) return SPHERES.find(s => s.id === fallback)
+  }
+  return undefined
 }
 
-export function realmForAdmin1(iso_3166_2: string): Realm | undefined {
-  const sphere = sphereForAdmin1(iso_3166_2)
+export function realmForAdmin1(iso_3166_2: string, parentCountry?: string): Realm | undefined {
+  const sphere = sphereForAdmin1(iso_3166_2, parentCountry)
   return sphere ? realmById(sphere.realm_id) : undefined
 }
 
