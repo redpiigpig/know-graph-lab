@@ -538,10 +538,12 @@ const cv = computed(() => {
 
     // Wives to render alongside this subtree root (e.g., 以底特 next to 羅得 in
     // 哈蘭 expansion). Skip wives already drawn on the main chart (spine妻位).
+    // 注意：不要把 wife 加進 vis — 亂倫案例 (羅得-羅得長女/次女) 中，
+    // daughter-who-is-also-wife 必須能同時走 wife 路徑（placeWives）跟 kid
+    // 路徑（kids loop），這樣才會渲染 wife.subtree (摩押/便亞米) + 觸發 ♻。
     const wiveIds = (spousesOf.value.get(rootId) ?? []).filter(w =>
       !renderedAsSpouseOnSpine.has(w) && !vis.has(w) && pMap.has(w) && !rowOf.has(w)
     )
-    for (const w of wiveIds) vis.add(w)
     const SLOT_K = NW + WIFE_HG
     const wivesReach = wiveIds.length * SLOT_K
 
