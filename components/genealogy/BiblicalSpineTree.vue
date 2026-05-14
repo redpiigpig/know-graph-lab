@@ -1422,11 +1422,14 @@ const cv = computed(() => {
         const groupKidXs = groupKids.map(k => kidX.get(k)!).filter(v => v !== undefined)
         if (groupKidXs.length === 0) continue
         const barY = motherBarY.get(mom)!
-        // null-mom T-bar 要延伸到最後一妻的 center，跟婚姻紅線無縫接上
-        // (例：大衛在耶路撒冷生的 11 子，T-bar 從最左 child 一路紅到哈及)。
+        // null-mom T-bar 延伸到最末妻的「外緣」(不是 center) — 跟婚姻紅線連上，
+        // 但不穿過妻子卡片。wifeSide='left' (妻在丈夫左) → 止於最末妻 left edge；
+        // wifeSide='right' → 止於最末妻 right edge。
         const barExtremes = [groupMidX, ...groupKidXs]
         if (mom === null && wifeIds.length > 0) {
-          barExtremes.push(wifeLX.get(wifeIds[wifeIds.length - 1])! + NW / 2)
+          const lastWifeCx = wifeLX.get(wifeIds[wifeIds.length - 1])! + NW / 2
+          const joinX = wifeSide === 'left' ? lastWifeCx - NW / 2 : lastWifeCx + NW / 2
+          barExtremes.push(joinX)
         }
         const minBarX = Math.min(...barExtremes)
         const maxBarX = Math.max(...barExtremes)
