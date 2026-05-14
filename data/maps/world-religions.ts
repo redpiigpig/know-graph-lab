@@ -1,0 +1,596 @@
+/**
+ * 全球八大人文宗教界域 — 主題地圖資料
+ * 資料源：根目錄 全球八大人文宗教界域.docx
+ * 8 大界域配色定案見 memory/project_maps_feature.md
+ */
+
+export type RealmId =
+  | 'central'
+  | 'eastern'
+  | 'latin-america'
+  | 'western'
+  | 'asia-pacific'
+  | 'southern'
+  | 'northern'
+  | 'north-america'
+
+export interface Realm {
+  id: RealmId
+  index: number
+  name_zh: string
+  name_en: string
+  color: string
+  intro?: string
+}
+
+export interface Member {
+  iso_a3: string
+  admin1?: string
+  label: string
+  order: number
+  is_extension?: boolean
+  note?: string
+}
+
+export interface CulturalSphere {
+  id: string
+  name_zh: string
+  name_en: string
+  realm_id: RealmId
+  members: Member[]
+}
+
+export const REALMS: Realm[] = [
+  { id: 'central',        index: 1, name_zh: '中央界域',   name_en: 'Central Realm',          color: '#16A34A' },
+  { id: 'eastern',        index: 2, name_zh: '東方界域',   name_en: 'Eastern Realm',          color: '#EAB308' },
+  { id: 'latin-america',  index: 3, name_zh: '拉美界域',   name_en: 'Latin American Realm',   color: '#DC2626',
+    intro: '擁有獨立發明的原生文字（馬雅）與古老祭祀文明，儘管現代外觀由伊比利亞重塑，其文明底層極度古老。' },
+  { id: 'western',        index: 4, name_zh: '西方界域',   name_en: 'Western Realm',          color: '#9333EA',
+    intro: '承襲希臘羅馬的火種，伴隨拉丁/西里爾字母與基督教會，從地中海向北歐與東歐荒野推進。' },
+  { id: 'asia-pacific',   index: 5, name_zh: '亞太界域',   name_en: 'Asia-Pacific Realm',     color: '#2196F3',
+    intro: '位處東方與印度兩大母體邊緣，透過佛教、漢字與伊斯蘭季風貿易，逐步點亮信史。' },
+  { id: 'southern',       index: 6, name_zh: '南方界域',   name_en: 'Southern Realm',         color: '#A0522D',
+    intro: '從古老的衣索比亞文字，一路隨跨撒哈拉貿易與大航海時代，向中南部無文字部落推進。' },
+  { id: 'northern',       index: 7, name_zh: '北方界域',   name_en: 'Northern Realm',         color: '#7593B5',
+    intro: '游牧與森林的廣袤邊疆，文字與宗教（東正教/伊斯蘭教/藏傳佛教）多由外部勢力（羅斯人、阿拉伯人、漢人）自中世紀起強勢植入。' },
+  { id: 'north-america',  index: 8, name_zh: '北美界域',   name_en: 'North American Realm',   color: '#2A9D8F',
+    intro: '現代文明最強大的板塊，卻是全球最晚經歷「原生無文字部落被西歐近代文明徹底覆蓋」的最後邊疆。' },
+]
+
+export const SPHERES: CulturalSphere[] = [
+  // ========== 中央界域 ==========
+  {
+    id: 'mesopotamian-levantine', name_zh: '兩河-黎凡特文化圈', name_en: 'Mesopotamian-Levantine', realm_id: 'central',
+    members: [
+      { iso_a3: 'IRQ', label: '伊拉克', order: 1, note: '蘇美/阿卡德發源地' },
+      { iso_a3: 'SYR', label: '敘利亞', order: 2, note: '烏加里特' },
+      { iso_a3: 'LBN', label: '黎巴嫩', order: 3, note: '腓尼基' },
+      { iso_a3: 'PSE', label: '巴勒斯坦', order: 4, note: '迦南' },
+      { iso_a3: 'ISR', label: '以色列', order: 5, note: '古猶太教核心' },
+      { iso_a3: 'JOR', label: '約旦', order: 6, note: '納巴泰' },
+    ],
+  },
+  {
+    id: 'egyptian', name_zh: '埃及文化圈', name_en: 'Egyptian', realm_id: 'central',
+    members: [
+      { iso_a3: 'EGY', label: '埃及', order: 1, note: '聖書體發源地' },
+      { iso_a3: 'SDN', label: '蘇丹', order: 2, note: '中北部與東部，庫施王國' },
+      { iso_a3: 'LBY', label: '利比亞', order: 3, note: '昔蘭尼加地區' },
+    ],
+  },
+  {
+    id: 'aegean-asia-minor', name_zh: '愛琴-小亞細亞文化圈', name_en: 'Aegean-Asia Minor', realm_id: 'central',
+    members: [
+      { iso_a3: 'GRC', label: '希臘', order: 1, note: '米諾斯/邁錫尼文明' },
+      { iso_a3: 'CYP', label: '賽普勒斯', order: 2 },
+      { iso_a3: 'TUR', label: '土耳其', order: 3, note: '赫梯帝國至拜占庭' },
+    ],
+  },
+  {
+    id: 'persian', name_zh: '波斯文化圈', name_en: 'Persian', realm_id: 'central',
+    members: [
+      { iso_a3: 'IRN', label: '伊朗', order: 1, note: '埃蘭文明至波斯帝國' },
+      { iso_a3: 'AFG', label: '阿富汗', order: 2, note: '西部與中部' },
+      { iso_a3: 'TJK', label: '塔吉克', order: 3 },
+    ],
+  },
+  {
+    id: 'caucasus', name_zh: '高加索文化圈', name_en: 'Caucasus', realm_id: 'central',
+    members: [
+      { iso_a3: 'ARM', label: '亞美尼亞', order: 1, note: '烏拉爾圖，首個基督教國家' },
+      { iso_a3: 'GEO', label: '喬治亞', order: 2 },
+      { iso_a3: 'AZE', label: '亞塞拜然', order: 3 },
+      { iso_a3: 'RUS', admin1: 'North Caucasus', label: '俄羅斯（北高加索地區）', order: 4 },
+    ],
+  },
+  {
+    id: 'arabian', name_zh: '阿拉伯文化圈', name_en: 'Arabian', realm_id: 'central',
+    members: [
+      { iso_a3: 'YEM', label: '葉門', order: 1, note: '示巴王國，古南阿拉伯文' },
+      { iso_a3: 'SAU', label: '沙烏地阿拉伯', order: 2, note: '伊斯蘭教發源地' },
+      { iso_a3: 'OMN', label: '阿曼', order: 3 },
+      { iso_a3: 'BHR', label: '巴林', order: 4 },
+      { iso_a3: 'QAT', label: '卡達', order: 5 },
+      { iso_a3: 'ARE', label: '阿聯酋', order: 6 },
+      { iso_a3: 'KWT', label: '科威特', order: 7 },
+    ],
+  },
+
+  // ========== 東方界域 ==========
+  {
+    id: 'indian', name_zh: '印度文化圈', name_en: 'Indian', realm_id: 'eastern',
+    members: [
+      { iso_a3: 'PAK', label: '巴基斯坦', order: 1, note: '印度河文明' },
+      { iso_a3: 'IND', label: '印度', order: 2, note: '吠陀宗教核心' },
+      { iso_a3: 'NPL', label: '尼泊爾', order: 3, note: '佛教發源地' },
+      { iso_a3: 'LKA', label: '斯里蘭卡', order: 4, note: '早期南傳佛教' },
+      { iso_a3: 'AFG', admin1: 'South-East', label: '阿富汗（南部與東部）', order: 5, note: '犍陀羅' },
+      { iso_a3: 'BGD', label: '孟加拉', order: 6 },
+      { iso_a3: 'MDV', label: '馬爾地夫', order: 7 },
+    ],
+  },
+  {
+    id: 'han', name_zh: '漢地文化圈', name_en: 'Han', realm_id: 'eastern',
+    members: [
+      { iso_a3: 'CHN', admin1: 'Inner-18', label: '中國（關內 18 省）', order: 1, note: '甲骨文與華夏核心' },
+      { iso_a3: 'TWN', label: '台灣', order: 2, is_extension: true, note: '17 世紀進入漢文信史' },
+    ],
+  },
+  {
+    id: 'tibetan', name_zh: '圖博文化圈', name_en: 'Tibetan', realm_id: 'eastern',
+    members: [
+      { iso_a3: 'CHN', admin1: 'Tibet', label: '中國（西藏自治區）', order: 1, note: '吐蕃帝國與藏文創制' },
+      { iso_a3: 'CHN', admin1: 'Tibetan-4-Provinces', label: '中國（四省藏區）', order: 2 },
+      { iso_a3: 'BTN', label: '不丹', order: 3 },
+    ],
+  },
+
+  // ========== 拉美界域 ==========
+  {
+    id: 'mesoamerican', name_zh: '中美洲-墨西哥文化圈', name_en: 'Mesoamerican-Mexican', realm_id: 'latin-america',
+    members: [
+      { iso_a3: 'MEX', label: '墨西哥', order: 1, note: '奧爾梅克/阿茲特克' },
+      { iso_a3: 'GTM', label: '瓜地馬拉', order: 2, note: '馬雅核心' },
+      { iso_a3: 'BLZ', label: '貝里斯', order: 3 },
+      { iso_a3: 'HND', label: '宏都拉斯', order: 4 },
+      { iso_a3: 'SLV', label: '薩爾瓦多', order: 5 },
+      { iso_a3: 'NIC', label: '尼加拉瓜', order: 6 },
+      { iso_a3: 'CRI', label: '哥斯大黎加', order: 7 },
+      { iso_a3: 'PAN', label: '巴拿馬', order: 8 },
+      { iso_a3: 'USA', admin1: 'Southwest', label: '美國（西南部）', order: 9, is_extension: true },
+    ],
+  },
+  {
+    id: 'andean', name_zh: '安地斯文化圈', name_en: 'Andean', realm_id: 'latin-america',
+    members: [
+      { iso_a3: 'PER', label: '秘魯', order: 1, note: '卡拉爾/印加帝國' },
+      { iso_a3: 'BOL', label: '玻利維亞', order: 2 },
+      { iso_a3: 'ECU', label: '厄瓜多', order: 3 },
+      { iso_a3: 'COL', label: '哥倫比亞', order: 4 },
+    ],
+  },
+  {
+    id: 'caribbean', name_zh: '加勒比文化圈', name_en: 'Caribbean', realm_id: 'latin-america',
+    members: [
+      { iso_a3: 'CUB', label: '古巴', order: 1, note: '哥倫布首批接觸區' },
+      { iso_a3: 'DOM', label: '多明尼加', order: 2 },
+      { iso_a3: 'HTI', label: '海地', order: 3 },
+      { iso_a3: 'JAM', label: '牙買加', order: 4 },
+      { iso_a3: 'BHS', label: '巴哈馬', order: 5 },
+      { iso_a3: 'VEN', label: '委內瑞拉', order: 6 },
+      { iso_a3: 'GUY', label: '蓋亞那', order: 7 },
+      { iso_a3: 'SUR', label: '蘇利南', order: 8 },
+      { iso_a3: 'GUF', label: '法屬圭亞那', order: 9 },
+      { iso_a3: 'ATG', label: '安地卡', order: 10, is_extension: true },
+      { iso_a3: 'BRB', label: '巴貝多', order: 11, is_extension: true },
+      { iso_a3: 'DMA', label: '多米尼克', order: 12, is_extension: true },
+      { iso_a3: 'GRD', label: '格瑞那達', order: 13, is_extension: true },
+      { iso_a3: 'KNA', label: '聖克里斯多福及尼維斯', order: 14, is_extension: true },
+      { iso_a3: 'LCA', label: '聖露西亞', order: 15, is_extension: true },
+      { iso_a3: 'VCT', label: '聖文森', order: 16, is_extension: true },
+      { iso_a3: 'TTO', label: '千里達及托巴哥', order: 17, is_extension: true },
+    ],
+  },
+  {
+    id: 'southern-cone', name_zh: '南錐文化圈', name_en: 'Southern Cone', realm_id: 'latin-america',
+    members: [
+      { iso_a3: 'CHL', label: '智利', order: 1 },
+      { iso_a3: 'ARG', label: '阿根廷', order: 2 },
+      { iso_a3: 'PRY', label: '巴拉圭', order: 3 },
+      { iso_a3: 'URY', label: '烏拉圭', order: 4, note: '近代集約殖民化' },
+    ],
+  },
+  {
+    id: 'amazonian-brazilian', name_zh: '亞馬遜-巴西文化圈', name_en: 'Amazonian-Brazilian', realm_id: 'latin-america',
+    members: [
+      { iso_a3: 'BRA', label: '巴西', order: 1, note: '海岸線早於內陸雨林開發' },
+    ],
+  },
+
+  // ========== 西方界域 ==========
+  {
+    id: 'latin-cultural', name_zh: '拉丁文化圈', name_en: 'Latin', realm_id: 'western',
+    members: [
+      { iso_a3: 'ITA', label: '義大利', order: 1, note: '羅馬帝國核心' },
+      { iso_a3: 'VAT', label: '梵蒂岡', order: 2 },
+      { iso_a3: 'SMR', label: '聖馬利諾', order: 3 },
+      { iso_a3: 'ESP', label: '西班牙', order: 4 },
+      { iso_a3: 'PRT', label: '葡萄牙', order: 5 },
+      { iso_a3: 'MLT', label: '馬爾他', order: 6 },
+      { iso_a3: 'MCO', label: '摩納哥', order: 7 },
+      { iso_a3: 'AND', label: '安道爾', order: 8 },
+    ],
+  },
+  {
+    id: 'balkan', name_zh: '巴爾幹文化圈', name_en: 'Balkan', realm_id: 'western',
+    members: [
+      { iso_a3: 'MKD', label: '北馬其頓', order: 1 },
+      { iso_a3: 'BGR', label: '保加利亞', order: 2, note: '西里爾字母發源地' },
+      { iso_a3: 'SRB', label: '塞爾維亞', order: 3 },
+      { iso_a3: 'ROU', label: '羅馬尼亞', order: 4 },
+      { iso_a3: 'ALB', label: '阿爾巴尼亞', order: 5 },
+      { iso_a3: 'BIH', label: '波士尼亞', order: 6, is_extension: true },
+      { iso_a3: 'HRV', label: '克羅埃西亞', order: 7, is_extension: true },
+      { iso_a3: 'MNE', label: '蒙特內哥羅', order: 8, is_extension: true },
+      { iso_a3: 'SVN', label: '斯洛維尼亞', order: 9, is_extension: true },
+      { iso_a3: 'KOS', label: '科索沃', order: 10, is_extension: true },
+      { iso_a3: 'MDA', label: '摩爾多瓦', order: 11 },
+    ],
+  },
+  {
+    id: 'gallic-french', name_zh: '高盧-法蘭西文化圈', name_en: 'Gallic-French', realm_id: 'western',
+    members: [
+      { iso_a3: 'FRA', label: '法國', order: 1, note: '歐洲本土，羅馬化高盧' },
+      { iso_a3: 'CAN', admin1: 'Quebec', label: '加拿大（魁北克與阿卡迪亞）', order: 2 },
+      { iso_a3: 'USA', admin1: 'New-France', label: '美國（新法蘭西地區）', order: 3, is_extension: true },
+    ],
+  },
+  {
+    id: 'british-celtic', name_zh: '不列顛-凱爾特文化圈', name_en: 'British-Celtic', realm_id: 'western',
+    members: [
+      { iso_a3: 'GBR', label: '英國', order: 1, note: '羅馬不列顛' },
+      { iso_a3: 'IRL', label: '愛爾蘭', order: 2, note: '凱爾特基督教' },
+      { iso_a3: 'FLK', label: '英國（福克蘭群島）', order: 3 },
+    ],
+  },
+  {
+    id: 'central-european', name_zh: '中歐文化圈', name_en: 'Central European', realm_id: 'western',
+    members: [
+      { iso_a3: 'DEU', label: '德國', order: 1, note: '神聖羅馬帝國' },
+      { iso_a3: 'AUT', label: '奧地利', order: 2 },
+      { iso_a3: 'CHE', label: '瑞士', order: 3 },
+      { iso_a3: 'CZE', label: '捷克', order: 4 },
+      { iso_a3: 'HUN', label: '匈牙利', order: 5 },
+      { iso_a3: 'SVK', label: '斯洛伐克', order: 6 },
+      { iso_a3: 'POL', admin1: 'East-Prussia', label: '波蘭（東普魯士地區）', order: 7, is_extension: true },
+      { iso_a3: 'RUS', admin1: 'Kaliningrad', label: '俄國（加里寧格勒州）', order: 8, is_extension: true },
+      { iso_a3: 'LIE', label: '列支敦斯登', order: 9 },
+    ],
+  },
+  {
+    id: 'low-countries', name_zh: '低地文化圈', name_en: 'Low Countries', realm_id: 'western',
+    members: [
+      { iso_a3: 'BEL', label: '比利時', order: 1, note: '法蘭克核心' },
+      { iso_a3: 'NLD', label: '荷蘭', order: 2 },
+      { iso_a3: 'LUX', label: '盧森堡', order: 3 },
+    ],
+  },
+  {
+    id: 'lublin', name_zh: '盧布林文化圈', name_en: 'Lublin', realm_id: 'western',
+    members: [
+      { iso_a3: 'POL', label: '波蘭', order: 1, note: '10 世紀天主教化' },
+      { iso_a3: 'UKR', admin1: 'West', label: '烏克蘭（西部）', order: 2 },
+      { iso_a3: 'LTU', label: '立陶宛', order: 3 },
+      { iso_a3: 'LVA', admin1: 'Latgale', label: '拉脫維亞（拉特加爾地區）', order: 4 },
+    ],
+  },
+  {
+    id: 'nordic-livonian', name_zh: '北歐-立窩尼亞文化圈', name_en: 'Nordic-Livonian', realm_id: 'western',
+    members: [
+      { iso_a3: 'DNK', label: '丹麥', order: 1, note: '最早出現盧恩字母' },
+      { iso_a3: 'SWE', label: '瑞典', order: 2 },
+      { iso_a3: 'NOR', label: '挪威', order: 3 },
+      { iso_a3: 'ISL', label: '冰島', order: 4 },
+      { iso_a3: 'FIN', label: '芬蘭', order: 5 },
+      { iso_a3: 'EST', label: '愛沙尼亞', order: 6 },
+      { iso_a3: 'LVA', admin1: 'West-Central', label: '拉脫維亞（西部與中部）', order: 7 },
+    ],
+  },
+
+  // ========== 亞太界域 ==========
+  {
+    id: 'mekong', name_zh: '眉公文化圈', name_en: 'Mekong', realm_id: 'asia-pacific',
+    members: [
+      { iso_a3: 'KHM', label: '柬埔寨', order: 1, note: '扶南/高棉帝國，早期印度化' },
+      { iso_a3: 'VNM', label: '越南', order: 2, note: '交趾，早期漢化' },
+      { iso_a3: 'MMR', label: '緬甸', order: 3, note: '驃國/蒲甘' },
+      { iso_a3: 'THA', label: '泰國', order: 4, note: '素可泰' },
+      { iso_a3: 'LAO', label: '寮國', order: 5 },
+    ],
+  },
+  {
+    id: 'kuroshio', name_zh: '黑潮文化圈', name_en: 'Kuroshio', realm_id: 'asia-pacific',
+    members: [
+      { iso_a3: 'PRK', label: '北韓', order: 1, note: '漢四郡遺址' },
+      { iso_a3: 'KOR', label: '韓國', order: 2, note: '三韓與百濟' },
+      { iso_a3: 'JPN', label: '日本', order: 3, note: '大和朝廷，漢字傳入' },
+      { iso_a3: 'JPN', admin1: 'Ryukyu', label: '日本（琉球）', order: 4 },
+      { iso_a3: 'TWN', label: '台灣', order: 5, is_extension: true, note: '南島原鄉，但最晚進入文字信史' },
+    ],
+  },
+  {
+    id: 'banua', name_zh: '班努亞文化圈', name_en: 'Banua', realm_id: 'asia-pacific',
+    members: [
+      { iso_a3: 'IDN', label: '印尼', order: 1, note: '三佛齊/室利佛逝，印度化與伊斯蘭化起點' },
+      { iso_a3: 'MYS', label: '馬來西亞', order: 2 },
+      { iso_a3: 'BRN', label: '汶萊', order: 3 },
+      { iso_a3: 'SGP', label: '新加坡', order: 4 },
+      { iso_a3: 'PHL', label: '菲律賓', order: 5 },
+      { iso_a3: 'TLS', label: '東帝汶', order: 6 },
+    ],
+  },
+  {
+    id: 'pacific', name_zh: '太平洋文化圈', name_en: 'Pacific', realm_id: 'asia-pacific',
+    members: [
+      { iso_a3: 'VUT', label: '萬那杜', order: 1 },
+      { iso_a3: 'FJI', label: '斐濟', order: 2 },
+      { iso_a3: 'WSM', label: '薩摩亞', order: 3 },
+      { iso_a3: 'TON', label: '東加', order: 4 },
+      { iso_a3: 'PLW', label: '帛琉', order: 5, is_extension: true },
+      { iso_a3: 'FSM', label: '密克羅尼西亞', order: 6, is_extension: true },
+      { iso_a3: 'MHL', label: '馬紹爾群島', order: 7, is_extension: true },
+      { iso_a3: 'KIR', label: '吉里巴斯', order: 8, is_extension: true },
+      { iso_a3: 'NRU', label: '諾魯', order: 9, is_extension: true },
+      { iso_a3: 'TUV', label: '吐瓦魯', order: 10, is_extension: true },
+      { iso_a3: 'PNG', label: '巴布亞紐幾內亞', order: 11, is_extension: true },
+      { iso_a3: 'SLB', label: '索羅門群島', order: 12, is_extension: true },
+      { iso_a3: 'USA', admin1: 'Hawaii', label: '美國（夏威夷州）', order: 13, note: '最晚期南島拓殖' },
+    ],
+  },
+  {
+    id: 'australasian', name_zh: '紐奧文化圈', name_en: 'Australasian', realm_id: 'asia-pacific',
+    members: [
+      { iso_a3: 'AUS', label: '澳洲', order: 1 },
+      { iso_a3: 'NZL', label: '紐西蘭', order: 2, note: '毛利人抵達晚於原住民，白人殖民信史更晚' },
+    ],
+  },
+
+  // ========== 南方界域 ==========
+  {
+    id: 'ethiopian', name_zh: '衣索比亞文化圈', name_en: 'Ethiopian', realm_id: 'southern',
+    members: [
+      { iso_a3: 'ETH', label: '衣索比亞', order: 1, note: '中央高地與西北部，阿克蘇姆帝國與吉茲字母' },
+      { iso_a3: 'ERI', label: '厄利垂亞', order: 2 },
+    ],
+  },
+  {
+    id: 'west-african-sahel', name_zh: '西非-薩赫爾文化圈', name_en: 'West African-Sahel', realm_id: 'southern',
+    members: [
+      { iso_a3: 'MLI', label: '馬利', order: 1, note: '南部，廷巴克圖學術中心' },
+      { iso_a3: 'SEN', label: '塞內加爾', order: 2 },
+      { iso_a3: 'NER', label: '尼日（南部）', order: 3 },
+      { iso_a3: 'BFA', label: '布吉納法索', order: 4, is_extension: true },
+      { iso_a3: 'GIN', label: '幾內亞', order: 5, is_extension: true },
+      { iso_a3: 'GMB', label: '甘比亞', order: 6, is_extension: true },
+      { iso_a3: 'GNB', label: '幾內亞比索', order: 7, is_extension: true },
+      { iso_a3: 'MRT', label: '茅利塔尼亞', order: 8, is_extension: true },
+      { iso_a3: 'TCD', label: '查德', order: 9, is_extension: true },
+      { iso_a3: 'CPV', label: '維德角', order: 10 },
+    ],
+  },
+  {
+    id: 'east-african-swahili', name_zh: '東非-斯瓦希里文化圈', name_en: 'East African-Swahili', realm_id: 'southern',
+    members: [
+      { iso_a3: 'SOM', label: '索馬利亞', order: 1 },
+      { iso_a3: 'KEN', label: '肯亞', order: 2 },
+      { iso_a3: 'TZA', label: '坦尚尼亞', order: 3, note: '斯瓦希里城邦與阿拉伯貿易' },
+      { iso_a3: 'MDG', label: '馬達加斯加', order: 4 },
+      { iso_a3: 'UGA', label: '烏干達', order: 5, is_extension: true },
+      { iso_a3: 'RWA', label: '盧安達', order: 6, is_extension: true },
+      { iso_a3: 'BDI', label: '蒲隆地', order: 7, is_extension: true },
+      { iso_a3: 'DJI', label: '吉布地', order: 8, is_extension: true },
+      { iso_a3: 'COM', label: '葛摩', order: 9, is_extension: true },
+      { iso_a3: 'SYC', label: '塞席爾', order: 10, is_extension: true },
+      { iso_a3: 'SSD', label: '南蘇丹', order: 11 },
+    ],
+  },
+  {
+    id: 'gulf-of-guinea', name_zh: '幾內亞灣文化圈', name_en: 'Gulf of Guinea', realm_id: 'southern',
+    members: [
+      { iso_a3: 'NGA', label: '奈及利亞', order: 1, note: '南部，貝南帝國' },
+      { iso_a3: 'GHA', label: '迦納（南部）', order: 2 },
+      { iso_a3: 'BEN', label: '貝南', order: 3, is_extension: true },
+      { iso_a3: 'TGO', label: '多哥', order: 4, is_extension: true },
+      { iso_a3: 'CIV', label: '象牙海岸', order: 5, is_extension: true },
+      { iso_a3: 'SLE', label: '獅子山', order: 6, is_extension: true },
+      { iso_a3: 'LBR', label: '賴比瑞亞', order: 7 },
+    ],
+  },
+  {
+    id: 'central-african-congolese', name_zh: '中非-剛果文化圈', name_en: 'Central African-Congolese', realm_id: 'southern',
+    members: [
+      { iso_a3: 'COD', label: '剛果民主共和國', order: 1, note: '剛果王國，15 世紀天主教化' },
+      { iso_a3: 'COG', label: '剛果共和國', order: 2 },
+      { iso_a3: 'CMR', label: '喀麥隆', order: 3 },
+      { iso_a3: 'GAB', label: '加彭', order: 4, is_extension: true },
+      { iso_a3: 'GNQ', label: '赤道幾內亞', order: 5, is_extension: true },
+      { iso_a3: 'STP', label: '聖多美普林西比', order: 6, is_extension: true },
+      { iso_a3: 'CAF', label: '中非共和國', order: 7 },
+    ],
+  },
+  {
+    id: 'southern-african-bantu', name_zh: '南部非洲-班圖文化圈', name_en: 'Southern African-Bantu', realm_id: 'southern',
+    members: [
+      { iso_a3: 'ZWE', label: '辛巴威', order: 1, note: '大辛巴威遺址' },
+      { iso_a3: 'MOZ', label: '莫三比克', order: 2 },
+      { iso_a3: 'ZAF', label: '南非', order: 3 },
+      { iso_a3: 'AGO', label: '安哥拉', order: 4 },
+      { iso_a3: 'BWA', label: '波札那', order: 5, is_extension: true },
+      { iso_a3: 'ZMB', label: '尚比亞', order: 6, is_extension: true },
+      { iso_a3: 'MWI', label: '馬拉威', order: 7, is_extension: true },
+      { iso_a3: 'LSO', label: '賴索托', order: 8, is_extension: true },
+      { iso_a3: 'SWZ', label: '史瓦帝尼', order: 9, is_extension: true },
+      { iso_a3: 'NAM', label: '納米比亞', order: 10 },
+    ],
+  },
+
+  // ========== 北方界域 ==========
+  {
+    id: 'turanian-turkic', name_zh: '圖蘭-突厥文化圈', name_en: 'Turanian-Turkic', realm_id: 'northern',
+    members: [
+      { iso_a3: 'UZB', label: '烏茲別克', order: 1, note: '粟特/撒馬爾罕，絲路核心' },
+      { iso_a3: 'AFG', admin1: 'North', label: '阿富汗（北部）', order: 2 },
+      { iso_a3: 'TKM', label: '土庫曼', order: 3 },
+      { iso_a3: 'CHN', admin1: 'Xinjiang', label: '中國（新疆維吾爾自治區）', order: 4 },
+      { iso_a3: 'KGZ', label: '吉爾吉斯', order: 5 },
+      { iso_a3: 'KAZ', label: '哈薩克', order: 6, note: '游牧腹地' },
+    ],
+  },
+  {
+    id: 'russian-tatar', name_zh: '羅斯-韃靼文化圈', name_en: 'Russian-Tatar', realm_id: 'northern',
+    members: [
+      { iso_a3: 'UKR', admin1: 'East', label: '烏克蘭（東部）', order: 1, note: '基輔羅斯發源地' },
+      { iso_a3: 'UKR', admin1: 'West', label: '烏克蘭（西部）', order: 2, is_extension: true },
+      { iso_a3: 'BLR', label: '白俄羅斯', order: 3 },
+      { iso_a3: 'RUS', admin1: 'European', label: '俄羅斯（歐俄部分）', order: 4, note: '莫斯科公國崛起' },
+    ],
+  },
+  {
+    id: 'mongolic-manchurian', name_zh: '蒙古-滿洲文化圈', name_en: 'Mongolic-Manchurian', realm_id: 'northern',
+    members: [
+      { iso_a3: 'MNG', label: '蒙古', order: 1, note: '回鶻式蒙古文創制' },
+      { iso_a3: 'CHN', admin1: 'Inner-Mongolia-Manchuria', label: '中國（內蒙古自治區與東北）', order: 2, note: '滿文創制' },
+      { iso_a3: 'RUS', admin1: 'Buryatia', label: '俄羅斯（布里亞特共和國）', order: 3 },
+      { iso_a3: 'RUS', admin1: 'Tuva', label: '俄羅斯（圖瓦共和國）', order: 4 },
+      { iso_a3: 'RUS', admin1: 'Kalmykia', label: '俄羅斯（卡爾梅克共和國）', order: 5 },
+      { iso_a3: 'RUS', admin1: 'Far-East-South', label: '俄羅斯（遠東南部）', order: 6, is_extension: true },
+    ],
+  },
+  {
+    id: 'siberian', name_zh: '西伯利亞文化圈', name_en: 'Siberian', realm_id: 'northern',
+    members: [
+      { iso_a3: 'RUS', admin1: 'Siberia-Arctic', label: '俄羅斯極地與北亞森林區', order: 1, note: '16 世紀後俄羅斯哥薩克東擴才全面進入信史' },
+    ],
+  },
+
+  // ========== 北美界域 ==========
+  {
+    id: 'anglo-american', name_zh: '盎格魯美洲文化圈', name_en: 'Anglo-American', realm_id: 'north-america',
+    members: [
+      { iso_a3: 'USA', label: '美國（本土 48 州）', order: 1, note: '詹姆斯鎮/五月花號' },
+      { iso_a3: 'CAN', admin1: 'South', label: '加拿大（南部定居區）', order: 2 },
+    ],
+  },
+  {
+    id: 'arctic', name_zh: '北極文化圈', name_en: 'Arctic', realm_id: 'north-america',
+    members: [
+      { iso_a3: 'GRL', label: '丹麥（格陵蘭島）', order: 1, note: '維京人短暫接觸，近代重新殖民' },
+      { iso_a3: 'CAN', admin1: 'North', label: '加拿大（北方領地）', order: 2 },
+      { iso_a3: 'USA', admin1: 'Alaska', label: '美國（阿拉斯加州）', order: 3 },
+      { iso_a3: 'RUS', admin1: 'Chukotka-Sakha', label: '俄羅斯（楚科奇/薩哈共和國北緣）', order: 4 },
+    ],
+  },
+]
+
+/**
+ * 地圖上色用：每個 ISO_A3 國家對應的「主要」界域（country-level coloring）。
+ * 多文化圈國家（中國/俄羅斯/美國/加拿大/法國/丹麥/阿富汗/烏克蘭）以面積或人口最大的文化圈為主。
+ * 詳細多文化圈歸屬請看「資訊列表」視圖。
+ */
+export const COUNTRY_REALM: Record<string, RealmId> = {
+  // 中央 (Green)
+  IRQ: 'central', SYR: 'central', LBN: 'central', PSE: 'central', ISR: 'central', JOR: 'central',
+  EGY: 'central', SDN: 'central', LBY: 'central',
+  GRC: 'central', CYP: 'central', TUR: 'central',
+  IRN: 'central', AFG: 'central', TJK: 'central',
+  ARM: 'central', GEO: 'central', AZE: 'central',
+  YEM: 'central', SAU: 'central', OMN: 'central', BHR: 'central', QAT: 'central', ARE: 'central', KWT: 'central',
+
+  // 東方 (Yellow)
+  PAK: 'eastern', IND: 'eastern', NPL: 'eastern', LKA: 'eastern', BGD: 'eastern', MDV: 'eastern',
+  CHN: 'eastern',  // 漢地為主，圖博/新疆/內蒙在多文化圈列表
+  TWN: 'eastern',
+  BTN: 'eastern',
+
+  // 拉美 (Red)
+  MEX: 'latin-america', GTM: 'latin-america', BLZ: 'latin-america', HND: 'latin-america',
+  SLV: 'latin-america', NIC: 'latin-america', CRI: 'latin-america', PAN: 'latin-america',
+  PER: 'latin-america', BOL: 'latin-america', ECU: 'latin-america', COL: 'latin-america',
+  CUB: 'latin-america', DOM: 'latin-america', HTI: 'latin-america', JAM: 'latin-america',
+  BHS: 'latin-america', VEN: 'latin-america', GUY: 'latin-america', SUR: 'latin-america', GUF: 'latin-america',
+  ATG: 'latin-america', BRB: 'latin-america', DMA: 'latin-america', GRD: 'latin-america',
+  KNA: 'latin-america', LCA: 'latin-america', VCT: 'latin-america', TTO: 'latin-america',
+  CHL: 'latin-america', ARG: 'latin-america', PRY: 'latin-america', URY: 'latin-america',
+  BRA: 'latin-america',
+
+  // 西方 (Purple)
+  ITA: 'western', VAT: 'western', SMR: 'western', ESP: 'western', PRT: 'western',
+  MLT: 'western', MCO: 'western', AND: 'western',
+  MKD: 'western', BGR: 'western', SRB: 'western', ROU: 'western', ALB: 'western',
+  BIH: 'western', HRV: 'western', MNE: 'western', SVN: 'western', KOS: 'western', MDA: 'western',
+  FRA: 'western',
+  GBR: 'western', IRL: 'western', FLK: 'western',
+  DEU: 'western', AUT: 'western', CHE: 'western', CZE: 'western', HUN: 'western', SVK: 'western',
+  POL: 'western', LIE: 'western',
+  BEL: 'western', NLD: 'western', LUX: 'western',
+  UKR: 'western',  // 烏克蘭以盧布林/西烏為主呈現（東烏在北方多文化圈列表）
+  LTU: 'western', LVA: 'western',
+  DNK: 'western', SWE: 'western', NOR: 'western', ISL: 'western', FIN: 'western', EST: 'western',
+  // 馬格里布（文件未列為主，但圖示與西方羅馬-法殖民圈一致）
+  TUN: 'western', DZA: 'western', MAR: 'western', ESH: 'western',
+
+  // 亞太 (Blue)
+  KHM: 'asia-pacific', VNM: 'asia-pacific', MMR: 'asia-pacific', THA: 'asia-pacific', LAO: 'asia-pacific',
+  PRK: 'asia-pacific', KOR: 'asia-pacific', JPN: 'asia-pacific',
+  IDN: 'asia-pacific', MYS: 'asia-pacific', BRN: 'asia-pacific', SGP: 'asia-pacific',
+  PHL: 'asia-pacific', TLS: 'asia-pacific',
+  VUT: 'asia-pacific', FJI: 'asia-pacific', WSM: 'asia-pacific', TON: 'asia-pacific',
+  PLW: 'asia-pacific', FSM: 'asia-pacific', MHL: 'asia-pacific', KIR: 'asia-pacific',
+  NRU: 'asia-pacific', TUV: 'asia-pacific', PNG: 'asia-pacific', SLB: 'asia-pacific',
+  AUS: 'asia-pacific', NZL: 'asia-pacific',
+
+  // 南方 (Brown)
+  ETH: 'southern', ERI: 'southern',
+  MLI: 'southern', SEN: 'southern', NER: 'southern', CPV: 'southern',
+  BFA: 'southern', GIN: 'southern', GMB: 'southern', GNB: 'southern', MRT: 'southern', TCD: 'southern',
+  SOM: 'southern', KEN: 'southern', TZA: 'southern', MDG: 'southern', SSD: 'southern',
+  UGA: 'southern', RWA: 'southern', BDI: 'southern', DJI: 'southern', COM: 'southern', SYC: 'southern',
+  NGA: 'southern', GHA: 'southern', LBR: 'southern',
+  BEN: 'southern', TGO: 'southern', CIV: 'southern', SLE: 'southern',
+  COD: 'southern', COG: 'southern', CMR: 'southern', CAF: 'southern',
+  GAB: 'southern', GNQ: 'southern', STP: 'southern',
+  ZWE: 'southern', MOZ: 'southern', ZAF: 'southern', AGO: 'southern', NAM: 'southern',
+  BWA: 'southern', ZMB: 'southern', MWI: 'southern', LSO: 'southern', SWZ: 'southern',
+
+  // 北方 (Slate Blue)
+  UZB: 'northern', TKM: 'northern', KGZ: 'northern', KAZ: 'northern',
+  BLR: 'northern', RUS: 'northern',
+  MNG: 'northern',
+
+  // 北美 (Teal)
+  USA: 'north-america', CAN: 'north-america', GRL: 'north-america',
+}
+
+export function realmById(id: RealmId): Realm {
+  return REALMS.find(r => r.id === id)!
+}
+
+export function spheresByRealm(realmId: RealmId): CulturalSphere[] {
+  return SPHERES.filter(s => s.realm_id === realmId)
+}
+
+export function realmForCountry(iso_a3: string): Realm | undefined {
+  const id = COUNTRY_REALM[iso_a3]
+  return id ? realmById(id) : undefined
+}
+
+/** Returns all cultural spheres a country participates in (across realms) */
+export function spheresForCountry(iso_a3: string): { sphere: CulturalSphere; member: Member }[] {
+  const out: { sphere: CulturalSphere; member: Member }[] = []
+  for (const sphere of SPHERES) {
+    for (const m of sphere.members) {
+      if (m.iso_a3 === iso_a3) out.push({ sphere, member: m })
+    }
+  }
+  return out
+}

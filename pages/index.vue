@@ -137,6 +137,16 @@
           <span class="tool-badge bg-teal-50 text-teal-600">可用</span>
         </NuxtLink>
 
+        <!-- 地圖繪製 -->
+        <NuxtLink :to="user ? '/maps' : '/login'" class="tool-card group border-emerald-100 hover:border-emerald-300 hover:shadow-emerald-100">
+          <div class="tool-icon bg-emerald-50 text-emerald-600">🗺️</div>
+          <div class="flex-1">
+            <h2 class="tool-title">地圖繪製</h2>
+            <p class="tool-desc">世界主題地圖上色，呈現宗教文化圈分佈、歷史傳播路徑</p>
+          </div>
+          <span class="tool-badge bg-emerald-50 text-emerald-600">可用</span>
+        </NuxtLink>
+
       </div>
 
       <div class="mt-12 text-center text-gray-400 text-xs">
