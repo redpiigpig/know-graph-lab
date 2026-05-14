@@ -121,9 +121,7 @@
         <span class="text-gray-600">{{ selectedFeature.realm.index }}. {{ selectedFeature.realm.name_zh }}</span>
       </div>
       <div v-if="selectedFeature.spheres.length" class="text-gray-500 text-[11px] leading-relaxed mt-1 space-y-0.5">
-        <div v-for="(s, i) in selectedFeature.spheres" :key="i">
-          · {{ s.name }}<span v-if="s.note" class="text-gray-400"> — {{ s.note }}</span>
-        </div>
+        <div v-for="(s, i) in selectedFeature.spheres" :key="i">· {{ s.name }}</div>
       </div>
     </div>
 

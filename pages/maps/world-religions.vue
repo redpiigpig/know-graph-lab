@@ -32,14 +32,6 @@
 
     <div v-else class="flex-1 p-4 sm:p-6 overflow-y-auto">
       <div class="max-w-4xl mx-auto">
-        <div class="mb-5 px-1">
-          <p class="text-sm text-gray-500 leading-relaxed">
-            八大界域以「文字／信史進入時間」與「文化母體」為分類軸，每個界域內部含若干文化圈，
-            文化圈以箭頭標示歷史傳播順序；以
-            <span class="inline-block align-middle px-1.5 py-0.5 border border-dashed border-gray-300 text-gray-500 bg-gray-50 rounded text-[11px]">虛線框</span>
-            表示延伸／後期擴張地區。
-          </p>
-        </div>
         <RealmInfoList />
       </div>
     </div>

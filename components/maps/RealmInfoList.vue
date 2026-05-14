@@ -17,7 +17,6 @@
         </div>
         <div class="flex-1 min-w-0">
           <div class="font-semibold text-gray-900 text-base">{{ realm.name_zh }} <span class="text-xs text-gray-400 font-normal ml-1">({{ realm.name_en }})</span></div>
-          <div v-if="realm.intro" class="text-xs text-gray-500 mt-0.5 leading-relaxed">{{ realm.intro }}</div>
         </div>
       </header>
 
@@ -46,14 +45,7 @@
                 :class="m.is_extension
                   ? 'border-dashed border-gray-300 text-gray-500 bg-gray-50'
                   : 'border-gray-200 text-gray-800 bg-white'"
-                :title="m.note || ''"
-              >
-                <span>{{ m.label }}</span>
-                <span
-                  v-if="m.note"
-                  class="ml-1 text-[10px] text-gray-400"
-                >· {{ m.note }}</span>
-              </span>
+              >{{ m.label }}</span>
             </li>
           </ol>
         </article>
