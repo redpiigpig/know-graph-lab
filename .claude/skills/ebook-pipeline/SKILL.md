@@ -28,7 +28,7 @@ End-to-end pipeline that takes books from a local Drive folder all the way to th
 | **EPUB standardize → markdown reader format** | ✅ done + sidebar fixes 2026-05-14 | 505/505 EPUBs format=markdown; 0 filename leaks; 0 chunks below heading-rate threshold (was 21 / 41 / 68) |
 | **PDF standardize Plan A (lite)** | ✅ done | 437/437 text-extractable PDFs polished |
 | **PDF standardize Plan B v0 (TOC-driven)** | ✅ done + sidebar headings ✅ (2026-05-14) | 207 Plan-B PDFs backfilled with `##` / `###` markdown headings via `backfill_pdf_headings.py` so reader sidebar renders nesting; Plan B v1 (font-driven, no-TOC subset) still deferred |
-| **套書 splitting** | ✅ partial done 2026-05-14 | 19 splittable 套書 → 132 child ebooks (after 康德 dedup); 16 unsplittable (`volume=None` throughout) still pending font/LLM detection |
+| **套書 splitting** | ✅ done 2026-05-14 | Phase 1: 19 splittable → 132 children. Phase 2: 16 unsplittable processed via `detect_set_volumes.py` (Haiku) → 14 marked NOT_A_SET (single-volume despite title) + 2 multi-volume split into 18 children. Auto-split now wired into `standardize_ebook` + daily bat. |
 | **Online metadata enrichment** | ✅ done | 89% publisher / 87% publish_year coverage |
 | **books / excerpts library** | ✅ done | `/excerpts/library`, tags, Markdown export, daily bookmark |
 
@@ -49,6 +49,8 @@ End-to-end pipeline that takes books from a local Drive folder all the way to th
 | `standardize_pdf_lite.py` | 4 — standardize | Plan A polish over per-page JSONL: s2tw + collapse spacing + extract publisher metadata. `page_number` preserved exactly. See `standardize-pdf` skill |
 | `standardize_pdf.py` | 4 — standardize | Plan B TOC-driven re-chunking. Reads existing JSONL + PDF TOC → emits chapter-level chunks with `page_range`. Falls back to Plan A on books without usable TOC. See `standardize-pdf` skill |
 | `enrich_book_metadata.py` | 4b — backfill | Online lookup (Google Books → Open Library) to fill missing `publisher` / `publish_year` on `books` rows. Idempotent; respects `metadata_locked`. `status` / `run [--limit N] [--dry-run] [--book <id>]` / `probe --book <id>` |
+| `detect_set_volumes.py` | 4c — 套書 prep | Haiku-driven volume boundary detection for 套書 lacking volume metadata. Builds a TOC from chunk h2/h3 headings, asks Haiku 4.5 to identify volume boundaries, writes `volume` field into JSONL OR marks `NOT_A_SET_MARKER` if single-volume despite title. `status` / `run --book <id>` / `run --all` |
+| `split_ebook_set.py` | 4d — 套書 split | Split a multi-volume ebook into one row per volume. Idempotent (skips books already marked with `SPLIT_MARKER` / `NOT_A_SET_MARKER` / annotations). `status` / `run --book <id>` / `run --all` |
 | `repopulate_chunk_previews.py` | 5 — DB | Back-fill `ebook_chunks` previews from local JSONL. `run` / `retry-failed` / `status` |
 | `upload_chunks_to_r2.py` | 5 — R2 | One-shot bulk uploader for any books whose JSONL isn't on R2 yet |
 | `offload_chunks.py` | (history) | Did the original DB-truncate after JSONL offload. Don't run again |
@@ -121,8 +123,8 @@ annotations (
 
 ### Scheduler (set up + running)
 
-The bat is now a **3-stage runner**: `ingest_new_books → parse_worker → ocr_with_gemini`.
-Despite the historical name `KGLab-OCR-Daily`, it does more than OCR — see [`scripts/run_ocr_daily.bat`](../../../scripts/run_ocr_daily.bat).
+The bat is now a **5-step runner**: `ingest_new_books → parse_worker → ocr_with_gemini → detect_set_volumes → split_ebook_set`.
+Despite the historical name `KGLab-OCR-Daily`, it does more than OCR — see [`scripts/run_ocr_daily.bat`](../../../scripts/run_ocr_daily.bat). Steps 4a/4b are idempotent (no-op when no 套書 is pending).
 
 | Component | Path |
 |---|---|
@@ -563,9 +565,9 @@ If you're a fresh agent picking this up, this is what changed in the
 **Remaining TODOs (priority order):**
 
 1. **45 EPUBs with single chunk >400KB** (劍橋中國史 11冊, 摩訶婆羅多, Eusebius Collected Works, 世界佛教通史 14卷, …) — publisher EPUB has no chapter anchors, one volume = one giant chunk. Wait on font-size analysis or LLM chapter-edge detection.
-2. **16 套書 with `volume=None`** (see Phase 2 list above) — needs font/LLM volume detection before `split_ebook_set.py` can act.
+2. ~~16 套書 with `volume=None`~~ — ✅ done 2026-05-14 via `detect_set_volumes.py` (Haiku).
 3. **Content-filter-rejected books** (Haiku OCR refuses) — book 4 `哥白尼革命`, book 44 `規訓與懲罰`. Future Gemini-fallback queue.
-4. **`ingest_new_books.py` auto-split-on-ingest** — when a freshly-ingested 套書 finishes standardize_ebook, automatically call `split_ebook_set.py` (currently manual).
+4. ~~`ingest_new_books.py` auto-split-on-ingest~~ — ✅ done 2026-05-14. `standardize_ebook.py` now auto-calls `detect_set_volumes` + `split_ebook_set` on any 套書-titled book at end of standardize. Daily bat also drains via two extra steps (4a + 4b) so any stragglers get processed.
 
 ### Online metadata enrichment — ✅ shipped 2026-05-06
 

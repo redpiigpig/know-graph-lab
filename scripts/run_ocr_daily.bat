@@ -60,6 +60,17 @@ if "%GEMINI_EXIT%"=="2" (
     REM "%PY%" scripts\ocr_with_qwen.py run --limit 5 >> "%LOGFILE%" 2>&1
 )
 
+REM Step 4: auto-split fresh 套書 (idempotent — no-op when nothing pending).
+REM detect_set_volumes finds 套書-titled books w/o volume metadata, runs Haiku
+REM to decide multi/single-volume, writes volume field or NOT_A_SET marker.
+REM split_ebook_set then breaks splittable ones into per-volume children.
+echo --- detect_set_volumes --- >> "%LOGFILE%"
+"%PY%" scripts\detect_set_volumes.py run --all >> "%LOGFILE%" 2>&1
+echo step4a exit=%ERRORLEVEL% >> "%LOGFILE%"
+echo --- split_ebook_set --- >> "%LOGFILE%"
+"%PY%" scripts\split_ebook_set.py run --all >> "%LOGFILE%" 2>&1
+echo step4b exit=%ERRORLEVEL% >> "%LOGFILE%"
+
 echo === Daily run ended %DATE% %TIME% (gemini-exit %GEMINI_EXIT%) === >> "%LOGFILE%"
 
 endlocal

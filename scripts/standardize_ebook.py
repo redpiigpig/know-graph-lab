@@ -1547,7 +1547,63 @@ def standardize_one(ebook_id: str, dry_run: bool = False, no_r2: bool = False):
         update_db(ebook_id, chunks)
     except Exception as e:
         return 0, f"persist failed: {str(e)[:200]}"
+
+    # Auto-split fresh 套書 — per feedback memory "套書要拆成個別書", and the
+    # 2026-05-14 TODO #4 ("auto-split-on-ingest"). Triggers iff title matches
+    # 套書 pattern and book has no annotations. Non-fatal — split failures
+    # don't roll back the standardize itself.
+    try:
+        _maybe_auto_split(ebook_id, book, chunks)
+    except Exception as e:
+        print(f"  ⚠ auto-split skipped: {str(e)[:160]}", file=sys.stderr)
+
     return len(chunks), None
+
+
+def _maybe_auto_split(ebook_id: str, book: dict, chunks: list[dict]) -> None:
+    """If `book` is a 套書 and its chunks reveal ≥2 volumes (either already
+    populated, or after detect_set_volumes runs Haiku), split it into per-volume
+    child ebooks. No-op for non-套書 titles."""
+    sys.path.insert(0, str(Path(__file__).parent))
+    from split_ebook_set import (
+        SET_TITLE_RX, SPLIT_MARKER, NOT_A_SET_MARKER,
+        annotations_for, split_one, load_chunks as _load_chunks,
+    )
+    title = book.get("title") or ""
+    if not SET_TITLE_RX.search(title):
+        return
+    pe = book.get("parse_error") or ""
+    if pe.startswith(SPLIT_MARKER) or pe.startswith(NOT_A_SET_MARKER):
+        return
+    if annotations_for(ebook_id) > 0:
+        print(f"  · {title[:40]}: has annotations — auto-split skipped")
+        return
+
+    n_with_vol = len(set(c.get("volume") for c in chunks if c.get("volume")))
+    if n_with_vol < 2:
+        # No volume metadata from standardize — ask Haiku for boundaries.
+        try:
+            from detect_set_volumes import make_client, process_one as _detect_one
+        except ImportError:
+            print(f"  · {title[:40]}: detect_set_volumes unavailable", file=sys.stderr)
+            return
+        print(f"  → {title[:40]}: 套書 w/o volume metadata, running detect_set_volumes…", flush=True)
+        client = make_client()
+        result = _detect_one(client, book, dry_run=False)
+        print(f"    {result}", flush=True)
+        # Re-read chunks to see whether detect wrote `volume` field
+        new_chunks = _load_chunks(ebook_id) or []
+        n_with_vol = len(set(c.get("volume") for c in new_chunks if c.get("volume")))
+        if n_with_vol < 2:
+            return  # detect marked NOT_A_SET, nothing to split
+
+    print(f"  → {title[:40]}: auto-splitting into {n_with_vol} volumes…", flush=True)
+    fresh = fetch_book(ebook_id)
+    n_new, err = split_one(fresh)
+    if err:
+        print(f"  ⚠ auto-split: {err}", flush=True)
+    else:
+        print(f"  ✓ auto-split: created {n_new} child ebooks (parent deleted)", flush=True)
 
 
 def cmd_batch(category: str = None, subcategory: str = None, limit: int = None,
