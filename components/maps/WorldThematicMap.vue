@@ -671,20 +671,17 @@ function rebuildAll() {
 
     paths.value = [...grayBase, ...histPaths]
 
-    // ===== 標籤層 =====
-    // 將當前年份所有 active historical features 按 sphere_id 分組，每組算 centroid
-    // 作為「文化圈標籤」浮在版面上 — 文字超越國界，像現代視圖的 realm 標籤。
-    const activeBySphere = new Map<string, any[]>()
-    for (const h of historicalEntries.value) {
-      if (currentYear < h.yearFrom || currentYear > h.yearTo) continue
-      if (!activeBySphere.has(h.sphereId)) activeBySphere.set(h.sphereId, [])
-      activeBySphere.get(h.sphereId)!.push(h.feature)
-    }
-
-    // 沒鑽取時：顯示 realm labels（大字）+ 所有 active sphere labels（小字）
-    // 鑽取時：只顯示鑽入界域內的 sphere labels（中等字）
+    // ===== 標籤層（完全比照現代視圖邏輯）=====
+    // 非鑽取：只顯示有 active sphere 的 realm 標籤（大字），sphere 標籤不顯示
+    // 鑽取：顯示鑽入界域 realm 標籤 + 該界域內 active sphere 的文字標籤
     if (drillingHist) {
-      // drill 模式：列出該界域所有 active sphere
+      // === drill 模式 ===
+      const activeBySphere = new Map<string, any[]>()
+      for (const h of historicalEntries.value) {
+        if (currentYear < h.yearFrom || currentYear > h.yearTo) continue
+        if (!activeBySphere.has(h.sphereId)) activeBySphere.set(h.sphereId, [])
+        activeBySphere.get(h.sphereId)!.push(h.feature)
+      }
       const drilledSphereLabels: LabelItem[] = []
       for (const [sphereId, features] of activeBySphere) {
         const sphere = SPHERES.find(s => s.id === sphereId)
@@ -694,7 +691,6 @@ function rebuildAll() {
           centroid = geoCentroid({ type: 'FeatureCollection', features } as any)
           if (isNaN(centroid[0]) || isNaN(centroid[1])) continue
         } catch { continue }
-        // 用 sphere.label_lnglat 為優先（手動釘位）
         const anchorXY = projection(centroid)
         if (!anchorXY) continue
         let displayXY: [number, number] = anchorXY
@@ -707,59 +703,20 @@ function rebuildAll() {
           x: displayXY[0], y: displayXY[1],
           anchorX: anchorXY[0], anchorY: anchorXY[1],
           text: sphere.name_zh,
-          fontSize: 13, hasLeader: false,
+          fontSize: 12, hasLeader: false,
           extraAnchors: [], isLockedByUser: false,
           mainLeaderHidden: false, isDisplaced: false,
         })
       }
-      // 標籤防重疊
       relaxLabelCollisions(drilledSphereLabels)
       for (const l of drilledSphereLabels) {
         l.hasLeader = Math.hypot(l.x - l.anchorX, l.y - l.anchorY) > 6
       }
       sphereLabels.value = drilledSphereLabels
-      // 鑽取時不顯示其他界域標籤
-      const drilledRealm = realmById(drillingHist)
-      const xy = projection(drilledRealm.label_lnglat)
-      realmLabels.value = xy ? [{
-        id: drilledRealm.id, x: xy[0], y: xy[1], anchorX: xy[0], anchorY: xy[1],
-        text: drilledRealm.name_zh, fontSize: 17, hasLeader: false,
-        extraAnchors: [], isLockedByUser: false, mainLeaderHidden: false, isDisplaced: false,
-      }] : []
+      realmLabels.value = []  // 鑽取時不顯示 realm 標籤（與現代視圖一致）
     } else {
-      // 非 drill：所有 active sphere 都顯示文字標籤（中等字）
-      const allSphereLabels: LabelItem[] = []
-      for (const [sphereId, features] of activeBySphere) {
-        const sphere = SPHERES.find(s => s.id === sphereId)
-        if (!sphere) continue
-        let centroid: [number, number]
-        try {
-          centroid = geoCentroid({ type: 'FeatureCollection', features } as any)
-          if (isNaN(centroid[0]) || isNaN(centroid[1])) continue
-        } catch { continue }
-        const anchorXY = projection(centroid)
-        if (!anchorXY) continue
-        let displayXY: [number, number] = anchorXY
-        if (sphere.label_lnglat) {
-          const p = projection(sphere.label_lnglat)
-          if (p && !isNaN(p[0]) && !isNaN(p[1])) displayXY = p
-        }
-        allSphereLabels.push({
-          id: sphereId,
-          x: displayXY[0], y: displayXY[1],
-          anchorX: anchorXY[0], anchorY: anchorXY[1],
-          text: sphere.name_zh,
-          fontSize: 11, hasLeader: false,
-          extraAnchors: [], isLockedByUser: false,
-          mainLeaderHidden: false, isDisplaced: false,
-        })
-      }
-      relaxLabelCollisions(allSphereLabels)
-      for (const l of allSphereLabels) {
-        l.hasLeader = Math.hypot(l.x - l.anchorX, l.y - l.anchorY) > 6
-      }
-      sphereLabels.value = allSphereLabels
-      // realm 標籤照樣，但只顯示有 active sphere 的界域
+      // === 非鑽取模式 ===
+      // 只顯示有 active sphere 的 realm 標籤；不顯示 sphere 標籤、不用 sphere shade
       const presentRealms = new Set<string>()
       for (const p of histPaths) if (p.realm) presentRealms.add(p.realm.id)
       realmLabels.value = REALMS.filter(r => presentRealms.has(r.id)).map(r => {
@@ -772,6 +729,7 @@ function rebuildAll() {
           mainLeaderHidden: false, isDisplaced: false,
         }
       }).filter(Boolean) as LabelItem[]
+      sphereLabels.value = []
     }
     return
   }
