@@ -651,6 +651,8 @@ function rebuildAll() {
     const sphereColorsHist = drillingHist ? sphereColorsByRealm(drillingHist) : null
 
     // ===== Layer A：陸地灰底 =====
+    // 所有陸地（無論有無 sphere）都先塗統一的灰色，後續 sphere fill 覆蓋有 sphere 的區域。
+    // 用全 opacity 確保灰與白海背景對比清楚。
     const landBase: PathItem[] = featureEntries.value
       .filter(e => !e.isAdmin1)
       .map((entry, i) => {
@@ -658,7 +660,7 @@ function rebuildAll() {
         const countryZh = COUNTRY_NAME_ZH[entry.key] || entry.feature.properties.NAME || entry.key
         return {
           id: `land-${entry.key || 'x'}-${i}`,
-          d, fill: '#E5E7EB', opacity: 0.5,
+          d, fill: '#D1D5DB', opacity: 1,
           strokeBase: 0, strokeOpacity: 0,
           isAdmin1: false,
           title: `${countryZh}（口傳部落／非文字社會）`,
