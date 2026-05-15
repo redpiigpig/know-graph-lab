@@ -40,6 +40,17 @@
             <div class="text-xs text-gray-400 mt-0.5">五大宗主教座歷任主教傳承表</div>
           </div>
         </NuxtLink>
+
+        <NuxtLink
+          to="/genealogy/islamic"
+          class="group flex flex-col gap-3 bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-emerald-300 transition"
+        >
+          <div class="text-3xl">☪</div>
+          <div>
+            <div class="font-semibold text-gray-900 text-base group-hover:text-emerald-700 transition">伊斯蘭族譜</div>
+            <div class="text-xs text-gray-400 mt-0.5">阿丹至穆罕默德 + 12 伊瑪目傳承</div>
+          </div>
+        </NuxtLink>
       </div>
     </div>
   </div>
