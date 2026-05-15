@@ -29,23 +29,59 @@ const OUT_FILLS = 'public/maps/historical-sphere-fills.geojson'
 const OUT_STATES = 'public/maps/historical-states.geojson'
 
 const SNAPSHOTS = [
-  [-4000, 'world_bc4000.geojson'],
-  [-2000, 'world_bc2000.geojson'],
-  [-1500, 'world_bc1500.geojson'],
-  [-1000, 'world_bc1000.geojson'],
-  [-500,  'world_bc500.geojson'],
-  [-322,  'world_bc323.geojson'],
-  [-99,   'world_bc100.geojson'],
-  [200,   'world_200.geojson'],
-  [500,   'world_500.geojson'],
-  [800,   'world_800.geojson'],
-  [1000,  'world_1000.geojson'],
-  [1100,  'world_1100.geojson'],
-  [1279,  'world_1279.geojson'],
-  [1500,  'world_1500.geojson'],
-  [1815,  'world_1815.geojson'],
-  [1914,  'world_1914.geojson'],
-  [2000,  'world_2000.geojson'],
+  [-123000, 'world_bc123000.geojson'],
+  [-10000,  'world_bc10000.geojson'],
+  [-8000,   'world_bc8000.geojson'],
+  [-5000,   'world_bc5000.geojson'],
+  [-4000,   'world_bc4000.geojson'],
+  [-3000,   'world_bc3000.geojson'],
+  [-2000,   'world_bc2000.geojson'],
+  [-1500,   'world_bc1500.geojson'],
+  [-1000,   'world_bc1000.geojson'],
+  [-700,    'world_bc700.geojson'],
+  [-500,    'world_bc500.geojson'],
+  [-400,    'world_bc400.geojson'],
+  [-323,    'world_bc323.geojson'],
+  [-300,    'world_bc300.geojson'],
+  [-200,    'world_bc200.geojson'],
+  [-100,    'world_bc100.geojson'],
+  [-1,      'world_bc1.geojson'],
+  [100,     'world_100.geojson'],
+  [200,     'world_200.geojson'],
+  [300,     'world_300.geojson'],
+  [400,     'world_400.geojson'],
+  [500,     'world_500.geojson'],
+  [600,     'world_600.geojson'],
+  [700,     'world_700.geojson'],
+  [800,     'world_800.geojson'],
+  [900,     'world_900.geojson'],
+  [1000,    'world_1000.geojson'],
+  [1100,    'world_1100.geojson'],
+  [1200,    'world_1200.geojson'],
+  [1279,    'world_1279.geojson'],
+  [1300,    'world_1300.geojson'],
+  [1400,    'world_1400.geojson'],
+  [1492,    'world_1492.geojson'],
+  [1500,    'world_1500.geojson'],
+  [1530,    'world_1530.geojson'],
+  [1600,    'world_1600.geojson'],
+  [1650,    'world_1650.geojson'],
+  [1700,    'world_1700.geojson'],
+  [1715,    'world_1715.geojson'],
+  [1783,    'world_1783.geojson'],
+  [1800,    'world_1800.geojson'],
+  [1815,    'world_1815.geojson'],
+  [1880,    'world_1880.geojson'],
+  [1900,    'world_1900.geojson'],
+  [1914,    'world_1914.geojson'],
+  [1920,    'world_1920.geojson'],
+  [1930,    'world_1930.geojson'],
+  [1938,    'world_1938.geojson'],
+  [1945,    'world_1945.geojson'],
+  [1960,    'world_1960.geojson'],
+  [1994,    'world_1994.geojson'],
+  [2000,    'world_2000.geojson'],
+  [2010,    'world_2010.geojson'],
 ]
 
 /**
@@ -294,10 +330,31 @@ function sphereForCountryAtYear(iso, year) {
 }
 
 /**
- * 已知「真實國家／文明」白名單（從 v3 MAP 整理）。
- * 只有出現在這個 Set 的歷史 polygon 才會被當作 sphere fill 處理；
- * 其他（hunter-gatherers, shellfish, aboriginal tribes 等部落標籤）skipped → 灰底。
+ * STATE_NAMES whitelist — 給 sphere fills（world-religions-map）用。
+ * 只有出現在這個 Set 的歷史 polygon 才會被切成 sphere fill。
+ *
+ * historical-states.geojson（給 historical-borders-map 用）採取相反策略：
+ * 用 NON_STATE_PATTERNS blacklist 排除部落／hunter-gatherers，其他全收。
  */
+const NON_STATE_PATTERNS = [
+  /hunter[\s-]?gatherer/i,
+  /shellfish gather/i,
+  /pastoralis[t]?/i,
+  /\bnomad[s]?\b/i,
+  /^Hunter/i,
+  /aboriginal\b/i,
+  /\bculture[s]?\b/i,         // "Beaker culture", "Dapenkeng culture" 等部落／考古文化
+  /^Indigenous\b/i,
+  /^Tribes?\b/i,
+  /^[A-Z][a-z]+ tribes?$/i,   // "Saxon tribes" 等
+]
+
+function isStatePolygon(name) {
+  if (!name) return false
+  for (const re of NON_STATE_PATTERNS) if (re.test(name)) return false
+  return true
+}
+
 const STATE_NAMES = new Set([
   // 古代文明／早期國家
   'Egypt', 'Kerma', 'Ur', 'Hurrian Kingdoms', 'Elam',
@@ -475,14 +532,17 @@ function main() {
     for (const hf of gj.features) {
       const nm = hf.properties?.NAME?.trim()
       if (!nm) continue
-      // Whitelist：只有「真實國家／文明」會被處理；部落／hunter-gatherer 等 skipped
-      if (!STATE_NAMES.has(nm)) continue
+      // historical-states.geojson — blacklist：排除部落、hunter-gatherer、考古文化等非政體
+      if (!isStatePolygon(nm)) continue
 
       stateFeatures.push({
         type: 'Feature',
         properties: { name: nm, year_from: yearFrom, year_to: yearTo },
         geometry: hf.geometry,
       })
+
+      // sphere fill 仍用 whitelist（影響 world-religions-map）
+      if (!STATE_NAMES.has(nm)) continue
 
       // Intersect with each modern admin_0
       for (const { feature: af, iso } of adm0Features) {
