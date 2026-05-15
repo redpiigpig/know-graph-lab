@@ -293,6 +293,155 @@ function sphereForCountryAtYear(iso, year) {
   return active
 }
 
+/**
+ * 已知「真實國家／文明」白名單（從 v3 MAP 整理）。
+ * 只有出現在這個 Set 的歷史 polygon 才會被當作 sphere fill 處理；
+ * 其他（hunter-gatherers, shellfish, aboriginal tribes 等部落標籤）skipped → 灰底。
+ */
+const STATE_NAMES = new Set([
+  // 古代文明／早期國家
+  'Egypt', 'Kerma', 'Ur', 'Hurrian Kingdoms', 'Elam',
+  'Indus valley civilization', 'Minoan', 'Cycladic', 'Norte Chico',
+  'Valdivia', 'Namazga', 'Semites', 'Dravidians',
+  'Dapenkeng culture', 'Dakapeng culture',
+  // 青銅時代列國
+  'Hittites', 'Canaan', 'Xia', 'Oxus', 'Únětice', 'Beaker',
+  // 鐵器時代
+  'Assyria', 'Babylonia', 'Phrygians', 'Arameans',
+  'state societies and Aramaean kingdoms', 'Urartu',
+  // 軸心
+  'Achaemenid Empire', 'Greek city-states', 'Rome', 'Etrurians',
+  'Sabini', 'Samnites', 'Carthaginian Empire',
+  'Magadha', 'Kosala', 'Kasi', 'Avanti', 'Gandhāra', 'Kuru',
+  'Pancala', 'Surasena', 'Vatsa', 'Malla', 'Simhala', 'Hindu kingdoms',
+  'Zhou states', 'Saba', 'Meroe', 'Blemmyes',
+  'Olmec', 'Chavin', 'Chorrera', 'El Paraiso',
+  'Illyrians', 'Boii', 'Ethiopian highland farmers',
+  // 希臘化／早期帝國
+  'Macedonia', 'Macedonian Empire', 'Seleucid Empire',
+  'Ptolemaic Kingdom', 'Antigonid Kingdom', 'Cappadocia',
+  'Maurya Empire', 'Maurya', 'Mauryan Empire',
+  'Han Empire', 'Han', 'Xiongnu',
+  'Roman Republic', 'Roman Empire',
+  'Parthian Empire', 'Parthians',
+  'Armenia', 'Iberia', 'Colchis',
+  'Aksum', 'Axum', 'Hadramaut', 'Himyarite Kingdom',
+  'Nabateans', 'Nabatean Kingdom',
+  // 古典/晚期古代
+  'Eastern Roman Empire', 'Western Roman Empire',
+  'Byzantine Empire', 'Sasanian Empire', 'Sassanid Empire',
+  'Gupta Empire', 'Vakataka', 'Pallavas', 'Cholas', 'Cheras',
+  'Pandyas', 'Kadambas', 'Western Gangas', 'Vishnu-Kundins',
+  'Kushan Principalities', 'Kushan Empire',
+  'Yamato', 'Toba Wei', 'Jin Empire', 'Tang Empire',
+  'Tang Chinese Empire', 'Sui Empire',
+  'Koguryo', 'Paekche', 'Silla', 'Ruanruan',
+  'Champa', 'Funan', 'Lavo',
+  'Anglo-Saxons', 'Franks', 'Visigoths', 'Ostrogoths',
+  'Vandals', 'Burgunds', 'Sveves', 'Saxons', 'Turingians', 'Basks',
+  'Empire of Ghana',
+  'Maya states', 'Maya city-states', 'Teotihuacàn', 'Teotihuacán',
+  'Monte Albàn', 'Monte Albán', 'Moche', 'Nazca',
+  'Veracruz civilization', 'Mixtec Empire',
+  'Swedes', 'Saami', 'Sámi',
+  // 中古
+  'Caliphate', 'Umayyad Caliphate', 'Abbasid Caliphate',
+  'Rashidun Caliphate', 'Charlemagne Empire', 'Carolingian Empire',
+  'Holy Roman Empire',
+  'Song Empire', 'Song Chinese Empire', 'Jin (Jurchen)',
+  'Liao Empire', 'Tangut Empire', 'Western Xia',
+  'Tibet', 'Tibetan Empire',
+  'Khmer Empire', 'Pagan', 'Sukhothai', 'Đại Việt', 'Dai Viet', 'Cambodia',
+  'Srivijaya', 'Srivijaya Empire', 'Majapahit',
+  'Mongol Empire', 'Yuan Empire', 'Yuan Chinese Empire',
+  'Golden Horde', 'Chagatai Khanate', 'Ilkhanate', 'Il-khanate',
+  'Mamluke Sultanate', 'Mamluk Sultanate', 'Sultanate of Delhi',
+  'Seljuk Empire', 'Seljuks', 'Sultanate of Rum', 'Seljuk Caliphate',
+  'Anatolian Beyliks', 'Emirate of the White Sheep Turks',
+  "Kievan Rus", "Kievan Rus'",
+  'Kingdom of England', 'England', 'Scotland', 'Scottland', 'Ireland',
+  'France', 'Kingdom of France', 'Hungary', 'Imperial Hungary',
+  'Poland', 'Poland-Lithuania', 'Lithuania',
+  'Grand Duchy of Moscow', 'Novgorod', 'Novgorod-Seversky',
+  'Pskov', 'Ryazan',
+  'Castille', 'Aragón', 'Aragon', 'Portugal', 'Navarre',
+  'Venice', 'Papal States',
+  'Denmark', 'Denmark-Norway', 'Norway', 'Sweden', 'Iceland',
+  'Kalmar Union', 'Teutonic Knights',
+  // 近世
+  'Ming Empire', 'Ming Chinese Empire', 'Ottoman Empire',
+  'Aztec Empire', 'Inca Empire',
+  'Mali', 'Songhai', 'Mwenemutapa', 'Congo',
+  'Korea', 'Japan',
+  'Vijayanagara', 'Bahmani Kingdom', 'Bengal', 'Orissa', 'Rajastan',
+  'Crimean Khanate', 'White Horde', 'Khanate of Sibir',
+  'Timurid Emirates', 'Timurid Empire', 'Oirat Confederation',
+  'Ethiopia', 'Adal', 'Funj', 'Yemen', 'Muscat',
+  'Bornu-Kanem', 'Hausa States',
+  'Hafsid Caliphate', 'Zayyanid Caliphate', 'Wattasid Caliphate',
+  'Akan', 'Oyo', 'Benin', 'Mossi States',
+  'Alwa', 'Makkura', 'Madagascar', 'Ndongo',
+  'Britany', 'Brittany', 'Swiss Confederation',
+  'Cyprus', 'Georgia',
+  'Aceh', 'Malacca', 'Brunei', 'Ayutthaya',
+  'Burmese kingdoms', 'Pegu', 'Laos', 'Arakan',
+  'Sinhalese kingdoms', 'Maldives',
+  'Taiwan', 'Philippines',
+  'Maori', 'Polynesians', 'Maldivians',
+  "Tuʻi Tonga Empire",
+  // 近現代
+  'Russian Empire', 'Habsburg Empire', 'Austrian Empire',
+  'Prussia', 'Kingdom of Prussia',
+  'Spain', 'United Kingdom',
+  'Qing Empire', 'Qing Chinese Empire',
+  'Mughal Empire', 'British India',
+  'Burma', 'Iran', 'Persia', 'Egypt under Ottoman',
+  'United States', 'Brazil', 'Mexico', 'Gran Colombia',
+  'Provinces of the Río de la Plata',
+  'Sokoto Caliphate', 'Tukulor Empire', 'Toucouleur Empire',
+  'Buganda', 'Zulu Kingdom', 'Boer Republics',
+  // 1914 / 2000 modern states — full list 太長，直接放當前國家代表名
+  'France & Colonies', 'British Empire',
+  'Portuguese Empire', 'Spanish Empire',
+  'German Empire', 'Austria-Hungary', 'Italy',
+  'Belgium', 'Netherlands', 'Switzerland',
+  'Greece', 'Bulgaria', 'Romania', 'Serbia', 'Albania', 'Montenegro',
+  // 2000 — 主要的（其他現代國家會在 2000 file 中匹配 iso 自動 fallback）
+  'Iraq', 'Syria', 'Lebanon', 'Israel', 'Jordan', 'Palestine',
+  'Sudan', 'Libya', 'Tunisia', 'Algeria', 'Morocco',
+  'Turkey', 'Afghanistan', 'Tajikistan',
+  'Azerbaijan', 'Saudi Arabia', 'Oman', 'Bahrain', 'Qatar',
+  'United Arab Emirates', 'Kuwait',
+  'Pakistan', 'India', 'Nepal', 'Sri Lanka', 'Bangladesh',
+  'China', 'Bhutan',
+  'Guatemala', 'Belize', 'Honduras', 'El Salvador', 'Nicaragua',
+  'Costa Rica', 'Panama',
+  'Peru', 'Bolivia', 'Ecuador', 'Colombia',
+  'Cuba', 'Dominican Republic', 'Haiti', 'Jamaica',
+  'Venezuela', 'Guyana', 'Suriname',
+  'Chile', 'Argentina', 'Paraguay', 'Uruguay',
+  'Vatican', 'Malta', 'Macedonia',
+  'Croatia', 'Bosnia and Herzegovina', 'Slovenia', 'Moldova',
+  'Germany', 'Austria', 'Czech Republic', 'Slovakia',
+  'Luxembourg', 'Latvia', 'Estonia', 'Finland',
+  'Vietnam', 'Thailand',
+  "Korea, Democratic People's Republic of", 'Korea, Republic of',
+  'Indonesia', 'Malaysia', 'Singapore',
+  'Fiji', 'Papua New Guinea', 'Australia', 'New Zealand',
+  'Eritrea', 'Senegal', 'Niger', 'Chad', 'Burkina Faso',
+  'Mauritania', 'Gambia, The', 'Guinea', 'Guinea-Bissau', 'Cape Verde',
+  'Somalia', 'Kenya', 'Tanzania, United Republic of',
+  'Uganda', 'Rwanda', 'Burundi', 'Djibouti',
+  'Liberia', 'Sierra Leone', 'Ivory Coast', 'Ghana', 'Togo', 'Nigeria',
+  'Cameroon', 'Gabon', 'Equatorial Guinea',
+  'Central African Republic', 'Zaire',
+  'Zimbabwe', 'Mozambique', 'South Africa', 'Angola',
+  'Namibia', 'Botswana', 'Zambia', 'Malawi', 'Lesotho', 'Swaziland',
+  'Uzbekistan', 'Turkmenistan', 'Kyrgyzstan', 'Kazakhstan',
+  'Ukraine', 'Byelarus', 'Belarus', 'Russia', 'Mongolia',
+  'Canada', 'Greenland',
+])
+
 function getAdm0Code(props) {
   const iso = props.ISO_A3
   if (iso && iso !== '-99') return iso
@@ -326,8 +475,8 @@ function main() {
     for (const hf of gj.features) {
       const nm = hf.properties?.NAME?.trim()
       if (!nm) continue
-      // Skip pure tribal/hunter-gatherer labels
-      if (/hunter[- ]gatherer|tribal|culture$|cultures$| culture[s]?$/i.test(nm) && !/civiliz/i.test(nm)) continue
+      // Whitelist：只有「真實國家／文明」會被處理；部落／hunter-gatherer 等 skipped
+      if (!STATE_NAMES.has(nm)) continue
 
       stateFeatures.push({
         type: 'Feature',
