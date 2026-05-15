@@ -241,18 +241,21 @@ interface HistoricalState extends StateSkeleton, StateDetail {
 2. **陸地灰底**：modern admin_0，`fill='#D1D5DB'` 全 opacity
 3. **古國 polygon**：filtered by currentYear（`year_from <= y <= year_to`），每國 **hash-based HSL 唯一色**
 4. **海岸線**：NE coastline 黑線 0.6/transform.k
-5. **國名標籤**：centroid + 防重疊 relax，僅顯示英文
+5. **國名標籤**：centroid + 防重疊 relax，**中文優先**。`nameZhOf()` 查序：STATE_DETAILS → wikidata-states.json → NE admin_0 (COUNTRY_NAME_ZH) → fallback 英文
 
 `colorForState(name)` 用名稱字串 hash 算 HSL，**同名穩定色**（一致性）。
-點 polygon → `selectedState` 彈窗顯示有效年代。
+點 polygon → `selectedState` 彈窗顯示中文 + 英文副標 + 有效年代。
+
+**已知未譯標籤**（geojson 部落／文化 polygon 名，不在 wikidata 也不在 NE admin_0）：
+state societies and Aramaean kingdoms / El Paraiso / Chorrera / Ethiopian highland farmers / Dravidians / Saami / Illyrians / Phrygians / Beaker 等。要補譯就加進 [data/maps/historical-states-db.ts](../../../data/maps/historical-states-db.ts) 的 `STATE_DETAILS`，key 用 geojson `properties.name` 完全一致。
 
 ### 列表 UI（HistoricalStateList.vue）
 
-工具列：
-- 搜尋（中英文）
-- 界域過濾（8 大界域，依 `realm_id`）
-- 詳細過濾（全部／已填／僅骨架）
-- polygon 過濾（全部／有地圖／無 polygon）
+工具列（右側統計排版）：
+- **「顯示 4,424 / 4,424 國」** — 大字粗體主視覺
+- 「有 polygon 368」「人工詳細 41」 — 次要灰色文字（避免被誤讀為總數）
+
+過濾：搜尋（中英文）／界域（8 大界域，依 `realm_id`）／詳細（全部／已填／僅骨架）／polygon（全部／有地圖／無 polygon）
 
 表格欄位：國名 / 年代 / 朝代統治 / 巔峰人口 / 巔峰面積 / 主要首都 / 現代涵蓋 / 界域
 
@@ -260,7 +263,7 @@ interface HistoricalState extends StateSkeleton, StateDetail {
 
 排序：依 `year_start` 或 `name_en`，asc/desc 切換
 
-分頁：50 條/頁
+分頁：**50 條/頁**，89 頁。分頁列含「⟪ 第一頁／← 上頁／第 X / Y 頁／下頁 →／最末頁 ⟫」
 
 ---
 
