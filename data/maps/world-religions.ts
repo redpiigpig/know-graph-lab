@@ -40,6 +40,9 @@ export interface CulturalSphere {
   name_en: string
   realm_id: RealmId
   members: Member[]
+  /** 可選：手動指定 sphere 名稱顯示位置 [lng, lat]（預設用 d3.geoCentroid 自動計算）。
+   *  顯示位置與原 centroid 不同時自動拉 leader line。 */
+  label_lnglat?: [number, number]
 }
 
 export const REALMS: Realm[] = [
@@ -77,7 +80,16 @@ export const SPHERES: CulturalSphere[] = [
     members: [
       { iso_a3: 'EGY', label: '埃及', order: 1, note: '聖書體發源地' },
       { iso_a3: 'SDN', label: '蘇丹', order: 2, note: '中北部與東部，庫施王國' },
-      { iso_a3: 'LBY', label: '利比亞', order: 3, note: '昔蘭尼加地區' },
+      { iso_a3: 'LBY', admin1: 'Cyrenaica', label: '利比亞（昔蘭尼加）', order: 3 },
+    ],
+  },
+  {
+    id: 'carthaginian-maghreb', name_zh: '迦太基-馬格里布文化圈', name_en: 'Carthaginian-Maghreb', realm_id: 'central',
+    members: [
+      { iso_a3: 'TUN', label: '突尼西亞', order: 1, note: '迦太基發祥' },
+      { iso_a3: 'DZA', label: '阿爾及利亞', order: 2 },
+      { iso_a3: 'MAR', label: '摩洛哥', order: 3 },
+      { iso_a3: 'LBY', admin1: 'Tripolitania-Fezzan', label: '利比亞（的黎波里塔尼亞與費贊）', order: 4 },
     ],
   },
   {
@@ -241,6 +253,7 @@ export const SPHERES: CulturalSphere[] = [
   },
   {
     id: 'gallic-french', name_zh: '高盧-法蘭西文化圈', name_en: 'Gallic-French', realm_id: 'western',
+    label_lnglat: [-3, 47],  // 拉到比斯開灣，避開歐陸文字打架
     members: [
       { iso_a3: 'FRA', label: '法國', order: 1, note: '歐洲本土，羅馬化高盧' },
     ],
@@ -255,6 +268,7 @@ export const SPHERES: CulturalSphere[] = [
   },
   {
     id: 'central-european', name_zh: '中歐文化圈', name_en: 'Central European', realm_id: 'western',
+    label_lnglat: [13, 50],  // 釘在德/捷邊界中歐核心
     members: [
       { iso_a3: 'DEU', label: '德國', order: 1, note: '神聖羅馬帝國' },
       { iso_a3: 'AUT', label: '奧地利', order: 2 },
@@ -543,8 +557,9 @@ export const COUNTRY_REALM: Record<string, RealmId> = {
   UKR: 'western',  // 烏克蘭以盧布林/西烏為主呈現（東烏在北方多文化圈列表）
   LTU: 'western', LVA: 'western',
   DNK: 'western', SWE: 'western', NOR: 'western', ISL: 'western', FIN: 'western', EST: 'western',
-  // 馬格里布（文件未列為主，但圖示與西方羅馬-法殖民圈一致）
-  TUN: 'western', DZA: 'western', MAR: 'western', ESH: 'western',
+  // 馬格里布 → 中央界域 迦太基-馬格里布文化圈（柏柏爾人 + 阿拉伯-伊斯蘭主體 + 法殖民層覆蓋；腓尼基根）
+  TUN: 'central', DZA: 'central', MAR: 'central',
+  ESH: 'western',  // 西撒哈拉留西方默認
 
   // 亞太 (Blue)
   KHM: 'asia-pacific', VNM: 'asia-pacific', MMR: 'asia-pacific', THA: 'asia-pacific', LAO: 'asia-pacific',
@@ -635,8 +650,9 @@ export const COUNTRY_NAME_ZH: Record<string, string> = {
  *  LBY/AFG/UKR 用 NE 10m admin_1（檔案：ne_10m_admin_1_extra.geojson）
  */
 export const COUNTRIES_USING_ADMIN1 = new Set<string>([
-  'CHN', 'RUS', 'USA', 'CAN',                            // NE 50m subset
-  'LBY', 'AFG', 'UKR', 'SDN', 'ETH', 'NGA', 'GHA', 'FRA', // NE 10m extra subset
+  'CHN', 'RUS', 'USA', 'CAN',                     // NE 50m subset
+  'LBY', 'AFG', 'UKR', 'SDN', 'ETH', 'NGA', 'GHA', // NE 10m extra subset
+  // FRA 不在此集合：本土走 admin_0 整片，海外省（FR-GF/MQ/GP/RE/YT）以 admin_1 疊圖覆寫
 ])
 
 /**
@@ -649,7 +665,6 @@ export const COUNTRY_DEFAULT_SPHERE: Record<string, string> = {
   RUS: 'russian-tatar',
   USA: 'anglo-american',
   CAN: 'anglo-american',
-  FRA: 'gallic-french',
   LBY: 'egyptian',
   AFG: 'persian',
   UKR: 'lublin',
@@ -684,8 +699,8 @@ export const ADMIN1_SPHERE: Record<string, string> = {
   'RU-AD': 'caucasus', 'RU-KC': 'caucasus', 'RU-IN': 'caucasus', 'RU-KB': 'caucasus',
   'RU-SE': 'caucasus', 'RU-CE': 'caucasus', 'RU-DA': 'caucasus',
   'RU-STA': 'caucasus', 'RU-KDA': 'caucasus',
-  // 中歐文化圈（西方界域）
-  'RU-KGD': 'central-european',  // 加里寧格勒
+  // 加里寧格勒 → 羅斯-韃靼（俄羅斯飛地，今日東正教/俄文化主體；歷史東普魯士不再）
+  'RU-KGD': 'russian-tatar',
   // 蒙古-通古斯文化圈（北方界域）— 藏傳佛教 + 蒙古/Oirat 認同核心
   'RU-BU': 'mongolic-tungusic',   // 布里亞特共和國
   'RU-TY': 'mongolic-tungusic',   // 圖瓦共和國（Turkic 但藏傳佛教，與蒙古文化共生）
@@ -698,9 +713,10 @@ export const ADMIN1_SPHERE: Record<string, string> = {
   'RU-KHA': 'siberian',  // 哈巴羅夫斯克邊疆區
   'RU-MAG': 'siberian',  // 馬加丹州
   'RU-SAK': 'siberian',  // 薩哈林州
-  // 北極文化圈（北美界域）
+  'RU-SA': 'siberian',   // 薩哈共和國主體（Turkic 雅庫特族，非楚克奇也非北極原住民）
+  // 北極文化圈（北美界域）— 只有楚科奇是真正的楚克奇族 + Paleo-Siberian 北極帶
   'RU-CHU': 'arctic',  // 楚科奇
-  'RU-SA': 'arctic',   // 薩哈/雅庫特
+  // RU-SA 薩哈共和國主體是 Turkic 雅庫特族，移到西伯利亞
   // 羅斯-韃靼文化圈（北方界域）— 歐俄部分
   'RU-MUR': 'russian-tatar', 'RU-NGR': 'russian-tatar', 'RU-PSK': 'russian-tatar',
   'RU-LEN': 'russian-tatar', 'RU-SPE': 'russian-tatar', 'RU-BRY': 'russian-tatar',
@@ -768,12 +784,12 @@ export const ADMIN1_SPHERE: Record<string, string> = {
   'LY-MJ': 'egyptian',  // 邁爾季
   'LY-JA': 'egyptian',  // 綠山省（傑貝爾艾赫達爾）
   'LY-QB': 'egyptian',  // 古拜
-  // 拉丁文化圈（西方界域）— 的黎波里塔尼亞 + 費贊（中西部，義屬殖民延伸）
-  'LY-GD': 'latin-cultural', 'LY-NQ': 'latin-cultural', 'LY-MQ': 'latin-cultural',
-  'LY-WS': 'latin-cultural', 'LY-GT': 'latin-cultural', 'LY-MI': 'latin-cultural',
-  'LY-MB': 'latin-cultural', 'LY-TN': 'latin-cultural', 'LY-ZA': 'latin-cultural',
-  'LY-JI': 'latin-cultural', 'LY-MZ': 'latin-cultural', 'LY-JU': 'latin-cultural',
-  'LY-SB': 'latin-cultural', 'LY-WD': 'latin-cultural', 'LY-SR': 'latin-cultural',
+  // 迦太基-馬格里布文化圈（中央界域）— 的黎波里塔尼亞 + 費贊（中西部）
+  'LY-GD': 'carthaginian-maghreb', 'LY-NQ': 'carthaginian-maghreb', 'LY-MQ': 'carthaginian-maghreb',
+  'LY-WS': 'carthaginian-maghreb', 'LY-GT': 'carthaginian-maghreb', 'LY-MI': 'carthaginian-maghreb',
+  'LY-MB': 'carthaginian-maghreb', 'LY-TN': 'carthaginian-maghreb', 'LY-ZA': 'carthaginian-maghreb',
+  'LY-JI': 'carthaginian-maghreb', 'LY-MZ': 'carthaginian-maghreb', 'LY-JU': 'carthaginian-maghreb',
+  'LY-SB': 'carthaginian-maghreb', 'LY-WD': 'carthaginian-maghreb', 'LY-SR': 'carthaginian-maghreb',
 
   // ---------- 阿富汗 (AFG) ----------
   // 波斯文化圈（中央界域）— 西部與中部

@@ -335,6 +335,10 @@ function rebuildAll() {
     .map((entry, i) => {
       const { realm, sphere, title, spheres } = describeEntry(entry, drilling)
 
+      // 「疊圖型」admin_1：父國本身是 admin_0 渲染（如 FRA 海外省覆蓋在 FRA admin_0 上），
+      // 在 drilled 視圖時仍維持全不透明，以免被下方 admin_0 顏色滲出
+      const isOverlayOnAdmin0 = entry.isAdmin1 && !COUNTRIES_USING_ADMIN1.has(entry.countryCode)
+
       let fill = '#E5E7EB'
       let opacity = 1
       if (drilling) {
@@ -343,7 +347,7 @@ function rebuildAll() {
           opacity = 1
         } else {
           fill = realm ? realm.color : '#E5E7EB'
-          opacity = 0.12
+          opacity = isOverlayOnAdmin0 ? 1 : 0.12
         }
       } else {
         fill = realm ? realm.color : '#E5E7EB'
@@ -387,18 +391,29 @@ function rebuildAll() {
         return s.members.some(m => m.iso_a3 === e.key && !m.is_extension && !m.admin1)
       }).map(e => e.feature)
       if (!matches.length) return null
-      let lng = 0, lat = 0
+      let anchorLng = 0, anchorLat = 0
       try {
         const c = geoCentroid({ type: 'FeatureCollection', features: matches } as any)
-        lng = c[0]; lat = c[1]
+        anchorLng = c[0]; anchorLat = c[1]
       } catch { return null }
-      const xy = projection([lng, lat])
-      if (!xy || isNaN(xy[0]) || isNaN(xy[1])) return null
+      const anchorXy = projection([anchorLng, anchorLat])
+      if (!anchorXy || isNaN(anchorXy[0]) || isNaN(anchorXy[1])) return null
+      // Optional override: explicit label position; anchor stays at centroid for leader line
+      let displayXy = anchorXy
+      if (s.label_lnglat) {
+        const ovr = projection(s.label_lnglat)
+        if (ovr && !isNaN(ovr[0]) && !isNaN(ovr[1])) displayXy = ovr
+      }
       return {
-        id: s.id, x: xy[0], y: xy[1], anchorX: xy[0], anchorY: xy[1],
+        id: s.id, x: displayXy[0], y: displayXy[1],
+        anchorX: anchorXy[0], anchorY: anchorXy[1],
         text: s.name_zh, fontSize: 12, hasLeader: false,
       }
     }).filter(Boolean) as LabelItem[]
+    // Mark explicit-overrided labels as having leaders unconditionally
+    for (const l of sphereLabels.value) {
+      if (Math.hypot(l.x - l.anchorX, l.y - l.anchorY) > 6) l.hasLeader = true
+    }
     relaxLabelCollisions(sphereLabels.value)
   } else {
     sphereLabels.value = []
