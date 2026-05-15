@@ -74,6 +74,7 @@ export const SPHERES: CulturalSphere[] = [
   // ========== 中央界域 ==========
   {
     id: 'mesopotamian-levantine', name_zh: '兩河-黎凡特文化圈', name_en: 'Mesopotamian-Levantine', realm_id: 'central',
+    valid_from: -539,  // 波斯吞併巴比倫，亞蘭語成通用語，兩河與黎凡特實質縫合
     members: [
       { iso_a3: 'IRQ', label: '伊拉克', order: 1, note: '蘇美/阿卡德發源地' },
       { iso_a3: 'SYR', label: '敘利亞', order: 2, note: '烏加里特' },
@@ -85,6 +86,7 @@ export const SPHERES: CulturalSphere[] = [
   },
   {
     id: 'egyptian', name_zh: '埃及文化圈', name_en: 'Egyptian', realm_id: 'central',
+    valid_from: -3500,  // 前王朝、上下埃及形成期
     members: [
       { iso_a3: 'EGY', label: '埃及', order: 1, note: '聖書體發源地' },
       { iso_a3: 'SDN', label: '蘇丹', order: 2, note: '中北部與東部，庫施王國' },
@@ -93,6 +95,7 @@ export const SPHERES: CulturalSphere[] = [
   },
   {
     id: 'carthaginian-maghreb', name_zh: '迦太基-馬格里布文化圈', name_en: 'Carthaginian-Maghreb', realm_id: 'western',
+    valid_from: -1100,  // 腓尼基殖民開始
     members: [
       { iso_a3: 'TUN', label: '突尼西亞', order: 1, note: '迦太基發祥' },
       { iso_a3: 'DZA', label: '阿爾及利亞', order: 2 },
@@ -106,6 +109,7 @@ export const SPHERES: CulturalSphere[] = [
     // 1071 CE Manzikert 後小亞細亞突厥化逐步分立，1923 Lausanne 條約徹底定型。
     // 現代範圍縮回希臘+賽普勒斯；土耳其已劃入新增的 'anatolia' sphere。
     id: 'aegean-asia-minor', name_zh: '愛琴文化圈', name_en: 'Aegean', realm_id: 'central',
+    valid_from: -2700,  // 米諾斯文明成型
     members: [
       { iso_a3: 'GRC', label: '希臘', order: 1, note: '米諾斯/邁錫尼/古典希臘/拜占庭核心' },
       { iso_a3: 'CYP', label: '賽普勒斯', order: 2 },
@@ -113,6 +117,7 @@ export const SPHERES: CulturalSphere[] = [
   },
   {
     id: 'persian', name_zh: '波斯文化圈', name_en: 'Persian', realm_id: 'central',
+    valid_from: -3200,  // 原始埃蘭文字
     members: [
       { iso_a3: 'IRN', label: '伊朗', order: 1, note: '埃蘭文明至波斯帝國' },
       { iso_a3: 'AFG', label: '阿富汗', order: 2, note: '西部與中部' },
@@ -121,6 +126,7 @@ export const SPHERES: CulturalSphere[] = [
   },
   {
     id: 'caucasus', name_zh: '高加索文化圈', name_en: 'Caucasus', realm_id: 'central',
+    valid_from: -3400,  // 庫拉-阿拉斯青銅文化
     members: [
       { iso_a3: 'ARM', label: '亞美尼亞', order: 1, note: '烏拉爾圖，首個基督教國家' },
       { iso_a3: 'GEO', label: '喬治亞', order: 2 },
@@ -130,6 +136,7 @@ export const SPHERES: CulturalSphere[] = [
   },
   {
     id: 'arabian', name_zh: '阿拉伯次大陸文化圈', name_en: 'Arabian Subcontinent', realm_id: 'central',
+    valid_from: -1200,  // 示巴等古南阿拉伯王國
     members: [
       { iso_a3: 'YEM', label: '葉門', order: 1, note: '示巴王國，古南阿拉伯文' },
       { iso_a3: 'SAU', label: '沙烏地阿拉伯', order: 2, note: '伊斯蘭教發源地' },
@@ -204,6 +211,7 @@ export const SPHERES: CulturalSphere[] = [
   // ========== 東方界域 ==========
   {
     id: 'indian', name_zh: '印度文化圈', name_en: 'Indian', realm_id: 'eastern',
+    valid_from: -2600,  // 印度河文明（哈拉帕）
     members: [
       { iso_a3: 'PAK', label: '巴基斯坦', order: 1, note: '印度河文明' },
       { iso_a3: 'IND', label: '印度', order: 2, note: '吠陀宗教核心' },
@@ -216,6 +224,7 @@ export const SPHERES: CulturalSphere[] = [
   },
   {
     id: 'han', name_zh: '漢地文化圈', name_en: 'Han', realm_id: 'eastern',
+    valid_from: -2070,  // 夏（傳說）
     members: [
       { iso_a3: 'CHN', admin1: 'Inner-18', label: '中國（關內 18 省）', order: 1, note: '甲骨文與華夏核心' },
       { iso_a3: 'TWN', label: '台灣', order: 2, is_extension: true, note: '17 世紀進入漢文信史' },
@@ -223,6 +232,7 @@ export const SPHERES: CulturalSphere[] = [
   },
   {
     id: 'tibetan', name_zh: '圖博文化圈', name_en: 'Tibetan', realm_id: 'eastern',
+    valid_from: -1000,  // 象雄
     members: [
       { iso_a3: 'CHN', admin1: 'Tibet', label: '中國（西藏自治區）', order: 1, note: '吐蕃帝國與藏文創制' },
       { iso_a3: 'CHN', admin1: 'Tibetan-4-Provinces', label: '中國（四省藏區）', order: 2 },
@@ -233,6 +243,7 @@ export const SPHERES: CulturalSphere[] = [
   // ========== 拉美界域 ==========
   {
     id: 'mesoamerican', name_zh: '中美洲-墨西哥文化圈', name_en: 'Mesoamerican-Mexican', realm_id: 'latin-america',
+    valid_from: -1500,  // 奧爾梅克
     members: [
       { iso_a3: 'MEX', label: '墨西哥', order: 1, note: '奧爾梅克/阿茲特克' },
       { iso_a3: 'GTM', label: '瓜地馬拉', order: 2, note: '馬雅核心' },
@@ -247,6 +258,7 @@ export const SPHERES: CulturalSphere[] = [
   },
   {
     id: 'andean', name_zh: '安地斯文化圈', name_en: 'Andean', realm_id: 'latin-america',
+    valid_from: -3000,  // 諾爾特奇科／卡拉爾
     members: [
       { iso_a3: 'PER', label: '秘魯', order: 1, note: '卡拉爾/印加帝國' },
       { iso_a3: 'BOL', label: '玻利維亞', order: 2 },
@@ -256,6 +268,7 @@ export const SPHERES: CulturalSphere[] = [
   },
   {
     id: 'caribbean', name_zh: '加勒比文化圈', name_en: 'Caribbean', realm_id: 'latin-america',
+    valid_from: -2000,  // 阿拉瓦克／泰諾
     members: [
       { iso_a3: 'CUB', label: '古巴', order: 1, note: '哥倫布首批接觸區' },
       { iso_a3: 'DOM', label: '多明尼加', order: 2 },
@@ -278,6 +291,7 @@ export const SPHERES: CulturalSphere[] = [
   },
   {
     id: 'southern-cone', name_zh: '南錐文化圈', name_en: 'Southern Cone', realm_id: 'latin-america',
+    valid_from: -2000,
     members: [
       { iso_a3: 'CHL', label: '智利', order: 1 },
       { iso_a3: 'ARG', label: '阿根廷', order: 2 },
@@ -287,6 +301,7 @@ export const SPHERES: CulturalSphere[] = [
   },
   {
     id: 'amazonian-brazilian', name_zh: '亞馬遜-巴西文化圈', name_en: 'Amazonian-Brazilian', realm_id: 'latin-america',
+    valid_from: -3000,
     members: [
       { iso_a3: 'BRA', label: '巴西', order: 1, note: '海岸線早於內陸雨林開發' },
     ],
@@ -295,6 +310,7 @@ export const SPHERES: CulturalSphere[] = [
   // ========== 西方界域 ==========
   {
     id: 'latin-cultural', name_zh: '拉丁文化圈', name_en: 'Latin', realm_id: 'western',
+    valid_from: -1000,  // 伊特魯里亞、早期義大利
     members: [
       { iso_a3: 'ITA', label: '義大利', order: 1, note: '羅馬帝國核心' },
       { iso_a3: 'VAT', label: '梵蒂岡', order: 2 },
@@ -308,6 +324,7 @@ export const SPHERES: CulturalSphere[] = [
   },
   {
     id: 'balkan', name_zh: '巴爾幹文化圈', name_en: 'Balkan', realm_id: 'western',
+    valid_from: -1500,
     members: [
       { iso_a3: 'MKD', label: '北馬其頓', order: 1 },
       { iso_a3: 'BGR', label: '保加利亞', order: 2, note: '西里爾字母發源地' },
@@ -324,12 +341,14 @@ export const SPHERES: CulturalSphere[] = [
   },
   {
     id: 'gallic-french', name_zh: '高盧-法蘭西文化圈', name_en: 'Gallic-French', realm_id: 'western',
+    valid_from: -800,  // 凱爾特高盧
     members: [
       { iso_a3: 'FRA', label: '法國', order: 1, note: '歐洲本土，羅馬化高盧' },
     ],
   },
   {
     id: 'british-celtic', name_zh: '不列顛-凱爾特文化圈', name_en: 'British-Celtic', realm_id: 'western',
+    valid_from: -800,  // 凱爾特不列顛
     members: [
       { iso_a3: 'GBR', label: '英國', order: 1, note: '羅馬不列顛' },
       { iso_a3: 'IRL', label: '愛爾蘭', order: 2, note: '凱爾特基督教' },
@@ -338,6 +357,7 @@ export const SPHERES: CulturalSphere[] = [
   },
   {
     id: 'central-european', name_zh: '中歐文化圈', name_en: 'Central European', realm_id: 'western',
+    valid_from: -500,  // 凱爾特/日耳曼
     label_lnglat: [13, 50],  // 釘在德/捷邊界中歐核心
     members: [
       { iso_a3: 'DEU', label: '德國', order: 1, note: '神聖羅馬帝國' },

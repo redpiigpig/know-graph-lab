@@ -23,9 +23,10 @@
             :d="p.d"
             :fill="p.fill"
             :fill-opacity="p.opacity"
-            stroke="#FFFFFF"
+            :stroke="p.strokeColor || '#FFFFFF'"
             :stroke-width="p.strokeBase / transform.k"
-            :stroke-opacity="p.opacity"
+            :stroke-opacity="p.strokeOpacity ?? p.opacity"
+            :pointer-events="p.fill === 'none' ? 'none' : 'auto'"
             class="cursor-pointer"
             style="transition: fill 200ms, fill-opacity 200ms;"
             @click.stop="onCountryClick(p, $event)"
@@ -364,6 +365,7 @@ import {
   type RealmId,
   type CulturalSphere,
 } from '~/data/maps/world-religions'
+import { sphereForCountryAtYear, countriesInSphereAtYear } from '~/data/maps/country-sphere-timeline'
 import { epochAt, formatYearShort } from '~/data/maps/historical-epochs'
 
 const props = withDefaults(defineProps<{ currentYear?: number }>(), { currentYear: 2026 })
@@ -384,6 +386,10 @@ interface PathItem {
   fill: string
   opacity: number
   strokeBase: number
+  /** 預設 white 國界；歷史視圖的古國界 overlay 用深色 */
+  strokeColor?: string
+  /** stroke opacity 預設用 opacity；古國界 overlay 可獨立設 */
+  strokeOpacity?: number
   isAdmin1: boolean
   realm?: Realm
   title: string
@@ -615,77 +621,99 @@ function rebuildAll() {
   const projection = makeProjection()
   const path = geoPath(projection)
 
-  // === Historical view: gray admin_0 base + colored historical polygons ===
+  // === Historical view ===
+  // v3 架構：
+  //   Layer A — 現代 admin_0 polygons 填 sphere 色（按 country-timeline 查當下 sphere）
+  //             modern admin_0 邊界 stroke 隱藏，讓「文化圈整片」呈現
+  //   Layer B — 歷史 polygons（古代帝國／城邦）只畫 outline，顯示「曾統治過的國界」
+  //   文化圈跟「地理區域」綁定 → 阿拉伯帝國 polygon 橫跨多 sphere 不會覆寫
   if (isHistoricalView.value) {
     const currentYear = props.currentYear
     const drillingHist = selectedRealm.value
     const sphereColorsHist = drillingHist ? sphereColorsByRealm(drillingHist) : null
 
-    // Gray base — only admin_0 (skip all admin_1 detail for historical)
-    const grayBase: PathItem[] = featureEntries.value
+    // ===== Layer A：sphere 填色 (modern admin_0 + country timeline) =====
+    const fillPaths: PathItem[] = featureEntries.value
       .filter(e => !e.isAdmin1)
       .map((entry, i) => {
+        const sphereId = sphereForCountryAtYear(entry.countryCode, currentYear)
+        const sphere = sphereId ? SPHERES.find(s => s.id === sphereId) : undefined
+        const realm = sphere ? realmById(sphere.realm_id) : undefined
         const d = path(entry.feature as any) || ''
-        const title = COUNTRY_NAME_ZH[entry.key] || entry.feature.properties.NAME || entry.key
+        const countryZh = COUNTRY_NAME_ZH[entry.key] || entry.feature.properties.NAME || entry.key
+
+        let fill = '#E5E7EB'  // 預設灰底（口傳部落）
+        let opacity = 0.7
+
+        if (sphereId && realm) {
+          if (drillingHist) {
+            if (realm.id === drillingHist) {
+              // 鑽入該界域：用 sphere shade
+              fill = sphereColorsHist?.[sphereId] || realm.color
+              opacity = 1
+            } else {
+              // 其他界域：用 realm 色但 dim
+              fill = realm.color
+              opacity = 0.3
+            }
+          } else {
+            // 非鑽取：用 realm 色（與現代視圖一致）
+            fill = realm.color
+            opacity = 1
+          }
+        }
+
+        const title = sphereId
+          ? `${countryZh}（${sphere?.name_zh || ''}）`
+          : `${countryZh}（口傳部落／非文字社會）`
         return {
-          id: `gray-${entry.key || 'x'}-${i}`,
-          d, fill: '#E5E7EB', opacity: 0.7,
-          strokeBase: 0.3,
+          id: `fill-${entry.key || 'x'}-${i}`,
+          d, fill, opacity,
+          strokeBase: 0,  // 隱藏 modern 邊界 stroke，避免與古國界 overlay 衝突
+          strokeOpacity: 0,
           isAdmin1: false,
-          title: `${title}（口傳部落／非文字社會）`,
+          realm,
+          title,
+          spheres: sphere ? [{ name: sphere.name_zh }] : [],
+        } as PathItem
+      })
+      .filter(p => p.d)
+
+    // ===== Layer B：古代國界 outline overlay =====
+    // 全部 active 歷史 polygons 都畫 outline，不論 sphere 是哪個（凸顯「曾統治過的疆域」）
+    const borderPaths: PathItem[] = historicalEntries.value
+      .filter(h => currentYear >= h.yearFrom && currentYear <= h.yearTo)
+      .map((h, i) => {
+        const d = path(h.feature as any) || ''
+        return {
+          id: `border-${i}`,
+          d,
+          fill: 'none',
+          opacity: 1,
+          strokeBase: 1.2,
+          strokeColor: '#1F2937',
+          strokeOpacity: 0.55,
+          isAdmin1: false,
+          title: h.nameZh,
           spheres: [],
         } as PathItem
       })
       .filter(p => p.d)
 
-    // Historical overlay
-    const histPaths: PathItem[] = historicalEntries.value
-      .filter(h => currentYear >= h.yearFrom && currentYear <= h.yearTo)
-      .map((h, i) => {
-        const sphere = SPHERES.find(s => s.id === h.sphereId)
-        const realm = sphere ? realmById(sphere.realm_id) : undefined
-        const d = path(h.feature as any) || ''
-        let fill = realm?.color || '#6B7280'
-        let opacity = 0.92
-        if (drillingHist) {
-          if (realm?.id === drillingHist) {
-            // 鑽入該界域：用 sphere-specific shade
-            fill = (sphere && sphereColorsHist) ? sphereColorsHist[sphere.id] : (realm?.color || fill)
-            opacity = 1
-          } else {
-            // 其他界域：減弱
-            opacity = 0.3
-          }
-        }
-        return {
-          id: `hist-${h.sphereId}-${i}`,
-          d, fill, opacity,
-          strokeBase: 0.4,
-          isAdmin1: false,
-          realm,
-          title: h.nameZh,
-          spheres: sphere ? [{ name: sphere.name_zh, note: h.nameEn }] : [],
-        } as PathItem
-      })
-      .filter(p => p.d)
+    paths.value = [...fillPaths, ...borderPaths]
 
-    paths.value = [...grayBase, ...histPaths]
-
-    // ===== 標籤層（完全比照現代視圖邏輯）=====
-    // 非鑽取：只顯示有 active sphere 的 realm 標籤（大字），sphere 標籤不顯示
-    // 鑽取：顯示鑽入界域 realm 標籤 + 該界域內 active sphere 的文字標籤
+    // ===== 標籤層 =====
     if (drillingHist) {
-      // === drill 模式 ===
-      const activeBySphere = new Map<string, any[]>()
-      for (const h of historicalEntries.value) {
-        if (currentYear < h.yearFrom || currentYear > h.yearTo) continue
-        if (!activeBySphere.has(h.sphereId)) activeBySphere.set(h.sphereId, [])
-        activeBySphere.get(h.sphereId)!.push(h.feature)
-      }
+      // 鑽取：sphere 文字標籤（基於 country-timeline 找出每個 sphere 涵蓋的現代國家）
       const drilledSphereLabels: LabelItem[] = []
-      for (const [sphereId, features] of activeBySphere) {
-        const sphere = SPHERES.find(s => s.id === sphereId)
-        if (!sphere || sphere.realm_id !== drillingHist) continue
+      const realmSpheres = SPHERES.filter(s => s.realm_id === drillingHist)
+      for (const sphere of realmSpheres) {
+        const countriesIso = countriesInSphereAtYear(sphere.id, currentYear)
+        if (!countriesIso.length) continue
+        const features = featureEntries.value
+          .filter(e => !e.isAdmin1 && countriesIso.includes(e.countryCode))
+          .map(e => e.feature)
+        if (!features.length) continue
         let centroid: [number, number]
         try {
           centroid = geoCentroid({ type: 'FeatureCollection', features } as any)
@@ -699,7 +727,7 @@ function rebuildAll() {
           if (p && !isNaN(p[0]) && !isNaN(p[1])) displayXY = p
         }
         drilledSphereLabels.push({
-          id: sphereId,
+          id: sphere.id,
           x: displayXY[0], y: displayXY[1],
           anchorX: anchorXY[0], anchorY: anchorXY[1],
           text: sphere.name_zh,
@@ -713,12 +741,11 @@ function rebuildAll() {
         l.hasLeader = Math.hypot(l.x - l.anchorX, l.y - l.anchorY) > 6
       }
       sphereLabels.value = drilledSphereLabels
-      realmLabels.value = []  // 鑽取時不顯示 realm 標籤（與現代視圖一致）
+      realmLabels.value = []
     } else {
-      // === 非鑽取模式 ===
-      // 只顯示有 active sphere 的 realm 標籤；不顯示 sphere 標籤、不用 sphere shade
+      // 非鑽取：只顯示有 active sphere 的 realm 標籤
       const presentRealms = new Set<string>()
-      for (const p of histPaths) if (p.realm) presentRealms.add(p.realm.id)
+      for (const p of fillPaths) if (p.realm) presentRealms.add(p.realm.id)
       realmLabels.value = REALMS.filter(r => presentRealms.has(r.id)).map(r => {
         const xy = projection(r.label_lnglat)
         if (!xy) return null
