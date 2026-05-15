@@ -166,12 +166,6 @@
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-emerald-300 bg-emerald-50 rounded" />東方教會傳統</div>
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-blue-300 bg-blue-50 rounded" />拉比傳統</div>
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-teal-300 bg-teal-50 rounded" />次經／第二聖殿時期</div>
-        <div class="pt-1 mt-1 border-t border-gray-100 text-gray-500">傳統親子線（非聖經明文）：</div>
-        <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-orange-500 rounded-full" />早期教會（如 約亞敬→馬利亞）</div>
-        <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-purple-500 rounded-full" />天主教（如 馬利亞-革羅罷→雅各）</div>
-        <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-emerald-500 rounded-full" />東正教（如 撒羅米→雅各）</div>
-        <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-blue-500 rounded-full" />拉比傳統（如 拿順→以利米勒）</div>
-        <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-teal-500 rounded-full" />次經（如 拿弗他利→阿息耳）</div>
         <div class="text-gray-400 mt-1 pt-1 border-t border-gray-100">滾輪：上下/左右移動　·　Ctrl+滾輪：縮放　·　拖曳：平移　·　♻ 點擊跳同人</div>
       </div>
     </template>
@@ -945,8 +939,19 @@ const cv = computed(() => {
     }
     for (const kidId of ch.get(sid) ?? []) {
       if (rowOf.has(kidId)) continue  // spine kid, skip
-      for (const wid of sp.get(kidId) ?? []) {
-        renderedAsSpouseOnSpine.add(wid)
+      const kp = pMap.get(kidId)
+      // 規則：
+      //   - 女兒（嫁出去的）：標女兒本人為 married-out，她的後代由「丈夫家」渲染（避免母女各畫一支）
+      //   - 兒子：他的妻子標為 spouse-on-spine（妻子已在兒子旁渲染，不需重畫）
+      // 重要：男性兒子 不能 被標為 married-out（會讓他自己的兒子無法展開）
+      // 例：亞米拿達(spine).children=以利沙巴(F)。以前一律標 wid=亞倫 →
+      //     亞倫 leaf → 拿答/亞比戶/以利亞撒/以他瑪/約雅黎/馬加比全鏈消失。
+      if (kp?.data.gender === 'female') {
+        renderedAsSpouseOnSpine.add(kidId)
+      } else {
+        for (const wid of sp.get(kidId) ?? []) {
+          renderedAsSpouseOnSpine.add(wid)
+        }
       }
     }
     // also include spine person's own gen-mate spine spouse (cross-spine like Mary↔Joseph)
@@ -1305,10 +1310,14 @@ const cv = computed(() => {
     }
 
     // Dual-spine 中段：把非 spine 兄弟整段過濾掉，只留 spine 主幹 kids。
+    // 例外：使用者明確展開的 clan（如 哈拿尼雅 → Exilarch / Nasi 線）保留，
+    // 否則「🏛️ 展開朝代」按鈕無法在 dual-spine 中段達到 Davidic 後代。
     if (isInDualSpineHideZone(sid)) {
-      const onlySpine = orderedRTL.filter(k => rowOf.has(k))
+      const onlySpineOrExpanded = orderedRTL.filter(k =>
+        rowOf.has(k) || expandedClans.value.has(k)
+      )
       orderedRTL.length = 0
-      orderedRTL.push(...onlySpine)
+      orderedRTL.push(...onlySpineOrExpanded)
     }
 
     // Compute X for each kid
@@ -1892,12 +1901,14 @@ function toggleExpand(spineParentId: string) {
   expandedClans.value = s
 }
 
-// 一鍵展開朝代線：利未（→ Aaron → 馬加比 → 經 馬利安美一世 嫁入 → 希律）
-// + 哈拿尼雅（所羅巴伯之子，→ 亞乃 → 巴比倫 Exilarch；→ 哈突 → 希勒爾-Nasi）。
-// 兩個 anchor 是各自所在主幹的「first off-spine kid」，所以放入 expandedClans 後
+// 一鍵展開朝代線：
+//   利未（→ Aaron → 馬加比 → 經 馬利安美一世 嫁入 → 希律）
+//   哈拿尼雅（所羅巴伯之子，→ 亞乃 → 巴比倫 Exilarch；→ 哈突 → 希勒爾-Nasi）
+//   以掃（→ 安提帕特 Idumean → 大希律 → 亞基老/希律安提帕/腓力/亞基帕一世等 NT 希律家全枝）
+// 三個 anchor 都是其所在主幹的 first off-spine kid，放入 expandedClans 後
 // recursive layoutSubtree 會自動往下渲染整條 dynasty。
 function expandDynasties() {
-  const anchors = ['利未', '哈拿尼雅（所羅巴伯之子）']
+  const anchors = ['利未', '哈拿尼雅（所羅巴伯之子）', '以掃']
   const byName = personByName.value
   const s = new Set(expandedClans.value)
   for (const name of anchors) {
