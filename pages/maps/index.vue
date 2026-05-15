@@ -18,6 +18,17 @@
             <div class="text-xs text-gray-400 mt-0.5">世界文化板塊主題地圖，按界域與文化圈劃定</div>
           </div>
         </NuxtLink>
+
+        <NuxtLink
+          to="/maps/historical-borders"
+          class="group flex flex-col gap-3 bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-amber-300 transition"
+        >
+          <div class="text-3xl">🗺️</div>
+          <div>
+            <div class="font-semibold text-gray-900 text-base group-hover:text-amber-700 transition">歷史國界地圖</div>
+            <div class="text-xs text-gray-400 mt-0.5">公元前 4000 年至今的政治國界演進，純國家／帝國邊界</div>
+          </div>
+        </NuxtLink>
       </div>
     </div>
   </div>
