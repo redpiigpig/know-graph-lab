@@ -92,7 +92,10 @@
       class="absolute right-3 top-14 z-10 w-[260px] bg-white border border-gray-200 rounded-xl shadow-md p-3 text-xs"
     >
       <div class="flex items-start justify-between gap-2 mb-1.5">
-        <div class="font-semibold text-sm text-gray-900 leading-tight">{{ selectedState.name }}</div>
+        <div>
+          <div class="font-semibold text-sm text-gray-900 leading-tight">{{ nameZhOf(selectedState.name) }}</div>
+          <div v-if="nameZhOf(selectedState.name) !== selectedState.name" class="text-[10px] text-gray-400 mt-0.5">{{ selectedState.name }}</div>
+        </div>
         <button
           @click="selectedState = null"
           class="text-gray-300 hover:text-gray-700 leading-none -mt-0.5 text-base"
@@ -129,6 +132,11 @@ import { geoNaturalEarth1, geoPath, geoCentroid, type GeoProjection } from 'd3-g
 import { zoom as d3zoom, zoomIdentity, type ZoomBehavior } from 'd3-zoom'
 import { select } from 'd3-selection'
 import { formatYearShort } from '~/data/maps/historical-epochs'
+import { STATE_DETAILS, type WikidataState } from '~/data/maps/historical-states-db'
+import { COUNTRY_NAME_ZH } from '~/data/maps/world-religions'
+
+// 從現代國家英文名找 ISO_A3 → 中文。NE admin_0 用的是國家英文全名。
+const adm0NameToZh = new Map<string, string>()
 
 const props = withDefaults(defineProps<{ currentYear?: number }>(), { currentYear: -1500 })
 
@@ -153,6 +161,14 @@ interface StateEntry {
 const landFeatures = ref<any[]>([])
 const stateEntries = ref<StateEntry[]>([])
 const coastlineFeatures = ref<any[]>([])
+const nameZhMap = ref<Map<string, string>>(new Map())
+
+function nameZhOf(en: string): string {
+  return STATE_DETAILS[en]?.name_zh
+    || nameZhMap.value.get(en)
+    || adm0NameToZh.get(en)
+    || en
+}
 
 interface PathItem { id: string; d: string; fill?: string; strokeColor?: string }
 interface StatePathItem extends PathItem {
@@ -247,7 +263,7 @@ function rebuildAll() {
     labels.push({
       id: `lbl-${s.name}-${labels.length}`,
       x: xy[0], y: xy[1],
-      text: s.name,
+      text: nameZhOf(s.name),
       fontSize: 10,
     })
   }
@@ -335,16 +351,31 @@ onMounted(async () => {
   }
 
   try {
-    const [adm0Res, statesRes, coastRes] = await Promise.all([
+    const [adm0Res, statesRes, coastRes, wdRes] = await Promise.all([
       fetch('/maps/ne_50m_admin_0_countries.geojson'),
       fetch('/maps/historical-states.geojson'),
       fetch('/maps/ne_50m_coastline.geojson'),
+      fetch('/maps/wikidata-states.json'),
     ])
-    const [adm0, states, coast] = await Promise.all([
-      adm0Res.json(), statesRes.json(), coastRes.json(),
+    const [adm0, states, coast, wd] = await Promise.all([
+      adm0Res.json(), statesRes.json(), coastRes.json(), wdRes.json(),
     ])
     landFeatures.value = adm0.features.filter((f: any) => f.properties.ADM0_A3 !== 'ATA')
     coastlineFeatures.value = coast.features || []
+    const m = new Map<string, string>()
+    for (const w of wd as WikidataState[]) {
+      if (w.name_zh) m.set(w.name_en, w.name_zh)
+    }
+    nameZhMap.value = m
+    // 從 NE admin_0 抽 NAME_EN → ISO → 中文國名
+    adm0NameToZh.clear()
+    for (const f of adm0.features) {
+      const iso = f.properties.ISO_A3 || f.properties.ADM0_A3
+      const zh = COUNTRY_NAME_ZH[iso]
+      if (!zh) continue
+      const en = f.properties.NAME_EN || f.properties.NAME
+      if (en) adm0NameToZh.set(en, zh)
+    }
     stateEntries.value = (states.features || []).map((f: any) => ({
       feature: f,
       name: f.properties.name,

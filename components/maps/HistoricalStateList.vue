@@ -32,10 +32,14 @@
         <option value="without">無 polygon</option>
       </select>
 
-      <div class="ml-auto text-xs text-gray-500">
-        共 <span class="font-semibold text-gray-900">{{ filteredStates.length }}</span> 個（總 {{ allStates.length }}）·
-        有 polygon <span class="font-semibold text-blue-700">{{ polygonCount }}</span> ·
-        已填詳細 <span class="font-semibold text-emerald-700">{{ detailCount }}</span>
+      <div class="ml-auto text-xs text-gray-500 flex items-baseline gap-2">
+        <span>顯示</span>
+        <span class="text-base font-bold text-gray-900 tabular-nums">{{ filteredStates.length.toLocaleString() }}</span>
+        <span>/ {{ allStates.length.toLocaleString() }} 國</span>
+        <span class="text-gray-300">·</span>
+        <span class="text-blue-600">有 polygon {{ polygonCount }}</span>
+        <span class="text-gray-300">·</span>
+        <span class="text-emerald-600">人工詳細 {{ detailCount }}</span>
       </div>
     </div>
 
@@ -134,10 +138,16 @@
       </div>
 
       <!-- 分頁 -->
-      <div v-if="totalPages > 1" class="flex items-center justify-center gap-2 py-3 border-t border-gray-100">
+      <div v-if="totalPages > 1" class="flex items-center justify-center gap-3 py-3 border-t border-gray-100 bg-gray-50">
+        <button @click="page = 1" :disabled="page === 1" class="px-2 py-1 text-xs text-gray-500 hover:text-gray-900 disabled:opacity-30">⟪ 第一頁</button>
         <button @click="page = Math.max(1, page - 1)" :disabled="page === 1" class="px-2 py-1 text-xs text-gray-500 hover:text-gray-900 disabled:opacity-30">← 上頁</button>
-        <span class="text-xs text-gray-500">{{ page }} / {{ totalPages }}</span>
+        <span class="text-xs text-gray-700">
+          第 <span class="font-semibold tabular-nums">{{ page }}</span> /
+          <span class="tabular-nums">{{ totalPages }}</span> 頁
+          <span class="text-gray-400 ml-1">（每頁 {{ pageSize }} 國）</span>
+        </span>
         <button @click="page = Math.min(totalPages, page + 1)" :disabled="page === totalPages" class="px-2 py-1 text-xs text-gray-500 hover:text-gray-900 disabled:opacity-30">下頁 →</button>
+        <button @click="page = totalPages" :disabled="page === totalPages" class="px-2 py-1 text-xs text-gray-500 hover:text-gray-900 disabled:opacity-30">最末頁 ⟫</button>
       </div>
     </div>
 
