@@ -84,7 +84,7 @@ export const SPHERES: CulturalSphere[] = [
     ],
   },
   {
-    id: 'carthaginian-maghreb', name_zh: '迦太基-馬格里布文化圈', name_en: 'Carthaginian-Maghreb', realm_id: 'central',
+    id: 'carthaginian-maghreb', name_zh: '迦太基-馬格里布文化圈', name_en: 'Carthaginian-Maghreb', realm_id: 'western',
     members: [
       { iso_a3: 'TUN', label: '突尼西亞', order: 1, note: '迦太基發祥' },
       { iso_a3: 'DZA', label: '阿爾及利亞', order: 2 },
@@ -557,9 +557,8 @@ export const COUNTRY_REALM: Record<string, RealmId> = {
   UKR: 'western',  // 烏克蘭以盧布林/西烏為主呈現（東烏在北方多文化圈列表）
   LTU: 'western', LVA: 'western',
   DNK: 'western', SWE: 'western', NOR: 'western', ISL: 'western', FIN: 'western', EST: 'western',
-  // 馬格里布 → 中央界域 迦太基-馬格里布文化圈（柏柏爾人 + 阿拉伯-伊斯蘭主體 + 法殖民層覆蓋；腓尼基根）
-  TUN: 'central', DZA: 'central', MAR: 'central',
-  ESH: 'western',  // 西撒哈拉留西方默認
+  // 馬格里布 → 西方界域 迦太基-馬格里布文化圈（羅馬迦太基 + 法殖民近代層）
+  TUN: 'western', DZA: 'western', MAR: 'western', ESH: 'western',
 
   // 亞太 (Blue)
   KHM: 'asia-pacific', VNM: 'asia-pacific', MMR: 'asia-pacific', THA: 'asia-pacific', LAO: 'asia-pacific',
