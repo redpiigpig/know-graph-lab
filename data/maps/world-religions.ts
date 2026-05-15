@@ -1107,17 +1107,22 @@ function hslToHex(h: number, s: number, l: number): string {
 }
 
 /** Generate a sphere shade in the realm's color family.
- *  idx in 0..total-1 — varies lightness ±24% and hue ±28° around the realm hex,
- *  with alternating saturation jitter for stronger neighbour contrast. */
+ *  Lightness range is asymmetric — clamped within available headroom of the base color
+ *  so dark-base realms (e.g. central green L≈37) don't get the lower half flattened by clamping.
+ *  Hue spreads ±28°; saturation alternates to push adjacent indices apart. */
 export function shadeForSphere(realmHex: string, idx: number, total: number): string {
   if (total <= 1) return realmHex
   const { h, s, l } = hexToHsl(realmHex)
   const t = idx / (total - 1)
-  const newL = Math.max(26, Math.min(78, l - 24 + t * 48))
+  // Asymmetric L range — keep within [26, 78] but anchored relative to base
+  const lo = Math.max(26, l - 24)
+  const hi = Math.min(78, l + 24)
+  const newL = lo + t * (hi - lo)
+  // Wide hue spread (within family but distinguishable)
   const hueShift = -28 + t * 56
   const newH = (h + hueShift + 360) % 360
-  // alternate saturation to push adjacent indices apart visually
-  const newS = Math.max(35, Math.min(92, s + (idx % 2 === 0 ? -8 : 12)))
+  // Alternate saturation to push neighbours apart
+  const newS = Math.max(35, Math.min(92, s + (idx % 2 === 0 ? -10 : 14)))
   return hslToHex(newH, newS, newL)
 }
 
