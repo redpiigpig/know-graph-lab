@@ -48,11 +48,32 @@ export interface StateDetail {
   sphere_id?: string
 }
 
-export interface HistoricalState extends StateSkeleton, StateDetail {
+export interface WikidataState {
+  qid: string
+  name_en: string
+  name_zh: string | null
+  inception_year: number | null
+  dissolved_year: number | null
+  continents: string[]
+}
+
+export interface HistoricalState extends Partial<StateSkeleton>, StateDetail {
   /** Slug id（snake_case 化的英文名） */
   id: string
   /** 細節是否已填（false = 只有骨架資料） */
   has_detail: boolean
+  /** 是否有歷史 polygon（historical-basemaps）— 可在地圖上看到 */
+  has_polygon: boolean
+  /** 英文名（必有） */
+  name_en: string
+  /** Wikidata QID（若來自 Wikidata） */
+  qid?: string
+  /** 來源所在大陸（Wikidata 提供） */
+  continents?: string[]
+  /** 起始年（合併 skeleton.earliest_from + wikidata.inception_year，取較早） */
+  year_start: number | null
+  /** 結束年 */
+  year_end: number | null
 }
 
 /**
@@ -479,16 +500,65 @@ export function slugifyStateName(name: string): string {
 }
 
 /**
- * 從 skeleton + details merge 成完整 HistoricalState list
+ * 從 skeleton（historical-basemaps polygon）+ wikidata + details merge 成完整 list。
+ * - 以 Wikidata 為主資料（~4000 國家），補上 polygon-only 的條目
+ * - 同名 dedupe（不同 dataset 間以英文名為 key）
+ * - polygon 提供 modern_countries + snapshots
+ * - wikidata 提供 inception/dissolved 年份 + 中文名 + 大陸
+ * - STATE_DETAILS 為人工撰寫的高品質詳細（覆蓋以上）
  */
-export function mergeStates(skeleton: StateSkeleton[]): HistoricalState[] {
-  return skeleton.map(sk => {
-    const detail = STATE_DETAILS[sk.name_en] || {}
-    return {
-      ...sk,
+export function mergeStates(
+  skeleton: StateSkeleton[],
+  wikidata: WikidataState[]
+): HistoricalState[] {
+  // 用英文名（小寫去空格）作為 key dedupe
+  const norm = (s: string) => s.toLowerCase().replace(/\s+/g, '').replace(/[^\w]/g, '')
+
+  const skMap = new Map<string, StateSkeleton>()
+  for (const sk of skeleton) skMap.set(norm(sk.name_en), sk)
+
+  // Wikidata 主名 + 別名 set
+  const wdMap = new Map<string, WikidataState>()
+  for (const w of wikidata) wdMap.set(norm(w.name_en), w)
+
+  // 收集所有獨特英文名
+  const allKeys = new Set([...skMap.keys(), ...wdMap.keys()])
+
+  const result: HistoricalState[] = []
+  for (const key of allKeys) {
+    const sk = skMap.get(key)
+    const wd = wdMap.get(key)
+    const name_en = sk?.name_en || wd?.name_en || ''
+    const detail = STATE_DETAILS[name_en] || {}
+
+    const year_start = sk?.earliest_from ?? wd?.inception_year ?? null
+    const year_end = (sk?.latest_to !== undefined && sk.latest_to < 9999)
+      ? sk.latest_to
+      : wd?.dissolved_year
+      ?? null
+
+    result.push({
+      id: slugifyStateName(name_en),
+      name_en,
+      name_zh: detail.name_zh || wd?.name_zh || undefined,
+      earliest_from: sk?.earliest_from,
+      latest_to: sk?.latest_to,
+      modern_countries: sk?.modern_countries || [],
+      snapshots: sk?.snapshots || [],
+      qid: wd?.qid,
+      continents: wd?.continents,
+      year_start,
+      year_end,
       ...detail,
-      id: slugifyStateName(sk.name_en),
-      has_detail: !!STATE_DETAILS[sk.name_en],
-    }
+      has_detail: !!STATE_DETAILS[name_en],
+      has_polygon: !!sk,
+    })
+  }
+
+  return result.sort((a, b) => {
+    const ay = a.year_start ?? 9999
+    const by = b.year_start ?? 9999
+    return ay - by || a.name_en.localeCompare(b.name_en)
   })
 }
+

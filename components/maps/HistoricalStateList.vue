@@ -26,8 +26,15 @@
           <option value="without">僅骨架</option>
         </select>
       </div>
+      <select v-model="filterPolygon" class="px-2 py-1.5 text-sm border border-gray-200 rounded-md focus:outline-none">
+        <option value="all">所有</option>
+        <option value="with">有地圖 polygon</option>
+        <option value="without">無 polygon</option>
+      </select>
+
       <div class="ml-auto text-xs text-gray-500">
         共 <span class="font-semibold text-gray-900">{{ filteredStates.length }}</span> 個（總 {{ allStates.length }}）·
+        有 polygon <span class="font-semibold text-blue-700">{{ polygonCount }}</span> ·
         已填詳細 <span class="font-semibold text-emerald-700">{{ detailCount }}</span>
       </div>
     </div>
@@ -41,8 +48,8 @@
               <th class="text-left px-3 py-2 cursor-pointer hover:text-gray-900" @click="setSort('name_en')">
                 國名 <SortArrow :col="'name_en'" :sort="sortKey" :dir="sortDir" />
               </th>
-              <th class="text-left px-3 py-2 cursor-pointer hover:text-gray-900" @click="setSort('earliest_from')">
-                年代 <SortArrow :col="'earliest_from'" :sort="sortKey" :dir="sortDir" />
+              <th class="text-left px-3 py-2 cursor-pointer hover:text-gray-900" @click="setSort('year_start')">
+                年代 <SortArrow :col="'year_start'" :sort="sortKey" :dir="sortDir" />
               </th>
               <th class="text-left px-3 py-2">朝代／統治</th>
               <th class="text-left px-3 py-2">巔峰人口</th>
@@ -66,8 +73,13 @@
                 <span v-if="!s.has_detail" class="inline-block text-[9px] text-gray-400 mt-0.5">骨架</span>
               </td>
               <td class="px-3 py-2 tabular-nums text-gray-600 whitespace-nowrap">
-                <div>{{ formatYearShort(s.earliest_from) }}</div>
-                <div class="text-gray-400">– {{ s.latest_to >= 9999 ? '至今' : formatYearShort(s.latest_to) }}</div>
+                <div v-if="s.year_start !== null">{{ formatYearShort(s.year_start) }}</div>
+                <div v-else class="text-gray-300">?</div>
+                <div class="text-gray-400">
+                  – <template v-if="s.year_end === null">?</template>
+                  <template v-else-if="s.year_end >= 9999">至今</template>
+                  <template v-else>{{ formatYearShort(s.year_end) }}</template>
+                </div>
               </td>
               <td class="px-3 py-2 text-gray-600 max-w-[180px]">
                 <div v-if="s.dynasties?.length" class="space-y-0.5">
@@ -91,7 +103,7 @@
                 <span v-else class="text-gray-300 text-[10px]">—</span>
               </td>
               <td class="px-3 py-2 text-gray-600">
-                <div class="flex flex-wrap gap-0.5">
+                <div v-if="s.modern_countries && s.modern_countries.length" class="flex flex-wrap gap-0.5">
                   <span
                     v-for="iso in s.modern_countries.slice(0, 6)"
                     :key="iso"
@@ -99,6 +111,14 @@
                   >{{ countryZh(iso) }}</span>
                   <span v-if="s.modern_countries.length > 6" class="text-[9px] text-gray-400">+{{ s.modern_countries.length - 6 }}</span>
                 </div>
+                <div v-else-if="s.continents && s.continents.length" class="flex flex-wrap gap-0.5">
+                  <span
+                    v-for="c in s.continents"
+                    :key="c"
+                    class="inline-block px-1 py-0.5 rounded bg-gray-50 text-[9px] text-gray-500 italic"
+                  >{{ c }}</span>
+                </div>
+                <span v-else class="text-gray-300 text-[10px]">—</span>
               </td>
               <td class="px-3 py-2">
                 <span
@@ -128,6 +148,9 @@
           <div>
             <h2 class="text-2xl font-bold text-gray-900">{{ selected.name_zh || selected.name_en }}</h2>
             <div v-if="selected.name_zh" class="text-sm text-gray-500 mt-1">{{ selected.name_en }}</div>
+            <div v-if="selected.qid" class="text-[10px] text-gray-400 mt-1">
+              <a :href="`https://www.wikidata.org/wiki/${selected.qid}`" target="_blank" rel="noopener" class="hover:text-blue-600">Wikidata: {{ selected.qid }} ↗</a>
+            </div>
           </div>
           <button @click="selected = null" class="text-gray-400 hover:text-gray-900 text-2xl">×</button>
         </div>
@@ -135,7 +158,14 @@
         <div class="grid grid-cols-2 gap-4 mb-4 text-xs">
           <div>
             <div class="text-gray-400 mb-0.5">存在年代</div>
-            <div class="font-medium tabular-nums">{{ formatYearShort(selected.earliest_from) }} – {{ selected.latest_to >= 9999 ? '至今' : formatYearShort(selected.latest_to) }}</div>
+            <div class="font-medium tabular-nums">
+              <template v-if="selected.year_start !== null">{{ formatYearShort(selected.year_start) }}</template>
+              <template v-else>?</template>
+              –
+              <template v-if="selected.year_end === null">?</template>
+              <template v-else-if="selected.year_end >= 9999">至今</template>
+              <template v-else>{{ formatYearShort(selected.year_end) }}</template>
+            </div>
           </div>
           <div>
             <div class="text-gray-400 mb-0.5">所屬界域</div>
@@ -198,6 +228,7 @@ import { ref, computed, onMounted, h } from 'vue'
 import {
   type HistoricalState,
   type StateSkeleton,
+  type WikidataState,
   STATE_DETAILS,
   mergeStates,
 } from '~/data/maps/historical-states-db'
@@ -209,13 +240,15 @@ const allStates = ref<HistoricalState[]>([])
 const searchText = ref('')
 const filterRealm = ref('')
 const filterDetail = ref<'all' | 'with' | 'without'>('all')
-const sortKey = ref<'name_en' | 'earliest_from'>('earliest_from')
+const filterPolygon = ref<'all' | 'with' | 'without'>('all')
+const sortKey = ref<'name_en' | 'year_start'>('year_start')
 const sortDir = ref<'asc' | 'desc'>('asc')
 const page = ref(1)
-const pageSize = 30
+const pageSize = 50
 const selected = ref<HistoricalState | null>(null)
 
 const detailCount = computed(() => allStates.value.filter(s => s.has_detail).length)
+const polygonCount = computed(() => allStates.value.filter(s => s.has_polygon).length)
 
 const filteredStates = computed(() => {
   let list = allStates.value
@@ -231,11 +264,15 @@ const filteredStates = computed(() => {
   }
   if (filterDetail.value === 'with') list = list.filter(s => s.has_detail)
   if (filterDetail.value === 'without') list = list.filter(s => !s.has_detail)
+  if (filterPolygon.value === 'with') list = list.filter(s => s.has_polygon)
+  if (filterPolygon.value === 'without') list = list.filter(s => !s.has_polygon)
   // sort
   list = [...list].sort((a, b) => {
     const dir = sortDir.value === 'asc' ? 1 : -1
     if (sortKey.value === 'name_en') return dir * a.name_en.localeCompare(b.name_en)
-    return dir * ((a.earliest_from - b.earliest_from) || a.name_en.localeCompare(b.name_en))
+    const ay = a.year_start ?? 99999
+    const by = b.year_start ?? 99999
+    return dir * ((ay - by) || a.name_en.localeCompare(b.name_en))
   })
   return list
 })
@@ -247,7 +284,7 @@ const pagedStates = computed(() => {
   return filteredStates.value.slice(start, start + pageSize)
 })
 
-function setSort(key: 'name_en' | 'earliest_from') {
+function setSort(key: 'name_en' | 'year_start') {
   if (sortKey.value === key) sortDir.value = sortDir.value === 'asc' ? 'desc' : 'asc'
   else { sortKey.value = key; sortDir.value = 'asc' }
   page.value = 1
@@ -280,11 +317,15 @@ const SortArrow = (props: { col: string; sort: string; dir: string }) => {
 
 onMounted(async () => {
   try {
-    const r = await fetch('/maps/state-skeleton.json')
-    const skeleton: StateSkeleton[] = await r.json()
-    allStates.value = mergeStates(skeleton)
+    const [skRes, wdRes] = await Promise.all([
+      fetch('/maps/state-skeleton.json'),
+      fetch('/maps/wikidata-states.json'),
+    ])
+    const skeleton: StateSkeleton[] = await skRes.json()
+    const wikidata: WikidataState[] = await wdRes.json()
+    allStates.value = mergeStates(skeleton, wikidata)
   } catch (e) {
-    console.error('skeleton 載入失敗', e)
+    console.error('states data load failed', e)
   }
 })
 </script>
