@@ -843,6 +843,8 @@ const cv = computed(() => {
     // only that row's actual X range. 用來精準 occlude：例如 Esau 的第一列子
     // 女在 row 23 某個 x 範圍；如果用整體 bbox（subtree max x），會誤包含
     // 同列其他家庭（Levi↔米加 婚姻）。Per-row bbox 只覆蓋實際 row 內容。
+    // y1 往上 padding 60px 以涵蓋父輩 T-bar HBAR（位於本列上方 ~50px），
+    // 否則 T-bar 接到已 hidden 子嗣的線會殘留變幽靈線。
     const nodesByRow = new Map<number, LNode[]>()
     for (const n of allNodes) {
       const arr = nodesByRow.get(n.y) ?? []
@@ -853,7 +855,7 @@ const cv = computed(() => {
     for (const [y, rowNodes] of nodesByRow) {
       rowBboxes.push({
         x1: Math.min(...rowNodes.map(n => n.x)) - 8,
-        y1: y - 8,
+        y1: y - 60,  // 涵蓋 T-bar HBAR Y（位於本列上方）
         x2: Math.max(...rowNodes.map(n => n.x + n.w)) + 8,
         y2: y + NH + 8,
       })
