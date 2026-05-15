@@ -31,23 +31,22 @@
         <svg class="absolute inset-0 pointer-events-none overflow-visible"
              :width="cv!.w" :height="cv!.h">
 
-          <!-- Spine trunk guide -->
           <line v-for="(g, i) in cv!.trunkGuides" :key="'tg'+i"
                 :x1="g.x" :y1="g.y1" :x2="g.x" :y2="g.y2"
                 :stroke="g.color" stroke-width="6" opacity="0.10" stroke-linecap="round" />
 
-          <!-- Marriage lines (red) -->
+          <!-- Marriage lines — red horizontal between spouses -->
           <line v-for="m in cv!.marriages" :key="m.id"
                 :x1="m.x1" :y1="m.y" :x2="m.x2" :y2="m.y"
                 stroke="#dc2626" stroke-width="2" stroke-linecap="round" />
 
-          <!-- Vertical drops (parent → child) -->
+          <!-- Vertical drops (parent → child / drop from marriage midpoint) -->
           <line v-for="(d, i) in cv!.drops" :key="'d'+i"
                 :x1="d.x" :y1="d.y1" :x2="d.x" :y2="d.y2"
                 :stroke="d.stroke || '#9ca3af'" stroke-width="1.5"
                 stroke-linecap="round" />
 
-          <!-- Horizontal bars -->
+          <!-- Horizontal T-bars -->
           <line v-for="(b, i) in cv!.hbars" :key="'b'+i"
                 :x1="b.x1" :y1="b.y" :x2="b.x2" :y2="b.y"
                 :stroke="b.stroke || '#9ca3af'" stroke-width="1.5"
@@ -128,7 +127,7 @@
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-teal-300 bg-teal-50 rounded" />蘇菲傳承</div>
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-gray-300 bg-gray-50 rounded" />史傳（不確定）</div>
         <div class="flex items-center gap-1.5 pt-1 mt-1 border-t border-gray-100"><span class="w-3 h-[2px] bg-rose-600 rounded-full" />婚姻</div>
-        <div class="flex items-center gap-1.5"><span class="w-3 h-[2px] bg-gray-400 rounded-full" />親子</div>
+        <div class="flex items-center gap-1.5"><span class="w-3 h-[2px] bg-gray-400 rounded-full" />親子（從婚姻中點下降）</div>
         <div class="text-gray-400 mt-1 pt-1 border-t border-gray-100">滾輪：移動　·　Ctrl+滾輪：縮放　·　拖曳：平移</div>
       </div>
     </template>
@@ -151,27 +150,28 @@ const emit = defineEmits<{
 }>()
 
 const viewOptions: Array<{ value: View; label: string; activeColor: string; tooltip: string }> = [
-  { value: 'quranic',      label: '古蘭',     activeColor: 'text-gray-900',     tooltip: '只顯示古蘭明文人物（普世共識）' },
-  { value: 'sunni',        label: '順尼',     activeColor: 'text-emerald-700',  tooltip: '順尼派視角：古蘭 + Sira/Hadith + 史傳' },
-  { value: 'shia_twelver', label: '十二派',   activeColor: 'text-rose-700',     tooltip: '十二伊瑪目派：含 Hasan→Mahdi 鏈' },
-  { value: 'shia_ismaili', label: '伊斯瑪儀', activeColor: 'text-purple-700',   tooltip: '伊斯瑪儀派：於 Ja\'far 接伊斯瑪儀分支' },
-  { value: 'shia_zaidi',   label: '栽德',     activeColor: 'text-orange-700',   tooltip: '栽德派：於宰因·阿比丁接宰德分支' },
+  { value: 'quranic',      label: '古蘭',     activeColor: 'text-gray-900',     tooltip: '只顯示古蘭明文人物' },
+  { value: 'sunni',        label: '順尼',     activeColor: 'text-emerald-700',  tooltip: '順尼派視角（預設）' },
+  { value: 'shia_twelver', label: '十二派',   activeColor: 'text-rose-700',     tooltip: '十二伊瑪目派' },
+  { value: 'shia_ismaili', label: '伊斯瑪儀', activeColor: 'text-purple-700',   tooltip: '伊斯瑪儀派' },
+  { value: 'shia_zaidi',   label: '栽德',     activeColor: 'text-orange-700',   tooltip: '栽德派' },
 ]
 
 // ── Layout constants ──
-const NW = 130
-const NH = 56
-const HG = 18         // sibling horizontal gap
-const WIFE_HG = 36    // wife-stack horizontal gap from spine
-const VG = 80         // vertical gap between rows
-const RH = NH + VG
-const PAD = 60
+const NW       = 130    // node width
+const NH       = 56     // node height
+const HG       = 18     // sibling horizontal gap
+const WIFE_HG  = 50     // wife horizontal gap
+const SLOT_K   = NW + WIFE_HG
+const VG       = 80     // row vertical gap
+const RH       = NH + VG
+const PAD      = 60
+const SPINE_X  = 1200   // spine center X
 
 const baseName = (s: string) => s.split('（')[0].trim()
-const disambigOf = (s: string) => {
-  const m = s.match(/^[^（]+（(.+)）$/)
-  return m ? m[1] : ''
-}
+const shortName = (s: string) => { const b = baseName(s); return b.length <= 8 ? b : b.slice(0, 7) + '…' }
+const disambigOf = (s: string) => { const m = s.match(/^[^（]+（(.+)）$/); return m ? m[1] : '' }
+const rowY = (gen: number) => PAD + (gen - 1) * RH
 
 // ── Graph maps ──
 const personById = computed(() => {
@@ -184,7 +184,6 @@ const personByName = computed(() => {
   for (const n of props.nodes) m.set(n.data.name, n)
   return m
 })
-
 const childrenOf = computed(() => {
   const m = new Map<string, string[]>()
   for (const e of props.edges) {
@@ -219,7 +218,7 @@ const parentsOf = computed(() => {
   return m
 })
 
-// ── Spine path: Adam → Muhammad via BFS through waypoints ──
+// ── Spine path: Adam → Muhammad via BFS waypoints ──
 function bfsPath(src: string, dst: string, ch: Map<string, string[]>): string[] {
   if (src === dst) return [src]
   const queue: string[][] = [[src]]
@@ -234,11 +233,9 @@ function bfsPath(src: string, dst: string, ch: Map<string, string[]>): string[] 
   }
   return []
 }
-
 function resolveByName(name: string): string | undefined {
   return personByName.value.get(name)?.id
 }
-
 function spineFromWaypoints(names: string[], ch: Map<string, string[]>): string[] {
   const ids = names.map(resolveByName).filter(Boolean) as string[]
   if (ids.length < 2) return []
@@ -252,17 +249,12 @@ function spineFromWaypoints(names: string[], ch: Map<string, string[]>): string[
   return path
 }
 
-const SPINE_WAYPOINTS = [
-  '阿丹', '努哈', '易卜拉欣', '伊斯瑪儀', '阿德南', '穆罕默德',
-]
-
+const SPINE_WAYPOINTS = ['阿丹', '努哈', '易卜拉欣', '伊斯瑪儀', '阿德南', '穆罕默德']
 const spinePath = computed(() => spineFromWaypoints(SPINE_WAYPOINTS, childrenOf.value))
 const hasSpine = computed(() => spinePath.value.length > 0)
 const spineSet = computed(() => new Set(spinePath.value))
 
 const muhammadId = computed(() => resolveByName('穆罕默德'))
-const aliId      = computed(() => resolveByName('阿里（艾比·塔利卜之子）'))
-const fatimaId   = computed(() => resolveByName('法蒂瑪（穆聖之女）'))
 
 // ── Node interface ──
 interface LNode {
@@ -284,43 +276,49 @@ interface HBar  { x1: number; x2: number; y: number; stroke?: string }
 interface MLine { id: string; x1: number; x2: number; y: number }
 interface TrunkGuide { x: number; y1: number; y2: number; color: string }
 
+interface LayoutResult {
+  nodes: LNode[]
+  drops: VDrop[]
+  hbars: HBar[]
+  marriages: MLine[]
+  rootCX: number
+  maxX: number
+  maxY: number
+}
+
 // ── Main layout ──
 const cv = computed(() => {
   if (!hasSpine.value) return null
 
-  const ch  = childrenOf.value
-  const sp  = spousesOf.value
-  const pa  = parentsOf.value
+  const ch = childrenOf.value
+  const sp = spousesOf.value
+  const pa = parentsOf.value
   const pMap = personById.value
+  const spineList = spinePath.value
+  const spineMembership = spineSet.value
 
-  const nodes:    LNode[]      = []
-  const drops:    VDrop[]      = []
-  const hbars:    HBar[]       = []
-  const marriages:MLine[]      = []
-  const trunkGuides:TrunkGuide[] = []
-
+  const nodes: LNode[] = []
+  const drops: VDrop[] = []
+  const hbars: HBar[] = []
+  const marriages: MLine[] = []
+  const trunkGuides: TrunkGuide[] = []
   const placedPersonIds = new Set<string>()
   const positionByPerson = new Map<string, { x: number; y: number }>()
   const spineRowOf = new Map<string, number>()
 
-  const SPINE_X = 600  // spine column center
-
-  function placeNode(personId: string, x: number, y: number, isSpine = false): LNode | null {
+  function makeLNode(personId: string, x: number, y: number, isSpine = false): LNode | null {
     if (placedPersonIds.has(personId)) return null
     const p = pMap.get(personId)
     if (!p) return null
     placedPersonIds.add(personId)
-    const raw  = p.data.name as string
-    const base = baseName(raw)
-    const dis  = disambigOf(raw)
-    const display = base.length <= 8 ? base : base.slice(0, 7) + '…'
+    const raw = p.data.name as string
     const ln: LNode = {
       id: `n:${personId}`,
       personId,
       rawName:    raw,
-      displayName: display,
+      displayName: shortName(raw),
       kunya:      (p.data.kunya as string) || '',
-      disambig:   dis,
+      disambig:   disambigOf(raw),
       genLabel:   p.data.generation || '',
       generation: p.data.generationNum ?? 0,
       gender:     p.data.gender,
@@ -328,192 +326,405 @@ const cv = computed(() => {
       x, y, w: NW, h: NH,
       isSpine,
     }
-    nodes.push(ln)
     positionByPerson.set(personId, { x, y })
     return ln
   }
 
-  // ── Step 1: place spine, vertical column ──
-  const path = spinePath.value
-  path.forEach((id, i) => {
-    const y = PAD + i * RH
-    placeNode(id, SPINE_X, y, true)
+  // Recursive subtree layout for a NON-SPINE person and their descendants.
+  // Uses DB gen for Y; lays children left-to-right; root centered over them.
+  // Marriage line + drop-from-midpoint rule per biblical spec.
+  function layoutSubtree(rootId: string, leftX: number, vis: Set<string>, minGen: number, depth: number = 0): LayoutResult {
+    const empty = (): LayoutResult => ({ nodes: [], drops: [], hbars: [], marriages: [], rootCX: leftX + NW / 2, maxX: leftX + NW, maxY: 0 })
+    if (vis.has(rootId)) return empty()
+    const p = pMap.get(rootId)
+    if (!p) return empty()
+    if (depth > 30) return empty()  // safety
+    vis.add(rootId)
+
+    const dbGen = p.data.generationNum || 1
+    const gen = Math.max(dbGen, minGen)
+    const myY = rowY(gen)
+
+    // Wives (non-spine, not in vis, not already placed elsewhere)
+    const wiveIds = (sp.get(rootId) ?? []).filter(w =>
+      !spineMembership.has(w) && !vis.has(w) && pMap.has(w) && !placedPersonIds.has(w)
+    )
+    const wivesReach = wiveIds.length * SLOT_K
+
+    // Children — skip those on spine (already drawn), skip vis duplicates
+    const kids = (ch.get(rootId) ?? []).filter(c =>
+      !spineMembership.has(c) && !vis.has(c) && pMap.has(c)
+    )
+
+    const myNodes: LNode[] = []
+    const myDrops: VDrop[] = []
+    const myHbars: HBar[]  = []
+    const myMarriages: MLine[] = []
+
+    if (kids.length === 0) {
+      const rootX = leftX + wivesReach
+      const rootCX = rootX + NW / 2
+      const node = makeLNode(rootId, rootX, myY, false)
+      if (node) myNodes.push(node)
+      // place wives + marriage lines
+      const wResult = placeWivesHere(rootId, rootCX, myY, wiveIds)
+      myNodes.push(...wResult.nodes)
+      myMarriages.push(...wResult.marriages)
+      const maxXLeaf = Math.max(rootX + NW, wResult.maxX)
+      return {
+        nodes: myNodes, drops: [], hbars: [], marriages: myMarriages,
+        rootCX, maxX: maxXLeaf, maxY: myY + NH,
+      }
+    }
+
+    // Recurse children left-to-right
+    let cursorX = leftX + wivesReach
+    const childResults: LayoutResult[] = []
+    let maxY = myY + NH
+    for (const k of kids) {
+      const r = layoutSubtree(k, cursorX, vis, gen + 1, depth + 1)
+      if (r.nodes.length === 0) continue
+      childResults.push(r)
+      cursorX = r.maxX + HG
+      maxY = Math.max(maxY, r.maxY)
+    }
+    if (childResults.length === 0) {
+      // all kids skipped (visited / off-tree) → treat as leaf
+      const rootX = leftX + wivesReach
+      const rootCX = rootX + NW / 2
+      const node = makeLNode(rootId, rootX, myY, false)
+      if (node) myNodes.push(node)
+      const wResult = placeWivesHere(rootId, rootCX, myY, wiveIds)
+      myNodes.push(...wResult.nodes)
+      myMarriages.push(...wResult.marriages)
+      return {
+        nodes: myNodes, drops: [], hbars: [], marriages: myMarriages,
+        rootCX, maxX: Math.max(rootX + NW, wResult.maxX), maxY: myY + NH,
+      }
+    }
+
+    const childCXs = childResults.map(r => r.rootCX)
+    const cmin = Math.min(...childCXs)
+    const cmax = Math.max(...childCXs)
+    const rootCX = (cmin + cmax) / 2
+    const rootX = rootCX - NW / 2
+    const node = makeLNode(rootId, rootX, myY, false)
+    if (node) myNodes.push(node)
+
+    // wives
+    const wResult = placeWivesHere(rootId, rootCX, myY, wiveIds)
+    myNodes.push(...wResult.nodes)
+    myMarriages.push(...wResult.marriages)
+
+    // drop from marriage midpoint (or root bottom) to children
+    const firstChildY = childResults[0].nodes[0]?.y ?? myY + RH
+    const marY = myY + NH / 2
+    const hasWives = wiveIds.length > 0
+    const dropStartX = hasWives ? rootCX - SLOT_K / 2 : rootCX
+    const dropStartY = hasWives ? marY : myY + NH
+    const barY = dropStartY + Math.round((firstChildY - dropStartY) * 0.5)
+    myDrops.push({ x: dropStartX, y1: dropStartY, y2: barY })
+    if (childCXs.length === 1) {
+      const cc = childCXs[0]
+      if (Math.abs(dropStartX - cc) < 1) {
+        myDrops.push({ x: cc, y1: barY, y2: firstChildY })
+      } else {
+        myHbars.push({ x1: Math.min(dropStartX, cc), x2: Math.max(dropStartX, cc), y: barY })
+        myDrops.push({ x: cc, y1: barY, y2: firstChildY })
+      }
+    } else {
+      const barMinX = Math.min(dropStartX, cmin)
+      const barMaxX = Math.max(dropStartX, cmax)
+      myHbars.push({ x1: barMinX, x2: barMaxX, y: barY })
+      for (const cc of childCXs) {
+        myDrops.push({ x: cc, y1: barY, y2: firstChildY })
+      }
+    }
+
+    // collect descendants
+    for (const r of childResults) {
+      myNodes.push(...r.nodes)
+      myDrops.push(...r.drops)
+      myHbars.push(...r.hbars)
+      myMarriages.push(...r.marriages)
+    }
+
+    const rightEdge = Math.max(rootX + NW, cursorX - HG, wResult.maxX)
+    return {
+      nodes: myNodes, drops: myDrops, hbars: myHbars, marriages: myMarriages,
+      rootCX, maxX: rightEdge, maxY,
+    }
+  }
+
+  function placeWivesHere(rootId: string, rootCX: number, myY: number, wiveIds: string[]): { nodes: LNode[]; marriages: MLine[]; maxX: number } {
+    const ns: LNode[] = []
+    const ms: MLine[] = []
+    const marY = myY + NH / 2
+    let maxX = rootCX + NW / 2
+    for (let wi = 0; wi < wiveIds.length; wi++) {
+      const wid = wiveIds[wi]
+      const wcx = rootCX - (wi + 1) * SLOT_K
+      const wx = wcx - NW / 2
+      const node = makeLNode(wid, wx, myY, false)
+      if (node) ns.push(node)
+      const prevCx = wi === 0 ? rootCX : rootCX - wi * SLOT_K
+      // Marriage line: from this wife's right edge to neighbor's left edge
+      ms.push({
+        id: `m:${rootId}:${wid}:${wi}`,
+        x1: wcx + NW / 2,
+        x2: prevCx - NW / 2,
+        y: marY,
+      })
+      maxX = Math.max(maxX, wx + NW)
+    }
+    return { nodes: ns, marriages: ms, maxX }
+  }
+
+  // ── Place spine cards ──
+  spineList.forEach((id, i) => {
+    const y = rowY(i + 1)
+    const node = makeLNode(id, SPINE_X, y, true)
+    if (node) nodes.push(node)
     spineRowOf.set(id, i)
   })
 
-  // Spine trunk guide
   trunkGuides.push({
     x: SPINE_X + NW / 2,
-    y1: PAD,
-    y2: PAD + (path.length - 1) * RH + NH,
+    y1: rowY(1),
+    y2: rowY(spineList.length) + NH,
     color: '#10b981',
   })
 
-  // Spine parent→child drops
-  for (let i = 0; i < path.length - 1; i++) {
-    const parentId = path[i], childId = path[i + 1]
-    const py = PAD + i * RH + NH
-    const cy = PAD + (i + 1) * RH
-    drops.push({ x: SPINE_X + NW / 2, y1: py, y2: cy })
-  }
+  // ── For each spine person, place wives + handle children-by-wife ──
+  const vis = new Set<string>(spineList)  // mark all spine as visited for subtree recursion
 
-  // ── Step 2: place spouses to the LEFT of each spine card (stacked if multiple) ──
-  for (const spineId of path) {
-    const wives = (sp.get(spineId) ?? []).filter(w => !spineSet.value.has(w) && !placedPersonIds.has(w))
-    const spineCenter = positionByPerson.get(spineId)!
-    wives.forEach((wifeId, idx) => {
-      const wx = spineCenter.x - (WIFE_HG + NW) * (idx + 1)
-      const wy = spineCenter.y
-      const placed = placeNode(wifeId, wx, wy, false)
-      if (placed) {
-        // Marriage line between rightmost wife and spine card
-        marriages.push({
-          id: `m:${spineId}:${wifeId}`,
-          x1: wx + NW,
-          x2: spineCenter.x,
-          y:  wy + NH / 2,
-        })
-      }
-    })
-  }
+  for (let i = 0; i < spineList.length; i++) {
+    const spineId = spineList[i]
+    const sp_p = pMap.get(spineId)
+    if (!sp_p) continue
+    const myY = rowY(i + 1)
+    const rootCX = SPINE_X + NW / 2
+    const marY = myY + NH / 2
 
-  // ── Step 3: place SIBLINGS of each spine person to the RIGHT side of that row ──
-  // (Not their parents — siblings = spine parent's other children, except the next-spine child)
-  for (let i = 0; i < path.length; i++) {
-    const personId = path[i]
-    const parents = pa.get(personId) ?? []
-    if (!parents.length) continue
-    // Find the spine parent (one row up)
-    const spineParent = parents.find(p => spineRowOf.get(p) === i - 1) ?? parents[0]
-    const siblings = (ch.get(spineParent) ?? []).filter(c => c !== personId && !spineSet.value.has(c) && !placedPersonIds.has(c))
-    if (!siblings.length) continue
+    // Wives — exclude any spine wife (none expected) and already-placed
+    const wiveIds = (sp.get(spineId) ?? []).filter(w =>
+      !spineMembership.has(w) && !placedPersonIds.has(w)
+    )
 
-    const pY = positionByPerson.get(personId)!.y
-    let cursorX = SPINE_X + NW + HG * 4
-    for (const sibId of siblings) {
-      placeNode(sibId, cursorX, pY, false)
-      // sibling parent→child drop
-      const spineParentPos = positionByPerson.get(spineParent)!
-      drops.push({
-        x: cursorX + NW / 2,
-        y1: spineParentPos.y + NH,
-        y2: pY,
-      })
-      // horizontal bar connecting spine-parent drop line to sibling drop
-      hbars.push({
-        x1: SPINE_X + NW / 2,
-        x2: cursorX + NW / 2,
-        y:  pY - VG / 2,
-      })
-      cursorX += NW + HG
-    }
-  }
-
-  // ── Step 4: place non-spine children of spine spouses (e.g. Muhammad's daughters by Khadijah) ──
-  // For Muhammad, place his 7 children below him as a row
-  if (muhammadId.value) {
-    const mKids = (ch.get(muhammadId.value) ?? []).filter(c => !placedPersonIds.has(c))
-    if (mKids.length) {
-      const mPos = positionByPerson.get(muhammadId.value)!
-      const totalW = mKids.length * NW + (mKids.length - 1) * HG
-      const startX = mPos.x + NW / 2 - totalW / 2
-      const kidsY = mPos.y + RH
-      mKids.forEach((kidId, idx) => {
-        const kx = startX + idx * (NW + HG)
-        placeNode(kidId, kx, kidsY, false)
-        drops.push({ x: kx + NW / 2, y1: kidsY - VG / 2, y2: kidsY })
-      })
-      // h-bar above the kids row
-      if (mKids.length > 0) {
-        const lastIdx = mKids.length - 1
-        hbars.push({
-          x1: startX + NW / 2,
-          x2: startX + lastIdx * (NW + HG) + NW / 2,
-          y: kidsY - VG / 2,
-        })
-        drops.push({ x: mPos.x + NW / 2, y1: mPos.y + NH, y2: kidsY - VG / 2 })
-      }
-    }
-  }
-
-  // ── Step 5: place Ali + 12 Imams chain (below Fatima) ──
-  if (fatimaId.value && aliId.value) {
-    const fPos = positionByPerson.get(fatimaId.value)
-    if (fPos) {
-      // Place Ali next to Fatima as spouse (left side)
-      const aliX = fPos.x - WIFE_HG - NW
-      const aliY = fPos.y
-      placeNode(aliId.value, aliX, aliY, false)
+    // Place wives left of spine
+    for (let wi = 0; wi < wiveIds.length; wi++) {
+      const wid = wiveIds[wi]
+      const wcx = rootCX - (wi + 1) * SLOT_K
+      const wx = wcx - NW / 2
+      const node = makeLNode(wid, wx, myY, false)
+      if (node) nodes.push(node)
+      const prevCx = wi === 0 ? rootCX : rootCX - wi * SLOT_K
       marriages.push({
-        id: `m:${aliId.value}:${fatimaId.value}`,
-        x1: aliX + NW,
-        x2: fPos.x,
-        y:  fPos.y + NH / 2,
+        id: `m:spine:${spineId}:${wid}`,
+        x1: wcx + NW / 2,
+        x2: prevCx - NW / 2,
+        y: marY,
       })
+      vis.add(wid)
+    }
 
-      // BFS down from Ali, place imam chain as a single descending column to the right
-      const imamColX = fPos.x + NW + HG * 3
-      const seen = new Set<string>([aliId.value, fatimaId.value])
-      const queue: Array<{ id: string; row: number; parentY: number; parentX: number }> = []
-      for (const kid of (ch.get(aliId.value) ?? [])) {
-        if (!placedPersonIds.has(kid)) {
-          queue.push({ id: kid, row: 0, parentY: aliY, parentX: imamColX })
+    // Spine→spine child drop (handled via plain vertical line between consecutive spine cards below)
+    // For Muhammad: handle the 7 children (some by Khadijah, one by Maria) plus the imam chain via 法蒂瑪
+    // For other spine persons, also handle non-spine children if any (siblings of next spine).
+
+    // Find non-spine children, group by which wife (mother) they belong to
+    const allKids = ch.get(spineId) ?? []
+    const nonSpineKids = allKids.filter(c => !spineMembership.has(c) && !placedPersonIds.has(c))
+
+    // Build mother → kids map. If we can identify the wife who is the mother
+    // (by checking that wife's children field), use her; else "unknown mom".
+    const motherIdOfKid = new Map<string, string>()  // kid → wife personId
+    for (const kid of nonSpineKids) {
+      for (const wid of wiveIds) {
+        const wifeKids = ch.get(wid) ?? []
+        if (wifeKids.includes(kid)) {
+          motherIdOfKid.set(kid, wid)
+          break
         }
       }
-      let row = 0
-      while (queue.length) {
-        const batch = queue.splice(0, queue.length)
-        // Lay this row horizontally
-        const startX = imamColX
-        batch.forEach((item, idx) => {
-          if (seen.has(item.id) || placedPersonIds.has(item.id)) return
-          seen.add(item.id)
-          const x = startX + idx * (NW + HG)
-          const y = fPos.y + RH * (row + 1)
-          placeNode(item.id, x, y, false)
-          // drop from row above (use parent's position)
-          const pPos = positionByPerson.get(item.id === aliId.value ? aliId.value : (pa.get(item.id)?.[0] ?? aliId.value))
-          if (pPos) {
-            drops.push({ x: x + NW / 2, y1: pPos.y + NH, y2: y })
-          }
-          // enqueue this person's children
-          for (const kid of (ch.get(item.id) ?? [])) {
-            if (!seen.has(kid) && !placedPersonIds.has(kid)) {
-              queue.push({ id: kid, row: row + 1, parentY: y, parentX: x })
-            }
-          }
-        })
-        row++
-        if (row > 20) break
+    }
+
+    // Also check spine child's mother (法蒂瑪 from Khadijah for Muhammad)
+    const spineNextId = spineList[i + 1]
+    let spineNextMother: string | undefined
+    if (spineNextId) {
+      for (const wid of wiveIds) {
+        if ((ch.get(wid) ?? []).includes(spineNextId)) {
+          spineNextMother = wid
+          break
+        }
+      }
+    }
+
+    // Group nonSpineKids by mother. unknown-mom kids go into "no mom" bucket.
+    type Group = { wifeId: string | null; kids: string[] }
+    const groups: Group[] = []
+    const noMomGroup: Group = { wifeId: null, kids: [] }
+    const wifeGroup = new Map<string, Group>()
+    for (const wid of wiveIds) wifeGroup.set(wid, { wifeId: wid, kids: [] })
+    for (const kid of nonSpineKids) {
+      const mom = motherIdOfKid.get(kid)
+      if (mom) wifeGroup.get(mom)!.kids.push(kid)
+      else noMomGroup.kids.push(kid)
+    }
+    for (const wid of wiveIds) {
+      const g = wifeGroup.get(wid)!
+      if (g.kids.length) groups.push(g)
+    }
+    if (noMomGroup.kids.length) groups.push(noMomGroup)
+
+    // Render each group beneath the mother-or-spine via T-bar
+    // For Muhammad's case: Khadijah (gen 49 wife) → 6 children at gen 50; Maria → Ibrahim (gen 50)
+    for (const grp of groups) {
+      // Calculate dropStartX based on mother
+      const wi = grp.wifeId ? wiveIds.indexOf(grp.wifeId) : -1
+      const motherCx = wi >= 0 ? rootCX - (wi + 1) * SLOT_K : rootCX
+      const motherPrevCx = wi === 0 ? rootCX : wi > 0 ? rootCX - wi * SLOT_K : rootCX
+      const dropStartX = wi >= 0 ? (motherCx + motherPrevCx) / 2 : rootCX
+      const dropStartY = wi >= 0 ? marY : myY + NH
+
+      // Each kid: recursive subtree layout (so descendants come along)
+      // Lay them in a row at gen+1 with HG gap. Anchor row left edge near mother.
+      let groupCursor = dropStartX - (grp.kids.length * (NW + HG)) / 2 + NW / 2
+      const kidResults: LayoutResult[] = []
+      for (const kid of grp.kids) {
+        const r = layoutSubtree(kid, groupCursor - NW / 2, vis, (sp_p.data.generationNum || i + 1) + 1, 0)
+        if (r.nodes.length === 0) continue
+        kidResults.push(r)
+        groupCursor = r.maxX + HG + NW / 2
+      }
+      if (kidResults.length === 0) continue
+      const kidCXs = kidResults.map(r => r.rootCX)
+      const firstChildY = kidResults[0].nodes[0]?.y ?? myY + RH
+      const barY = dropStartY + Math.round((firstChildY - dropStartY) * 0.5)
+      drops.push({ x: dropStartX, y1: dropStartY, y2: barY })
+      if (kidCXs.length === 1) {
+        const cc = kidCXs[0]
+        if (Math.abs(dropStartX - cc) < 1) {
+          drops.push({ x: cc, y1: barY, y2: firstChildY })
+        } else {
+          hbars.push({ x1: Math.min(dropStartX, cc), x2: Math.max(dropStartX, cc), y: barY })
+          drops.push({ x: cc, y1: barY, y2: firstChildY })
+        }
+      } else {
+        const bMin = Math.min(dropStartX, ...kidCXs)
+        const bMax = Math.max(dropStartX, ...kidCXs)
+        hbars.push({ x1: bMin, x2: bMax, y: barY })
+        for (const cc of kidCXs) drops.push({ x: cc, y1: barY, y2: firstChildY })
+      }
+      for (const r of kidResults) {
+        nodes.push(...r.nodes)
+        drops.push(...r.drops)
+        hbars.push(...r.hbars)
+        marriages.push(...r.marriages)
+      }
+    }
+
+    // Spine→Spine child line: from spine card bottom (or marriage midpoint if next spine kid has a known mother)
+    if (spineNextId && !spineMembership.has(spineId)) {
+      // never reached because spineId is always in spineMembership; we always draw spine link via simple vertical below
+    }
+    if (spineNextId) {
+      const childY = rowY(i + 2)
+      const dropX = spineNextMother
+        ? (() => {
+            const wi2 = wiveIds.indexOf(spineNextMother)
+            const motherCx = rootCX - (wi2 + 1) * SLOT_K
+            const prevCx = wi2 === 0 ? rootCX : rootCX - wi2 * SLOT_K
+            return (motherCx + prevCx) / 2
+          })()
+        : rootCX
+      const dropStartY = spineNextMother ? marY : myY + NH
+      const barY = dropStartY + Math.round((childY - dropStartY) * 0.5)
+      drops.push({ x: dropX, y1: dropStartY, y2: barY })
+      const targetCX = SPINE_X + NW / 2
+      if (Math.abs(dropX - targetCX) < 1) {
+        drops.push({ x: targetCX, y1: barY, y2: childY })
+      } else {
+        hbars.push({ x1: Math.min(dropX, targetCX), x2: Math.max(dropX, targetCX), y: barY })
+        drops.push({ x: targetCX, y1: barY, y2: childY })
       }
     }
   }
 
-  // ── Step 6: any remaining nodes (orphans) — place in a tail column on the far right ──
-  let orphanX = SPINE_X + 1200
+  // ── For each spine person (except 穆罕默德), also layout SIBLINGS to the right ──
+  // (children of spine_parent that are not on spine)
+  for (let i = 1; i < spineList.length; i++) {
+    const personId = spineList[i]
+    const myY = rowY(i + 1)
+    const spineParent = spineList[i - 1]
+    const siblings = (ch.get(spineParent) ?? []).filter(c =>
+      !spineMembership.has(c) && !placedPersonIds.has(c)
+    )
+    if (siblings.length === 0) continue
+    let cursorX = SPINE_X + NW + HG * 3
+    const sibResults: LayoutResult[] = []
+    for (const sibId of siblings) {
+      const r = layoutSubtree(sibId, cursorX, vis, i + 1, 0)
+      if (r.nodes.length === 0) continue
+      sibResults.push(r)
+      cursorX = r.maxX + HG
+    }
+    if (sibResults.length === 0) continue
+    // Sibling drops from spine_parent
+    const parentPos = positionByPerson.get(spineParent)!
+    const parentMidX = parentPos.x + NW / 2
+    const parentBottomY = parentPos.y + NH
+    const targetY = sibResults[0].nodes[0]?.y ?? myY
+    const barY = parentBottomY + Math.round((targetY - parentBottomY) * 0.5)
+    for (const r of sibResults) {
+      const cc = r.rootCX
+      // Add sibling drop bar
+      drops.push({ x: cc, y1: barY, y2: targetY })
+    }
+    // Bar from parent down to each sibling
+    const allCXs = sibResults.map(r => r.rootCX)
+    hbars.push({
+      x1: Math.min(parentMidX, ...allCXs),
+      x2: Math.max(parentMidX, ...allCXs),
+      y: barY,
+    })
+    drops.push({ x: parentMidX, y1: parentBottomY, y2: barY })
+    for (const r of sibResults) {
+      nodes.push(...r.nodes)
+      drops.push(...r.drops)
+      hbars.push(...r.hbars)
+      marriages.push(...r.marriages)
+    }
+  }
+
+  // ── Orphan area for anything not yet placed ──
+  // (e.g. Sharif Hussein if not connected, Sufi saints, etc.)
+  let orphanX = -1200
   let orphanY = PAD
+  const ORPHAN_COLS = 6
+  let col = 0
   for (const node of props.nodes) {
     if (placedPersonIds.has(node.id)) continue
-    placeNode(node.id, orphanX, orphanY, false)
-    orphanY += RH * 0.7
-    if (orphanY > 4000) { orphanY = PAD; orphanX += NW + HG * 2 }
+    const lnode = makeLNode(node.id, orphanX + col * (NW + HG), orphanY, false)
+    if (lnode) nodes.push(lnode)
+    col++
+    if (col >= ORPHAN_COLS) { col = 0; orphanY += RH * 0.7 }
   }
 
-  // ── Canvas bounds ──
-  let maxX = 0, maxY = 0, minX = 0
+  // ── Canvas bounds: shift if anything negative ──
+  let minX = 0, maxX = 0, maxY = 0
   for (const n of nodes) {
+    if (n.x < minX) minX = n.x
     if (n.x + n.w > maxX) maxX = n.x + n.w
     if (n.y + n.h > maxY) maxY = n.y + n.h
-    if (n.x < minX) minX = n.x
   }
-
-  // Shift all coords so nothing has negative x
   const shift = minX < PAD ? PAD - minX : 0
   if (shift !== 0) {
-    for (const n of nodes) n.x += shift
-    for (const d of drops) d.x += shift
-    for (const b of hbars) { b.x1 += shift; b.x2 += shift }
-    for (const m of marriages) { m.x1 += shift; m.x2 += shift }
+    for (const n of nodes)     n.x += shift
+    for (const d of drops)     d.x += shift
+    for (const b of hbars)   { b.x1 += shift; b.x2 += shift }
+    for (const m of marriages){ m.x1 += shift; m.x2 += shift }
     for (const g of trunkGuides) g.x += shift
     maxX += shift
     for (const [k, v] of positionByPerson) positionByPerson.set(k, { x: v.x + shift, y: v.y })
@@ -521,7 +732,7 @@ const cv = computed(() => {
 
   return {
     nodes, drops, hbars, marriages, trunkGuides,
-    w: Math.max(maxX + PAD, 1200),
+    w: Math.max(maxX + PAD, 1600),
     h: Math.max(maxY + PAD, 800),
     spineCenterX: SPINE_X + shift,
     muhammadPos: muhammadId.value ? positionByPerson.get(muhammadId.value) : null,
@@ -544,30 +755,22 @@ function cardClass(n: LNode) {
   return `relative rounded-lg border shadow-sm hover:shadow transition cursor-pointer ${m[n.tradition] ?? m.sunni}`
 }
 function cardStyle(n: LNode) {
-  return {
-    left: n.x + 'px',
-    top: n.y + 'px',
-    width: n.w + 'px',
-    height: n.h + 'px',
-  }
+  return { left: n.x + 'px', top: n.y + 'px', width: n.w + 'px', height: n.h + 'px' }
 }
-
-function onCardClick(n: LNode) {
-  emit('selectPerson', n.personId)
-}
+function onCardClick(n: LNode) { emit('selectPerson', n.personId) }
 
 // ── Pan / zoom ──
 const viewportRef = ref<HTMLElement | null>(null)
-const zoom = ref(0.85)
-const panX = ref(20)
-const panY = ref(20)
+const zoom  = ref(0.65)
+const panX  = ref(20)
+const panY  = ref(20)
 const isDragging = ref(false)
 const dragStart = ref({ x: 0, y: 0, panX: 0, panY: 0 })
 
 function onWheel(e: WheelEvent) {
   if (e.ctrlKey || e.metaKey) {
     const delta = -e.deltaY * 0.001
-    const newZoom = Math.max(0.2, Math.min(2, zoom.value + delta))
+    const newZoom = Math.max(0.15, Math.min(2, zoom.value + delta))
     const rect = viewportRef.value?.getBoundingClientRect()
     if (rect) {
       const cx = e.clientX - rect.left, cy = e.clientY - rect.top
@@ -581,7 +784,6 @@ function onWheel(e: WheelEvent) {
     panY.value -= e.deltaY
   }
 }
-
 function onPointerDown(e: PointerEvent) {
   if ((e.target as HTMLElement).closest('.node-card, button')) return
   isDragging.value = true
@@ -597,26 +799,22 @@ function onPointerUp(e: PointerEvent) {
   isDragging.value = false
   try { (e.currentTarget as HTMLElement).releasePointerCapture(e.pointerId) } catch {}
 }
-
 function zoomIn()  { zoom.value = Math.min(2, zoom.value + 0.1) }
-function zoomOut() { zoom.value = Math.max(0.2, zoom.value - 0.1) }
+function zoomOut() { zoom.value = Math.max(0.15, zoom.value - 0.1) }
 
 function fitSpine() {
   if (!cv.value || !viewportRef.value) return
   const rect = viewportRef.value.getBoundingClientRect()
-  const targetZoom = Math.min(0.85, (rect.height - 80) / (cv.value.h))
-  zoom.value = Math.max(0.25, targetZoom)
+  const targetZoom = Math.min(0.6, (rect.height - 80) / cv.value.h)
+  zoom.value = Math.max(0.18, targetZoom)
   panX.value = rect.width / 2 - cv.value.spineCenterX * zoom.value
   panY.value = 30
 }
 
 onMounted(() => {
-  watch(ready, (r) => {
-    if (r) nextTick(fitSpine)
-  }, { immediate: true })
+  watch(ready, (r) => { if (r) nextTick(fitSpine) }, { immediate: true })
 })
 
-// ── Position of Muhammad card on screen, for view-switch widget anchor ──
 const muhammadScreenPos = computed(() => {
   if (!cv.value?.muhammadPos) return { visible: false, x: 0, y: 0 }
   const mp = cv.value.muhammadPos

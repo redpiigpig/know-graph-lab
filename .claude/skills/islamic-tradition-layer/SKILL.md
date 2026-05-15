@@ -96,7 +96,7 @@ URL：`/genealogy/islamic-tree?view=quranic|sunni|shia_twelver|shia_ismaili|shia
 
 ---
 
-## 🌳 已填入的人物世系（aggregated 195 rows）
+## 🌳 已填入的人物世系（aggregated 278 rows）
 
 ### 阿丹 → 努哈（gen 1-10，10 代）
 阿丹 → 施特 → 阿努施 → 蓋南 → 馬哈萊勒 → 雅利得 → **伊德里斯**（古蘭 19:56-57，與聖經以諾對應）→ 馬突舍拉 → 拉麥（努哈之父）→ **努哈**（古蘭 11:25-49 整章 71）
@@ -341,21 +341,27 @@ view 規則（鏡像 biblical-graph）：
 - `shia_ismaili` → quranic + sunni + shia_ismaili + JSONB merge
 - `shia_zaidi` → quranic + sunni + shia_zaidi + JSONB merge
 
-### Task 3: Tree component `IslamicSpineTree.vue` — ✅ MVP 完成
+### Task 3: Tree component `IslamicSpineTree.vue` — ✅ v2 重做完成（2026-05-16）
 
-實作要點：
-- **單 spine** （非雙 spine），spine 走 阿丹→努哈→易卜拉欣→伊斯瑪儀→阿德南→穆罕默德
-- spine 卡左側 3px emerald-400 條帶（取代 biblical 的 amber/rose）
-- 7 種傳統 tailwind 配色（quranic 白／sunni 綠／shia_twelver 紅／shia_ismaili 紫／shia_zaidi 橙／sufi 青／historical 灰）
-- 紅實線 = 婚姻；灰實線 = 親子（直線 + T-bar drop）
-- pan / zoom / wheel-scroll / Ctrl+wheel-zoom / 滑鼠拖曳平移（同 biblical）
-- 右上「+ −」zoom 按鈕 + 「定位主幹」
-- 配偶 stacked 在 spine 卡左側；穆聖 12 妻會排出 12 列
-- 穆聖 7 子女 row 排在他下方
-- 阿里+12 伊瑪目鏈：阿里以「法蒂瑪之夫」放在法蒂瑪左側；下方 BFS 展開 Hasan/Hussein → Zaynal Abidin → ... → 12 Mahdi
-- 視圖切換 widget 浮在穆罕默德卡右側（鏡像 biblical 的 widget 設計）
-- 左下 Legend（7 色 swatch + 線型）
-- 未實作：subtree ▼ 收摺、♻ same-person marker、cross-gen 婚姻 minGen 機制（layout 簡化版，~600 行 vs. biblical 2152 行）
+v2 重點修正（per biblical 規則）：
+- **婚姻線 per-wife**：每位妻子畫獨立紅線到右側鄰居（首妻→root；二妻→首妻 等）
+- **親子 drop 起點 = 婚姻中點**（`rootCX - SLOT_K/2`，Y=marriage-line Y）— 而非從父卡正下方掉下
+- **T-bar 跨所有子嗣 X**，每個子卡上方有個別灰色垂直線
+- **多妻分組**：哈蒂徹的 6 子女從 哈蒂徹↔穆罕默德 中點下，瑪利亞·科普特的 1 子（易卜拉欣）從 瑪利亞↔對位 中點下
+- **`layoutSubtree` 遞迴**：非 spine 子樹（伊瑪目鏈、哈里發朝代、麥加謝里夫鏈）以 biblical 的左右佈局演算法處理
+- **Siblings of spine** 仍放在 spine 卡右側（hbar 從 spine_parent 下伸出）
+- **Orphan 區**：暫放在 spine 左側 -1200 開始的 6 列 grid（蘇菲 + 未連通的 historical placeholder）
+
+v1（已被取代）的問題：
+- 只畫一條 marriage line（最右側妻 ↔ root），其他妻沒線
+- 子嗣 drop 從 spine 卡正下方掉下，看不出是父+妻所生
+- 沒有 T-bar，多子嗣直接平行下垂
+- 伊瑪目鏈用 BFS row-by-row 排，亂
+
+仍未實作（biblical 有但 Islamic 暫無）：
+- subtree ▼ 收摺（旁支預設展開全部，畫面會很寬）
+- ♻ same-person marker（跨子樹同人跳轉，如法蒂瑪 既是穆聖女兒又是阿里之妻）
+- 跨代婚姻 minGen 機制（阿里 gen 48 娶 法蒂瑪 gen 50，目前以較低的 gen 為準）
 
 ### Task 4: 路由入口 — ✅ 完成
 
@@ -381,12 +387,12 @@ view 規則（鏡像 biblical-graph）：
 - ✅ 倭馬亞王朝 14 任哈里發 + Sufyanid/Marwanid 兩支接入（2026-05-16 完成）
 - ✅ 阿拔斯王朝 37 任巴格達哈里發（2026-05-16 完成）
 - ✅ 現代哈希姆王朝（沙里夫·胡笙、約旦王國四代、伊拉克王國三代）（2026-05-16 完成）
+- ✅ **法蒂瑪王朝** 14 任哈里發 + 4 satr 隱遁伊瑪目（穆罕默德·伊本·伊斯瑪儀往下，gen 56-69）（2026-05-16 完成）
+- ✅ **歷代麥加謝里夫**完整鏈（Hasan ibn Ali → Banu Qatadah → 沙里夫·胡笙，~35 gens 已連通）（2026-05-16 完成）
+- ✅ 開羅阿拔斯傀儡哈里發 18 任（1258-1517 CE，馬木留克時期）（2026-05-16 完成）
+- ✅ 早期蘇菲聖徒 10 位（順序：Uways/Hasan al-Basri/Rabia/Ibrahim Adham/Ma'ruf/Sari/Bayazid/Junayd/Hallaj/Ahmad Ghazali）（2026-05-16 完成；皆 orphan，蘇菲為精神 silsila 非血親）
 - ⏳ 伊瑪目之配偶與其他子女（目前只填了直系傳承的伊瑪目）
-- ⏳ 早期蘇菲聖徒鏈（Junayd, Bayazid, ...）→ tradition='sufi'
-- ⏳ **法蒂瑪王朝** 14 任哈里發（909-1171 CE）— Ismaili 派從穆罕默德·伊本·伊斯瑪儀往下
-- ⏳ **歷代麥加謝里夫**完整鏈（Hasan ibn Ali → Banu Qatadah → 沙里夫·胡笙，~35 gens）
-- ⏳ 開羅阿拔斯傀儡哈里發（1258-1517 CE，馬木留克時期）
-- ⏳ 鄂圖曼蘇丹自稱哈里發（1517-1924）— 不在血脈內
+- ⏳ 鄂圖曼蘇丹自稱哈里發（1517-1924）— 不在血脈內，可選擇加入
 
 ### Task 8（tree 進階）
 
