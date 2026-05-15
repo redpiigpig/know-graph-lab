@@ -128,7 +128,7 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
-import { geoNaturalEarth1, geoPath, geoCentroid, type GeoProjection } from 'd3-geo'
+import { geoEqualEarth, geoPath, geoCentroid, type GeoProjection } from 'd3-geo'
 import { zoom as d3zoom, zoomIdentity, type ZoomBehavior } from 'd3-zoom'
 import { select } from 'd3-selection'
 import { formatYearShort } from '~/data/maps/historical-epochs'
@@ -251,12 +251,14 @@ const landFeatures = ref<any[]>([])
 const stateEntries = ref<StateEntry[]>([])
 const coastlineFeatures = ref<any[]>([])
 const nameZhMap = ref<Map<string, string>>(new Map())
+const polygonNameZh = ref<Record<string, string>>({})
 
 function nameZhOf(en: string): string {
   return STATE_DETAILS[en]?.name_zh
     || SUPPLEMENT_ZH[en]
-    || nameZhMap.value.get(en)
     || adm0NameToZh.get(en)
+    || nameZhMap.value.get(en)
+    || polygonNameZh.value[en]
     || en
 }
 
@@ -301,7 +303,7 @@ function getAdm0Code(props: any): string {
 }
 
 function makeProjection(): GeoProjection {
-  const p = geoNaturalEarth1()
+  const p = geoEqualEarth()
     .fitSize([width.value, height.value - 20], { type: 'Sphere' } as any)
     .translate([width.value / 2, (height.value - 20) / 2 + 10])
   projectionCache = p
@@ -441,15 +443,19 @@ onMounted(async () => {
   }
 
   try {
-    const [adm0Res, statesRes, coastRes, wdRes] = await Promise.all([
+    const [adm0Res, statesRes, coastRes, wdRes, polyZhRes] = await Promise.all([
       fetch('/maps/ne_50m_admin_0_countries.geojson'),
       fetch('/maps/historical-states.geojson'),
       fetch('/maps/ne_50m_coastline.geojson'),
       fetch('/maps/wikidata-states.json'),
+      fetch('/maps/polygon-names-zh.json').catch(() => ({ ok: false } as any)),
     ])
     const [adm0, states, coast, wd] = await Promise.all([
       adm0Res.json(), statesRes.json(), coastRes.json(), wdRes.json(),
     ])
+    if (polyZhRes && (polyZhRes as Response).ok) {
+      try { polygonNameZh.value = await (polyZhRes as Response).json() } catch {}
+    }
     landFeatures.value = adm0.features.filter((f: any) => f.properties.ADM0_A3 !== 'ATA')
     coastlineFeatures.value = coast.features || []
     const m = new Map<string, string>()
@@ -457,14 +463,18 @@ onMounted(async () => {
       if (w.name_zh) m.set(w.name_en, w.name_zh)
     }
     nameZhMap.value = m
-    // 從 NE admin_0 抽 NAME_EN → ISO → 中文國名
+    // 從 NE admin_0 抽各種 NAME 變體 → 中文。優先 NAME_ZHT (繁中)，再 NAME_ZH (簡中)，
+    // 退而求其次用 ISO → COUNTRY_NAME_ZH
     adm0NameToZh.clear()
     for (const f of adm0.features) {
       const iso = f.properties.ISO_A3 || f.properties.ADM0_A3
-      const zh = COUNTRY_NAME_ZH[iso]
+      const zh = f.properties.NAME_ZHT || f.properties.NAME_ZH || COUNTRY_NAME_ZH[iso]
       if (!zh) continue
-      const en = f.properties.NAME_EN || f.properties.NAME
-      if (en) adm0NameToZh.set(en, zh)
+      // 一個 admin_0 可能在不同 NAME 欄位有不同英文寫法 — 全收
+      for (const k of ['NAME', 'NAME_EN', 'NAME_LONG', 'ADMIN', 'SOVEREIGNT', 'BRK_NAME']) {
+        const en = f.properties[k]
+        if (en && !adm0NameToZh.has(en)) adm0NameToZh.set(en, zh)
+      }
     }
     stateEntries.value = (states.features || []).map((f: any) => ({
       feature: f,

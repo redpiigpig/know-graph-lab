@@ -342,7 +342,7 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
-import { geoNaturalEarth1, geoPath, geoCentroid, type GeoProjection } from 'd3-geo'
+import { geoEqualEarth, geoPath, geoCentroid, type GeoProjection } from 'd3-geo'
 import { zoom as d3zoom, zoomIdentity, type ZoomBehavior } from 'd3-zoom'
 import { select } from 'd3-selection'
 import {
@@ -628,7 +628,7 @@ function describeEntry(entry: FeatureEntry, drilling: RealmId | null) {
 }
 
 function makeProjection(): GeoProjection {
-  const p = geoNaturalEarth1()
+  const p = geoEqualEarth()
     .fitSize([width.value, height.value - 20], { type: 'Sphere' } as any)
     .translate([width.value / 2, (height.value - 20) / 2 + 10])
   projectionCache = p
