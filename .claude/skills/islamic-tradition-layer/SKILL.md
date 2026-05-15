@@ -231,17 +231,22 @@ URL：`/genealogy/islamic-tree?view=quranic|sunni|shia_twelver|shia_ismaili|shia
 
 ## 🚧 待辦清單
 
-### Task 1: 表格 CRUD 頁面 `pages/genealogy/islamic.vue`
+### Task 1: 表格頁 `pages/genealogy/islamic.vue` — ✅ 列表（read-only）完成
 
-複製 [pages/genealogy/biblical.vue](../../../pages/genealogy/biblical.vue) 結構，僅換 endpoint 至 `/api/genealogy/islamic-people`，欄位多加 name_ar / kunya。
+已就位：
+- 列表頁（7 種傳統徽章 + 列底色 + 搜尋 / 傳統 filter）
+- 中／阿／英三欄姓名顯示，kunya 跟在中文名後以小字呈現
+- 族譜圖 tab 暫禁用（待 Task 3 tree 組件建好）
 
-### Task 2: API endpoints
+未做：新增／編輯／刪除（POST/PATCH/DELETE 介面）— 需要可改寫 biblical.vue 的 modal 套件
 
-新建：
-- `server/api/genealogy/islamic-people.get.ts` — 列表
-- `server/api/genealogy/islamic-people/[id].patch.ts` — 更新
-- `server/api/genealogy/islamic-people/[id].delete.ts` — 刪除
-- `server/api/genealogy/islamic-graph.get.ts` — graph view，套 `?view=` filter + JSONB merge
+### Task 2: API endpoints — ✅ GET 完成
+
+- ✅ `server/api/genealogy/islamic-people.get.ts` — 列表
+- ⏳ `server/api/genealogy/islamic-people.post.ts` — 新增
+- ⏳ `server/api/genealogy/islamic-people/[id].patch.ts` — 更新
+- ⏳ `server/api/genealogy/islamic-people/[id].delete.ts` — 刪除
+- ⏳ `server/api/genealogy/islamic-graph.get.ts` — graph view，套 `?view=` filter + JSONB merge
 
 mirror 完全可從 biblical-* 複製 + sed。
 
@@ -255,19 +260,9 @@ mirror 完全可從 biblical-* 複製 + sed。
 - spine 終點 = 穆罕默德（gen 44）vs. biblical 終點 = 馬利亞（gen 74）
 - 後續 12 伊瑪目鏈作為穆聖→法蒂瑪 (gen 45) 的下分支展開（阿里為穆聖堂弟接入點）
 
-### Task 4: 路由入口
+### Task 4: 路由入口 — ✅ 完成
 
-更新 [pages/genealogy/index.vue](../../../pages/genealogy/index.vue) 新增第 4 張卡片：
-
-```vue
-<NuxtLink to="/genealogy/islamic" ...>
-  <div class="text-3xl">☪</div>
-  <div>
-    <div>伊斯蘭族譜</div>
-    <div>阿丹至穆罕默德 + 12 伊瑪目</div>
-  </div>
-</NuxtLink>
-```
+[pages/genealogy/index.vue](../../../pages/genealogy/index.vue) 已加第 4 張卡片 ☪「伊斯蘭族譜」(emerald hover)。
 
 ### Task 5: 視圖切換 widget
 
