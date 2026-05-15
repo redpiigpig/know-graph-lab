@@ -192,7 +192,10 @@ def update_book_error(book_id, msg):
 
 
 def insert_chunk_previews(book_id, chunks):
-    """Bulk-insert preview-only rows into ebook_chunks. Same format as parse_worker."""
+    """Bulk-insert preview-only rows into ebook_chunks. Adaptive batching
+    (50→20→5→1) survives Supabase 57014 statement-timeout spikes — without
+    it, a transient IO blip after a 30-minute Haiku OCR run discards the
+    book entirely."""
     if not chunks:
         return
     rows = [
@@ -213,17 +216,27 @@ def insert_chunk_previews(book_id, chunks):
         headers={"apikey": KEY, "Authorization": f"Bearer {KEY}"},
         timeout=30,
     )
-    # Insert in batches of 50
-    batch = 50
-    for i in range(0, len(rows), batch):
-        r = requests.post(
-            f"{URL}/rest/v1/ebook_chunks",
-            headers=H,
-            json=rows[i:i + batch],
-            timeout=60,
-        )
-        if not r.ok:
-            raise RuntimeError(f"chunk insert failed: {r.status_code} {r.text[:200]}")
+    BATCH_SIZES = [50, 20, 5, 1]
+    i = 0
+    while i < len(rows):
+        for bs in BATCH_SIZES:
+            batch = rows[i:i + bs]
+            r = requests.post(
+                f"{URL}/rest/v1/ebook_chunks",
+                headers=H,
+                json=batch,
+                timeout=120,
+            )
+            if r.status_code in (200, 201):
+                i += len(batch)
+                break
+            text = r.text[:300]
+            if "57014" in text or "timeout" in text.lower() or r.status_code >= 500:
+                if bs > BATCH_SIZES[-1]:
+                    continue
+            raise RuntimeError(f"chunk insert failed: {r.status_code} {text[:200]}")
+        else:
+            raise RuntimeError(f"chunk insert failed at batch_size=1, row {i}")
 
 
 def write_jsonl(book_id, chunks):
