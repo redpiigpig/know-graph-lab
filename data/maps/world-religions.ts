@@ -853,19 +853,19 @@ export const ADMIN1_SPHERE: Record<string, string> = {
   'SD-KN': 'west-african-sahel',  // 北科爾多凡
 
   // ---------- 衣索比亞 (ETH) ----------
-  // 衣索比亞文化圈（南方界域）— 高地基督徒 (Aksumite 後裔，正教東正教徒)
-  'ET-TI': 'ethiopian',  // 提格雷
-  'ET-AM': 'ethiopian',  // 阿姆哈拉
-  'ET-BE': 'ethiopian',  // 本尚古勒-古馬茲
+  // 衣索比亞文化圈（南方界域）— 高地 Aksumite + Menelik II 帝國整入區
+  'ET-TI': 'ethiopian',  // 提格雷（Aksumite 北核）
+  'ET-AM': 'ethiopian',  // 阿姆哈拉（高地中央）
+  'ET-BE': 'ethiopian',  // 本尚古勒-古馬茲（西北）
   'ET-DD': 'ethiopian',  // 德雷達瓦
   'ET-AA': 'ethiopian',  // 阿迪斯阿貝巴
-  // 東非-斯瓦希里文化圈（南方界域）— 低地穆斯林 (Somali/Afar 為主)
-  'ET-SO': 'east-african-swahili',  // 索馬利州
-  'ET-AF': 'east-african-swahili',  // 阿法爾州
-  'ET-OR': 'east-african-swahili',  // 奧羅米亞 (穆斯林過半)
-  'ET-SN': 'east-african-swahili',  // 南方各族州
-  'ET-GA': 'east-african-swahili',  // 甘貝拉
-  'ET-HA': 'east-african-swahili',  // 哈勒爾
+  'ET-OR': 'ethiopian',  // 奧羅米亞（19 世紀末整入帝國，正教+穆斯林混居）
+  'ET-SN': 'ethiopian',  // 南方各族州（多族群但宗教政治整入衣國）
+  'ET-GA': 'ethiopian',  // 甘貝拉（西部低地，仍屬衣國體系）
+  // 東非-斯瓦希里文化圈（南方界域）— 純 Cushitic 穆斯林、衣國體系邊緣
+  'ET-SO': 'east-african-swahili',  // 索馬利州（Ogaden 索馬利亞族原鄉）
+  'ET-AF': 'east-african-swahili',  // 阿法爾州（Afar 族）
+  'ET-HA': 'east-african-swahili',  // 哈勒爾（古穆斯林城邦）
 
   // ---------- 奈及利亞 (NGA) ----------
   // 西非-薩赫爾文化圈（南方界域）— 北部 (Sokoto 哈里發遺產，豪薩-富拉尼穆斯林)
