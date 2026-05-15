@@ -23,7 +23,8 @@ description: 「歷史國界地圖」工具集（/maps/historical-borders）— 
 | D. Wikidata 主資料 | `public/maps/wikidata-states.json` | 4215 條 (~ 530 KB) | 中英文名、起始／結束年、所屬大陸、QID |
 | E. 人工撰寫詳細 | `data/maps/historical-states-db.ts` (`STATE_DETAILS`) | 46 條（41 匹配） | 朝代、首都、宗教、人口、面積、簡介 |
 | F. NE 50m coastline | `public/maps/ne_50m_coastline.geojson` | 1428 LineString | 海岸線（黑線） |
-| G. NE 50m admin_0 | `public/maps/ne_50m_admin_0_countries.geojson` | 242 features | 陸地灰底 |
+| G. NE 50m admin_0 | `public/maps/ne_50m_admin_0_countries.geojson` | 242 features | 陸地灰底 + **NAME_ZHT 中文國名（內建）** |
+| H. Polygon 名譯本 | `public/maps/polygon-names-zh.json` | **2,420 條 (88 KB)** | Gemini batch 翻的 polygon name → 繁中 |
 
 **Snapshot 來源**：[scripts/build_historical_layer.mjs](../../../scripts/build_historical_layer.mjs) 用 53 個 historical-basemaps snapshots：BCE 17 個（123000、10000、8000、5000、4000、3000、2000、1500、1000、700、500、400、323、300、200、100、1）+ CE 36 個（100、200、300、400、500、600、700、800、900、1000、1100、1200、1279、1300、1400、1492、1500、1530、1600、1650、1700、1715、1783、1800、1815、1880、1900、1914、1920、1930、1938、1945、1960、1994、2000、2010）。每 snapshot 的 `yearTo = 下個 snapshot 年 - 1`；最後一個（2010）`yearTo = 9999`。
 
@@ -246,7 +247,15 @@ interface HistoricalState extends StateSkeleton, StateDetail {
 2. **陸地灰底**：modern admin_0，`fill='#D1D5DB'` 全 opacity
 3. **古國 polygon**：filtered by currentYear（`year_from <= y <= year_to`），每國 **hash-based HSL 唯一色**
 4. **海岸線**：NE coastline 黑線 0.6/transform.k
-5. **國名標籤**：centroid + 防重疊 relax，**中文優先**。`nameZhOf()` 查序：STATE_DETAILS → **SUPPLEMENT_ZH（~80 條歷史國名手譯）** → wikidata-states.json → NE admin_0 (COUNTRY_NAME_ZH) → fallback 英文
+5. **國名標籤**：centroid + 防重疊 relax，**中文優先**。`nameZhOf()` 查序：
+   1. STATE_DETAILS (41，最準)
+   2. SUPPLEMENT_ZH (~80 條，HistoricalBordersMap.vue 內手譯)
+   3. NE admin_0 NAME_ZHT/NAME_ZH (~315 個現代國家內建)
+   4. wikidata-states.json (4117 條)
+   5. **polygon-names-zh.json (2420 條，Gemini 翻譯)**
+   6. fallback 英文
+
+   **總覆蓋率：95.9%（2827/2949）**。剩下 ~120 個多為澳洲原住民部落名（Wiradjuri/Yolngu 等），Gemini quota 緊時跳過。
 
 `colorForState(name)` 用名稱字串 hash 算 HSL，**同名穩定色**（一致性）。
 點 polygon → `selectedState` 彈窗顯示中文 + 英文副標 + 有效年代。
@@ -311,6 +320,27 @@ node scripts/translate_state_names.mjs   # 即時，幾秒鐘
 ```bash
 node scripts/fetch_hbm_snapshots.mjs   # ~2 分鐘
 ```
+
+### 5. `scripts/translate_polygon_names_gemini.py`
+**Gemini batch 翻譯 polygon 名 → 繁體中文**，輸出 `public/maps/polygon-names-zh.json`。
+
+流程：
+1. 讀 `historical-states.geojson` 抽 unique polygon names (~2949)
+2. 過濾掉已在 STATE_DETAILS / SUPPLEMENT_ZH / NE admin_0 NAME_ZHT / wikidata 的（~407）
+3. 過濾掉已在 `polygon-names-zh.json` 的（incremental，跑第二次只翻新的）
+4. 剩下的 batch 30~50 個一組丟給 Gemini 2.5 Flash
+5. JSON 嚴格輸出格式（response_mime_type: application/json），temperature=0
+6. 多 GEMINI_API_KEY 輪替過 free-tier quota (10 RPM, 250 RPD/key)
+7. 每 batch 增量寫回 `polygon-names-zh.json`（crash-safe）
+
+```bash
+PYTHONIOENCODING=utf-8 python scripts/translate_polygon_names_gemini.py [--batch 50] [--rpm 10] [--limit N]
+# ~6 分鐘完成 2540 個翻譯，加上 quota retry 可能 10-15 分鐘
+```
+
+Free tier `gemini-2.5-flash` 每 key 250 RPD，腳本內建 multi-key 輪替（GEMINI_API_KEY=k1,k2 或 GEMINI_API_KEY_2..._10）。
+
+跑完後重啟 dev server，`HistoricalBordersMap.vue` 自動 fetch `polygon-names-zh.json` 並加入 `nameZhOf()` 查序最後一層。
 
 ---
 
