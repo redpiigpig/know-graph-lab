@@ -788,8 +788,15 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False,
                 hresult = process_one_haiku(_haiku_lazy_client, b, src)
                 if hresult["status"] == "ok":
                     result = hresult
+                else:
+                    # Haiku also failed (likely connection / rate-limit cooldown).
+                    # Force the book transient so it stays in queue for next run —
+                    # the Gemini 1000-page failure alone is permanent, but we don't
+                    # want to mark permanent until Haiku has a fair chance.
+                    result["transient"] = True
             except Exception as e:
                 print(f"  ⚠ Haiku fallback failed: {str(e)[:120]}", file=sys.stderr)
+                result["transient"] = True
 
         if quota_hit:
             # All Gemini keys exhausted — fall back to Haiku for this book and the rest.
