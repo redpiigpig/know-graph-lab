@@ -190,7 +190,7 @@
 
     <!-- Selected feature info -->
     <div
-      v-if="selectedFeature && selectedRealm && !editMode"
+      v-if="selectedFeature && (selectedRealm || isHistoricalView) && !editMode"
       class="absolute right-3 top-14 z-10 w-[260px] bg-white border border-gray-200 rounded-xl shadow-md p-3 text-xs"
     >
       <div class="flex items-start justify-between gap-2 mb-1.5">
@@ -219,7 +219,15 @@
         <span class="text-sm font-bold text-amber-900 tabular-nums">{{ formatYearShort(props.currentYear) }}</span>
         <span class="text-xs text-amber-700">{{ currentEpochInfo?.label_zh }}</span>
       </div>
-      <div class="text-[10px] text-amber-600 mt-0.5">⚠ 歷史邊界資料尚未接入；目前仍顯示現代邊界</div>
+      <div class="text-[10px] text-amber-600 mt-0.5">灰底 = 口傳部落／非文字社會</div>
+    </div>
+
+    <!-- Attribution (only in historical view) -->
+    <div
+      v-if="!isModernYear"
+      class="absolute right-3 top-3 z-10 bg-white/90 backdrop-blur rounded-md border border-gray-200 px-2 py-0.5 text-[10px] text-gray-500 pointer-events-none"
+    >
+      © <a href="https://github.com/aourednik/historical-basemaps" target="_blank" class="hover:text-gray-700 pointer-events-auto" rel="noopener">historical-basemaps</a> · CC BY-NC-SA 4.0
     </div>
 
     <!-- Add-anchor banner -->
@@ -386,10 +394,22 @@ interface FeatureEntry {
   countryCode: string
 }
 
+interface HistoricalEntry {
+  feature: any
+  sphereId: string
+  yearFrom: number
+  yearTo: number
+  nameZh: string
+  nameEn: string
+}
+
 const featureEntries = ref<FeatureEntry[]>([])
+const historicalEntries = ref<HistoricalEntry[]>([])
 const paths = ref<PathItem[]>([])
 const realmLabels = ref<LabelItem[]>([])
 const sphereLabels = ref<LabelItem[]>([])
+
+const isHistoricalView = computed(() => props.currentYear < 2000)
 
 const selectedFeature = ref<PathItem | null>(null)
 
@@ -556,6 +576,67 @@ function rebuildAll() {
   const projection = makeProjection()
   const path = geoPath(projection)
 
+  // === Historical view: gray admin_0 base + colored historical polygons ===
+  if (isHistoricalView.value) {
+    const currentYear = props.currentYear
+    // Gray base — only admin_0 (skip all admin_1 detail for historical)
+    const grayBase: PathItem[] = featureEntries.value
+      .filter(e => !e.isAdmin1)
+      .map((entry, i) => {
+        const d = path(entry.feature as any) || ''
+        const title = COUNTRY_NAME_ZH[entry.key] || entry.feature.properties.NAME || entry.key
+        return {
+          id: `gray-${entry.key || 'x'}-${i}`,
+          d, fill: '#E5E7EB', opacity: 0.7,
+          strokeBase: 0.3,
+          isAdmin1: false,
+          title: `${title}（口傳部落／非文字社會）`,
+          spheres: [],
+        } as PathItem
+      })
+      .filter(p => p.d)
+
+    // Historical overlay
+    const histPaths: PathItem[] = historicalEntries.value
+      .filter(h => currentYear >= h.yearFrom && currentYear <= h.yearTo)
+      .map((h, i) => {
+        const sphere = SPHERES.find(s => s.id === h.sphereId)
+        const realm = sphere ? realmById(sphere.realm_id) : undefined
+        const d = path(h.feature as any) || ''
+        return {
+          id: `hist-${h.sphereId}-${i}`,
+          d,
+          fill: realm?.color || '#6B7280',
+          opacity: 0.92,
+          strokeBase: 0.4,
+          isAdmin1: false,
+          realm,
+          title: h.nameZh,
+          spheres: sphere ? [{ name: sphere.name_zh, note: h.nameEn }] : [],
+        } as PathItem
+      })
+      .filter(p => p.d)
+
+    paths.value = [...grayBase, ...histPaths]
+
+    // Realm labels: show only realms that have at least one historical polygon visible
+    const presentRealms = new Set<string>()
+    for (const p of histPaths) if (p.realm) presentRealms.add(p.realm.id)
+    realmLabels.value = REALMS.filter(r => presentRealms.has(r.id)).map(r => {
+      const xy = projection(r.label_lnglat)
+      if (!xy) return null
+      return {
+        id: r.id, x: xy[0], y: xy[1], anchorX: xy[0], anchorY: xy[1],
+        text: r.name_zh, fontSize: 17, hasLeader: false,
+        extraAnchors: [], isLockedByUser: false,
+        mainLeaderHidden: false, isDisplaced: false,
+      }
+    }).filter(Boolean) as LabelItem[]
+    sphereLabels.value = []
+    return
+  }
+
+  // === Modern view (currentYear >= 2000): existing rendering ===
   const drilling = selectedRealm.value
   const sphereColors = drilling ? sphereColorsByRealm(drilling) : null
 
@@ -736,7 +817,16 @@ function onCountryClick(p: PathItem, ev: MouseEvent) {
     addAnchorFor.value = null
     return
   }
-  if (!p.realm) return
+  if (!p.realm) {
+    // gray base or unmapped — clear selection
+    if (selectedFeature.value) selectedFeature.value = null
+    return
+  }
+  // In historical view: just toggle selection info, no drill
+  if (isHistoricalView.value) {
+    selectedFeature.value = selectedFeature.value?.id === p.id ? null : p
+    return
+  }
   if (selectedRealm.value) {
     if (editMode.value) return  // ignore feature select while editing
     if (selectedFeature.value && selectedFeature.value.id === p.id) {
@@ -847,15 +937,25 @@ onMounted(async () => {
   }
 
   try {
-    const [adm0Res, adm1Res, adm1ExtraRes, prefRes] = await Promise.all([
+    const [adm0Res, adm1Res, adm1ExtraRes, prefRes, histRes] = await Promise.all([
       fetch('/maps/ne_50m_admin_0_countries.geojson'),
       fetch('/maps/ne_50m_admin_1_subset.geojson'),
       fetch('/maps/ne_10m_admin_1_extra.geojson'),
       fetch('/maps/cn_tibetan_prefectures.geojson'),
+      fetch('/maps/historical-spheres.geojson'),
     ])
-    const [adm0, adm1, adm1Extra, pref] = await Promise.all([
-      adm0Res.json(), adm1Res.json(), adm1ExtraRes.json(), prefRes.json(),
+    const [adm0, adm1, adm1Extra, pref, hist] = await Promise.all([
+      adm0Res.json(), adm1Res.json(), adm1ExtraRes.json(), prefRes.json(), histRes.json(),
     ])
+
+    historicalEntries.value = (hist.features || []).map((f: any) => ({
+      feature: f,
+      sphereId: f.properties.sphere_id,
+      yearFrom: f.properties.year_from,
+      yearTo: f.properties.year_to,
+      nameZh: f.properties.name_zh,
+      nameEn: f.properties.name_en,
+    }))
 
     const entries: FeatureEntry[] = []
     for (const f of adm0.features) {
@@ -897,5 +997,16 @@ onBeforeUnmount(() => {
 watch(selectedRealm, () => rebuildAll())
 watch(editMode, () => {
   // No need to rebuild paths but template re-renders due to reactive changes.
+})
+watch(() => props.currentYear, (newY, oldY) => {
+  // Reset drill state when crossing the modern/historical boundary
+  const wasHist = (oldY ?? 2026) < 2000
+  const isHist = newY < 2000
+  if (wasHist !== isHist) {
+    selectedRealm.value = null
+    selectedFeature.value = null
+    editMode.value = false
+  }
+  rebuildAll()
 })
 </script>

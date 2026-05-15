@@ -7,9 +7,12 @@
         <span class="text-2xl font-bold text-gray-900 tabular-nums leading-none">{{ formatYear(modelValue) }}</span>
       </div>
 
-      <div v-if="currentEpoch" class="hidden sm:flex items-center gap-1.5 px-2.5 py-1 bg-amber-50 border border-amber-200 rounded-md">
-        <span class="text-[11px] text-amber-700 font-medium">{{ currentEpoch.label_zh }}</span>
-        <span v-if="currentEpoch.label_en" class="text-[10px] text-amber-500">{{ currentEpoch.label_en }}</span>
+      <div v-if="currentMajorEra" class="hidden sm:flex items-center gap-1.5 px-2.5 py-1 bg-amber-100 border border-amber-300 rounded-md">
+        <span class="text-[11px] text-amber-800 font-bold">{{ currentMajorEra.label_zh }}</span>
+        <span class="text-[10px] text-amber-600">{{ currentMajorEra.label_en }}</span>
+      </div>
+      <div v-if="currentEpoch && currentEpoch.label_zh !== currentMajorEra.label_zh" class="hidden md:flex items-center gap-1.5 px-2 py-0.5 bg-amber-50 border border-amber-200 rounded-md">
+        <span class="text-[10px] text-amber-700">{{ currentEpoch.label_zh }}</span>
       </div>
 
       <div class="ml-auto flex items-center gap-1.5">
@@ -98,12 +101,14 @@ import {
   formatYear,
   formatYearShort,
   epochAt,
+  majorEraAt,
 } from '~/data/maps/historical-epochs'
 
 const props = defineProps<{ modelValue: number }>()
 const emit = defineEmits<{ (e: 'update:modelValue', v: number): void }>()
 
 const currentEpoch = computed(() => epochAt(props.modelValue))
+const currentMajorEra = computed(() => majorEraAt(props.modelValue))
 
 const inputEra = ref<'CE' | 'BCE'>(props.modelValue < 0 ? 'BCE' : 'CE')
 const inputYear = ref<number>(

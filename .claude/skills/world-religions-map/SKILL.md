@@ -225,12 +225,51 @@ CulturalSphere 也可在資料層硬編 `label_lnglat?: [lng, lat]` 預設位置
 
 地圖／列表都有底部時間軸，拉動可看任意年份的文化圈狀態。年份規則用**天文年**（含 0 年）：BCE 為負、CE 為正、`9999` 為「持續至今」哨兵。顯示給使用者前用 `formatYear()` / `formatYearShort()` 轉回慣用人類年表（`-3000` → 「3001 BCE」）。
 
+### 600 年制人類史分期（使用者偏好）
+| 區段 | 名稱 |
+|---|---|
+| ≤ -1200 | 新石器／青銅器（按器物時代分） |
+| -1200 ~ -600 | 古風時代 |
+| -600 ~ 0 | 軸心時代 |
+| 0 ~ 600 | 古典時代 |
+| 600 ~ 1200 | 中古時代 |
+| 1200 ~ 1800 | 近世 |
+| 1800+ | 近現代 |
+
+`MAJOR_ERAS` 在 historical-epochs.ts，`majorEraAt(year)` 可查當下大時代。時間軸的次要 epoch 是 600 年內的關鍵轉折（拿破崙戰後、蒙古巔峰…）。
+
 ### 檔案結構
 | 檔案 | 用途 |
 |---|---|
-| [data/maps/historical-epochs.ts](../../../data/maps/historical-epochs.ts) | 18 個預設 epoch（青銅曙光、軸心時代、蒙古、大航海、現代…），刻度標籤與快照按鈕用。`epochAt(year)` 找最近的 epoch；`YEAR_MIN=-4000`、`YEAR_MAX=2026`。 |
-| [data/maps/sphere-history.ts](../../../data/maps/sphere-history.ts) | `SPHERE_HISTORY: Record<sphereId, SphereHistoryEntry[]>` — 每文化圈的歷史期間。目前已填：`mesopotamian-levantine`、`han`。其他 28 個待補。 |
-| [components/maps/TimeAxis.vue](../../../components/maps/TimeAxis.vue) | 滑桿 + 公元前後切換輸入框 + 快照按鈕列。`v-model:number`。 |
+| [data/maps/historical-epochs.ts](../../../data/maps/historical-epochs.ts) | 600 年制 7 大時代 + 25+ 個次要 epoch；`epochAt(y)` / `majorEraAt(y)`。`YEAR_MIN=-4000`、`YEAR_MAX=2026`。 |
+| [data/maps/sphere-history.ts](../../../data/maps/sphere-history.ts) | `SPHERE_HISTORY: Record<sphereId, SphereHistoryEntry[]>` — 41 個文化圈全有歷史期間資料（兩河、漢地、埃及、波斯、孔雀、羅馬、奧斯曼、明清…）。 |
+| [components/maps/TimeAxis.vue](../../../components/maps/TimeAxis.vue) | 滑桿 + 公元前後切換輸入框 + 快照按鈕 + 大時代徽章。`v-model:number`。 |
+| [scripts/build_historical_layer.mjs](../../../scripts/build_historical_layer.mjs) | 預處理：讀 17 個 historical-basemaps 快照 → 過濾 + 加 sphere_id → 輸出 `historical-spheres.geojson`。內嵌 ~300 條 state-name → sphere 映射表。 |
+| `public/maps/historical-spheres.geojson` | **產出檔，5MB / 734 features**，含 17 個快照的歷史邊界。每 feature 有 `sphere_id`、`year_from`、`year_to`、`name_zh`、`name_en`。 |
+
+### 地圖渲染：兩種模式
+WorldThematicMap 依 `currentYear` 在兩模式切換：
+
+**現代模式**（year >= 2000）：原本的 NE admin_0 + admin_1 + 鑽取功能。
+
+**歷史模式**（year < 2000）：
+- admin_0 邊界當灰底（`#E5E7EB` 70% opacity）— 代表「口傳部落／非文字社會」基底
+- 跳過所有 admin_1 細節（不適用於歷史）
+- 疊加 historical-spheres.geojson 的 features，過濾 `year_from <= currentYear <= year_to`，按 `sphere_id` 對應 realm 色染色
+- 禁用鑽取（點 polygon 只顯示 tooltip）
+- 右上角顯示 CC BY-NC-SA attribution
+
+切換邊界時 `selectedRealm` / `selectedFeature` / `editMode` 自動重置。
+
+### Historical-basemaps 快照
+17 個快照：bc4000, bc2000, bc1500, bc1000, bc500, bc323, bc100, 200, 500, 800, 1000, 1100, 1279, 1500, 1815, 1914, 2000。每個 feature 的 `year_to` = 下一個快照 -1，最後一個為 9999。
+
+**重新跑預處理**：
+1. 編輯 `scripts/build_historical_layer.mjs` 內的 `MAP` 表（state-name → sphere）
+2. 確保 `C:\tmp\hbm-sample\` 有原檔（若沒有，重新從 GitHub 下載）
+3. 跑 `node scripts/build_historical_layer.mjs`
+4. 輸出寫入 `public/maps/historical-spheres.geojson`
+5. 腳本末會列出最常見未映射的 name，可挑選加入
 
 ### SphereHistoryEntry schema
 ```ts
@@ -247,15 +286,16 @@ CulturalSphere 也可在資料層硬編 `label_lnglat?: [lng, lat]` 預設位置
 ```
 
 ### 加新 sphere 的歷史資料
-1. 在 `SPHERE_HISTORY` 加 `sphereId: [...]` 陣列
+1. 在 [data/maps/sphere-history.ts](../../../data/maps/sphere-history.ts) `SPHERE_HISTORY` 加 `sphereId: [...]` 陣列
 2. 按時間順序排列（會直接顯示在列表的縱向時間軸）
 3. `states` 必填，`places` `faiths` `note` 可選
 4. 列表 UI 自動依 `currentYear` 高亮當下期間（琥珀色圓點 + 文字）
 
 ### 已知限制
-- WorldThematicMap **尚未**依 currentYear 變更邊界——目前僅顯示「年代徽章 + 警示文字」。
-- 待接：`aourednik/historical-basemaps`（CC，123 BCE → 2017 每 100 年）+ 手繪 4000-500 BCE 早期文明核心區（蘇美/埃及/印度河/夏商/米諾斯…）。
-- 史前區設計為 `sphere_id: 'oral-tribal'` 淺灰底，4000 BCE 時除幾個核心文明區外整地球都是這色。
+- Snapshot-based 邊界：拖過 200 CE 邊界時，全圖 polygon 會「跳」一次。將來可加 polygon-level valid_from/valid_to 與相鄰快照融合。
+- ~80% 的史前小酋邦與部落（hunter-gatherers）標籤未上色，由灰底代表。`scripts/build_historical_layer.mjs` 末會列出未映射名稱，可漸進補。
+- USA Mesoamerican 西南州延伸、ETH 邊界州、SDN Darfur 等近代延伸區仍如舊，不在歷史 layer 處理範圍。
+- 歷史邊界用 historical-basemaps 數據（CC BY-NC-SA 4.0），僅限非商業使用。商業化前需另外處理授權。
 
 ---
 
