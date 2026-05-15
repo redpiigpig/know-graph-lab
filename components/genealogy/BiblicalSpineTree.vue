@@ -838,7 +838,12 @@ const cv = computed(() => {
     for (const n of allNodes) expansionNodeIds.add(n.id)
     const minX = Math.min(...allNodes.map(n => n.x)) - 8
     const maxX = Math.max(...allNodes.map(n => n.x + n.w)) + 8
-    const minY = Math.min(...allNodes.map(n => n.y)) - 8
+    // 重要：bbox.y1 跳過 expansion 第一列（子女列）— 否則此 bbox 會橫掃同代的
+    // marriage Y，把其他家庭（例：Levi↔米加）的婚姻線一起遮掉。
+    // 用 firstY（第一列子女頂端） + NH（卡高）作為 bbox 起點，這樣第一列子女
+    // 本身仍渲染為 isExpansionNode（不在 bbox 占空裡），bbox 只負責 occlude
+    // 第二列以下與 expansion 重疊的旁系內容。
+    const minY = firstY > 0 ? firstY + NH : Math.min(...allNodes.map(n => n.y)) - 8
     return {
       nodes: allNodes, drops: allDrops, hbars: allHbars, marriages: allMarriages,
       bbox: { x1: minX, y1: minY, x2: maxX, y2: maxY + 8 },
@@ -1730,8 +1735,12 @@ const cv = computed(() => {
     }
     for (const d of drops) {
       if (!d.isExpansionLine) continue
+      // 重要：drop 的 TOP 經常正好是父輩 marriage Y（drop 從婚姻線中點往下接 children
+      // T-bar）。如果往上 pad 8px，會剛好遮到 marriage line 本身 → marriage 被誤判
+      // hidden。修法：top y1 至少比實際 top 多 4px（不往上 pad），讓 marriage line
+      // 不會誤命中此 exShape；x/bottom 維持 8px pad 給視覺呼吸空間。
       exShapes.push({
-        x1: d.x - OCCL_PAD, y1: Math.min(d.y1, d.y2) - OCCL_PAD,
+        x1: d.x - OCCL_PAD, y1: Math.min(d.y1, d.y2) + 4,
         x2: d.x + OCCL_PAD, y2: Math.max(d.y1, d.y2) + OCCL_PAD,
       })
     }
