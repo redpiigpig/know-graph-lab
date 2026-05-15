@@ -456,20 +456,20 @@ export const SPHERES: CulturalSphere[] = [
     ],
   },
   {
-    id: 'mongolic-manchurian', name_zh: '蒙古-滿洲文化圈', name_en: 'Mongolic-Manchurian', realm_id: 'northern',
+    id: 'mongolic-tungusic', name_zh: '蒙古-通古斯文化圈', name_en: 'Mongolic-Tungusic', realm_id: 'northern',
     members: [
       { iso_a3: 'MNG', label: '蒙古', order: 1, note: '回鶻式蒙古文創制' },
-      { iso_a3: 'CHN', admin1: 'Inner-Mongolia-Manchuria', label: '中國（內蒙古自治區與東北）', order: 2, note: '滿文創制' },
+      { iso_a3: 'CHN', admin1: 'Inner-Mongolia-Manchuria', label: '中國（內蒙古自治區與東北三省）', order: 2, note: '滿文創制；女真／滿族原鄉' },
       { iso_a3: 'RUS', admin1: 'Buryatia', label: '俄羅斯（布里亞特共和國）', order: 3 },
       { iso_a3: 'RUS', admin1: 'Tuva', label: '俄羅斯（圖瓦共和國）', order: 4 },
       { iso_a3: 'RUS', admin1: 'Kalmykia', label: '俄羅斯（卡爾梅克共和國）', order: 5 },
-      { iso_a3: 'RUS', admin1: 'Far-East-South', label: '俄羅斯（遠東南部）', order: 6, is_extension: true },
     ],
   },
   {
     id: 'siberian', name_zh: '西伯利亞文化圈', name_en: 'Siberian', realm_id: 'northern',
     members: [
       { iso_a3: 'RUS', admin1: 'Siberia-Arctic', label: '俄羅斯極地與北亞森林區', order: 1, note: '16 世紀後俄羅斯哥薩克東擴才全面進入信史' },
+      { iso_a3: 'RUS', admin1: 'Far-East', label: '俄羅斯遠東（阿穆爾／外貝加爾／濱海／哈巴羅夫斯克／猶太自治州／馬加丹／薩哈林）', order: 2, is_extension: true, note: '土著通古斯今日佔比 <5%，已俄化' },
     ],
   },
 
@@ -667,11 +667,11 @@ export const ADMIN1_SPHERE: Record<string, string> = {
   'CN-QH': 'tibetan',  // 青海（藏族高原）
   // 圖蘭-突厥文化圈（北方界域）
   'CN-XJ': 'turanian-turkic',  // 新疆維吾爾自治區
-  // 蒙古-滿洲文化圈（北方界域）
-  'CN-NM': 'mongolic-manchurian',  // 內蒙古自治區
-  'CN-HL': 'mongolic-manchurian',  // 黑龍江
-  'CN-JL': 'mongolic-manchurian',  // 吉林
-  'CN-LN': 'mongolic-manchurian',  // 遼寧
+  // 蒙古-通古斯文化圈（北方界域）— 滿族原鄉與文化遺緒（自治縣群、清三陵、長白山）
+  'CN-NM': 'mongolic-tungusic',  // 內蒙古自治區
+  'CN-HL': 'mongolic-tungusic',  // 黑龍江（赫哲/鄂倫春族 + 女真原鄉）
+  'CN-JL': 'mongolic-tungusic',  // 吉林（伊通滿族自治縣 + 長白山祖先聖山 + 延邊）
+  'CN-LN': 'mongolic-tungusic',  // 遼寧（六個滿族自治縣 + 清三陵 + 瀋陽故宮）
   // 漢地文化圈（東方界域）— 其餘 24 省 / 直轄市 / 自治區
   'CN-GS': 'han', 'CN-GX': 'han', 'CN-GZ': 'han', 'CN-CQ': 'han', 'CN-BJ': 'han',
   'CN-FJ': 'han', 'CN-AH': 'han', 'CN-GD': 'han', 'CN-HI': 'han', 'CN-NX': 'han',
@@ -686,11 +686,18 @@ export const ADMIN1_SPHERE: Record<string, string> = {
   'RU-STA': 'caucasus', 'RU-KDA': 'caucasus',
   // 中歐文化圈（西方界域）
   'RU-KGD': 'central-european',  // 加里寧格勒
-  // 蒙古-滿洲文化圈（北方界域）
-  'RU-BU': 'mongolic-manchurian', 'RU-TY': 'mongolic-manchurian', 'RU-KL': 'mongolic-manchurian',
-  'RU-AMU': 'mongolic-manchurian', 'RU-ZAB': 'mongolic-manchurian', 'RU-PRI': 'mongolic-manchurian',
-  'RU-YEV': 'mongolic-manchurian', 'RU-KHA': 'mongolic-manchurian',
-  'RU-MAG': 'mongolic-manchurian', 'RU-SAK': 'mongolic-manchurian',
+  // 蒙古-通古斯文化圈（北方界域）— 藏傳佛教 + 蒙古/Oirat 認同核心
+  'RU-BU': 'mongolic-tungusic',   // 布里亞特共和國
+  'RU-TY': 'mongolic-tungusic',   // 圖瓦共和國（Turkic 但藏傳佛教，與蒙古文化共生）
+  'RU-KL': 'mongolic-tungusic',   // 卡爾梅克共和國（Oirat Mongol）
+  // 西伯利亞文化圈（北方界域）— 俄羅斯遠東 19 世紀後哥薩克殖民、東正教覆蓋
+  'RU-AMU': 'siberian',  // 阿穆爾州
+  'RU-ZAB': 'siberian',  // 外貝加爾邊疆區
+  'RU-PRI': 'siberian',  // 濱海邊疆區
+  'RU-YEV': 'siberian',  // 猶太自治州
+  'RU-KHA': 'siberian',  // 哈巴羅夫斯克邊疆區
+  'RU-MAG': 'siberian',  // 馬加丹州
+  'RU-SAK': 'siberian',  // 薩哈林州
   // 北極文化圈（北美界域）
   'RU-CHU': 'arctic',  // 楚科奇
   'RU-SA': 'arctic',   // 薩哈/雅庫特
