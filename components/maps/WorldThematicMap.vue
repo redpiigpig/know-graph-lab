@@ -107,6 +107,24 @@
             />
           </g>
 
+          <!-- Main leader anchor — clickable in editMode to toggle leader visibility -->
+          <g v-if="editMode">
+            <template v-for="lbl in sphereLabels" :key="`main-anchor-${lbl.id}`">
+              <circle
+                v-if="lbl.isDisplaced"
+                :cx="lbl.anchorX"
+                :cy="lbl.anchorY"
+                :r="5 / transform.k"
+                :fill="lbl.mainLeaderHidden ? 'transparent' : '#DC2626'"
+                stroke="#DC2626"
+                :stroke-width="1.5 / transform.k"
+                :stroke-dasharray="lbl.mainLeaderHidden ? `${3/transform.k} ${2/transform.k}` : ''"
+                class="cursor-pointer"
+                @click.stop="toggleMainLeader(lbl.id)"
+              />
+            </template>
+          </g>
+
           <!-- Labels (text + drag handle) -->
           <g v-for="lbl in sphereLabels" :key="lbl.id" :transform="`translate(${lbl.x},${lbl.y})`">
             <!-- editMode: subtle dashed background as drag affordance -->
@@ -244,7 +262,7 @@
         </div>
       </div>
       <div class="text-[10px] text-gray-400 mt-2 leading-relaxed">
-        {{ editMode ? '拖標籤調位置；＋線可新增引線；點紅錨刪除' : '點國家／行政區看名稱；點海洋退回八大界域' }}
+        {{ editMode ? '拖標籤改位置；＋線新增引線；點紅錨刪除；點主錨切換主引線' : '點國家／行政區看名稱；點海洋退回八大界域' }}
       </div>
     </div>
 
@@ -331,6 +349,10 @@ interface LabelItem {
   extraAnchors: { x: number; y: number }[]
   /** True if user manually moved the label position. Skip auto-collision relax. */
   isLockedByUser: boolean
+  /** User toggled the main centroid→label leader off (only in editMode UI) */
+  mainLeaderHidden: boolean
+  /** Whether displacement is significant enough to warrant a main leader (used when hidden, to know it COULD have one) */
+  isDisplaced: boolean
 }
 
 interface FeatureEntry {
@@ -348,7 +370,7 @@ const sphereLabels = ref<LabelItem[]>([])
 const selectedFeature = ref<PathItem | null>(null)
 
 // ----- Edit mode + label overrides -----
-type LabelOverride = { lnglat?: [number, number]; extraAnchors?: [number, number][] }
+type LabelOverride = { lnglat?: [number, number]; extraAnchors?: [number, number][]; hideMainLeader?: boolean }
 type Overrides = Record<string, Record<string, LabelOverride>>
 const STORAGE_KEY = 'maps:wr:label-overrides:v1'
 const overrides = ref<Overrides>({})
@@ -392,6 +414,20 @@ function removeExtraAnchor(sphereId: string, idx: number) {
   if (!ovr?.extraAnchors) return
   ovr.extraAnchors.splice(idx, 1)
   if (!ovr.extraAnchors.length) delete ovr.extraAnchors
+  saveOverrides()
+  rebuildAll()
+}
+function toggleMainLeader(sphereId: string) {
+  const realmId = selectedRealm.value
+  if (!realmId) return
+  if (!overrides.value[realmId]) overrides.value[realmId] = {}
+  if (!overrides.value[realmId][sphereId]) overrides.value[realmId][sphereId] = {}
+  const cur = overrides.value[realmId][sphereId].hideMainLeader === true
+  if (cur) {
+    delete overrides.value[realmId][sphereId].hideMainLeader
+  } else {
+    overrides.value[realmId][sphereId].hideMainLeader = true
+  }
   saveOverrides()
   rebuildAll()
 }
@@ -532,6 +568,7 @@ function rebuildAll() {
       id: r.id, x: xy[0], y: xy[1], anchorX: xy[0], anchorY: xy[1],
       text: r.name_zh, fontSize: 17, hasLeader: false,
       extraAnchors: [], isLockedByUser: false,
+      mainLeaderHidden: false, isDisplaced: false,
     }
   }).filter(Boolean) as LabelItem[]
 
@@ -581,6 +618,8 @@ function rebuildAll() {
         anchorX: anchorXy[0], anchorY: anchorXy[1],
         text: s.name_zh, fontSize: 12, hasLeader: false,
         extraAnchors, isLockedByUser: userLocked,
+        mainLeaderHidden: ovr.hideMainLeader === true,
+        isDisplaced: false,
       } as LabelItem
     }).filter(Boolean) as LabelItem[]
 
@@ -590,6 +629,11 @@ function rebuildAll() {
     }
     // Auto-relax overlapping (skip user-locked labels)
     relaxLabelCollisions(sphereLabels.value)
+    // Apply hideMainLeader override after relaxation (which may have introduced displacement)
+    for (const l of sphereLabels.value) {
+      l.isDisplaced = Math.hypot(l.x - l.anchorX, l.y - l.anchorY) > 6
+      if (l.mainLeaderHidden) l.hasLeader = false
+    }
   } else {
     sphereLabels.value = []
   }

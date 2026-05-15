@@ -253,7 +253,6 @@ export const SPHERES: CulturalSphere[] = [
   },
   {
     id: 'gallic-french', name_zh: '高盧-法蘭西文化圈', name_en: 'Gallic-French', realm_id: 'western',
-    label_lnglat: [-3, 47],  // 拉到比斯開灣，避開歐陸文字打架
     members: [
       { iso_a3: 'FRA', label: '法國', order: 1, note: '歐洲本土，羅馬化高盧' },
     ],
@@ -1108,15 +1107,18 @@ function hslToHex(h: number, s: number, l: number): string {
 }
 
 /** Generate a sphere shade in the realm's color family.
- *  idx in 0..total-1 — varies lightness ±14% and a small hue shift ±10° around the realm hex. */
+ *  idx in 0..total-1 — varies lightness ±24% and hue ±28° around the realm hex,
+ *  with alternating saturation jitter for stronger neighbour contrast. */
 export function shadeForSphere(realmHex: string, idx: number, total: number): string {
   if (total <= 1) return realmHex
   const { h, s, l } = hexToHsl(realmHex)
   const t = idx / (total - 1)
-  const newL = Math.max(28, Math.min(72, l - 14 + t * 28))
-  const hueShift = -10 + t * 20
+  const newL = Math.max(26, Math.min(78, l - 24 + t * 48))
+  const hueShift = -28 + t * 56
   const newH = (h + hueShift + 360) % 360
-  return hslToHex(newH, s, newL)
+  // alternate saturation to push adjacent indices apart visually
+  const newS = Math.max(35, Math.min(92, s + (idx % 2 === 0 ? -8 : 12)))
+  return hslToHex(newH, newS, newL)
 }
 
 /** Build a per-realm sphere->color map keyed by sphere id. */
