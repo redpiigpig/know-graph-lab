@@ -431,8 +431,26 @@ interface HistoricalEntry {
   nameEn: string
 }
 
+interface SphereFillEntry {
+  feature: any
+  sphereId: string
+  iso: string
+  stateName: string
+  yearFrom: number
+  yearTo: number
+}
+
+interface StateOutlineEntry {
+  feature: any
+  name: string
+  yearFrom: number
+  yearTo: number
+}
+
 const featureEntries = ref<FeatureEntry[]>([])
 const historicalEntries = ref<HistoricalEntry[]>([])
+const sphereFillEntries = ref<SphereFillEntry[]>([])
+const stateOutlineEntries = ref<StateOutlineEntry[]>([])
 const coastlineFeatures = ref<any[]>([])
 const paths = ref<PathItem[]>([])
 const realmLabels = ref<LabelItem[]>([])
@@ -622,105 +640,89 @@ function rebuildAll() {
   const projection = makeProjection()
   const path = geoPath(projection)
 
-  // === Historical view ===
-  // v3 架構：
-  //   Layer A — 現代 admin_0 polygons 填 sphere 色（按 country-timeline 查當下 sphere）
-  //             modern admin_0 邊界 stroke 隱藏，讓「文化圈整片」呈現
-  //   Layer B — 歷史 polygons（古代帝國／城邦）只畫 outline，顯示「曾統治過的國界」
-  //   文化圈跟「地理區域」綁定 → 阿拉伯帝國 polygon 橫跨多 sphere 不會覆寫
+  // === Historical view (v5: geometric intersection) ===
+  // Layer A — 現代 admin_0 灰底（陸地基底，所有陸地都呈淺灰）
+  // Layer B — sphere fill：historical state ∩ modern country 的細片，按地理區 sphere 上色
+  // Layer C — 海岸線（黑線陸/海分界）
+  // Layer D — 古代國界 outline（深色 + 粗）
   if (isHistoricalView.value) {
     const currentYear = props.currentYear
     const drillingHist = selectedRealm.value
     const sphereColorsHist = drillingHist ? sphereColorsByRealm(drillingHist) : null
 
-    // ===== Layer A：sphere 填色 (modern admin_0 + country timeline) =====
-    const fillPaths: PathItem[] = featureEntries.value
+    // ===== Layer A：陸地灰底 =====
+    const landBase: PathItem[] = featureEntries.value
       .filter(e => !e.isAdmin1)
       .map((entry, i) => {
-        const sphereId = sphereForCountryAtYear(entry.countryCode, currentYear)
-        const sphere = sphereId ? SPHERES.find(s => s.id === sphereId) : undefined
-        const realm = sphere ? realmById(sphere.realm_id) : undefined
         const d = path(entry.feature as any) || ''
         const countryZh = COUNTRY_NAME_ZH[entry.key] || entry.feature.properties.NAME || entry.key
-
-        let fill = '#E5E7EB'  // 預設灰底（口傳部落）
-        let opacity = 0.7
-
-        if (sphereId && realm) {
-          if (drillingHist) {
-            if (realm.id === drillingHist) {
-              // 鑽入該界域：用 sphere shade
-              fill = sphereColorsHist?.[sphereId] || realm.color
-              opacity = 1
-            } else {
-              // 其他界域：用 realm 色但 dim
-              fill = realm.color
-              opacity = 0.3
-            }
-          } else {
-            // 非鑽取：用 realm 色（與現代視圖一致）
-            fill = realm.color
-            opacity = 1
-          }
-        }
-
-        const title = sphereId
-          ? `${countryZh}（${sphere?.name_zh || ''}）`
-          : `${countryZh}（口傳部落／非文字社會）`
         return {
-          id: `fill-${entry.key || 'x'}-${i}`,
-          d, fill, opacity,
-          // 古代視圖：移除現代國界 stroke；改用 NE coastline 顯海岸線
-          strokeBase: 0,
-          strokeOpacity: 0,
+          id: `land-${entry.key || 'x'}-${i}`,
+          d, fill: '#E5E7EB', opacity: 0.5,
+          strokeBase: 0, strokeOpacity: 0,
           isAdmin1: false,
-          realm,
-          title,
-          spheres: sphere ? [{ name: sphere.name_zh }] : [],
-        } as PathItem
-      })
-      .filter(p => p.d)
-
-    // ===== Layer B：海岸線（NE coastline LineString）=====
-    // 黑色細線：陸地與海洋的分界
-    const coastPaths: PathItem[] = coastlineFeatures.value.map((f, i) => {
-      const d = path(f) || ''
-      return {
-        id: `coast-${i}`,
-        d,
-        fill: 'none',
-        opacity: 1,
-        strokeBase: 0.5,
-        strokeColor: '#000000',
-        strokeOpacity: 0.7,
-        isAdmin1: false,
-        title: '',
-        spheres: [],
-      } as PathItem
-    }).filter(p => p.d)
-
-    // ===== Layer C：古代國界 outline overlay =====
-    // 全部 active 歷史 polygons 都畫 outline（顯示「曾統治過的疆域」）
-    const borderPaths: PathItem[] = historicalEntries.value
-      .filter(h => currentYear >= h.yearFrom && currentYear <= h.yearTo)
-      .map((h, i) => {
-        const d = path(h.feature as any) || ''
-        return {
-          id: `border-${i}`,
-          d,
-          fill: 'none',
-          opacity: 1,
-          strokeBase: 1.5,
-          strokeColor: '#111827',
-          strokeOpacity: 0.85,
-          isAdmin1: false,
-          title: h.nameZh,
+          title: `${countryZh}（口傳部落／非文字社會）`,
           spheres: [],
         } as PathItem
       })
       .filter(p => p.d)
 
-    paths.value = [...fillPaths, ...coastPaths, ...borderPaths]
+    // ===== Layer B：sphere fill（split features）=====
+    const fillPaths: PathItem[] = sphereFillEntries.value
+      .filter(e => currentYear >= e.yearFrom && currentYear <= e.yearTo)
+      .map((e, i) => {
+        const sphere = SPHERES.find(s => s.id === e.sphereId)
+        const realm = sphere ? realmById(sphere.realm_id) : undefined
+        const d = path(e.feature) || ''
+        let fill = realm?.color || '#9CA3AF'
+        let opacity = 1
+        if (drillingHist) {
+          if (realm?.id === drillingHist) {
+            fill = sphereColorsHist?.[e.sphereId] || realm.color
+            opacity = 1
+          } else {
+            opacity = 0.3
+          }
+        }
+        const countryZh = COUNTRY_NAME_ZH[e.iso] || e.iso
+        return {
+          id: `fill-${i}`,
+          d, fill, opacity,
+          strokeBase: 0, strokeOpacity: 0,
+          isAdmin1: false,
+          realm,
+          title: `${countryZh}・${e.stateName}（${sphere?.name_zh || ''}）`,
+          spheres: sphere ? [{ name: sphere.name_zh }] : [],
+        } as PathItem
+      })
+      .filter(p => p.d)
+
+    // ===== Layer C：海岸線 =====
+    const coastPaths: PathItem[] = coastlineFeatures.value.map((f, i) => {
+      const d = path(f) || ''
+      return {
+        id: `coast-${i}`,
+        d, fill: 'none', opacity: 1,
+        strokeBase: 0.5, strokeColor: '#000000', strokeOpacity: 0.7,
+        isAdmin1: false, title: '', spheres: [],
+      } as PathItem
+    }).filter(p => p.d)
+
+    // ===== Layer D：古代國界 outline =====
+    const borderPaths: PathItem[] = stateOutlineEntries.value
+      .filter(s => currentYear >= s.yearFrom && currentYear <= s.yearTo)
+      .map((s, i) => {
+        const d = path(s.feature) || ''
+        return {
+          id: `border-${i}`,
+          d, fill: 'none', opacity: 1,
+          strokeBase: 1.5, strokeColor: '#111827', strokeOpacity: 0.85,
+          isAdmin1: false, title: s.name, spheres: [],
+        } as PathItem
+      })
+      .filter(p => p.d)
+
+    paths.value = [...landBase, ...fillPaths, ...coastPaths, ...borderPaths]
 
     // ===== 標籤層 =====
     if (drillingHist) {
@@ -1086,26 +1088,34 @@ onMounted(async () => {
   }
 
   try {
-    const [adm0Res, adm1Res, adm1ExtraRes, prefRes, histRes, coastRes] = await Promise.all([
+    const [adm0Res, adm1Res, adm1ExtraRes, prefRes, fillsRes, statesRes, coastRes] = await Promise.all([
       fetch('/maps/ne_50m_admin_0_countries.geojson'),
       fetch('/maps/ne_50m_admin_1_subset.geojson'),
       fetch('/maps/ne_10m_admin_1_extra.geojson'),
       fetch('/maps/cn_tibetan_prefectures.geojson'),
-      fetch('/maps/historical-spheres.geojson'),
+      fetch('/maps/historical-sphere-fills.geojson'),
+      fetch('/maps/historical-states.geojson'),
       fetch('/maps/ne_50m_coastline.geojson'),
     ])
-    const [adm0, adm1, adm1Extra, pref, hist, coast] = await Promise.all([
-      adm0Res.json(), adm1Res.json(), adm1ExtraRes.json(), prefRes.json(), histRes.json(), coastRes.json(),
+    const [adm0, adm1, adm1Extra, pref, fills, states, coast] = await Promise.all([
+      adm0Res.json(), adm1Res.json(), adm1ExtraRes.json(), prefRes.json(),
+      fillsRes.json(), statesRes.json(), coastRes.json(),
     ])
     coastlineFeatures.value = coast.features || []
 
-    historicalEntries.value = (hist.features || []).map((f: any) => ({
+    sphereFillEntries.value = (fills.features || []).map((f: any) => ({
       feature: f,
       sphereId: f.properties.sphere_id,
+      iso: f.properties.iso_a3,
+      stateName: f.properties.state_name,
       yearFrom: f.properties.year_from,
       yearTo: f.properties.year_to,
-      nameZh: f.properties.name_zh,
-      nameEn: f.properties.name_en,
+    }))
+    stateOutlineEntries.value = (states.features || []).map((f: any) => ({
+      feature: f,
+      name: f.properties.name,
+      yearFrom: f.properties.year_from,
+      yearTo: f.properties.year_to,
     }))
 
     const entries: FeatureEntry[] = []
