@@ -1220,19 +1220,20 @@ export function shadeForSphere(realmHex: string, idx: number, total: number): st
 
 /**
  * Build a per-realm sphere->color map keyed by sphere id.
- * 只計算「現代仍有效」的 sphere（排除 is_historical: true 的 ancient sphere），
- * 確保現代視圖顏色穩定。Ancient sphere 在歷史視圖中用 realm.color 直接渲染。
+ * 現代 sphere 與歷史性 sphere 分開分配色彩 — 保持現代色穩定，
+ * 同時讓每個歷史 sphere 也有獨立可辨識的色階。
  */
 export function sphereColorsByRealm(realm: RealmId): Record<string, string> {
   const r = realmById(realm)
-  const modernList = SPHERES.filter(s => s.realm_id === realm && !s.is_historical)
   const out: Record<string, string> = {}
+  const modernList = SPHERES.filter(s => s.realm_id === realm && !s.is_historical)
   modernList.forEach((s, i) => {
     out[s.id] = shadeForSphere(r.color, i, modernList.length)
   })
-  // Ancient spheres fall back to realm base color
-  SPHERES.filter(s => s.realm_id === realm && s.is_historical).forEach(s => {
-    out[s.id] = r.color
+  // 歷史性 sphere 用獨立的索引範圍分配色階，與現代色不重疊（也不衝突）
+  const historicalList = SPHERES.filter(s => s.realm_id === realm && s.is_historical)
+  historicalList.forEach((s, i) => {
+    out[s.id] = shadeForSphere(r.color, i, historicalList.length)
   })
   return out
 }

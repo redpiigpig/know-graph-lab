@@ -275,7 +275,7 @@
     </div>
 
     <!-- Legend (drilled) -->
-    <div v-else class="absolute left-3 bottom-3 bg-white/95 backdrop-blur rounded-lg border border-gray-200 px-3 py-2 shadow-sm max-w-[320px]">
+    <div v-else class="absolute left-3 bottom-3 bg-white/95 backdrop-blur rounded-lg border border-gray-200 px-3 py-2 shadow-sm max-w-[340px]">
       <div class="flex items-center gap-2 mb-2">
         <button
           @click="exitRealm"
@@ -285,9 +285,29 @@
         <span class="text-[12px] font-semibold text-gray-900">{{ selectedRealmInfo?.name_zh }}</span>
       </div>
       <div class="grid grid-cols-1 gap-y-1">
-        <div v-for="s in sphereLegendItems" :key="s.id" class="flex items-start gap-1.5 text-[11px]">
-          <span class="inline-block w-3 h-3 rounded-sm flex-shrink-0 mt-0.5" :style="{ background: s.color }"></span>
-          <span class="text-gray-700">{{ s.name_zh }}</span>
+        <div
+          v-for="s in sphereLegendItems"
+          :key="s.id"
+          class="flex items-start gap-1.5 text-[11px] leading-tight"
+          :class="!s.is_active && 'opacity-55'"
+          :title="s.is_active ? '當前年份有效' : '當前年份未活躍'"
+        >
+          <span
+            class="inline-block w-3 h-3 rounded-sm flex-shrink-0 mt-0.5"
+            :style="{ background: s.color }"
+          ></span>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-baseline gap-1 flex-wrap">
+              <span class="text-gray-800">{{ s.name_zh }}</span>
+              <span
+                v-if="s.is_historical"
+                class="text-[9px] px-1 rounded-sm bg-amber-100 text-amber-700 border border-amber-200"
+              >歷史</span>
+            </div>
+            <div v-if="s.is_historical && (s.valid_from !== undefined || s.valid_to !== undefined)" class="text-[9px] text-gray-400 tabular-nums mt-0.5">
+              {{ formatValidity(s) }}
+            </div>
+          </div>
         </div>
       </div>
       <div class="text-[10px] text-gray-400 mt-2 leading-relaxed">
@@ -335,6 +355,7 @@ import {
   realmById,
   spheresByRealm,
   activeSpheresByRealm,
+  isSphereActiveAt,
   spheresForCountry,
   primarySphereForCountryInRealm,
   sphereForAdmin1,
@@ -520,10 +541,27 @@ const currentEpochInfo = computed(() => epochAt(props.currentYear))
 const sphereLegendItems = computed(() => {
   if (!selectedRealm.value) return []
   const colors = sphereColorsByRealm(selectedRealm.value)
-  return activeSpheresByRealm(selectedRealm.value, props.currentYear).map(s => ({
-    id: s.id, name_zh: s.name_zh, color: colors[s.id] || realmById(selectedRealm.value!).color,
+  // 顯示全部 sphere，讓使用者看到該界域的完整結構（含已退場的歷史性 sphere）。
+  // 是否為當前年份「有效」由 is_active 旗標決定，UI 上以不同樣式呈現。
+  return spheresByRealm(selectedRealm.value).map(s => ({
+    id: s.id,
+    name_zh: s.name_zh,
+    color: colors[s.id] || realmById(selectedRealm.value!).color,
+    is_historical: s.is_historical === true,
+    is_active: isSphereActiveAt(s, props.currentYear),
+    valid_from: s.valid_from,
+    valid_to: s.valid_to,
   }))
 })
+
+function formatValidity(s: { valid_from?: number; valid_to?: number }): string {
+  const from = s.valid_from
+  const to = s.valid_to
+  if (from === undefined && to === undefined) return ''
+  const fromStr = from === undefined ? '?' : formatYearShort(from)
+  const toStr = to === undefined || to >= 9999 ? '至今' : formatYearShort(to)
+  return `${fromStr} – ${toStr}`
+}
 
 function getAdm0Code(props: any): string {
   const iso = props.ISO_A3
@@ -580,6 +618,9 @@ function rebuildAll() {
   // === Historical view: gray admin_0 base + colored historical polygons ===
   if (isHistoricalView.value) {
     const currentYear = props.currentYear
+    const drillingHist = selectedRealm.value
+    const sphereColorsHist = drillingHist ? sphereColorsByRealm(drillingHist) : null
+
     // Gray base — only admin_0 (skip all admin_1 detail for historical)
     const grayBase: PathItem[] = featureEntries.value
       .filter(e => !e.isAdmin1)
@@ -604,11 +645,21 @@ function rebuildAll() {
         const sphere = SPHERES.find(s => s.id === h.sphereId)
         const realm = sphere ? realmById(sphere.realm_id) : undefined
         const d = path(h.feature as any) || ''
+        let fill = realm?.color || '#6B7280'
+        let opacity = 0.92
+        if (drillingHist) {
+          if (realm?.id === drillingHist) {
+            // 鑽入該界域：用 sphere-specific shade
+            fill = (sphere && sphereColorsHist) ? sphereColorsHist[sphere.id] : (realm?.color || fill)
+            opacity = 1
+          } else {
+            // 其他界域：減弱
+            opacity = 0.3
+          }
+        }
         return {
           id: `hist-${h.sphereId}-${i}`,
-          d,
-          fill: realm?.color || '#6B7280',
-          opacity: 0.92,
+          d, fill, opacity,
           strokeBase: 0.4,
           isAdmin1: false,
           realm,
@@ -621,18 +672,22 @@ function rebuildAll() {
     paths.value = [...grayBase, ...histPaths]
 
     // Realm labels: show only realms that have at least one historical polygon visible
+    // 鑽取時不顯示其他界域標籤
     const presentRealms = new Set<string>()
     for (const p of histPaths) if (p.realm) presentRealms.add(p.realm.id)
-    realmLabels.value = REALMS.filter(r => presentRealms.has(r.id)).map(r => {
-      const xy = projection(r.label_lnglat)
-      if (!xy) return null
-      return {
-        id: r.id, x: xy[0], y: xy[1], anchorX: xy[0], anchorY: xy[1],
-        text: r.name_zh, fontSize: 17, hasLeader: false,
-        extraAnchors: [], isLockedByUser: false,
-        mainLeaderHidden: false, isDisplaced: false,
-      }
-    }).filter(Boolean) as LabelItem[]
+    realmLabels.value = REALMS
+      .filter(r => presentRealms.has(r.id))
+      .filter(r => !drillingHist || r.id === drillingHist)
+      .map(r => {
+        const xy = projection(r.label_lnglat)
+        if (!xy) return null
+        return {
+          id: r.id, x: xy[0], y: xy[1], anchorX: xy[0], anchorY: xy[1],
+          text: r.name_zh, fontSize: 17, hasLeader: false,
+          extraAnchors: [], isLockedByUser: false,
+          mainLeaderHidden: false, isDisplaced: false,
+        }
+      }).filter(Boolean) as LabelItem[]
     sphereLabels.value = []
     return
   }
@@ -1000,15 +1055,11 @@ watch(selectedRealm, () => rebuildAll())
 watch(editMode, () => {
   // No need to rebuild paths but template re-renders due to reactive changes.
 })
-watch(() => props.currentYear, (newY, oldY) => {
-  // Reset drill state when crossing the modern/historical boundary
-  const wasHist = (oldY ?? 2026) < 2000
-  const isHist = newY < 2000
-  if (wasHist !== isHist) {
-    selectedRealm.value = null
-    selectedFeature.value = null
-    editMode.value = false
-  }
+watch(() => props.currentYear, () => {
+  // 不再重置 drill 狀態：跨代切換時保留鑽取，讓使用者拉時間軸時持續觀察該界域變化。
+  // 編輯模式仍重置（避免拖動古代不存在的標籤）
+  if (editMode.value) editMode.value = false
+  selectedFeature.value = null
   rebuildAll()
 })
 </script>
