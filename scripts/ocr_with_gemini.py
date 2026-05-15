@@ -327,6 +327,14 @@ def is_quota_stop(err_str: str) -> bool:
     return any(k in low for k in ("quota", "resource_exhausted", "429"))
 
 
+def is_gemini_oversized(err_str: str) -> bool:
+    """Gemini Files API rejects PDFs > 1000 pages. Haiku image-batch path
+    is not subject to this cap — caller should fall back per-book."""
+    low = err_str.lower()
+    return ("exceeds the supported page limit" in low
+            or "page limit of 1000" in low)
+
+
 _HAIKU_MODEL = "claude-haiku-4-5-20251001"
 _HAIKU_PAGES_PER_BATCH = 10
 _HAIKU_DPI = 150
@@ -726,6 +734,7 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False,
     ok = 0
     failed = []
     quota_hit = False
+    _haiku_lazy_client = None  # lazy init for inline Haiku fallback on oversized books
     for i, b in enumerate(targets, 1):
         src = Path(b["file_path"])
         if not src.exists():
@@ -765,6 +774,22 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False,
                 break
             last_call = time.time()
             result = process_one(client, b, src, model)
+
+        # Gemini Files API has a 1000-page cap — books over that limit always
+        # fail with 400 INVALID_ARGUMENT. Haiku image-batch path has no such cap.
+        # Auto-fall back inline so >1000 page books don't get marked permanent.
+        if (result.get("status") != "ok"
+                and is_gemini_oversized(result.get("error", ""))
+                and _HAS_ANTHROPIC and _HAS_FITZ):
+            try:
+                if _haiku_lazy_client is None:
+                    _haiku_lazy_client = _make_anthropic_client()
+                print(f"  → Gemini page-limit hit; trying Haiku for this book")
+                hresult = process_one_haiku(_haiku_lazy_client, b, src)
+                if hresult["status"] == "ok":
+                    result = hresult
+            except Exception as e:
+                print(f"  ⚠ Haiku fallback failed: {str(e)[:120]}", file=sys.stderr)
 
         if quota_hit:
             # All Gemini keys exhausted — fall back to Haiku for this book and the rest.
