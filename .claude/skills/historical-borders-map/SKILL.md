@@ -17,19 +17,24 @@ description: 「歷史國界地圖」工具集（/maps/historical-borders）— 
 
 | 層 | 檔案 | 數量 | 用途 |
 |---|---|---|---|
-| A. 古國 polygon | `public/maps/historical-states.geojson` | 762 features (5.2 MB) | 地圖上的古國邊界 polygon |
-| B. Sphere fill polygon | `public/maps/historical-sphere-fills.geojson` | 2767 features (11.6 MB) | 文化圈著色（**不在本工具使用**，由 world-religions-map 使用） |
-| C. 國家骨架（含現代涵蓋） | `public/maps/state-skeleton.json` | 370 條 (49 KB) | 從 historical-basemaps 抽出，含 modern_countries ISO list |
+| A. 古國 polygon | `public/maps/historical-states.geojson` | **9,588 features (40 MB)** | 地圖上的古國邊界 polygon — 跨 53 snapshots |
+| B. Sphere fill polygon | `public/maps/historical-sphere-fills.geojson` | **10,350 features (42 MB)** | 文化圈著色（由 world-religions-map 使用）— 跨 53 snapshots |
+| C. 國家骨架（含現代涵蓋） | `public/maps/state-skeleton.json` | **2,949 條 (348 KB)** | 從 historical-states.geojson 抽出 unique names |
 | D. Wikidata 主資料 | `public/maps/wikidata-states.json` | 4215 條 (~ 530 KB) | 中英文名、起始／結束年、所屬大陸、QID |
-| E. 人工撰寫詳細 | `data/maps/historical-states-db.ts` (`STATE_DETAILS`) | 41 條 | 朝代、首都、宗教、人口、面積、簡介 |
+| E. 人工撰寫詳細 | `data/maps/historical-states-db.ts` (`STATE_DETAILS`) | 46 條（41 匹配） | 朝代、首都、宗教、人口、面積、簡介 |
 | F. NE 50m coastline | `public/maps/ne_50m_coastline.geojson` | 1428 LineString | 海岸線（黑線） |
 | G. NE 50m admin_0 | `public/maps/ne_50m_admin_0_countries.geojson` | 242 features | 陸地灰底 |
+
+**Snapshot 來源**：[scripts/build_historical_layer.mjs](../../../scripts/build_historical_layer.mjs) 用 53 個 historical-basemaps snapshots：BCE 17 個（123000、10000、8000、5000、4000、3000、2000、1500、1000、700、500、400、323、300、200、100、1）+ CE 36 個（100、200、300、400、500、600、700、800、900、1000、1100、1200、1279、1300、1400、1492、1500、1530、1600、1650、1700、1715、1783、1800、1815、1880、1900、1914、1920、1930、1938、1945、1960、1994、2000、2010）。每 snapshot 的 `yearTo = 下個 snapshot 年 - 1`；最後一個（2010）`yearTo = 9999`。
+
+**過濾策略**（雙軌）：
+- `historical-states.geojson`（給本工具）：用 `NON_STATE_PATTERNS` blacklist 排除 hunter-gatherer/culture/tribe/nomad/farmers — 其他全收
+- `historical-sphere-fills.geojson`（給 world-religions-map）：用 `STATE_NAMES` whitelist（240+ 政體名）保持原有切分
 
 **Merge 邏輯**（[data/maps/historical-states-db.ts](../../../data/maps/historical-states-db.ts) `mergeStates()`）：
 - 依英文名 normalized key dedupe
 - skeleton + wikidata + STATE_DETAILS 三層合併
-- 最終 **4424 個獨特國家**（370 + 4215 - 重複）
-- 有 polygon 368 個（少於 370 因 wikidata mapping 對應後變少）
+- 最終 **6853 個獨特國家**（2949 skeleton + 4215 wikidata - 交集）
 - 已填詳細 41 個
 
 ---
@@ -241,19 +246,23 @@ interface HistoricalState extends StateSkeleton, StateDetail {
 2. **陸地灰底**：modern admin_0，`fill='#D1D5DB'` 全 opacity
 3. **古國 polygon**：filtered by currentYear（`year_from <= y <= year_to`），每國 **hash-based HSL 唯一色**
 4. **海岸線**：NE coastline 黑線 0.6/transform.k
-5. **國名標籤**：centroid + 防重疊 relax，**中文優先**。`nameZhOf()` 查序：STATE_DETAILS → wikidata-states.json → NE admin_0 (COUNTRY_NAME_ZH) → fallback 英文
+5. **國名標籤**：centroid + 防重疊 relax，**中文優先**。`nameZhOf()` 查序：STATE_DETAILS → **SUPPLEMENT_ZH（~80 條歷史國名手譯）** → wikidata-states.json → NE admin_0 (COUNTRY_NAME_ZH) → fallback 英文
 
 `colorForState(name)` 用名稱字串 hash 算 HSL，**同名穩定色**（一致性）。
 點 polygon → `selectedState` 彈窗顯示中文 + 英文副標 + 有效年代。
 
-**已知未譯標籤**（geojson 部落／文化 polygon 名，不在 wikidata 也不在 NE admin_0）：
-state societies and Aramaean kingdoms / El Paraiso / Chorrera / Ethiopian highland farmers / Dravidians / Saami / Illyrians / Phrygians / Beaker 等。要補譯就加進 [data/maps/historical-states-db.ts](../../../data/maps/historical-states-db.ts) 的 `STATE_DETAILS`，key 用 geojson `properties.name` 完全一致。
+**SUPPLEMENT_ZH 涵蓋**（在 [components/maps/HistoricalBordersMap.vue](../../../components/maps/HistoricalBordersMap.vue) 內）：
+- 20 世紀關鍵國名：USSR/蘇聯、East Germany/東德、West Germany/西德、Czechoslovakia/捷克斯洛伐克、Yugoslavia/南斯拉夫、Empire of Japan/大日本帝國
+- 殖民地／託管地：British Raj/英屬印度、French Indo-China/法屬印度支那、Dutch East Indies/荷屬東印度、各 French/British/Italian Somaliland、Mandatory Palestine 等
+- NE admin_0 對不上的常見國家：Tanzania (United Republic of)/坦尚尼亞、Korea (DPRK/RoK)/北韓南韓、Gambia, The/甘比亞、Swaziland/史瓦帝尼、Hong Kong/香港、Western Sahara/西撒哈拉
+- 加勒比、太平洋小國：Antigua and Barbuda、Saint Kitts and Nevis、Tonga、Samoa、Niue、American Samoa、Wallis and Futuna 等
+- 仍可能未譯的：早期文化／部落／考古群名（Olmec／Chavin／Beaker culture／Dravidians 等）— 加進 STATE_DETAILS 即可
 
 ### 列表 UI（HistoricalStateList.vue）
 
 工具列（右側統計排版）：
-- **「顯示 4,424 / 4,424 國」** — 大字粗體主視覺
-- 「有 polygon 368」「人工詳細 41」 — 次要灰色文字（避免被誤讀為總數）
+- **「顯示 N / 6,853 國」** — 大字粗體主視覺
+- 「有 polygon X」「人工詳細 41」 — 次要灰色文字（避免被誤讀為總數）
 
 過濾：搜尋（中英文）／界域（8 大界域，依 `realm_id`）／詳細（全部／已填／僅骨架）／polygon（全部／有地圖／無 polygon）
 
@@ -263,7 +272,7 @@ state societies and Aramaean kingdoms / El Paraiso / Chorrera / Ethiopian highla
 
 排序：依 `year_start` 或 `name_en`，asc/desc 切換
 
-分頁：**50 條/頁**，89 頁。分頁列含「⟪ 第一頁／← 上頁／第 X / Y 頁／下頁 →／最末頁 ⟫」
+分頁：**50 條/頁**，~137 頁。分頁列含「⟪ 第一頁／← 上頁／第 X / Y 頁／下頁 →／最末頁 ⟫」
 
 ---
 
@@ -295,6 +304,12 @@ node scripts/fetch_wikidata_states.mjs   # ~3 分鐘
 
 ```bash
 node scripts/translate_state_names.mjs   # 即時，幾秒鐘
+```
+
+### 4. `scripts/fetch_hbm_snapshots.mjs`
+從 GitHub `aourednik/historical-basemaps` 下載所有 53 個 `world_*.geojson` 到 `C:/tmp/hbm-sample/`。已存在的 skip。
+```bash
+node scripts/fetch_hbm_snapshots.mjs   # ~2 分鐘
 ```
 
 ---
