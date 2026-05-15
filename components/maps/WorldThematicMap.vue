@@ -532,13 +532,14 @@ onMounted(async () => {
   }
 
   try {
-    const [adm0Res, adm1Res, adm1ExtraRes] = await Promise.all([
+    const [adm0Res, adm1Res, adm1ExtraRes, prefRes] = await Promise.all([
       fetch('/maps/ne_50m_admin_0_countries.geojson'),
       fetch('/maps/ne_50m_admin_1_subset.geojson'),
       fetch('/maps/ne_10m_admin_1_extra.geojson'),
+      fetch('/maps/cn_tibetan_prefectures.geojson'),
     ])
-    const [adm0, adm1, adm1Extra] = await Promise.all([
-      adm0Res.json(), adm1Res.json(), adm1ExtraRes.json(),
+    const [adm0, adm1, adm1Extra, pref] = await Promise.all([
+      adm0Res.json(), adm1Res.json(), adm1ExtraRes.json(), prefRes.json(),
     ])
 
     const entries: FeatureEntry[] = []
@@ -556,6 +557,12 @@ onMounted(async () => {
     for (const f of adm1Extra.features) {
       const key = f.properties.iso_3166_2
       const country = f.properties.adm0_a3
+      entries.push({ feature: f, isAdmin1: true, key, countryCode: country })
+    }
+    // GADM admin_2 prefecture overrides (drawn LAST so they're on top of admin_1)
+    for (const f of pref.features) {
+      const key = `gadm:${f.properties.GID_2}`
+      const country = f.properties.GID_0
       entries.push({ feature: f, isAdmin1: true, key, countryCode: country })
     }
     featureEntries.value = entries

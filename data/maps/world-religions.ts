@@ -880,6 +880,13 @@ export const ADMIN1_SPHERE: Record<string, string> = {
   'FR-RE': 'east-african-swahili',  // 留尼旺
   'FR-YT': 'east-african-swahili',  // 馬約特
   // 本土 96 département + 科西嘉預設由 COUNTRY_DEFAULT_SPHERE['FRA'] = 'gallic-french' 接手
+
+  // ---------- 中國四省藏區（GADM admin_2 自治州，覆寫所屬省份的漢地映射） ----------
+  // 圖博文化圈（東方界域）
+  'gadm:CHN.5.3_1': 'tibetan',    // 甘肅・甘南藏族自治州
+  'gadm:CHN.26.5_1': 'tibetan',   // 四川・甘孜藏族自治州
+  'gadm:CHN.26.16_1': 'tibetan',  // 四川・阿壩藏族羌族自治州
+  'gadm:CHN.30.5_1': 'tibetan',   // 雲南・迪慶藏族自治州
 }
 
 /** Admin_1 名稱對照（繁體中文，用於 tooltip 顯示） */
@@ -984,6 +991,11 @@ export const ADMIN1_NAME_ZH: Record<string, string> = {
   'FR-GF': '法屬圭亞那', 'FR-MQ': '馬丁尼克', 'FR-GP': '瓜德羅普',
   'FR-RE': '留尼旺', 'FR-YT': '馬約特',
   'FR-2A': '南科西嘉', 'FR-2B': '上科西嘉',
+  // 中國四省藏區（GADM admin_2）
+  'gadm:CHN.5.3_1': '甘南藏族自治州',
+  'gadm:CHN.26.5_1': '甘孜藏族自治州',
+  'gadm:CHN.26.16_1': '阿壩藏族羌族自治州',
+  'gadm:CHN.30.5_1': '迪慶藏族自治州',
 }
 
 /** 給一個 admin_1 iso_3166_2 代碼，回傳所屬文化圈與界域。沒有顯式對應時用 COUNTRY_DEFAULT_SPHERE 後備。 */
