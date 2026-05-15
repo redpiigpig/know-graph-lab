@@ -43,6 +43,14 @@ export interface CulturalSphere {
   /** 可選：手動指定 sphere 名稱顯示位置 [lng, lat]（預設用 d3.geoCentroid 自動計算）。
    *  顯示位置與原 centroid 不同時自動拉 leader line。 */
   label_lnglat?: [number, number]
+  /** 有效起始年（天文年；BCE 為負）。未指定視為「自古至今」。 */
+  valid_from?: number
+  /** 有效結束年（天文年；9999 = 持續至今）。未指定視為「持續至今」。 */
+  valid_to?: number
+  /** 若是某 sphere 的歷史前身，連結到後繼者 id。文字說明用。 */
+  successor?: string
+  /** 該 sphere 是否為已退場的歷史 sphere（valid_to 已過）。便於 UI 顯示「(歷史)」標記。 */
+  is_historical?: boolean
 }
 
 export const REALMS: Realm[] = [
@@ -93,11 +101,14 @@ export const SPHERES: CulturalSphere[] = [
     ],
   },
   {
-    id: 'aegean-asia-minor', name_zh: '愛琴-小亞細亞文化圈', name_en: 'Aegean-Asia Minor', realm_id: 'central',
+    // 注：sphere id 保留為 'aegean-asia-minor' 以維持與舊資料相容。
+    // 歷史上 -539 BCE ~ 1071 CE 期間此 sphere 涵蓋希臘+土耳其（希臘化-拜占庭縫合期）。
+    // 1071 CE Manzikert 後小亞細亞突厥化逐步分立，1923 Lausanne 條約徹底定型。
+    // 現代範圍縮回希臘+賽普勒斯；土耳其已劃入新增的 'anatolia' sphere。
+    id: 'aegean-asia-minor', name_zh: '愛琴文化圈', name_en: 'Aegean', realm_id: 'central',
     members: [
-      { iso_a3: 'GRC', label: '希臘', order: 1, note: '米諾斯/邁錫尼文明' },
+      { iso_a3: 'GRC', label: '希臘', order: 1, note: '米諾斯/邁錫尼/古典希臘/拜占庭核心' },
       { iso_a3: 'CYP', label: '賽普勒斯', order: 2 },
-      { iso_a3: 'TUR', label: '土耳其', order: 3, note: '赫梯帝國至拜占庭' },
     ],
   },
   {
@@ -128,6 +139,66 @@ export const SPHERES: CulturalSphere[] = [
       { iso_a3: 'ARE', label: '阿聯酋', order: 6 },
       { iso_a3: 'KWT', label: '科威特', order: 7 },
     ],
+  },
+
+  // ===== 中央界域：歷史性 sphere（已退場或重組）=====
+  // 這些 sphere 主要由 historical-spheres.geojson 在歷史視圖呈現；
+  // 現代視圖（year >= 2000）會被 activeSpheresByRealm 過濾掉。
+  {
+    id: 'anatolia', name_zh: '小亞細亞文化圈', name_en: 'Anatolia', realm_id: 'central',
+    valid_from: -2334, valid_to: 9999,  // 赫梯起；1071+ 再次浮現；現代為土耳其
+    members: [
+      { iso_a3: 'TUR', label: '土耳其', order: 1, note: '赫梯帝國／拜占庭安納托利亞／突厥-奧斯曼-土耳其' },
+    ],
+    label_lnglat: [35, 39],
+  },
+  {
+    id: 'sumerian', name_zh: '蘇美文化圈', name_en: 'Sumerian', realm_id: 'central',
+    valid_from: -4000, valid_to: -2335,
+    successor: 'sumero-akkadian',
+    is_historical: true,
+    members: [],
+    label_lnglat: [46, 31],
+  },
+  {
+    id: 'sumero-akkadian', name_zh: '蘇美-阿卡德文化圈', name_en: 'Sumero-Akkadian', realm_id: 'central',
+    valid_from: -2334, valid_to: -1201,
+    successor: 'assyrian / babylonian',  // 鐵器崩潰後分裂
+    is_historical: true,
+    members: [],
+    label_lnglat: [45, 33],
+  },
+  {
+    id: 'assyrian', name_zh: '亞述文化圈', name_en: 'Assyrian', realm_id: 'central',
+    valid_from: -1200, valid_to: -540,
+    successor: 'mesopotamian-levantine',  // 539 BCE 大縫合
+    is_historical: true,
+    members: [],
+    label_lnglat: [43, 36],
+  },
+  {
+    id: 'babylonian', name_zh: '巴比倫文化圈', name_en: 'Babylonian', realm_id: 'central',
+    valid_from: -1200, valid_to: -540,
+    successor: 'mesopotamian-levantine',
+    is_historical: true,
+    members: [],
+    label_lnglat: [45, 32],
+  },
+  {
+    id: 'canaan', name_zh: '迦南文化圈', name_en: 'Canaan', realm_id: 'central',
+    valid_from: -3000, valid_to: -1201,
+    successor: 'levant',
+    is_historical: true,
+    members: [],
+    label_lnglat: [35, 32],
+  },
+  {
+    id: 'levant', name_zh: '黎凡特文化圈', name_en: 'Levant', realm_id: 'central',
+    valid_from: -1200, valid_to: -540,
+    successor: 'mesopotamian-levantine',
+    is_historical: true,
+    members: [],
+    label_lnglat: [36, 33],
   },
 
   // ========== 東方界域 ==========
@@ -1043,6 +1114,27 @@ export function spheresByRealm(realmId: RealmId): CulturalSphere[] {
   return SPHERES.filter(s => s.realm_id === realmId)
 }
 
+/**
+ * 拿某 realm 在指定年份「有效」的 sphere。
+ * sphere 的 valid_from/valid_to 預設為 -Infinity..9999（自古至今），
+ * 過濾後排除「該年已退場」或「該年尚未出現」的 sphere。
+ */
+export function activeSpheresByRealm(realmId: RealmId, year: number): CulturalSphere[] {
+  return SPHERES.filter(s => {
+    if (s.realm_id !== realmId) return false
+    const from = s.valid_from ?? -Infinity
+    const to = s.valid_to ?? 9999
+    return year >= from && year <= to
+  })
+}
+
+/** 判斷一個 sphere 在指定年份是否有效 */
+export function isSphereActiveAt(sphere: CulturalSphere, year: number): boolean {
+  const from = sphere.valid_from ?? -Infinity
+  const to = sphere.valid_to ?? 9999
+  return year >= from && year <= to
+}
+
 export function realmForCountry(iso_a3: string): Realm | undefined {
   const id = COUNTRY_REALM[iso_a3]
   return id ? realmById(id) : undefined
@@ -1126,13 +1218,21 @@ export function shadeForSphere(realmHex: string, idx: number, total: number): st
   return hslToHex(newH, newS, newL)
 }
 
-/** Build a per-realm sphere->color map keyed by sphere id. */
+/**
+ * Build a per-realm sphere->color map keyed by sphere id.
+ * 只計算「現代仍有效」的 sphere（排除 is_historical: true 的 ancient sphere），
+ * 確保現代視圖顏色穩定。Ancient sphere 在歷史視圖中用 realm.color 直接渲染。
+ */
 export function sphereColorsByRealm(realm: RealmId): Record<string, string> {
   const r = realmById(realm)
-  const list = SPHERES.filter(s => s.realm_id === realm)
+  const modernList = SPHERES.filter(s => s.realm_id === realm && !s.is_historical)
   const out: Record<string, string> = {}
-  list.forEach((s, i) => {
-    out[s.id] = shadeForSphere(r.color, i, list.length)
+  modernList.forEach((s, i) => {
+    out[s.id] = shadeForSphere(r.color, i, modernList.length)
+  })
+  // Ancient spheres fall back to realm base color
+  SPHERES.filter(s => s.realm_id === realm && s.is_historical).forEach(s => {
+    out[s.id] = r.color
   })
   return out
 }

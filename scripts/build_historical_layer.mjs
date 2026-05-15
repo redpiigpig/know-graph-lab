@@ -48,10 +48,11 @@ const SNAPSHOTS = [
 // '__tribal__' = explicitly oral-tribal (don't render as polygon; let gray base show).
 const MAP = {
   // ===== bc4000-era civilizations =====
+  // 2026-05 重構：中央界域早期 spheres 拆分 — Ur/Hurrian/Semites → sumerian
   'Egypt':                            { sphere: 'egyptian',                name_zh: '埃及' },
   'Kerma':                            { sphere: 'egyptian',                name_zh: '克爾瑪（努比亞）' },
-  'Ur':                               { sphere: 'mesopotamian-levantine',  name_zh: '烏爾' },
-  'Hurrian Kingdoms':                 { sphere: 'mesopotamian-levantine',  name_zh: '胡里安諸邦' },
+  'Ur':                               { sphere: 'sumerian',                name_zh: '烏爾' },
+  'Hurrian Kingdoms':                 { sphere: 'sumerian',                name_zh: '胡里安諸邦' },
   'Elam':                             { sphere: 'persian',                 name_zh: '埃蘭' },
   'Indus valley civilization':        { sphere: 'indian',                  name_zh: '印度河文明' },
   'Minoan':                           { sphere: 'aegean-asia-minor',       name_zh: '米諾斯' },
@@ -59,18 +60,33 @@ const MAP = {
   'Norte Chico':                      { sphere: 'andean',                  name_zh: '小北文明' },
   'Valdivia':                         { sphere: 'andean',                  name_zh: '瓦爾迪維亞' },
   'Namazga':                          { sphere: 'persian',                 name_zh: '那馬茲加（中亞）' },
-  'Semites':                          { sphere: 'mesopotamian-levantine',  name_zh: '閃族（古近東）' },
+  'Semites':                          { sphere: 'sumerian',                name_zh: '閃族（古近東早期）' },
   'Dravidians':                       { sphere: 'indian',                  name_zh: '達羅毗荼' },
   'Dapenkeng culture':                { sphere: 'banua',                   name_zh: '大坌坑文化（台灣）' },
   'Dakapeng culture':                 { sphere: 'banua',                   name_zh: '大坌坑文化' },
 
   // ===== bc2000-era additions =====
-  'Hittites':                         { sphere: 'aegean-asia-minor',       name_zh: '赫梯' },
-  'Canaan':                           { sphere: 'mesopotamian-levantine',  name_zh: '迦南' },
+  // 2026-05：Hittites → anatolia; Canaan → canaan
+  'Hittites':                         { sphere: 'anatolia',                name_zh: '赫梯' },
+  'Canaan':                           { sphere: 'canaan',                  name_zh: '迦南' },
   'Xia':                              { sphere: 'han',                     name_zh: '夏' },
   'Oxus':                             { sphere: 'persian',                 name_zh: '巴克特里亞-馬爾吉亞那（奧克蘇斯）' },
   'Únětice':                          { sphere: 'central-european',        name_zh: '奧涅蒂采（中歐青銅）' },
   'Beaker':                           { sphere: 'central-european',        name_zh: '鐘形杯文化' },
+
+  // ===== bc1500-bc1000 (鐵器時代列國) =====
+  'Assyria':                          { sphere: 'assyrian',                name_zh: '亞述' },
+  'Babylonia':                        { sphere: 'babylonian',              name_zh: '巴比倫' },
+  'Phrygians':                        { sphere: 'anatolia',                name_zh: '弗里吉亞' },
+  'Arameans':                         { sphere: 'levant',                  name_zh: '亞蘭' },
+  'state societies and Aramaean kingdoms': { sphere: 'levant',             name_zh: '亞蘭諸邦' },
+  'Urartu':                           { sphere: 'caucasus',                name_zh: '烏拉爾圖' },
+  'Iron Age megalith cultures':       { sphere: '__tribal__',              name_zh: '鐵器時代巨石文化' },
+
+  // ===== bc323/bc100 (希臘化／早期帝國) =====
+  // 此期間愛琴-小亞細亞已合，Cappadocia 等小亞細亞諸邦歸 aegean-asia-minor
+  'Cappadocia':                       { sphere: 'aegean-asia-minor',       name_zh: '卡帕多西亞' },
+  'Nabatean Kingdom':                 { sphere: 'mesopotamian-levantine',  name_zh: '納巴泰王國' },
 
   // ===== bc1500/bc1000/bc500 axial =====
   'Achaemenid Empire':                { sphere: 'persian',                 name_zh: '阿契美尼德波斯' },
@@ -219,8 +235,12 @@ const MAP = {
   'Mamluke Sultanate':                { sphere: 'arabian',                 name_zh: '馬木留克' },
   'Mamluk Sultanate':                 { sphere: 'arabian',                 name_zh: '馬木留克' },
   'Sultanate of Delhi':               { sphere: 'indian',                  name_zh: '德里蘇丹國' },
-  'Seljuk Empire':                    { sphere: 'aegean-asia-minor',       name_zh: '塞爾柱帝國' },
-  'Seljuks':                          { sphere: 'aegean-asia-minor',       name_zh: '塞爾柱' },
+  'Seljuk Empire':                    { sphere: 'anatolia',                name_zh: '塞爾柱帝國' },
+  'Seljuks':                          { sphere: 'anatolia',                name_zh: '塞爾柱' },
+  'Sultanate of Rum':                 { sphere: 'anatolia',                name_zh: '羅姆蘇丹國' },
+  'Anatolian Beyliks':                { sphere: 'anatolia',                name_zh: '安納托利亞諸貝伊國' },
+  'Seljuk Caliphate':                 { sphere: 'anatolia',                name_zh: '塞爾柱「哈里發」（羅姆蘇丹國）' },
+  'Emirate of the White Sheep Turks': { sphere: 'anatolia',                name_zh: '白羊王朝（土庫曼-安納托利亞）' },
   'Kievan Rus':                       { sphere: 'russian-tatar',           name_zh: '基輔羅斯' },
   "Kievan Rus'":                      { sphere: 'russian-tatar',           name_zh: '基輔羅斯' },
   'Kingdom of England':               { sphere: 'british-celtic',          name_zh: '英格蘭王國' },
@@ -258,7 +278,9 @@ const MAP = {
   // ===== 1500 Age of Exploration =====
   'Ming Empire':                      { sphere: 'han',                     name_zh: '明' },
   'Ming Chinese Empire':              { sphere: 'han',                     name_zh: '明' },
-  'Ottoman Empire':                   { sphere: 'aegean-asia-minor',       name_zh: '奧斯曼帝國' },
+  // 奧斯曼歸 anatolia（1071 後小亞細亞分立；雖然奧斯曼版圖含巴爾幹/黎凡特/埃及，
+  // 但其核心與身分是安納托利亞-突厥，本期他地仍以邊界顯示）
+  'Ottoman Empire':                   { sphere: 'anatolia',                name_zh: '奧斯曼帝國' },
   'Aztec Empire':                     { sphere: 'mesoamerican',            name_zh: '阿茲特克' },
   'Inca Empire':                      { sphere: 'andean',                  name_zh: '印加帝國' },
   'Mali':                             { sphere: 'west-african-sahel',      name_zh: '馬利帝國' },
@@ -376,7 +398,7 @@ const MAP = {
   'Tunisia':                          { sphere: 'carthaginian-maghreb',    name_zh: '突尼西亞' },
   'Algeria':                          { sphere: 'carthaginian-maghreb',    name_zh: '阿爾及利亞' },
   'Morocco':                          { sphere: 'carthaginian-maghreb',    name_zh: '摩洛哥' },
-  'Turkey':                           { sphere: 'aegean-asia-minor',       name_zh: '土耳其' },
+  'Turkey':                           { sphere: 'anatolia',                name_zh: '土耳其' },
   'Afghanistan':                      { sphere: 'persian',                 name_zh: '阿富汗' },
   'Tajikistan':                       { sphere: 'persian',                 name_zh: '塔吉克' },
   'Armenia':                          { sphere: 'caucasus',                name_zh: '亞美尼亞' },

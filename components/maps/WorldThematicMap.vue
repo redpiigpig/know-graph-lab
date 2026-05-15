@@ -334,6 +334,7 @@ import {
   ADMIN1_NAME_ZH,
   realmById,
   spheresByRealm,
+  activeSpheresByRealm,
   spheresForCountry,
   primarySphereForCountryInRealm,
   sphereForAdmin1,
@@ -519,8 +520,8 @@ const currentEpochInfo = computed(() => epochAt(props.currentYear))
 const sphereLegendItems = computed(() => {
   if (!selectedRealm.value) return []
   const colors = sphereColorsByRealm(selectedRealm.value)
-  return spheresByRealm(selectedRealm.value).map(s => ({
-    id: s.id, name_zh: s.name_zh, color: colors[s.id],
+  return activeSpheresByRealm(selectedRealm.value, props.currentYear).map(s => ({
+    id: s.id, name_zh: s.name_zh, color: colors[s.id] || realmById(selectedRealm.value!).color,
   }))
 })
 
@@ -681,7 +682,8 @@ function rebuildAll() {
   }).filter(Boolean) as LabelItem[]
 
   if (drilling) {
-    const realmSpheres = spheresByRealm(drilling)
+    // 在 drilled view 中只渲染當前年份「有效」的 sphere 標籤
+    const realmSpheres = activeSpheresByRealm(drilling, props.currentYear).filter(s => !s.is_historical)
     sphereLabels.value = realmSpheres.map(s => {
       const matches = featureEntries.value.filter(e => {
         if (e.isAdmin1) {

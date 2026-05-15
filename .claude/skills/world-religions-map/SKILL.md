@@ -271,6 +271,34 @@ WorldThematicMap 依 `currentYear` 在兩模式切換：
 4. 輸出寫入 `public/maps/historical-spheres.geojson`
 5. 腳本末會列出最常見未映射的 name，可挑選加入
 
+### 中央界域 v2：sphere 分裂與縫合（2026-05 重構）
+
+中央界域不再是固定 7 個 sphere；某些 sphere 是「歷史性」的，會出現、合併、再分裂。`CulturalSphere` interface 加入：
+- `valid_from?: number` — 起始年（天文年）
+- `valid_to?: number` — 結束年（9999 = 持續至今）
+- `successor?: string` — 後繼 sphere id（文字說明用）
+- `is_historical?: boolean` — true 表已退場，不計入現代色彩分配
+
+中央界域現有 15 個 sphere，分兩類：
+
+**現代仍存（8 個）**：兩河-黎凡特、埃及、迦太基-馬格里布、愛琴（原愛琴-小亞細亞，已縮減為 GRC+CYP）、波斯、高加索、阿拉伯次大陸、**小亞細亞（NEW）**（TUR 從愛琴移過來）
+
+**歷史性已退場（6 個，`is_historical: true`）**：
+- `sumerian` 蘇美 (-4000 ~ -2335) → 後繼 `sumero-akkadian`
+- `sumero-akkadian` 蘇美-阿卡德 (-2334 ~ -1201) → 後繼 `assyrian + babylonian`
+- `assyrian` 亞述 (-1200 ~ -540) → 後繼 `mesopotamian-levantine`
+- `babylonian` 巴比倫 (-1200 ~ -540) → 後繼 `mesopotamian-levantine`
+- `canaan` 迦南 (-3000 ~ -1201) → 後繼 `levant`
+- `levant` 黎凡特 (-1200 ~ -540) → 後繼 `mesopotamian-levantine`
+
+**重要：愛琴 ↔ 小亞細亞的雙次分合**：
+- -2334 ~ -540：愛琴（米諾斯/邁錫尼/希臘城邦）+ 小亞細亞（赫梯/弗里吉亞/呂底亞）兩 sphere **分立**
+- -539 ~ +1070：併入 `aegean-asia-minor`（希臘化-羅馬-拜占庭縫合期，包含整個安納托利亞 + 愛琴）
+- +1071 ~ +1922：曼齊克特戰役後安納托利亞突厥化、塞爾柱-貝伊-奧斯曼依序佔據；安納托利亞獨立成 `anatolia` sphere；但奧斯曼版圖橫跨多區，仍以 anatolia 為主
+- +1923 ~：洛桑條約 + 希土人口交換徹底分立
+
+用 `activeSpheresByRealm(realmId, year)` 過濾出當前年份有效的 sphere，drilled-view 的 legend / labels 都用它。
+
 ### SphereHistoryEntry schema
 ```ts
 {
@@ -296,6 +324,8 @@ WorldThematicMap 依 `currentYear` 在兩模式切換：
 - ~80% 的史前小酋邦與部落（hunter-gatherers）標籤未上色，由灰底代表。`scripts/build_historical_layer.mjs` 末會列出未映射名稱，可漸進補。
 - USA Mesoamerican 西南州延伸、ETH 邊界州、SDN Darfur 等近代延伸區仍如舊，不在歷史 layer 處理範圍。
 - 歷史邊界用 historical-basemaps 數據（CC BY-NC-SA 4.0），僅限非商業使用。商業化前需另外處理授權。
+- 中央界域 v2 重構已完成（蘇美/亞述/巴比倫/迦南/黎凡特/小亞細亞獨立）；**其他 7 個界域尚未做類似的分裂-縫合分析**，目前只有「sphere 內部時期變化」，沒有 sphere 增減。長期計畫是每界域來一輪（依使用者提供的階段分析）。
+- 奧斯曼帝國（1500-1914）版圖跨多區（安納托利亞+巴爾幹+黎凡特+埃及），但目前整片塗 `anatolia` 色；理想上應該分區但 historical-basemaps 沒提供分區 polygon。
 
 ---
 
