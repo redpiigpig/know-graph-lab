@@ -1,18 +1,22 @@
 ---
 name: islamic-tradition-layer
-description: 伊斯蘭族譜的「教派傳統」視角圖層 — 古蘭明文（白）／順尼派（綠）／十二伊瑪目派（紅）／伊斯瑪儀派（紫）／栽德派（橙）／蘇菲（青）／歷史傳述（灰）。包含資料表 schema、人物清單（阿丹→穆罕默德+穆聖家族+12 伊瑪目）、UI 配色設計、未完成 API/Vue 項目。
+description: 伊斯蘭族譜的「教派傳統」視角圖層 — 古蘭明文（白）／順尼派（綠）／十二伊瑪目派（紅）／伊斯瑪儀派（紫）／栽德派（橙）／蘇菲（青）／歷史傳述（灰）。包含資料表 schema、人物清單（阿丹→穆罕默德+穆聖家族+12 伊瑪目）、UI 配色設計、表格 CRUD + 族譜圖 + view 切換 widget（皆已上線）。
 ---
 
 # 伊斯蘭族譜 — 教派傳統視角圖層
 
 > 姊妹 skill: [[biblical-tradition-layer]] — 兩套族譜共用相同 DB schema 模式（per-person `tradition` 列 + JSONB override 三件套），只是傳統值集合 + 視覺顏色不同。
 
-主要檔案（規劃中，尚未實作）：
-- `components/genealogy/IslamicSpineTree.vue`（待建，可大量複用 [BiblicalSpineTree.vue](../../../components/genealogy/BiblicalSpineTree.vue) 邏輯）
-- `server/api/genealogy/islamic-graph.get.ts`（待建，鏡像 biblical-graph.get.ts）
-- `pages/genealogy/islamic.vue`（待建，表格 CRUD）
-- `pages/genealogy/islamic-tree.vue`（待建，族譜圖）
-- `pages/genealogy/index.vue` 新增入口卡片（待建）
+主要檔案（皆已就位）：
+- ✅ [components/genealogy/IslamicSpineTree.vue](../../../components/genealogy/IslamicSpineTree.vue) — 單 spine 族譜圖組件，pan/zoom + 卡片色 + view widget + legend
+- ✅ [server/api/genealogy/islamic-graph.get.ts](../../../server/api/genealogy/islamic-graph.get.ts) — `?view=` filter + JSONB tradition merge（鏡像 biblical-graph）
+- ✅ [server/api/genealogy/islamic-people.get.ts](../../../server/api/genealogy/islamic-people.get.ts) — 列表
+- ✅ [server/api/genealogy/islamic-people.post.ts](../../../server/api/genealogy/islamic-people.post.ts) — 新增
+- ✅ [server/api/genealogy/islamic-people/[id].patch.ts](../../../server/api/genealogy/islamic-people/[id].patch.ts) — 更新
+- ✅ [server/api/genealogy/islamic-people/[id].delete.ts](../../../server/api/genealogy/islamic-people/[id].delete.ts) — 刪除
+- ✅ [pages/genealogy/islamic.vue](../../../pages/genealogy/islamic.vue) — 表格 CRUD（新增/編輯/刪除 modal）
+- ✅ [pages/genealogy/islamic-tree.vue](../../../pages/genealogy/islamic-tree.vue) — 族譜圖頁 + URL `?view=` 同步
+- ✅ [pages/genealogy/index.vue](../../../pages/genealogy/index.vue) — 入口卡片 ☪「伊斯蘭族譜」(emerald hover)
 
 已完成腳本（c:\tmp）：
 - `islamic_create_table.py` — 建立 `islamic_people` 表 + 索引 + updated_at trigger
@@ -229,65 +233,81 @@ URL：`/genealogy/islamic-tree?view=quranic|sunni|shia_twelver|shia_ismaili|shia
 
 ---
 
-## 🚧 待辦清單
+## ✅ 完成項目
 
-### Task 1: 表格頁 `pages/genealogy/islamic.vue` — ✅ 列表（read-only）完成
+### Task 1: 表格頁 `pages/genealogy/islamic.vue` — ✅ 完整 CRUD 完成
 
 已就位：
 - 列表頁（7 種傳統徽章 + 列底色 + 搜尋 / 傳統 filter）
 - 中／阿／英三欄姓名顯示，kunya 跟在中文名後以小字呈現
-- 族譜圖 tab 暫禁用（待 Task 3 tree 組件建好）
+- 「+ 新增人物」按鈕（emerald 綠）
+- 編輯／刪除按鈕（hover 顯示，與 biblical.vue 一致的 UX）
+- Modal 表單：中／阿／英 / kunya / 性別 / 傳統下拉（7 選項）/ 國別 / generation / sort_order / birth_year / death_year / child_year / age / spouse / children / sources / notes
+- 表頭族譜圖 tab 連到 `/genealogy/islamic-tree`
 
-未做：新增／編輯／刪除（POST/PATCH/DELETE 介面）— 需要可改寫 biblical.vue 的 modal 套件
-
-### Task 2: API endpoints — ✅ GET 完成
+### Task 2: API endpoints — ✅ 全部完成
 
 - ✅ `server/api/genealogy/islamic-people.get.ts` — 列表
-- ⏳ `server/api/genealogy/islamic-people.post.ts` — 新增
-- ⏳ `server/api/genealogy/islamic-people/[id].patch.ts` — 更新
-- ⏳ `server/api/genealogy/islamic-people/[id].delete.ts` — 刪除
-- ⏳ `server/api/genealogy/islamic-graph.get.ts` — graph view，套 `?view=` filter + JSONB merge
+- ✅ `server/api/genealogy/islamic-people.post.ts` — 新增（含 tradition CHECK 驗證）
+- ✅ `server/api/genealogy/islamic-people/[id].patch.ts` — 更新（含 JSONB 三件套欄位）
+- ✅ `server/api/genealogy/islamic-people/[id].delete.ts` — 刪除
+- ✅ `server/api/genealogy/islamic-graph.get.ts` — graph view，套 `?view=` filter + JSONB merge
 
-mirror 完全可從 biblical-* 複製 + sed。
+view 規則（鏡像 biblical-graph）：
+- `quranic`（預設）→ 只 quranic
+- `sunni` → quranic + sunni + historical
+- `shia_twelver` → 上 + shia_twelver + JSONB merge
+- `shia_ismaili` → quranic + sunni + shia_ismaili + JSONB merge
+- `shia_zaidi` → quranic + sunni + shia_zaidi + JSONB merge
 
-### Task 3: Tree component `IslamicSpineTree.vue`
+### Task 3: Tree component `IslamicSpineTree.vue` — ✅ MVP 完成
 
-複用 `BiblicalSpineTree.vue` 1700+ 行邏輯。主要差異：
-
-- **單 spine** 即可（不需 dual-spine A/B），穆聖只有一條直系；對比 biblical 有馬太/路加雙譜系
-- `traditionColors` 改 5 色：`quranic`/`sunni`/`shia_twelver`/`shia_ismaili`/`shia_zaidi`/`sufi`/`historical`
-- 線條規則同 biblical（紅 = 夫妻橫向；灰 = T-bar drop）
-- spine 終點 = 穆罕默德（gen 44）vs. biblical 終點 = 馬利亞（gen 74）
-- 後續 12 伊瑪目鏈作為穆聖→法蒂瑪 (gen 45) 的下分支展開（阿里為穆聖堂弟接入點）
+實作要點：
+- **單 spine** （非雙 spine），spine 走 阿丹→努哈→易卜拉欣→伊斯瑪儀→阿德南→穆罕默德
+- spine 卡左側 3px emerald-400 條帶（取代 biblical 的 amber/rose）
+- 7 種傳統 tailwind 配色（quranic 白／sunni 綠／shia_twelver 紅／shia_ismaili 紫／shia_zaidi 橙／sufi 青／historical 灰）
+- 紅實線 = 婚姻；灰實線 = 親子（直線 + T-bar drop）
+- pan / zoom / wheel-scroll / Ctrl+wheel-zoom / 滑鼠拖曳平移（同 biblical）
+- 右上「+ −」zoom 按鈕 + 「定位主幹」
+- 配偶 stacked 在 spine 卡左側；穆聖 12 妻會排出 12 列
+- 穆聖 7 子女 row 排在他下方
+- 阿里+12 伊瑪目鏈：阿里以「法蒂瑪之夫」放在法蒂瑪左側；下方 BFS 展開 Hasan/Hussein → Zaynal Abidin → ... → 12 Mahdi
+- 視圖切換 widget 浮在穆罕默德卡右側（鏡像 biblical 的 widget 設計）
+- 左下 Legend（7 色 swatch + 線型）
+- 未實作：subtree ▼ 收摺、♻ same-person marker、cross-gen 婚姻 minGen 機制（layout 簡化版，~600 行 vs. biblical 2152 行）
 
 ### Task 4: 路由入口 — ✅ 完成
 
 [pages/genealogy/index.vue](../../../pages/genealogy/index.vue) 已加第 4 張卡片 ☪「伊斯蘭族譜」(emerald hover)。
 
-### Task 5: 視圖切換 widget
+### Task 5: 視圖切換 widget — ✅ 完成
 
-在 islamic-tree.vue 加浮動 toggle（鏡像 biblical-tree 的「耶穌聖家詮釋」widget）：
+於 `islamic-tree.vue` 加浮動 toggle（在 IslamicSpineTree 內，緊鄰穆罕默德卡）：
+`[古蘭] [順尼] [十二派] [伊斯瑪儀] [栽德]`
+預設「古蘭」（quranic）；URL `?view=` 同步；非預設值才寫入 query。
 
-```
-[古蘭] [順尼] [十二派] [伊斯瑪儀] [栽德]
-```
+### Task 6: 圖例 — ✅ 完成
 
-預設「古蘭」，URL `?view=quranic` 同步。
+左下 Legend：emerald 主幹色 + 7 色 swatch + 紅線婚姻 + 灰線親子 + 操作提示。
 
-### Task 6: 圖例
+---
 
-左下 Legend：
-- 7 色 swatch（含 `sufi` 預留）
-- 紅實線 = 婚姻
-- 灰虛線 = T-bar / 下傳
-- spine guide color（穆聖直系用 emerald 綠？）
+## 🚧 後續待辦（next）
 
-### Task 7（資料補完）
+### Task 7（資料補完，可後續批次）
 
 - 伊瑪目之配偶與其他子女（目前只填了直系傳承的伊瑪目）
 - 主要哈里發：艾布·伯克爾、歐麥爾、奧斯曼、阿里（已填）
 - 早期蘇菲聖徒鏈（Junayd, Bayazid, ...）→ tradition='sufi'
 - 烏麥葉／阿拔斯／法蒂瑪王朝主要君主（與本族譜的血緣分支）
+
+### Task 8（tree 進階）
+
+- subtree 展開／收摺（▼/▲）
+- ♻ same-person marker（跨子樹同人跳轉）
+- 跨代婚姻視覺修正（阿里 gen 43 娶 法蒂瑪 gen 45 — 目前直接以法蒂瑪 row 為基準畫，aliY = fPos.y，沒有 minGen 機制）
+- orphan 區（step 6）視覺化目前粗暴堆疊；可改為「相關家族成員」分組顯示
+- 視覺驗收：寫 `scripts/islamic-shot.mjs` 仿 `scripts/biblical-shot.mjs`
 
 ---
 
