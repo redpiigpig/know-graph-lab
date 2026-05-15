@@ -13,14 +13,14 @@ export default defineEventHandler(async (event) => {
   // sufi 暫無資料，保留 view 名但不阻擋未來擴充。
   // shia_* 三派互不混雜（各派視角獨立）。
   const q = getQuery(event)
-  const viewRaw = String(q.view ?? 'quranic').toLowerCase()
+  const viewRaw = String(q.view ?? 'sunni').toLowerCase()
   type View = 'quranic' | 'sunni' | 'shia_twelver' | 'shia_ismaili' | 'shia_zaidi'
   const view: View =
-    viewRaw === 'sunni'        ? 'sunni' :
+    viewRaw === 'quranic'      ? 'quranic' :
     viewRaw === 'shia_twelver' ? 'shia_twelver' :
     viewRaw === 'shia_ismaili' ? 'shia_ismaili' :
     viewRaw === 'shia_zaidi'   ? 'shia_zaidi' :
-                                 'quranic'
+                                 'sunni'
 
   const allowedTraditions = new Set<string>(['quranic'])
   if (view !== 'quranic') {

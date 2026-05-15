@@ -83,13 +83,13 @@ URL：`/genealogy/islamic-tree?view=quranic|sunni|shia_twelver|shia_ismaili|shia
 
 | view | 顯示哪些 tradition 的人 | JSONB override 套用 |
 |---|---|---|
-| `quranic`（預設） | `quranic` only | 無 |
-| `sunni` | `quranic` + `sunni` + `historical` | sunni override |
+| `quranic` | `quranic` only — 25 先知 + 古蘭點名人物（約 17 人，spine 不連貫） | 無 |
+| `sunni`（預設） | `quranic` + `sunni` + `historical` | sunni override |
 | `shia_twelver` | 上述 + `shia_twelver` | shia_twelver override |
 | `shia_ismaili` | quranic + sunni + `shia_ismaili` | shia_ismaili override |
 | `shia_zaidi` | quranic + sunni + `shia_zaidi` | shia_zaidi override |
 
-> 預設 view 用 `quranic` 而非 `sunni`，是因為穆斯林世界對「古蘭明文」普世共識最強，可作中立起點。
+> 預設改為 `sunni`，因為 spine 必經中段（阿丹↔努哈 中的 伊德里斯系；阿德南↔穆罕默德 22 代）皆是 sunni 傳述。`quranic` only 會讓 BFS 找不到完整路徑（17 人散落不連貫），保留作為「只看古蘭明文」嚴格過濾選項。
 > `sunni`/`shia_*` 不互相納入彼此的伊瑪目人物（避免視覺擠 + 各派視角互不混雜）。
 
 切換點：嘉法爾·薩迪克 (gen 48) 之後 — 十二派接穆薩·卡齊姆 (49)、伊斯瑪儀派接伊斯瑪儀·伊本·嘉法爾 (49)。

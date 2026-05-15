@@ -50,12 +50,12 @@ async function getToken() {
 type View = 'quranic' | 'sunni' | 'shia_twelver' | 'shia_ismaili' | 'shia_zaidi'
 const ALLOWED: View[] = ['quranic', 'sunni', 'shia_twelver', 'shia_ismaili', 'shia_zaidi']
 const view = ref<View>(
-  (ALLOWED.includes(route.query.view as View) ? route.query.view : 'quranic') as View
+  (ALLOWED.includes(route.query.view as View) ? route.query.view : 'sunni') as View
 )
 
 function setView(v: View) {
   view.value = v
-  router.replace({ query: { ...route.query, view: v === 'quranic' ? undefined : v } })
+  router.replace({ query: { ...route.query, view: v === 'sunni' ? undefined : v } })
 }
 
 const graphNodes  = ref<any[]>([])
@@ -65,7 +65,7 @@ const peopleCount = computed(() => graphNodes.value.length)
 async function loadGraph() {
   const token = await getToken()
   if (!token) return
-  const qs = view.value !== 'quranic' ? `?view=${view.value}` : ''
+  const qs = view.value !== 'sunni' ? `?view=${view.value}` : ''
   const { nodes, edges } = await $fetch<{ nodes: any[], edges: any[] }>('/api/genealogy/islamic-graph' + qs, {
     headers: { Authorization: `Bearer ${token}` },
   })
