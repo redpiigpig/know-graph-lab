@@ -81,10 +81,19 @@
                 stroke="rgba(15,23,42,0.55)"
                 :stroke-width="0.8 / transform.k"
               />
+              <!-- Uniform anchor dot at every leader endpoint (main + extras) -->
               <circle
                 v-if="lbl.hasLeader"
                 :cx="lbl.anchorX"
                 :cy="lbl.anchorY"
+                :r="1.6 / transform.k"
+                fill="rgba(15,23,42,0.7)"
+              />
+              <circle
+                v-for="(a, ai) in lbl.extraAnchors"
+                :key="`extra-dot-${lbl.id}-${ai}`"
+                :cx="a.x"
+                :cy="a.y"
                 :r="1.6 / transform.k"
                 fill="rgba(15,23,42,0.7)"
               />
