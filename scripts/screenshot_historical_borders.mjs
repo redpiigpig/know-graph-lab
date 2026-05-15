@@ -88,5 +88,14 @@ for (const y of years) {
   await shot(String(y))
 }
 
+// Switch to list view
+await page.evaluate(() => {
+  for (const b of document.querySelectorAll('button')) {
+    if (b.textContent?.includes('國家列表')) { b.click(); return }
+  }
+})
+await page.waitForTimeout(2000)
+await shot('list_view')
+
 await browser.close()
 console.log('Done.')

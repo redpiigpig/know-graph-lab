@@ -1,0 +1,290 @@
+<template>
+  <div class="space-y-3">
+    <!-- 工具列 -->
+    <div class="flex items-center gap-3 flex-wrap bg-white rounded-xl border border-gray-200 p-3">
+      <div class="flex items-center gap-2">
+        <input
+          v-model="searchText"
+          type="text"
+          placeholder="搜尋國名（中英文）"
+          class="px-3 py-1.5 text-sm border border-gray-200 rounded-md focus:outline-none focus:border-amber-400 w-56"
+        />
+        <select v-model="filterRealm" class="px-2 py-1.5 text-sm border border-gray-200 rounded-md focus:outline-none">
+          <option value="">所有界域</option>
+          <option value="central">中央界域</option>
+          <option value="eastern">東方界域</option>
+          <option value="latin-america">拉美界域</option>
+          <option value="western">西方界域</option>
+          <option value="asia-pacific">亞太界域</option>
+          <option value="southern">南方界域</option>
+          <option value="northern">北方界域</option>
+          <option value="north-america">北美界域</option>
+        </select>
+        <select v-model="filterDetail" class="px-2 py-1.5 text-sm border border-gray-200 rounded-md focus:outline-none">
+          <option value="all">全部</option>
+          <option value="with">已填詳細</option>
+          <option value="without">僅骨架</option>
+        </select>
+      </div>
+      <div class="ml-auto text-xs text-gray-500">
+        共 <span class="font-semibold text-gray-900">{{ filteredStates.length }}</span> 個（總 {{ allStates.length }}）·
+        已填詳細 <span class="font-semibold text-emerald-700">{{ detailCount }}</span>
+      </div>
+    </div>
+
+    <!-- 表格 -->
+    <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs">
+          <thead class="bg-gray-50 text-gray-500 text-[11px]">
+            <tr>
+              <th class="text-left px-3 py-2 cursor-pointer hover:text-gray-900" @click="setSort('name_en')">
+                國名 <SortArrow :col="'name_en'" :sort="sortKey" :dir="sortDir" />
+              </th>
+              <th class="text-left px-3 py-2 cursor-pointer hover:text-gray-900" @click="setSort('earliest_from')">
+                年代 <SortArrow :col="'earliest_from'" :sort="sortKey" :dir="sortDir" />
+              </th>
+              <th class="text-left px-3 py-2">朝代／統治</th>
+              <th class="text-left px-3 py-2">巔峰人口</th>
+              <th class="text-left px-3 py-2">巔峰面積</th>
+              <th class="text-left px-3 py-2">主要首都</th>
+              <th class="text-left px-3 py-2">現代涵蓋</th>
+              <th class="text-left px-3 py-2">界域</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr
+              v-for="s in pagedStates"
+              :key="s.id"
+              class="hover:bg-amber-50/50 transition cursor-pointer"
+              :class="!s.has_detail && 'opacity-70'"
+              @click="selected = s"
+            >
+              <td class="px-3 py-2">
+                <div class="font-medium text-gray-900">{{ s.name_zh || s.name_en }}</div>
+                <div v-if="s.name_zh" class="text-[10px] text-gray-400 mt-0.5">{{ s.name_en }}</div>
+                <span v-if="!s.has_detail" class="inline-block text-[9px] text-gray-400 mt-0.5">骨架</span>
+              </td>
+              <td class="px-3 py-2 tabular-nums text-gray-600 whitespace-nowrap">
+                <div>{{ formatYearShort(s.earliest_from) }}</div>
+                <div class="text-gray-400">– {{ s.latest_to >= 9999 ? '至今' : formatYearShort(s.latest_to) }}</div>
+              </td>
+              <td class="px-3 py-2 text-gray-600 max-w-[180px]">
+                <div v-if="s.dynasties?.length" class="space-y-0.5">
+                  <div v-for="(d, i) in s.dynasties.slice(0, 3)" :key="i" class="text-[10px]">· {{ d }}</div>
+                  <div v-if="s.dynasties.length > 3" class="text-[9px] text-gray-400">+{{ s.dynasties.length - 3 }} 更多</div>
+                </div>
+                <span v-else class="text-gray-300 text-[10px]">—</span>
+              </td>
+              <td class="px-3 py-2 tabular-nums text-gray-600 whitespace-nowrap">
+                <span v-if="s.population_peak_wan" class="font-medium">{{ formatPopulation(s.population_peak_wan) }}</span>
+                <span v-else class="text-gray-300">—</span>
+              </td>
+              <td class="px-3 py-2 tabular-nums text-gray-600 whitespace-nowrap">
+                <span v-if="s.area_peak_wan_km2" class="font-medium">{{ formatArea(s.area_peak_wan_km2) }}</span>
+                <span v-else class="text-gray-300">—</span>
+              </td>
+              <td class="px-3 py-2 text-gray-600 max-w-[140px]">
+                <div v-if="s.capitals?.length" class="text-[10px]">
+                  {{ s.capitals.join('、') }}
+                </div>
+                <span v-else class="text-gray-300 text-[10px]">—</span>
+              </td>
+              <td class="px-3 py-2 text-gray-600">
+                <div class="flex flex-wrap gap-0.5">
+                  <span
+                    v-for="iso in s.modern_countries.slice(0, 6)"
+                    :key="iso"
+                    class="inline-block px-1 py-0.5 rounded bg-gray-100 text-[9px]"
+                  >{{ countryZh(iso) }}</span>
+                  <span v-if="s.modern_countries.length > 6" class="text-[9px] text-gray-400">+{{ s.modern_countries.length - 6 }}</span>
+                </div>
+              </td>
+              <td class="px-3 py-2">
+                <span
+                  v-if="s.realm_id"
+                  class="inline-block px-1.5 py-0.5 rounded text-[10px]"
+                  :style="{ background: realmColor(s.realm_id) + '20', color: realmColor(s.realm_id) }"
+                >{{ realmName(s.realm_id) }}</span>
+                <span v-else class="text-gray-300 text-[10px]">—</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 分頁 -->
+      <div v-if="totalPages > 1" class="flex items-center justify-center gap-2 py-3 border-t border-gray-100">
+        <button @click="page = Math.max(1, page - 1)" :disabled="page === 1" class="px-2 py-1 text-xs text-gray-500 hover:text-gray-900 disabled:opacity-30">← 上頁</button>
+        <span class="text-xs text-gray-500">{{ page }} / {{ totalPages }}</span>
+        <button @click="page = Math.min(totalPages, page + 1)" :disabled="page === totalPages" class="px-2 py-1 text-xs text-gray-500 hover:text-gray-900 disabled:opacity-30">下頁 →</button>
+      </div>
+    </div>
+
+    <!-- 詳細彈窗 -->
+    <div v-if="selected" class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" @click.self="selected = null">
+      <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-6 shadow-2xl">
+        <div class="flex items-start justify-between gap-4 mb-4">
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900">{{ selected.name_zh || selected.name_en }}</h2>
+            <div v-if="selected.name_zh" class="text-sm text-gray-500 mt-1">{{ selected.name_en }}</div>
+          </div>
+          <button @click="selected = null" class="text-gray-400 hover:text-gray-900 text-2xl">×</button>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mb-4 text-xs">
+          <div>
+            <div class="text-gray-400 mb-0.5">存在年代</div>
+            <div class="font-medium tabular-nums">{{ formatYearShort(selected.earliest_from) }} – {{ selected.latest_to >= 9999 ? '至今' : formatYearShort(selected.latest_to) }}</div>
+          </div>
+          <div>
+            <div class="text-gray-400 mb-0.5">所屬界域</div>
+            <div class="font-medium">{{ selected.realm_id ? realmName(selected.realm_id) : '—' }}</div>
+          </div>
+          <div v-if="selected.population_peak_wan">
+            <div class="text-gray-400 mb-0.5">巔峰人口</div>
+            <div class="font-medium tabular-nums">{{ formatPopulation(selected.population_peak_wan) }}</div>
+          </div>
+          <div v-if="selected.area_peak_wan_km2">
+            <div class="text-gray-400 mb-0.5">巔峰面積</div>
+            <div class="font-medium tabular-nums">{{ formatArea(selected.area_peak_wan_km2) }}</div>
+          </div>
+        </div>
+
+        <div v-if="selected.intro" class="mb-4 text-sm text-gray-700 leading-relaxed">{{ selected.intro }}</div>
+
+        <div v-if="selected.dynasties?.length" class="mb-3">
+          <div class="text-xs text-gray-400 mb-1">統治家族／朝代</div>
+          <div class="flex flex-wrap gap-1.5">
+            <span v-for="d in selected.dynasties" :key="d" class="px-2 py-0.5 rounded-md bg-amber-50 border border-amber-200 text-xs">{{ d }}</span>
+          </div>
+        </div>
+
+        <div v-if="selected.capitals?.length" class="mb-3">
+          <div class="text-xs text-gray-400 mb-1">主要首都／重要城市</div>
+          <div class="flex flex-wrap gap-1.5">
+            <span v-for="c in selected.capitals" :key="c" class="px-2 py-0.5 rounded-md bg-gray-50 border border-gray-200 text-xs">{{ c }}</span>
+          </div>
+        </div>
+
+        <div v-if="selected.religions?.length" class="mb-3">
+          <div class="text-xs text-gray-400 mb-1">主要宗教／信仰</div>
+          <div class="flex flex-wrap gap-1.5">
+            <span v-for="r in selected.religions" :key="r" class="px-2 py-0.5 rounded-md bg-blue-50 border border-blue-200 text-xs">{{ r }}</span>
+          </div>
+        </div>
+
+        <div v-if="selected.modern_countries?.length" class="mb-3">
+          <div class="text-xs text-gray-400 mb-1">涵蓋現代國家 ({{ selected.modern_countries.length }})</div>
+          <div class="flex flex-wrap gap-1.5">
+            <span v-for="iso in selected.modern_countries" :key="iso" class="px-2 py-0.5 rounded-md bg-gray-100 text-xs">{{ countryZh(iso) }} <span class="text-gray-400">({{ iso }})</span></span>
+          </div>
+        </div>
+
+        <div v-if="selected.snapshots?.length" class="text-[10px] text-gray-400 mt-3">
+          出現於 snapshot: {{ selected.snapshots.map(formatYearShort).join(', ') }}
+        </div>
+
+        <div v-if="!selected.has_detail" class="mt-4 p-2 bg-amber-50 border border-amber-200 rounded-md text-xs text-amber-800">
+          📋 此國家僅有骨架資料（年代＋現代涵蓋國家）。中文名／朝代／人口／面積等待補。
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref, computed, onMounted, h } from 'vue'
+import {
+  type HistoricalState,
+  type StateSkeleton,
+  STATE_DETAILS,
+  mergeStates,
+} from '~/data/maps/historical-states-db'
+import { formatYearShort } from '~/data/maps/historical-epochs'
+import { REALMS, COUNTRY_NAME_ZH, realmById } from '~/data/maps/world-religions'
+
+const allStates = ref<HistoricalState[]>([])
+
+const searchText = ref('')
+const filterRealm = ref('')
+const filterDetail = ref<'all' | 'with' | 'without'>('all')
+const sortKey = ref<'name_en' | 'earliest_from'>('earliest_from')
+const sortDir = ref<'asc' | 'desc'>('asc')
+const page = ref(1)
+const pageSize = 30
+const selected = ref<HistoricalState | null>(null)
+
+const detailCount = computed(() => allStates.value.filter(s => s.has_detail).length)
+
+const filteredStates = computed(() => {
+  let list = allStates.value
+  if (searchText.value.trim()) {
+    const q = searchText.value.trim().toLowerCase()
+    list = list.filter(s =>
+      s.name_en.toLowerCase().includes(q) ||
+      (s.name_zh && s.name_zh.toLowerCase().includes(q))
+    )
+  }
+  if (filterRealm.value) {
+    list = list.filter(s => s.realm_id === filterRealm.value)
+  }
+  if (filterDetail.value === 'with') list = list.filter(s => s.has_detail)
+  if (filterDetail.value === 'without') list = list.filter(s => !s.has_detail)
+  // sort
+  list = [...list].sort((a, b) => {
+    const dir = sortDir.value === 'asc' ? 1 : -1
+    if (sortKey.value === 'name_en') return dir * a.name_en.localeCompare(b.name_en)
+    return dir * ((a.earliest_from - b.earliest_from) || a.name_en.localeCompare(b.name_en))
+  })
+  return list
+})
+
+const totalPages = computed(() => Math.max(1, Math.ceil(filteredStates.value.length / pageSize)))
+
+const pagedStates = computed(() => {
+  const start = (page.value - 1) * pageSize
+  return filteredStates.value.slice(start, start + pageSize)
+})
+
+function setSort(key: 'name_en' | 'earliest_from') {
+  if (sortKey.value === key) sortDir.value = sortDir.value === 'asc' ? 'desc' : 'asc'
+  else { sortKey.value = key; sortDir.value = 'asc' }
+  page.value = 1
+}
+
+function realmColor(id: string): string {
+  return realmById(id as any)?.color || '#999'
+}
+function realmName(id: string): string {
+  return realmById(id as any)?.name_zh || id
+}
+function countryZh(iso: string): string {
+  return COUNTRY_NAME_ZH[iso] || iso
+}
+function formatPopulation(wan: number): string {
+  if (wan >= 1e4) return `${(wan / 1e4).toFixed(1)} 億人`
+  if (wan >= 1e3) return `${(wan / 1e3).toFixed(1)} 千萬人`
+  return `${wan} 萬人`
+}
+function formatArea(wan_km2: number): string {
+  if (wan_km2 >= 100) return `${wan_km2.toLocaleString()} 萬 km²`
+  return `${wan_km2} 萬 km²`
+}
+
+// 小元件：排序箭頭
+const SortArrow = (props: { col: string; sort: string; dir: string }) => {
+  if (props.sort !== props.col) return h('span', { class: 'text-gray-300' }, '↕')
+  return h('span', { class: 'text-amber-600' }, props.dir === 'asc' ? '↑' : '↓')
+}
+
+onMounted(async () => {
+  try {
+    const r = await fetch('/maps/state-skeleton.json')
+    const skeleton: StateSkeleton[] = await r.json()
+    allStates.value = mergeStates(skeleton)
+  } catch (e) {
+    console.error('skeleton 載入失敗', e)
+  }
+})
+</script>
