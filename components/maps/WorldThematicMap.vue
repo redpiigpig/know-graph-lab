@@ -11,7 +11,7 @@
       <rect
         :width="width"
         :height="height"
-        fill="#F1F5F9"
+        :fill="isHistoricalView ? '#FFFFFF' : '#F1F5F9'"
         @click="onBackgroundClick($event)"
       />
 
@@ -433,6 +433,7 @@ interface HistoricalEntry {
 
 const featureEntries = ref<FeatureEntry[]>([])
 const historicalEntries = ref<HistoricalEntry[]>([])
+const coastlineFeatures = ref<any[]>([])
 const paths = ref<PathItem[]>([])
 const realmLabels = ref<LabelItem[]>([])
 const sphereLabels = ref<LabelItem[]>([])
@@ -669,7 +670,8 @@ function rebuildAll() {
         return {
           id: `fill-${entry.key || 'x'}-${i}`,
           d, fill, opacity,
-          strokeBase: 0,  // 隱藏 modern 邊界 stroke，避免與古國界 overlay 衝突
+          // 古代視圖：移除現代國界 stroke；改用 NE coastline 顯海岸線
+          strokeBase: 0,
           strokeOpacity: 0,
           isAdmin1: false,
           realm,
@@ -679,8 +681,26 @@ function rebuildAll() {
       })
       .filter(p => p.d)
 
-    // ===== Layer B：古代國界 outline overlay =====
-    // 全部 active 歷史 polygons 都畫 outline，不論 sphere 是哪個（凸顯「曾統治過的疆域」）
+    // ===== Layer B：海岸線（NE coastline LineString）=====
+    // 黑色細線：陸地與海洋的分界
+    const coastPaths: PathItem[] = coastlineFeatures.value.map((f, i) => {
+      const d = path(f) || ''
+      return {
+        id: `coast-${i}`,
+        d,
+        fill: 'none',
+        opacity: 1,
+        strokeBase: 0.5,
+        strokeColor: '#000000',
+        strokeOpacity: 0.7,
+        isAdmin1: false,
+        title: '',
+        spheres: [],
+      } as PathItem
+    }).filter(p => p.d)
+
+    // ===== Layer C：古代國界 outline overlay =====
+    // 全部 active 歷史 polygons 都畫 outline（顯示「曾統治過的疆域」）
     const borderPaths: PathItem[] = historicalEntries.value
       .filter(h => currentYear >= h.yearFrom && currentYear <= h.yearTo)
       .map((h, i) => {
@@ -690,9 +710,9 @@ function rebuildAll() {
           d,
           fill: 'none',
           opacity: 1,
-          strokeBase: 1.2,
-          strokeColor: '#1F2937',
-          strokeOpacity: 0.55,
+          strokeBase: 1.5,
+          strokeColor: '#111827',
+          strokeOpacity: 0.85,
           isAdmin1: false,
           title: h.nameZh,
           spheres: [],
@@ -700,7 +720,7 @@ function rebuildAll() {
       })
       .filter(p => p.d)
 
-    paths.value = [...fillPaths, ...borderPaths]
+    paths.value = [...fillPaths, ...coastPaths, ...borderPaths]
 
     // ===== 標籤層 =====
     if (drillingHist) {
@@ -1066,16 +1086,18 @@ onMounted(async () => {
   }
 
   try {
-    const [adm0Res, adm1Res, adm1ExtraRes, prefRes, histRes] = await Promise.all([
+    const [adm0Res, adm1Res, adm1ExtraRes, prefRes, histRes, coastRes] = await Promise.all([
       fetch('/maps/ne_50m_admin_0_countries.geojson'),
       fetch('/maps/ne_50m_admin_1_subset.geojson'),
       fetch('/maps/ne_10m_admin_1_extra.geojson'),
       fetch('/maps/cn_tibetan_prefectures.geojson'),
       fetch('/maps/historical-spheres.geojson'),
+      fetch('/maps/ne_50m_coastline.geojson'),
     ])
-    const [adm0, adm1, adm1Extra, pref, hist] = await Promise.all([
-      adm0Res.json(), adm1Res.json(), adm1ExtraRes.json(), prefRes.json(), histRes.json(),
+    const [adm0, adm1, adm1Extra, pref, hist, coast] = await Promise.all([
+      adm0Res.json(), adm1Res.json(), adm1ExtraRes.json(), prefRes.json(), histRes.json(), coastRes.json(),
     ])
+    coastlineFeatures.value = coast.features || []
 
     historicalEntries.value = (hist.features || []).map((f: any) => ({
       feature: f,

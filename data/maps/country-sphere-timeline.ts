@@ -99,11 +99,11 @@ export const COUNTRY_SPHERE_TIMELINE: Record<string, SphereTimelineEntry[]> = {
   GEO: [{ from: -3400, sphere: 'caucasus' }],
   AZE: [{ from: -3400, sphere: 'caucasus' }],
   YEM: [
-    { from: -1200, sphere: 'arabian', note: '示巴等南阿拉伯王國' },
+    { from: -1200, sphere: 'arabian', note: '示巴等南阿拉伯王國（唯一早期有國家的半島區）' },
   ],
-  // 沙烏地半島中北部：游牧期 → 622 CE 伊斯蘭擴張
+  // 沙烏地半島中北部 622 CE 前是游牧部落（無國家），622 後伊斯蘭擴張覆蓋
   SAU: [
-    { from: -1200, sphere: 'arabian', note: '南阿拉伯部落、納巴泰；伊斯蘭出現後全面整合' },
+    { from: 622, sphere: 'arabian', note: '伊斯蘭擴張將整個半島納入文化圈' },
   ],
   OMN: [{ from: 622, sphere: 'arabian', note: '伊斯蘭擴張' }],
   BHR: [{ from: 622, sphere: 'arabian' }],
