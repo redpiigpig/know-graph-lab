@@ -802,7 +802,7 @@ const cv = computed(() => {
   function layoutExpansion(
     rootIds: string[],
     centerX: number,
-  ): { nodes: LNode[]; drops: VDrop[]; hbars: HBar[]; marriages: MLine[]; bbox: ExpansionBox; rootCXs: number[]; firstY: number } {
+  ): { nodes: LNode[]; drops: VDrop[]; hbars: HBar[]; marriages: MLine[]; bbox: ExpansionBox; rowBboxes: ExpansionBox[]; rootCXs: number[]; firstY: number } {
     const vis = new Set<string>()
     let cursorX = 0
     const allNodes: LNode[] = []
@@ -824,7 +824,7 @@ const cv = computed(() => {
       if (firstY === 0 && r.nodes.length > 0) firstY = r.nodes[0].y
     }
     if (rootCXs.length === 0) {
-      return { nodes: [], drops: [], hbars: [], marriages: [], bbox: { x1: 0, y1: 0, x2: 0, y2: 0 }, rootCXs, firstY }
+      return { nodes: [], drops: [], hbars: [], marriages: [], bbox: { x1: 0, y1: 0, x2: 0, y2: 0 }, rowBboxes: [], rootCXs, firstY }
     }
     const cmin = Math.min(...rootCXs)
     const cmax = Math.max(...rootCXs)
@@ -838,15 +838,30 @@ const cv = computed(() => {
     for (const n of allNodes) expansionNodeIds.add(n.id)
     const minX = Math.min(...allNodes.map(n => n.x)) - 8
     const maxX = Math.max(...allNodes.map(n => n.x + n.w)) + 8
-    // 重要：bbox.y1 跳過 expansion 第一列（子女列）— 否則此 bbox 會橫掃同代的
-    // marriage Y，把其他家庭（例：Levi↔米加）的婚姻線一起遮掉。
-    // 用 firstY（第一列子女頂端） + NH（卡高）作為 bbox 起點，這樣第一列子女
-    // 本身仍渲染為 isExpansionNode（不在 bbox 占空裡），bbox 只負責 occlude
-    // 第二列以下與 expansion 重疊的旁系內容。
-    const minY = firstY > 0 ? firstY + NH : Math.min(...allNodes.map(n => n.y)) - 8
+    const minY = Math.min(...allNodes.map(n => n.y)) - 8
+    // Per-row bboxes: group nodes by Y, each row gets its own bbox covering
+    // only that row's actual X range. 用來精準 occlude：例如 Esau 的第一列子
+    // 女在 row 23 某個 x 範圍；如果用整體 bbox（subtree max x），會誤包含
+    // 同列其他家庭（Levi↔米加 婚姻）。Per-row bbox 只覆蓋實際 row 內容。
+    const nodesByRow = new Map<number, LNode[]>()
+    for (const n of allNodes) {
+      const arr = nodesByRow.get(n.y) ?? []
+      arr.push(n)
+      nodesByRow.set(n.y, arr)
+    }
+    const rowBboxes: ExpansionBox[] = []
+    for (const [y, rowNodes] of nodesByRow) {
+      rowBboxes.push({
+        x1: Math.min(...rowNodes.map(n => n.x)) - 8,
+        y1: y - 8,
+        x2: Math.max(...rowNodes.map(n => n.x + n.w)) + 8,
+        y2: y + NH + 8,
+      })
+    }
     return {
       nodes: allNodes, drops: allDrops, hbars: allHbars, marriages: allMarriages,
       bbox: { x1: minX, y1: minY, x2: maxX, y2: maxY + 8 },
+      rowBboxes,
       rootCXs: shiftedRootCXs,
       firstY,
     }
@@ -1551,7 +1566,18 @@ const cv = computed(() => {
           // Bbox covers the subtree but NOT the parent row, so the spine T-bar above stays visible.
           // 規則：旁支展開後一律 occlude — 跟 spine 重疊區的 spine 卡片整段隱形，
           // 讓旁支子嗣有足夠視覺空間。大小 clan 都一視同仁。
-          if (expandedClans.value.has(kid)) expansionBoxes.push(exp.bbox)
+          if (expandedClans.value.has(kid)) {
+            // Use per-row bboxes (precise, tight per Y range) instead of the
+            // single big bbox so wide-X subtrees (e.g. Esau→Antipater→Herod)
+            // don't accidentally occlude OTHER families' content at the same Y
+            // (e.g., Levi↔米加 marriage on row 23 happened to fall inside
+            // Esau's bbox X range when subtree extended via Mariamne).
+            if (exp.rowBboxes && exp.rowBboxes.length) {
+              expansionBoxes.push(...exp.rowBboxes)
+            } else {
+              expansionBoxes.push(exp.bbox)
+            }
+          }
         }
       }
     }
