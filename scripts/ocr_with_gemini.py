@@ -333,12 +333,19 @@ If a page is blank or purely decorative, output its [PAGE N] header with an empt
 """
 
 
-def _haiku_render_page(doc, page_idx: int) -> bytes:
-    import base64
+def _haiku_render_page(doc, page_idx: int) -> tuple[bytes, str]:
+    """Render page to bytes ≤ 5 MB (Anthropic image size limit). Tries JPEG at
+    progressively lower DPI until under cap. Returns (bytes, media_type)."""
     page = doc[page_idx]
-    mat = _fitz.Matrix(_HAIKU_DPI / 72, _HAIKU_DPI / 72)
-    pix = page.get_pixmap(matrix=mat, colorspace=_fitz.csRGB)
-    return pix.tobytes("png")
+    HAIKU_IMAGE_MAX = 5_000_000  # 5 MB Anthropic cap (with margin)
+    for dpi in (_HAIKU_DPI, 120, 96, 75, 60):
+        mat = _fitz.Matrix(dpi / 72, dpi / 72)
+        pix = page.get_pixmap(matrix=mat, colorspace=_fitz.csRGB)
+        data = pix.tobytes("jpeg", jpg_quality=85)
+        if len(data) <= HAIKU_IMAGE_MAX:
+            return data, "image/jpeg"
+    # Last resort — return whatever we got at 60 DPI even if oversized
+    return data, "image/jpeg"
 
 
 def _haiku_parse_response(text: str, page_numbers: list) -> list:
@@ -368,9 +375,9 @@ def _haiku_ocr_book(haiku_client, src_path: Path) -> list:
         page_numbers = [i + 1 for i in page_indices]
         content = []
         for pi in page_indices:
-            png = _haiku_render_page(doc, pi)
-            b64 = base64.standard_b64encode(png).decode()
-            content.append({"type": "image", "source": {"type": "base64", "media_type": "image/png", "data": b64}})
+            img_bytes, media_type = _haiku_render_page(doc, pi)
+            b64 = base64.standard_b64encode(img_bytes).decode()
+            content.append({"type": "image", "source": {"type": "base64", "media_type": media_type, "data": b64}})
         prompt = _HAIKU_BATCH_PROMPT.format(
             first=page_numbers[0],
             next=page_numbers[1] if len(page_numbers) > 1 else page_numbers[0] + 1,
