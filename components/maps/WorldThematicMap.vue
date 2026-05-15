@@ -210,6 +210,18 @@
       </div>
     </div>
 
+    <!-- Era badge (top-center) -->
+    <div
+      v-if="!isModernYear"
+      class="absolute left-1/2 top-3 -translate-x-1/2 z-10 bg-amber-50/95 backdrop-blur border border-amber-300 rounded-lg shadow-md px-3 py-1.5 pointer-events-none"
+    >
+      <div class="flex items-baseline gap-2">
+        <span class="text-sm font-bold text-amber-900 tabular-nums">{{ formatYearShort(props.currentYear) }}</span>
+        <span class="text-xs text-amber-700">{{ currentEpochInfo?.label_zh }}</span>
+      </div>
+      <div class="text-[10px] text-amber-600 mt-0.5">⚠ 歷史邊界資料尚未接入；目前仍顯示現代邊界</div>
+    </div>
+
     <!-- Add-anchor banner -->
     <div
       v-if="addAnchorFor && addAnchorTargetName"
@@ -322,6 +334,9 @@ import {
   type RealmId,
   type CulturalSphere,
 } from '~/data/maps/world-religions'
+import { epochAt, formatYearShort } from '~/data/maps/historical-epochs'
+
+const props = withDefaults(defineProps<{ currentYear?: number }>(), { currentYear: 2026 })
 
 const rootEl = ref<HTMLElement | null>(null)
 const svgEl = ref<SVGSVGElement | null>(null)
@@ -477,6 +492,9 @@ function enterAddAnchor(sphereId: string) {
 const selectedRealmInfo = computed<Realm | undefined>(() =>
   selectedRealm.value ? realmById(selectedRealm.value) : undefined
 )
+
+const isModernYear = computed(() => props.currentYear >= 2000)
+const currentEpochInfo = computed(() => epochAt(props.currentYear))
 
 const sphereLegendItems = computed(() => {
   if (!selectedRealm.value) return []

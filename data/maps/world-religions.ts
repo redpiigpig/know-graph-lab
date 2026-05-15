@@ -118,7 +118,7 @@ export const SPHERES: CulturalSphere[] = [
     ],
   },
   {
-    id: 'arabian', name_zh: '阿拉伯文化圈', name_en: 'Arabian', realm_id: 'central',
+    id: 'arabian', name_zh: '阿拉伯次大陸文化圈', name_en: 'Arabian Subcontinent', realm_id: 'central',
     members: [
       { iso_a3: 'YEM', label: '葉門', order: 1, note: '示巴王國，古南阿拉伯文' },
       { iso_a3: 'SAU', label: '沙烏地阿拉伯', order: 2, note: '伊斯蘭教發源地' },

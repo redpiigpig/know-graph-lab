@@ -24,15 +24,21 @@
       </div>
     </nav>
 
-    <div v-if="view === 'map'" class="flex-1 p-4 sm:p-6">
-      <div class="max-w-[1400px] mx-auto h-[calc(100dvh-7rem)] min-h-[480px]">
-        <WorldThematicMap />
+    <div v-if="view === 'map'" class="flex-1 flex flex-col p-4 sm:p-6 gap-3">
+      <div class="max-w-[1400px] w-full mx-auto flex-1 min-h-[420px]">
+        <WorldThematicMap :current-year="currentYear" />
+      </div>
+      <div class="max-w-[1400px] w-full mx-auto">
+        <TimeAxis v-model="currentYear" />
       </div>
     </div>
 
-    <div v-else class="flex-1 p-4 sm:p-6 overflow-y-auto">
-      <div class="max-w-4xl mx-auto">
-        <RealmInfoList />
+    <div v-else class="flex-1 flex flex-col p-4 sm:p-6 gap-3 overflow-hidden">
+      <div class="max-w-4xl w-full mx-auto flex-1 overflow-y-auto">
+        <RealmInfoList :current-year="currentYear" />
+      </div>
+      <div class="max-w-4xl w-full mx-auto">
+        <TimeAxis v-model="currentYear" />
       </div>
     </div>
   </div>
@@ -42,9 +48,11 @@
 import { ref } from 'vue'
 import WorldThematicMap from '~/components/maps/WorldThematicMap.vue'
 import RealmInfoList from '~/components/maps/RealmInfoList.vue'
+import TimeAxis from '~/components/maps/TimeAxis.vue'
 
 definePageMeta({ middleware: 'auth' })
 useHead({ title: '全球八大人文宗教界域 — Know Graph Lab' })
 
 const view = ref<'map' | 'list'>('map')
+const currentYear = ref(2026)
 </script>

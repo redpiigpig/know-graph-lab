@@ -1,6 +1,6 @@
 ---
 name: world-religions-map
-description: 「全球八大人文宗教界域」主題地圖工具集（/maps/world-religions）— 8 大界域 × 30 文化圈 × ~150 國家。記錄資料層（admin_0 / admin_1 50m / admin_1 10m / GADM admin_2 四層次）、配色系統、編輯模式、邊界切分邏輯。Use when 加新國家／文化圈／sphere/admin 細分；改配色；標籤位置調整；修 NE GeoJSON 對照 bug。
+description: 「全球八大人文宗教界域」主題地圖工具集（/maps/world-religions）— 8 大界域 × 30 文化圈 × ~150 國家 + 歷時功能（4000 BCE → 2026）。記錄資料層（admin_0 / admin_1 50m / admin_1 10m / GADM admin_2 四層次）、配色系統、編輯模式、邊界切分邏輯、時間軸與 sphere 歷史期間資料。Use when 加新國家／文化圈／sphere/admin 細分；改配色；標籤位置調整；修 NE GeoJSON 對照 bug；填補 sphere history 資料；接歷史邊界 GeoJSON。
 ---
 
 # 全球八大人文宗教界域 — 主題地圖
@@ -76,7 +76,7 @@ ADMIN1_SPHERE key 也支援 GADM admin_2 用 `'gadm:GID_2'` 前綴（如 `'gadm:
 - 愛琴-小亞細亞：GRC/CYP/TUR
 - 波斯：IRN/AFG(西+中 11 省)/TJK
 - 高加索：ARM/GEO/AZE/RUS(北高加索 9 區)
-- 阿拉伯：YEM/SAU/OMN/BHR/QAT/ARE/KWT
+- 阿拉伯次大陸：YEM/SAU/OMN/BHR/QAT/ARE/KWT
 
 ### 東方界域 (3 圈)
 - 印度：PAK/IND/NPL/LKA/AFG(南+東 12 省)/BGD/MDV
@@ -218,6 +218,44 @@ CulturalSphere 也可在資料層硬編 `label_lnglat?: [lng, lat]` 預設位置
 - SDN 西部 Darfur+Kordofan → 西非-薩赫爾是延伸解讀（doc 沒明確指）。
 - USA Mesoamerican 西南州延伸（is_extension）目前不在地圖上染色，僅資料記錄。
 - 若日後 doc 出新版 / 用戶提新分類，動 ADMIN1_SPHERE 即可，不必動 SPHERES.members。
+
+---
+
+## 歷時功能（4000 BCE → 2026）
+
+地圖／列表都有底部時間軸，拉動可看任意年份的文化圈狀態。年份規則用**天文年**（含 0 年）：BCE 為負、CE 為正、`9999` 為「持續至今」哨兵。顯示給使用者前用 `formatYear()` / `formatYearShort()` 轉回慣用人類年表（`-3000` → 「3001 BCE」）。
+
+### 檔案結構
+| 檔案 | 用途 |
+|---|---|
+| [data/maps/historical-epochs.ts](../../../data/maps/historical-epochs.ts) | 18 個預設 epoch（青銅曙光、軸心時代、蒙古、大航海、現代…），刻度標籤與快照按鈕用。`epochAt(year)` 找最近的 epoch；`YEAR_MIN=-4000`、`YEAR_MAX=2026`。 |
+| [data/maps/sphere-history.ts](../../../data/maps/sphere-history.ts) | `SPHERE_HISTORY: Record<sphereId, SphereHistoryEntry[]>` — 每文化圈的歷史期間。目前已填：`mesopotamian-levantine`、`han`。其他 28 個待補。 |
+| [components/maps/TimeAxis.vue](../../../components/maps/TimeAxis.vue) | 滑桿 + 公元前後切換輸入框 + 快照按鈕列。`v-model:number`。 |
+
+### SphereHistoryEntry schema
+```ts
+{
+  period_label: '阿巴斯哈里發',
+  period_label_en?: 'Abbasid Caliphate',
+  year_from: 750,         // 天文年（BCE 為負）
+  year_to: 1258,          // 或 9999 = 至今
+  states?: ['阿巴斯王朝'],
+  places?: ['巴格達', '巴斯拉'],
+  faiths?: ['遜尼派伊斯蘭'],
+  note?: '黃金時代'
+}
+```
+
+### 加新 sphere 的歷史資料
+1. 在 `SPHERE_HISTORY` 加 `sphereId: [...]` 陣列
+2. 按時間順序排列（會直接顯示在列表的縱向時間軸）
+3. `states` 必填，`places` `faiths` `note` 可選
+4. 列表 UI 自動依 `currentYear` 高亮當下期間（琥珀色圓點 + 文字）
+
+### 已知限制
+- WorldThematicMap **尚未**依 currentYear 變更邊界——目前僅顯示「年代徽章 + 警示文字」。
+- 待接：`aourednik/historical-basemaps`（CC，123 BCE → 2017 每 100 年）+ 手繪 4000-500 BCE 早期文明核心區（蘇美/埃及/印度河/夏商/米諾斯…）。
+- 史前區設計為 `sphere_id: 'oral-tribal'` 淺灰底，4000 BCE 時除幾個核心文明區外整地球都是這色。
 
 ---
 
