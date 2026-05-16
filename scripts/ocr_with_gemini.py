@@ -757,6 +757,7 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False,
     failed = []
     quota_hit = False
     _haiku_lazy_client = None  # lazy init for inline Haiku fallback on oversized books
+    consecutive_oversized_quota = 0  # 2-strike pause for oversized-Haiku fallback path
     for i, b in enumerate(targets, 1):
         src = Path(b["file_path"])
         if not src.exists():
@@ -810,15 +811,28 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False,
                 hresult = process_one_haiku(_haiku_lazy_client, b, src)
                 if hresult["status"] == "ok":
                     result = hresult
+                    consecutive_oversized_quota = 0
                 else:
                     # Haiku also failed (likely connection / rate-limit cooldown).
                     # Force the book transient so it stays in queue for next run —
                     # the Gemini 1000-page failure alone is permanent, but we don't
                     # want to mark permanent until Haiku has a fair chance.
                     result["transient"] = True
+                    # 2-strike: a stuck Haiku quota will fail every oversized book
+                    # in a row. Track the streak so we stop after 2.
+                    if _is_quota_err(hresult.get("error", "")):
+                        consecutive_oversized_quota += 1
+                    else:
+                        consecutive_oversized_quota = 0
             except Exception as e:
                 print(f"  ⚠ Haiku fallback failed: {str(e)[:120]}", file=sys.stderr)
                 result["transient"] = True
+
+        if consecutive_oversized_quota >= 2:
+            print(f"\n⛔ Oversized-Haiku quota hit twice in a row — pausing run (per user rule).",
+                  flush=True)
+            print(f"   Retry later when Anthropic quota resets.", flush=True)
+            break
 
         if quota_hit:
             # All Gemini keys exhausted — fall back to Haiku for this book and the rest.
