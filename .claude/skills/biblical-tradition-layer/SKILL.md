@@ -165,7 +165,22 @@ per user spec：「就約瑟和馬利亞正常生耶穌就好」(commit `b6aac84
 
 ---
 
-## 🟢 當前狀態快照（2026-05-14，commit `802a802`）
+## 🟢 當前狀態快照（2026-05-16，commit `067ed26`）
+
+### 本次 session 完成（追加）
+- ✅ **Task 4E-2 蘇比/施洗約翰 chain 渲染**：dual-spine hide zone (gen 34-73) 過濾非 spine 兄弟，但 斯多蘭（亞拿之父）gen 72 是聖家 anchor 必須保留。修法：在 line 1337-1349 加 alwaysShow 例外，與 forceExpand（line 1478-1483）名單同步。FORCE_EXPAND_NAMES Set = ['斯多蘭（亞拿之父）','蘇比（亞拿之姊）','以利米勒']
+- ✅ **Task 4E-3 orthodox ghost 馬利亞 card**：根因 `wifeReachOnSide` 函式之前只看 spine kid 自己的 membership 決定 kidWifeSide，spine A 末端 (約瑟 gen 63) 的妻 撒羅米 在 placeOne 走 left 但 wifeReachOnSide 回 0 → 革羅罷 (約瑟之弟) 被擺到撒羅米 80px 重疊位置。修法：函式改檢查 cross-spine 配偶決定 kidWifeSide (line 1395-1414)
+- ✅ **以利米勒 force-expand**：拿俄米+以利米勒 → 瑪倫+基連 預設展開（forceExpand 名單新增）。注意 J30 row 仍有 基連↔路得 80px 重疊（gen 30 row 5 卡共擠 500px 空間），可讀但不完美
+- ✅ **刪除 莉莉絲**：rabbinic 不承認；DB row + 亞當.spouse 清乾淨
+- ✅ **拿俄米.children = 瑪倫、基連** patch（原為 null）
+- ✅ **apocrypha + rabbinic view buttons**：widget 從 4 → 6 個選項。Server allowedTraditions 與 protestant 同；UI 標籤色 次經 teal-700 / 拉比 blue-700
+
+### Task 1 結論（dual-spine overlap）
+經 gen 44-53 截圖驗收（c:/tmp/biblical_verify/41-hezekiah-dual.png），spine A/B 兩列在 hide zone (gen 34-73) 內已被 isInDualSpineHideZone 過濾掉所有非 spine 兄弟，兩列乾淨單卡無 overlap。Task 1 原 spec 的「A/B 撞列→ collapse 成旁支」由現有 hide zone 機制處理，不需另實作。
+
+---
+
+## 🟢 舊狀態快照（2026-05-14，commit `802a802`）
 
 ### 架構
 - **URL 拆分**：`/genealogy/biblical`（表格 CRUD）+ `/genealogy/biblical-tree`（族譜圖），各自獨立路由
