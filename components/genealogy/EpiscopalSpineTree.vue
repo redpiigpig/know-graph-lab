@@ -58,12 +58,13 @@
           }"
           :title="n.tooltip || ''"
         >
-          <!-- Spine bar (left edge) -->
-          <div v-if="n.spineColor"
+          <!-- Spine bar (left edge) — skip for see kind which is pure text -->
+          <div v-if="n.spineColor && n.kind !== 'see'"
                class="absolute left-0 top-1.5 bottom-1.5 w-[3px] rounded-full"
                :style="{ background: n.spineColor }" />
 
-          <div class="px-2 py-1.5 leading-tight" :class="n.spineColor ? 'pl-3' : ''">
+          <div class="leading-tight"
+               :class="n.kind === 'see' ? '' : (n.spineColor ? 'px-2 py-1.5 pl-3' : 'px-2 py-1.5')">
             <template v-if="n.kind === 'jesus'">
               <div class="text-[14px] font-bold text-amber-700 text-center tracking-wide">{{ n.label }}</div>
             </template>
@@ -74,9 +75,8 @@
             </template>
 
             <template v-else-if="n.kind === 'see'">
-              <div class="text-[11px] font-bold truncate text-center"
+              <div class="text-[11px] font-bold truncate text-right tracking-wide"
                    :style="n.spineColor ? { color: n.spineColor } : undefined">{{ n.label }}</div>
-              <div v-if="n.sub" class="text-[8px] text-slate-400 truncate text-center">{{ n.sub }}</div>
             </template>
 
             <template v-else-if="n.kind === 'bishop'">
@@ -220,29 +220,33 @@ const ready = computed(() => !!props.graph)
 // ── Layout constants ────────────────────────────────────────
 const PAD     = 50
 
-// Unified person-card width — apostle / bishop / branch-bishop all share
-// the same frame so the visual rhythm is consistent across generations.
-const PERSON_W = 160
-const PERSON_H = 32
+const JESUS_W = 110
+const JESUS_H = 36
 
-const JESUS_W = PERSON_W
-const JESUS_H = 38
+// Apostle cards are narrow — they're just identity badges; the wide cards
+// belong to bishops below.
+const APO_W   = 100
+const APO_H   = 34
+const APO_HG  = 20     // gap between apostle lanes (apostle row width is driven by spine clusters below)
 
-const APO_W   = PERSON_W
-const APO_H   = PERSON_H
-const APO_HG  = 80     // ≥3x previous 24 — user expects each spine to expand horizontally with many daughter sees
+// See name appears as PURE TEXT (no card frame) to the LEFT of bishop #2.
+// User: 「教座名稱旁邊不要再有卡片框框，這會被跟人搞混」
+const SEE_LABEL_W = 70    // text-only label, just enough for 4-5 chars
+const SEE_LABEL_GAP = 6   // gap between label text and bishop card
 
-const SEE_BADGE_W = 90    // small see-name badge, sits to the LEFT of bishop #2
-const SEE_BADGE_GAP = 8   // gap between see badge and bishop card
-
-const BISH_W  = PERSON_W
-const BISH_H  = PERSON_H - 2
+const BISH_W  = 160       // bishop / branch-bishop cards — the "people" frames
+const BISH_H  = 30
 const BISH_VG = 90        // biblical-tree 規格：每一任之間至少 90px
 
-const SPINE_HG = 130      // between spine bishop columns; must fit next spine's see badge (90 + 8 + slack)
+// Within one apostle's lane, multiple spines (e.g. 彼得 has 羅馬/亞歷山卓/安提阿)
+// are laid out horizontally with this gap between them.
+const SPINE_IN_LANE_GAP = 16
 
-const BRANCH_W   = PERSON_W
-const BRANCH_H   = PERSON_H - 2
+// Between two adjacent apostle lanes.
+const APOSTLE_LANE_GAP = 24
+
+const BRANCH_W   = 160
+const BRANCH_H   = 28
 const BRANCH_GAP = 12
 const BRANCH_INDENT = 16
 
@@ -279,13 +283,7 @@ const cv = computed(() => {
   if (!props.graph) return { nodes, paths, guides, w: 800, h: 600 }
   const g = props.graph
 
-  // Pre-compute desired canvas width based on widest of:
-  //  - apostle row: 16 cards * APO_W + 15 * APO_HG
-  //  - spines + their expanded branches
-  const apostleRowWidth = g.apostles.length * APO_W + (g.apostles.length - 1) * APO_HG
-
-  // Pre-compute per-spine width incl. expanded branch columns
-  // (branches can themselves have child branches → variable depth)
+  // ── Pre-compute branch children & per-spine expanded depth ──
   const branchChildren = new Map<string, BranchIn[]>()
   for (const br of g.branches) {
     if (!branchChildren.has(br.parent_see_id)) branchChildren.set(br.parent_see_id, [])
@@ -304,17 +302,38 @@ const cv = computed(() => {
     return n
   }
   const spineExpandedDepth = g.spines.map(sp => sp.see ? expandedDepth(sp.see.id) : 0)
-  // Each spine column = bishop card (PERSON_W) + optional expanded branch tree
-  const spineWidths = g.spines.map((_, i) =>
-    PERSON_W + spineExpandedDepth[i] * (BRANCH_W + BRANCH_GAP) + (spineExpandedDepth[i] > 0 ? 16 : 0)
+  // Per-spine column width — bishop card + optional expanded branch tree
+  const spineColWidth = g.spines.map((_, i) =>
+    BISH_W + spineExpandedDepth[i] * (BRANCH_W + BRANCH_GAP) + (spineExpandedDepth[i] > 0 ? 16 : 0)
   )
-  // +SEE_BADGE_W+gap reserves leftmost see badge space (extends left of the first bishop column)
-  const spineRowWidth =
-    SEE_BADGE_W + SEE_BADGE_GAP +
-    spineWidths.reduce((a, b) => a + b, 0) +
-    (g.spines.length - 1) * SPINE_HG
+  // One "spine slot" = see label area + bishop column. Used to size apostle lanes.
+  const SPINE_SLOT_LEFT = SEE_LABEL_W + SEE_LABEL_GAP
+  const spineSlotWidth = spineColWidth.map(w => SPINE_SLOT_LEFT + w)
 
-  w = Math.max(apostleRowWidth + PAD * 2, spineRowWidth + PAD * 2, JESUS_W + PAD * 2, 1200)
+  // ── Group spines by primary apostle ──
+  // Each apostle has a "lane" — wide enough to fit its apostle card AND
+  // all spines hanging below it (e.g. 彼得 has 3: 羅馬, 亞歷山卓, 安提阿).
+  const apostleSpineIdx = new Map<string, number[]>()
+  for (let si = 0; si < g.spines.length; si++) {
+    const ap = g.spines[si].primaryApostleId
+    if (!apostleSpineIdx.has(ap)) apostleSpineIdx.set(ap, [])
+    apostleSpineIdx.get(ap)!.push(si)
+  }
+
+  // Per-apostle lane width — max of apostle card width and spine cluster width
+  const laneInfo = g.apostles.map(a => {
+    const spineIdxs = apostleSpineIdx.get(a.id) ?? []
+    let cluster = 0
+    for (const si of spineIdxs) cluster += spineSlotWidth[si]
+    cluster += Math.max(0, spineIdxs.length - 1) * SPINE_IN_LANE_GAP
+    return { spineIdxs, width: Math.max(APO_W, cluster) }
+  })
+
+  const apostleRowWidth =
+    laneInfo.reduce((s, l) => s + l.width, 0) +
+    Math.max(0, g.apostles.length - 1) * APOSTLE_LANE_GAP
+
+  w = Math.max(apostleRowWidth + PAD * 2, JESUS_W + PAD * 2, 1200)
 
   // ── 1. Jesus card centered ──────────────────────────────
   const jesusY = PAD
@@ -324,21 +343,41 @@ const cv = computed(() => {
     x: jesusX, y: jesusY, w: JESUS_W, h: JESUS_H,
   })
 
-  // ── 2. Apostle row (single row of 16 centered) ─────────
+  // ── 2. Apostle row — laid out as lanes, each lane wide enough for its spines ─
   const apostleY = jesusY + JESUS_H + 60
-  const apostleStartX = (w - apostleRowWidth) / 2
+  const apostleRowStartX = (w - apostleRowWidth) / 2
   const apostleCX = new Map<string, number>()
-  for (let i = 0; i < g.apostles.length; i++) {
-    const a = g.apostles[i]
-    const ax = apostleStartX + i * (APO_W + APO_HG)
-    nodes.push({
-      id: 'ap_' + a.id, kind: 'apostle',
-      label: simplifyApostleName(a.name_zh),
-      sub: a.name_en,
-      x: ax, y: apostleY, w: APO_W, h: APO_H,
-      tooltip: `${a.name_zh}（${a.name_en}）`,
-    })
-    apostleCX.set(a.id, ax + APO_W / 2)
+  const spineX: number[] = new Array(g.spines.length).fill(0)   // bishop column X per spine
+  {
+    let cursor = apostleRowStartX
+    for (let i = 0; i < g.apostles.length; i++) {
+      const a = g.apostles[i]
+      const lane = laneInfo[i]
+      const laneCenterX = cursor + lane.width / 2
+      const ax = laneCenterX - APO_W / 2
+      nodes.push({
+        id: 'ap_' + a.id, kind: 'apostle',
+        label: simplifyApostleName(a.name_zh),
+        sub: a.name_en,
+        x: ax, y: apostleY, w: APO_W, h: APO_H,
+        tooltip: `${a.name_zh}（${a.name_en}）`,
+      })
+      apostleCX.set(a.id, laneCenterX)
+
+      // Distribute spines belonging to this apostle inside the lane, centered.
+      if (lane.spineIdxs.length > 0) {
+        let cluster = 0
+        for (const si of lane.spineIdxs) cluster += spineSlotWidth[si]
+        cluster += Math.max(0, lane.spineIdxs.length - 1) * SPINE_IN_LANE_GAP
+        let spineCursor = laneCenterX - cluster / 2
+        for (const si of lane.spineIdxs) {
+          spineX[si] = spineCursor + SPINE_SLOT_LEFT   // bishop column X
+          spineCursor += spineSlotWidth[si] + SPINE_IN_LANE_GAP
+        }
+      }
+
+      cursor += lane.width + APOSTLE_LANE_GAP
+    }
   }
 
   // ── 3. Jesus → apostles fan ────────────────────────────
@@ -356,17 +395,8 @@ const cv = computed(() => {
     }
   }
 
-  // ── 4. Spine columns (centered as a row below apostles) ─
+  // ── 4. Spine columns — spineX[] already set above per apostle lane ─
   const spineHeaderY = apostleY + APO_H + 80
-  const spineRowStartX = (w - spineRowWidth) / 2
-  const spineX: number[] = []
-  // Leftmost bishop column starts after reserving leftmost see-badge space
-  let cursor = spineRowStartX + SEE_BADGE_W + SEE_BADGE_GAP
-  for (let i = 0; i < g.spines.length; i++) {
-    spineX.push(cursor)
-    cursor += spineWidths[i] + SPINE_HG
-  }
-
   const spineCenterX: Record<string, number> = {}
   const spineBishopCenterY = new Map<string, Map<string, number>>()
   let lastBishopY = spineHeaderY
@@ -424,16 +454,15 @@ const cv = computed(() => {
     spineBishopCenterY.set(sp.key, bishopMap)
     lastBishopY = Math.max(lastBishopY, by)
 
-    // See-name badge — sits to the LEFT of the first rendered bishop card,
-    // at the same row level (= second generation row).
+    // See-name label — PURE TEXT (no card frame, per user spec) sitting to the
+    // LEFT of the first rendered bishop card, at the same row level.
     if (firstBishopY != null) {
       nodes.push({
         id: 'see_' + sp.see.id, kind: 'see',
         label: sp.see.see_zh,
-        sub: sp.see.name_zh !== sp.see.see_zh ? sp.see.name_zh : '',
-        x: headerX - SEE_BADGE_GAP - SEE_BADGE_W,
+        x: headerX - SEE_LABEL_GAP - SEE_LABEL_W,
         y: firstBishopY,
-        w: SEE_BADGE_W, h: BISH_H,
+        w: SEE_LABEL_W, h: BISH_H,
         spineColor: sp.color,
         tooltip: `${sp.see.name_zh}（創立 ${sp.see.founded_year ?? '?'}）`,
       })
@@ -658,7 +687,7 @@ function cardClass(n: LNode): string {
   const base = 'rounded-lg shadow-sm hover:shadow transition-shadow'
   if (n.kind === 'jesus') return `${base} bg-amber-50 border-2 border-amber-400`
   if (n.kind === 'apostle') return `${base} bg-white border border-slate-200`
-  if (n.kind === 'see') return `${base} bg-slate-50 border border-slate-200 font-medium flex items-center justify-center`
+  if (n.kind === 'see') return 'flex items-center justify-end pr-1'   // no frame — pure text label
   if (n.kind === 'bishop') return `${base} bg-white border border-slate-200`
   if (n.kind === 'branch-see') return `${base} bg-violet-50 border border-violet-300 cursor-pointer hover:bg-violet-100`
   return base

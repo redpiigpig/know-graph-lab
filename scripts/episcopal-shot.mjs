@@ -76,6 +76,47 @@ if (page.url().includes('/login')) {
 
 await page.waitForTimeout(3000)
 
+// Optional: click 定位全圖 (fit-all)
+if (args.includes('--fit')) {
+  const fitBtn = page.locator('button:has-text("定位")').first()
+  if (await fitBtn.count() > 0) {
+    await fitBtn.click({ force: true })
+    await page.waitForTimeout(1000)
+  }
+}
+
+// Optional: set zoom level (after centerOnJesus default), e.g. --zoom 0.6
+const zoomArg = arg('zoom')
+if (zoomArg) {
+  await page.evaluate((z) => {
+    const wrapper = document.querySelector('.absolute.top-0.left-0.origin-top-left')
+    if (wrapper) {
+      const t = wrapper.style.transform || ''
+      // Replace scale value
+      const newT = t.replace(/scale\([^)]+\)/, `scale(${z})`)
+      wrapper.style.transform = newT.includes('scale') ? newT : `${t} scale(${z})`
+    }
+  }, parseFloat(zoomArg))
+  await page.waitForTimeout(500)
+}
+
+// Optional: scroll horizontally by passing --panX (positive = pan right)
+const panXArg = arg('panX')
+if (panXArg) {
+  await page.evaluate((dx) => {
+    const wrapper = document.querySelector('.absolute.top-0.left-0.origin-top-left')
+    if (wrapper) {
+      const t = wrapper.style.transform || ''
+      const m = t.match(/translate\(([\-\d.]+)px,\s*([\-\d.]+)px\)/)
+      if (m) {
+        const newX = parseFloat(m[1]) + parseFloat(dx)
+        wrapper.style.transform = t.replace(/translate\([^)]+\)/, `translate(${newX}px, ${m[2]}px)`)
+      }
+    }
+  }, parseFloat(panXArg))
+  await page.waitForTimeout(300)
+}
+
 // Optional zoom to viewport scale 1 (no fit-all)
 const noFit = args.includes('--no-fit')
 if (noFit) {
@@ -83,7 +124,7 @@ if (noFit) {
     // Reset transform via clicking nothing — workaround: force no fit by reload then no-op
     // Instead, find the canvas wrapper and reset transform
     const wrapper = document.querySelector('.absolute.top-0.left-0.origin-top-left')
-    if (wrapper) wrapper.style.transform = 'translate(20px, 20px) scale(1)'
+    if (wrapper) wrapper.style.transform = 'translate(20px, 20px) scale(1.5)'
   })
   await page.waitForTimeout(500)
 }
