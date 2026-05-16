@@ -1,5 +1,5 @@
 import { requireAdmin } from "~/server/utils/auth-helper";
-import { countBucket, listMonths } from "~/server/utils/photos";
+import { countBucket, listEvents, listMonths } from "~/server/utils/photos";
 
 export default defineEventHandler(async (event) => {
   await requireAdmin(event);
@@ -9,5 +9,6 @@ export default defineEventHandler(async (event) => {
   for (const m of months) out.push({ month: m, count: await countBucket(year, m) });
   const screenshots = await countBucket(year, "screenshots");
   const downloads = await countBucket(year, "downloads");
-  return { year, months: out, screenshots, downloads };
+  const events = await listEvents(year);
+  return { year, months: out, screenshots, downloads, events };
 });

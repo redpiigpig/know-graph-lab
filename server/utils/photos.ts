@@ -10,8 +10,8 @@ const IMAGE_EXTS = new Set([
 const VIDEO_EXTS = new Set([".mp4", ".mov", ".m4v", ".webm", ".mkv"]);
 
 export type PhotoKind = "image" | "video";
-export type PhotoSource = "photo" | "screenshot" | "download";
-export type Segment = string; // "01"-"12" | "screenshots" | "downloads"
+export type PhotoSource = "photo" | "screenshot" | "download" | "event";
+export type Segment = string; // "01"-"12" | "screenshots" | "downloads" | <event-folder-name>
 
 export interface PhotoFile {
   name: string;
@@ -102,13 +102,42 @@ export function bucketDir(year: string, segment: Segment): string {
   }
   if (segment === "screenshots") return path.join(yearRoot, `${year}截圖`);
   if (segment === "downloads") return path.join(yearRoot, `${year}下載`);
-  throw createError({ statusCode: 400, message: `Invalid segment: ${segment}` });
+  // 事件資料夾：任意名稱，但必須是 yearRoot 的直接子資料夾且不能是 path traversal
+  if (!segment || segment.includes("/") || segment.includes("\\") || segment.startsWith(".")) {
+    throw createError({ statusCode: 400, message: `Invalid segment: ${segment}` });
+  }
+  return path.join(yearRoot, segment);
 }
 
 export function sourceForSegment(segment: Segment): PhotoSource {
   if (segment === "screenshots") return "screenshot";
   if (segment === "downloads") return "download";
-  return "photo";
+  if (/^(0[1-9]|1[0-2])$/.test(segment)) return "photo";
+  return "event";
+}
+
+/** List event subfolders under {year}相片 (non YYYY.MM, non 截圖/下載). */
+export async function listEvents(year: string): Promise<{ name: string; count: number }[]> {
+  if (!/^\d{4}$/.test(year)) {
+    throw createError({ statusCode: 400, message: "Invalid year" });
+  }
+  const yearRoot = path.join(getPhotosRoot(), `${year}相片`);
+  const entries = await fs.readdir(yearRoot, { withFileTypes: true }).catch(() => []);
+  const monthRe = new RegExp(`^${year}\\.(0[1-9]|1[0-2])$`);
+  const out: { name: string; count: number }[] = [];
+  for (const e of entries) {
+    if (!e.isDirectory()) continue;
+    if (monthRe.test(e.name)) continue;
+    if (e.name === `${year}截圖` || e.name === `${year}下載`) continue;
+    if (e.name.startsWith(".")) continue;
+    const sub = path.join(yearRoot, e.name);
+    const subEntries = await fs.readdir(sub, { withFileTypes: true }).catch(() => []);
+    let count = 0;
+    for (const f of subEntries) if (f.isFile() && classify(f.name)) count++;
+    out.push({ name: e.name, count });
+  }
+  out.sort((a, b) => a.name.localeCompare(b.name));
+  return out;
 }
 
 export async function countBucket(year: string, segment: Segment): Promise<number> {

@@ -48,8 +48,9 @@
           </NuxtLink>
         </div>
 
-        <!-- Special buckets: screenshots & downloads -->
-        <div v-if="screenshots > 0 || downloads > 0" class="mt-8 pt-6 border-t border-stone-300/60">
+        <!-- Special buckets: screenshots / downloads / events -->
+        <div v-if="screenshots > 0 || downloads > 0 || events.length > 0"
+             class="mt-8 pt-6 border-t border-stone-300/60">
           <p class="text-[10px] uppercase tracking-[0.25em] text-stone-500 mb-3">Other</p>
           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
             <NuxtLink
@@ -78,6 +79,21 @@
                 {{ downloads.toLocaleString() }}<span class="ml-1">張</span>
               </div>
             </NuxtLink>
+            <NuxtLink
+              v-for="ev in events"
+              :key="ev.name"
+              :to="`/photos/${year}/${encodeURIComponent(ev.name)}`"
+              class="bucket-card bucket-card--ev"
+              :title="ev.name"
+            >
+              <div class="flex items-center gap-2 min-w-0">
+                <span class="text-xl shrink-0">📁</span>
+                <span class="font-serif text-stone-800 text-base truncate">{{ ev.name }}</span>
+              </div>
+              <div class="mt-1 text-[10px] tracking-widest uppercase text-stone-700">
+                {{ ev.count.toLocaleString() }}<span class="ml-1">張</span>
+              </div>
+            </NuxtLink>
           </div>
         </div>
       </template>
@@ -103,9 +119,12 @@ const errMsg = ref("");
 const months = ref<{ month: string; count: number }[]>([]);
 const screenshots = ref(0);
 const downloads = ref(0);
+const events = ref<{ name: string; count: number }[]>([]);
 const countOf = (m: string) => months.value.find((x) => x.month === m)?.count ?? 0;
 const yearTotal = computed(() =>
-  months.value.reduce((a, b) => a + b.count, 0) + screenshots.value + downloads.value
+  months.value.reduce((a, b) => a + b.count, 0)
+  + screenshots.value + downloads.value
+  + events.value.reduce((a, b) => a + b.count, 0)
 );
 const activeMonths = computed(() => months.value.filter((m) => m.count > 0).length);
 
@@ -115,10 +134,12 @@ onMounted(async () => {
       months: { month: string; count: number }[];
       screenshots: number;
       downloads: number;
+      events: { name: string; count: number }[];
     }>(`/api/photos/${year.value}/months`);
     months.value = r.months || [];
     screenshots.value = r.screenshots || 0;
     downloads.value = r.downloads || 0;
+    events.value = r.events || [];
   } catch (e: unknown) {
     errMsg.value = (e as { message?: string })?.message ?? String(e);
   } finally {
@@ -169,4 +190,5 @@ onMounted(async () => {
 }
 .bucket-card--ss { background: #fbf6ee; }
 .bucket-card--dl { background: #f4f1eb; }
+.bucket-card--ev { background: #f1ede4; }
 </style>

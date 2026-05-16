@@ -120,7 +120,7 @@ definePageMeta({ middleware: 'auth' });
 interface PhotoFile {
   name: string;
   kind: "image" | "video";
-  source: "photo" | "screenshot" | "download";
+  source: "photo" | "screenshot" | "download" | "event";
   ext: string;
   size: number;
   mtime: number;
@@ -131,14 +131,20 @@ const route = useRoute();
 const year = computed(() => String(route.params.year || ""));
 const segment = computed(() => String(route.params.month || ""));
 const isMonth = computed(() => /^(0[1-9]|1[0-2])$/.test(segment.value));
+const isEvent = computed(() =>
+  !isMonth.value && segment.value !== "screenshots" && segment.value !== "downloads"
+);
 const headerLabel = computed(() =>
   isMonth.value ? `${Number(segment.value)} 月`
   : segment.value === "screenshots" ? "截圖"
-  : segment.value === "downloads" ? "下載" : segment.value
+  : segment.value === "downloads" ? "下載"
+  : decodeURIComponent(segment.value)
 );
 const sourceIcon = computed(() =>
   segment.value === "screenshots" ? "📸"
-  : segment.value === "downloads" ? "🌐" : ""
+  : segment.value === "downloads" ? "🌐"
+  : isEvent.value ? "📁"
+  : ""
 );
 
 useHead({ title: () => `${year.value} ${headerLabel.value} — 辰瑋相片` });
@@ -160,12 +166,14 @@ function renderableImage(ext: string) {
 function tileIcon(kind: string, source: string) {
   if (source === "screenshot") return "📸";
   if (source === "download") return "🌐";
+  if (source === "event") return "📁";
   if (kind === "video") return "🎬";
   return "📱"; // photos in YYYY.MM — assume phone (predominant case)
 }
 function sourceTitle(source: string) {
   if (source === "screenshot") return "螢幕截圖";
   if (source === "download") return "網路下載";
+  if (source === "event") return "事件資料夾";
   return "手機／相機拍攝";
 }
 function prev() {
@@ -187,7 +195,9 @@ function onKey(e: KeyboardEvent) {
 onMounted(async () => {
   window.addEventListener("keydown", onKey);
   try {
-    const r = await authedFetch<{ files: PhotoFile[] }>(`/api/photos/${year.value}/${segment.value}/files`);
+    const r = await authedFetch<{ files: PhotoFile[] }>(
+      `/api/photos/${year.value}/${encodeURIComponent(segment.value)}/files`
+    );
     files.value = r.files || [];
   } catch (e: unknown) {
     errMsg.value = (e as { message?: string })?.message ?? String(e);
