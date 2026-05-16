@@ -252,6 +252,7 @@ const stateEntries = ref<StateEntry[]>([])
 const coastlineFeatures = ref<any[]>([])
 const nameZhMap = ref<Map<string, string>>(new Map())
 const polygonNameZh = ref<Record<string, string>>({})
+const polygonIsState = ref<Record<string, { is_state: boolean }>>({})
 
 function nameZhOf(en: string): string {
   return STATE_DETAILS[en]?.name_zh
@@ -443,18 +444,22 @@ onMounted(async () => {
   }
 
   try {
-    const [adm0Res, statesRes, coastRes, wdRes, polyZhRes] = await Promise.all([
+    const [adm0Res, statesRes, coastRes, wdRes, polyZhRes, polyClsRes] = await Promise.all([
       fetch('/maps/ne_50m_admin_0_countries.geojson'),
       fetch('/maps/historical-states.geojson'),
       fetch('/maps/ne_50m_coastline.geojson'),
       fetch('/maps/wikidata-states.json'),
       fetch('/maps/polygon-names-zh.json').catch(() => ({ ok: false } as any)),
+      fetch('/maps/polygon-classifications.json').catch(() => ({ ok: false } as any)),
     ])
     const [adm0, states, coast, wd] = await Promise.all([
       adm0Res.json(), statesRes.json(), coastRes.json(), wdRes.json(),
     ])
     if (polyZhRes && (polyZhRes as Response).ok) {
       try { polygonNameZh.value = await (polyZhRes as Response).json() } catch {}
+    }
+    if (polyClsRes && (polyClsRes as Response).ok) {
+      try { polygonIsState.value = await (polyClsRes as Response).json() } catch {}
     }
     landFeatures.value = adm0.features.filter((f: any) => f.properties.ADM0_A3 !== 'ATA')
     coastlineFeatures.value = coast.features || []
@@ -476,12 +481,18 @@ onMounted(async () => {
         if (en && !adm0NameToZh.has(en)) adm0NameToZh.set(en, zh)
       }
     }
-    stateEntries.value = (states.features || []).map((f: any) => ({
-      feature: f,
-      name: f.properties.name,
-      yearFrom: f.properties.year_from,
-      yearTo: f.properties.year_to,
-    }))
+    // 政權過濾：用 polygon-classifications.json 篩除部落／文化／hunter-gatherer
+    // 標準（user-defined）：至少酋邦／城邦／建立王權的遊牧帝國才算政權
+    const cls = polygonIsState.value
+    const hasCls = Object.keys(cls).length > 0
+    stateEntries.value = (states.features || [])
+      .filter((f: any) => !hasCls || cls[f.properties.name]?.is_state !== false)
+      .map((f: any) => ({
+        feature: f,
+        name: f.properties.name,
+        yearFrom: f.properties.year_from,
+        yearTo: f.properties.year_to,
+      }))
     rebuildAll()
   } catch (e) {
     console.error('歷史國界地圖載入失敗', e)

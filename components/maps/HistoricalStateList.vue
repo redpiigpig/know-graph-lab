@@ -31,11 +31,18 @@
         <option value="with">有地圖 polygon</option>
         <option value="without">無 polygon</option>
       </select>
+      <select v-model="filterPolity" class="px-2 py-1.5 text-sm border border-gray-200 rounded-md focus:outline-none" title="政權標準：至少酋邦／城邦／建立王權的遊牧帝國">
+        <option value="state">僅政權（含酋邦）</option>
+        <option value="nonstate">僅部落／文化群</option>
+        <option value="all">不過濾</option>
+      </select>
 
       <div class="ml-auto text-xs text-gray-500 flex items-baseline gap-2">
         <span>顯示</span>
         <span class="text-base font-bold text-gray-900 tabular-nums">{{ filteredStates.length.toLocaleString() }}</span>
-        <span>/ {{ allStates.length.toLocaleString() }} 國</span>
+        <span>/ {{ allStates.length.toLocaleString() }} 條目</span>
+        <span class="text-gray-300">·</span>
+        <span class="text-amber-700">政權 {{ polityCount }}</span>
         <span class="text-gray-300">·</span>
         <span class="text-blue-600">有 polygon {{ polygonCount }}</span>
         <span class="text-gray-300">·</span>
@@ -246,11 +253,13 @@ import { formatYearShort } from '~/data/maps/historical-epochs'
 import { REALMS, COUNTRY_NAME_ZH, realmById } from '~/data/maps/world-religions'
 
 const allStates = ref<HistoricalState[]>([])
+const polityClassification = ref<Record<string, { is_state: boolean }>>({})
 
 const searchText = ref('')
 const filterRealm = ref('')
 const filterDetail = ref<'all' | 'with' | 'without'>('all')
 const filterPolygon = ref<'all' | 'with' | 'without'>('all')
+const filterPolity = ref<'state' | 'nonstate' | 'all'>('state')
 const sortKey = ref<'name_en' | 'year_start'>('year_start')
 const sortDir = ref<'asc' | 'desc'>('asc')
 const page = ref(1)
@@ -259,6 +268,16 @@ const selected = ref<HistoricalState | null>(null)
 
 const detailCount = computed(() => allStates.value.filter(s => s.has_detail).length)
 const polygonCount = computed(() => allStates.value.filter(s => s.has_polygon).length)
+
+// 政權判定：用 polygon-classifications.json（is_state）；wikidata-only 條目（無 polygon）若有 inception_year 視為政權
+function isStatePolity(s: HistoricalState): boolean {
+  const cls = polityClassification.value[s.name_en]
+  if (cls) return cls.is_state
+  // 沒分類資料的（多為 wikidata-only）— 有起始年份就視為政權
+  return s.year_start !== null && s.year_start !== undefined
+}
+
+const polityCount = computed(() => allStates.value.filter(isStatePolity).length)
 
 const filteredStates = computed(() => {
   let list = allStates.value
@@ -276,6 +295,8 @@ const filteredStates = computed(() => {
   if (filterDetail.value === 'without') list = list.filter(s => !s.has_detail)
   if (filterPolygon.value === 'with') list = list.filter(s => s.has_polygon)
   if (filterPolygon.value === 'without') list = list.filter(s => !s.has_polygon)
+  if (filterPolity.value === 'state') list = list.filter(s => isStatePolity(s))
+  if (filterPolity.value === 'nonstate') list = list.filter(s => !isStatePolity(s))
   // sort
   list = [...list].sort((a, b) => {
     const dir = sortDir.value === 'asc' ? 1 : -1
@@ -327,13 +348,17 @@ const SortArrow = (props: { col: string; sort: string; dir: string }) => {
 
 onMounted(async () => {
   try {
-    const [skRes, wdRes] = await Promise.all([
+    const [skRes, wdRes, clsRes] = await Promise.all([
       fetch('/maps/state-skeleton.json'),
       fetch('/maps/wikidata-states.json'),
+      fetch('/maps/polygon-classifications.json').catch(() => ({ ok: false } as any)),
     ])
     const skeleton: StateSkeleton[] = await skRes.json()
     const wikidata: WikidataState[] = await wdRes.json()
     allStates.value = mergeStates(skeleton, wikidata)
+    if (clsRes && (clsRes as Response).ok) {
+      try { polityClassification.value = await (clsRes as Response).json() } catch {}
+    }
   } catch (e) {
     console.error('states data load failed', e)
   }
