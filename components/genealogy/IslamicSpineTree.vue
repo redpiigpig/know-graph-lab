@@ -125,6 +125,11 @@
                        text-[10px] font-medium shadow-sm hover:bg-emerald-50 transition leading-tight
                        text-center cursor-default"
                 @click.stop="fitSpine">定位<br>主幹</button>
+        <button class="px-1 py-1.5 bg-white/90 border border-amber-300 rounded-lg text-amber-700
+                       text-[10px] font-medium shadow-sm hover:bg-amber-50 transition leading-tight
+                       text-center cursor-default"
+                title="一鍵展開以色列先知鏈：易司哈格→葉爾孤白→穆薩/達烏德/蘇萊曼/麥爾彥/爾撒"
+                @click.stop="expandProphets">先知<br>鏈</button>
       </div>
 
       <!-- Legend -->
@@ -306,6 +311,31 @@ function toggleExpand(personId: string) {
   const s = new Set(expandedClans.value)
   if (s.has(personId)) s.delete(personId)
   else s.add(personId)
+  expandedClans.value = s
+}
+
+// 一鍵展開以色列先知鏈：易司哈格→葉爾孤白→[利未/猶大 兩線]→穆薩/哈倫 + Davidic kings/達烏德/蘇萊曼/麥爾彥/爾撒
+function expandProphets() {
+  const PROPHET_CHAIN = [
+    '易司哈格', '葉爾孤白',
+    // Moses line
+    '利未', '卡哈特', '阿米蘭（穆薩之父）',
+    '哈倫',  // 為了顯示 Aaron→Zechariah 線（21 代略過）
+    // David line
+    '猶大', '法勒斯', '希斯崙', '蘭', '阿米拿達', '拿順',
+    '撒門', '波阿斯', '俄備得', '耶西', '達烏德', '蘇萊曼',
+    // Davidic kings of Judah
+    '羅波安', '亞比雅', '亞撒', '約沙法', '約蘭', '烏西雅',
+    '約坦', '亞哈斯', '希西家', '瑪拿西', '亞們', '約西亞',
+    '耶哥尼雅', '阿米蘭（馬利亞之父）', '麥爾彥',
+    '宰凱里雅',  // 顯示 葉哈雅
+  ]
+  const byName = personByName.value
+  const s = new Set(expandedClans.value)
+  for (const name of PROPHET_CHAIN) {
+    const node = byName.get(name)
+    if (node) s.add(node.id)
+  }
   expandedClans.value = s
 }
 // 觸發 subtree ▼ 的最小子孫數 — 1+ 就有 toggle，避免單獨葉節點長尾出現
@@ -753,7 +783,15 @@ const cv = computed(() => {
       !spineMembership.has(c) && !placedPersonIds.has(c)
     )
     if (siblings.length === 0) continue
+    // Start cursorX after any previously-placed node that extends into row i+1 or later.
+    // 防止 易司哈格 subtree (gen 21 起 27 代) 與 gen 48 spine siblings X 碰撞
+    const myRowOrBelow = myY  // row Y for siblings (i+1)
     let cursorX = SPINE_X + NW + HG * 3
+    for (const n of nodes) {
+      if (n.y >= myRowOrBelow - 1 && n.x + NW > cursorX) {
+        cursorX = n.x + NW + HG
+      }
+    }
     const sibResults: LayoutResult[] = []
     for (const sibId of siblings) {
       const r = layoutSubtree(sibId, cursorX, vis, i + 1, 0)

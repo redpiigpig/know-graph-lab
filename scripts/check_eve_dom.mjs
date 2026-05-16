@@ -53,6 +53,14 @@ await page.waitForLoadState('networkidle').catch(() => {})
 await page.waitForSelector('.node-card', { timeout: 15000 })
 await page.waitForTimeout(2500)
 
+// Click "先知鏈" auto-expand
+const expBtn = page.locator('button[title*="先知鏈"]')
+if (await expBtn.count() > 0) {
+  await expBtn.first().click()
+  await page.waitForTimeout(1200)
+}
+
+
 const result = await page.evaluate(() => {
   const cards = Array.from(document.querySelectorAll('.node-card'))
   const summary = cards.map((c, i) => ({
