@@ -48,7 +48,9 @@ uploads/
 temp/
 
 # Raw data files (large CSV/Excel, imported via scripts)
-stores/
+stores/*
+# …except Pinia store source files (Nuxt auto-imports stores/*.ts)
+!stores/*.ts
 
 # 龐君華會督文集典藏：原 nonchurch-nuxt 轉運資料夾（已搬入 pages/, layouts/, server/api/, stores/, scripts/）
 /pong-archive/
