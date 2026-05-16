@@ -75,15 +75,13 @@ export const useThesisInterviewsStore = defineStore('thesisInterviews', () => {
     { id: 'wangch', name: '王彩虹居士', role: '弘誓學團常住居士、前法界出版社秘書', date: '2024.01.17', category: '其他', filename: '01.17 王彩虹居士口述訪談紀錄' },
     { id: 'chenyxl', name: '陳悅萱老師', role: '玄奘大學宗教文化學系專案教師、印順導師思想研討會承辦人', date: '2024.02.14', category: '學者', filename: '02.14 陳悅萱老師口述訪談紀錄' },
     { id: 'linrz', name: '林蓉芝居士', role: '中華佛寺協會秘書長、宗教立法研究者', date: '2024.09.03', category: '其他', filename: '09.03 林蓉芝居士口述訪談紀錄' },
+    { id: 'kuanqian', name: '釋寬謙法師', role: '覺風佛教藝術文化基金會董事長、永修精舍住持', date: '2024.09.19', category: '法師', filename: '09.19 釋寬謙法師口述訪談紀錄' },
   ])
 
   // ── Drive 上沒有正式紀錄 docx 的訪談 ──────────────────────
   // （網站可能已有手動整理過的逐字稿，但 Drive 上欠缺正式檔）
   const driveMissing = ref<PendingInterview[]>([
     // 只有錄音 m4a，連逐字稿草稿都還沒有
-    { id: 'kuanqian', name: '釋寬謙法師', role: '財團法人覺風佛教藝術文化基金會董事長', date: '2024.09.19', category: '法師',
-      driveFolder: '2024.09.19 釋寬謙法師訪談', has: ['outline', 'audio', 'photo'],
-      note: '網站尚未上架' },
     { id: 'xinqian', name: '釋心謙法師', role: '佛教弘誓學院法師', date: '2025.03.01', category: '法師',
       driveFolder: '2025.03.01 釋心謙法師訪談', has: ['outline', 'audio', 'photo'] },
     { id: 'xinxuan', name: '釋心玄法師', role: '玄奘大學宗教與文化學系', date: '2025.03.15', category: '法師',
