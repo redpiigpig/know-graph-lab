@@ -123,7 +123,7 @@
         <div class="font-semibold text-slate-700 mb-1">使徒統緒（七大宗主教座）</div>
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-[3px] bg-red-500 rounded-full" />羅馬（彼得＋保羅）</div>
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-[3px] bg-blue-500 rounded-full" />君士坦丁堡（安得烈）</div>
-        <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-[3px] bg-amber-500 rounded-full" />亞歷山大（彼得→馬可＋巴拿巴）</div>
+        <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-[3px] bg-amber-500 rounded-full" />亞歷山卓（彼得→馬可＋巴拿巴）</div>
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-[3px] bg-cyan-600 rounded-full" />安提阿（彼得）</div>
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-[3px] bg-green-600 rounded-full" />耶路撒冷（義人雅各）</div>
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-[3px] bg-purple-600 rounded-full" />亞美尼亞（達太）</div>
