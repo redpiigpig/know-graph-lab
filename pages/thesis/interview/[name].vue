@@ -169,9 +169,6 @@ onMounted(async () => {
 }
 
 :deep(.i-q) {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
   margin: 1.25rem 0 0.5rem;
   padding: 0.75rem 1rem;
   background: #f9fafb;
@@ -180,47 +177,48 @@ onMounted(async () => {
 }
 
 :deep(.i-q-label) {
-  flex-shrink: 0;
+  display: inline-block;
   font-size: 0.7rem;
   font-weight: 700;
   color: #6b7280;
   background: #e5e7eb;
   border-radius: 0.25rem;
-  padding: 0.1rem 0.45rem;
-  margin-top: 0.35rem;
+  padding: 0.15rem 0.5rem;
   letter-spacing: 0.05em;
   font-style: normal;
+  margin-bottom: 0.4rem;
 }
 
 :deep(.i-q-body) {
+  display: block;
   font-size: 0.875rem;
   line-height: 2;
   color: #374151;
   font-style: italic;
+  text-indent: 2em;
 }
 
 :deep(.i-a) {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
   margin: 0.5rem 0 1.25rem;
 }
 
 :deep(.i-a-label) {
-  flex-shrink: 0;
+  display: inline-block;
   font-size: 0.7rem;
   font-weight: 700;
   color: #7c3aed;
   background: #ede9fe;
   border-radius: 0.25rem;
-  padding: 0.1rem 0.45rem;
-  margin-top: 0.35rem;
+  padding: 0.15rem 0.5rem;
   letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
 }
 
 :deep(.i-a-body) {
+  display: block;
   font-size: 0.9125rem;
   line-height: 2.15;
   color: #111827;
+  text-indent: 2em;
 }
 </style>
