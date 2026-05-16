@@ -1511,12 +1511,19 @@ const cv = computed(() => {
       const FORCE_EXPAND_PATH = new Map<string, Set<string>>([
         ['利未', new Set(['哥轄', '暗蘭', '摩西', '亞倫', '米利暗'])],
       ])
+      // 額外 X 偏移：force-expand 預設將 expansion centerX align 到 kid spine column，
+      // 但 Moses chain 寬度大 (亞倫|西坡拉|摩西|米利暗 ~580px)，會撞到 Judah 主幹 J26 的 亞蘭。
+      // 用 SHIFT_X 把整個 expansion 往左推，連接線會自動補 hbar kink。
+      const FORCE_EXPAND_SHIFT_X = new Map<string, number>([
+        ['利未', 30],  // Moses cluster 往右推開 30px 避 亞倫(L26) ↔ 亞蘭(希斯崙之子, J26) 撞列
+      ])
       const forceExpand = FORCE_EXPAND_NAMES.has(kp.data.name)
       const userExpanded = expandedClans.value.has(kid)
       const expanded = forceExpand || userExpanded
       // user 在 expandedClans 內表示「我要看完整」（不論是 ▼ 點開或「展開朝代」按鈕）
       // → 不套 path filter；否則 force-expand 預設只展 path 上人物
       const forcePath = (forceExpand && !userExpanded) ? (FORCE_EXPAND_PATH.get(kp.data.name) ?? null) : null
+      const forceShiftX = (forceExpand && !userExpanded) ? (FORCE_EXPAND_SHIFT_X.get(kp.data.name) ?? 0) : 0
 
       nodes.push({
         id: kid,
@@ -1576,7 +1583,7 @@ const cv = computed(() => {
         // 亞拿 已是 約亞敬 的 spine 妻 → 不要在 expansion 再畫一次）
         const kidChildren = (ch.get(kid) ?? []).filter(c => !rowOf.has(c) && !renderedAsSpouseOnSpine.has(c))
         if (kidChildren.length > 0) {
-          const exp = layoutExpansion(kidChildren, kxVal, forcePath)
+          const exp = layoutExpansion(kidChildren, kxVal + forceShiftX, forcePath)
           nodes.push(...exp.nodes)
           drops.push(...exp.drops)
           hbars.push(...exp.hbars)
