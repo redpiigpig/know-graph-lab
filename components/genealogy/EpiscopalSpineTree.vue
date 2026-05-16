@@ -74,8 +74,9 @@
             </template>
 
             <template v-else-if="n.kind === 'see'">
-              <div class="text-[12px] font-bold text-slate-900 truncate">{{ n.label }}</div>
-              <div class="text-[8.5px] text-slate-500 truncate">{{ n.sub }}</div>
+              <div class="text-[11px] font-bold truncate text-center"
+                   :style="n.spineColor ? { color: n.spineColor } : undefined">{{ n.label }}</div>
+              <div v-if="n.sub" class="text-[8px] text-slate-400 truncate text-center">{{ n.sub }}</div>
             </template>
 
             <template v-else-if="n.kind === 'bishop'">
@@ -219,24 +220,29 @@ const ready = computed(() => !!props.graph)
 // ── Layout constants ────────────────────────────────────────
 const PAD     = 50
 
-const JESUS_W = 110
-const JESUS_H = 36
+// Unified person-card width — apostle / bishop / branch-bishop all share
+// the same frame so the visual rhythm is consistent across generations.
+const PERSON_W = 160
+const PERSON_H = 32
 
-const APO_W   = 92    // 16 cards * 92 + 15 * 24 = 1832 px row
-const APO_H   = 36
-const APO_HG  = 24    // (was 8) doubled+ per user spec — clearer separation between apostles
+const JESUS_W = PERSON_W
+const JESUS_H = 38
 
-const SEE_W   = 200
-const SEE_H   = 38
+const APO_W   = PERSON_W
+const APO_H   = PERSON_H
+const APO_HG  = 80     // ≥3x previous 24 — user expects each spine to expand horizontally with many daughter sees
 
-const BISH_W  = 200
-const BISH_H  = 26
-const BISH_VG = 4
+const SEE_BADGE_W = 90    // small see-name badge, sits to the LEFT of bishop #2
+const SEE_BADGE_GAP = 8   // gap between see badge and bishop card
 
-const SPINE_HG = 90   // (was 30) wider gap between spine columns; matches biblical-tree 子嗣線 spacing
+const BISH_W  = PERSON_W
+const BISH_H  = PERSON_H - 2
+const BISH_VG = 90        // biblical-tree 規格：每一任之間至少 90px
 
-const BRANCH_W   = 190
-const BRANCH_H   = 30
+const SPINE_HG = 130      // between spine bishop columns; must fit next spine's see badge (90 + 8 + slack)
+
+const BRANCH_W   = PERSON_W
+const BRANCH_H   = PERSON_H - 2
 const BRANCH_GAP = 12
 const BRANCH_INDENT = 16
 
@@ -298,10 +304,15 @@ const cv = computed(() => {
     return n
   }
   const spineExpandedDepth = g.spines.map(sp => sp.see ? expandedDepth(sp.see.id) : 0)
+  // Each spine column = bishop card (PERSON_W) + optional expanded branch tree
   const spineWidths = g.spines.map((_, i) =>
-    SEE_W + spineExpandedDepth[i] * (BRANCH_W + BRANCH_GAP) + (spineExpandedDepth[i] > 0 ? 16 : 0)
+    PERSON_W + spineExpandedDepth[i] * (BRANCH_W + BRANCH_GAP) + (spineExpandedDepth[i] > 0 ? 16 : 0)
   )
-  const spineRowWidth = spineWidths.reduce((a, b) => a + b, 0) + (g.spines.length - 1) * SPINE_HG
+  // +SEE_BADGE_W+gap reserves leftmost see badge space (extends left of the first bishop column)
+  const spineRowWidth =
+    SEE_BADGE_W + SEE_BADGE_GAP +
+    spineWidths.reduce((a, b) => a + b, 0) +
+    (g.spines.length - 1) * SPINE_HG
 
   w = Math.max(apostleRowWidth + PAD * 2, spineRowWidth + PAD * 2, JESUS_W + PAD * 2, 1200)
 
@@ -349,7 +360,8 @@ const cv = computed(() => {
   const spineHeaderY = apostleY + APO_H + 80
   const spineRowStartX = (w - spineRowWidth) / 2
   const spineX: number[] = []
-  let cursor = spineRowStartX
+  // Leftmost bishop column starts after reserving leftmost see-badge space
+  let cursor = spineRowStartX + SEE_BADGE_W + SEE_BADGE_GAP
   for (let i = 0; i < g.spines.length; i++) {
     spineX.push(cursor)
     cursor += spineWidths[i] + SPINE_HG
@@ -357,30 +369,45 @@ const cv = computed(() => {
 
   const spineCenterX: Record<string, number> = {}
   const spineBishopCenterY = new Map<string, Map<string, number>>()
-  let lastBishopY = spineHeaderY + SEE_H
+  let lastBishopY = spineHeaderY
+
+  // Apostle name aliases — used to detect when spine #1 bishop = apostle himself.
+  // If matched, skip rendering bishop #1 (the apostle card already represents him).
+  const APOSTLE_ALIASES: Record<string, string[]> = {
+    ap_peter:      ['彼得', '聖伯多祿', '伯多祿', '聖彼得'],
+    ap_andrew:     ['安得烈', '聖安得烈', '安得肋', '聖安得肋'],
+    ap_james_just: ['義人雅各', '義人雅各伯', '雅各', '雅各伯'],
+    ap_thaddaeus:  ['達太', '聖達太', '猶達塔陡'],
+    ap_thomas:     ['多馬', '聖多馬', '多默', '聖多默'],
+  }
+  function isApostleHimself(apostleId: string, bishopName: string): boolean {
+    return (APOSTLE_ALIASES[apostleId] ?? []).some(a => bishopName.includes(a) || a.includes(bishopName))
+  }
 
   for (let i = 0; i < g.spines.length; i++) {
     const sp = g.spines[i]
     if (!sp.see) continue
 
     const headerX = spineX[i]
-    const headerCX = headerX + SEE_W / 2
+    const headerCX = headerX + BISH_W / 2
     spineCenterX[sp.key] = headerCX
 
-    nodes.push({
-      id: 'see_' + sp.see.id, kind: 'see',
-      label: sp.see.see_zh,
-      sub: sp.see.name_zh,
-      x: headerX, y: spineHeaderY, w: SEE_W, h: SEE_H,
-      spineColor: sp.color,
-      tooltip: `${sp.see.name_zh}（創立 ${sp.see.founded_year ?? '?'}）`,
-    })
+    // Per user spec: don't render see header above the column. The see name
+    // sits as a small badge NEXT TO the first rendered bishop (= 第二代).
+    // Bishops start from index 1 (skip #1) if first bishop = apostle himself.
+    let startIdx = 0
+    if (sp.bishops[0] && isApostleHimself(sp.primaryApostleId, sp.bishops[0].name_zh)) {
+      startIdx = 1
+    }
 
     const bishopMap = new Map<string, number>()
-    let by = spineHeaderY + SEE_H + 22
-    for (const b of sp.bishops) {
+    let by = spineHeaderY    // bishops start at the top of "spine area" (no see header above)
+    let firstBishopY: number | null = null
+    for (let bi = startIdx; bi < sp.bishops.length; bi++) {
+      const b = sp.bishops[bi]
       const churchTag = b.church && b.church !== '未分裂教會' ? `（${b.church}）` : ''
       bishopMap.set(b.id, by + BISH_H / 2)
+      if (firstBishopY == null) firstBishopY = by
       nodes.push({
         id: 'bish_' + b.id, kind: 'bishop',
         label: b.name_zh,
@@ -397,38 +424,58 @@ const cv = computed(() => {
     spineBishopCenterY.set(sp.key, bishopMap)
     lastBishopY = Math.max(lastBishopY, by)
 
-    // Spine guide line
-    if (sp.bishops.length > 0) {
-      guides.push({
-        x: headerCX, y1: spineHeaderY + SEE_H, y2: by - BISH_VG, color: sp.color,
+    // See-name badge — sits to the LEFT of the first rendered bishop card,
+    // at the same row level (= second generation row).
+    if (firstBishopY != null) {
+      nodes.push({
+        id: 'see_' + sp.see.id, kind: 'see',
+        label: sp.see.see_zh,
+        sub: sp.see.name_zh !== sp.see.see_zh ? sp.see.name_zh : '',
+        x: headerX - SEE_BADGE_GAP - SEE_BADGE_W,
+        y: firstBishopY,
+        w: SEE_BADGE_W, h: BISH_H,
+        spineColor: sp.color,
+        tooltip: `${sp.see.name_zh}（創立 ${sp.see.founded_year ?? '?'}）`,
       })
     }
-    // First bishop ← see header
-    if (sp.bishops.length > 0) {
-      const firstY = bishopMap.get(sp.bishops[0].id)!
-      paths.push({
-        d: `M${headerCX},${spineHeaderY + SEE_H} L${headerCX},${firstY}`,
-        stroke: sp.color, opacity: 0.5,
+
+    // Spine guide line — from apostle card bottom area to last bishop card
+    if (sp.bishops.length > startIdx) {
+      guides.push({
+        x: headerCX, y1: apostleY + APO_H, y2: by - BISH_VG, color: sp.color,
       })
     }
 
     // ── side branches (collapsible) ──
-    const branchColBaseX = headerX + SEE_W + 16
+    const branchColBaseX = headerX + BISH_W + 16
     const lastBranchYByDepth = new Map<number, number>()
+
+    // Track Y position of every branch bishop card so sub-branches can attach to
+    // the right successor row (per user spec: 分裂/獨立必須在那任主教 row 才分出).
+    const branchBishopMap = new Map<string, number>()
 
     function renderBranches(parentSeeId: string, depth: number, parentBranchY?: number) {
       const kids = branchChildren.get(parentSeeId) ?? []
       for (const br of kids) {
+        // Find the Y of the parent bishop during whose tenure this daughter was founded.
+        // Parent bishop may live in either:
+        //   - the spine bishopMap (if direct child of spine)
+        //   - the branchBishopMap (if child of an expanded branch)
         let attachY: number
-        if (depth === 0 && br.parent_bishop_id && bishopMap.has(br.parent_bishop_id)) {
+        if (br.parent_bishop_id && bishopMap.has(br.parent_bishop_id)) {
           attachY = bishopMap.get(br.parent_bishop_id)!
+        } else if (br.parent_bishop_id && branchBishopMap.has(br.parent_bishop_id)) {
+          attachY = branchBishopMap.get(br.parent_bishop_id)!
         } else if (depth === 0) {
-          attachY = approxYByYear(sp, br.founded_year, bishopMap, spineHeaderY + SEE_H + 22)
+          // No specific bishop matched → approx by founding year along this spine
+          attachY = approxYByYear(sp, br.founded_year, bishopMap, spineHeaderY)
         } else {
-          attachY = parentBranchY ?? (spineHeaderY + SEE_H + 22)
+          // Sub-branch with no resolvable parent bishop (parent branch likely collapsed)
+          // → fall back to parent branch header Y
+          attachY = parentBranchY ?? (spineHeaderY)
         }
         const bx = branchColBaseX + depth * (BRANCH_W + BRANCH_GAP)
-        let by = Math.max(attachY - BRANCH_H / 2, spineHeaderY + SEE_H + 22)
+        let by = Math.max(attachY - BRANCH_H / 2, spineHeaderY)
         const prevY = lastBranchYByDepth.get(depth)
         if (prevY != null) {
           const minY = prevY + BRANCH_H + 6
@@ -449,7 +496,7 @@ const cv = computed(() => {
         // Connection line from attach point → branch
         // - is_split (同名 see, rival successors): 紅色鋸齒線（強斷裂感）
         // - 設立教座 (子座新名): 粗實線·spine 色
-        const fromX = depth === 0 ? headerX + SEE_W : bx - BRANCH_GAP
+        const fromX = depth === 0 ? headerX + BISH_W : bx - BRANCH_GAP
         const toX = bx
         const toY = by + BRANCH_H / 2
         const midX = (fromX + toX) / 2
@@ -464,6 +511,9 @@ const cv = computed(() => {
           let cy = by + BRANCH_H + 4
           for (const bb of br.bishops) {
             const churchTag = bb.church && bb.church !== br.church ? `（${bb.church}）` : ''
+            // Track this branch bishop's Y so deeper sub-branches can attach to the
+            // specific bishop row when their parent_bishop_id resolves to here.
+            branchBishopMap.set(bb.id, cy + (BISH_H - 2) / 2)
             nodes.push({
               id: 'bbish_' + bb.id, kind: 'bishop',
               label: bb.name_zh,
@@ -608,7 +658,7 @@ function cardClass(n: LNode): string {
   const base = 'rounded-lg shadow-sm hover:shadow transition-shadow'
   if (n.kind === 'jesus') return `${base} bg-amber-50 border-2 border-amber-400`
   if (n.kind === 'apostle') return `${base} bg-white border border-slate-200`
-  if (n.kind === 'see') return `${base} bg-white border border-slate-300 font-medium`
+  if (n.kind === 'see') return `${base} bg-slate-50 border border-slate-200 font-medium flex items-center justify-center`
   if (n.kind === 'bishop') return `${base} bg-white border border-slate-200`
   if (n.kind === 'branch-see') return `${base} bg-violet-50 border border-violet-300 cursor-pointer hover:bg-violet-100`
   return base
