@@ -1332,12 +1332,19 @@ const cv = computed(() => {
     }
 
     // Dual-spine 中段：把非 spine 兄弟整段過濾掉，只留 spine 主幹 kids。
-    // 例外：使用者明確展開的 clan（如 哈拿尼雅 → Exilarch / Nasi 線）保留，
-    // 否則「🏛️ 展開朝代」按鈕無法在 dual-spine 中段達到 Davidic 後代。
+    // 例外 1：使用者明確展開的 clan（如 哈拿尼雅 → Exilarch / Nasi 線）保留，
+    //         否則「🏛️ 展開朝代」按鈕無法在 dual-spine 中段達到 Davidic 後代。
+    // 例外 2：聖家 anchor — 斯多蘭（亞拿之父）必須保留，否則 蘇比 → 以利沙白 →
+    //         施洗約翰 整條 chain 在 gen 72 (spine B 71<gen<73 hide zone) 被切斷。
+    //         此清單與 line ~1471 的 forceExpand 同步。
     if (isInDualSpineHideZone(sid)) {
-      const onlySpineOrExpanded = orderedRTL.filter(k =>
-        rowOf.has(k) || expandedClans.value.has(k)
-      )
+      const onlySpineOrExpanded = orderedRTL.filter(k => {
+        if (rowOf.has(k)) return true
+        if (expandedClans.value.has(k)) return true
+        const nm = pMap.get(k)?.data?.name
+        if (nm === '斯多蘭（亞拿之父）' || nm === '蘇比（亞拿之姊）') return true
+        return false
+      })
       orderedRTL.length = 0
       orderedRTL.push(...onlySpineOrExpanded)
     }
@@ -1468,7 +1475,13 @@ const cv = computed(() => {
       // 展開後跟 spine 重疊的卡片會被 occlude 隱藏（line 1316）。
       // 例外：耶穌聖家 anchor 鏈（斯多蘭 → 蘇比 → 以利沙白 → 施洗約翰）必須預設展開，
       // 否則 蘇比 + 施洗約翰 整支看不到。亞拿（聖母之母）的姊妹 蘇比 是 NT key person。
-      const forceExpand = kp.data.name === '斯多蘭（亞拿之父）' || kp.data.name === '蘇比（亞拿之姊）'
+      // 以利米勒 + 拿俄米 是路得記主家庭 — 預設展開好讓 瑪倫 + 基連 + 路得 一起看見。
+      const FORCE_EXPAND_NAMES = new Set<string>([
+        '斯多蘭（亞拿之父）',
+        '蘇比（亞拿之姊）',
+        '以利米勒',
+      ])
+      const forceExpand = FORCE_EXPAND_NAMES.has(kp.data.name)
       const expanded = forceExpand || expandedClans.value.has(kid)
 
       nodes.push({
