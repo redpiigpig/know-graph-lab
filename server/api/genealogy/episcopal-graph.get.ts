@@ -20,6 +20,7 @@ interface SeeRow {
   tradition: string
   founded_year: number | null
   parent_see_id: string | null
+  split_year: number | null
 }
 
 interface SuccRow {
@@ -81,11 +82,15 @@ type SpineKey = 'rome' | 'constantinople' | 'alexandria' | 'antioch' | 'jerusale
 // `rivalChurches` is for parallel rival successions that split off and
 //   should be rendered as a separate split branch, NOT merged into the spine
 //   (e.g. 東方教會（亞述） split from 古代東方教會 in 1968 — both exist today).
+// `rivalSplitYear` filters rival bishops to those AFTER the split, suppressing
+//   pre-split duplicates (e.g. 科普特正教 DB has full 42-present list but
+//   pre-451 entries duplicate 未分裂教會 — we only want post-Chalcedon ones).
 const SPINE_DEFS: Array<{
   key: SpineKey
   see_zh: string
   primaryChurches: string[]
   rivalChurches?: string[]
+  rivalSplitYear?: number
   primaryApostleId: string
   secondaryApostleId?: string
   color: string
@@ -94,7 +99,7 @@ const SPINE_DEFS: Array<{
     primaryApostleId: 'ap_peter', secondaryApostleId: 'ap_paul',         color: '#dc2626' },
   { key: 'constantinople', see_zh: '君士坦丁堡',     primaryChurches: ['未分裂教會', '東正教'],
     primaryApostleId: 'ap_andrew',                                        color: '#2563eb' },
-  { key: 'alexandria',     see_zh: '亞歷山卓',       primaryChurches: ['未分裂教會', '東正教', '科普特正教'],
+  { key: 'alexandria',     see_zh: '亞歷山卓',       primaryChurches: ['未分裂教會', '東正教'],
     primaryApostleId: 'ap_peter', secondaryApostleId: 'ap_barnabas',     color: '#d97706' },
   { key: 'antioch',        see_zh: '安提阿',         primaryChurches: ['未分裂教會', '東正教'],
     primaryApostleId: 'ap_peter',                                         color: '#0891b2' },
@@ -114,7 +119,7 @@ export default defineEventHandler(async (event) => {
   // 1. all sees
   const { data: seeRows, error: seeErr } = await supabase
     .from('episcopal_sees')
-    .select('id, see_zh, name_zh, name_en, church, tradition, founded_year, parent_see_id')
+    .select('id, see_zh, name_zh, name_en, church, tradition, founded_year, parent_see_id, split_year')
   if (seeErr) throw createError({ statusCode: 500, message: seeErr.message })
 
   const sees: SeeRow[] = seeRows ?? []
@@ -162,14 +167,18 @@ export default defineEventHandler(async (event) => {
     if (main) spineSeeIds.add(main.id)
 
     // gather all bishops for this see across all primaryChurches.
-    // Dedupe: a bishop with the same (name_zh, start_year) appearing under
-    // multiple "churches" (e.g. 聖馬爾谷 in both 未分裂教會 and 科普特正教)
-    // is the same person — keep one (prefer 未分裂教會, else lowest succession_number).
+    // Dedupe: same bishop may appear under multiple "churches" with different
+    // Chinese translations (e.g. 亞歷山卓 #24 is 聖息羅一世 in 未分裂教會 but
+    // 聖濟利祿一世 in 東正教 — both = Cyril of Alexandria, 412 AD).
+    // Use (succession_number, start_year) as dedupe key when succession_number
+    // is set; fall back to name+year otherwise.
     const bishopMergeMap = new Map<string, SuccRow>()
     for (const church of def.primaryChurches) {
       const list = bishopsBySeeChurch.get(`${def.see_zh}|${church}`) ?? []
       for (const b of list) {
-        const key = `${b.name_zh}|${b.start_year ?? ''}`
+        const key = b.succession_number != null
+          ? `n${b.succession_number}|${b.start_year ?? ''}`
+          : `z${b.name_zh}|${b.start_year ?? ''}`
         const prev = bishopMergeMap.get(key)
         if (!prev) {
           bishopMergeMap.set(key, b)
@@ -301,12 +310,20 @@ export default defineEventHandler(async (event) => {
         if (seen.has(k.id)) continue
         seen.add(k.id)
         const parentSee = seeById.get(seeId)!
-        const parentBishopId = findBishopAtYear(parentSee, k.founded_year)
+        // Use split_year (if set) as the attach point — that's the moment the rival
+        // line diverged. Otherwise use founded_year.
+        const attachYear = k.split_year ?? k.founded_year
+        const parentBishopId = findBishopAtYear(parentSee, attachYear)
         // gather bishops for this branch see (across all churches it carries)
-        const allBishops: SuccRow[] = []
+        let allBishops: SuccRow[] = []
         for (const [bk, arr] of bishopsBySeeChurch.entries()) {
           const [seeName, ch] = bk.split('|')
           if (seeName === k.see_zh && ch === k.church) allBishops.push(...arr)
+        }
+        // If this branch see has split_year (e.g. 451 for Coptic Orthodox split from
+        // Alexandria), drop pre-split bishops — they're duplicates of primary line.
+        if (k.split_year != null) {
+          allBishops = allBishops.filter(b => (b.start_year ?? 9999) >= k.split_year!)
         }
         allBishops.sort((a, b) => {
           const an = a.succession_number ?? 9999
@@ -327,7 +344,8 @@ export default defineEventHandler(async (event) => {
           name_en: k.name_en,
           church: k.church,
           tradition: k.tradition,
-          founded_year: k.founded_year,
+          // For split branches show the split year (more informative than ancient see founding)
+          founded_year: k.split_year ?? k.founded_year,
           parent_see_id: seeId,
           parent_spine_key: spineKey,
           parent_bishop_id: parentBishopId,
@@ -348,7 +366,13 @@ export default defineEventHandler(async (event) => {
     if (!sp || !sp.see) continue
 
     for (const rivalChurch of def.rivalChurches) {
-      const rivalBishopRows = bishopsBySeeChurch.get(`${def.see_zh}|${rivalChurch}`) ?? []
+      let rivalBishopRows = bishopsBySeeChurch.get(`${def.see_zh}|${rivalChurch}`) ?? []
+      // If rivalSplitYear is set, filter out pre-split bishops (they're duplicates
+      // of primary line, e.g. 科普特正教 DB has full 42-present list but pre-451
+      // entries duplicate 未分裂教會).
+      if (def.rivalSplitYear != null) {
+        rivalBishopRows = rivalBishopRows.filter(b => (b.start_year ?? 9999) >= def.rivalSplitYear!)
+      }
       if (rivalBishopRows.length === 0) continue
 
       // Find a see row for this (see_zh, church) pair to use as the branch identity.
@@ -357,10 +381,8 @@ export default defineEventHandler(async (event) => {
       const branchId = rivalSee?.id ?? `synth_${def.key}_${rivalChurch}`
 
       // The split year = the earliest year this rival has its own succession.
-      // Prefer rivalBishopRows[0].start_year over rivalSee.founded_year because the
-      // see record's founded_year often refers to the ancient see (e.g. 310 for
-      // 塞琉西亞—泰西封 itself), not the split moment (1976 for the rival line).
-      const foundedYear = (rivalBishopRows[0]?.start_year ?? null) ?? rivalSee?.founded_year ?? null
+      // Prefer the explicit rivalSplitYear or first remaining bishop's start_year.
+      const foundedYear = def.rivalSplitYear ?? (rivalBishopRows[0]?.start_year ?? null) ?? rivalSee?.founded_year ?? null
       const parentBishopId = findBishopAtYear(sp.see as SeeRow, foundedYear)
 
       branches.push({
