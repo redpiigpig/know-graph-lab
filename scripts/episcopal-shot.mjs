@@ -83,7 +83,7 @@ if (noFit) {
     // Reset transform via clicking nothing — workaround: force no fit by reload then no-op
     // Instead, find the canvas wrapper and reset transform
     const wrapper = document.querySelector('.absolute.top-0.left-0.origin-top-left')
-    if (wrapper) wrapper.style.transform = 'translate(20px, 20px) scale(1.2)'
+    if (wrapper) wrapper.style.transform = 'translate(20px, 20px) scale(0.18)'
   })
   await page.waitForTimeout(500)
 }
