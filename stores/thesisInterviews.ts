@@ -48,7 +48,7 @@ export const useThesisInterviewsStore = defineStore('thesisInterviews', () => {
     { id: 'yuanmao', name: '釋圓貌法師', role: '佛教弘誓學院院長', date: '2024.01.16', category: '法師', filename: '01.16 釋圓貌法師口述訪談紀錄' },
     { id: 'xinyu', name: '釋心宇法師', role: '佛教弘誓學院', date: '2024.01.16', category: '法師', filename: '01.16 釋心宇法師口述訪談紀錄' },
     { id: 'yinyue', name: '釋印悅法師', role: '《弘誓》雙月刊總編輯、學務主任', date: '2024.01.16', category: '法師', filename: '01.16 釋印悅法師口述訪談紀錄' },
-    { id: 'xinhao', name: '釋心皓法師', role: '佛教弘誓學院法師', date: '2024.01.17', category: '法師', filename: '01.17 釋心皓法師口述訪談紀錄' },
+    { id: 'xinhao', name: '釋心皓法師', role: '弘誓僧團住持、弘誓文教基金會財務主任', date: '2024.01.17', category: '法師', filename: '01.17 釋心皓法師口述訪談紀錄' },
     { id: 'jianan', name: '釋見岸法師', role: '佛教弘誓學院法師', date: '2024.05.11', category: '法師', filename: '05.11 釋見岸法師口述訪談紀錄' },
     { id: 'changlei', name: '釋長叡法師', role: '台北市中山區慧日講堂住持', date: '2024.06.17', category: '法師', filename: '06.17 釋長叡法師口述訪談紀錄' },
     { id: 'xinqian', name: '釋心謙法師', role: '佛教弘誓學院法師', date: '2025.03.01', category: '法師', filename: '03.01 釋心謙法師口述訪談紀錄' },
@@ -83,9 +83,6 @@ export const useThesisInterviewsStore = defineStore('thesisInterviews', () => {
     // 只有 m4a.txt 逐字稿草稿（最接近可用狀態）
     { id: 'wangch', name: '王彩虹居士', role: '佛教弘誓學院護持者', date: '2024.01.17', category: '其他',
       driveFolder: '2024.01.17 王彩虹居士訪談', has: ['outline', 'audio', 'draft-txt', 'photo'] },
-    { id: 'xinhao', name: '釋心皓法師', role: '佛教弘誓學院法師', date: '2024.01.17', category: '法師',
-      driveFolder: '2024.01.17 釋心皓法師訪談', has: ['outline', 'audio', 'draft-txt', 'photo'],
-      note: '錄音分三段 m4a + 合併檔 mp3' },
     { id: 'chenyxl', name: '陳悅萱老師', role: '佛教音樂工作者', date: '2024.02.14', category: '其他',
       driveFolder: '2024.02.14 陳悅萱老師訪談', has: ['outline', 'audio', 'draft-txt', 'photo'] },
 
