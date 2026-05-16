@@ -1,0 +1,952 @@
+# 歷史國界 100 年級距審查（v2）
+時間：2026-05-16T09:35:35.524Z
+資料：historical-states.geojson 9588 features → 過濾政權後 4008
+
+## 預掃結果
+
+### A. 時代錯置（0 條）
+
+### B. 跨度過大 polygon（>1500 年，top 30）
+
+## 每 100 年活躍政權清單
+
+
+### 4001 BCE  ·  8 政權  
+    city-states (city-states)                          Egypt (Egypt)                                      Elam (Elam)                                       
+    Hurrian Kingdoms (Hurrian Kingdoms)                Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                       
+    Minoan (Minoan)                                    Ur (Ur)                                           
+
+### 3901 BCE  ·  8 政權  
+    city-states (city-states)                          Egypt (Egypt)                                      Elam (Elam)                                       
+    Hurrian Kingdoms (Hurrian Kingdoms)                Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                       
+    Minoan (Minoan)                                    Ur (Ur)                                           
+
+### 3801 BCE  ·  8 政權  
+    city-states (city-states)                          Egypt (Egypt)                                      Elam (Elam)                                       
+    Hurrian Kingdoms (Hurrian Kingdoms)                Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                       
+    Minoan (Minoan)                                    Ur (Ur)                                           
+
+### 3701 BCE  ·  8 政權  
+    city-states (city-states)                          Egypt (Egypt)                                      Elam (Elam)                                       
+    Hurrian Kingdoms (Hurrian Kingdoms)                Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                       
+    Minoan (Minoan)                                    Ur (Ur)                                           
+
+### 3601 BCE  ·  8 政權  
+    city-states (city-states)                          Egypt (Egypt)                                      Elam (Elam)                                       
+    Hurrian Kingdoms (Hurrian Kingdoms)                Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                       
+    Minoan (Minoan)                                    Ur (Ur)                                           
+
+### 3501 BCE  ·  8 政權  
+    city-states (city-states)                          Egypt (Egypt)                                      Elam (Elam)                                       
+    Hurrian Kingdoms (Hurrian Kingdoms)                Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                       
+    Minoan (Minoan)                                    Ur (Ur)                                           
+
+### 3401 BCE  ·  8 政權  
+    city-states (city-states)                          Egypt (Egypt)                                      Elam (Elam)                                       
+    Hurrian Kingdoms (Hurrian Kingdoms)                Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                       
+    Minoan (Minoan)                                    Ur (Ur)                                           
+
+### 3301 BCE  ·  8 政權  
+    city-states (city-states)                          Egypt (Egypt)                                      Elam (Elam)                                       
+    Hurrian Kingdoms (Hurrian Kingdoms)                Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                       
+    Minoan (Minoan)                                    Ur (Ur)                                           
+
+### 3201 BCE  ·  8 政權  
+    city-states (city-states)                          Egypt (Egypt)                                      Elam (Elam)                                       
+    Hurrian Kingdoms (Hurrian Kingdoms)                Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                       
+    Minoan (Minoan)                                    Ur (Ur)                                           
+
+### 3101 BCE  ·  8 政權  
+    city-states (city-states)                          Egypt (Egypt)                                      Elam (Elam)                                       
+    Hurrian Kingdoms (Hurrian Kingdoms)                Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                       
+    Minoan (Minoan)                                    Ur (Ur)                                           
+
+### 3001 BCE  ·  8 政權  
+    city-states (city-states)                          Egypt (Egypt)                                      Elam (Elam)                                       
+    Hurrian Kingdoms (Hurrian Kingdoms)                Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                       
+    Minoan (Minoan)                                    Ur (Ur)                                           
+
+### 2901 BCE  ·  8 政權  
+    city-states (city-states)                          Egypt (Egypt)                                      Elam (Elam)                                       
+    Hurrian Kingdoms (Hurrian Kingdoms)                Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                       
+    Minoan (Minoan)                                    Ur (Ur)                                           
+
+### 2801 BCE  ·  8 政權  
+    city-states (city-states)                          Egypt (Egypt)                                      Elam (Elam)                                       
+    Hurrian Kingdoms (Hurrian Kingdoms)                Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                       
+    Minoan (Minoan)                                    Ur (Ur)                                           
+
+### 2701 BCE  ·  8 政權  
+    city-states (city-states)                          Egypt (Egypt)                                      Elam (Elam)                                       
+    Hurrian Kingdoms (Hurrian Kingdoms)                Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                       
+    Minoan (Minoan)                                    Ur (Ur)                                           
+
+### 2601 BCE  ·  8 政權  
+    city-states (city-states)                          Egypt (Egypt)                                      Elam (Elam)                                       
+    Hurrian Kingdoms (Hurrian Kingdoms)                Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                       
+    Minoan (Minoan)                                    Ur (Ur)                                           
+
+### 2501 BCE  ·  8 政權  
+    city-states (city-states)                          Egypt (Egypt)                                      Elam (Elam)                                       
+    Hurrian Kingdoms (Hurrian Kingdoms)                Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                       
+    Minoan (Minoan)                                    Ur (Ur)                                           
+
+### 2401 BCE  ·  8 政權  
+    city-states (city-states)                          Egypt (Egypt)                                      Elam (Elam)                                       
+    Hurrian Kingdoms (Hurrian Kingdoms)                Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                       
+    Minoan (Minoan)                                    Ur (Ur)                                           
+
+### 2301 BCE  ·  8 政權  
+    city-states (city-states)                          Egypt (Egypt)                                      Elam (Elam)                                       
+    Hurrian Kingdoms (Hurrian Kingdoms)                Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                       
+    Minoan (Minoan)                                    Ur (Ur)                                           
+
+### 2201 BCE  ·  8 政權  
+    city-states (city-states)                          Egypt (Egypt)                                      Elam (Elam)                                       
+    Hurrian Kingdoms (Hurrian Kingdoms)                Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                       
+    Minoan (Minoan)                                    Ur (Ur)                                           
+
+### 2101 BCE  ·  8 政權  
+    city-states (city-states)                          Egypt (Egypt)                                      Elam (Elam)                                       
+    Hurrian Kingdoms (Hurrian Kingdoms)                Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                       
+    Minoan (Minoan)                                    Ur (Ur)                                           
+
+### 2001 BCE  ·  11 政權  
+    Canaan (Canaan)                                    city-states (city-states)                          Egypt (Egypt)                                     
+    Elam (Elam)                                        Hittites (Hittites)                                Hurrian Kingdoms (Hurrian Kingdoms)               
+    Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                        Minoan (Minoan)                                   
+    Ur (Ur)                                            Xia (Xia)                                         
+
+### 1901 BCE  ·  11 政權  
+    Canaan (Canaan)                                    city-states (city-states)                          Egypt (Egypt)                                     
+    Elam (Elam)                                        Hittites (Hittites)                                Hurrian Kingdoms (Hurrian Kingdoms)               
+    Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                        Minoan (Minoan)                                   
+    Ur (Ur)                                            Xia (Xia)                                         
+
+### 1801 BCE  ·  11 政權  
+    Canaan (Canaan)                                    city-states (city-states)                          Egypt (Egypt)                                     
+    Elam (Elam)                                        Hittites (Hittites)                                Hurrian Kingdoms (Hurrian Kingdoms)               
+    Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                        Minoan (Minoan)                                   
+    Ur (Ur)                                            Xia (Xia)                                         
+
+### 1701 BCE  ·  11 政權  
+    Canaan (Canaan)                                    city-states (city-states)                          Egypt (Egypt)                                     
+    Elam (Elam)                                        Hittites (Hittites)                                Hurrian Kingdoms (Hurrian Kingdoms)               
+    Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                        Minoan (Minoan)                                   
+    Ur (Ur)                                            Xia (Xia)                                         
+
+### 1601 BCE  ·  11 政權  
+    Canaan (Canaan)                                    city-states (city-states)                          Egypt (Egypt)                                     
+    Elam (Elam)                                        Hittites (Hittites)                                Hurrian Kingdoms (Hurrian Kingdoms)               
+    Indus valley civilization (Indus valley civilization) 克爾瑪 (Kerma)                                        Minoan (Minoan)                                   
+    Ur (Ur)                                            Xia (Xia)                                         
+
+### 1501 BCE  ·  16 政權  · 重複 1 條
+  ⚠ 同名重複：
+    - 「state societies and Aramaean kingdoms」（國家與亞蘭諸王國）x2 | 1501 BCE-1002 BCE、1501 BCE-1002 BCE
+    Assyria (Assyria)                                  Babylonia (Babylonia)                              Egypt (Egypt)                                     
+    Elam (Elam)                                        Greek city-states (Greek city-states)              Hittites (Hittites)                               
+    大衛與所羅門王國 (Kingdom of David and Solomon)            庫施 (Kush)                                          Saba (Saba)                                       
+    華夏 (Sinic)                                         國家與亞蘭諸王國 (state societies and Aramaean)            國家與亞蘭諸王國 (state societies and Aramaean)           
+    Thrace (Thrace)                                    Urartu (Urartu)                                    Wu (Wu)                                           
+    Zhoa (Zhoa)                                       
+
+### 1401 BCE  ·  16 政權  · 重複 1 條
+  ⚠ 同名重複：
+    - 「state societies and Aramaean kingdoms」（國家與亞蘭諸王國）x2 | 1501 BCE-1002 BCE、1501 BCE-1002 BCE
+    Assyria (Assyria)                                  Babylonia (Babylonia)                              Egypt (Egypt)                                     
+    Elam (Elam)                                        Greek city-states (Greek city-states)              Hittites (Hittites)                               
+    大衛與所羅門王國 (Kingdom of David and Solomon)            庫施 (Kush)                                          Saba (Saba)                                       
+    華夏 (Sinic)                                         國家與亞蘭諸王國 (state societies and Aramaean)            國家與亞蘭諸王國 (state societies and Aramaean)           
+    Thrace (Thrace)                                    Urartu (Urartu)                                    Wu (Wu)                                           
+    Zhoa (Zhoa)                                       
+
+### 1301 BCE  ·  16 政權  · 重複 1 條
+  ⚠ 同名重複：
+    - 「state societies and Aramaean kingdoms」（國家與亞蘭諸王國）x2 | 1501 BCE-1002 BCE、1501 BCE-1002 BCE
+    Assyria (Assyria)                                  Babylonia (Babylonia)                              Egypt (Egypt)                                     
+    Elam (Elam)                                        Greek city-states (Greek city-states)              Hittites (Hittites)                               
+    大衛與所羅門王國 (Kingdom of David and Solomon)            庫施 (Kush)                                          Saba (Saba)                                       
+    華夏 (Sinic)                                         國家與亞蘭諸王國 (state societies and Aramaean)            國家與亞蘭諸王國 (state societies and Aramaean)           
+    Thrace (Thrace)                                    Urartu (Urartu)                                    Wu (Wu)                                           
+    Zhoa (Zhoa)                                       
+
+### 1201 BCE  ·  16 政權  · 重複 1 條
+  ⚠ 同名重複：
+    - 「state societies and Aramaean kingdoms」（國家與亞蘭諸王國）x2 | 1501 BCE-1002 BCE、1501 BCE-1002 BCE
+    Assyria (Assyria)                                  Babylonia (Babylonia)                              Egypt (Egypt)                                     
+    Elam (Elam)                                        Greek city-states (Greek city-states)              Hittites (Hittites)                               
+    大衛與所羅門王國 (Kingdom of David and Solomon)            庫施 (Kush)                                          Saba (Saba)                                       
+    華夏 (Sinic)                                         國家與亞蘭諸王國 (state societies and Aramaean)            國家與亞蘭諸王國 (state societies and Aramaean)           
+    Thrace (Thrace)                                    Urartu (Urartu)                                    Wu (Wu)                                           
+    Zhoa (Zhoa)                                       
+
+### 1101 BCE  ·  16 政權  · 重複 1 條
+  ⚠ 同名重複：
+    - 「state societies and Aramaean kingdoms」（國家與亞蘭諸王國）x2 | 1501 BCE-1002 BCE、1501 BCE-1002 BCE
+    Assyria (Assyria)                                  Babylonia (Babylonia)                              Egypt (Egypt)                                     
+    Elam (Elam)                                        Greek city-states (Greek city-states)              Hittites (Hittites)                               
+    大衛與所羅門王國 (Kingdom of David and Solomon)            庫施 (Kush)                                          Saba (Saba)                                       
+    華夏 (Sinic)                                         國家與亞蘭諸王國 (state societies and Aramaean)            國家與亞蘭諸王國 (state societies and Aramaean)           
+    Thrace (Thrace)                                    Urartu (Urartu)                                    Wu (Wu)                                           
+    Zhoa (Zhoa)                                       
+
+### 1001 BCE  ·  16 政權  · 重複 1 條
+  ⚠ 同名重複：
+    - 「state societies and Aramaean kingdoms」（國家與亞蘭諸王國）x2 | 1001 BCE-702 BCE、1001 BCE-702 BCE
+    Assyria (Assyria)                                  Babylonia (Babylonia)                              Egypt (Egypt)                                     
+    Elam (Elam)                                        Greek city-states (Greek city-states)              Hittites (Hittites)                               
+    大衛與所羅門王國 (Kingdom of David and Solomon)            庫施 (Kush)                                          Saba (Saba)                                       
+    華夏 (Sinic)                                         國家與亞蘭諸王國 (state societies and Aramaean)            國家與亞蘭諸王國 (state societies and Aramaean)           
+    Thrace (Thrace)                                    Urartu (Urartu)                                    Wu (Wu)                                           
+    Zhoa (Zhoa)                                       
+
+### 901 BCE  ·  16 政權  · 重複 1 條
+  ⚠ 同名重複：
+    - 「state societies and Aramaean kingdoms」（國家與亞蘭諸王國）x2 | 1001 BCE-702 BCE、1001 BCE-702 BCE
+    Assyria (Assyria)                                  Babylonia (Babylonia)                              Egypt (Egypt)                                     
+    Elam (Elam)                                        Greek city-states (Greek city-states)              Hittites (Hittites)                               
+    大衛與所羅門王國 (Kingdom of David and Solomon)            庫施 (Kush)                                          Saba (Saba)                                       
+    華夏 (Sinic)                                         國家與亞蘭諸王國 (state societies and Aramaean)            國家與亞蘭諸王國 (state societies and Aramaean)           
+    Thrace (Thrace)                                    Urartu (Urartu)                                    Wu (Wu)                                           
+    Zhoa (Zhoa)                                       
+
+### 801 BCE  ·  16 政權  · 重複 1 條
+  ⚠ 同名重複：
+    - 「state societies and Aramaean kingdoms」（國家與亞蘭諸王國）x2 | 1001 BCE-702 BCE、1001 BCE-702 BCE
+    Assyria (Assyria)                                  Babylonia (Babylonia)                              Egypt (Egypt)                                     
+    Elam (Elam)                                        Greek city-states (Greek city-states)              Hittites (Hittites)                               
+    大衛與所羅門王國 (Kingdom of David and Solomon)            庫施 (Kush)                                          Saba (Saba)                                       
+    華夏 (Sinic)                                         國家與亞蘭諸王國 (state societies and Aramaean)            國家與亞蘭諸王國 (state societies and Aramaean)           
+    Thrace (Thrace)                                    Urartu (Urartu)                                    Wu (Wu)                                           
+    Zhoa (Zhoa)                                       
+
+### 701 BCE  ·  16 政權  · 重複 1 條
+  ⚠ 同名重複：
+    - 「state societies and Aramaean kingdoms」（國家與亞蘭諸王國）x2 | 701 BCE-502 BCE、701 BCE-502 BCE
+    Assyria (Assyria)                                  Babylonia (Babylonia)                              Egypt (Egypt)                                     
+    Elam (Elam)                                        Greek city-states (Greek city-states)              Hittites (Hittites)                               
+    大衛與所羅門王國 (Kingdom of David and Solomon)            庫施 (Kush)                                          Saba (Saba)                                       
+    華夏 (Sinic)                                         國家與亞蘭諸王國 (state societies and Aramaean)            國家與亞蘭諸王國 (state societies and Aramaean)           
+    Thrace (Thrace)                                    Urartu (Urartu)                                    Wu (Wu)                                           
+    Zhoa (Zhoa)                                       
+
+### 601 BCE  ·  16 政權  · 重複 1 條
+  ⚠ 同名重複：
+    - 「state societies and Aramaean kingdoms」（國家與亞蘭諸王國）x2 | 701 BCE-502 BCE、701 BCE-502 BCE
+    Assyria (Assyria)                                  Babylonia (Babylonia)                              Egypt (Egypt)                                     
+    Elam (Elam)                                        Greek city-states (Greek city-states)              Hittites (Hittites)                               
+    大衛與所羅門王國 (Kingdom of David and Solomon)            庫施 (Kush)                                          Saba (Saba)                                       
+    華夏 (Sinic)                                         國家與亞蘭諸王國 (state societies and Aramaean)            國家與亞蘭諸王國 (state societies and Aramaean)           
+    Thrace (Thrace)                                    Urartu (Urartu)                                    Wu (Wu)                                           
+    Zhoa (Zhoa)                                       
+
+### 501 BCE  ·  25 政權  · 重複 1 條
+  ⚠ 同名重複：
+    - 「Greek city-states」（Greek city-states）x3 | 501 BCE-402 BCE、501 BCE-402 BCE、501 BCE-402 BCE
+    Achaemenid Empire (Achaemenid Empire)              Avanti (Avanti)                                    波伊人 (Boii)                                        
+    Carthaginian Empire (Carthaginian Empire)          伊特拉斯坎人 (Etrurians)                                 Gandhāra (Gandhāra)                               
+    Greek city-states (Greek city-states)              Greek city-states (Greek city-states)              Greek city-states (Greek city-states)             
+    印度教王國 (Hindu kingdoms)                             迦屍 (Kasi)                                          Kosala (Kosala)                                   
+    俱盧 (Kuru)                                          Magadha (Magadha)                                  Malla (Malla)                                     
+    麥羅埃 (Meroe)                                        Pancala (Pancala)                                  Rome (Rome)                                       
+    Saba (Saba)                                        薩賓人 (Sabini)                                       薩姆尼特人 (Samnites)                                  
+    僧伽羅人 (Simhala)                                     Surasena (Surasena)                                Vatsa (Vatsa)                                     
+    Zhou states (Zhou states)                         
+
+### 401 BCE  ·  22 政權  · 重複 2 條
+  ⚠ 同名重複：
+    - 「Greek colonies」（希臘殖民地）x3 | 401 BCE-325 BCE、401 BCE-325 BCE、401 BCE-325 BCE
+    - 「Magadha」（Magadha）x3 | 401 BCE-325 BCE、401 BCE-325 BCE、401 BCE-325 BCE
+    Achaemenid Empire (Achaemenid Empire)              波伊人 (Boii)                                         Carthaginian Empire (Carthaginian Empire)         
+    伊特拉斯坎人 (Etrurians)                                 Gojoseon (Gojoseon)                                Greek city-states (Greek city-states)             
+    希臘殖民地 (Greek colonies)                             希臘殖民地 (Greek colonies)                             希臘殖民地 (Greek colonies)                            
+    印度教王國 (Hindu kingdoms)                             庫施 (Kush)                                          Magadha (Magadha)                                 
+    Magadha (Magadha)                                  Magadha (Magadha)                                  Roman Republic (Roman Republic)                   
+    薩賓人 (Sabini)                                       薩姆尼特人 (Samnites)                                   僧伽羅人 (Simhala)                                    
+    Xiongnu (Xiongnu)                                  Zapotec (Zapotec)                                  Zhangzhung Kingdom (Zhangzhung Kingdom)           
+    Zhou states (Zhou states)                         
+
+### 301 BCE  ·  31 政權  · 重複 1 條
+  ⚠ 同名重複：
+    - 「Greek city-states」（Greek city-states）x2 | 301 BCE-202 BCE、301 BCE-202 BCE
+    Armenia (Armenia)                                  Atropatene (Atropatene)                            Bithynia (Bithynia)                               
+    Bosporan Kingdom (Bosporan Kingdom)                卡帕多奇亞 (Cappadocia)                                 Carthaginian Empire (Carthaginian Empire)         
+    Damot (Damot)                                      Greek city-states (Greek city-states)              Greek city-states (Greek city-states)             
+    哈德拉毛 (Hadramaut)                                   印度教王國 (Hindu kingdoms)                             印度教王國與共和國 (Hindu kingdoms and republics)          
+    安提柯王國 (Kingdom of Antigonus)                       卡山德王國 (Kingdom of Kassander)                       利西馬科斯王國 (Kingdom of Lysimachus)                   
+    孔雀王朝 (Mauryan Empire)                              瑪雅酋邦與國家 (Maya chiefdoms and states)                麥羅埃 (Meroe)                                       
+    蒙特阿爾班 (Monte Albán)                                納巴泰王國 (Nabatean Kingdom)                           Ptolemaic Kingdom (Ptolemaic Kingdom)             
+    蓋塔班王國 (Qataban)                                    秦 (Qin)                                            Roman Republic (Roman Republic)                   
+    Saba (Saba)                                        塞琉古王國 (Seleucid Kingdom)                           僧伽羅人 (Simhala)                                    
+    提奧提華坎 (Teotihuacán)                                Yue (Yue)                                          Zhangzhung Kingdom (Zhangzhung Kingdom)           
+    Zhow states (Zhow states)                         
+
+### 201 BCE  ·  24 政權  
+    若開 (Arakan)                                        Bosporan Kingdom (Bosporan Kingdom)                哈德拉毛 (Hadramaut)                                  
+    Han Empire (Han Empire)                            伽拉王國 (Kingdom of Gala)                             西法克斯王國 (Kingdom of Syphax)                        
+    馬其頓與希臘同盟 (Macedon and Hellenic League)             孔雀王朝 (Mauryan Empire)                              瑪雅酋邦與國家 (Maya chiefdoms and states)               
+    麥羅埃 (Meroe)                                        諸邦 (minor states)                                  蒙特阿爾班 (Monte Albán)                               
+    納巴泰王國 (Nabatean Kingdom)                           Parthia (Parthia)                                  Ptolemaic Kingdom (Ptolemaic Kingdom)             
+    蓋塔班王國 (Qataban)                                    Rome (Rome)                                        Saba (Saba)                                       
+    塞琉古王國 (Seleucid Kingdom)                           僧伽羅人 (Simhala)                                     提奧提華坎 (Teotihuacán)                               
+    Xiongnu (Xiongnu)                                  Yuezhi (Yuezhi)                                    Zhangzhung Kingdom (Zhangzhung Kingdom)           
+
+### 101 BCE  ·  23 政權  · 重複 1 條
+  ⚠ 同名重複：
+    - 「Roman Republic」（Roman Republic）x2 | 101 BCE-3 BCE、101 BCE-3 BCE
+    若開 (Arakan)                                        Bosporan Kingdom (Bosporan Kingdom)                哈德拉毛 (Hadramaut)                                  
+    Han Empire (Han Empire)                            印度教王國 (Hindu kingdoms)                             Kushan Empire (Kushan Empire)                     
+    孔雀王朝 (Mauryan Empire)                              瑪雅酋邦與國家 (Maya chiefdoms and states)                麥羅埃 (Meroe)                                       
+    諸邦 (minor states)                                  蒙特阿爾班 (Monte Albán)                                納巴泰王國 (Nabatean Kingdom)                          
+    Parthia (Parthia)                                  Ptolemaic Kingdom (Ptolemaic Kingdom)              蓋塔班王國 (Qataban)                                   
+    Roman Republic (Roman Republic)                    Roman Republic (Roman Republic)                    Saba (Saba)                                       
+    塞琉古王國 (Seleucid Kingdom)                           僧伽羅人 (Simhala)                                     提奧提華坎 (Teotihuacán)                               
+    Xiongnu (Xiongnu)                                  Zhangzhung Kingdom (Zhangzhung Kingdom)           
+
+### 1 BCE  ·  25 政權  · 重複 1 條
+  ⚠ 同名重複：
+    - 「Hindu kingdoms」（印度教王國）x2 | 2 BCE-99 CE、2 BCE-99 CE
+    若開 (Arakan)                                        Armenia (Armenia)                                  阿克蘇姆 (Axum)                                       
+    博斯普魯斯王國 (Bosporian Kingdom)                        Dacia (Dacia)                                      哈德拉毛 (Hadramaut)                                  
+    Han (Han)                                          希木葉爾王國 (Himyarite Kingdom)                         印度教王國 (Hindu kingdoms)                            
+    印度教王國 (Hindu kingdoms)                             Kalinga (Kalinga)                                  高句麗 (Koguryo)                                     
+    瑪雅酋邦與國家 (Maya chiefdoms and states)                麥羅埃 (Meroe)                                        蒙特阿爾班 (Monte Albán)                               
+    納巴泰王國 (Nabatean Kingdom)                           奧德里西亞王國 (Odrysian Kingdom)                         Parthian Empire (Parthian Empire)                 
+    Roman Empire (Roman Empire)                        塞迦王國 (Saka Kingdom)                                Silla (Silla)                                     
+    僧伽羅人 (Simhala)                                     蘇倫王國 (Suren Kingdom)                               提奧提華坎 (Teotihuacán)                               
+    Xiongnu (Xiongnu)                                 
+
+### 100 CE  ·  27 政權  · 重複 2 條
+  ⚠ 同名重複：
+    - 「Hindu kingdoms」（印度教王國）x2 | 100 CE-199 CE、100 CE-199 CE
+    - 「Koguryo」（高句麗）x2 | 100 CE-199 CE、100 CE-199 CE
+    若開 (Arakan)                                        Armenia (Armenia)                                  阿克蘇姆 (Axum)                                       
+    博斯普魯斯王國 (Bosporian Kingdom)                        Dacia (Dacia)                                      伽耶 (Gaya)                                         
+    哈德拉毛 (Hadramaut)                                   Han (Han)                                          希木葉爾王國 (Himyarite Kingdom)                        
+    印度教王國 (Hindu kingdoms)                             印度教王國 (Hindu kingdoms)                             Kalinga (Kalinga)                                 
+    高句麗 (Koguryo)                                      高句麗 (Koguryo)                                      Kushan Empire (Kushan Empire)                     
+    瑪雅酋邦與國家 (Maya chiefdoms and states)                麥羅埃 (Meroe)                                        蒙特阿爾班 (Monte Albán)                               
+    納巴泰王國 (Nabatean Kingdom)                           百濟 (Paekche)                                       Parthian Empire (Parthian Empire)                 
+    Roman Empire (Roman Empire)                        塞迦王國 (Saka Kingdom)                                Silla (Silla)                                     
+    僧伽羅人 (Simhala)                                     蘇倫王國 (Suren Kingdom)                               提奧提華坎 (Teotihuacán)                               
+
+### 200 CE  ·  23 政權  · 重複 1 條
+  ⚠ 同名重複：
+    - 「Paekche」（百濟）x2 | 200 CE-299 CE、200 CE-299 CE
+    Armenia (Armenia)                                  阿克蘇姆 (Axum)                                        博斯普魯斯王國 (Bosporian Kingdom)                       
+    朱羅 (Chola)                                         伽耶 (Gaya)                                          哈德拉毛 (Hadramaut)                                  
+    Han (Han)                                          希木葉爾王國 (Himyarite Kingdom)                         Kalinga (Kalinga)                                 
+    高句麗 (Koguryo)                                      Magadha (Magadha)                                  瑪雅酋邦與國家 (Maya chiefdoms and states)               
+    麥羅埃 (Meroe)                                        蒙特阿爾班 (Monte Albán)                                百濟 (Paekche)                                      
+    百濟 (Paekche)                                       Parthian Empire (Parthian Empire)                  Roman Empire (Roman Empire)                       
+    塞迦王國 (Saka Kingdom)                                Silla (Silla)                                      僧伽羅人 (Simhala)                                    
+    蘇倫王國 (Suren Kingdom)                               提奧提華坎 (Teotihuacán)                               
+
+### 300 CE  ·  20 政權  
+    Armenia (Armenia)                                  阿克蘇姆 (Axum)                                        迦納帝國 (Empire of Ghana)                            
+    伽耶 (Gaya)                                          Gupta Empire (Gupta Empire)                        哈德拉毛 (Hadramaut)                                  
+    希木葉爾王國 (Himyarite Kingdom)                         印度教王國 (Hindu kingdoms)                             Kalinga (Kalinga)                                 
+    高句麗 (Koguryo)                                      瑪雅酋邦與國家 (Maya chiefdoms and states)                麥羅埃 (Meroe)                                       
+    蒙特阿爾班 (Monte Albán)                                百濟 (Paekche)                                       Parthian Empire (Parthian Empire)                 
+    塞迦王國 (Saka Kingdom)                                Silla (Silla)                                      僧伽羅人 (Simhala)                                    
+    蘇倫王國 (Suren Kingdom)                               提奧提華坎 (Teotihuacán)                               
+
+### 400 CE  ·  23 政權  · 重複 1 條
+  ⚠ 同名重複：
+    - 「Paekche」（百濟）x2 | 400 CE-499 CE、400 CE-499 CE
+    阿克蘇姆 (Axum)                                        東羅馬帝國 (Eastern Roman Empire)                       迦納帝國 (Empire of Ghana)                            
+    伽耶 (Gaya)                                          Gupta Empire (Gupta Empire)                        哈德拉毛 (Hadramaut)                                  
+    希木葉爾王國 (Himyarite Kingdom)                         印度教王國 (Hindu kingdoms)                             Hunnic Empire (Hunnic Empire)                     
+    高句麗 (Koguryo)                                      瑪雅酋邦與國家 (Maya chiefdoms and states)                麥羅埃 (Meroe)                                       
+    蒙特阿爾班 (Monte Albán)                                百濟 (Paekche)                                       百濟 (Paekche)                                      
+    Persia (Persia)                                    柔然 (Ruanruan)                                      Silla (Silla)                                     
+    僧伽羅人 (Simhala)                                     十六國 (Sixteen Kingdoms)                             蘇倫王國 (Suren Kingdom)                              
+    提奧提華坎 (Teotihuacán)                                Western Roman Empire (Western Roman Empire)       
+
+### 500 CE  ·  28 政權  · 重複 1 條
+  ⚠ 同名重複：
+    - 「Western Roman Empire」（Western Roman Empire）x2 | 500 CE-599 CE、500 CE-599 CE
+    盎格魯-撒克遜人 (Anglo-Saxons)                            阿克蘇姆 (Axum)                                        占婆 (Champa)                                       
+    東羅馬帝國 (Eastern Roman Empire)                       迦納帝國 (Empire of Ghana)                             扶南 (Funan)                                        
+    Gupta Empire (Gupta Empire)                        希木葉爾王國 (Himyarite Kingdom)                         金帝國 (Jin Empire)                                  
+    高句麗 (Koguryo)                                      貴霜諸侯國 (Kushan Principalities)                      羅渦 (Lavo)                                         
+    馬庫拉人 (Makkura)                                     瑪雅國家 (Maya states)                                 蒙特阿爾班 (Monte Albàn)                               
+    百濟 (Paekche)                                       柔然 (Ruanruan)                                      Sasanian Empire (Sasanian Empire)                 
+    Silla (Silla)                                      僧伽羅人 (Simhala)                                     提奧提華坎 (Teotihuacàn)                               
+    拓跋魏 (Toba Wei)                                     伐伽陀伽王朝 (Vakataka)                                  毘濕奴昆丁王朝 (Vishnu-Kundins)                          
+    西恆伽王朝 (Western Gangas)                             Western Roman Empire (Western Roman Empire)        Western Roman Empire (Western Roman Empire)       
+    Yamato (Yamato)                                   
+
+### 600 CE  ·  30 政權  · 重複 2 條
+  ⚠ 同名重複：
+    - 「Hindu kingdoms」（印度教王國）x2 | 600 CE-699 CE、600 CE-699 CE
+    - 「minor states under Indian influence」（受印度影響諸邦）x2 | 600 CE-699 CE、600 CE-699 CE
+    阿爾瓦 (Alwa)                                         若開 (Arakan)                                        阿克蘇姆 (Axum)                                       
+    占婆 (Champa)                                        東羅馬帝國 (Eastern Roman Empire)                       迦納帝國 (Empire of Ghana)                            
+    法蘭克王國 (Frankish Kingdom)                           扶南 (Funan)                                         Hejaz (Hejaz)                                     
+    印度教王國 (Hindu kingdoms)                             印度教王國 (Hindu kingdoms)                             瓦里帝國 (Huari Empire)                               
+    高句麗 (Koguryo)                                      倫巴底親王國 (Lombard principalities)                    馬庫拉人 (Makkura)                                    
+    馬塔蘭 (Mataram)                                      瑪雅國家 (Maya states)                                 受印度影響諸邦 (minor states under Indian in)            
+    受印度影響諸邦 (minor states under Indian in)             Nobatia (Nobatia)                                  百濟 (Paekche)                                      
+    Sasanian Empire (Sasanian Empire)                  Silla (Silla)                                      僧伽羅人 (Simhala)                                    
+    隋朝 (Sui Empire)                                    提奧提華坎 (Teotihuacàn)                                泰國諸王國 (Thai Kingdoms)                             
+    蒂亞瓦納科帝國 (Tiahuanaco Empire)                        Visigothic Kingdom (Visigothic Kingdom)            Yamato (Yamato)                                   
+
+### 700 CE  ·  45 政權  · 重複 6 條
+  ⚠ 同名重複：
+    - 「Lombard principalities」（倫巴底親王國）x2 | 700 CE-799 CE、700 CE-799 CE
+    - 「minor states under Indian influence」（受印度影響諸邦）x2 | 700 CE-799 CE、700 CE-799 CE
+    - 「Frankish Kingdom」（法蘭克王國）x2 | 700 CE-799 CE、700 CE-799 CE
+    - 「Tufan Empire」（吐蕃帝國）x2 | 700 CE-799 CE、700 CE-799 CE
+    - 「Western Gokturk Khaganate」（西突厥汗國）x2 | 700 CE-799 CE、700 CE-799 CE
+    - 「Hindu kingdoms」（印度教王國）x2 | 700 CE-799 CE、700 CE-799 CE
+    阿爾瓦 (Alwa)                                         Armenia (Armenia)                                  阿克蘇姆 (Axum)                                       
+    占婆 (Champa)                                        東羅馬帝國 (Eastern Roman Empire)                       迦納帝國 (Empire of Ghana)                            
+    法蘭克王國 (Frankish Kingdom)                           法蘭克王國 (Frankish Kingdom)                           喬治亞王國 (Georgian Kingdom)                          
+    Hejaz (Hejaz)                                      印度教王國 (Hindu kingdoms)                             印度教王國 (Hindu kingdoms)                            
+    印度教國家 (Hindu states)                               瓦里帝國 (Huari Empire)                                迦畢試王國 (Kingdom of Kapisa)                         
+    克什米爾王國 (Kingdom of Kashmir)                        信德王國 (Kingdom of Sind)                             尊比爾王國 (Kingdom of Zunbil)                         
+    高句麗 (Koguryo)                                      倫巴底親王國 (Lombard principalities)                    倫巴底親王國 (Lombard principalities)                   
+    邁特拉卡王國 (Maitraka Kingdom)                          馬庫拉人 (Makkura)                                     馬塔蘭 (Mataram)                                     
+    瑪雅國家 (Maya states)                                 受印度影響諸邦 (minor states under Indian in)             受印度影響諸邦 (minor states under Indian in)            
+    Nobatia (Nobatia)                                  百濟 (Paekche)                                       波羅王朝 (Palas)                                      
+    Sasanian Empire (Sasanian Empire)                  Silla (Silla)                                      僧伽羅人 (Simhala)                                    
+    隋朝 (Sui Empire)                                    提奧提華坎 (Teotihuacàn)                                泰國諸王國 (Thai Kingdoms)                             
+    蒂亞瓦納科帝國 (Tiahuanaco Empire)                        吐蕃帝國 (Tufan Empire)                                吐蕃帝國 (Tufan Empire)                               
+    Umayyad Caliphate (Umayyad Caliphate)              Visigothic Kingdom (Visigothic Kingdom)            西恆伽王朝 (Western Gangas)                            
+    西突厥汗國 (Western Gokturk Khaganate)                  西突厥汗國 (Western Gokturk Khaganate)                  Yamato (Yamato)                                   
+
+### 800 CE  ·  47 政權  · 重複 2 條
+  ⚠ 同名重複：
+    - 「Hindu states」（印度教國家）x2 | 800 CE-899 CE、800 CE-899 CE
+    - 「Carolingian Empire」（Carolingian Empire）x2 | 800 CE-899 CE、800 CE-899 CE
+    Abbasid Caliphate (Abbasid Caliphate)              阿格拉布王朝 (Aghlabid Emirate)                          阿爾瓦 (Alwa)                                        
+    阿斯圖里亞斯 (Asturias)                                  阿克蘇姆 (Axum)                                        布列塔尼 (Britany)                                    
+    Byzantine Empire (Byzantine Empire)                Carolingian Empire (Carolingian Empire)            Carolingian Empire (Carolingian Empire)           
+    凱爾特王國 (Celtic kingdoms)                            占婆 (Champa)                                        Cyprus (Cyprus)                                   
+    哥多華酋長國 (Emirate of Córdoba)                        埃塞克斯 (Essex)                                       Ghana (Ghana)                                     
+    瞿折羅-普拉蒂哈拉王朝 (Gurjara Pratihara)                    印度教國家 (Hindu states)                               印度教國家 (Hindu states)                              
+    瓦里帝國 (Huari Empire)                                伊德里斯王朝 (Idrisid Caliphate)                         Japan (Japan)                                     
+    加涅姆 (Kanem)                                        肯特 (Kent)                                          倫巴底公國 (Lombard duchies)                           
+    馬庫拉人 (Makkura)                                     Mari (Mari)                                        馬塔蘭 (Mataram)                                     
+    瑪雅城邦 (Maya city-states)                            麥西亞 (Mercia)                                       中美洲城邦與酋邦 (Mesoamerican city-states and)           
+    印度教佛教諸邦 (minor Hindu & Buddhist state)             孟邦 (Mon state)                                     波羅王朝 (Palas)                                      
+    帕拉瓦國 (Pallava state)                               潘地亞國 (Pandya state)                                Papal States (Papal States)                       
+    皮克特 (Picts)                                        驃國 (Pyu state)                                     拉傑普特部族與小邦 (Rajput Clans and Small State)          
+    羅濕陀羅拘陀國 (Rashtrakuta state)                        僧伽羅諸王國 (Sinhalese kingdoms)                        室利佛逝帝國 (Srivijaya Empire)                         
+    Tang Empire (Tang Empire)                          蒂亞瓦納科帝國 (Tiahuanaco Empire)                        Tibetan Empire (Tibetan Empire)                   
+    Toltec Empire (Toltec Empire)                      威塞克斯 (Wessex)                                     
+
+### 900 CE  ·  59 政權  · 重複 1 條
+  ⚠ 同名重複：
+    - 「Carolingian Empire」（Carolingian Empire）x2 | 900 CE-999 CE、900 CE-999 CE
+    Abbasid Caliphate (Abbasid Caliphate)              阿格拉布王朝 (Aghlabid Emirate)                          阿爾瓦 (Alwa)                                        
+    若開 (Arakan)                                        阿斯圖里亞斯 (Asturias)                                  阿克蘇姆 (Axum)                                       
+    Balhae (Balhae)                                    布列塔尼 (Britany)                                     Byzantine Empire (Byzantine Empire)               
+    Carolingian Empire (Carolingian Empire)            Carolingian Empire (Carolingian Empire)            凱爾特王國 (Celtic kingdoms)                           
+    占婆 (Champa)                                        克羅埃西亞王國 (Croatian kingdom)                         Cyprus (Cyprus)                                   
+    East Francia (East Francia)                        哥多華酋長國 (Emirate of Córdoba)                        Emirate of Sicily (Emirate of Sicily)             
+    埃塞克斯 (Essex)                                       Ghana (Ghana)                                      瞿折羅-普拉蒂哈拉王朝 (Gurjara Pratihara)                   
+    印度教沙希王朝 (Hindu Shahis)                             印度教國家 (Hindu states)                               瓦里帝國 (Huari Empire)                               
+    伊德里斯王朝 (Idrisid Caliphate)                         Kalinga (Kalinga)                                  加涅姆 (Kanem)                                       
+    肯特 (Kent)                                          Khmer Empire (Khmer Empire)                        Kingdom of Norway (Kingdom of Norway)             
+    基輔羅斯 (Kyivan Rus)                                  倫巴底公國 (Lombard duchies)                            馬庫拉人 (Makkura)                                    
+    馬塔蘭 (Mataram)                                      瑪雅城邦 (Maya city-states)                            麥西亞 (Mercia)                                      
+    中美洲城邦與酋邦 (Mesoamerican city-states and)            印度教佛教諸邦 (minor Hindu & Buddhist state)             孟族邦國 (Mon States)                                 
+    蒲甘王朝 (Pagan)                                       波羅王朝 (Palas)                                       帕拉瓦人 (Pallava)                                    
+    潘地亞國 (Pandya state)                                佩切涅格 (Pechenegs)                                   皮克特 (Picts)                                       
+    羅濕陀羅拘陀 (Rashtrakuta)                               薩法爾王朝 (Saffarids)                                  Samanid Empire (Samanid Empire)                   
+    Serbia (Serbia)                                    Silla (Silla)                                      索姆瓦姆西王朝 (Somvamsis)                               
+    室利佛逝帝國 (Srivijaya Empire)                          Tang Empire (Tang Empire)                          蒂亞瓦納科帝國 (Tiahuanaco Empire)                       
+    Tibetan Empire (Tibetan Empire)                    Toltec Empire (Toltec Empire)                      威塞克斯 (Wessex)                                     
+    West Francia (West Francia)                        Yamato (Yamato)                                   
+
+### 1000 CE  ·  69 政權  · 重複 2 條
+  ⚠ 同名重複：
+    - 「minor Hindu and Buddhist states」（印度教佛教諸邦）x2 | 1000 CE-1099 CE、1000 CE-1099 CE
+    - 「Sweden」（Sweden）x2 | 1000 CE-1099 CE、1000 CE-1099 CE
+    阿爾瓦 (Alwa)                                         Annam (Annam)                                      亞拉岡 (Aragón)                                      
+    Armenia (Armenia)                                  布列塔尼 (Britany)                                     保加爾汗國 (Bulgar Khanate)                            
+    佈韋希埃米爾國 (Buyid Emirate)                            Byzantine Empire (Byzantine Empire)                Caliphate of Córdoba (Caliphate of Córdoba)       
+    凱爾特王國 (Celtic kingdoms)                            遮婁其帝國 (Chalukya Empire)                            占婆 (Champa)                                       
+    奇穆帝國 (Chimú Empire)                                朱羅國 (Chola state)                                  Croatia (Croatia)                                 
+    Cyprus (Cyprus)                                    丹麥-挪威 (Denmark-Norway)                             Duchy of Swabia (Duchy of Swabia)                 
+    貝內文托公國 (Dutchy of Benevento)                       Emirate of Sicily (Emirate of Sicily)              英格蘭 (England)                                     
+    梅里納擴張王國 (Expansionist Kingdom of Meri)             Fatimid Caliphate (Fatimid Caliphate)              Georgia (Georgia)                                 
+    Ghana (Ghana)                                      加茲尼王朝 (Ghaznavid Emirate)                          哈德拉毛 (Hadramaut)                                  
+    Holy Roman Empire (Holy Roman Empire)              瓦里帝國 (Huari Empire)                                日本帝國 (Imperial Japan (Fujiwara))                  
+    伊斯蘭城邦 (Islamic city-states)                        Kalinga (Kalinga)                                  加涅姆 (Kanem)                                       
+    Khmer Empire (Khmer Empire)                        基馬克-欽察汗國 (Kimek-Kipchak khaganate)                 Kingdom of France (Kingdom of France)             
+    Kingdom of Georgia (Kingdom of Georgia)            蒲甘王國 (Kingdom of Pagan)                            Korea (Korea)                                     
+    基輔羅斯 (Kyivan Rus)                                  雷昂 (León)                                          Liao (Liao)                                       
+    Madagascar (Madagascar)                            馬庫拉人 (Makkura)                                     Mali (Mali)                                       
+    瑪雅城邦 (Maya city-states)                            中美洲城邦與酋邦 (Mesoamerican city-states and)            印度教佛教諸邦 (minor Hindu and Buddhist sta)            
+    印度教佛教諸邦 (minor Hindu and Buddhist sta)             馬斯喀特 (Muscat)                                      納瓦拉 (Navarre)                                     
+    奧里薩 (Orissa)                                       波羅王朝 (Palas)                                       Poland (Poland)                                   
+    波美拉尼亞 (Pomerania)                                  普拉蒂哈拉王朝 (Pratiharas)                               拉傑普特諸王國 (Rajput kingdoms)                         
+    薩丁尼亞 (Sardinia)                                    蘇格蘭 (Scotland)                                     Serbia (Serbia)                                   
+    Song Empire (Song Empire)                          室利佛逝帝國 (Srivijaya Empire)                          Sweden (Sweden)                                   
+    Sweden (Sweden)                                    蒂亞瓦納科帝國 (Tiahuanaco Empire)                        Tibet (Tibet)                                     
+    Toltec Empire (Toltec Empire)                      Venice (Venice)                                    Yemen (Yemen)                                     
+
+### 1100 CE  ·  79 政權  · 重複 5 條
+  ⚠ 同名重複：
+    - 「minor Hindu and Buddhist states」（印度教佛教諸邦）x3 | 1100 CE-1199 CE、1100 CE-1199 CE、1100 CE-1199 CE
+    - 「Byzantine Empire」（Byzantine Empire）x2 | 1100 CE-1199 CE、1100 CE-1199 CE
+    - 「Sweden」（Sweden）x2 | 1100 CE-1199 CE、1100 CE-1199 CE
+    - 「Kievan Rus」（基輔羅斯）x2 | 1100 CE-1199 CE、1100 CE-1199 CE
+    - 「Palas」（波羅王朝）x5 | 1100 CE-1199 CE、1100 CE-1199 CE、1100 CE-1199 CE、1100 CE-1199 CE、1100 CE-1199 CE
+    Almoravid dynasty (Almoravid dynasty)              阿爾瓦 (Alwa)                                         亞拉岡 (Aragón)                                      
+    Armenia (Armenia)                                  布列塔尼 (Britany)                                     保加爾汗國 (Bulgar Khanate)                            
+    Byzantine Empire (Byzantine Empire)                Byzantine Empire (Byzantine Empire)                凱爾特王國 (Celtic kingdoms)                           
+    占婆 (Champa)                                        奇穆帝國 (Chimú Empire)                                Croatia (Croatia)                                 
+    庫曼-欽察邦聯 (Cuman-Kipchak confederation)              Cyprus (Cyprus)                                    大越 (Đại Việt)                                     
+    Denmark (Denmark)                                  貝內文托公國 (Dutchy of Benevento)                       提比里斯酋長國 (Emirate of Tiflis)                       
+    英格蘭 (England)                                      梅里納擴張王國 (Expansionist Kingdom of Meri)             Fatimid Caliphate (Fatimid Caliphate)             
+    Ghana (Ghana)                                      加茲尼王朝 (Ghaznavid Emirate)                          哈德拉毛 (Hadramaut)                                  
+    印度教王國 (Hindu Kingdoms)                             Holy Roman Empire (Holy Roman Empire)              瓦里帝國 (Huari Empire)                               
+    Hungary (Hungary)                                  日本帝國 (Imperial Japan (Fujiwara))                   伊斯蘭城邦 (Islamic city-states)                       
+    加涅姆 (Kanem)                                        喀喇汗國 (Karkhanids)                                  Khmer Empire (Khmer Empire)                       
+    基輔羅斯 (Kievan Rus)                                  基輔羅斯 (Kievan Rus)                                  Kingdom of France (Kingdom of France)             
+    Kingdom of Georgia (Kingdom of Georgia)            素可泰王國 (Kingdom of Sukhotai)                        Korea (Korea)                                     
+    雷昂 (León)                                          Liao (Liao)                                        羅渦王國 (Lopburi Kingdom)                            
+    Madagascar (Madagascar)                            馬庫拉人 (Makkura)                                     Mali (Mali)                                       
+    瑪雅城邦 (Maya city-states)                            中美洲城邦與酋邦 (Mesoamerican city-states and)            印度教佛教諸邦 (minor Hindu and Buddhist sta)            
+    印度教佛教諸邦 (minor Hindu and Buddhist sta)             印度教佛教諸邦 (minor Hindu and Buddhist sta)             孟邦 (Mon state)                                    
+    馬斯喀特 (Muscat)                                      納瓦拉 (Navarre)                                      Norway (Norway)                                   
+    波羅王朝 (Palas)                                       波羅王朝 (Palas)                                       波羅王朝 (Palas)                                      
+    波羅王朝 (Palas)                                       波羅王朝 (Palas)                                       Papal States (Papal States)                       
+    Poland (Poland)                                    普拉蒂哈拉王朝 (Pratiharas)                               Principality of Polotsk (Principality of Polotsk) 
+    驃國 (Pyu state)                                     薩丁尼亞 (Sardinia)                                    蘇格蘭 (Scotland)                                    
+    Seljuk Empire (Seljuk Empire)                      Serbia (Serbia)                                    Song Empire (Song Empire)                         
+    蘇姆拉埃米爾國 (Soomra Emirate)                           室利佛逝帝國 (Srivijaya Empire)                          Sweden (Sweden)                                   
+    Sweden (Sweden)                                    蒂亞瓦納科帝國 (Tiahuanaco Empire)                        Tibet (Tibet)                                     
+    Toltec Empire (Toltec Empire)                      Venice (Venice)                                    西遮婁其王朝 (Western Chalukyas)                        
+    Yemen (Yemen)                                     
+
+### 1200 CE  ·  74 政權  · 重複 3 條
+  ⚠ 同名重複：
+    - 「minor Hindu and Buddhist states」（印度教佛教諸邦）x2 | 1200 CE-1278 CE、1200 CE-1278 CE
+    - 「Sweden」（Sweden）x2 | 1200 CE-1278 CE、1200 CE-1278 CE
+    - 「Kingdom of France」（Kingdom of France）x2 | 1200 CE-1278 CE、1200 CE-1278 CE
+    Almohad Caliphate (Almohad Caliphate)              阿爾瓦 (Alwa)                                         安茹帝國 (Angevin Empire)                             
+    亞拉岡 (Aragón)                                       Armenia (Armenia)                                  蒲甘 (Bagan)                                        
+    Bhutan (Bhutan)                                    布列塔尼 (Britany)                                     保加爾汗國 (Bulgar Khanate)                            
+    Byzantine Empire (Byzantine Empire)                凱爾特王國 (Celtic kingdoms)                            占婆城邦 (Champa City States)                         
+    奇穆帝國 (Chimú Empire)                                朱羅國 (Chola state)                                  Croatia (Croatia)                                 
+    庫曼汗國 (Cuman Khanates)                              Cyprus (Cyprus)                                    大越 (Đại Việt)                                     
+    Denmark (Denmark)                                  貝內文托公國 (Dutchy of Benevento)                       梅里納擴張王國 (Expansionist Kingdom of Meri)            
+    Fatimid Caliphate (Fatimid Caliphate)              Georgia (Georgia)                                  Ghana (Ghana)                                     
+    加茲尼王朝 (Ghaznavid Emirate)                          Goryeo (Goryeo)                                    哈德拉毛 (Hadramaut)                                  
+    Holy Roman Empire (Holy Roman Empire)              瓦里帝國 (Huari Empire)                                Hungary (Hungary)                                 
+    伊法特蘇丹國 (Ifat)                                      日本帝國 (Imperial Japan (Fujiwara))                   伊斯蘭城邦 (Islamic city-states)                       
+    加涅姆 (Kanem)                                        Khmer Empire (Khmer Empire)                        Kingdom of France (Kingdom of France)             
+    Kingdom of France (Kingdom of France)              雷昂 (León)                                          Liao (Liao)                                       
+    Madagascar (Madagascar)                            馬庫拉人 (Makkura)                                     Mali (Mali)                                       
+    瑪雅城邦 (Maya city-states)                            中美洲城邦與酋邦 (Mesoamerican city-states and)            印度教佛教諸邦 (minor Hindu and Buddhist sta)            
+    印度教佛教諸邦 (minor Hindu and Buddhist sta)             孟邦 (Mon state)                                     Mongol Empire (Mongol Empire)                     
+    馬斯喀特 (Muscat)                                      納瓦拉 (Navarre)                                      Nepal (Nepal)                                     
+    Norway (Norway)                                    其他羅斯公國 (Other Rus Principalities)                  Papal States (Papal States)                       
+    Poland (Poland)                                    Portugal (Portugal)                                加利西亞-沃里尼亞公國 (Principality of Galicia-Volh)        
+    Principality of Kyiv (Principality of Kyiv)        諾夫哥羅德公國 (Principality of Novgorod)                 弗拉基米爾-蘇茲達爾公國 (Principality of Vladimir-Suz)       
+    驃國 (Pyu state)                                     拉傑普特諸王國 (Rajput Kingdoms)                          薩丁尼亞 (Sardinia)                                   
+    蘇格蘭 (Scotland)                                     Song Empire (Song Empire)                          室利佛逝帝國 (Srivijaya Empire)                         
+    德里蘇丹國 (Sultanate of Delhi)                         Sweden (Sweden)                                    Sweden (Sweden)                                   
+    蒂亞瓦納科帝國 (Tiahuanaco Empire)                        Tibet (Tibet)                                      Toltec Empire (Toltec Empire)                     
+    Venice (Venice)                                    Yemen (Yemen)                                     
+
+### 1300 CE  ·  68 政權  
+    亞齊 (Aceh)                                          阿爾瓦 (Alwa)                                         安地斯國家與酋邦 (Andean states and chiefdoms)            
+    亞拉岡 (Aragón)                                       艾馬拉王國 (Aymara kingdoms)                            Benin (Benin)                                     
+    博爾努-卡奈姆 (Bornu-Kanem)                              布列塔尼 (Britany)                                     保加爾汗國 (Bulgar Khanate)                            
+    Byzantine Empire (Byzantine Empire)                卡斯提爾 (Castile)                                     Chagatai Khanate (Chagatai Khanate)               
+    占婆 (Champa)                                        奇穆帝國 (Chimú Empire)                                朱羅國 (Chola state)                                 
+    Cyprus (Cyprus)                                    大越 (Đại Việt)                                      Denmark (Denmark)                                 
+    Ethiopia (Ethiopia)                                梅里納擴張王國 (Expansionist Kingdom of Meri)             France (France)                                   
+    Georgia (Georgia)                                  格拉納達 (Granada)                                     莫斯科大公國 (Grand Duchy of Moscow)                    
+    大汗國 (Great Khanate)                                哈德拉毛 (Hadramaut)                                   哈夫斯王朝 (Hafsid Caliphate)                          
+    Holy Roman Empire (Holy Roman Empire)              Hungary (Hungary)                                  Ilkhanate (Ilkhanate)                             
+    伊斯蘭城邦 (Islamic city-states)                        金帳汗國 (Khanate of the Golden Horde)                 Khmer Empire (Khmer Empire)                       
+    Lithuania (Lithuania)                              Madagascar (Madagascar)                            馬庫拉人 (Makkura)                                    
+    Mali (Mali)                                        馬穆魯克蘇丹國 (Mamluke Sultanate)                        瑪雅城邦 (Maya city-states)                           
+    印度教佛教諸王國 (minor Hindu and Buddhist kin)            印度教諸王國 (minor Hindu kingdoms)                      米斯特克帝國 (Mixtec Empire)                            
+    Morocco (Morocco)                                  馬斯喀特 (Muscat)                                      納瓦拉 (Navarre)                                     
+    Norway (Norway)                                    諾夫哥羅德 (Novgorod)                                   奧里薩 (Orissa)                                      
+    蒲甘王朝 (Pagan)                                       潘地亞國 (Pandya state)                                Papal States (Papal States)                       
+    Poland (Poland)                                    Portugal (Portugal)                                梁贊 (Ryazan)                                       
+    薩丁尼亞 (Sardinia)                                    蘇格蘭 (Scotland)                                     塞爾柱哈里發國 (Seljuk Caliphate)                        
+    西西里 (Sicily)                                       僧伽羅王國 (Sinhalese kingdom)                          室利佛逝帝國 (Srivijaya Empire)                         
+    素可泰王國 (Sukhothai)                                  德里蘇丹國 (Sultanate of Delhi)                         Sweden (Sweden)                                   
+    條頓騎士團 (Teutonic Knights)                           Tibet (Tibet)                                      Venice (Venice)                                   
+    Yemen (Yemen)                                      Zapotec Empire (Zapotec Empire)                   
+
+### 1400 CE  ·  73 政權  · 重複 3 條
+  ⚠ 同名重複：
+    - 「Sicily」（西西里）x2 | 1400 CE-1491 CE、1400 CE-1491 CE
+    - 「Sukhothai」（素可泰王國）x3 | 1400 CE-1491 CE、1400 CE-1491 CE、1400 CE-1491 CE
+    - 「Ottoman Empire」（Ottoman Empire）x2 | 1400 CE-1491 CE、1400 CE-1491 CE
+    亞齊 (Aceh)                                          阿爾瓦 (Alwa)                                         安地斯國家與酋邦 (Andean states and chiefdoms)            
+    亞拉岡 (Aragón)                                       艾馬拉王國 (Aymara kingdoms)                            阿瑜陀耶 (Ayutthaya)                                  
+    Benin (Benin)                                      艾登侯國 (Beylik of Aydin)                             Blue Horde (Blue Horde)                           
+    博爾努-卡奈姆 (Bornu-Kanem)                              Bosnia (Bosnia)                                    布列塔尼 (Britany)                                    
+    保加爾汗國 (Bulgar Khanate)                             Byzantine Empire (Byzantine Empire)                卡斯提爾 (Castile)                                    
+    Chagatai Khanate (Chagatai Khanate)                占婆 (Champa)                                        奇穆帝國 (Chimú Empire)                               
+    朱羅國 (Chola state)                                  Cyprus (Cyprus)                                    大越 (Đại Việt)                                     
+    Ethiopia (Ethiopia)                                梅里納擴張王國 (Expansionist Kingdom of Meri)             France (France)                                   
+    Georgia (Georgia)                                  格拉納達 (Granada)                                     大汗國 (Great Khanate)                               
+    哈德拉毛 (Hadramaut)                                   哈夫斯王朝 (Hafsid Caliphate)                           Holy Roman Empire (Holy Roman Empire)             
+    伊斯蘭城邦 (Islamic city-states)                        Kalmar Union (Kalmar Union)                        Khmer Empire (Khmer Empire)                       
+    Kingdom of Hungary (Kingdom of Hungary)            Madagascar (Madagascar)                            馬庫拉人 (Makkura)                                    
+    Mali (Mali)                                        馬穆魯克蘇丹國 (Mamluke Sultanate)                        瑪雅城邦 (Maya city-states)                           
+    印度教佛教諸王國 (minor Hindu and Buddhist kin)            米斯特克帝國 (Mixtec Empire)                             Moldova (Moldova)                                 
+    Morocco (Morocco)                                  馬斯喀特 (Muscat)                                      納瓦拉 (Navarre)                                     
+    諾夫哥羅德 (Novgorod)                                   奧里薩 (Orissa)                                       Ottoman Empire (Ottoman Empire)                   
+    Ottoman Empire (Ottoman Empire)                    蒲甘王朝 (Pagan)                                       潘地亞國 (Pandya state)                               
+    Papal States (Papal States)                        波蘭立陶宛聯邦 (Poland-Lithuania)                         Portugal (Portugal)                               
+    Principality of Wallachia (Principality of Wallachia) 薩丁尼亞 (Sardinia)                                    蘇格蘭 (Scotland)                                    
+    塞爾柱哈里發國 (Seljuk Caliphate)                         西西里 (Sicily)                                       西西里 (Sicily)                                      
+    僧伽羅王國 (Sinhalese kingdom)                          室利佛逝帝國 (Srivijaya Empire)                          素可泰王國 (Sukhothai)                                 
+    素可泰王國 (Sukhothai)                                  素可泰王國 (Sukhothai)                                  德里蘇丹國 (Sultanate of Delhi)                        
+    條頓騎士團 (Teutonic Knights)                           Tibet (Tibet)                                      Timurid Empire (Timurid Empire)                   
+    Venice (Venice)                                    White Horde (White Horde)                          Yemen (Yemen)                                     
+    Zapotec Empire (Zapotec Empire)                   
+
+### 1500 CE  ·  94 政權  · 重複 1 條
+  ⚠ 同名重複：
+    - 「Islamic states」（Islamic states）x3 | 1500 CE-1529 CE、1500 CE-1529 CE、1500 CE-1529 CE
+    亞齊 (Aceh)                                          阿達爾 (Adal)                                         艾哈邁德訥格爾 (Ahmadnagar)                              
+    阿坎人 (Akan)                                         阿爾瓦 (Alwa)                                         亞拉岡 (Aragón)                                      
+    若開 (Arakan)                                        阿瑜陀耶 (Ayutthaya)                                   Aztec Empire (Aztec Empire)                       
+    巴赫曼尼王國 (Bahmani Kingdom)                           孟加拉 (Bengal)                                       Benin (Benin)                                     
+    比達爾 (Bidar)                                        比賈布爾 (Bijapur)                                     博爾努-卡奈姆 (Bornu-Kanem)                             
+    布列塔尼 (Britany)                                     Burmese kingdoms (Burmese kingdoms)                Cambodia (Cambodia)                               
+    卡斯提爾 (Castille)                                    Chagatai Khanate (Chagatai Khanate)                占婆 (Champa)                                       
+    Congo (Congo)                                      Crimean Khanate (Crimean Khanate)                  Cyprus (Cyprus)                                   
+    大越 (Đại Việt)                                      德拉瓦 (Delaware)                                     丹麥-挪威 (Denmark-Norway)                            
+    白羊王朝 (Emirate of the White Sheep T)                英格蘭 (England)                                      Ethiopia (Ethiopia)                               
+    梅里納擴張王國 (Expansionist Kingdom of Meri)             France (France)                                    豐吉蘇丹國 (Funj)                                      
+    Georgia (Georgia)                                  Golden Horde (Golden Horde)                        戈爾康達 (Golkonda)                                   
+    莫斯科大公國 (Grand Duchy of Moscow)                     哈德拉毛 (Hadramaut)                                   哈夫斯王朝 (Hafsid Caliphate)                          
+    豪薩諸國 (Hausa States)                                Holy Roman Empire (Holy Roman Empire)              匈牙利帝國 (Imperial Hungary)                          
+    Inca Empire (Inca Empire)                          伊斯蘭城邦 (Islamic city-states)                        Islamic states (Islamic states)                   
+    Islamic states (Islamic states)                    Islamic states (Islamic states)                    Japan (Japan)                                     
+    Kalmar Union (Kalmar Union)                        西伯利亞汗國 (Khanate of Sibir)                          Korea (Korea)                                     
+    Laos (Laos)                                        Madagascar (Madagascar)                            馬六甲 (Malacca)                                     
+    馬來西亞伊斯蘭邦國 (Malaysian Islamic states)               Mali (Mali)                                        馬穆魯克蘇丹國 (Mamluke Sultanate)                       
+    瑪雅城邦 (Maya city-states)                            明朝 (Ming Chinese Empire)                           米斯特克帝國 (Mixtec Empire)                            
+    莫西邦國 (Mossi States)                                馬斯喀特 (Muscat)                                      姆韋內穆塔帕 (Mwenemutapa)                              
+    納瓦拉 (Navarre)                                      恩東戈王國 (Ndongo)                                     諾夫哥羅德-謝韋爾斯基 (Novgorod-Seversky)                   
+    衛拉特聯盟 (Oirat Confederation)                        奧里薩 (Orissa)                                       Ottoman Empire (Ottoman Empire)                   
+    奧約帝國 (Oyo)                                         Papal States (Papal States)                        Papua New Guinea (Papua New Guinea)               
+    勃固 (Pegu)                                          Philippines (Philippines)                          波蘭立陶宛聯邦 (Poland-Lithuania)                        
+    Portugal (Portugal)                                普斯科夫 (Pskov)                                       拉賈斯坦 (Rajastan)                                   
+    梁贊 (Ryazan)                                        蘇格蘭 (Scottland)                                    僧伽羅諸王國 (Sinhalese kingdoms)                       
+    桑海 (Songhai)                                       德里蘇丹國 (Sultanate of Delhi)                         瑞士邦聯 (Swiss Confederation)                        
+    Taiwan (Taiwan)                                    條頓騎士團 (Teutonic Knights)                           Tibet (Tibet)                                     
+    帖木兒埃米爾國 (Timurid Emirates)                         Venice (Venice)                                    維查耶納加爾帝國 (Vijayanagara)                           
+    瓦塔斯王朝 (Wattasid Caliphate)                         White Horde (White Horde)                          Yemen (Yemen)                                     
+    Zayyanid Caliphate (Zayyanid Caliphate)           
+
+### 1600 CE  ·  100 政權  · 重複 5 條
+  ⚠ 同名重複：
+    - 「Ayutthaya」（阿瑜陀耶）x2 | 1600 CE-1649 CE、1600 CE-1649 CE
+    - 「England and Ireland」（英格蘭與愛爾蘭）x2 | 1600 CE-1649 CE、1600 CE-1649 CE
+    - 「Holy Roman Empire」（Holy Roman Empire）x2 | 1600 CE-1649 CE、1600 CE-1649 CE
+    - 「Ottoman Empire」（Ottoman Empire）x2 | 1600 CE-1649 CE、1600 CE-1649 CE
+    - 「Sweden」（Sweden）x13 | 1600 CE-1649 CE、1600 CE-1649 CE、1600 CE-1649 CE、1600 CE-1649 CE、1600 CE-1649 CE、1600 CE-1649 CE、1600 CE-1649 CE、1600 CE-1649 CE、1600 CE-1649 CE、1600 CE-1649 CE、1600 CE-1649 CE、1600 CE-1649 CE、1600 CE-1649 CE
+    亞齊 (Aceh)                                          阿達爾 (Adal)                                         艾哈邁德訥格爾 (Ahmadnagar)                              
+    阿坎人 (Akan)                                         阿瑜陀耶 (Ayutthaya)                                   阿瑜陀耶 (Ayutthaya)                                  
+    巴吉爾米 (Bagirmi)                                     孟加拉 (Bengal)                                       Benin (Benin)                                     
+    比達爾 (Bidar)                                        比賈布爾 (Bijapur)                                     博爾努-卡奈姆 (Bornu-Kanem)                             
+    Burmese kingdoms (Burmese kingdoms)                Cambodia (Cambodia)                                central Asian khanates (central Asian khanates)   
+    Congo (Congo)                                      Crimean Khanate (Crimean Khanate)                  西屬古巴 (Cuba (Spain))                               
+    大越 (Đại Việt)                                      達爾富爾 (Darfur)                                      德拉瓦 (Delaware)                                    
+    丹麥-挪威 (Denmark-Norway)                             Dutch Republic (Dutch Republic)                    英格蘭與愛爾蘭 (England and Ireland)                     
+    英格蘭與愛爾蘭 (England and Ireland)                      Ethiopia (Ethiopia)                                梅里納擴張王國 (Expansionist Kingdom of Meri)            
+    Florence (Florence)                                France (France)                                    熱那亞 (Genoa)                                       
+    戈爾康達 (Golkonda)                                    哈布斯堡尼德蘭 (Habsburg Netherlands)                     哈德拉毛 (Hadramaut)                                  
+    豪薩諸國 (Hausa States)                                西屬伊斯帕尼奧拉 (Hispaniola (Spain))                      Holy Roman Empire (Holy Roman Empire)             
+    Holy Roman Empire (Holy Roman Empire)              Inca Empire (Inca Empire)                          伊斯蘭與印度教國家 (Islamic and Hindu states)              
+    伊斯蘭城邦 (Islamic city-states)                        日本戰國時代 (Japan (Warring States))                    希瓦汗國 (Khiva Khanate)                              
+    Korea (Korea)                                      蘭納 (Lan Na)                                        Laos (Laos)                                       
+    盧巴人 (Luba)                                         隆達人 (Lunda)                                        Madagascar (Madagascar)                           
+    馬六甲 (Malacca)                                      馬來西亞伊斯蘭邦國 (Malaysian Islamic states)               瑪雅 (Maya)                                         
+    瑪雅人 (Mayas)                                        Milan (Milan)                                      明朝 (Ming Chinese Empire)                          
+    莫西邦國 (Mossi States)                                Mughal Empire (Mughal Empire)                      姆韋內穆塔帕 (Mwenemutapa)                              
+    那不勒斯 (Naples)                                      Nogai Horde (Nogai Horde)                          Oman (Oman)                                       
+    奧里薩 (Orissa)                                       Ottoman Empire (Ottoman Empire)                    Ottoman Empire (Ottoman Empire)                   
+    奧約帝國 (Oyo)                                         Papal States (Papal States)                        勃固 (Pegu)                                         
+    波蘭立陶宛聯邦 (Poland-Llituania)                         Portugal (Portugal)                                Prussia (Prussia)                                 
+    哈薩克汗國 (Quazaq Khanate)                             七省共和國 (Republic of the Seven Zenden)               薩法維帝國 (Safavid Empire)                            
+    薩丁尼亞 (Sardinia)                                    蘇格蘭 (Scotland)                                     Senegal (Senegal)                                 
+    撣邦 (Shan states)                                   西西里 (Sicily)                                       桑海 (Songhai)                                      
+    Spain (Spain)                                      Sweden (Sweden)                                    Sweden (Sweden)                                   
+    Sweden (Sweden)                                    Sweden (Sweden)                                    Sweden (Sweden)                                   
+    Sweden (Sweden)                                    Sweden (Sweden)                                    Sweden (Sweden)                                   
+    Sweden (Sweden)                                    Sweden (Sweden)                                    Sweden (Sweden)                                   
+    Sweden (Sweden)                                    Sweden (Sweden)                                    瑞士邦聯 (Swiss Confederation)                        
+    Tibet (Tibet)                                      莫斯科沙皇國 (Tsardom of Muscovy)                        Venice (Venice)                                   
+    新西班牙總督轄區 (Vice Royalty of New Spain)               維查耶納加爾帝國 (Vijayanagara)                            瓦達伊 (Wadai)                                       
+    瓦塔斯王朝 (Watassid Morocco)                          
+
+### 1700 CE  ·  106 政權  · 重複 3 條
+  ⚠ 同名重複：
+    - 「Ottoman Empire」（Ottoman Empire）x3 | 1700 CE-1714 CE、1700 CE-1714 CE、1700 CE-1714 CE
+    - 「Austrian Empire」（Austrian Empire）x2 | 1700 CE-1714 CE、1700 CE-1714 CE
+    - 「central Asian khanates」（central Asian khanates）x2 | 1700 CE-1714 CE、1700 CE-1714 CE
+    阿坎人 (Akan)                                         若開 (印度土邦) (Arakan (Indian princely stat)           Austrian Empire (Austrian Empire)                 
+    Austrian Empire (Austrian Empire)                  阿瓦 (Ava)                                           奧薩 (Awsa)                                         
+    阿瑜陀耶 (Ayutthaya)                                   Belize (Belize)                                    Benin (Benin)                                     
+    Bhutan (Bhutan)                                    博爾努-卡奈姆 (Bornu-Kanem)                              Brunei (Brunei)                                   
+    Cambodia (Cambodia)                                開雲 (Cayenne)                                       central Asian khanates (central Asian khanates)   
+    central Asian khanates (central Asian khanates)    Ceylon (Ceylon)                                    荷屬錫蘭 (Ceylon (Dutch))                             
+    Congo (Congo)                                      西屬古巴 (Cuba (Spain))                                大越 (Đại Việt)                                     
+    達爾富爾 (Darfur)                                      德拉戈亞灣 (Delagoa Bay)                                丹麥-挪威 (Denmark-Norway)                            
+    Dutch Brazil (Dutch Brazil)                        Dutch East Indies (Dutch East Indies)              荷屬福爾摩沙 (Dutch Formosa)                            
+    Dutch Republic (Dutch Republic)                    英格蘭與愛爾蘭 (England and Ireland)                      埃塞奎博 (Essequibo)                                  
+    Ethiopia (Ethiopia)                                梅里納擴張王國 (Expansionist Kingdom of Meri)             菲維扎諾 (Fivizzano)                                  
+    佛羅里達 (Florida)                                     France (France)                                    弗朗什-孔泰 (Franche-Comté)                            
+    熱那亞 (Genoa)                                        哈德拉毛 (Hadramaut)                                   豪薩諸國 (Hausa States)                               
+    印度教王國 (Hindu Kingdoms)                             西屬伊斯帕尼奧拉 (Hispaniola (Spain))                      Holy Roman Empire (Holy Roman Empire)             
+    Hong Kong (Hong Kong)                              希瓦汗國 (Khiva Khanate)                               Korea (Korea)                                     
+    蘭納 (Lan Na)                                        寮國諸邦 (Laotian states)                              倫巴底 (Lombardy)                                    
+    盧巴人 (Luba)                                         盧卡 (Lucca)                                         隆達人 (Lunda)                                       
+    Luxembourg (Luxembourg)                            Madagascar (Madagascar)                            馬來亞 (Malaya)                                      
+    Mali (Mali)                                        滿洲帝國 (Manchu Empire)                               馬薩人 (Massa)                                       
+    馬薩諸塞灣 (Massachusetts Bay)                          瑪雅 (Maya)                                          米達格王國 (Middag Kingdom)                            
+    Milan (Milan)                                      摩德納 (Modena)                                       Morocco (Morocco)                                 
+    莫西邦國 (Mossi States)                                Mughal Empire (Mughal Empire)                      那不勒斯 (Naples)                                     
+    新法蘭西 (New France)                                  Nogai Horde (Nogai Horde)                          Oman (Oman)                                       
+    Ottoman Empire (Ottoman Empire)                    Ottoman Empire (Ottoman Empire)                    Ottoman Empire (Ottoman Empire)                   
+    奧約帝國 (Oyo)                                         Papal States (Papal States)                        Parma (Parma)                                     
+    Philippines (Philippines)                          蓬特雷莫利 (Pontremoli)                                 Portugal (Portugal)                               
+    葡屬巴西 (Portuguese Brazil)                           葡屬東非 (Portuguese East Africa)                      葡屬幾內亞 (Portuguese Guinea)                         
+    Prussia (Prussia)                                  哈薩克汗國 (Quazaq Khanate)                             七省共和國 (Republic of the Seven Zenden)              
+    羅茲維帝國 (Rozwi)                                      薩法維帝國 (Safavid Empire)                             薩丁尼亞 (Sardinia)                                   
+    薩丁尼亞-皮埃蒙特 (Sardinia-Piedmont)                      Senegal (Senegal)                                  撣邦 (Shan states)                                  
+    西西里 (Sicily)                                       桑海 (Songhai)                                       南卡羅來納州 (South Carolina)                           
+    Spain (Spain)                                      蘇利南 (Surinam)                                      Sweden (Sweden)                                   
+    瑞士邦聯 (Swiss Confederation)                         Tibet (Tibet)                                      德川幕府 (Tokugawa Shogunate)                         
+    莫斯科沙皇國 (Tsardom of Muscovy)                        托斯卡尼 (Tuscany)                                     Venice (Venice)                                   
+    秘魯總督轄區 (Vice Royalty of Peru)                      新西班牙總督轄區 (Vice-Royalty of New Spain)               維吉尼亞 (Virginia)                                   
+    瓦達伊 (Wadai)                                       
+
+### 1800 CE  ·  120 政權  · 重複 6 條
+  ⚠ 同名重複：
+    - 「United Kingdom」（United Kingdom）x2 | 1800 CE-1814 CE、1800 CE-1814 CE
+    - 「Anhalt」（安哈特）x2 | 1800 CE-1814 CE、1800 CE-1814 CE
+    - 「Prussia」（Prussia）x2 | 1800 CE-1814 CE、1800 CE-1814 CE
+    - 「Lozi」（洛齊人）x2 | 1800 CE-1814 CE、1800 CE-1814 CE
+    - 「central Asian khanates」（central Asian khanates）x2 | 1800 CE-1814 CE、1800 CE-1814 CE
+    - 「Kingdom of Sardinia」（Kingdom of Sardinia）x2 | 1800 CE-1814 CE、1800 CE-1814 CE
+    阿卡迪亞半島 (Acadian Peninsula (UK))                    Afghanistan (Afghanistan)                          阿爾及爾 (Algiers)                                    
+    Anguilla (Anguilla)                                安哈特 (Anhalt)                                       安哈特 (Anhalt)                                      
+    若開 (Arakan)                                        阿散蒂 (Asante)                                       Austrian Empire (Austrian Empire)                 
+    Austrian Netherlands (Austrian Netherlands)        奧薩 (Awsa)                                          巴登 (Baden)                                        
+    巴吉爾米 (Bagirmi)                                     Bahamas (Bahamas)                                  巴哈瓦爾布爾 (Bahawalpur)                               
+    Batavian Republic (Batavian Republic)              巴伐利亞 (Bavaria)                                     Bhutan (Bhutan)                                   
+    博爾努-卡奈姆 (Bornu-Kanem)                              英屬蓋亞那 (British Guiana)                             Brunei (Brunei)                                   
+    Burma (Burma)                                      Cambodia (Cambodia)                                Cape Colony (Cape Colony)                         
+    central Asian khanates (central Asian khanates)    central Asian khanates (central Asian khanates)    荷屬錫蘭 (Ceylon (Dutch))                             
+    科欽 (Cochin)                                        Cochin China (Cochin China)                        Congo (Congo)                                     
+    昔蘭尼加 (Cyrenaica)                                   Dahomey (Dahomey)                                  大越 (Đại Việt)                                     
+    達爾富爾 (Darfur)                                      德拉戈亞灣 (Delagoa Bay)                                丹麥-挪威 (Denmark-Norway)                            
+    Dominica (Dominica)                                Dutch East Indies (Dutch East Indies)              荷蘭定居點 (Dutch settlements)                         
+    Ethiopia (Ethiopia)                                梅里納擴張王國 (Expansionist Kingdom of Meri)             菲維扎諾 (Fivizzano)                                  
+    France (France)                                    豐吉蘇丹國 (Funj)                                       漢諾威 (Hanover)                                     
+    豪薩諸國 (Hausa States)                                Helvetic Republic (Helvetic Republic)              霍爾斯坦 (Holstein)                                   
+    Hong Kong (Hong Kong)                              Japan (Japan)                                      Kingdom of Ireland (Kingdom of Ireland)           
+    Kingdom of Sardinia (Kingdom of Sardinia)          Kingdom of Sardinia (Kingdom of Sardinia)          Kingdom of the Two Sicilies (Kingdom of the Two Sicilies)
+    Kong Empire (Kong Empire)                          Korea (Korea)                                      Laos (Laos)                                       
+    倫巴底 (Lombardy)                                     洛齊人 (Lozi)                                         洛齊人 (Lozi)                                        
+    盧巴人 (Luba)                                         盧卡 (Lucca)                                         隆達人 (Lunda)                                       
+    Luxembourg (Luxembourg)                            Madagascar (Madagascar)                            馬來亞 (Malaya)                                      
+    馬拉塔聯盟 (Maratha Confederacy)                        馬薩人 (Massa)                                        瑪雅 (Maya)                                         
+    摩德納 (Modena)                                       Morocco (Morocco)                                  莫西邦國 (Mossi States)                               
+    邁索爾 (Mysore)                                       Nepal (Nepal)                                      Netherlands Antilles (Netherlands Antilles)       
+    Oman (Oman)                                        Ottoman Empire (Ottoman Empire)                    奧德 (Oudh)                                         
+    奧約帝國 (Oyo)                                         Papal States (Papal States)                        Papua New Guinea (Papua New Guinea)               
+    Paraguay (Paraguay)                                Parma (Parma)                                      Persia (Persia)                                   
+    Philippines (Philippines)                          蓬特雷莫利 (Pontremoli)                                 Portugal (Portugal)                               
+    葡屬東非 (Portuguese East Africa)                      葡屬幾內亞 (Portuguese Guinea)                          Prussia (Prussia)                                 
+    Prussia (Prussia)                                  Qing Empire (Qing Empire)                          魁北克 (Quebec)                                      
+    Rattanakosin Kingdom (Rattanakosin Kingdom)        東非大裂谷諸國 (Rift Valley States)                       羅茲維帝國 (Rozwi)                                     
+    Russian Empire (Russian Empire)                    Saint Barthelemy (Saint Barthelemy)                Saint Martin (Saint Martin)                       
+    薩克森 (Saxony)                                       Senegal (Senegal)                                  桑海 (Songhai)                                      
+    Spain (Spain)                                      Sweden (Sweden)                                    特拉凡科爾 (Travancore)                                
+    的黎波里塔尼亞 (Tripolitania)                             突尼斯 (Tunis)                                        Turks and Caicos Islands (Turks and Caicos Islands)
+    托斯卡尼 (Tuscany)                                     United Kingdom (United Kingdom)                    United Kingdom (United Kingdom)                   
+    United States of America (United States of America) 巴西總督轄區 (Vice-Royalty of Brazil)                    新格拉納達總督轄區 (Vice-Royalty of New Granada)           
+    新西班牙總督轄區 (Vice-Royalty of New Spain)               秘魯總督轄區 (Vice-Royalty of Peru)                      拉普拉塔總督轄區 (Viceroyalty of the Río de la)           
+    瓦達伊 (Wadai)                                        Württemberg (Württemberg)                          Yemen (Yemen)                                     
+
+### 1900 CE  ·  213 政權  · 重複 8 條
+  ⚠ 同名重複：
+    - 「Spain」（Spain）x2 | 1900 CE-1913 CE、1900 CE-1913 CE
+    - 「France」（France）x2 | 1900 CE-1913 CE、1900 CE-1913 CE
+    - 「Egypt」（Egypt）x2 | 1900 CE-1913 CE、1900 CE-1913 CE
+    - 「American Samoa」（American Samoa）x5 | 1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE
+    - 「Fiji」（Fiji）x35 | 1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE
+    - 「Tonga」（Tonga）x15 | 1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE、1900 CE-1913 CE
+    - 「Wallis and Futuna Islands」（Wallis and Futuna Islands）x2 | 1900 CE-1913 CE、1900 CE-1913 CE
+    - 「Samoa」（Samoa）x2 | 1900 CE-1913 CE、1900 CE-1913 CE
+    阿克拉 (Accra)                                        Afghanistan (Afghanistan)                          Algeria (Algeria)                                 
+    American Samoa (American Samoa)                    American Samoa (American Samoa)                    American Samoa (American Samoa)                   
+    American Samoa (American Samoa)                    American Samoa (American Samoa)                    Angola (Angola)                                   
+    Anguilla (Anguilla)                                Antigua and Barbuda (Antigua and Barbuda)          阿拉伯 (Arabia)                                      
+    Argentina (Argentina)                              阿散蒂 (Asante)                                       阿托貿易聯盟 (Ato trading confederacy)                  
+    奧匈 (Austria Hungary)                               洛齊人 (Barotse)                                      Basutoland (Basutoland)                           
+    Belgium (Belgium)                                  Belize (Belize)                                    Benin (Benin)                                     
+    Bhutan (Bhutan)                                    Bolivia (Bolivia)                                  博爾古諸國 (Borgu States)                              
+    波士尼亞與赫塞哥維納 (Bosnia-Herzegovina)                    英屬蓋亞那 (British Guiana)                             British Raj (British Raj)                         
+    Brunei (Brunei)                                    Buganda (Buganda)                                  Bulgaria (Bulgaria)                               
+    Bunyoro (Bunyoro)                                  Burundi (Burundi)                                  卡拉巴爾 (Calabar)                                    
+    Canada (Canada)                                    Cape Colony (Cape Colony)                          central Asian khanates (central Asian khanates)   
+    Ceylon (Ceylon)                                    Chile (Chile)                                      Colombia (Colombia)                               
+    Congo (Congo)                                      Costa Rica (Costa Rica)                            科托努 (Cotonou)                                     
+    Dahomey (Dahomey)                                  Denmark (Denmark)                                  Dominica (Dominica)                               
+    Dominican Republic (Dominican Republic)            荷屬圭亞那 (Dutch Guiana)                               Ecuador (Ecuador)                                 
+    Egypt (Egypt)                                      Egypt (Egypt)                                      El Salvador (El Salvador)                         
+    Ethiopia (Ethiopia)                                Fiji (Fiji)                                        Fiji (Fiji)                                       
+    Fiji (Fiji)                                        Fiji (Fiji)                                        Fiji (Fiji)                                       
+    Fiji (Fiji)                                        Fiji (Fiji)                                        Fiji (Fiji)                                       
+    Fiji (Fiji)                                        Fiji (Fiji)                                        Fiji (Fiji)                                       
+    Fiji (Fiji)                                        Fiji (Fiji)                                        Fiji (Fiji)                                       
+    Fiji (Fiji)                                        Fiji (Fiji)                                        Fiji (Fiji)                                       
+    Fiji (Fiji)                                        Fiji (Fiji)                                        Fiji (Fiji)                                       
+    Fiji (Fiji)                                        Fiji (Fiji)                                        Fiji (Fiji)                                       
+    Fiji (Fiji)                                        Fiji (Fiji)                                        Fiji (Fiji)                                       
+    Fiji (Fiji)                                        Fiji (Fiji)                                        Fiji (Fiji)                                       
+    Fiji (Fiji)                                        Fiji (Fiji)                                        Fiji (Fiji)                                       
+    Fiji (Fiji)                                        Fiji (Fiji)                                        Fiji (Fiji)                                       
+    薩莫里第一帝國 (First Samori Empire)                      France (France)                                    France (France)                                   
+    French Guiana (French Guiana)                      French Indochina (French Indochina)                富塔賈隆 (Futa Jalon)                                 
+    富塔托羅 (Futa Toro)                                   Gabon (Gabon)                                      Gambia (Gambia)                                   
+    Germany (Germany)                                  Greece (Greece)                                    Greenland (Greenland)                             
+    Griqualand West (Griqualand West)                  Guadeloupe (Guadeloupe)                            Guatemala (Guatemala)                             
+    Haiti (Haiti)                                      哈勒爾 (Harer (Egypt))                                Honduras (Honduras)                               
+    Hong Kong (Hong Kong)                              伊巴丹 (Ibadan)                                       Iceland (Iceland)                                 
+    伊默里納王國 (Imerina)                                   Imperial Japan (Imperial Japan)                    India (India)                                     
+    Italy (Italy)                                      Ivory Coast (Ivory Coast)                          加涅姆-博爾努 (Kanem-Bornu)                             
+    巴西王國 (Kingdom of Brazil)                           夏威夷王國 (Kingdom of Hawaii)                          貢 (Kong)                                          
+    Korea (Korea)                                      拉哥斯 (Lagos)                                        Liberia (Liberia)                                 
+    洛齊人 (Lozi)                                         盧巴人 (Luba)                                         隆達人 (Lunda)                                       
+    Luxembourg (Luxembourg)                            Madagascar (Madagascar)                            馬來亞 (Malaya)                                      
+    Malta (Malta)                                      滿洲帝國 (Manchu Empire)                               姆拜倫杜 (Mbailundu)                                  
+    Mexico (Mexico)                                    Montenegro (Montenegro)                            Montserrat (Montserrat)                           
+    Morocco (Morocco)                                  莫西邦國 (Mossi States)                                納塔爾 (Natal)                                       
+    Nepal (Nepal)                                      Netherlands (Netherlands)                          Netherlands Antilles (Netherlands Antilles)       
+    荷屬東印度 (Netherlands Indies)                         新南威爾斯 (New South Wales (UK))                       Nicaragua (Nicaragua)                             
+    Niue (Niue)                                        北方領地 (Northern Territory (UK))                     Oman (Oman)                                       
+    奧波博 (Opobo)                                        Orange Free State (Orange Free State)              Ottoman Empire (Ottoman Empire)                   
+    奧約帝國 (Oyo)                                         Papua New Guinea (Papua New Guinea)                Paraguay (Paraguay)                               
+    Persia (Persia)                                    Peru (Peru)                                        Philippines (Philippines)                         
+    Portugal (Portugal)                                葡屬東非 (Portuguese East Africa)                      葡屬幾內亞 (Portuguese Guinea)                         
+    Qatar (Qatar)                                      昆士蘭 (Queensland (UK))                              Rapa Nui (Rapa Nui)                               
+    Rattanakosin Kingdom (Rattanakosin Kingdom)        Romania (Romania)                                  Russian Empire (Russian Empire)                   
+    Rwanda (Rwanda)                                    Saint Barthelemy (Saint Barthelemy)                Saint Kitts and Nevis (Saint Kitts and Nevis)     
+    Saint Martin (Saint Martin)                        Samoa (Samoa)                                      Samoa (Samoa)                                     
+    第二薩莫里帝國 (Second Samori Empire)                     Senegal (Senegal)                                  Serbia (Serbia)                                   
+    Sierra Leone (Sierra Leone)                        Sokoto Caliphate (Sokoto Caliphate)                南澳大利亞 (South Australia (UK))                      
+    Spain (Spain)                                      Spain (Spain)                                      西屬幾內亞 (Spanish Guinea)                            
+    烏特泰拉蘇丹國 (Sultanate of Utetera)                     尚吉巴蘇丹國 (Sultinate of Zanzibar)                     Swaziland (Swaziland)                             
+    瑞典-挪威 (Sweden–Norway)                              Switzerland (Switzerland)                          Tonga (Tonga)                                     
+    Tonga (Tonga)                                      Tonga (Tonga)                                      Tonga (Tonga)                                     
+    Tonga (Tonga)                                      Tonga (Tonga)                                      Tonga (Tonga)                                     
+    Tonga (Tonga)                                      Tonga (Tonga)                                      Tonga (Tonga)                                     
+    Tonga (Tonga)                                      Tonga (Tonga)                                      Tonga (Tonga)                                     
+    Tonga (Tonga)                                      Tonga (Tonga)                                      德蘭士瓦 (Transvaal)                                  
+    Trucial Oman (Trucial Oman)                        圖庫勒爾哈里發國 (Tukular Caliphate)                       Tunisia (Tunisia)                                 
+    United Kingdom of Great Britain and Ireland (United Kingdom of Great Brit) United States of America (United States of America) United States Virgin Islands (United States Virgin Islands)
+    Uruguay (Uruguay)                                  Venezuela (Venezuela)                              維多利亞 (Victoria (UK))                              
+    Wallis and Futuna Islands (Wallis and Futuna Islands) Wallis and Futuna Islands (Wallis and Futuna Islands) 西澳大利亞 (Western Australia (UK))                    
+    Yaka (Yaka)                                        耶克 (Yeke)                                          Zululand (Zululand)                               
+
+### 2000 CE  ·  196 政權  · 重複 3 條
+  ⚠ 同名重複：
+    - 「United States」（United States）x3 | 2000 CE-2009 CE、2000 CE-2009 CE、2000 CE-2009 CE
+    - 「Russia」（Russia）x2 | 2000 CE-2009 CE、2000 CE-2009 CE
+    - 「Italy」（Italy）x3 | 2000 CE-2009 CE、2000 CE-2009 CE、2000 CE-2009 CE
+    Afghanistan (Afghanistan)                          Albania (Albania)                                  Algeria (Algeria)                                 
+    American Samoa (American Samoa)                    Andorra (Andorra)                                  Angola (Angola)                                   
+    Anguilla (Anguilla)                                Antigua and Barbuda (Antigua and Barbuda)          Argentina (Argentina)                             
+    Armenia (Armenia)                                  Australia (Australia)                              Austria (Austria)                                 
+    Azerbaijan (Azerbaijan)                            Bahamas (Bahamas)                                  Bangladesh (Bangladesh)                           
+    Barbados (Barbados)                                Belgium (Belgium)                                  Belize (Belize)                                   
+    Benin (Benin)                                      Bhutan (Bhutan)                                    Bolivia (Bolivia)                                 
+    Bosnia and Herzegovina (Bosnia and Herzegovina)    Botswana (Botswana)                                Brazil (Brazil)                                   
+    Brunei (Brunei)                                    Bulgaria (Bulgaria)                                Burkina Faso (Burkina Faso)                       
+    Burma (Burma)                                      Burundi (Burundi)                                  Cambodia (Cambodia)                               
+    Cameroon (Cameroon)                                Canada (Canada)                                    Central African Republic (Central African Republic)
+    Chad (Chad)                                        Chile (Chile)                                      China (China)                                     
+    Colombia (Colombia)                                Congo (Congo)                                      Costa Rica (Costa Rica)                           
+    Croatia (Croatia)                                  Cuba (Cuba)                                        Cyprus (Cyprus)                                   
+    Czech Republic (Czech Republic)                    Denmark (Denmark)                                  Djibouti (Djibouti)                               
+    Dominica (Dominica)                                Dominican Republic (Dominican Republic)            Ecuador (Ecuador)                                 
+    Egypt (Egypt)                                      El Salvador (El Salvador)                          Equatorial Guinea (Equatorial Guinea)             
+    Eritrea (Eritrea)                                  Estonia (Estonia)                                  Ethiopia (Ethiopia)                               
+    Fiji (Fiji)                                        Finland (Finland)                                  France (France)                                   
+    French Guiana (French Guiana)                      Gabon (Gabon)                                      Gambia, The (Gambia, The)                         
+    Georgia (Georgia)                                  Germany (Germany)                                  Ghana (Ghana)                                     
+    Greece (Greece)                                    Greenland (Greenland)                              Grenada (Grenada)                                 
+    Guadeloupe (Guadeloupe)                            Guatemala (Guatemala)                              Guinea (Guinea)                                   
+    Guinea-Bissau (Guinea-Bissau)                      Guyana (Guyana)                                    Haiti (Haiti)                                     
+    Honduras (Honduras)                                Hong Kong (Hong Kong)                              Hungary (Hungary)                                 
+    Iceland (Iceland)                                  India (India)                                      Indonesia (Indonesia)                             
+    Iran (Iran)                                        Iraq (Iraq)                                        Ireland (Ireland)                                 
+    Israel (Israel)                                    Italy (Italy)                                      Italy (Italy)                                     
+    Italy (Italy)                                      Ivory Coast (Ivory Coast)                          Jamaica (Jamaica)                                 
+    Japan (Japan)                                      Jordan (Jordan)                                    Kazakhstan (Kazakhstan)                           
+    Kenya (Kenya)                                      朝鮮民主主義人民共和國 (Korea, Democratic People's R)         Korea, Republic of (Korea, Republic of)           
+    Kuwait (Kuwait)                                    Kyrgyzstan (Kyrgyzstan)                            Laos (Laos)                                       
+    Latvia (Latvia)                                    Lebanon (Lebanon)                                  Lesotho (Lesotho)                                 
+    Liberia (Liberia)                                  Libya (Libya)                                      Liechtenstein (Liechtenstein)                     
+    Lithuania (Lithuania)                              Luxembourg (Luxembourg)                            Macedonia (Macedonia)                             
+    Madagascar (Madagascar)                            Malawi (Malawi)                                    Malaysia (Malaysia)                               
+    Mali (Mali)                                        Malta (Malta)                                      Martinique (Martinique)                           
+    Mauritania (Mauritania)                            Mexico (Mexico)                                    Moldova (Moldova)                                 
+    Mongolia (Mongolia)                                Montenegro (Montenegro)                            Montserrat (Montserrat)                           
+    Morocco (Morocco)                                  Mozambique (Mozambique)                            Namibia (Namibia)                                 
+    Nepal (Nepal)                                      Netherlands (Netherlands)                          Netherlands Antilles (Netherlands Antilles)       
+    New Zealand (New Zealand)                          Nicaragua (Nicaragua)                              Niger (Niger)                                     
+    Nigeria (Nigeria)                                  Niue (Niue)                                        Norway (Norway)                                   
+    Oman (Oman)                                        Pakistan (Pakistan)                                Panama (Panama)                                   
+    Papua New Guinea (Papua New Guinea)                Paraguay (Paraguay)                                Peru (Peru)                                       
+    Philippines (Philippines)                          Poland (Poland)                                    Portugal (Portugal)                               
+    Puerto Rico (Puerto Rico)                          Qatar (Qatar)                                      Rapa Nui (Rapa Nui)                               
+    Romania (Romania)                                  Russia (Russia)                                    Russia (Russia)                                   
+    Rwanda (Rwanda)                                    Saint Barthelemy (Saint Barthelemy)                Saint Kitts and Nevis (Saint Kitts and Nevis)     
+    Saint Lucia (Saint Lucia)                          Saint Martin (Saint Martin)                        Saint Vincent and the Grenadines (Saint Vincent and the Grenad)
+    Samoa (Samoa)                                      Saudi Arabia (Saudi Arabia)                        Senegal (Senegal)                                 
+    Serbia (Serbia)                                    Sierra Leone (Sierra Leone)                        Slovakia (Slovakia)                               
+    Slovenia (Slovenia)                                Somalia (Somalia)                                  South Africa (South Africa)                       
+    Spain (Spain)                                      Sri Lanka (Sri Lanka)                              Sudan (Sudan)                                     
+    Suriname (Suriname)                                Swaziland (Swaziland)                              Sweden (Sweden)                                   
+    Switzerland (Switzerland)                          Syria (Syria)                                      Taiwan (Taiwan)                                   
+    Tajikistan (Tajikistan)                            Tanzania, United Republic of (Tanzania, United Republic of) Thailand (Thailand)                               
+    Togo (Togo)                                        Tonga (Tonga)                                      Trinidad (Trinidad)                               
+    Tunisia (Tunisia)                                  Turkey (Turkey)                                    Turkmenistan (Turkmenistan)                       
+    Turks and Caicos Islands (Turks and Caicos Islands) Uganda (Uganda)                                    Ukraine (Ukraine)                                 
+    United Arab Emirates (United Arab Emirates)        United Kingdom (United Kingdom)                    United States (United States)                     
+    United States (United States)                      United States (United States)                      United States Virgin Islands (United States Virgin Islands)
+    Uruguay (Uruguay)                                  Uzbekistan (Uzbekistan)                            Venezuela (Venezuela)                             
+    Vietnam (Vietnam)                                  Wallis and Futuna Islands (Wallis and Futuna Islands) Western Sahara (Western Sahara)                   
+    Yemen (Yemen)                                      Zaire (Zaire)                                      Zambia (Zambia)                                   
+    Zimbabwe (Zimbabwe)                               
+
+## 各年總數（每 100 年）
+
+    4001 BCE:   8    3901 BCE:   8    3801 BCE:   8    3701 BCE:   8    3601 BCE:   8
+    3501 BCE:   8    3401 BCE:   8    3301 BCE:   8    3201 BCE:   8    3101 BCE:   8
+    3001 BCE:   8    2901 BCE:   8    2801 BCE:   8    2701 BCE:   8    2601 BCE:   8
+    2501 BCE:   8    2401 BCE:   8    2301 BCE:   8    2201 BCE:   8    2101 BCE:   8
+    2001 BCE:  11    1901 BCE:  11    1801 BCE:  11    1701 BCE:  11    1601 BCE:  11
+    1501 BCE:  16(重1)    1401 BCE:  16(重1)    1301 BCE:  16(重1)    1201 BCE:  16(重1)    1101 BCE:  16(重1)
+    1001 BCE:  16(重1)     901 BCE:  16(重1)     801 BCE:  16(重1)     701 BCE:  16(重1)     601 BCE:  16(重1)
+     501 BCE:  25(重1)     401 BCE:  22(重2)     301 BCE:  31(重1)     201 BCE:  24     101 BCE:  23(重1)
+       1 BCE:  25(重1)      100 CE:  27(重2)      200 CE:  23(重1)      300 CE:  20      400 CE:  23(重1)
+      500 CE:  28(重1)      600 CE:  30(重2)      700 CE:  45(重6)      800 CE:  47(重2)      900 CE:  59(重1)
+     1000 CE:  69(重2)     1100 CE:  79(重5)     1200 CE:  74(重3)     1300 CE:  68     1400 CE:  73(重3)
+     1500 CE:  94(重1)     1600 CE: 100(重5)     1700 CE: 106(重3)     1800 CE: 120(重6)     1900 CE: 213(重8)
+     2000 CE: 196(重3)

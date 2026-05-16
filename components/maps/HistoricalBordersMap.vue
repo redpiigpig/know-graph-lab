@@ -93,7 +93,7 @@
     >
       <div class="flex items-start justify-between gap-2 mb-1.5">
         <div>
-          <div class="font-semibold text-sm text-gray-900 leading-tight">{{ nameZhOf(selectedState.name) }}</div>
+          <div class="font-semibold text-sm text-gray-900 leading-tight">{{ dynastyLabelAt(selectedState.name, props.currentYear) || nameZhOf(selectedState.name) }}</div>
           <div v-if="nameZhOf(selectedState.name) !== selectedState.name" class="text-[10px] text-gray-400 mt-0.5">{{ selectedState.name }}</div>
         </div>
         <button
@@ -132,12 +132,13 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
-import { geoEqualEarth, geoPath, geoCentroid, type GeoProjection } from 'd3-geo'
+import { geoEqualEarth, geoPath, geoCentroid, geoArea, type GeoProjection } from 'd3-geo'
 import { zoom as d3zoom, zoomIdentity, type ZoomBehavior } from 'd3-zoom'
 import { select } from 'd3-selection'
 import { formatYearShort } from '~/data/maps/historical-epochs'
 import { STATE_DETAILS, type WikidataState } from '~/data/maps/historical-states-db'
 import { COUNTRY_NAME_ZH } from '~/data/maps/world-religions'
+import { dynastyLabelAt } from '~/data/maps/dynasty-labels'
 
 // 從現代國家英文名找 ISO_A3 → 中文。NE admin_0 用的是國家英文全名。
 const adm0NameToZh = new Map<string, string>()
@@ -352,20 +353,37 @@ function rebuildAll() {
     id: `coast-${i}`, d: path(f) || '',
   })).filter(p => p.d)
 
-  // Labels — compute centroid per state
-  const labels: LabelItem[] = []
+  // Labels — 同名 polygon 去重，每組只在面積最大的 polygon 上印一個 label
+  // 跨朝代的 polygon（如 Egypt, Persia, England）改顯示「{朝代}（{國家}）」
+  const byName = new Map<string, StateEntry[]>()
   for (const s of activeStates) {
+    if (!byName.has(s.name)) byName.set(s.name, [])
+    byName.get(s.name)!.push(s)
+  }
+  const labels: LabelItem[] = []
+  for (const [name, group] of byName) {
+    // 找面積最大的 polygon 當 label 位置
+    let best: StateEntry | null = null
+    let bestArea = -Infinity
+    for (const g of group) {
+      try {
+        const a = geoArea(g.feature)
+        if (a > bestArea) { bestArea = a; best = g }
+      } catch {}
+    }
+    if (!best) continue
     let c: [number, number]
     try {
-      c = geoCentroid(s.feature)
+      c = geoCentroid(best.feature)
       if (isNaN(c[0]) || isNaN(c[1])) continue
     } catch { continue }
     const xy = projection(c)
     if (!xy || isNaN(xy[0]) || isNaN(xy[1])) continue
+    const dynLbl = dynastyLabelAt(name, year)
     labels.push({
-      id: `lbl-${s.name}-${labels.length}`,
+      id: `lbl-${name}`,
       x: xy[0], y: xy[1],
-      text: nameZhOf(s.name),
+      text: dynLbl || nameZhOf(name),
       fontSize: 10,
     })
   }
