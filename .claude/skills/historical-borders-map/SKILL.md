@@ -1,6 +1,6 @@
 ---
 name: historical-borders-map
-description: 「歷史國界地圖」工具集（/maps/historical-borders）— 4215 個歷史國家從 4000 BCE 至今的政治國界演進地圖 + 國家資料庫列表。記錄三層資料源（historical-basemaps + Wikidata SPARQL + 人工 STATE_DETAILS）、翻譯系統（規則 + 880+ 手譯）、列表 UI、地圖渲染。Use when 補國家詳細資料、增加新 sphere/realm 對照、新增手譯、修地圖渲染、改列表過濾、Wikidata 重抓、加新 prefix/suffix 翻譯規則。
+description: 「歷史國界地圖」工具集（/maps/historical-borders）— 6,853 個歷史政權從 -123,000 BCE 至今的政治國界演進地圖 + 國家資料庫列表。跨 53 個 historical-basemaps snapshots，Equal Earth 等積投影。資料層：historical-basemaps polygon + Wikidata SPARQL + 人工 STATE_DETAILS + Gemini batch 中文翻譯（2,420 條）+ rules-based 政權分類器（is_state，過濾部落／文化群）。Use when 補國家詳細資料、新增 SUPPLEMENT_ZH／STATE_DETAILS／sphere 對照、新增手譯／規則／snapshot、修地圖渲染、改列表過濾、調整政權分類標準（KNOWN_STATES / KNOWN_NON_STATES）、Gemini 補翻譯。
 ---
 
 # 歷史國界地圖 — 純政治國界 + 國家資料庫
@@ -267,10 +267,12 @@ interface HistoricalState extends StateSkeleton, StateDetail {
 
 ### 地圖渲染（HistoricalBordersMap.vue）
 
+**投影**：`geoEqualEarth` (Equal Earth, 2018) — **等積投影**，真實面積保留。視覺接近 Natural Earth 但不騙面積（高緯度不誇大）。同一投影也用在 `WorldThematicMap.vue`。要改換投影改 `import { geoEqualEarth } from 'd3-geo'` 那行 + `makeProjection()` 裡的 `geoEqualEarth()` 呼叫。
+
 四層：
 1. **海背景**：白
 2. **陸地灰底**：modern admin_0，`fill='#D1D5DB'` 全 opacity
-3. **古國 polygon**：filtered by currentYear（`year_from <= y <= year_to`），每國 **hash-based HSL 唯一色**
+3. **古國 polygon**：filtered by currentYear（`year_from <= y <= year_to`）+ **`polygon-classifications.json` 政權過濾**，每國 **hash-based HSL 唯一色**
 4. **海岸線**：NE coastline 黑線 0.6/transform.k
 5. **國名標籤**：centroid + 防重疊 relax，**中文優先**。`nameZhOf()` 查序：
    1. STATE_DETAILS (41，最準)
@@ -295,10 +297,15 @@ interface HistoricalState extends StateSkeleton, StateDetail {
 ### 列表 UI（HistoricalStateList.vue）
 
 工具列（右側統計排版）：
-- **「顯示 N / 6,853 國」** — 大字粗體主視覺
-- 「有 polygon X」「人工詳細 41」 — 次要灰色文字（避免被誤讀為總數）
+- **「顯示 N / 6,853 條目」** — 大字粗體主視覺
+- 「政權 X」（amber-700）／「有 polygon X」（blue-600）／「人工詳細 41」（emerald-600） — 次要灰色文字
 
-過濾：搜尋（中英文）／界域（8 大界域，依 `realm_id`）／詳細（全部／已填／僅骨架）／polygon（全部／有地圖／無 polygon）
+過濾：
+- 搜尋（中英文）
+- 界域（8 大界域，依 `realm_id`）
+- 詳細（全部／已填／僅骨架）
+- polygon（全部／有地圖／無 polygon）
+- **政權 filter**（預設「僅政權（含酋邦）」／僅部落／文化群／不過濾）— 用 `polygon-classifications.json`，wikidata-only 條目（無 polygon 分類）若有 inception_year 視為政權
 
 表格欄位：國名 / 年代 / 朝代統治 / 巔峰人口 / 巔峰面積 / 主要首都 / 現代涵蓋 / 界域
 
@@ -310,7 +317,7 @@ interface HistoricalState extends StateSkeleton, StateDetail {
 
 ---
 
-## 三個工具腳本
+## 工具腳本（六個）
 
 ### 1. `scripts/generate_state_skeleton.mjs`
 從 `historical-states.geojson` + `historical-sphere-fills.geojson` 抽 370 國骨架，輸出 `state-skeleton.json`。
@@ -347,9 +354,13 @@ node scripts/fetch_hbm_snapshots.mjs   # ~2 分鐘
 ```
 
 ### 5. `scripts/classify_polygons.mjs`
-**純 rules-based 政權分類器**，輸出 `public/maps/polygon-classifications.json`。
+**純 rules-based 政權分類器**，輸出 `public/maps/polygon-classifications.json`（2,949 條 entries 含 `is_state` + `reason`）。
 
-對 historical-states.geojson 中每個 unique polygon name 判定 `is_state: bool`，標準=「至少酋邦／城邦／建立王權的遊牧帝國」。5 層判定見上。每加新國家／文化群到 KNOWN_STATES / KNOWN_NON_STATES 後重跑：
+對 historical-states.geojson 中每個 unique polygon name 判定 `is_state: bool`，標準（v2）：
+- 舊大陸：至少酋邦／城邦／建立王權的遊牧帝國
+- 新大陸（美洲／澳洲／太平洋）：只從「有文字民族出現或入侵」開始算（Maya/Aztec/Inca + 歐洲殖民後）
+
+5 層判定見上。每加新國家／文化群到 KNOWN_STATES / KNOWN_NON_STATES 後重跑：
 ```bash
 node scripts/classify_polygons.mjs   # 即時，~1 秒
 ```
@@ -357,6 +368,9 @@ node scripts/classify_polygons.mjs   # 即時，~1 秒
 要修「某 polygon 顯不顯示」：
 - 想顯示 → 加進 `KNOWN_STATES` set
 - 想不顯示 → 加進 `KNOWN_NON_STATES` set
+- 順序：KNOWN_NON_STATES 先檢查（優先排除），KNOWN_STATES 次檢查
+
+KNOWN_STATES (~400) / KNOWN_NON_STATES (~120 + 新大陸殖民前無文字文明全 list) 已包含豐富覆蓋。
 
 ### 6. `scripts/translate_polygon_names_gemini.py`
 **Gemini batch 翻譯 polygon 名 → 繁體中文**，輸出 `public/maps/polygon-names-zh.json`。
@@ -434,6 +448,40 @@ node scripts/translate_state_names.mjs
 node scripts/generate_state_skeleton.mjs
 ```
 
+### 完整重 build pipeline（全部資料層重生）
+
+```bash
+# 1. 抓 historical-basemaps 53 snapshots（已存在會 skip）
+node scripts/fetch_hbm_snapshots.mjs
+
+# 2. 重 build 兩個 geojson（~30 分鐘，CPU 重）
+node scripts/build_historical_layer.mjs
+
+# 3. 重抽 skeleton
+node scripts/generate_state_skeleton.mjs
+
+# 4. 重抓 wikidata（可選，~3 分鐘）
+node scripts/fetch_wikidata_states.mjs
+node scripts/translate_state_names.mjs
+
+# 5. Gemini batch 翻 polygon names（~10-15 分鐘）
+PYTHONIOENCODING=utf-8 python scripts/translate_polygon_names_gemini.py
+
+# 6. 重新分類政權（~1 秒）
+node scripts/classify_polygons.mjs
+```
+
+### 加新政權／排除某 polygon
+
+編輯 [scripts/classify_polygons.mjs](../../../scripts/classify_polygons.mjs)：
+- 想顯示 → 加進 `KNOWN_STATES`
+- 想不顯示 → 加進 `KNOWN_NON_STATES`（會優先攔截）
+- 跑 `node scripts/classify_polygons.mjs`，前端硬重整就生效
+
+### 加新地圖標籤手譯（rules 抓不到的）
+
+編輯 [components/maps/HistoricalBordersMap.vue](../../../components/maps/HistoricalBordersMap.vue) 的 `SUPPLEMENT_ZH` 物件，加 `'English Name': '中文名'`。HMR 即生效。
+
 ---
 
 ## 待補項目（低優先）
@@ -490,7 +538,12 @@ historical-borders-map 額外用：
 
 ## Recent commits
 
-`a8a26e6` 中文譯名 100% 完成（4215/4215）
+`a0080cb` 政權標準 v2 — 新大陸從文字／殖民開始算
+`5c10c98` 政權標準分類器（rules-based）— 排除部落／文化群／hunter-gatherer
+`56722b1` polygon 名 95.9% 中文化 (Gemini batch) + 改 Equal Earth 等積投影
+`abf4d79` 補齊 53 個 historical-basemaps snapshots，修 1980 等近代年份
+`967e837` 地圖標籤中文化 + 列表工具列強化
+`a8a26e6` 中文譯名 100% 完成（4215/4215，wikidata 名）
 `4ae5aff` 翻譯 82% → 93.5%（規則 + 270 手譯）
 `c7182a3` 翻譯 60% → 82%（規則 + 400 手譯）
 `8719571` 接 Wikidata SPARQL，370 → 4424
