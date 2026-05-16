@@ -319,7 +319,8 @@ interface LayoutResult {
 
 // ── Subtree expansion state ──
 // Keyed by personId — when set, that person's full descendants are rendered.
-// 預設一律收摺；點 ▼ 才展開。
+// 預設：穆聖之後雙主幹 (法蒂瑪 → 哈桑 順尼 Sharif 線 + 侯賽因 12 伊瑪目線) 自動展開。
+// 其他旁支 (阿拔斯王朝、倭馬亞王朝、Davidic 王朝等) 收摺，按 ▼ 一次展開整支。
 const expandedClans = ref<Set<string>>(new Set())
 function toggleExpand(personId: string) {
   const s = new Set(expandedClans.value)
@@ -327,6 +328,32 @@ function toggleExpand(personId: string) {
   else s.add(personId)
   expandedClans.value = s
 }
+
+// 雙主幹自動展開：法蒂瑪+阿里 全部後代（哈桑+Sharif 線 + 侯賽因+12 伊瑪目線）
+const DUAL_SPINE_ROOTS = ['法蒂瑪（穆聖之女）', '阿里（艾比·塔利卜之子）', '哈桑·伊本·阿里', '侯賽因·伊本·阿里']
+const dualSpineExpanded = ref(false)
+watch(() => [personByName.value, childrenOf.value], ([byName, chMap]) => {
+  if (dualSpineExpanded.value) return
+  if ((byName as Map<string, any>).size === 0) return
+  const s = new Set(expandedClans.value)
+  for (const name of DUAL_SPINE_ROOTS) {
+    const node = (byName as Map<string, any>).get(name)
+    if (!node) continue
+    // BFS add all descendants
+    const queue = [node.id]
+    const seen = new Set<string>()
+    while (queue.length) {
+      const id = queue.shift()!
+      if (seen.has(id)) continue
+      seen.add(id)
+      s.add(id)
+      const kids = (chMap as Map<string, string[]>).get(id) ?? []
+      queue.push(...kids)
+    }
+  }
+  expandedClans.value = s
+  dualSpineExpanded.value = true
+}, { immediate: true })
 
 // 一鍵展開以色列先知鏈：易司哈格→葉爾孤白→[利未/猶大 兩線]→穆薩/哈倫 + Davidic kings/達烏德/蘇萊曼/麥爾彥/爾撒
 function expandProphets() {
@@ -453,7 +480,7 @@ const cv = computed(() => {
   //
   // 收摺規則：rootId 在 expandedSet 才遞迴子孫；否則只放 root + 配偶。
   // 由 makeLNode 自動標 hasSubtree+subtreeSize，模板 render ▼/▲ 鈕。
-  function layoutSubtree(rootId: string, leftX: number, vis: Set<string>, minGen: number, depth: number = 0): LayoutResult {
+  function layoutSubtree(rootId: string, leftX: number, vis: Set<string>, minGen: number, depth: number = 0, forceExpand = false): LayoutResult {
     const empty = (): LayoutResult => ({ nodes: [], drops: [], hbars: [], marriages: [], rootCX: leftX + NW / 2, maxX: leftX + NW, maxY: 0 })
     if (vis.has(rootId)) return empty()
     const p = pMap.get(rootId)
@@ -481,8 +508,10 @@ const cv = computed(() => {
     const myHbars: HBar[]  = []
     const myMarriages: MLine[] = []
 
-    // 收摺：root 未展開且有子孫 → 只放 root+配偶，不遞迴 kids
-    const collapsed = kids.length > 0 && !expandedSet.has(rootId)
+    // 遞迴展開：root 在 expandedSet 或父代 forceExpand=true → 整支子樹自動展開
+    // 仿 biblical：一次 ▼ 點擊全展開，不用層層按
+    const isExpanded = forceExpand || expandedSet.has(rootId)
+    const collapsed = kids.length > 0 && !isExpanded
 
     if (kids.length === 0 || collapsed) {
       const rootX = leftX + wivesReach
@@ -500,12 +529,12 @@ const cv = computed(() => {
       }
     }
 
-    // Recurse children left-to-right
+    // Recurse children left-to-right — forceExpand 傳下去讓整支子樹自動展開
     let cursorX = leftX + wivesReach
     const childResults: LayoutResult[] = []
     let maxY = myY + NH
     for (const k of kids) {
-      const r = layoutSubtree(k, cursorX, vis, gen + 1, depth + 1)
+      const r = layoutSubtree(k, cursorX, vis, gen + 1, depth + 1, isExpanded)
       if (r.nodes.length === 0) continue
       childResults.push(r)
       cursorX = r.maxX + HG
@@ -570,6 +599,21 @@ const cv = computed(() => {
       myDrops.push(...r.drops)
       myHbars.push(...r.hbars)
       myMarriages.push(...r.marriages)
+    }
+
+    // 標 expansion flags（biblical occlusion 用）：
+    //   - isThisRoot: 最上層被點 ▼ 的卡片（永遠不被遮）
+    //   - isExpansionNode: 該次展開內部的子嗣/配偶
+    //   - isExpansionLine: 該次展開畫的連線
+    const isThisRoot = isExpanded && !forceExpand
+    if (isExpanded) {
+      for (const n of myNodes) {
+        if (n.personId === rootId && isThisRoot) n.isExpansionRoot = true
+        else n.isExpansionNode = true
+      }
+      for (const d of myDrops)     d.isExpansionLine = true
+      for (const b of myHbars)     b.isExpansionLine = true
+      for (const m of myMarriages) m.isExpansionLine = true
     }
 
     const rightEdge = Math.max(rootX + NW, cursorX - HG, wResult.maxX)
