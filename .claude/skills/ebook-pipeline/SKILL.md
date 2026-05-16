@@ -169,6 +169,25 @@ A future silent failure now leaves a fingerprint instead of an empty log.
 
 Quota-exhaustion fallback (Gemini → Haiku) is still wired separately — when all Gemini keys hit 429 mid-run, the script auto-switches to Haiku for the current book and all remaining books in the same run.
 
+### OCR robustness patches (2026-05-14 → 05-16 manual run)
+
+Long sessions of `ocr_with_gemini.py run` exposed five recurring failure modes that previously discarded books on transient issues. All shipped on master:
+
+| Commit | Fix | Why it matters |
+|---|---|---|
+| `9729b0a` | `json_repair` salvage filters non-dict pages (`isinstance(p, dict)`); 0-byte file preflight before Gemini upload | A single non-dict element after Gemini truncates JSON would crash the whole book after json_repair had already recovered 100+ pages. 0-byte PDFs no longer waste a 400 round-trip. |
+| `672c948` | Haiku image render → JPEG q=85 with auto-downsample loop (150 → 120 → 96 → 75 → 60 DPI) until under Anthropic's 5 MB image cap | At 150 DPI PNG a dense 17-20 MB scanned page renders to ~8 MB → permanent 400. All large books now succeed at 120 DPI JPEG. |
+| `5e44dc1` | `insert_chunk_previews` uses adaptive batching (50 → 20 → 5 → 1) on 57014 / 5xx, matching parse_worker / repopulate / split_ebook_set | A single Supabase IO spike was discarding an entire 30-minute Haiku OCR run. |
+| `230d8b1` | When Gemini rejects with "exceeds the supported page limit of 1000", auto-fall back inline to Haiku for that single book | Haiku image-batch API has no 1000-page cap. Books like 羅馬尼亞通史簡編 (1381 pages, recovered ✓) / 中國宗教通史 (1294 pages) no longer need manual `--book` Haiku runs. |
+| `6211844` | When the oversized-PDF Haiku fallback above hits its own transient failure (connection error / 502 / 500), force `result.transient = True` | Without this, a transient Haiku blip during the oversized fallback would permanent-mark a >1000-page book even though the underlying issue is recoverable. |
+
+**Operational gotchas surfaced this run** (not yet patched, log them when retrying these workflows):
+
+- **OAuth token in `~/.claude/.credentials.json` expires every few hours.** A long-running `ocr_with_gemini.py` loads the token at startup and keeps using it in memory — once it expires, every Haiku call returns `Error code: 401`. The fix is kill + restart so the next instance reads the refreshed file. Auto-refresh would be a small enhancement.
+- **Python's DNS resolver caches failures.** After a brief local network blip, all subsequent socket calls inside the same process keep returning `getaddrinfo failed` even after `ping` confirms upstream is reachable. Kill + restart fixes this too.
+- **Anthropic rolling rate limit** — after ~6-7 consecutive Haiku books, the next requests return Cloudflare 502 / `Connection error` for ~30 minutes. The script doesn't pause; it churns through books with transient-mark failures. Tomorrow's daily run picks them up since transient = stays in queue.
+- **Content-filter rejections** (e.g. 哥白尼革命, 規訓與懲罰, 走向馬克思主義的人道主義, 新版宗教史叢書 4卷本) — Haiku returns `Output blocked by content filtering policy`. These need a different OCR engine; currently they leave the queue marked permanent.
+
 **Split-queue pattern (2026-05-14):** when specific books are known-Gemini-only (e.g. Haiku content-filter rejects 哥白尼革命 / 規訓與懲罰), run them in parallel with the rest:
 ```bash
 # Gemini for the 2 known-Gemini-only books
