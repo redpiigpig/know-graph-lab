@@ -41,9 +41,9 @@ const browser = await chromium.launch({ headless: true })
 const context = await browser.newContext({ viewport: { width: viewportW, height: viewportH } })
 const page = await context.newPage()
 page.on('console', msg => {
-  if (msg.type() === 'error' || msg.type() === 'warning') console.log('  PAGE', msg.type(), msg.text())
+  if (msg.type() === 'error') console.log('  PAGE-ERR', msg.text().slice(0, 500))
 })
-page.on('pageerror', err => console.log('  PAGEERROR', err.message))
+page.on('pageerror', err => console.log('  PAGEERROR', err.message.slice(0, 500)))
 await page.goto(actionLink, { waitUntil: 'domcontentloaded' })
 await page.waitForLoadState('networkidle').catch(() => {})
 
@@ -83,7 +83,7 @@ if (noFit) {
     // Reset transform via clicking nothing — workaround: force no fit by reload then no-op
     // Instead, find the canvas wrapper and reset transform
     const wrapper = document.querySelector('.absolute.top-0.left-0.origin-top-left')
-    if (wrapper) wrapper.style.transform = 'translate(20px, 20px) scale(0.18)'
+    if (wrapper) wrapper.style.transform = 'translate(20px, 20px) scale(0.6)'
   })
   await page.waitForTimeout(500)
 }

@@ -31,12 +31,17 @@
                 :x1="g.x" :y1="g.y1" :x2="g.x" :y2="g.y2"
                 :stroke="g.color" stroke-width="6" opacity="0.10" stroke-linecap="round" />
 
-          <!-- Lines: paths with optional dashes -->
+          <!-- Lines: paths with optional dashes
+               - Dashes:
+                   none → 實線
+                   '4,3' → 一般虛線
+                   '2,4,8,4' → 鋸齒線（教座分裂）
+                   '2,3' → 細點線（教導關係的暗示） -->
           <path v-for="(p, i) in cv.paths" :key="'p'+i"
                 :d="p.d" :stroke="p.stroke || '#9ca3af'"
                 :stroke-width="p.width ?? 1.5" fill="none"
                 stroke-linecap="round"
-                :stroke-dasharray="p.dashed ? '4,3' : ''"
+                :stroke-dasharray="p.dashes ?? (p.dashed ? '4,3' : '')"
                 :opacity="p.opacity ?? 1" />
         </svg>
 
@@ -119,16 +124,38 @@
 
       <!-- Legend -->
       <div class="absolute bottom-3 left-3 z-40 bg-white/95 border border-gray-200 rounded-lg p-2.5
-                  text-[10px] text-gray-600 shadow-sm pointer-events-none space-y-0.5">
-        <div class="font-semibold text-slate-700 mb-1">使徒統緒（七大宗主教座）</div>
-        <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-[3px] bg-red-500 rounded-full" />羅馬（彼得＋保羅）</div>
-        <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-[3px] bg-blue-500 rounded-full" />君士坦丁堡（安得烈）</div>
-        <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-[3px] bg-amber-500 rounded-full" />亞歷山卓（彼得→馬可＋巴拿巴）</div>
-        <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-[3px] bg-cyan-600 rounded-full" />安提阿（彼得）</div>
-        <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-[3px] bg-green-600 rounded-full" />耶路撒冷（義人雅各）</div>
-        <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-[3px] bg-purple-600 rounded-full" />亞美尼亞（達太）</div>
-        <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-[3px] bg-slate-500 rounded-full" />亞述（多馬）</div>
-        <div class="text-gray-400 mt-1 pt-1 border-t border-gray-100">主使徒實線、輔使徒虛線　·　▸/▾ 旁支收／展　·　Ctrl＋滾輪：縮放</div>
+                  text-[10px] text-gray-600 shadow-sm pointer-events-none space-y-0.5 max-w-[260px]">
+        <div class="font-semibold text-slate-700 mb-1">七大宗主教座</div>
+        <div class="grid grid-cols-2 gap-x-2 gap-y-0.5">
+          <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-[3px] bg-red-500 rounded-full" />羅馬（彼得＋保羅）</div>
+          <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-[3px] bg-blue-500 rounded-full" />君士坦丁堡（安得烈）</div>
+          <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-[3px] bg-amber-500 rounded-full" />亞歷山卓（彼得＋巴拿巴）</div>
+          <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-[3px] bg-cyan-600 rounded-full" />安提阿（彼得）</div>
+          <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-[3px] bg-green-600 rounded-full" />耶路撒冷（雅各）</div>
+          <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-[3px] bg-purple-600 rounded-full" />亞美尼亞（達太）</div>
+          <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-[3px] bg-slate-500 rounded-full" />亞述（多馬）</div>
+        </div>
+        <div class="font-semibold text-slate-700 mt-2 mb-0.5 pt-1.5 border-t border-gray-100">線條種類</div>
+        <div class="space-y-0.5">
+          <div class="flex items-center gap-1.5">
+            <span class="inline-block w-5 h-[1.5px] bg-slate-400" />
+            教座傳承（spine 內承繼）
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span class="inline-block w-5 h-[2.5px] bg-slate-400" />
+            設立教座（新建子座）
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span class="inline-block w-5 h-[2px]"
+                  style="background-image: repeating-linear-gradient(90deg, #dc2626 0 2px, transparent 2px 6px, #dc2626 6px 14px, transparent 14px 18px);" />
+            教座分裂（rival 繼承）
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span class="inline-block w-5 h-[1.5px] bg-orange-500 rounded-full" />
+            師徒教導（橘）
+          </div>
+        </div>
+        <div class="text-gray-400 mt-1 pt-1 border-t border-gray-100">▸/▾ 旁支收／展　·　Ctrl＋滾輪：縮放</div>
       </div>
     </template>
   </div>
@@ -162,13 +189,28 @@ interface BranchIn {
   church: string; tradition: string; founded_year: number | null
   parent_see_id: string; parent_spine_key: string
   parent_bishop_id: string | null
+  is_split: boolean    // true: 教座分裂 (same see_zh as parent); false: 設立教座 (new see)
   bishops: BishopIn[]
+}
+interface TeachingIn {
+  id: string
+  teacher_name_zh: string
+  teacher_name_en: string | null
+  student_name_zh: string
+  student_name_en: string | null
+  period_year: number | null
+  relationship: string
+  source: string | null
+  notes: string | null
+  teacher_bishop_id: string | null
+  student_bishop_id: string | null
 }
 interface GraphIn {
   jesus: { id: string; name_zh: string; name_en: string }
   apostles: ApostleIn[]
   spines: SpineIn[]
   branches: BranchIn[]
+  teachings?: TeachingIn[]
 }
 
 const props = defineProps<{ graph: GraphIn | null }>()
@@ -219,7 +261,7 @@ interface LNode {
   spineColor?: string
   tooltip?: string
 }
-interface LPath { d: string; stroke?: string; dashed?: boolean; width?: number; opacity?: number }
+interface LPath { d: string; stroke?: string; dashed?: boolean; dashes?: string; width?: number; opacity?: number }
 interface LGuide { x: number; y1: number; y2: number; color: string }
 
 const cv = computed(() => {
@@ -405,14 +447,18 @@ const cv = computed(() => {
         })
 
         // Connection line from attach point → branch
+        // - is_split (同名 see, rival successors): 紅色鋸齒線（強斷裂感）
+        // - 設立教座 (子座新名): 粗實線·spine 色
         const fromX = depth === 0 ? headerX + SEE_W : bx - BRANCH_GAP
         const toX = bx
         const toY = by + BRANCH_H / 2
         const midX = (fromX + toX) / 2
-        paths.push({
-          d: `M${fromX},${attachY} L${midX},${attachY} L${midX},${toY} L${toX},${toY}`,
-          stroke: sp.color, dashed: true, opacity: 0.7,
-        })
+        const dPath = `M${fromX},${attachY} L${midX},${attachY} L${midX},${toY} L${toX},${toY}`
+        if (br.is_split) {
+          paths.push({ d: dPath, stroke: '#dc2626', dashes: '2,4,8,4', width: 2, opacity: 0.85 })
+        } else {
+          paths.push({ d: dPath, stroke: sp.color, width: 2, opacity: 0.85 })
+        }
 
         if (expandedBranches.value.has(br.id)) {
           let cy = by + BRANCH_H + 4
@@ -469,7 +515,56 @@ const cv = computed(() => {
     }
   }
 
-  // ── 6. Compute canvas height ──────────────────────────
+  // ── 6. Teaching lines (orange) — connect bishop nodes that are master-disciple pairs ──
+  // Skip pairs where the institutional spine/branch chain already shows the relationship
+  // (per user spec: 設立教座/職位關係 takes precedence over 教導關係).
+  if (g.teachings && g.teachings.length > 0) {
+    // Build lookup: bishopId → node
+    const nodeByBishopId = new Map<string, LNode>()
+    for (const n of nodes) {
+      if (n.kind === 'bishop' && n.id.startsWith('bish_')) {
+        nodeByBishopId.set(n.id.slice(5), n)
+      } else if (n.kind === 'bishop' && n.id.startsWith('bbish_')) {
+        nodeByBishopId.set(n.id.slice(6), n)
+      }
+    }
+
+    // Determine which (teacher_bishop_id, student_bishop_id) pairs are already
+    // covered by spine/branch institutional lines:
+    // - same spine adjacent succession (#N → #N+1): always institutional, skip
+    // - branch.parent_bishop_id chain (Wesley→Coke is in same Baltimore see, so spine covers)
+    const institutionalPairs = new Set<string>()
+    for (const sp of g.spines) {
+      for (let i = 0; i < sp.bishops.length - 1; i++) {
+        institutionalPairs.add(`${sp.bishops[i].id}|${sp.bishops[i + 1].id}`)
+      }
+    }
+
+    for (const t of g.teachings) {
+      if (!t.teacher_bishop_id || !t.student_bishop_id) continue
+      const teacherNode = nodeByBishopId.get(t.teacher_bishop_id)
+      const studentNode = nodeByBishopId.get(t.student_bishop_id)
+      if (!teacherNode || !studentNode) continue
+      // Skip if already institutional
+      if (institutionalPairs.has(`${t.teacher_bishop_id}|${t.student_bishop_id}`)) continue
+
+      // Draw orange curved line from teacher card to student card
+      const x1 = teacherNode.x + teacherNode.w
+      const y1 = teacherNode.y + teacherNode.h / 2
+      const x2 = studentNode.x
+      const y2 = studentNode.y + studentNode.h / 2
+      const midX = (x1 + x2) / 2
+      // Use a quadratic-ish path with horizontal mid for clarity
+      paths.push({
+        d: `M${x1},${y1} C${midX},${y1} ${midX},${y2} ${x2},${y2}`,
+        stroke: '#ea580c',  // orange-600
+        width: 1.5,
+        opacity: 0.7,
+      })
+    }
+  }
+
+  // ── 7. Compute canvas height ──────────────────────────
   let maxY = 0
   for (const n of nodes) maxY = Math.max(maxY, n.y + n.h)
   h = maxY + PAD

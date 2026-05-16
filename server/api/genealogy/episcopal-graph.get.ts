@@ -304,6 +304,12 @@ export default defineEventHandler(async (event) => {
           if (an !== bn) return an - bn
           return (a.start_year ?? 9999) - (b.start_year ?? 9999)
         })
+        // Per user spec: 教座分裂 (split) vs 設立教座 (founding)
+        //   分裂 = daughter see has SAME see_zh as parent (rival successors claim the same chair).
+        //   設立 = daughter see has DIFFERENT see_zh from parent (new see established).
+        const parentSeeForSplit = seeById.get(seeId)
+        const isSplit = parentSeeForSplit ? (k.see_zh === parentSeeForSplit.see_zh) : false
+
         branches.push({
           id: k.id,
           see_zh: k.see_zh,
@@ -315,6 +321,7 @@ export default defineEventHandler(async (event) => {
           parent_see_id: seeId,
           parent_spine_key: spineKey,
           parent_bishop_id: parentBishopId,
+          is_split: isSplit,
           bishops: allBishops.map(mapBishop),
         })
         queue.push({ seeId: k.id, spineKey })
@@ -322,10 +329,19 @@ export default defineEventHandler(async (event) => {
     }
   }
 
+  // 6. teaching pairs (Jesus → disciples, Peter → Mark, John → Polycarp, Albertus → Aquinas, etc.)
+  //    Returned as-is from church_teachings. The renderer decides whether to draw an
+  //    orange teaching line based on whether both endpoints exist on canvas AND aren't
+  //    already connected via institutional (spine/branch) chain.
+  const { data: teachingRows } = await supabase
+    .from('church_teachings')
+    .select('id, teacher_name_zh, teacher_name_en, student_name_zh, student_name_en, period_year, relationship, source, notes, teacher_bishop_id, student_bishop_id')
+
   return {
     jesus: { id: 'jesus', name_zh: '耶穌基督', name_en: 'Jesus Christ' },
     apostles: APOSTLES,
     spines,
     branches,
+    teachings: teachingRows ?? [],
   }
 })
