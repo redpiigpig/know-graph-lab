@@ -109,7 +109,7 @@
   },
   "Adena": {
     "is_state": false,
-    "reason": "unmatched-default-false"
+    "reason": "known-non-state"
   },
   "Afanasevo": {
     "is_state": false,
@@ -304,8 +304,8 @@
     "reason": "unmatched-default-false"
   },
   "Anasazi": {
-    "is_state": true,
-    "reason": "known-state"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "Andean states and chiefdoms": {
     "is_state": true,
@@ -1660,8 +1660,8 @@
     "reason": "zh-nonstate-suffix (喬漢人)"
   },
   "Chavin": {
-    "is_state": true,
-    "reason": "known-state"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "Chehalis": {
     "is_state": false,
@@ -1704,16 +1704,16 @@
     "reason": "unmatched-default-false"
   },
   "Cherokee": {
-    "is_state": true,
-    "reason": "known-state"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "Cherokee (Oklahoma)": {
     "is_state": false,
     "reason": "unmatched-default-false"
   },
   "Cherookee": {
-    "is_state": true,
-    "reason": "known-state"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "Chesapeake": {
     "is_state": false,
@@ -1776,8 +1776,8 @@
     "reason": "zh-nonstate-suffix (奇馬里科人)"
   },
   "Chimú": {
-    "is_state": true,
-    "reason": "known-state"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "Chimú Empire": {
     "is_state": true,
@@ -2024,8 +2024,8 @@
     "reason": "non-state-pattern: /\\bTribes? of\\b/i"
   },
   "Confederated Villages of Lisjan": {
-    "is_state": true,
-    "reason": "polity-pattern: /\\bConfederated\\b/i"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "Congaree": {
     "is_state": false,
@@ -3084,8 +3084,8 @@
     "reason": "unmatched-default-false"
   },
   "Gitx̱san Lax̱yip": {
-    "is_state": true,
-    "reason": "polity-pattern: /\\bSan\\s|^Saint\\s/i"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "Giya": {
     "is_state": false,
@@ -3656,8 +3656,8 @@
     "reason": "unmatched-default-false"
   },
   "Hohokam": {
-    "is_state": true,
-    "reason": "known-state"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "Hokuzan": {
     "is_state": false,
@@ -3709,7 +3709,7 @@
   },
   "Hopewell": {
     "is_state": false,
-    "reason": "zh-nonstate-suffix (霍普韋爾文化)"
+    "reason": "known-non-state"
   },
   "Hopi": {
     "is_state": false,
@@ -3992,8 +3992,8 @@
     "reason": "unmatched-default-false"
   },
   "Iroquois": {
-    "is_state": true,
-    "reason": "known-state"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "Irritilas": {
     "is_state": false,
@@ -5232,8 +5232,8 @@
     "reason": "modern-country"
   },
   "Kō Hawaiʻi Paeʻāina (Hawaiian Kingdom)": {
-    "is_state": true,
-    "reason": "polity-pattern: /\\bKingdoms?\\b/i"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "K’asho Got’ine": {
     "is_state": false,
@@ -5920,12 +5920,12 @@
     "reason": "zh-nonstate-suffix (馬沙卡利人)"
   },
   "Maya": {
-    "is_state": false,
-    "reason": "unmatched-default-false"
+    "is_state": true,
+    "reason": "known-state"
   },
   "Maya Yucateco": {
-    "is_state": false,
-    "reason": "zh-nonstate-suffix (猶加敦瑪雅人)"
+    "is_state": true,
+    "reason": "known-state"
   },
   "Maya chiefdoms and states": {
     "is_state": true,
@@ -5948,8 +5948,8 @@
     "reason": "zh-nonstate-suffix (馬揚納人)"
   },
   "Mayas": {
-    "is_state": false,
-    "reason": "zh-nonstate-suffix (瑪雅人)"
+    "is_state": true,
+    "reason": "known-state"
   },
   "Mayi-Kulan": {
     "is_state": false,
@@ -6108,8 +6108,8 @@
     "reason": "modern-country"
   },
   "Mexihcah (Triple Alliance)": {
-    "is_state": false,
-    "reason": "zh-nonstate-suffix (墨西加人)"
+    "is_state": true,
+    "reason": "known-state"
   },
   "Meškwahki·aša·hina (Fox)": {
     "is_state": false,
@@ -6120,8 +6120,8 @@
     "reason": "zh-nonstate-suffix (梅法阿人)"
   },
   "Mi'kma'ki": {
-    "is_state": true,
-    "reason": "known-state"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "Miami": {
     "is_state": false,
@@ -6252,8 +6252,8 @@
     "reason": "zh-nonstate-suffix (姆尼康朱人)"
   },
   "Moche": {
-    "is_state": true,
-    "reason": "known-state"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "Mochó": {
     "is_state": false,
@@ -6272,8 +6272,8 @@
     "reason": "zh-nonstate-suffix (奧克拉荷馬莫多克人)"
   },
   "Mogollon": {
-    "is_state": true,
-    "reason": "known-state"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "Mohawk (Kalapuya)": {
     "is_state": false,
@@ -6588,8 +6588,8 @@
     "reason": "zh-nonstate-suffix (納瓦人)"
   },
   "Nahua ( Morelos, Puebla, Tlaxcala, Veracruz, Hidalgo, San Luis Potosi)": {
-    "is_state": true,
-    "reason": "polity-pattern: /\\bSan\\s|^Saint\\s/i"
+    "is_state": false,
+    "reason": "zh-nonstate-suffix (納瓦人)"
   },
   "Nahua (Guerrero)": {
     "is_state": false,
@@ -6748,8 +6748,8 @@
     "reason": "unmatched-default-false"
   },
   "Nazca": {
-    "is_state": true,
-    "reason": "known-state"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "Ndebele": {
     "is_state": false,
@@ -7140,8 +7140,8 @@
     "reason": "zh-nonstate-suffix (諾斯人)"
   },
   "Norte Chico": {
-    "is_state": true,
-    "reason": "known-state"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "North American Pacifi foraging, hunting and fishing peoples": {
     "is_state": false,
@@ -7384,8 +7384,8 @@
     "reason": "unmatched-default-false"
   },
   "Olmec": {
-    "is_state": true,
-    "reason": "known-state"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "Omaguaca": {
     "is_state": false,
@@ -8585,7 +8585,7 @@
   },
   "Saint Kitts and Nevis (UK)": {
     "is_state": true,
-    "reason": "polity-pattern: /\\bSan\\s|^Saint\\s/i"
+    "reason": "colony-format"
   },
   "Saint Lucia": {
     "is_state": true,
@@ -8668,16 +8668,16 @@
     "reason": "zh-nonstate-suffix (薩莫耶德人)"
   },
   "San Carlos Apache": {
-    "is_state": true,
-    "reason": "polity-pattern: /\\bSan\\s|^Saint\\s/i"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "San Marino": {
     "is_state": true,
-    "reason": "polity-pattern: /\\bSan\\s|^Saint\\s/i"
+    "reason": "modern-country"
   },
   "San Poil": {
-    "is_state": true,
-    "reason": "polity-pattern: /\\bSan\\s|^Saint\\s/i"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "Sana": {
     "is_state": false,
@@ -9960,8 +9960,8 @@
     "reason": "zh-nonstate-suffix (托羅莫納人)"
   },
   "Totonac": {
-    "is_state": true,
-    "reason": "known-state"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "Totonaco": {
     "is_state": false,
@@ -10168,8 +10168,8 @@
     "reason": "zh-nonstate-suffix (圖沙人)"
   },
   "Tuʻi Tonga Empire": {
-    "is_state": true,
-    "reason": "known-state"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "Twana/Skokomish": {
     "is_state": false,
@@ -10424,8 +10424,8 @@
     "reason": "zh-nonstate-suffix (韋普斯人)"
   },
   "Veracruz civilization": {
-    "is_state": true,
-    "reason": "known-state"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "Vice Royalty of New Spain": {
     "is_state": true,
@@ -10516,8 +10516,8 @@
     "reason": "zh-nonstate-suffix (瓦亞尼人)"
   },
   "Wabanaki (Dawnland Confederacy)": {
-    "is_state": true,
-    "reason": "polity-pattern: /\\bConfederacy\\b/i"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "Waccamaw (Woccon)": {
     "is_state": false,
@@ -10720,8 +10720,8 @@
     "reason": "zh-nonstate-suffix (瓦爾加梅根人)"
   },
   "Wari": {
-    "is_state": true,
-    "reason": "known-state"
+    "is_state": false,
+    "reason": "known-non-state"
   },
   "Wari’": {
     "is_state": false,

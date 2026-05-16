@@ -1,10 +1,15 @@
 #!/usr/bin/env node
 /**
- * Classify each historical-states.geojson polygon NAME as is_state (政權／酋邦／城邦) or not.
+ * Classify each historical-states.geojson polygon NAME as is_state (政權) or not.
  *
- * 標準（user-defined）：
- *   - 至少達到「酋邦 (chiefdom)」、「城邦 (city-state)」或「建立王權的遊牧帝國」
- *   - 純部落 (band/tribe) / 語族 / 考古文化群 / 古人類學名 / 狩獵採集者群 → 排除
+ * 標準（user-defined v2）：
+ *   - 舊大陸 (歐亞非)：至少「酋邦／城邦／建立王權的遊牧帝國」
+ *   - 新大陸 (美洲、澳洲、太平洋諸島)：**只從「有文字民族的出現或入侵」開始算**
+ *     · 有文字的本土文明：Maya / Aztec / Inca 算
+ *     · 歐洲殖民後：所有殖民地／殖民國家算
+ *     · 殖民前的無文字酋邦／文化（Olmec/Norte Chico/Toltec/Cahokia/Mississippian/
+ *       Iroquois Confederacy/Tarascan/Polynesian chiefdoms 等）→ 排除
+ *   - 純部落 (band/tribe) / 語族 / 考古文化群 / 狩獵採集者群 → 排除
  *
  * Output: public/maps/polygon-classifications.json
  *   {
@@ -54,6 +59,7 @@ const POLITY_PATTERNS = [
   /\bConfederation\b/i,
   /\bConfederacy\b/i,
   /\bFederation\b/i,
+  /\bAlliance\b/i,                        // Triple Alliance 等 — 阿茲特克
   /\bUnion\b/i,
   /\bDuchy\b/i,
   /\bGrand Duchy\b/i,
@@ -100,7 +106,6 @@ const POLITY_PATTERNS = [
   /\bRegency\b/i,
   /\bRegent of\b/i,
   /\bPrincipal/i,
-  /\bSan\s|^Saint\s/i,                    // 假設 San X / Saint X 是城邦／國家
 ]
 
 // ---- Rule layer 2: STRONG BLACKLIST (definite non-state) ----
@@ -247,17 +252,13 @@ const KNOWN_STATES = new Set([
   'Rwanda','Burundi','Karagwe','Bukoba','Mwenemutapa','Mutapa','Rozvi','Butua','Maravi',
   'Madagascar','Imerina','Merina','Expansionist Kingdom of Merina','Sakalava','Betsimisaraka','Boina','Antemoro',
   'Zulu Kingdom','Boer Republics','Orange Free State','Transvaal','Natal','Cape Colony',
-  // 美洲
-  'Olmec','Norte Chico','Caral','Chavin','Chavín','Moche','Nazca','Tiwanaku','Wari','Huari',
-  'Inca Empire','Chimu','Chimú','Chachapoya','Lambayeque','Sicán','Cajamarca',
-  'Maya states','Maya city-states','Maya chiefdoms and states','Maya civilization',
-  'Teotihuacàn','Teotihuacán','Monte Albàn','Monte Albán','Toltec','Aztec Empire','Tarascan',
-  'Mixtec Empire','Zapotec','Veracruz civilization','Huastec','Totonac',
-  'Cahokia','Mississippian','Anasazi','Ancestral Puebloan','Hohokam','Mogollon',
-  'Iroquois Confederacy','Powhatan Confederacy','Wabanaki Confederacy','Cherokee Nation',
-  'Aztec Empire','Tarascan Empire','Purépecha',
-  // 大洋洲
-  "Tuʻi Tonga Empire","Tongan Empire","Tu'i Tonga Empire",'Hawaiian Kingdom','Tahitian Kingdom',
+  // 美洲 — 僅保留有文字傳統的（Maya 象形字 / Aztec codices / Inca quipu）。
+  // 殖民前無文字文明 (Olmec/Toltec/Norte Chico/Cahokia/Mississippian/Anasazi/Iroquois...) 移到 KNOWN_NON_STATES
+  'Inca Empire','Aztec Empire','Mixtec Empire',                  // 中美洲有文字大文明
+  'Mexihcah (Triple Alliance)','Mexica','Triple Alliance',         // Aztec 本名
+  'Mayas','Maya','Maya states','Maya city-states','Maya civilization','Maya Yucateco', // Maya 象形文字
+  'Zapotec','Monte Albán','Monte Albàn','Teotihuacán','Teotihuacàn', // 部分有 Mesoamerican 文字
+  // 大洋洲 — 殖民前無文字 → 全排除（移到 KNOWN_NON_STATES）
   // 殖民／現代簡稱
   'British Empire','French & Colonies','French Empire','Portuguese Empire','Spanish Empire',
   'Dutch East Indies','British India','British Raj','French Indo-China','German Empire',
@@ -364,6 +365,31 @@ const KNOWN_NON_STATES = new Set([
   'Pygmies','San','Hottentots','Bushmen','Zaghawa',
   'Guanches','Berbers','Tuareg',
   // Polynesians 等已含 -人 結尾
+
+  // === user 標準 v2：新大陸殖民前的無文字文明／酋邦 → 全排除 ===
+  // 中美洲非文字 / 邊界文明
+  'Olmec','Toltec','Tarascan','Tarascan Empire','Purépecha','Purepecha',
+  'Veracruz civilization','Huastec','Totonac',
+  // 安地斯／南美殖民前文化（Inca 之前的 chiefdom／文化）
+  'Norte Chico','Caral','Chavin','Chavín','Moche','Nazca','Tiwanaku','Wari','Huari',
+  'Chimu','Chimú','Chachapoya','Lambayeque','Sicán','Sican','Cajamarca','Paracas',
+  'Wankarani','Valdivia','Chinchoros','Cotton Preceramic',
+  // 北美殖民前 mound-builder / chiefdom / pueblo / 邦聯
+  'Cahokia','Mississippian','Adena','Hopewell','Anasazi','Ancestral Puebloan',
+  'Hohokam','Mogollon','Fremont','Patayan',
+  'Iroquois','Iroquoia','Iroquois Confederacy','Powhatan Confederacy','Wabanaki',
+  'Wabanaki Confederacy','Creek Confederacy','Wampanoag Confederacy',
+  'Three Fires Confederacy','Cherokee','Cherokee Nation','Cherookee','Mi\'kma\'ki',
+  // 太平洋諸島殖民前（Polynesian / Melanesian / Micronesian chiefdoms — 都無文字）
+  "Tuʻi Tonga Empire","Tongan Empire","Tu'i Tonga Empire",'Hawaiian Kingdom','Tahitian Kingdom',
+  'Society Islands','Tahiti','Samoan Islands','Hawaii','Hawaiian Islands','Cook Islands',
+  'Tonga (Kingdom)','Wallis and Futuna','Fiji (Kingdom)','Polynesian chiefdoms',
+  'Hawaiian chiefdoms','Maori','Māori','M?ori',
+  // 北美原住民（被 Confederated/San Saint/Confederacy 等抓到的，原住民領地非政權）
+  'Confederated Villages of Lisjan','Gitx̱san Lax̱yip','Wabanaki (Dawnland Confederacy)',
+  'San Carlos Apache','San Poil','San Felipe','San Ildefonso','San Juan',
+  // 1492 historical-basemaps 把夏威夷王國（1810 才建）誤標到 1492 — 排除
+  'Kō Hawaiʻi Paeʻāina (Hawaiian Kingdom)',
 ])
 
 // 中文翻譯後綴 — 高信心信號
