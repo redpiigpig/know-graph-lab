@@ -209,7 +209,10 @@ export default defineEventHandler(async (event) => {
         id: b.id,
         name_zh: b.name_zh,
         name_en: b.name_en,
-        succession_number: b.succession_number,
+        // Negative succession_number signals pre-canonical / pre-Catholicos tradition
+        // (e.g. 亞美尼亞使徒寶座 8 位 #-8..#-1 排在格利高爾 #1 之前). Hide the number
+        // on the card; the natural sort puts them in correct order.
+        succession_number: (b.succession_number != null && b.succession_number > 0) ? b.succession_number : null,
         start_year: b.start_year,
         end_year: b.end_year,
         appointed_by: b.appointed_by,
@@ -240,7 +243,7 @@ export default defineEventHandler(async (event) => {
       id: b.id,
       name_zh: b.name_zh,
       name_en: b.name_en,
-      succession_number: b.succession_number,
+      succession_number: (b.succession_number != null && b.succession_number > 0) ? b.succession_number : null,
       start_year: b.start_year,
       end_year: b.end_year,
       appointed_by: b.appointed_by,
