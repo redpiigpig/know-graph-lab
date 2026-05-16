@@ -102,7 +102,11 @@
           aria-label="關閉"
         >×</button>
       </div>
-      <div class="text-gray-500">有效年代：{{ formatYearShort(selectedState.yearFrom) }} – {{ selectedState.yearTo >= 9999 ? '至今' : formatYearShort(selectedState.yearTo) }}</div>
+      <div class="text-gray-500 mb-2">有效年代：{{ formatYearShort(selectedState.yearFrom) }} – {{ selectedState.yearTo >= 9999 ? '至今' : formatYearShort(selectedState.yearTo) }}</div>
+      <button
+        @click="emit('locateInList', { name: selectedState.name })"
+        class="w-full px-2 py-1 text-[11px] bg-amber-500 text-white rounded hover:bg-amber-600 transition flex items-center justify-center gap-1"
+      >📋 在列表查看詳細</button>
     </div>
 
     <!-- Zoom controls -->
@@ -227,7 +231,12 @@ const SUPPLEMENT_ZH: Record<string, string> = {
   'Hong Kong': '香港',
 }
 
-const props = withDefaults(defineProps<{ currentYear?: number }>(), { currentYear: -1500 })
+const props = withDefaults(defineProps<{
+  currentYear?: number
+  highlightName?: string | null
+}>(), { currentYear: -1500, highlightName: null })
+
+const emit = defineEmits<{ (e: 'locateInList', payload: { name: string }): void }>()
 
 const rootEl = ref<HTMLElement | null>(null)
 const svgEl = ref<SVGSVGElement | null>(null)
@@ -508,5 +517,19 @@ onBeforeUnmount(() => {
 watch(() => props.currentYear, () => {
   selectedState.value = null
   rebuildAll()
+  // 換年後若有 highlightName，再嘗試一次 — 因為 statePaths 重建了
+  if (props.highlightName) tryHighlight(props.highlightName)
+})
+
+function tryHighlight(name: string) {
+  const found = statePaths.value.find(p => p.name === name)
+  if (found) selectedState.value = found
+}
+
+watch(() => props.highlightName, (name) => {
+  if (!name) return
+  // 等下一輪 rebuildAll，statePaths 已是當前年的內容
+  // 若 polygon 在當年不可見，就不會 highlight；page 端會把年份調整到 year_start，所以多半可見
+  setTimeout(() => tryHighlight(name), 0)
 })
 </script>

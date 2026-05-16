@@ -74,6 +74,8 @@ export interface HistoricalState extends Partial<StateSkeleton>, StateDetail {
   year_start: number | null
   /** 結束年 */
   year_end: number | null
+  /** realm/sphere 是否來自自動推斷（true = inference；false = 人工填或無） */
+  has_inferred_sphere?: boolean
 }
 
 /**
@@ -500,16 +502,31 @@ export function slugifyStateName(name: string): string {
 }
 
 /**
+ * 自動推斷的 realm/sphere（由 scripts/infer_state_realm_sphere.mjs 產出）
+ * Key = 英文 NAME，Value = { sphere_id, realm_id, confidence, ... }
+ */
+export interface SphereInferenceEntry {
+  sphere_id: string | null
+  realm_id: string | null
+  confidence: number
+  sources?: { iso: string; sphere: string }[]
+  year_inferred_at?: number
+  reason?: string
+}
+
+/**
  * 從 skeleton（historical-basemaps polygon）+ wikidata + details merge 成完整 list。
  * - 以 Wikidata 為主資料（~4000 國家），補上 polygon-only 的條目
  * - 同名 dedupe（不同 dataset 間以英文名為 key）
  * - polygon 提供 modern_countries + snapshots
  * - wikidata 提供 inception/dissolved 年份 + 中文名 + 大陸
  * - STATE_DETAILS 為人工撰寫的高品質詳細（覆蓋以上）
+ * - sphereInference 為自動推斷補位（STATE_DETAILS 沒填時才用，標記 has_inferred_sphere=true）
  */
 export function mergeStates(
   skeleton: StateSkeleton[],
-  wikidata: WikidataState[]
+  wikidata: WikidataState[],
+  sphereInference: Record<string, SphereInferenceEntry> = {}
 ): HistoricalState[] {
   // 用英文名（小寫去空格）作為 key dedupe
   const norm = (s: string) => s.toLowerCase().replace(/\s+/g, '').replace(/[^\w]/g, '')
@@ -530,12 +547,18 @@ export function mergeStates(
     const wd = wdMap.get(key)
     const name_en = sk?.name_en || wd?.name_en || ''
     const detail = STATE_DETAILS[name_en] || {}
+    const inferred = sphereInference[name_en]
 
     const year_start = sk?.earliest_from ?? wd?.inception_year ?? null
     const year_end = (sk?.latest_to !== undefined && sk.latest_to < 9999)
       ? sk.latest_to
       : wd?.dissolved_year
       ?? null
+
+    // sphere/realm 來源優先序：STATE_DETAILS > inference
+    const realm_id = detail.realm_id || inferred?.realm_id || undefined
+    const sphere_id = detail.sphere_id || inferred?.sphere_id || undefined
+    const has_inferred_sphere = !detail.realm_id && !!inferred?.realm_id
 
     result.push({
       id: slugifyStateName(name_en),
@@ -550,8 +573,11 @@ export function mergeStates(
       year_start,
       year_end,
       ...detail,
+      realm_id,
+      sphere_id,
       has_detail: !!STATE_DETAILS[name_en],
       has_polygon: !!sk,
+      has_inferred_sphere,
     })
   }
 

@@ -37,6 +37,32 @@
         <option value="all">不過濾</option>
       </select>
 
+      <!-- 匯出按鈕 -->
+      <div class="relative">
+        <button
+          @click="exportMenuOpen = !exportMenuOpen"
+          class="px-2.5 py-1.5 text-xs text-gray-700 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-md transition flex items-center gap-1"
+          :title="`匯出當前 ${filteredStates.length} 條結果`"
+        >
+          <span>⬇ 匯出</span>
+          <span class="text-[10px] text-gray-400">({{ filteredStates.length }})</span>
+        </button>
+        <template v-if="exportMenuOpen">
+          <!-- 透明覆蓋層，點擊空白處關閉 -->
+          <div class="fixed inset-0 z-10" @click="exportMenuOpen = false" />
+          <div
+            class="absolute right-0 top-full mt-1 z-20 bg-white border border-gray-200 rounded-md shadow-lg overflow-hidden min-w-[160px]"
+          >
+            <button @click="exportAs('csv'); exportMenuOpen = false" class="block w-full text-left px-3 py-2 text-xs text-gray-700 hover:bg-amber-50">
+              CSV <span class="text-gray-400">（Excel/Numbers）</span>
+            </button>
+            <button @click="exportAs('json'); exportMenuOpen = false" class="block w-full text-left px-3 py-2 text-xs text-gray-700 hover:bg-amber-50 border-t border-gray-100">
+              JSON <span class="text-gray-400">（程式可讀）</span>
+            </button>
+          </div>
+        </template>
+      </div>
+
       <div class="ml-auto text-xs text-gray-500 flex items-baseline gap-2">
         <span>顯示</span>
         <span class="text-base font-bold text-gray-900 tabular-nums">{{ filteredStates.length.toLocaleString() }}</span>
@@ -47,6 +73,8 @@
         <span class="text-blue-600">有 polygon {{ polygonCount }}</span>
         <span class="text-gray-300">·</span>
         <span class="text-emerald-600">人工詳細 {{ detailCount }}</span>
+        <span class="text-gray-300">·</span>
+        <span class="text-purple-600" title="自動由 modern_countries × country-sphere-timeline 推斷">推斷界域 {{ inferredSphereCount }}</span>
       </div>
     </div>
 
@@ -134,9 +162,14 @@
               <td class="px-3 py-2">
                 <span
                   v-if="s.realm_id"
-                  class="inline-block px-1.5 py-0.5 rounded text-[10px]"
+                  class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[10px]"
                   :style="{ background: realmColor(s.realm_id) + '20', color: realmColor(s.realm_id) }"
-                >{{ realmName(s.realm_id) }}</span>
+                  :class="s.has_inferred_sphere ? 'border border-dashed border-purple-300' : ''"
+                  :title="s.has_inferred_sphere ? '由 modern_countries 自動推斷' : '人工標註'"
+                >
+                  {{ realmName(s.realm_id) }}
+                  <span v-if="s.has_inferred_sphere" class="text-purple-500 text-[8px]">推</span>
+                </span>
                 <span v-else class="text-gray-300 text-[10px]">—</span>
               </td>
             </tr>
@@ -169,7 +202,15 @@
               <a :href="`https://www.wikidata.org/wiki/${selected.qid}`" target="_blank" rel="noopener" class="hover:text-blue-600">Wikidata: {{ selected.qid }} ↗</a>
             </div>
           </div>
-          <button @click="selected = null" class="text-gray-400 hover:text-gray-900 text-2xl">×</button>
+          <div class="flex items-center gap-2">
+            <button
+              v-if="selected.has_polygon"
+              @click="locateOnMap(selected)"
+              class="px-2.5 py-1 text-xs bg-amber-500 text-white rounded-md hover:bg-amber-600 transition flex items-center gap-1"
+              :title="`切到地圖視圖並跳到 ${selected.year_start ?? '?'}`"
+            >🗺️ 在地圖查看</button>
+            <button @click="selected = null" class="text-gray-400 hover:text-gray-900 text-2xl">×</button>
+          </div>
         </div>
 
         <div class="grid grid-cols-2 gap-4 mb-4 text-xs">
@@ -241,16 +282,20 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, h } from 'vue'
+import { ref, computed, onMounted, watch, h } from 'vue'
 import {
   type HistoricalState,
   type StateSkeleton,
   type WikidataState,
+  type SphereInferenceEntry,
   STATE_DETAILS,
   mergeStates,
 } from '~/data/maps/historical-states-db'
 import { formatYearShort } from '~/data/maps/historical-epochs'
 import { REALMS, COUNTRY_NAME_ZH, realmById } from '~/data/maps/world-religions'
+
+const props = defineProps<{ highlightName?: string | null }>()
+const emit = defineEmits<{ (e: 'locateOnMap', payload: { name: string; year: number | null }): void }>()
 
 const allStates = ref<HistoricalState[]>([])
 const polityClassification = ref<Record<string, { is_state: boolean }>>({})
@@ -265,9 +310,11 @@ const sortDir = ref<'asc' | 'desc'>('asc')
 const page = ref(1)
 const pageSize = 50
 const selected = ref<HistoricalState | null>(null)
+const exportMenuOpen = ref(false)
 
 const detailCount = computed(() => allStates.value.filter(s => s.has_detail).length)
 const polygonCount = computed(() => allStates.value.filter(s => s.has_polygon).length)
+const inferredSphereCount = computed(() => allStates.value.filter(s => s.has_inferred_sphere).length)
 
 // 政權判定：用 polygon-classifications.json（is_state）；wikidata-only 條目（無 polygon）若有 inception_year 視為政權
 function isStatePolity(s: HistoricalState): boolean {
@@ -321,6 +368,11 @@ function setSort(key: 'name_en' | 'year_start') {
   page.value = 1
 }
 
+function locateOnMap(s: HistoricalState) {
+  emit('locateOnMap', { name: s.name_en, year: s.year_start })
+  selected.value = null
+}
+
 function realmColor(id: string): string {
   return realmById(id as any)?.color || '#999'
 }
@@ -340,25 +392,127 @@ function formatArea(wan_km2: number): string {
   return `${wan_km2} 萬 km²`
 }
 
+// ===== 匯出 =====
+function downloadFile(filename: string, content: string, mime: string) {
+  const blob = new Blob([content], { type: `${mime};charset=utf-8` })
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = filename
+  document.body.appendChild(a)
+  a.click()
+  document.body.removeChild(a)
+  setTimeout(() => URL.revokeObjectURL(url), 1000)
+}
+
+function exportAs(format: 'csv' | 'json') {
+  const list = filteredStates.value
+  const ts = new Date().toISOString().slice(0, 10)
+  const tag = filterPolity.value === 'state' ? '政權' : filterPolity.value === 'nonstate' ? '非政權' : '全部'
+  const stem = `historical-states_${tag}_${list.length}_${ts}`
+
+  if (format === 'json') {
+    const payload = list.map(s => ({
+      id: s.id,
+      name_en: s.name_en,
+      name_zh: s.name_zh,
+      year_start: s.year_start,
+      year_end: s.year_end,
+      realm_id: s.realm_id,
+      sphere_id: s.sphere_id,
+      has_inferred_sphere: s.has_inferred_sphere || false,
+      dynasties: s.dynasties || null,
+      capitals: s.capitals || null,
+      religions: s.religions || null,
+      population_peak_wan: s.population_peak_wan ?? null,
+      area_peak_wan_km2: s.area_peak_wan_km2 ?? null,
+      modern_countries: s.modern_countries || [],
+      qid: s.qid || null,
+      intro: s.intro || null,
+      has_detail: s.has_detail,
+      has_polygon: s.has_polygon,
+    }))
+    downloadFile(`${stem}.json`, JSON.stringify(payload, null, 2), 'application/json')
+    return
+  }
+
+  // CSV
+  const headers = [
+    'id', 'name_zh', 'name_en', 'year_start', 'year_end',
+    'realm_id', 'sphere_id', 'inferred_sphere',
+    'dynasties', 'capitals', 'religions',
+    'population_peak_wan', 'area_peak_wan_km2',
+    'modern_countries', 'qid', 'has_detail', 'has_polygon',
+  ]
+  const esc = (v: any): string => {
+    if (v === null || v === undefined) return ''
+    let s = Array.isArray(v) ? v.join('|') : String(v)
+    if (/[",\n]/.test(s)) s = '"' + s.replace(/"/g, '""') + '"'
+    return s
+  }
+  const rows = list.map(s => [
+    s.id,
+    s.name_zh || '',
+    s.name_en,
+    s.year_start ?? '',
+    s.year_end ?? '',
+    s.realm_id || '',
+    s.sphere_id || '',
+    s.has_inferred_sphere ? 'Y' : '',
+    s.dynasties || [],
+    s.capitals || [],
+    s.religions || [],
+    s.population_peak_wan ?? '',
+    s.area_peak_wan_km2 ?? '',
+    s.modern_countries || [],
+    s.qid || '',
+    s.has_detail ? 'Y' : 'N',
+    s.has_polygon ? 'Y' : 'N',
+  ].map(esc).join(','))
+  const csv = '﻿' + headers.join(',') + '\n' + rows.join('\n')
+  downloadFile(`${stem}.csv`, csv, 'text/csv')
+}
+
 // 小元件：排序箭頭
 const SortArrow = (props: { col: string; sort: string; dir: string }) => {
   if (props.sort !== props.col) return h('span', { class: 'text-gray-300' }, '↕')
   return h('span', { class: 'text-amber-600' }, props.dir === 'asc' ? '↑' : '↓')
 }
 
+// 接受外部 highlight：找到 state，自動開啟詳細彈窗（filter 不限制 modal 顯示）
+watch(() => props.highlightName, (name) => {
+  if (!name) return
+  const found = allStates.value.find(s => s.name_en === name)
+  if (found) selected.value = found
+})
+
+// 也在資料載入完成後檢查一次（若 highlightName 比資料先到）
+function applyHighlightAfterLoad() {
+  const name = props.highlightName
+  if (!name) return
+  const found = allStates.value.find(s => s.name_en === name)
+  if (found) selected.value = found
+}
+
 onMounted(async () => {
   try {
-    const [skRes, wdRes, clsRes] = await Promise.all([
+    const [skRes, wdRes, clsRes, infRes] = await Promise.all([
       fetch('/maps/state-skeleton.json'),
       fetch('/maps/wikidata-states.json'),
       fetch('/maps/polygon-classifications.json').catch(() => ({ ok: false } as any)),
+      fetch('/maps/state-sphere-inference.json').catch(() => ({ ok: false } as any)),
     ])
     const skeleton: StateSkeleton[] = await skRes.json()
     const wikidata: WikidataState[] = await wdRes.json()
-    allStates.value = mergeStates(skeleton, wikidata)
+    let inference: Record<string, SphereInferenceEntry> = {}
+    if (infRes && (infRes as Response).ok) {
+      try { inference = await (infRes as Response).json() } catch {}
+    }
+    allStates.value = mergeStates(skeleton, wikidata, inference)
     if (clsRes && (clsRes as Response).ok) {
       try { polityClassification.value = await (clsRes as Response).json() } catch {}
     }
+    applyHighlightAfterLoad()
   } catch (e) {
     console.error('states data load failed', e)
   }

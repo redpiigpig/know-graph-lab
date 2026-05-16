@@ -26,6 +26,7 @@ description: 「歷史國界地圖」工具集（/maps/historical-borders）— 
 | G. NE 50m admin_0 | `public/maps/ne_50m_admin_0_countries.geojson` | 242 features | 陸地灰底 + **NAME_ZHT 中文國名（內建）** |
 | H. Polygon 名譯本 | `public/maps/polygon-names-zh.json` | **2,420 條 (88 KB)** | Gemini batch 翻的 polygon name → 繁中 |
 | I. Polygon 政權分類 | `public/maps/polygon-classifications.json` | **2,949 條** | rules-based: is_state + reason，過濾部落／文化群 |
+| J. Realm/Sphere 自動推斷 | `public/maps/state-sphere-inference.json` | **360 條** | 由 modern_countries × country-sphere-timeline 推算 realm_id + sphere_id（confidence + sources）|
 
 **Snapshot 來源**：[scripts/build_historical_layer.mjs](../../../scripts/build_historical_layer.mjs) 用 53 個 historical-basemaps snapshots：BCE 17 個（123000、10000、8000、5000、4000、3000、2000、1500、1000、700、500、400、323、300、200、100、1）+ CE 36 個（100、200、300、400、500、600、700、800、900、1000、1100、1200、1279、1300、1400、1492、1500、1530、1600、1650、1700、1715、1783、1800、1815、1880、1900、1914、1920、1930、1938、1945、1960、1994、2000、2010）。每 snapshot 的 `yearTo = 下個 snapshot 年 - 1`；最後一個（2010）`yearTo = 9999`。
 
@@ -317,7 +318,7 @@ interface HistoricalState extends StateSkeleton, StateDetail {
 
 ---
 
-## 工具腳本（六個）
+## 工具腳本（七個）
 
 ### 1. `scripts/generate_state_skeleton.mjs`
 從 `historical-states.geojson` + `historical-sphere-fills.geojson` 抽 370 國骨架，輸出 `state-skeleton.json`。
@@ -392,6 +393,22 @@ PYTHONIOENCODING=utf-8 python scripts/translate_polygon_names_gemini.py [--batch
 Free tier `gemini-2.5-flash` 每 key 250 RPD，腳本內建 multi-key 輪替（GEMINI_API_KEY=k1,k2 或 GEMINI_API_KEY_2..._10）。
 
 跑完後重啟 dev server，`HistoricalBordersMap.vue` 自動 fetch `polygon-names-zh.json` 並加入 `nameZhOf()` 查序最後一層。
+
+### 7. `scripts/infer_state_realm_sphere.mjs`
+**自動推斷 historical state 的 realm_id / sphere_id**，輸出 `public/maps/state-sphere-inference.json`。
+
+對每個 state（skeleton + wikidata 合併後）：
+1. 取 modern_countries[] 和 year_start（earliest_from 或 wikidata.inception_year）
+2. 對每個 ISO_A3，查 `country-sphere-timeline.ts` 在 year_start 時的 sphere
+3. Vote：最多票的 sphere 為勝出（confidence = top/total）
+4. sphere → realm 用 `SPHERES` 表對照
+5. 結果包含 `sources`（每個 ISO 投了哪個 sphere）+ `reason`
+
+```bash
+node scripts/infer_state_realm_sphere.mjs   # ~1 秒，輸出 ~360 條推斷
+```
+
+純文字 parser（regex 解 .ts 檔），無 ts-node/tsx 依賴。前端 `mergeStates(skeleton, wikidata, inference)` 第三個參數吃這份 JSON，當 `STATE_DETAILS` 沒填 realm 時自動補位並標 `has_inferred_sphere=true`，列表用紫色虛線 badge 與「推」字標示。
 
 ---
 
@@ -482,6 +499,29 @@ node scripts/classify_polygons.mjs
 
 編輯 [components/maps/HistoricalBordersMap.vue](../../../components/maps/HistoricalBordersMap.vue) 的 `SUPPLEMENT_ZH` 物件，加 `'English Name': '中文名'`。HMR 即生效。
 
+### 重跑 realm/sphere 自動推斷
+
+任何時候 `country-sphere-timeline.ts` 或 skeleton 變了：
+```bash
+node scripts/infer_state_realm_sphere.mjs
+```
+覆寫 `public/maps/state-sphere-inference.json`；前端下次 mount 自動吃。
+
+### 匯出列表資料
+
+列表右上「⬇ 匯出」 → CSV 或 JSON，會匯出**當前 filter 結果**（檔名含計數與 filter tag）。CSV 加 BOM，Excel/Numbers 開啟中文不亂碼；list 欄位用 `|` 分隔。JSON 保留 realm_id / sphere_id / has_inferred_sphere 等所有欄位。
+
+### 地圖 ↔ 列表雙向聯動
+
+- 列表詳細彈窗點「🗺️ 在地圖查看」→ 自動切到地圖視圖、拉時間軸到 `year_start`、polygon 可見時開 selectedState 彈窗
+- 地圖 polygon 點開後右上彈窗點「📋 在列表查看詳細」→ 自動切到列表並打開該國的詳細 modal
+
+實作：page-level 管 `mapHighlight` / `listHighlight` ref，setTimeout(0) 賦值確保 watch 即使同名也重觸發。
+
+### 時間軸動畫播放
+
+TimeAxis 右上「▶ 播放」按鈕，速度可選「慢／普通／快」（2500/1200/500 ms / 格）。依 EPOCHS 逐 epoch 跳到 2026。播放中改速度即時生效。已到末端可再次按 ▶ 從 -4000 重播。
+
 ---
 
 ## 待補項目（低優先）
@@ -494,15 +534,9 @@ node scripts/classify_polygons.mjs
    - 非洲帝國（馬利、桑海、阿散蒂、辛巴威）
    - 美洲（特奧蒂瓦坎、托爾特克、奇穆）
 
-2. **realm_id / sphere_id 自動推斷** — 從 modern_countries 對應到 sphere（透過 [country-sphere-timeline](../../../data/maps/country-sphere-timeline.ts) 查 inception_year 時的 sphere）。減輕手填負擔。
+2. **與 world-religions-map 整合** — 此工具是 sphere 分類討論的底層，分類確定後可同步反向更新 world-religions 的 sphere-history。
 
-3. **地圖 + 列表雙向聯動** — 列表點國家可直接拉時間軸到該國年代並標示在地圖；地圖點 polygon 可跳到列表對應條目。
-
-4. **匯出功能** — 列表能匯出 CSV／JSON 便於離線研究。
-
-5. **時間軸動畫** — 地圖加「播放」按鈕，自動 -4000 → 2026 動畫演進。
-
-6. **與 world-religions-map 整合** — 此工具是 sphere 分類討論的底層，分類確定後可同步反向更新 world-religions 的 sphere-history。
+3. **(已完成 #2/#3/#4/#5)** realm/sphere 自動推斷、雙向聯動、匯出、動畫播放 — 見上方常見操作。
 
 ---
 
@@ -538,6 +572,7 @@ historical-borders-map 額外用：
 
 ## Recent commits
 
+`(WIP)` realm/sphere 自動推斷 + 雙向聯動 + 匯出 CSV/JSON + 時間軸動畫播放
 `a0080cb` 政權標準 v2 — 新大陸從文字／殖民開始算
 `5c10c98` 政權標準分類器（rules-based）— 排除部落／文化群／hunter-gatherer
 `56722b1` polygon 名 95.9% 中文化 (Gemini batch) + 改 Equal Earth 等積投影

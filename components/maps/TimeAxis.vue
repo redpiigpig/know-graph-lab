@@ -16,6 +16,30 @@
       </div>
 
       <div class="ml-auto flex items-center gap-1.5">
+        <!-- 播放／速度控制 -->
+        <button
+          @click="togglePlay"
+          class="flex items-center gap-1 px-2.5 py-1 text-xs rounded-md border transition"
+          :class="isPlaying
+            ? 'bg-amber-500 border-amber-500 text-white hover:bg-amber-600'
+            : 'bg-white border-gray-200 text-gray-700 hover:border-amber-400 hover:text-amber-700'"
+          :title="isPlaying ? '暫停動畫' : `播放：依快照逐格演進，當前 ${playSpeed} ms / 格`"
+        >
+          <span v-if="isPlaying">⏸</span><span v-else>▶</span>
+          <span>{{ isPlaying ? '暫停' : '播放' }}</span>
+        </button>
+        <select
+          v-model.number="playSpeed"
+          class="px-1.5 py-1 text-xs bg-gray-50 border border-gray-200 rounded-md focus:outline-none text-gray-700"
+          title="動畫速度（毫秒／快照）"
+        >
+          <option :value="2500">慢</option>
+          <option :value="1200">普通</option>
+          <option :value="500">快</option>
+        </select>
+
+        <div class="w-px h-5 bg-gray-200 mx-1" />
+
         <label class="text-[11px] text-gray-400">跳至</label>
         <div class="flex items-center bg-gray-50 border border-gray-200 rounded-md overflow-hidden">
           <input
@@ -93,7 +117,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
+import { computed, ref, watch, onBeforeUnmount } from 'vue'
 import {
   EPOCHS,
   YEAR_MIN,
@@ -106,6 +130,63 @@ import {
 
 const props = defineProps<{ modelValue: number }>()
 const emit = defineEmits<{ (e: 'update:modelValue', v: number): void }>()
+
+// ===== 動畫播放 =====
+const isPlaying = ref(false)
+const playSpeed = ref<number>(1200)  // 毫秒／快照
+let playTimer: ReturnType<typeof setTimeout> | null = null
+
+function nextEpochYear(currentYear: number): number | null {
+  // 找出下一個 EPOCHS 的年份；找不到回 null（已到末端）
+  for (const e of EPOCHS) {
+    if (e.year > currentYear) return e.year
+  }
+  return null
+}
+
+function tick() {
+  const next = nextEpochYear(props.modelValue)
+  if (next === null) {
+    isPlaying.value = false
+    return
+  }
+  emit('update:modelValue', next)
+}
+
+function scheduleNext() {
+  if (playTimer) clearTimeout(playTimer)
+  playTimer = setTimeout(() => {
+    if (!isPlaying.value) return
+    tick()
+  }, playSpeed.value)
+}
+
+function togglePlay() {
+  isPlaying.value = !isPlaying.value
+  if (isPlaying.value) {
+    // 若已在最末端，從 YEAR_MIN 重新開始
+    if (props.modelValue >= EPOCHS[EPOCHS.length - 1].year) {
+      emit('update:modelValue', EPOCHS[0].year)
+    }
+    scheduleNext()
+  } else if (playTimer) {
+    clearTimeout(playTimer)
+    playTimer = null
+  }
+}
+
+// 每次年份變動且仍在播放，排下一格
+watch(() => props.modelValue, () => {
+  if (isPlaying.value) scheduleNext()
+})
+// 若使用者在播放中改速度，重新排程
+watch(playSpeed, () => {
+  if (isPlaying.value) scheduleNext()
+})
+
+onBeforeUnmount(() => {
+  if (playTimer) clearTimeout(playTimer)
+})
 
 const currentEpoch = computed(() => epochAt(props.modelValue))
 const currentMajorEra = computed(() => majorEraAt(props.modelValue))
