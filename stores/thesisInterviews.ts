@@ -101,8 +101,6 @@ export const useThesisInterviewsStore = defineStore('thesisInterviews', () => {
       driveFolder: '2024.05.23 詹錫奎先生訪談', has: ['outline', 'audio', 'photo'] },
     { id: 'zhuzh', name: '朱增宏先生', role: '台灣動物社會研究會創辦人', date: '2024.05.28', category: '社運界',
       driveFolder: '2024.05.28 朱增宏先生訪談', has: ['outline', 'audio', 'photo'] },
-    { id: 'changlei', name: '釋長叡法師', role: '台北市中山區慧日講堂住持', date: '2024.06.17', category: '法師',
-      driveFolder: '2024.06.17 釋長叡法師訪談', has: ['outline', 'audio', 'photo'] },
     { id: 'linrz', name: '林蓉芝居士', role: '中華佛寺協會工作者', date: '2024.09.03', category: '其他',
       driveFolder: '2024.09.03 林蓉芝居士訪談', has: ['outline', 'audio', 'photo'] },
     { id: 'kuanqian', name: '釋寬謙法師', role: '財團法人覺風佛教藝術文化基金會董事長', date: '2024.09.19', category: '法師',
@@ -113,11 +111,6 @@ export const useThesisInterviewsStore = defineStore('thesisInterviews', () => {
     { id: 'xinxuan', name: '釋心玄法師', role: '玄奘大學宗教與文化學系', date: '2025.03.15', category: '法師',
       driveFolder: '2025.03.15 釋心玄法師訪談', has: ['outline', 'audio', 'photo'],
       note: '另附「慈恩精舍選佛場一一佛教空間整修設計範例研析0312.docx」參考資料' },
-
-    // 訪問已安排但連錄音都還沒有
-    { id: 'wangsz', name: '王素珍居士', role: '—', date: '2025.03.02', category: '其他',
-      driveFolder: '2025.03.02 王素珍居士訪談', has: ['outline'],
-      note: '訪問日期已過但 Drive 上只有訪綱 — 可能未進行或檔案未上傳' },
   ])
 
   // ── 派生 ─────────────────────────────────────────────
