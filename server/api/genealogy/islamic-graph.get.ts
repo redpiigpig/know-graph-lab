@@ -22,14 +22,15 @@ export default defineEventHandler(async (event) => {
     viewRaw === 'shia_zaidi'   ? 'shia_zaidi' :
                                  'sunni'
 
-  const allowedTraditions = new Set<string>(['quranic'])
-  if (view !== 'quranic') {
-    allowedTraditions.add('sunni')
-    allowedTraditions.add('historical')
-  }
-  if (view === 'shia_twelver') allowedTraditions.add('shia_twelver')
-  if (view === 'shia_ismaili') allowedTraditions.add('shia_ismaili')
-  if (view === 'shia_zaidi')   allowedTraditions.add('shia_zaidi')
+  // 設計原則：view 不應該因「傳統 tag 不同」就過濾人物。
+  // 不同 view 是用來「解決族譜衝突」（例如 嘉法爾 之後 Twelver 接 穆薩·卡齊姆 vs
+  // Ismaili 接 伊斯瑪儀·伊本·嘉法爾），透過 JSONB tradition_children/spouse/hide_children
+  // 套用 override。順尼派沒理由不列阿里後裔（哈桑/侯賽因/12 伊瑪目）— 那些 shia_twelver
+  // tag 只表「該人物受該派特別重視」，並不代表其他派否認此人存在。
+  // 故：永遠 include 全部 7 種傳統的人；view 只決定 JSONB merge key。
+  const allowedTraditions = new Set<string>([
+    'quranic', 'sunni', 'shia_twelver', 'shia_ismaili', 'shia_zaidi', 'sufi', 'historical'
+  ])
 
   // Which tradition's JSONB to apply for conflict resolution
   const mergeKey: 'shia_twelver' | 'shia_ismaili' | 'shia_zaidi' | null =

@@ -298,11 +298,14 @@ interface LNode {
   subtreeSize?: number    // total hidden descendants (only when collapsed)
   subtreeExpanded?: boolean
   samePerson?: boolean    // true → same personId rendered at another position; show ♻ marker
+  isExpansionNode?: boolean  // true → 屬於某 ▼ 展開的子樹（occlusion 不會遮自己）
+  isExpansionRoot?: boolean  // true → 是被點 ▼ 的那張卡（永遠不被遮）
+  hidden?: boolean           // true → occlusion 後不渲染
 }
-interface VDrop { x: number; y1: number; y2: number; stroke?: string }
-interface HBar  { x1: number; x2: number; y: number; stroke?: string }
-interface MLine { id: string; x1: number; x2: number; y: number }
-interface TrunkGuide { x: number; y1: number; y2: number; color: string }
+interface VDrop { x: number; y1: number; y2: number; stroke?: string; isExpansionLine?: boolean; hidden?: boolean }
+interface HBar  { x1: number; x2: number; y: number; stroke?: string; isExpansionLine?: boolean; hidden?: boolean }
+interface MLine { id: string; x1: number; x2: number; y: number; isExpansionLine?: boolean; hidden?: boolean }
+interface TrunkGuide { x: number; y1: number; y2: number; color: string; hidden?: boolean }
 
 interface LayoutResult {
   nodes: LNode[]
@@ -866,7 +869,7 @@ const cv = computed(() => {
 
   // ── Orphan area ── 只放「真的無法連到 spine」的人（蘇菲、未連通的 historical）
   // 被 collapsed subtree 隱藏的後代不應變成 orphan—他們躲在收摺裡，user 展開 ▼ 才會顯現。
-  // 判定：person 透過 parent chain 不能到達任何 spine person → orphan
+  // 判定：person 透過 parent chain 或 spouse-chain（transitive）能到達任何 spine person
   const reachesSpine = new Map<string, boolean>()
   function descendsFromSpine(id: string, vis: Set<string> = new Set()): boolean {
     if (reachesSpine.has(id)) return reachesSpine.get(id)!
@@ -877,9 +880,9 @@ const cv = computed(() => {
     for (const par of pa.get(id) ?? []) {
       if (descendsFromSpine(par, vis)) { reachesSpine.set(id, true); return true }
     }
-    // 透過 spouse — 嫁/娶 spine person 也算
+    // 透過 spouse — 配偶若 descendsFromSpine 則此人也接上（哈拿→阿米蘭→葉爾孤白→spine）
     for (const spId of sp.get(id) ?? []) {
-      if (spineMembership.has(spId)) { reachesSpine.set(id, true); return true }
+      if (descendsFromSpine(spId, vis)) { reachesSpine.set(id, true); return true }
     }
     reachesSpine.set(id, false); return false
   }
