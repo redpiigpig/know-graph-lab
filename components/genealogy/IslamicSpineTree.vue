@@ -151,7 +151,7 @@
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-purple-300 bg-purple-50 rounded" />伊斯瑪儀派</div>
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-orange-300 bg-orange-50 rounded" />栽德派</div>
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-teal-300 bg-teal-50 rounded" />蘇菲傳承</div>
-        <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-dashed border-gray-400 bg-gray-100 rounded" />史傳補白（權威性低，伊斯瑪儀↔阿德南 5 代）</div>
+        <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-gray-300 bg-gray-50 rounded" />史傳（不確定）</div>
         <div class="flex items-center gap-1.5 pt-1 mt-1 border-t border-gray-100"><span class="w-3 h-[2px] bg-rose-600 rounded-full" />婚姻</div>
         <div class="flex items-center gap-1.5"><span class="w-3 h-[2px] bg-gray-400 rounded-full" />親子（從婚姻中點下降）</div>
         <div class="text-gray-400 mt-1 pt-1 border-t border-gray-100">滾輪：移動　·　Ctrl+滾輪：縮放　·　拖曳：平移</div>
@@ -994,7 +994,6 @@ function cardClass(n: LNode) {
   // 不含 `relative`——`relative` 會在 Tailwind cascade 蓋掉 inline `absolute`，
   // 害 v-for 第 N 張卡片掉到 normal flow 第 N 行（debug 過：哈娃曾被推到 y=2181）。
   // 卡內子元素的 absolute 定位由 .node-card 既是 absolute 又有 left/top inline 提供 containing block。
-  // historical (史傳補白權威性低) 用 dashed border 明顯區分 ↔ 古蘭明文/Sira 信實
   const m: Record<string, string> = {
     quranic:      'border-gray-300 bg-white',
     sunni:        'border-emerald-300 bg-emerald-50',
@@ -1002,7 +1001,7 @@ function cardClass(n: LNode) {
     shia_ismaili: 'border-purple-300 bg-purple-50',
     shia_zaidi:   'border-orange-300 bg-orange-50',
     sufi:         'border-teal-300 bg-teal-50',
-    historical:   'border-dashed border-gray-400 bg-gray-100 opacity-80',
+    historical:   'border-gray-300 bg-gray-50',
   }
   return `rounded-lg border shadow-sm hover:shadow transition cursor-pointer ${m[n.tradition] ?? m.sunni}`
 }
