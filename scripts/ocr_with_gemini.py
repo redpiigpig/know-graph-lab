@@ -630,9 +630,21 @@ def cmd_status():
             print(f"  {b['title'][:50]}  {sz}")
 
 
+def _is_quota_err(err_str: str) -> bool:
+    """Recognize per-account quota / rate-limit messages. Reused by 2-strike pause."""
+    low = (err_str or "").lower()
+    return any(k in low for k in (
+        "429", "rate_limit", "rate limit", "exceed your account",
+        "quota", "resource_exhausted",
+    ))
+
+
 def _run_haiku_primary(targets, dry_run=False):
     """Run Haiku-only OCR on the given queue (no Gemini at all). One book at a time,
-    matching the 5/7 incident lesson (parallel Haiku exhausts Max-subscription tokens)."""
+    matching the 5/7 incident lesson (parallel Haiku exhausts Max-subscription tokens).
+
+    Per user rule: stop after 2 consecutive 429/rate-limit failures — burning
+    through the queue with fast 429 rejections wastes nothing but emits noise."""
     if not _HAS_ANTHROPIC or not _HAS_FITZ:
         missing = []
         if not _HAS_ANTHROPIC: missing.append("anthropic")
@@ -653,6 +665,7 @@ def _run_haiku_primary(targets, dry_run=False):
 
     ok = 0
     failed = []
+    consecutive_quota = 0
     for i, b in enumerate(targets, 1):
         src = Path(b["file_path"])
         if not src.exists():
@@ -667,11 +680,20 @@ def _run_haiku_primary(targets, dry_run=False):
         hresult = process_one_haiku(haiku_client, b, src)
         if hresult["status"] == "ok":
             ok += 1
+            consecutive_quota = 0
             print(f"  → 完成，繼續下一本", flush=True)
         else:
             failed.append((b["title"], hresult["error"]))
             if not hresult["transient"]:
                 update_book_error(b["id"], hresult["error"])
+            if _is_quota_err(hresult.get("error", "")):
+                consecutive_quota += 1
+                if consecutive_quota >= 2:
+                    print(f"\n⛔ Haiku quota hit twice in a row — pausing run (per user rule).", flush=True)
+                    print(f"   Retry later when quota resets.", flush=True)
+                    break
+            else:
+                consecutive_quota = 0
     print(f"\nDone. OK: {ok}, Failed: {len(failed)}")
     if failed:
         print("First failures:")
@@ -818,6 +840,7 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False,
 
             # Process the current book (that triggered the quota) plus all remaining books.
             remaining = [b] + targets[i:]  # targets[i:] already excludes processed books
+            consecutive_quota = 0
             for j, hb in enumerate(remaining, 1):
                 hsrc = Path(hb["file_path"])
                 if not hsrc.exists():
@@ -834,11 +857,21 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False,
                 hresult = process_one_haiku(haiku_client, hb, hsrc)
                 if hresult["status"] == "ok":
                     ok += 1
+                    consecutive_quota = 0
                     print(f"  → 完成，繼續下一本", flush=True)
                 else:
                     failed.append((hb["title"], hresult["error"]))
                     if not hresult["transient"]:
                         update_book_error(hb["id"], hresult["error"])
+                    if _is_quota_err(hresult.get("error", "")):
+                        consecutive_quota += 1
+                        if consecutive_quota >= 2:
+                            print(f"\n⛔ Haiku quota hit twice in a row — pausing run (per user rule).",
+                                  flush=True)
+                            print(f"   Retry later when quota resets.", flush=True)
+                            break
+                    else:
+                        consecutive_quota = 0
             break  # Haiku loop handled all remaining; exit the Gemini loop
 
         if result["status"] == "ok":
