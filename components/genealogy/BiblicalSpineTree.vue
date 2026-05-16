@@ -68,6 +68,8 @@
           class="node-card absolute"
           :class="cardClass(n)"
           :style="cardStyle(n)"
+          :data-person-id="n.personId"
+          :data-raw-name="n.rawName"
           @click.stop="onCardClick(n)"
         >
           <div v-if="n.spineKind === 'A'"      class="absolute left-0 top-2 bottom-2 w-[3px] bg-amber-400 rounded-full" />

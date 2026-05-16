@@ -267,10 +267,12 @@ per user spec：「就約瑟和馬利亞正常生耶穌就好」(commit `b6aac84
 
 ### 🟢 P3 — Misc / 已了解
 
-5. **expand 同名抓首匹配 ambiguity** （scripts/biblical-shot.mjs 問題，非 layout）
-   - `--expand 雅各` 找第一張含「雅各」的卡 → 可能抓到 雅各-馬但之子 (gen 62) 或 雅各-主的兄弟 (L64) 而非 patriarch (gen 22)
-   - 同名問題：雅各 (3+ rows)、約瑟 (3+ rows)、利未 (3 rows: gen 23/43/71)
-   - 改進：截圖 script 支援 `--expand-id <uuid>` 或 `--expand <full-name-with-paren>` 完全匹配
+5. ~~**expand 同名抓首匹配 ambiguity**~~ ✅ **2026-05-16 修好**
+   - 加 `--focus-id <uuid>` / `--expand-id <uuid>` 旗標（personId 完全匹配）
+   - 加 rawName 完全匹配模式（target 含 `（` 時 → 比對 `data-raw-name`）
+   - legacy substring 行為留為 fallback (target 不含 `（` 時)
+   - 配套：`.node-card` 加 `data-person-id` + `data-raw-name` HTML attributes
+   - 驗收：`--focus 雅各` (loose) → 雅各-主的兄弟；`--focus-id 844e541b-...` → patriarch 雅各 (gen 22)；`--focus '雅各（馬但之子）'` → gen 62 雅各
 
 6. **羅得 expansion --focus 摩押 panTo 失敗**
    - 截圖：`c03-lot.png` 顯示 Adam 區
@@ -291,8 +293,8 @@ per user spec：「就約瑟和馬利亞正常生耶穌就好」(commit `b6aac84
 下次 session（更新後）：
 1. ~~Fix #1（typo `流便→呂便`）~~ ✅ 已預先修
 2. ~~Fix #2（Moses chain forceExpand）~~ ✅ path-filter 已實作
-3. **亞倫 nested ▼ toggle**（中規模）— 讓 user 可獨立展亞倫的祭司+馬加比線，不必走「🏛️ 展開朝代」一鍵打開三條 dynasty
-4. **scripts/biblical-shot.mjs `--expand-id` / `--focus-id`**（小）— 解同名 ambiguity，--focus 利未/雅各/約瑟 才能準確跳到 patriarch 而非 gen 62/71
+3. ~~**亞倫 nested ▼ toggle**~~ ✅ 2026-05-16
+4. ~~**scripts/biblical-shot.mjs `--expand-id` / `--focus-id`**~~ ✅ 2026-05-16
 5. Fix #3（J30 row 基連 overlap）— 較複雜，可選
 
 ---

@@ -6,10 +6,18 @@
  * cookies are set, then drives the page.
  *
  * Usage:
- *   node scripts/biblical-shot.mjs                  # default screenshot
- *   node scripts/biblical-shot.mjs --expand 拿鶴    # click ▼ on 拿鶴 then shot
- *   node scripts/biblical-shot.mjs --focus 他拉     # pan to focus on a person
- *   node scripts/biblical-shot.mjs --out path.png   # custom output path
+ *   node scripts/biblical-shot.mjs                                # default screenshot
+ *   node scripts/biblical-shot.mjs --expand 拿鶴                  # click ▼ on first card matching 拿鶴
+ *   node scripts/biblical-shot.mjs --focus 他拉                   # pan to focus on first card matching 他拉
+ *   node scripts/biblical-shot.mjs --focus '雅各（以撒之子）'    # exact rawName match (full name w/ disambig)
+ *   node scripts/biblical-shot.mjs --focus-id <uuid>              # exact personId match — best for same-name disambig
+ *   node scripts/biblical-shot.mjs --expand-id <uuid>             # click ▼ on card with this personId
+ *   node scripts/biblical-shot.mjs --out path.png                 # custom output path
+ *
+ * Same-name people in this tree (use --focus-id / --expand-id or full name with disambig):
+ *   雅各: patriarch (gen 22) / 雅各（馬但之子）(gen 62) / 雅各（主的兄弟，L64）
+ *   約瑟: patriarch (gen 23) / 約瑟（馬利亞之夫，gen 63） / 約瑟（巴拿巴）等
+ *   利未: tribe (gen 23) / 利未（路加 3:24，gen 71） / 利未（馬利亞-革羅罷之子）
  */
 import { chromium } from 'playwright'
 import { createClient } from '@supabase/supabase-js'
@@ -37,8 +45,10 @@ function arg(name) {
 }
 const expandName = arg('expand')
 const focusName  = arg('focus')
+const expandId   = arg('expand-id')
+const focusId    = arg('focus-id')
 const view       = arg('view') || arg('tradition')  // protestant (default) | catholic | orthodox
-const outPath    = arg('out') || `c:/tmp/biblical-${expandName ? 'expand-' + expandName : 'default'}.png`
+const outPath    = arg('out') || `c:/tmp/biblical-${expandName ? 'expand-' + expandName : expandId ? 'expand-id' : 'default'}.png`
 const fullPage   = args.includes('--full')
 
 // ── 1. Get magic link via Supabase admin ───────────────────────────
@@ -148,66 +158,102 @@ if (page.url().includes('/login')) {
 await page.waitForSelector('.node-card', { timeout: 15000 })
 await page.waitForTimeout(2000) // let layout settle
 
+// ── Selector strategies ────────────────────────────────────────────
+// Three modes (most precise → least):
+//   { mode: 'id',       value: uuid }     — match data-person-id exactly
+//   { mode: 'rawName',  value: '雅各（馬但之子）' } — match data-raw-name exactly
+//                                          (when target contains '（')
+//   { mode: 'baseName', value: '雅各' }   — match displayed text loosely
+//                                          (legacy substring; first match by deepest Y)
+function selector(idArg, nameArg) {
+  if (idArg) return { mode: 'id', value: idArg }
+  if (!nameArg) return null
+  if (nameArg.includes('（')) return { mode: 'rawName', value: nameArg }
+  return { mode: 'baseName', value: nameArg }
+}
+
+async function findCard(sel) {
+  return await page.evaluate((sel) => {
+    const cards = Array.from(document.querySelectorAll('.node-card'))
+    let matches = []
+    if (sel.mode === 'id') {
+      matches = cards.filter(c => c.dataset.personId === sel.value)
+    } else if (sel.mode === 'rawName') {
+      matches = cards.filter(c => c.dataset.rawName === sel.value)
+    } else {
+      const base = sel.value.split('（')[0].trim()
+      matches = cards.filter(c => c.textContent?.includes(base))
+    }
+    if (!matches.length) return null
+    // Prefer deepest-Y card (legacy behavior — biases towards bottom-most match)
+    matches.sort((a, b) => parseFloat(b.style.top || '0') - parseFloat(a.style.top || '0'))
+    const c = matches[0]
+    return {
+      personId: c.dataset.personId,
+      rawName: c.dataset.rawName,
+      left: c.style.left,
+      top: c.style.top,
+      width: c.style.width,
+    }
+  }, sel)
+}
+
 // ── 4. Optional: expand a clan ──────────────────────────────────────
-if (expandName) {
-  console.log(`→ Looking for ▼ toggle near "${expandName}"`)
-  // Find the card whose displayName contains expandName, then click its ▼ button
-  const clicked = await page.evaluate((target) => {
+const expandSel = selector(expandId, expandName)
+if (expandSel) {
+  const tag = expandSel.mode === 'id' ? `id=${expandSel.value}` : expandSel.value
+  console.log(`→ Looking for ▼ toggle near "${tag}" (${expandSel.mode})`)
+  const clicked = await page.evaluate((sel) => {
     const cards = Array.from(document.querySelectorAll('.node-card'))
     for (const card of cards) {
-      if (card.textContent?.includes(target)) {
-        const btn = card.querySelector('button[title*="展開"]')
-        if (btn) { (btn).click(); return true }
-      }
+      let ok = false
+      if (sel.mode === 'id') ok = card.dataset.personId === sel.value
+      else if (sel.mode === 'rawName') ok = card.dataset.rawName === sel.value
+      else ok = !!card.textContent?.includes(sel.value)
+      if (!ok) continue
+      const btn = card.querySelector('button[title*="展開"]')
+      if (btn) { btn.click(); return card.dataset.rawName || true }
     }
     return false
-  }, expandName)
-  console.log(clicked ? '  ▼ clicked' : `  ⚠️ no ▼ for "${expandName}"`)
+  }, expandSel)
+  console.log(clicked ? `  ▼ clicked on "${clicked}"` : `  ⚠️ no ▼ for "${tag}"`)
   await page.waitForTimeout(1500)
 }
 
 // ── 5. Optional: pan the canvas to bring a card into view ───────────
-// The chart uses CSS transform (not native scroll), so we mutate the
-// transform's translate values directly via DOM.
-async function panTo(target) {
-  await page.evaluate((target) => {
-    const vp = document.querySelector('.bg-stone-50') // viewport
+async function panTo(sel) {
+  const card = await findCard(sel)
+  if (!card) {
+    console.log(`  ⚠️ no card matched ${sel.mode}=${sel.value}`)
+    return
+  }
+  console.log(`  → matched ${card.rawName} (id ${(card.personId || '').slice(0,8)}…)`)
+  await page.evaluate((c) => {
+    const vp = document.querySelector('.bg-stone-50')
     if (!vp) return
-    const cards = Array.from(document.querySelectorAll('.node-card'))
-    // Cards typically render only the base name (no parenthetical disambig),
-    // so match by base name and prefer the deepest-Y card (handles multiple).
-    const base = target.split('（')[0].trim()
-    const matches = cards.filter(c => c.textContent?.includes(base))
-    if (!matches.length) return
-    matches.sort((a, b) => parseFloat(b.style.top || '0') - parseFloat(a.style.top || '0'))
-    const card = matches[0]
-    if (!card) return
-    // Find the inner canvas div whose style has transform
     const canvas = vp.querySelector('div[style*="transform"]')
     if (!canvas) return
     const m = canvas.style.transform.match(/translate\(([-\d.]+)px,\s*([-\d.]+)px\)\s*scale\(([\d.]+)\)/)
     if (!m) return
-    const [, pxStr, pyStr, scaleStr] = m
-    const scale = parseFloat(scaleStr)
-    // Card position in canvas (pre-transform)
-    const cardLeft = parseFloat(card.style.left)
-    const cardTop = parseFloat(card.style.top)
-    const cardW = parseFloat(card.style.width)
+    const scale = parseFloat(m[3])
+    const cardLeft = parseFloat(c.left)
+    const cardTop = parseFloat(c.top)
+    const cardW = parseFloat(c.width)
     const vpRect = vp.getBoundingClientRect()
-    // Desired: card center == viewport center
     const newPanX = vpRect.width / 2 - (cardLeft + cardW / 2) * scale
     const newPanY = vpRect.height / 2 - (cardTop + 26) * scale
     canvas.style.transform = `translate(${newPanX}px, ${newPanY}px) scale(${scale})`
-  }, target)
+  }, card)
   await page.waitForTimeout(400)
 }
-if (focusName) {
-  console.log(`→ Panning to "${focusName}"`)
-  await panTo(focusName)
-}
-if (expandName) {
-  // After expanding, also pan to it (the card is the anchor of its subtree)
-  await panTo(expandName)
+const focusSel = selector(focusId, focusName)
+if (focusSel) {
+  const tag = focusSel.mode === 'id' ? `id=${focusSel.value}` : focusSel.value
+  console.log(`→ Panning to "${tag}" (${focusSel.mode})`)
+  await panTo(focusSel)
+} else if (expandSel) {
+  // Fallback: after expanding, pan to that same target
+  await panTo(expandSel)
 }
 
 // ── 6. Screenshot ──────────────────────────────────────────────────
