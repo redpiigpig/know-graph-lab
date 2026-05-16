@@ -66,8 +66,8 @@ const cookieValue = 'base64-' + base64url(JSON.stringify(session))
 await context.addCookies([{ name: `sb-${projectRef}-auth-token`, value: cookieValue, domain: new URL(APP_BASE).hostname, path: '/', httpOnly: false, secure: false, sameSite: 'Lax' }])
 
 console.log(`→ Loading /genealogy/episcopal-tree`)
-await page.goto(APP_BASE + '/genealogy/episcopal-tree', { waitUntil: 'domcontentloaded' })
-await page.waitForLoadState('networkidle').catch(() => {})
+await page.goto(APP_BASE + '/genealogy/episcopal-tree', { waitUntil: 'domcontentloaded', timeout: 90000 })
+await page.waitForLoadState('networkidle', { timeout: 30000 }).catch(() => {})
 
 if (page.url().includes('/login')) {
   console.error('Auth cookie not accepted, redirected to /login')
@@ -75,6 +75,18 @@ if (page.url().includes('/login')) {
 }
 
 await page.waitForTimeout(3000)
+
+// Optional zoom to viewport scale 1 (no fit-all)
+const noFit = args.includes('--no-fit')
+if (noFit) {
+  await page.evaluate(() => {
+    // Reset transform via clicking nothing — workaround: force no fit by reload then no-op
+    // Instead, find the canvas wrapper and reset transform
+    const wrapper = document.querySelector('.absolute.top-0.left-0.origin-top-left')
+    if (wrapper) wrapper.style.transform = 'translate(20px, 20px) scale(1.2)'
+  })
+  await page.waitForTimeout(500)
+}
 
 // Optional: click a branch to expand it
 const expandLabel = arg('expand')

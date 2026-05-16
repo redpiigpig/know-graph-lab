@@ -44,13 +44,10 @@ const APOSTLES: Array<{
   id: string
   name_zh: string
   name_en: string
-  founderOfSeeKey?: 'rome' | 'antioch' | 'constantinople' | 'alexandria' | 'jerusalem'
-  // 多 founder 時用 array (彼得 既是羅馬也是安提阿)
-  founderOfMany?: Array<'rome' | 'antioch' | 'constantinople' | 'alexandria' | 'jerusalem'>
   notes?: string
 }> = [
-  { id: 'ap_peter',       name_zh: '彼得',           name_en: 'Peter',          founderOfMany: ['rome', 'antioch'] },
-  { id: 'ap_andrew',      name_zh: '安得烈',         name_en: 'Andrew',         founderOfSeeKey: 'constantinople' },
+  { id: 'ap_peter',       name_zh: '彼得',           name_en: 'Peter' },
+  { id: 'ap_andrew',      name_zh: '安得烈',         name_en: 'Andrew' },
   { id: 'ap_james_zeb',   name_zh: '雅各（西庇太之子）', name_en: 'James, son of Zebedee' },
   { id: 'ap_john',        name_zh: '約翰',           name_en: 'John' },
   { id: 'ap_philip',      name_zh: '腓力',           name_en: 'Philip' },
@@ -58,33 +55,50 @@ const APOSTLES: Array<{
   { id: 'ap_matthew',     name_zh: '馬太',           name_en: 'Matthew' },
   { id: 'ap_thomas',      name_zh: '多馬',           name_en: 'Thomas' },
   { id: 'ap_james_alph',  name_zh: '雅各（亞勒腓之子）', name_en: 'James, son of Alphaeus' },
-  { id: 'ap_thaddaeus',   name_zh: '達太（猶達·塔陡）', name_en: 'Thaddaeus / Jude of James' },
+  { id: 'ap_thaddaeus',   name_zh: '達太',           name_en: 'Thaddaeus / Jude of James' },
   { id: 'ap_simon_zeal',  name_zh: '西門（奮銳黨）', name_en: 'Simon the Zealot' },
   { id: 'ap_matthias',    name_zh: '馬提亞',         name_en: 'Matthias' },
-  { id: 'ap_james_just',  name_zh: '義人雅各',       name_en: 'James the Just', founderOfSeeKey: 'jerusalem' },
+  { id: 'ap_james_just',  name_zh: '義人雅各',       name_en: 'James the Just' },
   { id: 'ap_jude_lord',   name_zh: '猶大（主弟）',   name_en: 'Jude, brother of the Lord' },
   { id: 'ap_barnabas',    name_zh: '巴拿巴',         name_en: 'Barnabas' },
   { id: 'ap_paul',        name_zh: '保羅',           name_en: 'Paul' },
 ]
 
-// ── 5 大宗主教座 ───────────────────────────────────────────────────────
+// ── 7 大宗主教座 ───────────────────────────────────────────────────────
+//
+// Per user spec (5→7 spines)：每個 spine 可有 1 個主使徒 + 可選 1 個輔使徒：
+//   羅馬       彼得 (主) + 保羅 (輔)
+//   君士坦丁堡 安得烈
+//   亞歷山大   彼得 (主，派遣馬可) + 巴拿巴 (輔)
+//   安提阿     彼得
+//   耶路撒冷   義人雅各
+//   亞美尼亞   達太 (Thaddaeus + Bartholomew tradition；以 達太 為主)
+//   亞述       多馬
+type SpineKey = 'rome' | 'constantinople' | 'alexandria' | 'antioch' | 'jerusalem' | 'armenia' | 'assyria'
+
 const SPINE_DEFS: Array<{
-  key: 'rome' | 'antioch' | 'constantinople' | 'alexandria' | 'jerusalem'
+  key: SpineKey
   see_zh: string
-  // 主要 church 來篩 spine 主鏈（其他 church 仍會被當 branch 處理）
   primaryChurches: string[]
-  apostleId: string
+  primaryApostleId: string
+  secondaryApostleId?: string
   color: string
 }> = [
-  { key: 'rome',           see_zh: '羅馬',       primaryChurches: ['未分裂教會', '天主教'],          apostleId: 'ap_peter',      color: '#dc2626' },
-  { key: 'constantinople', see_zh: '君士坦丁堡', primaryChurches: ['未分裂教會', '東正教'],          apostleId: 'ap_andrew',     color: '#2563eb' },
-  { key: 'alexandria',     see_zh: '亞歷山大',   primaryChurches: ['未分裂教會', '東正教', '科普特正教'], apostleId: 'ap_peter', /* via Mark — special */ color: '#d97706' },
-  { key: 'antioch',        see_zh: '安提阿',     primaryChurches: ['未分裂教會', '東正教'],          apostleId: 'ap_peter',      color: '#0891b2' },
-  { key: 'jerusalem',      see_zh: '耶路撒冷',   primaryChurches: ['未分裂教會', '東正教'],          apostleId: 'ap_james_just', color: '#16a34a' },
+  { key: 'rome',           see_zh: '羅馬',           primaryChurches: ['未分裂教會', '天主教'],
+    primaryApostleId: 'ap_peter', secondaryApostleId: 'ap_paul',         color: '#dc2626' },
+  { key: 'constantinople', see_zh: '君士坦丁堡',     primaryChurches: ['未分裂教會', '東正教'],
+    primaryApostleId: 'ap_andrew',                                        color: '#2563eb' },
+  { key: 'alexandria',     see_zh: '亞歷山大',       primaryChurches: ['未分裂教會', '東正教', '科普特正教'],
+    primaryApostleId: 'ap_peter', secondaryApostleId: 'ap_barnabas',     color: '#d97706' },
+  { key: 'antioch',        see_zh: '安提阿',         primaryChurches: ['未分裂教會', '東正教'],
+    primaryApostleId: 'ap_peter',                                         color: '#0891b2' },
+  { key: 'jerusalem',      see_zh: '耶路撒冷',       primaryChurches: ['未分裂教會', '東正教'],
+    primaryApostleId: 'ap_james_just',                                    color: '#16a34a' },
+  { key: 'armenia',        see_zh: '厄奇米亞津',     primaryChurches: ['亞美尼亞使徒教會'],
+    primaryApostleId: 'ap_thaddaeus', secondaryApostleId: 'ap_bartholomew', color: '#9333ea' },
+  { key: 'assyria',        see_zh: '塞琉西亞—泰西封', primaryChurches: ['古代東方教會', '東方教會（亞述）'],
+    primaryApostleId: 'ap_thomas',                                        color: '#475569' },
 ]
-
-// 馬可 (Mark) 不在 12 使徒中，故技術上是 彼得 → 馬可 → 亞歷山大；UI 上仍把 亞歷山大
-// 直接掛到 彼得 下（彼得是直接傳承者）。如未來想加 70 弟子（Mark/Luke 等）可改。
 
 export default defineEventHandler(async (event) => {
   await requireAuth(event)
@@ -101,12 +115,19 @@ export default defineEventHandler(async (event) => {
   for (const s of sees) seeById.set(s.id, s)
 
   // 2. all bishops (we'll filter to relevant sees only)
-  const { data: succRows, error: succErr } = await supabase
-    .from('episcopal_succession')
-    .select('id, name_zh, name_en, see, church, succession_number, start_year, end_year, appointed_by, status, notes')
-  if (succErr) throw createError({ statusCode: 500, message: succErr.message })
-
-  const succ: SuccRow[] = succRows ?? []
+  // Supabase defaults to a 1000-row cap; episcopal_succession has 3000+ rows
+  // (e.g. Pope Gregory I at #64 was getting cut off). Page through in 1000-row chunks.
+  const succ: SuccRow[] = []
+  for (let from = 0; ; from += 1000) {
+    const { data: page, error: pageErr } = await supabase
+      .from('episcopal_succession')
+      .select('id, name_zh, name_en, see, church, succession_number, start_year, end_year, appointed_by, status, notes')
+      .range(from, from + 999)
+    if (pageErr) throw createError({ statusCode: 500, message: pageErr.message })
+    if (!page || page.length === 0) break
+    succ.push(...page)
+    if (page.length < 1000) break
+  }
 
   // 3. group bishops by (see + church)
   const bishopsBySeeChurch = new Map<string, SuccRow[]>()
@@ -165,7 +186,8 @@ export default defineEventHandler(async (event) => {
 
     return {
       key: def.key,
-      apostleId: def.apostleId,
+      primaryApostleId: def.primaryApostleId,
+      secondaryApostleId: def.secondaryApostleId ?? null,
       color: def.color,
       see: main ? {
         id: main.id,
