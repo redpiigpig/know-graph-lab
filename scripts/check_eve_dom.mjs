@@ -74,24 +74,29 @@ const result = await page.evaluate(() => {
       stroke: l.getAttribute('stroke'),
     }))
     .filter(l => l.y1 < 200 && l.y2 < 200 && l.stroke && (l.stroke.includes('dc2626') || l.stroke.includes('f43f5e')))
+  // Detect overlapping cards (any two cards with overlapping rect)
+  const overlaps = []
+  for (let i = 0; i < cards.length; i++) {
+    for (let j = i+1; j < cards.length; j++) {
+      const a = summary[i], b = summary[j]
+      if (Math.abs(a.top - b.top) > 50) continue
+      if (Math.abs(a.left - b.left) < 130) {
+        overlaps.push([a, b])
+      }
+    }
+  }
   return {
     total: cards.length,
-    eve: summary.filter(s => s.text.includes('哈娃')),
-    adam: summary.filter(s => s.text.includes('阿丹')),
-    muhammad: summary.filter(s => s.text.includes('穆罕默德') && !s.text.includes('巴基爾') && !s.text.includes('伊本')).slice(0, 3),
-    wives: summary.filter(s =>
-      s.text.includes('赫蒂徹') || s.text.includes('阿伊莎') || s.text.includes('蘇黛') ||
-      s.text.includes('哈芙莎') || s.text.includes('烏姆·薩拉瑪') || s.text.includes('賈赫什') ||
-      s.text.includes('朱韋里葉') || s.text.includes('烏姆·哈比巴') || s.text.includes('莎菲婭') ||
-      s.text.includes('邁穆娜') || s.text.includes('瑪利亞·科普特') || s.text.includes('胡扎伊瑪')
-    ),
+    overlaps: overlaps.slice(0, 20).map(([a, b]) => ({ a: a.text.slice(0, 20), b: b.text.slice(0, 20), a_left: a.left, a_top: a.top, b_left: b.left, b_top: b.top })),
+    around_muhammad: summary.filter(s => s.top > 6400 && s.top < 7000 && Math.abs(s.left - 1260) < 1500),
   }
 })
 console.log('Total cards:', result.total)
-console.log('Eve:', JSON.stringify(result.eve))
-console.log('Adam:', JSON.stringify(result.adam))
-console.log('Muhammad:', JSON.stringify(result.muhammad))
-console.log('Wives:')
-for (const w of result.wives) console.log(' ', JSON.stringify(w))
+console.log(`\n--- Overlaps (${result.overlaps.length}) ---`)
+for (const o of result.overlaps) console.log(' ', JSON.stringify(o))
+console.log(`\n--- Around Muhammad row (gen 48-50) ---`)
+for (const c of result.around_muhammad.sort((a,b) => a.top - b.top || a.left - b.left)) {
+  console.log(`  top=${c.top}, left=${c.left}, idx=${c.idx}: ${c.text.slice(0, 25)}`)
+}
 
 await browser.close()

@@ -623,12 +623,19 @@ const cv = computed(() => {
     }
 
     // Spine→spine child drop (handled via plain vertical line between consecutive spine cards below)
-    // For Muhammad: handle the 7 children (some by Khadijah, one by Maria) plus the imam chain via 法蒂瑪
-    // For other spine persons, also handle non-spine children if any (siblings of next spine).
+    // 為何只在最後一代 spine (穆罕默德) 才跑 "non-spine kids" 群組？因為對其他 spine 人物，
+    // 他們的非 spine 子嗣 = 下一代 spine 的兄弟姐妹，會被下面的 "siblings of spine"
+    // 迴圈在 i+1 處理（放在 spine 右側）。如果這裡也放一遍會：
+    //   - 父輩 spine（i）把他們置中放在父下方 → X 碰到下一代 spine column + 妻
+    //   - 子輩 spine（i+1）跑 siblings loop 看見已 placed 就跳過 → 結果留在錯位置
+    // 對最後一代 spine 沒有 i+1，所以必須在這裡處理 spineId 自己的子嗣（穆聖 7 子女 + 12 妻）。
+    const isLastSpine = !spineList[i + 1]
 
     // Find non-spine children, group by which wife (mother) they belong to
     const allKids = ch.get(spineId) ?? []
-    const nonSpineKids = allKids.filter(c => !spineMembership.has(c) && !placedPersonIds.has(c))
+    const nonSpineKids = isLastSpine
+      ? allKids.filter(c => !spineMembership.has(c) && !placedPersonIds.has(c))
+      : []
 
     // Build mother → kids map. If we can identify the wife who is the mother
     // (by checking that wife's children field), use her; else "unknown mom".
