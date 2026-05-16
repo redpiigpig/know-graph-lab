@@ -579,46 +579,27 @@ const cv = computed(() => {
     for (const wid of rawWiveIds) if (!ordered.includes(wid)) ordered.push(wid)
     const wiveIds = ordered
 
-    // Wife placement — split into 2 rows when > 6 wives (穆罕默德 12 妻 → 6+6)
-    // 1st row (上面，緊靠 spine)、2nd row 在 1st row 下方 NH+12 px
-    // 二 row 的婚姻線是垂直「stub」連到 marY，1 row 的是橫向 marY
-    const WIVES_STACK_THRESHOLD = 6
-    const useStack = wiveIds.length > WIVES_STACK_THRESHOLD
-    const row1Count = useStack ? Math.ceil(wiveIds.length / 2) : wiveIds.length
-    const wifePosByIdx = new Map<number, { cx: number; x: number; y: number; row: 0 | 1 }>()
-    const ROW2_OFFSET = NH + 12
+    // Place wives — 全部單行排左側、固定 SLOT_K 間距、婚姻線都同長 (WIFE_HG)
+    // 仿 biblical 雅各家族 4 妻單行排列。穆聖 12 妻寬度 = 12 * SLOT_K = 2160 px，
+    // 由 resetToTop 預設 100% zoom 確保看得清楚，user 自己 pan/zoom 探索
+    const wifePosByIdx = new Map<number, { cx: number; x: number; y: number }>()
     for (let wi = 0; wi < wiveIds.length; wi++) {
-      const isRow2 = useStack && wi >= row1Count
-      const slotI  = isRow2 ? wi - row1Count : wi    // 該 row 內第幾位
-      const wcx = rootCX - (slotI + 1) * SLOT_K
+      const wcx = rootCX - (wi + 1) * SLOT_K
       const wx  = wcx - NW / 2
-      const wy  = isRow2 ? myY + ROW2_OFFSET : myY
-      wifePosByIdx.set(wi, { cx: wcx, x: wx, y: wy, row: isRow2 ? 1 : 0 })
+      wifePosByIdx.set(wi, { cx: wcx, x: wx, y: myY })
     }
-
-    // Place wife cards + marriage lines
-    // Row 1 wives 取 row1Count（含 first wife = wi=0），row 2 wives 在 row 1 正下方
-    // Row 1 各妻間 horizontal marriage line at marY；Row 2 各妻 vertical 紅線 stub 連到 marY
     for (let wi = 0; wi < wiveIds.length; wi++) {
       const wid = wiveIds[wi]
       const pos = wifePosByIdx.get(wi)!
       const node = makeLNode(wid, pos.x, pos.y, false)
       if (node) nodes.push(node)
-
-      if (pos.row === 0) {
-        // Row 1: horizontal marriage line to neighbor (root, or previous wife)
-        const slotI = wi
-        const prevCx = slotI === 0 ? rootCX : rootCX - slotI * SLOT_K
-        marriages.push({
-          id: `m:spine:${spineId}:${wid}`,
-          x1: pos.cx + NW / 2,
-          x2: prevCx - NW / 2,
-          y: marY,
-        })
-      } else {
-        // Row 2: 紅色垂直 stub 從妻卡上緣到 spine marY
-        drops.push({ x: pos.cx, y1: marY, y2: pos.y, stroke: '#dc2626' })
-      }
+      const prevCx = wi === 0 ? rootCX : rootCX - wi * SLOT_K
+      marriages.push({
+        id: `m:spine:${spineId}:${wid}`,
+        x1: pos.cx + NW / 2,
+        x2: prevCx - NW / 2,
+        y: marY,
+      })
       vis.add(wid)
     }
 
@@ -680,9 +661,8 @@ const cv = computed(() => {
     if (noMomGroup.kids.length) groups.push(noMomGroup)
 
     // Render each group beneath the mother-or-spine via T-bar
-    // For Muhammad's case: Khadijah (row 1 wife) → 6 children at gen 50; Maria (row 2 wife) → Ibrahim
+    // Mother (wife)→kid drop 起點 = 妻↔右鄰中點（婚姻線 midpoint），垂直下降到 T-bar，再分支到每個子嗣
     for (const grp of groups) {
-      // Calculate dropStartX/Y based on mother position
       const wi = grp.wifeId ? wiveIds.indexOf(grp.wifeId) : -1
       let dropStartX: number
       let dropStartY: number
@@ -692,17 +672,9 @@ const cv = computed(() => {
         dropStartY = myY + NH
       } else {
         const wpos = wifePosByIdx.get(wi)!
-        if (wpos.row === 0) {
-          // Row 1 wife — drop from midpoint of marriage line (mother↔neighbor)
-          const slotI = wi
-          const motherPrevCx = slotI === 0 ? rootCX : rootCX - slotI * SLOT_K
-          dropStartX = (wpos.cx + motherPrevCx) / 2
-          dropStartY = marY
-        } else {
-          // Row 2 wife — drop from below mother's own card (vertical stub already connects up to marY)
-          dropStartX = wpos.cx
-          dropStartY = wpos.y + NH
-        }
+        const motherPrevCx = wi === 0 ? rootCX : rootCX - wi * SLOT_K
+        dropStartX = (wpos.cx + motherPrevCx) / 2
+        dropStartY = marY
       }
 
       // Each kid: recursive subtree layout (so descendants come along)
@@ -754,14 +726,9 @@ const cv = computed(() => {
         const wi2 = wiveIds.indexOf(spineNextMother)
         const wpos2 = wifePosByIdx.get(wi2)
         if (wpos2) {
-          if (wpos2.row === 0) {
-            const motherPrevCx = wi2 === 0 ? rootCX : rootCX - wi2 * SLOT_K
-            dropX = (wpos2.cx + motherPrevCx) / 2
-            dropStartY = marY
-          } else {
-            dropX = wpos2.cx
-            dropStartY = wpos2.y + NH
-          }
+          const motherPrevCx = wi2 === 0 ? rootCX : rootCX - wi2 * SLOT_K
+          dropX = (wpos2.cx + motherPrevCx) / 2
+          dropStartY = marY
         }
       }
       const barY = dropStartY + Math.round((childY - dropStartY) * 0.5)
@@ -967,16 +934,13 @@ function fitSpine() {
 }
 
 function resetToTop() {
-  // 預設初始視野：spine 置中，zoom 自動算讓畫面剛好容下 spine 前 6 代 + 妻
-  // (避免太放大只看到 1-2 代，也避免太縮小看不清字)
+  // 預設初始視野：100% zoom + spine 水平置中 + 頂端對齊 viewport
+  // 仿 biblical 雅各家族那種視角，user 自己 scroll/zoom 探索
   if (!cv.value || !viewportRef.value) return
   const vw = viewportRef.value.clientWidth
-  const vh = viewportRef.value.clientHeight
-  const desiredRows = 7  // 預設視野容納大約 7 代
-  const z = Math.max(0.35, Math.min(0.75, vh / (desiredRows * RH)))
-  zoom.value = z
-  panX.value = vw / 2 - cv.value.spineCenterX * z
-  panY.value = 30
+  zoom.value = 1
+  panX.value = vw / 2 - cv.value.spineCenterX
+  panY.value = 0
 }
 
 watch(ready, (r) => { if (r) nextTick(resetToTop) }, { immediate: true })
