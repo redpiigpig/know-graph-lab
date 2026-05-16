@@ -131,6 +131,7 @@ export default defineEventHandler(async (event) => {
         : '',
       notes: p.notes ?? '',
       tradition: p.tradition ?? 'sunni',
+      spouseField: p.spouse ?? '',     // 保留原順序（按婚姻時間）用於 UI 排妻
       shape: 'rectangle',
       borderStyleId: 'solid-md',
       borderColor: '#d1d5db',

@@ -79,20 +79,31 @@
               （{{ n.disambig }}）
             </div>
           </div>
+          <!-- Subtree toggle (▼/▲) for cards with descendants -->
+          <button
+            v-if="n.hasSubtree"
+            class="absolute -bottom-2 left-1/2 -translate-x-1/2 z-10
+                   px-1.5 h-4 min-w-[20px] rounded-full bg-white text-[10px] leading-none
+                   border border-emerald-300 text-emerald-700 hover:bg-emerald-50 shadow-sm
+                   cursor-default flex items-center justify-center gap-0.5 tabular-nums"
+            :title="n.subtreeExpanded ? '收起子孫' : `展開 ${n.subtreeSize} 名子孫`"
+            @click.stop="toggleExpand(n.personId)"
+          >
+            <span>{{ n.subtreeExpanded ? '▲' : '▼' }}</span>
+            <span v-if="!n.subtreeExpanded" class="text-[9px] opacity-70">{{ n.subtreeSize }}</span>
+          </button>
         </div>
       </div>
 
-      <!-- View switch widget — local toggle near Muhammad spine card -->
+      <!-- View switch widget — viewport-fixed top-left (always reachable) -->
       <div
-        v-if="muhammadScreenPos.visible"
-        class="absolute z-40 bg-white/95 border border-gray-200 rounded-lg p-1 shadow-sm flex flex-col items-stretch gap-0.5 pointer-events-auto"
-        :style="{ left: muhammadScreenPos.x + 'px', top: muhammadScreenPos.y + 'px' }"
+        class="absolute top-3 left-3 z-40 bg-white/95 border border-gray-200 rounded-lg p-1 shadow-sm flex flex-row items-center gap-0.5 pointer-events-auto"
       >
-        <span class="text-[10px] text-gray-400 px-1.5 select-none leading-tight">視角</span>
+        <span class="text-[10px] text-gray-400 px-1.5 select-none leading-tight border-r border-gray-200 mr-0.5">視角</span>
         <button
           v-for="t in viewOptions"
           :key="t.value"
-          class="text-[11px] px-2 py-1 rounded-md font-medium transition cursor-default text-left"
+          class="text-[11px] px-2 py-1 rounded-md font-medium transition cursor-default"
           :class="props.view === t.value
             ? `bg-gray-100 ${t.activeColor}`
             : 'text-gray-500 hover:text-gray-700'"
@@ -254,8 +265,6 @@ const spinePath = computed(() => spineFromWaypoints(SPINE_WAYPOINTS, childrenOf.
 const hasSpine = computed(() => spinePath.value.length > 0)
 const spineSet = computed(() => new Set(spinePath.value))
 
-const muhammadId = computed(() => resolveByName('穆罕默德'))
-
 // ── Node interface ──
 interface LNode {
   id: string
@@ -270,6 +279,9 @@ interface LNode {
   tradition: string
   x: number; y: number; w: number; h: number
   isSpine: boolean
+  hasSubtree?: boolean    // true → render ▼/▲ collapse button
+  subtreeSize?: number    // total hidden descendants (only when collapsed)
+  subtreeExpanded?: boolean
 }
 interface VDrop { x: number; y1: number; y2: number; stroke?: string }
 interface HBar  { x1: number; x2: number; y: number; stroke?: string }
@@ -286,6 +298,19 @@ interface LayoutResult {
   maxY: number
 }
 
+// ── Subtree expansion state ──
+// Keyed by personId — when set, that person's full descendants are rendered.
+// 預設一律收摺；點 ▼ 才展開。
+const expandedClans = ref<Set<string>>(new Set())
+function toggleExpand(personId: string) {
+  const s = new Set(expandedClans.value)
+  if (s.has(personId)) s.delete(personId)
+  else s.add(personId)
+  expandedClans.value = s
+}
+// 觸發 subtree ▼ 的最小子孫數 — 1+ 就有 toggle，避免單獨葉節點長尾出現
+const SUBTREE_MIN = 1
+
 // ── Main layout ──
 const cv = computed(() => {
   if (!hasSpine.value) return null
@@ -296,6 +321,22 @@ const cv = computed(() => {
   const pMap = personById.value
   const spineList = spinePath.value
   const spineMembership = spineSet.value
+  const expandedSet = expandedClans.value
+
+  // 計算每個人的子孫數（剔除 spine + 已 visited，遞迴限深 25）
+  const descCountCache = new Map<string, number>()
+  function countDescendants(id: string, vis: Set<string> = new Set()): number {
+    if (vis.has(id)) return 0
+    vis.add(id)
+    if (descCountCache.has(id)) return descCountCache.get(id)!
+    let n = 0
+    for (const c of ch.get(id) ?? []) {
+      if (spineMembership.has(c)) continue
+      n += 1 + countDescendants(c, vis)
+    }
+    descCountCache.set(id, n)
+    return n
+  }
 
   const nodes: LNode[] = []
   const drops: VDrop[] = []
@@ -312,6 +353,9 @@ const cv = computed(() => {
     if (!p) return null
     placedPersonIds.add(personId)
     const raw = p.data.name as string
+    const descCount = isSpine ? 0 : countDescendants(personId)
+    const isExpanded = expandedSet.has(personId)
+    const hasSubtree = !isSpine && descCount >= SUBTREE_MIN
     const ln: LNode = {
       id: `n:${personId}`,
       personId,
@@ -325,6 +369,9 @@ const cv = computed(() => {
       tradition:  p.data.tradition || 'sunni',
       x, y, w: NW, h: NH,
       isSpine,
+      hasSubtree,
+      subtreeSize: hasSubtree ? descCount : undefined,
+      subtreeExpanded: isExpanded,
     }
     positionByPerson.set(personId, { x, y })
     return ln
@@ -333,6 +380,9 @@ const cv = computed(() => {
   // Recursive subtree layout for a NON-SPINE person and their descendants.
   // Uses DB gen for Y; lays children left-to-right; root centered over them.
   // Marriage line + drop-from-midpoint rule per biblical spec.
+  //
+  // 收摺規則：rootId 在 expandedSet 才遞迴子孫；否則只放 root + 配偶。
+  // 由 makeLNode 自動標 hasSubtree+subtreeSize，模板 render ▼/▲ 鈕。
   function layoutSubtree(rootId: string, leftX: number, vis: Set<string>, minGen: number, depth: number = 0): LayoutResult {
     const empty = (): LayoutResult => ({ nodes: [], drops: [], hbars: [], marriages: [], rootCX: leftX + NW / 2, maxX: leftX + NW, maxY: 0 })
     if (vis.has(rootId)) return empty()
@@ -361,7 +411,10 @@ const cv = computed(() => {
     const myHbars: HBar[]  = []
     const myMarriages: MLine[] = []
 
-    if (kids.length === 0) {
+    // 收摺：root 未展開且有子孫 → 只放 root+配偶，不遞迴 kids
+    const collapsed = kids.length > 0 && !expandedSet.has(rootId)
+
+    if (kids.length === 0 || collapsed) {
       const rootX = leftX + wivesReach
       const rootCX = rootX + NW / 2
       const node = makeLNode(rootId, rootX, myY, false)
@@ -507,24 +560,65 @@ const cv = computed(() => {
     const marY = myY + NH / 2
 
     // Wives — exclude any spine wife (none expected) and already-placed
-    const wiveIds = (sp.get(spineId) ?? []).filter(w =>
+    // 按 spine 人物的 spouse 欄位字串順序排（赫蒂徹必為首妻，靠近穆聖卡）
+    const rawWiveIds = (sp.get(spineId) ?? []).filter(w =>
       !spineMembership.has(w) && !placedPersonIds.has(w)
     )
+    const spouseField: string = (sp_p.data.spouseField as string) || ''
+    const orderHint: string[] = spouseField.split(/[,，、]/).map(s => s.trim()).filter(Boolean)
+    const nameToId = new Map<string, string>()
+    for (const w of rawWiveIds) {
+      const wp = pMap.get(w)
+      if (wp) nameToId.set(wp.data.name, w)
+    }
+    const ordered: string[] = []
+    for (const name of orderHint) {
+      const wid = nameToId.get(name)
+      if (wid && !ordered.includes(wid)) ordered.push(wid)
+    }
+    for (const wid of rawWiveIds) if (!ordered.includes(wid)) ordered.push(wid)
+    const wiveIds = ordered
 
-    // Place wives left of spine
+    // Wife placement — split into 2 rows when > 6 wives (穆罕默德 12 妻 → 6+6)
+    // 1st row (上面，緊靠 spine)、2nd row 在 1st row 下方 NH+12 px
+    // 二 row 的婚姻線是垂直「stub」連到 marY，1 row 的是橫向 marY
+    const WIVES_STACK_THRESHOLD = 6
+    const useStack = wiveIds.length > WIVES_STACK_THRESHOLD
+    const row1Count = useStack ? Math.ceil(wiveIds.length / 2) : wiveIds.length
+    const wifePosByIdx = new Map<number, { cx: number; x: number; y: number; row: 0 | 1 }>()
+    const ROW2_OFFSET = NH + 12
+    for (let wi = 0; wi < wiveIds.length; wi++) {
+      const isRow2 = useStack && wi >= row1Count
+      const slotI  = isRow2 ? wi - row1Count : wi    // 該 row 內第幾位
+      const wcx = rootCX - (slotI + 1) * SLOT_K
+      const wx  = wcx - NW / 2
+      const wy  = isRow2 ? myY + ROW2_OFFSET : myY
+      wifePosByIdx.set(wi, { cx: wcx, x: wx, y: wy, row: isRow2 ? 1 : 0 })
+    }
+
+    // Place wife cards + marriage lines
+    // Row 1 wives 取 row1Count（含 first wife = wi=0），row 2 wives 在 row 1 正下方
+    // Row 1 各妻間 horizontal marriage line at marY；Row 2 各妻 vertical 紅線 stub 連到 marY
     for (let wi = 0; wi < wiveIds.length; wi++) {
       const wid = wiveIds[wi]
-      const wcx = rootCX - (wi + 1) * SLOT_K
-      const wx = wcx - NW / 2
-      const node = makeLNode(wid, wx, myY, false)
+      const pos = wifePosByIdx.get(wi)!
+      const node = makeLNode(wid, pos.x, pos.y, false)
       if (node) nodes.push(node)
-      const prevCx = wi === 0 ? rootCX : rootCX - wi * SLOT_K
-      marriages.push({
-        id: `m:spine:${spineId}:${wid}`,
-        x1: wcx + NW / 2,
-        x2: prevCx - NW / 2,
-        y: marY,
-      })
+
+      if (pos.row === 0) {
+        // Row 1: horizontal marriage line to neighbor (root, or previous wife)
+        const slotI = wi
+        const prevCx = slotI === 0 ? rootCX : rootCX - slotI * SLOT_K
+        marriages.push({
+          id: `m:spine:${spineId}:${wid}`,
+          x1: pos.cx + NW / 2,
+          x2: prevCx - NW / 2,
+          y: marY,
+        })
+      } else {
+        // Row 2: 紅色垂直 stub 從妻卡上緣到 spine marY
+        drops.push({ x: pos.cx, y1: marY, y2: pos.y, stroke: '#dc2626' })
+      }
       vis.add(wid)
     }
 
@@ -579,14 +673,30 @@ const cv = computed(() => {
     if (noMomGroup.kids.length) groups.push(noMomGroup)
 
     // Render each group beneath the mother-or-spine via T-bar
-    // For Muhammad's case: Khadijah (gen 49 wife) → 6 children at gen 50; Maria → Ibrahim (gen 50)
+    // For Muhammad's case: Khadijah (row 1 wife) → 6 children at gen 50; Maria (row 2 wife) → Ibrahim
     for (const grp of groups) {
-      // Calculate dropStartX based on mother
+      // Calculate dropStartX/Y based on mother position
       const wi = grp.wifeId ? wiveIds.indexOf(grp.wifeId) : -1
-      const motherCx = wi >= 0 ? rootCX - (wi + 1) * SLOT_K : rootCX
-      const motherPrevCx = wi === 0 ? rootCX : wi > 0 ? rootCX - wi * SLOT_K : rootCX
-      const dropStartX = wi >= 0 ? (motherCx + motherPrevCx) / 2 : rootCX
-      const dropStartY = wi >= 0 ? marY : myY + NH
+      let dropStartX: number
+      let dropStartY: number
+      if (wi < 0) {
+        // no specific mother — drop from spine bottom
+        dropStartX = rootCX
+        dropStartY = myY + NH
+      } else {
+        const wpos = wifePosByIdx.get(wi)!
+        if (wpos.row === 0) {
+          // Row 1 wife — drop from midpoint of marriage line (mother↔neighbor)
+          const slotI = wi
+          const motherPrevCx = slotI === 0 ? rootCX : rootCX - slotI * SLOT_K
+          dropStartX = (wpos.cx + motherPrevCx) / 2
+          dropStartY = marY
+        } else {
+          // Row 2 wife — drop from below mother's own card (vertical stub already connects up to marY)
+          dropStartX = wpos.cx
+          dropStartY = wpos.y + NH
+        }
+      }
 
       // Each kid: recursive subtree layout (so descendants come along)
       // Lay them in a row at gen+1 with HG gap. Anchor row left edge near mother.
@@ -631,15 +741,22 @@ const cv = computed(() => {
     }
     if (spineNextId) {
       const childY = rowY(i + 2)
-      const dropX = spineNextMother
-        ? (() => {
-            const wi2 = wiveIds.indexOf(spineNextMother)
-            const motherCx = rootCX - (wi2 + 1) * SLOT_K
-            const prevCx = wi2 === 0 ? rootCX : rootCX - wi2 * SLOT_K
-            return (motherCx + prevCx) / 2
-          })()
-        : rootCX
-      const dropStartY = spineNextMother ? marY : myY + NH
+      let dropX = rootCX
+      let dropStartY = myY + NH
+      if (spineNextMother) {
+        const wi2 = wiveIds.indexOf(spineNextMother)
+        const wpos2 = wifePosByIdx.get(wi2)
+        if (wpos2) {
+          if (wpos2.row === 0) {
+            const motherPrevCx = wi2 === 0 ? rootCX : rootCX - wi2 * SLOT_K
+            dropX = (wpos2.cx + motherPrevCx) / 2
+            dropStartY = marY
+          } else {
+            dropX = wpos2.cx
+            dropStartY = wpos2.y + NH
+          }
+        }
+      }
       const barY = dropStartY + Math.round((childY - dropStartY) * 0.5)
       drops.push({ x: dropX, y1: dropStartY, y2: barY })
       const targetCX = SPINE_X + NW / 2
@@ -698,18 +815,41 @@ const cv = computed(() => {
     }
   }
 
-  // ── Orphan area for anything not yet placed ──
-  // (e.g. Sharif Hussein if not connected, Sufi saints, etc.)
-  let orphanX = -1200
-  let orphanY = PAD
+  // ── Orphan area ── 只放「真的無法連到 spine」的人（蘇菲、未連通的 historical）
+  // 被 collapsed subtree 隱藏的後代不應變成 orphan—他們躲在收摺裡，user 展開 ▼ 才會顯現。
+  // 判定：person 透過 parent chain 不能到達任何 spine person → orphan
+  const reachesSpine = new Map<string, boolean>()
+  function descendsFromSpine(id: string, vis: Set<string> = new Set()): boolean {
+    if (reachesSpine.has(id)) return reachesSpine.get(id)!
+    if (vis.has(id)) return false
+    vis.add(id)
+    if (spineMembership.has(id)) { reachesSpine.set(id, true); return true }
+    // 透過 parents 往上追
+    for (const par of pa.get(id) ?? []) {
+      if (descendsFromSpine(par, vis)) { reachesSpine.set(id, true); return true }
+    }
+    // 透過 spouse — 嫁/娶 spine person 也算
+    for (const spId of sp.get(id) ?? []) {
+      if (spineMembership.has(spId)) { reachesSpine.set(id, true); return true }
+    }
+    reachesSpine.set(id, false); return false
+  }
+
+  // Orphans: 放在 spine 最後一代 + 2 row 下方（避免擠在 Adam 旁邊）
+  // 限定在 SPINE_X 兩側 ±450 內，3 行排列
+  const orphanY0 = rowY(spineList.length) + RH * 2
   const ORPHAN_COLS = 6
-  let col = 0
+  let orphanCol = 0
+  let orphanRow = 0
   for (const node of props.nodes) {
     if (placedPersonIds.has(node.id)) continue
-    const lnode = makeLNode(node.id, orphanX + col * (NW + HG), orphanY, false)
+    if (descendsFromSpine(node.id)) continue   // 屬於 collapsed subtree—暫時隱藏
+    const ox = SPINE_X - (NW + HG) * ORPHAN_COLS / 2 + orphanCol * (NW + HG)
+    const oy = orphanY0 + orphanRow * RH * 0.85
+    const lnode = makeLNode(node.id, ox, oy, false)
     if (lnode) nodes.push(lnode)
-    col++
-    if (col >= ORPHAN_COLS) { col = 0; orphanY += RH * 0.7 }
+    orphanCol++
+    if (orphanCol >= ORPHAN_COLS) { orphanCol = 0; orphanRow++ }
   }
 
   // ── Canvas bounds: shift if anything negative ──
@@ -735,7 +875,6 @@ const cv = computed(() => {
     w: Math.max(maxX + PAD, 1600),
     h: Math.max(maxY + PAD, 800),
     spineCenterX: SPINE_X + shift,
-    muhammadPos: muhammadId.value ? positionByPerson.get(muhammadId.value) : null,
   }
 })
 
@@ -743,6 +882,9 @@ const ready = computed(() => hasSpine.value && cv.value !== null)
 
 // ── Card visual ──
 function cardClass(n: LNode) {
+  // 不含 `relative`——`relative` 會在 Tailwind cascade 蓋掉 inline `absolute`，
+  // 害 v-for 第 N 張卡片掉到 normal flow 第 N 行（debug 過：哈娃曾被推到 y=2181）。
+  // 卡內子元素的 absolute 定位由 .node-card 既是 absolute 又有 left/top inline 提供 containing block。
   const m: Record<string, string> = {
     quranic:      'border-gray-300 bg-white',
     sunni:        'border-emerald-300 bg-emerald-50',
@@ -752,7 +894,7 @@ function cardClass(n: LNode) {
     sufi:         'border-teal-300 bg-teal-50',
     historical:   'border-gray-300 bg-gray-50',
   }
-  return `relative rounded-lg border shadow-sm hover:shadow transition cursor-pointer ${m[n.tradition] ?? m.sunni}`
+  return `rounded-lg border shadow-sm hover:shadow transition cursor-pointer ${m[n.tradition] ?? m.sunni}`
 }
 function cardStyle(n: LNode) {
   return { left: n.x + 'px', top: n.y + 'px', width: n.w + 'px', height: n.h + 'px' }
@@ -803,27 +945,33 @@ function zoomIn()  { zoom.value = Math.min(2, zoom.value + 0.1) }
 function zoomOut() { zoom.value = Math.max(0.15, zoom.value - 0.1) }
 
 function fitSpine() {
+  // "定位主幹" — fit ~14 rows centered on spine column.
+  // 不 fit canvas 整高（subtree 收摺後仍可能上千 px），改 fit spine rows。
   if (!cv.value || !viewportRef.value) return
-  const rect = viewportRef.value.getBoundingClientRect()
-  const targetZoom = Math.min(0.6, (rect.height - 80) / cv.value.h)
-  zoom.value = Math.max(0.18, targetZoom)
-  panX.value = rect.width / 2 - cv.value.spineCenterX * zoom.value
+  const vw = viewportRef.value.clientWidth
+  const vh = viewportRef.value.clientHeight
+  const c = cv.value
+  const targetRows = 14
+  const targetH = targetRows * RH
+  const z = Math.max(0.15, Math.min(0.9, vh / targetH))
+  zoom.value = z
+  panX.value = vw / 2 - c.spineCenterX * z
+  panY.value = 40
+}
+
+function resetToTop() {
+  // 預設初始視野：spine 置中，zoom 自動算讓畫面剛好容下 spine 前 6 代 + 妻
+  // (避免太放大只看到 1-2 代，也避免太縮小看不清字)
+  if (!cv.value || !viewportRef.value) return
+  const vw = viewportRef.value.clientWidth
+  const vh = viewportRef.value.clientHeight
+  const desiredRows = 7  // 預設視野容納大約 7 代
+  const z = Math.max(0.35, Math.min(0.75, vh / (desiredRows * RH)))
+  zoom.value = z
+  panX.value = vw / 2 - cv.value.spineCenterX * z
   panY.value = 30
 }
 
-onMounted(() => {
-  watch(ready, (r) => { if (r) nextTick(fitSpine) }, { immediate: true })
-})
-
-const muhammadScreenPos = computed(() => {
-  if (!cv.value?.muhammadPos) return { visible: false, x: 0, y: 0 }
-  const mp = cv.value.muhammadPos
-  const sx = mp.x * zoom.value + panX.value
-  const sy = mp.y * zoom.value + panY.value
-  return {
-    visible: true,
-    x: sx + NW * zoom.value + 8,
-    y: sy,
-  }
-})
+watch(ready, (r) => { if (r) nextTick(resetToTop) }, { immediate: true })
+onMounted(() => { if (ready.value) nextTick(resetToTop) })
 </script>

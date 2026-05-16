@@ -359,9 +359,9 @@ v1（已被取代）的問題：
 - 伊瑪目鏈用 BFS row-by-row 排，亂
 
 仍未實作（biblical 有但 Islamic 暫無）：
-- subtree ▼ 收摺（旁支預設展開全部，畫面會很寬）
+- ✅ ~~subtree ▼ 收摺~~（2026-05-16 已實作；非 spine 卡片有後代 → 顯示 ▼N 鈕；點擊展開）
 - ♻ same-person marker（跨子樹同人跳轉，如法蒂瑪 既是穆聖女兒又是阿里之妻）
-- 跨代婚姻 minGen 機制（阿里 gen 48 娶 法蒂瑪 gen 50，目前以較低的 gen 為準）
+- 跨代婚姻 minGen 機制（阿里 gen 48 娶 法蒂瑪 gen 50，目前以較低的 gen 為準）— BUG 6 暫不修
 
 ### Task 4: 路由入口 — ✅ 完成
 
@@ -394,61 +394,50 @@ v1（已被取代）的問題：
 - ⏳ 伊瑪目之配偶與其他子女（目前只填了直系傳承的伊瑪目）
 - ⏳ 鄂圖曼蘇丹自稱哈里發（1517-1924）— 不在血脈內，可選擇加入
 
-### Task 8（tree 進階）— 🆕 2026-05-16 視覺驗收後待修清單
+### Task 8（tree 進階）— ✅ 2026-05-16 視覺驗收 8 大 BUG 已修
 
 `scripts/islamic-shot.mjs` ✅ 已建立（仿 biblical-shot.mjs）。視覺驗收截圖存於 `c:/tmp/islamic-*.png`。
 
-**截圖驗證的事實**：
-- 233 cards 全渲染（含 95 spine + 138 旁支/orphan）
-- 婚姻線 ✅ 紅色短水平段、per-wife 各畫一條（驗證於 阿丹 row + 穆罕默德 row）
-- 親子 drop ✅ 從婚姻中點下降（穆罕默德→哈蒂徹 6 子女 T-bar 結構正確）
+**已驗證**：
+- 132 / 86 cards rendered（sunni / shia_twelver view，subtree 收摺後）
+- 婚姻線 ✅ Row 1 妻 horizontal、Row 2 妻 vertical 紅 stub 連到 spine marY
+- 親子 drop ✅ 從婚姻中點下降；Row 1 妻 → marY 中點下；Row 2 妻 → 妻卡底下垂直
 - spine 列 ✅ 阿丹 (gen 1) → 穆罕默德 (gen 49) 完整連貫，每張綠卡左側 3px emerald 條帶
-- 視角 widget ✅ 浮動於穆罕默德卡右側、隨 pan/zoom 移動
+- 視角 widget ✅ 固定 viewport 左上角，pan/zoom 不影響
 
-**🐞 BUG 1：spine 中段 row 出現超長紅色橫線（嚴重）**
-基納納 (gen 35) row 的 marriage line 視覺上跨越 ~1800px 寬度，但實際 spouse 欄位該只有 1-2 妻。
-- 推測原因：可能是上游 `spouse` 欄位被多輪 INSERT 寫入了重複/串接值，或 graph endpoint 的 `spousesOf` 計算把多人混在一起
-- 也可能是哈馬爾/薩拉曼/耶薩/烏達德/烏德 placeholder rows 之間 spouse 欄位串接出 phantom 邊
-- 偵錯：直接 query DB `select name_zh, spouse from islamic_people where generation between 33 and 37`，看是否有意外 spouse 欄位內容
-- 也可能是 `placedAsRowSpouse` 邏輯有 bug，讓多人在同一 Y 排出多條短紅線（但實際是視覺接連成長線）
+**🟢 BUG 1：spine 中段 row 出現超長紅色橫線** — 已解
+偵錯後發現 DB 沒有 phantom spouse 資料。實際原因是 cardClass 回傳 `relative` 蓋掉 inline `absolute`（BUG 5 同源），導致 v-for 第 N 張卡片掉到 normal flow 第 N 行，視覺上婚姻線連結到錯位的卡片。修 cardClass 去掉 `relative` 後消失。
 
-**🐞 BUG 2：沙里夫·胡笙 35 代直系造成 canvas 7000+px 高（嚴重）**
-Hasan b. Ali (gen 50) → 哈桑·穆斯安納 → ... → 卡塔達 → ... → 沙里夫·胡笙 (gen 85) 是單線單子，每代佔 RH=136px → 共 ~4760px 額外高度。`layoutSubtree` 遞迴把這 35 代全展開成垂直細條。
-- 修法 A：subtree ▼ 收摺（biblical 規則），預設只顯示 spine + 一層子女
-- 修法 B：偵測「單子單孫鏈」≥5 代時自動壓縮成「展開鏈長 N」按鈕
-- 修法 C：在 view 切換 widget 加「顯示完整麥加謝里夫鏈」開關，預設不展開
+**🟢 BUG 2：沙里夫·胡笙 35 代直系造成 canvas 7000+px 高** — 已解
+實作 subtree ▼/▲ 收摺機制：每張非 spine 且有子孫的卡片掛一個 ▼N 鈕，預設收摺，點開展開該支。沙里夫·胡笙鏈現在預設躲在 哈桑·穆斯安納 的 ▼ 後面。countDescendants 計算每人後代數，深度上限 25 防自環。
 
-**🐞 BUG 3：阿拔斯王朝 37 哈里發子樹寬度爆炸（嚴重）**
-從 阿巴斯 (gen 48) 遞迴展開 37 代後裔（從 gen 49 阿卜杜拉·伊本·阿巴斯一路到 gen 71 穆斯塔西姆），由於每代 sibling 多分支，總寬度約 3000px。
-- 修法 A：同 BUG 2，subtree ▼ 收摺
-- 修法 B：限制 layoutSubtree depth，超過則收成「N 代後裔」摺疊節點
+**🟢 BUG 3：阿拔斯王朝 37 哈里發子樹寬度爆炸** — 已解
+同 BUG 2，阿巴斯（穆聖叔父）卡掛 ▼37 鈕。預設收摺，點開才往下渲染 37 代哈里發。
 
-**🐞 BUG 4：fitSpine 預設縮放只到 18%（嚴重）**
-canvas h ~8000px ÷ viewport h ~1200px → zoom 0.15。畫面上所有卡片變成 1-2px 寬，無法閱讀。
-- 修法 A：fitSpine 改成「對齊穆罕默德卡 + zoom 0.6」當預設，不再 fit 整個 canvas
-- 修法 B：fitSpine 用 spine 高度算（gen 1→49 = ~6700px）而非整個 canvas 高度
-- 修法 C：viewport 內顯示 mini-map（biblical 也沒做）— 可選
+**🟢 BUG 4：fitSpine 預設縮放只到 18%** — 已解
+新增 `resetToTop()` (mount 時跑、根據 viewport / desiredRows 算 zoom 0.35-0.75) + `fitSpine()` (14 row 為基準)。不再 fit 整個 canvas 高（含 collapsed subtree + orphan）。
 
-**🐞 BUG 5：哈娃 (Eve) 卡未驗證可見**
-阿丹 row 確認有紅色 marriage line 往左延伸，但截圖看不到 哈娃 卡本身。可能 Eve 卡在 Adam 左側 SLOT_K=180 處被推到 PAD=60 邊界外，shift 後仍卡在最左。
-- 偵錯：直接讀 cv.value.nodes 找 personId=哈娃, console.log 她的 x/y
+**🟢 BUG 5：哈娃 (Eve) 卡未驗證可見** — 已解
+根因：`cardClass()` 回傳含 `relative`，與 inline `class="node-card absolute"` 衝突。Tailwind 中 `.relative` (alphabetical) 出現在 `.absolute` 之後，cascade 取最後一個 → `position: relative` 勝出 → 所有卡片掉到 normal flow，第 49 張卡 (哈娃) 出現在 y≈2181（screen 外）。修法：cardClass 移除 `relative`，子元素的 absolute 定位由 .node-card 自身的 absolute + left/top inline 提供 containing block。
 
-**🐞 BUG 6：跨代婚姻 阿里(48) × 法蒂瑪(50)未實作 minGen**
-SKILL.md 早期記錄該用 minGen 機制（biblical 拉班-利亞案例）強制視覺世代 ≥ 父代+1，但 Islamic v2 沒套用 minGen 給跨代配偶。視覺結果：阿里會 hidden 或重疊在 法蒂瑪 row。
-- 修法：在 step 5（穆罕默德 children 後）若 spine 子嗣 spouse 來自其他 gen，強制把 spouse 拉到子嗣同 row
+**🟡 BUG 6：跨代婚姻 阿里(48) × 法蒂瑪(50) 未實作 minGen** — 暫不修
+複雜度高 / 視覺影響小。目前阿里在 gen 48 row (作為 艾比·塔利卜 sibling 子樹)，法蒂瑪在 gen 50 row (穆聖之女)，兩人沒有跨樹婚姻線。語意上是兩棵獨立子樹各自顯示 — 不致誤導但無連結。後續若要做需要：(a) 在 graph endpoint 加 cross-subtree spouse edge 渲染，或 (b) 讓 阿里 也在 gen 50 出現第二張卡 + 跳同人 ♻ marker（biblical 已有此功能可參考）。
 
-**🐞 BUG 7：視角 widget 在非穆罕默德視窗會跑到畫面外**
-widget 位置 = 穆罕默德卡螢幕座標 + 偏移。當 pan 到 Adam 或 Sharif Hussein 時，widget 會跑到 viewport 外、看不見。
-- 修法：widget 浮動位置改成 fixed-to-viewport-corner（如右上角下方），而非 anchor-to-Muhammad-card
+**🟢 BUG 7：視角 widget 在非穆罕默德視窗會跑到畫面外** — 已解
+從 `anchored to Muhammad card` 改為 `absolute top-3 left-3` 永遠在 viewport 左上角。橫式排列 5 個 view 選項，z-40 不被卡片蓋住。
 
-**🐞 BUG 8：穆罕默德的 12 妻全擺左側，畫面寬度爆炸**
-12 wives × SLOT_K (180px) = 2160px 寬，全部在穆罕默德左側。如果未來加配偶或子嗣，會繼續向左推。
-- 修法 A：用 2 行 stack 而非 1 行（6 妻在 spine row、6 妻在下面一 row、各畫紅線）
-- 修法 B：用 biblical 的 dual-spine 中段瘦身規則 — 只留「有 spine 子嗣的妻」（赫蒂徹 + 瑪利亞·科普特），其他妻摺成收起狀態
+**🟢 BUG 8：穆罕默德的 12 妻全擺左側畫面寬度爆炸** — 已解
+妻數 > 6 自動 stack 2 行：Row 1（spine row）放 row1Count = ceil(N/2)，Row 2 在 NH+12 px 下方。Row 2 妻的婚姻線用紅色垂直 stub 連到 Row 1 的 marY。同時加 wife 排序：spineId 的 `spouse` 欄位字串順序為準（赫蒂徹是首妻 → 靠近穆聖），新增 `spouseField` 透過 graph endpoint 帶到 node data。
 
-**改造優先順序**：BUG 4（zoom）→ BUG 1（紅線）→ BUG 2+3（subtree 收摺）→ BUG 8（穆聖 12 妻）→ BUG 5/6/7（細節）
+**Orphan 區重設計**
+原本 orphan area 從 (-1200, PAD=60) 開始，後來與 Eve 衝突（都在 y=60 那一列）。現改放在 spine 最後一代 + 2 row 下方、SPINE_X 兩側 ±450 內，6 cols × N rows 排列。`descendsFromSpine()` 走 parent + spouse chain 判定是否屬於 spine，是 → 屬於 collapsed subtree 暫時隱藏；否 → 才是真 orphan（蘇菲鏈、view-filter 後失聯人物）。
 
-驗收 screenshot：`node scripts/islamic-shot.mjs --width 1800 --height 1200 --focus 阿伊莎 --zoom 0.9` 可看到 spine gen 22-40 中段；`--focus 穆罕默德 --zoom 0.85` 可看到妻列 + 子女 T-bar。
+驗收 screenshot：
+- `node scripts/islamic-shot.mjs` — 預設 sunni view，看到 spine gen 1-11 + 哈娃
+- `node scripts/islamic-shot.mjs --view shia_twelver --focus 哈桑·伊本·阿里 --zoom 0.8` — 切換到十二派視角，rendered 86 cards
+- `node scripts/islamic-shot.mjs --focus 烏姆·薩拉瑪 --zoom 1.1` — 看 12 妻 2 行 stack（赫蒂徹靠近穆聖、瑪利亞·科普特連 易卜拉欣）
+
+DOM 驗證腳本：`node scripts/check_eve_dom.mjs` — 列 Adam/Eve/Muhammad/12 妻位置。
 
 ---
 
