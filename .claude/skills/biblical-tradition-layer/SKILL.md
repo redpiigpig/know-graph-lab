@@ -194,6 +194,71 @@ per user spec：「就約瑟和馬利亞正常生耶穌就好」(commit `b6aac84
 
 ---
 
+## 📋 2026-05-16 旁支 clan 全面截圖驗收 — 已發現但尚未修的問題
+
+**截圖位置**：`c:/tmp/biblical_verify/c01-c16-*.png` (16 張)
+**狀態**：以下問題在新 session 處理。每項標明截圖檔與症狀。
+
+### 🔴 P1 — Data bugs（先修）
+
+1. **API TRIBE_SEEDS `'流便'` typo → 呂便沒有 R tribe code**
+   - 檔案：`server/api/genealogy/biblical-graph.get.ts:119`
+   - 現況：`['流便', 'R']` 但 DB 雅各.children = "**呂便**、西緬、利未、…"。`exactMap.get('流便')` 永遠 undefined → seedId null → R tribe code 不傳播 → 整支 Reuben line gen labels 顯示 "第 N 代" 而非 "R23/R24/..."
+   - 修：把 `'流便'` 改為 `'呂便'`（或加上 alternative seed）
+
+2. **OT 重要人物 摩西/亞倫/米利暗 buried 3 levels deep 預設不可見**
+   - 截圖：`c14-moses.png`、`c15-miriam.png` 都 panTo 失敗（panned to Adam）
+   - chain：雅各(spine, gen22) → 利未(non-spine, gen23) → 哥轄(gen24) → 暗蘭(gen25) → 摩西/亞倫/米利暗(gen26)
+   - 預設只到 雅各 + 利未；要看到 摩西，user 需手動點開 利未 ▼ + 哥轄 ▼ + 暗蘭 ▼ (3 次)
+   - 建議修法：把 `利未（雅各之子）`、`哥轄`、`暗蘭` 加進 `FORCE_EXPAND_NAMES`（BiblicalSpineTree.vue line ~1478），讓 Moses chain 預設展開。注意 利未 同名歧義（有 gen 23/43/71 三個 利未）— 需用 disambiguator 比對。
+
+### 🟡 P2 — Layout overlaps
+
+3. **基連 ↔ 路得 J30 row 80px 重疊** （from 上一 session，仍待）
+   - 截圖：`c08c-jacob-reuben.png`、`22-boaz.png`
+   - J30 row 5 卡擠 500px 空間：俄珥巴(2428) — 路得(2568) — **基連(2608, overlap 路得)** — 瑪倫(2748) — 波阿斯(2928)
+   - 基連在以利米勒 expansion centerX，剛好與波阿斯 spine 的 Trinubium wife 路得 X 衝突
+   - 修法選項：(a) shift 以利米勒 X 進一步往左 (b) 把 以利米勒 expansion 推到 J31 row 而非 J30 (c) z-index 讓基連 ON TOP（但會遮路得名）
+   - 目前 user 知道存在此 overlap，acceptable as known limitation
+
+4. **拿鶴 expansion J22 row 過於擁擠**
+   - 截圖：`c02-nahor.png`
+   - J22 row 8+ 卡：利百加 / 拉班 / 利亞 / 雅各(spine A 起點) / 巴實抹 / 阿何利巴瑪 / 亞大 / 以掃(▼50)
+   - 雖然各自不直接重疊但視覺擁擠
+   - 拉班 + 利亞/拉結 同代（拉班 gen 22 為彼土利之子；利亞/拉結 gen 22 為拉班之女）— minGen 規則已處理（line 70-78 SKILL）視覺 row 23 而非 row 22
+   - 可選優化：把 拉班 expansion 收起來 (▼)，預設只展示 spine kid + immediate kids
+
+### 🟢 P3 — Misc / 已了解
+
+5. **expand 同名抓首匹配 ambiguity** （scripts/biblical-shot.mjs 問題，非 layout）
+   - `--expand 雅各` 找第一張含「雅各」的卡 → 可能抓到 雅各-馬但之子 (gen 62) 或 雅各-主的兄弟 (L64) 而非 patriarch (gen 22)
+   - 同名問題：雅各 (3+ rows)、約瑟 (3+ rows)、利未 (3 rows: gen 23/43/71)
+   - 改進：截圖 script 支援 `--expand-id <uuid>` 或 `--expand <full-name-with-paren>` 完全匹配
+
+6. **羅得 expansion --focus 摩押 panTo 失敗**
+   - 截圖：`c03-lot.png` 顯示 Adam 區
+   - 可能：摩押 在 ▼ expand 前不渲染，焦點找不到 → fallback 不動
+   - 確認方式：手動測試瀏覽器中按 羅得 ▼ 看 摩押+便亞米 是否真的出現
+
+### 🟢 驗收結果（沒問題）
+
+- ✅ 該隱 expansion (`c01-cain.png`) — 拉麥+亞大/洗拉 婚姻線 + 雅八/猶八/土八該隱/拿瑪 子嗣 row 整齊
+- ✅ 以掃 expansion (`c04-esau.png`) — ▼50 子嗣，wife row 巴實抹/阿何利巴瑪/亞大 整齊
+- ✅ 以實瑪利 (`c05-ishmael.png`) — 12 子嗣 row 整齊（尼拜約/基達/亞德別/米比散/米施瑪/度瑪/瑪撒/哈大/提瑪/伊突/拿非/基底瑪）
+- ✅ 押沙龍 / 大衛之子 row (`c11b-absalom.png`) — gen 33 7 妻 + gen 34 11+ 兒女整齊，drop 從正確的母親婚姻中點掉下
+- ✅ 馬加比 (`c13b-maccabees.png`) — 🏛️ 展開朝代 後 沙法→猶大·瑪加伯/以肋阿匝爾/約納堂 chain 完整
+- ✅ 希律 (`c16-herod.png`) — 大希律 + 7 妻 + 比羅尼基/亞里斯托布魯/亞基帕一世/二世/莎樂米/阿里斯托布魯 整齊複雜但無 overlap
+
+### 建議 P1+P2 fix 優先序
+
+下次 session：
+1. Fix #1（typo `流便→呂便`）— 1 行 code 改動
+2. Fix #2（Moses chain forceExpand）— 加 3 個 name 到 FORCE_EXPAND_NAMES
+3. Re-screenshot c14/c15 驗收，並順便看 c09 利未 expand 是否能抓正確（用 disambiguator）
+4. Fix #3（J30 row 基連 overlap）— 較複雜，可選
+
+---
+
 ## 🟢 舊狀態快照（2026-05-14，commit `802a802`）
 
 ### 架構
