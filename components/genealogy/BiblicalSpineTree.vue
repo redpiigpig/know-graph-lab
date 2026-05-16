@@ -98,7 +98,7 @@
                    border border-amber-300 text-amber-600 hover:bg-amber-50 shadow-sm
                    cursor-default flex items-center justify-center gap-0.5 tabular-nums"
             :title="n.subtreeExpanded ? '收起子孫' : `展開 ${n.subtreeSize} 名子孫`"
-            @click.stop="toggleExpand(n.personId)"
+            @click.stop="n.isNestedSubclan ? toggleSubclan(n.personId) : toggleExpand(n.personId)"
           >
             <span>{{ n.subtreeExpanded ? '▲' : '▼' }}</span>
             <span v-if="!n.subtreeExpanded" class="text-[9px] opacity-70">{{ n.subtreeSize }}</span>
@@ -460,6 +460,10 @@ interface LNode {
   hasSubtree?: boolean        // true → render a ▼/▲ toggle on the card
   subtreeExpanded?: boolean
   subtreeSize?: number
+  isNestedSubclan?: boolean   // true → ▼ click toggles expandedSubclans (pathFilter bypass)
+                              //   instead of expandedClans (top-level kid-of-spine).
+                              //   Set on layoutSubtree nodes whose children were cut by pathFilter
+                              //   (e.g. 亞倫 under force-expanded 利未 with Moses-chain pathFilter).
   samePerson?: boolean        // true → this person also appears at another card; render ♻
   isExpansionRoot?: boolean   // true → this kid card's own ▼ is expanded; immune to occlusion
   hidden?: boolean
@@ -557,9 +561,19 @@ const cv = computed(() => {
       const cn = pMap.get(cid)?.data.name
       return !!cn && pathFilter.has(cn)
     }
-    const kids = rowOf.has(rootId) || isMarriedOut
-      ? []  // spine node or married-out daughter — render as leaf
-      : effectiveChildIds(rootId).filter(c => !vis.has(c) && passesPathFilter(c))
+    // Real children (before pathFilter). Used to detect when pathFilter cuts a
+    // subtree — if so this node becomes a nested-subclan ▼ root that lets user
+    // bypass pathFilter on click (亞倫 use case — see expandedSubclans).
+    const allKidsRaw = rowOf.has(rootId) || isMarriedOut
+      ? []
+      : effectiveChildIds(rootId).filter(c => !vis.has(c))
+    const pathFilterCut = !!pathFilter && allKidsRaw.length > 0 && allKidsRaw.some(c => !passesPathFilter(c))
+    const nestedExpanded = pathFilterCut && expandedSubclans.value.has(rootId)
+    // user nest-expanded this rootId → drop pathFilter for THIS subtree's recursion.
+    const recursePathFilter = nestedExpanded ? null : pathFilter
+    const kids = nestedExpanded
+      ? allKidsRaw
+      : allKidsRaw.filter(passesPathFilter)
 
     // Wives to render alongside this subtree root (e.g., 以底特 next to 羅得 in
     // 哈蘭 expansion). Skip wives already drawn on the main chart (spine妻位).
@@ -597,7 +611,7 @@ const cv = computed(() => {
       let tempCursor = 0
       const results: IncestGroup['kidResults'] = []
       for (const wk of wifeKids) {
-        const r = layoutSubtree(wk, tempCursor, vis, gen + 1, pathFilter)
+        const r = layoutSubtree(wk, tempCursor, vis, gen + 1, recursePathFilter)
         results.push(r)
         tempCursor = r.maxX + HG
       }
@@ -702,6 +716,12 @@ const cv = computed(() => {
         tradition:   p.data.tradition,
         isClan:      false,
         isExpansionNode: true,
+        ...(pathFilterCut ? {
+          hasSubtree: true,
+          subtreeExpanded: false,
+          subtreeSize: subtreeIds(rootId).length - 1,
+          isNestedSubclan: true,
+        } : {}),
       }
       const w = placeWives(rootCX)
       const ig = applyIncestGroups(rootCX)
@@ -725,7 +745,7 @@ const cv = computed(() => {
     const childResults: ReturnType<typeof layoutSubtree>[] = []
     let maxY = myY + NH
     for (const k of effectiveKids) {
-      const r = layoutSubtree(k, cursorX, vis, gen + 1, pathFilter)
+      const r = layoutSubtree(k, cursorX, vis, gen + 1, recursePathFilter)
       childResults.push(r)
       cursorX = r.maxX + HG
       maxY = Math.max(maxY, r.maxY)
@@ -750,6 +770,13 @@ const cv = computed(() => {
       tradition:   p.data.tradition,
       isClan:      false,
       isExpansionNode: true,
+      ...(pathFilterCut ? {
+        hasSubtree: true,
+        subtreeExpanded: nestedExpanded,
+        subtreeSize: subtreeIds(rootId).length - 1,
+        isNestedSubclan: true,
+        isExpansionRoot: nestedExpanded,  // immune to occlusion when nested-expanded
+      } : {}),
     }
 
     // Connector: root (or marriage midpoint if wives) → barY → each child top.
@@ -1990,6 +2017,20 @@ function toggleExpand(spineParentId: string) {
   if (s.has(spineParentId)) s.delete(spineParentId)
   else s.add(spineParentId)
   expandedClans.value = s
+}
+
+// Nested subclan toggle — for pathFilter leaves inside a force-expanded clan.
+// 例：force-expand 利未 走 Moses pathFilter，亞倫 的 descendants（祭司線→馬加比）
+// 被 pathFilter 砍掉。亞倫 卡片得到 ▼ 按鈕，點擊 → expandedSubclans.add(亞倫.id)
+// → layoutSubtree 對亞倫的 subtree 不套 pathFilter，整條祭司線渲染出來。
+// 跟 expandedClans 獨立 — 不會影響其他 force-expand chain。
+const expandedSubclans = ref<Set<string>>(new Set())
+
+function toggleSubclan(personId: string) {
+  const s = new Set(expandedSubclans.value)
+  if (s.has(personId)) s.delete(personId)
+  else s.add(personId)
+  expandedSubclans.value = s
 }
 
 // 一鍵展開朝代線：

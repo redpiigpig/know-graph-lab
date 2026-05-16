@@ -226,14 +226,28 @@ per user spec：「就約瑟和馬利亞正常生耶穌就好」(commit `b6aac84
    - **覆蓋機制**：user 點 ▼ 或「展開朝代」按鈕（`expandedClans.add(kid)`）→ pathFilter 失效（`forcePath = forceExpand && !userExpanded ? ... : null`），渲染完整祭司線（亞倫→大祭司→馬加比→希律家）。
    - **驗收**：`c:/tmp/moses-chain-verify.png` — gen 26 row 顯示 西坡拉-摩西-米利暗 + 亞倫，無祭司線溢出。
 
-### ⏳ P1 — 後續（亞倫 nested ▼ toggle）
+### ✅ P1 完成（2026-05-16）— 亞倫 nested ▼ toggle
 
-當前限制：path-filter 把亞倫的descendants（拿答/亞比戶/以利亞撒/大祭司線/馬加比）全砍掉，user 在族譜圖上沒辦法只展亞倫一支 — 要看全祭司線得點「🏛️ 展開朝代」按鈕，會同時展 利未 整支 + 哈拿尼雅 + 以掃 3 條 dynasty。
+實作 path-filter leaf 上的 nested ▼，獨立於 top-level expandedClans，讓 user 可只展亞倫的祭司+馬加比線而不必開整條 利未 dynasty（避免「🏛️ 展開朝代」連帶開 利未/哈拿尼雅/以掃 3 條 dynasty）。
 
-**建議下次做**：給 expansion-node leaf（如 亞倫，pathFilter 切斷下游）加 nested ▼ toggle，獨立的 `expandedSubclans: Set<string>` ref。在 layoutSubtree 內：
-- 若 rootId in expandedSubclans → 忽略 pathFilter for this subtree（遞迴傳 null）
-- 若 rootId 是 pathFilter leaf 且 DB 還有 children → return node 帶 `hasNestedSubtree: true` + count
-- 點擊 toggle nestedSubclan，render 路徑改走 layoutExpansion 加深一層
+**設計**：
+- `expandedSubclans = ref<Set<string>>()` 與 `expandedClans` 獨立
+- `toggleSubclan(personId)` 加減 personId
+- `LNode.isNestedSubclan?: boolean` 標記哪個 ▼ 走 nested 路徑
+- `layoutSubtree` 內：
+  - 先算 `allKidsRaw`（不套 pathFilter），與 `kids`（套 pathFilter）對比
+  - `pathFilterCut = pathFilter && allKidsRaw.length > kids.length`
+  - `nestedExpanded = pathFilterCut && expandedSubclans.has(rootId)`
+  - `nestedExpanded === true` → 該 rootId 的 subtree 不套 pathFilter（遞迴傳 `recursePathFilter = null`）
+  - `pathFilterCut === true` → myNode 加 `hasSubtree: true, isNestedSubclan: true, subtreeSize: subtreeIds(rootId).length - 1`
+- UI ▼ click handler: `n.isNestedSubclan ? toggleSubclan : toggleExpand`
+
+**範圍**：force-expand `利未` 時，pathFilter `{哥轄, 暗蘭, 摩西, 亞倫, 米利暗}` 內每個有被砍 children 的人都拿 nested ▼：
+- 哥轄 ▼121（被砍 4 個：以斯哈/烏薛/希伯倫/約基別 + subtree 大）
+- 亞倫 ▼100（拿答/亞比戶/以利亞撒/以他瑪 + 祭司線+馬加比+希律 = 100 descendants）
+- 摩西 ▼2（革舜/以利以謝）
+
+**驗收**：headless click 亞倫 nested ▼ → 展開 L27 以利亞撒 → L28 無名祭司一世 → L31 無名祭司四世，沒有同時展 利未/哈拿尼雅/以掃 3 條 dynasty。截圖 `c:/tmp/aaron-nested-after-click.png`
 
 ### 🟡 P2 — Layout overlaps
 
