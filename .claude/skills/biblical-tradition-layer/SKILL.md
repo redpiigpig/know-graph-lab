@@ -167,6 +167,20 @@ per user spec：「就約瑟和馬利亞正常生耶穌就好」(commit `b6aac84
 
 ## 🟢 當前狀態快照（2026-05-16，commit `067ed26`）
 
+### ⚠️ 重要 DB 規則 — **wife.children 必須與 husband.children 對齊**
+**症狀**：子嗣的 drop 不從 夫妻婚姻線中點掉下，反而從 husband column 直接垂直 drop（看起來「不像 父+母 生的」）。
+
+**根因**：`mommidX` 計算 drop X 起點時，先用 children-of-wife reverse-lookup 找 mom。若 wife.children 沒列出該 child → mom=null → drop 從 sid(husband) column。
+
+**修法**：每對「父+母 同生子嗣」的婚姻，**wife.children 必須包含所有他們共同的子嗣**。
+- 例：原 夏娃.children = '該隱、亞伯、塞特'，但 亞當.children 有 6 個（多了 亞萬、亞祖拉、亞克利瑪 — 為 該隱/亞伯/塞特 的妻子，per rabbinic 亦為 亞當+夏娃所生）。後 3 個 mom=null → drop 從 亞當 column 而非中點。
+- 修：夏娃.children = '該隱、亞伯、塞特、亞萬（該隱之妻）、亞祖拉（塞特之妻）、亞克利瑪（亞伯之孿生姊妹）'
+- 同樣的對齊規則也已套用：拿俄米.children = 瑪倫、基連（原為 null）
+
+**Future 加新人物 checklist**：插入新的 「父子鏈 + 母親」時，記得 wife.children 也要 patch，否則視覺斷裂。
+
+---
+
 ### 本次 session 完成（追加）
 - ✅ **Task 4E-2 蘇比/施洗約翰 chain 渲染**：dual-spine hide zone (gen 34-73) 過濾非 spine 兄弟，但 斯多蘭（亞拿之父）gen 72 是聖家 anchor 必須保留。修法：在 line 1337-1349 加 alwaysShow 例外，與 forceExpand（line 1478-1483）名單同步。FORCE_EXPAND_NAMES Set = ['斯多蘭（亞拿之父）','蘇比（亞拿之姊）','以利米勒']
 - ✅ **Task 4E-3 orthodox ghost 馬利亞 card**：根因 `wifeReachOnSide` 函式之前只看 spine kid 自己的 membership 決定 kidWifeSide，spine A 末端 (約瑟 gen 63) 的妻 撒羅米 在 placeOne 走 left 但 wifeReachOnSide 回 0 → 革羅罷 (約瑟之弟) 被擺到撒羅米 80px 重疊位置。修法：函式改檢查 cross-spine 配偶決定 kidWifeSide (line 1395-1414)
