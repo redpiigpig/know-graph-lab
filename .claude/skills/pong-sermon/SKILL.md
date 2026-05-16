@@ -3,6 +3,8 @@ name: pong-sermon
 description: Re-transcribe + clean up 龐君華牧師 sermons end-to-end and write them into pong_sermons / pong_media. Use when the user asks to redo / improve a year's worth of sermon transcripts, when a specific sermon date's transcript looks rough (no punctuation, simplified Chinese, run-on text), or when 城中教會講道_YYYY.txt has 「⏳ 未完成」 entries that need processing.
 ---
 
+> 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session（"exceeds the dimension limit for many-image requests"）。使用者一說要傳截圖，立刻提醒先確認尺寸；推薦 Win+Shift+S 框選或縮到 ≤ 1920px。
+
 # 龐君華 講道集 — Re-transcribe & Clean-up Pipeline
 
 End-to-end workflow that takes a year list of YouTube sermon URLs and turns each into a polished traditional-Chinese transcript stored in `pong_sermons.content` + `pong_media.transcript`.

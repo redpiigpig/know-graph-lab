@@ -3,6 +3,8 @@ name: standardize-pdf
 description: Restandardize parsed PDFs into reader-ready chunks. Two flavors shipped — Plan A (lite) reuses the EPUB text helpers on the existing per-page JSONL with `page_number` preserved; Plan B (TOC-driven) re-chunks Plan A output into chapter-level chunks using PDF bookmarks, with a `page_range` field for cross-page citations. Plan B v1 (font-size driven, for no-TOC books) is deferred design. Use when EPUB-only standardize won't cut it for a PDF book stuck on raw per-page text or needing chapter sidebar.
 ---
 
+> 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session（"exceeds the dimension limit for many-image requests"）。使用者一說要傳截圖，立刻提醒先確認尺寸；推薦 Win+Shift+S 框選或縮到 ≤ 1920px。
+
 # Standardize PDF Skill
 
 PDFs in this project go through `parse_worker` (text-extractable) or

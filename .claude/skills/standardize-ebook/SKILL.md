@@ -3,6 +3,8 @@ name: standardize-ebook
 description: Turn a parsed book (EPUB or PDF) into the "reader-ready" format used by /ebook/[id] — markdown chunks with simplified→traditional Chinese, publisher boilerplate stripped, multi-volume hierarchy, smart chapter titles. Branches by file_type — EPUB uses ebooklib + TOC anchors; PDF uses font-size heuristics. Use when wiring a new book into the reader, fixing a book whose TOC looks ugly, batch-processing a category, or extending the pipeline to support a new file type.
 ---
 
+> 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session（"exceeds the dimension limit for many-image requests"）。使用者一說要傳截圖，立刻提醒先確認尺寸；推薦 Win+Shift+S 框選或縮到 ≤ 1920px。
+
 # Standardize Ebook Skill
 
 Turn a parsed book into the reader-ready format. The pipeline **branches on file_type** because EPUB and PDF expose totally different signals — EPUB has semantic HTML + a TOC tree; PDF only has text-on-page coordinates and font sizes. Each branch produces the same output JSONL contract.

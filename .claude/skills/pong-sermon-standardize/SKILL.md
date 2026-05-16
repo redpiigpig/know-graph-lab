@@ -3,6 +3,8 @@ name: pong-sermon-standardize
 description: Standardize and normalize formatting across all 龐君華牧師 sermons in `pong_sermons` table — speaker label, content markdown stripping, paragraph regrouping, occasion/title/scripture_ref backfilling, preacher field consistency. Run after content cleanup is mature, to bring all 270+ sermons to a uniform publishable format the frontend `[year].vue` renderer expects.
 ---
 
+> 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session（"exceeds the dimension limit for many-image requests"）。使用者一說要傳截圖，立刻提醒先確認尺寸；推薦 Win+Shift+S 框選或縮到 ≤ 1920px。
+
 # 龐君華 講道集 — Standardization Pipeline
 
 After all sermons are transcribed and cleaned (via `pong-sermon` skill) and content polished (via `pong-sermon-polish` skill), this skill enforces a uniform format across the entire collection so the frontend renders consistently and SEO/RSS exports look professional.

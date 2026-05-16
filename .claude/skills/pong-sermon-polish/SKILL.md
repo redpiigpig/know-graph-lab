@@ -3,6 +3,8 @@ name: pong-sermon-polish
 description: Manually polish 龐君華牧師 sermons that were auto-cleaned (rough draft quality) into publication-ready transcripts. Use when 2020-2026 sermons need higher quality cleanup beyond what `auto_clean.py` produced — full punctuation, paragraph breaks at topical shifts, Whisper error correction, traditional Chinese throughout.
 ---
 
+> 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session（"exceeds the dimension limit for many-image requests"）。使用者一說要傳截圖，立刻提醒先確認尺寸；推薦 Win+Shift+S 框選或縮到 ≤ 1920px。
+
 # 龐君華 講道集 — Manual Polish Pipeline (auto-cleaned → publication-ready)
 
 End-to-end workflow for upgrading 2020-2026 龐 sermons from auto-cleaned draft quality to publication quality. The auto_clean.py from the original pipeline produces an OK first pass but has issues:

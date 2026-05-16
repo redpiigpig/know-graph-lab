@@ -3,6 +3,8 @@ name: thesis-interview
 description: 把碩士論文口述訪談的「音檔」整理成符合 /thesis?tab=interviews 上架格式的繁體中文逐字稿。Gemini Audio 轉錄 → Claude 在對話中整理 Q&A、分節、補前言三段 → 寫入 public/content/interviews/ → 更新 stores/thesisInterviews.ts。Use when 使用者指明某位受訪者要把音檔轉成正式紀錄並上架，或要重做某位現有訪談紀錄的清理工作。
 ---
 
+> 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session（"exceeds the dimension limit for many-image requests"）。使用者一說要傳截圖，立刻提醒先確認尺寸；推薦 Win+Shift+S 框選或縮到 ≤ 1920px。
+
 # 碩士論文口述訪談 — 音檔轉文字檔 + 整理 Pipeline
 
 > 把 `G:\我的雲端硬碟\公事\國北教\碩士論文\口述訪談\YYYY.MM.DD [受訪者]訪談\` 下面的 m4a/mp3 整理成跟 [04.10 邱敏捷教授口述訪談紀錄.txt](../../../public/content/interviews/04.10%20%E9%82%B1%E6%95%8F%E6%8D%B7%E6%95%99%E6%8E%88%E5%8F%A3%E8%BF%B0%E8%A8%AA%E8%AB%87%E7%B4%80%E9%8C%84.txt) 一樣的逐字稿，寫入 `public/content/interviews/` 並更新 [stores/thesisInterviews.ts](../../../stores/thesisInterviews.ts)。
@@ -140,7 +142,8 @@ python scripts/transcribe_interview_gemini.py \
 讀 `_tmp_audio/interview/[date]_raw.txt`（或多段 `_partN.txt`），做以下整理：
 
 1. **辨識說話者**：兩人對話為主，少數三方（如黃美瑜＋游雅婷同場）。Gemini 偶爾會搞錯說話者標籤，要對照訪綱與上下文修正。短暫的「電話中斷／與第三人對話」可整段省略。
-2. **複合問題 + 多段完整回答**（最重要！）：**不要照搬 Gemini 的碎片化 Q-A**。每節只用 1-2 個複合問題，把相關的子題（譬如「您怎麼接觸 X / 為什麼 Y / 後來如何 Z」）合併在同一個 `筆者：` 問句裡；對應的 `[受訪者]：` 回答用多個段落寫成流暢敘述，**段落間不重貼說話者標籤**。對照 [釋印悅 04.10 邱敏捷](../../../public/content/interviews/) 的 Q&A 密度——一節通常只有 1-2 個 Q&A turn，回答長 3-5 段。
+2. **每節 2-5 個獨立問題，每個問題的回答 1-3 段**（不是「一節一個 mega-question」）：對照既有範本（[邱敏捷 04.10](../../../public/content/interviews/04.10%20邱敏捷教授口述訪談紀錄.txt)、[釋印悅 01.16](../../../public/content/interviews/01.16%20釋印悅法師口述訪談紀錄.txt)、[釋見岸 05.11](../../../public/content/interviews/05.11%20釋見岸法師口述訪談紀錄.txt)、[黃運喜 04.21](../../../public/content/interviews/04.21%20黃運喜教授口述訪談紀錄.txt)、[侯坤宏 12.22](../../../public/content/interviews/12.22%20侯坤宏教授口述訪談紀錄.txt)、[林建德 08.27](../../../public/content/interviews/08.27%20林建德教授口述訪談紀錄.txt)），每節有 2-5 個獨立的 `筆者：` 問句，每個問句後面的回答用 1-3 段多段完整敘述，**段落間不重貼說話者標籤**。問題本身可以稍微複合（例如同時問「為什麼 X」+「後來怎麼 Y」），但不要把整節壓成一個巨型問題。同時也**不要照搬 Gemini 的碎片化 Q-A**（每個「嗯」「是」都拆成獨立 turn），把短促的確認直接刪除合併。
+   - 篇幅參考：一個 60-90 分鐘的訪談，整理過後通常 25-50K 字。如果你的輸出 < 15K 字而音檔超過 60 分鐘，多半是被過度精簡，應該回去拿原始稿補回更多的細節、典故、人名、確切年份。
 3. **合併「嗯」「是」短回應**：Gemini 把每個確認都拆成獨立 turn，整理時直接刪掉，不要列出來。
 4. **按訪綱分節**：訪綱通常有 2-4 個主題，把 Q&A 對應到 `二、`、`三、`、`四、`（`一、` 留給前言）。實際對話順序可能跟訪綱不一致，按內容歸位、不要強行重排對話順序。
 5. **寫前言三節**（必須）：

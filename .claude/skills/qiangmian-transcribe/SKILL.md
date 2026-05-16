@@ -3,6 +3,8 @@ name: qiangmian-transcribe
 description: 千面上帝宗教史讀書會的完整自動化流程：Gemini Audio 轉錄 + 潤稿 + PPT 上傳 R2 + 日期/YouTube/下載連結。Use when the user wants to transcribe, polish, or manage episodes of 千面上帝 宗教史讀書會.
 ---
 
+> 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session（"exceeds the dimension limit for many-image requests"）。使用者一說要傳截圖，立刻提醒先確認尺寸；推薦 Win+Shift+S 框選或縮到 ≤ 1920px。
+
 # 宗教史讀書會 — 完整自動化流程
 
 ## 總覽

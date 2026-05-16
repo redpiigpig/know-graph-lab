@@ -3,6 +3,8 @@ name: pong-photo-sermon
 description: Backfill / correct pong_sermons rows from chat-attached photos of a 程序單 (worship program handout) — sermon title, 服事人員名單, 詩歌, occasion, sermon_type. Use when the user uploads photos of a specific service's program (e.g., 城中教會堂慶感恩禮拜 / 平安夜燭光禮拜 / 聖誕崇拜) and says something like "你把講題、服事人員名單放到相應的時間與類別中" or "這份程序單對應 YYYY-MM-DD 那場". Sibling of `pong-photo-writing` but targets a different table.
 ---
 
+> 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session（"exceeds the dimension limit for many-image requests"）。使用者一說要傳截圖，立刻提醒先確認尺寸；推薦 Win+Shift+S 框選或縮到 ≤ 1920px。
+
 # pong-photo-sermon — 程序單照片 → pong_sermons
 
 End-to-end recipe for taking chat-attached photos of a printed 程序單 and applying the metadata to the matching `pong_sermons` row.

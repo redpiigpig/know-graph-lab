@@ -3,6 +3,8 @@ name: biblical-tradition-layer
 description: 聖經族譜的「教會傳統」視角圖層 — 早期教會（橘色，東西方共識）／天主教（紅）／東方教會（黃）／拉比傳統（藍）。包含資料表 schema、人物清單、UI 切換與配色設計、未完成 layout 修正項目。
 ---
 
+> 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session（"exceeds the dimension limit for many-image requests"）。使用者一說要傳截圖，立刻提醒先確認尺寸；推薦 Win+Shift+S 框選或縮到 ≤ 1920px。
+
 # 聖經族譜 — 教會傳統視角圖層
 
 > 接手用 skill。session 之前已做過 compaction，此檔記錄所有未完成項目與設計決策。

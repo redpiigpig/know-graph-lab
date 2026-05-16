@@ -3,6 +3,8 @@ name: historical-borders-map
 description: 「歷史國界地圖」工具集（/maps/historical-borders）— 6,853 個歷史政權從 -123,000 BCE 至今的政治國界演進地圖 + 國家資料庫列表。跨 53 個 historical-basemaps snapshots，Equal Earth 等積投影。資料層：historical-basemaps polygon + Wikidata SPARQL + 人工 STATE_DETAILS + Gemini batch 中文翻譯（2,420 條）+ rules-based 政權分類器（is_state，過濾部落／文化群）。Use when 補國家詳細資料、新增 SUPPLEMENT_ZH／STATE_DETAILS／sphere 對照、新增手譯／規則／snapshot、修地圖渲染、改列表過濾、調整政權分類標準（KNOWN_STATES / KNOWN_NON_STATES）、Gemini 補翻譯。
 ---
 
+> 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session（"exceeds the dimension limit for many-image requests"）。使用者一說要傳截圖，立刻提醒先確認尺寸；推薦 Win+Shift+S 框選或縮到 ≤ 1920px。
+
 # 歷史國界地圖 — 純政治國界 + 國家資料庫
 
 > Live URL：http://localhost:3000/maps/historical-borders

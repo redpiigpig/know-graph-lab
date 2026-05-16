@@ -3,6 +3,8 @@ name: world-religions-map
 description: 「全球八大人文宗教界域」主題地圖工具集（/maps/world-religions）— 8 大界域 × 30 文化圈 × ~150 國家 + 歷時功能（4000 BCE → 2026）。記錄資料層（admin_0 / admin_1 50m / admin_1 10m / GADM admin_2 四層次）、配色系統、編輯模式、邊界切分邏輯、時間軸與 sphere 歷史期間資料。Use when 加新國家／文化圈／sphere/admin 細分；改配色；標籤位置調整；修 NE GeoJSON 對照 bug；填補 sphere history 資料；接歷史邊界 GeoJSON。
 ---
 
+> 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session（"exceeds the dimension limit for many-image requests"）。使用者一說要傳截圖，立刻提醒先確認尺寸；推薦 Win+Shift+S 框選或縮到 ≤ 1920px。
+
 # 全球八大人文宗教界域 — 主題地圖
 
 > 來源資料：根目錄 `全球八大人文宗教界域.docx`（手稿 50 段）。

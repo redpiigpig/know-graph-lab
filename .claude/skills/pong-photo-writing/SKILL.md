@@ -3,6 +3,8 @@ name: pong-photo-writing
 description: Transcribe photos of printed 龐君華會督 articles (periodical / 紀念特刊 / 書章 etc.) into pong_writings rows, end-to-end. Use when the user uploads images of book/magazine pages and says something like "把這幾張的內容放到刊物文章中" or "新增一篇某某特刊的文章". Handles vertical traditional Chinese OCR, colophon (版權頁) extraction, and all DB + UI plumbing.
 ---
 
+> 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session（"exceeds the dimension limit for many-image requests"）。使用者一說要傳截圖，立刻提醒先確認尺寸；推薦 Win+Shift+S 框選或縮到 ≤ 1920px。
+
 # pong-photo-writing — Photos → pong_writings
 
 End-to-end recipe for taking 1-N chat-attached photos of an already-published 龐君華會督 article (most often a 堂慶紀念特刊 / 期刊 / 書章) and turning it into a fully-rendered entry under `/pong-archive/writings/<id>`.
