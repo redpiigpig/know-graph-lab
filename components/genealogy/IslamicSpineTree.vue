@@ -92,6 +92,16 @@
             <span>{{ n.subtreeExpanded ? '▲' : '▼' }}</span>
             <span v-if="!n.subtreeExpanded" class="text-[9px] opacity-70">{{ n.subtreeSize }}</span>
           </button>
+          <!-- Same-person marker — click to pan to OTHER position of this same DB person -->
+          <button
+            v-if="n.samePerson"
+            class="absolute -top-1.5 -right-1.5 z-10 h-4 min-w-[16px] px-1
+                   rounded-full bg-indigo-500 text-white text-[9px] leading-4
+                   font-medium shadow-sm flex items-center justify-center
+                   hover:bg-indigo-600 cursor-default"
+            title="同一人 — 點擊跳到他在族譜上的另一個位置"
+            @click.stop="jumpToOther(n)"
+          >♻</button>
         </div>
       </div>
 
@@ -287,6 +297,7 @@ interface LNode {
   hasSubtree?: boolean    // true → render ▼/▲ collapse button
   subtreeSize?: number    // total hidden descendants (only when collapsed)
   subtreeExpanded?: boolean
+  samePerson?: boolean    // true → same personId rendered at another position; show ♻ marker
 }
 interface VDrop { x: number; y1: number; y2: number; stroke?: string }
 interface HBar  { x1: number; x2: number; y: number; stroke?: string }
@@ -329,6 +340,9 @@ function expandProphets() {
     '約坦', '亞哈斯', '希西家', '瑪拿西', '亞們', '約西亞',
     '耶哥尼雅', '阿米蘭（馬利亞之父）', '麥爾彥',
     '宰凱里雅',  // 顯示 葉哈雅
+    // 顯示阿里在 gen 48 (艾比·塔利卜之子，穆聖堂弟) — 同時 gen 50 仍以法蒂瑪之夫
+    // 出現，兩處都會掛 ♻ marker（仿 biblical 利亞案例）
+    '艾比·塔利卜',
   ]
   const byName = personByName.value
   const s = new Set(expandedClans.value)
@@ -377,15 +391,18 @@ const cv = computed(() => {
   const positionByPerson = new Map<string, { x: number; y: number }>()
   const spineRowOf = new Map<string, number>()
 
-  function makeLNode(personId: string, x: number, y: number, isSpine = false): LNode | null {
-    if (placedPersonIds.has(personId)) return null
+  let dupCounter = 0
+  function makeLNode(personId: string, x: number, y: number, isSpine = false, allowDup = false): LNode | null {
     const p = pMap.get(personId)
     if (!p) return null
+    const isDup = placedPersonIds.has(personId)
+    if (isDup && !allowDup) return null
     placedPersonIds.add(personId)
     const raw = p.data.name as string
-    let descCount = isSpine ? 0 : countDescendants(personId)
+    // Dup placements: 不顯示 ▼（descendants 由 primary 卡負責），標 samePerson=true
+    let descCount = isSpine || isDup ? 0 : countDescendants(personId)
     const isExpanded = expandedSet.has(personId)
-    let hasSubtree = !isSpine && descCount >= SUBTREE_MIN
+    let hasSubtree = !isSpine && !isDup && descCount >= SUBTREE_MIN
     // 妻子的 children 若被丈夫 children 涵蓋 → 不顯示 ▼（族譜慣例「子嗣放男方」）
     // e.g., 麗百加(利百加, ▼37) 跟 易司哈格(以撒, ▼38) 雙顯示重複，保留 易司哈格 一邊
     const isFemale = p.data.gender === '女' || p.data.gender === 'female'
@@ -405,7 +422,7 @@ const cv = computed(() => {
       }
     }
     const ln: LNode = {
-      id: `n:${personId}`,
+      id: isDup ? `n:${personId}:dup${++dupCounter}` : `n:${personId}`,
       personId,
       rawName:    raw,
       displayName: shortName(raw),
@@ -420,8 +437,10 @@ const cv = computed(() => {
       hasSubtree,
       subtreeSize: hasSubtree ? descCount : undefined,
       subtreeExpanded: isExpanded,
+      samePerson: isDup,
     }
-    positionByPerson.set(personId, { x, y })
+    // primary placement records position；dup 不覆寫 (jumpToOther 需要 primary 位置)
+    if (!isDup) positionByPerson.set(personId, { x, y })
     return ln
   }
 
@@ -465,7 +484,7 @@ const cv = computed(() => {
     if (kids.length === 0 || collapsed) {
       const rootX = leftX + wivesReach
       const rootCX = rootX + NW / 2
-      const node = makeLNode(rootId, rootX, myY, false)
+      const node = makeLNode(rootId, rootX, myY, false, true /* allowDup */)
       if (node) myNodes.push(node)
       // place wives + marriage lines
       const wResult = placeWivesHere(rootId, rootCX, myY, wiveIds)
@@ -493,7 +512,7 @@ const cv = computed(() => {
       // all kids skipped (visited / off-tree) → treat as leaf
       const rootX = leftX + wivesReach
       const rootCX = rootX + NW / 2
-      const node = makeLNode(rootId, rootX, myY, false)
+      const node = makeLNode(rootId, rootX, myY, false, true /* allowDup */)
       if (node) myNodes.push(node)
       const wResult = placeWivesHere(rootId, rootCX, myY, wiveIds)
       myNodes.push(...wResult.nodes)
@@ -882,6 +901,19 @@ const cv = computed(() => {
     if (orphanCol >= ORPHAN_COLS) { orphanCol = 0; orphanRow++ }
   }
 
+  // ── samePerson ♻ marker ── (仿 biblical 規則)
+  // 同 personId 多個 LNode → 全部標 samePerson=true，UI 顯 ♻ click 跳同人
+  // e.g., 阿里：gen 48 (艾比·塔利卜之子，穆聖堂弟) + gen 50 (法蒂瑪之夫，伊瑪目鏈祖)
+  const byPid = new Map<string, LNode[]>()
+  for (const n of nodes) {
+    const arr = byPid.get(n.personId) ?? []
+    arr.push(n)
+    byPid.set(n.personId, arr)
+  }
+  for (const list of byPid.values()) {
+    if (list.length > 1) for (const n of list) n.samePerson = true
+  }
+
   // ── Canvas bounds: shift if anything negative ──
   let minX = 0, maxX = 0, maxY = 0
   for (const n of nodes) {
@@ -930,6 +962,45 @@ function cardStyle(n: LNode) {
   return { left: n.x + 'px', top: n.y + 'px', width: n.w + 'px', height: n.h + 'px' }
 }
 function onCardClick(n: LNode) { emit('selectPerson', n.personId) }
+
+// ♻ same-person marker click — pan to the OTHER position of this person.
+// 仿 biblical：先找 visible peer，找不到則 fallback 往上找最近的祖先展開其 ▼，再 pan
+function jumpToOther(current: LNode) {
+  if (!cv.value || !viewportRef.value) return
+  const peers = cv.value.nodes.filter(o => o.personId === current.personId && o.id !== current.id)
+  if (peers.length > 0) { panToCard(peers[0]); return }
+  // No rendered peer — walk up parent chain to find nearest rendered ancestor and expand
+  let cur: string | undefined = current.personId
+  const seen = new Set<string>([current.personId])
+  while (cur) {
+    const parents = parentsOf.value.get(cur) ?? []
+    if (parents.length === 0) break
+    const par = parents[0]
+    if (seen.has(par)) break
+    seen.add(par)
+    const ancestorNode = cv.value.nodes.find(n => n.personId === par)
+    if (ancestorNode) {
+      if (!expandedClans.value.has(par)) toggleExpand(par)
+      nextTick(() => {
+        if (!cv.value) return
+        const newPeers = cv.value.nodes.filter(o => o.personId === current.personId && o.id !== current.id)
+        if (newPeers.length > 0) panToCard(newPeers[0])
+      })
+      return
+    }
+    cur = par
+  }
+}
+
+function panToCard(target: LNode) {
+  if (!viewportRef.value) return
+  const vw = viewportRef.value.clientWidth
+  const vh = viewportRef.value.clientHeight
+  const cx = target.x + NW / 2
+  const cy = target.y + NH / 2
+  panX.value = vw / 2 - cx * zoom.value
+  panY.value = vh / 2 - cy * zoom.value
+}
 
 // ── Pan / zoom ──
 const viewportRef = ref<HTMLElement | null>(null)

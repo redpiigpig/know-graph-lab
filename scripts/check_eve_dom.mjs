@@ -93,18 +93,18 @@ const result = await page.evaluate(() => {
       }
     }
   }
+  // Find Ali (阿里) instances — match by Abu al-Hasan kunya (unique to Ali ibn Abi Talib)
+  const aliCards = summary.filter(s => s.text.includes('Abu al-Hasan') || (s.text.startsWith('第 49 代阿里') && s.text.length < 50))
   return {
     total: cards.length,
     overlaps: overlaps.slice(0, 20).map(([a, b]) => ({ a: a.text.slice(0, 20), b: b.text.slice(0, 20), a_left: a.left, a_top: a.top, b_left: b.left, b_top: b.top })),
-    around_muhammad: summary.filter(s => s.top > 6400 && s.top < 7000 && Math.abs(s.left - 1260) < 1500),
+    aliInstances: aliCards.map(c => ({ top: c.top, left: c.left, text: c.text.slice(0, 30), hasSamePersonMarker: false })),
   }
 })
 console.log('Total cards:', result.total)
 console.log(`\n--- Overlaps (${result.overlaps.length}) ---`)
 for (const o of result.overlaps) console.log(' ', JSON.stringify(o))
-console.log(`\n--- Around Muhammad row (gen 48-50) ---`)
-for (const c of result.around_muhammad.sort((a,b) => a.top - b.top || a.left - b.left)) {
-  console.log(`  top=${c.top}, left=${c.left}, idx=${c.idx}: ${c.text.slice(0, 25)}`)
-}
+console.log(`\n--- Ali instances (${result.aliInstances.length}) ---`)
+for (const a of result.aliInstances) console.log(' ', JSON.stringify(a))
 
 await browser.close()
