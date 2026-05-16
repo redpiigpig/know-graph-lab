@@ -251,12 +251,13 @@ per user spec：「就約瑟和馬利亞正常生耶穌就好」(commit `b6aac84
 
 ### 🟡 P2 — Layout overlaps
 
-3. **基連 ↔ 路得 J30 row 80px 重疊** （from 上一 session，仍待）
-   - 截圖：`c08c-jacob-reuben.png`、`22-boaz.png`
-   - J30 row 5 卡擠 500px 空間：俄珥巴(2428) — 路得(2568) — **基連(2608, overlap 路得)** — 瑪倫(2748) — 波阿斯(2928)
-   - 基連在以利米勒 expansion centerX，剛好與波阿斯 spine 的 Trinubium wife 路得 X 衝突
-   - 修法選項：(a) shift 以利米勒 X 進一步往左 (b) 把 以利米勒 expansion 推到 J31 row 而非 J30 (c) z-index 讓基連 ON TOP（但會遮路得名）
-   - 目前 user 知道存在此 overlap，acceptable as known limitation
+3. ~~**基連 ↔ 路得 J30 row 80px 重疊**~~ ✅ **2026-05-16 修好**
+   - 採方案 (b)：以利米勒 expansion 內子嗣強制下推到 J31 row
+   - 加 `FORCE_EXPAND_MIN_GEN: Map<string, number>` map，以利米勒 → 31
+   - `layoutExpansion(rootIds, centerX, pathFilter, minGen)` 第 4 參數轉傳給 `layoutSubtree` 的 minGen
+   - 視覺：J30 row 只有 路得-瑪倫(▲)-波阿斯（Trinubium）；俄珥巴+基連 推到 J31 row 與 俄備得(J31 spine) 同列但 X 不同
+   - label 仍標「第 30 代」（minGen 只影響 Y position 不影響 genLabel）— 跟 利亞 case 同 pattern
+   - 驗收：`c:/tmp/_boaz-after.png` — 無 overlap，連接線 以利米勒 → drop → J31 基連 視覺自然
 
 4. **拿鶴 expansion J22 row 過於擁擠**
    - 截圖：`c02-nahor.png`
@@ -295,7 +296,7 @@ per user spec：「就約瑟和馬利亞正常生耶穌就好」(commit `b6aac84
 2. ~~Fix #2（Moses chain forceExpand）~~ ✅ path-filter 已實作
 3. ~~**亞倫 nested ▼ toggle**~~ ✅ 2026-05-16
 4. ~~**scripts/biblical-shot.mjs `--expand-id` / `--focus-id`**~~ ✅ 2026-05-16
-5. Fix #3（J30 row 基連 overlap）— 較複雜，可選
+5. ~~Fix #3（J30 row 基連 overlap）~~ ✅ 2026-05-16 — FORCE_EXPAND_MIN_GEN 把基連/俄珥巴下推到 J31
 
 ---
 

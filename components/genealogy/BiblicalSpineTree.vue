@@ -846,6 +846,7 @@ const cv = computed(() => {
     rootIds: string[],
     centerX: number,
     pathFilter: Set<string> | null = null,
+    minGen: number = 0,  // force expansion roots to render at row ≥ minGen-1 (e.g. 31 → row 30 / J31 visual)
   ): { nodes: LNode[]; drops: VDrop[]; hbars: HBar[]; marriages: MLine[]; bbox: ExpansionBox; rowBboxes: ExpansionBox[]; rootCXs: number[]; firstY: number } {
     const vis = new Set<string>()
     let cursorX = 0
@@ -857,7 +858,7 @@ const cv = computed(() => {
     const rootCXs: number[] = []
     let firstY = 0
     for (const rid of rootIds) {
-      const r = layoutSubtree(rid, cursorX, vis, 0, pathFilter)
+      const r = layoutSubtree(rid, cursorX, vis, minGen, pathFilter)
       if (r.nodes.length === 0) continue  // pathFilter 剔除 — 跳過空 subtree
       allNodes.push(...r.nodes)
       allDrops.push(...r.drops)
@@ -1546,6 +1547,13 @@ const cv = computed(() => {
       const FORCE_EXPAND_SHIFT_X = new Map<string, number>([
         ['利未', 30],  // Moses cluster 往右推開 30px 避 亞倫(L26) ↔ 亞蘭(希斯崙之子, J26) 撞列
       ])
+      // 額外 Y 偏移：把 expansion 子嗣強制下推一行。用於 expansion col 跟 spine 妻位 X
+      // 重疊的 case — 例：以利米勒 expansion 內 基連(2608) 撞 波阿斯 spine wife 路得(2568)。
+      // 把 基連/俄珥巴 下推到 J31 row → 路得 J30 wife 列獨佔，基連 跟 俄備得(J31 spine)
+      // 同 row 但 X 不同不衝突。
+      const FORCE_EXPAND_MIN_GEN = new Map<string, number>([
+        ['以利米勒', 31],  // 基連+俄珥巴 推到 J31 row 避撞 路得 J30 spine wife
+      ])
       const forceExpand = FORCE_EXPAND_NAMES.has(kp.data.name)
       const userExpanded = expandedClans.value.has(kid)
       const expanded = forceExpand || userExpanded
@@ -1553,6 +1561,7 @@ const cv = computed(() => {
       // → 不套 path filter；否則 force-expand 預設只展 path 上人物
       const forcePath = (forceExpand && !userExpanded) ? (FORCE_EXPAND_PATH.get(kp.data.name) ?? null) : null
       const forceShiftX = (forceExpand && !userExpanded) ? (FORCE_EXPAND_SHIFT_X.get(kp.data.name) ?? 0) : 0
+      const forceMinGen = (forceExpand && !userExpanded) ? (FORCE_EXPAND_MIN_GEN.get(kp.data.name) ?? 0) : 0
 
       nodes.push({
         id: kid,
@@ -1612,7 +1621,7 @@ const cv = computed(() => {
         // 亞拿 已是 約亞敬 的 spine 妻 → 不要在 expansion 再畫一次）
         const kidChildren = (ch.get(kid) ?? []).filter(c => !rowOf.has(c) && !renderedAsSpouseOnSpine.has(c))
         if (kidChildren.length > 0) {
-          const exp = layoutExpansion(kidChildren, kxVal + forceShiftX, forcePath)
+          const exp = layoutExpansion(kidChildren, kxVal + forceShiftX, forcePath, forceMinGen)
           nodes.push(...exp.nodes)
           drops.push(...exp.drops)
           hbars.push(...exp.hbars)
