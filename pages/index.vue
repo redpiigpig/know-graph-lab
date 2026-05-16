@@ -37,16 +37,6 @@
           <span class="tool-badge bg-violet-50 text-violet-600">可用</span>
         </NuxtLink>
 
-        <!-- AI 研究助理 -->
-        <NuxtLink :to="user ? '/ai' : '/login'" class="tool-card group border-cyan-100 hover:border-cyan-300 hover:shadow-cyan-100">
-          <div class="tool-icon bg-cyan-50 text-cyan-600">🤖</div>
-          <div class="flex-1">
-            <h2 class="tool-title">AI 研究助理</h2>
-            <p class="tool-desc">書摘 RAG 問答、拍照 OCR 建摘文，本地 Ollama 驅動</p>
-          </div>
-          <span class="tool-badge bg-cyan-50 text-cyan-600">可用</span>
-        </NuxtLink>
-
         <!-- 論文寫作系統 -->
         <NuxtLink :to="user ? '/writing' : '/login'" class="tool-card group border-purple-100 hover:border-purple-300 hover:shadow-purple-100">
           <div class="tool-icon bg-purple-50 text-purple-600">✍️</div>
@@ -55,26 +45,6 @@
             <p class="tool-desc">碩士論文、學士論文、會議與期刊論文、口述訪談線上閱讀</p>
           </div>
           <span class="tool-badge bg-purple-50 text-purple-600">可用</span>
-        </NuxtLink>
-
-        <!-- 流程圖編輯器 -->
-        <NuxtLink :to="user ? '/canvas?type=flowchart' : '/login'" class="tool-card group border-sky-100 hover:border-sky-300 hover:shadow-sky-100">
-          <div class="tool-icon bg-sky-50 text-sky-600">🔀</div>
-          <div class="flex-1">
-            <h2 class="tool-title">流程圖編輯器</h2>
-            <p class="tool-desc">AI 驅動的智能流程圖，自動佈局，拖拽編輯</p>
-          </div>
-          <span class="tool-badge bg-sky-50 text-sky-600">可用</span>
-        </NuxtLink>
-
-        <!-- 心智圖工具 -->
-        <NuxtLink :to="user ? '/canvas?type=mindmap' : '/login'" class="tool-card group border-emerald-100 hover:border-emerald-300 hover:shadow-emerald-100">
-          <div class="tool-icon bg-emerald-50 text-emerald-600">🧠</div>
-          <div class="flex-1">
-            <h2 class="tool-title">心智圖工具</h2>
-            <p class="tool-desc">整理思緒，AI 智能展開分支，快速建構知識體系</p>
-          </div>
-          <span class="tool-badge bg-emerald-50 text-emerald-600">可用</span>
         </NuxtLink>
 
         <!-- 族譜繪製 -->
@@ -105,16 +75,6 @@
             <p class="tool-desc">客製化專屬研究網站的展示模板，可依需求替換主題與內容</p>
           </div>
           <span class="tool-badge bg-orange-50 text-orange-500">示範</span>
-        </NuxtLink>
-
-        <!-- 智能表格 -->
-        <NuxtLink :to="user ? '/canvas?type=table' : '/login'" class="tool-card group border-rose-100 hover:border-rose-300 hover:shadow-rose-100">
-          <div class="tool-icon bg-rose-50 text-rose-600">📊</div>
-          <div class="flex-1">
-            <h2 class="tool-title">智能表格</h2>
-            <p class="tool-desc">快速生成專業表格，支援資料視覺化與統計分析</p>
-          </div>
-          <span class="tool-badge bg-rose-50 text-rose-600">可用</span>
         </NuxtLink>
 
         <!-- 寫作計畫 -->
