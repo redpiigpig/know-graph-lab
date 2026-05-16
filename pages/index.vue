@@ -107,6 +107,16 @@
           <span class="tool-badge bg-emerald-50 text-emerald-600">可用</span>
         </NuxtLink>
 
+        <!-- 照片管理 -->
+        <NuxtLink :to="user ? '/photos' : '/login'" class="tool-card group border-pink-100 hover:border-pink-300 hover:shadow-pink-100">
+          <div class="tool-icon bg-pink-50 text-pink-600">📷</div>
+          <div class="flex-1">
+            <h2 class="tool-title">照片管理</h2>
+            <p class="tool-desc">辰瑋相片庫，依年份／月份瀏覽，從 Google Drive 直接讀取</p>
+          </div>
+          <span class="tool-badge bg-pink-50 text-pink-600">可用</span>
+        </NuxtLink>
+
       </div>
 
       <div class="mt-12 text-center text-gray-400 text-xs">

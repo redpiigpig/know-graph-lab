@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     r2Endpoint: process.env.R2_ENDPOINT,
     r2Bucket: process.env.R2_BUCKET,
     ebookChunksDir: process.env.EBOOK_CHUNKS_DIR,
+    photosRoot: process.env.PHOTOS_ROOT || "G:/我的雲端硬碟/資料/儲存資料夾/辰瑋相片",
 
     // 公開配置（前端和後端都可用）
     public: {
