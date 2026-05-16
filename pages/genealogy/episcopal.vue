@@ -13,6 +13,16 @@
         <span class="text-xs font-medium text-gray-700">{{ selectedSee.name_zh }}</span>
       </template>
       <div class="flex-1" />
+
+      <!-- View toggle: 表格 / 族譜圖 -->
+      <div class="flex items-center gap-0.5 bg-gray-100 rounded-lg p-0.5 mr-2">
+        <span class="text-xs px-2.5 py-1 rounded-md font-medium bg-white shadow-sm text-gray-900">表格</span>
+        <NuxtLink
+          to="/genealogy/episcopal-tree"
+          class="text-xs px-2.5 py-1 rounded-md font-medium transition text-gray-500 hover:text-gray-700"
+        >族譜圖</NuxtLink>
+      </div>
+
       <button
         v-if="selectedSee"
         class="text-xs px-3 py-1.5 rounded-lg bg-violet-500 hover:bg-violet-600 text-white font-medium transition shadow-sm"

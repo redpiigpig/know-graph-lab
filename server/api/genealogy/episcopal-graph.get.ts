@@ -1,0 +1,309 @@
+/**
+ * Episcopal apostolic-succession graph
+ *
+ * Topology (per user spec):
+ *   耶穌基督 (root)
+ *     └── 16 使徒 (apostle row)
+ *           └── 5 大宗主教座 (spine columns: 羅馬 / 安提阿 / 君士坦丁堡 / 亞歷山大 / 耶路撒冷)
+ *                 └── 主教鏈 (bishops in succession_number order)
+ *                       └── 旁支主教座 (branch sees with parent_see_id pointing into a spine)
+ *
+ * No marriage edges — only succession (parent-child along the spine + spawn for branches).
+ */
+
+interface SeeRow {
+  id: string
+  see_zh: string
+  name_zh: string
+  name_en: string | null
+  church: string
+  tradition: string
+  founded_year: number | null
+  parent_see_id: string | null
+}
+
+interface SuccRow {
+  id: string
+  name_zh: string
+  name_en: string | null
+  see: string
+  church: string | null
+  succession_number: number | null
+  start_year: number | null
+  end_year: number | null
+  appointed_by: string | null
+  status: string
+  notes: string | null
+}
+
+// ── 16 apostles ───────────────────────────────────────────────────────
+//
+// Order: 12 主使徒 + 義人雅各 + 主弟猶大 + 巴拿巴 + 保羅
+// `founderOfSeeKey` 對應到下方 SPINES key（只有 5 位是 5 大宗主教座的開創者）
+const APOSTLES: Array<{
+  id: string
+  name_zh: string
+  name_en: string
+  founderOfSeeKey?: 'rome' | 'antioch' | 'constantinople' | 'alexandria' | 'jerusalem'
+  // 多 founder 時用 array (彼得 既是羅馬也是安提阿)
+  founderOfMany?: Array<'rome' | 'antioch' | 'constantinople' | 'alexandria' | 'jerusalem'>
+  notes?: string
+}> = [
+  { id: 'ap_peter',       name_zh: '彼得',           name_en: 'Peter',          founderOfMany: ['rome', 'antioch'] },
+  { id: 'ap_andrew',      name_zh: '安得烈',         name_en: 'Andrew',         founderOfSeeKey: 'constantinople' },
+  { id: 'ap_james_zeb',   name_zh: '雅各（西庇太之子）', name_en: 'James, son of Zebedee' },
+  { id: 'ap_john',        name_zh: '約翰',           name_en: 'John' },
+  { id: 'ap_philip',      name_zh: '腓力',           name_en: 'Philip' },
+  { id: 'ap_bartholomew', name_zh: '巴多羅買',       name_en: 'Bartholomew' },
+  { id: 'ap_matthew',     name_zh: '馬太',           name_en: 'Matthew' },
+  { id: 'ap_thomas',      name_zh: '多馬',           name_en: 'Thomas' },
+  { id: 'ap_james_alph',  name_zh: '雅各（亞勒腓之子）', name_en: 'James, son of Alphaeus' },
+  { id: 'ap_thaddaeus',   name_zh: '達太（猶達·塔陡）', name_en: 'Thaddaeus / Jude of James' },
+  { id: 'ap_simon_zeal',  name_zh: '西門（奮銳黨）', name_en: 'Simon the Zealot' },
+  { id: 'ap_matthias',    name_zh: '馬提亞',         name_en: 'Matthias' },
+  { id: 'ap_james_just',  name_zh: '義人雅各',       name_en: 'James the Just', founderOfSeeKey: 'jerusalem' },
+  { id: 'ap_jude_lord',   name_zh: '猶大（主弟）',   name_en: 'Jude, brother of the Lord' },
+  { id: 'ap_barnabas',    name_zh: '巴拿巴',         name_en: 'Barnabas' },
+  { id: 'ap_paul',        name_zh: '保羅',           name_en: 'Paul' },
+]
+
+// ── 5 大宗主教座 ───────────────────────────────────────────────────────
+const SPINE_DEFS: Array<{
+  key: 'rome' | 'antioch' | 'constantinople' | 'alexandria' | 'jerusalem'
+  see_zh: string
+  // 主要 church 來篩 spine 主鏈（其他 church 仍會被當 branch 處理）
+  primaryChurches: string[]
+  apostleId: string
+  color: string
+}> = [
+  { key: 'rome',           see_zh: '羅馬',       primaryChurches: ['未分裂教會', '天主教'],          apostleId: 'ap_peter',      color: '#dc2626' },
+  { key: 'constantinople', see_zh: '君士坦丁堡', primaryChurches: ['未分裂教會', '東正教'],          apostleId: 'ap_andrew',     color: '#2563eb' },
+  { key: 'alexandria',     see_zh: '亞歷山大',   primaryChurches: ['未分裂教會', '東正教', '科普特正教'], apostleId: 'ap_peter', /* via Mark — special */ color: '#d97706' },
+  { key: 'antioch',        see_zh: '安提阿',     primaryChurches: ['未分裂教會', '東正教'],          apostleId: 'ap_peter',      color: '#0891b2' },
+  { key: 'jerusalem',      see_zh: '耶路撒冷',   primaryChurches: ['未分裂教會', '東正教'],          apostleId: 'ap_james_just', color: '#16a34a' },
+]
+
+// 馬可 (Mark) 不在 12 使徒中，故技術上是 彼得 → 馬可 → 亞歷山大；UI 上仍把 亞歷山大
+// 直接掛到 彼得 下（彼得是直接傳承者）。如未來想加 70 弟子（Mark/Luke 等）可改。
+
+export default defineEventHandler(async (event) => {
+  await requireAuth(event)
+  const supabase = getAdminClient()
+
+  // 1. all sees
+  const { data: seeRows, error: seeErr } = await supabase
+    .from('episcopal_sees')
+    .select('id, see_zh, name_zh, name_en, church, tradition, founded_year, parent_see_id')
+  if (seeErr) throw createError({ statusCode: 500, message: seeErr.message })
+
+  const sees: SeeRow[] = seeRows ?? []
+  const seeById = new Map<string, SeeRow>()
+  for (const s of sees) seeById.set(s.id, s)
+
+  // 2. all bishops (we'll filter to relevant sees only)
+  const { data: succRows, error: succErr } = await supabase
+    .from('episcopal_succession')
+    .select('id, name_zh, name_en, see, church, succession_number, start_year, end_year, appointed_by, status, notes')
+  if (succErr) throw createError({ statusCode: 500, message: succErr.message })
+
+  const succ: SuccRow[] = succRows ?? []
+
+  // 3. group bishops by (see + church)
+  const bishopsBySeeChurch = new Map<string, SuccRow[]>()
+  for (const b of succ) {
+    const key = `${b.see}|${b.church ?? ''}`
+    if (!bishopsBySeeChurch.has(key)) bishopsBySeeChurch.set(key, [])
+    bishopsBySeeChurch.get(key)!.push(b)
+  }
+  for (const arr of bishopsBySeeChurch.values()) {
+    arr.sort((a, b) => {
+      const an = a.succession_number ?? 9999
+      const bn = b.succession_number ?? 9999
+      if (an !== bn) return an - bn
+      return (a.start_year ?? 9999) - (b.start_year ?? 9999)
+    })
+  }
+
+  // 4. pick spine sees & their bishops
+  const spineSeeIds = new Set<string>()
+  const spines = SPINE_DEFS.map(def => {
+    // pick the main see record (prefer 未分裂教會 / 天主教 / 東正教 — tradition independent)
+    const candidateSees = sees.filter(s => s.see_zh === def.see_zh)
+    const main = candidateSees.find(s => def.primaryChurches.includes(s.church))
+              ?? candidateSees[0]
+    if (main) spineSeeIds.add(main.id)
+
+    // gather all bishops for this see across all primaryChurches.
+    // Dedupe: a bishop with the same (name_zh, start_year) appearing under
+    // multiple "churches" (e.g. 聖馬爾谷 in both 未分裂教會 and 科普特正教)
+    // is the same person — keep one (prefer 未分裂教會, else lowest succession_number).
+    const bishopMergeMap = new Map<string, SuccRow>()
+    for (const church of def.primaryChurches) {
+      const list = bishopsBySeeChurch.get(`${def.see_zh}|${church}`) ?? []
+      for (const b of list) {
+        const key = `${b.name_zh}|${b.start_year ?? ''}`
+        const prev = bishopMergeMap.get(key)
+        if (!prev) {
+          bishopMergeMap.set(key, b)
+        } else {
+          // Prefer the one with church=未分裂教會, else the one with succession_number set
+          const prevPriority = (prev.church === '未分裂教會' ? 0 : 1)
+                             + (prev.succession_number == null ? 1 : 0)
+          const newPriority  = (b.church === '未分裂教會' ? 0 : 1)
+                             + (b.succession_number == null ? 1 : 0)
+          if (newPriority < prevPriority) bishopMergeMap.set(key, b)
+        }
+      }
+    }
+    const bishops = Array.from(bishopMergeMap.values())
+    bishops.sort((a, b) => {
+      const an = a.succession_number ?? 9999
+      const bn = b.succession_number ?? 9999
+      if (an !== bn) return an - bn
+      return (a.start_year ?? 9999) - (b.start_year ?? 9999)
+    })
+
+    return {
+      key: def.key,
+      apostleId: def.apostleId,
+      color: def.color,
+      see: main ? {
+        id: main.id,
+        see_zh: main.see_zh,
+        name_zh: main.name_zh,
+        name_en: main.name_en,
+        church: main.church,
+        tradition: main.tradition,
+        founded_year: main.founded_year,
+      } : null,
+      bishops: bishops.map(b => ({
+        id: b.id,
+        name_zh: b.name_zh,
+        name_en: b.name_en,
+        succession_number: b.succession_number,
+        start_year: b.start_year,
+        end_year: b.end_year,
+        appointed_by: b.appointed_by,
+        church: b.church,
+        status: b.status,
+        notes: b.notes,
+      })),
+    }
+  })
+
+  // 5. branch sees: any see whose parent_see_id is in spine OR (recursively) in another branch
+  //    we'll do a BFS from spine see ids, collecting parent→children in episcopal_sees tree
+  type BranchNode = {
+    id: string
+    see_zh: string
+    name_zh: string
+    name_en: string | null
+    church: string
+    tradition: string
+    founded_year: number | null
+    parent_see_id: string | null
+    parent_spine_key: string  // root spine key
+    parent_bishop_id: string | null  // bishop in the parent see whose tenure includes founded_year
+    bishops: ReturnType<typeof mapBishop>[]
+  }
+  function mapBishop(b: SuccRow) {
+    return {
+      id: b.id,
+      name_zh: b.name_zh,
+      name_en: b.name_en,
+      succession_number: b.succession_number,
+      start_year: b.start_year,
+      end_year: b.end_year,
+      appointed_by: b.appointed_by,
+      church: b.church,
+      status: b.status,
+      notes: b.notes,
+    }
+  }
+
+  const childrenOfSee = new Map<string, SeeRow[]>()
+  for (const s of sees) {
+    if (s.parent_see_id) {
+      if (!childrenOfSee.has(s.parent_see_id)) childrenOfSee.set(s.parent_see_id, [])
+      childrenOfSee.get(s.parent_see_id)!.push(s)
+    }
+  }
+  // sort children by founded_year
+  for (const arr of childrenOfSee.values()) {
+    arr.sort((a, b) => (a.founded_year ?? 9999) - (b.founded_year ?? 9999))
+  }
+
+  // map see id → spine key (only for spine sees)
+  const spineKeyBySeeId = new Map<string, string>()
+  for (const sp of spines) {
+    if (sp.see) spineKeyBySeeId.set(sp.see.id, sp.key)
+  }
+
+  function findBishopAtYear(seeRow: SeeRow, year: number | null): string | null {
+    if (year == null) return null
+    // find bishop in seeRow whose [start_year, end_year] contains year, in any church
+    const candidates: SuccRow[] = []
+    for (const [k, arr] of bishopsBySeeChurch.entries()) {
+      const [seeName] = k.split('|')
+      if (seeName === seeRow.see_zh) candidates.push(...arr)
+    }
+    let best: SuccRow | null = null
+    for (const b of candidates) {
+      if (b.start_year != null && b.start_year <= year && (b.end_year == null || b.end_year >= year)) {
+        if (!best || (b.start_year > (best.start_year ?? -99999))) best = b
+      }
+    }
+    return best?.id ?? null
+  }
+
+  const branches: BranchNode[] = []
+  // BFS from each spine see
+  for (const sp of spines) {
+    if (!sp.see) continue
+    const queue: Array<{ seeId: string; spineKey: string }> = [{ seeId: sp.see.id, spineKey: sp.key }]
+    const seen = new Set<string>([sp.see.id])
+    while (queue.length) {
+      const { seeId, spineKey } = queue.shift()!
+      const kids = childrenOfSee.get(seeId) ?? []
+      for (const k of kids) {
+        if (seen.has(k.id)) continue
+        seen.add(k.id)
+        const parentSee = seeById.get(seeId)!
+        const parentBishopId = findBishopAtYear(parentSee, k.founded_year)
+        // gather bishops for this branch see (across all churches it carries)
+        const allBishops: SuccRow[] = []
+        for (const [bk, arr] of bishopsBySeeChurch.entries()) {
+          const [seeName, ch] = bk.split('|')
+          if (seeName === k.see_zh && ch === k.church) allBishops.push(...arr)
+        }
+        allBishops.sort((a, b) => {
+          const an = a.succession_number ?? 9999
+          const bn = b.succession_number ?? 9999
+          if (an !== bn) return an - bn
+          return (a.start_year ?? 9999) - (b.start_year ?? 9999)
+        })
+        branches.push({
+          id: k.id,
+          see_zh: k.see_zh,
+          name_zh: k.name_zh,
+          name_en: k.name_en,
+          church: k.church,
+          tradition: k.tradition,
+          founded_year: k.founded_year,
+          parent_see_id: seeId,
+          parent_spine_key: spineKey,
+          parent_bishop_id: parentBishopId,
+          bishops: allBishops.map(mapBishop),
+        })
+        queue.push({ seeId: k.id, spineKey })
+      }
+    }
+  }
+
+  return {
+    jesus: { id: 'jesus', name_zh: '耶穌基督', name_en: 'Jesus Christ' },
+    apostles: APOSTLES,
+    spines,
+    branches,
+  }
+})
