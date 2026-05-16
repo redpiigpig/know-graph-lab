@@ -52,7 +52,7 @@ export const useThesisInterviewsStore = defineStore('thesisInterviews', () => {
     { id: 'jianan', name: '釋見岸法師', role: '法印講堂住持、弘誓文教基金會董事長', date: '2024.05.11', category: '法師', filename: '05.11 釋見岸法師口述訪談紀錄' },
     { id: 'changlei', name: '釋長叡法師', role: '台北市中山區慧日講堂住持', date: '2024.06.17', category: '法師', filename: '06.17 釋長叡法師口述訪談紀錄' },
     { id: 'xinqian', name: '釋心謙法師', role: '弘誓學團監院、國際事務負責人', date: '2025.03.01', category: '法師', filename: '03.01 釋心謙法師口述訪談紀錄' },
-    { id: 'xinxuan', name: '釋心玄法師', role: '玄奘大學宗教與文化學系', date: '2025.03.15', category: '法師', filename: '03.15 釋心玄法師口述訪談紀錄' },
+    { id: 'xinxuan', name: '釋心玄法師', role: '玄奘大學選佛場設計師、慈恩精舍男眾法師', date: '2025.03.15', category: '法師', filename: '03.15 釋心玄法師口述訪談紀錄' },
     { id: 'houkh', name: '侯坤宏教授', role: '國史館研究員、指導教授', date: '2022.12.22', category: '學者', filename: '12.22 侯坤宏教授口述訪談紀錄' },
     { id: 'qiumj', name: '邱敏捷教授', role: '臺南大學國語文學系教授，印順學研究者', date: '2023.04.10', category: '學者', filename: '04.10 邱敏捷教授口述訪談紀錄' },
     { id: 'huangyh', name: '黃運喜教授', role: '玄奘大學宗教與文化學系教授', date: '2023.04.21', category: '學者', filename: '04.21 黃運喜教授口述訪談紀錄' },
@@ -82,9 +82,6 @@ export const useThesisInterviewsStore = defineStore('thesisInterviews', () => {
   // （網站可能已有手動整理過的逐字稿，但 Drive 上欠缺正式檔）
   const driveMissing = ref<PendingInterview[]>([
     // 只有錄音 m4a，連逐字稿草稿都還沒有
-    { id: 'xinxuan', name: '釋心玄法師', role: '玄奘大學宗教與文化學系', date: '2025.03.15', category: '法師',
-      driveFolder: '2025.03.15 釋心玄法師訪談', has: ['outline', 'audio', 'photo'],
-      note: '另附「慈恩精舍選佛場一一佛教空間整修設計範例研析0312.docx」參考資料' },
   ])
 
   // ── 派生 ─────────────────────────────────────────────
