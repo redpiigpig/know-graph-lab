@@ -72,7 +72,7 @@ export const useThesisInterviewsStore = defineStore('thesisInterviews', () => {
     { id: 'zhuzh', name: '朱增宏先生', role: '台灣動物社會研究會創辦人', date: '2024.05.28', category: '社運界', filename: '05.28 朱增宏先生口述訪談紀錄' },
     { id: 'zhanglj', name: '張莉筠居士', role: '佛教弘誓學院護持者', date: '2024.03.26', category: '其他', filename: '03.26 張莉筠居士口述訪談紀錄' },
     { id: 'zhuangsx', name: '莊秀美女士', role: '日本龍谷大學教授', date: '2024.04.08', category: '其他', filename: '04.08 莊秀美女士口述訪談紀錄' },
-    { id: 'wangch', name: '王彩虹居士', role: '佛教弘誓學院護持者', date: '2024.01.17', category: '其他', filename: '01.17 王彩虹居士口述訪談紀錄' },
+    { id: 'wangch', name: '王彩虹居士', role: '弘誓學團常住居士、前法界出版社秘書', date: '2024.01.17', category: '其他', filename: '01.17 王彩虹居士口述訪談紀錄' },
     { id: 'chenyxl', name: '陳悅萱老師', role: '佛教音樂工作者', date: '2024.02.14', category: '其他', filename: '02.14 陳悅萱老師口述訪談紀錄' },
     { id: 'linrz', name: '林蓉芝居士', role: '中華佛寺協會工作者', date: '2024.09.03', category: '其他', filename: '09.03 林蓉芝居士口述訪談紀錄' },
   ])
@@ -81,8 +81,6 @@ export const useThesisInterviewsStore = defineStore('thesisInterviews', () => {
   // （網站可能已有手動整理過的逐字稿，但 Drive 上欠缺正式檔）
   const driveMissing = ref<PendingInterview[]>([
     // 只有 m4a.txt 逐字稿草稿（最接近可用狀態）
-    { id: 'wangch', name: '王彩虹居士', role: '佛教弘誓學院護持者', date: '2024.01.17', category: '其他',
-      driveFolder: '2024.01.17 王彩虹居士訪談', has: ['outline', 'audio', 'draft-txt', 'photo'] },
     { id: 'chenyxl', name: '陳悅萱老師', role: '佛教音樂工作者', date: '2024.02.14', category: '其他',
       driveFolder: '2024.02.14 陳悅萱老師訪談', has: ['outline', 'audio', 'draft-txt', 'photo'] },
 
