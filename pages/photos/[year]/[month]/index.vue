@@ -1,34 +1,46 @@
 <template>
-  <div class="min-h-screen bg-slate-50">
+  <div class="min-h-screen bg-[#f5f1ea]">
     <AppHeader>
       <template #actions>
-        <NuxtLink :to="`/photos/${year}`" class="text-sm text-gray-500 hover:text-gray-900 transition">← {{ year }} 年</NuxtLink>
+        <NuxtLink :to="`/photos/${year}`" class="text-sm text-stone-500 hover:text-stone-900 transition">← {{ year }}</NuxtLink>
       </template>
     </AppHeader>
 
-    <div class="max-w-7xl mx-auto px-6 py-10">
-      <nav class="text-xs text-gray-500 mb-3">
-        <NuxtLink to="/photos" class="hover:text-gray-900">照片管理</NuxtLink>
-        <span class="mx-1">/</span>
-        <NuxtLink :to="`/photos/${year}`" class="hover:text-gray-900">{{ year }}</NuxtLink>
-        <span class="mx-1">/</span>
-        <span class="text-gray-900">{{ Number(month) }} 月</span>
+    <div class="max-w-7xl mx-auto px-6 py-14">
+      <nav class="text-[11px] uppercase tracking-[0.2em] text-stone-500 mb-3">
+        <NuxtLink to="/photos" class="hover:text-stone-900">照片庫</NuxtLink>
+        <span class="mx-2">/</span>
+        <NuxtLink :to="`/photos/${year}`" class="hover:text-stone-900">{{ year }}</NuxtLink>
+        <span class="mx-2">/</span>
+        <span class="text-stone-700">{{ Number(month) }} 月</span>
       </nav>
-      <div class="mb-6 flex items-baseline gap-3">
-        <h1 class="text-2xl font-bold text-gray-900">{{ year }} 年 {{ Number(month) }} 月</h1>
-        <p class="text-gray-500 text-sm" v-if="!loading">{{ files.length }} 個檔案</p>
+
+      <header class="mb-10 flex items-end justify-between flex-wrap gap-4 border-b border-stone-300/60 pb-6">
+        <div class="flex items-end gap-4">
+          <h1 class="font-serif text-6xl text-stone-900 leading-none tracking-tight">
+            {{ Number(month) }}<span class="text-2xl text-stone-500 ml-1">月</span>
+          </h1>
+          <p class="text-stone-500 text-sm pb-2">{{ year }} ／ {{ monthName }}</p>
+        </div>
+        <div v-if="!loading" class="text-right font-serif">
+          <div class="text-3xl text-stone-800 leading-none">{{ files.length.toLocaleString() }}</div>
+          <div class="mt-2 text-[10px] uppercase tracking-[0.25em] text-stone-500">張</div>
+        </div>
+      </header>
+
+      <div v-if="loading" class="text-stone-400 text-sm">載入中…</div>
+      <div v-else-if="errMsg" class="text-red-500 text-sm">{{ errMsg }}</div>
+      <div v-else-if="!files.length" class="py-20 text-center">
+        <div class="font-serif text-2xl text-stone-300 mb-2">— 空 —</div>
+        <div class="text-stone-500 text-sm">這個月還沒有照片</div>
       </div>
 
-      <div v-if="loading" class="text-gray-400 text-sm">載入中…</div>
-      <div v-else-if="errMsg" class="text-red-500 text-sm">{{ errMsg }}</div>
-      <div v-else-if="!files.length" class="text-gray-400 text-sm">這個月還沒有照片</div>
-
-      <div v-else class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2">
+      <div v-else class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
         <button
           v-for="(f, i) in files"
           :key="f.name"
           @click="viewerIndex = i"
-          class="group relative bg-white rounded-lg overflow-hidden border border-gray-100 hover:border-pink-300 transition aspect-square focus:outline-none focus:ring-2 focus:ring-pink-400"
+          class="photo-tile group"
         >
           <img
             v-if="f.kind === 'image' && renderableImage(f.ext)"
@@ -36,13 +48,13 @@
             :alt="f.name"
             loading="lazy"
             decoding="async"
-            class="w-full h-full object-cover"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
-          <div v-else class="w-full h-full flex flex-col items-center justify-center text-gray-400 p-2">
+          <div v-else class="w-full h-full flex flex-col items-center justify-center text-stone-400 bg-stone-100 p-3">
             <div class="text-3xl">{{ f.kind === 'video' ? '🎬' : '📄' }}</div>
-            <div class="mt-1 text-[10px] uppercase">{{ f.ext.replace('.', '') }}</div>
+            <div class="mt-1 text-[10px] uppercase tracking-widest">{{ f.ext.replace('.', '') }}</div>
           </div>
-          <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent text-white text-[10px] px-1.5 py-1 truncate text-left opacity-0 group-hover:opacity-100 transition">
+          <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent text-white text-[10px] px-2 py-1.5 truncate text-left opacity-0 group-hover:opacity-100 transition">
             {{ f.name }}
           </div>
         </button>
@@ -52,22 +64,21 @@
     <!-- Lightbox -->
     <div
       v-if="viewerIndex !== null && current"
-      class="fixed inset-0 bg-black/90 z-50 flex flex-col"
+      class="fixed inset-0 bg-black/95 z-50 flex flex-col"
       @click.self="viewerIndex = null"
-      @keydown.esc="viewerIndex = null"
       tabindex="0"
     >
-      <div class="flex items-center justify-between px-4 py-3 text-white">
-        <div class="text-sm truncate max-w-[60%]">{{ current.name }}</div>
-        <div class="flex items-center gap-4 text-sm">
-          <span class="text-gray-400">{{ (viewerIndex ?? 0) + 1 }} / {{ files.length }}</span>
-          <a :href="current.url" :download="current.name" class="hover:text-pink-300" @click.stop>下載</a>
-          <button @click="viewerIndex = null" class="hover:text-pink-300">關閉 ✕</button>
+      <div class="flex items-center justify-between px-6 py-4 text-white border-b border-white/10">
+        <div class="text-sm truncate max-w-[55%] font-mono text-white/80">{{ current.name }}</div>
+        <div class="flex items-center gap-5 text-sm">
+          <span class="text-white/50 font-mono">{{ (viewerIndex ?? 0) + 1 }} / {{ files.length }}</span>
+          <a :href="current.url" :download="current.name" class="hover:text-amber-300 transition" @click.stop>下載</a>
+          <button @click="viewerIndex = null" class="hover:text-amber-300 transition">關閉 ✕</button>
         </div>
       </div>
       <div class="flex-1 flex items-center justify-between min-h-0">
-        <button @click.stop="prev" class="text-white text-3xl px-4 hover:text-pink-300" aria-label="prev">‹</button>
-        <div class="flex-1 h-full flex items-center justify-center min-h-0" @click.self="viewerIndex = null">
+        <button @click.stop="prev" class="text-white/60 hover:text-white text-4xl px-6 transition" aria-label="prev">‹</button>
+        <div class="flex-1 h-full flex items-center justify-center min-h-0 p-4" @click.self="viewerIndex = null">
           <img
             v-if="current.kind === 'image' && renderableImage(current.ext)"
             :src="current.url"
@@ -82,14 +93,14 @@
             autoplay
             class="max-h-full max-w-full"
           />
-          <div v-else class="text-gray-400 text-center p-8">
+          <div v-else class="text-stone-400 text-center p-8">
             <div class="text-5xl mb-2">📄</div>
             <div class="text-sm">{{ current.name }}</div>
             <div class="text-xs mt-2">無法在瀏覽器預覽此格式</div>
-            <a :href="current.url" :download="current.name" class="mt-4 inline-block px-4 py-2 bg-pink-500 hover:bg-pink-600 text-white rounded text-xs">下載原檔</a>
+            <a :href="current.url" :download="current.name" class="mt-4 inline-block px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded text-xs">下載原檔</a>
           </div>
         </div>
-        <button @click.stop="next" class="text-white text-3xl px-4 hover:text-pink-300" aria-label="next">›</button>
+        <button @click.stop="next" class="text-white/60 hover:text-white text-4xl px-6 transition" aria-label="next">›</button>
       </div>
     </div>
   </div>
@@ -110,7 +121,10 @@ interface PhotoFile {
 const route = useRoute();
 const year = computed(() => String(route.params.year || ""));
 const month = computed(() => String(route.params.month || ""));
-useHead({ title: () => `${year.value}.${month.value} — 照片管理` });
+useHead({ title: () => `${year.value}.${month.value} — 辰瑋相片` });
+
+const MONTH_NAMES = ["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"];
+const monthName = computed(() => MONTH_NAMES[Number(month.value) - 1] || "");
 
 const loading = ref(true);
 const errMsg = ref("");
@@ -150,3 +164,25 @@ onMounted(async () => {
 });
 onBeforeUnmount(() => window.removeEventListener("keydown", onKey));
 </script>
+
+<style scoped>
+.photo-tile {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 14px;
+  background: rgb(245 241 234);
+  border: 1px solid rgb(214 211 209 / 0.6);
+  cursor: pointer;
+  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+.photo-tile:hover {
+  border-color: rgb(168 162 158 / 0.9);
+  box-shadow: 0 14px 30px -16px rgba(60, 30, 0, 0.25);
+}
+.photo-tile:focus-visible {
+  outline: 2px solid rgb(217 119 6);
+  outline-offset: 2px;
+}
+</style>
