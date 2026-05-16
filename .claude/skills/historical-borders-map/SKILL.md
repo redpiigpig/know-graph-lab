@@ -25,12 +25,33 @@ description: 「歷史國界地圖」工具集（/maps/historical-borders）— 
 | F. NE 50m coastline | `public/maps/ne_50m_coastline.geojson` | 1428 LineString | 海岸線（黑線） |
 | G. NE 50m admin_0 | `public/maps/ne_50m_admin_0_countries.geojson` | 242 features | 陸地灰底 + **NAME_ZHT 中文國名（內建）** |
 | H. Polygon 名譯本 | `public/maps/polygon-names-zh.json` | **2,420 條 (88 KB)** | Gemini batch 翻的 polygon name → 繁中 |
+| I. Polygon 政權分類 | `public/maps/polygon-classifications.json` | **2,949 條** | rules-based: is_state + reason，過濾部落／文化群 |
 
 **Snapshot 來源**：[scripts/build_historical_layer.mjs](../../../scripts/build_historical_layer.mjs) 用 53 個 historical-basemaps snapshots：BCE 17 個（123000、10000、8000、5000、4000、3000、2000、1500、1000、700、500、400、323、300、200、100、1）+ CE 36 個（100、200、300、400、500、600、700、800、900、1000、1100、1200、1279、1300、1400、1492、1500、1530、1600、1650、1700、1715、1783、1800、1815、1880、1900、1914、1920、1930、1938、1945、1960、1994、2000、2010）。每 snapshot 的 `yearTo = 下個 snapshot 年 - 1`；最後一個（2010）`yearTo = 9999`。
 
-**過濾策略**（雙軌）：
-- `historical-states.geojson`（給本工具）：用 `NON_STATE_PATTERNS` blacklist 排除 hunter-gatherer/culture/tribe/nomad/farmers — 其他全收
-- `historical-sphere-fills.geojson`（給 world-religions-map）：用 `STATE_NAMES` whitelist（240+ 政體名）保持原有切分
+**過濾策略**（多層）：
+- **build 階段**：`historical-states.geojson`（給本工具）用 `NON_STATE_PATTERNS` blacklist 排除明顯非政體；`historical-sphere-fills.geojson`（給 world-religions-map）用 `STATE_NAMES` whitelist
+- **runtime 階段**（前端 filter）：用 `polygon-classifications.json` 進一步過濾。**標準（user-defined）：至少酋邦 (chiefdom)／城邦 (city-state)／建立王權的遊牧帝國才算政權**。純 band/tribe／語族／考古文化群（未達酋邦）／古人類學名／狩獵採集者群 → 排除。
+
+**政權分類器**（[scripts/classify_polygons.mjs](../../../scripts/classify_polygons.mjs)，純 rules-based）— 5 層判定：
+1. **顯式 override**：`KNOWN_NON_STATES` (~80) / `KNOWN_STATES` (~400) / `STATE_DETAILS` keys
+2. **`NON_STATE_PATTERNS` regex**：Hunter-Forager / *culture / *farmers / Tribe of / Reservation / -peoples / Indigenous / Mesolithic / Neolithic Farmers / pastoralis / nomad
+3. **`POLITY_PATTERNS` regex**：Empire/Kingdom/Caliphate/Khanate/Sultanate/Dynasty/Republic/Confederation/Principality/Duchy/Emirate/Shogunate/League/Protectorate/Colony/Viceroyalty/Chiefdom/...; 殖民地 prefix `Portuguese|Spanish|French|British|Dutch|Soviet|...\s+[A-Z]`
+4. **NE admin_0 對應**：在 NE 的國家英文名 set 內 → 是現代國家
+5. **中文翻譯後綴**（看 polygon-names-zh.json）：含「王國/帝國/汗國/王朝/...」→ true；結尾「-人/-族/文化」→ false
+
+預設保守 = false（疑似非政權）。
+
+過濾效果（每年顯示的 polygon 數）：
+| 年 | 全部 polygons | 過濾後政權 | 排除（部落／文化）|
+|---|---|---|---|
+| 1980 | 160 | **160** | 0 |
+| 1900 | 222 | 213 | 9 (非洲部族) |
+| 1700 | 584 | 109 | 475 (大量原住民／部落) |
+| 1500 | 133 | 96 | 37 |
+| 500 | 70 | 31 | 39 |
+| -2000 | 32 | 12 | 20 (考古文化／語族) |
+| -8000 | 11 | 0 | 11 (全 hunter-gatherers) |
 
 **Merge 邏輯**（[data/maps/historical-states-db.ts](../../../data/maps/historical-states-db.ts) `mergeStates()`）：
 - 依英文名 normalized key dedupe
@@ -321,7 +342,19 @@ node scripts/translate_state_names.mjs   # 即時，幾秒鐘
 node scripts/fetch_hbm_snapshots.mjs   # ~2 分鐘
 ```
 
-### 5. `scripts/translate_polygon_names_gemini.py`
+### 5. `scripts/classify_polygons.mjs`
+**純 rules-based 政權分類器**，輸出 `public/maps/polygon-classifications.json`。
+
+對 historical-states.geojson 中每個 unique polygon name 判定 `is_state: bool`，標準=「至少酋邦／城邦／建立王權的遊牧帝國」。5 層判定見上。每加新國家／文化群到 KNOWN_STATES / KNOWN_NON_STATES 後重跑：
+```bash
+node scripts/classify_polygons.mjs   # 即時，~1 秒
+```
+
+要修「某 polygon 顯不顯示」：
+- 想顯示 → 加進 `KNOWN_STATES` set
+- 想不顯示 → 加進 `KNOWN_NON_STATES` set
+
+### 6. `scripts/translate_polygon_names_gemini.py`
 **Gemini batch 翻譯 polygon 名 → 繁體中文**，輸出 `public/maps/polygon-names-zh.json`。
 
 流程：
