@@ -222,9 +222,9 @@ const PAD     = 50
 const JESUS_W = 110
 const JESUS_H = 36
 
-const APO_W   = 92    // 16 cards * 92 = 1472 + gaps → ~1610px wide row
+const APO_W   = 92    // 16 cards * 92 + 15 * 24 = 1832 px row
 const APO_H   = 36
-const APO_HG  = 8
+const APO_HG  = 24    // (was 8) doubled+ per user spec — clearer separation between apostles
 
 const SEE_W   = 200
 const SEE_H   = 38
@@ -233,7 +233,7 @@ const BISH_W  = 200
 const BISH_H  = 26
 const BISH_VG = 4
 
-const SPINE_HG = 30   // gap between adjacent spine columns
+const SPINE_HG = 90   // (was 30) wider gap between spine columns; matches biblical-tree 子嗣線 spacing
 
 const BRANCH_W   = 190
 const BRANCH_H   = 30
@@ -618,7 +618,7 @@ function cardClass(n: LNode): string {
 const viewportRef = ref<HTMLDivElement | null>(null)
 const panX = ref(0)
 const panY = ref(0)
-const zoom = ref(0.9)
+const zoom = ref(1)
 const isDragging = ref(false)
 const dragStart = ref({ x: 0, y: 0, panX: 0, panY: 0 })
 
@@ -666,6 +666,15 @@ function fitAll() {
   panY.value = 20
 }
 
-onMounted(() => { nextTick(() => fitAll()) })
-watch(() => props.graph, () => { nextTick(() => fitAll()) })
+// Default: 100% zoom + center horizontally on Jesus card. User can click 「定位全圖」for fit-to-screen.
+function centerOnJesus() {
+  const rect = viewportRef.value?.getBoundingClientRect()
+  if (!rect) return
+  const c = cv.value
+  zoom.value = 1
+  panX.value = (rect.width - c.w) / 2
+  panY.value = 20
+}
+onMounted(() => { nextTick(centerOnJesus) })
+watch(() => props.graph, () => { nextTick(centerOnJesus) })
 </script>
