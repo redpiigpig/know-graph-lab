@@ -76,10 +76,16 @@ const APOSTLES: Array<{
 //   亞述       多馬
 type SpineKey = 'rome' | 'constantinople' | 'alexandria' | 'antioch' | 'jerusalem' | 'armenia' | 'assyria'
 
+// `primaryChurches` is for continuous time-sequential succession (e.g.
+//   羅馬: 未分裂教會 → 天主教 is one chronological line, no overlap).
+// `rivalChurches` is for parallel rival successions that split off and
+//   should be rendered as a separate split branch, NOT merged into the spine
+//   (e.g. 東方教會（亞述） split from 古代東方教會 in 1968 — both exist today).
 const SPINE_DEFS: Array<{
   key: SpineKey
   see_zh: string
   primaryChurches: string[]
+  rivalChurches?: string[]
   primaryApostleId: string
   secondaryApostleId?: string
   color: string
@@ -96,7 +102,8 @@ const SPINE_DEFS: Array<{
     primaryApostleId: 'ap_james_just',                                    color: '#16a34a' },
   { key: 'armenia',        see_zh: '埃奇米亞津',     primaryChurches: ['亞美尼亞使徒教會'],
     primaryApostleId: 'ap_thaddaeus', secondaryApostleId: 'ap_bartholomew', color: '#9333ea' },
-  { key: 'assyria',        see_zh: '塞琉西亞—泰西封', primaryChurches: ['古代東方教會', '東方教會（亞述）'],
+  { key: 'assyria',        see_zh: '塞琉西亞—泰西封', primaryChurches: ['古代東方教會'],
+    rivalChurches: ['東方教會（亞述）'],
     primaryApostleId: 'ap_thomas',                                        color: '#475569' },
 ]
 
@@ -326,6 +333,47 @@ export default defineEventHandler(async (event) => {
         })
         queue.push({ seeId: k.id, spineKey })
       }
+    }
+  }
+
+  // 5b. Synthetic split branches for `rivalChurches` (e.g. 東方教會（亞述） vs 古代東方教會 in assyria spine)
+  //    These are parallel-existing rival successions on the same see_zh that must NOT be merged
+  //    into the spine line (would interleave by succession_number and look broken).
+  for (const def of SPINE_DEFS) {
+    if (!def.rivalChurches || def.rivalChurches.length === 0) continue
+    const sp = spines.find(s => s.key === def.key)
+    if (!sp || !sp.see) continue
+
+    for (const rivalChurch of def.rivalChurches) {
+      const rivalBishopRows = bishopsBySeeChurch.get(`${def.see_zh}|${rivalChurch}`) ?? []
+      if (rivalBishopRows.length === 0) continue
+
+      // Find a see row for this (see_zh, church) pair to use as the branch identity.
+      // If none exists, synthesize an id from the rivalChurch name.
+      const rivalSee = sees.find(s => s.see_zh === def.see_zh && s.church === rivalChurch)
+      const branchId = rivalSee?.id ?? `synth_${def.key}_${rivalChurch}`
+
+      // The split year = the earliest year this rival has its own succession.
+      // Prefer rivalBishopRows[0].start_year over rivalSee.founded_year because the
+      // see record's founded_year often refers to the ancient see (e.g. 310 for
+      // 塞琉西亞—泰西封 itself), not the split moment (1976 for the rival line).
+      const foundedYear = (rivalBishopRows[0]?.start_year ?? null) ?? rivalSee?.founded_year ?? null
+      const parentBishopId = findBishopAtYear(sp.see as SeeRow, foundedYear)
+
+      branches.push({
+        id: branchId,
+        see_zh: def.see_zh,
+        name_zh: rivalSee?.name_zh ?? rivalChurch,
+        name_en: rivalSee?.name_en ?? null,
+        church: rivalChurch,
+        tradition: rivalSee?.tradition ?? '',
+        founded_year: foundedYear,
+        parent_see_id: sp.see.id,
+        parent_spine_key: sp.key,
+        parent_bishop_id: parentBishopId,
+        is_split: true,
+        bishops: rivalBishopRows.map(mapBishop),
+      })
     }
   }
 
