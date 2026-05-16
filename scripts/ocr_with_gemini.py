@@ -890,6 +890,9 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False,
 
         if result["status"] == "ok":
             ok += 1
+            # Successful book = reset the oversized streak so a future
+            # oversized-Haiku-429 isn't paired with one from before this win.
+            consecutive_oversized_quota = 0
         else:
             err = result["error"]
             failed.append((b["title"], err))
