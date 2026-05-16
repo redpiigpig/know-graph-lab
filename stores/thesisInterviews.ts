@@ -49,7 +49,7 @@ export const useThesisInterviewsStore = defineStore('thesisInterviews', () => {
     { id: 'xinyu', name: '釋心宇法師', role: '佛教弘誓學院', date: '2024.01.16', category: '法師', filename: '01.16 釋心宇法師口述訪談紀錄' },
     { id: 'yinyue', name: '釋印悅法師', role: '《弘誓》雙月刊總編輯、學務主任', date: '2024.01.16', category: '法師', filename: '01.16 釋印悅法師口述訪談紀錄' },
     { id: 'xinhao', name: '釋心皓法師', role: '弘誓僧團住持、弘誓文教基金會財務主任', date: '2024.01.17', category: '法師', filename: '01.17 釋心皓法師口述訪談紀錄' },
-    { id: 'jianan', name: '釋見岸法師', role: '佛教弘誓學院法師', date: '2024.05.11', category: '法師', filename: '05.11 釋見岸法師口述訪談紀錄' },
+    { id: 'jianan', name: '釋見岸法師', role: '法印講堂住持、弘誓文教基金會董事長', date: '2024.05.11', category: '法師', filename: '05.11 釋見岸法師口述訪談紀錄' },
     { id: 'changlei', name: '釋長叡法師', role: '台北市中山區慧日講堂住持', date: '2024.06.17', category: '法師', filename: '06.17 釋長叡法師口述訪談紀錄' },
     { id: 'xinqian', name: '釋心謙法師', role: '佛教弘誓學院法師', date: '2025.03.01', category: '法師', filename: '03.01 釋心謙法師口述訪談紀錄' },
     { id: 'xinxuan', name: '釋心玄法師', role: '玄奘大學宗教與文化學系', date: '2025.03.15', category: '法師', filename: '03.15 釋心玄法師口述訪談紀錄' },
@@ -81,8 +81,6 @@ export const useThesisInterviewsStore = defineStore('thesisInterviews', () => {
   // （網站可能已有手動整理過的逐字稿，但 Drive 上欠缺正式檔）
   const driveMissing = ref<PendingInterview[]>([
     // 只有錄音 m4a，連逐字稿草稿都還沒有
-    { id: 'jianan', name: '釋見岸法師', role: '佛教弘誓學院法師', date: '2024.05.11', category: '法師',
-      driveFolder: '2024.05.11 釋見岸法師訪談', has: ['outline', 'audio', 'photo'] },
     { id: 'zhanxk', name: '詹錫奎先生', role: '動物保護運動人士', date: '2024.05.23', category: '社運界',
       driveFolder: '2024.05.23 詹錫奎先生訪談', has: ['outline', 'audio', 'photo'] },
     { id: 'zhuzh', name: '朱增宏先生', role: '台灣動物社會研究會創辦人', date: '2024.05.28', category: '社運界',
