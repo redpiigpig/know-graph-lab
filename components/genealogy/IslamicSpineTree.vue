@@ -383,9 +383,27 @@ const cv = computed(() => {
     if (!p) return null
     placedPersonIds.add(personId)
     const raw = p.data.name as string
-    const descCount = isSpine ? 0 : countDescendants(personId)
+    let descCount = isSpine ? 0 : countDescendants(personId)
     const isExpanded = expandedSet.has(personId)
-    const hasSubtree = !isSpine && descCount >= SUBTREE_MIN
+    let hasSubtree = !isSpine && descCount >= SUBTREE_MIN
+    // 妻子的 children 若被丈夫 children 涵蓋 → 不顯示 ▼（族譜慣例「子嗣放男方」）
+    // e.g., 麗百加(利百加, ▼37) 跟 易司哈格(以撒, ▼38) 雙顯示重複，保留 易司哈格 一邊
+    const isFemale = p.data.gender === '女' || p.data.gender === 'female'
+    if (hasSubtree && isFemale) {
+      const myKids = ch.get(personId) ?? []
+      for (const spId of sp.get(personId) ?? []) {
+        const spP = pMap.get(spId)
+        if (!spP) continue
+        const spIsMale = spP.data.gender === '男' || spP.data.gender === 'male'
+        if (!spIsMale) continue
+        const spKids = ch.get(spId) ?? []
+        if (myKids.length > 0 && myKids.every(k => spKids.includes(k))) {
+          hasSubtree = false
+          descCount = 0
+          break
+        }
+      }
+    }
     const ln: LNode = {
       id: `n:${personId}`,
       personId,
@@ -783,12 +801,12 @@ const cv = computed(() => {
       !spineMembership.has(c) && !placedPersonIds.has(c)
     )
     if (siblings.length === 0) continue
-    // Start cursorX after any previously-placed node that extends into row i+1 or later.
-    // 防止 易司哈格 subtree (gen 21 起 27 代) 與 gen 48 spine siblings X 碰撞
-    const myRowOrBelow = myY  // row Y for siblings (i+1)
+    // 防止跨 subtree X 碰撞 — 只看 SAME ROW 的 nodes
+    // (之前用「row myY 或以下」太寬，會被遙遠 chain 的 X 拖很遠；
+    //  例如 易司哈格 subtree gen 21 起 27 代展開時把 納比特 推到極右)
     let cursorX = SPINE_X + NW + HG * 3
     for (const n of nodes) {
-      if (n.y >= myRowOrBelow - 1 && n.x + NW > cursorX) {
+      if (Math.abs(n.y - myY) < 1 && n.x + NW > cursorX) {
         cursorX = n.x + NW + HG
       }
     }
