@@ -178,14 +178,14 @@ defineOptions({ name: 'BiblicalSpineTree' })
 
 interface BreadcrumbItem { id: string; name: string }
 
-type BrothersView = 'protestant' | 'early_consensus' | 'orthodox' | 'catholic'
+type BrothersView = 'protestant' | 'early_consensus' | 'orthodox' | 'catholic' | 'apocrypha' | 'rabbinic'
 
 const props = defineProps<{
   nodes: any[]
   edges: any[]
   rootId?: string                   // when set: recursive single-spine mode
   breadcrumb?: BreadcrumbItem[]     // navigation crumbs (recursive only)
-  brothersView?: BrothersView       // 耶穌弟兄詮釋（馬可 6:3）
+  brothersView?: BrothersView       // 耶穌弟兄詮釋（馬可 6:3）+ apocrypha / rabbinic layer view
 }>()
 const emit = defineEmits<{
   selectPerson:        [id: string]
@@ -203,6 +203,8 @@ const brothersOptions: Array<{ value: BrothersView; label: string; activeColor: 
   { value: 'early_consensus', label: '早期教會', activeColor: 'text-orange-700',   tooltip: '早期教會（Jerome 393 前）：前妻撒羅米所生' },
   { value: 'orthodox',        label: '東方',     activeColor: 'text-emerald-700',  tooltip: '東方教會（Epiphanian）：約瑟前妻撒羅米所生' },
   { value: 'catholic',        label: '天主教',   activeColor: 'text-purple-700',   tooltip: '天主教（Hieronymian）：馬利亞-革羅罷之子（表親）' },
+  { value: 'apocrypha',       label: '次經',     activeColor: 'text-teal-700',     tooltip: '第二聖殿時期 — 次經/偽經人物（瑪加比、托比特等）為主視角' },
+  { value: 'rabbinic',        label: '拉比',     activeColor: 'text-blue-700',     tooltip: '拉比傳統 — 米示拿/塔木德補白人物（撒拉之姊以斯卡、夏甲別名等）為主視角' },
 ]
 
 // ── Layout constants ──────────────────────────────────────────────────
@@ -1393,11 +1395,18 @@ const cv = computed(() => {
       function wifeReachOnSide(spineKidId: string, side: 'left' | 'right'): number {
         const spouses = (sp.get(spineKidId) ?? []).filter(w => !rowOf.has(w))
         if (spouses.length === 0) return 0
+        // 與 placeOne(line 1082-1161) 同邏輯：預設 wifeSide='left'，
+        // 若 spine kid 有 cross-spine 配偶（如 約瑟↔馬利亞）則翻面。
+        // 之前錯誤地用 spineKidId 自己的 membership 決定 → 約瑟 (spine A 末端) 的妻
+        // 撒羅米 在 placeOne 走 left 但 wifeReachOnSide 回 0 → 革羅罷 被擺到撒羅米
+        // 重疊位置 (Task 4E-3 ghost card)。
         let kidWifeSide: 'left' | 'right' = 'left'
-        if (isDualMode.value) {
-          const sk = membership.get(spineKidId)
-          if (sk === 'A') kidWifeSide = 'right'
-          else if (sk === 'B') kidWifeSide = 'left'
+        for (const wid of (sp.get(spineKidId) ?? [])) {
+          if (rowOf.has(wid)) {
+            const csk = membership.get(wid)
+            if (csk === 'A')      kidWifeSide = 'right'
+            else if (csk === 'B') kidWifeSide = 'left'
+          }
         }
         if (kidWifeSide !== side) return 0
         // Each spine kid's wife claims one (NW + WIFE_HG) marriage slot.

@@ -15,10 +15,14 @@ export default defineEventHandler(async (event) => {
   // rabbinic 傳統人物永遠顯示（不衝突）。
   const q = getQuery(event)
   const viewRaw = String(q.view ?? 'protestant').toLowerCase()
-  const view: 'protestant' | 'catholic' | 'orthodox' | 'early_consensus' =
+  // apocrypha / rabbinic view = 聖經 protestant 視角，但 widget UI 用「次經主題」/
+  // 「拉比主題」做為視覺強調入口；後端 tradition allowlist 與 JSONB merge 行為一致。
+  const view: 'protestant' | 'catholic' | 'orthodox' | 'early_consensus' | 'apocrypha' | 'rabbinic' =
     viewRaw === 'catholic'        ? 'catholic' :
     viewRaw === 'orthodox'        ? 'orthodox' :
     viewRaw === 'early_consensus' ? 'early_consensus' :
+    viewRaw === 'apocrypha'       ? 'apocrypha' :
+    viewRaw === 'rabbinic'        ? 'rabbinic' :
                                     'protestant'
 
   const allowedTraditions = new Set<string>(['biblical', 'rabbinic', 'early_consensus', 'apocrypha'])

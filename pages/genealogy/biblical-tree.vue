@@ -55,8 +55,8 @@ async function getToken() {
 // 耶穌弟兄詮釋（馬可 6:3）— 4 個選項：
 //   protestant（字面）/ early_consensus（前妻說早期版）/ orthodox（前妻說）/ catholic（表親說）
 // 局部按鈕在族譜圖 widget 內；URL 同步 ?view=
-type BrothersView = 'protestant' | 'early_consensus' | 'orthodox' | 'catholic'
-const ALLOWED = ['protestant', 'early_consensus', 'orthodox', 'catholic']
+type BrothersView = 'protestant' | 'early_consensus' | 'orthodox' | 'catholic' | 'apocrypha' | 'rabbinic'
+const ALLOWED = ['protestant', 'early_consensus', 'orthodox', 'catholic', 'apocrypha', 'rabbinic']
 const brothersView = ref<BrothersView>(
   (ALLOWED.includes(route.query.view as string) ? route.query.view : 'protestant') as BrothersView
 )
