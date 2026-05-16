@@ -26,26 +26,61 @@
       <div v-if="loading" class="text-stone-400 text-sm">載入中…</div>
       <div v-else-if="errMsg" class="text-red-500 text-sm">{{ errMsg }}</div>
 
-      <div v-else class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
-        <NuxtLink
-          v-for="m in MONTHS"
-          :key="m.key"
-          :to="`/photos/${year}/${m.key}`"
-          class="month-card"
-          :class="countOf(m.key) === 0 && 'month-card--empty'"
-        >
-          <div class="flex items-baseline gap-1">
-            <span class="month-card__num">{{ Number(m.key) }}</span>
-            <span class="month-card__suffix">月</span>
+      <template v-else>
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
+          <NuxtLink
+            v-for="m in MONTHS"
+            :key="m.key"
+            :to="`/photos/${year}/${m.key}`"
+            class="month-card"
+            :class="countOf(m.key) === 0 && 'month-card--empty'"
+          >
+            <div class="flex items-baseline gap-1">
+              <span class="month-card__num">{{ Number(m.key) }}</span>
+              <span class="month-card__suffix">月</span>
+            </div>
+            <div class="mt-1 text-[10px] tracking-widest uppercase text-stone-500">
+              <span v-if="countOf(m.key) > 0" class="text-stone-700">
+                {{ countOf(m.key).toLocaleString() }}<span class="ml-1">張</span>
+              </span>
+              <span v-else>—</span>
+            </div>
+          </NuxtLink>
+        </div>
+
+        <!-- Special buckets: screenshots & downloads -->
+        <div v-if="screenshots > 0 || downloads > 0" class="mt-8 pt-6 border-t border-stone-300/60">
+          <p class="text-[10px] uppercase tracking-[0.25em] text-stone-500 mb-3">Other</p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+            <NuxtLink
+              v-if="screenshots > 0"
+              :to="`/photos/${year}/screenshots`"
+              class="bucket-card bucket-card--ss"
+            >
+              <div class="flex items-center gap-2">
+                <span class="text-xl">📸</span>
+                <span class="font-serif text-stone-800 text-lg">截圖</span>
+              </div>
+              <div class="mt-1 text-[10px] tracking-widest uppercase text-stone-700">
+                {{ screenshots.toLocaleString() }}<span class="ml-1">張</span>
+              </div>
+            </NuxtLink>
+            <NuxtLink
+              v-if="downloads > 0"
+              :to="`/photos/${year}/downloads`"
+              class="bucket-card bucket-card--dl"
+            >
+              <div class="flex items-center gap-2">
+                <span class="text-xl">🌐</span>
+                <span class="font-serif text-stone-800 text-lg">下載</span>
+              </div>
+              <div class="mt-1 text-[10px] tracking-widest uppercase text-stone-700">
+                {{ downloads.toLocaleString() }}<span class="ml-1">張</span>
+              </div>
+            </NuxtLink>
           </div>
-          <div class="mt-1 text-[10px] tracking-widest uppercase text-stone-500">
-            <span v-if="countOf(m.key) > 0" class="text-stone-700">
-              {{ countOf(m.key).toLocaleString() }}<span class="ml-1">張</span>
-            </span>
-            <span v-else>—</span>
-          </div>
-        </NuxtLink>
-      </div>
+        </div>
+      </template>
     </div>
   </div>
 </template>
@@ -66,16 +101,24 @@ const MONTHS = [
 const loading = ref(true);
 const errMsg = ref("");
 const months = ref<{ month: string; count: number }[]>([]);
+const screenshots = ref(0);
+const downloads = ref(0);
 const countOf = (m: string) => months.value.find((x) => x.month === m)?.count ?? 0;
-const yearTotal = computed(() => months.value.reduce((a, b) => a + b.count, 0));
+const yearTotal = computed(() =>
+  months.value.reduce((a, b) => a + b.count, 0) + screenshots.value + downloads.value
+);
 const activeMonths = computed(() => months.value.filter((m) => m.count > 0).length);
 
 onMounted(async () => {
   try {
-    const r = await authedFetch<{ months: { month: string; count: number }[] }>(
-      `/api/photos/${year.value}/months`
-    );
+    const r = await authedFetch<{
+      months: { month: string; count: number }[];
+      screenshots: number;
+      downloads: number;
+    }>(`/api/photos/${year.value}/months`);
     months.value = r.months || [];
+    screenshots.value = r.screenshots || 0;
+    downloads.value = r.downloads || 0;
   } catch (e: unknown) {
     errMsg.value = (e as { message?: string })?.message ?? String(e);
   } finally {
@@ -85,7 +128,8 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-.month-card {
+.month-card,
+.bucket-card {
   position: relative;
   display: block;
   background: #fdfbf6;
@@ -96,7 +140,8 @@ onMounted(async () => {
   color: inherit;
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
-.month-card:hover {
+.month-card:hover,
+.bucket-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 22px -14px rgba(60, 30, 0, 0.18);
   border-color: rgb(168 162 158 / 0.9);
@@ -122,4 +167,6 @@ onMounted(async () => {
   font-size: 0.85rem;
   color: rgb(87 83 78);
 }
+.bucket-card--ss { background: #fbf6ee; }
+.bucket-card--dl { background: #f4f1eb; }
 </style>

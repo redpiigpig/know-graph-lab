@@ -7,20 +7,24 @@
     </AppHeader>
 
     <div class="max-w-7xl mx-auto px-6 py-14">
-      <nav class="text-[11px] uppercase tracking-[0.2em] text-stone-500 mb-3">
+      <nav class="text-[10px] uppercase tracking-[0.2em] text-stone-500 mb-3">
         <NuxtLink to="/photos" class="hover:text-stone-900">照片庫</NuxtLink>
         <span class="mx-2">/</span>
         <NuxtLink :to="`/photos/${year}`" class="hover:text-stone-900">{{ year }}</NuxtLink>
         <span class="mx-2">/</span>
-        <span class="text-stone-700">{{ Number(month) }} 月</span>
+        <span class="text-stone-700">{{ headerLabel }}</span>
       </nav>
 
       <header class="mb-10 flex items-end justify-between flex-wrap gap-4 border-b border-stone-300/60 pb-6">
-        <div class="flex items-end gap-4">
-          <h1 class="font-serif text-6xl text-stone-900 leading-none tracking-tight">
-            {{ Number(month) }}<span class="text-2xl text-stone-500 ml-1">月</span>
+        <div class="flex items-end gap-3">
+          <h1 v-if="isMonth" class="font-serif text-6xl text-stone-900 leading-none tracking-tight">
+            {{ Number(segment) }}<span class="text-2xl text-stone-500 ml-1">月</span>
           </h1>
-          <p class="text-stone-500 text-sm pb-2">{{ year }} ／ {{ monthName }}</p>
+          <h1 v-else class="font-serif text-5xl text-stone-900 leading-none tracking-tight flex items-center gap-3">
+            <span class="text-4xl">{{ sourceIcon }}</span>{{ headerLabel }}
+          </h1>
+          <p v-if="isMonth" class="text-stone-500 text-sm pb-2">{{ year }} ／ {{ monthName }}</p>
+          <p v-else class="text-stone-500 text-sm pb-2">{{ year }} 年</p>
         </div>
         <div v-if="!loading" class="text-right font-serif">
           <div class="text-3xl text-stone-800 leading-none">{{ files.length.toLocaleString() }}</div>
@@ -32,7 +36,7 @@
       <div v-else-if="errMsg" class="text-red-500 text-sm">{{ errMsg }}</div>
       <div v-else-if="!files.length" class="py-20 text-center">
         <div class="font-serif text-2xl text-stone-300 mb-2">— 空 —</div>
-        <div class="text-stone-500 text-sm">這個月還沒有照片</div>
+        <div class="text-stone-500 text-sm">這裡沒有檔案</div>
       </div>
 
       <div v-else class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
@@ -54,6 +58,10 @@
             <div class="text-3xl">{{ f.kind === 'video' ? '🎬' : '📄' }}</div>
             <div class="mt-1 text-[10px] uppercase tracking-widest">{{ f.ext.replace('.', '') }}</div>
           </div>
+          <!-- Source badge top-right -->
+          <span class="photo-tile__badge" :title="sourceTitle(f.source)">
+            {{ tileIcon(f.kind, f.source) }}
+          </span>
           <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent text-white text-[10px] px-2 py-1.5 truncate text-left opacity-0 group-hover:opacity-100 transition">
             {{ f.name }}
           </div>
@@ -112,6 +120,7 @@ definePageMeta({ middleware: 'auth' });
 interface PhotoFile {
   name: string;
   kind: "image" | "video";
+  source: "photo" | "screenshot" | "download";
   ext: string;
   size: number;
   mtime: number;
@@ -120,11 +129,24 @@ interface PhotoFile {
 
 const route = useRoute();
 const year = computed(() => String(route.params.year || ""));
-const month = computed(() => String(route.params.month || ""));
-useHead({ title: () => `${year.value}.${month.value} — 辰瑋相片` });
+const segment = computed(() => String(route.params.month || ""));
+const isMonth = computed(() => /^(0[1-9]|1[0-2])$/.test(segment.value));
+const headerLabel = computed(() =>
+  isMonth.value ? `${Number(segment.value)} 月`
+  : segment.value === "screenshots" ? "截圖"
+  : segment.value === "downloads" ? "下載" : segment.value
+);
+const sourceIcon = computed(() =>
+  segment.value === "screenshots" ? "📸"
+  : segment.value === "downloads" ? "🌐" : ""
+);
+
+useHead({ title: () => `${year.value} ${headerLabel.value} — 辰瑋相片` });
 
 const MONTH_NAMES = ["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"];
-const monthName = computed(() => MONTH_NAMES[Number(month.value) - 1] || "");
+const monthName = computed(() =>
+  isMonth.value ? (MONTH_NAMES[Number(segment.value) - 1] || "") : ""
+);
 
 const loading = ref(true);
 const errMsg = ref("");
@@ -134,6 +156,17 @@ const current = computed(() => (viewerIndex.value === null ? null : files.value[
 
 function renderableImage(ext: string) {
   return [".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif", ".bmp"].includes(ext);
+}
+function tileIcon(kind: string, source: string) {
+  if (source === "screenshot") return "📸";
+  if (source === "download") return "🌐";
+  if (kind === "video") return "🎬";
+  return "📱"; // photos in YYYY.MM — assume phone (predominant case)
+}
+function sourceTitle(source: string) {
+  if (source === "screenshot") return "螢幕截圖";
+  if (source === "download") return "網路下載";
+  return "手機／相機拍攝";
 }
 function prev() {
   if (viewerIndex.value === null) return;
@@ -154,7 +187,7 @@ function onKey(e: KeyboardEvent) {
 onMounted(async () => {
   window.addEventListener("keydown", onKey);
   try {
-    const r = await authedFetch<{ files: PhotoFile[] }>(`/api/photos/${year.value}/${month.value}/files`);
+    const r = await authedFetch<{ files: PhotoFile[] }>(`/api/photos/${year.value}/${segment.value}/files`);
     files.value = r.files || [];
   } catch (e: unknown) {
     errMsg.value = (e as { message?: string })?.message ?? String(e);
@@ -184,5 +217,21 @@ onBeforeUnmount(() => window.removeEventListener("keydown", onKey));
 .photo-tile:focus-visible {
   outline: 2px solid rgb(217 119 6);
   outline-offset: 2px;
+}
+.photo-tile__badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  z-index: 2;
+  pointer-events: none;
 }
 </style>

@@ -10,10 +10,13 @@ const IMAGE_EXTS = new Set([
 const VIDEO_EXTS = new Set([".mp4", ".mov", ".m4v", ".webm", ".mkv"]);
 
 export type PhotoKind = "image" | "video";
+export type PhotoSource = "photo" | "screenshot" | "download";
+export type Segment = string; // "01"-"12" | "screenshots" | "downloads"
 
 export interface PhotoFile {
   name: string;
   kind: PhotoKind;
+  source: PhotoSource;
   ext: string;
   size: number;
   mtime: number;
@@ -37,17 +40,17 @@ function sign(payload: string): string {
   return crypto.createHmac("sha256", signingSecret()).update(payload).digest("base64url");
 }
 
-export function signFileUrl(year: string, month: string, name: string, ttlSec = 3600): string {
+export function signFileUrl(year: string, segment: Segment, name: string, ttlSec = 3600): string {
   const exp = Math.floor(Date.now() / 1000) + ttlSec;
-  const sig = sign(`${year}|${month}|${name}|${exp}`);
-  const q = new URLSearchParams({ y: year, m: month, n: name, exp: String(exp), sig });
+  const sig = sign(`${year}|${segment}|${name}|${exp}`);
+  const q = new URLSearchParams({ y: year, m: segment, n: name, exp: String(exp), sig });
   return `/api/photos/file?${q.toString()}`;
 }
 
-export function verifyFileSig(year: string, month: string, name: string, exp: string, sig: string): boolean {
+export function verifyFileSig(year: string, segment: Segment, name: string, exp: string, sig: string): boolean {
   const expNum = Number(exp);
   if (!expNum || expNum < Math.floor(Date.now() / 1000)) return false;
-  const expected = sign(`${year}|${month}|${name}|${expNum}`);
+  const expected = sign(`${year}|${segment}|${name}|${expNum}`);
   if (expected.length !== sig.length) return false;
   return crypto.timingSafeEqual(Buffer.from(expected), Buffer.from(sig));
 }
@@ -88,8 +91,28 @@ export async function listMonths(year: string): Promise<string[]> {
   return months;
 }
 
-export async function countMonth(year: string, month: string): Promise<number> {
-  const dir = monthDir(year, month);
+/** Resolve the absolute folder for a (year, segment) tuple. */
+export function bucketDir(year: string, segment: Segment): string {
+  if (!/^\d{4}$/.test(year)) {
+    throw createError({ statusCode: 400, message: "Invalid year" });
+  }
+  const yearRoot = path.join(getPhotosRoot(), `${year}相片`);
+  if (/^(0[1-9]|1[0-2])$/.test(segment)) {
+    return path.join(yearRoot, `${year}.${segment}`);
+  }
+  if (segment === "screenshots") return path.join(yearRoot, `${year}截圖`);
+  if (segment === "downloads") return path.join(yearRoot, `${year}下載`);
+  throw createError({ statusCode: 400, message: `Invalid segment: ${segment}` });
+}
+
+export function sourceForSegment(segment: Segment): PhotoSource {
+  if (segment === "screenshots") return "screenshot";
+  if (segment === "downloads") return "download";
+  return "photo";
+}
+
+export async function countBucket(year: string, segment: Segment): Promise<number> {
+  const dir = bucketDir(year, segment);
   const entries = await fs.readdir(dir, { withFileTypes: true }).catch(() => []);
   let n = 0;
   for (const e of entries) {
@@ -98,15 +121,14 @@ export async function countMonth(year: string, month: string): Promise<number> {
   return n;
 }
 
-export function monthDir(year: string, month: string): string {
-  if (!/^\d{4}$/.test(year) || !/^(0[1-9]|1[0-2])$/.test(month)) {
-    throw createError({ statusCode: 400, message: "Invalid year/month" });
-  }
-  return path.join(getPhotosRoot(), `${year}相片`, `${year}.${month}`);
-}
+/** @deprecated use bucketDir */
+export const monthDir = bucketDir;
+/** @deprecated use countBucket */
+export const countMonth = countBucket;
 
-export async function listFiles(year: string, month: string): Promise<PhotoFile[]> {
-  const dir = monthDir(year, month);
+export async function listFiles(year: string, segment: Segment): Promise<PhotoFile[]> {
+  const dir = bucketDir(year, segment);
+  const source = sourceForSegment(segment);
   const entries = await fs.readdir(dir, { withFileTypes: true }).catch(() => []);
   const out: PhotoFile[] = [];
   for (const e of entries) {
@@ -117,18 +139,19 @@ export async function listFiles(year: string, month: string): Promise<PhotoFile[
     out.push({
       name: e.name,
       kind: meta.kind,
+      source,
       ext: meta.ext,
       size: stat.size,
       mtime: stat.mtimeMs,
-      url: signFileUrl(year, month, e.name),
+      url: signFileUrl(year, segment, e.name),
     });
   }
   out.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
   return out;
 }
 
-export function resolveFilePath(year: string, month: string, name: string): string {
-  const base = monthDir(year, month);
+export function resolveFilePath(year: string, segment: Segment, name: string): string {
+  const base = bucketDir(year, segment);
   const resolved = path.resolve(base, name);
   if (!resolved.startsWith(path.resolve(base) + path.sep) && resolved !== path.resolve(base)) {
     throw createError({ statusCode: 400, message: "Path traversal" });
