@@ -523,6 +523,7 @@ const cv = computed(() => {
     leftX: number,
     vis: Set<string>,
     minGen: number = 0,
+    pathFilter: Set<string> | null = null,
   ): { nodes: LNode[]; drops: VDrop[]; hbars: HBar[]; marriages: MLine[]; rootCX: number; maxX: number; maxY: number } {
     if (vis.has(rootId)) {
       return { nodes: [], drops: [], hbars: [], marriages: [], rootCX: leftX + NW / 2, maxX: leftX + NW, maxY: 0 }
@@ -531,6 +532,12 @@ const cv = computed(() => {
     const p = pMap.get(rootId)
     if (!p) {
       return { nodes: [], drops: [], hbars: [], marriages: [], rootCX: leftX + NW / 2, maxX: leftX + NW, maxY: 0 }
+    }
+    // pathFilter: 若 root 不在白名單 → 整個 subtree 不渲染（連 root 都不畫）。
+    // 用於 force-expand 路徑限定 — 例如 利未 force-expand 但只想看 Moses 鏈，
+    // 不想把整條祭司線（亞倫→大祭司→馬加比 60+ 代）一起展開。
+    if (pathFilter && !pathFilter.has(p.data.name)) {
+      return { nodes: [], drops: [], hbars: [], marriages: [], rootCX: leftX + NW / 2, maxX: leftX, maxY: 0 }
     }
     const dbGen = p.data.generationNum || 1
     // 視覺世代 = max(DB gen, 父代+1)。處理像 拉班(gen22) → 利亞(gen22) 這種
@@ -545,9 +552,14 @@ const cv = computed(() => {
     // daughter herself shows as a leaf in her father's tree, but her descendants
     // belong to husband's family tree and shouldn't be counted/drawn here.
     const isMarriedOut = renderedAsSpouseOnSpine.has(rootId)
+    const passesPathFilter = (cid: string): boolean => {
+      if (!pathFilter) return true
+      const cn = pMap.get(cid)?.data.name
+      return !!cn && pathFilter.has(cn)
+    }
     const kids = rowOf.has(rootId) || isMarriedOut
       ? []  // spine node or married-out daughter — render as leaf
-      : effectiveChildIds(rootId).filter(c => !vis.has(c))
+      : effectiveChildIds(rootId).filter(c => !vis.has(c) && passesPathFilter(c))
 
     // Wives to render alongside this subtree root (e.g., 以底特 next to 羅得 in
     // 哈蘭 expansion). Skip wives already drawn on the main chart (spine妻位).
@@ -585,7 +597,7 @@ const cv = computed(() => {
       let tempCursor = 0
       const results: IncestGroup['kidResults'] = []
       for (const wk of wifeKids) {
-        const r = layoutSubtree(wk, tempCursor, vis, gen + 1)
+        const r = layoutSubtree(wk, tempCursor, vis, gen + 1, pathFilter)
         results.push(r)
         tempCursor = r.maxX + HG
       }
@@ -713,7 +725,7 @@ const cv = computed(() => {
     const childResults: ReturnType<typeof layoutSubtree>[] = []
     let maxY = myY + NH
     for (const k of effectiveKids) {
-      const r = layoutSubtree(k, cursorX, vis, gen + 1)
+      const r = layoutSubtree(k, cursorX, vis, gen + 1, pathFilter)
       childResults.push(r)
       cursorX = r.maxX + HG
       maxY = Math.max(maxY, r.maxY)
@@ -804,6 +816,7 @@ const cv = computed(() => {
   function layoutExpansion(
     rootIds: string[],
     centerX: number,
+    pathFilter: Set<string> | null = null,
   ): { nodes: LNode[]; drops: VDrop[]; hbars: HBar[]; marriages: MLine[]; bbox: ExpansionBox; rowBboxes: ExpansionBox[]; rootCXs: number[]; firstY: number } {
     const vis = new Set<string>()
     let cursorX = 0
@@ -815,7 +828,8 @@ const cv = computed(() => {
     const rootCXs: number[] = []
     let firstY = 0
     for (const rid of rootIds) {
-      const r = layoutSubtree(rid, cursorX, vis)
+      const r = layoutSubtree(rid, cursorX, vis, 0, pathFilter)
+      if (r.nodes.length === 0) continue  // pathFilter 剔除 — 跳過空 subtree
       allNodes.push(...r.nodes)
       allDrops.push(...r.drops)
       allHbars.push(...r.hbars)
@@ -1489,9 +1503,20 @@ const cv = computed(() => {
         '斯多蘭（亞拿之父）',
         '蘇比（亞拿之姊）',
         '以利米勒',
+        '利未',  // gen 23: Moses chain — 哥轄→暗蘭→{摩西,亞倫,米利暗}
+      ])
+      // 對 force-expand 進來的 kid 限定 subtree path — 只展開 path 上的 descendants。
+      // 例：利未 force-expand 會把整條祭司線（亞倫→大祭司→馬加比 60+ 代）也展開，
+      // 用 path 限定只到 摩西/亞倫/米利暗。亞倫 以下需另外用 ▼ 點開（見 expandedSubclans）。
+      const FORCE_EXPAND_PATH = new Map<string, Set<string>>([
+        ['利未', new Set(['哥轄', '暗蘭', '摩西', '亞倫', '米利暗'])],
       ])
       const forceExpand = FORCE_EXPAND_NAMES.has(kp.data.name)
-      const expanded = forceExpand || expandedClans.value.has(kid)
+      const userExpanded = expandedClans.value.has(kid)
+      const expanded = forceExpand || userExpanded
+      // user 在 expandedClans 內表示「我要看完整」（不論是 ▼ 點開或「展開朝代」按鈕）
+      // → 不套 path filter；否則 force-expand 預設只展 path 上人物
+      const forcePath = (forceExpand && !userExpanded) ? (FORCE_EXPAND_PATH.get(kp.data.name) ?? null) : null
 
       nodes.push({
         id: kid,
@@ -1551,7 +1576,7 @@ const cv = computed(() => {
         // 亞拿 已是 約亞敬 的 spine 妻 → 不要在 expansion 再畫一次）
         const kidChildren = (ch.get(kid) ?? []).filter(c => !rowOf.has(c) && !renderedAsSpouseOnSpine.has(c))
         if (kidChildren.length > 0) {
-          const exp = layoutExpansion(kidChildren, kxVal)
+          const exp = layoutExpansion(kidChildren, kxVal, forcePath)
           nodes.push(...exp.nodes)
           drops.push(...exp.drops)
           hbars.push(...exp.hbars)

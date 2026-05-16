@@ -165,6 +165,24 @@ per user spec：「就約瑟和馬利亞正常生耶穌就好」(commit `b6aac84
 
 ---
 
+## 🛤️ FORCE_EXPAND_PATH — pathFilter 機制（**重要！**）
+
+`FORCE_EXPAND_NAMES` 配 `FORCE_EXPAND_PATH` 用於「想預設展某條鏈但**不**炸到整個 subtree」的場景。例如 利未 force-expand 想看 Moses chain，但他下游有整條祭司線 + 馬加比 + 大希律家（60+ 代）會一起炸。
+
+**設計**：
+- `FORCE_EXPAND_PATH: Map<string, Set<string>>`（[BiblicalSpineTree.vue:1498](../../../components/genealogy/BiblicalSpineTree.vue#L1498) 附近）— key = kid-of-spine 名字，value = 允許渲染的 subtree 人物名字 set
+- `layoutSubtree(rootId, leftX, vis, minGen, pathFilter)` 與 `layoutExpansion(rootIds, centerX, pathFilter)` 加 `pathFilter: Set<string> | null` 參數
+- root 不在 set → 整個 subtree 不渲染（return empty）
+- 遞迴下 kids 也 filter 一遍；wives（placeWives）**不**檢查 pathFilter（讓 約基別/西坡拉 這種「path 上人物的配偶」自然顯示）
+- user expand override：`forcePath = forceExpand && !expandedClans.has(kid) ? FORCE_EXPAND_PATH.get(name) : null` — 點 ▼ 或「🏛️ 展開朝代」會清掉 pathFilter，渲染完整
+
+**現有條目**：
+- `'利未'` → `{哥轄, 暗蘭, 摩西, 亞倫, 米利暗}` — Moses chain
+
+**怎麼新增**：要把 OT 某條深埋的鏈預設可見（例如 Joshua/Caleb），就把 chain 上的 kid-of-spine 名字加進 `FORCE_EXPAND_NAMES`，再到 `FORCE_EXPAND_PATH` 加對應 set 限縮 subtree。
+
+---
+
 ## 🟢 當前狀態快照（2026-05-16，commit `067ed26`）
 
 ### ⚠️ 重要 DB 規則 — **wife.children 必須與 husband.children 對齊**
@@ -199,18 +217,23 @@ per user spec：「就約瑟和馬利亞正常生耶穌就好」(commit `b6aac84
 **截圖位置**：`c:/tmp/biblical_verify/c01-c16-*.png` (16 張)
 **狀態**：以下問題在新 session 處理。每項標明截圖檔與症狀。
 
-### 🔴 P1 — Data bugs（先修）
+### ✅ P1 完成（2026-05-16，commit 後續）
 
-1. **API TRIBE_SEEDS `'流便'` typo → 呂便沒有 R tribe code**
-   - 檔案：`server/api/genealogy/biblical-graph.get.ts:119`
-   - 現況：`['流便', 'R']` 但 DB 雅各.children = "**呂便**、西緬、利未、…"。`exactMap.get('流便')` 永遠 undefined → seedId null → R tribe code 不傳播 → 整支 Reuben line gen labels 顯示 "第 N 代" 而非 "R23/R24/..."
-   - 修：把 `'流便'` 改為 `'呂便'`（或加上 alternative seed）
+1. ~~**API TRIBE_SEEDS `'流便'` typo**~~ — 已預先修好；line 123-124 同時有 `'呂便'` (canonical) 與 `'流便'` (alternative seed)。
 
-2. **OT 重要人物 摩西/亞倫/米利暗 buried 3 levels deep 預設不可見**
-   - 截圖：`c14-moses.png`、`c15-miriam.png` 都 panTo 失敗（panned to Adam）
-   - chain：雅各(spine, gen22) → 利未(non-spine, gen23) → 哥轄(gen24) → 暗蘭(gen25) → 摩西/亞倫/米利暗(gen26)
-   - 預設只到 雅各 + 利未；要看到 摩西，user 需手動點開 利未 ▼ + 哥轄 ▼ + 暗蘭 ▼ (3 次)
-   - 建議修法：把 `利未（雅各之子）`、`哥轄`、`暗蘭` 加進 `FORCE_EXPAND_NAMES`（BiblicalSpineTree.vue line ~1478），讓 Moses chain 預設展開。注意 利未 同名歧義（有 gen 23/43/71 三個 利未）— 需用 disambiguator 比對。
+2. ~~**OT 重要人物 摩西/亞倫/米利暗 預設不可見**~~ — 已用 **path-filter** 修好。`利未` 加進 `FORCE_EXPAND_NAMES`，搭配 `FORCE_EXPAND_PATH` map 限制 subtree 範圍 = `{哥轄, 暗蘭, 摩西, 亞倫, 米利暗}`。`layoutSubtree` / `layoutExpansion` 加 `pathFilter: Set<string> | null` 參數，root 不在 set 就回空。
+   - **遞迴行為**：pathFilter 透過 layoutSubtree 內遞迴 call 傳下去；只過濾 kids，不過濾 wives（`placeWives` 不檢查 pathFilter → 約基別/西坡拉 仍能渲染）。
+   - **覆蓋機制**：user 點 ▼ 或「展開朝代」按鈕（`expandedClans.add(kid)`）→ pathFilter 失效（`forcePath = forceExpand && !userExpanded ? ... : null`），渲染完整祭司線（亞倫→大祭司→馬加比→希律家）。
+   - **驗收**：`c:/tmp/moses-chain-verify.png` — gen 26 row 顯示 西坡拉-摩西-米利暗 + 亞倫，無祭司線溢出。
+
+### ⏳ P1 — 後續（亞倫 nested ▼ toggle）
+
+當前限制：path-filter 把亞倫的descendants（拿答/亞比戶/以利亞撒/大祭司線/馬加比）全砍掉，user 在族譜圖上沒辦法只展亞倫一支 — 要看全祭司線得點「🏛️ 展開朝代」按鈕，會同時展 利未 整支 + 哈拿尼雅 + 以掃 3 條 dynasty。
+
+**建議下次做**：給 expansion-node leaf（如 亞倫，pathFilter 切斷下游）加 nested ▼ toggle，獨立的 `expandedSubclans: Set<string>` ref。在 layoutSubtree 內：
+- 若 rootId in expandedSubclans → 忽略 pathFilter for this subtree（遞迴傳 null）
+- 若 rootId 是 pathFilter leaf 且 DB 還有 children → return node 帶 `hasNestedSubtree: true` + count
+- 點擊 toggle nestedSubclan，render 路徑改走 layoutExpansion 加深一層
 
 ### 🟡 P2 — Layout overlaps
 
@@ -251,11 +274,12 @@ per user spec：「就約瑟和馬利亞正常生耶穌就好」(commit `b6aac84
 
 ### 建議 P1+P2 fix 優先序
 
-下次 session：
-1. Fix #1（typo `流便→呂便`）— 1 行 code 改動
-2. Fix #2（Moses chain forceExpand）— 加 3 個 name 到 FORCE_EXPAND_NAMES
-3. Re-screenshot c14/c15 驗收，並順便看 c09 利未 expand 是否能抓正確（用 disambiguator）
-4. Fix #3（J30 row 基連 overlap）— 較複雜，可選
+下次 session（更新後）：
+1. ~~Fix #1（typo `流便→呂便`）~~ ✅ 已預先修
+2. ~~Fix #2（Moses chain forceExpand）~~ ✅ path-filter 已實作
+3. **亞倫 nested ▼ toggle**（中規模）— 讓 user 可獨立展亞倫的祭司+馬加比線，不必走「🏛️ 展開朝代」一鍵打開三條 dynasty
+4. **scripts/biblical-shot.mjs `--expand-id` / `--focus-id`**（小）— 解同名 ambiguity，--focus 利未/雅各/約瑟 才能準確跳到 patriarch 而非 gen 62/71
+5. Fix #3（J30 row 基連 overlap）— 較複雜，可選
 
 ---
 
