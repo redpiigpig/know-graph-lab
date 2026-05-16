@@ -67,7 +67,7 @@ export const useThesisInterviewsStore = defineStore('thesisInterviews', () => {
     { id: 'yejl', name: '葉菊蘭女士', role: '前行政院院長、台灣政治人物', date: '2024.06.20', category: '社運界', filename: '06.20 葉菊蘭女士口述訪談紀錄0213(最終版)' },
     { id: 'hezx', name: '何宗勳先生', role: '台灣動物保護運動人士', date: '2024.01.16', category: '社運界', filename: '01.16 何宗勳先生口述訪談紀錄' },
     { id: 'huangmy', name: '黃美瑜居士・游雅婷居士', role: '台灣首對公開佛化女同志婚禮當事人', date: '2024.05.02', category: '宗教對話', filename: '05.02 黃美瑜女士游雅婷女士口述訪談紀錄' },
-    { id: 'zhangzd', name: '張章得先生', role: '關懷生命協會工作者', date: '2024.05.07', category: '社運界', filename: '05.07 張章得先生口述訪談紀錄' },
+    { id: 'zhangzd', name: '張章得先生', role: '關懷生命協會前理事長、弘誓文教基金會董事', date: '2024.05.07', category: '社運界', filename: '05.07 張章得先生口述訪談紀錄' },
     { id: 'zhanxk', name: '詹錫奎先生', role: '動物保護運動人士', date: '2024.05.23', category: '社運界', filename: '05.23 詹錫奎先生口述訪談紀錄' },
     { id: 'zhuzh', name: '朱增宏先生', role: '台灣動物社會研究會創辦人', date: '2024.05.28', category: '社運界', filename: '05.28 朱增宏先生口述訪談紀錄' },
     { id: 'zhanglj', name: '張莉筠居士', role: '佛教弘誓學院護持者', date: '2024.03.26', category: '其他', filename: '03.26 張莉筠居士口述訪談紀錄' },
@@ -81,8 +81,6 @@ export const useThesisInterviewsStore = defineStore('thesisInterviews', () => {
   // （網站可能已有手動整理過的逐字稿，但 Drive 上欠缺正式檔）
   const driveMissing = ref<PendingInterview[]>([
     // 只有錄音 m4a，連逐字稿草稿都還沒有
-    { id: 'zhangzd', name: '張章得先生', role: '關懷生命協會工作者', date: '2024.05.07', category: '社運界',
-      driveFolder: '2024.05.07 張章得先生訪談', has: ['outline', 'audio', 'photo'] },
     { id: 'jianan', name: '釋見岸法師', role: '佛教弘誓學院法師', date: '2024.05.11', category: '法師',
       driveFolder: '2024.05.11 釋見岸法師訪談', has: ['outline', 'audio', 'photo'] },
     { id: 'zhanxk', name: '詹錫奎先生', role: '動物保護運動人士', date: '2024.05.23', category: '社運界',
