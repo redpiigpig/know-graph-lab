@@ -31,7 +31,10 @@ description: 「歷史國界地圖」工具集（/maps/historical-borders）— 
 
 **過濾策略**（多層）：
 - **build 階段**：`historical-states.geojson`（給本工具）用 `NON_STATE_PATTERNS` blacklist 排除明顯非政體；`historical-sphere-fills.geojson`（給 world-religions-map）用 `STATE_NAMES` whitelist
-- **runtime 階段**（前端 filter）：用 `polygon-classifications.json` 進一步過濾。**標準（user-defined）：至少酋邦 (chiefdom)／城邦 (city-state)／建立王權的遊牧帝國才算政權**。純 band/tribe／語族／考古文化群（未達酋邦）／古人類學名／狩獵採集者群 → 排除。
+- **runtime 階段**（前端 filter）：用 `polygon-classifications.json` 進一步過濾。**標準 v2（user-defined）**：
+  - **舊大陸（歐亞非）**：至少酋邦 (chiefdom)／城邦 (city-state)／建立王權的遊牧帝國
+  - **新大陸（美洲、澳洲、太平洋諸島）**：**只從「有文字民族的出現或入侵」開始算**。有文字本土文明（Maya 象形字／Aztec codex／Inca quipu）算；歐洲殖民後的所有殖民地／殖民國家算；殖民前無文字酋邦（Olmec/Toltec/Tarascan/Norte Chico/Cahokia/Mississippian/Anasazi/Iroquois Confederacy/Tu'i Tonga Empire/Hawaiian Kingdom 等）→ **排除**
+  - 純 band/tribe／語族／考古文化群／古人類學名／狩獵採集者群 → 全排除
 
 **政權分類器**（[scripts/classify_polygons.mjs](../../../scripts/classify_polygons.mjs)，純 rules-based）— 5 層判定：
 1. **顯式 override**：`KNOWN_NON_STATES` (~80) / `KNOWN_STATES` (~400) / `STATE_DETAILS` keys
@@ -43,15 +46,16 @@ description: 「歷史國界地圖」工具集（/maps/historical-borders）— 
 預設保守 = false（疑似非政權）。
 
 過濾效果（每年顯示的 polygon 數）：
-| 年 | 全部 polygons | 過濾後政權 | 排除（部落／文化）|
+| 年 | 全部 polygons | 過濾後政權 | 排除 |
 |---|---|---|---|
 | 1980 | 160 | **160** | 0 |
 | 1900 | 222 | 213 | 9 (非洲部族) |
-| 1700 | 584 | 109 | 475 (大量原住民／部落) |
-| 1500 | 133 | 96 | 37 |
-| 500 | 70 | 31 | 39 |
-| -2000 | 32 | 12 | 20 (考古文化／語族) |
-| -8000 | 11 | 0 | 11 (全 hunter-gatherers) |
+| 1700 | 584 | 102 | 482 (大量原住民／部落) |
+| 1500 | 133 | 92 | 41 |
+| **1492** | **1303** | **89** | **1214 (含全美洲殖民前部族／chiefdom — 只剩 Aztec / Maya)** |
+| 500 | 70 | 27 | 43 |
+| -2000 | 32 | 11 | 21 (新大陸全空、舊大陸古文明 11 個) |
+| -8000 | 11 | **0** | 11 (全 hunter-gatherers) |
 
 **Merge 邏輯**（[data/maps/historical-states-db.ts](../../../data/maps/historical-states-db.ts) `mergeStates()`）：
 - 依英文名 normalized key dedupe
