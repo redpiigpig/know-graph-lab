@@ -677,6 +677,289 @@ export const DYNASTY_LABELS: Record<string, DynastyEntry[]> = {
     { from: 1920, to: 1922, dynasty_zh: '奧斯曼末（蘇丹政權）', country_zh: '土耳其' },
     { from: 1923, to: 1937, dynasty_zh: '凱末爾共和', country_zh: '土耳其' },
   ],
+
+  // ============================================================
+  // 葡萄牙 — 海上帝國
+  // ============================================================
+  'Portugal': [
+    { from: 1139, to: 1279, dynasty_zh: '勃艮第王朝（建國／收復失地）', country_zh: '葡萄牙' },
+    { from: 1279, to: 1383, dynasty_zh: '勃艮第晚期', country_zh: '葡萄牙' },
+    { from: 1385, to: 1415, dynasty_zh: '阿維什前期（若昂一世）', country_zh: '葡萄牙' },
+    { from: 1415, to: 1495, dynasty_zh: '海上探險（亨利王子／好望角）', country_zh: '葡萄牙' },
+    { from: 1495, to: 1521, dynasty_zh: '曼努埃爾一世（達伽馬／巴西）', country_zh: '葡萄牙' },
+    { from: 1521, to: 1580, dynasty_zh: '海上帝國巔峰', country_zh: '葡萄牙' },
+    { from: 1580, to: 1640, dynasty_zh: '伊比利亞聯合（哈布斯堡）', country_zh: '葡萄牙' },
+    { from: 1640, to: 1668, dynasty_zh: '復國戰爭（布拉甘薩）', country_zh: '葡萄牙' },
+    { from: 1668, to: 1750, dynasty_zh: '巴西金礦時代', country_zh: '葡萄牙' },
+    { from: 1750, to: 1777, dynasty_zh: '龐巴爾改革', country_zh: '葡萄牙' },
+    { from: 1777, to: 1807, dynasty_zh: '末期君主', country_zh: '葡萄牙' },
+    { from: 1807, to: 1820, dynasty_zh: '半島戰爭／王室遷巴西', country_zh: '葡萄牙' },
+    { from: 1820, to: 1834, dynasty_zh: '自由派革命', country_zh: '葡萄牙' },
+    { from: 1834, to: 1910, dynasty_zh: '立憲君主', country_zh: '葡萄牙' },
+    { from: 1910, to: 1926, dynasty_zh: '第一共和（混亂）', country_zh: '葡萄牙' },
+    { from: 1926, to: 1974, dynasty_zh: '薩拉查獨裁', country_zh: '葡萄牙' },
+    { from: 1974, to: 9999, dynasty_zh: '康乃馨革命後', country_zh: '葡萄牙' },
+  ],
+
+  // ============================================================
+  // 法蘭克／加洛林
+  // ============================================================
+  'Frankish Kingdom': [
+    { from: 481, to: 511, dynasty_zh: '克洛維一世（建國／皈依）', country_zh: '法蘭克' },
+    { from: 511, to: 561, dynasty_zh: '克洛泰爾一世（再統一）', country_zh: '法蘭克' },
+    { from: 561, to: 687, dynasty_zh: '墨洛溫分裂（紐斯特里亞／奧斯特拉西亞／勃艮第）', country_zh: '法蘭克' },
+    { from: 687, to: 751, dynasty_zh: '宮相實控（查理‧馬特擊敗阿拉伯）', country_zh: '法蘭克' },
+    { from: 751, to: 799, dynasty_zh: '加洛林（丕平／早期查理曼）', country_zh: '法蘭克' },
+  ],
+  'Carolingian Empire': [
+    { from: 800, to: 814, dynasty_zh: '查理曼加冕（西方皇帝）', country_zh: '加洛林' },
+    { from: 814, to: 840, dynasty_zh: '虔誠者路易', country_zh: '加洛林' },
+    { from: 840, to: 843, dynasty_zh: '繼承戰爭', country_zh: '加洛林' },
+    { from: 843, to: 887, dynasty_zh: '凡爾登條約後（三分）', country_zh: '加洛林' },
+    { from: 887, to: 999, dynasty_zh: '末期分裂', country_zh: '加洛林' },
+  ],
+
+  // ============================================================
+  // 荷蘭
+  // ============================================================
+  'Dutch Republic': [
+    { from: 1568, to: 1609, dynasty_zh: '八十年戰爭前期', country_zh: '荷蘭共和' },
+    { from: 1609, to: 1648, dynasty_zh: '十二年休戰到威斯特伐利亞獨立', country_zh: '荷蘭共和' },
+    { from: 1648, to: 1672, dynasty_zh: '黃金時代', country_zh: '荷蘭共和' },
+    { from: 1672, to: 1713, dynasty_zh: '災年到西班牙王位繼承戰', country_zh: '荷蘭共和' },
+    { from: 1713, to: 1780, dynasty_zh: '衰退期', country_zh: '荷蘭共和' },
+    { from: 1780, to: 1795, dynasty_zh: '第四次英荷戰爭到滅亡', country_zh: '荷蘭共和' },
+  ],
+  'Netherlands': [
+    { from: 1715, to: 1795, dynasty_zh: '共和末期', country_zh: '荷蘭' },
+    { from: 1795, to: 1806, dynasty_zh: '巴達維亞共和', country_zh: '荷蘭' },
+    { from: 1806, to: 1810, dynasty_zh: '荷蘭王國（拿破崙弟）', country_zh: '荷蘭' },
+    { from: 1815, to: 1830, dynasty_zh: '尼德蘭聯合王國（含比利時）', country_zh: '荷蘭' },
+    { from: 1830, to: 1914, dynasty_zh: '比利時獨立後', country_zh: '荷蘭' },
+    { from: 1914, to: 1940, dynasty_zh: '中立（一戰／戰間期）', country_zh: '荷蘭' },
+    { from: 1940, to: 1945, dynasty_zh: '德占', country_zh: '荷蘭' },
+    { from: 1945, to: 9999, dynasty_zh: '戰後', country_zh: '荷蘭' },
+  ],
+
+  // ============================================================
+  // 西非帝國
+  // ============================================================
+  'Mali': [
+    { from: 1235, to: 1255, dynasty_zh: '松迪亞塔建國', country_zh: '馬利' },
+    { from: 1255, to: 1312, dynasty_zh: '早期擴張', country_zh: '馬利' },
+    { from: 1312, to: 1337, dynasty_zh: '曼薩‧穆薩黃金時代', country_zh: '馬利' },
+    { from: 1337, to: 1464, dynasty_zh: '衰退（桑海崛起）', country_zh: '馬利' },
+    { from: 1464, to: 1599, dynasty_zh: '桑海取代（小馬利殘餘）', country_zh: '馬利' },
+    { from: 1880, to: 1959, dynasty_zh: '法屬蘇丹', country_zh: '馬利' },
+    { from: 1960, to: 1991, dynasty_zh: '獨立／一黨制', country_zh: '馬利' },
+    { from: 1991, to: 9999, dynasty_zh: '多黨制（薩赫勒衝突）', country_zh: '馬利' },
+  ],
+  'Songhai': [
+    { from: 1492, to: 1528, dynasty_zh: '宋尼‧阿里建國', country_zh: '桑海' },
+    { from: 1492, to: 1492, dynasty_zh: '阿斯基亞‧穆罕默德篡位', country_zh: '桑海' },
+    { from: 1493, to: 1528, dynasty_zh: '阿斯基亞改革', country_zh: '桑海' },
+    { from: 1528, to: 1591, dynasty_zh: '中期擴張', country_zh: '桑海' },
+    { from: 1591, to: 1591, dynasty_zh: '通迪比戰役（摩洛哥滅）', country_zh: '桑海' },
+    { from: 1591, to: 1700, dynasty_zh: '殘餘小國', country_zh: '桑海' },
+    { from: 1700, to: 1814, dynasty_zh: '邊緣化', country_zh: '桑海' },
+  ],
+  'Kanem': [
+    { from: 800, to: 1075, dynasty_zh: '建立（薩伊夫王朝）', country_zh: '加涅姆' },
+    { from: 1075, to: 1085, dynasty_zh: '杜納馬‧迪巴萊米（皈依伊斯蘭）', country_zh: '加涅姆' },
+    { from: 1085, to: 1259, dynasty_zh: '中世紀擴張', country_zh: '加涅姆' },
+    { from: 1259, to: 1278, dynasty_zh: '末期（被布拉拉人逐出）', country_zh: '加涅姆' },
+  ],
+  'Bornu-Kanem': [
+    { from: 1279, to: 1380, dynasty_zh: '重建博爾努（卡涅姆東遷）', country_zh: '博爾努-加涅姆' },
+    { from: 1380, to: 1571, dynasty_zh: '中期', country_zh: '博爾努-加涅姆' },
+    { from: 1571, to: 1603, dynasty_zh: '伊德里斯‧阿洛馬巔峰', country_zh: '博爾努-加涅姆' },
+    { from: 1603, to: 1808, dynasty_zh: '衰退期', country_zh: '博爾努-加涅姆' },
+    { from: 1808, to: 1846, dynasty_zh: '富拉尼聖戰／重建', country_zh: '博爾努-加涅姆' },
+    { from: 1846, to: 1879, dynasty_zh: '謝胡末期', country_zh: '博爾努-加涅姆' },
+  ],
+
+  // ============================================================
+  // 衣索比亞
+  // ============================================================
+  'Ethiopia': [
+    { from: 1270, to: 1434, dynasty_zh: '所羅門王朝復辟', country_zh: '衣索比亞' },
+    { from: 1434, to: 1543, dynasty_zh: '紮拉‧雅各布到阿達爾戰爭', country_zh: '衣索比亞' },
+    { from: 1543, to: 1632, dynasty_zh: '紮拉‧雅各布後／葡萄牙耶穌會', country_zh: '衣索比亞' },
+    { from: 1632, to: 1769, dynasty_zh: '貢德爾時期', country_zh: '衣索比亞' },
+    { from: 1769, to: 1855, dynasty_zh: '王公時代（分裂）', country_zh: '衣索比亞' },
+    { from: 1855, to: 1868, dynasty_zh: '特沃德羅斯二世（重新統一）', country_zh: '衣索比亞' },
+    { from: 1868, to: 1889, dynasty_zh: '約翰尼斯四世', country_zh: '衣索比亞' },
+    { from: 1889, to: 1913, dynasty_zh: '孟尼利克二世（阿杜瓦勝義）', country_zh: '衣索比亞' },
+    { from: 1913, to: 1935, dynasty_zh: '海爾‧塞拉西攝政／登基', country_zh: '衣索比亞' },
+    { from: 1935, to: 1941, dynasty_zh: '義大利占領', country_zh: '衣索比亞' },
+    { from: 1941, to: 1974, dynasty_zh: '海爾‧塞拉西復辟', country_zh: '衣索比亞' },
+    { from: 1974, to: 1991, dynasty_zh: '德爾格軍政府', country_zh: '衣索比亞' },
+    { from: 1991, to: 9999, dynasty_zh: 'EPRDF／後 EPRDF', country_zh: '衣索比亞' },
+  ],
+
+  // ============================================================
+  // 蒙古後續：伊兒汗／帖木兒
+  // ============================================================
+  'Ilkhanate': [
+    { from: 1256, to: 1265, dynasty_zh: '旭烈兀建立（滅阿巴斯）', country_zh: '伊兒汗' },
+    { from: 1265, to: 1295, dynasty_zh: '阿八哈到阿魯渾', country_zh: '伊兒汗' },
+    { from: 1295, to: 1304, dynasty_zh: '合贊汗（皈依伊斯蘭）', country_zh: '伊兒汗' },
+    { from: 1304, to: 1335, dynasty_zh: '完者都／不賽因', country_zh: '伊兒汗' },
+    { from: 1335, to: 1399, dynasty_zh: '分裂（札剌亦兒／穆扎法爾／丘班）', country_zh: '伊兒汗' },
+  ],
+  'Timurid Empire': [
+    { from: 1370, to: 1405, dynasty_zh: '帖木兒（征服）', country_zh: '帖木兒' },
+    { from: 1405, to: 1447, dynasty_zh: '沙哈魯（穩定／文化巔峰）', country_zh: '帖木兒' },
+    { from: 1447, to: 1469, dynasty_zh: '兀魯伯／烏茲別克擴張', country_zh: '帖木兒' },
+    { from: 1469, to: 1491, dynasty_zh: '末期（白羊崛起）', country_zh: '帖木兒' },
+  ],
+  'Timurid Emirates': [
+    { from: 1492, to: 1500, dynasty_zh: '分裂諸埃米爾', country_zh: '帖木兒' },
+    { from: 1500, to: 1529, dynasty_zh: '巴布爾流亡到建蒙兀兒', country_zh: '帖木兒' },
+  ],
+
+  // ============================================================
+  // 印度諸朝代
+  // ============================================================
+  'Mauryan Empire': [
+    { from: -322, to: -298, dynasty_zh: '月護王建國', country_zh: '孔雀' },
+    { from: -298, to: -272, dynasty_zh: '賓頭娑羅', country_zh: '孔雀' },
+    { from: -268, to: -232, dynasty_zh: '阿育王（佛教推廣）', country_zh: '孔雀' },
+    { from: -232, to: -185, dynasty_zh: '衰退到滅亡', country_zh: '孔雀' },
+  ],
+  'Gupta Empire': [
+    { from: 320, to: 350, dynasty_zh: '旃陀羅笈多一世', country_zh: '笈多' },
+    { from: 350, to: 375, dynasty_zh: '海護王（征服）', country_zh: '笈多' },
+    { from: 375, to: 415, dynasty_zh: '旃陀羅笈多二世（黃金時代）', country_zh: '笈多' },
+    { from: 415, to: 467, dynasty_zh: '鳩摩羅笈多／塞犍陀笈多（抗匈那）', country_zh: '笈多' },
+    { from: 467, to: 599, dynasty_zh: '衰退（匈那入侵）', country_zh: '笈多' },
+  ],
+  'Sultanate of Delhi': [
+    { from: 1206, to: 1290, dynasty_zh: '奴隸王朝', country_zh: '德里蘇丹' },
+    { from: 1290, to: 1320, dynasty_zh: '卡爾吉王朝', country_zh: '德里蘇丹' },
+    { from: 1320, to: 1414, dynasty_zh: '圖格魯克王朝', country_zh: '德里蘇丹' },
+    { from: 1414, to: 1451, dynasty_zh: '賽義德王朝（帖木兒劫後）', country_zh: '德里蘇丹' },
+    { from: 1451, to: 1526, dynasty_zh: '洛迪王朝（被巴布爾滅）', country_zh: '德里蘇丹' },
+  ],
+  'Chola state': [
+    { from: 1000, to: 1014, dynasty_zh: '羅闍羅闍一世', country_zh: '朱羅' },
+    { from: 1014, to: 1044, dynasty_zh: '羅貞陀羅一世（征東南亞）', country_zh: '朱羅' },
+    { from: 1044, to: 1118, dynasty_zh: '中期擴張', country_zh: '朱羅' },
+    { from: 1118, to: 1279, dynasty_zh: '衰退（潘地亞崛起）', country_zh: '朱羅' },
+  ],
+  'Cholas': [
+    { from: 500, to: 850, dynasty_zh: '早期（中朱羅）', country_zh: '朱羅' },
+    { from: 850, to: 1199, dynasty_zh: '帝國朱羅', country_zh: '朱羅' },
+  ],
+  'Pallavas': [
+    { from: 500, to: 728, dynasty_zh: '中期', country_zh: '帕拉瓦' },
+    { from: 728, to: 799, dynasty_zh: '末期（朱羅崛起）', country_zh: '帕拉瓦' },
+  ],
+  'Pallava state': [
+    { from: 500, to: 799, dynasty_zh: '帕拉瓦', country_zh: '帕拉瓦' },
+  ],
+  'Palas': [
+    { from: 750, to: 850, dynasty_zh: '建立（瞿波羅／達摩波羅）', country_zh: '波羅' },
+    { from: 850, to: 950, dynasty_zh: '提婆波羅巔峰', country_zh: '波羅' },
+    { from: 950, to: 1071, dynasty_zh: '衰退', country_zh: '波羅' },
+    { from: 1071, to: 1162, dynasty_zh: '羅摩波羅復興', country_zh: '波羅' },
+    { from: 1162, to: 1199, dynasty_zh: '末期（被斯那滅）', country_zh: '波羅' },
+  ],
+  'Vijayanagara': [
+    { from: 1336, to: 1485, dynasty_zh: '建立（桑伽馬王朝）', country_zh: '毗奢耶那伽羅' },
+    { from: 1485, to: 1505, dynasty_zh: '薩魯瓦王朝', country_zh: '毗奢耶那伽羅' },
+    { from: 1505, to: 1565, dynasty_zh: '圖盧瓦王朝（克里希納提婆‧拉亞巔峰）', country_zh: '毗奢耶那伽羅' },
+    { from: 1565, to: 1565, dynasty_zh: '塔利科塔戰役（決定性敗）', country_zh: '毗奢耶那伽羅' },
+    { from: 1565, to: 1699, dynasty_zh: '阿拉維杜末期', country_zh: '毗奢耶那伽羅' },
+  ],
+  'Maratha Confederacy': [
+    { from: 1674, to: 1707, dynasty_zh: '希瓦吉建國／與蒙兀兒對抗', country_zh: '馬拉塔' },
+    { from: 1707, to: 1761, dynasty_zh: '佩什瓦時代（巔峰）', country_zh: '馬拉塔' },
+    { from: 1761, to: 1761, dynasty_zh: '第三次帕尼帕特戰役（敗於阿富汗）', country_zh: '馬拉塔' },
+    { from: 1761, to: 1818, dynasty_zh: '聯邦衰退到英印滅', country_zh: '馬拉塔' },
+    { from: 1818, to: 1879, dynasty_zh: '英印統治', country_zh: '馬拉塔' },
+  ],
+  'Sikhs': [
+    { from: 1799, to: 1801, dynasty_zh: '蘭吉特‧辛格起', country_zh: '錫克' },
+    { from: 1801, to: 1814, dynasty_zh: '錫克帝國早期', country_zh: '錫克' },
+  ],
+
+  // ============================================================
+  // 東南亞
+  // ============================================================
+  'Khmer Empire': [
+    { from: 802, to: 889, dynasty_zh: '闍耶跋摩二世（建國）', country_zh: '高棉' },
+    { from: 889, to: 1010, dynasty_zh: '早期（耶輸跋摩）', country_zh: '高棉' },
+    { from: 1010, to: 1080, dynasty_zh: '蘇耶跋摩一世', country_zh: '高棉' },
+    { from: 1113, to: 1150, dynasty_zh: '蘇耶跋摩二世（吳哥窟）', country_zh: '高棉' },
+    { from: 1181, to: 1218, dynasty_zh: '闍耶跋摩七世（巔峰／大乘佛教）', country_zh: '高棉' },
+    { from: 1218, to: 1431, dynasty_zh: '衰退（被泰人攻陷吳哥）', country_zh: '高棉' },
+    { from: 1431, to: 1491, dynasty_zh: '末期遷都金邊', country_zh: '高棉' },
+  ],
+  'Srivijaya Empire': [
+    { from: 800, to: 900, dynasty_zh: '早期', country_zh: '室利佛逝' },
+    { from: 900, to: 1025, dynasty_zh: '貿易帝國巔峰', country_zh: '室利佛逝' },
+    { from: 1025, to: 1025, dynasty_zh: '朱羅海上突襲', country_zh: '室利佛逝' },
+    { from: 1025, to: 1290, dynasty_zh: '衰退', country_zh: '室利佛逝' },
+    { from: 1290, to: 1491, dynasty_zh: '滿者伯夷取代', country_zh: '室利佛逝' },
+  ],
+  'Bagan': [
+    { from: 1044, to: 1112, dynasty_zh: '阿奴律陀（建國）', country_zh: '蒲甘' },
+    { from: 1112, to: 1167, dynasty_zh: '中期', country_zh: '蒲甘' },
+    { from: 1167, to: 1287, dynasty_zh: '巔峰到蒙古入侵滅亡', country_zh: '蒲甘' },
+  ],
+  'Ayutthaya': [
+    { from: 1351, to: 1438, dynasty_zh: '烏通王建國', country_zh: '阿瑜陀耶' },
+    { from: 1438, to: 1569, dynasty_zh: '擴張期', country_zh: '阿瑜陀耶' },
+    { from: 1569, to: 1593, dynasty_zh: '東吁占領／納黎萱獨立', country_zh: '阿瑜陀耶' },
+    { from: 1593, to: 1688, dynasty_zh: '巴薩通／那萊（中興）', country_zh: '阿瑜陀耶' },
+    { from: 1688, to: 1767, dynasty_zh: '末期（緬甸滅）', country_zh: '阿瑜陀耶' },
+    { from: 1767, to: 1782, dynasty_zh: '吞武里王朝（達信）', country_zh: '阿瑜陀耶' },
+  ],
+  'Đại Việt': [
+    { from: 1009, to: 1225, dynasty_zh: '李朝', country_zh: '大越' },
+    { from: 1225, to: 1400, dynasty_zh: '陳朝（抗蒙）', country_zh: '大越' },
+    { from: 1400, to: 1407, dynasty_zh: '胡朝', country_zh: '大越' },
+    { from: 1407, to: 1428, dynasty_zh: '明朝占領', country_zh: '大越' },
+    { from: 1428, to: 1527, dynasty_zh: '黎朝前期（黎利／聖宗黃金時代）', country_zh: '大越' },
+    { from: 1527, to: 1592, dynasty_zh: '莫朝篡位', country_zh: '大越' },
+    { from: 1592, to: 1771, dynasty_zh: '黎朝後期（鄭阮分治）', country_zh: '大越' },
+    { from: 1771, to: 1802, dynasty_zh: '西山起義', country_zh: '大越' },
+    { from: 1802, to: 1814, dynasty_zh: '阮朝建立', country_zh: '大越' },
+  ],
+  'Goryeo': [
+    { from: 1200, to: 1270, dynasty_zh: '武人政權／抗蒙', country_zh: '高麗' },
+    { from: 1270, to: 1278, dynasty_zh: '元附庸', country_zh: '高麗' },
+  ],
+  'Funan': [
+    { from: 500, to: 627, dynasty_zh: '末期（真臘崛起）', country_zh: '扶南' },
+    { from: 627, to: 699, dynasty_zh: '被真臘吸收', country_zh: '扶南' },
+  ],
+  'Pyu state': [
+    { from: 800, to: 832, dynasty_zh: '驃國末期', country_zh: '驃國' },
+    { from: 832, to: 1044, dynasty_zh: '南詔毀後緬族崛起', country_zh: '驃國' },
+    { from: 1044, to: 1278, dynasty_zh: '蒲甘王朝時期', country_zh: '驃國' },
+  ],
+
+  // ============================================================
+  // 美洲
+  // ============================================================
+  'Inca Empire': [
+    { from: 1438, to: 1471, dynasty_zh: '帕查庫蒂（建國／擴張）', country_zh: '印加' },
+    { from: 1471, to: 1493, dynasty_zh: '圖帕克‧印加（巔峰）', country_zh: '印加' },
+    { from: 1493, to: 1525, dynasty_zh: '瓦伊納‧卡帕克', country_zh: '印加' },
+    { from: 1525, to: 1532, dynasty_zh: '內戰（瓦斯卡爾 vs 阿塔瓦爾帕）', country_zh: '印加' },
+    { from: 1532, to: 1533, dynasty_zh: '皮薩羅征服', country_zh: '印加' },
+    { from: 1533, to: 1572, dynasty_zh: '比爾卡班巴殘餘王國', country_zh: '印加' },
+  ],
+  'Aztec Empire': [
+    { from: 1428, to: 1440, dynasty_zh: '三方聯盟建立（伊茨科亞特爾）', country_zh: '阿茲特克' },
+    { from: 1440, to: 1469, dynasty_zh: '蒙特蘇馬一世', country_zh: '阿茲特克' },
+    { from: 1469, to: 1502, dynasty_zh: '阿沙亞卡特爾／提佐克／阿維特索特爾', country_zh: '阿茲特克' },
+    { from: 1502, to: 1520, dynasty_zh: '蒙特蘇馬二世（巔峰）', country_zh: '阿茲特克' },
+    { from: 1520, to: 1521, dynasty_zh: '科爾特斯征服（特諾奇蒂特蘭陷落）', country_zh: '阿茲特克' },
+    { from: 1521, to: 1529, dynasty_zh: '殘存附庸期', country_zh: '阿茲特克' },
+  ],
 }
 
 /**
