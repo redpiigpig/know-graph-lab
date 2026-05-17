@@ -471,13 +471,14 @@ onMounted(async () => {
   }
 
   try {
-    const [adm0Res, statesRes, coastRes, wdRes, polyZhRes, polyClsRes] = await Promise.all([
+    const [adm0Res, statesRes, coastRes, wdRes, polyZhRes, polyClsRes, polyYearRes] = await Promise.all([
       fetch('/maps/ne_50m_admin_0_countries.geojson'),
       fetch('/maps/historical-states.geojson'),
       fetch('/maps/ne_50m_coastline.geojson'),
       fetch('/maps/wikidata-states.json'),
       fetch('/maps/polygon-names-zh.json').catch(() => ({ ok: false } as any)),
       fetch('/maps/polygon-classifications.json').catch(() => ({ ok: false } as any)),
+      fetch('/maps/polygon-year-overrides.json').catch(() => ({ ok: false } as any)),
     ])
     const [adm0, states, coast, wd] = await Promise.all([
       adm0Res.json(), statesRes.json(), coastRes.json(), wdRes.json(),
@@ -487,6 +488,13 @@ onMounted(async () => {
     }
     if (polyClsRes && (polyClsRes as Response).ok) {
       try { polygonIsState.value = await (polyClsRes as Response).json() } catch {}
+    }
+    let yearOverrides: Record<string, { min_year_from?: number; max_year_to?: number }> = {}
+    if (polyYearRes && (polyYearRes as Response).ok) {
+      try {
+        const obj = await (polyYearRes as Response).json()
+        yearOverrides = obj.overrides || {}
+      } catch {}
     }
     landFeatures.value = adm0.features.filter((f: any) => f.properties.ADM0_A3 !== 'ATA')
     coastlineFeatures.value = coast.features || []
@@ -514,12 +522,17 @@ onMounted(async () => {
     const hasCls = Object.keys(cls).length > 0
     stateEntries.value = (states.features || [])
       .filter((f: any) => !hasCls || cls[f.properties.name]?.is_state !== false)
-      .map((f: any) => ({
-        feature: f,
-        name: f.properties.name,
-        yearFrom: f.properties.year_from,
-        yearTo: f.properties.year_to,
-      }))
+      .map((f: any) => {
+        const ovr = yearOverrides[f.properties.name]
+        const yearFrom = ovr?.min_year_from !== undefined
+          ? Math.max(f.properties.year_from, ovr.min_year_from)
+          : f.properties.year_from
+        const yearTo = ovr?.max_year_to !== undefined
+          ? Math.min(f.properties.year_to, ovr.max_year_to)
+          : f.properties.year_to
+        return { feature: f, name: f.properties.name, yearFrom, yearTo }
+      })
+      .filter((s: any) => s.yearFrom <= s.yearTo)
     rebuildAll()
   } catch (e) {
     console.error('歷史國界地圖載入失敗', e)

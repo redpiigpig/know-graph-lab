@@ -1,0 +1,57 @@
+{
+  "_comment": "源資料（historical-basemaps）有些 polygon 範圍過早，把考古群／前身硬畫成同一個政治體。此檔在 runtime 收窄 year_from / year_to 修正。runtime 過濾：max(s.yearFrom, override.min_year_from) ≤ year ≤ min(s.yearTo, override.max_year_to)。",
+  "overrides": {
+    "Hurrian Kingdoms": {
+      "min_year_from": -2500,
+      "reason": "胡里安語族文獻 -2300 出現；-5000 是石器時代，非政治體"
+    },
+    "Indus valley civilization": {
+      "min_year_from": -3300,
+      "max_year_to": -1300,
+      "reason": "印度河文明約 -3300~-1300（成熟期 -2600~-1900）"
+    },
+    "Elam": {
+      "min_year_from": -3200,
+      "reason": "原始埃蘭最早 -3200；-5000 早於蘇美文字"
+    },
+    "Kerma": {
+      "min_year_from": -2500,
+      "reason": "克爾瑪文化／國 -2500~-1500"
+    },
+    "Minoan": {
+      "min_year_from": -2700,
+      "max_year_to": -1100,
+      "reason": "米諾斯文明 -2700~-1450；後米諾斯到 -1100"
+    },
+    "Olmec": {
+      "min_year_from": -1500,
+      "max_year_to": -400,
+      "reason": "奧爾梅克 -1500~-400"
+    },
+    "Norte Chico": {
+      "min_year_from": -3000,
+      "max_year_to": -1800,
+      "reason": "卡拉爾／小北 -3000~-1800"
+    },
+    "Chavin": {
+      "min_year_from": -900,
+      "max_year_to": -200,
+      "reason": "查文 -900~-200"
+    },
+    "Xia": {
+      "min_year_from": -2070,
+      "max_year_to": -1600,
+      "reason": "傳說夏 -2070~-1600（二里頭考古對應）"
+    },
+    "Canaan": {
+      "min_year_from": -3500,
+      "max_year_to": -1180,
+      "reason": "迦南青銅時代 -3500~-1180（海上民族來臨終結）"
+    },
+    "Saba": {
+      "min_year_from": -1200,
+      "max_year_to": 275,
+      "reason": "示巴王國 -1200~ 275 CE"
+    }
+  }
+}

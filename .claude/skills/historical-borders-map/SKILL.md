@@ -23,8 +23,10 @@ description: 「歷史國界地圖」工具集（/maps/historical-borders）— 
 | B. Sphere fill polygon | `public/maps/historical-sphere-fills.geojson` | **10,350 features (42 MB)** | 文化圈著色（由 world-religions-map 使用）— 跨 53 snapshots |
 | C. 國家骨架（含現代涵蓋） | `public/maps/state-skeleton.json` | **2,949 條 (348 KB)** | 從 historical-states.geojson 抽出 unique names |
 | D. Wikidata 主資料 | `public/maps/wikidata-states.json` | 4215 條 (~ 530 KB) | 中英文名、起始／結束年、所屬大陸、QID |
-| E. 人工撰寫詳細 | `data/maps/historical-states-db.ts` (`STATE_DETAILS`) | **177 條（4 輪擴充）** | 朝代、首都、宗教、人口、面積、簡介 |
-| E2. 朝代時間段標籤 | `data/maps/dynasty-labels.ts` (`DYNASTY_LABELS`) | **47 polygon × ~9 段 = ~430 段** | 跨朝代 polygon 按年代切時期，標籤顯示「{朝代}（{國家}）」 |
+| E. 人工撰寫詳細 | `data/maps/historical-states-db.ts` (`STATE_DETAILS`) | **271 條（5 輪擴充）** | 朝代、首都、宗教、人口、面積、簡介 |
+| E2. 朝代時間段標籤 | `data/maps/dynasty-labels.ts` (`DYNASTY_LABELS`) | **47 polygon × ~10 段 = ~480 段（含第三輪細分）** | 跨朝代 polygon 按年代切時期，標籤顯示「{朝代}（{國家}）」 |
+| E3. polygon 年範圍修正 | `public/maps/polygon-year-overrides.json` | **11 條** | 收窄源資料過早 polygon（如 Hurrian -5000→-2500、Indus -4000→-3300）|
+| E4. 阿巴斯密集 polygon（POC） | `public/maps/abbasid-fine-polygons.geojson` | **6 polygons** | Stage 1 city-hull 法 POC：750/800/900/1000/1100/1200，未接入主圖 |
 | F. NE 50m coastline | `public/maps/ne_50m_coastline.geojson` | 1428 LineString | 海岸線（黑線） |
 | G. NE 50m admin_0 | `public/maps/ne_50m_admin_0_countries.geojson` | 242 features | 陸地灰底 + **NAME_ZHT 中文國名（內建）** |
 | H. Polygon 名譯本 | `public/maps/polygon-names-zh.json` | **2,420 條 (88 KB)** | Gemini batch 翻的 polygon name → 繁中 |
@@ -529,9 +531,18 @@ TimeAxis 右上「▶ 播放」按鈕，速度可選「慢／普通／快」（2
 
 ## 待補項目（下個 session 接續）
 
-### A. STATE_DETAILS 繼續擴充（目前 177 / 目標 250+）
+### A. STATE_DETAILS 繼續擴充（目前 271 / 目標 350+）
 
-已完成 4 輪擴充（46 → 78 → 135 → 177）。剩下未補的 polygon（每個都有 polygon、未填 details）：
+已完成 5 輪擴充（46 → 78 → 135 → 177 → **271**）。第 5 輪 (+94) 涵蓋：
+- A1 印度土邦（錫金／克什米爾／拉賈斯坦／巴哈瓦爾布爾／特拉凡科爾／柯欽／奧德／邁索爾／博帕爾／海得拉巴／齋浦爾／烏代浦／印多爾／瓜廖爾／巴羅達／伯蒂亞拉／卡拉特／凱爾布林／曼尼普爾）
+- A2 神羅小邦（巴登／巴伐利亞／薩克森／黑森／安哈特／漢諾威／符騰堡／梅克倫堡-S/Strelitz／布倫瑞克／霍爾斯坦／拿騷／奧爾登堡／紹姆堡-利珀／利珀-德特摩德）
+- A3 太平洋（新喀里多尼亞／拉帕努伊／薩摩亞王國／諾魯託管地）
+- A4 19-20 世紀短命邦（新西班牙／秘魯／拉普拉塔總督轄區、巴西帝國、大哥倫比亞、滿洲國、汪精衛、巴伐利亞蘇維埃、的里雅斯特自由區、薩爾保護領、德州／加州／猶加敦共和國）
+- A5 阿拉伯諸邦（漢志／哈伊勒／停戰諸國／馬斯喀特與阿曼／阿西爾／葉門宰德／葉門穆塔瓦基利亞）
+- A6 早期帝國（塞琉古／托勒密／巴克特里亞／希臘-巴克特里亞／貴霜諸侯／劉宋／北魏／北周／北齊／曹魏／東吳／蜀漢／吳越／南唐／高句麗）
+- A7 非洲（剛果王國／恩東戈／盧巴／隆達／阿散蒂／達荷美／布干達／盧安達王國／豐吉／薩伊／約魯巴地區／博爾努）
+
+剩下未補的 polygon（每個都有 polygon、未填 details）：
 
 **A1. 印度土邦（20+ 個）**
 - Bahawalpur、Rajastan、Travancore、Cochin、Oudh、Bhopal、Mysore、Hyderabad、Jodhpur、Jaipur、Udaipur、Indore、Gwalior、Baroda、Patiala、Sikkim、Kashmir、Kalat、Khairpur、Manipur
@@ -571,31 +582,49 @@ TimeAxis 右上「▶ 播放」按鈕，速度可選「慢／普通／快」（2
 
 ---
 
-### B. dynasty-labels.ts 第三輪細分（目前 47 polygon × 平均 9 段 = ~430 段）
+### B. dynasty-labels.ts 第三輪細分（已完成、目前 47 polygon × ~10 段 = ~480 段）
 
-User 偏好「擴張／衰退／分裂期更密」。下一輪可加：
+第三輪 (+~50 段) 已加：
+- **United Kingdom**：殖民帝國分期（第二次帝國／印度直轄／瓜分非洲／戰間期帝國巔峰／蘇伊士危機／去殖民化潮／脫歐）
+- **Ottoman Empire**：「停滯期」拆塞利姆二世／穆拉德三世／艾哈邁德一世／科普魯律家族，鬱金香時代與貝爾格勒和約
+- **Mughal Empire**：奧朗則布拆「北方統治／德干戰役」（1658-80 vs 1680-1707）；蘇爾中斷期、繼承內戰、阿富汗入侵獨立段
+- **Carolingian Empire**：查理曼倫巴底 774／薩克森 30 年戰爭／隆塞瓦勒 778／阿瓦爾 791-803 細節
+- **Sultanate of Delhi**：5 王朝拆到 14 段（巴勒班鎮蒙古／阿拉烏丁南征／圖格魯克遷都／帖木兒劫德里）
+- **Inca Empire**：卡哈馬卡之囚／天花橫掃／南北征細分 11 段
+- **Aztec Empire**：三方聯盟單獨成段／悲傷之夜／特諾奇蒂特蘭陷落 11 段
+- **Mauryan / Gupta**：羯陵伽戰爭單獨成段、海護王南征、塞犍陀笈多抗匈那
 
-- **葡西英荷海上殖民帝國** 切到「探險期／巔峰／衰退／去殖民化」
-- **印度諸朝代**（笈多／注輦／毗奢耶那伽羅／馬拉塔）切「建國／擴張／戰役轉折／衰退」
-- **阿茲特克／印加** 已粗切，可加更細的擴張階段（伊茨科亞特爾／蒙特蘇馬一世／二世；帕查庫蒂／圖帕克／瓦伊納‧卡帕克）
-- **馬利／桑海／衣索比亞** 已粗切，可再加細
-- **伊兒汗／帖木兒** 已切，可再加「沙哈魯赫拉特文化巔峰」等具體段
-- **法蘭克／加洛林** 已切，可加查理曼軍事擴張細節
+下一輪可考慮：
+- **Roman Empire**：朱里亞-克勞狄／弗拉維／五賢君／軍人皇帝危機／戴克里先／君士坦丁／西半部崩潰
+- **Tang Empire**：玄宗開元再拆早中晚／武則天周朝具體年
+- **Habsburg Spain**：腓力二世具體（聖戰艦／勒班陀／英艦隊）
+- **Russian Empire**：彼得大戰具體（波爾塔瓦／尼斯塔特）／葉卡捷琳娜瓜分波蘭
 
 操作：直接編 [data/maps/dynasty-labels.ts](../../../data/maps/dynasty-labels.ts)，依 polygon name 查 Wikipedia「Territorial evolution / Timeline of X」。
 
 ---
 
-### C. Stage 1：Gemini Vision polygon 生成（未開始）
+### C. Stage 1：City-Hull polygon POC（已試做、未接入主圖）
 
-User 期望：「每國每 10 年一刻 + 戰爭年細刻」。aourednik 53 snapshots 已是極限，再密就要新建。可行路徑：
+已完成阿巴斯 6 個密集 polygon POC：[scripts/city_hull_abbasid.mjs](../../../scripts/city_hull_abbasid.mjs) → `public/maps/abbasid-fine-polygons.geojson`（~3 KB / 6 features）。
 
-**方案 1：Gemini Vision city-hull 法**
-1. Wikipedia「Territorial evolution of [Empire]」抓圖
-2. Gemini Vision 識別圖中標記的城市／地名
-3. 城市名 → Wikidata SPARQL 查經緯度
-4. 城市集合 → convex hull → GeoJSON polygon
-5. 精度 ±100 km，但能補密集 snapshot
+**做法（簡化版，跳過 Gemini Vision）**：
+- 手寫城市清單 + 內嵌 lat/lon（CITIES 表 ~50 城）
+- CONTROL_BY_YEAR：750/800/900/1000/1100/1200 各列出該年阿巴斯控城
+- Graham scan convex hull → GeoJSON Polygon
+- 精度 ±100 km；凹邊（如阿巴斯失埃及但保敘利亞）不能呈現
+
+```bash
+node scripts/city_hull_abbasid.mjs   # ~1 秒
+```
+
+**下一步：**
+1. **接入主圖**：HistoricalBordersMap.vue 載 `abbasid-fine-polygons.geojson`，當該年在 [750, 1260] 區間時用密集 polygon 覆蓋 historical-basemaps 的阿巴斯 polygon（feature flag）
+2. **擴展到其他帝國**：寫 `city_hull_<empire>.mjs` 一個一個帝國做
+3. **Gemini Vision 自動化**：未來真的需要 50+ 帝國時，再寫 Vision 從 Wikipedia 抓城市清單
+4. **凹邊處理**：當控制不連續（如阿巴斯 900 既要含 Baghdad 又要含 Cairo 但中間敘利亞失控），用 alpha-shape 或手動分多 polygon
+
+其他長期路徑：
 
 **方案 2：CHGIS 整合（中國年解析度）**
 - 哈佛 + 復旦的中國歷史 GIS，-2 BCE → 1911 CE 縣級資料
@@ -610,8 +639,6 @@ User 期望：「每國每 10 年一刻 + 戰爭年細刻」。aourednik 53 snap
 - 用 QGIS + Wikipedia 地圖描繪
 - 阿巴斯 8 張、蒙古 7 張、羅馬 6 張、伍麥亞 3 張 = ~25 張 = 半天工
 
-**先做哪個？** Stage 1 起點建議：**方案 1 試做阿巴斯 750 + 800 + 900 + 1000 + 1100 + 1200 共 6 張**，看 Gemini Vision city-hull 精度是否堪用。
-
 ---
 
 ### D. 其他低優先
@@ -619,7 +646,7 @@ User 期望：「每國每 10 年一刻 + 戰爭年細刻」。aourednik 53 snap
 1. **CHGIS 整合**（B-2 同上，獨立工項）— 補中國朝代年密度
 2. **與 world-religions-map 整合** — 此工具是 sphere 分類討論的底層，分類確定後可同步反向更新 world-religions 的 sphere-history
 3. **OpenHistoricalMap 抓取阿巴斯等帝國 polygon**（被 Cloudflare 擋，需 browser-mode 解）
-4. **修正源資料過早 polygon**（如 Hurrian Kingdoms -5000 → -2300，Indus -4000 → -2600）— 加 `public/maps/polygon-year-overrides.json` + runtime 過濾
+4. ~~**修正源資料過早 polygon**~~ ✅ 已加 `public/maps/polygon-year-overrides.json`（11 條：Hurrian/Indus/Elam/Kerma/Minoan/Olmec/Norte Chico/Chavin/Xia/Canaan/Saba）+ HistoricalBordersMap.vue runtime 收窄。要加新 override：直接編輯該 JSON 的 `overrides`，格式 `{ "PolygonName": { "min_year_from"?: N, "max_year_to"?: N, "reason": "..." } }`，HMR 即生效。
 
 ---
 
@@ -655,6 +682,7 @@ historical-borders-map 額外用：
 
 ## Recent commits
 
+（即將） STATE_DETAILS 177 → 271（+94 第五輪：印度土邦／神羅小邦／太平洋／20 世紀短命邦／阿拉伯／早期帝國／非洲）+ dynasty-labels 第三輪（UK 殖民帝國／Ottoman 停滯期細分／Mughal Aurangzeb 拆／Carolingian 查理曼戰役／Delhi 14 段／Inca/Aztec 細擴張） + Stage 1 city-hull POC（阿巴斯 6 polygons） + polygon-year-overrides.json（11 條收窄源資料過早）
 `3ded3db` STATE_DETAILS 78 → 177（+99 條第二+三輪：太平洋／加勒比／拉美／歐洲／義大利城邦／中世紀伊斯蘭／中國北朝／朝鮮三國）
 `9615360` STATE_DETAILS 46 → 78（+32 條：殖民／印度／東南亞／西非／衣索比亞／日韓／法德義西）
 `37ff74b` dynasty-labels.ts 第二輪 — 葡西英荷殖民／西非／印度／東南亞／美洲（+22 polygon × ~130 段）
