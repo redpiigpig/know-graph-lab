@@ -871,45 +871,49 @@ const cv = computed(() => {
     const parentBottomY = parentPos.y + NH
     const parentMarY = parentPos.y + NH / 2
 
-    // ── 左側 (有母親) ──
+    // ── 左側 (有母親) ── 按母親分組，每組各自畫 drop + T-bar
+    // 例：易司哈格 媽=撒拉(slot 0) → 一組；米甸 媽=基突拉(slot 2) → 另一組
     if (leftSibs.length > 0) {
-      // 由 母↔spine 婚姻線中點下降
-      const firstMomId = motherOf.get(leftSibs[0])!
-      const slot = wifeSlotOf.get(firstMomId)!  // 0 = 緊靠 spine
-      const motherCx = parentMidX - (slot + 1) * SLOT_K
-      const prevCx   = slot === 0 ? parentMidX : parentMidX - slot * SLOT_K
-      const dropX = (motherCx + prevCx) / 2  // 婚姻線中點
-
-      // 每個 sib 中心對齊 motherCx 然後往左 fan out；
-      // pre-compute wivesReach 以正確設 leftX（避免子 root 被 wivesReach 推到右側撞 spine）
-      const leftResults: LayoutResult[] = []
-      for (let si = 0; si < leftSibs.length; si++) {
-        const sibId = leftSibs[si]
-        const sibWives = (sp.get(sibId) ?? []).filter(w =>
-          !spineMembership.has(w) && pMap.has(w) && !placedPersonIds.has(w)
-        )
-        const sibWivesReach = sibWives.length * SLOT_K
-        // 想要 sibling root center = motherCx - si * SLOT_K (依 si 往左展開)
-        const desiredRootX = motherCx - si * SLOT_K - NW / 2
-        const leftXArg = desiredRootX - sibWivesReach
-        const r = layoutSubtree(sibId, leftXArg, vis, i + 1, 0)
-        if (r.nodes.length === 0) continue
-        leftResults.push(r)
+      const byMother = new Map<string, string[]>()
+      for (const sib of leftSibs) {
+        const m = motherOf.get(sib)!
+        if (!byMother.has(m)) byMother.set(m, [])
+        byMother.get(m)!.push(sib)
       }
-      if (leftResults.length > 0) {
-        const targetY = leftResults[0].nodes[0]?.y ?? myY
+      for (const [momId, sibs] of byMother) {
+        const slot = wifeSlotOf.get(momId)!  // 0 = 緊靠 spine
+        const motherCx = parentMidX - (slot + 1) * SLOT_K
+        const prevCx   = slot === 0 ? parentMidX : parentMidX - slot * SLOT_K
+        const dropX = (motherCx + prevCx) / 2  // 母↔右鄰 婚姻線中點
+
+        const groupResults: LayoutResult[] = []
+        for (let si = 0; si < sibs.length; si++) {
+          const sibId = sibs[si]
+          const sibWives = (sp.get(sibId) ?? []).filter(w =>
+            !spineMembership.has(w) && pMap.has(w) && !placedPersonIds.has(w)
+          )
+          const sibWivesReach = sibWives.length * SLOT_K
+          // 想要 sib root center = motherCx - si * SLOT_K
+          const desiredRootX = motherCx - si * SLOT_K - NW / 2
+          const leftXArg = desiredRootX - sibWivesReach
+          const r = layoutSubtree(sibId, leftXArg, vis, i + 1, 0)
+          if (r.nodes.length === 0) continue
+          groupResults.push(r)
+        }
+        if (groupResults.length === 0) continue
+        const targetY = groupResults[0].nodes[0]?.y ?? myY
         const barY = parentMarY + Math.round((targetY - parentMarY) * 0.5)
-        const allCXs = leftResults.map(r => r.rootCX)
+        const groupCXs = groupResults.map(r => r.rootCX)
         drops.push({ x: dropX, y1: parentMarY, y2: barY })
         hbars.push({
-          x1: Math.min(dropX, ...allCXs),
-          x2: Math.max(dropX, ...allCXs),
+          x1: Math.min(dropX, ...groupCXs),
+          x2: Math.max(dropX, ...groupCXs),
           y: barY,
         })
-        for (const r of leftResults) {
+        for (const r of groupResults) {
           drops.push({ x: r.rootCX, y1: barY, y2: targetY })
         }
-        for (const r of leftResults) {
+        for (const r of groupResults) {
           nodes.push(...r.nodes)
           drops.push(...r.drops)
           hbars.push(...r.hbars)
