@@ -99,7 +99,7 @@
                 class="flex items-center gap-1 w-full text-[10.5px] cursor-default"
                 @click.stop="toggleBranch(n.branchId!)"
               >
-                <span class="text-[10px] text-violet-500 w-3 shrink-0">{{ expandedBranches.has(n.branchId!) ? '▾' : '▸' }}</span>
+                <span class="text-[10px] text-violet-500 w-3 shrink-0">{{ isBranchExpanded(n.branchId!) ? '▾' : '▸' }}</span>
                 <span class="font-semibold truncate flex-1 text-left text-slate-800">{{ n.label }}</span>
                 <span class="text-[8px] text-slate-400 tabular-nums shrink-0">{{ n.bishopCount }}</span>
               </button>
@@ -259,12 +259,17 @@ const BRANCH_GAP = 12
 const BRANCH_INDENT = 16
 
 // ── Expand state ────────────────────────────────────────────
-const expandedBranches = ref<Set<string>>(new Set())
+// `collapsedBranches` 紀錄「使用者主動收起的」分支；預設所有分支展開
+// （依使用者意願：「延伸出來的是第一任主教，然後往下才是其他主教」）。
+const collapsedBranches = ref<Set<string>>(new Set())
+function isBranchExpanded(branchId: string): boolean {
+  return !collapsedBranches.value.has(branchId)
+}
 function toggleBranch(branchId: string) {
-  const s = expandedBranches.value
+  const s = collapsedBranches.value
   if (s.has(branchId)) s.delete(branchId)
   else s.add(branchId)
-  expandedBranches.value = new Set(s)
+  collapsedBranches.value = new Set(s)
 }
 
 interface LNode {
@@ -303,7 +308,7 @@ const cv = computed(() => {
   function expandedDepth(seeId: string): number {
     let n = 0
     for (const k of branchChildren.get(seeId) ?? []) {
-      if (expandedBranches.value.has(k.id)) {
+      if (isBranchExpanded(k.id)) {
         n = Math.max(n, 1 + expandedDepth(k.id))
       }
     }
@@ -443,15 +448,15 @@ const cv = computed(() => {
     let firstBishopY: number | null = null
     for (let bi = startIdx; bi < sp.bishops.length; bi++) {
       const b = sp.bishops[bi]
-      const churchTag = b.church && b.church !== '未分裂教會' ? `（${b.church}）` : ''
       bishopMap.set(b.id, by + BISH_H / 2)
       if (firstBishopY == null) firstBishopY = by
       nodes.push({
         id: 'bish_' + b.id, kind: 'bishop',
         label: b.name_zh,
+        // 任期年份；不再附 church 後綴（spine 顏色+see 標籤已表明所屬教派）
         sub: b.start_year != null
-          ? `${formatYear(b.start_year)}–${b.end_year != null ? formatYear(b.end_year) : ''}${churchTag}`
-          : churchTag,
+          ? `${formatYear(b.start_year)}–${b.end_year != null ? formatYear(b.end_year) : ''}`
+          : '',
         x: headerX, y: by, w: BISH_W, h: BISH_H,
         successionNum: b.succession_number,
         spineColor: sp.color,
@@ -557,19 +562,19 @@ const cv = computed(() => {
           paths.push({ d: dPath, stroke: sp.color, width: 2, opacity: 0.85 })
         }
 
-        if (expandedBranches.value.has(br.id)) {
+        if (isBranchExpanded(br.id)) {
           let cy = by + BRANCH_H + 4
           for (const bb of br.bishops) {
-            const churchTag = bb.church && bb.church !== br.church ? `（${bb.church}）` : ''
             // Track this branch bishop's Y so deeper sub-branches can attach to the
             // specific bishop row when their parent_bishop_id resolves to here.
             branchBishopMap.set(bb.id, cy + (BISH_H - 2) / 2)
             nodes.push({
               id: 'bbish_' + bb.id, kind: 'bishop',
               label: bb.name_zh,
+              // 任期年份；不再附 church 後綴
               sub: bb.start_year != null
-                ? `${formatYear(bb.start_year)}–${bb.end_year != null ? formatYear(bb.end_year) : ''}${churchTag}`
-                : churchTag,
+                ? `${formatYear(bb.start_year)}–${bb.end_year != null ? formatYear(bb.end_year) : ''}`
+                : '',
               x: bx + BRANCH_INDENT, y: cy,
               w: BRANCH_W - BRANCH_INDENT, h: BISH_H - 2,
               successionNum: bb.succession_number,
