@@ -42,6 +42,17 @@
         </NuxtLink>
 
         <NuxtLink
+          to="/genealogy/consecration-tree"
+          class="group flex flex-col gap-3 bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-violet-300 transition"
+        >
+          <div class="text-3xl">🔗</div>
+          <div>
+            <div class="font-semibold text-gray-900 text-base group-hover:text-violet-700 transition">主教按立樹</div>
+            <div class="text-xs text-gray-400 mt-0.5">以按立鏈為主軸的傳承（含羅馬→坎特伯里→Wesley→台灣會督）</div>
+          </div>
+        </NuxtLink>
+
+        <NuxtLink
           to="/genealogy/islamic"
           class="group flex flex-col gap-3 bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-emerald-300 transition"
         >

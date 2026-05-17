@@ -33,6 +33,7 @@ interface SuccRow {
   start_year: number | null
   end_year: number | null
   appointed_by: string | null
+  consecrator_bishop_id: string | null   // 按立者 UUID（跨教座按立鏈用）
   status: string
   notes: string | null
 }
@@ -139,7 +140,7 @@ export default defineEventHandler(async (event) => {
   for (let from = 0; ; from += 1000) {
     const { data: page, error: pageErr } = await supabase
       .from('episcopal_succession')
-      .select('id, name_zh, name_en, see, church, succession_number, start_year, end_year, appointed_by, status, notes')
+      .select('id, name_zh, name_en, see, church, succession_number, start_year, end_year, appointed_by, consecrator_bishop_id, status, notes')
       .range(from, from + 999)
     if (pageErr) throw createError({ statusCode: 500, message: pageErr.message })
     if (!page || page.length === 0) break
@@ -232,6 +233,7 @@ export default defineEventHandler(async (event) => {
         start_year: b.start_year,
         end_year: b.end_year,
         appointed_by: b.appointed_by,
+        consecrator_bishop_id: b.consecrator_bishop_id,
         church: b.church,
         status: b.status,
         notes: b.notes,
@@ -263,6 +265,7 @@ export default defineEventHandler(async (event) => {
       start_year: b.start_year,
       end_year: b.end_year,
       appointed_by: b.appointed_by,
+      consecrator_bishop_id: b.consecrator_bishop_id,
       church: b.church,
       status: b.status,
       notes: b.notes,
