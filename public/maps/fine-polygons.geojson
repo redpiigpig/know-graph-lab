@@ -1,0 +1,821 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.1,
+              35.68
+            ],
+            [
+              13.18,
+              32.89
+            ],
+            [
+              45.03,
+              12.79
+            ],
+            [
+              71.51,
+              30.2
+            ],
+            [
+              66.97,
+              39.65
+            ],
+            [
+              44.83,
+              41.72
+            ],
+            [
+              10.18,
+              36.81
+            ],
+            [
+              10.1,
+              35.68
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Abbasid Caliphate",
+        "name_zh": "阿巴斯哈里發",
+        "year_from": 750,
+        "year_to": 799,
+        "city_count": 40,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.1,
+              35.68
+            ],
+            [
+              13.18,
+              32.89
+            ],
+            [
+              45.03,
+              12.79
+            ],
+            [
+              71.51,
+              30.2
+            ],
+            [
+              69.27,
+              41.32
+            ],
+            [
+              44.83,
+              41.72
+            ],
+            [
+              10.1,
+              35.68
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Abbasid Caliphate",
+        "name_zh": "阿巴斯哈里發",
+        "year_from": 800,
+        "year_to": 899,
+        "city_count": 41,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              35.23,
+              31.78
+            ],
+            [
+              39.83,
+              21.43
+            ],
+            [
+              51.67,
+              32.65
+            ],
+            [
+              51.43,
+              35.59
+            ],
+            [
+              44.51,
+              40.18
+            ],
+            [
+              38.8,
+              37.16
+            ],
+            [
+              37.16,
+              36.2
+            ],
+            [
+              35.23,
+              31.78
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Abbasid Caliphate",
+        "name_zh": "阿巴斯哈里發",
+        "year_from": 900,
+        "year_to": 999,
+        "city_count": 19,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              43.13,
+              36.34
+            ],
+            [
+              44.4,
+              32.03
+            ],
+            [
+              47.78,
+              30.5
+            ],
+            [
+              48.51,
+              34.8
+            ],
+            [
+              43.13,
+              36.34
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Abbasid Caliphate",
+        "name_zh": "阿巴斯哈里發",
+        "year_from": 1000,
+        "year_to": 1099,
+        "city_count": 8,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              43.69,
+              34.61
+            ],
+            [
+              44.4,
+              32.03
+            ],
+            [
+              44.43,
+              32.46
+            ],
+            [
+              44.42,
+              33.34
+            ],
+            [
+              43.69,
+              34.61
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Abbasid Caliphate",
+        "name_zh": "阿巴斯哈里發",
+        "year_from": 1100,
+        "year_to": 1199,
+        "city_count": 5,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              43.13,
+              36.34
+            ],
+            [
+              44.4,
+              32.03
+            ],
+            [
+              47.78,
+              30.5
+            ],
+            [
+              43.13,
+              36.34
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Abbasid Caliphate",
+        "name_zh": "阿巴斯哈里發",
+        "year_from": 1200,
+        "year_to": 1259,
+        "city_count": 7,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.18,
+              32.89
+            ],
+            [
+              39.83,
+              21.43
+            ],
+            [
+              47.78,
+              30.5
+            ],
+            [
+              43.13,
+              36.34
+            ],
+            [
+              36.16,
+              36.2
+            ],
+            [
+              13.18,
+              32.89
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Umayyad Caliphate",
+        "name_zh": "伍麥亞哈里發",
+        "year_from": 661,
+        "year_to": 679,
+        "city_count": 15,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.1,
+              35.68
+            ],
+            [
+              13.18,
+              32.89
+            ],
+            [
+              44.21,
+              15.37
+            ],
+            [
+              47.78,
+              30.5
+            ],
+            [
+              43.13,
+              36.34
+            ],
+            [
+              38.8,
+              37.16
+            ],
+            [
+              10.1,
+              35.68
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Umayyad Caliphate",
+        "name_zh": "伍麥亞哈里發",
+        "year_from": 680,
+        "year_to": 699,
+        "city_count": 20,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.1,
+              35.68
+            ],
+            [
+              13.18,
+              32.89
+            ],
+            [
+              45.03,
+              12.79
+            ],
+            [
+              71.51,
+              30.2
+            ],
+            [
+              64.43,
+              39.77
+            ],
+            [
+              10.18,
+              36.81
+            ],
+            [
+              10.1,
+              35.68
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Umayyad Caliphate",
+        "name_zh": "伍麥亞哈里發",
+        "year_from": 700,
+        "year_to": 719,
+        "city_count": 26,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -7.99,
+              31.63
+            ],
+            [
+              45.03,
+              12.79
+            ],
+            [
+              71.51,
+              30.2
+            ],
+            [
+              66.97,
+              39.65
+            ],
+            [
+              64.43,
+              39.77
+            ],
+            [
+              -4.02,
+              39.86
+            ],
+            [
+              -5.99,
+              37.39
+            ],
+            [
+              -7.99,
+              31.63
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Umayyad Caliphate",
+        "name_zh": "伍麥亞哈里發",
+        "year_from": 720,
+        "year_to": 744,
+        "city_count": 39,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -5.99,
+              37.39
+            ],
+            [
+              -5,
+              34.03
+            ],
+            [
+              45.03,
+              12.79
+            ],
+            [
+              71.51,
+              30.2
+            ],
+            [
+              69.27,
+              41.32
+            ],
+            [
+              -4.02,
+              39.86
+            ],
+            [
+              -5.99,
+              37.39
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Umayyad Caliphate",
+        "name_zh": "伍麥亞哈里發",
+        "year_from": 745,
+        "year_to": 749,
+        "city_count": 41,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102.35,
+              46.93
+            ],
+            [
+              103.35,
+              46.93
+            ],
+            [
+              103.35,
+              47.93
+            ],
+            [
+              102.35,
+              47.93
+            ],
+            [
+              102.35,
+              46.93
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Mongol Empire",
+        "name_zh": "蒙古帝國",
+        "year_from": 1206,
+        "year_to": 1214,
+        "city_count": 1,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102.85,
+              47.43
+            ],
+            [
+              113.3,
+              40.08
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              102.85,
+              47.43
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Mongol Empire",
+        "name_zh": "蒙古帝國",
+        "year_from": 1215,
+        "year_to": 1219,
+        "city_count": 4,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              58.81,
+              36.21
+            ],
+            [
+              62.2,
+              34.34
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              102.85,
+              47.43
+            ],
+            [
+              68.3,
+              42.85
+            ],
+            [
+              60.63,
+              41.55
+            ],
+            [
+              58.81,
+              36.21
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Mongol Empire",
+        "name_zh": "蒙古帝國",
+        "year_from": 1220,
+        "year_to": 1229,
+        "city_count": 12,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.27,
+              38.07
+            ],
+            [
+              48.51,
+              34.8
+            ],
+            [
+              51.67,
+              32.65
+            ],
+            [
+              114.34,
+              34.8
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              102.85,
+              47.43
+            ],
+            [
+              68.3,
+              42.85
+            ],
+            [
+              60.63,
+              41.55
+            ],
+            [
+              46.27,
+              38.07
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Mongol Empire",
+        "name_zh": "蒙古帝國",
+        "year_from": 1230,
+        "year_to": 1239,
+        "city_count": 19,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              30.52,
+              50.45
+            ],
+            [
+              48.51,
+              34.8
+            ],
+            [
+              51.67,
+              32.65
+            ],
+            [
+              71.51,
+              30.2
+            ],
+            [
+              114.34,
+              34.8
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              102.85,
+              47.43
+            ],
+            [
+              40.42,
+              56.13
+            ],
+            [
+              30.52,
+              50.45
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Mongol Empire",
+        "name_zh": "蒙古帝國",
+        "year_from": 1240,
+        "year_to": 1249,
+        "city_count": 25,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              16.16,
+              51.21
+            ],
+            [
+              19.07,
+              47.5
+            ],
+            [
+              51.67,
+              32.65
+            ],
+            [
+              71.51,
+              30.2
+            ],
+            [
+              114.34,
+              34.8
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              102.85,
+              47.43
+            ],
+            [
+              40.42,
+              56.13
+            ],
+            [
+              16.16,
+              51.21
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Mongol Empire",
+        "name_zh": "蒙古帝國",
+        "year_from": 1250,
+        "year_to": 1258,
+        "city_count": 32,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              30.52,
+              50.45
+            ],
+            [
+              36.3,
+              33.51
+            ],
+            [
+              77.21,
+              28.65
+            ],
+            [
+              114.34,
+              34.8
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              102.85,
+              47.43
+            ],
+            [
+              40.42,
+              56.13
+            ],
+            [
+              30.52,
+              50.45
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Mongol Empire",
+        "name_zh": "蒙古帝國",
+        "year_from": 1259,
+        "year_to": 1259,
+        "city_count": 35,
+        "source": "city-hull (manual city list)"
+      }
+    }
+  ]
+}

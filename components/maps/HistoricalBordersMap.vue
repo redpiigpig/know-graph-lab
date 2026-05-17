@@ -255,6 +255,7 @@ interface StateEntry {
   name: string
   yearFrom: number
   yearTo: number
+  isFine?: boolean
 }
 
 const landFeatures = ref<any[]>([])
@@ -332,9 +333,16 @@ function rebuildAll() {
     id: `land-${i}`, d: path(f) || '',
   })).filter(p => p.d)
 
-  // States active at year
-  const activeStates = stateEntries.value.filter(s =>
+  // States active at year — fine polygon 蓋住的 name 抑制對應粗 polygon
+  const activeAtYear = stateEntries.value.filter(s =>
     year >= s.yearFrom && year <= s.yearTo
+  )
+  const fineActiveNames = new Set<string>()
+  for (const s of activeAtYear) {
+    if (s.isFine) fineActiveNames.add(s.name)
+  }
+  const activeStates = activeAtYear.filter(s =>
+    s.isFine || !fineActiveNames.has(s.name)
   )
   statePaths.value = activeStates.map((s, i) => {
     const { fill, stroke } = colorForState(s.name)
@@ -471,7 +479,7 @@ onMounted(async () => {
   }
 
   try {
-    const [adm0Res, statesRes, coastRes, wdRes, polyZhRes, polyClsRes, polyYearRes] = await Promise.all([
+    const [adm0Res, statesRes, coastRes, wdRes, polyZhRes, polyClsRes, polyYearRes, fineRes] = await Promise.all([
       fetch('/maps/ne_50m_admin_0_countries.geojson'),
       fetch('/maps/historical-states.geojson'),
       fetch('/maps/ne_50m_coastline.geojson'),
@@ -479,6 +487,7 @@ onMounted(async () => {
       fetch('/maps/polygon-names-zh.json').catch(() => ({ ok: false } as any)),
       fetch('/maps/polygon-classifications.json').catch(() => ({ ok: false } as any)),
       fetch('/maps/polygon-year-overrides.json').catch(() => ({ ok: false } as any)),
+      fetch('/maps/fine-polygons.geojson').catch(() => ({ ok: false } as any)),
     ])
     const [adm0, states, coast, wd] = await Promise.all([
       adm0Res.json(), statesRes.json(), coastRes.json(), wdRes.json(),
@@ -494,6 +503,14 @@ onMounted(async () => {
       try {
         const obj = await (polyYearRes as Response).json()
         yearOverrides = obj.overrides || {}
+      } catch {}
+    }
+    // 細粒度 polygon（city-hull POC）— 對應的粗 polygon 在覆蓋年份會被替換
+    let fineFeatures: any[] = []
+    if (fineRes && (fineRes as Response).ok) {
+      try {
+        const obj = await (fineRes as Response).json()
+        fineFeatures = obj.features || []
       } catch {}
     }
     landFeatures.value = adm0.features.filter((f: any) => f.properties.ADM0_A3 !== 'ATA')
@@ -520,7 +537,8 @@ onMounted(async () => {
     // 標準（user-defined）：至少酋邦／城邦／建立王權的遊牧帝國才算政權
     const cls = polygonIsState.value
     const hasCls = Object.keys(cls).length > 0
-    stateEntries.value = (states.features || [])
+    // 粗 polygon entries（標 isFine=false）
+    const coarseEntries = (states.features || [])
       .filter((f: any) => !hasCls || cls[f.properties.name]?.is_state !== false)
       .map((f: any) => {
         const ovr = yearOverrides[f.properties.name]
@@ -530,9 +548,20 @@ onMounted(async () => {
         const yearTo = ovr?.max_year_to !== undefined
           ? Math.min(f.properties.year_to, ovr.max_year_to)
           : f.properties.year_to
-        return { feature: f, name: f.properties.name, yearFrom, yearTo }
+        return { feature: f, name: f.properties.name, yearFrom, yearTo, isFine: false }
       })
       .filter((s: any) => s.yearFrom <= s.yearTo)
+
+    // 細粒度 polygon entries（標 isFine=true）— rebuildAll 中若有 fine 蓋住，粗的就被抑制
+    const fineStateEntries = fineFeatures.map((f: any) => ({
+      feature: f,
+      name: f.properties.name,
+      yearFrom: f.properties.year_from,
+      yearTo: f.properties.year_to,
+      isFine: true,
+    }))
+
+    stateEntries.value = [...coarseEntries, ...fineStateEntries]
     rebuildAll()
   } catch (e) {
     console.error('歷史國界地圖載入失敗', e)

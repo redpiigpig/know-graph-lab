@@ -26,7 +26,7 @@ description: 「歷史國界地圖」工具集（/maps/historical-borders）— 
 | E. 人工撰寫詳細 | `data/maps/historical-states-db.ts` (`STATE_DETAILS`) | **271 條（5 輪擴充）** | 朝代、首都、宗教、人口、面積、簡介 |
 | E2. 朝代時間段標籤 | `data/maps/dynasty-labels.ts` (`DYNASTY_LABELS`) | **47 polygon × ~10 段 = ~480 段（含第三輪細分）** | 跨朝代 polygon 按年代切時期，標籤顯示「{朝代}（{國家}）」 |
 | E3. polygon 年範圍修正 | `public/maps/polygon-year-overrides.json` | **11 條** | 收窄源資料過早 polygon（如 Hurrian -5000→-2500、Indus -4000→-3300）|
-| E4. 阿巴斯密集 polygon（POC） | `public/maps/abbasid-fine-polygons.geojson` | **6 polygons** | Stage 1 city-hull 法 POC：750/800/900/1000/1100/1200，未接入主圖 |
+| E4. 細粒度 polygon（city-hull） | `public/maps/fine-polygons.geojson` | **18 polygons / 3 帝國** | 阿巴斯 6 + 伍麥亞 5 + 蒙古 7；已接入主圖，覆蓋粗 polygon |
 | F. NE 50m coastline | `public/maps/ne_50m_coastline.geojson` | 1428 LineString | 海岸線（黑線） |
 | G. NE 50m admin_0 | `public/maps/ne_50m_admin_0_countries.geojson` | 242 features | 陸地灰底 + **NAME_ZHT 中文國名（內建）** |
 | H. Polygon 名譯本 | `public/maps/polygon-names-zh.json` | **2,420 條 (88 KB)** | Gemini batch 翻的 polygon name → 繁中 |
@@ -604,25 +604,34 @@ TimeAxis 右上「▶ 播放」按鈕，速度可選「慢／普通／快」（2
 
 ---
 
-### C. Stage 1：City-Hull polygon POC（已試做、未接入主圖）
+### C. Stage 1：City-Hull polygon（已接入主圖，3 帝國 18 polygons）
 
-已完成阿巴斯 6 個密集 polygon POC：[scripts/city_hull_abbasid.mjs](../../../scripts/city_hull_abbasid.mjs) → `public/maps/abbasid-fine-polygons.geojson`（~3 KB / 6 features）。
+**現況：** [scripts/build_city_hull_polygons.mjs](../../../scripts/build_city_hull_polygons.mjs) 輸出 `public/maps/fine-polygons.geojson`（18 polygons / 3 帝國 / ~5.5 KB）：
+- 阿巴斯 750 / 800 / 900 / 1000 / 1100 / 1200（6）
+- 伍麥亞 661 / 680 / 700 / 720 / 745（5）— 鄂圖曼前的阿拉伯帝國擴張
+- 蒙古 1206 / 1215 / 1220 / 1230 / 1240 / 1250 / 1259（7）— 從鐵木真崛起到 1259 蒙哥死前極盛
 
-**做法（簡化版，跳過 Gemini Vision）**：
-- 手寫城市清單 + 內嵌 lat/lon（CITIES 表 ~50 城）
-- CONTROL_BY_YEAR：750/800/900/1000/1100/1200 各列出該年阿巴斯控城
-- Graham scan convex hull → GeoJSON Polygon
-- 精度 ±100 km；凹邊（如阿巴斯失埃及但保敘利亞）不能呈現
+**已接入 [HistoricalBordersMap.vue](../../../components/maps/HistoricalBordersMap.vue)：** runtime 比對 polygon `name`，當該年有 fine polygon 覆蓋某 name，自動抑制對應粗 polygon。`stateEntries` 同時含 coarse + fine，render 時用 `s.isFine` 標籤判定優先序。
+
+**做法（跳過 Gemini Vision）：**
+- 共享城市庫 CITIES（~80 城 lat/lon，含中東/中亞/中國/俄羅斯/歐洲核心城）
+- 每帝國 polygon_name + years 字典（年 → 該年控城清單），end_year 終止年
+- 1 城 → 0.5° 方塊；2 城 → bbox；3+ → Graham scan convex hull
+- 精度 ±100 km；凹邊（阿巴斯 900 失埃及但保敘利亞）不能呈現
 
 ```bash
-node scripts/city_hull_abbasid.mjs   # ~1 秒
+node scripts/build_city_hull_polygons.mjs   # ~1 秒
+```
+
+**polygon_name 必須對齊 historical-states.geojson** — 跑前用以下檢查：
+```bash
+node -e "const fs=require('fs');const gj=JSON.parse(fs.readFileSync('public/maps/historical-states.geojson'));const ns=new Set(gj.features.map(f=>f.properties.name));console.log(ns.has('Mongol Empire'))"
 ```
 
 **下一步：**
-1. **接入主圖**：HistoricalBordersMap.vue 載 `abbasid-fine-polygons.geojson`，當該年在 [750, 1260] 區間時用密集 polygon 覆蓋 historical-basemaps 的阿巴斯 polygon（feature flag）
-2. **擴展到其他帝國**：寫 `city_hull_<empire>.mjs` 一個一個帝國做
-3. **Gemini Vision 自動化**：未來真的需要 50+ 帝國時，再寫 Vision 從 Wikipedia 抓城市清單
-4. **凹邊處理**：當控制不連續（如阿巴斯 900 既要含 Baghdad 又要含 Cairo 但中間敘利亞失控），用 alpha-shape 或手動分多 polygon
+1. **擴展更多帝國**：在 build_city_hull_polygons.mjs 的 EMPIRES 加：羅馬／拜占庭／鄂圖曼／唐／元／清；至少 6 個帝國 ×7-10 年 = 50+ polygons
+2. **凹邊處理**：當控制不連續，用 alpha-shape 或手動分多 polygon（一帝國同年可多 polygon）
+3. **Gemini Vision 自動化**：未來真的需要 50+ 帝國時，從 Wikipedia「Territorial evolution of X」抓城市清單
 
 其他長期路徑：
 
@@ -682,7 +691,8 @@ historical-borders-map 額外用：
 
 ## Recent commits
 
-（即將） STATE_DETAILS 177 → 271（+94 第五輪：印度土邦／神羅小邦／太平洋／20 世紀短命邦／阿拉伯／早期帝國／非洲）+ dynasty-labels 第三輪（UK 殖民帝國／Ottoman 停滯期細分／Mughal Aurangzeb 拆／Carolingian 查理曼戰役／Delhi 14 段／Inca/Aztec 細擴張） + Stage 1 city-hull POC（阿巴斯 6 polygons） + polygon-year-overrides.json（11 條收窄源資料過早）
+（即將）city-hull 多帝國通用版 + 接入主圖：阿巴斯 6 / 伍麥亞 5 / 蒙古 7 polygons → fine-polygons.geojson；HistoricalBordersMap.vue 載入並抑制對應粗 polygon
+`db7f443` STATE_DETAILS 177 → 271（+94 第五輪：印度土邦／神羅小邦／太平洋／20 世紀短命邦／阿拉伯／早期帝國／非洲）+ dynasty-labels 第三輪 + Stage 1 city-hull POC + polygon-year-overrides.json
 `3ded3db` STATE_DETAILS 78 → 177（+99 條第二+三輪：太平洋／加勒比／拉美／歐洲／義大利城邦／中世紀伊斯蘭／中國北朝／朝鮮三國）
 `9615360` STATE_DETAILS 46 → 78（+32 條：殖民／印度／東南亞／西非／衣索比亞／日韓／法德義西）
 `37ff74b` dynasty-labels.ts 第二輪 — 葡西英荷殖民／西非／印度／東南亞／美洲（+22 polygon × ~130 段）
