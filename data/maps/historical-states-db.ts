@@ -136,7 +136,7 @@ export const STATE_DETAILS: Record<string, StateDetail> = {
     intro: '克里特島青銅時代文明（-2700~-1450）。線形文字 A 未解。可能毀於聖托里尼火山或邁錫尼入侵。',
   },
   'Norte Chico': {
-    name_zh: '小北文明（卡拉爾）',
+    name_zh: '小北文明',
     capitals: ['卡拉爾'],
     realm_id: 'latin-america', sphere_id: 'andean',
     intro: '美洲最早城市文明（-3000~-1800）。秘魯中部沿海。無陶器但有複雜建築與量子記繩（Quipu 原型）。',
@@ -284,7 +284,7 @@ export const STATE_DETAILS: Record<string, StateDetail> = {
     area_peak_wan_km2: 500,
   },
   'Parthian Empire': {
-    name_zh: '帕提亞（安息）',
+    name_zh: '帕提亞',
     capitals: ['泰西封（Ctesiphon）', '尼薩'],
     religions: ['瑣羅亞斯德教', '希臘化-伊朗融合'],
     realm_id: 'central', sphere_id: 'persian',
@@ -772,7 +772,7 @@ export const STATE_DETAILS: Record<string, StateDetail> = {
     population_peak_wan: 1000,
   },
   'Persia': {
-    name_zh: '波斯（近世）',
+    name_zh: '波斯',
     dynasties: ['薩法維（1501-1736）', '阿夫沙爾／贊德', '卡扎爾（1796-1925）'],
     capitals: ['伊斯法罕', '德黑蘭'],
     religions: ['伊斯蘭什葉派十二伊瑪目派'],
@@ -792,7 +792,7 @@ export const STATE_DETAILS: Record<string, StateDetail> = {
     area_peak_wan_km2: 165,
   },
   'Manchu Empire': {
-    name_zh: '滿洲帝國（清）',
+    name_zh: '滿洲帝國',
     dynasties: ['愛新覺羅'],
     capitals: ['盛京（瀋陽）→ 北京（1644 起）'],
     religions: ['薩滿', '藏傳佛教', '儒釋道', '伊斯蘭（新疆）'],
@@ -1414,7 +1414,7 @@ export const STATE_DETAILS: Record<string, StateDetail> = {
 
   // ========== 中國北方／三國／早期 ==========
   'Liao': {
-    name_zh: '遼（契丹）',
+    name_zh: '遼',
     dynasties: ['耶律氏'],
     capitals: ['上京臨潢府', '中京大定府'],
     religions: ['薩滿', '佛教（中後期盛）'],
@@ -1423,7 +1423,7 @@ export const STATE_DETAILS: Record<string, StateDetail> = {
     area_peak_wan_km2: 489,
   },
   'Jin': {
-    name_zh: '金（女真）',
+    name_zh: '金',
     dynasties: ['完顏氏'],
     capitals: ['上京會寧府', '中都（北京）'],
     religions: ['薩滿＋佛教＋儒'],
@@ -1617,7 +1617,7 @@ export const STATE_DETAILS: Record<string, StateDetail> = {
     intro: '拉吉普特最大邦之一。1727 馬哈拉賈‧傑‧辛格二世建粉紅城。1949 併入拉賈斯坦。',
   },
   'Udaipur State': {
-    name_zh: '烏代浦土邦（梅瓦爾）',
+    name_zh: '烏代浦土邦',
     dynasties: ['Sisodia 王朝（西索迪亞）'],
     capitals: ['奇陶加爾', '烏代浦（1559）'],
     religions: ['印度教'],
@@ -1716,7 +1716,7 @@ export const STATE_DETAILS: Record<string, StateDetail> = {
     intro: '1806 拿破崙從黑森-達姆施塔特方伯國升為大公國。1871 入德意志帝國。1918 共和。',
   },
   'Electoral Hesse': {
-    name_zh: '黑森選帝侯國（卡塞爾）',
+    name_zh: '黑森選帝侯國',
     capitals: ['卡塞爾'],
     religions: ['新教改革宗'],
     realm_id: 'western', sphere_id: 'central-european',
@@ -1814,7 +1814,7 @@ export const STATE_DETAILS: Record<string, StateDetail> = {
     intro: '1853 法國併吞、原為流放殖民地。鎳礦豐富。卡納克原住民獨立運動 1980s 起。2018-2021 三次公投皆否決獨立。',
   },
   'Rapa Nui': {
-    name_zh: '拉帕努伊（復活節島）',
+    name_zh: '拉帕努伊',
     religions: ['玻里尼西亞傳統＋天主教'],
     realm_id: 'asia-pacific', sphere_id: 'pacific',
     intro: '玻里尼西亞最東。9-17 世紀 Moai 巨石像文明。內戰與歐人帶來疾病使 1877 人口跌至 111 人。1888 智利併吞。',
@@ -1926,7 +1926,7 @@ export const STATE_DETAILS: Record<string, StateDetail> = {
     intro: '1836 從墨西哥獨立（阿拉莫之戰、聖哈辛托）。Sam Houston 首任總統。1845 加入美國成為第 28 州、引爆美墨戰爭。',
   },
   'California Republic': {
-    name_zh: '加利福尼亞共和國（熊旗）',
+    name_zh: '加利福尼亞共和國',
     realm_id: 'north-america', sphere_id: 'anglo-american',
     intro: '1846 6 月 14 日美墨戰爭爆發後、北加州移民在索諾馬建熊旗共和國。僅持續 25 天、7 月 9 日 John Frémont 接管後併入美國。',
   },
@@ -1962,7 +1962,7 @@ export const STATE_DETAILS: Record<string, StateDetail> = {
     intro: '1926 伊本紹德兼漢志王。1927 英承認為獨立國。1932 改名沙烏地阿拉伯王國。',
   },
   'Hail': {
-    name_zh: '哈伊勒（傑貝勒沙馬爾酋長國）',
+    name_zh: '哈伊勒',
     dynasties: ['Rashidi 拉希迪家族（1836-1921）'],
     capitals: ['哈伊勒'],
     religions: ['伊斯蘭遜尼派'],
@@ -1970,7 +1970,7 @@ export const STATE_DETAILS: Record<string, StateDetail> = {
     intro: '阿拉伯北部沙馬爾部族邦。19 世紀末逐第二沙烏地國（1891）成為半島強權。1921 伊本紹德反攻征服、併入沙烏地。',
   },
   'Trucial Oman': {
-    name_zh: '停戰阿曼（停戰諸國）',
+    name_zh: '停戰阿曼',
     religions: ['伊斯蘭遜尼派'],
     realm_id: 'central', sphere_id: 'arabian',
     intro: '波斯灣南岸七酋長國群（阿布達比／杜拜／沙迦／阿吉曼／烏姆蓋萬／拉斯海瑪／富吉拉）。1820 英簽永久停戰、1892 英保護國。1971 獨立組成阿聯。',
@@ -2046,7 +2046,7 @@ export const STATE_DETAILS: Record<string, StateDetail> = {
     intro: '阿姆河上游的古老地區。波斯帝國行省。亞歷山大東征後與大夏交融。-250 起希臘-巴克特里亞王國獨立。後為塞種與貴霜取代。',
   },
   'Greco-Bactrian Kingdom': {
-    name_zh: '希臘-巴克特里亞王國（大夏）',
+    name_zh: '希臘-巴克特里亞王國',
     dynasties: ['狄奧多托斯／歐西德摩斯／米南德等支系'],
     capitals: ['巴克特拉', '阿伊哈努姆'],
     religions: ['希臘多神＋佛教（影響後續犍陀羅）'],
@@ -2079,7 +2079,7 @@ export const STATE_DETAILS: Record<string, StateDetail> = {
     area_peak_wan_km2: 290,
   },
   'Toba Wei': {
-    name_zh: '拓跋魏（北魏）',
+    name_zh: '北魏',
     realm_id: 'eastern', sphere_id: 'han',
     intro: 'historical-basemaps 對北魏的另一稱呼（拓跋部）。',
   },
@@ -2222,7 +2222,7 @@ export const STATE_DETAILS: Record<string, StateDetail> = {
     population_peak_wan: 200,
   },
   'Funj': {
-    name_zh: '豐吉蘇丹國（森納爾）',
+    name_zh: '豐吉蘇丹國',
     dynasties: ['Unsab／Funj 家族（1504-1821）'],
     capitals: ['森納爾'],
     religions: ['伊斯蘭遜尼派蘇菲'],
@@ -2239,7 +2239,7 @@ export const STATE_DETAILS: Record<string, StateDetail> = {
     population_peak_wan: 4000,
   },
   'Yorubaland': {
-    name_zh: '約魯巴地區（諸城邦）',
+    name_zh: '約魯巴地區',
     capitals: ['伊費', '奧約', '伊巴丹'],
     religions: ['Orisha 本土信仰（後輸出至加勒比 Santería／Candomblé）'],
     realm_id: 'southern', sphere_id: 'gulf-of-guinea',
