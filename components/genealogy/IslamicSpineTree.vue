@@ -760,12 +760,36 @@ const cv = computed(() => {
       }
 
       // Each kid: recursive subtree layout (so descendants come along)
-      // Lay them in a row at gen+1 with HG gap. Anchor row left edge near mother.
+      // 特例：法蒂瑪 先處理且固定位置 (Ali 落在 SPINE_X)，其他 kids 後續從她右側 cursor 繼續
+      const FATIMA_NAME = '法蒂瑪（穆聖之女）'
+      const fatimaKid = grp.kids.find(k => pMap.get(k)?.data.name === FATIMA_NAME)
+      const otherKids = grp.kids.filter(k => k !== fatimaKid)
+      const orderedKids = fatimaKid ? [fatimaKid, ...otherKids] : grp.kids
+
       let groupCursor = dropStartX - (grp.kids.length * (NW + HG)) / 2 + NW / 2
       const kidResults: LayoutResult[] = []
-      for (const kid of grp.kids) {
+      for (const kid of orderedKids) {
+        const isFatima = kid === fatimaKid
         const r = layoutSubtree(kid, groupCursor - NW / 2, vis, (sp_p.data.generationNum || i + 1) + 1, 0)
         if (r.nodes.length === 0) continue
+        if (isFatima) {
+          // Post-shift: Fatima rootX = SPINE_X + SLOT_K, Ali (wife) 落在 SPINE_X
+          const fatimaNode = r.nodes.find(n => n.personId === kid)
+          if (fatimaNode) {
+            const dx = (SPINE_X + SLOT_K) - fatimaNode.x
+            if (dx !== 0) {
+              for (const n of r.nodes) {
+                n.x += dx
+                positionByPerson.set(n.personId, { x: n.x, y: n.y })
+              }
+              for (const d of r.drops)     d.x += dx
+              for (const b of r.hbars)   { b.x1 += dx; b.x2 += dx }
+              for (const m of r.marriages){ m.x1 += dx; m.x2 += dx }
+              r.rootCX += dx
+              r.maxX += dx
+            }
+          }
+        }
         kidResults.push(r)
         groupCursor = r.maxX + HG + NW / 2
       }
