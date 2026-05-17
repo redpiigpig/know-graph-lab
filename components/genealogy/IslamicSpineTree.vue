@@ -320,7 +320,10 @@ function toggleExpand(personId: string) {
 }
 
 // 雙主幹自動展開：法蒂瑪+阿里 全部後代（哈桑+Sharif 線 + 侯賽因+12 伊瑪目線）
-const DUAL_SPINE_ROOTS = ['法蒂瑪（穆聖之女）', '阿里（艾比·塔利卜之子）', '哈桑·伊本·阿里', '侯賽因·伊本·阿里']
+// + 艾比·塔利卜 (顯示阿里在父親那邊，搭配 ♻ 同人標記)
+const DUAL_SPINE_ROOTS = ['法蒂瑪（穆聖之女）', '阿里（艾比·塔利卜之子）', '哈桑·伊本·阿里', '侯賽因·伊本·阿里', '艾比·塔利卜']
+// 「主幹角色」— hasSubtree 強制 false (不顯示 ▼)，他們的後代自動展開故無需收摺鈕
+const NO_COLLAPSE_NAMES = new Set(['阿里（艾比·塔利卜之子）', '法蒂瑪（穆聖之女）', '哈桑·伊本·阿里', '侯賽因·伊本·阿里'])
 const dualSpineExpanded = ref(false)
 watch(() => [personByName.value, childrenOf.value], ([byName, chMap]) => {
   if (dualSpineExpanded.value) return
@@ -393,9 +396,11 @@ const cv = computed(() => {
     placedPersonIds.add(personId)
     const raw = p.data.name as string
     // Dup placements: 不顯示 ▼（descendants 由 primary 卡負責），標 samePerson=true
-    let descCount = isSpine || isDup ? 0 : countDescendants(personId)
+    // 主幹角色（阿里/法蒂瑪/哈桑/侯賽因）也不顯示 ▼（雙主幹預設展開故無需）
+    const isMainBranch = NO_COLLAPSE_NAMES.has(raw)
+    let descCount = isSpine || isDup || isMainBranch ? 0 : countDescendants(personId)
     const isExpanded = expandedSet.has(personId)
-    let hasSubtree = !isSpine && !isDup && descCount >= SUBTREE_MIN
+    let hasSubtree = !isSpine && !isDup && !isMainBranch && descCount >= SUBTREE_MIN
     // 妻子的 children 若被丈夫 children 涵蓋 → 不顯示 ▼（族譜慣例「子嗣放男方」）
     // e.g., 麗百加(利百加, ▼37) 跟 易司哈格(以撒, ▼38) 雙顯示重複，保留 易司哈格 一邊
     const isFemale = p.data.gender === '女' || p.data.gender === 'female'
