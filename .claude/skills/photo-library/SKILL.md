@@ -115,15 +115,35 @@ YYYY.MM 月份夾內的檔案**只搬高信心** screenshot/download。中／低
 日期來源優先：EXIF DateTimeOriginal → 檔名 YYYYMMDD (允許 2000-2026) → mtime。同一天的多張依完整時間（含時分秒）由早至晚排 `(1)(2)(3)...`。HEIC EXIF 讀取靠 `pillow-heif`（已 pip install）。
 
 ```bash
-python scripts/rename_photos.py plan      # dry-run, 寫出 photo_rename_report.json
-python scripts/rename_photos.py execute   # 依 report 兩階段 rename
+python scripts/rename_photos.py plan [LIB]      # dry-run, 寫出 photo_rename_report_{lib}.json
+python scripts/rename_photos.py execute [LIB]   # 依 report 兩階段 rename
+python scripts/rename_photos.py auto LIB...     # 對每個 LIB 連跑 plan + execute（overnight 用）
 ```
+
+`LIB ∈ {chenwei, training, hongshi}`，省略時預設 `chenwei`。Library 配置在腳本內 `LIBRARIES` map（root = `PHOTOS_PARENT / 子夾名`）。
 
 **兩階段 rename**：先 `src → __rename_tmp_XXXXX.ext`，再 `tmp → 目標名`。避免目標檔名跟另一個檔的當前檔名衝突。崩潰時殘留的 `__rename_tmp_*` 會在下一次 plan 偵測並阻擋 execute。
 
-**idempotent**：已符合格式的不重命名。
+**idempotent**：已符合格式的不重命名，重跑安全。
 
-**目前只跑 chenwei**（rename 腳本內 `PHOTOS_ROOT` 寫死辰瑋相片根）。training / hongshi 要 rename 時把 `PHOTOS_ROOT` 改成對應 library 根再跑 plan/execute。
+### Overnight 排程（脫離 Claude Code session 跑）
+
+`auto` 模式 + PowerShell `Start-Process` 直接 detach python，跑幾小時不受 harness timeout 限制：
+
+```powershell
+$repo = "C:\Users\user\Desktop\know-graph-lab"
+$logDir = "$repo\scripts\logs"
+$stamp = Get-Date -Format "yyyy-MM-dd_HHmmss"
+$out = "$logDir\rename_overnight_$stamp.log"
+$err = "$logDir\rename_overnight_$stamp.err"
+$py = "C:\Users\user\AppData\Local\Python\bin\python.exe"
+Start-Process -FilePath $py -ArgumentList @("-u", "scripts\rename_photos.py", "auto", "chenwei", "training", "hongshi") `
+  -WorkingDirectory $repo -RedirectStandardOutput $out -RedirectStandardError $err -WindowStyle Hidden -PassThru
+```
+
+`-u` 強制 Python unbuffered stdout，log 即時可讀。看進度：`Get-Content $out -Tail 30` 或直接打開 log 檔。完成判斷：log 結尾出現 `=== AUTO mode done ===`。
+
+> **跟 daily OCR (16:00) 錯開**：daily OCR 那條 Task Scheduler 走 `scripts/run_ocr_daily.bat`，跟 rename 共用 G: I/O。rename 走 overnight 手動 kick off，不放 Task Scheduler。
 
 ## /photos 網站
 
@@ -163,6 +183,14 @@ python scripts/rename_photos.py execute   # 依 report 兩階段 rename
 | `POST /api/photos/lib/[lib]/delete` | `{items: [{path, name}]}` | 訓練／弘誓批次刪 |
 
 UI：grid 右上角「選取」按鈕進入多選；點 tile toggle 選取（不開 lightbox）；toolbar 顯示「刪除 N」紅按鈕一鍵刪（不問確認，Drive 垃圾桶當 safety net）。實作於 [pages/photos/chenwei/[year]/[month]/index.vue](../../../pages/photos/chenwei/[year]/[month]/index.vue) 與 [pages/photos/[lib]/[[...path]].vue](../../../pages/photos/[lib]/[[...path]].vue)。
+
+### Mobile RWD
+
+- **影片 tile**：`<video preload="metadata" src="{url}#t=0.1" muted playsinline>` 顯示首幀預覽 + ▶ 圓形 badge（不需 ffmpeg / server 端 preview generation）。`.mp4` / `.mov` / `.webm` 多數瀏覽器吃；`.mkv` 看 codec
+- **Lightbox swipe**：手機水平滑 >50px、<600ms、水平 > 垂直 → prev/next（touchstart/touchend handler）
+- **多層 breadcrumb mobile 隱藏**：所有 `<nav>` 都加 `hidden sm:flex`，靠 AppHeader 的「← 上一層」回去
+- **Header / toolbar wrap**：右側 stats + selection toolbar 都加 `flex-wrap`，小機型不會被擠出邊界
+- 各層 grid breakpoint：library picker 1→3 / 年份 2→3→4 / 月份 3→4→6 / 照片 2→3→4→5→6 / folder 1→2→3→4
 
 ### 圖片 URL 簽章
 
@@ -232,8 +260,16 @@ sourceForSegment(segment) → "photo" | "screenshot" | "download" | "event"
 ### 加新 tile 圖示／類型
 
 1. 後端：`PhotoSource` type 加新值、`sourceForSegment` 加判斷、bucketDir 加路徑
-2. 前端 [photos/[year]/[month]/index.vue](../../../pages/photos/[year]/[month]/index.vue) 的 `tileIcon` / `sourceTitle` 加 mapping
-3. 年份頁 [photos/[year]/index.vue](../../../pages/photos/[year]/index.vue) Other 區加新卡
+2. 前端 [pages/photos/chenwei/[year]/[month]/index.vue](../../../pages/photos/chenwei/[year]/[month]/index.vue) 的 `tileIcon` / `sourceTitle` 加 mapping
+3. 年份頁 [pages/photos/chenwei/[year]/index.vue](../../../pages/photos/chenwei/[year]/index.vue) Other 區加新卡
+
+### 加新 library
+
+1. [server/utils/photos.ts](../../../server/utils/photos.ts) 的 `LIBRARIES` map 加 entry（slug / name / folder / layout）
+2. `LibrarySlug` union 加新 slug、`isLibrarySlug` 也補
+3. [pages/photos/index.vue](../../../pages/photos/index.vue) 的 `libIcon` 加 emoji
+4. [pages/photos/[lib]/[[...path]].vue](../../../pages/photos/[lib]/[[...path]].vue) 的 `LIB_META` 加 name+icon
+5. Drive 上建 sibling 資料夾（位於 `儲存資料夾/` 下）；layout=year-month 走辰瑋專用頁，layout=folders 走通用 browser
 
 ---
 
