@@ -54,6 +54,7 @@ End-to-end pipeline that takes books from a local Drive folder all the way to th
 | `detect_set_volumes.py` | 4c — 套書 prep | Haiku-driven volume boundary detection for 套書 lacking volume metadata. Builds a TOC from chunk h2/h3 headings, asks Haiku 4.5 to identify volume boundaries, writes `volume` field into JSONL OR marks `NOT_A_SET_MARKER` if single-volume despite title. `status` / `run --book <id>` / `run --all` |
 | `split_ebook_set.py` | 4d — 套書 split | Split a multi-volume ebook into one row per volume. Idempotent (skips books already marked with `SPLIT_MARKER` / `NOT_A_SET_MARKER` / annotations). `status` / `run --book <id>` / `run --all` |
 | `resplit_giant_chunks.py` | 4e — chunk refinement | Break oversized chunks (>400K chars) by their internal `##` / `###` markdown headings; reduces "1-chunk-per-book" cases to reasonable per-section sizes. Annotation guard. Doesn't help chunks without internal headings (those need LLM/font-size). `status` / `run --book <id>` / `run --all` |
+| `split_oversized_pdf_by_toc.py` | 3b — OCR rescue | Physically split a multi-volume PDF into one PDF per volume using level-1 TOC bookmarks; insert one `ebooks` row per child. **For OCR escape from 套書 bundles that fail BOTH Gemini (>1000 pages or >50 MB) AND Haiku (content-filter rejects the bundle on breadth-of-content).** Children land back in the OCR queue and route through the normal small-book Gemini path. `python scripts/split_oversized_pdf_by_toc.py <parent_id> [--dry-run]` |
 | `repopulate_chunk_previews.py` | 5 — DB | Back-fill `ebook_chunks` previews from local JSONL. `run` / `retry-failed` / `status` |
 | `upload_chunks_to_r2.py` | 5 — R2 | One-shot bulk uploader for any books whose JSONL isn't on R2 yet |
 | `offload_chunks.py` | (history) | Did the original DB-truncate after JSONL offload. Don't run again |
@@ -189,7 +190,28 @@ Long sessions of `ocr_with_gemini.py run` exposed five recurring failure modes t
 - **Python's DNS resolver caches failures.** After a brief local network blip, all subsequent socket calls inside the same process keep returning `getaddrinfo failed` even after `ping` confirms upstream is reachable. Kill + restart fixes this too.
 - **Anthropic rolling rate limit** — after ~6-7 consecutive Haiku books, the next requests return Cloudflare 502 / `Connection error` for ~30 minutes. The script doesn't pause; it churns through books with transient-mark failures. Tomorrow's daily run picks them up since transient = stays in queue.
 - **2-strike quota auto-pause** (shipped 2026-05-16) — `_run_haiku_primary` and the Gemini→Haiku quota-fallback loop track consecutive `429 / rate_limit / "exceed your account" / quota / resource_exhausted` failures via `_is_quota_err()`. After **2 in a row**, the loop prints `⛔ Haiku quota hit twice in a row — pausing run (per user rule)` and breaks. Avoids the previous behavior of burning through 100+ books with fast 429 rejections (each ~10 sec) flooding logs. **User rule, not a guess** — if relaxing or tightening this, ask first.
-- **Content-filter rejections** (e.g. 哥白尼革命, 規訓與懲罰, 走向馬克思主義的人道主義, 新版宗教史叢書 4卷本) — Haiku returns `Output blocked by content filtering policy`. These need a different OCR engine; currently they leave the queue marked permanent.
+- **Content-filter rejections** (e.g. 哥白尼革命, 規訓與懲罰, 走向馬克思主義的人道主義) — Haiku returns `Output blocked by content filtering policy`. These need a different OCR engine; currently they leave the queue marked permanent.
+
+### Multi-volume bundles — manual physical split
+
+When a 套書 / 多卷本 PDF fails BOTH Gemini (oversized) AND Haiku (content-filter often triggers on the breadth of content in a multi-discipline bundle), the rescue is to **physically split the PDF into one file per volume** using the level-1 TOC bookmarks and re-ingest each as its own ebook row. Use [`scripts/split_oversized_pdf_by_toc.py`](../../../scripts/split_oversized_pdf_by_toc.py).
+
+```bash
+python scripts/split_oversized_pdf_by_toc.py <parent_ebook_id> --dry-run   # preview
+python scripts/split_oversized_pdf_by_toc.py <parent_ebook_id>             # split for real
+```
+
+What it does:
+1. Reads the parent's PDF, extracts level-1 TOC entries (one entry per 卷).
+2. Writes one PDF per volume to the same Drive folder, named `<parent_title_stripped>_<volume_title>.pdf`. Auto-strips common bundle suffixes like `（4卷本）` / `（套裝共N冊）`.
+3. Inserts one new `ebooks` row per volume with `parse_error = 'no extractable text'` so the next OCR sweep picks them up.
+4. Marks the parent with `SPLIT_MARKER` so it leaves the OCR queue + future `split_ebook_set status` ignores it.
+
+**First case (2026-05-17):** 新版宗教史叢書（4卷本）— 22.2 MB / 2317 pages — Gemini rejected on >1000 pages, Haiku rejected with content-filter. Split into 佛教史 (5.1 MB / 618 pp), 道教史 (3.1 MB / 563 pp), 基督教史 (5.3 MB / 510 pp), 伊斯兰教史 (9.6 MB / 624 pp). Each child volume now fits the small-book Gemini path comfortably.
+
+**When to reach for this:** any future 多卷本 / 全集 PDF that the auto-fallback paths (`is_gemini_oversized` → Haiku; >50 MB → Haiku) can't recover because Haiku also refuses the bundle. Don't reach for it on single-volume oversized books — those usually do OK via the Haiku fallback.
+
+**Requires:** parent PDF has usable level-1 TOC bookmarks (most publisher scans of multi-volume sets do). If TOC is missing, you'd need to split by page-range manually — the script bails clean rather than guess.
 
 **Split-queue pattern (2026-05-14):** when specific books are known-Gemini-only (e.g. Haiku content-filter rejects 哥白尼革命 / 規訓與懲罰), run them in parallel with the rest:
 ```bash
