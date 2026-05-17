@@ -494,6 +494,498 @@
         "coordinates": [
           [
             [
+              112.45,
+              34.62
+            ],
+            [
+              115.65,
+              34.41
+            ],
+            [
+              113.62,
+              34.75
+            ],
+            [
+              112.79,
+              34.72
+            ],
+            [
+              112.45,
+              34.62
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sinic",
+        "name_zh": "商",
+        "year_from": -1500,
+        "year_to": -1301,
+        "city_count": 4,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.45,
+              34.62
+            ],
+            [
+              115.65,
+              34.41
+            ],
+            [
+              114.49,
+              37.06
+            ],
+            [
+              112.45,
+              34.62
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sinic",
+        "name_zh": "商",
+        "year_from": -1300,
+        "year_to": -1201,
+        "city_count": 5,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.79,
+              34.72
+            ],
+            [
+              115.65,
+              34.41
+            ],
+            [
+              116.99,
+              35.6
+            ],
+            [
+              114.49,
+              37.06
+            ],
+            [
+              112.79,
+              34.72
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sinic",
+        "name_zh": "商",
+        "year_from": -1200,
+        "year_to": -1101,
+        "city_count": 7,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.45,
+              34.62
+            ],
+            [
+              115.65,
+              34.41
+            ],
+            [
+              116.99,
+              35.6
+            ],
+            [
+              114.49,
+              37.06
+            ],
+            [
+              112.45,
+              34.62
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sinic",
+        "name_zh": "商",
+        "year_from": -1100,
+        "year_to": -1047,
+        "city_count": 8,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              107.62,
+              34.45
+            ],
+            [
+              108.88,
+              34.2
+            ],
+            [
+              113.62,
+              34.75
+            ],
+            [
+              116.99,
+              35.6
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              107.62,
+              34.45
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Zhoa",
+        "name_zh": "周",
+        "year_from": -1046,
+        "year_to": -951,
+        "city_count": 9,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              107.62,
+              34.45
+            ],
+            [
+              108.88,
+              34.2
+            ],
+            [
+              113.62,
+              34.75
+            ],
+            [
+              116.99,
+              35.6
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              107.62,
+              34.45
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Zhoa",
+        "name_zh": "周",
+        "year_from": -950,
+        "year_to": -821,
+        "city_count": 10,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              107.16,
+              34.62
+            ],
+            [
+              107.62,
+              34.45
+            ],
+            [
+              108.88,
+              34.2
+            ],
+            [
+              113.62,
+              34.75
+            ],
+            [
+              116.99,
+              35.6
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              107.16,
+              34.62
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Zhoa",
+        "name_zh": "周",
+        "year_from": -820,
+        "year_to": -771,
+        "city_count": 12,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              107.16,
+              34.62
+            ],
+            [
+              112.2,
+              30.62
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              107.16,
+              34.62
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Zhoa",
+        "name_zh": "周",
+        "year_from": -770,
+        "year_to": -651,
+        "city_count": 10,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              107.16,
+              34.62
+            ],
+            [
+              112.2,
+              30.62
+            ],
+            [
+              120.58,
+              30.03
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              107.16,
+              34.62
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Zhoa",
+        "name_zh": "周",
+        "year_from": -650,
+        "year_to": -551,
+        "city_count": 11,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              107.16,
+              34.62
+            ],
+            [
+              112.2,
+              30.62
+            ],
+            [
+              120.58,
+              30.03
+            ],
+            [
+              120.59,
+              31.3
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              107.16,
+              34.62
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Zhoa",
+        "name_zh": "周",
+        "year_from": -550,
+        "year_to": -401,
+        "city_count": 11,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              107.16,
+              34.62
+            ],
+            [
+              112.2,
+              30.62
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              107.16,
+              34.62
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Zhoa",
+        "name_zh": "周",
+        "year_from": -400,
+        "year_to": -301,
+        "city_count": 9,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              107.16,
+              34.62
+            ],
+            [
+              112.2,
+              30.62
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              107.16,
+              34.62
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Zhoa",
+        "name_zh": "周",
+        "year_from": -300,
+        "year_to": -257,
+        "city_count": 8,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
               102.35,
               46.93
             ],

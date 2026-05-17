@@ -59,9 +59,9 @@
       "reason": "春秋吳國 -900~-473（夫差敗於越王勾踐）；-1500 起源 polygon 過早"
     },
     "Zhoa": {
-      "min_year_from": -1100,
+      "min_year_from": -1046,
       "max_year_to": -256,
-      "reason": "Zhoa 應為 Zhou typo；周部族／西周／東周 -1100~-256"
+      "reason": "Zhoa 應為 Zhou typo；西周武王伐紂 -1046 起到秦滅東周 -256。-1046 起由 fine Zhoa polygon 接管實際範圍"
     },
     "Greek city-states": {
       "min_year_from": -800,
@@ -90,6 +90,10 @@
     "Babylonia": {
       "min_year_from": -1894,
       "reason": "古巴比倫漢摩拉比王朝 -1894 起"
+    },
+    "Sinic": {
+      "max_year_to": -1047,
+      "reason": "Sinic polygon 超大不準（涵蓋整個東亞），限制只在 -1047 武王伐紂前商朝期顯示；-1046 起交給 Zhoa fine polygon"
     }
   }
 }

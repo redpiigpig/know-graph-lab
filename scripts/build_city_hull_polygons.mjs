@@ -120,6 +120,30 @@ const CITIES = {
   'Pest':           [19.07, 47.50],
   'Yanjing':        [116.40, 39.91],   // 燕京 = 北京
   'Lin\'an':        [120.16, 30.27],   // 南宋臨安 = 杭州
+  // 商朝（殷商）核心都邑
+  'Yanshi':         [112.79, 34.72],   // 偃師（早商）
+  'Zhengzhou':      [113.62, 34.75],   // 鄭州商城
+  'Anyang':         [114.39, 36.10],   // 安陽（殷墟、晚商）
+  'Chaoge':         [114.20, 35.74],   // 朝歌（紂王末都）
+  'Shangqiu':       [115.65, 34.41],   // 商丘（商部族起源）
+  'Xingtai':        [114.49, 37.06],   // 邢台（中商盤庚前）
+  // 西周核心都邑
+  'Haojing':        [108.88, 34.20],   // 鎬京（西周首都，西安西）
+  'Luoyi':          [112.45, 34.62],   // 洛邑（成周）
+  'Qishan':         [107.62, 34.45],   // 岐山（周原）
+  'Yan':            [116.40, 39.91],   // 燕（北京）
+  'Qufu':           [116.99, 35.60],   // 魯（曲阜）
+  'Linzi':          [118.30, 36.85],   // 齊（臨淄）
+  'Hancheng':       [110.45, 35.48],   // 韓城（晉舊地）
+  'Jiang':          [111.57, 35.99],   // 絳（晉都）
+  // 春秋戰國列國新增
+  'Yongcheng':      [107.16, 34.62],   // 雍（秦舊都）
+  'Yanying':        [112.20, 30.62],   // 楚郢都
+  'Suzhou':         [120.59, 31.30],   // 吳都姑蘇
+  'Shaoxing':       [120.58, 30.03],   // 越都會稽
+  'Handan':         [114.49, 36.62],   // 趙都邯鄲
+  'Daliang':        [114.34, 34.80],   // 魏都大梁
+  'Xinzheng':       [113.74, 34.40],   // 韓都新鄭
   // 羅馬／拜占庭範疇
   'Rome':           [12.50, 41.90],
   'Ravenna':        [12.20, 44.42],
@@ -242,6 +266,45 @@ const EMPIRES = [
         'Ghazni','Multan','Kabul','Balkh',
         'Rayy','Isfahan','Shiraz','Hamadan','Tabriz',
       ],
+    },
+  },
+  {
+    // 商朝 — 用實際考古證據的核心都邑而非 historical-basemaps 的超大 Sinic 範圍
+    polygon_name: 'Sinic',
+    name_zh: '商',
+    end_year: -1046,
+    years: {
+      // 早商：偃師 → 鄭州二里崗
+      [-1500]: ['Yanshi', 'Zhengzhou', 'Shangqiu', 'Luoyi'],
+      // 中商：盤庚遷殷前後
+      [-1300]: ['Zhengzhou', 'Anyang', 'Xingtai', 'Shangqiu', 'Luoyi'],
+      // 晚商：殷墟＋朝歌＋擴張到河北/山東
+      [-1200]: ['Anyang', 'Chaoge', 'Xingtai', 'Shangqiu', 'Zhengzhou', 'Yanshi', 'Qufu'],
+      // 商末：紂王朝歌＋武王伐紂前
+      [-1100]: ['Anyang', 'Chaoge', 'Xingtai', 'Shangqiu', 'Zhengzhou', 'Yanshi', 'Qufu', 'Luoyi'],
+    },
+  },
+  {
+    // 西周 — 鎬京＋洛邑＋諸侯封地
+    polygon_name: 'Zhoa',
+    name_zh: '周',
+    end_year: -256,
+    years: {
+      // 西周早期：周公分封
+      [-1046]: ['Haojing', 'Qishan', 'Luoyi', 'Yanshi', 'Zhengzhou', 'Anyang', 'Yan', 'Qufu', 'Linzi'],
+      // 西周中期：穆王西征／昭王南征
+      [-950]: ['Haojing', 'Qishan', 'Luoyi', 'Yanshi', 'Zhengzhou', 'Anyang', 'Yan', 'Qufu', 'Linzi', 'Jiang'],
+      // 西周晚期：宣王中興
+      [-820]: ['Haojing', 'Qishan', 'Luoyi', 'Yanshi', 'Zhengzhou', 'Anyang', 'Yan', 'Qufu', 'Linzi', 'Jiang', 'Hancheng', 'Yongcheng'],
+      // 東周春秋：王室東遷洛邑、諸侯坐大
+      [-770]: ['Luoyi', 'Zhengzhou', 'Anyang', 'Yan', 'Qufu', 'Linzi', 'Jiang', 'Hancheng', 'Yongcheng', 'Yanying'],
+      [-650]: ['Luoyi', 'Zhengzhou', 'Anyang', 'Yan', 'Qufu', 'Linzi', 'Jiang', 'Hancheng', 'Yongcheng', 'Yanying', 'Shaoxing'],
+      // 春秋末：吳越爭霸
+      [-550]: ['Luoyi', 'Zhengzhou', 'Anyang', 'Yan', 'Qufu', 'Linzi', 'Jiang', 'Yongcheng', 'Yanying', 'Suzhou', 'Shaoxing'],
+      // 戰國七雄
+      [-400]: ['Luoyi', 'Yan', 'Qufu', 'Linzi', 'Yongcheng', 'Yanying', 'Handan', 'Daliang', 'Xinzheng'],
+      // 戰國末：秦逐並
+      [-300]: ['Luoyi', 'Yan', 'Linzi', 'Yongcheng', 'Yanying', 'Handan', 'Daliang', 'Xinzheng'],
     },
   },
   {
