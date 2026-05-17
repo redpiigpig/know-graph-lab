@@ -26,10 +26,10 @@
         <svg class="absolute inset-0 pointer-events-none overflow-visible"
              :width="cv.w" :height="cv.h">
 
-          <!-- spine guide lines (faint) -->
+          <!-- spine guide lines (faint) — width varies pre/post 宗主教座 establishment -->
           <line v-for="(g, i) in cv.guides" :key="'g'+i"
                 :x1="g.x" :y1="g.y1" :x2="g.x" :y2="g.y2"
-                :stroke="g.color" stroke-width="6" opacity="0.10" stroke-linecap="round" />
+                :stroke="g.color" :stroke-width="g.width ?? 6" opacity="0.10" stroke-linecap="round" />
 
           <!-- Lines: paths with optional dashes
                - Dashes:
@@ -143,6 +143,13 @@
             教座傳承（spine 內承繼）
           </div>
           <div class="flex items-center gap-1.5">
+            <span class="inline-flex w-5 items-center gap-px">
+              <span class="inline-block h-[2px] w-2 bg-slate-300 opacity-60 rounded-full" />
+              <span class="inline-block h-[5px] w-2 bg-slate-300 opacity-60 rounded-full" />
+            </span>
+            spine 細→粗：建立宗主教座（451/410/484）
+          </div>
+          <div class="flex items-center gap-1.5">
             <span class="inline-block w-5 h-[2.5px] bg-slate-400" />
             設立教座（新建子座）
           </div>
@@ -182,6 +189,7 @@ interface SpineIn {
   primaryApostleId: string
   secondaryApostleId: string | null
   color: string
+  patriarchateYear?: number   // 宗主教座建立年份；此前 spine 線細，此後 spine 線粗
   see: SeeIn | null
   bishops: BishopIn[]
 }
@@ -272,7 +280,7 @@ interface LNode {
   tooltip?: string
 }
 interface LPath { d: string; stroke?: string; dashed?: boolean; dashes?: string; width?: number; opacity?: number }
-interface LGuide { x: number; y1: number; y2: number; color: string }
+interface LGuide { x: number; y1: number; y2: number; color: string; width?: number }
 
 const cv = computed(() => {
   const nodes: LNode[] = []
@@ -468,11 +476,24 @@ const cv = computed(() => {
       })
     }
 
-    // Spine guide line — from apostle card bottom area to last bishop card
+    // Spine guide line — from apostle card bottom area to last bishop card.
+    // 若有 patriarchateYear 則切兩段：建立宗主教座前線細（width 4），後線粗（width 10）。
     if (sp.bishops.length > startIdx) {
-      guides.push({
-        x: headerCX, y1: apostleY + APO_H, y2: by - BISH_VG, color: sp.color,
-      })
+      const guideTop = apostleY + APO_H
+      const guideBottom = by - BISH_VG
+      if (sp.patriarchateYear != null) {
+        const splitY = approxYByYear(sp, sp.patriarchateYear, bishopMap, guideTop)
+        // 細線段：apostle 底 → 宗主教座建立年
+        if (splitY > guideTop) {
+          guides.push({ x: headerCX, y1: guideTop, y2: splitY, color: sp.color, width: 4 })
+        }
+        // 粗線段：宗主教座建立年 → 最後一任主教
+        if (guideBottom > splitY) {
+          guides.push({ x: headerCX, y1: splitY, y2: guideBottom, color: sp.color, width: 10 })
+        }
+      } else {
+        guides.push({ x: headerCX, y1: guideTop, y2: guideBottom, color: sp.color })
+      }
     }
 
     // ── side branches (collapsible) ──

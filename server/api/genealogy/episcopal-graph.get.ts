@@ -85,6 +85,11 @@ type SpineKey = 'rome' | 'constantinople' | 'alexandria' | 'antioch' | 'jerusale
 // `rivalSplitYear` filters rival bishops to those AFTER the split, suppressing
 //   pre-split duplicates (e.g. 科普特正教 DB has full 42-present list but
 //   pre-451 entries duplicate 未分裂教會 — we only want post-Chalcedon ones).
+// `patriarchateYear` = 該 spine 正式建立宗主教座 / Catholicosate 的年份。
+// 此年份前 spine 線細，此年份後 spine 線粗（前端 render 時切兩段）。
+//   - 五大宗主教座（羅馬/君士坦丁堡/亞歷山卓/安提阿/耶路撒冷）= 451（迦克墩會議 Canon 28 確立 Pentarchy）
+//   - 埃奇米亞津 = 484（Edict of Vahan Mamikonian 確立 Catholicosate）
+//   - 塞琉西亞-泰西封 = 410（Mar Isaac 主教會議確立 Catholicos）
 const SPINE_DEFS: Array<{
   key: SpineKey
   see_zh: string
@@ -94,22 +99,23 @@ const SPINE_DEFS: Array<{
   primaryApostleId: string
   secondaryApostleId?: string
   color: string
+  patriarchateYear: number
 }> = [
   { key: 'rome',           see_zh: '羅馬',           primaryChurches: ['未分裂教會', '天主教'],
-    primaryApostleId: 'ap_peter', secondaryApostleId: 'ap_paul',         color: '#dc2626' },
+    primaryApostleId: 'ap_peter', secondaryApostleId: 'ap_paul',         color: '#dc2626', patriarchateYear: 451 },
   { key: 'constantinople', see_zh: '君士坦丁堡',     primaryChurches: ['未分裂教會', '東正教'],
-    primaryApostleId: 'ap_andrew',                                        color: '#2563eb' },
+    primaryApostleId: 'ap_andrew',                                        color: '#2563eb', patriarchateYear: 451 },
   { key: 'alexandria',     see_zh: '亞歷山卓',       primaryChurches: ['未分裂教會', '東正教'],
-    primaryApostleId: 'ap_peter', secondaryApostleId: 'ap_barnabas',     color: '#d97706' },
+    primaryApostleId: 'ap_peter', secondaryApostleId: 'ap_barnabas',     color: '#d97706', patriarchateYear: 451 },
   { key: 'antioch',        see_zh: '安提阿',         primaryChurches: ['未分裂教會', '東正教'],
-    primaryApostleId: 'ap_peter',                                         color: '#0891b2' },
+    primaryApostleId: 'ap_peter',                                         color: '#0891b2', patriarchateYear: 451 },
   { key: 'jerusalem',      see_zh: '耶路撒冷',       primaryChurches: ['未分裂教會', '東正教'],
-    primaryApostleId: 'ap_james_just',                                    color: '#16a34a' },
+    primaryApostleId: 'ap_james_just',                                    color: '#16a34a', patriarchateYear: 451 },
   { key: 'armenia',        see_zh: '埃奇米亞津',     primaryChurches: ['亞美尼亞使徒教會'],
-    primaryApostleId: 'ap_thaddaeus', secondaryApostleId: 'ap_bartholomew', color: '#9333ea' },
+    primaryApostleId: 'ap_thaddaeus', secondaryApostleId: 'ap_bartholomew', color: '#9333ea', patriarchateYear: 484 },
   { key: 'assyria',        see_zh: '塞琉西亞—泰西封', primaryChurches: ['古代東方教會'],
     rivalChurches: ['東方教會（亞述）'],
-    primaryApostleId: 'ap_thomas',                                        color: '#475569' },
+    primaryApostleId: 'ap_thomas',                                        color: '#475569', patriarchateYear: 410 },
 ]
 
 export default defineEventHandler(async (event) => {
@@ -205,6 +211,7 @@ export default defineEventHandler(async (event) => {
       primaryApostleId: def.primaryApostleId,
       secondaryApostleId: def.secondaryApostleId ?? null,
       color: def.color,
+      patriarchateYear: def.patriarchateYear,
       see: main ? {
         id: main.id,
         see_zh: main.see_zh,
