@@ -156,6 +156,14 @@ python scripts/rename_photos.py execute   # 依 report 兩階段 rename
 | `GET /api/photos/lib/[lib]/list?path=` | `{folders: [{name, fileCount, subfolderCount}], files: PhotoFile[]}` |
 | `GET /api/photos/lib/[lib]/file?p=&n=&exp=&sig=` | library 照片本體串流（path-based HMAC，1 小時 TTL）|
 
+**批次刪除（直接刪 G: 檔，Drive 同步刪雲端，30 天垃圾桶可救回）**
+| Endpoint | body | 行為 |
+|---|---|---|
+| `POST /api/photos/delete` | `{items: [{year, segment, name}]}` | 辰瑋批次刪 |
+| `POST /api/photos/lib/[lib]/delete` | `{items: [{path, name}]}` | 訓練／弘誓批次刪 |
+
+UI：grid 右上角「選取」按鈕進入多選；點 tile toggle 選取（不開 lightbox）；toolbar 顯示「刪除 N」紅按鈕一鍵刪（不問確認，Drive 垃圾桶當 safety net）。實作於 [pages/photos/chenwei/[year]/[month]/index.vue](../../../pages/photos/chenwei/[year]/[month]/index.vue) 與 [pages/photos/[lib]/[[...path]].vue](../../../pages/photos/[lib]/[[...path]].vue)。
+
 ### 圖片 URL 簽章
 
 [server/utils/photos.ts](../../../server/utils/photos.ts) 的 `signFileUrl(year, segment, name)`：

@@ -28,9 +28,30 @@
           <p v-if="isMonth" class="text-stone-500 text-sm pb-2">{{ year }} ／ {{ monthName }}</p>
           <p v-else class="text-stone-500 text-sm pb-2">{{ year }} 年</p>
         </div>
-        <div v-if="!loading" class="text-right font-serif">
-          <div class="text-3xl text-stone-800 leading-none">{{ files.length.toLocaleString() }}</div>
-          <div class="mt-2 text-[10px] uppercase tracking-[0.25em] text-stone-500">張</div>
+        <div v-if="!loading" class="flex items-center gap-4">
+          <div class="text-right font-serif">
+            <div class="text-3xl text-stone-800 leading-none">{{ files.length.toLocaleString() }}</div>
+            <div class="mt-2 text-[10px] uppercase tracking-[0.25em] text-stone-500">張</div>
+          </div>
+          <div v-if="files.length" class="flex items-center gap-2">
+            <button
+              v-if="!selectMode"
+              @click="enterSelect"
+              class="text-[11px] uppercase tracking-widest px-3 py-1.5 border border-stone-300 rounded hover:bg-stone-100 transition"
+            >選取</button>
+            <template v-else>
+              <span class="text-[11px] uppercase tracking-widest text-stone-500">{{ selected.size }} 張</span>
+              <button
+                @click="deleteSelected"
+                :disabled="selected.size === 0 || deleting"
+                class="text-[11px] uppercase tracking-widest px-3 py-1.5 bg-red-600 text-white rounded hover:bg-red-700 transition disabled:opacity-40"
+              >{{ deleting ? '刪除中…' : `刪除 ${selected.size}` }}</button>
+              <button
+                @click="exitSelect"
+                class="text-[11px] uppercase tracking-widest px-3 py-1.5 border border-stone-300 rounded hover:bg-stone-100 transition"
+              >取消</button>
+            </template>
+          </div>
         </div>
       </header>
 
@@ -45,8 +66,9 @@
         <button
           v-for="(f, i) in files"
           :key="f.name"
-          @click="viewerIndex = i"
+          @click="onTileClick(i)"
           class="photo-tile group"
+          :class="{ 'photo-tile--selected': selectMode && selected.has(f.name) }"
         >
           <img
             v-if="f.kind === 'image' && renderableImage(f.ext)"
@@ -63,6 +85,11 @@
           <span class="photo-tile__badge" :title="sourceTitle(f.source)">
             {{ tileIcon(f.kind, f.source) }}
           </span>
+          <span
+            v-if="selectMode"
+            class="photo-tile__check"
+            :class="{ 'photo-tile__check--on': selected.has(f.name) }"
+          >{{ selected.has(f.name) ? '✓' : '' }}</span>
           <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent text-white text-[10px] px-2 py-1.5 truncate text-left opacity-0 group-hover:opacity-100 transition">
             {{ f.name }}
           </div>
@@ -160,6 +187,58 @@ const files = ref<PhotoFile[]>([]);
 const viewerIndex = ref<number | null>(null);
 const current = computed(() => (viewerIndex.value === null ? null : files.value[viewerIndex.value] ?? null));
 
+const selectMode = ref(false);
+const selected = ref<Set<string>>(new Set());
+const deleting = ref(false);
+
+function enterSelect() {
+  selectMode.value = true;
+  selected.value = new Set();
+  viewerIndex.value = null;
+}
+function exitSelect() {
+  selectMode.value = false;
+  selected.value = new Set();
+}
+function onTileClick(i: number) {
+  if (selectMode.value) {
+    const n = files.value[i]?.name;
+    if (!n) return;
+    const s = new Set(selected.value);
+    if (s.has(n)) s.delete(n); else s.add(n);
+    selected.value = s;
+  } else {
+    viewerIndex.value = i;
+  }
+}
+async function deleteSelected() {
+  if (!selected.value.size || deleting.value) return;
+  deleting.value = true;
+  try {
+    const items = Array.from(selected.value).map((name) => ({
+      year: year.value, segment: segment.value, name,
+    }));
+    const r = await authedFetch<{ deleted: number; errors: { item: unknown; error: string }[] }>(
+      "/api/photos/delete",
+      { method: "POST", body: { items } }
+    );
+    const removedNames = new Set(
+      items.slice(0, r.deleted).map((it) => it.name)
+    );
+    // 簡單作法：移除所有「沒在 errors 裡」的 name；errors 中的留下
+    const errorNames = new Set((r.errors || []).map((e) => (e.item as { name: string }).name));
+    files.value = files.value.filter((f) => !(selected.value.has(f.name) && !errorNames.has(f.name)));
+    exitSelect();
+    if (r.errors?.length) {
+      errMsg.value = `刪除 ${r.deleted} 張；${r.errors.length} 張失敗：${r.errors[0]?.error || ''}`;
+    }
+  } catch (e: unknown) {
+    errMsg.value = (e as { message?: string })?.message ?? String(e);
+  } finally {
+    deleting.value = false;
+  }
+}
+
 function renderableImage(ext: string) {
   return [".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif", ".bmp"].includes(ext);
 }
@@ -242,5 +321,32 @@ onBeforeUnmount(() => window.removeEventListener("keydown", onKey));
   border-radius: 8px;
   z-index: 2;
   pointer-events: none;
+}
+.photo-tile--selected {
+  outline: 3px solid rgb(217 119 6);
+  outline-offset: -3px;
+}
+.photo-tile__check {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1.5px solid rgb(168 162 158);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgb(168 162 158);
+  z-index: 3;
+  pointer-events: none;
+}
+.photo-tile__check--on {
+  background: rgb(217 119 6);
+  border-color: rgb(217 119 6);
+  color: white;
 }
 </style>
