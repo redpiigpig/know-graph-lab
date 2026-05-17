@@ -143,7 +143,11 @@ interface GraphIn {
   teachings?: unknown[]
 }
 
-const props = defineProps<{ graph: GraphIn | null }>()
+const props = defineProps<{
+  graph: GraphIn | null
+  /** 預設聚焦在「辛俊傑」（台灣衛理公會 #9）— 追溯到根，只顯示這條鏈上的教座 */
+  targetBishopName?: string
+}>()
 const ready = computed(() => !!props.graph)
 
 // ── Layout constants ──
@@ -206,9 +210,13 @@ const cv = computed(() => {
     })
   }
 
-  // 2) Build bishop → col map
+  // 2) Build bishop → col map + bishop id → bishop full record
   const bishopColKey = new Map<string, string>()
-  for (const col of colMap.values()) for (const b of col.bishops) bishopColKey.set(b.id, col.key)
+  const bishopById = new Map<string, BishopIn>()
+  for (const col of colMap.values()) for (const b of col.bishops) {
+    bishopColKey.set(b.id, col.key)
+    bishopById.set(b.id, b)
+  }
 
   // 3) Build parent-of-column relationship via consecrator chain
   // For each column, find its "founder bishop" (the one earliest in column whose consecrator is in a different column).
@@ -225,9 +233,38 @@ const cv = computed(() => {
     }
   }
 
-  // 4) Identify root columns (no parent)
-  const allColKeys = [...colMap.keys()]
-  const rootCols = allColKeys.filter(k => !parentOfCol.has(k))
+  // 4) Focus mode: 從 targetBishop 追溯到根，只保留鏈上經過的 column +
+  //    在每個 column 內只顯示鏈上的主教（不全部 100+ 都顯示）
+  const targetName = props.targetBishopName ?? '辛俊傑'
+  const targetBishop = [...bishopById.values()].find(b => b.name_zh === targetName)
+  let allColKeys = [...colMap.keys()]
+  const pathBishopIds = new Set<string>()   // 鏈上的所有主教 id
+  if (targetBishop) {
+    const onPath = new Set<string>()
+    let cur: BishopIn | undefined = targetBishop
+    const seen = new Set<string>()
+    while (cur && !seen.has(cur.id)) {
+      seen.add(cur.id)
+      pathBishopIds.add(cur.id)
+      const colKey = bishopColKey.get(cur.id)
+      if (colKey) onPath.add(colKey)
+      if (!cur.consecrator_bishop_id) break
+      cur = bishopById.get(cur.consecrator_bishop_id)
+    }
+    if (onPath.size > 0) {
+      allColKeys = allColKeys.filter(k => onPath.has(k))
+      // 「被遮住的就隱形」：每個 column 內只顯示到「分出去那位主教」為止
+      // — 找到該 column 上路徑最後一位主教，之後（更晚 start_year）的全部隱藏
+      for (const k of allColKeys) {
+        const col = colMap.get(k)!
+        const onPathInCol = col.bishops.filter(b => pathBishopIds.has(b.id))
+        if (onPathInCol.length === 0) continue
+        const maxPathYear = Math.max(...onPathInCol.map(b => b.start_year ?? 0))
+        col.bishops = col.bishops.filter(b => (b.start_year ?? 99999) <= maxPathYear)
+      }
+    }
+  }
+  const rootCols = allColKeys.filter(k => !parentOfCol.has(k) || !allColKeys.includes(parentOfCol.get(k)!))
 
   // 5) Compute column depth (X position) via DFS
   const colDepth = new Map<string, number>()
