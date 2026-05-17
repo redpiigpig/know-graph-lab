@@ -1,17 +1,28 @@
 ---
 name: photo-library
-description: 「辰瑋相片」照片管理系統 — Drive 上 YYYY相片/YYYY.MM 整理結構 + /photos 網站瀏覽 + EXIF 啟發式自動分類腳本（classify_photos.py）。Use when 新增一批照片要分月份／截圖／下載歸位、要新增事件資料夾、要在 /photos 加新功能（icon、filter、event tile）、調整分類規則、修網站 photo viewer，或當使用者問「照片在哪／怎麼整理」。
+description: 「照片庫」多相簿管理系統 — 三個 Drive 相簿（辰瑋／訓練／弘誓）+ /photos 網站瀏覽 + 自動分類腳本（classify_photos.py）+ 統一日期 rename 腳本（rename_photos.py）。Use when 新增一批照片要分月份／截圖／下載歸位、要新增事件資料夾、要在 /photos 加新功能（icon、filter、event tile）、調整分類規則、修網站 photo viewer、把整個資料夾的檔名統一成 `YYYY-MM-DD(N)` 格式、或當使用者問「照片在哪／怎麼整理」。
 ---
 
-# 辰瑋相片 — Drive 結構 + /photos 網站
+# 照片庫 — Drive 結構 + /photos 網站
 
-> Drive 根：`G:/我的雲端硬碟/資料/儲存資料夾/辰瑋相片/`
-> 網站：[pages/photos/index.vue](../../../pages/photos/index.vue)（需登入）
-> 分類器：[scripts/classify_photos.py](../../../scripts/classify_photos.py)
+> Drive 父目錄：`G:/我的雲端硬碟/資料/儲存資料夾/`
+> 網站：[pages/photos/index.vue](../../../pages/photos/index.vue)（library picker，需登入）
+> 自動分類器：[scripts/classify_photos.py](../../../scripts/classify_photos.py)
+> 統一 rename：[scripts/rename_photos.py](../../../scripts/rename_photos.py)
+
+## 三個相簿
+
+| Slug | 名稱 | Drive 路徑 | 結構 | UI |
+|---|---|---|---|---|
+| `chenwei` | 辰瑋相片 | `儲存資料夾/辰瑋相片/` | `{YEAR}相片/{YEAR}.MM/` + 截圖/下載/事件 | `/photos/chenwei` 走年月專用頁 |
+| `training` | 訓練相片 | `儲存資料夾/訓練相片/` | 平鋪事件夾（`2024.09.01 忠烈祠 宋修傳/` ...） | `/photos/training` 走 [lib]/[...path] 通用 folder browser |
+| `hongshi` | 弘誓相片 | `儲存資料夾/弘誓相片/` | 民國年份夾 → 事件夾（多層） | 同上 |
+
+LIBRARIES 註冊在 [server/utils/photos.ts](../../../server/utils/photos.ts) 的 `LIBRARIES` map。新增相簿：加 entry + 確保資料夾 sibling 於 `photosRoot`。
 
 ---
 
-## Drive 資料夾結構（單一年份）
+## 辰瑋相片 — Drive 資料夾結構（單一年份）
 
 ```
 {YEAR}相片/
@@ -93,24 +104,57 @@ YYYY.MM 月份夾內的檔案**只搬高信心** screenshot/download。中／低
 
 ---
 
+## 統一 rename — [scripts/rename_photos.py](../../../scripts/rename_photos.py)
+
+把每個資料夾內的檔案重新命名為 `{S|D|}YYYY-MM-DD(N).{ext}`：
+
+- `S` 前綴 = `{YEAR}截圖/` 內
+- `D` 前綴 = `{YEAR}下載/` 內
+- 無前綴 = `{YEAR}.MM/` / `{YEAR}未分類/` / 事件夾
+
+日期來源優先：EXIF DateTimeOriginal → 檔名 YYYYMMDD (允許 2000-2026) → mtime。同一天的多張依完整時間（含時分秒）由早至晚排 `(1)(2)(3)...`。HEIC EXIF 讀取靠 `pillow-heif`（已 pip install）。
+
+```bash
+python scripts/rename_photos.py plan      # dry-run, 寫出 photo_rename_report.json
+python scripts/rename_photos.py execute   # 依 report 兩階段 rename
+```
+
+**兩階段 rename**：先 `src → __rename_tmp_XXXXX.ext`，再 `tmp → 目標名`。避免目標檔名跟另一個檔的當前檔名衝突。崩潰時殘留的 `__rename_tmp_*` 會在下一次 plan 偵測並阻擋 execute。
+
+**idempotent**：已符合格式的不重命名。
+
+**目前只跑 chenwei**（rename 腳本內 `PHOTOS_ROOT` 寫死辰瑋相片根）。training / hongshi 要 rename 時把 `PHOTOS_ROOT` 改成對應 library 根再跑 plan/execute。
+
 ## /photos 網站
 
 ### 路由
 
 | URL | 頁面 | 用途 |
 |---|---|---|
-| `/photos` | [pages/photos/index.vue](../../../pages/photos/index.vue) | 年份 grid（13 個年份卡）|
-| `/photos/[year]` | [pages/photos/[year]/index.vue](../../../pages/photos/[year]/index.vue) | 12 月份 tile + Other 區（📸截圖／🌐下載／📁事件）|
-| `/photos/[year]/[month]` | [pages/photos/[year]/[month]/index.vue](../../../pages/photos/[year]/[month]/index.vue) | 照片 grid + lightbox（month 也接受 `screenshots`／`downloads`／事件夾名）|
+| `/photos` | [pages/photos/index.vue](../../../pages/photos/index.vue) | 3 個 library 卡片（library picker）|
+| `/photos/chenwei` | [pages/photos/chenwei/index.vue](../../../pages/photos/chenwei/index.vue) | 辰瑋年份 grid |
+| `/photos/chenwei/[year]` | [pages/photos/chenwei/[year]/index.vue](../../../pages/photos/chenwei/[year]/index.vue) | 月份 + Other 區 |
+| `/photos/chenwei/[year]/[month]` | [pages/photos/chenwei/[year]/[month]/index.vue](../../../pages/photos/chenwei/[year]/[month]/index.vue) | 照片 grid + lightbox |
+| `/photos/training` 或 `/photos/hongshi`（含 nested path）| [pages/photos/[lib]/[[...path]].vue](../../../pages/photos/[lib]/[[...path]].vue) | 通用 folder browser（資料夾 + 照片 + lightbox）|
+
+`/photos/chenwei` 由靜態 `chenwei/` 子目錄取勝路由優先順序，所以即使 `[lib]/[[...path]].vue` 也會匹配 `/photos/chenwei`，靜態仍會中標。
 
 ### 後端 API
 
+**辰瑋專用（沿用舊路由）**
 | Endpoint | 回傳 |
 |---|---|
 | `GET /api/photos/years` | `{years: [{year, total, monthsWithPhotos}]}` |
 | `GET /api/photos/[year]/months` | `{months, screenshots, downloads, events}` |
 | `GET /api/photos/[year]/[month]/files` | `{files: [{name, kind, source, ext, size, mtime, url}]}` |
-| `GET /api/photos/file?y=&m=&n=&exp=&sig=` | 串流照片本體（HMAC-SHA256 簽章，1 小時 TTL）|
+| `GET /api/photos/file?y=&m=&n=&exp=&sig=` | 辰瑋照片本體串流（HMAC-SHA256，1 小時 TTL）|
+
+**多 library 統一 API**
+| Endpoint | 回傳 |
+|---|---|
+| `GET /api/photos/libraries` | `{libraries: [{slug, name, layout, totalFiles, topFolders}]}` |
+| `GET /api/photos/lib/[lib]/list?path=` | `{folders: [{name, fileCount, subfolderCount}], files: PhotoFile[]}` |
+| `GET /api/photos/lib/[lib]/file?p=&n=&exp=&sig=` | library 照片本體串流（path-based HMAC，1 小時 TTL）|
 
 ### 圖片 URL 簽章
 

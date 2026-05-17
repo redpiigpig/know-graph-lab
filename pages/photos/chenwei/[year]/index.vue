@@ -2,13 +2,15 @@
   <div class="min-h-screen bg-[#f5f1ea]">
     <AppHeader>
       <template #actions>
-        <NuxtLink to="/photos" class="text-sm text-stone-500 hover:text-stone-900 transition">← 全部年份</NuxtLink>
+        <NuxtLink to="/photos/chenwei" class="text-sm text-stone-500 hover:text-stone-900 transition">← 全部年份</NuxtLink>
       </template>
     </AppHeader>
 
     <div class="max-w-5xl mx-auto px-6 py-10">
       <nav class="text-[10px] uppercase tracking-[0.2em] text-stone-500 mb-2">
         <NuxtLink to="/photos" class="hover:text-stone-900">照片庫</NuxtLink>
+        <span class="mx-2">/</span>
+        <NuxtLink to="/photos/chenwei" class="hover:text-stone-900">辰瑋相片</NuxtLink>
         <span class="mx-2">/</span>
         <span class="text-stone-700">{{ year }}</span>
       </nav>
@@ -31,7 +33,7 @@
           <NuxtLink
             v-for="m in MONTHS"
             :key="m.key"
-            :to="`/photos/${year}/${m.key}`"
+            :to="`/photos/chenwei/${year}/${m.key}`"
             class="month-card"
             :class="countOf(m.key) === 0 && 'month-card--empty'"
           >
@@ -48,14 +50,13 @@
           </NuxtLink>
         </div>
 
-        <!-- Special buckets: screenshots / downloads / events -->
         <div v-if="screenshots > 0 || downloads > 0 || events.length > 0"
              class="mt-8 pt-6 border-t border-stone-300/60">
           <p class="text-[10px] uppercase tracking-[0.25em] text-stone-500 mb-3">Other</p>
           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
             <NuxtLink
               v-if="screenshots > 0"
-              :to="`/photos/${year}/screenshots`"
+              :to="`/photos/chenwei/${year}/screenshots`"
               class="bucket-card bucket-card--ss"
             >
               <div class="flex items-center gap-2">
@@ -68,7 +69,7 @@
             </NuxtLink>
             <NuxtLink
               v-if="downloads > 0"
-              :to="`/photos/${year}/downloads`"
+              :to="`/photos/chenwei/${year}/downloads`"
               class="bucket-card bucket-card--dl"
             >
               <div class="flex items-center gap-2">
@@ -82,7 +83,7 @@
             <NuxtLink
               v-for="ev in events"
               :key="ev.name"
-              :to="`/photos/${year}/${encodeURIComponent(ev.name)}`"
+              :to="`/photos/chenwei/${year}/${encodeURIComponent(ev.name)}`"
               class="bucket-card bucket-card--ev"
               :title="ev.name"
             >

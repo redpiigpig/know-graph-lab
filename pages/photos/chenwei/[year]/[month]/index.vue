@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-[#f5f1ea]">
     <AppHeader>
       <template #actions>
-        <NuxtLink :to="`/photos/${year}`" class="text-sm text-stone-500 hover:text-stone-900 transition">← {{ year }}</NuxtLink>
+        <NuxtLink :to="`/photos/chenwei/${year}`" class="text-sm text-stone-500 hover:text-stone-900 transition">← {{ year }}</NuxtLink>
       </template>
     </AppHeader>
 
@@ -10,7 +10,9 @@
       <nav class="text-[10px] uppercase tracking-[0.2em] text-stone-500 mb-3">
         <NuxtLink to="/photos" class="hover:text-stone-900">照片庫</NuxtLink>
         <span class="mx-2">/</span>
-        <NuxtLink :to="`/photos/${year}`" class="hover:text-stone-900">{{ year }}</NuxtLink>
+        <NuxtLink to="/photos/chenwei" class="hover:text-stone-900">辰瑋相片</NuxtLink>
+        <span class="mx-2">/</span>
+        <NuxtLink :to="`/photos/chenwei/${year}`" class="hover:text-stone-900">{{ year }}</NuxtLink>
         <span class="mx-2">/</span>
         <span class="text-stone-700">{{ headerLabel }}</span>
       </nav>
@@ -58,7 +60,6 @@
             <div class="text-3xl">{{ f.kind === 'video' ? '🎬' : '📄' }}</div>
             <div class="mt-1 text-[10px] uppercase tracking-widest">{{ f.ext.replace('.', '') }}</div>
           </div>
-          <!-- Source badge top-right -->
           <span class="photo-tile__badge" :title="sourceTitle(f.source)">
             {{ tileIcon(f.kind, f.source) }}
           </span>
@@ -69,7 +70,6 @@
       </div>
     </div>
 
-    <!-- Lightbox -->
     <div
       v-if="viewerIndex !== null && current"
       class="fixed inset-0 bg-black/95 z-50 flex flex-col"
@@ -168,7 +168,7 @@ function tileIcon(kind: string, source: string) {
   if (source === "download") return "🌐";
   if (source === "event") return "📁";
   if (kind === "video") return "🎬";
-  return "📱"; // photos in YYYY.MM — assume phone (predominant case)
+  return "📱";
 }
 function sourceTitle(source: string) {
   if (source === "screenshot") return "螢幕截圖";
@@ -184,7 +184,6 @@ function next() {
   if (viewerIndex.value === null) return;
   viewerIndex.value = (viewerIndex.value + 1) % files.value.length;
 }
-
 function onKey(e: KeyboardEvent) {
   if (viewerIndex.value === null) return;
   if (e.key === "Escape") viewerIndex.value = null;

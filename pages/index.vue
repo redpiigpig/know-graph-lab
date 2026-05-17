@@ -112,7 +112,7 @@
           <div class="tool-icon bg-pink-50 text-pink-600">📷</div>
           <div class="flex-1">
             <h2 class="tool-title">照片管理</h2>
-            <p class="tool-desc">辰瑋相片庫，依年份／月份瀏覽，從 Google Drive 直接讀取</p>
+            <p class="tool-desc">辰瑋／訓練／弘誓 三個相簿，從 Google Drive 直接讀取</p>
           </div>
           <span class="tool-badge bg-pink-50 text-pink-600">可用</span>
         </NuxtLink>
