@@ -22,6 +22,17 @@ description: 使徒統緒族譜圖（/genealogy/episcopal-tree）的資料維護
 - 有傳統教會歷史（Eusebius《Historia Ecclesiastica》、Movses Khorenatsi、Ormanian、Le Quien 等）公認的繼任名單 → 列
 - 完全無記載、只是「應該存在過」的空檔 → 留空 notes 註明
 
+## Archbishop / Metropolitan / Catholicos 中文翻譯慣例
+
+| 英文 | 東正教 / 天主教 | 聖公會 / 信義宗 |
+|---|---|---|
+| Archbishop | **總主教** | 大主教 |
+| Metropolitan | 都主教 | 都主教 |
+| Patriarch | 宗主教 | — |
+| Catholicos | Catholicos / 大公主教 | — |
+
+新增資料時請按此分流。如要批次改舊資料：使用 `c:/tmp/rename_archbishop.mjs` 模式（過濾 `church` 欄包含 `東正教|天主教|未分裂教會|科普特|敘利亞正教|馬龍尼特|麥勒基特|亞美尼亞使徒|古代東方|...`）然後 PATCH `name_zh`/`see_zh`/`notes` 等欄位。
+
 ## 7 大 spine 結構
 
 定義在 `SPINE_DEFS`（[episcopal-graph.get.ts](../../server/api/genealogy/episcopal-graph.get.ts)）。每 spine 一個 `primaryApostleId` + 可選 `secondaryApostleId`。
