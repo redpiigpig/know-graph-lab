@@ -70,6 +70,16 @@ export const DYNASTY_LABELS: Record<string, DynastyEntry[]> = {
     { from: -2070, to: -1600, dynasty_zh: '', country_zh: '夏' },
   ],
 
+  // Jin polygon — source 300~499，已 year-override 266~420
+  'Jin': [
+    { from: 266, to: 316, dynasty_zh: '', country_zh: '西晉' },
+    { from: 317, to: 420, dynasty_zh: '', country_zh: '東晉' },
+  ],
+  // Jin Empire 500~599 是源資料命名錯誤，已 year-override 到 1115-1234 真實金朝
+  'Jin Empire': [
+    { from: 1115, to: 1234, dynasty_zh: '', country_zh: '金' },
+  ],
+
   // Han Empire / Han polygon — 西漢 / 新莽 / 東漢
   'Han Empire': [
     { from: -202, to: -195, dynasty_zh: '高祖建漢', country_zh: '西漢' },

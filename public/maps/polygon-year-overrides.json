@@ -94,6 +94,94 @@
     "Sinic": {
       "max_year_to": -1047,
       "reason": "Sinic polygon 超大不準（涵蓋整個東亞），限制只在 -1047 武王伐紂前商朝期顯示；-1046 起交給 Zhoa fine polygon"
+    },
+    "Sui Empire": {
+      "max_year_to": 618,
+      "reason": "隋只到 618 唐高祖代隋；源資料 700~799 polygon 為過晚"
+    },
+    "Tang Empire": {
+      "min_year_from": 618,
+      "max_year_to": 907,
+      "reason": "唐 618~907；源資料 900~999 polygon 涵蓋唐亡後（五代）"
+    },
+    "Han Empire": {
+      "min_year_from": -202,
+      "reason": "西漢建立 -202；-200 源 polygon 早兩年但無妨"
+    },
+    "Han": {
+      "max_year_to": 220,
+      "reason": "Han polygon 涵蓋兩漢 -1~299；漢 220 亡，限制到 220 不延伸到三國"
+    },
+    "Manchu Empire": {
+      "min_year_from": 1644,
+      "reason": "清入關 1644；源資料 1650 起算"
+    },
+    "Jin Empire": {
+      "min_year_from": 1115,
+      "max_year_to": 1234,
+      "reason": "金朝 1115~1234；源 500~599 polygon 為命名錯誤（500~599 是南北朝）"
+    },
+    "Jin": {
+      "min_year_from": 266,
+      "max_year_to": 420,
+      "reason": "晉朝 266~420（西晉 266~316、東晉 317~420）；polygon 範圍 300~499 過晚"
+    },
+    "Yuan Empire": {
+      "min_year_from": 1271,
+      "max_year_to": 1368,
+      "reason": "元朝 1271~1368"
+    },
+    "Ming Chinese Empire": {
+      "max_year_to": 1644,
+      "reason": "明 1368~1644；源 polygon 範圍可能延伸到 lon 141 太誇張，年份限制不能修地理但至少限年"
+    },
+    "Ming Empire": {
+      "min_year_from": 1368,
+      "max_year_to": 1644,
+      "reason": "明 1368~1644"
+    },
+    "Qing Empire": {
+      "min_year_from": 1644,
+      "max_year_to": 1912,
+      "reason": "清 1644~1912"
+    },
+    "Tibetans": {
+      "min_year_from": 9999,
+      "reason": "Tibetans -1500~-501 是早期藏人部族，非政體；隱藏（用 9999 強制不顯示）"
+    },
+    "Tibeto-Burmanese": {
+      "min_year_from": 9999,
+      "reason": "藏緬語族 -2000~-1501 是語族不是政體"
+    },
+    "Liao": {
+      "max_year_to": 1125,
+      "reason": "遼朝 916~1125，金滅遼"
+    },
+    "Song Empire": {
+      "min_year_from": 960,
+      "max_year_to": 1279,
+      "reason": "宋朝 960~1279（北宋 960~1127 / 南宋 1127~1279）"
+    },
+    "Qin": {
+      "max_year_to": -207,
+      "reason": "秦亡 -207；source polygon -201 太晚"
+    },
+    "Western Gokturk Khaganate": {
+      "max_year_to": 657,
+      "reason": "西突厥 -581~657 唐高宗滅；source 700~799 polygon 為過晚"
+    },
+    "Mongol Empire": {
+      "max_year_to": 1259,
+      "reason": "蒙古帝國 1206~1259 蒙哥死後分裂為四汗"
+    },
+    "Tibetan Empire": {
+      "max_year_to": 877,
+      "reason": "吐蕃帝國 618~842，朗達瑪滅佛 842 後分裂；877 為延伸到斷代"
+    },
+    "Khitans": {
+      "min_year_from": 916,
+      "max_year_to": 1125,
+      "reason": "契丹遼朝 916~1125"
     }
   }
 }

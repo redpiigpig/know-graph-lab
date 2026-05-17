@@ -555,45 +555,7 @@
         "name_zh": "商",
         "year_from": -1300,
         "year_to": -1201,
-        "city_count": 5,
-        "source": "city-hull (manual city list)"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              112.79,
-              34.72
-            ],
-            [
-              115.65,
-              34.41
-            ],
-            [
-              116.99,
-              35.6
-            ],
-            [
-              114.49,
-              37.06
-            ],
-            [
-              112.79,
-              34.72
-            ]
-          ]
-        ]
-      },
-      "properties": {
-        "name": "Sinic",
-        "name_zh": "商",
-        "year_from": -1200,
-        "year_to": -1101,
-        "city_count": 7,
+        "city_count": 6,
         "source": "city-hull (manual city list)"
       }
     },
@@ -614,6 +576,48 @@
             [
               116.99,
               35.6
+            ],
+            [
+              114.49,
+              37.06
+            ],
+            [
+              112.45,
+              34.62
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sinic",
+        "name_zh": "商",
+        "year_from": -1200,
+        "year_to": -1101,
+        "city_count": 8,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.45,
+              34.62
+            ],
+            [
+              115.65,
+              34.41
+            ],
+            [
+              116.99,
+              35.6
+            ],
+            [
+              118.3,
+              36.85
             ],
             [
               114.49,
@@ -631,7 +635,7 @@
         "name_zh": "商",
         "year_from": -1100,
         "year_to": -1047,
-        "city_count": 8,
+        "city_count": 9,
         "source": "city-hull (manual city list)"
       }
     },
@@ -692,16 +696,8 @@
               34.45
             ],
             [
-              108.88,
-              34.2
-            ],
-            [
-              113.62,
-              34.75
-            ],
-            [
-              116.99,
-              35.6
+              112.2,
+              30.62
             ],
             [
               118.3,
@@ -723,7 +719,7 @@
         "name_zh": "周",
         "year_from": -950,
         "year_to": -821,
-        "city_count": 10,
+        "city_count": 11,
         "source": "city-hull (manual city list)"
       }
     },
@@ -738,20 +734,8 @@
               34.62
             ],
             [
-              107.62,
-              34.45
-            ],
-            [
-              108.88,
-              34.2
-            ],
-            [
-              113.62,
-              34.75
-            ],
-            [
-              116.99,
-              35.6
+              112.2,
+              30.62
             ],
             [
               118.3,
@@ -773,7 +757,7 @@
         "name_zh": "周",
         "year_from": -820,
         "year_to": -771,
-        "city_count": 12,
+        "city_count": 13,
         "source": "city-hull (manual city list)"
       }
     },
@@ -834,6 +818,10 @@
               30.03
             ],
             [
+              120.59,
+              31.3
+            ],
+            [
               118.3,
               36.85
             ],
@@ -853,7 +841,7 @@
         "name_zh": "周",
         "year_from": -650,
         "year_to": -551,
-        "city_count": 11,
+        "city_count": 12,
         "source": "city-hull (manual city list)"
       }
     },
@@ -975,7 +963,1377 @@
         "name_zh": "周",
         "year_from": -300,
         "year_to": -257,
-        "city_count": 8,
+        "city_count": 9,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.58,
+              30.03
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              108.71,
+              34.33
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Qin",
+        "name_zh": "秦",
+        "year_from": -221,
+        "year_to": -211,
+        "city_count": 18,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.59,
+              31.3
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              108.71,
+              34.33
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Qin",
+        "name_zh": "秦",
+        "year_from": -210,
+        "year_to": -207,
+        "city_count": 13,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              108.71,
+              34.33
+            ],
+            [
+              112.45,
+              34.62
+            ],
+            [
+              114.34,
+              34.8
+            ],
+            [
+              116.99,
+              35.6
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              108.71,
+              34.33
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Cao Wei",
+        "name_zh": "曹魏",
+        "year_from": 220,
+        "year_to": 262,
+        "city_count": 13,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              116.99,
+              35.6
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              108.71,
+              34.33
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Cao Wei",
+        "name_zh": "曹魏",
+        "year_from": 263,
+        "year_to": 265,
+        "city_count": 14,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              112.24,
+              30.34
+            ],
+            [
+              110.39,
+              34.55
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Shu Han",
+        "name_zh": "蜀漢",
+        "year_from": 221,
+        "year_to": 262,
+        "city_count": 3,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.85,
+              21.03
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.58,
+              30.03
+            ],
+            [
+              120.59,
+              31.3
+            ],
+            [
+              118.78,
+              32.06
+            ],
+            [
+              112.2,
+              30.62
+            ],
+            [
+              105.85,
+              21.03
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Eastern Wu",
+        "name_zh": "東吳",
+        "year_from": 222,
+        "year_to": 279,
+        "city_count": 9,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              116.99,
+              35.6
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              108.71,
+              34.33
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Jin",
+        "name_zh": "西晉",
+        "year_from": 266,
+        "year_to": 279,
+        "city_count": 13,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              105.85,
+              21.03
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              120.59,
+              31.3
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              108.71,
+              34.33
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Jin",
+        "name_zh": "西晉",
+        "year_from": 280,
+        "year_to": 315,
+        "city_count": 20,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              105.85,
+              21.03
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              120.59,
+              31.3
+            ],
+            [
+              118.78,
+              32.06
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Jin",
+        "name_zh": "東晉",
+        "year_from": 317,
+        "year_to": 419,
+        "city_count": 9,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              112.55,
+              37.87
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Tang Empire",
+        "name_zh": "唐",
+        "year_from": 618,
+        "year_to": 659,
+        "city_count": 11,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              125.75,
+              39.04
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              112.55,
+              37.87
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Tang Empire",
+        "name_zh": "唐",
+        "year_from": 660,
+        "year_to": 689,
+        "city_count": 13,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              79.92,
+              37.11
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              82.97,
+              41.72
+            ],
+            [
+              79.92,
+              37.11
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Tang Empire",
+        "name_zh": "唐",
+        "year_from": 690,
+        "year_to": 712,
+        "city_count": 14,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.99,
+              39.47
+            ],
+            [
+              79.92,
+              37.11
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              89.2,
+              43.92
+            ],
+            [
+              75.99,
+              39.47
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Tang Empire",
+        "name_zh": "唐",
+        "year_from": 713,
+        "year_to": 754,
+        "city_count": 16,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              112.55,
+              37.87
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Tang Empire",
+        "name_zh": "唐",
+        "year_from": 755,
+        "year_to": 799,
+        "city_count": 12,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              108.94,
+              34.34
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Tang Empire",
+        "name_zh": "唐",
+        "year_from": 800,
+        "year_to": 869,
+        "city_count": 10,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              112.2,
+              30.62
+            ],
+            [
+              119.42,
+              32.39
+            ],
+            [
+              113.62,
+              34.75
+            ],
+            [
+              108.94,
+              34.34
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Tang Empire",
+        "name_zh": "唐",
+        "year_from": 870,
+        "year_to": 906,
+        "city_count": 6,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              91.13,
+              29.65
+            ],
+            [
+              105.85,
+              21.03
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              113.3,
+              40.08
+            ],
+            [
+              91.13,
+              29.65
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Ming Chinese Empire",
+        "name_zh": "明",
+        "year_from": 1368,
+        "year_to": 1420,
+        "city_count": 15,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              91.13,
+              29.65
+            ],
+            [
+              105.85,
+              21.03
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              113.3,
+              40.08
+            ],
+            [
+              91.13,
+              29.65
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Ming Chinese Empire",
+        "name_zh": "明",
+        "year_from": 1421,
+        "year_to": 1499,
+        "city_count": 17,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102.71,
+              25.04
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              113.3,
+              40.08
+            ],
+            [
+              104.07,
+              30.67
+            ],
+            [
+              102.71,
+              25.04
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Ming Chinese Empire",
+        "name_zh": "明",
+        "year_from": 1500,
+        "year_to": 1599,
+        "city_count": 15,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102.71,
+              25.04
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              113.3,
+              40.08
+            ],
+            [
+              104.07,
+              30.67
+            ],
+            [
+              102.71,
+              25.04
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Ming Chinese Empire",
+        "name_zh": "明",
+        "year_from": 1600,
+        "year_to": 1629,
+        "city_count": 14,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102.71,
+              25.04
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              113.3,
+              40.08
+            ],
+            [
+              104.07,
+              30.67
+            ],
+            [
+              102.71,
+              25.04
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Ming Chinese Empire",
+        "name_zh": "明",
+        "year_from": 1630,
+        "year_to": 1643,
+        "city_count": 13,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102.71,
+              25.04
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              104.07,
+              30.67
+            ],
+            [
+              102.71,
+              25.04
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Manchu Empire",
+        "name_zh": "清",
+        "year_from": 1644,
+        "year_to": 1682,
+        "city_count": 14,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102.71,
+              25.04
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              102.85,
+              47.43
+            ],
+            [
+              102.71,
+              25.04
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Manchu Empire",
+        "name_zh": "清",
+        "year_from": 1683,
+        "year_to": 1758,
+        "city_count": 15,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.99,
+              39.47
+            ],
+            [
+              91.13,
+              29.65
+            ],
+            [
+              105.85,
+              21.03
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              102.85,
+              47.43
+            ],
+            [
+              89.2,
+              43.92
+            ],
+            [
+              75.99,
+              39.47
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Manchu Empire",
+        "name_zh": "清",
+        "year_from": 1759,
+        "year_to": 1839,
+        "city_count": 20,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.99,
+              39.47
+            ],
+            [
+              91.13,
+              29.65
+            ],
+            [
+              102.71,
+              25.04
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              102.85,
+              47.43
+            ],
+            [
+              89.2,
+              43.92
+            ],
+            [
+              75.99,
+              39.47
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Manchu Empire",
+        "name_zh": "清",
+        "year_from": 1840,
+        "year_to": 1899,
+        "city_count": 19,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.99,
+              39.47
+            ],
+            [
+              91.13,
+              29.65
+            ],
+            [
+              102.71,
+              25.04
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              89.2,
+              43.92
+            ],
+            [
+              75.99,
+              39.47
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Manchu Empire",
+        "name_zh": "清",
+        "year_from": 1900,
+        "year_to": 1911,
+        "city_count": 16,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102.85,
+              47.43
+            ],
+            [
+              108.71,
+              34.33
+            ],
+            [
+              112.45,
+              34.62
+            ],
+            [
+              113.62,
+              34.75
+            ],
+            [
+              125.75,
+              39.04
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              102.85,
+              47.43
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Yuan Empire",
+        "name_zh": "元",
+        "year_from": 1271,
+        "year_to": 1278,
+        "city_count": 11,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.2,
+              43.92
+            ],
+            [
+              91.13,
+              29.65
+            ],
+            [
+              102.71,
+              25.04
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              125.75,
+              39.04
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              102.85,
+              47.43
+            ],
+            [
+              89.2,
+              43.92
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Yuan Empire",
+        "name_zh": "元",
+        "year_from": 1279,
+        "year_to": 1350,
+        "city_count": 20,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              89.2,
+              43.92
+            ],
+            [
+              91.13,
+              29.65
+            ],
+            [
+              102.71,
+              25.04
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              125.75,
+              39.04
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              102.85,
+              47.43
+            ],
+            [
+              89.2,
+              43.92
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Yuan Empire",
+        "name_zh": "元",
+        "year_from": 1351,
+        "year_to": 1367,
+        "city_count": 17,
         "source": "city-hull (manual city list)"
       }
     },

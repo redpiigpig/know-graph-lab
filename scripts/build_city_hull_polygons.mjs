@@ -144,6 +144,60 @@ const CITIES = {
   'Handan':         [114.49, 36.62],   // 趙都邯鄲
   'Daliang':        [114.34, 34.80],   // 魏都大梁
   'Xinzheng':       [113.74, 34.40],   // 韓都新鄭
+  'Xianyang':       [108.71, 34.33],   // 秦都咸陽
+  'Linfen':         [111.52, 36.10],   // 平陽（晉舊都）
+  'Tongguan':       [110.39, 34.55],   // 潼關（關中東鎖）
+  'Pingyang':       [111.52, 36.10],   // 平陽
+  // 秦統一後郡縣
+  'Chengdu':        [104.07, 30.67],   // 蜀郡
+  'Lingnan':        [113.27, 23.13],   // 嶺南（番禺）
+  'Liaodong':       [123.43, 41.80],   // 遼東郡（瀋陽）
+  'Jiangnan':       [118.78, 32.06],   // 江南
+  // 三國魏蜀吳都城
+  'Luoyang2':       [112.45, 34.62],   // 洛陽（曹魏／西晉都）
+  'Chengdu2':       [104.07, 30.67],   // 成都（蜀漢都）
+  'Jianye':         [118.78, 32.06],   // 建業（孫吳都）
+  // 西晉南遷東晉
+  'Jiankang':       [118.78, 32.06],   // 建康（東晉都）
+  // 隋唐都城／節度使治所
+  'Daxing':         [108.94, 34.34],   // 大興＝隋唐長安
+  'Yangzhou2':      [119.42, 32.39],   // 揚州
+  'Lhasa':          [91.13, 29.65],    // 拉薩（吐蕃／西藏）
+  'Kucha':          [82.97, 41.72],    // 龜茲（安西四鎮）
+  'Khotan':         [79.92, 37.11],    // 于闐
+  'Kashgar':        [75.99, 39.47],    // 疏勒
+  'Beshbalik':      [89.20, 43.92],    // 北庭都護府
+  'Pyongyang':      [125.75, 39.04],   // 平壤
+  // 五代十國
+  'Kaifeng2':       [114.34, 34.80],   // 後梁／後晉／後漢／後周＋北宋都
+  'Taiyuan':        [112.55, 37.87],   // 太原（北漢＋後唐）
+  'Fuzhou':         [119.30, 26.08],   // 福州（閩）
+  'Changsha':       [112.94, 28.23],   // 長沙（楚）
+  'Jiangling':      [112.24, 30.34],   // 江陵（荊南／南平）
+  'Chengdu3':       [104.07, 30.67],   // 成都（前蜀／後蜀）
+  // 元朝大都／行省
+  'Dadu':           [116.40, 39.91],   // 元大都 = 北京
+  'Shangdu':        [116.18, 42.36],   // 上都（金蓮川／開平）
+  'Karakorum2':     [102.85, 47.43],   // 哈拉和林
+  'Yunnan':         [102.71, 25.04],   // 雲南行省
+  // 明清北京
+  'Beiping':        [116.40, 39.91],   // 明初北平＝後遷都
+  'Yingtian':       [118.78, 32.06],   // 應天府＝南京（明初都）
+  // 西夏
+  'Xingqing':       [106.27, 38.49],   // 興慶府（銀川）
+  'Liangzhou':      [102.64, 37.93],   // 涼州（武威）
+  'Ganzhou':        [100.46, 38.94],   // 甘州（張掖）
+  // 遼五京
+  'Liaoyang':       [123.18, 41.27],   // 遼東京遼陽
+  'Linhuang':       [119.41, 43.99],   // 上京臨潢（巴林左旗）
+  'Datong':         [113.30, 40.08],   // 西京大同
+  // 金五京
+  'Huining':        [126.10, 45.78],   // 上京會寧（哈爾濱阿城）
+  'Zhongdu':        [116.40, 39.91],   // 中都（北京）
+  // 西藏吐蕃
+  'Lhotse':         [91.13, 29.65],    // 邏些＝拉薩
+  // 越南北部
+  'Hanoi2':         [105.85, 21.03],   // 河內
   // 羅馬／拜占庭範疇
   'Rome':           [12.50, 41.90],
   'Ravenna':        [12.20, 44.42],
@@ -274,14 +328,14 @@ const EMPIRES = [
     name_zh: '商',
     end_year: -1046,
     years: {
-      // 早商：偃師 → 鄭州二里崗
+      // 早商：偃師 → 鄭州二里崗（黃河中游核心）
       [-1500]: ['Yanshi', 'Zhengzhou', 'Shangqiu', 'Luoyi'],
-      // 中商：盤庚遷殷前後
-      [-1300]: ['Zhengzhou', 'Anyang', 'Xingtai', 'Shangqiu', 'Luoyi'],
-      // 晚商：殷墟＋朝歌＋擴張到河北/山東
-      [-1200]: ['Anyang', 'Chaoge', 'Xingtai', 'Shangqiu', 'Zhengzhou', 'Yanshi', 'Qufu'],
-      // 商末：紂王朝歌＋武王伐紂前
-      [-1100]: ['Anyang', 'Chaoge', 'Xingtai', 'Shangqiu', 'Zhengzhou', 'Yanshi', 'Qufu', 'Luoyi'],
+      // 中商：盤庚遷殷前後，勢力北擴到河北邢台
+      [-1300]: ['Zhengzhou', 'Anyang', 'Xingtai', 'Shangqiu', 'Luoyi', 'Yanshi'],
+      // 晚商武丁中興：殷墟＋朝歌＋大規模東擴到山東
+      [-1200]: ['Anyang', 'Chaoge', 'Xingtai', 'Shangqiu', 'Zhengzhou', 'Yanshi', 'Qufu', 'Luoyi'],
+      // 商末：紂王朝歌、武王伐紂前夕
+      [-1100]: ['Anyang', 'Chaoge', 'Xingtai', 'Shangqiu', 'Zhengzhou', 'Yanshi', 'Qufu', 'Luoyi', 'Linzi'],
     },
   },
   {
@@ -290,21 +344,160 @@ const EMPIRES = [
     name_zh: '周',
     end_year: -256,
     years: {
-      // 西周早期：周公分封
+      // 西周早期：周公分封，東至齊魯西至涇渭
       [-1046]: ['Haojing', 'Qishan', 'Luoyi', 'Yanshi', 'Zhengzhou', 'Anyang', 'Yan', 'Qufu', 'Linzi'],
-      // 西周中期：穆王西征／昭王南征
-      [-950]: ['Haojing', 'Qishan', 'Luoyi', 'Yanshi', 'Zhengzhou', 'Anyang', 'Yan', 'Qufu', 'Linzi', 'Jiang'],
+      // 西周中期：穆王西征／昭王南征到江漢
+      [-950]: ['Haojing', 'Qishan', 'Luoyi', 'Yanshi', 'Zhengzhou', 'Anyang', 'Yan', 'Qufu', 'Linzi', 'Jiang', 'Yanying'],
       // 西周晚期：宣王中興
-      [-820]: ['Haojing', 'Qishan', 'Luoyi', 'Yanshi', 'Zhengzhou', 'Anyang', 'Yan', 'Qufu', 'Linzi', 'Jiang', 'Hancheng', 'Yongcheng'],
-      // 東周春秋：王室東遷洛邑、諸侯坐大
+      [-820]: ['Haojing', 'Qishan', 'Luoyi', 'Yanshi', 'Zhengzhou', 'Anyang', 'Yan', 'Qufu', 'Linzi', 'Jiang', 'Hancheng', 'Yongcheng', 'Yanying'],
+      // 東周春秋：王室東遷洛邑，諸侯坐大（齊桓晉文）
       [-770]: ['Luoyi', 'Zhengzhou', 'Anyang', 'Yan', 'Qufu', 'Linzi', 'Jiang', 'Hancheng', 'Yongcheng', 'Yanying'],
-      [-650]: ['Luoyi', 'Zhengzhou', 'Anyang', 'Yan', 'Qufu', 'Linzi', 'Jiang', 'Hancheng', 'Yongcheng', 'Yanying', 'Shaoxing'],
+      // 春秋中期：晉楚爭霸
+      [-650]: ['Luoyi', 'Zhengzhou', 'Anyang', 'Yan', 'Qufu', 'Linzi', 'Jiang', 'Hancheng', 'Yongcheng', 'Yanying', 'Shaoxing', 'Suzhou'],
       // 春秋末：吳越爭霸
       [-550]: ['Luoyi', 'Zhengzhou', 'Anyang', 'Yan', 'Qufu', 'Linzi', 'Jiang', 'Yongcheng', 'Yanying', 'Suzhou', 'Shaoxing'],
       // 戰國七雄
       [-400]: ['Luoyi', 'Yan', 'Qufu', 'Linzi', 'Yongcheng', 'Yanying', 'Handan', 'Daliang', 'Xinzheng'],
-      // 戰國末：秦逐並
-      [-300]: ['Luoyi', 'Yan', 'Linzi', 'Yongcheng', 'Yanying', 'Handan', 'Daliang', 'Xinzheng'],
+      // 戰國末：秦東出函谷
+      [-300]: ['Luoyi', 'Yan', 'Linzi', 'Yongcheng', 'Yanying', 'Handan', 'Daliang', 'Xinzheng', 'Xianyang'],
+    },
+  },
+  {
+    // 大秦統一 — 用 polygon_name='Qin' 抑制源 Qin polygon（戰國秦狹小範圍）在 -221 後
+    // 源 coarse Qin -323~-201 是戰國秦，fine Qin 在 -221~-207 顯示統一範圍
+    polygon_name: 'Qin',
+    name_zh: '秦',
+    end_year: -206,
+    years: {
+      // -221 秦始皇統一六國：北抵長城、南至嶺南、西到隴右
+      [-221]: ['Xianyang', 'Haojing', 'Luoyang2', 'Yanshi', 'Zhengzhou', 'Anyang', 'Qufu', 'Linzi', 'Yan', 'Handan', 'Daliang', 'Yanying', 'Suzhou', 'Shaoxing', 'Chengdu', 'Lingnan', 'Liaodong', 'Pingyang'],
+      // -210 秦始皇崩於沙丘
+      [-210]: ['Xianyang', 'Luoyang2', 'Zhengzhou', 'Qufu', 'Linzi', 'Yan', 'Handan', 'Daliang', 'Yanying', 'Suzhou', 'Chengdu', 'Lingnan', 'Liaodong'],
+    },
+  },
+  {
+    // 三國時期 — historical-basemaps 沒有獨立 Cao Wei / Shu Han / Eastern Wu polygon
+    // 用 fine polygon 補三國鼎立 220-280
+    polygon_name: 'Cao Wei',
+    name_zh: '曹魏',
+    end_year: 266,
+    years: {
+      // 220 曹丕受禪建魏：黃河流域＋關中＋幽州
+      [220]: ['Luoyang2', 'Zhengzhou', 'Anyang', 'Xianyang', 'Yan', 'Handan', 'Linzi', 'Qufu', 'Daliang', 'Hancheng', 'Pingyang', 'Liaodong', 'Tongguan'],
+      // 263 滅蜀漢
+      [263]: ['Luoyang2', 'Zhengzhou', 'Anyang', 'Xianyang', 'Yan', 'Handan', 'Linzi', 'Qufu', 'Daliang', 'Hancheng', 'Pingyang', 'Liaodong', 'Tongguan', 'Chengdu2'],
+    },
+  },
+  {
+    polygon_name: 'Shu Han',
+    name_zh: '蜀漢',
+    end_year: 263,
+    years: {
+      // 221 劉備稱帝於成都：益州（蜀＋漢中）
+      [221]: ['Chengdu2', 'Jiangling', 'Tongguan'],
+    },
+  },
+  {
+    polygon_name: 'Eastern Wu',
+    name_zh: '東吳',
+    end_year: 280,
+    years: {
+      // 222 孫權稱吳王、229 稱帝：揚州＋荊州南＋交州
+      [222]: ['Jianye', 'Suzhou', 'Hangzhou', 'Shaoxing', 'Yanying', 'Changsha', 'Jiangling', 'Lingnan', 'Hanoi2'],
+    },
+  },
+  {
+    // 西晉 — 用 polygon_name='Jin' 抑制源 Jin polygon（300~499）在 266~316
+    polygon_name: 'Jin',
+    name_zh: '西晉',
+    end_year: 316,
+    years: {
+      // 266 司馬炎建晉
+      [266]: ['Luoyang2', 'Zhengzhou', 'Anyang', 'Xianyang', 'Yan', 'Handan', 'Linzi', 'Qufu', 'Daliang', 'Pingyang', 'Liaodong', 'Tongguan', 'Chengdu2'],
+      // 280 滅吳統一
+      [280]: ['Luoyang2', 'Zhengzhou', 'Anyang', 'Xianyang', 'Yan', 'Handan', 'Linzi', 'Qufu', 'Daliang', 'Pingyang', 'Liaodong', 'Tongguan', 'Chengdu2', 'Jianye', 'Suzhou', 'Hangzhou', 'Yanying', 'Changsha', 'Lingnan', 'Hanoi2'],
+    },
+  },
+  {
+    // 東晉 — polygon_name='Jin' 繼續抑制源 Jin 至 420
+    polygon_name: 'Jin',
+    name_zh: '東晉',
+    end_year: 420,
+    years: {
+      // 317 司馬睿在建康稱帝，南渡偏安
+      [317]: ['Jiankang', 'Suzhou', 'Hangzhou', 'Yanying', 'Jiangling', 'Changsha', 'Chengdu2', 'Lingnan', 'Hanoi2'],
+    },
+  },
+  {
+    // 唐朝 — 補 618-799（源 Tang Empire 只 800-999），用 polygon_name='Tang Empire' 抑制源
+    polygon_name: 'Tang Empire',
+    name_zh: '唐',
+    end_year: 907,
+    years: {
+      // 618 高祖建唐
+      [618]: ['Daxing', 'Luoyang2', 'Taiyuan', 'Zhengzhou', 'Linzi', 'Yan', 'Chengdu', 'Yanying', 'Hangzhou', 'Guangzhou', 'Liaodong'],
+      // 660 高宗滅百濟、668 滅高句麗
+      [660]: ['Daxing', 'Luoyang2', 'Taiyuan', 'Zhengzhou', 'Linzi', 'Yan', 'Chengdu', 'Yanying', 'Hangzhou', 'Guangzhou', 'Liaodong', 'Pyongyang', 'Yangzhou2'],
+      // 690 武則天稱帝、神都洛陽
+      [690]: ['Daxing', 'Luoyang2', 'Taiyuan', 'Zhengzhou', 'Linzi', 'Yan', 'Chengdu', 'Yanying', 'Hangzhou', 'Guangzhou', 'Liaodong', 'Yangzhou2', 'Kucha', 'Khotan'],
+      // 713 玄宗開元盛世（疆域極盛）
+      [713]: ['Daxing', 'Luoyang2', 'Taiyuan', 'Zhengzhou', 'Linzi', 'Yan', 'Chengdu', 'Yanying', 'Hangzhou', 'Guangzhou', 'Liaodong', 'Yangzhou2', 'Kucha', 'Khotan', 'Kashgar', 'Beshbalik'],
+      // 755 安史之亂後失西域
+      [755]: ['Daxing', 'Luoyang2', 'Taiyuan', 'Zhengzhou', 'Linzi', 'Yan', 'Chengdu', 'Yanying', 'Hangzhou', 'Guangzhou', 'Liaodong', 'Yangzhou2'],
+      // 800 中唐藩鎮割據（與源 Tang Empire 800 銜接）
+      [800]: ['Daxing', 'Luoyang2', 'Zhengzhou', 'Linzi', 'Yan', 'Chengdu', 'Yanying', 'Hangzhou', 'Guangzhou', 'Yangzhou2'],
+      // 870 黃巢之亂後縮減
+      [870]: ['Daxing', 'Luoyang2', 'Zhengzhou', 'Chengdu', 'Yanying', 'Yangzhou2'],
+    },
+  },
+  {
+    // 明朝實際範圍 — 用 fine 抑制源 Ming Chinese Empire (lon 跨 141 太誇張)
+    polygon_name: 'Ming Chinese Empire',
+    name_zh: '明',
+    end_year: 1644,
+    years: {
+      // 1368 朱元璋建明（南京為都）
+      [1368]: ['Yingtian', 'Luoyang2', 'Zhengzhou', 'Daxing', 'Pingcheng', 'Linzi', 'Yan', 'Chengdu', 'Yanying', 'Hangzhou', 'Guangzhou', 'Liaodong', 'Yangzhou2', 'Lhasa', 'Hanoi2'],
+      // 1421 永樂遷都北京
+      [1421]: ['Beiping', 'Yingtian', 'Luoyang2', 'Zhengzhou', 'Daxing', 'Pingcheng', 'Linzi', 'Yan', 'Chengdu', 'Yanying', 'Hangzhou', 'Guangzhou', 'Liaodong', 'Yangzhou2', 'Lhasa', 'Hanoi2', 'Yunnan'],
+      // 1500 中期
+      [1500]: ['Beiping', 'Yingtian', 'Luoyang2', 'Zhengzhou', 'Daxing', 'Pingcheng', 'Linzi', 'Yan', 'Chengdu', 'Yanying', 'Hangzhou', 'Guangzhou', 'Liaodong', 'Yangzhou2', 'Yunnan'],
+      // 1600 萬曆末，努爾哈赤崛起前
+      [1600]: ['Beiping', 'Yingtian', 'Luoyang2', 'Zhengzhou', 'Daxing', 'Pingcheng', 'Linzi', 'Yan', 'Chengdu', 'Yanying', 'Hangzhou', 'Guangzhou', 'Yangzhou2', 'Yunnan'],
+      // 1630 失遼東給後金
+      [1630]: ['Beiping', 'Yingtian', 'Luoyang2', 'Zhengzhou', 'Daxing', 'Pingcheng', 'Linzi', 'Chengdu', 'Yanying', 'Hangzhou', 'Guangzhou', 'Yangzhou2', 'Yunnan'],
+    },
+  },
+  {
+    // 清朝實際範圍 — 用 fine 抑制源 Manchu Empire / Qing Empire 的範圍誇大
+    polygon_name: 'Manchu Empire',
+    name_zh: '清',
+    end_year: 1912,
+    years: {
+      // 1644 入關
+      [1644]: ['Beiping', 'Mukden', 'Yingtian', 'Luoyang2', 'Zhengzhou', 'Linzi', 'Yan', 'Chengdu', 'Yanying', 'Hangzhou', 'Guangzhou', 'Liaodong', 'Yangzhou2', 'Yunnan'],
+      // 1683 平台灣
+      [1683]: ['Beiping', 'Mukden', 'Yingtian', 'Luoyang2', 'Zhengzhou', 'Linzi', 'Yan', 'Chengdu', 'Yanying', 'Hangzhou', 'Guangzhou', 'Liaodong', 'Yangzhou2', 'Yunnan', 'Karakorum2'],
+      // 1759 十全武功（疆域極盛）
+      [1759]: ['Beiping', 'Mukden', 'Yingtian', 'Luoyang2', 'Zhengzhou', 'Linzi', 'Yan', 'Chengdu', 'Yanying', 'Hangzhou', 'Guangzhou', 'Liaodong', 'Yangzhou2', 'Yunnan', 'Karakorum2', 'Lhasa', 'Kashgar', 'Khotan', 'Beshbalik', 'Hanoi2'],
+      // 1840 鴉片戰爭前
+      [1840]: ['Beiping', 'Mukden', 'Yingtian', 'Luoyang2', 'Zhengzhou', 'Linzi', 'Yan', 'Chengdu', 'Yanying', 'Hangzhou', 'Guangzhou', 'Liaodong', 'Yangzhou2', 'Yunnan', 'Karakorum2', 'Lhasa', 'Kashgar', 'Khotan', 'Beshbalik'],
+      // 1900 義和團
+      [1900]: ['Beiping', 'Mukden', 'Luoyang2', 'Zhengzhou', 'Linzi', 'Yan', 'Chengdu', 'Yanying', 'Hangzhou', 'Guangzhou', 'Liaodong', 'Yangzhou2', 'Yunnan', 'Lhasa', 'Kashgar', 'Beshbalik'],
+    },
+  },
+  {
+    // 元朝 — source 完全沒有 Yuan Empire polygon！
+    polygon_name: 'Yuan Empire',
+    name_zh: '元',
+    end_year: 1368,
+    years: {
+      // 1271 忽必烈定國號元
+      [1271]: ['Dadu', 'Shangdu', 'Karakorum2', 'Pingcheng', 'Luoyang2', 'Zhengzhou', 'Xianyang', 'Yan', 'Linzi', 'Liaodong', 'Pyongyang'],
+      // 1279 崖山之戰滅南宋，統一全境
+      [1279]: ['Dadu', 'Shangdu', 'Karakorum2', 'Pingcheng', 'Luoyang2', 'Zhengzhou', 'Xianyang', 'Yan', 'Linzi', 'Liaodong', 'Pyongyang', 'Jianye', 'Hangzhou', 'Lin\'an', 'Guangzhou', 'Chengdu2', 'Yunnan', 'Yanying', 'Lhasa', 'Beshbalik'],
+      // 1351 紅巾起義
+      [1351]: ['Dadu', 'Shangdu', 'Karakorum2', 'Pingcheng', 'Luoyang2', 'Zhengzhou', 'Xianyang', 'Yan', 'Linzi', 'Liaodong', 'Pyongyang', 'Hangzhou', 'Guangzhou', 'Chengdu2', 'Yunnan', 'Lhasa', 'Beshbalik'],
     },
   },
   {

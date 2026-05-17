@@ -254,6 +254,22 @@ const SUPPLEMENT_ZH: Record<string, string> = {
   'Manchu Empire': '清',
   'Toba Wei': '北魏',
   'China': '中國',
+  // fine-polygons.geojson 新增的中國朝代（非源 historical-basemaps）
+  'Qin (unified)': '秦',
+  'Western Jin': '西晉',
+  'Eastern Jin': '東晉',
+  'Cao Wei': '曹魏',
+  'Shu Han': '蜀漢',
+  'Eastern Wu': '東吳',
+  // 其他源資料常見朝代名／命名怪異 polygon 補正
+  'Jin': '晉',
+  'Khitans': '契丹',
+  'Mongols': '蒙古',
+  'Tibetan Empire': '吐蕃',
+  'Parhae': '渤海',
+  'Southern Xiongnu': '南匈奴',
+  'Northern Liang': '北涼',
+  'Goguryeo': '高句麗',
 }
 
 const props = withDefaults(defineProps<{
