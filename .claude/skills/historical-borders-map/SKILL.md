@@ -23,10 +23,10 @@ description: 「歷史國界地圖」工具集（/maps/historical-borders）— 
 | B. Sphere fill polygon | `public/maps/historical-sphere-fills.geojson` | **10,350 features (42 MB)** | 文化圈著色（由 world-religions-map 使用）— 跨 53 snapshots |
 | C. 國家骨架（含現代涵蓋） | `public/maps/state-skeleton.json` | **2,949 條 (348 KB)** | 從 historical-states.geojson 抽出 unique names |
 | D. Wikidata 主資料 | `public/maps/wikidata-states.json` | 4215 條 (~ 530 KB) | 中英文名、起始／結束年、所屬大陸、QID |
-| E. 人工撰寫詳細 | `data/maps/historical-states-db.ts` (`STATE_DETAILS`) | **271 條（5 輪擴充）** | 朝代、首都、宗教、人口、面積、簡介 |
-| E2. 朝代時間段標籤 | `data/maps/dynasty-labels.ts` (`DYNASTY_LABELS`) | **47 polygon × ~10 段 = ~480 段（含第三輪細分）** | 跨朝代 polygon 按年代切時期，標籤顯示「{朝代}（{國家}）」 |
-| E3. polygon 年範圍修正 | `public/maps/polygon-year-overrides.json` | **11 條** | 收窄源資料過早 polygon（如 Hurrian -5000→-2500、Indus -4000→-3300）|
-| E4. 細粒度 polygon（city-hull） | `public/maps/fine-polygons.geojson` | **18 polygons / 3 帝國** | 阿巴斯 6 + 伍麥亞 5 + 蒙古 7；已接入主圖，覆蓋粗 polygon |
+| E. 人工撰寫詳細 | `data/maps/historical-states-db.ts` (`STATE_DETAILS`) | **277 條（5 輪 + 中國諸侯）** | 朝代、首都、宗教、人口、面積、簡介 |
+| E2. 朝代時間段標籤 | `data/maps/dynasty-labels.ts` (`DYNASTY_LABELS`) | **55 polygon × ~10 段** | 跨朝代 polygon 按年代切時期；dynastyLabelAt() 同名簡化 + 空 dynasty_zh 處理 |
+| E3. polygon 年範圍修正 | `public/maps/polygon-year-overrides.json` | **30 條** | 收窄源資料錯誤年代（Sui 619、Tang 907、Yuan 1271-1368、Sinic 限商朝期、Wu 春秋吳國 -900~-473 等）|
+| E4. 細粒度 polygon（city-hull） | `public/maps/fine-polygons.geojson` | **151 polygons / 37 帝國** | 中東 18（阿巴斯／伍麥亞／蒙古）+ 中國 130+（商周秦漢三國晉南朝隋唐五代十國北南宋遼金西夏西遼元明清）|
 | F. NE 50m coastline | `public/maps/ne_50m_coastline.geojson` | 1428 LineString | 海岸線（黑線） |
 | G. NE 50m admin_0 | `public/maps/ne_50m_admin_0_countries.geojson` | 242 features | 陸地灰底 + **NAME_ZHT 中文國名（內建）** |
 | H. Polygon 名譯本 | `public/maps/polygon-names-zh.json` | **2,420 條 (88 KB)** | Gemini batch 翻的 polygon name → 繁中 |
@@ -529,7 +529,72 @@ TimeAxis 右上「▶ 播放」按鈕，速度可選「慢／普通／快」（2
 
 ---
 
-## 已完成（最新一輪：2026-05-17）
+## 已完成（最新一輪：2026-05-18）
+
+### ✅ E. 中國朝代徹底校正 + city-hull 大擴充（最大一塊）
+
+**目標**：源 historical-basemaps 的中國朝代 polygon 不準（Sinic -1500~-501 覆蓋整個東亞、Wu polygon -1500 起源、Sui Empire 延到 799、Tang Empire 延到 999、Ming Chinese Empire lon 延到 141°；Yuan/Cao Wei/Shu Han/西晉/東晉/南朝/五代十國/西夏/西遼/金朝完全缺）
+
+**做法**：用 city-hull 法畫真實考古／史學範圍。fine-polygons.geojson 從 18 → **151**：
+
+| 朝代 | fine keyframes 數 | 涵蓋年代 |
+|---|---|---|
+| 商 | 4 | -1500/-1300/-1200/-1100（偃師→安陽，河南-河北一帶） |
+| 周 | 8 | -1046/-950/-820/-770/-650/-550/-400/-300（西周→春秋→戰國各期） |
+| 秦 | 2 | -221（始皇統一極盛）/ -210（始皇崩） |
+| 西漢 | 9 | -202 建漢 / -154 七國亂 / -127 武帝前 / -121 取河西四郡 / -111 平南越 / -108 滅朝鮮（極盛） / -60 西域都護府 / -33 元帝 / -7 哀帝末 |
+| 東漢 | 8 | 25 光武 / 36 平蜀 / 73 班超 / 91 北匈奴亡 / 105 永元 / 160 桓帝末 / 184 黃巾 / 200 官渡 |
+| 三國 | 4 | 220 曹魏 / 221 蜀漢 / 222 東吳 / 263 蜀漢亡 |
+| 西晉／東晉 | 3 | 266 司馬炎 / 280 統一 / 317 南渡 |
+| 南朝 | 6 | 劉宋 420/450 / 南齊 479 / 梁 502/548 / 陳 557 |
+| 唐 | 15 | 618 建唐 / 630 破突厥 / 640 滅高昌 / 657 平西突厥 / 668 滅麗 / 690 武則天 / 713 開元盛世（極盛）/ 755 安史 / 763 吐蕃陷長安 / 781 失安西 / 805 元和 / 840 武宗 / 874 黃巢 / 884 平亂 / 904 末 |
+| 五代 | 5 | 後梁 907 / 後唐 923 / 後晉 936（割燕雲）/ 後漢 947 / 後周 951 |
+| 十國 | 9 | 前蜀／後蜀／南漢／楚／閩／南平／北漢／吳越／南唐 |
+| 北宋 | 5 | 960 / 979 滅北漢 / 1004 澶淵 / 1100 徽宗 / 1126 靖康前 |
+| 南宋 | 4 | 1127 南渡 / 1141 紹興和議 / 1234 端平入洛 / 1276 臨安陷 |
+| 遼 | 3 | 916 阿保機 / 936 取燕雲 / 947 改名遼 |
+| 金 | 4 | 1115 阿骨打 / 1127 入中原 / 1153 海陵王遷中都 / 1214 南遷汴京 |
+| 西夏 | 3 | 1038 元昊稱帝 / 1100 / 1200 |
+| 西遼 | 3 | 1124 耶律大石 / 1141 卡特萬戰役 / 1200 末 |
+| 元 | 6 | 1271 忽必烈 / 1279 滅南宋 / 1300 大德之治 / 1320 仁宗 / 1351 紅巾 / 1360 朱元璋崛起 |
+| 明 | 13 | 1368 / 1372 平河西 / 1387 平遼東 / 1405 鄭和 / 1421 遷都 / 1428 棄交趾 / 1449 土木堡 / 1500 / 1550 倭寇 / 1583 努爾哈赤 / 1592 援朝 / 1619 薩爾滸 / 1630 失廣寧 / 1640 崇禎末 |
+| 清 | 18 | 1644 入關 / 1645 滅弘光 / 1662 南明亡 / 1683 收台 / 1689 尼布楚 / 1696 平噶爾丹 / 1720 平西藏 / 1755 平準噶爾 / 1759 平回部（極盛）/ 1800 嘉慶 / 1840 鴉片 / 1842 失香港 / 1860 失外興安嶺 / 1881 收回伊犁 / 1895 失台灣 / 1900 庚子 / 1911 辛亥 |
+
+**新增 ~100 個歷史地點 lat/lon**（CITIES 表 ~80 → ~180）：
+- 中國古都：偃師／鄭州／安陽／朝歌／商丘／邢台（商）；鎬京／洛邑／岐山／燕／曲阜／臨淄／絳／韓城（西周）；雍／郢／姑蘇／會稽／邯鄲／大梁／新鄭／咸陽（戰國）
+- 漢朝擴張：酒泉／武威／張掖／敦煌／南越／樂浪／西域都護／交趾／夜郎
+- 唐朝西域：高昌／安西大都護府／龜茲／于闐／疏勒／北庭／平壤／拉薩
+- 五代十國：汴梁／洛陽／太原／福州／長沙／江陵／成都／贛州／瓊海
+- 西夏：銀川（興慶）／涼州／甘州／敦煌／榆林／鄂爾多斯
+- 西遼：八剌沙袞／葉爾羌／阿克蘇／阿力麻里／怛邏斯
+- 元明清：大都／上都／哈拉和林／雲南／北平／應天府／嘉峪關／哈密／璦琿／海參崴／庫頁島／台灣／西寧／伊犁／烏魯木齊／喀什噶爾／澳門／香港島
+
+**polygon-year-overrides 從 11 → 30 條**（修正源資料年代）：
+- 中國：Sinic max=-1047（武王伐紂前）、Zhoa 限 -1046~-256、Wu 限 -900~-473（春秋吳國）、Sui Empire max=618、Tang Empire 限 618~907、Han Empire 限 -202 起、Han 限 24~219（東漢）、Jin 限 266~420（兩晉）、Jin Empire 改 1115~1234（真實金朝）、Yuan Empire 限 1271~1368、Ming Chinese Empire 限 1368~1643、Manchu Empire min=1644、Song Empire 限 960~1126（北宋）、Liao max=1125、Khitans 916~1125、Qin max=-207、Western Gokturk max=657、Tibetan Empire max=877、Mongol Empire max=1259、Tibetans/Tibeto-Burmanese 隱藏（語族非政體）
+- 其他：Greek city-states -800~-146、Kingdom of David and Solomon -1010~-930、Kush -1070~350、Aramaean kingdoms -1100~-732、Assyria min=-1365、Babylonia min=-1894
+
+**SUPPLEMENT_ZH（HistoricalBordersMap.vue）+ ~50 條**：補中國 polygon 中文 + 修正 wikidata 錯譯（Han 邗国→漢、Liao 蓼國→遼）+ 新 fine polygon 名（Southern Dynasties/Five Dynasties/Western Xia/Qara Khitai 等）+ 全部簡潔化（Yuan Empire→元、Sui Empire→隋）
+
+**dynastyLabelAt() 重寫**：dynasty_zh 與 country_zh 相同時不重複括號、為空時只顯示另一個。配合 user feedback「國名保持乾淨，繁雜資訊放 detail 彈窗」(see [[feedback-map-label-clean-country-name]])
+
+**dynasty-labels.ts +311 條清理**：用 [scripts/clean_dynasty_labels.mjs](../../../scripts/clean_dynasty_labels.mjs) 批次剝掉所有 dynasty_zh 內括號說明（如「武帝擴張（漠北之戰／絲路）」→「武帝擴張」）；新加 Sinic / Zhoa / Wu / Yue / Qin / Xia / Jin / Jin Empire 等中國朝代切年代規則
+
+**驗證範例**（每個年份顯示什麼）：
+- 1501 BCE → 商（fine 河南-河北小範圍，非源資料的東亞超大塊）
+- 100 BCE → 西漢（武帝極盛、含河西四郡＋南越＋朝鮮四郡）
+- 200 CE → 東漢
+- 263 CE → 曹魏 + 蜀漢 + 東吳
+- 580 CE → 陳 + 北魏（南北朝）
+- 750 CE → 唐（開元盛世）+ 阿巴斯
+- 936 CE → 五代＋後蜀＋南漢＋楚＋閩＋南平＋吳越＋南唐＋遼（十國最盛）
+- 1127 CE → 南宋＋金＋西夏＋西遼＋西藏（靖康後新格局）
+- 1234 CE → 南宋＋蒙古
+- 1276 CE → 元入臨安、南宋殘餘＋元＋西藏
+- 1759 CE → 清（十全武功疆域極盛、平準噶爾／平回部後）
+- 1860 CE → 清（失香港＋外興安嶺以南）
+- 1900 CE → 清（庚子之亂、失台澎）
+
+---
 
 ### ✅ A. STATE_DETAILS 第五輪擴充：177 → **271 條**（+94）
 
@@ -558,18 +623,36 @@ TimeAxis 右上「▶ 播放」按鈕，速度可選「慢／普通／快」（2
 | Aztec Empire | 11 段（三方聯盟／悲傷之夜／特諾奇蒂特蘭陷落） |
 | Mauryan / Gupta | 羯陵伽戰爭／海護王南征／塞犍陀笈多抗匈那 |
 
-### ✅ C. Stage 1 City-Hull polygon：3 帝國 18 polygons 已接入主圖
+### ✅ C. Stage 1 City-Hull polygon：37 帝國 151 polygons 已接入主圖
 
-- [scripts/build_city_hull_polygons.mjs](../../../scripts/build_city_hull_polygons.mjs)：CITIES 共享城市庫（~80 城）+ EMPIRES 配置
-- 阿巴斯（6）+ 伍麥亞（5）+ 蒙古（7）→ [public/maps/fine-polygons.geojson](../../../public/maps/fine-polygons.geojson)（~5.5 KB）
+- [scripts/build_city_hull_polygons.mjs](../../../scripts/build_city_hull_polygons.mjs)：CITIES 共享城市庫（~180 城）+ EMPIRES 配置
+- 中東：阿巴斯（6）/ 伍麥亞（5）/ 蒙古（7）
+- 中國：商／周／秦／西漢／東漢／曹魏／蜀漢／東吳／西晉／東晉／南朝四（劉宋／南齊／梁／陳）／唐／五代／十國九個／北宋／南宋／遼／金／西夏／西遼／元／明／清 共 130+ polygons
+- 輸出 [public/maps/fine-polygons.geojson](../../../public/maps/fine-polygons.geojson)（~46 KB）
 - [HistoricalBordersMap.vue](../../../components/maps/HistoricalBordersMap.vue) runtime 抑制同名粗 polygon（StateEntry.isFine 標籤）
 - 1 城 → 0.5° 方塊；2 城 → bbox；3+ → Graham scan convex hull
 
-### ✅ D. polygon-year-overrides：源資料過早收窄
+**設計原則：事件級而非機械式 10 年**
+- 系統已支援連續任意年份查詢；兩個 keyframe 間 polygon 不變
+- 用實際領土變動的歷史事件年補 keyframe（如 -121 取河西、668 滅高麗、1689 尼布楚）
+- 比機械 10 年更節省、更準確
 
-- [public/maps/polygon-year-overrides.json](../../../public/maps/polygon-year-overrides.json)（11 條）
-- 修正 Hurrian -5000→-2500、Indus -4000→-3300、Elam -5000→-3200、Kerma/Minoan/Olmec/Norte Chico/Chavin/Xia/Canaan/Saba
-- HistoricalBordersMap.vue runtime 載入並收窄 yearFrom/yearTo
+### ✅ D. polygon-year-overrides：30 條年代收窄
+
+- [public/maps/polygon-year-overrides.json](../../../public/maps/polygon-year-overrides.json)
+- **古國（11）**：Hurrian -5000→-2500、Indus -4000→-3300、Elam -5000→-3200、Kerma/Minoan/Olmec/Norte Chico/Chavin/Xia/Canaan/Saba
+- **中國 13**：Sinic max=-1047、Zhoa -1046~-256、Wu -900~-473（春秋吳國）、Qin max=-207、Sui max=618、Tang 618~907、Han Empire min=-202、Han 24~219、Jin 266~420（兩晉）、Jin Empire 1115~1234（真實金朝）、Yuan 1271~1368、Ming Chinese Empire 1368~1643、Manchu Empire min=1644、Song Empire 960~1126、Liao max=1125、Khitans 916~1125、Mongol max=1259
+- **其他 6**：Greek city-states -800~-146、David/Solomon -1010~-930、Kush -1070~350、Aramaean -1100~-732、Assyria min=-1365、Babylonia min=-1894、Tibetan Empire max=877、Western Gokturk max=657、Tibetans/Tibeto-Burmanese 隱藏
+- HistoricalBordersMap.vue runtime 載入並收窄 yearFrom/yearTo（過 yt<yf 自動 filter 掉）
+
+### ✅ F. 國名標籤保持乾淨（feedback memory 規則化）
+
+[[feedback-map-label-clean-country-name]] — polygon 標籤只放純中文國名／朝代名，繁雜資訊（朝代統治、君主、戰役）放 detail 彈窗。
+
+- dynasty-labels.ts dynasty_zh +311 條剝括號說明（[scripts/clean_dynasty_labels.mjs](../../../scripts/clean_dynasty_labels.mjs)）
+- STATE_DETAILS.name_zh +14 條剝括號（滿洲帝國（清）→ 滿洲帝國、烏代浦土邦（梅瓦爾）→ 烏代浦土邦）
+- dynastyLabelAt() 改 dynasty_zh = country_zh 時不重複；任一為空時只顯示另一個
+- 例外：埃及王朝重構為「埃及第 N 王朝」格式（dynasty_zh 留空，country_zh 直接放完整名）
 
 ---
 
@@ -612,8 +695,6 @@ TimeAxis 右上「▶ 播放」按鈕，速度可選「慢／普通／快」（2
 - Khazar Khaganate（已有 Khazars？）、Cuman-Kipchak
 - Volga Bulgaria、Pecheneg
 - Tangut／西夏（檢查 Western Xia）
-
-**操作流程**：每輪用 [scripts/audit_historical_borders.mjs](../../../scripts/audit_historical_borders.mjs) 列出剩餘高頻 polygon、根據 Wikipedia 寫條目；目標每條含 intro / capitals / religions / dynasties / realm_id / sphere_id。
 
 **操作流程**：每輪用 [scripts/audit_historical_borders.mjs](../../../scripts/audit_historical_borders.mjs) 列出剩餘高頻 polygon、根據 Wikipedia 寫條目；目標每條含 intro / capitals / religions / dynasties / realm_id / sphere_id。
 
@@ -675,10 +756,16 @@ node -e "const fs=require('fs');const gj=JSON.parse(fs.readFileSync('public/maps
 
 ### D. 其他低優先
 
-1. **CHGIS 整合**（C 方案 2 同上）— 補中國朝代年密度
-2. **與 world-religions-map 整合** — 此工具是 sphere 分類討論的底層，分類確定後可同步反向更新 world-religions 的 sphere-history
-3. **OpenHistoricalMap 抓取阿巴斯等帝國 polygon**（被 Cloudflare 擋，需 browser-mode 解）
-4. **polygon-year-overrides 擴充** — 已加 11 條；剩可加項目：Vinča / Cucuteni / Yangshao（中歐銅器文化非政體）、Mycenaean -1700 起、Phoenicia -1500 起、Etruria -900 起。要加新 override：直接編 [public/maps/polygon-year-overrides.json](../../../public/maps/polygon-year-overrides.json) 的 `overrides`，HMR 即生效。
+1. **其他帝國的 city-hull fine polygons** — 中東/中國已做。剩可做：
+   - 羅馬帝國：-200／-100／-30／0／100／150／200／300／395（西/東分裂）
+   - 拜占庭：395／476／527／630／700／843／1025／1204／1350／1453
+   - 鄂圖曼：1326／1389／1453／1520／1566／1683／1798／1878／1914
+   - 古印度（Maurya／Gupta／Sultanate）／古波斯（Achaemenid／Sasanian）
+2. **CHGIS 整合**（中國年解析度）— 哈佛+復旦中國歷史 GIS，-2 BCE→1911 CE 縣級資料，整合可達真實年密度而非事件級
+3. **與 world-religions-map 整合** — 此工具是 sphere 分類討論的底層，分類確定後可同步反向更新 world-religions 的 sphere-history
+4. **OpenHistoricalMap 抓取阿巴斯等帝國 polygon**（被 Cloudflare 擋，需 browser-mode 解）
+5. **polygon-year-overrides 擴充** — 已 30 條；剩可加：Vinča / Cucuteni / Yangshao（中歐銅器文化非政體）、Mycenaean -1700 起、Phoenicia -1500 起、Etruria -900 起。要加新 override：直接編 [public/maps/polygon-year-overrides.json](../../../public/maps/polygon-year-overrides.json) 的 `overrides`，HMR 即生效。
+6. **南北朝細分**：北朝（西魏／東魏／北周／北齊）尚未做 fine polygon；目前還靠 Toba Wei 源 polygon 顯示 500 CE 北朝
 
 ---
 
@@ -714,8 +801,14 @@ historical-borders-map 額外用：
 
 ## Recent commits
 
-`f079cf3` city-hull 多帝國通用版 + 接入主圖：阿巴斯 6 / 伍麥亞 5 / 蒙古 7 = 18 polygons → fine-polygons.geojson；HistoricalBordersMap.vue 載入並抑制對應粗 polygon
-`db7f443` STATE_DETAILS 177 → 271（+94 第五輪：印度土邦／神羅小邦／太平洋／20 世紀短命邦／阿拉伯／早期帝國／非洲）+ dynasty-labels 第三輪 + Stage 1 city-hull POC + polygon-year-overrides.json
+`5a097ac` 中國朝代加 ~49 事件級 keyframes — 西漢/東漢/唐/元/明/清密集化（fine 102 → 151）
+`e54a488` 補齊南朝/五代十國/北南宋/西夏/西遼/金（fine 59 → 102，+43）
+`bdac72c` 中國朝代全面校正：補秦/三國/晉/唐/元/明/清 fine polygons + 修源資料錯誤年代（fine 30 → 59）
+`1aa46e6` city-hull 法畫實際商朝範圍，蓋掉源資料超大的 Sinic polygon
+`04d2b33` 中國朝代+古國校正：Zhoa 拼字錯／Wu -1500 過早／Liao/Han wikidata 錯譯 → SUPPLEMENT_ZH 補正 + year overrides + dynasty labels
+`ccab5f6` 國名標籤保持乾淨，繁雜資訊移到 detail 彈窗（dynasty_zh 剝括號 311 條／STATE_DETAILS 14 條）
+`f079cf3` city-hull 多帝國通用版 + 接入主圖：阿巴斯 6 / 伍麥亞 5 / 蒙古 7 = 18 polygons → fine-polygons.geojson
+`db7f443` STATE_DETAILS 177 → 271（+94 第五輪）+ dynasty-labels 第三輪 + Stage 1 city-hull POC + polygon-year-overrides.json
 `3ded3db` STATE_DETAILS 78 → 177（+99 條第二+三輪：太平洋／加勒比／拉美／歐洲／義大利城邦／中世紀伊斯蘭／中國北朝／朝鮮三國）
 `9615360` STATE_DETAILS 46 → 78（+32 條：殖民／印度／東南亞／西非／衣索比亞／日韓／法德義西）
 `37ff74b` dynasty-labels.ts 第二輪 — 葡西英荷殖民／西非／印度／東南亞／美洲（+22 polygon × ~130 段）
