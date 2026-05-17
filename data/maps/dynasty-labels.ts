@@ -39,6 +39,37 @@ export const DYNASTY_LABELS: Record<string, DynastyEntry[]> = {
     { from: -500, to: -221, dynasty_zh: '戰國', country_zh: '東周' },
   ],
 
+  // Zhoa — historical-basemaps 拼字錯誤（應為 Zhou），polygon 跨 -1500 ~ -501
+  // 年範圍經 polygon-year-overrides 收窄到 -1100 ~ -256
+  'Zhoa': [
+    { from: -1100, to: -1047, dynasty_zh: '', country_zh: '周（部族）' },
+    { from: -1046, to: -772,  dynasty_zh: '', country_zh: '西周' },
+    { from: -770,  to: -481,  dynasty_zh: '春秋', country_zh: '東周' },
+    { from: -480,  to: -256,  dynasty_zh: '戰國', country_zh: '東周' },
+  ],
+
+  // Wu — polygon 跨 -1500 ~ -501，經 year-overrides 收窄到 -900 ~ -473
+  // 全段都是春秋吳國
+  'Wu': [
+    { from: -900, to: -473, dynasty_zh: '', country_zh: '吳' },
+  ],
+
+  // Yue — polygon 跨 -323 ~ -201（戰國末越被楚滅）
+  'Yue': [
+    { from: -323, to: -222, dynasty_zh: '', country_zh: '越' },
+  ],
+
+  // Qin — polygon 跨 -323 ~ -201
+  'Qin': [
+    { from: -323, to: -222, dynasty_zh: '戰國', country_zh: '秦' },
+    { from: -221, to: -207, dynasty_zh: '統一', country_zh: '秦' },
+  ],
+
+  // Xia — polygon 跨 -2000 ~ -1501（已 year-override 到 -2070 ~ -1600）
+  'Xia': [
+    { from: -2070, to: -1600, dynasty_zh: '', country_zh: '夏' },
+  ],
+
   // Han Empire / Han polygon — 西漢 / 新莽 / 東漢
   'Han Empire': [
     { from: -202, to: -195, dynasty_zh: '高祖建漢', country_zh: '西漢' },

@@ -229,7 +229,31 @@ const SUPPLEMENT_ZH: Record<string, string> = {
   'France': '法國',
   'Spain': '西班牙',
   'Germany': '德國',
-  'Hong Kong': '香港',
+  // 中國朝代／古國（覆蓋 wikidata 偶有錯譯，如 Han→邗国 / Liao→蓼國）
+  // 跨多朝 polygon 改用 DYNASTY_LABELS 切年代顯示，這裡只放 fallback
+  'Han': '漢',
+  'Liao': '遼',
+  'Yue': '越',
+  'Wu': '吳',
+  'Yuezhi': '月氏',
+  'Zhoa': '周',
+  'Sinic': '中國',
+  'Zhou states': '周',
+  'Xia': '夏',
+  'Qin': '秦',
+  'state societies and Aramaean kingdoms': '亞蘭諸王國',
+  'Han Empire': '漢',
+  'Tang Empire': '唐',
+  'Song Empire': '宋',
+  'Yuan Empire': '元',
+  'Ming Empire': '明',
+  'Qing Empire': '清',
+  'Sui Empire': '隋',
+  'Jin Empire': '金',
+  'Ming Chinese Empire': '明',
+  'Manchu Empire': '清',
+  'Toba Wei': '北魏',
+  'China': '中國',
 }
 
 const props = withDefaults(defineProps<{

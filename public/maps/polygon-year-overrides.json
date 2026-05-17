@@ -52,6 +52,44 @@
       "min_year_from": -1200,
       "max_year_to": 275,
       "reason": "示巴王國 -1200~ 275 CE"
+    },
+    "Wu": {
+      "min_year_from": -900,
+      "max_year_to": -473,
+      "reason": "春秋吳國 -900~-473（夫差敗於越王勾踐）；-1500 起源 polygon 過早"
+    },
+    "Zhoa": {
+      "min_year_from": -1100,
+      "max_year_to": -256,
+      "reason": "Zhoa 應為 Zhou typo；周部族／西周／東周 -1100~-256"
+    },
+    "Greek city-states": {
+      "min_year_from": -800,
+      "max_year_to": -146,
+      "reason": "希臘城邦時代 -800~-146（科林斯戰敗併入羅馬）"
+    },
+    "Kingdom of David and Solomon": {
+      "min_year_from": -1010,
+      "max_year_to": -930,
+      "reason": "聯合王國 -1010~-930（所羅門死後分裂為以色列／猶大）"
+    },
+    "Kush": {
+      "min_year_from": -1070,
+      "max_year_to": 350,
+      "reason": "庫施王國 -1070~350（阿克蘇姆征服）"
+    },
+    "state societies and Aramaean kingdoms": {
+      "min_year_from": -1100,
+      "max_year_to": -732,
+      "reason": "亞蘭諸王國 -1100~-732（亞述吞併大馬士革）"
+    },
+    "Assyria": {
+      "min_year_from": -1365,
+      "reason": "中亞述 -1365 起；古亞述只是城邦"
+    },
+    "Babylonia": {
+      "min_year_from": -1894,
+      "reason": "古巴比倫漢摩拉比王朝 -1894 起"
     }
   }
 }

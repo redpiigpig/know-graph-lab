@@ -264,7 +264,7 @@ export const STATE_DETAILS: Record<string, StateDetail> = {
     area_peak_wan_km2: 500,
   },
   'Han Empire': {
-    name_zh: '漢帝國',
+    name_zh: '漢',
     dynasties: ['西漢（-202~9）', '新莽', '東漢（25~220）'],
     capitals: ['長安', '洛陽'],
     religions: ['儒家國教', '黃老／早期道教', '佛教傳入'],
@@ -2253,6 +2253,51 @@ export const STATE_DETAILS: Record<string, StateDetail> = {
     religions: ['伊斯蘭遜尼派'],
     realm_id: 'southern', sphere_id: 'west-african-sahel',
     intro: '加涅姆-博爾努帝國的後繼，1380 從查德湖東岸遷至西岸博爾努。Idris Alooma（c.1571-1603）為盛期。1893 蘇丹奴隸販子拉比赫攻陷。',
+  },
+
+  // ========== 中國春秋戰國諸侯 ==========
+  'Wu': {
+    name_zh: '吳',
+    dynasties: ['吳氏（傳 -1100 起，史可考 -585~-473）'],
+    capitals: ['梅里', '姑蘇（蘇州）'],
+    realm_id: 'eastern', sphere_id: 'han',
+    intro: '春秋末年姑蘇強國。闔閭採孫武為將，伍子胥相，破楚入郢（-506）。-473 夫差敗於越王勾踐，吳亡。',
+  },
+  'Yue': {
+    name_zh: '越',
+    dynasties: ['越氏（傳少康後裔，史可考 -555~-222）'],
+    capitals: ['會稽（紹興）', '琅琊'],
+    realm_id: 'eastern', sphere_id: 'han',
+    intro: '春秋末年勾踐臥薪嘗膽滅吳（-473）。戰國時被楚滅（-222）。',
+  },
+  'Yuezhi': {
+    name_zh: '月氏',
+    capitals: ['敦煌', '巴克特拉（大月氏西遷後）'],
+    realm_id: 'central', sphere_id: 'turanian-turkic',
+    intro: '河西走廊遊牧民族。-176 為匈奴所敗西遷，分大月氏（中亞 → 後形成貴霜）／小月氏（青海）。',
+  },
+  'Zhoa': {
+    name_zh: '周',
+    dynasties: ['姬氏（-1100~-256）'],
+    capitals: ['鎬京', '洛邑（東遷後）'],
+    realm_id: 'eastern', sphere_id: 'han',
+    intro: 'historical-basemaps polygon 拼字錯誤（應為 Zhou）。涵蓋早期周部族／西周／東周／春秋戰國時期。',
+    successors: ['Qin'],
+  },
+  'Qin': {
+    name_zh: '秦',
+    dynasties: ['嬴氏（-905~-207）'],
+    capitals: ['雍', '咸陽（-350 遷）'],
+    realm_id: 'eastern', sphere_id: 'han',
+    intro: '西周封贏非子，世居西陲。商鞅變法 -356 富強。-221 秦始皇統一六國。-210 始皇崩，二世胡亥被趙高弒。-207 子嬰降劉邦。',
+    population_peak_wan: 3000,
+    area_peak_wan_km2: 360,
+    successors: ['Han Empire'],
+  },
+  'Wu (Three Kingdoms)': {
+    name_zh: '東吳',
+    realm_id: 'eastern', sphere_id: 'han',
+    intro: '三國時期吳國（222-280），孫權建立。詳見 Eastern Wu。',
   },
 }
 
