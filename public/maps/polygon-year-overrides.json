@@ -109,8 +109,9 @@
       "reason": "西漢建立 -202；-200 源 polygon 早兩年但無妨"
     },
     "Han": {
-      "max_year_to": 220,
-      "reason": "Han polygon 涵蓋兩漢 -1~299；漢 220 亡，限制到 220 不延伸到三國"
+      "min_year_from": 24,
+      "max_year_to": 219,
+      "reason": "源 Han polygon -1~299 太寬；西漢交給 fine Han Empire（-202~8）/ 東漢 25~219 由 fine Han 接管"
     },
     "Manchu Empire": {
       "min_year_from": 1644,
@@ -132,8 +133,9 @@
       "reason": "元朝 1271~1368"
     },
     "Ming Chinese Empire": {
-      "max_year_to": 1644,
-      "reason": "明 1368~1644；源 polygon 範圍可能延伸到 lon 141 太誇張，年份限制不能修地理但至少限年"
+      "min_year_from": 1368,
+      "max_year_to": 1643,
+      "reason": "明 1368~1644；1644 整年交給清；source polygon 範圍 lon 141 太誇張，靠 fine 明蓋掉"
     },
     "Ming Empire": {
       "min_year_from": 1368,
