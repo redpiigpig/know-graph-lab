@@ -184,6 +184,33 @@
       "min_year_from": 916,
       "max_year_to": 1125,
       "reason": "契丹遼朝 916~1125"
+    },
+    "Western Roman Empire": {
+      "min_year_from": 9999,
+      "reason": "西羅馬 400~599 範圍由 fine Roman Empire (-27~476) 接管"
+    },
+    "Eastern Roman Empire": {
+      "min_year_from": 9999,
+      "reason": "東羅馬 400~799 範圍由 fine Byzantine Empire (395~1453) 接管"
+    },
+    "Byzantine Empire": {
+      "max_year_to": 1452,
+      "reason": "拜占庭 395~1453；1453 君士坦丁堡陷"
+    },
+    "Roman Empire": {
+      "min_year_from": -27,
+      "max_year_to": 476,
+      "reason": "羅馬帝國 -27~476；源 polygon -1~299 範圍太窄，由 fine 補完"
+    },
+    "Ottoman Empire": {
+      "min_year_from": 1299,
+      "max_year_to": 1922,
+      "reason": "鄂圖曼 1299~1922；fine 補早期 1326~1452"
+    },
+    "Toba Wei": {
+      "min_year_from": 386,
+      "max_year_to": 534,
+      "reason": "北魏 386~534；源 polygon 500~599 太晚（534 已分裂為東魏西魏）"
     }
   }
 }

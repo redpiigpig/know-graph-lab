@@ -5654,6 +5654,1944 @@
         "coordinates": [
           [
             [
+              100.46,
+              38.94
+            ],
+            [
+              104.07,
+              30.67
+            ],
+            [
+              111.52,
+              36.1
+            ],
+            [
+              100.46,
+              38.94
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Northern Zhou",
+        "name_zh": "北周",
+        "year_from": 535,
+        "year_to": 576,
+        "city_count": 9,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.46,
+              38.94
+            ],
+            [
+              104.07,
+              30.67
+            ],
+            [
+              116.99,
+              35.6
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              100.46,
+              38.94
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Northern Zhou",
+        "name_zh": "北周",
+        "year_from": 577,
+        "year_to": 580,
+        "city_count": 15,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.45,
+              34.62
+            ],
+            [
+              113.62,
+              34.75
+            ],
+            [
+              116.99,
+              35.6
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              112.45,
+              34.62
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Northern Qi",
+        "name_zh": "北齊",
+        "year_from": 550,
+        "year_to": 576,
+        "city_count": 9,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.52,
+              36.1
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              113.3,
+              40.08
+            ],
+            [
+              111.52,
+              36.1
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Toba Wei",
+        "name_zh": "北魏",
+        "year_from": 386,
+        "year_to": 438,
+        "city_count": 4,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              94.66,
+              40.14
+            ],
+            [
+              112.45,
+              34.62
+            ],
+            [
+              113.62,
+              34.75
+            ],
+            [
+              116.99,
+              35.6
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              113.3,
+              40.08
+            ],
+            [
+              94.66,
+              40.14
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Toba Wei",
+        "name_zh": "北魏",
+        "year_from": 439,
+        "year_to": 492,
+        "city_count": 15,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              94.66,
+              40.14
+            ],
+            [
+              112.45,
+              34.62
+            ],
+            [
+              113.62,
+              34.75
+            ],
+            [
+              116.99,
+              35.6
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              113.3,
+              40.08
+            ],
+            [
+              94.66,
+              40.14
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Toba Wei",
+        "name_zh": "北魏",
+        "year_from": 493,
+        "year_to": 522,
+        "city_count": 14,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              100.46,
+              38.94
+            ],
+            [
+              102.64,
+              37.93
+            ],
+            [
+              112.45,
+              34.62
+            ],
+            [
+              113.62,
+              34.75
+            ],
+            [
+              116.99,
+              35.6
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              113.3,
+              40.08
+            ],
+            [
+              100.46,
+              38.94
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Toba Wei",
+        "name_zh": "北魏",
+        "year_from": 523,
+        "year_to": 533,
+        "city_count": 12,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -4.78,
+              37.89
+            ],
+            [
+              29.92,
+              31.2
+            ],
+            [
+              35.23,
+              31.78
+            ],
+            [
+              36.16,
+              36.2
+            ],
+            [
+              27.18,
+              39.13
+            ],
+            [
+              5.37,
+              43.3
+            ],
+            [
+              1.25,
+              41.12
+            ],
+            [
+              -4.78,
+              37.89
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Roman Empire",
+        "name_zh": "羅馬",
+        "year_from": -27,
+        "year_to": 13,
+        "city_count": 12,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -4.78,
+              37.89
+            ],
+            [
+              29.92,
+              31.2
+            ],
+            [
+              35.23,
+              31.78
+            ],
+            [
+              36.16,
+              36.2
+            ],
+            [
+              16.37,
+              48.21
+            ],
+            [
+              6.96,
+              50.94
+            ],
+            [
+              -4.78,
+              37.89
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Roman Empire",
+        "name_zh": "羅馬",
+        "year_from": 14,
+        "year_to": 116,
+        "city_count": 17,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -4.78,
+              37.89
+            ],
+            [
+              29.92,
+              31.2
+            ],
+            [
+              35.44,
+              30.32
+            ],
+            [
+              40.73,
+              34.75
+            ],
+            [
+              38.8,
+              37.16
+            ],
+            [
+              16.37,
+              48.21
+            ],
+            [
+              -1.08,
+              53.96
+            ],
+            [
+              -4.78,
+              37.89
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Roman Empire",
+        "name_zh": "羅馬",
+        "year_from": 117,
+        "year_to": 137,
+        "city_count": 28,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -4.78,
+              37.89
+            ],
+            [
+              29.92,
+              31.2
+            ],
+            [
+              35.44,
+              30.32
+            ],
+            [
+              38.27,
+              34.55
+            ],
+            [
+              38.8,
+              37.16
+            ],
+            [
+              16.37,
+              48.21
+            ],
+            [
+              -1.08,
+              53.96
+            ],
+            [
+              -4.78,
+              37.89
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Roman Empire",
+        "name_zh": "羅馬",
+        "year_from": 138,
+        "year_to": 234,
+        "city_count": 26,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -4.78,
+              37.89
+            ],
+            [
+              29.92,
+              31.2
+            ],
+            [
+              35.23,
+              31.78
+            ],
+            [
+              38.8,
+              37.16
+            ],
+            [
+              16.37,
+              48.21
+            ],
+            [
+              -1.08,
+              53.96
+            ],
+            [
+              -4.78,
+              37.89
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Roman Empire",
+        "name_zh": "羅馬",
+        "year_from": 235,
+        "year_to": 284,
+        "city_count": 24,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -4.78,
+              37.89
+            ],
+            [
+              29.92,
+              31.2
+            ],
+            [
+              35.23,
+              31.78
+            ],
+            [
+              38.8,
+              37.16
+            ],
+            [
+              16.37,
+              48.21
+            ],
+            [
+              6.96,
+              50.94
+            ],
+            [
+              -0.13,
+              51.51
+            ],
+            [
+              -4.78,
+              37.89
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Roman Empire",
+        "name_zh": "羅馬",
+        "year_from": 285,
+        "year_to": 329,
+        "city_count": 24,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -4.78,
+              37.89
+            ],
+            [
+              29.92,
+              31.2
+            ],
+            [
+              35.23,
+              31.78
+            ],
+            [
+              38.8,
+              37.16
+            ],
+            [
+              32.85,
+              39.93
+            ],
+            [
+              8.27,
+              50
+            ],
+            [
+              -0.13,
+              51.51
+            ],
+            [
+              -4.78,
+              37.89
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Roman Empire",
+        "name_zh": "羅馬",
+        "year_from": 330,
+        "year_to": 394,
+        "city_count": 21,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -4.78,
+              37.89
+            ],
+            [
+              29.92,
+              31.2
+            ],
+            [
+              35.23,
+              31.78
+            ],
+            [
+              36.16,
+              36.2
+            ],
+            [
+              28.98,
+              41.02
+            ],
+            [
+              8.27,
+              50
+            ],
+            [
+              -0.13,
+              51.51
+            ],
+            [
+              -4.78,
+              37.89
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Roman Empire",
+        "name_zh": "羅馬",
+        "year_from": 395,
+        "year_to": 409,
+        "city_count": 18,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1.25,
+              41.12
+            ],
+            [
+              10.32,
+              36.85
+            ],
+            [
+              29.92,
+              31.2
+            ],
+            [
+              35.23,
+              31.78
+            ],
+            [
+              36.16,
+              36.2
+            ],
+            [
+              28.98,
+              41.02
+            ],
+            [
+              13.37,
+              45.77
+            ],
+            [
+              4.83,
+              45.76
+            ],
+            [
+              1.25,
+              41.12
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Roman Empire",
+        "name_zh": "羅馬",
+        "year_from": 410,
+        "year_to": 454,
+        "city_count": 14,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.37,
+              43.3
+            ],
+            [
+              29.92,
+              31.2
+            ],
+            [
+              35.23,
+              31.78
+            ],
+            [
+              36.16,
+              36.2
+            ],
+            [
+              28.98,
+              41.02
+            ],
+            [
+              12.2,
+              44.42
+            ],
+            [
+              5.37,
+              43.3
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Roman Empire",
+        "name_zh": "羅馬",
+        "year_from": 455,
+        "year_to": 475,
+        "city_count": 10,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              22.94,
+              40.64
+            ],
+            [
+              23.73,
+              37.98
+            ],
+            [
+              29.92,
+              31.2
+            ],
+            [
+              35.23,
+              31.78
+            ],
+            [
+              38.8,
+              37.16
+            ],
+            [
+              32.85,
+              39.93
+            ],
+            [
+              28.98,
+              41.02
+            ],
+            [
+              26.56,
+              41.68
+            ],
+            [
+              22.94,
+              40.64
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Byzantine Empire",
+        "name_zh": "拜占庭",
+        "year_from": 395,
+        "year_to": 526,
+        "city_count": 11,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              22.94,
+              40.64
+            ],
+            [
+              23.73,
+              37.98
+            ],
+            [
+              29.92,
+              31.2
+            ],
+            [
+              35.23,
+              31.78
+            ],
+            [
+              38.8,
+              37.16
+            ],
+            [
+              32.85,
+              39.93
+            ],
+            [
+              28.98,
+              41.02
+            ],
+            [
+              26.56,
+              41.68
+            ],
+            [
+              22.94,
+              40.64
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Byzantine Empire",
+        "name_zh": "拜占庭",
+        "year_from": 527,
+        "year_to": 564,
+        "city_count": 12,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -4.78,
+              37.89
+            ],
+            [
+              29.92,
+              31.2
+            ],
+            [
+              35.23,
+              31.78
+            ],
+            [
+              38.8,
+              37.16
+            ],
+            [
+              32.85,
+              39.93
+            ],
+            [
+              28.98,
+              41.02
+            ],
+            [
+              26.56,
+              41.68
+            ],
+            [
+              12.2,
+              44.42
+            ],
+            [
+              -4.78,
+              37.89
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Byzantine Empire",
+        "name_zh": "拜占庭",
+        "year_from": 565,
+        "year_to": 629,
+        "city_count": 20,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.32,
+              36.85
+            ],
+            [
+              29.92,
+              31.2
+            ],
+            [
+              35.23,
+              31.78
+            ],
+            [
+              38.8,
+              37.16
+            ],
+            [
+              32.85,
+              39.93
+            ],
+            [
+              28.98,
+              41.02
+            ],
+            [
+              26.56,
+              41.68
+            ],
+            [
+              12.2,
+              44.42
+            ],
+            [
+              10.32,
+              36.85
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Byzantine Empire",
+        "name_zh": "拜占庭",
+        "year_from": 630,
+        "year_to": 699,
+        "city_count": 18,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              12.2,
+              44.42
+            ],
+            [
+              14.27,
+              40.85
+            ],
+            [
+              25.13,
+              35.34
+            ],
+            [
+              33.36,
+              35.17
+            ],
+            [
+              39.72,
+              41
+            ],
+            [
+              12.2,
+              44.42
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Byzantine Empire",
+        "name_zh": "拜占庭",
+        "year_from": 700,
+        "year_to": 842,
+        "city_count": 14,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              14.27,
+              40.85
+            ],
+            [
+              23.73,
+              37.98
+            ],
+            [
+              35.49,
+              38.72
+            ],
+            [
+              39.72,
+              41
+            ],
+            [
+              26.56,
+              41.68
+            ],
+            [
+              16.87,
+              41.13
+            ],
+            [
+              14.27,
+              40.85
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Byzantine Empire",
+        "name_zh": "拜占庭",
+        "year_from": 843,
+        "year_to": 1024,
+        "city_count": 11,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              14.27,
+              40.85
+            ],
+            [
+              25.13,
+              35.34
+            ],
+            [
+              33.36,
+              35.17
+            ],
+            [
+              38.8,
+              37.16
+            ],
+            [
+              39.72,
+              41
+            ],
+            [
+              23.32,
+              42.7
+            ],
+            [
+              14.27,
+              40.85
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Byzantine Empire",
+        "name_zh": "拜占庭",
+        "year_from": 1025,
+        "year_to": 1070,
+        "city_count": 16,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              14.27,
+              40.85
+            ],
+            [
+              25.13,
+              35.34
+            ],
+            [
+              33.36,
+              35.17
+            ],
+            [
+              39.72,
+              41
+            ],
+            [
+              23.32,
+              42.7
+            ],
+            [
+              14.27,
+              40.85
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Byzantine Empire",
+        "name_zh": "拜占庭",
+        "year_from": 1071,
+        "year_to": 1179,
+        "city_count": 10,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              22.94,
+              40.64
+            ],
+            [
+              23.73,
+              37.98
+            ],
+            [
+              25.13,
+              35.34
+            ],
+            [
+              33.36,
+              35.17
+            ],
+            [
+              39.72,
+              41
+            ],
+            [
+              26.56,
+              41.68
+            ],
+            [
+              22.94,
+              40.64
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Byzantine Empire",
+        "name_zh": "拜占庭",
+        "year_from": 1180,
+        "year_to": 1203,
+        "city_count": 9,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              29.22,
+              39.93
+            ],
+            [
+              40.22,
+              39.93
+            ],
+            [
+              40.22,
+              41.5
+            ],
+            [
+              29.22,
+              41.5
+            ],
+            [
+              29.22,
+              39.93
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Byzantine Empire",
+        "name_zh": "拜占庭",
+        "year_from": 1204,
+        "year_to": 1260,
+        "city_count": 2,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              22.94,
+              40.64
+            ],
+            [
+              29.72,
+              40.43
+            ],
+            [
+              39.72,
+              41
+            ],
+            [
+              26.56,
+              41.68
+            ],
+            [
+              22.94,
+              40.64
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Byzantine Empire",
+        "name_zh": "拜占庭",
+        "year_from": 1261,
+        "year_to": 1349,
+        "city_count": 5,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              22.94,
+              40.64
+            ],
+            [
+              28.98,
+              41.02
+            ],
+            [
+              26.56,
+              41.68
+            ],
+            [
+              22.94,
+              40.64
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Byzantine Empire",
+        "name_zh": "拜占庭",
+        "year_from": 1350,
+        "year_to": 1429,
+        "city_count": 3,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              28.48,
+              40.52
+            ],
+            [
+              29.48,
+              40.52
+            ],
+            [
+              29.48,
+              41.52
+            ],
+            [
+              28.48,
+              41.52
+            ],
+            [
+              28.48,
+              40.52
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Byzantine Empire",
+        "name_zh": "拜占庭",
+        "year_from": 1430,
+        "year_to": 1452,
+        "city_count": 1,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              28.56,
+              39.68
+            ],
+            [
+              30.22,
+              39.68
+            ],
+            [
+              30.22,
+              40.93
+            ],
+            [
+              28.56,
+              40.93
+            ],
+            [
+              28.56,
+              39.68
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Ottoman Empire",
+        "name_zh": "鄂圖曼",
+        "year_from": 1326,
+        "year_to": 1360,
+        "city_count": 2,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              26.56,
+              41.68
+            ],
+            [
+              29.06,
+              40.18
+            ],
+            [
+              29.72,
+              40.43
+            ],
+            [
+              26.56,
+              41.68
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Ottoman Empire",
+        "name_zh": "鄂圖曼",
+        "year_from": 1361,
+        "year_to": 1388,
+        "city_count": 4,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              22.94,
+              40.64
+            ],
+            [
+              29.06,
+              40.18
+            ],
+            [
+              26.56,
+              41.68
+            ],
+            [
+              23.32,
+              42.7
+            ],
+            [
+              22.94,
+              40.64
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Ottoman Empire",
+        "name_zh": "鄂圖曼",
+        "year_from": 1389,
+        "year_to": 1452,
+        "city_count": 5,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              22.94,
+              40.64
+            ],
+            [
+              23.73,
+              37.98
+            ],
+            [
+              32.85,
+              39.93
+            ],
+            [
+              23.32,
+              42.7
+            ],
+            [
+              22.94,
+              40.64
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Ottoman Empire",
+        "name_zh": "鄂圖曼",
+        "year_from": 1453,
+        "year_to": 1516,
+        "city_count": 8,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              22.94,
+              40.64
+            ],
+            [
+              23.73,
+              37.98
+            ],
+            [
+              29.92,
+              31.2
+            ],
+            [
+              39.2,
+              21.49
+            ],
+            [
+              39.83,
+              21.43
+            ],
+            [
+              41.27,
+              39.91
+            ],
+            [
+              39.72,
+              41
+            ],
+            [
+              23.32,
+              42.7
+            ],
+            [
+              22.94,
+              40.64
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Ottoman Empire",
+        "name_zh": "鄂圖曼",
+        "year_from": 1517,
+        "year_to": 1565,
+        "city_count": 18,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.06,
+              36.75
+            ],
+            [
+              39.2,
+              21.49
+            ],
+            [
+              39.83,
+              21.43
+            ],
+            [
+              47.78,
+              30.5
+            ],
+            [
+              41.27,
+              39.91
+            ],
+            [
+              39.72,
+              41
+            ],
+            [
+              19.04,
+              47.5
+            ],
+            [
+              3.06,
+              36.75
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Ottoman Empire",
+        "name_zh": "鄂圖曼",
+        "year_from": 1566,
+        "year_to": 1682,
+        "city_count": 28,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.06,
+              36.75
+            ],
+            [
+              39.83,
+              21.43
+            ],
+            [
+              47.78,
+              30.5
+            ],
+            [
+              41.27,
+              39.91
+            ],
+            [
+              19.04,
+              47.5
+            ],
+            [
+              3.06,
+              36.75
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Ottoman Empire",
+        "name_zh": "鄂圖曼",
+        "year_from": 1683,
+        "year_to": 1698,
+        "city_count": 24,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3.06,
+              36.75
+            ],
+            [
+              39.83,
+              21.43
+            ],
+            [
+              47.78,
+              30.5
+            ],
+            [
+              41.27,
+              39.91
+            ],
+            [
+              20.45,
+              44.79
+            ],
+            [
+              3.06,
+              36.75
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Ottoman Empire",
+        "name_zh": "鄂圖曼",
+        "year_from": 1699,
+        "year_to": 1797,
+        "city_count": 23,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.18,
+              36.81
+            ],
+            [
+              13.18,
+              32.89
+            ],
+            [
+              39.83,
+              21.43
+            ],
+            [
+              47.78,
+              30.5
+            ],
+            [
+              41.27,
+              39.91
+            ],
+            [
+              20.45,
+              44.79
+            ],
+            [
+              10.18,
+              36.81
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Ottoman Empire",
+        "name_zh": "鄂圖曼",
+        "year_from": 1798,
+        "year_to": 1829,
+        "city_count": 21,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.18,
+              36.81
+            ],
+            [
+              13.18,
+              32.89
+            ],
+            [
+              39.83,
+              21.43
+            ],
+            [
+              47.78,
+              30.5
+            ],
+            [
+              41.27,
+              39.91
+            ],
+            [
+              23.32,
+              42.7
+            ],
+            [
+              10.18,
+              36.81
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Ottoman Empire",
+        "name_zh": "鄂圖曼",
+        "year_from": 1830,
+        "year_to": 1877,
+        "city_count": 21,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              13.18,
+              32.89
+            ],
+            [
+              39.83,
+              21.43
+            ],
+            [
+              47.78,
+              30.5
+            ],
+            [
+              41.27,
+              39.91
+            ],
+            [
+              26.56,
+              41.68
+            ],
+            [
+              22.94,
+              40.64
+            ],
+            [
+              13.18,
+              32.89
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Ottoman Empire",
+        "name_zh": "鄂圖曼",
+        "year_from": 1878,
+        "year_to": 1911,
+        "city_count": 16,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              26.56,
+              41.68
+            ],
+            [
+              39.83,
+              21.43
+            ],
+            [
+              47.78,
+              30.5
+            ],
+            [
+              41.27,
+              39.91
+            ],
+            [
+              26.56,
+              41.68
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Ottoman Empire",
+        "name_zh": "鄂圖曼",
+        "year_from": 1912,
+        "year_to": 1917,
+        "city_count": 13,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              26.56,
+              41.68
+            ],
+            [
+              29.06,
+              40.18
+            ],
+            [
+              32.85,
+              39.93
+            ],
+            [
+              41.27,
+              39.91
+            ],
+            [
+              39.72,
+              41
+            ],
+            [
+              26.56,
+              41.68
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Ottoman Empire",
+        "name_zh": "鄂圖曼",
+        "year_from": 1918,
+        "year_to": 1921,
+        "city_count": 6,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
               104.07,
               30.67
             ],

@@ -258,6 +258,52 @@ const CITIES = {
   'HKisland':       [114.17, 22.30],   // 香港（1842 割英）
   'Khotan_Q':       [79.92, 37.11],    // 和闐
   'Yarkand_Q':      [77.24, 38.42],    // 葉爾羌
+  // 北朝補
+  'Yecheng2':       [114.55, 36.32],   // 鄴城（東魏／北齊都）
+  'Xianyang2':      [108.71, 34.33],   // 長安（西魏／北周都）
+  // 羅馬／拜占庭擴張
+  'Cordoba2':       [-4.78, 37.89],    // Hispalis 羅馬西班牙
+  'Mainz':          [8.27, 50.00],     // Mogontiacum 萊茵防線
+  'Trier':          [6.64, 49.75],     // Augusta Treverorum
+  'Cologne':        [6.96, 50.94],     // Colonia
+  'Vienna2':        [16.37, 48.21],    // Vindobona
+  'Aquileia':       [13.37, 45.77],    // 亞奎雷亞
+  'Sirmium':        [19.61, 44.97],    // 賽爾彌烏姆（多瑙河）
+  'Petra':          [35.44, 30.32],    // 佩特拉（阿拉伯）
+  'Palmyra':        [38.27, 34.55],    // 帕米拉
+  'Dura':           [40.73, 34.75],    // 杜拉歐羅普斯
+  'Pergamon':       [27.18, 39.13],    // 帕加馬
+  'Cyrene':         [21.86, 32.82],    // 昔蘭尼
+  'Hippo':          [7.75, 36.90],     // 希波（聖奧古斯丁主教座）
+  'Lugdunum':       [4.83, 45.76],     // 里昂（羅馬高盧首府）
+  'Londinium':      [-0.13, 51.51],    // 倫敦
+  'Eboracum':       [-1.08, 53.96],    // 約克
+  'Tarraco':        [1.25, 41.12],     // 塔拉戈納（西班牙）
+  'Caesaraugusta':  [-0.88, 41.65],    // 撒拉戈薩
+  // 拜占庭補
+  'Adrianople':     [26.56, 41.68],    // 阿德里亞諾堡
+  'Sardis':         [28.04, 38.49],    // 撒第斯
+  'Bari':           [16.87, 41.13],    // 巴里（拜占庭意南據點）
+  'Naples2':        [14.27, 40.85],    // 那不勒斯
+  'Iconium':        [32.49, 37.87],    // 伊科尼姆（科尼亞）
+  'Caesarea_Cap':   [35.49, 38.72],    // 凱撒利亞（卡帕多西亞）
+  'Ankyra':         [32.85, 39.93],    // 安卡拉
+  // 鄂圖曼擴張
+  'Bursa':          [29.06, 40.18],    // 布爾薩（鄂圖曼前期都）
+  'Edirne':         [26.56, 41.68],    // 埃迪爾內＝阿德里亞諾堡
+  'Sofia':          [23.32, 42.70],    // 索菲亞
+  'Belgrade':       [20.45, 44.79],    // 貝爾格勒
+  'Buda':           [19.04, 47.50],    // 布達（匈牙利）
+  'Algiers':        [3.06, 36.75],     // 阿爾及爾
+  'Tripoli2':       [13.18, 32.89],    // 的黎波里
+  'Basra2':         [47.78, 30.50],    // 巴斯拉
+  'Mosul2':         [43.13, 36.34],    // 摩蘇爾
+  'Jeddah':         [39.20, 21.49],    // 吉達
+  'Crete_Hera':     [25.13, 35.34],    // 克里特島（伊拉克利翁）
+  'Cyprus_Nic':     [33.36, 35.17],    // 賽普勒斯（尼科西亞）
+  'Aleppo2':        [37.16, 36.20],    // 阿勒坡
+  'Erzurum':        [41.27, 39.91],    // 埃爾祖魯姆（東部）
+  'Trabzon':        [39.72, 41.00],    // 特拉布宗
   // 羅馬／拜占庭範疇
   'Rome':           [12.50, 41.90],
   'Ravenna':        [12.20, 44.42],
@@ -853,6 +899,139 @@ const EMPIRES = [
       [1351]: ['Dadu', 'Shangdu', 'Karakorum2', 'Pingcheng', 'Luoyang2', 'Zhengzhou', 'Xianyang', 'Yan', 'Linzi', 'Liaodong', 'Pyongyang', 'Hangzhou', 'Guangzhou', 'Chengdu2', 'Yunnan', 'Lhasa', 'Korea_Yuan'],
       // 1360 朱元璋崛起、南方各地起義
       [1360]: ['Dadu', 'Shangdu', 'Karakorum2', 'Pingcheng', 'Luoyang2', 'Zhengzhou', 'Yan', 'Linzi', 'Liaodong'],
+    },
+  },
+  {
+    // 北朝（北魏分裂後）— 西魏 535-557 / 北周 557-581
+    polygon_name: 'Northern Zhou',
+    name_zh: '北周',
+    end_year: 581,
+    years: {
+      // 535 拓跋寶炬建西魏（前身），557 宇文覺廢西魏建北周
+      [535]: ['Xianyang2', 'Daxing', 'Linfen', 'Pingyang', 'Hancheng', 'Wuwei2', 'Zhangye2', 'Liangzhou', 'Chengdu2'],
+      // 577 北周武帝滅北齊
+      [577]: ['Xianyang2', 'Daxing', 'Linfen', 'Pingyang', 'Hancheng', 'Wuwei2', 'Zhangye2', 'Liangzhou', 'Chengdu2', 'Yecheng2', 'Anyang', 'Zhengzhou', 'Linzi', 'Qufu', 'Handan'],
+    },
+  },
+  {
+    polygon_name: 'Northern Qi',
+    name_zh: '北齊',
+    end_year: 577,
+    years: {
+      // 550 高洋廢東魏建北齊（黃河下游+山東）
+      [550]: ['Yecheng2', 'Anyang', 'Zhengzhou', 'Luoyang2', 'Linzi', 'Qufu', 'Handan', 'Liaodong', 'Yan'],
+    },
+  },
+  {
+    // 北魏 — 用 polygon_name='Toba Wei' 補充並抑制源 polygon
+    polygon_name: 'Toba Wei',
+    name_zh: '北魏',
+    end_year: 534,
+    years: {
+      // 386 拓跋珪建魏（鮮卑）
+      [386]: ['Pingcheng', 'Datong', 'Yan', 'Linfen'],
+      // 439 太武帝滅北涼統一華北
+      [439]: ['Pingcheng', 'Datong', 'Yan', 'Linfen', 'Anyang', 'Zhengzhou', 'Luoyang2', 'Linzi', 'Qufu', 'Hancheng', 'Pingyang', 'Wuwei2', 'Zhangye2', 'Liangzhou', 'Dunhuang2'],
+      // 493 孝文帝遷洛陽（漢化）
+      [493]: ['Luoyang2', 'Pingcheng', 'Datong', 'Yan', 'Anyang', 'Zhengzhou', 'Linzi', 'Qufu', 'Hancheng', 'Pingyang', 'Wuwei2', 'Zhangye2', 'Liangzhou', 'Dunhuang2'],
+      // 523 六鎮之亂後分裂前夕
+      [523]: ['Luoyang2', 'Pingcheng', 'Datong', 'Yan', 'Anyang', 'Zhengzhou', 'Linzi', 'Qufu', 'Hancheng', 'Pingyang', 'Wuwei2', 'Zhangye2'],
+    },
+  },
+  {
+    // 羅馬帝國 — 用 polygon_name='Roman Empire' 抑制源（範圍可能不準）
+    polygon_name: 'Roman Empire',
+    name_zh: '羅馬',
+    end_year: 476,
+    years: {
+      // -27 屋大維建元首制
+      [-27]: ['Rome', 'Naples2', 'Carthage', 'Massalia', 'Tarraco', 'Cordoba2', 'Athens', 'Alexandria', 'Antioch', 'Jerusalem', 'Cyrene', 'Pergamon'],
+      // 14 奧古斯都駕崩
+      [14]: ['Rome', 'Naples2', 'Carthage', 'Massalia', 'Lugdunum', 'Tarraco', 'Cordoba2', 'Athens', 'Alexandria', 'Antioch', 'Jerusalem', 'Cyrene', 'Pergamon', 'Mainz', 'Cologne', 'Aquileia', 'Vienna2'],
+      // 117 圖拉真極盛（含達契亞、亞美尼亞、美索不達米亞）
+      [117]: ['Rome', 'Naples2', 'Carthage', 'Massalia', 'Lugdunum', 'Tarraco', 'Cordoba2', 'Athens', 'Alexandria', 'Antioch', 'Jerusalem', 'Cyrene', 'Pergamon', 'Mainz', 'Cologne', 'Trier', 'Aquileia', 'Vienna2', 'Sirmium', 'Londinium', 'Eboracum', 'Edessa', 'Palmyra', 'Petra', 'Dura', 'Ankyra', 'Sardis', 'Caesarea_Cap'],
+      // 138 哈德良後（已棄美索不達米亞）
+      [138]: ['Rome', 'Naples2', 'Carthage', 'Massalia', 'Lugdunum', 'Tarraco', 'Cordoba2', 'Athens', 'Alexandria', 'Antioch', 'Jerusalem', 'Cyrene', 'Pergamon', 'Mainz', 'Cologne', 'Trier', 'Aquileia', 'Vienna2', 'Sirmium', 'Londinium', 'Eboracum', 'Edessa', 'Palmyra', 'Petra', 'Ankyra', 'Sardis'],
+      // 235 三世紀危機開始（軍人皇帝）
+      [235]: ['Rome', 'Naples2', 'Carthage', 'Massalia', 'Lugdunum', 'Tarraco', 'Cordoba2', 'Athens', 'Alexandria', 'Antioch', 'Jerusalem', 'Cyrene', 'Pergamon', 'Mainz', 'Cologne', 'Trier', 'Aquileia', 'Vienna2', 'Sirmium', 'Londinium', 'Eboracum', 'Edessa', 'Ankyra', 'Sardis'],
+      // 285 戴克里先四帝共治、東西分治起源
+      [285]: ['Rome', 'Naples2', 'Carthage', 'Massalia', 'Lugdunum', 'Tarraco', 'Cordoba2', 'Athens', 'Alexandria', 'Antioch', 'Jerusalem', 'Cyrene', 'Pergamon', 'Mainz', 'Cologne', 'Trier', 'Aquileia', 'Vienna2', 'Sirmium', 'Londinium', 'Constantinople', 'Edessa', 'Ankyra', 'Sardis'],
+      // 330 君士坦丁定都君士坦丁堡
+      [330]: ['Rome', 'Naples2', 'Carthage', 'Massalia', 'Lugdunum', 'Tarraco', 'Cordoba2', 'Athens', 'Alexandria', 'Antioch', 'Jerusalem', 'Cyrene', 'Mainz', 'Trier', 'Aquileia', 'Sirmium', 'Londinium', 'Constantinople', 'Thessalonica', 'Edessa', 'Ankyra'],
+      // 395 狄奧多西死、帝國正式分東西
+      [395]: ['Rome', 'Naples2', 'Carthage', 'Massalia', 'Lugdunum', 'Tarraco', 'Cordoba2', 'Athens', 'Alexandria', 'Antioch', 'Jerusalem', 'Mainz', 'Trier', 'Aquileia', 'Sirmium', 'Londinium', 'Constantinople', 'Thessalonica'],
+      // 410 西哥德人攻陷羅馬
+      [410]: ['Rome', 'Naples2', 'Carthage', 'Massalia', 'Lugdunum', 'Tarraco', 'Athens', 'Alexandria', 'Antioch', 'Jerusalem', 'Aquileia', 'Constantinople', 'Thessalonica', 'Ravenna'],
+      // 455 汪達爾人洗劫羅馬
+      [455]: ['Rome', 'Ravenna', 'Naples2', 'Massalia', 'Athens', 'Alexandria', 'Antioch', 'Jerusalem', 'Constantinople', 'Thessalonica'],
+    },
+  },
+  {
+    // 拜占庭（東羅馬）— 用 polygon_name='Byzantine Empire' 抑制源
+    polygon_name: 'Byzantine Empire',
+    name_zh: '拜占庭',
+    end_year: 1453,
+    years: {
+      // 395 帝國分裂後東部
+      [395]: ['Constantinople', 'Thessalonica', 'Athens', 'Alexandria', 'Antioch', 'Jerusalem', 'Edessa', 'Ankyra', 'Sardis', 'Adrianople', 'Pergamon'],
+      // 527 查士丁尼即位前
+      [527]: ['Constantinople', 'Thessalonica', 'Athens', 'Alexandria', 'Antioch', 'Jerusalem', 'Edessa', 'Ankyra', 'Sardis', 'Adrianople', 'Pergamon', 'Cyprus_Nic'],
+      // 565 查士丁尼末（收復義大利、北非、西班牙東南）
+      [565]: ['Constantinople', 'Thessalonica', 'Athens', 'Alexandria', 'Antioch', 'Jerusalem', 'Edessa', 'Ankyra', 'Sardis', 'Adrianople', 'Pergamon', 'Cyprus_Nic', 'Rome', 'Ravenna', 'Naples2', 'Bari', 'Carthage', 'Cordoba2', 'Crete_Hera', 'Cyrene'],
+      // 630 希拉克略勝薩珊
+      [630]: ['Constantinople', 'Thessalonica', 'Athens', 'Alexandria', 'Antioch', 'Jerusalem', 'Edessa', 'Ankyra', 'Sardis', 'Adrianople', 'Pergamon', 'Cyprus_Nic', 'Rome', 'Ravenna', 'Naples2', 'Bari', 'Carthage', 'Crete_Hera'],
+      // 700 阿拉伯失敘利亞埃及北非
+      [700]: ['Constantinople', 'Thessalonica', 'Athens', 'Adrianople', 'Pergamon', 'Sardis', 'Ankyra', 'Caesarea_Cap', 'Trebizond', 'Cyprus_Nic', 'Naples2', 'Bari', 'Ravenna', 'Crete_Hera'],
+      // 843 聖像破壞結束、復起時代
+      [843]: ['Constantinople', 'Thessalonica', 'Athens', 'Adrianople', 'Pergamon', 'Sardis', 'Ankyra', 'Caesarea_Cap', 'Trebizond', 'Naples2', 'Bari'],
+      // 1025 巴西爾二世末（疆域復興）
+      [1025]: ['Constantinople', 'Thessalonica', 'Athens', 'Adrianople', 'Pergamon', 'Sardis', 'Ankyra', 'Caesarea_Cap', 'Trebizond', 'Naples2', 'Bari', 'Sofia', 'Antioch', 'Edessa', 'Cyprus_Nic', 'Crete_Hera'],
+      // 1071 曼齊刻爾特戰役、失安納托利亞
+      [1071]: ['Constantinople', 'Thessalonica', 'Athens', 'Adrianople', 'Trebizond', 'Naples2', 'Bari', 'Cyprus_Nic', 'Crete_Hera', 'Sofia'],
+      // 1180 科穆寧復興末
+      [1180]: ['Constantinople', 'Thessalonica', 'Athens', 'Adrianople', 'Trebizond', 'Cyprus_Nic', 'Crete_Hera', 'Pergamon', 'Sardis'],
+      // 1204 第四次十字軍劫
+      [1204]: ['Nicaea', 'Trebizond'],
+      // 1261 巴里奧略復辟
+      [1261]: ['Constantinople', 'Thessalonica', 'Adrianople', 'Nicaea', 'Trebizond'],
+      // 1350 末期偏安
+      [1350]: ['Constantinople', 'Thessalonica', 'Adrianople'],
+      // 1430 帖薩羅尼基陷
+      [1430]: ['Constantinople'],
+    },
+  },
+  {
+    // 鄂圖曼帝國 — 用 polygon_name='Ottoman Empire' 抑制源
+    polygon_name: 'Ottoman Empire',
+    name_zh: '鄂圖曼',
+    end_year: 1922,
+    years: {
+      // 1326 奧斯曼一世末、奧爾汗取布爾薩
+      [1326]: ['Bursa', 'Nicaea'],
+      // 1361 取阿德里亞諾堡（埃迪爾內）
+      [1361]: ['Bursa', 'Nicaea', 'Edirne', 'Adrianople'],
+      // 1389 科索沃戰役
+      [1389]: ['Bursa', 'Edirne', 'Adrianople', 'Sofia', 'Thessalonica'],
+      // 1453 攻陷君士坦丁堡
+      [1453]: ['Constantinople', 'Bursa', 'Edirne', 'Sofia', 'Thessalonica', 'Athens', 'Adrianople', 'Ankyra'],
+      // 1517 塞利姆一世征馬木留克（取敘利亞、埃及、聖地）
+      [1517]: ['Constantinople', 'Bursa', 'Edirne', 'Sofia', 'Thessalonica', 'Athens', 'Adrianople', 'Ankyra', 'Damascus', 'Aleppo2', 'Jerusalem', 'Cairo', 'Alexandria', 'Mecca', 'Medina', 'Jeddah', 'Erzurum', 'Trabzon'],
+      // 1566 蘇萊曼末（極盛）
+      [1566]: ['Constantinople', 'Bursa', 'Edirne', 'Sofia', 'Belgrade', 'Buda', 'Thessalonica', 'Athens', 'Adrianople', 'Ankyra', 'Damascus', 'Aleppo2', 'Jerusalem', 'Cairo', 'Alexandria', 'Mecca', 'Medina', 'Jeddah', 'Erzurum', 'Trabzon', 'Mosul2', 'Baghdad', 'Basra2', 'Algiers', 'Tunis', 'Tripoli2', 'Crete_Hera', 'Cyprus_Nic'],
+      // 1683 維也納之圍敗
+      [1683]: ['Constantinople', 'Bursa', 'Edirne', 'Sofia', 'Belgrade', 'Buda', 'Thessalonica', 'Athens', 'Ankyra', 'Damascus', 'Aleppo2', 'Jerusalem', 'Cairo', 'Mecca', 'Medina', 'Erzurum', 'Mosul2', 'Baghdad', 'Basra2', 'Algiers', 'Tunis', 'Tripoli2', 'Crete_Hera', 'Cyprus_Nic'],
+      // 1699 卡洛維茨和約（失匈牙利）
+      [1699]: ['Constantinople', 'Bursa', 'Edirne', 'Sofia', 'Belgrade', 'Thessalonica', 'Athens', 'Ankyra', 'Damascus', 'Aleppo2', 'Jerusalem', 'Cairo', 'Mecca', 'Medina', 'Erzurum', 'Mosul2', 'Baghdad', 'Basra2', 'Algiers', 'Tunis', 'Tripoli2', 'Crete_Hera', 'Cyprus_Nic'],
+      // 1798 拿破崙入埃及
+      [1798]: ['Constantinople', 'Bursa', 'Edirne', 'Sofia', 'Belgrade', 'Thessalonica', 'Athens', 'Ankyra', 'Damascus', 'Aleppo2', 'Jerusalem', 'Mecca', 'Medina', 'Erzurum', 'Mosul2', 'Baghdad', 'Basra2', 'Tunis', 'Tripoli2', 'Crete_Hera', 'Cyprus_Nic'],
+      // 1830 失阿爾及爾（法）/ 希臘獨立
+      [1830]: ['Constantinople', 'Bursa', 'Edirne', 'Sofia', 'Thessalonica', 'Adrianople', 'Ankyra', 'Damascus', 'Aleppo2', 'Jerusalem', 'Cairo', 'Mecca', 'Medina', 'Erzurum', 'Mosul2', 'Baghdad', 'Basra2', 'Tunis', 'Tripoli2', 'Crete_Hera', 'Cyprus_Nic'],
+      // 1878 柏林條約（失巴爾幹大半）
+      [1878]: ['Constantinople', 'Bursa', 'Edirne', 'Thessalonica', 'Adrianople', 'Ankyra', 'Damascus', 'Aleppo2', 'Jerusalem', 'Mecca', 'Medina', 'Erzurum', 'Mosul2', 'Baghdad', 'Basra2', 'Tripoli2'],
+      // 1912 巴爾幹戰爭失歐洲領土
+      [1912]: ['Constantinople', 'Bursa', 'Edirne', 'Ankyra', 'Damascus', 'Aleppo2', 'Jerusalem', 'Mecca', 'Medina', 'Erzurum', 'Mosul2', 'Baghdad', 'Basra2'],
+      // 1918 一戰戰敗
+      [1918]: ['Constantinople', 'Bursa', 'Edirne', 'Ankyra', 'Erzurum', 'Trabzon'],
     },
   },
   {
