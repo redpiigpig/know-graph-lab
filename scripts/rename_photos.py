@@ -150,10 +150,15 @@ def file_datetime(path: Path):
 
 # ----- 命名 helpers -----
 
-def folder_prefix(folder_name: str, year: str) -> str:
-    if folder_name == f"{year}截圖":
+_SCREENSHOT_RE = re.compile(r"^\d{4}截圖$")
+_DOWNLOAD_RE = re.compile(r"^\d{4}下載$")
+
+
+def folder_prefix(folder_name: str) -> str:
+    """單看資料夾名字決定 prefix。{YEAR}截圖 → S, {YEAR}下載 → D, 其他無前綴。"""
+    if _SCREENSHOT_RE.match(folder_name):
         return "S"
-    if folder_name == f"{year}下載":
+    if _DOWNLOAD_RE.match(folder_name):
         return "D"
     return ""
 
@@ -204,33 +209,51 @@ def collect_folder_plan(folder: Path, prefix: str) -> list[dict]:
 
 
 def collect_plan():
+    """遞迴 walk 整個 PHOTOS_ROOT，對每個直接含照片檔的資料夾排 rename plan。
+
+    支援不同 library layout：
+    - chenwei: {YEAR}相片/{YEAR}.MM/ + {YEAR}截圖/ + {YEAR}下載/ + 事件夾
+    - training: 事件夾平鋪在根（無 YEAR 層）
+    - hongshi: 民國年/事件/photos（多層巢狀）
+
+    Prefix 由資料夾名單獨決定（regex match {YEAR}截圖 / {YEAR}下載），
+    其餘無前綴。
+    """
     all_plan = []
     folders_scanned = 0
     leftover_tmp = []
-    for year_dir in sorted(PHOTOS_ROOT.iterdir()):
-        if not year_dir.is_dir():
-            continue
-        if not year_dir.name.endswith("相片"):
-            continue
-        year = year_dir.name.replace("相片", "")
 
-        for sub in sorted(year_dir.iterdir()):
-            if not sub.is_dir():
-                continue
-            # 偵測上次崩潰的中繼檔
-            for f in sub.iterdir():
-                if f.is_file() and f.name.startswith(TMP_PREFIX):
-                    leftover_tmp.append(str(f).replace("\\", "/"))
-            prefix = folder_prefix(sub.name, year)
-            folder_plan = collect_folder_plan(sub, prefix)
+    def walk(d: Path):
+        nonlocal folders_scanned
+        try:
+            entries = list(d.iterdir())
+        except (OSError, PermissionError):
+            return
+        # 中繼檔偵測
+        for e in entries:
+            if e.is_file() and e.name.startswith(TMP_PREFIX):
+                leftover_tmp.append(str(e).replace("\\", "/"))
+        # 直接含照片 → 排 plan
+        has_photo = any(
+            e.is_file() and e.suffix.lower() in IMG_EXTS
+            and not e.name.startswith(TMP_PREFIX)
+            for e in entries
+        )
+        if has_photo:
+            prefix = folder_prefix(d.name)
+            folder_plan = collect_folder_plan(d, prefix)
             for item in folder_plan:
-                item["folder"] = str(sub).replace("\\", "/")
-                item["folder_name"] = sub.name
-                item["year"] = year
+                item["folder"] = str(d).replace("\\", "/")
+                item["folder_name"] = d.name
                 item["prefix"] = prefix
             all_plan.extend(folder_plan)
             folders_scanned += 1
+        # 遞迴子資料夾
+        for e in sorted(entries, key=lambda x: x.name):
+            if e.is_dir() and not e.name.startswith("."):
+                walk(e)
 
+    walk(PHOTOS_ROOT)
     return all_plan, folders_scanned, leftover_tmp
 
 

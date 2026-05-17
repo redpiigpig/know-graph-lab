@@ -122,6 +122,8 @@ python scripts/rename_photos.py auto LIB...     # 對每個 LIB 連跑 plan + ex
 
 `LIB ∈ {chenwei, training, hongshi}`，省略時預設 `chenwei`。Library 配置在腳本內 `LIBRARIES` map（root = `PHOTOS_PARENT / 子夾名`）。
 
+`collect_plan()` 用**遞迴 walk** 整個 root，對任何「直接含照片檔」的資料夾排 rename plan（不論深度）。支援三種 layout：chenwei 兩層（YEAR相片/MONTH or event）、training 一層平鋪事件、hongshi 多層巢狀（民國年/事件/photos）。Prefix 由資料夾名單獨判定：`\d{4}截圖$` → S、`\d{4}下載$` → D、其他無前綴。
+
 **兩階段 rename**：先 `src → __rename_tmp_XXXXX.ext`，再 `tmp → 目標名`。避免目標檔名跟另一個檔的當前檔名衝突。崩潰時殘留的 `__rename_tmp_*` 會在下一次 plan 偵測並阻擋 execute。
 
 **idempotent**：已符合格式的不重命名，重跑安全。
