@@ -26,7 +26,7 @@ description: 「歷史國界地圖」工具集（/maps/historical-borders）— 
 | E. 人工撰寫詳細 | `data/maps/historical-states-db.ts` (`STATE_DETAILS`) | **277 條（5 輪 + 中國諸侯）** | 朝代、首都、宗教、人口、面積、簡介 |
 | E2. 朝代時間段標籤 | `data/maps/dynasty-labels.ts` (`DYNASTY_LABELS`) | **55 polygon × ~10 段** | 跨朝代 polygon 按年代切時期；dynastyLabelAt() 同名簡化 + 空 dynasty_zh 處理 |
 | E3. polygon 年範圍修正 | `public/maps/polygon-year-overrides.json` | **30 條** | 收窄源資料錯誤年代（Sui 619、Tang 907、Yuan 1271-1368、Sinic 限商朝期、Wu 春秋吳國 -900~-473 等）|
-| E4. 細粒度 polygon（city-hull） | `public/maps/fine-polygons.geojson` | **151 polygons / 37 帝國** | 中東 18（阿巴斯／伍麥亞／蒙古）+ 中國 130+（商周秦漢三國晉南朝隋唐五代十國北南宋遼金西夏西遼元明清）|
+| E4. 細粒度 polygon（city-hull） | `public/maps/fine-polygons.geojson` | **194 polygons / 43 帝國** | 中東 18（阿巴斯／伍麥亞／蒙古）+ 中國 135（商周秦漢三國晉南北朝隋唐五代十國北南宋遼金西夏西遼元明清）+ 地中海 36（羅馬／拜占庭／鄂圖曼）|
 | F. NE 50m coastline | `public/maps/ne_50m_coastline.geojson` | 1428 LineString | 海岸線（黑線） |
 | G. NE 50m admin_0 | `public/maps/ne_50m_admin_0_countries.geojson` | 242 features | 陸地灰底 + **NAME_ZHT 中文國名（內建）** |
 | H. Polygon 名譯本 | `public/maps/polygon-names-zh.json` | **2,420 條 (88 KB)** | Gemini batch 翻的 polygon name → 繁中 |
@@ -623,18 +623,19 @@ TimeAxis 右上「▶ 播放」按鈕，速度可選「慢／普通／快」（2
 | Aztec Empire | 11 段（三方聯盟／悲傷之夜／特諾奇蒂特蘭陷落） |
 | Mauryan / Gupta | 羯陵伽戰爭／海護王南征／塞犍陀笈多抗匈那 |
 
-### ✅ C. Stage 1 City-Hull polygon：37 帝國 151 polygons 已接入主圖
+### ✅ C. Stage 1 City-Hull polygon：43 帝國 194 polygons 已接入主圖
 
-- [scripts/build_city_hull_polygons.mjs](../../../scripts/build_city_hull_polygons.mjs)：CITIES 共享城市庫（~180 城）+ EMPIRES 配置
+- [scripts/build_city_hull_polygons.mjs](../../../scripts/build_city_hull_polygons.mjs)：CITIES 共享城市庫（~220 城）+ EMPIRES 配置
 - 中東：阿巴斯（6）/ 伍麥亞（5）/ 蒙古（7）
-- 中國：商／周／秦／西漢／東漢／曹魏／蜀漢／東吳／西晉／東晉／南朝四（劉宋／南齊／梁／陳）／唐／五代／十國九個／北宋／南宋／遼／金／西夏／西遼／元／明／清 共 130+ polygons
-- 輸出 [public/maps/fine-polygons.geojson](../../../public/maps/fine-polygons.geojson)（~46 KB）
+- 中國：商／周／秦／西漢／東漢／曹魏／蜀漢／東吳／西晉／東晉／南朝四／**北朝三**（北魏／北周／北齊）／唐／五代／十國九個／北宋／南宋／遼／金／西夏／西遼／元／明／清 共 135 polygons
+- 地中海：**羅馬帝國（10）／拜占庭（13）／鄂圖曼（13）** = 36 polygons
+- 輸出 [public/maps/fine-polygons.geojson](../../../public/maps/fine-polygons.geojson)（~59 KB）
 - [HistoricalBordersMap.vue](../../../components/maps/HistoricalBordersMap.vue) runtime 抑制同名粗 polygon（StateEntry.isFine 標籤）
 - 1 城 → 0.5° 方塊；2 城 → bbox；3+ → Graham scan convex hull
 
 **設計原則：事件級而非機械式 10 年**
 - 系統已支援連續任意年份查詢；兩個 keyframe 間 polygon 不變
-- 用實際領土變動的歷史事件年補 keyframe（如 -121 取河西、668 滅高麗、1689 尼布楚）
+- 用實際領土變動的歷史事件年補 keyframe（如 -121 取河西、668 滅高麗、1689 尼布楚、117 圖拉真極盛、565 查士丁尼收復、1453 君士坦丁堡陷）
 - 比機械 10 年更節省、更準確
 
 ### ✅ D. polygon-year-overrides：30 條年代收窄
@@ -756,16 +757,16 @@ node -e "const fs=require('fs');const gj=JSON.parse(fs.readFileSync('public/maps
 
 ### D. 其他低優先
 
-1. **其他帝國的 city-hull fine polygons** — 中東/中國已做。剩可做：
-   - 羅馬帝國：-200／-100／-30／0／100／150／200／300／395（西/東分裂）
-   - 拜占庭：395／476／527／630／700／843／1025／1204／1350／1453
-   - 鄂圖曼：1326／1389／1453／1520／1566／1683／1798／1878／1914
-   - 古印度（Maurya／Gupta／Sultanate）／古波斯（Achaemenid／Sasanian）
+1. **其他帝國的 city-hull fine polygons** — 中東／中國／地中海三大區已做。剩可做：
+   - 古印度（Maurya／Gupta／Delhi Sultanate／Mughal 早期）
+   - 古波斯（Achaemenid／Parthian／Sasanian）
+   - 中世紀俄國／立陶宛大公國
+   - 神聖羅馬帝國（哈布斯堡 vs 法國等）
+   - 阿茲特克／印加（已有 dynasty labels，可補實際範圍）
 2. **CHGIS 整合**（中國年解析度）— 哈佛+復旦中國歷史 GIS，-2 BCE→1911 CE 縣級資料，整合可達真實年密度而非事件級
 3. **與 world-religions-map 整合** — 此工具是 sphere 分類討論的底層，分類確定後可同步反向更新 world-religions 的 sphere-history
 4. **OpenHistoricalMap 抓取阿巴斯等帝國 polygon**（被 Cloudflare 擋，需 browser-mode 解）
-5. **polygon-year-overrides 擴充** — 已 30 條；剩可加：Vinča / Cucuteni / Yangshao（中歐銅器文化非政體）、Mycenaean -1700 起、Phoenicia -1500 起、Etruria -900 起。要加新 override：直接編 [public/maps/polygon-year-overrides.json](../../../public/maps/polygon-year-overrides.json) 的 `overrides`，HMR 即生效。
-6. **南北朝細分**：北朝（西魏／東魏／北周／北齊）尚未做 fine polygon；目前還靠 Toba Wei 源 polygon 顯示 500 CE 北朝
+5. **polygon-year-overrides 擴充** — 已 38 條；剩可加：Vinča / Cucuteni / Yangshao（中歐銅器文化非政體）、Mycenaean -1700 起、Phoenicia -1500 起、Etruria -900 起。要加新 override：直接編 [public/maps/polygon-year-overrides.json](../../../public/maps/polygon-year-overrides.json) 的 `overrides`，HMR 即生效。
 
 ---
 
@@ -801,6 +802,7 @@ historical-borders-map 額外用：
 
 ## Recent commits
 
+`78ad410` 補北朝 + 羅馬 + 拜占庭 + 鄂圖曼 fine polygons（fine 151 → 194 / 37 → 43 帝國）
 `5a097ac` 中國朝代加 ~49 事件級 keyframes — 西漢/東漢/唐/元/明/清密集化（fine 102 → 151）
 `e54a488` 補齊南朝/五代十國/北南宋/西夏/西遼/金（fine 59 → 102，+43）
 `bdac72c` 中國朝代全面校正：補秦/三國/晉/唐/元/明/清 fine polygons + 修源資料錯誤年代（fine 30 → 59）
