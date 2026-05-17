@@ -198,6 +198,34 @@ const CITIES = {
   'Lhotse':         [91.13, 29.65],    // 邏些＝拉薩
   // 越南北部
   'Hanoi2':         [105.85, 21.03],   // 河內
+  // 南朝補
+  'Jiaozhou':       [105.85, 21.03],   // 交州（越南北部）
+  'Jiangzhou':      [115.99, 28.68],   // 江州（江西南昌）
+  'Xiangzhou':      [112.94, 28.23],   // 湘州（長沙）
+  'Yongjia':        [120.65, 28.00],   // 永嘉（溫州）
+  'Jingzhou':       [112.18, 30.34],   // 荊州（江陵）
+  // 五代十國補
+  'Bianliang':      [114.34, 34.80],   // 汴梁（後梁／後晉／後漢／後周＋北宋都）
+  'Luoyang3':       [112.45, 34.62],   // 洛陽（後唐都）
+  'Ganzhou2':       [115.00, 25.83],   // 贛州
+  'Qionghai':       [110.47, 19.24],   // 瓊海（南漢南端）
+  // 西夏五州
+  'Yinchuan':       [106.27, 38.49],   // 興慶＝銀川（西夏都）
+  'Wuwei':          [102.64, 37.93],   // 涼州武威
+  'Zhangye':        [100.46, 38.94],   // 甘州張掖
+  'Dunhuang':       [94.66, 40.14],    // 沙州敦煌
+  'Yulin':          [109.74, 38.29],   // 銀州榆林
+  'Ordos':          [109.78, 39.61],   // 鄂爾多斯（橫山）
+  // 西遼（喀喇契丹）核心都邑
+  'Balasaghun':     [75.18, 42.85],    // 八剌沙袞（虎思斡耳朵，吉爾吉斯）
+  'Yarkand':        [77.24, 38.42],    // 葉爾羌
+  'Aksu':           [80.27, 41.17],    // 阿克蘇
+  'Almaliq':        [80.95, 44.05],    // 阿力麻里（伊犁地區）
+  'Talas':          [71.41, 42.52],    // 怛邏斯
+  // 北宋／南宋核心
+  'Yongzhou':       [108.32, 22.82],   // 邕州南寧
+  'Tanzhou':        [112.94, 28.23],   // 潭州（北宋稱長沙）
+  'Quanzhou':       [118.68, 24.87],   // 泉州（南宋海港）
   // 羅馬／拜占庭範疇
   'Rome':           [12.50, 41.90],
   'Ravenna':        [12.20, 44.42],
@@ -429,6 +457,49 @@ const EMPIRES = [
     },
   },
   {
+    // 南朝 — source 完全沒有劉宋／南齊／梁／陳 polygons
+    // 用 polygon_name='Liu Song' 是源資料的命名（但只到 479）— 之後 polygon 缺
+    // 此處用 source 完全沒有的名字，避免衝突
+    polygon_name: 'Southern Dynasties (Liu Song)',
+    name_zh: '劉宋',
+    end_year: 479,
+    years: {
+      // 420 劉裕代晉建宋（南朝最盛時 — 收復河南）
+      [420]: ['Jiankang', 'Suzhou', 'Hangzhou', 'Yanying', 'Jingzhou', 'Jiangzhou', 'Xiangzhou', 'Chengdu2', 'Lingnan', 'Jiaozhou', 'Luoyang2', 'Zhengzhou'],
+      // 450 元嘉之治後北伐失敗、失河南
+      [450]: ['Jiankang', 'Suzhou', 'Hangzhou', 'Yanying', 'Jingzhou', 'Jiangzhou', 'Xiangzhou', 'Chengdu2', 'Lingnan', 'Jiaozhou'],
+    },
+  },
+  {
+    polygon_name: 'Southern Dynasties (Southern Qi)',
+    name_zh: '南齊',
+    end_year: 502,
+    years: {
+      // 479 蕭道成建齊
+      [479]: ['Jiankang', 'Suzhou', 'Hangzhou', 'Yanying', 'Jingzhou', 'Jiangzhou', 'Xiangzhou', 'Chengdu2', 'Lingnan', 'Jiaozhou'],
+    },
+  },
+  {
+    polygon_name: 'Southern Dynasties (Liang)',
+    name_zh: '梁',
+    end_year: 557,
+    years: {
+      // 502 蕭衍建梁
+      [502]: ['Jiankang', 'Suzhou', 'Hangzhou', 'Yanying', 'Jingzhou', 'Jiangzhou', 'Xiangzhou', 'Chengdu2', 'Lingnan', 'Jiaozhou'],
+      // 548 侯景之亂後分崩
+      [548]: ['Jiankang', 'Suzhou', 'Hangzhou', 'Yanying', 'Jingzhou', 'Jiangzhou', 'Xiangzhou', 'Lingnan', 'Jiaozhou'],
+    },
+  },
+  {
+    polygon_name: 'Southern Dynasties (Chen)',
+    name_zh: '陳',
+    end_year: 589,
+    years: {
+      // 557 陳霸先建陳（已失江北蜀地）
+      [557]: ['Jiankang', 'Suzhou', 'Hangzhou', 'Yanying', 'Jingzhou', 'Jiangzhou', 'Xiangzhou', 'Lingnan', 'Jiaozhou'],
+    },
+  },
+  {
     // 唐朝 — 補 618-799（源 Tang Empire 只 800-999），用 polygon_name='Tang Empire' 抑制源
     polygon_name: 'Tang Empire',
     name_zh: '唐',
@@ -484,6 +555,194 @@ const EMPIRES = [
       [1840]: ['Beiping', 'Mukden', 'Yingtian', 'Luoyang2', 'Zhengzhou', 'Linzi', 'Yan', 'Chengdu', 'Yanying', 'Hangzhou', 'Guangzhou', 'Liaodong', 'Yangzhou2', 'Yunnan', 'Karakorum2', 'Lhasa', 'Kashgar', 'Khotan', 'Beshbalik'],
       // 1900 義和團
       [1900]: ['Beiping', 'Mukden', 'Luoyang2', 'Zhengzhou', 'Linzi', 'Yan', 'Chengdu', 'Yanying', 'Hangzhou', 'Guangzhou', 'Liaodong', 'Yangzhou2', 'Yunnan', 'Lhasa', 'Kashgar', 'Beshbalik'],
+    },
+  },
+  {
+    // 五代 907-960 — source 完全沒有後梁/後唐/後晉/後漢/後周 polygons
+    polygon_name: 'Five Dynasties',
+    name_zh: '五代',
+    end_year: 960,
+    years: {
+      // 907 朱溫滅唐建後梁
+      [907]: ['Bianliang', 'Luoyang3', 'Zhengzhou', 'Daxing', 'Linzi', 'Yan'],
+      // 923 李存勖建後唐（都洛陽）
+      [923]: ['Luoyang3', 'Bianliang', 'Zhengzhou', 'Daxing', 'Linzi', 'Yan', 'Taiyuan'],
+      // 936 石敬瑭建後晉、割燕雲十六州予契丹
+      [936]: ['Bianliang', 'Luoyang3', 'Zhengzhou', 'Daxing', 'Linzi', 'Taiyuan'],
+      // 947 劉知遠建後漢
+      [947]: ['Bianliang', 'Luoyang3', 'Zhengzhou', 'Daxing', 'Linzi', 'Taiyuan'],
+      // 951 郭威建後周（柴榮北伐有成）
+      [951]: ['Bianliang', 'Luoyang3', 'Zhengzhou', 'Daxing', 'Linzi', 'Taiyuan'],
+    },
+  },
+  {
+    // 十國 — 南方諸國（源有 Wuyue / Southern Tang 兩個）
+    // 此處補後蜀（成都）／南漢（廣州）／楚（長沙）／閩（福州）／南平（江陵）
+    polygon_name: 'Later Shu',
+    name_zh: '後蜀',
+    end_year: 965,
+    years: {
+      [934]: ['Chengdu3', 'Jiangling', 'Tongguan'],
+    },
+  },
+  {
+    polygon_name: 'Southern Han',
+    name_zh: '南漢',
+    end_year: 971,
+    years: {
+      [917]: ['Guangzhou', 'Qionghai', 'Yongzhou', 'Ganzhou2', 'Hanoi2'],
+    },
+  },
+  {
+    polygon_name: 'Chu (Ten Kingdoms)',
+    name_zh: '楚',
+    end_year: 951,
+    years: {
+      [907]: ['Tanzhou', 'Xiangzhou', 'Ganzhou2', 'Jiangling'],
+    },
+  },
+  {
+    polygon_name: 'Min',
+    name_zh: '閩',
+    end_year: 945,
+    years: {
+      [909]: ['Fuzhou', 'Quanzhou'],
+    },
+  },
+  {
+    polygon_name: 'Nanping (Ten Kingdoms)',
+    name_zh: '南平',
+    end_year: 963,
+    years: {
+      [924]: ['Jiangling'],
+    },
+  },
+  {
+    polygon_name: 'Former Shu',
+    name_zh: '前蜀',
+    end_year: 925,
+    years: {
+      [907]: ['Chengdu3', 'Jiangling', 'Tongguan'],
+    },
+  },
+  {
+    polygon_name: 'Northern Han',
+    name_zh: '北漢',
+    end_year: 979,
+    years: {
+      [951]: ['Taiyuan'],
+    },
+  },
+  {
+    // 北宋 — 用 polygon_name='Song Empire' 抑制源（含燕雲十六州被遼）
+    polygon_name: 'Song Empire',
+    name_zh: '北宋',
+    end_year: 1127,
+    years: {
+      // 960 趙匡胤陳橋兵變建宋（中原）
+      [960]: ['Bianliang', 'Luoyang3', 'Zhengzhou', 'Daxing', 'Linzi', 'Taiyuan'],
+      // 979 滅北漢統一中原（仍缺燕雲）
+      [979]: ['Bianliang', 'Luoyang3', 'Zhengzhou', 'Daxing', 'Linzi', 'Taiyuan', 'Chengdu', 'Yanying', 'Hangzhou', 'Guangzhou', 'Yangzhou2', 'Quanzhou'],
+      // 1004 澶淵之盟後穩定
+      [1004]: ['Bianliang', 'Luoyang3', 'Zhengzhou', 'Daxing', 'Linzi', 'Taiyuan', 'Chengdu', 'Yanying', 'Hangzhou', 'Guangzhou', 'Yangzhou2', 'Quanzhou', 'Tanzhou', 'Fuzhou'],
+      // 1100 徽宗末（北宋極盛文化但軍事衰）
+      [1100]: ['Bianliang', 'Luoyang3', 'Zhengzhou', 'Daxing', 'Linzi', 'Taiyuan', 'Chengdu', 'Yanying', 'Hangzhou', 'Guangzhou', 'Yangzhou2', 'Quanzhou', 'Tanzhou', 'Fuzhou'],
+      // 1126 靖康之變
+      [1126]: ['Bianliang', 'Hangzhou', 'Yanying', 'Chengdu', 'Guangzhou', 'Quanzhou', 'Fuzhou'],
+    },
+  },
+  {
+    // 南宋 — 失中原偏安江南
+    polygon_name: 'Southern Song',
+    name_zh: '南宋',
+    end_year: 1279,
+    years: {
+      // 1127 高宗建炎南渡
+      [1127]: ['Hangzhou', 'Yanying', 'Chengdu', 'Guangzhou', 'Quanzhou', 'Fuzhou', 'Tanzhou', 'Yangzhou2'],
+      // 1141 紹興和議後界以淮河
+      [1141]: ['Hangzhou', 'Yanying', 'Chengdu', 'Guangzhou', 'Quanzhou', 'Fuzhou', 'Tanzhou', 'Yangzhou2', 'Lingnan'],
+      // 1234 蒙古滅金與宋共擊
+      [1234]: ['Hangzhou', 'Yanying', 'Chengdu', 'Guangzhou', 'Quanzhou', 'Fuzhou', 'Tanzhou', 'Yangzhou2', 'Lingnan'],
+      // 1276 元軍入臨安
+      [1276]: ['Quanzhou', 'Fuzhou', 'Guangzhou'],
+    },
+  },
+  {
+    // 吳越 — source 沒有 polygon
+    polygon_name: 'Wuyue',
+    name_zh: '吳越',
+    end_year: 978,
+    years: {
+      [907]: ['Hangzhou', 'Suzhou', 'Quanzhou', 'Fuzhou'],
+    },
+  },
+  {
+    // 南唐 — source 沒有 polygon
+    polygon_name: 'Southern Tang',
+    name_zh: '南唐',
+    end_year: 976,
+    years: {
+      [937]: ['Nanjing', 'Hangzhou', 'Yangzhou2', 'Quanzhou', 'Fuzhou', 'Jiangzhou', 'Tanzhou', 'Ganzhou2'],
+      // 958 失江北十四州予後周
+      [958]: ['Nanjing', 'Hangzhou', 'Yangzhou2', 'Jiangzhou', 'Tanzhou', 'Ganzhou2'],
+    },
+  },
+  {
+    // 金朝（女真）— source 沒有對應 polygon（500-599 polygon 是命名錯誤）
+    polygon_name: 'Jin Empire',
+    name_zh: '金',
+    end_year: 1234,
+    years: {
+      // 1115 完顏阿骨打稱帝
+      [1115]: ['Huining', 'Liaoyang', 'Liaodong'],
+      // 1127 滅北宋、取中原
+      [1127]: ['Huining', 'Zhongdu', 'Liaoyang', 'Liaodong', 'Bianliang', 'Luoyang3', 'Zhengzhou', 'Daxing', 'Linzi', 'Taiyuan', 'Pyongyang'],
+      // 1153 海陵王遷都中都
+      [1153]: ['Zhongdu', 'Huining', 'Liaoyang', 'Liaodong', 'Bianliang', 'Luoyang3', 'Zhengzhou', 'Daxing', 'Linzi', 'Taiyuan', 'Pyongyang'],
+      // 1214 蒙古攻陷中都、宣宗南遷汴京
+      [1214]: ['Bianliang', 'Luoyang3', 'Zhengzhou', 'Daxing', 'Linzi', 'Taiyuan'],
+    },
+  },
+  {
+    // 遼朝補早期 916-999（source Liao 只 1000 起）
+    polygon_name: 'Liao',
+    name_zh: '遼',
+    end_year: 999,
+    years: {
+      // 916 耶律阿保機建契丹國
+      [916]: ['Linhuang', 'Liaoyang', 'Liaodong', 'Karakorum2'],
+      // 936 取燕雲十六州
+      [936]: ['Linhuang', 'Liaoyang', 'Liaodong', 'Karakorum2', 'Zhongdu', 'Datong', 'Yan'],
+      // 947 改名遼、入侵中原
+      [947]: ['Linhuang', 'Liaoyang', 'Liaodong', 'Karakorum2', 'Zhongdu', 'Datong', 'Yan'],
+    },
+  },
+  {
+    // 西夏 — source 完全沒有 Western Xia / Tangut polygon
+    polygon_name: 'Western Xia',
+    name_zh: '西夏',
+    end_year: 1227,
+    years: {
+      // 1038 李元昊稱帝
+      [1038]: ['Yinchuan', 'Wuwei', 'Zhangye', 'Dunhuang', 'Yulin', 'Ordos', 'Liangzhou', 'Ganzhou'],
+      // 1100 中期穩定
+      [1100]: ['Yinchuan', 'Wuwei', 'Zhangye', 'Dunhuang', 'Yulin', 'Ordos', 'Liangzhou', 'Ganzhou'],
+      // 1200 蒙古崛起前夕
+      [1200]: ['Yinchuan', 'Wuwei', 'Zhangye', 'Dunhuang', 'Yulin', 'Ordos', 'Liangzhou', 'Ganzhou'],
+    },
+  },
+  {
+    // 西遼（喀喇契丹）— source 沒有
+    polygon_name: 'Qara Khitai',
+    name_zh: '西遼',
+    end_year: 1218,
+    years: {
+      // 1124 耶律大石西遷
+      [1124]: ['Balasaghun', 'Almaliq', 'Talas', 'Beshbalik', 'Kucha'],
+      // 1141 卡特萬戰役大勝塞爾柱
+      [1141]: ['Balasaghun', 'Almaliq', 'Talas', 'Beshbalik', 'Kucha', 'Khotan', 'Kashgar', 'Yarkand', 'Aksu', 'Samarkand', 'Bukhara'],
+      // 1200 末期
+      [1200]: ['Balasaghun', 'Almaliq', 'Talas', 'Beshbalik', 'Kucha', 'Khotan', 'Kashgar', 'Yarkand', 'Aksu'],
     },
   },
   {

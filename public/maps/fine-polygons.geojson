@@ -1392,6 +1392,286 @@
               30.67
             ],
             [
+              105.85,
+              21.03
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              120.59,
+              31.3
+            ],
+            [
+              113.62,
+              34.75
+            ],
+            [
+              112.45,
+              34.62
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Southern Dynasties (Liu Song)",
+        "name_zh": "劉宋",
+        "year_from": 420,
+        "year_to": 449,
+        "city_count": 12,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              105.85,
+              21.03
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              120.59,
+              31.3
+            ],
+            [
+              118.78,
+              32.06
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Southern Dynasties (Liu Song)",
+        "name_zh": "劉宋",
+        "year_from": 450,
+        "year_to": 478,
+        "city_count": 10,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              105.85,
+              21.03
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              120.59,
+              31.3
+            ],
+            [
+              118.78,
+              32.06
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Southern Dynasties (Southern Qi)",
+        "name_zh": "南齊",
+        "year_from": 479,
+        "year_to": 501,
+        "city_count": 10,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              105.85,
+              21.03
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              120.59,
+              31.3
+            ],
+            [
+              118.78,
+              32.06
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Southern Dynasties (Liang)",
+        "name_zh": "梁",
+        "year_from": 502,
+        "year_to": 547,
+        "city_count": 10,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.85,
+              21.03
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              120.59,
+              31.3
+            ],
+            [
+              118.78,
+              32.06
+            ],
+            [
+              112.2,
+              30.62
+            ],
+            [
+              105.85,
+              21.03
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Southern Dynasties (Liang)",
+        "name_zh": "梁",
+        "year_from": 548,
+        "year_to": 556,
+        "city_count": 9,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.85,
+              21.03
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              120.59,
+              31.3
+            ],
+            [
+              118.78,
+              32.06
+            ],
+            [
+              112.2,
+              30.62
+            ],
+            [
+              105.85,
+              21.03
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Southern Dynasties (Chen)",
+        "name_zh": "陳",
+        "year_from": 557,
+        "year_to": 588,
+        "city_count": 9,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
               113.27,
               23.13
             ],
@@ -2180,6 +2460,1548 @@
         "year_from": 1900,
         "year_to": 1911,
         "city_count": 16,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              108.94,
+              34.34
+            ],
+            [
+              112.45,
+              34.62
+            ],
+            [
+              114.34,
+              34.8
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              108.94,
+              34.34
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Five Dynasties",
+        "name_zh": "五代",
+        "year_from": 907,
+        "year_to": 922,
+        "city_count": 6,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              108.94,
+              34.34
+            ],
+            [
+              112.45,
+              34.62
+            ],
+            [
+              114.34,
+              34.8
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              112.55,
+              37.87
+            ],
+            [
+              108.94,
+              34.34
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Five Dynasties",
+        "name_zh": "五代",
+        "year_from": 923,
+        "year_to": 935,
+        "city_count": 7,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              108.94,
+              34.34
+            ],
+            [
+              112.45,
+              34.62
+            ],
+            [
+              114.34,
+              34.8
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              112.55,
+              37.87
+            ],
+            [
+              108.94,
+              34.34
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Five Dynasties",
+        "name_zh": "五代",
+        "year_from": 936,
+        "year_to": 946,
+        "city_count": 6,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              108.94,
+              34.34
+            ],
+            [
+              112.45,
+              34.62
+            ],
+            [
+              114.34,
+              34.8
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              112.55,
+              37.87
+            ],
+            [
+              108.94,
+              34.34
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Five Dynasties",
+        "name_zh": "五代",
+        "year_from": 947,
+        "year_to": 950,
+        "city_count": 6,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              108.94,
+              34.34
+            ],
+            [
+              112.45,
+              34.62
+            ],
+            [
+              114.34,
+              34.8
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              112.55,
+              37.87
+            ],
+            [
+              108.94,
+              34.34
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Five Dynasties",
+        "name_zh": "五代",
+        "year_from": 951,
+        "year_to": 959,
+        "city_count": 6,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              112.24,
+              30.34
+            ],
+            [
+              110.39,
+              34.55
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Later Shu",
+        "name_zh": "後蜀",
+        "year_from": 934,
+        "year_to": 964,
+        "city_count": 3,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.85,
+              21.03
+            ],
+            [
+              110.47,
+              19.24
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              115,
+              25.83
+            ],
+            [
+              108.32,
+              22.82
+            ],
+            [
+              105.85,
+              21.03
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Southern Han",
+        "name_zh": "南漢",
+        "year_from": 917,
+        "year_to": 970,
+        "city_count": 5,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.24,
+              30.34
+            ],
+            [
+              112.94,
+              28.23
+            ],
+            [
+              115,
+              25.83
+            ],
+            [
+              112.24,
+              30.34
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Chu (Ten Kingdoms)",
+        "name_zh": "楚",
+        "year_from": 907,
+        "year_to": 950,
+        "city_count": 4,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.18,
+              24.37
+            ],
+            [
+              119.8,
+              24.37
+            ],
+            [
+              119.8,
+              26.58
+            ],
+            [
+              118.18,
+              26.58
+            ],
+            [
+              118.18,
+              24.37
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Min",
+        "name_zh": "閩",
+        "year_from": 909,
+        "year_to": 944,
+        "city_count": 2,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.74,
+              29.84
+            ],
+            [
+              112.74,
+              29.84
+            ],
+            [
+              112.74,
+              30.84
+            ],
+            [
+              111.74,
+              30.84
+            ],
+            [
+              111.74,
+              29.84
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Nanping (Ten Kingdoms)",
+        "name_zh": "南平",
+        "year_from": 924,
+        "year_to": 962,
+        "city_count": 1,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              112.24,
+              30.34
+            ],
+            [
+              110.39,
+              34.55
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Former Shu",
+        "name_zh": "前蜀",
+        "year_from": 907,
+        "year_to": 924,
+        "city_count": 3,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.05,
+              37.37
+            ],
+            [
+              113.05,
+              37.37
+            ],
+            [
+              113.05,
+              38.37
+            ],
+            [
+              112.05,
+              38.37
+            ],
+            [
+              112.05,
+              37.37
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Northern Han",
+        "name_zh": "北漢",
+        "year_from": 951,
+        "year_to": 978,
+        "city_count": 1,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              108.94,
+              34.34
+            ],
+            [
+              112.45,
+              34.62
+            ],
+            [
+              114.34,
+              34.8
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              112.55,
+              37.87
+            ],
+            [
+              108.94,
+              34.34
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Song Empire",
+        "name_zh": "北宋",
+        "year_from": 960,
+        "year_to": 978,
+        "city_count": 6,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              118.68,
+              24.87
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              112.55,
+              37.87
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Song Empire",
+        "name_zh": "北宋",
+        "year_from": 979,
+        "year_to": 1003,
+        "city_count": 12,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              118.68,
+              24.87
+            ],
+            [
+              119.3,
+              26.08
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              112.55,
+              37.87
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Song Empire",
+        "name_zh": "北宋",
+        "year_from": 1004,
+        "year_to": 1099,
+        "city_count": 14,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              118.68,
+              24.87
+            ],
+            [
+              119.3,
+              26.08
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              112.55,
+              37.87
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Song Empire",
+        "name_zh": "北宋",
+        "year_from": 1100,
+        "year_to": 1125,
+        "city_count": 14,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              118.68,
+              24.87
+            ],
+            [
+              119.3,
+              26.08
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              114.34,
+              34.8
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Song Empire",
+        "name_zh": "北宋",
+        "year_from": 1126,
+        "year_to": 1126,
+        "city_count": 7,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              118.68,
+              24.87
+            ],
+            [
+              119.3,
+              26.08
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              119.42,
+              32.39
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Southern Song",
+        "name_zh": "南宋",
+        "year_from": 1127,
+        "year_to": 1140,
+        "city_count": 8,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              118.68,
+              24.87
+            ],
+            [
+              119.3,
+              26.08
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              119.42,
+              32.39
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Southern Song",
+        "name_zh": "南宋",
+        "year_from": 1141,
+        "year_to": 1233,
+        "city_count": 9,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              104.07,
+              30.67
+            ],
+            [
+              113.27,
+              23.13
+            ],
+            [
+              118.68,
+              24.87
+            ],
+            [
+              119.3,
+              26.08
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              119.42,
+              32.39
+            ],
+            [
+              104.07,
+              30.67
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Southern Song",
+        "name_zh": "南宋",
+        "year_from": 1234,
+        "year_to": 1275,
+        "city_count": 9,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.27,
+              23.13
+            ],
+            [
+              118.68,
+              24.87
+            ],
+            [
+              119.3,
+              26.08
+            ],
+            [
+              113.27,
+              23.13
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Southern Song",
+        "name_zh": "南宋",
+        "year_from": 1276,
+        "year_to": 1278,
+        "city_count": 3,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.68,
+              24.87
+            ],
+            [
+              119.3,
+              26.08
+            ],
+            [
+              120.59,
+              31.3
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              118.68,
+              24.87
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Wuyue",
+        "name_zh": "吳越",
+        "year_from": 907,
+        "year_to": 977,
+        "city_count": 4,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.94,
+              28.23
+            ],
+            [
+              115,
+              25.83
+            ],
+            [
+              118.68,
+              24.87
+            ],
+            [
+              119.3,
+              26.08
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              119.42,
+              32.39
+            ],
+            [
+              118.78,
+              32.06
+            ],
+            [
+              112.94,
+              28.23
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Southern Tang",
+        "name_zh": "南唐",
+        "year_from": 937,
+        "year_to": 957,
+        "city_count": 8,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.94,
+              28.23
+            ],
+            [
+              115,
+              25.83
+            ],
+            [
+              120.16,
+              30.27
+            ],
+            [
+              119.42,
+              32.39
+            ],
+            [
+              118.78,
+              32.06
+            ],
+            [
+              112.94,
+              28.23
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Southern Tang",
+        "name_zh": "南唐",
+        "year_from": 958,
+        "year_to": 975,
+        "city_count": 6,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              123.18,
+              41.27
+            ],
+            [
+              126.1,
+              45.78
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              123.18,
+              41.27
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Jin Empire",
+        "name_zh": "金",
+        "year_from": 1115,
+        "year_to": 1126,
+        "city_count": 3,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              108.94,
+              34.34
+            ],
+            [
+              112.45,
+              34.62
+            ],
+            [
+              114.34,
+              34.8
+            ],
+            [
+              125.75,
+              39.04
+            ],
+            [
+              126.1,
+              45.78
+            ],
+            [
+              112.55,
+              37.87
+            ],
+            [
+              108.94,
+              34.34
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Jin Empire",
+        "name_zh": "金",
+        "year_from": 1127,
+        "year_to": 1152,
+        "city_count": 11,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              108.94,
+              34.34
+            ],
+            [
+              112.45,
+              34.62
+            ],
+            [
+              114.34,
+              34.8
+            ],
+            [
+              125.75,
+              39.04
+            ],
+            [
+              126.1,
+              45.78
+            ],
+            [
+              112.55,
+              37.87
+            ],
+            [
+              108.94,
+              34.34
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Jin Empire",
+        "name_zh": "金",
+        "year_from": 1153,
+        "year_to": 1213,
+        "city_count": 11,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              108.94,
+              34.34
+            ],
+            [
+              112.45,
+              34.62
+            ],
+            [
+              114.34,
+              34.8
+            ],
+            [
+              118.3,
+              36.85
+            ],
+            [
+              112.55,
+              37.87
+            ],
+            [
+              108.94,
+              34.34
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Jin Empire",
+        "name_zh": "金",
+        "year_from": 1214,
+        "year_to": 1233,
+        "city_count": 6,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102.85,
+              47.43
+            ],
+            [
+              123.18,
+              41.27
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              119.41,
+              43.99
+            ],
+            [
+              102.85,
+              47.43
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Liao",
+        "name_zh": "遼",
+        "year_from": 916,
+        "year_to": 935,
+        "city_count": 4,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102.85,
+              47.43
+            ],
+            [
+              113.3,
+              40.08
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              123.18,
+              41.27
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              119.41,
+              43.99
+            ],
+            [
+              102.85,
+              47.43
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Liao",
+        "name_zh": "遼",
+        "year_from": 936,
+        "year_to": 946,
+        "city_count": 7,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              102.85,
+              47.43
+            ],
+            [
+              113.3,
+              40.08
+            ],
+            [
+              116.4,
+              39.91
+            ],
+            [
+              123.18,
+              41.27
+            ],
+            [
+              123.43,
+              41.8
+            ],
+            [
+              119.41,
+              43.99
+            ],
+            [
+              102.85,
+              47.43
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Liao",
+        "name_zh": "遼",
+        "year_from": 947,
+        "year_to": 998,
+        "city_count": 7,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              94.66,
+              40.14
+            ],
+            [
+              102.64,
+              37.93
+            ],
+            [
+              109.74,
+              38.29
+            ],
+            [
+              109.78,
+              39.61
+            ],
+            [
+              94.66,
+              40.14
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Western Xia",
+        "name_zh": "西夏",
+        "year_from": 1038,
+        "year_to": 1099,
+        "city_count": 8,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              94.66,
+              40.14
+            ],
+            [
+              102.64,
+              37.93
+            ],
+            [
+              109.74,
+              38.29
+            ],
+            [
+              109.78,
+              39.61
+            ],
+            [
+              94.66,
+              40.14
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Western Xia",
+        "name_zh": "西夏",
+        "year_from": 1100,
+        "year_to": 1199,
+        "city_count": 8,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              94.66,
+              40.14
+            ],
+            [
+              102.64,
+              37.93
+            ],
+            [
+              109.74,
+              38.29
+            ],
+            [
+              109.78,
+              39.61
+            ],
+            [
+              94.66,
+              40.14
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Western Xia",
+        "name_zh": "西夏",
+        "year_from": 1200,
+        "year_to": 1226,
+        "city_count": 8,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              71.41,
+              42.52
+            ],
+            [
+              82.97,
+              41.72
+            ],
+            [
+              89.2,
+              43.92
+            ],
+            [
+              80.95,
+              44.05
+            ],
+            [
+              71.41,
+              42.52
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Qara Khitai",
+        "name_zh": "西遼",
+        "year_from": 1124,
+        "year_to": 1140,
+        "city_count": 5,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              64.43,
+              39.77
+            ],
+            [
+              79.92,
+              37.11
+            ],
+            [
+              89.2,
+              43.92
+            ],
+            [
+              80.95,
+              44.05
+            ],
+            [
+              71.41,
+              42.52
+            ],
+            [
+              64.43,
+              39.77
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Qara Khitai",
+        "name_zh": "西遼",
+        "year_from": 1141,
+        "year_to": 1199,
+        "city_count": 11,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              71.41,
+              42.52
+            ],
+            [
+              77.24,
+              38.42
+            ],
+            [
+              79.92,
+              37.11
+            ],
+            [
+              89.2,
+              43.92
+            ],
+            [
+              80.95,
+              44.05
+            ],
+            [
+              71.41,
+              42.52
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Qara Khitai",
+        "name_zh": "西遼",
+        "year_from": 1200,
+        "year_to": 1217,
+        "city_count": 9,
         "source": "city-hull (manual city list)"
       }
     },

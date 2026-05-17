@@ -270,6 +270,25 @@ const SUPPLEMENT_ZH: Record<string, string> = {
   'Southern Xiongnu': '南匈奴',
   'Northern Liang': '北涼',
   'Goguryeo': '高句麗',
+  // 南朝
+  'Southern Dynasties (Liu Song)': '劉宋',
+  'Southern Dynasties (Southern Qi)': '南齊',
+  'Southern Dynasties (Liang)': '梁',
+  'Southern Dynasties (Chen)': '陳',
+  // 五代十國
+  'Five Dynasties': '五代',
+  'Later Shu': '後蜀',
+  'Former Shu': '前蜀',
+  'Southern Han': '南漢',
+  'Chu (Ten Kingdoms)': '楚',
+  'Min': '閩',
+  'Nanping (Ten Kingdoms)': '南平',
+  'Northern Han': '北漢',
+  // 北宋／南宋
+  'Southern Song': '南宋',
+  // 西夏／西遼
+  'Western Xia': '西夏',
+  'Qara Khitai': '西遼',
 }
 
 const props = withDefaults(defineProps<{

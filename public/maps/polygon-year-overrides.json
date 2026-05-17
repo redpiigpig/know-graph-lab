@@ -159,8 +159,8 @@
     },
     "Song Empire": {
       "min_year_from": 960,
-      "max_year_to": 1279,
-      "reason": "宋朝 960~1279（北宋 960~1127 / 南宋 1127~1279）"
+      "max_year_to": 1126,
+      "reason": "源 Song Empire 1000~1278 改用 fine 北宋 960~1126 + 南宋 1127~1279 替代"
     },
     "Qin": {
       "max_year_to": -207,
