@@ -131,15 +131,6 @@
                        text-base font-medium shadow-sm transition flex items-center justify-center cursor-default"
                 @click.stop="zoomOut">−</button>
         <div class="text-[9px] text-gray-400 text-center tabular-nums">{{ Math.round(zoom * 100) }}%</div>
-        <button class="px-1 py-1.5 bg-white/90 border border-emerald-300 rounded-lg text-emerald-700
-                       text-[10px] font-medium shadow-sm hover:bg-emerald-50 transition leading-tight
-                       text-center cursor-default"
-                @click.stop="fitSpine">定位<br>主幹</button>
-        <button class="px-1 py-1.5 bg-white/90 border border-amber-300 rounded-lg text-amber-700
-                       text-[10px] font-medium shadow-sm hover:bg-amber-50 transition leading-tight
-                       text-center cursor-default"
-                title="一鍵展開以色列先知鏈：易司哈格→葉爾孤白→穆薩/達烏德/蘇萊曼/麥爾彥/爾撒"
-                @click.stop="expandProphets">先知<br>鏈</button>
       </div>
 
       <!-- Legend -->
@@ -355,47 +346,6 @@ watch(() => [personByName.value, childrenOf.value], ([byName, chMap]) => {
   dualSpineExpanded.value = true
 }, { immediate: true })
 
-// 一鍵展開以色列先知鏈：易司哈格→葉爾孤白→[利未/猶大 兩線]→穆薩/哈倫 + Davidic kings/達烏德/蘇萊曼/麥爾彥/爾撒
-function expandProphets() {
-  const PROPHET_CHAIN = [
-    '易司哈格', '葉爾孤白',
-    // Moses line
-    '利未', '卡哈特', '阿米蘭（穆薩之父）',
-    '哈倫',  // 為了顯示 Aaron→Zechariah 線（21 代略過）
-    // David line
-    '猶大', '法勒斯', '希斯崙', '蘭', '阿米拿達', '拿順',
-    '撒門', '波阿斯', '俄備得', '耶西', '達烏德', '蘇萊曼',
-    // Davidic kings of Judah (pre-exile)
-    '羅波安', '亞比雅', '亞撒', '約沙法', '約蘭', '烏西雅',
-    '約坦', '亞哈斯', '希西家', '瑪拿西', '亞們', '約西亞',
-    // Post-exile Matthean 系譜 (太 1:12-16)
-    '耶哥尼雅', '撒拉鐵', '所羅巴伯', '亞比玉', '以利亞敬', '亞所',
-    '撒督', '亞金', '以律', '以利亞撒', '馬但',
-    '雅各（馬但之子）', '約瑟（馬利亞之夫）',
-    '阿米蘭（馬利亞之父）', '麥爾彥',
-    '宰凱里雅',  // 顯示 葉哈雅
-    // 顯示阿里在 gen 49 (艾比·塔利卜之子，穆聖表弟) — 同時 gen 66 仍以法蒂瑪之夫
-    // 出現，兩處都會掛 ♻ marker（仿 biblical 利亞案例）
-    '艾比·塔利卜',
-    // 易卜拉欣之兄 哈蘭 → 魯特（古蘭明文先知）
-    '哈蘭（易卜拉欣之兄）',
-    // 易卜拉欣 via Keturah → 米甸 → 舒阿卜（古蘭先知，穆薩岳父）
-    '米甸',
-    // Esau (爾撒-雙胞胎兄弟) → 拉扎 → 穆斯 → 艾優卜 → 祖勒基福勒
-    '爾撒（雙胞胎兄弟）', '拉扎', '穆斯', '艾優卜',
-    // 西布倫 → 亞米太 → 優努斯（鯨魚先知）
-    '西布倫', '亞米太',
-    // 哈倫 → 以利亞撒(哈倫之子) → 非尼哈 → 易勒亞斯 → 艾勒葉賽爾
-    '以利亞撒（哈倫之子）', '非尼哈', '易勒亞斯',
-  ]
-  const byName = personByName.value
-  const s = new Set(expandedClans.value)
-  for (const name of PROPHET_CHAIN) {
-    const node = byName.get(name)
-    if (node) s.add(node.id)
-  }
-  expandedClans.value = s
-}
 // 觸發 subtree ▼ 的最小子孫數 — 1+ 就有 toggle，避免單獨葉節點長尾出現
 const SUBTREE_MIN = 1
 
@@ -1105,21 +1055,6 @@ function onPointerUp(e: PointerEvent) {
 }
 function zoomIn()  { zoom.value = Math.min(2, zoom.value + 0.1) }
 function zoomOut() { zoom.value = Math.max(0.15, zoom.value - 0.1) }
-
-function fitSpine() {
-  // "定位主幹" — fit ~14 rows centered on spine column.
-  // 不 fit canvas 整高（subtree 收摺後仍可能上千 px），改 fit spine rows。
-  if (!cv.value || !viewportRef.value) return
-  const vw = viewportRef.value.clientWidth
-  const vh = viewportRef.value.clientHeight
-  const c = cv.value
-  const targetRows = 14
-  const targetH = targetRows * RH
-  const z = Math.max(0.15, Math.min(0.9, vh / targetH))
-  zoom.value = z
-  panX.value = vw / 2 - c.spineCenterX * z
-  panY.value = 40
-}
 
 function resetToTop() {
   // 預設初始視野：100% zoom + spine 水平置中 + 頂端對齊 viewport
