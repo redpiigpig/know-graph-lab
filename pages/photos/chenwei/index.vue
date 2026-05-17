@@ -7,7 +7,7 @@
     </AppHeader>
 
     <div class="max-w-5xl mx-auto px-6 py-10">
-      <nav class="text-[10px] uppercase tracking-[0.2em] text-stone-500 mb-2">
+      <nav class="hidden sm:flex text-[10px] uppercase tracking-[0.2em] text-stone-500 mb-2 flex-wrap items-center">
         <NuxtLink to="/photos" class="hover:text-stone-900">照片庫</NuxtLink>
         <span class="mx-2">/</span>
         <span class="text-stone-700">辰瑋相片</span>

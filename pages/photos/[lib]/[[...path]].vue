@@ -9,7 +9,7 @@
     </AppHeader>
 
     <div class="max-w-7xl mx-auto px-6 py-10">
-      <nav class="text-[10px] uppercase tracking-[0.2em] text-stone-500 mb-3 flex flex-wrap items-center gap-y-1">
+      <nav class="hidden sm:flex text-[10px] uppercase tracking-[0.2em] text-stone-500 mb-3 flex-wrap items-center gap-y-1">
         <NuxtLink to="/photos" class="hover:text-stone-900">照片庫</NuxtLink>
         <span class="mx-2">/</span>
         <NuxtLink :to="`/photos/${lib}`" class="hover:text-stone-900">{{ libName }}</NuxtLink>
@@ -36,7 +36,7 @@
             </p>
           </div>
         </div>
-        <div v-if="!loading" class="flex items-center gap-4">
+        <div v-if="!loading" class="flex items-center gap-4 flex-wrap justify-end">
           <div class="text-right font-serif">
             <div class="text-2xl text-stone-800 leading-none">
               {{ (folders.length + files.length).toLocaleString() }}
@@ -45,7 +45,7 @@
               {{ folders.length }} 資料夾 · {{ files.length }} 張
             </div>
           </div>
-          <div v-if="files.length" class="flex items-center gap-2">
+          <div v-if="files.length" class="flex items-center gap-2 flex-wrap">
             <button
               v-if="!selectMode"
               @click="enterSelect"
@@ -120,10 +120,19 @@
                 decoding="async"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
+              <video
+                v-else-if="f.kind === 'video'"
+                :src="`${f.url}#t=0.1`"
+                preload="metadata"
+                muted
+                playsinline
+                class="w-full h-full object-cover"
+              />
               <div v-else class="w-full h-full flex flex-col items-center justify-center text-stone-400 bg-stone-100 p-3">
-                <div class="text-3xl">{{ f.kind === 'video' ? '🎬' : '📄' }}</div>
+                <div class="text-3xl">📄</div>
                 <div class="mt-1 text-[10px] uppercase tracking-widest">{{ f.ext.replace('.', '') }}</div>
               </div>
+              <span v-if="f.kind === 'video'" class="photo-tile__play" aria-hidden="true">▶</span>
               <span
                 v-if="selectMode"
                 class="photo-tile__check"
@@ -142,6 +151,8 @@
       v-if="viewerIndex !== null && current"
       class="fixed inset-0 bg-black/95 z-50 flex flex-col"
       @click.self="viewerIndex = null"
+      @touchstart.passive="onTouchStart"
+      @touchend="onTouchEnd"
       tabindex="0"
     >
       <div class="flex items-center justify-between px-6 py-4 text-white border-b border-white/10">
@@ -309,6 +320,25 @@ function onKey(e: KeyboardEvent) {
   else if (e.key === "ArrowRight") next();
 }
 
+const touchStart = { x: 0, y: 0, t: 0 };
+function onTouchStart(e: TouchEvent) {
+  const t = e.touches[0];
+  if (!t) return;
+  touchStart.x = t.clientX;
+  touchStart.y = t.clientY;
+  touchStart.t = Date.now();
+}
+function onTouchEnd(e: TouchEvent) {
+  const t = e.changedTouches[0];
+  if (!t) return;
+  const dx = t.clientX - touchStart.x;
+  const dy = t.clientY - touchStart.y;
+  const dt = Date.now() - touchStart.t;
+  if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) && dt < 600) {
+    if (dx < 0) next(); else prev();
+  }
+}
+
 async function load() {
   loading.value = true;
   errMsg.value = "";
@@ -408,5 +438,22 @@ watch(() => route.fullPath, load);
   background: rgb(217 119 6);
   border-color: rgb(217 119 6);
   color: white;
+}
+.photo-tile__play {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  padding-left: 2px;
+  z-index: 2;
+  pointer-events: none;
 }
 </style>
