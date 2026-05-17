@@ -322,16 +322,22 @@ function toggleExpand(personId: string) {
 // 雙主幹自動展開：法蒂瑪+阿里 全部後代（哈桑+Sharif 線 + 侯賽因+12 伊瑪目線）
 // + 艾比·塔利卜 (顯示阿里在父親那邊，搭配 ♻ 同人標記)
 const DUAL_SPINE_ROOTS = ['法蒂瑪（穆聖之女）', '阿里（艾比·塔利卜之子）', '哈桑·伊本·阿里', '侯賽因·伊本·阿里', '艾比·塔利卜']
-// 「主幹角色」— hasSubtree 強制 false (不顯示 ▼)，他們的後代自動展開故無需收摺鈕
-const NO_COLLAPSE_NAMES = new Set(['阿里（艾比·塔利卜之子）', '法蒂瑪（穆聖之女）', '哈桑·伊本·阿里', '侯賽因·伊本·阿里'])
+// 「主幹角色」all-descendants no-collapse — 動態算（在 dual-spine watcher 一併計算）
+// 包含法蒂瑪/阿里/哈桑/侯賽因 + 所有後代（12 伊瑪目鏈、Sharif Hussein 鏈、阿拔斯王朝 子樹 等等）
+const noCollapseIds = ref<Set<string>>(new Set())
 const dualSpineExpanded = ref(false)
 watch(() => [personByName.value, childrenOf.value], ([byName, chMap]) => {
   if (dualSpineExpanded.value) return
   if ((byName as Map<string, any>).size === 0) return
   const s = new Set(expandedClans.value)
+  const noCol = new Set<string>()
+  // Names whose descendants are 直系，無需 ▼ 收起 (阿里/法蒂瑪/哈桑/侯賽因；艾比·塔利卜 除外，
+  // 他的 subtree 含 12 伊瑪目鏈的入口阿里，自己沒有「直系」地位)
+  const NO_COLLAPSE_ROOTS = ['法蒂瑪（穆聖之女）', '阿里（艾比·塔利卜之子）', '哈桑·伊本·阿里', '侯賽因·伊本·阿里']
   for (const name of DUAL_SPINE_ROOTS) {
     const node = (byName as Map<string, any>).get(name)
     if (!node) continue
+    const isNoColRoot = NO_COLLAPSE_ROOTS.includes(name)
     // BFS add all descendants
     const queue = [node.id]
     const seen = new Set<string>()
@@ -340,11 +346,13 @@ watch(() => [personByName.value, childrenOf.value], ([byName, chMap]) => {
       if (seen.has(id)) continue
       seen.add(id)
       s.add(id)
+      if (isNoColRoot) noCol.add(id)
       const kids = (chMap as Map<string, string[]>).get(id) ?? []
       queue.push(...kids)
     }
   }
   expandedClans.value = s
+  noCollapseIds.value = noCol
   dualSpineExpanded.value = true
 }, { immediate: true })
 
@@ -396,8 +404,9 @@ const cv = computed(() => {
     placedPersonIds.add(personId)
     const raw = p.data.name as string
     // Dup placements: 不顯示 ▼（descendants 由 primary 卡負責），標 samePerson=true
-    // 主幹角色（阿里/法蒂瑪/哈桑/侯賽因）也不顯示 ▼（雙主幹預設展開故無需）
-    const isMainBranch = NO_COLLAPSE_NAMES.has(raw)
+    // 主幹角色（阿里/法蒂瑪/哈桑/侯賽因 + 全部後代：12 伊瑪目 + Sharif Hussein chain 等）
+    // 不顯示 ▼（雙主幹預設展開故無需）
+    const isMainBranch = noCollapseIds.value.has(personId)
     let descCount = isSpine || isDup || isMainBranch ? 0 : countDescendants(personId)
     const isExpanded = expandedSet.has(personId)
     let hasSubtree = !isSpine && !isDup && !isMainBranch && descCount >= SUBTREE_MIN
