@@ -778,6 +778,35 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False,
             failed.append((b["title"], "empty file"))
             continue
 
+        # Pre-flight: PDFs > 50 MB always 400 INVALID_ARGUMENT from Gemini Files API.
+        # Skip Gemini entirely and route to Haiku image-batch path (no file-size cap).
+        GEMINI_MAX_BYTES = 50 * 1024 * 1024
+        if fsize > GEMINI_MAX_BYTES and _HAS_ANTHROPIC and _HAS_FITZ:
+            title_short = (b["title"] or src.stem)[:40]
+            print(f"  [{i:3d}/{len(targets)}] OCR  {title_short}  ({fsize/1024/1024:.1f} MB > 50, → Haiku)…",
+                  end="", flush=True)
+            try:
+                if _haiku_lazy_client is None:
+                    _haiku_lazy_client = _make_anthropic_client()
+                hresult = process_one_haiku(_haiku_lazy_client, b, src)
+                if hresult["status"] == "ok":
+                    ok += 1
+                    consecutive_oversized_quota = 0
+                else:
+                    failed.append((b["title"], hresult["error"]))
+                    if _is_quota_err(hresult.get("error", "")):
+                        consecutive_oversized_quota += 1
+                    elif not hresult.get("transient"):
+                        update_book_error(b["id"], f"OCR (Haiku >50MB): {hresult['error']}")
+            except Exception as e:
+                print(f"  ⚠ Haiku pre-route failed: {str(e)[:120]}", file=sys.stderr)
+                failed.append((b["title"], f"Haiku pre-route: {str(e)[:120]}"))
+            if consecutive_oversized_quota >= 2:
+                print(f"\n⛔ Oversized-Haiku quota hit twice in a row — pausing run (per user rule).",
+                      flush=True)
+                break
+            continue
+
         # Rate limit
         gap = time.time() - last_call
         if gap < min_gap:
