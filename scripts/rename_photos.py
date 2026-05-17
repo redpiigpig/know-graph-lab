@@ -20,8 +20,11 @@ Idempotent：已符合格式且編號正確的檔不會再 rename。
 若 execute 中途崩潰，會留下 tmp 檔；下一次 execute 啟動時偵測並 abort。
 
 Usage:
-    python scripts/rename_photos.py plan      # dry-run, 寫出 photo_rename_report.json
-    python scripts/rename_photos.py execute   # 依 report 實際 rename
+    python scripts/rename_photos.py plan [LIB]     # dry-run, 寫出 photo_rename_report_{lib}.json
+    python scripts/rename_photos.py execute [LIB]  # 依 report 實際 rename
+    python scripts/rename_photos.py auto LIB...    # 對每個 LIB 連跑 plan + execute
+
+LIB ∈ {chenwei, training, hongshi}，省略時預設 chenwei。
 """
 import json
 import re
@@ -43,9 +46,27 @@ try:
 except Exception:
     HEIF_OK = False
 
-PHOTOS_ROOT = Path("G:/我的雲端硬碟/資料/儲存資料夾/辰瑋相片")
-REPORT_PATH = Path(__file__).parent / "photo_rename_report.json"
+PHOTOS_PARENT = Path("G:/我的雲端硬碟/資料/儲存資料夾")
+
+# Library → 對應子資料夾
+LIBRARIES = {
+    "chenwei": "辰瑋相片",
+    "training": "訓練相片",
+    "hongshi": "弘誓相片",
+}
+DEFAULT_LIB = "chenwei"
+
+# 全域，由 main() 設定
+PHOTOS_ROOT = PHOTOS_PARENT / LIBRARIES[DEFAULT_LIB]
+REPORT_PATH = Path(__file__).parent / f"photo_rename_report_{DEFAULT_LIB}.json"
 LOG_PATH = Path(__file__).parent / "photo_rename_log.jsonl"
+
+def set_library(slug: str):
+    global PHOTOS_ROOT, REPORT_PATH
+    if slug not in LIBRARIES:
+        raise SystemExit(f"未知 library：{slug}（可用：{list(LIBRARIES)}）")
+    PHOTOS_ROOT = PHOTOS_PARENT / LIBRARIES[slug]
+    REPORT_PATH = Path(__file__).parent / f"photo_rename_report_{slug}.json"
 
 IMG_EXTS = {
     ".jpg", ".jpeg", ".png", ".webp", ".gif", ".heic", ".heif", ".avif", ".bmp",
@@ -343,11 +364,39 @@ def cmd_execute():
     print(f"Log: {LOG_PATH}")
 
 
+def cmd_auto(libs: list[str]):
+    """每個 library：plan → execute（連跑）。Overnight 用。"""
+    if not libs:
+        libs = list(LIBRARIES)
+    print(f"=== AUTO mode: {libs} ===\n")
+    for lib in libs:
+        if lib not in LIBRARIES:
+            print(f"!! 跳過未知 library：{lib}")
+            continue
+        print(f"\n========== [{lib}] ==========")
+        set_library(lib)
+        print(f"PHOTOS_ROOT = {PHOTOS_ROOT}")
+        print(f"\n--- PLAN ---")
+        cmd_plan()
+        print(f"\n--- EXECUTE ---")
+        cmd_execute()
+    print("\n=== AUTO mode done ===")
+
+
 def main():
-    if len(sys.argv) < 2 or sys.argv[1] not in ("plan", "execute"):
+    argv = sys.argv[1:]
+    if not argv or argv[0] not in ("plan", "execute", "auto"):
         print(__doc__)
         sys.exit(1)
-    if sys.argv[1] == "plan":
+    cmd = argv[0]
+    rest = argv[1:]
+    if cmd == "auto":
+        cmd_auto(rest)
+        return
+    # plan/execute：optional 第二參數選 library
+    if rest:
+        set_library(rest[0])
+    if cmd == "plan":
         cmd_plan()
     else:
         cmd_execute()
