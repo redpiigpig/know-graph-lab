@@ -782,6 +782,8 @@ const cv = computed(() => {
 
     function renderBranches(parentSeeId: string, depth: number, parentBranchY?: number) {
       const kids = branchChildren.get(parentSeeId) ?? []
+      // Focus mode：當一個展開的分支主教鏈往下延伸，下方 attachY 落在這範圍內的兄弟分支隱形
+      let focusYEnd: number | null = null
       for (const br of kids) {
         // Skip if branch is in a menu and user hasn't revealed it yet
         if (isBranchInMenu(br)) continue
@@ -795,6 +797,10 @@ const cv = computed(() => {
           attachY = approxYByYear(sp, br.founded_year, bishopMap, spineHeaderY)
         } else {
           attachY = parentBranchY ?? (spineHeaderY)
+        }
+        // FOCUS MODE：如果上一個展開的兄弟分支主教鏈覆蓋到本分支 attachY → 隱形
+        if (focusYEnd != null && attachY < focusYEnd) {
+          continue
         }
         const bx = branchColBaseX + branchDir * depth * (BRANCH_W + BRANCH_GAP)
         let by = Math.max(attachY - BRANCH_H / 2, spineHeaderY)
@@ -816,14 +822,11 @@ const cv = computed(() => {
         })
 
         // Connection line: SINGLE DIAGONAL from bishop edge → branch edge
-        // 改成單一斜線避免 L 形多支同 midX 堆疊出虛假長直線
         let fromX: number, toX: number
         if (branchDir > 0) {
-          // 東方往右：bishop 右緣 → branch 左緣
           fromX = depth === 0 ? headerX + BISH_W : bx - BRANCH_GAP
           toX = bx
         } else {
-          // rome 往左：bishop 左緣 → branch 右緣
           fromX = depth === 0 ? headerX : bx + BRANCH_W + BRANCH_GAP
           toX = bx + BRANCH_W
         }
@@ -835,13 +838,13 @@ const cv = computed(() => {
           paths.push({ d: dPath, stroke: sp.color, width: 2, opacity: 0.85 })
         }
 
+        let chainEndY = by + BRANCH_H + 4
         if (isBranchExpanded(br.id)) {
           let cy = by + BRANCH_H + 4
           const branchBishopCX = bx + BRANCH_INDENT + (BRANCH_W - BRANCH_INDENT) / 2
           let prevBb: BishopIn | null = null
           let prevBottomY: number | null = null
           for (const bb of br.bishops) {
-            // 主教傳承軸線：從上一任卡片底到這一任卡片頂；若 succession_number 有 gap → 點線
             if (prevBb != null && prevBottomY != null) {
               const hasGap = prevBb.succession_number != null && bb.succession_number != null
                 && (bb.succession_number - prevBb.succession_number) > 1
@@ -868,6 +871,13 @@ const cv = computed(() => {
             prevBb = bb
             prevBottomY = cy + (BISH_H - 2)
             cy += BISH_H - 2 + BISH_VG
+          }
+          chainEndY = cy
+          // 把 lastBranchYByDepth 更新到 chain 末端，下一個兄弟分支會堆疊在後面（不蓋住主教鏈）
+          if (br.bishops.length > 0) {
+            lastBranchYByDepth.set(depth, chainEndY)
+            // Focus mode：本分支展開後，主教鏈覆蓋到 chainEndY；下方 attachY 在範圍內的兄弟分支隱形
+            focusYEnd = chainEndY
           }
           renderBranches(br.id, depth + 1, by + BRANCH_H / 2)
         }
