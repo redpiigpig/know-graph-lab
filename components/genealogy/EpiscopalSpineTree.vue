@@ -99,11 +99,34 @@
                   {{ n.successionNum }}
                 </span>
                 <span class="font-medium text-slate-800 truncate flex-1 text-left">{{ n.label }}</span>
+                <button v-if="n.menuBranchCount"
+                        class="text-[9px] px-1 rounded bg-violet-100 text-violet-700 hover:bg-violet-200 cursor-default shrink-0"
+                        @click.stop="toggleBishopMenu(n.id)">
+                  +{{ n.menuBranchCount }} 被立
+                </button>
               </div>
               <div v-if="n.sub"
                    class="text-[8px] text-slate-400 truncate w-full text-left"
                    :class="n.successionNum != null ? 'pl-6' : ''">
                 {{ n.sub }}
+              </div>
+              <!-- Popup menu for multi-consecration -->
+              <div v-if="openMenuBishopId === n.id && n.menuBranches"
+                   class="absolute left-full top-0 ml-2 bg-white border border-violet-300 rounded-lg shadow-lg p-1 z-50 min-w-[200px] max-h-[300px] overflow-y-auto"
+                   @click.stop>
+                <div class="text-[9px] text-slate-500 px-2 py-1 border-b border-gray-100">
+                  {{ n.label }} 任內按立 {{ n.menuBranches.length }} 個教座
+                </div>
+                <button v-for="mb in n.menuBranches" :key="mb.id"
+                        class="block w-full text-left px-2 py-1 text-[10px] hover:bg-violet-50 rounded cursor-default"
+                        @click.stop="revealMenuBranch(mb.id)">
+                  <div class="flex items-center gap-1.5">
+                    <span class="inline-block w-1 h-3 rounded-full"
+                          :style="{ background: mb.is_split ? '#dc2626' : '#7c3aed' }" />
+                    <span class="font-medium text-slate-800 flex-1 truncate">{{ mb.label }}</span>
+                    <span class="text-[9px] text-slate-400 tabular-nums shrink-0">{{ mb.year }}</span>
+                  </div>
+                </button>
               </div>
             </template>
 
@@ -119,6 +142,43 @@
               <div v-if="n.sub" class="text-[8px] text-slate-400 truncate w-full text-left pl-3.5">{{ n.sub }}</div>
             </template>
           </div>
+        </div>
+      </div>
+
+      <!-- Search bar -->
+      <div class="absolute top-3 left-3 z-40 pointer-events-auto" style="width: 320px;">
+        <div class="relative">
+          <input
+            v-model="searchQuery"
+            type="text"
+            placeholder="搜尋主教或教座（中／英／教座名）"
+            class="w-full px-3 py-2 text-[12px] bg-white/95 border border-gray-200 rounded-lg shadow-sm
+                   focus:outline-none focus:border-violet-400 focus:ring-1 focus:ring-violet-200"
+            @focus="searchOpen = true"
+            @input="searchOpen = true"
+            @keydown.escape="searchOpen = false"
+          />
+          <button v-if="searchQuery"
+                  class="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-700 text-[14px] cursor-default"
+                  @click.stop="searchQuery = ''; searchOpen = false">×</button>
+        </div>
+        <div v-if="searchOpen && searchResults.length > 0"
+             class="mt-1 bg-white/98 border border-gray-200 rounded-lg shadow-lg max-h-[420px] overflow-y-auto">
+          <button v-for="r in searchResults" :key="r.id"
+                  class="block w-full text-left px-3 py-1.5 text-[11px] hover:bg-violet-50 border-b border-gray-50 cursor-default"
+                  @click.stop="jumpTo(r)">
+            <div class="flex items-center gap-2">
+              <span class="inline-block w-[3px] h-[14px] rounded-full"
+                    :style="{ background: r.spineColor || '#cbd5e1' }" />
+              <span class="font-medium text-slate-800 flex-1 truncate">{{ r.label }}</span>
+              <span class="text-[9px] text-slate-400 shrink-0">{{ r.kindLabel }}</span>
+            </div>
+            <div v-if="r.context" class="text-[9px] text-slate-400 truncate ml-3 mt-0.5">{{ r.context }}</div>
+          </button>
+        </div>
+        <div v-else-if="searchOpen && searchQuery && searchResults.length === 0"
+             class="mt-1 bg-white/95 border border-gray-200 rounded-lg shadow-sm px-3 py-2 text-[11px] text-gray-400">
+          沒有結果
         </div>
       </div>
 
@@ -302,6 +362,22 @@ function toggleApostle(apostleId: string) {
   else s.add(apostleId)
   collapsedApostles.value = new Set(s)
 }
+// 多教座按立選單：哪個主教的「+N 被立座」popup 目前開著、哪些被點過顯示
+const openMenuBishopId = ref<string | null>(null)
+const revealedFromMenu = ref<Set<string>>(new Set())
+function toggleBishopMenu(bishopId: string) {
+  openMenuBishopId.value = openMenuBishopId.value === bishopId ? null : bishopId
+}
+function revealMenuBranch(branchId: string) {
+  const s = new Set(revealedFromMenu.value)
+  s.add(branchId)
+  revealedFromMenu.value = s
+  // Also expand the branch so its bishops show
+  const cs = new Set(collapsedBranches.value)
+  cs.delete(branchId)
+  collapsedBranches.value = cs
+  openMenuBishopId.value = null
+}
 watch(() => props.graph, (g) => {
   if (!g) return
   if (g.branches) collapsedBranches.value = new Set(g.branches.map((b: any) => b.id))
@@ -325,6 +401,9 @@ interface LNode {
   tooltip?: string
   apostleId?: string         // for apostle node — for click handler
   apostleBranchCount?: number   // for apostle node — # depth-0 apostolic branches under this apostle
+  bishopId?: string          // for bishop node — raw bishop id (lookup menuCountByBishop)
+  menuBranchCount?: number   // for bishop node — # daughter sees collapsed into menu
+  menuBranches?: Array<{ id: string; label: string; year: number | null; is_split: boolean }>   // for popup menu
 }
 interface LPath { d: string; stroke?: string; dashed?: boolean; dashes?: string; width?: number; opacity?: number }
 interface LGuide { x: number; y1: number; y2: number; color: string; width?: number }
@@ -346,6 +425,26 @@ const cv = computed(() => {
   }
   for (const arr of branchChildren.values()) {
     arr.sort((a, b) => (a.founded_year ?? 9999) - (b.founded_year ?? 9999))
+  }
+
+  // ── 多教座按立選單：全圖一次性計算 branchesByParentBishop ──
+  // 同一位主教按立 >= 2 個子座時，預設摺成「+N 被立座」選單，使用者從選單點才 reveal
+  const branchesByParentBishop = new Map<string, BranchIn[]>()
+  for (const br of g.branches) {
+    if (!br.parent_bishop_id) continue
+    if (!branchesByParentBishop.has(br.parent_bishop_id)) branchesByParentBishop.set(br.parent_bishop_id, [])
+    branchesByParentBishop.get(br.parent_bishop_id)!.push(br)
+  }
+  function isBranchInMenu(br: BranchIn): boolean {
+    const sibs = branchesByParentBishop.get(br.parent_bishop_id ?? '') ?? []
+    return sibs.length >= 2 && !revealedFromMenu.value.has(br.id)
+  }
+  // Per bishop: how many hidden-in-menu daughter sees
+  const menuCountByBishop = new Map<string, number>()
+  for (const [bid, sibs] of branchesByParentBishop) {
+    if (sibs.length < 2) continue
+    const hidden = sibs.filter(s => !revealedFromMenu.value.has(s.id))
+    if (hidden.length > 0) menuCountByBishop.set(bid, hidden.length)
   }
   function expandedDepth(seeId: string): number {
     let n = 0
@@ -556,16 +655,24 @@ const cv = computed(() => {
       const b = sp.bishops[bi]
       bishopMap.set(b.id, by + BISH_H / 2)
       if (firstBishopY == null) firstBishopY = by
+      const menuCount = menuCountByBishop.get(b.id) ?? 0
+      const menuBranches = menuCount > 0
+        ? (branchesByParentBishop.get(b.id) ?? [])
+            .filter(br => !revealedFromMenu.value.has(br.id))
+            .map(br => ({ id: br.id, label: br.see_zh + (br.church ? ' · ' + br.church : ''), year: br.founded_year, is_split: br.is_split }))
+        : undefined
       nodes.push({
         id: 'bish_' + b.id, kind: 'bishop',
         label: b.name_zh,
-        // 任期年份；不再附 church 後綴（spine 顏色+see 標籤已表明所屬教派）
         sub: b.start_year != null
           ? `${formatYear(b.start_year)}–${b.end_year != null ? formatYear(b.end_year) : ''}`
           : '',
         x: headerX, y: by, w: BISH_W, h: BISH_H,
         successionNum: b.succession_number,
         spineColor: sp.color,
+        bishopId: b.id,
+        menuBranchCount: menuCount || undefined,
+        menuBranches,
         tooltip: `${b.name_zh}\n任期：${formatYear(b.start_year)}–${formatYear(b.end_year)}${b.notes ? '\n' + b.notes : ''}`,
       })
       by += BISH_H + BISH_VG
@@ -618,6 +725,8 @@ const cv = computed(() => {
     function renderBranches(parentSeeId: string, depth: number, parentBranchY?: number) {
       const kids = branchChildren.get(parentSeeId) ?? []
       for (const br of kids) {
+        // Skip if branch is in a menu and user hasn't revealed it yet
+        if (isBranchInMenu(br)) continue
         // Find the Y of the parent bishop during whose tenure this daughter was founded.
         // Parent bishop may live in either:
         //   - the spine bishopMap (if direct child of spine)
@@ -817,12 +926,155 @@ function approxYByYear(sp: SpineIn, year: number | null, map: Map<string, number
 
 function cardClass(n: LNode): string {
   const base = 'rounded-lg shadow-sm hover:shadow transition-shadow'
-  if (n.kind === 'jesus') return `${base} bg-amber-50 border-2 border-amber-400`
-  if (n.kind === 'apostle') return `${base} bg-white border border-slate-200`
-  if (n.kind === 'see') return 'flex items-center justify-end pr-1'   // no frame — pure text label
-  if (n.kind === 'bishop') return `${base} bg-white border border-slate-200`
-  if (n.kind === 'branch-see') return `${base} bg-violet-50 border border-violet-300 cursor-pointer hover:bg-violet-100`
+  const highlight = highlightedNodeId.value === n.id ? ' ring-2 ring-violet-400 ring-offset-1' : ''
+  if (n.kind === 'jesus') return `${base} bg-amber-50 border-2 border-amber-400${highlight}`
+  if (n.kind === 'apostle') return `${base} bg-white border border-slate-200${highlight}`
+  if (n.kind === 'see') return 'flex items-center justify-end pr-1'
+  if (n.kind === 'bishop') return `${base} bg-white border border-slate-200${highlight}`
+  if (n.kind === 'branch-see') return `${base} bg-violet-50 border border-violet-300 cursor-pointer hover:bg-violet-100${highlight}`
   return base
+}
+
+// ── Search ──────────────────────────────────────────────────
+interface SearchResult {
+  id: string
+  label: string
+  kindLabel: string
+  context: string
+  spineColor?: string
+  // Anchor info — for jump-to
+  spineKey?: string         // which spine (for spine bishops)
+  branchId?: string         // which branch (for branch bishops or branch-see)
+  bishopId?: string         // raw bishop id (for nested lookup)
+  apostleId?: string        // apostolic-branch host
+}
+const searchQuery = ref('')
+const searchOpen = ref(false)
+const highlightedNodeId = ref<string | null>(null)
+
+const searchIndex = computed<SearchResult[]>(() => {
+  const out: SearchResult[] = []
+  const g = props.graph
+  if (!g) return out
+
+  // Apostles
+  for (const a of g.apostles) {
+    out.push({
+      id: 'ap_' + a.id, label: a.name_zh, kindLabel: '使徒',
+      context: a.name_en, apostleId: a.id,
+    })
+  }
+  // Spine sees + bishops
+  for (const sp of g.spines) {
+    if (sp.see) {
+      out.push({
+        id: 'see_' + sp.see.id, label: sp.see.see_zh, kindLabel: '宗主教座',
+        context: `${sp.see.name_zh} · ${sp.see.church}`,
+        spineColor: sp.color, spineKey: sp.key,
+      })
+    }
+    for (const b of sp.bishops) {
+      out.push({
+        id: 'bish_' + b.id,
+        label: b.name_zh,
+        kindLabel: (sp.see?.see_zh ?? '') + (b.succession_number != null ? ` #${b.succession_number}` : ''),
+        context: [b.name_en, b.start_year != null ? `${formatYear(b.start_year)}–${b.end_year != null ? formatYear(b.end_year) : ''}` : null].filter(Boolean).join(' · '),
+        spineColor: sp.color, spineKey: sp.key, bishopId: b.id,
+      })
+    }
+  }
+  // Branch sees + bishops
+  for (const br of g.branches) {
+    out.push({
+      id: 'br_' + br.id, label: `${br.see_zh}・${br.church}`, kindLabel: '旁支教座',
+      context: br.founded_year != null ? `${formatYear(br.founded_year)} 創立` : '',
+      branchId: br.id,
+    })
+    for (const bb of br.bishops) {
+      out.push({
+        id: 'bbish_' + bb.id,
+        label: bb.name_zh,
+        kindLabel: br.see_zh + (bb.succession_number != null ? ` #${bb.succession_number}` : ''),
+        context: [bb.name_en, bb.start_year != null ? `${formatYear(bb.start_year)}–${bb.end_year != null ? formatYear(bb.end_year) : ''}` : null].filter(Boolean).join(' · '),
+        branchId: br.id, bishopId: bb.id,
+      })
+    }
+  }
+  // Apostolic branches + their bishops
+  for (const ab of (g.apostolicBranches ?? [])) {
+    out.push({
+      id: 'apbr_' + ab.id, label: `${ab.see_zh}・${ab.church}`, kindLabel: '使徒立座',
+      context: ab.founded_year != null ? `${formatYear(ab.founded_year)} 使徒立座` : '',
+      spineColor: '#a16207', branchId: ab.id, apostleId: ab.parent_apostle_id ?? undefined,
+    })
+    for (const bb of ab.bishops) {
+      out.push({
+        id: 'apbish_' + bb.id,
+        label: bb.name_zh,
+        kindLabel: ab.see_zh + (bb.succession_number != null ? ` #${bb.succession_number}` : ''),
+        context: bb.name_en ?? '',
+        branchId: ab.id, bishopId: bb.id,
+      })
+    }
+  }
+  return out
+})
+
+const searchResults = computed<SearchResult[]>(() => {
+  const q = searchQuery.value.trim().toLowerCase()
+  if (q.length < 1) return []
+  const out: SearchResult[] = []
+  for (const r of searchIndex.value) {
+    if (
+      r.label.toLowerCase().includes(q) ||
+      (r.context && r.context.toLowerCase().includes(q)) ||
+      (r.kindLabel && r.kindLabel.toLowerCase().includes(q))
+    ) {
+      out.push(r)
+      if (out.length >= 100) break
+    }
+  }
+  return out
+})
+
+function jumpTo(r: SearchResult) {
+  // Auto-expand path to reveal target node
+  if (r.apostleId) collapsedApostles.value = (() => { const s = new Set(collapsedApostles.value); s.delete(r.apostleId!); return s })()
+  if (r.branchId) collapsedBranches.value = (() => { const s = new Set(collapsedBranches.value); s.delete(r.branchId!); return s })()
+
+  // Wait for re-render, then find the rendered node and pan to it
+  nextTick(() => {
+    const node = cv.value.nodes.find(n => n.id === r.id)
+    if (!node) {
+      // Try fallbacks: if bishop is in a collapsed branch, find branch header
+      const fallbackIds = [
+        r.branchId ? 'br_' + r.branchId : null,
+        r.branchId ? 'apbr_' + r.branchId : null,
+        r.apostleId ? 'ap_' + r.apostleId : null,
+      ].filter(Boolean) as string[]
+      for (const fid of fallbackIds) {
+        const fn = cv.value.nodes.find(n => n.id === fid)
+        if (fn) { panToNode(fn); searchOpen.value = false; return }
+      }
+      searchOpen.value = false
+      return
+    }
+    panToNode(node)
+    searchOpen.value = false
+  })
+}
+
+function panToNode(n: LNode) {
+  const rect = viewportRef.value?.getBoundingClientRect()
+  if (!rect) return
+  // Center the node in the viewport
+  const z = zoom.value
+  const cx = n.x + n.w / 2
+  const cy = n.y + n.h / 2
+  panX.value = rect.width / 2 - cx * z
+  panY.value = rect.height / 2 - cy * z
+  highlightedNodeId.value = n.id
+  setTimeout(() => { if (highlightedNodeId.value === n.id) highlightedNodeId.value = null }, 3000)
 }
 
 // ── Pan & Zoom ──────────────────────────────────────────────

@@ -179,6 +179,20 @@ description: 使徒統緒族譜圖（/genealogy/episcopal-tree）的資料維護
 - **Spine 主線 opacity = 0.55**（之前 0.10 看不到傳承）；patriarchateYear 後加粗（width 10）強化「宗主教座成立」
 - **每個 spine 至少預留 1 個 branch slot 寬度**，避免 collapsed branch headers 溢出到下一個 spine 領域
 
+## 導航功能
+
+**搜尋（top-left 輸入框）**：
+- 搜尋對象：使徒、spine 主 see、spine 主教、旁支 see、旁支主教、使徒立座 see、使徒立座主教
+- 支援中文名 / 英文名 / 教座名 / 任期年份 全字串 substring match
+- 點搜尋結果 → 自動展開必要的 branch / apostle，nextTick 後 pan canvas 把該 node 居中 + 加 violet ring highlight（3s 消失）
+
+**多教座按立選單（`menuBranchCount` / `menuBranches`）**：
+- 同一位主教按立 >= 2 個子座時（如 Pius IX 任內建立 13 個美洲教省），主教卡片右側顯示「+N 被立」紫色 badge
+- 預設這些子座**完全不渲染**（避免幾十個 ▸ headers 在同一個 Y 堆疊到無法閱讀）
+- 點 badge 開 popup menu 列出所有 daughter sees + 年份 + split / 設立色標
+- 點 menu 項 → 把該分支從 `revealedFromMenu` 揭示出來、同時 expand 它（從 collapsedBranches 移除）
+- State：`revealedFromMenu: Set<branchId>`、`openMenuBishopId: string | null`
+
 ## 截圖工具
 
 [scripts/episcopal-shot.mjs](../../scripts/episcopal-shot.mjs) — headless：
