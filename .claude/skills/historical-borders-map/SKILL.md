@@ -11,6 +11,7 @@ description: 「歷史國界地圖」工具集（/maps/historical-borders）— 
 > 1. **歐洲區（羅馬、拜占庭、神羅、法蘭克、西哥德、倫巴底、教皇國、納瓦拉、萊昂、卡斯提爾、阿拉貢、西西里、威尼斯、西班牙、法蘭西、俄羅斯沙皇／帝國、普魯士、德意志、瑞典、丹麥、波蘭立陶宛、鄂圖曼…34 個）已改用 OHM 真實邊界**（[ohm-polygons.geojson](../../../public/maps/ohm-polygons.geojson)，由 [fetch_ohm_europe.py](../../../scripts/fetch_ohm_europe.py) 從 OpenHistoricalMap Overpass API 抓 + DP 0.1° 簡化）。每個 polygon 年份分段，準確沿海岸線。
 > 2. **其他區（中國、伊斯蘭、古印度、古波斯、美洲）仍是 city-hull**，HistoricalBordersMap.vue 用 `<clipPath id="land-clip">` 把切過海的部分裁掉。
 > 3. **OHM 覆蓋限制**：古近東／古印度／前哥倫布美洲幾乎沒人補（11 個非歐洲新加帝國裡 7 個 OHM 0 polygon），所以這些區短期不換。CHGIS（中國）/ DARMC（地中海+中世紀）是未來路徑。
+> 4. **OHM 歐洲覆蓋已知 gap**：神羅 1202~1647（中世紀後期到三十年戰爭結束 OHM 沒人補）— 此 gap 期間 fine HRE city-hull 接手。匈牙利只有 1921-1941（中世紀王國時期 OHM 沒補）。fine 仍是 fallback safety net。
 
 > 🧹 **任務結束清 c:/tmp**：地圖任務常產 `historical-borders-XXX.png` 等截圖到 `/c/tmp/`，session 尾段要刪。保留 `/c/tmp/hbm-sample/`（53 snapshots，重抓 ~2 分鐘）。詳見 [[feedback-tmp-cleanup]]。
 
