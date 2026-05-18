@@ -11,6 +11,18 @@
       <rect :width="width" :height="height" fill="#FFFFFF" />
 
       <g :transform="`translate(${transform.x},${transform.y}) scale(${transform.k})`">
+        <!-- clipPath：把所有 state polygons 裁到現代陸地，去掉 city-hull 切過海洋的部分 -->
+        <!-- 放在同一 transform <g> 內，coord 系統一致 -->
+        <defs>
+          <clipPath id="land-clip">
+            <path
+              v-for="p in landPaths"
+              :key="`clip-${p.id}`"
+              :d="p.d"
+            />
+          </clipPath>
+        </defs>
+
         <!-- 陸地灰底 -->
         <path
           v-for="p in landPaths"
@@ -20,19 +32,21 @@
           stroke="none"
         />
 
-        <!-- 國家／帝國 polygon (彩色) -->
-        <path
-          v-for="p in statePaths"
-          :key="p.id"
-          :d="p.d"
-          :fill="p.fill"
-          :stroke="p.strokeColor"
-          :stroke-width="1.2 / transform.k"
-          stroke-opacity="0.9"
-          :pointer-events="'auto'"
-          class="cursor-pointer"
-          @click.stop="onStateClick(p, $event)"
-        />
+        <!-- 國家／帝國 polygon (彩色) — 裁到陸地 -->
+        <g clip-path="url(#land-clip)">
+          <path
+            v-for="p in statePaths"
+            :key="p.id"
+            :d="p.d"
+            :fill="p.fill"
+            :stroke="p.strokeColor"
+            :stroke-width="1.2 / transform.k"
+            stroke-opacity="0.9"
+            :pointer-events="'auto'"
+            class="cursor-pointer"
+            @click.stop="onStateClick(p, $event)"
+          />
+        </g>
 
         <!-- 海岸線：黑 -->
         <path
