@@ -1,202 +1,85 @@
 ---
 name: standardize-ebook
-description: Turn a parsed book (EPUB or PDF) into the "reader-ready" format used by /ebook/[id] — markdown chunks with simplified→traditional Chinese, publisher boilerplate stripped, multi-volume hierarchy, smart chapter titles. Branches by file_type — EPUB uses ebooklib + TOC anchors; PDF uses font-size heuristics. Use when wiring a new book into the reader, fixing a book whose TOC looks ugly, batch-processing a category, or extending the pipeline to support a new file type.
+description: Standardize parsed books (EPUB + PDF) into the reader-ready format used by /ebook/[id]. EPUB → markdown chunks via TOC anchors. PDF Plan A → s2tw + collapse spacing on per-page JSONL with page_number preserved. PDF Plan B v0 → TOC-bookmark-driven chapter chunks with page_range. Use when wiring a new book into the reader, fixing a book whose TOC looks ugly, batch-processing a category, or processing freshly-OCR'd scanned PDFs.
 ---
 
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session（"exceeds the dimension limit for many-image requests"）。使用者一說要傳截圖，立刻提醒先確認尺寸；推薦 Win+Shift+S 框選或縮到 ≤ 1920px。
 
 # Standardize Ebook Skill
 
-Turn a parsed book into the reader-ready format. The pipeline **branches on file_type** because EPUB and PDF expose totally different signals — EPUB has semantic HTML + a TOC tree; PDF only has text-on-page coordinates and font sizes. Each branch produces the same output JSONL contract.
+Turns a parsed book into the reader-ready format at `/ebook/[id]`. The pipeline **branches on `ebooks.file_type`** because EPUB and PDF expose totally different signals:
 
-## Branch decision (read this first)
-
-| `ebooks.file_type` | Source signals | Standardize script | Status |
+| `file_type` | Source | Script | Granularity |
 |---|---|---|---|
-| `epub` | `<h1-h4>`, `<b>/<em>`, `<p>`, TOC tree with anchors | [`scripts/standardize_ebook.py`](../../../scripts/standardize_ebook.py) | ✅ implemented |
-| `pdf` (text-extractable) | text + font size + bbox via PyMuPDF | `scripts/standardize_pdf.py` | ⚠ **NOT YET BUILT** — design below |
-| `pdf` (scanned) | image pages → Gemini Vision OCR JSON | [`scripts/ocr_with_gemini.py`](../../../scripts/ocr_with_gemini.py) emits chunks; then run the PDF pipeline on those | ✅ OCR scheduled, PDF pipeline pending |
+| `epub` | `<h1-h4>`, `<b>/<em>`, `<p>`, TOC tree | [`scripts/standardize_ebook.py`](../../../scripts/standardize_ebook.py) | chapter chunks (`chunk_type=chapter`) |
+| `pdf` (text or OCR'd) | per-page JSONL from parse_worker / ocr_with_gemini | [`scripts/standardize_pdf_lite.py`](../../../scripts/standardize_pdf_lite.py) (Plan A) → [`scripts/standardize_pdf.py`](../../../scripts/standardize_pdf.py) (Plan B) | Plan A: per-page; Plan B: chapter |
 
-Both branches write the **same JSONL shape** to `G:/我的雲端硬碟/資料/電子書/_chunks/{ebook_id}.jsonl` so the reader doesn't care which path produced it.
+Both branches write the **same JSONL shape** to `G:/我的雲端硬碟/資料/電子書/_chunks/{ebook_id}.jsonl` so the reader stays branch-agnostic.
+
+> **🔑 Hard rule: PDF `page_number` is sacred.** Citations in 書摘 reference the real publisher page number. Any transform that re-numbers `page_number` is a bug. `chunk_index` can be re-numbered; `page_number` cannot.
 
 ---
 
-## Shared rules — title / boilerplate / merging (both pipelines reuse)
+## 流程 — 新書 vs 舊書
 
-These rules run AFTER the file-specific extraction (HTML walk for EPUB, font heuristics for PDF) and BEFORE persistence. The PDF pipeline must reuse them — they're already implemented in `standardize_ebook.py` and should be factored into a shared module when `standardize_pdf.py` lands.
+### 新書（daily ingest 自動跑）
 
-### Chapter title derivation
-
-Pulled out of `derive_chapter_title()` and `normalize_chapter_title()` in `standardize_ebook.py`. The TOC sidebar's `chapter_path` should always end up looking like one of:
-
-| Cosmetic rename | Triggers |
-|---|---|
-| `版權頁` | content starts with `圖書在版編目` / `图书在版编目`, OR title is literally `CIP數據` / `版權信息` / `版权信息` / `版權頁` / `版权页` |
-| `目錄` (or `目　錄`, original spacing kept) | when chunk content's first short line is "目錄" — picked up automatically by first-line fallback |
-| `後記`, `序言`, `致謝`, `導論`, `索引`, etc. | first short line as-is, no special handling needed |
-
-Selection priority for chapter title (first match wins):
-
-1. **Markdown heading** — `## title` / `### title` … in content (after publisher rename normalization)
-2. **CIP detected anywhere in first 3 lines** → `版權頁`
-3. **Earliest short non-banner line** (≤30 chars, doesn't match `叢書|丛书|名著|系列|文集|文庫|出版社`) — natural document order, so 「目錄」 beats a later「第一章」inside a TOC chunk
-4. **Long chapter heading anywhere** — lines matching `^第N(章|卷|編|册|冊|部|集|篇|節|节|回|课|課)` accepted even if longer than 30 chars (君主論's chapter titles can be 30+ chars)
-5. First candidate ≤60 chars as last resort
-6. Filename fallback (e.g. `text/part0001.html`) — should never reach here for well-formed books
-
-### Drop & dedupe (publisher noise)
-
-- **Hard drop** (chunk is publisher-only ad with no value): currently
-  matches 上海譯文出版社 Digital Lab pages. Pattern set is in
-  `HARD_DROP_PATTERNS`. Add new publishers as they show up — keep patterns
-  *narrow* to avoid eating real content.
-- **Dedupe** (keep first occurrence, drop rest): for sections that publishers
-  repeat per sub-volume:
-  - `^版权信息` / `^版權信息`
-  - `圖書在版編目` / `图书在版编目` (CIP data — multi-volume sets repeat this per volume)
-- **Empty-doc handling**: if a doc has < 5 chars of plain text:
-  - First cover-image-only page (`titlepage.xhtml` or filename contains `cover`) → emit a `## 封面` placeholder once
-  - Later empty pages → drop silently
-
-### Continuation merge — 後記/索引 split fix
-
-EPUBs (and OCR'd PDFs) sometimes split one logical section across multiple
-files whose TOC titles are just `一 / 二 / 三` (續篇) or `A / B / C` (索引
-字母分頁). Merge those into the previous chunk:
+每日 16:00 `scripts/run_ocr_daily.bat` 跑完整 5-step：
 
 ```
-Before:  [後記] + [二] + [索引] + [A] + [B] + … + [Z]   ← 27 chunks
-After:   [後記] + [索引]                                 ← 2 chunks, content concatenated
+ingest_new_books → parse_worker → ocr_with_gemini → detect_set_volumes → split_ebook_set
 ```
 
-Detection regex (in `is_continuation_title()`):
-- Single Chinese numeral: `[一二三四五六七八九十百千]+`
-- Single Latin letter: `[A-Za-z]`
-- 1-3 digits: `\d{1,3}`
-- Empty after stripping
+Standardize 不在 daily bat 裡 — parse / OCR 落地後 chunk_type 還是 `page` (PDF) 或 raw (EPUB)。**新書 standardize 需手動觸發**（見「舊書批次」一段的 commands）。已知 TODO：把 standardize 也鉤進 daily bat。
 
-Merge condition: same `volume` as the previous chunk (don't merge across
-volume boundaries).
+唯一例外是 **套書 auto-split** — `standardize_ebook.py` 在 EPUB 完成後自動呼叫 `detect_set_volumes` + `split_ebook_set`，所以 standardize-ed 套書自動拆成多個 child rows。
 
-### Heading rewrite for cosmetic renames
+### 舊書（一次性 batch）
 
-When `derive_chapter_title()` applied a rename (e.g. CIP→版權頁), also
-rewrite the first markdown heading line in the chunk content so the page's
-own h2 matches the sidebar label. Without this the user sees `版權頁` in
-the TOC but `## 圖書在版編目（CIP）數據` rendered as the page title — the
-reader caught this immediately.
+EPUB 單本：
+```bash
+python scripts/standardize_ebook.py <ebook_id>
+python scripts/standardize_ebook.py <ebook_id> --dry-run
+python scripts/standardize_ebook.py <ebook_id> --no-r2
+```
 
-### Simplified → traditional + post-fix
+EPUB 批次（自動跳過 PDF）：
+```bash
+python scripts/standardize_ebook.py --category 哲學
+python scripts/standardize_ebook.py --category 哲學 --subcategory 近代哲學
+python scripts/standardize_ebook.py --category 哲學 --limit 5 --dry-run
+```
 
-Use `to_traditional()` (in `standardize_ebook.py`):
-1. `opencc.OpenCC("s2tw").convert()` for the heavy lifting
-2. Apply `TRAD_FIXES` table (24 entries — shared with `parse_drive_inventory.py`)
-   to fix s2tw over-conversions: 历史→曆史 (should be 歷史), 託爾斯泰→
-   should be 托爾斯泰, 慄田 should be 栗田, etc.
+PDF Plan A（lite — s2tw + spacing collapse + publisher metadata）：
+```bash
+python scripts/standardize_pdf_lite.py <ebook_id>
+python scripts/standardize_pdf_lite.py --category 哲學
+python scripts/standardize_pdf_lite.py --all
+```
 
-When you find a new mis-conversion, **add it to `parse_drive_inventory.py:TRAD_FIXES`** (single source of truth — used by both filename parsing and chunk content) and re-run the affected books.
+PDF Plan B v0（TOC-driven chapter chunking — Plan A 跑完後才跑 B）：
+```bash
+python scripts/standardize_pdf.py <ebook_id>
+python scripts/standardize_pdf.py --all --dry-run            # 列出 eligible PDF
+python scripts/standardize_pdf.py --all                      # ~6.5s/book
+python scripts/standardize_pdf.py <ebook_id> --force         # 忽略 annotations 守衛
+```
 
-### Volume markers
+---
 
-Multi-volume books are detected by their EPUB top-level TOC entries
-containing one of `卷 / 冊 / 部 / 集 / 篇`. PDF pipeline can build the
-equivalent from `page.get_toc()` (PDF bookmarks) when present.
+## Current state
 
-If anchored TOC entries (`href="part.html#K4"`) point to anchors that don't
-actually exist in the HTML (broken EPUB, like 中國儒學史), fall back to
-treating the doc as a doc-level volume start.
-
-### Hierarchical TOC support — `parse_toc_hierarchical` (preferred over flat)
-
-When `book.toc` exposes top-level Sections with ≥2 child entries each, the
-pipeline switches from the flat single-level path into a richer 2-level
-splitter that exposes both 章 AND 節 in the sidebar.
-
-**Role detection.** A top-level Section can mean either a volume or a
-chapter, decided by title shape:
-
-- **multi_volume** — top Section titles are volume names (羅馬帝國衰亡史:
-  「全譯羅馬帝國衰亡史：1」). Split at child (chapter) anchors AND grandchild
-  (節) anchors. `volume = top_title`, `chapter_path = chap_or_section_title`.
-  Heading levels: chapters get `###` (sidebar `pl-7`), 節 get `####` (`pl-11`).
-
-- **single_chapter** — top Section titles look like printed-book chapters
-  (現代世界史: 「第1章 歐洲的興起」 — matches `_CHAPTER_TITLE_RE`). Split at
-  top (chapter) anchors AND child (節) anchors. `volume = None`,
-  `chapter_path = chap_or_section_title`. Heading levels: chapters get `##`
-  (sidebar `pl-3`), 節 get `###` (`pl-7`).
-
-The decision uses `_is_chapter_title()` vs `looks_like_volume()` counts: if
-≥50% of top Sections match the chapter pattern AND chapter > volume count,
-it's `single_chapter`; else `multi_volume`.
-
-**Payload contract.** Both roles emit 3-tuple anchor payloads
-`(vol_or_None, chap_title, level_str)` so the standardize loop can normalize
-heading depth uniformly via the `target_level` override (see "Heading
-normalization" below).
-
-**Why this matters.** Without hierarchical support, books like 現代世界史
-(27 chapters × ~5 節 each) collapsed into 21 flat chunks; books like 羅馬帝國
-衰亡史 (13 vols × 88 chapters) collapsed into 15 flat per-spine-doc chunks
-with `volume=None` everywhere. After: 201 and 103 chunks respectively, with
-correct nesting. Survey: 283/308 standardized EPUBs (92%) qualified for the
-hierarchical path; 25 fall back to legacy `parse_volume_toc`.
-
-### Anchor splitting — deep walk + per-anchor dedup
-
-`split_body_at_anchors` previously iterated only `body.children` (top-level
-direct children). Many publishers wrap the entire chapter list inside one
-`<div>` directly under body, so the loop only matched the first anchor
-inside it — rest got swallowed (現代世界史: alternating chapters 第1, 第3,
-第5… with even-numbered chapters lost).
-
-The current implementation:
-1. Walks all body descendants in document order, dedupes anchor matches by
-   their `id` value (publishers often emit the same id on both an `<a>` nav
-   target AND a `<h2>` heading — without dedup the same anchor fires twice
-   and creates a phantom chunk).
-2. String-splits the body at each match's tag-start position, preserving
-   the open/close `<body…>` tags around each segment.
-
-### Heading normalization (hierarchical mode only)
-
-The reader's `loadToc` derives sidebar nesting from each chunk's first
-heading depth (`## → level 2 → pl-3`, `### → level 3 → pl-7`, etc.). EPUBs
-use whatever `<h1>/<h2>/<h3>` the publisher chose for chapter titles, which
-varies — making some chapters render as level-2 entries and others as
-level-3+ children of preceding chunks.
-
-In hierarchical mode, the standardize loop forces a uniform heading level:
-
-| Role | Chapter heading | 節 heading |
+| Pipeline | 書數 | Status |
 |---|---|---|
-| `single_chapter` | `## 第N章 …` (level 2, `pl-3`) | `### N. 節名` (level 3, `pl-7`) |
-| `multi_volume` | `### 第N章 …` (level 3, `pl-7`) — `##` reserved for volume | `#### 節名` (level 4, `pl-11`) |
-
-If the chunk has no `#` heading at all in content, one is prepended at the
-target level. This is what makes the 章/節 indentation visible in the
-reader sidebar.
-
-### Same-chapter cross-spine merge
-
-When the previous chunk has the EXACT same `volume + chapter_path` as the
-current one, it's a continuation — typically cross-spine-doc spillover
-(`current_volume` state carries from doc N's last anchor into doc N+1's
-segment-0, which has no new transition). Strip the duplicate heading and
-append to the previous chunk. Without this rule each chapter's title-image
-spine doc becomes a phantom standalone chunk.
-
-### `ebook_chunks` DB previews
-
-After writing JSONL + R2, refresh `ebook_chunks` rows for this book —
-DELETE existing then INSERT first 200 chars of each chunk's content so
-full-text search via `/api/ebooks/search?mode=fulltext` finds them.
-Adaptive batch size (100 → 50 → 20 → 5 → 1) to handle Supabase IO budget
-57014 timeouts on multi-volume books with 800+ chunks.
+| EPUB standardize → format=markdown | 505 / 505 | ✅ done — 0 filename leaks / 0 chunks below heading-rate threshold |
+| PDF Plan A (lite) | 437 / 437 text-extractable | ✅ done — s2tw + spacing collapse + publisher metadata |
+| PDF Plan B v0 (TOC-driven) | 152 / 437 chapter-chunked | ✅ done — 285 skip 主因為 0-entry TOC（待 Plan B v1 font 救援）|
+| PDF Plan B v1 (font-driven) | 0 | 📐 deferred design |
+| OCR queue（轉錄主隊列） | 113 | 🔄 daily 16:00 Gemini 自動帶；新 standardize 進來才會跑 |
 
 ---
 
-## Output contract — the JSONL shape consumers depend on
+## Output contract — 共通 JSONL shape
 
 Each line is one chunk:
 
@@ -208,112 +91,140 @@ Each line is one chunk:
   "chapter_path": "第一卷　時　間",
   "volume": "文明的歷史：發現者（上冊）",
   "format": "markdown",
-  "content": "## 第一卷　時　間\n\n時間是最偉大的改革者。\n\n**——弗朗西斯·培根：《論革新》（1625）**"
+  "content": "## 第一卷　時　間\n\n時間是最偉大的改革者。"
 }
 ```
 
-| Field | Required | Notes |
-|---|---|---|
-| `chunk_index` | yes | 0-based, contiguous |
-| `chunk_type` | yes | `"chapter"` for EPUB; `"page"` for PDF |
-| `page_number` | optional | Null for EPUB, set for PDF |
-| `chapter_path` | yes | First heading text, used for sidebar TOC entry |
-| `volume` | optional | Only present in multi-volume books; null = front matter or single-volume |
-| `format` | yes | `"markdown"` for standardized output |
-| `content` | yes | Markdown — supports `## ###  ####`, `**bold**`, `*em*`, `> blockquote` |
+| Field | Required | EPUB | PDF Plan A | PDF Plan B v0 |
+|---|---|---|---|---|
+| `chunk_index` | yes | 0-based contiguous | 0-based contiguous | re-numbered from 0 |
+| `chunk_type` | yes | `"chapter"` | `"page"` | `"chapter"` |
+| `page_number` | optional | null | **real PDF page (sacred)** | **first real PDF page in chapter (sacred)** |
+| `page_range` | new | — | — | `[first, last]` |
+| `chapter_path` | yes | TOC anchor title | derived if heading detected else null | TOC ancestor hierarchy `祖 / 父 / 本` |
+| `volume` | optional | multi-volume only | — | — |
+| `format` | yes | `"markdown"` | `"text"` | `"text"` |
+| `content` | yes | markdown (h2-h4, bold, em, blockquote) | s2tw'd + spacing-collapsed | concatenated s2tw'd pages joined by `\n\n` |
 
-The reader's [`server/utils/ebook-chunks.ts`](../../../server/utils/ebook-chunks.ts) `loadToc()` reads this format and produces the sidebar; the reader page renders markdown via its own limited renderer (h1-h4 / bold / em / blockquote / paragraphs).
-
-## EPUB pipeline (implemented)
-
-What `standardize_ebook.py` does for EPUB input, in order:
-
-1. **Read EPUB** with `ebooklib` — iterate spine docs in reading order.
-2. **Parse top-level TOC** (`book.toc`):
-   - Strip entries titled `版权信息` / `Digital Lab`
-   - **Filter to volume markers only**: keep only entries whose title contains `卷 / 冊 / 部 / 集 / 篇`. Without this filter, single-volume books promote `目錄 / 插頁 / 出版說明` into fake volume groups (this was a real bug found running the 哲學 batch).
-   - Remaining entries with `href` (no `#`) → mark as **volume start at this doc**
-   - Entries with `href#anchor` → mark as **volume start at this anchor inside doc** (split point)
-   - If fewer than 2 volume entries remain after filtering → flat (single-volume) layout
-3. For each spine doc:
-   - If TOC anchors point inside it, **split body** at those anchor elements into segments
-   - Each segment becomes a candidate chunk
-4. **HTML → markdown** ([`el_to_md`](../../../scripts/standardize_ebook.py)):
-   - `<h1>` → `##`, `<h2>` → `###`, `<h3>/<h4>` → `####`
-   - `<b>/<strong>` → `**…**`, `<em>/<i>` → `*…*`
-   - `<p>` → paragraph, `<blockquote>` → `> …`, `<hr>` → `---`
-   - Images, footnote `<sup>`, decorative `<svg>` are stripped
-5. **Drop / dedupe**:
-   - **Hard drop** if plain text matches `HARD_DROP_PATTERNS` (currently tuned for 上海譯文 Digital Lab)
-   - **Dedupe** first-occurrence patterns (`版权信息` / `版權信息`) — keep one, drop later copies
-   - **Empty docs** that are cover-image-only become a single 「封面」 placeholder chunk
-6. **Convert** simplified Chinese → traditional via `opencc s2tw` (also normalizes 卷/編 names if needed).
-7. **Pick `chapter_path`** from the first markdown heading; fall back to filename.
-8. **Persist**:
-   - Write JSONL to `G:/我的雲端硬碟/資料/電子書/_chunks/{ebook_id}.jsonl`
-   - Gzip + PUT to R2 `ebook-chunks/{ebook_id}.jsonl.gz`
-   - Refresh `ebook_chunks` in DB with 200-char previews (replace, don't append) so full-text search picks them up
-   - Update `ebooks` row: `chunk_count`, `total_chars`, `total_pages`, `parsed_at`
-
-## How to run
-
-### Single book
-```bash
-python scripts/standardize_ebook.py <ebook_id>
-python scripts/standardize_ebook.py <ebook_id> --dry-run     # preview chunks only
-python scripts/standardize_ebook.py <ebook_id> --no-r2       # skip R2 push (dev)
-```
-
-### Batch by category
-```bash
-python scripts/standardize_ebook.py --category 哲學
-python scripts/standardize_ebook.py --category 哲學 --subcategory 近代哲學
-python scripts/standardize_ebook.py --category 哲學 --limit 5 --dry-run
-```
-
-Auto-skips PDFs (the script can't parse them — they need a different path, see "Limitations").
-
-### Verify a result
-```bash
-python -c "
-import json
-from pathlib import Path
-p = Path('G:/我的雲端硬碟/資料/電子書/_chunks/<ebook_id>.jsonl')
-lines = p.read_text(encoding='utf-8').splitlines()
-print(f'chunks: {len(lines)}')
-for i in [0, 1, 2, len(lines)//2, len(lines)-1]:
-    c = json.loads(lines[i])
-    print(f'[{i}] vol={c.get(\"volume\")}  title={c[\"chapter_path\"][:40]}')
-    print(c['content'][:200])
-    print()
-"
-```
-
-Or open `/ebook/<ebook_id>` in the running dev server (restart first to clear LRU cache) and check:
-- TOC sidebar groups by volume if the book is multi-volume
-- Headings render bold + sized (h2 centered with rule, h3 left-aligned)
-- Chinese is traditional throughout
-- No `Digital Lab` ad pages
+Reader's [`server/utils/ebook-chunks.ts`](../../../server/utils/ebook-chunks.ts) `loadToc()` consumes this; reader page renders markdown via its own h1-h4 / bold / em / blockquote / paragraph renderer.
 
 ---
 
-## PDF pipeline (TO BE BUILT — design)
+## EPUB pipeline (`standardize_ebook.py`)
 
-PDFs lack the semantic markup EPUBs give us, so we infer structure from
-typography. This is **less reliable than EPUB** but tractable for well-typeset
-print books. Scanned PDFs go through OCR first (which produces text without
-typography signals — see "OCR fallback" below).
+1. **Read EPUB** via `ebooklib` — iterate spine docs in reading order.
+2. **Parse TOC** (`book.toc`):
+   - Strip `版权信息` / `Digital Lab` entries
+   - Volume filter: keep only entries with `卷 / 冊 / 部 / 集 / 篇` in title (else 「目錄/插頁/出版說明」 get promoted to fake volumes)
+   - `href` (no anchor) → volume start at doc; `href#anchor` → volume start at anchor inside doc
+   - <2 remaining volume entries → flat (single-volume) layout
+3. **Per spine doc**: if TOC anchors point inside, split body at those anchors into segments → each becomes a candidate chunk.
+4. **HTML → markdown** via `el_to_md`:
+   - `<h1>` → `##`, `<h2>` → `###`, `<h3>/<h4>` → `####`
+   - `<b>/<strong>` → `**…**`, `<em>/<i>` → `*…*`
+   - `<p>` → para, `<blockquote>` → `> …`, `<hr>` → `---`
+   - Images / `<sup>` footnote / decorative `<svg>` stripped
+5. **Drop / dedupe** (see Shared rules below).
+6. **s2tw + TRAD_FIXES** (see Shared rules).
+7. **Pick `chapter_path`** from first markdown heading; fallback filename.
+8. **Persist**: write JSONL → gzip+PUT R2 → DELETE+INSERT `ebook_chunks` previews (adaptive batch) → update ebooks row.
 
-### Suggested script: `scripts/standardize_pdf.py`
+### Hierarchical TOC support — `parse_toc_hierarchical`
 
-Uses [PyMuPDF (`fitz`)](https://pymupdf.readthedocs.io/) which is already a
-dependency of `parse_worker.py`.
+When `book.toc` exposes top-level Sections with ≥2 children each, switch from flat single-level to 2-level splitter that exposes both 章 AND 節 in the sidebar.
 
-### Pipeline order
+**Role detection.** Top-level Section title shape determines role:
+- **multi_volume** — top titles are volume names (羅馬帝國衰亡史「全譯羅馬帝國衰亡史：1」). Split at child (chapter) AND grandchild (節) anchors. `volume=top_title`, `chapter_path=chap_or_section`. Heading levels: chapters `###` (sidebar pl-7), 節 `####` (pl-11).
+- **single_chapter** — top titles look like printed chapters (現代世界史「第1章 歐洲的興起」 — matches `_CHAPTER_TITLE_RE`). Split at top (chapter) AND child (節) anchors. `volume=None`. Heading levels: chapters `##` (pl-3), 節 `###` (pl-7).
+
+Decision: `_is_chapter_title()` vs `looks_like_volume()` counts. If ≥50% of tops match chapter pattern AND chapter > volume count → `single_chapter`; else `multi_volume`.
+
+**Payload contract.** Both roles emit 3-tuple anchor payloads `(vol_or_None, chap_title, level_str)` so the standardize loop normalizes heading depth uniformly via `target_level` override.
+
+**Survey:** 283/308 standardized EPUBs (92%) qualify for hierarchical; 25 fall back to legacy `parse_volume_toc`.
+
+### Anchor splitting — deep walk + per-anchor dedup
+
+`split_body_at_anchors` walks **all body descendants** in document order (publishers wrap chapter lists inside `<div>` directly under body — naïve `body.children` loop misses everything but the first anchor). Dedupes anchor matches by their `id` value (same id often emitted on both `<a>` nav target AND `<h2>` heading).
+
+### Heading normalization (hierarchical mode only)
+
+Reader's `loadToc` derives sidebar nesting from each chunk's first heading depth. EPUBs use whatever `<h1>/<h2>/<h3>` the publisher chose, so without this normalization some chapters render as level-2 entries and others as level-3+ children. Standardize loop forces uniform heading level per role + prepends a heading at target level if chunk has none.
+
+### Post-processing pipeline (after EPUB walk, before persist)
+
+Order matters — at end of `standardize()`:
+
+1. **`promote_implicit_volumes`** — TOC has unnamed top-level group (publisher omitted 「第一部」 but named 「第二部」+). Scan vol=None chunks for `第N部/卷` dividers in `chapter_path` and synthesize missing volume.
+2. **`apply_cover_enrichment`** — replace placeholder `## 封面 (書本封面)` with structured markdown from DB title/author + 版權頁 extraction (subtitle / original_title / author_en). Insert at index 0 if no cover chunk.
+3. **`consolidate_frontmatter_into_publisher`** — CONTENTS-style chunk (目錄 / Contents) in first ~12 entries AND no volume between cover and CONTENTS → fold chunks `[1..contents-1]` into one synthesized 「出版資訊」. Named entries (序 / 致謝 / 譯者序 / 推薦序 / Acknowledgments) AFTER CONTENTS stay separate.
+4. **`derive_chapter_title` smart fallback** — skips numeric/single-letter headings (academic EPUBs use `<h2>1</h2><h1>Real Title</h1>`); combines `「01 王權的誕生」` from `<h2>01</h2><p>王權的誕生</p>`.
+5. **Continuation-merge size cap** — `is_continuation_title` merges tiny `「二」 / 「A」` into previous chunk, but only if plain text ≤ 800 chars (prevents a 130KB chapter file titled `「1」` being eaten).
+
+### Auto-split for 套書 (since 2026-05-14)
+
+After standardize, if title matches 套書 pattern, auto-calls `detect_set_volumes` (Haiku-driven volume boundary detection) + `split_ebook_set` (children flattened to `##`). Each child gets `parse_error = 'split from set; do not re-standardize'` marker.
+
+---
+
+## PDF Plan A — `standardize_pdf_lite.py`
+
+Polish per-page JSONL from parse_worker / ocr_with_gemini. Per chunk:
+
+1. **s2tw + TRAD_FIXES** (Shared rules).
+2. **Collapse CJK spacing** — `路 … 文 本 、 歷 史` → `路文本、歷史` via `collapse_cjk_spacing()`. Squeezes adjacent CJK without touching real spaces in mixed CJK/Latin paragraphs.
+3. **Strip page-number-only running header** — only when leading line is short AND starts with a number = chunk's `page_number`. Conservative: `2  Title` on a page whose actual `page_number=7` stays put (Plan B handles those positionally).
+4. **Re-derive `chapter_path`** — only when page genuinely starts with chapter heading (`第N章 / Chapter N / 引言 / 序 / 致謝 / 附錄 / Bibliography / Index`). Unclear → leave null.
+5. **Preserve `page_number` exactly**.
+
+Book-level:
+- **Extract publisher metadata** (Shared rules) + PATCH ebooks row.
+
+Plan A does NOT do: chapter-level chunking, cover synthesis, frontmatter consolidation, volume hierarchy, position-based header strip, bold/italic/heading inference (no font signals in this layer).
+
+---
+
+## PDF Plan B v0 — `standardize_pdf.py` (TOC-driven)
+
+Plan A polishes existing one-page-one-chunk output. Plan B re-chunks those flat pages into chapter-level chunks **driven by the PDF's TOC bookmarks**. Same source-of-truth (existing JSONL) — no PDF text re-extraction.
+
+> **🚧 Why TOC-driven, not font-driven?** 30-PDF probe showed font signal is degenerate on a large fraction of the library — many books are image-based PDFs where PyMuPDF extracts <1% of body text yet PyMuPDF's TOC bookmarks survive. TOC is both more reliable and simpler. Font-driven inference is deferred to Plan B v1 for the no-TOC subset (~285 books).
+
+### What v0 does
+
+1. Load per-page JSONL (already Plan A-polished).
+2. Read PDF's TOC (`fitz.Document.get_toc()`) — no body re-extract.
+3. Filter TOC to `level <= 2`, drop empties, dedupe same-start-page, sort by start page.
+4. For each TOC entry, concat existing JSONL pages from `[entry.start_page, next.start_page - 1]` into one chapter chunk.
+5. Pages BEFORE first TOC entry → one `前置內容` chunk (so 版權頁 / 序言 still feed `_extract_publisher_metadata`).
+6. Apply `to_traditional()` + `collapse_cjk_spacing()` per chunk.
+7. Build hierarchical `chapter_path` from TOC ancestors (`祖 / 父 / 本`).
+8. Persist JSONL → R2 → DB previews + ebooks metadata PATCH.
+
+### Skip conditions (book stays on Plan A output)
+
+| Condition | Threshold |
+|---|---|
+| TOC entries < 3 | `MIN_TOC_ENTRIES` |
+| Page-level TOC (~1 entry/page) | `total_pages / len(toc) < 1.2` (`MIN_PAGES_PER_ENTRY`) — caught 中東史 (654/661), 希伯來聖經 (598/598) |
+| Existing annotations on ebook | hard refuse without `--force` (re-chunking shifts `chunk_index`) |
+| JSONL already chapter-chunked | re-run guard (`chunk_type == 'chapter'` or `page_range` present) — must re-run `standardize_pdf_lite` first to revert |
+| PDF file missing on Drive | `file not found:` error |
+
+### Realistic hit rate (full `--all` batch)
+
+152 / 437 chapter-chunked. 285 skip break down:
+- ~257 books had **0 TOC entries** (publisher exported PDF without bookmarks — Plan B v1 candidates)
+- ~28 books reduced to single TOC chunk (`only N chunks produced` guard) or page-level TOC
+
+---
+
+## Plan B v1 — font-driven inference for no-TOC PDFs (deferred design)
+
+Worth building when the no-TOC subset (~285 books) becomes the bottleneck.
 
 1. **Open PDF**, iterate pages.
-2. **Per-page font analysis** — for each page collect text spans with
-   `(text, font_name, font_size, bbox, flags)`:
+2. **Per-page font analysis** — collect spans `(text, font_name, font_size, bbox, flags)`:
    ```python
    doc = fitz.open(path)
    for page in doc:
@@ -322,249 +233,222 @@ dependency of `parse_worker.py`.
                for span in line["spans"]:
                    ...  # span["text"], span["size"], span["font"], span["flags"]
    ```
-3. **Build a global font histogram** — across the whole book, count chars
-   per `font_size` bucket. The most common size is the **body text size**.
-4. **Classify spans by size relative to body**:
-   - `≥ body_size + 6pt` and short (≤ 30 chars) → **h2** (chapter title)
-   - `≥ body_size + 3pt` and short → **h3** (section title)
-   - `≥ body_size + 1pt` → **h4** (subsection)
-   - `flags & 16` (bold) AND short → **h3** (some publishers signal headings only by bold, not size)
-   - Else → body paragraph
-5. **Build markdown content** by emitting each classified span:
-   - Heading spans → `## title` / `### title` / `#### title`
-   - Body spans → join with newlines; merge same-paragraph spans (same y-bbox proximity, no heading between)
-   - Bold/italic body → `**text**` / `*text*`
-6. **Chunking strategy**:
-   - **Per-chapter (preferred)**: start a new chunk at every `h2`. Keeps
-     chunks meaningfully sized; matches EPUB chunk granularity.
-   - **Fallback per-page**: if no headings detected anywhere (very plain PDF),
-     fall back to one chunk per page (`chunk_type="page"`). Already what
-     `parse_worker.py` does today, so re-running this script just upgrades
-     the metadata.
-7. **Reuse the EPUB pipeline's downstream pieces**:
-   - `to_traditional()` for s2tw + TRAD_FIXES (already in `standardize_ebook.py`)
-   - `derive_chapter_title()` for CIP→版權頁 / banner skip / long heading recognition
-   - Continuation-merge for 後記/二, 索引 A-Z
-   - `volume` detection — PDFs rarely have a programmatic volume marker, so
-     usually flat. Could later add a TOC-bookmark reader (`page.get_toc()`)
-     for paginated multi-volume sets like 《文明的歷史(全五卷)》.
-   - Same `write_jsonl` / `push_to_r2` / `update_db` from `standardize_ebook.py`
-     — refactor those into a shared module if the PDF script grows.
+3. **Build global font histogram** — char count per `font_size` bucket. Most common size = body text size.
+4. **Classify spans relative to body**:
+   - `≥ body + 6pt` AND short (≤30 chars) → `h2` (chapter)
+   - `≥ body + 3pt` AND short → `h3` (section)
+   - `≥ body + 1pt` → `h4` (subsection)
+   - `flags & 16` (bold) AND short → `h3` (publishers signaling headings only by bold)
+   - Else → body para
+5. **Build markdown** — heading spans → `## … / ### … / #### …`; body spans → join + merge same-paragraph spans (same y-bbox proximity, no heading between); bold/italic body → `**…**` / `*…*`.
+6. **Chunking**: new chunk at every `h2`. Same per-chunk contract (`page_number` sacred, `page_range` new).
 
-### Calibration tips when implementing
+### Calibration tips
+- **Body size is the linchpin.** Test on 5-10 books from different publishers first. Filter by total char count per bucket, not frequency (footnotes are small but numerous).
+- **Bold-only signaling is publisher-specific.** 商務印書館 漢譯名著 puts chapter titles in bold same-size as body. Enable bold→heading promotion only when font-size signal is weak.
+- **Drop running headers/footers** — text spans at the same y-bbox on most pages (page numbers, book title repeated). Detect by frequency across pages.
+- **Page-spanning paragraphs** — don't split a para that ends on page N and continues on N+1. Track "did previous page end mid-sentence" via `not text.endswith(('。', '!', '?', '」', '）'))`.
+- **Footnotes** — bottom of page in smaller font. Drop or move to end of chunk as `> [註] ...`.
 
-- **Body size detection is the linchpin.** Test on 5-10 books from different
-  publishers first. If a book has heavy use of footnotes (small font), they
-  shouldn't drown out the body. Filter by total character count per bucket,
-  not just frequency.
-- **Bold-only signaling is publisher-specific.** Some books (商務印書館 漢譯名著)
-  put chapter titles in bold same-size as body. Only enable bold→heading
-  promotion when font-size signal is weak.
-- **Drop running headers/footers** — text spans appearing at the same y-bbox
-  on most pages (page numbers, book title repeated). Detect by frequency.
-- **Page-spanning paragraphs** — a paragraph that ends on page N and continues
-  on page N+1 should NOT be split. Track "did the previous page end mid-sentence"
-  using `not text.endswith(('。', '!', '?', '」', '）'))`.
-- **Footnotes** — usually appear at bottom of page in smaller font. Either
-  drop them or move to end of chunk as `> [註] ...`. User preference.
-
-### Known PDFs to use as test cases
-
-- 《尼采到底說了什麼？》by 羅伯特·所羅門 (`53625079-…`) — straightforward 哲學 PDF
-- 《從封閉世界到無限宇宙》by 柯瓦雷 — typical philosophy press PDF
-- 《當代數學》— may have heavy formula content; PyMuPDF text extraction will be ugly
-
-### Current scope of哲學 PDF backlog
-
-| Subcategory | PDF count |
-|---|---|
-| 哲學 (overall) | 58 PDFs (vs 51 EPUBs already standardized) |
-| Across all categories | 422 text-extractable PDFs + 391 scanned-pending-OCR |
-
-### OCR fallback for scanned PDFs
-
-Already wired: `scripts/ocr_with_gemini.py` (run daily 16:00 by Windows Task
-Scheduler) writes JSONL with `chunk_type="page"` and `format="text"`. After OCR
-finishes:
-- Re-running `standardize_pdf.py` on those JSONLs would mostly be a no-op
-  (no font signals to work with) — it'd just apply s2tw + TRAD_FIXES + 
-  `derive_chapter_title()` to upgrade them
-- Each OCRed page might already include heading detection via the Gemini
-  prompt — could enhance the prompt to mark heading-line vs body-line if
-  needed (lower priority — current state is "readable but flat")
-
-### When NOT to bother
-
-- One-off book that already reads OK in the current per-page format
-- PDFs with heavy formula / table layout (PyMuPDF mangles those — Gemini
-  Vision is more robust but expensive)
+### When NOT to do v1
+- Book reads OK after Plan A or Plan B v0
+- Heavy formula / table layout (PyMuPDF mangles those — Gemini Vision is more robust but expensive)
+- Image-based PDFs (run OCR first; v1's font signal will be empty)
 
 ---
 
-## Current state (snapshot 2026-05-08)
+## Shared rules (both pipelines)
 
-All 481 standardized EPUBs have been re-run with the post-processing
-pipeline below. The 5 books that fail consistently have invalid Windows
-file paths (Errno 22) — pre-existing data issue, not a script bug.
+### Simplified → traditional
 
-| Category | EPUBs | Status |
-|---|---|---|
-| 哲學 / 宗教學 / 世界宗教 / 心理學 / 人類生物學 / 自然科學 / 文學 / 社會政治學 / 歷史學 | 481 total | ✅ all standardized; 2-3 transient persist errors per batch are auto-handled |
-| Hierarchical re-run | 283/308 EPUBs eligible (92%) | 🔄 batch in progress (`scripts/batch_hier_standardize.py` in tmp); 3 books with annotations excluded |
+```python
+to_traditional(text):
+    1. opencc.OpenCC("s2tw").convert()
+    2. Apply TRAD_FIXES table (24 entries — shared with parse_drive_inventory.py)
+```
 
-Reference books that exercise the hierarchical path:
-- 羅馬帝國衰亡史 (吉本) — `multi_volume` role: 13 vols × 88 chapters; was 15 flat → now 103 chunks with proper volume groups
-- 現代世界史 (帕爾默·克萊默) — `single_chapter` role: 27 chapters × ~5 節 each; was 21 flat → now 201 chunks with 章 (`##`) > 節 (`###`) sidebar nesting
-- 卡夫卡著作集 (套裝10冊) — depth-5 TOC; previously fully flat
+Fixes s2tw over-conversions: 历史→曆史 (should be 歷史), 託爾斯泰→托爾斯泰, 慄田→栗田, etc. When you find a new mis-conversion, **add to `parse_drive_inventory.py:TRAD_FIXES`** (single source of truth) and re-run.
 
-Reference books to spot-check (after each re-run):
-- 《君主論》 — single-vol; **NO** volume groups in sidebar
-- 《中國儒學史》 — 10-vol; groups by 「先秦卷／漢代卷／…」
-- 《希臘羅馬神話》 (Hamilton) — fake-flat 第一部 promoted via `promote_implicit_volumes`; cover has full subtitle/原書名/作者中英
-- 《A State of Mixture》 (Payne) — chapters separated correctly (no longer eaten by 「Introduction」 super-chunk); 「In honor of beloved Virgil—」 / 「Publisher.xhtml」 / title-page repeats / epigraph / series banner all consolidated into 「出版資訊」
+### Drop & dedupe (publisher noise)
 
-## Post-processing pipeline (runs after the EPUB walk, before persist)
+```python
+HARD_DROP_PATTERNS = [
+    r"Digital\s*Lab是上海译文出版社",
+    r"我们致力于将优质的资源送到读者手中",
+    r"上海译文出版社\|Digital\s*Lab",
+]
+DEDUPE_PATTERNS = [
+    r"^版权信息", r"^版權信息",
+    "圖書在版編目", "图书在版编目",   # CIP — multi-volume sets repeat per volume
+]
+```
 
-Order matters — see end of `standardize()`:
+Empty-doc: < 5 chars plain text:
+- First cover-image-only page (`titlepage.xhtml` or filename `cover`) → emit `## 封面` placeholder once
+- Later empty pages → drop silently
 
-1. **`promote_implicit_volumes`** — when an EPUB TOC has an unnamed top-level group (e.g. publisher omitted 「第一部」 but properly named 「第二部」+) the chapters end up flat. Scan vol=None chunks for `第N部/卷` dividers in their `chapter_path` and synthesize the missing volume.
-2. **`apply_cover_enrichment`** — replace the placeholder `## 封面 (書本封面)` chunk with structured markdown built from DB title/author + 版權頁 extraction (subtitle / original_title / author_en). Or insert one at index 0 if no cover chunk exists.
-3. **`consolidate_frontmatter_into_publisher`** — when a CONTENTS-style chunk (目錄 / Contents) exists in the first ~12 entries AND no volume starts between cover and CONTENTS, fold all chunks `[1..contents-1]` into one synthesized 「出版資訊」 chunk. Substantive named entries (序 / 致謝 / 譯者序 / 推薦序 / Note on / Acknowledgments) stay separate because they appear AFTER CONTENTS.
-4. **`derive_chapter_title` smart fallback** — already runs per-chunk during the main walk. Skips numeric/single-letter headings (academic EPUBs use `<h2>1</h2><h1>Real Title</h1>`); when only numeric headings exist AND a short content line follows (`<h2>01</h2><p>王權的誕生</p>`), combines into `「01 王權的誕生」`.
-5. **Continuation-merge size cap** — `is_continuation_title` matches still merge tiny `「二」 / 「A」` chunks into the previous chunk, but ONLY if the chunk's plain text is ≤ 800 chars (prevents a 130KB chapter file titled just `「1」` from being eaten).
+**Tuning heuristic:** patterns must be narrow enough not to match real content. Test on 1 book with `--dry-run` before batch.
 
-## Rich publisher metadata extraction (`_extract_publisher_metadata`)
+### Continuation-merge
 
-Scans every chunk's content for 版權頁-style key-value lines and writes
-the result to ebooks columns during `update_db()`:
+EPUBs (and OCR'd PDFs) sometimes split one logical section across multiple files whose TOC titles are just `一 / 二 / 三` (續篇) or `A / B / C` (索引字母分頁). Merge into previous chunk:
 
-| Field | Regex source | ebooks column |
-|---|---|---|
-| `full_title` (used for subtitle split) | `書名: …` / `Title: …` | `subtitle` (only the post-`：` part) |
-| `original_title` | `原文書名: …` / `原書名: …` / `Original Title: …` | `original_title` |
-| `author_en` | `作者: 中文（English）` parens capture | `author_en` |
-| `translator` | `譯者: …` (stops at `│ | ， ; / 、`) | `translator` |
-| `publisher` | `出版: …` / `出版社: …` / `Published by: …` (rejects `出版日期` / `出版年` / `出版地`) | `publisher` |
-| `publish_year` | `初版: …YYYY` / `初版首刷: YYYY` / `電子書: …YYYY` | `publication_year` |
-| `original_publish_year` + `original_author` | `Copyright © YYYY by AUTHOR` | both |
+```
+Before:  [後記] + [二] + [索引] + [A] + [B] + … + [Z]   ← 27 chunks
+After:   [後記] + [索引]                                  ← 2 chunks, content concatenated
+```
 
-Field-stop char class `_FIELD_STOP = "\n│|，,；;／/（(、"` keeps regexes
-from greedy-eating siblings on packed lines like
-`作者：X│譯者：Y│出版者：Z│出版日期：YYYY年`.
+`is_continuation_title()` regex: `[一二三四五六七八九十百千]+` / single `[A-Za-z]` / 1-3 digits / empty. Merge only if **same `volume`** as previous (don't merge across volume boundaries).
 
-### Auto-copy to `books` on excerpt creation
+### Chapter title derivation
 
-`server/api/annotations/index.post.ts` (POST handler with
-`save_as_excerpt: true`) reads the rich columns from `ebooks` and copies
-them into the auto-created `books` row, so books that get created by the
-reader's 「+ 書摘」 button come out matching the richness of manually-
-entered ones — translator / publisher / publish_year / original_title /
-original_author / original_publish_year all populated when extractable.
+`derive_chapter_title()` / `normalize_chapter_title()` — selection priority (first match wins):
 
-When you tweak the extraction regexes here, **re-run `--all`** so existing
-ebooks pick up the new fields, then any future excerpt save will produce
-a rich `books` row.
+1. **Markdown heading** — `## title` / `### title` (after rename normalization)
+2. **CIP in first 3 lines** → `版權頁`
+3. **Earliest short non-banner line** (≤30 chars, doesn't match `叢書|丛书|名著|系列|文集|文庫|出版社`) — document order, so 「目錄」 beats later「第一章」 inside a TOC chunk
+4. **Long chapter heading anywhere** — `^第N(章|卷|編|册|冊|部|集|篇|節|节|回|课|課)` accepted even if >30 chars (君主論's chapter titles can be 30+ chars)
+5. First candidate ≤60 chars as last resort
+6. Filename fallback (`text/part0001.html`) — should never reach here for well-formed books
 
-## Idempotency
+Cosmetic renames trigger **heading rewrite** in chunk content — without this, sidebar shows `版權頁` but page renders `## 圖書在版編目（CIP）數據` as title.
 
-Re-running on the same book is safe — it overwrites:
-- Local JSONL (write replaces)
-- R2 object (PUT replaces)
-- `ebook_chunks` rows (DELETE-then-INSERT)
-- `ebooks` row's `chunk_count` / `total_chars` / `parsed_at`
+### Same-chapter cross-spine merge
 
-Annotations (`annotations` table) reference `chunk_index` which generally stays stable for the same book — but if you tweak `HARD_DROP_PATTERNS` and re-run, indices shift and existing annotations may land on wrong text. Avoid re-running once users have annotations.
+Previous chunk has EXACT same `volume + chapter_path` as current → continuation (cross-spine-doc spillover). Strip duplicate heading and append. Without this each chapter's title-image spine doc becomes phantom standalone chunk.
 
-## Volume detection — known limits
+### Volume detection — known limits
 
-The `looks_like_volume()` heuristic is conservative: a TOC entry must contain one of `卷 / 冊 / 部 / 集 / 篇` to be considered a volume. This works for:
+`looks_like_volume()` requires `卷 / 冊 / 部 / 集 / 篇` in TOC entry. Works for:
 - ✅ 文明的歷史：發現者（上冊） — has 「冊」
 - ✅ 中國儒學史：先秦卷 — has 「卷」
 - ✅ 五燈會元第N部 — has 「部」
 
-It will **miss** books that group by other markers like:
-- ❌ Series titled 「上」「中」「下」 alone (since 「上」 alone is too common in Chinese to safely match)
-- ❌ Latin numerals like 「Volume I / II」 in mixed-language editions
-- ❌ Publishers using 「輯」 or other terms not in the marker set
+Misses:
+- ❌ 上 / 中 / 下 alone (「上」 is too common to safely match)
+- ❌ Volume I / II in mixed-lang editions
+- ❌ 輯 or other markers not in set
 
-If a multi-volume book gets flattened by mistake, **add the missing marker to `VOLUME_MARKERS`** and re-run. Don't try to detect "this looks like a multi-volume set" structurally — the marker check is the only reliable signal in the EPUB TOC.
+If a multi-volume book gets flattened, **add the marker to `VOLUME_MARKERS`** and re-run. Don't try structural detection — the marker check is the only reliable EPUB TOC signal.
 
-### Anchor fallback (broken EPUB anchors)
+### Broken anchor fallback (EPUB)
 
-Some EPUBs put `#anchor` fragments in their TOC hrefs but the HTML body never actually emits a matching `id="..."` — `中國儒學史` does this. The script handles it:
+Some EPUBs (e.g. 中國儒學史) put `#anchor` fragments in TOC but body never emits matching `id="..."`. Handler:
 
-1. After `parse_volume_toc()`, every `(file, anchor, title)` entry is validated by reading the doc's HTML and `find(attrs={"id": anchor})`.
-2. If at least one anchor in a doc lands → keep the split-at-anchor behavior.
-3. If **no** anchors in a doc resolve → promote the first declared title to a doc-level volume start. The volume transition still fires, just at doc beginning instead of mid-doc.
+1. After `parse_volume_toc()`, validate each `(file, anchor, title)` against the doc's HTML.
+2. ≥1 anchor lands → keep split-at-anchor behavior.
+3. **No** anchors resolve → promote first declared title to doc-level volume start. Transition still fires at doc beginning.
 
-Logged as `(N anchored volume(s) had no resolvable id — promoted to doc-level starts)` per book during a batch.
+Logged as `(N anchored volume(s) had no resolvable id — promoted to doc-level starts)`.
 
-## Tuning per publisher
+### Rich publisher metadata extraction (`_extract_publisher_metadata`)
 
-The default boilerplate patterns target 上海譯文出版社. Adjust [`HARD_DROP_PATTERNS` and `DEDUPE_PATTERNS`](../../../scripts/standardize_ebook.py) when you find a publisher whose noise pages slip through:
+Scans every chunk for 版權頁-style key-value lines, writes to ebooks columns during `update_db()`:
 
-```python
-HARD_DROP_PATTERNS = [
-    r"Digital\s*Lab是上海译文出版社",         # 上海譯文
-    r"我们致力于将优质的资源送到读者手中",
-    r"上海译文出版社\|Digital\s*Lab",
-    # ADD HERE: e.g. r"^本书由.+出版社制作"
-]
+| Field | Regex source | ebooks column |
+|---|---|---|
+| `full_title` (subtitle split) | `書名: …` / `Title: …` | `subtitle` (post-`：` part) |
+| `original_title` | `原文書名: …` / `原書名: …` / `Original Title: …` | `original_title` |
+| `author_en` | `作者: 中文（English）` parens capture | `author_en` |
+| `translator` | `譯者: …` (stops at `│ \| ， ; / 、`) | `translator` |
+| `publisher` | `出版: …` / `出版社: …` / `Published by: …` (rejects `出版日期/年/地`) | `publisher` |
+| `publish_year` | `初版: …YYYY` / `初版首刷: YYYY` / `電子書: …YYYY` | `publication_year` |
+| `original_publish_year` + `original_author` | `Copyright © YYYY by AUTHOR` | both |
+
+Field-stop char class `_FIELD_STOP = "\n│|，,；;／/（(、"` keeps regexes from greedy-eating siblings on packed lines like `作者：X│譯者：Y│出版者：Z│出版日期：YYYY年`.
+
+**Auto-copy to `books` on excerpt creation** — `server/api/annotations/index.post.ts` POST handler with `save_as_excerpt: true` reads rich columns from `ebooks` and copies them into auto-created `books` row, so 「+ 書摘」-created books match the richness of manually-entered ones. When you tweak extraction regexes here, re-run `--all` so existing ebooks pick up new fields.
+
+### DB previews (`ebook_chunks`)
+
+After writing JSONL + R2, refresh `ebook_chunks`:
+- DELETE existing rows for this ebook
+- INSERT 200-char preview of each chunk
+- Adaptive batch (100 → 50 → 20 → 5 → 1) to ride out Supabase IO budget 57014 timeouts on 800+ chunk multi-volume books
+
+---
+
+## Idempotency + annotation safety
+
+| Branch | Re-run safe? | Annotation safety |
+|---|---|---|
+| EPUB | ✅ overwrites JSONL / R2 / DB / ebooks columns | ⚠ `chunk_index` can shift if HARD_DROP_PATTERNS / dedupe rules change — avoid re-running on books with annotations |
+| PDF Plan A | ✅ overwrites | ✅ `chunk_index` + `page_number` preserved exactly |
+| PDF Plan B v0 on Plan-A book | ✅ overwrites | ⚠ re-chunks → `chunk_index` shifts; refuses without `--force` if annotations exist |
+| PDF Plan B v0 on Plan-B book | ⛔ HARD STOP `JSONL already chapter-chunked` — revert via `standardize_pdf_lite` first | — |
+
+Currently 3 ebooks have annotations: 文明的歷史 / A state of mixture / 道教簡史 (none are 套書, none are PDFs). Check first if you batch-run.
+
+---
+
+## Verify a result
+
+```bash
+python -c "
+import json
+from pathlib import Path
+p = Path('G:/我的雲端硬碟/資料/電子書/_chunks/<ebook_id>.jsonl')
+chunks = [json.loads(l) for l in p.read_text(encoding='utf-8').splitlines()]
+print(f'chunks: {len(chunks)}')
+print(f'first 5 page_numbers: {[c.get(\"page_number\") for c in chunks[:5]]}')
+print(f'last 3 page_numbers: {[c.get(\"page_number\") for c in chunks[-3:]]}')
+print(f'chapters detected: {sum(1 for c in chunks if c.get(\"chapter_path\"))}')
+print(f'volumes: {set(c.get(\"volume\") for c in chunks if c.get(\"volume\"))}')
+print()
+for i in [0, 1, len(chunks)//2, len(chunks)-1]:
+    c = chunks[i]
+    print(f'[{i}] vol={c.get(\"volume\")} title={c[\"chapter_path\"]}')
+    print(c['content'][:200])
+    print()
+"
 ```
 
-**Heuristic for what to add**:
-- Patterns must be *narrow enough* not to match real content (a copyright page is content the user wants kept; a publisher self-promo page is not)
-- Test on 1 book with `--dry-run` before running batch
+Reader-side: open `/ebook/<id>` (restart dev server first to clear LRU cache):
+- TOC sidebar groups by volume if multi-volume
+- Headings render bold + sized (h2 centered with rule, h3 left-aligned)
+- Chinese is traditional throughout
+- No `Digital Lab` ad pages
+- PDF: `?page=N` URL matches printed page in the chunk content
+- Chapter labels for pages that started with chapter marker
 
-## Limitations
+---
 
-- **PDFs not supported.** The script raises `SystemExit` for non-EPUB input. PDFs lack reliable HTML structure for headings; the OCR pipeline produces flat per-page text. A future PDF standardizer would need to LLM-detect headings — separate skill.
-- **Boilerplate detection is publisher-specific.** Books from publishers not in `HARD_DROP_PATTERNS` will keep their copyright/dedication/ad pages as visible chunks. Cosmetic, not breaking.
-- **TOC anchor accuracy varies.** EPUBs that link `volume2 → file#anchor` mid-document get split at the anchor. If the publisher placed the anchor at the wrong paragraph (e.g. 文明的歷史's K4 anchor is mid-上冊 but tagged as 下冊 start), the split is also wrong. Manual fix would need per-book overrides.
-- **No semantic dedupe.** Two chunks with very similar but not identical 版權頁 content both get kept. The current dedupe is regex-based prefix matching only.
-- **EPUB images dropped entirely.** Cover page becomes the placeholder text 「封面」. Inline figures (chart_img etc.) are stripped — content-only.
+## 故障排除
 
-## Recovery / re-runs
+**Reader sidebar shows 「目錄/插頁」 as fake volumes**
+→ `standardize_ebook.py` was run before volume-marker filter. Re-run.
 
-If a batch run partially fails (e.g. Supabase IO budget hits 57014), the same command re-run picks up where it left off — but only because each book is overwriting independently. There's no checkpoint file. The persisted state in DB / R2 / local is your progress marker.
+**Reader shows publisher ad page (e.g. Digital Lab)**
+→ Add the phrase to `HARD_DROP_PATTERNS` in `standardize_ebook.py`, re-run.
 
-To find books that were standardized vs not, after a batch:
-```sql
--- Approximation: standardized books have format='markdown' in their JSONL.
--- Easiest signal: their first chunk's content starts with '## '.
-```
-Or `ls G:/.../電子書/_chunks/*.jsonl` mtime — recent files were just standardized.
+**EPUB chapter titles show as filename (e.g. `text/part0001.html`)**
+→ Heading detection failed. Check if h1-h4 exists in source HTML; if not, add to `CHAPTER_TITLE_RE` or extend `derive_chapter_title()`.
 
-## When to NOT use this skill
+**PDF chapter_path mostly null after Plan A**
+→ Normal — most PDF pages are mid-chapter. Run Plan B to get chapter chunks.
 
-- The book is a PDF (use OCR pipeline instead)
-- The book has annotations from users (re-running can shift `chunk_index`, breaking saved highlights)
-- The book is single-language English with a normal structure (s2tw conversion would be a no-op, but boilerplate patterns mostly target Chinese — script still works, just less cleaning)
-- You want to re-parse without re-uploading to R2 (use `--no-r2`)
+**PDF Plan B skipped a book with 「only N chunks produced」**
+→ TOC had ≤3 usable entries OR was page-level. Book stays on Plan A (acceptable).
 
-## Recommended order for "I'm a new agent picking this up"
+**「JSONL already chapter-chunked」 when re-running Plan B**
+→ Run `standardize_pdf_lite.py <id>` first to revert to per-page, then Plan B again.
 
-1. Read this file end-to-end first.
-2. Read the [`ebook-pipeline` SKILL](../ebook-pipeline/SKILL.md) for context on where this fits in the broader system.
-3. Look at the **Current state** table above to see which categories are done vs not.
-4. Re-run the 哲學 batch first to apply the recent volume-marker fix:
-   ```bash
-   python scripts/standardize_ebook.py --category 哲學
-   ```
-5. Pick another category and dry-run to estimate scope:
-   ```bash
-   python scripts/standardize_ebook.py --category <名> --dry-run
-   ```
-6. Look at 3-5 sample chunks before committing to a full batch — different categories have different publisher mixes.
-7. After running, sample chunks visually (snippet in **How to run / Verify**). If you see boilerplate that should be dropped, extend `HARD_DROP_PATTERNS` and re-run — idempotent.
-8. **Don't** re-run `standardize_ebook.py` on books whose IDs have entries in the `annotations` table (re-running can shift `chunk_index`). Check first:
-   ```bash
-   python -c "import requests, ... ; print(requests.get(URL+'/rest/v1/annotations?select=ebook_id', headers=H).json())"
-   ```
+**Search returns no fulltext hits**
+→ `ebook_chunks` table doesn't have previews for this book. Run `repopulate_chunk_previews.py --book <id>`.
+
+**`Errno 22` invalid Windows path during batch**
+→ Pre-existing data issue, not a script bug. 5 books in the library have this; skip them.
+
+---
+
+## Files NOT to touch
+
+- `data/local_inventory.json` — frozen Drive scan snapshot
+- `G:/我的雲端硬碟/資料/電子書/_chunks/*.jsonl` — source of truth for full text (R2 mirrors these; if lost, must re-parse)
 
 ## Related
 
-- [`ebook-pipeline` SKILL](../ebook-pipeline/SKILL.md) — the master/orchestration skill that this slots into
-- [`scripts/parse_worker.py`](../../../scripts/parse_worker.py) — the **first-pass** parser. Produces unstructured per-doc chunks. `standardize_ebook.py` is the **second pass** that converts these into reader-ready format.
-- [`scripts/repopulate_chunk_previews.py`](../../../scripts/repopulate_chunk_previews.py) — back-fills `ebook_chunks` previews from local JSONL for books that were never standardized but need full-text search coverage.
-- [`scripts/ocr_with_gemini.py`](../../../scripts/ocr_with_gemini.py) — for scanned PDFs. Produces JSONL of the same shape but `chunk_type="page"`.
+- [`ebook-pipeline` SKILL](../ebook-pipeline/SKILL.md) — orchestration hub (parse_worker → ocr_with_gemini → standardize fan-out)
+- [`scripts/parse_worker.py`](../../../scripts/parse_worker.py) — first-pass parser; produces unstructured per-doc / per-page chunks that this skill polishes
+- [`scripts/ocr_with_gemini.py`](../../../scripts/ocr_with_gemini.py) — for scanned PDFs; emits same per-page JSONL as parse_worker
+- [`scripts/repopulate_chunk_previews.py`](../../../scripts/repopulate_chunk_previews.py) — back-fill DB previews from local JSONL
