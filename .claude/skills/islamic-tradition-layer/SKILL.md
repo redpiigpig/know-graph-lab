@@ -94,24 +94,19 @@ tradition IN ('quranic','sunni','shia_twelver','shia_ismaili','shia_zaidi','sufi
 
 ---
 
-## 📜 視圖機制（規劃，鏡像 biblical 的 `?view=` 邏輯）
+## 📜 視圖機制（累進納入，鏡像 biblical 的 `?view=` 邏輯）
 
 URL：`/genealogy/islamic-tree?view=quranic|sunni|shia_twelver|shia_ismaili|shia_zaidi`
 
-規則（**累進納入**）：
+| view | 顯示 tradition |
+|---|---|
+| `quranic` | `quranic` only — 25 先知 + 古蘭點名（spine 不連貫，嚴格過濾） |
+| `sunni`（預設） | `quranic` + `sunni` + `historical` |
+| `shia_twelver` | 上述 + `shia_twelver` + JSONB override |
+| `shia_ismaili` | quranic + sunni + `shia_ismaili` + JSONB override |
+| `shia_zaidi` | quranic + sunni + `shia_zaidi` + JSONB override |
 
-| view | 顯示哪些 tradition 的人 | JSONB override 套用 |
-|---|---|---|
-| `quranic` | `quranic` only — 25 先知 + 古蘭點名人物（約 17 人，spine 不連貫） | 無 |
-| `sunni`（預設） | `quranic` + `sunni` + `historical` | sunni override |
-| `shia_twelver` | 上述 + `shia_twelver` | shia_twelver override |
-| `shia_ismaili` | quranic + sunni + `shia_ismaili` | shia_ismaili override |
-| `shia_zaidi` | quranic + sunni + `shia_zaidi` | shia_zaidi override |
-
-> 預設改為 `sunni`，因為 spine 必經中段（阿丹↔努哈 中的 伊德里斯系；阿德南↔穆罕默德 22 代）皆是 sunni 傳述。`quranic` only 會讓 BFS 找不到完整路徑（17 人散落不連貫），保留作為「只看古蘭明文」嚴格過濾選項。
-> `sunni`/`shia_*` 不互相納入彼此的伊瑪目人物（避免視覺擠 + 各派視角互不混雜）。
-
-切換點：嘉法爾·薩迪克 (gen 53) 之後 — 十二派接穆薩·卡齊姆 (54)、伊斯瑪儀派接伊斯瑪儀·伊本·嘉法爾 (54)。
+> 預設 sunni 因為 spine 必經中段（伊德里斯系、阿德南→穆罕默德 22 代）皆 sunni 傳述。`sunni`/`shia_*` 不互相納入彼此的伊瑪目人物。十二派 / 伊斯瑪儀派分支點：嘉法爾·薩迪克 (gen 69) 之後。
 
 ---
 
@@ -312,25 +307,12 @@ gen 23 阿蘭姆 → 24 奧達 → 25 馬齊 → 26 薩米 → 27 扎里赫
 
 1. **古蘭優先** — 古蘭明文人物（25 先知 + 古蘭點名者）必為 `quranic`，不可降階為 `sunni`
 2. **不批次 propagate disambiguator** — 套用 [feedback_biblical_name_rules](../../../memory/feedback_biblical_name_rules.md) 同則
-3. **中文音譯遵循中國穆斯林傳統** — 阿丹／努哈／易卜拉欣／伊斯瑪儀／穆罕默德／阿里／法蒂瑪／侯賽因 等通行譯名；遇到罕見人物可參考《伊斯蘭百科全書》中文版或《穆罕默德傳》（Martin Lings 馬丁·林斯 中譯本）
+3. **中文音譯走伊斯蘭傳統，不沿用聖經和合本** — 該隱→蓋比勒、亞伯→哈比勒、利未→拉維、雅各→葉爾孤白、約瑟→優素福、雅弗→雅菲斯、含→哈姆、寧錄→尼姆魯德 等 68 名已批次 rename（見 `islamic_arabic_rename.py`）。新增以色列線人物時，先查 `RENAME` map 或 Arabic 拼寫，不要直接抄聖經中文名
 4. **kunya（父子稱呼）** — 阿拉伯人「Abu X / Umm X / Ibn X / Bint X」是文化專有，獨立放 `kunya` 欄不要混入主名
-5. **gen 計數** — 阿丹 = 1；穆罕默德 = 65；末伊瑪目馬赫迪 = 75；現代約旦阿卜杜拉二世 = 105。**不要重編**（freeze；蓋達爾↔阿德南中段已改用 Ibn Hisham 21 代版本，伊斯瑪儀血親全鏈 gen 已 +16）
-6. **PowerShell 全授權**（per [feedback_powershell_full_auth](../../../memory/feedback_powershell_full_auth.md)）
-7. **有改動自動 git push**（per [feedback_auto_push](../../../memory/feedback_auto_push.md)）
-
----
-
-## 📁 相關 scripts（可直接重用 / 改寫）
-
-- `c:\tmp\islamic_create_table.py` — schema migration（已跑過）
-- `c:\tmp\islamic_seed_lineage.py` — 阿丹→穆罕默德 53 行（已跑過）
-- `c:\tmp\islamic_seed_family.py` — 穆聖叔伯 + 12 妻 + 7 子女 + 12 伊瑪目 42 行（已跑過）
-- `c:\tmp\islamic_insert_qaydar_adnan_bridge.py` — 蓋達爾→阿德南 5 代史傳補白 + gen >= 23 全表 +5（已跑過）
-- `c:\tmp\islamic_seed_caliphs.py` — Quraysh 部族分支錨點 + 4 正統 + 14 倭馬亞 + 37 阿拔斯 + 現代哈希姆 共 96 行（已跑過）
-- `c:\tmp\islamic_check_state.py` / `c:\tmp\islamic_verify_caliphs.py` — DB 狀態檢查工具
-- `c:\tmp\inspect_biblical_schema.py` — 範本，列任意 supabase 表 column
-
-未來新批次（如蘇菲聖徒鏈、法蒂瑪王朝、麥加謝里夫完整鏈）依此模式：fetch_all → set existing → INSERT skip-if-exists；parent 用 `_parent` field 同步 patch parent.children。
+5. **gen 計數 freeze** — 阿丹 = 1；穆罕默德 = 65；末伊瑪目馬赫迪 = 75；現代約旦阿卜杜拉二世 = 105。蓋達爾↔阿德南中段已改用 Ibn Hisham 21 代版本，伊斯瑪儀血親全鏈 gen 已 +16
+6. **新批次資料 idempotent pattern** — fetch_all → set existing → INSERT skip-if-exists；parent 用 `_parent` field 同步 patch parent.children；gen shift 用 BFS（見 `islamic_ibn_hisham_migration.py` 範本）
+7. **PowerShell 全授權**（per [feedback_powershell_full_auth](../../../memory/feedback_powershell_full_auth.md)）
+8. **有改動自動 git push**（per [feedback_auto_push](../../../memory/feedback_auto_push.md)）
 
 ---
 
@@ -346,10 +328,19 @@ gen 23 阿蘭姆 → 24 奧達 → 25 馬齊 → 26 薩米 → 27 扎里赫
 
 ---
 
-## 入門
+## 視覺驗收
 
-1. 先讀此 SKILL.md
-2. 跑 `python c:/tmp/inspect_biblical_schema.py` 改寫成 `islamic_people` 查表，看當前 95 行資料
-3. 依 Task 1-7 順序做（先 API + 表格頁，再 tree 組件，最後 widget + legend）
-4. 每完成一個 task 就 commit + push
-5. 視覺驗收可仿 `scripts/biblical-shot.mjs` 寫 `scripts/islamic-shot.mjs`
+- `node scripts/islamic-shot.mjs` — 預設 sunni view 截圖（仿 biblical-shot.mjs）
+- `node scripts/islamic-shot.mjs --view shia_twelver --focus 哈桑·伊本·阿里 --zoom 0.8`
+- `node scripts/islamic-shot.mjs --focus 烏姆·薩拉瑪 --zoom 1.1` — 看穆聖 12 妻 2 行 stack
+- `node scripts/islamic-prophet-shot.mjs` — 先知鏈展開驗收
+- `node scripts/islamic-branch-shots.mjs` — 朝代分支驗收
+- `node scripts/check_eve_dom.mjs` — DOM 驗證（列 Adam/Eve/Muhammad/12 妻位置）
+
+## 新增資料的標準流程
+
+1. 查 DB 現況（`python c:/tmp/islamic_stats.py`）
+2. 撰寫批次 script 跟 `islamic_ibn_hisham_migration.py` / `islamic_side_branches.py` 等 idempotent pattern
+3. 跑 script → 用 `islamic_check_state.py` 確認 row 數與 gens
+4. 視覺驗收（islamic-shot.mjs --focus 新人物）
+5. 更新本 SKILL.md（人物世系區 + scripts list）→ commit + push
