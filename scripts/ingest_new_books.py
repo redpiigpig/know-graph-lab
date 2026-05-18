@@ -163,6 +163,15 @@ def fallback_category(title: str, author: str) -> str | None:
         "christ", "christian", "christology", "church", "bonhoeffer", "syriac",
         "nestorius", "cyril", "monophysite", "chalcedon", "ephrem", "babai",
         "homilies", "patristic", "apostolic", "gospel", "biblical", "theology",
+        # 教父名字（Schaff 等版本書名/作者欄會出現）
+        "nicene", "ecumenical", "fathers", "schaff",
+        "tertullian", "hippolytus", "cyprian", "origen", "novatian",
+        "lactantius", "methodius", "aphrahat",
+        "augustine", "jerome", "athanasius", "ambrose", "hilary",
+        "basil", "chrysostom", "eusebius", "sulpitius", "theodoret",
+        "sozomenus", "nazianzen", "leo the great", "gregory of nyssa",
+        "gregory the great", "gregory thaumaturgus", "irenaeus", "justin martyr",
+        "clement of alexandria",
     ]
     if any(k in text for k in christian_kw):
         return "宗教學"

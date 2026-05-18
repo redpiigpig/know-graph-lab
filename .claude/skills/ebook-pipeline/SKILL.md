@@ -658,6 +658,17 @@ Schema in [`database/tags.sql`](../../../database/tags.sql). `tags` + `book_tags
 
 ## Pending TODOs
 
+0. **ziliaozhan/神学 大規模待下載清單** — 見 [`ziliaozhan_theology_todo.md`](ziliaozhan_theology_todo.md)（255 本，247 新增）。包含：
+   - 古代基督信仰聖經注釋叢書（IVP ACCS 中譯）27 冊 ★★★
+   - 黃根春《基督教典外文獻》OT 6 + NT 4 = 10 冊 ★★
+   - Aquinas《神學大全》中譯 18 冊 + 索引 ★★★
+   - Aquinas《駁異大全》中譯 4 卷 ★★
+   - 信理神學套書 6 卷
+   - Augustine / Athanasius / Ambrose / Chrysostom / Gregory / Origen / Tertullian / Justin / Anselm 等個別教父著作
+   - Bonhoeffer / Barth / Rahner / Moltmann / Küng / Pelikan / Kierkegaard 等現代神學家
+   - Doctors of the Church 靈修經典：師主篇、大德蘭、十字若望、依納爵神操、沙漠教父等
+   - 教父／聖師傳記
+   - URL pattern: `https://dl.ziliaozhan.win/d/书籍/pdf/{neice}/{filename}`
 1. **PDF Plan B v1 (font-driven)** — for ~285 no-TOC PDFs. Design above in Workflow B.
 2. **37 EPUBs with single chunk >400KB and no internal headings** — `resplit_giant_chunks.py` can't help. Needs LLM page-boundary detection on raw text, or font cues from raw EPUB HTML.
 3. **16 套書 with `volume=None`** — flat-TOC EPUB or PDF without volume metadata. Need font-size analysis (EPUB) or LLM-detect on TOC chunk content.
