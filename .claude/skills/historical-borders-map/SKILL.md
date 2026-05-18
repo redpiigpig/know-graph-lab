@@ -7,7 +7,10 @@ description: 「歷史國界地圖」工具集（/maps/historical-borders）— 
 
 > ⚠️ **d3-geo 球面 winding 反向陷阱（已踩過）**：d3-geoEqualEarth／geoArea／geoCentroid 用**球面**慣例：**地理座標 CW 環 = 內部小區域，CCW = 補集（整個球面減該區）**。這與 RFC 7946 GeoJSON spec 相反。任何手寫 polygon 或 Graham 凸包（標準輸出數學 CCW）→ **必須 reverse 成 CW**，否則 `geoCentroid` 回傳對蹠點、`geoPath` 渲染出「世界輪廓 + 小洞」=全圖被填一色。`scripts/build_city_hull_polygons.mjs` 已內建 `.reverse()`，新加 polygon 一定要驗證 geoArea < 2π。
 
-> 🏔️ **city-hull fine polygons 的本質限制**：用 Graham 凸包連城市點 → 是**幾何凸多邊形**，不沿海岸線、會切過海（如蒙兀兒 Kabul→Dhaka 直線穿孟加拉灣）。HistoricalBordersMap.vue 已加 `<clipPath id="land-clip">` 用 NE admin_0 把 state polygons 裁到現代陸地，海洋部分自動消失。長期最正解仍是改用實際邊界資料（OpenHistoricalMap、DARMC），但目前 OHM 對古近東／古印度／前哥倫布美洲覆蓋率近零（11 個我加的帝國裡 7 個 0 polygon），所以 land-clip 是當前最佳折衷。
+> 🏔️ **city-hull fine polygons 的本質限制 + 解法**：用 Graham 凸包連城市點 → 是**幾何凸多邊形**，不沿海岸線、會切過海（如蒙兀兒 Kabul→Dhaka 直線穿孟加拉灣）。
+> 1. **歐洲區（羅馬、拜占庭、神羅、法蘭克、西哥德、倫巴底、教皇國、納瓦拉、萊昂、卡斯提爾、阿拉貢、西西里、威尼斯、西班牙、法蘭西、俄羅斯沙皇／帝國、普魯士、德意志、瑞典、丹麥、波蘭立陶宛、鄂圖曼…34 個）已改用 OHM 真實邊界**（[ohm-polygons.geojson](../../../public/maps/ohm-polygons.geojson)，由 [fetch_ohm_europe.py](../../../scripts/fetch_ohm_europe.py) 從 OpenHistoricalMap Overpass API 抓 + DP 0.1° 簡化）。每個 polygon 年份分段，準確沿海岸線。
+> 2. **其他區（中國、伊斯蘭、古印度、古波斯、美洲）仍是 city-hull**，HistoricalBordersMap.vue 用 `<clipPath id="land-clip">` 把切過海的部分裁掉。
+> 3. **OHM 覆蓋限制**：古近東／古印度／前哥倫布美洲幾乎沒人補（11 個非歐洲新加帝國裡 7 個 OHM 0 polygon），所以這些區短期不換。CHGIS（中國）/ DARMC（地中海+中世紀）是未來路徑。
 
 > 🧹 **任務結束清 c:/tmp**：地圖任務常產 `historical-borders-XXX.png` 等截圖到 `/c/tmp/`，session 尾段要刪。保留 `/c/tmp/hbm-sample/`（53 snapshots，重抓 ~2 分鐘）。詳見 [[feedback-tmp-cleanup]]。
 
@@ -32,7 +35,8 @@ description: 「歷史國界地圖」工具集（/maps/historical-borders）— 
 | E. 人工撰寫詳細 | `data/maps/historical-states-db.ts` (`STATE_DETAILS`) | **277 條（5 輪 + 中國諸侯）** | 朝代、首都、宗教、人口、面積、簡介 |
 | E2. 朝代時間段標籤 | `data/maps/dynasty-labels.ts` (`DYNASTY_LABELS`) | **55 polygon × ~10 段** | 跨朝代 polygon 按年代切時期；dynastyLabelAt() 同名簡化 + 空 dynasty_zh 處理 |
 | E3. polygon 年範圍修正 | `public/maps/polygon-year-overrides.json` | **43 條** | 收窄源資料錯誤年代（Sui 619、Tang 907、Yuan 1271-1368、Sinic 限商朝期、Wu 春秋吳國 -900~-473、Achaemenid -550~-330、Sasanian 224~651、Maurya -322~-185、Aztec 1428~1521、Inca 1438~1533、HRE 962~1806 等）|
-| E4. 細粒度 polygon（city-hull） | `public/maps/fine-polygons.geojson` | **279 polygons / 54 帝國** | 中東 18（阿巴斯／伍麥亞／蒙古）+ 中國 135（商周秦漢三國晉南北朝隋唐五代十國北南宋遼金西夏西遼元明清）+ 地中海 36（羅馬／拜占庭／鄂圖曼）+ **古波斯 30（阿契美尼德／帕提亞早期＋極盛／薩珊）+ 古印度 35（孔雀／笈多／德里蘇丹／蒙兀兒）+ 神羅 13（962-1806）+ 美洲 13（阿茲特克／印加）**|
+| E4. 細粒度 polygon（city-hull） | `public/maps/fine-polygons.geojson` | **276 polygons / 54 帝國** | 中東 18（阿巴斯／伍麥亞／蒙古）+ 中國 135 + 地中海 33（羅馬到 395／拜占庭／鄂圖曼）+ 古波斯 30 + 古印度 35 + 神羅 13 + 美洲 13 |
+| E5. **OHM 真實邊界 polygon** | `public/maps/ohm-polygons.geojson` | **525 polygons / 34 歐洲帝國 (4.2 MB)** | 從 OpenHistoricalMap 抓的真實歷史國界（年份分段、Douglas-Peucker 0.1° 簡化）；含羅馬／拜占庭／西羅馬／神羅／法蘭克／倫巴底／西哥德／教皇國／納瓦拉／萊昂／卡斯提爾／阿拉貢／西西里／威尼斯／西班牙／法蘭西／俄羅斯沙皇國／俄羅斯帝國／普魯士／德意志／瑞典／丹麥／波蘭立陶宛聯邦／鄂圖曼／…34 個歐洲帝國。優先級：OHM > fine > source |
 | F. NE 50m coastline | `public/maps/ne_50m_coastline.geojson` | 1428 LineString | 海岸線（黑線） |
 | G. NE 50m admin_0 | `public/maps/ne_50m_admin_0_countries.geojson` | 242 features | 陸地灰底 + **NAME_ZHT 中文國名（內建）** |
 | H. Polygon 名譯本 | `public/maps/polygon-names-zh.json` | **2,420 條 (88 KB)** | Gemini batch 翻的 polygon name → 繁中 |

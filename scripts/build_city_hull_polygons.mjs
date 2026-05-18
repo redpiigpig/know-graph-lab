@@ -1053,9 +1053,10 @@ const EMPIRES = [
   },
   {
     // 羅馬帝國 — 用 polygon_name='Roman Empire' 抑制源（範圍可能不準）
+    // 395 後分東西，由 OHM Western/Eastern Roman 接手，此處 fine 只到 395
     polygon_name: 'Roman Empire',
     name_zh: '羅馬',
-    end_year: 476,
+    end_year: 395,
     years: {
       // -27 屋大維建元首制
       [-27]: ['Rome', 'Naples2', 'Carthage', 'Massalia', 'Tarraco', 'Cordoba2', 'Athens', 'Alexandria', 'Antioch', 'Jerusalem', 'Cyrene', 'Pergamon'],
@@ -1071,12 +1072,7 @@ const EMPIRES = [
       [285]: ['Rome', 'Naples2', 'Carthage', 'Massalia', 'Lugdunum', 'Tarraco', 'Cordoba2', 'Athens', 'Alexandria', 'Antioch', 'Jerusalem', 'Cyrene', 'Pergamon', 'Mainz', 'Cologne', 'Trier', 'Aquileia', 'Vienna2', 'Sirmium', 'Londinium', 'Constantinople', 'Edessa', 'Ankyra', 'Sardis'],
       // 330 君士坦丁定都君士坦丁堡
       [330]: ['Rome', 'Naples2', 'Carthage', 'Massalia', 'Lugdunum', 'Tarraco', 'Cordoba2', 'Athens', 'Alexandria', 'Antioch', 'Jerusalem', 'Cyrene', 'Mainz', 'Trier', 'Aquileia', 'Sirmium', 'Londinium', 'Constantinople', 'Thessalonica', 'Edessa', 'Ankyra'],
-      // 395 狄奧多西死、帝國正式分東西
-      [395]: ['Rome', 'Naples2', 'Carthage', 'Massalia', 'Lugdunum', 'Tarraco', 'Cordoba2', 'Athens', 'Alexandria', 'Antioch', 'Jerusalem', 'Mainz', 'Trier', 'Aquileia', 'Sirmium', 'Londinium', 'Constantinople', 'Thessalonica'],
-      // 410 西哥德人攻陷羅馬
-      [410]: ['Rome', 'Naples2', 'Carthage', 'Massalia', 'Lugdunum', 'Tarraco', 'Athens', 'Alexandria', 'Antioch', 'Jerusalem', 'Aquileia', 'Constantinople', 'Thessalonica', 'Ravenna'],
-      // 455 汪達爾人洗劫羅馬
-      [455]: ['Rome', 'Ravenna', 'Naples2', 'Massalia', 'Athens', 'Alexandria', 'Antioch', 'Jerusalem', 'Constantinople', 'Thessalonica'],
+      // 395 狄奧多西死、帝國正式分東西（fine 終止；後 395 改由 OHM Western/Eastern Roman 提供準確邊界）
     },
   },
   {
