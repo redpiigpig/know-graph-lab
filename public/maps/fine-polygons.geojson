@@ -8700,6 +8700,3892 @@
         "city_count": 35,
         "source": "city-hull (manual city list)"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              48.27,
+              32.18
+            ],
+            [
+              52.89,
+              29.93
+            ],
+            [
+              53.18,
+              30.19
+            ],
+            [
+              48.51,
+              34.8
+            ],
+            [
+              48.27,
+              32.18
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Achaemenid Empire",
+        "name_zh": "阿契美尼德",
+        "year_from": -550,
+        "year_to": -547,
+        "city_count": 5,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.34,
+              37.95
+            ],
+            [
+              27.42,
+              37.04
+            ],
+            [
+              52.89,
+              29.93
+            ],
+            [
+              53.18,
+              30.19
+            ],
+            [
+              48.51,
+              34.8
+            ],
+            [
+              28.04,
+              38.49
+            ],
+            [
+              27.34,
+              37.95
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Achaemenid Empire",
+        "name_zh": "阿契美尼德",
+        "year_from": -546,
+        "year_to": -540,
+        "city_count": 8,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.34,
+              37.95
+            ],
+            [
+              27.42,
+              37.04
+            ],
+            [
+              35.23,
+              31.78
+            ],
+            [
+              52.89,
+              29.93
+            ],
+            [
+              53.18,
+              30.19
+            ],
+            [
+              48.51,
+              34.8
+            ],
+            [
+              28.04,
+              38.49
+            ],
+            [
+              27.34,
+              37.95
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Achaemenid Empire",
+        "name_zh": "阿契美尼德",
+        "year_from": -539,
+        "year_to": -526,
+        "city_count": 13,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.86,
+              32.82
+            ],
+            [
+              31.25,
+              29.85
+            ],
+            [
+              52.89,
+              29.93
+            ],
+            [
+              53.18,
+              30.19
+            ],
+            [
+              48.51,
+              34.8
+            ],
+            [
+              28.04,
+              38.49
+            ],
+            [
+              27.34,
+              37.95
+            ],
+            [
+              21.86,
+              32.82
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Achaemenid Empire",
+        "name_zh": "阿契美尼德",
+        "year_from": -525,
+        "year_to": -519,
+        "city_count": 17,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.86,
+              32.82
+            ],
+            [
+              31.25,
+              29.85
+            ],
+            [
+              52.89,
+              29.93
+            ],
+            [
+              71.51,
+              30.2
+            ],
+            [
+              72.83,
+              33.74
+            ],
+            [
+              66.97,
+              39.65
+            ],
+            [
+              64.43,
+              39.77
+            ],
+            [
+              28.04,
+              38.49
+            ],
+            [
+              27.34,
+              37.95
+            ],
+            [
+              21.86,
+              32.82
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Achaemenid Empire",
+        "name_zh": "阿契美尼德",
+        "year_from": -518,
+        "year_to": -487,
+        "city_count": 24,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              21.86,
+              32.82
+            ],
+            [
+              31.25,
+              29.85
+            ],
+            [
+              52.89,
+              29.93
+            ],
+            [
+              71.51,
+              30.2
+            ],
+            [
+              72.83,
+              33.74
+            ],
+            [
+              66.97,
+              39.65
+            ],
+            [
+              26.56,
+              41.68
+            ],
+            [
+              21.86,
+              32.82
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Achaemenid Empire",
+        "name_zh": "阿契美尼德",
+        "year_from": -486,
+        "year_to": -405,
+        "city_count": 26,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.34,
+              37.95
+            ],
+            [
+              27.42,
+              37.04
+            ],
+            [
+              35.23,
+              31.78
+            ],
+            [
+              52.89,
+              29.93
+            ],
+            [
+              71.51,
+              30.2
+            ],
+            [
+              72.83,
+              33.74
+            ],
+            [
+              66.97,
+              39.65
+            ],
+            [
+              64.43,
+              39.77
+            ],
+            [
+              32.85,
+              39.93
+            ],
+            [
+              28.04,
+              38.49
+            ],
+            [
+              27.34,
+              37.95
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Achaemenid Empire",
+        "name_zh": "阿契美尼德",
+        "year_from": -404,
+        "year_to": -344,
+        "city_count": 21,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.34,
+              37.95
+            ],
+            [
+              27.42,
+              37.04
+            ],
+            [
+              29.92,
+              31.2
+            ],
+            [
+              31.25,
+              29.85
+            ],
+            [
+              52.89,
+              29.93
+            ],
+            [
+              71.51,
+              30.2
+            ],
+            [
+              72.83,
+              33.74
+            ],
+            [
+              66.97,
+              39.65
+            ],
+            [
+              64.43,
+              39.77
+            ],
+            [
+              32.85,
+              39.93
+            ],
+            [
+              28.04,
+              38.49
+            ],
+            [
+              27.34,
+              37.95
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Achaemenid Empire",
+        "name_zh": "阿契美尼德",
+        "year_from": -343,
+        "year_to": -335,
+        "city_count": 23,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              27.34,
+              37.95
+            ],
+            [
+              27.42,
+              37.04
+            ],
+            [
+              31.25,
+              29.85
+            ],
+            [
+              52.89,
+              29.93
+            ],
+            [
+              71.51,
+              30.2
+            ],
+            [
+              72.83,
+              33.74
+            ],
+            [
+              66.97,
+              39.65
+            ],
+            [
+              64.43,
+              39.77
+            ],
+            [
+              32.85,
+              39.93
+            ],
+            [
+              28.04,
+              38.49
+            ],
+            [
+              27.34,
+              37.95
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Achaemenid Empire",
+        "name_zh": "阿契美尼德",
+        "year_from": -334,
+        "year_to": -331,
+        "city_count": 22,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              42.72,
+              35.59
+            ],
+            [
+              58.81,
+              36.21
+            ],
+            [
+              61.83,
+              37.6
+            ],
+            [
+              42.72,
+              35.59
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Parthia",
+        "name_zh": "帕提亞",
+        "year_from": -247,
+        "year_to": -210,
+        "city_count": 3,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              42.72,
+              35.59
+            ],
+            [
+              62.2,
+              34.34
+            ],
+            [
+              66.9,
+              36.76
+            ],
+            [
+              61.83,
+              37.6
+            ],
+            [
+              42.72,
+              35.59
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Parthia",
+        "name_zh": "帕提亞",
+        "year_from": -209,
+        "year_to": -172,
+        "city_count": 5,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              42.72,
+              35.59
+            ],
+            [
+              48.27,
+              32.18
+            ],
+            [
+              52.92,
+              29.98
+            ],
+            [
+              62.2,
+              34.34
+            ],
+            [
+              66.9,
+              36.76
+            ],
+            [
+              61.83,
+              37.6
+            ],
+            [
+              42.72,
+              35.59
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Parthia",
+        "name_zh": "帕提亞",
+        "year_from": -171,
+        "year_to": -131,
+        "city_count": 8,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              41.21,
+              37.07
+            ],
+            [
+              44.42,
+              32.54
+            ],
+            [
+              52.89,
+              29.93
+            ],
+            [
+              62.2,
+              34.34
+            ],
+            [
+              66.9,
+              36.76
+            ],
+            [
+              61.83,
+              37.6
+            ],
+            [
+              41.21,
+              37.07
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Parthian Empire",
+        "name_zh": "帕提亞",
+        "year_from": -129,
+        "year_to": -70,
+        "city_count": 12,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              41.21,
+              37.07
+            ],
+            [
+              44.42,
+              32.54
+            ],
+            [
+              52.89,
+              29.93
+            ],
+            [
+              62.2,
+              34.34
+            ],
+            [
+              66.9,
+              36.76
+            ],
+            [
+              61.83,
+              37.6
+            ],
+            [
+              41.21,
+              37.07
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Parthian Empire",
+        "name_zh": "帕提亞",
+        "year_from": -69,
+        "year_to": -54,
+        "city_count": 12,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              38.8,
+              37.16
+            ],
+            [
+              44.42,
+              32.54
+            ],
+            [
+              52.89,
+              29.93
+            ],
+            [
+              62.2,
+              34.34
+            ],
+            [
+              66.9,
+              36.76
+            ],
+            [
+              61.83,
+              37.6
+            ],
+            [
+              44.51,
+              40.18
+            ],
+            [
+              38.8,
+              37.16
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Parthian Empire",
+        "name_zh": "帕提亞",
+        "year_from": -53,
+        "year_to": 0,
+        "city_count": 14,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              38.8,
+              37.16
+            ],
+            [
+              44.42,
+              32.54
+            ],
+            [
+              52.89,
+              29.93
+            ],
+            [
+              62.2,
+              34.34
+            ],
+            [
+              66.9,
+              36.76
+            ],
+            [
+              61.83,
+              37.6
+            ],
+            [
+              38.8,
+              37.16
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Parthian Empire",
+        "name_zh": "帕提亞",
+        "year_from": 1,
+        "year_to": 62,
+        "city_count": 13,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              41.21,
+              37.07
+            ],
+            [
+              44.42,
+              32.54
+            ],
+            [
+              52.89,
+              29.93
+            ],
+            [
+              62.2,
+              34.34
+            ],
+            [
+              66.9,
+              36.76
+            ],
+            [
+              61.83,
+              37.6
+            ],
+            [
+              41.21,
+              37.07
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Parthian Empire",
+        "name_zh": "帕提亞",
+        "year_from": 63,
+        "year_to": 116,
+        "city_count": 12,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              42.72,
+              35.59
+            ],
+            [
+              44.58,
+              33.09
+            ],
+            [
+              52.89,
+              29.93
+            ],
+            [
+              62.2,
+              34.34
+            ],
+            [
+              66.9,
+              36.76
+            ],
+            [
+              61.83,
+              37.6
+            ],
+            [
+              42.72,
+              35.59
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Parthian Empire",
+        "name_zh": "帕提亞",
+        "year_from": 117,
+        "year_to": 164,
+        "city_count": 10,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              42.72,
+              35.59
+            ],
+            [
+              44.42,
+              32.54
+            ],
+            [
+              52.89,
+              29.93
+            ],
+            [
+              62.2,
+              34.34
+            ],
+            [
+              66.9,
+              36.76
+            ],
+            [
+              61.83,
+              37.6
+            ],
+            [
+              42.72,
+              35.59
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Parthian Empire",
+        "name_zh": "帕提亞",
+        "year_from": 165,
+        "year_to": 197,
+        "city_count": 11,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              42.72,
+              35.59
+            ],
+            [
+              44.58,
+              33.09
+            ],
+            [
+              52.89,
+              29.93
+            ],
+            [
+              62.2,
+              34.34
+            ],
+            [
+              66.9,
+              36.76
+            ],
+            [
+              61.83,
+              37.6
+            ],
+            [
+              42.72,
+              35.59
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Parthian Empire",
+        "name_zh": "帕提亞",
+        "year_from": 198,
+        "year_to": 223,
+        "city_count": 10,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              44.58,
+              33.09
+            ],
+            [
+              52.89,
+              29.93
+            ],
+            [
+              52.92,
+              29.98
+            ],
+            [
+              48.51,
+              34.8
+            ],
+            [
+              44.58,
+              33.09
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Parthian Empire",
+        "name_zh": "帕提亞",
+        "year_from": 224,
+        "year_to": 223,
+        "city_count": 5,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              41.21,
+              37.07
+            ],
+            [
+              44.42,
+              32.54
+            ],
+            [
+              52.55,
+              28.97
+            ],
+            [
+              66.9,
+              36.76
+            ],
+            [
+              61.83,
+              37.6
+            ],
+            [
+              41.21,
+              37.07
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sasanian Empire",
+        "name_zh": "薩珊",
+        "year_from": 224,
+        "year_to": 259,
+        "city_count": 14,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              36.16,
+              36.2
+            ],
+            [
+              44.42,
+              32.54
+            ],
+            [
+              52.55,
+              28.97
+            ],
+            [
+              66.9,
+              36.76
+            ],
+            [
+              61.83,
+              37.6
+            ],
+            [
+              38.8,
+              37.16
+            ],
+            [
+              36.16,
+              36.2
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sasanian Empire",
+        "name_zh": "薩珊",
+        "year_from": 260,
+        "year_to": 308,
+        "city_count": 17,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              41.21,
+              37.07
+            ],
+            [
+              44.42,
+              32.54
+            ],
+            [
+              52.55,
+              28.97
+            ],
+            [
+              66.9,
+              36.76
+            ],
+            [
+              61.83,
+              37.6
+            ],
+            [
+              41.21,
+              37.07
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sasanian Empire",
+        "name_zh": "薩珊",
+        "year_from": 309,
+        "year_to": 386,
+        "city_count": 14,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              41.21,
+              37.07
+            ],
+            [
+              44.42,
+              32.54
+            ],
+            [
+              52.55,
+              28.97
+            ],
+            [
+              66.9,
+              36.76
+            ],
+            [
+              61.83,
+              37.6
+            ],
+            [
+              44.51,
+              40.18
+            ],
+            [
+              41.21,
+              37.07
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sasanian Empire",
+        "name_zh": "薩珊",
+        "year_from": 387,
+        "year_to": 483,
+        "city_count": 15,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              41.21,
+              37.07
+            ],
+            [
+              44.42,
+              32.54
+            ],
+            [
+              52.55,
+              28.97
+            ],
+            [
+              61.83,
+              37.6
+            ],
+            [
+              41.21,
+              37.07
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sasanian Empire",
+        "name_zh": "薩珊",
+        "year_from": 484,
+        "year_to": 530,
+        "city_count": 12,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              38.8,
+              37.16
+            ],
+            [
+              44.42,
+              32.54
+            ],
+            [
+              52.55,
+              28.97
+            ],
+            [
+              66.9,
+              36.76
+            ],
+            [
+              61.83,
+              37.6
+            ],
+            [
+              44.51,
+              40.18
+            ],
+            [
+              38.8,
+              37.16
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sasanian Empire",
+        "name_zh": "薩珊",
+        "year_from": 531,
+        "year_to": 613,
+        "city_count": 17,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              29.92,
+              31.2
+            ],
+            [
+              31.25,
+              29.85
+            ],
+            [
+              52.55,
+              28.97
+            ],
+            [
+              66.9,
+              36.76
+            ],
+            [
+              61.83,
+              37.6
+            ],
+            [
+              44.51,
+              40.18
+            ],
+            [
+              36.16,
+              36.2
+            ],
+            [
+              29.92,
+              31.2
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sasanian Empire",
+        "name_zh": "薩珊",
+        "year_from": 614,
+        "year_to": 627,
+        "city_count": 21,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              41.21,
+              37.07
+            ],
+            [
+              44.42,
+              32.54
+            ],
+            [
+              52.55,
+              28.97
+            ],
+            [
+              66.9,
+              36.76
+            ],
+            [
+              61.83,
+              37.6
+            ],
+            [
+              41.21,
+              37.07
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sasanian Empire",
+        "name_zh": "薩珊",
+        "year_from": 628,
+        "year_to": 650,
+        "city_count": 14,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              51.57,
+              29.79
+            ],
+            [
+              52.89,
+              29.93
+            ],
+            [
+              62.2,
+              34.34
+            ],
+            [
+              66.9,
+              36.76
+            ],
+            [
+              61.83,
+              37.6
+            ],
+            [
+              58.81,
+              36.21
+            ],
+            [
+              51.57,
+              29.79
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sasanian Empire",
+        "name_zh": "薩珊",
+        "year_from": 651,
+        "year_to": 650,
+        "city_count": 7,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.78,
+              23.18
+            ],
+            [
+              77.81,
+              23.52
+            ],
+            [
+              85.14,
+              25.61
+            ],
+            [
+              79.92,
+              27.06
+            ],
+            [
+              77.67,
+              27.49
+            ],
+            [
+              75.78,
+              23.18
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Mauryan Empire",
+        "name_zh": "孔雀",
+        "year_from": -322,
+        "year_to": -306,
+        "city_count": 5,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              65.71,
+              31.62
+            ],
+            [
+              68.37,
+              25.39
+            ],
+            [
+              72.99,
+              21.71
+            ],
+            [
+              85.14,
+              25.61
+            ],
+            [
+              72.83,
+              33.74
+            ],
+            [
+              65.71,
+              31.62
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Mauryan Empire",
+        "name_zh": "孔雀",
+        "year_from": -305,
+        "year_to": -269,
+        "city_count": 10,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              65.71,
+              31.62
+            ],
+            [
+              68.37,
+              25.39
+            ],
+            [
+              72.82,
+              19.41
+            ],
+            [
+              85.14,
+              25.61
+            ],
+            [
+              72.83,
+              33.74
+            ],
+            [
+              65.71,
+              31.62
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Mauryan Empire",
+        "name_zh": "孔雀",
+        "year_from": -268,
+        "year_to": -261,
+        "city_count": 12,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              65.71,
+              31.62
+            ],
+            [
+              68.37,
+              25.39
+            ],
+            [
+              78.12,
+              9.93
+            ],
+            [
+              87.92,
+              22.04
+            ],
+            [
+              88.65,
+              25.03
+            ],
+            [
+              72.83,
+              33.74
+            ],
+            [
+              65.71,
+              31.62
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Mauryan Empire",
+        "name_zh": "孔雀",
+        "year_from": -260,
+        "year_to": -233,
+        "city_count": 16,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              68.37,
+              25.39
+            ],
+            [
+              72.82,
+              19.41
+            ],
+            [
+              85.83,
+              20.3
+            ],
+            [
+              87.92,
+              22.04
+            ],
+            [
+              88.65,
+              25.03
+            ],
+            [
+              72.83,
+              33.74
+            ],
+            [
+              68.37,
+              25.39
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Mauryan Empire",
+        "name_zh": "孔雀",
+        "year_from": -232,
+        "year_to": -201,
+        "city_count": 14,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.82,
+              19.41
+            ],
+            [
+              85.83,
+              20.3
+            ],
+            [
+              87.92,
+              22.04
+            ],
+            [
+              88.65,
+              25.03
+            ],
+            [
+              79.92,
+              27.06
+            ],
+            [
+              77.67,
+              27.49
+            ],
+            [
+              72.99,
+              21.71
+            ],
+            [
+              72.82,
+              19.41
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Mauryan Empire",
+        "name_zh": "孔雀",
+        "year_from": -200,
+        "year_to": -186,
+        "city_count": 11,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.67,
+              27.49
+            ],
+            [
+              87.92,
+              22.04
+            ],
+            [
+              85.14,
+              25.61
+            ],
+            [
+              79.92,
+              27.06
+            ],
+            [
+              77.67,
+              27.49
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Gupta Empire",
+        "name_zh": "笈多",
+        "year_from": 320,
+        "year_to": 349,
+        "city_count": 4,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.99,
+              21.71
+            ],
+            [
+              87.92,
+              22.04
+            ],
+            [
+              88.65,
+              25.03
+            ],
+            [
+              79.92,
+              27.06
+            ],
+            [
+              77.67,
+              27.49
+            ],
+            [
+              72.99,
+              21.71
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Gupta Empire",
+        "name_zh": "笈多",
+        "year_from": 350,
+        "year_to": 379,
+        "city_count": 9,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              71.51,
+              30.2
+            ],
+            [
+              71.88,
+              21.89
+            ],
+            [
+              72.82,
+              19.41
+            ],
+            [
+              87.92,
+              22.04
+            ],
+            [
+              88.65,
+              25.03
+            ],
+            [
+              71.51,
+              30.2
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Gupta Empire",
+        "name_zh": "笈多",
+        "year_from": 380,
+        "year_to": 414,
+        "city_count": 13,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              71.88,
+              21.89
+            ],
+            [
+              72.82,
+              19.41
+            ],
+            [
+              87.92,
+              22.04
+            ],
+            [
+              88.65,
+              25.03
+            ],
+            [
+              79.92,
+              27.06
+            ],
+            [
+              77.67,
+              27.49
+            ],
+            [
+              72.59,
+              23.03
+            ],
+            [
+              71.88,
+              21.89
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Gupta Empire",
+        "name_zh": "笈多",
+        "year_from": 415,
+        "year_to": 479,
+        "city_count": 12,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.67,
+              27.49
+            ],
+            [
+              77.74,
+              23.48
+            ],
+            [
+              87.92,
+              22.04
+            ],
+            [
+              88.65,
+              25.03
+            ],
+            [
+              79.92,
+              27.06
+            ],
+            [
+              77.67,
+              27.49
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Gupta Empire",
+        "name_zh": "笈多",
+        "year_from": 480,
+        "year_to": 529,
+        "city_count": 7,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              79.92,
+              27.06
+            ],
+            [
+              87.92,
+              22.04
+            ],
+            [
+              88.65,
+              25.03
+            ],
+            [
+              79.92,
+              27.06
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Gupta Empire",
+        "name_zh": "笈多",
+        "year_from": 530,
+        "year_to": 549,
+        "city_count": 4,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              68.37,
+              25.39
+            ],
+            [
+              79.92,
+              27.06
+            ],
+            [
+              74.36,
+              31.55
+            ],
+            [
+              71.51,
+              30.2
+            ],
+            [
+              68.37,
+              25.39
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sultanate of Delhi",
+        "name_zh": "德里蘇丹國",
+        "year_from": 1206,
+        "year_to": 1235,
+        "city_count": 7,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              68.37,
+              25.39
+            ],
+            [
+              72.99,
+              21.71
+            ],
+            [
+              88.13,
+              24.86
+            ],
+            [
+              74.36,
+              31.55
+            ],
+            [
+              71.51,
+              30.2
+            ],
+            [
+              68.37,
+              25.39
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sultanate of Delhi",
+        "name_zh": "德里蘇丹國",
+        "year_from": 1236,
+        "year_to": 1295,
+        "city_count": 9,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              68.37,
+              25.39
+            ],
+            [
+              75.21,
+              19.93
+            ],
+            [
+              88.13,
+              24.86
+            ],
+            [
+              74.36,
+              31.55
+            ],
+            [
+              71.51,
+              30.2
+            ],
+            [
+              68.37,
+              25.39
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sultanate of Delhi",
+        "name_zh": "德里蘇丹國",
+        "year_from": 1296,
+        "year_to": 1319,
+        "city_count": 11,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              68.37,
+              25.39
+            ],
+            [
+              75.71,
+              16.83
+            ],
+            [
+              78.49,
+              17.39
+            ],
+            [
+              88.13,
+              24.86
+            ],
+            [
+              74.36,
+              31.55
+            ],
+            [
+              71.51,
+              30.2
+            ],
+            [
+              68.37,
+              25.39
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sultanate of Delhi",
+        "name_zh": "德里蘇丹國",
+        "year_from": 1320,
+        "year_to": 1329,
+        "city_count": 13,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              65.71,
+              31.62
+            ],
+            [
+              68.37,
+              25.39
+            ],
+            [
+              78.12,
+              9.93
+            ],
+            [
+              88.13,
+              24.86
+            ],
+            [
+              74.36,
+              31.55
+            ],
+            [
+              65.71,
+              31.62
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sultanate of Delhi",
+        "name_zh": "德里蘇丹國",
+        "year_from": 1330,
+        "year_to": 1350,
+        "city_count": 15,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              68.37,
+              25.39
+            ],
+            [
+              72.99,
+              21.71
+            ],
+            [
+              88.13,
+              24.86
+            ],
+            [
+              74.36,
+              31.55
+            ],
+            [
+              71.51,
+              30.2
+            ],
+            [
+              68.37,
+              25.39
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sultanate of Delhi",
+        "name_zh": "德里蘇丹國",
+        "year_from": 1351,
+        "year_to": 1397,
+        "city_count": 10,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              68.37,
+              25.39
+            ],
+            [
+              79.92,
+              27.06
+            ],
+            [
+              77.21,
+              28.65
+            ],
+            [
+              71.51,
+              30.2
+            ],
+            [
+              68.37,
+              25.39
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sultanate of Delhi",
+        "name_zh": "德里蘇丹國",
+        "year_from": 1398,
+        "year_to": 1413,
+        "city_count": 5,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              68.37,
+              25.39
+            ],
+            [
+              79.92,
+              27.06
+            ],
+            [
+              74.36,
+              31.55
+            ],
+            [
+              71.51,
+              30.2
+            ],
+            [
+              68.37,
+              25.39
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sultanate of Delhi",
+        "name_zh": "德里蘇丹國",
+        "year_from": 1414,
+        "year_to": 1499,
+        "city_count": 6,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              68.37,
+              25.39
+            ],
+            [
+              75.78,
+              23.18
+            ],
+            [
+              79.92,
+              27.06
+            ],
+            [
+              74.36,
+              31.55
+            ],
+            [
+              71.51,
+              30.2
+            ],
+            [
+              68.37,
+              25.39
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Sultanate of Delhi",
+        "name_zh": "德里蘇丹國",
+        "year_from": 1500,
+        "year_to": 1525,
+        "city_count": 7,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              68.37,
+              25.39
+            ],
+            [
+              79.92,
+              27.06
+            ],
+            [
+              74.36,
+              31.55
+            ],
+            [
+              69.21,
+              34.53
+            ],
+            [
+              68.37,
+              25.39
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Mughal Empire",
+        "name_zh": "蒙兀兒",
+        "year_from": 1526,
+        "year_to": 1539,
+        "city_count": 7,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              65.71,
+              31.62
+            ],
+            [
+              74.36,
+              31.55
+            ],
+            [
+              69.21,
+              34.53
+            ],
+            [
+              65.71,
+              31.62
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Mughal Empire",
+        "name_zh": "蒙兀兒",
+        "year_from": 1540,
+        "year_to": 1555,
+        "city_count": 3,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              68.37,
+              25.39
+            ],
+            [
+              79.92,
+              27.06
+            ],
+            [
+              74.36,
+              31.55
+            ],
+            [
+              69.21,
+              34.53
+            ],
+            [
+              68.37,
+              25.39
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Mughal Empire",
+        "name_zh": "蒙兀兒",
+        "year_from": 1556,
+        "year_to": 1575,
+        "city_count": 7,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              65.71,
+              31.62
+            ],
+            [
+              68.37,
+              25.39
+            ],
+            [
+              71.88,
+              21.89
+            ],
+            [
+              72.99,
+              21.71
+            ],
+            [
+              90.41,
+              23.81
+            ],
+            [
+              69.21,
+              34.53
+            ],
+            [
+              65.71,
+              31.62
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Mughal Empire",
+        "name_zh": "蒙兀兒",
+        "year_from": 1576,
+        "year_to": 1604,
+        "city_count": 15,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              65.71,
+              31.62
+            ],
+            [
+              68.37,
+              25.39
+            ],
+            [
+              71.88,
+              21.89
+            ],
+            [
+              72.83,
+              21.17
+            ],
+            [
+              90.41,
+              23.81
+            ],
+            [
+              69.21,
+              34.53
+            ],
+            [
+              65.71,
+              31.62
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Mughal Empire",
+        "name_zh": "蒙兀兒",
+        "year_from": 1605,
+        "year_to": 1658,
+        "city_count": 16,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              65.71,
+              31.62
+            ],
+            [
+              68.37,
+              25.39
+            ],
+            [
+              71.88,
+              21.89
+            ],
+            [
+              72.83,
+              21.17
+            ],
+            [
+              75.21,
+              19.93
+            ],
+            [
+              90.41,
+              23.81
+            ],
+            [
+              69.21,
+              34.53
+            ],
+            [
+              65.71,
+              31.62
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Mughal Empire",
+        "name_zh": "蒙兀兒",
+        "year_from": 1659,
+        "year_to": 1686,
+        "city_count": 17,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              65.71,
+              31.62
+            ],
+            [
+              68.37,
+              25.39
+            ],
+            [
+              75.71,
+              16.83
+            ],
+            [
+              78.49,
+              17.39
+            ],
+            [
+              90.41,
+              23.81
+            ],
+            [
+              69.21,
+              34.53
+            ],
+            [
+              65.71,
+              31.62
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Mughal Empire",
+        "name_zh": "蒙兀兒",
+        "year_from": 1687,
+        "year_to": 1699,
+        "city_count": 20,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              65.71,
+              31.62
+            ],
+            [
+              68.37,
+              25.39
+            ],
+            [
+              78.12,
+              9.93
+            ],
+            [
+              90.41,
+              23.81
+            ],
+            [
+              69.21,
+              34.53
+            ],
+            [
+              65.71,
+              31.62
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Mughal Empire",
+        "name_zh": "蒙兀兒",
+        "year_from": 1700,
+        "year_to": 1706,
+        "city_count": 21,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.08,
+              50.78
+            ],
+            [
+              6.64,
+              49.75
+            ],
+            [
+              9.16,
+              45.18
+            ],
+            [
+              12.5,
+              41.9
+            ],
+            [
+              12.1,
+              49.01
+            ],
+            [
+              11.63,
+              52.13
+            ],
+            [
+              10,
+              53.55
+            ],
+            [
+              8.81,
+              53.08
+            ],
+            [
+              6.08,
+              50.78
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Holy Roman Empire",
+        "name_zh": "神聖羅馬",
+        "year_from": 962,
+        "year_to": 1023,
+        "city_count": 18,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.08,
+              50.78
+            ],
+            [
+              7.45,
+              46.95
+            ],
+            [
+              9.16,
+              45.18
+            ],
+            [
+              12.5,
+              41.9
+            ],
+            [
+              14.42,
+              50.08
+            ],
+            [
+              10.69,
+              53.87
+            ],
+            [
+              8.81,
+              53.08
+            ],
+            [
+              6.08,
+              50.78
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Holy Roman Empire",
+        "name_zh": "神聖羅馬",
+        "year_from": 1024,
+        "year_to": 1076,
+        "city_count": 25,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.08,
+              50.78
+            ],
+            [
+              7.45,
+              46.95
+            ],
+            [
+              8.95,
+              44.41
+            ],
+            [
+              11.26,
+              43.77
+            ],
+            [
+              12.2,
+              44.42
+            ],
+            [
+              14.42,
+              50.08
+            ],
+            [
+              10.69,
+              53.87
+            ],
+            [
+              8.81,
+              53.08
+            ],
+            [
+              6.08,
+              50.78
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Holy Roman Empire",
+        "name_zh": "神聖羅馬",
+        "year_from": 1077,
+        "year_to": 1154,
+        "city_count": 26,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.08,
+              50.78
+            ],
+            [
+              7.45,
+              46.95
+            ],
+            [
+              8.95,
+              44.41
+            ],
+            [
+              11.26,
+              43.77
+            ],
+            [
+              12.2,
+              44.42
+            ],
+            [
+              16.37,
+              48.21
+            ],
+            [
+              10.69,
+              53.87
+            ],
+            [
+              8.81,
+              53.08
+            ],
+            [
+              6.08,
+              50.78
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Holy Roman Empire",
+        "name_zh": "神聖羅馬",
+        "year_from": 1155,
+        "year_to": 1249,
+        "city_count": 29,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.08,
+              50.78
+            ],
+            [
+              7.45,
+              46.95
+            ],
+            [
+              11.12,
+              46.07
+            ],
+            [
+              16.37,
+              48.21
+            ],
+            [
+              10.69,
+              53.87
+            ],
+            [
+              8.81,
+              53.08
+            ],
+            [
+              6.08,
+              50.78
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Holy Roman Empire",
+        "name_zh": "神聖羅馬",
+        "year_from": 1250,
+        "year_to": 1355,
+        "city_count": 22,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.08,
+              50.78
+            ],
+            [
+              7.45,
+              46.95
+            ],
+            [
+              11.12,
+              46.07
+            ],
+            [
+              16.37,
+              48.21
+            ],
+            [
+              13.74,
+              51.05
+            ],
+            [
+              10.69,
+              53.87
+            ],
+            [
+              8.81,
+              53.08
+            ],
+            [
+              6.08,
+              50.78
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Holy Roman Empire",
+        "name_zh": "神聖羅馬",
+        "year_from": 1356,
+        "year_to": 1452,
+        "city_count": 25,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.36,
+              50.85
+            ],
+            [
+              11.12,
+              46.07
+            ],
+            [
+              16.37,
+              48.21
+            ],
+            [
+              13.74,
+              51.05
+            ],
+            [
+              10.69,
+              53.87
+            ],
+            [
+              5.12,
+              52.09
+            ],
+            [
+              4.4,
+              51.22
+            ],
+            [
+              4.36,
+              50.85
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Holy Roman Empire",
+        "name_zh": "神聖羅馬",
+        "year_from": 1453,
+        "year_to": 1555,
+        "city_count": 26,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.36,
+              50.85
+            ],
+            [
+              11.12,
+              46.07
+            ],
+            [
+              16.37,
+              48.21
+            ],
+            [
+              13.74,
+              51.05
+            ],
+            [
+              10.69,
+              53.87
+            ],
+            [
+              5.12,
+              52.09
+            ],
+            [
+              4.4,
+              51.22
+            ],
+            [
+              4.36,
+              50.85
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Holy Roman Empire",
+        "name_zh": "神聖羅馬",
+        "year_from": 1556,
+        "year_to": 1647,
+        "city_count": 26,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.08,
+              50.78
+            ],
+            [
+              6.64,
+              49.75
+            ],
+            [
+              7.75,
+              48.58
+            ],
+            [
+              11.12,
+              46.07
+            ],
+            [
+              16.37,
+              48.21
+            ],
+            [
+              13.74,
+              51.05
+            ],
+            [
+              10.69,
+              53.87
+            ],
+            [
+              8.81,
+              53.08
+            ],
+            [
+              6.08,
+              50.78
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Holy Roman Empire",
+        "name_zh": "神聖羅馬",
+        "year_from": 1648,
+        "year_to": 1680,
+        "city_count": 23,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.08,
+              50.78
+            ],
+            [
+              6.64,
+              49.75
+            ],
+            [
+              11.12,
+              46.07
+            ],
+            [
+              16.37,
+              48.21
+            ],
+            [
+              13.74,
+              51.05
+            ],
+            [
+              10.69,
+              53.87
+            ],
+            [
+              8.81,
+              53.08
+            ],
+            [
+              6.08,
+              50.78
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Holy Roman Empire",
+        "name_zh": "神聖羅馬",
+        "year_from": 1681,
+        "year_to": 1739,
+        "city_count": 22,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.08,
+              50.78
+            ],
+            [
+              6.64,
+              49.75
+            ],
+            [
+              11.12,
+              46.07
+            ],
+            [
+              16.37,
+              48.21
+            ],
+            [
+              13.74,
+              51.05
+            ],
+            [
+              10.69,
+              53.87
+            ],
+            [
+              8.81,
+              53.08
+            ],
+            [
+              6.08,
+              50.78
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Holy Roman Empire",
+        "name_zh": "神聖羅馬",
+        "year_from": 1740,
+        "year_to": 1788,
+        "city_count": 22,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              6.08,
+              50.78
+            ],
+            [
+              6.64,
+              49.75
+            ],
+            [
+              11.12,
+              46.07
+            ],
+            [
+              16.37,
+              48.21
+            ],
+            [
+              13.74,
+              51.05
+            ],
+            [
+              10.69,
+              53.87
+            ],
+            [
+              8.81,
+              53.08
+            ],
+            [
+              6.08,
+              50.78
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Holy Roman Empire",
+        "name_zh": "神聖羅馬",
+        "year_from": 1789,
+        "year_to": 1802,
+        "city_count": 22,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.68,
+              50.11
+            ],
+            [
+              11.12,
+              46.07
+            ],
+            [
+              16.37,
+              48.21
+            ],
+            [
+              13.74,
+              51.05
+            ],
+            [
+              10.69,
+              53.87
+            ],
+            [
+              8.81,
+              53.08
+            ],
+            [
+              8.68,
+              50.11
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Holy Roman Empire",
+        "name_zh": "神聖羅馬",
+        "year_from": 1803,
+        "year_to": 1805,
+        "city_count": 16,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -99.2,
+              19.45
+            ],
+            [
+              -99.1,
+              19.26
+            ],
+            [
+              -98.3,
+              19.06
+            ],
+            [
+              -98.88,
+              19.5
+            ],
+            [
+              -99.2,
+              19.45
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Aztec Empire",
+        "name_zh": "阿茲特克",
+        "year_from": 1428,
+        "year_to": 1439,
+        "city_count": 5,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -99.21,
+              20.23
+            ],
+            [
+              -99.2,
+              19.45
+            ],
+            [
+              -99.1,
+              19.26
+            ],
+            [
+              -98.3,
+              19.06
+            ],
+            [
+              -96.5,
+              18.9
+            ],
+            [
+              -96.41,
+              19.45
+            ],
+            [
+              -99.21,
+              20.23
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Aztec Empire",
+        "name_zh": "阿茲特克",
+        "year_from": 1440,
+        "year_to": 1468,
+        "city_count": 8,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -99.34,
+              20.06
+            ],
+            [
+              -99.2,
+              19.45
+            ],
+            [
+              -99.1,
+              19.26
+            ],
+            [
+              -96.73,
+              17.06
+            ],
+            [
+              -96.41,
+              19.45
+            ],
+            [
+              -99.21,
+              20.23
+            ],
+            [
+              -99.34,
+              20.06
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Aztec Empire",
+        "name_zh": "阿茲特克",
+        "year_from": 1469,
+        "year_to": 1485,
+        "city_count": 10,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -99.34,
+              20.06
+            ],
+            [
+              -99.2,
+              19.45
+            ],
+            [
+              -99.1,
+              19.26
+            ],
+            [
+              -96.73,
+              17.06
+            ],
+            [
+              -95.24,
+              16.32
+            ],
+            [
+              -92.13,
+              14.79
+            ],
+            [
+              -96.41,
+              19.45
+            ],
+            [
+              -99.21,
+              20.23
+            ],
+            [
+              -99.34,
+              20.06
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Aztec Empire",
+        "name_zh": "阿茲特克",
+        "year_from": 1486,
+        "year_to": 1501,
+        "city_count": 12,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -99.34,
+              20.06
+            ],
+            [
+              -99.2,
+              19.45
+            ],
+            [
+              -99.1,
+              19.26
+            ],
+            [
+              -96.73,
+              17.06
+            ],
+            [
+              -95.24,
+              16.32
+            ],
+            [
+              -92.13,
+              14.79
+            ],
+            [
+              -97.41,
+              20.96
+            ],
+            [
+              -99.21,
+              20.23
+            ],
+            [
+              -99.34,
+              20.06
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Aztec Empire",
+        "name_zh": "阿茲特克",
+        "year_from": 1502,
+        "year_to": 1518,
+        "city_count": 13,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -99.34,
+              20.06
+            ],
+            [
+              -99.2,
+              19.45
+            ],
+            [
+              -99.1,
+              19.26
+            ],
+            [
+              -96.73,
+              17.06
+            ],
+            [
+              -95.24,
+              16.32
+            ],
+            [
+              -92.13,
+              14.79
+            ],
+            [
+              -97.41,
+              20.96
+            ],
+            [
+              -99.21,
+              20.23
+            ],
+            [
+              -99.34,
+              20.06
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Aztec Empire",
+        "name_zh": "阿茲特克",
+        "year_from": 1519,
+        "year_to": 1520,
+        "city_count": 13,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -77.4,
+              -14.03
+            ],
+            [
+              -71.47,
+              -14.03
+            ],
+            [
+              -71.47,
+              -11.76
+            ],
+            [
+              -77.4,
+              -11.76
+            ],
+            [
+              -77.4,
+              -14.03
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Inca Empire",
+        "name_zh": "印加",
+        "year_from": 1438,
+        "year_to": 1462,
+        "city_count": 2,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.07,
+              -8.1
+            ],
+            [
+              -76.9,
+              -12.26
+            ],
+            [
+              -71.97,
+              -13.53
+            ],
+            [
+              -79.03,
+              -8.11
+            ],
+            [
+              -79.07,
+              -8.1
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Inca Empire",
+        "name_zh": "印加",
+        "year_from": 1463,
+        "year_to": 1470,
+        "city_count": 5,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.07,
+              -8.1
+            ],
+            [
+              -76.9,
+              -12.26
+            ],
+            [
+              -71.54,
+              -16.41
+            ],
+            [
+              -68.15,
+              -16.5
+            ],
+            [
+              -78.52,
+              -0.18
+            ],
+            [
+              -79,
+              -2.9
+            ],
+            [
+              -79.07,
+              -8.1
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Inca Empire",
+        "name_zh": "印加",
+        "year_from": 1471,
+        "year_to": 1492,
+        "city_count": 10,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.07,
+              -8.1
+            ],
+            [
+              -70.65,
+              -33.45
+            ],
+            [
+              -65.26,
+              -19.04
+            ],
+            [
+              -77.28,
+              1.21
+            ],
+            [
+              -78.52,
+              -0.18
+            ],
+            [
+              -79,
+              -2.9
+            ],
+            [
+              -79.07,
+              -8.1
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Inca Empire",
+        "name_zh": "印加",
+        "year_from": 1493,
+        "year_to": 1524,
+        "city_count": 14,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.07,
+              -8.1
+            ],
+            [
+              -71.66,
+              -35.43
+            ],
+            [
+              -68.85,
+              -32.89
+            ],
+            [
+              -65.21,
+              -26.83
+            ],
+            [
+              -65.26,
+              -19.04
+            ],
+            [
+              -77.28,
+              1.21
+            ],
+            [
+              -78.52,
+              -0.18
+            ],
+            [
+              -79,
+              -2.9
+            ],
+            [
+              -79.07,
+              -8.1
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Inca Empire",
+        "name_zh": "印加",
+        "year_from": 1525,
+        "year_to": 1531,
+        "city_count": 17,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.07,
+              -8.1
+            ],
+            [
+              -71.66,
+              -35.43
+            ],
+            [
+              -70.65,
+              -33.45
+            ],
+            [
+              -65.26,
+              -19.04
+            ],
+            [
+              -78.52,
+              -0.18
+            ],
+            [
+              -79,
+              -2.9
+            ],
+            [
+              -79.07,
+              -8.1
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Inca Empire",
+        "name_zh": "印加",
+        "year_from": 1532,
+        "year_to": 1532,
+        "city_count": 14,
+        "source": "city-hull (manual city list)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -78.5,
+              -7.16
+            ],
+            [
+              -76.9,
+              -12.26
+            ],
+            [
+              -71.97,
+              -13.53
+            ],
+            [
+              -78.5,
+              -7.16
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Inca Empire",
+        "name_zh": "印加",
+        "year_from": 1533,
+        "year_to": 1532,
+        "city_count": 5,
+        "source": "city-hull (manual city list)"
+      }
     }
   ]
 }

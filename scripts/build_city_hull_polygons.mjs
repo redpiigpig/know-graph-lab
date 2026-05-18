@@ -324,6 +324,119 @@ const CITIES = {
   'Vienna':         [16.37, 48.21],
   'Hispalis':       [-5.99, 37.39],    // 塞維利亞舊名
   'Tingis':         [-5.81, 35.78],    // 丹吉爾舊名
+  // ===== 古波斯（阿契美尼德／帕提亞／薩珊）=====
+  'Persepolis':     [52.89, 29.93],    // 波斯波利斯（阿契美尼德禮儀首都）
+  'Pasargadae':     [53.18, 30.19],    // 帕薩爾加德（居魯士建）
+  'Susa':           [48.27, 32.18],    // 蘇薩（冬都）
+  'Ecbatana':       [48.51, 34.80],    // 埃克巴坦那＝Hamadan（夏都）
+  'Babylon':        [44.42, 32.54],    // 巴比倫
+  'Memphis':        [31.25, 29.85],    // 孟菲斯（埃及舊都）
+  'Pelusium':       [32.55, 31.04],    // 佩魯希烏姆（尼羅河東岸口）
+  'Sidon':          [35.38, 33.56],    // 西頓
+  'Behistun':       [47.43, 34.39],    // 貝希斯敦（大流士銘文）
+  'Halicarnassus':  [27.42, 37.04],    // 哈利卡爾納索斯（小亞細亞 satrapy）
+  'Ctesiphon':      [44.58, 33.09],    // 泰西封（帕提亞／薩珊首都）
+  'Hatra':          [42.72, 35.59],    // 哈特拉（帕提亞據點）
+  'Nisibis':        [41.21, 37.07],    // 尼西比斯（薩珊／羅馬邊界）
+  'Bishapur':       [51.57, 29.79],    // 比沙普爾（薩珊 Shapur I 建）
+  'Gundeshapur':    [48.55, 32.30],    // 詹迪沙普爾（薩珊學術中心）
+  'Gor':            [52.55, 28.97],    // Ardashir-Khurra（薩珊發祥）
+  'Estakhr':        [52.92, 29.98],    // 伊斯塔赫爾（波斯本土）
+  'Taxila':         [72.83, 33.74],    // 塔克西拉（阿契美尼德印度河 satrapy／孔雀）
+  'Maracanda':      [66.97, 39.65],    // 馬拉坎大＝Samarkand（已有 Samarkand）
+  // ===== 古印度 =====
+  'Pataliputra':    [85.14, 25.61],    // 巴連弗邑（孔雀／笈多都，今 Patna）
+  'Ujjain':         [75.78, 23.18],    // 烏賈因
+  'Mathura':        [77.67, 27.49],    // 馬圖拉
+  'Sanchi':         [77.74, 23.48],    // 桑奇
+  'Kalinga':        [85.83, 20.30],    // 羯陵伽（今 Bhubaneswar）
+  'Bharuch':        [72.99, 21.71],    // 婆魯羯車（古港）
+  'Sopara':         [72.82, 19.41],    // 蘇帕拉
+  'Vidisha':        [77.81, 23.52],    // 維迪沙
+  'Kannauj':        [79.92, 27.06],    // 曲女城（笈多後／戒日王都）
+  'Vallabhi':       [71.88, 21.89],    // 伐臘毗（Maitraka 都）
+  'Pundravardhana': [88.65, 25.03],    // 笈多孟加拉據點
+  'Tamralipti':     [87.92, 22.04],    // 達摩立底港
+  'Devagiri':       [75.21, 19.93],    // 德瓦吉里（Tughluq 短期遷都＝Daulatabad）
+  'Lakhnauti':      [88.13, 24.86],    // 拉克瑙提（孟加拉蘇丹）
+  'Madurai':        [78.12, 9.93],     // 馬杜賴（Tughluq 南界）
+  'Surat':          [72.83, 21.17],    // 蘇拉特（Mughal 港）
+  'Hyderabad':      [78.49, 17.39],    // 海德拉巴（Mughal 德干）
+  'Dhaka':          [90.41, 23.81],    // 達卡（Mughal 孟加拉）
+  'Kandahar':       [65.71, 31.62],    // 坎大哈（Mughal 西界）
+  'Ahmedabad':      [72.59, 23.03],    // 阿默達巴德
+  'Bijapur':        [75.71, 16.83],    // 比賈普爾（Mughal 德干征服）
+  'Golconda':       [78.40, 17.38],    // 戈爾康達（Mughal 1687 滅）
+  'Sind':           [68.37, 25.39],    // 信德（卡拉奇北）
+  'Agra':           [78.02, 27.18],    // 阿格拉（Mughal 主都）
+  'Ajmer':          [74.64, 26.45],    // 阿傑梅爾（拉吉普坦那）
+  // ===== 神聖羅馬帝國 =====
+  'Aachen':         [6.08, 50.78],     // 亞琛（查理曼／Otto 加冕地）
+  'Frankfurt':      [8.68, 50.11],     // 法蘭克福（選帝侯選舉）
+  'Nuremberg':      [11.08, 49.45],    // 紐倫堡（帝國自由市）
+  'Regensburg':     [12.10, 49.01],    // 雷根斯堡（帝國議會）
+  'Augsburg':       [10.90, 48.37],    // 奧格斯堡（富格家族）
+  'Prague':         [14.42, 50.08],    // 布拉格（盧森堡查理四世都）
+  'Munich':         [11.58, 48.14],    // 慕尼黑（巴伐利亞）
+  'Strasbourg':     [7.75, 48.58],     // 斯特拉斯堡（萊茵帝國市）
+  'Hamburg':        [10.00, 53.55],    // 漢堡（漢薩自由市）
+  'Bremen':         [8.81, 53.08],     // 不萊梅
+  'Lubeck':         [10.69, 53.87],    // 呂北克（漢薩盟首）
+  'Magdeburg':      [11.63, 52.13],    // 馬格德堡（薩克森）
+  'Worms':          [8.36, 49.63],     // 沃姆斯（帝國議會 1521）
+  'Speyer':         [8.43, 49.32],     // 施派爾（皇陵）
+  'Brussels':       [4.36, 50.85],     // 布魯塞爾（哈布斯堡尼德蘭都）
+  'Utrecht':        [5.12, 52.09],     // 烏特勒支
+  'Basel':          [7.59, 47.56],     // 巴塞爾（瑞士 1499 脫離）
+  'Bern':           [7.45, 46.95],     // 伯恩
+  'Zurich':         [8.55, 47.37],     // 蘇黎世
+  'Florence':       [11.26, 43.77],    // 佛羅倫斯
+  'Venice':         [12.33, 45.44],    // 威尼斯
+  'Genoa':          [8.95, 44.41],     // 熱那亞
+  'Bologna':        [11.34, 44.49],    // 波隆那
+  'Innsbruck':      [11.40, 47.27],    // 因斯布魯克（哈布斯堡蒂羅爾）
+  'Salzburg':       [13.05, 47.81],    // 薩爾茨堡（采邑大主教區）
+  'Dresden':        [13.74, 51.05],    // 德勒斯登（薩克森）
+  'Leipzig':        [12.37, 51.34],    // 萊比錫
+  'Pavia':          [9.16, 45.18],     // 帕維亞（倫巴底／義大利王國舊都）
+  'Verona':         [10.99, 45.44],    // 維羅納
+  'Trento':         [11.12, 46.07],    // 特倫托
+  'Antwerp':        [4.40, 51.22],     // 安特衛普
+  // ===== 中美洲（阿茲特克）=====
+  'Tenochtitlan':   [-99.13, 19.43],   // 特諾奇蒂特蘭（阿茲特克都）
+  'Texcoco':        [-98.88, 19.50],   // 特斯科科（三方聯盟）
+  'Tlacopan':       [-99.20, 19.45],   // 特拉科潘（三方聯盟）
+  'Cholula':        [-98.30, 19.06],   // 喬盧拉
+  'Tlaxcala':       [-98.24, 19.32],   // 特拉斯卡拉（反阿茲特克盟、後助西班牙）
+  'Cempoala':       [-96.41, 19.45],   // 森波瓦拉（灣岸 Totonac）
+  'Xochimilco':     [-99.10, 19.26],   // 霍奇米爾科
+  'Tula':           [-99.34, 20.06],   // 圖拉（托爾特克舊都）
+  'Tehuantepec':    [-95.24, 16.32],   // 特萬特佩克（地峽）
+  'Oaxaca':         [-96.73, 17.06],   // 瓦哈卡
+  'Soconusco':      [-92.13, 14.79],   // 索科努斯科（阿茲特克南界）
+  'Tuxpan':         [-97.41, 20.96],   // 圖斯潘（灣岸北）
+  'Cuetlaxtla':     [-96.50, 18.90],   // 庫埃特拉斯特蘭
+  'Mixquiahuala':   [-99.21, 20.23],   // Otomí 區
+  'TepicMex':       [-104.89, 21.51],  // 特皮克（阿茲特克西界）
+  // ===== 安第斯（印加）=====
+  'Cuzco':          [-71.97, -13.53],  // 庫斯科（印加首都）
+  'Quito':          [-78.52, -0.18],   // 基多（北印加副都）
+  'Cajamarca':      [-78.50, -7.16],   // 卡哈馬卡（Atahualpa 被擒處）
+  'Pachacamac':     [-76.90, -12.26],  // 帕查卡馬克（沿海聖所）
+  'Tomebamba':      [-79.00, -2.90],   // 托梅班巴＝Cuenca（北副都）
+  'ChanChan':       [-79.07, -8.10],   // 昌昌（Chimu 都、被印加征）
+  'Vilcabamba':     [-72.94, -13.10],  // 比爾卡班巴（印加殘餘）
+  'MendozaInca':    [-68.85, -32.89],  // 門多薩（南界）
+  'TalcaInca':      [-71.66, -35.43],  // 塔爾卡（智利南界）
+  'SantiagoInca':   [-70.65, -33.45],  // 聖地牙哥（智利中部）
+  'TrujilloAndes':  [-79.03, -8.11],   // 特魯希略
+  'Arequipa':       [-71.54, -16.41],  // 阿雷基帕
+  'PotosiInca':     [-65.75, -19.59],  // 波托西
+  'LaPaz':          [-68.15, -16.50],  // 拉巴斯
+  'SucreInca':      [-65.26, -19.04],  // 蘇克雷
+  'Huancayo':       [-75.21, -12.07],  // 萬卡約（中央高原）
+  'TucumanInca':    [-65.21, -26.83],  // 圖庫曼（南界）
+  'Pasto':          [-77.28, 1.21],    // 帕斯托（北界）
 }
 
 // ===== 帝國控制資料 =====
@@ -1131,6 +1244,275 @@ const EMPIRES = [
         'Tabriz','Hamadan','Rayy','Isfahan','Yerevan','Tbilisi','Derbent',
         'Sarai','Vladimir','Kiev','Ryazan',
       ],
+    },
+  },
+  // ============================================================
+  // 古波斯三朝
+  // ============================================================
+  {
+    // 阿契美尼德波斯 -550~-330（源 polygon 只到 -400~-324）
+    polygon_name: 'Achaemenid Empire',
+    name_zh: '阿契美尼德',
+    end_year: -330,
+    years: {
+      // -550 居魯士滅米底
+      [-550]: ['Pasargadae', 'Persepolis', 'Ecbatana', 'Susa', 'Estakhr'],
+      // -546 滅呂底亞、取小亞細亞
+      [-546]: ['Pasargadae', 'Persepolis', 'Ecbatana', 'Susa', 'Estakhr', 'Sardis', 'Halicarnassus', 'Ephesus'],
+      // -539 滅新巴比倫
+      [-539]: ['Pasargadae', 'Persepolis', 'Ecbatana', 'Susa', 'Estakhr', 'Sardis', 'Halicarnassus', 'Ephesus', 'Babylon', 'Tyre', 'Sidon', 'Jerusalem', 'Damascus'],
+      // -525 岡比西斯滅埃及
+      [-525]: ['Pasargadae', 'Persepolis', 'Ecbatana', 'Susa', 'Estakhr', 'Sardis', 'Halicarnassus', 'Ephesus', 'Babylon', 'Tyre', 'Sidon', 'Jerusalem', 'Damascus', 'Memphis', 'Pelusium', 'Alexandria', 'Cyrene'],
+      // -518 大流士征東邊（中亞／印度河）
+      [-518]: ['Pasargadae', 'Persepolis', 'Ecbatana', 'Susa', 'Estakhr', 'Sardis', 'Halicarnassus', 'Ephesus', 'Babylon', 'Tyre', 'Sidon', 'Jerusalem', 'Damascus', 'Memphis', 'Pelusium', 'Alexandria', 'Cyrene', 'Behistun', 'Balkh', 'Merv', 'Samarkand', 'Bukhara', 'Taxila', 'Multan'],
+      // -486 大流士末（極盛：色雷斯到印度河）
+      [-486]: ['Pasargadae', 'Persepolis', 'Ecbatana', 'Susa', 'Estakhr', 'Sardis', 'Halicarnassus', 'Ephesus', 'Babylon', 'Tyre', 'Sidon', 'Jerusalem', 'Damascus', 'Memphis', 'Pelusium', 'Alexandria', 'Cyrene', 'Behistun', 'Balkh', 'Merv', 'Samarkand', 'Bukhara', 'Taxila', 'Multan', 'Adrianople', 'Ankyra'],
+      // -404 埃及叛離（阿米爾塔尤斯）
+      [-404]: ['Pasargadae', 'Persepolis', 'Ecbatana', 'Susa', 'Estakhr', 'Sardis', 'Halicarnassus', 'Ephesus', 'Babylon', 'Tyre', 'Sidon', 'Jerusalem', 'Damascus', 'Behistun', 'Balkh', 'Merv', 'Samarkand', 'Bukhara', 'Taxila', 'Multan', 'Ankyra'],
+      // -343 阿爾塔薛西斯三世復征埃及
+      [-343]: ['Pasargadae', 'Persepolis', 'Ecbatana', 'Susa', 'Estakhr', 'Sardis', 'Halicarnassus', 'Ephesus', 'Babylon', 'Tyre', 'Sidon', 'Jerusalem', 'Damascus', 'Memphis', 'Alexandria', 'Behistun', 'Balkh', 'Merv', 'Samarkand', 'Bukhara', 'Taxila', 'Multan', 'Ankyra'],
+      // -334 亞歷山大東征前
+      [-334]: ['Pasargadae', 'Persepolis', 'Ecbatana', 'Susa', 'Estakhr', 'Sardis', 'Halicarnassus', 'Ephesus', 'Babylon', 'Tyre', 'Sidon', 'Jerusalem', 'Damascus', 'Memphis', 'Behistun', 'Balkh', 'Merv', 'Samarkand', 'Bukhara', 'Taxila', 'Multan', 'Ankyra'],
+    },
+  },
+  {
+    // 帕提亞早期 -247~-130（源 'Parthia' polygon -200~-2）
+    polygon_name: 'Parthia',
+    name_zh: '帕提亞',
+    end_year: -130,
+    years: {
+      // -247 阿薩息斯一世建國於帕提亞（伊朗東北）
+      [-247]: ['Nishapur', 'Merv', 'Hatra'],
+      // -209 安條克三世征討、暫時臣屬
+      [-209]: ['Nishapur', 'Merv', 'Hatra', 'Balkh', 'Herat'],
+      // -171 米特里達梯一世擴張至米底
+      [-171]: ['Nishapur', 'Merv', 'Hatra', 'Balkh', 'Herat', 'Ecbatana', 'Estakhr', 'Susa'],
+    },
+  },
+  {
+    // 帕提亞極盛 -129~224
+    polygon_name: 'Parthian Empire',
+    name_zh: '帕提亞',
+    end_year: 224,
+    years: {
+      // -129 米特里達梯一世取美索不達米亞
+      [-129]: ['Ctesiphon', 'Babylon', 'Hatra', 'Nisibis', 'Ecbatana', 'Susa', 'Estakhr', 'Persepolis', 'Nishapur', 'Merv', 'Balkh', 'Herat'],
+      // -69 提格蘭時期失亞美尼亞
+      [-69]: ['Ctesiphon', 'Babylon', 'Hatra', 'Nisibis', 'Ecbatana', 'Susa', 'Estakhr', 'Persepolis', 'Nishapur', 'Merv', 'Balkh', 'Herat'],
+      // -53 卡萊戰役大勝克拉蘇
+      [-53]: ['Ctesiphon', 'Babylon', 'Hatra', 'Nisibis', 'Edessa', 'Ecbatana', 'Susa', 'Estakhr', 'Persepolis', 'Nishapur', 'Merv', 'Balkh', 'Herat', 'Yerevan'],
+      // 1 奧古斯都和議、亞美尼亞共管
+      [1]: ['Ctesiphon', 'Babylon', 'Hatra', 'Nisibis', 'Edessa', 'Ecbatana', 'Susa', 'Estakhr', 'Persepolis', 'Nishapur', 'Merv', 'Balkh', 'Herat'],
+      // 63 提里達特斯加冕為亞美尼亞王（羅馬保護）
+      [63]: ['Ctesiphon', 'Babylon', 'Hatra', 'Nisibis', 'Ecbatana', 'Susa', 'Estakhr', 'Persepolis', 'Nishapur', 'Merv', 'Balkh', 'Herat'],
+      // 117 圖拉真攻入泰西封
+      [117]: ['Ctesiphon', 'Hatra', 'Ecbatana', 'Susa', 'Estakhr', 'Persepolis', 'Nishapur', 'Merv', 'Balkh', 'Herat'],
+      // 165 羅馬再侵
+      [165]: ['Ctesiphon', 'Babylon', 'Hatra', 'Ecbatana', 'Susa', 'Estakhr', 'Persepolis', 'Nishapur', 'Merv', 'Balkh', 'Herat'],
+      // 198 塞普蒂米烏斯洗劫泰西封
+      [198]: ['Ctesiphon', 'Hatra', 'Ecbatana', 'Susa', 'Estakhr', 'Persepolis', 'Nishapur', 'Merv', 'Balkh', 'Herat'],
+      // 224 亡於 Ardashir 薩珊
+      [224]: ['Ctesiphon', 'Ecbatana', 'Susa', 'Estakhr', 'Persepolis'],
+    },
+  },
+  {
+    // 薩珊波斯 224~651（源 polygon 只 500~799）
+    polygon_name: 'Sasanian Empire',
+    name_zh: '薩珊',
+    end_year: 651,
+    years: {
+      // 224 Ardashir I 建國於 Estakhr，滅帕提亞
+      [224]: ['Gor', 'Estakhr', 'Persepolis', 'Bishapur', 'Ctesiphon', 'Susa', 'Ecbatana', 'Hatra', 'Nisibis', 'Babylon', 'Nishapur', 'Merv', 'Balkh', 'Herat'],
+      // 260 Shapur I 擒羅馬皇帝瓦勒良於 Edessa
+      [260]: ['Gor', 'Estakhr', 'Persepolis', 'Bishapur', 'Ctesiphon', 'Susa', 'Ecbatana', 'Hatra', 'Nisibis', 'Edessa', 'Babylon', 'Nishapur', 'Merv', 'Balkh', 'Herat', 'Gundeshapur', 'Antioch'],
+      // 309 Shapur II 即位（70 年穩定期前夕）
+      [309]: ['Gor', 'Estakhr', 'Persepolis', 'Bishapur', 'Ctesiphon', 'Susa', 'Ecbatana', 'Nisibis', 'Babylon', 'Nishapur', 'Merv', 'Balkh', 'Herat', 'Gundeshapur'],
+      // 387 與羅馬瓜分亞美尼亞
+      [387]: ['Gor', 'Estakhr', 'Persepolis', 'Bishapur', 'Ctesiphon', 'Susa', 'Ecbatana', 'Nisibis', 'Babylon', 'Nishapur', 'Merv', 'Balkh', 'Herat', 'Gundeshapur', 'Yerevan'],
+      // 484 Peroz I 戰死於匈那
+      [484]: ['Gor', 'Estakhr', 'Persepolis', 'Bishapur', 'Ctesiphon', 'Susa', 'Ecbatana', 'Nisibis', 'Babylon', 'Nishapur', 'Merv', 'Gundeshapur'],
+      // 531 Khosrow I 即位（最盛之治）
+      [531]: ['Gor', 'Estakhr', 'Persepolis', 'Bishapur', 'Ctesiphon', 'Susa', 'Ecbatana', 'Hatra', 'Nisibis', 'Edessa', 'Babylon', 'Nishapur', 'Merv', 'Balkh', 'Herat', 'Gundeshapur', 'Yerevan'],
+      // 614 Khosrow II 攻陷耶路撒冷
+      [614]: ['Gor', 'Estakhr', 'Persepolis', 'Bishapur', 'Ctesiphon', 'Susa', 'Ecbatana', 'Nisibis', 'Edessa', 'Babylon', 'Nishapur', 'Merv', 'Balkh', 'Herat', 'Gundeshapur', 'Yerevan', 'Antioch', 'Damascus', 'Jerusalem', 'Alexandria', 'Memphis'],
+      // 628 希拉克略反攻、和議
+      [628]: ['Gor', 'Estakhr', 'Persepolis', 'Bishapur', 'Ctesiphon', 'Susa', 'Ecbatana', 'Nisibis', 'Babylon', 'Nishapur', 'Merv', 'Balkh', 'Herat', 'Gundeshapur'],
+      // 651 末王 Yazdgerd III 死於 Merv，亡於阿拉伯
+      [651]: ['Estakhr', 'Persepolis', 'Bishapur', 'Nishapur', 'Merv', 'Herat', 'Balkh'],
+    },
+  },
+  // ============================================================
+  // 古印度
+  // ============================================================
+  {
+    // 孔雀王朝 -322~-185（源 polygon -300~-2 不準到末）
+    polygon_name: 'Mauryan Empire',
+    name_zh: '孔雀',
+    end_year: -185,
+    years: {
+      // -322 旃陀羅笈多滅難陀、建孔雀
+      [-322]: ['Pataliputra','Kannauj', 'Mathura', 'Ujjain', 'Vidisha'],
+      // -305 戰勝塞琉古、取阿富汗東南
+      [-305]: ['Pataliputra','Kannauj', 'Mathura', 'Ujjain', 'Vidisha', 'Taxila', 'Kandahar', 'Multan', 'Sind', 'Bharuch'],
+      // -268 阿育王即位
+      [-268]: ['Pataliputra','Kannauj', 'Mathura', 'Ujjain', 'Vidisha', 'Taxila', 'Kandahar', 'Multan', 'Sind', 'Bharuch', 'Sopara', 'Sanchi'],
+      // -260 羯陵伽戰爭後（極盛、皈依佛教）
+      [-260]: ['Pataliputra','Kannauj', 'Mathura', 'Ujjain', 'Vidisha', 'Taxila', 'Kandahar', 'Multan', 'Sind', 'Bharuch', 'Sopara', 'Sanchi', 'Kalinga', 'Tamralipti', 'Pundravardhana', 'Madurai'],
+      // -232 阿育王崩
+      [-232]: ['Pataliputra','Kannauj', 'Mathura', 'Ujjain', 'Vidisha', 'Taxila', 'Multan', 'Sind', 'Bharuch', 'Sopara', 'Sanchi', 'Kalinga', 'Tamralipti', 'Pundravardhana'],
+      // -200 衰落期，西北已失
+      [-200]: ['Pataliputra','Kannauj', 'Mathura', 'Ujjain', 'Vidisha', 'Bharuch', 'Sopara', 'Sanchi', 'Kalinga', 'Tamralipti', 'Pundravardhana'],
+    },
+  },
+  {
+    // 笈多王朝 320~550（源 polygon 300~599 含前後過寬）
+    polygon_name: 'Gupta Empire',
+    name_zh: '笈多',
+    end_year: 550,
+    years: {
+      // 320 旃陀羅笈多一世建國，恆河中游
+      [320]: ['Pataliputra','Kannauj', 'Mathura', 'Tamralipti'],
+      // 350 海護王（Samudragupta）南征北討
+      [350]: ['Pataliputra','Kannauj', 'Mathura', 'Vidisha', 'Sanchi', 'Tamralipti', 'Pundravardhana', 'Ujjain', 'Bharuch'],
+      // 380 旃陀羅笈多二世滅西塞迦（極盛）
+      [380]: ['Pataliputra','Kannauj', 'Mathura', 'Vidisha', 'Sanchi', 'Ujjain', 'Bharuch', 'Sopara', 'Tamralipti', 'Pundravardhana', 'Vallabhi', 'Ahmedabad', 'Multan'],
+      // 415 鳩摩羅笈多時穩定
+      [415]: ['Pataliputra','Kannauj', 'Mathura', 'Vidisha', 'Sanchi', 'Ujjain', 'Bharuch', 'Sopara', 'Tamralipti', 'Pundravardhana', 'Vallabhi', 'Ahmedabad'],
+      // 480 匈那入侵
+      [480]: ['Pataliputra','Kannauj', 'Mathura', 'Vidisha', 'Sanchi', 'Tamralipti', 'Pundravardhana'],
+      // 530 末期分裂
+      [530]: ['Pataliputra','Kannauj', 'Tamralipti', 'Pundravardhana'],
+    },
+  },
+  {
+    // 德里蘇丹國 1206~1526（源 polygon 1200~1529）
+    polygon_name: 'Sultanate of Delhi',
+    name_zh: '德里蘇丹國',
+    end_year: 1526,
+    years: {
+      // 1206 古爾人 Qutb al-Din Aibak 建奴隸王朝
+      [1206]: ['Delhi', 'Lahore', 'Multan', 'Sind', 'Ajmer','Kannauj', 'Mathura'],
+      // 1236 伊勒圖什密末（已穩固北印度）
+      [1236]: ['Delhi', 'Lahore', 'Multan', 'Sind', 'Kannauj', 'Mathura', 'Lakhnauti', 'Ujjain', 'Bharuch'],
+      // 1296 阿拉烏丁哈勒吉即位
+      [1296]: ['Delhi', 'Lahore', 'Multan', 'Sind', 'Kannauj', 'Mathura', 'Lakhnauti', 'Ujjain', 'Bharuch', 'Vidisha', 'Devagiri'],
+      // 1320 圖格魯克即位
+      [1320]: ['Delhi', 'Lahore', 'Multan', 'Sind', 'Kannauj', 'Mathura', 'Lakhnauti', 'Ujjain', 'Bharuch', 'Vidisha', 'Devagiri', 'Hyderabad', 'Bijapur'],
+      // 1330 穆罕默德‧賓‧圖格魯克遷都德瓦吉里（極盛）
+      [1330]: ['Delhi', 'Lahore', 'Multan', 'Sind', 'Kannauj', 'Mathura', 'Lakhnauti', 'Ujjain', 'Bharuch', 'Vidisha', 'Devagiri', 'Hyderabad', 'Bijapur', 'Madurai', 'Kandahar'],
+      // 1351 菲魯茲沙時退守北印度
+      [1351]: ['Delhi', 'Lahore', 'Multan', 'Sind', 'Kannauj', 'Mathura', 'Lakhnauti', 'Ujjain', 'Vidisha', 'Bharuch'],
+      // 1398 帖木兒劫德里
+      [1398]: ['Delhi', 'Multan', 'Sind', 'Kannauj', 'Mathura'],
+      // 1414 賽義德王朝
+      [1414]: ['Delhi', 'Multan', 'Sind', 'Kannauj', 'Mathura', 'Lahore'],
+      // 1500 洛迪王朝
+      [1500]: ['Delhi', 'Multan', 'Sind', 'Kannauj', 'Mathura', 'Lahore', 'Ujjain'],
+    },
+  },
+  {
+    // 蒙兀兒帝國 1526~1707 極盛（源 polygon 1530~1782）
+    polygon_name: 'Mughal Empire',
+    name_zh: '蒙兀兒',
+    end_year: 1707,
+    years: {
+      // 1526 巴布爾敗洛迪、立蒙兀兒於德里
+      [1526]: ['Delhi', 'Agra', 'Lahore', 'Multan', 'Sind', 'Kabul', 'Kannauj'],
+      // 1540 蘇爾人舍爾沙暫篡（中斷期，1540-55）
+      [1540]: ['Kabul', 'Kandahar', 'Lahore'],
+      // 1556 阿克巴即位、收復北印度
+      [1556]: ['Delhi', 'Lahore', 'Multan', 'Sind', 'Kabul', 'Kannauj', 'Mathura'],
+      // 1576 阿克巴併孟加拉
+      [1576]: ['Delhi', 'Lahore', 'Multan', 'Sind', 'Kabul', 'Kandahar', 'Kannauj', 'Mathura', 'Ujjain', 'Bharuch', 'Ahmedabad', 'Lakhnauti', 'Dhaka', 'Vidisha', 'Vallabhi'],
+      // 1605 阿克巴崩
+      [1605]: ['Delhi', 'Lahore', 'Multan', 'Sind', 'Kabul', 'Kandahar', 'Kannauj', 'Mathura', 'Ujjain', 'Bharuch', 'Ahmedabad', 'Lakhnauti', 'Dhaka', 'Vidisha', 'Vallabhi', 'Surat'],
+      // 1659 奧朗則布即位
+      [1659]: ['Delhi', 'Lahore', 'Multan', 'Sind', 'Kabul', 'Kandahar', 'Kannauj', 'Mathura', 'Ujjain', 'Bharuch', 'Ahmedabad', 'Lakhnauti', 'Dhaka', 'Vidisha', 'Vallabhi', 'Surat', 'Devagiri'],
+      // 1687 滅戈爾康達（南征極盛）
+      [1687]: ['Delhi', 'Lahore', 'Multan', 'Sind', 'Kabul', 'Kandahar', 'Kannauj', 'Mathura', 'Ujjain', 'Bharuch', 'Ahmedabad', 'Lakhnauti', 'Dhaka', 'Vidisha', 'Vallabhi', 'Surat', 'Devagiri', 'Bijapur', 'Golconda', 'Hyderabad'],
+      // 1700 奧朗則布暮年（疆域含整個次大陸）
+      [1700]: ['Delhi', 'Lahore', 'Multan', 'Sind', 'Kabul', 'Kandahar', 'Kannauj', 'Mathura', 'Ujjain', 'Bharuch', 'Ahmedabad', 'Lakhnauti', 'Dhaka', 'Vidisha', 'Vallabhi', 'Surat', 'Devagiri', 'Bijapur', 'Golconda', 'Hyderabad', 'Madurai'],
+    },
+  },
+  // ============================================================
+  // 神聖羅馬帝國 962~1806
+  // ============================================================
+  {
+    polygon_name: 'Holy Roman Empire',
+    name_zh: '神聖羅馬',
+    end_year: 1806,
+    years: {
+      // 962 鄂圖一世加冕（薩克森＋巴伐利亞＋義大利北）
+      [962]: ['Aachen', 'Frankfurt', 'Mainz', 'Cologne', 'Trier', 'Worms', 'Speyer', 'Regensburg', 'Augsburg', 'Munich', 'Magdeburg', 'Bremen', 'Hamburg', 'Rome', 'Ravenna', 'Pavia', 'Milan', 'Verona'],
+      // 1024 薩利安王朝即位
+      [1024]: ['Aachen', 'Frankfurt', 'Mainz', 'Cologne', 'Trier', 'Worms', 'Speyer', 'Regensburg', 'Augsburg', 'Munich', 'Magdeburg', 'Bremen', 'Hamburg', 'Lubeck', 'Rome', 'Ravenna', 'Pavia', 'Milan', 'Verona', 'Florence', 'Strasbourg', 'Basel', 'Zurich', 'Bern', 'Prague'],
+      // 1077 卡諾莎之辱（敘任權鬥爭）
+      [1077]: ['Aachen', 'Frankfurt', 'Mainz', 'Cologne', 'Trier', 'Worms', 'Speyer', 'Regensburg', 'Augsburg', 'Munich', 'Magdeburg', 'Bremen', 'Hamburg', 'Lubeck', 'Ravenna', 'Pavia', 'Milan', 'Verona', 'Florence', 'Genoa', 'Bologna', 'Strasbourg', 'Basel', 'Zurich', 'Bern', 'Prague'],
+      // 1155 巴巴羅薩加冕、義大利政策
+      [1155]: ['Aachen', 'Frankfurt', 'Mainz', 'Cologne', 'Trier', 'Worms', 'Speyer', 'Regensburg', 'Augsburg', 'Munich', 'Nuremberg', 'Magdeburg', 'Bremen', 'Hamburg', 'Lubeck', 'Ravenna', 'Pavia', 'Milan', 'Verona', 'Florence', 'Genoa', 'Bologna', 'Strasbourg', 'Basel', 'Zurich', 'Bern', 'Prague', 'Vienna', 'Trento'],
+      // 1250 腓特烈二世崩、大空位期
+      [1250]: ['Aachen', 'Frankfurt', 'Mainz', 'Cologne', 'Trier', 'Worms', 'Speyer', 'Regensburg', 'Augsburg', 'Munich', 'Nuremberg', 'Magdeburg', 'Bremen', 'Hamburg', 'Lubeck', 'Strasbourg', 'Basel', 'Zurich', 'Bern', 'Prague', 'Vienna', 'Trento'],
+      // 1356 金璽詔書（七選帝侯）
+      [1356]: ['Aachen', 'Frankfurt', 'Mainz', 'Cologne', 'Trier', 'Worms', 'Speyer', 'Regensburg', 'Augsburg', 'Munich', 'Nuremberg', 'Magdeburg', 'Bremen', 'Hamburg', 'Lubeck', 'Strasbourg', 'Basel', 'Zurich', 'Bern', 'Prague', 'Vienna', 'Trento', 'Dresden', 'Leipzig', 'Salzburg'],
+      // 1453 哈布斯堡掌帝位
+      [1453]: ['Aachen', 'Frankfurt', 'Mainz', 'Cologne', 'Trier', 'Worms', 'Speyer', 'Regensburg', 'Augsburg', 'Munich', 'Nuremberg', 'Magdeburg', 'Bremen', 'Hamburg', 'Lubeck', 'Strasbourg', 'Prague', 'Vienna', 'Trento', 'Dresden', 'Leipzig', 'Salzburg', 'Innsbruck', 'Brussels', 'Antwerp', 'Utrecht'],
+      // 1556 查理五世退位、奧西分家
+      [1556]: ['Aachen', 'Frankfurt', 'Mainz', 'Cologne', 'Trier', 'Worms', 'Speyer', 'Regensburg', 'Augsburg', 'Munich', 'Nuremberg', 'Magdeburg', 'Bremen', 'Hamburg', 'Lubeck', 'Strasbourg', 'Prague', 'Vienna', 'Trento', 'Dresden', 'Leipzig', 'Salzburg', 'Innsbruck', 'Brussels', 'Antwerp', 'Utrecht'],
+      // 1648 西發里亞和約（瑞士/荷蘭正式脫離）
+      [1648]: ['Aachen', 'Frankfurt', 'Mainz', 'Cologne', 'Trier', 'Worms', 'Speyer', 'Regensburg', 'Augsburg', 'Munich', 'Nuremberg', 'Magdeburg', 'Bremen', 'Hamburg', 'Lubeck', 'Strasbourg', 'Prague', 'Vienna', 'Trento', 'Dresden', 'Leipzig', 'Salzburg', 'Innsbruck'],
+      // 1681 法併斯特拉斯堡
+      [1681]: ['Aachen', 'Frankfurt', 'Mainz', 'Cologne', 'Trier', 'Worms', 'Speyer', 'Regensburg', 'Augsburg', 'Munich', 'Nuremberg', 'Magdeburg', 'Bremen', 'Hamburg', 'Lubeck', 'Prague', 'Vienna', 'Trento', 'Dresden', 'Leipzig', 'Salzburg', 'Innsbruck'],
+      // 1740 瑪麗亞‧特蕾莎即位（西里西亞戰爭前）
+      [1740]: ['Aachen', 'Frankfurt', 'Mainz', 'Cologne', 'Trier', 'Worms', 'Speyer', 'Regensburg', 'Augsburg', 'Munich', 'Nuremberg', 'Magdeburg', 'Bremen', 'Hamburg', 'Lubeck', 'Prague', 'Vienna', 'Trento', 'Dresden', 'Leipzig', 'Salzburg', 'Innsbruck'],
+      // 1789 法國大革命前夕
+      [1789]: ['Aachen', 'Frankfurt', 'Mainz', 'Cologne', 'Trier', 'Worms', 'Speyer', 'Regensburg', 'Augsburg', 'Munich', 'Nuremberg', 'Magdeburg', 'Bremen', 'Hamburg', 'Lubeck', 'Prague', 'Vienna', 'Trento', 'Dresden', 'Leipzig', 'Salzburg', 'Innsbruck'],
+      // 1803 帝國代表重要決議（俗世化）
+      [1803]: ['Frankfurt', 'Regensburg', 'Augsburg', 'Munich', 'Nuremberg', 'Magdeburg', 'Bremen', 'Hamburg', 'Lubeck', 'Prague', 'Vienna', 'Trento', 'Dresden', 'Leipzig', 'Salzburg', 'Innsbruck'],
+    },
+  },
+  // ============================================================
+  // 美洲（阿茲特克 + 印加）
+  // ============================================================
+  {
+    // 阿茲特克 1428~1521（源 polygon 只 1500~1529 一格）
+    polygon_name: 'Aztec Empire',
+    name_zh: '阿茲特克',
+    end_year: 1521,
+    years: {
+      // 1428 三方聯盟成立（Tenochtitlan + Texcoco + Tlacopan 滅 Azcapotzalco）
+      [1428]: ['Tenochtitlan', 'Texcoco', 'Tlacopan', 'Xochimilco', 'Cholula'],
+      // 1440 蒙特蘇馬一世擴張
+      [1440]: ['Tenochtitlan', 'Texcoco', 'Tlacopan', 'Xochimilco', 'Cholula', 'Cempoala', 'Cuetlaxtla', 'Mixquiahuala'],
+      // 1469 阿薩亞卡特即位
+      [1469]: ['Tenochtitlan', 'Texcoco', 'Tlacopan', 'Xochimilco', 'Cholula', 'Cempoala', 'Cuetlaxtla', 'Tula', 'Mixquiahuala', 'Oaxaca'],
+      // 1486 阿維索托即位（南擴 Soconusco）
+      [1486]: ['Tenochtitlan', 'Texcoco', 'Tlacopan', 'Xochimilco', 'Cholula', 'Cempoala', 'Cuetlaxtla', 'Tula', 'Mixquiahuala', 'Oaxaca', 'Tehuantepec', 'Soconusco'],
+      // 1502 蒙特蘇馬二世即位（極盛、含灣岸與南境）
+      [1502]: ['Tenochtitlan', 'Texcoco', 'Tlacopan', 'Xochimilco', 'Cholula', 'Cempoala', 'Cuetlaxtla', 'Tula', 'Mixquiahuala', 'Oaxaca', 'Tehuantepec', 'Soconusco', 'Tuxpan'],
+      // 1519 科爾特斯登陸
+      [1519]: ['Tenochtitlan', 'Texcoco', 'Tlacopan', 'Xochimilco', 'Cholula', 'Cempoala', 'Cuetlaxtla', 'Tula', 'Mixquiahuala', 'Oaxaca', 'Tehuantepec', 'Soconusco', 'Tuxpan'],
+    },
+  },
+  {
+    // 印加 1438~1533（源 polygon 1500~1649 過晚——印加 1533 已亡）
+    polygon_name: 'Inca Empire',
+    name_zh: '印加',
+    end_year: 1533,
+    years: {
+      // 1438 帕查庫特克擊敗昌卡（建塔萬廷蘇尤）
+      [1438]: ['Cuzco', 'Pachacamac'],
+      // 1463 征服 Chimu（北沿海）
+      [1463]: ['Cuzco', 'Pachacamac', 'ChanChan', 'TrujilloAndes', 'Huancayo'],
+      // 1471 圖帕克‧印加即位（南北擴張）
+      [1471]: ['Cuzco', 'Pachacamac', 'ChanChan', 'TrujilloAndes', 'Huancayo', 'Cajamarca', 'Tomebamba', 'Quito', 'Arequipa', 'LaPaz'],
+      // 1493 瓦伊納‧卡帕克即位（北至 Pasto）
+      [1493]: ['Cuzco', 'Pachacamac', 'ChanChan', 'TrujilloAndes', 'Huancayo', 'Cajamarca', 'Tomebamba', 'Quito', 'Pasto', 'Arequipa', 'LaPaz', 'SucreInca', 'PotosiInca', 'SantiagoInca'],
+      // 1525 瓦伊納‧卡帕克死於天花、南北分裂前極盛
+      [1525]: ['Cuzco', 'Pachacamac', 'ChanChan', 'TrujilloAndes', 'Huancayo', 'Cajamarca', 'Tomebamba', 'Quito', 'Pasto', 'Arequipa', 'LaPaz', 'SucreInca', 'PotosiInca', 'SantiagoInca', 'TalcaInca', 'MendozaInca', 'TucumanInca'],
+      // 1532 皮薩羅擒阿塔瓦爾帕於 Cajamarca
+      [1532]: ['Cuzco', 'Pachacamac', 'ChanChan', 'TrujilloAndes', 'Huancayo', 'Cajamarca', 'Tomebamba', 'Quito', 'Arequipa', 'LaPaz', 'SucreInca', 'PotosiInca', 'SantiagoInca', 'TalcaInca'],
+      // 1533 阿塔瓦爾帕被殺、印加亡
+      [1533]: ['Cuzco', 'Vilcabamba', 'Pachacamac', 'Huancayo', 'Cajamarca'],
     },
   },
 ]

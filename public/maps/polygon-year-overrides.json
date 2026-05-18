@@ -211,6 +211,69 @@
       "min_year_from": 386,
       "max_year_to": 534,
       "reason": "北魏 386~534；源 polygon 500~599 太晚（534 已分裂為東魏西魏）"
+    },
+    "Achaemenid Empire": {
+      "min_year_from": -550,
+      "max_year_to": -330,
+      "reason": "阿契美尼德 -550 居魯士滅米底~-330 大流士三世亡於亞歷山大；源 polygon -500 起算過晚、-324 過早結束"
+    },
+    "Parthia": {
+      "min_year_from": -247,
+      "max_year_to": -130,
+      "reason": "帕提亞早期 -247 阿薩息斯建國~-130 米特里達梯一世取美索不達米亞；之後由 fine Parthian Empire 接管"
+    },
+    "Parthian Empire": {
+      "min_year_from": -129,
+      "max_year_to": 224,
+      "reason": "帕提亞極盛期 -129~224；源 polygon -1~399 含薩珊期過晚（224 亡於 Ardashir）"
+    },
+    "Sasanian Empire": {
+      "min_year_from": 224,
+      "max_year_to": 651,
+      "reason": "薩珊 224 Ardashir~651 末王戰死於 Merv；源 polygon 500~799 漏掉早期 200~499 + 過晚到伊斯蘭征服後"
+    },
+    "Mauryan Empire": {
+      "min_year_from": -322,
+      "max_year_to": -185,
+      "reason": "孔雀 -322 旃陀羅笈多~-185 巽伽篡位；源 polygon -100~-2 為 Maurya 亡後過晚"
+    },
+    "Gupta Empire": {
+      "min_year_from": 320,
+      "max_year_to": 550,
+      "reason": "笈多 320 旃陀羅笈多一世~550 末分裂；源 polygon 500~599 部分過晚"
+    },
+    "Sultanate of Delhi": {
+      "min_year_from": 1206,
+      "max_year_to": 1526,
+      "reason": "德里蘇丹國 1206 Qutb al-Din~1526 巴布爾滅洛迪；源 polygon 起 1200 略早，1529 過晚"
+    },
+    "Mughal Empire": {
+      "min_year_from": 1526,
+      "max_year_to": 1857,
+      "reason": "蒙兀兒 1526 巴布爾~1857 印度大叛亂後英廢黜；源 polygon 1530 起略晚、1782 起 fine 接續到 1857"
+    },
+    "Holy Roman Empire": {
+      "min_year_from": 962,
+      "max_year_to": 1806,
+      "reason": "神羅 962 鄂圖一世加冕~1806 法朗茨二世退位；源 polygon 1000 起略晚"
+    },
+    "Aztec Empire": {
+      "min_year_from": 1428,
+      "max_year_to": 1521,
+      "reason": "阿茲特克三方聯盟 1428 滅 Azcapotzalco~1521 特諾奇蒂特蘭陷於 Cortés；源 polygon 只 1500~1529 一格"
+    },
+    "Inca Empire": {
+      "min_year_from": 1438,
+      "max_year_to": 1533,
+      "reason": "印加 1438 帕查庫特克擊敗昌卡~1533 阿塔瓦爾帕被殺；源 polygon 1500~1649 把殖民地後也算進來過晚"
+    },
+    "Mexihcah (Triple Alliance)": {
+      "min_year_from": 9999,
+      "reason": "三方聯盟即阿茲特克；由 fine Aztec Empire 統一處理，源 polygon 隱藏避免重疊"
+    },
+    "Sasanian dependencies": {
+      "min_year_from": 9999,
+      "reason": "薩珊附庸國（亞美尼亞／伊比利亞等），與 fine Sasanian Empire 重疊；隱藏簡化"
     }
   }
 }
