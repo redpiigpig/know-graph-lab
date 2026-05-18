@@ -84,10 +84,43 @@ description: 使徒統緒族譜圖（/genealogy/episcopal-tree）的資料維護
 
 凡 `episcopal_sees.parent_see_id` 指向 spine 的主 see 或另一個旁支 see → BFS 找到後成為旁支，可在 spine 圖點 ▸ 展開。
 
-- 若旁支 see_zh **與母教座相同** → `is_split=true`（紅色鋸齒線、教座分裂；如 坎特伯里|英格蘭教會 ← 坎特伯里|天主教）
-- 若旁支 see_zh **與母教座不同** → `is_split=false`（spine 色實線、設立教座；如 米蘭 ← 羅馬）
+**三種視覺差異（重要）：**
+
+| see_zh vs parent | split_year | 視覺 | 語義 | 例 |
+|---|---|---|---|---|
+| 同名 | 有 | 紅色鋸齒線 | 教座分裂（爭奪同一寶座 / 改宗傳承） | 對立教宗（亞威農 / 比薩），Old Catholic，坎特伯里|英格蘭教會 ← 坎特伯里|天主教，烏普薩拉|瑞典信義會 ← 烏普薩拉|天主教 |
+| 不同名 | 有 | spine 色實線 + 顯示 split_year | 自主獨立教會 | 莫斯科 1448 ← 君士坦丁堡，雅典 1833 ← 君士坦丁堡 |
+| 不同名 | 無 | spine 色實線 + 顯示 founded_year | 母教座差派設立 | 米蘭 ← 羅馬（巴拿巴），坎特伯里 ← 羅馬（額我略一世派奧古斯丁） |
+
+**關鍵規則：**
+- **教宗 / 母 spine 主教差派設立的子教座** → 不同 see_zh + 無 split_year（藍實線「設立」）
+- **同一寶座的對立 / 改宗承繼** → 同 see_zh + 設 split_year（紅鋸齒「分裂」）
+- **不同地理位置但宣告獨立** → 不同 see_zh + 設 split_year（藍實線 + 年份）
 
 預期將來會擴張到「一個宗主教座下面延伸很多教座傳承」，spine column 之間預留了 horizontal space。
+
+## 教座 → parent 接法（資料 audit 政策）
+
+每個教座一定要 `parent_see_id` 指到某處（不能孤兒），否則不會出現在族譜圖上。指派原則：
+
+**羅馬公教教座：**
+- Post-600 一般拉丁禮 → `parent=rome` 直屬（教宗差派時代）
+- Pre-600 拉丁禮 → 按地區族群接母 metropolis（教宗權尚不穩固，地方總主教祝聖）：Hispanic→托萊多、Gallic→里昂、Germanic→特里爾、Italian/Insular/African→rome 直屬
+- 對立教宗（Avignon / Pisa）→ see_zh="羅馬"、parent=rome、設 split_year，紅鋸齒
+- Old Catholic（反 Vatican I 1871/1873/1874/1897）→ 同對立教宗法
+- 東儀天主教（Maronite / Melkite / Chaldean / Coptic Cath / Syriac Cath / Armenian Cath / Ukrainian GC）→ rename see_zh 成對應東方母 spine 的 see_zh、parent=該 spine、設 split_year，紅鋸齒
+
+**東方教會教座：**
+- 國家層級的 Orthodox 自主教會（俄羅斯/塞爾維亞/羅馬尼亞/保加利亞/希臘 等）已建檔為 君堡 旁支
+- 該國境內的城市 diocese → 接國家層級的母教會（如 第比利斯 → 姆茨赫塔、聖彼得堡 → 莫斯科、明斯克 → 莫斯科）
+- 古希臘教會 Pauline 教座（科林斯/帖撒羅尼迦/克里特/帕特雷 等）→ 君堡 直屬
+- Old Believers / Old Calendar → 接對應母會（莫斯科 / 雅典）+ 設真正的 schism 年份
+
+**基督新教教座：**
+- 看是否承接古老的 Catholic / Orthodox 教座
+  - **是**（同城繼承，宗教改革轉變）→ 同 see_zh、parent=該古老母 see、split_year=宗教改革年（如 烏普薩拉|瑞典信義會 ← 烏普薩拉|天主教 split=1531；圖爾庫 split=1527；里加 split=1522）
+  - **否**（新立傳教教座，無歷史前身）→ parent=rome、split_year=founded_year（藍線「設立」自拉丁基督教體系；如 漢諾威 1948、棉蘭 1861、衣索比亞福音 1959）
+- 聖公宗 mission 子教座 → parent=坎特伯里|英格蘭教會
 
 ## split_year 機制
 
@@ -137,7 +170,7 @@ description: 使徒統緒族譜圖（/genealogy/episcopal-tree）的資料維護
 
 ## 教座清單
 
-DB 是 source of truth。截至最近紀錄：**7 大 spine + 127 旁支教座**。
+DB 是 source of truth。截至最近紀錄：**7 大 spine + 330 旁支教座**（其中 23 個 Protestant orphan 已於 Stage 7 接 rome）。
 - 主要傳承群：羅馬（西方大分裂對立教宗、米蘭、歐美天主教教區）、君士坦丁堡（古代/中世紀/19-21 世紀自主與自治教會、小亞細亞 7 教會、姆茨赫塔喬治亞）、亞歷山卓（科普特正教含 4 大修道院 + 努比亞古代教座、衣索比亞、厄立特里亞）、安提阿（馬龍尼特、麥勒基特、敘利亞正教、凱撒利亞·巴勒斯坦/卡帕多西亞、以弗所、塞浦路斯、大馬士革）、耶路撒冷（拉丁禮、亞美尼亞耶城）、埃奇米亞津（奇里乞亞、亞美尼亞天主教）、塞琉西亞-泰西封（古代東方 + 亞述派 rival + 馬拉巴爾系列 + 古代景教阿爾比/尼西比斯/默夫/撒馬爾罕/長安）
 - 新教改革後：聖公宗（坎特伯里→各國 Province）、信義宗（北歐 + 各國）、衛理宗（巴爾的摩→各國分支）
 
