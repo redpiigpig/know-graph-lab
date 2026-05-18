@@ -404,6 +404,16 @@ def cmd_auto(libs: list[str]):
         print(f"\n--- EXECUTE ---")
         cmd_execute()
     print("\n=== AUTO mode done ===")
+    # 跑完 auto rename 後刷新 photo_index.json，讓 /photos web 立刻看到新檔
+    try:
+        import subprocess
+        print("\n--- 重建 photo_index.json ---")
+        subprocess.run(
+            [sys.executable, str(Path(__file__).parent / "build_photo_index.py")],
+            check=False,
+        )
+    except Exception as e:
+        print(f"!! photo_index 重建失敗（不影響 rename 結果）：{e}")
 
 
 def main():

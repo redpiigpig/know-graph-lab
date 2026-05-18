@@ -2,6 +2,83 @@ import crypto from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
 
+// ===== Photo index (scripts/photo_index.json) =====
+// 由 scripts/build_photo_index.py 產生，避免每次 API 都遞迴掃 Drive 鏡像。
+
+interface IndexFile {
+  name: string;
+  kind: PhotoKind;
+  ext: string;
+  size: number;
+  mtime: number;
+}
+interface IndexFolderNode {
+  folders: { name: string; fileCount: number; subfolderCount: number }[];
+  files: IndexFile[];
+}
+interface IndexChenweiYear {
+  monthCounts: Record<string, number>;
+  screenshots: number;
+  downloads: number;
+  events: { name: string; count: number }[];
+  buckets: Record<string, IndexFile[]>; // "01".."12" | "screenshots" | "downloads" | <event>
+}
+interface IndexChenweiLib {
+  totalFiles: number;
+  topFolders: number;
+  layout: "year-month";
+  years: Record<string, IndexChenweiYear>;
+}
+interface IndexFolderLib {
+  totalFiles: number;
+  topFolders: number;
+  layout: "folders";
+  folders: Record<string, IndexFolderNode>;
+}
+interface PhotoIndex {
+  version: number;
+  generatedAt: string;
+  libraries: {
+    chenwei?: IndexChenweiLib;
+    training?: IndexFolderLib;
+    hongshi?: IndexFolderLib;
+  };
+}
+
+let _indexCache: { mtime: number; data: PhotoIndex } | null = null;
+
+function indexPath(): string {
+  // scripts/photo_index.json 相對於 process.cwd() (Nuxt server 啟動時的 repo root)
+  return path.resolve(process.cwd(), "scripts", "photo_index.json");
+}
+
+export async function getPhotoIndex(): Promise<PhotoIndex | null> {
+  const p = indexPath();
+  let stat: { mtimeMs: number };
+  try {
+    stat = await fs.stat(p);
+  } catch {
+    return null;
+  }
+  if (_indexCache && _indexCache.mtime === stat.mtimeMs) return _indexCache.data;
+  try {
+    const raw = await fs.readFile(p, "utf-8");
+    const data = JSON.parse(raw) as PhotoIndex;
+    _indexCache = { mtime: stat.mtimeMs, data };
+    return data;
+  } catch (e) {
+    console.warn("[photo-index] failed to load:", e);
+    return null;
+  }
+}
+
+export function getChenweiIndex(idx: PhotoIndex): IndexChenweiLib | null {
+  return idx.libraries.chenwei ?? null;
+}
+export function getFolderLibIndex(idx: PhotoIndex, slug: "training" | "hongshi"): IndexFolderLib | null {
+  return idx.libraries[slug] ?? null;
+}
+
 const YEAR_RE = /^(\d{4})相片$/;
 const MONTH_RE = /^(\d{4})\.(0[1-9]|1[0-2])$/;
 const IMAGE_EXTS = new Set([
@@ -351,4 +428,115 @@ export function contentTypeFor(ext: string): string {
     case ".mkv": return "video/x-matroska";
     default: return "application/octet-stream";
   }
+}
+
+// ===== Index-backed builders（API endpoints 用）=====
+// 把 IndexFile 上身為 PhotoFile（補 source + 即時簽 URL，避免 stale TTL）。
+
+function indexFileToPhotoFile(
+  f: IndexFile,
+  source: PhotoSource,
+  signer: (name: string) => string,
+): PhotoFile {
+  return {
+    name: f.name,
+    kind: f.kind,
+    source,
+    ext: f.ext,
+    size: f.size,
+    mtime: f.mtime,
+    url: signer(f.name),
+  };
+}
+
+/** Library 卡片資料（給 /api/photos/libraries）。沒 index 回 null，caller fallback。 */
+export function summarizeLibraryFromIndex(idx: PhotoIndex, slug: LibrarySlug):
+  { totalFiles: number; topFolders: number } | null
+{
+  const lib = idx.libraries[slug];
+  if (!lib) return null;
+  return { totalFiles: lib.totalFiles, topFolders: lib.topFolders };
+}
+
+/** Chenwei 年份清單（給 /api/photos/years）。 */
+export function listYearsFromIndex(idx: PhotoIndex):
+  { year: string; total: number; monthsWithPhotos: number }[] | null
+{
+  const cw = idx.libraries.chenwei;
+  if (!cw) return null;
+  const out: { year: string; total: number; monthsWithPhotos: number }[] = [];
+  for (const [year, yd] of Object.entries(cw.years)) {
+    let total = 0;
+    let monthsWithPhotos = 0;
+    for (const c of Object.values(yd.monthCounts)) {
+      total += c;
+      if (c > 0) monthsWithPhotos++;
+    }
+    // 加上 screenshots / downloads / events
+    total += yd.screenshots + yd.downloads;
+    for (const e of yd.events) total += e.count;
+    out.push({ year, total, monthsWithPhotos });
+  }
+  out.sort((a, b) => Number(b.year) - Number(a.year));
+  return out;
+}
+
+/** Chenwei 單一年份的月／截圖／下載／事件統計（給 /api/photos/[year]/months）。 */
+export function getYearMonthsFromIndex(idx: PhotoIndex, year: string):
+  {
+    months: { month: string; count: number }[];
+    screenshots: number;
+    downloads: number;
+    events: { name: string; count: number }[];
+  } | null
+{
+  const cw = idx.libraries.chenwei;
+  if (!cw) return null;
+  const yd = cw.years[year];
+  if (!yd) return { months: [], screenshots: 0, downloads: 0, events: [] };
+  const months = Object.entries(yd.monthCounts)
+    .map(([month, count]) => ({ month, count }))
+    .sort((a, b) => a.month.localeCompare(b.month));
+  return {
+    months,
+    screenshots: yd.screenshots,
+    downloads: yd.downloads,
+    events: yd.events.slice(),
+  };
+}
+
+/** Chenwei 單一 segment（月份／截圖／下載／事件）的檔案清單（給 /api/photos/[year]/[month]/files）。 */
+export function listFilesFromIndex(idx: PhotoIndex, year: string, segment: Segment): PhotoFile[] | null {
+  const cw = idx.libraries.chenwei;
+  if (!cw) return null;
+  const yd = cw.years[year];
+  if (!yd) return [];
+  // 把 segment 對應到 bucket key
+  let bucketKey: string;
+  if (/^(0[1-9]|1[0-2])$/.test(segment)) bucketKey = segment;
+  else if (segment === "screenshots") bucketKey = "screenshots";
+  else if (segment === "downloads") bucketKey = "downloads";
+  else bucketKey = segment; // 事件夾名
+  const files = yd.buckets[bucketKey];
+  if (!files) return [];
+  const source = sourceForSegment(segment);
+  return files.map(f =>
+    indexFileToPhotoFile(f, source, (n) => signFileUrl(year, segment, n))
+  );
+}
+
+/** Training/Hongshi folder browser（給 /api/photos/lib/[lib]/list）。 */
+export function listLibraryFolderFromIndex(
+  idx: PhotoIndex,
+  slug: "training" | "hongshi",
+  subpath: string,
+): { folders: FolderNode[]; files: PhotoFile[] } | null {
+  const lib = idx.libraries[slug];
+  if (!lib) return null;
+  const node = lib.folders[subpath];
+  if (!node) return { folders: [], files: [] };
+  const files = node.files.map(f =>
+    indexFileToPhotoFile(f, "event", (n) => signLibFileUrl(slug, subpath, n))
+  );
+  return { folders: node.folders.slice(), files };
 }

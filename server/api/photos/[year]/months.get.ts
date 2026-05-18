@@ -1,9 +1,21 @@
 import { requireAdmin } from "~/server/utils/auth-helper";
-import { countBucket, listEvents, listMonths } from "~/server/utils/photos";
+import {
+  countBucket,
+  getPhotoIndex,
+  getYearMonthsFromIndex,
+  listEvents,
+  listMonths,
+} from "~/server/utils/photos";
 
 export default defineEventHandler(async (event) => {
   await requireAdmin(event);
   const year = getRouterParam(event, "year") || "";
+  const idx = await getPhotoIndex();
+  if (idx) {
+    const fromIdx = getYearMonthsFromIndex(idx, year);
+    if (fromIdx) return { year, ...fromIdx };
+  }
+  // fs fallback
   const months = await listMonths(year);
   const out: { month: string; count: number }[] = [];
   for (const m of months) out.push({ month: m, count: await countBucket(year, m) });
