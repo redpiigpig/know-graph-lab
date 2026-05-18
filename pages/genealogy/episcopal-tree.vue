@@ -21,7 +21,7 @@
 
     <div class="flex-1 min-h-0 relative">
       <ClientOnly>
-        <GenealogyEpiscopalSpineTree :graph="graph" />
+        <GenealogyConsecrationTree :graph="graph" />
         <template #fallback>
           <div class="absolute inset-0 flex items-center justify-center text-gray-300 text-sm">載入中…</div>
         </template>
