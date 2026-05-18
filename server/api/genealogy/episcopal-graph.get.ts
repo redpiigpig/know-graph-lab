@@ -158,10 +158,14 @@ export default defineEventHandler(async (event) => {
   }
   for (const arr of bishopsBySeeChurch.values()) {
     arr.sort((a, b) => {
+      if (a.start_year != null && b.start_year != null && a.start_year !== b.start_year) {
+        return a.start_year - b.start_year
+      }
+      if (a.start_year != null && b.start_year == null) return -1
+      if (a.start_year == null && b.start_year != null) return 1
       const an = a.succession_number ?? 9999
       const bn = b.succession_number ?? 9999
-      if (an !== bn) return an - bn
-      return (a.start_year ?? 9999) - (b.start_year ?? 9999)
+      return an - bn
     })
   }
 
@@ -202,10 +206,17 @@ export default defineEventHandler(async (event) => {
     }
     const bishops = Array.from(bishopMergeMap.values())
     bishops.sort((a, b) => {
+      // 先 chronological（start_year）再 succession_number 當 tiebreaker
+      // 確保資料 anomaly（如 那不勒斯 聖真納羅 succession=0 但 year=303 比 #1 還晚）
+      // 不會把後人塞到 #1 前面；同時保留 米蘭 巴拿巴 #-1 (50AD) 在 #1 (100AD) 前面的正確排序
+      if (a.start_year != null && b.start_year != null && a.start_year !== b.start_year) {
+        return a.start_year - b.start_year
+      }
+      if (a.start_year != null && b.start_year == null) return -1
+      if (a.start_year == null && b.start_year != null) return 1
       const an = a.succession_number ?? 9999
       const bn = b.succession_number ?? 9999
-      if (an !== bn) return an - bn
-      return (a.start_year ?? 9999) - (b.start_year ?? 9999)
+      return an - bn
     })
 
     return {
@@ -368,10 +379,14 @@ export default defineEventHandler(async (event) => {
           allBishops = allBishops.filter(b => (b.start_year ?? 9999) >= k.split_year!)
         }
         allBishops.sort((a, b) => {
+          if (a.start_year != null && b.start_year != null && a.start_year !== b.start_year) {
+            return a.start_year - b.start_year
+          }
+          if (a.start_year != null && b.start_year == null) return -1
+          if (a.start_year == null && b.start_year != null) return 1
           const an = a.succession_number ?? 9999
           const bn = b.succession_number ?? 9999
-          if (an !== bn) return an - bn
-          return (a.start_year ?? 9999) - (b.start_year ?? 9999)
+          return an - bn
         })
         // Per user spec: 教座分裂 (split) vs 設立教座 (founding)
         //   分裂 = daughter see has SAME see_zh as parent (rival successors claim the same chair).
@@ -475,10 +490,14 @@ export default defineEventHandler(async (event) => {
         allBishops = allBishops.filter(b => (b.start_year ?? 9999) >= see.split_year!)
       }
       allBishops.sort((a, b) => {
+        if (a.start_year != null && b.start_year != null && a.start_year !== b.start_year) {
+          return a.start_year - b.start_year
+        }
+        if (a.start_year != null && b.start_year == null) return -1
+        if (a.start_year == null && b.start_year != null) return 1
         const an = a.succession_number ?? 9999
         const bn = b.succession_number ?? 9999
-        if (an !== bn) return an - bn
-        return (a.start_year ?? 9999) - (b.start_year ?? 9999)
+        return an - bn
       })
 
       // Determine parent for visual: depth-0 → apostle card; deeper → parent_bishop_id in parent see

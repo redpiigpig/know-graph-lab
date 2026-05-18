@@ -868,13 +868,20 @@ const cv = computed(() => {
 
     // Determine which (teacher_bishop_id, student_bishop_id) pairs are already
     // covered by spine/branch institutional lines:
-    // - same spine adjacent succession (#N → #N+1): always institutional, skip
-    // - branch.parent_bishop_id chain (Wesley→Coke is in same Baltimore see, so spine covers)
-    const institutionalPairs = new Set<string>()
+    // 任何兩個 bishop 在「同一個 column」(同 spine 或同 branch) 都當作機構性傳承，不畫教導橘線
+    // —— 之前只擋 adjacent，所以 Peter #1 → Clement #4 還是會畫，造成奇怪曲線
+    const bishopToColumn = new Map<string, string>()
     for (const sp of g.spines) {
-      for (let i = 0; i < sp.bishops.length - 1; i++) {
-        institutionalPairs.add(`${sp.bishops[i].id}|${sp.bishops[i + 1].id}`)
-      }
+      const colKey = 'sp_' + sp.key
+      for (const b of sp.bishops) bishopToColumn.set(b.id, colKey)
+    }
+    for (const br of g.branches) {
+      const colKey = 'br_' + br.id
+      for (const bb of br.bishops) bishopToColumn.set(bb.id, colKey)
+    }
+    for (const ab of (g.apostolicBranches ?? [])) {
+      const colKey = 'apbr_' + ab.id
+      for (const bb of ab.bishops) bishopToColumn.set(bb.id, colKey)
     }
 
     for (const t of g.teachings) {
@@ -882,8 +889,10 @@ const cv = computed(() => {
       const teacherNode = nodeByBishopId.get(t.teacher_bishop_id)
       const studentNode = nodeByBishopId.get(t.student_bishop_id)
       if (!teacherNode || !studentNode) continue
-      // Skip if already institutional
-      if (institutionalPairs.has(`${t.teacher_bishop_id}|${t.student_bishop_id}`)) continue
+      // Skip if both in same column (institutional within same spine/branch)
+      const tCol = bishopToColumn.get(t.teacher_bishop_id)
+      const sCol = bishopToColumn.get(t.student_bishop_id)
+      if (tCol && sCol && tCol === sCol) continue
 
       // Draw orange curved line from teacher card to student card
       const x1 = teacherNode.x + teacherNode.w
