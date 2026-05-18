@@ -230,3 +230,13 @@ description: 使徒統緒族譜圖（/genealogy/episcopal-tree）的資料維護
 
 - **#1 格利高爾的 appointed_by**：原寫「國王提里達底三世」（錯，國王是受洗者，不是任命者）→ 修為「凱撒利亞·萊昂提烏斯」
 - **assyria spine 兩派交錯**：原 `primaryChurches: ['古代東方教會', '東方教會（亞述）']` 把 1968 後並行的兩派合進同一條線按 succession_number 排序，#1帕帕（280）→ #1馬爾·丁哈（1976）→ #2示孟（329）→ #2馬爾·吉瓦吉斯（2015）交錯亂序 → 改用 `rivalChurches` 分開
+- **新教改革後大主教錯位**：`findBishopAtYear` 原本只用 see_zh 篩選候選人，當 daughter see 與 parent 同 see_zh 時（如 坎特伯里|英格蘭教會 從 坎特伯里|天主教 分支），會誤把 daughter 的 #1 主教（如 1533 Cranmer）當成 parent 在該年的當任，導致 attach Y 落到 parent header（597 AD 區域），結果 1500+ 的大主教排在最上面 → 加 `churchFilter` 參數，spine 用 primaryChurches，branch 只用該 branch 的 church
+
+## Layout 規格（前端 `EpiscopalSpineTree.vue`）
+
+- **七大宗主教按順序「平均分配」橫排**：不再 group by primary apostle，每個 spine 獨立 slot（SPINE_BETWEEN_GAP=36）
+- **16 使徒平均分配**橫排在 spine 之上（APO_HG=20）
+- **預設所有 branch 都收起來**：使用者按 ▸ 才一個個展開（watch `props.graph` 寫滿 `collapsedBranches` Set）
+- **預設 zoom = fit-to-width**（不 fit-to-height，因為 rome 261 任主教 ≈ 30000px 高會壓到 3%）
+- **Spine 主線 opacity = 0.55**（之前 0.10 太淡看不到主教傳承）；451/410/484 後加粗（width 10）強化「宗主教座成立」
+- **每個 spine 至少預留 1 個 branch slot 寬度**，防止 collapsed branch headers 溢出到下一個 spine 領域

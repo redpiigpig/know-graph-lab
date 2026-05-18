@@ -26,10 +26,10 @@
         <svg class="absolute inset-0 pointer-events-none overflow-visible"
              :width="cv.w" :height="cv.h">
 
-          <!-- spine guide lines (faint) — width varies pre/post 宗主教座 establishment -->
+          <!-- spine 主線（vivid，明顯可見的主教傳承線）— width varies pre/post 宗主教座 establishment -->
           <line v-for="(g, i) in cv.guides" :key="'g'+i"
                 :x1="g.x" :y1="g.y1" :x2="g.x" :y2="g.y2"
-                :stroke="g.color" :stroke-width="g.width ?? 6" opacity="0.10" stroke-linecap="round" />
+                :stroke="g.color" :stroke-width="g.width ?? 6" :opacity="g.opacity ?? 0.55" stroke-linecap="round" />
 
           <!-- Lines: paths with optional dashes
                - Dashes:
@@ -259,8 +259,8 @@ const BRANCH_GAP = 12
 const BRANCH_INDENT = 16
 
 // ── Expand state ────────────────────────────────────────────
-// `collapsedBranches` 紀錄「使用者主動收起的」分支；預設所有分支展開
-// （依使用者意願：「延伸出來的是第一任主教，然後往下才是其他主教」）。
+// 預設所有分支都收起來；使用者點 ▸ 才一個個展開。
+// （依使用者意願：避免上百個分支同時展開把畫面拉到不可讀的高度）
 const collapsedBranches = ref<Set<string>>(new Set())
 function isBranchExpanded(branchId: string): boolean {
   return !collapsedBranches.value.has(branchId)
@@ -271,6 +271,11 @@ function toggleBranch(branchId: string) {
   else s.add(branchId)
   collapsedBranches.value = new Set(s)
 }
+watch(() => props.graph, (g) => {
+  if (g && g.branches) {
+    collapsedBranches.value = new Set(g.branches.map((b: any) => b.id))
+  }
+}, { immediate: true })
 
 interface LNode {
   id: string
@@ -315,38 +320,36 @@ const cv = computed(() => {
     return n
   }
   const spineExpandedDepth = g.spines.map(sp => sp.see ? expandedDepth(sp.see.id) : 0)
-  // Per-spine column width — bishop card + optional expanded branch tree
-  const spineColWidth = g.spines.map((_, i) =>
-    BISH_W + spineExpandedDepth[i] * (BRANCH_W + BRANCH_GAP) + (spineExpandedDepth[i] > 0 ? 16 : 0)
-  )
-  // One "spine slot" = see label area + bishop column. Used to size apostle lanes.
+  // 每個 spine 只要有「任何 branch（可展開／已展開都算）」就要保留至少 1 個 branch slot
+  // —— 否則收起的 branch header 會 overlay 進下一個 spine 的領域
+  function hasAnyBranch(seeId: string): boolean {
+    const kids = branchChildren.get(seeId) ?? []
+    if (kids.length > 0) return true
+    return false
+  }
+  // Per-spine column width — bishop card + branch tree（至少預留 1 slot 給 collapsed headers）
+  const spineColWidth = g.spines.map((sp, i) => {
+    const minBranchDepth = sp.see && hasAnyBranch(sp.see.id) ? 1 : 0
+    const depth = Math.max(spineExpandedDepth[i], minBranchDepth)
+    return BISH_W + depth * (BRANCH_W + BRANCH_GAP) + (depth > 0 ? 16 : 0)
+  })
+  // 一個 spine slot = 左邊 see label 區 + bishop column
   const SPINE_SLOT_LEFT = SEE_LABEL_W + SEE_LABEL_GAP
   const spineSlotWidth = spineColWidth.map(w => SPINE_SLOT_LEFT + w)
 
-  // ── Group spines by primary apostle ──
-  // Each apostle has a "lane" — wide enough to fit its apostle card AND
-  // all spines hanging below it (e.g. 彼得 has 3: 羅馬, 亞歷山卓, 安提阿).
-  const apostleSpineIdx = new Map<string, number[]>()
-  for (let si = 0; si < g.spines.length; si++) {
-    const ap = g.spines[si].primaryApostleId
-    if (!apostleSpineIdx.has(ap)) apostleSpineIdx.set(ap, [])
-    apostleSpineIdx.get(ap)!.push(si)
-  }
+  // ── 7 大宗主教座按順序「平均分配」橫排 ──
+  // 每個 spine 都有獨立 slot；不再把多個 spine 塞進同一個 apostle lane
+  const SPINE_BETWEEN_GAP = 36
+  const spineRowWidth =
+    spineSlotWidth.reduce((s, w) => s + w, 0) +
+    Math.max(0, g.spines.length - 1) * SPINE_BETWEEN_GAP
 
-  // Per-apostle lane width — max of apostle card width and spine cluster width
-  const laneInfo = g.apostles.map(a => {
-    const spineIdxs = apostleSpineIdx.get(a.id) ?? []
-    let cluster = 0
-    for (const si of spineIdxs) cluster += spineSlotWidth[si]
-    cluster += Math.max(0, spineIdxs.length - 1) * SPINE_IN_LANE_GAP
-    return { spineIdxs, width: Math.max(APO_W, cluster) }
-  })
-
+  // 16 使徒也按順序平均分配
   const apostleRowWidth =
-    laneInfo.reduce((s, l) => s + l.width, 0) +
-    Math.max(0, g.apostles.length - 1) * APOSTLE_LANE_GAP
+    g.apostles.length * APO_W + Math.max(0, g.apostles.length - 1) * APO_HG
 
-  w = Math.max(apostleRowWidth + PAD * 2, JESUS_W + PAD * 2, 1200)
+  const contentWidth = Math.max(spineRowWidth, apostleRowWidth)
+  w = Math.max(contentWidth + PAD * 2, JESUS_W + PAD * 2, 1200)
 
   // ── 1. Jesus card centered ──────────────────────────────
   const jesusY = PAD
@@ -356,40 +359,32 @@ const cv = computed(() => {
     x: jesusX, y: jesusY, w: JESUS_W, h: JESUS_H,
   })
 
-  // ── 2. Apostle row — laid out as lanes, each lane wide enough for its spines ─
+  // ── 2. Apostle row — 16 位平均分配 ──
   const apostleY = jesusY + JESUS_H + 60
   const apostleRowStartX = (w - apostleRowWidth) / 2
   const apostleCX = new Map<string, number>()
-  const spineX: number[] = new Array(g.spines.length).fill(0)   // bishop column X per spine
+  for (let i = 0; i < g.apostles.length; i++) {
+    const a = g.apostles[i]
+    const ax = apostleRowStartX + i * (APO_W + APO_HG)
+    const cx = ax + APO_W / 2
+    nodes.push({
+      id: 'ap_' + a.id, kind: 'apostle',
+      label: simplifyApostleName(a.name_zh),
+      sub: a.name_en,
+      x: ax, y: apostleY, w: APO_W, h: APO_H,
+      tooltip: `${a.name_zh}（${a.name_en}）`,
+    })
+    apostleCX.set(a.id, cx)
+  }
+
+  // ── Spine row — 7 個平均分配，bishop column X 寫進 spineX[] ──
+  const spineX: number[] = new Array(g.spines.length).fill(0)
   {
-    let cursor = apostleRowStartX
-    for (let i = 0; i < g.apostles.length; i++) {
-      const a = g.apostles[i]
-      const lane = laneInfo[i]
-      const laneCenterX = cursor + lane.width / 2
-      const ax = laneCenterX - APO_W / 2
-      nodes.push({
-        id: 'ap_' + a.id, kind: 'apostle',
-        label: simplifyApostleName(a.name_zh),
-        sub: a.name_en,
-        x: ax, y: apostleY, w: APO_W, h: APO_H,
-        tooltip: `${a.name_zh}（${a.name_en}）`,
-      })
-      apostleCX.set(a.id, laneCenterX)
-
-      // Distribute spines belonging to this apostle inside the lane, centered.
-      if (lane.spineIdxs.length > 0) {
-        let cluster = 0
-        for (const si of lane.spineIdxs) cluster += spineSlotWidth[si]
-        cluster += Math.max(0, lane.spineIdxs.length - 1) * SPINE_IN_LANE_GAP
-        let spineCursor = laneCenterX - cluster / 2
-        for (const si of lane.spineIdxs) {
-          spineX[si] = spineCursor + SPINE_SLOT_LEFT   // bishop column X
-          spineCursor += spineSlotWidth[si] + SPINE_IN_LANE_GAP
-        }
-      }
-
-      cursor += lane.width + APOSTLE_LANE_GAP
+    const spineRowStartX = (w - spineRowWidth) / 2
+    let cursor = spineRowStartX
+    for (let i = 0; i < g.spines.length; i++) {
+      spineX[i] = cursor + SPINE_SLOT_LEFT   // bishop column X
+      cursor += spineSlotWidth[i] + SPINE_BETWEEN_GAP
     }
   }
 
@@ -771,13 +766,15 @@ function fitAll() {
   panY.value = 20
 }
 
-// Default: 100% zoom + center horizontally on Jesus card. User can click 「定位全圖」for fit-to-screen.
+// Default: fit canvas WIDTH into viewport (canvas is ~3000px wide for 7 spines, viewport ~1800px).
+// 縱向不 fit 因為 rome 有 261 任主教 ≈ 30000px 高，fit-to-height 會把 zoom 縮到 3%。
 function centerOnJesus() {
   const rect = viewportRef.value?.getBoundingClientRect()
   if (!rect) return
   const c = cv.value
-  zoom.value = 1
-  panX.value = (rect.width - c.w) / 2
+  const widthFit = (rect.width - 40) / c.w
+  zoom.value = Math.min(widthFit, 1)
+  panX.value = (rect.width - c.w * zoom.value) / 2
   panY.value = 20
 }
 onMounted(() => { nextTick(centerOnJesus) })

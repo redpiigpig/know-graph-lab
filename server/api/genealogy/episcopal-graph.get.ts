@@ -290,13 +290,17 @@ export default defineEventHandler(async (event) => {
     if (sp.see) spineKeyBySeeId.set(sp.see.id, sp.key)
   }
 
-  function findBishopAtYear(seeRow: SeeRow, year: number | null): string | null {
+  // ⚠ Critical: when a parent see is reused by a daughter (e.g. 坎特伯里|天主教 → 坎特伯里|英格蘭教會
+  // both with see_zh="坎特伯里"), looking up bishops "by see_zh only" pulls the daughter's bishops
+  // into the candidate pool and the wrong attach point is returned. Pass the parent's actual
+  // church list (for spines: primaryChurches; for branches: [branch.church]) to restrict scope.
+  function findBishopAtYear(seeRow: SeeRow, year: number | null, churchFilter?: string[]): string | null {
     if (year == null) return null
-    // find bishop in seeRow whose [start_year, end_year] contains year, in any church
+    const churches = churchFilter ?? [seeRow.church]
     const candidates: SuccRow[] = []
-    for (const [k, arr] of bishopsBySeeChurch.entries()) {
-      const [seeName] = k.split('|')
-      if (seeName === seeRow.see_zh) candidates.push(...arr)
+    for (const ch of churches) {
+      const arr = bishopsBySeeChurch.get(`${seeRow.see_zh}|${ch}`) ?? []
+      candidates.push(...arr)
     }
     let best: SuccRow | null = null
     for (const b of candidates) {
@@ -305,6 +309,14 @@ export default defineEventHandler(async (event) => {
       }
     }
     return best?.id ?? null
+  }
+
+  // Spine see id → primary churches list (for cross-church bishop lookups along spine line)
+  const spineSeeChurches = new Map<string, string[]>()
+  for (let i = 0; i < SPINE_DEFS.length; i++) {
+    const def = SPINE_DEFS[i]
+    const sp = spines[i]
+    if (sp.see) spineSeeChurches.set(sp.see.id, def.primaryChurches)
   }
 
   const branches: BranchNode[] = []
@@ -323,7 +335,10 @@ export default defineEventHandler(async (event) => {
         // Use split_year (if set) as the attach point — that's the moment the rival
         // line diverged. Otherwise use founded_year.
         const attachYear = k.split_year ?? k.founded_year
-        const parentBishopId = findBishopAtYear(parentSee, attachYear)
+        // 如果 parent 是 spine see，跨多個 church（如 rome = 未分裂教會 + 天主教）
+        // 否則只看 parent 自己的 church（避免 see_zh 相同的 daughter 攪進來）
+        const parentChurches = spineSeeChurches.get(seeId) ?? [parentSee.church]
+        const parentBishopId = findBishopAtYear(parentSee, attachYear, parentChurches)
         // gather bishops for this branch see (across all churches it carries)
         let allBishops: SuccRow[] = []
         for (const [bk, arr] of bishopsBySeeChurch.entries()) {
@@ -393,7 +408,8 @@ export default defineEventHandler(async (event) => {
       // The split year = the earliest year this rival has its own succession.
       // Prefer the explicit rivalSplitYear or first remaining bishop's start_year.
       const foundedYear = def.rivalSplitYear ?? (rivalBishopRows[0]?.start_year ?? null) ?? rivalSee?.founded_year ?? null
-      const parentBishopId = findBishopAtYear(sp.see as SeeRow, foundedYear)
+      // Spine 的 rival 從 spine primaryChurches 找 parent bishop
+      const parentBishopId = findBishopAtYear(sp.see as SeeRow, foundedYear, def.primaryChurches)
 
       branches.push({
         id: branchId,
