@@ -88,7 +88,8 @@
             </template>
 
             <template v-else-if="n.kind === 'see'">
-              <div class="text-[11px] font-bold truncate text-right tracking-wide"
+              <div class="text-[11px] font-bold truncate tracking-wide"
+                   :class="n.labelSide === 'right' ? 'text-left' : 'text-right'"
                    :style="n.spineColor ? { color: n.spineColor } : undefined">{{ n.label }}</div>
             </template>
 
@@ -404,6 +405,7 @@ interface LNode {
   bishopId?: string          // for bishop node — raw bishop id (lookup menuCountByBishop)
   menuBranchCount?: number   // for bishop node — # daughter sees collapsed into menu
   menuBranches?: Array<{ id: string; label: string; year: number | null; is_split: boolean }>   // for popup menu
+  labelSide?: 'left' | 'right'   // for see node — which side the label sits on
 }
 interface LPath { d: string; stroke?: string; dashed?: boolean; dashes?: string; width?: number; opacity?: number }
 interface LGuide { x: number; y1: number; y2: number; color: string; width?: number }
@@ -484,12 +486,21 @@ const cv = computed(() => {
   const apostleRowWidth =
     g.apostles.length * APO_W + Math.max(0, g.apostles.length - 1) * APO_HG
 
+  // Rome（西方）旁支往左展開 → 需要在 canvas 左側預留空間
+  const romeIdx = g.spines.findIndex(sp => sp.key === 'rome')
+  const romeHasBranches = romeIdx >= 0 && g.spines[romeIdx].see ? hasAnyBranch(g.spines[romeIdx].see!.id) : false
+  const romeBranchDepth = romeIdx >= 0 && romeHasBranches ? Math.max(spineExpandedDepth[romeIdx], 1) : 0
+  const ROME_LEFT_RESERVE = romeBranchDepth > 0 ? romeBranchDepth * (BRANCH_W + BRANCH_GAP) + 16 : 0
+
   const contentWidth = Math.max(spineRowWidth, apostleRowWidth)
-  w = Math.max(contentWidth + PAD * 2, JESUS_W + PAD * 2, 1200)
+  w = Math.max(contentWidth + PAD * 2 + ROME_LEFT_RESERVE, JESUS_W + PAD * 2, 1200)
+  // 內容置中於「保留左側 reserve 之後的右側區域」，這樣 rome 往左的分支就在 reserve 範圍內
+  const innerLeft = ROME_LEFT_RESERVE
+  const innerCenter = innerLeft + (w - innerLeft) / 2
 
   // ── 1. Jesus card centered ──────────────────────────────
   const jesusY = PAD
-  const jesusX = (w - JESUS_W) / 2
+  const jesusX = innerCenter - JESUS_W / 2
   nodes.push({
     id: 'jesus', kind: 'jesus', label: '耶穌基督', sub: 'Jesus Christ',
     x: jesusX, y: jesusY, w: JESUS_W, h: JESUS_H,
@@ -510,7 +521,7 @@ const cv = computed(() => {
 
   // ── 2. Apostle row — 16 位平均分配 ──
   const apostleY = jesusY + JESUS_H + 60
-  const apostleRowStartX = (w - apostleRowWidth) / 2
+  const apostleRowStartX = innerCenter - apostleRowWidth / 2
   const apostleCX = new Map<string, number>()
   for (let i = 0; i < g.apostles.length; i++) {
     const a = g.apostles[i]
@@ -532,10 +543,20 @@ const cv = computed(() => {
   // ── Spine row — 7 個平均分配，bishop column X 寫進 spineX[] ──
   const spineX: number[] = new Array(g.spines.length).fill(0)
   {
-    const spineRowStartX = (w - spineRowWidth) / 2
+    const spineRowStartX = innerCenter - spineRowWidth / 2
     let cursor = spineRowStartX
     for (let i = 0; i < g.spines.length; i++) {
-      spineX[i] = cursor + SPINE_SLOT_LEFT   // bishop column X
+      const sp = g.spines[i]
+      // Rome（branchDir=-1）: bishop column 放在 slot 右側，see label 也在右側，左邊讓給 branches
+      // 其他: bishop column 放在 slot 左側緊接 see label 之後（保留現行行為）
+      if (sp.key === 'rome') {
+        // slot 內：[branches...][gap][bishop][gap][see label on right]
+        // bishop X = cursor + branchWidth + 16
+        const branchPart = romeBranchDepth * (BRANCH_W + BRANCH_GAP) + (romeBranchDepth > 0 ? 16 : 0)
+        spineX[i] = cursor + branchPart
+      } else {
+        spineX[i] = cursor + SPINE_SLOT_LEFT
+      }
       cursor += spineSlotWidth[i] + SPINE_BETWEEN_GAP
     }
   }
@@ -679,16 +700,20 @@ const cv = computed(() => {
     spineBishopCenterY.set(sp.key, bishopMap)
     lastBishopY = Math.max(lastBishopY, by)
 
-    // See-name label — PURE TEXT (no card frame, per user spec) sitting to the
-    // LEFT of the first rendered bishop card, at the same row level.
+    // See-name label — PURE TEXT (no card frame). Rome: 右側；其他: 左側
     if (firstBishopY != null) {
+      const isRome = sp.key === 'rome'
+      const labelX = isRome
+        ? headerX + BISH_W + SEE_LABEL_GAP
+        : headerX - SEE_LABEL_GAP - SEE_LABEL_W
       nodes.push({
         id: 'see_' + sp.see.id, kind: 'see',
         label: sp.see.see_zh,
-        x: headerX - SEE_LABEL_GAP - SEE_LABEL_W,
+        x: labelX,
         y: firstBishopY,
         w: SEE_LABEL_W, h: BISH_H,
         spineColor: sp.color,
+        labelSide: isRome ? 'right' : 'left',
         tooltip: `${sp.see.name_zh}（創立 ${sp.see.founded_year ?? '?'}）`,
       })
     }
@@ -714,7 +739,11 @@ const cv = computed(() => {
     }
 
     // ── side branches (collapsible) ──
-    const branchColBaseX = headerX + BISH_W + 16
+    // 西方教會（rome）的旁支往左展開、東方 6 大宗主教旁支往右展開
+    const branchDir: 1 | -1 = sp.key === 'rome' ? -1 : 1
+    const branchColBaseX = branchDir > 0
+      ? headerX + BISH_W + 16
+      : headerX - 16 - BRANCH_W
     const lastBranchYByDepth = new Map<number, number>()
 
     // Track Y position of every branch bishop card so sub-branches can attach to
@@ -727,23 +756,17 @@ const cv = computed(() => {
         // Skip if branch is in a menu and user hasn't revealed it yet
         if (isBranchInMenu(br)) continue
         // Find the Y of the parent bishop during whose tenure this daughter was founded.
-        // Parent bishop may live in either:
-        //   - the spine bishopMap (if direct child of spine)
-        //   - the branchBishopMap (if child of an expanded branch)
         let attachY: number
         if (br.parent_bishop_id && bishopMap.has(br.parent_bishop_id)) {
           attachY = bishopMap.get(br.parent_bishop_id)!
         } else if (br.parent_bishop_id && branchBishopMap.has(br.parent_bishop_id)) {
           attachY = branchBishopMap.get(br.parent_bishop_id)!
         } else if (depth === 0) {
-          // No specific bishop matched → approx by founding year along this spine
           attachY = approxYByYear(sp, br.founded_year, bishopMap, spineHeaderY)
         } else {
-          // Sub-branch with no resolvable parent bishop (parent branch likely collapsed)
-          // → fall back to parent branch header Y
           attachY = parentBranchY ?? (spineHeaderY)
         }
-        const bx = branchColBaseX + depth * (BRANCH_W + BRANCH_GAP)
+        const bx = branchColBaseX + branchDir * depth * (BRANCH_W + BRANCH_GAP)
         let by = Math.max(attachY - BRANCH_H / 2, spineHeaderY)
         const prevY = lastBranchYByDepth.get(depth)
         if (prevY != null) {
@@ -762,14 +785,20 @@ const cv = computed(() => {
           tooltip: `${br.name_zh}（${br.church}）\n創立：${formatYear(br.founded_year)}`,
         })
 
-        // Connection line from attach point → branch
-        // - is_split (同名 see, rival successors): 紅色鋸齒線（強斷裂感）
-        // - 設立教座 (子座新名): 粗實線·spine 色
-        const fromX = depth === 0 ? headerX + BISH_W : bx - BRANCH_GAP
-        const toX = bx
+        // Connection line: SINGLE DIAGONAL from bishop edge → branch edge
+        // 改成單一斜線避免 L 形多支同 midX 堆疊出虛假長直線
+        let fromX: number, toX: number
+        if (branchDir > 0) {
+          // 東方往右：bishop 右緣 → branch 左緣
+          fromX = depth === 0 ? headerX + BISH_W : bx - BRANCH_GAP
+          toX = bx
+        } else {
+          // rome 往左：bishop 左緣 → branch 右緣
+          fromX = depth === 0 ? headerX : bx + BRANCH_W + BRANCH_GAP
+          toX = bx + BRANCH_W
+        }
         const toY = by + BRANCH_H / 2
-        const midX = (fromX + toX) / 2
-        const dPath = `M${fromX},${attachY} L${midX},${attachY} L${midX},${toY} L${toX},${toY}`
+        const dPath = `M${fromX},${attachY} L${toX},${toY}`
         if (br.is_split) {
           paths.push({ d: dPath, stroke: '#dc2626', dashes: '2,4,8,4', width: 2, opacity: 0.85 })
         } else {
@@ -955,7 +984,7 @@ function cardClass(n: LNode): string {
   const highlight = highlightedNodeId.value === n.id ? ' ring-2 ring-violet-400 ring-offset-1' : ''
   if (n.kind === 'jesus') return `${base} bg-amber-50 border-2 border-amber-400${highlight}`
   if (n.kind === 'apostle') return `${base} bg-white border border-slate-200${highlight}`
-  if (n.kind === 'see') return 'flex items-center justify-end pr-1'
+  if (n.kind === 'see') return n.labelSide === 'right' ? 'flex items-center justify-start pl-1' : 'flex items-center justify-end pr-1'
   if (n.kind === 'bishop') return `${base} bg-white border border-slate-200${highlight}`
   if (n.kind === 'branch-see') return `${base} bg-violet-50 border border-violet-300 cursor-pointer hover:bg-violet-100${highlight}`
   return base
