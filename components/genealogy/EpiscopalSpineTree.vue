@@ -404,11 +404,16 @@ function revealMenuBranch(branchId: string) {
 }
 watch(() => props.graph, (g) => {
   if (!g) return
-  if (g.branches) collapsedBranches.value = new Set(g.branches.map((b: any) => b.id))
+  // 對立式分支（is_split=true，同 see_zh 的對立教宗/Old Catholic 等）預設「展開」
+  // —— 它們是隨母教宗一起呈現的並行支線，不需要使用者再點開
+  if (g.branches) collapsedBranches.value = new Set(
+    g.branches.filter((b: any) => !b.is_split).map((b: any) => b.id)
+  )
   if (g.apostolicBranches) {
-    for (const b of g.apostolicBranches) collapsedBranches.value.add(b.id)
+    for (const b of g.apostolicBranches) {
+      if (!b.is_split) collapsedBranches.value.add(b.id)
+    }
   }
-  // 所有 apostle 預設收起
   if (g.apostles) collapsedApostles.value = new Set(g.apostles.map((a: any) => a.id))
 }, { immediate: true })
 
@@ -463,6 +468,7 @@ const cv = computed(() => {
   // 規則：1 個子座 → inline 顯示；2 個以上 → 全部摺成「+N 被立」選單
   // 點選單某項 → 只 reveal 那一個，同教宗的其他兄弟分支保持隱形（exclusive reveal）
   function isBranchInMenu(br: BranchIn): boolean {
+    if (br.is_split) return false   // 對立式分支永不進選單，總是並行顯示
     const sibs = branchesByParentBishop.get(br.parent_bishop_id ?? '') ?? []
     if (sibs.length <= 1) return false
     return !revealedFromMenu.value.has(br.id)
@@ -821,7 +827,10 @@ const cv = computed(() => {
           tooltip: `${br.name_zh}（${br.church}）\n創立：${formatYear(br.founded_year)}`,
         })
 
-        // Connection line: SINGLE DIAGONAL from bishop edge → branch edge
+        // Connection line:
+        //  - 一般 branch (is_split=false): 單一斜線
+        //  - 對立式 branch (is_split=true): 「外面一圈再回來」的曲線
+        //    Bezier control point 拉到 branch 外側，視覺上像繞出去再回到分支
         let fromX: number, toX: number
         if (branchDir > 0) {
           fromX = depth === 0 ? headerX + BISH_W : bx - BRANCH_GAP
@@ -831,10 +840,14 @@ const cv = computed(() => {
           toX = bx + BRANCH_W
         }
         const toY = by + BRANCH_H / 2
-        const dPath = `M${fromX},${attachY} L${toX},${toY}`
+        let dPath: string
         if (br.is_split) {
+          // 控制點往外側拉出 80px，做出「環外側再回來」的曲線
+          const outX = branchDir > 0 ? Math.max(fromX, toX) + 80 : Math.min(fromX, toX) - 80
+          dPath = `M${fromX},${attachY} C${outX},${attachY} ${outX},${toY} ${toX},${toY}`
           paths.push({ d: dPath, stroke: '#dc2626', dashes: '2,4,8,4', width: 2, opacity: 0.85 })
         } else {
+          dPath = `M${fromX},${attachY} L${toX},${toY}`
           paths.push({ d: dPath, stroke: sp.color, width: 2, opacity: 0.85 })
         }
 
