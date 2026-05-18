@@ -13,15 +13,25 @@ End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL 
 
 | | 數量 |
 |---|---|
-| Total ebooks | **1,504** |
-| Parsed (`parsed_at NOT NULL`) | **1,367** (91%) |
-| **OCR queue** (`parse_error LIKE '%no extractable text%'`) | **113** |
+| Total ebooks | **1,542** |
+| Parsed (`parsed_at NOT NULL`) | ~1,405 (91%) |
+| **OCR queue** (`parse_error LIKE '%no extractable text%'`) | ~108 |
 | Permanent OCR fail (need manual) | **0** |
-| Split-from-set children | 151 (150 parsed / 1 pending) |
-| EPUB standardize → markdown | 505 / 505 ✅ |
+| Split-from-set children | 151 |
+| EPUB standardize → markdown | 543 / 543 ✅ (Schaff 38 含) |
 | PDF Plan A (lite) | 437 / 437 ✅ |
 | PDF Plan B v0 (TOC chapter chunks) | 152 / 437 ✅ |
 | PDF Plan B v1 (font-driven, no-TOC subset ~285) | 📐 deferred |
+
+10 大分類書數（reclassification 後）：
+
+| 分類 | 書數 | 分類 | 書數 |
+|---|---|---|---|
+| 歷史學 | 466 | 社會政治學 | 141 |
+| 世界宗教 | 372 | 宗教學 | 105 |
+| 哲學 | 218 | 人類生物學 | 68 |
+| 文學 | 58 | 神學 ★ 2026-05-18 新增 | 53 |
+| 自然科學 | 31 | 心理學 | 30 |
 
 ---
 
@@ -101,32 +111,53 @@ annotations (
 
 ## Drive 分類結構（10 大頂層 + subcategory + 套書子資料夾）
 
-頂層 10 個分類資料夾在 `G:/我的雲端硬碟/資料/電子書/`：
+頂層 10 個分類資料夾在 `G:/我的雲端硬碟/資料/電子書/`，最新書數見 [Current state](#current-state) 表。
 
-| 分類 | 內容判準 | 範例 |
+### 一覽
+
+| 分類 | 收什麼 | 不收什麼（去看別處） |
 |---|---|---|
-| **哲學** | 哲學家、哲學流派、形上學、倫理學、邏輯學 | 尼采、康德、Heidegger、士林哲學 |
-| **神學** | 系統神學、教父著作、信理神學、神學概論、神學家著作與研究、教父學、護教學 | Schaff 教父集、Aquinas 神學大全/駁異大全、Augustine 懺悔錄、Barth、Rahner、Moltmann、Küng |
-| **世界宗教** | 特定宗教自身的「經典／教義原本」 | 聖經中譯本、可蘭經、佛經、阿維斯塔、巴哈伊經典 |
-| **宗教學** | 跨宗教學術研究 | 神話學、宗教史、宗教社會學、宗教比較、宗教對話、宗教現象學 |
-| **歷史學** | 通史、斷代史、地區史、人物傳記（非宗教人物） | 中國史、世界文明史、戰爭史 |
-| **社會政治學** | 政治、經濟、社會學、法律、國際關係 | |
-| **人類生物學** | 人類學、生物人類學、演化、考古、體質 | |
-| **心理學** | 心理學、精神分析、認知科學 | Frankl、Yalom |
-| **文學** | 小說、詩歌、散文、文學評論 | |
-| **自然科學** | 物理、化學、生物、地球科學、數學 | |
+| **哲學** | 哲學家本人著作 / 哲學流派研究 / 形上學 / 倫理學 / 邏輯 / 認識論 / 美學 / 科學哲學 / 宗教哲學書（看哲學家視角分析宗教） | 神話學 → 宗教學；神學家用神學語言寫的書 → 神學 |
+| **神學** | 系統神學 / 教父原典英譯（Schaff、IVP ACCS）/ 信理神學 / 神學家本人著作（Barth 教會教義學、Rahner、Moltmann、Aquinas Summa）/ 教父研究 monograph / 教義論述 / 護教學 | 基督教史／教會史 / 神學家傳記 → 世界宗教/基督教 |
+| **世界宗教** | 特定宗教自身的：經典原文 / 教義教理 / 神學家傳記 / 教會史 / 該宗教的歷史敘述 / 該宗教的祈禱書與禮儀 | 跨宗教比較 → 宗教學；學術系統神學 → 神學 |
+| **宗教學** | 跨宗教研究（多宗教比較對話）/ 神話學（Eliade／Frazer／Durkheim 等大家）/ 宗教社會學 / 宗教心理學 / 宗教現象學 / 宗教史（不專屬一宗教） | 單一宗教的研究 → 世界宗教/{該宗教} |
+| **歷史學** | 通史 / 斷代史 / 地區史 / 戰爭史 / 革命史 / 一般人物傳記（非宗教非哲學人物）/ 史學理論 / 史料原典 | 思想史／政治史 → 哲學或社會政治學；宗教史 → 看是否跨宗教 |
+| **社會政治學** | 政治學 / 政治哲學 / 經濟學 / 社會學 / 法律 / 國際關係 / 性學 / 知識社會學 / 政治理論 / 政治觀念史（Voegelin 等） | 純哲學書 → 哲學；社會宗教學 → 宗教學 |
+| **人類生物學** | 人類學 / 民族誌 / 考古學 / 人類起源與進化 / 生物人類學 / 體質人類學 / 文化人類學 / 語言學 / 「大歷史」流派書（Sapiens 等） | 純動植物生物學 → 自然科學；純語言哲學 → 哲學 |
+| **心理學** | 心理學 / 精神分析 / 認知科學 / 心理治療 / 生死學 / Yalom 系列 / Frankl 系列 | 宗教心理學 → 宗教學 |
+| **文學** | 小說 / 詩歌 / 散文 / 戲劇 / 文學評論 / 文學史 | 文化研究 → 看內容；翻譯文學原典 → 看作者所屬類 |
+| **自然科學** | 物理 / 化學 / 生物學 / 地球科學 / 氣候 / 天文 / 數學 / 統計 / 演化生物學 / 科學史 | 科學哲學 → 哲學；「大歷史」流派 → 人類生物學 |
 
-### 神學 vs 世界宗教 vs 宗教學 邊界
+### 神學 vs 世界宗教 vs 宗教學 — 三類最常混淆的判準
 
-最常見混淆。判準：
+**核心原則**：分類看「**這本書的書寫位置／框架**」，不是「題材碰到什麼宗教」。
 
-| 內容性質 | 分類 |
+| 內容性質 | 分類 | 範例 |
+|---|---|---|
+| 教父原典英譯／中譯（Patrologia Graeca/Latina 系列原文翻譯） | **神學** | Schaff NPNF/ANF、IVP ACCS 27 冊、《使徒教父著作》、Sarug Homilies、Babai Union |
+| 系統神學論述（從信仰內部建構神學體系） | **神學** | 《基督教神學》《基督教神學導論》《信理神學》6 卷、Barth《教會教義學》、Aquinas《神學大全》/《駁異大全》、Rahner |
+| 神學家本人的神學論述（不是傳記） | **神學** | Moltmann《被釘十字架的上帝》、Kung《論基督徒》、Bonhoeffer《獄中書簡》 |
+| 教義專題研究（基督論／三一論／聖靈論／末世論的學術 monograph） | **神學** | Grillmeier《Christ in Christian Tradition》、Council of Chalcedon Re-Examined、Monophysite Movement、Cyril Christological Controversy |
+| **基督教史／教會史／宗教改革史** | **世界宗教/基督教** | 《基督教史》《亞洲基督教史》《俄國教會史》《1550 年前的中國基督教史》、《宗教改革史》、《歷代教宗簡史》 |
+| **神學家／聖人傳記** | **世界宗教/基督教** | Bonhoeffer 傳記、奧古斯丁傳、追尋之旅（奧古斯丁）、波納文圖拉傳 |
+| 該宗教自身禮儀／經典／祈禱書／信經中譯 | **世界宗教/{該宗教}** | 聖經中譯本、可蘭經、佛經、Avesta、巴哈伊經典 |
+| 該宗教的史 — 佛教史／伊斯蘭教史／道教史／猶太人三千年 | **世界宗教/{該宗教}** | 《佛教史》《伊斯蘭世界史》《猶太文化史》 |
+| 跨宗教研究 — 兩個以上宗教並列比較／對話／法律比較 | **宗教學** | 《聖經與古蘭經》、《A state of mixture - Christians, Zoroastrians》、《Judging in Islamic, Jewish and Zoroastrian Legal Traditions》、《The Age of Faith - Medieval Christian Islamic Judaic Civilization》 |
+| 宗教社會學 / 宗教心理學 / 宗教現象學 / 神話學 / 宗教比較 | **宗教學** | Eliade《神聖與世俗》、Durkheim《宗教生活的基本形式》、Frazer《金枝》、James《宗教經驗之種種》、Berger《神聖的帷幕》 |
+
+### 邊界情況的快速判斷
+
+| 情境 | 怎麼判 |
 |---|---|
-| 教父原典／系統神學／Augustine 懺悔錄／Aquinas 神學大全／Schaff NPNF／信理神學／基督論／三一論 | **神學** |
-| 教會史人物傳、護教學、神學家研究、教父學大綱 | **神學** |
-| 各宗教自己的「經典／教義原本」（聖經中譯／可蘭經／佛經／阿維斯塔） | **世界宗教** |
-| 神話學、跨宗教比較研究、宗教社會學、宗教對話 | **宗教學** |
-| 不確定基督教書 → 神學 還是 世界宗教？學術／系統／神學家著作 → 神學；Bible 譯本／祈禱書／信經中譯 → 世界宗教 | |
+| 標題含「神學」但作者是哲學家（康德的神學／海德格爾與神學） | → **哲學**（看的是哲學家視角，不是教內神學） |
+| 標題含「哲學」但內容是某宗教教義（伊斯蘭哲學／印度哲學） | 看書寫框架：學術研究 → 哲學；教內教義 → 世界宗教/{宗教} |
+| 「宗教與資本主義／新教倫理」類 | → **社會政治學/政治經濟社會學**（Weber、Sombart） |
+| 性別／性學／身體史（Foucault 性經驗史） | → **社會政治學/性學**（不要因「史」字就抓到歷史學） |
+| 政治思想史／政治觀念史（Voegelin） | → **社會政治學/政治學**（不是歷史學） |
+| 「大歷史」「人類大歷史」「Big History」（Sapiens、Yuval Harari） | → **人類生物學/人類大歷史**（user 偏好） |
+| 中國思想史／儒家／道家哲學分析 | → **哲學/中國思想史** |
+| 中國宗教綜論／中國民間信仰／中國五大宗教 | → **世界宗教/東亞宗教** |
+| 教父研究 monograph vs 教父傳記 | monograph（教義／思想研究）→ 神學；傳記（生平故事）→ 世界宗教/基督教 |
 
 ### 套書子資料夾規則
 
@@ -137,13 +168,30 @@ G:/我的雲端硬碟/資料/電子書/神學/
   Schaff - Ante-Nicene Fathers (10 vols)/        anf01.epub … anf10.epub
   Schaff - Nicene and Post-Nicene Fathers Series 1 (Augustine and Chrysostom)/   npnf101…114
   Schaff - Nicene and Post-Nicene Fathers Series 2 (14 vols)/   npnf201…214
-  Aquinas - Summa Theologica (神學大全 18 冊)/   ← 未來
-  IVP Ancient Christian Commentary on Scripture (27 冊)/   ← 未來
+  Aquinas - Summa Theologica (神學大全 18 冊)/   ← ziliaozhan TODO 候選
+  IVP Ancient Christian Commentary on Scripture (27 冊)/   ← ziliaozhan TODO 候選
 ```
 
 子資料夾命名 `{編者／出版社} - {系列名} ({N} vols)`。`ebooks.subcategory` 同步存子資料夾名。
 
-> ⚠ **移動 Drive 檔案後，必須 UPDATE `ebooks.file_path`** 指向新位置，否則 reader 找不到書。範例腳本：`scripts/_organize_schaff_to_folders.py`。
+> ⚠ **移動 Drive 檔案後，必須 UPDATE `ebooks.file_path`** 指向新位置，否則 reader 找不到書。範例腳本：`scripts/_organize_schaff_to_folders.py`（移動 + DB 同步一條龍）。
+
+### 已存在的 subcategory 命名慣例
+
+每類目前實際使用中的 subcategory（新書 ingest 時優先沿用以保持一致）：
+
+| 分類 | 常見 subcategory |
+|---|---|
+| 哲學 | 近代哲學 / 哲學原典 / 經典與解釋輯刊 / 中國思想史 / 哲學通史 / 當代哲學 / 古希臘哲學 / 東方哲學 / 政治哲學 |
+| 神學 | Schaff - Ante-Nicene Fathers (10 vols) / Schaff - NPNF Series 1 / Schaff - NPNF Series 2 / 教父原典 / 系統神學 / 教父研究 / 神學家研究 / 神學專題 / 靈修神學 |
+| 世界宗教 | 基督教 / 猶太教 / 東亞宗教 / 波斯宗教 / 佛教 / 伊斯蘭教 / 其他宗教 / 印度教 / 摩門教 |
+| 宗教學 | 神話學 / 宗教史 / 宗教對話 / World Religions系列 / 教會史 / 宗教社會學 |
+| 歷史學 | 東方界域史 / 西方界域史 / 中央界域史 / 亞太界域史 / 美州界域史 / 全球通史 / 史料原典 / 近代史 / 史學理論 |
+| 社會政治學 | 政治學 / 政治經濟社會學 / 資本主義-社會主義 / 知識社會學 / 社會學 / 性學 / 名家作品 / 國際關係 |
+| 人類生物學 | 人類大歷史 / 人類文化-語言學 / 人類起源與進化史 / 生物學 |
+| 心理學 | 生死學 / 認知科學 |
+| 文學 | 小說 / 文學評論 |
+| 自然科學 | (尚無 subcategory) |
 
 ## Storage layout
 
