@@ -591,7 +591,22 @@ const cv = computed(() => {
 
       // If apostolic branch is expanded → render its bishops below the header
       if (isBranchExpanded(ab.id)) {
+        const apoBishopCX = apX
+        let prevAb: BishopIn | null = null
+        let prevBottom: number | null = null
         for (const bb of ab.bishops) {
+          // 主教傳承軸線：上一任 → 這一任；gap → 點線
+          if (prevAb != null && prevBottom != null) {
+            const hasGap = prevAb.succession_number != null && bb.succession_number != null
+              && (bb.succession_number - prevAb.succession_number) > 1
+            paths.push({
+              d: `M${apoBishopCX},${prevBottom} L${apoBishopCX},${cy}`,
+              stroke: '#a16207',
+              width: 2,
+              opacity: hasGap ? 0.5 : 0.75,
+              dashes: hasGap ? '3,4' : '',
+            })
+          }
           apostolicBranchBishopMap.set(bb.id, cy + (BISH_H - 2) / 2)
           nodes.push({
             id: 'apbish_' + bb.id, kind: 'bishop',
@@ -606,6 +621,8 @@ const cv = computed(() => {
             spineColor: '#a16207',
             tooltip: `${bb.name_zh}\n任期：${formatYear(bb.start_year)}–${formatYear(bb.end_year)}`,
           })
+          prevAb = bb
+          prevBottom = cy + (BISH_H - 2)
           cy += BISH_H - 2 + 8
         }
         cy += 8   // gap before next apostolic branch
@@ -761,14 +778,26 @@ const cv = computed(() => {
 
         if (isBranchExpanded(br.id)) {
           let cy = by + BRANCH_H + 4
+          const branchBishopCX = bx + BRANCH_INDENT + (BRANCH_W - BRANCH_INDENT) / 2
+          let prevBb: BishopIn | null = null
+          let prevBottomY: number | null = null
           for (const bb of br.bishops) {
-            // Track this branch bishop's Y so deeper sub-branches can attach to the
-            // specific bishop row when their parent_bishop_id resolves to here.
+            // 主教傳承軸線：從上一任卡片底到這一任卡片頂；若 succession_number 有 gap → 點線
+            if (prevBb != null && prevBottomY != null) {
+              const hasGap = prevBb.succession_number != null && bb.succession_number != null
+                && (bb.succession_number - prevBb.succession_number) > 1
+              paths.push({
+                d: `M${branchBishopCX},${prevBottomY} L${branchBishopCX},${cy}`,
+                stroke: sp.color,
+                width: 2,
+                opacity: hasGap ? 0.5 : 0.75,
+                dashes: hasGap ? '3,4' : '',
+              })
+            }
             branchBishopMap.set(bb.id, cy + (BISH_H - 2) / 2)
             nodes.push({
               id: 'bbish_' + bb.id, kind: 'bishop',
               label: bb.name_zh,
-              // 任期年份；不再附 church 後綴
               sub: bb.start_year != null
                 ? `${formatYear(bb.start_year)}–${bb.end_year != null ? formatYear(bb.end_year) : ''}`
                 : '',
@@ -777,6 +806,8 @@ const cv = computed(() => {
               successionNum: bb.succession_number,
               tooltip: `${bb.name_zh}\n任期：${formatYear(bb.start_year)}–${formatYear(bb.end_year)}`,
             })
+            prevBb = bb
+            prevBottomY = cy + (BISH_H - 2)
             cy += BISH_H - 2 + BISH_VG
           }
           renderBranches(br.id, depth + 1, by + BRANCH_H / 2)
