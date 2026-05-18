@@ -1672,7 +1672,7 @@ def main():
         return
 
     # Single-book mode
-    ebook_id = args[0]
+    ebook_id = args[0].strip()  # tolerate CRLF / whitespace from `xargs` / `while read` on Windows
     book = fetch_book(ebook_id)
     print(f"Book: {book['title']}  ({book['file_type']})")
     print(f"Author: {book.get('author')}")
