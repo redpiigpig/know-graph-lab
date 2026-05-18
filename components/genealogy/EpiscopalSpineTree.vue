@@ -378,10 +378,25 @@ function toggleBishopMenu(bishopId: string) {
   openMenuBishopId.value = openMenuBishopId.value === bishopId ? null : bishopId
 }
 function revealMenuBranch(branchId: string) {
-  const s = new Set(revealedFromMenu.value)
-  s.add(branchId)
-  revealedFromMenu.value = s
-  // Also expand the branch so its bishops show
+  // Exclusive reveal：把同教宗的其他兄弟分支從 revealed 移除（自動回到 menu 隱形），
+  // 只 reveal 這一個。需要查它的 parent_bishop_id 與 siblings。
+  const g = props.graph
+  if (g) {
+    const targetBr = g.branches.find(b => b.id === branchId)
+    const parentBid = targetBr?.parent_bishop_id
+    if (parentBid) {
+      const sibs = g.branches.filter(b => b.parent_bishop_id === parentBid)
+      const newRevealed = new Set(revealedFromMenu.value)
+      for (const s of sibs) newRevealed.delete(s.id)   // 移除所有兄弟
+      newRevealed.add(branchId)                          // 只加這個
+      revealedFromMenu.value = newRevealed
+    } else {
+      const s = new Set(revealedFromMenu.value)
+      s.add(branchId)
+      revealedFromMenu.value = s
+    }
+  }
+  // 展開該分支以顯示其主教
   const cs = new Set(collapsedBranches.value)
   cs.delete(branchId)
   collapsedBranches.value = cs
@@ -445,21 +460,18 @@ const cv = computed(() => {
     if (!branchesByParentBishop.has(br.parent_bishop_id)) branchesByParentBishop.set(br.parent_bishop_id, [])
     branchesByParentBishop.get(br.parent_bishop_id)!.push(br)
   }
-  // 規則：3 個以下子座全部 inline 顯示；4 個以上才把「前 3 個之外」摺成 +N 被立選單
-  // （之前閾值 2 太緊：大多數教宗都按立 2+ 個教座，幾乎全被藏起來）
-  const MENU_INLINE_LIMIT = 3
+  // 規則：1 個子座 → inline 顯示；2 個以上 → 全部摺成「+N 被立」選單
+  // 點選單某項 → 只 reveal 那一個，同教宗的其他兄弟分支保持隱形（exclusive reveal）
   function isBranchInMenu(br: BranchIn): boolean {
     const sibs = branchesByParentBishop.get(br.parent_bishop_id ?? '') ?? []
-    if (sibs.length <= MENU_INLINE_LIMIT) return false   // ≤ 3 全部 inline
-    // > 3：sibs 已按 founded_year 排序；前 MENU_INLINE_LIMIT 個 inline，其餘進選單
-    const idx = sibs.findIndex(s => s.id === br.id)
-    return idx >= MENU_INLINE_LIMIT && !revealedFromMenu.value.has(br.id)
+    if (sibs.length <= 1) return false
+    return !revealedFromMenu.value.has(br.id)
   }
   // Per bishop: how many hidden-in-menu daughter sees
   const menuCountByBishop = new Map<string, number>()
   for (const [bid, sibs] of branchesByParentBishop) {
-    if (sibs.length <= MENU_INLINE_LIMIT) continue
-    const hidden = sibs.slice(MENU_INLINE_LIMIT).filter(s => !revealedFromMenu.value.has(s.id))
+    if (sibs.length <= 1) continue
+    const hidden = sibs.filter(s => !revealedFromMenu.value.has(s.id))
     if (hidden.length > 0) menuCountByBishop.set(bid, hidden.length)
   }
   function expandedDepth(seeId: string): number {
@@ -708,10 +720,9 @@ const cv = computed(() => {
       bishopMap.set(b.id, by + BISH_H / 2)
       if (firstBishopY == null) firstBishopY = by
       const menuCount = menuCountByBishop.get(b.id) ?? 0
-      // popup 只列「前 MENU_INLINE_LIMIT 個之外」的子座
+      // popup 列出所有同教宗的未 reveal 子座
       const menuBranches = menuCount > 0
         ? (branchesByParentBishop.get(b.id) ?? [])
-            .slice(MENU_INLINE_LIMIT)
             .filter(br => !revealedFromMenu.value.has(br.id))
             .map(br => ({ id: br.id, label: br.see_zh + (br.church ? ' · ' + br.church : ''), year: br.founded_year, is_split: br.is_split }))
         : undefined
