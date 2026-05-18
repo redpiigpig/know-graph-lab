@@ -5,6 +5,10 @@ description: 「歷史國界地圖」工具集（/maps/historical-borders）— 
 
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session（"exceeds the dimension limit for many-image requests"）。使用者一說要傳截圖，立刻提醒先確認尺寸；推薦 Win+Shift+S 框選或縮到 ≤ 1920px。
 
+> ⚠️ **d3-geo 球面 winding 反向陷阱（已踩過）**：d3-geoEqualEarth／geoArea／geoCentroid 用**球面**慣例：**地理座標 CW 環 = 內部小區域，CCW = 補集（整個球面減該區）**。這與 RFC 7946 GeoJSON spec 相反。任何手寫 polygon 或 Graham 凸包（標準輸出數學 CCW）→ **必須 reverse 成 CW**，否則 `geoCentroid` 回傳對蹠點、`geoPath` 渲染出「世界輪廓 + 小洞」=全圖被填一色。`scripts/build_city_hull_polygons.mjs` 已內建 `.reverse()`，新加 polygon 一定要 `node test_geo6.mjs` 驗證 geoArea < 2π。
+
+> 🧹 **任務結束清 c:/tmp**：地圖任務常產 `historical-borders-XXX.png` 等截圖到 `/c/tmp/`，session 尾段要刪。保留 `/c/tmp/hbm-sample/`（53 snapshots，重抓 ~2 分鐘）。詳見 [[feedback-tmp-cleanup]]。
+
 # 歷史國界地圖 — 純政治國界 + 國家資料庫
 
 > Live URL：http://localhost:3000/maps/historical-borders

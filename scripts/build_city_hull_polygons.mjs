@@ -1566,19 +1566,21 @@ for (const emp of EMPIRES) {
     // 1-2 個城市無法 hull，做點／線；3+ 用 convex hull
     let ring
     if (coords.length === 1) {
-      // 單點：畫一個小方塊（~50 km 邊）
+      // 單點：畫一個小方塊（~50 km 邊）— CW（d3-geo 球面慣例：CW = 內部小區域）
       const [lon, lat] = coords[0]
       const d = 0.5
-      ring = [[lon - d, lat - d], [lon + d, lat - d], [lon + d, lat + d], [lon - d, lat + d], [lon - d, lat - d]]
+      ring = [[lon - d, lat - d], [lon - d, lat + d], [lon + d, lat + d], [lon + d, lat - d], [lon - d, lat - d]]
     } else if (coords.length === 2) {
-      // 兩點：畫一個長方形包圍
+      // 兩點：畫一個長方形包圍 — CW
       const [lon1, lat1] = coords[0]
       const [lon2, lat2] = coords[1]
       const minLon = Math.min(lon1, lon2) - 0.5, maxLon = Math.max(lon1, lon2) + 0.5
       const minLat = Math.min(lat1, lat2) - 0.5, maxLat = Math.max(lat1, lat2) + 0.5
-      ring = [[minLon, minLat], [maxLon, minLat], [maxLon, maxLat], [minLon, maxLat], [minLon, minLat]]
+      ring = [[minLon, minLat], [minLon, maxLat], [maxLon, maxLat], [maxLon, minLat], [minLon, minLat]]
     } else {
-      const hull = convexHull(coords)
+      // d3-geo spherical winding: CW (in geographic coords) = interior small region.
+      // Graham scan outputs mathematical CCW → reverse for d3-geo.
+      const hull = convexHull(coords).reverse()
       ring = [...hull, hull[0]]
     }
 
