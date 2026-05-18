@@ -619,19 +619,6 @@ const cv = computed(() => {
   const spineBishopCenterY = new Map<string, Map<string, number>>()
   let lastBishopY = spineHeaderY
 
-  // Apostle name aliases — used to detect when spine #1 bishop = apostle himself.
-  // If matched, skip rendering bishop #1 (the apostle card already represents him).
-  const APOSTLE_ALIASES: Record<string, string[]> = {
-    ap_peter:      ['彼得', '聖伯多祿', '伯多祿', '聖彼得'],
-    ap_andrew:     ['安得烈', '聖安得烈', '安得肋', '聖安得肋'],
-    ap_james_just: ['義人雅各', '義人雅各伯', '雅各', '雅各伯'],
-    ap_thaddaeus:  ['達太', '聖達太', '猶達塔陡'],
-    ap_thomas:     ['多馬', '聖多馬', '多默', '聖多默'],
-  }
-  function isApostleHimself(apostleId: string, bishopName: string): boolean {
-    return (APOSTLE_ALIASES[apostleId] ?? []).some(a => bishopName.includes(a) || a.includes(bishopName))
-  }
-
   for (let i = 0; i < g.spines.length; i++) {
     const sp = g.spines[i]
     if (!sp.see) continue
@@ -640,13 +627,8 @@ const cv = computed(() => {
     const headerCX = headerX + BISH_W / 2
     spineCenterX[sp.key] = headerCX
 
-    // Per user spec: don't render see header above the column. The see name
-    // sits as a small badge NEXT TO the first rendered bishop (= 第二代).
-    // Bishops start from index 1 (skip #1) if first bishop = apostle himself.
-    let startIdx = 0
-    if (sp.bishops[0] && isApostleHimself(sp.primaryApostleId, sp.bishops[0].name_zh)) {
-      startIdx = 1
-    }
+    // Render all bishops starting from #1 (don't skip apostle-himself; per user spec)
+    const startIdx = 0
 
     const bishopMap = new Map<string, number>()
     let by = spineHeaderY    // bishops start at the top of "spine area" (no see header above)
@@ -805,30 +787,34 @@ const cv = computed(() => {
   }
 
   // ── 5. Apostle → spine connections (primary + secondary) ──
-  for (const sp of g.spines) {
+  // 線錯開：每個 spine 用不同的水平 midY，避免多個 fan 在同一個 Y 重疊
+  // 7 spine × 8px stagger = 跨 56px 範圍，剛好分散在 fromY/toY 之間
+  const FAN_STAGGER = 8
+  const fromY = apostleY + APO_H
+  const toY = spineHeaderY
+  const baseMidY = fromY + 18   // 緊貼 apostle 下方，留出 stagger 空間到 toY
+  for (let i = 0; i < g.spines.length; i++) {
+    const sp = g.spines[i]
     const headerCX = spineCenterX[sp.key]
     if (headerCX == null) continue
+
+    const midY = baseMidY + i * FAN_STAGGER   // 每個 spine 獨立水平層
 
     // Primary apostle line (solid)
     const primaryX = apostleCX.get(sp.primaryApostleId)
     if (primaryX != null) {
-      const fromY = apostleY + APO_H
-      const toY = spineHeaderY
-      const midY = (fromY + toY) / 2
       paths.push({
         d: `M${primaryX},${fromY} L${primaryX},${midY} L${headerCX},${midY} L${headerCX},${toY}`,
         stroke: sp.color, width: 1.8,
       })
     }
-    // Secondary apostle line (dashed)
+    // Secondary apostle line (dashed) — 用相同 midY 但偏移 4px
     if (sp.secondaryApostleId) {
       const secX = apostleCX.get(sp.secondaryApostleId)
       if (secX != null) {
-        const fromY = apostleY + APO_H
-        const toY = spineHeaderY
-        const midY = (fromY + toY) / 2 + 12   // slight Y offset so it doesn't overlap primary
+        const sMidY = midY + 4
         paths.push({
-          d: `M${secX},${fromY} L${secX},${midY} L${headerCX},${midY} L${headerCX},${toY}`,
+          d: `M${secX},${fromY} L${secX},${sMidY} L${headerCX},${sMidY} L${headerCX},${toY}`,
           stroke: sp.color, width: 1.2, dashed: true, opacity: 0.65,
         })
       }

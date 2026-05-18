@@ -341,11 +341,26 @@ export default defineEventHandler(async (event) => {
         // 否則只看 parent 自己的 church（避免 see_zh 相同的 daughter 攪進來）
         const parentChurches = spineSeeChurches.get(seeId) ?? [parentSee.church]
         const parentBishopId = findBishopAtYear(parentSee, attachYear, parentChurches)
-        // gather bishops for this branch see (across all churches it carries)
+        // Gather bishops for this branch see
+        // Exact (see_zh, church) match first
         let allBishops: SuccRow[] = []
         for (const [bk, arr] of bishopsBySeeChurch.entries()) {
           const [seeName, ch] = bk.split('|')
           if (seeName === k.see_zh && ch === k.church) allBishops.push(...arr)
+        }
+        // Fallback: bishops with same see_zh but church not claimed by any OTHER see record
+        // 用途：合併過的同教座（如 坎特伯里）— 1533 後改新教，church 改 '英格蘭教會'，但 597-1532 的
+        // 主教 church='天主教' 沒有其他 see record 領養，所以併入此 see
+        const otherSeeChurches = new Set<string>()
+        for (const s of sees) {
+          if (s.see_zh === k.see_zh && s.id !== k.id) otherSeeChurches.add(s.church)
+        }
+        for (const [bk, arr] of bishopsBySeeChurch.entries()) {
+          const [seeName, ch] = bk.split('|')
+          if (seeName !== k.see_zh) continue
+          if (ch === k.church) continue   // already exact-matched
+          if (otherSeeChurches.has(ch)) continue   // owned by another see record
+          allBishops.push(...arr)
         }
         // If this branch see has split_year (e.g. 451 for Coptic Orthodox split from
         // Alexandria), drop pre-split bishops — they're duplicates of primary line.
