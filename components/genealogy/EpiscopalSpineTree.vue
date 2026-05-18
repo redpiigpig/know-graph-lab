@@ -218,10 +218,18 @@
           </div>
           <div class="flex items-center gap-1.5">
             <span class="inline-flex w-5 items-center gap-px">
-              <span class="inline-block h-[2px] w-2 bg-slate-300 opacity-60 rounded-full" />
-              <span class="inline-block h-[5px] w-2 bg-slate-300 opacity-60 rounded-full" />
+              <span class="inline-block h-[2px] w-2 bg-slate-400 rounded-full" />
+              <span class="inline-block h-[4px] w-2 bg-slate-400 rounded-full" />
             </span>
-            spine 細→粗：建立宗主教座（451/410/484）
+            細→粗：建立宗主教座（451/410/484）
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span class="inline-flex w-5 items-center gap-px">
+              <span class="inline-block h-[1.5px] w-1 bg-slate-400 rounded-full" />
+              <span class="inline-block h-[1.5px] w-1 bg-slate-400 rounded-full" />
+              <span class="inline-block h-[1.5px] w-1 bg-slate-400 rounded-full" />
+            </span>
+            點線：主教資料中間缺號
           </div>
           <div class="flex items-center gap-1.5">
             <span class="inline-block w-5 h-[2.5px] bg-slate-400" />
@@ -671,8 +679,26 @@ const cv = computed(() => {
     const bishopMap = new Map<string, number>()
     let by = spineHeaderY    // bishops start at the top of "spine area" (no see header above)
     let firstBishopY: number | null = null
+    let prevSpineBishop: BishopIn | null = null
+    let prevSpineBottomY: number | null = null
     for (let bi = startIdx; bi < sp.bishops.length; bi++) {
       const b = sp.bishops[bi]
+      // 主教傳承軸線 per-segment：上一任卡底 → 這一任卡頂；patriarchateYear 之後加粗
+      // 跳號（gap）→ 點線；連續 → 實線
+      if (prevSpineBishop != null && prevSpineBottomY != null) {
+        const hasGap = prevSpineBishop.succession_number != null && b.succession_number != null
+          && (b.succession_number - prevSpineBishop.succession_number) > 1
+        const isPostPatriarchate = sp.patriarchateYear != null
+          && b.start_year != null && b.start_year >= sp.patriarchateYear
+        const segWidth = isPostPatriarchate ? 6 : 3
+        paths.push({
+          d: `M${headerCX},${prevSpineBottomY} L${headerCX},${by}`,
+          stroke: sp.color,
+          width: segWidth,
+          opacity: hasGap ? 0.45 : 0.65,
+          dashes: hasGap ? '4,4' : '',
+        })
+      }
       bishopMap.set(b.id, by + BISH_H / 2)
       if (firstBishopY == null) firstBishopY = by
       const menuCount = menuCountByBishop.get(b.id) ?? 0
@@ -695,6 +721,8 @@ const cv = computed(() => {
         menuBranches,
         tooltip: `${b.name_zh}\n任期：${formatYear(b.start_year)}–${formatYear(b.end_year)}${b.notes ? '\n' + b.notes : ''}`,
       })
+      prevSpineBishop = b
+      prevSpineBottomY = by + BISH_H
       by += BISH_H + BISH_VG
     }
     spineBishopCenterY.set(sp.key, bishopMap)
@@ -718,25 +746,8 @@ const cv = computed(() => {
       })
     }
 
-    // Spine guide line — from apostle card bottom area to last bishop card.
-    // 若有 patriarchateYear 則切兩段：建立宗主教座前線細（width 4），後線粗（width 10）。
-    if (sp.bishops.length > startIdx) {
-      const guideTop = apostleY + APO_H
-      const guideBottom = by - BISH_VG
-      if (sp.patriarchateYear != null) {
-        const splitY = approxYByYear(sp, sp.patriarchateYear, bishopMap, guideTop)
-        // 細線段：apostle 底 → 宗主教座建立年
-        if (splitY > guideTop) {
-          guides.push({ x: headerCX, y1: guideTop, y2: splitY, color: sp.color, width: 4 })
-        }
-        // 粗線段：宗主教座建立年 → 最後一任主教
-        if (guideBottom > splitY) {
-          guides.push({ x: headerCX, y1: splitY, y2: guideBottom, color: sp.color, width: 10 })
-        }
-      } else {
-        guides.push({ x: headerCX, y1: guideTop, y2: guideBottom, color: sp.color })
-      }
-    }
+    // Spine guide → 已改成 per-segment between adjacent bishops (見上方迴圈)
+    // 不再畫整條長 unified guide bar
 
     // ── side branches (collapsible) ──
     // 西方教會（rome）的旁支往左展開、東方 6 大宗主教旁支往右展開
