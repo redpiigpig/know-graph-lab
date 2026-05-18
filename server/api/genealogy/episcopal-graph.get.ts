@@ -21,6 +21,7 @@ interface SeeRow {
   founded_year: number | null
   parent_see_id: string | null
   split_year: number | null
+  founder_apostle_id: string | null   // 使徒源頭：當設定時表示「這個教座由某使徒直接建立」，渲染時掛在使徒底下而非 spine
 }
 
 interface SuccRow {
@@ -126,7 +127,7 @@ export default defineEventHandler(async (event) => {
   // 1. all sees
   const { data: seeRows, error: seeErr } = await supabase
     .from('episcopal_sees')
-    .select('id, see_zh, name_zh, name_en, church, tradition, founded_year, parent_see_id, split_year')
+    .select('id, see_zh, name_zh, name_en, church, tradition, founded_year, parent_see_id, split_year, founder_apostle_id')
   if (seeErr) throw createError({ statusCode: 500, message: seeErr.message })
 
   const sees: SeeRow[] = seeRows ?? []
@@ -320,7 +321,7 @@ export default defineEventHandler(async (event) => {
   }
 
   const branches: BranchNode[] = []
-  // BFS from each spine see
+  // BFS from each spine see — SKIP sees with founder_apostle_id（這些屬於 apostolic subtree）
   for (const sp of spines) {
     if (!sp.see) continue
     const queue: Array<{ seeId: string; spineKey: string }> = [{ seeId: sp.see.id, spineKey: sp.key }]
@@ -330,6 +331,7 @@ export default defineEventHandler(async (event) => {
       const kids = childrenOfSee.get(seeId) ?? []
       for (const k of kids) {
         if (seen.has(k.id)) continue
+        if (k.founder_apostle_id) continue   // 跳過使徒源頭教座（會由 apostolic-branches collector 處理）
         seen.add(k.id)
         const parentSee = seeById.get(seeId)!
         // Use split_year (if set) as the attach point — that's the moment the rival
@@ -428,6 +430,76 @@ export default defineEventHandler(async (event) => {
     }
   }
 
+  // ── 5c. Apostolic branches — 使徒源頭教座，掛在 apostle card 下，預設收起 ──
+  // 凡 founder_apostle_id 有設定的 see，連同其子樹一起放到 apostolicBranches[apostleId]
+  // 內部結構與 spine branches 一樣 (parent_bishop_id, is_split, bishops...) 但 parent 是
+  // 「使徒」概念而非 spine bishop —— 渲染時 attach 點 = 使徒卡片底部
+  interface ApostolicBranch extends BranchNode {
+    parent_apostle_id: string | null   // 直接掛在某 apostle 底下時設定（depth-0），子座為 null
+  }
+  const apostolicBranches: ApostolicBranch[] = []
+  const apostolicRoots = sees.filter(s => s.founder_apostle_id)
+  for (const root of apostolicRoots) {
+    // BFS from this apostolic root (root + descendants)
+    const queue: Array<{ seeId: string; depth: number }> = [{ seeId: root.id, depth: 0 }]
+    const seen = new Set<string>()
+    while (queue.length) {
+      const { seeId, depth } = queue.shift()!
+      if (seen.has(seeId)) continue
+      seen.add(seeId)
+      const see = seeById.get(seeId)
+      if (!see) continue
+
+      // Gather bishops for this see
+      let allBishops: SuccRow[] = []
+      for (const [bk, arr] of bishopsBySeeChurch.entries()) {
+        const [seeName, ch] = bk.split('|')
+        if (seeName === see.see_zh && ch === see.church) allBishops.push(...arr)
+      }
+      if (see.split_year != null) {
+        allBishops = allBishops.filter(b => (b.start_year ?? 9999) >= see.split_year!)
+      }
+      allBishops.sort((a, b) => {
+        const an = a.succession_number ?? 9999
+        const bn = b.succession_number ?? 9999
+        if (an !== bn) return an - bn
+        return (a.start_year ?? 9999) - (b.start_year ?? 9999)
+      })
+
+      // Determine parent for visual: depth-0 → apostle card; deeper → parent_bishop_id in parent see
+      let parentBishopId: string | null = null
+      let isSplit = false
+      if (depth > 0 && see.parent_see_id) {
+        const parentSee = seeById.get(see.parent_see_id)
+        if (parentSee) {
+          const attachYear = see.split_year ?? see.founded_year
+          parentBishopId = findBishopAtYear(parentSee, attachYear, [parentSee.church])
+          isSplit = see.see_zh === parentSee.see_zh
+        }
+      }
+
+      apostolicBranches.push({
+        id: see.id,
+        see_zh: see.see_zh,
+        name_zh: see.name_zh,
+        name_en: see.name_en,
+        church: see.church,
+        tradition: see.tradition,
+        founded_year: see.split_year ?? see.founded_year,
+        parent_see_id: see.parent_see_id ?? root.id,
+        parent_spine_key: '',     // apostolic branches don't belong to a spine
+        parent_bishop_id: parentBishopId,
+        is_split: isSplit,
+        bishops: allBishops.map(mapBishop),
+        parent_apostle_id: depth === 0 ? root.founder_apostle_id : null,
+      } as ApostolicBranch)
+
+      for (const k of (childrenOfSee.get(seeId) ?? [])) {
+        if (!seen.has(k.id)) queue.push({ seeId: k.id, depth: depth + 1 })
+      }
+    }
+  }
+
   // 6. teaching pairs (Jesus → disciples, Peter → Mark, John → Polycarp, Albertus → Aquinas, etc.)
   //    Returned as-is from church_teachings. The renderer decides whether to draw an
   //    orange teaching line based on whether both endpoints exist on canvas AND aren't
@@ -441,6 +513,7 @@ export default defineEventHandler(async (event) => {
     apostles: APOSTLES,
     spines,
     branches,
+    apostolicBranches,
     teachings: teachingRows ?? [],
   }
 })

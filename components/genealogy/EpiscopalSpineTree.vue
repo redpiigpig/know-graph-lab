@@ -70,8 +70,21 @@
             </template>
 
             <template v-else-if="n.kind === 'apostle'">
-              <div class="text-[11.5px] font-semibold text-slate-800 truncate text-center">{{ n.label }}</div>
-              <div class="text-[8.5px] text-slate-400 truncate text-center mt-0.5">{{ n.sub }}</div>
+              <button
+                class="w-full text-center cursor-default"
+                :class="n.apostleBranchCount ? 'hover:bg-amber-50/40 rounded transition' : ''"
+                @click.stop="n.apostleBranchCount ? toggleApostle(n.apostleId!) : null"
+              >
+                <div class="flex items-center justify-center gap-1">
+                  <span v-if="n.apostleBranchCount" class="text-[10px] text-amber-600 shrink-0">
+                    {{ isApostleExpanded(n.apostleId!) ? '▾' : '▸' }}
+                  </span>
+                  <span class="text-[11.5px] font-semibold text-slate-800 truncate">{{ n.label }}</span>
+                  <span v-if="n.apostleBranchCount"
+                        class="text-[8.5px] text-amber-600 tabular-nums shrink-0">{{ n.apostleBranchCount }}</span>
+                </div>
+                <div class="text-[8.5px] text-slate-400 truncate mt-0.5">{{ n.sub }}</div>
+              </button>
             </template>
 
             <template v-else-if="n.kind === 'see'">
@@ -162,8 +175,12 @@
             <span class="inline-block w-5 h-[1.5px] bg-orange-500 rounded-full" />
             師徒教導（橘）
           </div>
+          <div class="flex items-center gap-1.5">
+            <span class="inline-block w-5 h-[1.5px] bg-amber-700 rounded-full" />
+            使徒立座（琥珀）— 點使徒卡片展開
+          </div>
         </div>
-        <div class="text-gray-400 mt-1 pt-1 border-t border-gray-100">▸/▾ 旁支收／展　·　Ctrl＋滾輪：縮放</div>
+        <div class="text-gray-400 mt-1 pt-1 border-t border-gray-100">▸/▾ 旁支收／展　·　使徒卡片可點　·　Ctrl＋滾輪：縮放</div>
       </div>
     </template>
   </div>
@@ -201,6 +218,9 @@ interface BranchIn {
   is_split: boolean    // true: 教座分裂 (same see_zh as parent); false: 設立教座 (new see)
   bishops: BishopIn[]
 }
+interface ApostolicBranchIn extends BranchIn {
+  parent_apostle_id: string | null   // 直接掛在使徒底下時設定（depth-0）；子座為 null
+}
 interface TeachingIn {
   id: string
   teacher_name_zh: string
@@ -219,6 +239,7 @@ interface GraphIn {
   apostles: ApostleIn[]
   spines: SpineIn[]
   branches: BranchIn[]
+  apostolicBranches?: ApostolicBranchIn[]
   teachings?: TeachingIn[]
 }
 
@@ -260,7 +281,6 @@ const BRANCH_INDENT = 16
 
 // ── Expand state ────────────────────────────────────────────
 // 預設所有分支都收起來；使用者點 ▸ 才一個個展開。
-// （依使用者意願：避免上百個分支同時展開把畫面拉到不可讀的高度）
 const collapsedBranches = ref<Set<string>>(new Set())
 function isBranchExpanded(branchId: string): boolean {
   return !collapsedBranches.value.has(branchId)
@@ -271,10 +291,25 @@ function toggleBranch(branchId: string) {
   else s.add(branchId)
   collapsedBranches.value = new Set(s)
 }
+// 預設所有 apostle 也收起來 — 預設視圖只看 7 大宗主教
+const collapsedApostles = ref<Set<string>>(new Set())
+function isApostleExpanded(apostleId: string): boolean {
+  return !collapsedApostles.value.has(apostleId)
+}
+function toggleApostle(apostleId: string) {
+  const s = collapsedApostles.value
+  if (s.has(apostleId)) s.delete(apostleId)
+  else s.add(apostleId)
+  collapsedApostles.value = new Set(s)
+}
 watch(() => props.graph, (g) => {
-  if (g && g.branches) {
-    collapsedBranches.value = new Set(g.branches.map((b: any) => b.id))
+  if (!g) return
+  if (g.branches) collapsedBranches.value = new Set(g.branches.map((b: any) => b.id))
+  if (g.apostolicBranches) {
+    for (const b of g.apostolicBranches) collapsedBranches.value.add(b.id)
   }
+  // 所有 apostle 預設收起
+  if (g.apostles) collapsedApostles.value = new Set(g.apostles.map((a: any) => a.id))
 }, { immediate: true })
 
 interface LNode {
@@ -288,6 +323,8 @@ interface LNode {
   bishopCount?: number
   spineColor?: string
   tooltip?: string
+  apostleId?: string         // for apostle node — for click handler
+  apostleBranchCount?: number   // for apostle node — # depth-0 apostolic branches under this apostle
 }
 interface LPath { d: string; stroke?: string; dashed?: boolean; dashes?: string; width?: number; opacity?: number }
 interface LGuide { x: number; y1: number; y2: number; color: string; width?: number }
@@ -359,6 +396,19 @@ const cv = computed(() => {
     x: jesusX, y: jesusY, w: JESUS_W, h: JESUS_H,
   })
 
+  // ── Build apostolic-branches map (per-apostle, depth=0 only) ──
+  const apostolicByApostle = new Map<string, ApostolicBranchIn[]>()
+  for (const b of (g.apostolicBranches ?? [])) {
+    if (b.parent_apostle_id) {
+      if (!apostolicByApostle.has(b.parent_apostle_id)) apostolicByApostle.set(b.parent_apostle_id, [])
+      apostolicByApostle.get(b.parent_apostle_id)!.push(b)
+    }
+  }
+  // 排序：照 founded_year 由舊到新
+  for (const arr of apostolicByApostle.values()) {
+    arr.sort((a, b) => (a.founded_year ?? 9999) - (b.founded_year ?? 9999))
+  }
+
   // ── 2. Apostle row — 16 位平均分配 ──
   const apostleY = jesusY + JESUS_H + 60
   const apostleRowStartX = (w - apostleRowWidth) / 2
@@ -367,12 +417,15 @@ const cv = computed(() => {
     const a = g.apostles[i]
     const ax = apostleRowStartX + i * (APO_W + APO_HG)
     const cx = ax + APO_W / 2
+    const branchCount = apostolicByApostle.get(a.id)?.length ?? 0
     nodes.push({
       id: 'ap_' + a.id, kind: 'apostle',
       label: simplifyApostleName(a.name_zh),
       sub: a.name_en,
       x: ax, y: apostleY, w: APO_W, h: APO_H,
       tooltip: `${a.name_zh}（${a.name_en}）`,
+      apostleId: a.id,
+      apostleBranchCount: branchCount || undefined,
     })
     apostleCX.set(a.id, cx)
   }
@@ -400,6 +453,64 @@ const cv = computed(() => {
     paths.push({ d: `M${xMin},${fanY} L${xMax},${fanY}`, stroke: '#a16207' })
     for (const x of xs) {
       paths.push({ d: `M${x},${fanY} L${x},${apostleY}`, stroke: '#a16207' })
+    }
+  }
+
+  // ── 3.5. Apostolic branches — 使徒展開後才畫，掛在 apostle card 底下 ──
+  // 預設所有 apostles 收起來；當某個 apostle 被展開，它的 depth-0 apostolic branches
+  // 顯示為小 branch-see header（橘色，使徒色系），疊在 apostle card 下方
+  const APO_BRANCH_W = 130
+  const APO_BRANCH_H = 24
+  const APO_BRANCH_GAP = 4
+  const apostolicBranchY = apostleY + APO_H + 16   // start just below apostle row
+  const apostolicBranchBishopMap = new Map<string, number>()   // apostolic branch bishop ID → Y
+  for (const a of g.apostles) {
+    if (!isApostleExpanded(a.id)) continue
+    const branchesForApostle = apostolicByApostle.get(a.id) ?? []
+    if (branchesForApostle.length === 0) continue
+    const apX = apostleCX.get(a.id)!
+    let cy = apostolicBranchY
+    for (const ab of branchesForApostle) {
+      const bx = apX - APO_BRANCH_W / 2
+      nodes.push({
+        id: 'apbr_' + ab.id, kind: 'branch-see',
+        label: ab.see_zh + (ab.church ? ` · ${ab.church}` : ''),
+        sub: ab.founded_year != null ? `${formatYear(ab.founded_year)} ${ab.is_split ? '分裂' : '使徒立座'}` : '',
+        x: bx, y: cy, w: APO_BRANCH_W, h: APO_BRANCH_H,
+        branchId: ab.id, bishopCount: ab.bishops.length,
+        spineColor: '#a16207',   // amber — apostolic line color
+        tooltip: `${ab.name_zh}（${ab.church}）\n${a.name_zh} 使徒立座`,
+      })
+      // Founding line from apostle card to branch header (amber)
+      const apostleBottomY = apostleY + APO_H
+      const branchMidY = cy + APO_BRANCH_H / 2
+      paths.push({
+        d: `M${apX},${apostleBottomY} L${apX},${branchMidY}`,
+        stroke: '#a16207', width: 1.5,
+      })
+      cy += APO_BRANCH_H + APO_BRANCH_GAP
+
+      // If apostolic branch is expanded → render its bishops below the header
+      if (isBranchExpanded(ab.id)) {
+        for (const bb of ab.bishops) {
+          apostolicBranchBishopMap.set(bb.id, cy + (BISH_H - 2) / 2)
+          nodes.push({
+            id: 'apbish_' + bb.id, kind: 'bishop',
+            label: bb.name_zh,
+            sub: bb.start_year != null
+              ? `${formatYear(bb.start_year)}–${bb.end_year != null ? formatYear(bb.end_year) : ''}`
+              : '',
+            x: apX - APO_BRANCH_W / 2 + 6,
+            y: cy,
+            w: APO_BRANCH_W - 12, h: BISH_H - 2,
+            successionNum: bb.succession_number,
+            spineColor: '#a16207',
+            tooltip: `${bb.name_zh}\n任期：${formatYear(bb.start_year)}–${formatYear(bb.end_year)}`,
+          })
+          cy += BISH_H - 2 + 8
+        }
+        cy += 8   // gap before next apostolic branch
+      }
     }
   }
 

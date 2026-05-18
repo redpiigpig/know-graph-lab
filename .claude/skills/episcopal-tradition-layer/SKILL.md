@@ -80,9 +80,29 @@ description: 使徒統緒族譜圖（/genealogy/episcopal-tree）的資料維護
 
 **如果是時序接續就用 primary，如果是並行對立就用 rival——不要混用，會交錯排序看起來像 bug**
 
+## 使徒源頭教座（apostolic-founded sees）— `founder_apostle_id` 欄
+
+某些古老教座不是「君堡／羅馬差派出來的」，而是使徒在傳道過程中直接建立。e.g. 哥林多/帖撒羅尼迦/克里特 是保羅建立、馬拉巴爾是多馬建立、姆茨赫塔/喬治亞是安得烈+西門奮銳黨建立、小亞細亞七教會（士每拿/別迦摩等）是約翰建立、塔林/托萊多/塞維利亞是雅各（西庇太之子）的西班牙傳統。
+
+**規則**：在 `episcopal_sees` 加 `founder_apostle_id` 欄（值 = `ap_paul`/`ap_thomas`/`ap_andrew`...），API 會：
+1. 把這個 see（與其子孫）**從 spine BFS 中排除**（避免雙重歸屬）
+2. 放進新的 `apostolicBranches` 陣列，附帶 `parent_apostle_id`
+3. 前端：apostle card 上顯示 ▸ + 分支數，**預設收起**（只看 7 大宗主教）
+4. 點擊 apostle card 才展開，分支以琥珀色（`#a16207`）小卡疊在 apostle 下方
+5. 同一個分支 see 進一步 ▸ 可展開該座的主教鏈（與 spine branch 同邏輯）
+
+**目前 28 個使徒源頭教座 / 7 個使徒**：
+- 保羅：哥林多、科林斯、帖撒羅尼迦、克里特、多德卡尼斯、以弗所、大馬士革、普洛夫迪夫
+- 巴拿巴：塞浦路斯、米蘭
+- 安得烈：帕特雷（殉道地）、托米斯、姆茨赫塔、第比利斯、格魯吉亞
+- 多馬：馬拉巴爾（含 1912 馬蘭卡拉東正教，後者作為馬拉巴爾子座）
+- 彼得：凱撒利亞·巴勒斯坦（哥尼流）、凱撒利亞·卡帕多西亞（彼前 1:1）
+- 約翰：士每拿、別迦摩、推雅推喇、撒狄、非拉鐵非、老底嘉
+- 雅各（西庇太之子）：布拉加、托萊多、塔拉戈納（西班牙傳統）
+
 ## 旁支（branch see）結構
 
-凡 `episcopal_sees.parent_see_id` 指向 spine 的主 see 或另一個旁支 see → BFS 找到後成為旁支，可在 spine 圖點 ▸ 展開。
+凡 `episcopal_sees.parent_see_id` 指向 spine 的主 see 或另一個旁支 see（且**沒有** `founder_apostle_id`）→ BFS 找到後成為旁支，可在 spine 圖點 ▸ 展開。
 
 **三種視覺差異（重要）：**
 
