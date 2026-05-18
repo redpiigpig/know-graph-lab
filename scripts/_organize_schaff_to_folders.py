@@ -25,7 +25,7 @@ KEY = os.environ["SUPABASE_SERVICE_ROLE_KEY"]
 H = {"apikey": KEY, "Authorization": f"Bearer {KEY}"}
 
 DRIVE_ROOT = Path(r"G:\我的雲端硬碟\資料\電子書")
-CATEGORY = "宗教學"
+CATEGORY = "神學"  # 2026-05-18: 從宗教學提升為頂層分類，神學作為獨立學科
 
 SUBFOLDER_ANF = "Schaff - Ante-Nicene Fathers (10 vols)"
 SUBFOLDER_NPNF1 = "Schaff - Nicene and Post-Nicene Fathers Series 1 (Augustine and Chrysostom)"
@@ -84,7 +84,7 @@ def main():
                     patch = requests.patch(
                         f"{SUPABASE_URL}/rest/v1/ebooks?id=eq.{row['id']}",
                         headers={**H, "Content-Type": "application/json"},
-                        json={"file_path": str(new_path), "subcategory": sub},
+                        json={"file_path": str(new_path), "category": CATEGORY, "subcategory": sub},
                     )
                     if patch.status_code in (200, 204):
                         moved += 1
@@ -110,7 +110,7 @@ def main():
             patch = requests.patch(
                 f"{SUPABASE_URL}/rest/v1/ebooks?id=eq.{row['id']}",
                 headers={**H, "Content-Type": "application/json"},
-                json={"file_path": str(new_path), "subcategory": sub},
+                json={"file_path": str(new_path), "category": CATEGORY, "subcategory": sub},
             )
             if patch.status_code in (200, 204):
                 moved += 1

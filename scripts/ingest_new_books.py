@@ -6,7 +6,7 @@ Daily z-lib ingest.
 Watches the skill-local "z-lib" drop folder, and for each ebook file:
   1. Parses filename -> (author, title) using parse_drive_inventory.parse_filename
      (handles z-library pattern, "by Author", 全形 comma split, etc.)
-  2. Asks Gemini to classify into one of the 9 main categories
+  2. Asks Gemini to classify into one of the 10 main categories
      (with a fallback rule for English Christian-studies books -> 宗教學).
   3. Inserts an `ebooks` row with category set + future Drive path as file_path.
   4. Moves the local file from z-lib/ to
@@ -49,7 +49,7 @@ INVALID_FNAME_CHARS = {
 }
 
 CATEGORIES = [
-    "哲學", "世界宗教", "宗教學", "人類生物學", "心理學",
+    "哲學", "神學", "世界宗教", "宗教學", "人類生物學", "心理學",
     "文學", "自然科學", "歷史學", "社會政治學",
 ]
 
@@ -174,7 +174,9 @@ def fallback_category(title: str, author: str) -> str | None:
         "clement of alexandria",
     ]
     if any(k in text for k in christian_kw):
-        return "宗教學"
+        # 教父名 / patristic / Augustine / Chrysostom / Aquinas / Barth 等
+        # → 神學（基督教神學作為獨立學科）
+        return "神學"
     if "zoroastr" in text or "avesta" in text or "islam" in text or "buddhis" in text:
         return "世界宗教"
     return None
@@ -182,10 +184,11 @@ def fallback_category(title: str, author: str) -> str | None:
 
 CATEGORIZE_PROMPT = """你是書籍分類助手。請將下列書籍歸入恰好一個分類：
 
-九大分類（擇一）：
+十大分類（擇一）：
 - 哲學 — 哲學家、哲學流派、形上學、倫理學、邏輯學
-- 世界宗教 — 特定宗教的經典、教義、史實（基督教、伊斯蘭、佛教、印度教、瑣羅亞斯德教、巴哈伊…）
-- 宗教學 — 神學、聖經研究、教會史、宗教社會學、宗教比較學等學術研究
+- 神學 — 系統神學、教父著作（Augustine/Aquinas/Schaff 教父集等）、信理神學、神學概論、神學家著作與研究（Barth/Rahner/Moltmann/Küng/Bonhoeffer 等）、教父學、護教學
+- 世界宗教 — 特定宗教的經典、教義、史實本身（基督教 Bible 翻譯／祈禱書、伊斯蘭可蘭經、佛經、印度教、瑣羅亞斯德教阿維斯塔、巴哈伊經典…）
+- 宗教學 — 跨宗教學術研究：神話學、宗教史、宗教社會學、宗教比較、宗教對話、宗教現象學
 - 人類生物學 — 人類學、生物人類學、演化、考古、體質
 - 心理學 — 心理學、精神分析、認知科學
 - 文學 — 小說、詩歌、散文、文學評論
@@ -193,16 +196,18 @@ CATEGORIZE_PROMPT = """你是書籍分類助手。請將下列書籍歸入恰好
 - 歷史學 — 通史、斷代史、地區史、人物傳記（非宗教人物）
 - 社會政治學 — 政治、經濟、社會學、法律、國際關係
 
-辨別技巧：
-- 「教會史」「基督論」「神學家」屬 宗教學（學術研究）
-- 「巴哈伊經典」「可蘭經」「阿維斯塔」屬 世界宗教（宗教文獻本身）
-- 不確定時，傾向 宗教學 而非 世界宗教
+辨別技巧（神學 vs 世界宗教 vs 宗教學 邊界）：
+- 教父原典、系統神學、Augustine 懺悔錄 / Aquinas 神學大全 / Schaff NPNF / 基督論 / 三一論 → 神學
+- 教會史人物傳、護教學、神學家研究、教父學概論 → 神學
+- 各宗教自己的「經典／教義原本」（聖經中譯本、佛經、可蘭經、阿維斯塔、巴哈伊經典）→ 世界宗教
+- 神話學、跨宗教比較研究、宗教社會學、宗教對話 → 宗教學
+- 不確定基督教書要 神學 還是 世界宗教 時，「學術／系統／神學家著作」→ 神學；「Bible 譯本／祈禱書／信經中譯」→ 世界宗教
 
 書名: {title}
 作者: {author}
 
 只回傳一行 JSON，無其他文字：
-{{"category":"<從上面九個擇一>","subcategory":"<細分名稱或 null>","confidence":0.0-1.0}}
+{{"category":"<從上面十個擇一>","subcategory":"<細分名稱或 null>","confidence":0.0-1.0}}
 """
 
 
@@ -266,10 +271,12 @@ def gemini_classify(title: str, author: str) -> dict:
     cat = parsed.get("category", "").strip()
     if cat not in CATEGORIES:
         # Map some common LLM mistakes
-        if cat in {"基督教", "神學", "聖經研究", "教會史"}:
-            cat = "宗教學"
-        elif cat in {"伊斯蘭教", "佛教", "印度教", "瑣羅亞斯德教"}:
+        if cat in {"聖經研究", "教父學", "系統神學", "信理神學", "基督論", "三一論"}:
+            cat = "神學"
+        elif cat in {"基督教", "伊斯蘭教", "佛教", "印度教", "瑣羅亞斯德教", "猶太教", "巴哈伊"}:
             cat = "世界宗教"
+        elif cat in {"教會史", "宗教史", "神話學", "宗教比較", "宗教社會學", "宗教對話"}:
+            cat = "宗教學"
         else:
             raise ValueError(f"Gemini returned non-category: {cat!r}")
     return {

@@ -99,6 +99,52 @@ annotations (
 )
 ```
 
+## Drive 分類結構（10 大頂層 + subcategory + 套書子資料夾）
+
+頂層 10 個分類資料夾在 `G:/我的雲端硬碟/資料/電子書/`：
+
+| 分類 | 內容判準 | 範例 |
+|---|---|---|
+| **哲學** | 哲學家、哲學流派、形上學、倫理學、邏輯學 | 尼采、康德、Heidegger、士林哲學 |
+| **神學** | 系統神學、教父著作、信理神學、神學概論、神學家著作與研究、教父學、護教學 | Schaff 教父集、Aquinas 神學大全/駁異大全、Augustine 懺悔錄、Barth、Rahner、Moltmann、Küng |
+| **世界宗教** | 特定宗教自身的「經典／教義原本」 | 聖經中譯本、可蘭經、佛經、阿維斯塔、巴哈伊經典 |
+| **宗教學** | 跨宗教學術研究 | 神話學、宗教史、宗教社會學、宗教比較、宗教對話、宗教現象學 |
+| **歷史學** | 通史、斷代史、地區史、人物傳記（非宗教人物） | 中國史、世界文明史、戰爭史 |
+| **社會政治學** | 政治、經濟、社會學、法律、國際關係 | |
+| **人類生物學** | 人類學、生物人類學、演化、考古、體質 | |
+| **心理學** | 心理學、精神分析、認知科學 | Frankl、Yalom |
+| **文學** | 小說、詩歌、散文、文學評論 | |
+| **自然科學** | 物理、化學、生物、地球科學、數學 | |
+
+### 神學 vs 世界宗教 vs 宗教學 邊界
+
+最常見混淆。判準：
+
+| 內容性質 | 分類 |
+|---|---|
+| 教父原典／系統神學／Augustine 懺悔錄／Aquinas 神學大全／Schaff NPNF／信理神學／基督論／三一論 | **神學** |
+| 教會史人物傳、護教學、神學家研究、教父學大綱 | **神學** |
+| 各宗教自己的「經典／教義原本」（聖經中譯／可蘭經／佛經／阿維斯塔） | **世界宗教** |
+| 神話學、跨宗教比較研究、宗教社會學、宗教對話 | **宗教學** |
+| 不確定基督教書 → 神學 還是 世界宗教？學術／系統／神學家著作 → 神學；Bible 譯本／祈禱書／信經中譯 → 世界宗教 | |
+
+### 套書子資料夾規則
+
+若 ingest 進來的是套書／系列（例如 Schaff 38 卷、Aquinas《神學大全》18 冊、IVP ACCS 27 冊），**在分類資料夾內建子資料夾集中管理**，不要平鋪。範例：
+
+```
+G:/我的雲端硬碟/資料/電子書/神學/
+  Schaff - Ante-Nicene Fathers (10 vols)/        anf01.epub … anf10.epub
+  Schaff - Nicene and Post-Nicene Fathers Series 1 (Augustine and Chrysostom)/   npnf101…114
+  Schaff - Nicene and Post-Nicene Fathers Series 2 (14 vols)/   npnf201…214
+  Aquinas - Summa Theologica (神學大全 18 冊)/   ← 未來
+  IVP Ancient Christian Commentary on Scripture (27 冊)/   ← 未來
+```
+
+子資料夾命名 `{編者／出版社} - {系列名} ({N} vols)`。`ebooks.subcategory` 同步存子資料夾名。
+
+> ⚠ **移動 Drive 檔案後，必須 UPDATE `ebooks.file_path`** 指向新位置，否則 reader 找不到書。範例腳本：`scripts/_organize_schaff_to_folders.py`。
+
 ## Storage layout
 
 - **Local JSONL** (source of truth): `G:/我的雲端硬碟/資料/電子書/_chunks/{ebook_id}.jsonl`
