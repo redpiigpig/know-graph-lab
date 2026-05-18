@@ -13,6 +13,7 @@ description: 使徒統緒族譜圖（/genealogy/episcopal-tree）的資料維護
 - API：[server/api/genealogy/episcopal-graph.get.ts](../../server/api/genealogy/episcopal-graph.get.ts)
 - 元件：[components/genealogy/EpiscopalSpineTree.vue](../../components/genealogy/EpiscopalSpineTree.vue)
 - 頁面：[pages/genealogy/episcopal-tree.vue](../../pages/genealogy/episcopal-tree.vue)
+- 截圖：[scripts/episcopal-shot.mjs](../../scripts/episcopal-shot.mjs)
 
 ## 編輯規則：一律按傳統說法
 
@@ -21,6 +22,7 @@ description: 使徒統緒族譜圖（/genealogy/episcopal-tree）的資料維護
 判斷依據：
 - 有傳統教會歷史（Eusebius《Historia Ecclesiastica》、Movses Khorenatsi、Ormanian、Le Quien 等）公認的繼任名單 → 列
 - 完全無記載、只是「應該存在過」的空檔 → 留空 notes 註明
+- 殘缺 / 史料前段空白（如埃奇米亞津 191-239 年）notes 註明即可，不要用 `status='傳說'` 把人別開
 
 ## Archbishop / Metropolitan / Catholicos 中文翻譯慣例
 
@@ -31,7 +33,7 @@ description: 使徒統緒族譜圖（/genealogy/episcopal-tree）的資料維護
 | Patriarch | 宗主教 | — |
 | Catholicos | Catholicos / 大公主教 | — |
 
-新增資料時請按此分流。如要批次改舊資料：使用 `c:/tmp/rename_archbishop.mjs` 模式（過濾 `church` 欄包含 `東正教|天主教|未分裂教會|科普特|敘利亞正教|馬龍尼特|麥勒基特|亞美尼亞使徒|古代東方|...`）然後 PATCH `name_zh`/`see_zh`/`notes` 等欄位。
+新增資料時請按此分流。
 
 ## `tradition` 分類規則：嚴格 7 大正統
 
@@ -50,35 +52,51 @@ description: 使徒統緒族譜圖（/genealogy/episcopal-tree）的資料維護
 - 與羅馬共融 = 羅馬公教（不管什麼禮儀）
 - 從敘利亞正教 / 古代東方教會 / 亞美尼亞使徒等正教傳統獨立 = 仍歸該正教傳統
 - 16 世紀宗教改革後在歐美建立的非天主教教會 = 基督新教
-
-**錯誤示範**（我曾犯過，已修正）：開「使徒教會」「東正教自主」「東正教自治」「東方禮天主教」「西方大分裂」「卡帕多西亞教父」「改革派敘利亞」當 tradition 值——全部應該歸進上述 7 大。
+- **不要開**「使徒教會」「東正教自主」「東正教自治」「東方禮天主教」「西方大分裂」「卡帕多西亞教父」「改革派敘利亞」等中間類別——全部應該歸進上述 7 大
 
 ## 7 大 spine 結構
 
-定義在 `SPINE_DEFS`（[episcopal-graph.get.ts](../../server/api/genealogy/episcopal-graph.get.ts)）。每 spine 一個 `primaryApostleId` + 可選 `secondaryApostleId`。
+定義在 `SPINE_DEFS`（[episcopal-graph.get.ts](../../server/api/genealogy/episcopal-graph.get.ts)）。每 spine 一個 `primaryApostleId` + 可選 `secondaryApostleId`，`patriarchateYear` 標宗主教座正式建立年份（線條粗細在此切換）。
 
-| spine key | see_zh | 主使徒 | 輔使徒 | spine 色 |
-|---|---|---|---|---|
-| `rome` | 羅馬 | 彼得 | 保羅 | `#dc2626` 紅 |
-| `constantinople` | 君士坦丁堡 | 安得烈 | — | `#2563eb` 藍 |
-| `alexandria` | 亞歷山卓 | 彼得 | 巴拿巴 | `#d97706` 橙 |
-| `antioch` | 安提阿 | 彼得 | — | `#0891b2` 青 |
-| `jerusalem` | 耶路撒冷 | 義人雅各 | — | `#16a34a` 綠 |
-| `armenia` | 埃奇米亞津 | 達太 | 巴多羅買 | `#9333ea` 紫 |
-| `assyria` | 塞琉西亞—泰西封 | 多馬 | — | `#475569` 灰 |
+| spine key | see_zh | 主使徒 | 輔使徒 | spine 色 | patriarchateYear |
+|---|---|---|---|---|---|
+| `rome` | 羅馬 | 彼得 | 保羅 | `#dc2626` 紅 | 451 |
+| `constantinople` | 君士坦丁堡 | 安得烈 | — | `#2563eb` 藍 | 451 |
+| `alexandria` | 亞歷山卓 | 彼得 | 巴拿巴 | `#d97706` 橙 | 451 |
+| `antioch` | 安提阿 | 彼得 | — | `#0891b2` 青 | 451 |
+| `jerusalem` | 耶路撒冷 | 義人雅各 | — | `#16a34a` 綠 | 451 |
+| `armenia` | 埃奇米亞津 | 達太 | 巴多羅買 | `#9333ea` 紫 | 484 |
+| `assyria` | 塞琉西亞—泰西封 | 多馬 | — | `#475569` 灰 | 410 |
 
 ## primaryChurches vs rivalChurches
 
-兩種多教會處理方式：
-
 **`primaryChurches`**：時序接續、無重疊的多個 church 名稱合併在同一條 spine 線上
-- 例：羅馬 `['未分裂教會', '天主教']`（1054 大分裂後 天主教 接續未分裂教會的羅馬線）
+- 例：羅馬 `['未分裂教會', '天主教']`（1054 大分裂後 天主教 接續未分裂教會）
 - 例：君士坦丁堡 `['未分裂教會', '東正教']`
 
 **`rivalChurches`**：並行存在的對立教會，自動產生 `is_split=true` 的合成分支（紅色鋸齒線）
 - 例：assyria 的 `rivalChurches: ['東方教會（亞述）']`（1968 後與 古代東方教會 並存）
 - attach 點：rival 第一位主教的 `start_year` 對應 spine 同期主教
-- **如果是時序接續就用 primary，如果是並行對立就用 rival——不要混用，會交錯排序看起來像 bug**
+
+**如果是時序接續就用 primary，如果是並行對立就用 rival——不要混用，會交錯排序看起來像 bug**
+
+## 旁支（branch see）結構
+
+凡 `episcopal_sees.parent_see_id` 指向 spine 的主 see 或另一個旁支 see → BFS 找到後成為旁支，可在 spine 圖點 ▸ 展開。
+
+- 若旁支 see_zh **與母教座相同** → `is_split=true`（紅色鋸齒線、教座分裂；如 坎特伯里|英格蘭教會 ← 坎特伯里|天主教）
+- 若旁支 see_zh **與母教座不同** → `is_split=false`（spine 色實線、設立教座；如 米蘭 ← 羅馬）
+
+預期將來會擴張到「一個宗主教座下面延伸很多教座傳承」，spine column 之間預留了 horizontal space。
+
+## split_year 機制
+
+當 `episcopal_sees.split_year` 設了之後，API 旁支 BFS 會：
+1. **過濾掉 `start_year < split_year` 的主教**（避免重複 spine 上的 pre-split 同人）
+2. **用 split_year 取代 founded_year** 作為旁支卡片顯示年份（更貼近語義：「這條線是從何時分出來的」）
+3. **用 split_year 作 attach 點 Y**（分裂線從那一年的同期 spine 主教接出來）
+
+適用所有並行對立分支（科普特正教 451、奇里乞亞 1293、亞美尼亞天主教 1742、保加利亞 870 等）。
 
 ## 負 succession_number 慣例
 
@@ -87,156 +105,40 @@ description: 使徒統緒族譜圖（/genealogy/episcopal-tree）的資料維護
 | 教座 | 例 | 處理 |
 |---|---|---|
 | 埃奇米亞津 | 達太傳統 8 位（撒杜克 → 美侯讓，68-270 AD） | succession_number `-8..-1`，格利高爾續 `#1` |
+| 米蘭 | 巴拿巴 50 年奠基（安波羅西禮不算進主教編號內） | succession_number `-1` |
 
 **規則：API 把負 succession_number 在輸出時轉成 `null`**（前端不顯示編號數字），但**排序仍用原值**——負數自然排在正數之前，無需修改 sort 邏輯。
 
-如要在其他教座加類似列表：
-1. DB 主教用 `succession_number = -N .. -1` 寫入
-2. 不需要改 SPINE_DEFS
-3. 不需要前端改 code
-
-## 旁支（branch see）結構
-
-凡 `episcopal_sees.parent_see_id` 指向 spine 的主 see 或另一個旁支 see → BFS 找到後成為旁支，可在 spine 圖點 ▸ 展開。
-
-- 若旁支 see_zh **與母教座相同** → 視為 `is_split=true`（紅色鋸齒線、教座分裂）
-- 若旁支 see_zh **與母教座不同** → `is_split=false`（spine 色實線、設立教座）
-
-預期將來會擴張到「一個宗主教座下面延伸很多教座傳承」（user 原話），spine column 之間預留了 horizontal space。
-
-## 使徒傳統教座清單（90 個旁支）
-
-### 安提阿管轄 spine 下
-- 既有：馬龍尼特禮天主教、希臘天主教麥勒基特禮、天主教（拉丁禮）、敘利亞天主教、敘利亞正教
-- **凱撒利亞·巴勒斯坦**：使徒時代社群（行 10 哥尼流）；#1 撒該（彼得按立）→ #8 該撒利亞·優西比烏（教會史家）→ #10 蓋拉修斯（37-395 AD，10 位）
-- **凱撒利亞·卡帕多西亞**：可考鏈始於 ~230 Firmilian；#4 萊昂提烏斯祝聖亞美尼亞格利高爾；#9 巴西略大帝；建檔 11 位（232-432 AD）
-- **以弗所**：保羅約 53 年駐 3 年；約翰使徒晚年駐此；#1 提摩太（保羅按立）→ #4 波利克拉提斯（爭復活節日期）→ #9 米米農（主持 431 以弗所大公會議）；建檔 10 位
-- **塞浦路斯**：巴拿巴與保羅約 45 年首傳（行 13）；#1 巴拿巴（殉道於薩拉米斯）→ #3 拉撒路（伯大尼的拉撒路，Kition 主教）→ #6 葉皮法尼烏斯（著 Panarion）；478 年 Zeno 帝確認自主權；9 位
-- **大馬士革**：保羅悔改受洗地；#1 亞拿尼亞（為保羅施洗）；4 位主要主教
-
-### 君士坦丁堡管轄 spine 下
-- 既有：天主教（拉丁禮）、亞美尼亞正教
-- **哥林多**：保羅約 51-52 駐 1.5 年；#1 阿波羅 → #6 第尼修（170 寫多教會書信）；10 位（52-400 AD）
-- **小亞細亞七教會**（啟示錄 2-3 章 / 除以弗所另立外的 6 個）：
-  - **士每拿**：#1 布迦留 → **#2 坡旅甲**（使徒約翰門徒，155 殉道，「使徒教父」最後一代）→ 8 位
-  - **別迦摩**：#1 安提帕（啟 2:13「我忠心的見證」，多米田時代殉道）→ 6 位
-  - **推雅推喇**：#1 索西帕特（保羅同工）→ 5 位
-  - **撒狄**：#2 米利託（170-180，著《逾越節之書》）→ 6 位
-  - **非拉鐵非**：#1 第米特里（安提阿伊格那丟書信收件人）→ 4 位
-  - **老底嘉**：#1 亞基布（西 4:17）→ #2 尼姆菲 → 6 位
-- **托米斯**（今羅馬尼亞康斯坦察）：安得烈傳道地（傳統）；#1 安得烈使徒 → #2 攸提其（戴克里先迫害殉道）→ #4 拜列陀（反亞流派）→ #6 第奧提姆一世（與奧利金學者通信）；9 位
-- **姆茨赫塔**（今喬治亞）：安得烈+西門奮銳黨傳道（傳統），4 世紀聖尼諾使國王米里安三世受洗；#1 約翰一世（凱撒利亞·萊昂提烏斯按立）→ #10 加比利爾一世（466 年起為 Catholicos-Patriarch）；10 位
-
-### 羅馬管轄 spine 下
-- **米蘭**：巴拿巴 50 年到米蘭傳道（傳統）；既有列表（#1 阿那多利 → #94 卡洛·博羅梅奧, 50-1584 AD）+ 新增 #-1 巴拿巴 為奠基者
-  - 注：米蘭採安波羅西禮傳統，**不**把巴拿巴算進主教編號內，這裡用 #-1 標記
-
-### 塞琉西亞-泰西封管轄 spine 下
-- **馬拉巴爾**（印度·喀拉拉邦）：多馬 52 年抵印度（傳統），於 Mylapore 殉道；#1 多馬使徒 → #4 馬爾·約安南（6 世紀古代東方教會委派）；4 位
-- 既有 **馬拉巴爾東正教（1912 建立）**：parent 是 敘利亞正教（不是 assyria）—— 反映 1912 年馬蘭卡拉聖座與敘利亞正教合一
-
-### 妥用慣例
-
-- 教座數字編號採傳統說法（撒該由彼得按立、巴拿巴米蘭奠基等），就算學界存疑也按教會傳統列；類同羅馬教宗列表把彼得算 #1
-- 殘缺 / 史料前段空白的部分（如埃奇米亞津 191-239 年）notes 註明即可，不要用 `status='傳說'` 把人別開
-- 對於兩種編號慣例並存的情況（米蘭：巴拿巴算 / 不算進主教列表），用負 succession_number 標傳統奠基者，正編號維持既有教會慣例
-
-## 既有 7 大 spine 的分裂處理現況
-
-### 羅馬 spine
-- 時序接續：未分裂教會 → 天主教（1054）
-- 旁支：**亞威農對立教宗線**（1378-1429，4 位 antipopes）、**比薩對立教宗線**（1409-1415，2 位 antipopes）— 西方大分裂兩條線
-- 旁支：**米蘭**（巴拿巴傳統奠基）+ 既有的歐美各天主教教區
-
-### 君士坦丁堡 spine
-- 時序接續：未分裂教會 → 東正教（1054）
-- 旁支 — 古代 / 中世紀自主教會：
-  - 保加利亞（split 870）、塞爾維亞（1219）、莫斯科·俄羅斯（1448）、姆茨赫塔·喬治亞（466）、塞浦路斯（431）
-- 旁支 — 19-21 世紀自主教會（全部 parent=君堡，split_year 已標）：
-  - 雅典·希臘（1833）、羅馬尼亞（1872）、波蘭（1924）、阿爾巴尼亞（1922）、捷克和斯洛伐克（1951）、美洲 OCA（1970）、Ohrid 北馬其頓（1967/2022）、烏克蘭 OCU（2019）
-- 旁支 — 自治（非完全自主）教會：
-  - 西奈山·聖凱瑟琳修道院（565/1575）、芬蘭（1923）、愛沙尼亞（1923）、日本（1970）、中國（1957）
-- 旁支 — 已廢/名義主教座：拉丁帝國時代的拉丁宗主教座；以弗所、士每拿等小亞細亞 7 教會；哥林多、托米斯等
-
-### 亞歷山卓 spine
-- 時序接續：未分裂教會 → 東正教
-- 並行對立（用 split_year 機制）：**科普特正教**（split_year=451，迦克墩會議後拒絕迦克墩派的非迦克墩派傳承）— 已修原本交錯 bug
-- 旁支：科普特天主教（1741）、拉丁禮亞歷山卓等
-- 科普特正教旁支（已建檔）：
-  - **聖安東尼修道院**（356 AD）— 史上第一座基督教修道院；5 位
-  - **聖帕科繆斯修道院**（320 AD）— 集體修道（Cenobitic）發源；4 位
-  - **聖瑪卡留斯修道院**（360 AD）— Wadi El Natrun 四大修道院之一；4 位
-  - **聖普旭瓦修道院**（340 AD）— Wadi El Natrun；現任宗主教塔瓦德羅斯二世曾任此修道院主教；3 位
-  - **東加王國教座**（580 AD）— 努比亞 Makuria 王國國教，1317 年伊斯蘭化後消失；5 位
-  - **法拉斯主教座**（543 AD）— 努比亞 Nobatia 王國，波蘭考古發掘出 27 任主教肖像壁畫；6 位
-- 衣索比亞東正教（1959 自治後 6 任 Patriarch 已補完）
-- 厄立特里亞東正教（1998 自治後 5 任 Patriarch 已補完）
-
-### 安提阿 spine
-- 時序接續：未分裂教會 → 東正教
-- 旁支（既有 episcopal_sees 子記錄）：馬龍尼特禮天主教、希臘麥勒基特禮、拉丁禮、敘利亞天主教、敘利亞正教（後者是 451 後非迦克墩派 / Jacobite 線）
-- 旁支：凱撒利亞·巴勒斯坦、凱撒利亞·卡帕多西亞、以弗所、塞浦路斯、大馬士革
-
-### 耶路撒冷 spine
-- 時序接續：未分裂教會 → 東正教
-- 旁支：拉丁禮耶路撒冷宗主教座（1099 十字軍後設立）、亞美尼亞正教耶路撒冷宗主教座等
-
-### 埃奇米亞津 spine
-- 主線：亞美尼亞使徒教會（單線，達太傳統 8 位 + 格利高爾續至今）
-- 旁支：**奇里乞亞 Catholicosate**（1293 split_year，今駐黎巴嫩 Antelias）
-- 旁支：**亞美尼亞天主教宗主教座**（1742 split_year，今駐黎巴嫩 Bzoummar）
-
-### 塞琉西亞-泰西封 spine
-- 主線：古代東方教會（從 280 帕帕一直接續至今）
-- rivalChurches（並行對立）：**東方教會-亞述**（1968 分裂，3 位現代 Catholicos）
-- 旁支：**馬拉巴爾**（多馬傳統，4 位古代主教）+ 既有 1912 馬蘭卡拉東正教（split_year 未設）
-- 馬拉巴爾線下的近代分裂：
-  - **敘利亞瑪拉巴爾天主教**（1599，10 位主教；Synod of Diamper 後納入羅馬）
-  - **馬爾托馬敘利亞教會**（1875，10 位；自敘利亞正教獨立的改革派支系）
-  - **敘利亞馬蘭卡拉天主教**（1930，4 位；Mar Ivanios 帶領歸羅馬）
-- 古代景教歷史諸座（已建檔）：
-  - **阿爾比 / 爾必勒**（104 AD，8 位）— 馬·阿達伊/馬·馬利傳統，最古老東方教會主教座
-  - **尼西比斯**（308 AD，5 位）— 神學學派中心；馬·巴爾·撒姆主導東方教會接受涅斯托利派
-  - **默夫**（410 AD，5 位）— 中亞景教樞紐，元朝極盛
-  - **撒馬爾罕**（498 AD，5 位）— 絲路景教大都會
-  - **長安·景教**（635 AD，4 位）— 唐代景教（阿羅本→景淨）
-  - **特里楚爾**（1907 AD，3 位）— 現代印度亞述派
-
-## split_year 機制（重要）
-
-當 `episcopal_sees.split_year` 設了之後，API 旁支 BFS 會：
-1. **過濾掉 `start_year < split_year` 的主教**（避免重複 spine 上的 pre-split 同人）
-2. **用 split_year 取代 founded_year** 作為旁支卡片顯示年份（更貼近用戶語義：「這條線是從何時分出來的」）
-3. **用 split_year 作 attach 點 Y**（分裂線從那一年的同期 spine 主教接出來）
-
-適用所有並行對立分支（科普特正教 451、奇里乞亞 1293、亞美尼亞天主教 1742、保加利亞 870 等）。
+要在其他教座加類似列表：DB 主教用 `succession_number = -N .. -1` 寫入，不需要改 SPINE_DEFS 或前端 code。
 
 ## 跨 spine 祝聖關係：church_teachings
 
-教座之間的「祝聖／教導」關係寫進 `church_teachings`。前端 SVG 用橘色實線 + 細邊（`#ea580c`）畫師徒線。若 institutional spine/branch 鏈已連通則略過（教座傳承 takes precedence over 教導）。
+教座之間的「祝聖／教導」關係寫進 `church_teachings`。前端 SVG 用橘色實線 + 細邊（`#ea580c`）畫師徒線。若 institutional spine/branch 鏈已連通則略過（教座傳承 takes precedence over 教導關係）。
 
-已建檔：
-- 萊昂提烏斯（凱撒利亞·卡帕多西亞 #4）→ 聖額我略·啟蒙者（埃奇米亞津 #1），302 年祝聖
-
-## 截圖工具
-
-[scripts/episcopal-shot.mjs](../../scripts/episcopal-shot.mjs)：headless 截圖
-- 預設 `--zoom 0.55` 看全使徒列
-- `--expand <branchId>` 展開某旁支
-- `--panX <dx>` 微調水平 pan
-- 因 Rome 有 261 任 pope，垂直高度 ~30000px，`--fit` 會把 zoom 縮到 4%，不實用——建議用 `--zoom 0.5` + `--panX` 看特定區域
-
-## 已修正的歷史錯誤紀錄
-
-- **#1 格利高爾的 appointed_by**：原寫「國王提里達底三世」（錯，國王是受洗者，不是任命者）→ 修為「凱撒利亞·萊昂提烏斯」
-- **assyria spine 兩派交錯**：原 `primaryChurches: ['古代東方教會', '東方教會（亞述）']` 把 1968 後並行的兩派合進同一條線按 succession_number 排序，#1帕帕（280）→ #1馬爾·丁哈（1976）→ #2示孟（329）→ #2馬爾·吉瓦吉斯（2015）交錯亂序 → 改用 `rivalChurches` 分開
-- **新教改革後大主教錯位**：`findBishopAtYear` 原本只用 see_zh 篩選候選人，當 daughter see 與 parent 同 see_zh 時（如 坎特伯里|英格蘭教會 從 坎特伯里|天主教 分支），會誤把 daughter 的 #1 主教（如 1533 Cranmer）當成 parent 在該年的當任，導致 attach Y 落到 parent header（597 AD 區域），結果 1500+ 的大主教排在最上面 → 加 `churchFilter` 參數，spine 用 primaryChurches，branch 只用該 branch 的 church
+例：萊昂提烏斯（凱撒利亞·卡帕多西亞 #4）→ 聖額我略·啟蒙者（埃奇米亞津 #1），302 年祝聖
 
 ## Layout 規格（前端 `EpiscopalSpineTree.vue`）
 
-- **七大宗主教按順序「平均分配」橫排**：不再 group by primary apostle，每個 spine 獨立 slot（SPINE_BETWEEN_GAP=36）
+- **七大宗主教按順序「平均分配」橫排**：每個 spine 獨立 slot（SPINE_BETWEEN_GAP=36），不按 primary apostle group
 - **16 使徒平均分配**橫排在 spine 之上（APO_HG=20）
-- **預設所有 branch 都收起來**：使用者按 ▸ 才一個個展開（watch `props.graph` 寫滿 `collapsedBranches` Set）
-- **預設 zoom = fit-to-width**（不 fit-to-height，因為 rome 261 任主教 ≈ 30000px 高會壓到 3%）
-- **Spine 主線 opacity = 0.55**（之前 0.10 太淡看不到主教傳承）；451/410/484 後加粗（width 10）強化「宗主教座成立」
-- **每個 spine 至少預留 1 個 branch slot 寬度**，防止 collapsed branch headers 溢出到下一個 spine 領域
+- **預設所有 branch 收起來**：使用者按 ▸ 才一個個展開（watch `props.graph` 寫滿 `collapsedBranches` Set）
+- **預設 zoom = fit-to-width**：rome 261 任主教 ≈ 30000px 高，fit-to-height 會壓到 3% 不可讀
+- **Spine 主線 opacity = 0.55**（之前 0.10 看不到傳承）；patriarchateYear 後加粗（width 10）強化「宗主教座成立」
+- **每個 spine 至少預留 1 個 branch slot 寬度**，避免 collapsed branch headers 溢出到下一個 spine 領域
+
+## 截圖工具
+
+[scripts/episcopal-shot.mjs](../../scripts/episcopal-shot.mjs) — headless：
+- 預設 1800×1200 viewport（**勿超 2000px，會炸 session**）
+- `--zoom 0.55` 看全圖縮覽；`--zoom 1.0` 看細節
+- `--expand <branchId>` 展開某旁支
+- `--panX <dx>` 微調水平 pan
+- 環境變數 `APP_BASE`（dev server port）
+
+## 教座清單
+
+DB 是 source of truth。截至最近紀錄：**7 大 spine + 127 旁支教座**。
+- 主要傳承群：羅馬（西方大分裂對立教宗、米蘭、歐美天主教教區）、君士坦丁堡（古代/中世紀/19-21 世紀自主與自治教會、小亞細亞 7 教會、姆茨赫塔喬治亞）、亞歷山卓（科普特正教含 4 大修道院 + 努比亞古代教座、衣索比亞、厄立特里亞）、安提阿（馬龍尼特、麥勒基特、敘利亞正教、凱撒利亞·巴勒斯坦/卡帕多西亞、以弗所、塞浦路斯、大馬士革）、耶路撒冷（拉丁禮、亞美尼亞耶城）、埃奇米亞津（奇里乞亞、亞美尼亞天主教）、塞琉西亞-泰西封（古代東方 + 亞述派 rival + 馬拉巴爾系列 + 古代景教阿爾比/尼西比斯/默夫/撒馬爾罕/長安）
+- 新教改革後：聖公宗（坎特伯里→各國 Province）、信義宗（北歐 + 各國）、衛理宗（巴爾的摩→各國分支）
+
+查清單直接 `SELECT see_zh, church, tradition, founded_year, split_year FROM episcopal_sees ORDER BY founded_year`。
