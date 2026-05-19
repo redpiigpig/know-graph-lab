@@ -31,6 +31,13 @@ import argparse, json, sys, time, urllib.parse
 from pathlib import Path
 import requests
 
+# Windows console default cp950 cannot print CJK ── force UTF-8 stdout
+try:
+    sys.stdout.reconfigure(encoding='utf-8')  # type: ignore[attr-defined]
+    sys.stderr.reconfigure(encoding='utf-8')  # type: ignore[attr-defined]
+except Exception:
+    pass
+
 ROOT = Path(__file__).resolve().parent.parent
 ENV = {}
 for line in (ROOT / '.env').read_text(encoding='utf-8').splitlines():
