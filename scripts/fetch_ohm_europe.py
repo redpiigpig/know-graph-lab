@@ -72,6 +72,43 @@ EMPIRES = [
     ("Soviet Union",                "Soviet Union",                       "蘇聯"),
     # --- 鄂圖曼（含部分歐洲領土）---
     ("دولتْ علیّه عثمانیّه",         "Ottoman Empire",                     "鄂圖曼"),
+    # ============================================================
+    # A 級：非歐洲歷史政體（OHM 用母語名所以之前漏掉）
+    # ============================================================
+    # 中亞／東亞
+    ("Mongol Empire",               "Mongol Empire",                      "蒙古帝國"),
+    ("大淸 ᡩᠠᡳ᠌ᠴᡳᠩ ᡤᡠᡵᡠᠨ",            "Manchu Empire",                      "大清"),
+    ("고려",                         "Goryeo",                             "高麗"),
+    ("大日本帝国",                    "Empire of Japan",                    "大日本帝國"),
+    ("大越",                         "Đại Việt",                           "大越"),
+    # 伊斯蘭中世紀
+    ("الْخِلَافَة الْعَبَّاسِيَّة",  "Abbasid Caliphate",                  "阿拔斯哈里發"),
+    ("الخلافة الفاطمیّة",            "Fatimid Caliphate",                  "法蒂瑪哈里發"),
+    # 美洲
+    ("Nueva España",                "New Spain",                          "新西班牙"),
+    # United States — OHM 52 polys 但 out geom; response 130+ MB JSON parse fail
+    # 暫跳過；source historical-states.geojson 已有 US 21 polys (1815-2010) 涵蓋
+    # ("United States",               "United States",                      "美國"),
+    ("Mutul",                       "Mutul",                              "馬雅穆圖爾"),
+    ("Kaanu'l Ajawlel",             "Kaan Dynasty",                       "馬雅卡安王朝"),
+    # ============================================================
+    # B 級：中世紀漏掉的歐洲＋亞洲政體
+    # ============================================================
+    # 對齊 historical-states.geojson 既有名稱（避免重複 polygon 並排）
+    ("Qart-ḥadašt",                  "Carthage",                           "迦太基"),
+    ("Rìoghachd na h-Alba",          "Scotland",                           "蘇格蘭王國"),
+    ("Noregsveldi",                  "Kingdom of Norway",                  "古挪威王國"),
+    ("Reino de Portugal",            "Kingdom of Portugal",                "葡萄牙王國"),
+    ("Regnum Hungariae",             "Kingdom of Hungary",                 "中世紀匈牙利"),
+    ("Regnum Neapolitanum",          "Naples",                             "那不勒斯王國"),
+    ("Великое княжество Московское","Grand Duchy of Moscow",              "莫斯科大公國"),
+    ("مملكة غرناطة",                  "Granada",                            "格拉納達酋長國"),
+    ("Francia occidentalis",         "West Francia",                       "西法蘭克"),
+    ("Brandenburg-Preußen",          "Brandenburg-Prussia",                "布蘭登堡-普魯士"),
+    ("Reino d'Aragón",               "Aragon",                             "早期阿拉貢"),
+    ("Company Raj",                  "British East India Company",         "東印度公司印度"),
+    ("British Raj",                  "British Raj",                        "英屬印度"),
+    ("Nouvelle-France",              "New France",                         "新法蘭西"),
 ]
 
 # HRE admin_level=3 Imperial Circles (Reichskreise) — 補 HRE 中世紀後期 OHM gap
@@ -102,7 +139,7 @@ def overpass_query(query: str, retries: int = 3) -> dict:
         try:
             req = urllib.request.Request(OVERPASS_URL, data=data, method="POST",
                                          headers={"User-Agent": "know-graph-lab/1.0"})
-            with urllib.request.urlopen(req, timeout=120) as resp:
+            with urllib.request.urlopen(req, timeout=300) as resp:
                 return json.load(resp)
         except (urllib.error.URLError, TimeoutError) as e:
             wait = 5 * (attempt + 1)
@@ -112,10 +149,15 @@ def overpass_query(query: str, retries: int = 3) -> dict:
 
 
 def fetch_empire_relations(ohm_name: str, admin_level: str = "2") -> list:
-    """Fetch all relations matching this OHM name with full geometry."""
-    q = (
-        '[out:json][timeout:120];'
-        f'relation["type"="boundary"]["admin_level"="{admin_level}"]["name"={json.dumps(ohm_name, ensure_ascii=False)}];'
+    """Fetch all relations matching this OHM name with full geometry.
+
+    Big polygons (e.g. United States) can blow up the single out-geom; if
+    the all-at-once fetch fails, fall back to fetching each relation by ID.
+    """
+    name_q = json.dumps(ohm_name, ensure_ascii=False)
+    q_all = (
+        '[out:json][timeout:180];'
+        f'relation["type"="boundary"]["admin_level"="{admin_level}"]["name"={name_q}];'
         'out geom;'
     )
     cache = CACHE_DIR / f"al{admin_level}_{ohm_name.replace('/', '_')}.json"
@@ -126,7 +168,35 @@ def fetch_empire_relations(ohm_name: str, admin_level: str = "2") -> list:
         except Exception:
             pass
     print(f"  → fetching {ohm_name} (al={admin_level})…")
-    data = overpass_query(q)
+    try:
+        data = overpass_query(q_all)
+    except Exception as e:
+        print(f"  ⚠ all-at-once failed ({e}); falling back to per-relation fetch")
+        data = None
+    if data is None:
+        # Get IDs first then fetch each individually
+        q_ids = (
+            '[out:json][timeout:60];'
+            f'relation["type"="boundary"]["admin_level"="{admin_level}"]["name"={name_q}];'
+            'out ids;'
+        )
+        try:
+            ids_data = overpass_query(q_ids)
+        except Exception as e:
+            print(f"  ❌ id fetch failed: {e}")
+            return []
+        rel_ids = [e["id"] for e in ids_data.get("elements", []) if e.get("type") == "relation"]
+        print(f"  → fetching {len(rel_ids)} relations one by one…")
+        all_elements = []
+        for rid in rel_ids:
+            q_one = f'[out:json][timeout:120];relation({rid});out geom;'
+            try:
+                one_data = overpass_query(q_one)
+                all_elements.extend(one_data.get("elements", []))
+                time.sleep(2)
+            except Exception as e:
+                print(f"  ⚠ rel {rid} failed: {e}; skipping")
+        data = {"elements": all_elements}
     with open(cache, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False)
     return data.get("elements", [])
@@ -268,9 +338,10 @@ def relation_to_features(rel: dict, polygon_name: str, name_zh: str) -> list:
     outer_rings = [simplify_ring(r, EPSILON) for r in outer_rings]
     inner_rings = [simplify_ring(r, EPSILON) for r in inner_rings]
 
-    # Drop tiny rings (小島／拼接殘片，帝國尺度不可見）— abs area < 0.5 sq-deg
-    outer_rings = [r for r in outer_rings if abs(signed_area(r)) > 0.5]
-    inner_rings = [r for r in inner_rings if abs(signed_area(r)) > 0.5]
+    # Drop tiny rings (小島／拼接殘片）— abs area < 0.05 sq-deg
+    # 0.05 sq-deg ~ 600 km² 在赤道；夠小到不會看見的島嶼會被丟掉，但保留馬雅城邦尺度
+    outer_rings = [r for r in outer_rings if abs(signed_area(r)) > 0.05]
+    inner_rings = [r for r in inner_rings if abs(signed_area(r)) > 0.05]
     if not outer_rings:
         return []
 
