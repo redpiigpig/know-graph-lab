@@ -96,11 +96,10 @@ python scripts/classify_photos.py execute
 | 來源 | 處理方式 |
 |---|---|
 | `{YEAR}相片/<file>`（散檔）| 全分類搬到對應 bucket |
-| `{YEAR}相片/{YEAR}.MM/<file>`（2014-2022 月份內）| 只抽**高信心** screenshot/download，照片留在月份 |
-| `{YEAR}相片/{YEAR}.MM/<file>`（2023+）| 不掃 |
+| `{YEAR}相片/{YEAR}.MM/<file>`（2014-2026 月份內）| 只抽**高信心** screenshot/download，照片留在月份 |
 | `{YEAR}相片/<事件夾>/<file>` | 永遠不動 |
 
-> **`SCAN_MONTH_SUBDIR_YEARS = {2014..2022}`** — 如果之後 2023+ 也要清理，改這個 set 即可。
+> **`SCAN_MONTH_SUBDIR_YEARS = {2014..2026}`**（[classify_photos.py:213](../../../scripts/classify_photos.py#L213)）。月份內過濾只搬高信心結果（screenshot via UserComment / 檔名前綴 / WEBP/GIF/AVIF 明確 download），中／低信心不動 → 全年範圍開啟也安全。2026-05-19 從 {2014..2022} 擴到 {2014..2026}，連同一次性 fix 440 個 iPhone screenshot 從 2023-2024 月份夾遷出。
 
 ### 分類規則（依序）
 

@@ -210,7 +210,9 @@ def plan_target(file_path: Path, year_folder: str, info: dict) -> tuple[Path, st
 
 
 # 哪些年份要掃 YYYY.MM 月份子資料夾，挑出混進去的截圖／下載
-SCAN_MONTH_SUBDIR_YEARS = {str(y) for y in range(2014, 2023)}  # 2014..2022
+# 月份內過濾只搬「高信心」結果（screenshot via UserComment / 檔名前綴 / WEBP/GIF/AVIF
+# 等明確 download 型），所以全年範圍開啟亦安全。
+SCAN_MONTH_SUBDIR_YEARS = {str(y) for y in range(2014, 2027)}  # 2014..2026
 
 
 def collect_plan():
