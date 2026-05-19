@@ -211,7 +211,22 @@ API 對主教排序的順序：
 
 ## 教座清單與名單匯出
 
-DB 是 source of truth。截至最新：**7 大 spine + ~335 旁支教座**（含 28 使徒立座、38 個 is_split 分裂分支）。
+DB 是 source of truth。截至最新（2026-05-19）：**7 大 spine + 387 旁支教座 / 5,401 主教**（含 28 使徒立座、38+ 個 is_split 分裂分支）。
+
+**最近補完項目（2026-05-19）**：
+- 古代教父教座：希波（奧古斯丁）、尼撒、拿先斯、希拉波利斯（帕皮亞）、安卡拉、居勒拿、居魯士（提奧多禮）、摩普綏厄斯提亞（提奧多）、埃德薩（Ibas）
+- Catholic 中世紀/近世：阿維尼翁、馬賽、巴塞爾、比薩、蒙特卡西諾、維洛納、帕多瓦、雷根斯堡（大阿爾伯特）、馬德堡、沃姆斯、斯特拉斯堡、烏茲堡、科爾多瓦（何西烏斯）、薩拉曼卡、錫耶納
+- Orthodox：諾夫哥羅德、弗拉基米爾、托博爾斯克、喀山、佩奇（聖薩瓦）、奧赫里德古代、普雷斯拉夫、加沙、特拉布宗、赫爾松、波羅茨克
+- Oriental/Assyrian：巴格達加色丁、巴士拉、泉州（元代景教）、科欽、霍姆斯
+- Anglican Reformers：倫敦（Ridley）、達勒姆（Cosin）、溫徹斯特（Andrewes）、索爾茲伯里（Jewel）、烏斯特（Latimer）、林肯（Grosseteste）、伊利、羅徹斯特（Fisher）、聖大衛、新加坡、拉各斯
+- 台灣天主教 7 個教區（台北總教區/高雄/台中/台南/嘉義/新竹/花蓮）+ 台灣聖公會
+- 4 個拉丁禮宗主教座（耶路撒冷、安提阿、君堡、亞歷山卓）補完歷代主教鏈
+- 西奈山自治大主教 22 任、Cilicia 亞美尼亞使徒/天主教雙線
+- 刪除 2 個亞美尼亞正教 duplicate 0 任記錄
+
+剩餘 2 個 audit warning 屬歷史事實（比薩對立教宗線 1409-1415 只 2 任、亞述派 1968 後分裂只 4 任 Catholici）。
+
+SQL 補丁批檔：[database/episcopal-fill-phase1.sql](../../database/episcopal-fill-phase1.sql) 至 [phase8.sql](../../database/episcopal-fill-phase8.sql)，依序刪除→補完→新增。
 
 跑 `node scripts/episcopal-audit-export.mjs` 重新生成兩份 txt：
 - `episcopal-sees-337.txt`：每個教座 + 完整按立軌跡鏈（耶穌→使徒/spine→...→自己）+ 標記類型（★宗主教/☆使徒立座/○旁支）
