@@ -3,7 +3,7 @@
 
     <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
       <div class="max-w-5xl mx-auto px-6 h-14 flex items-center gap-4">
-        <NuxtLink to="/writing" class="text-gray-400 hover:text-gray-700 transition text-sm">← 論文寫作系統</NuxtLink>
+        <NuxtLink to="/writing/degrees" class="text-gray-400 hover:text-gray-700 transition text-sm">← 學位論文</NuxtLink>
         <span class="text-gray-200">|</span>
         <span class="text-sm font-medium text-gray-700">學士論文線上版</span>
       </div>

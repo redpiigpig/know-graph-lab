@@ -1,23 +1,55 @@
 <template>
-  <div class="min-h-screen bg-slate-50">
+  <div :class="['min-h-screen', isEditorial ? 'bg-amber-50/40' : 'bg-slate-50']">
 
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
-      <div class="max-w-3xl mx-auto px-6 h-14 flex items-center gap-4">
-        <NuxtLink to="/papers" class="text-gray-400 hover:text-gray-700 transition text-sm">← 學術著作目錄</NuxtLink>
+    <nav :class="['border-b sticky top-0 z-40', isEditorial ? 'bg-orange-700 border-orange-800' : 'bg-white border-gray-200']">
+      <div class="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
+        <NuxtLink
+          :to="isEditorial ? '/papers?type=editorial' : '/papers'"
+          :class="['transition text-sm', isEditorial ? 'text-orange-100 hover:text-white' : 'text-gray-400 hover:text-gray-700']"
+        >← {{ isEditorial ? '報紙社論' : '學術著作目錄' }}</NuxtLink>
+        <a
+          v-if="isEditorial && editorialMeta?.originalUrl"
+          :href="editorialMeta.originalUrl" target="_blank" rel="noopener"
+          class="text-xs font-medium text-orange-100 hover:text-white bg-orange-800/40 hover:bg-orange-800 px-3 py-1.5 rounded transition"
+        >查看 tcnn.org.tw 原文 →</a>
       </div>
     </nav>
+
+    <!-- 報紙抬頭（社論專用） -->
+    <div v-if="isEditorial && editorialMeta" class="bg-white border-b-4 border-double border-orange-700">
+      <div class="max-w-3xl mx-auto px-6 py-5 flex items-end justify-between">
+        <div>
+          <div class="text-[11px] tracking-[0.3em] text-orange-700 mb-1">TAIWAN CHURCH NEWS</div>
+          <div class="text-2xl font-bold text-orange-800" style="font-family: '標楷體', 'DFKai-SB', 'BiauKai', 'KaiTi', serif">{{ editorialMeta.venue }}</div>
+        </div>
+        <div class="text-right text-xs text-gray-500 leading-relaxed">
+          <div>第 <span class="font-semibold text-gray-800">{{ editorialMeta.issue }}</span> 期</div>
+          <div>{{ editorialMeta.date }}</div>
+        </div>
+      </div>
+    </div>
 
     <div class="max-w-3xl mx-auto px-6 py-10">
       <div v-if="pending" class="text-center text-gray-400 py-20 text-sm">載入中…</div>
       <div v-else-if="error" class="text-center text-red-400 py-20 text-sm">無法載入全文</div>
-      <article v-else class="bg-white rounded-2xl border border-gray-100 px-10 py-12 md:px-16">
+      <article
+        v-else
+        :class="[
+          'bg-white rounded-2xl border px-10 py-12 md:px-16',
+          isEditorial ? 'border-orange-100 shadow-sm editorial-article' : 'border-gray-100'
+        ]"
+      >
         <template v-for="(line, idx) in parsedLines" :key="idx">
           <!-- 標題 -->
           <h1 v-if="line.type === 'title'"
-            class="text-xl font-bold text-gray-900 text-center leading-snug mb-2">{{ line.text }}</h1>
-          <!-- 作者、機構、期刊、日期等元資料 -->
+            :class="isEditorial
+              ? 'text-3xl font-bold text-gray-900 text-center leading-snug mb-3 editorial-title'
+              : 'text-xl font-bold text-gray-900 text-center leading-snug mb-2'">{{ line.text }}</h1>
+          <!-- 作者、機構、期刊、日期等元資料（社論模式由抬頭顯示，這邊只留作者署名） -->
           <p v-else-if="line.type === 'meta'"
-            class="text-sm text-gray-500 text-center leading-snug mb-0.5">{{ line.text }}</p>
+            :class="isEditorial
+              ? (line.text === '張辰瑋' ? 'text-sm text-gray-600 text-center leading-snug mb-6 italic' : 'hidden')
+              : 'text-sm text-gray-500 text-center leading-snug mb-0.5'">{{ line.text }}</p>
           <!-- 摘要 / Abstract 標籤 -->
           <div v-else-if="line.type === 'abstract-label'"
             class="text-sm font-bold text-gray-900 text-center mt-7 mb-2">{{ line.text }}</div>
@@ -56,6 +88,17 @@
             class="text-sm leading-7 text-gray-800 mb-4 indent-[2em]"
             v-html="inline(line.text)"></p>
         </template>
+
+        <!-- 社論結尾：原文連結 -->
+        <div v-if="isEditorial && editorialMeta?.originalUrl" class="mt-10 pt-6 border-t border-double border-orange-200 text-center">
+          <a
+            :href="editorialMeta.originalUrl" target="_blank" rel="noopener"
+            class="inline-flex items-center gap-2 text-xs text-orange-700 hover:text-orange-900 font-medium px-4 py-2 rounded-full bg-orange-50 hover:bg-orange-100 transition"
+          >
+            <span>原文刊於 {{ editorialMeta.venue }} 第 {{ editorialMeta.issue }} 期</span>
+            <span>→</span>
+          </a>
+        </div>
       </article>
     </div>
 
@@ -64,6 +107,20 @@
 
 <script setup lang="ts">
 const route = useRoute()
+
+const EDITORIAL_META: Record<string, { venue: string; issue: string; date: string; originalUrl: string }> = {
+  e1: { venue: '台灣教會公報', issue: '3473', date: '2018 年 9 月 21 日', originalUrl: 'https://tcnn.org.tw/archives/42359' },
+  e2: { venue: '台灣教會公報', issue: '3471', date: '2018 年 9 月 7 日', originalUrl: 'https://tcnn.org.tw/archives/20975' },
+  e3: { venue: '台灣教會公報', issue: '3435', date: '2017 年 12 月 26 日', originalUrl: 'https://tcnn.org.tw/archives/30630' },
+}
+
+const isEditorial = computed(() => {
+  const id = String(route.params.id || '')
+  return /^e\d+$/.test(id)
+})
+const editorialMeta = computed(() =>
+  isEditorial.value ? EDITORIAL_META[String(route.params.id)] : null
+)
 
 const { data, pending, error } = useFetch(
   () => `/content/papers/${route.params.id}.txt`,
@@ -185,3 +242,15 @@ function inline(text: string): string {
   )
 }
 </script>
+
+<style scoped>
+.editorial-title {
+  font-family: '標楷體', 'DFKai-SB', 'BiauKai', 'KaiTi', serif;
+  letter-spacing: 0.05em;
+}
+.editorial-article :deep(p.indent-\[2em\]) {
+  font-size: 0.95rem;
+  line-height: 1.95;
+  color: #1f2937;
+}
+</style>

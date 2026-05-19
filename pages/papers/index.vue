@@ -3,9 +3,9 @@
 
     <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
       <div class="max-w-5xl mx-auto px-6 h-14 flex items-center gap-4">
-        <NuxtLink to="/writing" class="text-gray-400 hover:text-gray-700 transition text-sm">← 論文寫作系統</NuxtLink>
+        <NuxtLink to="/writing" class="text-gray-400 hover:text-gray-700 transition text-sm">← 學術活動紀錄</NuxtLink>
         <span class="text-gray-200">|</span>
-        <span class="text-sm font-medium text-gray-700">學術著作目錄</span>
+        <span class="text-sm font-medium text-gray-700">{{ pageTitle }}</span>
       </div>
     </nav>
 
@@ -13,14 +13,14 @@
     <div class="bg-white border-b border-gray-100">
       <div class="max-w-5xl mx-auto px-6 py-10">
         <div class="flex items-center gap-2 mb-3">
-          <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-teal-100 text-teal-700">學術著作目錄</span>
+          <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-teal-100 text-teal-700">{{ pageTitle }}</span>
           <span class="text-xs text-gray-400">張辰瑋</span>
         </div>
-        <h1 class="text-xl font-bold text-gray-900 mb-4">期刊論文 · 會議論文 · 報紙社論</h1>
+        <h1 class="text-xl font-bold text-gray-900 mb-4">{{ pageHeadline }}</h1>
         <div class="flex flex-wrap gap-x-6 gap-y-1.5 text-sm text-gray-500">
-          <span><span class="font-semibold text-gray-800">{{ journals.length }}</span> 篇期刊論文</span>
-          <span><span class="font-semibold text-gray-800">{{ conferences.length }}</span> 篇會議論文</span>
-          <span><span class="font-semibold text-gray-800">{{ editorials.length }}</span> 篇報紙社論</span>
+          <span v-if="active === 'all' || active === 'journal'"><span class="font-semibold text-gray-800">{{ journals.length }}</span> 篇期刊論文</span>
+          <span v-if="active === 'all' || active === 'conference'"><span class="font-semibold text-gray-800">{{ conferences.length }}</span> 篇會議論文</span>
+          <span v-if="active === 'all' || active === 'editorial'"><span class="font-semibold text-gray-800">{{ editorials.length }}</span> 篇報紙社論</span>
         </div>
       </div>
     </div>
@@ -102,25 +102,42 @@
       <!-- 報紙社論 -->
       <section v-if="active === 'all' || active === 'editorial'">
         <h2 v-if="active === 'all'" class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">報紙社論</h2>
-        <div class="space-y-3">
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <div
             v-for="p in editorials" :key="p.id"
-            @click="() => p.hasText && navigateTo(`/papers/${p.id}`)"
-            :class="['bg-white rounded-2xl border border-gray-100 p-5 transition-all',
-              p.hasText ? 'cursor-pointer hover:border-teal-200 hover:shadow-sm' : 'hover:border-gray-200']"
+            class="group relative bg-white rounded-xl border border-orange-100 overflow-hidden transition-all hover:border-orange-300 hover:shadow-md flex flex-col"
           >
-            <div class="flex-1 min-w-0">
-              <div class="flex flex-wrap gap-1.5 mb-2">
-                <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-orange-50 text-orange-700">報紙社論</span>
-                <span v-if="p.hasText" class="text-xs font-medium px-2 py-0.5 rounded-full bg-teal-50 text-teal-700">全文</span>
-              </div>
-              <h3 class="text-sm font-semibold text-gray-900 leading-snug mb-2">{{ p.title }}</h3>
-              <div class="flex flex-wrap gap-x-6 gap-y-0.5 text-xs text-gray-500">
-                <span><span class="text-gray-400">報紙　</span>{{ p.venue }}</span>
-                <span><span class="text-gray-400">期次　</span>第 {{ p.issue }} 期</span>
-                <span><span class="text-gray-400">日期　</span>{{ p.date }}</span>
+            <!-- 報紙抬頭條 -->
+            <div class="bg-gradient-to-r from-orange-50 to-amber-50 border-b border-orange-100 px-4 py-2 flex items-center justify-between text-[11px]">
+              <span class="font-semibold text-orange-800 tracking-wider">{{ p.venue }}</span>
+              <span class="text-orange-600">第 {{ p.issue }} 期</span>
+            </div>
+
+            <!-- 內容 -->
+            <div
+              @click="() => p.hasText && navigateTo(`/papers/${p.id}`)"
+              :class="['flex-1 px-5 py-4 flex flex-col', p.hasText ? 'cursor-pointer' : '']"
+            >
+              <h3
+                class="font-bold text-gray-900 leading-tight mb-3 group-hover:text-orange-700 transition"
+                style="font-family: '標楷體', 'DFKai-SB', 'BiauKai', 'KaiTi', serif; font-size: 1.05rem"
+              >{{ p.title }}</h3>
+              <div class="text-xs text-gray-500 mb-3">{{ p.date }}</div>
+              <div class="mt-auto flex items-center gap-2 pt-2 border-t border-dashed border-gray-200">
+                <span v-if="p.hasText" class="text-[10px] font-medium px-1.5 py-0.5 rounded bg-teal-50 text-teal-700">全文</span>
+                <span class="text-[10px] font-medium px-1.5 py-0.5 rounded bg-orange-50 text-orange-700">社論</span>
               </div>
             </div>
+
+            <!-- 原文連結 -->
+            <a
+              v-if="p.originalUrl"
+              :href="p.originalUrl" target="_blank" rel="noopener"
+              @click.stop
+              class="block bg-orange-700 hover:bg-orange-800 text-white text-center text-xs font-medium py-2 transition"
+            >
+              查看 tcnn.org.tw 原文 →
+            </a>
           </div>
         </div>
       </section>
@@ -130,15 +147,30 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: '學術著作目錄 — 張辰瑋' })
-
-const active = ref('all')
+const route = useRoute()
 const filters = [
   { id: 'all', label: '全部' },
   { id: 'journal', label: '期刊論文' },
   { id: 'conference', label: '會議論文' },
   { id: 'editorial', label: '報紙社論' },
 ]
+const initialType = (() => {
+  const t = (route.query.type as string) || ''
+  return ['journal', 'conference', 'editorial'].includes(t) ? t : 'all'
+})()
+const active = ref(initialType)
+
+const pageTitle = computed(() => {
+  const f = filters.find(f => f.id === active.value)
+  return active.value === 'all' ? '學術著作目錄' : (f?.label ?? '學術著作目錄')
+})
+const pageHeadline = computed(() => {
+  if (active.value === 'journal') return '期刊論文'
+  if (active.value === 'conference') return '研討會論文'
+  if (active.value === 'editorial') return '報紙社論'
+  return '期刊論文 · 會議論文 · 報紙社論'
+})
+useHead({ title: () => `${pageTitle.value} — 張辰瑋` })
 
 type Status = 'published' | 'review' | 'upcoming'
 
@@ -151,7 +183,8 @@ interface ConferencePaper {
   date: string; status: Status; hasText?: boolean; bilingual?: boolean
 }
 interface EditorialPaper {
-  id: string; title: string; venue: string; issue: string; date: string; hasText?: boolean
+  id: string; title: string; venue: string; issue: string; date: string
+  hasText?: boolean; originalUrl?: string
 }
 
 const journals: JournalPaper[] = [
@@ -289,9 +322,9 @@ const conferences: ConferencePaper[] = [
 ]
 
 const editorials: EditorialPaper[] = [
-  { id: 'e1', title: '自由派究竟是什麼？', venue: '台灣教會公報', issue: '3473', date: '2018 年 9 月 21 日', hasText: true },
-  { id: 'e2', title: '中產階級的講台', venue: '台灣教會公報', issue: '3471', date: '2018 年 9 月 7 日', hasText: true },
-  { id: 'e3', title: '盡智', venue: '台灣教會公報', issue: '3435', date: '2017 年 12 月 26 日', hasText: true },
+  { id: 'e1', title: '自由派究竟是什麼？', venue: '台灣教會公報', issue: '3473', date: '2018 年 9 月 21 日', hasText: true, originalUrl: 'https://tcnn.org.tw/archives/42359' },
+  { id: 'e2', title: '中產階級的講台', venue: '台灣教會公報', issue: '3471', date: '2018 年 9 月 7 日', hasText: true, originalUrl: 'https://tcnn.org.tw/archives/20975' },
+  { id: 'e3', title: '盡智', venue: '台灣教會公報', issue: '3435', date: '2017 年 12 月 26 日', hasText: true, originalUrl: 'https://tcnn.org.tw/archives/30630' },
 ]
 
 function statusStyle(status: Status) {

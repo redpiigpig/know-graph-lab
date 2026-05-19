@@ -37,12 +37,12 @@
           <span class="tool-badge bg-violet-50 text-violet-600">可用</span>
         </NuxtLink>
 
-        <!-- 論文寫作系統 -->
+        <!-- 學術活動紀錄 -->
         <NuxtLink :to="user ? '/writing' : '/login'" class="tool-card group border-purple-100 hover:border-purple-300 hover:shadow-purple-100">
           <div class="tool-icon bg-purple-50 text-purple-600">✍️</div>
           <div class="flex-1">
-            <h2 class="tool-title">論文寫作系統</h2>
-            <p class="tool-desc">碩士論文、學士論文、會議與期刊論文、口述訪談線上閱讀</p>
+            <h2 class="tool-title">學術活動紀錄</h2>
+            <p class="tool-desc">學位論文、期刊與研討會論文、報紙社論、演講活動、學術履歷</p>
           </div>
           <span class="tool-badge bg-purple-50 text-purple-600">可用</span>
         </NuxtLink>
