@@ -387,39 +387,59 @@ def _haiku_parse_response(text: str, page_numbers: list) -> list:
 
 def _haiku_ocr_book(haiku_client, src_path: Path) -> list:
     import base64
+    import sys as _sys
     doc = _fitz.open(src_path)
     total = len(doc)
+    print(f"\n    [haiku] {total} pages, batching {_HAIKU_PAGES_PER_BATCH}/call",
+          flush=True)
     all_chunks = []
-    for batch_start in range(0, total, _HAIKU_PAGES_PER_BATCH):
+    n_batches = (total + _HAIKU_PAGES_PER_BATCH - 1) // _HAIKU_PAGES_PER_BATCH
+    t_book_start = time.time()
+    for bi, batch_start in enumerate(range(0, total, _HAIKU_PAGES_PER_BATCH), 1):
         batch_end = min(batch_start + _HAIKU_PAGES_PER_BATCH, total)
         page_indices = list(range(batch_start, batch_end))
         page_numbers = [i + 1 for i in page_indices]
+        t_b = time.time()
         content = []
         for pi in page_indices:
             img_bytes, media_type = _haiku_render_page(doc, pi)
             b64 = base64.standard_b64encode(img_bytes).decode()
             content.append({"type": "image", "source": {"type": "base64", "media_type": media_type, "data": b64}})
+        t_render = time.time() - t_b
         prompt = _HAIKU_BATCH_PROMPT.format(
             first=page_numbers[0],
             next=page_numbers[1] if len(page_numbers) > 1 else page_numbers[0] + 1,
         )
         content.append({"type": "text", "text": prompt})
+        t_api = time.time()
         resp = haiku_client.messages.create(
             model=_HAIKU_MODEL,
             max_tokens=4096,
             messages=[{"role": "user", "content": content}],
         )
+        t_api_dur = time.time() - t_api
         batch_text = resp.content[0].text if resp.content else ""
-        all_chunks.extend(_haiku_parse_response(batch_text, page_numbers))
+        chunks = _haiku_parse_response(batch_text, page_numbers)
+        all_chunks.extend(chunks)
+        elapsed = time.time() - t_book_start
+        eta = (elapsed / bi) * (n_batches - bi) if bi else 0
+        print(f"    [haiku] batch {bi}/{n_batches} pp{page_numbers[0]}-{page_numbers[-1]} "
+              f"render={t_render:.1f}s api={t_api_dur:.1f}s pages={len(chunks)} "
+              f"elapsed={elapsed/60:.1f}m eta={eta/60:.1f}m",
+              flush=True)
     doc.close()
     return all_chunks
 
 
 def _make_anthropic_client():
-    """Create anthropic.Anthropic using API key or Claude Code's OAuth token (whichever is available)."""
+    """Create anthropic.Anthropic using API key or Claude Code's OAuth token (whichever is available).
+
+    10-min timeout + 2 retries — without timeout SDK hangs indefinitely on stuck socket,
+    OCR run becomes zombie burning RAM (踩過坑 2026-05-19，batch 36 卡 7+ hours)."""
+    common_kwargs = {"timeout": 600.0, "max_retries": 2}
     api_key = ENV.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_API_KEY")
     if api_key:
-        return _anthropic.Anthropic(api_key=api_key)
+        return _anthropic.Anthropic(api_key=api_key, **common_kwargs)
 
     # Fall back to Claude Code's stored OAuth token
     cred_path = Path(os.environ.get("USERPROFILE", os.environ.get("HOME", ""))) / ".claude" / ".credentials.json"
@@ -429,7 +449,7 @@ def _make_anthropic_client():
                 creds = json.load(f)
             token = creds.get("claudeAiOauth", {}).get("accessToken", "")
             if token:
-                return _anthropic.Anthropic(auth_token=token)
+                return _anthropic.Anthropic(auth_token=token, **common_kwargs)
         except Exception:
             pass
 
