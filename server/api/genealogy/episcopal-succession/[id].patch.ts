@@ -4,7 +4,7 @@ export default defineEventHandler(async (event) => {
   const id = getRouterParam(event, 'id')
   const body = await readBody(event)
 
-  const allowed = ['name_zh','name_en','see','church','succession_number','start_year','end_year','end_reason','appointed_by','status','sources','notes']
+  const allowed = ['name_zh','name_en','see','church','succession_number','start_year','end_year','end_reason','appointed_by','status','sources','notes','portrait_url']
   const patch: Record<string, any> = {}
   for (const key of allowed) {
     if (key in body) {

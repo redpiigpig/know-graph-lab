@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 430" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bgP" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0fdf4"/>
+      <stop offset="1" stop-color="#bbf7d0"/>
+    </linearGradient>
+  </defs>
+  <rect width="350" height="430" fill="url(#bgP)"/>
+
+  <!-- Halo (subtle/optional in Protestant style) -->
+  <circle cx="175" cy="225" r="80" fill="#fef9c3" opacity="0.35"/>
+
+  <!-- Cassock (black) -->
+  <path d="M 65 430 L 90 305 Q 175 275 260 305 L 285 430 Z" fill="#1f2937"/>
+  <!-- Tippet / preaching scarf (black ribbon down chest) -->
+  <rect x="160" y="305" width="6" height="125" fill="#0f172a"/>
+  <rect x="184" y="305" width="6" height="125" fill="#0f172a"/>
+  <!-- Open Bible held in front -->
+  <g transform="translate(175,370)">
+    <path d="M -28,-8 L -28,12 L 0,15 L 28,12 L 28,-8 L 0,-5 Z" fill="#fef9c3" stroke="#a16207" stroke-width="1.2"/>
+    <line x1="0" y1="-5" x2="0" y2="15" stroke="#a16207" stroke-width="1"/>
+    <line x1="-18" y1="0" x2="-6" y2="0" stroke="#a16207" stroke-width="0.6"/>
+    <line x1="-18" y1="5" x2="-6" y2="5" stroke="#a16207" stroke-width="0.6"/>
+    <line x1="6" y1="0" x2="18" y2="0" stroke="#a16207" stroke-width="0.6"/>
+    <line x1="6" y1="5" x2="18" y2="5" stroke="#a16207" stroke-width="0.6"/>
+  </g>
+
+  <!-- Face -->
+  <ellipse cx="175" cy="245" rx="38" ry="48" fill="#fde7c0"/>
+
+  <!-- White preaching tabs / clerical collar -->
+  <path d="M 165 285 L 165 300 L 175 295 L 185 300 L 185 285 Z" fill="#fef9c3"/>
+  <rect x="160" y="278" width="30" height="8" fill="#fff" stroke="#cbd5e1" stroke-width="0.5"/>
+
+  <!-- Geneva-style preacher's cap (academic/Reformer style) — plain black square cap or simple mitre -->
+  <!-- Plain Anglican mitre with cross -->
+  <path d="M 135 220 L 175 145 L 215 220 Z" fill="#fef9c3" stroke="#16a34a" stroke-width="1.8"/>
+  <!-- Mitre center band -->
+  <line x1="158" y1="195" x2="192" y2="195" stroke="#16a34a" stroke-width="2.5"/>
+  <!-- Cross on mitre -->
+  <g transform="translate(175,175)" stroke="#16a34a" stroke-width="2.2" fill="none">
+    <line x1="0" y1="-10" x2="0" y2="10"/>
+    <line x1="-7" y1="-3" x2="7" y2="-3"/>
+  </g>
+  <!-- Mitre rim -->
+  <rect x="135" y="216" width="80" height="6" fill="#16a34a"/>
+  <!-- Lappets -->
+  <rect x="148" y="222" width="4" height="32" fill="#fef9c3" stroke="#16a34a" stroke-width="0.8"/>
+  <rect x="198" y="222" width="4" height="32" fill="#fef9c3" stroke="#16a34a" stroke-width="0.8"/>
+
+  <!-- Footer -->
+  <rect x="0" y="395" width="350" height="35" fill="#16a34a" opacity="0.92"/>
+  <text x="175" y="418" text-anchor="middle" font-family="Noto Serif TC, serif" font-size="13" fill="#fff" letter-spacing="3">基督新教 · 通用主教肖像</text>
+</svg>

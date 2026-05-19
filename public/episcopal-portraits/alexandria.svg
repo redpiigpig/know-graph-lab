@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 430" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bgA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffbeb"/>
+      <stop offset="1" stop-color="#fed7aa"/>
+    </linearGradient>
+  </defs>
+  <rect width="350" height="430" fill="url(#bgA)"/>
+
+  <!-- Halo -->
+  <circle cx="175" cy="200" r="78" fill="#fde68a" opacity="0.45"/>
+  <circle cx="175" cy="200" r="78" fill="none" stroke="#d97706" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Robe (black, Coptic style) -->
+  <path d="M 65 430 L 90 295 Q 175 265 260 295 L 285 430 Z" fill="#1f2937"/>
+  <!-- Pectoral cross -->
+  <g transform="translate(175,345)" stroke="#fbbf24" stroke-width="2.5" fill="none">
+    <line x1="0" y1="-18" x2="0" y2="18"/>
+    <line x1="-14" y1="0" x2="14" y2="0"/>
+    <!-- Coptic cross flares -->
+    <circle cx="0" cy="-18" r="3" fill="#fbbf24"/>
+    <circle cx="0" cy="18" r="3" fill="#fbbf24"/>
+    <circle cx="-14" cy="0" r="3" fill="#fbbf24"/>
+    <circle cx="14" cy="0" r="3" fill="#fbbf24"/>
+  </g>
+
+  <!-- Face -->
+  <ellipse cx="175" cy="220" rx="38" ry="48" fill="#e8c896"/>
+  <!-- Long Coptic beard -->
+  <path d="M 142 240 Q 175 325 208 240 Q 195 285 175 295 Q 155 285 142 240" fill="#4b5563"/>
+
+  <!-- Coptic qalansuwa (black embroidered cap) -->
+  <ellipse cx="175" cy="175" rx="48" ry="20" fill="#1f2937"/>
+  <path d="M 127 175 Q 127 130 175 125 Q 223 130 223 175 Z" fill="#1f2937"/>
+  <!-- 13 yellow crosses pattern (12 apostles + Christ) -->
+  <g fill="#fbbf24" font-family="serif" font-size="11" text-anchor="middle">
+    <text x="175" y="148">✚</text>
+    <text x="157" y="153">✚</text>
+    <text x="193" y="153">✚</text>
+    <text x="143" y="163">✚</text>
+    <text x="207" y="163">✚</text>
+    <text x="135" y="175">✚</text>
+    <text x="215" y="175">✚</text>
+  </g>
+  <!-- Cap rim trim -->
+  <ellipse cx="175" cy="175" rx="48" ry="20" fill="none" stroke="#fbbf24" stroke-width="1.2"/>
+
+  <!-- Footer -->
+  <rect x="0" y="395" width="350" height="35" fill="#d97706" opacity="0.92"/>
+  <text x="175" y="418" text-anchor="middle" font-family="Noto Serif TC, serif" font-size="13" fill="#fff" letter-spacing="3">科普特正教 · 通用主教肖像</text>
+</svg>

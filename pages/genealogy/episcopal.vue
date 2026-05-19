@@ -198,53 +198,46 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <template v-for="b in seeBishops" :key="b.id">
-                    <!-- Main row -->
-                    <tr
-                      class="border-b border-gray-100 hover:bg-violet-50/20 transition cursor-pointer group"
-                      :class="expandedRows.has(b.id) ? 'bg-amber-50/30' : ''"
-                      @click="b.notes ? toggleRow(b.id) : undefined"
-                    >
-                      <td class="px-3 py-2.5 text-xs text-gray-400 whitespace-nowrap">
-                        {{ b.succession_number != null ? b.succession_number : '—' }}
-                      </td>
-                      <td class="px-3 py-2.5 font-medium text-gray-900 whitespace-nowrap text-sm">
-                        <div class="flex items-center gap-1.5">
-                          {{ b.name_zh }}
-                          <span v-if="b.notes" class="text-[9px] text-amber-400 opacity-60 group-hover:opacity-100">▾</span>
-                        </div>
-                      </td>
-                      <td class="px-3 py-2.5 text-xs text-gray-500 max-w-[160px] truncate" :title="b.name_en || ''">
-                        {{ b.name_en || '—' }}
-                      </td>
-                      <td class="px-3 py-2.5 text-xs text-gray-600 whitespace-nowrap font-mono">
-                        {{ formatYear(b.start_year) }}{{ b.end_year != null ? `–${formatYear(b.end_year)}` : b.end_reason ? '' : '–' }}
-                      </td>
-                      <td class="px-3 py-2.5 text-xs text-gray-500 whitespace-nowrap">
-                        {{ b.end_reason || '—' }}
-                      </td>
-                      <td class="px-3 py-2.5 text-xs text-gray-500 max-w-[140px] truncate" :title="b.appointed_by || ''">
-                        {{ b.appointed_by || '—' }}
-                      </td>
-                      <td class="px-3 py-2.5 whitespace-nowrap">
-                        <span :class="statusClass(b.status)" class="px-1.5 py-0.5 rounded text-[10px] font-medium">
-                          {{ b.status }}
-                        </span>
-                      </td>
-                      <td class="px-3 py-2.5">
-                        <div class="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition" @click.stop>
-                          <button class="p-1 rounded hover:bg-violet-100 text-violet-600 text-xs" @click="openEdit(b)">編輯</button>
-                          <button class="p-1 rounded hover:bg-red-50 text-red-400 text-xs" @click="deleteBishop(b.id)">刪除</button>
-                        </div>
-                      </td>
-                    </tr>
-                    <!-- Expanded notes row -->
-                    <tr v-if="expandedRows.has(b.id)" class="border-b border-amber-100 bg-amber-50/40">
-                      <td colspan="8" class="px-5 py-3">
-                        <p class="text-xs text-gray-700 leading-relaxed whitespace-pre-wrap">{{ b.notes }}</p>
-                      </td>
-                    </tr>
-                  </template>
+                  <tr
+                    v-for="b in seeBishops"
+                    :key="b.id"
+                    class="border-b border-gray-100 hover:bg-violet-50/30 transition cursor-pointer group"
+                    @click="openCard(b.id)"
+                  >
+                    <td class="px-3 py-2.5 text-xs text-gray-400 whitespace-nowrap">
+                      {{ b.succession_number != null ? b.succession_number : '—' }}
+                    </td>
+                    <td class="px-3 py-2.5 font-medium text-gray-900 whitespace-nowrap text-sm">
+                      <div class="flex items-center gap-1.5">
+                        {{ b.name_zh }}
+                        <span v-if="b.portrait_url" class="text-[10px] text-violet-400" title="有肖像">◉</span>
+                        <span v-if="b.notes" class="text-[9px] text-amber-400 opacity-60 group-hover:opacity-100" title="有備注">▾</span>
+                      </div>
+                    </td>
+                    <td class="px-3 py-2.5 text-xs text-gray-500 max-w-[160px] truncate" :title="b.name_en || ''">
+                      {{ b.name_en || '—' }}
+                    </td>
+                    <td class="px-3 py-2.5 text-xs text-gray-600 whitespace-nowrap font-mono">
+                      {{ formatYear(b.start_year) }}{{ b.end_year != null ? `–${formatYear(b.end_year)}` : b.end_reason ? '' : '–' }}
+                    </td>
+                    <td class="px-3 py-2.5 text-xs text-gray-500 whitespace-nowrap">
+                      {{ b.end_reason || '—' }}
+                    </td>
+                    <td class="px-3 py-2.5 text-xs text-gray-500 max-w-[140px] truncate" :title="b.appointed_by || ''">
+                      {{ b.appointed_by || '—' }}
+                    </td>
+                    <td class="px-3 py-2.5 whitespace-nowrap">
+                      <span :class="statusClass(b.status)" class="px-1.5 py-0.5 rounded text-[10px] font-medium">
+                        {{ b.status }}
+                      </span>
+                    </td>
+                    <td class="px-3 py-2.5">
+                      <div class="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition" @click.stop>
+                        <button class="p-1 rounded hover:bg-violet-100 text-violet-600 text-xs" @click="openEdit(b)">編輯</button>
+                        <button class="p-1 rounded hover:bg-red-50 text-red-400 text-xs" @click="deleteBishop(b.id)">刪除</button>
+                      </div>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -254,25 +247,14 @@
       </main>
     </div>
 
-    <!-- ── Detail modal (notes/sources popup) ─────────────── -->
-    <div
-      v-if="detail.show"
-      class="fixed inset-0 z-50 flex items-center justify-center bg-black/30 px-4"
-      @click.self="detail.show = false"
-    >
-      <div class="bg-white rounded-2xl shadow-xl w-full max-w-md">
-        <div class="flex items-center justify-between px-5 py-4 border-b border-gray-100">
-          <div>
-            <h2 class="font-semibold text-gray-900">{{ detail.personName }}</h2>
-            <p class="text-xs text-gray-400 mt-0.5">{{ detail.title }}</p>
-          </div>
-          <button class="text-gray-400 hover:text-gray-600 text-lg leading-none" @click="detail.show = false">×</button>
-        </div>
-        <div class="px-5 py-4 max-h-[60vh] overflow-y-auto">
-          <p class="text-sm text-gray-700 leading-relaxed whitespace-pre-wrap">{{ detail.body }}</p>
-        </div>
-      </div>
-    </div>
+    <!-- ── Bishop card modal ─────────────────────────────── -->
+    <GenealogyBishopCard
+      :bishop-id="cardBishopId"
+      :siblings="seeBishops"
+      @close="cardBishopId = null"
+      @open="(id) => cardBishopId = id"
+      @updated="onBishopUpdated"
+    />
 
     <!-- ── Add / Edit modal ───────────────────────────────── -->
     <div v-if="showModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/30 px-4" @click.self="showModal = false">
@@ -400,9 +382,11 @@ interface Bishop {
   end_year: number | null
   end_reason: string | null
   appointed_by: string | null
+  consecrator_bishop_id: string | null
   status: string
   sources: string | null
   notes: string | null
+  portrait_url: string | null
 }
 
 interface SubGroupItem { subGroup: string; sees: See[] }
@@ -558,11 +542,11 @@ const searchResults = computed(() => {
 const selectedSee  = ref<See | null>(null)
 const seeBishops   = ref<Bishop[]>([])
 const seqLoading   = ref(false)
-const expandedRows = ref(new Set<string>())
+const cardBishopId = ref<string | null>(null)
 
 async function selectSee(s: See) {
   selectedSee.value = s
-  expandedRows.value = new Set()
+  cardBishopId.value = null
   seqLoading.value = true
   try {
     const token = await getToken()
@@ -576,10 +560,13 @@ async function selectSee(s: See) {
   }
 }
 
-function toggleRow(id: string) {
-  const s = expandedRows.value
-  s.has(id) ? s.delete(id) : s.add(id)
-  expandedRows.value = new Set(s)
+function openCard(id: string) {
+  cardBishopId.value = id
+}
+
+function onBishopUpdated(updated: Bishop) {
+  const idx = seeBishops.value.findIndex(b => b.id === updated.id)
+  if (idx >= 0) seeBishops.value[idx] = { ...seeBishops.value[idx], ...updated }
 }
 
 // ── Add / Edit modal state ──────────────────────────────────
@@ -587,7 +574,6 @@ const showModal = ref(false)
 const editingId = ref<string | null>(null)
 const saving    = ref(false)
 const form      = ref(emptyForm())
-const detail    = ref({ show: false, title: '', body: '', personName: '' })
 
 function emptyForm() {
   return {

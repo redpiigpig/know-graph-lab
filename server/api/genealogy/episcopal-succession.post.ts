@@ -16,6 +16,7 @@ export default defineEventHandler(async (event) => {
     status:            body.status            || '正統',
     sources:           body.sources           || null,
     notes:             body.notes             || null,
+    portrait_url:      body.portrait_url      || null,
   }
 
   if (!payload.name_zh) throw createError({ statusCode: 400, message: '中文名為必填' })

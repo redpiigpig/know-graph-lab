@@ -11,10 +11,31 @@ description: 使徒統緒族譜圖（/genealogy/episcopal-tree）的資料維護
 
 主要程式：
 - API：[server/api/genealogy/episcopal-graph.get.ts](../../server/api/genealogy/episcopal-graph.get.ts)
+- 主教詳細卡 API：[server/api/genealogy/episcopal-bishop/[id].get.ts](../../server/api/genealogy/episcopal-bishop/[id].get.ts)
 - 元件：[components/genealogy/EpiscopalSpineTree.vue](../../components/genealogy/EpiscopalSpineTree.vue)
-- 頁面：[pages/genealogy/episcopal-tree.vue](../../pages/genealogy/episcopal-tree.vue)
+- 主教卡 modal：[components/genealogy/BishopCard.vue](../../components/genealogy/BishopCard.vue)
+- 頁面：[pages/genealogy/episcopal-tree.vue](../../pages/genealogy/episcopal-tree.vue)、[pages/genealogy/episcopal.vue](../../pages/genealogy/episcopal.vue)
+- 通用肖像 fallback：[public/episcopal-portraits/](../../public/episcopal-portraits/)（rome/constantinople/alexandria/antioch/armenia/assyria/protestant.svg）
 - 截圖：[scripts/episcopal-shot.mjs](../../scripts/episcopal-shot.mjs)
 - 名單匯出：[scripts/episcopal-audit-export.mjs](../../scripts/episcopal-audit-export.mjs) → `scripts/episcopal-sees-337.txt` + `episcopal-incomplete-bishops.txt`
+
+## 主教卡片（BishopCard modal，2026-05-19 上線）
+
+`/genealogy/episcopal` 表格列點 row → 開大張主教卡片 modal。資料來自 `/api/genealogy/episcopal-bishop/[id]`。
+
+**卡片區塊（top-down）：**
+1. Header：tradition spine 色 bar + see_zh / tradition
+2. 肖像：`portrait_url` → 真實照片；否則 fallback 到該 tradition 的通用 SVG（7 種）
+3. 身份：中文名 + #N + 英文名 + tradition/church/status badges
+4. 任期 + 卸任原因 + 任命者 inline rows
+5. 使徒按立鏈：consecrator + consecrated（clickable，點即跳到該主教卡）
+6. 師徒關係：`church_teachings` 雙向（teachers/students），橘色 link
+7. 事蹟／神學立場：`notes`
+8. 史料來源：`sources`
+9. 編輯肖像連結：collapsed details 內 + 即時 PATCH `portrait_url`
+10. Footer：前一任 / 下一任 navigation（同 see 的 siblings；←→ 鍵盤也可）
+
+**DB schema：** `episcopal_succession.portrait_url TEXT`（2026-05-19 新增）。沒值就 fallback。
 
 ## 編輯規則：一律按傳統說法
 

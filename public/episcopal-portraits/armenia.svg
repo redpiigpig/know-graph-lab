@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 430" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bgM" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf5ff"/>
+      <stop offset="1" stop-color="#d8b4fe"/>
+    </linearGradient>
+  </defs>
+  <rect width="350" height="430" fill="url(#bgM)"/>
+
+  <!-- Halo -->
+  <circle cx="175" cy="210" r="78" fill="#fde68a" opacity="0.45"/>
+  <circle cx="175" cy="210" r="78" fill="none" stroke="#d97706" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Robe (rich purple/black, Armenian Catholicos) -->
+  <path d="M 65 430 L 90 305 Q 175 275 260 305 L 285 430 Z" fill="#3b0764"/>
+  <!-- Gold trim across chest -->
+  <path d="M 90 305 Q 175 275 260 305" fill="none" stroke="#fbbf24" stroke-width="2.5"/>
+
+  <!-- Khachkar-style cross (Armenian crucifix stone art) -->
+  <g transform="translate(175,355)" fill="#fbbf24" stroke="#a16207" stroke-width="1.2">
+    <!-- Stem -->
+    <rect x="-2" y="-18" width="4" height="36"/>
+    <rect x="-14" y="-2" width="28" height="4"/>
+    <!-- Flared arms with curlicues -->
+    <path d="M -14,0 Q -22,-6 -18,-12 Q -10,-10 -14,0" />
+    <path d="M -14,0 Q -22,6 -18,12 Q -10,10 -14,0" />
+    <path d="M 14,0 Q 22,-6 18,-12 Q 10,-10 14,0" />
+    <path d="M 14,0 Q 22,6 18,12 Q 10,10 14,0" />
+    <path d="M 0,-18 Q -6,-26 -12,-22 Q -10,-14 0,-18" />
+    <path d="M 0,-18 Q 6,-26 12,-22 Q 10,-14 0,-18" />
+  </g>
+
+  <!-- Face -->
+  <ellipse cx="175" cy="230" rx="38" ry="48" fill="#e8c896"/>
+  <!-- Armenian long beard -->
+  <path d="M 142 250 Q 175 340 208 250 Q 195 295 175 305 Q 155 295 142 250" fill="#4b5563"/>
+
+  <!-- Armenian vegharakir — pointed black hood with cross -->
+  <path d="M 130 200 Q 130 170 150 150 Q 175 95 200 150 Q 220 170 220 200 L 215 215 L 135 215 Z" fill="#1f2937"/>
+  <!-- Hood pointed tip glow -->
+  <path d="M 175 95 L 178 105 L 175 110 L 172 105 Z" fill="#fbbf24" opacity="0.7"/>
+  <!-- Cross on front -->
+  <g transform="translate(175,180)" stroke="#fbbf24" stroke-width="2" fill="none">
+    <line x1="0" y1="-10" x2="0" y2="10"/>
+    <line x1="-7" y1="0" x2="7" y2="0"/>
+    <!-- Diagonal decorations -->
+    <line x1="-3" y1="-7" x2="3" y2="-7" stroke-width="1"/>
+    <line x1="-3" y1="7" x2="3" y2="7" stroke-width="1"/>
+  </g>
+  <!-- Hood bottom trim -->
+  <line x1="130" y1="210" x2="220" y2="210" stroke="#fbbf24" stroke-width="2"/>
+
+  <!-- Footer -->
+  <rect x="0" y="395" width="350" height="35" fill="#9333ea" opacity="0.92"/>
+  <text x="175" y="418" text-anchor="middle" font-family="Noto Serif TC, serif" font-size="13" fill="#fff" letter-spacing="3">亞美尼亞使徒 · 通用主教肖像</text>
+</svg>
