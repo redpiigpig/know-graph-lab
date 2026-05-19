@@ -37,7 +37,7 @@ description: 「歷史國界地圖」工具集（/maps/historical-borders）— 
 | E2. 朝代時間段標籤 | `data/maps/dynasty-labels.ts` (`DYNASTY_LABELS`) | **55 polygon × ~10 段** | 跨朝代 polygon 按年代切時期；dynastyLabelAt() 同名簡化 + 空 dynasty_zh 處理 |
 | E3. polygon 年範圍修正 | `public/maps/polygon-year-overrides.json` | **43 條** | 收窄源資料錯誤年代（Sui 619、Tang 907、Yuan 1271-1368、Sinic 限商朝期、Wu 春秋吳國 -900~-473、Achaemenid -550~-330、Sasanian 224~651、Maurya -322~-185、Aztec 1428~1521、Inca 1438~1533、HRE 962~1806 等）|
 | E4. 細粒度 polygon（city-hull） | `public/maps/fine-polygons.geojson` | **276 polygons / 54 帝國** | 中東 18（阿巴斯／伍麥亞／蒙古）+ 中國 135 + 地中海 33（羅馬到 395／拜占庭／鄂圖曼）+ 古波斯 30 + 古印度 35 + 神羅 13 + 美洲 13 |
-| E5. **OHM 真實邊界 polygon** | `public/maps/ohm-polygons.geojson` | **525 polygons / 34 歐洲帝國 (4.2 MB)** | 從 OpenHistoricalMap 抓的真實歷史國界（年份分段、Douglas-Peucker 0.1° 簡化）；含羅馬／拜占庭／西羅馬／神羅／法蘭克／倫巴底／西哥德／教皇國／納瓦拉／萊昂／卡斯提爾／阿拉貢／西西里／威尼斯／西班牙／法蘭西／俄羅斯沙皇國／俄羅斯帝國／普魯士／德意志／瑞典／丹麥／波蘭立陶宛聯邦／鄂圖曼／…34 個歐洲帝國。優先級：OHM > fine > source |
+| E5. **OHM 真實邊界 polygon** | `public/maps/ohm-polygons.geojson` | **560 polygons / 44 歐洲政體 (4.2 MB)** | 從 OpenHistoricalMap 抓的真實歷史國界（年份分段、Douglas-Peucker 0.1° 簡化）。包含：a) admin_level=2 的 34 個帝國／王國（羅馬／拜占庭／西羅馬／神羅／法蘭克／倫巴底／西哥德／教皇國／納瓦拉／萊昂／卡斯提爾／阿拉貢／西西里／威尼斯／西班牙／法蘭西／俄羅斯沙皇國／俄羅斯帝國／普魯士／德意志／瑞典／丹麥／波蘭立陶宛聯邦／鄂圖曼／…），b) admin_level=3 的 10 個 HRE 帝國圈 Reichskreise（奧地利／巴伐利亞／勃艮第／法蘭克尼亞／選帝侯萊茵／下萊茵-西伐利亞／下薩克森／上萊茵／上薩克森／薩克森／施瓦本，補 HRE 1500-1806 諸侯細節）。優先級：OHM > fine > source |
 | F. NE 50m coastline | `public/maps/ne_50m_coastline.geojson` | 1428 LineString | 海岸線（黑線） |
 | G. NE 50m admin_0 | `public/maps/ne_50m_admin_0_countries.geojson` | 242 features | 陸地灰底 + **NAME_ZHT 中文國名（內建）** |
 | H. Polygon 名譯本 | `public/maps/polygon-names-zh.json` | **2,420 條 (88 KB)** | Gemini batch 翻的 polygon name → 繁中 |

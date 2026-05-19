@@ -74,6 +74,24 @@ EMPIRES = [
     ("دولتْ علیّه عثمانیّه",         "Ottoman Empire",                     "鄂圖曼"),
 ]
 
+# HRE admin_level=3 Imperial Circles (Reichskreise) — 補 HRE 中世紀後期 OHM gap
+# 1512 起神羅劃分為 10 個 Reichskreis；OHM 對父 HRE 1201-1647 用 subarea 引用
+# 1500 後直接顯示 Reichskreise，比父 HRE 大區塊更準
+REICHSKREISE = [
+    ("Österreichischer Reichskreis",             "奧地利帝國圈"),
+    ("Bayerischer Reichskreis",                  "巴伐利亞帝國圈"),
+    ("Burgundischer Reichskreis",                "勃艮第帝國圈"),
+    ("Fränkischer Reichskreis",                  "法蘭克尼亞帝國圈"),
+    ("Kurrheinischer Reichskreis",               "選帝侯萊茵帝國圈"),
+    ("Niederrheinisch-Westfälischer Reichskreis","下萊茵-西伐利亞帝國圈"),
+    ("Niedersächsische Reichskreis",             "下薩克森帝國圈"),
+    ("Niedersächsischer Reichskreis",            "下薩克森帝國圈"),
+    ("Oberrheinischer Reichskreis",              "上萊茵帝國圈"),
+    ("Obersächsischer Reichskreis",              "上薩克森帝國圈"),
+    ("Sächsischer Reichskreis",                  "薩克森帝國圈"),
+    ("Schwäbischer Reichskreis",                 "施瓦本帝國圈"),
+]
+
 OVERPASS_URL = "https://overpass-api.openhistoricalmap.org/api/interpreter"
 
 
@@ -93,21 +111,21 @@ def overpass_query(query: str, retries: int = 3) -> dict:
     raise RuntimeError("Overpass exhausted retries")
 
 
-def fetch_empire_relations(ohm_name: str) -> list:
-    """Fetch all admin_level=2 relations matching this OHM name with full geometry."""
+def fetch_empire_relations(ohm_name: str, admin_level: str = "2") -> list:
+    """Fetch all relations matching this OHM name with full geometry."""
     q = (
         '[out:json][timeout:120];'
-        f'relation["type"="boundary"]["admin_level"="2"]["name"={json.dumps(ohm_name, ensure_ascii=False)}];'
+        f'relation["type"="boundary"]["admin_level"="{admin_level}"]["name"={json.dumps(ohm_name, ensure_ascii=False)}];'
         'out geom;'
     )
-    cache = CACHE_DIR / f"{ohm_name.replace('/', '_')}.json"
+    cache = CACHE_DIR / f"al{admin_level}_{ohm_name.replace('/', '_')}.json"
     if cache.exists():
         try:
             with open(cache, "r", encoding="utf-8") as f:
                 return json.load(f).get("elements", [])
         except Exception:
             pass
-    print(f"  → fetching {ohm_name}…")
+    print(f"  → fetching {ohm_name} (al={admin_level})…")
     data = overpass_query(q)
     with open(cache, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False)
@@ -306,15 +324,30 @@ def main():
         if args.only and args.only != ohm_name:
             continue
         try:
-            rels = fetch_empire_relations(ohm_name)
+            rels = fetch_empire_relations(ohm_name, admin_level="2")
             empire_features = []
             for r in rels:
                 empire_features.extend(relation_to_features(r, my_name, name_zh))
-            print(f"  ✅ {ohm_name:40s} → {my_name:40s} {len(rels):3d} relations → {len(empire_features):3d} features")
+            print(f"  ✅ {ohm_name:40s} → {my_name:40s} {len(rels):3d} rels →{len(empire_features):3d} feats")
             all_features.extend(empire_features)
             time.sleep(3)
         except Exception as e:
             print(f"  ❌ {ohm_name}: {e}")
+
+    # --- HRE Reichskreise (admin_level=3) — 補 HRE 1500-1806 諸侯細節 ---
+    if not args.only:
+        print("\n=== HRE Reichskreise (admin_level=3) ===")
+        for ohm_name, name_zh in REICHSKREISE:
+            try:
+                rels = fetch_empire_relations(ohm_name, admin_level="3")
+                kreis_features = []
+                for r in rels:
+                    kreis_features.extend(relation_to_features(r, ohm_name, name_zh))
+                print(f"  ✅ {ohm_name:45s} → {name_zh:20s} {len(rels):3d} rels →{len(kreis_features):3d} feats")
+                all_features.extend(kreis_features)
+                time.sleep(3)
+            except Exception as e:
+                print(f"  ❌ {ohm_name}: {e}")
 
     out = {"type": "FeatureCollection", "features": all_features}
     OUT_PATH.write_text(json.dumps(out, ensure_ascii=False, indent=None), encoding="utf-8")

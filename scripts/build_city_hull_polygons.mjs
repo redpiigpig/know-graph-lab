@@ -1541,7 +1541,15 @@ const features = []
 let totalCities = 0
 let missingCities = new Set()
 
+// 歐洲帝國（羅馬/拜占庭/鄂圖曼/神羅）改用 OHM 真實邊界，OHM gap 由 source 接手
+// 此處 skipped，避免 fine city-hull 壓掉 source hand-drawn polygons
+const SKIP_EMPIRES = new Set(['Roman Empire', 'Byzantine Empire', 'Ottoman Empire', 'Holy Roman Empire'])
+
 for (const emp of EMPIRES) {
+  if (SKIP_EMPIRES.has(emp.polygon_name)) {
+    console.log(`[${emp.polygon_name}] SKIPPED (OHM + source 接手)`)
+    continue
+  }
   const years = Object.keys(emp.years).map(Number).sort((a, b) => a - b)
   for (let i = 0; i < years.length; i++) {
     const year = years[i]
