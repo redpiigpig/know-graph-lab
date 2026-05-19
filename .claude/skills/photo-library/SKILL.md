@@ -195,6 +195,35 @@ Start-Process -FilePath $py -ArgumentList @("-u", "scripts\rename_photos.py", "a
 
 > **跟 daily OCR (16:00) 錯開**：daily OCR 那條 Task Scheduler 走 `scripts/run_ocr_daily.bat`，跟 rename 共用 G: I/O。rename 走 overnight 手動 kick off，不放 Task Scheduler。
 
+## Photo thumbnails — sharp + disk cache（必懂）
+
+問題：grid tile 和 lightbox 早期都直接吃原檔 signed URL，iPhone JPG 一張 3-5 MB，一個月 40 張 = 170 MB 從 G: cold cache 串給瀏覽器 → 顯示永遠像「上方一條」progressive JPG 沒解到底。
+
+方案：sharp + libvips 在 server 端 on-the-fly 縮圖、WebP quality 80 重壓、結果寫到 `.cache/thumbs/{hash_前2}/{hash}_{w}.webp`。
+
+- 第一次 cold 縮圖：依 Drive 冷檔狀態 1-100s（Drive 本身慢，不是 sharp）
+- 之後同 URL：~25 ms（純本機 disk read），等同 Google Photos
+- 寬度白名單 `{240, 480, 800, 1600}`（限制 enumeration、防 cache 爆增）
+- Grid tile 用 `?w=480`、lightbox 用 `?w=1600`、`f.url` 仍指向原檔（給「下載」按鈕用）
+- 簽章 reuse 原本 file endpoint 的 sig — 同 `(year,segment,name,exp,sig)`，width 不入 sig
+
+實作：
+- [server/utils/photo-thumbs.ts](../../../server/utils/photo-thumbs.ts) — `getOrGenerateThumb()` + `thumbCacheKey()` + `generateThumbToCache()`
+- [server/api/photos/thumb.get.ts](../../../server/api/photos/thumb.get.ts)（chenwei） + [server/api/photos/lib/[lib]/thumb.get.ts](../../../server/api/photos/lib/[lib]/thumb.get.ts)（training/hongshi）
+- Frontend `thumbUrl(url, w)` helper：把 `/file?...` 換成 `/thumb?...&w=N`（[chenwei month page](../../../pages/photos/chenwei/[year]/[month]/index.vue) 和 [lib browser](../../../pages/photos/[lib]/[[...path]].vue) 各一份）
+- Prewarm 腳本 [scripts/prewarm_thumbs.mjs](../../../scripts/prewarm_thumbs.mjs)：讀 photo_index.json 走全 library，產 480w + 1600w 兩種寬度
+
+**HEIC 不支援**：sharp 預設沒 libheif（Windows 上 sharp 沒 bundle）。HEIC 從 `renderableImage()` 白名單排除，前端 fallback 到 📄 icon。要支援的話要另外裝 libheif 或換 decoder。
+
+**Prewarm 用法**：
+```bash
+node scripts/prewarm_thumbs.mjs                # 全部
+node scripts/prewarm_thumbs.mjs chenwei        # 只跑 chenwei
+node scripts/prewarm_thumbs.mjs --widths=480   # 只跑 grid 寬
+```
+
+預估：cold-state 整 chenwei 12,863 張 × 2 寬度 = 25,726 thumbs，視 Drive 速度 1-10 小時。跑完後任何月份首次點開都瞬間。Drive 串流速度緩慢時可先排除 AV：`Add-MpPreference -ExclusionPath 'G:\','...\\DriveFS\\...\\content_cache'`（需 admin）。
+
 ## Photo index — server-side（必懂）
 
 問題：早期 `/photos` 頁載入永遠卡「載入中…」。原因是每次刷新 `summarizeLibrary` 都做三 library 遞迴 fs.readdir，G: 是 Drive 鏡像（冷檔還要 fault-in），單次 wall clock 數十秒到分鐘級。

@@ -114,7 +114,7 @@
             >
               <img
                 v-if="f.kind === 'image' && renderableImage(f.ext)"
-                :src="f.url"
+                :src="thumbUrl(f.url, 480)"
                 :alt="f.name"
                 loading="lazy"
                 decoding="async"
@@ -168,7 +168,7 @@
         <div class="flex-1 h-full flex items-center justify-center min-h-0 p-4" @click.self="viewerIndex = null">
           <img
             v-if="current.kind === 'image' && renderableImage(current.ext)"
-            :src="current.url"
+            :src="thumbUrl(current.url, 1600)"
             :alt="current.name"
             class="max-h-full max-w-full object-contain select-none"
             draggable="false"
@@ -304,6 +304,9 @@ async function deleteSelected() {
 
 function renderableImage(ext: string) {
   return [".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif", ".bmp"].includes(ext);
+}
+function thumbUrl(url: string, width: number): string {
+  return url.replace(/\/file\?/, "/thumb?") + `&w=${width}`;
 }
 function prev() {
   if (viewerIndex.value === null) return;

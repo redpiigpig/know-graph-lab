@@ -45,6 +45,7 @@
     "pdf-parse": "^2.4.5",
     "pinia": "^3.0.4",
     "resend": "^6.10.0",
+    "sharp": "^0.34.5",
     "vue": "^3.4.27"
   },
   "devDependencies": {
