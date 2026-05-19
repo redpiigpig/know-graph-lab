@@ -558,7 +558,7 @@ onMounted(async () => {
   }
 
   try {
-    const [adm0Res, statesRes, coastRes, wdRes, polyZhRes, polyClsRes, polyYearRes, fineRes, ohmRes] = await Promise.all([
+    const [adm0Res, statesRes, coastRes, wdRes, polyZhRes, polyClsRes, polyYearRes, fineRes, ohmRes, chgisRes] = await Promise.all([
       fetch('/maps/ne_50m_admin_0_countries.geojson'),
       fetch('/maps/historical-states.geojson'),
       fetch('/maps/ne_50m_coastline.geojson'),
@@ -568,6 +568,7 @@ onMounted(async () => {
       fetch('/maps/polygon-year-overrides.json').catch(() => ({ ok: false } as any)),
       fetch('/maps/fine-polygons.geojson').catch(() => ({ ok: false } as any)),
       fetch('/maps/ohm-polygons.geojson').catch(() => ({ ok: false } as any)),
+      fetch('/maps/chgis-polygons.geojson').catch(() => ({ ok: false } as any)),
     ])
     const [adm0, states, coast, wd] = await Promise.all([
       adm0Res.json(), statesRes.json(), coastRes.json(), wdRes.json(),
@@ -603,6 +604,19 @@ onMounted(async () => {
     }
     // 把 OHM polygon 帶的 name_zh 餵進 nameZhMap，這樣新的政體（卡斯提爾／納瓦拉等）有中文名
     for (const f of ohmFeatures) {
+      const n = f.properties?.name
+      const zh = f.properties?.name_zh
+      if (n && zh && !nameZhMap.value.has(n)) nameZhMap.value.set(n, zh)
+    }
+    // CHGIS 中國朝代真實邊界（從 Harvard/Fudan CHGIS V6 prefecture polygons dissolve 出來）
+    let chgisFeatures: any[] = []
+    if (chgisRes && (chgisRes as Response).ok) {
+      try {
+        const obj = await (chgisRes as Response).json()
+        chgisFeatures = obj.features || []
+      } catch {}
+    }
+    for (const f of chgisFeatures) {
       const n = f.properties?.name
       const zh = f.properties?.name_zh
       if (n && zh && !nameZhMap.value.has(n)) nameZhMap.value.set(n, zh)
@@ -666,7 +680,17 @@ onMounted(async () => {
       isOhm: true,
     }))
 
-    stateEntries.value = [...coarseEntries, ...fineStateEntries, ...ohmStateEntries]
+    // CHGIS 中國朝代真實邊界 — 最高優先級（CHGIS > OHM > fine > source）
+    const chgisStateEntries = chgisFeatures.map((f: any) => ({
+      feature: f,
+      name: f.properties.name,
+      yearFrom: f.properties.year_from,
+      yearTo: f.properties.year_to,
+      isFine: true,
+      isOhm: true,  // 沿用 isOhm 路徑（CHGIS 行為與 OHM 相同：壓過 fine/source）
+    }))
+
+    stateEntries.value = [...coarseEntries, ...fineStateEntries, ...ohmStateEntries, ...chgisStateEntries]
     rebuildAll()
   } catch (e) {
     console.error('歷史國界地圖載入失敗', e)
