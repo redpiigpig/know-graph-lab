@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-slate-50">
     <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
       <div class="max-w-3xl mx-auto px-6 h-14 flex items-center gap-4">
-        <NuxtLink to="/talks" class="text-gray-400 hover:text-gray-700 transition text-sm">← 演講活動</NuxtLink>
+        <NuxtLink to="/speech" class="text-gray-400 hover:text-gray-700 transition text-sm">← 演講活動</NuxtLink>
       </div>
     </nav>
 
@@ -25,7 +25,7 @@
           </div>
           <div class="flex flex-wrap gap-2 mt-5">
             <a v-if="talk.pptR2Key"
-              :href="`/api/talks/ppt-download/${talk.id}`"
+              :href="`/api/speech/ppt-download/${talk.id}`"
               class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-700 text-xs font-medium transition"
             >📑 下載投影片 (PPTX)</a>
           </div>
@@ -51,16 +51,16 @@
 </template>
 
 <script setup lang="ts">
-import { useTalksStore } from '~/stores/talks'
+import { useSpeechStore } from '~/stores/speech'
 
 const route = useRoute()
-const store = useTalksStore()
+const store = useSpeechStore()
 const talk = computed(() => store.talks.find(t => t.id === route.params.id))
 
 useHead({ title: () => (talk.value ? `${talk.value.title} — 演講活動` : '演講活動') })
 
 const { data, pending, error } = useFetch(
-  () => `/content/talks/${route.params.id}.md`,
+  () => `/content/speech/${route.params.id}.md`,
   { responseType: 'text' }
 )
 

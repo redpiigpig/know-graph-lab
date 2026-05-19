@@ -1,8 +1,8 @@
 /**
  * 演講活動紀錄 store
  *
- * /talks 列表 + /talks/[id] 單場逐字稿。
- * 逐字稿存在 public/content/talks/${id}.md；PPT 存在 R2 (talks-ppt/...)。
+ * /speech 列表 + /speech/[id] 單場逐字稿。
+ * 逐字稿存在 public/content/speech/${id}.md；PPT 存在 R2 (talks-ppt/...)。
  */
 import { defineStore } from 'pinia'
 
@@ -26,10 +26,10 @@ export interface Talk {
   hasTranscript: boolean
   pptR2Key?: string // talks-ppt/2026-05-19-hsuanchuang.pptx
   description?: string
-  posterPath?: string // /talks-posters/2026-05-19-hsuanchuang.jpg
+  posterPath?: string // /speech-posters/2026-05-19-hsuanchuang.jpg
 }
 
-export const useTalksStore = defineStore('talks', () => {
+export const useSpeechStore = defineStore('speech', () => {
   const talks = ref<Talk[]>([
     {
       id: '2026-05-19-hsuanchuang',

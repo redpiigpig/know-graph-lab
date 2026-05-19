@@ -60,7 +60,7 @@
           </div>
         </NuxtLink>
 
-        <NuxtLink to="/talks" class="project-card border-rose-100 hover:border-rose-300 hover:shadow-rose-100">
+        <NuxtLink to="/speech" class="project-card border-rose-100 hover:border-rose-300 hover:shadow-rose-100">
           <div class="project-icon bg-rose-50 text-rose-600">🎤</div>
           <div>
             <h2 class="project-title">演講活動</h2>
@@ -74,12 +74,12 @@
 </template>
 
 <script setup lang="ts">
-import { useTalksStore } from '~/stores/talks'
+import { useSpeechStore } from '~/stores/speech'
 
 useHead({ title: '學術活動紀錄 — Know Graph Lab' })
 
-const talksStore = useTalksStore()
-const talksCount = computed(() => talksStore.talks.length)
+const speechStore = useSpeechStore()
+const talksCount = computed(() => speechStore.talks.length)
 </script>
 
 <style scoped>

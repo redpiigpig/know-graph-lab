@@ -24,7 +24,7 @@
     <div class="max-w-5xl mx-auto px-6 py-8 space-y-4">
       <NuxtLink
         v-for="t in store.sorted" :key="t.id"
-        :to="`/talks/${t.id}`"
+        :to="`/speech/${t.id}`"
         class="block bg-white rounded-2xl border border-gray-100 p-6 transition-all hover:border-rose-200 hover:shadow-sm"
       >
         <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
@@ -49,11 +49,11 @@
 </template>
 
 <script setup lang="ts">
-import { useTalksStore, type TalkCategory } from '~/stores/talks'
+import { useSpeechStore, type TalkCategory } from '~/stores/speech'
 
 useHead({ title: '演講活動 — 學術活動紀錄' })
 
-const store = useTalksStore()
+const store = useSpeechStore()
 
 function catLabel(c: TalkCategory) {
   return ({

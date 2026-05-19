@@ -1,8 +1,8 @@
 import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3'
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner'
 
-// 演講 PPT 與 R2 key 的對照（與 stores/talks.ts 保持同步）
-const TALK_PPT_KEYS: Record<string, { key: string; filename: string }> = {
+// 演講 PPT 與 R2 key 的對照（與 stores/speech.ts 保持同步）
+const SPEECH_PPT_KEYS: Record<string, { key: string; filename: string }> = {
   '2026-05-19-hsuanchuang': {
     key: 'talks-ppt/2026-05-19-hsuanchuang.pptx',
     filename: '2026.05.19 玄奘宗教系講座 — 台灣佛教具有民主基因嗎.pptx',
@@ -11,9 +11,9 @@ const TALK_PPT_KEYS: Record<string, { key: string; filename: string }> = {
 
 export default defineEventHandler(async (event) => {
   const id = getRouterParam(event, 'id') || ''
-  const meta = TALK_PPT_KEYS[id]
+  const meta = SPEECH_PPT_KEYS[id]
   if (!meta) {
-    throw createError({ statusCode: 404, message: 'Talk PPT not registered' })
+    throw createError({ statusCode: 404, message: 'Speech PPT not registered' })
   }
 
   const config = useRuntimeConfig()
