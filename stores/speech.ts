@@ -26,7 +26,7 @@ export interface Talk {
   hasTranscript: boolean
   pptR2Key?: string // talks-ppt/2026-05-19-hsuanchuang.pptx
   description?: string
-  posterPath?: string // /speech-posters/2026-05-19-hsuanchuang.jpg
+  posterPath?: string // /api/speech/poster/[id] — 走 R2 signed URL 302 redirect
 }
 
 export const useSpeechStore = defineStore('speech', () => {
@@ -43,7 +43,7 @@ export const useSpeechStore = defineStore('speech', () => {
       category: 'lecture',
       hasTranscript: true,
       pptR2Key: 'talks-ppt/2026-05-19-hsuanchuang.pptx',
-      posterPath: '/speech-posters/2026-05-19-hsuanchuang.jpg',
+      posterPath: '/api/speech/poster/2026-05-19-hsuanchuang',
       description:
         '以美國加大聖地亞哥分校社會學榮譽教授 Richard Madsen（趙文詞）2007 年著作 Democracy\'s Dharma《民主妙法》為對話起點，' +
         '回顧三大教團（法鼓山／慈濟／佛光山）在解嚴前後的制度演進，並用 2007 年之後近廿年的演變回頭檢驗其結論。',
