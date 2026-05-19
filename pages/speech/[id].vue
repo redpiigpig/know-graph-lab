@@ -11,23 +11,31 @@
     <template v-else>
       <!-- 標題區 -->
       <div class="bg-white border-b border-gray-100">
-        <div class="max-w-3xl mx-auto px-6 py-10">
-          <div class="flex flex-wrap gap-1.5 mb-3">
-            <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-rose-50 text-rose-700">演講活動</span>
-            <span class="text-xs text-gray-500">{{ formatDate(talk.date) }}<span v-if="talk.duration"> ‧ {{ talk.duration }}</span></span>
+        <div class="max-w-3xl mx-auto px-6 py-10 flex flex-col md:flex-row gap-8">
+          <!-- 左：海報 -->
+          <div v-if="talk.posterPath" class="flex-shrink-0 md:w-48">
+            <img :src="talk.posterPath" :alt="talk.title" class="w-full rounded-lg shadow-md border border-gray-100" />
           </div>
-          <h1 class="text-2xl font-bold text-gray-900 leading-snug mb-2">{{ talk.title }}</h1>
-          <p v-if="talk.subtitle" class="text-base text-gray-600 mb-5">── {{ talk.subtitle }}</p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 text-xs text-gray-500 mb-4">
-            <span class="sm:col-span-2"><span class="text-gray-400">場地　</span>{{ talk.venue }}</span>
-            <span><span class="text-gray-400">主辦　</span>{{ talk.organizer }}</span>
-            <span v-if="talk.course"><span class="text-gray-400">課程　</span>{{ talk.course }}</span>
-          </div>
-          <div class="flex flex-wrap gap-2 mt-5">
-            <a v-if="talk.pptR2Key"
-              :href="`/api/speech/ppt-download/${talk.id}`"
-              class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-700 text-xs font-medium transition"
-            >📑 下載投影片 (PPTX)</a>
+
+          <!-- 右：資訊 -->
+          <div class="flex-1 min-w-0">
+            <div class="flex flex-wrap gap-1.5 mb-3">
+              <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-rose-50 text-rose-700">演講活動</span>
+              <span class="text-xs text-gray-500">{{ formatDate(talk.date) }}<span v-if="talk.duration"> ‧ {{ talk.duration }}</span></span>
+            </div>
+            <h1 class="text-2xl font-bold text-gray-900 leading-snug mb-2">{{ talk.title }}</h1>
+            <p v-if="talk.subtitle" class="text-base text-gray-600 mb-5">── {{ talk.subtitle }}</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 text-xs text-gray-500 mb-4">
+              <span class="sm:col-span-2"><span class="text-gray-400">場地　</span>{{ talk.venue }}</span>
+              <span><span class="text-gray-400">主辦　</span>{{ talk.organizer }}</span>
+              <span v-if="talk.course"><span class="text-gray-400">課程　</span>{{ talk.course }}</span>
+            </div>
+            <div class="flex flex-wrap gap-2 mt-5">
+              <a v-if="talk.pptR2Key"
+                :href="`/api/speech/ppt-download/${talk.id}`"
+                class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-700 text-xs font-medium transition"
+              >📑 下載投影片 (PPTX)</a>
+            </div>
           </div>
         </div>
       </div>
@@ -60,7 +68,7 @@ const talk = computed(() => store.talks.find(t => t.id === route.params.id))
 useHead({ title: () => (talk.value ? `${talk.value.title} — 演講活動` : '演講活動') })
 
 const { data, pending, error } = useFetch(
-  () => `/content/speech/${route.params.id}.md`,
+  () => `/content/speech/${route.params.id}.txt`,
   { responseType: 'text' }
 )
 

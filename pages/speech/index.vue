@@ -25,23 +25,31 @@
       <NuxtLink
         v-for="t in store.sorted" :key="t.id"
         :to="`/speech/${t.id}`"
-        class="block bg-white rounded-2xl border border-gray-100 p-6 transition-all hover:border-rose-200 hover:shadow-sm"
+        class="flex gap-5 bg-white rounded-2xl border border-gray-100 overflow-hidden transition-all hover:border-rose-200 hover:shadow-md"
       >
-        <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
-          <div class="flex flex-wrap gap-1.5">
-            <span :class="catStyle(t.category)" class="text-xs font-medium px-2 py-0.5 rounded-full">{{ catLabel(t.category) }}</span>
-            <span v-if="t.hasTranscript" class="text-xs font-medium px-2 py-0.5 rounded-full bg-teal-50 text-teal-700">逐字稿</span>
-            <span v-if="t.pptR2Key" class="text-xs font-medium px-2 py-0.5 rounded-full bg-amber-50 text-amber-700">投影片</span>
-          </div>
-          <span class="text-xs text-gray-500">{{ formatDate(t.date) }}<span v-if="t.duration" class="ml-1">‧ {{ t.duration }}</span></span>
+        <!-- 左側海報 -->
+        <div v-if="t.posterPath" class="hidden sm:block w-32 md:w-40 flex-shrink-0 bg-gray-50">
+          <img :src="t.posterPath" :alt="t.title" class="w-full h-full object-cover" />
         </div>
-        <h2 class="text-base font-bold text-gray-900 mb-1 leading-snug">{{ t.title }}</h2>
-        <p v-if="t.subtitle" class="text-sm text-gray-600 mb-3">── {{ t.subtitle }}</p>
-        <p v-if="t.description" class="text-xs text-gray-500 leading-relaxed mb-3 line-clamp-2">{{ t.description }}</p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-0.5 text-xs text-gray-500">
-          <span class="sm:col-span-2"><span class="text-gray-400">場地　</span>{{ t.venue }}</span>
-          <span><span class="text-gray-400">主辦　</span>{{ t.organizer }}</span>
-          <span v-if="t.course"><span class="text-gray-400">課程　</span>{{ t.course }}</span>
+
+        <!-- 右側內容 -->
+        <div class="flex-1 min-w-0 p-6 sm:pl-5">
+          <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
+            <div class="flex flex-wrap gap-1.5">
+              <span :class="catStyle(t.category)" class="text-xs font-medium px-2 py-0.5 rounded-full">{{ catLabel(t.category) }}</span>
+              <span v-if="t.hasTranscript" class="text-xs font-medium px-2 py-0.5 rounded-full bg-teal-50 text-teal-700">逐字稿</span>
+              <span v-if="t.pptR2Key" class="text-xs font-medium px-2 py-0.5 rounded-full bg-amber-50 text-amber-700">投影片</span>
+            </div>
+            <span class="text-xs text-gray-500">{{ formatDate(t.date) }}<span v-if="t.duration" class="ml-1">‧ {{ t.duration }}</span></span>
+          </div>
+          <h2 class="text-base font-bold text-gray-900 mb-1 leading-snug">{{ t.title }}</h2>
+          <p v-if="t.subtitle" class="text-sm text-gray-600 mb-3">── {{ t.subtitle }}</p>
+          <p v-if="t.description" class="text-xs text-gray-500 leading-relaxed mb-3 line-clamp-2">{{ t.description }}</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-0.5 text-xs text-gray-500">
+            <span class="sm:col-span-2"><span class="text-gray-400">場地　</span>{{ t.venue }}</span>
+            <span><span class="text-gray-400">主辦　</span>{{ t.organizer }}</span>
+            <span v-if="t.course"><span class="text-gray-400">課程　</span>{{ t.course }}</span>
+          </div>
         </div>
       </NuxtLink>
     </div>
