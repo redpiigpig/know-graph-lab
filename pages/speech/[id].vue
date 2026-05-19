@@ -64,6 +64,11 @@ const { data, pending, error } = useFetch(
   { responseType: 'text' }
 )
 
+function formatDate(d: string) {
+  const [y, m, day] = d.split('-')
+  return `${y} 年 ${parseInt(m)} 月 ${parseInt(day)} 日`
+}
+
 type Block = { type: 'h2' | 'h3' | 'speaker' | 'note' | 'para'; text: string }
 
 const blocks = computed((): Block[] => {
