@@ -199,17 +199,10 @@ export const DYNASTY_LABELS: Record<string, DynastyEntry[]> = {
     { from: 1673, to: 1681, dynasty_zh: '三藩之亂', country_zh: '中國' },
   ],
 
-  // China (1945+)
+  // China (1945+) — 現代僅顯示國名，不再強調當政者時代
   'China': [
-    { from: 1945, to: 1949, dynasty_zh: '國共內戰', country_zh: '中華民國／中華人民共和國' },
-    { from: 1949, to: 1957, dynasty_zh: '建國初', country_zh: '中華人民共和國' },
-    { from: 1958, to: 1961, dynasty_zh: '大躍進', country_zh: '中華人民共和國' },
-    { from: 1962, to: 1965, dynasty_zh: '七千人大會調整期', country_zh: '中華人民共和國' },
-    { from: 1966, to: 1976, dynasty_zh: '文化大革命', country_zh: '中華人民共和國' },
-    { from: 1977, to: 1989, dynasty_zh: '改革開放初', country_zh: '中華人民共和國' },
-    { from: 1990, to: 2001, dynasty_zh: '南巡到入 WTO', country_zh: '中華人民共和國' },
-    { from: 2002, to: 2012, dynasty_zh: '胡溫黃金十年', country_zh: '中華人民共和國' },
-    { from: 2013, to: 9999, dynasty_zh: '習近平時代', country_zh: '中華人民共和國' },
+    { from: 1945, to: 1949, dynasty_zh: '', country_zh: '中華民國／中華人民共和國' },
+    { from: 1949, to: 9999, dynasty_zh: '', country_zh: '中華人民共和國' },
   ],
 
   // ============================================================
@@ -502,7 +495,7 @@ export const DYNASTY_LABELS: Record<string, DynastyEntry[]> = {
     { from: 1979, to: 1990, dynasty_zh: '柴契爾時代', country_zh: '聯合王國' },
     { from: 1990, to: 2016, dynasty_zh: '布萊爾／後柴契爾共識', country_zh: '聯合王國' },
     { from: 2016, to: 2022, dynasty_zh: '脫歐', country_zh: '聯合王國' },
-    { from: 2022, to: 9999, dynasty_zh: '查爾斯三世', country_zh: '聯合王國' },
+    { from: 2022, to: 9999, dynasty_zh: '', country_zh: '聯合王國' },
   ],
   'United Kingdom of Great Britain and Ireland': [
     { from: 1815, to: 1837, dynasty_zh: '攝政－威廉四世', country_zh: '大不列顛及愛爾蘭聯合王國' },
@@ -631,7 +624,7 @@ export const DYNASTY_LABELS: Record<string, DynastyEntry[]> = {
     { from: 1926, to: 1944, dynasty_zh: '昭和', country_zh: '日本' },
     { from: 1947, to: 1989, dynasty_zh: '戰後昭和', country_zh: '日本' },
     { from: 1989, to: 2019, dynasty_zh: '平成', country_zh: '日本' },
-    { from: 2019, to: 9999, dynasty_zh: '令和', country_zh: '日本' },
+    { from: 2019, to: 9999, dynasty_zh: '', country_zh: '日本' },
   ],
   'Imperial Japan': [
     { from: 1868, to: 1894, dynasty_zh: '明治前期', country_zh: '大日本帝國' },
@@ -702,15 +695,14 @@ export const DYNASTY_LABELS: Record<string, DynastyEntry[]> = {
     { from: 1933, to: 1939, dynasty_zh: '納粹前期', country_zh: '德國' },
     { from: 1939, to: 1945, dynasty_zh: '二戰', country_zh: '德國' },
     { from: 1949, to: 1989, dynasty_zh: '西德', country_zh: '德國' },
-    { from: 1990, to: 9999, dynasty_zh: '兩德統一後', country_zh: '德國' },
+    { from: 1990, to: 9999, dynasty_zh: '', country_zh: '德國' },
   ],
 
   // ============================================================
   // 俄羅斯
   // ============================================================
   'Russia': [
-    { from: 1991, to: 1999, dynasty_zh: '葉爾欽', country_zh: '俄羅斯聯邦' },
-    { from: 2000, to: 9999, dynasty_zh: '普京時代', country_zh: '俄羅斯聯邦' },
+    { from: 1991, to: 9999, dynasty_zh: '', country_zh: '俄羅斯聯邦' },
   ],
   'Tsardom of Muscovy': [
     { from: 1547, to: 1584, dynasty_zh: '伊凡四世', country_zh: '俄羅斯沙皇國' },
@@ -734,19 +726,14 @@ export const DYNASTY_LABELS: Record<string, DynastyEntry[]> = {
   'India': [
     { from: 1783, to: 1857, dynasty_zh: '英屬東印度公司', country_zh: '印度' },
     { from: 1858, to: 1947, dynasty_zh: '英屬印度', country_zh: '印度' },
-    { from: 1947, to: 1964, dynasty_zh: '尼赫魯時代', country_zh: '印度' },
-    { from: 1964, to: 1991, dynasty_zh: '英迪拉‧甘地家族時代', country_zh: '印度' },
-    { from: 1991, to: 9999, dynasty_zh: '經濟改革時代', country_zh: '印度' },
+    { from: 1947, to: 9999, dynasty_zh: '', country_zh: '印度' },
   ],
 
   // ============================================================
   // 土耳其
   // ============================================================
   'Turkey': [
-    { from: 1938, to: 1950, dynasty_zh: '凱末爾末期／伊諾努', country_zh: '土耳其' },
-    { from: 1950, to: 1980, dynasty_zh: '多黨制', country_zh: '土耳其' },
-    { from: 1980, to: 2002, dynasty_zh: '軍人主導', country_zh: '土耳其' },
-    { from: 2002, to: 9999, dynasty_zh: '艾爾段時代', country_zh: '土耳其' },
+    { from: 1923, to: 9999, dynasty_zh: '', country_zh: '土耳其' },
   ],
   'Ottoman Sultanate': [
     { from: 1920, to: 1922, dynasty_zh: '奧斯曼末', country_zh: '土耳其' },
@@ -773,7 +760,7 @@ export const DYNASTY_LABELS: Record<string, DynastyEntry[]> = {
     { from: 1834, to: 1910, dynasty_zh: '立憲君主', country_zh: '葡萄牙' },
     { from: 1910, to: 1926, dynasty_zh: '第一共和', country_zh: '葡萄牙' },
     { from: 1926, to: 1974, dynasty_zh: '薩拉查獨裁', country_zh: '葡萄牙' },
-    { from: 1974, to: 9999, dynasty_zh: '康乃馨革命後', country_zh: '葡萄牙' },
+    { from: 1974, to: 9999, dynasty_zh: '', country_zh: '葡萄牙' },
   ],
 
   // ============================================================
@@ -819,7 +806,7 @@ export const DYNASTY_LABELS: Record<string, DynastyEntry[]> = {
     { from: 1830, to: 1914, dynasty_zh: '比利時獨立後', country_zh: '荷蘭' },
     { from: 1914, to: 1940, dynasty_zh: '中立', country_zh: '荷蘭' },
     { from: 1940, to: 1945, dynasty_zh: '德占', country_zh: '荷蘭' },
-    { from: 1945, to: 9999, dynasty_zh: '戰後', country_zh: '荷蘭' },
+    { from: 1945, to: 9999, dynasty_zh: '', country_zh: '荷蘭' },
   ],
 
   // ============================================================
