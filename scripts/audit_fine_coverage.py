@@ -23,6 +23,7 @@ source = load(ROOT / 'public/maps/historical-states.geojson')
 fine = load(ROOT / 'public/maps/fine-polygons.geojson')
 ohm = load(ROOT / 'public/maps/ohm-polygons.geojson')
 chgis = load(ROOT / 'public/maps/chgis-polygons.geojson')
+manual = load(ROOT / 'public/maps/manual-polygons.geojson')
 overrides = load(ROOT / 'public/maps/polygon-year-overrides.json')['overrides']
 cls = load(ROOT / 'public/maps/polygon-classifications.json')
 
@@ -51,10 +52,11 @@ results = []  # (year, fine_only_names: list)
 for year in range(-500, 1901, 25):
     chgis_names = active_names_at(year, chgis)
     ohm_names = active_names_at(year, ohm)
+    manual_names = active_names_at(year, manual)
     fine_names = active_names_at(year, fine)
     source_names = active_names_at(year, source, with_overrides=True)
-    # Fine polygons that aren't superseded by CHGIS or OHM (same name)
-    visible_fine = fine_names - chgis_names - ohm_names
+    # Fine polygons that aren't superseded by CHGIS / OHM / manual (same name)
+    visible_fine = fine_names - chgis_names - ohm_names - manual_names
     if visible_fine:
         results.append((year, sorted(visible_fine)))
 
