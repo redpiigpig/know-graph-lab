@@ -489,6 +489,78 @@ TimeAxis 右上「▶ 播放」按鈕，速度可選「慢／普通／快」（2
 
 ## 待補項目
 
+### 🚧 下個 session 接續：補 manual polygons 中亞／非洲／東南亞／拉美
+
+**現況**：歐洲（OHM 781 polys）、中國（CHGIS 94 polys）、波斯/印度/美洲核心（manual 77 polys）已有真實/手繪邊界。剩**中亞／非洲／東南亞／拉美**仍是 city-hull 凸包多邊形（user 截圖反映 1145 中亞偏多角；近東/印度 OK 但其他區待補）。
+
+**方法**：擴展 [scripts/build_manual_polygons.mjs](../../../scripts/build_manual_polygons.mjs) 的 EMPIRES 陣列。每帝國 5-8 keyframes，每 keyframe 15-25 個 (lon, lat) 頂點，**參考 Wikipedia「Territorial evolution of X」地圖 + 自然地理（河流／山脈／海岸線）**。建好跑 `node scripts/build_manual_polygons.mjs` 驗證 geoArea < 2π。
+
+**清單**（按優先級）：
+
+**B1. 中亞**
+- Khwarezmid Empire（花剌子模）1077-1231：核心 Khwarezm + 後擴 Iran/Afghanistan/中亞
+- Khazar Khaganate（可薩）650-969：高加索北 + Volga
+- Volga Bulgaria（伏爾加保加利亞）700-1240
+- Cuman-Kipchak Confederation 900-1241：黑海北草原
+- Pechenegs（佩切涅格）860-1091：黑海北
+- Turkic Khaganate（突厥汗國）552-744：分東西
+- Uyghur Khaganate（回鶻）744-840
+- Ghaznavid（伽色尼）977-1186：阿富汗/印度西北
+- Seljuk Empire（塞爾柱）1037-1194：橫跨中亞-波斯-小亞細亞
+
+**B2. 西非／中非／東非**
+- Ghana Empire（迦納帝國）300-1235
+- Mali Empire（馬利帝國）1235-1670
+- Songhai Empire（桑海帝國）1464-1591
+- Kanem Empire（加奈姆）700-1380
+- Bornu Empire（博爾努）1380-1893
+- Hausa Kingdoms（豪薩諸國）900-1808
+- Aksum（阿克蘇姆）100-960
+- Kingdom of Makuria（馬庫拉）500-1500
+- Ethiopian Empire（衣索比亞帝國）1270-1974
+- Kongo Kingdom（剛果王國）1390-1914
+- Great Zimbabwe（大津巴布韋）1100-1450
+- Mutapa Empire（莫諾莫塔帕）1430-1760
+- Zulu Kingdom（祖魯王國）1816-1897
+
+**B3. 東南亞**
+- Khmer Empire（高棉帝國）802-1431：年代分段（建國／極盛 Jayavarman VII 1200／衰落）
+- Srivijaya（室利佛逝）650-1377：海上帝國
+- Majapahit（滿者伯夷）1293-1527
+- Pagan Kingdom（蒲甘）849-1297
+- Ayutthaya Kingdom（大城）1351-1767：OHM 已抓但年代分段
+- Toungoo Dynasty（東吁）1510-1752
+- Konbaung Dynasty（貢榜）1752-1885
+- Lan Xang（瀾滄）1353-1707
+- Champa（占婆）192-1832
+
+**B4. 拉美（前哥倫布 + 殖民後）**
+- Olmec（奧爾梅克）-1500~-400
+- Zapotec（薩波特克）-500~700
+- Toltec（托爾特克）900-1180
+- Mixtec（米斯特克）950-1521
+- Wari Empire（瓦里帝國）500-1100
+- Tiwanaku（蒂瓦納庫）-200~1100
+- Chimú Empire（奇穆帝國）1100-1470
+- Mapuche（馬普切）—長期存在
+- Powhatan Confederacy（北美）1607-1646
+- 19 世紀拉美獨立國家（如果 OHM 沒抓）
+
+**操作流程**：
+1. 開 Wikipedia 「Territorial evolution of [Empire]」找最具代表性 5-8 個年份
+2. 每年份從 Wikipedia 地圖估 15-25 個邊界頂點 (lon, lat)
+3. 加進 build_manual_polygons.mjs 的 EMPIRES 陣列（CCW 自然順序，build 時自動 reverse 成 d3-geo 球面 CW）
+4. `node scripts/build_manual_polygons.mjs` 重 build
+5. 跑 `python scripts/audit_fine_coverage.py` 確認 fine city-hull 不再覆蓋這些
+6. commit + push
+
+**注意事項**：
+- 用 `node check_centroid.mjs`（臨時寫）驗證 centroid 落在預期區域、d3-geo geoArea < 2π
+- polygon name 要對齊 source historical-states.geojson 用的英文名（grep 一下）
+- 「Empire of X」改「X」前綴有時也對齊更好（用之前對齊 Portugal/Sicily 的方式）
+
+---
+
 ### A. STATE_DETAILS 繼續擴充（271 → 目標 350+）
 
 剩餘高頻 polygon（未填 details）：
