@@ -77,7 +77,7 @@ def main():
         if not fp.exists():
             print(f'⚠ Missing {fp.name}')
             continue
-        data = json.loads(fp.read_text(encoding='utf-8'))
+        data = json.loads(fp.read_text(encoding='utf-8-sig'))
         for entry in data:
             n_total += 1
             url = entry.get('portrait_url')
