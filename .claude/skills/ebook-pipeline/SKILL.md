@@ -39,11 +39,26 @@ End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL 
 
 ### 新書（daily ingest 自動跑）
 
-每日 16:00 `scripts/run_ocr_daily.bat` 跑完整 5-step：
+`scripts/run_ocr_daily.bat` 跑完整 5-step：
 
 ```
 ingest_new_books → parse_worker → ocr_with_gemini → detect_set_volumes → split_ebook_set
 ```
+
+**每日 3 次自動偵測 z-lib/ drop**（user 規則 2026-05-20）：
+- **08:00 / 14:00 / 22:00 Taipei** — Windows Task Scheduler 觸發
+- 對話中 Claude 啟動或被詢問「z-lib」「新書」「ingest」時，**主動跑 `python scripts/ingest_new_books.py status`** 看看有沒有未處理的 drop
+- 若 status 顯示 >0 本待 ingest，立即跑 `python scripts/ingest_new_books.py run`
+
+排程設置：
+```powershell
+# 8 AM 排程（多增的第 2 個觸發）
+schtasks /create /tn "KGLab-OCR-Daily-08" /tr "C:\Users\user\Desktop\know-graph-lab\scripts\run_ocr_daily.bat" /sc daily /st 08:00 /ru "$env:USERNAME"
+
+# 22:00 排程（多增的第 3 個觸發）
+schtasks /create /tn "KGLab-OCR-Daily-22" /tr "C:\Users\user\Desktop\know-graph-lab\scripts\run_ocr_daily.bat" /sc daily /st 22:00 /ru "$env:USERNAME"
+```
+（既有 16:00 那個 `KGLab-OCR-Daily` 不動。3 個 cron entry 同跑 same bat，但 step 1 ingest 對空 z-lib 是 no-op，安全。）
 
 Standardize 不在 daily bat 裡 — parse/OCR 落地後 chunk_type 還是 `page` (PDF) 或 raw (EPUB)。**新書 standardize 需手動觸發**（見 Workflow B）。已知 TODO：把 standardize 鉤進 daily bat。
 
