@@ -46,10 +46,10 @@ EMPIRES = [
     ("Reino de León",               "Kingdom of León",                    "萊昂王國"),
     ("Corona Castellae",            "Crown of Castile",                   "卡斯提爾"),
     ("Aragonum et Catalonie",       "Crown of Aragon",                    "阿拉貢"),
-    ("Regnum Siciliae",             "Kingdom of Sicily",                  "西西里王國"),
-    ("Konungariket Sverige",        "Kingdom of Sweden",                  "瑞典王國"),
+    ("Regnum Siciliae",             "Sicily",                             "西西里王國"),
+    ("Konungariket Sverige",        "Sweden",                             "瑞典王國"),
     ("Republica de Venezia",        "Venetian Republic",                  "威尼斯共和國"),
-    ("Magyar Királyság",            "Kingdom of Hungary",                 "匈牙利王國"),
+    ("Magyar Királyság",            "Hungary",                            "匈牙利王國"),
     # --- 近世 ---
     ("España",                      "Spain",                              "西班牙"),
     ("Royaume de France",           "Kingdom of France",                  "法蘭西王國"),
@@ -61,14 +61,14 @@ EMPIRES = [
     ("Российская империя",          "Russian Empire",                     "俄羅斯帝國"),
     ("République Française",        "French Republic",                    "法蘭西共和國"),
     ("Kaiserthum Oesterreich",      "Austrian Empire",                    "奧地利帝國"),
-    ("Königreich Preußen",          "Kingdom of Prussia",                 "普魯士王國"),
+    ("Königreich Preußen",          "Prussia",                            "普魯士王國"),
     ("Deutsches Reich",             "German Empire",                      "德意志帝國"),
     ("Italia",                      "Italy",                              "義大利王國"),  # align with source "Italy"
     ("Sverige",                     "Sweden",                             "瑞典"),
     ("Danmark",                     "Denmark",                            "丹麥"),
     ("Polska",                      "Poland",                             "波蘭"),
     ("Československá republika",    "Czechoslovakia",                     "捷克斯洛伐克"),
-    ("Koninkrijk der Nederlanden",  "Kingdom of the Netherlands",         "荷蘭王國"),
+    ("Koninkrijk der Nederlanden",  "Netherlands",                        "荷蘭王國"),
     ("Soviet Union",                "USSR",                               "蘇聯"),  # align with source "USSR"
     # --- 鄂圖曼（含部分歐洲領土）---
     ("دولتْ علیّه عثمانیّه",         "Ottoman Empire",                     "鄂圖曼"),
@@ -85,7 +85,7 @@ EMPIRES = [
     ("الْخِلَافَة الْعَبَّاسِيَّة",  "Abbasid Caliphate",                  "阿拔斯哈里發"),
     ("الخلافة الفاطمیّة",            "Fatimid Caliphate",                  "法蒂瑪哈里發"),
     # 美洲
-    ("Nueva España",                "New Spain",                          "新西班牙"),
+    ("Nueva España",                "Vice-Royalty of New Spain",          "新西班牙"),  # align with source
     # United States — OHM 52 polys 但 out geom; response 130+ MB JSON parse fail
     # 暫跳過；source historical-states.geojson 已有 US 21 polys (1815-2010) 涵蓋
     # ("United States",               "United States",                      "美國"),
@@ -98,8 +98,8 @@ EMPIRES = [
     ("Qart-ḥadašt",                  "Carthage",                           "迦太基"),
     ("Rìoghachd na h-Alba",          "Scotland",                           "蘇格蘭王國"),
     ("Noregsveldi",                  "Kingdom of Norway",                  "古挪威王國"),
-    ("Reino de Portugal",            "Kingdom of Portugal",                "葡萄牙王國"),
-    ("Regnum Hungariae",             "Kingdom of Hungary",                 "中世紀匈牙利"),
+    ("Reino de Portugal",            "Portugal",                           "葡萄牙王國"),
+    ("Regnum Hungariae",             "Hungary",                            "中世紀匈牙利"),
     ("Regnum Neapolitanum",          "Naples",                             "那不勒斯王國"),
     ("Великое княжество Московское","Grand Duchy of Moscow",              "莫斯科大公國"),
     ("مملكة غرناطة",                  "Granada",                            "格拉納達酋長國"),
