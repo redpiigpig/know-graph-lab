@@ -12,10 +12,10 @@
       <!-- 標題區 -->
       <div class="bg-white border-b border-gray-100">
         <div class="max-w-3xl mx-auto px-6 py-10 flex flex-col md:flex-row gap-8">
-          <!-- 左：海報 -->
-          <div v-if="talk.posterPath" class="flex-shrink-0 md:w-48">
-            <img :src="talk.posterPath" :alt="talk.title" class="w-full rounded-lg shadow-md border border-gray-100" />
-          </div>
+          <!-- 左：海報（點擊看大圖） -->
+          <a v-if="talk.posterPath" :href="talk.posterPath" target="_blank" rel="noopener" class="flex-shrink-0 md:w-48 group">
+            <img :src="talk.posterPath" :alt="talk.title" class="w-full rounded-lg shadow-md border border-gray-100 group-hover:shadow-lg group-hover:opacity-90 transition cursor-zoom-in" />
+          </a>
 
           <!-- 右：資訊 -->
           <div class="flex-1 min-w-0">
@@ -41,15 +41,10 @@
       </div>
 
       <!-- 逐字稿 -->
-      <div class="max-w-3xl mx-auto px-6 py-10">
+      <div class="max-w-6xl mx-auto px-6 py-10">
         <div v-if="pending" class="text-center text-gray-400 py-20 text-sm">載入逐字稿…</div>
         <div v-else-if="error" class="text-center text-red-400 py-20 text-sm">無法載入逐字稿</div>
         <article v-else class="bg-white rounded-2xl border border-gray-100 overflow-hidden">
-          <!-- 內文頂部大圖海報 -->
-          <div v-if="talk.posterPath" class="border-b border-gray-100 bg-gray-50">
-            <img :src="talk.posterPath" :alt="talk.title" class="w-full max-h-[600px] object-contain mx-auto" />
-          </div>
-
           <div class="px-8 py-10 md:px-14">
           <template v-for="(b, i) in blocks" :key="i">
             <h2 v-if="b.type === 'h2'" class="text-base font-bold text-gray-900 mt-10 mb-3 pl-3 border-l-4 border-rose-300">{{ b.text }}</h2>
