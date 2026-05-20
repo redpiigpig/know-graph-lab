@@ -137,6 +137,42 @@
       "max_year_to": 1368,
       "reason": "大汗國（元朝東部）1271~1368；source polygon 涵蓋到 1399 把明朝期也算進來"
     },
+    "Carolingian Empire": {
+      "max_year_to": 888,
+      "reason": "Carolingian Empire 800~888（查理曼加冕到 Charles the Fat 廢黜）；source 延到 999 含後 East/West Francia 期"
+    },
+    "Visigothic Kingdom": {
+      "max_year_to": 711,
+      "reason": "西哥德王國 418~711 (Guadalete 之役亡於 Umayyad)；source 延到 799"
+    },
+    "Bulgar Khanate": {
+      "max_year_to": 1396,
+      "reason": "保加爾汗國（含第一+第二保加利亞帝國）681~1396 Ottoman 征服；source 延到 1491"
+    },
+    "Pagan": {
+      "max_year_to": 1297,
+      "reason": "蒲甘 849~1297（蒙古入侵後解體）；source 延到 1491"
+    },
+    "Srivijaya Empire": {
+      "max_year_to": 1377,
+      "reason": "室利佛逝 650~1377 (Majapahit 取代)；source 延到 1491"
+    },
+    "Ilkhanate": {
+      "max_year_to": 1335,
+      "reason": "伊兒汗國 1256~1335（Abu Said 死後分裂）；source 延到 1399"
+    },
+    "Maratha Confederacy": {
+      "max_year_to": 1818,
+      "reason": "馬拉塔聯盟 1674~1818（第三次英馬戰爭亡）；source 延到 1879"
+    },
+    "Khmer Empire": {
+      "max_year_to": 1431,
+      "reason": "高棉帝國 802~1431（Ayutthaya 攻 Angkor）；source 延到 1491"
+    },
+    "Vijayanagara": {
+      "max_year_to": 1646,
+      "reason": "毗奢耶那伽羅 1336~1646；source 延到 1699"
+    },
     "Ming Chinese Empire": {
       "min_year_from": 1368,
       "max_year_to": 1643,
