@@ -302,6 +302,8 @@ const SUPPLEMENT_ZH: Record<string, string> = {
   'Southern Song': '南宋',
   // 西夏／西遼
   'Western Xia': '西夏',
+  'Xixia': '西夏',
+  'Xia': '夏',
   'Qara Khitai': '西遼',
 }
 

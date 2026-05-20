@@ -968,7 +968,7 @@ const EMPIRES = [
   },
   {
     // 西夏 — source 完全沒有 Western Xia / Tangut polygon
-    polygon_name: 'Western Xia',
+    polygon_name: 'Xixia',  // 對齊 source historical-states.geojson 用的名稱
     name_zh: '西夏',
     end_year: 1227,
     years: {

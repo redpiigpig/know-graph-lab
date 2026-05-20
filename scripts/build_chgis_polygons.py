@@ -26,6 +26,44 @@ ROOT = Path(__file__).resolve().parent.parent
 SHP_PATH = Path("C:/tmp/chgis/v6_time_pref_pgn_utf_wgs84")
 OUT_PATH = ROOT / "public/maps/chgis-polygons.geojson"
 
+# 朝代地理 bbox — 同期共存的朝代（三國／南北朝／五代十國／宋遼金夏）必須各自只取
+# 該地理範圍內的 prefectures，不然 unary_union 會把所有 active prefectures 合到一塊
+# bbox: (min_lon, min_lat, max_lon, max_lat)；用 prefecture 的 X_COOR/Y_COOR 代表點
+DYNASTY_BBOX = {
+    # 三國 (220-280) — Huai 為界
+    'Cao Wei':                          (95, 33, 130, 50),   # 曹魏：淮河北
+    'Shu Han':                          (100, 27, 110, 35),  # 蜀漢：蜀地
+    'Eastern Wu':                       (110, 18, 122, 33),  # 東吳：江東+荊南
+    # 南北朝 — 淮河為界
+    'Toba Wei':                         (95, 33, 130, 50),
+    'Northern Qi':                      (108, 33, 122, 42),
+    'Northern Zhou':                    (95, 33, 115, 42),
+    'Southern Dynasties (Liu Song)':    (95, 18, 122, 33),
+    'Southern Dynasties (Southern Qi)': (95, 18, 122, 33),
+    'Southern Dynasties (Liang)':       (95, 18, 122, 33),
+    'Southern Dynasties (Chen)':        (105, 18, 122, 33),
+    # 五代十國 — 五代北方 / 十國各區
+    'Five Dynasties':                   (105, 33, 122, 42),
+    'Wuyue':                            (118, 27, 122, 32),
+    'Southern Tang':                    (113, 26, 122, 33),
+    'Southern Han':                     (105, 18, 115, 26),
+    'Later Shu':                        (100, 26, 110, 35),
+    'Min':                              (115, 23, 120, 28),
+    'Chu (Ten Kingdoms)':               (108, 24, 114, 30),
+    'Nanping (Ten Kingdoms)':           (108, 28, 114, 32),
+    'Former Shu':                       (100, 26, 110, 35),
+    'Northern Han':                     (110, 35, 116, 42),
+    # 北宋／南宋 vs 遼/金/西夏（同期）
+    # 北宋：黃河流域含中原＋江南，避開遼（北界 ~ 42N 燕雲線）和西夏（西界 ~ 108E）
+    'Song Empire':                      (108, 18, 122, 42),
+    'Southern Song':                    (95, 18, 122, 33),   # 南宋僅淮河南
+    'Liao':                             (108, 38, 135, 55),  # 遼：燕雲＋滿洲＋蒙古
+    'Jin Empire':                       (108, 33, 135, 55),  # 金：取代遼＋北宋北方
+    'Western Xia':                      (95, 35, 108, 42),   # 西夏：黨項區
+    # 元／明／清基本上控制全中國，無同期分裂，不需 bbox 過濾
+}
+
+
 # 朝代 key years（事件級採樣，與我 fine city-hull 對齊但用 CHGIS 真實邊界）
 # 格式: (dynasty_polygon_name, dynasty_zh, [(key_year, label_zh), ...])
 DYNASTIES = [
@@ -122,26 +160,17 @@ DYNASTIES = [
         (1220, "理宗"),
         (1270, "蒙古入侵前"),
     ]),
-    ("Liao", "遼", [
-        (920, "遼初"),
-        (960, "遼中前"),
-        (1000, "聖宗極盛"),
-        (1050, "遼中"),
-        (1100, "天祚末"),
-        (1120, "遼末"),
-    ]),
+    # Liao／Western Xia 在 CHGIS V6 prefecture 資料極少（CHGIS 以漢人行政區為主，
+    # 非漢政體不在 prefecture catalog）— 改由 fine city-hull / manual polygon 接手
+    # ("Liao", "遼", ...) — 已移除，fine 接管
+    # ("Western Xia", "西夏", ...) — 已移除，fine 接管
     ("Jin Empire", "金", [
         (1130, "金初"),
         (1160, "海陵王"),
         (1200, "章宗"),
         (1230, "金末"),
     ]),
-    ("Western Xia", "西夏", [
-        (1050, "西夏初"),
-        (1100, "西夏中"),
-        (1170, "西夏中後"),
-        (1220, "西夏末"),
-    ]),
+    # (Western Xia moved to fine fallback)
     ("Yuan Empire", "元", [
         (1280, "元初"),
         (1310, "元中"),
@@ -265,6 +294,7 @@ def main():
     features = []
     for poly_name, dyn_zh, keyframes in DYNASTIES:
         sorted_kfs = sorted(keyframes)
+        bbox = DYNASTY_BBOX.get(poly_name)  # (min_lon, min_lat, max_lon, max_lat) or None
         for idx, (year, label) in enumerate(sorted_kfs):
             # year_from = current key year; year_to = next key year - 1 (or end of dynasty)
             next_year = sorted_kfs[idx + 1][0] if idx + 1 < len(sorted_kfs) else year
@@ -284,8 +314,14 @@ def main():
                         # 修無效 geometry (self-intersection 等) 才能 union
                         if not g.is_valid:
                             g = g.buffer(0)
-                        if g.is_valid and not g.is_empty:
-                            active_geoms.append(g)
+                        if not (g.is_valid and not g.is_empty):
+                            continue
+                        # 朝代地理 bbox 過濾（用 polygon centroid）
+                        if bbox is not None:
+                            c = g.centroid
+                            if not (bbox[0] <= c.x <= bbox[2] and bbox[1] <= c.y <= bbox[3]):
+                                continue
+                        active_geoms.append(g)
                     except Exception:
                         pass
 
