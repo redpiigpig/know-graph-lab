@@ -45,14 +45,42 @@
         <div v-if="pending" class="text-center text-gray-400 py-20 text-sm">載入逐字稿…</div>
         <div v-else-if="error" class="text-center text-red-400 py-20 text-sm">無法載入逐字稿</div>
         <article v-else class="bg-white rounded-2xl border border-gray-100 overflow-hidden">
-          <div class="px-8 py-10 md:px-14">
-          <template v-for="(b, i) in blocks" :key="i">
-            <h2 v-if="b.type === 'h2'" class="text-lg font-bold text-gray-900 mt-10 mb-3 pl-3 border-l-4 border-rose-300">{{ b.text }}</h2>
-            <h3 v-else-if="b.type === 'h3'" class="text-base font-semibold text-rose-700 mt-6 mb-2">{{ b.text }}</h3>
-            <div v-else-if="b.type === 'speaker'" class="mt-4 mb-1 text-sm font-semibold text-rose-600">{{ b.text }}</div>
-            <p v-else-if="b.type === 'note'" class="text-sm text-gray-400 italic my-2 text-center">{{ b.text }}</p>
-            <p v-else class="text-base leading-8 text-gray-800 mb-4 indent-[2em]" v-html="inline(b.text)"></p>
-          </template>
+          <!-- 編輯工具列（只在登入時顯示）-->
+          <div v-if="canEdit" class="flex items-center justify-between gap-3 px-6 md:px-8 py-3 border-b border-gray-100 bg-gray-50/60 text-xs">
+            <span class="text-gray-500">
+              <span v-if="editMode">編輯模式 ‧ 支援 Markdown：## 主標、### 小標、*斜體*、**粗體**、講者：／提問A：</span>
+              <span v-else>登入中 ‧ 點右側「編輯」可修改逐字稿</span>
+            </span>
+            <div class="flex gap-2">
+              <template v-if="!editMode">
+                <button @click="startEdit" class="px-3 py-1 rounded bg-rose-600 hover:bg-rose-700 text-white font-medium transition">編輯</button>
+              </template>
+              <template v-else>
+                <button @click="cancelEdit" :disabled="saving" class="px-3 py-1 rounded bg-gray-100 hover:bg-gray-200 text-gray-700 transition">取消</button>
+                <button @click="saveEdit" :disabled="saving" class="px-3 py-1 rounded bg-rose-600 hover:bg-rose-700 disabled:opacity-50 text-white font-medium transition">{{ saving ? '儲存中…' : '儲存' }}</button>
+              </template>
+            </div>
+          </div>
+
+          <!-- 編輯區 -->
+          <div v-if="editMode" class="px-8 py-6 md:px-14">
+            <textarea
+              v-model="draft"
+              class="w-full min-h-[70vh] text-base leading-8 text-gray-800 font-mono resize-y border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-rose-300"
+              spellcheck="false"
+            ></textarea>
+            <p v-if="saveErr" class="mt-2 text-xs text-red-500">儲存失敗：{{ saveErr }}</p>
+          </div>
+
+          <!-- 閱讀區 -->
+          <div v-else class="px-8 py-10 md:px-14">
+            <template v-for="(b, i) in blocks" :key="i">
+              <h2 v-if="b.type === 'h2'" class="text-lg font-bold text-gray-900 mt-10 mb-3 pl-3 border-l-4 border-rose-300">{{ b.text }}</h2>
+              <h3 v-else-if="b.type === 'h3'" class="text-base font-semibold text-rose-700 mt-6 mb-2">{{ b.text }}</h3>
+              <div v-else-if="b.type === 'speaker'" class="mt-4 mb-1 text-sm font-semibold text-rose-600">{{ b.text }}</div>
+              <p v-else-if="b.type === 'note'" class="text-sm text-gray-400 italic my-2 text-center">{{ b.text }}</p>
+              <p v-else class="text-base leading-8 text-gray-800 mb-4 indent-[2em]" v-html="inline(b.text)"></p>
+            </template>
           </div>
         </article>
       </div>
@@ -66,16 +94,51 @@ import { useSpeechStore } from '~/stores/speech'
 const route = useRoute()
 const store = useSpeechStore()
 const talk = computed(() => store.talks.find(t => t.id === route.params.id))
+const user = useSupabaseUser()
+const canEdit = computed(() => !!user.value)
 
 useHead({ title: () => (talk.value ? `${talk.value.title} — 演講活動` : '演講活動') })
 
-const { data, pending, error } = useAsyncData(
+const { data, pending, error, refresh } = useAsyncData(
   () => `speech-${route.params.id}`,
   () => $fetch<string>(`/content/speech/${route.params.id}.txt`, {
     parseResponse: (txt) => txt,
   }),
   { watch: [() => route.params.id] }
 )
+
+// 編輯狀態
+const editMode = ref(false)
+const draft = ref('')
+const saving = ref(false)
+const saveErr = ref('')
+
+function startEdit() {
+  draft.value = (data.value as string) || ''
+  saveErr.value = ''
+  editMode.value = true
+}
+function cancelEdit() {
+  if (draft.value !== ((data.value as string) || '') && !confirm('放棄未儲存的修改？')) return
+  editMode.value = false
+  saveErr.value = ''
+}
+async function saveEdit() {
+  saving.value = true
+  saveErr.value = ''
+  try {
+    await $fetch(`/api/speech/edit/${route.params.id}`, {
+      method: 'POST',
+      body: { content: draft.value },
+    })
+    await refresh()
+    editMode.value = false
+  } catch (e: any) {
+    saveErr.value = e?.statusMessage || e?.message || String(e)
+  } finally {
+    saving.value = false
+  }
+}
 
 function formatDate(d: string) {
   const [y, m, day] = d.split('-')
