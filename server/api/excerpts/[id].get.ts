@@ -12,7 +12,8 @@ export default defineEventHandler(async (event) => {
     .select(
       `id, title, content, chapter, page_number, created_at, updated_at,
        books(id, title, author, translator, publish_place, publisher, publish_year, edition),
-       excerpt_book_projects(book_project_id, book_projects(id, name, type))`
+       excerpt_book_projects(book_project_id, book_projects(id, name, type)),
+       excerpt_concepts(concept_id, concepts(id, name, slug, color))`
     )
     .eq("id", id)
     .single();

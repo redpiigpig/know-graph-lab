@@ -248,6 +248,15 @@
                       class="text-xs px-2 py-0.5 rounded-full"
                     >{{ p.name }}</span>
                   </div>
+
+                  <div class="mt-2" @click.stop>
+                    <ConceptChips
+                      :excerpt-id="excerpt.id"
+                      :model-value="excerpt.concepts ?? []"
+                      editable
+                      @update:model-value="(v) => excerpt.concepts = v"
+                    />
+                  </div>
                 </div>
 
               </template>

@@ -73,6 +73,17 @@
         </div>
       </div>
 
+      <!-- 概念連結 -->
+      <div class="bg-white rounded-2xl border border-gray-200 px-6 py-4 mb-6">
+        <p class="text-xs text-gray-500 mb-2">概念連結（加上後可在概念筆記頁回查相關摘文）</p>
+        <ConceptChips
+          :excerpt-id="excerpt.id"
+          :model-value="linkedConcepts"
+          editable
+          @update:model-value="linkedConcepts = $event"
+        />
+      </div>
+
       <!-- 摘文主體 -->
       <div class="bg-white rounded-2xl border border-gray-200 p-8">
         <h1 v-if="excerpt.title" class="text-2xl font-bold text-gray-900 mb-6 leading-snug">
@@ -165,6 +176,7 @@ type ExcerptDetail = {
   updated_at: string;
   books: Book | null;
   excerpt_book_projects: ExcerptBookProject[];
+  excerpt_concepts?: { concept_id: string; concepts: { id: string; name: string; slug: string; color?: string | null } }[];
 };
 
 const supabase = useSupabaseClient();
@@ -176,6 +188,7 @@ const excerpt = ref<ExcerptDetail | null>(null);
 const contentEl = ref<HTMLElement | null>(null);
 const copyToastVisible = ref(false);
 let toastTimer: ReturnType<typeof setTimeout>;
+const linkedConcepts = ref<{ id: string; name: string; slug: string; color?: string | null }[]>([]);
 
 // 將 content 依 \n---\n 切分為多個頁面段落
 const contentSections = computed(() => {
@@ -366,6 +379,10 @@ async function fetchExcerpt() {
   }).catch(() => null);
 
   excerpt.value = data;
+  linkedConcepts.value = (data?.excerpt_concepts ?? [])
+    .map((ec: any) => ec.concepts)
+    .filter(Boolean)
+    .map((c: any) => ({ id: c.id, name: c.name, slug: c.slug, color: c.color }));
   loading.value = false;
 }
 

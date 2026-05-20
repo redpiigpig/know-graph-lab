@@ -76,8 +76,21 @@
             <h2 class="text-base font-semibold text-gray-900">書摘與構思</h2>
             <p class="text-xs text-gray-500 mt-0.5">章節草稿 · 引用筆記 · 此分頁僅登入者可見</p>
           </div>
-          <span class="text-xs text-gray-400">{{ editMode ? notesStatus : '檢視中（按右上「編輯」可修改）' }}</span>
+          <div class="flex items-center gap-2">
+            <button
+              v-if="editMode"
+              class="px-3 py-1.5 text-xs rounded-lg border border-blue-300 text-blue-700 hover:bg-blue-50"
+              @click="showPicker = true"
+            >📎 插入引用</button>
+            <button
+              class="px-3 py-1.5 text-xs rounded-lg border border-purple-300 text-purple-700 hover:bg-purple-50"
+              @click="showExport = true"
+            >📄 預覽 + 書目</button>
+            <span class="text-xs text-gray-400 ml-2">{{ editMode ? notesStatus : '檢視中（按右上「編輯」可修改）' }}</span>
+          </div>
         </div>
+
+        <p v-if="pickerToast" class="text-xs text-emerald-600 mb-2">{{ pickerToast }}</p>
         <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden" style="min-height: 400px;">
           <ClientOnly>
             <GenealogyRichTextEditor
@@ -99,6 +112,17 @@
         登入後可看到「書摘與構思」筆記分頁
       </div>
     </template>
+
+    <ExcerptPicker
+      :open="showPicker"
+      @close="showPicker = false"
+      @picked="onPicked"
+    />
+    <DocumentExportModal
+      :open="showExport"
+      :source-html="notesHtml"
+      @close="showExport = false"
+    />
   </div>
 </template>
 
@@ -129,6 +153,14 @@ const notesHtml = ref('')
 const editorKey = ref(0)
 const notesStatus = ref('')
 const lastSavedHtml = ref('')
+const showPicker = ref(false)
+const showExport = ref(false)
+const pickerToast = ref('')
+
+function onPicked(payload: { id: string; marker: string; toastMsg: string }) {
+  pickerToast.value = payload.toastMsg
+  setTimeout(() => { pickerToast.value = '' }, 3500)
+}
 
 useHead(() => ({ title: project.value ? `${project.value.title} — 寫作計畫` : '寫作計畫' }))
 
