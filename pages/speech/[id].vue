@@ -51,7 +51,7 @@
             <h3 v-else-if="b.type === 'h3'" class="text-base font-semibold text-rose-700 mt-6 mb-2">{{ b.text }}</h3>
             <div v-else-if="b.type === 'speaker'" class="mt-4 mb-1 text-sm font-semibold text-rose-600">{{ b.text }}</div>
             <p v-else-if="b.type === 'note'" class="text-sm text-gray-400 italic my-2 text-center">{{ b.text }}</p>
-            <p v-else class="text-base leading-8 text-gray-800 mb-4 indent-[2em]">{{ b.text }}</p>
+            <p v-else class="text-base leading-8 text-gray-800 mb-4 indent-[2em]" v-html="inline(b.text)"></p>
           </template>
           </div>
         </article>
@@ -80,6 +80,17 @@ const { data, pending, error } = useAsyncData(
 function formatDate(d: string) {
   const [y, m, day] = d.split('-')
   return `${y} 年 ${parseInt(m)} 月 ${parseInt(day)} 日`
+}
+
+// 處理 inline markdown：*text* → <em>text</em>，**text** → <strong>text</strong>
+function inline(text: string): string {
+  const escaped = text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+  return escaped
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*([^*]+)\*/g, '<em>$1</em>')
 }
 
 type Block = { type: 'h2' | 'h3' | 'speaker' | 'note' | 'para'; text: string }
