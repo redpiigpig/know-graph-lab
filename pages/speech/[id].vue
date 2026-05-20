@@ -47,11 +47,11 @@
         <article v-else class="bg-white rounded-2xl border border-gray-100 overflow-hidden">
           <div class="px-8 py-10 md:px-14">
           <template v-for="(b, i) in blocks" :key="i">
-            <h2 v-if="b.type === 'h2'" class="text-base font-bold text-gray-900 mt-10 mb-3 pl-3 border-l-4 border-rose-300">{{ b.text }}</h2>
-            <h3 v-else-if="b.type === 'h3'" class="text-sm font-semibold text-rose-700 mt-6 mb-2">{{ b.text }}</h3>
-            <div v-else-if="b.type === 'speaker'" class="mt-4 mb-1 text-xs font-semibold text-rose-600">{{ b.text }}</div>
-            <p v-else-if="b.type === 'note'" class="text-xs text-gray-400 italic my-2 text-center">{{ b.text }}</p>
-            <p v-else class="text-sm leading-7 text-gray-800 mb-3 indent-[2em]">{{ b.text }}</p>
+            <h2 v-if="b.type === 'h2'" class="text-lg font-bold text-gray-900 mt-10 mb-3 pl-3 border-l-4 border-rose-300">{{ b.text }}</h2>
+            <h3 v-else-if="b.type === 'h3'" class="text-base font-semibold text-rose-700 mt-6 mb-2">{{ b.text }}</h3>
+            <div v-else-if="b.type === 'speaker'" class="mt-4 mb-1 text-sm font-semibold text-rose-600">{{ b.text }}</div>
+            <p v-else-if="b.type === 'note'" class="text-sm text-gray-400 italic my-2 text-center">{{ b.text }}</p>
+            <p v-else class="text-base leading-8 text-gray-800 mb-4 indent-[2em]">{{ b.text }}</p>
           </template>
           </div>
         </article>
