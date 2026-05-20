@@ -17,6 +17,8 @@
           <div class="flex items-center gap-2">
             <button class="px-3 py-1.5 text-xs rounded-lg bg-amber-600 text-white hover:bg-amber-500" @click="showCreate = true">+ 新增文摘</button>
             <button class="px-3 py-1.5 text-xs rounded-lg border border-amber-300 text-amber-800 hover:bg-amber-50" @click="showCSV = true">上傳 CSV</button>
+            <button class="px-3 py-1.5 text-xs rounded-lg border border-purple-300 text-purple-700 hover:bg-purple-50"
+              :disabled="!ja" @click="showCite = true">📚 引用</button>
             <button @click="handleLogout" class="text-gray-500 hover:text-red-600 transition text-sm">登出</button>
           </div>
         </div>
@@ -223,6 +225,14 @@
         </div>
       </div>
     </div>
+
+    <CiteModal
+      :open="showCite"
+      source="journal"
+      :id="journalId"
+      @close="showCite = false"
+      @metadata-fetched="applyFetchedMetadata"
+    />
   </div>
 </template>
 
@@ -256,6 +266,7 @@ const searchQ = ref("");
 const searchField = ref<"all" | "content" | "title">("all");
 const showCreate = ref(false);
 const showCSV = ref(false);
+const showCite = ref(false);
 const csvFile = ref<File | null>(null);
 const form = ref({ title: "", chapter: "", page_number: "", content: "" });
 const projectTargets = ref<{ id: string; name: string; type: string }[]>([]);
@@ -486,6 +497,39 @@ async function saveJournalField(field: string, value: unknown) {
     body: { [field]: value },
   }).catch(console.error);
   if (ja.value) (ja.value as any)[field] = value;
+}
+
+async function applyFetchedMetadata(meta: Record<string, any>) {
+  if (!ja.value) return;
+  const FIELD_MAP: Record<string, string> = {
+    title: 'title',
+    author: 'author',
+    venue: 'venue',
+    publish_year: 'publish_year',
+    doi: 'doi',
+    volume: 'volume',
+    issue: 'issue',
+    pages: 'pages',
+    url: 'url',
+    language: 'language',
+    publisher: 'publisher',
+  };
+  const patch: Record<string, unknown> = {};
+  for (const [srcKey, dbField] of Object.entries(FIELD_MAP)) {
+    const v = meta[srcKey];
+    if (v === undefined || v === null || v === '') continue;
+    if (!(ja.value as any)[dbField]) {
+      patch[dbField] = v;
+      (ja.value as any)[dbField] = v;
+    }
+  }
+  if (!Object.keys(patch).length) return;
+  const token = await getToken(); if (!token) return;
+  await $fetch(`/api/journal-articles/${journalId}`, {
+    method: "PATCH",
+    headers: { Authorization: `Bearer ${token}` },
+    body: patch,
+  }).catch(console.error);
 }
 
 async function handleLogout() {

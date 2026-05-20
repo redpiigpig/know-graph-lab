@@ -7,7 +7,7 @@ export default defineEventHandler(async (event) => {
     await Promise.all([
       supabase
         .from("books")
-        .select("id, title, author, translator, publish_place, publisher, publish_year, edition, original_author, original_title, original_publisher, original_publish_year, category_id, created_at")
+        .select("id, title, author, translator, editor, publish_place, publisher, publish_year, edition, edition_number, original_author, original_title, original_publisher, original_publish_year, category_id, created_at, isbn, doi, series_title, series_number, container_title, container_editor, pages, url, accessed_date, language, citation_key")
         .eq("id", id!)
         .single(),
       supabase

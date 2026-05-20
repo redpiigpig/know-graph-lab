@@ -8,7 +8,7 @@ export default defineEventHandler(async (event) => {
 
   const { data: ja, error: jaErr } = await supabase
     .from("journal_articles")
-    .select("id, title, venue, author, publish_year, issue_label, created_at")
+    .select("id, title, venue, author, publish_year, issue_label, created_at, doi, volume, issue, pages, url, accessed_date, publisher, language, citation_key")
     .eq("id", id!)
     .single();
 

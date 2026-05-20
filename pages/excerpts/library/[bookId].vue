@@ -20,6 +20,8 @@
             <button class="px-3 py-1.5 text-xs rounded-lg border border-blue-300 text-blue-700 hover:bg-blue-50" @click="showCSV = true">上傳 CSV</button>
             <button class="px-3 py-1.5 text-xs rounded-lg border border-emerald-300 text-emerald-700 hover:bg-emerald-50"
               :disabled="!book?.excerpts?.length" @click="exportMarkdown">📋 匯出 Markdown</button>
+            <button class="px-3 py-1.5 text-xs rounded-lg border border-purple-300 text-purple-700 hover:bg-purple-50"
+              :disabled="!book" @click="showCite = true">📚 引用</button>
             <button @click="handleLogout" class="text-gray-500 hover:text-red-600 transition text-sm">登出</button>
           </div>
         </div>
@@ -285,6 +287,14 @@
       </div>
     </div>
 
+    <CiteModal
+      :open="showCite"
+      source="book"
+      :id="bookId"
+      @close="showCite = false"
+      @metadata-fetched="applyFetchedMetadata"
+    />
+
     <div v-if="showCSV" class="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4">
       <div class="w-full max-w-md bg-white rounded-2xl border border-gray-200 p-5">
         <h3 class="text-lg font-bold mb-3">上傳 CSV 匯入文摘</h3>
@@ -327,6 +337,7 @@ const searchField = ref<"all" | "content" | "title">("all");
 const showCreate = ref(false);
 const showOCR = ref(false);
 const showCSV = ref(false);
+const showCite = ref(false);
 const ocrFile = ref<File | null>(null);
 const csvFile = ref<File | null>(null);
 const ocrStartPage = ref("1");
@@ -707,6 +718,40 @@ async function saveBookField(field: string, value: unknown) {
     body: { [field]: value },
   }).catch(console.error);
   if (book.value) (book.value as any)[field] = value;
+}
+
+// Fired when CiteModal fetches DOI/ISBN metadata — merge it into the
+// current book row. Only fills empty fields so we don't clobber edits.
+async function applyFetchedMetadata(meta: Record<string, any>) {
+  if (!book.value) return;
+  const FIELD_MAP: Record<string, string> = {
+    title: 'title',
+    author: 'author',
+    publisher: 'publisher',
+    publish_place: 'publish_place',
+    publish_year: 'publish_year',
+    isbn: 'isbn',
+    doi: 'doi',
+    pages: 'pages',
+    url: 'url',
+    language: 'language',
+  };
+  const patch: Record<string, unknown> = {};
+  for (const [srcKey, dbField] of Object.entries(FIELD_MAP)) {
+    const v = meta[srcKey];
+    if (v === undefined || v === null || v === '') continue;
+    if (!(book.value as any)[dbField]) {
+      patch[dbField] = v;
+      (book.value as any)[dbField] = v;
+    }
+  }
+  if (!Object.keys(patch).length) return;
+  const token = await getToken(); if (!token) return;
+  await $fetch(`/api/books/${bookId}`, {
+    method: "PATCH",
+    headers: { Authorization: `Bearer ${token}` },
+    body: patch,
+  }).catch(console.error);
 }
 
 async function handleLogout() {

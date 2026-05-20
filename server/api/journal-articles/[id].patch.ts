@@ -5,7 +5,11 @@ export default defineEventHandler(async (event) => {
   const id = getRouterParam(event, "id")!;
   const body = await readBody(event) as Record<string, unknown>;
 
-  const allowed = ["title", "venue", "author", "publish_year", "issue_label"] as const;
+  const allowed = [
+    "title", "venue", "author", "publish_year", "issue_label",
+    "doi", "volume", "issue", "pages", "url",
+    "accessed_date", "publisher", "language", "citation_key",
+  ] as const;
   const patch: Record<string, unknown> = {};
   for (const k of allowed) {
     if (body[k] !== undefined) patch[k] = body[k];
