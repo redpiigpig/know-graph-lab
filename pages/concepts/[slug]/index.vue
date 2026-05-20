@@ -80,6 +80,33 @@
             <p v-if="b.context" class="text-xs text-gray-600 line-clamp-2 mt-0.5">…{{ b.context }}…</p>
           </NuxtLink>
         </section>
+        <section v-if="concept.source_books?.length">
+          <h3 class="text-sm font-semibold text-gray-700 mb-2">引用書籍 ({{ concept.source_books.length }})</h3>
+          <NuxtLink v-for="b in concept.source_books" :key="b.id" :to="`/excerpts/library/${b.id}`"
+            class="block bg-blue-50/40 border border-blue-100 rounded-lg px-3 py-2 mb-1.5 hover:border-blue-300">
+            <p class="text-sm text-gray-800 line-clamp-1">📚 {{ b.title }}</p>
+            <p class="text-[11px] text-gray-500 mt-0.5">
+              <span v-if="b.author">{{ b.author }}</span>
+              <span v-if="b.publish_year">（{{ b.publish_year }}）</span>
+              <span class="ml-1 text-gray-400">· {{ b.excerpt_count }} 筆摘文</span>
+            </p>
+          </NuxtLink>
+        </section>
+
+        <section v-if="concept.source_journals?.length">
+          <h3 class="text-sm font-semibold text-gray-700 mb-2">引用期刊 ({{ concept.source_journals.length }})</h3>
+          <NuxtLink v-for="j in concept.source_journals" :key="j.id" :to="`/excerpts/journal/${j.id}`"
+            class="block bg-amber-50/40 border border-amber-100 rounded-lg px-3 py-2 mb-1.5 hover:border-amber-300">
+            <p class="text-sm text-gray-800 line-clamp-1">📰 {{ j.title }}</p>
+            <p class="text-[11px] text-gray-500 mt-0.5">
+              <span v-if="j.author">{{ j.author }}</span>
+              <span v-if="j.venue">·《{{ j.venue }}》</span>
+              <span v-if="j.publish_year">（{{ j.publish_year }}）</span>
+              <span class="ml-1 text-gray-400">· {{ j.excerpt_count }} 筆摘文</span>
+            </p>
+          </NuxtLink>
+        </section>
+
         <section v-if="concept.excerpts?.length">
           <h3 class="text-sm font-semibold text-gray-700 mb-2">關聯書摘 ({{ concept.excerpts.length }})</h3>
           <NuxtLink v-for="ex in concept.excerpts" :key="ex.id" :to="`/excerpts/${ex.id}`"
@@ -106,6 +133,7 @@ interface Concept {
   aliases?: string[]; summary?: string | null; body?: string;
   color?: string | null;
   outlinks: any[]; backlinks: any[]; excerpts: any[];
+  source_books?: any[]; source_journals?: any[];
 }
 
 const route = useRoute();

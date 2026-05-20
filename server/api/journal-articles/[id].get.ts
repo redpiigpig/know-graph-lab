@@ -31,7 +31,8 @@ export default defineEventHandler(async (event) => {
         id, title, content, chapter, page_number, created_at,
         excerpt_book_projects(
           book_projects(id, name, type)
-        )
+        ),
+        excerpt_concepts(concepts(id, name, slug, color))
       `)
     .in("journal_article_id", clusterIds)
     .order("created_at");
@@ -47,6 +48,7 @@ export default defineEventHandler(async (event) => {
     page_number: e.page_number,
     created_at: e.created_at,
     projects: (e.excerpt_book_projects ?? []).map((ebp: any) => ebp.book_projects).filter(Boolean),
+    concepts: (e.excerpt_concepts ?? []).map((ec: any) => ec.concepts).filter(Boolean),
   }));
 
   return { ...ja, excerpts: enriched, chapterNameMap: {} };

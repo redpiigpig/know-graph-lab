@@ -15,6 +15,7 @@
             <NuxtLink to="/excerpts/help"
               class="w-7 h-7 flex items-center justify-center rounded-lg border border-gray-200 text-gray-500 hover:text-blue-600 hover:border-blue-300 text-xs transition" title="使用說明">?</NuxtLink>
             <button @click="showCreateBook = true" class="text-xs px-3 py-1.5 rounded-lg bg-blue-600 text-white hover:bg-blue-500 transition">+ 新增書籍</button>
+            <button @click="showBulkImport = true" class="text-xs px-3 py-1.5 rounded-lg border border-purple-300 text-purple-700 hover:bg-purple-50 transition" title="批次貼 ISBN / DOI">📥 批次匯入</button>
             <button @click="handleLogout" class="text-gray-500 hover:text-red-600 transition text-sm">登出</button>
           </div>
         </div>
@@ -138,6 +139,12 @@
         </div>
       </div>
     </div>
+
+    <BulkImportModal
+      :open="showBulkImport"
+      @close="showBulkImport = false"
+      @done="onBulkDone"
+    />
   </div>
 </template>
 
@@ -157,6 +164,11 @@ const bookSearch = ref("");
 const selectedTopCat = ref<Category | null>(null);
 const selectedSubCat = ref<Category | null>(null);
 const showCreateBook = ref(false);
+const showBulkImport = ref(false);
+
+async function onBulkDone() {
+  await Promise.all([fetchAllBooks(), loadBooks(selectedSubCat.value?.id || selectedTopCat.value?.id)]);
+}
 const newBook = ref<{ title: string; author: string; publisher: string; publish_year: number | null }>({
   title: "", author: "", publisher: "", publish_year: null,
 });
