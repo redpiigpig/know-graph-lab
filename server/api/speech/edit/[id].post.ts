@@ -1,11 +1,16 @@
 // POST /api/speech/edit/[id]
-// 編輯演講逐字稿（登入才能用）
+// 編輯演講（逐字稿 .txt + metadata .meta.json）— 登入才能用
 import { writeFile, mkdir } from 'node:fs/promises'
 import { resolve } from 'node:path'
 
 const ALLOWED_IDS = new Set([
   '2026-05-19-hsuanchuang',
 ])
+
+const ALLOWED_META_FIELDS = [
+  'title', 'subtitle', 'date', 'duration',
+  'venue', 'organizer', 'course', 'category', 'description',
+] as const
 
 export default defineEventHandler(async (event) => {
   await requireAuth(event)
@@ -15,18 +20,35 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 404, message: 'Speech not registered' })
   }
 
-  const body = await readBody(event) as { content?: string }
-  const content = body.content ?? ''
-  if (typeof content !== 'string') {
-    throw createError({ statusCode: 400, message: 'content must be a string' })
-  }
-  if (content.length > 500_000) {
-    throw createError({ statusCode: 413, message: 'content too large (>500KB)' })
+  const body = await readBody(event) as {
+    content?: string
+    meta?: Record<string, string>
   }
 
-  const target = resolve(process.cwd(), 'public', 'content', 'speech', `${id}.txt`)
-  await mkdir(resolve(process.cwd(), 'public', 'content', 'speech'), { recursive: true })
-  await writeFile(target, content, 'utf-8')
+  const dir = resolve(process.cwd(), 'public', 'content', 'speech')
+  await mkdir(dir, { recursive: true })
 
-  return { ok: true, bytes: Buffer.byteLength(content, 'utf-8') }
+  // 寫逐字稿
+  if (typeof body.content === 'string') {
+    if (body.content.length > 500_000) {
+      throw createError({ statusCode: 413, message: 'content too large (>500KB)' })
+    }
+    await writeFile(resolve(dir, `${id}.txt`), body.content, 'utf-8')
+  }
+
+  // 寫 metadata
+  if (body.meta && typeof body.meta === 'object') {
+    const cleanMeta: Record<string, string> = {}
+    for (const k of ALLOWED_META_FIELDS) {
+      const v = body.meta[k]
+      if (typeof v === 'string') cleanMeta[k] = v
+    }
+    await writeFile(
+      resolve(dir, `${id}.meta.json`),
+      JSON.stringify(cleanMeta, null, 2) + '\n',
+      'utf-8'
+    )
+  }
+
+  return { ok: true }
 })
