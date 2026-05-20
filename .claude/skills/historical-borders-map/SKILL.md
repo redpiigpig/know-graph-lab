@@ -5,6 +5,16 @@ description: 「歷史國界地圖」工具集（/maps/historical-borders）— 
 
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session（"exceeds the dimension limit for many-image requests"）。使用者一說要傳截圖，立刻提醒先確認尺寸；推薦 Win+Shift+S 框選或縮到 ≤ 1920px。
 
+> 🚫 **地圖標籤只能是國名／朝代名 — 絕對禁止君主／戰役／時代名／公國名／治世名** [[feedback-map-label-clean-country-name]]
+>
+> 規則：地圖 polygon 文字標籤只顯示「乾淨的中文國名／朝代名」。`dynasty_zh` 在 dynasty-labels.ts 可保留作 detail 彈窗用途，但 **`dynastyLabelAt()` 永遠只回傳 `country_zh`，從不組合成 `{dynasty_zh}（{country_zh}）`**。
+>
+> ❌ 禁止項範例：`查理五世/六世（法蘭西王國）`／`羅斯托夫－雅羅斯拉夫爾（俄羅斯）`／`貞觀之治（唐）`／`武帝極盛（漢）`／`阿維尼翁教皇（教皇國）`／`葡萄牙第一王朝（葡萄牙王國）`／`沙圖格魯克（德里蘇丹）`／`習近平時代（中華人民共和國）`／`普京時代（俄羅斯聯邦）`／`衰退（馬利）`／`所羅門王朝復辟（衣索比亞）`
+>
+> ✅ 改成：`法蘭西王國`／`俄羅斯`／`唐`／`漢`／`教皇國`／`葡萄牙王國`／`德里蘇丹國`／`中華人民共和國`／`俄羅斯聯邦`／`馬利`／`衣索比亞`
+>
+> 已強制：[data/maps/dynasty-labels.ts](../../../data/maps/dynasty-labels.ts) 的 `dynastyLabelAt()` 只回傳 `e.country_zh`。新加 DYNASTY_LABELS entries 只需填 country_zh 即可；dynasty_zh 可空。
+
 > ⚠️ **d3-geo 球面 winding 反向陷阱（已踩過）**：d3-geoEqualEarth／geoArea／geoCentroid 用**球面**慣例：**地理座標 CW 環 = 內部小區域，CCW = 補集（整個球面減該區）**。這與 RFC 7946 GeoJSON spec 相反。任何手寫 polygon 或 Graham 凸包（標準輸出數學 CCW）→ **必須 reverse 成 CW**，否則 `geoCentroid` 回傳對蹠點、`geoPath` 渲染出「世界輪廓 + 小洞」=全圖被填一色。`scripts/build_city_hull_polygons.mjs` 已內建 `.reverse()`，新加 polygon 一定要驗證 geoArea < 2π。
 
 > 🏔️ **city-hull fine polygons 的本質限制 + 解法**：用 Graham 凸包連城市點 → 是**幾何凸多邊形**，不沿海岸線、會切過海（如蒙兀兒 Kabul→Dhaka 直線穿孟加拉灣）。

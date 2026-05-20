@@ -1066,15 +1066,16 @@ export const DYNASTY_LABELS: Record<string, DynastyEntry[]> = {
  *   - dynasty_zh === country_zh → 只顯示一次
  *   - 其他 → '{dynasty_zh}（{country_zh}）'
  */
+// 規則：地圖標籤只顯示「國名／朝代名」，絕不顯示君主／戰役／時代名（如「查理五世」「貞觀之治」）。
+// 詳見 SKILL.md 與 feedback_map_label_clean_country_name.md。
+// dynasty_zh 用於 detail 彈窗（鉅細內容），不進地圖標籤。
 export function dynastyLabelAt(name: string, year: number): string | null {
   const list = DYNASTY_LABELS[name]
   if (!list) return null
   for (const e of list) {
     if (year >= e.from && year <= e.to) {
-      if (!e.dynasty_zh) return e.country_zh
-      if (!e.country_zh) return e.dynasty_zh
-      if (e.dynasty_zh === e.country_zh) return e.country_zh
-      return `${e.dynasty_zh}（${e.country_zh}）`
+      // 只回傳 country_zh；dynasty_zh 從不出現在地圖文字
+      return e.country_zh || e.dynasty_zh || null
     }
   }
   return null
