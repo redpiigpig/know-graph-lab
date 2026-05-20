@@ -49,7 +49,7 @@ description: 「歷史國界地圖」工具集（/maps/historical-borders）— 
 | E4. 細粒度 polygon（city-hull） | `public/maps/fine-polygons.geojson` | **276 polygons / 54 帝國** | 中東 18（阿巴斯／伍麥亞／蒙古）+ 中國 135 + 地中海 33（羅馬到 395／拜占庭／鄂圖曼）+ 古波斯 30 + 古印度 35 + 神羅 13 + 美洲 13 |
 | E5. **OHM 真實邊界 polygon** | `public/maps/ohm-polygons.geojson` | **831 polygons / 67 政體 (6.1 MB)** | 從 OpenHistoricalMap 抓的真實歷史國界（年份分段、Douglas-Peucker 0.1° 簡化）。a) admin_level=2 共 58 個（歐洲 34 + 非歐洲 A 級 10：Mongol/Manchu 大清/Goryeo/大日本帝國/大越/Abbasid/Fatimid/Nueva España/Mutul/Kaan Dynasty；B 級 14：迦太基/蘇格蘭/挪威/葡萄牙/中世紀匈牙利/那不勒斯/莫斯科大公國/格拉納達/西法蘭克/布蘭登堡-普魯士/早期阿拉貢/East India Co/英屬印度/新法蘭西），b) admin_level=3 的 10 個 HRE Reichskreise（補 1500-1806 諸侯細節）。優先級：CHGIS > OHM > fine > source。
 | E6. **CHGIS 中國朝代真實邊界** | `public/maps/chgis-polygons.geojson` | **111 polygons / 31 朝代 (1.9 MB)** | 從 Harvard/Fudan **CHGIS V6 Time Series Prefecture Polygons**（DOI:10.7910/DVN/I0Q7SM，免費學術用）dissolve 出朝代邊界。涵蓋 -224 BCE → 1911 CE，含繁中名／拼音／簡中名。每朝代取代表性 key years（武帝極盛 -110、開元盛世 750、忽必烈 1280、永樂初 1400、乾隆極盛 1760 等）unary_union 所有 active prefectures。3,830 prefecture/府／州／路 → 111 個朝代-年 polygons。pyshp + shapely，[scripts/build_chgis_polygons.py](../../../scripts/build_chgis_polygons.py)。
-| E7. **手繪 polygon** (OHM/CHGIS 無覆蓋) | `public/maps/manual-polygons.geojson` | **77 polygons / 13 帝國 (25 KB)** | 基於 Wikipedia 領土演進地圖 + 自然地理特徵手繪，每 polygon 15-25 個 (lon, lat) 頂點沿河流/山脈/海岸線。涵蓋古波斯（Achaemenid/Parthia/Parthian/Sasanian 23 polys）、古印度（Maurya/Gupta/Delhi Sultanate/Mughal 26 polys）、美洲（Aztec/Inca 12 polys）、伊斯蘭早期（Umayyad 4 polys，含 Iberia+北非 MultiPolygon）、中亞（Qara Khitai 4 polys）、中國早期 pre-CHGIS（Zhoa 周朝 8 polys）。比 city-hull 凸包貼近真實但仍簡化（誤差 ~50-100 km）。[scripts/build_manual_polygons.mjs](../../../scripts/build_manual_polygons.mjs)。
+| E7. **手繪 polygon** (OHM/CHGIS 無覆蓋) | `public/maps/manual-polygons.geojson` | **219 polygons / 52 帝國 (60 KB)** | 基於 Wikipedia 領土演進地圖 + 自然地理特徵手繪，每 polygon 5-25 個 (lon, lat) 頂點沿河流/山脈/海岸線。涵蓋：古波斯 4（Achaemenid/Parthia/Parthian/Sasanian 23 polys）、古印度 4（Maurya/Gupta/Delhi Sultanate/Mughal 26 polys）、美洲核心 2（Aztec/Inca 12 polys）+ 美洲擴充 9（Olmec/Zapotec/Toltec/Mixtec/Wari/Tiwanaku/Chimú/Mapuche/Powhatan）、伊斯蘭 1（Umayyad 4 polys，Iberia+北非 MultiPolygon）、中亞核心 1（Qara Khitai 4 polys）+ 中亞擴充 9（花剌子模／可薩／伏爾加保加利亞／佩切涅格／欽察／突厥／回鶻／伽色尼／塞爾柱）、中國早期 1（Zhoa 周朝 8 polys，pre-CHGIS）、非洲 13（迦納／馬利／桑海／加奈姆／博爾努-加奈姆／豪薩諸國／阿克蘇姆／馬庫拉／衣索比亞／剛果／大津巴布韋／莫諾莫塔帕／祖魯）、東南亞 9（高棉／室利佛逝／滿者伯夷／蒲甘／東吁／貢榜／瀾滄／占婆）。比 city-hull 凸包貼近真實但仍簡化（誤差 ~50-100 km）。[scripts/build_manual_polygons.mjs](../../../scripts/build_manual_polygons.mjs)。
 | F. NE 50m coastline | `public/maps/ne_50m_coastline.geojson` | 1428 LineString | 海岸線（黑線） |
 | G. NE 50m admin_0 | `public/maps/ne_50m_admin_0_countries.geojson` | 242 features | 陸地灰底 + **NAME_ZHT 中文國名（內建）** |
 | H. Polygon 名譯本 | `public/maps/polygon-names-zh.json` | **2,420 條 (88 KB)** | Gemini batch 翻的 polygon name → 繁中 |
@@ -489,87 +489,19 @@ TimeAxis 右上「▶ 播放」按鈕，速度可選「慢／普通／快」（2
 
 ## 待補項目
 
-### 🚧 下個 session 接續：補 manual polygons 中亞／非洲／東南亞／拉美
+### ✅ 已完成（2026-05-20）：manual polygons 中亞／非洲／東南亞／拉美
 
-**現況**：歐洲（OHM 781 polys）、中國（CHGIS 94 polys）、波斯/印度/美洲核心（manual 77 polys）已有真實/手繪邊界。剩**中亞／非洲／東南亞／拉美**仍是 city-hull 凸包多邊形（user 截圖反映 1145 中亞偏多角；近東/印度 OK 但其他區待補）。
-
-**方法**：擴展 [scripts/build_manual_polygons.mjs](../../../scripts/build_manual_polygons.mjs) 的 EMPIRES 陣列。每帝國 5-8 keyframes，每 keyframe 15-25 個 (lon, lat) 頂點，**參考 Wikipedia「Territorial evolution of X」地圖 + 自然地理（河流／山脈／海岸線）**。建好跑 `node scripts/build_manual_polygons.mjs` 驗證 geoArea < 2π。
-
-**清單**（按優先級）：
-
-**B1. 中亞**
-- Khwarezmid Empire（花剌子模）1077-1231：核心 Khwarezm + 後擴 Iran/Afghanistan/中亞
-- Khazar Khaganate（可薩）650-969：高加索北 + Volga
-- Volga Bulgaria（伏爾加保加利亞）700-1240
-- Cuman-Kipchak Confederation 900-1241：黑海北草原
-- Pechenegs（佩切涅格）860-1091：黑海北
-- Turkic Khaganate（突厥汗國）552-744：分東西
-- Uyghur Khaganate（回鶻）744-840
-- Ghaznavid（伽色尼）977-1186：阿富汗/印度西北
-- Seljuk Empire（塞爾柱）1037-1194：橫跨中亞-波斯-小亞細亞
-
-**B2. 西非／中非／東非**
-- Ghana Empire（迦納帝國）300-1235
-- Mali Empire（馬利帝國）1235-1670
-- Songhai Empire（桑海帝國）1464-1591
-- Kanem Empire（加奈姆）700-1380
-- Bornu Empire（博爾努）1380-1893
-- Hausa Kingdoms（豪薩諸國）900-1808
-- Aksum（阿克蘇姆）100-960
-- Kingdom of Makuria（馬庫拉）500-1500
-- Ethiopian Empire（衣索比亞帝國）1270-1974
-- Kongo Kingdom（剛果王國）1390-1914
-- Great Zimbabwe（大津巴布韋）1100-1450
-- Mutapa Empire（莫諾莫塔帕）1430-1760
-- Zulu Kingdom（祖魯王國）1816-1897
-
-**B3. 東南亞**
-- Khmer Empire（高棉帝國）802-1431：年代分段（建國／極盛 Jayavarman VII 1200／衰落）
-- Srivijaya（室利佛逝）650-1377：海上帝國
-- Majapahit（滿者伯夷）1293-1527
-- Pagan Kingdom（蒲甘）849-1297
-- Ayutthaya Kingdom（大城）1351-1767：OHM 已抓但年代分段
-- Toungoo Dynasty（東吁）1510-1752
-- Konbaung Dynasty（貢榜）1752-1885
-- Lan Xang（瀾滄）1353-1707
-- Champa（占婆）192-1832
-
-**B4. 拉美（前哥倫布 + 殖民後）**
-- Olmec（奧爾梅克）-1500~-400
-- Zapotec（薩波特克）-500~700
-- Toltec（托爾特克）900-1180
-- Mixtec（米斯特克）950-1521
-- Wari Empire（瓦里帝國）500-1100
-- Tiwanaku（蒂瓦納庫）-200~1100
-- Chimú Empire（奇穆帝國）1100-1470
-- Mapuche（馬普切）—長期存在
-- Powhatan Confederacy（北美）1607-1646
-- 19 世紀拉美獨立國家（如果 OHM 沒抓）
-
-**操作流程**：
-1. 開 Wikipedia 「Territorial evolution of [Empire]」找最具代表性 5-8 個年份
-2. 每年份從 Wikipedia 地圖估 15-25 個邊界頂點 (lon, lat)
-3. 加進 build_manual_polygons.mjs 的 EMPIRES 陣列（CCW 自然順序，build 時自動 reverse 成 d3-geo 球面 CW）
-4. `node scripts/build_manual_polygons.mjs` 重 build
-5. 跑 `python scripts/audit_fine_coverage.py` 確認 fine city-hull 不再覆蓋這些
-6. commit + push
-
-**注意事項**：
-- 用 `node check_centroid.mjs`（臨時寫）驗證 centroid 落在預期區域、d3-geo geoArea < 2π
-- polygon name 要對齊 source historical-states.geojson 用的英文名（grep 一下）
-- 「Empire of X」改「X」前綴有時也對齊更好（用之前對齊 Portugal/Sicily 的方式）
-
----
+5 月 20 日大擴充：manual 77→**219 polygons / 13→52 帝國**，覆蓋這 4 區共 40 個帝國。詳見 E7 行。下個 session 不需再做這項。
 
 ### A. STATE_DETAILS 繼續擴充（271 → 目標 350+）
 
-剩餘高頻 polygon（未填 details）：
+剩餘高頻 polygon（未填 details）— 注意這是 STATE_DETAILS（人工撰寫朝代詳細）擴充，不是 polygon 形狀：
 - 南印度殘餘土邦：Madurai／Pudukkottai／Banganapalle／Cooch Behar／Tripura／Sirohi／Jhalawar／Ramnad／Tanjore；法屬 Mahe／Karikal／Yanam
 - 神羅／義大利小邦：Mantua／Modena Reggio／Urbino／Ferrara；Reuss-Greiz／Reuss-Schleiz／Liechtenstein；瑞士 Uri／Schwyz／Unterwalden（1291 盟誓）
 - 西非／中非：Wagadu／Takrur／Jolof／Cayor／Sine／Saloum／Bambara／Segou／Massina；Sokoto 各 emirate（Kano／Katsina／Zaria／Gobir／Bauchi）；Lozi／Ovambo／Kazembe
-- 美洲原住民有政權者：Powhatan／Cherokee Nation／Comanche Empire／Tarascan
-- 東南亞補遺：Lan Xang／Lan Na／Sukhothai／Pegu／Mrauk-U／Sulu／Maguindanao／Aceh／Pagaruyung
-- 中亞補遺：Khazar Khaganate／Cuman-Kipchak／Volga Bulgaria／Pecheneg
+- 美洲原住民有政權者：Cherokee Nation／Comanche Empire／Tarascan
+- 東南亞補遺：Sukhothai／Pegu／Mrauk-U／Sulu／Maguindanao／Aceh／Pagaruyung
+- 中亞補遺：早期 Cuman-Kipchak／Pecheneg 詳細 STATE_DETAILS（polygon 已有）
 
 操作：[scripts/audit_historical_borders.mjs](../../../scripts/audit_historical_borders.mjs) 列剩餘高頻 polygon → Wikipedia 寫條目（intro / capitals / religions / dynasties / realm_id / sphere_id）。
 
