@@ -203,7 +203,7 @@ async function saveEdit() {
   saving.value = true
   saveErr.value = ''
   try {
-    await $fetch(`/api/speech/edit/${route.params.id}`, {
+    await authedFetch(`/api/speech/edit/${route.params.id}`, {
       method: 'POST',
       body: { content: draftContent.value, meta: { ...draftMeta } },
     })
