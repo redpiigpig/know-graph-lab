@@ -38,7 +38,7 @@ export const useSpeechStore = defineStore('speech', () => {
       date: '2026-05-19',
       duration: '08:30–10:15',
       venue: '玄奘大學 妙然樓 M401 教室',
-      organizer: '玄奘大學宗教與文化學系',
+      organizer: '玄奘大學 台灣佛教研究中心',
       course: '宗教社會學 ‧ 專題演講',
       category: 'lecture',
       hasTranscript: true,

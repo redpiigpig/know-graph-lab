@@ -69,9 +69,12 @@ const talk = computed(() => store.talks.find(t => t.id === route.params.id))
 
 useHead({ title: () => (talk.value ? `${talk.value.title} — 演講活動` : '演講活動') })
 
-const { data, pending, error } = useFetch(
-  () => `/content/speech/${route.params.id}.txt`,
-  { responseType: 'text' }
+const { data, pending, error } = useAsyncData(
+  () => `speech-${route.params.id}`,
+  () => $fetch<string>(`/content/speech/${route.params.id}.txt`, {
+    parseResponse: (txt) => txt,
+  }),
+  { watch: [() => route.params.id] }
 )
 
 function formatDate(d: string) {
