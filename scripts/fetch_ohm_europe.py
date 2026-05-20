@@ -63,13 +63,13 @@ EMPIRES = [
     ("Kaiserthum Oesterreich",      "Austrian Empire",                    "奧地利帝國"),
     ("Königreich Preußen",          "Kingdom of Prussia",                 "普魯士王國"),
     ("Deutsches Reich",             "German Empire",                      "德意志帝國"),
-    ("Italia",                      "Kingdom of Italy",                   "義大利王國"),
+    ("Italia",                      "Italy",                              "義大利王國"),  # align with source "Italy"
     ("Sverige",                     "Sweden",                             "瑞典"),
     ("Danmark",                     "Denmark",                            "丹麥"),
     ("Polska",                      "Poland",                             "波蘭"),
     ("Československá republika",    "Czechoslovakia",                     "捷克斯洛伐克"),
     ("Koninkrijk der Nederlanden",  "Kingdom of the Netherlands",         "荷蘭王國"),
-    ("Soviet Union",                "Soviet Union",                       "蘇聯"),
+    ("Soviet Union",                "USSR",                               "蘇聯"),  # align with source "USSR"
     # --- 鄂圖曼（含部分歐洲領土）---
     ("دولتْ علیّه عثمانیّه",         "Ottoman Empire",                     "鄂圖曼"),
     # ============================================================
@@ -419,6 +419,25 @@ def main():
                 time.sleep(3)
             except Exception as e:
                 print(f"  ❌ {ohm_name}: {e}")
+
+    # 修同名重疊年代：OHM 用真實日期 (e.g. 1943-09-08)，year-level 截斷後常見 A=1943~1944
+    # 與 B=1944~1945 在 1944 共存。按 start_date 排序，把前 polygon 的 year_to 縮到
+    # 下個的 year_from - 1，確保 year-level no-overlap。
+    from collections import defaultdict
+    by_name: dict[str, list] = defaultdict(list)
+    for f in all_features:
+        by_name[f["properties"]["name"]].append(f)
+    for name, group in by_name.items():
+        if len(group) < 2:
+            continue
+        group.sort(key=lambda f: (f["properties"]["year_from"], f["properties"]["year_to"]))
+        for i in range(len(group) - 1):
+            cur = group[i]["properties"]
+            nxt = group[i + 1]["properties"]
+            if cur["year_to"] >= nxt["year_from"]:
+                cur["year_to"] = nxt["year_from"] - 1
+        # Drop now-invalid (year_to < year_from)
+    all_features = [f for f in all_features if f["properties"]["year_to"] >= f["properties"]["year_from"]]
 
     out = {"type": "FeatureCollection", "features": all_features}
     OUT_PATH.write_text(json.dumps(out, ensure_ascii=False, indent=None), encoding="utf-8")
