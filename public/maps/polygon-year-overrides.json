@@ -132,6 +132,11 @@
       "max_year_to": 1368,
       "reason": "元朝 1271~1368"
     },
+    "Great Khanate": {
+      "min_year_from": 1271,
+      "max_year_to": 1368,
+      "reason": "大汗國（元朝東部）1271~1368；source polygon 涵蓋到 1399 把明朝期也算進來"
+    },
     "Ming Chinese Empire": {
       "min_year_from": 1368,
       "max_year_to": 1643,
