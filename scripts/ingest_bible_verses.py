@@ -1171,6 +1171,161 @@ def ingest_rcv_zh(dry_run=False):
     print(f"  done — {total} verses")
 
 
+# ─── YouVersion early Chinese Bibles ────────────────────────────────────────
+# URL: https://www.bible.com/bible/{VERSION_ID}/{USFM_BOOK}.{CHAPTER}
+# Verse spans: <span data-usfm="JHN.1.1" class="...verse">1元始有道...</span>
+# Inside each span is a <span class="label">N</span> for verse number — strip it.
+#
+# Early Chinese versions (all PD):
+#   2283  馬禮遜《神天聖書》1823       morrison
+#   2295  委辦譯本 1854                delegates
+#   2213  裨治文文理譯本 1862          bridgman
+#   1581  北京官話譯本 1872            peking
+#   2218  楊格非淺文理譯本 1885 (NT+詩箴歌) griffith
+#   2296  施約瑟淺文理譯本 1902        schereschewsky
+
+YOUVERSION_BASE = "https://www.bible.com/bible"
+YOUVERSION_USFM = {
+    "gen": "GEN", "exo": "EXO", "lev": "LEV", "num": "NUM", "deu": "DEU",
+    "jos": "JOS", "jdg": "JDG", "rut": "RUT",
+    "1sa": "1SA", "2sa": "2SA", "1ki": "1KI", "2ki": "2KI",
+    "1ch": "1CH", "2ch": "2CH", "ezr": "EZR", "neh": "NEH", "est": "EST",
+    "job": "JOB", "psa": "PSA", "pro": "PRO", "ecc": "ECC", "sng": "SNG",
+    "isa": "ISA", "jer": "JER", "lam": "LAM", "ezk": "EZK", "dan": "DAN",
+    "hos": "HOS", "jol": "JOL", "amo": "AMO", "oba": "OBA", "jon": "JON",
+    "mic": "MIC", "nam": "NAM", "hab": "HAB", "zep": "ZEP", "hag": "HAG",
+    "zec": "ZEC", "mal": "MAL",
+    "mat": "MAT", "mrk": "MRK", "luk": "LUK", "jhn": "JHN",
+    "act": "ACT", "rom": "ROM", "1co": "1CO", "2co": "2CO", "gal": "GAL",
+    "eph": "EPH", "php": "PHP", "col": "COL", "1th": "1TH", "2th": "2TH",
+    "1ti": "1TI", "2ti": "2TI", "tit": "TIT", "phm": "PHM", "heb": "HEB",
+    "jas": "JAS", "1pe": "1PE", "2pe": "2PE", "1jn": "1JN", "2jn": "2JN",
+    "3jn": "3JN", "jud": "JUD", "rev": "REV",
+}
+# Pattern to extract one verse: data-usfm="JHN.1.1"...up to (next verse / chapter end)
+YV_VERSE_RE = re.compile(
+    r'<span\s+data-usfm="([\w]+)\.(\d+)\.(\d+)"[^>]*class="[^"]*verse[^"]*"[^>]*>'
+    r'(.*?)'
+    r'(?=<span\s+data-usfm=|<div\s+class="ChapterContent-module__hVMqcb|</div></div></div>|$)',
+    re.DOTALL,
+)
+YV_INNER_LABEL = re.compile(r'<span[^>]*class="[^"]*label[^"]*"[^>]*>[^<]*</span>', re.DOTALL)
+# YouVersion notes: <span class="...note">...nested spans with footnote/cross-ref...</span>
+# Must strip recursively because nested.
+YV_NOTE_SPAN = re.compile(
+    r'<span[^>]*class="[^"]*note[^"]*"[^>]*>.*?</span></span>',
+    re.DOTALL,
+)
+
+
+def _ingest_youversion(version_code, version_id, dry_run=False, books=None):
+    """Generic YouVersion scraper.
+
+    books: optional iterable of (our_code, max_chapter) to limit; otherwise uses
+           bible_books.canon_protestant chapter_count
+    """
+    print(f"-> Ingesting {version_code} (YouVersion ID={version_id})")
+    if not dry_run:
+        clear_version(version_code)
+    r = requests.get(
+        f"{SUPA_URL}/rest/v1/bible_books?canon_protestant=eq.true&select=code,chapter_count",
+        headers=PG_HEADERS, timeout=30,
+    )
+    chapter_counts = {row["code"]: row["chapter_count"] for row in r.json()}
+    if books is None:
+        books = [(c, chapter_counts.get(c, 0)) for c in YOUVERSION_USFM.keys()
+                 if chapter_counts.get(c, 0) > 0]
+    session = requests.Session()
+    session.headers["User-Agent"] = (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/120.0 Safari/537.36"
+    )
+    rows = []
+    total = 0
+    for our_code, n_ch in books:
+        usfm = YOUVERSION_USFM[our_code]
+        for ch in range(1, n_ch + 1):
+            url = f"{YOUVERSION_BASE}/{version_id}/{usfm}.{ch}"
+            try:
+                resp = session.get(url, timeout=30)
+                if resp.status_code != 200:
+                    continue
+                html = resp.text
+            except Exception as e:
+                print(f"  ! {our_code} {ch}: {e}", file=sys.stderr)
+                continue
+            seen_v = set()
+            for m in YV_VERSE_RE.finditer(html):
+                _bk, _ch, v_str, content = m.groups()
+                v_num = int(v_str)
+                if v_num in seen_v:
+                    continue
+                seen_v.add(v_num)
+                # Drop entire note spans (footnotes / cross-references) first
+                for _ in range(3):
+                    new_content = YV_NOTE_SPAN.sub("", content)
+                    if new_content == content:
+                        break
+                    content = new_content
+                # Drop verse number label
+                content = YV_INNER_LABEL.sub("", content)
+                # Drop all remaining tags
+                text = re.sub(r"<[^>]+>", "", content)
+                text = re.sub(r"\s+", " ", text).strip()
+                # Strip leading verse number (may be "1" or "1:1" format)
+                text = re.sub(rf"^{v_num}(:\d+)?\s*", "", text)
+                text = re.sub(rf"^:?\d+(:\d+)?\s*", "", text)
+                if not text:
+                    continue
+                rows.append({
+                    "book_code": our_code, "chapter": ch, "verse": v_num,
+                    "version_code": version_code, "text": text,
+                })
+            time.sleep(0.4)
+        if rows and not dry_run:
+            upsert_verses(rows)
+            total += len(rows)
+            print(f"  ✓ {our_code} {n_ch} ch (cum total {total})", file=sys.stderr)
+            rows = []
+    print(f"  done — {total} verses")
+
+
+def ingest_morrison(dry_run=False):
+    _ingest_youversion("morrison", 2283, dry_run=dry_run)
+
+
+def ingest_delegates(dry_run=False):
+    _ingest_youversion("delegates", 2295, dry_run=dry_run)
+
+
+def ingest_bridgman(dry_run=False):
+    _ingest_youversion("bridgman", 2213, dry_run=dry_run)
+
+
+def ingest_peking(dry_run=False):
+    _ingest_youversion("peking", 1581, dry_run=dry_run)
+
+
+def ingest_griffith(dry_run=False):
+    # Griffith: NT only + Psalms/Proverbs/Song
+    nt = ["mat","mrk","luk","jhn","act","rom","1co","2co","gal","eph","php","col",
+          "1th","2th","1ti","2ti","tit","phm","heb","jas","1pe","2pe","1jn","2jn",
+          "3jn","jud","rev"]
+    extras = ["psa","pro","sng"]
+    r = requests.get(
+        f"{SUPA_URL}/rest/v1/bible_books?canon_protestant=eq.true&select=code,chapter_count",
+        headers=PG_HEADERS, timeout=30,
+    )
+    chapter_counts = {row["code"]: row["chapter_count"] for row in r.json()}
+    books = [(c, chapter_counts.get(c, 0)) for c in nt + extras if chapter_counts.get(c, 0) > 0]
+    _ingest_youversion("griffith", 2218, dry_run=dry_run, books=books)
+
+
+def ingest_schereschewsky(dry_run=False):
+    # 施約瑟淺文理 — fills the 淺文理 placeholder
+    _ingest_youversion("cuv1919e", 2296, dry_run=dry_run)
+
+
 # ─── Knox Bible (catholicbible.online) ──────────────────────────────────────
 # URL: https://catholicbible.online/knox?bible_part_no={1|2}&book_no={N}&chapter_no={C}
 # Parse: <div class="vers"><div class="vers-no">N</div><div class="vers-content">TEXT</div></div>
@@ -1311,6 +1466,8 @@ def main():
                              "cuv1919", "cuv1919w", "drc", "asv", "ylt",
                              "nabre", "lzz", "tcv", "rcv", "rcv_zh", "knox",
                              "byz", "peshitta", "arm_east", "csl", "rus_syn", "cop_sah",
+                             "morrison", "delegates", "bridgman", "peking",
+                             "griffith", "schereschewsky",
                              "all"])
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--book", help="Limit to one book code (for testing)")
@@ -1351,6 +1508,12 @@ def main():
         "csl": ingest_csl,
         "rus_syn": ingest_rus_syn,
         "cop_sah": ingest_cop_sah,
+        "morrison": ingest_morrison,
+        "delegates": ingest_delegates,
+        "bridgman": ingest_bridgman,
+        "peking": ingest_peking,
+        "griffith": ingest_griffith,
+        "schereschewsky": ingest_schereschewsky,
         "knox": lambda dry_run=False: ingest_knox(dry_run=dry_run, resume=args.resume),
     }
     fn_map[args.version](dry_run=args.dry_run)
