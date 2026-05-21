@@ -601,12 +601,227 @@ def ingest_niv(dry_run=False):
     upsert_verses(rows, dry_run=dry_run)
 
 
+# ─── KJVA + 思高 (scrollmapper/bible_databases JSON) ────────────────────────
+# Same schema: {translation, books: [{name, chapters: [{chapter, verses: [{verse, text}]}]}]}.
+# We have these from one repo via different JSON files.
+
+SCROLLMAPPER_BASE = "https://raw.githubusercontent.com/scrollmapper/bible_databases/master/formats/json"
+
+# Map scrollmapper book "name" → our OSIS lowercase code.
+# Includes special handling for Baruch (splits ch 6 → epj) and Daniel (Sigao splits 13/14 → sus/bel).
+SCROLLMAPPER_BOOKS = {
+    # OT 39
+    "Genesis": "gen", "Exodus": "exo", "Leviticus": "lev", "Numbers": "num",
+    "Deuteronomy": "deu", "Joshua": "jos", "Judges": "jdg", "Ruth": "rut",
+    "I Samuel": "1sa", "II Samuel": "2sa", "I Kings": "1ki", "II Kings": "2ki",
+    "I Chronicles": "1ch", "II Chronicles": "2ch", "Ezra": "ezr", "Nehemiah": "neh",
+    "Esther": "est", "Job": "job", "Psalms": "psa", "Proverbs": "pro",
+    "Ecclesiastes": "ecc", "Song of Solomon": "sng", "Isaiah": "isa", "Jeremiah": "jer",
+    "Lamentations": "lam", "Ezekiel": "ezk", "Daniel": "dan", "Hosea": "hos",
+    "Joel": "jol", "Amos": "amo", "Obadiah": "oba", "Jonah": "jon",
+    "Micah": "mic", "Nahum": "nam", "Habakkuk": "hab", "Zephaniah": "zep",
+    "Haggai": "hag", "Zechariah": "zec", "Malachi": "mal",
+    # NT 27
+    "Matthew": "mat", "Mark": "mrk", "Luke": "luk", "John": "jhn",
+    "Acts": "act", "Romans": "rom", "I Corinthians": "1co", "II Corinthians": "2co",
+    "Galatians": "gal", "Ephesians": "eph", "Philippians": "php", "Colossians": "col",
+    "I Thessalonians": "1th", "II Thessalonians": "2th", "I Timothy": "1ti",
+    "II Timothy": "2ti", "Titus": "tit", "Philemon": "phm", "Hebrews": "heb",
+    "James": "jas", "I Peter": "1pe", "II Peter": "2pe", "I John": "1jn",
+    "II John": "2jn", "III John": "3jn", "Jude": "jud", "Revelation": "rev",
+    "Revelation of John": "rev",
+    # Deuterocanon
+    "Tobit": "tob", "Judith": "jdt", "Wisdom": "wis", "Sirach": "sir",
+    "I Maccabees": "1ma", "II Maccabees": "2ma",
+    "I Esdras": "1es", "II Esdras": "2es",
+    "Prayer of Manasses": "man", "Prayer of Manasseh": "man",
+    "Susanna": "sus",
+    "Bel and the Dragon": "bel",
+    "Prayer of Azariah": "aza",
+    # Skip: "Additions to Esther" (folded back to est is messy — leave for Phase 2)
+    # Special: "Baruch" → split ch 1-5 to bar, ch 6 to epj (Letter of Jeremiah)
+    "Baruch": "bar",
+}
+SCROLLMAPPER_SKIP = {"Additions to Esther"}  # complicates est numbering
+
+
+def _ingest_scrollmapper(version_code, json_filename, dry_run=False):
+    print(f"-> Ingesting {version_code} (scrollmapper/{json_filename})")
+    if not dry_run:
+        clear_version(version_code)
+    import json
+    url = f"{SCROLLMAPPER_BASE}/{json_filename}"
+    # Retry transient connection resets (large files + China network sometimes drop)
+    for attempt in range(4):
+        try:
+            r = requests.get(url, timeout=180, stream=False)
+            if r.status_code != 200:
+                print(f"  X HTTP {r.status_code}", file=sys.stderr)
+                return
+            data = r.json()
+            break
+        except (requests.exceptions.ConnectionError, requests.exceptions.ChunkedEncodingError) as e:
+            wait = 2 ** attempt
+            print(f"  ! attempt {attempt+1}/4 failed ({type(e).__name__}); retry in {wait}s", file=sys.stderr)
+            time.sleep(wait)
+    else:
+        print(f"  X all attempts failed", file=sys.stderr)
+        return
+    rows = []
+    unknown_books = set()
+    for book in data.get("books", []):
+        name = book["name"]
+        if name in SCROLLMAPPER_SKIP:
+            continue
+        code = SCROLLMAPPER_BOOKS.get(name)
+        if not code:
+            unknown_books.add(name)
+            continue
+        for ch in book.get("chapters", []):
+            ch_num = int(ch["chapter"])
+            # SPLIT: Baruch ch 6 → epj
+            if code == "bar" and ch_num == 6:
+                eff_code, eff_ch = "epj", 1
+            # SPLIT: 思高 Daniel ch 13/14 → sus/bel (KJVA already has them as separate books)
+            elif code == "dan" and ch_num == 13 and version_code == "sigao":
+                eff_code, eff_ch = "sus", 1
+            elif code == "dan" and ch_num == 14 and version_code == "sigao":
+                eff_code, eff_ch = "bel", 1
+            else:
+                eff_code, eff_ch = code, ch_num
+            for v in ch.get("verses", []):
+                v_num = int(v["verse"])
+                text = (v.get("text") or "").strip()
+                if not text:
+                    continue
+                rows.append({
+                    "book_code": eff_code,
+                    "chapter": eff_ch,
+                    "verse": v_num,
+                    "version_code": version_code,
+                    "text": text,
+                })
+    if unknown_books:
+        print(f"  ! unmapped books: {sorted(unknown_books)}", file=sys.stderr)
+    print(f"  parsed {len(rows)} verses across {len({r['book_code'] for r in rows})} books")
+    upsert_verses(rows, dry_run=dry_run)
+
+
+def ingest_kjva(dry_run=False):
+    _ingest_scrollmapper("kjva", "KJVA.json", dry_run=dry_run)
+
+
+def ingest_sigao(dry_run=False):
+    _ingest_scrollmapper("sigao", "ChiSB.json", dry_run=dry_run)
+
+
+def ingest_cuv1919(dry_run=False):
+    _ingest_scrollmapper("cuv1919", "ChiUn.json", dry_run=dry_run)
+
+
+def ingest_cuv1919w(dry_run=False):
+    _ingest_scrollmapper("cuv1919w", "ChiUnL.json", dry_run=dry_run)
+
+
+def ingest_drc(dry_run=False):
+    _ingest_scrollmapper("drc", "DRC.json", dry_run=dry_run)
+
+
+def ingest_asv(dry_run=False):
+    _ingest_scrollmapper("asv", "ASV.json", dry_run=dry_run)
+
+
+def ingest_ylt(dry_run=False):
+    _ingest_scrollmapper("ylt", "YLT.json", dry_run=dry_run)
+
+
+# ─── Brenton LXX English (USFM zip from eBible.org) ─────────────────────────
+# One zip → 60+ USFM files. We only fetch the books that fill our gaps
+# (3ma/4ma/epj/ps2/2es) since KJVA + Sigao already cover the common deutero.
+
+BRENTON_USFM_RAW = "https://ebible.org/Scriptures/eng-Brenton_usfm.zip"
+# Map Brenton USFM book code → our code. USFM filename pattern: NN-XXXeng-Brenton.usfm
+BRENTON_USFM_MAP = {
+    "TOB": "tob", "JDT": "jdt", "WIS": "wis", "SIR": "sir",
+    "BAR": "bar",       # Brenton has Baruch (only ch 1-5; LJE separate)
+    "LJE": "epj",       # Letter of Jeremiah as separate file!
+    "1MA": "1ma", "2MA": "2ma", "3MA": "3ma", "4MA": "4ma",
+    "1ES": "1es",
+    "MAN": "man",
+    "SUS": "sus", "BEL": "bel",
+    "DAG": "dan",       # Daniel-Greek (full inc. additions) — skip; use WLC/LXX/Sigao
+}
+
+
+def ingest_brenton(dry_run=False):
+    print("-> Ingesting Brenton LXX English (eBible.org USFM)")
+    if not dry_run:
+        clear_version("brenton")
+    import io, zipfile
+    r = requests.get(BRENTON_USFM_RAW, timeout=120)
+    if r.status_code != 200:
+        print(f"  X HTTP {r.status_code}", file=sys.stderr)
+        return
+    z = zipfile.ZipFile(io.BytesIO(r.content))
+    rows = []
+    # USFM verse marker: \v N text...  (chapter \c N, verse \v N)
+    chap_re = re.compile(r"^\\c\s+(\d+)")
+    verse_re = re.compile(r"^\\v\s+(\d+)([a-z]?)\s*(.*)")
+    # Brenton inserts \p, \q, \s for paragraph/poetry/section — we skip those lines
+    skip_markers = re.compile(r"^\\(p|q\d?|m|nb|s\d?|r|d|h|toc\d?|imt\d?|ip|ide|rem|mt\d?|usfm|fig)")
+    for name in z.namelist():
+        if not name.endswith(".usfm"):
+            continue
+        m = re.match(r"\d+-([A-Z0-9]+)eng-Brenton\.usfm", name)
+        if not m:
+            continue
+        usfm_code = m.group(1)
+        if usfm_code not in BRENTON_USFM_MAP:
+            continue
+        book_code = BRENTON_USFM_MAP[usfm_code]
+        if usfm_code == "DAG":
+            continue  # skip Daniel-Greek
+        text = z.read(name).decode("utf-8")
+        current_ch = 0
+        for line in text.splitlines():
+            line = line.strip()
+            if not line:
+                continue
+            mc = chap_re.match(line)
+            if mc:
+                current_ch = int(mc.group(1))
+                continue
+            mv = verse_re.match(line)
+            if mv and current_ch:
+                # Brenton 'epj' (Letter of Jeremiah) is its own book → chapter 1
+                ch = current_ch if usfm_code != "LJE" else 1
+                v_num = int(mv.group(1))
+                v_text = mv.group(3).strip()
+                # Strip remaining USFM markers like \nd \nd*  \add \add* etc.
+                v_text = re.sub(r"\\[a-z]+\*?\s?", "", v_text).strip()
+                if not v_text:
+                    continue
+                rows.append({
+                    "book_code": book_code,
+                    "chapter": ch,
+                    "verse": v_num,
+                    "version_code": "brenton",
+                    "text": v_text,
+                })
+            elif skip_markers.match(line):
+                continue
+    print(f"  parsed {len(rows)} verses across {len({r['book_code'] for r in rows})} books")
+    upsert_verses(rows, dry_run=dry_run)
+
+
 # ─── CLI ────────────────────────────────────────────────────────────────────
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("version",
-                    choices=["sblgnt", "vul", "wlc", "lxx", "cuv2010", "niv", "all"])
+                    choices=["sblgnt", "vul", "wlc", "lxx", "cuv2010", "niv",
+                             "kjva", "sigao", "brenton",
+                             "cuv1919", "cuv1919w", "drc", "asv", "ylt", "all"])
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--book", help="Limit to one book code (for testing)")
     ap.add_argument("--resume", action="store_true",
@@ -626,6 +841,14 @@ def main():
         "cuv2010": lambda dry_run=False: ingest_cuv2010(
             dry_run=dry_run, only_book=args.book, resume=args.resume),
         "niv": ingest_niv,
+        "kjva": ingest_kjva,
+        "sigao": ingest_sigao,
+        "brenton": ingest_brenton,
+        "cuv1919": ingest_cuv1919,
+        "cuv1919w": ingest_cuv1919w,
+        "drc": ingest_drc,
+        "asv": ingest_asv,
+        "ylt": ingest_ylt,
     }
     fn_map[args.version](dry_run=args.dry_run)
 
