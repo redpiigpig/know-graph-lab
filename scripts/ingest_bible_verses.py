@@ -1073,6 +1073,80 @@ def ingest_rcv(dry_run=False):
     print(f"  done — {total} verses")
 
 
+# ─── Chinese Recovery Version (line.twgbr.org) ──────────────────────────────
+# URL: https://line.twgbr.org/recoveryversion/bible/{book_no}.html  (1-66)
+# Structure:
+#   <h3 id="C{N}{BookEng}">{書名} 第 N 章</h3>
+#   <p class="calibre2"><sup>1</sup>text<sup>2</sup>text...</p>
+#   <div class="O0/O1/O2">outline - skip</div>
+
+RCV_ZH_BASE = "https://line.twgbr.org/recoveryversion/bible"
+RCV_ZH_BOOKS = [  # 1-indexed canonical 66-book ordering matches our codes
+    "gen","exo","lev","num","deu","jos","jdg","rut","1sa","2sa","1ki","2ki",
+    "1ch","2ch","ezr","neh","est","job","psa","pro","ecc","sng","isa","jer",
+    "lam","ezk","dan","hos","jol","amo","oba","jon","mic","nam","hab","zep",
+    "hag","zec","mal","mat","mrk","luk","jhn","act","rom","1co","2co","gal",
+    "eph","php","col","1th","2th","1ti","2ti","tit","phm","heb","jas","1pe",
+    "2pe","1jn","2jn","3jn","jud","rev",
+]
+RCV_ZH_CHAPTER_RE = re.compile(r'<h3\s+id="C(\d+)\w+">.*?</h3>', re.DOTALL)
+RCV_ZH_PARA_RE = re.compile(r'<p\s+class="calibre2">(.*?)</p>', re.DOTALL)
+RCV_ZH_VERSE_RE = re.compile(r'<sup>(\d+)</sup>(.*?)(?=<sup>\d+</sup>|$)', re.DOTALL)
+
+
+def ingest_rcv_zh(dry_run=False):
+    print("-> Ingesting 恢復本中文版 (line.twgbr.org)")
+    if not dry_run:
+        clear_version("rcv_zh")
+    session = requests.Session()
+    session.headers["User-Agent"] = "Mozilla/5.0 (research)"
+    rows = []
+    total = 0
+    for idx, our_code in enumerate(RCV_ZH_BOOKS, start=1):
+        url = f"{RCV_ZH_BASE}/{idx:02d}.html"
+        try:
+            resp = session.get(url, timeout=30)
+            if resp.status_code != 200:
+                print(f"  X {our_code} HTTP {resp.status_code}", file=sys.stderr)
+                continue
+            html = resp.text
+        except Exception as e:
+            print(f"  X {our_code}: {e}", file=sys.stderr)
+            continue
+        # Split on chapter headers to associate paragraphs with chapter
+        # Find all chapter markers + their positions
+        markers = list(RCV_ZH_CHAPTER_RE.finditer(html))
+        if not markers:
+            print(f"  ! {our_code} no chapter markers found", file=sys.stderr)
+            continue
+        for i, m in enumerate(markers):
+            ch_num = int(m.group(1))
+            seg_start = m.end()
+            seg_end = markers[i + 1].start() if i + 1 < len(markers) else len(html)
+            segment = html[seg_start:seg_end]
+            for para_m in RCV_ZH_PARA_RE.finditer(segment):
+                para_html = para_m.group(1)
+                for v_m in RCV_ZH_VERSE_RE.finditer(para_html):
+                    v_num = int(v_m.group(1))
+                    v_text = v_m.group(2)
+                    # Strip nested tags + collapse whitespace
+                    v_text = re.sub(r"<[^>]+>", "", v_text)
+                    v_text = re.sub(r"\s+", " ", v_text).strip()
+                    if not v_text:
+                        continue
+                    rows.append({
+                        "book_code": our_code, "chapter": ch_num, "verse": v_num,
+                        "version_code": "rcv_zh", "text": v_text,
+                    })
+        if rows and not dry_run:
+            upsert_verses(rows)
+            total += len(rows)
+            print(f"  ✓ {our_code} {len(markers)} ch (cum total {total})", file=sys.stderr)
+            rows = []
+        time.sleep(0.3)
+    print(f"  done — {total} verses")
+
+
 # ─── Knox Bible (catholicbible.online) ──────────────────────────────────────
 # URL: https://catholicbible.online/knox?bible_part_no={1|2}&book_no={N}&chapter_no={C}
 # Parse: <div class="vers"><div class="vers-no">N</div><div class="vers-content">TEXT</div></div>
@@ -1211,7 +1285,7 @@ def main():
                     choices=["sblgnt", "vul", "wlc", "lxx", "cuv2010", "niv",
                              "kjva", "sigao", "brenton",
                              "cuv1919", "cuv1919w", "drc", "asv", "ylt",
-                             "nabre", "lzz", "tcv", "rcv", "knox", "all"])
+                             "nabre", "lzz", "tcv", "rcv", "rcv_zh", "knox", "all"])
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--book", help="Limit to one book code (for testing)")
     ap.add_argument("--resume", action="store_true",
@@ -1244,6 +1318,7 @@ def main():
         "lzz": ingest_lzz,
         "tcv": ingest_tcv,
         "rcv": ingest_rcv,
+        "rcv_zh": ingest_rcv_zh,
         "knox": lambda dry_run=False: ingest_knox(dry_run=dry_run, resume=args.resume),
     }
     fn_map[args.version](dry_run=args.dry_run)
