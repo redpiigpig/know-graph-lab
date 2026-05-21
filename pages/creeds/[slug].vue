@@ -62,8 +62,91 @@
         >{{ creed.summaryZh }}</div>
       </section>
 
-      <!-- 三欄並列：中文 ／ 英文 ／ 原文 -->
-      <section class="mb-8">
+      <!-- ─── 逐段對照（梵二 / 有 textKey 的長文件） ─── -->
+      <section v-if="paragraphMode" class="mb-8">
+        <div class="flex items-baseline gap-2 mb-3 flex-wrap">
+          <span class="text-base">📜</span>
+          <h2 class="text-sm font-semibold tracking-wide text-stone-700">逐段對照</h2>
+          <span class="text-[11px] text-stone-400">每段 一 row × 中／英／拉 三欄並列（vatican.va 段號）</span>
+          <span v-if="paragraphRows.length > 0" class="text-[11px] text-stone-500 ml-auto">共 {{ paragraphRows.length }} 段</span>
+        </div>
+
+        <!-- 版本選擇 bar -->
+        <div class="grid gap-3 mb-3" :style="{ gridTemplateColumns: '3rem 1fr 1fr 1fr' }">
+          <div class="text-[10px] text-stone-400 uppercase tracking-wider self-center text-center">#</div>
+          <div class="bg-white border border-stone-200 rounded-md px-3 py-1.5 flex items-center gap-2">
+            <span class="text-[10px] uppercase tracking-wide text-stone-500">中文</span>
+            <select v-if="zhVersions.length > 1" v-model="zhPickIdx" class="flex-1 text-xs text-stone-800 bg-transparent border-none focus:outline-none cursor-pointer">
+              <option v-for="(v, i) in zhVersions" :key="i" :value="i">{{ v.shortLabel }}</option>
+            </select>
+            <span v-else class="flex-1 text-xs text-stone-700">{{ zhVersions[0]?.shortLabel || '—' }}</span>
+          </div>
+          <div class="bg-white border border-stone-200 rounded-md px-3 py-1.5 flex items-center gap-2">
+            <span class="text-[10px] uppercase tracking-wide text-sky-700">EN</span>
+            <select v-if="enVersions.length > 1" v-model="enPickIdx" class="flex-1 text-xs text-stone-800 bg-transparent border-none focus:outline-none cursor-pointer">
+              <option v-for="(v, i) in enVersions" :key="i" :value="i">{{ v.shortLabel }}</option>
+            </select>
+            <span v-else class="flex-1 text-xs text-stone-700">{{ enVersions[0]?.shortLabel || '—' }}</span>
+          </div>
+          <div class="bg-white border border-stone-200 rounded-md px-3 py-1.5 flex items-center gap-2">
+            <span class="text-[10px] uppercase tracking-wide text-amber-700">原文</span>
+            <select v-if="origVersions.length > 1" v-model="origPickIdx" class="flex-1 text-xs text-stone-800 bg-transparent border-none focus:outline-none cursor-pointer">
+              <option v-for="(v, i) in origVersions" :key="i" :value="i">{{ v.shortLabel }}</option>
+            </select>
+            <span v-else class="flex-1 text-xs text-stone-700">{{ origVersions[0]?.shortLabel || '—' }}</span>
+          </div>
+        </div>
+
+        <div v-if="paragraphsLoading" class="text-center text-stone-400 py-12 text-sm">載入段落中…</div>
+        <div v-else-if="paragraphRows.length === 0" class="text-center text-stone-400 py-12 text-sm">⚠ 無法解析段落，可能是 PDF 抽字失敗或文本格式特殊</div>
+
+        <div v-else class="space-y-1.5">
+          <article
+            v-for="row in paragraphRows"
+            :key="row.num"
+            class="bg-white border border-stone-200 rounded-md overflow-hidden"
+          >
+            <div class="grid gap-px bg-stone-100" :style="{ gridTemplateColumns: '3rem 1fr 1fr 1fr' }">
+              <div class="bg-stone-50 px-2 py-3 text-xs font-mono font-bold text-stone-700 flex items-start justify-center">
+                {{ row.num }}
+              </div>
+              <div class="bg-white px-3 py-3 text-[0.9rem] leading-loose text-stone-800 whitespace-pre-wrap"
+                   style="font-family: 'Noto Serif TC', 'Source Han Serif TC', 'Songti TC', serif">
+                <template v-if="row.byLang.zh">{{ row.byLang.zh }}</template>
+                <span v-else class="text-stone-300 italic text-xs">—</span>
+              </div>
+              <div class="bg-white px-3 py-3 text-[0.85rem] leading-relaxed text-stone-800 font-sans whitespace-pre-wrap">
+                <template v-if="row.byLang.en">{{ row.byLang.en }}</template>
+                <span v-else class="text-stone-300 italic text-xs">—</span>
+              </div>
+              <div class="bg-white px-3 py-3 text-[0.9rem] leading-relaxed text-stone-800 whitespace-pre-wrap"
+                   :class="origActiveClass">
+                <template v-if="row.byLang.orig">{{ row.byLang.orig }}</template>
+                <span v-else class="text-stone-300 italic text-xs">—</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- 來源 footer -->
+        <div class="mt-4 grid gap-2 text-[11px] text-stone-500 leading-relaxed" :style="{ gridTemplateColumns: '3rem 1fr 1fr 1fr' }">
+          <div></div>
+          <div>
+            <div v-if="zhActive?.source">📖 {{ zhActive.source }}</div>
+            <div v-if="zhActive?.translator">✍ {{ zhActive.translator }}</div>
+            <div v-if="zhActive?.placeholder" class="text-amber-700">⏳ 中文版本為 placeholder</div>
+          </div>
+          <div>
+            <div v-if="enActive?.source">📖 {{ enActive.source }}</div>
+          </div>
+          <div>
+            <div v-if="origActive?.source">📖 {{ origActive.source }}</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 三欄並列（短信經 — 無 textKey） ─── -->
+      <section v-else class="mb-8">
         <div class="flex items-baseline gap-2 mb-3">
           <span class="text-base">📜</span>
           <h2 class="text-sm font-semibold tracking-wide text-stone-700">三欄對照</h2>
@@ -199,7 +282,8 @@
 
 <script setup lang="ts">
 import { findCreed, ALL_CREEDS, CATEGORY_LABEL_ZH, TRADITION_LABEL_ZH, type CreedLanguage, type CreedVersion } from '~/data/creeds'
-import { loadCreedText } from '~/data/creeds/textLoader'
+import { loadCreedText, loadCreedParagraphs } from '~/data/creeds/textLoader'
+import { alignParagraphs, type ParagraphRow } from '~/data/creeds/paragraphParser'
 
 definePageMeta({ middleware: 'auth' })
 
@@ -362,4 +446,49 @@ const relatedCreeds = computed(() => {
     .map(slug => ALL_CREEDS.find(c => c.slug === slug))
     .filter((c): c is NonNullable<typeof c> => !!c)
 })
+
+// ── Paragraph mode（梵二 / 有 textKey 的長文件） ─────────────────
+const paragraphMode = computed(() => {
+  if (!creed.value) return false
+  return creed.value.versions.some(v => !!v.textKey)
+})
+
+const paragraphRows = ref<ParagraphRow[]>([])
+const paragraphsLoading = ref(false)
+
+async function recomputeParagraphs() {
+  if (!paragraphMode.value) {
+    paragraphRows.value = []
+    return
+  }
+  const zh = zhActive.value
+  const en = enActive.value
+  const orig = origActive.value
+  const tasks: Array<Promise<['zh' | 'en' | 'orig', Awaited<ReturnType<typeof loadCreedParagraphs>>]>> = []
+  if (zh?.textKey) tasks.push(loadCreedParagraphs(zh.textKey).then(p => ['zh', p] as const))
+  if (en?.textKey) tasks.push(loadCreedParagraphs(en.textKey).then(p => ['en', p] as const))
+  if (orig?.textKey) tasks.push(loadCreedParagraphs(orig.textKey).then(p => ['orig', p] as const))
+
+  if (tasks.length === 0) {
+    paragraphRows.value = []
+    return
+  }
+
+  paragraphsLoading.value = true
+  try {
+    const results = await Promise.all(tasks)
+    const byLang: Record<string, Awaited<ReturnType<typeof loadCreedParagraphs>>> = {}
+    for (const [k, p] of results) byLang[k] = p
+    paragraphRows.value = alignParagraphs(byLang)
+  } catch (err) {
+    console.error('[creed paragraph load]', err)
+    paragraphRows.value = []
+  } finally {
+    paragraphsLoading.value = false
+  }
+}
+
+watch([paragraphMode, zhActive, enActive, origActive], () => {
+  recomputeParagraphs()
+}, { immediate: true })
 </script>
