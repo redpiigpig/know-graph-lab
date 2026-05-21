@@ -21,6 +21,18 @@
         </div>
 
         <div class="flex items-center gap-2 flex-1 justify-end">
+          <!-- 中 / 對照 / 英 切換（僅在 chunk 有原文時顯示） -->
+          <div v-if="pageSourceText" class="inline-flex bg-stone-100 rounded-lg p-0.5 text-xs gap-0.5">
+            <button @click="setViewMode('zh')"
+              :class="['px-2.5 py-1 rounded-md transition',
+                viewMode==='zh' ? 'bg-white shadow-sm text-stone-900 font-medium' : 'text-stone-500 hover:text-stone-900']">中</button>
+            <button @click="setViewMode('bi')"
+              :class="['px-2.5 py-1 rounded-md transition',
+                viewMode==='bi' ? 'bg-white shadow-sm text-stone-900 font-medium' : 'text-stone-500 hover:text-stone-900']">中英</button>
+            <button @click="setViewMode('en')"
+              :class="['px-2.5 py-1 rounded-md transition',
+                viewMode==='en' ? 'bg-white shadow-sm text-stone-900 font-medium' : 'text-stone-500 hover:text-stone-900']">英</button>
+          </div>
           <input v-model="pageSearch" type="text" placeholder="頁內搜尋…"
             class="hidden sm:block bg-white border border-stone-200 rounded-lg px-3 py-1.5 text-sm w-40 focus:outline-none focus:border-blue-500" />
           <button @click="cycleReadingStatus"
@@ -103,12 +115,13 @@
 
       <!-- Reading area -->
       <div class="flex-1 overflow-y-auto bg-stone-50" ref="scrollEl">
-        <article class="max-w-4xl mx-auto px-12 py-14 bg-white shadow-sm rounded-lg my-8 border border-stone-200">
+        <article :class="['mx-auto px-12 py-14 bg-white shadow-sm rounded-lg my-8 border border-stone-200',
+          viewMode === 'bi' && pageSourceText ? 'max-w-7xl' : 'max-w-4xl']">
           <div v-if="pageLoading" class="space-y-3 animate-pulse">
             <div v-for="i in 8" :key="i" :class="['h-4 bg-stone-200 rounded', i % 3 === 0 ? 'w-3/4' : 'w-full']"></div>
           </div>
 
-          <template v-else-if="pageContent">
+          <template v-else-if="pageContent || pageSourceText">
             <div class="text-xs text-stone-400 mb-10 flex items-center gap-2 uppercase tracking-wider">
               <span v-if="pageChapter">{{ pageChapter }}</span>
               <span v-else>第 {{ currentPage }} 段</span>
@@ -116,11 +129,29 @@
               <span class="normal-case tracking-normal">{{ ebook?.title }}</span>
             </div>
 
-            <div ref="contentEl"
+            <!-- 中文（單欄）-->
+            <div v-if="effectiveViewMode === 'zh'"
+              ref="contentEl"
               class="ebook-prose"
               v-html="markdownHtml"
               @mouseup="onTextSelectionEnd"
               @click="onContentClick"></div>
+
+            <!-- 英文原文（單欄，無標註功能）-->
+            <div v-else-if="effectiveViewMode === 'en'"
+              class="ebook-prose ebook-prose-en"
+              v-html="sourceHtml"></div>
+
+            <!-- 中英對照（雙欄）-->
+            <div v-else class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+              <div ref="contentEl"
+                class="ebook-prose"
+                v-html="markdownHtml"
+                @mouseup="onTextSelectionEnd"
+                @click="onContentClick"></div>
+              <div class="ebook-prose ebook-prose-en lg:border-l lg:border-stone-200 lg:pl-10"
+                v-html="sourceHtml"></div>
+            </div>
 
             <div class="flex justify-between mt-16 pt-6 border-t border-stone-200">
               <button @click="goPage(currentPage - 1)" :disabled="currentPage <= 1"
@@ -312,8 +343,23 @@ const toc = ref<TocEntry[]>([]);
 const currentPage = ref(parseInt(route.query.page as string ?? "1") || 1);
 const jumpPage = ref(currentPage.value);
 const pageContent = ref("");
+const pageSourceText = ref<string | null>(null);
 const pageChapter = ref<string | null>(null);
 const pageLoading = ref(false);
+
+// View mode for bilingual books. "zh" = 中譯, "bi" = 對照, "en" = 原文.
+// Persisted across pages + reloads; gracefully degrades to "zh" if a chunk
+// has no source_text (e.g. mid-book transition between bilingual and
+// monolingual books, or a chunk that pre-dates the source-text schema).
+type ViewMode = "zh" | "bi" | "en";
+const viewMode = ref<ViewMode>("zh");
+const effectiveViewMode = computed<ViewMode>(() =>
+  !pageSourceText.value ? "zh" : viewMode.value
+);
+function setViewMode(m: ViewMode) {
+  viewMode.value = m;
+  try { localStorage.setItem("ebook-viewMode", m); } catch { /* private mode */ }
+}
 const pageSearch = ref("");
 const annotations = ref<Annotation[]>([]);
 const bookAnnotations = ref<Annotation[]>([]);
@@ -419,6 +465,7 @@ function renderMarkdown(md: string): string {
 }
 
 const markdownHtml = computed(() => renderMarkdown(pageContent.value));
+const sourceHtml = computed(() => pageSourceText.value ? renderMarkdown(pageSourceText.value) : "");
 
 // ── DOM-based highlight applier (handles cross-paragraph + multi-occurrence) ──
 function isInsideMark(node: Node, container: HTMLElement): boolean {
@@ -534,6 +581,13 @@ watch([markdownHtml, annotations], async () => {
   applyHighlights();
 });
 
+// Re-apply when the user switches view mode — contentEl mounts/unmounts as
+// the v-if/v-else branches swap, so highlights must be re-attached.
+watch(effectiveViewMode, async () => {
+  await nextTick();
+  applyHighlights();
+});
+
 // ── Loaders ──
 async function loadPage(page: number) {
   pageLoading.value = true;
@@ -547,6 +601,7 @@ async function loadPage(page: number) {
     if (data.toc) toc.value = data.toc;
   }
   pageContent.value = data?.currentPage?.content ?? "";
+  pageSourceText.value = data?.currentPage?.source_text ?? null;
   pageChapter.value = data?.currentPage?.chapter_path ?? null;
   pageLoading.value = false;
   jumpPage.value = page;
@@ -992,6 +1047,12 @@ async function confirmSaveExcerpt() {
 onMounted(async () => {
   document.addEventListener("mousedown", hidePopupsOnOutsideClick);
 
+  // Restore view mode from previous session
+  try {
+    const saved = localStorage.getItem("ebook-viewMode") as ViewMode | null;
+    if (saved === "zh" || saved === "bi" || saved === "en") viewMode.value = saved;
+  } catch { /* private mode */ }
+
   // Fetch shelf state + bookmarks first so we can decide whether to auto-jump.
   await Promise.all([loadReadingStatus(), loadBookmarks()]);
 
@@ -1078,6 +1139,26 @@ useHead({ title: computed(() => ebook.value ? `${ebook.value.title} — 閱讀` 
   transition: filter 0.15s;
 }
 .ebook-prose :deep(mark:hover) { filter: brightness(0.95); }
+
+/* English source column overrides — Latin typography */
+.ebook-prose-en {
+  font-family: Georgia, "Times New Roman", "Source Serif Pro", serif;
+  font-size: 16px;
+  line-height: 1.75;
+}
+.ebook-prose-en :deep(p) {
+  text-indent: 0;
+  margin: 0.9rem 0;
+}
+.ebook-prose-en :deep(h1),
+.ebook-prose-en :deep(h2),
+.ebook-prose-en :deep(h3),
+.ebook-prose-en :deep(h4) {
+  letter-spacing: 0;
+}
+.ebook-prose-en :deep(blockquote) {
+  font-style: italic;
+}
 
 .fade-enter-active, .fade-leave-active { transition: opacity 0.2s, transform 0.2s; }
 .fade-enter-from, .fade-leave-to { opacity: 0; transform: translateY(8px); }

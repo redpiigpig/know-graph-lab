@@ -1,28 +1,46 @@
 ---
 name: ebook-translate
-description: 將英文 ebook 翻譯成繁體中文並入庫（reader 可讀）的完整流程。Sonnet 4.6（OAuth）或 Gemini Flash 引擎，章節級 chunk 翻譯，教父人名／聖經書卷／神學術語對齊 glossary，append-write JSONL 支援 resume，token 自動 refresh。Use when 使用者要把英文 ebook 翻成中文上架（例 ACCS Apocrypha、未中譯的 Schaff 卷），或要補 ACCS 缺的中譯卷（vol 24-25 耶利米/哀歌等）。本 skill 與 ebook-pipeline 並列：ebook-pipeline 處理 parse/OCR/standardize，本 skill 處理「英→中」翻譯這一段。
+description: 將外文 ebook 翻譯／轉成繁體中文並入庫（reader 可讀）的完整流程。涵蓋兩條子 pipeline — (A) **英文 → 繁中（雙語入庫）**：Sonnet 4.6 或 Gemini Flash 章節級翻譯，原文 source_text 同步存進 JSONL，reader 提供「中／中英對照／英」三段切換；(B) **簡體 → 繁體（直接取代）**：opencc s2tw + TRAD_FIXES，不用 LLM，覆寫 content 不保留 source_text。Use when 使用者要把英文 ebook 翻成中文上架（例 ACCS Apocrypha、未中譯的 Schaff 卷）、補 ACCS 缺的中譯卷（vol 24-25 耶利米/哀歌等），或把舊有簡體書批次轉成繁體。本 skill 與 ebook-pipeline 並列：ebook-pipeline 處理 parse/OCR/standardize，本 skill 處理「外文／簡體 → 繁中」這一段。
 ---
 
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session。使用者一說要傳截圖立刻提醒先確認尺寸。
 
 # Ebook Translate Skill
 
-把英文 ebook 翻成繁體中文，按 chapter-level chunks 寫入 `_chunks/{ebook_id}.jsonl`，DB previews 同步，最後 `/ebook/[id]` 可讀。
+把外文／簡體 ebook 整理成繁體中文，按 chapter-level chunks 寫入 `_chunks/{ebook_id}.jsonl`，DB previews 同步，最後 `/ebook/[id]` 可讀。
 
-跟 [ebook-pipeline](../ebook-pipeline/SKILL.md) 並列：ebook-pipeline 處理「電子書 → 結構化 chunks」（parse/OCR/standardize），本 skill 處理「英文 chunks → 中文 chunks」。
+跟 [ebook-pipeline](../ebook-pipeline/SKILL.md) 並列：ebook-pipeline 處理「電子書 → 結構化 chunks」（parse/OCR/standardize），本 skill 處理「外文／簡體 chunks → 繁中 chunks」。
+
+兩條子 pipeline，差別主要在「是否保留原文」：
+
+| | A. 英文 → 繁中 | B. 簡體 → 繁體 |
+|---|---|---|
+| 何時用 | EPUB/PDF 原書是英文，要中譯後上架 | 庫內已有簡體中文書，要轉成繁體 |
+| 引擎 | Sonnet 4.6 / Gemini Flash（LLM）| opencc s2tw + TRAD_FIXES（rules-based，**不用 LLM**）|
+| JSONL 新欄位 | `source_lang: "en"` + `source_text`（保留原文）| 不新增；`content` 直接覆寫 |
+| Reader UI | 「中／中英對照／英」三段切換 | 純繁中單欄（跟其他中文書一樣）|
+| 速度 | 一本 ~244 chunks 約 4-12 小時（看引擎、quota）| 一本一兩秒（純字串替換）|
 
 ## 何時 trigger
 
+**A. 英 → 中（LLM 翻譯）**：
 - 使用者把英文 ebook 加進庫（DB row + Drive 檔），說「你來負責翻譯」「中譯」「translate」
 - ACCS 英文 27/29 卷有但中譯缺（如 Apocrypha vol 15，已加入庫 2026-05-21）
 - 中譯 ACCS 27 冊缺的書卷（vol 24-25 耶利米/哀歌；無官方中譯需自己翻）
 - 使用者要把英文教父原典／神學典籍中譯上架
 
-不適用：簡體 → 繁體（用 `opencc s2tw` + `parse_drive_inventory.py:TRAD_FIXES`，不用 LLM）；中文書內容潤稿（看 ebook-pipeline 的 standardize 流程）。
+**B. 簡 → 繁（s2tw 取代）**：
+- 使用者說「把簡體書都轉成繁體」「掃一遍把簡體取代掉」
+- 新 ingest 的書 chunk 偵測到簡體字 → 觸發轉換
+- 已上架書經抽查發現是簡體 → 補跑
+
+不適用：中文書內容潤稿（看 ebook-pipeline 的 standardize 流程）；繁→簡（沒這需求）。
 
 ---
 
-## Pipeline 概覽
+## A. 英 → 中 Pipeline
+
+### 概覽
 
 ```
 英文 EPUB（Drive 上）
@@ -40,16 +58,16 @@ Sonnet 4.6 / Gemini Flash 翻譯（術語對齊 prompt + glossary）
 s2tw 安全 pass + collapse_cjk_spacing
     │
     ▼
-append-write JSONL（中斷可 --resume）
+append-write JSONL（中斷可 --resume），每筆 chunk 同時存 `source_text`（英文原文） + `content`（繁中）
     │
     ▼
 push R2 + PATCH ebooks (chunk_count, standardized_at) + refresh ebook_chunks previews
     │
     ▼
-/ebook/[id] 可讀
+/ebook/[id] 可讀，topbar 有「中／中英對照／英」三段切換（localStorage 持久化）
 ```
 
-## 核心工具
+### 核心工具
 
 [`scripts/translate_ebook_to_zh.py`](../../../scripts/translate_ebook_to_zh.py)
 
@@ -139,9 +157,34 @@ ebooklib.epub.read_epub(...) → iter ITEM_DOCUMENT
 - **JSONL**：`G:/.../_chunks/{ebook_id}.jsonl` — append-mode 漸進寫，最後 rewrite 重編 chunk_index
 - **R2 mirror**：`r2://{R2_BUCKET}/ebook-chunks/{ebook_id}.jsonl.gz`（gzipped）
 - **ebooks row PATCH**：`chunk_count`, `total_chars`, `parsed_at`, `standardized_at`（兩個 timestamp 都寫，daily bat `--only-fresh` 不會再碰）
-- **ebook_chunks previews**：DELETE + INSERT 200-char preview，batch=25
+- **ebook_chunks previews**：DELETE + INSERT 200-char preview，batch=25（preview 只取 `content`，**不存** `source_text`）
 
-`source_lang: "en"` 寫進 JSONL 每筆 chunk metadata（reader 暫時不顯示，但保留追溯）。
+每筆 chunk JSON 結構（雙語 schema, 2026-05-21+）：
+
+```jsonc
+{
+  "chunk_index": 0,
+  "chunk_type": "chapter",
+  "page_number": null,
+  "chapter_path": "Introduction",
+  "format": "markdown",
+  "source_lang": "en",          // 來源語言；簡 → 繁 pipeline 不寫此欄
+  "source_text": "Origen ...",  // 英文原文，雙語 reader 用；簡 → 繁 pipeline 不寫此欄
+  "content": "奧利金 ..."       // 翻譯後／轉換後的繁中
+}
+```
+
+### Reader bilingual toggle
+
+`pages/ebook/[id].vue` topbar 在 `chunk.source_text` 存在時顯示「中／中英對照／英」三段切換：
+
+- **中**（zh）：單欄繁中，現有預設行為。標註（annotations）只在這個模式下能 selection → highlight
+- **中英對照**（bi）：grid-cols-2，左中右英，lg 寬度 max-w-7xl；mobile 自動降為單欄垂直堆疊
+- **英**（en）：單欄英文，no annotation interaction
+
+切換值存 `localStorage["ebook-viewMode"]`，跨頁／reload 保留。chunk 沒 source_text 時 `effectiveViewMode` 強制 fallback 到 zh（避免讀到舊書／簡轉繁書時看到空白英文欄）。
+
+API（`/api/ebooks/[id]`）`currentPage.source_text` + `currentPage.source_lang` 已從 JSONL passthrough。Type 在 [server/utils/ebook-chunks.ts](../../../server/utils/ebook-chunks.ts) 加了 optional `source_text` / `source_lang`。
 
 ---
 
@@ -149,14 +192,14 @@ ebooklib.epub.read_epub(...) → iter ITEM_DOCUMENT
 
 | Book | 狀態 | ebook_id | Source |
 |---|---|---|---|
-| **ACCS Apocrypha vol 15** | 🟡 翻譯啟動中（被 OAuth 401 中斷數次，已 fix；待重啟） | `37ff8191-8bc8-4eeb-bd84-d85fa3dd893b` | archive.org（PDF/EPUB 已下載到 IVP 兄弟資料夾） |
+| **ACCS Apocrypha vol 15** | 🟢 雙語 schema smoke test 通過（Gemini, 3 chunks 已 R2 + DB）；待全量啟動 | `37ff8191-8bc8-4eeb-bd84-d85fa3dd893b` | archive.org（PDF/EPUB 已下載到 IVP 兄弟資料夾） |
 
 下次接手第一動：
 1. `Get-Process python` 看有沒有殘留 worker
-2. `wc -l G:/.../_chunks/37ff8191-...jsonl` 看 resume 點（之前都失敗，預期 0）
-3. 確認 OCR wrapper 狀態（必要時暫停）
-4. 確認 Claude Code 剛剛有互動（credentials.json mtime 在 1 小時內）
-5. `python scripts/translate_ebook_to_zh.py 37ff8191-... --engine sonnet --resume` 啟動
+2. `(Get-Content G:/.../_chunks/37ff8191-....jsonl | Measure-Object -Line).Lines` 看 resume 點（smoke test 已寫 3）
+3. 確認 OCR wrapper / 互動 Claude Code（Opus/Sonnet）狀態 — Sonnet 翻譯跟使用者跟我互動會搶 Anthropic quota（**實測 2026-05-21：互動中啟 Sonnet worker 立刻 429**）；建議 idle 期跑 Sonnet，否則用 `--engine gemini`
+4. 確認 Claude Code 剛剛有互動（credentials.json mtime 在 1 小時內，僅 Sonnet 需要）
+5. `python scripts/translate_ebook_to_zh.py 37ff8191-... --engine <gemini|sonnet> --resume` 啟動
 
 ## 待翻清單（按優先順序）
 
@@ -170,6 +213,71 @@ ebooklib.epub.read_epub(...) → iter ITEM_DOCUMENT
 ## 完成清單
 
 （空）
+
+---
+
+## B. 簡 → 繁 Pipeline
+
+把舊有「JSONL `content` 是簡體中文」的 ebook **直接覆寫**成繁體。
+
+### 規則
+
+- **不用 LLM**：opencc s2tw + `parse_drive_inventory.TRAD_FIXES` 已足夠精確
+- **直接取代**：不存 `source_text`、不存 `source_lang`，跟原本中文書 schema 一致
+- **冪等**：對純繁中文本跑也沒副作用（opencc s2tw 對純繁字串幾乎是 identity）
+
+### 偵測規則
+
+對每本 ebook 抽 chunk[0]+chunk[1]+chunk[2] 的 `content`（合計 ~600 chars），檢查是否含**簡體獨佔指示字**（trad system 不會出現的字）：
+
+```
+历这们时国个来书学经长现产业实从问开关动头爱东车电话语门间见马体识号买卖书师
+```
+
+任一個指示字命中 → 標記為簡體 → 進 conversion queue。沒命中 → skip。
+
+### 處理流程
+
+```
+ebooks WHERE chunk_count > 0
+    │
+    ▼
+load JSONL（local 優先；fallback R2）
+    │
+    ▼
+sample 簡體偵測（chunk[0..2] 的 content；任一指示字命中即判定）
+    │
+    ▼
+若是簡體 → 對每 chunk 的 content 跑 standardize_ebook.to_traditional(content)
+    │           （保留 chunk_index / chapter_path / format / page_number 不動；不寫 source_lang/source_text）
+    ▼
+rewrite JSONL（原地覆寫，無 backup — Drive 有版本歷史）
+    │
+    ▼
+push R2 + refresh ebook_chunks previews（chunk_count 不變，不 PATCH ebooks.standardized_at）
+```
+
+### 核心工具
+
+[`scripts/simp_to_trad_batch.py`](../../../scripts/simp_to_trad_batch.py)
+
+```bash
+# Dry run：只報告哪些書會被轉
+python scripts/simp_to_trad_batch.py --scan
+
+# 對單本書轉
+python scripts/simp_to_trad_batch.py --id <ebook_id>
+
+# 全庫掃 + 自動轉
+python scripts/simp_to_trad_batch.py --run-all
+```
+
+### 常見坑
+
+- **TRAD_FIXES 不夠**：opencc s2tw 的常見 over-conversion bug（历 → 曆 而非 歷）由 [`parse_drive_inventory.TRAD_FIXES`](../../../scripts/parse_drive_inventory.py) 處理。新發現的錯誤要加到那邊（**不要**在本 batch script 自己另寫一份）
+- **書名／作者欄是簡體**：本 batch script 只動 JSONL `content`。`ebooks.title` / `ebooks.author` 的簡體要另跑（或在 ingest 時就 to_traditional）
+- **判定誤殺**：英文書的 `content` 可能不含中文字 → 偵測不到指示字 → skip（正確行為）；若 mix 雙語（中英對照書）chunk[0] 是純英可能 miss → 偵測延伸到 chunk[0..2]
+- **轉換後 reader cache 沒更新**：`server/utils/ebook-chunks.ts` 有 10min LRU cache，dev server 要 restart 才看得到
 
 ---
 

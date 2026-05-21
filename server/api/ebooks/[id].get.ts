@@ -32,6 +32,8 @@ export default defineEventHandler(async (event) => {
           chapter_path: chunk.chapter_path,
           chunk_type: chunk.chunk_type,
           content: chunk.content,
+          source_text: chunk.source_text ?? null,
+          source_lang: chunk.source_lang ?? null,
         }
       : null,
   };

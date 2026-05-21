@@ -98,15 +98,29 @@ def _make_anthropic_client():
 
 
 _sonnet_client = None
+_sonnet_client_cred_mtime = 0.0
+
+
+def _refresh_sonnet_client_if_creds_changed() -> None:
+    """Rebuild the client when credentials.json has been touched by Claude Code's
+    interactive session (refresh tokens roll the access token every few hours).
+    Without this, a long-running worker holds a stale token and every call 401s."""
+    global _sonnet_client, _sonnet_client_cred_mtime
+    cred = Path(os.environ.get("USERPROFILE", os.environ.get("HOME", ""))) / ".claude" / ".credentials.json"
+    if cred.exists():
+        m = cred.stat().st_mtime
+        if m > _sonnet_client_cred_mtime:
+            _sonnet_client = _make_anthropic_client()
+            _sonnet_client_cred_mtime = m
+    elif _sonnet_client is None:
+        _sonnet_client = _make_anthropic_client()
 
 
 def sonnet_translate(source: str) -> str:
-    """Translate via Claude Sonnet 4.6. OAuth tokens roll every ~8h — kill +
-    restart the worker if you see persistent 401s.
-    Long backoff because OCR Haiku wrappers share the same Anthropic quota."""
-    global _sonnet_client
-    if _sonnet_client is None:
-        _sonnet_client = _make_anthropic_client()
+    """Translate via Claude Sonnet 4.6. Re-reads OAuth credentials when
+    .credentials.json mtime advances (Claude Code refreshes tokens every few
+    hours). Long backoff tolerates concurrent OCR Haiku wrappers."""
+    _refresh_sonnet_client_if_creds_changed()
     backoffs = [0, 60, 180, 300, 600]  # 0s, 1m, 3m, 5m, 10m — patient when OCR co-runs
     for attempt, wait in enumerate(backoffs, start=1):
         if wait:
@@ -129,7 +143,14 @@ def sonnet_translate(source: str) -> str:
             if attempt >= len(backoffs):
                 raise
         except _anthropic.AuthenticationError:
-            raise RuntimeError("Anthropic 401 — OAuth token expired. Kill + restart worker.")
+            # Token expired mid-run — try re-reading credentials.json (Claude
+            # Code may have refreshed it). One retry, then bail.
+            print("  Sonnet 401 — re-reading credentials.json", file=sys.stderr, flush=True)
+            global _sonnet_client_cred_mtime
+            _sonnet_client_cred_mtime = 0.0
+            _refresh_sonnet_client_if_creds_changed()
+            if attempt >= len(backoffs):
+                raise RuntimeError("Anthropic 401 even after token refresh — Claude Code OAuth may need re-auth.")
     raise RuntimeError("sonnet_translate exhausted retries")
 
 
@@ -314,7 +335,11 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
 
     target = src_chunks[:limit] if limit else src_chunks
 
-    # Resume: if a JSONL already exists, load it and skip those chunks
+    # Resume: if a JSONL already exists, load it and skip those chunks.
+    # Match on title_en (English source heading) — chapter_path is the
+    # translated Chinese heading which never matches the English source iter,
+    # so using chapter_path here would reprocess every H2 chunk on each resume
+    # (observed 2026-05-21: 10 lines but 7 unique sources after 2 resumes).
     out_path = CHUNKS_DIR / f"{ebook_id}.jsonl"
     out_chunks: list[dict] = []
     done_titles: set[str] = set()
@@ -323,7 +348,8 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
             for line in out_path.read_text(encoding="utf-8").splitlines():
                 obj = json.loads(line)
                 out_chunks.append(obj)
-                done_titles.add(obj.get("chapter_path", ""))
+                # title_en added 2026-05-21; legacy chunks fall back to chapter_path
+                done_titles.add(obj.get("title_en") or obj.get("chapter_path", ""))
             print(f"Resume: loaded {len(out_chunks)} existing chunks (skip-set size {len(done_titles)})", flush=True)
         except Exception as e:
             print(f"Resume failed: {e} — restarting from scratch", file=sys.stderr, flush=True)
@@ -379,6 +405,8 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
                              if re.search(r"^(#{2,4})\s+", zh, re.M) else c["title_en"]),
             "format": "markdown",
             "source_lang": "en",
+            "title_en": c["title_en"],  # source heading; used by --resume to dedupe across runs
+            "source_text": en,
             "content": zh,
         }
         out_chunks.append(new_chunk)

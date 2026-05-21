@@ -22,6 +22,8 @@ export interface ChunkData {
   chapter_path: string | null;
   volume?: string | null;
   format?: "markdown" | "text";
+  source_lang?: string | null;
+  source_text?: string | null;
   content: string;
 }
 
