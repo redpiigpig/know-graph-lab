@@ -26,7 +26,7 @@ End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL 
 | 今日 reorg / fix | 1 IVP retry done (dupe 刪除 + DB sync) |
 | 今日神學子分類 | **325/325 全 canonical** (LLM 配 rule-based 重新分類) |
 | 今日 daily bat | step 5 加 standardize（only-fresh）已 wire |
-| 今日 ACCS English | **Apocrypha vol 15 加入庫，翻譯 pipeline 啟動** |
+| 今日 ACCS English | Apocrypha vol 15 加入庫；翻譯流程移到新 skill [ebook-translate](../ebook-translate/SKILL.md) |
 
 ### 10 大分類書數（2026-05-21 晚上 — 神學重組後）
 
@@ -137,7 +137,6 @@ schtasks /create /tn "KGLab-OCR-Daily-18" /tr "C:\Users\user\Desktop\know-graph-
 | `_haiku_ivp_priority.sh` | 3 — OCR | bash wrapper：先跑 IVP 22 卷再 catch-all。Gemini-first (`--rpm 8` 不加 `--engine haiku`)，>50MB 自動 route Haiku |
 | `subcategorize_theology.py` | 4f — taxonomy | LLM 子分類器：神學 → 13 個 canonical labels (教父著作/中世紀/改教/近現代 + 教科書/概論/主題專論/倫理/靈修/詮釋/本地化)。Series subcat (Schaff/Aquinas/IVP) 自動 preserve。Rule-based 先過，剩餘批給 Gemini 25/batch |
 | `standardize_pdf_v1.py` | 4 — Plan B v1 | Font-driven heading 偵測 — body size 自動推斷 + flag-based bold + h2/h3/h4 配 size bump 規則。用於 no-TOC PDF (~285 候選)。`--inspect` 看 font histogram；`--dry-run` 預覽 chunks |
-| `translate_ebook_to_zh.py` | 4g — translate | 英文 ebook → 繁中翻譯 pipeline。Gemini Flash + 教父術語對齊 prompt + s2tw safety pass。已用於 ACCS Apocrypha vol 15 |
 
 ## DB schema
 
@@ -976,12 +975,12 @@ Schema in [`database/tags.sql`](../../../database/tags.sql). `tags` + `book_tags
 6. **65 books with single chunk >400KB and no internal headings** — `resplit_giant_chunks.py` 對 3 本有效（已跑），剩 65 本（包括 Schaff 系列、史料原典套書）需 LLM page-boundary 或 font 分析。Plan B v1 可能可吃掉一部分（EPUB 不行，PDF 部分可）。
 7. **~~16 套書 with `volume=None`~~** ✅ detect_set_volumes 已掃完所有候選，37 本 marked NOT_A_SET marker，0 本待處理。
 8. **~~17 no-hit books for enrich_metadata~~** ✅ 剩 3 本（古蘭經的故事 / 巴哈歐拉啟示錄 / 道教簡史）— 都是冷門 manual-fill only。
-9. **ACCS Apocrypha 翻譯**：英文 vol 15 已加入庫（`37ff8191-8bc8-4eeb-bd84-d85fa3dd893b`），完整翻譯 pipeline 透過 `translate_ebook_to_zh.py` 啟動中。244 個 source chunks，預估 ~30min Gemini Flash 跑完。完成後驗證術語對齊（教父人名、聖經書卷 abbrev）。
+9. **英→中翻譯類工作（ACCS Apocrypha vol 15 / ACCS 缺中譯卷 24-25 等）** — 移到新 skill [ebook-translate](../ebook-translate/SKILL.md)。翻譯 pipeline、glossary、引擎選擇都在那裡。
 10. **Manual sources for canon law batch 2** — Vatican CIC 1983 / CCEO 1990 / CCC + Book of Concord + Pedalion + Methodist / 1689 LBC / BFM 各新教信條 — 留給 scripture-canon-portal skill 啟動時做。
-11. **ACCS Chinese set 補卷**：中譯 27 冊 OT 缺 24-25（耶利米/哀歌）— 是否有官方中譯？若無只能用英文 vol 12（Jeremiah, Lamentations）+ 同樣 translate pipeline 補。
 
 ## See also
 
 - [`EBOOK_PIPELINE.md`](../../../EBOOK_PIPELINE.md) at repo root — original design doc
 - [`scripts/haiku_cleanup_guide.md`](../../../scripts/haiku_cleanup_guide.md) — Haiku text cleanup (historical)
+- [ebook-translate](../ebook-translate/SKILL.md) — 並列 skill，處理英文 ebook → 繁中翻譯（ACCS Apocrypha 等）。本 skill 處理上游 parse/OCR/standardize，translate skill 接下游英→中
 - [scripture-canon-portal](../scripture-canon-portal/SKILL.md) — 新 skill（2026-05-21），會大量依賴本 pipeline 的 ebooks data（IVP ACCS / Schaff / 教父原典 / 基督教典外文獻 / Schaff Creeds + History 等）
