@@ -76,6 +76,7 @@ GEMINI_KEYS = _find_gemini_keys()
 _key_idx = 0
 
 SONNET_MODEL = "claude-sonnet-4-6"
+HAIKU_MODEL = "claude-haiku-4-5-20251001"
 
 
 def _make_anthropic_client():
@@ -97,61 +98,73 @@ def _make_anthropic_client():
     raise RuntimeError("No Anthropic credentials")
 
 
-_sonnet_client = None
-_sonnet_client_cred_mtime = 0.0
+_anthropic_client = None
+_anthropic_client_cred_mtime = 0.0
 
 
-def _refresh_sonnet_client_if_creds_changed() -> None:
+def _refresh_anthropic_client_if_creds_changed() -> None:
     """Rebuild the client when credentials.json has been touched by Claude Code's
     interactive session (refresh tokens roll the access token every few hours).
-    Without this, a long-running worker holds a stale token and every call 401s."""
-    global _sonnet_client, _sonnet_client_cred_mtime
+    Without this, a long-running worker holds a stale token and every call 401s.
+    Shared between Sonnet and Haiku — same OAuth account/token."""
+    global _anthropic_client, _anthropic_client_cred_mtime
     cred = Path(os.environ.get("USERPROFILE", os.environ.get("HOME", ""))) / ".claude" / ".credentials.json"
     if cred.exists():
         m = cred.stat().st_mtime
-        if m > _sonnet_client_cred_mtime:
-            _sonnet_client = _make_anthropic_client()
-            _sonnet_client_cred_mtime = m
-    elif _sonnet_client is None:
-        _sonnet_client = _make_anthropic_client()
+        if m > _anthropic_client_cred_mtime:
+            _anthropic_client = _make_anthropic_client()
+            _anthropic_client_cred_mtime = m
+    elif _anthropic_client is None:
+        _anthropic_client = _make_anthropic_client()
 
 
-def sonnet_translate(source: str) -> str:
-    """Translate via Claude Sonnet 4.6. Re-reads OAuth credentials when
-    .credentials.json mtime advances (Claude Code refreshes tokens every few
-    hours). Long backoff tolerates concurrent OCR Haiku wrappers."""
-    _refresh_sonnet_client_if_creds_changed()
-    backoffs = [0, 60, 180, 300, 600]  # 0s, 1m, 3m, 5m, 10m — patient when OCR co-runs
+def _anthropic_translate(model: str, label: str, source: str,
+                         backoffs: tuple = (0, 60, 180, 300, 600)) -> str:
+    """Shared Anthropic invocation used by Sonnet + Haiku wrappers. `label` only
+    affects log lines so we can tell them apart in concurrent runs."""
+    _refresh_anthropic_client_if_creds_changed()
     for attempt, wait in enumerate(backoffs, start=1):
         if wait:
-            print(f"  Sonnet 429 — backoff {wait}s before attempt {attempt}", flush=True)
+            print(f"  {label} 429 — backoff {wait}s before attempt {attempt}", flush=True)
             time.sleep(wait)
         try:
-            msg = _sonnet_client.messages.create(
-                model=SONNET_MODEL,
+            msg = _anthropic_client.messages.create(
+                model=model,
                 max_tokens=16000,
                 messages=[{"role": "user", "content": PROMPT_TMPL.format(source=source)}],
             )
             text = "".join(block.text for block in msg.content if hasattr(block, "text"))
             return text.strip()
-        except _anthropic.RateLimitError as e:
-            print(f"  Sonnet rate-limit attempt {attempt}/{len(backoffs)}", file=sys.stderr, flush=True)
+        except _anthropic.RateLimitError:
+            print(f"  {label} rate-limit attempt {attempt}/{len(backoffs)}", file=sys.stderr, flush=True)
             if attempt >= len(backoffs):
                 raise
         except (_anthropic.APIConnectionError, _anthropic.APITimeoutError) as e:
-            print(f"  Sonnet conn error attempt {attempt}: {type(e).__name__}", file=sys.stderr, flush=True)
+            print(f"  {label} conn error attempt {attempt}: {type(e).__name__}", file=sys.stderr, flush=True)
             if attempt >= len(backoffs):
                 raise
         except _anthropic.AuthenticationError:
-            # Token expired mid-run — try re-reading credentials.json (Claude
-            # Code may have refreshed it). One retry, then bail.
-            print("  Sonnet 401 — re-reading credentials.json", file=sys.stderr, flush=True)
-            global _sonnet_client_cred_mtime
-            _sonnet_client_cred_mtime = 0.0
-            _refresh_sonnet_client_if_creds_changed()
+            print(f"  {label} 401 — re-reading credentials.json", file=sys.stderr, flush=True)
+            global _anthropic_client_cred_mtime
+            _anthropic_client_cred_mtime = 0.0
+            _refresh_anthropic_client_if_creds_changed()
             if attempt >= len(backoffs):
-                raise RuntimeError("Anthropic 401 even after token refresh — Claude Code OAuth may need re-auth.")
-    raise RuntimeError("sonnet_translate exhausted retries")
+                raise RuntimeError(f"Anthropic 401 even after token refresh ({label}) — Claude Code OAuth may need re-auth.")
+    raise RuntimeError(f"{label} exhausted retries")
+
+
+def sonnet_translate(source: str) -> str:
+    """Translate via Claude Sonnet 4.6. Long backoff tolerates concurrent
+    interactive Opus / OCR Haiku — they all share the OAuth account."""
+    return _anthropic_translate(SONNET_MODEL, "Sonnet", source)
+
+
+def haiku_translate(source: str) -> str:
+    """Translate via Claude Haiku 4.5. Cheaper + faster than Sonnet; ~95% of
+    Sonnet's translation quality on this task per spot-checks. Used as
+    automatic fallback when Gemini exhausts its 4 keys."""
+    return _anthropic_translate(HAIKU_MODEL, "Haiku", source,
+                                backoffs=(0, 30, 90, 180))  # shorter — Haiku has higher RPM
 
 
 MAX_CHUNK_CHARS = 20_000  # split source if larger — Sonnet 16K output cap + safety
@@ -247,6 +260,21 @@ def gemini_translate(source: str, model: str = "gemini-2.5-flash") -> str:
         # All attempts on this key failed — rotate
         _key_idx = (_key_idx + 1) % len(GEMINI_KEYS)
     raise RuntimeError(f"all {len(GEMINI_KEYS)} Gemini keys exhausted (timeouts/throttling)")
+
+
+def gemini_with_haiku_fallback(source: str) -> str:
+    """Default engine for English → 繁中 long-running jobs. Tries Gemini first
+    (free quota, no Anthropic OAuth conflict); on `all Gemini keys exhausted`
+    falls back to Claude Haiku for that specific piece. Per-piece fallback —
+    not whole-chunk — so we don't pessimize 'just barely' cases."""
+    try:
+        return gemini_translate(source)
+    except RuntimeError as e:
+        msg = str(e)
+        if "Gemini keys exhausted" in msg or "no Gemini API key" in msg:
+            print(f"  ↳ Gemini failed ({msg[:80]}…), falling back to Haiku", flush=True)
+            return haiku_translate(source)
+        raise
 
 
 # ── EPUB → ordered chunks ─────────────────────────────────────────────────
@@ -355,8 +383,13 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
             print(f"Resume failed: {e} — restarting from scratch", file=sys.stderr, flush=True)
             out_chunks = []
 
-    translator = sonnet_translate if engine == "sonnet" else gemini_translate
-    print(f"Engine: {engine}  Model: {SONNET_MODEL if engine == 'sonnet' else 'gemini-2.5-flash'}", flush=True)
+    if engine == "sonnet":
+        translator, model_label = sonnet_translate, SONNET_MODEL
+    elif engine == "haiku":
+        translator, model_label = haiku_translate, HAIKU_MODEL
+    else:  # gemini default — falls back to Haiku per piece when keys exhausted
+        translator, model_label = gemini_with_haiku_fallback, "gemini-2.5-flash → haiku-4-5 fallback"
+    print(f"Engine: {engine}  Model: {model_label}", flush=True)
 
     t_total = time.time()
     n_processed = 0
@@ -473,8 +506,10 @@ def main():
     p.add_argument("--inspect", action="store_true")
     p.add_argument("--dry-run", action="store_true")
     p.add_argument("--limit", type=int)
-    p.add_argument("--engine", choices=["gemini", "sonnet"], default="gemini",
-                   help="Translation engine. sonnet uses Claude Sonnet 4.6")
+    p.add_argument("--engine", choices=["gemini", "sonnet", "haiku"], default="gemini",
+                   help="Translation engine. 'gemini' uses Gemini Flash 2.5 with "
+                        "automatic per-piece fallback to Haiku when keys are exhausted. "
+                        "'sonnet' / 'haiku' use the named Claude model directly.")
     p.add_argument("--resume", action="store_true",
                    help="Skip chapter_path already in the on-disk JSONL")
     args = p.parse_args()
