@@ -3,6 +3,8 @@ import type { Creed } from '../types'
 import latText from './vatican-ii/gs-latin.txt?raw'
 // @ts-expect-error — Vite raw-text import
 import enText from './vatican-ii/gs-english.txt?raw'
+// @ts-expect-error — Vite raw-text import
+import zhText from './vatican-ii/gs-chinese.txt?raw'
 
 export const vaticanIIGS: Creed = {
   slug: 'vatican-ii-gs-gaudium-et-spes',
@@ -24,11 +26,10 @@ export const vaticanIIGS: Creed = {
   versions: [
     {
       lang: 'zh-Hant-Catholic',
-      label: '思高／天主教中文版（vatican.va 官方繁體 PDF）',
-      text: '待補：vatican.va 中文版為 PDF 檔，需手動下載抽字後填入。\n下載：https://www.vatican.va/chinese/concilio/vat-ii_gaudium-et-spes_zh-t.pdf',
+      label: '思高／天主教中文版（vatican.va 官方繁體 PDF 抽字）',
+      text: zhText as string,
       source: 'https://www.vatican.va/chinese/concilio/vat-ii_gaudium-et-spes_zh-t.pdf',
       translator: '台灣地區主教團 / 香港教區禮儀委員會',
-      placeholder: true,
     },
     {
       lang: 'en',

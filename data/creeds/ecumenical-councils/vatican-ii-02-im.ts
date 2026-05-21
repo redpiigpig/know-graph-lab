@@ -24,9 +24,9 @@ export const vaticanIIIM: Creed = {
   versions: [
     {
       lang: 'zh-Hant-Catholic',
-      label: '思高／天主教中文版（vatican.va 官方繁體 PDF）',
-      text: '待補：vatican.va 中文版為 PDF 檔，需手動下載抽字後填入。\n下載：https://www.vatican.va/chinese/concilio/vat-ii_inter-mirifica_zh-t.pdf',
-      source: 'https://www.vatican.va/chinese/concilio/vat-ii_inter-mirifica_zh-t.pdf',
+      label: '思高／天主教中文版（vatican.va PDF 損毀 — 16 份中唯一缺中譯）',
+      text: '⚠️ vatican.va 上 IM 中文 PDF 連結雖回 HTTP 200，但 Content-Length=0（檔案實際損毀，2026-05-21 確認，archive.org 鏡像亦同樣損毀）。\n\n建議來源：\n‧ 台灣地區主教團 1975《梵蒂岡第二屆大公會議文獻》紙本書\n‧ 天主教香港教區禮儀委員會編《梵二禮儀文獻匯編》\n‧ Vatican.va 中文簡體版（_zh-s.pdf 也 404）',
+      source: 'https://www.vatican.va/chinese/concilio/vat-ii_inter-mirifica_zh-t.pdf (broken)',
       translator: '台灣地區主教團 / 香港教區禮儀委員會',
       placeholder: true,
     },

@@ -3,6 +3,8 @@ import type { Creed } from '../types'
 import scLatin from './vatican-ii/sc-latin.txt?raw'
 // @ts-expect-error — Vite raw-text import
 import scEnglish from './vatican-ii/sc-english.txt?raw'
+// @ts-expect-error — Vite raw-text import
+import scChinese from './vatican-ii/sc-chinese.txt?raw'
 
 export const vaticanIISC: Creed = {
   slug: 'vatican-ii-sc-sacrosanctum-concilium',
@@ -26,11 +28,10 @@ export const vaticanIISC: Creed = {
   versions: [
     {
       lang: 'zh-Hant-Catholic',
-      label: '思高／天主教中文版（vatican.va 官方繁體 PDF）',
-      text: '待補：vatican.va 中文版為 PDF 檔，需手動下載抽字後填入。\n下載：https://www.vatican.va/chinese/concilio/vat-ii_sacrosanctum-concilium_zh-t.pdf',
+      label: '思高／天主教中文版（vatican.va 官方繁體 PDF 抽字）',
+      text: scChinese as string,
       source: 'https://www.vatican.va/chinese/concilio/vat-ii_sacrosanctum-concilium_zh-t.pdf',
       translator: '台灣地區主教團 / 香港教區禮儀委員會',
-      placeholder: true,
     },
     {
       lang: 'en',
