@@ -814,6 +814,359 @@ def ingest_brenton(dry_run=False):
     upsert_verses(rows, dry_run=dry_run)
 
 
+# ─── NABRE (nirmalben/bible-nabre-json-dataset) ─────────────────────────────
+# Single 7 MB JSON. Schema: [{book, chapters: [{chapter, verses: [{verse, text}]}]}]
+
+NABRE_URL = "https://raw.githubusercontent.com/nirmalben/bible-nabre-json-dataset/master/generated_data/nabre.json"
+# NABRE uses full English names; map to our codes
+NABRE_BOOKS = {
+    "Genesis": "gen", "Exodus": "exo", "Leviticus": "lev", "Numbers": "num",
+    "Deuteronomy": "deu", "Joshua": "jos", "Judges": "jdg", "Ruth": "rut",
+    "1Samuel": "1sa", "2Samuel": "2sa", "1Kings": "1ki", "2Kings": "2ki",
+    "1Chronicles": "1ch", "2Chronicles": "2ch", "Ezra": "ezr", "Nehemiah": "neh",
+    "Tobit": "tob", "Judith": "jdt", "Esther": "est",
+    "1Maccabees": "1ma", "2Maccabees": "2ma",
+    "Job": "job", "Psalms": "psa", "Proverbs": "pro", "Ecclesiastes": "ecc",
+    "SongofSongs": "sng", "Wisdom": "wis", "Sirach": "sir",
+    "Isaiah": "isa", "Jeremiah": "jer", "Lamentations": "lam", "Baruch": "bar",
+    "Ezekiel": "ezk", "Daniel": "dan",
+    "Hosea": "hos", "Joel": "jol", "Amos": "amo", "Obadiah": "oba", "Jonah": "jon",
+    "Micah": "mic", "Nahum": "nam", "Habakkuk": "hab", "Zephaniah": "zep",
+    "Haggai": "hag", "Zechariah": "zec", "Malachi": "mal",
+    "Matthew": "mat", "Mark": "mrk", "Luke": "luk", "John": "jhn",
+    "Acts": "act", "Romans": "rom", "1Corinthians": "1co", "2Corinthians": "2co",
+    "Galatians": "gal", "Ephesians": "eph", "Philippians": "php", "Colossians": "col",
+    "1Thessalonians": "1th", "2Thessalonians": "2th", "1Timothy": "1ti",
+    "2Timothy": "2ti", "Titus": "tit", "Philemon": "phm", "Hebrews": "heb",
+    "James": "jas", "1Peter": "1pe", "2Peter": "2pe", "1John": "1jn",
+    "2John": "2jn", "3John": "3jn", "Jude": "jud", "Revelation": "rev",
+}
+
+
+def ingest_nabre(dry_run=False):
+    print("-> Ingesting NABRE (nirmalben/bible-nabre-json-dataset)")
+    if not dry_run:
+        clear_version("nabre")
+    r = requests.get(NABRE_URL, timeout=180)
+    if r.status_code != 200:
+        print(f"  X HTTP {r.status_code}", file=sys.stderr)
+        return
+    data = r.json()
+    rows = []
+    unknown = set()
+    for book in data:
+        name = book.get("book", "")
+        code = NABRE_BOOKS.get(name)
+        if not code:
+            unknown.add(name)
+            continue
+        for ch in book.get("chapters", []):
+            ch_num = int(ch["chapter"])
+            # Same Baruch ch 6 split as scrollmapper
+            if code == "bar" and ch_num == 6:
+                eff_code, eff_ch = "epj", 1
+            else:
+                eff_code, eff_ch = code, ch_num
+            for v in ch.get("verses", []):
+                v_num = int(v["verse"])
+                text = (v.get("text") or "").strip()
+                # Strip inline section headers (NABRE prepends "Chapter Title ..." sometimes)
+                text = re.sub(r"^\s*[\w\s\.]+Chapter\s+\d+\s*-\s*", "", text)
+                if not text:
+                    continue
+                rows.append({
+                    "book_code": eff_code, "chapter": eff_ch, "verse": v_num,
+                    "version_code": "nabre", "text": text,
+                })
+    if unknown:
+        print(f"  ! unmapped: {sorted(unknown)}", file=sys.stderr)
+    print(f"  parsed {len(rows)} verses across {len({r['book_code'] for r in rows})} books")
+    upsert_verses(rows, dry_run=dry_run)
+
+
+# ─── FHL.net 呂振中 + 現代中文 ───────────────────────────────────────────────
+# https://bible.fhl.net/json/qb.php?engs={Eng}&chap={N}&version={lcc|tcv2019}
+# Schema: {status, record_count, record: [{engs, chap, sec, bible_text}], prev, next}
+
+FHL_BASE = "https://bible.fhl.net/json/qb.php"
+FHL_BOOKS = {
+    "gen": "Gen", "exo": "Exod", "lev": "Lev", "num": "Num", "deu": "Deut",
+    "jos": "Josh", "jdg": "Judg", "rut": "Ruth",
+    "1sa": "1Sam", "2sa": "2Sam", "1ki": "1Kgs", "2ki": "2Kgs",
+    "1ch": "1Chr", "2ch": "2Chr", "ezr": "Ezra", "neh": "Neh", "est": "Esth",
+    "job": "Job", "psa": "Ps", "pro": "Prov", "ecc": "Eccl", "sng": "Song",
+    "isa": "Isa", "jer": "Jer", "lam": "Lam", "ezk": "Ezek", "dan": "Dan",
+    "hos": "Hos", "jol": "Joel", "amo": "Amos", "oba": "Obad", "jon": "Jonah",
+    "mic": "Mic", "nam": "Nah", "hab": "Hab", "zep": "Zeph",
+    "hag": "Hag", "zec": "Zech", "mal": "Mal",
+    "mat": "Matt", "mrk": "Mark", "luk": "Luke", "jhn": "John",
+    "act": "Acts", "rom": "Rom", "1co": "1Cor", "2co": "2Cor", "gal": "Gal",
+    "eph": "Eph", "php": "Phil", "col": "Col", "1th": "1Thess", "2th": "2Thess",
+    "1ti": "1Tim", "2ti": "2Tim", "tit": "Titus", "phm": "Phlm", "heb": "Heb",
+    "jas": "Jas", "1pe": "1Pet", "2pe": "2Pet", "1jn": "1John", "2jn": "2John",
+    "3jn": "3John", "jud": "Jude", "rev": "Rev",
+}
+
+
+def _ingest_fhl(version_code, fhl_version, dry_run=False):
+    """Ingest one version from bible.fhl.net JSON API, chapter-by-chapter."""
+    print(f"-> Ingesting {version_code} (bible.fhl.net?version={fhl_version})")
+    if not dry_run:
+        clear_version(version_code)
+    # Get chapter counts from DB
+    r = requests.get(
+        f"{SUPA_URL}/rest/v1/bible_books?canon_protestant=eq.true&select=code,chapter_count",
+        headers=PG_HEADERS, timeout=30,
+    )
+    chapter_counts = {row["code"]: row["chapter_count"] for row in r.json()}
+    session = requests.Session()
+    session.headers["User-Agent"] = "Mozilla/5.0 (research)"
+    rows = []
+    total = 0
+    for our_code, fhl_engs in FHL_BOOKS.items():
+        n = chapter_counts.get(our_code, 0)
+        if not n:
+            continue
+        for ch in range(1, n + 1):
+            try:
+                resp = session.get(
+                    FHL_BASE,
+                    params={"engs": fhl_engs, "chap": ch, "version": fhl_version},
+                    timeout=30,
+                )
+                if resp.status_code != 200:
+                    continue
+                j = resp.json()
+                for rec in j.get("record", []):
+                    v_num = int(rec.get("sec", 0))
+                    text = (rec.get("bible_text") or "").strip()
+                    if not text or not v_num:
+                        continue
+                    # Strip leading section title (e.g., "生命之道 宇宙被造以前...")
+                    # only if first verse — handled inline
+                    rows.append({
+                        "book_code": our_code, "chapter": ch, "verse": v_num,
+                        "version_code": version_code, "text": text,
+                    })
+            except Exception as e:
+                print(f"  ! {our_code} {ch}: {e}", file=sys.stderr)
+            time.sleep(0.5)  # polite
+        if rows and not dry_run:
+            upsert_verses(rows)
+            total += len(rows)
+            print(f"  ✓ {our_code} ({fhl_engs}) {n} ch (cum total {total})", file=sys.stderr)
+            rows = []
+    if rows and not dry_run:
+        upsert_verses(rows)
+        total += len(rows)
+    print(f"  done — {total} verses")
+
+
+def ingest_lzz(dry_run=False):
+    _ingest_fhl("lzz", "lcc", dry_run=dry_run)
+
+
+def ingest_tcv(dry_run=False):
+    _ingest_fhl("tcv", "tcv2019", dry_run=dry_run)
+
+
+# ─── Recovery Version (text.recoveryversion.bible) ──────────────────────────
+# URL: https://text.recoveryversion.bible/{NN}_{Book}_{chapter}.htm
+# Parse: <p id="Joh1-1" class="verse"><b>...</b>VERSE TEXT</p>
+
+RCV_BASE = "https://text.recoveryversion.bible"
+RCV_BOOKS = [  # (NN, book_filename, our_code, chapter_count)
+    (1, "Genesis", "gen"), (2, "Exodus", "exo"), (3, "Leviticus", "lev"),
+    (4, "Numbers", "num"), (5, "Deuteronomy", "deu"), (6, "Joshua", "jos"),
+    (7, "Judges", "jdg"), (8, "Ruth", "rut"),
+    (9, "1Samuel", "1sa"), (10, "2Samuel", "2sa"),
+    (11, "1Kings", "1ki"), (12, "2Kings", "2ki"),
+    (13, "1Chronicles", "1ch"), (14, "2Chronicles", "2ch"),
+    (15, "Ezra", "ezr"), (16, "Nehemiah", "neh"), (17, "Esther", "est"),
+    (18, "Job", "job"), (19, "Psalms", "psa"), (20, "Proverbs", "pro"),
+    (21, "Ecclesiastes", "ecc"), (22, "SongofSongs", "sng"),
+    (23, "Isaiah", "isa"), (24, "Jeremiah", "jer"), (25, "Lamentations", "lam"),
+    (26, "Ezekiel", "ezk"), (27, "Daniel", "dan"),
+    (28, "Hosea", "hos"), (29, "Joel", "jol"), (30, "Amos", "amo"),
+    (31, "Obadiah", "oba"), (32, "Jonah", "jon"), (33, "Micah", "mic"),
+    (34, "Nahum", "nam"), (35, "Habakkuk", "hab"), (36, "Zephaniah", "zep"),
+    (37, "Haggai", "hag"), (38, "Zechariah", "zec"), (39, "Malachi", "mal"),
+    (40, "Matthew", "mat"), (41, "Mark", "mrk"), (42, "Luke", "luk"),
+    (43, "John", "jhn"), (44, "Acts", "act"), (45, "Romans", "rom"),
+    (46, "1Corinthians", "1co"), (47, "2Corinthians", "2co"),
+    (48, "Galatians", "gal"), (49, "Ephesians", "eph"), (50, "Philippians", "php"),
+    (51, "Colossians", "col"), (52, "1Thessalonians", "1th"),
+    (53, "2Thessalonians", "2th"), (54, "1Timothy", "1ti"), (55, "2Timothy", "2ti"),
+    (56, "Titus", "tit"), (57, "Philemon", "phm"), (58, "Hebrews", "heb"),
+    (59, "James", "jas"), (60, "1Peter", "1pe"), (61, "2Peter", "2pe"),
+    (62, "1John", "1jn"), (63, "2John", "2jn"), (64, "3John", "3jn"),
+    (65, "Jude", "jud"), (66, "Revelation", "rev"),
+]
+RCV_VERSE_RE = re.compile(
+    r'<p[^>]*class="verse"[^>]*>(?:<b[^>]*>.*?</b>)?(.*?)</p>',
+    re.DOTALL | re.IGNORECASE,
+)
+RCV_VERSE_ID_RE = re.compile(r'id="\w+(\d+)-(\d+)"')
+# Combined: extract id + text in one pass
+RCV_BV_RE = re.compile(
+    r'<p[^>]*id="\w+(\d+)-(\d+)"[^>]*class="verse"[^>]*>(?:<b[^>]*>.*?</b>)?(.*?)</p>',
+    re.DOTALL | re.IGNORECASE,
+)
+
+
+def ingest_rcv(dry_run=False):
+    print("-> Ingesting Recovery Version (text.recoveryversion.bible)")
+    if not dry_run:
+        clear_version("rcv")
+    r = requests.get(
+        f"{SUPA_URL}/rest/v1/bible_books?canon_protestant=eq.true&select=code,chapter_count",
+        headers=PG_HEADERS, timeout=30,
+    )
+    chapter_counts = {row["code"]: row["chapter_count"] for row in r.json()}
+    session = requests.Session()
+    session.headers["User-Agent"] = "Mozilla/5.0 (research)"
+    rows = []
+    total = 0
+    for nn, fname, our_code in RCV_BOOKS:
+        n_ch = chapter_counts.get(our_code, 0)
+        if not n_ch:
+            continue
+        nn_str = f"{nn:02d}"
+        for ch in range(1, n_ch + 1):
+            url = f"{RCV_BASE}/{nn_str}_{fname}_{ch}.htm"
+            try:
+                resp = session.get(url, timeout=30)
+                if resp.status_code != 200:
+                    continue
+                html = resp.text
+                for m in RCV_BV_RE.finditer(html):
+                    _ch, v_num, vtext = m.group(1), int(m.group(2)), m.group(3)
+                    # Strip nested tags (a, sup, span)
+                    vtext = re.sub(r'<[^>]+>', '', vtext)
+                    vtext = re.sub(r'\s+', ' ', vtext).strip()
+                    if not vtext:
+                        continue
+                    rows.append({
+                        "book_code": our_code, "chapter": ch, "verse": v_num,
+                        "version_code": "rcv", "text": vtext,
+                    })
+            except Exception as e:
+                print(f"  ! {our_code} {ch}: {e}", file=sys.stderr)
+            time.sleep(0.3)
+        if rows and not dry_run:
+            upsert_verses(rows)
+            total += len(rows)
+            print(f"  ✓ {our_code} ({fname}) {n_ch} ch (cum total {total})", file=sys.stderr)
+            rows = []
+    print(f"  done — {total} verses")
+
+
+# ─── Knox Bible (catholicbible.online) ──────────────────────────────────────
+# URL: https://catholicbible.online/knox?bible_part_no={1|2}&book_no={N}&chapter_no={C}
+# Parse: <div class="vers"><div class="vers-no">N</div><div class="vers-content">TEXT</div></div>
+# OT (part=1): 1-46 (Catholic order); NT (part=2): 1-27
+
+KNOX_BASE = "https://catholicbible.online/knox"
+KNOX_OT = [  # Vulgate order (catholicbible.online sidebar order — verified)
+    (1, "gen"), (2, "exo"), (3, "lev"), (4, "num"), (5, "deu"),
+    (6, "jos"), (7, "jdg"), (8, "rut"),
+    (9, "1sa"), (10, "2sa"),         # Knox calls "1 Kings" / "2 Kings"
+    (11, "1ki"), (12, "2ki"),        # Knox calls "3 Kings" / "4 Kings"
+    (13, "1ch"), (14, "2ch"),        # "1/2 Paralipomena"
+    (15, "ezr"), (16, "neh"),        # "1/2 Esdras"
+    (17, "tob"), (18, "jdt"), (19, "est"),
+    (20, "job"), (21, "psa"), (22, "pro"),
+    (23, "ecc"), (24, "sng"), (25, "wis"), (26, "sir"),
+    (27, "isa"), (28, "jer"), (29, "lam"), (30, "bar"),
+    (31, "ezk"), (32, "dan"),
+    (33, "hos"), (34, "jol"), (35, "amo"), (36, "oba"), (37, "jon"),
+    (38, "mic"), (39, "nam"), (40, "hab"), (41, "zep"),
+    (42, "hag"), (43, "zec"), (44, "mal"),
+    (45, "1ma"), (46, "2ma"),
+]
+KNOX_NT = [  # NT same as scrollmapper order
+    (1, "mat"), (2, "mrk"), (3, "luk"), (4, "jhn"),
+    (5, "act"), (6, "rom"), (7, "1co"), (8, "2co"),
+    (9, "gal"), (10, "eph"), (11, "php"), (12, "col"),
+    (13, "1th"), (14, "2th"), (15, "1ti"), (16, "2ti"),
+    (17, "tit"), (18, "phm"), (19, "heb"),
+    (20, "jas"), (21, "1pe"), (22, "2pe"),
+    (23, "1jn"), (24, "2jn"), (25, "3jn"), (26, "jud"), (27, "rev"),
+]
+KNOX_VERSE_RE = re.compile(
+    r'<div class="vers-no[^"]*">\s*(\d+)\s*</div>\s*'
+    r'<div class="vers-content[^"]*">(.+?)</div>',
+    re.DOTALL,
+)
+# Knox includes Baruch ch 6 = Letter of Jeremiah; split that
+# Knox includes Daniel chapters with additions (deuterocanonical sus/bel inline) — not split for MVP
+
+
+def ingest_knox(dry_run=False):
+    print("-> Ingesting Knox 1949 (catholicbible.online)")
+    if not dry_run:
+        clear_version("knox")
+    r = requests.get(
+        f"{SUPA_URL}/rest/v1/bible_books?select=code,chapter_count",
+        headers=PG_HEADERS, timeout=30,
+    )
+    chapter_counts = {row["code"]: row["chapter_count"] for row in r.json()}
+    # Knox-specific chapter counts: Baruch 6 (incl epj), Daniel 14 (incl sus/bel)
+    knox_ch_override = {"bar": 6, "dan": 14}
+    session = requests.Session()
+    session.headers["User-Agent"] = (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36"
+    )
+    rows = []
+    total = 0
+    for part_no, books in [(1, KNOX_OT), (2, KNOX_NT)]:
+        for bk_no, our_code in books:
+            n_ch = knox_ch_override.get(our_code, chapter_counts.get(our_code, 0))
+            if not n_ch:
+                continue
+            for ch in range(1, n_ch + 1):
+                # Split Baruch ch 6 → epj, Daniel ch 13/14 → sus/bel
+                if our_code == "bar" and ch == 6:
+                    eff_code, eff_ch = "epj", 1
+                elif our_code == "dan" and ch == 13:
+                    eff_code, eff_ch = "sus", 1
+                elif our_code == "dan" and ch == 14:
+                    eff_code, eff_ch = "bel", 1
+                else:
+                    eff_code, eff_ch = our_code, ch
+                try:
+                    resp = session.get(
+                        KNOX_BASE,
+                        params={"bible_part_no": part_no, "book_no": bk_no, "chapter_no": ch},
+                        timeout=30,
+                    )
+                    if resp.status_code != 200:
+                        continue
+                    html = resp.text
+                    for m in KNOX_VERSE_RE.finditer(html):
+                        v_num = int(m.group(1))
+                        vtext = m.group(2)
+                        # Strip inline tags
+                        vtext = re.sub(r'<[^>]+>', '', vtext)
+                        vtext = re.sub(r'\s+', ' ', vtext).strip()
+                        if not vtext:
+                            continue
+                        rows.append({
+                            "book_code": eff_code, "chapter": eff_ch, "verse": v_num,
+                            "version_code": "knox", "text": vtext,
+                        })
+                except Exception as e:
+                    print(f"  ! {our_code} {ch}: {e}", file=sys.stderr)
+                time.sleep(0.4)
+            if rows and not dry_run:
+                upsert_verses(rows)
+                total += len(rows)
+                print(f"  ✓ {our_code} {n_ch} ch (cum total {total})", file=sys.stderr)
+                rows = []
+    print(f"  done — {total} verses")
+
+
 # ─── CLI ────────────────────────────────────────────────────────────────────
 
 def main():
@@ -821,7 +1174,8 @@ def main():
     ap.add_argument("version",
                     choices=["sblgnt", "vul", "wlc", "lxx", "cuv2010", "niv",
                              "kjva", "sigao", "brenton",
-                             "cuv1919", "cuv1919w", "drc", "asv", "ylt", "all"])
+                             "cuv1919", "cuv1919w", "drc", "asv", "ylt",
+                             "nabre", "lzz", "tcv", "rcv", "knox", "all"])
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--book", help="Limit to one book code (for testing)")
     ap.add_argument("--resume", action="store_true",
@@ -849,6 +1203,11 @@ def main():
         "drc": ingest_drc,
         "asv": ingest_asv,
         "ylt": ingest_ylt,
+        "nabre": ingest_nabre,
+        "lzz": ingest_lzz,
+        "tcv": ingest_tcv,
+        "rcv": ingest_rcv,
+        "knox": ingest_knox,
     }
     fn_map[args.version](dry_run=args.dry_run)
 
