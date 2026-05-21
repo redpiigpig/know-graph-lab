@@ -1,0 +1,60 @@
+{
+  "ts": "2026-05-21T08:29:21",
+  "op": "training_cleanup",
+  "desktop_ini_deleted": [
+    "2026.04.10 張訓豪\\desktop.ini"
+  ],
+  "empty_folders_removed": [
+    "2016.05.04 忠烈祠 張文軒",
+    "2016.05.07 成儀 童瑞琪",
+    "2016.06.21 中正 江韋利",
+    "2016.07.01 中正 林大為",
+    "2016.07.02 中正 林政瑋"
+  ],
+  "not_found": [
+    "2016.05.04 兒少營 張學岡",
+    "2016.05.07 培靈 黃富城",
+    "2016.06.21 培靈 蔡瑞益",
+    "2016.07.01 培靈 林大煜",
+    "2016.07.02 培靈 林大煜"
+  ],
+  "not_empty": [],
+  "empty_folders_errors": [],
+  "nested_empty": [
+    "一般相片\\儀隊汗水\\健身",
+    "一般相片\\儀隊汗水\\2012",
+    "2021.08.21 孫凱駿\\ipad相片",
+    "fitcasting\\Lukas-Animal Kingdom Workout",
+    "fitcasting\\Ilya-25Challenge",
+    "fitcasting\\Vlad-First Casting",
+    "fitcasting\\Ivan-Stress Challenge",
+    "fitcasting\\Dima-Ganymede Workout",
+    "fitcasting\\Dima-Cardio",
+    "fitcasting\\Vlad-25Challenge",
+    "fitcasting\\Vlad-Animal Kingdom Workout",
+    "fitcasting\\Lukas-Ganymede Challenge",
+    "fitcasting\\Vlad-Ganymede",
+    "fitcasting\\Aleksandr-Casting",
+    "fitcasting\\Dima-Stress Position Workout",
+    "fitcasting\\Ivan-Stress Position Workout",
+    "fitcasting\\Ivan-Full Body Workout",
+    "fitcasting\\Ilya-First Casting",
+    "fitcasting\\Vlad-Cardio Workout Challenge",
+    "fitcasting\\Ilya-Posing Workout",
+    "fitcasting\\Dima-Posing Workout",
+    "fitcasting\\Lukas-First-Casting",
+    "fitcasting\\Dima-Cardio Workout Challenge",
+    "fitcasting\\Dima-Second Stress Position Workout",
+    "fitcasting\\Ivan-Warehouse Workout",
+    "fitcasting\\Ilya-Stress Challenge",
+    "fitcasting\\Ivan-Arms Day Challenge",
+    "fitcasting\\Lukas-Posing Workout",
+    "fitcasting\\Ilya-Ganymede",
+    "fitcasting\\Ilya-Alex Temple Boy",
+    "fitcasting\\Lukas-Gladiator Penalty Workout",
+    "fitcasting\\Aleksandr-Stress Position Workout",
+    "fitcasting\\Vlad-Posing Workout",
+    "fitcasting\\Lukas-Gladiator Abs",
+    "fitcasting\\Yans-Punishment"
+  ]
+}
