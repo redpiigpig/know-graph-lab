@@ -212,20 +212,33 @@ CREATE INDEX bible_commentary_verse ON bible_commentary (verse_ref);
 
 ## 🗂️ 目前實作進度（2026-05-21 snapshot）
 
-### ✅ /scripture 上線 — 6 版本平行對照（2026-05-21）
+### ✅ /scripture 上線 — 19 版本平行對照（2026-05-21）
 
-**Schema**：[database/bible-schema.sql](../../../database/bible-schema.sql) — `bible_books` (86 卷 × 8 教會 canon flags) / `bible_versions` (6 版本) / `bible_verses` (book+ch+v+version PK + GIN FTS)。
+**Schema**：[database/bible-schema.sql](../../../database/bible-schema.sql) — `bible_books` (86 卷 × 8 教會 canon flags) / `bible_versions` (19 版本) / `bible_verses` (book+ch+v+version PK + GIN FTS)。
 
-**已匯入版本（~150K verses）**：
+**已匯入版本（~410K verses）**：
 
 | code | 版本 | 範圍 | 節數 | 來源 | 版權 |
 |---|---|---|---|---|---|
-| `cuv2010` | 和合本2010 (RCUV) | 新教 66 | ~30K（scrape 中） | rcuv.hkbs.org.hk | © HKBS（站內研究用） |
-| `niv`     | NIV 新國際譯本 | 新教 66 | 31087 | aruljohn/Bible-niv | © Biblica |
-| `wlc`     | WLC 希伯來 OT | OT 39 | 23213 | openscriptures/morphhb | PD + CC-BY morph |
-| `lxx`     | LXX Rahlfs 1935 | OT + 第二正典 | 24982 | eliranwong/LXX-Rahlfs-1935 | CC BY-NC-SA |
-| `sblgnt`  | SBL Greek NT | NT 27 | 7939 | LogosBible/SBLGNT | CC BY 4.0 |
-| `vul`     | Clementine Vulgate | 全 73 卷（含次經）| 31005 | BibleGet-I-O/Clementine-Vulgate | PD |
+| `cuv2010` | 和合本2010 (RCUV) | 新教 66 | 30,981 | rcuv.hkbs.org.hk scrape | © HKBS（站內研究用） |
+| `cuv1919` | 和合本1919 國語 | 新教 66 | 31,103 | scrollmapper ChiUn | PD |
+| `cuv1919w` | 文理和合本1919 | 新教 66 | 31,095 | scrollmapper ChiUnL | PD |
+| `sigao` | 思高聖經 | 天主教（含次經）| 35,471 | scrollmapper ChiSB | © 思高聖經學會 |
+| `lzz` | 呂振中譯本 | 新教 66 | ~31K | bible.fhl.net (?version=lcc) | © HKBS |
+| `tcv` | 現代中文譯本 2019 | 新教 66 | ~31K | bible.fhl.net (?version=tcv2019) | © UBS |
+| `rcv` | 恢復本 | 新教 66 | 31,058 | text.recoveryversion.bible | © LSM |
+| `niv` | NIV 新國際譯本 | 新教 66 | 31,087 | aruljohn/Bible-niv | © Biblica |
+| `kjva` | KJV 1611 含次經 | 新教 + 次經 | 36,702 | scrollmapper KJVA | PD |
+| `drc` | Douay-Rheims 天主教英文 | 天主教（含次經）| 35,805 | scrollmapper DRC | PD |
+| `nabre` | NABRE 天主教標準 | 天主教（含次經）| 35,091 | nirmalben/bible-nabre-json-dataset | © USCCB |
+| `knox` | Knox 1949 天主教 | 天主教（含次經）| ~33K | catholicbible.online | © Westminster |
+| `asv` | ASV 美國標準 1901 | 新教 66 | 31,086 | scrollmapper ASV | PD |
+| `ylt` | YLT 楊氏直譯 | 新教 66 | 31,102 | scrollmapper YLT | PD |
+| `brenton` | Brenton LXX 英譯 1851 | LXX OT + 次經 | 5,332 | eBible.org Brenton USFM | PD |
+| `wlc` | WLC 希伯來 OT | OT 39 | 23,213 | openscriptures/morphhb | PD + CC-BY morph |
+| `lxx` | LXX Rahlfs 1935 希臘 | OT + 第二正典 | 28,263 | eliranwong/LXX-Rahlfs-1935 | CC BY-NC-SA |
+| `sblgnt` | SBL Greek NT | NT 27 | 7,939 | LogosBible/SBLGNT | CC BY 4.0 |
+| `vul` | Clementine Vulgate 拉丁 | 全 73 卷（含次經）| 31,005 | BibleGet-I-O/Clementine-Vulgate | PD |
 
 **UI**：
 - [pages/scripture/index.vue](../../../pages/scripture/index.vue) — 86 卷 grid，按 testament 分組 + 5 教會 canon filter
@@ -243,6 +256,73 @@ CREATE INDEX bible_commentary_verse ON bible_commentary (verse_ref);
   - 公版版本：直接 GitHub raw fetch + parse + PostgREST upsert（batch 500）
   - CUV2010：HKBS rcuv.hkbs.org.hk scrape，per-chapter，polite 0.25s rate, resume mode
   - 上載時自動 dedupe（同一 batch 同 PK 取最長 text；繞過 PostgREST ON CONFLICT 限制）
+
+### 🟢 已加：搜尋框（2026-05-21）
+
+`/scripture` index 頂部加經文搜尋框（[server/api/scripture/search.get.ts](../../../server/api/scripture/search.get.ts)）：
+- 中／英／希伯來／希臘／拉丁皆可
+- 預設跨全 19 版本搜尋，可 dropdown 限定單一版本
+- 結果卡片高亮 match + 點擊跳到該章
+
+### 🔮 Phase 3 — 原文字典點選功能（FHL bible.fhl.net 風格，user 規劃 2026-05-21）
+
+**目標**：點選原文欄的每個字 → popup 顯示「原字／拉丁化／詞性／lemma／Strong's 字典中英文義」。先做 NT 希臘，再 OT 希伯來。
+
+**3 張新 schema**：
+```sql
+bible_word_tokens (
+  book_code, chapter, verse, position INT,
+  surface_form TEXT, lemma TEXT,
+  strongs_num INT, morph_code TEXT, language CHAR(3),
+  PRIMARY KEY (book_code, chapter, verse, position, language)
+)
+strongs_lexicon (
+  strongs_num INT, language CHAR(3),
+  lemma TEXT, transliteration TEXT, pronunciation TEXT,
+  short_def TEXT, long_def_en TEXT, long_def_zh TEXT,
+  PRIMARY KEY (strongs_num, language)
+)
+morph_codes (
+  code TEXT PRIMARY KEY,
+  language CHAR(3),
+  description_en TEXT, description_zh TEXT
+)
+```
+
+**資料源**（PD/CC-BY，個人研究用）：
+- NT Greek: [openscriptures/MorphGNT](https://github.com/morphgnt/sblgnt) CC-BY — 138K word tokens + lemma + morph + Strong's
+- OT Hebrew: [openscriptures/morphhb](https://github.com/openscriptures/morphhb) CC-BY — WLC 已含 morph/lemma（我們上次 ingest 時拋掉了，重新 ingest 把資訊存起來即可）
+- Strong's lexicon: [openscriptures/strongs](https://github.com/openscriptures/strongs) PD — 希臘 5,624 條 + 希伯來 8,674 條 含英文定義 + gloss
+- 中文 Strong's: 用 Gemini Flash 批次翻譯英文定義（~14K 條 × 3 秒 = 12 小時）
+
+**UI 互動**：原文欄每個字渲染為 `<span data-strongs="1722" data-morph="P">ἐν</span>`，點/hover popup 卡片。
+
+**Phase 3 子任務**：
+- 3a：NT 希臘 token table + Strong's 希臘字典 ingest（~1 週）
+- 3b：OT 希伯來 token + Strong's 希伯來字典 ingest（~3 天）
+- 3c：聖經內部跨節搜尋（已有 token 後一行 SQL：`WHERE lemma='λόγος'`；UI 1 天）
+- 3d：中文 Strong's LLM 翻譯（離線 batch 跑）
+
+### 🔮 Phase 4 — 教父文獻交叉搜尋（user 提問 2026-05-21）
+
+**目標**：點 約 1:1 「λόγος」→ 顯示「Augustine 在《論真福》／Origen 在《詩篇釋義》／Chrysostom 在《約翰福音講道》都討論這字」。
+
+**核心 table**（schema 已在原 SKILL.md 規劃，未實作）：
+```sql
+bible_commentary (
+  id UUID PK, verse_ref VARCHAR(20),  -- 'mat.5.3' / 'gen.1.1' / 'tob.1.1'
+  ebook_id UUID FK, chunk_index INT,
+  father_slug VARCHAR(50),  -- 'augustine' / 'origen' / 'chrysostom'
+  excerpt TEXT, era VARCHAR(20), language VARCHAR(20)
+)
+```
+
+**Phase 4 子任務**（重工作 — Gemini Flash batch + 人工 QA）：
+- 4a：IVP ACCS 27 冊 chunks（已在 DB）LLM 抽 verse_ref + father_slug → ~10K rows，~2 天
+- 4b：Schaff NPNF 28 冊 抽 → ~8K rows，~3 天
+- 4c：中譯個別教父 ~25 本 抽 → ~3K rows，~2 天
+- 4d：Strong's lemma 對 chunks fuzzy match（教父用希臘字或英文 transliteration 引用，需 LLM 標 lemma → strongs_num）— 最難
+- 預估 total: ~15-25K commentary rows × 教父 cross-link
 
 ### 🟡 Phase 2 backlog — /scripture 擴充
 

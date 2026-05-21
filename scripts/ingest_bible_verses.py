@@ -889,22 +889,23 @@ def ingest_nabre(dry_run=False):
 # Schema: {status, record_count, record: [{engs, chap, sec, bible_text}], prev, next}
 
 FHL_BASE = "https://bible.fhl.net/json/qb.php"
+# FHL ignores engs= param (always returns Romans); use chineses= with short 中文 name.
 FHL_BOOKS = {
-    "gen": "Gen", "exo": "Exod", "lev": "Lev", "num": "Num", "deu": "Deut",
-    "jos": "Josh", "jdg": "Judg", "rut": "Ruth",
-    "1sa": "1Sam", "2sa": "2Sam", "1ki": "1Kgs", "2ki": "2Kgs",
-    "1ch": "1Chr", "2ch": "2Chr", "ezr": "Ezra", "neh": "Neh", "est": "Esth",
-    "job": "Job", "psa": "Ps", "pro": "Prov", "ecc": "Eccl", "sng": "Song",
-    "isa": "Isa", "jer": "Jer", "lam": "Lam", "ezk": "Ezek", "dan": "Dan",
-    "hos": "Hos", "jol": "Joel", "amo": "Amos", "oba": "Obad", "jon": "Jonah",
-    "mic": "Mic", "nam": "Nah", "hab": "Hab", "zep": "Zeph",
-    "hag": "Hag", "zec": "Zech", "mal": "Mal",
-    "mat": "Matt", "mrk": "Mark", "luk": "Luke", "jhn": "John",
-    "act": "Acts", "rom": "Rom", "1co": "1Cor", "2co": "2Cor", "gal": "Gal",
-    "eph": "Eph", "php": "Phil", "col": "Col", "1th": "1Thess", "2th": "2Thess",
-    "1ti": "1Tim", "2ti": "2Tim", "tit": "Titus", "phm": "Phlm", "heb": "Heb",
-    "jas": "Jas", "1pe": "1Pet", "2pe": "2Pet", "1jn": "1John", "2jn": "2John",
-    "3jn": "3John", "jud": "Jude", "rev": "Rev",
+    "gen": "創", "exo": "出", "lev": "利", "num": "民", "deu": "申",
+    "jos": "書", "jdg": "士", "rut": "得",
+    "1sa": "撒上", "2sa": "撒下", "1ki": "王上", "2ki": "王下",
+    "1ch": "代上", "2ch": "代下", "ezr": "拉", "neh": "尼", "est": "斯",
+    "job": "伯", "psa": "詩", "pro": "箴", "ecc": "傳", "sng": "歌",
+    "isa": "賽", "jer": "耶", "lam": "哀", "ezk": "結", "dan": "但",
+    "hos": "何", "jol": "珥", "amo": "摩", "oba": "俄", "jon": "拿",
+    "mic": "彌", "nam": "鴻", "hab": "哈", "zep": "番",
+    "hag": "該", "zec": "亞", "mal": "瑪",
+    "mat": "太", "mrk": "可", "luk": "路", "jhn": "約",
+    "act": "徒", "rom": "羅", "1co": "林前", "2co": "林後", "gal": "加",
+    "eph": "弗", "php": "腓", "col": "西", "1th": "帖前", "2th": "帖後",
+    "1ti": "提前", "2ti": "提後", "tit": "多", "phm": "門", "heb": "來",
+    "jas": "雅", "1pe": "彼前", "2pe": "彼後", "1jn": "約一", "2jn": "約二",
+    "3jn": "約三", "jud": "猶", "rev": "啟",
 }
 
 
@@ -923,7 +924,7 @@ def _ingest_fhl(version_code, fhl_version, dry_run=False):
     session.headers["User-Agent"] = "Mozilla/5.0 (research)"
     rows = []
     total = 0
-    for our_code, fhl_engs in FHL_BOOKS.items():
+    for our_code, fhl_zh in FHL_BOOKS.items():
         n = chapter_counts.get(our_code, 0)
         if not n:
             continue
@@ -931,7 +932,7 @@ def _ingest_fhl(version_code, fhl_version, dry_run=False):
             try:
                 resp = session.get(
                     FHL_BASE,
-                    params={"engs": fhl_engs, "chap": ch, "version": fhl_version},
+                    params={"chineses": fhl_zh, "chap": ch, "version": fhl_version},
                     timeout=30,
                 )
                 if resp.status_code != 200:
@@ -942,8 +943,6 @@ def _ingest_fhl(version_code, fhl_version, dry_run=False):
                     text = (rec.get("bible_text") or "").strip()
                     if not text or not v_num:
                         continue
-                    # Strip leading section title (e.g., "生命之道 宇宙被造以前...")
-                    # only if first verse — handled inline
                     rows.append({
                         "book_code": our_code, "chapter": ch, "verse": v_num,
                         "version_code": version_code, "text": text,
@@ -954,7 +953,7 @@ def _ingest_fhl(version_code, fhl_version, dry_run=False):
         if rows and not dry_run:
             upsert_verses(rows)
             total += len(rows)
-            print(f"  ✓ {our_code} ({fhl_engs}) {n} ch (cum total {total})", file=sys.stderr)
+            print(f"  ✓ {our_code} ({fhl_zh}) {n} ch (cum total {total})", file=sys.stderr)
             rows = []
     if rows and not dry_run:
         upsert_verses(rows)
