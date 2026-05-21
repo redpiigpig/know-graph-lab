@@ -82,7 +82,7 @@ const tools = [
     icon: '📖',
     title: '聖經對照 + 教父註釋',
     desc: '多版本平行對照（中／英／拉／希／敘／科普特／亞美尼亞／衣索匹亞）+ 教父逐節註釋 + 各教會 OT/NT canon 標記',
-    enabled: false,
+    enabled: true,
   },
 ]
 </script>
