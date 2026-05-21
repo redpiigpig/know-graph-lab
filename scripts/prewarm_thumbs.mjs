@@ -20,11 +20,30 @@ import sharp from "sharp";
 const REPO = path.resolve(import.meta.dirname, "..");
 const INDEX_PATH = path.join(REPO, "scripts", "photo_index.json");
 const CACHE_DIR = path.join(REPO, ".cache", "thumbs");
+const CURRENT_FILE_MARKER = path.join(REPO, ".cache", "_prewarm_current.txt");
+const SKIPLIST_PATH = path.join(REPO, ".cache", "_prewarm_skiplist.txt");
 const PHOTOS_PARENT = "G:/我的雲端硬碟/資料/儲存資料夾";
 const LIB_FOLDERS = { chenwei: "辰瑋相片", training: "訓練相片", hongshi: "弘誓相片" };
 
 const SUPPORTED_EXTS = new Set([".jpg", ".jpeg", ".png", ".webp", ".heic", ".heif", ".avif", ".bmp"]);
 const ALLOWED_WIDTHS = new Set([240, 480, 800, 1600]);
+
+// 啟動時，若 current 檔還留著 → 上次 crash 在那個檔，加進 skiplist
+const skipset = new Set();
+try {
+  const prev = fsSync.readFileSync(CURRENT_FILE_MARKER, "utf-8").trim();
+  if (prev) {
+    console.log(`!! 偵測到上次 crash 在 ${prev}，加進 skiplist`);
+    fsSync.appendFileSync(SKIPLIST_PATH, prev + "\n");
+    fsSync.unlinkSync(CURRENT_FILE_MARKER);
+  }
+} catch {}
+try {
+  for (const ln of fsSync.readFileSync(SKIPLIST_PATH, "utf-8").split(/\r?\n/)) {
+    if (ln.trim()) skipset.add(ln.trim());
+  }
+  if (skipset.size) console.log(`Skiplist: ${skipset.size} 個檔曾 crash，本次跳過`);
+} catch {}
 
 const argv = process.argv.slice(2);
 const onlyLibs = argv.filter((a) => !a.startsWith("--"));
@@ -68,17 +87,26 @@ async function genOne(origPath, key, width) {
 async function processFile(origPath, keyParts, stats) {
   const ext = path.extname(origPath).toLowerCase();
   if (!SUPPORTED_EXTS.has(ext)) return;
+  if (skipset.has(origPath)) {
+    stats.skippedByList = (stats.skippedByList || 0) + 1;
+    stats.total++;
+    return;
+  }
   const key = thumbCacheKey(keyParts);
+  // 寫 current marker：crash 後 restart 會偵測到並加進 skiplist
+  fsSync.writeFileSync(CURRENT_FILE_MARKER, origPath);
   for (const w of widths) {
     const r = await genOne(origPath, key, w);
     if (r.skipped) stats.skipped++;
     else if (r.generated) stats.generated++;
     else stats.errors.push(`${origPath} @${w}w: ${r.error}`);
   }
+  // 成功跑完該檔 → 清除 marker
+  try { fsSync.unlinkSync(CURRENT_FILE_MARKER); } catch {}
   stats.total++;
   if (stats.total % 100 === 0) {
     process.stdout.write(
-      `  ${stats.total} files | gen=${stats.generated} skip=${stats.skipped} err=${stats.errors.length}\n`
+      `  ${stats.total} files | gen=${stats.generated} skip=${stats.skipped} skiplist=${stats.skippedByList||0} err=${stats.errors.length}\n`
     );
   }
 }
