@@ -9,29 +9,38 @@ description: Operate the Know-Graph-Lab ebook pipeline end-to-end. Use when work
 
 End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL covers ingest, parse, OCR, standardize, DB back-fill, and reader-side features.
 
-## Current state (snapshot 2026-05-21 上午 ziliaozhan 神學批次後)
+## Current state (snapshot 2026-05-21 晚上 — 神學批次 + 神學重組 + standardize 全跑完)
 
 | | 數量 |
 |---|---|
-| Total ebooks | **1,844** (5/21 上午 ingest 神學批次 295 本 +10:00 daily task) |
-| Parsed | 1,423 |
-| **OCR queue（皆 scanned，需 Gemini/Haiku）** | **21** + 302 todo（newly-ingested theology batch 待 parse_worker） |
+| Total ebooks | **1,883** (今日 +39: 28 本地化 + 11 Schaff Creeds/History；其他 +295 已含於 1,844 基礎) |
+| Parsed (text 提取完成) | ~1,628 |
+| **OCR queue 待打** | ~113（76 ≤50MB Gemini route / 37 >50MB Haiku route） |
 | Permanent OCR fail | 0 |
-| EPUB standardize → markdown | 543 ✅ |
-| PDF Plan A | 437 ✅ |
+| **EPUB standardize → markdown** | 543 ✅ |
+| **PDF Plan A** | **956 ✅** (今日跑 --all 956/956 一次補齊) |
 | PDF Plan B v0 | 152 ✅ |
 
-### 10 大分類書數（5/21 神學批次 ingest 後）
+### 10 大分類書數（2026-05-21 晚上 — 神學重組後）
 
 | 分類 | 書數 | 分類 | 書數 |
 |---|---|---|---|
 | 歷史學 | 468 | 宗教學 | 111 |
-| 世界宗教 | 380 | 人類生物學 | 68 |
-| **神學** ★ | **318** | 文學 | 58 |
+| **世界宗教** | **418** ↑ | 人類生物學 | 68 |
+| **神學** ★ | **319** ↑ | 文學 | 58 |
 | 哲學 | 239 | 自然科學 | 31 |
 | 社會政治學 | 141 | 心理學 | 30 |
 
-神學從 53 → **318**（+265）— ziliaozhan/神学 295 本 + 哲學區 Aquinas/士林哲學 + 圣经/灵修/研究 子目錄合集。
+**今日變化**：
+- 神學 318 → 319（+28 本地化 - 27 IVP 搬出 = +1）
+- 世界宗教 380 → 418（+27 IVP ACCS 進來 + 11 Schaff Creeds/History 進來；含 4 本基督教典外文獻從猶太教搬到基督教）
+
+**Drive 結構新增**：
+- `神學/中世紀著作/Aquinas - 多瑪斯阿奎那著作/{神學大全 (19 冊), 駁異大全 (4 卷), 神學大全 索引/導讀}/`
+- `神學/本地化處境神學/` (28 本)
+- `世界宗教/基督教/IVP - 古代基督信仰聖經註釋叢書 (27 冊)/`
+- `世界宗教/基督教/基督教典外文獻 (10 冊)/`
+- `世界宗教/基督教/教會法典與信條/` (Schaff Creeds 3 + History 8)
 
 ### 進行中的 OCR run（會跨 session 持續）
 
@@ -53,7 +62,9 @@ End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL 
 - **OAuth token 有效期 ~8 小時** → long-running python 緩存舊 token 後續全 401。要 kill python 讓 wrapper 重起讀新 token
 - **網路抖動** → Connection error + Drive open fail 雜訊不斷
 - **Anthropic content filter false positive**：知識份子論、道教史已永久 marked Haiku-OCR fail
-- **Gemini classifier 全 keys 429**（5/21 上午 ingest 神學批次時遇到）→ 已擴充中文 `fallback_category` 達 100% 覆蓋率，0 Gemini call 完成 215 本 ingest。詳見「ingest fallback 中文擴充」段落
+- **Gemini classifier 全 keys 429**（5/21 上午 ingest 神學批次時遇到）→ 已擴充中文 `fallback_category` 達 100% 覆蓋率，0 Gemini call 完成 215 本 ingest
+- **Gemini engine 503 / 自動 fallback 困境**（5/21）：日次 daily task 第 1 本遇到 gemini-2.5-flash 503 後，script 自動全 fallback Haiku 整 run。**Rule of thumb**：每次新 run 前單獨測 4 keys；若 ≥3 keys OK → 用 Gemini-first wrapper (`--rpm 8` 不加 `--engine haiku`)，>50MB 自動 route Haiku
+- **OCR worker 鎖 Drive 檔**（5/21 batch1 reorg 1/73 fail）：搬家時若該書正在被 OCR worker 開啟 → WinError 32。Workaround: 等該本 OCR 完，或暫停 wrapper 再搬
 
 ---
 
@@ -108,6 +119,11 @@ Standardize 不在 daily bat 裡 — parse/OCR 落地後 chunk_type 還是 `page
 | `resplit_giant_chunks.py` | 4e — chunk refinement | Break oversized chunks (>400K chars) by internal `##`/`###` headings. Annotation guard |
 | `repopulate_chunk_previews.py` | 5 — DB | Back-fill `ebook_chunks` previews from local JSONL. `run` / `retry-failed` / `status` |
 | `upload_chunks_to_r2.py` | 5 — R2 | One-shot bulk uploader for JSONL not yet on R2 |
+| `_download_direct_to_drive.py` | F — direct-to-Drive | One-off batch downloader bypassing z-lib/, writes straight to `G:/{category}/{sub}/` + INSERT. See Workflow F |
+| `_download_canon_law_creeds.py` | F — direct-to-Drive | CCEL Schaff Creeds 3 + History 8 → 世界宗教/基督教/教會法典與信條/ |
+| `_download_ziliaozhan_theology.py` | E — bulk download | ziliaozhan/神学 295-book batch → z-lib/ → ingest. See Workflow E |
+| `_reorg_theology_batch1.py` | G — reorg | DB UPDATE + Drive move 同步搬家。IVP/典外/Aquinas 範例。See Workflow G |
+| `_haiku_ivp_priority.sh` | 3 — OCR | bash wrapper：先跑 IVP 22 卷再 catch-all。Gemini-first (`--rpm 8` 不加 `--engine haiku`)，>50MB 自動 route Haiku |
 
 ## DB schema
 
@@ -414,6 +430,106 @@ Used 2026-05-21 for 神學 295 本批次. Generic playbook for any directory-lis
 
 - `scripts/_ziliaozhan_index.json` 可重 crawl 維持 fresh — site 新增書時 + 重跑 crawler
 - 4,346 個 ziliaozhan 條目，6.7GB 神學批次只取了其中 295（其他子目錄：剑桥基督教史、罗光全书、东传福音 等，未來可分批）
+
+---
+
+## Workflow F — Direct-to-Drive download (skip z-lib/ staging)
+
+**User 規則 2026-05-21**：大批次下載（>20 本）或單一 category 的整批，**不要先存 z-lib/ 再 ingest**，直接寫到 `G:/我的雲端硬碟/資料/電子書/{category}/{subfolder}/` + 直接 DB INSERT。理由：減少 C: 本地磁碟暫存佔用、Drive sync 立刻上傳。
+
+z-lib/ 路徑仍然保留給「手動 drop 幾本」的場景（user 從 z-library 一次 drop 1-10 本）— 那走 Workflow D。
+
+### 何時用 Workflow F vs Workflow D
+
+| Workflow | 適用場景 | 流程 |
+|---|---|---|
+| **D**（z-lib drop） | user 手動 drop ≤10 本 / 混合分類 | z-lib/ → ingest_new_books → classify → 移到 G: |
+| **F**（direct-to-Drive） | 大批次（>20 本）/ 整 category 的「主題包」/ 已知 target subfolder | 一次直接寫到 G:/{category}/{sub}/ + INSERT；不過 z-lib/ |
+
+### 範本腳本
+
+- [`scripts/_download_direct_to_drive.py`](../../../scripts/_download_direct_to_drive.py) — 通用模式
+  - `localize` subcommand 為 ziliaozhan/神学/本地化 28 本範例
+  - 流程：read source URL → 計算 G: 目標路徑（含 sanitize + s2tw 繁體化檔名）→ urllib 串流寫入 → ebooks INSERT
+- [`scripts/_download_canon_law_creeds.py`](../../../scripts/_download_canon_law_creeds.py) — CCEL Schaff Creeds 3 + History 8 範例
+  - target: `G:/.../世界宗教/基督教/教會法典與信條/`
+  - 同樣 direct-to-Drive 不過 z-lib/
+
+### 寫新批次的模板（複製改寫）
+
+```python
+TARGET_CATEGORY = "神學"  # 或其他 9 大分類
+TARGET_SUBCATEGORY = "本地化處境神學"
+TARGET_DIR = DRIVE_ROOT / TARGET_CATEGORY / TARGET_SUBCATEGORY
+
+# 1. List files to fetch（from index.json 或 hard-coded list）
+files_to_fetch = [...]
+
+# 2. 對每本：urllib download → G:/{cat}/{sub}/{filename}
+for src_url, basename in files_to_fetch:
+    target_path = TARGET_DIR / sanitize(to_traditional(basename))
+    # stream download
+    urllib download_to(target_path)
+    # DB insert
+    supabase_insert(title, ext, TARGET_CATEGORY, TARGET_SUBCATEGORY, target_path)
+```
+
+之後 parse_worker / ocr_with_gemini 會自動掃到這些新 row（`parsed_at IS NULL`）並處理。
+
+### 已執行的 direct-to-Drive 批次（2026-05-21）
+
+| 批次 | 目標 | 數量 | 結果 |
+|---|---|---|---|
+| 本地化處境神學 | `神學/本地化處境神學/` | 28 | ✅ 28/28 |
+| Schaff Creeds + History | `世界宗教/基督教/教會法典與信條/` | 11 | ✅ 11/11 |
+
+---
+
+## Workflow G — Reorg / 神學 重組（DB + Drive 同步搬家）
+
+User 對神學分類 fine-tune 後，需要把已 ingest 的書搬到新的 Drive 子資料夾 + 同步更新 DB `category` / `subcategory` / `file_path`。
+
+### 範本腳本
+
+[`scripts/_reorg_theology_batch1.py`](../../../scripts/_reorg_theology_batch1.py) — 5 段 reorg：
+
+1. IVP ACCS 27 → `世界宗教/基督教/IVP - 古代基督信仰聖經註釋叢書 (27 冊)/`（神學 → 世界宗教 cross-category move）
+2. 基督教典外文獻 20 → `世界宗教/基督教/基督教典外文獻 (10 冊)/`（含 4 本從世界宗教/猶太教 → 世界宗教/基督教 cross-subcat）
+3. Aquinas 神學大全 20 → `神學/中世紀著作/Aquinas - 多瑪斯阿奎那著作/神學大全 (19 冊)/`
+4. Aquinas 駁異大全 4 → `神學/中世紀著作/Aquinas - 多瑪斯阿奎那著作/駁異大全 (4 卷)/`
+5. Aquinas 導讀 / 索引 2 → `神學/中世紀著作/Aquinas - 多瑪斯阿奎那著作/`
+
+**結果**：72/73 ok，1 fail 因 OCR worker 鎖檔（需等該本 OCR 完再 retry）。
+
+### Reorg 腳本通用模板
+
+```python
+def fetch_books_by_titles_or(env, title_patterns):
+    """ILIKE OR 多 pattern — 用於書名 stem 不一致時（駁異大全 4 卷檔名為 1.論真原 / 2.論萬物 ...）"""
+    parts = [f"title.ilike.{urllib.parse.quote(p, safe='*')}" for p in title_patterns]
+    or_clause = f"or=({','.join(parts)})"
+    # ...
+
+def execute_move(env, books, target_subdir, new_category, new_subcategory, dry_run):
+    for b in books:
+        old_path = Path(b["file_path"])
+        new_path = target_subdir / old_path.name
+        if not dry_run:
+            shutil.move(old_path, new_path)
+            update_book(env, b["id"], category=new_category, subcategory=new_subcategory,
+                        file_path=str(new_path).replace("/", "\\"))
+```
+
+### 已知坑
+
+- **WinError 32 file in use**：若 OCR worker 正在打那本書 → 搬家失敗。Workaround: 暫停 OCR wrapper / 等 OCR 完該本再 retry
+- **URL encode 中文**：PostgREST ILIKE 中文 query 必須 `urllib.parse.quote()`，否則 0 hit
+- **opencc 改字進 DB**：title 是 s2tw 後版本，搜尋要對齊（e.g. 駁異/駁异 都會變成 駁異）
+
+### 待做的 reorg 工作
+
+- **神學 280+ 本 重新分子分類**：歷史時期（教父著作／中世紀／改教／近現代）+ 主題（教科書/概論／主題專論／倫理／靈修／神學詮釋／本地化處境）。需要 LLM 補（每本 1 個 Gemini call，~5min 跑完 318 本）
+- **1 本 IVP ACCS 雅彼約猶 待 retry move**（OCR-locked）
 
 ---
 
@@ -836,14 +952,19 @@ Schema in [`database/tags.sql`](../../../database/tags.sql). `tags` + `book_tags
 
 ## Pending TODOs
 
-0. **~~ziliaozhan/神学 大規模待下載清單~~** ✅ 2026-05-21 已 ingest（295 本 → 神學 +265, 哲學 +21, 宗教學 +6）。Period 期刊 zip bundle 2 個（神學論集 862MB + 神思 349MB）留 z-lib/ 待 unzip。剩餘 ziliaozhan 子目錄（剑桥基督教史、罗光全书、东传福音 等）作為下一批可選來源 — 見 Workflow E 的 playbook。
-1. **PDF Plan B v1 (font-driven)** — for ~285 no-TOC PDFs. Design above in Workflow B.
-2. **37 EPUBs with single chunk >400KB and no internal headings** — `resplit_giant_chunks.py` can't help. Needs LLM page-boundary detection on raw text, or font cues from raw EPUB HTML.
-3. **16 套書 with `volume=None`** — flat-TOC EPUB or PDF without volume metadata. Need font-size analysis (EPUB) or LLM-detect on TOC chunk content.
-4. **Auto-trigger standardize after daily ingest** — currently manual. Wire into bat as step 6 (idempotent skip for already-standardized).
-5. **17 no-hit books** for `enrich_book_metadata.py` (article fragments, Chinese-Buddhist, translated Western works absent from Google Books). Manual fill via `/excerpts/library/[bookId]` UI.
+0. **~~ziliaozhan/神学 大規模待下載清單~~** ✅ 2026-05-21 已 ingest（295 本 → 神學 +265, 哲學 +21, 宗教學 +6）。Period 期刊 zip bundle 2 個（神學論集 862MB + 神思 349MB）已從 z-lib/ 刪除（暫不處理，需另外 unzip + 個別 ingest）。剩餘 ziliaozhan 子目錄（剑桥基督教史、罗光全书、东传福音 + 其他 ~1,800 條）作為下一批可選來源 — 見 Workflow E 的 playbook。
+1. **~~標準化 Plan A 補跑~~** ✅ 2026-05-21 已跑 `--all` 956/956 完成。整個書庫 PDF reader-ready。
+2. **神學 280+ 本 重新分子分類** — 歷史時期（教父著作／中世紀／改教／近現代）+ 主題（教科書／概論／主題專論／倫理／靈修／神學詮釋／本地化處境）。需要 LLM 補（每本 1 Gemini call，~5min）。配套 UI tree 已更新（commit c99883f + e3c5e9b）。
+3. **1 本 IVP ACCS 雅彼約猶 reorg retry** — `_reorg_theology_batch1.py` 跑時被 OCR worker 鎖檔 fail。等 Haiku 跑完該本後手動 retry move + DB update。
+4. **PDF Plan B v1 (font-driven)** — for ~285 no-TOC PDFs. Design above in Workflow B.
+5. **37 EPUBs with single chunk >400KB and no internal headings** — `resplit_giant_chunks.py` can't help. Needs LLM page-boundary detection on raw text, or font cues from raw EPUB HTML.
+6. **16 套書 with `volume=None`** — flat-TOC EPUB or PDF without volume metadata. Need font-size analysis (EPUB) or LLM-detect on TOC chunk content.
+7. **Auto-trigger standardize after daily ingest** — currently manual. Wire into bat as step 6 (idempotent skip for already-standardized).
+8. **17 no-hit books** for `enrich_book_metadata.py` (article fragments, Chinese-Buddhist, translated Western works absent from Google Books). Manual fill via `/excerpts/library/[bookId]` UI.
+9. **Manual sources for canon law batch 2** — Vatican CIC 1983 / CCEO 1990 / CCC（vatican.va HTML scrape）+ Book of Concord（archive.org）+ Pedalion Cummings 1957（archive.org）+ Methodist 25 Articles / Book of Discipline / 1689 LBC / BFM 2000 各新教信條 — 全部公版可手動或寫腳本抓，留給 scripture-canon-portal skill 啟動時做。
 
 ## See also
 
 - [`EBOOK_PIPELINE.md`](../../../EBOOK_PIPELINE.md) at repo root — original design doc
 - [`scripts/haiku_cleanup_guide.md`](../../../scripts/haiku_cleanup_guide.md) — Haiku text cleanup (historical)
+- [scripture-canon-portal](../scripture-canon-portal/SKILL.md) — 新 skill（2026-05-21），會大量依賴本 pipeline 的 ebooks data（IVP ACCS / Schaff / 教父原典 / 基督教典外文獻 / Schaff Creeds + History 等）
