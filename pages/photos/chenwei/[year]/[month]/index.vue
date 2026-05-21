@@ -78,13 +78,10 @@
             decoding="async"
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
-          <video
+          <LazyVideoTile
             v-else-if="f.kind === 'video'"
-            :src="`${f.url}#t=0.1`"
-            preload="metadata"
-            muted
-            playsinline
-            class="w-full h-full object-cover"
+            :src="f.url"
+            cls="w-full h-full object-cover"
           />
           <div v-else class="w-full h-full flex flex-col items-center justify-center text-stone-400 bg-stone-100 p-3">
             <div class="text-3xl">📄</div>
