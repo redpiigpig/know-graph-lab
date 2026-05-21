@@ -9,39 +9,41 @@ description: Operate the Know-Graph-Lab ebook pipeline end-to-end. Use when work
 
 End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL covers ingest, parse, OCR, standardize, DB back-fill, and reader-side features.
 
-## Current state (snapshot 2026-05-21 深夜 — pipeline 大規模整修 + 神學分類完成 + Apocrypha 翻譯啟動)
+## Current state (snapshot 2026-05-22 凌晨 — overnight 完成 sections live + reclassify apply)
 
 | | 數量 |
 |---|---|
-| Total ebooks | **1,896** (+1 ACCS Apocrypha English vol 15) |
+| Total ebooks | **1,896** |
 | Parsed (text 提取完成) | ~1,663 |
+| Total chunks | **179,382** (+2,649 隔夜) |
 | **OCR queue 待打** | **78**（60 ≤50MB Gemini route / 18 >50MB Haiku route，0 missing） |
+| **OCR body rescue 候選** | **49**（>50% tiny chunks，PDF body 抽取失敗）— 待 user review [ocr-rescue-candidates.md](ocr-rescue-candidates.md) |
 | Permanent OCR fail | 0 |
-| **standardized_at NOT NULL** | **1,487** (backfilled 今日) |
+| **standardized_at NOT NULL** | **1,487** |
 | EPUB standardize → markdown | 543 ✅ |
 | PDF Plan A | 956 ✅ |
 | PDF Plan B v0 | 152 ✅ |
-| **PDF Plan B v1 (font-driven)** | **prototype 上線** ([standardize_pdf_v1.py](../../../scripts/standardize_pdf_v1.py)) |
-| 今日 Haiku 完成 | **8 本**（1 main + 7 IVP；queue 從 ~113 → 78） |
-| 今日 reorg / fix | 1 IVP retry done (dupe 刪除 + DB sync) |
-| 今日神學子分類 | **325/325 全 canonical** (LLM 配 rule-based 重新分類) |
-| 今日 daily bat | step 5 加 standardize（only-fresh）已 wire |
-| 今日 ACCS English | Apocrypha vol 15 加入庫；翻譯流程移到新 skill [ebook-translate](../ebook-translate/SKILL.md) |
-| 今日 giant-chunk 收尾 | [`resplit_giant_chunks_v2.py`](../../../scripts/resplit_giant_chunks_v2.py) 寫好（inline-text 模式 + recursive）；dry-run 顯示可切 37/67 (+1468 chunks) — 待跑 |
+| 隔夜 sections resplit live | **28 本切完 +2,649 chunks** ✅ |
+| 隔夜 history reclassify apply | **44 本搬類別**（25 檔搬 Drive + 19 套書只改 DB）✅ |
+| 隔夜 compound-cat bugfix | **16 本** 把 `category="世界宗教/X"` 修成 `category="世界宗教", subcategory="X/..."`  ✅ |
 
-### 10 大分類書數（2026-05-21 晚上 — 神學重組後）
+### 10 大分類書數（2026-05-22 凌晨 — history reclassify 後）
 
-| 分類 | 書數 | 分類 | 書數 |
-|---|---|---|---|
-| 歷史學 | 468 | 宗教學 | 111 |
-| **世界宗教** | **418** ↑ | 人類生物學 | 68 |
-| **神學** ★ | **319** ↑ | 文學 | 58 |
-| 哲學 | 239 | 自然科學 | 31 |
-| 社會政治學 | 141 | 心理學 | 30 |
+| 分類 | 書數 | 隔夜變化 | 分類 | 書數 | 隔夜變化 |
+|---|---|---|---|---|---|
+| **世界宗教** | **447** | +29 ↑ | 宗教學 | 115 | +4 ↑ |
+| **歷史學** | **424** | −44 ↓ | 人類生物學 | 69 | +1 |
+| 神學 | 326 | +7 ↑ | 文學 | 60 | +2 ↑ |
+| 哲學 | 253 | +14 ↑ | 自然科學 | 31 | 0 |
+| 社會政治學 | 141 | 0 | 心理學 | 30 | 0 |
 
-**今日變化**：
-- 神學 318 → 319（+28 本地化 - 27 IVP 搬出 = +1）
-- 世界宗教 380 → 418（+27 IVP ACCS 進來 + 11 Schaff Creeds/History 進來；含 4 本基督教典外文獻從猶太教搬到基督教）
+**隔夜分類變化**（來自 Gemini judge 468 本 + apply）：
+- 歷史學 → 世界宗教/基督教/教會史 等：8 本（十字軍史/燃燒的遠徵/天國之秋/Eusebius 教會史 etc）
+- 歷史學 → 哲學：12 本商務印書館套書（理想國/物性論/談談方法/小邏輯/倫理學 etc）
+- 歷史學 → 哲學專題：5 本（柏拉圖/雅典劇作家/雅斯培 歷史哲學/徐復觀 中國人性論/科耶夫）
+- 歷史學 → 世界宗教/伊斯蘭教/猶太教/印度教/佛教 等：8 本
+- 歷史學 → 宗教學 跨宗教研究：4 本（敵人與鄰居 / 中國和猶太民族 etc）
+- 歷史學 → 神學/文學/古典文學：3 本
 
 **Drive 結構新增**：
 - `神學/中世紀著作/Aquinas - 多瑪斯阿奎那著作/{神學大全 (19 冊), 駁異大全 (4 卷), 神學大全 索引/導讀}/`

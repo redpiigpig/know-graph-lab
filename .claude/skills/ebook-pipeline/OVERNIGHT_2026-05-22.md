@@ -1,0 +1,110 @@
+# Overnight 2026-05-22 進度報告
+
+接續 [OVERNIGHT_2026-05-21.md](OVERNIGHT_2026-05-21.md) — 整晚自動跑「sections live + reclassify apply + 寫 OCR rescue 候選表 + SKILL.md 更新」。
+
+## ✅ 完成的工作
+
+### 1. Sections resplit live — 28 本切完 +2,649 chunks
+
+dry-run 看起來乾淨 → `python scripts/resplit_to_sections.py run --all` 跑 live。
+
+**亮點**（log 在 `scripts/logs/resplit_sections_live_2026-05-21.log`）：
+
+| 書 | +chunks | 模式 |
+|---|---|---|
+| **Aquinas 神學大全（第 1 冊）** | +252 | chinese_jie:36 |
+| **Aquinas 神學大全（第 3 冊）** | +145 | chinese_jie:27 |
+| 舊約背景 | +254 | chinese_jie:3 |
+| 中國儒學史 | +281 | chinese_jie:60 |
+| 中國佛教史（卷 3） | +150 | chinese_jie:5 |
+| 鹽野七生作品集（33 冊） | +135 | aquinas_a:7, md_h3:1 |
+| 幽靈帝國拜占庭 | +118 | md_h3:11 |
+| 印度哲學通史 | +116 | md_h3:25 |
+| 大歷史 | +110 | md_h3:14 |
+
+Boundary methods used: `aquinas_a=7, md_h3=177, chinese_jie=183` — total 367 boundary cuts。
+
+### 2. History reclassify apply — 44 本搬類別 + 套書 DB-only 安全
+
+Gemini judge 跑了 468 本歷史學書，找出 49 本應移出（high confidence 44 本，low 5 本捨棄）。
+
+`scripts/_reclassify_history_via_gemini.py` 原本 `cmd_apply` 是 `[TODO]` 沒接，今晚補上 `scripts/_reorg_history_apply.py` 完整接線：
+
+- **dry-run 先掃 file_path** — DB 內共享 file_path（套書）會被偵測成 `is_shared=True`
+- **shared (套書) 19 本** → 只改 DB category/subcategory，**不搬實體檔**（避免破壞其他 DB row 的指向）
+- **unique 25 本** → DB 改 + Drive 檔移到新 category 資料夾 + UPDATE file_path
+
+apply 結果：moved=44, fail=0, not_found=0, db_only(套書)=19
+
+### 3. ⚠ 修一個 bug — compound-category（16 本）
+
+`_reorg_history_apply.py` 原版直接把 Gemini judge 給的 `new_category="世界宗教/基督教"` 整段塞進 `category` 欄。post-apply category counts 出現：
+
+```
+10  世界宗教/基督教   ← 錯（應該 category=世界宗教, sub=基督教/...）
+ 2  世界宗教/猶太教
+ 2  世界宗教/伊斯蘭教
+ 1  世界宗教/佛教
+ 1  世界宗教/印度教
+```
+
+修 16/16 → category 變回 `世界宗教`，subcategory 變成 `基督教/教會史` etc（match 既有 22 IVP/9 典外文獻的 nested 命名）。
+
+**修了腳本 normalize() 防止再犯**：raw_cat 含 / 時拆 head/tail，head 進 cat，tail 接到 sub 前面。
+
+### 4. OCR body rescue 候選表 — 49 本識別好
+
+`c:/tmp/ocr_rescue_candidates.txt` 跑 SQL（chunk content < 100 chars 比例 > 50%）找出 49 本 PDF body 抽取失敗的書，寫到 [.claude/skills/ebook-pipeline/ocr-rescue-candidates.md](ocr-rescue-candidates.md)。
+
+**Top 21 是 100% tiny**（body 完全沒抽出來），重災區：
+- 文化與帝國主義（572 chunks 全空）
+- 走向十字架上的真（473）
+- 民主與城邦的衰落（378）
+- 國家與祭祀（205）
+- 尼采到底說了什麼（112）
+- 現代性與後現代性十五講（68）
+
+⚠ **沒自動 re-OCR** — 原因：
+1. 今晚已有 2 個 OCR wrapper 在跑（main daily + IVP priority），照 SKILL.md 警告 race risk
+2. Gemini quota 狀態未知（OVERNIGHT_2026-05-21.md 提到「明天 quota reset 後」）
+3. 一本 30 分鐘起跳，49 本要 24+ 小時，需要明天 user 決定優先順序
+
+### 5. z-lib drop 偵測 — 空（0 ebooks waiting）
+
+### 6. 套書 share-file 暴露的問題
+
+reorg 過程發現 **21 個 file_path 是套書共享**：
+- `商務印書館，商務印書館漢譯歷史套裝（24 冊）.epub` — 24 本 ebook row 指同一檔
+- `企鵝歐洲史系列（套裝 7 冊）.epub` — 7 本
+- `世界史的拼圖（7 冊）.epub` — 7 本
+- `中東大歷史（共 5 冊）.epub` — 5 本
+- `理想國譯叢系列 套裝 32 冊（MIRROR 系列）.epub` — 32 本
+- 其他 16 個
+
+per memory `feedback_set_books_split.md` —「套書要拆成個別書」是長期目標。今晚的 reorg 在 DB 改了 cat/subcat 但不動 file_path，等之後做 set-split workflow 時再正式拆。
+
+## 📊 數字總結（vs 昨晚收盤）
+
+| 指標 | 5/21 收盤 | 5/22 凌晨 | Δ |
+|---|---|---|---|
+| Total chunks | ~176,733 | **179,382** | +2,649 |
+| 歷史學 books | 468 | 424 | −44 |
+| 世界宗教 books | 418 | 447 | +29 |
+| 哲學 books | 239 | 253 | +14 |
+| 神學 books | 319 | 326 | +7 |
+| 宗教學 books | 111 | 115 | +4 |
+| 文學 books | 58 | 60 | +2 |
+
+## 📋 明早接續任務（user 抓回來）
+
+1. **OCR body rescue** — 看 [ocr-rescue-candidates.md](ocr-rescue-candidates.md) 49 本候選，挑優先順序，等 Gemini quota OK 再排程
+2. **鹽野七生 33 冊決議** — 仍待 user 決定（z-lib 重抓單本 vs 保留現狀 vs 拆 33 row）
+3. **套書拆 split workflow** — 21 個共享檔的長期任務
+4. **master-scholars 170 本下載** — Anna's Archive .li 有 anti-bot JS challenge，自動腳本跑不動。改成手動 batch drop（z-lib / 出版社官網）+ daily ingest 接
+5. **印度哲學/哲學原典 子分類補齊** — 12 本商務印書館套書現在 `category=哲學, subcategory=NULL`，可進一步 LLM judge 分 古希臘/近代/中國 等
+
+## 隔夜碰到的 dead-end（記給未來自己）
+
+- **Anna's Archive .li 反爬** — `https://annas-archive.li/search?q=...` 回 HTML JS challenge，requests 拉不到實際結果。Need real browser / playwright or 換 mirror
+- **PowerShell cp950 + Python print** — chinese print 到 stdout 會 UnicodeEncodeError，必須 `sys.stdout.reconfigure(encoding='utf-8')` 或寫檔再讀
+- **Supabase Management API** — 跑 SQL 比 REST PATCH 直觀，且能 GROUP BY；但 `db.{ref}.supabase.co` IPv6-only 連不通，照 memory 用 `api.supabase.com/v1/projects/{ref}/database/query`
