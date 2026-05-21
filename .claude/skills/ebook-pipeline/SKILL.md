@@ -27,6 +27,7 @@ End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL 
 | 今日神學子分類 | **325/325 全 canonical** (LLM 配 rule-based 重新分類) |
 | 今日 daily bat | step 5 加 standardize（only-fresh）已 wire |
 | 今日 ACCS English | Apocrypha vol 15 加入庫；翻譯流程移到新 skill [ebook-translate](../ebook-translate/SKILL.md) |
+| 今日 giant-chunk 收尾 | [`resplit_giant_chunks_v2.py`](../../../scripts/resplit_giant_chunks_v2.py) 寫好（inline-text 模式 + recursive）；dry-run 顯示可切 37/67 (+1468 chunks) — 待跑 |
 
 ### 10 大分類書數（2026-05-21 晚上 — 神學重組後）
 
@@ -127,7 +128,8 @@ schtasks /create /tn "KGLab-OCR-Daily-18" /tr "C:\Users\user\Desktop\know-graph-
 | `detect_set_volumes.py` | 4c — 套書 prep | Haiku detects volume boundaries in chunks → writes `volume` field or `NOT_A_SET_MARKER` |
 | `split_ebook_set.py` | 4d — 套書 split | Split multi-volume ebook into one row per volume. Idempotent (SPLIT_MARKER / annotations guard). Children get `parse_error='split from set; do not re-standardize'` |
 | `split_oversized_pdf_by_toc.py` | 3b — OCR rescue | Physically split a multi-volume PDF into per-volume PDFs using level-1 TOC bookmarks. For 套書 failing BOTH Gemini (>1000 pages) AND Haiku (content-filter). Children re-enter OCR queue |
-| `resplit_giant_chunks.py` | 4e — chunk refinement | Break oversized chunks (>400K chars) by internal `##`/`###` headings. Annotation guard |
+| `resplit_giant_chunks.py` | 4e — chunk refinement (v1) | Break oversized chunks (>400K chars) by internal `##`/`###` markdown headings only. EPUB-only. Annotation guard |
+| `resplit_giant_chunks_v2.py` | 4e — chunk refinement (v2) | Same as v1 + inline-text patterns (Chinese `第N章/卷/編/部/節`, English `Book N.` / `Chapter N`) + recursive iteration. Handles EPUB **and** PDF. 2026-05-21 dry-run: 37/67 books resplittable → +1468 chunks. Annotation guard |
 | `repopulate_chunk_previews.py` | 5 — DB | Back-fill `ebook_chunks` previews from local JSONL. `run` / `retry-failed` / `status` |
 | `upload_chunks_to_r2.py` | 5 — R2 | One-shot bulk uploader for JSONL not yet on R2 |
 | `_download_direct_to_drive.py` | F — direct-to-Drive | One-off batch downloader bypassing z-lib/, writes straight to `G:/{category}/{sub}/` + INSERT. See Workflow F |
@@ -972,7 +974,15 @@ Schema in [`database/tags.sql`](../../../database/tags.sql). `tags` + `book_tags
 3. **~~1 本 IVP ACCS 雅彼約猶 reorg retry~~** ✅ 2026-05-21 已 fix（dupe deduped + DB sync）。
 4. **~~PDF Plan B v1 (font-driven)~~** ✅ 2026-05-21 prototype 上線 ([standardize_pdf_v1.py](../../../scripts/standardize_pdf_v1.py)). Calibration TODO：thresholds 在不同 publisher 的真實效果還沒大規模 measure。下一批 no-TOC PDFs 可開始試跑。
 5. **~~Auto-trigger standardize after daily ingest~~** ✅ 2026-05-21 step 5 已 wire 進 `run_ocr_daily.bat` (only-fresh 守衛)。
-6. **65 books with single chunk >400KB and no internal headings** — `resplit_giant_chunks.py` 對 3 本有效（已跑），剩 65 本（包括 Schaff 系列、史料原典套書）需 LLM page-boundary 或 font 分析。Plan B v1 可能可吃掉一部分（EPUB 不行，PDF 部分可）。
+6. **Giant chunks (>400KB) 收尾** — 2026-05-21 深夜重新調查 + 寫了 [`resplit_giant_chunks_v2.py`](../../../scripts/resplit_giant_chunks_v2.py)（inline-text 模式 + 遞迴 iteration）。dry-run 結果：
+
+   | 狀態 | 數量 | 例子 |
+   |---|---|---|
+   | **v2 可切 (37 本, +1468 chunks)** | 33 via `chinese_sec` (第N章/卷/節) + 10 via `book_roman` (Schaff Book I-XV) + 1 via `chapter_arabic` (Scott PDF) | 存在與時間 PDF +430 chunks, 中國佛教史卷3 +111, 5 本 Schaff Augustine +20-48 each |
+   | **v2 切完仍有 21 chunks > 400K** | 6 in 劍橋中國史 + 5 in Schaff Gospel of Peter + 10 雜本 | 都是 multi-volume 混合的「附錄／後記／credits」非結構性章節，本質上是 monolithic 散文，不該再切 |
+   | **30 本 v2 完全無能為力** | Schaff Apostolic Fathers / Latin Christianity / Athanasius / 7 Ecumenical Councils；古典英文 collected works (Plato/Plutarch/Aristophanes/Eusebius/Thucydides)；3 本 PDF (Babai/Heracleides/近代教會史) + 17 本中文連續散文 | 教父原典 CCEL 平鋪 / 對話體連續文 / 敘事散文 — 都需要 LLM-based segmentation 或 origin-side EPUB re-parse |
+
+   **下一步**：使用者命令時跑 `python scripts/resplit_giant_chunks_v2.py run --all` 一次。v2 對 OCR run 沒影響（只動已 standardize 的書，OCR queue 是 parsed=NULL 的書），但保險起見最好 OCR wrapper 暫停時跑。剩餘 51 本（30 不可切 + 21 切完仍 giant）留作未來 LLM 任務。
 7. **~~16 套書 with `volume=None`~~** ✅ detect_set_volumes 已掃完所有候選，37 本 marked NOT_A_SET marker，0 本待處理。
 8. **~~17 no-hit books for enrich_metadata~~** ✅ 剩 3 本（古蘭經的故事 / 巴哈歐拉啟示錄 / 道教簡史）— 都是冷門 manual-fill only。
 9. **英→中翻譯類工作（ACCS Apocrypha vol 15 / ACCS 缺中譯卷 24-25 等）** — 移到新 skill [ebook-translate](../ebook-translate/SKILL.md)。翻譯 pipeline、glossary、引擎選擇都在那裡。
