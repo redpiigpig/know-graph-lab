@@ -156,9 +156,15 @@ def parse_book_meta(filename: str) -> dict:
     return {"author": author or None, "title": title, "ext": ext}
 
 
-def fallback_category(title: str, author: str) -> str | None:
-    """Cheap keyword pre-classifier for common cases — saves Gemini calls."""
-    text = f"{title} {author}".lower()
+def fallback_category(title: str, author: str, filename: str = "") -> str | None:
+    """Cheap keyword pre-classifier for common cases — saves Gemini calls.
+
+    Includes the raw filename in the search text because parse_book_meta
+    strips subtitle text after「：」 and converts simplified→traditional,
+    which can lose critical theology keywords (e.g. 克尔恺郭尔 → 克爾愷郭爾).
+    """
+    text_raw = f"{title} {author} {filename}"
+    text = text_raw.lower()
     christian_kw = [
         "christ", "christian", "christology", "church", "bonhoeffer", "syriac",
         "nestorius", "cyril", "monophysite", "chalcedon", "ephrem", "babai",
@@ -177,8 +183,171 @@ def fallback_category(title: str, author: str) -> str | None:
         # 教父名 / patristic / Augustine / Chrysostom / Aquinas / Barth 等
         # → 神學（基督教神學作為獨立學科）
         return "神學"
+
+    # 中文神學關鍵字（簡繁通吃）— 涵蓋 ziliaozhan/神学 大批次的常見書名模式
+    cn_theology_kw = [
+        "神學", "神学",
+        "教父", "教父學", "教父学", "教父原典",
+        "信理", "信理神學", "信理神学",
+        "阿奎那", "多瑪斯", "多玛斯",
+        "奧古斯丁", "奥古斯丁",
+        "三位一體", "三位一体", "三一論", "三一论", "三一神",
+        "基督論", "基督论", "基督學", "基督学",
+        "聖事", "圣事",
+        "禮儀", "礼仪",
+        "教宗", "教皇", "教會教義", "教会教义",
+        "解放神學", "解放神学",
+        "拉納", "拉纳",  # Rahner
+        "莫爾特曼", "莫尔特曼",  # Moltmann
+        "朋霍費爾", "朋霍费尔",  # Bonhoeffer
+        "巴特", "卡尔巴特", "卡爾巴特",  # Barth
+        "孔漢思", "孔汉思", "汉斯昆", "漢斯昆", "孔思昆",  # Hans Küng
+        "利瑪竇", "利玛窦", "明清傳教",
+        "梵二", "梵蒂岡第二", "梵蒂冈第二",
+        "教義", "教义", "信經", "信经",
+        "默觀", "默观", "默想", "靈修", "灵修",
+        "神義論", "神义论",
+        "末世論", "末世论",
+        "聖母", "圣母", "瑪利亞", "玛利亚",
+        "教父經注", "教父经注",
+        "東正教神學", "东正教神学",
+        "趙紫宸", "赵紫宸", "丁光訓", "丁光训",  # 漢語神學家
+        "克爾凱郭爾", "克尔恺郭尔",  # Kierkegaard (when paired with 信仰/基督教)
+        "潘霍華", "潘霍华",
+        "信德與望德", "信德与望德",
+        "天主教信", "天主教教義", "天主教教义", "天主教神",
+        "上帝之城", "天主之城",  # Augustine
+        "懺悔錄", "忏悔录",  # Augustine
+        "神學大全", "神学大全", "駁異大全", "驳异大全",  # Aquinas
+        "教父集成", "歷代基督教名著", "历代基督教名著",
+        "金口若望", "屈梭多模",  # Chrysostom
+        "安波羅修", "安波罗修", "安布罗斯",  # Ambrose
+        "亞他那修", "亚他那修",  # Athanasius
+        "德爾圖良", "德尔图良",  # Tertullian
+        "游斯丁", "查士丁",  # Justin Martyr
+        "俄利根",  # Origen
+        "馬克西穆斯", "马克西穆斯",  # Maximus the Confessor
+        "納西盎", "纳西盎",  # Nazianzen
+        "格列高利", "大圣国瑞", "大聖國瑞",  # Gregory
+        "波納文圖拉", "波纳文图拉",  # Bonaventure
+        "牧靈", "牧灵",
+        "宗徒",
+        "罪與救贖", "罪与救赎",
+        "苦難神學", "苦难神学",
+        "親吻神學", "亲吻神学",
+        "華夏與基督", "华夏与基督",
+        "智慧叢書", "智慧丛书",
+        "普及神學", "普及神学",
+        "基督之律", "基督宗教倫理", "基督宗教伦理",
+        "信仰", "啟示", "启示",
+    ]
+    if any(k in text_raw for k in cn_theology_kw):
+        return "神學"
+
+    # 中文「世界宗教」邊界（佛教史／伊斯蘭史／猶太教史等 — 不跨宗教，屬該宗教自身的研究）
+    cn_world_religion_kw = [
+        "佛教史", "佛經", "佛经", "中國佛教", "中国佛教", "藏傳", "藏传",
+        "伊斯蘭教史", "伊斯兰教史", "可蘭經", "可兰经", "古蘭經", "古兰经",
+        "猶太人", "犹太人", "猶太教", "犹太教", "希伯來", "希伯来",
+        "印度教", "吠陀",
+        "瑣羅亞斯德", "琐罗亚斯德", "祆教",
+        "道教史", "道藏",
+        "巴哈伊",
+    ]
+    if any(k in text_raw for k in cn_world_religion_kw):
+        return "世界宗教"
+
     if "zoroastr" in text or "avesta" in text or "islam" in text or "buddhis" in text:
         return "世界宗教"
+
+    # 中文「宗教學／哲學」優先 override（避免被下面 catch-all 誤抓進神學）
+    cn_religious_studies_kw = [
+        "宗教學導論", "宗教学导论", "後現代宗教", "后现代宗教",
+        "跨宗教", "宗教對話", "宗教对话", "宗教比較", "宗教比较",
+        "宗教社會學", "宗教社会学", "宗教現象學", "宗教现象学",
+    ]
+    if any(k in text_raw for k in cn_religious_studies_kw):
+        return "宗教學"
+
+    cn_philosophy_kw = [
+        "士林哲學", "士林哲学",
+        "現代西方倫理學", "现代西方伦理学",
+    ]
+    if any(k in text_raw for k in cn_philosophy_kw):
+        return "哲學"
+
+    # 神學 catch-all — 基督教/天主/聖/圣 + 教父/神學家／聖人翻譯名／聖事禮儀靈修術語
+    # （順序很重要：宗教學／哲學 override 必須在這之前）
+    cn_theology_catchall = [
+        "基督",  # 廣譜 catch-all：基督教／基督徒／基督之友／基督之言／基督與人類痛苦／基督新教 — 對 ziliaozhan 批次全是神學
+        "天主",  # 天主實義（利瑪竇）／天主論／天主降生／天主之城
+        "圣域", "聖域",
+        "圣事", "聖事",
+        "圣秩", "聖秩",
+        "圣女", "聖女",  # 大德蘭等聖人傳
+        "圣方济各", "聖方濟各", "五伤方济各", "五傷方濟各",
+        "圣十字若望", "聖十字若望", "十字若望",  # St John of the Cross
+        "圣依纳爵", "聖依納爵", "神操",  # Ignatius《神操》
+        "嘉默罗", "嘉默羅",  # Carmel
+        "大德兰", "大德蘭",  # Teresa of Avila
+        "德兰修女", "德蘭修女",  # Mother Teresa
+        "师主篇", "師主篇",  # Imitation of Christ
+        "登上嘉默罗", "登上嘉默羅",  # Ascent of Mount Carmel
+        "灵歌", "靈歌",  # Spiritual Canticle
+        "默想", "默观", "默觀",
+        "圣周", "聖周",
+        "圣经", "聖經", "聖言", "圣言",
+        "圣徒", "聖徒",
+        "卡斯培",  # Kasper
+        "麦格拉思", "麥格拉思",  # McGrath
+        "帕利坎",  # Pelikan
+        "亨利樞機", "亨利枢机",
+        "上帝观", "上帝觀", "上帝之城",
+        "异端", "異端",
+        "救赎", "救贖",
+        "修女传", "修女傳", "圣人传", "聖人傳",
+        "纳匝肋", "納匝肋",  # Nazareth (Benedict XVI)
+        "现代基督教", "現代基督教",
+        "驳赛尔修斯", "駁賽爾修斯",  # Origen Contra Celsum
+        "勸勉希臘人", "劝勉希腊人",  # Clement of Alexandria
+        "论责任", "論責任",  # Ambrose
+        "论信望爱", "論信望愛",  # Augustine
+        "论怀疑者", "論懷疑者",
+        "论隐秘的上帝", "論隱秘的上帝",
+        "道德论集", "道德論集",
+        "隐修", "隱修",
+        "汉斯昆", "漢斯昆",
+        "卡尔·拉内",  # Rahner alt translit
+        "海德格尔现象学及其神学", "海德格爾現象學及其神學",  # already would match 神學, but spell out
+        "汉语景教", "漢語景教",  # 景教 (Christianity in China)
+        "景教",
+        "基督抹杀", "基督抹殺",  # 評/評基督抹殺論 — 反神論書，仍歸神學
+        "神圣", "神聖",  # 神圣的根/神聖
+        "神秘", "神祕",
+        "神存在", "神不存在",
+        "异教徒", "異教徒",
+        "杜伊诺哀歌",  # Rilke 哀歌 + 基督教思想
+        "墙上的书写", "牆上的書寫",  # 墙上的书写：尼采与基督教
+        "门槛", "門檻",  # 跨越希望的门槛 (John Paul II)
+        "希望的门槛", "希望的門檻",
+        "诠释学-宗教",  # hermeneutics + religion + hope (Tracy)
+        "安瑟伦", "安瑟莫", "安瑟倫",  # St Anselm (多個音譯)
+        "有神论", "有神論",
+        "天人之际", "天人之際",  # 何光沪 漢語神學
+        "moltmann", "Moltmann",  # 「被钉十字架的上帝.Moltmann.pdf」 — author英文留檔
+        "kierkegaard",
+        "rahner",
+        "kasper",
+        "küng", "kung",
+        "罪人的福音",  # 「現實的人類和理想的人類 一個貧苦罪人的福音」
+        "贫苦罪人",
+        "道与言", "道與言",
+        "上帝",  # 上帝之城／神存在嗎／神聖的根 — 凡題目有上帝/神（在我們批次都是神學
+        "神性",  # 莫扎特音乐的神性与超验
+    ]
+    if any(k in text_raw for k in cn_theology_catchall):
+        return "神學"
+
     return None
 
 
@@ -286,8 +455,8 @@ def gemini_classify(title: str, author: str) -> dict:
     }
 
 
-def classify(title: str, author: str) -> dict:
-    fb = fallback_category(title, author)
+def classify(title: str, author: str, filename: str = "") -> dict:
+    fb = fallback_category(title, author, filename)
     if fb:
         return {"category": fb, "subcategory": None, "confidence": 0.9, "source": "fallback"}
     g = gemini_classify(title, author)
@@ -378,7 +547,7 @@ def cmd_run(limit: int | None, dry_run: bool):
         print(f"  parsed: title={meta['title']!r}  author={meta.get('author')!r}  ext={meta['ext']}")
 
         try:
-            cls = classify(meta["title"], meta.get("author") or "")
+            cls = classify(meta["title"], meta.get("author") or "", p.name)
         except Exception as e:
             print(f"  CLASSIFY FAILED: {e}")
             fail += 1

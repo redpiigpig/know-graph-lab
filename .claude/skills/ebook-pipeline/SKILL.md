@@ -9,73 +9,51 @@ description: Operate the Know-Graph-Lab ebook pipeline end-to-end. Use when work
 
 End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL covers ingest, parse, OCR, standardize, DB back-fill, and reader-side features.
 
-## Current state (snapshot 2026-05-21 08:15)
+## Current state (snapshot 2026-05-21 上午 ziliaozhan 神學批次後)
 
 | | 數量 |
 |---|---|
-| Total ebooks | **1,552** (5/20 ingest 10 本新書) |
-| Parsed | ~1,470 |
-| **OCR queue（皆 >50MB 需 Haiku）** | **82** |
+| Total ebooks | **1,844** (5/21 上午 ingest 神學批次 295 本 +10:00 daily task) |
+| Parsed | 1,423 |
+| **OCR queue（皆 scanned，需 Gemini/Haiku）** | **21** + 302 todo（newly-ingested theology batch 待 parse_worker） |
 | Permanent OCR fail | 0 |
 | EPUB standardize → markdown | 543 ✅ |
 | PDF Plan A | 437 ✅ |
 | PDF Plan B v0 | 152 ✅ |
 
+### 10 大分類書數（5/21 神學批次 ingest 後）
+
+| 分類 | 書數 | 分類 | 書數 |
+|---|---|---|---|
+| 歷史學 | 468 | 宗教學 | 111 |
+| 世界宗教 | 380 | 人類生物學 | 68 |
+| **神學** ★ | **318** | 文學 | 58 |
+| 哲學 | 239 | 自然科學 | 31 |
+| 社會政治學 | 141 | 心理學 | 30 |
+
+神學從 53 → **318**（+265）— ziliaozhan/神学 295 本 + 哲學區 Aquinas/士林哲學 + 圣经/灵修/研究 子目錄合集。
+
 ### 進行中的 OCR run（會跨 session 持續）
 
 - **腳本：** `scripts/_haiku_autorestart.sh` — 自動重啟 wrapper，最多 15 iterations 後 exit
-- **log：** `scripts/logs/ocr_haiku_2026-05-19_v2.log`（continued）+ `ocr_haiku_2026-05-20.log`
-- **檢查進度：** `grep -c '✓ Haiku' scripts/logs/ocr_haiku_2026-05-19_v2.log`
+- **當前 log：** `scripts/logs/ocr_haiku_2026-05-21.log`
+- **檢查進度：** `grep -c '✓ Haiku' scripts/logs/ocr_haiku_2026-05-21.log`
 - **新 session 接續方法：**
   ```bash
   # 1. 確認 Anthropic OK + queue 還有書
   python -X utf8 -c "import os, json; from dotenv import load_dotenv; load_dotenv(); import anthropic, requests; from pathlib import Path; cred=json.loads(Path(os.environ['USERPROFILE']+'/.claude/.credentials.json').read_text(encoding='utf-8')); c=anthropic.Anthropic(auth_token=cred['claudeAiOauth']['accessToken'],timeout=15); print('Anthropic OK' if not c.messages.create(model='claude-haiku-4-5-20251001',max_tokens=5,messages=[{'role':'user','content':'hi'}]).usage else 'OK')"
 
   # 2. 啟動 wrapper（背景）
-  bash scripts/_haiku_autorestart.sh 2>&1 | tee -a scripts/logs/ocr_haiku_2026-05-20.log
-
-  # 3. Re-arm Monitor 抓書級事件
-  # Monitor tool: tail -F log | grep -E "✓ Haiku|⛔|Queue empty"
+  bash scripts/_haiku_autorestart.sh 2>&1 | tee -a scripts/logs/ocr_haiku_YYYY-MM-DD.log
   ```
 
-### 已知狀況（5/20-5/21）
+### 已知狀況
 
-- **rate limit 累計性卡死**：Anthropic 帳號級 burst rate limit，跑 ~6 本後就連續 429，wrapper 2-strike pause + 重啟 + 又 429...iteration 燒得快。實際 ~5 本/天可完成
+- **Anthropic 帳號級 burst rate limit**：跑 ~6 本後連續 429，wrapper 2-strike pause + 重啟。實際 ~5 本/天可完成 Haiku-OCR
 - **OAuth token 有效期 ~8 小時** → long-running python 緩存舊 token 後續全 401。要 kill python 讓 wrapper 重起讀新 token
 - **網路抖動** → Connection error + Drive open fail 雜訊不斷
-- **Anthropic content filter false positive**：知識份子論、道教史已永久 marked Haiku-OCR fail（沒進當前 queue）
-
-### 本輪 (5/19-5/21) 完成清單
-
-| # | 書 | 大小 | 頁數 | 用時 |
-|---|---|---|---|---|
-| 1 | 神話學 (Lévi-Strauss) | 51.7MB | 445 | 98m |
-| 2 | 人類時代 | 52.0MB | 178 | 33.5m |
-| 3 | 伊朗伊斯蘭革命及其世界影響 | 52.3MB | 229 | 50m |
-| 4 | 我們世界的歷史 第 5 版 卷 3 | 59.3MB | 214 | 51.5m |
-| 5 | 饒宗頤 二十世紀學術文集 卷 5 | 60.7MB | 212 | 45.5m |
-| 6 | 從蒙古到大清 | 65.4MB | 434 | 39m |
-| 7 | (悄悄完成沒抓到事件，~5/20 晚上) | ? | ? | ? |
-
-### 10 大分類書數（5/20 ingest 後）
-
-| 分類 | 書數 | 分類 | 書數 |
-|---|---|---|---|
-| 歷史學 | 468 | 社會政治學 | 141 |
-| 世界宗教 | 372 | 宗教學 | 105 |
-| 哲學 | 219 | 人類生物學 | 68 |
-| 神學 ★ | 60 | 文學 | 58 |
-| 自然科學 | 31 | 心理學 | 30 |
-
-10 大分類書數（reclassification 後）：
-
-| 分類 | 書數 | 分類 | 書數 |
-|---|---|---|---|
-| 歷史學 | 466 | 社會政治學 | 141 |
-| 世界宗教 | 372 | 宗教學 | 105 |
-| 哲學 | 218 | 人類生物學 | 68 |
-| 文學 | 58 | 神學 ★ 2026-05-18 新增 | 53 |
-| 自然科學 | 31 | 心理學 | 30 |
+- **Anthropic content filter false positive**：知識份子論、道教史已永久 marked Haiku-OCR fail
+- **Gemini classifier 全 keys 429**（5/21 上午 ingest 神學批次時遇到）→ 已擴充中文 `fallback_category` 達 100% 覆蓋率，0 Gemini call 完成 215 本 ingest。詳見「ingest fallback 中文擴充」段落
 
 ---
 
@@ -361,9 +339,11 @@ Single-volume oversized books usually go through Haiku auto-fallback fine — do
 User drops freshly-acquired ebooks into [`z-lib/`](../../../z-lib/) at project root. Filename suffix `(z-library.sk, 1lib.sk, z-lib.sk)` preserved on disk, stripped during parse. [`scripts/ingest_new_books.py`](../../../scripts/ingest_new_books.py) processes once per day as part of `run_ocr_daily.bat`. For each `.pdf` / `.epub` / `.mobi` / `.azw3`:
 
 1. **Parse filename** → `(author, title, ext)` via `parse_drive_inventory.parse_filename()`.
-2. **Classify** into 9 main categories. Two-tier:
-   - **Keyword fallback first** (free): `christ|church|bonhoeffer|patristic|...` → `宗教學`; `zoroastr|avesta|islam|buddhis` → `世界宗教`.
+2. **Classify** into 10 main categories. Two-tier:
+   - **Keyword fallback first** (free): English `christ|church|bonhoeffer|patristic|augustine|aquinas|...` → `神學`; Chinese `基督|天主|教父|神學|聖事|奧古斯丁|阿奎那|莫爾特曼|...` → `神學`; `宗教學導論|跨宗教|宗教社會學` → `宗教學`; `士林哲學|現代西方倫理學` → `哲學`; `zoroastr|avesta|islam|buddhis|佛教史|可蘭經|猶太教|...` → `世界宗教`. Fallback 吃 `title + author + 原始 filename`（因為 `parse_book_meta` 砍「：」後副標題 + s2tw 改字會吃掉關鍵字，e.g. 克尔恺郭尔 → 克爾愷郭爾）。
    - **Gemini 2.5 Flash** otherwise — strict JSON. LLM mistakes ("基督教"/"神學") auto-mapped to 宗教學.
+
+   **2026-05-21 大批次教訓**：Gemini 全 4 keys 在前一個 OCR run 燒過後**極易 429**；ziliaozhan 神學批次 295 本若全打 Gemini 會卡死。已擴充中文 fallback 達 215/215 = 100% 覆蓋。新增 ziliaozhan-style 大批次（單一語言領域）前，**先寫 fallback 補關鍵字**，避免燒 Gemini quota。
 3. **Insert** `ebooks` row with `category`, `parsed_at=NULL`, `file_path` pointing to future Drive location.
 4. **Move** local file → `G:/我的雲端硬碟/資料/電子書/{category}/{author}，{title}.{ext}`. G: IS Drive sync mount → move = upload + local-delete in one filesystem rename.
 
@@ -387,6 +367,53 @@ python scripts/ingest_new_books.py run                 # full sweep
 | Target exists on Drive (dupe) | **Auto-delete `z-lib/` copy** (since 2026-05-14). Logs both sizes |
 
 Keyword fallback skews Christian-studies (user backlog) — extend `fallback_category()` for other dominant areas. Junk files (`Z-Library-latest.exe`) silently ignored — only `EBOOK_EXTS` touched.
+
+---
+
+## Workflow E — Bulk download from indexed library (ziliaozhan-style)
+
+Used 2026-05-21 for 神學 295 本批次. Generic playbook for any directory-listed library (Directory Lister, autoindex, etc).
+
+### Steps
+
+1. **Build a TODO markdown** snapshot — list `- {filename.ext} — {size} MB — *display name*` lines per section. Mark `⚠` for entries DB already has. Example: [`.claude/skills/ebook-pipeline/ziliaozhan_theology_todo.md`](ziliaozhan_theology_todo.md).
+2. **Crawl the site** to build a filename → URL path index. For ziliaozhan-style sites:
+   ```python
+   # See inline crawler in scripts/_download_ziliaozhan_theology.py header
+   # - BFS over ?dir= subdirs
+   # - Regex href="\?dir=([^"]+)" for subdir links
+   # - Regex href="([^"]+\.(pdf|epub|mobi|azw3|zip))" for file links
+   # - Output: scripts/_ziliaozhan_index.json (4346 entries for ziliaozhan)
+   ```
+3. **Match + download** — [`scripts/_download_ziliaozhan_theology.py`](../../../scripts/_download_ziliaozhan_theology.py):
+   ```bash
+   python scripts/_download_ziliaozhan_theology.py --dry-run    # see match rate + ambiguities
+   python scripts/_download_ziliaozhan_theology.py              # downloads to z-lib/
+   ```
+   - URL pattern: `https://dl.ziliaozhan.win/{url-encoded relative path}` (no `/d/` prefix despite name)
+   - Skip-existing: target file >100KB skips. Re-run safe
+   - Speed: LAN ~20MB/s → ~6.6GB / 295 books in ~5 minutes
+   - Missing-from-index: usually 簡繁差異 / 引號（curly vs straight）/ trailing space / 作者名尾綴差異 — fix the TODO lines to match site filenames
+4. **Pre-flight fallback coverage**: BEFORE running ingest, test `fallback_category` against all z-lib filenames. Target ≥ 95% coverage to avoid Gemini 429 hell. Test snippet:
+   ```python
+   # See "Run download for ... books" workflow in chat history
+   for f in z-lib files:
+       meta = parse_book_meta(f.name)
+       cat = fallback_category(meta['title'], meta.get('author') or '', f.name)
+       if not cat: print(f'GEMINI_NEEDED: {f.name}')
+   ```
+5. **Run ingest_new_books → parse_worker → ocr_with_gemini** as Workflow D. Should be 0 Gemini call if fallback covers all.
+
+### Lessons from ziliaozhan/神学 295-book batch
+
+- **Parse-book-meta 砍「：」副標題** — fallback 必須吃**原始 filename**，不能只看 parse 後的 title。已將 `classify(title, author, filename)` 三參數化。
+- **opencc s2tw 會改字** — 克尔恺郭尔 (簡) → 克爾愷郭爾 (繁，opencc 把 恺 → 愷)。三種音譯都要在 keyword 列表（簡 + 繁 + opencc-轉換後）。
+- **Period 期刊 zip bundle 不處理** — ingest 跳過 zip。神學論集 162 期 + 神思 90+ 期需另外 unzip 後再 ingest（暫留 z-lib/ 不處理）。
+
+### Site index lifecycle
+
+- `scripts/_ziliaozhan_index.json` 可重 crawl 維持 fresh — site 新增書時 + 重跑 crawler
+- 4,346 個 ziliaozhan 條目，6.7GB 神學批次只取了其中 295（其他子目錄：剑桥基督教史、罗光全书、东传福音 等，未來可分批）
 
 ---
 
@@ -809,17 +836,7 @@ Schema in [`database/tags.sql`](../../../database/tags.sql). `tags` + `book_tags
 
 ## Pending TODOs
 
-0. **ziliaozhan/神学 大規模待下載清單** — 見 [`ziliaozhan_theology_todo.md`](ziliaozhan_theology_todo.md)（255 本，247 新增）。包含：
-   - 古代基督信仰聖經注釋叢書（IVP ACCS 中譯）27 冊 ★★★
-   - 黃根春《基督教典外文獻》OT 6 + NT 4 = 10 冊 ★★
-   - Aquinas《神學大全》中譯 18 冊 + 索引 ★★★
-   - Aquinas《駁異大全》中譯 4 卷 ★★
-   - 信理神學套書 6 卷
-   - Augustine / Athanasius / Ambrose / Chrysostom / Gregory / Origen / Tertullian / Justin / Anselm 等個別教父著作
-   - Bonhoeffer / Barth / Rahner / Moltmann / Küng / Pelikan / Kierkegaard 等現代神學家
-   - Doctors of the Church 靈修經典：師主篇、大德蘭、十字若望、依納爵神操、沙漠教父等
-   - 教父／聖師傳記
-   - URL pattern: `https://dl.ziliaozhan.win/d/书籍/pdf/{neice}/{filename}`
+0. **~~ziliaozhan/神学 大規模待下載清單~~** ✅ 2026-05-21 已 ingest（295 本 → 神學 +265, 哲學 +21, 宗教學 +6）。Period 期刊 zip bundle 2 個（神學論集 862MB + 神思 349MB）留 z-lib/ 待 unzip。剩餘 ziliaozhan 子目錄（剑桥基督教史、罗光全书、东传福音 等）作為下一批可選來源 — 見 Workflow E 的 playbook。
 1. **PDF Plan B v1 (font-driven)** — for ~285 no-TOC PDFs. Design above in Workflow B.
 2. **37 EPUBs with single chunk >400KB and no internal headings** — `resplit_giant_chunks.py` can't help. Needs LLM page-boundary detection on raw text, or font cues from raw EPUB HTML.
 3. **16 套書 with `volume=None`** — flat-TOC EPUB or PDF without volume metadata. Need font-size analysis (EPUB) or LLM-detect on TOC chunk content.

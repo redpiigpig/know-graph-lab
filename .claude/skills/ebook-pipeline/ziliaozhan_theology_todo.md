@@ -92,7 +92,7 @@ URL pattern: `https://dl.ziliaozhan.win/d/书籍/pdf/神学/{filename}`
 
 ## Rahner 研究
 
-- 卡尔·拉纳神哲学思想探析——"先验人学"之来龙去脉.pdf — 12.6 MB — *Rahner 研究*
+- 卡尔·拉纳神哲学思想探析——“先验人学”之来龙去脉.pdf — 12.6 MB — *Rahner 研究*
 
 ## Rilke 神學詮釋
 
@@ -191,7 +191,7 @@ URL pattern: `https://dl.ziliaozhan.win/d/书籍/pdf/神学/{filename}`
 
 ## 基本倫理神學
 
-- 基本伦理神学-吴智勋.pdf — 1.8 MB — *基本倫理神學*
+- 基本伦理神学-吴智勋 .pdf — 1.8 MB — *基本倫理神學*
 
 ## 基督之律 9 卷
 
@@ -476,14 +476,14 @@ URL pattern: `https://dl.ziliaozhan.win/d/书籍/pdf/神学/{filename}`
 
 ## 異端史
 
-- 异端简史：对正统说"不"的历史 （英）吉尔·R·埃文斯.pdf — 5.1 MB — *異端史*
+- 异端简史：对正统说“不”的历史 （英）吉尔·R·埃文斯.pdf — 5.1 MB — *異端史*
 
 ## 研究區 — 當代神學概論與名家
 
 - 二十世纪宗教思想（美）约翰·麦奎利.pdf — ?? MB — *Macquarrie《二十世紀宗教思想》研究/*
 - 基督教学 段琦.pdf — ?? MB — *段琦《基督教學》研究/*
-- 宗教学导论.pdf — ?? MB — *宗教學導論 研究/*
-- 后现代宗教 David Ray Griffin.pdf — ?? MB — *Griffin《後現代宗教》研究/*
+- 宗教学导论（英）麦克斯·缪勒.pdf — ?? MB — *宗教學導論（麥克斯‧繆勒）研究/*
+- 后现代宗教大卫·雷·格进而芬.pdf — ?? MB — *Griffin《後現代宗教》研究/*
 - 基督教与文化-艾略特.pdf — ?? MB — *T.S. Eliot《基督教與文化》研究/*
 
 ## 神學綱要
@@ -583,7 +583,7 @@ URL pattern: `https://dl.ziliaozhan.win/d/书籍/pdf/神学/{filename}`
 
 ## 通俗系統神學
 
-- 大众神學（下册）.pdf — 9.7 MB — *通俗系統神學*
+- 大众神学（下册）.pdf — 9.7 MB — *通俗系統神學*
 - 大众神学（上册）.pdf — 6.1 MB — *通俗系統神學*
 
 ## 逾越節禮儀
