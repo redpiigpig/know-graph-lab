@@ -50,16 +50,23 @@
         </div>
       </header>
 
-      <!-- Summary -->
-      <section v-if="creed.summaryZh" class="mb-8">
+      <!-- Summary — lead paragraph + 文件名《》斜體 -->
+      <section v-if="creed.summaryZh" class="mb-10">
         <div class="flex items-baseline gap-2 mb-3">
           <span class="text-base">📌</span>
           <h2 class="text-sm font-semibold tracking-wide text-stone-700">摘要</h2>
         </div>
-        <div
-          class="text-sm text-stone-700 leading-loose bg-white px-5 py-4 rounded-xl border border-stone-200 shadow-sm whitespace-pre-wrap"
-          style="font-family: 'Noto Serif TC', 'Source Han Serif TC', 'Songti TC', serif"
-        >{{ creed.summaryZh }}</div>
+        <div class="bg-white rounded-xl border border-stone-200 shadow-sm overflow-hidden">
+          <div class="border-l-[3px] border-amber-400 px-6 py-5 prose-summary">
+            <p
+              v-for="(part, i) in summaryParagraphs"
+              :key="i"
+              :class="i === 0 ? 'lead text-[1.02rem] text-stone-900 font-medium leading-loose' : 'text-[0.95rem] text-stone-700 leading-loose mt-3'"
+              style="font-family: 'Noto Serif TC', 'Source Han Serif TC', 'Songti TC', serif"
+              v-html="renderRichText(part)"
+            ></p>
+          </div>
+        </div>
       </section>
 
       <!-- ─── 逐段對照（梵二 / 有 textKey 的長文件） ─── -->
@@ -237,16 +244,28 @@
         </div>
       </section>
 
-      <!-- Notes -->
-      <section v-if="creed.notes" class="mb-8">
+      <!-- Notes — bullet items + 文件名《》斜體 -->
+      <section v-if="creed.notes" class="mb-10">
         <div class="flex items-baseline gap-2 mb-3">
           <span class="text-base">📝</span>
           <h2 class="text-sm font-semibold tracking-wide text-stone-700">歷史 Notes</h2>
         </div>
-        <div
-          class="text-sm text-stone-700 leading-loose bg-white px-5 py-4 rounded-xl border border-stone-200 shadow-sm whitespace-pre-wrap"
-          style="font-family: 'Noto Serif TC', 'Source Han Serif TC', 'Songti TC', serif"
-        >{{ creed.notes }}</div>
+        <div class="bg-white rounded-xl border border-stone-200 shadow-sm overflow-hidden">
+          <div class="border-l-[3px] border-stone-400 px-6 py-5">
+            <template v-for="(block, i) in notesBlocks" :key="i">
+              <ul v-if="block.kind === 'list'" class="space-y-2 text-[0.95rem] text-stone-700 leading-relaxed"
+                  style="font-family: 'Noto Serif TC', 'Source Han Serif TC', 'Songti TC', serif">
+                <li v-for="(item, j) in block.items" :key="j" class="pl-5 relative">
+                  <span class="absolute left-0 top-[0.55em] w-1.5 h-1.5 rounded-full bg-stone-400"></span>
+                  <span v-html="renderListItem(item)"></span>
+                </li>
+              </ul>
+              <p v-else class="text-[0.95rem] text-stone-700 leading-loose mt-3 first:mt-0"
+                 style="font-family: 'Noto Serif TC', 'Source Han Serif TC', 'Songti TC', serif"
+                 v-html="renderRichText(block.text)"></p>
+            </template>
+          </div>
+        </div>
       </section>
 
       <!-- Related -->
@@ -445,6 +464,73 @@ const relatedCreeds = computed(() => {
   return creed.value.related
     .map(slug => ALL_CREEDS.find(c => c.slug === slug))
     .filter((c): c is NonNullable<typeof c> => !!c)
+})
+
+// ── Rich-text helpers for summary / notes rendering ───────────────
+function escapeHtml(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+}
+
+/**
+ * Plain text -> escaped HTML with italic styling for:
+ *   - 《文件名》  -> italic serif
+ *   - (英文/拉丁 phrase) -> italic when content looks Latin/Western (>= 2 ASCII letter words)
+ */
+function renderRichText(text: string): string {
+  if (!text) return ''
+  let html = escapeHtml(text)
+  // 《...》 italic 文件名稱
+  html = html.replace(/《([^》]+)》/g, '<em class="italic font-medium text-stone-900">《$1》</em>')
+  // 括號內 ≥2 字 ASCII 詞語視為拉丁/英文，italic
+  html = html.replace(/（([A-Za-z][A-Za-z\s\-/.,;:]+[A-Za-z])）/g, '<span class="italic text-stone-600">（$1）</span>')
+  return html
+}
+
+/** List item: `label：rest` -> bold label + rest. Falls back to renderRichText. */
+function renderListItem(text: string): string {
+  const idx = text.indexOf('：')
+  if (idx > 0 && idx < 30) {
+    const label = text.slice(0, idx)
+    const rest = text.slice(idx + 1)
+    return `<strong class="font-semibold text-stone-900">${escapeHtml(label)}</strong>：${renderRichText(rest)}`
+  }
+  return renderRichText(text)
+}
+
+const summaryParagraphs = computed<string[]>(() => {
+  const t = creed.value?.summaryZh
+  if (!t) return []
+  return t.split(/\n{2,}/).map(s => s.trim()).filter(Boolean)
+})
+
+interface NotesBlock {
+  kind: 'p' | 'list'
+  text?: string
+  items?: string[]
+}
+
+const notesBlocks = computed<NotesBlock[]>(() => {
+  const t = creed.value?.notes
+  if (!t) return []
+  const lines = t.split('\n')
+  const out: NotesBlock[] = []
+  let listBuf: string[] | null = null
+  for (const raw of lines) {
+    const line = raw.trim()
+    if (!line) {
+      if (listBuf) { out.push({ kind: 'list', items: listBuf }); listBuf = null }
+      continue
+    }
+    if (line.startsWith('- ') || line.startsWith('* ')) {
+      if (!listBuf) listBuf = []
+      listBuf.push(line.slice(2).trim())
+    } else {
+      if (listBuf) { out.push({ kind: 'list', items: listBuf }); listBuf = null }
+      out.push({ kind: 'p', text: line })
+    }
+  }
+  if (listBuf) out.push({ kind: 'list', items: listBuf })
+  return out
 })
 
 // ── Paragraph mode（梵二 / 有 textKey 的長文件） ─────────────────
