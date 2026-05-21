@@ -57,8 +57,14 @@ export interface CreedVersion {
   lang: CreedLanguage
   /** 顯示用版本名稱，例如「原文希臘（325 版）」「思高中譯」 */
   label: string
-  /** 信條/文件正文。長文以換行分段 */
+  /** 信條/文件正文。長文以換行分段。若用 textKey 動態載入則填 '' 即可。 */
   text: string
+  /**
+   * 動態載入鍵 — 設了此值的版本，detail page 會 await loadCreedText(textKey)。
+   * 用於避免大型文本（梵二 16 份 ×3 語 = ~9MB raw text）在 Vite SSR 階段 eager bundle
+   * 而導致 IPC buffer overflow。鍵名同 `data/creeds/ecumenical-councils/vatican-ii/{key}.txt`。
+   */
+  textKey?: string
   /**
    * 句對齊版本：陣列長度必須等於該 creed 的 anchor version 的 lines.length；
    * 用於 detail page 的 3-column hover 對照視圖（每 index 一 row，跨欄高亮）。

@@ -1,10 +1,4 @@
 import type { Creed } from '../types'
-// @ts-expect-error — Vite raw-text import
-import latText from './vatican-ii/aa-latin.txt?raw'
-// @ts-expect-error — Vite raw-text import
-import enText from './vatican-ii/aa-english.txt?raw'
-// @ts-expect-error — Vite raw-text import
-import zhText from './vatican-ii/aa-chinese.txt?raw'
 
 export const vaticanIIAA: Creed = {
   slug: 'vatican-ii-aa-apostolicam-actuositatem',
@@ -27,20 +21,23 @@ export const vaticanIIAA: Creed = {
     {
       lang: 'zh-Hant-Catholic',
       label: '思高／天主教中文版（vatican.va 官方繁體 PDF 抽字）',
-      text: zhText as string,
+      text: '',
+      textKey: 'aa-chinese',
       source: 'https://www.vatican.va/chinese/concilio/vat-ii_apostolicam-actuositatem_zh-t.pdf',
       translator: '台灣地區主教團 / 香港教區禮儀委員會',
     },
     {
       lang: 'en',
       label: 'Vatican official English translation',
-      text: enText as string,
+      text: '',
+      textKey: 'aa-english',
       source: 'https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19651118_apostolicam-actuositatem_en.html',
     },
     {
       lang: 'lat',
       label: 'Editio Typica Latina',
-      text: latText as string,
+      text: '',
+      textKey: 'aa-latin',
       source: 'https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19651118_apostolicam-actuositatem_lt.html',
     },
   ],

@@ -1,10 +1,4 @@
 import type { Creed } from '../types'
-// @ts-expect-error — Vite raw-text import
-import latText from './vatican-ii/ge-latin.txt?raw'
-// @ts-expect-error — Vite raw-text import
-import enText from './vatican-ii/ge-english.txt?raw'
-// @ts-expect-error — Vite raw-text import
-import zhText from './vatican-ii/ge-chinese.txt?raw'
 
 export const vaticanIIGE: Creed = {
   slug: 'vatican-ii-ge-gravissimum-educationis',
@@ -27,20 +21,23 @@ export const vaticanIIGE: Creed = {
     {
       lang: 'zh-Hant-Catholic',
       label: '思高／天主教中文版（vatican.va 官方繁體 PDF 抽字）',
-      text: zhText as string,
+      text: '',
+      textKey: 'ge-chinese',
       source: 'https://www.vatican.va/chinese/concilio/vat-ii_gravissimum-educationis_zh-t.pdf',
       translator: '台灣地區主教團 / 香港教區禮儀委員會',
     },
     {
       lang: 'en',
       label: 'Vatican official English translation',
-      text: enText as string,
+      text: '',
+      textKey: 'ge-english',
       source: 'https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651028_gravissimum-educationis_en.html',
     },
     {
       lang: 'lat',
       label: 'Editio Typica Latina',
-      text: latText as string,
+      text: '',
+      textKey: 'ge-latin',
       source: 'https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651028_gravissimum-educationis_lt.html',
     },
   ],

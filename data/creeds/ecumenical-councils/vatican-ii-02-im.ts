@@ -1,8 +1,4 @@
 import type { Creed } from '../types'
-// @ts-expect-error — Vite raw-text import
-import latText from './vatican-ii/im-latin.txt?raw'
-// @ts-expect-error — Vite raw-text import
-import enText from './vatican-ii/im-english.txt?raw'
 
 export const vaticanIIIM: Creed = {
   slug: 'vatican-ii-im-inter-mirifica',
@@ -33,13 +29,15 @@ export const vaticanIIIM: Creed = {
     {
       lang: 'en',
       label: 'Vatican official English translation',
-      text: enText as string,
+      text: '',
+      textKey: 'im-english',
       source: 'https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19631204_inter-mirifica_en.html',
     },
     {
       lang: 'lat',
       label: 'Editio Typica Latina',
-      text: latText as string,
+      text: '',
+      textKey: 'im-latin',
       source: 'https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19631204_inter-mirifica_lt.html',
     },
   ],

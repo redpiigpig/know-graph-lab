@@ -199,6 +199,7 @@
 
 <script setup lang="ts">
 import { findCreed, ALL_CREEDS, CATEGORY_LABEL_ZH, TRADITION_LABEL_ZH, type CreedLanguage, type CreedVersion } from '~/data/creeds'
+import { loadCreedText } from '~/data/creeds/textLoader'
 
 definePageMeta({ middleware: 'auth' })
 
@@ -209,12 +210,10 @@ useHead(() => ({
   title: creed.value ? `${creed.value.nameZh} — 信條對照` : '找不到信條',
 }))
 
-/**
- * 將 CreedVersion 分到三個 bucket：中文 / 英文 / 原文
- *  - 中文：lang.startsWith('zh-')
- *  - 英文：lang === 'en'
- *  - 原文：其他（grc/lat/lat-filioque/hye/cop/syr-*/gez/arc/hbo/de/fr）
- */
+// Bucket CreedVersion -> zh / en / orig
+// - zh: lang.startsWith('zh-')
+// - en: lang === 'en'
+// - orig: others (grc, lat, lat-filioque, hye, cop, syr-east, syr-west, gez, arc, hbo, de, fr)
 type Bucket = 'zh' | 'en' | 'orig'
 function bucketOf(lang: CreedLanguage): Bucket {
   if (lang.startsWith('zh-')) return 'zh'
@@ -256,6 +255,24 @@ interface EnrichedVersion extends CreedVersion {
 
 function enrich(v: CreedVersion): EnrichedVersion {
   return { ...v, shortLabel: SHORT_LABEL[v.lang] || v.label }
+}
+
+/** Lazy text cache — reactive, keyed by textKey. */
+const lazyTextCache = reactive<Record<string, string | 'loading' | undefined>>({})
+
+function ensureText(version: EnrichedVersion | undefined): EnrichedVersion | undefined {
+  if (!version) return undefined
+  if (!version.textKey) return version  // already inline
+  const cached = lazyTextCache[version.textKey]
+  if (cached === undefined) {
+    lazyTextCache[version.textKey] = 'loading'
+    loadCreedText(version.textKey)
+      .then(text => { lazyTextCache[version.textKey!] = text })
+      .catch(err => { lazyTextCache[version.textKey!] = `[載入失敗：${err.message}]` })
+    return { ...version, text: '載入中...' }
+  }
+  if (cached === 'loading') return { ...version, text: '載入中...' }
+  return { ...version, text: cached }
 }
 
 /** 中文版本排序：合一 → 聖公 → 信義 → 天主教 → 東正 → 改革 → 衛理 → 浸信 → 通用 */
@@ -327,9 +344,9 @@ watch(() => creed.value?.slug, () => {
   origPickIdx.value = 0
 })
 
-const zhActive = computed(() => zhVersions.value[zhPickIdx.value])
-const enActive = computed(() => enVersions.value[enPickIdx.value])
-const origActive = computed(() => origVersions.value[origPickIdx.value])
+const zhActive = computed(() => ensureText(zhVersions.value[zhPickIdx.value]))
+const enActive = computed(() => ensureText(enVersions.value[enPickIdx.value]))
+const origActive = computed(() => ensureText(origVersions.value[origPickIdx.value]))
 
 const origActiveClass = computed(() => {
   if (!origActive.value) return ''

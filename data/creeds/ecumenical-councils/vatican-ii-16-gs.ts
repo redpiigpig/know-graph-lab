@@ -1,10 +1,4 @@
 import type { Creed } from '../types'
-// @ts-expect-error — Vite raw-text import
-import latText from './vatican-ii/gs-latin.txt?raw'
-// @ts-expect-error — Vite raw-text import
-import enText from './vatican-ii/gs-english.txt?raw'
-// @ts-expect-error — Vite raw-text import
-import zhText from './vatican-ii/gs-chinese.txt?raw'
 
 export const vaticanIIGS: Creed = {
   slug: 'vatican-ii-gs-gaudium-et-spes',
@@ -27,20 +21,23 @@ export const vaticanIIGS: Creed = {
     {
       lang: 'zh-Hant-Catholic',
       label: '思高／天主教中文版（vatican.va 官方繁體 PDF 抽字）',
-      text: zhText as string,
+      text: '',
+      textKey: 'gs-chinese',
       source: 'https://www.vatican.va/chinese/concilio/vat-ii_gaudium-et-spes_zh-t.pdf',
       translator: '台灣地區主教團 / 香港教區禮儀委員會',
     },
     {
       lang: 'en',
       label: 'Vatican official English translation',
-      text: enText as string,
+      text: '',
+      textKey: 'gs-english',
       source: 'https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651207_gaudium-et-spes_en.html',
     },
     {
       lang: 'lat',
       label: 'Editio Typica Latina',
-      text: latText as string,
+      text: '',
+      textKey: 'gs-latin',
       source: 'https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651207_gaudium-et-spes_lt.html',
     },
   ],

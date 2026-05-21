@@ -1,10 +1,4 @@
 import type { Creed } from '../types'
-// @ts-expect-error — Vite raw-text import
-import latText from './vatican-ii/dh-latin.txt?raw'
-// @ts-expect-error — Vite raw-text import
-import enText from './vatican-ii/dh-english.txt?raw'
-// @ts-expect-error — Vite raw-text import
-import zhText from './vatican-ii/dh-chinese.txt?raw'
 
 export const vaticanIIDH: Creed = {
   slug: 'vatican-ii-dh-dignitatis-humanae',
@@ -27,20 +21,23 @@ export const vaticanIIDH: Creed = {
     {
       lang: 'zh-Hant-Catholic',
       label: '思高／天主教中文版（vatican.va 官方繁體 PDF 抽字）',
-      text: zhText as string,
+      text: '',
+      textKey: 'dh-chinese',
       source: 'https://www.vatican.va/chinese/concilio/vat-ii_dignitatis-humanae_zh-t.pdf',
       translator: '台灣地區主教團 / 香港教區禮儀委員會',
     },
     {
       lang: 'en',
       label: 'Vatican official English translation',
-      text: enText as string,
+      text: '',
+      textKey: 'dh-english',
       source: 'https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651207_dignitatis-humanae_en.html',
     },
     {
       lang: 'lat',
       label: 'Editio Typica Latina',
-      text: latText as string,
+      text: '',
+      textKey: 'dh-latin',
       source: 'https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651207_dignitatis-humanae_lt.html',
     },
   ],
