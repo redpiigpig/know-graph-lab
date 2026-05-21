@@ -127,6 +127,16 @@
           <span class="tool-badge bg-pink-50 text-pink-600">可用</span>
         </NuxtLink>
 
+        <!-- 經典對照與註釋 -->
+        <NuxtLink :to="user ? '/scripture-canon' : '/login'" class="tool-card group border-stone-200 hover:border-stone-400 hover:shadow-stone-100">
+          <div class="tool-icon bg-stone-50 text-stone-700">📜</div>
+          <div class="flex-1">
+            <h2 class="tool-title">經典對照與註釋</h2>
+            <p class="tool-desc">信條 / 法規 / 教父著作 / 典外文獻 / 聖經多版本對照（基督宗教專題）</p>
+          </div>
+          <span class="tool-badge bg-stone-50 text-stone-700">建置中</span>
+        </NuxtLink>
+
       </div>
 
       <div class="mt-12 text-center text-gray-400 text-xs">

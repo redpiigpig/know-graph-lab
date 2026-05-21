@@ -1,0 +1,88 @@
+<template>
+  <div class="flex flex-col bg-slate-50 min-h-dvh">
+    <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 z-30">
+      <NuxtLink to="/" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
+      <div class="w-px h-5 bg-gray-200" />
+      <span class="text-sm font-semibold text-gray-900">經典對照與註釋</span>
+    </nav>
+
+    <div class="flex-1 flex items-start justify-center px-6 py-12">
+      <div class="w-full max-w-4xl">
+        <div class="mb-8 text-center">
+          <h1 class="text-2xl font-bold text-gray-900 mb-1">📜 經典對照與註釋</h1>
+          <p class="text-sm text-gray-500">五個子工具：聖經多版本平行 / 信條 / 法規 / 教父著作 / 典外文獻</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <NuxtLink
+            v-for="tool in tools"
+            :key="tool.path"
+            :to="tool.enabled ? tool.path : '#'"
+            class="group relative flex flex-col gap-3 bg-white border rounded-2xl p-6 shadow-sm transition"
+            :class="tool.enabled
+              ? 'border-gray-200 hover:shadow-md hover:border-stone-300 cursor-pointer'
+              : 'border-gray-100 opacity-60 cursor-not-allowed'"
+          >
+            <div class="text-3xl">{{ tool.icon }}</div>
+            <div>
+              <div class="font-semibold text-gray-900 text-base group-hover:text-stone-700 transition">{{ tool.title }}</div>
+              <div class="text-xs text-gray-500 mt-1 leading-relaxed">{{ tool.desc }}</div>
+            </div>
+            <span
+              v-if="!tool.enabled"
+              class="absolute top-3 right-3 text-[10px] px-1.5 py-0.5 rounded bg-gray-100 text-gray-500"
+            >待實作</span>
+          </NuxtLink>
+        </div>
+
+        <div class="mt-10 text-xs text-gray-400 leading-relaxed">
+          <p>本入口集合與基督教聖典／信條／法規／教父／典外文獻相關的五個對照工具。</p>
+          <p class="mt-1">資料源：Schaff《教父著作集 38 卷》／《Creeds of Christendom 3 卷》／IVP《古代基督信仰聖經註釋叢書 27 卷》／基督教典外文獻 10 卷／梵蒂岡公開檔案 等公開出版物。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+definePageMeta({ middleware: 'auth' })
+useHead({ title: '經典對照與註釋 — Know Graph Lab' })
+
+const tools = [
+  {
+    path: '/creeds',
+    icon: '⛪',
+    title: '信條對照',
+    desc: '21 次大公會議信條 + 各教會尼西亞信經 + 新教信條全譜 + 20-21 世紀普世合一對話文獻',
+    enabled: true,
+  },
+  {
+    path: '/canon-law',
+    icon: '⚖️',
+    title: '教會法規',
+    desc: '天主教 CIC 1983 / CCEO 1990 / 教理 CCC、東正教 Pedalion + 使徒教規 85 條、新教章程',
+    enabled: false,
+  },
+  {
+    path: '/fathers',
+    icon: '✝️',
+    title: '教父著作搜索',
+    desc: '~50 位教父基本資料 + Schaff 38 卷 + 中譯個別教父原典；按時期 / 地理 / 主題 / 經文交叉搜索',
+    enabled: false,
+  },
+  {
+    path: '/apocrypha',
+    icon: '📜',
+    title: '典外文獻搜索',
+    desc: 'OT 偽典 / 第二正典、NT 偽典、死海古卷、Nag Hammadi 諾斯底文獻全文檢索',
+    enabled: false,
+  },
+  {
+    path: '/scripture',
+    icon: '📖',
+    title: '聖經對照 + 教父註釋',
+    desc: '多版本平行對照（中／英／拉／希／敘／科普特／亞美尼亞／衣索匹亞）+ 教父逐節註釋 + 各教會 OT/NT canon 標記',
+    enabled: false,
+  },
+]
+</script>
