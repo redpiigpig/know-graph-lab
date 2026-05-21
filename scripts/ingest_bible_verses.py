@@ -63,7 +63,7 @@ GITHUB_RAW = "https://raw.githubusercontent.com"
 
 # ─── 統一 upsert ────────────────────────────────────────────────────────────
 
-def upsert_verses(rows, batch_size=500, dry_run=False):
+def upsert_verses(rows, batch_size=200, dry_run=False):
     """Upsert into bible_verses via PostgREST.
 
     rows: list of {book_code, chapter, verse, version_code, text}
@@ -87,13 +87,21 @@ def upsert_verses(rows, batch_size=500, dry_run=False):
     done = 0
     for i in range(0, total, batch_size):
         chunk = rows[i:i + batch_size]
-        r = requests.post(
-            f"{SUPA_URL}/rest/v1/bible_verses?on_conflict=book_code,chapter,verse,version_code",
-            headers=PG_HEADERS,
-            json=chunk,
-            timeout=60,
-        )
-        if r.status_code >= 300:
+        # Retry transient 5xx (statement timeout etc.) up to 3 times w/ backoff
+        for attempt in range(4):
+            r = requests.post(
+                f"{SUPA_URL}/rest/v1/bible_verses?on_conflict=book_code,chapter,verse,version_code",
+                headers=PG_HEADERS,
+                json=chunk,
+                timeout=120,
+            )
+            if r.status_code < 300:
+                break
+            if 500 <= r.status_code < 600 and attempt < 3:
+                wait = 2 ** attempt * 2
+                print(f"  ! HTTP {r.status_code}, retry in {wait}s (attempt {attempt+1}/4)", file=sys.stderr)
+                time.sleep(wait)
+                continue
             print(f"  ✗ HTTP {r.status_code}: {r.text[:500]}", file=sys.stderr)
             sys.exit(1)
         done += len(chunk)
@@ -1101,10 +1109,26 @@ KNOX_VERSE_RE = re.compile(
 # Knox includes Daniel chapters with additions (deuterocanonical sus/bel inline) — not split for MVP
 
 
-def ingest_knox(dry_run=False):
+def ingest_knox(dry_run=False, resume=False):
     print("-> Ingesting Knox 1949 (catholicbible.online)")
-    if not dry_run:
+    done_books = set()
+    if not dry_run and not resume:
         clear_version("knox")
+    elif resume:
+        try:
+            ref = SUPA_URL.replace("https://", "").split(".")[0]
+            mgmt = requests.post(
+                f"https://api.supabase.com/v1/projects/{ref}/database/query",
+                headers={"Authorization": f"Bearer {ENV.get('SUPABASE_ACCESS_TOKEN','')}",
+                         "content-type": "application/json"},
+                json={"query": "SELECT book_code, COUNT(*) c FROM bible_verses WHERE version_code='knox' GROUP BY book_code HAVING COUNT(*) > 10;"},
+                timeout=30,
+            )
+            for row in mgmt.json():
+                done_books.add(row["book_code"])
+            print(f"  resume mode: skipping {len(done_books)} books with > 50 rows", file=sys.stderr)
+        except Exception as e:
+            print(f"  ! resume scan failed: {e}", file=sys.stderr)
     r = requests.get(
         f"{SUPA_URL}/rest/v1/bible_books?select=code,chapter_count",
         headers=PG_HEADERS, timeout=30,
@@ -1121,6 +1145,14 @@ def ingest_knox(dry_run=False):
     total = 0
     for part_no, books in [(1, KNOX_OT), (2, KNOX_NT)]:
         for bk_no, our_code in books:
+            if resume and our_code in done_books:
+                continue
+            # If Mark was partial, clear and redo
+            if resume and our_code == "mrk":
+                requests.delete(
+                    f"{SUPA_URL}/rest/v1/bible_verses?version_code=eq.knox&book_code=eq.mrk",
+                    headers=PG_HEADERS, timeout=30,
+                )
             n_ch = knox_ch_override.get(our_code, chapter_counts.get(our_code, 0))
             if not n_ch:
                 continue
@@ -1193,6 +1225,7 @@ def main():
         "lxx": ingest_lxx,
         "cuv2010": lambda dry_run=False: ingest_cuv2010(
             dry_run=dry_run, only_book=args.book, resume=args.resume),
+        "knox_resume": lambda dry_run=False: ingest_knox(dry_run=dry_run, resume=True),
         "niv": ingest_niv,
         "kjva": ingest_kjva,
         "sigao": ingest_sigao,
@@ -1206,7 +1239,7 @@ def main():
         "lzz": ingest_lzz,
         "tcv": ingest_tcv,
         "rcv": ingest_rcv,
-        "knox": ingest_knox,
+        "knox": lambda dry_run=False: ingest_knox(dry_run=dry_run, resume=args.resume),
     }
     fn_map[args.version](dry_run=args.dry_run)
 
