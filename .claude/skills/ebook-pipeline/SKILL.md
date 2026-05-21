@@ -9,18 +9,24 @@ description: Operate the Know-Graph-Lab ebook pipeline end-to-end. Use when work
 
 End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL covers ingest, parse, OCR, standardize, DB back-fill, and reader-side features.
 
-## Current state (snapshot 2026-05-21 深夜 — 雙 wrapper 並跑中消化 queue)
+## Current state (snapshot 2026-05-21 深夜 — pipeline 大規模整修 + 神學分類完成 + Apocrypha 翻譯啟動)
 
 | | 數量 |
 |---|---|
-| Total ebooks | **1,883** (今日 +39: 28 本地化 + 11 Schaff Creeds/History；其他 +295 已含於 1,844 基礎) |
+| Total ebooks | **1,896** (+1 ACCS Apocrypha English vol 15) |
 | Parsed (text 提取完成) | ~1,663 |
 | **OCR queue 待打** | **78**（60 ≤50MB Gemini route / 18 >50MB Haiku route，0 missing） |
 | Permanent OCR fail | 0 |
-| **EPUB standardize → markdown** | 543 ✅ |
-| **PDF Plan A** | **956 ✅** (今日跑 --all 956/956 一次補齊) |
+| **standardized_at NOT NULL** | **1,487** (backfilled 今日) |
+| EPUB standardize → markdown | 543 ✅ |
+| PDF Plan A | 956 ✅ |
 | PDF Plan B v0 | 152 ✅ |
+| **PDF Plan B v1 (font-driven)** | **prototype 上線** ([standardize_pdf_v1.py](../../../scripts/standardize_pdf_v1.py)) |
 | 今日 Haiku 完成 | **8 本**（1 main + 7 IVP；queue 從 ~113 → 78） |
+| 今日 reorg / fix | 1 IVP retry done (dupe 刪除 + DB sync) |
+| 今日神學子分類 | **325/325 全 canonical** (LLM 配 rule-based 重新分類) |
+| 今日 daily bat | step 5 加 standardize（only-fresh）已 wire |
+| 今日 ACCS English | **Apocrypha vol 15 加入庫，翻譯 pipeline 啟動** |
 
 ### 10 大分類書數（2026-05-21 晚上 — 神學重組後）
 
@@ -96,7 +102,7 @@ schtasks /create /tn "KGLab-OCR-Daily-18" /tr "C:\Users\user\Desktop\know-graph-
 ```
 3 個 task 同跑 same bat，step 1 ingest 對空 z-lib 是 no-op 安全。舊的 `KGLab-OCR-Daily` (16:00) / `-08` / `-22` 已刪。
 
-Standardize 不在 daily bat 裡 — parse/OCR 落地後 chunk_type 還是 `page` (PDF) 或 raw (EPUB)。**新書 standardize 需手動觸發**（見 Workflow B）。已知 TODO：把 standardize 鉤進 daily bat。
+**Standardize step 5 已 wire 進 daily bat (2026-05-21)**。`--only-fresh` 過濾 `standardized_at IS NULL`，避免每日重跑 1487 本完成書（content-idempotent 但浪費 50min）。新書 ingest → parse → OCR 後，next daily 自動 standardize。
 
 唯一例外是 **套書 auto-split** — `standardize_ebook.py` 在 EPUB 完成後自動呼叫 `detect_set_volumes` + `split_ebook_set`，所以 standardize-ed 套書自動拆成多個 child rows。
 
@@ -129,6 +135,9 @@ Standardize 不在 daily bat 裡 — parse/OCR 落地後 chunk_type 還是 `page
 | `_download_ziliaozhan_theology.py` | E — bulk download | ziliaozhan/神学 295-book batch → z-lib/ → ingest. See Workflow E |
 | `_reorg_theology_batch1.py` | G — reorg | DB UPDATE + Drive move 同步搬家。IVP/典外/Aquinas 範例。See Workflow G |
 | `_haiku_ivp_priority.sh` | 3 — OCR | bash wrapper：先跑 IVP 22 卷再 catch-all。Gemini-first (`--rpm 8` 不加 `--engine haiku`)，>50MB 自動 route Haiku |
+| `subcategorize_theology.py` | 4f — taxonomy | LLM 子分類器：神學 → 13 個 canonical labels (教父著作/中世紀/改教/近現代 + 教科書/概論/主題專論/倫理/靈修/詮釋/本地化)。Series subcat (Schaff/Aquinas/IVP) 自動 preserve。Rule-based 先過，剩餘批給 Gemini 25/batch |
+| `standardize_pdf_v1.py` | 4 — Plan B v1 | Font-driven heading 偵測 — body size 自動推斷 + flag-based bold + h2/h3/h4 配 size bump 規則。用於 no-TOC PDF (~285 候選)。`--inspect` 看 font histogram；`--dry-run` 預覽 chunks |
+| `translate_ebook_to_zh.py` | 4g — translate | 英文 ebook → 繁中翻譯 pipeline。Gemini Flash + 教父術語對齊 prompt + s2tw safety pass。已用於 ACCS Apocrypha vol 15 |
 
 ## DB schema
 
@@ -136,15 +145,16 @@ Standardize 不在 daily bat 裡 — parse/OCR 落地後 chunk_type 還是 `page
 ebooks (
   id uuid PK, title, author, file_type,
   file_path,                    -- absolute path to local Drive file
-  category, subcategory,         -- 9 main categories, free-form subcategory
+  category, subcategory,         -- 10 main categories, free-form subcategory
   total_pages, total_chars, chunk_count,
   parsed_at,                     -- NULL = not yet parsed
   parse_error,                   -- NULL on success; preserved on transient fail for retry
   book_id,                       -- nullable FK to books table (for excerpt linkage)
-  cleaned_at,
+  standardized_at,               -- NULL = not yet through standardize_*; daily bat --only-fresh filter
   subtitle, original_title, author_en, translator,
-  publisher, publication_year, original_publish_year, original_author,
-  metadata_locked                -- blocks enrich_book_metadata writes
+  publisher, publisher_location,
+  publication_year, original_publish_year, original_author,
+  category_id                    -- legacy nullable
 )
 
 ebook_chunks (
@@ -239,8 +249,8 @@ G:/我的雲端硬碟/資料/電子書/神學/
 | 分類 | 常見 subcategory |
 |---|---|
 | 哲學 | 近代哲學 / 哲學原典 / 經典與解釋輯刊 / 中國思想史 / 哲學通史 / 當代哲學 / 古希臘哲學 / 東方哲學 / 政治哲學 |
-| 神學 | Schaff - Ante-Nicene Fathers (10 vols) / Schaff - NPNF Series 1 / Schaff - NPNF Series 2 / 教父原典 / 系統神學 / 教父研究 / 神學家研究 / 神學專題 / 靈修神學 |
-| 世界宗教 | 基督教 / 猶太教 / 東亞宗教 / 波斯宗教 / 佛教 / 伊斯蘭教 / 其他宗教 / 印度教 / 摩門教 |
+| 神學 | **13 canonical labels (2026-05-21 LLM 重整)**: 教父著作 / 中世紀著作 / 改教著作 / 近現代著作 / 教父研究 / 中世紀研究 / 改教研究 / 教科書/概論 / 主題專論 / 倫理神學 / 靈修神學 / 神學詮釋/哲學 / 本地化處境神學。Series 保留: Schaff - ANF (10) / NPNF1 (14) / NPNF2 (14) / 中世紀著作 / Aquinas - 神學大全 (20) / Aquinas - 駁異大全 (4) / Aquinas - 輔助 (2) |
+| 世界宗教 | 基督教 / 猶太教 / 東亞宗教 / 波斯宗教 / 佛教 / 伊斯蘭教 / 其他宗教 / 印度教 / 摩門教。子分區: 基督教 / IVP - 古代基督信仰聖經註釋叢書 (27 中譯) / 基督教 / IVP - ACCS Apocrypha (English, vol 15) / 基督教 / 教會法典與信條 / 基督教 / 基督教典外文獻 |
 | 宗教學 | 神話學 / 宗教史 / 宗教對話 / World Religions系列 / 教會史 / 宗教社會學 |
 | 歷史學 | 東方界域史 / 西方界域史 / 中央界域史 / 亞太界域史 / 美州界域史 / 全球通史 / 史料原典 / 近代史 / 史學理論 |
 | 社會政治學 | 政治學 / 政治經濟社會學 / 資本主義-社會主義 / 知識社會學 / 社會學 / 性學 / 名家作品 / 國際關係 |
@@ -957,16 +967,18 @@ Schema in [`database/tags.sql`](../../../database/tags.sql). `tags` + `book_tags
 
 ## Pending TODOs
 
-0. **~~ziliaozhan/神学 大規模待下載清單~~** ✅ 2026-05-21 已 ingest（295 本 → 神學 +265, 哲學 +21, 宗教學 +6）。Period 期刊 zip bundle 2 個（神學論集 862MB + 神思 349MB）已從 z-lib/ 刪除（暫不處理，需另外 unzip + 個別 ingest）。剩餘 ziliaozhan 子目錄（剑桥基督教史、罗光全书、东传福音 + 其他 ~1,800 條）作為下一批可選來源 — 見 Workflow E 的 playbook。
-1. **~~標準化 Plan A 補跑~~** ✅ 2026-05-21 已跑 `--all` 956/956 完成。整個書庫 PDF reader-ready。
-2. **神學 280+ 本 重新分子分類** — 歷史時期（教父著作／中世紀／改教／近現代）+ 主題（教科書／概論／主題專論／倫理／靈修／神學詮釋／本地化處境）。需要 LLM 補（每本 1 Gemini call，~5min）。配套 UI tree 已更新（commit c99883f + e3c5e9b）。
-3. **1 本 IVP ACCS 雅彼約猶 reorg retry** — `_reorg_theology_batch1.py` 跑時被 OCR worker 鎖檔 fail。等 Haiku 跑完該本後手動 retry move + DB update。
-4. **PDF Plan B v1 (font-driven)** — for ~285 no-TOC PDFs. Design above in Workflow B.
-5. **37 EPUBs with single chunk >400KB and no internal headings** — `resplit_giant_chunks.py` can't help. Needs LLM page-boundary detection on raw text, or font cues from raw EPUB HTML.
-6. **16 套書 with `volume=None`** — flat-TOC EPUB or PDF without volume metadata. Need font-size analysis (EPUB) or LLM-detect on TOC chunk content.
-7. **Auto-trigger standardize after daily ingest** — currently manual. Wire into bat as step 6 (idempotent skip for already-standardized).
-8. **17 no-hit books** for `enrich_book_metadata.py` (article fragments, Chinese-Buddhist, translated Western works absent from Google Books). Manual fill via `/excerpts/library/[bookId]` UI.
-9. **Manual sources for canon law batch 2** — Vatican CIC 1983 / CCEO 1990 / CCC（vatican.va HTML scrape）+ Book of Concord（archive.org）+ Pedalion Cummings 1957（archive.org）+ Methodist 25 Articles / Book of Discipline / 1689 LBC / BFM 2000 各新教信條 — 全部公版可手動或寫腳本抓，留給 scripture-canon-portal skill 啟動時做。
+0. **~~ziliaozhan/神学 大規模待下載清單~~** ✅ 2026-05-21 已 ingest（295 本 → 神學 +265, 哲學 +21, 宗教學 +6）。
+1. **~~標準化 Plan A 補跑~~** ✅ 2026-05-21 已跑 `--all` 956/956 完成。
+2. **~~神學 280+ 本 重新分子分類~~** ✅ 2026-05-21 已透過 `subcategorize_theology.py` 完成 325/325 → 13 canonical labels + series preserved。
+3. **~~1 本 IVP ACCS 雅彼約猶 reorg retry~~** ✅ 2026-05-21 已 fix（dupe deduped + DB sync）。
+4. **~~PDF Plan B v1 (font-driven)~~** ✅ 2026-05-21 prototype 上線 ([standardize_pdf_v1.py](../../../scripts/standardize_pdf_v1.py)). Calibration TODO：thresholds 在不同 publisher 的真實效果還沒大規模 measure。下一批 no-TOC PDFs 可開始試跑。
+5. **~~Auto-trigger standardize after daily ingest~~** ✅ 2026-05-21 step 5 已 wire 進 `run_ocr_daily.bat` (only-fresh 守衛)。
+6. **65 books with single chunk >400KB and no internal headings** — `resplit_giant_chunks.py` 對 3 本有效（已跑），剩 65 本（包括 Schaff 系列、史料原典套書）需 LLM page-boundary 或 font 分析。Plan B v1 可能可吃掉一部分（EPUB 不行，PDF 部分可）。
+7. **~~16 套書 with `volume=None`~~** ✅ detect_set_volumes 已掃完所有候選，37 本 marked NOT_A_SET marker，0 本待處理。
+8. **~~17 no-hit books for enrich_metadata~~** ✅ 剩 3 本（古蘭經的故事 / 巴哈歐拉啟示錄 / 道教簡史）— 都是冷門 manual-fill only。
+9. **ACCS Apocrypha 翻譯**：英文 vol 15 已加入庫（`37ff8191-8bc8-4eeb-bd84-d85fa3dd893b`），完整翻譯 pipeline 透過 `translate_ebook_to_zh.py` 啟動中。244 個 source chunks，預估 ~30min Gemini Flash 跑完。完成後驗證術語對齊（教父人名、聖經書卷 abbrev）。
+10. **Manual sources for canon law batch 2** — Vatican CIC 1983 / CCEO 1990 / CCC + Book of Concord + Pedalion + Methodist / 1689 LBC / BFM 各新教信條 — 留給 scripture-canon-portal skill 啟動時做。
+11. **ACCS Chinese set 補卷**：中譯 27 冊 OT 缺 24-25（耶利米/哀歌）— 是否有官方中譯？若無只能用英文 vol 12（Jeremiah, Lamentations）+ 同樣 translate pipeline 補。
 
 ## See also
 
