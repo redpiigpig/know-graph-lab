@@ -59,6 +59,12 @@ export interface CreedVersion {
   label: string
   /** 信條/文件正文。長文以換行分段 */
   text: string
+  /**
+   * 句對齊版本：陣列長度必須等於該 creed 的 anchor version 的 lines.length；
+   * 用於 detail page 的 3-column hover 對照視圖（每 index 一 row，跨欄高亮）。
+   * 若不需句對齊，省略本欄；UI 退回單區塊 accordion 顯示。
+   */
+  lines?: string[]
   /** 來源資料書 / 網站 / 禮儀文本出處 */
   source?: string
   /** 譯者 / 採稿單位（中譯版常需） */
@@ -72,6 +78,13 @@ export interface Creed {
   category: CreedCategory
   /** 大公會議信條才有 council_no（1-21）；其他類別不填 */
   councilNo?: number
+  /**
+   * 同一場會議產出多份文件時的子文件代號（梵二有 16 份 SC/LG/DV/GS/...）。
+   * 1-20 次大公會議只產出 1 份主要信條，可省略本欄。
+   */
+  councilDocCode?: string
+  /** 同 councilNo 內的子文件排序（梵二 SC=1, LG=2, DV=3, ...） */
+  councilDocOrder?: number
   /** 顯示順序（同類別內排序） */
   order: number
   nameZh: string
@@ -96,6 +109,14 @@ export interface Creed {
   notes?: string
   /** 相關信條的 slug（用於前後串連） */
   related?: string[]
+  /**
+   * 啟用 3-column 句對齊視圖時的 anchor 語言。
+   *  - 該 lang 的 version 必須有 lines:string[]，定義 row 數量
+   *  - 同 lines.length 的其他 versions 自動加入對齊視圖（按欄類型 中 / 英 / 原文 分類）
+   *  - 不設則退回單區塊 accordion 顯示
+   *  範例：'zh-Hant-Joint2019'（尼西亞-君士坦丁堡 381 用 2019 五宗派合一譯本作 anchor）
+   */
+  anchorLang?: CreedLanguage
 }
 
 export interface CanonLawDoc {
