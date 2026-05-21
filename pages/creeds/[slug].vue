@@ -105,34 +105,88 @@
         </div>
 
         <div v-if="paragraphsLoading" class="text-center text-stone-400 py-12 text-sm">載入段落中…</div>
-        <div v-else-if="paragraphRows.length === 0" class="text-center text-stone-400 py-12 text-sm">⚠ 無法解析段落，可能是 PDF 抽字失敗或文本格式特殊</div>
+        <div v-else-if="docRows.length === 0" class="text-center text-stone-400 py-12 text-sm">⚠ 無法解析段落</div>
 
         <div v-else class="space-y-1.5">
-          <article
-            v-for="row in paragraphRows"
-            :key="row.num"
-            class="bg-white border border-stone-200 rounded-md overflow-hidden"
-          >
-            <div class="grid gap-px bg-stone-100" :style="{ gridTemplateColumns: '3rem 1fr 1fr 1fr' }">
-              <div class="bg-stone-50 px-2 py-3 text-xs font-mono font-bold text-stone-700 flex items-start justify-center">
-                {{ row.num }}
-              </div>
-              <div class="bg-white px-3 py-3 text-[0.9rem] leading-loose text-stone-800 whitespace-pre-wrap"
-                   style="font-family: 'Noto Serif TC', 'Source Han Serif TC', 'Songti TC', serif">
-                <template v-if="row.byLang.zh">{{ row.byLang.zh }}</template>
-                <span v-else class="text-stone-300 italic text-xs">—</span>
-              </div>
-              <div class="bg-white px-3 py-3 text-[0.85rem] leading-relaxed text-stone-800 font-sans whitespace-pre-wrap">
-                <template v-if="row.byLang.en">{{ row.byLang.en }}</template>
-                <span v-else class="text-stone-300 italic text-xs">—</span>
-              </div>
-              <div class="bg-white px-3 py-3 text-[0.9rem] leading-relaxed text-stone-800 whitespace-pre-wrap"
-                   :class="origActiveClass">
-                <template v-if="row.byLang.orig">{{ row.byLang.orig }}</template>
-                <span v-else class="text-stone-300 italic text-xs">—</span>
+          <template v-for="(row, ri) in docRows" :key="ri">
+            <!-- Section heading: spans full width -->
+            <div
+              v-if="row.kind === 'heading'"
+              class="bg-gradient-to-r from-amber-50 via-stone-50 to-white border-y border-amber-200 px-4 py-3 mt-5 first:mt-0"
+            >
+              <div class="text-[11px] font-semibold uppercase tracking-widest text-amber-800 mb-1">section</div>
+              <div class="grid gap-4" :style="{ gridTemplateColumns: '1fr 1fr 1fr' }">
+                <div class="text-[0.92rem] font-semibold text-stone-900"
+                     style="font-family: 'Noto Serif TC', 'Source Han Serif TC', 'Songti TC', serif">
+                  <template v-if="row.byLang.zh">{{ row.byLang.zh }}</template>
+                  <span v-else class="text-stone-300 italic text-xs">—</span>
+                </div>
+                <div class="text-[0.88rem] font-semibold text-stone-900 font-sans italic">
+                  <template v-if="row.byLang.en">{{ row.byLang.en }}</template>
+                  <span v-else class="text-stone-300 italic text-xs">—</span>
+                </div>
+                <div class="text-[0.9rem] font-semibold text-stone-900 italic">
+                  <template v-if="row.byLang.orig">{{ row.byLang.orig }}</template>
+                  <span v-else class="text-stone-300 italic text-xs">—</span>
+                </div>
               </div>
             </div>
-          </article>
+
+            <!-- Paragraph row -->
+            <article
+              v-else
+              :id="`para-${row.num}`"
+              class="bg-white border border-stone-200 rounded-md overflow-hidden"
+            >
+              <div class="grid gap-px bg-stone-100" :style="{ gridTemplateColumns: '3rem 1fr 1fr 1fr' }">
+                <div class="bg-stone-50 px-2 py-3 text-xs font-mono font-bold text-stone-700 flex items-start justify-center">
+                  {{ row.num }}
+                </div>
+                <div class="bg-white px-3 py-3 text-[0.92rem] leading-loose text-stone-800 whitespace-pre-wrap"
+                     style="font-family: 'Noto Serif TC', 'Source Han Serif TC', 'Songti TC', serif">
+                  <span v-if="row.byLang.zh" v-html="renderBody(row.byLang.zh, 'zh')"></span>
+                  <span v-else class="text-stone-300 italic text-xs">—</span>
+                </div>
+                <div class="bg-white px-3 py-3 text-[0.875rem] leading-relaxed text-stone-800 font-sans whitespace-pre-wrap">
+                  <span v-if="row.byLang.en" v-html="renderBody(row.byLang.en, 'en')"></span>
+                  <span v-else class="text-stone-300 italic text-xs">—</span>
+                </div>
+                <div class="bg-white px-3 py-3 text-[0.92rem] leading-relaxed text-stone-800 whitespace-pre-wrap"
+                     :class="origActiveClass">
+                  <span v-if="row.byLang.orig" v-html="renderBody(row.byLang.orig, 'orig')"></span>
+                  <span v-else class="text-stone-300 italic text-xs">—</span>
+                </div>
+              </div>
+            </article>
+          </template>
+        </div>
+
+        <!-- Footnotes section -->
+        <div v-if="hasFootnotes" class="mt-8 border-t-2 border-stone-300 pt-6">
+          <div class="text-xs uppercase tracking-widest text-stone-500 font-semibold mb-3">📎 註腳對照</div>
+          <div class="grid gap-4" :style="{ gridTemplateColumns: '3rem 1fr 1fr 1fr' }">
+            <div></div>
+            <div class="text-[10px] uppercase tracking-wider text-stone-400">中文</div>
+            <div class="text-[10px] uppercase tracking-wider text-sky-700">English</div>
+            <div class="text-[10px] uppercase tracking-wider text-amber-700">原文</div>
+
+            <template v-for="num in footnoteNumbers" :key="num">
+              <div :id="`fn-anchor-${num}`" class="text-xs font-mono font-bold text-stone-600 self-start pt-1 text-center">[{{ num }}]</div>
+              <div :id="`fn-zh-${num}`" class="text-[0.85rem] text-stone-700 leading-relaxed scroll-mt-16"
+                   style="font-family: 'Noto Serif TC', 'Source Han Serif TC', 'Songti TC', serif">
+                <span v-if="footnoteOf('zh', num)" v-html="renderBody(footnoteOf('zh', num), 'zh')"></span>
+                <span v-else class="text-stone-300 italic text-xs">—</span>
+              </div>
+              <div :id="`fn-en-${num}`" class="text-[0.82rem] text-stone-700 leading-relaxed font-sans scroll-mt-16">
+                <span v-if="footnoteOf('en', num)" v-html="renderBody(footnoteOf('en', num), 'en')"></span>
+                <span v-else class="text-stone-300 italic text-xs">—</span>
+              </div>
+              <div :id="`fn-orig-${num}`" class="text-[0.85rem] text-stone-700 leading-relaxed italic scroll-mt-16">
+                <span v-if="footnoteOf('orig', num)" v-html="renderBody(footnoteOf('orig', num), 'orig')"></span>
+                <span v-else class="text-stone-300 italic text-xs">—</span>
+              </div>
+            </template>
+          </div>
         </div>
 
         <!-- 來源 footer -->
@@ -301,8 +355,8 @@
 
 <script setup lang="ts">
 import { findCreed, ALL_CREEDS, CATEGORY_LABEL_ZH, TRADITION_LABEL_ZH, type CreedLanguage, type CreedVersion } from '~/data/creeds'
-import { loadCreedText, loadCreedParagraphs } from '~/data/creeds/textLoader'
-import { alignParagraphs, type ParagraphRow } from '~/data/creeds/paragraphParser'
+import { loadCreedText, loadCreedParagraphs, loadCreedDoc } from '~/data/creeds/textLoader'
+import { alignParagraphs, alignDocs, type ParagraphRow, type DocRow, type FootnoteDef } from '~/data/creeds/paragraphParser'
 
 definePageMeta({ middleware: 'auth' })
 
@@ -486,6 +540,35 @@ function renderRichText(text: string): string {
   return html
 }
 
+/**
+ * Render paragraph body with:
+ *   - inline footnote ref [^N] or (N) -> clickable <sup><a href="#fn-{lang}-N">[N]</a></sup>
+ *   - biblical book+chapter ref (Rom 11:17-24) -> <span class="scripture-ref">
+ */
+function renderBody(body: string, lang: 'zh' | 'en' | 'orig'): string {
+  if (!body) return ''
+  let html = escapeHtml(body)
+  // [^N] markdown footnote ref
+  html = html.replace(/\[\^(\d{1,4})\]/g, (_, n) =>
+    `<sup class="ml-0.5"><a class="text-stone-500 hover:text-stone-900 underline decoration-dotted font-semibold" href="#fn-${lang}-${n}">${n}</a></sup>`,
+  )
+  // (N) plain numeric in parens — conservative: surrounded by space/punct/start
+  html = html.replace(/(^|[\s,;.])\((\d{1,3})\)(?=[\s,;.]|$)/g, (_, pre, n) =>
+    `${pre}<sup class="ml-0.5"><a class="text-stone-500 hover:text-stone-900 underline decoration-dotted font-semibold" href="#fn-${lang}-${n}">${n}</a></sup>`,
+  )
+  // Biblical book reference (BookName Ch:V) — italic kai-ti styling
+  html = html.replace(
+    /\((([1-3]\s)?[A-Z][a-z]+\.?\s+\d+[:.]\d+(?:[-,–]\d+)?(?:f?\.?)?(?:\s*;\s*(?:[1-3]\s)?[A-Z][a-z]+\.?\s+\d+[:.]\d+(?:[-,–]\d+)?(?:f?\.?)?)*)\)/g,
+    '<span class="scripture-ref">($1)</span>',
+  )
+  // Chinese biblical ref ⟨書N:M⟩ or （羅 11:17-24）— very conservative pattern
+  html = html.replace(
+    /（([一二三]?[一-鿿]{1,3}\s*\d+[:：.]\d+(?:[-－―]\d+)?)）/g,
+    '<span class="scripture-ref">（$1）</span>',
+  )
+  return html
+}
+
 /** List item: `label：rest` -> bold label + rest. Falls back to renderRichText. */
 function renderListItem(text: string): string {
   const idx = text.indexOf('：')
@@ -539,36 +622,42 @@ const paragraphMode = computed(() => {
   return creed.value.versions.some(v => !!v.textKey)
 })
 
-const paragraphRows = ref<ParagraphRow[]>([])
+const docRows = ref<DocRow[]>([])
+const docFootnotes = ref<Record<string, FootnoteDef[]>>({})
 const paragraphsLoading = ref(false)
 
 async function recomputeParagraphs() {
   if (!paragraphMode.value) {
-    paragraphRows.value = []
+    docRows.value = []
+    docFootnotes.value = {}
     return
   }
   const zh = zhActive.value
   const en = enActive.value
   const orig = origActive.value
-  const tasks: Array<Promise<['zh' | 'en' | 'orig', Awaited<ReturnType<typeof loadCreedParagraphs>>]>> = []
-  if (zh?.textKey) tasks.push(loadCreedParagraphs(zh.textKey).then(p => ['zh', p] as const))
-  if (en?.textKey) tasks.push(loadCreedParagraphs(en.textKey).then(p => ['en', p] as const))
-  if (orig?.textKey) tasks.push(loadCreedParagraphs(orig.textKey).then(p => ['orig', p] as const))
+  const tasks: Array<Promise<['zh' | 'en' | 'orig', Awaited<ReturnType<typeof loadCreedDoc>>]>> = []
+  if (zh?.textKey) tasks.push(loadCreedDoc(zh.textKey).then(d => ['zh', d] as const))
+  if (en?.textKey) tasks.push(loadCreedDoc(en.textKey).then(d => ['en', d] as const))
+  if (orig?.textKey) tasks.push(loadCreedDoc(orig.textKey).then(d => ['orig', d] as const))
 
   if (tasks.length === 0) {
-    paragraphRows.value = []
+    docRows.value = []
+    docFootnotes.value = {}
     return
   }
 
   paragraphsLoading.value = true
   try {
     const results = await Promise.all(tasks)
-    const byLang: Record<string, Awaited<ReturnType<typeof loadCreedParagraphs>>> = {}
-    for (const [k, p] of results) byLang[k] = p
-    paragraphRows.value = alignParagraphs(byLang)
+    const byLang: Record<string, Awaited<ReturnType<typeof loadCreedDoc>>> = {}
+    for (const [k, d] of results) byLang[k] = d
+    const aligned = alignDocs(byLang)
+    docRows.value = aligned.rows
+    docFootnotes.value = aligned.footnotesByLang
   } catch (err) {
     console.error('[creed paragraph load]', err)
-    paragraphRows.value = []
+    docRows.value = []
+    docFootnotes.value = {}
   } finally {
     paragraphsLoading.value = false
   }
@@ -577,4 +666,32 @@ async function recomputeParagraphs() {
 watch([paragraphMode, zhActive, enActive, origActive], () => {
   recomputeParagraphs()
 }, { immediate: true })
+
+// ── Footnote helpers ─────────────────────────────────────────────
+const hasFootnotes = computed(() => {
+  const all = Object.values(docFootnotes.value)
+  return all.some(list => list && list.length > 0)
+})
+
+const footnoteNumbers = computed<string[]>(() => {
+  const set = new Set<string>()
+  for (const list of Object.values(docFootnotes.value)) {
+    for (const f of list ?? []) set.add(f.num)
+  }
+  return Array.from(set).sort((a, b) => parseInt(a, 10) - parseInt(b, 10))
+})
+
+function footnoteOf(lang: 'zh' | 'en' | 'orig', num: string): string {
+  return docFootnotes.value[lang]?.find(f => f.num === num)?.body ?? ''
+}
 </script>
+
+<style>
+/* Global (unscoped) so v-html inner spans also pick up the style. */
+.scripture-ref {
+  font-family: 'DFKai-SB', 'BiauKai', 'Kaiti TC', 'Kaiti SC', 'STKaiti', 'KaiTi', serif;
+  font-style: italic;
+  font-weight: 600;
+  color: #92400e;  /* amber-800 */
+}
+</style>
