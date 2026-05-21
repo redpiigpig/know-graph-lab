@@ -9,17 +9,18 @@ description: Operate the Know-Graph-Lab ebook pipeline end-to-end. Use when work
 
 End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL covers ingest, parse, OCR, standardize, DB back-fill, and reader-side features.
 
-## Current state (snapshot 2026-05-21 晚上 — 神學批次 + 神學重組 + standardize 全跑完)
+## Current state (snapshot 2026-05-21 深夜 — 雙 wrapper 並跑中消化 queue)
 
 | | 數量 |
 |---|---|
 | Total ebooks | **1,883** (今日 +39: 28 本地化 + 11 Schaff Creeds/History；其他 +295 已含於 1,844 基礎) |
-| Parsed (text 提取完成) | ~1,628 |
-| **OCR queue 待打** | ~113（76 ≤50MB Gemini route / 37 >50MB Haiku route） |
+| Parsed (text 提取完成) | ~1,663 |
+| **OCR queue 待打** | **78**（60 ≤50MB Gemini route / 18 >50MB Haiku route，0 missing） |
 | Permanent OCR fail | 0 |
 | **EPUB standardize → markdown** | 543 ✅ |
 | **PDF Plan A** | **956 ✅** (今日跑 --all 956/956 一次補齊) |
 | PDF Plan B v0 | 152 ✅ |
+| 今日 Haiku 完成 | **8 本**（1 main + 7 IVP；queue 從 ~113 → 78） |
 
 ### 10 大分類書數（2026-05-21 晚上 — 神學重組後）
 
@@ -44,9 +45,13 @@ End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL 
 
 ### 進行中的 OCR run（會跨 session 持續）
 
+- **目前同時跑兩個 wrapper**（2026-05-21 深夜狀況）：
+  - **Main daily run** — PID 19360 (起於 13:03)，正在打「亞伯拉罕」540 頁
+  - **IVP priority wrapper** — `_haiku_ivp_priority.sh` 從昨晚 19:55 持續，IVP 22 卷打完進 catch-all 階段，目前打「麥克斯·繆勒 宗教學導論」240 頁
+- ⚠ **雙 wrapper race risk**：同 queue 兩 worker 可能 grab 同一本，或 Drive WinError 32 file lock。實測目前在不同書安全；如果停掉 main daily 留 IVP 一個比較乾淨
 - **腳本：** `scripts/_haiku_autorestart.sh` — 自動重啟 wrapper，最多 15 iterations 後 exit
-- **當前 log：** `scripts/logs/ocr_haiku_2026-05-21.log`
-- **檢查進度：** `grep -c '✓ Haiku' scripts/logs/ocr_haiku_2026-05-21.log`
+- **當前 log：** `scripts/logs/ocr_haiku_2026-05-21.log` (main) + `scripts/logs/ocr_haiku_2026-05-21_ivp.log` (IVP)
+- **檢查進度：** `grep -c '✓ Haiku' scripts/logs/ocr_haiku_2026-05-21*.log`
 - **新 session 接續方法：**
   ```bash
   # 1. 確認 Anthropic OK + queue 還有書
