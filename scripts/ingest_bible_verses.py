@@ -951,6 +951,11 @@ def _ingest_fhl(version_code, fhl_version, dry_run=False):
                     text = (rec.get("bible_text") or "").strip()
                     if not text or not v_num:
                         continue
+                    # Strip HTML tags (FHL TCV embeds <h2>section</h2> + <br> etc.)
+                    text = re.sub(r"<[^>]+>", "", text)
+                    text = re.sub(r"\s+", " ", text).strip()
+                    if not text:
+                        continue
                     rows.append({
                         "book_code": our_code, "chapter": ch, "verse": v_num,
                         "version_code": version_code, "text": text,
