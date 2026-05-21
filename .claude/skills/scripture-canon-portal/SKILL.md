@@ -195,7 +195,10 @@ CREATE INDEX bible_commentary_verse ON bible_commentary (verse_ref);
 |---|---|
 | [data/creeds/types.ts](../../../data/creeds/types.ts) | `Creed` / `CreedVersion` / `CanonLawDoc` interface；`CreedLanguage` / `CreedCategory` / `CreedTradition` union；`TRADITION_LABEL_ZH` / `CATEGORY_LABEL_ZH` / `LANG_LABEL_ZH` 中文標籤對照（含 Joint2019 / Lutheran / Anglican 等所有中文 sub-version） |
 | [data/creeds/index.ts](../../../data/creeds/index.ts) | Creed registry — ECUMENICAL_COUNCILS / PROTESTANT_CONFESSIONS / ORTHODOX_CONFESSIONS / ECUMENICAL_DIALOGUES / APOSTOLIC_CREEDS arrays + `ALL_CREEDS` 統一排序 + `findCreed(slug)` lookup |
-| [data/creeds/ecumenical-councils/01-nicaea-325.ts](../../../data/creeds/ecumenical-councils/01-nicaea-325.ts) | 第一份信條範例（含多語版本） |
+| [data/creeds/ecumenical-councils/01-nicaea-325.ts](../../../data/creeds/ecumenical-councils/01-nicaea-325.ts) | 第一次尼西亞大公會議 325 原版（含多語） |
+| [data/creeds/ecumenical-councils/02-constantinople-381.ts](../../../data/creeds/ecumenical-councils/02-constantinople-381.ts) | 第一次君士坦丁堡 381 — 5 個中文版本（2019 五宗派合一譯本 / 思高 / 聖公 / 信義 / 正教）|
+| [data/creeds/apostolic-creeds/00-apostles.ts](../../../data/creeds/apostolic-creeds/00-apostles.ts) | 使徒信經 — 中文（聖公／信義／思高）+ 英 + 拉丁 |
+| [data/creeds/apostolic-creeds/01-athanasian.ts](../../../data/creeds/apostolic-creeds/01-athanasian.ts) | 亞他那修信經 — 中文（聖公／思高 placeholder）+ 英 + 拉丁 |
 | [pages/scripture-canon/index.vue](../../../pages/scripture-canon/index.vue) | Portal index — 5 子頁面卡片（只有 `/creeds` enabled，其餘 `待實作` tag） |
 | [pages/creeds/index.vue](../../../pages/creeds/index.vue) | List page — category filter + grouped list + tradition tags |
 | [pages/creeds/[slug].vue](../../../pages/creeds/[slug].vue) | Detail page — header / summary / 中文 → 英文 → 原文版本排序 / notes / related links |
@@ -206,15 +209,12 @@ CREATE INDEX bible_commentary_verse ON bible_commentary (verse_ref);
 > ⚠️ 不要在同一個 session 裡批量新增以下檔案，會被攔截。逐份做、做完 commit + push、再開新 session。
 > 每份檔的中文 / 英文 / 原文版本內容請從 Schaff 已下載 PDF + 該教會官網禮儀文本逐份找；本 SKILL.md 不存放正文。
 
-**最高優先（信經 5 份）**
+**最高優先（信經 — 剩 2 份）**
 
 | slug（檔名） | 子資料夾 | order | 來源描述 |
 |---|---|---|---|
-| `ecumenical-councils/02-` 君士坦丁堡 381 | ecumenical-councils | 2 | Schaff Creeds Vol 2 + 香港五宗派 2019 合一譯本 + 5 個中文禮儀版本 |
 | `ecumenical-councils/03-` 以弗所 431 | ecumenical-councils | 3 | Schaff NPNF2 Vol 14 + Cyril 十二章 |
 | `ecumenical-councils/04-` 迦克墩 451 定義 | ecumenical-councils | 4 | Schaff Creeds Vol 2 + Schaff NPNF2 Vol 14 |
-| `apostolic-creeds/00-apostles` 使徒信經 | apostolic-creeds（待建子資料夾） | 0 | Schaff Creeds Vol 2 + 各禮儀本 |
-| `apostolic-creeds/00-athanasian` 亞他那修信經 | apostolic-creeds | 0 | Schaff Creeds Vol 2 + 拉丁原文 + 中文禮儀本 |
 
 **第二批（大公會議 5-21 + 改革宗信條）**：見下方 `/creeds` 章節的完整清單；同樣逐份新增。
 

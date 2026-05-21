@@ -11,9 +11,11 @@ import type { Creed } from './types'
 
 // ── ecumenical-councils ──────────────────────────────────────
 import { nicaea325 } from './ecumenical-councils/01-nicaea-325'
+import { constantinople381 } from './ecumenical-councils/02-constantinople-381'
 
 export const ECUMENICAL_COUNCILS: Creed[] = [
   nicaea325,
+  constantinople381,
 ]
 
 // ── protestant-confessions ───────────────────────────────────
@@ -26,7 +28,13 @@ export const ORTHODOX_CONFESSIONS: Creed[] = []
 export const ECUMENICAL_DIALOGUES: Creed[] = []
 
 // ── apostolic-creeds（使徒信經 + 亞他那修 + 迦克墩 etc.） ─────
-export const APOSTOLIC_CREEDS: Creed[] = []
+import { apostlesCreed } from './apostolic-creeds/00-apostles'
+import { athanasianCreed } from './apostolic-creeds/01-athanasian'
+
+export const APOSTOLIC_CREEDS: Creed[] = [
+  apostlesCreed,
+  athanasianCreed,
+]
 
 // ── 統一列表（依 category + order 排序） ──────────────────────
 export const ALL_CREEDS: Creed[] = [
