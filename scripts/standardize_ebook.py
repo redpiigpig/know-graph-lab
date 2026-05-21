@@ -1453,11 +1453,13 @@ def update_db(book_id, chunks):
     # publisher metadata we managed to extract from 版權頁. Fields are only
     # included when present so we never overwrite a manually-set value with
     # null on a later re-run.
+    now = datetime.utcnow().isoformat() + "Z"
     patch = {
         "chunk_count": len(chunks),
         "total_chars": total_chars,
         "total_pages": len(chunks),
-        "parsed_at": datetime.utcnow().isoformat() + "Z",
+        "parsed_at": now,
+        "standardized_at": now,
     }
     meta = _extract_publisher_metadata(chunks)
     if meta["full_title"]:
@@ -1499,17 +1501,22 @@ def update_db(book_id, chunks):
             return
 
 
-def fetch_books_by_category(category: str = None, subcategory: str = None, limit: int = None):
+def fetch_books_by_category(category: str = None, subcategory: str = None, limit: int = None,
+                            only_fresh: bool = False):
     """Return list of parsed EPUB books, optionally filtered by category. Skips
     PDFs (script can't handle them), books without parsed content, and books
-    missing on disk. Pass category=None to fetch every parsed EPUB."""
+    missing on disk. Pass category=None to fetch every parsed EPUB.
+    only_fresh=True restricts to books not yet standardized (daily-bat use)."""
     params = (
         "select=id,title,author,file_type,file_path,parsed_at,chunk_count,category"
         "&parsed_at=not.is.null"
         "&file_type=eq.epub"
+        "&parse_error=is.null"
         "&order=category,title"
         "&limit=2000"
     )
+    if only_fresh:
+        params += "&standardized_at=is.null"
     if category:
         params += f"&category=eq.{requests.utils.quote(category)}"
     if subcategory:
@@ -1607,9 +1614,10 @@ def _maybe_auto_split(ebook_id: str, book: dict, chunks: list[dict]) -> None:
 
 
 def cmd_batch(category: str = None, subcategory: str = None, limit: int = None,
-              dry_run: bool = False, no_r2: bool = False):
-    books = fetch_books_by_category(category, subcategory, limit)
-    label = "ALL categories" if not category else f"Category: {category}{f' / {subcategory}' if subcategory else ''}"
+              dry_run: bool = False, no_r2: bool = False, only_fresh: bool = False):
+    books = fetch_books_by_category(category, subcategory, limit, only_fresh=only_fresh)
+    suffix = " (fresh only)" if only_fresh else ""
+    label = ("ALL categories" if not category else f"Category: {category}{f' / {subcategory}' if subcategory else ''}") + suffix
     print(label)
     print(f"Eligible EPUBs: {len(books)}")
     if not books:
@@ -1654,10 +1662,11 @@ def main():
     args = sys.argv[1:]
     dry_run = "--dry-run" in args
     no_r2 = "--no-r2" in args
+    only_fresh = "--only-fresh" in args
 
     if "--all" in args:
         limit = int(args[args.index("--limit") + 1]) if "--limit" in args else None
-        cmd_batch(category=None, limit=limit, dry_run=dry_run, no_r2=no_r2)
+        cmd_batch(category=None, limit=limit, dry_run=dry_run, no_r2=no_r2, only_fresh=only_fresh)
         return
 
     if "--category" in args:
@@ -1668,7 +1677,7 @@ def main():
         limit = None
         if "--limit" in args:
             limit = int(args[args.index("--limit") + 1])
-        cmd_batch(category, subcategory, limit, dry_run, no_r2)
+        cmd_batch(category, subcategory, limit, dry_run, no_r2, only_fresh)
         return
 
     # Single-book mode

@@ -71,6 +71,16 @@ echo --- split_ebook_set --- >> "%LOGFILE%"
 "%PY%" scripts\split_ebook_set.py run --all >> "%LOGFILE%" 2>&1
 echo step4b exit=%ERRORLEVEL% >> "%LOGFILE%"
 
+REM Step 5: standardize freshly-parsed books (EPUB → markdown chapters,
+REM PDF → Plan A polished pages). --only-fresh filters to standardized_at IS NULL
+REM so it's a daily no-op once the catalogue is fully standardized.
+echo --- standardize_ebook --- >> "%LOGFILE%"
+"%PY%" scripts\standardize_ebook.py --all --only-fresh >> "%LOGFILE%" 2>&1
+echo step5a exit=%ERRORLEVEL% >> "%LOGFILE%"
+echo --- standardize_pdf_lite --- >> "%LOGFILE%"
+"%PY%" scripts\standardize_pdf_lite.py --all --only-fresh >> "%LOGFILE%" 2>&1
+echo step5b exit=%ERRORLEVEL% >> "%LOGFILE%"
+
 echo === Daily run ended %DATE% %TIME% (gemini-exit %GEMINI_EXIT%) === >> "%LOGFILE%"
 
 endlocal

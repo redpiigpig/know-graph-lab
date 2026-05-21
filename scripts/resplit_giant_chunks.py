@@ -39,6 +39,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import sys
 from datetime import datetime
@@ -60,24 +61,27 @@ PREVIEW_LEN = 200
 
 
 def fetch_oversized_books(threshold: int = GIANT_THRESHOLD) -> list[dict]:
-    """List books that have at least one chunk >= threshold."""
-    # Postgres can't easily express "any chunk > N" without join; use REST.
-    # Fetch oversized chunks first.
-    chunks = []
-    offset = 0
-    while True:
-        r = requests.get(
-            f"{se.URL}/rest/v1/ebook_chunks?select=ebook_id,char_count"
-            f"&char_count=gt.{threshold}&order=ebook_id&limit=1000&offset={offset}",
-            headers=se.H_GET, timeout=60)
-        page = r.json() or []
-        if not page:
-            break
-        chunks.extend(page)
-        if len(page) < 1000:
-            break
-        offset += 1000
-    ids = sorted(set(c["ebook_id"] for c in chunks))
+    """List books that have at least one chunk >= threshold.
+    Scans local JSONL files (source of truth) — the ebook_chunks DB scan
+    times out on Supabase free tier with `char_count > N` predicate."""
+    from pathlib import Path
+    chunks_dir = Path(os.environ.get("EBOOK_CHUNKS_DIR")
+                      or r"G:\我的雲端硬碟\資料\電子書\_chunks")
+    ids = []
+    for jp in chunks_dir.glob("*.jsonl"):
+        try:
+            with open(jp, "r", encoding="utf-8") as fh:
+                for line in fh:
+                    try:
+                        obj = json.loads(line)
+                    except Exception:
+                        continue
+                    if len(obj.get("content") or "") > threshold:
+                        ids.append(jp.stem)
+                        break
+        except Exception:
+            continue
+    ids = sorted(set(ids))
     if not ids:
         return []
     out = []

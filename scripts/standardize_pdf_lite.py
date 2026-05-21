@@ -256,10 +256,12 @@ def update_db(book_id: str, chunks: list[dict], metadata: dict) -> None:
     import requests
     total_chars = sum(len(c.get("content") or "") for c in chunks)
 
+    now = datetime.utcnow().isoformat() + "Z"
     patch = {
         "chunk_count": len(chunks),
         "total_chars": total_chars,
-        "parsed_at": datetime.utcnow().isoformat() + "Z",
+        "parsed_at": now,
+        "standardized_at": now,
     }
     # Same metadata mapping as standardize_ebook.update_db.
     if metadata.get("full_title"):
@@ -351,15 +353,18 @@ def standardize_one(ebook_id: str, dry_run: bool = False, no_r2: bool = False) -
     return len(chunks), None
 
 
-def fetch_pdfs_by_category(category: str | None = None, subcategory: str | None = None, limit: int | None = None):
+def fetch_pdfs_by_category(category: str | None = None, subcategory: str | None = None,
+                            limit: int | None = None, only_fresh: bool = False):
     import requests
     params = (
         "select=id,title,author,file_type,file_path,parsed_at,chunk_count,category"
         "&parsed_at=not.is.null"
         "&file_type=eq.pdf"
+        "&parse_error=is.null"
         "&order=category,title"
         "&limit=2000"
     )
+    if only_fresh:  params += "&standardized_at=is.null"
     if category:    params += f"&category=eq.{requests.utils.quote(category)}"
     if subcategory: params += f"&subcategory=eq.{requests.utils.quote(subcategory)}"
     r = requests.get(f"{se.URL}/rest/v1/ebooks?{params}", headers=se.H_GET, timeout=30)
@@ -371,9 +376,11 @@ def fetch_pdfs_by_category(category: str | None = None, subcategory: str | None 
 
 
 def cmd_batch(category: str | None = None, subcategory: str | None = None,
-              limit: int | None = None, dry_run: bool = False, no_r2: bool = False) -> None:
-    books = fetch_pdfs_by_category(category, subcategory, limit)
-    label = "ALL categories" if not category else f"Category: {category}{f' / {subcategory}' if subcategory else ''}"
+              limit: int | None = None, dry_run: bool = False, no_r2: bool = False,
+              only_fresh: bool = False) -> None:
+    books = fetch_pdfs_by_category(category, subcategory, limit, only_fresh=only_fresh)
+    suffix = " (fresh only)" if only_fresh else ""
+    label = ("ALL categories" if not category else f"Category: {category}{f' / {subcategory}' if subcategory else ''}") + suffix
     print(label)
     print(f"Eligible PDFs: {len(books)}")
     if not books:
@@ -416,6 +423,8 @@ def main() -> None:
     p.add_argument("--limit", type=int, help="batch cap")
     p.add_argument("--dry-run", action="store_true")
     p.add_argument("--no-r2", action="store_true")
+    p.add_argument("--only-fresh", action="store_true",
+                   help="skip books that already have standardized_at set (daily-bat idempotency)")
     args = p.parse_args()
 
     if args.ebook_id:
@@ -425,7 +434,8 @@ def main() -> None:
             sys.exit(1)
         print(f"✓ {n} chunks{' (dry-run)' if args.dry_run else ''}")
     elif args.all or args.category or args.subcategory:
-        cmd_batch(args.category, args.subcategory, args.limit, args.dry_run, args.no_r2)
+        cmd_batch(args.category, args.subcategory, args.limit, args.dry_run, args.no_r2,
+                  only_fresh=args.only_fresh)
     else:
         p.print_help()
         sys.exit(1)
