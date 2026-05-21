@@ -67,12 +67,22 @@ def upsert_verses(rows, batch_size=500, dry_run=False):
     """Upsert into bible_verses via PostgREST.
 
     rows: list of {book_code, chapter, verse, version_code, text}
+    Dedupes within the batch on (book, ch, v, version) keeping the longest text
+    — PostgREST refuses ON CONFLICT batches with duplicate keys.
     """
     if dry_run:
         print(f"  [dry-run] would upsert {len(rows)} rows; sample: {rows[:2]}")
         return
     if not rows:
         return
+    # Dedupe: keep the row with the longest text for each PK
+    dedup = {}
+    for r in rows:
+        k = (r["book_code"], r["chapter"], r["verse"], r["version_code"])
+        prev = dedup.get(k)
+        if not prev or len(r["text"]) > len(prev["text"]):
+            dedup[k] = r
+    rows = list(dedup.values())
     total = len(rows)
     done = 0
     for i in range(0, total, batch_size):
@@ -338,28 +348,28 @@ LXX_URL = (
     "https://raw.githubusercontent.com/eliranwong/LXX-Rahlfs-1935/master/"
     "11_end-users_files/MyBible/Bibles/LXX_final_main.csv"
 )
-# eliranwong uses MySword-style book ids: 10=Gen, 20=Exo, ..., 670=Sir, 700=Tobit, etc.
-# Reference: https://github.com/eliranwong/LXX-Rahlfs-1935/blob/master/.../books_main.csv
+# eliranwong/LXX-Rahlfs-1935 book IDs from books_main.csv.
+# Note: 150 = Ezra (Esdras B/II 1-10), 160 = Neh (Esdras B/II 11-23).
 LXX_BOOK_IDS = {
     10: "gen", 20: "exo", 30: "lev", 40: "num", 50: "deu",
     60: "jos", 70: "jdg", 80: "rut",
     90: "1sa", 100: "2sa", 110: "1ki", 120: "2ki",
     130: "1ch", 140: "2ch",
-    150: "1es",  # 1 Esdras (LXX Esdras A)
-    160: "ezr",  # 2 Esdras (LXX Esdras B = Ezra-Neh; we split below)
-    190: "est", 200: "jdt", 210: "tob",
-    220: "1ma", 230: "2ma", 240: "3ma", 250: "4ma",
-    220.5: "1ma",  # safety
-    260: "psa", 265: "ps2",  # Psalm 151
-    270: "pro", 280: "ecc", 290: "sng",
-    300: "job", 305: "wis", 310: "sir",
-    315: "ps2",  # Odes/Pss of Solomon possibly — exclude
-    320: "hos", 330: "amo", 340: "mic", 350: "jol", 360: "oba",
-    370: "jon", 380: "nam", 390: "hab", 400: "zep", 410: "hag",
-    420: "zec", 430: "mal",
-    440: "isa", 450: "jer", 460: "bar", 470: "lam", 480: "epj",
-    490: "ezk", 500: "sus", 510: "dan", 520: "bel",
-    # Variants (LXX2 columns) skipped — main file uses these.
+    150: "ezr", 160: "neh",   # LXX Esdras B/II split into Ezra+Neh
+    165: "1es",                # LXX Esdras A/I = our 1 Esdras
+    170: "tob", 180: "jdt", 190: "est",
+    220: "job", 230: "psa", 240: "pro",
+    250: "ecc", 260: "sng",
+    270: "wis", 280: "sir",
+    290: "isa", 300: "jer", 310: "lam",
+    315: "epj", 320: "bar",
+    325: "sus", 330: "ezk", 340: "dan", 345: "bel",
+    350: "hos", 360: "jol", 370: "amo", 380: "oba", 390: "jon",
+    400: "mic", 410: "nam", 420: "hab", 430: "zep",
+    440: "hag", 450: "zec", 460: "mal",
+    462: "1ma", 464: "2ma", 466: "3ma", 467: "4ma",
+    # Skipped (not in our canon list): 232 = PsSol (Psalms of Solomon),
+    # 800 = Od (Odes — pieces of other books); add later if needed.
 }
 LXX_STRIP = re.compile(r"<S>\d+</S>|<m>[^<]+</m>|<f>[^<]*</f>|<n>[^<]*</n>")
 
@@ -447,9 +457,9 @@ def _clean_cuv_text(html):
     return re.sub(r'\s+', ' ', html).strip()
 
 
-def ingest_cuv2010(dry_run=False, only_book=None):
+def ingest_cuv2010(dry_run=False, only_book=None, resume=False):
     print("→ Ingesting 和合本2010 RCUV (HKBS, scrape ~30-60 min)")
-    if not dry_run and only_book is None:
+    if not dry_run and only_book is None and not resume:
         clear_version("cuv2010")
 
     # Get chapter counts from DB
@@ -459,12 +469,35 @@ def ingest_cuv2010(dry_run=False, only_book=None):
     )
     chapter_counts = {row["code"]: row["chapter_count"] for row in r.json()}
 
+    # Resume mode: skip books that already have ≥80% of their expected verses in DB.
+    # Use Management API for a proper DISTINCT scan (PostgREST list view caps at 1000 rows).
+    done_books = set()
+    if resume:
+        try:
+            ref = SUPA_URL.replace("https://", "").split(".")[0]
+            mgmt_resp = requests.post(
+                f"https://api.supabase.com/v1/projects/{ref}/database/query",
+                headers={
+                    "Authorization": f"Bearer {ENV.get('SUPABASE_ACCESS_TOKEN', '')}",
+                    "content-type": "application/json",
+                },
+                json={"query": "SELECT DISTINCT book_code FROM bible_verses WHERE version_code='cuv2010';"},
+                timeout=30,
+            )
+            for row in mgmt_resp.json():
+                done_books.add(row["book_code"])
+        except Exception as e:
+            print(f"  ! resume scan failed: {e}; doing full re-scrape", file=sys.stderr)
+        print(f"  resume mode: {len(done_books)} books already in DB, skipping", file=sys.stderr)
+
     session = requests.Session()
     session.headers["User-Agent"] = "Mozilla/5.0 (research, Bible parallel study)"
     rows = []
     total_verses = 0
     for book_code, hkbs_code in CUV_BOOK_MAP.items():
         if only_book and book_code != only_book:
+            continue
+        if resume and book_code in done_books:
             continue
         n_chapters = chapter_counts.get(book_code, 0)
         if not n_chapters:
@@ -576,6 +609,8 @@ def main():
                     choices=["sblgnt", "vul", "wlc", "lxx", "cuv2010", "niv", "all"])
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--book", help="Limit to one book code (for testing)")
+    ap.add_argument("--resume", action="store_true",
+                    help="CUV2010: skip books already in DB")
     args = ap.parse_args()
 
     if args.version == "all":
@@ -588,7 +623,8 @@ def main():
         "vul": ingest_vul,
         "wlc": ingest_wlc,
         "lxx": ingest_lxx,
-        "cuv2010": lambda dry_run=False: ingest_cuv2010(dry_run=dry_run, only_book=args.book),
+        "cuv2010": lambda dry_run=False: ingest_cuv2010(
+            dry_run=dry_run, only_book=args.book, resume=args.resume),
         "niv": ingest_niv,
     }
     fn_map[args.version](dry_run=args.dry_run)

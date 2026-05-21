@@ -1,11 +1,11 @@
 ---
 name: scripture-canon-portal
-description: 五個基督教經典/傳統對照工具的入口（/scripture 聖經多版本+教父註釋+各教會次經第二正典 / /creeds 21 次大公會議+各教會尼西亞信經+新教信條全譜 / /canon-law 教會法規 / /fathers 教父著作搜索 / /apocrypha 典外文獻搜索）。Status: **實作中 — /creeds MVP shell 已上線（2026-05-21）**。
+description: 五個基督教經典/傳統對照工具的入口（/scripture 聖經多版本+教父註釋+各教會次經第二正典 / /creeds 21 次大公會議+各教會尼西亞信經+新教信條全譜 / /canon-law 教會法規 / /fathers 教父著作搜索 / /apocrypha 典外文獻搜索）。Status: **實作中 — /creeds MVP + /scripture 6 版本平行對照（CUV2010+NIV+WLC+LXX+SBLGNT+Vulgate, ~150K verses）已上線（2026-05-21）**。
 ---
 
 # Scripture, Tradition, Canon, Fathers, Apocrypha Portal
 
-> 🟢 **Status**: 實作中 2026-05-21。`/scripture-canon` portal + `/creeds` list + detail page + 一份範例信條已上線；其餘信條檔依「逐份新增」流程補。
+> 🟢 **Status**: 實作中 2026-05-21。`/scripture-canon` portal + `/creeds` list + `/scripture` 多版本平行對照（86 卷 × 6 版本）+ 一份範例信條已上線；其餘信條檔依「逐份新增」流程補。
 >
 > 入口卡片 = home / 工作台多一張「📜 經典對照與註釋」卡片，點進 5 個子頁面。本文檔記錄範圍、方法、已有資料源、外部源頭清單。
 
@@ -189,7 +189,66 @@ CREATE INDEX bible_commentary_verse ON bible_commentary (verse_ref);
 
 ## 🗂️ 目前實作進度（2026-05-21 snapshot）
 
-### ✅ 已上線（MVP shell）
+### ✅ /scripture 上線 — 6 版本平行對照（2026-05-21）
+
+**Schema**：[database/bible-schema.sql](../../../database/bible-schema.sql) — `bible_books` (86 卷 × 8 教會 canon flags) / `bible_versions` (6 版本) / `bible_verses` (book+ch+v+version PK + GIN FTS)。
+
+**已匯入版本（~150K verses）**：
+
+| code | 版本 | 範圍 | 節數 | 來源 | 版權 |
+|---|---|---|---|---|---|
+| `cuv2010` | 和合本2010 (RCUV) | 新教 66 | ~30K（scrape 中） | rcuv.hkbs.org.hk | © HKBS（站內研究用） |
+| `niv`     | NIV 新國際譯本 | 新教 66 | 31087 | aruljohn/Bible-niv | © Biblica |
+| `wlc`     | WLC 希伯來 OT | OT 39 | 23213 | openscriptures/morphhb | PD + CC-BY morph |
+| `lxx`     | LXX Rahlfs 1935 | OT + 第二正典 | 24982 | eliranwong/LXX-Rahlfs-1935 | CC BY-NC-SA |
+| `sblgnt`  | SBL Greek NT | NT 27 | 7939 | LogosBible/SBLGNT | CC BY 4.0 |
+| `vul`     | Clementine Vulgate | 全 73 卷（含次經）| 31005 | BibleGet-I-O/Clementine-Vulgate | PD |
+
+**UI**：
+- [pages/scripture/index.vue](../../../pages/scripture/index.vue) — 86 卷 grid，按 testament 分組 + 5 教會 canon filter
+- [pages/scripture/[book]/[chapter].vue](../../../pages/scripture/[book]/[chapter].vue) — 3-column dropdown 平行對照（中文／英文／原文），可 `+ 對照欄` 加 column
+- 預設 picker：中文→ CUV2010；英文→ NIV；原文→ OT 用 WLC、NT 用 SBLGNT、次經 用 LXX
+
+**Server API**：
+- [server/api/scripture/books.get.ts](../../../server/api/scripture/books.get.ts) — 列出所有 bible_books
+- [server/api/scripture/versions.get.ts](../../../server/api/scripture/versions.get.ts) — 列出所有 bible_versions
+- [server/api/scripture/chapter.get.ts](../../../server/api/scripture/chapter.get.ts) — `?book=jhn&chapter=1` → `{book, chapter, verses: [{verse, byVersion: {cuv2010: '...', niv: '...', ...}}]}`
+
+**Ingest 工具**：
+- [scripts/apply-bible-schema.mjs](../../../scripts/apply-bible-schema.mjs) — Apply migration via Management API
+- [scripts/ingest_bible_verses.py](../../../scripts/ingest_bible_verses.py) — 統一 ingest 腳本，CLI： `python scripts/ingest_bible_verses.py {sblgnt|vul|wlc|lxx|cuv2010|niv|all} [--book CODE] [--resume] [--dry-run]`
+  - 公版版本：直接 GitHub raw fetch + parse + PostgREST upsert（batch 500）
+  - CUV2010：HKBS rcuv.hkbs.org.hk scrape，per-chapter，polite 0.25s rate, resume mode
+  - 上載時自動 dedupe（同一 batch 同 PK 取最長 text；繞過 PostgREST ON CONFLICT 限制）
+
+### 🟡 Phase 2 backlog — /scripture 擴充
+
+> 用戶要求 widening：除預設 CUV2010+NIV+WLC+SBLGNT+Vulgate 外，「也可以選其他中文版本來對照」 + 「也可以有其他英文版本」 + 「也可以預設其他種類型的原文」。但已商議：MVP 不做「原文配對譯本」自動切換 mode（如 LXX→思高、Vulgate→Douay-Rheims），用戶比對 CUV/NIV 即能看出文本傳統差異；之後若需求再加。
+
+**待補版本**（每個都要單獨 ingest 腳本 + 加 bible_versions row + 更新 `data/scripture/version-registry`）：
+
+| 待補版本 | 來源 | 版權 | 備註 |
+|---|---|---|---|
+| **和合本1919** | bible.com / digitalbible.io | ✓ PD | 中文公版 baseline（無「上主」等 2010 修訂） |
+| **思高聖經** | 思高聖經學會 | © | 天主教中文標準；含次經第二正典 |
+| **新譯本 CNV** | 漢語聖經協會 | © | 漢語學者譯，相對直譯 |
+| **呂振中譯本** | bible.com | ✓ PD（作者 1970 +50） | 文體典雅 |
+| **中文次經（香港聖公會版）** | 香港聖公會出版 | © | user 強調要找；天主教＋東正教＋東方教會共用次經中譯 |
+| KJV | bible.org / berean-bible | ✓ PD | 英文公版 baseline |
+| ESV | Crossway | © | 學界常用 |
+| NRSV | NCC | © | 含次經，學術標準 |
+| Peshitta NT | peshitta.org | ✓ PD | 敘利亞東方教會 22 卷 NT |
+| Bohairic Coptic NT | copticbible.org | ✓ PD | 科普特正教傳統 |
+| Armenian Bible | digilibraries | ✓ PD | 亞美尼亞使徒 |
+| Ge'ez 衣索匹亞 | ethiopicbible.com | 部分 | 數位化稀少；含 Jubilees / 1 Enoch |
+| Targum 亞蘭 OT | sefaria.org | ✓ | 拉比傳統補充 |
+
+**Gap fix（已知）**：
+- LXX skipped book IDs `[165, 170, 180, 232, 325, 345, 462, 464, 466, 467, 800]` — LXX2 variants / Odes / Pss of Solomon 等；下次補映射
+- Vulgate `epj` (Letter of Jeremiah)：在 `Bar.lat` 第六章；要重新 parse 拆出
+- 次經 ingest：CUV2010/NIV 都不含次經；LXX + Vulgate 已含，但需要核對章節對應（如 LXX Daniel 與 Hebrew Daniel 不同編號）
+
+### ✅ /creeds 已上線（MVP shell）
 
 | 檔案 | 內容 |
 |---|---|
