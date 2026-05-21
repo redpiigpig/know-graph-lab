@@ -151,22 +151,54 @@ type ChapterRes = {
   verses: { verse: number; byVersion: Record<string, string> }[]
 }
 
-const { data: books } = await useFetch<BibleBook[]>('/api/scripture/books', {
-  key: 'scripture-books',
-  default: () => [],
-})
-const { data: versions } = await useFetch<BibleVersion[]>('/api/scripture/versions', {
-  key: 'scripture-versions',
-  default: () => [],
+const supabase = useSupabaseClient()
+const books = ref<BibleBook[]>([])
+const versions = ref<BibleVersion[]>([])
+const chapterData = ref<ChapterRes | null>(null)
+const pending = ref(true)
+const error = ref<string | null>(null)
+
+async function authHeaders() {
+  const { data: { session } } = await supabase.auth.getSession()
+  return session ? { Authorization: `Bearer ${session.access_token}` } : {}
+}
+
+async function loadBootstrap() {
+  const headers = await authHeaders()
+  const [b, v] = await Promise.all([
+    $fetch<BibleBook[]>('/api/scripture/books', { headers }),
+    $fetch<BibleVersion[]>('/api/scripture/versions', { headers }),
+  ])
+  books.value = b
+  versions.value = v
+}
+
+async function loadChapter() {
+  pending.value = true
+  error.value = null
+  try {
+    const headers = await authHeaders()
+    chapterData.value = await $fetch<ChapterRes>('/api/scripture/chapter', {
+      headers,
+      query: { book: bookCode.value, chapter: chapterNum.value },
+    })
+    // Reset columns so the defaults re-pick when chapter changes between OT and NT
+    columns.value = []
+  } catch (e: any) {
+    error.value = e?.message || String(e)
+  } finally {
+    pending.value = false
+  }
+}
+
+onMounted(async () => {
+  await loadBootstrap()
+  await loadChapter()
 })
 
-const { data: chapterData, pending, error } = await useFetch<ChapterRes>(
-  '/api/scripture/chapter',
-  {
-    query: { book: bookCode, chapter: chapterNum },
-    watch: [bookCode, chapterNum],
-  }
-)
+watch([bookCode, chapterNum], () => {
+  if (books.value.length > 0) loadChapter()
+})
 
 useHead({
   title: () => chapterData.value

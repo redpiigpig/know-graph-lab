@@ -85,7 +85,25 @@ type BibleBook = {
   chapter_count: number | null
 }
 
-const { data: books, pending, error } = await useFetch<BibleBook[]>('/api/scripture/books')
+const supabase = useSupabaseClient()
+const books = ref<BibleBook[]>([])
+const pending = ref(true)
+const error = ref<string | null>(null)
+
+async function load() {
+  const { data: { session } } = await supabase.auth.getSession()
+  if (!session) { pending.value = false; return }
+  try {
+    books.value = await $fetch<BibleBook[]>('/api/scripture/books', {
+      headers: { Authorization: `Bearer ${session.access_token}` },
+    })
+  } catch (e: any) {
+    error.value = e?.message || String(e)
+  } finally {
+    pending.value = false
+  }
+}
+onMounted(load)
 
 type CanonKey = 'all' | 'protestant' | 'catholic' | 'orthodox' | 'ethiopian' | 'syriac'
 const activeCanon = ref<CanonKey>('all')
