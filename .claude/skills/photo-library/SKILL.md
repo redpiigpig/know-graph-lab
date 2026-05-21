@@ -53,7 +53,15 @@ Get-ChildItem scripts\logs\prewarm_retry_*.log -Exclude prewarm_retry_loop*.log 
 Get-Content scripts\logs\prewarm_retry_loop2.log -Tail 10
 ```
 
-**判定完成**：最新 try log 結尾出現 `=== Done` + Loop log 寫 `All done after N tries`。預計 hongshi 35,927 張需再跑 ~15-20 小時（已過 ~4,300 張）。
+**判定完成**：最新 try log 結尾出現 `=== Done` + Loop log 寫 `All done after N tries`。
+
+**最新進度（2026-05-21 10:35）**：
+- File pointer **13,400 / 35,927 ≈ 37%**
+- 本 try 新生成 thumbs：**7,986**（其餘 18,770 從 cache skip + 1 skiplist + 42 持續 err = HEIC plugin 解不開）
+- Disk cache 累計 **51,852 thumbs / 5.18 GB**
+- 速度（08:38–10:35 兩小時觀察）：~29 files/min（一檔 × 480w + 1600w = 58 thumbs/min），Drive 越進到 113-114 年（較近期上傳）越冷越慢
+- Try 1 在 9,400 檔時 Drive I/O 中斷 crash（exit -1073741818 = STATUS_IN_PAGE_ERROR），try 2 自動 relaunch 從 8:19 跑到現在
+- 剩 22,527 檔，估再 **~13 小時**完成（早上 1 檔/秒 → 現在 ~0.5 檔/秒，越往後越冷）
 
 **手動 kill**：`Stop-Process -Id 18652 -Force; Get-Process node | Stop-Process -Force`
 
