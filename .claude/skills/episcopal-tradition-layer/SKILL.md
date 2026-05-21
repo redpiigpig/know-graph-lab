@@ -1,6 +1,6 @@
 ---
 name: episcopal-tradition-layer
-description: 使徒統緒族譜圖（/genealogy/episcopal-tree）的資料維護政策、教座清單、傳統主教列表規則。Use when 加新教座／補主教鏈／修使徒寶座傳統名單／調整 SPINE_DEFS／處理教座分裂 vs 並行對立 vs 改革轉變。
+description: 使徒統緒族譜圖（/genealogy/episcopal-tree）+ 主教表格／卡片（/genealogy/episcopal）的資料維護政策、教座清單、傳統主教列表規則、肖像回填 pipeline。Use when 加新教座／補主教鏈／修使徒寶座傳統名單／調整 SPINE_DEFS／處理教座分裂 vs 並行對立 vs 改革轉變／補主教肖像。
 ---
 
 # 使徒統緒族譜圖 — 資料維護政策
@@ -254,3 +254,69 @@ SQL 補丁批檔：[database/episcopal-fill-phase1.sql](../../database/episcopal
 - `episcopal-incomplete-bishops.txt`：主教不齊的教座清單（依「宗主教座 ≥50」「自主分裂 ≥5」「使徒立座 ≥3」「現代教座 ≥1」分類）
 
 查清單 SQL：`SELECT see_zh, church, tradition, founded_year, split_year FROM episcopal_sees ORDER BY founded_year`。
+
+## BishopCard 主教卡片（`/genealogy/episcopal`）
+
+點表格 row → 開中央 modal 大彈窗，顯示該主教完整資訊：
+
+**12 個區塊（components/genealogy/BishopCard.vue）**：
+1. 肖像區（160×200px）─ `episcopal_succession.portrait_url`（新欄）／無 → 套 7 tradition fallback SVG
+2. 標題 ─ 中文名 + 英文名 + 任次 #N
+3. 教座 ─ see_zh + church + tradition badge（用 7 spine 色）
+4. 任期 ─ start_year – end_year + 年數
+5. 身份 ─ status badge（正統／對立／廢黜後復位／爭議）+ end_reason
+6. 任命者 ─ appointed_by 文字
+7. 按立者 ─ consecrator_bishop_id → 可點跳到該主教卡片
+8. 被他按立的人 ─ 反查 consecrator_bishop_id（reverse query）
+9. 教導關係 ─ `church_teachings` 中的師徒線
+10. 重要事件 / 神學立場 ─ notes 全文
+11. 史料來源 ─ sources（Eusebius HE / Liber Pontificalis 等）
+12. 上一任／下一任 ─ 同 see 前後 ←→ 翻頁
+
+**API**：[server/api/genealogy/episcopal-bishop/[id].get.ts](../../server/api/genealogy/episcopal-bishop/[id].get.ts) — 含 consecrator + consecrated + teachings 三個 reverse join。
+
+**7 tradition fallback SVG**（[public/episcopal-portraits/](../../public/episcopal-portraits/)）：每個 tradition 一張通用法冠 silhouette，無 portrait 時自動套用：
+- 羅馬公教 `#dc2626` 紅 → 三重冕 tiara
+- 希臘正教 `#2563eb` 藍 → 拜占庭主教冠
+- 科普特正教 `#d97706` 橙 → 科普特十字 + 頭巾
+- 敘利亞正教 `#0891b2` 青 → 敘利亞十字 + masnafto
+- 亞美尼亞 `#9333ea` 紫 → vegharakir 頭冠
+- 亞述景教 `#475569` 灰 → 亞述十字 + 頭巾
+- 基督新教 `#16a34a` 綠 → 簡約十架 + 開卷聖經
+
+## Portrait 回填 pipeline（Haiku batch + Wikipedia）
+
+`episcopal_succession.portrait_url`（TEXT）為新增欄。回填以 **Haiku agent → Wikipedia REST API** 為主軸：
+
+```
+[prep] scripts/episcopal-portrait-prep-batches.py
+  → 拉所有 portrait_url IS NULL & name_en IS NOT NULL 的候選
+  → 依「著名教座+現代→古早」排序切 25/batch
+  → 寫到 c:/tmp/episcopal_batches/batch_NNN.jsonl
+
+[resolve] 主 Claude spawn Haiku Agent（subagent_type=general-purpose, model=haiku）
+  每個 agent 25 row：
+    1. 從 name + see + era 推 Wikipedia slug
+    2. WebFetch en.wikipedia.org/api/rest_v1/page/summary/{slug}
+    3. 驗證主教 ＝ 該人（era/see/denomination match）
+    4. 試 1-2 個 alternative slugs 若 wrong
+    5. 接受 paintings/photos/frescoes/mosaics/sculptures/miniatures；拒 coats of arms / churches / scene paintings
+  → 寫 batch_NNN_haiku.json: {id, slug, portrait_url, status: HIT/NO_ARTICLE/NO_IMAGE/WRONG_PERSON}
+
+[apply] scripts/episcopal-portrait-apply-haiku.py --skip-head
+  → 讀 batch_NNN_haiku.json（utf-8-sig 容 BOM）
+  → PATCH portrait_url 到 episcopal_succession
+```
+
+**規模**：210 batches × 25 rows = 5,245 candidates。Quota 限制下分 21 輪 × 10 平行 agents 完成。
+**最終覆蓋率**（2026-05-21）：**1,902 / 5,401 主教 = 35.2%**
+
+**Hit rate 變化**：
+- 著名教座（教宗、Canterbury 1500+、現代各 spine）→ 50-100% hit
+- 中世紀（500-1300）→ 15-30% hit（多無 Wikipedia 條目／僅 coins/seals）
+- 18 世紀東歐 / 16 世紀 Constantinople / 醒目 Coptic / Armenian 1290-1800 → 0-10%（極稀疏）
+
+**注意事項**：
+- Wikipedia 對單一 IP 連續 fetch 易 429 rate-limit；agent 內部 2-3s sleep；批 146/148 撞 429 → 加 sleep 後重 retry 拿到分
+- Apply 預設 `--skip-head` 因為 Wikimedia 拒 HEAD（也常 429）
+- 偶爾 Haiku 寫出 malformed JSON（如 `"id": "15": "15"`）— 手動修一個 entry，整 batch 即可恢復
