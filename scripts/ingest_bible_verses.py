@@ -427,69 +427,69 @@ CUV_BOOK_MAP = {  # our code → HKBS code (uppercase, mostly OSIS-compatible)
     "1pe": "1PE", "2pe": "2PE", "1jn": "1JN", "2jn": "2JN", "3jn": "3JN",
     "jud": "JUD", "rev": "REV",
 }
-CUV_VERSE_RE = re.compile(r'<span[^>]*class="[^"]*verse[^"]*"[^>]*>.*?(\d+)\s*(.*?)</span>',
-                          re.DOTALL)
+# CUV response = metadata line + HTML body. HTML pattern:
+#   <h3>section</h3><p><b>1</b><span>text<i>name</i>text<sup title="footnote"></sup></span><b>2</b><span>...</span></p>
+# Parse: <b>NUM</b><span>TEXT</span> pairs. Strip <i> (keep inner) and <sup title="..."> (drop).
+CUV_BV_PAIR = re.compile(r'<b>(\d+)</b>\s*<span>(.*?)</span>', re.DOTALL)
+
+
+def _clean_cuv_text(html):
+    """Strip <i>...</i> wrappers (keep inner), drop <sup title="..."> footnotes,
+    collapse whitespace."""
+    # Strip footnote sups (empty tags with title attribute)
+    html = re.sub(r'<sup[^>]*></sup>', '', html)
+    html = re.sub(r'<sup[^>]*>.*?</sup>', '', html, flags=re.DOTALL)
+    # Unwrap <i> tags
+    html = re.sub(r'</?i>', '', html)
+    # Drop any remaining HTML tags
+    html = re.sub(r'<[^>]+>', '', html)
+    # Collapse whitespace
+    return re.sub(r'\s+', ' ', html).strip()
 
 
 def ingest_cuv2010(dry_run=False, only_book=None):
-    print("→ Ingesting 和合本2010 RCUV (HKBS, scrape; slow ~1 hr)")
-    if not dry_run:
-        clear_version("cuv2010") if only_book is None else None
-    from bs4 import BeautifulSoup  # type: ignore
+    print("→ Ingesting 和合本2010 RCUV (HKBS, scrape ~30-60 min)")
+    if not dry_run and only_book is None:
+        clear_version("cuv2010")
 
-    # Get chapter counts from bible_books
+    # Get chapter counts from DB
     r = requests.get(
         f"{SUPA_URL}/rest/v1/bible_books?canon_protestant=eq.true&select=code,chapter_count",
         headers=PG_HEADERS, timeout=30,
     )
     chapter_counts = {row["code"]: row["chapter_count"] for row in r.json()}
+
+    session = requests.Session()
+    session.headers["User-Agent"] = "Mozilla/5.0 (research, Bible parallel study)"
     rows = []
+    total_verses = 0
     for book_code, hkbs_code in CUV_BOOK_MAP.items():
         if only_book and book_code != only_book:
             continue
         n_chapters = chapter_counts.get(book_code, 0)
         if not n_chapters:
             continue
-        print(f"  {book_code} ({hkbs_code}) {n_chapters} chapters", file=sys.stderr)
+        book_verses = 0
         for ch in range(1, n_chapters + 1):
             url = f"{CUV_BASE}/{hkbs_code}/{ch}/"
             try:
-                resp = requests.get(url, timeout=30,
-                                    headers={"User-Agent": "Mozilla/5.0 (research)"})
+                resp = session.get(url, timeout=30)
             except Exception as e:
                 print(f"    ✗ {book_code} {ch}: {e}", file=sys.stderr)
                 continue
             if resp.status_code != 200:
                 print(f"    ✗ {book_code} {ch}: HTTP {resp.status_code}", file=sys.stderr)
                 continue
-            soup = BeautifulSoup(resp.text, "html.parser")
-            # The structure on rcuv.hkbs.org.hk: <div class="bibleVerse"> contains
-            # verses, each as <p> or <span> with verse number + text.
-            # Find all verse-bearing elements; structure can vary.
-            verse_container = soup.select_one(
-                ".bibleVerse, .scripture, #scripture, .bible-text, .chapter-content")
-            if not verse_container:
-                # Fallback: whole body
-                verse_container = soup.body or soup
-            # Each verse: typically <sup>1</sup> verse text <sup>2</sup> verse text ...
-            # We split on superscript number markers.
-            html = str(verse_container)
-            # Strip script/style
-            for tag in verse_container.find_all(["script", "style", "nav", "header", "footer"]):
-                tag.decompose()
-            # Get text with verse-number markers preserved
-            text_with_marks = ""
-            for el in verse_container.descendants:
-                if hasattr(el, "name") and el.name == "sup":
-                    text_with_marks += f"\n[V{el.get_text(strip=True)}] "
-                elif hasattr(el, "name") and el.name is None:
-                    text_with_marks += str(el)
-            # Split on \n[Vn]
-            for m in re.finditer(r"\[V(\d+)\]\s*(.+?)(?=\[V\d+\]|$)",
-                                  text_with_marks, re.DOTALL):
+            # Response starts with a metadata pipe-delimited line, then HTML
+            body = resp.text
+            # Find the first <h3> or <p> as start of HTML
+            html_start = body.find("<")
+            if html_start < 0:
+                continue
+            html = body[html_start:]
+            for m in CUV_BV_PAIR.finditer(html):
                 v_num = int(m.group(1))
-                v_text = m.group(2).strip()
-                v_text = re.sub(r"\s+", " ", v_text)
+                v_text = _clean_cuv_text(m.group(2))
                 if not v_text:
                     continue
                 rows.append({
@@ -499,22 +499,73 @@ def ingest_cuv2010(dry_run=False, only_book=None):
                     "version_code": "cuv2010",
                     "text": v_text,
                 })
-            time.sleep(0.4)  # be polite
-        # Flush per book to avoid losing data on crash
+                book_verses += 1
+            time.sleep(0.25)  # be polite ~4 req/sec
+        total_verses += book_verses
+        print(f"  ✓ {book_code} ({hkbs_code}) {n_chapters} ch → {book_verses} verses (total {total_verses})",
+              file=sys.stderr)
+        # Flush per book so we don't lose all progress on crash
         if rows and not dry_run:
             upsert_verses(rows)
             rows = []
-    print(f"  done")
+    print(f"  done — {total_verses} verses")
 
 
-# ─── NIV (NIV84 dump) ───────────────────────────────────────────────────────
-# Use Rosuav/NIV84 GitHub dump as starting point — messy HTML per book.
-# For MVP we'll use a cleaner unofficial JSON if found; else skip until later.
+# ─── NIV (aruljohn/Bible-niv JSON dump) ─────────────────────────────────────
+# Clean per-book JSON files. Each: { book, count, chapters: [{ chapter, verses: [{verse, text}] }] }
+
+NIV_REPO = "aruljohn/Bible-niv/main"
+NIV_BOOKS = {
+    "Genesis": "gen", "Exodus": "exo", "Leviticus": "lev", "Numbers": "num",
+    "Deuteronomy": "deu", "Joshua": "jos", "Judges": "jdg", "Ruth": "rut",
+    "1 Samuel": "1sa", "2 Samuel": "2sa", "1 Kings": "1ki", "2 Kings": "2ki",
+    "1 Chronicles": "1ch", "2 Chronicles": "2ch", "Ezra": "ezr", "Nehemiah": "neh",
+    "Esther": "est", "Job": "job", "Psalms": "psa", "Proverbs": "pro",
+    "Ecclesiastes": "ecc", "Song Of Solomon": "sng", "Isaiah": "isa", "Jeremiah": "jer",
+    "Lamentations": "lam", "Ezekiel": "ezk", "Daniel": "dan", "Hosea": "hos",
+    "Joel": "jol", "Amos": "amo", "Obadiah": "oba", "Jonah": "jon",
+    "Micah": "mic", "Nahum": "nam", "Habakkuk": "hab", "Zephaniah": "zep",
+    "Haggai": "hag", "Zechariah": "zec", "Malachi": "mal",
+    "Matthew": "mat", "Mark": "mrk", "Luke": "luk", "John": "jhn",
+    "Acts": "act", "Romans": "rom", "1 Corinthians": "1co", "2 Corinthians": "2co",
+    "Galatians": "gal", "Ephesians": "eph", "Philippians": "php", "Colossians": "col",
+    "1 Thessalonians": "1th", "2 Thessalonians": "2th", "1 Timothy": "1ti",
+    "2 Timothy": "2ti", "Titus": "tit", "Philemon": "phm", "Hebrews": "heb",
+    "James": "jas", "1 Peter": "1pe", "2 Peter": "2pe", "1 John": "1jn",
+    "2 John": "2jn", "3 John": "3jn", "Jude": "jud", "Revelation": "rev",
+}
+
 
 def ingest_niv(dry_run=False):
-    print("→ NIV ingest not yet implemented (need to scout cleaner source).")
-    print("  Run with --version niv-skip to suppress this message.")
-    return
+    print("-> Ingesting NIV (aruljohn/Bible-niv JSON, (c) Biblica)")
+    import json
+    if not dry_run:
+        clear_version("niv")
+    rows = []
+    for book_name, book_code in NIV_BOOKS.items():
+        # URL-encode space
+        url = f"{GITHUB_RAW}/{NIV_REPO}/{quote(book_name)}.json"
+        r = requests.get(url, timeout=30)
+        if r.status_code != 200:
+            print(f"  ✗ {book_name}: HTTP {r.status_code}", file=sys.stderr)
+            continue
+        data = r.json()
+        for chapter in data.get("chapters", []):
+            ch_num = int(chapter["chapter"])
+            for v in chapter.get("verses", []):
+                v_num = int(v["verse"])
+                text = (v.get("text") or "").strip()
+                if not text:
+                    continue
+                rows.append({
+                    "book_code": book_code,
+                    "chapter": ch_num,
+                    "verse": v_num,
+                    "version_code": "niv",
+                    "text": text,
+                })
+    print(f"  parsed {len(rows)} verses from {len(NIV_BOOKS)} books")
+    upsert_verses(rows, dry_run=dry_run)
 
 
 # ─── CLI ────────────────────────────────────────────────────────────────────
