@@ -1,5 +1,3 @@
-[ BE - CS - DE - EN - ES - FR - IT - HU - LA - LV - PT - SW - ZH ]
-
 DECREE CONCERNING THE PASTORAL OFFICE OF BISHOPS IN THE CHURCH CHRISTUS DOMINUS PROCLAIMED BY HIS HOLINESS, POPE PAUL VI ON OCTOBER 28, 1965
 
 1. Christ the Lord, Son of the living God, came that He might save His people from their sins(1) and that all men might be sanctified. Just as He Himself was sent by the Father, so He also sent His Apostles.(2) Therefore, He sanctified them, conferring on them the Holy Spirit, so that they also might glorify the Father upon earth and save men, "to the building up of the body of Christ" (Eph. 4:12), which is the Church.
@@ -142,7 +140,7 @@ Also, where similar situations exist, provision should be made for the faithful 
 
 III. Assistants in the Pastoral Office of the Diocesan Bishops
 
-1. Coadjutor and auxiliary bishops
+## 1. Coadjutor and auxiliary bishops
 
 25. The pastoral office of Bishops should be so constituted for the governing of dioceses that the good of the Lord's flock is always the supreme consideration. Rightly to achieve this goal, auxiliary bishops will frequently be appointed because the diocesan bishop cannot personally fulfill all his episcopal duties as the good of souls demands, either because of the vast extent of the diocese or the great number of its inhabitants, or because of the special nature of the apostolate or other reasons of a different nature. Sometimes, in fact, a particular need requires that a coadjutor bishop be appointed to assist the diocesan bishop. Coadjutor and auxiliary bishops should be granted those faculties necessary for rendering their work more effective and safeguarding the dignity proper to bishops. This, of course, should always be accomplished without detriment to the unity of the diocesan administration and the authority of the diocesan bishop.
 
@@ -158,7 +156,7 @@ A coadjutor bishop, appointed with the right of succession, must always be named
 
 In order to provide for the greatest possible present and future good of the diocese, the diocesan bishop and his coadjutor should not fail to consult with each other on matters of great importance.
 
-2. The diocesan curia and commissions
+## 2. The diocesan curia and commissions
 
 27. The most important office in the diocesan curia is that of vicar general. However, as often as the proper government of the diocese requires it, one or more episcopal vicars can be named by the bishop. These automatically enjoy the same authority which the common law grants the vicar general, but only for a certain part of the diocese, or for a determined type of transaction or for the faithful of a determined rite.
 
@@ -170,7 +168,7 @@ The diocesan curia should be so organized that it is an appropriate instrument f
 
 It is greatly desired that in each diocese a pastoral commission will be established over which the diocesan bishop himself will preside and in which specially chosen clergy, religious and lay people will participate. The duty of this commission will be to investigate and weigh pastoral undertakings and to formulate practical conclusions regarding them.
 
-3. The diocesan clergy
+## 3. The diocesan clergy
 
 28. All presbyters, both diocesan and religious, participate in and exercise with the bishop the one priesthood of Christ and are thereby constituted prudent cooperators of the episcopal order. In the care of souls, however, the first place is held by diocesan priests who are incardinated or attached to a particular church, for they have fully dedicated themselves in the service of caring for a single portion of the Lord's flock. In consequence, they form one presbytery and one family whose father is the bishop. In order to distribute more equitably and properly the sacred ministries among his priests, the bishop should possess a necessary freedom in bestowing offices and benefices. Therefore, rights or privileges which in any way limit this freedom are to be suppressed.
 
@@ -208,7 +206,7 @@ Pastors who are unable to fulfill their office properly and fruitfully because o
 
 32. Finally, the same concern for souls should be the basis for determining or reconsidering the erection or suppression of parishes and any other changes of this kind which the bishop is empowered to undertake on his own authority.
 
-4. Religious
+## 4. Religious
 
 33. (In all that follows with Religious are included also the members of other institutes who profess the evangelical counsels.) All Religious have the duty, each according to his proper vocation, of cooperating zealously and diligently in building up and increasing the whole Mystical Body of Christ and for the good of the particular churches.
 
@@ -289,6 +287,8 @@ Diocesan bishops should release to the military vicar a sufficient number of pri
 This sacred synod also prescribes that general directories be prepared treating of the care of souls for the use of both bishops and pastors. Thus they will be provided with certain methods which will help them to discharge their own pastoral office with greater ease and effectiveness.
 
 There should be prepared also a particular directory concerning the pastoral care of special groups of the faithful as the different circumstances of individual nations or regions require. Another directory should be composed concerning the catechetical instruction of the Christian people; this directory will consider the fundamental principles of such instruction, its disposition and the composition of books on the subject. In preparing these directories, special attention should be given to the views which have been expressed both by the commissions and the council Fathers.
+
+NOTES
 
 Preface
 

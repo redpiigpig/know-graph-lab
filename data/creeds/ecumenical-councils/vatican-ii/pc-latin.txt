@@ -1,5 +1,3 @@
-[ BE - CS - DE - EN - ES - FR - IT - HU - LA - LV - PT - SW - ZH ]
-
 PAULUS EPISCOPUS SERVUS SERVORUM DEI UNA CUM SACROSANCTI CONCILII PATRIBUS AD PERPETUAM REI MEMORIAM
 
 DECRETUM DE ACCOMMODATA RENOVATIONE VITAE RELIGIOSAE PERFECTAE CARITATIS
@@ -130,7 +128,7 @@ Huiusmodi autem conferentiae etiam pro institutis saecularibus institui possunt.
 
 Meminerint vero sodales exemplum propriae vitae optimam commendationem esse sui instituti et invitationem ad vitam religiosam capessendam.
 
-25. Instituta pro quibus hae accommodatae renovationis normae statuuntur, prompto animo suae divinae vocationi et muneri suo in Ecclesia hisce temporibus respondeant. Magni enim facit Sacra Synodus genus eorum vitae, virginalis, pauperis et oboedientis, cuius Ipse Christus Dominus est exemplar firmamque spem in opera eorum abscondita et aperta tam fecunda collocat. Religiosi ergo omnes fidei integritate, caritate erga Deum et proximum, amore crucis necnon spe futurae gloriae, Christi bonum nuntium in toto mundo diffundant, ut testimonium eorum ab omnibus conspiciatur et Pater noster, qui in caelis est, glorificetur (cf. Mt . 5, 16). Ita deprecante suavissima Deipara Virgine Maria, «cuius vita omnium est disciplina», [1] ampliora quotidie incrementa capient ac uberiores salutares afferent fructus.
+25. Instituta pro quibus hae accommodatae renovationis normae statuuntur, prompto animo suae divinae vocationi et muneri suo in Ecclesia hisce temporibus respondeant. Magni enim facit Sacra Synodus genus eorum vitae, virginalis, pauperis et oboedientis, cuius Ipse Christus Dominus est exemplar firmamque spem in opera eorum abscondita et aperta tam fecunda collocat. Religiosi ergo omnes fidei integritate, caritate erga Deum et proximum, amore crucis necnon spe futurae gloriae, Christi bonum nuntium in toto mundo diffundant, ut testimonium eorum ab omnibus conspiciatur et Pater noster, qui in caelis est, glorificetur (cf. Mt . 5, 16). Ita deprecante suavissima Deipara Virgine Maria, «cuius vita omnium est disciplina», [^[1]] ampliora quotidie incrementa capient ac uberiores salutares afferent fructus.
 
 Haec omnia et singula quae in hoc Decreto edicta sunt, placuerunt Sacrosancti Concilii Patribus. Et Nos, Apostolica a Christo Nobis tradita potestate, illa, una cum Venerabilibus Patribus, in Spiritu Sancto approbamus, decernimus ac statuimus et quae ita synodaliter statuta sunt ad Dei gloriam promulgari iubemus.
 

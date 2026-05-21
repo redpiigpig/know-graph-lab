@@ -1,5 +1,3 @@
-[ BE - CS - DE - EN - ES - FR - IT - HU - LA - LV - PT - SW - ZH ]
-
 DECREE ON THE CATHOLIC CHURCHES OF THE EASTERN RITE ORIENTALIUM ECCLESIARUM SOLEMNLY PROMULGATED BY HIS HOLINESS POPE PAUL VI ON NOVEMBER 21, 1964
 
 1. The Catholic Church holds in high esteem the institutions, liturgical rites, ecclesiastical traditions and the established standards of the Christian life of the Eastern Churches, for in them, distinguished as they are for their venerable antiquity, there remains conspicuous the tradition that has been handed down from the Apostles through the Fathers (1) and that forms part of the divinely revealed and undivided heritage of the universal Church. This Sacred Ecumenical Council, therefore, in its care for the Eastern Churches which bear living witness to this tradition, in order that they may flourish and with new apostolic vigor execute the task entrusted to them, has determined to lay down a number of principles, in addition to those which refer to the universal Church; all else is remitted to the care of the Eastern synods and of the Holy See.
@@ -85,6 +83,8 @@ Meanwhile, however, all Christians, Eastern as well as Western, are earnestly as
 Each and all these matters which are set forth in this decree have been favorably voted on by the Fathers of the Council. And we, by the apostolic authority given us by Christ and in union with the Fathers, approve, decree and establish them in the Holy Spirit and command that they be promulgated for the glory of God.
 
 Given in Rome at St. Peter's, November 21, 1964
+
+NOTES
 
 (1) Leo XIII, Litt. Ap. Orientalium dignitas, 30 nov. 1894, in Leonis XIII Acta, vol. XIV, pp. 201-202.
 

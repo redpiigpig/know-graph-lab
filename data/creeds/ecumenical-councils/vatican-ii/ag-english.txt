@@ -1,5 +1,3 @@
-[ BE - CS - DE - EN - ES - FR - IT - HU - LA - LV - PT - SW - ZH ]
-
 DECREE AD GENTES ON THE MISSION ACTIVITY OF THE CHURCH
 
 1. Divinely sent to the nations of the world to be unto them "a universal sacrament of salvation,"(1) the Church, driven by the inner necessity of her own catholicity, and obeying the mandate of her Founder (cf. Mark 16:16), strives ever to proclaim the Gospel to all men. The Apostles themselves, on whom the Church was founded, following in the footsteps of Christ, "preached the word of truth and begot churches."(2) It is the duty of their successors to make this task endure "so that the word of God may run and be glorified (2 Thess. 3:1) and the kingdom of God be proclaimed and established throughout the world.
@@ -56,7 +54,7 @@ MISSION WORK ITSELF
 
 10. The Church, sent by Christ to reveal and to communicate the love of God to all men and nations, is aware that there still remains a gigantic missionary task for her to accomplish. For the Gospel message has not yet, or hardly yet, been heard by two million human beings (and their number is increasing daily), who are formed into large and distinct groups by permanent cultural ties, by ancient religious traditions, and by firm bonds of social necessity. Some of these men are followers of one of the great religions, but others remain strangers to the very knowledge of God, while still others expressly deny His existence, and sometimes even attack it. The Church, in order to be able to offer all of them the mystery of salvation and the life brought by God, must implant herself into these groups for the same motive which led Christ to bind Himself, in virtue of His Incarnation, to certain social and cultural conditions of those human beings among whom He dwelt.
 
-ARTICLE 1: Christian Witness
+## ARTICLE 1: Christian Witness
 
 11. The Church must be present in these groups through her children, who dwell among them or who are sent to them. For all Christians, wherever they live, are bound to show forth, by the example of their lives and by the witness of the word, that new man put on at baptism and that power of the Holy Spirit by which they have been strengthened at Conformation. Thus other men, observing their good works, can glorify the Father (cf. Matt. ES:16) and can perceive more fully the real meaning of human life and the universal bond of the community of mankind.
 
@@ -70,7 +68,7 @@ However, the Church has no desire at all to intrude itself into the government o
 
 Closely united with men in their life and work, Christ's disciples hope to render to others true witness of Christ, and to work for their salvation, even where they are not able to announce Christ fully. For they are not seeking a mere material progress and prosperity for men, but are promoting their dignity and brotherly union, teaching those religious and moral truths which Christ illumined with His light; and in this way, they are gradually opening up a fuller approach to God. Thus they help men to attain to salvation by love for God and neighbor, and the mystery of Christ begins to shine forth, in which there appears the new man, created according to God (cf. Eph. 4:24), and in which the charity of God is revealed.
 
-ARTICLE 2: Preaching the Gospel and Gathering together the People of God
+## ARTICLE 2: Preaching the Gospel and Gathering together the People of God
 
 13. Wherever God opens a door of speech for proclaiming the mystery of Christ (cf. Col. 4:3), there is announced to all men (cf. Mark 16:15; 1 Cor. 9:15; Rom. 10:14) with confidence and constancy (cf. Acts 4:13, 29, 31; 9:27, 28; 13:46; 14:3; 19:8; 26:26; 28:31; 1 Thess. 2:2; 2 Cor. 3:12; 7:4; Phil. 1:20; Eph. 3:12; 6:19, 20) the living God, and He Whom He has sent for the salvation of all, Jesus Christ (cf. 1 Thess. 1:9-10; 1 Cor. 1:18-21; Gal. 1:31; Acts 14:15-17, 17:22-31), in order that non - Christians, when the Holy Spirit opens their heart (cf. Acts 16:14), may believe and be freely converted to the Lord, that they may cleave sincerely to Him Who, being the "way, the truth, and the life" (John 14:6), fulfills all their spiritual expectations, and even infinitely surpasses them.
 
@@ -90,7 +88,7 @@ But this Christian initiation in the catechumenate should be taken care of not o
 
 Finally, the juridic status of catechumens should be clearly defined in the new code of Canon law. For since they are joined to the Church, they are already of the household of Christ,(7) and not seldom they are already leading a life of faith, hope, and charity.
 
-ARTICLE 3: Forming a Christian Community
+## ARTICLE 3: Forming a Christian Community
 
 15. The Holy Spirit, who calls all men to Christ by the seeds of the Lord and by the preaching of the Gospel, stirs up in their: hearts a submission to the faith Who in the womb of the baptismal font, He begets to a new life those who believe in Christ, He gathers them into the one People of God which is "a chosen race, a royal priesthood, a holy nation, a purchased people" (1 Peter 2:9).(8)
 

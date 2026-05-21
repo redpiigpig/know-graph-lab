@@ -10,7 +10,7 @@
  *   - 同樣對應 16 份梵二文件（im / lg / oe / ur / cd / pc / ot / ge / na / dv / aa / dh / ag / po / gs）
  */
 
-import { parseParagraphs, type Paragraph } from './paragraphParser'
+import { parseParagraphs, parseDoc, type Paragraph, type ParsedDoc } from './paragraphParser'
 
 const vat2Loaders = import.meta.glob(
   './ecumenical-councils/vatican-ii/*.txt',
@@ -20,6 +20,7 @@ const vat2Loaders = import.meta.glob(
 /** 已載入過的 text cache（避免重複網路 / fs 載入） */
 const cache = new Map<string, string>()
 const paragraphCache = new Map<string, Paragraph[]>()
+const docCache = new Map<string, ParsedDoc>()
 
 export async function loadCreedText(textKey: string): Promise<string> {
   if (cache.has(textKey)) return cache.get(textKey)!
@@ -41,6 +42,15 @@ export async function loadCreedParagraphs(textKey: string): Promise<Paragraph[]>
   const paragraphs = parseParagraphs(text)
   paragraphCache.set(textKey, paragraphs)
   return paragraphs
+}
+
+/** Load and fully parse a document into structured Blocks + footnotes. */
+export async function loadCreedDoc(textKey: string): Promise<ParsedDoc> {
+  if (docCache.has(textKey)) return docCache.get(textKey)!
+  const text = await loadCreedText(textKey)
+  const doc = parseDoc(text)
+  docCache.set(textKey, doc)
+  return doc
 }
 
 export function availableTextKeys(): string[] {

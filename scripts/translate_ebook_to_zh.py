@@ -393,6 +393,9 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
 
     t_total = time.time()
     n_processed = 0
+    consecutive_failures = 0
+    FAIL_PAUSE_AFTER = 3       # n chunks in a row before sleeping
+    FAIL_PAUSE_SEC = 30 * 60   # sleep duration on rate-limit wall
     for i, c in enumerate(target):
         en = c["content_en"]
         if not en.strip() or len(en) < 30:
@@ -425,7 +428,16 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
                 failed = True
                 break
         if failed:
+            consecutive_failures += 1
+            if consecutive_failures >= FAIL_PAUSE_AFTER:
+                mins = FAIL_PAUSE_SEC // 60
+                print(f"\n  💤 {consecutive_failures} consecutive failures — pausing {mins} min "
+                      f"(likely Anthropic / Gemini rate-limit wall). Will resume automatically.",
+                      flush=True)
+                time.sleep(FAIL_PAUSE_SEC)
+                consecutive_failures = 0  # give it another shot
             continue
+        consecutive_failures = 0  # reset on any successful chunk
         zh = "\n\n".join(zh_parts)
         zh = se.to_traditional(zh)
         zh = pl.collapse_cjk_spacing(zh)
