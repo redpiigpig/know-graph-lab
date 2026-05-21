@@ -9,19 +9,63 @@ description: Operate the Know-Graph-Lab ebook pipeline end-to-end. Use when work
 
 End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL covers ingest, parse, OCR, standardize, DB back-fill, and reader-side features.
 
-## Current state (snapshot 2026-05-18)
+## Current state (snapshot 2026-05-21 08:15)
 
 | | 數量 |
 |---|---|
-| Total ebooks | **1,542** |
-| Parsed (`parsed_at NOT NULL`) | ~1,405 (91%) |
-| **OCR queue** (`parse_error LIKE '%no extractable text%'`) | ~108 |
-| Permanent OCR fail (need manual) | **0** |
-| Split-from-set children | 151 |
-| EPUB standardize → markdown | 543 / 543 ✅ (Schaff 38 含) |
-| PDF Plan A (lite) | 437 / 437 ✅ |
-| PDF Plan B v0 (TOC chapter chunks) | 152 / 437 ✅ |
-| PDF Plan B v1 (font-driven, no-TOC subset ~285) | 📐 deferred |
+| Total ebooks | **1,552** (5/20 ingest 10 本新書) |
+| Parsed | ~1,470 |
+| **OCR queue（皆 >50MB 需 Haiku）** | **82** |
+| Permanent OCR fail | 0 |
+| EPUB standardize → markdown | 543 ✅ |
+| PDF Plan A | 437 ✅ |
+| PDF Plan B v0 | 152 ✅ |
+
+### 進行中的 OCR run（會跨 session 持續）
+
+- **腳本：** `scripts/_haiku_autorestart.sh` — 自動重啟 wrapper，最多 15 iterations 後 exit
+- **log：** `scripts/logs/ocr_haiku_2026-05-19_v2.log`（continued）+ `ocr_haiku_2026-05-20.log`
+- **檢查進度：** `grep -c '✓ Haiku' scripts/logs/ocr_haiku_2026-05-19_v2.log`
+- **新 session 接續方法：**
+  ```bash
+  # 1. 確認 Anthropic OK + queue 還有書
+  python -X utf8 -c "import os, json; from dotenv import load_dotenv; load_dotenv(); import anthropic, requests; from pathlib import Path; cred=json.loads(Path(os.environ['USERPROFILE']+'/.claude/.credentials.json').read_text(encoding='utf-8')); c=anthropic.Anthropic(auth_token=cred['claudeAiOauth']['accessToken'],timeout=15); print('Anthropic OK' if not c.messages.create(model='claude-haiku-4-5-20251001',max_tokens=5,messages=[{'role':'user','content':'hi'}]).usage else 'OK')"
+
+  # 2. 啟動 wrapper（背景）
+  bash scripts/_haiku_autorestart.sh 2>&1 | tee -a scripts/logs/ocr_haiku_2026-05-20.log
+
+  # 3. Re-arm Monitor 抓書級事件
+  # Monitor tool: tail -F log | grep -E "✓ Haiku|⛔|Queue empty"
+  ```
+
+### 已知狀況（5/20-5/21）
+
+- **rate limit 累計性卡死**：Anthropic 帳號級 burst rate limit，跑 ~6 本後就連續 429，wrapper 2-strike pause + 重啟 + 又 429...iteration 燒得快。實際 ~5 本/天可完成
+- **OAuth token 有效期 ~8 小時** → long-running python 緩存舊 token 後續全 401。要 kill python 讓 wrapper 重起讀新 token
+- **網路抖動** → Connection error + Drive open fail 雜訊不斷
+- **Anthropic content filter false positive**：知識份子論、道教史已永久 marked Haiku-OCR fail（沒進當前 queue）
+
+### 本輪 (5/19-5/21) 完成清單
+
+| # | 書 | 大小 | 頁數 | 用時 |
+|---|---|---|---|---|
+| 1 | 神話學 (Lévi-Strauss) | 51.7MB | 445 | 98m |
+| 2 | 人類時代 | 52.0MB | 178 | 33.5m |
+| 3 | 伊朗伊斯蘭革命及其世界影響 | 52.3MB | 229 | 50m |
+| 4 | 我們世界的歷史 第 5 版 卷 3 | 59.3MB | 214 | 51.5m |
+| 5 | 饒宗頤 二十世紀學術文集 卷 5 | 60.7MB | 212 | 45.5m |
+| 6 | 從蒙古到大清 | 65.4MB | 434 | 39m |
+| 7 | (悄悄完成沒抓到事件，~5/20 晚上) | ? | ? | ? |
+
+### 10 大分類書數（5/20 ingest 後）
+
+| 分類 | 書數 | 分類 | 書數 |
+|---|---|---|---|
+| 歷史學 | 468 | 社會政治學 | 141 |
+| 世界宗教 | 372 | 宗教學 | 105 |
+| 哲學 | 219 | 人類生物學 | 68 |
+| 神學 ★ | 60 | 文學 | 58 |
+| 自然科學 | 31 | 心理學 | 30 |
 
 10 大分類書數（reclassification 後）：
 
