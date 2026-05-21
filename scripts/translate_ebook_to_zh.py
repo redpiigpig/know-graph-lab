@@ -451,6 +451,17 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
     if dry_run or not out_chunks:
         return
 
+    # Sort by source order before final rewrite. Append-write puts chunks in
+    # completion order, which diverges from source order whenever a chunk
+    # fails on first attempt and gets resumed later (observed 2026-05-21:
+    # TOBIT 1:3-22 failed and was retried after TOBIT 2:1-3:6, so the TOC
+    # showed them out of biblical order). title_en is the source heading,
+    # so source.index(title_en) gives the correct row.
+    src_order = {c["title_en"]: i for i, c in enumerate(src_chunks)}
+    def src_idx(chunk: dict) -> int:
+        return src_order.get(chunk.get("title_en", ""), 10**9)
+    out_chunks.sort(key=src_idx)
+
     # Rewrite JSONL with renumbered chunk_index (the append-write above may
     # have produced non-contiguous indices if resume hit duplicates).
     for i, c in enumerate(out_chunks):
@@ -458,7 +469,7 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
     with open(out_path, "w", encoding="utf-8") as f:
         for c in out_chunks:
             f.write(json.dumps(c, ensure_ascii=False) + "\n")
-    print(f"\nWrote {out_path}  ({out_path.stat().st_size//1024} KB)", flush=True)
+    print(f"\nWrote {out_path}  ({out_path.stat().st_size//1024} KB)  [sorted to source order]", flush=True)
 
     # R2 + DB previews
     try:

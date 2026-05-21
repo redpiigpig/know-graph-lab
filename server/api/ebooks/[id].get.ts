@@ -14,12 +14,18 @@ export default defineEventHandler(async (event) => {
 
   if (error || !ebook) throw createError({ statusCode: 404, message: "找不到電子書" });
 
-  const totalChunks = ebook.chunk_count ?? ebook.total_pages ?? 0;
+  const dbChunkCount = ebook.chunk_count ?? ebook.total_pages ?? 0;
   const chunkIndex = Math.max(0, (page ? parseInt(page) : 1) - 1);
   const [chunk, toc] = await Promise.all([
-    totalChunks > 0 ? loadChunk(id!, chunkIndex) : Promise.resolve(null),
-    includeToc === "1" && totalChunks > 0 ? loadToc(id!) : Promise.resolve(undefined),
+    dbChunkCount > 0 ? loadChunk(id!, chunkIndex) : Promise.resolve(null),
+    includeToc === "1" && dbChunkCount > 0 ? loadToc(id!) : Promise.resolve(undefined),
   ]);
+
+  // Translation pipeline only PATCHes ebooks.chunk_count at end-of-run, so a
+  // book mid-translation reports a stale DB count and the reader's page nav
+  // caps too low. Prefer the live JSONL length (via TOC) when it's bigger.
+  const tocLen = Array.isArray(toc) ? toc.length : 0;
+  const totalChunks = Math.max(dbChunkCount, tocLen);
 
   return {
     ...ebook,

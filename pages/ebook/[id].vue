@@ -142,15 +142,17 @@
               class="ebook-prose ebook-prose-en"
               v-html="sourceHtml"></div>
 
-            <!-- 中英對照（雙欄）-->
-            <div v-else class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-              <div ref="contentEl"
-                class="ebook-prose"
-                v-html="markdownHtml"
-                @mouseup="onTextSelectionEnd"
-                @click="onContentClick"></div>
-              <div class="ebook-prose ebook-prose-en lg:border-l lg:border-stone-200 lg:pl-10"
-                v-html="sourceHtml"></div>
+            <!-- 中英對照（逐段對齊雙欄）-->
+            <div v-else ref="contentEl"
+              class="bilingual-rows"
+              @mouseup="onTextSelectionEnd"
+              @click="onContentClick">
+              <div v-for="(pair, idx) in paragraphPairs" :key="idx"
+                class="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-1 py-1">
+                <div class="ebook-prose" v-html="pair.zh"></div>
+                <div class="ebook-prose ebook-prose-en lg:border-l lg:border-stone-100 lg:pl-10"
+                  v-html="pair.en"></div>
+              </div>
             </div>
 
             <div class="flex justify-between mt-16 pt-6 border-t border-stone-200">
@@ -467,6 +469,28 @@ function renderMarkdown(md: string): string {
 const markdownHtml = computed(() => renderMarkdown(pageContent.value));
 const sourceHtml = computed(() => pageSourceText.value ? renderMarkdown(pageSourceText.value) : "");
 
+// Paragraph-level alignment for bilingual mode. Each paragraph (split on
+// blank line in source markdown) pairs with the matching translated
+// paragraph. If counts differ (LLM occasionally splits or merges), pad with
+// empty cells so the surviving paragraphs stay on the correct row.
+function splitParagraphs(md: string): string[] {
+  return md.split(/\n{2,}/).map(p => p.trim()).filter(Boolean);
+}
+const paragraphPairs = computed<{ zh: string; en: string }[]>(() => {
+  if (!pageContent.value || !pageSourceText.value) return [];
+  const zh = splitParagraphs(pageContent.value);
+  const en = splitParagraphs(pageSourceText.value);
+  const n = Math.max(zh.length, en.length);
+  const out: { zh: string; en: string }[] = [];
+  for (let i = 0; i < n; i++) {
+    out.push({
+      zh: zh[i] ? renderMarkdown(zh[i]) : "",
+      en: en[i] ? renderMarkdown(en[i]) : "",
+    });
+  }
+  return out;
+});
+
 // ── DOM-based highlight applier (handles cross-paragraph + multi-occurrence) ──
 function isInsideMark(node: Node, container: HTMLElement): boolean {
   let p: Node | null = node.parentNode;
@@ -752,6 +776,12 @@ function captureSelection() {
   if (text.length < 2) return null;
   const range = sel.getRangeAt(0);
   if (!contentEl.value || !contentEl.value.contains(range.commonAncestorContainer)) return null;
+  // Bilingual mode: ignore selections inside the English source column —
+  // annotations are scoped to the Chinese translation only.
+  const startEl = range.commonAncestorContainer.nodeType === 1
+    ? (range.commonAncestorContainer as Element)
+    : range.commonAncestorContainer.parentElement;
+  if (startEl?.closest(".ebook-prose-en")) return null;
   const containerText = contentEl.value.innerText || "";
   const idx = containerText.indexOf(text);
   const before = idx > 0 ? containerText.slice(Math.max(0, idx - 30), idx) : "";
