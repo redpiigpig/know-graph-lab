@@ -30,6 +30,12 @@ from dotenv import load_dotenv
 import ebooklib
 from ebooklib import epub
 
+try:
+    import anthropic as _anthropic
+    _HAS_ANTHROPIC = True
+except ImportError:
+    _HAS_ANTHROPIC = False
+
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 load_dotenv(dotenv_path=PROJECT_ROOT / ".env")
 sys.path.insert(0, str(Path(__file__).parent))
@@ -68,6 +74,86 @@ def _find_gemini_keys() -> list[str]:
 
 GEMINI_KEYS = _find_gemini_keys()
 _key_idx = 0
+
+SONNET_MODEL = "claude-sonnet-4-6"
+
+
+def _make_anthropic_client():
+    if not _HAS_ANTHROPIC:
+        raise RuntimeError("anthropic SDK not installed — run: pip install anthropic")
+    common_kwargs = {"timeout": 600.0, "max_retries": 2}
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    if api_key:
+        return _anthropic.Anthropic(api_key=api_key, **common_kwargs)
+    cred_path = Path(os.environ.get("USERPROFILE", os.environ.get("HOME", ""))) / ".claude" / ".credentials.json"
+    if cred_path.exists():
+        try:
+            creds = json.loads(cred_path.read_text(encoding="utf-8"))
+            token = creds.get("claudeAiOauth", {}).get("accessToken", "")
+            if token:
+                return _anthropic.Anthropic(auth_token=token, **common_kwargs)
+        except Exception:
+            pass
+    raise RuntimeError("No Anthropic credentials")
+
+
+_sonnet_client = None
+
+
+def sonnet_translate(source: str) -> str:
+    """Translate via Claude Sonnet 4.6. OAuth tokens roll every ~8h — kill +
+    restart the worker if you see persistent 401s.
+    Long backoff because OCR Haiku wrappers share the same Anthropic quota."""
+    global _sonnet_client
+    if _sonnet_client is None:
+        _sonnet_client = _make_anthropic_client()
+    backoffs = [0, 60, 180, 300, 600]  # 0s, 1m, 3m, 5m, 10m — patient when OCR co-runs
+    for attempt, wait in enumerate(backoffs, start=1):
+        if wait:
+            print(f"  Sonnet 429 — backoff {wait}s before attempt {attempt}", flush=True)
+            time.sleep(wait)
+        try:
+            msg = _sonnet_client.messages.create(
+                model=SONNET_MODEL,
+                max_tokens=16000,
+                messages=[{"role": "user", "content": PROMPT_TMPL.format(source=source)}],
+            )
+            text = "".join(block.text for block in msg.content if hasattr(block, "text"))
+            return text.strip()
+        except _anthropic.RateLimitError as e:
+            print(f"  Sonnet rate-limit attempt {attempt}/{len(backoffs)}", file=sys.stderr, flush=True)
+            if attempt >= len(backoffs):
+                raise
+        except (_anthropic.APIConnectionError, _anthropic.APITimeoutError) as e:
+            print(f"  Sonnet conn error attempt {attempt}: {type(e).__name__}", file=sys.stderr, flush=True)
+            if attempt >= len(backoffs):
+                raise
+        except _anthropic.AuthenticationError:
+            raise RuntimeError("Anthropic 401 — OAuth token expired. Kill + restart worker.")
+    raise RuntimeError("sonnet_translate exhausted retries")
+
+
+MAX_CHUNK_CHARS = 20_000  # split source if larger — Sonnet 16K output cap + safety
+
+
+def split_oversized(src: str, max_chars: int = MAX_CHUNK_CHARS) -> list[str]:
+    """Split a single source chunk by paragraph break (\\n\\n) when over max_chars.
+    Greedily packs paragraphs into pieces ≤ max_chars."""
+    if len(src) <= max_chars:
+        return [src]
+    paras = src.split("\n\n")
+    pieces, cur = [], []
+    cur_len = 0
+    for p in paras:
+        if cur_len + len(p) + 2 > max_chars and cur:
+            pieces.append("\n\n".join(cur))
+            cur, cur_len = [p], len(p)
+        else:
+            cur.append(p)
+            cur_len += len(p) + 2
+    if cur:
+        pieces.append("\n\n".join(cur))
+    return pieces
 
 
 PROMPT_TMPL = """你是基督教神學翻譯專家。把下列英文段落翻譯成「繁體中文」。
@@ -200,7 +286,8 @@ def fetch_book(ebook_id: str) -> dict:
     return rows[0]
 
 
-def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: bool) -> None:
+def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: bool,
+                   engine: str = "gemini", resume: bool = False) -> None:
     # Always unbuffered so background-mode logs show progress live.
     try:
         sys.stdout.reconfigure(line_buffering=True)
@@ -227,30 +314,64 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
 
     target = src_chunks[:limit] if limit else src_chunks
 
+    # Resume: if a JSONL already exists, load it and skip those chunks
+    out_path = CHUNKS_DIR / f"{ebook_id}.jsonl"
     out_chunks: list[dict] = []
+    done_titles: set[str] = set()
+    if resume and out_path.exists():
+        try:
+            for line in out_path.read_text(encoding="utf-8").splitlines():
+                obj = json.loads(line)
+                out_chunks.append(obj)
+                done_titles.add(obj.get("chapter_path", ""))
+            print(f"Resume: loaded {len(out_chunks)} existing chunks (skip-set size {len(done_titles)})", flush=True)
+        except Exception as e:
+            print(f"Resume failed: {e} — restarting from scratch", file=sys.stderr, flush=True)
+            out_chunks = []
+
+    translator = sonnet_translate if engine == "sonnet" else gemini_translate
+    print(f"Engine: {engine}  Model: {SONNET_MODEL if engine == 'sonnet' else 'gemini-2.5-flash'}", flush=True)
+
     t_total = time.time()
+    n_processed = 0
     for i, c in enumerate(target):
         en = c["content_en"]
         if not en.strip() or len(en) < 30:
-            # Skip empties + tiny front-matter slivers
             continue
+        if c["title_en"] in done_titles:
+            # Already translated in a prior run
+            continue
+        n_processed += 1
         elapsed_total = time.time() - t_total
-        rate = (i + 1) / elapsed_total if elapsed_total else 0
+        rate = n_processed / elapsed_total if elapsed_total else 0
         eta = (len(target) - i - 1) / rate if rate else 0
-        print(f"\n[{i+1}/{len(target)}] {c['title_en'][:50]}  ({len(en)} en chars)  ETA {int(eta)}s")
+        print(f"\n[{i+1}/{len(target)}] {c['title_en'][:50]}  ({len(en)} en chars)  ETA {int(eta)}s", flush=True)
         if dry_run:
-            print("  (dry-run, skipped Gemini call)")
+            print("  (dry-run, skipped translation call)", flush=True)
             continue
         t0 = time.time()
-        try:
-            zh = gemini_translate(en)
-        except Exception as e:
-            print(f"  ⚠ translation failed: {e}", file=sys.stderr)
+        pieces = split_oversized(en)
+        if len(pieces) > 1:
+            print(f"  ↳ source split into {len(pieces)} pieces (>{MAX_CHUNK_CHARS} chars)", flush=True)
+        zh_parts = []
+        failed = False
+        for j, piece in enumerate(pieces, start=1):
+            try:
+                zh_part = translator(piece)
+                zh_parts.append(zh_part)
+                if len(pieces) > 1:
+                    print(f"    piece {j}/{len(pieces)}: {len(zh_part)} zh chars", flush=True)
+            except Exception as e:
+                print(f"  ⚠ translation failed (piece {j}/{len(pieces)}): {e}", file=sys.stderr, flush=True)
+                failed = True
+                break
+        if failed:
             continue
-        zh = se.to_traditional(zh)         # safety s2tw pass — Gemini sometimes returns simplified
+        zh = "\n\n".join(zh_parts)
+        zh = se.to_traditional(zh)
         zh = pl.collapse_cjk_spacing(zh)
         elapsed = time.time() - t0
-        out_chunks.append({
+        new_chunk = {
             "chunk_index": len(out_chunks),
             "chunk_type": "chapter",
             "page_number": None,
@@ -259,19 +380,24 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
             "format": "markdown",
             "source_lang": "en",
             "content": zh,
-        })
-        print(f"  ✓ {len(zh)} zh chars  in {elapsed:.1f}s")
+        }
+        out_chunks.append(new_chunk)
+        # Append-write so an interrupted run keeps its partial output (resume).
+        with open(out_path, "a", encoding="utf-8") as f:
+            f.write(json.dumps(new_chunk, ensure_ascii=False) + "\n")
+        print(f"  ✓ {len(zh)} zh chars  in {elapsed:.1f}s  (total so far: {len(out_chunks)})", flush=True)
 
     if dry_run or not out_chunks:
         return
 
-    # Persist
-    out_path = CHUNKS_DIR / f"{ebook_id}.jsonl"
-    out_path.parent.mkdir(parents=True, exist_ok=True)
+    # Rewrite JSONL with renumbered chunk_index (the append-write above may
+    # have produced non-contiguous indices if resume hit duplicates).
+    for i, c in enumerate(out_chunks):
+        c["chunk_index"] = i
     with open(out_path, "w", encoding="utf-8") as f:
         for c in out_chunks:
             f.write(json.dumps(c, ensure_ascii=False) + "\n")
-    print(f"\nWrote {out_path}  ({out_path.stat().st_size//1024} KB)")
+    print(f"\nWrote {out_path}  ({out_path.stat().st_size//1024} KB)", flush=True)
 
     # R2 + DB previews
     try:
@@ -319,8 +445,13 @@ def main():
     p.add_argument("--inspect", action="store_true")
     p.add_argument("--dry-run", action="store_true")
     p.add_argument("--limit", type=int)
+    p.add_argument("--engine", choices=["gemini", "sonnet"], default="gemini",
+                   help="Translation engine. sonnet uses Claude Sonnet 4.6")
+    p.add_argument("--resume", action="store_true",
+                   help="Skip chapter_path already in the on-disk JSONL")
     args = p.parse_args()
-    translate_book(args.ebook_id, args.limit, args.inspect, args.dry_run)
+    translate_book(args.ebook_id, args.limit, args.inspect, args.dry_run,
+                   engine=args.engine, resume=args.resume)
 
 
 if __name__ == "__main__":
