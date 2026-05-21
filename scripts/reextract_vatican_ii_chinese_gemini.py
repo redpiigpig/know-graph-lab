@@ -145,7 +145,7 @@ def main():
             out_path = OUT_DIR / f"{code.lower()}-chinese.txt"
             out_path.write_text(text, encoding="utf-8")
             print(f"  -> {out_path} ({len(text)} chars)", flush=True)
-            time.sleep(2)  # be polite under flash 10rpm limit
+            time.sleep(4)  # be polite under flash free-tier 20 rpm
         except Exception as e:
             print(f"  [{code}] EXCEPTION: {e}", flush=True)
             failures.append((code, str(e)[:120]))
