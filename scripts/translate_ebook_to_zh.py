@@ -110,12 +110,20 @@ def gemini_translate(source: str, model: str = "gemini-2.5-flash") -> str:
         "generationConfig": {"temperature": 0.2, "responseMimeType": "text/plain"},
     }
     base = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
-    while _key_idx < len(GEMINI_KEYS):
+    keys_tried = 0
+    while keys_tried < len(GEMINI_KEYS):
         key = GEMINI_KEYS[_key_idx]
-        for attempt, wait in enumerate((0, 5, 20, 60), start=1):
+        keys_tried += 1
+        for attempt, wait in enumerate((0, 3, 12), start=1):
             if wait:
                 time.sleep(wait)
-            r = requests.post(f"{base}?key={key}", json=body, timeout=180)
+            try:
+                r = requests.post(f"{base}?key={key}", json=body, timeout=90)
+            except requests.exceptions.RequestException as e:
+                print(f"  Gemini conn-err key#{_key_idx} attempt {attempt}: {type(e).__name__}", file=sys.stderr, flush=True)
+                if attempt >= 3:
+                    break
+                continue
             if r.status_code == 200:
                 data = r.json()
                 try:
@@ -124,17 +132,14 @@ def gemini_translate(source: str, model: str = "gemini-2.5-flash") -> str:
                     raise RuntimeError(f"unexpected Gemini response: {json.dumps(data)[:300]}")
                 return text.strip()
             if r.status_code in (429, 502, 503, 504):
-                print(f"  Gemini {r.status_code} key#{_key_idx} attempt {attempt}", file=sys.stderr)
+                print(f"  Gemini {r.status_code} key#{_key_idx} attempt {attempt}", file=sys.stderr, flush=True)
                 if attempt >= 3:
-                    if _key_idx + 1 < len(GEMINI_KEYS):
-                        _key_idx += 1
-                        print(f"  → rotating to key #{_key_idx}", file=sys.stderr)
-                    else:
-                        raise RuntimeError(f"all {len(GEMINI_KEYS)} keys exhausted")
                     break
                 continue
             raise RuntimeError(f"Gemini HTTP {r.status_code}: {r.text[:300]}")
-    raise RuntimeError("all keys exhausted")
+        # All attempts on this key failed — rotate
+        _key_idx = (_key_idx + 1) % len(GEMINI_KEYS)
+    raise RuntimeError(f"all {len(GEMINI_KEYS)} Gemini keys exhausted (timeouts/throttling)")
 
 
 # ── EPUB → ordered chunks ─────────────────────────────────────────────────
@@ -196,15 +201,22 @@ def fetch_book(ebook_id: str) -> dict:
 
 
 def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: bool) -> None:
+    # Always unbuffered so background-mode logs show progress live.
+    try:
+        sys.stdout.reconfigure(line_buffering=True)
+        sys.stderr.reconfigure(line_buffering=True)
+    except Exception:
+        pass
+
     book = fetch_book(ebook_id)
-    print(f"Book: {book['title']}")
+    print(f"Book: {book['title']}", flush=True)
     epub_path = find_epub_for_book(book)
-    print(f"EPUB: {epub_path}")
+    print(f"EPUB: {epub_path}", flush=True)
 
     src_chunks = epub_to_chunks(epub_path)
-    print(f"Source chunks: {len(src_chunks)}")
+    print(f"Source chunks: {len(src_chunks)}", flush=True)
     total_en_chars = sum(len(c["content_en"]) for c in src_chunks)
-    print(f"Source total: {total_en_chars:,} chars")
+    print(f"Source total: {total_en_chars:,} chars", flush=True)
 
     if inspect:
         for i, c in enumerate(src_chunks[:8]):

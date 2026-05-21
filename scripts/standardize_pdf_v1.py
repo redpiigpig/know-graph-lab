@@ -291,10 +291,55 @@ def standardize(book: dict, dry_run: bool) -> None:
         return
 
     out = CHUNKS_DIR / f"{book['id']}.jsonl"
+    out.parent.mkdir(parents=True, exist_ok=True)
     with open(out, "w", encoding="utf-8") as f:
         for c in chunks:
             f.write(json.dumps(c, ensure_ascii=False) + "\n")
     print(f"✓ wrote {out}")
+
+    try:
+        se.push_to_r2(book["id"], out)
+        print("  ✓ pushed R2")
+    except Exception as e:
+        print(f"  ⚠ R2 push failed: {e}", file=sys.stderr)
+
+    # Update ebooks row + refresh ebook_chunks previews
+    total_chars = sum(len(c.get("content") or "") for c in chunks)
+    from datetime import datetime
+    now = datetime.utcnow().isoformat() + "Z"
+    patch = {
+        "chunk_count": len(chunks),
+        "total_chars": total_chars,
+        "parsed_at": now,
+        "standardized_at": now,
+    }
+    r = requests.patch(f"{URL}/rest/v1/ebooks?id=eq.{book['id']}",
+                       headers={**H_GET, "Content-Type": "application/json"},
+                       json=patch, timeout=30)
+    if r.ok:
+        print(f"  ✓ ebooks patched  chunk_count={len(chunks)}  total_chars={total_chars:,}")
+    else:
+        print(f"  ⚠ ebooks patch: {r.status_code}", file=sys.stderr)
+
+    requests.delete(f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{book['id']}", headers=H_GET, timeout=30)
+    rows = [{
+        "ebook_id": book["id"],
+        "chunk_index": c["chunk_index"],
+        "chunk_type": c.get("chunk_type") or "chapter",
+        "page_number": c.get("page_number"),
+        "chapter_path": c.get("chapter_path"),
+        "content": (c.get("content") or "")[:200],
+        "char_count": len(c.get("content") or ""),
+    } for c in chunks]
+    BATCH = 25
+    for i in range(0, len(rows), BATCH):
+        rr = requests.post(f"{URL}/rest/v1/ebook_chunks",
+                           headers={**H_GET, "Content-Type": "application/json"},
+                           json=rows[i:i+BATCH], timeout=60)
+        if not rr.ok:
+            print(f"  ⚠ ebook_chunks insert {rr.status_code}: {rr.text[:200]}", file=sys.stderr)
+            return
+    print("  ✓ ebook_chunks previews refreshed")
 
 
 def main():
