@@ -743,6 +743,30 @@ def ingest_ylt(dry_run=False):
     _ingest_scrollmapper("ylt", "YLT.json", dry_run=dry_run)
 
 
+def ingest_byz(dry_run=False):
+    _ingest_scrollmapper("byz", "Byz.json", dry_run=dry_run)
+
+
+def ingest_peshitta(dry_run=False):
+    _ingest_scrollmapper("peshitta", "Peshitta.json", dry_run=dry_run)
+
+
+def ingest_arm_east(dry_run=False):
+    _ingest_scrollmapper("arm_east", "ArmEastern.json", dry_run=dry_run)
+
+
+def ingest_csl(dry_run=False):
+    _ingest_scrollmapper("csl", "CSlElizabeth.json", dry_run=dry_run)
+
+
+def ingest_rus_syn(dry_run=False):
+    _ingest_scrollmapper("rus_syn", "RusSynodal.json", dry_run=dry_run)
+
+
+def ingest_cop_sah(dry_run=False):
+    _ingest_scrollmapper("cop_sah", "CopSahBible2.json", dry_run=dry_run)
+
+
 # ─── Brenton LXX English (USFM zip from eBible.org) ─────────────────────────
 # One zip → 60+ USFM files. We only fetch the books that fill our gaps
 # (3ma/4ma/epj/ps2/2es) since KJVA + Sigao already cover the common deutero.
@@ -1285,7 +1309,9 @@ def main():
                     choices=["sblgnt", "vul", "wlc", "lxx", "cuv2010", "niv",
                              "kjva", "sigao", "brenton",
                              "cuv1919", "cuv1919w", "drc", "asv", "ylt",
-                             "nabre", "lzz", "tcv", "rcv", "rcv_zh", "knox", "all"])
+                             "nabre", "lzz", "tcv", "rcv", "rcv_zh", "knox",
+                             "byz", "peshitta", "arm_east", "csl", "rus_syn", "cop_sah",
+                             "all"])
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--book", help="Limit to one book code (for testing)")
     ap.add_argument("--resume", action="store_true",
@@ -1319,6 +1345,12 @@ def main():
         "tcv": ingest_tcv,
         "rcv": ingest_rcv,
         "rcv_zh": ingest_rcv_zh,
+        "byz": ingest_byz,
+        "peshitta": ingest_peshitta,
+        "arm_east": ingest_arm_east,
+        "csl": ingest_csl,
+        "rus_syn": ingest_rus_syn,
+        "cop_sah": ingest_cop_sah,
         "knox": lambda dry_run=False: ingest_knox(dry_run=dry_run, resume=args.resume),
     }
     fn_map[args.version](dry_run=args.dry_run)
