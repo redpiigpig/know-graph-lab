@@ -7,7 +7,7 @@ export const vaticanIPA: Creed = {
   councilDocCode: 'PA',
   councilDocOrder: 2,
   order: 2002,
-  nameZh: '永恆牧人教義憲章（論基督教會教義憲章第一）',
+  nameZh: '論基督教會教義憲章第一（永恆牧人）',
   nameEn: 'First Dogmatic Constitution on the Church of Christ',
   nameLat: 'Pastor Aeternus',
   year: 1870,
@@ -20,12 +20,14 @@ export const vaticanIPA: Creed = {
     '反對派代表（後接受）：Karl Joseph von Hefele、Felix Dupanloup、John Henry Newman（缺席派）',
   ],
   acceptedBy: ['catholic'],
+  displayMode: 'simple',
   versions: [
     {
       lang: 'zh-Hant-Catholic',
       label: '天主教中文版（待手動填入；vatican.va 無中文官方版）',
       text: '',
       textKey: 'pa-chinese',
+      placeholder: true,
       source: '待補：來源候選 → 中華民國天主教主教團《梵蒂岡第一屆大公會議文獻》／思高聖經學會《大公會議信條彙編》',
       translator: '待確認',
     },

@@ -619,6 +619,8 @@ const notesBlocks = computed<NotesBlock[]>(() => {
 // ── Paragraph mode（梵二 / 有 textKey 的長文件） ─────────────────
 const paragraphMode = computed(() => {
   if (!creed.value) return false
+  // 顯式 'simple' opt-out（如梵一 Dei Filius / Pastor Aeternus — 結構不適合段號對照）
+  if (creed.value.displayMode === 'simple') return false
   return creed.value.versions.some(v => !!v.textKey)
 })
 

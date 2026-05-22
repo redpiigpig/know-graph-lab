@@ -7,7 +7,7 @@ export const vaticanIDF: Creed = {
   councilDocCode: 'DF',
   councilDocOrder: 1,
   order: 2001,
-  nameZh: '天主子教義憲章（公教信仰教義憲章）',
+  nameZh: '信德教義憲章',
   nameEn: 'Dogmatic Constitution on the Catholic Faith',
   nameLat: 'Dei Filius',
   year: 1870,
@@ -19,12 +19,14 @@ export const vaticanIDF: Creed = {
     '神學委員會（Deputatio de fide）審議',
   ],
   acceptedBy: ['catholic'],
+  displayMode: 'simple',
   versions: [
     {
       lang: 'zh-Hant-Catholic',
       label: '天主教中文版（待手動填入；vatican.va 無中文官方版）',
       text: '',
       textKey: 'df-chinese',
+      placeholder: true,
       source: '待補：來源候選 → 中華民國天主教主教團《梵蒂岡第一屆大公會議文獻》／思高聖經學會《大公會議信條彙編》',
       translator: '待確認',
     },

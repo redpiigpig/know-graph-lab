@@ -123,6 +123,14 @@ export interface Creed {
    *  範例：'zh-Hant-Joint2019'（尼西亞-君士坦丁堡 381 用 2019 五宗派合一譯本作 anchor）
    */
   anchorLang?: CreedLanguage
+  /**
+   * detail page 顯示模式：
+   *  - 'paragraph'（預設，若有 textKey）：逐段對照 — 用 paragraphParser 把每份 .txt 拆成
+   *    `## heading` + `N. paragraph` blocks 並按段號跨欄 outer-join。適用梵二 16 份結構化文件。
+   *  - 'simple'：三欄並列 — 整段原文直接 `<pre>` 顯示。適用結構不規則的文件（如梵一兩份
+   *    教義憲章：章節內為自由連續散文、無段號；canons 區段號又按章節 reset）。
+   */
+  displayMode?: 'paragraph' | 'simple'
 }
 
 export interface CanonLawDoc {
