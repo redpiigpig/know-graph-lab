@@ -14,21 +14,25 @@
       </div>
 
       <div class="tfb-topbar-center">
-        <button class="tfb-nav-btn" :disabled="leftPage <= 1" @click="prev" title="上一頁 (←)">‹</button>
+        <button class="tfb-nav-btn" :disabled="state === 'cover'" @click="prev" title="上一頁 (←)">‹</button>
         <span class="tfb-page-label">
-          第
-          <input
-            v-model.number="jumpInput"
-            class="tfb-page-input"
-            type="number"
-            :min="1"
-            :max="totalPages"
-            @keyup.enter="jump"
-            @blur="jump"
-          />
-          / {{ totalPages }} 頁
+          <template v-if="state === 'cover'">封面</template>
+          <template v-else-if="state === 'back'">封底</template>
+          <template v-else>
+            第
+            <input
+              v-model.number="jumpInput"
+              class="tfb-page-input"
+              type="number"
+              :min="1"
+              :max="totalPages"
+              @keyup.enter="jump"
+              @blur="jump"
+            />
+            / {{ totalPages }} 頁
+          </template>
         </span>
-        <button class="tfb-nav-btn" :disabled="rightPage >= totalPages" @click="next" title="下一頁 (→)">›</button>
+        <button class="tfb-nav-btn" :disabled="state === 'back'" @click="next" title="下一頁 (→)">›</button>
       </div>
 
       <div class="tfb-topbar-right">
@@ -54,8 +58,8 @@
     <!-- ── Reader body ────────────────────────────────────────── -->
     <div v-else class="tfb-body">
 
-      <!-- TOC sidebar -->
-      <aside v-show="tocOpen" class="tfb-toc">
+      <!-- TOC sidebar (only when reading) -->
+      <aside v-show="tocOpen && state === 'reading'" class="tfb-toc">
         <div class="tfb-toc-title">章節目錄</div>
         <div v-if="!outline?.length" class="tfb-toc-empty">尚未自動偵測到章節</div>
         <ul v-else class="tfb-toc-list">
@@ -75,14 +79,58 @@
 
       <!-- Book -->
       <div class="tfb-book-wrap">
-        <div class="tfb-book" :class="{ 'tfb-book--flipping': flipping }">
+
+        <!-- ── Front cover ─────────────────────────────────── -->
+        <div v-if="state === 'cover'" class="tfb-book tfb-book--single" @click="openBook">
+          <div class="tfb-cover tfb-cover--front">
+            <div class="tfb-cover-frame">
+              <div class="tfb-cover-eyebrow">{{ categoryLabel }}</div>
+              <div class="tfb-cover-rule" />
+              <h1 class="tfb-cover-title">{{ article.title }}</h1>
+              <p v-if="article.title_en" class="tfb-cover-title-en">{{ article.title_en }}</p>
+              <div class="tfb-cover-mid">
+                <span class="tfb-cover-ornament">❦</span>
+              </div>
+              <p class="tfb-cover-author">{{ article.author || '龐君華' }}</p>
+              <p v-if="article.supervisor" class="tfb-cover-supervisor">指導教授 ‧ {{ article.supervisor }}</p>
+              <div class="tfb-cover-foot">
+                <p v-if="article.publication" class="tfb-cover-school">{{ article.publication }}</p>
+                <p v-if="article.published_date" class="tfb-cover-year">{{ formatYear(article.published_date) }}</p>
+              </div>
+            </div>
+            <div class="tfb-cover-hint">點擊封面，開啟全書 →</div>
+          </div>
+        </div>
+
+        <!-- ── Back cover ──────────────────────────────────── -->
+        <div v-else-if="state === 'back'" class="tfb-book tfb-book--single" @click="prev">
+          <div class="tfb-cover tfb-cover--back">
+            <div class="tfb-cover-frame">
+              <div class="tfb-back-mark">✝</div>
+              <p class="tfb-back-archive">龐君華會督數位典藏</p>
+              <p class="tfb-back-archive-en">Bishop Pong Kwan-wah Digital Archive</p>
+              <div class="tfb-cover-rule" />
+              <p v-if="article.provider" class="tfb-back-meta">原檔提供 ‧ {{ article.provider }}</p>
+              <p class="tfb-back-meta">© {{ new Date().getFullYear() }}</p>
+            </div>
+            <div class="tfb-cover-hint">← 點擊回到最後一頁</div>
+          </div>
+        </div>
+
+        <!-- ── Reading: 2-page spread ──────────────────────── -->
+        <div v-else class="tfb-book" :class="{ 'tfb-book--flipping': flipping }">
 
           <!-- Left page -->
           <article class="tfb-page tfb-page--left" :class="overflowClass(leftOverflowLevel)">
             <div class="tfb-page-inner" ref="leftPageEl">
               <div class="tfb-content" v-if="leftBlocks">
                 <template v-for="(b, i) in bodyBlocks(leftBlocks)" :key="`L${i}`">
-                  <component :is="blockTag(b)" :class="blockClass(b)">{{ b.text }}</component>
+                  <div v-if="b.type === '_toc_entry'" :class="['tfb-blk', 'tfb-blk--toc', `tfb-blk--toc-lvl${Math.min(b.level || 1, 4)}`]">
+                    <span class="tfb-blk-toc-text">{{ b.text }}</span>
+                    <span class="tfb-blk-toc-leader" aria-hidden="true"></span>
+                    <span class="tfb-blk-toc-page">{{ b.page }}</span>
+                  </div>
+                  <component v-else :is="blockTag(b)" :class="blockClass(b)">{{ b.text }}</component>
                 </template>
                 <div v-if="leftFootnotes.length" class="tfb-footnotes">
                   <div v-for="(f, i) in leftFootnotes" :key="`LF${i}`" class="tfb-footnote">
@@ -101,7 +149,12 @@
             <div class="tfb-page-inner" ref="rightPageEl">
               <div class="tfb-content" v-if="rightBlocks">
                 <template v-for="(b, i) in bodyBlocks(rightBlocks)" :key="`R${i}`">
-                  <component :is="blockTag(b)" :class="blockClass(b)">{{ b.text }}</component>
+                  <div v-if="b.type === '_toc_entry'" :class="['tfb-blk', 'tfb-blk--toc', `tfb-blk--toc-lvl${Math.min(b.level || 1, 4)}`]">
+                    <span class="tfb-blk-toc-text">{{ b.text }}</span>
+                    <span class="tfb-blk-toc-leader" aria-hidden="true"></span>
+                    <span class="tfb-blk-toc-page">{{ b.page }}</span>
+                  </div>
+                  <component v-else :is="blockTag(b)" :class="blockClass(b)">{{ b.text }}</component>
                 </template>
                 <div v-if="rightFootnotes.length" class="tfb-footnotes">
                   <div v-for="(f, i) in rightFootnotes" :key="`RF${i}`" class="tfb-footnote">
@@ -127,11 +180,27 @@
 
 <script setup>
 const props = defineProps({
-  writingId: { type: [Number, String], required: true },
-  outline:   { type: Array, default: () => [] },
-  totalPages: { type: Number, default: 0 },
-  pdfUrl:    { type: String, default: '' },
+  writingId:     { type: [Number, String], required: true },
+  outline:       { type: Array, default: () => [] },
+  totalPages:    { type: Number, default: 0 },
+  pdfUrl:        { type: String, default: '' },
+  article:       { type: Object, default: () => ({}) },
+  categoryLabel: { type: String, default: '學位論文' },
 })
+
+// state machine: cover → reading → back
+const state = ref('cover')
+function openBook() { state.value = 'reading'; if (leftPage.value < 1) leftPage.value = 1 }
+function closeFront() { state.value = 'cover' }
+function closeBack()  { state.value = 'back' }
+
+function formatYear(dateStr) {
+  if (!dateStr) return ''
+  const [y, m] = String(dateStr).split('-').map(Number)
+  const cy = String(y).split('').map(d => '〇一二三四五六七八九'[+d]).join('')
+  const cm = ['','一','二','三','四','五','六','七','八','九','十','十一','十二'][m] || ''
+  return cm ? `${cy} 年 ${cm} 月` : `${cy} 年`
+}
 
 const pages = ref([])              // array of { page, blocks }
 const pagesByNumber = ref(new Map())
@@ -190,8 +259,35 @@ const downloadUrl = computed(() => {
 const leftBlocks = computed(() => pagesByNumber.value.get(leftPage.value)?.blocks ?? null)
 const rightBlocks = computed(() => pagesByNumber.value.get(rightPage.value)?.blocks ?? null)
 
+// Detect OCR'd 目錄 pages: if a title block is followed by a paragraph that's
+// just a number / page range, merge them into a virtual 'toc_entry' block so we
+// can render dot-leader 「章節名 …… 頁碼」on one row.
+function transformBlocks(blocks) {
+  if (!blocks || !blocks.length) return blocks || []
+  const out = []
+  const isPageStr = s => /^[\d]{1,4}(\s*[-—–]\s*[\d]{1,4})?$/.test((s || '').trim())
+  const titleTypes = new Set(['chapter_title','section_title','subsection_title'])
+  for (let i = 0; i < blocks.length; i++) {
+    const b = blocks[i]
+    const next = blocks[i + 1]
+    if (titleTypes.has(b.type) && next && next.type === 'paragraph' && isPageStr(next.text)) {
+      out.push({
+        type: '_toc_entry',
+        _origType: b.type,
+        level: b.level,
+        text: (b.text || '').trim(),
+        page: (next.text || '').trim(),
+      })
+      i++
+      continue
+    }
+    out.push(b)
+  }
+  return out
+}
+
 function bodyBlocks(blocks) {
-  return (blocks || []).filter(b => b.type !== 'footnote' && b.type !== 'page_number')
+  return transformBlocks(blocks).filter(b => b.type !== 'footnote' && b.type !== 'page_number')
 }
 
 const leftFootnotes = computed(() =>
@@ -234,6 +330,7 @@ function clampLeft(n) {
 }
 
 function goPage(n) {
+  state.value = 'reading'
   const target = clampLeft(n % 2 === 0 ? n - 1 : n)
   if (target === leftPage.value) return
   flipping.value = true
@@ -242,8 +339,18 @@ function goPage(n) {
   jumpInput.value = target
 }
 
-function prev() { if (leftPage.value > 1) goPage(leftPage.value - 2) }
-function next() { if (rightPage.value < totalPages.value) goPage(leftPage.value + 2) }
+function prev() {
+  if (state.value === 'back') { state.value = 'reading'; return }
+  if (state.value === 'cover') return
+  if (leftPage.value <= 1) { state.value = 'cover'; return }
+  goPage(leftPage.value - 2)
+}
+function next() {
+  if (state.value === 'cover') { openBook(); return }
+  if (state.value === 'back')  return
+  if (rightPage.value >= totalPages.value) { state.value = 'back'; return }
+  goPage(leftPage.value + 2)
+}
 
 function jump() {
   const n = parseInt(jumpInput.value, 10)
@@ -295,7 +402,10 @@ onBeforeUnmount(() => {
 .tfb-root {
   position: relative;
   background: linear-gradient(180deg, #3A2E20 0%, #2A2218 100%);
-  height: 100vh;            /* fill viewport exactly so book fits A4 with no inner scroll */
+  /* Fill parent (which is layout's <main flex:1>, sized = viewport-header-footer).
+     Falls back to a sensible min-height if parent doesn't size us. */
+  height: 100%;
+  min-height: 480px;
   display: flex;
   flex-direction: column;
   font-family: 'Noto Serif TC', serif;
@@ -500,6 +610,214 @@ onBeforeUnmount(() => {
   position: relative;
   perspective: 1800px;
 }
+/* Single-page mode for cover / back cover — A4 portrait shape */
+.tfb-book--single {
+  grid-template-columns: 1fr;
+  aspect-ratio: 0.707 / 1;
+  cursor: pointer;
+  background: linear-gradient(135deg, #3F2E1E 0%, #2A1E12 100%);
+}
+.tfb-book--single::before { display: none; }
+
+/* ── Cover ─────────────────────────────────────────────── */
+.tfb-cover {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background:
+    radial-gradient(ellipse at top, rgba(220, 195, 150, 0.08), transparent 70%),
+    linear-gradient(170deg, #F4E8CE 0%, #E8D9B6 50%, #D9C698 100%);
+  color: #2C2218;
+  padding: 6% 8%;
+  border-radius: 3px;
+  box-shadow:
+    inset 0 0 0 1px rgba(120, 90, 50, 0.25),
+    inset 0 0 80px rgba(80, 50, 20, 0.15);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.tfb-cover:hover { transform: translateY(-2px); }
+
+.tfb-cover-frame {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 8% 4%;
+  border: 1px double rgba(120, 90, 50, 0.4);
+  border-radius: 2px;
+  background: rgba(252, 244, 224, 0.25);
+}
+.tfb-cover-eyebrow {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #6A5538;
+  letter-spacing: 0.5em;
+  padding-left: 0.5em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.tfb-cover-rule {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #8A6E48, transparent);
+  margin: 0 0 28px;
+}
+.tfb-cover-title {
+  font-family: 'Noto Serif TC', 'SimSun', serif;
+  font-size: clamp(1.3rem, 2.6vw, 2.1rem);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  line-height: 1.55;
+  color: #1F1610;
+  margin: 0 0 14px;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+}
+.tfb-cover-title-en {
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(0.78rem, 1.1vw, 0.95rem);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  color: #5A4530;
+  margin: 0 0 24px;
+}
+.tfb-cover-mid {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+}
+.tfb-cover-ornament {
+  font-size: 1.4rem;
+  color: #8A6E48;
+  opacity: 0.5;
+}
+.tfb-cover-author {
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 500;
+  letter-spacing: 0.85em;
+  padding-left: 0.85em;
+  color: #2C2218;
+  margin: 0 0 8px;
+}
+.tfb-cover-supervisor {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: clamp(0.72rem, 0.9vw, 0.82rem);
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  color: #5A4530;
+  margin: 0 0 28px;
+}
+.tfb-cover-foot {
+  font-family: 'Noto Serif TC', serif;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.tfb-cover-school {
+  font-size: clamp(0.78rem, 1vw, 0.92rem);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: #3A2A18;
+  margin: 0;
+}
+.tfb-cover-year {
+  font-size: clamp(0.72rem, 0.9vw, 0.82rem);
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  color: #5A4530;
+  margin: 0;
+}
+.tfb-cover-hint {
+  text-align: center;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  color: rgba(106, 85, 56, 0.55);
+  padding-top: 12px;
+}
+
+/* Back cover variant */
+.tfb-cover--back {
+  background:
+    radial-gradient(ellipse at center, rgba(180, 150, 110, 0.1), transparent 70%),
+    linear-gradient(170deg, #E8D9B6 0%, #D9C698 50%, #C4B080 100%);
+}
+.tfb-back-mark {
+  font-size: 2.4rem;
+  color: #6A5538;
+  margin: 8% 0 4%;
+  opacity: 0.6;
+}
+.tfb-back-archive {
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  padding-left: 0.28em;
+  color: #2C2218;
+  margin: 0 0 6px;
+}
+.tfb-back-archive-en {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  color: #5A4530;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+.tfb-back-meta {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  color: #3A2A18;
+  margin: 0 0 6px;
+}
+
+/* ── In-page TOC entry (dot leader) ───────────────────────── */
+.tfb-blk--toc {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0.18em 0;
+  font-family: 'Noto Serif TC', serif;
+  text-indent: 0;
+  line-height: 1.7;
+}
+.tfb-blk-toc-text {
+  flex: 0 1 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tfb-blk-toc-leader {
+  flex: 1 1 auto;
+  min-width: 16px;
+  border-bottom: 1px dotted rgba(80, 60, 30, 0.4);
+  transform: translateY(-4px);
+  margin-bottom: 0.45em;
+}
+.tfb-blk-toc-page {
+  flex-shrink: 0;
+  font-family: 'Noto Sans TC', 'Times New Roman', serif;
+  color: #4A3A24;
+}
+.tfb-blk--toc-lvl1 { font-size: 1.05rem; font-weight: 600; color: #1F1A14; margin: 0.6em 0 0.25em; }
+.tfb-blk--toc-lvl2 { font-size: 0.96rem; padding-left: 1.5em; }
+.tfb-blk--toc-lvl3 { font-size: 0.9rem;  padding-left: 3em; color: #3A3025; }
+.tfb-blk--toc-lvl4 { font-size: 0.86rem; padding-left: 4.5em; color: #4A4030; }
 .tfb-book::before {
   content: '';
   position: absolute;

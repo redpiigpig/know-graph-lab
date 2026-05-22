@@ -1,5 +1,5 @@
 <template>
-  <div class="wa-page">
+  <div class="wa-page" :class="{ 'wa-page--thesis': isThesisFlipbook }">
 
     <div class="wa-topbar">
       <NuxtLink to="/pong-archive/writings" class="wa-back">← 返回著作列表</NuxtLink>
@@ -7,28 +7,15 @@
 
     <div v-if="pending" class="wa-loading">載入中…</div>
 
-    <!-- ── Thesis flipbook reader ─────────────────────────── -->
+    <!-- ── Thesis flipbook reader (cover/back/spread 都在 component 內) ── -->
     <template v-else-if="article && isThesisFlipbook">
-      <header class="wa-header wa-header--thesis">
-        <div class="wa-header-meta">
-          <span class="wa-cat-badge">{{ categoryLabel }}</span>
-          <span v-if="article.publication" class="wa-pub">{{ article.publication }}</span>
-          <span v-if="article.published_date" class="wa-date">{{ formatDate(article.published_date, article.date_approximate) }}</span>
-          <span v-if="article.total_pages" class="wa-pages">共 {{ article.total_pages }} 頁</span>
-        </div>
-        <h1 class="wa-title">{{ article.title }}</h1>
-        <p v-if="article.title_en" class="wa-title-en">{{ article.title_en }}</p>
-        <div class="wa-byline-row">
-          <p class="wa-byline">{{ article.author || '龐君華 會督' }}</p>
-          <p v-if="article.supervisor" class="wa-meta-side">指導教授：{{ article.supervisor }}</p>
-          <p v-if="article.provider" class="wa-meta-side">提供：{{ article.provider }}</p>
-        </div>
-      </header>
       <PongArchivePongThesisFlipbook
+        :article="article"
         :writing-id="article.id"
         :outline="article.outline || []"
         :total-pages="article.total_pages || 0"
         :pdf-url="`/api/pong-writing/${article.id}/pdf`"
+        :category-label="categoryLabel"
       />
     </template>
 
@@ -166,6 +153,23 @@ function formatDate(dateStr, approximate) {
   min-height: 100vh;
   font-family: 'Noto Sans TC', sans-serif;
   color: #2C2C2C;
+}
+
+/* Thesis flipbook 模式 — 不需要外層 100vh wrapper，
+   讓 flipbook 自己抓 main 的可用高度（layout main 是 flex:1） */
+.wa-page--thesis {
+  min-height: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.wa-page--thesis .wa-topbar {
+  padding: 10px 24px;
+  flex-shrink: 0;
+}
+.wa-page--thesis > *:last-child {
+  flex: 1;
+  min-height: 0;
 }
 
 /* ── Topbar ──────────────────────────────────────────────── */
