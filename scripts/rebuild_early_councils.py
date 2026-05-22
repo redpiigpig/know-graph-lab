@@ -22,6 +22,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TXT_DIR = os.path.join(ROOT, "data", "creeds", "ecumenical-councils", "early")
 
 COUNCILS = [
+    (3, "ecum03", "ephesus"),
+    (4, "ecum04", "chalcedon"),
     (5, "ecum05", "constantinople-ii"),
     (6, "ecum06", "constantinople-iii"),
     (7, "ecum07", "nicaea-ii"),

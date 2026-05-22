@@ -63,6 +63,8 @@ export const early05: Creed = {
 - 中文版尚未從 vatican.va 取得（前七次大公會議無中文官方版）；中譯需從《公教會之信仰與倫理教義選集》(Denzinger 中譯, 光啟 2013, ISBN 9789575467418) 紙本取材
 - 原文為希臘文；拉丁版多為中世紀回譯`,
   related: [
+    'early-03-ephesus',
+    'early-04-chalcedon',
     'early-06-constantinople-iii',
     'early-07-nicaea-ii',
   ],

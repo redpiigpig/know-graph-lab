@@ -590,11 +590,30 @@ def el_to_md(el, depth=0):
             return "\n\n---\n\n"
         return ""
 
-    # Footnote refs: drop entirely (they're decorative without target resolution)
+    # Footnote refs:
+    #   <sup>(N)</sup>   → emit `[^N]` (Pandoc-style footnote ref marker)
+    #   <sup>e</sup>     → decorative version marker (1559版本 etc.) → drop
+    #   <a><sup>(N)</sup></a> → also `[^N]` (the wrapping <a> is the
+    #                            EPUB back-link mechanism; we lose the
+    #                            HTML anchor but keep the ref number).
+    # Reader's renderMarkdown turns `[^N]` into a clickable sup linking
+    # to the corresponding `(N) ...` paragraph in the footnote section.
     if name == "sup":
+        text = el.get_text(strip=True)
+        m = re.match(r"^\((\d+)\)$", text)
+        if m:
+            return f"[^{m.group(1)}]"
         return ""
-    if name == "a" and (_bool_class(el, "footnote") or el.find("sup")):
-        return ""
+    if name == "a":
+        sup = el.find("sup")
+        if sup is not None:
+            m = re.match(r"^\((\d+)\)$", sup.get_text(strip=True))
+            if m:
+                return f"[^{m.group(1)}]"
+            return ""
+        if _bool_class(el, "footnote"):
+            # Footnote body anchor `<a id="..."(N)</a>` — just emit text.
+            return el.get_text()
 
     inner = "".join(el_to_md(c, depth + 1) for c in el.children)
 

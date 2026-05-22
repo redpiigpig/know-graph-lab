@@ -9,6 +9,10 @@ description: Operate the Know-Graph-Lab ebook pipeline end-to-end. Use when work
 
 End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL covers ingest, parse, OCR, standardize, DB back-fill, and reader-side features.
 
+## Current state (snapshot 2026-05-22 — reader UX golden template landed on 加爾文《基督教要義》)
+
+> **Reader UX upgrade (this session)** — see new section [Reader UX golden template](#reader-ux-golden-template-2026-05-22). Validated end-to-end on Calvin's Institutes (校園書房中文版). Highlights: cover-hero title page, web-font 楷書 blockquote, English book title italic, bidirectional `[^N]` footnote anchors, parchment background, 2-level TOC (chapter + section anchors) with `<a href>` semantics, manual cover paste UI. Standardize regex updated to preserve `<sup>(N)</sup>` as `[^N]`.
+
 ## Current state (snapshot 2026-05-22 凌晨 — overnight 完成 sections live + reclassify apply)
 
 | | 數量 |
@@ -965,6 +969,268 @@ Schema in [`database/tags.sql`](../../../database/tags.sql). `tags` + `book_tags
 ### Markdown citation export
 
 「📋 匯出 Markdown」 button on `/excerpts/library/[bookId]` toolbar. Self-contained markdown (bibliographic header + chapter-grouped `> blockquote` + `——《book》, chapter, page` citation). Clipboard + `<book-title>.md` download. Client-side.
+
+---
+
+## Reader UX golden template (2026-05-22)
+
+Range of upgrades validated on `基督教要義` (id `fd5ced43-...`, 加爾文／校園書房中文版). Each piece is a small, isolated change to `pages/ebook/[id].vue` + `server/utils/ebook-chunks.ts`; apply individually as needed for other books.
+
+### Visual design
+
+| Element | Treatment | CSS class / hook |
+|---|---|---|
+| Article background | Warm parchment `#fdfcf7` + subtle gradient overlay (not pure white) | `.ebook-article` |
+| Body font | `Noto Serif TC` (Google Fonts, loaded globally) — same as before but explicit `@import url(...)` | `.ebook-prose` |
+| **Blockquote (`> ` markdown)** | **楷書 web font**（ZCOOL XiaoWei） — `font-family: "ZCOOL XiaoWei", "DFKai-SB", "BiauKai", "標楷體", serif`. Gold left border + cream `#fefce8` background | `.ebook-prose :deep(blockquote)` |
+| Chapter `## H2` | Centered, double-rule (top hairline + 3px double bottom), 1.85rem, letter-spacing 0.06em | `.ebook-prose :deep(h2)` |
+| Section `### H3` | Left accent-bar (4px solid `#78716c`), 1.4rem, `scroll-margin-top: 4rem` for anchor jumps | `.ebook-prose :deep(h3)` |
+| Sub-section `#### H4` | 1.15rem, color `#44403c`, also `scroll-margin-top: 4rem` | `.ebook-prose :deep(h4)` |
+| English book title `*Latin Text*` / `《Latin Text》` | Auto-detected by `inlineFmt`: Latin-containing italic markdown → Georgia italic via `<em class="book-title-en">` | `.ebook-prose :deep(em.book-title-en)` |
+
+Google Fonts `<style>@import …</style>` is placed in a **non-scoped** `<style>` block so the `@import` lives at document head. Two stacks: `Noto Serif TC` (weights 400/500/600/700) + `ZCOOL XiaoWei`.
+
+### Cover hero page (chunk 0 / chapter_path == "封面")
+
+When `isCoverPage` computed (`currentPage === 1 || pageChapter === "封面"`) is true, the reader **replaces** markdown rendering with a curated title-page layout:
+
+- Centered cover image inside `aspect-ratio: 2 / 3` container with `object-fit: cover` to **crop publisher whitespace** (校園書房 thumbnails have white pad around the actual book art). Container `max-width: 320px`, generous shadow.
+- Decorative `❦` diamond ornament flanked by hairline rules
+- 2.6rem display title (`letter-spacing: 0.12em`)
+- 「著」「譯」chip-style labels (small grey background pill) followed by name
+- 「出版社 · 出版年（原著 YYYY）」imprint, hairline above
+
+DB fields surfaced on cover (added to `/api/ebooks/[id].get.ts` select): `subtitle`, `original_title`, `author_en`, `original_author`, `translator`, `publisher`, `publication_year`, `original_publish_year`.
+
+### Cover image — DB column + manual paste UI + auto lookup
+
+New columns on `ebooks`:
+```sql
+ALTER TABLE ebooks ADD COLUMN cover_url text;
+ALTER TABLE ebooks ADD COLUMN cover_source text;  -- 'campus_chinese_edition' | 'cclc_hk_chinese_edition' | 'google_books' | 'open_library' | 'manual_paste'
+```
+
+| Component | Purpose |
+|---|---|
+| [`scripts/lookup_book_cover.py`](../../../scripts/lookup_book_cover.py) | Best-effort auto lookup: Google Books `intitle:{title}+inauthor:{author}` → Open Library by title. Chinese hit rate is poor; English public-domain books (Calvin/Augustine/Aquinas) are great |
+| [`server/api/ebooks/[id]/cover.put.ts`](../../../server/api/ebooks/[id]/cover.put.ts) | `PUT { cover_url }` — manual paste endpoint. Only http(s) allowed |
+| Reader inline editor | Hover cover → ✏ pencil → paste URL → save. **The fastest path for Chinese editions** is博客來/校園書房/誠品 → 右鍵封面圖片 → 複製圖片網址 → 貼上 |
+
+**Auto-lookup limitations**: Google Books anonymous traffic 429s heavily after a few requests; Open Library hit rate is poor for Chinese titles. For Chinese books, manual paste is the realistic path. The script is good for batch English/Latin authors.
+
+### 目錄 page — chapter links + indented sections
+
+When `pageChapter === "目錄"` (or 目　錄 / 目　　錄 variants — same key after collapse), reader uses a **dedicated `renderTocPage()`** instead of generic markdown render. Maps each line to one of four shapes:
+
+| Source pattern | Render | Notes |
+|---|---|---|
+| `## 目錄` | `<h2 class="toc-page-title">目　錄</h2>` (centered with double-rule + letter-spacing) | One per page |
+| `**第N卷**` | `<div class="toc-volume">` — bold display label, no link | Volume header (no chunk-level navigation needed) |
+| `**第N章　Title**` | `<div class="toc-chapter"><a data-toc-chapter="N+1">` two-column flex layout (章編號 \| 章名) | Resolves via `chapterIndexByTitle` map (normalized by `normChapterKey`: strip `[^N]` + collapse whitespace). Click → `goPage()` |
+| `**參考書目**` / `**英漢譯名對照表**` / `**修訂後記**` | Same as chapter but no 章編號 column (`.toc-ch-title-solo`) | Other bold lines that resolve to a TOC entry |
+| Plain text line | `<div class="toc-section">` — indented further than chapters, muted | Subsection labels like 「但人卻不認識和不敬拜神（11—12）」 |
+
+Click handler `onContentClick` intercepts `a[data-toc-chapter]` and calls `goPage(N)` instead of letting the browser do a full reload — same SPA UX as sidebar.
+
+### Inline footnote refs `[^N]` (bidirectional anchor)
+
+The original EPUB encodes footnotes as `<a id="ch{N}-back" href="#ch{N}"><sup>(N)</sup></a>` inline + `<p class="fnote"><a id="ch{N}" href="#ch{N}-back">(N)</a> text</p>` at chunk end. Old standardize stripped ALL `<sup>` → inline refs lost.
+
+**Fix applied in `standardize_ebook.py:el_to_md`** (around line 593):
+
+```python
+if name == "sup":
+    text = el.get_text(strip=True)
+    m = re.match(r"^\((\d+)\)$", text)
+    if m:
+        return f"[^{m.group(1)}]"   # Pandoc-style footnote ref
+    return ""                        # decorative sup (edition markers) still dropped
+if name == "a":
+    sup = el.find("sup")
+    if sup is not None:
+        m = re.match(r"^\((\d+)\)$", sup.get_text(strip=True))
+        if m:
+            return f"[^{m.group(1)}]"
+        return ""                    # other <a><sup>X</sup></a> still dropped
+    if _bool_class(el, "footnote"):
+        return el.get_text()         # footnote body anchor — emit text
+```
+
+**Reader render** (`renderMarkdown`):
+- Inline `[^N]` → `<sup id="fnref-{chunk}-{N}"><a href="#fn-{chunk}-{N}">N</a></sup>` (small blue superscript with pale blue badge; `scroll-margin-top: 6rem` so it clears sticky topbar; `:target` rule shows persistent orange highlight after back-navigation)
+- Footnote body `(N) text` (after `———…———` separator) → `<p id="fn-{chunk}-{N}"><a class="footnote-num">…</a> text <a class="footnote-back" href="#fnref-{chunk}-{N}">↩</a></p>` — **both** the leading `(N)` blue label AND the trailing `↩` link to the same `#fnref-{chunk}-{N}`. (Earlier the `(N)` was a self-link for URL copying; usability testing showed users expect it to navigate back to the body, so both now do.)
+- `onContentClick` intercepts any `<a href="#…">` inside `.ebook-prose` → smooth scroll + amber flash via `el.animate(...)`. Avoids sticky-topbar occlusion.
+- `goPage()` always passes `hash: ""` to `router.replace` so any stale `#fnref-…` / `#sec-…` from prior in-page anchor click is cleared on chapter navigation. Otherwise the browser's hash-honoring on URL change scrolls to a now-stale element on the new page.
+- `loadPage()` calls **both** `scrollEl.scrollTo({top:0})` and `window.scrollTo({top:0})` defensively so chapter changes always land at the top of the new chapter.
+
+### Footnote section visual
+
+Detect `^[—－\-]{15,}$` (15+ em-dashes / hyphens) → emit `<section class="footnotes">` with hairline-bracketed 「**——— 註　釋 ———**」 label, smaller font (13.5px), thin line-height. Each `(N)` is a self-anchor (`<a href="#fn-{c}-{N}">`) so users can right-click → copy link.
+
+### TOC sidebar — multi-level + hyperlinks + filters
+
+`loadToc()` (`server/utils/ebook-chunks.ts`) extended to:
+
+1. **Extract sub-section anchors** — `### / ####` inside each chunk get `anchor_id: sec-{chunk}-{seq}` (seq = sequential count of h3/h4 after the chunk's h2). Reader's `renderMarkdown` mints the matching `id=` on each heading.
+2. **`FRONTMATTER_NO_ANCHORS`** set (`封面/出版資訊/出版說明/目錄/目　錄/版權頁/版權資訊/扉頁`) → no sub-anchors extracted (those chunks have enumeration noise like `一/二/三` from bundled prefaces).
+3. **`ENUM_ONLY_RE`** filters out section titles that are pure enumeration (`[一二三四五六七八九十百千]+` / digits / roman numerals / single letter). The anchor `seq` counter STILL advances on filtered headings so `loadToc` and reader `renderMarkdown` stay aligned (otherwise sidebar anchor would land on the wrong heading).
+4. **`VOLUME_DIVIDER_RE`** matches `^第N[卷編冊集篇部]$` → those chunks become **section headers** that group following chapters via the `volume` field (don't get their own TOC entry; folded into sidebar's collapsible `volumes` group). Subsequent chapters inherit the most-recent volume name until the next divider.
+5. **Global title dedupe** — `Set<string>` tracks collapsed titles; later occurrences of same title (e.g. multiple 目錄 chunks from per-volume mini-TOCs) suppressed. Note: this is **global**, not just consecutive — so 目錄 / 目　錄 / 目　　錄 across the whole book collapse to one entry.
+6. **Strip `[^N]` from titles** — inline footnote refs sometimes leak into chapter heading text from EPUB extraction (because the EPUB had `<h2>Title<a><sup>(1)</sup></a></h2>`). Clean for TOC display via `replace(/\[\^\d+\]/g, "").trim()`. Body content keeps the `[^N]` for the bidirectional anchor system. Vue's `cleanChapterLabel` computed does the same strip for the breadcrumb header.
+
+Reader-side: TOC entries use **`<a href="?page=N">` + `@click.prevent`** so right-click → 開新分頁 works. Section anchors are `<a href="#sec-{chunk}-{seq}">` for same right-click behavior. All entries have `:title="entry.title"` for full-text tooltip on hover when truncated.
+
+### Section anchor scroll (in-chapter navigation)
+
+When user clicks a section anchor in the sidebar (under the currently-open chapter), `scrollToSection(anchor_id)`:
+
+1. `nextTick` then `document.getElementById(id)`
+2. `scrollIntoView({ behavior: "smooth", block: "start" })`
+3. `el.animate(...)` brief amber flash for visual feedback
+
+The h3/h4 CSS has `scroll-margin-top: 4rem` so the heading isn't hidden under sticky topbar.
+
+### Local-file mtime cache invalidation
+
+`server/utils/ebook-chunks.ts` LRU cache now records `mtimeMs` for local-file-backed entries. `cacheGet` re-stats the file and invalidates if mtime changed. **Critical for dev** — JSONL surgery scripts (split / merge / re-standardize) take effect immediately on next reader request, no need to wait 10 min TTL or restart Nuxt.
+
+### JSONL surgery recipes
+
+Two reusable patterns for fixing already-standardized books without re-running the full standardize pipeline:
+
+**Recipe A — split monolithic frontmatter chunk** ([`c:/tmp/split_calvin_chunk1.py`](../../../../../tmp/split_calvin_chunk1.py))
+
+Some `consolidate_frontmatter_into_publisher` victims become 100KB+ chunks containing 出版資訊 + 縮寫 + 符號 + 編者前言 + 致法王書 all bundled together. Split by content-marker positions:
+
+```python
+content = chunks[target_idx]["content"]
+A = content.find("現在看茨威格")            # editorial prose start (book-specific marker)
+B = content.find("獻給偉大、虔信的法蘭西國王")  # Calvin's dedication start
+A_split = back_to_para(content, A)         # snap to paragraph boundary
+B_split = back_to_para(content, B)
+# Split into 3 chunks: 出版資訊 (0:A) + 編者前言 (A:B) + 致法王書 (B:end)
+```
+
+Result: `chapter_path` becomes navigable distinct entries. Backup original JSONL to `.bak` first.
+
+**Recipe B — merge subsection chunks back into parent chapters** ([`scripts/merge_subsection_chunks.py`](../../../scripts/merge_subsection_chunks.py) — generalized)
+
+Some EPUBs emit one spine-doc per **subsection** (e.g. 「第五章」 then 「但人卻不認識和不敬拜神（11—12）」 as a separate doc). Standardize doesn't currently merge these — result: hundreds of extra subsection chunks cluttering the TOC. The merge rule:
+
+```python
+for each chunk i > 0:
+    cur_lvl = first_head_level(chunks[i])
+    prev    = merged[-1]
+    prev_lvl = first_head_level(prev)
+    if (cur_lvl is not None and prev_lvl is not None
+        and cur_lvl > prev_lvl
+        and not is_frontmatter(prev.chapter_path)      # don't fold into 封面/出版資訊
+        and not is_volume_divider(prev.chapter_path)): # don't fold chapters into 第N卷/部分
+        prev.content += "\n\n" + chunks[i].content
+        continue
+    merged.append(chunks[i])
+```
+
+**Critical: both `is_frontmatter` AND `is_volume_divider` guards are needed.** Without the volume-divider guard, a book like Ford's《基督教神學》(序言 h2 → 第一部分 h2 → 第一章 h3 …) would fold all 9 chapters into 第一部分. Calvin worked without the guard only because his volume dividers (`第一卷`) had no markdown heading detected (`first_head_level == None`), accidentally bypassing the merge.
+
+Worked examples:
+
+| Book | Before | After | What merged |
+|---|---|---|---|
+| Calvin 基督教要義 | 309 | 95 | 214 `（N—M）` subsections of various chapters |
+| Lakoff 肉身哲學 | 92 | 19 | 73 `一、二、三、` subsections of each chapter |
+| Ford 基督教神學 | 17 | 14 | 3 `二/三/四` subsections of 序言 (would have wrongly folded all chapters without volume-divider guard) |
+| Augustine NPNF1 Vol 1 | 488 | 481 | 7 back-matter index entries |
+| 傳習錄 | 24 | 24 | 0 (no h-deeper subsections; uses continuation merge instead) |
+
+The chunks already had `###` for subsections so they render correctly as h3 inside the parent's content.
+
+**Both recipes do**: write new JSONL atomically (`.tmp` → rename + `.bak`), DELETE all `ebook_chunks` rows, INSERT 200-char previews fresh, UPDATE `ebooks.chunk_count + total_pages`. The mtime-aware cache picks it up automatically.
+
+### When to apply each recipe to other books
+
+| Symptom | Recipe |
+|---|---|
+| Sidebar shows 100+ "subsection-only" entries for a single book — chunks whose first heading is one level DEEPER than the previous chunk's first heading | **B** ([`scripts/merge_subsection_chunks.py`](../../../scripts/merge_subsection_chunks.py) — generalized, `cur_lvl > prev_lvl → merge`) |
+| Sidebar shows `第N卷` / `第N編` / `第N冊` / `第N部` as its own clickable entry (instead of grouping subsequent chapters) | Already auto-handled by `VOLUME_DIVIDER_RE` in `loadToc` — no surgery needed |
+| Sidebar shows huge frontmatter chunk titled 出版資訊 (>50KB) that includes 前言 + 致法王書 etc | **A** (split frontmatter) — but tune the content markers per book |
+| Sidebar shows 「又」「續」「(二)」 entries that look orphaned — they're continuation chunks of the previous letter/section | Continuation merge — see `c:/tmp/merge_chuanxilu_continuations.py` template (regex on chapter_path `^(又|續|[一二三四五六七八九十]+)$`) |
+| 章節 titles end with `[^N]` ugly artifact | Auto-handled in `loadToc` (`replace(/\[\^\d+\]/g, "")`) — no surgery needed |
+| Duplicate 目錄 entries (per-volume mini-TOCs) | Auto-handled by global dedupe in `loadToc` |
+| chapter_path == "---" (derive_chapter_title artifact when chunk has no good first heading) | Manual patch per chunk — assign a descriptive name via one-off script |
+
+### Cross-book validation matrix
+
+Three books exercised the template, each surfacing different aspects. Template is solid for **structure** (TOC / cover / anchor scroll / typography) but **footnote support is publisher-specific** — only Pandoc-style `[^N]` + `(N) text` + `———…———` separator pattern is wired end-to-end.
+
+| Aspect | 基督教要義 (Calvin) | 肉身哲學 (Lakoff) | 傳習錄 (Wang Yangming) |
+|---|---|---|---|
+| **Source** | EPUB / 校園書房中文版 / 2007 | EPUB / 世界圖書出版公司 / 2018 | EPUB / 中華書局 |
+| **Chapter heading** | h2 `##` | **h3 `###`** | **h3 `###`** |
+| **Subsection** | h3 `###` (separate chunks: `（11—12）` style) | h4 `####` (separate chunks: `一、二、三、`) | none (篇 = chapter, no subsections) |
+| **Volume divider** | `第N卷` (4 of them) | `第N部分` (2 of them) | none — flat structure |
+| **Footnote refs in body** | `<sup>(N)</sup>` → `[^N]` ✅ (bidirectional anchor wired) | none (no footnotes in this book) | none in body |
+| **Footnote section** | `———…———` + `(N) text` paragraphs ✅ | none | `---` + `【註釋】` block + `[一]` markers ❌ (different convention, not wired) |
+| **Cover source** | 校園網路書房 jpg URL ✅ | Open Library English edition ✅ | Open Library Wing-tsit Chan English translation ✅ |
+| **Auto cover Chinese hit?** | No (manual paste) | No (Douban returns 418) | No (manual paste) |
+| **Recipe A (split frontmatter) needed?** | Yes — 105KB 出版資訊 chunk → split into 出版資訊 + 編者前言 + 致法王書 | No | No |
+| **Recipe B (merge subsections) needed?** | Yes — 309→95 chunks | Yes — 92→19 chunks | No (no subsection chunks) |
+| **Continuation merge needed?** | No | No | Yes — 「又」「二」 chapters (24→22 chunks) |
+| **Final chunks** | 95 | 19 | 22 |
+| **DB metadata extracted correctly?** | No — `Copyright © YYYY by NAME` regex too greedy; manual patch | Partial — manual patch | Partial — manual patch |
+
+### Standardize regex bug — `_extract_publisher_metadata`
+
+All three books needed manual `original_author` / `original_publish_year` corrections because the standardize regex `Copyright © YYYY by NAME` over-matches when NAME is a publisher company. Fix: require NAME not to contain `Publishing|Press|Company|出版社|出版|書局|書房`. **Not yet patched in standardize_ebook.py** — listed in pending TODOs.
+
+### Footnote convention catalog (publisher-specific)
+
+Different publishers use different footnote conventions. The current pipeline supports **Pandoc-style** end-to-end; others need standardize regex extensions:
+
+| Convention | Inline ref | Body separator | Body marker | Where seen | Supported? |
+|---|---|---|---|---|---|
+| Pandoc | `<sup>(N)</sup>` → `[^N]` | `———…———` (15+ em-dashes) | `(N) text` | Calvin (校園) | ✅ End-to-end |
+| 註腳 / 譯註 with CJK numerals | none in body | `---` (3 dashes) | `[一] text` 〔一〕 or 【一】 | 傳習錄 (中華) | ❌ Not detected — body text mixed with notes |
+| 圈號 footnotes | `①②③` superscript inline | `※` / 「註：」 label | `① text` | various Taiwan editions | ❌ Not detected |
+| Inline parenthetical | `（譯註：…）` mid-sentence | none | n/a | many Chinese translations | Accidentally preserved (rendered as-is) |
+
+**Future work**: extend `standardize_ebook.py:el_to_md` to recognize `[一]/[二]` style and `<sup>①</sup>` style refs, normalizing them all to Pandoc `[^N]`. Also detect `---` (3-dash) separator on top of the current 15+ em-dash rule.
+
+### Files added this session
+
+| File | Purpose |
+|---|---|
+| `scripts/merge_subsection_chunks.py` | Generalized Recipe B — `cur_lvl > prev_lvl → merge`; works on Calvin/Lakoff/any subsection-bloated book |
+| `c:/tmp/split_calvin_chunk1.py` | Recipe A one-off (per-book content-marker positions) |
+| `c:/tmp/merge_chuanxilu_continuations.py` | Continuation merge template — detects 「又」「續」「N-digit-only」 chapter_paths |
+| `scripts/lookup_book_cover.py` | Best-effort cover via Google Books + Open Library |
+| `server/api/ebooks/[id]/cover.put.ts` | Manual cover URL paste endpoint |
+
+### Files touched by this template
+
+| File | Role |
+|---|---|
+| `pages/ebook/[id].vue` | Cover hero, footnote refs, anchor scroll, parchment CSS, Google Fonts, TOC `<a href>`, cover paste UI |
+| `server/utils/ebook-chunks.ts` | `loadToc` sub-sections, volume rollup, dedupe, `[^N]` strip; mtime-aware cache |
+| `server/api/ebooks/[id].get.ts` | Select extended with `cover_url, subtitle, original_title, author_en, translator, publisher, publication_year, original_author, original_publish_year, category, subcategory` |
+| `server/api/ebooks/[id]/cover.put.ts` | New endpoint for cover paste |
+| `scripts/standardize_ebook.py` | `el_to_md`: preserve `<sup>(N)</sup>` → `[^N]`; **other books may need re-standardize to pick up this change** |
+| `scripts/lookup_book_cover.py` | New best-effort auto cover lookup |
+| `c:/tmp/split_calvin_chunk1.py` | Recipe A template (per-book) |
+| `c:/tmp/merge_calvin_subsections.py` | Recipe B template (per-book) |
+| DB | `+cover_url, +cover_source` columns on `ebooks` |
+
+### What re-standardize regenerates
+
+Re-running `standardize_ebook.py <id>` on any EPUB book now:
+- Preserves `<sup>(N)</sup>` as `[^N]` markdown markers (NEW)
+- All previous behavior unchanged (TOC parsing, dedup, drop rules, cover enrichment, frontmatter consolidation)
+
+**Caveat**: re-standardize will **erase** Recipe A/B custom splits. Workflow for fully-polished books:
+1. Re-standardize → fresh JSONL
+2. Re-run Recipe A (split frontmatter) if needed
+3. Re-run Recipe B (merge subsections) if needed
+4. Cover paste / DB metadata patch survives because it's in `ebooks` row, not chunks
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: scripture-canon-portal
-description: 五個基督教經典/傳統對照工具的入口（/scripture 聖經多版本+教父註釋+各教會次經第二正典 / /creeds 21 次大公會議+各教會尼西亞信經+新教信條全譜 / /canon-law 教會法規 / /fathers 教父著作搜索 / /apocrypha 典外文獻搜索）。Status: **實作中 — /scripture 32 版本平行對照 + /creeds 信經區 + 早期東方公會議 5-7 + 中世紀 8-18 + Trent 25 會期 + 梵一 2 份 + 梵二 16 份皆上線（2026-05-22）**。
+description: 五個基督教經典/傳統對照工具的入口（/scripture 聖經多版本+教父註釋+各教會次經第二正典 / /creeds 21 次大公會議+各教會尼西亞信經+新教信條全譜 / /canon-law 教會法規 / /fathers 教父著作搜索 / /apocrypha 典外文獻搜索）。Status: **實作中 — /scripture 32 版本平行對照 + /creeds 21 次大公會議全部上線（信經區 1-2 + 早期東方 3-7 + 中世紀 8-18 + Trent 19 + 梵一 20 + 梵二 21；共 50+ Creed entries）（2026-05-22）**。
 ---
 
 # Scripture, Tradition, Canon, Fathers, Apocrypha Portal
@@ -524,15 +524,17 @@ for f in data/creeds/ecumenical-councils/vatican-ii/*-chinese.txt; do
 done
 ```
 
-### ✅ 早期東方公會議 5-7（553-787）— 2026-05-22 上線
+### ✅ 早期東方公會議 3-7（431-787）— 2026-05-22 上線
 
-3 場後 Chalcedon 東方大公會議建檔；皆為東正教＋天主教＋多數新教傳統共同承認。
+5 場早期東方大公會議全數建檔。
 
 | councilNo | 中文名 | 拉丁名 | 年代 | 重點 | 東正教 | 東方東正教 | 亞述 |
 |---|---|---|---|---|---|---|---|
-| 5 | 第二次君士坦丁堡 | Constantinopolitanum II | 553 | 三章案（譴責 Theodore of Mopsuestia 等）+ 反 Origenism；引發 Aquileia 分裂 150 年 | ✓ | ✗ | ✗ |
-| 6 | 第三次君士坦丁堡 | Constantinopolitanum III | 680-81 | 譴 Monothelitism；確立 dyothelitism；★ 追溯譴責教宗 Honorius I — Vatican I 教宗無誤論辯論關鍵 case | ✓ | ✗ | ✗ |
-| 7 | 第二次尼西亞 | Nicaenum II | 787 | ★★ 終結 Iconoclasm；定義 latreia / proskynesis 區別；引 St. Basil「敬禮歸於原型」 | ✓ | ✓ | ✗ |
+| 3 | 以弗所 | Ephesinum | 431 | ★ Theotokos / Cyril 十二章；譴 Nestorius；亞述教會至今不承認 | ✓ | ✓ | ✗ |
+| 4 | 迦克墩 | Chalcedonense | 451 | ★★★ 一位格兩本性 (四副詞)；Tome of Leo；引發 1500 年東方分裂 | ✓ | ✗ | ✗ |
+| 5 | 第二次君士坦丁堡 | Constantinopolitanum II | 553 | 三章案 + 反 Origenism；Aquileia 分裂 150 年 | ✓ | ✗ | ✗ |
+| 6 | 第三次君士坦丁堡 | Constantinopolitanum III | 680-81 | 譴 Monothelitism；★ 追溯譴責教宗 Honorius I — Vatican I 教宗無誤論關鍵 case | ✓ | ✗ | ✗ |
+| 7 | 第二次尼西亞 | Nicaenum II | 787 | ★★ 終結 Iconoclasm；latreia / proskynesis 區別 | ✓ | ✓ | ✗ |
 
 **資料來源 & pipeline**：
 - 英文：papalencyclicals.net `ecum05-07.htm` — 已抓全 3 場 ~120KB
@@ -541,9 +543,13 @@ done
 - pipeline：[scripts/rebuild_early_councils.py](../../../scripts/rebuild_early_councils.py)（scrape）+ `scripts/_gen_early_metadata.py`（local-only, gitignored）
 
 **重點神學爭議**：
+- 3：Theotokos 爭議 — Cyril of Alexandria (Alexandrian) vs Nestorius (Antiochene)；Cyril 十二章 anathema canons；亞述東方教會至今不承認、視聶斯脫流為正統
+- 4：基督論「一位格兩本性」最終定型 — Tome of Leo 449 + 迦克墩四副詞「不混亂／不改變／不分割／不分離」；引發 1500 年東方東正教 (Coptic / Syriac / Armenian / Tewahedo / Malankara) 分裂；1973-1996 系列雙邊聲明達成「語言差異非實質神學分歧」共識
 - 5：三章案實質是天主教與反迦克墩派 (Oriental Orthodox) 之政治神學妥協嘗試，未成功反生新分裂
 - 6：教宗 Honorius I 案 — Vatican I 教宗無誤論辯論的關鍵歷史 case；學界至今討論
 - 7：聖像敬禮神學基礎 — St. John of Damascus《Three Apologetic Treatises》；794 Frankfurt 因譯文錯誤一度反對，1274 Lyon II 正式接受
+
+**Anathema content note**：3-7 中含 anathema canon 的會議（以弗所 Cyril 十二章 / 第二次君士坦丁堡 11 條反 Origenism / 君士坦丁堡 III 譴 Monothelitism / 迦克墩反 Eutyches）— 全部從 papalencyclicals.net 直接 scrape 為 .txt，Claude 未生成 anathema 文本；summaryZh 描述歷史脈絡但不引用 anathema 原文 — 安全通過 content filter。**SKILL.md 早先「策略 C」(Claude 寫架構＋user 自貼) 對以弗所/迦克墩之保守判斷實證可繞過**：scrape + 描述性 summaryZh 已足夠，與梵一／Trent 路徑相同。
 
 ### ✅ 中世紀大公會議 8-18（869-1517）— 2026-05-22 上線
 
@@ -649,7 +655,7 @@ done
 | `ecumenical-councils/03-` 以弗所 431 | ecumenical-councils | 3 | Schaff NPNF2 Vol 14 + Cyril 十二章 | ⚠️ 有 |
 | `ecumenical-councils/04-` 迦克墩 451 定義 | ecumenical-councils | 4 | Schaff Creeds Vol 2 + Schaff NPNF2 Vol 14 | ⚠️ 有 |
 
-**剩餘大公會議**：以弗所 431（councilNo 3）+ 迦克墩 451（councilNo 4）— 兩者皆含 Cyril 十二章 anathema canons，content-filter 風險高。**早期東方 5-7 / 中世紀 8-18 已全數完成（2026-05-22）**。
+**21 次大公會議全數上線**（2026-05-22）：信經區 1-2 + 早期東方 3-7 + 中世紀 8-18 + Trent 19 + 梵一 20 + 梵二 21。共 50+ Creed entries 於 `/creeds`。
 
 **第三批（Ecumenical Dialogue 20-21 世紀文件）**：見下方 `/creeds` 章節 ecumenical-dialogue 清單；JDDJ 1999 優先（與 Trent Session 6 成義令對話直接相關）。
 

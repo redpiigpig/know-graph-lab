@@ -8,7 +8,7 @@ export default defineEventHandler(async (event) => {
 
   const { data: ebook, error } = await supabase
     .from("ebooks")
-    .select("id, title, author, file_type, chunk_count, total_pages, created_at, book_id")
+    .select("id, title, author, file_type, chunk_count, total_pages, created_at, book_id, cover_url, subtitle, original_title, author_en, translator, publisher, publication_year, original_author, original_publish_year, category, subcategory")
     .eq("id", id!)
     .single();
 

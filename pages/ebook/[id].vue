@@ -67,25 +67,47 @@
           <div class="text-xs uppercase text-stone-400 mb-2 px-2 tracking-wider">目錄</div>
           <div v-if="!toc.length && pageLoading" class="text-stone-400 text-sm px-2 py-2">載入中…</div>
 
-          <!-- Front matter (no volume) -->
+          <!-- Front matter (no volume). For books where the standardize step
+               failed to extract volumes, ALL chapters land here — so we
+               still need to show the nested section anchors under the
+               current chapter.
+               TOC items use real <a href> so right-click → 開新分頁 works. -->
           <div v-if="frontMatter.length" class="space-y-0.5 mb-3">
-            <div v-for="entry in frontMatter" :key="entry.chunk_index" class="group relative">
-              <button @click="goPage(entry.chunk_index + 1)"
-                :class="[tocBtnCls(entry), 'w-full flex items-center gap-1.5']">
-                <span class="flex-1 text-left truncate">{{ entry.title }}</span>
-                <span v-if="bookmarkByChunk.get(entry.chunk_index)"
-                  class="text-[10px] px-1 py-px rounded bg-purple-100 text-purple-700 font-medium flex-shrink-0">
-                  📅 {{ fmtBookmarkDate(bookmarkByChunk.get(entry.chunk_index)!.created_at) }}
-                </span>
-              </button>
-              <button v-if="bookmarkByChunk.get(entry.chunk_index)"
-                @click.stop="deleteBookmark(bookmarkByChunk.get(entry.chunk_index)!.id)"
-                title="移除書籤"
-                class="absolute right-1 top-1/2 -translate-y-1/2 hidden group-hover:flex w-4 h-4 items-center justify-center rounded text-purple-700 hover:bg-purple-200 text-xs">×</button>
-            </div>
+            <template v-for="entry in frontMatter" :key="entry.chunk_index">
+              <div class="group relative">
+                <a :href="`?page=${entry.chunk_index + 1}`"
+                  @click.prevent="goPage(entry.chunk_index + 1)"
+                  :title="entry.title"
+                  :class="[tocBtnCls(entry), 'w-full flex items-center gap-1.5 no-underline']">
+                  <span class="flex-1 text-left truncate">{{ entry.title }}</span>
+                  <span v-if="bookmarkByChunk.get(entry.chunk_index)"
+                    class="text-[10px] px-1 py-px rounded bg-purple-100 text-purple-700 font-medium flex-shrink-0">
+                    📅 {{ fmtBookmarkDate(bookmarkByChunk.get(entry.chunk_index)!.created_at) }}
+                  </span>
+                </a>
+                <button v-if="bookmarkByChunk.get(entry.chunk_index)"
+                  @click.stop="deleteBookmark(bookmarkByChunk.get(entry.chunk_index)!.id)"
+                  title="移除書籤"
+                  class="absolute right-1 top-1/2 -translate-y-1/2 hidden group-hover:flex w-4 h-4 items-center justify-center rounded text-purple-700 hover:bg-purple-200 text-xs">×</button>
+              </div>
+              <!-- Section anchors for the currently-open chapter -->
+              <div v-if="entry.chunk_index === currentPage - 1 && entry.sections?.length"
+                class="space-y-px ml-1 border-l border-stone-200 pl-2 pb-1 mb-1">
+                <a v-for="sec in entry.sections" :key="sec.anchor_id"
+                  :href="`#${sec.anchor_id}`"
+                  @click.prevent="scrollToSection(sec.anchor_id)"
+                  :title="sec.title"
+                  :class="['block w-full text-left py-1 rounded text-xs text-stone-500 hover:bg-stone-50 hover:text-stone-900 truncate no-underline',
+                    sec.level === 3 ? 'pl-2' : 'pl-5 text-[11px] text-stone-400']">
+                  <span class="text-stone-300 mr-1">›</span>{{ sec.title }}
+                </a>
+              </div>
+            </template>
           </div>
 
-          <!-- Volumes (collapsible) -->
+          <!-- Volumes (collapsible). Each chapter row also expands to show
+               its internal section anchors when it's the current chapter, so
+               users can jump directly to a 節 within the page. -->
           <div v-for="v in volumes" :key="v.name" class="mb-1">
             <button @click="toggleVolume(v.name)"
               class="w-full flex items-center gap-1 px-2 py-2 rounded text-sm font-medium text-stone-900 hover:bg-stone-50 transition">
@@ -94,20 +116,35 @@
               <span class="text-xs text-stone-400">{{ v.entries.length }}</span>
             </button>
             <div v-if="expandedVolumes.has(v.name)" class="space-y-0.5 mt-0.5">
-              <div v-for="entry in v.entries" :key="entry.chunk_index" class="group relative">
-                <button @click="goPage(entry.chunk_index + 1)"
-                  :class="[tocBtnCls(entry), 'w-full flex items-center gap-1.5']">
-                  <span class="flex-1 text-left truncate">{{ entry.title }}</span>
-                  <span v-if="bookmarkByChunk.get(entry.chunk_index)"
-                    class="text-[10px] px-1 py-px rounded bg-purple-100 text-purple-700 font-medium flex-shrink-0">
-                    📅 {{ fmtBookmarkDate(bookmarkByChunk.get(entry.chunk_index)!.created_at) }}
-                  </span>
-                </button>
-                <button v-if="bookmarkByChunk.get(entry.chunk_index)"
-                  @click.stop="deleteBookmark(bookmarkByChunk.get(entry.chunk_index)!.id)"
-                  title="移除書籤"
-                  class="absolute right-1 top-1/2 -translate-y-1/2 hidden group-hover:flex w-4 h-4 items-center justify-center rounded text-purple-700 hover:bg-purple-200 text-xs">×</button>
-              </div>
+              <template v-for="entry in v.entries" :key="entry.chunk_index">
+                <div class="group relative">
+                  <a :href="`?page=${entry.chunk_index + 1}`"
+                    @click.prevent="goPage(entry.chunk_index + 1)"
+                    :title="entry.title"
+                    :class="[tocBtnCls(entry), 'w-full flex items-center gap-1.5 no-underline']">
+                    <span class="flex-1 text-left truncate">{{ entry.title }}</span>
+                    <span v-if="bookmarkByChunk.get(entry.chunk_index)"
+                      class="text-[10px] px-1 py-px rounded bg-purple-100 text-purple-700 font-medium flex-shrink-0">
+                      📅 {{ fmtBookmarkDate(bookmarkByChunk.get(entry.chunk_index)!.created_at) }}
+                    </span>
+                  </a>
+                  <button v-if="bookmarkByChunk.get(entry.chunk_index)"
+                    @click.stop="deleteBookmark(bookmarkByChunk.get(entry.chunk_index)!.id)"
+                    title="移除書籤"
+                    class="absolute right-1 top-1/2 -translate-y-1/2 hidden group-hover:flex w-4 h-4 items-center justify-center rounded text-purple-700 hover:bg-purple-200 text-xs">×</button>
+                </div>
+                <!-- Nested section anchors, only for current chapter -->
+                <div v-if="entry.chunk_index === currentPage - 1 && entry.sections?.length"
+                  class="space-y-px ml-1 border-l border-stone-200 pl-2 pb-1">
+                  <a v-for="sec in entry.sections" :key="sec.anchor_id"
+                    :href="`#${sec.anchor_id}`"
+                    @click.prevent="scrollToSection(sec.anchor_id)"
+                    :class="['block w-full text-left py-1 rounded text-xs text-stone-500 hover:bg-stone-50 hover:text-stone-900 truncate no-underline',
+                      sec.level === 3 ? 'pl-2' : 'pl-5 text-[11px] text-stone-400']">
+                    <span class="text-stone-300 mr-1">›</span>{{ sec.title }}
+                  </a>
+                </div>
+              </template>
             </div>
           </div>
         </div>
@@ -115,45 +152,117 @@
 
       <!-- Reading area -->
       <div class="flex-1 overflow-y-auto bg-stone-50" ref="scrollEl">
-        <article :class="['mx-auto px-12 py-14 bg-white shadow-sm rounded-lg my-8 border border-stone-200',
+        <article :class="['ebook-article mx-auto px-12 py-14 shadow-sm rounded-lg my-8 border border-stone-200',
           viewMode === 'bi' && pageSourceText ? 'max-w-7xl' : 'max-w-4xl']">
           <div v-if="pageLoading" class="space-y-3 animate-pulse">
             <div v-for="i in 8" :key="i" :class="['h-4 bg-stone-200 rounded', i % 3 === 0 ? 'w-3/4' : 'w-full']"></div>
           </div>
 
           <template v-else-if="pageContent || pageSourceText">
-            <div class="text-xs text-stone-400 mb-10 flex items-center gap-2 uppercase tracking-wider">
-              <span v-if="pageChapter">{{ pageChapter }}</span>
-              <span v-else>第 {{ currentPage }} 段</span>
-              <span>·</span>
-              <span class="normal-case tracking-normal">{{ ebook?.title }}</span>
-            </div>
+            <!-- ── COVER PAGE (chunk 0 / chapter_path == 封面) ──
+                 Replaces the markdown chunk content with a curated layout:
+                 image + title + subtitle + author + translator + publisher.
+                 The bare `## 封面 / 基督教要義 / 加爾文` content is hidden
+                 since the structured layout already shows everything. -->
+            <div v-if="isCoverPage" class="cover-hero group/cover">
+              <div v-if="ebook?.cover_url && !coverEditOpen" class="cover-image-wrap">
+                <img :src="ebook.cover_url" :alt="ebook?.title" class="cover-image" />
+                <button @click="openCoverEdit" title="換封面" class="cover-edit-btn">✏</button>
+              </div>
+              <div v-else-if="!ebook?.cover_url && !coverEditOpen"
+                class="cover-placeholder" @click="openCoverEdit">
+                <div class="cover-placeholder-icon">📕</div>
+                <div class="cover-placeholder-title">封面圖片</div>
+                <div class="cover-placeholder-sub">點此貼上網址</div>
+              </div>
+              <div v-if="coverEditOpen" class="cover-editor">
+                <div class="text-sm text-stone-700 font-medium mb-1">封面圖片網址</div>
+                <input v-model="coverUrlDraft" type="url" placeholder="https://..."
+                  class="w-full text-sm border border-stone-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+                  @keyup.enter="saveCoverUrl"
+                  @keyup.escape="coverEditOpen = false" />
+                <div class="flex gap-2 mt-2">
+                  <button @click="saveCoverUrl" :disabled="coverSaving"
+                    class="flex-1 px-3 py-1.5 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-500 disabled:opacity-50">
+                    {{ coverSaving ? '儲存中…' : '儲存' }}
+                  </button>
+                  <button @click="coverEditOpen = false"
+                    class="px-3 py-1.5 text-sm bg-stone-100 text-stone-600 rounded-md hover:bg-stone-200">取消</button>
+                  <button v-if="ebook?.cover_url" @click="clearCoverUrl"
+                    class="px-3 py-1.5 text-sm text-red-600 hover:bg-red-50 rounded-md">清除</button>
+                </div>
+                <p class="text-xs text-stone-400 mt-2">到博客來/校園書房/誠品 → 右鍵封面 → 複製圖片網址 → 貼上</p>
+              </div>
 
-            <!-- 中文（單欄）-->
-            <div v-if="effectiveViewMode === 'zh'"
-              ref="contentEl"
-              class="ebook-prose"
-              v-html="markdownHtml"
-              @mouseup="onTextSelectionEnd"
-              @click="onContentClick"></div>
+              <!-- Decorative diamond -->
+              <div class="cover-divider"><span>❦</span></div>
 
-            <!-- 英文原文（單欄，無標註功能）-->
-            <div v-else-if="effectiveViewMode === 'en'"
-              class="ebook-prose ebook-prose-en"
-              v-html="sourceHtml"></div>
+              <h1 class="cover-title">{{ ebook?.title }}</h1>
+              <p v-if="ebook?.subtitle" class="cover-subtitle">{{ ebook.subtitle }}</p>
+              <p v-if="ebook?.original_title" class="cover-original-title">
+                <em>{{ ebook.original_title }}</em>
+              </p>
 
-            <!-- 中英對照（逐段對齊雙欄）-->
-            <div v-else ref="contentEl"
-              class="bilingual-rows"
-              @mouseup="onTextSelectionEnd"
-              @click="onContentClick">
-              <div v-for="(pair, idx) in paragraphPairs" :key="idx"
-                class="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-1 py-1">
-                <div class="ebook-prose" v-html="pair.zh"></div>
-                <div class="ebook-prose ebook-prose-en lg:border-l lg:border-stone-100 lg:pl-10"
-                  v-html="pair.en"></div>
+              <div class="cover-author-block">
+                <p class="cover-author">
+                  <span class="cover-author-label">著</span>
+                  {{ ebook?.original_author || ebook?.author }}
+                  <span v-if="ebook?.author_en" class="cover-author-en"> ({{ ebook.author_en }})</span>
+                </p>
+                <p v-if="ebook?.translator" class="cover-translator">
+                  <span class="cover-author-label">譯</span>
+                  {{ ebook.translator }}
+                </p>
+              </div>
+
+              <div v-if="ebook?.publisher || ebook?.publication_year || ebook?.original_publish_year" class="cover-imprint">
+                <span v-if="ebook?.publisher">{{ ebook.publisher }}</span>
+                <span v-if="ebook?.publisher && ebook?.publication_year"> · </span>
+                <span v-if="ebook?.publication_year">{{ ebook.publication_year }}</span>
+                <span v-if="ebook?.original_publish_year && ebook?.original_publish_year !== ebook?.publication_year">
+                  （原著 {{ ebook.original_publish_year }}）
+                </span>
               </div>
             </div>
+
+            <!-- ── NORMAL PAGE (any chunk that isn't the cover) ── -->
+            <template v-else>
+              <div class="text-xs text-stone-400 mb-10 flex items-center gap-2 uppercase tracking-wider">
+                <span v-if="pageChapter">{{ cleanChapterLabel }}</span>
+                <span v-else>第 {{ currentPage }} 段</span>
+                <span>·</span>
+                <span class="normal-case tracking-normal">{{ ebook?.title }}</span>
+              </div>
+            </template>
+
+            <!-- View-mode-specific content — fully suppressed on cover page. -->
+            <template v-if="!isCoverPage">
+              <!-- 中文（單欄）-->
+              <div v-if="effectiveViewMode === 'zh'"
+                ref="contentEl"
+                class="ebook-prose"
+                v-html="markdownHtml"
+                @mouseup="onTextSelectionEnd"
+                @click="onContentClick"></div>
+
+              <!-- 英文原文（單欄，無標註功能）-->
+              <div v-else-if="effectiveViewMode === 'en'"
+                class="ebook-prose ebook-prose-en"
+                v-html="sourceHtml"></div>
+
+              <!-- 中英對照（逐段對齊雙欄）-->
+              <div v-else ref="contentEl"
+                class="bilingual-rows"
+                @mouseup="onTextSelectionEnd"
+                @click="onContentClick">
+                <div v-for="(pair, idx) in paragraphPairs" :key="idx"
+                  class="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-1 py-1">
+                  <div class="ebook-prose" v-html="pair.zh"></div>
+                  <div class="ebook-prose ebook-prose-en lg:border-l lg:border-stone-100 lg:pl-10"
+                    v-html="pair.en"></div>
+                </div>
+              </div>
+            </template>
 
             <div class="flex justify-between mt-16 pt-6 border-t border-stone-200">
               <button @click="goPage(currentPage - 1)" :disabled="currentPage <= 1"
@@ -303,7 +412,14 @@
 <script setup lang="ts">
 definePageMeta({ middleware: "auth" });
 
-interface TocEntry { chunk_index: number; title: string; level: number; volume?: string | null }
+interface TocSection { anchor_id: string; title: string; level: number }
+interface TocEntry {
+  chunk_index: number;
+  title: string;
+  level: number;
+  volume?: string | null;
+  sections?: TocSection[];
+}
 interface VolumeGroup { name: string; entries: TocEntry[] }
 interface Annotation {
   id: string;
@@ -397,6 +513,12 @@ function showToast(message: string, type: "info" | "error" = "info") {
   toastTimer = setTimeout(() => { toast.value.show = false; }, type === "error" ? 5000 : 2500);
 }
 
+// Clean chapter label for breadcrumb — strip `[^N]` markdown footnote
+// refs that bled into the chapter heading during standardize.
+const cleanChapterLabel = computed(() =>
+  (pageChapter.value || "").replace(/\[\^\d+\]/g, "").trim()
+);
+
 // ── TOC grouping ──
 const frontMatter = computed(() => toc.value.filter(e => !e.volume));
 const volumes = computed<VolumeGroup[]>(() => {
@@ -437,36 +559,195 @@ function tocBtnCls(entry: TocEntry) {
 function escapeHtml(s: string) {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
-function inlineFmt(s: string) {
-  return s.replace(/\*\*([^*\n]+)\*\*/g, "<strong>$1</strong>")
-          .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, "$1<em>$2</em>")
+// Inline markdown formatter. `chunkIdx` (when provided) is used to mint
+// per-chunk footnote ref anchors so each `[^N]` becomes a clickable sup
+// linked to the chunk's footnote section, with a back-link from the
+// footnote body to here.
+function inlineFmt(s: string, chunkIdx: number | null = null) {
+  let out = s.replace(/\*\*([^*\n]+)\*\*/g, "<strong>$1</strong>")
+          // *italic* — split by Latin presence:
+          //   - Latin-containing → Georgia italic (English book titles,
+          //     Latin/German terms, foreign-language quotes)
+          //   - Pure CJK         → regular <em> (rare but possible)
+          .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, (_, lead, inner) =>
+            /[A-Za-z]/.test(inner)
+              ? `${lead}<em class="book-title-en">${inner}</em>`
+              : `${lead}<em>${inner}</em>`
+          )
           // <u>X</u> survives escapeHtml as &lt;u&gt;X&lt;/u&gt; — restore the tag here
-          .replace(/&lt;u&gt;([^<]+?)&lt;\/u&gt;/g, "<u>$1</u>");
+          .replace(/&lt;u&gt;([^<]+?)&lt;\/u&gt;/g, "<u>$1</u>")
+          // English book titles 《Some Title》 → italic Latin serif. Pure-CJK
+          // titles like 《創世記》 stay upright.
+          .replace(/《([^《》]*[A-Za-z][^《》]*)》/g, "<em class=\"book-title-en\">《$1》</em>");
+
+  // Footnote refs `[^N]` → clickable superscript with bidirectional anchor.
+  // Each inline ref gets `id="fnref-{chunk}-{N}"`, links to `#fn-{chunk}-{N}`.
+  // Footnote body in `renderMarkdown` adds the matching id + back-link.
+  if (chunkIdx !== null) {
+    out = out.replace(/\[\^(\d+)\]/g, (_, n) =>
+      `<sup class="footnote-ref" id="fnref-${chunkIdx}-${n}">` +
+      `<a href="#fn-${chunkIdx}-${n}" title="跳到註 ${n}">${n}</a></sup>`
+    );
+  }
+  return out;
 }
-function renderMarkdown(md: string): string {
+// Render markdown to HTML. `chunkIndex` (when provided) is used to mint
+// stable anchor ids on h3/h4 — these match what `loadToc` emits, so the
+// TOC sidebar can scrollIntoView to a section within the current chapter.
+//
+// Footnote detection: a paragraph that's just 15+ em-dashes / hyphens
+// (`————————————————…`) marks the start of the chunk's footnote section.
+// Everything after is rendered inside <section class="footnotes"> with
+// smaller font, and each `(N) text...` paragraph gets `id="fn-{chunk}-{N}"`
+// so URL hashes and TOC refs can link directly.
+function renderMarkdown(md: string, chunkIndex: number | null = null): string {
   const blocks = md.split(/\n{2,}/);
   const out: string[] = [];
+  let subSeq = 0;
+  let inFootnotes = false;
   for (let block of blocks) {
     block = block.trim();
     if (!block) continue;
+    // Footnote separator — long horizontal run of em-dashes / hyphens.
+    if (/^[—－\-]{15,}$/.test(block)) {
+      if (!inFootnotes) {
+        out.push('<section class="footnotes" aria-label="註釋">');
+        out.push('<div class="footnotes-label">註　釋</div>');
+        inFootnotes = true;
+      } else {
+        out.push('<hr class="footnote-divider">');
+      }
+      continue;
+    }
     if (/^-{3,}$/.test(block)) { out.push("<hr>"); continue; }
     const escaped = escapeHtml(block);
     let h: RegExpMatchArray | null;
-    if ((h = escaped.match(/^####\s+(.+)$/))) out.push(`<h4>${inlineFmt(h[1])}</h4>`);
-    else if ((h = escaped.match(/^###\s+(.+)$/))) out.push(`<h3>${inlineFmt(h[1])}</h3>`);
-    else if ((h = escaped.match(/^##\s+(.+)$/))) out.push(`<h2>${inlineFmt(h[1])}</h2>`);
-    else if ((h = escaped.match(/^#\s+(.+)$/))) out.push(`<h1>${inlineFmt(h[1])}</h1>`);
+    if ((h = escaped.match(/^####\s+(.+)$/))) {
+      const id = chunkIndex !== null ? ` id="sec-${chunkIndex}-${subSeq}"` : "";
+      subSeq++;
+      out.push(`<h4${id}>${inlineFmt(h[1], chunkIndex)}</h4>`);
+    }
+    else if ((h = escaped.match(/^###\s+(.+)$/))) {
+      const id = chunkIndex !== null ? ` id="sec-${chunkIndex}-${subSeq}"` : "";
+      subSeq++;
+      out.push(`<h3${id}>${inlineFmt(h[1], chunkIndex)}</h3>`);
+    }
+    else if ((h = escaped.match(/^##\s+(.+)$/))) out.push(`<h2>${inlineFmt(h[1], chunkIndex)}</h2>`);
+    else if ((h = escaped.match(/^#\s+(.+)$/))) out.push(`<h1>${inlineFmt(h[1], chunkIndex)}</h1>`);
     else if (/^&gt;\s/.test(escaped)) {
       const lines = escaped.split(/\n/).map(ln => ln.replace(/^&gt;\s?/, "")).join("<br>");
-      out.push(`<blockquote>${inlineFmt(lines)}</blockquote>`);
+      out.push(`<blockquote>${inlineFmt(lines, chunkIndex)}</blockquote>`);
     } else {
-      out.push(`<p>${inlineFmt(escaped).replace(/\n/g, "<br>")}</p>`);
+      // Footnote body paragraph — both the leading (N) label AND the
+      // trailing ↩ navigate back to the inline ref in the body. The
+      // paragraph itself has id="fn-{chunk}-{N}" for URL-hash addressing
+      // (right-click → 複製連結 still works on the paragraph background).
+      const fn = inFootnotes ? escaped.match(/^\((\d+)\)\s*(.*)$/s) : null;
+      if (fn && chunkIndex !== null) {
+        const num = fn[1];
+        const rest = inlineFmt(fn[2], chunkIndex).replace(/\n/g, "<br>");
+        out.push(
+          `<p class="footnote-item" id="fn-${chunkIndex}-${num}">` +
+          `<a href="#fnref-${chunkIndex}-${num}" class="footnote-num" title="回到正文">(${num})</a> ` +
+          `${rest} ` +
+          `<a href="#fnref-${chunkIndex}-${num}" class="footnote-back" title="回到正文">↩</a></p>`
+        );
+      } else {
+        out.push(`<p>${inlineFmt(escaped, chunkIndex).replace(/\n/g, "<br>")}</p>`);
+      }
     }
+  }
+  if (inFootnotes) out.push("</section>");
+  return out.join("\n");
+}
+
+// Detect 目錄 (table-of-contents) page — special render: each chapter
+// becomes a hyperlink to its reader page; sub-section lines indent
+// under their parent chapter.
+const isTocPage = computed(() =>
+  pageChapter.value === "目錄" || pageChapter.value === "目　錄" || pageChapter.value === "目　　錄"
+);
+
+// Build a lookup map from cleaned chapter title → chunk_index so each
+// `**第N章 …**` line in the 目錄 source can resolve to `?page=N+1`.
+function normChapterKey(s: string): string {
+  return s.replace(/\[\^\d+\]/g, "").replace(/\s+/g, "").trim();
+}
+const chapterIndexByTitle = computed(() => {
+  const m = new Map<string, number>();
+  for (const e of toc.value) {
+    m.set(normChapterKey(e.title), e.chunk_index);
+  }
+  return m;
+});
+
+// Render the 目錄 chunk content as a properly-indented + hyperlinked list.
+// Lines fall into four shapes:
+//   `## 目錄`                  → page heading (h2)
+//   `**第N卷**`                 → volume label (display-only)
+//   `**第N章　Chapter Title**`  → clickable link to that chapter's page
+//   plain text (other)         → section title, indented under its chapter
+function renderTocPage(md: string): string {
+  const lines = md.split(/\n+/).map(l => l.trim()).filter(Boolean);
+  const out: string[] = [];
+  for (let raw of lines) {
+    const line = raw;
+    // h2 目錄 heading
+    let m = line.match(/^##\s+(?:<u>)?目[　 ]*錄(?:<\/u>)?$/);
+    if (m) { out.push('<h2 class="toc-page-title">目　錄</h2>'); continue; }
+    // **第N卷** volume label
+    m = line.match(/^\*\*(第[一二三四五六七八九十百千]+[卷編冊集篇部])\*\*$/);
+    if (m) { out.push(`<div class="toc-volume">${m[1]}</div>`); continue; }
+    // **第N章　Title** chapter link
+    m = line.match(/^\*\*(第[一二三四五六七八九十百千]+章)([　 ]+)(.+?)\*\*$/);
+    if (m) {
+      const chNum = m[1];
+      const title = m[3].trim();
+      const cleanTitle = title.replace(/\[\^\d+\]/g, "").trim();
+      const fullKey = normChapterKey(`${chNum}${title}`);
+      const idx = chapterIndexByTitle.value.get(fullKey);
+      if (idx !== undefined) {
+        out.push(
+          `<div class="toc-chapter"><a href="?page=${idx + 1}" data-toc-chapter="${idx + 1}">` +
+          `<span class="toc-ch-num">${chNum}</span>` +
+          `<span class="toc-ch-title">${escapeHtml(cleanTitle)}</span>` +
+          `</a></div>`
+        );
+      } else {
+        // No match in TOC — render as plain (rare, defensive)
+        out.push(`<div class="toc-chapter toc-chapter-orphan">${escapeHtml(chNum)} ${escapeHtml(cleanTitle)}</div>`);
+      }
+      continue;
+    }
+    // Other **bold** lines — back-matter labels (參考書目 / 英漢譯名對照表 /
+    // 修訂後記 etc.) or front-matter (前言, 致法王書...). If we can resolve
+    // them to a chunk index they become hyperlinks like chapters.
+    m = line.match(/^\*\*(.+?)\*\*$/);
+    if (m) {
+      const title = m[1].trim();
+      const idx = chapterIndexByTitle.value.get(normChapterKey(title));
+      if (idx !== undefined) {
+        out.push(
+          `<div class="toc-chapter"><a href="?page=${idx + 1}" data-toc-chapter="${idx + 1}">` +
+          `<span class="toc-ch-title toc-ch-title-solo">${escapeHtml(title)}</span>` +
+          `</a></div>`
+        );
+      } else {
+        out.push(`<div class="toc-chapter toc-chapter-orphan">${escapeHtml(title)}</div>`);
+      }
+      continue;
+    }
+    // Plain section line — indent under chapter
+    out.push(`<div class="toc-section">${escapeHtml(line)}</div>`);
   }
   return out.join("\n");
 }
 
-const markdownHtml = computed(() => renderMarkdown(pageContent.value));
+const markdownHtml = computed(() =>
+  isTocPage.value
+    ? renderTocPage(pageContent.value)
+    : renderMarkdown(pageContent.value, currentPage.value - 1)
+);
 const sourceHtml = computed(() => pageSourceText.value ? renderMarkdown(pageSourceText.value) : "");
 
 // Paragraph-level alignment for bilingual mode. Each paragraph (split on
@@ -637,7 +918,11 @@ async function loadPage(page: number) {
   await loadAnnotations(page - 1);
 
   await nextTick();
+  // Scroll reading area to top. Also call window.scrollTo defensively in
+  // case the scroll container changed or the browser is honoring a stale
+  // URL hash from a prior in-page anchor click.
   scrollEl.value?.scrollTo({ top: 0, behavior: "auto" });
+  window.scrollTo({ top: 0, behavior: "auto" });
 }
 
 async function loadAnnotations(chunkIndex: number) {
@@ -743,8 +1028,72 @@ function goPage(p: number) {
   const clamped = Math.max(1, Math.min(p, ebook.value.total_pages));
   if (clamped === currentPage.value) return;
   currentPage.value = clamped;
-  router.replace({ query: { page: String(clamped) } });
+  // hash: "" strips any stale `#fnref-…` / `#sec-…` hash from prior in-page
+  // anchor navigation, so the next page lands at the top instead of trying
+  // to scroll to a now-stale element.
+  router.replace({ query: { page: String(clamped) }, hash: "" });
   loadPage(clamped);
+}
+
+// Scroll to a section anchor inside the currently-rendered chapter. Anchor
+// ids are minted by renderMarkdown to match what loadToc reports — clicking
+// 節 X in the TOC sidebar lands on the corresponding heading.
+async function scrollToSection(anchorId: string) {
+  await nextTick();
+  const el = document.getElementById(anchorId);
+  if (!el) return;
+  el.scrollIntoView({ behavior: "smooth", block: "start" });
+  // brief flash for visual feedback
+  el.animate(
+    [{ background: "#fef3c7" }, { background: "transparent" }],
+    { duration: 1200 }
+  );
+}
+
+// ── Cover image paste / edit ──
+// The cover image appears on the book's 封面 page only — typically chunk 0
+// (page=1) or any chunk whose `chapter_path` is "封面". This keeps the
+// reader UI clean: chapters look like text, cover page looks like a book
+// cover. Other reader pages don't show the cover.
+const isCoverPage = computed(() =>
+  currentPage.value === 1 || pageChapter.value === "封面"
+);
+const coverEditOpen = ref(false);
+const coverUrlDraft = ref("");
+const coverSaving = ref(false);
+function openCoverEdit() {
+  coverUrlDraft.value = ebook.value?.cover_url ?? "";
+  coverEditOpen.value = true;
+}
+async function saveCoverUrl() {
+  const token = await getToken(); if (!token) return;
+  const url = coverUrlDraft.value.trim();
+  if (url && !/^https?:\/\//i.test(url)) {
+    showToast("封面網址必須 http 或 https 開頭", "error");
+    return;
+  }
+  coverSaving.value = true;
+  try {
+    const result = await $fetch<{ id: string; cover_url: string | null }>(
+      `/api/ebooks/${ebookId}/cover`,
+      {
+        method: "PUT",
+        headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+        body: { cover_url: url || null },
+      }
+    );
+    if (ebook.value) ebook.value.cover_url = result.cover_url;
+    coverEditOpen.value = false;
+    showToast(url ? "封面已更新" : "封面已清除");
+  } catch (e: any) {
+    showToast(`封面儲存失敗：${e?.data?.message || e?.message || ""}`, "error");
+  } finally {
+    coverSaving.value = false;
+  }
+}
+async function clearCoverUrl() {
+  coverUrlDraft.value = "";
+  await saveCoverUrl();
 }
 
 async function jumpToAnnotation(a: Annotation) {
@@ -813,6 +1162,46 @@ const markPopup = ref({ show: false, x: 0, y: 0, annoId: "" });
 
 function onContentClick(e: MouseEvent) {
   const target = e.target as HTMLElement;
+
+  // Cross-page link rendered inside the 目錄 chunk content. Use the SPA
+  // router (`goPage`) instead of letting the browser do a full reload.
+  const pageLink = target.closest("a[data-toc-chapter]") as HTMLAnchorElement | null;
+  if (pageLink) {
+    const p = parseInt(pageLink.dataset.tocChapter || "0", 10);
+    if (p > 0) {
+      e.preventDefault();
+      e.stopPropagation();
+      goPage(p);
+      return;
+    }
+  }
+
+  // Intra-chunk anchor link (footnote ref ↔ footnote body, section anchor).
+  // We hijack the navigation to do smooth scroll + flash highlight, since
+  // the sticky topbar otherwise covers the target and bare :target CSS is
+  // too subtle on inline superscript.
+  const anchor = target.closest("a[href^='#']") as HTMLAnchorElement | null;
+  if (anchor) {
+    const href = anchor.getAttribute("href")!;
+    const id = href.slice(1);
+    const el = document.getElementById(id);
+    if (el) {
+      e.preventDefault();
+      e.stopPropagation();
+      // Update URL hash so :target still applies, without page jump.
+      history.replaceState(null, "", `${location.pathname}${location.search}${href}`);
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+      el.animate(
+        [
+          { background: "#fde68a", outline: "2px solid #f59e0b", outlineOffset: "2px" },
+          { background: "transparent", outline: "2px solid transparent", outlineOffset: "2px" },
+        ],
+        { duration: 1500 }
+      );
+      return;
+    }
+  }
+
   const mark = target.closest("mark[data-anno-id]") as HTMLElement | null;
   if (!mark) {
     markPopup.value.show = false;
@@ -1107,7 +1496,177 @@ onBeforeUnmount(() => {
 useHead({ title: computed(() => ebook.value ? `${ebook.value.title} — 閱讀` : "閱讀") });
 </script>
 
+<style>
+/* Google Fonts — loaded ONCE globally (not scoped, so <head> picks it up).
+   - Noto Serif TC: body 正文宋體 (already requested via fontface-stack but
+     explicit load keeps render consistent across machines)
+   - ZCOOL XiaoWei: 楷書風格的繁中字體，作為 blockquote 引用字體 (近似標楷體) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&family=ZCOOL+XiaoWei&display=swap');
+</style>
+
 <style scoped>
+/* ── COVER HERO ──
+   Curated title-page layout: image + decorative divider + display title
+   + author + publisher imprint. Replaces the bare markdown content of
+   chunk 0 (`## 封面 / 書名 / 作者`). */
+.cover-hero {
+  text-align: center;
+  padding: 2.5rem 1rem 1rem;
+  font-family: "Noto Serif TC", "Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", Georgia, serif;
+}
+.cover-image-wrap {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 2rem;
+  /* Lock to typical book aspect ratio so we can crop the publisher
+     image's white padding via object-fit: cover. */
+  width: min(320px, 60vw);
+  aspect-ratio: 2 / 3;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #d6d3d1;
+  box-shadow: 0 14px 40px -10px rgba(0, 0, 0, 0.28), 0 4px 14px -4px rgba(0, 0, 0, 0.16);
+}
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* fills container; crops outer whitespace */
+  object-position: center;
+  display: block;
+}
+.cover-edit-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #d6d3d1;
+  color: #78716c;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.15s, transform 0.15s, color 0.15s;
+  cursor: pointer;
+}
+.cover-edit-btn:hover { color: #1c1917; transform: scale(1.08); }
+.group\/cover:hover .cover-edit-btn { opacity: 1; }
+.cover-placeholder {
+  display: inline-block;
+  padding: 4rem 4.5rem;
+  border-radius: 8px;
+  border: 2px dashed #d6d3d1;
+  background: #fafaf9;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.cover-placeholder:hover { border-color: #60a5fa; background: rgba(219, 234, 254, 0.3); }
+.cover-placeholder-icon { font-size: 3rem; color: #d6d3d1; margin-bottom: 0.75rem; }
+.cover-placeholder-title { color: #78716c; font-size: 0.95rem; margin-bottom: 0.25rem; }
+.cover-placeholder-sub { color: #a8a29e; font-size: 0.8rem; }
+.cover-editor {
+  max-width: 28rem;
+  margin: 0 auto 2rem;
+  background: #fafaf9;
+  border: 1px solid #d6d3d1;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  text-align: left;
+}
+.cover-divider {
+  margin: 0.5rem auto 1.5rem;
+  color: #a8a29e;
+  font-size: 1.5rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+.cover-divider::before,
+.cover-divider::after {
+  content: "";
+  display: block;
+  flex: 0 0 4rem;
+  height: 1px;
+  background: #d6d3d1;
+}
+.cover-title {
+  font-family: "Noto Serif TC", "Source Han Serif TC", serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #0c0a09;
+  letter-spacing: 0.12em;
+  margin: 0 0 0.5rem;
+  line-height: 1.35;
+}
+.cover-subtitle {
+  font-size: 1.1rem;
+  color: #44403c;
+  margin: 0.5rem 0 0;
+  letter-spacing: 0.05em;
+}
+.cover-original-title {
+  margin: 0.6rem 0 1.25rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  color: #78716c;
+}
+.cover-original-title em { font-style: italic; }
+.cover-author-block {
+  margin: 1.75rem 0 1rem;
+  color: #292524;
+}
+.cover-author,
+.cover-translator {
+  margin: 0.4rem 0;
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+}
+.cover-author-label {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  background: #e7e5e4;
+  color: #57534e;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+.cover-author-en {
+  font-family: Georgia, serif;
+  font-style: italic;
+  color: #78716c;
+  font-size: 0.95em;
+}
+.cover-imprint {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e7e5e4;
+  color: #a8a29e;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+}
+
+/* Article container — warm parchment tint instead of clinical white. */
+.ebook-article {
+  background: #fdfcf7;
+  position: relative;
+}
+.ebook-article::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0, rgba(255,250,235,0.25) 100%);
+  border-radius: inherit;
+}
+
 .ebook-prose {
   color: #1c1917;
   font-size: 17px;
@@ -1115,60 +1674,256 @@ useHead({ title: computed(() => ebook.value ? `${ebook.value.title} — 閱讀` 
   font-family: "Noto Serif TC", "Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", Georgia, serif;
 }
 .ebook-prose :deep(h1) {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
-  margin: 2.5rem 0 1.5rem;
+  margin: 3rem 0 1.75rem;
   color: #0c0a09;
   letter-spacing: 0.02em;
   text-align: center;
 }
+/* h2 = 章 (chapter heading inside the chunk, mirrors chapter_path)
+   Biggest, most prominent; ornamental double-rule + centered.         */
 .ebook-prose :deep(h2) {
-  font-size: 1.625rem;
+  font-size: 1.85rem;
   font-weight: 700;
-  margin: 2.5rem 0 1.25rem;
+  margin: 1rem 0 2.5rem;
   color: #0c0a09;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #e7e5e4;
+  padding: 1.25rem 0 1rem;
+  border-top: 1px solid #d6d3d1;
+  border-bottom: 3px double #78716c;
   text-align: center;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.06em;
+  line-height: 1.55;
 }
+/* h3 = 節 (section). Medium-large; left-aligned with a left accent bar. */
 .ebook-prose :deep(h3) {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  margin: 2.25rem 0 1rem;
+  margin: 2.5rem 0 1rem;
   color: #1c1917;
+  padding-left: 0.75rem;
+  border-left: 4px solid #78716c;
+  letter-spacing: 0.02em;
+  scroll-margin-top: 4rem;
 }
+/* h4 = 子節 / numbered sub-items. Smaller but still distinct.          */
 .ebook-prose :deep(h4) {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 600;
-  margin: 1.5rem 0 0.75rem;
-  color: #292524;
+  margin: 1.75rem 0 0.75rem;
+  color: #44403c;
+  letter-spacing: 0.02em;
+  scroll-margin-top: 4rem;
 }
 .ebook-prose :deep(p) {
-  margin: 1rem 0;
+  margin: 1.1rem 0;
   text-indent: 2em;
   text-align: justify;
 }
 .ebook-prose :deep(strong) { font-weight: 700; color: #0c0a09; }
 .ebook-prose :deep(em) { font-style: italic; }
-.ebook-prose :deep(blockquote) {
-  border-left: 3px solid #93c5fd;
-  padding: 0.5rem 0 0.5rem 1.25rem;
-  margin: 1.5rem 0;
-  color: #57534e;
+/* English book titles 《...》 — render in italicized Latin serif. The
+   regex in inlineFmt wraps them in <em class="book-title-en">.        */
+.ebook-prose :deep(em.book-title-en) {
+  font-family: Georgia, "Times New Roman", serif;
   font-style: italic;
-  background: #fffbeb;
+  font-weight: 500;
+  color: #1c1917;
+}
+/* Blockquote 引用 — 標楷體 (ZCOOL XiaoWei web font + system 標楷體 fallback).
+   No italic on CJK (italic looks bad on Chinese); use the kai script font
+   itself to signal "quoted material". */
+.ebook-prose :deep(blockquote) {
+  border-left: 3px solid #c4a35a;
+  padding: 0.75rem 1rem 0.75rem 1.5rem;
+  margin: 1.75rem 0;
+  color: #44403c;
+  background: #fefce8;
+  border-radius: 0 4px 4px 0;
+  font-family: "ZCOOL XiaoWei", "DFKai-SB", "BiauKai", "標楷體", "Noto Serif TC", serif;
+  font-size: 16.5px;
+  line-height: 1.95;
+  font-style: normal;
+}
+.ebook-prose :deep(blockquote p) {
+  text-indent: 0;
 }
 .ebook-prose :deep(hr) {
   margin: 2rem 0;
   border: 0;
   border-top: 1px solid #e7e5e4;
 }
+/* Footnote section —章末註釋區。Smaller font, ornamental separator,
+   each entry's (N) label is a clickable anchor (URL hash) so users can
+   right-click → copy link to a specific note. */
+.ebook-prose :deep(section.footnotes) {
+  margin-top: 4rem;
+  padding-top: 0;
+  font-size: 13.5px;
+  line-height: 1.9;
+  color: #57534e;
+  position: relative;
+}
+.ebook-prose :deep(.footnotes-label) {
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  color: #a8a29e;
+  text-align: center;
+  margin: 0 auto 1.5rem;
+  text-indent: 0.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: 500;
+}
+.ebook-prose :deep(.footnotes-label)::before,
+.ebook-prose :deep(.footnotes-label)::after {
+  content: "";
+  flex: 0 0 5rem;
+  height: 1px;
+  background: #d6d3d1;
+}
+.ebook-prose :deep(.footnote-item) {
+  margin: 0.6rem 0;
+  text-indent: -2.2em;
+  padding-left: 2.2em;
+  text-align: justify;
+}
+.ebook-prose :deep(.footnote-item:target) {
+  background: #fef3c7;
+  border-left: 3px solid #f59e0b;
+  padding-left: 2em;
+  margin-left: -0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 0 4px 4px 0;
+  scroll-margin-top: 4rem;
+}
+.ebook-prose :deep(a.footnote-num) {
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: none;
+  font-variant-numeric: tabular-nums;
+}
+.ebook-prose :deep(a.footnote-num:hover) {
+  text-decoration: underline;
+}
+/* Inline footnote reference — small superscript, blue, clickable. */
+.ebook-prose :deep(sup.footnote-ref) {
+  font-size: 0.7em;
+  line-height: 0;
+  margin: 0 1px 0 2px;
+  vertical-align: super;
+  scroll-margin-top: 6rem;     /* clear of sticky topbar when scrolled to */
+  scroll-margin-bottom: 4rem;
+}
+.ebook-prose :deep(sup.footnote-ref a) {
+  color: #2563eb;
+  text-decoration: none;
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: 600;
+  background: rgba(219, 234, 254, 0.45);
+}
+.ebook-prose :deep(sup.footnote-ref a:hover) {
+  background: #93c5fd;
+  color: #fff;
+}
+/* When :target is active, persistent highlight on the footnote ref the
+   user just navigated back to. Stays until they click somewhere else. */
+.ebook-prose :deep(sup.footnote-ref:target a) {
+  background: #fbbf24;
+  color: #0c0a09;
+  outline: 2px solid #d97706;
+  outline-offset: 1px;
+}
+/* Back-link arrow on each footnote body paragraph. */
+.ebook-prose :deep(a.footnote-back) {
+  color: #94a3b8;
+  text-decoration: none;
+  margin-left: 0.25rem;
+  font-size: 0.95em;
+}
+.ebook-prose :deep(a.footnote-back:hover) {
+  color: #2563eb;
+}
 .ebook-prose :deep(mark) {
   cursor: pointer;
   transition: filter 0.15s;
 }
 .ebook-prose :deep(mark:hover) { filter: brightness(0.95); }
+
+/* ── 目錄 page styling ──
+   Each 章 line becomes a hyperlink. 節 lines (plain non-bold) indent 2
+   levels deeper than chapters and stay as muted display-only text. */
+.ebook-prose :deep(.toc-page-title) {
+  font-size: 1.85rem;
+  font-weight: 700;
+  margin: 1rem 0 2rem;
+  text-align: center;
+  letter-spacing: 0.6em;
+  text-indent: 0.6em;
+  color: #0c0a09;
+  padding: 1rem 0;
+  border-top: 1px solid #d6d3d1;
+  border-bottom: 3px double #78716c;
+}
+.ebook-prose :deep(.toc-volume) {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0c0a09;
+  margin: 2rem 0 0.5rem;
+  letter-spacing: 0.15em;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #d6d3d1;
+}
+.ebook-prose :deep(.toc-chapter) {
+  margin: 0.4rem 0;
+  padding-left: 1.5rem;     /* base indent under volume */
+  line-height: 1.7;
+}
+.ebook-prose :deep(.toc-chapter a) {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  color: #1c1917;
+  text-decoration: none;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.15s, color 0.15s;
+}
+.ebook-prose :deep(.toc-chapter a:hover) {
+  background: #fef3c7;
+  color: #0c0a09;
+}
+.ebook-prose :deep(.toc-ch-num) {
+  flex: 0 0 4em;
+  font-weight: 600;
+  color: #57534e;
+  font-variant-numeric: tabular-nums;
+}
+.ebook-prose :deep(.toc-ch-title) {
+  flex: 1;
+  font-weight: 500;
+}
+/* Back-matter / front-matter entry without 第N章 prefix (e.g. 參考書目,
+   英漢譯名對照表, 修訂後記). Left-align without reserving num column. */
+.ebook-prose :deep(.toc-ch-title-solo) {
+  flex: 1;
+  font-weight: 600;
+  color: #1c1917;
+  margin-left: 0;
+}
+.ebook-prose :deep(.toc-chapter-orphan) {
+  color: #a8a29e;     /* greyed-out — couldn't resolve to a real chunk */
+}
+.ebook-prose :deep(.toc-section) {
+  padding-left: 4.5rem;     /* chapter base 1.5em + chapter内 num 4em ≈ +2 more */
+  margin: 0.15rem 0;
+  font-size: 0.92em;
+  color: #78716c;
+  line-height: 1.6;
+}
 
 /* English source column overrides — Latin typography */
 .ebook-prose-en {
@@ -1188,6 +1943,7 @@ useHead({ title: computed(() => ebook.value ? `${ebook.value.title} — 閱讀` 
 }
 .ebook-prose-en :deep(blockquote) {
   font-style: italic;
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 .fade-enter-active, .fade-leave-active { transition: opacity 0.2s, transform 0.2s; }
