@@ -18,12 +18,15 @@
         </div>
         <h1 class="wa-title">{{ article.title }}</h1>
         <p v-if="article.title_en" class="wa-title-en">{{ article.title_en }}</p>
-        <p class="wa-byline">{{ article.author || '龐君華 會督' }}</p>
+        <div class="wa-byline-row">
+          <p class="wa-byline">{{ article.author || '龐君華 會督' }}</p>
+          <p v-if="article.supervisor" class="wa-supervisor">指導教授：{{ article.supervisor }}</p>
+        </div>
         <div v-if="article.tags && article.tags.length" class="wa-tags">
           <span v-for="tag in article.tags" :key="tag" class="wa-tag">{{ tag }}</span>
         </div>
       </header>
-      <PongThesisFlipbook
+      <PongArchivePongThesisFlipbook
         :writing-id="article.id"
         :outline="article.outline || []"
         :total-pages="article.total_pages || 0"
@@ -301,13 +304,29 @@ function formatDate(dateStr, approximate) {
   line-height: 1.6;
   margin: 0 0 24px;
 }
+.wa-byline-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 0 0 24px;
+}
 .wa-byline {
   font-family: 'Noto Serif TC', serif;
   font-size: 0.95rem;
   font-weight: 400;
   color: #6A5E4A;
   letter-spacing: 0.18em;
-  margin: 0 0 24px;
+  margin: 0;
+}
+.wa-supervisor {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: #8A8278;
+  letter-spacing: 0.08em;
+  margin: 0;
 }
 
 .wa-header-actions {
