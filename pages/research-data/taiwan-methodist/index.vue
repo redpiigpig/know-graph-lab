@@ -56,8 +56,8 @@
         <NuxtLink to="/research-data/taiwan-methodist/herald" class="tool-card group border-purple-100 hover:border-purple-300 hover:shadow-purple-100">
           <div class="tool-icon bg-purple-50 text-purple-600">📰</div>
           <div class="flex-1">
-            <h2 class="tool-title">衛理報</h2>
-            <p class="tool-desc">中華基督教衛理公會機關刊物《衛理報》各期資料整理</p>
+            <h2 class="tool-title">衛報</h2>
+            <p class="tool-desc">中華基督教衛理公會機關刊物《衛報》各期資料整理</p>
           </div>
           <span class="tool-badge bg-purple-50 text-purple-600">建置中</span>
         </NuxtLink>

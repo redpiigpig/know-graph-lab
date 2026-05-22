@@ -5,7 +5,7 @@
       <div class="max-w-5xl mx-auto px-6 h-14 flex items-center gap-4">
         <NuxtLink to="/research-data/taiwan-methodist" class="text-gray-400 hover:text-gray-700 transition text-sm">← 台灣衛理公會研究資料</NuxtLink>
         <span class="text-gray-200">|</span>
-        <span class="text-sm font-medium text-gray-700">衛理報</span>
+        <span class="text-sm font-medium text-gray-700">衛報</span>
       </div>
     </nav>
 
@@ -15,7 +15,7 @@
           <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-purple-100 text-purple-700">研究資料</span>
           <span class="text-xs text-gray-400">台灣衛理公會</span>
         </div>
-        <h1 class="text-2xl font-bold text-gray-900 mb-1">衛理報 Wesleyan News</h1>
+        <h1 class="text-2xl font-bold text-gray-900 mb-1">衛報 Wesleyan News</h1>
         <p class="text-sm text-gray-500">中華基督教衛理公會衛蘭中心發行的華文刊物。掃描原件以翻頁書形式呈現。</p>
       </div>
 
@@ -51,7 +51,7 @@
 
 <script setup lang="ts">
 definePageMeta({ middleware: 'auth' });
-useHead({ title: '衛理報 — 台灣衛理公會研究資料' });
+useHead({ title: '衛報 — 台灣衛理公會研究資料' });
 </script>
 
 <style scoped>

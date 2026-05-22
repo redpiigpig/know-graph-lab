@@ -1,13 +1,13 @@
 <template>
   <div class="min-h-screen bg-slate-900">
 
-    <nav class="bg-slate-800 border-b border-slate-700 sticky top-0 z-40">
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40 shadow-sm">
       <div class="max-w-7xl mx-auto px-6 h-14 flex items-center gap-4">
-        <NuxtLink to="/research-data/taiwan-methodist/herald" class="text-gray-400 hover:text-white transition text-sm">← 衛理報</NuxtLink>
-        <span class="text-gray-600">|</span>
-        <span class="text-sm font-medium text-gray-200">第 {{ issue }} 期</span>
+        <NuxtLink to="/research-data/taiwan-methodist/herald" class="text-gray-400 hover:text-gray-700 transition text-sm">← 衛報</NuxtLink>
+        <span class="text-gray-200">|</span>
+        <span class="text-sm font-medium text-gray-700">第 {{ issue }} 期</span>
         <span class="text-xs text-gray-500">2002/11/30 · 將臨節第一主日</span>
-        <div class="ml-auto flex items-center gap-3 text-xs text-gray-300">
+        <div class="ml-auto flex items-center gap-3 text-xs text-gray-500">
           <span>{{ currentLabel }}</span>
         </div>
       </div>
