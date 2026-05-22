@@ -262,8 +262,10 @@ def _haiku_chunked(raw: str, code: str, max_body_chunk: int = 60000) -> str:
     return "\n\n".join(out_parts)
 
 
-# Long docs that need chunked Haiku processing (input > 100K chars cleaned output > 64K tokens cap)
-CHUNK_CODES = {"LG", "GS"}
+# Long docs that need chunked Haiku processing (force-chunk via env var if single-call truncates)
+# After empirical test: pdftotext_layout produces ~73K chars for LG/GS — single Haiku 64K call is enough.
+# Set env CHUNK_CODES=LG,GS to force chunked mode if truncation recurs.
+CHUNK_CODES = set(filter(None, os.environ.get("CHUNK_CODES", "").split(",")))
 
 
 def main():
