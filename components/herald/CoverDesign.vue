@@ -123,19 +123,19 @@ defineProps<{ issue?: string }>();
 
 .rules {
   position: absolute;
-  top: 22%;
+  top: 23%;
   left: 5%;
   right: 5%;
   z-index: 2;
 }
 .rule {
-  height: 0.4cqw;
-  background: #b8b8b8;
-  margin-bottom: 0.6cqw;
+  height: 0.35cqw;
+  background: #888;
+  margin-bottom: 0.5cqw;
 }
 .rule-dark {
-  height: 0.6cqw;
-  background: #6a6a6a;
+  height: 1.3cqw;
+  background: #1f1f1f;
 }
 
 .umc-shield {
@@ -164,7 +164,7 @@ defineProps<{ issue?: string }>();
 
 .meta {
   position: absolute;
-  top: 26%;
+  top: 28%;
   left: 36%;
   right: 6%;
   z-index: 2;

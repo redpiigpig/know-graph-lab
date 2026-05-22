@@ -24,7 +24,7 @@
           <div class="page page-left" :class="{ 'is-blank': !leftItem }">
             <component v-if="leftItem?.type === 'cover'" :is="CoverDesign" :issue="issue" />
             <component v-else-if="leftItem?.type === 'back'" :is="BackCoverDesign" />
-            <component v-else-if="leftItem?.type === 'text'" :is="InsidePage" :issue="issue" :page-idx="leftItem.idx" />
+            <component v-else-if="leftItem?.type === 'text'" :is="InsidePage" :issue="issue" :page-idx="leftItem.idx" side="left" />
             <div v-else class="blank-page"></div>
             <div class="page-shadow-right"></div>
           </div>
@@ -33,7 +33,7 @@
           <div class="page page-right" :class="{ 'is-blank': !rightItem }">
             <component v-if="rightItem?.type === 'cover'" :is="CoverDesign" :issue="issue" />
             <component v-else-if="rightItem?.type === 'back'" :is="BackCoverDesign" />
-            <component v-else-if="rightItem?.type === 'text'" :is="InsidePage" :issue="issue" :page-idx="rightItem.idx" />
+            <component v-else-if="rightItem?.type === 'text'" :is="InsidePage" :issue="issue" :page-idx="rightItem.idx" side="right" />
             <div v-else class="blank-page"></div>
             <div class="page-shadow-left"></div>
           </div>
@@ -250,18 +250,41 @@ const bookSize = computed(() => ({
   z-index: 5;
   pointer-events: none;
 }
+/* Side click zones only — leave middle selectable */
 .nav-zone {
   position: absolute;
   top: 0; bottom: 0;
-  width: 50%;
+  width: 60px;
   background: transparent;
   border: 0;
   cursor: pointer;
   z-index: 10;
+  transition: background 0.15s;
+}
+.nav-zone:hover:not(:disabled) {
+  background: linear-gradient(to right, rgba(255,255,255,0.05), transparent);
 }
 .nav-zone:disabled { cursor: default; }
-.nav-zone-left { left: 0; }
-.nav-zone-right { right: 0; }
+.nav-zone-left { left: -60px; }
+.nav-zone-right { right: -60px;
+  background: linear-gradient(to left, rgba(255,255,255,0.0), transparent);
+}
+.nav-zone::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+  border-top: 3px solid rgba(255,255,255,0.5);
+  border-right: 3px solid rgba(255,255,255,0.5);
+  border-radius: 2px;
+}
+.nav-zone-left::after  { transform: translate(-50%, -50%) rotate(225deg); }
+.nav-zone-right::after { transform: translate(-50%, -50%) rotate(45deg); }
+.nav-zone:hover:not(:disabled)::after { border-color: rgba(255,255,255,0.95); }
+.nav-zone:disabled::after { opacity: 0.15; }
 
 /* Flip leaf */
 .flip-leaf {

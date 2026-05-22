@@ -3,17 +3,28 @@
     <div class="paper">
       <div v-if="loading" class="loading">載入中…</div>
       <div v-else-if="error" class="error-fallback">
-        <div class="error-msg">{{ error }}</div>
         <div class="error-hint">本頁文字尚未完成 OCR · 顯示原始掃描</div>
         <img :src="scanSrc" class="scan-img" :alt="`page ${pageNumber}`" />
       </div>
-      <div v-else class="content" v-html="rendered"></div>
+      <template v-else>
+        <!-- Running header (top): magazine page header on every inside page -->
+        <div class="running-header">
+          <span class="rh-page" :class="isLeftPage ? 'rh-left' : 'rh-right'">
+            <template v-if="isLeftPage">{{ pageNumber }}</template>
+          </span>
+          <span class="rh-title" :class="isLeftPage ? 'rh-title-right' : 'rh-title-left'">{{ runningHeader }}</span>
+          <span class="rh-page" :class="isLeftPage ? 'rh-right' : 'rh-left'" v-if="!isLeftPage">{{ pageNumber }}</span>
+        </div>
 
-      <!-- Footer with page number and date (hidden in scan fallback) -->
-      <div v-if="!error" class="page-footer">
-        <div class="footer-left">{{ pageNumber }}</div>
-        <div class="footer-right">2002-11-30</div>
-      </div>
+        <!-- Body content -->
+        <div class="content" v-html="rendered"></div>
+
+        <!-- Running footer -->
+        <div class="running-footer">
+          <span class="rf-page">{{ pageNumber }}</span>
+          <span class="rf-date">2002-11-30</span>
+        </div>
+      </template>
     </div>
   </div>
 </template>
@@ -24,9 +35,11 @@ import { ref, computed, watch, onMounted } from 'vue';
 const props = defineProps<{
   issue: string;
   pageIdx: number; // 2..23, used to fetch page-02.txt..page-23.txt
+  side?: 'left' | 'right';
 }>();
 
-// Magazine inner page number is pageIdx - 1 (page-02.jpg => 編者案頭 = p.1)
+const isLeftPage = computed(() => props.side === 'left');
+
 const pageNumber = computed(() => props.pageIdx - 1);
 const scanSrc = computed(() => `/herald/${props.issue}/page-${String(props.pageIdx).padStart(2, '0')}.jpg`);
 
@@ -52,15 +65,36 @@ async function load() {
 onMounted(load);
 watch(() => [props.issue, props.pageIdx], load);
 
-// Render text: lines beginning with 一、 二、 etc become headers; blank lines split paragraphs
+const RUNNING_HEADER_PATTERNS = [
+  /^文化取向/,  // matches "文化取向的宣教 ..." running header
+];
+
+function isRunningHeaderLine(line: string): boolean {
+  return RUNNING_HEADER_PATTERNS.some(re => re.test(line));
+}
+
+// Extract running header from first line(s), keep body separately
+const parsed = computed(() => {
+  const rawLines = text.value.split(/\n+/).map(s => s.trim()).filter(Boolean);
+  let header = '';
+  const bodyLines: string[] = [];
+  for (const line of rawLines) {
+    if (!header && isRunningHeaderLine(line)) {
+      header = line;
+      continue;
+    }
+    bodyLines.push(line);
+  }
+  return { header, bodyLines };
+});
+
+const runningHeader = computed(() => parsed.value.header || '文化取向的宣教 國度視野的牧養');
+
 const rendered = computed(() => {
-  if (!text.value) return '';
-  const lines = text.value.split(/\n+/);
+  const lines = parsed.value.bodyLines;
+  if (!lines.length) return '';
   const out: string[] = [];
-  for (const raw of lines) {
-    const line = raw.trim();
-    if (!line) continue;
-    // Section header: 一、二、三、…  or Roman numerals or numbered like "1."
+  for (const line of lines) {
     const isCnHeader = /^[一二三四五六七八九十]+、/.test(line);
     const isMainTitle = isCnHeader && line.length <= 24;
     if (isMainTitle) {
@@ -84,16 +118,18 @@ function escapeHtml(s: string): string {
   background: #ffffff;
   position: relative;
   container-type: size;
+  user-select: text;
 }
 .paper {
   position: absolute;
   inset: 0;
-  padding: 7cqh 8cqw 6cqh 8cqw;
+  padding: 4cqh 7cqw 4cqh 7cqw;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   font-family: 'Noto Serif TC', 'Source Han Serif TC', 'PMingLiU', 'Times New Roman', serif;
   color: #1a1a1a;
+  user-select: text;
 }
 .loading {
   margin: auto;
@@ -105,9 +141,6 @@ function escapeHtml(s: string): string {
   inset: 0;
   display: flex;
   flex-direction: column;
-}
-.error-msg {
-  display: none;
 }
 .error-hint {
   padding: 1cqh 2cqw;
@@ -123,14 +156,43 @@ function escapeHtml(s: string): string {
   object-fit: contain;
   background: #f5f5f0;
 }
+
+/* Running header bar (top of every inside page) */
+.running-header {
+  display: flex;
+  align-items: baseline;
+  font-size: 1.5cqw;
+  color: #666;
+  padding-bottom: 1cqh;
+  margin-bottom: 2cqh;
+  letter-spacing: 0.05em;
+  user-select: text;
+}
+.rh-page {
+  flex: 0 0 auto;
+  font-family: 'Times New Roman', serif;
+  font-size: 1.6cqw;
+  color: #555;
+  min-width: 2em;
+}
+.rh-left { text-align: left; }
+.rh-right { text-align: right; }
+.rh-title {
+  flex: 1;
+  color: #555;
+}
+.rh-title-right { text-align: right; }
+.rh-title-left  { text-align: left; padding-left: 1em; }
+
 .content {
   flex: 1;
   overflow: hidden;
-  font-size: 2.3cqw;
+  font-size: 2.2cqw;
   line-height: 1.95;
   letter-spacing: 0.02em;
   text-align: justify;
   text-justify: inter-ideograph;
+  user-select: text;
 }
 .content :deep(.sec) {
   text-align: center;
@@ -144,24 +206,30 @@ function escapeHtml(s: string): string {
   margin: 0 0 1.2cqw 0;
   text-indent: 2em;
 }
-.page-footer {
+
+/* Running footer (bottom) */
+.running-footer {
   display: flex;
+  align-items: baseline;
   justify-content: space-between;
-  align-items: center;
-  font-size: 1.6cqw;
-  color: #555;
-  padding-top: 2cqh;
-  border-top: 0;
+  font-size: 1.4cqw;
+  color: #666;
+  padding-top: 1cqh;
+  margin-top: 1cqh;
   font-family: 'Times New Roman', serif;
+  letter-spacing: 0.05em;
 }
-.footer-left {
+.rf-page {
   flex: 1;
   text-align: center;
+  font-size: 1.6cqw;
+  color: #444;
 }
-.footer-right {
+.rf-date {
   position: absolute;
-  right: 8cqw;
+  right: 7cqw;
   bottom: 3cqh;
   font-size: 1.4cqw;
+  color: #888;
 }
 </style>
