@@ -210,35 +210,62 @@ CREATE INDEX bible_commentary_verse ON bible_commentary (verse_ref);
 
 ---
 
-## 🗂️ 目前實作進度（2026-05-21 snapshot）
+## 🗂️ 目前實作進度（2026-05-22 snapshot）
 
-### ✅ /scripture 上線 — 19 版本平行對照（2026-05-21）
+### ✅ /scripture 上線 — **32 版本平行對照（852,840 節）**
 
-**Schema**：[database/bible-schema.sql](../../../database/bible-schema.sql) — `bible_books` (86 卷 × 8 教會 canon flags) / `bible_versions` (19 版本) / `bible_verses` (book+ch+v+version PK + GIN FTS)。
+**Schema**：[database/bible-schema.sql](../../../database/bible-schema.sql) — `bible_books` (86 卷 × 8 教會 canon flags) / `bible_versions` (32 版本 + `pub_year` 欄) / `bible_verses` (book+ch+v+version PK + GIN FTS)。`display_order` 按 category 內 pub_year DESC 排（新→舊）。
 
-**已匯入版本（~410K verses）**：
-
-| code | 版本 | 範圍 | 節數 | 來源 | 版權 |
+#### 中文 13 版（display_order 10-22）
+| code | 版本 | 年代 | 節數 | 來源 | 版權 |
 |---|---|---|---|---|---|
-| `cuv2010` | 和合本2010 (RCUV) | 新教 66 | 30,981 | rcuv.hkbs.org.hk scrape | © HKBS（站內研究用） |
-| `cuv1919` | 和合本1919 國語 | 新教 66 | 31,103 | scrollmapper ChiUn | PD |
-| `cuv1919w` | 文理和合本1919 | 新教 66 | 31,095 | scrollmapper ChiUnL | PD |
-| `sigao` | 思高聖經 | 天主教（含次經）| 35,471 | scrollmapper ChiSB | © 思高聖經學會 |
-| `lzz` | 呂振中譯本 | 新教 66 | ~31K | bible.fhl.net (?version=lcc) | © HKBS |
-| `tcv` | 現代中文譯本 2019 | 新教 66 | ~31K | bible.fhl.net (?version=tcv2019) | © UBS |
-| `rcv` | 恢復本 | 新教 66 | 31,058 | text.recoveryversion.bible | © LSM |
-| `niv` | NIV 新國際譯本 | 新教 66 | 31,087 | aruljohn/Bible-niv | © Biblica |
-| `kjva` | KJV 1611 含次經 | 新教 + 次經 | 36,702 | scrollmapper KJVA | PD |
-| `drc` | Douay-Rheims 天主教英文 | 天主教（含次經）| 35,805 | scrollmapper DRC | PD |
-| `nabre` | NABRE 天主教標準 | 天主教（含次經）| 35,091 | nirmalben/bible-nabre-json-dataset | © USCCB |
-| `knox` | Knox 1949 天主教 | 天主教（含次經）| ~33K | catholicbible.online | © Westminster |
-| `asv` | ASV 美國標準 1901 | 新教 66 | 31,086 | scrollmapper ASV | PD |
-| `ylt` | YLT 楊氏直譯 | 新教 66 | 31,102 | scrollmapper YLT | PD |
-| `brenton` | Brenton LXX 英譯 1851 | LXX OT + 次經 | 5,332 | eBible.org Brenton USFM | PD |
-| `wlc` | WLC 希伯來 OT | OT 39 | 23,213 | openscriptures/morphhb | PD + CC-BY morph |
-| `lxx` | LXX Rahlfs 1935 希臘 | OT + 第二正典 | 28,263 | eliranwong/LXX-Rahlfs-1935 | CC BY-NC-SA |
-| `sblgnt` | SBL Greek NT | NT 27 | 7,939 | LogosBible/SBLGNT | CC BY 4.0 |
-| `vul` | Clementine Vulgate 拉丁 | 全 73 卷（含次經）| 31,005 | BibleGet-I-O/Clementine-Vulgate | PD |
+| `tcv` | 現代中文譯本 | 2019 | 31,098 | bible.fhl.net (?version=tcv2019) | © UBS |
+| `cuv2010` | 和合本2010 (RCUV) | 2010 | 30,981 | rcuv.hkbs.org.hk scrape | © HKBS |
+| `rcv_zh` | 恢復本 | 2003 | 31,081 | line.twgbr.org/recoveryversion/bible | © LSM |
+| `lzz` | 呂振中譯本 | 1970 | 31,103 | bible.fhl.net (?version=lcc) | © HKBS |
+| `sigao` | 思高聖經 | 1968 | 35,471 | scrollmapper ChiSB | © 思高聖經學會 |
+| `cuv1919` | 官話和合本 | 1919 | 31,103 | scrollmapper ChiUn | PD |
+| `cuv1919e` | 施約瑟淺文理 | 1902 | 30,905 | bible.com YouVersion 2296 | PD |
+| `cuv1919w` | 文理和合本 | 1919 | 31,095 | scrollmapper ChiUnL | PD |
+| `griffith` | 楊格非淺文理 | 1885 | 7,934 (NT+詩箴歌) | bible.com YouVersion 2218 | PD |
+| `peking` | 北京官話譯本 | 1872 | 30,922 | bible.com YouVersion 1581 | PD |
+| `bridgman` | 裨治文文理譯本 | 1862 | 15,086 (NT 27 + 7 OT 卷) | bible.com YouVersion 2213 | PD |
+| `delegates` | 委辦譯本 | 1854 | 30,268 | bible.com YouVersion 2295 | PD |
+| `morrison` | 神天聖書（馬禮遜） | 1823 | 31,067 | bible.com YouVersion 2283 | PD |
+
+#### 英文 9 版（display_order 30-38）
+| code | 版本 | 年代 | 節數 | 來源 | 版權 |
+|---|---|---|---|---|---|
+| `nabre` | NABRE 天主教標準 | 2011 | 35,091 | nirmalben/bible-nabre-json-dataset | © USCCB |
+| `niv` | NIV 新國際譯本 | 2011 | 31,087 | aruljohn/Bible-niv | © Biblica |
+| `rcv` | RcV 恢復本英文 | 2003 | 31,058 | text.recoveryversion.bible | © LSM |
+| `knox` | Knox 天主教英譯 | 1949 | 35,507 | catholicbible.online | © Westminster |
+| `asv` | ASV 美國標準 | 1901 | 31,086 | scrollmapper ASV | PD |
+| `drc` | DRC 杜雷-蘭斯天主教 | 1899 | 35,805 | scrollmapper DRC | PD |
+| `ylt` | YLT 楊氏直譯本 | 1898 | 31,102 | scrollmapper YLT | PD |
+| `brenton` | Brenton LXX 英譯 | 1851 | 5,332 | eBible.org Brenton USFM | PD |
+| `kjva` | KJV 1611 含次經 | 1611 | 36,702 | scrollmapper KJVA | PD |
+
+#### 原文 10 版（display_order 50-58）
+| code | 版本 | 語言 | 年代 | 節數 | 來源 | 版權 |
+|---|---|---|---|---|---|---|
+| `sblgnt` | SBL Greek NT | 希臘文 | 2010 | 7,939 | LogosBible/SBLGNT | CC BY 4.0 |
+| `byz` | Byzantine Majority NT（希臘正教近似）| 希臘文 | 2013 | 7,949 | scrollmapper Byz | PD |
+| `lxx` | LXX 七十士譯本（Rahlfs）| 希臘文 | 1935 | 28,263 | eliranwong/LXX-Rahlfs-1935 | CC BY-NC-SA |
+| `rus_syn` | Синодальный 俄羅斯正教 | 俄文 | 1876 | 36,846 | scrollmapper RusSynodal | PD |
+| `arm_east` | Armenian Eastern Bible（亞美尼亞使徒）| 亞美尼亞文 | 1853 | 6,478（資料源僅 6 卷）| scrollmapper ArmEastern | PD |
+| `csl` | Church Slavonic Elizabeth（俄羅斯正教禮儀）| 教會斯拉夫文 | 1751 | 35,928 | scrollmapper CSlElizabeth | PD |
+| `vul` | Clementine Vulgate（天主教典範）| 拉丁文 | 1592 | 31,005 | BibleGet-I-O/Clementine-Vulgate | PD |
+| `wlc` | WLC 列寧格勒抄本（希伯來原文）| 希伯來文 | 1008 | 23,213 | openscriptures/morphhb | PD + CC-BY morph |
+| `peshitta` | Peshitta 敘利亞文新約 | 敘利亞文 | 460 | 7,956 | scrollmapper Peshitta | PD |
+| `cop_sah` | Coptic Sahidic Bible（科普特正教傳統）| 科普特文 | ~200 | 26,449 | scrollmapper CopSahBible2 | PD |
+
+> **東正教 / 天主教標準對照**（user 規劃 2026-05-22）：
+> - 東正教 OT 標準 = LXX；NT 標準 = Patriarchal 1904（近似 byz）
+> - 天主教 OT+NT 標準 = Vulgate（Clementine 1592 → Nova Vulgata 1979）
+> - 各教會語言：俄羅斯禮儀 = Church Slavonic / 敘利亞 = Peshitta / 衣索匹亞 = Ge'ez（未補）
+
+> **中文東正教**：無現代統一標準。歷史上有 新遺詔聖經1864（固利伊 Gury Karpov）/ 使徒書信1911（殷諾肯特 Innokenty Figurovsky）— 北京俄羅斯使團翻譯，孤本古籍無電子版。現代華人東正教徒禮儀多用思高代替。
 
 **UI**：
 - [pages/scripture/index.vue](../../../pages/scripture/index.vue) — 86 卷 grid，按 testament 分組 + 5 教會 canon filter
@@ -252,17 +279,45 @@ CREATE INDEX bible_commentary_verse ON bible_commentary (verse_ref);
 
 **Ingest 工具**：
 - [scripts/apply-bible-schema.mjs](../../../scripts/apply-bible-schema.mjs) — Apply migration via Management API
-- [scripts/ingest_bible_verses.py](../../../scripts/ingest_bible_verses.py) — 統一 ingest 腳本，CLI： `python scripts/ingest_bible_verses.py {sblgnt|vul|wlc|lxx|cuv2010|niv|all} [--book CODE] [--resume] [--dry-run]`
-  - 公版版本：直接 GitHub raw fetch + parse + PostgREST upsert（batch 500）
+- [scripts/ingest_bible_verses.py](../../../scripts/ingest_bible_verses.py) — 統一 ingest 腳本，CLI： `python -X utf8 scripts/ingest_bible_verses.py {VERSION_CODE} [--book CODE] [--resume]`
+  - 公版版本：直接 GitHub raw fetch + parse + PostgREST upsert（batch 200）
   - CUV2010：HKBS rcuv.hkbs.org.hk scrape，per-chapter，polite 0.25s rate, resume mode
   - 上載時自動 dedupe（同一 batch 同 PK 取最長 text；繞過 PostgREST ON CONFLICT 限制）
+  - 上載 5xx 自動 retry exponential backoff (4 次)
+  - 6 種 fetch backend：
+    - scrollmapper JSON (`_ingest_scrollmapper`): kjva/sigao/cuv1919/cuv1919w/drc/asv/ylt/byz/peshitta/arm_east/csl/rus_syn/cop_sah
+    - aruljohn JSON: niv
+    - eBible USFM zip: brenton
+    - rcuv.hkbs.org.hk: cuv2010
+    - bible.fhl.net JSON API (`_ingest_fhl`, `chineses=` 中文書名，**engs= 是 bug 永遠回 Romans**): lzz/tcv
+    - text.recoveryversion.bible 靜態 HTML: rcv
+    - line.twgbr.org/recoveryversion/bible/{NN}.html: rcv_zh（**注意 NN 須 zero-pad**）
+    - catholicbible.online (Vulgate 順序 + browser UA): knox
+    - bible.com YouVersion (`_ingest_youversion`): morrison/delegates/bridgman/peking/griffith + cuv1919e（淺文理）
 
 ### 🟢 已加：搜尋框（2026-05-21）
 
 `/scripture` index 頂部加經文搜尋框（[server/api/scripture/search.get.ts](../../../server/api/scripture/search.get.ts)）：
-- 中／英／希伯來／希臘／拉丁皆可
-- 預設跨全 19 版本搜尋，可 dropdown 限定單一版本
+- 中／英／希伯來／希臘／拉丁／敘利亞／教會斯拉夫／俄文／亞美尼亞／科普特皆可
+- 預設跨全 32 版本搜尋，可 dropdown 限定單一版本
 - 結果卡片高亮 match + 點擊跳到該章
+
+### 🟡 Phase B/C — 母語譯本 + Ge'ez + 早期 OCR（user 規劃 2026-05-22，**新 session 接手**）
+
+**Phase B：台灣母語譯本**（user 強調，全部從 bible.fhl.net 或 bible.com YouVersion 查 version code）
+- 台語漢字（TWHA / 台羅）
+- 台語白話字（POJ 教會羅馬字）
+- 客語漢字
+- 客語白話字（HK 客羅）
+- 阿美語、泰雅語、布農語、排灣語、太魯閣語、魯凱語、賽夏語、達悟語、鄒語、賽德克語等原住民聖經（各族 NT 完成，OT 進度不一；台聖經公會出版）
+
+**研究方向**：先列舉 bible.fhl.net `/new/read.php` 隱藏的 version code（去看 view-source 找 `<select>` options）。可能的 code 模板：`twh / poj / hak_h / hak_p / amis / tao / atayal / bunun / paiwan / truku / rukai / saisiyat / tsou / sediq`。每個 code 跟既有 `_ingest_fhl` 一樣的 chineses= per-chapter pattern，所以同一個 helper 改一改就能跑。
+
+**Phase C：衣索匹亞 Ge'ez** — [LPettay/ethiopian-bible](https://github.com/LPettay/ethiopian-bible) 有 Ge'ez 文字 + Charles 1917 英譯（CC BY-SA 4.0 morph 含 Strong's）。可同時補上 `jub` (Jubilees) / `eno` (1 Enoch) 衣索匹亞獨有書卷 的 Ge'ez + 英譯資料。
+
+**Phase D：馬殊曼譯本 1822（Marshman/Lassar Serampore 譯本）** — YouVersion 沒有；只有 PDF scan 在 daozaishenzhou.wordpress.com 與 Bristol Global Bible archive。要走 ebook-pipeline OCR 路徑（Gemini Vision 切頁掃描）。最古老的中文新教聖經，學術價值很高。建議放到 ebook-pipeline 排程。
+
+**Phase E：黃根春《基督教典外文獻》OCR**（仍未做）— DB 內 ebook chunks 有 10 冊 OCR 但品質中等，需 Gemini 清稿 → LLM 抽取 verse boundary → 寫 `jub` / `eno` / `4ba` 中文。
 
 ### 🔮 Phase 3 — 原文字典點選功能（FHL bible.fhl.net 風格，user 規劃 2026-05-21）
 
@@ -407,17 +462,38 @@ bible_commentary (
 | 15 | PO | `vatican-ii-po-presbyterorum-ordinis` | 司鐸職務與生活法令 | Presbyterorum Ordinis | 1965-12-07 |
 | 16 | GS | `vatican-ii-gs-gaudium-et-spes` | 牧靈憲章 | Gaudium et Spes | 1965-12-07 |
 
-**資料來源 & pipeline**：
-- 拉丁＋英文：vatican.va 官方 HTML，[scripts/build_vatican_ii_docs.py](../../../scripts/build_vatican_ii_docs.py) requests + BeautifulSoup 批次抓
-- 中文：vatican.va 中文 PDF（待 OCR / 手動抽字後填回）— 目前 16 份的 `zh-Hant-Catholic` version 都標 `placeholder: true` 含 PDF 下載連結
-- 全文檔：每份用 Vite `?raw` import `data/creeds/ecumenical-councils/vatican-ii/{code-lc}-latin.txt` + `-english.txt`
-- 體積：GS 牧靈憲章拉丁＋英文約 400KB（最長）；NA 教會對非基督宗教約 25KB（最短）
+**資料來源 & pipeline**（updated 2026-05-22）：
+- 拉丁＋英文：vatican.va 官方 HTML，[scripts/rebuild_vatican_ii_html.py](../../../scripts/rebuild_vatican_ii_html.py)（取代舊 build_vatican_ii_docs.py）— 用 BS4 走樹狀結構，輸出 markdown：
+  - `<p><i><b>...</b></i></p>` → `## {text}`（section heading）
+  - `<a href="#_ftnN" name="_ftnrefN">M</a>` → `[^M]`（inline footnote ref）
+  - `<a name="_ftnN">` 開頭的 `<p>` → 進入 footnote 區段
+  - 文末加 `## Footnotes` + `[^N]: 定義` 區塊
+- 中文：vatican.va 中文 PDF → [scripts/reextract_vatican_ii_chinese_gemini.py](../../../scripts/reextract_vatican_ii_chinese_gemini.py)
+  - `pdftotext -layout` 抽字（粗糙含 toc/頁碼）
+  - 餵 Gemini 2.5 Flash 重整為相同 markdown 結構（`## 章節`/`N. 段落`/`(N) inline refs`/`[^N]: 註腳定義`）
+  - 已重抽：NA / DV ／ 其餘 13 份背景跑中（IM 跳過 — vatican.va 端 PDF 損毀 Content-Length=0）
+- 全文檔：每份用 Vite `?raw` lazy import `data/creeds/ecumenical-councils/vatican-ii/{code-lc}-{lang}.txt`
+  - Lazy load via `data/creeds/textLoader.ts`（避免 ~9MB raw text eager bundling 撐爆 Vite SSR IPC buffer）
+  - 三語對齊：alignDocs() outer-join by 段號 / heading 順序
+- 體積：GS 拉丁＋英文約 400KB（最長）；NA 約 25KB（最短）
 
-**SOP — 加新一份梵二中譯**（從 vatican.va PDF）：
-1. 下載 PDF：`curl -o /tmp/{slug}.pdf https://www.vatican.va/chinese/concilio/vat-ii_{slug}_zh-t.pdf`
-2. 用 pdftotext 或 Gemini 抽字成 plain text
-3. 開該 doc 的 .ts 檔，把 `zh-Hant-Catholic` version 的 text 換成 PDF 內容，刪 `placeholder: true`
-4. commit + push
+**Parser & UI**（updated 2026-05-22）：
+- [data/creeds/paragraphParser.ts](../../../data/creeds/paragraphParser.ts) — parseDoc() 識別 heading/paragraph/footnote-def 三種 Block
+- [pages/creeds/[slug].vue](../../../pages/creeds/[slug].vue) 用 alignDocs 渲染：
+  - Section heading row：amber-gradient bar 跨三語欄
+  - Paragraph row：中／英／拉 三欄含 inline `[^N]`/`(N)` clickable footnote anchor（跳到頁底 `#fn-{lang}-{N}`）
+  - 文末「📎 註腳對照」三語並列 footnote definitions
+  - 經文 reference (`Rom. 11:17-24` / `（羅 11:17-24）`) 自動 .scripture-ref class（標楷體 italic bold amber-800）
+- 摘要 / Notes：lead paragraph + bullet list；`《文件名》` 自動 italic + 加重；括號內拉丁/英文片語 italic
+
+**SOP — 對某份梵二進行中文重抽**：
+```
+python scripts/reextract_vatican_ii_chinese_gemini.py --codes=SC,LG
+```
+跑完直接 commit + push；不需要動 .ts 檔。
+
+**已知 parser limitation**：
+- SC 因 §57 內含 sub-item 編號（`§ 1.` `1. a)` `2.`）會觸發 parser fallback 把 §58+ 誤併到 footnotes；後續可寫 SC-專屬 parser 識別 `§ N.` sub-marker
 
 ### 🟡 待補（其餘大公會議文件 — 注意 content-filter 規避策略）
 
