@@ -73,34 +73,80 @@ function isRunningHeaderLine(line: string): boolean {
   return RUNNING_HEADER_PATTERNS.some(re => re.test(line));
 }
 
-// Extract running header from first line(s), keep body separately
-const parsed = computed(() => {
-  const rawLines = text.value.split(/\n+/).map(s => s.trim()).filter(Boolean);
-  let header = '';
-  const bodyLines: string[] = [];
-  for (const line of rawLines) {
-    if (!header && isRunningHeaderLine(line)) {
-      header = line;
+function isAsterisks(line: string): boolean {
+  return /^[*＊]{3,}$/.test(line);
+}
+
+function joinLines(lines: string[]): string {
+  // Join visually-broken lines within a Chinese paragraph.
+  // Insert a space between lines only when both sides are ASCII letters/digits
+  // (to keep English/page-number readable). Otherwise concatenate directly.
+  let out = '';
+  for (let i = 0; i < lines.length; i++) {
+    const cur = lines[i].trim();
+    if (!cur) continue;
+    if (!out) {
+      out = cur;
       continue;
     }
-    bodyLines.push(line);
+    const prevEnd = out[out.length - 1];
+    const curStart = cur[0];
+    const needsSpace = /[A-Za-z0-9]/.test(prevEnd) && /[A-Za-z0-9]/.test(curStart);
+    out += (needsSpace ? ' ' : '') + cur;
   }
-  return { header, bodyLines };
+  return out;
+}
+
+// Extract running header from first line(s), group blank-separated chunks into paragraphs
+const parsed = computed(() => {
+  const raw = text.value.replace(/\r\n?/g, '\n');
+  // Split into paragraphs by blank lines (one or more empty lines)
+  const chunks = raw.split(/\n\s*\n+/).map(c => c.split(/\n/).map(s => s.trim()).filter(Boolean));
+
+  let header = '';
+  const paragraphs: string[] = [];
+
+  for (const chunk of chunks) {
+    if (!chunk.length) continue;
+
+    // Strip running header if present at chunk start
+    const filtered = chunk.filter((line, idx) => {
+      if (idx === 0 && !header && isRunningHeaderLine(line)) {
+        header = line;
+        return false;
+      }
+      return true;
+    });
+    if (!filtered.length) continue;
+
+    // Asterisk separator chunk → keep as separator paragraph
+    if (filtered.length === 1 && isAsterisks(filtered[0])) {
+      paragraphs.push('___SEP___');
+      continue;
+    }
+
+    paragraphs.push(joinLines(filtered));
+  }
+  return { header, paragraphs };
 });
 
 const runningHeader = computed(() => parsed.value.header || '文化取向的宣教 國度視野的牧養');
 
 const rendered = computed(() => {
-  const lines = parsed.value.bodyLines;
-  if (!lines.length) return '';
+  const paras = parsed.value.paragraphs;
+  if (!paras.length) return '';
   const out: string[] = [];
-  for (const line of lines) {
-    const isCnHeader = /^[一二三四五六七八九十]+、/.test(line);
-    const isMainTitle = isCnHeader && line.length <= 24;
+  for (const p of paras) {
+    if (p === '___SEP___') {
+      out.push(`<div class="sep">＊＊＊＊＊＊＊＊＊＊</div>`);
+      continue;
+    }
+    const isCnHeader = /^[一二三四五六七八九十]+、/.test(p);
+    const isMainTitle = isCnHeader && p.length <= 24;
     if (isMainTitle) {
-      out.push(`<h2 class="sec">${escapeHtml(line)}</h2>`);
+      out.push(`<h2 class="sec">${escapeHtml(p)}</h2>`);
     } else {
-      out.push(`<p>${escapeHtml(line)}</p>`);
+      out.push(`<p>${escapeHtml(p)}</p>`);
     }
   }
   return out.join('\n');
@@ -123,7 +169,7 @@ function escapeHtml(s: string): string {
 .paper {
   position: absolute;
   inset: 0;
-  padding: 4cqh 7cqw 4cqh 7cqw;
+  padding: 3cqh 6cqw 3cqh 6cqw;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -187,8 +233,8 @@ function escapeHtml(s: string): string {
 .content {
   flex: 1;
   overflow: hidden;
-  font-size: 2.2cqw;
-  line-height: 1.95;
+  font-size: 1.95cqw;
+  line-height: 1.7;
   letter-spacing: 0.02em;
   text-align: justify;
   text-justify: inter-ideograph;
@@ -196,15 +242,23 @@ function escapeHtml(s: string): string {
 }
 .content :deep(.sec) {
   text-align: center;
-  font-size: 3cqw;
+  font-size: 2.6cqw;
   font-weight: 700;
-  margin: 0 0 2.5cqw 0;
+  margin: 0 0 1.6cqw 0;
   letter-spacing: 0.3em;
   padding-left: 0.3em;
 }
 .content :deep(p) {
-  margin: 0 0 1.2cqw 0;
+  margin: 0 0 0.8cqw 0;
   text-indent: 2em;
+}
+.content :deep(.sep) {
+  text-align: center;
+  letter-spacing: 0.4em;
+  color: #888;
+  margin: 1cqw 0;
+  font-size: 1.7cqw;
+  text-indent: 0;
 }
 
 /* Running footer (bottom) */
