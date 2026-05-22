@@ -7,6 +7,31 @@
 
     <div v-if="pending" class="wa-loading">載入中…</div>
 
+    <!-- ── Thesis flipbook reader ─────────────────────────── -->
+    <template v-else-if="article && isThesisFlipbook">
+      <header class="wa-header wa-header--thesis">
+        <div class="wa-header-meta">
+          <span class="wa-cat-badge">{{ categoryLabel }}</span>
+          <span v-if="article.publication" class="wa-pub">{{ article.publication }}</span>
+          <span v-if="article.published_date" class="wa-date">{{ formatDate(article.published_date, article.date_approximate) }}</span>
+          <span v-if="article.total_pages" class="wa-pages">共 {{ article.total_pages }} 頁</span>
+        </div>
+        <h1 class="wa-title">{{ article.title }}</h1>
+        <p v-if="article.title_en" class="wa-title-en">{{ article.title_en }}</p>
+        <p class="wa-byline">{{ article.author || '龐君華 會督' }}</p>
+        <div v-if="article.tags && article.tags.length" class="wa-tags">
+          <span v-for="tag in article.tags" :key="tag" class="wa-tag">{{ tag }}</span>
+        </div>
+      </header>
+      <PongThesisFlipbook
+        :writing-id="article.id"
+        :outline="article.outline || []"
+        :total-pages="article.total_pages || 0"
+        :pdf-url="`/api/pong-writing/${article.id}/pdf`"
+      />
+    </template>
+
+    <!-- ── Standard text article ──────────────────────────── -->
     <template v-else-if="article">
       <header class="wa-header">
         <div class="wa-header-meta">
@@ -101,6 +126,10 @@ onMounted(async () => {
 })
 
 const categoryLabel = computed(() => CATEGORIES[article.value?.category] || article.value?.category || '')
+
+const isThesisFlipbook = computed(() =>
+  article.value?.category === 'thesis' && !!article.value?.pdf_r2_key
+)
 
 const paragraphs = computed(() => {
   const text = article.value?.content || ''
