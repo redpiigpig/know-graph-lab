@@ -211,16 +211,19 @@ const councilGroups = computed<CouncilGroup[]>(() => {
   return groups
 })
 
-/** 多份文件會議的「主卡片」標題（梵一 2 份／梵二 16 份等） */
+/** 多份文件會議的「主卡片」標題（特利騰 25 場／梵一 2 份／梵二 16 份等） */
 const COUNCIL_TITLES_ZH: Record<number, string> = {
+  19: '特利騰大公會議',
   20: '第一次梵蒂岡大公會議',
   21: '第二次梵蒂岡大公會議',
 }
 const COUNCIL_TITLES_EN: Record<number, string> = {
+  19: 'Council of Trent',
   20: 'First Vatican Council',
   21: 'Second Vatican Council',
 }
 const COUNCIL_TOPICS: Record<number, string> = {
+  19: '反宗教改革 ／ 正典聖經 ／ 七件聖事 ／ 成義論 ／ 聖體變質說 ／ 彌撒聖祭 ／ 大規模紀律改革 — 跨 18 年共 25 會期，奠定特利騰天主教 (Tridentine Catholicism) 之神學與紀律基礎',
   20: '回應啟蒙運動以來理性主義與唯物論對信仰的挑戰 ／ 定義教宗首席權與不可錯謬論 — 共產出 2 份教義憲章（Dei Filius + Pastor Aeternus）',
   21: '禮儀改革 ／ 教會本質 ／ 啟示論 ／ 普世合一 ／ 宗教自由 ／ 教會與現代世界 — 共產出 4 份憲章 + 9 份法令 + 3 份宣言',
 }

@@ -23,10 +23,19 @@ const vat1Loaders = import.meta.glob(
   { query: '?raw', import: 'default' },
 ) as Record<string, () => Promise<string>>
 
+const trentLoaders = import.meta.glob(
+  './ecumenical-councils/trent/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
 /** Vatican I document code prefixes — used to route textKey to vatican-i/ folder. */
 const VAT1_PREFIXES = new Set(['df', 'pa'])
 
 function resolveLoader(textKey: string): (() => Promise<string>) | undefined {
+  // Trent: textKeys all start with 'trent-' (e.g. trent-06-chinese)
+  if (textKey.startsWith('trent-')) {
+    return trentLoaders[`./ecumenical-councils/trent/${textKey}.txt`]
+  }
   const prefix = textKey.split('-')[0]
   if (VAT1_PREFIXES.has(prefix)) {
     return vat1Loaders[`./ecumenical-councils/vatican-i/${textKey}.txt`]
@@ -71,6 +80,9 @@ export async function loadCreedDoc(textKey: string): Promise<ParsedDoc> {
 
 export function availableTextKeys(): string[] {
   const keys: string[] = []
+  for (const p of Object.keys(trentLoaders)) {
+    keys.push(p.replace('./ecumenical-councils/trent/', '').replace(/\.txt$/, ''))
+  }
   for (const p of Object.keys(vat1Loaders)) {
     keys.push(p.replace('./ecumenical-councils/vatican-i/', '').replace(/\.txt$/, ''))
   }

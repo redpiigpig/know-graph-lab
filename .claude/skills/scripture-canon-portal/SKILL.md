@@ -1,6 +1,6 @@
 ---
 name: scripture-canon-portal
-description: 五個基督教經典/傳統對照工具的入口（/scripture 聖經多版本+教父註釋+各教會次經第二正典 / /creeds 21 次大公會議+各教會尼西亞信經+新教信條全譜 / /canon-law 教會法規 / /fathers 教父著作搜索 / /apocrypha 典外文獻搜索）。Status: **實作中 — /scripture 32 版本平行對照（852K 節，中文 13 + 英文 9 + 原文 10）+ /creeds 含梵二 16 份中文 + 梵一 2 份（拉丁/英文，中文待手動補）+ 信經區皆上線（2026-05-22）**。
+description: 五個基督教經典/傳統對照工具的入口（/scripture 聖經多版本+教父註釋+各教會次經第二正典 / /creeds 21 次大公會議+各教會尼西亞信經+新教信條全譜 / /canon-law 教會法規 / /fathers 教父著作搜索 / /apocrypha 典外文獻搜索）。Status: **實作中 — /scripture 32 版本平行對照（852K 節，中文 13 + 英文 9 + 原文 10）+ /creeds 含梵二 16 份／梵一 2 份／特利騰 25 會期 + 信經區皆上線（2026-05-22）**。
 ---
 
 # Scripture, Tradition, Canon, Fathers, Apocrypha Portal
@@ -524,6 +524,39 @@ for f in data/creeds/ecumenical-councils/vatican-ii/*-chinese.txt; do
 done
 ```
 
+### ✅ 特利騰大公會議 1545-63（councilNo 19，25 會期）— 2026-05-22 上線
+
+25 場會期完整建檔；以會期為單位、每會期一個 Creed entry（共 25 個），對齊 papalencyclicals.net 的頁面切法（每會期所有 dogmatic + reform decree 合併為一份）。
+
+**重點會期**（高神學密度）：
+- Session 3（1546-02-04）信德象徵令 — 重申尼西亞-君士坦丁堡信經
+- Session 4（1546-04-08）正典聖經與聖傳令 — 73 卷正典含次經；定 Vulgate 為公教標準
+- Session 5（1546-06-17）原罪令
+- Session 6（1547-01-13）★★★ 成義令 — 16 章 + 33 canons；與 JDDJ 1999 對話核心
+- Session 7（1547-03-03）七件聖事令（總論＋洗禮＋堅振）
+- Session 13（1551-10-11）★★★ 聖體聖事令 — 變質說 transubstantiatio
+- Session 14（1551-11-25）告解與終傅聖事令
+- Session 21（1562-07-16）二形領聖體令
+- Session 22（1562-09-17）★★ 彌撒聖祭令 — 同一犧牲 unum sacrificium
+- Session 23（1563-07-15）聖秩令 + 修院制度首創
+- Session 24（1563-11-11）★ 婚姻令 + Tametsi 詔令（終結秘密婚姻）
+- Session 25（1563-12-04）★ 閉幕巨型會期 — 煉獄／聖人／聖像／大赦／禁書／要理問答／日課經／彌撒經本
+
+**程序性會期**（內容較少）：1, 2, 8-12, 15-17, 19-20（開幕／延會／復會等）
+
+**資料來源 & pipeline**：
+- 英文：papalencyclicals.net Waterworth 1848 公版英譯（per-session pages）— 已抓全 25 場
+- 拉丁：**待補** — vatican.va 對 Trent 僅 Italian + 部分 Latin extract；候選來源 documentacatholicaomnia.eu / Wikisource la / intratext.com LAT0432
+- 中文：**待補** — vatican.va 對 Trent 無中文官方版；線上搜尋未找到全文中譯；必須從紙本《天主教大公會議文獻彙編》／思高聖經學會《大公會議信條彙編》取材
+- pipeline：[scripts/rebuild_trent_html.py](../../../scripts/rebuild_trent_html.py)（scrape papalencyclicals.net）+ [scripts/_gen_trent_metadata.py](../../../scripts/_gen_trent_metadata.py)（生成 25 個 .ts metadata files；source catalog 含 session_num/date/name_zh/name_en/topic/summary 內嵌）
+- 全部用 `displayMode: 'simple'`（同梵一，因 Trent 結構章節 + 章內重置 canon 編號不適合 paragraphParser）
+
+**SOP — 補某個 session 中文**：手抄／OCR 紙本後直接覆蓋 `data/creeds/ecumenical-councils/trent/trent-NN-chinese.txt`。
+
+**SOP — 補拉丁版**：當找到拉丁源後，建議擴充 `rebuild_trent_html.py` 加 Latin scrape；或從 documenta catholica omnia 一次下載 25 份 Latin .txt 手動放入 `trent-NN-latin.txt`。
+
+**Anathema content note**：Trent 有 Session 5/6/7/13/14/21/22/23/24 共 9 個會期含「Si quis dixerit ... anathema sit」canon 句型；全部從 papalencyclicals.net 直接 scrape 為 .txt，Claude 沒生成 anathema 文本；metadata 生成器的 summaryZh 描述教義概要但不引用 anathema 原文；安全通過 content filter。
+
 ### ✅ 梵蒂岡第一屆大公會議 1869-70（councilNo 20，2 份文件）— 2026-05-22 上線
 
 兩份教義憲章已建檔：拉丁＋英文上線、中文待手動補（vatican.va 對梵一無中文版）。
@@ -553,7 +586,7 @@ done
 ### 🟡 待補（其餘大公會議文件 — 注意 content-filter 規避策略）
 
 > ⚠️ 不要在同一個 session 裡批量新增以下檔案，會被攔截。逐份做、做完 commit + push、再開新 session。
-> 含 anathema 詛咒句型的（以弗所 431 / 迦克墩 451 / Trent）必須採上方「策略 C」— Claude 寫架構，使用者自貼原文。**梵一 2 份已採 scrape 路徑成功** — Trent 也可比照（papalencyclicals.net `ecum19.htm` 有完整文本）。
+> 含 anathema 詛咒句型的（以弗所 431 / 迦克墩 451）必須採上方「策略 C」— Claude 寫架構，使用者自貼原文。**梵一 2 份／Trent 25 場已採 scrape + generator 路徑成功**。
 
 **最高優先（剩餘信經 — 2 份）**
 
@@ -562,9 +595,9 @@ done
 | `ecumenical-councils/03-` 以弗所 431 | ecumenical-councils | 3 | Schaff NPNF2 Vol 14 + Cyril 十二章 | ⚠️ 有 |
 | `ecumenical-councils/04-` 迦克墩 451 定義 | ecumenical-councils | 4 | Schaff Creeds Vol 2 + Schaff NPNF2 Vol 14 | ⚠️ 有 |
 
-**第二批（大公會議 5-19）**：康斯坦茲、Trent 等；Trent 含大量 anathema canons，可比照梵一 scrape 路徑（papalencyclicals.net `ecum19.htm`）。
+**第二批（大公會議 5-18）**：康斯坦茲、拉特朗 I-V、里昂、佛羅倫斯等中世紀會議；可參考 papalencyclicals.net `councils/` 各自會議頁面，scrape 路徑與 Trent 相同。
 
-**第三批（Ecumenical Dialogue 20-21 世紀文件）**：見下方 `/creeds` 章節 ecumenical-dialogue 清單；JDDJ 1999 優先。
+**第三批（Ecumenical Dialogue 20-21 世紀文件）**：見下方 `/creeds` 章節 ecumenical-dialogue 清單；JDDJ 1999 優先（與 Trent Session 6 成義令對話直接相關）。
 
 ### 🚧 待開工（4 個子頁面尚未開始）
 

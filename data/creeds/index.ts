@@ -18,6 +18,33 @@ import type { Creed } from './types'
 import { nicaea325 } from './ecumenical-councils/01-nicaea-325'
 import { constantinople381 } from './ecumenical-councils/02-constantinople-381'
 
+// ── Trent (council #19, 25 會期) ─────────────────────────────
+import { trent01 } from './ecumenical-councils/trent-01'
+import { trent02 } from './ecumenical-councils/trent-02'
+import { trent03 } from './ecumenical-councils/trent-03'
+import { trent04 } from './ecumenical-councils/trent-04'
+import { trent05 } from './ecumenical-councils/trent-05'
+import { trent06 } from './ecumenical-councils/trent-06'
+import { trent07 } from './ecumenical-councils/trent-07'
+import { trent08 } from './ecumenical-councils/trent-08'
+import { trent09 } from './ecumenical-councils/trent-09'
+import { trent10 } from './ecumenical-councils/trent-10'
+import { trent11 } from './ecumenical-councils/trent-11'
+import { trent12 } from './ecumenical-councils/trent-12'
+import { trent13 } from './ecumenical-councils/trent-13'
+import { trent14 } from './ecumenical-councils/trent-14'
+import { trent15 } from './ecumenical-councils/trent-15'
+import { trent16 } from './ecumenical-councils/trent-16'
+import { trent17 } from './ecumenical-councils/trent-17'
+import { trent18 } from './ecumenical-councils/trent-18'
+import { trent19 } from './ecumenical-councils/trent-19'
+import { trent20 } from './ecumenical-councils/trent-20'
+import { trent21 } from './ecumenical-councils/trent-21'
+import { trent22 } from './ecumenical-councils/trent-22'
+import { trent23 } from './ecumenical-councils/trent-23'
+import { trent24 } from './ecumenical-councils/trent-24'
+import { trent25 } from './ecumenical-councils/trent-25'
+
 // ── Vatican I (council #20, 2 文件) ──────────────────────────
 import { vaticanIDF } from './ecumenical-councils/vatican-i-01-df'
 import { vaticanIPA } from './ecumenical-councils/vatican-i-02-pa'
@@ -43,6 +70,12 @@ import { vaticanIIGS } from './ecumenical-councils/vatican-ii-16-gs'
 export const ECUMENICAL_COUNCILS: Creed[] = [
   nicaea325,
   constantinople381,
+  // Trent 25 會期（1545-63；對應 councilNo 19）
+  trent01, trent02, trent03, trent04, trent05,
+  trent06, trent07, trent08, trent09, trent10,
+  trent11, trent12, trent13, trent14, trent15,
+  trent16, trent17, trent18, trent19, trent20,
+  trent21, trent22, trent23, trent24, trent25,
   // Vatican I 2 文件
   vaticanIDF,  // 1. Dei Filius — 公教信仰教義憲章 (1870-04-24)
   vaticanIPA,  // 2. Pastor Aeternus — 永恆牧人教義憲章 (1870-07-18)
