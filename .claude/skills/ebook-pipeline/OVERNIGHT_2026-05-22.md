@@ -100,8 +100,59 @@ per memory `feedback_set_books_split.md` —「套書要拆成個別書」是長
 1. **OCR body rescue** — 看 [ocr-rescue-candidates.md](ocr-rescue-candidates.md) 49 本候選，挑優先順序，等 Gemini quota OK 再排程
 2. **鹽野七生 33 冊決議** — 仍待 user 決定（z-lib 重抓單本 vs 保留現狀 vs 拆 33 row）
 3. **套書拆 split workflow** — 21 個共享檔的長期任務
-4. **master-scholars 170 本下載** — Anna's Archive .li 有 anti-bot JS challenge，自動腳本跑不動。改成手動 batch drop（z-lib / 出版社官網）+ daily ingest 接
-5. **印度哲學/哲學原典 子分類補齊** — 12 本商務印書館套書現在 `category=哲學, subcategory=NULL`，可進一步 LLM judge 分 古希臘/近代/中國 等
+4. **印度哲學/哲學原典 子分類補齊** — 12 本商務印書館套書現在 `category=哲學, subcategory=NULL`，可進一步 LLM judge 分 古希臘/近代/中國 等
+
+## 🔍 WebSearch 三輪結果 — master-scholars PDF 找尋（user 指定 option C）
+
+Anna's Archive / libgen / z-lib 自動下載全擋（DNS / anti-bot）。換成 Google WebSearch 對每本書 / 每位學者搜索免費 PDF。
+
+### Round 1 — 170 本待補書直連搜尋
+
+每本 1 次 WebSearch，過濾出 archive.org / .edu / monoskop / 作者站等直連 PDF（拒 books.com.tw / 博客來 / 書評 / bookey AI 摘要）。
+
+- **143/170 found (84.1%)**
+- 命中率語言差很多：英文標題 96% vs 中文標題 67%
+- Top hosts：archive.org (11) / monoskop.org (5) / cdn.bookey.app (10 ⚠ AI 摘要要降權)
+
+### Round 2 — 27 N 改英文書名重 search
+
+把「中譯版罩英文原書」27 本換 English title 再搜。
+
+- **+18 新命中 → 161/170 (94.7%)**
+- 救回 Durkheim Suicide / Bourdieu Logic of Practice / Spinoza Tractatus / Tylor Primitive Culture / Malinowski Argonauts / Freud 文明及其不滿 / Jung Psychological Types / Otto Idea of the Holy
+- **9 確定放棄**：Bauman ×2 (Cornell UP)、Hauerwas (Notre Dame UP)、Aron (T&F)、Hartmann (De Gruyter)、Panikkar、Rogers、Fromm、Merleau-Ponty 符號、Balthasar — 都是出版社鎖檔，只能 Anna's Archive 手動
+
+### Round 3 — 106 學者全集打包搜尋
+
+user 觀察：322 代表作只是 hit-list，要完整覆蓋每個學者全集應 500+ 本量級（Freud SE 24 卷、Jung CW 20 卷、Heidegger GA 102 卷、Husserliana 42 卷、Weber MWG 47 卷…）。
+
+- subagent 跑到 **15/106 撞 session limit**（9 Y / 6 N）
+- 剩 91 + 救 6 N → 我手動構造 `archive.org/search?query=creator:"{Latin name}"` URL 補完
+- 驗證 sample：Husserl 116 件、W.C. Smith 17 件、Bourdieu 53 件 — 構造 URL 真的有結果
+- **最終 106/106 都有 archive.org author profile URL**
+
+| 已 verified（subagent 找到具體 bundle） | 構造（user 點開可看 archive.org 全部該作者作品） |
+|---|---|
+| Max Weber Gesamtausgabe / Marx Collected Works / Eliade Monoskop / Max Müller / Feuerbach / William James / Frazer (Golden Bough 12 vols) / Otto / Durkheim Monoskop | 97 學者 archive.org 作者搜索頁 |
+
+### 兩張 CSV 給 user
+
+1. **`c:/tmp/master_scholars_pdf_urls.csv`** — 170 本直連 PDF（161 Y / 9 N）
+2. **`c:/tmp/master_scholars_full_collection_urls.csv`** — 106 學者全集打包入口（106 Y / 0 N）
+3. **`c:/tmp/master_scholars_pdf_search_summary.md`** — Round 1+2 摘要 + top 20 URL
+
+### 下載流程建議（VPN 不需要）
+
+archive.org / monoskop / earlymoderntexts / marxists.org **全球可達**，台灣 ISP 不擋。user 可以直接：
+1. 點開 CSV 內 best_url
+2. 對 archive.org 頁面手動挑 PDF/EPUB 下載到 `z-lib/` 資料夾
+3. 既有 daily ingest 自動接（10/14/18 排程）
+4. **不要 wget 大批量** — archive.org 對 bot 也風控，建議 user 用瀏覽器逐本下載比較不會被 ban
+
+預估覆蓋率：
+- 322 代表作 → ~158 本確定可下載
+- 106 學者全集入口 → 假設每個學者平均能再撈到 5 本沒在 hit-list 上的 → +500 本量級
+- **合計 600-700 本可能下載量**，但實際還是看 user 點擊速度
 
 ## 隔夜碰到的 dead-end（記給未來自己）
 
