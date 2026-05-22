@@ -85,36 +85,77 @@ python scripts/translate_ebook_to_zh.py <ebook_id> --engine sonnet --resume
 python scripts/translate_ebook_to_zh.py <ebook_id> --engine gemini --resume
 ```
 
-`--resume` 機制：on-disk JSONL 用 append-mode 寫，每完成一個 chunk 立刻 flush。再啟動時讀 JSONL，看 `chapter_path` 對 source 的 title_en — 已完成的 skip。所以中斷／kill 不會丟進度。
+`--resume` 機制：on-disk JSONL 用 append-mode 寫，每完成一個 chunk 立刻 flush。再啟動時讀 JSONL，**match 是用 `title_en`（英文 source heading），不是 `chapter_path`**（後者是已翻譯成中文的 H2，永遠對不上 source iter 的英文 title）。所以中斷／kill 不會丟進度，重啟也不會重做。
 
-最後一次完整跑會把 chunk_index 重編連續寫一次（rewrite JSONL）。
+最後一次完整跑會：
+1. 按 `src_order` 排序 out_chunks（補救 failure-then-resume 造成的完成順序 ≠ source 順序）
+2. 重編 chunk_index 連續
+3. 寫一次 rewrite JSONL
+
+**連續失敗保護**：3 個 chunk 連續失敗 → `time.sleep(30 min)` → 重置計數續跑（Anthropic / Gemini rate-limit wall 自動消化，不會 spin）。
+
+**完成 ≠ 一定完整**：rate-limit / 網路 / parse-error 都會讓某些 chunk 沒寫進 JSONL；最後 chunk_count 可能小於 source_chunks 數。再跑一次 `--resume` 會補進去。
 
 ## 引擎選擇
 
+三個 `--engine` 選項：
+
 | 引擎 | 何時用 | 注意 |
 |---|---|---|
-| **Sonnet 4.6** | 預設，神學術語準確度最高 | OAuth token 每 ~8 小時 refresh；script 已加自動 re-read `~/.claude/.credentials.json` mtime advance 就重建 client；如果跑時 OCR Haiku wrapper 也在跑，會 burst 429 — 看 [quota 協調](#quota-協調) |
-| **Gemini Flash** | OCR 在跑且不想暫停；或 Sonnet OAuth re-auth 麻煩時 | 4 個 key rotation；翻譯品質略遜 Sonnet；術語對齊靠 prompt 自己撐；free tier 250 RPD 跑 1 本 ~244 chunks 一天內可完成 |
+| **sonnet** (`SONNET_MODEL`) | 神學術語準確度最高（idle 期最佳）| OAuth；**跟互動 Claude Code (Opus/Sonnet) 共用 Max 帳號 burst rate**，互動中啟 Sonnet worker 立刻 429（2026-05-21 實測），idle 期才能用 |
+| **gemini** (`gemini-2.5-flash`) | 預設；OCR 不在跑、Gemini quota 寬時 | 4 key rotation；free tier 250 RPD × 4 keys；**遇 "all keys exhausted" 自動 fallback 到 Haiku 該段**（per-piece，不是 per-chunk） |
+| **haiku** (`HAIKU_MODEL`) | Gemini 已撞牆、不想浪費 ~70s/chunk 等 4 把 key 退讓 | OAuth；跟 Sonnet 同帳號但實測限額比 Sonnet 鬆很多 — 我互動跑 Opus + worker 跑 Haiku 可並行；偶爾撞 "exceed account rate limit" 由 auto-pause 接住 |
 
-**規則**：使用者沒指明 → 先試 Sonnet。若 OCR queue 還很多本要打（>10 本）且使用者不想暫停 OCR → 改 Gemini。
+**規則**（2026-05-22 update）：
+- 使用者在 idle 期、要最高品質 → `--engine sonnet`
+- 預設、不確定 → `--engine gemini`（自帶 Haiku fallback）
+- 知道 Gemini 一定撞牆（比如剛跑過大量翻譯、OCR Gemini 也在跑）→ `--engine haiku` 直接跳
+- 一律先看 [Quota 協調](#quota-協調) 確認狀態
 
-## Quota 協調（與 ebook-pipeline 的 OCR）
+## Quota 協調
 
-ebook-pipeline 的 OCR Haiku wrapper（`_haiku_autorestart.sh` / `_haiku_ivp_priority.sh`）跟本 skill 的 Sonnet 翻譯 **共用同一個 Anthropic Max 帳號的 burst rate limit**。實測：
+三組 quota 互動：
 
-| OCR 狀態 | Sonnet 翻譯預期 |
-|---|---|
-| OCR 完全停 | 順跑，每 chunk ~30-60s API time |
-| 1 個 wrapper 在跑（~1 call/min） | 偶爾 429，backoff [0,60,180,300,600]s 可吃下，但 244 chunks 預估 4-6hr |
-| 2 個 wrapper 並跑 | 持續 429，根本無法推進 — 必須先停一個 |
+| 工人 | 帳號 / quota | 跟誰搶 |
+|---|---|---|
+| **互動 Claude Code (Opus 4.7)** | Anthropic Max OAuth | Sonnet worker (硬搶) / Haiku worker (鬆) |
+| **OCR Haiku wrapper** (`_haiku_autorestart.sh`) | Anthropic Max OAuth | Sonnet worker (硬搶) / 互動 Opus (鬆) |
+| **OCR Gemini** (`ocr_with_gemini.py`) | Gemini API key × 4 | Gemini 翻譯 (硬搶) |
 
-**SOP**：開始 Sonnet 翻譯前先檢查並收斂到 ≤ 1 個 OCR wrapper。檢查命令：
+實測（2026-05-21 / 2026-05-22）：
+
+| 狀態 | Sonnet 翻譯 | Gemini 翻譯 | Haiku 翻譯 |
+|---|---|---|---|
+| 互動 Opus 沒動，OCR 全停 | 順跑 ~30-60s/chunk | 順跑 ~10-30s/chunk | 順跑 ~10-30s/chunk |
+| 互動 Opus 在打字 | **立刻 429**，4-6hr 都推不完 1 本 | 不受影響 | 偶爾 429，basically OK |
+| OCR Gemini 在跑 | OK | **每 chunk 4 key 都試完才放棄 (~70s 浪費)**，靠 Haiku fallback 救 | OK |
+| OCR Haiku wrapper 在跑 | 持續 429 | 不受影響 | 偶爾 429 |
+
+**SOP**：開始翻譯前檢查並選對 engine：
 
 ```powershell
 Get-Process bash, python -ErrorAction SilentlyContinue | Sort-Object StartTime | Format-Table Id, StartTime, CPU
+Get-CimInstance Win32_Process -Filter "Name='python.exe'" | Where-Object { $_.CommandLine -like "*ocr_with_gemini*" -or $_.CommandLine -like "*_haiku_*" } | Select-Object ProcessId, CommandLine | Format-List
 ```
 
-看 `scripts/logs/ocr_haiku_YYYY-MM-DD*.log` mtime — 若 mtime 超過 1 小時沒動 = 殭屍 worker，直接 `Stop-Process -Id <pid> -Force`（zombie burning RAM but not making progress 是已知 pattern）。
+殭屍偵測：`scripts/logs/ocr_haiku_YYYY-MM-DD*.log` mtime 超過 1 小時沒動 = 殭屍 worker，直接 `Stop-Process -Id <pid> -Force`。
+
+**防多 worker race**：本 skill 的 JSONL append-mode **不防競態**。一本書 = 一個 worker。TaskStop 不一定能殺乾淨 bash 包裝下的 python，重啟前一定要 PowerShell 確認：
+
+```powershell
+Get-CimInstance Win32_Process -Filter "Name='python.exe'" | Where-Object { $_.CommandLine -like "*translate_ebook*" }
+```
+
+兩個 worker 並跑會造成 JSONL 重複寫入相同 chunk（觀察過：本來 7 chunks，跑兩天變 76 lines / 28 unique titles，要手動 dedupe）。dedupe 方法：
+
+```python
+# 按 title_en dedup + sort by source order，見 git log b172z82ss / 此 session
+seen, kept = set(), []
+for l in lines:
+    if l['title_en'] in seen: continue
+    seen.add(l['title_en']); kept.append(l)
+kept.sort(key=lambda c: src_order.get(c['title_en'], 10**9))
+```
 
 ## OAuth token refresh（Sonnet 專屬）
 
@@ -188,31 +229,41 @@ API（`/api/ebooks/[id]`）`currentPage.source_text` + `currentPage.source_lang`
 
 ---
 
-## 當前狀態（2026-05-21 晚間）
+## 當前狀態（2026-05-22 凌晨）
 
-| Book | 狀態 | ebook_id | Source |
-|---|---|---|---|
-| **ACCS Apocrypha vol 15** | 🟢 雙語 schema smoke test 通過（Gemini, 3 chunks 已 R2 + DB）；待全量啟動 | `37ff8191-8bc8-4eeb-bd84-d85fa3dd893b` | archive.org（PDF/EPUB 已下載到 IVP 兄弟資料夾） |
-
-下次接手第一動：
-1. `Get-Process python` 看有沒有殘留 worker
-2. `(Get-Content G:/.../_chunks/37ff8191-....jsonl | Measure-Object -Line).Lines` 看 resume 點（smoke test 已寫 3）
-3. 確認 OCR wrapper / 互動 Claude Code（Opus/Sonnet）狀態 — Sonnet 翻譯跟使用者跟我互動會搶 Anthropic quota（**實測 2026-05-21：互動中啟 Sonnet worker 立刻 429**）；建議 idle 期跑 Sonnet，否則用 `--engine gemini`
-4. 確認 Claude Code 剛剛有互動（credentials.json mtime 在 1 小時內，僅 Sonnet 需要）
-5. `python scripts/translate_ebook_to_zh.py 37ff8191-... --engine <gemini|sonnet> --resume` 啟動
+無 in-flight 翻譯任務。簡→繁 batch 已掃完全庫（1688 本 / 29 本簡體轉好 / 3 本 JSONL 壞讀不開未處理）。
 
 ## 待翻清單（按優先順序）
 
-1. **ACCS Apocrypha vol 15**（英文已下載；正在翻）
-2. **ACCS vol 24-25 耶利米／哀歌**（中譯 27 冊跳過這段；確認無官方中譯後從英文 ACCS vol 12 翻）
-3. **ACCS 第 29 卷 / companion index**（若 archive.org 有；確認是否值得）
-4. （未來）使用者指明的其他英文書
+1. **ACCS vol 24-25 耶利米／哀歌**（中譯 27 冊跳過這段；確認無官方中譯後從英文 ACCS vol 12 翻）
+2. **ACCS 第 29 卷 / companion index**（若 archive.org 有；確認是否值得）
+3. （未來）使用者指明的其他英文書
 
 每本書翻譯前先寫一行記到本表，列：`書名｜source 位置｜source 字數估計｜術語焦點`。翻完 toggle 到 [完成清單](#完成清單)。
 
 ## 完成清單
 
-（空）
+| Date | Book | Stats | Engine | 備註 |
+|---|---|---|---|---|
+| **2026-05-22** | **ACCS Apocrypha vol 15**（古代基督徒聖經註釋叢書 卷十五：次經）<br>`ebook_id: 37ff8191-8bc8-4eeb-bd84-d85fa3dd893b` | 243 chunks / 497,817 繁中字 / 1.43M 英文字 / 含多俾亞傳・智慧篇・德訓篇・巴錄・耶利米書信・三童歌・蘇撒納・比勒與大龍 + 教父人物簡介 + 各種索引 | gemini → 切 haiku | smoke test (gemini) 過 → 跑 gemini 撞 quota → 切 haiku direct 完成；中途撞 Anthropic 帳號 rate-limit 用 auto-pause 接住；最後按 src_order 排序入庫 |
+
+## 下次接手第一動
+
+1. 確認沒有殘留 worker：
+
+   ```powershell
+   Get-CimInstance Win32_Process -Filter "Name='python.exe'" | Where-Object { $_.CommandLine -like "*translate_ebook*" }
+   ```
+
+2. 看待翻清單挑下一本，先 `--inspect` 看 source 結構：
+
+   ```bash
+   python scripts/translate_ebook_to_zh.py <ebook_id> --inspect
+   ```
+
+3. 確認 OCR Gemini worker 狀態（不衝突可放著）；OCR Haiku wrapper 狀態（若想用 sonnet/haiku 翻譯就先停）
+4. `--engine` 選擇看 [引擎選擇](#引擎選擇) 規則
+5. smoke test `--limit 3` 後再 `--resume` 全跑
 
 ---
 
@@ -270,7 +321,12 @@ python scripts/simp_to_trad_batch.py --id <ebook_id>
 
 # 全庫掃 + 自動轉
 python scripts/simp_to_trad_batch.py --run-all
+
+# 只重補 previews（不 s2tw 再跑）— 救撞到 Supabase 8s timeout 的大書
+python scripts/simp_to_trad_batch.py --previews-only <ebook_id>
 ```
+
+**Supabase previews timeout 救法**：DELETE + INSERT 在 >500 chunks 的書（例 2026-05-21 二思集 535 chunks）會撞 Supabase 8s `statement_timeout` (`code: 57014`)。`--previews-only` 子指令用 batch=10（vs main 用 25）+ 每批 3 次 retry，可以救回來。
 
 ### 常見坑
 
@@ -296,10 +352,14 @@ python scripts/simp_to_trad_batch.py --run-all
 - **Token 過期殺整個 run** — script 已自動 re-read credentials.json；若 Claude Code 互動 session 已關超過 8 小時，沒有刷 token，必須先開個互動視窗觸發
 - **OCR wrapper 殭屍**（log mtime 超過 1 小時沒動 + python process 高 CPU 但無進度）— 直接 `Stop-Process -Id <pid> -Force`，IVP / main wrapper 是兩個獨立 python，殺一個不影響另一個
 - **Source EPUB 缺**（只有 PDF）— 改寫 `find_epub_for_book` 接 PDF：用 PyMuPDF 抽 page text → 簡單 chapter heuristic 切 source chunks。但 PDF OCR 雜訊多，翻譯品質會掉
-- **JSONL 跨進程寫**（同一本書多開 worker）— 不要這樣做。append-mode 不防競態。一本書 = 一個 worker
+- **JSONL 跨進程寫**（同一本書多開 worker）— 不要這樣做。append-mode 不防競態。一本書 = 一個 worker。TaskStop **不保證** kill python，重啟前一定要 PowerShell 確認（見 [Quota 協調](#quota-協調)）
 - **chunk_index 跳號**（resume 模式）— 最後 final rewrite 會重編，中途看到不連續正常
 - **R2 push 失敗** — 看 `se.push_to_r2` 錯誤；通常網路抖一下，script 不會 retry，下次跑時要手動 trigger，或加上 retry decorator
 - **Reader 看不到新內容** — `server/utils/ebook-chunks.ts` 有 10min LRU cache，dev server 要 restart 才看得到（生產不用）
+- **Reader 的 total_pages 卡在 stale DB 數**（翻譯途中讀者點 next 過不去）— API 已修為 `max(dbChunkCount, tocLen)`，TOC 走即時 JSONL，所以翻譯中 reload 就能即時跟上
+- **目錄章節順序錯**（例：TOBIT 2:1-3:6 排在 1:3-22 前）— 完成順序 ≠ 源順序的副作用。final rewrite 已加 src_order sort 自動處理。歷史壞掉的 JSONL 可手動 dedupe + sort（見 [Quota 協調](#quota-協調) 末段的 snippet）
+- **DB title 全英文搜不到中文**：新 ingest 預設用 `[English] Original Title` tag。翻完應 PATCH title 成 `中文書名（Original Title）` 格式（例 2026-05-22 ACCS Apocrypha vol 15）—— search 走 ilike 對 title，無中文則中文 query 命不中
+- **跨翻譯 worker 名稱不一致**（例：多比傳 vs 多俾亞傳）— Haiku 偶爾忽略 PROMPT_TMPL 的 glossary 跳譯一次。改進方向：翻完後跑一個 glossary sweep 全文取代（沿用 `parse_drive_inventory.TRAD_FIXES` 模式但範圍更廣）。**目前狀態：未實作，使用者讀時可能會看到不一致**
 
 ## See also
 
