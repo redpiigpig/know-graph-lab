@@ -35,6 +35,12 @@ try:
 except ImportError:
     print("pip install google-genai", file=sys.stderr); sys.exit(1)
 
+try:
+    import anthropic as _anthropic
+    _HAS_ANTHROPIC = True
+except ImportError:
+    _HAS_ANTHROPIC = False
+
 DOCS = [
     ("SC", "sacrosanctum-concilium"),
     # IM skipped (Vatican PDF Content-Length=0)
@@ -89,21 +95,70 @@ def pdftotext_layout(pdf_path: Path) -> str:
     return txt_path.read_text(encoding="utf-8")
 
 
-def main():
-    keys = _find_gemini_keys()
-    if not keys:
-        print("❌ No GEMINI_API_KEY found in env/.env", file=sys.stderr)
-        sys.exit(1)
-    print(f"loaded {len(keys)} Gemini key(s)")
+def _make_anthropic_client():
+    """Build Anthropic client preferring API key, falling back to Claude Code OAuth."""
+    if not _HAS_ANTHROPIC:
+        raise RuntimeError("anthropic SDK not installed (pip install anthropic)")
+    api_key = os.environ.get("ANTHROPIC_API_KEY") or ENV.get("ANTHROPIC_API_KEY")
+    common = {"timeout": 600.0, "max_retries": 2}
+    if api_key:
+        return _anthropic.Anthropic(api_key=api_key, **common)
+    # OAuth fallback: read accessToken from Claude Code credentials.json
+    from pathlib import Path
+    import json as _json
+    cred_path = Path(os.environ.get("USERPROFILE", os.environ.get("HOME", ""))) / ".claude" / ".credentials.json"
+    if cred_path.exists():
+        creds = _json.loads(cred_path.read_text(encoding="utf-8"))
+        token = creds.get("claudeAiOauth", {}).get("accessToken", "")
+        if token:
+            return _anthropic.Anthropic(auth_token=token, **common)
+    raise RuntimeError("No Anthropic credentials (set ANTHROPIC_API_KEY or login via Claude Code)")
 
+
+def _haiku_call(prompt: str, model: str = "claude-haiku-4-5-20251001") -> str:
+    client = _make_anthropic_client()
+    resp = client.messages.create(
+        model=model,
+        max_tokens=16000,
+        temperature=0.2,
+        messages=[{"role": "user", "content": prompt}],
+    )
+    parts = []
+    for block in resp.content:
+        if getattr(block, "type", None) == "text":
+            parts.append(block.text)
+    return "".join(parts)
+
+
+def main():
+    engine = "gemini"
     codes_arg = None
     for a in sys.argv[1:]:
         if a.startswith("--codes="):
             codes_arg = [c.strip().upper() for c in a.split("=", 1)[1].split(",")]
+        elif a.startswith("--engine="):
+            engine = a.split("=", 1)[1].strip().lower()
+
     selected = [(c, s) for (c, s) in DOCS if not codes_arg or c in codes_arg]
 
-    client = genai.Client(api_key=keys[0])
-    key_idx = 0
+    if engine == "haiku":
+        if not _HAS_ANTHROPIC:
+            print("❌ Install: pip install anthropic", file=sys.stderr); sys.exit(1)
+        try:
+            _make_anthropic_client()  # verify auth (API key OR Claude Code OAuth)
+        except Exception as e:
+            print(f"❌ Anthropic auth failed: {e}", file=sys.stderr); sys.exit(1)
+        print(f"engine: Haiku 4.5 (OAuth via Claude Code credentials.json)")
+        client = None  # not used
+        keys = []  # not used
+        key_idx = 0
+    else:
+        keys = _find_gemini_keys()
+        if not keys:
+            print("❌ No GEMINI_API_KEY found in env/.env", file=sys.stderr); sys.exit(1)
+        print(f"engine: Gemini Flash, {len(keys)} key(s)")
+        client = genai.Client(api_key=keys[0])
+        key_idx = 0
 
     failures: list[tuple[str, str]] = []
     for code, slug in selected:
@@ -113,28 +168,30 @@ def main():
             continue
         try:
             raw = pdftotext_layout(pdf)
-            print(f"[{code}] pdftotext -> {len(raw)} chars; calling Gemini Flash...", flush=True)
+            print(f"[{code}] pdftotext -> {len(raw)} chars; calling {engine}...", flush=True)
             prompt = PROMPT.format(raw=raw)
 
-            for attempt in range(3):
-                try:
-                    resp = client.models.generate_content(
-                        model="gemini-2.5-flash",
-                        contents=prompt,
-                        config={"temperature": 0.2, "max_output_tokens": 32000},
-                    )
-                    break
-                except Exception as e:
-                    msg = str(e).lower()
-                    if ("429" in msg or "quota" in msg) and key_idx + 1 < len(keys):
-                        key_idx += 1
-                        print(f"  quota — rotating to key {key_idx + 1}/{len(keys)}", flush=True)
-                        client = genai.Client(api_key=keys[key_idx])
-                        time.sleep(2)
-                        continue
-                    raise
-
-            text = (resp.text or "").strip()
+            if engine == "haiku":
+                text = _haiku_call(prompt).strip()
+            else:
+                for attempt in range(3):
+                    try:
+                        resp = client.models.generate_content(
+                            model="gemini-2.5-flash",
+                            contents=prompt,
+                            config={"temperature": 0.2, "max_output_tokens": 32000},
+                        )
+                        break
+                    except Exception as e:
+                        msg = str(e).lower()
+                        if ("429" in msg or "quota" in msg) and key_idx + 1 < len(keys):
+                            key_idx += 1
+                            print(f"  quota — rotating to key {key_idx + 1}/{len(keys)}", flush=True)
+                            client = genai.Client(api_key=keys[key_idx])
+                            time.sleep(2)
+                            continue
+                        raise
+                text = (resp.text or "").strip()
             if not text or len(text) < 500:
                 print(f"  [{code}] WARN — output too short ({len(text)} chars), skipping write")
                 failures.append((code, "output_too_short"))
