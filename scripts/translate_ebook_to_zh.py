@@ -190,11 +190,143 @@ def split_oversized(src: str, max_chars: int = MAX_CHUNK_CHARS) -> list[str]:
     return pieces
 
 
-PROMPT_TMPL = """你是基督教神學翻譯專家。把下列英文段落翻譯成「繁體中文」。
+# AUTO-PROMPT-PEOPLE:START — 自動從 /translation-glossary DB 同步（教父全集翻譯用）
+AUTO_PROMPT_PEOPLE = '''
+   - Clement of Rome → 羅馬的革利免
+   - Ignatius of Antioch → 安提阿的依納爵
+   - Papias of Hierapolis → 希拉波利的帕皮亞
+   - Aristides of Athens → 雅典的亞里斯底德
+   - Melito of Sardis → 撒狄的美利多
+   - Mathetes → 瑪忒特
+   - Pantaenus → 潘代諾
+   - Hermas → 羅馬的黑馬
+   - Polycarp of Smyrna → 士每拿的坡旅甲
+   - Justin Martyr → 殉道者猶斯定
+   - Tatian the Assyrian → 他提安
+   - Theophilus of Antioch → 安提阿的提阿非羅
+   - Athenagoras of Athens → 雅典那哥拉
+   - Hermias → 赫爾米亞
+   - Irenaeus of Lyon → 里昂的愛任紐
+   - Clement of Alexandria → 亞歷山卓的革利免
+   - Tertullian → 特土良
+   - Hippolytus of Rome → 希波呂圖斯
+   - Julius Africanus → 猶略‧阿弗里卡努斯
+   - Minucius Felix → 密努修‧斐力克斯
+   - Theognostus of Alexandria → 亞歷山卓的提奧格諾斯圖斯
+   - Anatolius of Laodicea → 勞底基亞的亞納托利烏
+   - Origen → 俄利根
+   - Cyprian of Carthage → 居普良
+   - Novatian → 諾窪天
+   - Dionysius of Alexandria → 亞歷山卓的狄奧尼修
+   - Commodian → 科摩狄安
+   - Gregory Thaumaturgus → 奇蹟行者格列高利
+   - Arnobius of Sicca → 阿爾諾比烏斯
+   - Lactantius → 乳香者拉克坦提烏斯
+   - Venantius → 維南提烏
+   - Asterius the Sophist → 詭辯家亞斯特里烏
+   - Pierius of Alexandria → 亞歷山卓的皮埃里烏斯
+   - Methodius of Olympus → 奧林波斯的美多第烏
+   - Eusebius of Caesarea → 該撒利亞的優西比烏
+   - Aphrahat the Persian Sage → 波斯智者亞弗拉哈特
+   - Pacian of Barcelona → 帕齊安
+   - Hilary of Poitiers → 希拉里
+   - Ephrem the Syrian → 敘利亞的艾弗冷
+   - Athanasius of Alexandria → 亞他那修
+   - Macrina the Younger → 小瑪克麗娜
+   - Basil the Great → 大巴西略
+   - Cyril of Jerusalem → 西瑞爾
+   - Gregory of Nazianzus → 拿先斯的格列高理
+   - Apollinaris of Laodicea → 亞波里那留
+   - Diodore of Tarsus → 大數的狄奧多若
+   - Pelagius → 伯拉糾
+   - Gregory of Nyssa → 尼撒的格列高理
+   - Ambrose of Milan → 安波羅修
+   - Didymus the Blind → 狄第摩
+   - Asterius of Amasea → 亞斯特里
+   - Epiphanius of Salamis → 厄皮法尼
+   - John Chrysostom → 金口若望
+   - Jerome → 耶柔米
+   - Sulpitius Severus → 蘇皮修
+   - Theodore of Mopsuestia → 摩普綏提亞的狄奧多若
+   - Augustine of Hippo → 希波的奧古斯丁
+   - John Cassian → 若望‧格西安
+   - Cyril of Alexandria → 亞歷山卓的西里爾
+   - Vincent of Lerins → 勒蘭的文生
+   - Nestorius → 聶斯脫里
+   - Prosper of Aquitaine → 普洛斯培
+   - Eutyches → 歐迪克
+   - Leo the Great → 大良
+   - Theodoret of Cyrus → 居魯斯的狄奧多雷特
+   - Salvian of Marseille → 薩爾維安
+   - Pseudo-Dionysius the Areopagite → 偽狄奧尼修斯
+   - Philoxenus of Mabbug → 腓洛克塞努斯
+   - Boethius → 波愛修
+   - Fulgentius of Ruspe → 富爾根修
+   - Severus of Antioch → 塞維魯斯
+   - Caesarius of Arles → 凱撒略
+   - Romanos the Melodist → 羅馬努斯‧梅洛迪斯特
+   - Cassiodorus → 卡西奧多魯斯
+   - Gregory the Great → 大額我略
+   - Isidore of Seville → 依西多祿
+   - John Climacus → 西奈的若望
+   - Maximus the Confessor → 認信者馬克西姆
+   - Germanus of Constantinople → 君士坦丁堡的日耳曼
+   - Bede the Venerable → 可敬者比德
+   - Andrew of Crete → 克里特的安德烈
+   - John of Damascus → 大馬士革的若望
+   - Alcuin of York → 艾爾昆
+   - Theodore the Studite → 斯圖德修院的西奧多
+   - Rabanus Maurus → 拉班‧毛魯斯
+   - John Scotus Eriugena → 若望‧思高‧愛留根納
+   - Photius of Constantinople → 君士坦丁堡的佛提烏
+   - Symeon the New Theologian → 新神學家西蒙
+   - Berengar of Tours → 貝倫加留斯
+   - Anselm of Canterbury → 坎特伯里的安瑟倫
+   - Anselm of Laon → 蘭的安塞姆
+   - Hugh of Saint Victor → 聖維克多的修格
+   - Peter Abelard → 伯多祿‧亞伯拉
+   - Bernard of Clairvaux → 克萊爾沃的伯納德
+   - Peter Lombard → 倫巴第的彼得
+   - Richard of Saint Victor → 聖維克多的理查德
+   - Hildegard of Bingen → 賓根的希爾德加德
+   - Robert Grosseteste → 羅伯特‧格羅塞特斯特
+   - Hugh of Saint-Cher → 聖凱爾的雨果
+   - Thomas Aquinas → 多瑪斯‧阿奎那
+   - Bonaventure → 文德
+   - Albertus Magnus → 大亞爾伯特
+   - Mechthild of Magdeburg → 美格德堡的梅希蒂爾德
+   - Henry of Ghent → 根特的亨利
+   - Roger Bacon → 羅傑‧培根
+   - Duns Scotus → 董‧思高
+   - Giles of Rome → 羅馬的埃吉迪烏斯
+   - Meister Eckhart → 艾克哈特
+   - Marsilius of Padua → 馬西略‧帕多瓦
+   - Gregory of Sinai → 西奈的格列高理
+   - William of Ockham → 奧坎的威廉
+   - Gregory Palamas → 帕拉馬的格列高理
+   - Johannes Tauler → 陶勒
+   - Henry Suso → 蘇索
+   - Catherine of Siena → 錫耶納的凱瑟琳
+   - Julian of Norwich → 諾里奇的朱利安
+   - John Wycliffe → 威克里夫
+   - Nicholas Cabasilas → 尼古拉‧卡巴西拉
+   - Jan Hus → 揚‧胡斯
+   - Lorenzo Valla → 洛倫佐‧瓦拉
+   - Nicholas of Cusa → 庫薩的尼古拉
+   - Thomas à Kempis → 多瑪斯‧肯皮斯
+   - Gabriel Biel → 比耶爾
+'''
+# AUTO-PROMPT-PEOPLE:END
+
+_PROMPT_TMPL_HEAD = """你是基督教神學翻譯專家。把下列英文段落翻譯成「繁體中文」。
 
 關鍵要求：
 1. **嚴守繁體中文**：所有用字必須繁體。
-2. **教父/教會傳統術語對齊以下標準譯法**：
+2. **教父／神學家人名對齊**（自動同步自 /translation-glossary DB；以下 ★建議譯名為使用者校過的標準）：
+"""
+
+_PROMPT_TMPL_TAIL = """
+3. **聖經書卷／神學術語／諾斯底專名對齊**：
    - Patristic / Church Fathers → 教父
    - Apocrypha / Deuterocanonical → 次經 / 第二正典
    - Wisdom of Solomon → 智慧篇
@@ -203,15 +335,21 @@ PROMPT_TMPL = """你是基督教神學翻譯專家。把下列英文段落翻譯
    - Baruch → 巴錄
    - Judith → 友弟德傳 / 猶滴傳
    - 1-2 Maccabees → 瑪加伯上下 / 馬加比上下
-   - Augustine → 奧古斯丁
-   - Athanasius → 亞他那修 / 阿塔納修
-   - Origen → 奧利金
-   - John Chrysostom → 屈梭多模 / 金口若望
-   - Cyril of Alexandria → 亞歷山大的西里爾
-   - Bede → 比德
-3. **保留原文 Markdown 結構**：## / ### / **粗體** / *斜體* / > 引文 / - 列表全部對應翻譯。
-4. **聖經引用格式**：把英文 (1 Mac 4:18) 翻成繁體（瑪加伯上 4:18）。
-5. **章節標題簡潔**：別把 "Chapter 1" 翻成囉嗦句子，直譯「第一章」即可。
+   - Marcion / Valentinus / Basilides → 馬吉安 / 瓦倫提努 / 巴西理德
+   - 諾斯底人物（Saturninus / Cerinthus / Carpocrates / Menander / Simon Magus）→ 撒土爾尼努 / 克林妥 / 加爾頗克拉底 / 米南德 / 行邪術的西門
+   - Demiurge → 巨匠造物者
+   - Pleroma → 普累若麻 / 充滿
+   - Aeon (Gnostic) → 永世 / 伊翁（諾斯底專名，非時間義）
+   - Recapitulation (anakephalaiosis) → 復歸 / 總歸於一
+   - rule of faith (regula fidei) → 信仰準則
+   - apostolic succession → 使徒統緒
+   - Against Heresies → 駁異端
+   - Didache → 十二使徒遺訓
+   - Shepherd of Hermas → 黑馬牧者書
+   - Dialogue with Trypho → 與特里弗的對話
+4. **保留原文 Markdown 結構**：## / ### / **粗體** / *斜體* / > 引文 / - 列表全部對應翻譯。
+5. **聖經引用格式**：把英文 (1 Mac 4:18) 翻成繁體（瑪加伯上 4:18）。
+6. **章節標題簡潔**：別把 "Chapter 1" 翻成囉嗦句子，直譯「第一章」即可。
 
 只輸出翻譯後的繁體中文 markdown，不要加說明、不要 wrap 在程式碼塊裡。
 
@@ -219,6 +357,9 @@ PROMPT_TMPL = """你是基督教神學翻譯專家。把下列英文段落翻譯
 
 {source}
 """
+
+# AUTO_PROMPT_PEOPLE 在 AUTO-PROMPT-PEOPLE marker 區內，由 export_glossary_from_db.py 維護
+PROMPT_TMPL = _PROMPT_TMPL_HEAD + AUTO_PROMPT_PEOPLE + _PROMPT_TMPL_TAIL
 
 
 def gemini_translate(source: str, model: str = "gemini-2.5-flash") -> str:

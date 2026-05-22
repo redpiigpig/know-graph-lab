@@ -10,7 +10,7 @@
       <div class="w-full max-w-4xl">
         <div class="mb-8 text-center">
           <h1 class="text-2xl font-bold text-gray-900 mb-1">📜 經典對照與註釋</h1>
-          <p class="text-sm text-gray-500">五個子工具：聖經多版本平行 / 信條 / 法規 / 教父著作 / 典外文獻</p>
+          <p class="text-sm text-gray-500">六個子工具：聖經多版本平行 / 信條 / 法規 / 教父著作 / 典外文獻 / 神學家與名詞中譯</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -82,6 +82,13 @@ const tools = [
     icon: '📖',
     title: '聖經對照 + 教父註釋',
     desc: '多版本平行對照（中／英／拉／希／敘／科普特／亞美尼亞／衣索匹亞）+ 教父逐節註釋 + 各教會 OT/NT canon 標記',
+    enabled: true,
+  },
+  {
+    path: '/translation-glossary',
+    icon: '🔤',
+    title: '神學家與名詞中譯',
+    desc: '~150 位教父／神學家 + ~300 條神學名詞的多傳統中譯對照（新教／思高／東正教／香港／台灣／中國學界）+ 建議譯名',
     enabled: true,
   },
 ]

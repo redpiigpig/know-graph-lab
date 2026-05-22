@@ -261,6 +261,7 @@ API（`/api/ebooks/[id]`）`currentPage.source_text` + `currentPage.source_lang`
 
 | Date | Book | Stats | Engine | 備註 |
 |---|---|---|---|---|
+| **2026-05-22** | **ANF Vol 1**（Apostolic Fathers with Justin Martyr and Irenaeus）<br>`ebook_id: c98d358d-7066-4691-a896-b7232707b0db` | **中斷暫停**：smoke 3 + 部分翻 = 28 / 938 chunks；source = 2.6M 英文字 | gemini（4 key 全 429 救回；smoke OK）| 走 Gemini 預設譯 Justin = 遊斯丁，使用者糾正要「猶斯定」(思高傳統)。停 worker → 修 glossary/PROMPT/JSONL → 觸發新建 [translation-glossary](../translation-glossary/SKILL.md) 工具校所有譯名後再續譯。**未完成，等使用者校完 ★建議譯名後再 `--resume`** |
 | **2026-05-22** | **ACCS OT XII vol 12**（古代基督徒聖經註釋叢書 卷十二：耶利米書‧耶利米哀歌）<br>`ebook_id: 3f678406-3969-49c1-a971-d76a6fd62f0e` | 112 chunks / 434,720 繁中字 / 1.19M 英文字 / 跑時間 1h24m / 涵蓋 General Intro + Jeremiah 1-52 + Lamentations 1-5 + Subject/Scripture/Author Index + Notes | haiku（Gemini 4 key 全 429，直接走 Haiku；Vatican II Haiku worker 並跑無衝突） | English source 從 archive.org `ancient-christian-commentary-on-scripture_ot` item 下載 EPUB+PDF；補因中譯 27 冊跳過的 gap；少數 chapter_path 標題抓取偏長（chunk 6/40/100）— 內文品質乾淨可讀 |
 | **2026-05-22** | **ACCS Apocrypha vol 15**（古代基督徒聖經註釋叢書 卷十五：次經）<br>`ebook_id: 37ff8191-8bc8-4eeb-bd84-d85fa3dd893b` | 243 chunks / 497,817 繁中字 / 1.43M 英文字 / 含多俾亞傳・智慧篇・德訓篇・巴錄・耶利米書信・三童歌・蘇撒納・比勒與大龍 + 教父人物簡介 + 各種索引 | gemini → 切 haiku | smoke test (gemini) 過 → 跑 gemini 撞 quota → 切 haiku direct 完成；中途撞 Anthropic 帳號 rate-limit 用 auto-pause 接住；最後按 src_order 排序入庫 |
 
@@ -278,9 +279,25 @@ API（`/api/ebooks/[id]`）`currentPage.source_text` + `currentPage.source_lang`
    python scripts/translate_ebook_to_zh.py <ebook_id> --inspect
    ```
 
-3. 確認 OCR Gemini worker 狀態（不衝突可放著）；OCR Haiku wrapper 狀態（若想用 sonnet/haiku 翻譯就先停）
-4. `--engine` 選擇看 [引擎選擇](#引擎選擇) 規則
-5. smoke test `--limit 3` 後再 `--resume` 全跑
+3. **🆕 譯名前置確認**（必做，2026-05-22 起新 SOP）：開 `http://localhost:3010/translation-glossary` 把 source 主要會出現的人名／神學術語都查一遍：
+   - 確認 ★建議譯名跟使用者偏好一致
+   - 不確定的問使用者「Justin Martyr 你要新教游斯丁、思高猶斯定、還是東正教尤斯丁？」
+   - 確認後把該書要用的譯名同步寫進 `translate_ebook_to_zh.py:PROMPT_TMPL` 強化（補一行 `Justin Martyr → 殉道者猶斯定`）
+   - 詳見 [translation-glossary](../translation-glossary/SKILL.md) skill
+4. 確認 OCR Gemini worker 狀態（不衝突可放著）；OCR Haiku wrapper 狀態（若想用 sonnet/haiku 翻譯就先停）
+5. `--engine` 選擇看 [引擎選擇](#引擎選擇) 規則
+6. smoke test `--limit 3` 後**請使用者看 1-2 chunks 確認譯名**再 `--resume` 全跑
+
+### 為什麼要先校譯名
+
+實測：2026-05-22 跑 ANF Vol 1 直接開翻，Gemini 把 Justin Martyr 譯成「遊斯丁」，使用者糾正後要：
+1. 殺 worker 避免繼續寫錯名
+2. 修 [glossary.md](glossary.md) + `PROMPT_TMPL`
+3. 改已寫的 JSONL chunks 內人名
+4. push R2 + refresh DB previews
+5. 重啟 worker
+
+走 `/translation-glossary` 校過再開翻，這整套修正都不會發生。一本書 ~900 chunks，越早糾正越省事。
 
 ---
 
