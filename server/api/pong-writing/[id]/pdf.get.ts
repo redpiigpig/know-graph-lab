@@ -69,9 +69,20 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 502, message: "R2 returned empty body" });
   }
 
+  const q = getQuery(event);
+  const wantDownload = q.download === "1" || q.download === "true";
+  // Make download-mode filename more recognisable. Title may contain CJK,
+  // so encode RFC-5987-style for filename* and ASCII-fallback for filename.
+  const safeTitle = (data.title || `thesis-${id}`).replace(/[\\/:*?"<>|]/g, "_");
+  const asciiFallback = `thesis-${id}.pdf`;
+  const dispType = wantDownload ? "attachment" : "inline";
   setHeader(event, "Content-Type", "application/pdf");
   setHeader(event, "Cache-Control", "public, max-age=86400");
-  setHeader(event, "Content-Disposition", `inline; filename="thesis-${id}.pdf"`);
+  setHeader(
+    event,
+    "Content-Disposition",
+    `${dispType}; filename="${asciiFallback}"; filename*=UTF-8''${encodeURIComponent(safeTitle + ".pdf")}`
+  );
   if (res.ContentLength) {
     setHeader(event, "Content-Length", String(res.ContentLength));
   }

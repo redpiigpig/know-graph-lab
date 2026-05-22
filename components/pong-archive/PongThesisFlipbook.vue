@@ -32,14 +32,11 @@
       </div>
 
       <div class="tfb-topbar-right">
-        <a :href="pdfUrl" target="_blank" rel="noopener" class="tfb-action-btn" title="開啟原版 PDF">
+        <a :href="downloadUrl" download class="tfb-action-btn" title="下載原版 PDF">
           <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <rect x="2" y="1" width="12" height="14" rx="1.5" stroke="currentColor" stroke-width="1.2" fill="none"/>
-            <line x1="4.5" y1="5.5" x2="11.5" y2="5.5" stroke="currentColor" stroke-width="1"/>
-            <line x1="4.5" y1="8"   x2="11.5" y2="8"   stroke="currentColor" stroke-width="1"/>
-            <line x1="4.5" y1="10.5" x2="9"   y2="10.5" stroke="currentColor" stroke-width="1"/>
+            <path d="M8 2v8 M5 7l3 3 3-3 M2.5 13h11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           </svg>
-          原版
+          下載 PDF
         </a>
         <button class="tfb-action-btn" @click="fullscreen = !fullscreen" title="全螢幕">
           <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -146,6 +143,10 @@ const jumpInput = ref(1)
 
 const totalPages = computed(() => Math.max(props.totalPages || pages.value.length, pages.value.length))
 const rightPage = computed(() => leftPage.value + 1)
+const downloadUrl = computed(() => {
+  const base = props.pdfUrl || ''
+  return base ? base + (base.includes('?') ? '&' : '?') + 'download=1' : ''
+})
 
 // Spread convention: left odd (1, 3, 5…), right even (2, 4, 6…).
 // So a fresh book opens to page 1 on the right with a blank cover-left.
@@ -254,11 +255,12 @@ onBeforeUnmount(() => {
 .tfb-root {
   position: relative;
   background: linear-gradient(180deg, #3A2E20 0%, #2A2218 100%);
-  min-height: 100vh;
+  height: 100vh;            /* fill viewport exactly so book fits A4 with no inner scroll */
   display: flex;
   flex-direction: column;
   font-family: 'Noto Serif TC', serif;
   color: #2C2620;
+  overflow: hidden;
 }
 .tfb-root--fullscreen {
   position: fixed;
@@ -271,7 +273,7 @@ onBeforeUnmount(() => {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  padding: 12px 24px;
+  padding: 8px 20px;
   background: #1F1810;
   border-bottom: 1px solid #4A3E2C;
   color: #DBCBB0;
@@ -357,30 +359,31 @@ onBeforeUnmount(() => {
   flex: 1;
   display: flex;
   overflow: hidden;
+  min-height: 0;
 }
 
 /* ── TOC ──────────────────────────────────────────────────── */
 .tfb-toc {
-  width: 280px;
+  width: 220px;
   flex-shrink: 0;
   background: #251E14;
   border-right: 1px solid #4A3E2C;
   overflow-y: auto;
-  padding: 18px 0;
+  padding: 14px 0;
   font-family: 'Noto Sans TC', sans-serif;
 }
 .tfb-toc-title {
-  font-size: 0.7rem;
+  font-size: 0.62rem;
   color: #A09280;
   letter-spacing: 0.22em;
-  padding: 0 18px 12px;
+  padding: 0 14px 8px;
   border-bottom: 1px solid #3A3025;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 .tfb-toc-empty {
-  padding: 30px 18px;
+  padding: 20px 14px;
   color: #6A6050;
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   text-align: center;
   letter-spacing: 0.06em;
 }
@@ -393,47 +396,51 @@ onBeforeUnmount(() => {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  gap: 10px;
-  padding: 6px 18px;
-  font-size: 0.82rem;
+  gap: 8px;
+  padding: 4px 14px;
+  font-size: 0.72rem;
+  line-height: 1.45;
   color: #C4B89A;
   cursor: pointer;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   transition: background 0.15s, color 0.15s;
 }
 .tfb-toc-item:hover { background: #2F2618; color: #F0E2C8; }
 .tfb-toc-item--active { background: #3A3025; color: #F0E2C8; font-weight: 500; }
-.tfb-toc-item--lvl1 { font-weight: 600; color: #DBCBB0; }
-.tfb-toc-item--lvl2 { padding-left: 32px; }
-.tfb-toc-item--lvl3 { padding-left: 46px; font-size: 0.76rem; }
-.tfb-toc-item--lvl4 { padding-left: 60px; font-size: 0.74rem; color: #A09280; }
+.tfb-toc-item--lvl1 { font-weight: 600; color: #DBCBB0; font-size: 0.76rem; }
+.tfb-toc-item--lvl2 { padding-left: 24px; }
+.tfb-toc-item--lvl3 { padding-left: 36px; font-size: 0.68rem; }
+.tfb-toc-item--lvl4 { padding-left: 48px; font-size: 0.66rem; color: #A09280; }
 .tfb-toc-text { flex: 1; }
 .tfb-toc-page {
   font-family: 'Noto Sans TC', monospace;
-  font-size: 0.7rem;
+  font-size: 0.62rem;
   color: #6A6050;
 }
 
 /* ── Book ─────────────────────────────────────────────────── */
 .tfb-book-wrap {
   flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 28px 40px;
-  overflow: auto;
+  display: grid;
+  place-items: center;
+  padding: 14px 20px;
+  overflow: hidden;
+  min-height: 0;
 }
 .tfb-book {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: min(100%, 1100px);
-  aspect-ratio: 1.45 / 1;
+  aspect-ratio: 1.414 / 1;       /* A4 spread (210×2 : 297) */
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
   background: #1A130C;
   border-radius: 4px;
   box-shadow:
     0 0 0 1px rgba(0,0,0,0.5),
     0 20px 60px rgba(0,0,0,0.5),
-    inset 0 0 0 8px #2A2218,
+    inset 0 0 0 6px #2A2218,
     inset 0 0 30px rgba(0,0,0,0.4);
   position: relative;
   perspective: 1800px;
@@ -475,17 +482,15 @@ onBeforeUnmount(() => {
 
 .tfb-page-inner {
   flex: 1;
-  padding: 56px 56px 36px;
-  overflow-y: auto;
-  scrollbar-gutter: stable;
+  padding: 28px 32px 14px;
+  overflow: hidden;                 /* desktop: A4 fit, no scroll */
+  min-height: 0;
 }
-.tfb-page-inner::-webkit-scrollbar { width: 6px; }
-.tfb-page-inner::-webkit-scrollbar-thumb { background: rgba(120, 100, 70, 0.25); border-radius: 3px; }
 
 .tfb-page-empty {
   text-align: center;
   color: #B8AC92;
-  font-size: 0.82rem;
+  font-size: 0.7rem;
   margin-top: 40%;
   letter-spacing: 0.18em;
   font-style: italic;
@@ -493,51 +498,54 @@ onBeforeUnmount(() => {
 
 .tfb-page-num {
   text-align: center;
-  font-size: 0.72rem;
+  font-size: 0.62rem;
   color: #9A8E72;
-  padding: 8px 0 12px;
+  padding: 4px 0 8px;
   font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 0.08em;
+  flex-shrink: 0;
 }
 
 /* ── Content blocks ───────────────────────────────────────── */
 .tfb-content {
   font-family: 'Noto Serif TC', 'SimSun', serif;
   color: #2C2620;
-  line-height: 1.9;
-  font-size: 1rem;
+  line-height: 1.65;
+  font-size: 0.82rem;
 }
 
 /* Chapter title */
 .tfb-blk--ch {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   text-align: center;
-  margin: 0.4em 0 1em;
-  padding-bottom: 0.4em;
+  margin: 0.2em 0 0.6em;
+  padding-bottom: 0.3em;
   border-bottom: 1px solid #C4B89A;
   color: #1F1A14;
+  line-height: 1.4;
 }
 /* Section title */
 .tfb-blk--sec {
-  font-size: 1.25rem;
+  font-size: 0.98rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
-  margin: 1.4em 0 0.6em;
+  letter-spacing: 0.08em;
+  margin: 0.9em 0 0.35em;
   color: #2A2418;
+  line-height: 1.4;
 }
 /* Subsection */
-.tfb-blk--sub { font-weight: 600; color: #3A3025; }
+.tfb-blk--sub { font-weight: 600; color: #3A3025; line-height: 1.4; }
 .tfb-blk--sub3 {
-  font-size: 1.08rem;
-  letter-spacing: 0.06em;
-  margin: 1em 0 0.4em;
+  font-size: 0.88rem;
+  letter-spacing: 0.05em;
+  margin: 0.65em 0 0.25em;
 }
 .tfb-blk--sub4 {
-  font-size: 1rem;
+  font-size: 0.84rem;
   letter-spacing: 0.04em;
-  margin: 0.8em 0 0.3em;
+  margin: 0.5em 0 0.2em;
   font-weight: 500;
 }
 
@@ -545,50 +553,50 @@ onBeforeUnmount(() => {
 .tfb-blk--p {
   text-indent: 2em;
   text-align: justify;
-  margin: 0 0 0.35em;
-  line-height: 2;
+  margin: 0 0 0.2em;
+  line-height: 1.7;
 }
 /* Block quote */
 .tfb-blk--q {
-  margin: 0.6em 0 0.6em 1.5em;
-  padding: 0.4em 0 0.4em 1em;
-  border-left: 3px solid #C4B89A;
+  margin: 0.4em 0 0.4em 1em;
+  padding: 0.25em 0 0.25em 0.8em;
+  border-left: 2px solid #C4B89A;
   font-family: 'Noto Serif TC', 'DFKai-SB', 'BiauKai', serif;
   color: #4A4030;
-  line-height: 1.85;
-  font-size: 0.96rem;
+  line-height: 1.55;
+  font-size: 0.78rem;
   text-indent: 0;
 }
 /* List item */
 .tfb-blk--li {
-  margin: 0.2em 0 0.2em 2em;
+  margin: 0.1em 0 0.1em 1.6em;
   text-indent: 0;
   list-style: none;
-  line-height: 1.85;
+  line-height: 1.55;
 }
 
 /* ── Footnotes ────────────────────────────────────────────── */
 .tfb-footnotes {
-  margin-top: 2em;
-  padding-top: 0.6em;
+  margin-top: 0.8em;
+  padding-top: 0.35em;
   border-top: 1px solid #C4B89A;
   font-family: 'Noto Sans TC', sans-serif;
 }
 .tfb-footnote {
-  font-size: 0.74rem;
-  line-height: 1.7;
+  font-size: 0.62rem;
+  line-height: 1.4;
   color: #4A4030;
-  margin: 0 0 0.35em;
+  margin: 0 0 0.15em;
   display: flex;
-  gap: 6px;
+  gap: 5px;
   text-indent: 0;
 }
 .tfb-footnote-marker {
-  font-size: 0.62rem;
+  font-size: 0.55rem;
   color: #8A7860;
   font-weight: 500;
   flex-shrink: 0;
-  min-width: 1.4em;
+  min-width: 1.2em;
   text-align: right;
 }
 .tfb-footnote-text { flex: 1; }
@@ -609,14 +617,26 @@ onBeforeUnmount(() => {
 .tfb-edge:hover  { opacity: 1; }
 .tfb-edge--disabled { cursor: default; opacity: 0 !important; pointer-events: none; }
 
-/* ── Responsive ───────────────────────────────────────────── */
+/* ── Responsive: mobile = single page + scroll allowed ────── */
 @media (max-width: 920px) {
-  .tfb-toc { display: none; }
-  .tfb-book-wrap { padding: 16px; }
-  .tfb-page-inner { padding: 32px 24px 20px; }
-  .tfb-blk--ch  { font-size: 1.3rem; }
-  .tfb-blk--sec { font-size: 1.1rem; }
-  .tfb-content  { font-size: 0.94rem; }
-  .tfb-topbar   { padding: 10px 14px; }
+  .tfb-root { height: auto; min-height: 100vh; overflow: visible; }
+  .tfb-body { overflow: visible; }
+  .tfb-toc  { display: none; }
+  .tfb-book-wrap { padding: 12px; overflow: visible; min-height: 0; }
+  .tfb-book {
+    grid-template-columns: 1fr;        /* single page */
+    aspect-ratio: 0.707 / 1;           /* A4 portrait */
+    height: auto;
+    min-height: calc(100vh - 80px);
+  }
+  .tfb-book::before { display: none; }
+  .tfb-page--right { display: none; }  /* hide right page on mobile, only left visible */
+  .tfb-page-inner  { overflow-y: auto; padding: 22px 18px 14px; }
+  .tfb-content  { font-size: 0.88rem; line-height: 1.75; }
+  .tfb-blk--ch  { font-size: 1.15rem; }
+  .tfb-blk--sec { font-size: 0.98rem; }
+  .tfb-topbar   { padding: 8px 12px; }
+  .tfb-action-btn span,
+  .tfb-toc-btn  { font-size: 0.72rem; }
 }
 </style>

@@ -20,10 +20,8 @@
         <p v-if="article.title_en" class="wa-title-en">{{ article.title_en }}</p>
         <div class="wa-byline-row">
           <p class="wa-byline">{{ article.author || '龐君華 會督' }}</p>
-          <p v-if="article.supervisor" class="wa-supervisor">指導教授：{{ article.supervisor }}</p>
-        </div>
-        <div v-if="article.tags && article.tags.length" class="wa-tags">
-          <span v-for="tag in article.tags" :key="tag" class="wa-tag">{{ tag }}</span>
+          <p v-if="article.supervisor" class="wa-meta-side">指導教授：{{ article.supervisor }}</p>
+          <p v-if="article.provider" class="wa-meta-side">提供：{{ article.provider }}</p>
         </div>
       </header>
       <PongArchivePongThesisFlipbook
@@ -320,7 +318,7 @@ function formatDate(dateStr, approximate) {
   letter-spacing: 0.18em;
   margin: 0;
 }
-.wa-supervisor {
+.wa-meta-side {
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 0.78rem;
   font-weight: 300;
