@@ -1,6 +1,6 @@
 ---
 name: scripture-canon-portal
-description: 五個基督教經典/傳統對照工具的入口（/scripture 聖經多版本+教父註釋+各教會次經第二正典 / /creeds 21 次大公會議+各教會尼西亞信經+新教信條全譜 / /canon-law 教會法規 / /fathers 教父著作搜索 / /apocrypha 典外文獻搜索）。Status: **實作中 — /scripture 32 版本平行對照（852K 節，中文 13 + 英文 9 + 原文 10）+ /creeds 含梵二 16 份／梵一 2 份／特利騰 25 會期 + 信經區皆上線（2026-05-22）**。
+description: 五個基督教經典/傳統對照工具的入口（/scripture 聖經多版本+教父註釋+各教會次經第二正典 / /creeds 21 次大公會議+各教會尼西亞信經+新教信條全譜 / /canon-law 教會法規 / /fathers 教父著作搜索 / /apocrypha 典外文獻搜索）。Status: **實作中 — /scripture 32 版本平行對照（852K 節，中文 13 + 英文 9 + 原文 10）+ /creeds 信經區 + 中世紀 11 場（councils 8-18）+ 特利騰 25 會期 + 梵一 2 份 + 梵二 16 份皆上線（2026-05-22）**。
 ---
 
 # Scripture, Tradition, Canon, Fathers, Apocrypha Portal
@@ -524,6 +524,35 @@ for f in data/creeds/ecumenical-councils/vatican-ii/*-chinese.txt; do
 done
 ```
 
+### ✅ 中世紀大公會議 8-18（869-1517）— 2026-05-22 上線
+
+11 場中世紀大公會議全數建檔；每場一個 Creed entry（單檔模式，非多文件群組）。
+
+| councilNo | 中文名 | 拉丁名 | 年代 | 重點 |
+|---|---|---|---|---|
+| 8 | 第四次君士坦丁堡 | Concilium Constantinopolitanum IV | 869-70 | Photian Schism；東正教不承認 |
+| 9 | 第一次拉特朗 | Lateranense I | 1123 | 沃姆斯協定／敘任權之爭結束；**西方第一次大公會議** |
+| 10 | 第二次拉特朗 | Lateranense II | 1139 | 結束 Pierleoni 分裂；神職獨身強化 |
+| 11 | 第三次拉特朗 | Lateranense III | 1179 | **教宗選舉樞機 2/3 多數**（沿用至今）；譴 Cathars/Waldenses |
+| 12 | 第四次拉特朗 | Lateranense IV | 1215 | ★★★ **變質說 transubstantiatio 首次定義**；canon 21 Omnis utriusque sexus 年告解 |
+| 13 | 第一次里昂 | Lugdunense I | 1245 | 罷黜 Frederick II；蒙古入侵威脅 |
+| 14 | 第二次里昂 | Lugdunense II | 1274 | Union of Lyon 東西短暫合一（8 年後撤）；**Ubi periculum** conclave 制度 |
+| 15 | 維埃納 | Viennense | 1311-12 | **廢除聖殿騎士團**；Olivi 神貧爭論 |
+| 16 | 康斯坦茨 | Constantiense | 1414-18 | ★★ **結束西方大分裂**；處死 Jan Hus；Haec Sancta 公會議至上主義 |
+| 17 | 巴塞爾-費拉拉-佛羅倫斯 | Basileense-Florentinum | 1431-45 | **佛羅倫斯合一 1439** Laetentur Caeli；與科普特／亞美尼亞／亞述合一令 |
+| 18 | 第五次拉特朗 | Lateranense V | 1512-17 | 駁 Conciliarism 重申教宗權威；1517 閉幕後 7 個月 Luther 95 條 |
+
+**資料來源 & pipeline**：
+- 英文：papalencyclicals.net `ecumNN.htm`（pattern NN=08-18，Lateran IV 例外是 `ecum12-2.htm`）— 已抓全 11 場，共約 1.6MB
+- 拉丁：**待補**（同 Trent，候選 documentacatholicaomnia.eu / Wikisource la）
+- 中文：**待補** — 同 Vatican I 結論：唯一權威來源紙本《公教會之信仰與倫理教義選集》(Denzinger 中譯) — 光啟文化 2013 / ISBN 9789575467418 / 中世紀公會議散落於 DH 600-1450 範圍
+- pipeline：[scripts/rebuild_medieval_councils.py](../../../scripts/rebuild_medieval_councils.py)（scrape）+ [scripts/_gen_medieval_metadata.py](../../../scripts/_gen_medieval_metadata.py)（local-only, gitignored；內嵌 11 場 catalog 一次生成 11 個 .ts file）
+- 全部用 `displayMode: 'simple'`（同梵一／Trent）
+
+**架構決策**：中世紀公會議**不使用 `councilDocCode` 多文件群組**（不同於 Vatican I/II/Trent），每場一個獨立 Creed entry — 因 papalencyclicals.net 每場呈現為單一綜合 canons 文件，無自然的 sub-doc 切分點。
+
+**SOP — 補某會議中文**：手抄／OCR 紙本 Denzinger 對應段落後覆蓋 `data/creeds/ecumenical-councils/medieval/medieval-NN-chinese.txt`。
+
 ### ✅ 特利騰大公會議 1545-63（councilNo 19，25 會期）— 2026-05-22 上線
 
 25 場會期完整建檔；以會期為單位、每會期一個 Creed entry（共 25 個），對齊 papalencyclicals.net 的頁面切法（每會期所有 dogmatic + reform decree 合併為一份）。
@@ -599,7 +628,7 @@ done
 | `ecumenical-councils/03-` 以弗所 431 | ecumenical-councils | 3 | Schaff NPNF2 Vol 14 + Cyril 十二章 | ⚠️ 有 |
 | `ecumenical-councils/04-` 迦克墩 451 定義 | ecumenical-councils | 4 | Schaff Creeds Vol 2 + Schaff NPNF2 Vol 14 | ⚠️ 有 |
 
-**第二批（大公會議 5-18）**：康斯坦茲、拉特朗 I-V、里昂、佛羅倫斯等中世紀會議；可參考 papalencyclicals.net `councils/` 各自會議頁面，scrape 路徑與 Trent 相同。
+**第二批（剩餘：councils 5-7 — 早期東方公會議 553/680/787）**：第二/第三君士坦丁堡、第二尼西亞（聖像）；可參考 papalencyclicals.net `ecum05-07.htm`，scrape 路徑與中世紀／Trent 相同。**中世紀 8-18 已全數完成（2026-05-22）**。
 
 **第三批（Ecumenical Dialogue 20-21 世紀文件）**：見下方 `/creeds` 章節 ecumenical-dialogue 清單；JDDJ 1999 優先（與 Trent Session 6 成義令對話直接相關）。
 

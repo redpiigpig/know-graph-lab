@@ -18,6 +18,19 @@ import type { Creed } from './types'
 import { nicaea325 } from './ecumenical-councils/01-nicaea-325'
 import { constantinople381 } from './ecumenical-councils/02-constantinople-381'
 
+// ── 中世紀大公會議 (councils #8-#18) ─────────────────────────
+import { medieval08 } from './ecumenical-councils/medieval-08-constantinople-iv'
+import { medieval09 } from './ecumenical-councils/medieval-09-lateran-i'
+import { medieval10 } from './ecumenical-councils/medieval-10-lateran-ii'
+import { medieval11 } from './ecumenical-councils/medieval-11-lateran-iii'
+import { medieval12 } from './ecumenical-councils/medieval-12-lateran-iv'
+import { medieval13 } from './ecumenical-councils/medieval-13-lyon-i'
+import { medieval14 } from './ecumenical-councils/medieval-14-lyon-ii'
+import { medieval15 } from './ecumenical-councils/medieval-15-vienne'
+import { medieval16 } from './ecumenical-councils/medieval-16-constance'
+import { medieval17 } from './ecumenical-councils/medieval-17-basel-ferrara-florence'
+import { medieval18 } from './ecumenical-councils/medieval-18-lateran-v'
+
 // ── Trent (council #19, 25 會期) ─────────────────────────────
 import { trent01 } from './ecumenical-councils/trent-01'
 import { trent02 } from './ecumenical-councils/trent-02'
@@ -70,6 +83,10 @@ import { vaticanIIGS } from './ecumenical-councils/vatican-ii-16-gs'
 export const ECUMENICAL_COUNCILS: Creed[] = [
   nicaea325,
   constantinople381,
+  // 中世紀 11 場（councils 8-18）
+  medieval08, medieval09, medieval10, medieval11, medieval12,
+  medieval13, medieval14, medieval15, medieval16, medieval17,
+  medieval18,
   // Trent 25 會期（1545-63；對應 councilNo 19）
   trent01, trent02, trent03, trent04, trent05,
   trent06, trent07, trent08, trent09, trent10,
