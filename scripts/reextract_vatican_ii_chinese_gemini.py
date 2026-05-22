@@ -233,7 +233,7 @@ def _split_by_chapters(body: str, max_chunk_chars: int) -> list[str]:
     return chunks
 
 
-def _haiku_chunked(raw: str, code: str, max_body_chunk: int = 60000) -> str:
+def _haiku_chunked(raw: str, code: str, max_body_chunk: int = 25000) -> str:
     """Process long doc via multiple Haiku calls then concat outputs.
 
     Splits raw into [body chunks] + [tail chunk (footnotes + 公佈令)],
@@ -259,7 +259,11 @@ def _haiku_chunked(raw: str, code: str, max_body_chunk: int = 60000) -> str:
     text = re.sub(r"^```(?:markdown|md)?\s*\n", "", text)
     text = re.sub(r"\n```\s*$", "", text)
     out_parts.append(text)
-    return "\n\n".join(out_parts)
+    combined = "\n\n".join(out_parts)
+    # Post-process: normalize paragraph numbers '^N ' → '^N. ' (chunked mode often leaves
+    # raw '1 基督...' instead of '1. 基督...' despite prompt instruction)
+    combined = re.sub(r"^(\d+) ([一-鿿])", r"\1. \2", combined, flags=re.MULTILINE)
+    return combined
 
 
 # Long docs that need chunked Haiku processing (force-chunk via env var if single-call truncates)
