@@ -286,14 +286,22 @@ const CJK_RE = /[㐀-鿿豈-﫿　-〿]/
 const PUNCT_MAP = { ',': '，', '.': '。', ':': '：', ';': '；', '!': '！', '?': '？' }
 function normalizeCJKPunct(s) {
   if (!s || typeof s !== 'string') return s
-  // 1) Paired parens / brackets — convert both if any CJK is inside.
-  s = s.replace(/\(([^()\n]{0,200})\)/g, (m, inner) =>
+  // 1) Drop empty parens / brackets (OCR-shaped phantom shells).
+  //    Match before paired-conversion so we don't keep `（）` either.
+  s = s.replace(/\([\s　]*\)/g, '')
+       .replace(/（[\s　]*）/g, '')
+       .replace(/\[[\s　]*\]/g, '')
+       .replace(/〔[\s　]*〕/g, '')
+
+  // 2) Paired parens / brackets — convert both if any CJK is inside.
+  s = s.replace(/\(([^()\n]{1,200})\)/g, (m, inner) =>
     CJK_RE.test(inner) ? `（${inner}）` : m
   )
-  s = s.replace(/\[([^\[\]\n]{0,200})\]/g, (m, inner) =>
+  s = s.replace(/\[([^\[\]\n]{1,200})\]/g, (m, inner) =>
     CJK_RE.test(inner) ? `〔${inner}〕` : m
   )
-  // 2) Per-char punctuation — only when a CJK neighbor exists.
+
+  // 3) Per-char punctuation — only when a CJK neighbor exists.
   let out = ''
   for (let i = 0; i < s.length; i++) {
     const c = s[i]
@@ -308,7 +316,21 @@ function normalizeCJKPunct(s) {
     if (CJK_RE.test(prev) || CJK_RE.test(next)) out += full
     else out += c
   }
-  return out
+  s = out
+
+  // 4) Strip whitespace BETWEEN CJK chars (OCR scan-column artifact).
+  //    Single regex pass with lookbehind/lookahead drops all qualifying spaces.
+  s = s.replace(/([㐀-鿿豈-﫿])[\s　]+(?=[㐀-鿿豈-﫿])/g, '$1')
+
+  // 5) Drop whitespace immediately before fullwidth punctuation like 「，。：；」
+  s = s.replace(/[\s　]+([，。：；！？、）」』〕》])/g, '$1')
+  //    …and immediately after openers
+  s = s.replace(/([（「『〔《])[\s　]+/g, '$1')
+
+  // 6) Collapse runs of plain spaces / tabs (preserve newlines)
+  s = s.replace(/[ \t]{2,}/g, ' ')
+
+  return s.trim()
 }
 function normalizeBlock(b) {
   if (!b) return b
