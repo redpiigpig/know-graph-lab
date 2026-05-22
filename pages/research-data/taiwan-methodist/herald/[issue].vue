@@ -24,7 +24,7 @@
           <div class="page page-left" :class="{ 'is-blank': !leftItem }">
             <component v-if="leftItem?.type === 'cover'" :is="CoverDesign" :issue="issue" />
             <component v-else-if="leftItem?.type === 'back'" :is="BackCoverDesign" />
-            <img v-else-if="leftItem?.type === 'scan'" :src="leftItem.src" :alt="`page ${leftItem.idx}`" />
+            <component v-else-if="leftItem?.type === 'text'" :is="InsidePage" :issue="issue" :page-idx="leftItem.idx" />
             <div v-else class="blank-page"></div>
             <div class="page-shadow-right"></div>
           </div>
@@ -33,7 +33,7 @@
           <div class="page page-right" :class="{ 'is-blank': !rightItem }">
             <component v-if="rightItem?.type === 'cover'" :is="CoverDesign" :issue="issue" />
             <component v-else-if="rightItem?.type === 'back'" :is="BackCoverDesign" />
-            <img v-else-if="rightItem?.type === 'scan'" :src="rightItem.src" :alt="`page ${rightItem.idx}`" />
+            <component v-else-if="rightItem?.type === 'text'" :is="InsidePage" :issue="issue" :page-idx="rightItem.idx" />
             <div v-else class="blank-page"></div>
             <div class="page-shadow-left"></div>
           </div>
@@ -46,12 +46,12 @@
             <div class="flip-face flip-front">
               <component v-if="flip.front?.type === 'cover'" :is="CoverDesign" :issue="issue" />
               <component v-else-if="flip.front?.type === 'back'" :is="BackCoverDesign" />
-              <img v-else-if="flip.front?.type === 'scan'" :src="flip.front.src" />
+              <component v-else-if="flip.front?.type === 'text'" :is="InsidePage" :issue="issue" :page-idx="flip.front.idx" />
             </div>
             <div class="flip-face flip-back">
               <component v-if="flip.back?.type === 'cover'" :is="CoverDesign" :issue="issue" />
               <component v-else-if="flip.back?.type === 'back'" :is="BackCoverDesign" />
-              <img v-else-if="flip.back?.type === 'scan'" :src="flip.back.src" />
+              <component v-else-if="flip.back?.type === 'text'" :is="InsidePage" :issue="issue" :page-idx="flip.back.idx" />
             </div>
           </div>
         </div>
@@ -86,6 +86,7 @@ import { computed, ref, onMounted, onBeforeUnmount } from 'vue';
 import { useRoute } from 'vue-router';
 import CoverDesign from '~/components/herald/CoverDesign.vue';
 import BackCoverDesign from '~/components/herald/BackCoverDesign.vue';
+import InsidePage from '~/components/herald/InsidePage.vue';
 
 definePageMeta({ middleware: 'auth' });
 
@@ -95,10 +96,10 @@ const issue = String(route.params.issue);
 useHead({ title: `衛報 第 ${issue} 期 — 翻頁瀏覽` });
 
 // Items: 1 cover + 22 inside + 1 back = 24
-interface Item { type: 'cover' | 'back' | 'scan'; src?: string; idx: number; }
+interface Item { type: 'cover' | 'back' | 'text'; idx: number; }
 const items: Item[] = [];
 items.push({ type: 'cover', idx: 1 });
-for (let i = 2; i <= 23; i++) items.push({ type: 'scan', idx: i, src: `/herald/${issue}/page-${String(i).padStart(2, '0')}.jpg` });
+for (let i = 2; i <= 23; i++) items.push({ type: 'text', idx: i });
 items.push({ type: 'back', idx: 24 });
 
 // Spreads: spread 0 = [blank | cover], spread 1 = [item2 | item3], ..., spread 12 = [item24 | blank]
