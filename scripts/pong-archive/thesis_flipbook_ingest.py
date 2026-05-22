@@ -79,23 +79,23 @@ THESES = {
     "bd": {
         "slug": "pong-bd-thesis-1992",
         "pdf": "pong-archive/stores/龐牧師學位論文/92 BD - Pong Kwan Wah - Thesis Full.pdf",
-        "title": "聖經神學的進路：以《雅各書》為例",  # placeholder; will be overwritten by 真正 title from PDF cover
-        "title_en": "Bachelor of Divinity Thesis",
-        "published_date": "1992-06-01",
-        "date_approximate": True,
-        "publication": "中華信義神學院",  # placeholder; user will edit if needed
-        "tags": ["學位論文", "BD", "信義神學院"],
+        "title": "臺灣本土神學中政治主題的探討",
+        "title_en": None,
+        "published_date": "1992-05-01",
+        "date_approximate": False,
+        "publication": "香港中文大學崇基學院神學組／東南亞神學研究院 香港分院",
+        "tags": ["學位論文", "B.D.", "神學士", "崇基學院", "香港中文大學", "SEAGST", "本土神學", "政治神學", "導師：江大惠"],
         "sort_order_hint": "thesis-bd",
     },
     "mth": {
         "slug": "pong-mth-thesis",
         "pdf": "pong-archive/stores/龐牧師學位論文/MTh.pdf",
-        "title": "MTh 論文",  # placeholder
-        "title_en": "Master of Theology Thesis",
-        "published_date": None,
-        "date_approximate": True,
-        "publication": None,
-        "tags": ["學位論文", "MTh"],
+        "title": "處境神學的處境反省：戰後臺灣新教本土神學的建構與發展",
+        "title_en": "Testing the Limits of Contextual Theology: A Study of the Development of Taiwanese Indigenous Theology",
+        "published_date": "1999-02-01",
+        "date_approximate": False,
+        "publication": "東南亞神學研究院 香港分院 (South East Asia Graduate School of Theology, Hong Kong Area)",
+        "tags": ["學位論文", "M.Theol.", "神學碩士", "SEAGST", "東南亞神學研究院", "崇基學院", "香港中文大學", "系統神學", "處境神學", "本土神學", "導師：沈宣仁"],
         "sort_order_hint": "thesis-mth",
     },
 }
