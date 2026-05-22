@@ -18,6 +18,10 @@ import type { Creed } from './types'
 import { nicaea325 } from './ecumenical-councils/01-nicaea-325'
 import { constantinople381 } from './ecumenical-councils/02-constantinople-381'
 
+// ── Vatican I (council #20, 2 文件) ──────────────────────────
+import { vaticanIDF } from './ecumenical-councils/vatican-i-01-df'
+import { vaticanIPA } from './ecumenical-councils/vatican-i-02-pa'
+
 // ── Vatican II (council #21, 16 文件) ────────────────────────
 import { vaticanIISC } from './ecumenical-councils/vatican-ii-01-sc'
 import { vaticanIIIM } from './ecumenical-councils/vatican-ii-02-im'
@@ -39,6 +43,9 @@ import { vaticanIIGS } from './ecumenical-councils/vatican-ii-16-gs'
 export const ECUMENICAL_COUNCILS: Creed[] = [
   nicaea325,
   constantinople381,
+  // Vatican I 2 文件
+  vaticanIDF,  // 1. Dei Filius — 公教信仰教義憲章 (1870-04-24)
+  vaticanIPA,  // 2. Pastor Aeternus — 永恆牧人教義憲章 (1870-07-18)
   // Vatican II 16 文件（時間順序）
   vaticanIISC,  // 1. 禮儀憲章 (1963-12-04)
   vaticanIIIM,  // 2. 大眾傳播工具法令 (1963-12-04)

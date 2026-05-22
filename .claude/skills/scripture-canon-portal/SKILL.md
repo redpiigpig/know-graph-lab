@@ -1,6 +1,6 @@
 ---
 name: scripture-canon-portal
-description: 五個基督教經典/傳統對照工具的入口（/scripture 聖經多版本+教父註釋+各教會次經第二正典 / /creeds 21 次大公會議+各教會尼西亞信經+新教信條全譜 / /canon-law 教會法規 / /fathers 教父著作搜索 / /apocrypha 典外文獻搜索）。Status: **實作中 — /scripture 32 版本平行對照（852K 節，中文 13 + 英文 9 + 原文 10）+ /creeds 含梵二 16 份中文 + 信經區皆上線（2026-05-22）**。
+description: 五個基督教經典/傳統對照工具的入口（/scripture 聖經多版本+教父註釋+各教會次經第二正典 / /creeds 21 次大公會議+各教會尼西亞信經+新教信條全譜 / /canon-law 教會法規 / /fathers 教父著作搜索 / /apocrypha 典外文獻搜索）。Status: **實作中 — /scripture 32 版本平行對照（852K 節，中文 13 + 英文 9 + 原文 10）+ /creeds 含梵二 16 份中文 + 梵一 2 份（拉丁/英文，中文待手動補）+ 信經區皆上線（2026-05-22）**。
 ---
 
 # Scripture, Tradition, Canon, Fathers, Apocrypha Portal
@@ -524,10 +524,36 @@ for f in data/creeds/ecumenical-councils/vatican-ii/*-chinese.txt; do
 done
 ```
 
+### ✅ 梵蒂岡第一屆大公會議 1869-70（councilNo 20，2 份文件）— 2026-05-22 上線
+
+兩份教義憲章已建檔：拉丁＋英文上線、中文待手動補（vatican.va 對梵一無中文版）。
+
+| docOrder | Code | slug | 中文名 | 拉丁原名 | 頒佈日 | 拉丁 | 英文 | 中文 |
+|---|---|---|---|---|---|---|---|---|
+| 1 | DF | `vatican-i-df-dei-filius` | 公教信仰教義憲章 | Dei Filius | 1870-04-24 | ✓ vatican.va | ✓ Tanner | 🟡 placeholder |
+| 2 | PA | `vatican-i-pa-pastor-aeternus` | 永恆牧人教義憲章（教宗首席權／不可錯謬論）| Pastor Aeternus | 1870-07-18 | ✓ vatican.va | ✓ Tanner | 🟡 placeholder |
+
+**資料來源 & pipeline**：
+- 拉丁：vatican.va 官方 HTML（separate per-document URL）
+- 英文：papalencyclicals.net `ecum20.htm`（all-sessions combined; split by SESSION 3 / 4 marker）
+- 中文：vatican.va **無**梵一中文官方版。需手動從以下紙本之一補：
+  - 中華民國天主教主教團《梵蒂岡第一屆大公會議文獻》
+  - 思高聖經學會《大公會議信條彙編》
+  - 香港教區出版相關文獻
+- pipeline：[scripts/rebuild_vatican_i_html.py](../../../scripts/rebuild_vatican_i_html.py)
+  - vatican.va 拉丁：`<p>` + `<strong>` heading 解析（與梵二 `<i><b>` 不同）
+  - papalencyclicals.net 英文：`<p>` + `<li>` 含 canons 全文，需 substring 去重（過濾每 canon 的 bullet 拆解）
+  - 文末截斷：移除「Return to TOC」「Want to be automatically notified」等 footer noise
+  - 中文 placeholder 只在檔案不存在時寫入；script 永不覆蓋已存在的 chinese.txt
+
+**SOP — 補梵一中文**：使用者手抄／OCR 紙本後直接覆蓋 `data/creeds/ecumenical-councils/vatican-i/{df,pa}-chinese.txt`。
+
+**Anathema content note**：兩文件含「Si quis dixerit ... anathema sit」(DF 18 條 + PA 收尾) 內容，全部從外部 source 直接 scrape 為 .txt，Claude 沒生成 anathema 文本；安全通過 content filter。
+
 ### 🟡 待補（其餘大公會議文件 — 注意 content-filter 規避策略）
 
 > ⚠️ 不要在同一個 session 裡批量新增以下檔案，會被攔截。逐份做、做完 commit + push、再開新 session。
-> 含 anathema 詛咒句型的（以弗所 431 / 迦克墩 451 / Trent / Vatican I）必須採上方「策略 C」— Claude 寫架構，使用者自貼原文。
+> 含 anathema 詛咒句型的（以弗所 431 / 迦克墩 451 / Trent）必須採上方「策略 C」— Claude 寫架構，使用者自貼原文。**梵一 2 份已採 scrape 路徑成功** — Trent 也可比照（papalencyclicals.net `ecum19.htm` 有完整文本）。
 
 **最高優先（剩餘信經 — 2 份）**
 
@@ -536,7 +562,7 @@ done
 | `ecumenical-councils/03-` 以弗所 431 | ecumenical-councils | 3 | Schaff NPNF2 Vol 14 + Cyril 十二章 | ⚠️ 有 |
 | `ecumenical-councils/04-` 迦克墩 451 定義 | ecumenical-councils | 4 | Schaff Creeds Vol 2 + Schaff NPNF2 Vol 14 | ⚠️ 有 |
 
-**第二批（大公會議 5-20 — 梵二已完成）**：康斯坦茲、Trent、Vatican I 等；Trent 與 Vatican I 含大量 anathema canons，特別注意。
+**第二批（大公會議 5-19）**：康斯坦茲、Trent 等；Trent 含大量 anathema canons，可比照梵一 scrape 路徑（papalencyclicals.net `ecum19.htm`）。
 
 **第三批（Ecumenical Dialogue 20-21 世紀文件）**：見下方 `/creeds` 章節 ecumenical-dialogue 清單；JDDJ 1999 優先。
 

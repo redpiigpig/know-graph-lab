@@ -6,8 +6,9 @@
  * 載入 16 份梵二 × 3 語 × 平均 50KB = ~9MB 文本撐爆 Vite IPC buffer。
  *
  * textKey 對應規則：
- *   - 'sc-latin' / 'sc-english' / 'sc-chinese' -> data/creeds/ecumenical-councils/vatican-ii/sc-latin.txt
- *   - 同樣對應 16 份梵二文件（im / lg / oe / ur / cd / pc / ot / ge / na / dv / aa / dh / ag / po / gs）
+ *   - 梵二（vatican-ii/）：'sc-latin' / 'sc-english' / 'sc-chinese' 等 16 份 × 3 語
+ *     (im / lg / oe / ur / cd / pc / ot / ge / na / dv / aa / dh / ag / po / gs)
+ *   - 梵一（vatican-i/）：'df-{lang}' / 'pa-{lang}' — Dei Filius / Pastor Aeternus
  */
 
 import { parseParagraphs, parseDoc, type Paragraph, type ParsedDoc } from './paragraphParser'
@@ -17,6 +18,22 @@ const vat2Loaders = import.meta.glob(
   { query: '?raw', import: 'default' },
 ) as Record<string, () => Promise<string>>
 
+const vat1Loaders = import.meta.glob(
+  './ecumenical-councils/vatican-i/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+/** Vatican I document code prefixes — used to route textKey to vatican-i/ folder. */
+const VAT1_PREFIXES = new Set(['df', 'pa'])
+
+function resolveLoader(textKey: string): (() => Promise<string>) | undefined {
+  const prefix = textKey.split('-')[0]
+  if (VAT1_PREFIXES.has(prefix)) {
+    return vat1Loaders[`./ecumenical-councils/vatican-i/${textKey}.txt`]
+  }
+  return vat2Loaders[`./ecumenical-councils/vatican-ii/${textKey}.txt`]
+}
+
 /** 已載入過的 text cache（避免重複網路 / fs 載入） */
 const cache = new Map<string, string>()
 const paragraphCache = new Map<string, Paragraph[]>()
@@ -24,9 +41,8 @@ const docCache = new Map<string, ParsedDoc>()
 
 export async function loadCreedText(textKey: string): Promise<string> {
   if (cache.has(textKey)) return cache.get(textKey)!
-  const path = `./ecumenical-councils/vatican-ii/${textKey}.txt`
-  const loader = vat2Loaders[path]
-  if (!loader) throw new Error(`Creed text not found for key: ${textKey} (path: ${path})`)
+  const loader = resolveLoader(textKey)
+  if (!loader) throw new Error(`Creed text not found for key: ${textKey}`)
   const text = await loader()
   cache.set(textKey, text)
   return text
@@ -54,7 +70,12 @@ export async function loadCreedDoc(textKey: string): Promise<ParsedDoc> {
 }
 
 export function availableTextKeys(): string[] {
-  return Object.keys(vat2Loaders).map(p =>
-    p.replace('./ecumenical-councils/vatican-ii/', '').replace(/\.txt$/, ''),
-  )
+  const keys: string[] = []
+  for (const p of Object.keys(vat1Loaders)) {
+    keys.push(p.replace('./ecumenical-councils/vatican-i/', '').replace(/\.txt$/, ''))
+  }
+  for (const p of Object.keys(vat2Loaders)) {
+    keys.push(p.replace('./ecumenical-councils/vatican-ii/', '').replace(/\.txt$/, ''))
+  }
+  return keys
 }
