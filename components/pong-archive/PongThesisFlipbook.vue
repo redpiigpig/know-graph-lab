@@ -219,7 +219,7 @@ function formatYear(dateStr) {
   const [y, m] = String(dateStr).split('-').map(Number)
   const cy = String(y).split('').map(d => '〇一二三四五六七八九'[+d]).join('')
   const cm = ['','一','二','三','四','五','六','七','八','九','十','十一','十二'][m] || ''
-  return cm ? `${cy} 年 ${cm} 月` : `${cy} 年`
+  return cm ? `${cy}年${cm}月` : `${cy}年`
 }
 
 const pages = ref([])              // array of { page, blocks }
@@ -286,22 +286,24 @@ const CJK_RE = /[㐀-鿿豈-﫿　-〿]/
 const PUNCT_MAP = { ',': '，', '.': '。', ':': '：', ';': '；', '!': '！', '?': '？' }
 function normalizeCJKPunct(s) {
   if (!s || typeof s !== 'string') return s
-  // 1) Drop empty parens / brackets (OCR-shaped phantom shells).
-  //    Match before paired-conversion so we don't keep `（）` either.
-  s = s.replace(/\([\s　]*\)/g, '')
-       .replace(/（[\s　]*）/g, '')
-       .replace(/\[[\s　]*\]/g, '')
-       .replace(/〔[\s　]*〕/g, '')
 
-  // 2) Paired parens / brackets — convert both if any CJK is inside.
-  s = s.replace(/\(([^()\n]{1,200})\)/g, (m, inner) =>
-    CJK_RE.test(inner) ? `（${inner}）` : m
-  )
-  s = s.replace(/\[([^\[\]\n]{1,200})\]/g, (m, inner) =>
-    CJK_RE.test(inner) ? `〔${inner}〕` : m
+  // 1) Drop empty parens / brackets (OCR shells with nothing inside).
+  s = s.replace(/[\(（][\s　]*[\)）]/g, '')
+       .replace(/[\[〔][\s　]*[\]〕]/g, '')
+
+  // 2) Convert ALL parens / brackets to full-width (was: CJK-only).
+  s = s.replace(/\(/g, '（').replace(/\)/g, '）')
+       .replace(/\[/g, '〔').replace(/\]/g, '〕')
+
+  // 3) Inside（…）: detect 「英文名 西元年代」 and insert ", " separator.
+  //    Catches OCR shape `(Rudolf Karl Bultmann 1884-1976)` →
+  //    `（Rudolf Karl Bultmann, 1884-1976）`.
+  s = s.replace(
+    /（([A-Za-z][A-Za-z\s\.\-']+?)[\s　]+(\d{3,4}(?:[\s　]*[-–—][\s　]*\d{0,4})?)）/g,
+    (_, name, year) => `（${name.trim()}, ${year.replace(/[\s　]+/g, '')}）`
   )
 
-  // 3) Per-char punctuation — only when a CJK neighbor exists.
+  // 4) Per-char punctuation — only when a CJK neighbor exists.
   let out = ''
   for (let i = 0; i < s.length; i++) {
     const c = s[i]
@@ -309,26 +311,36 @@ function normalizeCJKPunct(s) {
     if (!full) { out += c; continue }
     const prev = s[i - 1] || ''
     const next = s[i + 1] || ''
-    // Skip '.' between digits (decimals) or in URL-like contexts
     if (c === '.' && /[\d]/.test(prev) && /[\d]/.test(next)) { out += c; continue }
-    // Skip ':' inside URL "http://"
     if (c === ':' && next === '/' && s[i + 2] === '/') { out += c; continue }
     if (CJK_RE.test(prev) || CJK_RE.test(next)) out += full
     else out += c
   }
   s = out
 
-  // 4) Strip whitespace BETWEEN CJK chars (OCR scan-column artifact).
-  //    Single regex pass with lookbehind/lookahead drops all qualifying spaces.
-  s = s.replace(/([㐀-鿿豈-﫿])[\s　]+(?=[㐀-鿿豈-﫿])/g, '$1')
-
-  // 5) Drop whitespace immediately before fullwidth punctuation like 「，。：；」
-  s = s.replace(/[\s　]+([，。：；！？、）」』〕》])/g, '$1')
-  //    …and immediately after openers
-  s = s.replace(/([（「『〔《])[\s　]+/g, '$1')
-
-  // 6) Collapse runs of plain spaces / tabs (preserve newlines)
-  s = s.replace(/[ \t]{2,}/g, ' ')
+  // 5) Whitespace cleanup — drop horizontal spaces UNLESS they sit between two
+  //    ASCII letters (English word boundary). Preserves newlines.
+  let buf = ''
+  for (let i = 0; i < s.length; i++) {
+    const c = s[i]
+    if (c === '\n') { buf += c; continue }
+    if (/[ \t　]/.test(c)) {
+      let j = i
+      while (j < s.length && /[ \t　]/.test(s[j])) j++
+      const prev = s[i - 1] || ''
+      const next = s[j] || ''
+      // Keep ONE space iff both sides are ASCII alphanumeric.
+      // Letter-letter: English word boundary. Digit-digit: table-row data.
+      // Letter-digit / digit-letter (e.g. `Bultmann 1884`) also kept; the
+      // earlier paren-name-year pass already swapped the space for ", " in
+      // the cases that want it.
+      if (/[A-Za-z0-9]/.test(prev) && /[A-Za-z0-9]/.test(next)) buf += ' '
+      i = j - 1
+      continue
+    }
+    buf += c
+  }
+  s = buf
 
   return s.trim()
 }
