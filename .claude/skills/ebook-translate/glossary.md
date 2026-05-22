@@ -191,8 +191,54 @@
 
 ---
 
+## 耶利米書 / 哀歌（ACCS vol 12）特定術語
+
+### Jeremiah 書內人物 / 地名
+
+| English | 繁體中文 | 備註 |
+|---|---|---|
+| Jeremiah | 耶利米 | 「流淚的先知」 |
+| Lamentations | 耶利米哀歌 / 哀歌 | |
+| Baruch son of Neriah | 巴錄（尼利亞之子）| 耶利米的書記 |
+| Hananiah | 哈拿尼雅 | 假先知（耶 28） |
+| Zedekiah | 西底家 | 末代猶大王 |
+| Jehoiakim | 約雅敬 | |
+| Jehoiachin / Coniah / Jeconiah | 約雅斤 / 哥尼雅 / 耶哥尼雅 | |
+| Josiah | 約西亞 | 改革派的猶大王 |
+| Nebuchadnezzar / Nebuchadrezzar | 尼布甲尼撒 | |
+| Pashhur | 巴施戶珥 | |
+| Anathoth | 亞拿突 | 耶利米故鄉 |
+| Topheth | 陀斐特 | 欣嫩谷火祭場 |
+| Hinnom Valley | 欣嫩子谷 | |
+| Ebed-melech | 以伯米勒 | 救耶利米的古實人 |
+| Gedaliah | 基大利 | 巴比倫立的省長 |
+| Ishmael son of Nethaniah | 尼探雅的兒子以實瑪利 | |
+| Riblah | 利比拉 | |
+| Tahpanhes | 答比匿 | 埃及城 |
+| Migdol | 密奪 | |
+| Carchemish | 迦基米施 | |
+| Rechabites | 利甲族 | |
+| Daughter of Zion | 錫安的女兒 / 錫安之女 | 哀歌主象徵 |
+
+### Jeremiah 主題
+
+| English | 繁體中文 |
+|---|---|
+| weeping prophet | 流淚的先知 |
+| new covenant | 新約 / 新的盟約 |
+| potter and clay | 窯匠與泥土 |
+| boiling pot from the north | 從北方燒開的鍋 |
+| almond rod | 杏樹枝 |
+| exile / Babylonian captivity | 流亡 / 巴比倫之囚 |
+| remnant | 餘民 |
+| acrostic poem | 字母離合詩 / 字母詩 | （哀歌 1-4 章）|
+| qinah meter | 哀歌韻律 |
+
+---
+
 ## 維護紀錄
 
 | Date | Edit |
 |---|---|
 | 2026-05-21 | 初稿 — 隨 ACCS Apocrypha 翻譯啟動建立。次經書卷 + 教父人名 + 高頻神學術語 |
+| 2026-05-22 | 新增 ACCS vol 12 耶利米／哀歌專屬術語（書內人物‧地名‧主題） |

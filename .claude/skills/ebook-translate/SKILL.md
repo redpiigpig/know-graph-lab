@@ -229,22 +229,39 @@ API（`/api/ebooks/[id]`）`currentPage.source_text` + `currentPage.source_lang`
 
 ---
 
-## 當前狀態（2026-05-22 凌晨）
+## 當前狀態（2026-05-22 上午）
 
 無 in-flight 翻譯任務。簡→繁 batch 已掃完全庫（1688 本 / 29 本簡體轉好 / 3 本 JSONL 壞讀不開未處理）。
 
 ## 待翻清單（按優先順序）
 
-1. **ACCS vol 24-25 耶利米／哀歌**（中譯 27 冊跳過這段；確認無官方中譯後從英文 ACCS vol 12 翻）
-2. **ACCS 第 29 卷 / companion index**（若 archive.org 有；確認是否值得）
-3. （未來）使用者指明的其他英文書
+1. **ACCS 第 29 卷 / companion index**（若 archive.org 有；確認是否值得）
+2. （未來）使用者指明的其他英文書
+
+完成歷史見 [完成清單](#完成清單)。
 
 每本書翻譯前先寫一行記到本表，列：`書名｜source 位置｜source 字數估計｜術語焦點`。翻完 toggle 到 [完成清單](#完成清單)。
+
+### 新書 ingest 簡略 SOP（無源檔走 archive.org 時）
+
+對「中譯叢書缺卷、但 archive.org 完整套有英文版」的情形（ACCS vol 12 即此案例）：
+
+1. WebSearch `"Ancient Christian Commentary" <book> EPUB archive.org` 找 internet archive item
+2. `archive.org/details/...` 拉取 EPUB+PDF 直連 URL
+3. `urllib.request.urlopen` 下載到 `G:\...\電子書\<category>\<subcategory>\IVP - ACCS <Book> (English, vol N)\` 新建子資料夾
+4. INSERT ebooks row（參照已完成 vol 15 row 的 shape）：
+   - title: `[English] <Original Title> (Ancient Christian Commentary on Scripture vol N)`
+   - file_path: 完整 Drive 路徑（**含 `資料\`**）
+   - category=世界宗教 / subcategory=`基督教／古代基督徒聖經註釋叢書 ACCS` / publisher=InterVarsity Press
+5. `--inspect` 確認 EPUB 解析結構乾淨（chapter count、頭幾個 chunk 內容）
+6. glossary.md 補書內 proper noun（人名‧地名‧主題）
+7. smoke test → full run（見 [引擎選擇](#引擎選擇) / [Quota 協調](#quota-協調)）
 
 ## 完成清單
 
 | Date | Book | Stats | Engine | 備註 |
 |---|---|---|---|---|
+| **2026-05-22** | **ACCS OT XII vol 12**（古代基督徒聖經註釋叢書 卷十二：耶利米書‧耶利米哀歌）<br>`ebook_id: 3f678406-3969-49c1-a971-d76a6fd62f0e` | 112 chunks / 434,720 繁中字 / 1.19M 英文字 / 跑時間 1h24m / 涵蓋 General Intro + Jeremiah 1-52 + Lamentations 1-5 + Subject/Scripture/Author Index + Notes | haiku（Gemini 4 key 全 429，直接走 Haiku；Vatican II Haiku worker 並跑無衝突） | English source 從 archive.org `ancient-christian-commentary-on-scripture_ot` item 下載 EPUB+PDF；補因中譯 27 冊跳過的 gap；少數 chapter_path 標題抓取偏長（chunk 6/40/100）— 內文品質乾淨可讀 |
 | **2026-05-22** | **ACCS Apocrypha vol 15**（古代基督徒聖經註釋叢書 卷十五：次經）<br>`ebook_id: 37ff8191-8bc8-4eeb-bd84-d85fa3dd893b` | 243 chunks / 497,817 繁中字 / 1.43M 英文字 / 含多俾亞傳・智慧篇・德訓篇・巴錄・耶利米書信・三童歌・蘇撒納・比勒與大龍 + 教父人物簡介 + 各種索引 | gemini → 切 haiku | smoke test (gemini) 過 → 跑 gemini 撞 quota → 切 haiku direct 完成；中途撞 Anthropic 帳號 rate-limit 用 auto-pause 接住；最後按 src_order 排序入庫 |
 
 ## 下次接手第一動
