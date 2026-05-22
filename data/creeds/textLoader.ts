@@ -33,10 +33,19 @@ const medievalLoaders = import.meta.glob(
   { query: '?raw', import: 'default' },
 ) as Record<string, () => Promise<string>>
 
+const earlyLoaders = import.meta.glob(
+  './ecumenical-councils/early/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
 /** Vatican I document code prefixes — used to route textKey to vatican-i/ folder. */
 const VAT1_PREFIXES = new Set(['df', 'pa'])
 
 function resolveLoader(textKey: string): (() => Promise<string>) | undefined {
+  // Early Eastern councils 5-7: textKeys start with 'early-'
+  if (textKey.startsWith('early-')) {
+    return earlyLoaders[`./ecumenical-councils/early/${textKey}.txt`]
+  }
   // Medieval councils 8-18: textKeys start with 'medieval-' (e.g. medieval-12-chinese)
   if (textKey.startsWith('medieval-')) {
     return medievalLoaders[`./ecumenical-councils/medieval/${textKey}.txt`]
@@ -89,6 +98,9 @@ export async function loadCreedDoc(textKey: string): Promise<ParsedDoc> {
 
 export function availableTextKeys(): string[] {
   const keys: string[] = []
+  for (const p of Object.keys(earlyLoaders)) {
+    keys.push(p.replace('./ecumenical-councils/early/', '').replace(/\.txt$/, ''))
+  }
   for (const p of Object.keys(medievalLoaders)) {
     keys.push(p.replace('./ecumenical-councils/medieval/', '').replace(/\.txt$/, ''))
   }

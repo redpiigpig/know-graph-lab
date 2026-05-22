@@ -1,0 +1,8 @@
+（第 5 次大公會議「constantinople-ii」 拉丁版 ─ 尚未取得）
+
+注：第 5-7 次大公會議於東方召開、希臘文為原始語言；拉丁版多為中世紀
+回譯。candidates:
+  - documentacatholicaomnia.eu (Latin)
+  - Wikisource la (Latin)
+  - PG (Patrologia Graeca) 希臘原文
+取得後請手動覆蓋本檔。

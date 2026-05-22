@@ -1,6 +1,6 @@
 ---
 name: scripture-canon-portal
-description: 五個基督教經典/傳統對照工具的入口（/scripture 聖經多版本+教父註釋+各教會次經第二正典 / /creeds 21 次大公會議+各教會尼西亞信經+新教信條全譜 / /canon-law 教會法規 / /fathers 教父著作搜索 / /apocrypha 典外文獻搜索）。Status: **實作中 — /scripture 32 版本平行對照（852K 節，中文 13 + 英文 9 + 原文 10）+ /creeds 信經區 + 中世紀 11 場（councils 8-18）+ 特利騰 25 會期 + 梵一 2 份 + 梵二 16 份皆上線（2026-05-22）**。
+description: 五個基督教經典/傳統對照工具的入口（/scripture 聖經多版本+教父註釋+各教會次經第二正典 / /creeds 21 次大公會議+各教會尼西亞信經+新教信條全譜 / /canon-law 教會法規 / /fathers 教父著作搜索 / /apocrypha 典外文獻搜索）。Status: **實作中 — /scripture 32 版本平行對照 + /creeds 信經區 + 早期東方公會議 5-7 + 中世紀 8-18 + Trent 25 會期 + 梵一 2 份 + 梵二 16 份皆上線（2026-05-22）**。
 ---
 
 # Scripture, Tradition, Canon, Fathers, Apocrypha Portal
@@ -524,6 +524,27 @@ for f in data/creeds/ecumenical-councils/vatican-ii/*-chinese.txt; do
 done
 ```
 
+### ✅ 早期東方公會議 5-7（553-787）— 2026-05-22 上線
+
+3 場後 Chalcedon 東方大公會議建檔；皆為東正教＋天主教＋多數新教傳統共同承認。
+
+| councilNo | 中文名 | 拉丁名 | 年代 | 重點 | 東正教 | 東方東正教 | 亞述 |
+|---|---|---|---|---|---|---|---|
+| 5 | 第二次君士坦丁堡 | Constantinopolitanum II | 553 | 三章案（譴責 Theodore of Mopsuestia 等）+ 反 Origenism；引發 Aquileia 分裂 150 年 | ✓ | ✗ | ✗ |
+| 6 | 第三次君士坦丁堡 | Constantinopolitanum III | 680-81 | 譴 Monothelitism；確立 dyothelitism；★ 追溯譴責教宗 Honorius I — Vatican I 教宗無誤論辯論關鍵 case | ✓ | ✗ | ✗ |
+| 7 | 第二次尼西亞 | Nicaenum II | 787 | ★★ 終結 Iconoclasm；定義 latreia / proskynesis 區別；引 St. Basil「敬禮歸於原型」 | ✓ | ✓ | ✗ |
+
+**資料來源 & pipeline**：
+- 英文：papalencyclicals.net `ecum05-07.htm` — 已抓全 3 場 ~120KB
+- 拉丁：placeholder（前 7 次大公會議原文為希臘文；拉丁多為中世紀回譯）
+- 中文：placeholder（同梵一結論：紙本 Denzinger 唯一來源，DH 100-600 範圍）
+- pipeline：[scripts/rebuild_early_councils.py](../../../scripts/rebuild_early_councils.py)（scrape）+ `scripts/_gen_early_metadata.py`（local-only, gitignored）
+
+**重點神學爭議**：
+- 5：三章案實質是天主教與反迦克墩派 (Oriental Orthodox) 之政治神學妥協嘗試，未成功反生新分裂
+- 6：教宗 Honorius I 案 — Vatican I 教宗無誤論辯論的關鍵歷史 case；學界至今討論
+- 7：聖像敬禮神學基礎 — St. John of Damascus《Three Apologetic Treatises》；794 Frankfurt 因譯文錯誤一度反對，1274 Lyon II 正式接受
+
 ### ✅ 中世紀大公會議 8-18（869-1517）— 2026-05-22 上線
 
 11 場中世紀大公會議全數建檔；每場一個 Creed entry（單檔模式，非多文件群組）。
@@ -628,7 +649,7 @@ done
 | `ecumenical-councils/03-` 以弗所 431 | ecumenical-councils | 3 | Schaff NPNF2 Vol 14 + Cyril 十二章 | ⚠️ 有 |
 | `ecumenical-councils/04-` 迦克墩 451 定義 | ecumenical-councils | 4 | Schaff Creeds Vol 2 + Schaff NPNF2 Vol 14 | ⚠️ 有 |
 
-**第二批（剩餘：councils 5-7 — 早期東方公會議 553/680/787）**：第二/第三君士坦丁堡、第二尼西亞（聖像）；可參考 papalencyclicals.net `ecum05-07.htm`，scrape 路徑與中世紀／Trent 相同。**中世紀 8-18 已全數完成（2026-05-22）**。
+**剩餘大公會議**：以弗所 431（councilNo 3）+ 迦克墩 451（councilNo 4）— 兩者皆含 Cyril 十二章 anathema canons，content-filter 風險高。**早期東方 5-7 / 中世紀 8-18 已全數完成（2026-05-22）**。
 
 **第三批（Ecumenical Dialogue 20-21 世紀文件）**：見下方 `/creeds` 章節 ecumenical-dialogue 清單；JDDJ 1999 優先（與 Trent Session 6 成義令對話直接相關）。
 

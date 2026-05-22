@@ -18,6 +18,11 @@ import type { Creed } from './types'
 import { nicaea325 } from './ecumenical-councils/01-nicaea-325'
 import { constantinople381 } from './ecumenical-councils/02-constantinople-381'
 
+// ── 早期東方公會議 (councils #5-#7) ──────────────────────────
+import { early05 } from './ecumenical-councils/early-05-constantinople-ii'
+import { early06 } from './ecumenical-councils/early-06-constantinople-iii'
+import { early07 } from './ecumenical-councils/early-07-nicaea-ii'
+
 // ── 中世紀大公會議 (councils #8-#18) ─────────────────────────
 import { medieval08 } from './ecumenical-councils/medieval-08-constantinople-iv'
 import { medieval09 } from './ecumenical-councils/medieval-09-lateran-i'
@@ -83,6 +88,8 @@ import { vaticanIIGS } from './ecumenical-councils/vatican-ii-16-gs'
 export const ECUMENICAL_COUNCILS: Creed[] = [
   nicaea325,
   constantinople381,
+  // 早期東方公會議 3 場（councils 5-7；councils 3-4 以弗所/迦克墩待補）
+  early05, early06, early07,
   // 中世紀 11 場（councils 8-18）
   medieval08, medieval09, medieval10, medieval11, medieval12,
   medieval13, medieval14, medieval15, medieval16, medieval17,
