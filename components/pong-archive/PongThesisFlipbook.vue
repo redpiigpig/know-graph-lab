@@ -173,8 +173,28 @@
     </div>
 
     <!-- ── Edge hot zones for click-to-flip ─────────────────── -->
-    <div class="tfb-edge tfb-edge--left"  @click="prev" :class="{ 'tfb-edge--disabled': leftPage <= 1 }"></div>
-    <div class="tfb-edge tfb-edge--right" @click="next" :class="{ 'tfb-edge--disabled': rightPage >= totalPages }"></div>
+    <button
+      type="button"
+      class="tfb-edge tfb-edge--left"
+      :class="{ 'tfb-edge--disabled': prevDisabled }"
+      :disabled="prevDisabled"
+      @click="prev"
+      :title="prevDisabled ? '' : '上一頁'"
+      aria-label="上一頁"
+    >
+      <span class="tfb-edge-arrow">‹</span>
+    </button>
+    <button
+      type="button"
+      class="tfb-edge tfb-edge--right"
+      :class="{ 'tfb-edge--disabled': nextDisabled }"
+      :disabled="nextDisabled"
+      @click="next"
+      :title="nextDisabled ? '' : '下一頁'"
+      aria-label="下一頁"
+    >
+      <span class="tfb-edge-arrow">›</span>
+    </button>
   </div>
 </template>
 
@@ -351,6 +371,9 @@ function next() {
   if (rightPage.value >= totalPages.value) { state.value = 'back'; return }
   goPage(leftPage.value + 2)
 }
+
+const prevDisabled = computed(() => state.value === 'cover')
+const nextDisabled = computed(() => state.value === 'back')
 
 function jump() {
   const n = parseInt(jumpInput.value, 10)
@@ -1018,21 +1041,43 @@ onBeforeUnmount(() => {
 .tfb-page.is-overflow-2 .tfb-footnotes,
 .tfb-page-inner.measure-2 .tfb-footnotes { margin-top: 0.6em; padding-top: 0.3em; }
 
-/* ── Edge click zones ─────────────────────────────────────── */
+/* ── Edge click zones (left/right halves for mouse-flip) ──── */
 .tfb-edge {
   position: absolute;
-  top: 70px;
-  bottom: 30px;
-  width: 32px;
+  top: 56px;        /* below topbar */
+  bottom: 0;
+  width: 12%;       /* generous click target, scales with viewport */
+  min-width: 64px;
+  max-width: 160px;
   cursor: pointer;
   z-index: 5;
-  opacity: 0;
-  transition: opacity 0.2s;
+  border: none;
+  background: transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(220, 200, 160, 0);
+  transition: color 0.18s, background 0.18s;
 }
-.tfb-edge--left  { left:  0; background: linear-gradient(90deg, rgba(200,180,140,0.18), transparent); }
-.tfb-edge--right { right: 0; background: linear-gradient(270deg, rgba(200,180,140,0.18), transparent); }
-.tfb-edge:hover  { opacity: 1; }
-.tfb-edge--disabled { cursor: default; opacity: 0 !important; pointer-events: none; }
+.tfb-edge--left  { left:  0; }
+.tfb-edge--right { right: 0; }
+.tfb-edge:hover {
+  color: rgba(240, 226, 200, 0.85);
+  background: linear-gradient(var(--dir, 90deg), rgba(60, 40, 20, 0.35), transparent 80%);
+}
+.tfb-edge--left:hover  { --dir: 90deg; }
+.tfb-edge--right:hover { --dir: 270deg; }
+.tfb-edge:active { color: #FFF; }
+.tfb-edge--disabled { cursor: default; pointer-events: none; }
+.tfb-edge-arrow {
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1;
+  display: block;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  user-select: none;
+}
 
 /* ── Responsive: mobile = single page + scroll allowed ────── */
 @media (max-width: 920px) {
