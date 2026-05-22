@@ -67,6 +67,7 @@
             @click="goPage(o.page)"
           >
             <span class="tfb-toc-text">{{ o.text }}</span>
+            <span class="tfb-toc-leader" aria-hidden="true"></span>
             <span class="tfb-toc-page">{{ o.page }}</span>
           </li>
         </ul>
@@ -77,8 +78,8 @@
         <div class="tfb-book" :class="{ 'tfb-book--flipping': flipping }">
 
           <!-- Left page -->
-          <article class="tfb-page tfb-page--left">
-            <div class="tfb-page-inner">
+          <article class="tfb-page tfb-page--left" :class="overflowClass(leftOverflowLevel)">
+            <div class="tfb-page-inner" ref="leftPageEl">
               <div class="tfb-content" v-if="leftBlocks">
                 <template v-for="(b, i) in bodyBlocks(leftBlocks)" :key="`L${i}`">
                   <component :is="blockTag(b)" :class="blockClass(b)">{{ b.text }}</component>
@@ -96,8 +97,8 @@
           </article>
 
           <!-- Right page -->
-          <article class="tfb-page tfb-page--right">
-            <div class="tfb-page-inner">
+          <article class="tfb-page tfb-page--right" :class="overflowClass(rightOverflowLevel)">
+            <div class="tfb-page-inner" ref="rightPageEl">
               <div class="tfb-content" v-if="rightBlocks">
                 <template v-for="(b, i) in bodyBlocks(rightBlocks)" :key="`R${i}`">
                   <component :is="blockTag(b)" :class="blockClass(b)">{{ b.text }}</component>
@@ -140,6 +141,39 @@ const flipping = ref(false)
 const tocOpen = ref(true)
 const fullscreen = ref(false)
 const jumpInput = ref(1)
+
+// Overflow auto-shrink: 0 = fits, 1 = mild shrink, 2 = aggressive shrink.
+// Pages with lots of footnotes need the deeper level so nothing gets clipped.
+const leftPageEl = ref(null)
+const rightPageEl = ref(null)
+const leftOverflowLevel = ref(0)
+const rightOverflowLevel = ref(0)
+function overflowClass(level) {
+  if (level >= 2) return 'is-overflow-2'
+  if (level >= 1) return 'is-overflow-1'
+  return ''
+}
+function measureOverflow(el) {
+  if (!el) return 0
+  // Try level 0 → 1 → 2 by applying classes and re-measuring
+  el.classList.remove('measure-1', 'measure-2')
+  if (el.scrollHeight <= el.clientHeight + 1) return 0
+  el.classList.add('measure-1')
+  if (el.scrollHeight <= el.clientHeight + 1) { el.classList.remove('measure-1'); return 1 }
+  el.classList.remove('measure-1')
+  el.classList.add('measure-2')
+  const stillOver = el.scrollHeight > el.clientHeight + 1
+  el.classList.remove('measure-2')
+  return stillOver ? 2 : 2  // even if still overflowing at level 2, cap there
+}
+async function recheckOverflow() {
+  await nextTick()
+  // Two RAF: first lets browser apply fonts, second to settle
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    leftOverflowLevel.value  = measureOverflow(leftPageEl.value)
+    rightOverflowLevel.value = measureOverflow(rightPageEl.value)
+  }))
+}
 
 const totalPages = computed(() => Math.max(props.totalPages || pages.value.length, pages.value.length))
 const rightPage = computed(() => leftPage.value + 1)
@@ -229,8 +263,11 @@ function onKey(e) {
   if (e.key === 'End')  { goPage(totalPages.value) }
 }
 
+const _onResize = () => recheckOverflow()
+
 onMounted(async () => {
   window.addEventListener('keydown', onKey)
+  window.addEventListener('resize', _onResize)
   try {
     const data = await $fetch(`/api/pong-writing/${props.writingId}/pages`)
     pages.value = Array.isArray(data) ? data : []
@@ -242,9 +279,12 @@ onMounted(async () => {
   } finally {
     loading.value = false
   }
+  recheckOverflow()
 })
+watch([leftPage, () => pages.value.length], () => recheckOverflow())
 onBeforeUnmount(() => {
   window.removeEventListener('keydown', onKey)
+  window.removeEventListener('resize', _onResize)
 })
 </script>
 
@@ -394,12 +434,11 @@ onBeforeUnmount(() => {
 }
 .tfb-toc-item {
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
-  gap: 8px;
+  gap: 5px;
   padding: 4px 14px;
-  font-size: 0.72rem;
-  line-height: 1.45;
+  font-size: 0.74rem;
+  line-height: 1.5;
   color: #C4B89A;
   cursor: pointer;
   letter-spacing: 0.03em;
@@ -407,16 +446,32 @@ onBeforeUnmount(() => {
 }
 .tfb-toc-item:hover { background: #2F2618; color: #F0E2C8; }
 .tfb-toc-item--active { background: #3A3025; color: #F0E2C8; font-weight: 500; }
-.tfb-toc-item--lvl1 { font-weight: 600; color: #DBCBB0; font-size: 0.76rem; }
+.tfb-toc-item--lvl1 { font-weight: 600; color: #DBCBB0; font-size: 0.78rem; }
 .tfb-toc-item--lvl2 { padding-left: 24px; }
-.tfb-toc-item--lvl3 { padding-left: 36px; font-size: 0.68rem; }
-.tfb-toc-item--lvl4 { padding-left: 48px; font-size: 0.66rem; color: #A09280; }
-.tfb-toc-text { flex: 1; }
+.tfb-toc-item--lvl3 { padding-left: 36px; font-size: 0.7rem; }
+.tfb-toc-item--lvl4 { padding-left: 48px; font-size: 0.68rem; color: #A09280; }
+.tfb-toc-text {
+  flex: 0 1 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tfb-toc-leader {
+  flex: 1 1 auto;
+  min-width: 10px;
+  border-bottom: 1px dotted rgba(196, 184, 154, 0.32);
+  transform: translateY(-3px);
+  align-self: end;
+  margin-bottom: 0.35em;
+}
+.tfb-toc-item--active .tfb-toc-leader { border-bottom-color: rgba(240, 226, 200, 0.5); }
 .tfb-toc-page {
+  flex-shrink: 0;
   font-family: 'Noto Sans TC', monospace;
-  font-size: 0.62rem;
+  font-size: 0.66rem;
   color: #6A6050;
 }
+.tfb-toc-item--active .tfb-toc-page { color: #DBCBB0; }
 
 /* ── Book ─────────────────────────────────────────────────── */
 .tfb-book-wrap {
@@ -482,7 +537,7 @@ onBeforeUnmount(() => {
 
 .tfb-page-inner {
   flex: 1;
-  padding: 28px 32px 14px;
+  padding: 36px 42px 18px;
   overflow: hidden;                 /* desktop: A4 fit, no scroll */
   min-height: 0;
 }
@@ -490,7 +545,7 @@ onBeforeUnmount(() => {
 .tfb-page-empty {
   text-align: center;
   color: #B8AC92;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   margin-top: 40%;
   letter-spacing: 0.18em;
   font-style: italic;
@@ -498,54 +553,54 @@ onBeforeUnmount(() => {
 
 .tfb-page-num {
   text-align: center;
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   color: #9A8E72;
-  padding: 4px 0 8px;
+  padding: 4px 0 10px;
   font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 0.08em;
   flex-shrink: 0;
 }
 
-/* ── Content blocks ───────────────────────────────────────── */
+/* ── Content blocks (default — fits comfortably) ──────────── */
 .tfb-content {
   font-family: 'Noto Serif TC', 'SimSun', serif;
   color: #2C2620;
-  line-height: 1.65;
-  font-size: 0.82rem;
+  line-height: 1.85;
+  font-size: 0.96rem;
 }
 
 /* Chapter title */
 .tfb-blk--ch {
-  font-size: 1.2rem;
+  font-size: 1.45rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-align: center;
-  margin: 0.2em 0 0.6em;
-  padding-bottom: 0.3em;
+  margin: 0.3em 0 0.85em;
+  padding-bottom: 0.35em;
   border-bottom: 1px solid #C4B89A;
   color: #1F1A14;
   line-height: 1.4;
 }
 /* Section title */
 .tfb-blk--sec {
-  font-size: 0.98rem;
+  font-size: 1.15rem;
   font-weight: 600;
   letter-spacing: 0.08em;
-  margin: 0.9em 0 0.35em;
+  margin: 1.1em 0 0.45em;
   color: #2A2418;
   line-height: 1.4;
 }
 /* Subsection */
 .tfb-blk--sub { font-weight: 600; color: #3A3025; line-height: 1.4; }
 .tfb-blk--sub3 {
-  font-size: 0.88rem;
+  font-size: 1.02rem;
   letter-spacing: 0.05em;
-  margin: 0.65em 0 0.25em;
+  margin: 0.8em 0 0.3em;
 }
 .tfb-blk--sub4 {
-  font-size: 0.84rem;
+  font-size: 0.95rem;
   letter-spacing: 0.04em;
-  margin: 0.5em 0 0.2em;
+  margin: 0.65em 0 0.25em;
   font-weight: 500;
 }
 
@@ -553,53 +608,97 @@ onBeforeUnmount(() => {
 .tfb-blk--p {
   text-indent: 2em;
   text-align: justify;
-  margin: 0 0 0.2em;
-  line-height: 1.7;
+  margin: 0 0 0.3em;
+  line-height: 1.95;
 }
 /* Block quote */
 .tfb-blk--q {
-  margin: 0.4em 0 0.4em 1em;
-  padding: 0.25em 0 0.25em 0.8em;
+  margin: 0.5em 0 0.5em 1.4em;
+  padding: 0.35em 0 0.35em 0.9em;
   border-left: 2px solid #C4B89A;
   font-family: 'Noto Serif TC', 'DFKai-SB', 'BiauKai', serif;
   color: #4A4030;
-  line-height: 1.55;
-  font-size: 0.78rem;
+  line-height: 1.75;
+  font-size: 0.9rem;
   text-indent: 0;
 }
 /* List item */
 .tfb-blk--li {
-  margin: 0.1em 0 0.1em 1.6em;
+  margin: 0.15em 0 0.15em 1.8em;
   text-indent: 0;
   list-style: none;
-  line-height: 1.55;
+  line-height: 1.75;
 }
 
 /* ── Footnotes ────────────────────────────────────────────── */
 .tfb-footnotes {
-  margin-top: 0.8em;
-  padding-top: 0.35em;
+  margin-top: 1.1em;
+  padding-top: 0.45em;
   border-top: 1px solid #C4B89A;
   font-family: 'Noto Sans TC', sans-serif;
 }
 .tfb-footnote {
-  font-size: 0.62rem;
-  line-height: 1.4;
+  font-size: 0.74rem;
+  line-height: 1.55;
   color: #4A4030;
-  margin: 0 0 0.15em;
+  margin: 0 0 0.25em;
   display: flex;
-  gap: 5px;
+  gap: 6px;
   text-indent: 0;
 }
 .tfb-footnote-marker {
-  font-size: 0.55rem;
+  font-size: 0.62rem;
   color: #8A7860;
   font-weight: 500;
   flex-shrink: 0;
-  min-width: 1.2em;
+  min-width: 1.3em;
   text-align: right;
 }
 .tfb-footnote-text { flex: 1; }
+
+/* ── Overflow auto-shrink ─────────────────────────────────── */
+/* level 1 — mild squeeze; level 2 — aggressive. JS picks whichever fits.
+   .measure-1 / .measure-2 classes are temporarily applied by JS during
+   measurement; they share the same rules so measurement matches render. */
+.tfb-page.is-overflow-1 .tfb-page-inner,
+.tfb-page-inner.measure-1 { padding: 28px 36px 14px; }
+.tfb-page.is-overflow-1 .tfb-content,
+.tfb-page-inner.measure-1 .tfb-content { font-size: 0.86rem; line-height: 1.7; }
+.tfb-page.is-overflow-1 .tfb-blk--ch,
+.tfb-page-inner.measure-1 .tfb-blk--ch { font-size: 1.28rem; margin: 0.2em 0 0.55em; }
+.tfb-page.is-overflow-1 .tfb-blk--sec,
+.tfb-page-inner.measure-1 .tfb-blk--sec { font-size: 1.05rem; margin: 0.85em 0 0.3em; }
+.tfb-page.is-overflow-1 .tfb-blk--sub3,
+.tfb-page-inner.measure-1 .tfb-blk--sub3 { font-size: 0.94rem; }
+.tfb-page.is-overflow-1 .tfb-blk--sub4,
+.tfb-page-inner.measure-1 .tfb-blk--sub4 { font-size: 0.88rem; }
+.tfb-page.is-overflow-1 .tfb-blk--p,
+.tfb-page-inner.measure-1 .tfb-blk--p { line-height: 1.78; margin-bottom: 0.22em; }
+.tfb-page.is-overflow-1 .tfb-blk--q,
+.tfb-page-inner.measure-1 .tfb-blk--q { font-size: 0.82rem; line-height: 1.6; }
+.tfb-page.is-overflow-1 .tfb-footnote,
+.tfb-page-inner.measure-1 .tfb-footnote { font-size: 0.66rem; line-height: 1.42; }
+
+.tfb-page.is-overflow-2 .tfb-page-inner,
+.tfb-page-inner.measure-2 { padding: 22px 28px 12px; }
+.tfb-page.is-overflow-2 .tfb-content,
+.tfb-page-inner.measure-2 .tfb-content { font-size: 0.76rem; line-height: 1.55; }
+.tfb-page.is-overflow-2 .tfb-blk--ch,
+.tfb-page-inner.measure-2 .tfb-blk--ch { font-size: 1.12rem; margin: 0.15em 0 0.42em; padding-bottom: 0.25em; }
+.tfb-page.is-overflow-2 .tfb-blk--sec,
+.tfb-page-inner.measure-2 .tfb-blk--sec { font-size: 0.94rem; margin: 0.6em 0 0.22em; }
+.tfb-page.is-overflow-2 .tfb-blk--sub3,
+.tfb-page-inner.measure-2 .tfb-blk--sub3 { font-size: 0.85rem; margin: 0.45em 0 0.15em; }
+.tfb-page.is-overflow-2 .tfb-blk--sub4,
+.tfb-page-inner.measure-2 .tfb-blk--sub4 { font-size: 0.8rem; margin: 0.35em 0 0.12em; }
+.tfb-page.is-overflow-2 .tfb-blk--p,
+.tfb-page-inner.measure-2 .tfb-blk--p { line-height: 1.6; margin-bottom: 0.14em; }
+.tfb-page.is-overflow-2 .tfb-blk--q,
+.tfb-page-inner.measure-2 .tfb-blk--q { font-size: 0.74rem; line-height: 1.5; margin: 0.3em 0 0.3em 1em; padding: 0.2em 0 0.2em 0.7em; }
+.tfb-page.is-overflow-2 .tfb-footnote,
+.tfb-page-inner.measure-2 .tfb-footnote { font-size: 0.6rem; line-height: 1.3; }
+.tfb-page.is-overflow-2 .tfb-footnotes,
+.tfb-page-inner.measure-2 .tfb-footnotes { margin-top: 0.6em; padding-top: 0.3em; }
 
 /* ── Edge click zones ─────────────────────────────────────── */
 .tfb-edge {
