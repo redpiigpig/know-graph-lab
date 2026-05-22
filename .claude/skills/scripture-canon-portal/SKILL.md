@@ -1,6 +1,6 @@
 ---
 name: scripture-canon-portal
-description: 五個基督教經典/傳統對照工具的入口（/scripture 聖經多版本+教父註釋+各教會次經第二正典 / /creeds 21 次大公會議+各教會尼西亞信經+新教信條全譜 / /canon-law 教會法規 / /fathers 教父著作搜索 / /apocrypha 典外文獻搜索）。Status: **實作中 — /creeds MVP + /scripture 6 版本平行對照（CUV2010+NIV+WLC+LXX+SBLGNT+Vulgate, ~150K verses）已上線（2026-05-21）**。
+description: 五個基督教經典/傳統對照工具的入口（/scripture 聖經多版本+教父註釋+各教會次經第二正典 / /creeds 21 次大公會議+各教會尼西亞信經+新教信條全譜 / /canon-law 教會法規 / /fathers 教父著作搜索 / /apocrypha 典外文獻搜索）。Status: **實作中 — /scripture 32 版本平行對照（852K 節，中文 13 + 英文 9 + 原文 10）+ /creeds 含梵二 16 份中文 + 信經區皆上線（2026-05-22）**。
 ---
 
 # Scripture, Tradition, Canon, Fathers, Apocrypha Portal
@@ -494,6 +494,35 @@ python scripts/reextract_vatican_ii_chinese_gemini.py --codes=SC,LG
 
 **已知 parser limitation**：
 - SC 因 §57 內含 sub-item 編號（`§ 1.` `1. a)` `2.`）會觸發 parser fallback 把 §58+ 誤併到 footnotes；後續可寫 SC-專屬 parser 識別 `§ N.` sub-marker
+
+### 🔁 梵二中文檔系統性截斷修復（2026-05-22）
+
+系統性檢查 16 份梵二中文檔，發現 5 份被 Gemini `max_output_tokens=32000` 截斷。已用 Haiku 4.5 64K 重抽完成：
+
+| Code | 文件 | 預期 § | 修復前結尾 | 修復後 |
+|---|---|---|---|---|
+| SC | 禮儀憲章 | 130 | §126 | §130 ✅ |
+| AA | 教友傳教法令 | 33 | §27 | §33 ✅ |
+| PO | 司鐸職務與生活法令 | 22 | §16 | §22 ✅（公佈令手補）|
+| LG | 教會憲章 | 69 | §29 | §69 ✅（Haiku chunked）|
+| GS | 牧靈憲章 | 93 | raw 2802 行未清稿 | §93 ✅（Haiku chunked）|
+
+**修復策略**（用戶指示：「改用 Haiku 不受 quota 限多跑幾輪」）：
+1. `_haiku_call` `max_tokens=16000` → `64000`（Haiku 4.5 output 上限）
+2. 加入 chunked mode（環境變數 `CHUNK_CODES=LG,GS` 觸發）：
+   - `_find_footnote_split()` 用 `•附注•` 或 `^1\.\s+(?:Cf\.|參閱|...)` heuristic 定位 footnote 區
+   - `_split_by_chapters()` 按 `^\s*第[一二三四五六七八九十]+(?:章|部分|編)` 切 body
+   - `PROMPT_CHUNK_BODY` / `PROMPT_CHUNK_TAIL` 兩種分塊 prompt
+3. 實測 pdftotext_layout 後 LG/GS raw 約 73K chars，單一 64K Haiku 已夠用，無須強制 chunked
+
+**驗證腳本 oneliner**（一鍵全梵二中文檔健康度檢查）：
+```bash
+for f in data/creeds/ecumenical-councils/vatican-ii/*-chinese.txt; do
+  echo "=== $(basename $f .txt) ==="
+  echo "  last §: $(grep -oE '^[0-9]+\.' $f | tail -1)"
+  echo "  has 公佈令: $(grep -c '公佈令' $f)"
+done
+```
 
 ### 🟡 待補（其餘大公會議文件 — 注意 content-filter 規避策略）
 

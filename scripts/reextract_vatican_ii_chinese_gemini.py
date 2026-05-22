@@ -178,16 +178,17 @@ def _find_footnote_split(raw: str) -> int:
       - Standalone `1. Cf.` / `1. 參閱` numbered footnote
       - Fallback: last 25% of doc
     """
-    candidates: list[int] = []
-    # 1) LG/GS style: •附注• marker
-    m = re.search(r'•附注•|•附\s*註•|附\s*註\s*第[一二三四五六七八九十]+章', raw)
-    if m and m.start() > len(raw) * 0.4:
-        candidates.append(m.start())
-    # 2) Markdown-ish heading
+    # GS/LG style: multiple •附注• markers interspersed with body chapters.
+    # Use the LAST •附注• marker so all body content lands in body chunks.
+    fn_marker_re = re.compile(r'•\s*附\s*[註注]\s*•')
+    matches = list(fn_marker_re.finditer(raw))
+    if matches:
+        return matches[-1].start()
+    # Markdown-ish heading
     m = re.search(r'^\s*##?\s*附\s*[註注]\s*$', raw, re.MULTILINE)
     if m and m.start() > len(raw) * 0.4:
-        candidates.append(m.start())
-    # 3) Standalone numbered footnote near end
+        return m.start()
+    # Standalone numbered footnote near end
     cutoff = int(len(raw) * 0.6)
     fn_pat = re.compile(
         r'^\s*1\.\s+(?:Cf\.|AAS|Conc\.|S\.|Sancti|Const\.|Encyc|Litt|PL|PG|參閱|聖|宗|教|《)',
@@ -195,9 +196,7 @@ def _find_footnote_split(raw: str) -> int:
     )
     m = fn_pat.search(raw, cutoff)
     if m:
-        candidates.append(m.start())
-    if candidates:
-        return min(candidates)
+        return m.start()
     # Fallback: last 25% of doc as 'tail'
     return int(len(raw) * 0.75)
 
