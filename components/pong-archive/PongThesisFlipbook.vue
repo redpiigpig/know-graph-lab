@@ -279,6 +279,44 @@ const downloadUrl = computed(() => {
 const leftBlocks = computed(() => pagesByNumber.value.get(leftPage.value)?.blocks ?? null)
 const rightBlocks = computed(() => pagesByNumber.value.get(rightPage.value)?.blocks ?? null)
 
+// ── Half-width → full-width punctuation normalization ─────
+// Only convert ASCII punct when it's adjacent to CJK (sentences in Chinese),
+// keep half-width for English / numeric contexts (dates, decimals, URLs).
+const CJK_RE = /[㐀-鿿豈-﫿　-〿]/
+const PUNCT_MAP = { ',': '，', '.': '。', ':': '：', ';': '；', '!': '！', '?': '？' }
+function normalizeCJKPunct(s) {
+  if (!s || typeof s !== 'string') return s
+  // 1) Paired parens / brackets — convert both if any CJK is inside.
+  s = s.replace(/\(([^()\n]{0,200})\)/g, (m, inner) =>
+    CJK_RE.test(inner) ? `（${inner}）` : m
+  )
+  s = s.replace(/\[([^\[\]\n]{0,200})\]/g, (m, inner) =>
+    CJK_RE.test(inner) ? `〔${inner}〕` : m
+  )
+  // 2) Per-char punctuation — only when a CJK neighbor exists.
+  let out = ''
+  for (let i = 0; i < s.length; i++) {
+    const c = s[i]
+    const full = PUNCT_MAP[c]
+    if (!full) { out += c; continue }
+    const prev = s[i - 1] || ''
+    const next = s[i + 1] || ''
+    // Skip '.' between digits (decimals) or in URL-like contexts
+    if (c === '.' && /[\d]/.test(prev) && /[\d]/.test(next)) { out += c; continue }
+    // Skip ':' inside URL "http://"
+    if (c === ':' && next === '/' && s[i + 2] === '/') { out += c; continue }
+    if (CJK_RE.test(prev) || CJK_RE.test(next)) out += full
+    else out += c
+  }
+  return out
+}
+function normalizeBlock(b) {
+  if (!b) return b
+  const t = normalizeCJKPunct(b.text)
+  if (t === b.text) return b
+  return { ...b, text: t }
+}
+
 // Detect OCR'd 目錄 pages: if a title block is followed by a paragraph that's
 // just a number / page range, merge them into a virtual 'toc_entry' block so we
 // can render dot-leader 「章節名 …… 頁碼」on one row.
@@ -307,14 +345,16 @@ function transformBlocks(blocks) {
 }
 
 function bodyBlocks(blocks) {
-  return transformBlocks(blocks).filter(b => b.type !== 'footnote' && b.type !== 'page_number')
+  return transformBlocks(blocks)
+    .filter(b => b.type !== 'footnote' && b.type !== 'page_number')
+    .map(normalizeBlock)
 }
 
 const leftFootnotes = computed(() =>
-  (leftBlocks.value || []).filter(b => b.type === 'footnote')
+  (leftBlocks.value || []).filter(b => b.type === 'footnote').map(normalizeBlock)
 )
 const rightFootnotes = computed(() =>
-  (rightBlocks.value || []).filter(b => b.type === 'footnote')
+  (rightBlocks.value || []).filter(b => b.type === 'footnote').map(normalizeBlock)
 )
 
 function blockTag(b) {
