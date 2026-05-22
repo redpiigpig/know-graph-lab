@@ -35,8 +35,8 @@
         <div v-if="data.date_line" class="date-line">{{ data.date_line }}</div>
         <div v-if="data.scripture_ref" class="scripture-ref">{{ data.scripture_ref }}</div>
 
-        <!-- Body: rendered in 1 or 2 columns -->
-        <div class="body" :class="`cols-${data.columns || 1}`">
+        <!-- Body: rendered in 1 or 2 columns; font auto-shrinks if overflow -->
+        <div ref="bodyEl" class="body" :class="`cols-${data.columns || 1}`" :style="{ fontSize: `${bodyFontCqw}cqw` }">
           <template v-for="(b, i) in data.blocks || []" :key="i">
             <h3 v-if="b.type === 'subsection'" class="sub">{{ b.text }}</h3>
             <div v-else-if="b.type === 'separator'" class="sep">＊＊＊＊＊＊＊＊＊＊</div>
@@ -57,7 +57,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch, onMounted } from 'vue';
+import { ref, computed, watch, onMounted, nextTick, onBeforeUnmount } from 'vue';
 
 interface Block {
   type: 'paragraph' | 'subsection' | 'separator' | 'blockquote' | 'scripture_attribution';
@@ -90,10 +90,17 @@ const data = ref<PageData>({});
 const loading = ref(true);
 const error = ref('');
 
+const bodyEl = ref<HTMLElement | null>(null);
+const MAX_BODY_FONT = 2.4;     // starts large to fill page
+const MIN_BODY_FONT = 1.4;     // floor; below this is unreadable
+const FONT_STEP = 0.05;
+const bodyFontCqw = ref(MAX_BODY_FONT);
+
 async function load() {
   loading.value = true;
   error.value = '';
   data.value = {};
+  bodyFontCqw.value = MAX_BODY_FONT;
   try {
     const url = `/herald/${props.issue}/data/page-${String(props.pageIdx).padStart(2, '0')}.json`;
     const res = await fetch(url);
@@ -103,10 +110,43 @@ async function load() {
     error.value = e?.message ?? '載入失敗';
   } finally {
     loading.value = false;
+    await nextTick();
+    fitFont();
+    // Re-observe new body element if it changed
+    if (ro && bodyEl.value) {
+      ro.disconnect();
+      ro.observe(bodyEl.value);
+    }
   }
 }
 
-onMounted(load);
+function fitFont() {
+  const el = bodyEl.value;
+  if (!el) return;
+  // Reset to max and shrink until content fits
+  let f = MAX_BODY_FONT;
+  bodyFontCqw.value = f;
+  // Force layout
+  void el.offsetHeight;
+  let guard = 30;
+  while (el.scrollHeight > el.clientHeight + 1 && f > MIN_BODY_FONT && guard-- > 0) {
+    f = Math.max(MIN_BODY_FONT, +(f - FONT_STEP).toFixed(2));
+    bodyFontCqw.value = f;
+    void el.offsetHeight;
+  }
+}
+
+let ro: ResizeObserver | null = null;
+onMounted(() => {
+  load();
+  // Refit on container resize (e.g. window resize → bookWidth changes)
+  if (typeof ResizeObserver !== 'undefined') {
+    ro = new ResizeObserver(() => fitFont());
+    if (bodyEl.value) ro.observe(bodyEl.value);
+  }
+});
+onBeforeUnmount(() => ro?.disconnect());
+
 watch(() => [props.issue, props.pageIdx], load);
 </script>
 
@@ -243,8 +283,8 @@ watch(() => [props.issue, props.pageIdx], load);
 .body {
   flex: 1;
   overflow: hidden;
-  font-size: 1.85cqw;
-  line-height: 1.65;
+  /* font-size is set inline via :style for auto-fit */
+  line-height: 1.6;
   letter-spacing: 0.02em;
   text-align: justify;
   text-justify: inter-ideograph;
@@ -256,38 +296,38 @@ watch(() => [props.issue, props.pageIdx], load);
   column-rule: 0.15cqw solid #d8d8d8;
 }
 .body p {
-  margin: 0 0 0.5cqw 0;
+  margin: 0 0 0.3em 0;
   text-indent: 2em;
   break-inside: avoid-column;
 }
 .body .sub {
-  font-size: 2.1cqw;
+  font-size: 1.15em;
   font-weight: 700;
   text-indent: 0;
-  margin: 1cqw 0 0.4cqw 0;
+  margin: 0.6em 0 0.2em 0;
   letter-spacing: 0.05em;
 }
 .body .sep {
   text-align: center;
   letter-spacing: 0.4em;
   color: #888;
-  margin: 0.8cqw 0;
-  font-size: 1.5cqw;
+  margin: 0.4em 0;
+  font-size: 0.85em;
   text-indent: 0;
 }
 .body .bq {
   padding-left: 2em;
   color: #333;
-  font-size: 1.75cqw;
+  font-size: 0.95em;
   text-indent: 0;
-  margin: 0 0 0.6cqw 0;
+  margin: 0 0 0.4em 0;
 }
 .body .attrib {
   text-align: right;
-  font-size: 1.7cqw;
+  font-size: 0.95em;
   color: #444;
   text-indent: 0;
-  margin: 0.6cqw 0 0 0;
+  margin: 0.4em 0 0 0;
 }
 
 /* Running footer */
