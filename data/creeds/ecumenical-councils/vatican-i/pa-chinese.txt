@@ -1,6 +1,33 @@
-（中文版尚未取得。vatican.va 對 Vatican I (1869-70) 僅提供 Italian + Latin，無中文官方版。
-可能來源：
-  - 中華民國天主教主教團《梵蒂岡第一屆大公會議文獻》中譯本
-  - 思高聖經學會編《大公會議信條彙編》
-  - 香港教區出版相關文獻
-取得後請手動覆蓋本檔。）
+（Pastor Aeternus《永恆司牧》論基督教會教義憲章第一 中文版 ─ 尚未取得）
+
+── 來源研究結論（2026-05-22 全網搜尋確認）──
+
+vatican.va 對梵蒂岡第一屆大公會議 (1869-70) 僅提供 Italian + Latin，無
+中文官方版。Wikipedia 中文／Baidu 百科／道風基督教文化評論／cathlinks /
+catholic.org.hk / catholic.org.tw / ccreadbible.org 等皆只有「摘要描述」
+或「片段引述」，無公開全文中譯。
+
+唯一權威全文中譯來源（紙本，需購買）：
+
+  《公教會之信仰與倫理教義選集》
+  原書：Denzinger-Hünermann《Enchiridion Symbolorum》(DH)
+  出版：光啟文化事業（台灣）2013-02-01
+  譯者：輔仁神學著作編譯會
+  ISBN：9789575467418
+  規格：拉中對照、2350 頁、精裝、單色印刷、19.6 × 27.2 cm
+  價格：NT$2,950 (~$95 USD)
+  購買：校園書房 https://shop.campus.org.tw/ProductDetails.aspx?productID=000580489
+        基道書樓 https://www.logos.com.hk/bf/acms/content.asp?site=logosbf&op=show&type=product&code=9789575467418
+
+本憲章內容於該書 DH 3050-3075 區段，含：
+  - 序言（Pius IX 開場）
+  - 第一章：論教宗首席權在伯鐸的設立 (De apostolici primatus in beato Petro institutione)
+  - 第二章：論伯鐸首席權在羅馬教宗之永久持續 (De perpetuitate primatus beati Petri in Romanis Pontificibus)
+  - 第三章：論羅馬教宗首席權的力量與本質 (De vi et ratione primatus Romani Pontificis)
+  - 第四章：論羅馬教宗的不可錯謬訓導權 (De Romani Pontificis infallibili magisterio)
+  - ex cathedra 不可錯謬定義 + 收尾 anathema
+
+── SOP ──
+
+購買書後手抄／OCR 本憲章對應段落，覆蓋本檔案即可上線。
+排版建議：保留 `## 章節標題` markdown 結構（與英文／拉丁版對齊三欄）。

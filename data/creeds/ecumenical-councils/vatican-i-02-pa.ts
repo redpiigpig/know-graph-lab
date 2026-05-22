@@ -28,8 +28,8 @@ export const vaticanIPA: Creed = {
       text: '',
       textKey: 'pa-chinese',
       placeholder: true,
-      source: '待補：來源候選 → 中華民國天主教主教團《梵蒂岡第一屆大公會議文獻》／思高聖經學會《大公會議信條彙編》',
-      translator: '待確認',
+      source: '已確認唯一權威來源：《公教會之信仰與倫理教義選集》(Denzinger-Hünermann 中文版) — 光啟文化事業 2013 / ISBN 9789575467418 / 2350 頁 / 拉中對照 / NT$2,950。本憲章內容於 DH 3050-3075（含序言＋四章＋ ex cathedra 不可錯謬定義）。線上 2026-05-22 全網搜尋未找到公開全文中譯。',
+      translator: '輔仁神學著作編譯會（紙本）',
     },
     {
       lang: 'en',
@@ -73,7 +73,9 @@ export const vaticanIPA: Creed = {
 - 「ex cathedra」嚴格意義行使案例：1854 Ineffabilis Deus（聖母無染原罪）／1950 Munificentissimus Deus（聖母升天）
 - 與 Vatican II 對比：本憲章單方面強調教宗權威；梵二《教會憲章》第三章補回「主教團 (collegium episcoporum) 連同教宗 (cum Petro et sub Petro) 共同治理普世教會」維度，是本憲章重要的補充與平衡
 - 對普世合一：1995《Ut Unum Sint》§95 邀請其他宗派討論首席權行使方式；2007《Ravenna Document》達成首席—會議互動共識
-- 中文版尚未從 vatican.va 取得（vatican.va 僅提供 Italian + Latin）；中譯需從紙本《梵蒂岡第一屆大公會議文獻》取材`,
+- 中文版尚未從 vatican.va 取得（vatican.va 僅提供 Italian + Latin）；2026-05-22 全網搜尋確認線上無公開全文中譯
+- 中譯唯一權威來源：《公教會之信仰與倫理教義選集》(Denzinger-Hünermann 中文版) — 光啟文化 2013 / ISBN 9789575467418 / 拉中對照 — 本文於 DH 3050-3075
+- 取得後請手抄／OCR 並覆蓋 \`data/creeds/ecumenical-councils/vatican-i/pa-chinese.txt\``,
   related: [
     'vatican-i-df-dei-filius',
     'vatican-ii-lg-lumen-gentium',

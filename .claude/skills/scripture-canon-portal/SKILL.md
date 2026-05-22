@@ -569,10 +569,14 @@ done
 **資料來源 & pipeline**：
 - 拉丁：vatican.va 官方 HTML（separate per-document URL）
 - 英文：papalencyclicals.net `ecum20.htm`（all-sessions combined; split by SESSION 3 / 4 marker）
-- 中文：vatican.va **無**梵一中文官方版。需手動從以下紙本之一補：
-  - 中華民國天主教主教團《梵蒂岡第一屆大公會議文獻》
-  - 思高聖經學會《大公會議信條彙編》
-  - 香港教區出版相關文獻
+- 中文：vatican.va **無**梵一中文官方版。**2026-05-22 全網搜尋確認線上無公開全文中譯本**（Wikipedia 中文／Baidu 百科／道風基督教文化評論／cathlinks／catholic.org.hk／catholic.org.tw／ccreadbible.org 等皆只有摘要描述或片段引述）。**唯一權威來源（紙本，需購買）**：
+  - **《公教會之信仰與倫理教義選集》** = Denzinger-Hünermann《Enchiridion Symbolorum》中文版
+  - 出版：光啟文化事業（台灣）2013-02-01；譯者：輔仁神學著作編譯會
+  - ISBN：9789575467418；2350 頁；拉中對照；NT$2,950 (~$95 USD)
+  - 購買：校園書房 ([連結](https://shop.campus.org.tw/ProductDetails.aspx?productID=000580489)) ／ 基道書樓
+  - **DF 對應 DH 3000-3045**；**PA 對應 DH 3050-3075**
+  - 取得後手抄／OCR 後直接覆蓋 `df-chinese.txt` / `pa-chinese.txt`
+  - 同一本書也含特利騰 Trent 全文（DH 1500 範圍）— 可一次性補梵一 + Trent 兩筆中譯
 - pipeline：[scripts/rebuild_vatican_i_html.py](../../../scripts/rebuild_vatican_i_html.py)
   - vatican.va 拉丁：`<p>` + `<strong>` heading 解析（與梵二 `<i><b>` 不同）
   - papalencyclicals.net 英文：`<p>` + `<li>` 含 canons 全文，需 substring 去重（過濾每 canon 的 bullet 拆解）

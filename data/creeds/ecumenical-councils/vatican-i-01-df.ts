@@ -27,8 +27,8 @@ export const vaticanIDF: Creed = {
       text: '',
       textKey: 'df-chinese',
       placeholder: true,
-      source: '待補：來源候選 → 中華民國天主教主教團《梵蒂岡第一屆大公會議文獻》／思高聖經學會《大公會議信條彙編》',
-      translator: '待確認',
+      source: '已確認唯一權威來源：《公教會之信仰與倫理教義選集》(Denzinger-Hünermann 中文版) — 光啟文化事業 2013 / ISBN 9789575467418 / 2350 頁 / 拉中對照 / NT$2,950。本憲章內容於 DH 3000-3045（含序言＋四章＋18 canons）。線上 2026-05-22 全網搜尋未找到公開全文中譯。',
+      translator: '輔仁神學著作編譯會（紙本）',
     },
     {
       lang: 'en',
@@ -66,7 +66,9 @@ export const vaticanIDF: Creed = {
 - 直接針對：理性主義、自然神論、泛神論、唯物論、信仰主義、傳統主義 (traditionalism)、半理性主義 (semi-rationalism) 等 19 世紀思潮
 - 與 1864《謬說要錄》(Syllabus Errorum) 為姊妹文件；前者列出否定的錯謬，本憲章作正面建構
 - 後續影響：Aeterni Patris（教宗良十三世 1879 復興多瑪斯）／Pascendi Dominici Gregis（碧岳十世 1907 反現代主義）／Humani Generis（碧岳十二世 1950）／Fides et Ratio（若望保祿二世 1998）皆引述本憲章
-- 中文版尚未從 vatican.va 取得（vatican.va 僅提供 Italian + Latin）；中譯需從紙本《梵蒂岡第一屆大公會議文獻》取材`,
+- 中文版尚未從 vatican.va 取得（vatican.va 僅提供 Italian + Latin）；2026-05-22 全網搜尋確認線上無公開全文中譯
+- 中譯唯一權威來源：《公教會之信仰與倫理教義選集》(Denzinger-Hünermann 中文版) — 光啟文化 2013 / ISBN 9789575467418 / 拉中對照 — 本文於 DH 3000-3045
+- 取得後請手抄／OCR 並覆蓋 \`data/creeds/ecumenical-councils/vatican-i/df-chinese.txt\``,
   related: [
     'vatican-i-pa-pastor-aeternus',
     'vatican-ii-dv-dei-verbum',
