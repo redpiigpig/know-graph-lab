@@ -78,7 +78,7 @@ def ocr_one(img: Path, key_idx: int = 0) -> dict:
     client = genai.Client(api_key=KEYS[key_idx])
     img_bytes = img.read_bytes()
     resp = client.models.generate_content(
-        model="gemini-2.5-flash",
+        model="gemini-2.5-flash-lite",
         contents=[
             types.Part.from_bytes(data=img_bytes, mime_type="image/jpeg"),
             PROMPT,
@@ -92,7 +92,20 @@ def ocr_one(img: Path, key_idx: int = 0) -> dict:
     # Strip ```json ... ``` fences if any
     raw = re.sub(r"^```(?:json)?\s*", "", raw)
     raw = re.sub(r"\s*```$", "", raw)
-    return json.loads(raw)
+    # Strip unescaped control characters that break json.loads (CR/LF/TAB inside strings, etc.)
+    raw = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", "", raw)
+    # Replace literal newlines inside strings (Gemini sometimes emits \n raw rather than escaped)
+    # but preserve newlines outside strings — easier: just remove them entirely; JSON ignores whitespace
+    raw = raw.replace("\r", "").replace("\n", " ")
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError:
+        # Try with json-repair if available
+        try:
+            import json_repair
+            return json_repair.loads(raw)
+        except Exception:
+            raise
 
 
 def main() -> None:
