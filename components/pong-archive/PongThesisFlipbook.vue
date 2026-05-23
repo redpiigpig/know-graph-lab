@@ -287,9 +287,17 @@ const PUNCT_MAP = { ',': '，', '.': '。', ':': '：', ';': '；', '!': '！', 
 function normalizeCJKPunct(s) {
   if (!s || typeof s !== 'string') return s
 
+  // 0) Pre-pass: collapse every Unicode space variant to ASCII space (except
+  //    newline), and strip zero-width chars. Gemini OCR commonly emits NBSP
+  //    ( ), thin/hair space ( / ), and ideographic space
+  //    (　) between scanned column gaps — none of which my downstream
+  //    regex caught before, leaving 「中 文 之 間」 visibly spaced.
+  s = s.replace(/[\n\r   -   　]/g, ' ')
+       .replace(/[​‌‍⁠﻿]/g, '')
+
   // 1) Drop empty parens / brackets (OCR shells with nothing inside).
-  s = s.replace(/[\(（][\s　]*[\)）]/g, '')
-       .replace(/[\[〔][\s　]*[\]〕]/g, '')
+  s = s.replace(/[\(（][\s]*[\)）]/g, '')
+       .replace(/[\[〔][\s]*[\]〕]/g, '')
 
   // 2) Convert ALL parens / brackets to full-width (was: CJK-only).
   s = s.replace(/\(/g, '（').replace(/\)/g, '）')
@@ -299,8 +307,8 @@ function normalizeCJKPunct(s) {
   //    Catches OCR shape `(Rudolf Karl Bultmann 1884-1976)` →
   //    `（Rudolf Karl Bultmann, 1884-1976）`.
   s = s.replace(
-    /（([A-Za-z][A-Za-z\s\.\-']+?)[\s　]+(\d{3,4}(?:[\s　]*[-–—][\s　]*\d{0,4})?)）/g,
-    (_, name, year) => `（${name.trim()}, ${year.replace(/[\s　]+/g, '')}）`
+    /（([A-Za-z][A-Za-z\s\.\-']+?)\s+(\d{3,4}(?:\s*[-–—]\s*\d{0,4})?)）/g,
+    (_, name, year) => `（${name.trim()}, ${year.replace(/\s+/g, '')}）`
   )
 
   // 4) Per-char punctuation — only when a CJK neighbor exists.
@@ -319,14 +327,14 @@ function normalizeCJKPunct(s) {
   s = out
 
   // 5) Whitespace cleanup — drop horizontal spaces UNLESS they sit between two
-  //    ASCII letters (English word boundary). Preserves newlines.
+  //    ASCII alphanumeric chars. Step 0 already normalized all Unicode space
+  //    variants to ASCII space, so we just look for ` ` and `\t`.
   let buf = ''
   for (let i = 0; i < s.length; i++) {
     const c = s[i]
-    if (c === '\n') { buf += c; continue }
-    if (/[ \t　]/.test(c)) {
+    if (c === ' ' || c === '\t') {
       let j = i
-      while (j < s.length && /[ \t　]/.test(s[j])) j++
+      while (j < s.length && (s[j] === ' ' || s[j] === '\t')) j++
       const prev = s[i - 1] || ''
       const next = s[j] || ''
       // Keep ONE space iff both sides are ASCII alphanumeric.
