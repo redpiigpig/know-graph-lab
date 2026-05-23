@@ -276,8 +276,15 @@ export async function loadToc(ebookId: string): Promise<TocEntry[]> {
       }
 
       // Sub-section headings (### / ####) inside the chunk → anchors.
+      // Filter out:
+      //  - Enumeration-only titles ("一", "I", "23"); navigation-useless
+      //  - The anchor that's the same as chunk's chapter_path itself —
+      //    that's the chapter title shown above, NOT a sub-section
+      //  - Duplicates within the same chunk (some EPUBs repeat the heading)
       const suppressAnchors = FRONTMATTER_NO_ANCHORS.has(chapterTitle);
       const sections: TocSection[] = [];
+      const seenAnchorTitles = new Set<string>();
+      const chapterTitleKey = chapterTitle.replace(/\[\^\d+\]/g, "").replace(/\s+/g, "").trim();
       let seq = 0;
       if (!suppressAnchors) {
         const headingRe = /^(#{2,4})\s+(.+)$/gm;
@@ -289,8 +296,14 @@ export async function loadToc(ebookId: string): Promise<TocEntry[]> {
           if (depth >= 3) {
             const cleanTitle = title.replace(/\[\^\d+\]/g, "").trim();
             const collapsed = cleanTitle.replace(/\s+/g, "");
-            if (!ENUM_ONLY_RE.test(collapsed)) {
+            // Drop: enum-only, matches chapter title, or already seen
+            if (
+              !ENUM_ONLY_RE.test(collapsed)
+              && collapsed !== chapterTitleKey
+              && !seenAnchorTitles.has(collapsed)
+            ) {
               sections.push({ anchor_id: `sec-${i}-${seq}`, title: cleanTitle, level: depth });
+              seenAnchorTitles.add(collapsed);
             }
             seq++;
           }

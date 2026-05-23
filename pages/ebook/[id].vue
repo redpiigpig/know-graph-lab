@@ -633,6 +633,12 @@ function inlineFmt(s: string, chunkIdx: number | null = null) {
       `<a href="#fn-${chunkIdx}-${n}" title="跳到註 ${n}">${n}</a></sup>`
     );
   }
+  // Print page markers `{{p:N}}` (injected by extract_epub_extras.py).
+  // Rendered as tiny inline pill that doesn't disrupt the prose but lets
+  // citation generation pick up the original page number under the cursor.
+  out = out.replace(/\{\{p:(\d+)\}\}/g, (_, n) =>
+    `<span class="page-marker" data-page="${n}" title="原書頁碼 ${n}">[頁${n}]</span>`
+  );
   return out;
 }
 // Render markdown to HTML. `chunkIndex` (when provided) is used to mint
@@ -719,7 +725,12 @@ function renderMarkdown(md: string, chunkIndex: number | null = null): string {
           `<a href="#fnref-${chunkIndex}-${num}" class="footnote-back" title="回到正文">↩</a></p>`
         );
       } else {
-        out.push(`<p>${inlineFmt(escaped, chunkIndex).replace(/\n/g, "<br>")}</p>`);
+        // CCEL EPUBs word-wrap paragraphs with single `\n` between lines.
+        // Replacing each \n with <br> created jagged forced-break columns
+        // (worse in the English bilingual column). Collapse single \n to a
+        // space so the browser reflows naturally; only `\n\n` (paragraph
+        // break) is honored upstream via the block split.
+        out.push(`<p>${inlineFmt(escaped, chunkIndex).replace(/\n/g, " ").replace(/  +/g, " ")}</p>`);
       }
     }
   }
@@ -1923,6 +1934,29 @@ useHead({ title: computed(() => ebook.value ? `${ebook.value.title} — 閱讀` 
   transition: filter 0.15s;
 }
 .ebook-prose :deep(mark:hover) { filter: brightness(0.95); }
+
+/* Print-edition page marker — tiny gray pill from `{{p:N}}` extracted by
+   extract_epub_extras.py. Doesn't disrupt prose but discoverable on hover
+   and consumed by copy-handler for Chicago citation. */
+.ebook-prose :deep(.page-marker) {
+  font-size: 0.65em;
+  color: #a8a29e;
+  background: #f5f5f4;
+  padding: 1px 5px;
+  border-radius: 3px;
+  margin: 0 3px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.5px;
+  vertical-align: 1px;
+  white-space: nowrap;
+  cursor: help;
+  user-select: none;
+}
+.ebook-prose :deep(.page-marker:hover) {
+  background: #e7e5e4;
+  color: #57534e;
+}
 
 /* ── 目錄 page styling ──
    Each 章 line becomes a hyperlink. 節 lines (plain non-bold) indent 2
