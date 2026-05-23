@@ -487,7 +487,9 @@ def _haiku_ocr_book(haiku_client, src_path: Path, book_id: str = None) -> list:
             )
             content.append({"type": "text", "text": prompt})
 
-            # Per-batch retry: 5 attempts with exponential backoff
+            # Per-batch retry: 5 attempts with exponential backoff.
+            # 401 (token expired) → call _refresh_oauth_token() + re-init client
+            # immediately, don't waste exponential backoff on a doomed call.
             resp = None
             t_api = time.time()
             last_err = None
@@ -502,6 +504,17 @@ def _haiku_ocr_book(haiku_client, src_path: Path, book_id: str = None) -> list:
                 except Exception as e:  # noqa: BLE001 — catch all Anthropic transient errors
                     last_err = e
                     msg = str(e)[:120]
+                    is_401 = getattr(e, "status_code", None) == 401 or "401" in str(e)[:200]
+                    if is_401:
+                        # Token expired — refresh + rebuild client, retry immediately
+                        print(f"    [haiku] batch {bi} attempt {attempt}/5 got 401, refreshing OAuth token", flush=True)
+                        _refresh_oauth_token()
+                        try:
+                            haiku_client = _make_anthropic_client(proactive_refresh=False)
+                            print(f"    [haiku] batch {bi} client rebuilt with fresh token, retrying", flush=True)
+                            continue  # retry without sleep
+                        except Exception as ce:
+                            print(f"    [haiku] batch {bi} client rebuild failed: {ce}", flush=True)
                     if attempt == 5:
                         # exhausted retries — re-raise to outer handler
                         raise
@@ -540,8 +553,87 @@ def _haiku_ocr_book(haiku_client, src_path: Path, book_id: str = None) -> list:
     return all_chunks
 
 
-def _make_anthropic_client():
-    """Create anthropic.Anthropic using API key or Claude Code's OAuth token (whichever is available).
+# Claude Code OAuth refresh endpoint (public — same client_id as the CLI)
+_CC_OAUTH_REFRESH_URL = "https://console.anthropic.com/v1/oauth/token"
+_CC_OAUTH_CLIENT_ID = "9d1c250a-e61b-44d9-88ed-5944d1962f5e"
+
+
+def _credentials_path() -> Path:
+    return Path(os.environ.get("USERPROFILE", os.environ.get("HOME", ""))) / ".claude" / ".credentials.json"
+
+
+def _refresh_oauth_token(verbose: bool = True) -> str | None:
+    """Refresh Claude Code OAuth access_token via the refresh_token grant.
+
+    Reads .credentials.json → POSTs to console.anthropic.com/v1/oauth/token →
+    writes new access_token / refresh_token / expiresAt back. Returns the new
+    access_token, or None on failure.
+    """
+    cred = _credentials_path()
+    if not cred.exists():
+        if verbose:
+            print(f"  [oauth-refresh] no credentials file at {cred}", flush=True)
+        return None
+    try:
+        with cred.open(encoding="utf-8") as f:
+            data = json.load(f)
+        oauth = data.get("claudeAiOauth", {})
+        refresh_tok = oauth.get("refreshToken")
+        if not refresh_tok:
+            if verbose:
+                print(f"  [oauth-refresh] no refreshToken in credentials", flush=True)
+            return None
+
+        resp = requests.post(
+            _CC_OAUTH_REFRESH_URL,
+            headers={"Content-Type": "application/json", "User-Agent": "anthropic"},
+            json={
+                "grant_type": "refresh_token",
+                "refresh_token": refresh_tok,
+                "client_id": _CC_OAUTH_CLIENT_ID,
+            },
+            timeout=30,
+        )
+        if not resp.ok:
+            if verbose:
+                print(f"  [oauth-refresh] HTTP {resp.status_code}: {resp.text[:200]}", flush=True)
+            return None
+
+        body = resp.json()
+        new_access = body.get("access_token")
+        new_refresh = body.get("refresh_token") or refresh_tok
+        expires_in = body.get("expires_in")  # seconds
+        if not new_access:
+            if verbose:
+                print(f"  [oauth-refresh] response missing access_token: {body}", flush=True)
+            return None
+
+        # Persist back to credentials.json
+        oauth["accessToken"] = new_access
+        oauth["refreshToken"] = new_refresh
+        if expires_in:
+            oauth["expiresAt"] = int(time.time() * 1000) + int(expires_in) * 1000
+        data["claudeAiOauth"] = oauth
+        with cred.open("w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2)
+
+        if verbose:
+            exp_min = (oauth["expiresAt"] - int(time.time() * 1000)) / 60000 if "expiresAt" in oauth else None
+            exp_str = f", expires in {exp_min:.0f}min" if exp_min else ""
+            print(f"  [oauth-refresh] ✓ token refreshed{exp_str}", flush=True)
+        return new_access
+    except Exception as e:
+        if verbose:
+            print(f"  [oauth-refresh] exception: {e}", flush=True)
+        return None
+
+
+def _make_anthropic_client(proactive_refresh: bool = True):
+    """Create anthropic.Anthropic using API key or Claude Code's OAuth token.
+
+    Proactive refresh: if expiresAt is within 5 minutes (or past), auto-call the
+    OAuth refresh endpoint before initializing the client. This lets the OCR run
+    survive past the 8-hour token lifetime without external intervention.
 
     10-min timeout + 2 retries — without timeout SDK hangs indefinitely on stuck socket,
     OCR run becomes zombie burning RAM (踩過坑 2026-05-19，batch 36 卡 7+ hours)."""
@@ -551,16 +643,28 @@ def _make_anthropic_client():
         return _anthropic.Anthropic(api_key=api_key, **common_kwargs)
 
     # Fall back to Claude Code's stored OAuth token
-    cred_path = Path(os.environ.get("USERPROFILE", os.environ.get("HOME", ""))) / ".claude" / ".credentials.json"
-    if cred_path.exists():
-        try:
-            with cred_path.open(encoding="utf-8") as f:
-                creds = json.load(f)
-            token = creds.get("claudeAiOauth", {}).get("accessToken", "")
-            if token:
-                return _anthropic.Anthropic(auth_token=token, **common_kwargs)
-        except Exception:
-            pass
+    cred_path = _credentials_path()
+    if not cred_path.exists():
+        raise RuntimeError("No Anthropic credentials found. Add ANTHROPIC_API_KEY to .env or sign in to Claude Code.")
+
+    try:
+        with cred_path.open(encoding="utf-8") as f:
+            creds = json.load(f)
+        oauth = creds.get("claudeAiOauth", {})
+        token = oauth.get("accessToken", "")
+        expires_at = oauth.get("expiresAt", 0)  # millis
+        now_ms = int(time.time() * 1000)
+
+        # Proactive refresh: 5-min skew + already-expired
+        if proactive_refresh and (expires_at <= now_ms + 300_000):
+            new_tok = _refresh_oauth_token()
+            if new_tok:
+                token = new_tok
+
+        if token:
+            return _anthropic.Anthropic(auth_token=token, **common_kwargs)
+    except Exception as e:
+        print(f"  [oauth] read credentials error: {e}", flush=True)
 
     raise RuntimeError("No Anthropic credentials found. Add ANTHROPIC_API_KEY to .env or sign in to Claude Code.")
 
