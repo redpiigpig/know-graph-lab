@@ -705,10 +705,17 @@ data/creeds/ecumenical-councils/
 
 **剩餘缺口（按優先級）**：
 1. **中文版** — 3-7 早期、8-18 中世紀、19 Trent (25 sessio)、20 梵一 (DF + PA) 共 44 份；vatican.va 無中文；唯一權威紙本 Denzinger（光啟 2013 / ISBN 9789575467418）
+   - **進行中 2026-05-23**：用戶已下載 Denzinger 中譯 PDF（2430 頁、139MB、輔仁神學著作編譯會編譯）入庫至 [[ebook-pipeline]] 系統：
+     - ebook_id: `568726d3-967e-457a-ab69-7452b21d606f`
+     - Drive 路徑：`G:/我的雲端硬碟/資料/電子書/世界宗教/基督教/教會法典與信條/輔仁神學著作編譯會，公教會之信仰與倫理教義選集.pdf`
+     - 雙欄拉中對照布局；Adobe Paper Capture 預 OCR 品質太差需重 Vision OCR
+     - **Haiku 重 OCR 進行中**（Gemini quota 用罄）；2430 頁 × 10 頁/batch = 243 batches，預估數小時實跑
+     - OCR 完成後 → 解析 DH 番號定位早期 3-7（DH 100-600）／ 中世紀 8-18（DH 600-1450）／ Trent 19（DH 1500-1900）／ 梵一 20（DH 3000-3075）對應段落，寫進 `*-chinese.txt` 完成 44 份中譯缺口
+   - **Reader UX backlog**：Denzinger 比《基督教要義》golden template 更複雜（雙欄拉中對照 + DH 番號 anchor + 學界 cross-reference 腳註）；需要新 layout type `bilingual-parallel`（與《基督教要義》的 `standard` 並列），standardize 時依書屬性 dispatch UI 模板
 2. **梵二 IM 中文** — vatican.va PDF Content-Length=0；候選 cathlinks.org / Catholic.org.hk 重抓
 3. **早期 5 + 6 希臘原文** — 候選 Schwartz/Riedinger ACO archive.org
 4. **Ephesus Cyril 信 + 12 Anathemas 希臘** — 候選 PG / ACO Vol 1
-5. **per-canon 三欄嚴格對齊** — 需要 Gemini Flash batch 對 latin .txt 做 canon 編號 normalize
+5. **per-canon 三欄嚴格對齊（已部分完成 2026-05-23）** — scripts/normalize_council_canons.py 已對 86 份檔案做拉丁 footnote 雜訊清 + 英文 anathema 編號保守 normalize；canon-boundary 偵測（拉丁 .doc 沒可見 canon 編號）為 Phase 2 工作。**用戶規則：不用 LLM/Gemini 自己做。**
 
 **第三批（Ecumenical Dialogue 20-21 世紀文件）**：見下方 `/creeds` 章節 ecumenical-dialogue 清單；JDDJ 1999 優先（與 Trent Session 6 成義令對話直接相關）。
 
