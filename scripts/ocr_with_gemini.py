@@ -370,18 +370,35 @@ def _haiku_render_page(doc, page_idx: int) -> tuple[bytes, str]:
 
 
 def _haiku_parse_response(text: str, page_numbers: list) -> list:
+    """Parse Haiku's `[PAGE N]\\n<text>` blocks.
+
+    **Important** — Haiku's `[PAGE N]` value is sometimes the book-internal
+    pagination it reads from the page image (e.g. printed page 727, DH number
+    3193 in margin), NOT the PDF page index we asked for. So we IGNORE the
+    number in the marker and match text blocks to `page_numbers[]` by ORDER.
+    The original Haiku-reported number is kept as `haiku_page_reported` for
+    debugging.
+    """
     import re
-    chunks = []
     parts = re.split(r'\[PAGE\s+(\d+)\]', text)
+    # parts: [pre, num_1, body_1, num_2, body_2, ...]
+    text_blocks: list[tuple[str, str]] = []  # (reported_num, body)
     for i in range(1, len(parts) - 1, 2):
-        try:
-            chunks.append({"page": int(parts[i]), "text": parts[i + 1].strip()})
-        except (ValueError, IndexError):
-            continue
-    if not chunks and page_numbers:
-        lines = text.strip().split("\n")
-        for j, pn in enumerate(page_numbers):
-            chunks.append({"page": pn, "text": lines[j] if j < len(lines) else ""})
+        text_blocks.append((parts[i], parts[i + 1].strip()))
+
+    chunks = []
+    # Match by ORDER to expected page_numbers; ignore Haiku's reported number for
+    # the canonical `page` field (which must be a real PDF index).
+    for j, pn in enumerate(page_numbers):
+        if j < len(text_blocks):
+            reported, body = text_blocks[j]
+            chunk = {"page": pn, "text": body}
+            if reported and reported != str(pn):
+                chunk["haiku_page_reported"] = reported
+            chunks.append(chunk)
+        else:
+            # Haiku returned fewer blocks than pages — pad with empty
+            chunks.append({"page": pn, "text": ""})
     return chunks
 
 
@@ -399,10 +416,12 @@ def _haiku_ocr_book(haiku_client, src_path: Path, book_id: str = None) -> list:
     doc = _fitz.open(src_path)
     total = len(doc)
 
-    # ── CHECKPOINT: resume from existing batch JSONL if present ──
+    # ── CHECKPOINT: resume tracked by BATCH INDEX (not page numbers, which can
+    # be unreliable since Haiku sometimes echoes book-internal pagination) ──
     ckpt_path = CHUNKS_DIR / f"{book_id}.batch_ckpt.jsonl" if book_id else None
+    batch_idx_path = CHUNKS_DIR / f"{book_id}.batch_idx.txt" if book_id else None
     all_chunks: list = []
-    done_pages: set = set()
+    done_batches: set = set()
     if ckpt_path and ckpt_path.exists():
         try:
             with ckpt_path.open(encoding="utf-8") as f:
@@ -413,19 +432,31 @@ def _haiku_ocr_book(haiku_client, src_path: Path, book_id: str = None) -> list:
                     try:
                         c = json.loads(line)
                         all_chunks.append(c)
-                        done_pages.add(c["page"])
-                    except (json.JSONDecodeError, KeyError):
+                    except json.JSONDecodeError:
                         pass
-            if done_pages:
-                print(f"    [haiku] resume: loaded {len(all_chunks)} chunks "
-                      f"from checkpoint (last page {max(done_pages)})", flush=True)
         except OSError as e:
             print(f"    [haiku] checkpoint read error: {e}; starting fresh", flush=True)
+    if batch_idx_path and batch_idx_path.exists():
+        try:
+            with batch_idx_path.open(encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if line.isdigit():
+                        done_batches.add(int(line))
+            if done_batches:
+                print(f"    [haiku] resume: {len(done_batches)} batches done "
+                      f"(max batch_idx {max(done_batches)}, {len(all_chunks)} chunks)",
+                      flush=True)
+        except OSError as e:
+            print(f"    [haiku] batch_idx read error: {e}; starting fresh", flush=True)
 
     ckpt_f = None
+    batch_idx_f = None
     if ckpt_path:
         CHUNKS_DIR.mkdir(parents=True, exist_ok=True)
         ckpt_f = ckpt_path.open("a", encoding="utf-8")
+    if batch_idx_path:
+        batch_idx_f = batch_idx_path.open("a", encoding="utf-8")
 
     print(f"\n    [haiku] {total} pages, batching {_HAIKU_PAGES_PER_BATCH}/call",
           flush=True)
@@ -437,10 +468,10 @@ def _haiku_ocr_book(haiku_client, src_path: Path, book_id: str = None) -> list:
             page_indices = list(range(batch_start, batch_end))
             page_numbers = [i + 1 for i in page_indices]
 
-            # Skip whole batch if every page already OCR'd in checkpoint
-            if done_pages and all(p in done_pages for p in page_numbers):
+            # Skip whole batch if this batch_index already marked done
+            if bi in done_batches:
                 print(f"    [haiku] batch {bi}/{n_batches} pp{page_numbers[0]}-{page_numbers[-1]} "
-                      f"SKIP (checkpoint)", flush=True)
+                      f"SKIP (batch_idx checkpoint)", flush=True)
                 continue
 
             t_b = time.time()
@@ -489,6 +520,10 @@ def _haiku_ocr_book(haiku_client, src_path: Path, book_id: str = None) -> list:
                 for c in chunks:
                     ckpt_f.write(json.dumps(c, ensure_ascii=False) + "\n")
                 ckpt_f.flush()
+            # Mark batch as done by index (the source of truth for resume)
+            if batch_idx_f:
+                batch_idx_f.write(f"{bi}\n")
+                batch_idx_f.flush()
 
             elapsed = time.time() - t_book_start
             eta = (elapsed / bi) * (n_batches - bi) if bi else 0
@@ -499,6 +534,8 @@ def _haiku_ocr_book(haiku_client, src_path: Path, book_id: str = None) -> list:
     finally:
         if ckpt_f:
             ckpt_f.close()
+        if batch_idx_f:
+            batch_idx_f.close()
         doc.close()
     return all_chunks
 
@@ -537,6 +574,7 @@ def process_one_haiku(haiku_client, book: dict, src_path: Path, max_retries: int
     """
     last_err = ""
     ckpt_path = CHUNKS_DIR / f"{book['id']}.batch_ckpt.jsonl"
+    batch_idx_path = CHUNKS_DIR / f"{book['id']}.batch_idx.txt"
     for attempt in range(1, max_retries + 1):
         try:
             t0 = time.time()
@@ -563,11 +601,12 @@ def process_one_haiku(haiku_client, book: dict, src_path: Path, max_retries: int
                 update_book_done(book["id"], total_chars=total_chars,
                                  chunk_count=len(non_empty),
                                  total_pages=max(c["page"] for c in non_empty))
-                # Success — clean up checkpoint
-                try:
-                    ckpt_path.unlink(missing_ok=True)
-                except OSError:
-                    pass
+                # Success — clean up checkpoint files
+                for p in (ckpt_path, batch_idx_path):
+                    try:
+                        p.unlink(missing_ok=True)
+                    except OSError:
+                        pass
                 return {"status": "ok"}
             else:
                 update_book_error(book["id"], f"OCR ok but R2 push failed: {r2_err}")
