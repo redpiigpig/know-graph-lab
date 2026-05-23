@@ -6,6 +6,14 @@
         <div class="flex items-center gap-3 min-w-0 flex-1">
           <NuxtLink to="/ebook" class="text-stone-500 hover:text-stone-900 text-sm transition flex-shrink-0">← 書架</NuxtLink>
           <span class="text-stone-300">·</span>
+          <!-- Always-visible TOC button (on lg+ it still toggles a slide-over;
+               on narrow screens it's the only way to see the TOC). -->
+          <button @click="tocDrawerOpen = !tocDrawerOpen"
+            :class="['flex items-center gap-1 px-2 py-1 rounded-md text-xs transition border flex-shrink-0',
+              tocDrawerOpen ? 'bg-stone-900 text-white border-stone-900' : 'bg-white text-stone-700 border-stone-200 hover:border-stone-400']"
+            title="目錄">
+            <span>📑</span><span class="hidden sm:inline">目錄</span>
+          </button>
           <span class="text-sm font-medium text-stone-900 truncate">{{ ebook?.title }}</span>
           <span v-if="ebook?.author" class="text-stone-400 text-sm hidden md:inline truncate">／{{ ebook.author }}</span>
         </div>
@@ -60,9 +68,16 @@
       </div>
     </nav>
 
-    <div class="flex flex-1 overflow-hidden">
-      <!-- Left TOC sidebar -->
-      <aside class="w-64 border-r border-stone-200 bg-white overflow-y-auto flex-shrink-0 hidden lg:block">
+    <div class="flex flex-1 overflow-hidden relative">
+      <!-- TOC backdrop (only on narrow screens when drawer open) -->
+      <div v-if="tocDrawerOpen" @click="tocDrawerOpen = false"
+        class="lg:hidden fixed inset-0 bg-stone-900/40 z-30 transition-opacity"></div>
+
+      <!-- Left TOC sidebar — slide-over on narrow, in-flow on lg+ when open -->
+      <aside :class="['border-r border-stone-200 bg-white overflow-y-auto flex-shrink-0 transition-transform duration-200',
+          tocDrawerOpen
+            ? 'fixed lg:relative inset-y-0 left-0 top-14 lg:top-0 w-72 lg:w-64 z-40 translate-x-0 shadow-xl lg:shadow-none'
+            : 'fixed lg:relative -translate-x-full w-0 lg:w-0 lg:opacity-0 lg:overflow-hidden']">
         <div class="p-3">
           <div class="text-xs uppercase text-stone-400 mb-2 px-2 tracking-wider">目錄</div>
           <div v-if="!toc.length && pageLoading" class="text-stone-400 text-sm px-2 py-2">載入中…</div>
@@ -471,18 +486,35 @@ const pageLoading = ref(false);
 // monolingual books, or a chunk that pre-dates the source-text schema).
 type ViewMode = "zh" | "bi" | "en";
 const viewMode = ref<ViewMode>("zh");
+// Tracks whether localStorage had an explicit preference at load time.
+// When false (first visit to any ebook), we auto-default to 'bi' the first
+// time we see a chunk with source_text — so AI-translated books open in
+// side-by-side mode by default. User clicking the toggle locks in their
+// choice via localStorage and disables auto-switching.
+const viewModeUserChosen = ref(false);
 const effectiveViewMode = computed<ViewMode>(() =>
   !pageSourceText.value ? "zh" : viewMode.value
 );
 function setViewMode(m: ViewMode) {
   viewMode.value = m;
+  viewModeUserChosen.value = true;
   try { localStorage.setItem("ebook-viewMode", m); } catch { /* private mode */ }
 }
+// Auto-default to bilingual when first bilingual chunk loads (until user
+// explicitly picks a mode via the toggle).
+watch(pageSourceText, (src) => {
+  if (src && !viewModeUserChosen.value && viewMode.value === "zh") {
+    viewMode.value = "bi";
+  }
+});
 const pageSearch = ref("");
 const annotations = ref<Annotation[]>([]);
 const bookAnnotations = ref<Annotation[]>([]);
 const expandedVolumes = ref<Set<string>>(new Set());
 const annotationsPanelOpen = ref(false);
+// TOC drawer: defaults open on desktop (lg+), can be toggled via topbar
+// 📑 button on any screen. We start open and let the user close it.
+const tocDrawerOpen = ref(true);
 const lastUsedColor = ref<string>("yellow");
 const contentEl = ref<HTMLDivElement | null>(null);
 const scrollEl = ref<HTMLElement | null>(null);
@@ -1466,10 +1498,15 @@ async function confirmSaveExcerpt() {
 onMounted(async () => {
   document.addEventListener("mousedown", hidePopupsOnOutsideClick);
 
-  // Restore view mode from previous session
+  // Restore view mode from previous session. If user has explicitly chosen
+  // a mode before, honor it; otherwise the watcher on pageSourceText will
+  // auto-default to 'bi' once a bilingual chunk loads.
   try {
     const saved = localStorage.getItem("ebook-viewMode") as ViewMode | null;
-    if (saved === "zh" || saved === "bi" || saved === "en") viewMode.value = saved;
+    if (saved === "zh" || saved === "bi" || saved === "en") {
+      viewMode.value = saved;
+      viewModeUserChosen.value = true;
+    }
   } catch { /* private mode */ }
 
   // Fetch shelf state + bookmarks first so we can decide whether to auto-jump.
