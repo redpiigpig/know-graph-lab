@@ -120,24 +120,38 @@
             </template>
           </div>
 
-          <!-- Volumes (collapsible). Each chapter row also expands to show
-               its internal section anchors when it's the current chapter, so
-               users can jump directly to a 節 within the page. -->
+          <!-- Volumes (collapsible). For volumes with a single page the
+               whole volume row becomes the link (no expansion, no
+               redundant child entry that would just duplicate the
+               volume name). Multi-page volumes keep the expand/toggle
+               behavior and show their pages as children. -->
           <div v-for="v in volumes" :key="v.name" class="mb-1">
-            <button @click="toggleVolume(v.name)"
+            <a v-if="v.entries.length === 1"
+              :href="`?page=${v.entries[0].chunk_index + 1}`"
+              @click.prevent="goPage(v.entries[0].chunk_index + 1)"
+              :title="v.name"
+              :class="[
+                'w-full flex items-center gap-1 px-2 py-2 rounded text-sm font-medium hover:bg-stone-50 transition no-underline',
+                currentPage - 1 === v.entries[0].chunk_index
+                  ? 'bg-blue-50 text-blue-700' : 'text-stone-900'
+              ]">
+              <span class="text-stone-300 text-xs w-3 inline-block">·</span>
+              <span class="flex-1 text-left truncate">{{ shortVolumeName(v.name) }}</span>
+            </a>
+            <button v-else @click="toggleVolume(v.name)"
               class="w-full flex items-center gap-1 px-2 py-2 rounded text-sm font-medium text-stone-900 hover:bg-stone-50 transition">
               <span class="text-stone-400 text-xs w-3 inline-block">{{ expandedVolumes.has(v.name) ? '▾' : '▸' }}</span>
               <span class="flex-1 text-left truncate">{{ shortVolumeName(v.name) }}</span>
               <span class="text-xs text-stone-400">{{ v.entries.length }}</span>
             </button>
-            <div v-if="expandedVolumes.has(v.name)" class="space-y-0.5 mt-0.5">
+            <div v-if="v.entries.length > 1 && expandedVolumes.has(v.name)" class="space-y-0.5 mt-0.5">
               <template v-for="entry in v.entries" :key="entry.chunk_index">
                 <div class="group relative">
                   <a :href="`?page=${entry.chunk_index + 1}`"
                     @click.prevent="goPage(entry.chunk_index + 1)"
                     :title="entry.title"
                     :class="[tocBtnCls(entry), 'w-full flex items-center gap-1.5 no-underline']">
-                    <span class="flex-1 text-left truncate">{{ entry.title }}</span>
+                    <span class="flex-1 text-left truncate">{{ stripVolumePrefix(entry.title, v.name) }}</span>
                     <span v-if="bookmarkByChunk.get(entry.chunk_index)"
                       class="text-[10px] px-1 py-px rounded bg-purple-100 text-purple-700 font-medium flex-shrink-0">
                       📅 {{ fmtBookmarkDate(bookmarkByChunk.get(entry.chunk_index)!.created_at) }}
@@ -581,6 +595,15 @@ function shortVolumeName(name: string): string {
   if (t && name.startsWith(t + "：")) return name.slice(t.length + 1);
   if (t && name.startsWith(t + ":")) return name.slice(t.length + 1);
   return name;
+}
+// Strip the volume-name prefix from an entry title so multi-page entries
+// under a volume read「第1-10章」instead of「致丟格那妥書 第1-10章」(redundant
+// because the volume name sits in the parent row right above).
+function stripVolumePrefix(entryTitle: string, volumeName: string): string {
+  if (entryTitle.startsWith(volumeName)) {
+    return entryTitle.slice(volumeName.length).trim().replace(/^[—－·,，:：]+\s*/, "");
+  }
+  return entryTitle;
 }
 
 function toggleVolume(name: string) {
