@@ -274,7 +274,8 @@ python scripts/translate_corpus_queue.py --status
 
 | Date | Book | Stats | Engine | 備註 |
 |---|---|---|---|---|
-| **2026-05-22** | **ANF Vol 1**（Apostolic Fathers with Justin Martyr and Irenaeus）<br>`ebook_id: c98d358d-7066-4691-a896-b7232707b0db` | **中斷暫停**：smoke 3 + 部分翻 = 28 / 938 chunks；source = 2.6M 英文字 | gemini（4 key 全 429 救回；smoke OK）| 走 Gemini 預設譯 Justin = 遊斯丁，使用者糾正要「猶斯定」(思高傳統)。停 worker → 修 glossary/PROMPT/JSONL → 觸發新建 [translation-glossary](../translation-glossary/SKILL.md) 工具校所有譯名後再續譯。**未完成，等使用者校完 ★建議譯名後再 `--resume`** |
+| **2026-05-23** | **ANF Vol 1**（Apostolic Fathers with Justin Martyr and Irenaeus）<br>`ebook_id: c98d358d-7066-4691-a896-b7232707b0db` | 918 chunks / 778,497 繁中字 / 2.6M 英文字 / 跑時間 2h49m | haiku（先 gemini smoke OK，後切 haiku 衝刺）| 教父全集 Schaff 38 冊批次第 1 本 ✅；早先 gemini 預設誤譯 Justin = 遊斯丁，校過 ★建議譯名（殉道者猶斯定，思高）後跑完。Reader 可讀，三段切換正常 |
+| **2026-05-22** | ANF Vol 1（同上）| 中斷暫停 28/938 chunks（已併入上列完成） | gemini | 校 glossary／PROMPT/JSONL → 觸發新建 [translation-glossary](../translation-glossary/SKILL.md) 工具校所有譯名 |
 | **2026-05-22** | **ACCS OT XII vol 12**（古代基督徒聖經註釋叢書 卷十二：耶利米書‧耶利米哀歌）<br>`ebook_id: 3f678406-3969-49c1-a971-d76a6fd62f0e` | 112 chunks / 434,720 繁中字 / 1.19M 英文字 / 跑時間 1h24m / 涵蓋 General Intro + Jeremiah 1-52 + Lamentations 1-5 + Subject/Scripture/Author Index + Notes | haiku（Gemini 4 key 全 429，直接走 Haiku；Vatican II Haiku worker 並跑無衝突） | English source 從 archive.org `ancient-christian-commentary-on-scripture_ot` item 下載 EPUB+PDF；補因中譯 27 冊跳過的 gap；少數 chapter_path 標題抓取偏長（chunk 6/40/100）— 內文品質乾淨可讀 |
 | **2026-05-22** | **ACCS Apocrypha vol 15**（古代基督徒聖經註釋叢書 卷十五：次經）<br>`ebook_id: 37ff8191-8bc8-4eeb-bd84-d85fa3dd893b` | 243 chunks / 497,817 繁中字 / 1.43M 英文字 / 含多俾亞傳・智慧篇・德訓篇・巴錄・耶利米書信・三童歌・蘇撒納・比勒與大龍 + 教父人物簡介 + 各種索引 | gemini → 切 haiku | smoke test (gemini) 過 → 跑 gemini 撞 quota → 切 haiku direct 完成；中途撞 Anthropic 帳號 rate-limit 用 auto-pause 接住；最後按 src_order 排序入庫 |
 
