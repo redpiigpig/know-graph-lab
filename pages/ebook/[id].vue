@@ -1540,8 +1540,94 @@ async function confirmSaveExcerpt() {
 }
 
 // ── Lifecycle ──
+// ── Copy → auto-append Chicago citation ──
+// When user copies text from the reader area, append a Chicago-format
+// citation (with the nearest preceding {{p:N}} page marker as the source
+// page). Works in both single-column and bilingual modes. The user gets
+// raw selection (no citation) by holding Shift+Cmd/Ctrl-C — too far in
+// the weeds for v1; default copy is always augmented.
+function findNearestPageBeforeNode(startNode: Node | null): number | null {
+  if (!startNode) return null;
+  // Walk backwards in document order from startNode looking for a
+  // .page-marker element. We scope to the article container so we don't
+  // pick up markers from a different chunk.
+  const article = (startNode as Element).closest?.("article") || document.querySelector("article");
+  if (!article) return null;
+  const markers = Array.from(article.querySelectorAll<HTMLElement>(".page-marker"));
+  if (!markers.length) return null;
+  // Find the LAST marker that's positioned <= startNode in document order.
+  let best: HTMLElement | null = null;
+  for (const m of markers) {
+    // compareDocumentPosition: returns DOCUMENT_POSITION_PRECEDING (2) if
+    // m comes BEFORE startNode in the document.
+    const pos = startNode.compareDocumentPosition(m);
+    if (pos & Node.DOCUMENT_POSITION_PRECEDING) {
+      best = m;  // keep updating; later in iteration = later in document
+    } else if (pos & Node.DOCUMENT_POSITION_FOLLOWING) {
+      break;  // marker is after selection; we've passed our target
+    }
+  }
+  if (!best) {
+    // Fall back: use the FIRST marker on the page (selection might be
+    // before any marker in the chunk, but the chunk does contain one).
+    best = markers[0];
+  }
+  const n = parseInt(best.dataset.page || "", 10);
+  return Number.isFinite(n) ? n : null;
+}
+
+function buildChicagoCitation(pageNum: number | null): string {
+  const b = ebook.value;
+  if (!b) return "";
+  const parts: string[] = [];
+  // Author (Chinese if present, else English)
+  const author = b.author || b.author_en;
+  if (author) parts.push(author);
+  // Title (chinese) + original title in parens
+  const title = b.title?.replace(/（[^）]+）$/, "").trim() || "";
+  if (title) parts.push(`《${title}》`);
+  // Editor / translator
+  if (b.translator) parts.push(`${b.translator}`);
+  // Publisher (Location: Publisher, Year)
+  const pubBits: string[] = [];
+  if (b.publisher_location) pubBits.push(b.publisher_location);
+  if (b.publisher) pubBits.push(b.publisher);
+  if (b.publication_year) pubBits.push(b.publication_year);
+  if (pubBits.length) parts.push(`（${pubBits.join("：")}）`);
+  // Page
+  if (pageNum !== null) parts.push(`頁 ${pageNum}`);
+  // Chapter context — helps readers who want chunk-level, not page-level, ref
+  const chap = pageVolume.value || cleanChapterLabel.value;
+  if (chap && !title.includes(chap)) parts.push(chap);
+  return parts.join("，") + "。";
+}
+
+function onReaderCopy(e: ClipboardEvent) {
+  const sel = window.getSelection();
+  if (!sel || sel.isCollapsed) return;
+  const selText = sel.toString().trim();
+  if (!selText) return;
+  // Only intercept selections that ORIGINATE in the reader article. Anchors
+  // outside (sidebar, toolbar) keep native copy behavior.
+  const anchor = sel.anchorNode;
+  const article = (anchor as Element)?.closest?.("article")
+                  || (anchor?.parentElement?.closest("article"));
+  if (!article) return;
+
+  const pageNum = findNearestPageBeforeNode(anchor);
+  const citation = buildChicagoCitation(pageNum);
+  if (!citation) return;
+
+  // Compose. Use a newline + em-dash + citation for clear visual separation.
+  const augmented = `${selText}\n\n—— ${citation}`;
+  e.clipboardData?.setData("text/plain", augmented);
+  e.preventDefault();
+  showToast(pageNum ? `已複製 + 自動帶入頁 ${pageNum} 引用` : "已複製 + 自動帶入引用", "info");
+}
+
 onMounted(async () => {
   document.addEventListener("mousedown", hidePopupsOnOutsideClick);
+  document.addEventListener("copy", onReaderCopy);
 
   // Restore view mode from previous session. If user has explicitly chosen
   // a mode before, honor it; otherwise the watcher on pageSourceText will
@@ -1574,6 +1660,7 @@ onMounted(async () => {
 });
 onBeforeUnmount(() => {
   document.removeEventListener("mousedown", hidePopupsOnOutsideClick);
+  document.removeEventListener("copy", onReaderCopy);
 });
 useHead({ title: computed(() => ebook.value ? `${ebook.value.title} — 閱讀` : "閱讀") });
 </script>

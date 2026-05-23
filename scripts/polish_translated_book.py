@@ -225,9 +225,19 @@ ANF_VOLUMES: list[tuple[str, Optional[str]]] = [
 ]
 
 
+INTRO_NOTE_RE = re.compile(r"^Introductory\s+Notes?\s+to\s+(?:the\s+)?(.+)$", re.I)
+
+
 def detect_volume(source_text: str) -> Optional[str]:
     """If this chunk's source_text starts with an H3 that names a known
     parent work, return the Chinese volume name. Otherwise None.
+
+    Patterns checked (in order):
+      1. "Introductory Note to X" → resolve to X's volume (CCEL prefaces
+         each parent work with a separate translator note chunk that's
+         logically part of the same parent work — chunk 4 in ANF Vol 1
+         was misclassified as front matter before this).
+      2. Direct ANF_VOLUMES substring match.
 
     We only look at the FIRST H3 in the chunk; deeper H3s (rare) are noise.
     """
@@ -241,6 +251,16 @@ def detect_volume(source_text: str) -> Optional[str]:
     h_norm = heading
     if h_norm.lower().startswith("the "):
         h_norm = h_norm[4:]
+
+    # (1) Introductory Note → look for parent work name inside it
+    intro_m = INTRO_NOTE_RE.match(h_norm)
+    if intro_m:
+        target = intro_m.group(1).strip()
+        for pattern, vol in ANF_VOLUMES:
+            if pattern.lower() in target.lower():
+                return vol
+
+    # (2) Direct match against ANF_VOLUMES
     for pattern, vol in ANF_VOLUMES:
         if pattern.lower() in heading.lower() or pattern.lower() in h_norm.lower():
             return vol
@@ -264,6 +284,7 @@ def polish(ebook_id: str, dry_run: bool = False,
 
     n_cleaned = 0
     n_volume_set = 0
+    n_volume_headers = 0
     current_volume: Optional[str] = None
     sample_cleans: list[tuple[int, str, str]] = []
 
@@ -272,11 +293,23 @@ def polish(ebook_id: str, dry_run: bool = False,
         #   source_text H3 to detect parent-work boundary) ─
         if not skip_volumes:
             new_vol = detect_volume(c.get("source_text", ""))
+            volume_changed = new_vol and new_vol != current_volume
             if new_vol:
                 current_volume = new_vol
             if current_volume and c.get("volume") != current_volume:
                 c["volume"] = current_volume
                 n_volume_set += 1
+            # Mark the chunk that TRIGGERS a new volume as that volume's
+            # header — server's loadToc hides these from the entries list,
+            # and the volume name button becomes clickable to jump here.
+            # This kills the "瑪忒特致丟格那圖書信" duplicate-of-volume-name
+            # TOC noise.
+            if volume_changed:
+                c["is_volume_header"] = True
+                n_volume_headers += 1
+            elif "is_volume_header" in c:
+                # Stale flag from earlier polish run with different rules
+                del c["is_volume_header"]
 
         # ─ Chapter-path cleanup ─
         if not skip_chapter_clean:
