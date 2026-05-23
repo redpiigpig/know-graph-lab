@@ -240,13 +240,17 @@
               </div>
             </div>
 
-            <!-- ── NORMAL PAGE (any chunk that isn't the cover) ── -->
+            <!-- ── NORMAL PAGE (any chunk that isn't the cover) ──
+                 Breadcrumb shows the parent work (volume) as primary
+                 context; chapter title sits secondary. Book title is
+                 dropped — it's already in the topbar. -->
             <template v-else>
-              <div class="text-xs text-stone-400 mb-10 flex items-center gap-2 uppercase tracking-wider">
-                <span v-if="pageChapter">{{ cleanChapterLabel }}</span>
-                <span v-else>第 {{ currentPage }} 段</span>
-                <span>·</span>
-                <span class="normal-case tracking-normal">{{ ebook?.title }}</span>
+              <div class="text-stone-400 mb-10 flex items-baseline gap-2">
+                <span v-if="pageVolume" class="text-sm font-medium text-stone-700 tracking-tight">{{ pageVolume }}</span>
+                <span v-if="pageVolume && pageChapter" class="text-stone-300">›</span>
+                <span class="text-xs uppercase tracking-wider">
+                  {{ cleanChapterLabel || `第 ${currentPage} 段` }}
+                </span>
               </div>
             </template>
 
@@ -271,9 +275,9 @@
                 @mouseup="onTextSelectionEnd"
                 @click="onContentClick">
                 <div v-for="(pair, idx) in paragraphPairs" :key="idx"
-                  class="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-1 py-1">
+                  class="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-x-8 gap-y-1 py-1">
                   <div class="ebook-prose" v-html="pair.zh"></div>
-                  <div class="ebook-prose ebook-prose-en lg:border-l lg:border-stone-100 lg:pl-10"
+                  <div class="ebook-prose ebook-prose-en lg:border-l lg:border-stone-100 lg:pl-8"
                     v-html="pair.en"></div>
                 </div>
               </div>
@@ -550,6 +554,14 @@ function showToast(message: string, type: "info" | "error" = "info") {
 const cleanChapterLabel = computed(() =>
   (pageChapter.value || "").replace(/\[\^\d+\]/g, "").trim()
 );
+// Volume (parent work) the current chunk belongs to — populated by polish
+// step (`volume` field on chunks). Used as the primary breadcrumb label
+// since it gives reader-relevant context (which letter/treatise they're in)
+// vs the duplicated book title.
+const pageVolume = computed<string | null>(() => {
+  const here = toc.value.find(e => e.chunk_index === currentPage.value - 1);
+  return here?.volume ?? null;
+});
 
 // ── TOC grouping ──
 const frontMatter = computed(() => toc.value.filter(e => !e.volume));
@@ -654,18 +666,40 @@ function renderMarkdown(md: string, chunkIndex: number | null = null): string {
     if (/^-{3,}$/.test(block)) { out.push("<hr>"); continue; }
     const escaped = escapeHtml(block);
     let h: RegExpMatchArray | null;
-    if ((h = escaped.match(/^####\s+(.+)$/))) {
+    // Heading detection — match HEADING LINE separately from the rest of
+    // the block. CCEL EPUBs wrap long headings across multiple lines with
+    // single \n (e.g. `#### Chapter I.—After the salutation, the\nwriter
+    // declares...`), so `.+$` without /m fails to match and the whole
+    // block falls through to <p>{escaped}</p> showing raw `####`.
+    // The fix: capture (heading first-line, rest-of-block) and emit both.
+    if ((h = escaped.match(/^####\s+([^\n]+)(?:\n([\s\S]*))?$/))) {
       const id = chunkIndex !== null ? ` id="sec-${chunkIndex}-${subSeq}"` : "";
       subSeq++;
-      out.push(`<h4${id}>${inlineFmt(h[1], chunkIndex)}</h4>`);
+      out.push(`<h4${id}>${inlineFmt(h[1].trim(), chunkIndex)}</h4>`);
+      if (h[2]?.trim()) {
+        out.push(`<p>${inlineFmt(h[2].trim(), chunkIndex).replace(/\n/g, " ")}</p>`);
+      }
     }
-    else if ((h = escaped.match(/^###\s+(.+)$/))) {
+    else if ((h = escaped.match(/^###\s+([^\n]+)(?:\n([\s\S]*))?$/))) {
       const id = chunkIndex !== null ? ` id="sec-${chunkIndex}-${subSeq}"` : "";
       subSeq++;
-      out.push(`<h3${id}>${inlineFmt(h[1], chunkIndex)}</h3>`);
+      out.push(`<h3${id}>${inlineFmt(h[1].trim(), chunkIndex)}</h3>`);
+      if (h[2]?.trim()) {
+        out.push(`<p>${inlineFmt(h[2].trim(), chunkIndex).replace(/\n/g, " ")}</p>`);
+      }
     }
-    else if ((h = escaped.match(/^##\s+(.+)$/))) out.push(`<h2>${inlineFmt(h[1], chunkIndex)}</h2>`);
-    else if ((h = escaped.match(/^#\s+(.+)$/))) out.push(`<h1>${inlineFmt(h[1], chunkIndex)}</h1>`);
+    else if ((h = escaped.match(/^##\s+([^\n]+)(?:\n([\s\S]*))?$/))) {
+      out.push(`<h2>${inlineFmt(h[1].trim(), chunkIndex)}</h2>`);
+      if (h[2]?.trim()) {
+        out.push(`<p>${inlineFmt(h[2].trim(), chunkIndex).replace(/\n/g, " ")}</p>`);
+      }
+    }
+    else if ((h = escaped.match(/^#\s+([^\n]+)(?:\n([\s\S]*))?$/))) {
+      out.push(`<h1>${inlineFmt(h[1].trim(), chunkIndex)}</h1>`);
+      if (h[2]?.trim()) {
+        out.push(`<p>${inlineFmt(h[2].trim(), chunkIndex).replace(/\n/g, " ")}</p>`);
+      }
+    }
     else if (/^&gt;\s/.test(escaped)) {
       const lines = escaped.split(/\n/).map(ln => ln.replace(/^&gt;\s?/, "")).join("<br>");
       out.push(`<blockquote>${inlineFmt(lines, chunkIndex)}</blockquote>`);
