@@ -487,13 +487,16 @@ def _haiku_ocr_book(haiku_client, src_path: Path, book_id: str = None) -> list:
             )
             content.append({"type": "text", "text": prompt})
 
-            # Per-batch retry: 5 attempts with exponential backoff.
+            # Per-batch retry: 8 attempts with exponential backoff capped at 600s.
+            # Schedule: 10/20/40/80/160/320/600/600 → ~21 min worst-case waste
+            # but rides through Cloudflare hiccups that >2 min outage.
             # 401 (token expired) → call _refresh_oauth_token() + re-init client
             # immediately, don't waste exponential backoff on a doomed call.
             resp = None
             t_api = time.time()
             last_err = None
-            for attempt in range(1, 6):
+            MAX_BATCH_ATTEMPTS = 8
+            for attempt in range(1, MAX_BATCH_ATTEMPTS + 1):
                 try:
                     resp = haiku_client.messages.create(
                         model=_HAIKU_MODEL,
@@ -507,7 +510,7 @@ def _haiku_ocr_book(haiku_client, src_path: Path, book_id: str = None) -> list:
                     is_401 = getattr(e, "status_code", None) == 401 or "401" in str(e)[:200]
                     if is_401:
                         # Token expired — refresh + rebuild client, retry immediately
-                        print(f"    [haiku] batch {bi} attempt {attempt}/5 got 401, refreshing OAuth token", flush=True)
+                        print(f"    [haiku] batch {bi} attempt {attempt}/{MAX_BATCH_ATTEMPTS} got 401, refreshing OAuth token", flush=True)
                         _refresh_oauth_token()
                         try:
                             haiku_client = _make_anthropic_client(proactive_refresh=False)
@@ -515,11 +518,12 @@ def _haiku_ocr_book(haiku_client, src_path: Path, book_id: str = None) -> list:
                             continue  # retry without sleep
                         except Exception as ce:
                             print(f"    [haiku] batch {bi} client rebuild failed: {ce}", flush=True)
-                    if attempt == 5:
+                    if attempt == MAX_BATCH_ATTEMPTS:
                         # exhausted retries — re-raise to outer handler
                         raise
-                    wait_s = 10 * (2 ** (attempt - 1))  # 10, 20, 40, 80, 160
-                    print(f"    [haiku] batch {bi} attempt {attempt}/5 failed: {msg}; "
+                    # Capped exponential backoff: 10, 20, 40, 80, 160, 320, 600, 600
+                    wait_s = min(10 * (2 ** (attempt - 1)), 600)
+                    print(f"    [haiku] batch {bi} attempt {attempt}/{MAX_BATCH_ATTEMPTS} failed: {msg}; "
                           f"retry in {wait_s}s", flush=True)
                     time.sleep(wait_s)
 
