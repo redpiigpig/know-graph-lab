@@ -106,10 +106,10 @@ python scripts/translate_ebook_to_zh.py <ebook_id> --engine gemini --resume
 | **gemini** (`gemini-2.5-flash`) | 預設；OCR 不在跑、Gemini quota 寬時 | 4 key rotation；free tier 250 RPD × 4 keys；**遇 "all keys exhausted" 自動 fallback 到 Haiku 該段**（per-piece，不是 per-chunk） |
 | **haiku** (`HAIKU_MODEL`) | Gemini 已撞牆、不想浪費 ~70s/chunk 等 4 把 key 退讓 | OAuth；跟 Sonnet 同帳號但實測限額比 Sonnet 鬆很多 — 我互動跑 Opus + worker 跑 Haiku 可並行；偶爾撞 "exceed account rate limit" 由 auto-pause 接住 |
 
-**規則**（2026-05-22 update）：
-- 使用者在 idle 期、要最高品質 → `--engine sonnet`
-- 預設、不確定 → `--engine gemini`（自帶 Haiku fallback）
-- 知道 Gemini 一定撞牆（比如剛跑過大量翻譯、OCR Gemini 也在跑）→ `--engine haiku` 直接跳
+**規則**（2026-05-23 update — Schaff 全集實測）：
+- **大批次（>2 本書 / >500 chunks 連跑）→ 直接 `--engine haiku`**。Gemini free tier 4 key × 250 RPD ≈ 1000 chunks 就撞牆，之後每 chunk 浪費 ~60s 跑 4×3=12 次 429 retry 才 fallback。實測 ANF Vol 1：Gemini→Haiku fallback ~72s/chunk vs 直接 Haiku ~5s/chunk（**14x 加速**）。
+- 單本書 / 小批次 / 不確定 → `--engine gemini`（有 Haiku fallback 保底，反正撞牆會自動切）
+- 使用者在 idle 期、單篇要最高品質、預算寬 → `--engine sonnet`
 - 一律先看 [Quota 協調](#quota-協調) 確認狀態
 
 ## Quota 協調
@@ -233,7 +233,7 @@ API（`/api/ebooks/[id]`）`currentPage.source_text` + `currentPage.source_lang`
 
 **🚧 教父全集 Schaff 38 冊批次翻譯啟動中**（ANF 10 + NPNF1 14 + NPNF2 14；剩 37 本 / ~104M 英文字，預估多日連跑）。
 
-走 [scripts/translate_corpus_queue.py](../../../scripts/translate_corpus_queue.py) — 一個 queue runner 順序跑 `translate_ebook_to_zh.py --engine gemini --resume`。state 存 `scripts/logs/corpus_queue_state.json`，每本 per-book log 在 `scripts/logs/translate_<series>_vol<N>_<ts>.log`。中斷可從任何點 resume，整本翻完才會進下一本。
+走 [scripts/translate_corpus_queue.py](../../../scripts/translate_corpus_queue.py) — 一個 queue runner 順序跑 `translate_ebook_to_zh.py --engine haiku --resume`（**大批次預設 haiku**，見 [引擎選擇](#引擎選擇)）。state 存 `scripts/logs/corpus_queue_state.json`，每本 per-book log 在 `scripts/logs/translate_<series>_vol<N>_<ts>.log`。中斷可從任何點 resume，整本翻完才會進下一本。
 
 順序：ANF 1 → ANF 2 → … → ANF 10 → NPNF1 1 → … → NPNF1 14 → NPNF2 1 → … → NPNF2 14。
 
