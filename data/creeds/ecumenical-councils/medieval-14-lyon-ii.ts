@@ -36,11 +36,10 @@ export const medieval14: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'medieval-14-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com Latin corpus',
+      source: 'Documenta Catholica Omnia, 1274-1274,_Concilium_Lugdunense_II,_Documenta,_LT.doc — 31 canons 含 Union of Lyon + Ubi periculum conclave 制度',
     },
   ],
   summaryZh: `第二次里昂大公會議於 1274 年 5 月由教宗額我略十世 (Gregory X) 召開於里昂，三大議題：東西教會合一、收復聖地、教會內部改革。

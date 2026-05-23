@@ -36,11 +36,17 @@ export const early04: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Latin Editio Typica（待補；本會議希臘原文，拉丁多為回譯）',
+      label: '拉丁文本（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'early-04-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / PG Patrologia Graeca 希臘原文',
+      source: 'Documenta Catholica Omnia, 0451-0451,_Concilium_Chalcedonense,_Documenta_Omnia,_LT.doc — 含 Definition of Faith + 30 canons 之拉丁回譯（Rusticus Diaconi 等）',
+    },
+    {
+      lang: 'grc',
+      label: '希臘原文（Documenta Catholica Omnia / Alberigo COD 1973）',
+      text: '',
+      textKey: 'early-04-greek',
+      source: 'Documenta Catholica Omnia, 0451-0451,_Concilium_Chalcedonense,_Documenta_Omnia,_GR.pdf — Κανόνες τῆς ἐν Χαλκηδόνι Ἁγίας καὶ Οἰκουμενικῆς Δ´ Συνόδου；30 canons polytonic Greek，pdftotext UTF-8 抽取',
     },
   ],
   summaryZh: `迦克墩大公會議於 451-10-08 至 11-01 由東羅馬皇帝馬西安 (Marcian) 與皇后 Pulcheria 召開於迦克墩（君士坦丁堡對岸，今伊斯坦堡亞洲側 Kadıköy），是基督教歷史上最具規模 (520+ 主教) 與最具決定性的單一大公會議之一。

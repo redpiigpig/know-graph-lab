@@ -38,11 +38,10 @@ export const trent04: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文 — Session 4（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'trent-04-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com LAT0432',
+      source: 'Documenta Catholica Omnia, 1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf — Alberigo, Conciliorum Oecumenicorum Decreta (1973) 批判版；25 sessio 自全集 PDF 按 SESSIO {ROMAN} 標頭切分',
     },
   ],
   summaryZh: `第四會期是特利騰最具決定性的會期之一，頒兩份相關令：(1)《論正典聖經令》(Decree concerning the canonical Scriptures) 列舉 73 卷為正典，包括新教所拒的 7 卷「次經 / 第二正典」(Tobit, Judith, Wisdom, Sirach, Baruch, 1-2 Maccabees + Esther / Daniel 增補)，並宣告聖經與「未成文聖傳」(unwritten traditions) 並列為公教啟示之兩大來源 — 直接駁斥路德「唯獨聖經」(sola Scriptura) 原則。(2)《論聖經版本及使用令》(Decree concerning the edition and the use of the sacred books) 定耶柔米的拉丁武加大譯本 (Vulgate) 為「真實版本」(authentica)，未經教會審查不得擅自詮釋聖經、禁止印行未經許可之聖經譯本。此令確立了天主教在正典範圍、譯本權威、詮釋準則上與新教的根本分歧。`,

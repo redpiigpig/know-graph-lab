@@ -1,22 +1,47 @@
-（第 4 次大公會議「chalcedon」 中文版 ─ 尚未取得）
+（第 4 次大公會議「迦克墩 Chalcedon, 451」中文版 ─ 待補）
 
-── 來源說明 ──
+── 來源研究結論（2026-05-22 更新）──
 
-vatican.va 對前七次大公會議無中文官方版。線上 2026-05-22 全網搜尋確認
-無公開全文中譯本。
+**迦克墩信經（Chalcedonian Definition）部分** — 因被歷代各宗派禮儀／神學教育廣
+泛引用，中文線上**多個版本可得**：
 
-唯一權威全文中譯：
+  1. Wikipedia 中文 — 文言體譯本（出處未注，立場古典）
+     https://zh.wikipedia.org/zh-tw/迦克墩信經
 
-  《公教會之信仰與倫理教義選集》
+  2. 林格尼爾福音事工（Ligonier 中文）— 改革宗版
+     https://zh.ligonier.org/tc/resources/creeds-and-confessions/the-creed-of-chalcedon/
+     出處：《歷代教會信條精選》改革宗 5-6 頁
+     ⚠ 該頁標註「僅供個人參考使用，請勿以任何形式重製散播販賣」
+
+  3. 中華基督教會公理堂
+     https://www.ccc.org.hk/content_page.php?p=108
+     ⚠ 「© 中華基督教會公理堂 版權所有 不得轉載」
+
+  4. 臺北歸正福音教會（改革宗）
+     https://www.rectp.org/2012/12/blog-post_3.html
+
+  5. 阿羅本（Alopen）景教資源中心
+     https://alopen.org/Portals/0/Downloads/迦克墩信經--ZHT.pdf
+
+各版本之翻譯選詞略有差異（如「神性／天主性」「人性／血肉」「同體／同性」等），
+反映改革宗、天主教、東正教不同傳統用語。下載 / 抄錄時請注意各源的版權條款。
+
+**迦克墩 27 條 canons + 全部 acts** — 線上**無**公開全文中譯。
+**Tome of Leo（教宗良一世致 Flavian 之信）** — 部分中譯散見學術文章，無完整版。
+
+── 完整全文唯一權威來源 ──
+
+  《公教會之信仰與倫理教義選集》(Denzinger 中譯)
   原書：Denzinger-Hünermann《Enchiridion Symbolorum》(DH)
   出版：光啟文化事業（台灣）2013-02-01
   譯者：輔仁神學著作編譯會
-  ISBN：9789575467418
-  規格：拉中對照、2350 頁、精裝、NT$2,950
+  ISBN：9789575467418 / 2350 頁 / 拉中對照 / NT$2,950
   購買：校園書房 https://shop.campus.org.tw/ProductDetails.aspx?productID=000580489
+  迦克墩內容於 DH 300-303 範圍（信經定義 + 部分 canons）。
 
-前七次大公會議散落於 DH 100-600 範圍。取得後手抄／OCR 後覆蓋本檔。
+── SOP ──
 
-備援來源（雖無正式中譯，但有學界引用）：
-  - 香港中文大學崇基學院神學院相關研究
-  - 林榮洪《基督教歷代名著集成》(漢語基督教文化研究所譯本)
+選定來源後手抄／OCR 並覆蓋本檔。建議排版：
+  - `## 迦克墩信經（Definition of Faith）` 後接信經正文
+  - `## Canons of Chalcedon` 後接 27 條
+  - 章節 heading 與英文／拉丁版對齊三欄並列

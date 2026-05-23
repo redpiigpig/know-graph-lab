@@ -36,11 +36,18 @@ export const early05: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Latin Editio Typica（待補；本會議希臘原文，拉丁多為回譯）',
+      label: '拉丁文本（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'early-05-latin',
+      source: 'Documenta Catholica Omnia, 0553-0553,_Concilium_Constantinopolitanum_II,_Documenta,_LT.doc — 14 anathemas vs Three Chapters + 1 vs Origenism；Justinian 拉丁定稿',
+    },
+    {
+      lang: 'grc',
+      label: '希臘原文（待補；候選來源：Schwartz ACO Vol 4 archive.org）',
+      text: '',
+      textKey: 'early-05-greek',
       placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / PG Patrologia Graeca 希臘原文',
+      source: '待補：Eduard Schwartz, Acta Conciliorum Oecumenicorum Vol 4 (Concilium Universale Constantinopolitanum sub Iustiniano habitum, de Gruyter 1971) — archive.org 有 PDF；DCO 未直接提供希臘版',
     },
   ],
   summaryZh: `第二次君士坦丁堡大公會議於 553 年由東羅馬皇帝查士丁尼一世 (Justinian I) 召開於君士坦丁堡聖索菲亞大殿，由君士坦丁堡牧首 Eutychius 主持。教宗 Vigilius 雖人在君士坦丁堡卻拒不出席，會議仍在皇帝強勢下進行；Vigilius 最終於 553-12-08 簽署接受會議決議。

@@ -36,11 +36,10 @@ export const medieval10: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'medieval-10-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com Latin corpus',
+      source: 'Documenta Catholica Omnia, 1139-1139,_Concilium_Lateranum_II,_Documenta,_LT.doc — 30 canons 結束 Pierleoni 分裂',
     },
   ],
   summaryZh: `第二次拉特朗大公會議於 1139 年 4 月由教宗依諾增爵二世 (Innocent II) 召開，主要目的為結束自 1130 年起 Anacletus II 對立教宗 (antipope) 所造成的「Pierleoni 分裂」— 該分裂於 1138 年 Anacletus II 去世後逐漸瓦解，本次會議正式宣告其全部任命、聖秩、決議皆為無效。

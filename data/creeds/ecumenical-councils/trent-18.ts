@@ -38,11 +38,10 @@ export const trent18: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文 — Session 18（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'trent-18-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com LAT0432',
+      source: 'Documenta Catholica Omnia, 1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf — Alberigo, Conciliorum Oecumenicorum Decreta (1973) 批判版；25 sessio 自全集 PDF 按 SESSIO {ROMAN} 標頭切分',
     },
   ],
   summaryZh: `頒《關於選擇書籍及邀請所有人出席會議令》：授權設立《禁書目錄》(Index Librorum Prohibitorum) 編纂委員會，該目錄於 Session 25 結束後於 1564 年正式發布、由教宗庇護四世以 Dominici gregis 訓令公佈；其延續至 1966 年才被廢止。同令並邀請尚未到會的東方與西方教長盡速赴會。`,

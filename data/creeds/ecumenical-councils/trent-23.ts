@@ -38,11 +38,10 @@ export const trent23: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文 — Session 23（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'trent-23-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com LAT0432',
+      source: 'Documenta Catholica Omnia, 1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf — Alberigo, Conciliorum Oecumenicorum Decreta (1973) 批判版；25 sessio 自全集 PDF 按 SESSIO {ROMAN} 標頭切分',
     },
   ],
   summaryZh: `第二十三會期頒《論聖秩聖事令》4 章 + 8 條 canons：(1) 聖秩 (ordo) 為基督所立之七件聖事之一，賦予不可磨滅之神印 (character indelebilis)；(2) 神品三級 — 主教、司鐸、執事 — 皆為神律所立 (ex jure divino)；(3) 主教於司鐸之上，擁有按立聖秩、堅振之專屬權柄 — 駁路德、加爾文「普世司祭職」之削平主張；(4) 主教為宗徒之繼承人，由聖神所立治理教會。同會期之改革令規範神品授職標準、嚴格規範常駐 (residency)、首創「修院制度」(seminarium) — 規定每教區應設神學院培養神職人員 — 此為日後天主教神職教育最重大的單一改革。`,

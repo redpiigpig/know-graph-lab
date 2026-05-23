@@ -36,11 +36,10 @@ export const medieval13: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'medieval-13-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com Latin corpus',
+      source: 'Documenta Catholica Omnia, 1245-1245,_Concilium_Lugdunense_I,_Documenta,_LT.doc — 22 canons 罷黜 Frederick II + 蒙古應對',
     },
   ],
   summaryZh: `第一次里昂大公會議於 1245 年 6 月由教宗依諾增爵四世 (Innocent IV) 召開於法蘭西里昂，因羅馬處於皇帝腓特烈二世 (Frederick II Hohenstaufen) 軍事威脅下，教宗逃亡至里昂避難。

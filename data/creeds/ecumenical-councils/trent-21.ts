@@ -38,11 +38,10 @@ export const trent21: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文 — Session 21（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'trent-21-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com LAT0432',
+      source: 'Documenta Catholica Omnia, 1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf — Alberigo, Conciliorum Oecumenicorum Decreta (1973) 批判版；25 sessio 自全集 PDF 按 SESSIO {ROMAN} 標頭切分',
     },
   ],
   summaryZh: `第二十一會期頒《論二形領聖體及兒童領聖體令》4 章 + 4 條 canons：(1) 基督於兩形（餅與酒）任一形下皆完全臨在 — 故領一形者即領整個基督；(2) 領二形非神律必需 (non est iure divino), 教會有權柄因牧靈理由保留聖爵僅給司鐸 (此為西方拉丁禮之長期慣例)；(3) 駁 Hussite 派與後續改教派「平信徒必須領二形」之主張；(4) 兒童（未達理智年齡）領聖體非救恩必需。同會期之改革令規範神品授職、教區管理。`,

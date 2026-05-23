@@ -36,11 +36,10 @@ export const medieval16: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'medieval-16-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com Latin corpus',
+      source: 'Documenta Catholica Omnia, 1414-1414,_Concilium_Constantiense,_Documenta,_LT.doc — 含 Haec Sancta 公會議至上主義 + 罷黜三位教宗 + 處死 Jan Hus',
     },
   ],
   summaryZh: `康斯坦茨大公會議於 1414-1418 年由神聖羅馬皇帝 Sigismund 主導召集，目的為終結 1378 年以來的西方大分裂 (Western Schism) — 期間有三位並立教宗：Gregory XII (羅馬系)、Benedict XIII (亞維儂系)、John XXIII (比薩系，1409 年企圖整合分裂時設立)。三位皆無法獲得普世承認，西方教會陷入治理危機 40 年。

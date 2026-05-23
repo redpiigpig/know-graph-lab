@@ -38,11 +38,10 @@ export const trent16: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文 — Session 16（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'trent-16-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com LAT0432',
+      source: 'Documenta Catholica Omnia, 1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf — Alberigo, Conciliorum Oecumenicorum Decreta (1973) 批判版；25 sessio 自全集 PDF 按 SESSIO {ROMAN} 標頭切分',
     },
   ],
   summaryZh: `因 Maurice of Saxony 起兵與皇帝查理五世撤退，會議第二度被迫無限期暫停。1555 年儒略三世去世；瑪策祿二世在位 22 天便驟逝；繼任的保祿四世 (Paul IV, 1555-59) 反對重啟會議；直至 1559 年其去世、庇護四世 (Pius IV) 即位才於 1562 年 1 月重啟第三期。`,

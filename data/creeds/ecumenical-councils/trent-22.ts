@@ -38,11 +38,10 @@ export const trent22: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文 — Session 22（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'trent-22-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com LAT0432',
+      source: 'Documenta Catholica Omnia, 1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf — Alberigo, Conciliorum Oecumenicorum Decreta (1973) 批判版；25 sessio 自全集 PDF 按 SESSIO {ROMAN} 標頭切分',
     },
   ],
   summaryZh: `第二十二會期頒《論彌撒聖祭令》9 章 + 9 條 canons：(1) 彌撒為「真正、本義的祭祀」(verum et proprium sacrificium)，非僅紀念或感謝祭 (駁路德、加爾文)；(2) 十架犧牲 (cruentum) 與彌撒中之祭獻 (incruentum, 不流血) 為「同一犧牲」(unum et idem sacrificium)，唯施行方式不同 — 司鐸代基督施行；(3) 彌撒為「贖罪祭」(propitiatoria) 對生者與亡者皆有功效；(4) 私人彌撒 (missa privata, 即僅司鐸領聖體) 合法、有益；(5) 拉丁禮 (lingua latina) 為彌撒禮儀語言之合宜選擇 — 但同時譴責任何「禁止以本地語向會眾解釋禮儀」之主張。同會期之改革令規範彌撒禮儀施行、神職人員生活、教廷財政。`,

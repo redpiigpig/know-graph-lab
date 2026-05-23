@@ -36,11 +36,10 @@ export const medieval08: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'medieval-08-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com Latin corpus',
+      source: 'Documenta Catholica Omnia, 0869-0870,_Concilium_Constantinopolitanum_IV,_Documenta,_LT.doc — 27 canons + Photian Schism decrees',
     },
   ],
   summaryZh: `第八次大公會議於 869-70 年在君士坦丁堡聖索菲亞大殿舉行，由東羅馬皇帝瓦西里一世 (Basil I) 召集，教宗阿德良二世 (Adrian II) 特使主持。會議核心議題為解決「佛迪烏分裂」(Photian Schism, 858-867) — 廢黜宗主教伊納爵 (Ignatius) 後由佛迪烏 (Photios) 繼任所引發的東西方教會衝突。會議廢黜佛迪烏、復位伊納爵，並頒佈 27 條 canons 規範教會紀律。

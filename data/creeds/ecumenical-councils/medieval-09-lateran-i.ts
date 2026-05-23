@@ -36,11 +36,10 @@ export const medieval09: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'medieval-09-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com Latin corpus',
+      source: 'Documenta Catholica Omnia, 1123-1123,_Concilium_Lateranum_I,_Documenta,_LT.doc — 22 canons 沃姆斯協定批准',
     },
   ],
   summaryZh: `第一次拉特朗大公會議於 1123 年由教宗加里斯都二世 (Callixtus II) 召開於羅馬拉特朗聖若望大殿。**這是天主教歷史上第一次完全由西方教會召開、不邀請東方主教的大公會議**，反映 1054 大分裂後西方教會獨立發展之新階段。

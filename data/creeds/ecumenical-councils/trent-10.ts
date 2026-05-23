@@ -38,11 +38,10 @@ export const trent10: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文 — Session 10（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'trent-10-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com LAT0432',
+      source: 'Documenta Catholica Omnia, 1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf — Alberigo, Conciliorum Oecumenicorum Decreta (1973) 批判版；25 sessio 自全集 PDF 按 SESSIO {ROMAN} 標頭切分',
     },
   ],
   summaryZh: `波隆那期第二度延會令；會議實質已癱瘓。1547 年 9 月，保祿三世為緩解與皇帝關係，宣布無限期暫停 Bologna 會議。1549 年保祿三世去世；1550 年儒略三世 (Julius III) 即位後重啟特利騰會議。`,

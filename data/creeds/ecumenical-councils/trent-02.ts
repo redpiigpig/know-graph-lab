@@ -38,11 +38,10 @@ export const trent02: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文 — Session 2（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'trent-02-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com LAT0432',
+      source: 'Documenta Catholica Omnia, 1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf — Alberigo, Conciliorum Oecumenicorum Decreta (1973) 批判版；25 sessio 自全集 PDF 按 SESSIO {ROMAN} 標頭切分',
     },
   ],
   summaryZh: `第二會期僅頒一份紀律令《與會者生活法度令》(Decree touching the manner of living and other matters)，要求所有與會教長在參與大公會議期間以身作則：勤誦日課、頻領聖事、節制飲食、安撫與其他教長之間的歧見，並以基督徒謙遜的態度共商議題。此令為後續會期奠定屬靈基調，亦為當時普遍譴責的「教廷奢靡」風氣作出自我反省。`,

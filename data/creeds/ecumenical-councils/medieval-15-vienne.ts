@@ -36,11 +36,10 @@ export const medieval15: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'medieval-15-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com Latin corpus',
+      source: 'Documenta Catholica Omnia, 1311-1312,_Concilium_Viennense,_Documenta,_LT.doc — Constitutiones Clementinae 含廢除聖殿騎士團 / Olivi 神貧爭論',
     },
   ],
   summaryZh: `維埃納大公會議於 1311-12 年由教宗 Clement V 召開於法國維埃納，是「亞維儂教廷」(Avignon Papacy, 1309-77) 時期的第一次大公會議。

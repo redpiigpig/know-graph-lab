@@ -38,11 +38,10 @@ export const trent11: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文 — Session 11（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'trent-11-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com LAT0432',
+      source: 'Documenta Catholica Omnia, 1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf — Alberigo, Conciliorum Oecumenicorum Decreta (1973) 批判版；25 sessio 自全集 PDF 按 SESSIO {ROMAN} 標頭切分',
     },
   ],
   summaryZh: `儒略三世即位後，與皇帝查理五世和解，宣布大公會議於特利騰復會。第十一會期僅頒《復會令》宣告會議重新運作。第二期 (1551-52) 的特色是：德意志改教派代表 (新教 estates) 應皇帝邀請出席，要求重啟成義論辯，但未獲滿足。`,

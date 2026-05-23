@@ -38,11 +38,10 @@ export const trent06: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文 — Session 6（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'trent-06-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com LAT0432',
+      source: 'Documenta Catholica Omnia, 1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf — Alberigo, Conciliorum Oecumenicorum Decreta (1973) 批判版；25 sessio 自全集 PDF 按 SESSIO {ROMAN} 標頭切分',
     },
   ],
   summaryZh: `第六會期是特利騰最具神學深度的會期，頒《論成義令》(Decree on justification) 16 章 + 33 條 canons，正面定義天主教成義論以回應 1517 以來的改教爭議：(1) 成義是「藉聖事獲得的稱義與內在成聖」(non per solam imputationem, sed interna iustitia)，非僅外在歸算（駁路德 imputed justification）；(2) 恩寵先於人意 (gratia praeveniens)，但人需以自由意志合作 (cooperation)；(3) 信、望、愛三德於受洗時皆由聖神灌注 (infusion)；(4) 受洗後犯死罪可失成義，但可藉告解聖事 (penance) 重獲；(5) 善功在恩寵中具真實功德 (meritum)，能增加成義恩寵；(6) 凡稱「人單藉信即可獲救」者，當受逐出 (anathema sit)。此令與《奧斯堡信條》(1530) 第 4 條「因信稱義」形成 469 年神學鴻溝，直至 1999《路德－天主教合一稱義宣言》(JDDJ) 才達成「實質共識」。`,

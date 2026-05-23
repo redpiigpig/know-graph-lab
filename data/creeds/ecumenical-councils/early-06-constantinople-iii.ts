@@ -36,11 +36,18 @@ export const early06: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Latin Editio Typica（待補；本會議希臘原文，拉丁多為回譯）',
+      label: '拉丁文本（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'early-06-latin',
+      source: 'Documenta Catholica Omnia, 0680-0680,_Concilium_Constantinopolitanum_III,_Documenta,_LT.doc — Definition of Faith vs Monothelitism + 譴責 Sergius / Honorius 等之拉丁定稿',
+    },
+    {
+      lang: 'grc',
+      label: '希臘原文（待補；候選來源：Schwartz/Riedinger ACO Series II Vol 2 archive.org）',
+      text: '',
+      textKey: 'early-06-greek',
       placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / PG Patrologia Graeca 希臘原文',
+      source: '待補：Riedinger, Acta Conciliorum Oecumenicorum Series II Vol 2 (Concilium Universale Constantinopolitanum Tertium, de Gruyter 1990-92) — archive.org 有 PDF；DCO 未直接提供希臘版',
     },
   ],
   summaryZh: `第三次君士坦丁堡大公會議於 680-11-07 至 681-09-16 由東羅馬皇帝君士坦丁四世 (Constantine IV) 召開於君士坦丁堡皇宮的 Trullan 圓頂大殿（故會議亦稱「Trullan I」— 區別於 692 年同地的 Trullan / Quinisext 會議）。

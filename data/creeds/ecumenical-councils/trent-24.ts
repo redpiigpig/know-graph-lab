@@ -38,11 +38,10 @@ export const trent24: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文 — Session 24（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'trent-24-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com LAT0432',
+      source: 'Documenta Catholica Omnia, 1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf — Alberigo, Conciliorum Oecumenicorum Decreta (1973) 批判版；25 sessio 自全集 PDF 按 SESSIO {ROMAN} 標頭切分',
     },
   ],
   summaryZh: `第二十四會期頒《論婚姻聖事令》12 條 canons + 著名的《Tametsi 詔令》：(1) 婚姻為基督所立之聖事，賦予恩寵；唯主教或經主教允許之司鐸為婚禮主持 (witness)；(2) 駁路德「婚姻非聖事、僅為公民契約」之主張；(3) 教會擁有訂立婚姻障礙、廢除無效婚姻之權柄；(4) 確認獨身、童貞 (caelibatus, virginitas) 較婚姻更完美 — 駁路德「神父應結婚」、「童貞較婚姻不更善」之主張；(5)《Tametsi 詔令》(decree of Tametsi) 之歷史里程碑：自此「秘密婚姻」(clandestine marriage, 即無證人之婚誓) 自動無效 — 須於本堂司鐂前並有至少兩證人見證，方為有效婚姻 — 此為西方婚姻法的根本性改革，終結中世紀以來秘密婚姻之亂象。同會期之改革令規範主教選任、教省會議、教廷財政。`,

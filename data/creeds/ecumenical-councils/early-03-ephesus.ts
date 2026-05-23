@@ -36,11 +36,17 @@ export const early03: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Latin Editio Typica（待補；本會議希臘原文，拉丁多為回譯）',
+      label: '拉丁文本（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'early-03-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / PG Patrologia Graeca 希臘原文',
+      source: 'Documenta Catholica Omnia, 0431-0431,_Concilium_Ephesenum,_Documenta_Omnia,_LT.doc — Conciliorum Oecumenicorum Decreta (Alberigo et al., 1973) 內中世紀拉丁回譯（含 Cyril 致 Nestorius 信件原文 + 12 anathemas + 8 canons）',
+    },
+    {
+      lang: 'grc',
+      label: '希臘原文（earlychurchtexts.com — Schaff NPNF2 Vol 14）',
+      text: '',
+      textKey: 'early-03-greek',
+      source: 'earlychurchtexts.com /main/ephesus/canons_of_ephesus_01-02.shtml — 8 canons in polytonic Greek. 注：本檔僅含 8 條 canons；Cyril 致 Nestorius 第二封信、12 anathemas 之希臘原文仍待補（候選來源 Schwartz ACO Vol 1 archive.org）',
     },
   ],
   summaryZh: `以弗所大公會議於 431-06-22 至 7 月由東羅馬皇帝狄奧多西二世 (Theodosius II) 召開於小亞細亞以弗所聖母教堂，是東西方教會基督論辯論之第一場大公會議。

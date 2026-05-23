@@ -38,11 +38,10 @@ export const trent25: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文 — Session 25（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'trent-25-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com LAT0432',
+      source: 'Documenta Catholica Omnia, 1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf — Alberigo, Conciliorum Oecumenicorum Decreta (1973) 批判版；25 sessio 自全集 PDF 按 SESSIO {ROMAN} 標頭切分',
     },
   ],
   summaryZh: `閉幕會期 (1563 年 12 月 3-4 日) 以前所未見之速度通過多份決議，回應改教家對天主教各項實踐之批評：(1)《論煉獄》— 肯定煉獄存在、生者祈禱與彌撒可助亡者；(2)《論聖人代禱、聖髑及聖像敬禮》— 肯定向諸聖代求合法；聖髑值得敬禮 (veneratio, 非崇拜 adoratio)；聖像為「教導文盲」之工具，敬禮聖像之榮歸於所代表之原型 — 直接駁斥喀爾文派之破壞聖像 (iconoclasm)；(3)《論修會與修女》— 規範修院生活、禁止強迫入會、要求 16 歲以上方能發誓；(4)《論大赦》— 肯定大赦合法、教會有權頒大赦；但嚴禁以金錢為條件之大赦交易（駁 Tetzel-style 弊端，即引發路德起事之直接導火線）；(5)《論禁書目錄》— 確認禁書目錄編纂；(6) 委託教宗編纂《羅馬要理問答》(Roman Catechism, 1566)、《羅馬日課經》(Roman Breviary, 1568)、《羅馬彌撒經本》(Roman Missal, 1570) — 此三書成為特利騰禮儀復興之核心成果；(7)《論禁食與大齋日》； (8) 會議宣告閉幕、感謝教宗、感謝皇帝、解散 — 全體與會教長 (255 位) 簽署所有特利騰決議；(9) 庇護四世於 1564 年 1 月 26 日以 Benedictus Deus 詔令正式批准 (confirmatio) 全部特利騰決議。同年 11 月以 Iniunctum nobis 詔令頒佈「特利騰信經」(Tridentine Profession of Faith)，要求所有神職人員、教師、修會會士宣誓宣信。`,

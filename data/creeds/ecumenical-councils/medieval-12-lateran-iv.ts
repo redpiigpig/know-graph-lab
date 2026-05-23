@@ -36,11 +36,10 @@ export const medieval12: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'medieval-12-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com Latin corpus',
+      source: 'Documenta Catholica Omnia, 1215-1215,_Concilium_Lateranense_IIII,_Documenta,_LT.pdf — 70 canons 含變質說 transubstantiatio + Omnis utriusque sexus',
     },
   ],
   summaryZh: `第四次拉特朗大公會議於 1215 年 11 月由教宗依諾增爵三世 (Innocent III) 召開，是中世紀最具規模與決定性的大公會議 — 與會超過 1200 位教會代表（含主教、隱修院長、教座代表、各國皇族特使），歷時 3 週通過 70 條 canons（後稱 Constitutiones），涵蓋幾乎所有 13 世紀拉丁西方教會生活面向。

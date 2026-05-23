@@ -1,6 +1,6 @@
 ---
 name: scripture-canon-portal
-description: 五個基督教經典/傳統對照工具的入口（/scripture 聖經多版本+教父註釋+各教會次經第二正典 / /creeds 21 次大公會議+各教會尼西亞信經+新教信條全譜 / /canon-law 教會法規 / /fathers 教父著作搜索 / /apocrypha 典外文獻搜索）。Status: **實作中 — /scripture 32 版本平行對照 + /creeds 21 次大公會議全部上線（信經區 1-2 + 早期東方 3-7 + 中世紀 8-18 + Trent 19 + 梵一 20 + 梵二 21；共 50+ Creed entries）（2026-05-22）**。
+description: 五個基督教經典/傳統對照工具的入口（/scripture 聖經多版本+教父註釋+各教會次經第二正典 / /creeds 21 次大公會議+各教會尼西亞信經+新教信條全譜 / /canon-law 教會法規 / /fathers 教父著作搜索 / /apocrypha 典外文獻搜索）。Status: **實作中 — /scripture 32 版本平行對照 + /creeds 21 次大公會議全部上線；2026-05-23 新增 DCO 原文 scrape pipeline：5 早期希臘＋拉丁 + 11 中世紀拉丁 + Trent 25 sessio 拉丁 + 2 早期希臘 GR.pdf + Ephesus 希臘 8 canons 全數入庫（48 份新原文檔；總共 50+ Creed entries × 3-4 語）**。
 ---
 
 # Scripture, Tradition, Canon, Fathers, Apocrypha Portal
@@ -643,19 +643,68 @@ done
 
 **Anathema content note**：兩文件含「Si quis dixerit ... anathema sit」(DF 18 條 + PA 收尾) 內容，全部從外部 source 直接 scrape 為 .txt，Claude 沒生成 anathema 文本；安全通過 content filter。
 
-### 🟡 待補（其餘大公會議文件 — 注意 content-filter 規避策略）
+### ✅ 大公會議原文 scrape pipeline — 2026-05-23 上線
 
-> ⚠️ 不要在同一個 session 裡批量新增以下檔案，會被攔截。逐份做、做完 commit + push、再開新 session。
-> 含 anathema 詛咒句型的（以弗所 431 / 迦克墩 451）必須採上方「策略 C」— Claude 寫架構，使用者自貼原文。**梵一 2 份／Trent 25 場已採 scrape + generator 路徑成功**。
+**41 份原文檔案一次性 ingest 完成**（5 早期希＋拉/2 缺希；11 中世紀拉；25 Trent sessio 拉），透過兩支腳本：
 
-**最高優先（剩餘信經 — 2 份）**
+| 腳本 | 來源 | 工具 | 涵蓋 |
+|---|---|---|---|
+| [scripts/scrape_dco_originals.py](../../../scripts/scrape_dco_originals.py) | documentacatholicaomnia.eu (DCO) | pdftotext -enc UTF-8 -layout + antiword | 19 targets：early 3-7 LT.doc 與 GR.pdf／medieval 8-18 LT.doc 或 LT.pdf／Trent omnibus PDF |
+| [scripts/scrape_earlychurchtexts_ephesus.py](../../../scripts/scrape_earlychurchtexts_ephesus.py) | earlychurchtexts.com | BeautifulSoup HTML parse | Ephesus 8 canons polytonic Greek |
+| [scripts/_update_council_ts_latin.py](../../../scripts/_update_council_ts_latin.py) | local | regex | 批次移除 36 份 TS 檔的 latin placeholder（11 medieval + 25 Trent） |
 
-| slug（檔名） | 子資料夾 | order | 來源描述 | anathema 風險 |
-|---|---|---|---|---|
-| `ecumenical-councils/03-` 以弗所 431 | ecumenical-councils | 3 | Schaff NPNF2 Vol 14 + Cyril 十二章 | ⚠️ 有 |
-| `ecumenical-councils/04-` 迦克墩 451 定義 | ecumenical-councils | 4 | Schaff Creeds Vol 2 + Schaff NPNF2 Vol 14 | ⚠️ 有 |
+**DCO URL pattern**（用戶若要 scrape 別份注意）：
+- 單年會議：`03d/{Y}-{Y},_{Title},_{Subtitle},_{LANG}.{pdf|doc}`
+- 跨年會議：`03d/{Y1}-{Y2}-,_{Title},_{Subtitle},_{LANG}.{pdf|doc}` — 注意 dash 在 comma 前
+- 範例：
+  - `03d/0451-0451,_Concilium_Chalcedonense,_Documenta_Omnia,_GR.pdf` ✓
+  - `03d/1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf` ✓
 
-**21 次大公會議全數上線**（2026-05-22）：信經區 1-2 + 早期東方 3-7 + 中世紀 8-18 + Trent 19 + 梵一 20 + 梵二 21。共 50+ Creed entries 於 `/creeds`。
+**抽取工具規則**：
+- `.pdf` → `pdftotext -enc UTF-8 -layout` — 完美保留 polytonic Greek（ἀ-ῗ 含 breathings + accents），UTF-8 encoding 是關鍵（預設 latin-1 會吃掉所有希臘字）
+- `.doc` → `antiword -w 0` — 抽乾淨拉丁無格式雜訊；但會吐 footnote 上標數字串（manuscript apparatus 編號），後處理可清
+
+**Trent 25 sessio 切分**：scrape_dco_originals.py 內 `split_trent_sessions()` 用 `^[ \t]*SESSIO (I|II|...|XXV)\s*$` regex 切。25 sessio 全部成功切分；程序性會期（Session 8/10/11/17/19/20）內容較短（1-3KB），大型 dogmatic 會期（Session 6 成義令 38KB / Session 14 告解 49KB / Session 24 婚姻令 64KB / Session 25 閉幕 79KB）內容齊全。
+
+**檔案佈局**：
+```
+data/creeds/ecumenical-councils/
+  early/
+    early-03-greek.txt   (Ephesus 8 canons polytonic Greek — earlychurchtexts.com)
+    early-03-latin.txt   (Ephesus DCO LT.doc — Alberigo COD 1973)
+    early-04-greek.txt   (Chalcedon 30 canons polytonic Greek — DCO GR.pdf)
+    early-04-latin.txt   (Chalcedon DCO LT.doc)
+    early-05-latin.txt   (Const II 14 anathemas — DCO LT.doc; 希臘待補 Schwartz ACO Vol 4)
+    early-06-latin.txt   (Const III Definition of Faith — DCO LT.doc; 希臘待補 Riedinger ACO II.2)
+    early-07-greek.txt   (Nicaea II Definition + 22 canons polytonic Greek — DCO GR.pdf)
+    early-07-latin.txt   (Nicaea II DCO LT.doc)
+  medieval/
+    medieval-08~18-latin.txt   (11 場全 — 3 來自 LT.pdf, 8 來自 LT.doc)
+  trent/
+    trent-01~25-latin.txt      (25 sessio — 從 1 個 omnibus PDF 切分)
+    _trent-full-latin.txt      (Trent 完整未切分版作 reference)
+```
+
+**TS metadata schema 更新**：
+- 早期 3-7：versions array 加入 `lang: 'grc'` 第 4 個版本（Const II/III 標 placeholder: true 因希臘未補）
+- 早期 + 中世紀 + Trent 共 36 份：lat 版本移除 placeholder: true 並更新 source 描述為 DCO + Alberigo COD 1973 引用
+
+**已知限制 / Phase 2 工作**：
+1. **per-canon 嚴格三欄對齊**（用戶 2026-05-23 要求）— 目前 latin .doc 抽取的內容缺乏明顯 canon 編號標頭（antiword 抹除 Word 的 bold 樣式）；希臘 PDF 有 `Κανὼν A'` 標頭但 latin 沒有對應。**Phase 2 需要 normalize pass**：用 LLM (Gemini Flash batch) 對每份 latin .txt 加 `N. body` 編號，確保跨語言對齊。paragraphParser.ts 已支援 `N. body` 格式。
+2. **DCO Latin .doc footnote 上標雜訊** — 抽取結果含 manuscript apparatus 編號串（如 "subiectos52 53 54 55 56 57"）；需要 regex 清理 `\s*\d+\s*\d+\s*\d+...` 連串數字。
+3. **早期 5 Const II / 早期 6 Const III 希臘原文未取得** — DCO 只有 LT.doc；候選 Schwartz/Riedinger ACO archive.org PDF；scrape 較複雜，留待 Phase 3。
+4. **Ephesus 希臘僅含 8 canons** — Cyril 致 Nestorius 第二封信 + 12 Anathemas 之希臘原文未補；候選 Schwartz ACO Vol 1 archive.org 或 PG (Patrologia Graeca) Migne。
+
+### 🟡 待補（中文版 + 部分希臘原文）
+
+**21 次大公會議全數上線**（2026-05-22-23）：信經區 1-2 + 早期東方 3-7 + 中世紀 8-18 + Trent 19 + 梵一 20 + 梵二 21。共 50+ Creed entries 於 `/creeds`；3-19 拉丁原文 2026-05-23 全數 ingest 完成。
+
+**剩餘缺口（按優先級）**：
+1. **中文版** — 3-7 早期、8-18 中世紀、19 Trent (25 sessio)、20 梵一 (DF + PA) 共 44 份；vatican.va 無中文；唯一權威紙本 Denzinger（光啟 2013 / ISBN 9789575467418）
+2. **梵二 IM 中文** — vatican.va PDF Content-Length=0；候選 cathlinks.org / Catholic.org.hk 重抓
+3. **早期 5 + 6 希臘原文** — 候選 Schwartz/Riedinger ACO archive.org
+4. **Ephesus Cyril 信 + 12 Anathemas 希臘** — 候選 PG / ACO Vol 1
+5. **per-canon 三欄嚴格對齊** — 需要 Gemini Flash batch 對 latin .txt 做 canon 編號 normalize
 
 **第三批（Ecumenical Dialogue 20-21 世紀文件）**：見下方 `/creeds` 章節 ecumenical-dialogue 清單；JDDJ 1999 優先（與 Trent Session 6 成義令對話直接相關）。
 

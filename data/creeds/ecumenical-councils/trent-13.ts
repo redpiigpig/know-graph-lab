@@ -38,11 +38,10 @@ export const trent13: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文 — Session 13（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'trent-13-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com LAT0432',
+      source: 'Documenta Catholica Omnia, 1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf — Alberigo, Conciliorum Oecumenicorum Decreta (1973) 批判版；25 sessio 自全集 PDF 按 SESSIO {ROMAN} 標頭切分',
     },
   ],
   summaryZh: `第十三會期頒《論至聖聖體聖事令》8 章 + 11 條 canons，正面定義聖體教義：(1) 變質說 (transubstantiatio) — 餅酒之實體 (substantia) 於祝聖時整個變為基督之體血，唯有附體 (accidentia, 即外在感官特徵) 仍存；(2) 基督真實、實質、實體地臨在聖體 (vere, realiter, substantialiter)，非僅象徵 (駁茨溫利 Zwingli)、亦非僅與餅同在 (駁路德 consubstantiation)、亦非僅靈性同在 (駁加爾文 spiritual presence)；(3) 一旦祝聖，基督即「常存」(permanens) 於聖體中，故合於朝拜與遊行 (Corpus Christi)；(4) 領聖體前需告解，受死罪者領聖體即犯瀆聖罪 (sacrilege)。同會期之《改革令》規範訴訟程序、主教權限。`,

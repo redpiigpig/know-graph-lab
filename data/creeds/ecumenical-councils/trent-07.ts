@@ -38,11 +38,10 @@ export const trent07: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文 — Session 7（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'trent-07-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com LAT0432',
+      source: 'Documenta Catholica Omnia, 1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf — Alberigo, Conciliorum Oecumenicorum Decreta (1973) 批判版；25 sessio 自全集 PDF 按 SESSIO {ROMAN} 標頭切分',
     },
   ],
   summaryZh: `第七會期定義「七件聖事」(septem sacramenta) 教義：聖事為「基督所親自設立、賦予恩寵的可見記號」；七件聖事 — 洗禮、堅振、聖體、告解、終傅、聖秩、婚配 — 皆為基督所立、為救恩所必需（雖非每人皆領每件）。同會期頒兩部分 canons：總論 13 條、洗禮 14 條、堅振 3 條。核心立場：(1) 七件全部、不多不少，駁路德的「僅二件聖事 (洗、餐) 為主立」；(2) 聖事 ex opere operato 因事工自身而有效，非取決於施行者或領受者之德行；(3) 主教為堅振之唯一通常施行者。同會期亦頒《改革令》規範教區之常駐 (residency) 與多重聖俸 (plurality) 之取締。`,

@@ -36,11 +36,10 @@ export const medieval18: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'medieval-18-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com Latin corpus',
+      source: 'Documenta Catholica Omnia, 1512-1512,_Concilium_Lateranum_V,_Documenta_Omnia,_LT.pdf — 駁 Conciliarism 重申教宗權威；1517 閉幕後 7 個月 Luther 95 條',
     },
   ],
   summaryZh: `第五次拉特朗大公會議於 1512-1517 年由教宗 Julius II 召開、Leo X 結束。本次會議的直接動機為對抗 1511 年由法王路易十二支持、5 位反 Julius II 樞機在比薩 (Pisa) 召開的「對立會議」(Conciliabulum Pisanum) — 試圖以公會議至上主義罷黜教宗。Julius II 召開拉特朗 V 作為正統公會議反制；比薩派最終於 1513 年解散。

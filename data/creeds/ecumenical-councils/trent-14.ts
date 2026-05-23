@@ -38,11 +38,10 @@ export const trent14: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文 — Session 14（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'trent-14-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com LAT0432',
+      source: 'Documenta Catholica Omnia, 1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf — Alberigo, Conciliorum Oecumenicorum Decreta (1973) 批判版；25 sessio 自全集 PDF 按 SESSIO {ROMAN} 標頭切分',
     },
   ],
   summaryZh: `第十四會期頒兩聖事令：(1)《論告解聖事》9 章 + 15 條 canons：告解 (paenitentia) 為基督所立第二件「重洗」性質的聖事；三要素為痛悔 (contritio)、告明 (confessio)、補贖 (satisfactio)；神父因聖秩擁有「司法性赦罪權」(potestas iudicialis)，非僅宣告而是真實赦免；對重罪 (peccatum mortale) 之告明為神律義務，須年至少一次。(2)《論終傅聖事》3 章 + 4 條 canons：終傅 (extrema unctio, 即病傅之古稱) 為雅各書 5:14-15 所暗示、基督所立、宗徒所傳之聖事，賦予病人罪赦、靈魂安慰、有時甚至身體痊癒之恩寵；唯司鐸 (presbyter) 為其施行者。同會期之《改革令》規範教省會議、主教對神父之裁判權。`,

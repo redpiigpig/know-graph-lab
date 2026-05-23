@@ -1,7 +1,17 @@
-（Session 19 拉丁版尚未取得 — vatican.va 對 Trent (1545-63) 僅
-提供 Italian + 部分 Latin extract。
-可能來源：
-  - documentacatholicaomnia.eu (Latin)
-  - Wikisource la (Latin)
-  - intratext.com LAT0432
-取得後請手動覆蓋本檔。）
+# Trent Session 19 — Latin
+# Source: Documenta Catholica Omnia (DCO) / Alberigo, Conciliorum Oecumenicorum Decreta, 1973
+
+SESSIO XIX
+                                             14 maii 1562
+                              [Prorogatur publicatio decretorum]
+
+       Sacrosancta oecumenica et generalis Tridentina Synodus in Spiritu Sancto
+legitime congregata praesidentibus in ea eisdem Apostolicae Sedis legatis decreta ea
+quae hodie in praesenti sessione statuenda et sancienda erant iustis nonnullis ac honestis
+causis in feriam quintam post proximam solemnitatem corporis Christi quae erit pridie
+nonas iunii proroganda esse censuit ac prorogat dicta que die sessionem habendam esse
+ac celebrandam omnibus indicit.
+
+       Interea rogandus est Deus et pater domini nostri auctor pacis ut sanctificet corda
+omnium quo adiuvante sancta Synodus et nunc et semper meditari ac peragere valeat
+quae ad eius laudem et gloriam pertineant.

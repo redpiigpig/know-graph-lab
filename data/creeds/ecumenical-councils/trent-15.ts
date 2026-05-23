@@ -38,11 +38,10 @@ export const trent15: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文 — Session 15（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'trent-15-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com LAT0432',
+      source: 'Documenta Catholica Omnia, 1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf — Alberigo, Conciliorum Oecumenicorum Decreta (1973) 批判版；25 sessio 自全集 PDF 按 SESSIO {ROMAN} 標頭切分',
     },
   ],
   summaryZh: `頒新教代表「平安通行證」(salvus conductus) 邀請彼等出席會議陳述立場，但實質對話未成。1552 年春 Maurice of Saxony 領德意志諸侯反叛、進攻 Innsbruck，皇帝查理五世倉皇撤退，會議第二度被迫無限期暫停。1555 年儒略三世去世。`,

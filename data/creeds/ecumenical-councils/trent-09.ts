@@ -38,11 +38,10 @@ export const trent09: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文 — Session 9（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'trent-09-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com LAT0432',
+      source: 'Documenta Catholica Omnia, 1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf — Alberigo, Conciliorum Oecumenicorum Decreta (1973) 批判版；25 sessio 自全集 PDF 按 SESSIO {ROMAN} 標頭切分',
     },
   ],
   summaryZh: `波隆那期的第一會期 — 因出席教長過少（多為意大利籍）、查理五世持續抗議、教宗保祿三世與皇帝關係緊張，會議無法處理任何實質教義或紀律議題，僅頒延會令。此為大公會議近乎癱瘓的一年標誌。`,

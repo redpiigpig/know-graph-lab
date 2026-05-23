@@ -36,11 +36,17 @@ export const early07: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Latin Editio Typica（待補；本會議希臘原文，拉丁多為回譯）',
+      label: '拉丁文本（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'early-07-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / PG Patrologia Graeca 希臘原文',
+      source: 'Documenta Catholica Omnia, 0787-0787,_Concilium_Nicaenum_II,_Documenta,_LT.doc — Definition of Faith (含聖像敬禮 latreia/proskynesis 區別) + 22 canons 之拉丁定稿',
+    },
+    {
+      lang: 'grc',
+      label: '希臘原文（Documenta Catholica Omnia / Alberigo COD 1973）',
+      text: '',
+      textKey: 'early-07-greek',
+      source: 'Documenta Catholica Omnia, 0787-0787,_Concilium_Nicaenum_II,_Documenta,_GR.pdf — Definition of Faith + 22 canons polytonic Greek，pdftotext UTF-8 抽取',
     },
   ],
   summaryZh: `第二次尼西亞大公會議於 787-09-24 至 10-23 由拜占庭女皇 Irene (代年幼皇帝 Constantine VI 攝政) 召開於小亞細亞尼西亞（即第一次尼西亞 325 同一地點）；君士坦丁堡牧首 Tarasius 主持，教宗 Adrian I 派特使參加。

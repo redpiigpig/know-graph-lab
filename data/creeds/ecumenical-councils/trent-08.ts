@@ -38,11 +38,10 @@ export const trent08: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文 — Session 8（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'trent-08-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com LAT0432',
+      source: 'Documenta Catholica Omnia, 1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf — Alberigo, Conciliorum Oecumenicorum Decreta (1973) 批判版；25 sessio 自全集 PDF 按 SESSIO {ROMAN} 標頭切分',
     },
   ],
   summaryZh: `因特利騰城內爆發傳染病疫情（可能為斑疹傷寒），第八會期投票表決將會議移至教廷國境內的波隆那 (Bologna)。然此舉引發與會教長嚴重分裂：神聖羅馬帝國皇帝查理五世 (Charles V) 強烈反對 — 因 Bologna 為教廷直轄、會議移此將完全脫離帝國影響；德意志教長拒絕同行、留守特利騰。會議實質陷入兩派並行狀態，使後續會期形同癱瘓。此會期為特利騰首度長期休會之開端。`,

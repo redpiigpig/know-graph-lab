@@ -36,11 +36,10 @@ export const medieval11: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'medieval-11-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com Latin corpus',
+      source: 'Documenta Catholica Omnia, 1179-1179,_Concilium_Lateranum_III,_Documenta,_LT.doc — 27 canons 含教宗選舉 2/3 多數',
     },
   ],
   summaryZh: `第三次拉特朗大公會議於 1179 年 3 月由教宗亞歷山大三世 (Alexander III) 召開，旨在結束自 1159 年以來與神聖羅馬皇帝腓特烈一世 (Frederick I Barbarossa) 之間的長期衝突 — 後者支持四位對立教宗（Victor IV, Paschal III, Callixtus III, Innocent III）對抗 Alexander III 將近二十年。1177 年《威尼斯和約》(Peace of Venice) 終結戰爭，本次會議為其神學與紀律收尾。

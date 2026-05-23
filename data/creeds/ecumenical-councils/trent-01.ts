@@ -38,11 +38,10 @@ export const trent01: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文 — Session 1（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'trent-01-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com LAT0432',
+      source: 'Documenta Catholica Omnia, 1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf — Alberigo, Conciliorum Oecumenicorum Decreta (1973) 批判版；25 sessio 自全集 PDF 按 SESSIO {ROMAN} 標頭切分',
     },
   ],
   summaryZh: `特利騰大公會議於 1545 年 12 月 13 日由保祿三世（Paul III）召開於北義特利騰 (Trento)，三位教宗特使 — Del Monte 樞機（後為儒略三世）、Cervini 樞機（後為瑪策祿二世）、Pole 樞機 — 主持開幕禮儀。此會期僅頒佈程序性「開幕令」（Decree touching the opening of the Council），確立會議三大目標：駁斥馬丁路德等改教運動所主張的「異端」、改革教會內部弊端、恢復基督徒和平。出席首日的與會教長僅 25 餘人，遠少於前次大公會議規模，反映 16 世紀中葉天主教世界的政治分裂與信仰危機。`,

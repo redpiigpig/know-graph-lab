@@ -36,11 +36,10 @@ export const medieval17: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'medieval-17-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com Latin corpus',
+      source: 'Documenta Catholica Omnia, 1431-1431,_Concilium_Basileense,_Documenta_Omnia,_LT.pdf — 含 Laetentur Caeli 佛羅倫斯合一令 + 與科普特／亞美尼亞／亞述合一令',
     },
   ],
   summaryZh: `本會議綜合三個地點與兩個競爭階段：(1) 巴塞爾 (Basel, 1431-37) 由教宗 Martin V 召開，原為延續 Constance 改革議程；(2) 費拉拉 (Ferrara, 1438-39) 由教宗 Eugene IV 遷址召開，因巴塞爾派抵制教宗權威而轉移正統會議所在；(3) 佛羅倫斯 (Florence, 1439-43) 因 Ferrara 爆發疫情遷址；(4) 羅馬 (Rome, 1443-45) 最後階段於羅馬閉幕。同時，留在巴塞爾的部分人員選出對立教宗 Felix V (1439-49)，與 Eugene IV 對峙；此「Basel 分裂」於 1449 年和解結束。

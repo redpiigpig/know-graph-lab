@@ -38,11 +38,10 @@ export const trent17: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文 — Session 17（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'trent-17-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com LAT0432',
+      source: 'Documenta Catholica Omnia, 1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf — Alberigo, Conciliorum Oecumenicorum Decreta (1973) 批判版；25 sessio 自全集 PDF 按 SESSIO {ROMAN} 標頭切分',
     },
   ],
   summaryZh: `庇護四世 (Pius IV) 即位後重啟會議；第三期 (1562-63) 在 Cardinal Morone 與 Cardinal Borromeo 等改革派主導下高效推進，於不到 2 年內通過剩餘所有重大教義與紀律令，為會議劃下句點。`,

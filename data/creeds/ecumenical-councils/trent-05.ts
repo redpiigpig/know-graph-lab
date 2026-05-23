@@ -38,11 +38,10 @@ export const trent05: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文 — Session 5（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'trent-05-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com LAT0432',
+      source: 'Documenta Catholica Omnia, 1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf — Alberigo, Conciliorum Oecumenicorum Decreta (1973) 批判版；25 sessio 自全集 PDF 按 SESSIO {ROMAN} 標頭切分',
     },
   ],
   summaryZh: `第五會期頒《論原罪令》(Decree concerning original sin) 五條 canons：肯定亞當因犯罪失去原義並將罪傳給全人類；唯獨基督的功勞能拯救人類；嬰兒受洗的必要性；洗禮確實除去原罪（駁斥路德「罪僅被遮蓋」之說），但「情慾」(concupiscentia, 即犯罪傾向) 仍存於受洗者中 — 此非罪本身、而是罪之促因。此會期同時頒佈第一份《改革令》(Decree on reformation) 規範主教講道義務與聖經教師職位設立，開啟「教義 + 紀律」並行的會議模式。`,

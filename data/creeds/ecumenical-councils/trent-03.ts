@@ -38,11 +38,10 @@ export const trent03: Creed = {
     },
     {
       lang: 'lat',
-      label: 'Editio Typica Latina（待補；documentacatholicaomnia.eu / Wikisource la 候選）',
+      label: '拉丁原文 — Session 3（Documenta Catholica Omnia / Alberigo COD 1973）',
       text: '',
       textKey: 'trent-03-latin',
-      placeholder: true,
-      source: '待補：來源候選 → documentacatholicaomnia.eu / la.wikisource.org / intratext.com LAT0432',
+      source: 'Documenta Catholica Omnia, 1545-1563-,_Concilium_Tridentinum,_Canones_et_Decreta,_LT.pdf — Alberigo, Conciliorum Oecumenicorum Decreta (1973) 批判版；25 sessio 自全集 PDF 按 SESSIO {ROMAN} 標頭切分',
     },
   ],
   summaryZh: `第三會期頒《信德象徵令》(Decree concerning the Symbol of Faith)，正式重申第一次君士坦丁堡大公會議（381）所制定的「尼西亞-君士坦丁堡信經」(含「和子說」filioque 西方版)，作為「全教會所必信、所必宣認」的信仰基礎。此舉並非新訂信經，而是宣告：後續所有教義決議皆以此信經為詮釋起點，重申天主教與東正教在前七次大公會議共識上的延續，同時對改教家提出「重新審視傳統」的挑戰作出嚴正回應。`,
