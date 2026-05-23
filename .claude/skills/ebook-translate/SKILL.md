@@ -229,14 +229,27 @@ API（`/api/ebooks/[id]`）`currentPage.source_text` + `currentPage.source_lang`
 
 ---
 
-## 當前狀態（2026-05-22 上午）
+## 當前狀態（2026-05-23 下午）
 
-無 in-flight 翻譯任務。簡→繁 batch 已掃完全庫（1688 本 / 29 本簡體轉好 / 3 本 JSONL 壞讀不開未處理）。
+**🚧 教父全集 Schaff 38 冊批次翻譯啟動中**（ANF 10 + NPNF1 14 + NPNF2 14；剩 37 本 / ~104M 英文字，預估多日連跑）。
+
+走 [scripts/translate_corpus_queue.py](../../../scripts/translate_corpus_queue.py) — 一個 queue runner 順序跑 `translate_ebook_to_zh.py --engine gemini --resume`。state 存 `scripts/logs/corpus_queue_state.json`，每本 per-book log 在 `scripts/logs/translate_<series>_vol<N>_<ts>.log`。中斷可從任何點 resume，整本翻完才會進下一本。
+
+順序：ANF 1 → ANF 2 → … → ANF 10 → NPNF1 1 → … → NPNF1 14 → NPNF2 1 → … → NPNF2 14。
+
+當前進度查詢：
+
+```powershell
+python scripts/translate_corpus_queue.py --status
+```
+
+簡→繁 batch 已掃完全庫（1688 本 / 29 本簡體轉好 / 3 本 JSONL 壞讀不開未處理）。
 
 ## 待翻清單（按優先順序）
 
-1. **ACCS 第 29 卷 / companion index**（若 archive.org 有；確認是否值得）
-2. （未來）使用者指明的其他英文書
+1. **Schaff 38 冊**（自動跑中，見上）
+2. **ACCS 第 29 卷 / companion index**（若 archive.org 有；確認是否值得）
+3. （未來）使用者指明的其他英文書
 
 完成歷史見 [完成清單](#完成清單)。
 
@@ -267,11 +280,15 @@ API（`/api/ebooks/[id]`）`currentPage.source_text` + `currentPage.source_lang`
 
 ## 下次接手第一動
 
-1. 確認沒有殘留 worker：
+1. 確認沒有殘留 worker，並注意 **Python launcher 假象**：
 
    ```powershell
-   Get-CimInstance Win32_Process -Filter "Name='python.exe'" | Where-Object { $_.CommandLine -like "*translate_ebook*" }
+   Get-CimInstance Win32_Process -Filter "Name='python.exe'" | Where-Object { $_.CommandLine -like "*translate_*" -or $_.CommandLine -like "*corpus*" } | Select-Object ProcessId, ParentProcessId, CommandLine | Format-List
    ```
+
+   ⚠️ **正常會看到 2 個 python.exe per worker**（whisper_venv launcher + uv interpreter，parent-child）— 不是 race condition。判斷依據是 ParentProcessId：每個 `_whisper_venv\Scripts\python.exe` 都該有一個 child `uv\python\...\python.exe`。**真的 race condition 是同一個 ebook_id 出現在兩條獨立的 parent chain。**
+
+2. 在跑 Schaff queue → `python scripts/translate_corpus_queue.py --status` 看進度，**不要再啟 worker**，會撞 JSONL race。要插隊單跑某本 → 先 TaskStop 整個 queue，再 `--only SERIES:VOL`。
 
 2. 看待翻清單挑下一本，先 `--inspect` 看 source 結構：
 
