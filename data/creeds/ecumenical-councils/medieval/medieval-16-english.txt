@@ -14,15 +14,11 @@ Pope Directory Leo XIV Francis Benedict XVI John Paul II Pope Paul VI John XXIII
 
 Contact Us
 
-
 ## Post navigation
-
 
 ## Council of Constance 1414-18
 
-
 ## INTRODUCTION 1
-
 
 ## [This is the introduction given by Tanner in Decrees of the Ecumenical Councils ]
 
@@ -32,16 +28,13 @@ The council, from the very beginning, proposed the following three topics:
 
 1. To bring unity back to the church and to make an end to the schism which had divided the church since 1378 and which the council held at Pisa in 1409 had not healed but rather aggravated when it elected Alexander V as a third pope. When the council of Constance opened, Christians owed obedience to three different popes: some owed obedience to Gregory XII of the Roman party others to Benedict XIII of the Avignon party, and others to John XXIII, who had been elected after the death of Alexander V. John XXIII and Benedict XIII were deposed by the council, Gregory XII voluntarily resigned. Then Martin V was elected pope on 11 November 1417 and he was regarded as the legitimate pontiff by the church as a whole.
 
-
 ## 2. To eradicate heresies , especially those spread by John Wyclif in Britain and by John Hus and Jerome of Prague in Bohemia.
-
 
 ## 3. To reform the corrupt morals of the church . This, however, was only partly accomplished in the final sessions of the council.
 
 With regard to the ecumenical nature of the sessions, there is dispute about those before the election of Martin V and also about the significance and force of the approval which he gave to the matters transacted by the council. The decrees notably those of sessions 3-5 and the decree Frequens ( session 39 ), appear to proceed from the council’s teaching. Objection has been made to them on the grounds of the primacy of the Roman pontiff. There is no doubt, however, that in enacting these decrees there was solicitude and care to choose the true and sure way ahead in order to heal the schism, and this could only be done by the authority of a council.
 
 The acts of the council of Constance were first published by Jerome of Croaria at Hagenau in 1500 ( Acta scitu dignissima docteque concinnata Constantiensis concilii celebratissimi = Asd), from the epitome of the acts which the council of Basel had ordered to be compiled and publicly accepted in 1442. This edition of the Basel epitome was followed by all general collections of the councils (including Editio Romana, IV 127-300, even though it ignores the council of Basel). These collections, down to Mansi (27, 529-1240), added various appendices. H. von der Hardt, in his great collection of the sources of the council of Constance, made an edition of the acts and decrees of the council according to the earliest trustworthy documents ( Magnum oecumenicum Constantiense concilium , in six tomes, Frankfurt-Leipzig 1696-1700; tome IV, Corpus actorum et decretorum magni Constantiensis concilii de Ecclesiae refor matione, unione ac fide = Hardt). We have followed von der Hardt’s edition throughout and have noted only the principle variants provided by Asd. We indicate only, and do not print, the decrees pertaining to the internal administration of the council and of the church and to judicial acts.
-
 
 ## Second Introduction
 
@@ -64,7 +57,6 @@ Malatesta then delegated his fellow envoy, the cardinal John Domenici, to pronou
 The work of Pisa was now almost undone, and by this council which, in origin, was a continuation of Pisa. It had suppressed the Pisan pope whom Pisa, with biting words, had rejected as a schismatic and no pope.”
 
 Phillip Hughes A History of the Church , p289-291
-
 
 ## SESSION 1 – 16 November 1414
 
@@ -92,12 +84,9 @@ Since it may happen that some of the participants will not be in their rightful 
 
 Since certain ministers and officials are required in order that this council may proceed, we therefore depute, with this sacred council’s approval, those named below, namely our beloved sons… [17 ]
 
-
 ## SESSION 2 – 2 March 1415
 
-
 ## [John XXIII publicly offers to resign the papacy]
-
 
 ## SESSION 3 – 26 March 1415
 
@@ -115,9 +104,7 @@ Next, that this sacred council may not be transferred to another place, except f
 
 Next, that prelates and other persons who should be present at this council may not depart from this place before it has ended, except for a reasonable cause which is to be examined by persons who have been, or will be, deputed by this sacred council. When the reason has been examined and approved, they may depart with the permission of the person or persons in authority. When the individual departs, he is bound to give his power to others who stay, under penalty of the law, as well as to others appointed by this sacred council, and those who act to the contrary are to be prosecuted.
 
-
 ## SESSION 4 – 30 March 1415
-
 
 ## [Decrees of the council on its authority and integrity, in the abbreviated form read out by cardinal Zabarella]
 
@@ -133,11 +120,9 @@ Next, that all translations of prelates, and depositions of the same, or of any 
 
 Next, that for the sake of unity new cardinals should not be created. Moreover, lest for reasons of deceit or fraud some persons may be said to have been made cardinals recently, this sacred council declares that those persons are not to be regarded as cardinals who were not publicly recognised and held to be such at the time of our lord pope’s departure from the city of Constance.
 
-
 ## SESSION 5 – 6 April 1415
 
 The famous Haec Sancta decree contradicting Vatican 1 on papal primacy/infallibility.
-
 
 ## [Decrees of the council, concerning its authority and integrity, which had been abbreviated by cardinal Zabarella at the preceding session, against the wishes of the nations, and which are now restored, repeated and confirmed by a public decree]
 
@@ -153,159 +138,111 @@ Next, that all translations of prelates, or depositions of the same, or of any o
 
 Next, it declares that the lord pope John XXIII and all the prelates and other persons summoned to this sacred council, and other participants in the same synod, have enjoyed and do now enjoy full freedom, as has been apparent in the said sacred council, and the opposite has not been brought to the notice of the said summoned persons or of the said council. The said sacred council testifies to this before God and people. [21 ]
 
-
 ## SESSION 6 – 17 April 1415
 
 [At this session there were, among other minor deliberations, decrees about admitting the office of proctor in the matter of pope John XXIII’s renunciation of the papacy and about the citing of Jerome of Prague.]
-
 
 ## SESSION 7 – 2 May 1415
 
 [At this session it was decreed that pope John should be publicly summoned and that the summons of Jerome of Prague, now charged with contumacy, should be repeated.]
 
-
 ## SESSION 8 – 4 May 1415
 
 This most holy synod of Constance, which is a general council and represents the catholic church and is legitimately assembled in the holy Spirit, for the eradication of the present schism and the elimination of the errors and heresies which are sprouting beneath its shade and for the reform of the church, make this perpetual record of its acts.
-
 
 ## [Sentence condemning various articles of John Wyclif]
 
 We learn from the writings and deeds of the holy fathers that the catholic faith without which (as the Apostle says) it is impossible to please God , has often been attacked by false followers of the same faith, or rather by perverse assailants, and by those who, desirous of the world’s glory, are led on by proud curiosity to know more than they should; and that it has been defended against such persons by the church’s faithful spiritual knights armed with the shield of faith. Indeed these kinds of wars were prefigured in the physical wars of the Israelite people against idolatrous nations. Therefore in these spiritual wars the holy catholic church, illuminated in the truth of faith by the rays of light from above and remaining ever spotless through the Lord’s providence and with the help of the patronage of the saints, has triumphed most gloriously over the darkness of error as over profligate enemies. In our times, however, that old and jealous foe has stirred up new conflicts so that the approved ones of this age may be made manifest. Their leader and prince was that pseudo-christian John Wyclif . He stubbornly asserted and taught many articles against the christian religion and the catholic faith while he was alive. We have decided that forty-five of the articles should be set out on this page as follows.
 
-
 ## 1. The material substance of bread, and similarly the material substance of wine, remain in the sacrament of the altar.
-
 
 ## 2. The accidents of bread do not remain without their subject in the said sacrament.
 
-
 ## 3. Christ is not identically and really present in the said sacrament in his own bodily persona.
-
 
 ## 4. If a bishop or a priest is in mortal sin, he does not ordain or confect or consecrate or baptise.
 
-
 ## 5. That Christ instituted the mass has no basis in the gospel.
-
 
 ## 6. God ought to obey the devil.
 
-
 ## 7. If a person is duly contrite, all exterior confession is superfluous and useless for him.
-
 
 ## 8. If a pope is foreknown as damned and is evil, and is therefore a limb of the devil, he does not have authority over the faithful given to him by anyone, except perhaps by the emperor.
 
-
 ## 9. Nobody should be considered as pope after Urban VI. Rather, people should live like the Greeks, under their own laws.
-
 
 ## 10. It is against sacred scripture for ecclesiastics to have possessions.
 
-
 ## 11. No prelate should excommunicate anyone unless he first knows that the person has been excommunicated by God; he who does so thereby becomes a heretic and an excommunicated person.
-
 
 ## 12. A prelate excommunicating a cleric who has appealed to the king or the king’s council is thereby a traitor to the king and the kingdom.
 
-
 ## 13. Those who stop preaching or hearing the word of God on account of an excommunication issued by men are themselves excommunicated and will be regarded as traitors of Christ on the day of judgment.
 
-
 ## 14. It is lawful for any deacon or priest to preach the word of God without authorisation from the apostolic see or from a catholic bishop.
-
 
 ## 15. Nobody is a civil lord or a prelate or a bishop while he is in mortal sin.
 
 16. Secular lords can confiscate temporal goods from the church at their discretion when those who possess them are sinning habitually, that is to say sinning from habit and not just in particular acts.
 
-
 ## 17. The people can correct sinful lords at their discretion.
-
 
 ## 18. Tithes are purely alms, and parishioners can withhold them at will on account of their prelates’ sins.
 
-
 ## 19. Special prayers applied by prelates or religious to a particular person avail him or her no more than general prayers, if other things are equal.
-
 
 ## 20. Whoever gives alms to friars is thereby excommunicated.
 
-
 ## 21. Whoever enters any religious order whatsoever, whether it be of the possessioners or the mendicants, makes himself less apt and suitable for the observance of God’s commands.
-
 
 ## 22. Saints who have founded religious orders have sinned in so doing.
 
-
 ## 23. Members of religious orders are not members of the christian religion.
-
 
 ## 24. Friars are bound to obtain their food by manual work and not by begging. [22 ]
 
-
 ## 25. All are simoniacs who bind themselves to pray for people who help them in temporal matters.
-
 
 ## 26. The prayer of someone foreknown as damned profits nobody.
 
-
 ## 27. All things happen from absolute necessity.
-
 
 ## 28. Confirming the young, ordaining clerics and consecrating places have been reserved to the pope and bishops because of their greed for temporal gain and honour.
 
-
 ## 29. Universities, places of study, colleges, degrees and academic exercises in these institutions were introduced by a vain pagan spirit and benefit the church as little as does the devil.
-
 
 ## 30. Excommunication by a pope or any prelate is not to be feared since it is a censure of antichrist.
 
-
 ## 31. Those who found religious houses sin, and those who enter them belong to the devil.
-
 
 ## 32. It is against Christ’s command to enrich the clergy.
 
-
 ## 33. Pope Silvester and the emperor Constantine erred in endowing the church.
-
 
 ## 34. All the members of mendicant orders are heretics, and those who give them alms are excommunicated.
 
-
 ## 35. Those who enter a religious or other order thereby become incapable of observing God’s commands, and consequently of reaching the kingdom of heaven, unless they leave them.
-
 
 ## 36. The pope with all his clerics who have property are heretics, for the very reason that they have property; and so are all who abet them, namely all secular lords and other laity.
 
-
 ## 37. The Roman church is Satan’s synagogue; and the pope is not the immediate and proximate vicar of Christ and the apostles.
-
 
 ## 38. The decretal letters are apocryphal and seduce people from Christ’s faith, and clerics who study them are fools.
 
-
 ## 39. The emperor and secular lords were seduced by the devil to endow the church with temporal goods.
-
 
 ## 40. The election of a pope by the cardinals was introduced by the devil.
 
-
 ## 41. It is not necessary for salvation to believe that the Roman church is supreme among the other churches. [23 ]
 
-
 ## 42. It is ridiculous to believe in the indulgences of popes and bishops.
-
 
 ## 43. Oaths taken to confirm civil commerce and contracts between people are unlawful.
 
 44. Augustine, Benedict and Bernard are damned, unless they repented of having owned property and of having founded and entered religious orders; and thus they are all heretics from the pope down to the lowest religious.
 
-
 ## 45. All religious orders alike were introduced by the devil.
-
 
 ## [Condemnation of Wyclif’s books]
 
@@ -319,26 +256,21 @@ This sacred synod has had the aforesaid forty-five articles examined and frequen
 
 When the doctors and masters of the university of Oxford examined the aforesaid written works, they found 260 articles in addition to the 45 articles that have been mentioned. Some of them coincide in meaning with the 45 articles, even if not in the forms of words used. Some of them, as has been said, were and are heretical, some seditious, some erroneous, others rash, some scandalous, others unsound, and almost all of them contrary to good morals and the catholic truth. They were therefore condemned by the said university in correct and scholastic form. This most holy synod, therefore, after deliberating as mentioned above, repudiates and condemns the said articles and each one of them in particular; and it forbids, commands and decrees in the same way as for the other 45 articles. We order the contents of these 260 articles to be included below [26 ] .
 
-
 ## [The council pronounces John Wyclif a heretic, condemns his memory and orders his bones to be exhumed]
 
 Furthermore, a process was begun, on the authority or by decree of the Roman council, and at the command of the church and of the apostolic see, after a due interval of time, for the condemnation of the said Wyclif and his memory. Invitations and proclamations were issued summoning those who wished to defend him and his memory, if any still existed. However, nobody appeared who was willing to defend him or his memory. Witnesses were examined by commissaries appointed by the reigning lord pope John and by this sacred council, regarding the said Wyclif’s final impenitence and obstinacy. Legal proof was thus provided, in accordance with all due observances, as the order of law demands in a matter of this kind, regarding his impenitence and final obstinacy. This was proved by clear indications from legitimate witnesses. This holy synod, therefore, at the instance of the procurator-fiscal and since a decree was issued to the effect that sentence should be heard on this day, declares, defines and decrees that the said John Wyclif was a notorious and obstinate heretic who died in heresy, and it anathematises him and condemns his memory. It decrees and orders that his body and bones are to be exhumed, if they can be identified among the corpses of the faithful, and to be scattered far from a burial place of the church, in accordance with canonical and lawful sanctions.
-
 
 ## SESSION 9 – 13 May 1415
 
 [Pope John is publicly summoned for the second time and an inquiry against him is decreed.]
 
-
 ## SESSION 10 – 14 May 1415
 
 [John XXIII is summoned for the third time, he is accused of contumacy and is suspended from the papacy.]
 
-
 ## SESSION 11 – 25 May 1415
 
 [Pope John XXIII is publicly charged and forty-four articles against him are produced.]
-
 
 ## SESSION 12 – 29 May 1415
 
@@ -346,24 +278,19 @@ Furthermore, a process was begun, on the authority or by decree of the Roman cou
 
 This most holy general synod of Constance, representing the catholic church, legitimately assembled in the holy Spirit, for the eradication of the present schism and errors, for bringing about the reform of the church in head and members, and in order that the unity of the church may be obtained more easily, quickly and freely, pronounces, determines, decrees and ordains that if it happens that the apostolic see becomes vacant, by whatever means this may happen, then the process of electing the next supreme pontiff may not begin without the deliberation and consent of this sacred general council. If the contrary is done then it is by this very fact, by the authority of the said sacred council, null and void. Nobody may accept anyone elected to the papacy in defiance of this decree, nor in any way adhere to or obey him as pope, under pain of eternal damnation and of becoming a supporter of the said schism. Those who make the election in such a case, as well as the person elected, if he consents, and those who adhere to him, are to be punished in the forms prescribed by this sacred council. The said holy synod, moreover, for the good of the church’s unity, suspends all positive laws, even those promulgated in general councils, and their statutes, ordinances, customs and privileges, by whomsoever they may have been granted, and penalties promulgated against any persons, insofar as these may in any way impede the effect of this decree.
 
-
 ## [Sentence deposing pope John XXIII]
 
 In the name of the holy and undivided Trinity, Father and Son and holy Spirit Amen. This most holy general synod of Constance, legitimately assembled in the holy Spirit, having invoked Christ’s name and holding God alone before its eyes, having seen the articles drawn up and presented in this case against the lord pope John XXIII, the proofs brought forward, his spontaneous submission and the whole process of the case, and having deliberated maturely on them, pronounces, decrees and declares by this definitive sentence which it commits to writing: that the departure of the aforesaid lord pope John XXIII from this city of Constance and from this sacred general council, secretly and at a suspicious hour of the night, in disguised and indecent dress, was and is unlawful, notoriously scandalous to God’s church and to this council, disturbing and damaging for the church’s peace and unity, supportive of this long-standing schism, and at variance with the vow, promise and oath made by the said lord pope John to God, to the church and to this sacred council; that the said lord pope John has been and is a notorious simoniac, a notorious destroyer of the goods and rights not only of the Roman church but also of other churches and of many pious places, and an evil administrator and dispenser of the church’s spiritualities and temporalities; that he has notoriously scandalised God’s church and the christian people by his detestable and dishonest life and morals, both before his promotion to the papacy and afterwards until the present time, that by the above he has scandalised and is scandalising in a notorious fashion God’s church and the christian people; that after due and charitable warnings, frequently reiterated to him, he obstinately persevered in the aforesaid evils and thereby rendered himself notoriously incorrigible; and that on account of the above and other crimes drawn from and contained in the said process against him, he should be deprived of and deposed from, as an unworthy, useless and damnable person, the papacy and all its spiritual and temporal administration. The said holy synod does now remove, deprive and depose him. It declares each and every Christian, of whatever state, dignity or condition, to be absolved from obedience, fidelity and oaths to him. It forbids all Christians henceforth to recognise him as pope, now that as mentioned he has been deposed from the papacy, or to call him pope, or to adhere to or in any way to obey him as pope. The said holy synod, moreover, from certain knowledge and its fullness of power, supplies for all and singular defects that may have occurred in the above-mentioned procedures or in any one of them. It condemns the said person, by this same sentence, to stay and remain in a good and suitable place, in the name of this sacred general council, in the safe custody of the most serene prince lord Sigismund, king of the Romans and of Hungary, etc., and most devoted advocate and defender of the universal church, as long as it seems to the said general council to be for the good of the unity of God’s church that he should be so condemned. The said council reserves the right to declare and inflict other punishments that should be imposed for the said crimes and faults in accordance with canonical sanctions, according as the rigour of justice or the counsel of mercy may advise.
-
 
 ## [Decree to the effect that none of the three contenders for the papacy may be re-elected as pope]
 
 The said holy synod decrees, determines and ordains for the good of unity in God’s church that neither the lord Baldassare de Cossa, recently John XXIII , nor Angelo Correr nor Peter de Luna, called Gregory XII and Benedict XIII by their respective obediences, shall ever be re-elected as pope. If the contrary happens, it is by this very fact null and void. Nobody, of whatever dignity or pre-eminence even if he be emperor, king, cardinal or pontiff, may ever adhere to or obey them or any one of them, contrary to this decree, under pain of eternal damnation and of being a supporter of the said schism. Let those who presume to the contrary, if there are any in the future, also be firmly proceeded against in other ways, even by invoking the secular arm. [28 ]
 
-
 ## SESSION 13 – 15 June 1415
-
 
 ## [Condemnation of communion under both kinds, recently revived among the Bohemians by Jakoubek of Stribro]
 
 In the name of the holy and undivided Trinity, Father and Son and holy Spirit, Amen. Certain people, in some parts of the world, have rashly dared to assert that the christian people ought to receive the holy sacrament of the eucharist under the forms of both bread and wine. They communicate the laity everywhere not only under the form of bread but also under that of wine, and they stubbornly assert that they should communicate even after a meal, or else without the need of a fast, contrary to the church’s custom which has been laudably and sensibly approved, from the church’s head downwards, but which they damnably try to repudiate as sacrilegious. Therefore this present general council of Constance, legitimately assembled in the holy Spirit, wishing to provide for the safety of the faithful against this error, after long deliberation by many persons learned in divine and human law, declares, decrees and defines that, although Christ instituted this venerable sacrament after a meal and ministered it to his apostles under the forms of both bread and wine, nevertheless and notwithstanding this, the praiseworthy authority of the sacred canons and the approved custom of the church have and do retain that this sacrament ought not to be celebrated after a meal nor received by the faithful without fasting, except in cases of sickness or some other necessity as permitted by law or by the church. Moreover, just as this custom was sensibly introduced in order to avoid various dangers and scandals, so with similar or even greater reason was it possible to introduce and sensibly observe the custom that, although this sacrament was received by the faithful under both kinds in the early church, nevertheless later it was received under both kinds only by those confecting it, and by the laity only under the form of bread. For it should be very firmly believed, and in no way doubted, that the whole body and blood of Christ are truly contained under both the form of bread and the form of wine. Therefore, since this custom was introduced for good reasons by the church and holy fathers, and has been observed for a very long time, it should be held as a law which nobody may repudiate or alter at will without the church’s permission. To say that the observance of this custom or law is sacrilegious or illicit must be regarded as erroneous. Those who stubbornly assert the opposite of the aforesaid are to be confined as heretics and severely punished by the local bishops or their officials or the inquisitors of heresy in the kingdoms or provinces in which anything is attempted or presumed against this decree, according to the canonical and legitimate sanctions that have been wisely established in favour of the catholic faith against heretics and their supporters.
-
 
 ## [That no priest, under pain of excommunication, may communicate the people under the forms of both bread and wine]
 
@@ -373,11 +300,9 @@ This holy synod also decrees and declares, regarding this matter, that instructi
 
 From this point on the council becomes a duly convened ecumenical council, all previous sessions being ultra-vires.
 
-
 ## SESSION 14 – 4 July 1415
 
 [29 ]
-
 
 ## [Uniting of the followers of pope Gregory XII and of the former pope John XXIII, now that both men have abdicated]
 
@@ -391,13 +316,11 @@ The most holy general synod of Constance, etc., enacts, pronounces, ordains and 
 
 The most holy general synod of Constance, legitimately assembled in the holy Spirit, representing the universal catholic church, accepts, approves and commends, in the name of the Father, the Son and the holy Spirit, the cession renunciation and resignation made on behalf of the lord who was called Gregory XII in his obedience, by the magnificent and powerful lord Charles Malatesta. here present, his irrevocable procurator for this business, of the right, title and possession that he had, or may have had, in regard to the papacy. [30 ]
 
-
 ## SESSION 15 – 6 July 1415
 
 [Sentence condemning 260 articles Wyclif] [31 ]
 
 The books and pamphlets of John Wyclif, of cursed memory, were carefully examined by the doctors and masters of Oxford university. They collected 260 unacceptable articles from these books and pamphlets and condemned them in scholastic form. This most holy general synod of Constance, representing the catholic church, legitimately assembled in the holy Spirit for the purpose of extirpating schism, errors and heresies, has had all these articles examined many times by many most reverend fathers, cardinals of the Roman church, bishops, abbots, masters of theology, doctors of both laws, and very many other notable persons from various universities. It was found that some, indeed many, of the articles thus examined were and are notoriously heretical and have already been condemned by holy fathers, some are offensive to the ears of the devout and some are rash and seditious. This holy synod, therefore, in the name of our lord Jesus Christ, repudiates and condemns, by this perpetual decree, the aforesaid articles and each one of them in particular; and it forbids each and every Catholic henceforth, under pain of anathema, to preach, teach, or hold the said articles or any one of them. The said holy synod orders local ordinaries and inquisitors of heresy to be vigilant in carrying out these things and duly observing them, insofar as each one is responsible, in accordance with the law and canonical sanctions. Let anyone who rashly violates the aforesaid decrees and sentences of this sacred council be punished, after due warning, by the local ordinaries on the authority of this sacred council, notwithstanding any privilege. [32 ]
-
 
 ## [Articles of John Wyclif selected from the 260]
 
@@ -411,7 +334,6 @@ The books and pamphlets of John Wyclif, of cursed memory, were carefully examine
 
 5. The fruit of this madness whereby it is pretended that there can be an accident without a subject is to blaspheme against God, to scandalise the saints and to deceive the church by means of false doctrines about accidents.
 
-
 ## 6. Those who claim that the children of the faithful dying without sacramental baptism will not be saved, are stupid and presumptuous in saying this.
 
 7. The slight and short confirmation by bishops, with whatever extra solemnised rites, was introduced at the devil’s suggestion so that the people might be deluded in the church’s faith and the solemnity and necessity of bishops might be believed in the more.
@@ -419,7 +341,6 @@ The books and pamphlets of John Wyclif, of cursed memory, were carefully examine
 8. As for the oil with which bishops anoint boys and the linen cloth which goes around the head, it seems that this is a trivial rite which is unfounded in scripture; and that this confirmation, which was introduced after the apostles, blasphemes against God.
 
 9. Oral confession to a priest, introduced by Innocent [33 ] , is not as necessary to people as he claimed. For if anyone offends his brother in thought, word or deed, then it suffices to repent in thought, word or deed.
-
 
 ## 10. It is a grave and unsupported practice for a priest to hear the confessions of the people in the way that the Latins use.
 
@@ -437,24 +358,19 @@ The books and pamphlets of John Wyclif, of cursed memory, were carefully examine
 
 17. The pope, who falsely calls himself the servant of God’s servants, has no status in the work of the gospel but only in the work of the world. If he has any rank, it is in the order of demons, of those who serve God rather in a blameworthy way.
 
-
 ## 18. The pope does not dispense from simony or from a rash vow, since he is the chief simoniac who rashly vows to preserve, to his damnation, his status here on the way. (Error at the end.)
-
 
 ## 19. That the pope is supreme pontiff is ridiculous. Christ approved such a dignity neither in Peter nor in anyone else.
 
 20. The pope is antichrist made manifest. Not only this particular person but also the multitude of popes, from the time of the endowment of the church, of cardinals, of bishops and of their other accomplices, make up the composite, monstrous person of antichrist. This is not altered by the fact that Gregory and other popes, who did many good and fruitful things in their lives, finally repented.
 
-
 ## 21. Peter and Clement, together with the other helpers in the faith, were not popes but God’s helpers in the work of building up the church of our lord Jesus Christ.
-
 
 ## 22. To say that papal pre-eminence originated with the faith of the gospel is as false as to say that every error arose from the original truth.
 
 23. There are twelve procurators and disciples of antichrist: the pope, cardinals, patriarchs, archbishops, bishops, archdeacons, officials, deans, monks, canons with their two-peaked hats, the recently introduced pseudo-friars, and pardoners.
 
 24. It is clear that whoever is the humbler, of greater service to the church, and the more fervent in Christ’s love towards his church, is the greater in the church militant and to be reckoned the most immediate vicar of Christ.
-
 
 ## 25. Whoever holds any of God’s goods unjustly, is taking the things of others by rapine, theft or robbery.
 
@@ -464,17 +380,13 @@ The books and pamphlets of John Wyclif, of cursed memory, were carefully examine
 
 28. Just as a prince or a lord does not keep the title of his office while he is in mortal sin, except in name and equivocally, so it is with a pope, bishop or priest while he has fallen into mortal sin.
 
-
 ## 29. Everyone habitually in mortal sin lacks dominion of any kind and the licit use of an action, even if it be good in its kind.
 
-
 ## 30. It is known from the principles of the faith that a person in mortal sin, sins mortally in every action.
-
 
 ## 31. In order to have true secular dominion, the lord must be in a state of righteousness. Therefore nobody in mortal sin is lord of anything.
 
 32. All modern religious necessarily become marked as hypocrites. For their profession demands that they fast, act and clothe themselves in a particular way, and thus they observe everything differently from other people.
-
 
 ## 33. All private religion as such savours of imperfection and sin whereby a person is indisposed to serve God freely.
 
@@ -498,39 +410,29 @@ The books and pamphlets of John Wyclif, of cursed memory, were carefully examine
 
 43. Temporal lords not only can take away goods of fortune from a church that is habitually sinning, nor is it only lawful for them to do so, but indeed they are obliged to do so under pain of eternal damnation.
 
-
 ## 44. God does not approve that anyone be judged or condemned by civil law.
 
 45. If an objection is made against those who oppose endowments for the church, by pointing to Benedict, Gregory and Bernard, who possessed few temporal goods in poverty, it may be said in reply that they repented at the end. If you object further that I merely pretend that these saints finally repented of their falling away from God’s law in this way, then you may teach that they are saints and I will teach that they repented at the end.
 
 46. If we ought to believe in sacred scripture and in reason, it is clear that Christ’s disciples do not have the authority to exact temporal goods by means of censures, and those who attempt this are sons of Eli and of Belial.
 
-
 ## 47. Each essence has one suppositum, following which another suppositum, equal to the first, is produced. This is the most perfect immanent action possible to nature.
-
 
 ## 48. Each essence, whether corporeal or incorporeal, is common to three supposita; and the properties, the accidents and the operations inhere in common in all of them.
 
-
 ## 49. God cannot annihilate anything, nor increase or diminish the world, but he can create souls up to a certain number, and not beyond it.
-
 
 ## 50. It is impossible for two corporeal substances to be co-extensive, the one continuously at rest in a place and the other continuously penetrating the body of Christ at rest.
 
 51. Any continuous mathematical line is composed of two, three or four contiguous points, or of only a simply finite number of points; and time is, was and will be composed of contiguous instants. It is not possible that time and a line, if they exist, are composed of in this way. (The first part is a philosophical error, the last part is an error with regard to God’s power.)
 
-
 ## 52. It must be supposed that one corporeal substance was formed at its beginning as composed of indivisibles, and that it occupies every possible place.
-
 
 ## 53. Every person is God.
 
-
 ## 54. Every creature is God.
 
-
 ## 55. Every being is everywhere, since every being is God.
-
 
 ## 56. All things that happen, happen from absolute necessity.
 
@@ -538,51 +440,39 @@ The books and pamphlets of John Wyclif, of cursed memory, were carefully examine
 
 58. I assert as a matter of faith that everything that will happen, will happen of necessity. Thus if Paul is foreknown as damned, he cannot truly repent; that is, he cannot cancel the sin of final impenitence by contrition, or be under the obligation not to have the sin.
 
-
 ## [Sentence against John Hus]
 
 The most holy general council of Constance, divinely assembled and representing the catholic church, for an everlasting record. Since a bad tree is wont to bear bad fruit, as truth itself testifies, so it is that John Wyclif, of cursed memory, by his deadly teaching, like a poisonous root, has brought forth many noxious sons, not in Christ Jesus through the gospel, as once the holy fathers brought forth faithful sons, but rather contrary to the saving faith of Christ, and he has left these sons as successors to his perverse teaching. This holy synod of Constance is compelled to act against these men as against spurious and illegitimate sons, and to cut away their errors from the Lord’s field as if they were harmful briars, by means of vigilant care and the knife of ecclesiastical authority, lest they spread as a cancer to destroy others. Although, therefore, it was decreed at the sacred general council recently held at Rome [35 ] that the teaching of John Wyclif, of cursed memory, should be condemned and the books of his containing this teaching should be burnt as heretical; although his teaching was in fact condemned and his books burnt as containing false and dangerous doctrine; and although a decree of this kind was approved by the authority of this present sacred council [36 ] ; nevertheless a certain John Hus , here present in person at this sacred council, who is a disciple not of Christ but rather of the heresiarch John Wyclif, boldly and rashly contravening the condemnation and the decree after their enactment, has taught, asserted and preached many errors and heresies of John Wyclif which have been condemned both by God’s church and by other reverend fathers in Christ, lord archbishops and bishops of various kingdoms, and masters in theology at many places of study. He has done this especially by publicly resisting in the schools and in sermons, together with his accomplices, the condemnation in scholastic form of the said articles of John Wyclif which has been made many times at the university of Prague, and he has declared the said John Wyclif to be a catholic man and an evangelical doctor, thus supporting his teaching, before a multitude of clergy and people. He has asserted and published certain articles listed below and many others, which are condemned and which are, as is well known, contained in the books and pamphlets of the said John Hus. Full information has been obtained about the aforesaid matters, and there has been careful deliberation by the most reverend fathers in Christ, lord cardinals of the holy Roman church, patriarchs archbishops, bishops and other prelates and doctors of holy scripture and of both laws, in large numbers. This most holy synod of Constance therefore declares and defines that the articles listed below, which have been found on examination, by many masters in sacred scripture, to be contained in his books and pamphlets written in his own hand, and which the same John Hus at a public hearing, before the fathers and prelates of this sacred council, has confessed to be contained in his books and pamphlets, are not catholic and should not be taught to be such but rather many of them are erroneous, others scandalous, others offensive to the ears of the devout, many of them are rash and seditious, and some of them are notoriously heretical and have long ago been rejected and condemned by holy fathers and by general councils, and it strictly forbids them to be preached, taught or in any way approved. Moreover, since the articles listed below are explicitly contained in his books or treatises, namely in the book entitled De ecclesia and in his other pamphlets, this most holy synod therefore reproves and condemns the aforesaid books and his teaching, as well as the other treatises and pamphlets written by him in Latin or in Czech, or translated by one or more other persons into any other language, and it decrees and determines that they should be publicly and solemnly burnt in the presence of the clergy and people in the city of Constance and elsewhere. On account of the above, moreover, all his teaching is and shall be deservedly suspect regarding the faith and is to be avoided by all of Christ’s faithful. In order that this pernicious teaching may be eliminated from the midst of the church, this holy synod also orders that local ordinaries make careful inquiry about treatises and pamphlets of this kind, using the church’s censures and even if necessary the punishment due for supporting heresy, and that they be publicly burnt when they have been found. This same holy synod decrees that local ordinaries and inquisitors of heresy are to proceed against any who violate or defy this sentence and decree as if they were persons suspected of heresy.
-
 
 ## [Sentence of degradation against J. Hus]
 
 Moreover, the acts and deliberations of the inquiry into heresy against the aforesaid John Hus have been examined. There was first a faithful and full account made by the commissioners deputed for the case and by other masters of theology and doctors of both laws, concerning the acts and deliberations and the depositions of very many trustworthy witnesses. These depositions were openly and publicly read out to the said John Hus before the fathers and prelates of this sacred council. It is very clearly established from the depositions of these witnesses that the said John has taught many evil, scandalous and seditious things, and dangerous heresies, and has publicly preached them during many years. This most holy synod of Constance, invoking Christ’s name and having God alone before its eyes, therefore pronounces, decrees and defines by this definitive sentence, which is here written down, that the said John Hus was and is a true and manifest heretic and has taught and publicly preached, to the great offence of the divine Majesty, to the scandal of the universal church and to the detriment of the catholic faith, errors and heresies that have long ago been condemned by God’s church and many things that are scandalous, offensive to the ears of the devout, rash and seditious, and that he has even despised the keys of the church and ecclesiastical censures. He has persisted in these things for many years with a hardened heart. He has greatly scandalised Christ’s faithful by his obstinacy since, bypassing the church’s intermediaries, he has made appeal directly to our lord Jesus Christ, as to the supreme judge, in which he has introduced many false, harmful and scandalous things to the contempt of the apostolic see, ecclesiastical censures and the keys. This holy synod therefore pronounces the said John Hus, on account of the aforesaid and many other matters, to have been a heretic and it judges him to be considered and condemned as a heretic, and it hereby condemns him. It rejects the said appeal of his as harmful and scandalous and offensive to the church’s jurisdiction. It declares that the said John Hus seduced the christian people, especially in the kingdom of Bohemia, in his public sermons and in his writings; and that he was not a true preacher of Christ’s gospel to the same christian people, according to the exposition of the holy doctors, but rather was a seducer. Since this most holy synod has learnt from what it has seen and heard, that the said John Hus is obstinate and incorrigible and as such does not desire to return to the bosom of holy mother the church, and is unwilling to abjure the heresies and errors which he has publicly defended and preached, this holy synod of Constance therefore declares and decrees that the same John Hus is to be deposed and degraded from the order of the priesthood and from the other orders held by him. It charges the reverend fathers in Christ, the archbishop of Milan and the bishops of Feltre Asti, Alessandria, Bangor and Lavour with duly carrying out the degradation in the presence of this most holy synod, in accordance with the procedure required by law.
 
-
 ## [Sentence condemning J. Hus to the stake]
 
 This holy synod of Constance, seeing that God’s church has nothing more that it can do, relinquishes John Hus to the judgment of the secular authority and decrees that he is to be relinquished to the secular court.
-
 
 ## [Condemned articles of J. Hus]
 
 1. There is only one holy universal church, which is the total number of those predestined to salvation. It therefore follows that the universal holy church is only one, inasmuch as there is only one number of all those who are predestined to salvation.
 
-
 ## 2. Paul was never a member of the devil, even though he did certain acts which are similar to the acts of the church’s enemies.
 
-
 ## 3. Those foreknown as damned are not parts of the church, for no part of the church can finally fall away from it, since the predestinating love that binds the church together does not fail.
-
 
 ## 4. The two natures, the divinity and the humanity, are one Christ.
 
 5. A person foreknown to damnation is never part of the holy church, even if he is in a state of grace according to present justice; a person predestined to salvation always remains a member of the church, even though he may fall away for a time from adventitious grace, for he keeps the grace of predestination.
 
-
 ## 6. The church is an article of faith in the following sense: to regard it as the convocation of those predestined to salvation, whether or not it be in a state of grace according to present justice.
-
 
 ## 7. Peter neither was nor is the head of the holy catholic church.
 
 8. Priests who live in vice in any way pollute the power of the priesthood, and like unfaithful sons are untrustworthy in their thinking about the church’s seven sacraments, about the keys, offices, censures, customs, ceremonies and sacred things of the church, about the veneration of relics, and about indulgences and orders.
 
-
 ## 9. The papal dignity originated with the emperor, and the primacy and institution of the pope emanated from imperial power.
 
-
 ## 10. Nobody would reasonably assert of himself or of another, without revelation, that he was the head of a particular holy church; nor is the Roman pontiff the head of the Roman church.
-
 
 ## 11. It is not necessary to believe that any particular Roman pontiff is the head of any particular holy church, unless God has predestined him to salvation.
 
@@ -592,13 +482,11 @@ This holy synod of Constance, seeing that God’s church has nothing more that i
 
 14. Doctors who state that anybody subjected to ecclesiastical censure, if he refuses to be corrected, should be handed over to the judgment of the secular authority, are undoubtedly following in this the chief priests, the scribes and the pharisees who handed over to the secular authority Christ himself, since he was unwilling to obey them in all things, saying, It is not lawful for us to put any man to death; these gave him to the civil judge, so that such men are even greater murderers than Pilate.
 
-
 ## 15. Ecclesiastical obedience was invented by the church’s priests, without the express authority of scripture.
 
 16. The immediate division of human actions is between those that are virtuous and those that are wicked. Therefore, if a man is wicked and does something, he acts wickedly; if he is virtuous and does something, he acts virtuously. For just as wickedness, which is called crime or mortal sin, infects all the acts of a wicked man, so virtue gives life to all the acts of a virtuous man.
 
 17. A priest of Christ who lives according to his law, knows scripture and has a desire to edify the people, ought to preach, notwithstanding a pretended excommunication. And further on: if the pope or any superior orders a priest so disposed not to preach, the subordinate ought not to obey.
-
 
 ## 18. Whoever enters the priesthood receives a binding duty to preach; and this mandate ought to be carried out, notwithstanding a pretended excommunication.
 
@@ -606,9 +494,7 @@ This holy synod of Constance, seeing that God’s church has nothing more that i
 
 20. If the pope is wicked, and especially if he is foreknown to damnation, then he is a devil like Judas the apostle, a thief and a son of perdition and is not the head of the holy church militant since he is not even a member of it.
 
-
 ## 21. The grace of predestination is the bond whereby the body of the church and each of its members is indissolubly joined with the head.
-
 
 ## 22. The pope or a prelate who is wicked and foreknown to damnation is a pastor only in an equivocal sense, and truly is a thief and a robber.
 
@@ -620,70 +506,55 @@ This holy synod of Constance, seeing that God’s church has nothing more that i
 
 26. The viva voce agreement upon some person, made according to human custom by the electors or by the greater part of them, does not mean by itself that the person has been legitimately elected or that by this very fact he is the true and manifest successor or vicar of the apostle Peter or of another apostle in an ecclesiastical office. For, it is to the works of the one elected that we should look irrespective of whether the manner of the election was good or bad. For, the more plentifully a person acts meritoriously towards building up the church, the more copiously does he thereby have power from God for this.
 
-
 ## 27. There is not the least proof that there must be one head ruling the church in spiritual matters who always lives with the church militant.
-
 
 ## 28. Christ would govern his church better by his true disciples scattered throughout the world, without these monstrous heads.
 
 29. The apostles and faithful priests of the Lord strenuously governed the church in matters necessary for salvation before the office of pope was introduced, and they would continue to do this until the day of judgment if–which is very possible–there is no pope.
 
-
 ## 30. Nobody is a civil lord, a prelate or a bishop while he is in mortal sin.
-
 
 ## [Sentence condemning John Petit’s proposition, “Any tyrant-‘]
 
 This most holy synod wishes to proceed with special care to the eradication of errors and heresies which are growing in various parts of the world, as is its duty and the purpose for which it has assembled. It has recently learnt that various propositions have been taught that are erroneous both in the faith and as regards good morals, are scandalous in many ways and threaten to subvert the constitution and order of every state. Among these propositions this one has been reported: Any tyrant can and ought to be killed, licitly and meritoriously, by any of his vassals or subjects, even by means of plots and blandishments or flattery, notwithstanding any oath taken, or treaty made with the tyrant, and without waiting for a sentence or a command from any judge. This holy synod, wishing to oppose this error and to eradicate it completely, declares, decrees and defines , after mature deliberation, that this doctrine is erroneous in the faith and with regard to morals, and it rejects and condemns the doctrine as heretical, scandalous and seditious and as leading the way through perjury to frauds, deceptions, lies and betrayals. It declares, decrees and defines, moreover, that those who stubbornly assert this very pernicious doctrine are heretics and are to be punished as such according to canonical and legitimate sanctions. [37 ]
 
-
 ## SESSION 16 – 11 July 1415
 
 [Deliberation about the council’s legates due to depart with the emperor Sigismund for Spain; minor deliberations about the conduct of the council’s business.]
-
 
 ## SESSION 17 – 15 July 1415
 
 [The emperor’s imminent departure from the council is treated of; the council offers prayers for his success.]
 
-
 ## SESSION 18 – 17 August 1415
 
 [Decrees about various matters to be decided by the council: power is given to judges to make decisions, and for pairs of them to hear cases; that bulls of the council are to be obeyed; that forgers of conciliar bulls are to be punished in the same way as forgers of apostolic letters; that letters are to be despatched regarding the graces granted by the former pope John, except expectative and exceptional graces; ambassadors to Italy are appointed .]
-
 
 ## SESSION 19 – 23 September 1415
 
 [Jerome of Prague finally abjures his faith publicly and solemnly. There is promulgated at this session an Ordinance between the friars Minor of the strict observance and others of the common life , to put an end to the discords which have arisen in certain provinces; another Ordinance by which cases of heresy are committed to certain judges . It is also decreed that, notwithstanding safe conducts of emperors and kings and others, a competent judge can inquire into heresy; that the lord vice-chancellor shall expedite the Caroline constitution [38 ] under a bull of the council; that those with benefices who are attending the council shall receive the fruits of their benefices in their absence, that the letters regarding provisions to patriarchal, metropolitan and other churches, which were granted by the former pope John before his suspension, shall be despatched .]
 
-
 ## SESSION 20 – 21 November 1415
 
 [A warning is decreed against the duke of Austria, on behalf of the bishop of Trent.]
 
-
 ## SESSION 21 – 30 May 1416
-
 
 ## [Sentence condemning Jerome of Prague]
 
 In the name of the Lord, Amen. Christ our God and saviour, the true vine whose Father is the vine-dresser, said when teaching his disciples and other followers in these matters: If anyone does not abide in me, he shall be cast forth as a branch and shall wither. This holy synod of Constance is following the teaching and carrying out the commands of this sovereign teacher and master in this case of inquiry into heresy which was started by the same holy synod. It notes the public talk and loud outcry against the said master Jerome of Prague , master of arts, layman. From the acts and proceedings of the case it is evident that the said Jerome has held, asserted and taught various heretical and erroneous articles, which were long ago condemned by holy fathers, some of which are blasphemous, others scandalous and others offensive to the ears of the devout as well as rash and seditious. They were long ago asserted, preached and taught by John Wyclif and John Hus, of cursed memory, and were included in various of their books and pamphlets. These articles, doctrines and books of the aforesaid John Wyclif and John Hus, as well as the memory of Wyclif, and finally the person of Hus, were condemned and damned by this same holy synod and its sentence of heresy. The said Jerome later, during the course of this inquiry, in this holy synod, approved and consented to this sentence of condemnation and acknowledged and professed the true, catholic and apostolic faith. He anathematised all heresy, especially that for which he had been defamed-and he confessed himself defamed–and which John Wyclif and John Hus had taught and held in the past in their works, sermons and pamphlets, and on account of which the said Wyclif and Hus, together with their dogmas and errors, had been condemned as heretical by this same holy synod, and their teaching likewise condemned. He professed acceptance of every condemnation of the aforesaid things and swore that he would remain in the truth of the faith, and that if he ever dared to think or preach anything to the contrary then he wished to submit to the severity of canon law and to be bound to eternal punishment. He offered and gave this profession of his, written in his own hand to this holy synod. Many days after his profession and abjuration, however, like a dog returning to its vomit, he asked for a public hearing to be granted to him in this same holy synod, in order that he might vomit forth in public the deadly poison which lay hidden within his breast. The hearing was granted to him and he asserted, said and professed in effect, at a public assembly of the same synod, that he had wrongly consented to the aforesaid sentence condemning the said Wyclif and John Hus and that he had lied in approving the sentence. He did not fear to state that he had lied. Indeed, he revoked now and for eternity his confession, approval and profession regarding the condemnation of the two men. He asserted that he had never read any heresy or error in the books of the said Wyclif and John Hus, even though it was clearly proved, before his profession to the sentence on the two men, that he had carefully studied, read and taught their books and it is clear that many errors and heresies are contained in them. The said Jerome professed, however, that he held and believed what the church holds and believes regarding the sacrament of the altar and the transubstantiation of the bread into the body of Christ, saying that he believed in Augustine and the other doctors of the church more than in Wyclif and Hus. It is evident from the above that the said Jerome adhered to the condemned Wyclif and Hus and their errors, and that he was and is a supporter of them. This holy synod has therefore decreed and now declares that the said Jerome is to be cast away as a branch that is rotten, withered and separated from the vine; and it pronounces, declares and condemns him as a heretic who has relapsed into heresy and as an excommunicated and anathematised person.
 
-
 ## SESSION 22 – 15 October 1416
 
 [The treaty of Narbonne, between the king of Aragon, the emperor and the envoys of the council, is confirmed [39 ] : the king of Aragon withdraws obedience from Benedict XIII and recognises the council of Constance through his envoys.]
-
 
 ## SESSION 23 – 5 November 1416
 
 [Beginning of the process against Peter de Luna, called Benedict XIII in his obedience.]
 
-
 ## SESSION 24 – 28 November 1416
 
 [A citation against Peter de Luna, called Benedict XIII in his obedience, is decreed.]
-
 
 ## SESSION 25 – 14 December 1416
 
@@ -691,18 +562,15 @@ In the name of the Lord, Amen. Christ our God and saviour, the true vine whose F
 
 accordance with the terms of the treaty of Narbonne.]
 
-
 ## SESSION 26 – 24 December 1416
 
 [The envoys of the king of Navarre are united with the council in accordance
 
 with the terms of the treaty of Narbonne.]
 
-
 ## SESSION 27 – 20 February 1417
 
 [The dispute between Frederick, duke of Austria, and the bishop of Trent is discussed: a report is made on the carrying out of the warning decreed in session 20.]
-
 
 ## SESSION 28 – 3 March 1417
 
@@ -710,67 +578,53 @@ with the terms of the treaty of Narbonne.]
 
 I The articles of Narbonne concerning the unity of the church, which were agreed between the emperor Sigismund and the envoys of the council of Constance on the one side, and the envoys of the kings and princes of Benedict XIII’s obedience on the other side, were published by the council in a general assembly on 13 December 1415 (see Hardt 4,584). They are printed in Hardt 2, 542-554.
 
-
 ## SESSION 29 – 8 March 1417
 
 [Peter de Luna is accused of contumacy.]
-
 
 ## SESSION 30 – 10 March 1417
 
 [The process against Peter de Luna continues.]
 
-
 ## SESSION 31 – 31 March 1417
 
 [A warning is decreed against Philip, count of Vertus, at the request of the bishop of Asti. Other minor deliberations take place.]
-
 
 ## SESSION 32 – 1 April 1417
 
 [Peter de Luna is again accused of contumacy and an inquiry about him is established.]
 
-
 ## SESSION 33 – 12 May 1417
 
 [The process against Peter de Luna, who is deemed contumacious, continues.]
-
 
 ## SESSION 34 – 5 June 1417
 
 [Everything is made ready for the condemnation of Peter de Luna.]
 
-
 ## SESSION 35 – 18 June 1417
 
 [The envoys of the king of Castile are united with the council in accordance with the terms of the treaty of Narbonne.]
-
 
 ## SESSION 36 – 22 July 1417
 
 [It is decreed that Peter de Luna is to be cited to hear the council’s sentence.]
 
-
 ## SESSION 37 – 26 July 1417
-
 
 ## [Definitive sentence whereby Peter de Luna, pope Benedict XIII, is divested of the papacy and deprived of the faith.]
 
 May this judgment come forth from the face of him who sits on the throne, and from his mouth proceeds a double-edged sword, whose scales are just and weights are true, who will come to judge the living and the dead, our lord Jesus Christ, Amen. The Lord is just and loves just deeds, his face looks on righteousness. But the Lord looks on those who do evil so as to cut off their remembrance from the earth. Let there perish, says the holy prophet, the memory of him who did not remember to show mercy and who persecuted the poor and needy. How much more should there perish the memory of Peter de Luna, called by some Benedict XIII, who persecuted and disturbed all people and the universal church? For, how greatly he has sinned against God’s church and the entire christian people, fostering, nourishing and continuing the schism and division of God’s church How ardent and frequent have been the devout and humble prayers, exhortations and requests of kings, princes and prelates with which he has been warned in charity, in accordance with the teaching of the gospel, to bring peace to the church, to heal its wounds and to reconstitute its divided parts into one structure and one body, as he had sworn to do, and as for a long time it was within his power to do ! He was unwilling, however, to listen to their charitable admonitions. How many were the persons afterwards sent to attest to him! Because he did not listen at all even to these, it has been necessary, in accordance with the aforesaid evangelical teaching of Christ, to say to the church, since he has not listened even to her, that he should be treated as a heathen and a publican. All these things have been clearly proved by the articles coming from the inquiry into faith and the schism held before this present synod, regarding the above and other matters brought against him, as well as by their truth and notoriety. The proceedings have been correct and canonical, all the acts have been correctly and carefully examined and there has been mature deliberation. Therefore this same holy general synod, representing the universal church and sitting as a tribunal in the aforesaid inquiry, pronounces, decrees and declares by this definitive sentence written here, that the same Peter de Luna, called Benedict XIII as has been said, has been and is a perjurer, a cause of scandal to the universal church, a promoter and breeder of the ancient schism, that long established fission and division in God’s holy church, an obstructer of the peace and unity of the said church, a schismatic disturber and a heretic, a deviator from the faith, a persistent violator of the article of the faith One holy catholic church, incorrigible, notorious and manifest in his scandal to God’s church, and that he has rendered himself unworthy of every title, rank, honour and dignity, rejected and cut off by God, deprived by the law itself of every right in any way belonging to him in the papacy or pertaining to the Roman pontiff and the Roman church, and cut off from the catholic church like a withered member. This same holy synod, moreover, as a precautionary measure, since according to himself he actually holds the papacy, deprives, deposes and casts out the said Peter from the papacy and from being the supreme pontiff of the Roman church and from every title, rank, honour, dignity, benefice and office whatsoever. It forbids him to act henceforth as the pope or as the supreme and Roman pontiff. It absolves and declares to be absolved all Christ’s faithful from obedience to him, and from every duty of obedience to him and from oaths and obligations in any way made to him. It forbids each and every one of Christ’s faithful to obey, respond to or attend to, as if he were pope, the said Peter de Luna, who is a notorious, declared and deposed schismatic and incorrigible heretic, or to sustain or harbour him in any way contrary to the aforesaid, or to offer him help, advice or good will. This is forbidden under pain of the offender being counted as a promoter of schism and heresy and of being deprived of all benefices, dignities and ecclesiastical or secular honours, and under other penalties of the law, even if the dignity is that of a bishop, a patriarch, a cardinal, a king or the emperor. If they act contrary to this prohibition, they are by this very fact deprived of these things, on the authority of this decree and sentence, and they incur the other penalties of the law. This holy synod, moreover, declares and decrees that all and singular prohibitions and all processes, sentences, constitu- tions, censures and any other things whatsoever that were issued by him and might impede the aforesaid, are without effect; and it invalidates, revokes and annuls them; saving always the other penalties which the law decrees for the above cases.
 
-
 ## SESSION 38 – 28 July 1417
 
 [Decree about the right to vote of the deputies of the kings of Castile and Aragon, concerning which agreement had not been reached among the said deputies in the previous session; decrees about other lesser matters.]
 
-
 ## SESSION 39 – 9 October 1417
-
 
 ## [On general councils]
 
 The frequent holding of general councils is a pre-eminent means of cultivating the Lord’s patrimony. It roots out the briars, thorns and thistles of heresies, errors and schisms, corrects deviations, reforms what is deformed and produces a richly fertile crop for the Lord’s vineyard. Neglect of councils, on the other hand, spreads and fosters the aforesaid evils. This conclusion is brought before our eyes by the memory of past times and reflection on the present situation. For this reason we establish, enact, decree and ordain, by a perpetual edict, that general councils shall be held henceforth in the following way . The first shall follow in five years immediately after the end of this council, the second in seven years immediately after the end of the next council, and thereafter they are to be held every ten years for ever. They are to be held in places which the supreme pontiff is bound to nominate and assign within a month before the end of each preceding council, with the approval and consent of the council, or which, in his default, the council itself is bound to nominate. Thus, by a certain continuity, there will always be either a council in existence or one expected within a given time. If perchance emergencies arise, the time may be shortened by the supreme pontiff, acting on the advice of his brothers, the cardinals of the Roman church, but it may never be prolonged. Moreover, he may not change the place assigned for the next council without evident necessity. If an emergency arises whereby it seems necessary to change the place–for example in the case of a siege, war, disease or the like–then the supreme pontiff may, with the consent and written endorsement of his aforesaid brothers or of two-thirds of them, substitute another place which is suitable and fairly near to the place previously assigned. It must, however, be within the same nation unless the same or a similar impediment exists throughout the nation. In the latter case he may summon the council to another suitable place which is nearby but within another nation, and the prelates and other persons who are customarily summoned to a council will be obliged to come to it as if it had been the place originally assigned. The supreme pontiff is bound to announce and publish the change of place or the shortening of time in a legal and solemn form within a year before the date assigned, so that the aforesaid persons may be able to meet and hold the council at the appointed time.
-
 
 ## [Provision to guard against future schisms]
 
@@ -785,7 +639,6 @@ The other prelates are bound to answer the cardinals’ summons, as mentioned ab
 The disturbance caused by fear or pressure at a papal election corrodes and divides, in a lamentable way, the whole of Christianity. In order that it may be assiduously avoided, we have decided to decree, in addition to what has been said above, that if anyone brings to bear or causes, or procures to be brought about, fear or pressure or violence of this kind upon the electors in a papal election, or upon any one of them, or has the matter ratified after it has been done, or advises or acts in support of it, or knowingly receives or defends someone who has done this, or is negligent in enforcing the penalties mentioned below–no matter of what state or rank or pre-eminence the offender may be, even if it be imperial or regal or pontifical, or any other ecclesiastical or secular dignity he may hold–then he automatically incurs the penalties contained in pope Boniface VIII’s constitution which begins Felicis, and he shall be effectively punished by them.
 
 Any city–even if it be Rome itself, though may it not be!–or any other corporation that gives aid, counsel or support to someone who does these things, or that does not have such an offender punished within a month, insofar as the enormity of the crime demands and there exists the possibility of inflicting the punishment, shall automatically be subject to ecclesiastical interdict. Furthermore the city, apart from the one mentioned above, shall be deprived of the episcopal dignity, notwithstanding any privileges to the contrary. We wish, moreover, that this decree be solemnly published at the end of every general council and that it be read out and publicly announced before the start of a conclave, wherever and whenever the election of a Roman pontiff is about to take place.
-
 
 ## [On the profession to be made by the pope]
 
@@ -815,77 +668,55 @@ Vienne ,
 
 and I will preserve this faith unchanged to the last dot and will confirm, defend and preach it to the point of death and the shedding of my blood, and likewise I will follow and observe in every way the rite handed down of the ecclesiastical sacraments of the catholic church. This my profession and confession, written at my orders by a notary of the holy Roman church, I have signed below with my own hand. I sincerely offer it on this altar N. to you, almighty God, with a pure mind and a devout conscience, in the presence of the following. Made etc.
 
-
 ## [That prelates may not be translated without their consent]
 
 When prelates are translated, there is commonly both spiritual and temporal loss and damage of a grave nature for the churches from which they are transferred. The prelates, moreover, sometimes do not maintain the rights and liberties of their churches as carefully as they otherwise might, out of fear of being translated. The importunity of certain people who seek their own good, not that of Jesus Christ, may mean that the Roman pontiff is deceived in such a matter, as one ignorant of the facts, and so is easily led astray. We therefore determine and ordain, by this present decree, that henceforth bishops and superiors ought not to be translated unwillingly without a grave and reasonable cause which, after the person in question has been summoned, is to be inquired into and decided upon with the advice of the cardinals of the holy Roman church, or the greater part of them, and with their written endorsement. Lesser prelates, such as abbots and others with perpetual benefices, ought not to be changed, moved or deposed without a just and reasonable cause that has been inquired into.
 
 We add, moreover, that for abbots to be changed the written endorsement of the cardinals is necessary–just as it is necessary for bishops, as has been said-saving, however, the constitutions and privileges of any churches, monasteries and orders.
 
-
 ## [On spoils and procurations]
 
 Papal reservations as well as the exacting and receiving of procurations which are due to ordinaries and other lesser prelates, by reason of a visitation, and of spoils on deceased prelates and other clerics, are seriously detrimental to churches, monasteries and other benefices and to churchmen. We therefore declare, by this present edict, that it is reasonable and in the public interest that reservations made by the pope, as well as exactions and collections of this kind made by collectors and others appointed or to be appointed by apostolic authority, are henceforth in no way to occur or to be attempted. Indeed, procurations of this kind, as well as spoils and the goods of any prelates found at their deaths, even if they are cardinals or members of the papal household or officials or any other clerics whatsoever, in the Roman curia or outside it, no matter where or when they die, are to belong to and to be received by, fully and freely, those persons to whom they would and ought to belong with the ending of the aforesaid reservations, mandates and exactions. We forbid the exaction of such spoils on prelates even inferior ones and others, which are outside and contrary to the form of common law. However, the constitution of pope Boniface VIII of happy memory, beginning Praesenti, which was published with this specially in mind, is to remain in force.
 
-
 ## SESSION 40 – 30 OCTOBER 1417
-
 
 ## [Reforms to be made by the pope together with the council before it is dissolved]
 
 The most holy synod of Constance [40 ] declares and decrees that the future supreme Roman pontiff, who by God’s grace is to be elected very soon, together with this sacred council or those to be deputed by the individual nations, is bound to reform the church in its head and in the Roman curia, according to justice and the good government of the church, before this council is dissolved, under the topics contained in the following articles, which were at various times put forward by the nations by way of reforms.
 
-
 ## 1. First, the number, quality and nationality of the lord cardinals.
-
 
 ## 2. Next, reservations of the apostolic see.
 
-
 ## 3. Next, annates, common services and petty services.
-
 
 ## 4. Next, collations to benefices and expectative graces.
 
-
 ## 5. Next, the cases that are, or are not, to be heard at the Roman curia.
-
 
 ## 6. Next, appeals to the Roman curia.
 
-
 ## 7. Next, the offices of chancery and penitentiary.
-
 
 ## 8. Next, exemptions and incorporations made at the time of the schism.
 
-
 ## 9. Next, commendams.
-
 
 ## 10. Next, confirmation of elections. [41 ]
 
-
 ## 11. Next, intercalary fruits.
-
 
 ## 12. Next, not alienating goods of the Roman church and of other churches.
 
-
 ## 13. Next, for what reasons and how a pope can be corrected or deposed.
-
 
 ## 14. Next, the eradication of simony.
 
-
 ## 15. Next, dispensations.
-
 
 ## 16. Next, revenues of the pope and the cardinals.
 
-
 ## 17. Next, indulgences.
-
 
 ## 18. Next, tithes.
 
@@ -895,34 +726,27 @@ mentioned above, the others may freely return to their own countries with the
 
 pope’s permission.
 
-
 ## [That the election of the Roman pontiff may be begun, notwithstanding the absence of Peter de Luna’s cardinals]
 
 The most holy general synod of Constance notes what was previously agreed upon at Narbonne concerning the church’s unity and the admission to this synod of the cardinals of the obedience of Peter de Luna, called Benedict XIII in his obedience. It notes, too, that after the notorious expulsion of the said Peter de Luna, the aforesaid cardinals who had been summoned before the expulsion according to the terms of the agreement, did not come within three months and more after the aforesaid expulsion. The synod therefore decrees and declares that, notwithstanding their absence, it will proceed to the election of the Roman pontiff on the authority of the said synod and according to what has been decided by the same synod. It declares, however, that if they arrive before the election of the future supreme pontiff has been completed, and if they adhere to the council, they are to be admitted to the aforesaid election together with the other cardinals, according to the directives of the law and what shall be decided by the council.
-
 
 ## [On the manner and form of electing the pope]
 
 For the praise, glory and honour of almighty God and for the peace and unity of the universal church and of the whole christian people. The election of the future Roman and supreme pontiff is soon to be held. We wish that it may be confirmed with greater authority and by the assent of many persons and that, mindful as we are of the state of the church, no doubts or scruples may later remain in people’s minds regarding the said election but rather that a secure, true full and perfect union of the faithful may result from it. Therefore this most holy general synod of Constance, mindful of the common good and with the special and express consent and the united wish of the cardinals of the holy Roman church present at the same synod, and of the college of cardinals and of all the nations at this present council, declares, ordains and decrees that, for this time only, at the election of the Roman and supreme pontiff, there shall be added to the cardinals six prelates or other honourable churchmen in holy orders, from each of the nations currently present and named at the same synod, who are to be chosen by each of the said nations within ten days. This same holy synod gives power to all these people, insofar as it is necessary, to elect the Roman pontiff according to the form here laid down. That is to say, the person is to be regarded as the Roman pontiff by the universal church without exception who is elected and admitted by two-thirds of the cardinals present at the conclave and by two-thirds of those from each nation who are to be and have been added to the cardinals. Moreover, the election is not valid nor is the person elected to be regarded as supreme pontiff unless two-thirds of the cardinals present at the conclave, and two-thirds of those from each nation who should be and have been added to the same cardinals, agree to elect him as Roman pontiff. The synod also declares, ordains and decrees that the votes of any persons cast at the election are null unless, as has been said, two-thirds of the cardinals, and two-thirds of those from each nation who should be and have been added to them, agree, directly or by way of addition, upon one person. This must be added, moreover, that the prelates and other persons who should be and have been added to the cardinals for the election, are bound to observe all and singular apostolic constitutions, even penal ones, which have been promulgated regarding the election of the Roman pontiff, just as the cardinals themselves are bound to observe them, and they are bound to their observance. The said electors, both cardinals and others, are also bound to swear, before they proceed to the election, that in attending to the business of the election, they will proceed with pure and sincere minds–since it is a question of creating the vicar Jesus Christ, the successor of the blessed Peter, the governor of the universal church and the leader of the Lord’s flock–and that they firmly believe it will benefit the public good of the universal church if they entirely prescind from all affection for persons of any particular nation, or other inordinate affections, as well as from hatred and graces or favours bestowed, in order that by their ministry a beneficial and suitable pastor may be provided for the universal church. This same holy synod, mindful of this notorious vacancy in the Roman church, fixes and assigns the next ten days for all and singular cardinals of the holy Roman church, whether present here or absent, and the other electors mentioned above, to enter into the conclave which is to be held in this city of Constance, in the commune’s principal building which has already been allocated for this purpose. The synod ordains, declares and decrees that within these next ten days the aforesaid electors, both cardinals and others mentioned above, must enter into the conclave for the purpose of holding the election and of doing and carrying out all the other matters according as the laws ordain and decree in all things, besides those mentioned above regarding the cardinals and other electors, concerning the election of a Roman pontiff. The same holy synod wishes all these laws to remain in force after the above matters have been observed. For this time, however, it approves, ordains, establishes and decrees this particular form and manner of election. The same holy synod, in order to remove all scruples, makes and declares fit for actively and passively carrying out all legitimate acts at the same synod, insofar as this is necessary, all those who are present at the same synod as well as those who will come and adhere to it, always saving the other decrees of this same sacred council, and it will supply for any defects, if perchance any shall occur in the above, notwithstanding any apostolic constitutions, even those published in general councils, and other constitutions to the contrary.
 
-
 ## SESSION 41 – 8 November 1417
 
 [Everything is prepared for the start of the conclave to elect a pope. On 11 November cardinal Oddo Colonna is elected pontiff as Martin V. ]
-
 
 ## SESSION 42 – 28 December 1417
 
 [In this session a bull of Martin V was approved regarding Baldassare Cossa, formerly pope, who was earlier deprived of his see and imprisoned by the council but who is now to be set free]
 
-
 ## SESSION 43
 
 [42 ]
 
-
 ## – 23 MARCH 1418
-
 
 ## [Certain statutes promulgated on the reform of the church]
 
@@ -950,37 +774,29 @@ On tithes and other dues
 
 Martin, etc. We command and order the strict observance of the laws which forbid tithes and other dues to be imposed on churches and ecclesiastics by persons lower than the pope. For ourselves, moreover, we shall in no way impose them generally on the whole clergy unless there is a grave and serious reason and an advantage for the universal church in doing so, and then with the advice, consent and written endorsement of our brothers, the cardinals of the holy Roman church, and the prelates whose advice can conveniently be obtained. This should not happen especially in any kingdom or province where the prelates in question, or the majority of them, have not been consulted or have not consented. In this way they may only be levied by ecclesiastics acting on the authority of the apostolic see.
 
-
 ## On the life and probity of clerics
 
 Martin, etc. Among the various faults of clerics and prelates this one has especially taken root, namely that many of them despise an appearance of ecclesiastical decency in their dress and delight in what is unbecoming. They seek to conform to the laity and they exhibit outwardly in their dress whatever they are thinking in their minds. Therefore, with the approval of this sacred council, we renew and order the careful observance of all the laws currently in force regarding the clothing, tonsure and habits of clerics, as to both shape and colour, and their hair-styles and the style and uprightness of their lives. These laws have been heeded far too little by both the secular and the regular clergy. Especially we order to be utterly abolished, with the same council’s approval, the abuse whereby in certain regions some clerics and churchmen, both secular and regular, and even (which we deplore still more) prelates of churches, wear long gloves that are unnecessarily large and sumptuous, extending to their elbows, and clothes with slits at the back and sides, with furs covering the edges even of the slit parts. Moreover, they are not afraid to attend the divine offices in churches–even in the churches in which they are beneficed–in such clothes together with their surplices and other garments worn for worship and the church’s services. We condemn this unbecoming way of dressing for all churchmen and we forbid the wearing of such garments. Those who do otherwise are to be punished as transgressors of the canons. We decree in particular that if any beneficed person, or any holder of an office in a church, dares to attend the divine office in such clothing, then he shall know that he is suspended from receiving his ecclesiastical incomes for one month for each such occasion, and the fruits of these incomes are to be applied to the fabric of the church in question.
 
 Martin, etc. We decree and declare with the approval of this sacred council, that the demands of this same sacred council. regarding the articles contained in the reform decree promulgated on Saturday 30 October [43 ] of last year, have been and are met by the various decrees, statutes and ordinances, both those which have been read out in this present session and those upon which agreement has been reached with the individual nations of the council. [44 ] We wish these decrees, statutes and ordinances to be deposited in our chancellery and that letters in public form, under the seal of our vice-chancellor, be drawn up and handed over to those who wish to have them.
 
-
 ## SESSION 44 – 19 April 1418
-
 
 ## [Decree on the place of the next council]
 
 Martin, etc. We wish and desire to put into effect a decree of this general council [45 ] which lays down, among other things, that general councils must always be held in the place which the supreme pontiff, with the consent and approval of the council, is bound to depute and assign, within the month before the end of this council, as the place for the next council after the end of the present one. With the consent and approval of this present council, we therefore, by this present decree, depute and assign the city of Pavia for this purpose, and we ordain and decree that prelates and others who ought to be summoned to general councils are obliged to go to Pavia at the aforesaid time. Let nobody therefore … If anyone however . . . Given and enacted at Constance, in the place of this public session . . .
 
-
 ## SESSION 45
 
 [46 ]
 
-
 ## – 22 April 1418
-
 
 ## [Sentence dissolving the council, and the granting of indulgences]
 
 Martin, etc. We dissolve the council, as the sacred council itself requires, for reasons that are certain, reasonable and just. We give permission, with the council’s approval, to each and every person at the council to return home. Furthermore, on the authority of almighty God and of his blessed apostles Peter and Paul and on our authority, we grant to each and every person who has taken part in this sacred council and its business a full absolution of all his sins, once in his life, provided he takes advantage of the absolution in the correct form within two months of his hearing about it. We grant the same at the hour of death. This is to be understood as applying to both lords and members of their households; provided that they fast on each Friday for a year from the day they come to know of this indulgence, in the case of those who seek the absolution for while they are alive, and for another year in the case of those who seek it for the hour of death, unless they are legitimately prevented from doing so, in which case they should perform other pious works. After the second year, they ought to fast on Fridays until the end of their lives or to perform other pious works. Let nobody therefore . . . If anyone however . . . Given and enacted at Constance in the place of this public session. ..
 
-
 ## Introduction and translation taken from Decrees of the Ecumenical Councils , ed. Norman P. Tanner
-
 
 ## FOOTNOTES
 

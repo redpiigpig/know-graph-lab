@@ -690,8 +690,12 @@ data/creeds/ecumenical-councils/
 - 早期 + 中世紀 + Trent 共 36 份：lat 版本移除 placeholder: true 並更新 source 描述為 DCO + Alberigo COD 1973 引用
 
 **已知限制 / Phase 2 工作**：
-1. **per-canon 嚴格三欄對齊**（用戶 2026-05-23 要求）— 目前 latin .doc 抽取的內容缺乏明顯 canon 編號標頭（antiword 抹除 Word 的 bold 樣式）；希臘 PDF 有 `Κανὼν A'` 標頭但 latin 沒有對應。**Phase 2 需要 normalize pass**：用 LLM (Gemini Flash batch) 對每份 latin .txt 加 `N. body` 編號，確保跨語言對齊。paragraphParser.ts 已支援 `N. body` 格式。
-2. **DCO Latin .doc footnote 上標雜訊** — 抽取結果含 manuscript apparatus 編號串（如 "subiectos52 53 54 55 56 57"）；需要 regex 清理 `\s*\d+\s*\d+\s*\d+...` 連串數字。
+1. **per-canon 嚴格三欄對齊**（用戶 2026-05-23 要求；2026-05-23 部分完成）— [scripts/normalize_council_canons.py](../../../scripts/normalize_council_canons.py) 對 86 份檔案執行 normalize pass：
+   - 拉丁：清掉 inline footnote 上標（`et16`→`et` / `verbo93`→`verbo` / `II349`→`II.`）、long footnote run（`62 63 64 6566 67...`）、orphan digit；保留 manuscript siglum `<O93, f.43va>`
+   - 英文：**保守**轉 `## N. body`→`N. body` — 僅當 body 含 `anathema|If anyone|Canon|let him be|excommunicat` 關鍵字時才下降（避免錯把 Cyril 信內的列表子句當成 canon）；Ephesus 12 anathemas 全數正確標號 1-12
+   - 希臘：本已乾淨，無需動
+   - 結果：早期 5 + 中世紀 11 + Trent 25 共 41 文件中，41 拉丁全部清整、12 英文 anathema-section 正確 normalize
+2. **仍待完成 — canon-boundary 偵測**：拉丁 .doc antiword 抽取後**沒有可見 canon 編號**（antiword 抹除 Word bold 標頭）；如 Lateran I 拉丁有 54 paragraphs 對應 22 canons，需 LLM-free 方式偵測 canon 邊界（候選：英文 Nth canon 與拉丁第 Nth 大段一一對位）後手動插入 `N.` 編號。為 Phase 2 工作。
 3. **早期 5 Const II / 早期 6 Const III 希臘原文未取得** — DCO 只有 LT.doc；候選 Schwartz/Riedinger ACO archive.org PDF；scrape 較複雜，留待 Phase 3。
 4. **Ephesus 希臘僅含 8 canons** — Cyril 致 Nestorius 第二封信 + 12 Anathemas 之希臘原文未補；候選 Schwartz ACO Vol 1 archive.org 或 PG (Patrologia Graeca) Migne。
 

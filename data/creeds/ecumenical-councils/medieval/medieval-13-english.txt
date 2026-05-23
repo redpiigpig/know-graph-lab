@@ -14,12 +14,9 @@ Pope Directory Leo XIV Francis Benedict XVI John Paul II Pope Paul VI John XXIII
 
 Contact Us
 
-
 ## Post navigation
 
-
 ## First Council of Lyons – 1245 A.D.
-
 
 ## INTRODUCTION
 
@@ -42,7 +39,6 @@ Our edition of the constitutions tries to give all the documents truly belonging
 We think that the bull of deposition of the emperor Frederick II must be considered a statute of the council, and we place this in front of the constitutions. The transmission of the text of the bull is involved, and the editions are very faulty. There are three copies of the bull: Vatican Archives, AA. Arm. I-XVIII, 171 (= V); Paris, Archives Nationales, L 245 no. 84 (= P); Lyons, Archives du Rhone, Fonds du chap. primat., Arm. Cham. vol. XXVII no. 2 (= L). Of these only V has been published. Other transcriptions of the bull are given in the register of Innocent IV, in some chronicles (Matthew of Paris, Annals of Plasencia, Annals of Melrose), in collections of decretals, and in some more recent publications (Bzovius). Our edition takes as its base V, P and L.
 
 {The headings are added by the hypertext editor. Endnotes are given in parenthesis {}. They should be noted for variant readings and numberings.}
-
 
 ## Bull Deposing The Emperor Frederick II
 
@@ -74,7 +70,6 @@ We therefore, after careful discussion with our brother cardinals and the sacred
 
 Given at Lyons on 17 July in the third year of our pontificate.
 
-
 ## CONSTITUTIONS
 
 I
@@ -83,113 +78,91 @@ I
 
 Since in many articles of law failure to define their scope is blameworthy, after prudent consideration we decree that by the general clause “certain others” which frequently occurs in papal letters, no more than three or four persons are to be brought to court. The petitioner should state the names in his first citation, lest by chance a place is left for fraud if the names can be freely altered {18}.
 
-
 ## 2. {19} Those to whom cases should be entrusted
 
 By {20} the present decree we ordain that the apostolic see or its legates should not entrust cases to any persons except those who possess a dignity or belong to cathedrals or other collegiate churches of high standing; and such cases are to be conducted only in cities or large and well-known places where are to be found many men learned in the law. Judges who, contrary to this statute, cite either one or both parties to other places may be disobeyed without penalty, unless the citation takes place with the consent of both parties.
-
 
 ## 3. {21} Curtailing legal expenses
 
 As we wish, to the best of our power, to curtail the expenses of lawsuits by shortening the legal process, extending the decree of Innocent III of happy memory on this matter, we decree that if anyone wishes to bring several personal claims against another, he must be careful to gain letters on all these claims to the same judges and not to different ones. If anyone acts contrary to this, his letters and the processes initiated by them are to lack all validity; besides if he has caused inconvenience to the defendant by them, he is to be condemned to pay the legal expenses. Also if the defendant during the course of the same trial declares that he has a charge against the plaintiff, he ought, through benefit either of reconvention or of convention, if he prefers to obtain letters against him, to have his case tried before the same judges, unless he can reject them as being suspect. If he acts contrary to this, he should suffer the same penalty.
 
-
 ## 4. {22} On challenging elections etc.
 
 We decree that if anyone attacks an election, postulation or provision already made, bringing some objection to the form or the person, and should happen to appeal to us in this matter, both the objector and the defendant, and in general all those who are concerned and whom the case affects, either by themselves or by their procurators instructed for the case, should make their way to the apostolic see within a month of the lodging of the objection. But if one party {23} does not come after twenty days, and the other party has arrived and is waiting, the case about the election may proceed according to law, notwithstanding the absence of anyone. We wish and command that this is to be observed in dignities parsonages and canonries. We {24} also add that anyone who does not fully prove the objection he has brought regarding the form, shall be condemned to pay the expenses which the other party claims to have incurred on this account. But anyone who fails to prove his objection against the person, should know that he is suspended from ecclesiastical benefices for three years, and if within that time he continues to act with similar reckless conduct, that by the law itself he is deprived of these benefices for ever, and he is to have no hope or confidence of mercy in this matter, unless it is established by the clearest proof that a probable and sufficient cause excuses him from a malicious accusation.
-
 
 ## 5. {25} Only unconditional votes valid
 
 In {26} elections, postulations and ballots, from which the right of election arises, we completely disapprove of conditional, alternative and indefinite votes, and we decree that the said votes are to be held invalid, and that the election is to be determined by unconditional votes; for the power of decision of those who do not express a clear opinion is transferred to the others {27}.
 
-
 ## 6. {28} Jurisdiction of conservators
 
 We decree that conservators, whom we frequently appoint, may defend from manifest injury and violence those whom we entrust to their protection, but that their power does not extend to other matters which require a judicial investigation.
-
 
 ## 7. {29} Legates and benefices
 
 We are required by our office to watch for remedies for our subjects, because while we relieve their burdens and remove their stumbling blocks, so we rest in their ease and enjoy their peace. Therefore we enact by the present decree that legates of the Roman church, however much they hold the full power of legates whether they have been sent by us or claim the dignity of that office on behalf of their own churches, have no power from the office of legate of conferring benefices, unless we have judged that this is specially to be granted to a particular one. We do not, however, wish this restriction to hold with our brother cardinals while acting as legates, because just as they rejoice in a prerogative of honour, so we wish them to exercise a wider authority.
 
-
 ## 8. {30} Judge delegates
 
 The law seems to be clear that a judge delegate, unless he has received a special concession for the purpose from the apostolic see, cannot order either of the parties to appear in person before him, unless it be a criminal case or, in order to obtain a statement of the truth or an oath regarding calumny, the necessity of the law demands that the parties appear before him.
-
 
 ## 9. {31} On peremptory exceptions
 
 The objection of a peremptory exception or of any major defence concerning the trial of a case, raised before the contestation of the suit, shall not prevent or hold up the contestation, unless the objector makes an exception concerning a matter already judged or concluded or brought to a solution, even though the objector says that the rescript would not have been granted if the grantor had been aware of the things which are adverse to the plaintiff.
 
-
 ## 10. {32} The objection of robbery
 
 We are well aware of the frequent and persistent complaint that the exception of robbery, sometimes maliciously introduced in trials, hinders and confuses ecclesiastical cases. For while the exception is admitted, sometimes appeals are introduced. Thus the hearing of the chief case is interrupted and often comes to nothing. Thus we who are ever ready to take labours upon ourselves so that we may win peace for others, wishing to limit lawsuits and to remove material for malicious accusations, decree that in civil suits a judge is not to hold up the proceedings of the major issue on account of an objection of robbery brought by anyone except the plaintiff. But if the defendant declares in civil suits that he has been robbed by the plaintiff, or in criminal cases by anyone at all, then he must prove his assertion within fifteen days after the day on which the claim is put forward; otherwise he is to be condemned to pay the expenses which the plaintiff has incurred on this account, after a judicial estimate has been made, or let him be punished otherwise if the judge thinks right. By the word “robbed” we wish to be understood in this case a criminal accusation whereby someone declares that he has been stripped by violence of all his substance or a greater part of it. This we think is the only honest interpretation of the canons, for we ought not to meet our opponents either naked or without arms. For the one stripped has the advantage that he cannot be stripped again. Among the schoolmen the matter is debated, whether one who has been robbed by a third party can bring an exception against his accuser, or whether a time should be granted him by the judge within which he should ask for restitution, lest perchance he should wish to continue in this state in order to evade every accuser, and this we think is fully according to justice. If he does not seek restitution within the time granted, or does not bring his case to a conclusion even though he could do so, then he can be accused regardless of the exception of robbery. In addition to this we decree that robbery of private goods cannot in any way be brought up against one for ecclesiastics or vice versa.
-
 
 ## 11. {33} No-show plaintiffs
 
 A plaintiff who does not take the trouble to come on the date for which he has caused his appeal to be cited, should be condemned on his arrival to pay the expenses incurred by the defendant on account of this, and he is not to be admitted to another citation unless he gives a sufficient surety that he will appear on the date.
 
-
 ## 12. {34} On early possession for the sake of preservation
 
 We decree that a person who, in order to obtain a dignity, parsonage or ecclesiastical benefice, brings a suit against the possessor, may not be admitted to possession of it for the sake of its preservation, on the grounds of the other’s contumacy; this is to prevent his entering upon it from appearing irregular. But in this case the divine presence may make up for the absence of the contumacious one, so that though the suit is not opposed, the matter may be brought to the proper conclusion after a careful examination.
-
 
 ## 13. {35} On the acceptability of negative assertions
 
 We decree that negative assertions, which can only be proved by the admission of the opponent, may be accepted by the judges if they see this to be expedient in the interests of equity.
 
-
 ## 14. {36} The exception of major excommunication
 
 After due consideration our holy mother the church decrees that the exception of a major excommunication should hold up the suit and delay the agents, in whatever part of the proceedings it is produced. Thus ecclesiastical censure will be the more feared, the danger of communion avoided, the vice of contumacy checked, and those excommunicated, while they are excluded from the acts of the community, may the more easily be brought, through a sense of shame, to the grace of humility and reconciliation. But with the growth of human evil what was provided as a remedy has turned to harm. For while in ecclesiastical cases this exception is frequently brought up through malice, it happens that business is delayed and the parties worn out by toil and expense. Therefore, since this has crept in like a general plague, we think it right to apply a general remedy. Thus if anyone brings up the objection of excommunication, he should set out the kind of excommunication and the name of the person who imposed the penalty. He must know that he is bringing the matter into public notice, and he must prove it with the clearest evidence within eight days, not counting the day on which he brings it forward. If he does not prove it, the judge should not fail to proceed in the case, condemning the accused to repay the sum which the plaintiff shows he has incurred, after an estimate has been made. If however later, while the hearing continues and the proof is progressing, an exception is made either with regard to the same excommunication or another and is proved, the plaintiff is to be excluded from the proceedings until he has deserved to gain the grace of absolution, and all that has gone before shall nevertheless be regarded as valid; provided that this exception is not put forward more than twice, unless a new excommunication has arisen or a clear and ready proof has come to light concerning the old. If such an exception is brought forward after the case has been decided though it will prevent the execution it will not weaken the verdict, with the qualification that, if the plaintiff has been publicly excommunicated, and the judge knows this at any time, then even if the accused shall not make an exception on this score, the judge should not delay in removing the plaintiff from his office.
-
 
 ## 15. {37} On Judges Who Give Dishonest Judgment
 
 Since before the judgment seat of the eternal king a person will not be held guilty when a judge unjustly condemns him, according to the words of the prophet, the Lord will not condemn him when he is judged, ecclesiastical judges must take care and be on the watch that in the process of justice dislike has no power, favour does not take an undue place, fear is banished, and reward or hope of reward does not overturn justice. Let them bear the scales in their hands and weigh with an equal balance, so that in all that is done in the court, especially in forming and giving the verdict, they may have God only before their eyes following the example of him who when entering the tabernacle referred the complaints of the people to the Lord to judge according to his command. If any ecclesiastical judge, whether ordinary or delegated, careless of his reputation and seeking his own honour, acts against his conscience and justice in any way to the injury of one party in his judgment, whether from favour or from base motives, let him know that he is suspended from the exercise of his office for a year and he is to be condemned to pay to the injured party the damages incurred; further, let him know that if during the period of his suspension he sacrilegiously takes part in the sacred rites of the church, he is caught in the noose of irregularity according to the canonical sanctions, from which he can be freed only by the apostolic see, saving the other constitutions which assign and inflict punishment on judges who give dishonest judgment. For it is right that he who dares to offend in so many ways should suffer a multiple penalty.
 
-
 ## 16. {38} On appeals
 
 It is our earnest wish to lessen lawsuits and to relieve subjects of their troubles. Therefore we decree that if anyone thinks that he should appeal to us in a court of law or outside it because of an interlocutory decree or a grievance, let him at once put in writing the reason for his appeal, seeking a writ which we order to be granted him. In this writ the judge is to declare the reason for the appeal, and why the appeal has not been granted or whether it was granted out of respect for a superior. After this let time be granted to the appellant, according to distance and the nature of the persons and the business, to follow up his appeal. If the appellee wishes it and the principals petition for it, let them approach the apostolic see, either by themselves or through agents who have been instructed and given a commission to act, bringing with them the reasons and documents relating to the case. Let them come so prepared that if it seems good to us, when the matter of the appeal has been dealt with or committed to the parties for agreement, the principal case may proceed, insofar as it can and should by law; without however any change in what tradition has ordained about appeals from definitive sentences. If the appellant does not observe the above provisions, he is not to be reckoned an appellant and he must return to the examination of the former judge, and is to be condemned to pay the legitimate expenses. If the appellee disregards this statute, he shall be proceeded against as contumacious, as regards both the costs and the case, in so far as this is allowed by the law. Indeed it is right that the laws should raise their hands against someone who mocks the law, judge and litigant.
-
 
 ## 17. {39} On the same
 
 When reasonable grounds for suspicion have been noted against a judge, and arbitrators have been chosen by the parties according to the form of law to investigate it, it often happens that when the two arbitrators fail to agree and do not summon a third one, with whom both or one of them can proceed to settle the matter as they are obliged, the judge brings a sentence of excommunication against them, which they through dislike or favour for long disregard. Thus the case itself, interrupted more than it should be, does not proceed to a settlement of the principal business. As it is our wish therefore to apply a necessary remedy for a disease of this nature, we decree that a fitting time-limit should be fixed by the judge for the two arbitrators, so that within it they may either agree or by consent summon a third one, with whom both or one of them may put an end to the suspicion. Otherwise the judge thenceforth shall proceed in the principal business.
 
-
 ## 18. {40} On employing assassins
 
 The son of God, Jesus Christ, for the redemption of the human race descended from the height of heaven to the lowest part of the world and underwent a temporal death. But when after his resurrection he was about to ascend to his Father, that he might not leave the flock redeemed by his glorious blood without a shepherd, he entrusted its care to the blessed apostle Peter , so that by the firmness of his own faith he might strengthen others in the christian religion and kindle their minds with the ardour of devotion to the works of their salvation. Hence we who by the will of our Lord, though without merit of our own, have been made successors of this apostle and hold on earth, though unworthy, the place of our Redeemer, should always be careful and vigilant in the guarding of that flock and be forced to direct our thoughts continuously to the salvation of souls by removing what is harmful and doing what is profitable. Thus casting off the sleep of negligence and with the eyes of our heart ever vigilant, we may be able to win souls to God with the cooperation of his grace. Since therefore there are people who with a terrible inhumanity and loathsome cruelty thirst for the death of others and cause them to be killed by assassins, and thus bring about not only the death of the body but also of the soul, unless the abundant divine grace prevents it, we wish to meet such danger to souls, so that the victims may be defended beforehand by spiritual arms and all power may be bestowed by God for justice and the exercise of right judgment, and to strike those wicked and reckless people with the sword of ecclesiastical punishment, so that the fear of punishment may set a limit to their audacity. We do so especially since some persons of high standing, fearing to be killed in such a way, are forced to beg for their own safety from the master of these assassins, and thus so to speak to redeem their life in a way that is an insult to christian dignity. Therefore, with the approval of the sacred council, we decree that if any prince, prelate or any ecclesiastical or secular person shall cause the death of any Christian by such assassins, or even command it — even though death does not follow from this-or receives, defends or hides such persons, he automatically incurs the sentence of excommunication and of deposition from dignity, honour, order, office and benefice, and these are to be conferred on others by those who have the right to do so. Let such a one with all his worldly goods be cast out for ever by all christian people as an enemy of religion, and after it has been established by reasonable evidence that so loathsome a crime has been committed, no other sentence of excommunication, deposition or rejection shall in any way be needed.
-
 
 ## 19. {41} On excommunication 1
 
 Since the aim of excommunication is healing and not death, correction and not destruction, as long as the one against whom it is pronounced does not treat it with contempt, let an ecclesiastical judge proceed with caution, so that in pronouncing It he may be seen as one who acts with a correcting and healing hand. Whoever pronounces an excommunication, therefore, should do this in writing and should write down expressly the reason why the excommunication was pronounced. He is bound to hand over a copy of this written document to the one excommunicated within a month after the date of sentence, if requested to do so. As to this request, we wish a public document to be drawn up or testimonial letters to be furnished, sealed with an official seal. If any judge rashly violates this constitution, let him know that he is suspended for one month from entering a church or attending divine services. The superior to whom the one excommunicated has recourse, should readily remove the excommunication and condemn the judge who pronounced it to repay the expenses and all losses, or punish him in other ways with a fitting penalty, so that judges may learn by the lesson of punishment how serious it is to hurl the bolt of excommunication without due consideration. We wish the same to be observed in sentences of suspension and interdict. Let prelates of churches and all judges take care that they do not incur the foresaid penalty of suspension. But if it happens that they take part m divine offices as before, they will not escape irregularity according to the canonical sanctions, in a matter where dispensation cannot be granted except by the sovereign pontiff.
 
-
 ## 20. {42} On excommunication 2
 
 The question is sometimes asked whether, when a person who asks to be absolved by a superior by way of precaution, asserting that the sentence of excommunication pronounced against him is void, the act of absolution should be performed for him without objection; and whether one who declares before such absolution that he will prove in a court of law that he was excommunicated after a legitimate appeal, or that an intolerable mistake was clearly expressed in the sentence, should be avoided in all things except in what concerns the proof. To the first question we decree that the following is to be observed: absolution is not to be refused to the petitioner, even though the pronouncer of the sentence or the adversary opposes it, unless he says that the petitioner was excommunicated for a manifest offence, in which case a limit of eight days is to be granted to the one saying this. If he proves his objection, the sentence is not to be set aside unless there is sufficient guarantee of amendment or an adequate assurance that the petitioner will appear in court if the offence with which he is charged is still doubtful. To the second question, we decree that he who is allowed to submit a proof, as long as the matter of proof is in dispute, is to be avoided in all matters in the court in which he is engaged as an agent, but outside the court he may take part in offices, postulations, elections and other lawful acts.
 
-
 ## 21. {43} On excommunication 3
 
 We decree {44} that no judge should presume to pronounce, before a canonical warning, a sentence of major excommunication upon persons who associate, in speech or other ways by which an associate incurs a minor excommunication, with persons already excommunicated by the judge; saving those decrees which have legitimately been promulgated against those who presume to associate with one condemned for grievous crime. But it the excommunicated person becomes hardened in speech or other ways by which an associate incurs a minor excommunication, the judge can, after canonical warning, condemn such associates with a similar censure. Otherwise excommunication pronounced against these associates is not to have any binding power, and those who pronounce it may fear the penalty of the law.
-
 
 ## 22. {45} On excommunication 4
 
 Since there is danger that bishops and their superiors in the execution of their pontifical office, which is often their duty, may incur in some case an automatic sentence of interdict or suspension, we have thought it right, after careful consideration, to decree that bishops and other higher prelates in no way incur, because of any decree, sentence or order, the aforesaid sentence by reason of the law itself, unless there is express mention in them of bishops and superiors. In the constitution Solet a nonnullis, previously promulgated by us, it is laid down that when someone offers in court to prove that a sentence of excommunication was passed against him after a legitimate appeal, he is not to be avoided during the period of proof in matters which lie outside the court, such as elections, postulations and offices. To this we add that this constitution should not be extended to the sentences of bishops and archbishops, but what was previously observed in such actions should be observed in the future for these too.
 
 II
-
 
 ## 1. {46} Management of church debts
 
@@ -199,7 +172,6 @@ Further we strictly forbid, with the authority of the same council, those mentio
 
 That this salutary constitution should be kept unbroken, and the advantage which we hope from it may be clearly seen, we consider that we must lay down by an inviolable decree that all abbots and priors as well as deans and those in charge of cathedrals or other churches, at least once a year in their chapters, should render a strict account of their administration, and a written and sealed account should be faithfully read out in the presence of the visiting superior. Likewise archbishops and bishops are to take care each year to make known to their chapters with due fidelity the state of administration of the goods belonging to their households, and bishops to their metropolitans, and metropolitans to the legates of the apostolic see, or to others to whom the visitation of their churches has been assigned by the same see. Written accounts are always to be kept in the treasury of the church for a record, so that in the accounts a careful comparison can be made between future years and the present and past; and the superior may learn from this the care or negligence of the administration. Let the superior requite any negligence, keeping God only before his eyes and putting aside love, hate and fear of humans, with such a degree and kind of correction that he may not on this account receive from God or his superior or the apostolic see condign punishment. We order that this constitution is to be observed not only by future prelates but also by those already promoted.
 
-
 ## 2. {47} On help for the empire of Constantinople
 
 Though we are engaged in difficult matters and distracted by manifold anxieties, yet among those things which demand our constant attention is the liberation of the empire of Constantinople. This we desire with our whole heart, this is ever the object of our thoughts. Yet though the apostolic see has eagerly sought a remedy on its behalf by earnest endeavour and many forms of assistance, though for long Catholics have striven by grievous toils, by burdensome expense, by care, sweat, tears and bloodshed, yet the hand that extended such aid could not wholly, hindered by sin, snatch the empire from the yoke of the enemy. Thus not without cause we are troubled with grief. But because the body of the church would be shamefully deformed by the lack of a loved member, namely the aforesaid empire, and be sadly weakened and suffer loss; and because it could rightly be assigned to our sloth and that of the church, if it were deprived of the support of the faithful, and left to be freely oppressed by its enemies; we firmly propose to come to the help of the empire with swift and effective aid. Thus at the same time as the church eagerly rises to its assistance and stretches out the hand of defence, the empire can be saved from the dominion of its foes, and be brought back by the Lord’s guidance to the unity of that same body, and may feel after the crushing hammer of its enemies the consoling hand of the church its mother, and after the blindness of error regain its sight by the possession of the catholic faith. It is the more fitting that prelates of churches and other ecclesiastics should be watchful and diligent for its liberation, and bestow their help and assistance, the more they are bound to work for the increase of the faith and of ecclesiastical liberty, which could chiefly come about from the liberation of the empire; and especially because while the empire is helped, assistance is consequently rendered to the holy Land.
@@ -208,11 +180,9 @@ Indeed, so that the help to the empire may be speedy and useful, we decree, with
 
 We ourselves, from the revenues of the church of Rome, after first deducting a tenth from them to be assigned to the aid of the holy Land, will assign a tenth part in full for the support of the said empire. Further, when help is given to the empire, assistance is given in a very particular way and directed to the recovery of the holy Land, while we are striving for the liberation of the empire itself. Thus trusting in the mercy of almighty God and the authority of his blessed apostles Peter and Paul , from the power of binding and loosing which he conferred upon us though unworthy, we grant pardon of their sins to all those who come to the help of the said empire, and we desire they may enjoy that privilege and immunity which is granted to those who come to the help of the holy Land.
 
-
 ## 3. {48} Admonition to be made by prelates to the people in their charge
 
 In the belief that it is for ever our native country, from times long past all the children of the church have not only poured out countless sums of money but have also freely shed their blood to recover the holy Land, which the Son of God has consecrated with the shedding of his own blood. This we learn, sad at heart, from what has happened across the sea where the unbelievers fight against the faithful. Since it is the special prayer of the apostolic see that the desire of all for the redemption of the holy Land may, if God so wills, be speedily accomplished, we have made due provision, in order to win God’s favour, to arouse you to this task by our letter. Therefore we earnestly beg all of you, commanding you in our lord Jesus Christ, that by your pious admonitions you should persuade the faithful committed to your care, in your sermons or when you Impose a penance upon them, granting a special indulgence, as you see it to be expedient, that in their wills, in return for the remission of their sins, they should leave something for the help of the holy Land or the eastern empire. You are carefully to provide that what they give for this support by way of money, through reverence of our crucified Lord, is faithfully preserved in definite places under your seal, and that what is bequeathed for this purpose in other forms is accurately recorded in writing. May your own devotion carry out this work of piety, in which the only aim is God’s cause and the salvation of the faithful, so readily that with full assurance you may look at least for the reward of glory from the hand of the divine judge.
-
 
 ## 4. {49} On the Tartars
 
@@ -232,9 +202,7 @@ Although tournaments have been forbidden in a general way on pain of a fixed pen
 
 We therefore, trusting in the mercy of almighty God and in the authority of the blessed apostles Peter and Paul , do grant, by the power of binding and loosing that God has conferred upon us, albeit unworthy, unto all those who undertake this work in person and at their own expense, full pardon for their sins about which they are heartily contrite and have spoken in confession, and we promise them an increase of eternal life at the recompensing of the just. To those who do not go there in person but send suitable men at their own expense, according to their means and status, and likewise to those who go in person but at others’ expense, we grant full pardon for their sins. We grant to share in this remission, according to the amount of their help and the intensity of their devotion, all who shall contribute suitably from their goods to the aid of the said Land or who give useful advice and help regarding the above. Finally, this holy and general synod imparts the benefit of its prayers and blessings to all who piously set out on this enterprise in order that it may contribute worthily to their salvation.
 
-
 ## Introduction and translation taken from Decrees of the Ecumenical Councils , ed. Norman P. Tanner
-
 
 ## ENDNOTES
 

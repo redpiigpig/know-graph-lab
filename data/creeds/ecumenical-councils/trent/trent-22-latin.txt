@@ -479,6 +479,6 @@ calicis fore iudicaverit.
                                 [Decretum diei futurae Sessionis]
 
        Insuper eadem sacrosancta Tridentina Synodus diem futurae sessionis ad feriam
-quintam post octavam festivitatis omnium sanctorum quae erit dies 12 mensis
+quintam post octavam festivitatis omnium sanctorum quae erit dies mensis
 novembris indicit; et in ea decernetur de sacramento ordinis et de sacramento
 matrimonii.

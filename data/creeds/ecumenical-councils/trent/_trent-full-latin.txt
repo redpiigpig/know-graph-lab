@@ -1413,7 +1413,7 @@ gubernentur constitutionis concilii viennensis quae incipit quia contingit forma
 
        Item haec sacrosancta Synodus statuit et decrevit proximam futuram sessionem
 habendam et celebrandam esse die iovis feria quinta post sequentem dominicam in albis
-quae erit 21 mensis aprilis praesentis annis 1547.
+quae erit mensis aprilis praesentis annis.
 
                                              SESSIO VIII
                                             11 mart. 1547
@@ -2798,8 +2798,8 @@ alteri inferiori reservetur.
 iuris patronatus nisi episcopo loci Ordinario ad quem provisio seu institutio ipsius
 beneficii cessante privilegio iure pertineret quoquo modo praesentare; alias praesentatio
 ac institutio forsan sequutae nullae sint et esse intelligantur.
-       Declarat praeterea sancta Synodus in futura sessione quam ad 25 diem ianuarii
-subsequentis anni 1552 habendam esse iam decrevit una cum sacrificio Missae
+       Declarat praeterea sancta Synodus in futura sessione quam ad diem ianuarii
+subsequentis anni habendam esse iam decrevit una cum sacrificio Missae
 agendum et tractandum etiam esse de sacramento ordinis et prosequendam esse
 materiam reformationis.
 
@@ -2995,7 +2995,7 @@ concilium fuerunt hactenus statuta et decreta.
 laudem et gloriam sanctae individuae Trinitatis Patris et Filii et Spiritus Sancti ad
 incrementum et exaltationem fidei et religionis christianae sacrum oecumenicum et
 generale concilium Tridentinum in Spiritu Sancto legitime congregatum ab hodierno die
-qui est decimus octavus mensis ianuarii anni a nativitate domini 1562 cathedrae
+qui est decimus octavus mensis ianuarii anni a nativitate domini cathedrae
 Romanae b(eati) Petri apostolorum principis consecrato sublata quacumque suspensione
 iuxta formam et tenorem litterarum sanctissimi domini nostri Pii IV pontificis maximi
 celebrari et in eo ea debito servato ordine tractari quae proponentibus legatis ac
@@ -3010,7 +3010,7 @@ Synodo videbuntur?
 
        illustrissimi et reverendissimi domini reverendi que patres placet ne vobis
 proximam futuram sessionem habendam et celebrandam esse feria quinta post
-secundam dominicam quadragesimae quae erit dies 26 mensis februarii?
+secundam dominicam quadragesimae quae erit dies mensis februarii?
 
        [Responderunt: placet].
 
@@ -3928,7 +3928,7 @@ calicis fore iudicaverit.
                                 [Decretum diei futurae Sessionis]
 
        Insuper eadem sacrosancta Tridentina Synodus diem futurae sessionis ad feriam
-quintam post octavam festivitatis omnium sanctorum quae erit dies 12 mensis
+quintam post octavam festivitatis omnium sanctorum quae erit dies mensis
 novembris indicit; et in ea decernetur de sacramento ordinis et de sacramento
 matrimonii.
 
