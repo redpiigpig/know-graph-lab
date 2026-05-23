@@ -385,49 +385,121 @@ def _haiku_parse_response(text: str, page_numbers: list) -> list:
     return chunks
 
 
-def _haiku_ocr_book(haiku_client, src_path: Path) -> list:
+def _haiku_ocr_book(haiku_client, src_path: Path, book_id: str = None) -> list:
+    """OCR a PDF book with Haiku, batch by batch.
+
+    Checkpoint: writes each batch's chunks to `_chunks/{book_id}.batch_ckpt.jsonl`
+    immediately after success, so a mid-book Cloudflare/network failure can resume
+    from the last completed batch on next run instead of redoing everything.
+
+    Per-batch retry: 5 attempts with exponential backoff (10/20/40/80/160s) on
+    transient errors (Cloudflare 520, connection drops, brief 429s).
+    """
     import base64
-    import sys as _sys
     doc = _fitz.open(src_path)
     total = len(doc)
+
+    # ── CHECKPOINT: resume from existing batch JSONL if present ──
+    ckpt_path = CHUNKS_DIR / f"{book_id}.batch_ckpt.jsonl" if book_id else None
+    all_chunks: list = []
+    done_pages: set = set()
+    if ckpt_path and ckpt_path.exists():
+        try:
+            with ckpt_path.open(encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if not line:
+                        continue
+                    try:
+                        c = json.loads(line)
+                        all_chunks.append(c)
+                        done_pages.add(c["page"])
+                    except (json.JSONDecodeError, KeyError):
+                        pass
+            if done_pages:
+                print(f"    [haiku] resume: loaded {len(all_chunks)} chunks "
+                      f"from checkpoint (last page {max(done_pages)})", flush=True)
+        except OSError as e:
+            print(f"    [haiku] checkpoint read error: {e}; starting fresh", flush=True)
+
+    ckpt_f = None
+    if ckpt_path:
+        CHUNKS_DIR.mkdir(parents=True, exist_ok=True)
+        ckpt_f = ckpt_path.open("a", encoding="utf-8")
+
     print(f"\n    [haiku] {total} pages, batching {_HAIKU_PAGES_PER_BATCH}/call",
           flush=True)
-    all_chunks = []
     n_batches = (total + _HAIKU_PAGES_PER_BATCH - 1) // _HAIKU_PAGES_PER_BATCH
     t_book_start = time.time()
-    for bi, batch_start in enumerate(range(0, total, _HAIKU_PAGES_PER_BATCH), 1):
-        batch_end = min(batch_start + _HAIKU_PAGES_PER_BATCH, total)
-        page_indices = list(range(batch_start, batch_end))
-        page_numbers = [i + 1 for i in page_indices]
-        t_b = time.time()
-        content = []
-        for pi in page_indices:
-            img_bytes, media_type = _haiku_render_page(doc, pi)
-            b64 = base64.standard_b64encode(img_bytes).decode()
-            content.append({"type": "image", "source": {"type": "base64", "media_type": media_type, "data": b64}})
-        t_render = time.time() - t_b
-        prompt = _HAIKU_BATCH_PROMPT.format(
-            first=page_numbers[0],
-            next=page_numbers[1] if len(page_numbers) > 1 else page_numbers[0] + 1,
-        )
-        content.append({"type": "text", "text": prompt})
-        t_api = time.time()
-        resp = haiku_client.messages.create(
-            model=_HAIKU_MODEL,
-            max_tokens=4096,
-            messages=[{"role": "user", "content": content}],
-        )
-        t_api_dur = time.time() - t_api
-        batch_text = resp.content[0].text if resp.content else ""
-        chunks = _haiku_parse_response(batch_text, page_numbers)
-        all_chunks.extend(chunks)
-        elapsed = time.time() - t_book_start
-        eta = (elapsed / bi) * (n_batches - bi) if bi else 0
-        print(f"    [haiku] batch {bi}/{n_batches} pp{page_numbers[0]}-{page_numbers[-1]} "
-              f"render={t_render:.1f}s api={t_api_dur:.1f}s pages={len(chunks)} "
-              f"elapsed={elapsed/60:.1f}m eta={eta/60:.1f}m",
-              flush=True)
-    doc.close()
+    try:
+        for bi, batch_start in enumerate(range(0, total, _HAIKU_PAGES_PER_BATCH), 1):
+            batch_end = min(batch_start + _HAIKU_PAGES_PER_BATCH, total)
+            page_indices = list(range(batch_start, batch_end))
+            page_numbers = [i + 1 for i in page_indices]
+
+            # Skip whole batch if every page already OCR'd in checkpoint
+            if done_pages and all(p in done_pages for p in page_numbers):
+                print(f"    [haiku] batch {bi}/{n_batches} pp{page_numbers[0]}-{page_numbers[-1]} "
+                      f"SKIP (checkpoint)", flush=True)
+                continue
+
+            t_b = time.time()
+            content = []
+            for pi in page_indices:
+                img_bytes, media_type = _haiku_render_page(doc, pi)
+                b64 = base64.standard_b64encode(img_bytes).decode()
+                content.append({"type": "image", "source": {"type": "base64", "media_type": media_type, "data": b64}})
+            t_render = time.time() - t_b
+            prompt = _HAIKU_BATCH_PROMPT.format(
+                first=page_numbers[0],
+                next=page_numbers[1] if len(page_numbers) > 1 else page_numbers[0] + 1,
+            )
+            content.append({"type": "text", "text": prompt})
+
+            # Per-batch retry: 5 attempts with exponential backoff
+            resp = None
+            t_api = time.time()
+            last_err = None
+            for attempt in range(1, 6):
+                try:
+                    resp = haiku_client.messages.create(
+                        model=_HAIKU_MODEL,
+                        max_tokens=4096,
+                        messages=[{"role": "user", "content": content}],
+                    )
+                    break
+                except Exception as e:  # noqa: BLE001 — catch all Anthropic transient errors
+                    last_err = e
+                    msg = str(e)[:120]
+                    if attempt == 5:
+                        # exhausted retries — re-raise to outer handler
+                        raise
+                    wait_s = 10 * (2 ** (attempt - 1))  # 10, 20, 40, 80, 160
+                    print(f"    [haiku] batch {bi} attempt {attempt}/5 failed: {msg}; "
+                          f"retry in {wait_s}s", flush=True)
+                    time.sleep(wait_s)
+
+            t_api_dur = time.time() - t_api
+            batch_text = resp.content[0].text if resp.content else ""
+            chunks = _haiku_parse_response(batch_text, page_numbers)
+            all_chunks.extend(chunks)
+
+            # Persist batch to checkpoint immediately (resume safety)
+            if ckpt_f:
+                for c in chunks:
+                    ckpt_f.write(json.dumps(c, ensure_ascii=False) + "\n")
+                ckpt_f.flush()
+
+            elapsed = time.time() - t_book_start
+            eta = (elapsed / bi) * (n_batches - bi) if bi else 0
+            print(f"    [haiku] batch {bi}/{n_batches} pp{page_numbers[0]}-{page_numbers[-1]} "
+                  f"render={t_render:.1f}s api={t_api_dur:.1f}s pages={len(chunks)} "
+                  f"elapsed={elapsed/60:.1f}m eta={eta/60:.1f}m",
+                  flush=True)
+    finally:
+        if ckpt_f:
+            ckpt_f.close()
+        doc.close()
     return all_chunks
 
 
@@ -457,12 +529,18 @@ def _make_anthropic_client():
 
 
 def process_one_haiku(haiku_client, book: dict, src_path: Path, max_retries: int = 2) -> dict:
-    """OCR one book with Haiku. Returns same {status, error?, transient?} dict as process_one."""
+    """OCR one book with Haiku. Returns same {status, error?, transient?} dict as process_one.
+
+    _haiku_ocr_book uses batch-level checkpoint (book_id keyed) so transient
+    Cloudflare 520 / network failures resume from last good batch on next call.
+    On successful completion, the checkpoint file is deleted.
+    """
     last_err = ""
+    ckpt_path = CHUNKS_DIR / f"{book['id']}.batch_ckpt.jsonl"
     for attempt in range(1, max_retries + 1):
         try:
             t0 = time.time()
-            chunks = _haiku_ocr_book(haiku_client, src_path)
+            chunks = _haiku_ocr_book(haiku_client, src_path, book_id=book["id"])
             non_empty = [c for c in chunks if c.get("text", "").strip()]
             if not non_empty:
                 return {"status": "fail", "error": "haiku returned 0 usable pages", "transient": False}
@@ -485,6 +563,11 @@ def process_one_haiku(haiku_client, book: dict, src_path: Path, max_retries: int
                 update_book_done(book["id"], total_chars=total_chars,
                                  chunk_count=len(non_empty),
                                  total_pages=max(c["page"] for c in non_empty))
+                # Success — clean up checkpoint
+                try:
+                    ckpt_path.unlink(missing_ok=True)
+                except OSError:
+                    pass
                 return {"status": "ok"}
             else:
                 update_book_error(book["id"], f"OCR ok but R2 push failed: {r2_err}")
@@ -499,6 +582,7 @@ def process_one_haiku(haiku_client, book: dict, src_path: Path, max_retries: int
                 time.sleep(wait)
                 continue
             print(f"  ❌ Haiku {last_err[:200]}")
+            print(f"     (checkpoint preserved at {ckpt_path.name} for resume)")
             return {"status": "fail", "error": last_err, "transient": is_rate}
     return {"status": "fail", "error": last_err, "transient": True}
 
