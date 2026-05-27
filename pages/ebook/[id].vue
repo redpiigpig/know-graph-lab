@@ -814,39 +814,35 @@ function renderMarkdown(md: string, chunkIndex: number | null = null): string {
     if (/^-{3,}$/.test(block)) { out.push("<hr>"); continue; }
     const escaped = escapeHtml(block);
     let h: RegExpMatchArray | null;
-    // Heading detection — match HEADING LINE separately from the rest of
-    // the block. CCEL EPUBs wrap long headings across multiple lines with
-    // single \n (e.g. `#### Chapter I.—After the salutation, the\nwriter
-    // declares...`), so `.+$` without /m fails to match and the whole
-    // block falls through to <p>{escaped}</p> showing raw `####`.
-    // The fix: capture (heading first-line, rest-of-block) and emit both.
-    if ((h = escaped.match(/^####\s+([^\n]+)(?:\n([\s\S]*))?$/))) {
+    // Heading detection — CCEL EPUBs wrap long headings across multiple
+    // lines with single \n (e.g. `#### Chapter I.—After the salutation, the
+    // \nwriter declares...`). Original `.+$` regex without /m fails on those
+    // and the whole block falls through to raw <p>####...</p>.
+    // Fix: when block starts with `####…`, treat the ENTIRE block as the
+    // heading content (joining wrapped lines with a space) — the EPUB
+    // separated heading from body using `\n\n`, so a `\n\n` would have
+    // already produced two blocks via splitParagraphs. Joining here
+    // avoids both the raw-render bug and the dangling-fragment-paragraph
+    // that resulted from splitting the block into <h4>+<p>.
+    if ((h = escaped.match(/^####\s+([\s\S]+)$/))) {
       const id = chunkIndex !== null ? ` id="sec-${chunkIndex}-${subSeq}"` : "";
       subSeq++;
-      out.push(`<h4${id}>${inlineFmt(h[1].trim(), chunkIndex)}</h4>`);
-      if (h[2]?.trim()) {
-        out.push(`<p>${inlineFmt(h[2].trim(), chunkIndex).replace(/\n/g, " ")}</p>`);
-      }
+      const joined = h[1].replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
+      out.push(`<h4${id}>${inlineFmt(joined, chunkIndex)}</h4>`);
     }
-    else if ((h = escaped.match(/^###\s+([^\n]+)(?:\n([\s\S]*))?$/))) {
+    else if ((h = escaped.match(/^###\s+([\s\S]+)$/))) {
       const id = chunkIndex !== null ? ` id="sec-${chunkIndex}-${subSeq}"` : "";
       subSeq++;
-      out.push(`<h3${id}>${inlineFmt(h[1].trim(), chunkIndex)}</h3>`);
-      if (h[2]?.trim()) {
-        out.push(`<p>${inlineFmt(h[2].trim(), chunkIndex).replace(/\n/g, " ")}</p>`);
-      }
+      const joined = h[1].replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
+      out.push(`<h3${id}>${inlineFmt(joined, chunkIndex)}</h3>`);
     }
-    else if ((h = escaped.match(/^##\s+([^\n]+)(?:\n([\s\S]*))?$/))) {
-      out.push(`<h2>${inlineFmt(h[1].trim(), chunkIndex)}</h2>`);
-      if (h[2]?.trim()) {
-        out.push(`<p>${inlineFmt(h[2].trim(), chunkIndex).replace(/\n/g, " ")}</p>`);
-      }
+    else if ((h = escaped.match(/^##\s+([\s\S]+)$/))) {
+      const joined = h[1].replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
+      out.push(`<h2>${inlineFmt(joined, chunkIndex)}</h2>`);
     }
-    else if ((h = escaped.match(/^#\s+([^\n]+)(?:\n([\s\S]*))?$/))) {
-      out.push(`<h1>${inlineFmt(h[1].trim(), chunkIndex)}</h1>`);
-      if (h[2]?.trim()) {
-        out.push(`<p>${inlineFmt(h[2].trim(), chunkIndex).replace(/\n/g, " ")}</p>`);
-      }
+    else if ((h = escaped.match(/^#\s+([\s\S]+)$/))) {
+      const joined = h[1].replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
+      out.push(`<h1>${inlineFmt(joined, chunkIndex)}</h1>`);
     }
     else if (/^&gt;\s/.test(escaped)) {
       const lines = escaped.split(/\n/).map(ln => ln.replace(/^&gt;\s?/, "")).join("<br>");
@@ -967,7 +963,13 @@ const markdownHtml = computed(() =>
     ? renderTocPage(pageContent.value)
     : renderMarkdown(pageContent.value, currentPage.value - 1)
 );
-const sourceHtml = computed(() => pageSourceText.value ? renderMarkdown(pageSourceText.value) : "");
+// Pass chunkIndex into the English render too — without it inlineFmt
+// leaves `[^N]` as raw text instead of <sup class="footnote-ref">. Use
+// a chunk-offset (1000+) so the footnote DOM ids don't collide with the
+// Chinese column's refs (same anchor space, opposite column).
+const sourceHtml = computed(() => pageSourceText.value
+  ? renderMarkdown(pageSourceText.value, currentPage.value - 1 + 100000)
+  : "");
 
 // Paragraph-level alignment for bilingual mode. Each paragraph (split on
 // blank line in source markdown) pairs with the matching translated
@@ -982,10 +984,12 @@ const paragraphPairs = computed<{ zh: string; en: string }[]>(() => {
   const en = splitParagraphs(pageSourceText.value);
   const n = Math.max(zh.length, en.length);
   const out: { zh: string; en: string }[] = [];
+  const zhChunkIdx = currentPage.value - 1;
+  const enChunkIdx = zhChunkIdx + 100000;  // offset so EN refs don't id-collide with ZH
   for (let i = 0; i < n; i++) {
     out.push({
-      zh: zh[i] ? renderMarkdown(zh[i]) : "",
-      en: en[i] ? renderMarkdown(en[i]) : "",
+      zh: zh[i] ? renderMarkdown(zh[i], zhChunkIdx) : "",
+      en: en[i] ? renderMarkdown(en[i], enChunkIdx) : "",
     });
   }
   return out;
