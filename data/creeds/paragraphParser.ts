@@ -89,11 +89,14 @@ export function parseDoc(text: string): ParsedDoc {
     }
 
     // Standard `N. body` numbered paragraph
+    //   Cap 600 covers papal encyclicals (longest known: Evangelii Gaudium 288;
+    //   Vatican II longest: GS at 93). Above 600 is almost certainly a year
+    //   ("1990. Anno illo...") or some other false positive.
     const m = block.match(/^(\d{1,3})\s*\.?\s+([\s\S]*)$/)
     if (m) {
       const n = parseInt(m[1], 10)
       const bodyAfter = m[2].trim()
-      if (n >= 1 && n <= 200 && bodyAfter.length >= 4) {
+      if (n >= 1 && n <= 600 && bodyAfter.length >= 4) {
         if (n <= lastParaNum) {
           // Backward jump — likely a chapter sub-header rendered as "1." or a
           // footnote section that wasn't tagged.

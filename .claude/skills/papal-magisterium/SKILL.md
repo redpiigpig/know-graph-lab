@@ -5,7 +5,7 @@ description: 教宗訓導文獻對照工具（/encyclicals）— 4 世紀 Damasu
 
 # Papal Magisterium — 教宗訓導文獻對照
 
-> 🟡 **Status**: 規劃中 2026-05-27。新 sub-portal，作為 `/scripture-canon` 第 7 卡片。架構直接複用 [[scripture-canon-portal]] 的 creeds pipeline；資料層獨立 (`data/encyclicals/`) 但 parser / UI alignment 元件共用。
+> 🟢 **Status**: Phase 0 + 1B demo 已上線 2026-05-27（`/encyclicals` portal + Laudato Si' 2015 三欄對照 246 段齊全）。架構直接複用 [[scripture-canon-portal]] 的 creeds pipeline；資料層獨立 (`data/encyclicals/`) 但 `paragraphParser.ts` / `alignDocs()` 元件共用。
 >
 > **本 skill 與 [[scripture-canon-portal]] 的分工**：
 > - scripture-canon-portal：**集體**文件（大公會議產出的信經 / canons / dogmatic decree）+ 信條 + 教會法規 + 教父著作搜尋 + 聖經對照 + 典外
@@ -292,7 +292,7 @@ import { loadCreedText } from '@/data/encyclicals/textLoader'  // 同樣的 Vite
 
 ## 5. Pipeline & 實作優先順序
 
-> **實作策略（user 2026-05-27 確認）**：**近代優先（Pius IX 1846 起），早期 4-7c 預留卡片／命名空位**。理由：vatican.va 直接有現成多語齊全資料；早期教宗文件的拉丁原文／英文取材路徑成熟，但**中文翻譯尚未到位**（依賴 [[fathers]] / Schaff NPNF Vol 12-13 中譯成熟度，目前進度不夠）。等早期教父 ebook 中文 standardize 完成後再回頭 ingest 4-7c。
+> **實作策略（user 2026-05-27 確認，第二次調整）**：**從 21 世紀方濟各往回做**。理由：vatican.va 21c 文件中英拉三語齊全且 PDF 為主教團官方繁中譯本（品質有保證）；資料源最新最完整。**4-15c 早期教宗 + 19c 早期 19c marquee 列表暫時保留為背景脈絡，但 ingest 順序改為新→舊**。良十四世（Leo XIV, 2025-）暫不收，缺官方中譯。
 
 ### Phase 1 — Scaffold + 早期世紀「空殼卡片」+ 近代 8 篇 marquee（~1 週）
 
@@ -439,9 +439,13 @@ https://www.documentacatholicaomnia.eu/04z/z_{ID}-{ID},_{Pope}_PP._{Roman},_{Tit
 
 ## 10. Status snapshot
 
-- [ ] 寫 `data/encyclicals/types.ts` + `index.ts` + `popes-catalog.ts` (Phase 0 scaffold)
-- [ ] 寫 `pages/encyclicals/index.vue`（按世紀分組）+ `[slug].vue`（三欄對照）
-- [ ] 加 `/scripture-canon` 第 7 卡片「🕊️ 教宗訓導文獻」
-- [ ] Phase 1A：4-15c **空殼卡片** ~30 篇骨架（命名 + 預定文件 + ⏳ status）
-- [ ] Phase 1B：近代 marquee 8 篇 ingest（從 Leo XIII 1891 *Rerum Novarum* 開始）
+- [x] `data/encyclicals/types.ts` + `index.ts` + `popes-catalog.ts` + `textLoader.ts`（Phase 0 scaffold；popes-catalog 含 21c→19c 共 12 位教宗）
+- [x] `pages/encyclicals/index.vue` + `[slug].vue`（三欄對照，借 `~/data/creeds/paragraphParser` 的 `parseDoc` + `alignDocs`）
+- [x] `/scripture-canon` 第 7 卡片「🕊️ 教宗訓導文獻」
+- [x] **Phase 1B 首篇 demo**：Francis 2015 *Laudato Si'* 三語 246 段齊全（vatican.va `/la/` + `/en/` HTML + `/zh_tw/` 主教團 PDF → pdftotext layout → 後處理腳本標記化）。172 個 footnote 對齊。
+- [x] `paragraphParser.ts` 段號上限從 200 提升到 600（encyclical 常有 246-288 段）
+- [x] 兩支腳本：`scripts/scrape_papal_encyclical.py`（vatican.va HTML 通用 scraper）+ `scripts/postprocess_papal_chinese_pdf.py`（中文 PDF layout → 段號標記化）
+- [ ] 下一批 21c：Francis *Fratelli Tutti* 2020 / *Dilexit Nos* 2024 / *Lumen Fidei* 2013；Benedict XVI 三道通諭
+- [ ] 20c：John Paul II 14 道通諭；Paul VI *Humanae Vitae* 1968
+- [ ] 19c：Leo XIII *Rerum Novarum* 1891；Pius IX 信理定義系列
 - [ ] 等 [[fathers]] / Schaff NPNF Vol 12-13 中譯成熟 → Phase 5 回頭 ingest 4-15c
