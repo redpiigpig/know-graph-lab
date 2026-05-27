@@ -370,6 +370,33 @@ def main():
                 actions.append({"chunk": i, "action": "no_target",
                                 "attributed": split["attributed_norm"]})
                 continue
+            # Safety guard — refuse moves that look catastrophic:
+            #  1. Suffix > 70% of source chunk's body: probably we're
+            #     mis-detecting which h3 is the bleed and would gut the
+            #     source.
+            #  2. Suffix > 15K ZH chars in a single move: oversized
+            #     transplant; let the user inspect manually.
+            #  3. Target chunk would balloon past 3× the average chunk
+            #     size (5K chars avg).
+            zh_full_len = len(chunks[i].get("content") or "")
+            zh_suffix_len = zh_full_len - split["zh_split"]
+            target_curr_len = len(chunks[target_idx].get("content") or "")
+            if zh_suffix_len > 0.70 * zh_full_len:
+                actions.append({"chunk": i, "target": target_idx,
+                                "action": "refused_majority_move",
+                                "attributed": split["attributed_norm"][:40]})
+                continue
+            if zh_suffix_len > 15000:
+                actions.append({"chunk": i, "target": target_idx,
+                                "action": "refused_oversized",
+                                "attributed": split["attributed_norm"][:40]})
+                continue
+            if target_curr_len + zh_suffix_len > 15000:
+                actions.append({"chunk": i, "target": target_idx,
+                                "action": "refused_target_overflow",
+                                "attributed": split["attributed_norm"][:40]})
+                continue
+
             stats = apply_fix(chunks[i], chunks[target_idx],
                               split["en_split"], split["zh_split"])
             actions.append({
@@ -385,15 +412,20 @@ def main():
         for a in actions:
             if a.get("action") == "no_target":
                 print(f"  ⚠ chunk {a['chunk']}: bleed → '{a['attributed']}' but NO matching target chunk")
+            elif a.get("action", "").startswith("refused_"):
+                print(f"  ⛔ chunk {a['chunk']} → chunk {a['target']}: REFUSED "
+                      f"({a['action']}, attr='{a['attributed']}')")
             else:
                 print(f"  chunk {a['chunk']:3d} → chunk {a['target']:3d}: "
                       f"{a['zh_moved_chars']} ZH chars, "
                       f"{a['en_moved_chars']} EN chars, "
                       f"fn={len(a['fn_moved'])}, pages={a['pages_moved']} "
                       f"({a['attributed']})")
-        # Bail-safety: if any iteration produced ONLY no_target actions
-        # (no actual moves), break to avoid infinite loop.
-        moved = [a for a in actions if a.get("action") != "no_target"]
+        # Bail-safety: if no actual moves (only refusals + no_target),
+        # break to avoid infinite loop.
+        moved = [a for a in actions
+                 if not a.get("action", "").startswith("refused_")
+                 and a.get("action") != "no_target"]
         if not moved:
             break
         total_actions += len(moved)
