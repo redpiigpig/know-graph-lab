@@ -247,33 +247,43 @@ def sweep_t8(content: str, term_fixes: dict[str, str]) -> tuple[str, int]:
 
 
 def sweep_t2(content: str, volume: str) -> tuple[str, int]:
-    """If chunk has ONE h3 and it differs from volume, replace it with
-    the volume name. SKIPS chunks with multiple h3s (cross-work bleed
-    artifacts that need a different fix)."""
+    """If chunk has ONE h3 NEAR THE TOP and it differs from volume,
+    replace it with the volume name.
+
+    Skipped when:
+    - chunk has multiple h3s (cross-work bleed needs a chunk-split, not
+      a heading rename)
+    - the lone h3 appears AFTER position threshold (default 30% of the
+      chunk's length): a late-positioned h3 is almost certainly the
+      bleeding intro of the NEXT letter (e.g. Justin Martyr intro stuck
+      at the tail of the Papias fragments chunk), so renaming it to the
+      current volume corrupts the meaning. Caught after a regression on
+      ANF Vol 1 chunk 48.
+    """
     if not volume:
         return content, 0
-    # Count h3 lines (### + space + text), excluding chapter-numbered ones
-    # (a 「### 第X章—」 would be a chapter heading at h3 depth, which is rare
-    # but possible — we don't touch those).
-    h3_lines = re.findall(r"^(### )(.+?)\s*$", content, re.M)
-    letter_titles = [t for marker, t in
-                     [(m, txt) for m, txt in h3_lines]
-                     if not re.match(r"第[一二三四五六七八九十百千零0-9]+章", t)]
-    if len(letter_titles) != 1:
-        # Either zero h3 (nothing to fix) or multiple h3 (cross-bleed)
+    h3_iter = list(re.finditer(r"^(### )(.+?)\s*$", content, re.M))
+    letter_h3s = [m for m in h3_iter
+                  if not re.match(r"第[一二三四五六七八九十百千零0-9]+章",
+                                  m.group(2).strip())]
+    if len(letter_h3s) != 1:
         return content, 0
-    current = letter_titles[0].strip()
-    # Strip [^N] refs for comparison
+    m = letter_h3s[0]
+    # Position guard: only fix h3s that sit in the first 30% of content.
+    # A letter title is naturally at the top; anything past 30% is almost
+    # always a next-letter intro that got packaged into this chunk.
+    if m.start() > len(content) * 0.30:
+        return content, 0
+    current = m.group(2).strip()
     current_clean = re.sub(r"\[\^\d+\]", "", current).strip()
     if current_clean == volume:
         return content, 0
-    # Replace the first matching h3
-    def _replace(m: re.Match) -> str:
-        body = m.group(2).strip()
+    def _replace(m2: re.Match) -> str:
+        body = m2.group(2).strip()
         body_clean = re.sub(r"\[\^\d+\]", "", body).strip()
         if body_clean == current_clean:
             return f"### {volume}"
-        return m.group(0)
+        return m2.group(0)
     new_content, n = re.subn(r"^(### )(.+?)\s*$", _replace, content,
                              count=1, flags=re.M)
     return new_content, n
