@@ -17,13 +17,26 @@
 | Reader Vue (DH badge / DH jump / chip) | ✅ | dev 截圖驗過 DH 101、DH 1520 |
 | /creeds 補 23 份中譯 | ✅ | 全部 placeholder 取代為實際中譯（即使 OCR 有質量問題）|
 
-**已知遺留問題（OCR 質量，不影響 pipeline）**：
-- 兩欄拉中並列 OCR 在同一行（多 spaces 分隔），語言切欄 line-by-line 不完美 → source_text/content 部分 chunks 拉中混排或 fragmentary
-- 解法（未做）：重 OCR 用 column-aware prompt 或 PDF 雙欄預切
+**已知遺留問題（→ 用 [denzinger-fix skill](../denzinger-fix/SKILL.md) 修）**：
 
-**未在這次解決**：
-- 2 個 medieval council DH range 不對（medieval-09 first lateran / medieval-10 second lateran）→ 手動翻書補
+2026-05-28 baseline audit (`scripts/_denzinger_audit.py`)：
+
+| Bucket | 量 | 修法 |
+|---|---|---|
+| missing | 31 | column-aware re-OCR |
+| column-merged | 883 | column-aware re-OCR + divider prompt |
+| lat-heavy | 40 | column-aware re-OCR（中譯欄被丟）|
+| cjk-heavy | 172 | 多半正常，不用動 |
+| short | 13 | 重 OCR |
+| ok | 1291 | 跳過 |
+
+需要動的 actionable pages 共 **967 頁**。用 `scripts/_denzinger_recolumn_ocr.py` 跑。
+
+DH range 修正待辦：
+- medieval-09 first lateran / medieval-10 second lateran — 手動翻書補
 - Vatican II 4 份用 DH 4001+ 等新版 Denzinger 編號猜的 → 跑驗證
+
+**接續修正請用 `/denzinger-fix` skill**（trigger：「修 Denzinger」「Denzinger 第 N 頁壞了」「Denzinger DH range 不對」等）。
 
 ---
 
