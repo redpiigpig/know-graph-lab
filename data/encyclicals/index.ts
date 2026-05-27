@@ -14,9 +14,15 @@ import type { PapalDocument } from './types'
 
 // ── 21c Francis ──────────────────────────────────────────────
 import { laudatoSi2015 } from './21c-francis/laudato-si-2015'
+import { fratelliTutti2020 } from './21c-francis/fratelli-tutti-2020'
+import { dilexitNos2024 } from './21c-francis/dilexit-nos-2024'
+import { lumenFidei2013 } from './21c-francis/lumen-fidei-2013'
 
 export const ALL_DOCUMENTS: PapalDocument[] = [
   laudatoSi2015,
+  fratelliTutti2020,
+  dilexitNos2024,
+  lumenFidei2013,
 ]
 
 export function findDocument(slug: string): PapalDocument | undefined {

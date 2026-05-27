@@ -104,6 +104,47 @@ def is_section_heading(p: Tag) -> bool:
     return False
 
 
+def is_flat_section_heading(p: Tag) -> bool:
+    """Fallback for HTML that uses plain <p> (no bold/italic wrap) for headings.
+
+    Used by e.g. Fratelli Tutti, Dilexit Nos. A <p> is a flat heading if:
+      - has no <a href="#_ftn..."> references (body paragraphs always do)
+      - text doesn't start with `N.` (not a numbered paragraph)
+      - text length 4 to 250 chars
+      - text contains no sentence-internal punctuation (`,;:`)
+      - text has no `. ` mid-sentence period
+
+    The vatican.va template uses `style="text-align: center;"` for chapter-level
+    headings sometimes; we accept both styles.
+    """
+    # Skip if has any footnote anchor
+    if p.find("a", href=re.compile(r"^#_ftn\d+")):
+        return False
+    # Skip if has inline bold/italic — handled by is_section_heading
+    if any(isinstance(c, Tag) and c.name in ("b", "i", "strong", "em") for c in p.children):
+        return False
+    text = p.get_text(" ", strip=True)
+    if not text or len(text) < 4 or len(text) > 250:
+        return False
+    if re.match(r"^\d+\.\s", text):
+        return False
+    if re.match(r"^\[\^", text):
+        return False
+    # Reject if contains sentence-internal punctuation (Latin)
+    if re.search(r"[,;](\s|$)", text):
+        return False
+    if re.search(r":\s", text):
+        return False
+    # Reject if contains mid-sentence period (period followed by space + word)
+    if re.search(r"\.\s+\S", text):
+        return False
+    # Reject CJK punctuation (Chinese commas / semicolons / colons / periods)
+    if re.search(r"[，；：。、！？]", text):
+        return False
+    # Accept
+    return True
+
+
 def transform_footnote_refs(p: Tag) -> str:
     """Convert inline <a href="#_ftnN" name="_ftnrefN">M</a> -> [^M]."""
     for a in p.find_all("a", href=re.compile(r"^#_ftn\d+")):
@@ -121,6 +162,10 @@ def transform_footnote_refs(p: Tag) -> str:
     # vatican.va wraps paragraph numbers in <a name="N">N</a> — get_text(" ")
     # leaves a space before the period: "2 . Body" → fold to "2. Body".
     text = re.sub(r"^(\d{1,3})\s+\.\s*", r"\1. ", text)
+    # Some HTML omits the space after the paragraph-number period:
+    #   "131.Later, his spiritual..." → "131. Later, his spiritual..."
+    # Only insert when the next char is a letter/CJK (avoid "1.5 million").
+    text = re.sub(r"^(\d{1,3})\.([A-Za-z一-鿿])", r"\1. \2", text)
     text = re.sub(r"\s{2,}", " ", text)
     return text.strip()
 
@@ -179,6 +224,11 @@ def extract(html: str) -> str:
             continue
 
         if is_section_heading(p):
+            out_lines.append(f"## {txt}")
+            out_lines.append("")
+            continue
+
+        if is_flat_section_heading(p):
             out_lines.append(f"## {txt}")
             out_lines.append("")
             continue
