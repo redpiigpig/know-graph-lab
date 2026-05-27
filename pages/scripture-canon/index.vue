@@ -66,9 +66,9 @@ const tools = [
   {
     path: '/fathers',
     icon: '✝️',
-    title: '教父著作搜索',
-    desc: '~50 位教父基本資料 + Schaff 38 卷 + 中譯個別教父原典；按時期 / 地理 / 主題 / 經文交叉搜索',
-    enabled: false,
+    title: '教父著作',
+    desc: 'Schaff 全集 38 卷（ANF 10 + NPNF1 14 + NPNF2 14）+ 中譯。按系列／卷號瀏覽，連 ebook reader 閱讀。已精修狀態標記。',
+    enabled: true,
   },
   {
     path: '/apocrypha',
