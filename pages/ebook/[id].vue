@@ -396,7 +396,16 @@
                  context; chapter title sits secondary. Book title is
                  dropped — it's already in the topbar. -->
             <template v-else>
-              <div class="text-stone-400 mb-10 flex items-baseline gap-2">
+              <div class="text-stone-400 mb-10 flex items-baseline gap-2 flex-wrap">
+                <!-- DH 編號徽章：bilingual-parallel 書的 entry chunk 才顯示 -->
+                <span v-if="isBilingualMode && pageDhNumber"
+                  class="text-sm font-bold tracking-tight px-2 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200">
+                  DH {{ pageDhNumber }}
+                </span>
+                <span v-else-if="isBilingualMode && pageSectionType === 'header'"
+                  class="text-xs font-semibold tracking-wider px-2 py-0.5 rounded bg-stone-100 text-stone-600 uppercase">標題</span>
+                <span v-else-if="isBilingualMode && pageSectionType === 'commentary'"
+                  class="text-xs font-semibold tracking-wider px-2 py-0.5 rounded bg-blue-50 text-blue-700 uppercase">註解</span>
                 <span v-if="pageVolume" class="text-sm font-medium text-stone-700 tracking-tight">{{ pageVolume }}</span>
                 <span v-if="pageVolume && pageChapter" class="text-stone-300">›</span>
                 <span class="text-xs uppercase tracking-wider">
@@ -1563,6 +1572,24 @@ function goPage(p: number) {
   // to scroll to a now-stale element.
   router.replace({ query: { page: String(clamped) }, hash: "" });
   loadPage(clamped);
+}
+
+// DH 跳轉 — bilingual-parallel 書專用。從 client-side toc cache 查 dh_number
+// → chunk_index → 跳頁。Server 端 toc 已含 chapter_path「DH N」格式。
+async function jumpToDh(input: string) {
+  if (!input?.trim() || !ebook.value) return;
+  const n = parseInt(input.replace(/[^\d]/g, ""), 10);
+  if (!Number.isFinite(n)) return;
+  // Look in current TOC for entry whose title is exactly "DH {n}" (segmenter
+  // sets chapter_path that way for 'entry' chunks).
+  const target = toc.value.find(e => e.title === `DH ${n}`);
+  if (target) {
+    dhJumpInput.value = "";
+    goPage(target.chunk_index + 1);
+  } else {
+    // Fallback: ask server (not yet implemented — falls through to alert)
+    alert(`找不到 DH ${n} — 可能還未上架或超出範圍`);
+  }
 }
 
 // Scroll to a section anchor inside the currently-rendered chapter. Anchor

@@ -29,6 +29,11 @@ export interface ChunkData {
   format?: "markdown" | "text";
   source_lang?: string | null;
   source_text?: string | null;
+  // Bilingual-parallel books (Denzinger, future ACCS dual-language).
+  // See .claude/skills/ebook-pipeline/book-structure-bilingual-parallel.md.
+  section_type?: "header" | "entry" | "commentary" | null;
+  dh_number?: number | null;
+  page_numbers?: number[] | null;
   content: string;
 }
 

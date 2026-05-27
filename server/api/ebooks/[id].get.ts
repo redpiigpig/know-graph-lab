@@ -8,7 +8,7 @@ export default defineEventHandler(async (event) => {
 
   const { data: ebook, error } = await supabase
     .from("ebooks")
-    .select("id, title, author, file_type, chunk_count, total_pages, created_at, book_id, cover_url, subtitle, original_title, author_en, translator, publisher, publication_year, original_author, original_publish_year, category, subcategory")
+    .select("id, title, author, file_type, chunk_count, total_pages, created_at, book_id, cover_url, subtitle, original_title, author_en, translator, publisher, publication_year, original_author, original_publish_year, category, subcategory, display_mode")
     .eq("id", id!)
     .single();
 
@@ -40,6 +40,9 @@ export default defineEventHandler(async (event) => {
           content: chunk.content,
           source_text: chunk.source_text ?? null,
           source_lang: chunk.source_lang ?? null,
+          section_type: chunk.section_type ?? null,
+          dh_number: chunk.dh_number ?? null,
+          page_numbers: chunk.page_numbers ?? null,
         }
       : null,
   };
