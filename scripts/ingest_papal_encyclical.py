@@ -102,7 +102,8 @@ def main() -> int:
     ap.add_argument("--url-key", required=True)
     ap.add_argument("--doctype", default="encyclicals",
                     choices=["encyclicals", "apost_constitutions",
-                             "apost_exhortations", "apost_letters"])
+                             "apost_exhortations", "apost_letters",
+                             "documents", "bulls"])
     ap.add_argument("--pdf-zh-url", default=None,
                     help="explicit Chinese PDF URL (override the dam/ pattern)")
     ap.add_argument("--skip-zh", action="store_true",
@@ -165,10 +166,17 @@ def main() -> int:
             print(f"  PDF attempt FAILED: {e}", flush=True)
             return False
 
+    DOCTYPE_NO_SUBFOLDER = {"documents"}
+    def make_html_url(lang_path: str) -> str:
+        if args.doctype in DOCTYPE_NO_SUBFOLDER:
+            return (f"https://www.vatican.va/content/{args.pope}/{lang_path}/"
+                    f"{args.doctype}/{args.url_key}.html")
+        return (f"https://www.vatican.va/content/{args.pope}/{lang_path}/"
+                f"{args.doctype}/documents/{args.url_key}.html")
+
     def try_html(lang_path: str) -> int:
         """Fetch one HTML lang variant. Returns the resulting file size."""
-        url = (f"https://www.vatican.va/content/{args.pope}/{lang_path}/"
-               f"{args.doctype}/documents/{args.url_key}.html")
+        url = make_html_url(lang_path)
         try:
             from urllib.request import urlopen, Request
             req = Request(url, headers={"User-Agent": "Mozilla/5.0"})

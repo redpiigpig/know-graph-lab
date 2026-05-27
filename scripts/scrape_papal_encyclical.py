@@ -51,6 +51,17 @@ URL_TMPL = (
     "{key}.html"
 )
 
+# Doctypes where the URL does NOT use a `documents/` subfolder (eg the
+# older Pius IX path /pius-ix/it/documents/{key}.html — only ONE
+# `documents/` segment, not `{doctype}/documents/`).
+DOCTYPE_NO_SUBFOLDER = {"documents"}
+
+
+def make_url(pope: str, lang: str, doctype: str, key: str) -> str:
+    if doctype in DOCTYPE_NO_SUBFOLDER:
+        return f"https://www.vatican.va/content/{pope}/{lang}/{doctype}/{key}.html"
+    return URL_TMPL.format(pope=pope, lang=lang, doctype=doctype, key=key)
+
 LANG_FILES = [
     ("la", "latin"),
     ("it", "italian"),
@@ -258,7 +269,7 @@ def main() -> int:
     ap.add_argument("--century", type=int, required=True)
     ap.add_argument("--doc-slug", required=True, help="our internal doc slug, e.g. 'laudato-si-2015'")
     ap.add_argument("--url-key", required=True, help="vatican.va URL filename without .html, e.g. 'papa-francesco_20150524_enciclica-laudato-si'")
-    ap.add_argument("--doctype", default="encyclicals", choices=["encyclicals", "apost_constitutions", "apost_exhortations", "apost_letters"])
+    ap.add_argument("--doctype", default="encyclicals", choices=["encyclicals", "apost_constitutions", "apost_exhortations", "apost_letters", "documents", "bulls"])
     ap.add_argument("--langs", default="la,en,zh_tw", help="comma-separated subset of la/en/zh_tw")
     args = ap.parse_args()
 
@@ -271,7 +282,7 @@ def main() -> int:
     for lang_url, lang_file in LANG_FILES:
         if lang_url not in wanted_langs:
             continue
-        url = URL_TMPL.format(pope=args.pope, lang=lang_url, doctype=args.doctype, key=args.url_key)
+        url = make_url(args.pope, lang_url, args.doctype, args.url_key)
         target = os.path.join(out_dir, f"{args.doc_slug}-{lang_file}.txt")
         print(f"[{args.doc_slug}-{lang_file}] {url}", flush=True)
         try:

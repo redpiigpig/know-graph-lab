@@ -1,0 +1,1 @@
+⏳ 中譯待補 — vatican.va 上的中文 PDF 因檔案格式問題無法以 pdftotext 抽出（Syntax Error: Missing or invalid default viewing OCCD）。原檔 zh 中文版本可下載至 https://www.vatican.va/content/dam/john-paul-ii/pdf/encyclicals/documents/hf_jp-ii_enc_01051991_centesimus-annus_zh.pdf
