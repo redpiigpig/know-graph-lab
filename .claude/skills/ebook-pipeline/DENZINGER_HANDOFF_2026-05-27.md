@@ -2,19 +2,28 @@
 
 公教會之信仰與倫理教義選集 (Denzinger 中譯 PDF) OCR 進度與下一 session 接手指南。
 
-## 0. TL;DR — 接手的 3 件事
+## 0. TL;DR — ✅ COMPLETED 2026-05-28
 
-1. **檢查 gap-fill 是否完成**（看下面「即時狀態查詢」一節）
-2. **若未完成且 quota 卡住** → 等 1-3 小時後 `python -X utf8 -u scripts/_denzinger_gaps_ocr.py`（會 resume）
-3. **若已完成** → 跑 consolidate + segment 兩支腳本（見「OCR 完之後的 Pipeline」）
+整套 pipeline 跑完入庫上架。**Reader 端可讀**：`/ebook/568726d3-967e-457a-ab69-7452b21d606f`
 
-**2026-05-27 更新（session 2，本 session 做完不交棒）**:
-- ✅ consolidate + segment scripts 寫好 + TOC 過濾改善
-- ✅ DB migration applied (`display_mode` + 5 bilingual chunk columns)
-- ✅ Reader Vue 改好（DH badge / DH 跳轉 / breadcrumb chip） + dev server boot 過編譯
-- ✅ `_denzinger_to_creeds.py` 也寫好（Phase 4 待 segment 完）
-- ⏳ OCR @ 80.9% (1967/2430)，rate-limit 把 ETA 拖到 ~5h 後
-- ⏳ Wrapper `_denzinger_wait_then_pipeline.ps1` 背景跑，OCR 完自動接 consolidate + segment write-jsonl，再 ping 我做 segment --apply + verify
+| Phase | 狀態 | 細節 |
+|---|---|---|
+| Main OCR (10 頁 batch) | ✅ | 801 chunks（截斷 bug 修在 `08ddff1` 後可重跑） |
+| Gap-fill OCR (單頁 4-prompt) | ✅ | 1598 pages 補齊；page 948 1 個 empty 留 |
+| Consolidate | ✅ | 2399 page-level chunks / 4.85M chars |
+| Segment | ✅ | 3840 chunks（120 commentary / 135 header / 3585 entry）；DH 100-5699 |
+| DB migration | ✅ | `display_mode` + 5 bilingual columns |
+| segment --apply | ✅ | DB + R2 + display_mode 同步；adaptive batching 過 57014 timeout |
+| Reader Vue (DH badge / DH jump / chip) | ✅ | dev 截圖驗過 DH 101、DH 1520 |
+| /creeds 補 23 份中譯 | ✅ | 全部 placeholder 取代為實際中譯（即使 OCR 有質量問題）|
+
+**已知遺留問題（OCR 質量，不影響 pipeline）**：
+- 兩欄拉中並列 OCR 在同一行（多 spaces 分隔），語言切欄 line-by-line 不完美 → source_text/content 部分 chunks 拉中混排或 fragmentary
+- 解法（未做）：重 OCR 用 column-aware prompt 或 PDF 雙欄預切
+
+**未在這次解決**：
+- 2 個 medieval council DH range 不對（medieval-09 first lateran / medieval-10 second lateran）→ 手動翻書補
+- Vatican II 4 份用 DH 4001+ 等新版 Denzinger 編號猜的 → 跑驗證
 
 ---
 
