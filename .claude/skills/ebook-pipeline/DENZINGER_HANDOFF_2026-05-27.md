@@ -8,7 +8,13 @@
 2. **若未完成且 quota 卡住** → 等 1-3 小時後 `python -X utf8 -u scripts/_denzinger_gaps_ocr.py`（會 resume）
 3. **若已完成** → 跑 consolidate + segment 兩支腳本（見「OCR 完之後的 Pipeline」）
 
-**2026-05-27 更新（session 2，本 session 做完不交棒）**: ✅ consolidate + segment scripts 寫好；OCR 跑到 1934/2430 = 79.6%；wrapper `scripts/_denzinger_wait_then_pipeline.ps1` 等 OCR 完自動接 consolidate + segment write-jsonl。session 2 內預計做到 OCR 完成 + DB migration + segment apply + reader 接通。
+**2026-05-27 更新（session 2，本 session 做完不交棒）**:
+- ✅ consolidate + segment scripts 寫好 + TOC 過濾改善
+- ✅ DB migration applied (`display_mode` + 5 bilingual chunk columns)
+- ✅ Reader Vue 改好（DH badge / DH 跳轉 / breadcrumb chip） + dev server boot 過編譯
+- ✅ `_denzinger_to_creeds.py` 也寫好（Phase 4 待 segment 完）
+- ⏳ OCR @ 80.9% (1967/2430)，rate-limit 把 ETA 拖到 ~5h 後
+- ⏳ Wrapper `_denzinger_wait_then_pipeline.ps1` 背景跑，OCR 完自動接 consolidate + segment write-jsonl，再 ping 我做 segment --apply + verify
 
 ---
 
