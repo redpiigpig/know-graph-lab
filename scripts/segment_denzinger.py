@@ -60,6 +60,10 @@ BILINGUAL_JSONL = CHUNKS_DIR / f"{BOOK_ID}.bilingual.jsonl"
 # to avoid catching mid-sentence numbers.
 DH_MARKER = re.compile(r"(?m)^[ \t]*(\d{3,5})\s+(\S.*)")
 
+# TOC artifacts — dot leaders (".....") + trailing page number
+DOT_LEADER = re.compile(r"\.{5,}")
+TOC_PAGE_HEADER = ("詳細目錄", "目錄")
+
 # Section header patterns (block-level — match at line start)
 SECTION_HEADER_PATTERNS: list[tuple[str, re.Pattern]] = [
     ("會期", re.compile(r"^第\s*[一二三四五六七八九十\d]+\s*場?\s*會議")),
@@ -110,6 +114,29 @@ def is_section_header(line: str) -> str | None:
 
 def looks_like_commentary(text: str) -> bool:
     if any(hint in text for hint in COMMENTARY_HINTS):
+        return True
+    return False
+
+
+def is_toc_page(content: str) -> bool:
+    """Detect a 詳細目錄 page: explicit header text, OR ≥20% lines have dot leaders."""
+    head = content.lstrip()
+    if any(head.startswith(h) for h in TOC_PAGE_HEADER):
+        return True
+    lines = [ln for ln in content.splitlines() if ln.strip()]
+    if not lines:
+        return False
+    dot_lines = sum(1 for ln in lines if DOT_LEADER.search(ln))
+    return dot_lines / len(lines) > 0.2
+
+
+def looks_like_toc_entry(text: str) -> bool:
+    """An 'entry' that's really a TOC line — has dot leader OR is one short line."""
+    if DOT_LEADER.search(text):
+        return True
+    # Single-line + < 30 chars + no Latin = TOC pointer
+    stripped = text.strip()
+    if "\n" not in stripped and len(stripped) < 30 and classify_lang(stripped) == "zh":
         return True
     return False
 
@@ -165,6 +192,19 @@ def segment_page(page: dict) -> list[dict]:
     Each sub-chunk carries page_number for later consolidation across pages.
     """
     pn = page["page_number"]
+
+    # Short-circuit: 詳細目錄 / TOC pages emit ONE header chunk; no DH entries.
+    # (Adjacent TOC pages get merged into one big TOC header by the cross-page pass.)
+    if is_toc_page(page["content"]):
+        return [{
+            "section_type": "header",
+            "chunk_type": "chapter",
+            "chapter_path": "詳細目錄",
+            "content": page["content"].strip(),
+            "page_number": pn,
+            "page_numbers": [pn],
+        }]
+
     blocks = split_into_blocks(page["content"])
 
     out: list[dict] = []
@@ -242,6 +282,10 @@ def segment_page(page: dict) -> list[dict]:
             lat = "\n".join(lat_lines).strip()
             zh = "\n".join(zh_lines).strip()
 
+        # Backstop: drop TOC-shaped entry stragglers (any block w/ dot leaders)
+        if (zh and looks_like_toc_entry(zh)) or (lat and looks_like_toc_entry(lat)):
+            continue
+
         out.append({
             "section_type": "entry",
             "chunk_type": "section",
@@ -289,6 +333,12 @@ def consolidate_across_pages(per_page: list[list[dict]]) -> list[dict]:
                 # since headers create their own slot which would break the same-type check)
                 if ch["section_type"] == "commentary":
                     last["content"] = (last.get("content", "") + "\n" + ch["content"]).strip()
+                    last["page_numbers"].extend(ch["page_numbers"])
+                    continue
+                # header-header merge if same chapter_path (e.g. 詳細目錄 spans pages)
+                if (ch["section_type"] == "header"
+                        and last.get("chapter_path") == ch.get("chapter_path")):
+                    last["content"] = (last.get("content", "") + "\n\n" + ch["content"]).strip()
                     last["page_numbers"].extend(ch["page_numbers"])
                     continue
             flat.append(dict(ch))
