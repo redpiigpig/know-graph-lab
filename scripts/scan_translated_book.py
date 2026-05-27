@@ -145,23 +145,87 @@ def build_ncx_index(epub_path: Path) -> list[dict]:
 
 def attribute_heading(heading: str,
                       ncx_index: list[dict]) -> Optional[dict]:
-    """Find the NCX entry whose normalized navLabel matches the heading
-    (substring either way to tolerate decoration / truncation). Returns
-    the matching entry dict or None."""
+    """Find the NCX entry whose normalized navLabel matches the heading.
+
+    Two-tier matching:
+      1. Substring (either direction) for NCX entries ≥ 15 chars. Short
+         NCX entries like 「fragments」 are too generic for substring;
+         skipping them here avoids 「Justin's fragments on resurrection」
+         falsely attributing to Papias's bare 「Fragments」 navPoint.
+      2. Token-set overlap (Jaccard ≥ 0.5) as a fallback that picks the
+         most-overlap entry across the WHOLE NCX, regardless of length.
+    """
     h = normalize_heading(heading)
     if len(h) < 8:
         return None
+    h_toks = set(t for t in re.split(r"\W+", h) if len(t) >= 3)
+    # Disambiguator: if the heading mentions a parent author name
+    # ("Ignatius", "Polycarp", "Clement"...) ONLY one of the candidate
+    # NCX entries should match. Pre-compute which parents appear in the
+    # heading text so the substring/token tiers can prefer them.
+    heading_parents = set()
+    for entry in ncx_index:
+        parent_low = entry["parent"].lower()
+        # First word of parent (e.g. "CLEMENT" from "CLEMENT OF ROME")
+        parent_first = parent_low.split()[0]
+        if parent_first and parent_first in h and len(parent_first) >= 4:
+            heading_parents.add(entry["parent"])
+    # Tier 1: substring on long NCX entries
     best = None
     best_len = 0
     for entry in ncx_index:
         en = entry["en_norm"]
-        if len(en) < 8:
+        if len(en) < 15:
             continue
         if en in h or h in en:
+            # When the heading explicitly names a parent author,
+            # restrict matches to that author's NCX entries.
+            if heading_parents and entry["parent"] not in heading_parents:
+                continue
             if len(en) > best_len:
                 best = entry
                 best_len = len(en)
-    return best
+    if best:
+        return best
+    # Tier 1b: substring on shorter NCX entries WITH parent disambiguation.
+    # Many NCX entries are short titles like 「Epistle to the Philippians」
+    # that appear under BOTH POLYCARP (real) and IGNATIUS (pseudo) parents.
+    # Without the parent guard the first matching entry wins arbitrarily.
+    if heading_parents:
+        for entry in ncx_index:
+            if entry["parent"] not in heading_parents:
+                continue
+            en = entry["en_norm"]
+            if len(en) < 8:
+                continue
+            if en in h or h in en:
+                if len(en) > best_len:
+                    best = entry
+                    best_len = len(en)
+        if best:
+            return best
+    # Tier 2: strict token-set overlap (Jaccard ≥ 0.7), with parent
+    # disambiguation. When two NCX entries score equally (e.g. POLYCARP
+    # vs IGNATIUS-pseudo both have「Epistle to the Philippians」), prefer
+    # the entry whose parent is mentioned in the heading.
+    candidates: list[tuple[float, dict]] = []
+    for entry in ncx_index:
+        en_toks = set(t for t in re.split(r"\W+", entry["en_letter_norm"])
+                      if len(t) >= 3)
+        if not en_toks:
+            continue
+        score = len(h_toks & en_toks) / max(len(h_toks | en_toks), 1)
+        if score >= 0.7:
+            candidates.append((score, entry))
+    if not candidates:
+        return None
+    # Sort by (score desc, parent-in-heading first)
+    candidates.sort(key=lambda x: (
+        -x[0],
+        0 if x[1]["parent"] in heading_parents else 1,
+        -len(x[1]["en_norm"]),
+    ))
+    return candidates[0][1]
 
 
 class Issue:
@@ -379,14 +443,17 @@ def scan(ebook_id: str) -> list[Issue]:
             src = c.get("source_text") or ""
             if not src:
                 continue
-            heading_re = re.compile(r"^###\s+(.+?)(?:\n+(?!\n)(.+?))?$",
-                                    re.M)
+            # h3 may wrap across multiple lines in CCEL EPUBs (e.g.
+            # 「### Introductory Note to the Epistle of\nMathetes to
+            # Diognetus」). Consume until next blank line or next heading
+            # so the FULL title sits in group 1, then collapse internal
+            # whitespace for attribution.
+            heading_re = re.compile(
+                r"^###[ \t]+([\s\S]+?)(?=\n[ \t]*\n|\n#|\Z)", re.M)
             seen_headings: set[str] = set()
             for m in heading_re.finditer(src):
                 raw = m.group(1)
-                if m.group(2) and not re.match(r"^[#\[(]", m.group(2)):
-                    raw = raw + " " + m.group(2)
-                heading = raw.strip()
+                heading = re.sub(r"\s+", " ", raw).strip()
                 if len(heading) < 4:
                     continue
                 h_norm = normalize_heading(heading)
