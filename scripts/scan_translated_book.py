@@ -12,6 +12,13 @@ T4  chapter_path bad  contains markdown control chars (* _ `[^N]`)
 T5  volume re-entry  same volume name appears in two non-contiguous spans
 T6  orphan index    chapter_path 含「索引」but volume isn't 索引/Indexes
 T7  cover/front     chunk[0] chapter_path != 「封面」or chunk[1] not 前言/序
+T9  cross-work bleed   source_text 有一個 h3 標題指向別封信 / 另一作者的
+                       作品（CCEL EPUB 把下一封信的 intro 打包到上一封
+                       信末尾的常見問題）。靠 LETTER_CN_LABELS 比對
+                       parent 與 letter 來判斷
+T10 footnote ref/body mismatch    chunk 內 [^N] refs 跟 (N) body 數量
+                                   或編號對不起來
+T11 bilingual paragraph drift     ZH 段落數 vs EN 段落數差 > 25%
 
 Usage:
     python scripts/scan_translated_book.py <ebook_id>
@@ -34,6 +41,18 @@ from dotenv import load_dotenv
 
 ROOT = Path(__file__).resolve().parent.parent
 load_dotenv(ROOT / ".env")
+sys.path.insert(0, str(ROOT / "scripts"))
+try:
+    from consolidate_by_ncx import (
+        LETTER_CN_LABELS, PARENT_CN_FALLBACK,
+        parse_ncx_letters, find_epub, chinese_label,
+    )
+except Exception:
+    LETTER_CN_LABELS = []
+    PARENT_CN_FALLBACK = {}
+    parse_ncx_letters = None
+    find_epub = None
+    chinese_label = None
 
 URL = os.environ["SUPABASE_URL"]
 KEY = os.environ["SUPABASE_SERVICE_ROLE_KEY"]
@@ -78,6 +97,72 @@ FRONT_MATTER_OK_CHUNK1 = {"前言", "序言", "書名頁", "前言／序"}
 INDEX_PATH_RE = re.compile(r"索引|目錄|Index", re.I)
 INDEX_VOLUME_RE = re.compile(r"索引|Indexes", re.I)
 
+# Bilingual paragraph-drift threshold — if either side has more than 25%
+# more paragraphs than the other, the EN-to-ZH alignment is broken and
+# the bilingual reader's row pairing won't line up.
+BILINGUAL_DRIFT_RATIO = 0.25
+
+
+def normalize_heading(s: str) -> str:
+    """Strip trailing footnote refs, collapse whitespace + dashes for
+    fuzzy matching of headings across source vs NCX."""
+    s = re.sub(r"\[\^?\d+\]", "", s)
+    s = re.sub(r"[—–\-]+", "-", s)
+    s = re.sub(r"\s+", " ", s).strip().lower()
+    return s
+
+
+_INTRO_PREFIX_RE = re.compile(
+    r"^introductory\s+notes?\s+to\s+(?:the\s+)?", re.I)
+
+
+def build_ncx_index(epub_path: Path) -> list[dict]:
+    """Return the NCX as a flat list of {en_norm, en_letter_norm, parent}.
+
+    `en_norm` is the literal navLabel text normalized for fuzzy matching.
+    `en_letter_norm` is the underlying letter title (for「Introductory
+    Note to X」navPoints we strip the prefix so the intro maps to X) —
+    this is what we compare against each chunk's `title_en` field set by
+    the consolidator. English-only matching keeps the rule robust across
+    different Chinese-translation choices.
+    """
+    if parse_ncx_letters is None:
+        return []
+    letters = parse_ncx_letters(epub_path)
+    out: list[dict] = []
+    for L in letters:
+        parent = L["parent_label"]
+        letter = L["letter_label"]
+        m = _INTRO_PREFIX_RE.match(letter)
+        underlying = letter[m.end():].strip() if m else letter
+        out.append({
+            "en_norm": normalize_heading(letter),
+            "en_letter_norm": normalize_heading(underlying),
+            "parent": parent,
+        })
+    return out
+
+
+def attribute_heading(heading: str,
+                      ncx_index: list[dict]) -> Optional[dict]:
+    """Find the NCX entry whose normalized navLabel matches the heading
+    (substring either way to tolerate decoration / truncation). Returns
+    the matching entry dict or None."""
+    h = normalize_heading(heading)
+    if len(h) < 8:
+        return None
+    best = None
+    best_len = 0
+    for entry in ncx_index:
+        en = entry["en_norm"]
+        if len(en) < 8:
+            continue
+        if en in h or h in en:
+            if len(en) > best_len:
+                best = entry
+                best_len = len(en)
+    return best
+
 
 class Issue:
     __slots__ = ("rule", "severity", "chunk_index", "message")
@@ -102,7 +187,9 @@ def load_jsonl(ebook_id: str) -> Optional[list[dict]]:
 
 
 def fetch_book(ebook_id: str) -> Optional[dict]:
-    r = requests.get(f"{URL}/rest/v1/ebooks?id=eq.{ebook_id}&select=id,title,chunk_count",
+    # Select * — T9 (NCX-driven cross-bleed) needs file_path to locate
+    # the EPUB; T2 needs volume; future rules may use other fields.
+    r = requests.get(f"{URL}/rest/v1/ebooks?id=eq.{ebook_id}&select=*",
                      headers=H_GET, timeout=30)
     if r.status_code != 200:
         return None
@@ -242,6 +329,126 @@ def scan(ebook_id: str) -> list[Issue]:
         if cp1 not in FRONT_MATTER_OK_CHUNK1:
             issues.append(Issue("T7", "INFO", 1,
                 f"chunk 1 chapter_path is '{cp1}', expected one of {FRONT_MATTER_OK_CHUNK1}"))
+
+    # ── T9 cross-work bleed (NCX-driven, English-only) ──
+    # NCX is the authoritative TOC. For each chunk, the consolidator
+    # stamped `title_en` with the NCX letter label this chunk represents.
+    # For each h3 in source_text, find which NCX entry it points to via
+    # fuzzy substring match — if that entry's underlying letter title
+    # disagrees with the chunk's `title_en`, content from another work
+    # has been packaged here (CCEL EPUB common layout quirk).
+    #
+    # All matching is English-only so we don't depend on the brittle
+    # LETTER_CN_LABELS Chinese-name table.
+    book = fetch_book(ebook_id)
+    ncx_index: list[dict] = []
+    if book and find_epub:
+        try:
+            ep = find_epub(book)
+            ncx_index = build_ncx_index(ep)
+        except Exception:
+            ncx_index = []
+    if ncx_index:
+        for c in chunks:
+            idx = c.get("chunk_index")
+            # Only check consolidated letter pages — front matter and
+            # back-matter (chunk_type='chapter') don't represent any
+            # specific letter, so cross-bleed comparison is meaningless.
+            if c.get("chunk_type") != "page":
+                continue
+            chunk_title_en = (c.get("title_en") or "").strip()
+            if not chunk_title_en:
+                continue
+            chunk_letter_norm = normalize_heading(chunk_title_en)
+            src = c.get("source_text") or ""
+            if not src:
+                continue
+            heading_re = re.compile(r"^###\s+(.+?)(?:\n+(?!\n)(.+?))?$",
+                                    re.M)
+            seen_headings: set[str] = set()
+            for m in heading_re.finditer(src):
+                raw = m.group(1)
+                if m.group(2) and not re.match(r"^[#\[(]", m.group(2)):
+                    raw = raw + " " + m.group(2)
+                heading = raw.strip()
+                if len(heading) < 4:
+                    continue
+                h_norm = normalize_heading(heading)
+                if h_norm in seen_headings:
+                    continue
+                seen_headings.add(h_norm)
+                attributed = attribute_heading(heading, ncx_index)
+                if attributed is None:
+                    continue
+                # Compare attributed letter to chunk's own letter. NCX
+                # entries and consolidator-stamped title_en are seldom
+                # character-identical — NCX may say 「First Epistle of
+                # Clement to the Corinthians」 while title_en is the
+                # shorter 「First Epistle to the Corinthians」. Use a
+                # token-set overlap (Jaccard) — if ≥0.6 tokens in common
+                # they refer to the same letter.
+                a = attributed["en_letter_norm"]
+                b = chunk_letter_norm
+                a_toks = set(t for t in re.split(r"\W+", a) if len(t) >= 3)
+                b_toks = set(t for t in re.split(r"\W+", b) if len(t) >= 3)
+                overlap = len(a_toks & b_toks) / max(len(a_toks | b_toks), 1)
+                same_letter = (overlap >= 0.6) or (a in b) or (b in a)
+                if not same_letter:
+                    issues.append(Issue("T9", "WARN", idx,
+                        f"source h3 '{heading[:60]}' attributes to NCX "
+                        f"letter '{a}' but chunk title_en is '{b}' "
+                        f"(cross-work bleed)"))
+
+    # ── T10 footnote ref vs body mismatch ──
+    # Within a single chunk's content, the body's `[^N]` refs and the
+    # footnote section's `(N) ...` items should have the same set of
+    # numbers. A diff means LLM dropped an item or invented a ref.
+    REF_RE = re.compile(r"\[\^(\d+)\]")
+    FN_BODY_RE = re.compile(r"^\((\d+)\)\s", re.M)
+    for c in chunks:
+        idx = c.get("chunk_index")
+        content = c.get("content") or ""
+        if not content:
+            continue
+        ref_nums = set(int(n) for n in REF_RE.findall(content))
+        fn_nums = set(int(n) for n in FN_BODY_RE.findall(content))
+        if not ref_nums and not fn_nums:
+            continue
+        only_in_refs = ref_nums - fn_nums
+        only_in_body = fn_nums - ref_nums
+        if only_in_refs:
+            issues.append(Issue("T10", "WARN", idx,
+                f"{len(only_in_refs)} refs without body: {sorted(only_in_refs)[:5]}"))
+        if only_in_body:
+            # Footnotes-without-refs are common and benign (translator
+            # comments etc.), so only report when count > 3.
+            if len(only_in_body) > 3:
+                issues.append(Issue("T10", "INFO", idx,
+                    f"{len(only_in_body)} fn body without refs: {sorted(only_in_body)[:5]}"))
+
+    # ── T11 bilingual paragraph drift ──
+    # For each chunk with both source_text and content, count blank-
+    # line-delimited paragraphs on each side. Bilingual reader pairs
+    # row-by-row, so a count drift > 25% means the right column won't
+    # line up with the left.
+    def _para_count(s: str) -> int:
+        return sum(1 for p in s.split("\n\n") if p.strip())
+    for c in chunks:
+        idx = c.get("chunk_index")
+        zh = c.get("content") or ""
+        en = c.get("source_text") or ""
+        if not zh or not en:
+            continue
+        nz = _para_count(zh)
+        ne = _para_count(en)
+        if nz < 4 or ne < 4:
+            continue  # too short to meaningfully measure
+        bigger = max(nz, ne)
+        smaller = min(nz, ne)
+        drift = (bigger - smaller) / bigger
+        if drift > BILINGUAL_DRIFT_RATIO:
+            issues.append(Issue("T11", "INFO", idx,
+                f"paragraph count drift: ZH={nz} vs EN={ne} ({drift*100:.0f}%)"))
 
     return issues
 
