@@ -292,11 +292,13 @@ def consolidate(ebook_id: str, dry_run: bool = False,
     jsonl_path = CHUNKS_DIR / f"{ebook_id}.jsonl"
     chunks = [json.loads(l) for l in jsonl_path.read_text(encoding="utf-8").splitlines()]
     print(f"Loaded {len(chunks)} chunks")
-    if any(c.get("chunk_type") == "letter_page" for c in chunks):
-        print("⚠ Already consolidated (chunk_type=letter_page found). "
-              "Restoring from R2 / re-translating not yet supported.")
-        # Allow override
-        # return
+    already_consolidated = any(
+        c.get("chunk_type") in ("letter_page", "page") and c.get("volume")
+        for c in chunks
+    )
+    if already_consolidated:
+        print("⚠ Already consolidated — skipping (idempotent).")
+        return
 
     letters = parse_ncx_letters(epub_path)
     print(f"NCX letters (raw): {len(letters)}")
@@ -454,7 +456,9 @@ def consolidate(ebook_id: str, dry_run: bool = False,
                 else:
                     page_path = f"{cn} 第{start_chap}-{end_chap}章"
             consolidated_pages.append({
-                "chunk_type": "letter_page",
+                # DB check constraint allows only 'page' | 'chapter' | 'section';
+                # 'page' is the natural label for a consolidated letter view.
+                "chunk_type": "page",
                 "page_number": merged_pgs[0] if merged_pgs else None,
                 "page_numbers": merged_pgs,
                 "chapter_path": page_path,

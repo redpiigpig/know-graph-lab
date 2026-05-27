@@ -87,24 +87,47 @@ CHAPTER_PREFIX_RE = re.compile(
 SUBTITLE_HARD_CAP = 22  # Subtitle (after `第N章——`) max length
 FRONTMATTER_CAP = 16    # Non-prefixed titles (前言/引言/封面) max length
 
+# Standard front-matter heading words. When chapter_path STARTS with one
+# of these and is followed by body text (no separator), truncate to just
+# the heading word — these are universal section labels.
+FRONTMATTER_HEAD_WORDS = [
+    "前言", "引言", "序言", "序",
+    "封面", "目錄", "目　錄", "目　　錄",
+    "版權頁", "版權資訊", "出版資訊", "出版說明",
+    "扉頁", "卷首語", "凡例", "編者按", "編序", "編輯前言",
+    "導論", "導言", "緒論",
+    "圖目錄", "表目錄", "插圖目錄",
+]
+FRONTMATTER_HEAD_RE = re.compile(
+    r"^(" + "|".join(re.escape(w) for w in FRONTMATTER_HEAD_WORDS) + r")(.{1,}?)?$"
+)
+
 
 def clean_chapter_path(raw: str, max_len: int = 32) -> tuple[str, bool]:
     """Return (cleaned_title, was_truncated).
 
     Algorithm (subtitle = chars after `第N章——`):
-      1. If raw already short enough: keep as-is.
-      2. Strip chapter prefix (`第N章——`) → `rest`.
-      3. In rest, find earliest of (in priority):
+      1. Front-matter heading-word truncation: if raw starts with a
+         standard heading word (前言/引言/序/封面/目錄/…) followed by other
+         characters, drop the trailing characters. Runs FIRST so it works
+         even on titles already under max_len (which an earlier polish
+         pass truncated to 「前言本卷所收錄的內容，等同於愛丁」).
+      2. If raw already short enough: keep as-is.
+      3. Strip chapter prefix (`第N章——`) → `rest`.
+      4. In rest, find earliest of (in priority):
          a. Hard period 「。」 within first SUBTITLE_HARD_CAP chars.
          b. Comma/colon/semicolon 「，：；」 within first SUBTITLE_HARD_CAP chars,
-            BUT only when it would leave subtitle ≥ 4 chars (avoid cutting a
-            real title like "我們應當順服上帝，而非煽動分裂者" too short).
-         c. Body-starter phrase AFTER position 3 of rest. Common phrases like
-            「親愛的」「因此」「我們應當」「你們要」 reliably mark body start.
-      4. Hard cap at SUBTITLE_HARD_CAP chars.
-    For front-matter chunks (no prefix), cap at FRONTMATTER_CAP and prefer 「。」 break.
+            BUT only when it would leave subtitle ≥ 4 chars.
+         c. Body-starter phrase AFTER position 3 of rest.
+      5. Hard cap at SUBTITLE_HARD_CAP chars.
     """
     raw = raw.strip().replace("\n", " ")
+
+    # (1) Front-matter heading-word truncation
+    fm_match = FRONTMATTER_HEAD_RE.match(raw)
+    if fm_match and fm_match.group(1) != raw:
+        return fm_match.group(1), True
+
     if len(raw) <= max_len:
         return raw, False
 
@@ -148,7 +171,16 @@ def clean_chapter_path(raw: str, max_len: int = 32) -> tuple[str, bool]:
         subtitle = re.sub(r"[\-—－]+$", "", subtitle).strip()
         return f"{prefix.rstrip()}{subtitle}".strip(), True
 
-    # No chapter prefix — front matter (前言/引言/封面/序 …)
+    # No chapter prefix — check for standard front-matter heading word
+    # (前言/引言/序/封面/目錄/…) followed by body. If found, drop the body
+    # and keep just the heading word. CCEL ebooks frequently emit `### PREFACE.`
+    # + body as one block, and the LLM merges them with no separator
+    # → my regex captures "前言本卷所收錄的內容…" as the chapter_path.
+    fm_match = FRONTMATTER_HEAD_RE.match(raw)
+    if fm_match:
+        return fm_match.group(1), True
+
+    # Otherwise — cut at first sentence break or hard cap
     period_pos = raw.find("。")
     if 0 < period_pos < FRONTMATTER_CAP * 1.5:
         return raw[:period_pos], True
@@ -288,27 +320,35 @@ def polish(ebook_id: str, dry_run: bool = False,
     current_volume: Optional[str] = None
     sample_cleans: list[tuple[int, str, str]] = []
 
+    # If chunks have already been consolidated (chunk_type='page' set by
+    # consolidate_by_ncx.py with letter-level Chinese names), DON'T re-run
+    # volume detection — polish's generic patterns (e.g. "Against Heresies"
+    # → "愛任紐《駁異端》") would overwrite the more precise consolidator
+    # labels ("愛任紐《駁異端》卷一/卷二/卷三/卷四/卷五") and lump all 5
+    # books into one volume, scrambling the TOC.
+    skip_existing_volumes = any(
+        c.get("chunk_type") == "page" and c.get("volume") for c in chunks
+    )
+    if skip_existing_volumes:
+        print("  (volume tags from consolidator already present — skipping volume detection)")
+
     for c in chunks:
         # ─ Volume injection (must run before chapter cleanup so we can use
         #   source_text H3 to detect parent-work boundary) ─
-        if not skip_volumes:
+        if not skip_volumes and not skip_existing_volumes:
             new_vol = detect_volume(c.get("source_text", ""))
             volume_changed = new_vol and new_vol != current_volume
             if new_vol:
                 current_volume = new_vol
-            if current_volume and c.get("volume") != current_volume:
+            # Set volume ONLY if not already set — polish should never
+            # overwrite a tag the consolidator already chose.
+            if current_volume and not c.get("volume"):
                 c["volume"] = current_volume
                 n_volume_set += 1
-            # Mark the chunk that TRIGGERS a new volume as that volume's
-            # header — server's loadToc hides these from the entries list,
-            # and the volume name button becomes clickable to jump here.
-            # This kills the "瑪忒特致丟格那圖書信" duplicate-of-volume-name
-            # TOC noise.
             if volume_changed:
                 c["is_volume_header"] = True
                 n_volume_headers += 1
-            elif "is_volume_header" in c:
-                # Stale flag from earlier polish run with different rules
+            elif "is_volume_header" in c and not c.get("volume"):
                 del c["is_volume_header"]
 
         # ─ Chapter-path cleanup ─

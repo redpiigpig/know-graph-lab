@@ -232,10 +232,17 @@ export interface TocEntry {
 // by `consolidate_frontmatter_into_publisher`.
 const FRONTMATTER_NO_ANCHORS = new Set([
   "封面", "出版資訊", "出版說明", "目錄", "目　錄", "版權頁", "版權資訊", "扉頁",
+  "前言", "引言", "序言", "序", "卷首語", "凡例", "編者按", "編序", "編輯前言",
+  "導論", "導言", "緒論", "來自基督教經典電子圖書館",
 ]);
 // Section-title patterns that are pure enumeration markers — never useful
 // as TOC anchors. Single CJK digit / arabic-only / 1-3 char roman numeral.
 const ENUM_ONLY_RE = /^([一二三四五六七八九十百千]+|[0-9]+|[IVXLC]+|[A-Z]|\d+\.?)$/;
+// Generic single-word anchors that show up inside CCEL boilerplate chunks
+// (book title page emits `### By` → 「著」, `#### Author Name`, copyright
+// notice lines, etc.). These are body-level keywords, not real navigable
+// sections — they pollute the TOC's nested-anchor list.
+const NOISE_ANCHOR_RE = /^(著|編者|譯者|版權.*|版權所有.*|ANF\d+\.?.*|NPNF\d+.*|出版.*|印刷.*|致謝)/;
 // Chunks whose chapter_path is just `第N卷` / `第N編` / `第N部` are volume
 // dividers, not navigable chapters. We hide them from the TOC and use them
 // to set the `volume` field on the chapters that follow.
@@ -281,7 +288,14 @@ export async function loadToc(ebookId: string): Promise<TocEntry[]> {
       //  - The anchor that's the same as chunk's chapter_path itself —
       //    that's the chapter title shown above, NOT a sub-section
       //  - Duplicates within the same chunk (some EPUBs repeat the heading)
-      const suppressAnchors = FRONTMATTER_NO_ANCHORS.has(chapterTitle);
+      //  - ALL anchors on volume-less chunks: those are front matter
+      //    (title pages / book intros) where every H3/H4 is a credit line
+      //    or section label that doesn't deserve a nested TOC entry.
+      //    (`前尼西亞教父` chunk previously expanded to show 「亞歷山大‧羅
+      //    伯茨」「詹姆斯‧唐納森」「修訂並按年代…」 — credit lines, not
+      //    navigation.)
+      const suppressAnchors = FRONTMATTER_NO_ANCHORS.has(chapterTitle)
+        || c.volume == null;
       const sections: TocSection[] = [];
       const seenAnchorTitles = new Set<string>();
       const chapterTitleKey = chapterTitle.replace(/\[\^\d+\]/g, "").replace(/\s+/g, "").trim();
@@ -296,9 +310,12 @@ export async function loadToc(ebookId: string): Promise<TocEntry[]> {
           if (depth >= 3) {
             const cleanTitle = title.replace(/\[\^\d+\]/g, "").trim();
             const collapsed = cleanTitle.replace(/\s+/g, "");
-            // Drop: enum-only, matches chapter title, or already seen
+            // Drop: enum-only, matches chapter title, already seen, or
+            // CCEL boilerplate noise (著/編者/版權.../ANF01.…) — these
+            // are body keywords masquerading as h3/h4 headings.
             if (
               !ENUM_ONLY_RE.test(collapsed)
+              && !NOISE_ANCHOR_RE.test(collapsed)
               && collapsed !== chapterTitleKey
               && !seenAnchorTitles.has(collapsed)
             ) {
@@ -335,11 +352,19 @@ export async function loadToc(ebookId: string): Promise<TocEntry[]> {
       }
       seenTitles.add(titleKey);
 
+      // Uniform indent for entries inside a volume — without this, the
+      // first page of each letter (which usually starts with `### Letter
+      // Title`) gets level=3 while subsequent pages start with `#### Ch.X`
+      // and get level=4, so 「第1-10章」 and 「第11-20章」 sit at different
+      // indents in the sidebar (jarring). Volume entries should all be
+      // level 3 (children of the volume bar).
+      const inferredLevel = firstHead ? firstHead[1].length : 2;
+      const entryLevel = effectiveVolume ? 3 : inferredLevel;
       raws.push({
         entry: {
           chunk_index: i,
           title,
-          level: firstHead ? firstHead[1].length : 2,
+          level: entryLevel,
           volume: effectiveVolume,
           sections: sections.length ? sections : undefined,
         },
