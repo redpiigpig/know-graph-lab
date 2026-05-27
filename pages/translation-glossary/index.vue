@@ -3,8 +3,8 @@
     <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 z-30">
       <NuxtLink to="/scripture-canon" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
       <div class="w-px h-5 bg-gray-200" />
-      <span class="text-sm font-semibold text-gray-900">神學家與名詞中譯</span>
-      <span class="text-xs text-gray-400 ml-1">{{ activeTab === 'people' ? theologians.length : terms.length }} 項</span>
+      <span class="text-sm font-semibold text-gray-900">教父文獻翻譯詞庫</span>
+      <span class="text-xs text-gray-400 ml-1">{{ activeTabCount }} 項</span>
       <div class="ml-auto flex items-center gap-2">
         <label class="text-xs text-gray-500 flex items-center gap-1 cursor-pointer select-none">
           <input type="checkbox" v-model="editMode" class="accent-stone-700" />
@@ -15,9 +15,9 @@
 
     <div class="flex-1 max-w-7xl w-full mx-auto px-6 py-8">
       <div class="mb-6">
-        <h1 class="text-2xl font-bold text-gray-900 mb-1">🔤 神學家與名詞中譯</h1>
+        <h1 class="text-2xl font-bold text-gray-900 mb-1">🔤 教父文獻翻譯詞庫</h1>
         <p class="text-sm text-gray-500">
-          各傳統中譯對照 — 新教（華聯／證主／校園／改革宗）／ 思高 ／ 東正教 ／ 香港（基文／道風）／ 台灣（光啟／輔大）／ 中國學界。標 ★ 為建議採用譯名。
+          翻譯前先在這裡確認譯名；每筆記下英文／原文／中文翻譯／首次出現的出處，避免後續書再次出現時譯法漂移。
         </p>
       </div>
 
@@ -30,51 +30,22 @@
           :class="activeTab === t.key
             ? 'border-stone-700 text-stone-900 font-semibold'
             : 'border-transparent text-gray-500 hover:text-gray-800'"
-        >{{ t.label }} <span class="text-xs text-gray-400">({{ t.key === 'people' ? theologians.length : terms.length }})</span></button>
+        >{{ t.label }} <span class="text-xs text-gray-400">({{ tabCount(t.key) }})</span></button>
       </div>
 
-      <!-- Filters -->
+      <!-- Search -->
       <div class="flex flex-wrap items-center gap-2 mb-4">
         <input
           v-model="q"
           type="search"
-          placeholder="搜尋（原文／英文／中譯任一）"
+          placeholder="搜尋（原文／英文／中譯／出處任一）"
           class="text-sm px-3 py-1.5 border border-gray-300 rounded-md w-72 focus:outline-none focus:border-stone-500"
         />
         <button
-          v-if="activeTab === 'people'"
-          @click="filterCentury = null"
-          class="text-xs px-2.5 py-1 rounded-full border transition"
-          :class="filterCentury === null
-            ? 'bg-stone-900 text-white border-stone-900'
-            : 'bg-white text-gray-600 border-gray-200 hover:border-stone-300'"
-        >全部世紀</button>
-        <button
-          v-for="c in centuries" :key="c"
-          @click="filterCentury = c"
-          v-show="activeTab === 'people'"
-          class="text-xs px-2.5 py-1 rounded-full border transition"
-          :class="filterCentury === c
-            ? 'bg-stone-900 text-white border-stone-900'
-            : 'bg-white text-gray-600 border-gray-200 hover:border-stone-300'"
-        >{{ c }}</button>
-        <button
-          v-if="activeTab === 'terms'"
-          @click="filterCategory = null"
-          class="text-xs px-2.5 py-1 rounded-full border transition"
-          :class="filterCategory === null
-            ? 'bg-stone-900 text-white border-stone-900'
-            : 'bg-white text-gray-600 border-gray-200 hover:border-stone-300'"
-        >全部分類</button>
-        <button
-          v-for="c in categories" :key="c"
-          @click="filterCategory = c"
-          v-show="activeTab === 'terms'"
-          class="text-xs px-2.5 py-1 rounded-full border transition"
-          :class="filterCategory === c
-            ? 'bg-stone-900 text-white border-stone-900'
-            : 'bg-white text-gray-600 border-gray-200 hover:border-stone-300'"
-        >{{ c }}</button>
+          v-if="editMode"
+          @click="addNew"
+          class="text-xs px-3 py-1 rounded-md bg-stone-900 text-white hover:bg-stone-800"
+        >+ 新增</button>
       </div>
 
       <!-- Loading -->
@@ -85,17 +56,10 @@
         <table class="w-full text-sm">
           <thead class="bg-stone-50 border-b border-gray-200 text-xs text-gray-600">
             <tr>
-              <th class="px-3 py-2 text-left font-medium">英文</th>
-              <th class="px-3 py-2 text-left font-medium">原文</th>
-              <th class="px-3 py-2 text-left font-medium">年代</th>
-              <th class="px-3 py-2 text-left font-medium">出身</th>
-              <th class="px-3 py-2 text-left font-medium">★ 建議</th>
-              <th class="px-3 py-2 text-left font-medium">新教</th>
-              <th class="px-3 py-2 text-left font-medium">思高</th>
-              <th class="px-3 py-2 text-left font-medium">東正教</th>
-              <th class="px-3 py-2 text-left font-medium">香港</th>
-              <th class="px-3 py-2 text-left font-medium">台灣</th>
-              <th class="px-3 py-2 text-left font-medium">中國</th>
+              <th class="px-3 py-2 text-left font-medium w-1/4">英文</th>
+              <th class="px-3 py-2 text-left font-medium w-1/4">原文</th>
+              <th class="px-3 py-2 text-left font-medium w-1/4">中文翻譯</th>
+              <th class="px-3 py-2 text-left font-medium w-1/4">首次出現出處</th>
             </tr>
           </thead>
           <tbody>
@@ -106,69 +70,61 @@
               >
                 <td class="px-3 py-2 font-medium text-gray-900">{{ row.name_english }}</td>
                 <td class="px-3 py-2 text-gray-700 font-serif">{{ row.name_original || '—' }}</td>
-                <td class="px-3 py-2 text-gray-600 whitespace-nowrap">{{ formatYears(row.born_year, row.died_year) }}</td>
-                <td class="px-3 py-2 text-gray-600">{{ row.nationality || '—' }}</td>
-                <td class="px-3 py-2 font-semibold text-amber-700">{{ row.name_recommended || '—' }}</td>
-                <td class="px-3 py-2 text-gray-600">{{ row.name_protestant || '—' }}</td>
-                <td class="px-3 py-2 text-gray-600">{{ row.name_catholic_sgs || '—' }}</td>
-                <td class="px-3 py-2 text-gray-600">{{ row.name_orthodox || '—' }}</td>
-                <td class="px-3 py-2 text-gray-600">{{ row.name_hk || '—' }}</td>
-                <td class="px-3 py-2 text-gray-600">{{ row.name_tw || '—' }}</td>
-                <td class="px-3 py-2 text-gray-600">{{ row.name_china_academic || '—' }}</td>
+                <td class="px-3 py-2 font-semibold text-stone-900">{{ row.name_recommended || '—' }}</td>
+                <td class="px-3 py-2 text-gray-600 text-xs">{{ row.first_source || '—' }}</td>
               </tr>
               <tr v-if="expanded === row.id" class="border-b border-gray-200 bg-stone-50/40">
-                <td colspan="11" class="px-5 py-4">
-                  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                <td colspan="4" class="px-5 py-4">
+                  <div v-if="!editMode" class="text-xs text-gray-700 grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <div class="text-gray-500 mb-1">基本資料</div>
-                      <div class="text-gray-800">
-                        <div><span class="text-gray-500">學派：</span>{{ row.school || '—' }}</div>
-                        <div><span class="text-gray-500">身份：</span>{{ row.role || '—' }}</div>
-                        <div><span class="text-gray-500">拉丁名：</span>{{ row.name_latin_std || '—' }}</div>
-                      </div>
+                      <div class="text-gray-500 mb-1">中文翻譯</div>
+                      <div class="text-stone-900 font-medium">{{ row.name_recommended || '—' }}</div>
                     </div>
-                    <div class="md:col-span-2">
-                      <div class="text-gray-500 mb-1">建議理由</div>
-                      <div v-if="!editMode" class="text-gray-800 whitespace-pre-wrap">{{ row.recommendation_reason || '—' }}</div>
-                      <div v-else class="flex flex-col gap-2">
-                        <input
-                          v-model="editPerson.name_recommended"
-                          class="text-xs px-2 py-1 border border-gray-300 rounded w-full"
-                          placeholder="建議譯名"
-                        />
-                        <textarea
-                          v-model="editPerson.recommendation_reason"
-                          rows="3"
-                          class="text-xs px-2 py-1 border border-gray-300 rounded w-full"
-                          placeholder="建議理由（音譯接近度／傳統權威／學界通用度）"
-                        />
-                        <textarea
-                          v-model="editPerson.notes"
-                          rows="2"
-                          class="text-xs px-2 py-1 border border-gray-300 rounded w-full"
-                          placeholder="備註"
-                        />
-                        <div class="flex gap-2">
-                          <button
-                            @click.stop="savePerson(row.id)"
-                            class="text-xs px-3 py-1 bg-stone-900 text-white rounded hover:bg-stone-800"
-                          >儲存</button>
-                          <button
-                            @click.stop="expanded = null"
-                            class="text-xs px-3 py-1 bg-gray-100 text-gray-700 rounded"
-                          >取消</button>
-                        </div>
-                      </div>
+                    <div>
+                      <div class="text-gray-500 mb-1">首次出現出處</div>
+                      <div class="text-stone-700">{{ row.first_source || '—' }}</div>
+                    </div>
+                    <div v-if="row.recommendation_reason" class="md:col-span-2">
+                      <div class="text-gray-500 mb-1">備註</div>
+                      <div class="text-gray-800 whitespace-pre-wrap">{{ row.recommendation_reason }}</div>
                     </div>
                   </div>
-                  <div v-if="row.notes" class="mt-3 text-xs text-gray-600 border-t border-gray-200 pt-2">
-                    <span class="text-gray-500">備註：</span>{{ row.notes }}
+                  <div v-else class="flex flex-col gap-2 text-xs">
+                    <label class="text-gray-500">中文翻譯</label>
+                    <input
+                      v-model="editPerson.name_recommended"
+                      class="px-2 py-1 border border-gray-300 rounded w-full"
+                      placeholder="中文翻譯"
+                    />
+                    <label class="text-gray-500 mt-1">首次出現出處（書名 / 卷 / chunk）</label>
+                    <input
+                      v-model="editPerson.first_source"
+                      class="px-2 py-1 border border-gray-300 rounded w-full"
+                      placeholder="例：ANF Vol 1 / 致丟格那妥書 / chunk 9"
+                    />
+                    <label class="text-gray-500 mt-1">備註（選填）</label>
+                    <textarea
+                      v-model="editPerson.recommendation_reason"
+                      rows="2"
+                      class="px-2 py-1 border border-gray-300 rounded w-full"
+                      placeholder="可選備註"
+                    />
+                    <div class="flex gap-2 mt-1">
+                      <button
+                        @click.stop="savePerson(row.id)"
+                        class="px-3 py-1 bg-stone-900 text-white rounded hover:bg-stone-800"
+                      >儲存</button>
+                      <button
+                        @click.stop="expanded = null"
+                        class="px-3 py-1 bg-gray-100 text-gray-700 rounded"
+                      >取消</button>
+                    </div>
                   </div>
                 </td>
               </tr>
             </template>
             <tr v-if="filteredPeople.length === 0">
-              <td colspan="11" class="px-3 py-12 text-center text-sm text-gray-400">
+              <td colspan="4" class="px-3 py-12 text-center text-sm text-gray-400">
                 {{ theologians.length === 0 ? '尚無資料 — 請執行 scripts/seed_translation_glossary.py 批次填入' : '無符合搜尋條件的項目' }}
               </td>
             </tr>
@@ -176,21 +132,16 @@
         </table>
       </div>
 
-      <!-- Terms table -->
+      <!-- Terms table — covers tabs 'place' / 'work' / 'sect' / 'term'
+           (all backed by theological_terms, filtered by entity_type). -->
       <div v-else class="bg-white border border-gray-200 rounded-lg overflow-hidden">
         <table class="w-full text-sm">
           <thead class="bg-stone-50 border-b border-gray-200 text-xs text-gray-600">
             <tr>
-              <th class="px-3 py-2 text-left font-medium">英文</th>
-              <th class="px-3 py-2 text-left font-medium">原文</th>
-              <th class="px-3 py-2 text-left font-medium">分類</th>
-              <th class="px-3 py-2 text-left font-medium">★ 建議</th>
-              <th class="px-3 py-2 text-left font-medium">新教</th>
-              <th class="px-3 py-2 text-left font-medium">思高</th>
-              <th class="px-3 py-2 text-left font-medium">東正教</th>
-              <th class="px-3 py-2 text-left font-medium">香港</th>
-              <th class="px-3 py-2 text-left font-medium">台灣</th>
-              <th class="px-3 py-2 text-left font-medium">中國</th>
+              <th class="px-3 py-2 text-left font-medium w-1/4">英文</th>
+              <th class="px-3 py-2 text-left font-medium w-1/4">原文</th>
+              <th class="px-3 py-2 text-left font-medium w-1/4">中文翻譯</th>
+              <th class="px-3 py-2 text-left font-medium w-1/4">首次出現出處</th>
             </tr>
           </thead>
           <tbody>
@@ -201,67 +152,62 @@
               >
                 <td class="px-3 py-2 font-medium text-gray-900">{{ row.term_english }}</td>
                 <td class="px-3 py-2 text-gray-700 font-serif">{{ row.term_original || '—' }}</td>
-                <td class="px-3 py-2 text-gray-600">{{ row.category || '—' }}</td>
-                <td class="px-3 py-2 font-semibold text-amber-700">{{ row.zh_recommended || '—' }}</td>
-                <td class="px-3 py-2 text-gray-600">{{ row.zh_protestant || '—' }}</td>
-                <td class="px-3 py-2 text-gray-600">{{ row.zh_catholic_sgs || '—' }}</td>
-                <td class="px-3 py-2 text-gray-600">{{ row.zh_orthodox || '—' }}</td>
-                <td class="px-3 py-2 text-gray-600">{{ row.zh_hk || '—' }}</td>
-                <td class="px-3 py-2 text-gray-600">{{ row.zh_tw || '—' }}</td>
-                <td class="px-3 py-2 text-gray-600">{{ row.zh_china_academic || '—' }}</td>
+                <td class="px-3 py-2 font-semibold text-stone-900">{{ row.zh_recommended || '—' }}</td>
+                <td class="px-3 py-2 text-gray-600 text-xs">{{ row.first_source || '—' }}</td>
               </tr>
               <tr v-if="expanded === row.id" class="border-b border-gray-200 bg-stone-50/40">
-                <td colspan="10" class="px-5 py-4">
-                  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                <td colspan="4" class="px-5 py-4">
+                  <div v-if="!editMode" class="text-xs text-gray-700 grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <div class="text-gray-500 mb-1">原文細節</div>
-                      <div class="text-gray-800">
-                        <div><span class="text-gray-500">羅馬化：</span>{{ row.term_latin_translit || '—' }}</div>
-                        <div><span class="text-gray-500">時期：</span>{{ row.era || '—' }}</div>
-                      </div>
-                      <div class="text-gray-500 mt-3 mb-1">中文釋義</div>
-                      <div class="text-gray-800">{{ row.definition_zh || '—' }}</div>
+                      <div class="text-gray-500 mb-1">中文翻譯</div>
+                      <div class="text-stone-900 font-medium">{{ row.zh_recommended || '—' }}</div>
                     </div>
-                    <div class="md:col-span-2">
-                      <div class="text-gray-500 mb-1">建議理由</div>
-                      <div v-if="!editMode" class="text-gray-800 whitespace-pre-wrap">{{ row.recommendation_reason || '—' }}</div>
-                      <div v-else class="flex flex-col gap-2">
-                        <input
-                          v-model="editTerm.zh_recommended"
-                          class="text-xs px-2 py-1 border border-gray-300 rounded w-full"
-                          placeholder="建議譯名"
-                        />
-                        <textarea
-                          v-model="editTerm.recommendation_reason"
-                          rows="3"
-                          class="text-xs px-2 py-1 border border-gray-300 rounded w-full"
-                          placeholder="建議理由"
-                        />
-                        <textarea
-                          v-model="editTerm.definition_zh"
-                          rows="2"
-                          class="text-xs px-2 py-1 border border-gray-300 rounded w-full"
-                          placeholder="中文釋義"
-                        />
-                        <div class="flex gap-2">
-                          <button
-                            @click.stop="saveTerm(row.id)"
-                            class="text-xs px-3 py-1 bg-stone-900 text-white rounded hover:bg-stone-800"
-                          >儲存</button>
-                          <button
-                            @click.stop="expanded = null"
-                            class="text-xs px-3 py-1 bg-gray-100 text-gray-700 rounded"
-                          >取消</button>
-                        </div>
-                      </div>
+                    <div>
+                      <div class="text-gray-500 mb-1">首次出現出處</div>
+                      <div class="text-stone-700">{{ row.first_source || '—' }}</div>
+                    </div>
+                    <div v-if="row.definition_zh" class="md:col-span-2">
+                      <div class="text-gray-500 mb-1">中文釋義</div>
+                      <div class="text-gray-800 whitespace-pre-wrap">{{ row.definition_zh }}</div>
+                    </div>
+                  </div>
+                  <div v-else class="flex flex-col gap-2 text-xs">
+                    <label class="text-gray-500">中文翻譯</label>
+                    <input
+                      v-model="editTerm.zh_recommended"
+                      class="px-2 py-1 border border-gray-300 rounded w-full"
+                      placeholder="中文翻譯"
+                    />
+                    <label class="text-gray-500 mt-1">首次出現出處（書名 / 卷 / chunk）</label>
+                    <input
+                      v-model="editTerm.first_source"
+                      class="px-2 py-1 border border-gray-300 rounded w-full"
+                      placeholder="例：ANF Vol 1 / 革利免致哥林多人前書 / chunk 3"
+                    />
+                    <label class="text-gray-500 mt-1">中文釋義（選填）</label>
+                    <textarea
+                      v-model="editTerm.definition_zh"
+                      rows="2"
+                      class="px-2 py-1 border border-gray-300 rounded w-full"
+                      placeholder="可選釋義"
+                    />
+                    <div class="flex gap-2 mt-1">
+                      <button
+                        @click.stop="saveTerm(row.id)"
+                        class="px-3 py-1 bg-stone-900 text-white rounded hover:bg-stone-800"
+                      >儲存</button>
+                      <button
+                        @click.stop="expanded = null"
+                        class="px-3 py-1 bg-gray-100 text-gray-700 rounded"
+                      >取消</button>
                     </div>
                   </div>
                 </td>
               </tr>
             </template>
             <tr v-if="filteredTerms.length === 0">
-              <td colspan="10" class="px-3 py-12 text-center text-sm text-gray-400">
-                {{ terms.length === 0 ? '尚無資料 — 請執行 scripts/seed_translation_glossary.py 批次填入' : '無符合搜尋條件的項目' }}
+              <td colspan="4" class="px-3 py-12 text-center text-sm text-gray-400">
+                {{ filteredTerms.length === 0 && tabCount(activeTab) === 0 ? '此類別尚無資料，編輯模式 → + 新增 開始填入' : '無符合搜尋條件的項目' }}
               </td>
             </tr>
           </tbody>
@@ -277,40 +223,39 @@ useHead({ title: '神學家與名詞中譯 — Know Graph Lab' })
 
 const supabase = useSupabaseClient<any>()
 
+// 5 categories. `people` is the theologians table; `place` / `work` /
+// `sect` / `term` are entity_type sub-buckets of theological_terms.
 const tabs = [
-  { key: 'people', label: '神學家' },
-  { key: 'terms', label: '神學名詞' },
+  { key: 'people', label: '人名' },
+  { key: 'place',  label: '地名' },
+  { key: 'work',   label: '作品名' },
+  { key: 'sect',   label: '教派名' },
+  { key: 'term',   label: '神學名詞' },
 ] as const
-const activeTab = ref<'people' | 'terms'>('people')
+type TabKey = typeof tabs[number]['key']
+const activeTab = ref<TabKey>('people')
 
 const loading = ref(true)
 const theologians = ref<any[]>([])
 const terms = ref<any[]>([])
 
 const q = ref('')
-const filterCentury = ref<string | null>(null)
-const filterCategory = ref<string | null>(null)
 const expanded = ref<string | null>(null)
 const editMode = ref(false)
 const editPerson = ref<any>({})
 const editTerm = ref<any>({})
 
-const CENTURY_ORDER = ['1c','2c','2-3c','3c','3-4c','4c','4-5c','5c','5-6c','6c','7c','8c','9c','10c','11c','12c','13c','14c','15c','16c']
-const centuries = computed(() => {
-  const set = new Set(theologians.value.map(t => t.century).filter(Boolean))
-  return CENTURY_ORDER.filter(c => set.has(c))
-})
-const categories = computed(() => {
-  const set = new Set(terms.value.map(t => t.category).filter(Boolean))
-  return [...set].sort()
-})
+function tabCount(key: TabKey): number {
+  if (key === 'people') return theologians.value.length
+  return terms.value.filter(t => (t.entity_type || 'term') === key).length
+}
+const activeTabCount = computed(() => tabCount(activeTab.value))
 
 const filteredPeople = computed(() => {
   const query = q.value.trim().toLowerCase()
   const rows = theologians.value.filter(r => {
-    if (filterCentury.value && r.century !== filterCentury.value) return false
     if (!query) return true
-    return [r.name_english, r.name_original, r.name_latin_std, r.name_protestant, r.name_catholic_sgs, r.name_orthodox, r.name_hk, r.name_tw, r.name_china_academic, r.name_recommended, r.nationality]
+    return [r.name_english, r.name_original, r.name_latin_std, r.name_recommended, r.first_source]
       .filter(Boolean).some((v: string) => v.toLowerCase().includes(query))
   })
   return [...rows].sort((a, b) => effectiveYear(a) - effectiveYear(b))
@@ -318,12 +263,37 @@ const filteredPeople = computed(() => {
 const filteredTerms = computed(() => {
   const query = q.value.trim().toLowerCase()
   return terms.value.filter(r => {
-    if (filterCategory.value && r.category !== filterCategory.value) return false
+    if ((r.entity_type || 'term') !== activeTab.value) return false
     if (!query) return true
-    return [r.term_english, r.term_original, r.term_latin_translit, r.zh_protestant, r.zh_catholic_sgs, r.zh_orthodox, r.zh_hk, r.zh_tw, r.zh_china_academic, r.zh_recommended, r.definition_zh]
+    return [r.term_english, r.term_original, r.term_latin_translit, r.zh_recommended, r.first_source, r.definition_zh]
       .filter(Boolean).some((v: string) => v.toLowerCase().includes(query))
   })
 })
+
+async function addNew() {
+  const english = prompt('英文／拉丁名（必填）')?.trim()
+  if (!english) return
+  const original = prompt('原文（希臘／拉丁／希伯來，可空）')?.trim() || null
+  const chinese = prompt('中文翻譯（必填）')?.trim()
+  if (!chinese) return
+  const source = prompt('首次出現出處（書名 / 卷 / chunk）')?.trim() || null
+  if (activeTab.value === 'people') {
+    const { data, error } = await supabase.from('theologians').insert({
+      name_english: english, name_original: original, name_latin_std: english,
+      name_recommended: chinese, first_source: source,
+    }).select().single()
+    if (error) { alert('新增失敗：' + error.message); return }
+    theologians.value.push(data)
+  } else {
+    const { data, error } = await supabase.from('theological_terms').insert({
+      term_english: english, term_original: original,
+      zh_recommended: chinese, first_source: source,
+      entity_type: activeTab.value,
+    }).select().single()
+    if (error) { alert('新增失敗：' + error.message); return }
+    terms.value.push(data)
+  }
+}
 
 function formatYears(b: number | null, d: number | null) {
   if (b == null && d == null) return '—'
@@ -355,14 +325,14 @@ function toggleExpand(id: string) {
     const row = theologians.value.find(r => r.id === id)
     editPerson.value = {
       name_recommended: row?.name_recommended || '',
+      first_source: row?.first_source || '',
       recommendation_reason: row?.recommendation_reason || '',
-      notes: row?.notes || '',
     }
   } else {
     const row = terms.value.find(r => r.id === id)
     editTerm.value = {
       zh_recommended: row?.zh_recommended || '',
-      recommendation_reason: row?.recommendation_reason || '',
+      first_source: row?.first_source || '',
       definition_zh: row?.definition_zh || '',
     }
   }
