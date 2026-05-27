@@ -141,6 +141,94 @@ CCEL 格式：每章一個 separator + footnotes，10 章 page 就有 10 個 sep
 
 **修法**：reader 端的 renderMarkdown toggle 邏輯（body↔footnotes flip per separator）+ 末尾收集所有 footnotes 集中渲染
 
+### 坑 4: JSONL 雙語雙存（dual-state bug，Vol 3 實證 2026-05-28）
+
+舊版 pipeline 的 idempotency bug：某次 partial re-translate 把英文原文 chunks 跟翻譯後中文 chunks **同時保留**在 JSONL 中（不是 dedupe，是並存）。Vol 3 上線時 1362 chunks，前 600 是 100% 英文（vol = English category names），後 762 才是 100% 中文（vol = None，chapter_path 是 raw `anfNN.x.y.html`）。reader 顯示一半英文一半中文。
+
+**偵測 snippet**（放在 `scan_translated_book.py` 或一次性檢查）：
+```python
+import re
+zh_run = en_run = 0
+for r in rows:
+    content = r.get('content','') or ''
+    if not content: continue
+    zh = len(re.findall(r'[一-鿿]', content))
+    if zh / max(len(content),1) > 0.3: zh_run += 1
+    elif zh / max(len(content),1) < 0.05: en_run += 1
+# 若 en_run + zh_run ≈ len(rows) 且兩者皆顯著 → 雙語雙存
+```
+
+**修法**：保留中文 chunks，刪除英文 chunks；re-index 0..N-1；對應 [[#tip-2-anf-file-prefix-volume-map]] 重新指派 volume。
+
+### 坑 5: bare volume vs book-specific volume 並存（Vol 2 實證）
+
+例：同一個 JSONL 裡同時出現 `volume='革利免《教師》'` 跟 `volume='革利免《教師》卷一/二/三'` — 前者是 polish 沒抓到 book number 的殘留 chunks，會被誤標到錯誤分組。
+
+**修法**：walk 所有 chunks；對 bare-vol chunks（不含「卷」字）查鄰近 chunks 是否有 specific 版（同 vol prefix），有就 inherit。在我 fixVol2 腳本中用：
+```python
+def specific_book(vol): return vol and '卷' in vol
+# 對每個 bare-vol chunk，先後向再前向各找 10 步內 specific 版本
+```
+
+---
+
+## Pipeline-level tips（橫跨 Vol 1/2/3 整理）
+
+### Tip 1: validate 0 FAIL 不等於 reader 完美
+
+`validate_book_structure.py` 只檢結構（chunk_index 連續、chunk_type 合法、chapter_path 非空）。**內容可能還是中英混雜或 dual-state**（見坑 4）。一定要 spot-check reader 開幾頁實際看一下，不要 100% 信賴 validator。
+
+### Tip 2: ANF file-prefix → volume map（救援已半譯 book）
+
+教父書都用 CCEL 命名 `anfNN.X.Y.Z.html`。如果 chunks 還掛這種 chapter_path，可不必重 consolidate，直接用 file-prefix 對應 NCX 結構回填 volume：
+
+```python
+# ANF Vol 2 例
+PREFIX_TO_VOL = [
+    ('anf02.ii.ii.', '黑馬牧者：異象篇'),
+    ('anf02.iii.ii.', '他提安致希臘人辭'),
+    ('anf02.iv.ii.i.', '提阿非羅致奧托呂庫書 卷一'),
+    # …按 NCX 對照
+]
+# 倒序 sort 讓 longest prefix 先匹配
+```
+
+實證效益：Vol 2 178 個 chunks 重新指派 volume（修一個 partial-consolidate 留下的 Theophilus 被錯標 Tatian 的 bug），Vol 3 762 個全部對應好。
+
+### Tip 3: sequential 第N章 fallback
+
+當大量 chunks 的 chapter_path 是翻譯變體（如「提阿非羅致奧多利古」「奧托呂庫」「歐多魯克」並存）而 R011 大量 WARN，最簡單的解：直接用 volume 名 + sequential 編號重命名：
+
+```python
+per_vol = {}
+for r in rows:
+    vol = r.get('volume')
+    if not vol: continue
+    n = per_vol.get(vol, 0) + 1
+    per_vol[vol] = n
+    r['chapter_path'] = f'{vol} 第{n}章'
+```
+
+Vol 2 R011 146 → 0，Vol 3 R012 159 → 0 都靠這招收尾。
+
+### Tip 4: B-layer LLM false positive 警惕
+
+Haiku 4.5 校對最常見的 false positive：建議把詞庫已經規定的中文音譯改回**英文音譯**。例 (2026-05-28)：建議「革利免」應為「克雷門」（錯！Κλήμης 是希臘文，思高/和合本都用「革利免」）。
+
+**處理原則**：先比對 `/translation-glossary` 的 `name_recommended`：
+- 若 LLM 建議 = 詞庫 → 採納，加進 TERM_FIXES_BY_BOOK 收斂變體
+- 若 LLM 建議 ≠ 詞庫 → **反向**修，把出現的變體列入 TERM_FIXES 收斂回詞庫值
+
+詳見 [[feedback-glossary-strict-authority]]。
+
+### Tip 5: 不要 conflate 同名異人
+
+Saturus（殉道者，與 Perpetua 同死）vs Saturninus（羅馬農業神 Saturnus 或圖盧斯主教）— 兩個人，兩個名。早期 sweep 曾經把 `薩圖魯 → 薩圖爾努斯` 錯誤合併，必須分開：
+- 薩圖魯：殉道者 Saturus
+- 薩圖爾努斯：羅馬神 Saturn / 主教 Saturninus
+
+加進 TERM_FIXES 前要確認**是不是同一個人物**，不只看字面相似。
+
 ---
 
 ## 詞庫整合（[[translation-glossary]] 對接）

@@ -249,8 +249,10 @@ TERM_FIXES_ANF_VOL_3 = {
     "費利西塔斯": "費莉西塔斯",  # 利 vs 莉
     "費利西塔": "費莉西塔斯",
     "菲莉西妲": "費莉西塔斯",
-    # Saturus / Saturninus — Vol 3 詞庫 薩圖爾努斯
-    "薩圖魯": "薩圖爾努斯",  # Note: 撒圖魯 is Saturus (different person), keep separate
+    # Saturus / Saturninus 是兩個不同人物，不要互相替換：
+    # - Saturus (殉道者，跟 Perpetua 一起死於 203 AD) → 薩圖魯
+    # - Saturninus (羅馬農業神 Saturnus，或 Toulouse 的殉道者) → 薩圖爾努斯
+    # 早期版本曾把兩者合併為「薩圖爾努斯」是 bug，必須保持兩名分離
     # Jupiter — Vol 1 標準 朱庇特
     "奧林匹亞宙斯": "奧林匹斯的朱庇特",
     "盧米娜神": "魯米娜神",
