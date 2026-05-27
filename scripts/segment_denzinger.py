@@ -53,6 +53,14 @@ BOOK_ID = "568726d3-967e-457a-ab69-7452b21d606f"
 MAIN_JSONL = CHUNKS_DIR / f"{BOOK_ID}.jsonl"
 BILINGUAL_JSONL = CHUNKS_DIR / f"{BOOK_ID}.bilingual.jsonl"
 PRE_SEGMENT_BACKUP = CHUNKS_DIR / f"{BOOK_ID}.jsonl.presegment.bak"
+# Column-aware re-OCR output. When present, overlays the page-level main
+# JSONL — divider-formatted text takes precedence so the segmenter can
+# split lat / zh deterministically instead of guessing line-by-line.
+RECOLUMN_JSONL = CHUNKS_DIR / f"{BOOK_ID}.recolumn.jsonl"
+
+# Divider markers emitted by _denzinger_recolumn_ocr.py
+LAT_DIVIDER = "--- 拉丁文 ---"
+ZH_DIVIDER = "--- 中譯 ---"
 
 # ──────────────────────────────────────────────────────────────
 # Regex / heuristic drafts (per spec §4 — validate against real OCR)
@@ -189,6 +197,116 @@ def split_into_blocks(page_content: str) -> list[dict]:
 # Phase 2/3: pair Latin+Chinese DH blocks, identify headers/commentary
 # ──────────────────────────────────────────────────────────────
 
+def _segment_divider_page(content: str, pn: int) -> list[dict] | None:
+    """
+    Column-aware re-OCR'd pages contain explicit `--- 拉丁文 ---` / `--- 中譯 ---`
+    dividers. We split the page into two clean blocks and run DH detection
+    inside each separately, then pair by DH number. Returns None when the
+    dividers aren't present so caller falls through to the line-by-line
+    classifier.
+    """
+    if LAT_DIVIDER not in content or ZH_DIVIDER not in content:
+        return None
+
+    # Split into [optional preamble] + [lat block] + [zh block]
+    # We trust LAT_DIVIDER comes before ZH_DIVIDER (recolumn prompt guarantees it).
+    after_lat = content.split(LAT_DIVIDER, 1)[1]
+    lat_block, zh_block = after_lat.split(ZH_DIVIDER, 1)
+    lat_block = lat_block.strip()
+    zh_block = zh_block.strip()
+
+    # If page has only one column (one side empty) — treat as commentary
+    if not lat_block and not zh_block:
+        return []
+    if not lat_block and zh_block:
+        # Commentary-only page
+        return [{
+            "section_type": "commentary",
+            "chunk_type": "section",
+            "chapter_path": "註解",
+            "content": zh_block,
+            "page_number": pn,
+            "page_numbers": [pn],
+        }]
+
+    # Both columns present — find DH markers in each
+    def by_dh_in_block(text: str) -> tuple[list[dict], dict[int, str]]:
+        """Return (preamble_blocks, {dh: text}). Preamble = lines before
+        the first DH marker — typically a section header or commentary
+        intro for the column."""
+        lines = text.splitlines()
+        preamble_lines: list[str] = []
+        by_dh: dict[int, list[str]] = {}
+        cur_dh: int | None = None
+        for ln in lines:
+            m = DH_MARKER.match(ln)
+            if m:
+                cur_dh = int(m.group(1))
+                by_dh.setdefault(cur_dh, []).append(m.group(2))
+            elif cur_dh is not None:
+                by_dh[cur_dh].append(ln)
+            else:
+                preamble_lines.append(ln)
+        preamble_text = "\n".join(preamble_lines).strip()
+        preambles: list[dict] = []
+        if preamble_text:
+            preambles.append({"text": preamble_text, "lang": classify_lang(preamble_text)})
+        return preambles, {d: "\n".join(ls).strip() for d, ls in by_dh.items()}
+
+    lat_preambles, lat_by_dh = by_dh_in_block(lat_block)
+    zh_preambles, zh_by_dh = by_dh_in_block(zh_block)
+
+    out: list[dict] = []
+
+    # Preambles → header (if matches section pattern) or commentary
+    for p in (zh_preambles + lat_preambles):
+        if len(p["text"].strip()) < 12:
+            continue
+        first_line = p["text"].strip().splitlines()[0]
+        header_label = is_section_header(first_line)
+        if header_label:
+            out.append({
+                "section_type": "header",
+                "chunk_type": "chapter",
+                "chapter_path": first_line[:35],
+                "content": p["text"].strip(),
+                "page_number": pn,
+                "page_numbers": [pn],
+            })
+        elif p["lang"] == "zh" and len(p["text"].strip()) > 30:
+            out.append({
+                "section_type": "commentary",
+                "chunk_type": "section",
+                "chapter_path": "註解",
+                "content": p["text"].strip(),
+                "page_number": pn,
+                "page_numbers": [pn],
+            })
+
+    # Entries: pair lat + zh by DH number (union of both sides)
+    all_dhs = sorted(set(lat_by_dh) | set(zh_by_dh))
+    for dh in all_dhs:
+        lat = lat_by_dh.get(dh, "").strip()
+        zh = zh_by_dh.get(dh, "").strip()
+        if not lat and not zh:
+            continue
+        if (zh and looks_like_toc_entry(zh)) or (lat and looks_like_toc_entry(lat)):
+            continue
+        out.append({
+            "section_type": "entry",
+            "chunk_type": "section",
+            "chapter_path": f"DH {dh}",
+            "content": zh,
+            "source_text": lat or None,
+            "source_lang": "lat" if lat else None,
+            "dh_number": dh,
+            "page_number": pn,
+            "page_numbers": [pn],
+        })
+
+    return out
+
+
 def segment_page(page: dict) -> list[dict]:
     """
     Convert one page chunk → list of typed sub-chunks (without final chunk_index).
@@ -207,6 +325,11 @@ def segment_page(page: dict) -> list[dict]:
             "page_number": pn,
             "page_numbers": [pn],
         }]
+
+    # Column-aware re-OCR'd page → divider-based deterministic split
+    divider_out = _segment_divider_page(page["content"], pn)
+    if divider_out is not None:
+        return divider_out
 
     blocks = split_into_blocks(page["content"])
 
@@ -372,6 +495,39 @@ def load_pages(path: Path) -> list[dict]:
     return out
 
 
+def overlay_recolumn(pages: list[dict]) -> int:
+    """When `_chunks/{id}.recolumn.jsonl` exists, replace the content of
+    each page present in it with the column-aware re-OCR'd version.
+    Returns the count of pages overlaid (0 if no recolumn file).
+    Idempotent — last-write-wins if the same page appears twice."""
+    if not RECOLUMN_JSONL.exists():
+        return 0
+    latest: dict[int, str] = {}
+    with RECOLUMN_JSONL.open(encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                o = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            pn = o.get("page_number")
+            content = (o.get("content") or "").strip()
+            if isinstance(pn, int) and content:
+                latest[pn] = content
+    if not latest:
+        return 0
+    n = 0
+    for p in pages:
+        pn = p.get("page_number")
+        if isinstance(pn, int) and pn in latest:
+            p["content"] = latest[pn]
+            p["_recolumn"] = True
+            n += 1
+    return n
+
+
 def report_stats(flat: list[dict], per_page_counts: list[int]) -> None:
     type_counter = Counter(c["section_type"] for c in flat)
     dh_numbers = [c["dh_number"] for c in flat
@@ -528,6 +684,11 @@ def main() -> int:
 
     pages = load_pages(source)
     print(f"Loaded {len(pages)} page chunks from {source.name}")
+
+    overlaid = overlay_recolumn(pages)
+    if overlaid:
+        print(f"Overlaid {overlaid} pages from {RECOLUMN_JSONL.name} "
+              f"(divider-aware segmentation enabled)")
 
     per_page = [segment_page(p) for p in pages]
     per_page_counts = [len(x) for x in per_page]
