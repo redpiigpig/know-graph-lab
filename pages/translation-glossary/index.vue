@@ -33,6 +33,18 @@
         >{{ t.label }} <span class="text-xs text-gray-400">({{ tabCount(t.key) }})</span></button>
       </div>
 
+      <!-- Sub-tabs (人名 only) — era buckets -->
+      <div v-if="activeTab === 'people'" class="flex flex-wrap items-center gap-1 mb-4">
+        <button
+          v-for="e in personEras" :key="e.key"
+          @click="activePersonEra = e.key"
+          class="text-xs px-2.5 py-1 rounded-full border transition"
+          :class="activePersonEra === e.key
+            ? 'bg-stone-900 text-white border-stone-900'
+            : 'bg-white text-gray-600 border-gray-200 hover:border-stone-300'"
+        >{{ e.label }} <span class="ml-0.5 text-[10px] opacity-70">{{ personEraCount(e.key) }}</span></button>
+      </div>
+
       <!-- Search -->
       <div class="flex flex-wrap items-center gap-2 mb-4">
         <input
@@ -96,6 +108,14 @@
                       class="px-2 py-1 border border-gray-300 rounded w-full"
                       placeholder="中文翻譯"
                     />
+                    <label class="text-gray-500 mt-1">分類</label>
+                    <select v-model="editPerson.person_era" class="px-2 py-1 border border-gray-300 rounded w-full">
+                      <option value="biblical">聖經人物</option>
+                      <option value="early">初代教會（-638）</option>
+                      <option value="medieval">中世紀教會（-1517）</option>
+                      <option value="modern">近代教會（-1910）</option>
+                      <option value="contemporary">現代教會</option>
+                    </select>
                     <label class="text-gray-500 mt-1">首次出現出處（書名 / 卷 / chunk）</label>
                     <input
                       v-model="editPerson.first_source"
@@ -223,8 +243,9 @@ useHead({ title: '神學家與名詞中譯 — Know Graph Lab' })
 
 const supabase = useSupabaseClient<any>()
 
-// 5 categories. `people` is the theologians table; `place` / `work` /
-// `sect` / `term` are entity_type sub-buckets of theological_terms.
+// 5 categories. `people` is the theologians table (further sub-divided
+// by `person_era`); `place` / `work` / `sect` / `term` are entity_type
+// sub-buckets of theological_terms.
 const tabs = [
   { key: 'people', label: '人名' },
   { key: 'place',  label: '地名' },
@@ -234,6 +255,23 @@ const tabs = [
 ] as const
 type TabKey = typeof tabs[number]['key']
 const activeTab = ref<TabKey>('people')
+
+// Sub-tabs for 人名: era-based grouping. Boundaries:
+//   biblical     — Bible characters (manual flag)
+//   early        — to 638 (Islamic conquest / end of patristic age)
+//   medieval     — 638-1516
+//   modern       — 1517-1909 (Reformation through to 1910)
+//   contemporary — 1910+
+const personEras = [
+  { key: 'all',          label: '全部' },
+  { key: 'biblical',     label: '聖經人物' },
+  { key: 'early',        label: '初代教會' },
+  { key: 'medieval',     label: '中世紀教會' },
+  { key: 'modern',       label: '近代教會' },
+  { key: 'contemporary', label: '現代教會' },
+] as const
+type PersonEra = typeof personEras[number]['key']
+const activePersonEra = ref<PersonEra>('all')
 
 const loading = ref(true)
 const theologians = ref<any[]>([])
@@ -251,9 +289,16 @@ function tabCount(key: TabKey): number {
 }
 const activeTabCount = computed(() => tabCount(activeTab.value))
 
+function personEraCount(era: PersonEra): number {
+  if (era === 'all') return theologians.value.length
+  return theologians.value.filter(p => (p.person_era || 'early') === era).length
+}
+
 const filteredPeople = computed(() => {
   const query = q.value.trim().toLowerCase()
+  const era = activePersonEra.value
   const rows = theologians.value.filter(r => {
+    if (era !== 'all' && (r.person_era || 'early') !== era) return false
     if (!query) return true
     return [r.name_english, r.name_original, r.name_latin_std, r.name_recommended, r.first_source]
       .filter(Boolean).some((v: string) => v.toLowerCase().includes(query))
@@ -278,9 +323,13 @@ async function addNew() {
   if (!chinese) return
   const source = prompt('首次出現出處（書名 / 卷 / chunk）')?.trim() || null
   if (activeTab.value === 'people') {
+    // For new entries, use the currently-active era sub-tab (or 'early'
+    // when 「全部」 is selected — user can change after via edit modal).
+    const era = activePersonEra.value === 'all' ? 'early' : activePersonEra.value
     const { data, error } = await supabase.from('theologians').insert({
       name_english: english, name_original: original, name_latin_std: english,
       name_recommended: chinese, first_source: source,
+      person_era: era,
     }).select().single()
     if (error) { alert('新增失敗：' + error.message); return }
     theologians.value.push(data)
@@ -326,6 +375,7 @@ function toggleExpand(id: string) {
     editPerson.value = {
       name_recommended: row?.name_recommended || '',
       first_source: row?.first_source || '',
+      person_era: row?.person_era || 'early',
       recommendation_reason: row?.recommendation_reason || '',
     }
   } else {
