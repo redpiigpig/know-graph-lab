@@ -44,12 +44,15 @@ from ocr_with_gemini import (  # noqa: E402
     URL,
     H,
     push_to_r2,
+    update_book_done,
 )
 import requests  # noqa: E402
+import shutil  # noqa: E402
 
 BOOK_ID = "568726d3-967e-457a-ab69-7452b21d606f"
 MAIN_JSONL = CHUNKS_DIR / f"{BOOK_ID}.jsonl"
 BILINGUAL_JSONL = CHUNKS_DIR / f"{BOOK_ID}.bilingual.jsonl"
+PRE_SEGMENT_BACKUP = CHUNKS_DIR / f"{BOOK_ID}.jsonl.presegment.bak"
 
 # ──────────────────────────────────────────────────────────────
 # Regex / heuristic drafts (per spec §4 — validate against real OCR)
@@ -434,9 +437,12 @@ def update_display_mode(mode: str) -> None:
 def replace_db_chunks(flat: list[dict]) -> None:
     """Replace ebook_chunks rows for this book with full segmented chunks
     (full content, not previews — bilingual reader fetches from DB)."""
+    # PostgREST bulk insert requires every object in the array to expose the
+    # same set of keys (PGRST102). Build rows with a fixed key set; populate
+    # missing bilingual fields as null/None.
     rows = []
     for ch in flat:
-        row = {
+        rows.append({
             "ebook_id": BOOK_ID,
             "chunk_index": ch["chunk_index"],
             "chunk_type": ch["chunk_type"],
@@ -444,14 +450,12 @@ def replace_db_chunks(flat: list[dict]) -> None:
             "chapter_path": ch.get("chapter_path"),
             "content": ch.get("content") or "",
             "char_count": len((ch.get("content") or "")) + len((ch.get("source_text") or "")),
-        }
-        # Bilingual extras — these columns must exist in DB; ignored gracefully if not.
-        for k in ("section_type", "source_text", "source_lang",
-                  "dh_number", "page_numbers"):
-            v = ch.get(k)
-            if v is not None:
-                row[k] = v
-        rows.append(row)
+            "section_type": ch.get("section_type"),
+            "source_text": ch.get("source_text"),
+            "source_lang": ch.get("source_lang"),
+            "dh_number": ch.get("dh_number"),
+            "page_numbers": ch.get("page_numbers"),
+        })
 
     requests.delete(
         f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{BOOK_ID}",
@@ -459,10 +463,16 @@ def replace_db_chunks(flat: list[dict]) -> None:
         timeout=30,
     )
 
-    BATCH = 50
-    for i in range(0, len(rows), BATCH):
-        batch = rows[i:i + BATCH]
-        for attempt in range(3):
+    # Adaptive batching — Supabase free tier hits statement timeout (57014)
+    # at 50-row batches when each row holds ~2KB of mixed Latin/Chinese text.
+    # Step down to smaller batches on timeout, same recipe as
+    # ocr_with_gemini.insert_chunk_previews.
+    BATCH_SIZES = [25, 10, 5, 1]
+    i = 0
+    inserted = 0
+    while i < len(rows):
+        for bs in BATCH_SIZES:
+            batch = rows[i:i + bs]
             r = requests.post(
                 f"{URL}/rest/v1/ebook_chunks",
                 headers=H,
@@ -470,8 +480,12 @@ def replace_db_chunks(flat: list[dict]) -> None:
                 timeout=120,
             )
             if r.status_code in (200, 201):
+                i += len(batch)
+                inserted += len(batch)
+                if inserted % 200 == 0 or i == len(rows):
+                    print(f"  inserted {inserted}/{len(rows)}", flush=True)
                 break
-            # PostgREST returns 400 with PGRST204 if unknown column → fallback
+            # Unknown-column / schema-cache → re-raise with helpful DDL.
             if "PGRST204" in r.text or "schema cache" in r.text:
                 raise RuntimeError(
                     f"ebook_chunks missing bilingual columns. Add a migration:\n"
@@ -482,9 +496,14 @@ def replace_db_chunks(flat: list[dict]) -> None:
                     f"  ALTER TABLE ebook_chunks ADD COLUMN page_numbers int[];\n"
                     f"DB error was: {r.text[:300]}"
                 )
-            if attempt == 2:
-                raise RuntimeError(f"insert failed: {r.status_code} {r.text[:200]}")
-            time.sleep(2 ** attempt)
+            # 57014 = statement timeout. Retry smaller batch.
+            if "57014" in r.text or "timeout" in r.text.lower() or r.status_code >= 500:
+                if bs > BATCH_SIZES[-1]:
+                    continue
+            raise RuntimeError(f"insert failed at batch_size={bs}, row {i}: "
+                               f"{r.status_code} {r.text[:200]}")
+        else:
+            raise RuntimeError(f"insert failed at batch_size=1, row {i}")
 
 
 def main() -> int:
@@ -497,13 +516,18 @@ def main() -> int:
                     help="write DB + R2 + display_mode='bilingual-parallel'")
     args = ap.parse_args()
 
-    if not MAIN_JSONL.exists():
-        print(f"ERROR: consolidated JSONL missing: {MAIN_JSONL}", file=sys.stderr)
+    # On re-runs after a prior --apply, MAIN_JSONL is already segmented (it got
+    # overwritten with the bilingual chunks so dev reads match prod). Prefer the
+    # presegment backup as the page-level source when it exists, so re-running
+    # this script is idempotent — never re-segment already-segmented output.
+    source = PRE_SEGMENT_BACKUP if PRE_SEGMENT_BACKUP.exists() else MAIN_JSONL
+    if not source.exists():
+        print(f"ERROR: page-level JSONL missing: {source}", file=sys.stderr)
         print("Run scripts/_denzinger_consolidate.py first.", file=sys.stderr)
         return 1
 
-    pages = load_pages(MAIN_JSONL)
-    print(f"Loaded {len(pages)} page chunks from {MAIN_JSONL.name}")
+    pages = load_pages(source)
+    print(f"Loaded {len(pages)} page chunks from {source.name}")
 
     per_page = [segment_page(p) for p in pages]
     per_page_counts = [len(x) for x in per_page]
@@ -522,8 +546,20 @@ def main() -> int:
         print(f"\nWrote {BILINGUAL_JSONL}  ({len(flat)} chunks)")
 
     if args.apply:
+        # Replace main .jsonl with bilingual content so dev (local) and prod (R2)
+        # see the same segmented chunks. Backup the page-level main once.
+        if MAIN_JSONL.exists() and not PRE_SEGMENT_BACKUP.exists():
+            shutil.copyfile(MAIN_JSONL, PRE_SEGMENT_BACKUP)
+            print(f"Backed up page-level main → {PRE_SEGMENT_BACKUP.name}")
+        tmp = MAIN_JSONL.with_suffix(".jsonl.tmp")
+        with tmp.open("w", encoding="utf-8") as f:
+            for ch in flat:
+                f.write(json.dumps(ch, ensure_ascii=False) + "\n")
+        tmp.replace(MAIN_JSONL)
+        print(f"Overwrote main JSONL with bilingual segmented chunks: {MAIN_JSONL.name}")
+
         try:
-            push_to_r2(BOOK_ID, BILINGUAL_JSONL)
+            push_to_r2(BOOK_ID, MAIN_JSONL)
             print("✓ R2 push ok (bilingual JSONL replaces standard at R2 key)")
         except Exception as e:
             print(f"⚠ R2 push failed: {str(e)[:200]}", file=sys.stderr)
@@ -534,6 +570,22 @@ def main() -> int:
 
         update_display_mode("bilingual-parallel")
         print("✓ ebooks.display_mode = 'bilingual-parallel'")
+
+        # Sync ebooks.chunk_count / total_chars with the segmented count.
+        total_chars = sum(len((c.get("content") or "")) + len((c.get("source_text") or ""))
+                          for c in flat)
+        total_pages = max(
+            (max(c.get("page_numbers") or [c.get("page_number") or 0]) for c in flat),
+            default=0,
+        )
+        update_book_done(
+            BOOK_ID,
+            total_chars=total_chars,
+            chunk_count=len(flat),
+            total_pages=total_pages,
+        )
+        print(f"✓ ebooks row updated: chunk_count={len(flat)}, "
+              f"total_chars={total_chars:,}, total_pages={total_pages}")
 
     return 0
 
