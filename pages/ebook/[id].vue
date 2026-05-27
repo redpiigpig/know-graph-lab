@@ -730,10 +730,9 @@ const expandedVolumes = ref<Set<string>>(new Set());
 // the row toggles its volume children visible.
 const expandedParents = ref<Set<string>>(new Set());
 const annotationsPanelOpen = ref(false);
-// TOC drawer: defaults CLOSED. User toggles it via topbar 📑 button when
-// needed. Keeping it closed by default gives the reader full reading-area
-// width on open; the drawer is one click away.
-const tocDrawerOpen = ref(false);
+// TOC drawer: defaults open on desktop (lg+), can be toggled via topbar
+// 📑 button on any screen. We start open and let the user close it.
+const tocDrawerOpen = ref(true);
 
 // ── Edit modal (in-place chunk editing) ──
 // Opens via ✏️ topbar button; lets the user fix translation errors, wrong
@@ -1374,12 +1373,10 @@ async function loadPage(page: number) {
     if (!ebook.value) ebook.value = data;
     if (data.toc) {
       toc.value = data.toc;
-      // Expand every parent_volume by default on initial TOC load so a
-      // multi-author book (Schaff ANF/NPNF) opens with full hierarchy
-      // visible. The user can collapse individual authors after.
-      const parents = new Set<string>();
-      for (const e of toc.value) if (e.parent_volume) parents.add(e.parent_volume);
-      expandedParents.value = parents;
+      // Parents default to COLLAPSED so the sidebar opens with just the
+      // author-level rows visible (compact overview). The author whose
+      // chunk is currently active gets auto-expanded below.
+      expandedParents.value = new Set();
     }
   }
   pageContent.value = data?.currentPage?.content ?? "";
