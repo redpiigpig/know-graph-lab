@@ -1,0 +1,14 @@
+Scanning…
+Total loose files: 6120
+
+Report: C:\Users\user\Desktop\know-graph-lab\scripts\photo_classification_report.json
+
+year       screenshot  download   photo  undated  from_mo  cross_yr  low_conf
+2015相片              0         1      24        0        0         0        23
+2016相片              0         4       4        0        0         0         5
+2017相片              0         4     155        0        0       119         4
+2018相片              0         0    2372        0        0         0        90
+2019相片              0         1    2483        0        0         0        34
+2020相片              0         0      25        0        0         0         0
+2021相片              3        65       0        0       68         0        65
+2022相片            294       685       0        0      979         0       667

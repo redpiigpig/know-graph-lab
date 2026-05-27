@@ -11,6 +11,7 @@
         --title "台灣佛教具有「民主基因」嗎？"
 """
 import argparse
+import os
 import shutil
 import subprocess
 import sys
@@ -136,9 +137,10 @@ def transcribe(audio_path: Path, ppt_text: str, speaker: str, title: str) -> str
 
 請開始輸出："""
 
-            print("  generating transcription...", flush=True)
+            model_name = os.environ.get("TALK_GEMINI_MODEL", "gemini-2.5-flash")
+            print(f"  generating transcription via {model_name}...", flush=True)
             resp = client.models.generate_content(
-                model="gemini-2.5-flash",
+                model=model_name,
                 contents=[uploaded, prompt],
             )
             try: client.files.delete(name=uploaded.name)

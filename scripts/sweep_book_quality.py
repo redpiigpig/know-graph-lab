@@ -127,8 +127,112 @@ TERM_FIXES_ANF_VOL_1 = {
     # Typos
     "平安安": "平安",
 }
+
+# ── ANF Vol 2 — Fathers of the Second Century ───────────────────────────
+# Hermas / Tatian / Athenagoras / Theophilus / Clement of Alexandria
+TERM_FIXES_ANF_VOL_2 = {
+    # Corinth — Protestant 哥林多
+    "科林多人": "哥林多人",
+    "科林斯人": "哥林多人",
+    "科林多": "哥林多",
+    "科林斯": "哥林多",
+    "科林妥": "哥林多",
+    "格林多前書": "哥林多前書",
+    "格林多後書": "哥林多後書",
+    "格林多": "哥林多",
+    # Paul — Protestant 保羅
+    "聖保祿": "聖保羅",
+    "保祿": "保羅",
+    # Philippi — Protestant 腓立比
+    "斐理伯人書": "腓立比人書",
+    "斐理伯人": "腓立比人",
+    "斐理伯": "腓立比",
+    # Cephas — Protestant 磯法
+    "革法": "磯法",
+    "克法": "磯法",
+    # Antioch
+    "安條克": "安提阿",
+    # Smyrna — Vol 1 standard 士每拿
+    "士麥那": "士每拿",
+    # Clement of Alexandria — volume uses 革利免 (亞歷山卓)
+    "克萊門": "革利免",
+    # Valentinus — Vol 1 standard 瓦倫廷
+    "瓦倫提努": "瓦倫廷",
+    "華倫提奴": "瓦倫廷",
+    "華倫提努": "瓦倫廷",
+    # Heraclitus
+    "赫拉克里特": "赫拉克利特",
+    # Thales — Protestant Greek philosophy convention
+    "泰勒斯": "泰利斯",
+    # Democritus
+    "德謨克里特": "德謨克利特",
+    # Protagoras
+    "普羅泰哥拉": "普羅泰戈拉",
+    # Caius (proper name in Hermas + Clement)
+    "蓋猶": "該猶",
+    # Epicurus
+    "伊比鳩魯": "伊壁鳩魯",
+    # Hera (Greek goddess) — 赫拉 is standard; 赫剌 is rare variant
+    "赫剌": "赫拉",
+    # Jupiter (Vol 1 convention)
+    "木星": "朱庇特",
+    # Aristion (Vol 1 convention from Papias)
+    "亞里斯頓": "亞里斯鐸",
+    # Typos seen
+    "平安安": "平安",
+}
+
+# ── ANF Vol 3 — Tertullian (Apologetic + Anti-Marcion + Ethical) ────────
+TERM_FIXES_ANF_VOL_3 = {
+    # Corinth
+    "科林多人": "哥林多人",
+    "科林斯人": "哥林多人",
+    "科林多": "哥林多",
+    "科林斯": "哥林多",
+    "格林多前書": "哥林多前書",
+    "格林多後書": "哥林多後書",
+    "格林多": "哥林多",
+    # Paul — Protestant 保羅
+    "聖保祿": "聖保羅",
+    "保祿": "保羅",
+    # Peter — Protestant 彼得 (Tertullian text leans Catholic 伯多祿 due to
+    # Latin sources; standardize to Protestant for cross-volume consistency)
+    "伯多祿": "彼得",
+    # Philippi
+    "斐理伯人書": "腓立比人書",
+    "斐理伯人": "腓立比人",
+    "斐理伯": "腓立比",
+    # Cephas
+    "革法": "磯法",
+    "克法": "磯法",
+    # Valentinus — Vol 1 standard 瓦倫廷
+    "瓦倫提努": "瓦倫廷",
+    "華倫提奴": "瓦倫廷",
+    "華倫提努": "瓦倫廷",
+    # Hermogenes — Tertullian's adversary in《駁黑摩根》; unify to 黑摩根
+    "黑爾摩根尼斯": "黑摩根",
+    "赫莫根尼斯": "黑摩根",
+    "黑摩根尼斯": "黑摩根",
+    "赫摩根": "黑摩根",
+    "赫莫根": "黑摩根",
+    "黑爾摩根": "黑摩根",
+    # Thales / Democritus / Protagoras
+    "泰勒斯": "泰利斯",
+    "塔勒斯": "泰利斯",
+    "德謨克里特": "德謨克利特",
+    "普羅泰哥拉": "普羅泰戈拉",
+    # Pliny
+    "普林尼": "普利尼",
+    # Heracles → 海格力斯 (Vol 1 latinate convention)
+    "赫拉克勒斯": "海格力斯",
+    # Jupiter (Vol 1 convention)
+    "木星": "朱庇特",
+}
+
 TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "c98d358d-7066-4691-a896-b7232707b0db": TERM_FIXES_ANF_VOL_1,  # ANF Vol 1
+    "4e3d16fc-ef4f-420f-a3ec-56e2e92d659f": TERM_FIXES_ANF_VOL_2,  # ANF Vol 2
+    "364dac2e-410f-4906-be63-8bb86b4865ee": TERM_FIXES_ANF_VOL_3,  # ANF Vol 3
 }
 
 

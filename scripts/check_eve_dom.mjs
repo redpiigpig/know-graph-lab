@@ -16,7 +16,7 @@ const admin = createClient(env.SUPABASE_URL, env.SUPABASE_SERVICE_ROLE_KEY, {
 const { data: linkData } = await admin.auth.admin.generateLink({
   type: 'magiclink',
   email: 'redpiigpig@gmail.com',
-  options: { redirectTo: 'http://localhost:3006/genealogy/islamic-tree' },
+  options: { redirectTo: 'http://localhost:3001/genealogy/islamic-tree' },
 })
 
 const browser = await chromium.launch({ headless: true })
@@ -48,7 +48,7 @@ await context.addCookies([{
   value: 'base64-' + base64url(JSON.stringify(session)),
   domain: 'localhost', path: '/', httpOnly: false, secure: false, sameSite: 'Lax',
 }])
-await page.goto('http://localhost:3006/genealogy/islamic-tree?view=sunni', { waitUntil: 'domcontentloaded', timeout: 90000 })
+await page.goto('http://localhost:3001/genealogy/islamic-tree?view=sunni', { waitUntil: 'domcontentloaded', timeout: 90000 })
 await page.waitForLoadState('networkidle').catch(() => {})
 await page.waitForSelector('.node-card', { timeout: 15000 })
 await page.waitForTimeout(2500)
@@ -94,11 +94,15 @@ const result = await page.evaluate(() => {
     }
   }
   // Find Ali (阿里) instances — match by Abu al-Hasan kunya (unique to Ali ibn Abi Talib)
-  const aliCards = summary.filter(s => s.text.includes('Abu al-Hasan') || (s.text.startsWith('第 49 代阿里') && s.text.length < 50))
+  const aliCards = summary.filter(s => s.text.includes('Abu al-Hasan'))
+  const mhdCard = summary.filter(s => s.text.includes('穆罕默德') && !s.text.includes('伊本') && !s.text.includes('麥地那') && parseFloat(s.left || 0) > 1000)[0]
+  const fatimaCard = summary.filter(s => s.text.includes('法蒂瑪') && s.text.includes('Umm al-Hasan'))
   return {
     total: cards.length,
     overlaps: overlaps.slice(0, 20).map(([a, b]) => ({ a: a.text.slice(0, 20), b: b.text.slice(0, 20), a_left: a.left, a_top: a.top, b_left: b.left, b_top: b.top })),
-    aliInstances: aliCards.map(c => ({ top: c.top, left: c.left, text: c.text.slice(0, 30), hasSamePersonMarker: false })),
+    aliInstances: aliCards.map(c => ({ top: c.top, left: c.left, text: c.text.slice(0, 30) })),
+    muhammad: mhdCard ? { top: mhdCard.top, left: mhdCard.left, text: mhdCard.text.slice(0, 30) } : null,
+    fatima: fatimaCard.map(c => ({ top: c.top, left: c.left, text: c.text.slice(0, 30) })),
   }
 })
 console.log('Total cards:', result.total)
@@ -106,5 +110,7 @@ console.log(`\n--- Overlaps (${result.overlaps.length}) ---`)
 for (const o of result.overlaps) console.log(' ', JSON.stringify(o))
 console.log(`\n--- Ali instances (${result.aliInstances.length}) ---`)
 for (const a of result.aliInstances) console.log(' ', JSON.stringify(a))
+console.log('\nMuhammad:', JSON.stringify(result.muhammad))
+console.log('Fatima:', JSON.stringify(result.fatima))
 
 await browser.close()

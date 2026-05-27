@@ -118,12 +118,77 @@ LETTER_CN_LABELS: list[tuple[str, str, str]] = [
     ("IRENAEUS", "Fragments from the Lost", "愛任紐遺著殘篇"),
     ("IRENÆUS", "Elucidation", "愛任紐《駁異端》註解"),
     ("IRENAEUS", "Elucidation", "愛任紐《駁異端》註解"),
+    # ── ANF Vol 2 — Fathers of the Second Century ─────────────────────
+    # Hermas — single work split into Visions / Commandments / Similitudes
+    ("HERMAS", "Visions", "黑馬牧者：異象篇"),
+    ("HERMAS", "Commandments", "黑馬牧者：誡命篇"),
+    ("HERMAS", "Similitudes", "黑馬牧者：比喻篇"),
+    ("HERMAS", "Book First", "黑馬牧者：異象篇"),
+    ("HERMAS", "Book Second", "黑馬牧者：誡命篇"),
+    ("HERMAS", "Book Third", "黑馬牧者：比喻篇"),
+    ("HERMAS", "Elucidations", "黑馬牧者：註解"),
+    # Tatian
+    ("TATIAN", "Address to the Greeks", "他提安致希臘人辭"),
+    ("TATIAN", "Fragments", "他提安殘篇"),
+    # Theophilus of Antioch — To Autolycus, 3 books
+    ("THEOPHILUS", "Book I", "提阿非羅致奧托呂庫書 卷一"),
+    ("THEOPHILUS", "Book II", "提阿非羅致奧托呂庫書 卷二"),
+    ("THEOPHILUS", "Book III", "提阿非羅致奧托呂庫書 卷三"),
+    ("THEOPHILUS", "Theophilus to Autolycus", "提阿非羅致奧托呂庫書"),
+    # Athenagoras — two works
+    ("ATHENAGORAS", "A Plea for the Christians", "雅典那哥拉護基督徒辭"),
+    ("ATHENAGORAS", "Plea for the Christians", "雅典那哥拉護基督徒辭"),
+    ("ATHENAGORAS", "The Resurrection of the Dead", "論死者復活"),
+    ("ATHENAGORAS", "Resurrection of the Dead", "論死者復活"),
+    # Clement of Alexandria — five works
+    ("CLEMENT", "Exhortation to the Heathen", "革利免勸勉希臘人辭"),
+    ("CLEMENT", "The Instructor", "革利免《教師》"),
+    ("CLEMENT", "Instructor", "革利免《教師》"),
+    ("CLEMENT", "The Stromata", "革利免《雜文集》"),
+    ("CLEMENT", "Stromata", "革利免《雜文集》"),
+    ("CLEMENT", "Miscellanies", "革利免《雜文集》"),
+    ("CLEMENT", "Who is the Rich Man", "革利免《富者得救》"),
+    ("CLEMENT", "Fragments", "革利免殘篇"),
+    # ── ANF Vol 3 — Tertullian (Apologetic / Anti-Marcion / Ethical) ─
+    # Apologetic works
+    ("APOLOGETIC", "Apology", "特土良護教辭"),
+    ("APOLOGETIC", "On Idolatry", "特土良論偶像崇拜"),
+    ("APOLOGETIC", "The Shows", "特土良論觀劇"),
+    ("APOLOGETIC", "De Spectaculis", "特土良論觀劇"),
+    ("APOLOGETIC", "The Chaplet", "特土良論花冠"),
+    ("APOLOGETIC", "De Corona", "特土良論花冠"),
+    ("APOLOGETIC", "To Scapula", "特土良致斯卡普拉"),
+    ("APOLOGETIC", "Ad Nationes", "特土良致萬民"),
+    ("APOLOGETIC", "An Answer to the Jews", "特土良駁猶太人"),
+    ("APOLOGETIC", "The Soul's Testimony", "特土良論靈魂的見證"),
+    ("APOLOGETIC", "A Treatise on the Soul", "特土良論靈魂"),
+    # Anti-Marcion works
+    ("ANTI-MARCION", "The Prescription Against Heretics", "特土良駁異端的時效"),
+    ("ANTI-MARCION", "Prescription Against Heretics", "特土良駁異端的時效"),
+    ("ANTI-MARCION", "The Five Books Against Marcion", "特土良駁馬吉安"),
+    ("ANTI-MARCION", "Against Marcion", "特土良駁馬吉安"),
+    ("ANTI-MARCION", "Against Hermogenes", "特土良駁黑摩根"),
+    ("ANTI-MARCION", "Against the Valentinians", "特土良駁瓦倫廷派"),
+    ("ANTI-MARCION", "On the Flesh of Christ", "特土良論基督的肉身"),
+    ("ANTI-MARCION", "On the Resurrection of the Flesh", "特土良論肉身復活"),
+    ("ANTI-MARCION", "Against Praxeas", "特土良駁普拉克西亞斯"),
+    ("ANTI-MARCION", "Scorpiace", "特土良蝎傷解毒劑"),
+    ("ANTI-MARCION", "Against All Heresies", "特土良駁諸異端附錄"),
+    # Ethical works
+    ("ETHICAL", "On Repentance", "特土良論悔改"),
+    ("ETHICAL", "On Baptism", "特土良論洗禮"),
+    ("ETHICAL", "On Prayer", "特土良論禱告"),
+    ("ETHICAL", "Ad Martyras", "特土良致殉道者"),
+    ("ETHICAL", "The Passion of the Holy Martyrs Perpetua and Felicitas", "佩爾佩圖亞與費莉西塔斯殉道記"),
+    ("ETHICAL", "Passion of the Holy Martyrs", "佩爾佩圖亞與費莉西塔斯殉道記"),
+    ("ETHICAL", "On Patience", "特土良論忍耐"),
     # Front-matter / index — fall through to translated letter_label
 ]
 
 # Parent-label → Chinese fallback. When letter doesn't match anything in
 # LETTER_CN_LABELS, we use parent_cn + letter_label as best-effort label.
 PARENT_CN_FALLBACK: dict[str, str] = {
+    # Vol 1 — Apostolic Fathers / Justin / Irenaeus
     "CLEMENT OF ROME": "羅馬的革利免",
     "MATHETES": "瑪忒特",
     "POLYCARP": "坡旅甲",
@@ -133,6 +198,20 @@ PARENT_CN_FALLBACK: dict[str, str] = {
     "JUSTIN MARTYR": "殉道者猶斯定",
     "IRENÆUS": "里昂的愛任紐",
     "IRENAEUS": "里昂的愛任紐",
+    # Vol 2 — Second Century Fathers
+    "HERMAS": "黑馬",
+    "THE PASTOR OF HERMAS": "黑馬",
+    "TATIAN": "他提安",
+    "THEOPHILUS": "提阿非羅",
+    "ATHENAGORAS": "雅典那哥拉",
+    "CLEMENT OF ALEXANDRIA": "亞歷山卓的革利免",
+    # Vol 3 — Tertullian (sectional parents, not author)
+    "APOLOGETIC.": "特土良護教文集",
+    "APOLOGETIC": "特土良護教文集",
+    "ANTI-MARCION.": "特土良駁異端文集",
+    "ANTI-MARCION": "特土良駁異端文集",
+    "ETHICAL.": "特土良倫理文集",
+    "ETHICAL": "特土良倫理文集",
 }
 
 # Skip these top-level NCX entries (front matter / index — handled separately)

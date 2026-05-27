@@ -113,7 +113,8 @@ def main() -> int:
     out_dir = ROOT / "data" / "encyclicals" / f"{century_label}-{args.pope_slug}"
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    # 1. scrape la + en
+    # 1. scrape la + it + en — italian is fetched as a fallback for documents
+    # (apostolic exhortations etc.) that have no Latin version
     scrape_cmd = [
         sys.executable, str(ROOT / "scripts" / "scrape_papal_encyclical.py"),
         "--pope", args.pope,
@@ -122,62 +123,105 @@ def main() -> int:
         "--doc-slug", args.doc_slug,
         "--url-key", args.url_key,
         "--doctype", args.doctype,
-        "--langs", "la,en",
+        "--langs", "la,it,en",
     ]
-    print(f"\n[1/4] Scrape LA+EN: {' '.join(scrape_cmd)}", flush=True)
+    print(f"\n[1/4] Scrape LA+IT+EN: {' '.join(scrape_cmd)}", flush=True)
     r = subprocess.run(scrape_cmd, cwd=ROOT)
     if r.returncode != 0:
-        print("WARNING: LA or EN scrape had failures (continuing)", flush=True)
+        print("WARNING: some lang scrapes had failures (continuing)", flush=True)
+    # If LA file is empty/missing, fall through — IT will be present as a fallback.
+    la_path = out_dir / f"{args.doc_slug}-latin.txt"
+    it_path = out_dir / f"{args.doc_slug}-italian.txt"
+    if la_path.exists() and la_path.stat().st_size < 1000:
+        la_path.unlink()
+        print(f"  Removed empty LA file (< 1000 bytes)", flush=True)
+    if it_path.exists() and it_path.stat().st_size < 1000:
+        it_path.unlink()
 
-    # 2. Chinese: try HTML first, fall back to PDF
+    # 2. Chinese: PDF preferred (better footnote structure), HTML as fallback
     zh_path = out_dir / f"{args.doc_slug}-chinese.txt"
+
+    def try_pdf(pdf_url: str) -> bool:
+        try:
+            pdf_bytes = fetch(pdf_url)
+            with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as f:
+                f.write(pdf_bytes)
+                pdf_path = f.name
+            txt_path = pdf_path + ".txt"
+            subprocess.run(
+                ["pdftotext", "-enc", "UTF-8", "-layout", pdf_path, txt_path],
+                check=True,
+            )
+            subprocess.run(
+                [sys.executable,
+                 str(ROOT / "scripts" / "postprocess_papal_chinese_pdf.py"),
+                 txt_path, str(zh_path)],
+                check=True,
+            )
+            os.unlink(pdf_path)
+            os.unlink(txt_path)
+            return True
+        except Exception as e:
+            print(f"  PDF attempt FAILED: {e}", flush=True)
+            return False
+
+    def try_html(lang_path: str) -> int:
+        """Fetch one HTML lang variant. Returns the resulting file size."""
+        url = (f"https://www.vatican.va/content/{args.pope}/{lang_path}/"
+               f"{args.doctype}/documents/{args.url_key}.html")
+        try:
+            from urllib.request import urlopen, Request
+            req = Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urlopen(req, timeout=60) as resp:
+                if resp.status != 200:
+                    return 0
+            # Use scrape_papal_encyclical via a temp override of LANG_FILES
+            # is complex; simpler: directly call extract() via Python.
+            from urllib.request import urlopen as _u
+            req = Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with _u(req, timeout=60) as r:
+                html = r.read().decode("utf-8", errors="replace")
+            sys.path.insert(0, str(ROOT / "scripts"))
+            from scrape_papal_encyclical import extract  # type: ignore
+            content = extract(html)
+            zh_path.write_text(content, encoding="utf-8")
+            return len(content.encode("utf-8"))
+        except Exception as e:
+            print(f"  HTML attempt FAILED ({lang_path}): {e}", flush=True)
+            return 0
+
     if args.skip_zh:
         print("[2/4] Skipping Chinese fetch (--skip-zh)", flush=True)
         zh_path.write_text("⏳ 中譯待補\n", encoding="utf-8")
     else:
-        # Try HTML first
-        zh_html_url = (f"https://www.vatican.va/content/{args.pope}/zh_tw/"
-                       f"{args.doctype}/documents/{args.url_key}.html")
-        print(f"[2/4] Try Chinese HTML: {zh_html_url}", flush=True)
-        zh_html_cmd = [
-            sys.executable, str(ROOT / "scripts" / "scrape_papal_encyclical.py"),
-            "--pope", args.pope,
-            "--pope-slug", args.pope_slug,
-            "--century", str(args.century),
-            "--doc-slug", args.doc_slug,
-            "--url-key", args.url_key,
-            "--doctype", args.doctype,
-            "--langs", "zh_tw",
-        ]
-        subprocess.run(zh_html_cmd, cwd=ROOT)
-        zh_size = zh_path.stat().st_size if zh_path.exists() else 0
-        if zh_size < 2000:
-            # Try PDF fallback
-            pdf_url = args.pdf_zh_url or (
+        # Try several PDF URL conventions
+        pdf_candidates = [args.pdf_zh_url] if args.pdf_zh_url else []
+        for variant in ["zh_tw", "zh-tw", "zh-t", "zh", "zh_hant", "zht"]:
+            pdf_candidates.append(
                 f"https://www.vatican.va/content/dam/{args.pope}/pdf/"
-                f"{args.doctype}/documents/{args.url_key}_zh_tw.pdf"
+                f"{args.doctype}/documents/{args.url_key}_{variant}.pdf"
             )
-            print(f"  HTML too small ({zh_size}B); try PDF: {pdf_url}", flush=True)
-            try:
-                pdf_bytes = fetch(pdf_url)
-                with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as f:
-                    f.write(pdf_bytes)
-                    pdf_path = f.name
-                txt_path = pdf_path + ".txt"
-                subprocess.run(
-                    ["pdftotext", "-enc", "UTF-8", "-layout", pdf_path, txt_path],
-                    check=True,
-                )
-                subprocess.run(
-                    [sys.executable,
-                     str(ROOT / "scripts" / "postprocess_papal_chinese_pdf.py"),
-                     txt_path, str(zh_path)],
-                    check=True,
-                )
-                os.unlink(pdf_path)
-                os.unlink(txt_path)
-            except Exception as e:
-                print(f"  PDF fallback FAILED: {e}", flush=True)
+        pdf_ok = False
+        for url in pdf_candidates:
+            if not url:
+                continue
+            print(f"[2/4] Try Chinese PDF: {url}", flush=True)
+            if try_pdf(url):
+                pdf_ok = True
+                break
+        if not pdf_ok:
+            # Try HTML variants in priority order
+            print(f"  PDF candidates exhausted; try Chinese HTML variants", flush=True)
+            best_size = 0
+            for lang_path in ["zh_tw", "zh-tw", "zh", "zh_hant"]:
+                size = try_html(lang_path)
+                print(f"    {lang_path}: {size} bytes", flush=True)
+                if size > best_size:
+                    best_size = size
+                if size >= 2000:
+                    break
+            if best_size < 2000:
+                print(f"  All HTML attempts too small; marking placeholder", flush=True)
                 zh_path.write_text("⏳ 中譯待補\n", encoding="utf-8")
 
     # 3. Normalize Chinese (Kangxi radicals → standard CJK)
@@ -194,7 +238,7 @@ def main() -> int:
 
     # Final report: counts
     print("\n=== Final counts ===")
-    for lang, suffix in [("EN", "english"), ("LA", "latin"), ("ZH", "chinese")]:
+    for lang, suffix in [("EN", "english"), ("LA", "latin"), ("IT", "italian"), ("ZH", "chinese")]:
         p = out_dir / f"{args.doc_slug}-{suffix}.txt"
         if not p.exists():
             print(f"  {lang}: (missing)")

@@ -64,6 +64,14 @@ await page.waitForLoadState('networkidle').catch(() => {})
 await page.waitForSelector('.node-card', { timeout: 15000 })
 await page.waitForTimeout(2000)
 
+// CLICK 展開朝代 first
+await page.evaluate(() => {
+  for (const b of document.querySelectorAll('button')) {
+    if (b.textContent?.replace(/\s+/g, '').includes('展開朝代')) { b.click(); return }
+  }
+})
+await page.waitForTimeout(2500)
+
 // Sample marriage lines near gen 23 row (利未 + 米加 area)
 const result = await page.evaluate(() => {
   const cards = Array.from(document.querySelectorAll('.node-card'))
@@ -91,6 +99,11 @@ const result = await page.evaluate(() => {
     x2: parseFloat(l.getAttribute('x2') || '0'),
     y2: parseFloat(l.getAttribute('y2') || '0'),
     stroke: l.getAttribute('stroke') || (l.style && l.style.stroke) || '',
+    display: getComputedStyle(l).display,
+    visibility: getComputedStyle(l).visibility,
+    opacity: getComputedStyle(l).opacity,
+    parentTag: l.parentElement?.tagName,
+    parentClass: l.parentElement?.className?.baseVal || '',
   }))
   return out
 })

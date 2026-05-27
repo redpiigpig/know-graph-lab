@@ -56,10 +56,9 @@ function b64url(s) { return Buffer.from(s, 'utf-8').toString('base64').replace(/
 const cookieValue = 'base64-' + b64url(JSON.stringify(session))
 await context.addCookies([{ name: `sb-${projectRef}-auth-token`, value: cookieValue, domain: new URL(APP_BASE).hostname, path: '/', httpOnly: false, secure: false, sameSite: 'Lax' }])
 
-console.log('→ Loading biblical page once…')
-await page.goto(APP_BASE + '/genealogy/biblical', { waitUntil: 'domcontentloaded' })
+console.log('→ Loading biblical-tree page once…')
+await page.goto(APP_BASE + '/genealogy/biblical-tree', { waitUntil: 'domcontentloaded' })
 await page.waitForLoadState('networkidle').catch(() => {})
-await page.click('button:has-text("族譜圖")', { timeout: 3000 }).catch(() => {})
 await page.waitForSelector('.node-card', { timeout: 15000 })
 await page.waitForTimeout(1500)
 
@@ -90,9 +89,8 @@ async function panTo(target) {
 async function expandAndShot(son, idx) {
   console.log(`[${idx+1}/12] ${son}`)
   // Reload page to ensure clean state (no leftover expansions from previous son)
-  await page.goto(APP_BASE + '/genealogy/biblical', { waitUntil: 'domcontentloaded' })
+  await page.goto(APP_BASE + '/genealogy/biblical-tree', { waitUntil: 'domcontentloaded' })
   await page.waitForLoadState('networkidle').catch(() => {})
-  try { await page.click('button:has-text("族譜圖")', { timeout: 2000 }) } catch {}
   await page.waitForSelector('.node-card', { timeout: 15000 })
   await page.waitForTimeout(1000)
   // First click ▼ on this son's card

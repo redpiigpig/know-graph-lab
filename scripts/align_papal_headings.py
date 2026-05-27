@@ -127,6 +127,7 @@ def main() -> int:
     folder = ROOT / "data" / "encyclicals" / f"{century:02d}c-{pope_slug}"
     en_path = folder / f"{doc_slug}-english.txt"
     la_path = folder / f"{doc_slug}-latin.txt"
+    it_path = folder / f"{doc_slug}-italian.txt"
     zh_path = folder / f"{doc_slug}-chinese.txt"
 
     if not en_path.exists():
@@ -144,6 +145,10 @@ def main() -> int:
         la_anchors = scan_headings(la_path.read_text(encoding="utf-8"))
         n_la = rewrite(la_path, en_anchors_pairs, la_anchors, placeholder="⏳ 拉丁標題待補")
         print(f"LA: scanned {len(la_anchors)} headings; re-inserted {n_la} at EN anchors")
+    if it_path.exists():
+        it_anchors = scan_headings(it_path.read_text(encoding="utf-8"))
+        n_it = rewrite(it_path, en_anchors_pairs, it_anchors, placeholder="⏳ 義文標題待補")
+        print(f"IT: scanned {len(it_anchors)} headings; re-inserted {n_it} at EN anchors")
     if zh_path.exists():
         zh_anchors = scan_headings(zh_path.read_text(encoding="utf-8"))
         n_zh = rewrite(zh_path, en_anchors_pairs, zh_anchors, placeholder="⏳ 中譯標題待補")

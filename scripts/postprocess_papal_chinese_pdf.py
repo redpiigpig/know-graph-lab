@@ -33,7 +33,7 @@ CJK_RE = re.compile(
     r"[　-〿一-鿿＀-￯㐀-䶿]"
 )
 
-PARA_NUM_RE = re.compile(r"^\s*(\d{1,3})\.\s+(.+)$")
+PARA_NUM_RE = re.compile(r"^\s*(\d{1,3})\s*[、.]\s*(.+)$")
 FOOTNOTE_NUM_RE = re.compile(r"^\s*(\d{1,3})\s+(.+)$")  # number + space (not period)
 PAGE_NUM_ONLY_RE = re.compile(r"^\s*\d{1,4}\s*$")
 
@@ -257,6 +257,30 @@ def assemble_paragraphs(all_body_lines: list[str]) -> list[str]:
     return out
 
 
+def maybe_simplified_to_traditional(text: str) -> str:
+    """If text is detected as simplified Chinese, convert to TW traditional.
+
+    Heuristic: count distinct simplified-only characters; if many appear, run
+    opencc s2tw. Reason: vatican.va Chinese PDFs vary between zh-CN simplified
+    (older Benedict XVI / John Paul II era) and zh-TW traditional (current
+    Francis era). We want output to be traditional per project convention.
+    """
+    # Common simplified-only chars unlikely to appear in any traditional text
+    simp_markers = "国学习时实现这进经济产业过来认识让产业从们对发会觉计画运动语动"
+    score = sum(text.count(c) for c in simp_markers)
+    if score < 5:
+        return text
+    try:
+        import opencc  # type: ignore
+        cc = opencc.OpenCC("s2tw")
+        converted = cc.convert(text)
+        print(f"  Converted simplified→traditional (score={score})", file=sys.stderr)
+        return converted
+    except Exception as e:
+        print(f"  opencc unavailable, skipping conversion: {e}", file=sys.stderr)
+        return text
+
+
 def main() -> int:
     if len(sys.argv) != 3:
         print("Usage: postprocess_papal_chinese_pdf.py INPUT.txt OUTPUT.txt", file=sys.stderr)
@@ -264,6 +288,7 @@ def main() -> int:
     src, dst = sys.argv[1], sys.argv[2]
     with open(src, encoding="utf-8") as f:
         text = f.read()
+    text = maybe_simplified_to_traditional(text)
 
     pages = text.split("\x0c")
     all_body_lines: list[str] = []

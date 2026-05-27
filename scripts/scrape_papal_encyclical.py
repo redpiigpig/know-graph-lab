@@ -53,6 +53,7 @@ URL_TMPL = (
 
 LANG_FILES = [
     ("la", "latin"),
+    ("it", "italian"),
     ("en", "english"),
     ("zh_tw", "chinese"),
 ]
@@ -118,7 +119,7 @@ def is_flat_section_heading(p: Tag) -> bool:
     headings sometimes; we accept both styles.
     """
     # Skip if has any footnote anchor
-    if p.find("a", href=re.compile(r"^#_ftn\d+")):
+    if p.find("a", href=re.compile(r"^#_(?:ftn|edn)\d+")):
         return False
     # Skip if has inline bold/italic — handled by is_section_heading
     if any(isinstance(c, Tag) and c.name in ("b", "i", "strong", "em") for c in p.children):
@@ -147,7 +148,7 @@ def is_flat_section_heading(p: Tag) -> bool:
 
 def transform_footnote_refs(p: Tag) -> str:
     """Convert inline <a href="#_ftnN" name="_ftnrefN">M</a> -> [^M]."""
-    for a in p.find_all("a", href=re.compile(r"^#_ftn\d+")):
+    for a in p.find_all("a", href=re.compile(r"^#_(?:ftn|edn)\d+")):
         marker_num = a.get_text(" ", strip=True)
         # marker_num may be wrapped like "[33]" — strip brackets
         marker_num = re.sub(r"[\[\]]", "", marker_num).strip()
@@ -171,15 +172,15 @@ def transform_footnote_refs(p: Tag) -> str:
 
 
 def is_footnote_section_start(p: Tag) -> bool:
-    a = p.find("a", attrs={"name": re.compile(r"^_ftn\d+$")})
+    a = p.find("a", attrs={"name": re.compile(r"^_(?:ftn|edn)\d+$")})
     return a is not None
 
 
 def parse_footnote_def(p: Tag) -> tuple[str, str] | None:
-    a = p.find("a", attrs={"name": re.compile(r"^_ftn\d+$")})
+    a = p.find("a", attrs={"name": re.compile(r"^_(?:ftn|edn)\d+$")})
     if not a:
         return None
-    m = re.match(r"_ftn(\d+)", a.get("name", ""))
+    m = re.match(r"_(?:ftn|edn)(\d+)", a.get("name", ""))
     if not m:
         return None
     num = m.group(1)

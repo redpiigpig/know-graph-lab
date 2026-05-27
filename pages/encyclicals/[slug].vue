@@ -153,7 +153,7 @@
             <div></div>
             <div class="text-[10px] uppercase tracking-wider text-stone-400">中文</div>
             <div class="text-[10px] uppercase tracking-wider text-sky-700">English</div>
-            <div class="text-[10px] uppercase tracking-wider text-amber-700">Latin</div>
+            <div class="text-[10px] uppercase tracking-wider text-amber-700">{{ latColLabelEn }}</div>
 
             <template v-for="num in footnoteNumbers" :key="num">
               <div :id="`fn-anchor-${num}`" class="text-xs font-mono font-bold text-stone-600 self-start pt-1 text-center">[{{ num }}]</div>
@@ -189,7 +189,7 @@
             <div v-if="enVersion?.source">📖 <a :href="enVersion.source" target="_blank" class="hover:underline">English 來源</a></div>
           </div>
           <div>
-            <div v-if="latVersion?.source">📖 <a :href="latVersion.source" target="_blank" class="hover:underline">Latin 來源</a></div>
+            <div v-if="latVersion?.source">📖 <a :href="latVersion.source" target="_blank" class="hover:underline">{{ latColSourceLabel }}</a></div>
           </div>
         </div>
       </section>
@@ -240,7 +240,9 @@ useHead(() => ({
 
 const zhVersion = computed(() => doc.value?.versions.find(v => v.lang === 'zh-Hant'))
 const enVersion = computed(() => doc.value?.versions.find(v => v.lang === 'en'))
-const latVersion = computed(() => doc.value?.versions.find(v => v.lang === 'lat'))
+const latVersion = computed(() => doc.value?.versions.find(v => v.lang === 'lat' || v.lang === 'it'))
+const latColLabelEn = computed(() => latVersion.value?.lang === 'it' ? 'Italian' : 'Latin')
+const latColSourceLabel = computed(() => latVersion.value?.lang === 'it' ? 'Italian 來源' : 'Latin 來源')
 
 const loading = ref(true)
 const loadError = ref<string | null>(null)

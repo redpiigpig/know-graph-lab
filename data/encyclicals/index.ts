@@ -17,12 +17,22 @@ import { laudatoSi2015 } from './21c-francis/laudato-si-2015'
 import { fratelliTutti2020 } from './21c-francis/fratelli-tutti-2020'
 import { dilexitNos2024 } from './21c-francis/dilexit-nos-2024'
 import { lumenFidei2013 } from './21c-francis/lumen-fidei-2013'
+import { evangeliiGaudium2013 } from './21c-francis/evangelii-gaudium-2013'
+
+// ── 21c Benedict XVI ────────────────────────────────────────
+import { deusCaritasEst2005 } from './21c-benedict-xvi/deus-caritas-est-2005'
+import { speSalvi2007 } from './21c-benedict-xvi/spe-salvi-2007'
+import { caritasInVeritate2009 } from './21c-benedict-xvi/caritas-in-veritate-2009'
 
 export const ALL_DOCUMENTS: PapalDocument[] = [
   laudatoSi2015,
   fratelliTutti2020,
   dilexitNos2024,
   lumenFidei2013,
+  evangeliiGaudium2013,
+  deusCaritasEst2005,
+  speSalvi2007,
+  caritasInVeritate2009,
 ]
 
 export function findDocument(slug: string): PapalDocument | undefined {
