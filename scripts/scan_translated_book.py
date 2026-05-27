@@ -348,6 +348,21 @@ def scan(ebook_id: str) -> list[Issue]:
             ncx_index = build_ncx_index(ep)
         except Exception:
             ncx_index = []
+    def _entry_parent(letter_norm: str) -> Optional[str]:
+        """Find which NCX parent_label owns this normalized letter."""
+        for e in ncx_index:
+            if e["en_letter_norm"] == letter_norm:
+                return e["parent"].upper()
+        # Looser: token-set match
+        toks = set(t for t in re.split(r"\W+", letter_norm) if len(t) >= 3)
+        if not toks:
+            return None
+        for e in ncx_index:
+            etoks = set(t for t in re.split(r"\W+", e["en_letter_norm"]) if len(t) >= 3)
+            if etoks and len(toks & etoks) / max(len(toks | etoks), 1) >= 0.6:
+                return e["parent"].upper()
+        return None
+
     if ncx_index:
         for c in chunks:
             idx = c.get("chunk_index")
@@ -360,6 +375,7 @@ def scan(ebook_id: str) -> list[Issue]:
             if not chunk_title_en:
                 continue
             chunk_letter_norm = normalize_heading(chunk_title_en)
+            chunk_parent = _entry_parent(chunk_letter_norm)
             src = c.get("source_text") or ""
             if not src:
                 continue
@@ -393,6 +409,12 @@ def scan(ebook_id: str) -> list[Issue]:
                 b_toks = set(t for t in re.split(r"\W+", b) if len(t) >= 3)
                 overlap = len(a_toks & b_toks) / max(len(a_toks | b_toks), 1)
                 same_letter = (overlap >= 0.6) or (a in b) or (b in a)
+                # Same-parent intros (e.g.「Introductory Note to the
+                # Epistles of Ignatius」inside any Ignatius letter chunk)
+                # are not cross-bleeds — NCX intros legitimately fold
+                # into the first letter of their parent group.
+                if not same_letter and chunk_parent and attributed.get("parent","").upper() == chunk_parent:
+                    same_letter = True
                 if not same_letter:
                     issues.append(Issue("T9", "WARN", idx,
                         f"source h3 '{heading[:60]}' attributes to NCX "
