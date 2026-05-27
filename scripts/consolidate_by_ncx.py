@@ -140,10 +140,28 @@ SKIP_PARENT_LABELS = {"About This Book", "Title Page", "Indexes"}
 
 
 def chinese_label(parent_label: str, letter_label: str) -> str:
-    """Resolve a Chinese label for (parent, letter) using the table above."""
+    """Resolve a Chinese label for (parent, letter) using the table above.
+
+    Match logic:
+      - parent_key: case-insensitive substring of parent_label
+      - letter_sub: WORD-BOUNDARY regex match — needed because plain
+        substring `"Book I" in "Book III"` is TRUE (bleed bug that put
+        all 5 Irenaeus books under 卷一). Patterns are tried longest-first
+        so "Book III" is checked before "Book I".
+    """
     p_upper = parent_label.upper()
-    for parent_key, letter_sub, cn in LETTER_CN_LABELS:
-        if parent_key in p_upper and letter_sub.lower() in letter_label.lower():
+    label_lower = letter_label.lower()
+    # Sort patterns by letter_sub length descending so more-specific
+    # patterns (e.g. "Book III") win over their prefixes ("Book I").
+    sorted_patterns = sorted(LETTER_CN_LABELS, key=lambda t: -len(t[1]))
+    for parent_key, letter_sub, cn in sorted_patterns:
+        if parent_key not in p_upper:
+            continue
+        # Word-boundary regex: ensures "Book I" doesn't match "Book III"
+        # (the "I" in "Book I" pattern must be followed by non-word char
+        # or end-of-string).
+        pat = r"\b" + re.escape(letter_sub.lower()) + r"\b"
+        if re.search(pat, label_lower):
             return cn
     # Fallback: parent_cn + letter_label (English-y)
     parent_cn = PARENT_CN_FALLBACK.get(p_upper, parent_label)
