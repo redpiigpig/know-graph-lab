@@ -23,6 +23,7 @@ description: Denzinger《公教會之信仰與倫理教義選集》(ebook_id 568
 | **cjk-heavy** | ~172 頁 | CJK ≥500 chars but Latin <100；多半正常（commentary 頁）| 通常不用動 |
 | **short** | ~13 頁 | OCR <200 chars but PDF >600 | 重 OCR |
 | **DH range 不對** | 6+ 條 | `_denzinger_to_creeds.py` 的 `COUNCIL_DH_RANGES` 編號猜的，medieval-09/10 跟 vatican-ii 四份要查書補 | 手翻書改 ranges |
+| **DH 1-76 Part 1 信經整段缺漏** | ~11 頁 | PDF page 76-87 在 main JSONL 沒有 chunk，sidebar 第一部分只剩 1 個 placeholder | column-aware 重 OCR pp 76-87 → 重 segment |
 
 ## 修正流程（一次走完）
 
@@ -97,6 +98,40 @@ if "--- 拉丁文 ---" in content and "--- 中譯 ---" in content:
 
 未做，待 Phase 2 跑完才知道輸出長相穩定。
 
+### Phase 3.5：sidebar TOC 重貼中文標題（已上線 2026-05-28）
+
+問題：reader 側欄 sidebar 預設從每個 chunk 的 `chapter_path` 抽 entries，
+Denzinger 上架後變成「DH 100、DH 101、DH 102…」3000+ 條 flat list，無法導航。
+
+修法（兩支 script，已 idempotent）：
+
+```bash
+# 1. 解析 chunk 6 的「詳細目錄」(103K chars, pages 21-74) → 結構化 JSON
+python -X utf8 -u scripts/_denzinger_parse_toc.py
+#   → scripts/_denzinger_toc/dh_titles.json   (3748 DH → 中文標題)
+#   → scripts/_denzinger_toc/entries.json     (608 entries with part/volume)
+
+# 2. 重寫每個 chunk 的 chapter_path / volume / parent_volume
+python -X utf8 -u scripts/_denzinger_relabel.py --dry-run    # 預覽
+python -X utf8 -u scripts/_denzinger_relabel.py --no-db      # JSONL + R2，不動 DB
+python -X utf8 -u scripts/_denzinger_relabel.py              # 全部（含 DB PATCH）
+```
+
+效果：
+- chunks 0-7 → 封面 / 綜合目錄 / 序言 / 壹/貳 / 詳細目錄 / 第一部分 引言
+- 3164 個 entry chunks → 「DH N 中文標題」+ 教宗/會議作為 volume
+- 117 個 commentary chunks → 「前一個 chapter · 註解」（避免 dedupe 隱藏）
+- 131 個 header chunks → 去 `#` prefix、trim
+- 全 chunks 帶 parent_volume = 第一部分／第二部分／第三部分
+
+→ Sidebar 變成 3-level 樹（部 → 教宗/會議 → DH entry）
+
+備份：`{id}.jsonl.prerelabel.bak`（idempotent，可 re-run）
+
+未做但可加：
+- DH 1-76（第一部分 信經）chunks 缺漏（pp 76-87 OCR 沒拿到），sidebar 第一部分目前只 1 個 placeholder（chunk 7 引言）
+- chunk 8（DH 1924）內容其實是宗徒信經（DH 30 區段），segmenter 誤判 dh_number；要等 column-aware OCR + 重 segment 才會修正
+
 ### Phase 4：重補 /creeds
 
 ```bash
@@ -131,6 +166,9 @@ DH range 修正參考來源（不要憑空編）：
 | `scripts/_denzinger_recolumn_ocr.py` | column-aware 重 OCR（gitignored）|
 | `scripts/_denzinger_consolidate.py` | merge gaps（recolumn TBD）→ main JSONL |
 | `scripts/segment_denzinger.py` | page chunks → DH-indexed bilingual chunks |
+| `scripts/_denzinger_parse_toc.py` | 解析 chunk 6 詳細目錄 → dh_titles.json + entries.json |
+| `scripts/_denzinger_relabel.py` | 重寫 chunks 的 chapter_path/volume/parent_volume + R2 push |
+| `scripts/_denzinger_toc/` | parser 輸出（dh_titles.json + entries.json，gitignored）|
 | `scripts/_denzinger_to_creeds.py` | bilingual chunks → /creeds Chinese files |
 | `scripts/_ebook_shot.mjs` | reader 截圖驗證（`--port` `--ebook` `--page`）|
 | `_chunks/{id}.jsonl` | 上架 main（segmented，3840 chunks）|
@@ -146,6 +184,7 @@ DH range 修正參考來源（不要憑空編）：
 - 「Denzinger 補 OCR」→ Phase 0 + Phase 1
 - 「Denzinger 第 N 頁壞了」→ `--pages N` 跑 column-aware OCR
 - 「Denzinger 重 segment」→ Phase 3
+- 「Denzinger sidebar 全是 DH 編號」「Denzinger 目錄沒中文」「側欄目錄」→ Phase 3.5
 - 「Denzinger DH range 不對」→ Phase 4 + 手改 COUNCIL_DH_RANGES
 - 「Denzinger /creeds 重補」→ Phase 4
 - 「Denzinger 兩欄拉中沒切開」→ Phase 1 + Phase 3
