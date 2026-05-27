@@ -338,6 +338,12 @@ def is_gemini_oversized(err_str: str) -> bool:
 _HAIKU_MODEL = "claude-haiku-4-5-20251001"
 _HAIKU_PAGES_PER_BATCH = 10
 _HAIKU_DPI = 150
+# Dense bilingual pages (Latin + Chinese, e.g. Denzinger 中譯) can have
+# ~2-3K chars each. 10 pages × 2500 chars ≈ 25K chars ≈ 8K tokens output.
+# Old 4096 was way too small → truncated mid-batch, 1629 pages lost on Denzinger
+# until detected. Raise to 32K (Haiku 4.5 supports up to 64K). For short books
+# (English-only, 1-2K chars/page), output won't approach this anyway.
+_HAIKU_MAX_TOKENS = 32000
 _HAIKU_BATCH_PROMPT = """\
 Each image is one page from a scanned book (Chinese Traditional/Simplified or English).
 For each page, extract ALL visible text exactly as written — do NOT translate, summarize, or add commentary.
@@ -500,7 +506,7 @@ def _haiku_ocr_book(haiku_client, src_path: Path, book_id: str = None) -> list:
                 try:
                     resp = haiku_client.messages.create(
                         model=_HAIKU_MODEL,
-                        max_tokens=4096,
+                        max_tokens=_HAIKU_MAX_TOKENS,
                         messages=[{"role": "user", "content": content}],
                     )
                     break
