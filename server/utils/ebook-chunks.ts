@@ -294,8 +294,17 @@ export async function loadToc(ebookId: string): Promise<TocEntry[]> {
       //    (`前尼西亞教父` chunk previously expanded to show 「亞歷山大‧羅
       //    伯茨」「詹姆斯‧唐納森」「修訂並按年代…」 — credit lines, not
       //    navigation.)
+      // Suppress section anchors when:
+      //  - This is a known front-matter heading (封面/目錄/前言…)
+      //  - The chunk has no volume (front matter)
+      //  - The chunk is a CONSOLIDATED letter page (chunk_type='page')
+      //    User: 「10章放一個單位，就不要再目錄再往下分了」 — when a
+      //    letter is paginated as「第1-10章」, the page IS the navigation
+      //    unit. Listing every internal 第一章/第二章/… as a sub-anchor
+      //    defeats the consolidation and clutters the sidebar.
       const suppressAnchors = FRONTMATTER_NO_ANCHORS.has(chapterTitle)
-        || c.volume == null;
+        || c.volume == null
+        || c.chunk_type === "page";
       const sections: TocSection[] = [];
       const seenAnchorTitles = new Set<string>();
       const chapterTitleKey = chapterTitle.replace(/\[\^\d+\]/g, "").replace(/\s+/g, "").trim();

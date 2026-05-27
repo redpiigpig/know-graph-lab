@@ -360,24 +360,33 @@ def polish(ebook_id: str, dry_run: bool = False,
                     sample_cleans.append((c["chunk_index"], raw[:80], cleaned))
                 c["chapter_path"] = cleaned
                 # Also fix the content's first heading line so the in-page
-                # H3/H4 anchor + breadcrumb match the new title. Replace
-                # only the FIRST heading line.
+                # H3/H4 anchor + breadcrumb match the new title.
                 content = c.get("content", "")
                 lines = content.split("\n", 1)
                 if lines and re.match(r"^#{2,4}\s+", lines[0]):
-                    # Extract the # prefix
                     pre_m = re.match(r"^(#{2,4})\s+", lines[0])
                     if pre_m:
                         hashes = pre_m.group(1)
                         body_after = lines[1] if len(lines) > 1 else ""
-                        # Pull body from the old (mashed) heading line into
-                        # body_after, prepending it.
                         old_line = lines[0][len(hashes) + 1:]
                         body_mashed = old_line[len(cleaned):].strip()
                         new_first = f"{hashes} {cleaned}"
                         new_body = body_after
-                        if body_mashed:
-                            new_body = f"{body_mashed}\n\n{body_after}" if body_after else body_mashed
+                        # Reinject body_mashed ONLY when:
+                        #   - body_after is empty (LLM put everything on
+                        #     one heading line; this IS the body to restore)
+                        #   - OR body_mashed is long enough to plausibly be
+                        #     a real lost body, AND not already at the
+                        #     start of body_after.
+                        # Skip otherwise — short body_mashed with non-empty
+                        # body_after is almost always a STALE fragment from
+                        # a prior polish run, and reinjecting it splits
+                        # CJK words at the truncation boundary (e.g.
+                        # "愛丁" + "堡系列" should be "愛丁堡系列").
+                        if body_mashed and not body_after:
+                            new_body = body_mashed
+                        elif body_mashed and len(body_mashed) >= 30 and not body_after.startswith(body_mashed[:10]):
+                            new_body = f"{body_mashed}\n\n{body_after}"
                         c["content"] = f"{new_first}\n\n{new_body}".rstrip() + "\n"
                 n_cleaned += 1
 
