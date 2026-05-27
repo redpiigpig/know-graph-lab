@@ -165,12 +165,29 @@ export function findPope(slug: string): Pope | undefined {
   return POPES.find(p => p.slug === slug)
 }
 
-/** 按世紀分組教宗（新→舊） */
+/** 依 pontificate 起訖推算教宗任期所跨的世紀（含起訖兩端）。
+ *  例：John Paul II 1978-2005 → [20, 21]；Leo XIII 1878-1903 → [19, 20]。
+ *  在位中（pontificateEnd 空字串）以當下年份計。 */
+export function centuriesOfPope(p: Pope): number[] {
+  const startY = parseInt(p.pontificateStart.slice(0, 4), 10)
+  const endY = p.pontificateEnd
+    ? parseInt(p.pontificateEnd.slice(0, 4), 10)
+    : new Date().getFullYear()
+  const cStart = Math.floor((startY - 1) / 100) + 1
+  const cEnd = Math.floor((endY - 1) / 100) + 1
+  const out: number[] = []
+  for (let c = cStart; c <= cEnd; c++) out.push(c)
+  return out
+}
+
+/** 按世紀分組教宗（新→舊）。跨世紀的教宗會在兩邊都出現。 */
 export function popesByCentury(): { century: number; popes: Pope[] }[] {
   const map = new Map<number, Pope[]>()
   for (const p of POPES) {
-    if (!map.has(p.century)) map.set(p.century, [])
-    map.get(p.century)!.push(p)
+    for (const c of centuriesOfPope(p)) {
+      if (!map.has(c)) map.set(c, [])
+      map.get(c)!.push(p)
+    }
   }
   return [...map.entries()]
     .sort((a, b) => b[0] - a[0])
@@ -178,4 +195,10 @@ export function popesByCentury(): { century: number; popes: Pope[] }[] {
       century,
       popes: popes.sort((a, b) => b.pontificateStart.localeCompare(a.pontificateStart)),
     }))
+}
+
+export function popesInCentury(century: number): Pope[] {
+  return POPES
+    .filter(p => centuriesOfPope(p).includes(century))
+    .sort((a, b) => b.pontificateStart.localeCompare(a.pontificateStart))
 }

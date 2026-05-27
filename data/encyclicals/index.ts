@@ -29,7 +29,7 @@ export function documentsByPope(popeSlug: string): PapalDocument[] {
     .sort((a, b) => a.promulgationDate.localeCompare(b.promulgationDate))
 }
 
-/** 按世紀分組（新→舊）；每組內按教宗 → 文件年份排序 */
+/** 按世紀分組（新→舊）；每組內按文件年份新→舊排序 */
 export function documentsByCentury(): { century: number; docs: PapalDocument[] }[] {
   const map = new Map<number, PapalDocument[]>()
   for (const d of ALL_DOCUMENTS) {
@@ -42,6 +42,17 @@ export function documentsByCentury(): { century: number; docs: PapalDocument[] }
       century,
       docs: docs.sort((a, b) => b.promulgationDate.localeCompare(a.promulgationDate)),
     }))
+}
+
+export function documentsInCentury(century: number): PapalDocument[] {
+  return ALL_DOCUMENTS
+    .filter(d => d.century === century)
+    .sort((a, b) => b.promulgationDate.localeCompare(a.promulgationDate))
+}
+
+/** 單一教宗在指定世紀的文件數（用來在世紀頁顯示教宗的「本世紀著作數」chip） */
+export function documentCountForPopeInCentury(popeSlug: string, century: number): number {
+  return ALL_DOCUMENTS.filter(d => d.popeSlug === popeSlug && d.century === century).length
 }
 
 export * from './types'

@@ -1,10 +1,22 @@
 <template>
   <div v-if="doc" class="flex flex-col bg-stone-50 min-h-dvh">
-    <nav class="flex items-center gap-3 px-4 h-12 bg-white/95 backdrop-blur border-b border-stone-200 z-30 sticky top-0">
-      <NuxtLink to="/encyclicals" class="text-stone-400 hover:text-stone-700 transition text-lg leading-none">←</NuxtLink>
+    <nav class="flex items-center gap-2 px-4 h-12 bg-white/95 backdrop-blur border-b border-stone-200 z-30 sticky top-0 overflow-x-auto">
+      <NuxtLink :to="popeBackUrl" class="text-stone-400 hover:text-stone-700 transition text-lg leading-none">←</NuxtLink>
       <div class="w-px h-5 bg-stone-200" />
+      <NuxtLink to="/encyclicals" class="text-sm font-semibold text-stone-700 hover:text-stone-900 transition whitespace-nowrap">🕊️</NuxtLink>
+      <span class="text-stone-300">/</span>
+      <NuxtLink
+        :to="`/encyclicals/century/${doc.century}`"
+        class="text-sm text-stone-500 hover:text-stone-900 transition whitespace-nowrap"
+      >{{ doc.century }} 世紀</NuxtLink>
+      <span class="text-stone-300">/</span>
+      <NuxtLink
+        v-if="pope"
+        :to="`/encyclicals/pope/${pope.slug}`"
+        class="text-sm text-stone-500 hover:text-stone-900 transition whitespace-nowrap"
+      >{{ pope.nameZh }}</NuxtLink>
+      <span class="text-stone-300">/</span>
       <span class="text-sm font-semibold text-stone-900 truncate">{{ doc.titleZh }}</span>
-      <span class="text-xs italic text-stone-400 truncate hidden sm:inline">{{ doc.titleLat }}</span>
       <span class="text-xs text-stone-400 ml-auto whitespace-nowrap font-mono">{{ doc.promulgationDate }}</span>
     </nav>
 
@@ -219,6 +231,8 @@ definePageMeta({ middleware: 'auth' })
 const route = useRoute()
 const doc = computed(() => findDocument(route.params.slug as string))
 const pope = computed(() => (doc.value ? findPope(doc.value.popeSlug) : undefined))
+
+const popeBackUrl = computed(() => (pope.value ? `/encyclicals/pope/${pope.value.slug}` : '/encyclicals'))
 
 useHead(() => ({
   title: doc.value ? `${doc.value.titleZh} — 教宗訓導文獻` : '找不到文件',
