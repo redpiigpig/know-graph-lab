@@ -25,7 +25,7 @@ from datetime import datetime
 from pathlib import Path
 
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, NavigableString
 from dotenv import load_dotenv
 import ebooklib
 from ebooklib import epub
@@ -350,6 +350,14 @@ _PROMPT_TMPL_TAIL = """
 4. **保留原文 Markdown 結構**：## / ### / **粗體** / *斜體* / > 引文 / - 列表全部對應翻譯。
 5. **聖經引用格式**：把英文 (1 Mac 4:18) 翻成繁體（瑪加伯上 4:18）。
 6. **章節標題簡潔**：別把 "Chapter 1" 翻成囉嗦句子，直譯「第一章」即可。
+7. **腳註標記原樣保留**（極重要 — reader 靠這些 markers 做跳轉與引用）：
+   - `[^N]`（如 `[^1445]`）= 內文腳註 ref。**逐字原樣輸出**，不要翻譯數字、不要拆 `^`、不要替換成中文括號。位置維持在對應的字後面。
+   - `{{p:N}}`（如 `{{p:25}}`）= 原書頁碼 marker。**逐字原樣輸出**，位置維持在文字流中對應處。讀者複製文字時這標記產生芝加哥引用的頁碼。
+   - 末尾若有 `————————…` 分隔線後跟 `(1) text` `(2) text` 區段 = 腳註正文區塊：
+       · 分隔線原樣保留
+       · 每行的 `(N)` 編號原樣保留（順序、數字皆不動）
+       · 編號後的本文翻成繁中
+       · 不要合併、不要省略
 
 只輸出翻譯後的繁體中文 markdown，不要加說明、不要 wrap 在程式碼塊裡。
 
@@ -421,12 +429,72 @@ def gemini_with_haiku_fallback(source: str) -> str:
 # ── EPUB → ordered chunks ─────────────────────────────────────────────────
 
 def epub_to_chunks(epub_path: Path) -> list[dict]:
+    """Walk EPUB items in document order, emitting one source chunk per
+    non-empty ITEM_DOCUMENT. Source markdown is ENRICHED with CCEL markers
+    that the bare get_text() would strip:
+
+      - `<a class="Note" href="#fnf_...">N</a>`         → `[^N]`
+        (inline footnote reference, preserved verbatim through translation)
+
+      - `<span class="pb" id="..Page_N"/>`              → `{{p:N}}`
+        (print-edition page break marker — citation handler picks the
+        nearest one before the selected text)
+
+      - `<div class="mnote"> ... <span class="Footnote">body</span>`
+        → appended at end of chunk as `\n\n————————…\n\n(N) body`
+        (translator's prompt instructs to translate the body text but
+        keep the (N) prefix and order intact)
+
+    This was previously a SEPARATE post-translate step
+    (`extract_epub_extras.py`), but doing it pre-translation lets the LLM
+    translate footnote bodies into Chinese too. Otherwise the Chinese
+    side ends up with no refs and no footnote section.
+    """
     book = epub.read_epub(str(epub_path))
     chunks: list[dict] = []
     for item in book.get_items_of_type(ebooklib.ITEM_DOCUMENT):
         soup = BeautifulSoup(item.get_content(), "lxml")
-        # Build markdown
-        md_parts = []
+
+        # ─ (1) Strip footnote <div class="mnote"> out of body flow.
+        #   Collect {N: body_text} for emission at chunk end.
+        footnotes: dict[int, str] = {}
+        for div in soup.find_all("div", class_="mnote"):
+            sup = div.find("sup", class_="NoteRef")
+            anchor = div.find("a", class_="Note")
+            body_span = div.find("span", class_="Footnote")
+            num: int | None = None
+            if sup and sup.get_text(strip=True).isdigit():
+                num = int(sup.get_text(strip=True))
+            elif anchor and anchor.get_text(strip=True).isdigit():
+                num = int(anchor.get_text(strip=True))
+            if num is None:
+                div.decompose()
+                continue
+            body = body_span.get_text(separator=" ", strip=True) if body_span else ""
+            body = re.sub(r"\s+", " ", body).strip()
+            if body:
+                footnotes[num] = body
+            div.decompose()
+
+        # ─ (2) Replace pagebreak <span class="pb"> with {{p:N}} sentinel
+        for sp in soup.find_all("span", class_="pb"):
+            page_id = sp.get("id", "")
+            m = re.search(r"Page[_\-](\d+)", page_id)
+            if m:
+                sp.replace_with(NavigableString(f" __PB_{m.group(1)}__ "))
+            else:
+                sp.decompose()
+
+        # ─ (3) Replace inline footnote refs <a class="Note">N</a> with [^N]
+        for a in soup.find_all("a", class_="Note"):
+            txt = a.get_text(strip=True)
+            if txt.isdigit():
+                a.replace_with(NavigableString(f"[^{txt}]"))
+            else:
+                a.decompose()
+
+        # ─ (4) Build markdown
+        md_parts: list[str] = []
         for el in soup.find_all(["h1", "h2", "h3", "h4", "p", "blockquote", "li"]):
             text = el.get_text(separator=" ", strip=True)
             if not text:
@@ -439,11 +507,26 @@ def epub_to_chunks(epub_path: Path) -> list[dict]:
             elif tag == "li": md_parts.append(f"- {text}")
             else:             md_parts.append(text)
         content = "\n\n".join(md_parts).strip()
+        # Finalize page-break sentinels and collapse runs of spaces
+        content = re.sub(r"__PB_(\d+)__", r"{{p:\1}}", content)
+        content = re.sub(r" +", " ", content)
+
         if not content:
             continue
+
+        # ─ (5) Append footnote section if any
+        if footnotes:
+            lines = ["", "—" * 30, ""]
+            for n in sorted(footnotes.keys()):
+                lines.append(f"({n}) {footnotes[n]}")
+                lines.append("")
+            content = content.rstrip() + "\n" + "\n".join(lines)
+
         # Derive title from first heading
         m = re.search(r"^(#{2,4})\s+(.+)", content, re.M)
         title = m.group(2).strip() if m else item.get_name()
+        title = title.split("\n", 1)[0].strip()
+
         chunks.append({
             "src_file": item.get_name(),
             "title_en": title,

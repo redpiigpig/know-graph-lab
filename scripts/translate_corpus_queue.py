@@ -154,24 +154,23 @@ def run_one(series: str, vol: int, ebook_id: str, title: str, engine: str) -> tu
             print(f"\n  → TRANSLATE FAILED  duration={fmt_dur(elapsed)}  log={log_path}", flush=True)
             return False, str(log_path)
 
-        # Steps 2-4: post-translate polish (best-effort; rc!=0 logged but tolerated)
+        # Steps 2-3: post-translate polish (best-effort; rc!=0 logged but tolerated)
+        # Note: extract_epub_extras is no longer a separate step — the EPUB
+        # parser in translate_ebook_to_zh now enriches source with [^N] refs
+        # + footnote section + {{p:N}} page markers, so the LLM translates
+        # the footnote bodies into Chinese inline.
         polish_ok = _run_subscript(
             "polish_translated_book.py", [ebook_id],
-            logf, "STEP 2/4: POLISH (chapter_path + volume tags)"
-        )
-        extras_ok = _run_subscript(
-            "extract_epub_extras.py", [ebook_id],
-            logf, "STEP 3/4: EXTRACT EPUB EXTRAS (footnotes + page numbers)"
+            logf, "STEP 2/3: POLISH (chapter_path + volume tags)"
         )
         consol_ok = _run_subscript(
             "consolidate_by_ncx.py", [ebook_id],
-            logf, "STEP 4/4: CONSOLIDATE BY NCX (chunk merge by letter)"
+            logf, "STEP 3/3: CONSOLIDATE BY NCX (chunk merge by letter)"
         )
         logf.write(
             f"\n══════ Pipeline summary ══════\n"
             f"  translate:   {'OK' if translate_ok else 'FAIL'}\n"
             f"  polish:      {'OK' if polish_ok else 'FAIL (book still usable)'}\n"
-            f"  extras:      {'OK' if extras_ok else 'FAIL (book still usable)'}\n"
             f"  consolidate: {'OK' if consol_ok else 'FAIL (book still usable)'}\n"
         )
     elapsed = time.time() - t0
