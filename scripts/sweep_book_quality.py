@@ -87,7 +87,7 @@ EM_DASH_SPLIT_RE = re.compile(r"^(第[一二三四五六七八九十百千零0-9
 # Longest patterns first to avoid prefix collision (科林斯 must be tried
 # before 科林).
 TERM_FIXES_ANF_VOL_1 = {
-    # Corinth
+    # Corinth — volume name uses 哥林多 (Protestant)
     "科林多人": "哥林多人",
     "科林斯人": "哥林多人",
     "科林多教會": "哥林多教會",
@@ -95,12 +95,37 @@ TERM_FIXES_ANF_VOL_1 = {
     "科林多": "哥林多",
     "科林斯": "哥林多",
     "科林妥": "哥林多",
+    "格林多前書": "哥林多前書",
+    "格林多後書": "哥林多後書",
+    "格林多": "哥林多",
     # Diognetus — addressee of Mathetes' letter. Volume = 致丟格那妥書.
     "狄奧格尼圖斯": "丟格那妥",
     "狄奧格尼特斯": "丟格那妥",
     "狄奧格尼圖": "丟格那妥",
     "狄奧格尼特": "丟格那妥",
     "狄奧格尼": "丟格那妥",
+    # Paul — book uses 保羅 (Protestant)
+    "聖保祿": "聖保羅",
+    "保祿": "保羅",
+    # Philippi — volume name uses 腓立比 (Protestant)
+    "斐理伯人書": "腓立比人書",
+    "斐理伯人": "腓立比人",
+    "斐理伯": "腓立比",
+    # Cephas / 磯法 — Catholic 革法 → Protestant 磯法
+    "革法": "磯法",
+    # Smyrna — volume uses 士每拿
+    "士麥那": "士每拿",
+    # Tarsus — volume uses 他爾索, but body shows variants
+    "他爾蘇城": "他爾索",
+    "他爾蘇": "他爾索",
+    "塔爾蘇": "他爾索",
+    # Aristion — Papias references this disciple of John
+    "亞里斯頓": "亞里斯鐸",
+    # Jupiter — sweep both ways could happen; prefer 朱庇特 (more common
+    # in Latin transliteration tradition). Body uses both.
+    "木星": "朱庇特",
+    # Typos
+    "平安安": "平安",
 }
 TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "c98d358d-7066-4691-a896-b7232707b0db": TERM_FIXES_ANF_VOL_1,  # ANF Vol 1
@@ -227,6 +252,30 @@ def sweep_t3(content: str) -> tuple[str, int, bool]:
     return content, fixes, ok
 
 
+def sweep_t12(content: str) -> tuple[str, int]:
+    """Insert a blank line between any ##/###/#### heading and the
+    immediately-following non-heading text.
+
+    Background: renderMarkdown uses a multiline regex
+    `^###[ \\t]+([\\s\\S]+?)(?=\\n[ \\t]*\\n|\\n#|\\Z)` to capture full h3
+    headings (CCEL wraps long titles across lines, so single-line `.+$`
+    misses the rest). The lookahead means the heading consumes everything
+    UNTIL the next blank line. When a body paragraph follows a heading
+    with only a single `\\n` separator, the whole paragraph gets absorbed
+    into the heading and rendered as a giant H3 — destroying ZH↔EN
+    paragraph alignment in bilingual mode (chunk 11 「致腓立比人的坡旅甲
+    書信」 + greeting got fused into one heading block).
+
+    Fix: insert `\\n` between heading + body so the lookahead fires.
+    """
+    fixed, n = re.subn(
+        r"(^#{2,4}[ \t]+[^\n]+)\n(?!\n|#)",
+        r"\1\n\n",
+        content, flags=re.M,
+    )
+    return fixed, n
+
+
 def sweep_t8(content: str, term_fixes: dict[str, str]) -> tuple[str, int]:
     """Apply term-consistency replacements, longest-first to avoid prefix
     collision."""
@@ -301,7 +350,8 @@ def fetch_book(ebook_id: str) -> dict:
 
 def sweep(ebook_id: str, dry_run: bool = False, push: bool = True,
           only_t1: bool = False, only_t2: bool = False,
-          only_t3: bool = False, only_t8: bool = False) -> None:
+          only_t3: bool = False, only_t8: bool = False,
+          only_t12: bool = False) -> None:
     book = fetch_book(ebook_id)
     print(f"Book: {book['title']}")
 
@@ -312,14 +362,15 @@ def sweep(ebook_id: str, dry_run: bool = False, push: bool = True,
     term_fixes = TERM_FIXES_BY_BOOK.get(ebook_id, {})
 
     # If any --only-X flag is set, run ONLY those steps. Else run all.
-    any_only = only_t1 or only_t2 or only_t3 or only_t8
+    any_only = only_t1 or only_t2 or only_t3 or only_t8 or only_t12
     run_t1 = (not any_only) or only_t1
     run_t2 = (not any_only) or only_t2
     run_t3 = (not any_only) or only_t3
     run_t8 = (not any_only) or only_t8
+    run_t12 = (not any_only) or only_t12
 
-    t1_total = t2_total = t3_total = t8_total = 0
-    t1_chunks = t2_chunks = t3_chunks = t8_chunks = 0
+    t1_total = t2_total = t3_total = t8_total = t12_total = 0
+    t1_chunks = t2_chunks = t3_chunks = t8_chunks = t12_chunks = 0
     t3_odd_chunks: list[int] = []
 
     for c in chunks:
@@ -347,12 +398,18 @@ def sweep(ebook_id: str, dry_run: bool = False, push: bool = True,
             if n8:
                 t8_total += n8
                 t8_chunks += 1
+        if run_t12:
+            new_content, n12 = sweep_t12(new_content)
+            if n12:
+                t12_total += n12
+                t12_chunks += 1
         if new_content != content:
             c["content"] = new_content
 
     print(f"\nT1 (heading bleed) fixes: {t1_total} in {t1_chunks} chunks")
     print(f"T2 (h3 letter-title) fixes: {t2_total} in {t2_chunks} chunks")
     print(f"T3 (quote chars) fixes:    {t3_total} in {t3_chunks} chunks")
+    print(f"T12 (blank line after heading) fixes: {t12_total} in {t12_chunks} chunks")
     if t3_odd_chunks:
         print(f"  ⚠ odd-quote-count chunks (review manually): {t3_odd_chunks}")
     if term_fixes:
@@ -414,10 +471,12 @@ def main():
     ap.add_argument("--only-t2", action="store_true")
     ap.add_argument("--only-t3", action="store_true")
     ap.add_argument("--only-t8", action="store_true")
+    ap.add_argument("--only-t12", action="store_true")
     args = ap.parse_args()
     sweep(args.ebook_id, dry_run=args.dry_run, push=not args.no_push,
           only_t1=args.only_t1, only_t2=args.only_t2,
-          only_t3=args.only_t3, only_t8=args.only_t8)
+          only_t3=args.only_t3, only_t8=args.only_t8,
+          only_t12=args.only_t12)
 
 
 if __name__ == "__main__":
