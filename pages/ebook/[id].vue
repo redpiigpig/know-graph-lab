@@ -29,6 +29,16 @@
         </div>
 
         <div class="flex items-center gap-2 flex-1 justify-end">
+          <!-- ✏️ 編輯本段按鈕 — 開啟 edit modal 直接改 content/source_text/chapter_path -->
+          <button @click="openEditModal"
+            :disabled="!pageContent && !pageSourceText"
+            :title="editModal.open ? '正在編輯' : '編輯本段內容'"
+            :class="['hidden md:flex items-center gap-1 px-2 py-1 rounded-md text-xs transition border flex-shrink-0',
+              editModal.open
+                ? 'bg-amber-100 text-amber-800 border-amber-300'
+                : 'bg-white text-stone-600 border-stone-200 hover:border-amber-400 hover:text-amber-700']">
+            <span>✏️</span><span>編輯</span>
+          </button>
           <!-- 中 / 對照 / 英 切換（僅在 chunk 有原文時顯示） -->
           <div v-if="pageSourceText" class="inline-flex bg-stone-100 rounded-lg p-0.5 text-xs gap-0.5">
             <button @click="setViewMode('zh')"
@@ -343,6 +353,53 @@
       </aside>
     </div>
 
+    <!-- ✏️ Edit chunk modal — direct edit of content / source_text /
+         chapter_path. Saves to JSONL (canonical) + R2 + DB preview row. -->
+    <div v-if="editModal.open" class="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50"
+      @click.self="closeEditModal">
+      <div class="bg-white rounded-xl shadow-2xl max-w-6xl w-full max-h-[90vh] flex flex-col">
+        <div class="flex items-center justify-between p-4 border-b border-stone-200 flex-shrink-0">
+          <div>
+            <div class="text-sm font-semibold text-stone-900">編輯本段內容</div>
+            <div class="text-xs text-stone-500 mt-0.5">{{ pageVolume }} · 第 {{ currentPage }} 段</div>
+          </div>
+          <div class="flex items-center gap-2">
+            <span v-if="editModal.dirty" class="text-xs text-amber-600">● 未儲存</span>
+            <button @click="closeEditModal" class="px-3 py-1.5 text-sm text-stone-600 hover:bg-stone-100 rounded-lg">取消</button>
+            <button @click="saveEditModal" :disabled="editModal.saving || !editModal.dirty"
+              class="px-4 py-1.5 text-sm bg-blue-600 text-white hover:bg-blue-500 disabled:opacity-40 rounded-lg transition">
+              {{ editModal.saving ? '儲存中…' : '儲存' }}
+            </button>
+          </div>
+        </div>
+        <div class="p-4 overflow-y-auto flex-1">
+          <label class="block text-xs font-semibold text-stone-700 mb-1">章節標題</label>
+          <input v-model="editModal.chapter_path" type="text"
+            @input="editModal.dirty = true"
+            class="w-full mb-4 px-3 py-2 border border-stone-300 rounded-lg focus:outline-none focus:border-blue-500 text-sm" />
+          <div :class="['grid gap-4 mb-2', editModal.source_text != null ? 'grid-cols-1 lg:grid-cols-2' : 'grid-cols-1']">
+            <div>
+              <label class="block text-xs font-semibold text-stone-700 mb-1">中文內容（markdown）</label>
+              <textarea v-model="editModal.content"
+                @input="editModal.dirty = true"
+                rows="22"
+                class="w-full px-3 py-2 border border-stone-300 rounded-lg focus:outline-none focus:border-blue-500 text-sm font-mono leading-relaxed resize-y"></textarea>
+            </div>
+            <div v-if="editModal.source_text != null">
+              <label class="block text-xs font-semibold text-stone-700 mb-1">英文原文（markdown）</label>
+              <textarea v-model="editModal.source_text"
+                @input="editModal.dirty = true"
+                rows="22"
+                class="w-full px-3 py-2 border border-stone-300 rounded-lg focus:outline-none focus:border-blue-500 text-sm font-mono leading-relaxed resize-y"></textarea>
+            </div>
+          </div>
+          <p class="text-xs text-stone-500 mt-2">
+            儲存後立刻覆寫到 JSONL（雲端硬碟）+ R2 + DB preview。撤銷請手動回滾 git。
+          </p>
+        </div>
+      </div>
+    </div>
+
     <!-- Selection popup (when text selected in reader) -->
     <div v-if="selectionPopup.show"
       data-selection-popup
@@ -533,6 +590,68 @@ const annotationsPanelOpen = ref(false);
 // TOC drawer: defaults open on desktop (lg+), can be toggled via topbar
 // 📑 button on any screen. We start open and let the user close it.
 const tocDrawerOpen = ref(true);
+
+// ── Edit modal (in-place chunk editing) ──
+// Opens via ✏️ topbar button; lets the user fix translation errors, wrong
+// chapter titles, or English source mishaps directly. Save POSTs to
+// PUT /api/ebooks/:id/chunks/:index which rewrites JSONL + R2 + DB preview.
+const editModal = ref({
+  open: false,
+  saving: false,
+  dirty: false,
+  chapter_path: "",
+  content: "",
+  source_text: null as string | null,
+});
+
+function openEditModal() {
+  editModal.value = {
+    open: true,
+    saving: false,
+    dirty: false,
+    chapter_path: pageChapter.value || "",
+    content: pageContent.value || "",
+    source_text: pageSourceText.value,
+  };
+}
+
+function closeEditModal() {
+  if (editModal.value.dirty) {
+    if (!confirm("有未儲存的修改，確定關閉？")) return;
+  }
+  editModal.value.open = false;
+}
+
+async function saveEditModal() {
+  if (!editModal.value.dirty) return;
+  editModal.value.saving = true;
+  try {
+    const payload: Record<string, string> = {
+      content: editModal.value.content,
+      chapter_path: editModal.value.chapter_path,
+    };
+    if (editModal.value.source_text !== null) {
+      payload.source_text = editModal.value.source_text;
+    }
+    await $fetch(`/api/ebooks/${ebookId}/chunks/${currentPage.value - 1}`, {
+      method: "PUT",
+      body: payload,
+    });
+    // Local refresh — bypass server cache by re-fetching the page
+    pageContent.value = editModal.value.content;
+    pageChapter.value = editModal.value.chapter_path;
+    if (editModal.value.source_text !== null) {
+      pageSourceText.value = editModal.value.source_text;
+    }
+    editModal.value.dirty = false;
+    editModal.value.open = false;
+    showToast("已儲存。R2 與 DB preview 同步中…");
+  } catch (e: any) {
+    showToast(`儲存失敗：${e.data?.message ?? e.message ?? "unknown error"}`, "error");
+  } finally {
+    editModal.value.saving = false;
+  }
+}
 const lastUsedColor = ref<string>("yellow");
 const contentEl = ref<HTMLDivElement | null>(null);
 const scrollEl = ref<HTMLElement | null>(null);
