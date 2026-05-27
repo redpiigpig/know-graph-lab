@@ -26,6 +26,14 @@
           <span class="text-xs text-stone-400">/ {{ ebook?.total_pages }}</span>
           <button @click="goPage(currentPage + 1)" :disabled="currentPage >= (ebook?.total_pages ?? 1)"
             class="w-8 h-8 flex items-center justify-center rounded-lg bg-stone-100 hover:bg-stone-200 disabled:opacity-30 transition">›</button>
+          <!-- DH 跳轉 — only shown for bilingual-parallel books (Denzinger). -->
+          <div v-if="isBilingualMode" class="hidden md:flex items-center gap-1 ml-1 pl-2 border-l border-stone-200">
+            <span class="text-xs font-bold text-amber-700">DH</span>
+            <input v-model="dhJumpInput" @keyup.enter="jumpToDh(dhJumpInput)" type="text" inputmode="numeric"
+              placeholder="1520"
+              :title="'跳到 DH 編號（如 1520 = Trent 信德定義）'"
+              class="w-16 bg-white border border-stone-200 rounded-lg px-2 py-1 text-center text-sm focus:outline-none focus:border-amber-500" />
+          </div>
         </div>
 
         <div class="flex items-center gap-2 flex-1 justify-end">
@@ -693,6 +701,12 @@ const pageContent = ref("");
 const pageSourceText = ref<string | null>(null);
 const pageChapter = ref<string | null>(null);
 const pageLoading = ref(false);
+// Bilingual-parallel extras (Denzinger and similar dual-language reference works).
+// Spec: .claude/skills/ebook-pipeline/book-structure-bilingual-parallel.md
+const pageSectionType = ref<"header" | "entry" | "commentary" | null>(null);
+const pageDhNumber = ref<number | null>(null);
+const dhJumpInput = ref<string>("");
+const isBilingualMode = computed(() => ebook.value?.display_mode === "bilingual-parallel");
 
 // View mode for bilingual books. "zh" = 中譯, "bi" = 對照, "en" = 原文.
 // Persisted across pages + reloads; gracefully degrades to "zh" if a chunk
@@ -964,92 +978,109 @@ function inlineFmt(s: string, chunkIdx: number | null = null) {
 // TOC sidebar can scrollIntoView to a section within the current chapter.
 //
 // Footnote detection: a paragraph that's just 15+ em-dashes / hyphens
-// (`————————————————…`) marks the start of the chunk's footnote section.
-// Everything after is rendered inside <section class="footnotes"> with
-// smaller font, and each `(N) text...` paragraph gets `id="fn-{chunk}-{N}"`
-// so URL hashes and TOC refs can link directly.
+// (`————————————————…`) is a body/footnote TOGGLE — CCEL packages each
+// chapter as body→separator→footnotes, and a consolidated page has 10
+// such blocks. We collect ALL footnote items across the whole chunk into
+// one unified `<section class="footnotes">` rendered at the bottom; body
+// blocks render in order with the footnote interleavings stripped out.
 function renderMarkdown(md: string, chunkIndex: number | null = null): string {
   const blocks = md.split(/\n{2,}/);
-  const out: string[] = [];
+  const bodyOut: string[] = [];
+  const footnoteItems: string[] = [];   // rendered <p class="footnote-item">
   let subSeq = 0;
   let inFootnotes = false;
   for (let block of blocks) {
     block = block.trim();
     if (!block) continue;
-    // Footnote separator — long horizontal run of em-dashes / hyphens.
+    // Footnote-section TOGGLE separator. First hit enters footnotes mode,
+    // next hit exits (back to body), and so on — CCEL interleaves per
+    // chapter so a 10-chapter page has 10 separators.
     if (/^[—－\-]{15,}$/.test(block)) {
-      if (!inFootnotes) {
-        out.push('<section class="footnotes" aria-label="註釋">');
-        out.push('<div class="footnotes-label">註　釋</div>');
-        inFootnotes = true;
-      } else {
-        out.push('<hr class="footnote-divider">');
-      }
+      inFootnotes = !inFootnotes;
       continue;
     }
-    if (/^-{3,}$/.test(block)) { out.push("<hr>"); continue; }
+    if (/^-{3,}$/.test(block)) {
+      if (!inFootnotes) bodyOut.push("<hr>");
+      continue;
+    }
     const escaped = escapeHtml(block);
     let h: RegExpMatchArray | null;
-    // Heading detection — CCEL EPUBs wrap long headings across multiple
-    // lines with single \n (e.g. `#### Chapter I.—After the salutation, the
-    // \nwriter declares...`). Original `.+$` regex without /m fails on those
-    // and the whole block falls through to raw <p>####...</p>.
-    // Fix: when block starts with `####…`, treat the ENTIRE block as the
-    // heading content (joining wrapped lines with a space) — the EPUB
-    // separated heading from body using `\n\n`, so a `\n\n` would have
-    // already produced two blocks via splitParagraphs. Joining here
-    // avoids both the raw-render bug and the dangling-fragment-paragraph
-    // that resulted from splitting the block into <h4>+<p>.
-    if ((h = escaped.match(/^####\s+([\s\S]+)$/))) {
-      const id = chunkIndex !== null ? ` id="sec-${chunkIndex}-${subSeq}"` : "";
-      subSeq++;
-      const joined = h[1].replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
-      out.push(`<h4${id}>${inlineFmt(joined, chunkIndex)}</h4>`);
-    }
-    else if ((h = escaped.match(/^###\s+([\s\S]+)$/))) {
-      const id = chunkIndex !== null ? ` id="sec-${chunkIndex}-${subSeq}"` : "";
-      subSeq++;
-      const joined = h[1].replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
-      out.push(`<h3${id}>${inlineFmt(joined, chunkIndex)}</h3>`);
-    }
-    else if ((h = escaped.match(/^##\s+([\s\S]+)$/))) {
-      const joined = h[1].replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
-      out.push(`<h2>${inlineFmt(joined, chunkIndex)}</h2>`);
-    }
-    else if ((h = escaped.match(/^#\s+([\s\S]+)$/))) {
-      const joined = h[1].replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
-      out.push(`<h1>${inlineFmt(joined, chunkIndex)}</h1>`);
-    }
-    else if (/^&gt;\s/.test(escaped)) {
-      const lines = escaped.split(/\n/).map(ln => ln.replace(/^&gt;\s?/, "")).join("<br>");
-      out.push(`<blockquote>${inlineFmt(lines, chunkIndex)}</blockquote>`);
-    } else {
-      // Footnote body paragraph — both the leading (N) label AND the
-      // trailing ↩ navigate back to the inline ref in the body. The
-      // paragraph itself has id="fn-{chunk}-{N}" for URL-hash addressing
-      // (right-click → 複製連結 still works on the paragraph background).
-      const fn = inFootnotes ? escaped.match(/^\((\d+)\)\s*(.*)$/s) : null;
-      if (fn && chunkIndex !== null) {
-        const num = fn[1];
-        const rest = inlineFmt(fn[2], chunkIndex).replace(/\n/g, "<br>");
-        out.push(
+    // Headings ALWAYS belong to body — even if they appear after a
+    // separator (CCEL sometimes restarts a new chapter without an explicit
+    // close separator). Flip mode back to body when we see a heading.
+    const isHeading = /^#{1,4}\s/.test(escaped);
+    if (isHeading && inFootnotes) inFootnotes = false;
+
+    if (inFootnotes) {
+      // Footnote body paragraph — (N) → footnote-item with bidirectional
+      // anchor. Continuation paragraphs (no leading (N)) get appended as
+      // a footnote-continuation under the previously-seen item.
+      const fnMatch = escaped.match(/^\((\d+)\)\s*(.*)$/s);
+      if (fnMatch && chunkIndex !== null) {
+        const num = fnMatch[1];
+        const rest = inlineFmt(fnMatch[2], chunkIndex).replace(/\n/g, " ");
+        footnoteItems.push(
           `<p class="footnote-item" id="fn-${chunkIndex}-${num}">` +
           `<a href="#fnref-${chunkIndex}-${num}" class="footnote-num" title="回到正文">(${num})</a> ` +
           `${rest} ` +
           `<a href="#fnref-${chunkIndex}-${num}" class="footnote-back" title="回到正文">↩</a></p>`
         );
       } else {
-        // CCEL EPUBs word-wrap paragraphs with single `\n` between lines.
-        // Replacing each \n with <br> created jagged forced-break columns
-        // (worse in the English bilingual column). Collapse single \n to a
-        // space so the browser reflows naturally; only `\n\n` (paragraph
-        // break) is honored upstream via the block split.
-        out.push(`<p>${inlineFmt(escaped, chunkIndex).replace(/\n/g, " ").replace(/  +/g, " ")}</p>`);
+        // No leading (N) — treat as continuation of the previous footnote
+        // item. If there's no previous item (edge case), fall back to body.
+        const cont = `<p class="footnote-continuation">${inlineFmt(escaped, chunkIndex).replace(/\n/g, " ")}</p>`;
+        if (footnoteItems.length) {
+          footnoteItems.push(cont);
+        } else {
+          bodyOut.push(`<p>${inlineFmt(escaped, chunkIndex).replace(/\n/g, " ").replace(/  +/g, " ")}</p>`);
+        }
       }
+      continue;
+    }
+
+    // Body block. Heading detection — CCEL EPUBs wrap long headings across
+    // multiple lines with single \n (e.g. `#### Chapter I.—After the salutation, the
+    // \nwriter declares...`). Original `.+$` regex without /m fails on those
+    // and the whole block falls through to raw <p>####...</p>.
+    if ((h = escaped.match(/^####\s+([\s\S]+)$/))) {
+      const id = chunkIndex !== null ? ` id="sec-${chunkIndex}-${subSeq}"` : "";
+      subSeq++;
+      const joined = h[1].replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
+      bodyOut.push(`<h4${id}>${inlineFmt(joined, chunkIndex)}</h4>`);
+    }
+    else if ((h = escaped.match(/^###\s+([\s\S]+)$/))) {
+      const id = chunkIndex !== null ? ` id="sec-${chunkIndex}-${subSeq}"` : "";
+      subSeq++;
+      const joined = h[1].replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
+      bodyOut.push(`<h3${id}>${inlineFmt(joined, chunkIndex)}</h3>`);
+    }
+    else if ((h = escaped.match(/^##\s+([\s\S]+)$/))) {
+      const joined = h[1].replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
+      bodyOut.push(`<h2>${inlineFmt(joined, chunkIndex)}</h2>`);
+    }
+    else if ((h = escaped.match(/^#\s+([\s\S]+)$/))) {
+      const joined = h[1].replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
+      bodyOut.push(`<h1>${inlineFmt(joined, chunkIndex)}</h1>`);
+    }
+    else if (/^&gt;\s/.test(escaped)) {
+      const lines = escaped.split(/\n/).map(ln => ln.replace(/^&gt;\s?/, "")).join("<br>");
+      bodyOut.push(`<blockquote>${inlineFmt(lines, chunkIndex)}</blockquote>`);
+    } else {
+      // CCEL EPUBs word-wrap paragraphs with single `\n` between lines.
+      // Replacing each \n with <br> created jagged forced-break columns
+      // (worse in the English bilingual column). Collapse single \n to a
+      // space so the browser reflows naturally; only `\n\n` (paragraph
+      // break) is honored upstream via the block split.
+      bodyOut.push(`<p>${inlineFmt(escaped, chunkIndex).replace(/\n/g, " ").replace(/  +/g, " ")}</p>`);
     }
   }
-  if (inFootnotes) out.push("</section>");
-  return out.join("\n");
+  if (footnoteItems.length) {
+    bodyOut.push('<section class="footnotes" aria-label="註釋">');
+    bodyOut.push('<div class="footnotes-label">註　釋</div>');
+    bodyOut.push(...footnoteItems);
+    bodyOut.push("</section>");
+  }
+  return bodyOut.join("\n");
 }
 
 // Detect 目錄 (table-of-contents) page — special render: each chapter
@@ -1164,11 +1195,32 @@ function splitParagraphs(md: string): string[] {
 // A footnote-section separator is 15+ em-dashes / hyphens on its own.
 // Identical to the renderMarkdown detector to keep behavior consistent.
 const FOOTNOTE_SEP_RE = /^[—－\-]{15,}$/;
+const HEADING_RE = /^#{1,4}\s/;
+// Walk the chunk's paragraphs, tracking the body↔footnotes mode via
+// separator toggles. Any heading paragraph encountered while inFootnotes
+// flips back to body (CCEL sometimes starts the next chapter without
+// closing the prior footnote section). Returns two arrays:
+//   - body[]      : paragraphs that belong to body content, in source order
+//   - footnotes[] : paragraphs that belong to footnote items (across ALL
+//                   sub-sections), in source order
 function splitBodyAndFootnotes(md: string): { body: string[]; footnotes: string[] } {
   const paras = splitParagraphs(md);
-  const sepIdx = paras.findIndex(p => FOOTNOTE_SEP_RE.test(p));
-  if (sepIdx < 0) return { body: paras, footnotes: [] };
-  return { body: paras.slice(0, sepIdx), footnotes: paras.slice(sepIdx + 1) };
+  const body: string[] = [];
+  const footnotes: string[] = [];
+  let inFootnotes = false;
+  for (const p of paras) {
+    if (FOOTNOTE_SEP_RE.test(p)) {
+      inFootnotes = !inFootnotes;
+      continue;
+    }
+    if (HEADING_RE.test(p)) {
+      inFootnotes = false;  // any heading restarts body context
+      body.push(p);
+      continue;
+    }
+    (inFootnotes ? footnotes : body).push(p);
+  }
+  return { body, footnotes };
 }
 // Parse a footnote paragraph into { num, text } by matching the leading
 // `(N) ` prefix. Returns null when the paragraph doesn't look like a
@@ -1382,6 +1434,8 @@ async function loadPage(page: number) {
   pageContent.value = data?.currentPage?.content ?? "";
   pageSourceText.value = data?.currentPage?.source_text ?? null;
   pageChapter.value = data?.currentPage?.chapter_path ?? null;
+  pageSectionType.value = data?.currentPage?.section_type ?? null;
+  pageDhNumber.value = data?.currentPage?.dh_number ?? null;
   pageLoading.value = false;
   jumpPage.value = page;
 
@@ -1975,31 +2029,72 @@ function findNearestPageBeforeNode(startNode: Node | null): number | null {
   return Number.isFinite(n) ? n : null;
 }
 
+// Strip parenthetical annotations that contain CJK characters and any
+// trailing CJK suffix, then collapse 、／/ separators to Chicago-style
+// "comma + and" lists. Used by buildChicagoCitation to convert library
+// metadata fields (which mix Chinese annotations and Chinese commas)
+// into clean English citation text.
+function cleanEnglishField(raw: string): string {
+  if (!raw) return "";
+  let s = raw;
+  // Drop (...) / （...） groups containing any CJK
+  s = s.replace(/[（(][^）)]*[一-鿿][^）)]*[）)]/g, "");
+  // Drop a trailing 「；... CJK ...」 annotation (e.g. "；AI 中譯")
+  s = s.replace(/[；;]\s*[^;；]*[一-鿿][^;；]*$/g, "");
+  // Convert Chinese-comma to ASCII comma
+  s = s.replace(/、/g, ", ");
+  // Convert slash separators
+  s = s.replace(/／/g, " / ");
+  // Drop any remaining stray CJK (defensive)
+  s = s.replace(/[一-鿿]/g, "");
+  // Collapse whitespace + tidy commas
+  s = s.replace(/\s+/g, " ").replace(/\s*,\s*/g, ", ")
+       .replace(/,\s*$/g, "").trim();
+  return s;
+}
+// Join a comma-separated name list as Chicago's "A, B, and C" form.
+function joinNamesChicago(s: string): string {
+  if (!s) return "";
+  const parts = s.split(/,\s*/).filter(Boolean);
+  if (parts.length <= 1) return s;
+  if (parts.length === 2) return `${parts[0]} and ${parts[1]}`;
+  return parts.slice(0, -1).join(", ") + ", and " + parts[parts.length - 1];
+}
+
 function buildChicagoCitation(pageNum: number | null): string {
   const b = ebook.value;
   if (!b) return "";
+  // Pure English Chicago citation — no Chinese characters.
+  // Example output:
+  //   Alexander Roberts, James Donaldson, and A. Cleveland Coxe, eds.,
+  //   The Apostolic Fathers with Justin Martyr and Irenaeus (Edinburgh:
+  //   T&T Clark, 1885), p. 154.
+  const editor = joinNamesChicago(cleanEnglishField(b.translator || ""));
+  // author_en often holds the SUBJECT on compiled volumes (e.g. "Apostolic
+  // Fathers, Justin Martyr, Irenaeus of Lyon"); editor takes precedence
+  // when present. Single-author treatises use author_en directly.
+  const author = editor || cleanEnglishField(b.author_en || b.original_author || "");
+  const title = cleanEnglishField(b.original_title || b.title || "");
+  const loc = cleanEnglishField(b.publisher_location || "");
+  const pub = cleanEnglishField(b.publisher || "");
+  const year = (b.publication_year || "").toString();
+
   const parts: string[] = [];
-  // Author (Chinese if present, else English)
-  const author = b.author || b.author_en;
-  if (author) parts.push(author);
-  // Title (chinese) + original title in parens
-  const title = b.title?.replace(/（[^）]+）$/, "").trim() || "";
-  if (title) parts.push(`《${title}》`);
-  // Editor / translator
-  if (b.translator) parts.push(`${b.translator}`);
-  // Publisher (Location: Publisher, Year)
+  if (author) parts.push(editor ? `${author}, eds.` : author);
+  if (title) parts.push(title);
   const pubBits: string[] = [];
-  if (b.publisher_location) pubBits.push(b.publisher_location);
-  if (b.publisher) pubBits.push(b.publisher);
-  if (b.publication_year) pubBits.push(b.publication_year);
-  if (pubBits.length) parts.push(`（${pubBits.join("：")}）`);
-  // Page
-  if (pageNum !== null) parts.push(`頁 ${pageNum}`);
-  // Chapter context — helps readers who want chunk-level, not page-level, ref
-  const chap = pageVolume.value || cleanChapterLabel.value;
-  if (chap && !title.includes(chap)) parts.push(chap);
-  return parts.join("，") + "。";
+  if (loc) pubBits.push(loc);
+  if (pub) pubBits.push(pub + (year ? `, ${year}` : ""));
+  else if (year) pubBits.push(year);
+  if (pubBits.length) parts.push(`(${pubBits.join(": ")})`);
+  if (pageNum !== null) parts.push(`p. ${pageNum}`);
+  return parts.join(", ") + ".";
 }
+
+// Below this threshold (in characters), copy = native behavior (no citation
+// appended). Copying a single word / a page number / a footnote ref doesn't
+// need a Chicago footer; only meaningful quotes do.
+const COPY_CITATION_MIN_CHARS = 20;
 
 function onReaderCopy(e: ClipboardEvent) {
   const sel = window.getSelection();
@@ -2012,6 +2107,10 @@ function onReaderCopy(e: ClipboardEvent) {
   const article = (anchor as Element)?.closest?.("article")
                   || (anchor?.parentElement?.closest("article"));
   if (!article) return;
+
+  // Short selections — bare copy. The citation noise on a 3-word fragment
+  // is louder than the citation itself is useful.
+  if (selText.length < COPY_CITATION_MIN_CHARS) return;
 
   const pageNum = findNearestPageBeforeNode(anchor);
   const citation = buildChicagoCitation(pageNum);
