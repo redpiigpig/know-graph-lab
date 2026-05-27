@@ -2114,20 +2114,21 @@ useHead({ title: computed(() => ebook.value ? `${ebook.value.title} — 閱讀` 
   border-radius: 0 4px 4px 0;
   scroll-margin-top: 4rem;
 }
+/* Footnote body's (N) prefix — plain blue bold, no background. */
 .ebook-prose :deep(a.footnote-num) {
   color: #2563eb;
-  font-weight: 500;
+  font-weight: 700;
   text-decoration: none;
   font-variant-numeric: tabular-nums;
 }
 .ebook-prose :deep(a.footnote-num:hover) {
   text-decoration: underline;
 }
-/* Inline footnote reference — small superscript, blue, clickable. */
+/* Inline footnote reference — small blue bold superscript, no pill. */
 .ebook-prose :deep(sup.footnote-ref) {
-  font-size: 0.7em;
+  font-size: 0.75em;
   line-height: 0;
-  margin: 0 1px 0 2px;
+  margin: 0 1px 0 1px;
   vertical-align: super;
   scroll-margin-top: 6rem;     /* clear of sticky topbar when scrolled to */
   scroll-margin-bottom: 4rem;
@@ -2135,22 +2136,20 @@ useHead({ title: computed(() => ebook.value ? `${ebook.value.title} — 閱讀` 
 .ebook-prose :deep(sup.footnote-ref a) {
   color: #2563eb;
   text-decoration: none;
-  padding: 1px 4px;
-  border-radius: 3px;
-  font-weight: 600;
-  background: rgba(219, 234, 254, 0.45);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
 }
 .ebook-prose :deep(sup.footnote-ref a:hover) {
-  background: #93c5fd;
-  color: #fff;
+  text-decoration: underline;
+  color: #1d4ed8;
 }
-/* When :target is active, persistent highlight on the footnote ref the
-   user just navigated back to. Stays until they click somewhere else. */
+/* When :target is active, persistent highlight on the ref the user just
+   navigated back to. Underline instead of background so the prose visual
+   stays clean. */
 .ebook-prose :deep(sup.footnote-ref:target a) {
-  background: #fbbf24;
-  color: #0c0a09;
-  outline: 2px solid #d97706;
-  outline-offset: 1px;
+  text-decoration: underline;
+  text-decoration-color: #d97706;
+  text-decoration-thickness: 2px;
 }
 /* Back-link arrow on each footnote body paragraph. */
 .ebook-prose :deep(a.footnote-back) {
