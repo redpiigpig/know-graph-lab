@@ -5,7 +5,7 @@ description: 教宗訓導文獻對照工具（/encyclicals）— 4 世紀 Damasu
 
 # Papal Magisterium — 教宗訓導文獻對照
 
-> 🟢 **Status**: Phase 0 + 1B demo 已上線 2026-05-27（`/encyclicals` portal + Laudato Si' 2015 三欄對照 246 段齊全）。架構直接複用 [[scripture-canon-portal]] 的 creeds pipeline；資料層獨立 (`data/encyclicals/`) 但 `paragraphParser.ts` / `alignDocs()` 元件共用。
+> 🟢 **Status**: Phase 1-3 已上線 2026-05-28（`/encyclicals` portal + 62 篇通諭三/四欄對照齊全）— 涵蓋 1879 良十三 *Aeterni Patris* 至 2024 方濟各 *Dilexit Nos*，共 19c-21c 9 位教宗。架構直接複用 [[scripture-canon-portal]] 的 creeds pipeline；資料層獨立 (`data/encyclicals/`) 但 `paragraphParser.ts` / `alignDocs()` 元件共用。
 >
 > **本 skill 與 [[scripture-canon-portal]] 的分工**：
 > - scripture-canon-portal：**集體**文件（大公會議產出的信經 / canons / dogmatic decree）+ 信條 + 教會法規 + 教父著作搜尋 + 聖經對照 + 典外
@@ -457,18 +457,48 @@ https://www.documentacatholicaomnia.eu/04z/z_{ID}-{ID},_{Pope}_PP._{Roman},_{Tit
 - [x] 跨世紀教宗在多世紀同時出現（centuriesOfPope 從 pontificate 起訖推算）
 - [x] 19c-21c marquee 教宗保留 notesZh 詳述；4c-13c 重要教父教宗也補了 notesZh；其餘僅放姓名 + 任期 + 國籍
 
-### Ingested 文件
-- [x] **方濟各 2015 *Laudato Si'***（首篇 demo）— 三語 246 段齊全 + 172 footnote + 手譯 6 章節 42 個 section heading
+### Ingested 文件（總 62 篇，2026-05-28 大批 ingest 完成）
 
-### 待辦 ingest 順序（21c → 19c）
-- [ ] **方濟各**：Fratelli Tutti 2020 / Dilexit Nos 2024 / Lumen Fidei 2013（與本篤十六合著）
-- [ ] **本篤十六世**：Deus Caritas Est 2005 / Spe Salvi 2007 / Caritas in Veritate 2009
-- [ ] **若望保祿二世**：14 道通諭（Redemptor Hominis 1979 / Veritatis Splendor 1993 / Evangelium Vitae 1995 / Fides et Ratio 1998 / Ut Unum Sint 1995 等）
-- [ ] **保祿六世**：Humanae Vitae 1968 等 7 道通諭
-- [ ] **若望二十三世**：Pacem in Terris 1963 / Mater et Magistra 1961
-- [ ] **碧岳十二世**：Divino Afflante Spiritu 1943 / Munificentissimus Deus 1950（使徒憲令）/ Mystici Corporis 1943 等
-- [ ] **碧岳十一世**：Quadragesimo Anno 1931 / Casti Connubii 1930 / Mit brennender Sorge 1937
-- [ ] **良十三世**：Rerum Novarum 1891 ★ 起頭，88 道通諭中的 marquee 約 15 道
-- [ ] **碧岳九世**：Ineffabilis Deus 1854（使徒憲令）/ Quanta Cura + Syllabus 1864
+**21c (8 篇 全有中文)**
+- [x] 方濟各：Laudato Si' 2015 (★ demo 首篇) / Fratelli Tutti 2020 / Lumen Fidei 2013 / Dilexit Nos 2024 / Evangelii Gaudium 2013 (apostolic-exhort)
+- [x] 本篤十六世：Deus Caritas Est 2005 / Spe Salvi 2007 / Caritas in Veritate 2009
+
+**20c-21c 若望保祿二世 (14 篇，中文 5/14)**
+- [x] 全 14 道：Redemptor Hominis 1979 / Dives in Misericordia 1980 / Laborem Exercens 1981 / Slavorum Apostoli 1985 / Dominum et Vivificantem 1986 / Redemptoris Mater 1987 / Sollicitudo Rei Socialis 1987 / Redemptoris Missio 1990 / Centesimus Annus 1991 / Veritatis Splendor 1993 / Evangelium Vitae 1995 / Ut Unum Sint 1995 / Fides et Ratio 1998 / Ecclesia de Eucharistia 2003
+- 中文已有 5 篇：Redemptor Hominis / Redemptoris Missio / Evangelium Vitae / Fides et Ratio / Ecclesia de Eucharistia
+- 中文缺 8 篇：vatican.va 未提供官方中譯（Phase 6 紙本／catholic.org.tw 補）
+- Centesimus Annus 中譯 PDF 有 OCCD 編碼問題 pdftotext 抽不出 → placeholder
+
+**20c 保祿六世 (7 篇，中文 0/7)**
+- [x] Ecclesiam Suam 1964 / Mense Maio 1965 / Mysterium Fidei 1965 / Christi Matri 1966 / Populorum Progressio 1967 / Sacerdotalis Caelibatus 1967 / Humanae Vitae 1968
+- 所有保祿六世通諭 vatican.va 無中文版
+
+**20c 若望廿三世 (8 篇，中文 0/8)**
+- [x] Ad Petri Cathedram 1959 / Sacerdotii Nostri Primordia 1959 / Grata Recordatio 1959 / Princeps Pastorum 1959 / Mater et Magistra 1961 / Aeterna Dei Sapientia 1961 / Paenitentiam Agere 1962 / Pacem in Terris 1963
+- 所有若望廿三世通諭 vatican.va 無中文版
+
+**20c 碧岳十二世 (8 篇，中文 0/8)**
+- [x] Summi Pontificatus 1939 / Mystici Corporis 1943 / Divino Afflante Spiritu 1943 / Mediator Dei 1947 / Humani Generis 1950 / Evangelii Praecones 1951 / Fulgens Corona 1953 / Haurietis Aquas 1956
+- *Munificentissimus Deus* 1950（使徒憲令，聖母升天信理）暫未收
+
+**20c 碧岳十一世 (6 篇，中文 0/6)**
+- [x] Mortalium Animos 1928 / Divini Illius Magistri 1929 / Casti Connubii 1930 / Quadragesimo Anno 1931 / Mit Brennender Sorge 1937 / Divini Redemptoris 1937
+
+**19c 良十三世 (10 篇，中文 0/10)**
+- [x] Aeterni Patris 1879 / Arcanum Divinae 1880 / Humanum Genus 1884 / Immortale Dei 1885 / Libertas 1888 / Sapientiae Christianae 1890 / Rerum Novarum 1891 / Providentissimus Deus 1893 / Divinum Illud Munus 1897 / Annum Sacrum 1899
+
+### Pipeline 工具 (2026-05-28 大批入庫產出)
+- `scripts/scrape_papal_encyclical.py` — vatican.va HTML 抓取，支援 la/it/en/zh_tw 四語、_ftn/_edn 雙 footnote anchor、flat heading 偵測（FT 樣式 plain `<p>` 而非 `<b><i>`）、CJK 標點 heading filter、auto-space `131.X→131. X`
+- `scripts/postprocess_papal_chinese_pdf.py` — vatican.va 中文 PDF → marker text，含 opencc s2tw 自動簡轉繁、`N、` 中式段碼支援
+- `scripts/align_papal_headings.py` — EN 為 spine，將 la/it/zh headings 按 next-para 重新錨定
+- `scripts/ingest_papal_encyclical.py` — one-stop pipeline（scrape → PDF fallback 多 zh-* 變體 → align → 報告）；支援 `--doctype documents` 給 Pius IX 等舊 URL 格式
+- `scripts/_batch_papal_ingest.py` — 教宗等級批次（local, gitignored `/scripts/_*.py`）
+- `scripts/_gen_papal_metadata.py` — 教宗等級 .ts metadata 批次生成（local, gitignored）
+
+### 待辦
+- [ ] **碧岳九世 (Pius IX)**：Ineffabilis Deus 1854 / Quanta Cura 1864 / Syllabus Errorum — vatican.va URL pattern 為 `/pius-ix/{lang}/documents/{slug}.html`（無 `/encyclicals/` 中間段），且文本無 paragraph numbers → 需 `displayMode: 'simple'` 顯示與適配
+- [ ] **碧岳十世 / 本篤十五**：vatican.va 提供，下次批次補（Pius X 8 篇 / Benedict XV 12 篇）
 - [ ] **良十四世**（2025-）：等台灣主教團官方中譯發布後再 ingest
+- [ ] **中文補譯**（Phase 6）：保祿六／若望廿三／碧岳十二／十一／良十三共 39 篇缺中文 → catholic.org.tw scrape ／ 紙本 OCR（光啟《公教會之信仰與倫理教義選集》/ 《天主教大公會議文獻彙編》）
 - [ ] **4-15c 早期教宗**：等 [[fathers-translation]] / Schaff NPNF Vol 12-13 中譯成熟 → Phase 5 回頭 ingest
+- [ ] **Heading 對齊精修**：自動 align 對部分文件有誤差（如 Lumen Fidei 中文 HTML 結構特殊），可逐篇手寫 `fix_{slug}_chinese_headings.py`（參 fix_laudato_si_chinese_headings.py 模板）
