@@ -17,7 +17,7 @@
       <div class="mb-6">
         <h1 class="text-2xl font-bold text-gray-900 mb-1">🔤 教父文獻翻譯詞庫</h1>
         <p class="text-sm text-gray-500">
-          每筆同時保留<b>新教</b>與<b>天主教</b>兩種譯法；翻譯教父著作時依脈絡選用（天主教教父／拉丁西方文獻用天主教譯名，新教徒著作或新教讀者向書用新教譯名）。
+          每筆主譯名為 <span class="text-amber-700 font-medium">★ 中文翻譯</span>（建議採用，跨教派通用版本）。在<b>聖經人物</b>與<b>神學名詞</b>兩 tab 額外顯示<b>新教變體</b>與<b>天主教變體</b>欄，供脈絡需要時查閱（保羅／保祿、Logos／道／聖言 等）。
         </p>
       </div>
 
@@ -68,10 +68,14 @@
         <table class="w-full text-sm">
           <thead class="bg-stone-50 border-b border-gray-200 text-xs text-gray-600">
             <tr>
-              <th class="px-3 py-2 text-left font-medium" style="width:18%">英文</th>
-              <th class="px-3 py-2 text-left font-medium" style="width:18%">原文</th>
-              <th class="px-3 py-2 text-left font-medium" style="width:22%">新教翻譯</th>
-              <th class="px-3 py-2 text-left font-medium" style="width:22%">天主教翻譯</th>
+              <th class="px-3 py-2 text-left font-medium" style="width:16%">英文</th>
+              <th class="px-3 py-2 text-left font-medium" style="width:14%">原文</th>
+              <th class="px-3 py-2 text-left font-medium" style="width:18%">★ 中文翻譯</th>
+              <!-- 雙翻譯欄位只在「聖經人物」sub-tab 顯示 — 一般教父的譯名
+                   差異不大，多兩欄反而吵雜。聖經人物則常有保羅/保祿、
+                   彼得/伯多祿、約翰/若望 等明顯分歧。-->
+              <th v-if="activePersonEra === 'biblical'" class="px-3 py-2 text-left font-medium" style="width:16%">新教變體</th>
+              <th v-if="activePersonEra === 'biblical'" class="px-3 py-2 text-left font-medium" style="width:16%">天主教變體</th>
               <th class="px-3 py-2 text-left font-medium" style="width:20%">首次出現出處</th>
             </tr>
           </thead>
@@ -83,34 +87,45 @@
               >
                 <td class="px-3 py-2 font-medium text-gray-900">{{ row.name_english }}</td>
                 <td class="px-3 py-2 text-gray-700 font-serif">{{ row.name_original || '—' }}</td>
-                <td class="px-3 py-2 font-semibold text-stone-900">{{ row.name_protestant || row.name_recommended || '—' }}</td>
-                <td class="px-3 py-2 font-semibold text-stone-900">{{ row.name_catholic_sgs || '—' }}</td>
+                <td class="px-3 py-2 font-semibold text-amber-700">{{ row.name_recommended || '—' }}</td>
+                <td v-if="activePersonEra === 'biblical'" class="px-3 py-2 text-gray-700">{{ row.name_protestant || '—' }}</td>
+                <td v-if="activePersonEra === 'biblical'" class="px-3 py-2 text-gray-700">{{ row.name_catholic_sgs || '—' }}</td>
                 <td class="px-3 py-2 text-gray-600 text-xs">{{ row.first_source || '—' }}</td>
               </tr>
               <tr v-if="expanded === row.id" class="border-b border-gray-200 bg-stone-50/40">
-                <td colspan="5" class="px-5 py-4">
-                  <div v-if="!editMode" class="text-xs text-gray-700 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <td :colspan="activePersonEra === 'biblical' ? 6 : 4" class="px-5 py-4">
+                  <div v-if="!editMode" class="text-xs text-gray-700 grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div>
-                      <div class="text-gray-500 mb-1">新教翻譯</div>
-                      <div class="text-stone-900 font-medium">{{ row.name_protestant || row.name_recommended || '—' }}</div>
+                      <div class="text-gray-500 mb-1">★ 中文翻譯（建議採用）</div>
+                      <div class="text-amber-700 font-medium">{{ row.name_recommended || '—' }}</div>
                     </div>
                     <div>
-                      <div class="text-gray-500 mb-1">天主教翻譯</div>
-                      <div class="text-stone-900 font-medium">{{ row.name_catholic_sgs || '—' }}</div>
+                      <div class="text-gray-500 mb-1">新教變體</div>
+                      <div class="text-stone-900">{{ row.name_protestant || '—' }}</div>
                     </div>
                     <div>
+                      <div class="text-gray-500 mb-1">天主教變體</div>
+                      <div class="text-stone-900">{{ row.name_catholic_sgs || '—' }}</div>
+                    </div>
+                    <div class="md:col-span-3">
                       <div class="text-gray-500 mb-1">首次出現出處</div>
                       <div class="text-stone-700">{{ row.first_source || '—' }}</div>
                     </div>
-                    <div v-if="row.recommendation_reason" class="md:col-span-2">
+                    <div v-if="row.recommendation_reason" class="md:col-span-3">
                       <div class="text-gray-500 mb-1">備註</div>
                       <div class="text-gray-800 whitespace-pre-wrap">{{ row.recommendation_reason }}</div>
                     </div>
                   </div>
                   <div v-else class="flex flex-col gap-2 text-xs">
-                    <div class="grid grid-cols-2 gap-2">
+                    <label class="text-gray-500">★ 中文翻譯（建議採用）</label>
+                    <input
+                      v-model="editPerson.name_recommended"
+                      class="px-2 py-1 border border-gray-300 rounded w-full"
+                      placeholder="建議採用的譯名"
+                    />
+                    <div class="grid grid-cols-2 gap-2 mt-1">
                       <div>
-                        <label class="text-gray-500">新教翻譯</label>
+                        <label class="text-gray-500">新教變體</label>
                         <input
                           v-model="editPerson.name_protestant"
                           class="px-2 py-1 border border-gray-300 rounded w-full"
@@ -118,7 +133,7 @@
                         />
                       </div>
                       <div>
-                        <label class="text-gray-500">天主教翻譯</label>
+                        <label class="text-gray-500">天主教變體</label>
                         <input
                           v-model="editPerson.name_catholic_sgs"
                           class="px-2 py-1 border border-gray-300 rounded w-full"
@@ -162,7 +177,7 @@
               </tr>
             </template>
             <tr v-if="filteredPeople.length === 0">
-              <td colspan="5" class="px-3 py-12 text-center text-sm text-gray-400">
+              <td :colspan="activePersonEra === 'biblical' ? 6 : 4" class="px-3 py-12 text-center text-sm text-gray-400">
                 {{ theologians.length === 0 ? '尚無資料 — 請執行 scripts/seed_translation_glossary.py 批次填入' : '無符合搜尋條件的項目' }}
               </td>
             </tr>
@@ -176,10 +191,13 @@
         <table class="w-full text-sm">
           <thead class="bg-stone-50 border-b border-gray-200 text-xs text-gray-600">
             <tr>
-              <th class="px-3 py-2 text-left font-medium" style="width:18%">英文</th>
-              <th class="px-3 py-2 text-left font-medium" style="width:18%">原文</th>
-              <th class="px-3 py-2 text-left font-medium" style="width:22%">新教翻譯</th>
-              <th class="px-3 py-2 text-left font-medium" style="width:22%">天主教翻譯</th>
+              <th class="px-3 py-2 text-left font-medium" style="width:16%">英文</th>
+              <th class="px-3 py-2 text-left font-medium" style="width:14%">原文</th>
+              <th class="px-3 py-2 text-left font-medium" style="width:18%">★ 中文翻譯</th>
+              <!-- 神學名詞 tab 才顯示雙翻譯欄；地名／作品名／教派名通常
+                   只有一個譯法（差異在於有沒有人翻過而已），雙欄沒意義。-->
+              <th v-if="activeTab === 'term'" class="px-3 py-2 text-left font-medium" style="width:16%">新教變體</th>
+              <th v-if="activeTab === 'term'" class="px-3 py-2 text-left font-medium" style="width:16%">天主教變體</th>
               <th class="px-3 py-2 text-left font-medium" style="width:20%">首次出現出處</th>
             </tr>
           </thead>
@@ -191,34 +209,45 @@
               >
                 <td class="px-3 py-2 font-medium text-gray-900">{{ row.term_english }}</td>
                 <td class="px-3 py-2 text-gray-700 font-serif">{{ row.term_original || '—' }}</td>
-                <td class="px-3 py-2 font-semibold text-stone-900">{{ row.zh_protestant || row.zh_recommended || '—' }}</td>
-                <td class="px-3 py-2 font-semibold text-stone-900">{{ row.zh_catholic_sgs || '—' }}</td>
+                <td class="px-3 py-2 font-semibold text-amber-700">{{ row.zh_recommended || '—' }}</td>
+                <td v-if="activeTab === 'term'" class="px-3 py-2 text-gray-700">{{ row.zh_protestant || '—' }}</td>
+                <td v-if="activeTab === 'term'" class="px-3 py-2 text-gray-700">{{ row.zh_catholic_sgs || '—' }}</td>
                 <td class="px-3 py-2 text-gray-600 text-xs">{{ row.first_source || '—' }}</td>
               </tr>
               <tr v-if="expanded === row.id" class="border-b border-gray-200 bg-stone-50/40">
-                <td colspan="5" class="px-5 py-4">
-                  <div v-if="!editMode" class="text-xs text-gray-700 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <td :colspan="activeTab === 'term' ? 6 : 4" class="px-5 py-4">
+                  <div v-if="!editMode" class="text-xs text-gray-700 grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div>
-                      <div class="text-gray-500 mb-1">新教翻譯</div>
-                      <div class="text-stone-900 font-medium">{{ row.zh_protestant || row.zh_recommended || '—' }}</div>
+                      <div class="text-gray-500 mb-1">★ 中文翻譯（建議採用）</div>
+                      <div class="text-amber-700 font-medium">{{ row.zh_recommended || '—' }}</div>
                     </div>
                     <div>
-                      <div class="text-gray-500 mb-1">天主教翻譯</div>
-                      <div class="text-stone-900 font-medium">{{ row.zh_catholic_sgs || '—' }}</div>
+                      <div class="text-gray-500 mb-1">新教變體</div>
+                      <div class="text-stone-900">{{ row.zh_protestant || '—' }}</div>
                     </div>
                     <div>
+                      <div class="text-gray-500 mb-1">天主教變體</div>
+                      <div class="text-stone-900">{{ row.zh_catholic_sgs || '—' }}</div>
+                    </div>
+                    <div class="md:col-span-3">
                       <div class="text-gray-500 mb-1">首次出現出處</div>
                       <div class="text-stone-700">{{ row.first_source || '—' }}</div>
                     </div>
-                    <div v-if="row.definition_zh" class="md:col-span-2">
+                    <div v-if="row.definition_zh" class="md:col-span-3">
                       <div class="text-gray-500 mb-1">中文釋義</div>
                       <div class="text-gray-800 whitespace-pre-wrap">{{ row.definition_zh }}</div>
                     </div>
                   </div>
                   <div v-else class="flex flex-col gap-2 text-xs">
-                    <div class="grid grid-cols-2 gap-2">
+                    <label class="text-gray-500">★ 中文翻譯（建議採用）</label>
+                    <input
+                      v-model="editTerm.zh_recommended"
+                      class="px-2 py-1 border border-gray-300 rounded w-full"
+                      placeholder="建議採用的譯名"
+                    />
+                    <div class="grid grid-cols-2 gap-2 mt-1">
                       <div>
-                        <label class="text-gray-500">新教翻譯</label>
+                        <label class="text-gray-500">新教變體</label>
                         <input
                           v-model="editTerm.zh_protestant"
                           class="px-2 py-1 border border-gray-300 rounded w-full"
@@ -226,7 +255,7 @@
                         />
                       </div>
                       <div>
-                        <label class="text-gray-500">天主教翻譯</label>
+                        <label class="text-gray-500">天主教變體</label>
                         <input
                           v-model="editTerm.zh_catholic_sgs"
                           class="px-2 py-1 border border-gray-300 rounded w-full"
@@ -262,7 +291,7 @@
               </tr>
             </template>
             <tr v-if="filteredTerms.length === 0">
-              <td colspan="5" class="px-3 py-12 text-center text-sm text-gray-400">
+              <td :colspan="activeTab === 'term' ? 6 : 4" class="px-3 py-12 text-center text-sm text-gray-400">
                 {{ filteredTerms.length === 0 && tabCount(activeTab) === 0 ? '此類別尚無資料，編輯模式 → + 新增 開始填入' : '無符合搜尋條件的項目' }}
               </td>
             </tr>
@@ -362,9 +391,15 @@ async function addNew() {
     // For new entries, use the currently-active era sub-tab (or 'early'
     // when 「全部」 is selected — user can change after via edit modal).
     const era = activePersonEra.value === 'all' ? 'early' : activePersonEra.value
+    // Store the user-supplied translation as both the recommended value
+    // AND the protestant slot, so the row shows up consistently in the
+    // ★ 中文翻譯 column and (for biblical figures) in the dual columns.
+    // User can refine via edit modal afterwards.
     const { data, error } = await supabase.from('theologians').insert({
       name_english: english, name_original: original, name_latin_std: english,
-      name_recommended: chinese, first_source: source,
+      name_recommended: chinese,
+      name_protestant: chinese,
+      first_source: source,
       person_era: era,
     }).select().single()
     if (error) { alert('新增失敗：' + error.message); return }
@@ -372,7 +407,9 @@ async function addNew() {
   } else {
     const { data, error } = await supabase.from('theological_terms').insert({
       term_english: english, term_original: original,
-      zh_recommended: chinese, first_source: source,
+      zh_recommended: chinese,
+      zh_protestant: chinese,
+      first_source: source,
       entity_type: activeTab.value,
     }).select().single()
     if (error) { alert('新增失敗：' + error.message); return }
@@ -409,11 +446,8 @@ function toggleExpand(id: string) {
   if (activeTab.value === 'people') {
     const row = theologians.value.find(r => r.id === id)
     editPerson.value = {
-      // Dual translations. Pre-fill the protestant slot with whatever
-      // value was previously sitting in name_recommended (the v1 single-
-      // translation field) when name_protestant itself is empty, so old
-      // seeded rows don't appear blank in the new dual-column UI.
-      name_protestant: row?.name_protestant || row?.name_recommended || '',
+      name_recommended: row?.name_recommended || '',
+      name_protestant: row?.name_protestant || '',
       name_catholic_sgs: row?.name_catholic_sgs || '',
       first_source: row?.first_source || '',
       person_era: row?.person_era || 'early',
@@ -422,7 +456,8 @@ function toggleExpand(id: string) {
   } else {
     const row = terms.value.find(r => r.id === id)
     editTerm.value = {
-      zh_protestant: row?.zh_protestant || row?.zh_recommended || '',
+      zh_recommended: row?.zh_recommended || '',
+      zh_protestant: row?.zh_protestant || '',
       zh_catholic_sgs: row?.zh_catholic_sgs || '',
       first_source: row?.first_source || '',
       definition_zh: row?.definition_zh || '',
