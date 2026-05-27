@@ -155,7 +155,10 @@ TERM_FIXES_ANF_VOL_2 = {
     # Smyrna — Vol 1 standard 士每拿
     "士麥那": "士每拿",
     # Clement of Alexandria — volume uses 革利免 (亞歷山卓)
+    # 革利免 是希臘文 Κλήμης (Klemēs) 的音譯，思高/和合本/教會傳統都用此譯名；
+    # 不要被 LLM 校對誤導改成英文音譯「克雷門」。
     "克萊門": "革利免",
+    "克雷門": "革利免",
     # Valentinus — Vol 1 standard 瓦倫廷
     "瓦倫提努": "瓦倫廷",
     "華倫提奴": "瓦倫廷",
@@ -178,8 +181,19 @@ TERM_FIXES_ANF_VOL_2 = {
     "木星": "朱庇特",
     # Aristion (Vol 1 convention from Papias)
     "亞里斯頓": "亞里斯鐸",
-    # Typos seen
+    # Typos seen — 違揹 (carry-on-back) is wrong for 違背 (violate)
+    "違揹": "違背",
     "平安安": "平安",
+    # Autolycus — addressee of Theophilus's letter; normalize to 奧托呂庫
+    "奧託呂庫": "奧托呂庫",
+    "歐多呂庫": "奧托呂庫",
+    "奧多利古": "奧托呂庫",
+    "歐多魯克": "奧托呂庫",
+    # Cassian — proper transliteration is 卡西安 (Protestant); 格西安 is wrong
+    "若望‧格西安": "卡西安",
+    "格西安": "卡西安",
+    # Sicyon — Greek city; standardize to 西錫翁
+    "錫錫翁": "西錫翁",
 }
 
 # ── ANF Vol 3 — Tertullian (Apologetic + Anti-Marcion + Ethical) ────────
@@ -227,6 +241,19 @@ TERM_FIXES_ANF_VOL_3 = {
     "赫拉克勒斯": "海格力斯",
     # Jupiter (Vol 1 convention)
     "木星": "朱庇特",
+    # Typo
+    "違揹": "違背",
+    "對峙巖": "對峙岩",
+    # Perpetua/Felicitas — Vol 3 glossary 統一為 佩爾佩圖亞 / 費莉西塔斯
+    "永卓": "佩爾佩圖亞",
+    "費利西塔斯": "費莉西塔斯",  # 利 vs 莉
+    "費利西塔": "費莉西塔斯",
+    "菲莉西妲": "費莉西塔斯",
+    # Saturus / Saturninus — Vol 3 詞庫 薩圖爾努斯
+    "薩圖魯": "薩圖爾努斯",  # Note: 撒圖魯 is Saturus (different person), keep separate
+    # Jupiter — Vol 1 標準 朱庇特
+    "奧林匹亞宙斯": "奧林匹斯的朱庇特",
+    "盧米娜神": "魯米娜神",
 }
 
 TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {

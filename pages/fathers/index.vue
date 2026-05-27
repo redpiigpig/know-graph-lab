@@ -96,6 +96,8 @@ const q = ref('')
 // column later).
 const REFINED_IDS = new Set([
   'c98d358d-7066-4691-a896-b7232707b0db',  // ANF Vol 1
+  '4e3d16fc-ef4f-420f-a3ec-56e2e92d659f',  // ANF Vol 2 (Hermas/Tatian/Athenagoras/Theophilus/Clement of Alexandria)
+  '364dac2e-410f-4906-be63-8bb86b4865ee',  // ANF Vol 3 (Tertullian)
 ])
 
 const series = [
