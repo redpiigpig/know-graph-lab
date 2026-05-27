@@ -108,17 +108,32 @@ def print_status(state: dict) -> None:
                 break
 
 
+def _run_subscript(script: str, args: list[str], logf, label: str) -> bool:
+    """Run a scripts/X.py with extra args, logging stdout/stderr into `logf`.
+    Returns True on rc==0."""
+    cmd = [sys.executable, "-u", str(ROOT / "scripts" / script), *args]
+    logf.write(f"\n\n══════ {label} ══════\n$ {' '.join(cmd)}\n")
+    logf.flush()
+    proc = subprocess.Popen(cmd, stdout=logf, stderr=subprocess.STDOUT, cwd=str(ROOT))
+    rc = proc.wait()
+    logf.write(f"\n→ {label}: rc={rc}\n")
+    logf.flush()
+    return rc == 0
+
+
 def run_one(series: str, vol: int, ebook_id: str, title: str, engine: str) -> tuple[bool, str]:
-    """Run translate_ebook_to_zh.py --resume on one book. Returns (success, log_path)."""
+    """Run the full post-translate pipeline on one book:
+       1. translate_ebook_to_zh.py --resume   (the actual translation)
+       2. polish_translated_book.py           (chapter_path cleanup + volume tags)
+       3. extract_epub_extras.py              (footnotes + page numbers)
+       4. consolidate_by_ncx.py               (chunk consolidation by NCX letter tree)
+
+    Steps 2-4 are best-effort: a failure in polish/extract/consolidate logs
+    the error but doesn't fail the book (translation is what matters most;
+    post-processing can be re-run via `python scripts/X.py <ebook_id>`).
+    Returns (translate_success, log_path)."""
     timestamp = datetime.now().strftime("%Y-%m-%d_%H%M%S")
     log_path = LOGS_DIR / f"translate_{series}_vol{vol:02d}_{timestamp}.log"
-    cmd = [
-        sys.executable, "-u",
-        str(ROOT / "scripts" / "translate_ebook_to_zh.py"),
-        ebook_id,
-        "--engine", engine,
-        "--resume",
-    ]
     print(f"\n┌────────────────────────────────────────────────────────────────")
     print(f"│ {series} Vol {vol} — {title}")
     print(f"│ ebook_id={ebook_id}")
@@ -128,14 +143,40 @@ def run_one(series: str, vol: int, ebook_id: str, title: str, engine: str) -> tu
     with open(log_path, "w", encoding="utf-8") as logf:
         logf.write(f"# {series} Vol {vol} | {title}\n# {ebook_id}\n# engine={engine}\n# started {datetime.now().isoformat()}\n\n")
         logf.flush()
-        proc = subprocess.Popen(cmd, stdout=logf, stderr=subprocess.STDOUT, cwd=str(ROOT))
-        # We don't capture output here; tail the log to see progress.
-        rc = proc.wait()
+        # Step 1: translate
+        translate_ok = _run_subscript(
+            "translate_ebook_to_zh.py",
+            [ebook_id, "--engine", engine, "--resume"],
+            logf, "STEP 1/4: TRANSLATE"
+        )
+        if not translate_ok:
+            elapsed = time.time() - t0
+            print(f"\n  → TRANSLATE FAILED  duration={fmt_dur(elapsed)}  log={log_path}", flush=True)
+            return False, str(log_path)
+
+        # Steps 2-4: post-translate polish (best-effort; rc!=0 logged but tolerated)
+        polish_ok = _run_subscript(
+            "polish_translated_book.py", [ebook_id],
+            logf, "STEP 2/4: POLISH (chapter_path + volume tags)"
+        )
+        extras_ok = _run_subscript(
+            "extract_epub_extras.py", [ebook_id],
+            logf, "STEP 3/4: EXTRACT EPUB EXTRAS (footnotes + page numbers)"
+        )
+        consol_ok = _run_subscript(
+            "consolidate_by_ncx.py", [ebook_id],
+            logf, "STEP 4/4: CONSOLIDATE BY NCX (chunk merge by letter)"
+        )
+        logf.write(
+            f"\n══════ Pipeline summary ══════\n"
+            f"  translate:   {'OK' if translate_ok else 'FAIL'}\n"
+            f"  polish:      {'OK' if polish_ok else 'FAIL (book still usable)'}\n"
+            f"  extras:      {'OK' if extras_ok else 'FAIL (book still usable)'}\n"
+            f"  consolidate: {'OK' if consol_ok else 'FAIL (book still usable)'}\n"
+        )
     elapsed = time.time() - t0
-    ok = rc == 0
-    status = "OK" if ok else f"FAILED (exit {rc})"
-    print(f"\n  → {status}  duration={fmt_dur(elapsed)}  log={log_path}", flush=True)
-    return ok, str(log_path)
+    print(f"\n  → OK  duration={fmt_dur(elapsed)}  log={log_path}", flush=True)
+    return True, str(log_path)
 
 
 def main():
