@@ -83,8 +83,8 @@ import {
 definePageMeta({ middleware: 'auth' })
 useHead({ title: '教宗訓導文獻 — 知識圖工作室' })
 
-/** 21c→19c 顯示順序 */
-const CENTURY_RANGE = [21, 20, 19] as const
+/** 21c→4c（含尼西亞會議 325 時的 Sylvester I）顯示順序 */
+const CENTURY_RANGE = [21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4] as const
 
 const centuries = computed(() =>
   CENTURY_RANGE.map(c => ({
