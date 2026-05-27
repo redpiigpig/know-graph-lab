@@ -439,13 +439,36 @@ https://www.documentacatholicaomnia.eu/04z/z_{ID}-{ID},_{Pope}_PP._{Roman},_{Tit
 
 ## 10. Status snapshot
 
-- [x] `data/encyclicals/types.ts` + `index.ts` + `popes-catalog.ts` + `textLoader.ts`（Phase 0 scaffold；popes-catalog 含 21c→19c 共 12 位教宗）
-- [x] `pages/encyclicals/index.vue` + `[slug].vue`（三欄對照，借 `~/data/creeds/paragraphParser` 的 `parseDoc` + `alignDocs`）
-- [x] `/scripture-canon` 第 7 卡片「🕊️ 教宗訓導文獻」
-- [x] **Phase 1B 首篇 demo**：Francis 2015 *Laudato Si'* 三語 246 段齊全（vatican.va `/la/` + `/en/` HTML + `/zh_tw/` 主教團 PDF → pdftotext layout → 後處理腳本標記化）。172 個 footnote 對齊。
+### Scaffold + 架構
+- [x] `data/encyclicals/types.ts` + `index.ts` + `popes-catalog.ts` + `textLoader.ts`
 - [x] `paragraphParser.ts` 段號上限從 200 提升到 600（encyclical 常有 246-288 段）
-- [x] 兩支腳本：`scripts/scrape_papal_encyclical.py`（vatican.va HTML 通用 scraper）+ `scripts/postprocess_papal_chinese_pdf.py`（中文 PDF layout → 段號標記化）
-- [ ] 下一批 21c：Francis *Fratelli Tutti* 2020 / *Dilexit Nos* 2024 / *Lumen Fidei* 2013；Benedict XVI 三道通諭
-- [ ] 20c：John Paul II 14 道通諭；Paul VI *Humanae Vitae* 1968
-- [ ] 19c：Leo XIII *Rerum Novarum* 1891；Pius IX 信理定義系列
-- [ ] 等 [[fathers]] / Schaff NPNF Vol 12-13 中譯成熟 → Phase 5 回頭 ingest 4-15c
+- [x] 兩支抓檔腳本：`scripts/scrape_papal_encyclical.py`（vatican.va HTML 通用）+ `scripts/postprocess_papal_chinese_pdf.py`（中文 PDF layout → 段號標記化）
+- [x] `scripts/fix_laudato_si_chinese_headings.py`：英文段標題→手譯映射，覆寫中文 PDF 抽出的雜亂 headings（每篇都需要這類專屬 fix 腳本，因 vatican.va 中文 PDF 排版各異）
+
+### UI（三層 drill-down）
+- [x] `/scripture-canon` 第 7 卡片「🕊️ 教宗訓導文獻」
+- [x] `/encyclicals` — 上下排列的長型世紀卡片（21c→4c 共 18 張），每張只列教宗聖號（· 分隔，無括號注釋）
+- [x] `/encyclicals/century/[century]` — 該世紀教宗列表，跨世紀者兩邊都有並掛「跨世紀」chip
+- [x] `/encyclicals/pope/[slug]` — 教宗 profile + 訓導文件依類別分組
+- [x] `/encyclicals/[slug]` — 三欄對照 detail，breadcrumb（🕊️/世紀/教宗/文件）
+
+### 教宗名錄（**231 位 — 4c Sylvester I → 21c Leo XIV 全收**，2026-05-27 完成）
+- [x] 中文聖號採思高聖經學會＋台灣主教團官方譯名
+- [x] 跨世紀教宗在多世紀同時出現（centuriesOfPope 從 pontificate 起訖推算）
+- [x] 19c-21c marquee 教宗保留 notesZh 詳述；4c-13c 重要教父教宗也補了 notesZh；其餘僅放姓名 + 任期 + 國籍
+
+### Ingested 文件
+- [x] **方濟各 2015 *Laudato Si'***（首篇 demo）— 三語 246 段齊全 + 172 footnote + 手譯 6 章節 42 個 section heading
+
+### 待辦 ingest 順序（21c → 19c）
+- [ ] **方濟各**：Fratelli Tutti 2020 / Dilexit Nos 2024 / Lumen Fidei 2013（與本篤十六合著）
+- [ ] **本篤十六世**：Deus Caritas Est 2005 / Spe Salvi 2007 / Caritas in Veritate 2009
+- [ ] **若望保祿二世**：14 道通諭（Redemptor Hominis 1979 / Veritatis Splendor 1993 / Evangelium Vitae 1995 / Fides et Ratio 1998 / Ut Unum Sint 1995 等）
+- [ ] **保祿六世**：Humanae Vitae 1968 等 7 道通諭
+- [ ] **若望二十三世**：Pacem in Terris 1963 / Mater et Magistra 1961
+- [ ] **碧岳十二世**：Divino Afflante Spiritu 1943 / Munificentissimus Deus 1950（使徒憲令）/ Mystici Corporis 1943 等
+- [ ] **碧岳十一世**：Quadragesimo Anno 1931 / Casti Connubii 1930 / Mit brennender Sorge 1937
+- [ ] **良十三世**：Rerum Novarum 1891 ★ 起頭，88 道通諭中的 marquee 約 15 道
+- [ ] **碧岳九世**：Ineffabilis Deus 1854（使徒憲令）/ Quanta Cura + Syllabus 1864
+- [ ] **良十四世**（2025-）：等台灣主教團官方中譯發布後再 ingest
+- [ ] **4-15c 早期教宗**：等 [[fathers-translation]] / Schaff NPNF Vol 12-13 中譯成熟 → Phase 5 回頭 ingest
