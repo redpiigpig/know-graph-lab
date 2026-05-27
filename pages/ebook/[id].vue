@@ -417,12 +417,26 @@
                 class="bilingual-rows"
                 @mouseup="onTextSelectionEnd"
                 @click="onContentClick">
+                <!-- Body paragraphs paired row-by-row -->
                 <div v-for="(pair, idx) in paragraphPairs" :key="idx"
                   class="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-x-8 gap-y-1 py-1">
                   <div class="ebook-prose" v-html="pair.zh"></div>
                   <div class="ebook-prose ebook-prose-en lg:border-l lg:border-stone-100 lg:pl-8"
                     v-html="pair.en"></div>
                 </div>
+                <!-- Unified footnote section, aligned BY NUMBER so a missing
+                     (45)/(46) in the EN side doesn't bump (47) onto the wrong
+                     row. Header spans both columns; each footnote is one row
+                     with zh + en cells. -->
+                <section v-if="footnotePairs.length" class="bilingual-footnotes ebook-prose">
+                  <div class="footnotes-label">註　釋</div>
+                  <div v-for="fn in footnotePairs" :key="fn.num"
+                    class="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-x-8 footnote-row">
+                    <div v-html="fn.zh || '&nbsp;'"></div>
+                    <div class="ebook-prose-en lg:border-l lg:border-stone-100 lg:pl-8"
+                      v-html="fn.en || '&nbsp;'"></div>
+                  </div>
+                </section>
               </div>
             </template>
 
@@ -716,9 +730,10 @@ const expandedVolumes = ref<Set<string>>(new Set());
 // the row toggles its volume children visible.
 const expandedParents = ref<Set<string>>(new Set());
 const annotationsPanelOpen = ref(false);
-// TOC drawer: defaults open on desktop (lg+), can be toggled via topbar
-// 📑 button on any screen. We start open and let the user close it.
-const tocDrawerOpen = ref(true);
+// TOC drawer: defaults CLOSED. User toggles it via topbar 📑 button when
+// needed. Keeping it closed by default gives the reader full reading-area
+// width on open; the drawer is one click away.
+const tocDrawerOpen = ref(false);
 
 // ── Edit modal (in-place chunk editing) ──
 // Opens via ✏️ topbar button; lets the user fix translation errors, wrong
@@ -1137,13 +1152,49 @@ const sourceHtml = computed(() => pageSourceText.value
 // blank line in source markdown) pairs with the matching translated
 // paragraph. If counts differ (LLM occasionally splits or merges), pad with
 // empty cells so the surviving paragraphs stay on the correct row.
+//
+// Footnote section gets SPECIAL handling — when paragraph counts diverge
+// in the footnote tail (the LLM occasionally drops/merges footnote
+// entries), row-by-row pairing produces 「Chinese (45)↔English (47)」
+// misalignment. So we split each side into [body, footnotes], pair the
+// body row-by-row as before, and align the footnotes BY NUMBER in a
+// separate unified bottom block.
 function splitParagraphs(md: string): string[] {
   return md.split(/\n{2,}/).map(p => p.trim()).filter(Boolean);
 }
+// A footnote-section separator is 15+ em-dashes / hyphens on its own.
+// Identical to the renderMarkdown detector to keep behavior consistent.
+const FOOTNOTE_SEP_RE = /^[—－\-]{15,}$/;
+function splitBodyAndFootnotes(md: string): { body: string[]; footnotes: string[] } {
+  const paras = splitParagraphs(md);
+  const sepIdx = paras.findIndex(p => FOOTNOTE_SEP_RE.test(p));
+  if (sepIdx < 0) return { body: paras, footnotes: [] };
+  return { body: paras.slice(0, sepIdx), footnotes: paras.slice(sepIdx + 1) };
+}
+// Parse a footnote paragraph into { num, text } by matching the leading
+// `(N) ` prefix. Returns null when the paragraph doesn't look like a
+// numbered footnote body (e.g. continuation lines, or a 2nd separator).
+function parseFootnoteItem(p: string): { num: number; text: string } | null {
+  const m = p.match(/^\((\d+)\)\s*([\s\S]*)$/);
+  if (!m) return null;
+  return { num: parseInt(m[1], 10), text: m[2] };
+}
+// Render a single footnote body with the (N) and ↩ anchors that link back
+// to the in-text superscript ref. `chunkIdx` is the namespace this column
+// uses (ZH and EN columns use different namespaces to avoid id collision).
+function renderFootnoteItem(num: number, text: string, chunkIdx: number): string {
+  const inner = inlineFmt(escapeHtml(text), chunkIdx).replace(/\n/g, " ");
+  return (
+    `<p class="footnote-item" id="fn-${chunkIdx}-${num}">` +
+    `<a href="#fnref-${chunkIdx}-${num}" class="footnote-num" title="回到正文">(${num})</a> ` +
+    `${inner} ` +
+    `<a href="#fnref-${chunkIdx}-${num}" class="footnote-back" title="回到正文">↩</a></p>`
+  );
+}
 const paragraphPairs = computed<{ zh: string; en: string }[]>(() => {
   if (!pageContent.value || !pageSourceText.value) return [];
-  const zh = splitParagraphs(pageContent.value);
-  const en = splitParagraphs(pageSourceText.value);
+  const zh = splitBodyAndFootnotes(pageContent.value).body;
+  const en = splitBodyAndFootnotes(pageSourceText.value).body;
   const n = Math.max(zh.length, en.length);
   const out: { zh: string; en: string }[] = [];
   const zhChunkIdx = currentPage.value - 1;
@@ -1155,6 +1206,39 @@ const paragraphPairs = computed<{ zh: string; en: string }[]>(() => {
     });
   }
   return out;
+});
+// Footnote pairs aligned by footnote NUMBER (not paragraph index). Each
+// row has zh + en cells; either side can be empty if the LLM dropped that
+// footnote in the other language. Continuation paragraphs (one footnote
+// spanning multiple paragraphs) get appended to the last-seen item.
+function parseFootnoteColumn(paras: string[], chunkIdx: number): Map<number, string> {
+  const out = new Map<number, string>();
+  let lastNum: number | null = null;
+  for (const p of paras) {
+    if (FOOTNOTE_SEP_RE.test(p)) continue;
+    const item = parseFootnoteItem(p);
+    if (item) {
+      out.set(item.num, renderFootnoteItem(item.num, item.text, chunkIdx));
+      lastNum = item.num;
+    } else if (lastNum !== null) {
+      // Continuation — append as bare paragraph after the prior item.
+      const html = `<p class="footnote-continuation">${inlineFmt(escapeHtml(p), chunkIdx)}</p>`;
+      out.set(lastNum, (out.get(lastNum) ?? "") + html);
+    }
+  }
+  return out;
+}
+const footnotePairs = computed<{ num: number; zh: string; en: string }[]>(() => {
+  if (!pageContent.value || !pageSourceText.value) return [];
+  const zhPart = splitBodyAndFootnotes(pageContent.value).footnotes;
+  const enPart = splitBodyAndFootnotes(pageSourceText.value).footnotes;
+  if (!zhPart.length && !enPart.length) return [];
+  const zhChunkIdx = currentPage.value - 1;
+  const enChunkIdx = zhChunkIdx + 100000;
+  const zh = parseFootnoteColumn(zhPart, zhChunkIdx);
+  const en = parseFootnoteColumn(enPart, enChunkIdx);
+  const nums = [...new Set([...zh.keys(), ...en.keys()])].sort((a, b) => a - b);
+  return nums.map(n => ({ num: n, zh: zh.get(n) ?? "", en: en.get(n) ?? "" }));
 });
 
 // ── DOM-based highlight applier (handles cross-paragraph + multi-occurrence) ──
@@ -2243,13 +2327,27 @@ useHead({ title: computed(() => ebook.value ? `${ebook.value.title} — 閱讀` 
 /* Footnote section —章末註釋區。Smaller font, ornamental separator,
    each entry's (N) label is a clickable anchor (URL hash) so users can
    right-click → copy link to a specific note. */
-.ebook-prose :deep(section.footnotes) {
+.ebook-prose :deep(section.footnotes),
+.bilingual-footnotes {
   margin-top: 4rem;
   padding-top: 0;
-  font-size: 13.5px;
-  line-height: 1.9;
+  font-size: 12.5px;
+  line-height: 1.85;
   color: #57534e;
   position: relative;
+}
+/* Bilingual footnote block — full-width container, header spans, each
+   row is its own grid. Numbers align across columns regardless of count
+   mismatches between languages. */
+.bilingual-footnotes {
+  border-top: 1px solid #e7e5e4;
+  padding-top: 2rem;
+}
+.bilingual-footnotes .footnote-row {
+  padding: 0.25rem 0;
+}
+.bilingual-footnotes .footnote-row :deep(.footnote-item) {
+  margin: 0.2rem 0;
 }
 .ebook-prose :deep(.footnotes-label) {
   font-size: 11px;

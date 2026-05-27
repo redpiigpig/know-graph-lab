@@ -3,7 +3,8 @@ bugs the structural pipeline can't catch.
 
 Pairs with `scan_translated_book.py`:
   - scan reports T1 (heading bleed) and T2 (h3 vs volume drift).
-  - sweep applies in-place fixes for those two classes.
+  - sweep applies in-place fixes plus T3 (quote chars) and T8 (term
+    consistency from the per-book TERM_FIXES table).
 
 T1 fix — heading bleed: split heading at the body-marker position, prepend
 the trailing portion onto the next paragraph. Example:
@@ -25,12 +26,26 @@ SKIPPED when the chunk has multiple h3s — those are EPUB-packaging cross-
 work bleed cases (next letter's intro got pulled into prev chunk) and
 need a careful split that this sweep doesn't attempt.
 
+T3 fix — straight quotes → CJK corner brackets. Toggle each chunk's
+straight " between 「 and 」 (alternating), and ' between 『 and 』, so
+all Chinese quote chars use the proper full-width CJK form. Chunks with
+odd quote-count get reported but not changed (heuristically broken).
+Only the `content` (Chinese) is swept; `source_text` (English original)
+is left untouched.
+
+T8 fix — term consistency. TERM_FIXES is the per-book table of
+{ wrong_term: standard_term } pairs, applied longest-first so prefix
+collisions don't bite. For ANF Vol 1 the table is built into the script;
+other books override by editing TERM_FIXES_BY_BOOK below.
+
 Usage:
     python scripts/sweep_book_quality.py <ebook_id> --dry-run
     python scripts/sweep_book_quality.py <ebook_id>
     python scripts/sweep_book_quality.py <ebook_id> --no-push
     python scripts/sweep_book_quality.py <ebook_id> --only-t1   # T1 only
     python scripts/sweep_book_quality.py <ebook_id> --only-t2   # T2 only
+    python scripts/sweep_book_quality.py <ebook_id> --only-t3   # quotes only
+    python scripts/sweep_book_quality.py <ebook_id> --only-t8   # terms only
 """
 from __future__ import annotations
 import argparse
@@ -66,6 +81,30 @@ BODY_MARKERS = [
 ]
 TITLE_CLOSE_PUNCT = re.compile(r"[。！？」）]\s*$")
 EM_DASH_SPLIT_RE = re.compile(r"^(第[一二三四五六七八九十百千零0-9]+章\s*[—\-－]+\s*)(.+)$")
+
+# Per-book term consistency fixes — { wrong_term: standard_term }. The
+# standards match the volume / NCX-derived names in consolidate_by_ncx.
+# Longest patterns first to avoid prefix collision (科林斯 must be tried
+# before 科林).
+TERM_FIXES_ANF_VOL_1 = {
+    # Corinth
+    "科林多人": "哥林多人",
+    "科林斯人": "哥林多人",
+    "科林多教會": "哥林多教會",
+    "科林斯教會": "哥林多教會",
+    "科林多": "哥林多",
+    "科林斯": "哥林多",
+    "科林妥": "哥林多",
+    # Diognetus — addressee of Mathetes' letter. Volume = 致丟格那妥書.
+    "狄奧格尼圖斯": "丟格那妥",
+    "狄奧格尼特斯": "丟格那妥",
+    "狄奧格尼圖": "丟格那妥",
+    "狄奧格尼特": "丟格那妥",
+    "狄奧格尼": "丟格那妥",
+}
+TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
+    "c98d358d-7066-4691-a896-b7232707b0db": TERM_FIXES_ANF_VOL_1,  # ANF Vol 1
+}
 
 
 def find_bleed_split(heading_text: str) -> tuple[str, str] | None:
@@ -149,6 +188,64 @@ def sweep_t1(content: str) -> tuple[str, int]:
     return "\n".join(out), fixes
 
 
+def sweep_t3(content: str) -> tuple[str, int, bool]:
+    """Toggle straight ASCII quotes to CJK corner brackets.
+
+    `"`→ alternates between 「 and 」 starting with 「.
+    `'`→ alternates between 『 and 』 starting with 『.
+
+    Returns (new_content, num_replaced, ok). ok=False when a column has
+    an odd number of straight quotes (likely broken pairing) — we still
+    apply the toggle but caller should report.
+    """
+    fixes = 0
+    ok = True
+    n_dq = content.count('"')
+    n_sq = content.count("'")
+    if n_dq % 2:
+        ok = False
+    if n_sq % 2:
+        ok = False
+    # Toggle double quotes
+    if n_dq:
+        toggle = [True]  # True → 「, False → 」
+        def _dq(_m: re.Match) -> str:
+            opening = toggle[0]
+            toggle[0] = not toggle[0]
+            return "「" if opening else "」"
+        content = re.sub(r'"', _dq, content)
+        fixes += n_dq
+    # Toggle single quotes (only when chunk has them; rare)
+    if n_sq:
+        toggle = [True]
+        def _sq(_m: re.Match) -> str:
+            opening = toggle[0]
+            toggle[0] = not toggle[0]
+            return "『" if opening else "』"
+        content = re.sub(r"'", _sq, content)
+        fixes += n_sq
+    return content, fixes, ok
+
+
+def sweep_t8(content: str, term_fixes: dict[str, str]) -> tuple[str, int]:
+    """Apply term-consistency replacements, longest-first to avoid prefix
+    collision."""
+    if not term_fixes:
+        return content, 0
+    fixes = 0
+    # Longest first
+    for wrong in sorted(term_fixes, key=len, reverse=True):
+        std = term_fixes[wrong]
+        if wrong == std:
+            continue
+        n = content.count(wrong)
+        if n == 0:
+            continue
+        content = content.replace(wrong, std)
+        fixes += n
+    return content, fixes
+
+
 def sweep_t2(content: str, volume: str) -> tuple[str, int]:
     """If chunk has ONE h3 and it differs from volume, replace it with
     the volume name. SKIPS chunks with multiple h3s (cross-work bleed
@@ -193,7 +290,8 @@ def fetch_book(ebook_id: str) -> dict:
 
 
 def sweep(ebook_id: str, dry_run: bool = False, push: bool = True,
-          only_t1: bool = False, only_t2: bool = False) -> None:
+          only_t1: bool = False, only_t2: bool = False,
+          only_t3: bool = False, only_t8: bool = False) -> None:
     book = fetch_book(ebook_id)
     print(f"Book: {book['title']}")
 
@@ -201,27 +299,56 @@ def sweep(ebook_id: str, dry_run: bool = False, push: bool = True,
     chunks = [json.loads(l) for l in jsonl_path.read_text(encoding="utf-8").splitlines() if l]
     print(f"Loaded {len(chunks)} chunks")
 
-    t1_total = t2_total = 0
-    t1_chunks = t2_chunks = 0
+    term_fixes = TERM_FIXES_BY_BOOK.get(ebook_id, {})
+
+    # If any --only-X flag is set, run ONLY those steps. Else run all.
+    any_only = only_t1 or only_t2 or only_t3 or only_t8
+    run_t1 = (not any_only) or only_t1
+    run_t2 = (not any_only) or only_t2
+    run_t3 = (not any_only) or only_t3
+    run_t8 = (not any_only) or only_t8
+
+    t1_total = t2_total = t3_total = t8_total = 0
+    t1_chunks = t2_chunks = t3_chunks = t8_chunks = 0
+    t3_odd_chunks: list[int] = []
 
     for c in chunks:
         content = c.get("content") or ""
         new_content = content
-        if not only_t2:
+        if run_t1:
             new_content, n1 = sweep_t1(new_content)
             if n1:
                 t1_total += n1
                 t1_chunks += 1
-        if not only_t1:
+        if run_t2:
             new_content, n2 = sweep_t2(new_content, c.get("volume") or "")
             if n2:
                 t2_total += n2
                 t2_chunks += 1
+        if run_t3:
+            new_content, n3, ok = sweep_t3(new_content)
+            if n3:
+                t3_total += n3
+                t3_chunks += 1
+            if not ok:
+                t3_odd_chunks.append(c.get("chunk_index"))
+        if run_t8 and term_fixes:
+            new_content, n8 = sweep_t8(new_content, term_fixes)
+            if n8:
+                t8_total += n8
+                t8_chunks += 1
         if new_content != content:
             c["content"] = new_content
 
     print(f"\nT1 (heading bleed) fixes: {t1_total} in {t1_chunks} chunks")
     print(f"T2 (h3 letter-title) fixes: {t2_total} in {t2_chunks} chunks")
+    print(f"T3 (quote chars) fixes:    {t3_total} in {t3_chunks} chunks")
+    if t3_odd_chunks:
+        print(f"  ⚠ odd-quote-count chunks (review manually): {t3_odd_chunks}")
+    if term_fixes:
+        print(f"T8 (term consistency) fixes: {t8_total} in {t8_chunks} chunks")
+    else:
+        print("T8 (term consistency): no TERM_FIXES table for this book")
 
     if dry_run:
         print("\n(dry-run; not writing)")
@@ -275,9 +402,12 @@ def main():
     ap.add_argument("--no-push", action="store_true")
     ap.add_argument("--only-t1", action="store_true")
     ap.add_argument("--only-t2", action="store_true")
+    ap.add_argument("--only-t3", action="store_true")
+    ap.add_argument("--only-t8", action="store_true")
     args = ap.parse_args()
     sweep(args.ebook_id, dry_run=args.dry_run, push=not args.no_push,
-          only_t1=args.only_t1, only_t2=args.only_t2)
+          only_t1=args.only_t1, only_t2=args.only_t2,
+          only_t3=args.only_t3, only_t8=args.only_t8)
 
 
 if __name__ == "__main__":
