@@ -130,62 +130,181 @@
             </template>
           </div>
 
-          <!-- Volumes (collapsible). For volumes with a single page the
-               whole volume row becomes the link (no expansion, no
-               redundant child entry that would just duplicate the
-               volume name). Multi-page volumes keep the expand/toggle
-               behavior and show their pages as children. -->
-          <div v-for="v in volumes" :key="v.name" class="mb-1">
-            <a v-if="v.entries.length === 1"
-              :href="`?page=${v.entries[0].chunk_index + 1}`"
-              @click.prevent="goPage(v.entries[0].chunk_index + 1)"
-              :title="v.name"
-              :class="[
-                'w-full flex items-center gap-1 px-2 py-2 rounded text-sm font-medium hover:bg-stone-50 transition no-underline',
-                currentPage - 1 === v.entries[0].chunk_index
-                  ? 'bg-blue-50 text-blue-700' : 'text-stone-900'
-              ]">
-              <span class="text-stone-300 text-xs w-3 inline-block">·</span>
-              <span class="flex-1 text-left truncate">{{ shortVolumeName(v.name) }}</span>
-            </a>
-            <button v-else @click="toggleVolume(v.name)"
-              class="w-full flex items-center gap-1 px-2 py-2 rounded text-sm font-medium text-stone-900 hover:bg-stone-50 transition">
-              <span class="text-stone-400 text-xs w-3 inline-block">{{ expandedVolumes.has(v.name) ? '▾' : '▸' }}</span>
-              <span class="flex-1 text-left truncate">{{ shortVolumeName(v.name) }}</span>
-              <span class="text-xs text-stone-400">{{ v.entries.length }}</span>
-            </button>
-            <div v-if="v.entries.length > 1 && expandedVolumes.has(v.name)" class="space-y-0.5 mt-0.5">
-              <template v-for="entry in v.entries" :key="entry.chunk_index">
-                <div class="group relative">
-                  <a :href="`?page=${entry.chunk_index + 1}`"
-                    @click.prevent="goPage(entry.chunk_index + 1)"
-                    :title="entry.title"
-                    :class="[tocBtnCls(entry), 'w-full flex items-center gap-1.5 no-underline']">
-                    <span class="flex-1 text-left truncate">{{ stripVolumePrefix(entry.title, v.name) }}</span>
-                    <span v-if="bookmarkByChunk.get(entry.chunk_index)"
-                      class="text-[10px] px-1 py-px rounded bg-purple-100 text-purple-700 font-medium flex-shrink-0">
-                      📅 {{ fmtBookmarkDate(bookmarkByChunk.get(entry.chunk_index)!.created_at) }}
-                    </span>
+          <!-- Volume row (single-page volume → link; multi-page → ▸ toggle
+               + nested entries). Same markup used twice — once for flat
+               (no parent group) and once nested under a parent. We avoid
+               extracting a component to keep all the prop wiring inline. -->
+          <template v-if="hasParentLevel">
+            <div v-for="p in parentGroups" :key="p.name ?? '__none__'" class="mb-2">
+              <!-- Anonymous group (volumes with no parent): render flat -->
+              <template v-if="!p.name">
+                <div v-for="v in p.volumes" :key="v.name" class="mb-1">
+                  <a v-if="v.entries.length === 1"
+                    :href="`?page=${v.entries[0].chunk_index + 1}`"
+                    @click.prevent="goPage(v.entries[0].chunk_index + 1)"
+                    :title="v.name"
+                    :class="[
+                      'w-full flex items-center gap-1 px-2 py-2 rounded text-sm font-medium hover:bg-stone-50 transition no-underline',
+                      currentPage - 1 === v.entries[0].chunk_index
+                        ? 'bg-blue-50 text-blue-700' : 'text-stone-900'
+                    ]">
+                    <span class="text-stone-300 text-xs w-3 inline-block">·</span>
+                    <span class="flex-1 text-left truncate">{{ shortVolumeName(v.name) }}</span>
                   </a>
-                  <button v-if="bookmarkByChunk.get(entry.chunk_index)"
-                    @click.stop="deleteBookmark(bookmarkByChunk.get(entry.chunk_index)!.id)"
-                    title="移除書籤"
-                    class="absolute right-1 top-1/2 -translate-y-1/2 hidden group-hover:flex w-4 h-4 items-center justify-center rounded text-purple-700 hover:bg-purple-200 text-xs">×</button>
+                  <button v-else @click="toggleVolume(v.name)"
+                    class="w-full flex items-center gap-1 px-2 py-2 rounded text-sm font-medium text-stone-900 hover:bg-stone-50 transition">
+                    <span class="text-stone-400 text-xs w-3 inline-block">{{ expandedVolumes.has(v.name) ? '▾' : '▸' }}</span>
+                    <span class="flex-1 text-left truncate">{{ shortVolumeName(v.name) }}</span>
+                    <span class="text-xs text-stone-400">{{ v.entries.length }}</span>
+                  </button>
+                  <div v-if="v.entries.length > 1 && expandedVolumes.has(v.name)" class="space-y-0.5 mt-0.5">
+                    <template v-for="entry in v.entries" :key="entry.chunk_index">
+                      <div class="group relative">
+                        <a :href="`?page=${entry.chunk_index + 1}`"
+                          @click.prevent="goPage(entry.chunk_index + 1)"
+                          :title="entry.title"
+                          :class="[tocBtnCls(entry), 'w-full flex items-center gap-1.5 no-underline']">
+                          <span class="flex-1 text-left truncate">{{ stripVolumePrefix(entry.title, v.name) }}</span>
+                          <span v-if="bookmarkByChunk.get(entry.chunk_index)"
+                            class="text-[10px] px-1 py-px rounded bg-purple-100 text-purple-700 font-medium flex-shrink-0">
+                            📅 {{ fmtBookmarkDate(bookmarkByChunk.get(entry.chunk_index)!.created_at) }}
+                          </span>
+                        </a>
+                        <button v-if="bookmarkByChunk.get(entry.chunk_index)"
+                          @click.stop="deleteBookmark(bookmarkByChunk.get(entry.chunk_index)!.id)"
+                          title="移除書籤"
+                          class="absolute right-1 top-1/2 -translate-y-1/2 hidden group-hover:flex w-4 h-4 items-center justify-center rounded text-purple-700 hover:bg-purple-200 text-xs">×</button>
+                      </div>
+                      <div v-if="entry.chunk_index === currentPage - 1 && entry.sections?.length"
+                        class="space-y-px ml-1 border-l border-stone-200 pl-2 pb-1">
+                        <a v-for="sec in entry.sections" :key="sec.anchor_id"
+                          :href="`#${sec.anchor_id}`"
+                          @click.prevent="scrollToSection(sec.anchor_id)"
+                          :class="['block w-full text-left py-1 rounded text-xs text-stone-500 hover:bg-stone-50 hover:text-stone-900 truncate no-underline',
+                            sec.level === 3 ? 'pl-2' : 'pl-5 text-[11px] text-stone-400']">
+                          <span class="text-stone-300 mr-1">›</span>{{ sec.title }}
+                        </a>
+                      </div>
+                    </template>
+                  </div>
                 </div>
-                <!-- Nested section anchors, only for current chapter -->
-                <div v-if="entry.chunk_index === currentPage - 1 && entry.sections?.length"
-                  class="space-y-px ml-1 border-l border-stone-200 pl-2 pb-1">
-                  <a v-for="sec in entry.sections" :key="sec.anchor_id"
-                    :href="`#${sec.anchor_id}`"
-                    @click.prevent="scrollToSection(sec.anchor_id)"
-                    :class="['block w-full text-left py-1 rounded text-xs text-stone-500 hover:bg-stone-50 hover:text-stone-900 truncate no-underline',
-                      sec.level === 3 ? 'pl-2' : 'pl-5 text-[11px] text-stone-400']">
-                    <span class="text-stone-300 mr-1">›</span>{{ sec.title }}
-                  </a>
+              </template>
+              <template v-else>
+                <button @click="toggleParent(p.name)"
+                  class="w-full flex items-center gap-1 px-2 py-2 rounded text-[15px] font-semibold text-stone-900 hover:bg-stone-100 transition">
+                  <span class="text-stone-500 text-xs w-3 inline-block">{{ expandedParents.has(p.name) ? '▾' : '▸' }}</span>
+                  <span class="flex-1 text-left truncate">{{ p.name }}</span>
+                  <span class="text-[11px] text-stone-400">{{ p.volumes.length }}</span>
+                </button>
+                <div v-if="expandedParents.has(p.name)" class="ml-3 mt-0.5 space-y-0.5 border-l border-stone-200 pl-1">
+                  <div v-for="v in p.volumes" :key="v.name" class="mb-1">
+                    <a v-if="v.entries.length === 1"
+                      :href="`?page=${v.entries[0].chunk_index + 1}`"
+                      @click.prevent="goPage(v.entries[0].chunk_index + 1)"
+                      :title="v.name"
+                      :class="[
+                        'w-full flex items-center gap-1 px-2 py-1.5 rounded text-sm hover:bg-stone-50 transition no-underline',
+                        currentPage - 1 === v.entries[0].chunk_index
+                          ? 'bg-blue-50 text-blue-700 font-medium' : 'text-stone-800'
+                      ]">
+                      <span class="text-stone-300 text-xs w-3 inline-block">·</span>
+                      <span class="flex-1 text-left truncate">{{ shortVolumeName(v.name) }}</span>
+                    </a>
+                    <button v-else @click="toggleVolume(v.name)"
+                      class="w-full flex items-center gap-1 px-2 py-1.5 rounded text-sm text-stone-800 hover:bg-stone-50 transition">
+                      <span class="text-stone-400 text-xs w-3 inline-block">{{ expandedVolumes.has(v.name) ? '▾' : '▸' }}</span>
+                      <span class="flex-1 text-left truncate">{{ shortVolumeName(v.name) }}</span>
+                      <span class="text-xs text-stone-400">{{ v.entries.length }}</span>
+                    </button>
+                    <div v-if="v.entries.length > 1 && expandedVolumes.has(v.name)" class="space-y-0.5 mt-0.5">
+                      <template v-for="entry in v.entries" :key="entry.chunk_index">
+                        <div class="group relative">
+                          <a :href="`?page=${entry.chunk_index + 1}`"
+                            @click.prevent="goPage(entry.chunk_index + 1)"
+                            :title="entry.title"
+                            :class="[tocBtnCls(entry), 'w-full flex items-center gap-1.5 no-underline']">
+                            <span class="flex-1 text-left truncate">{{ stripVolumePrefix(entry.title, v.name) }}</span>
+                            <span v-if="bookmarkByChunk.get(entry.chunk_index)"
+                              class="text-[10px] px-1 py-px rounded bg-purple-100 text-purple-700 font-medium flex-shrink-0">
+                              📅 {{ fmtBookmarkDate(bookmarkByChunk.get(entry.chunk_index)!.created_at) }}
+                            </span>
+                          </a>
+                          <button v-if="bookmarkByChunk.get(entry.chunk_index)"
+                            @click.stop="deleteBookmark(bookmarkByChunk.get(entry.chunk_index)!.id)"
+                            title="移除書籤"
+                            class="absolute right-1 top-1/2 -translate-y-1/2 hidden group-hover:flex w-4 h-4 items-center justify-center rounded text-purple-700 hover:bg-purple-200 text-xs">×</button>
+                        </div>
+                        <div v-if="entry.chunk_index === currentPage - 1 && entry.sections?.length"
+                          class="space-y-px ml-1 border-l border-stone-200 pl-2 pb-1">
+                          <a v-for="sec in entry.sections" :key="sec.anchor_id"
+                            :href="`#${sec.anchor_id}`"
+                            @click.prevent="scrollToSection(sec.anchor_id)"
+                            :class="['block w-full text-left py-1 rounded text-xs text-stone-500 hover:bg-stone-50 hover:text-stone-900 truncate no-underline',
+                              sec.level === 3 ? 'pl-2' : 'pl-5 text-[11px] text-stone-400']">
+                            <span class="text-stone-300 mr-1">›</span>{{ sec.title }}
+                          </a>
+                        </div>
+                      </template>
+                    </div>
+                  </div>
                 </div>
               </template>
             </div>
-          </div>
+          </template>
+
+          <!-- Legacy flat list for books without parent_volume on any chunk -->
+          <template v-else>
+            <div v-for="v in volumes" :key="v.name" class="mb-1">
+              <a v-if="v.entries.length === 1"
+                :href="`?page=${v.entries[0].chunk_index + 1}`"
+                @click.prevent="goPage(v.entries[0].chunk_index + 1)"
+                :title="v.name"
+                :class="[
+                  'w-full flex items-center gap-1 px-2 py-2 rounded text-sm font-medium hover:bg-stone-50 transition no-underline',
+                  currentPage - 1 === v.entries[0].chunk_index
+                    ? 'bg-blue-50 text-blue-700' : 'text-stone-900'
+                ]">
+                <span class="text-stone-300 text-xs w-3 inline-block">·</span>
+                <span class="flex-1 text-left truncate">{{ shortVolumeName(v.name) }}</span>
+              </a>
+              <button v-else @click="toggleVolume(v.name)"
+                class="w-full flex items-center gap-1 px-2 py-2 rounded text-sm font-medium text-stone-900 hover:bg-stone-50 transition">
+                <span class="text-stone-400 text-xs w-3 inline-block">{{ expandedVolumes.has(v.name) ? '▾' : '▸' }}</span>
+                <span class="flex-1 text-left truncate">{{ shortVolumeName(v.name) }}</span>
+                <span class="text-xs text-stone-400">{{ v.entries.length }}</span>
+              </button>
+              <div v-if="v.entries.length > 1 && expandedVolumes.has(v.name)" class="space-y-0.5 mt-0.5">
+                <template v-for="entry in v.entries" :key="entry.chunk_index">
+                  <div class="group relative">
+                    <a :href="`?page=${entry.chunk_index + 1}`"
+                      @click.prevent="goPage(entry.chunk_index + 1)"
+                      :title="entry.title"
+                      :class="[tocBtnCls(entry), 'w-full flex items-center gap-1.5 no-underline']">
+                      <span class="flex-1 text-left truncate">{{ stripVolumePrefix(entry.title, v.name) }}</span>
+                      <span v-if="bookmarkByChunk.get(entry.chunk_index)"
+                        class="text-[10px] px-1 py-px rounded bg-purple-100 text-purple-700 font-medium flex-shrink-0">
+                        📅 {{ fmtBookmarkDate(bookmarkByChunk.get(entry.chunk_index)!.created_at) }}
+                      </span>
+                    </a>
+                    <button v-if="bookmarkByChunk.get(entry.chunk_index)"
+                      @click.stop="deleteBookmark(bookmarkByChunk.get(entry.chunk_index)!.id)"
+                      title="移除書籤"
+                      class="absolute right-1 top-1/2 -translate-y-1/2 hidden group-hover:flex w-4 h-4 items-center justify-center rounded text-purple-700 hover:bg-purple-200 text-xs">×</button>
+                  </div>
+                  <div v-if="entry.chunk_index === currentPage - 1 && entry.sections?.length"
+                    class="space-y-px ml-1 border-l border-stone-200 pl-2 pb-1">
+                    <a v-for="sec in entry.sections" :key="sec.anchor_id"
+                      :href="`#${sec.anchor_id}`"
+                      @click.prevent="scrollToSection(sec.anchor_id)"
+                      :class="['block w-full text-left py-1 rounded text-xs text-stone-500 hover:bg-stone-50 hover:text-stone-900 truncate no-underline',
+                        sec.level === 3 ? 'pl-2' : 'pl-5 text-[11px] text-stone-400']">
+                      <span class="text-stone-300 mr-1">›</span>{{ sec.title }}
+                    </a>
+                  </div>
+                </template>
+              </div>
+            </div>
+          </template>
         </div>
       </aside>
 
@@ -508,9 +627,15 @@ interface TocEntry {
   title: string;
   level: number;
   volume?: string | null;
+  parent_volume?: string | null;
   sections?: TocSection[];
 }
 interface VolumeGroup { name: string; entries: TocEntry[] }
+// 3-level grouping: parent author (e.g. 「依納爵」) ⊃ volumes (each Letter)
+// ⊃ entries (each consolidated page). For books with no parent_volume on
+// any chunk, ParentGroup degenerates to a flat list inside one anonymous
+// group with name=null.
+interface ParentGroup { name: string | null; volumes: VolumeGroup[] }
 interface Annotation {
   id: string;
   ebook_id: string;
@@ -586,6 +711,10 @@ const pageSearch = ref("");
 const annotations = ref<Annotation[]>([]);
 const bookAnnotations = ref<Annotation[]>([]);
 const expandedVolumes = ref<Set<string>>(new Set());
+// Independent expansion state for the author (parent_volume) level.
+// Multi-author Schaff books open at the parent level by default; clicking
+// the row toggles its volume children visible.
+const expandedParents = ref<Set<string>>(new Set());
 const annotationsPanelOpen = ref(false);
 // TOC drawer: defaults open on desktop (lg+), can be toggled via topbar
 // 📑 button on any screen. We start open and let the user close it.
@@ -697,7 +826,10 @@ const pageVolume = computed<string | null>(() => {
 });
 
 // ── TOC grouping ──
+// Front matter = chunks with no volume (cover / preface / indexes).
 const frontMatter = computed(() => toc.value.filter(e => !e.volume));
+
+// Volumes = grouped by volume name, preserving order of first appearance.
 const volumes = computed<VolumeGroup[]>(() => {
   const map = new Map<string, TocEntry[]>();
   for (const e of toc.value) {
@@ -707,6 +839,30 @@ const volumes = computed<VolumeGroup[]>(() => {
   }
   return [...map].map(([name, entries]) => ({ name, entries }));
 });
+
+// 3-level groups = parent_volume → volumes → entries. We re-group the
+// existing `volumes` computed by each volume's parent_volume (taken from
+// its first entry, since all entries in a volume share the same parent).
+// Volumes without a parent_volume go under an anonymous group at the end
+// (e.g. one-off treatises that aren't part of a multi-work corpus).
+const parentGroups = computed<ParentGroup[]>(() => {
+  const order: (string | null)[] = [];
+  const map = new Map<string | null, VolumeGroup[]>();
+  for (const v of volumes.value) {
+    const parent = v.entries[0]?.parent_volume ?? null;
+    if (!map.has(parent)) {
+      map.set(parent, []);
+      order.push(parent);
+    }
+    map.get(parent)!.push(v);
+  }
+  return order.map(name => ({ name, volumes: map.get(name)! }));
+});
+// True iff at least one volume in this book has a parent_volume set —
+// reader switches between flat (2-level) and grouped (3-level) sidebar
+// based on this. Older books without parent_volume keep the flat look.
+const hasParentLevel = computed(() =>
+  toc.value.some(e => !!e.parent_volume));
 
 function shortVolumeName(name: string): string {
   // Strip the book title prefix from volume name for compact display
@@ -730,6 +886,12 @@ function toggleVolume(name: string) {
   if (next.has(name)) next.delete(name);
   else next.add(name);
   expandedVolumes.value = next;
+}
+function toggleParent(name: string) {
+  const next = new Set(expandedParents.value);
+  if (next.has(name)) next.delete(name);
+  else next.add(name);
+  expandedParents.value = next;
 }
 
 function tocBtnCls(entry: TocEntry) {
@@ -1126,7 +1288,15 @@ async function loadPage(page: number) {
 
   if (data) {
     if (!ebook.value) ebook.value = data;
-    if (data.toc) toc.value = data.toc;
+    if (data.toc) {
+      toc.value = data.toc;
+      // Expand every parent_volume by default on initial TOC load so a
+      // multi-author book (Schaff ANF/NPNF) opens with full hierarchy
+      // visible. The user can collapse individual authors after.
+      const parents = new Set<string>();
+      for (const e of toc.value) if (e.parent_volume) parents.add(e.parent_volume);
+      expandedParents.value = parents;
+    }
   }
   pageContent.value = data?.currentPage?.content ?? "";
   pageSourceText.value = data?.currentPage?.source_text ?? null;
@@ -1134,9 +1304,11 @@ async function loadPage(page: number) {
   pageLoading.value = false;
   jumpPage.value = page;
 
-  // Auto-expand the volume containing the current chunk
+  // Auto-expand the volume + parent containing the current chunk so the
+  // active entry stays visible after navigation.
   const here = toc.value.find(e => e.chunk_index === page - 1);
   if (here?.volume) expandedVolumes.value = new Set([...expandedVolumes.value, here.volume]);
+  if (here?.parent_volume) expandedParents.value = new Set([...expandedParents.value, here.parent_volume]);
 
   await loadAnnotations(page - 1);
 

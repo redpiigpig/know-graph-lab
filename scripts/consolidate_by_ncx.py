@@ -138,6 +138,24 @@ PARENT_CN_FALLBACK: dict[str, str] = {
 # Skip these top-level NCX entries (front matter / index — handled separately)
 SKIP_PARENT_LABELS = {"About This Book", "Title Page", "Indexes"}
 
+# When a "letter" under a parent has 0 chapters AND its label matches one
+# of these substring patterns, fold it into the PRIOR letter under the
+# same parent (rather than create a standalone letter page). CCEL splits
+# 「Elucidation」 between Book III and Book IV but logically it belongs
+# to Book III's commentary tail.
+FOLD_BACK_LABEL_PATTERNS = ("Elucidation", "Note on")
+
+
+def parent_volume_cn(parent_label: str) -> Optional[str]:
+    """Resolve the Chinese name for the father/parent author. Returns None
+    if no mapping exists — sidebar then displays the volume one level up
+    (no parent group)."""
+    p = parent_label.upper()
+    for key, cn in PARENT_CN_FALLBACK.items():
+        if key in p:
+            return cn
+    return None
+
 
 def chinese_label(parent_label: str, letter_label: str) -> str:
     """Resolve a Chinese label for (parent, letter) using the table above.
@@ -326,12 +344,23 @@ def consolidate(ebook_id: str, dry_run: bool = False,
     # separate navPoint with 0 chapters; logically it's part of the same
     # letter and should share a volume. We do this by appending the intro
     # letter's file path to the next letter's `letter_file_extras` list.
+    #
+    # Also fold "Elucidation" entries (0 chapters, between two real letters)
+    # BACKWARD into the prior letter — they're commentary on the prior
+    # book, not a standalone work (e.g. Irenæus AH Book III ← Elucidation).
     merged: list[dict] = []
-    pending_intros: list[str] = []  # file paths
+    pending_intros: list[str] = []  # file paths waiting to attach forward
     for L in letters:
-        is_intro = re.match(r"^Introductory\s+Notes?\s+to\b", L["letter_label"], re.I)
+        label = L["letter_label"]
+        is_intro = re.match(r"^Introductory\s+Notes?\s+to\b", label, re.I)
+        is_fold_back = (not L["chapters"]
+                        and any(pat in label for pat in FOLD_BACK_LABEL_PATTERNS))
         if is_intro and not L["chapters"]:
             pending_intros.append(L["letter_file"])
+            continue
+        if is_fold_back and merged:
+            prev = merged[-1]
+            prev.setdefault("letter_file_extras_tail", []).append(L["letter_file"])
             continue
         if pending_intros:
             L = dict(L)
@@ -347,7 +376,7 @@ def consolidate(ebook_id: str, dry_run: bool = False,
             "chapters": [],
         })
     letters = merged
-    print(f"NCX letters (after fold intros): {len(letters)}")
+    print(f"NCX letters (after fold intros + tails): {len(letters)}")
 
     # Build src_file → chunk by walking EPUB items in document order and
     # pairing 1:1 with JSONL chunks (which were produced in this same order
@@ -390,11 +419,13 @@ def consolidate(ebook_id: str, dry_run: bool = False,
     consolidated_pages: list[dict] = []
     for letter in letters:
         cn = chinese_label(letter["parent_label"], letter["letter_label"])
+        parent_cn = parent_volume_cn(letter["parent_label"])
         # Gather chunks for this letter:
         #   1. Folded-in "Introductory Note" files (came from a preceding
         #      navPoint that was merged into this letter)
         #   2. The letter's own title-page chunk (letter_file)
         #   3. Each chapter's chunk
+        #   4. Folded-back tail chunks (Elucidation et al.) — appended last
         gathered: list[dict] = []
         chapter_files = [normalize_src(cf) for cf, _ in letter["chapters"]]
         # 1. Pending intros
@@ -413,6 +444,15 @@ def consolidate(ebook_id: str, dry_run: bool = False,
             if cf in src_to_chunk and cf not in consumed:
                 gathered.append(src_to_chunk[cf])
                 consumed.add(cf)
+        # 4. Tail extras (folded-back Elucidation etc.) — kept SEPARATE
+        #    from `gathered` so pagination chapter math isn't bumped; we
+        #    append their content to the LAST page after slicing.
+        tail_chunks: list[dict] = []
+        for extra in letter.get("letter_file_extras_tail", []):
+            xf = normalize_src(extra)
+            if xf and xf in src_to_chunk and xf not in consumed:
+                tail_chunks.append(src_to_chunk[xf])
+                consumed.add(xf)
         if not gathered:
             print(f"  ⚠ letter '{cn}' no chunks matched (NCX file paths may differ)")
             continue
@@ -448,6 +488,11 @@ def consolidate(ebook_id: str, dry_run: bool = False,
                 pages.append((page_slice, (start + 1, end)))
             # No tail-fold: user explicitly wants 「第1-10章 然後第11-12章」
             # separate for a 12-chapter letter (NOT merged into one).
+        # Append fold-back tail (Elucidation etc.) to the LAST page so the
+        # commentary sits at the end of the book it elucidates.
+        if tail_chunks and pages:
+            last_page_chunks, last_span = pages[-1]
+            pages[-1] = (list(last_page_chunks) + tail_chunks, last_span)
         for page_chunks, span in pages:
             merged_zh = "\n\n".join(
                 c.get("content", "").strip() for c in page_chunks
@@ -483,6 +528,11 @@ def consolidate(ebook_id: str, dry_run: bool = False,
                 "format": "markdown",
                 "source_lang": "en",
                 "volume": cn,
+                # The Chinese name of the FATHER / parent author. Sidebar
+                # uses this to group all 革利免致哥林多人前書/後書 under
+                # 「羅馬的革利免」. Books without a parent (single-author
+                # treatises) get parent_volume = null.
+                "parent_volume": parent_cn,
                 "title_en": letter["letter_label"],
                 "source_text": merged_en,
                 "content": merged_zh,
@@ -527,6 +577,63 @@ def consolidate(ebook_id: str, dry_run: bool = False,
                  if min_consumed <= c["chunk_index"] <= max_consumed]
     # Anything mid-stream stays at end of front-matter prefix (rare)
     fm_prefix.extend(fm_middle)
+
+    # ── Normalize front-matter prefix ──
+    # CCEL Schaff / NPNF EPUB front matter is consistently:
+    #   [0] About This Book (CCEL boilerplate)
+    #   [1] Title Page       (book title only, very short)
+    #   [2] Preface          (publisher / editor preface)
+    #   [3] Introductory Notice
+    # We rename [0]→封面 always; merge [1]+[2]→前言 when the labels look
+    # like a Title-Page + Preface pair (so we collapse the redundant book-
+    # title row that the screenshot showed as「前尼西亞教父」).
+    PREFACE_LIKE = re.compile(r"序言|前言|序|Preface", re.I)
+    if fm_prefix:
+        # 1. chunk[0] = 封面
+        fm_prefix[0]["chapter_path"] = "封面"
+        fm_prefix[0]["chunk_type"] = "chapter"
+        # 2. If a Title-Page + Preface pair sits at [1] and [2], merge
+        if len(fm_prefix) >= 3:
+            c1, c2 = fm_prefix[1], fm_prefix[2]
+            l1 = c1.get("chapter_path", "")
+            l2 = c2.get("chapter_path", "")
+            if not PREFACE_LIKE.search(l1) and PREFACE_LIKE.search(l2):
+                c2["content"] = (
+                    (c1.get("content") or "").strip() + "\n\n"
+                    + (c2.get("content") or "").strip()
+                ).strip()
+                c2["source_text"] = (
+                    (c1.get("source_text") or "").strip() + "\n\n"
+                    + (c2.get("source_text") or "").strip()
+                ).strip()
+                # Merge footnotes / page_numbers (preserve both)
+                fn = dict(c1.get("footnotes") or {})
+                fn.update(c2.get("footnotes") or {})
+                if fn:
+                    c2["footnotes"] = fn
+                pgs = sorted(set(
+                    (c1.get("page_numbers") or [])
+                    + (c2.get("page_numbers") or [])))
+                if pgs:
+                    c2["page_numbers"] = pgs
+                    c2["page_number"] = pgs[0]
+                c2["chapter_path"] = "前言"
+                fm_prefix.pop(1)
+    # All prefix chunks should have null volume / parent_volume — they're
+    # cover / preface / intro pages, not part of any father.
+    for c in fm_prefix:
+        c["volume"] = None
+        c["parent_volume"] = None
+        c.setdefault("chunk_type", "chapter")
+
+    # ── Normalize front-matter suffix (indexes) ──
+    # Trailing index chunks must NOT inherit stray volume from the polish
+    # phase (the 「希伯來文詞彙與片語索引」→ 愛任紐《駁異端》 bleed). Clear
+    # both volume fields so sidebar shows them as standalone「索引」items.
+    for c in fm_suffix:
+        c["volume"] = None
+        c["parent_volume"] = None
+        c.setdefault("chunk_type", "chapter")
 
     # Renumber: 0, 1, 2, ... for entire merged list
     final: list[dict] = []

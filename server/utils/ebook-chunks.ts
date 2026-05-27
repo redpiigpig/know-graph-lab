@@ -21,6 +21,11 @@ export interface ChunkData {
   page_number: number | null;
   chapter_path: string | null;
   volume?: string | null;
+  // Father/parent-author for multi-work collections (Schaff ANF/NPNF).
+  // Sidebar groups all 革利免致哥林多人前書/後書 under 「羅馬的革利免」.
+  // null when the book has no two-level author hierarchy (single-author
+  // treatises or front matter).
+  parent_volume?: string | null;
   format?: "markdown" | "text";
   source_lang?: string | null;
   source_text?: string | null;
@@ -223,6 +228,10 @@ export interface TocEntry {
   title: string;
   level: number;
   volume?: string | null;
+  // Father / parent author — Schaff multi-author volumes group several
+  // volumes under one author (e.g. 羅馬的革利免 ⊃ 革利免致哥林多人前書 +
+  // 革利免致哥林多人後書). Sidebar renders a 3-level tree when this is set.
+  parent_volume?: string | null;
   sections?: TocSection[];
 }
 
@@ -340,6 +349,10 @@ export async function loadToc(ebookId: string): Promise<TocEntry[]> {
       // (so the sidebar's `volumes` computed groups chapters by volume).
       // Front-matter chunks (before the first divider) keep volume=null.
       const effectiveVolume = c.volume ?? inheritedVolume;
+      // parent_volume comes straight from JSONL (consolidate_by_ncx writes
+      // it per page). No inheritance: each consolidated page has its own
+      // explicit parent, and front matter / indexes carry null.
+      const parentVolume = c.parent_volume ?? null;
 
       // Inline footnote refs `[^N]` from the body sometimes leak into the
       // chapter_path (EPUB chapter heading had a footnote anchor right
@@ -353,7 +366,8 @@ export async function loadToc(ebookId: string): Promise<TocEntry[]> {
       const titleKey = title.replace(/\s+/g, "");
       if (seenTitles.has(titleKey)) {
         raws.push({
-          entry: { chunk_index: i, title, level: 2, volume: effectiveVolume },
+          entry: { chunk_index: i, title, level: 2, volume: effectiveVolume,
+                   parent_volume: parentVolume },
           rawChapterPath: chapterTitle,
           skip: true,
         });
@@ -375,6 +389,7 @@ export async function loadToc(ebookId: string): Promise<TocEntry[]> {
           title,
           level: entryLevel,
           volume: effectiveVolume,
+          parent_volume: parentVolume,
           sections: sections.length ? sections : undefined,
         },
         rawChapterPath: chapterTitle,

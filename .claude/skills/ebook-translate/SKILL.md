@@ -245,16 +245,46 @@ python scripts/validate_book_structure.py c98d358d-7066-4691-a896-b7232707b0db
 
 Vol 1 通過 = 模板鎖定，Vol 2-38 比照重跑（既有 Vol 2 翻譯有 bleed bug，需砍掉重練）。
 
-## Pipeline 3 步驟（2026-05-27 鎖定）
+## Pipeline 5 步驟（2026-05-27 鎖定）
 
 ```
-EPUB → translate_ebook_to_zh (含 [^N]+{{p:N}}+(N) markers)
+EPUB → translate_ebook_to_zh   (含 [^N]+{{p:N}}+(N) markers)
        → polish_translated_book (chapter_path 清理 + volume 標記)
-       → consolidate_by_ncx (按 NCX 樹合成 letter pages, ≤10 章/頁)
+       → consolidate_by_ncx     (按 NCX 樹合成 letter pages, ≤10 章/頁,
+                                 parent_volume + Elucidation fold-back +
+                                 封面/前言 rename + 索引尾頁清 volume)
+       → sweep_book_quality     (T1 標題 bleed + T2 h3 漂移自動修)
        → R2 + DB previews 同步
 ```
 
 舊有獨立的 `extract_epub_extras.py` 已 inline 進 translate parser，不再單獨跑。
+
+對「已 consolidate 但需要重套 normalize 規則」的書（schema 加新欄位／規則邏輯更新後），用 [`scripts/repatch_consolidated_book.py`](../../../scripts/repatch_consolidated_book.py) **in-place** 修，不必重 translate 不必重 walk NCX：
+
+```bash
+python scripts/repatch_consolidated_book.py <ebook_id> --dry-run
+python scripts/repatch_consolidated_book.py <ebook_id>
+```
+
+## 翻譯品質 scanner + sweep（2026-05-27 新增）
+
+跑完 consolidate 後**必跑** scanner + sweep，抓 LLM 留下的標題吞內文、術語不對齊等問題：
+
+```bash
+# 1. Scan: 列出 T1-T7 命中
+python scripts/scan_translated_book.py <ebook_id>
+
+# 2. Sweep: 自動修 T1 (heading bleed) + T2 (h3 vs volume drift)
+python scripts/sweep_book_quality.py <ebook_id> --dry-run     # 先看會改什麼
+python scripts/sweep_book_quality.py <ebook_id>               # 真的改
+
+# 3. Re-scan 確認剩餘 WARN
+python scripts/scan_translated_book.py <ebook_id>
+```
+
+T1-T7 規則見 [book-structure-spec.md](../ebook-pipeline/book-structure-spec.md#翻譯品質-scan_translated_bookpy違反--warn)。
+
+**sweep 不處理的剩餘 T2 case**：當 chunk 有兩個以上 h3（EPUB packaging 把下一封 letter 的 intro 灌進 chunk 末尾），sweep 自動 skip。需要 chunk 級別搬運，目前手動修（在 reader ✏️ 編輯按鈕）。實測 ANF Vol 1 剩 8 筆。
 
 走 [scripts/translate_corpus_queue.py](../../../scripts/translate_corpus_queue.py) — queue runner 順序跑全 38 本，每本完成自動接後 2 步。state 存 `scripts/logs/corpus_queue_state.json`。
 
@@ -298,7 +328,8 @@ python scripts/translate_corpus_queue.py --only ANF:N # 單跑某本
 
 | Date | Book | Stats | Engine | 備註 |
 |---|---|---|---|---|
-| **2026-05-27** | **ANF Vol 1 重翻 v2**（同上 ebook_id）| 114 letter pages / 1,002,000 繁中字 / 4923 中文 [^N] / 4926 中譯腳註本文 / 390 頁碼 markers / 跑時間 ~3.5 hr | haiku 新 pipeline | **🟢 教父全集翻譯模板鎖定**。EPUB parser 預帶 markers，PROMPT rule 7 指示 LLM 保留並翻腳註本文。validator 0 FAIL / 2 WARN（末尾 index 頁誤掛 Irenaeus 卷，可忽略）|
+| **2026-05-27** | **ANF Vol 1 精修 v3**（同上 ebook_id）| 112 letter pages（v2 的 114 - chunk 1 併入前言 - Elucidation 折進卷三）/ 1,002,003 繁中字 | repatch + sweep（不重翻）| 加 parent_volume 三層樹／封面「源自...」→「封面」／chunk 1+2 merge→「前言」／Elucidation fold 進卷三末頁／索引尾頁 stray volume 清除／T1 標題 bleed 39→0／T2 h3 letter-title 28→8（剩跨書 bleed）。validator 0 FAIL/0 WARN。**🟢 升級後的教父全集模板**|
+| **2026-05-27** | **ANF Vol 1 重翻 v2**（同上 ebook_id）| 114 letter pages / 1,002,000 繁中字 / 4923 中文 [^N] / 4926 中譯腳註本文 / 390 頁碼 markers / 跑時間 ~3.5 hr | haiku 新 pipeline | EPUB parser 預帶 markers，PROMPT rule 7 指示 LLM 保留並翻腳註本文。validator 0 FAIL / 2 WARN（末尾 index 頁誤掛 Irenaeus 卷，可忽略，已於 v3 精修修掉）|
 | **2026-05-23** | ANF Vol 1（v1，已棄）| 918 chunks / 778K 繁中字 / 跑 2h49m | haiku | 第一版有 consolidator bleed bug（Phila 第1-10章 內混 ch 7-11+士每拿 ch 1-5），且中文側完全無腳註 ref。已重翻 v2 |
 | **2026-05-22** | ANF Vol 1（同上）| 中斷暫停 28/938 chunks（已併入上列完成） | gemini | 校 glossary／PROMPT/JSONL → 觸發新建 [translation-glossary](../translation-glossary/SKILL.md) 工具校所有譯名 |
 | **2026-05-22** | **ACCS OT XII vol 12**（古代基督徒聖經註釋叢書 卷十二：耶利米書‧耶利米哀歌）<br>`ebook_id: 3f678406-3969-49c1-a971-d76a6fd62f0e` | 112 chunks / 434,720 繁中字 / 1.19M 英文字 / 跑時間 1h24m / 涵蓋 General Intro + Jeremiah 1-52 + Lamentations 1-5 + Subject/Scripture/Author Index + Notes | haiku（Gemini 4 key 全 429，直接走 Haiku；Vatican II Haiku worker 並跑無衝突） | English source 從 archive.org `ancient-christian-commentary-on-scripture_ot` item 下載 EPUB+PDF；補因中譯 27 冊跳過的 gap；少數 chapter_path 標題抓取偏長（chunk 6/40/100）— 內文品質乾淨可讀 |
