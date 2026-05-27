@@ -115,3 +115,4 @@ python scripts/validate_book_structure.py <id> --json    # CI 用
 | 日期 | 修改 |
 |---|---|
 | 2026-05-24 | 初稿；ANF Vol 1 通過全部 FAIL+WARN；Vol 2 因舊 polish 覆寫 bleed 仍有 411 WARN（需重 consolidate）|
+| 2026-05-27 | **ANF Vol 1 重翻 v2 鎖定為模板**。Pipeline 3 步驟（translate→polish→consolidate；extract_epub_extras 已 inline 進 translate parser）。EPUB parser 預帶 `[^N]` refs + `{{p:N}}` 頁碼 + 末尾 `(N) body` 腳註區。PROMPT rule 7 指示 LLM 逐字保留 markers + 翻腳註本文。consolidator chinese_label 用 word-boundary 杜絕 Book I/V 互撞。polish 不覆寫 consolidator 已設 volume。loadToc：page-type chunks 不展開 section anchors，volume-less chunks 不展開（front matter），entries 一律 level=3 縮排。Reader 腳註 sup 純藍粗體無底色，雙向 anchor 互跳。複製文字自動帶芝加哥引用含原書頁碼。|

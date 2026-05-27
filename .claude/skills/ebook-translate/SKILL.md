@@ -229,19 +229,43 @@ API（`/api/ebooks/[id]`）`currentPage.source_text` + `currentPage.source_lang`
 
 ---
 
-## 當前狀態（2026-05-23 下午）
+## 當前狀態（2026-05-27 — ANF Vol 1 模板鎖定）
 
-**🚧 教父全集 Schaff 38 冊批次翻譯啟動中**（ANF 10 + NPNF1 14 + NPNF2 14；剩 37 本 / ~104M 英文字，預估多日連跑）。
+**🟢 ANF Vol 1 = 教父全集翻譯模板**（[[anf-vol1-golden-template]]）
 
-走 [scripts/translate_corpus_queue.py](../../../scripts/translate_corpus_queue.py) — 一個 queue runner 順序跑 `translate_ebook_to_zh.py --engine haiku --resume`（**大批次預設 haiku**，見 [引擎選擇](#引擎選擇)）。state 存 `scripts/logs/corpus_queue_state.json`，每本 per-book log 在 `scripts/logs/translate_<series>_vol<N>_<ts>.log`。中斷可從任何點 resume，整本翻完才會進下一本。
+`ebook_id: c98d358d-7066-4691-a896-b7232707b0db`
+114 letter pages / 1,002,000 繁中字 / 4923 中文 [^N] refs / 4926 中文腳註本文（中譯）/ 390 頁碼 markers
 
-順序：ANF 1 → ANF 2 → … → ANF 10 → NPNF1 1 → … → NPNF1 14 → NPNF2 1 → … → NPNF2 14。
+新 session 接手要先驗證 Vol 1：
 
-當前進度查詢：
+```bash
+python scripts/validate_book_structure.py c98d358d-7066-4691-a896-b7232707b0db
+# 必須 0 FAIL；2 WARN 是末尾 index 頁的小問題，可忽略
+```
+
+Vol 1 通過 = 模板鎖定，Vol 2-38 比照重跑（既有 Vol 2 翻譯有 bleed bug，需砍掉重練）。
+
+## Pipeline 3 步驟（2026-05-27 鎖定）
+
+```
+EPUB → translate_ebook_to_zh (含 [^N]+{{p:N}}+(N) markers)
+       → polish_translated_book (chapter_path 清理 + volume 標記)
+       → consolidate_by_ncx (按 NCX 樹合成 letter pages, ≤10 章/頁)
+       → R2 + DB previews 同步
+```
+
+舊有獨立的 `extract_epub_extras.py` 已 inline 進 translate parser，不再單獨跑。
+
+走 [scripts/translate_corpus_queue.py](../../../scripts/translate_corpus_queue.py) — queue runner 順序跑全 38 本，每本完成自動接後 2 步。state 存 `scripts/logs/corpus_queue_state.json`。
+
+順序：ANF 1 → ANF 2 → … → ANF 10 → NPNF1 1 → … → NPNF2 14。
 
 ```powershell
-python scripts/translate_corpus_queue.py --status
+python scripts/translate_corpus_queue.py --status     # 查進度
+python scripts/translate_corpus_queue.py --only ANF:N # 單跑某本
 ```
+
+詳細結構規範見 [book-structure-spec.md](../ebook-pipeline/book-structure-spec.md)。
 
 簡→繁 batch 已掃完全庫（1688 本 / 29 本簡體轉好 / 3 本 JSONL 壞讀不開未處理）。
 
@@ -274,7 +298,8 @@ python scripts/translate_corpus_queue.py --status
 
 | Date | Book | Stats | Engine | 備註 |
 |---|---|---|---|---|
-| **2026-05-23** | **ANF Vol 1**（Apostolic Fathers with Justin Martyr and Irenaeus）<br>`ebook_id: c98d358d-7066-4691-a896-b7232707b0db` | 918 chunks / 778,497 繁中字 / 2.6M 英文字 / 跑時間 2h49m | haiku（先 gemini smoke OK，後切 haiku 衝刺）| 教父全集 Schaff 38 冊批次第 1 本 ✅；早先 gemini 預設誤譯 Justin = 遊斯丁，校過 ★建議譯名（殉道者猶斯定，思高）後跑完。Reader 可讀，三段切換正常 |
+| **2026-05-27** | **ANF Vol 1 重翻 v2**（同上 ebook_id）| 114 letter pages / 1,002,000 繁中字 / 4923 中文 [^N] / 4926 中譯腳註本文 / 390 頁碼 markers / 跑時間 ~3.5 hr | haiku 新 pipeline | **🟢 教父全集翻譯模板鎖定**。EPUB parser 預帶 markers，PROMPT rule 7 指示 LLM 保留並翻腳註本文。validator 0 FAIL / 2 WARN（末尾 index 頁誤掛 Irenaeus 卷，可忽略）|
+| **2026-05-23** | ANF Vol 1（v1，已棄）| 918 chunks / 778K 繁中字 / 跑 2h49m | haiku | 第一版有 consolidator bleed bug（Phila 第1-10章 內混 ch 7-11+士每拿 ch 1-5），且中文側完全無腳註 ref。已重翻 v2 |
 | **2026-05-22** | ANF Vol 1（同上）| 中斷暫停 28/938 chunks（已併入上列完成） | gemini | 校 glossary／PROMPT/JSONL → 觸發新建 [translation-glossary](../translation-glossary/SKILL.md) 工具校所有譯名 |
 | **2026-05-22** | **ACCS OT XII vol 12**（古代基督徒聖經註釋叢書 卷十二：耶利米書‧耶利米哀歌）<br>`ebook_id: 3f678406-3969-49c1-a971-d76a6fd62f0e` | 112 chunks / 434,720 繁中字 / 1.19M 英文字 / 跑時間 1h24m / 涵蓋 General Intro + Jeremiah 1-52 + Lamentations 1-5 + Subject/Scripture/Author Index + Notes | haiku（Gemini 4 key 全 429，直接走 Haiku；Vatican II Haiku worker 並跑無衝突） | English source 從 archive.org `ancient-christian-commentary-on-scripture_ot` item 下載 EPUB+PDF；補因中譯 27 冊跳過的 gap；少數 chapter_path 標題抓取偏長（chunk 6/40/100）— 內文品質乾淨可讀 |
 | **2026-05-22** | **ACCS Apocrypha vol 15**（古代基督徒聖經註釋叢書 卷十五：次經）<br>`ebook_id: 37ff8191-8bc8-4eeb-bd84-d85fa3dd893b` | 243 chunks / 497,817 繁中字 / 1.43M 英文字 / 含多俾亞傳・智慧篇・德訓篇・巴錄・耶利米書信・三童歌・蘇撒納・比勒與大龍 + 教父人物簡介 + 各種索引 | gemini → 切 haiku | smoke test (gemini) 過 → 跑 gemini 撞 quota → 切 haiku direct 完成；中途撞 Anthropic 帳號 rate-limit 用 auto-pause 接住；最後按 src_order 排序入庫 |
