@@ -1,10 +1,10 @@
 # 教宗訓導文獻 — 待辦清單
 
-> 最後更新：2026-05-28（晚）
-> 目前狀態：**205 篇 / 41 位教宗**（4c-21c）；popes-catalog 227 位（4c Damasus I 起，pre-Damasus 已刪除）
-> 中文翻譯狀態見 [_chinese_audit.md](_chinese_audit.md)
+> 最後更新：2026-05-28（更晚）
+> 目前狀態：**205 篇 / 41 位教宗**（4c-21c）；popes-catalog 227 位
+> 中文翻譯狀態見 [_chinese_audit.md](_chinese_audit.md) — full 17 / partial 10 / denzinger-excerpt 3 / missing 173
 >
-> 2026-05-28 晚補：Pius X 16 篇 + Benedict XV 12 篇 = 28 篇（vatican.va 拉/英/義齊全，中文全 placeholder）
+> 2026-05-28 (晚): Pius X 16 + Benedict XV 12 = 28 篇 ingest（拉/英/義齊全）；Denzinger DH 對位補 9 marquee；**hsscol 對位補 13 marquee 完整中譯**。
 
 ---
 
@@ -16,7 +16,8 @@
 
 | 來源 | 涵蓋範圍 | 預期收益 | 進度 |
 |---|---|---|---|
-| 光啟《公教會之信仰與倫理教義選集》(Denzinger 中譯) ebook_id `568726d3-967e-457a-ab69-7452b21d606f` | 15 篇 marquee（Unam Sanctam / Ineffabilis Deus / Quanta Cura / Syllabus / Exsurge Domine / Humani Generis 等可按 DH 番號對位） | 高 — 教義性 marquee 文件 | 2026-05-28 完成 9/13（`scripts/_denzinger_to_papal.py`）；剩 3 篇拉中混排污染 > 50% 待 [[denzinger-fix]] 重 OCR |
+| **archive.hsscol.org.hk** 香港聖神修院神哲學院 圖書館 文獻庫（619 項中譯） | 13 篇 marquee 通諭直接對位（Rerum Novarum / Quadragesimo Anno / Pacem in Terris / Humanae Vitae / Populorum Progressio 等） | **最高 — 13 篇完整中譯** | 2026-05-28 完成（`scripts/_hsscol_to_papal.py`）；hsscol 索引另有 8 勸諭 / 5 牧函 / 3 憲令未對位（多為 21c 已有） |
+| 光啟《公教會之信仰與倫理教義選集》(Denzinger 中譯) ebook_id `568726d3-967e-457a-ab69-7452b21d606f` | 15 篇 marquee（Unam Sanctam / Quanta Cura / Syllabus 等可按 DH 番號對位） | 中 — 教義性 marquee 文件，但僅信理摘錄非通諭全文 | 2026-05-28 完成 9 篇；6 篇被 hsscol 完整版取代；剩 3 篇拉中混排污染 > 50% 待 [[denzinger-fix]] 重 OCR |
 | 紙本《天主教大公會議文獻彙編》（user 預計轉錄） | 大公會議產出 + 周邊教宗訓導 | 高 — user 已表示之後會轉錄 |
 | catholic.org.tw / catholic.org.hk scrape | 近現代 vatican.va 沒中文的 39 篇 | 中 — 須驗證可用性 |
 | Gemini Flash 批次英→繁中（**最後手段**） | 無紙本可對的 113 篇 papalencyclicals.net 文件 | 低 — 機翻品質，需標註 |

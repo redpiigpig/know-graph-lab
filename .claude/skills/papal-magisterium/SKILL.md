@@ -13,6 +13,8 @@ description: 教宗訓導文獻對照工具（/encyclicals）— 4 世紀 Damasu
 >
 > 2026-05-28（晚）：catholic.org.tw scrape 確認該站僅含 2010+ 文件（6 通諭 / 10 勸諭 / 20 牧函），對 19-20c 早中期 marquee 無新增。改走 **Denzinger DH 對位**：`scripts/_denzinger_to_papal.py` 從光啟 Denzinger 中譯 (ebook_id `568726d3-...`) 按 DH 範圍對位抽取 marquee 中譯——成功補入 **9 篇**（Qui Pluribus / Ineffabilis Deus / Providentissimus Deus / Pascendi / Casti Connubii / Mystici Corporis / Divino Afflante Spiritu / Humani Generis / Haurietis Aquas），3 篇（*Quanta Cura* / *Syllabus* / *Mediator Dei*）因拉中混排 OCR 污染 > 50% 跳過待 [[denzinger-fix]] 重 OCR 後補。
 >
+> 2026-05-28（更晚）：**重大發現 — `archive.hsscol.org.hk`（香港聖神修院神哲學院 圖書館 文獻庫）收錄 619 項教廷文獻完整中譯**。`scripts/_hsscol_to_papal.py` 對位下載 + pdftotext / big5hkscs HTML 轉檔，覆寫 **13 篇 marquee 完整中譯**（取代 Denzinger 摘錄與 placeholder）：*Rerum Novarum* 1891 ★ ★ ★ / *Quadragesimo Anno* 1931 / *Summi Pontificatus* 1939 / *Mediator Dei* 1947（解 Denzinger skip）/ *Evangelii Praecones* 1951 / *Haurietis Aquas* 1956 / *Pacem in Terris* 1963 ★ ★ / *Mense Maio* 1965 / *Christi Matri* 1966 / *Sacerdotalis Caelibatus* 1967 / *Populorum Progressio* 1967 / *Humanae Vitae* 1968 ★ / *Redemptoris Mater* 1987。Centesimus Annus 1991 PDF 為掃描影像不可抽，仍為 placeholder。Denzinger 摘錄 6 篇被 hsscol 完整版取代，剩 3 篇（Qui Pluribus / Ineffabilis Deus / Providentissimus Deus）保留為 denzinger-excerpt（hsscol 無對應）。
+>
 > **本 skill 與 [[scripture-canon-portal]] 的分工**：
 > - scripture-canon-portal：**集體**文件（大公會議產出的信經 / canons / dogmatic decree）+ 信條 + 教會法規 + 教父著作搜尋 + 聖經對照 + 典外
 > - papal-magisterium（本 skill）：**個別教宗**頒布的文件（通諭 / 勸諭 / 憲令 / 自動詔書 / 使徒書信 / 演說 / 講道）
