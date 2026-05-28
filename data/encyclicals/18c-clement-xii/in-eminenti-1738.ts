@@ -26,9 +26,10 @@ export const inEminenti1738: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org)',
       textKey: 'in-eminenti-1738-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/In_eminenti_apostolatus_specula',
+
     },
   ],
   displayMode: 'simple',

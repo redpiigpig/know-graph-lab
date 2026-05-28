@@ -26,9 +26,10 @@ export const soletAnnuere1226: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org)',
       textKey: 'solet-annuere-1226-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Solet_Annuere',
+
     },
   ],
   displayMode: 'simple',
