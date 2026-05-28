@@ -269,6 +269,12 @@ import { miraCircaNos1228 } from './13c-gregory-ix/mira-circa-nos-1228'
 // ── added: honorius-iii (papalencyclicals.net batch) ──
 import { soletAnnuere1226 } from './13c-honorius-iii/solet-annuere-1226'
 
+// ── added: 11c gregory-vii (Wikisource) ──
+import { dictatusPapae1075 } from './11c-gregory-vii/dictatus-papae-1075'
+
+// ── added: 5c leo-i (CCEL Schaff NPNF2 Vol 12) ──
+import { tomeOfLeo449 } from './5c-leo-i/tome-of-leo-449'
+
 export const ALL_DOCUMENTS: PapalDocument[] = [
   laudatoSi2015,
   fratelliTutti2020,
@@ -483,6 +489,10 @@ export const ALL_DOCUMENTS: PapalDocument[] = [
   miraCircaNos1228,
   // ── added: honorius-iii ──
   soletAnnuere1226,
+  // ── added: 11c gregory-vii ──
+  dictatusPapae1075,
+  // ── added: 5c leo-i ──
+  tomeOfLeo449,
 ]
 
 export function findDocument(slug: string): PapalDocument | undefined {

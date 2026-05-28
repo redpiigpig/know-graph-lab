@@ -229,6 +229,16 @@ const honoriusIiiLoaders = import.meta.glob(
   { query: '?raw', import: 'default' },
 ) as Record<string, () => Promise<string>>
 
+const gregoryViiLoaders = import.meta.glob(
+  './11c-gregory-vii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const leoILoaders = import.meta.glob(
+  './5c-leo-i/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
 /** popeSlug → loaders；新增教宗時加一條 */
 const POPE_LOADERS: Record<string, Record<string, () => Promise<string>>> = {
   'francis': francisLoaders,
@@ -274,6 +284,8 @@ const POPE_LOADERS: Record<string, Record<string, () => Promise<string>>> = {
   'gregory-x': gregoryXLoaders,
   'gregory-ix': gregoryIxLoaders,
   'honorius-iii': honoriusIiiLoaders,
+  'gregory-vii': gregoryViiLoaders,
+  'leo-i': leoILoaders,
 }
 
 /** popeSlug → 資料夾前綴；reverse map from POPE_LOADERS keys */
@@ -321,6 +333,8 @@ const POPE_FOLDER: Record<string, string> = {
   'gregory-x': './13c-gregory-x',
   'gregory-ix': './13c-gregory-ix',
   'honorius-iii': './13c-honorius-iii',
+  'gregory-vii': './11c-gregory-vii',
+  'leo-i': './5c-leo-i',
 }
 
 function resolveLoader(popeSlug: string, textKey: string): (() => Promise<string>) | undefined {

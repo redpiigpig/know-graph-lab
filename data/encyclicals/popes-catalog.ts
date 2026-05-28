@@ -423,10 +423,9 @@ export const POPES: Pope[] = [
   { slug: 'anastasius-i', nameZh: '阿納大削一世', nameEn: 'Anastasius I', nameLat: 'Anastasius PP. I', birthName: 'Anastasio', pontificateStart: '399-11-27', pontificateEnd: '401-12-19', century: 4, nationality: '義大利' },
   { slug: 'siricius', nameZh: '西利修', nameEn: 'Siricius', nameLat: 'Siricius', birthName: 'Siricio', pontificateStart: '384-12-15', pontificateEnd: '399-11-26', century: 4, nationality: '義大利', notesZh: '385《Directa》（致 Himerius 主教論教會紀律）是學界普遍認可的第一封正式 Decretal — 現代教廷訓導文件法律體裁的源頭。' },
   { slug: 'damasus-i', nameZh: '達瑪穌一世', nameEn: 'Damasus I', nameLat: 'Damasus PP. I', birthName: 'Damaso', pontificateStart: '366-10-01', pontificateEnd: '384-12-11', century: 4, nationality: '葡萄牙／西班牙', notesZh: '382《Tomus Damasi》（Council of Rome 後的信經 + canon list）是教宗訓導文獻最早正式體裁。委託聖熱羅尼莫翻譯拉丁文聖經 Vulgate（從 382 開始至 405 完成）— 改變整個西方基督教 1000 年的聖經文本傳統。' },
-  { slug: 'liberius', nameZh: '利伯里', nameEn: 'Liberius', nameLat: 'Liberius', birthName: 'Liberio', pontificateStart: '352-05-17', pontificateEnd: '366-09-24', century: 4, nationality: '義大利', notesZh: '在 Arian 爭議中曾簽署可疑信條（受脅迫），事後是否仍正統信仰存疑。' },
-  { slug: 'julius-i', nameZh: '儒略一世', nameEn: 'Julius I', nameLat: 'Iulius PP. I', birthName: 'Giulio', pontificateStart: '337-02-06', pontificateEnd: '352-04-12', century: 4, nationality: '義大利', notesZh: '343 召開 Sardica 會議支持 Athanasius 反 Arianism，確立羅馬主教為西方教會的最終仲裁者。' },
-  { slug: 'mark', nameZh: '馬爾谷', nameEn: 'Mark', nameLat: 'Marcus', birthName: 'Marco', pontificateStart: '336-01-18', pontificateEnd: '336-10-07', century: 4, nationality: '義大利' },
-  { slug: 'sylvester-i', nameZh: '西爾物斯德一世', nameEn: 'Sylvester I', nameLat: 'Silvester PP. I', birthName: 'Silvestro', pontificateStart: '314-01-31', pontificateEnd: '335-12-31', century: 4, nationality: '義大利', notesZh: '尼西亞第一次大公會議（325）期間在位。他本人並未親自赴會，僅派代表（priest Vitus 與 Vincent）；會議主導者為君士坦丁大帝。後世偽造的《君士坦丁御賜書》(Donatio Constantini，8 世紀偽作) 將教宗國的權威神話託付於 Sylvester I — 中世紀政教關係最重要的偽造文獻之一。' },
+  // 達瑪穌一世（366）之前的教宗（Sylvester I 314 / Mark 336 / Julius I 337 / Liberius 352）已從本系統移除：
+  // 本工具範圍從 4 世紀「教宗以個人身分頒布正式訓導文獻」（Decretal 體裁）開始，Damasus I + Siricius 為起點。
+  // 更早期羅馬主教書信（如 Clement I 1 Clement、Stephen I、Cornelius）仍可在 [[fathers]] skill 看到。
 ]
 
 export function findPope(slug: string): Pope | undefined {
