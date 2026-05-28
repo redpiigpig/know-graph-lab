@@ -545,8 +545,14 @@ https://www.documentacatholicaomnia.eu/04z/z_{ID}-{ID},_{Pope}_PP._{Roman},_{Tit
 - `scripts/_batch_papalenc_all_popes.py` — master batch runner，內含 30 位 pre-Pius-IX 教宗清單（pope-key ↔ pope-slug ↔ century），支援 `--start-century N --end-century M` 範圍篩選與 `--only key1,key2` 指定
 
 ### 待辦
-- [ ] **拉丁原文補齊**：所有 papalencyclicals.net 批次的 113 篇 Latin 為 placeholder。下一步從 DCO Acta Sanctae Sedis / Migne PL / Bullarium Romanum PDF 抽取對應段落，逐段對位（可 LLM 輔助）
-- [ ] **中文補齊（161 篇 missing + 10 篇 partial）**：等使用者把《天主教大公會議文獻彙編》／光啟《公教會之信仰與倫理教義選集》(Denzinger 中譯 ebook_id `568726d3-967e-457a-ab69-7452b21d606f`) 紙本轉錄完成後，按 [`data/encyclicals/_chinese_audit.md`](../../../data/encyclicals/_chinese_audit.md) 清單批次補回。Denzinger DH 番號可對位 marquee 15 篇（Unam Sanctam / Ineffabilis Deus / Quanta Cura / Syllabus / Exsurge Domine / Humani Generis 等）建議優先
+
+📋 **完整 TODO 清單見** [`data/encyclicals/_todo.md`](../../../data/encyclicals/_todo.md)（按 P0/P1/P2 優先級分組）
+📋 **中文缺漏 audit 清單見** [`data/encyclicals/_chinese_audit.md`](../../../data/encyclicals/_chinese_audit.md)
+
+重點摘要：
+- **P0**：中文翻譯（171 篇）／4c-12c gap fill（7 個世紀）／拉丁原文（177 篇全 placeholder）
+- **P1**：Pius X + Benedict XV 補（vatican.va 有）／summary+topics+titleZh 精修
+- **P2**：Leo XIV／Apostolic Constitution+Exhortation 完整／演說＋講道＋訊息
 - [ ] **碧岳十世 / 本篤十五**：vatican.va 提供，下次補（Pius X 8 篇 / Benedict XV 12 篇）；亦可用 papalencyclicals.net pius10 / ben15
 - [ ] **良十四世**（2025-）：等台灣主教團官方中譯發布後再 ingest
 - [ ] **4-12c 早期教宗**：等 [[fathers-translation]] / Schaff NPNF Vol 12-13 中譯成熟 → 從 Migne PL 或 Schaff 補 ingest；papalencyclicals.net 對 4-10c 涵蓋極少
