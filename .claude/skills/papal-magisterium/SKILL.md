@@ -62,7 +62,9 @@ description: 教宗訓導文獻對照工具（/encyclicals）— 4 世紀 Damasu
 > - 19c 27 篇（Gregory XVI *Mirari Vos* / Pius IX 多篇 / Pius VII *Diu Satis*）
 > - pass 2（disambig follow + opensearch 雙站）對剩 56 篇額外 0 hit — Wikisource 對 18c 中型詔書覆蓋極稀
 >
-> C. 16-18c marquee bull 新增 7 篇（`_papal_marquee_ingest.py`）
+> C. 16-19c marquee bull 新增 **10 篇**（`_papal_marquee_ingest.py` + `_papal_leo13_gaps.py`）
+>
+> **16-18c 7 篇 marquee**（缺漏的歷史節點）：
 > - **Pius IV *Iniunctum Nobis* 1564**（特蘭多信仰宣誓 ★★ DH 1862-70）— EN from en.wikisource
 > - **Innocent X *Cum Occasione* 1653**（譴 Jansenism 5 命題 ★★ DH 2001-7）— EN from en.wikisource
 > - **Innocent XII *Romanum Decet Pontificem* 1692**（反 nepotism）— LA from la.wikisource
@@ -70,9 +72,21 @@ description: 教宗訓導文獻對照工具（/encyclicals）— 4 世紀 Damasu
 > - **Clement XII *In Eminenti Apostolatus Specula* 1738**（首譴 Freemasonry 完整版）— LA from la.wikisource
 > - **Benedict XIV *Providas Romanorum* 1751**（重申反 Freemasonry）— LA from la.wikisource
 > - **Leo XIII *Apostolicae Curae* 1896**（論英國國教聖秩無效 ★★★）— LA + EN from both wikisources
-> - 含 4 個新教宗資料夾（pius-iv / innocent-x / innocent-xii / gregory-xv）+ textLoader patch
 >
-> 系統總計：~640+（既有）+ 7（新 marquee）= **~647 篇 papal-doc**（vue-tsc 過）
+> **良十三世 3 篇 gap-fill**（papalencyclicals.net + la.wikisource）：
+> - **Quod Apostolici Muneris 1878**（首道通諭 — 反社會主義／共產主義／虛無主義；*Rerum Novarum* 1891 前奏）
+> - **Diuturnum Illud 1881**（論政治權威之源 — Christian democracy 神學奠基）
+> - **Tametsi Futura Prospicientibus 1900**（世紀末總結性訓導 — 基督是道路真理生命）
+>
+> 含 4 個新教宗資料夾（pius-iv / innocent-x / innocent-xii / gregory-xv）+ textLoader patch
+>
+> D. 中世紀／15c targeted LA backfill **4 篇**（`_papal_la_targeted.py`）— 對既有 placeholder 用特殊 URL 攻破：
+> - 13c Honorius III *Solet Annuere* 1226（確認方濟會會規 — la.wikisource Solet_Annuere）
+> - 15c Nicholas V *Romanus Pontifex* 1455（葡萄牙海外擴張權 — la.wikisource Romanus_Pontifex_in_excelso）
+> - 15c Alexander VI *Inter Caetera* 1493（劃地子午線 ★★★ — la.wikisource Inter_caetera_(quarto_nonas_Maii_1493)）
+> - 18c Clement XII *In Eminenti* 1738（既有 EN，LA 補入）
+>
+> 系統總計：~640+（既有）+ 10（新 marquee）= **~650 篇 papal-doc**（vue-tsc 過）；LA 原文新增 43 篇；小標題 placeholder 全清零
 >
 > 2026-05-28（凌晨）：**Haiku 4.5 OCR 救援 65 篇 hsscol PDF / HTM + A 區 hotfix + B 區 2 篇 vatican.va + slug rename 20 篇**
 >
