@@ -14,9 +14,9 @@
 
 完整清單見 [_chinese_audit.md](_chinese_audit.md)，按世紀 + 教宗分組。
 
-| 來源 | 涵蓋範圍 | 預期收益 |
-|---|---|---|
-| 光啟《公教會之信仰與倫理教義選集》(Denzinger 中譯) ebook_id `568726d3-967e-457a-ab69-7452b21d606f` | 15 篇 marquee（Unam Sanctam / Ineffabilis Deus / Quanta Cura / Syllabus / Exsurge Domine / Humani Generis 等可按 DH 番號對位） | 高 — 教義性 marquee 文件 |
+| 來源 | 涵蓋範圍 | 預期收益 | 進度 |
+|---|---|---|---|
+| 光啟《公教會之信仰與倫理教義選集》(Denzinger 中譯) ebook_id `568726d3-967e-457a-ab69-7452b21d606f` | 15 篇 marquee（Unam Sanctam / Ineffabilis Deus / Quanta Cura / Syllabus / Exsurge Domine / Humani Generis 等可按 DH 番號對位） | 高 — 教義性 marquee 文件 | 2026-05-28 完成 9/13（`scripts/_denzinger_to_papal.py`）；剩 3 篇拉中混排污染 > 50% 待 [[denzinger-fix]] 重 OCR |
 | 紙本《天主教大公會議文獻彙編》（user 預計轉錄） | 大公會議產出 + 周邊教宗訓導 | 高 — user 已表示之後會轉錄 |
 | catholic.org.tw / catholic.org.hk scrape | 近現代 vatican.va 沒中文的 39 篇 | 中 — 須驗證可用性 |
 | Gemini Flash 批次英→繁中（**最後手段**） | 無紙本可對的 113 篇 papalencyclicals.net 文件 | 低 — 機翻品質，需標註 |

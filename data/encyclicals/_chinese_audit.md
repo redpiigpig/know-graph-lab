@@ -2,9 +2,13 @@
 
 > 產出時間：2026-05-28（晚）　|　涵蓋：203 篇文件　|　目的：等《天主教大公會議文獻彙編》／光啟《公教會之信仰與倫理教義選集》（Denzinger 中譯）轉錄完成後，按本清單批次補回。
 
-**統計**：full 4 ／ partial 10 ／ missing 189
+**統計**：full 4 ／ partial 10 ／ denzinger-excerpt 9 ／ missing 180
 
 > 2026-05-28 晚補：Pius X 16 篇 + Benedict XV 12 篇 = 28 篇 missing（vatican.va 確認無中譯）
+>
+> 2026-05-28（晚 II）：Denzinger DH 對位補 **9 篇 marquee 信理摘錄**（標 `denzinger-excerpt`，僅含信理段落非完整通諭）— Qui Pluribus / Ineffabilis Deus / Providentissimus Deus / Pascendi / Casti Connubii / Mystici Corporis / Divino Afflante / Humani Generis / Haurietis Aquas
+
+- **denzinger-excerpt** — Denzinger 教義選集摘錄（僅信理／倫理段落，非完整通諭全文）
 
 - **full** — 中文已完整
 - **partial** — 主體已譯，少數章節標題仍為 `## ⏳ 中譯標題待補`

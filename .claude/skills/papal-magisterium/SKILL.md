@@ -11,6 +11,8 @@ description: 教宗訓導文獻對照工具（/encyclicals）— 4 世紀 Damasu
 >
 > 2026-05-28（接續）：補齊 **20c 早期 Pius X 16 篇 + Benedict XV 12 篇 = 28 篇**（vatican.va 拉/英/義 三語齊全，中文 vatican.va 無）；Pius X *Pascendi Dominici Gregis* 1907（反現代主義雙峰文件）、Benedict XV *Pacem Dei Munus* 1920（一戰戰後和平整體框架）等 marquee 入庫。中文 sweep 確認 vatican.va 對 20c 多數 marquee（*Quadragesimo Anno* / *Populorum Progressio* / *Pacem in Terris* / *Divino Afflante Spiritu* 等）皆無中文，pipeline 既有 6 PDF + 4 HTML variants exhaustive 嘗試已達上限。
 >
+> 2026-05-28（晚）：catholic.org.tw scrape 確認該站僅含 2010+ 文件（6 通諭 / 10 勸諭 / 20 牧函），對 19-20c 早中期 marquee 無新增。改走 **Denzinger DH 對位**：`scripts/_denzinger_to_papal.py` 從光啟 Denzinger 中譯 (ebook_id `568726d3-...`) 按 DH 範圍對位抽取 marquee 中譯——成功補入 **9 篇**（Qui Pluribus / Ineffabilis Deus / Providentissimus Deus / Pascendi / Casti Connubii / Mystici Corporis / Divino Afflante Spiritu / Humani Generis / Haurietis Aquas），3 篇（*Quanta Cura* / *Syllabus* / *Mediator Dei*）因拉中混排 OCR 污染 > 50% 跳過待 [[denzinger-fix]] 重 OCR 後補。
+>
 > **本 skill 與 [[scripture-canon-portal]] 的分工**：
 > - scripture-canon-portal：**集體**文件（大公會議產出的信經 / canons / dogmatic decree）+ 信條 + 教會法規 + 教父著作搜尋 + 聖經對照 + 典外
 > - papal-magisterium（本 skill）：**個別教宗**頒布的文件（通諭 / 勸諭 / 憲令 / 自動詔書 / 使徒書信 / 演說 / 講道）
