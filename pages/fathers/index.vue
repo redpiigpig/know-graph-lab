@@ -101,6 +101,7 @@ const REFINED_IDS = new Set([
   '904661d3-16fc-4f37-bb04-f7c4aa7671e9',  // ANF Vol 4 (Tertullian IV / Minucius Felix / Commodian / Origen — De Principiis + Contra Celsum)
   '0e08c662-540b-4186-b250-9bca0cfe1002',  // ANF Vol 5 (Hippolytus / Cyprian / Caius / Novatian)
   'dffaae40-e088-41c1-ab7f-9b96f9249661',  // ANF Vol 6 (Gregory Thaumaturgus / Dionysius / Africanus / Anatolius+Minor / Archelaus / Methodius / Arnobius)
+  '75d8aae0-7431-4be9-baee-c57d26599653',  // ANF Vol 7 (Lactantius / Venantius / Asterius / Methodius / Arnobius)
 ])
 
 const series = [
