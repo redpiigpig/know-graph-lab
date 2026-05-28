@@ -310,11 +310,75 @@ TERM_FIXES_ANF_VOL_4 = {
     "阿非利加努斯": "阿弗里卡努",
 }
 
+# Cross-volume baseline (思高聖經書名 → 和合本 + 一般 typo) —
+# Vol 5/6/7 起步用此 baseline；post-llm_proofread 再個別擴充
+TERM_FIXES_ANF_COMMON = {
+    # 思高聖經書名 → 和合本
+    "瑪竇福音": "馬太福音",
+    "若望福音": "約翰福音",
+    "若望一書": "約翰一書",
+    "若望二書": "約翰二書",
+    "若望三書": "約翰三書",
+    "格林多前書": "哥林多前書",
+    "格林多後書": "哥林多後書",
+    "格林多人前書": "哥林多人前書",
+    "格林多人後書": "哥林多人後書",
+    "格林多": "哥林多",
+    "格言書": "箴言",
+    "厄則克爾": "以西結",
+    "厄則克耳": "以西結",
+    "依撒意亞": "以賽亞",
+    "厄弗所": "以弗所",
+    "斐理伯": "腓立比",
+    "厄娃": "夏娃",
+    "巴拉罕": "巴蘭",
+    "瓦倫提努": "瓦倫廷",
+    "瓦倫蒂努斯": "瓦倫廷",
+    # 跨卷詞庫名
+    "奧利金": "俄利根",
+    "奧利根": "俄利根",
+    "亞非利加努斯": "阿弗里卡努",
+    "阿非利加努斯": "阿弗里卡努",
+}
+
+TERM_FIXES_ANF_VOL_5 = dict(TERM_FIXES_ANF_COMMON, **{
+    # ── proofread 2026-05-28 抽出 ──────────────────────────────────────
+    # Seven Sages 七賢
+    "庇達庫": "庇塔庫斯",          # Pittacus of Mitylene
+    "基隆": "奇洛",                 # Chilo of Sparta
+    "裴裡安德": "佩里安德",         # Periander of Corinth
+    "克萊奧布盧斯": "克里奧布盧斯", # Cleobulus of Lindus
+    # Hippolytus 駁諸異端 — 異端領袖名
+    "尤斯提努": "猶斯定",           # Justinus (gnostic) — 跟 Justin Martyr 同名統一
+    "塞蒂安人": "塞特人",           # Sethians
+    "撒土爾尼努": "撒圖尼魯",       # Saturnilus
+    # Cyprian 書信 — 人物
+    "克魯斯神父": "克魯斯",         # Abbe Cruice (近代編者)
+    # Cross-vol typos / variants
+    "克林妥": "哥林多",             # Vol 2 標準 哥林多
+    "希玻里圖": "希波呂圖",         # Hippolytus
+    "希玻律陀": "希波呂圖",
+    "希波律陀": "希波呂圖",
+    "希玻律圖": "希波呂圖",
+    "塞浦良": "居普良",             # Cyprian — Vol 5 詞庫定為「居普良」
+    "西普里安": "居普良",
+    "西彼連": "居普良",
+    "賽普林": "居普良",
+    "諾瓦圖斯": "諾瓦提安",         # Novatian
+    "諾瓦提亞努斯": "諾瓦提安",
+})
+TERM_FIXES_ANF_VOL_6 = dict(TERM_FIXES_ANF_COMMON)
+TERM_FIXES_ANF_VOL_7 = dict(TERM_FIXES_ANF_COMMON)
+
+# 所有 ANF vol 都吃 ANF_COMMON baseline；per-vol specific 覆蓋 baseline。
 TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
-    "c98d358d-7066-4691-a896-b7232707b0db": TERM_FIXES_ANF_VOL_1,  # ANF Vol 1
-    "4e3d16fc-ef4f-420f-a3ec-56e2e92d659f": TERM_FIXES_ANF_VOL_2,  # ANF Vol 2
-    "364dac2e-410f-4906-be63-8bb86b4865ee": TERM_FIXES_ANF_VOL_3,  # ANF Vol 3
-    "904661d3-16fc-4f37-bb04-f7c4aa7671e9": TERM_FIXES_ANF_VOL_4,  # ANF Vol 4
+    "c98d358d-7066-4691-a896-b7232707b0db": {**TERM_FIXES_ANF_COMMON, **TERM_FIXES_ANF_VOL_1},  # ANF Vol 1
+    "4e3d16fc-ef4f-420f-a3ec-56e2e92d659f": {**TERM_FIXES_ANF_COMMON, **TERM_FIXES_ANF_VOL_2},  # ANF Vol 2
+    "364dac2e-410f-4906-be63-8bb86b4865ee": {**TERM_FIXES_ANF_COMMON, **TERM_FIXES_ANF_VOL_3},  # ANF Vol 3
+    "904661d3-16fc-4f37-bb04-f7c4aa7671e9": TERM_FIXES_ANF_VOL_4,  # ANF Vol 4 (already includes common)
+    "0e08c662-540b-4186-b250-9bca0cfe1002": TERM_FIXES_ANF_VOL_5,  # ANF Vol 5
+    "dffaae40-e088-41c1-ab7f-9b96f9249661": TERM_FIXES_ANF_VOL_6,  # ANF Vol 6
+    "75d8aae0-7431-4be9-baee-c57d26599653": TERM_FIXES_ANF_VOL_7,  # ANF Vol 7
 }
 
 
