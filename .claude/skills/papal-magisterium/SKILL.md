@@ -15,6 +15,8 @@ description: 教宗訓導文獻對照工具（/encyclicals）— 4 世紀 Damasu
 >
 > 2026-05-28（更晚）：**重大發現 — `archive.hsscol.org.hk`（香港聖神修院神哲學院 圖書館 文獻庫）收錄 619 項教廷文獻完整中譯**。`scripts/_hsscol_to_papal.py` 對位下載 + pdftotext / big5hkscs HTML 轉檔，覆寫 **13 篇 marquee 完整中譯**（取代 Denzinger 摘錄與 placeholder）：*Rerum Novarum* 1891 ★ ★ ★ / *Quadragesimo Anno* 1931 / *Summi Pontificatus* 1939 / *Mediator Dei* 1947（解 Denzinger skip）/ *Evangelii Praecones* 1951 / *Haurietis Aquas* 1956 / *Pacem in Terris* 1963 ★ ★ / *Mense Maio* 1965 / *Christi Matri* 1966 / *Sacerdotalis Caelibatus* 1967 / *Populorum Progressio* 1967 / *Humanae Vitae* 1968 ★ / *Redemptoris Mater* 1987。Centesimus Annus 1991 PDF 為掃描影像不可抽，仍為 placeholder。Denzinger 摘錄 6 篇被 hsscol 完整版取代，剩 3 篇（Qui Pluribus / Ineffabilis Deus / Providentissimus Deus）保留為 denzinger-excerpt（hsscol 無對應）。
 >
+> 2026-05-28（再晚）：新增本篤十五世 *Maximum Illud* 1919 宗座牧函（傳教神學開山之作 — 後梵二《Ad Gentes》與 JP2《Redemptoris Missio》皆承襲）— LA+EN+IT from vatican.va。中文 hsscol P397 為馬相伯選譯 1947 掃描影像 PDF（9 頁），保留 placeholder 待 Gemini Vision OCR。
+>
 > **本 skill 與 [[scripture-canon-portal]] 的分工**：
 > - scripture-canon-portal：**集體**文件（大公會議產出的信經 / canons / dogmatic decree）+ 信條 + 教會法規 + 教父著作搜尋 + 聖經對照 + 典外
 > - papal-magisterium（本 skill）：**個別教宗**頒布的文件（通諭 / 勸諭 / 憲令 / 自動詔書 / 使徒書信 / 演說 / 講道）
@@ -492,8 +494,8 @@ https://www.documentacatholicaomnia.eu/04z/z_{ID}-{ID},_{Pope}_PP._{Roman},_{Tit
 **20c 碧岳十一世 (6 篇，中文 0/6)**
 - [x] Mortalium Animos 1928 / Divini Illius Magistri 1929 / Casti Connubii 1930 / Quadragesimo Anno 1931 / Mit Brennender Sorge 1937 / Divini Redemptoris 1937
 
-**20c 本篤十五世 (12 篇，中文 0/12)** — 2026-05-28 補
-- [x] Ad Beatissimi Apostolorum 1914 / Humani Generis Redemptionem 1917 / Quod Iam Diu 1918 / In Hac Tanta 1919 / Paterno Iam Diu 1919 / Pacem Dei Munus Pulcherrimum 1920 / Spiritus Paraclitus 1920 / Principi Apostolorum Petro 1920 / Annus Iam Plenus 1920 / Sacra Propediem 1921 / In Praeclara Summorum 1921 / Fausto Appetente Die 1921
+**20c 本篤十五世 (13 篇，中文 0/13)** — 2026-05-28 補
+- [x] Ad Beatissimi Apostolorum 1914 / Humani Generis Redemptionem 1917 / Quod Iam Diu 1918 / In Hac Tanta 1919 / Paterno Iam Diu 1919 / **Maximum Illud 1919（宗座牧函，傳教 marquee）** / Pacem Dei Munus Pulcherrimum 1920 / Spiritus Paraclitus 1920 / Principi Apostolorum Petro 1920 / Annus Iam Plenus 1920 / Sacra Propediem 1921 / In Praeclara Summorum 1921 / Fausto Appetente Die 1921
 
 **20c 碧岳十世 (16 篇，中文 0/16)** — 2026-05-28 補
 - [x] E Supremi 1903 / Ad Diem Illum Laetissimum 1904 / Iucunda Sane 1904 / Acerbo Nimis 1905 / Il Fermo Proposito 1905 / Vehementer Nos 1906 / Tribus Circiter 1906 / Pieni L'Animo 1906 / Gravissimo Officii Munere 1906 / Une Fois Encore 1907 / Pascendi Dominici Gregis 1907 / Communium Rerum 1909 / Editae Saepe 1910 / Iamdudum 1911 / Lacrimabili Statu 1912 / Singulari Quadam 1912

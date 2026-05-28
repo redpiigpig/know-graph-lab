@@ -83,6 +83,7 @@ import { humaniGenerisRedemptionem1917 } from './20c-benedict-xv/humani-generis-
 import { quodIamDiu1918 } from './20c-benedict-xv/quod-iam-diu-1918'
 import { inHacTanta1919 } from './20c-benedict-xv/in-hac-tanta-1919'
 import { paternoIamDiu1919 } from './20c-benedict-xv/paterno-iam-diu-1919'
+import { maximumIllud1919 } from './20c-benedict-xv/maximum-illud-1919'
 import { pacemDeiMunusPulcherrimum1920 } from './20c-benedict-xv/pacem-dei-munus-pulcherrimum-1920'
 import { spiritusParaclitus1920 } from './20c-benedict-xv/spiritus-paraclitus-1920'
 import { principiApostolorumPetro1920 } from './20c-benedict-xv/principi-apostolorum-petro-1920'
@@ -369,6 +370,7 @@ export const ALL_DOCUMENTS: PapalDocument[] = [
   quodIamDiu1918,
   inHacTanta1919,
   paternoIamDiu1919,
+  maximumIllud1919,
   pacemDeiMunusPulcherrimum1920,
   spiritusParaclitus1920,
   principiApostolorumPetro1920,
