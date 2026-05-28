@@ -7902,7 +7902,7 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P274.htm",
     "ext": "htm",
     "size": 699033,
-    "title": "",
+    "title": "《在真理中實踐愛德》通諭 (Caritas in Veritate)",
     "headings": {
       "title": null,
       "h1": [],
@@ -7911,7 +7911,10 @@
       "h4": [],
       "first_para": "各主教、司鐸、執事、修會會士、"
     },
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗本篤十六世",
+    "year_haiku": 2009
   },
   "P275": {
     "p_id": "P275",
@@ -9005,7 +9008,7 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P329.htm",
     "ext": "htm",
     "size": 5862,
-    "title": "第53屆世界聖召祈禱日文告",
+    "title": "第 53 屆世界聖召祈禱日文告",
     "headings": {
       "title": "第53屆世界聖召祈禱日文告",
       "h1": [],
@@ -9014,7 +9017,10 @@
       "h4": [],
       "first_para": "第53屆世界聖召祈禱日文告 2016年4月17日，復活節第四主日"
     },
-    "status": "ok"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2016
   },
   "P330": {
     "p_id": "P330",
@@ -9022,7 +9028,7 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P330.htm",
     "ext": "htm",
     "size": 5624,
-    "title": "教宗方濟各2016年復活節文告",
+    "title": "教宗方濟各 2016 年復活節文告",
     "headings": {
       "title": "教宗方濟各2016年復活節文告",
       "h1": [],
@@ -9031,7 +9037,10 @@
       "h4": [],
       "first_para": "2016年復活節文告 梵蒂岡電台譯"
     },
-    "status": "ok"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2016
   },
   "P331": {
     "p_id": "P331",
@@ -9039,7 +9048,7 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P331.htm",
     "ext": "htm",
     "size": 6726,
-    "title": "「我喜歡仁愛勝過祭獻」（瑪九13）",
+    "title": "「我喜歡仁愛勝過祭獻」（瑪九 13）",
     "headings": {
       "title": "教宗方濟各2016年四旬期文告",
       "h1": [],
@@ -9052,7 +9061,10 @@
       ],
       "first_para": "2016年四旬期文告 台灣明愛會譯"
     },
-    "status": "ok"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2016
   },
   "P332": {
     "p_id": "P332",
@@ -9071,7 +9083,10 @@
       "h4": [],
       "first_para": "2016年第二十四屆世界病患日文告 臺灣地區主教團健康照護委員會譯"
     },
-    "status": "ok"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2016
   },
   "P333": {
     "p_id": "P333",
@@ -9088,7 +9103,10 @@
       "h4": [],
       "first_para": "於聖衛雅逝世150週年宣佈司鐸年"
     },
-    "status": "ok"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗本篤十六世",
+    "year_haiku": 2010
   },
   "P334": {
     "p_id": "P334",
@@ -9105,7 +9123,10 @@
       "h4": [],
       "first_para": "第四十二屆世界傳播日文告"
     },
-    "status": "ok"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗本篤十六世",
+    "year_haiku": 2008
   },
   "P335": {
     "p_id": "P335",
@@ -9122,7 +9143,10 @@
       "h4": [],
       "first_para": "第四十三屆世界傳播日文告"
     },
-    "status": "ok"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗本篤十六世",
+    "year_haiku": 2009
   },
   "P336": {
     "p_id": "P336",
@@ -9559,7 +9583,7 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P370.html",
     "ext": "html",
     "size": 7970,
-    "title": "受刑人的禧年 — 教宗若望保祿二世",
+    "title": "受刑人的禧年",
     "headings": {
       "title": "2000年受刑人的禧年",
       "h1": [],
@@ -9572,7 +9596,10 @@
       "h4": [],
       "first_para": "1. 在西元二千大禧年的架構下，理當為受刑人保留特殊的一天。監獄的鐵窗不應阻礙他們接觸此一偉大的救恩事件。"
     },
-    "status": "ok"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗若望保祿二世",
+    "year_haiku": 2000
   },
   "P372": {
     "p_id": "P372",
@@ -9580,7 +9607,7 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P372.html",
     "ext": "html",
     "size": 17708,
-    "title": "2002年聖週四致司鐸書 — 教宗若望保祿二世",
+    "title": "2002 年聖週四致司鐸書",
     "headings": {
       "title": "2002年聖週四致司鐸書",
       "h1": [],
@@ -9593,7 +9620,10 @@
       "h4": [],
       "first_para": "二００二年，我任職教宗第二十四年三月十七日四旬期第五主日於梵蒂岡城若望保祿二世"
     },
-    "status": "ok"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗若望保祿二世",
+    "year_haiku": 2002
   },
   "P373": {
     "p_id": "P373",
@@ -9601,7 +9631,7 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P373.html",
     "ext": "html",
     "size": 13044,
-    "title": "2001年聖週四致司鐸書 — 教宗若望保祿二世",
+    "title": "2001 年聖週四致司鐸書",
     "headings": {
       "title": "2001年聖週四致司鐸書",
       "h1": [],
@@ -9614,7 +9644,10 @@
       "h4": [],
       "first_para": "1. 在主耶穌賜予教會聖體聖事，也是建立司鐸聖秩的日子上，我不能不向你們致上友誼之書，或更好說是親蜜的信函，希望與你們分享感恩與讚美。如今這已成為一個傳統。"
     },
-    "status": "ok"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗若望保祿二世",
+    "year_haiku": 2001
   },
   "P374": {
     "p_id": "P374",
@@ -10738,9 +10771,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P451.pdf",
     "ext": "pdf",
     "size": 1771714,
-    "title": "",
+    "title": "奉獻誦",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2022
   },
   "P452": {
     "p_id": "P452",
@@ -10748,9 +10784,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P452.pdf",
     "ext": "pdf",
     "size": 5094797,
-    "title": "",
+    "title": "第 6 屆世界窮人日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2022
   },
   "P453": {
     "p_id": "P453",
@@ -10758,9 +10797,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P453.pdf",
     "ext": "pdf",
     "size": 4614219,
-    "title": "",
+    "title": "第 37 屆世界青年日文告 — 馬利亞起身並急速啟程",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2022
   },
   "P454": {
     "p_id": "P454",
@@ -10768,9 +10810,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P454.pdf",
     "ext": "pdf",
     "size": 2791440,
-    "title": "",
+    "title": "第 30 屆世界病患日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2022
   },
   "P455": {
     "p_id": "P455",
@@ -10778,9 +10823,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P455.pdf",
     "ext": "pdf",
     "size": 2912096,
-    "title": "",
+    "title": "第 59 屆世界聖召祈禱日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2022
   },
   "P456": {
     "p_id": "P456",
@@ -10788,9 +10836,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P456.pdf",
     "ext": "pdf",
     "size": 3387812,
-    "title": "",
+    "title": "2022 年四旬期文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2022
   },
   "P457": {
     "p_id": "P457",
@@ -10798,9 +10849,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P457.pdf",
     "ext": "pdf",
     "size": 4099748,
-    "title": "",
+    "title": "第 55 屆世界和平日文告 — 教育、工作與世代間的對話",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2022
   },
   "P458": {
     "p_id": "P458",
@@ -10878,9 +10932,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P465.pdf",
     "ext": "pdf",
     "size": 2818400,
-    "title": "",
+    "title": "第 2 屆世界祖父母及長者日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2022
   },
   "P466": {
     "p_id": "P466",
@@ -10888,9 +10945,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P466.pdf",
     "ext": "pdf",
     "size": 2908534,
-    "title": "",
+    "title": "照料受造界祈禱日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2022
   },
   "P467": {
     "p_id": "P467",
@@ -10898,9 +10958,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P467.pdf",
     "ext": "pdf",
     "size": 3624725,
-    "title": "",
+    "title": "第 57 屆世界社會傳播日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2023
   },
   "P468": {
     "p_id": "P468",
@@ -10908,9 +10971,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P468.pdf",
     "ext": "pdf",
     "size": 2322574,
-    "title": "",
+    "title": "第 109 屆世界移民及難民日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2023
   },
   "P469": {
     "p_id": "P469",
@@ -10918,9 +10984,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P469.pdf",
     "ext": "pdf",
     "size": 3135303,
-    "title": "",
+    "title": "第 61 屆世界聖召祈禱日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2024
   },
   "P470": {
     "p_id": "P470",
@@ -10928,9 +10997,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P470.pdf",
     "ext": "pdf",
     "size": 3919946,
-    "title": "",
+    "title": "第 58 屆世界社會傳播日文告 — 人工智能與人心智慧",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2024
   },
   "P471": {
     "p_id": "P471",
@@ -10938,9 +11010,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P471.pdf",
     "ext": "pdf",
     "size": 2161018,
-    "title": "",
+    "title": "第 1 屆世界兒童日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2024
   },
   "P472": {
     "p_id": "P472",
@@ -10948,9 +11023,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P472.pdf",
     "ext": "pdf",
     "size": 3038778,
-    "title": "",
+    "title": "第 4 屆世界祖父母及長者日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2024
   },
   "P473": {
     "p_id": "P473",
@@ -10958,9 +11036,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P473.pdf",
     "ext": "pdf",
     "size": 1912337,
-    "title": "",
+    "title": "第 110 屆世界移民及難民日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2024
   },
   "P474": {
     "p_id": "P474",
@@ -10968,9 +11049,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P474.pdf",
     "ext": "pdf",
     "size": 13681793,
-    "title": "",
+    "title": "希望的訊息（2024 年禧年訊息）",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2024
   },
   "P475": {
     "p_id": "P475",
@@ -10978,9 +11062,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P475.pdf",
     "ext": "pdf",
     "size": 3764699,
-    "title": "",
+    "title": "2024 年普世傳教節文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2024
   },
   "P476": {
     "p_id": "P476",
@@ -10988,9 +11075,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P476.pdf",
     "ext": "pdf",
     "size": 3007597,
-    "title": "",
+    "title": "第 59 屆世界社會傳播日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2025
   },
   "P477": {
     "p_id": "P477",
@@ -11008,9 +11098,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P478.pdf",
     "ext": "pdf",
     "size": 4602313,
-    "title": "",
+    "title": "2015 年第 30 屆世界青年日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2015
   },
   "P479": {
     "p_id": "P479",
@@ -11028,9 +11121,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P480.pdf",
     "ext": "pdf",
     "size": 2189824,
-    "title": "",
+    "title": "教宗方濟各致函",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2015
   },
   "P481": {
     "p_id": "P481",
@@ -11038,9 +11134,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P481.pdf",
     "ext": "pdf",
     "size": 5267522,
-    "title": "",
+    "title": "2016 年第 31 屆世界青年日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2016
   },
   "P482": {
     "p_id": "P482",
@@ -11058,9 +11157,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P483.pdf",
     "ext": "pdf",
     "size": 4215076,
-    "title": "",
+    "title": "第 4 屆世界窮人日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2020
   },
   "P484": {
     "p_id": "P484",
@@ -11088,9 +11190,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P486.pdf",
     "ext": "pdf",
     "size": 2539094,
-    "title": "",
+    "title": "第 57 屆世界聖召祈禱日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2020
   },
   "P487": {
     "p_id": "P487",
@@ -11098,9 +11203,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P487.pdf",
     "ext": "pdf",
     "size": 1400838,
-    "title": "",
+    "title": "世界司鐸聖化祈禱日致司鐸文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗良十四世",
+    "year_haiku": 2025
   },
   "P488": {
     "p_id": "P488",
@@ -11108,9 +11216,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P488.pdf",
     "ext": "pdf",
     "size": 2221283,
-    "title": "",
+    "title": "第 33 屆世界病患日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2025
   },
   "P489": {
     "p_id": "P489",
@@ -11118,9 +11229,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P489.pdf",
     "ext": "pdf",
     "size": 2287844,
-    "title": "",
+    "title": "第 62 屆世界聖召祈禱日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2025
   },
   "P490": {
     "p_id": "P490",
@@ -11128,9 +11242,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P490.pdf",
     "ext": "pdf",
     "size": 2341244,
-    "title": "",
+    "title": "2025 年復活節文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2025
   },
   "P491": {
     "p_id": "P491",
@@ -11138,9 +11255,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P491.pdf",
     "ext": "pdf",
     "size": 2033207,
-    "title": "",
+    "title": "2025 年四旬期文告 — 讓我們在希望中同行",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2025
   },
   "P492": {
     "p_id": "P492",
@@ -11148,9 +11268,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P492.pdf",
     "ext": "pdf",
     "size": 2564612,
-    "title": "",
+    "title": "教宗方濟各聖誕節文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2020
   },
   "P493": {
     "p_id": "P493",
@@ -11158,9 +11281,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P493.pdf",
     "ext": "pdf",
     "size": 4100178,
-    "title": "",
+    "title": "第 54 屆世界傳播日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2020
   },
   "P494": {
     "p_id": "P494",
@@ -11168,9 +11294,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P494.pdf",
     "ext": "pdf",
     "size": 3372012,
-    "title": "",
+    "title": "第 55 屆世界傳播日文告 — 「你來看一看吧！」（若一 46）",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2021
   },
   "P495": {
     "p_id": "P495",
@@ -11178,9 +11307,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P495.pdf",
     "ext": "pdf",
     "size": 4904729,
-    "title": "",
+    "title": "第 5 屆世界窮人日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2021
   },
   "P496": {
     "p_id": "P496",
@@ -11188,9 +11320,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P496.pdf",
     "ext": "pdf",
     "size": 2680393,
-    "title": "",
+    "title": "2021 年四旬期文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2021
   },
   "P497": {
     "p_id": "P497",
@@ -11208,9 +11343,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P498.pdf",
     "ext": "pdf",
     "size": 3780710,
-    "title": "",
+    "title": "照料受造界祈禱日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2020
   },
   "P499": {
     "p_id": "P499",
@@ -11218,9 +11356,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P499.pdf",
     "ext": "pdf",
     "size": 2431215,
-    "title": "",
+    "title": "照料受造界祈禱日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2019
   },
   "P500": {
     "p_id": "P500",
@@ -11228,9 +11369,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P500.pdf",
     "ext": "pdf",
     "size": 4086107,
-    "title": "",
+    "title": "照料受造界祈禱日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2024
   },
   "P501": {
     "p_id": "P501",
@@ -11238,9 +11382,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P501.pdf",
     "ext": "pdf",
     "size": 3222818,
-    "title": "",
+    "title": "第 1 屆世界祖父母及長者日文告 — 「我同你們天天在一起」",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2021
   },
   "P502": {
     "p_id": "P502",
@@ -11248,9 +11395,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P502.pdf",
     "ext": "pdf",
     "size": 1942673,
-    "title": "",
+    "title": "第 3 屆世界祖父母及長者日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2023
   },
   "P503": {
     "p_id": "P503",
@@ -11258,9 +11408,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P503.pdf",
     "ext": "pdf",
     "size": 4415438,
-    "title": "",
+    "title": "第 38 屆世界青年日文告 — 活出望德的喜樂",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2023
   },
   "P504": {
     "p_id": "P504",
@@ -11268,9 +11421,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P504.pdf",
     "ext": "pdf",
     "size": 3621494,
-    "title": "",
+    "title": "第 39 屆世界青年日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2024
   },
   "P505": {
     "p_id": "P505",
@@ -11278,9 +11434,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P505.pdf",
     "ext": "pdf",
     "size": 2595955,
-    "title": "",
+    "title": "第 31 屆世界病患日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2023
   },
   "P506": {
     "p_id": "P506",
@@ -11288,9 +11447,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P506.pdf",
     "ext": "pdf",
     "size": 1736768,
-    "title": "",
+    "title": "第 32 屆世界病患日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2024
   },
   "P507": {
     "p_id": "P507",
@@ -11298,9 +11460,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P507.pdf",
     "ext": "pdf",
     "size": 3417164,
-    "title": "",
+    "title": "第 8 屆世界窮人日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2024
   },
   "P508": {
     "p_id": "P508",
@@ -11308,9 +11473,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P508.pdf",
     "ext": "pdf",
     "size": 3285906,
-    "title": "",
+    "title": "聖召既是因寵也是使命",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2024
   },
   "P509": {
     "p_id": "P509",
@@ -11318,9 +11486,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P509.pdf",
     "ext": "pdf",
     "size": 2417598,
-    "title": "",
+    "title": "2023 年四旬期文告 — 同道偕行的歷程",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2023
   },
   "P510": {
     "p_id": "P510",
@@ -11328,9 +11499,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P510.pdf",
     "ext": "pdf",
     "size": 1463150,
-    "title": "",
+    "title": "為普世和平祈禱",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2023
   },
   "P511": {
     "p_id": "P511",
@@ -11338,9 +11512,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P511.pdf",
     "ext": "pdf",
     "size": 12890104,
-    "title": "",
+    "title": "《請讀頌天主》宗座勸諭",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2023
   },
   "P512": {
     "p_id": "P512",
@@ -11348,9 +11525,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P512.pdf",
     "ext": "pdf",
     "size": 148353,
-    "title": "",
+    "title": "照料受造界祈禱日文告 2023",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2023
   },
   "P513": {
     "p_id": "P513",
@@ -11368,9 +11548,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P515.pdf",
     "ext": "pdf",
     "size": 3071652,
-    "title": "",
+    "title": "2024 年四旬期文告 — 天主帶領我們穿過荒漠，走向自由",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2024
   },
   "P516": {
     "p_id": "P516",
@@ -11438,9 +11621,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P522.pdf",
     "ext": "pdf",
     "size": 3743311,
-    "title": "",
+    "title": "第 56 屆世界傳播日文告 — 用內心的耳朵去聆聽",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2022
   },
   "P523": {
     "p_id": "P523",
@@ -11478,9 +11664,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P526.pdf",
     "ext": "pdf",
     "size": 952037,
-    "title": "",
+    "title": "2019 年第 34 屆世界青年日影片文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2019
   },
   "P527": {
     "p_id": "P527",
@@ -11488,9 +11677,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P527.pdf",
     "ext": "pdf",
     "size": 4653434,
-    "title": "",
+    "title": "第 36 屆世界青年日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2021
   },
   "P528": {
     "p_id": "P528",
@@ -11498,9 +11690,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P528.pdf",
     "ext": "pdf",
     "size": 3176300,
-    "title": "",
+    "title": "第 58 屆世界聖召祈禱日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2021
   },
   "P529": {
     "p_id": "P529",
@@ -11508,9 +11703,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P529.pdf",
     "ext": "pdf",
     "size": 2539033,
-    "title": "",
+    "title": "2021 年第 29 屆世界病患日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2021
   },
   "P530": {
     "p_id": "P530",
@@ -11528,9 +11726,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P531.pdf",
     "ext": "pdf",
     "size": 6088288,
-    "title": "",
+    "title": "第 54 屆世界和平日文告 — 關懷的文化作為和平之路",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗方濟各",
+    "year_haiku": 2021
   },
   "P532": {
     "p_id": "P532",
@@ -11598,9 +11799,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P538.pdf",
     "ext": "pdf",
     "size": 2140565,
-    "title": "",
+    "title": "教宗良十四世 2026 年四旬期文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗良十四世",
+    "year_haiku": 2026
   },
   "P539": {
     "p_id": "P539",
@@ -11608,9 +11812,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P539.pdf",
     "ext": "pdf",
     "size": 5387593,
-    "title": "",
+    "title": "第 59 屆世界和平日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗良十四世",
+    "year_haiku": 2026
   },
   "P540": {
     "p_id": "P540",
@@ -11618,9 +11825,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P540.pdf",
     "ext": "pdf",
     "size": 3470428,
-    "title": "",
+    "title": "第 34 屆世界病患日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗良十四世",
+    "year_haiku": 2026
   },
   "P541": {
     "p_id": "P541",
@@ -11628,9 +11838,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P541.pdf",
     "ext": "pdf",
     "size": 3369525,
-    "title": "",
+    "title": "第 63 屆世界聖召祈禱日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗良十四世",
+    "year_haiku": 2026
   },
   "P542": {
     "p_id": "P542",
@@ -11638,9 +11851,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P542.pdf",
     "ext": "pdf",
     "size": 2485087,
-    "title": "",
+    "title": "青年禧年慶典閉幕彌撒講道",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗良十四世",
+    "year_haiku": 2025
   },
   "P543": {
     "p_id": "P543",
@@ -11648,9 +11864,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P543.pdf",
     "ext": "pdf",
     "size": 2135750,
-    "title": "",
+    "title": "第 111 屆世界移民及難民日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗良十四世",
+    "year_haiku": 2025
   },
   "P544": {
     "p_id": "P544",
@@ -11658,9 +11877,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P544.pdf",
     "ext": "pdf",
     "size": 2904109,
-    "title": "",
+    "title": "第 9 屆世界盲人日文告（或：第 9 屆世界窮人日文告）",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗良十四世",
+    "year_haiku": 2025
   },
   "P545": {
     "p_id": "P545",
@@ -11668,9 +11890,12 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P545.pdf",
     "ext": "pdf",
     "size": 3193926,
-    "title": "",
+    "title": "第 40 屆世界青年日文告",
     "headings": null,
-    "status": "no_title"
+    "status": "ok",
+    "source": "haiku_ocr",
+    "pope_zh_haiku": "教宗良十四世",
+    "year_haiku": 2025
   },
   "P546": {
     "p_id": "P546",

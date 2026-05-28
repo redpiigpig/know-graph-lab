@@ -695,6 +695,79 @@ import { hsscolP2832011 } from './21c-benedict-xvi/hsscol-p283-2011'
 // ── 2026-05-28 hsscol BC 批次 — 21c-francis ──
 import { hsscolP3492016 } from './21c-francis/hsscol-p349-2016'
 
+
+
+// ── 2026-05-28 hsscol Haiku OCR — 21c-benedict-xvi ──
+import { hsscolP2742009 } from './21c-benedict-xvi/hsscol-p274-2009'
+
+// ── 2026-05-28 hsscol Haiku OCR — 21c-francis ──
+import { hsscolP4512022 } from './21c-francis/hsscol-p451-2022'
+import { hsscolP4522022 } from './21c-francis/hsscol-p452-2022'
+import { hsscolP4532022 } from './21c-francis/hsscol-p453-2022'
+import { hsscolP4542022 } from './21c-francis/hsscol-p454-2022'
+import { hsscolP4552022 } from './21c-francis/hsscol-p455-2022'
+import { hsscolP4562022 } from './21c-francis/hsscol-p456-2022'
+import { hsscolP4572022 } from './21c-francis/hsscol-p457-2022'
+import { hsscolP4652022 } from './21c-francis/hsscol-p465-2022'
+import { hsscolP4662022 } from './21c-francis/hsscol-p466-2022'
+import { hsscolP4672023 } from './21c-francis/hsscol-p467-2023'
+import { hsscolP4682023 } from './21c-francis/hsscol-p468-2023'
+import { hsscolP4692024 } from './21c-francis/hsscol-p469-2024'
+import { hsscolP4702024 } from './21c-francis/hsscol-p470-2024'
+import { hsscolP4712024 } from './21c-francis/hsscol-p471-2024'
+import { hsscolP4722024 } from './21c-francis/hsscol-p472-2024'
+import { hsscolP4732024 } from './21c-francis/hsscol-p473-2024'
+import { hsscolP4742024 } from './21c-francis/hsscol-p474-2024'
+import { hsscolP4752024 } from './21c-francis/hsscol-p475-2024'
+import { hsscolP4762025 } from './21c-francis/hsscol-p476-2025'
+import { hsscolP4782015 } from './21c-francis/hsscol-p478-2015'
+import { hsscolP4802015 } from './21c-francis/hsscol-p480-2015'
+import { hsscolP4812016 } from './21c-francis/hsscol-p481-2016'
+import { hsscolP4832020 } from './21c-francis/hsscol-p483-2020'
+import { hsscolP4862020 } from './21c-francis/hsscol-p486-2020'
+import { hsscolP4882025 } from './21c-francis/hsscol-p488-2025'
+import { hsscolP4892025 } from './21c-francis/hsscol-p489-2025'
+import { hsscolP4902025 } from './21c-francis/hsscol-p490-2025'
+import { hsscolP4912025 } from './21c-francis/hsscol-p491-2025'
+import { hsscolP4922020 } from './21c-francis/hsscol-p492-2020'
+import { hsscolP4932020 } from './21c-francis/hsscol-p493-2020'
+import { hsscolP4942021 } from './21c-francis/hsscol-p494-2021'
+import { hsscolP4952021 } from './21c-francis/hsscol-p495-2021'
+import { hsscolP4962021 } from './21c-francis/hsscol-p496-2021'
+import { hsscolP4982020 } from './21c-francis/hsscol-p498-2020'
+import { hsscolP4992019 } from './21c-francis/hsscol-p499-2019'
+import { hsscolP5002024 } from './21c-francis/hsscol-p500-2024'
+import { hsscolP5012021 } from './21c-francis/hsscol-p501-2021'
+import { hsscolP5022023 } from './21c-francis/hsscol-p502-2023'
+import { hsscolP5032023 } from './21c-francis/hsscol-p503-2023'
+import { hsscolP5042024 } from './21c-francis/hsscol-p504-2024'
+import { hsscolP5052023 } from './21c-francis/hsscol-p505-2023'
+import { hsscolP5062024 } from './21c-francis/hsscol-p506-2024'
+import { hsscolP5072024 } from './21c-francis/hsscol-p507-2024'
+import { hsscolP5082024 } from './21c-francis/hsscol-p508-2024'
+import { hsscolP5092023 } from './21c-francis/hsscol-p509-2023'
+import { hsscolP5102023 } from './21c-francis/hsscol-p510-2023'
+import { hsscolP5112023 } from './21c-francis/hsscol-p511-2023'
+import { hsscolP5122023 } from './21c-francis/hsscol-p512-2023'
+import { hsscolP5152024 } from './21c-francis/hsscol-p515-2024'
+import { hsscolP5222022 } from './21c-francis/hsscol-p522-2022'
+import { hsscolP5262019 } from './21c-francis/hsscol-p526-2019'
+import { hsscolP5272021 } from './21c-francis/hsscol-p527-2021'
+import { hsscolP5282021 } from './21c-francis/hsscol-p528-2021'
+import { hsscolP5292021 } from './21c-francis/hsscol-p529-2021'
+import { hsscolP5312021 } from './21c-francis/hsscol-p531-2021'
+
+// ── 2026-05-28 hsscol Haiku OCR — 21c-leo-xiv ──
+import { hsscolP4872025 } from './21c-leo-xiv/hsscol-p487-2025'
+import { hsscolP5382026 } from './21c-leo-xiv/hsscol-p538-2026'
+import { hsscolP5392026 } from './21c-leo-xiv/hsscol-p539-2026'
+import { hsscolP5402026 } from './21c-leo-xiv/hsscol-p540-2026'
+import { hsscolP5412026 } from './21c-leo-xiv/hsscol-p541-2026'
+import { hsscolP5422025 } from './21c-leo-xiv/hsscol-p542-2025'
+import { hsscolP5432025 } from './21c-leo-xiv/hsscol-p543-2025'
+import { hsscolP5442025 } from './21c-leo-xiv/hsscol-p544-2025'
+import { hsscolP5452025 } from './21c-leo-xiv/hsscol-p545-2025'
+
 export const ALL_DOCUMENTS: PapalDocument[] = [
   laudatoSi2015,
   fratelliTutti2020,
@@ -1328,6 +1401,78 @@ export const ALL_DOCUMENTS: PapalDocument[] = [
 
   // ── 2026-05-28 hsscol — 21c-francis ──
   hsscolP3492016,
+
+
+  // ── 2026-05-28 hsscol Haiku — 21c-benedict-xvi ──
+  hsscolP2742009,
+
+  // ── 2026-05-28 hsscol Haiku — 21c-francis ──
+  hsscolP4512022,
+  hsscolP4522022,
+  hsscolP4532022,
+  hsscolP4542022,
+  hsscolP4552022,
+  hsscolP4562022,
+  hsscolP4572022,
+  hsscolP4652022,
+  hsscolP4662022,
+  hsscolP4672023,
+  hsscolP4682023,
+  hsscolP4692024,
+  hsscolP4702024,
+  hsscolP4712024,
+  hsscolP4722024,
+  hsscolP4732024,
+  hsscolP4742024,
+  hsscolP4752024,
+  hsscolP4762025,
+  hsscolP4782015,
+  hsscolP4802015,
+  hsscolP4812016,
+  hsscolP4832020,
+  hsscolP4862020,
+  hsscolP4882025,
+  hsscolP4892025,
+  hsscolP4902025,
+  hsscolP4912025,
+  hsscolP4922020,
+  hsscolP4932020,
+  hsscolP4942021,
+  hsscolP4952021,
+  hsscolP4962021,
+  hsscolP4982020,
+  hsscolP4992019,
+  hsscolP5002024,
+  hsscolP5012021,
+  hsscolP5022023,
+  hsscolP5032023,
+  hsscolP5042024,
+  hsscolP5052023,
+  hsscolP5062024,
+  hsscolP5072024,
+  hsscolP5082024,
+  hsscolP5092023,
+  hsscolP5102023,
+  hsscolP5112023,
+  hsscolP5122023,
+  hsscolP5152024,
+  hsscolP5222022,
+  hsscolP5262019,
+  hsscolP5272021,
+  hsscolP5282021,
+  hsscolP5292021,
+  hsscolP5312021,
+
+  // ── 2026-05-28 hsscol Haiku — 21c-leo-xiv ──
+  hsscolP4872025,
+  hsscolP5382026,
+  hsscolP5392026,
+  hsscolP5402026,
+  hsscolP5412026,
+  hsscolP5422025,
+  hsscolP5432025,
+  hsscolP5442025,
+  hsscolP5452025,
 
 ]
 
