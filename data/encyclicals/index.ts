@@ -779,7 +779,22 @@ import { hsscolP3292016 } from './21c-francis/hsscol-p329-2016'
 import { hsscolP3312016 } from './21c-francis/hsscol-p331-2016'
 import { hsscolP3322016 } from './21c-francis/hsscol-p332-2016'
 
+import { iniunctumNobis1564 } from './16c-pius-iv/iniunctum-nobis-1564'
+
+import { cumOccasione1653 } from './17c-innocent-x/cum-occasione-1653'
+
+import { romanumDecetPontificem1692 } from './17c-innocent-xii/romanum-decet-pontificem-1692'
+
+import { aeterniPatrisFilius1621 } from './17c-gregory-xv/aeterni-patris-filius-1621'
+
+import { inEminentiApostolatus1738 } from './18c-clement-xii/in-eminenti-apostolatus-1738'
+
 export const ALL_DOCUMENTS: PapalDocument[] = [
+  inEminentiApostolatus1738,
+  aeterniPatrisFilius1621,
+  romanumDecetPontificem1692,
+  cumOccasione1653,
+  iniunctumNobis1564,
   laudatoSi2015,
   fratelliTutti2020,
   dilexitNos2024,

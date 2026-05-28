@@ -124,6 +124,26 @@ const innocentXiLoaders = import.meta.glob(
   { query: '?raw', import: 'default' },
 ) as Record<string, () => Promise<string>>
 
+const innocentXiiLoaders = import.meta.glob(
+  './17c-innocent-xii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const innocentXLoaders = import.meta.glob(
+  './17c-innocent-x/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const gregoryXvLoaders = import.meta.glob(
+  './17c-gregory-xv/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const piusIvLoaders = import.meta.glob(
+  './16c-pius-iv/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
 const alexanderViiLoaders = import.meta.glob(
   './17c-alexander-vii/*.txt',
   { query: '?raw', import: 'default' },
@@ -262,11 +282,15 @@ const POPE_LOADERS: Record<string, Record<string, () => Promise<string>>> = {
   'benedict-xiv': benedictXivLoaders,
   'clement-xii': clementXiiLoaders,
   'clement-xi': clementXiLoaders,
+  'innocent-xii': innocentXiiLoaders,
   'innocent-xi': innocentXiLoaders,
+  'innocent-x': innocentXLoaders,
+  'gregory-xv': gregoryXvLoaders,
   'alexander-vii': alexanderViiLoaders,
   'clement-viii': clementViiiLoaders,
   'sixtus-v': sixtusVLoaders,
   'pius-v': piusVLoaders,
+  'pius-iv': piusIvLoaders,
   'paul-iii': paulIiiLoaders,
   'leo-x': leoXLoaders,
   'alexander-vi': alexanderViLoaders,
@@ -311,11 +335,15 @@ const POPE_FOLDER: Record<string, string> = {
   'benedict-xiv': './18c-benedict-xiv',
   'clement-xii': './18c-clement-xii',
   'clement-xi': './18c-clement-xi',
+  'innocent-xii': './17c-innocent-xii',
   'innocent-xi': './17c-innocent-xi',
+  'innocent-x': './17c-innocent-x',
+  'gregory-xv': './17c-gregory-xv',
   'alexander-vii': './17c-alexander-vii',
   'clement-viii': './16c-clement-viii',
   'sixtus-v': './16c-sixtus-v',
   'pius-v': './16c-pius-v',
+  'pius-iv': './16c-pius-iv',
   'paul-iii': './16c-paul-iii',
   'leo-x': './16c-leo-x',
   'alexander-vi': './15c-alexander-vi',
