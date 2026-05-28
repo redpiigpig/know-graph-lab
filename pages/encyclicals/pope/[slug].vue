@@ -46,53 +46,95 @@
         </p>
       </header>
 
-      <!-- Documents -->
+      <!-- Documents — 3-tab tier 分組 -->
       <div v-if="docs.length === 0" class="text-center text-stone-400 py-12">
         <p class="text-sm">尚未錄入此教宗的訓導文件。</p>
         <p class="text-xs text-stone-300 mt-2">資料源排程：依世紀新→舊；本教宗待辦。</p>
       </div>
 
       <div v-else>
-        <div class="text-xs uppercase tracking-widest text-stone-500 font-semibold mb-3">
-          訓導文件 · 共 {{ docs.length }} 篇
+        <!-- Tier tabs -->
+        <div class="flex border-b border-stone-200 mb-4 -mx-1">
+          <button
+            v-for="t in TIER_ORDER"
+            :key="t"
+            type="button"
+            class="px-4 py-2.5 mx-1 text-sm font-semibold border-b-2 transition-colors"
+            :class="activeTier === t
+              ? 'border-stone-900 text-stone-900'
+              : 'border-transparent text-stone-400 hover:text-stone-700'"
+            @click="activeTier = t"
+          >
+            {{ TIER_LABEL_ZH[t] }}
+            <span class="ml-1.5 text-[11px] font-normal text-stone-500">
+              {{ docsByTier.get(t)?.length || 0 }}
+            </span>
+          </button>
         </div>
 
-        <div v-for="group in docsByCategory" :key="group.category" class="mb-6">
-          <div class="text-xs font-semibold text-stone-600 mb-2 flex items-baseline gap-2">
-            <span>{{ CATEGORY_LABEL_ZH[group.category] }}</span>
-            <span class="text-[10px] italic text-stone-400">{{ CATEGORY_LABEL_LAT[group.category] }}</span>
-            <span class="text-[10px] text-stone-400 ml-auto">{{ group.docs.length }} 篇</span>
-          </div>
+        <!-- Active tier description -->
+        <p class="text-xs text-stone-500 mb-4 leading-relaxed">
+          {{ TIER_DESC_ZH[activeTier] }}
+        </p>
 
-          <div class="grid grid-cols-1 gap-2.5">
-            <NuxtLink
-              v-for="doc in group.docs"
-              :key="doc.slug"
-              :to="`/encyclicals/${doc.slug}`"
-              class="block bg-white border border-stone-200 rounded-lg px-5 py-4 hover:border-stone-400 hover:shadow-md transition-all duration-150"
-            >
-              <div class="flex items-start gap-3">
-                <div class="flex-1 min-w-0">
-                  <div class="flex items-baseline gap-2 mb-1 flex-wrap">
-                    <span class="text-[11px] font-mono text-stone-400">{{ doc.promulgationDate }}</span>
-                    <span class="text-[10px] px-1.5 py-0.5 rounded bg-stone-100 text-stone-600 border border-stone-200">
-                      {{ doc.century }}c
-                    </span>
+        <!-- Tier content -->
+        <div v-if="(docsByTier.get(activeTier)?.length || 0) === 0" class="text-center text-stone-400 py-12 border border-stone-200 rounded-lg bg-stone-50/50">
+          <p class="text-sm">此教宗暫無「{{ TIER_LABEL_ZH[activeTier] }}」類型文件入庫。</p>
+          <p class="text-xs text-stone-300 mt-2">
+            <template v-if="activeTier === 'curia'">
+              部會文件（信理部／禮儀部等頒布）資料層待下輪 batch 入庫。
+            </template>
+            <template v-else-if="activeTier === 'message'">
+              一般文告（年度世界和平日／青年日等系列）資料層待下輪 batch 入庫。
+            </template>
+            <template v-else>
+              敬請期待後續資料補入。
+            </template>
+          </p>
+        </div>
+
+        <div v-else>
+          <div v-for="group in docsByCategoryInActiveTier" :key="group.category" class="mb-6">
+            <div class="text-xs font-semibold text-stone-600 mb-2 flex items-baseline gap-2">
+              <span>{{ CATEGORY_LABEL_ZH[group.category] }}</span>
+              <span class="text-[10px] italic text-stone-400">{{ CATEGORY_LABEL_LAT[group.category] }}</span>
+              <span class="text-[10px] text-stone-400 ml-auto">{{ group.docs.length }} 篇</span>
+            </div>
+
+            <div class="grid grid-cols-1 gap-2.5">
+              <NuxtLink
+                v-for="doc in group.docs"
+                :key="doc.slug"
+                :to="`/encyclicals/${doc.slug}`"
+                class="block bg-white border border-stone-200 rounded-lg px-5 py-4 hover:border-stone-400 hover:shadow-md transition-all duration-150"
+              >
+                <div class="flex items-start gap-3">
+                  <div class="flex-1 min-w-0">
+                    <div class="flex items-baseline gap-2 mb-1 flex-wrap">
+                      <span class="text-[11px] font-mono text-stone-400">{{ doc.promulgationDate }}</span>
+                      <span class="text-[10px] px-1.5 py-0.5 rounded bg-stone-100 text-stone-600 border border-stone-200">
+                        {{ doc.century }}c
+                      </span>
+                      <span
+                        v-if="doc.issuer"
+                        class="text-[10px] px-1.5 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-100"
+                      >{{ doc.issuer }}</span>
+                    </div>
+                    <div class="font-semibold text-stone-900 text-base leading-snug">{{ doc.titleZh }}</div>
+                    <div class="text-sm italic text-stone-500 mt-0.5">{{ doc.titleLat }}</div>
+                    <div v-if="doc.titleEn" class="text-xs text-stone-400 mt-0.5">{{ doc.titleEn }}</div>
+                    <div v-if="doc.topics?.length" class="flex flex-wrap gap-1 mt-2">
+                      <span
+                        v-for="t in doc.topics.slice(0, 5)"
+                        :key="t"
+                        class="text-[10px] px-1.5 py-0.5 rounded bg-amber-50 text-amber-700 border border-amber-100"
+                      >{{ t }}</span>
+                    </div>
                   </div>
-                  <div class="font-semibold text-stone-900 text-base leading-snug">{{ doc.titleZh }}</div>
-                  <div class="text-sm italic text-stone-500 mt-0.5">{{ doc.titleLat }}</div>
-                  <div v-if="doc.titleEn" class="text-xs text-stone-400 mt-0.5">{{ doc.titleEn }}</div>
-                  <div v-if="doc.topics?.length" class="flex flex-wrap gap-1 mt-2">
-                    <span
-                      v-for="t in doc.topics.slice(0, 5)"
-                      :key="t"
-                      class="text-[10px] px-1.5 py-0.5 rounded bg-amber-50 text-amber-700 border border-amber-100"
-                    >{{ t }}</span>
-                  </div>
+                  <div class="text-stone-300 group-hover:text-stone-500 self-center text-xl">→</div>
                 </div>
-                <div class="text-stone-300 group-hover:text-stone-500 self-center text-xl">→</div>
-              </div>
-            </NuxtLink>
+              </NuxtLink>
+            </div>
           </div>
         </div>
       </div>
@@ -112,8 +154,12 @@ import {
   documentsByPope,
   CATEGORY_LABEL_ZH,
   CATEGORY_LABEL_LAT,
+  TIER_LABEL_ZH,
+  TIER_DESC_ZH,
+  docTier,
   POPES,
   type PapalDocCategory,
+  type PapalDocTier,
 } from '~/data/encyclicals'
 
 definePageMeta({ middleware: 'auth' })
@@ -142,8 +188,12 @@ const popeNoLabel = computed(() => {
   return m ? m[1] : '—'
 })
 
+/** Tier 顯示順序：訓導 → 部會 → 文告 */
+const TIER_ORDER: PapalDocTier[] = ['teaching', 'curia', 'message']
+
 /** 依文件類別分組（通諭 / 勸諭 / 憲令 / 自動詔書 ...） */
 const CATEGORY_ORDER: PapalDocCategory[] = [
+  // teaching
   'encyclical',
   'apostolic-exhort',
   'apostolic-const',
@@ -151,15 +201,39 @@ const CATEGORY_ORDER: PapalDocCategory[] = [
   'motu-proprio',
   'bull',
   'brief',
+  'epistola',
+  // curia
+  'instruction',
+  'declaration',
+  'decree',
+  'notification',
+  'responsum',
+  'curia-document',
+  // message
   'allocution',
   'homily',
   'message',
-  'epistola',
+  'letter-informal',
 ]
 
-const docsByCategory = computed(() => {
-  const map = new Map<PapalDocCategory, typeof docs.value>()
+/** Active tier — 預設 'teaching' */
+const activeTier = ref<PapalDocTier>('teaching')
+
+/** 將 docs 按 tier 分組 */
+const docsByTier = computed(() => {
+  const map = new Map<PapalDocTier, typeof docs.value>()
+  for (const t of TIER_ORDER) map.set(t, [])
   for (const d of docs.value) {
+    map.get(docTier(d))!.push(d)
+  }
+  return map
+})
+
+/** 當前 tier 內，再按 category 分組 */
+const docsByCategoryInActiveTier = computed(() => {
+  const tierDocs = docsByTier.value.get(activeTier.value) || []
+  const map = new Map<PapalDocCategory, typeof docs.value>()
+  for (const d of tierDocs) {
     if (!map.has(d.category)) map.set(d.category, [])
     map.get(d.category)!.push(d)
   }

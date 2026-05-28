@@ -17,6 +17,14 @@ description: 教宗訓導文獻對照工具（/encyclicals）— 4 世紀 Damasu
 >
 > 2026-05-28（再晚）：新增本篤十五世 *Maximum Illud* 1919 宗座牧函（傳教神學開山之作 — 後梵二《Ad Gentes》與 JP2《Redemptoris Missio》皆承襲）— LA+EN+IT from vatican.va。中文 hsscol P397 為馬相伯選譯 1947 掃描影像 PDF（9 頁），保留 placeholder 待 Gemini Vision OCR。
 >
+> 2026-05-28（最晚）：**framework 改造為訓導位階 3-tier 架構**——hsscol archive 還有 ~600 篇待 ingest（部會文件 + 一般文告），規模龐大。本次只做框架：
+> - **`types.ts`** 加 `PapalDocTier = 'teaching' | 'curia' | 'message'` + `issuer?: string` 欄位，並擴展 `PapalDocCategory` 加 curia 類型（instruction / declaration / decree / notification / responsum / curia-document）與新 message 類型（letter-informal）
+> - **`pages/encyclicals/pope/[slug].vue`** 改 3-tab UI：教宗訓導 / 部會文件 / 一般文告。部會與文告 tab 暫顯「待下輪 batch 入庫」
+> - 既有 206 篇全部歸 tier='teaching'（靠 `docTier()` fallback，metadata 不動）
+> - `data/encyclicals/_CURIA_README.md` 規劃部會資料層
+>
+> **下輪 session 待補（具體內容）**：(B 位階剩 ~20 篇 marquee teaching) + (C 位階 ~130 篇部會文件) + (D 位階 ~470 篇一般文告)
+>
 > **本 skill 與 [[scripture-canon-portal]] 的分工**：
 > - scripture-canon-portal：**集體**文件（大公會議產出的信經 / canons / dogmatic decree）+ 信條 + 教會法規 + 教父著作搜尋 + 聖經對照 + 典外
 > - papal-magisterium（本 skill）：**個別教宗**頒布的文件（通諭 / 勸諭 / 憲令 / 自動詔書 / 使徒書信 / 演說 / 講道）
