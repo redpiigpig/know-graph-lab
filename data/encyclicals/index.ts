@@ -308,6 +308,342 @@ import { dictatusPapae1075 } from './11c-gregory-vii/dictatus-papae-1075'
 // ── added: 5c leo-i (CCEL Schaff NPNF2 Vol 12) ──
 import { tomeOfLeo449 } from './5c-leo-i/tome-of-leo-449'
 
+
+
+// ── 2026-05-28 hsscol BC 批次 — 20c-john-paul-ii ──
+import { catechesiTradendae1979 } from './20c-john-paul-ii/catechesi-tradendae-1979'
+import { hsscolP1651979 } from './20c-john-paul-ii/hsscol-p165-1979'
+import { hsscolP1682002 } from './20c-john-paul-ii/hsscol-p168-2002'
+import { hsscolP1691981 } from './20c-john-paul-ii/hsscol-p169-1981'
+import { hsscolP1701981 } from './20c-john-paul-ii/hsscol-p170-1981'
+import { hsscolP1721983 } from './20c-john-paul-ii/hsscol-p172-1983'
+import { hsscolP1731984 } from './20c-john-paul-ii/hsscol-p173-1984'
+import { hsscolP1741984 } from './20c-john-paul-ii/hsscol-p174-1984'
+import { hsscolP1751984 } from './20c-john-paul-ii/hsscol-p175-1984'
+import { hsscolP1781987 } from './20c-john-paul-ii/hsscol-p178-1987'
+import { hsscolP1791987 } from './20c-john-paul-ii/hsscol-p179-1987'
+import { hsscolP1811988 } from './20c-john-paul-ii/hsscol-p181-1988'
+import { hsscolP1821988 } from './20c-john-paul-ii/hsscol-p182-1988'
+import { hsscolP1831988 } from './20c-john-paul-ii/hsscol-p183-1988'
+import { hsscolP1841989 } from './20c-john-paul-ii/hsscol-p184-1989'
+import { hsscolP1852002 } from './20c-john-paul-ii/hsscol-p185-2002'
+import { hsscolP1871992 } from './20c-john-paul-ii/hsscol-p187-1992'
+import { hsscolP1881993 } from './20c-john-paul-ii/hsscol-p188-1993'
+import { hsscolP1911994 } from './20c-john-paul-ii/hsscol-p191-1994'
+import { hsscolP1931995 } from './20c-john-paul-ii/hsscol-p193-1995'
+import { hsscolP1941995 } from './20c-john-paul-ii/hsscol-p194-1995'
+import { hsscolP1961995 } from './20c-john-paul-ii/hsscol-p196-1995'
+import { hsscolP1971996 } from './20c-john-paul-ii/hsscol-p197-1996'
+import { hsscolP1981996 } from './20c-john-paul-ii/hsscol-p198-1996'
+import { hsscolP1991998 } from './20c-john-paul-ii/hsscol-p199-1998'
+import { hsscolP2001998 } from './20c-john-paul-ii/hsscol-p200-1998'
+import { hsscolP2011998 } from './20c-john-paul-ii/hsscol-p201-1998'
+import { hsscolP2021998 } from './20c-john-paul-ii/hsscol-p202-1998'
+import { hsscolP2041998 } from './20c-john-paul-ii/hsscol-p204-1998'
+import { hsscolP2101992 } from './20c-john-paul-ii/hsscol-p210-1992'
+import { hsscolP2122001 } from './20c-john-paul-ii/hsscol-p212-2001'
+import { hsscolP2132003 } from './20c-john-paul-ii/hsscol-p213-2003'
+import { hsscolP2141984 } from './20c-john-paul-ii/hsscol-p214-1984'
+import { hsscolP2152004 } from './20c-john-paul-ii/hsscol-p215-2004'
+import { hsscolP2171993 } from './20c-john-paul-ii/hsscol-p217-1993'
+import { hsscolP2181999 } from './20c-john-paul-ii/hsscol-p218-1999'
+import { hsscolP2192001 } from './20c-john-paul-ii/hsscol-p219-2001'
+import { hsscolP2202004 } from './20c-john-paul-ii/hsscol-p220-2004'
+import { hsscolP2232002 } from './20c-john-paul-ii/hsscol-p223-2002'
+import { hsscolP2242005 } from './20c-john-paul-ii/hsscol-p224-2005'
+import { hsscolP2252005 } from './20c-john-paul-ii/hsscol-p225-2005'
+import { hsscolP2262005 } from './20c-john-paul-ii/hsscol-p226-2005'
+import { hsscolP2302004 } from './20c-john-paul-ii/hsscol-p230-2004'
+import { hsscolP2312004 } from './20c-john-paul-ii/hsscol-p231-2004'
+import { hsscolP2322004 } from './20c-john-paul-ii/hsscol-p232-2004'
+import { hsscolP2332004 } from './20c-john-paul-ii/hsscol-p233-2004'
+import { hsscolP2341991 } from './20c-john-paul-ii/hsscol-p234-1991'
+import { hsscolP2431994 } from './20c-john-paul-ii/hsscol-p243-1994'
+import { hsscolP2442003 } from './20c-john-paul-ii/hsscol-p244-2003'
+import { hsscolP2452002 } from './20c-john-paul-ii/hsscol-p245-2002'
+import { hsscolP2462001 } from './20c-john-paul-ii/hsscol-p246-2001'
+import { hsscolP2472005 } from './20c-john-paul-ii/hsscol-p247-2005'
+import { hsscolP2492000 } from './20c-john-paul-ii/hsscol-p249-2000'
+import { hsscolP2502001 } from './20c-john-paul-ii/hsscol-p250-2001'
+import { hsscolP2512007 } from './20c-john-paul-ii/hsscol-p251-2007'
+import { hsscolP2521998 } from './20c-john-paul-ii/hsscol-p252-1998'
+import { hsscolP2702009 } from './20c-john-paul-ii/hsscol-p270-2009'
+import { hsscolP2772010 } from './20c-john-paul-ii/hsscol-p277-2010'
+import { hsscolP2992003 } from './20c-john-paul-ii/hsscol-p299-2003'
+import { hsscolP3002003 } from './20c-john-paul-ii/hsscol-p300-2003'
+import { hsscolP3451980 } from './20c-john-paul-ii/hsscol-p345-1980'
+import { hsscolP3501982 } from './20c-john-paul-ii/hsscol-p350-1982'
+import { hsscolP3531995 } from './20c-john-paul-ii/hsscol-p353-1995'
+import { hsscolP3622002 } from './20c-john-paul-ii/hsscol-p362-2002'
+import { hsscolP3632002 } from './20c-john-paul-ii/hsscol-p363-2002'
+import { hsscolP3642002 } from './20c-john-paul-ii/hsscol-p364-2002'
+import { hsscolP3652000 } from './20c-john-paul-ii/hsscol-p365-2000'
+import { hsscolP3661999 } from './20c-john-paul-ii/hsscol-p366-1999'
+import { hsscolP3672004 } from './20c-john-paul-ii/hsscol-p367-2004'
+import { hsscolP3831999 } from './20c-john-paul-ii/hsscol-p383-1999'
+import { hsscolP3841997 } from './20c-john-paul-ii/hsscol-p384-1997'
+import { hsscolP3852003 } from './20c-john-paul-ii/hsscol-p385-2003'
+import { hsscolP3862003 } from './20c-john-paul-ii/hsscol-p386-2003'
+import { hsscolP3871997 } from './20c-john-paul-ii/hsscol-p387-1997'
+import { theHolySee1994 } from './20c-john-paul-ii/the-holy-see-1994'
+
+// ── 2026-05-28 hsscol BC 批次 — 20c-paul-vi ──
+import { apostolicConstitutionOnTheFastAmpAbstinence1966 } from './20c-paul-vi/apostolic-constitution-on-the-fast-amp-abstinence-1966'
+import { christianoGaudio1975 } from './20c-paul-vi/christiano-gaudio-1975'
+import { hsscolP0011967 } from './20c-paul-vi/hsscol-p001-1967'
+import { hsscolP0031971 } from './20c-paul-vi/hsscol-p003-1971'
+import { hsscolP0041970 } from './20c-paul-vi/hsscol-p004-1970'
+import { hsscolP0051971 } from './20c-paul-vi/hsscol-p005-1971'
+import { hsscolP0061971 } from './20c-paul-vi/hsscol-p006-1971'
+import { hsscolP0071971 } from './20c-paul-vi/hsscol-p007-1971'
+import { hsscolP0081971 } from './20c-paul-vi/hsscol-p008-1971'
+import { hsscolP0091971 } from './20c-paul-vi/hsscol-p009-1971'
+import { hsscolP0101971 } from './20c-paul-vi/hsscol-p010-1971'
+import { hsscolP0111970 } from './20c-paul-vi/hsscol-p011-1970'
+import { hsscolP0171967 } from './20c-paul-vi/hsscol-p017-1967'
+import { hsscolP0181970 } from './20c-paul-vi/hsscol-p018-1970'
+import { hsscolP0201967 } from './20c-paul-vi/hsscol-p020-1967'
+import { hsscolP0221968 } from './20c-paul-vi/hsscol-p022-1968'
+import { hsscolP0241963 } from './20c-paul-vi/hsscol-p024-1963'
+import { hsscolP0251967 } from './20c-paul-vi/hsscol-p025-1967'
+import { hsscolP0261969 } from './20c-paul-vi/hsscol-p026-1969'
+import { hsscolP0271964 } from './20c-paul-vi/hsscol-p027-1964'
+import { hsscolP0401970 } from './20c-paul-vi/hsscol-p040-1970'
+import { hsscolP0411970 } from './20c-paul-vi/hsscol-p041-1970'
+import { hsscolP0421970 } from './20c-paul-vi/hsscol-p042-1970'
+import { hsscolP0431970 } from './20c-paul-vi/hsscol-p043-1970'
+import { hsscolP0441970 } from './20c-paul-vi/hsscol-p044-1970'
+import { hsscolP0451970 } from './20c-paul-vi/hsscol-p045-1970'
+import { hsscolP0461970 } from './20c-paul-vi/hsscol-p046-1970'
+import { hsscolP0471970 } from './20c-paul-vi/hsscol-p047-1970'
+import { hsscolP0561968 } from './20c-paul-vi/hsscol-p056-1968'
+import { hsscolP0571969 } from './20c-paul-vi/hsscol-p057-1969'
+import { hsscolP0581970 } from './20c-paul-vi/hsscol-p058-1970'
+import { hsscolP0591970 } from './20c-paul-vi/hsscol-p059-1970'
+import { hsscolP0601970 } from './20c-paul-vi/hsscol-p060-1970'
+import { hsscolP0611970 } from './20c-paul-vi/hsscol-p061-1970'
+import { hsscolP0621970 } from './20c-paul-vi/hsscol-p062-1970'
+import { hsscolP0631970 } from './20c-paul-vi/hsscol-p063-1970'
+import { hsscolP0641970 } from './20c-paul-vi/hsscol-p064-1970'
+import { hsscolP0651970 } from './20c-paul-vi/hsscol-p065-1970'
+import { hsscolP0721968 } from './20c-paul-vi/hsscol-p072-1968'
+import { hsscolP1711983 } from './20c-paul-vi/hsscol-p171-1983'
+import { hsscolP4581973 } from './20c-paul-vi/hsscol-p458-1973'
+import { hsscolP4591970 } from './20c-paul-vi/hsscol-p459-1970'
+import { regiminiEcclesiae1967 } from './20c-paul-vi/regimini-ecclesiae-1967'
+import { sacrarumIndulgentiarumRecognitio1967 } from './20c-paul-vi/sacrarum-indulgentiarum-recognitio-1967'
+import { sacrumDiaconatus1967 } from './20c-paul-vi/sacrum-diaconatus-1967'
+
+// ── 2026-05-28 hsscol BC 批次 — 20c-pius-xi ──
+import { deAcrisMissionibusProvehendis1926 } from './20c-pius-xi/de-acris-missionibus-provehendis-1926'
+import { diviniMagistri1929 } from './20c-pius-xi/divini-magistri-1929'
+import { hsscolP0761931 } from './20c-pius-xi/hsscol-p076-1931'
+import { hsscolP0771935 } from './20c-pius-xi/hsscol-p077-1935'
+import { hsscolP0781922 } from './20c-pius-xi/hsscol-p078-1922'
+import { hsscolP0801926 } from './20c-pius-xi/hsscol-p080-1926'
+
+// ── 2026-05-28 hsscol BC 批次 — 20c-pius-xii ──
+import { hsscolP0941939 } from './20c-pius-xii/hsscol-p094-1939'
+import { hsscolP0951940 } from './20c-pius-xii/hsscol-p095-1940'
+import { hsscolP0961940 } from './20c-pius-xii/hsscol-p096-1940'
+import { hsscolP0971940 } from './20c-pius-xii/hsscol-p097-1940'
+import { hsscolP0981940 } from './20c-pius-xii/hsscol-p098-1940'
+import { hsscolP1001941 } from './20c-pius-xii/hsscol-p100-1941'
+import { hsscolP1041943 } from './20c-pius-xii/hsscol-p104-1943'
+import { hsscolP1051951 } from './20c-pius-xii/hsscol-p105-1951'
+import { hsscolP1071943 } from './20c-pius-xii/hsscol-p107-1943'
+import { hsscolP1081943 } from './20c-pius-xii/hsscol-p108-1943'
+import { hsscolP1091944 } from './20c-pius-xii/hsscol-p109-1944'
+import { hsscolP1101944 } from './20c-pius-xii/hsscol-p110-1944'
+import { hsscolP1111945 } from './20c-pius-xii/hsscol-p111-1945'
+import { hsscolP1121945 } from './20c-pius-xii/hsscol-p112-1945'
+import { hsscolP1131945 } from './20c-pius-xii/hsscol-p113-1945'
+import { hsscolP1141946 } from './20c-pius-xii/hsscol-p114-1946'
+import { hsscolP1151946 } from './20c-pius-xii/hsscol-p115-1946'
+import { hsscolP1171947 } from './20c-pius-xii/hsscol-p117-1947'
+import { hsscolP1181947 } from './20c-pius-xii/hsscol-p118-1947'
+import { hsscolP1191948 } from './20c-pius-xii/hsscol-p119-1948'
+import { hsscolP1201949 } from './20c-pius-xii/hsscol-p120-1949'
+import { hsscolP1211949 } from './20c-pius-xii/hsscol-p121-1949'
+import { hsscolP1221951 } from './20c-pius-xii/hsscol-p122-1951'
+import { hsscolP1231951 } from './20c-pius-xii/hsscol-p123-1951'
+import { hsscolP1241956 } from './20c-pius-xii/hsscol-p124-1956'
+import { hsscolP1251956 } from './20c-pius-xii/hsscol-p125-1956'
+import { hsscolP1261958 } from './20c-pius-xii/hsscol-p126-1958'
+import { hsscolP1271949 } from './20c-pius-xii/hsscol-p127-1949'
+import { hsscolP1281950 } from './20c-pius-xii/hsscol-p128-1950'
+import { hsscolP1292002 } from './20c-pius-xii/hsscol-p129-2002'
+import { hsscolP1301951 } from './20c-pius-xii/hsscol-p130-1951'
+import { hsscolP1321952 } from './20c-pius-xii/hsscol-p132-1952'
+import { hsscolP1331952 } from './20c-pius-xii/hsscol-p133-1952'
+import { hsscolP1342002 } from './20c-pius-xii/hsscol-p134-2002'
+import { hsscolP1351952 } from './20c-pius-xii/hsscol-p135-1952'
+import { hsscolP1371952 } from './20c-pius-xii/hsscol-p137-1952'
+import { hsscolP1381953 } from './20c-pius-xii/hsscol-p138-1953'
+import { hsscolP1391953 } from './20c-pius-xii/hsscol-p139-1953'
+import { hsscolP1401953 } from './20c-pius-xii/hsscol-p140-1953'
+import { hsscolP1411954 } from './20c-pius-xii/hsscol-p141-1954'
+import { hsscolP1421954 } from './20c-pius-xii/hsscol-p142-1954'
+import { hsscolP1431954 } from './20c-pius-xii/hsscol-p143-1954'
+import { hsscolP1461955 } from './20c-pius-xii/hsscol-p146-1955'
+import { hsscolP1471955 } from './20c-pius-xii/hsscol-p147-1955'
+import { hsscolP1481955 } from './20c-pius-xii/hsscol-p148-1955'
+import { hsscolP1491955 } from './20c-pius-xii/hsscol-p149-1955'
+import { hsscolP1501956 } from './20c-pius-xii/hsscol-p150-1956'
+import { hsscolP1541957 } from './20c-pius-xii/hsscol-p154-1957'
+import { hsscolP1551957 } from './20c-pius-xii/hsscol-p155-1957'
+import { hsscolP1561957 } from './20c-pius-xii/hsscol-p156-1957'
+import { hsscolP1571957 } from './20c-pius-xii/hsscol-p157-1957'
+import { hsscolP1581957 } from './20c-pius-xii/hsscol-p158-1957'
+import { hsscolP1591957 } from './20c-pius-xii/hsscol-p159-1957'
+import { hsscolP1601957 } from './20c-pius-xii/hsscol-p160-1957'
+import { hsscolP1611958 } from './20c-pius-xii/hsscol-p161-1958'
+import { hsscolP1621958 } from './20c-pius-xii/hsscol-p162-1958'
+import { hsscolP2061955 } from './20c-pius-xii/hsscol-p206-1955'
+import { hsscolP2071956 } from './20c-pius-xii/hsscol-p207-1956'
+import { hsscolP2081957 } from './20c-pius-xii/hsscol-p208-1957'
+import { hsscolP2091958 } from './20c-pius-xii/hsscol-p209-1958'
+import { laSolennita1941 } from './20c-pius-xii/la-solennita-1941'
+import { votreVisite1956 } from './20c-pius-xii/votre-visite-1956'
+
+// ── 2026-05-28 hsscol BC 批次 — 21c-benedict-xvi ──
+import { hsscolP2272006 } from './21c-benedict-xvi/hsscol-p227-2006'
+import { hsscolP2282006 } from './21c-benedict-xvi/hsscol-p228-2006'
+import { hsscolP2292006 } from './21c-benedict-xvi/hsscol-p229-2006'
+import { hsscolP2392006 } from './21c-benedict-xvi/hsscol-p239-2006'
+import { hsscolP2402005 } from './21c-benedict-xvi/hsscol-p240-2005'
+import { hsscolP2412007 } from './21c-benedict-xvi/hsscol-p241-2007'
+import { hsscolP2422007 } from './21c-benedict-xvi/hsscol-p242-2007'
+import { hsscolP2482006 } from './21c-benedict-xvi/hsscol-p248-2006'
+import { hsscolP2602005 } from './21c-benedict-xvi/hsscol-p260-2005'
+import { hsscolP2612007 } from './21c-benedict-xvi/hsscol-p261-2007'
+import { hsscolP2622005 } from './21c-benedict-xvi/hsscol-p262-2005'
+import { hsscolP2642006 } from './21c-benedict-xvi/hsscol-p264-2006'
+import { hsscolP2652008 } from './21c-benedict-xvi/hsscol-p265-2008'
+import { hsscolP2661970 } from './21c-benedict-xvi/hsscol-p266-1970'
+import { hsscolP2672009 } from './21c-benedict-xvi/hsscol-p267-2009'
+import { hsscolP2682009 } from './21c-benedict-xvi/hsscol-p268-2009'
+import { hsscolP2692006 } from './21c-benedict-xvi/hsscol-p269-2006'
+import { hsscolP2712005 } from './21c-benedict-xvi/hsscol-p271-2005'
+import { hsscolP2722006 } from './21c-benedict-xvi/hsscol-p272-2006'
+import { hsscolP2732009 } from './21c-benedict-xvi/hsscol-p273-2009'
+import { hsscolP2752010 } from './21c-benedict-xvi/hsscol-p275-2010'
+import { hsscolP2762010 } from './21c-benedict-xvi/hsscol-p276-2010'
+import { hsscolP2782009 } from './21c-benedict-xvi/hsscol-p278-2009'
+import { hsscolP2792011 } from './21c-benedict-xvi/hsscol-p279-2011'
+import { hsscolP2802011 } from './21c-benedict-xvi/hsscol-p280-2011'
+import { hsscolP2812010 } from './21c-benedict-xvi/hsscol-p281-2010'
+import { hsscolP2822011 } from './21c-benedict-xvi/hsscol-p282-2011'
+import { hsscolP2842011 } from './21c-benedict-xvi/hsscol-p284-2011'
+import { hsscolP2852011 } from './21c-benedict-xvi/hsscol-p285-2011'
+import { hsscolP2862011 } from './21c-benedict-xvi/hsscol-p286-2011'
+import { hsscolP2872010 } from './21c-benedict-xvi/hsscol-p287-2010'
+import { hsscolP2882012 } from './21c-benedict-xvi/hsscol-p288-2012'
+import { hsscolP2892012 } from './21c-benedict-xvi/hsscol-p289-2012'
+import { hsscolP2902012 } from './21c-benedict-xvi/hsscol-p290-2012'
+import { hsscolP2912012 } from './21c-benedict-xvi/hsscol-p291-2012'
+import { hsscolP2922012 } from './21c-benedict-xvi/hsscol-p292-2012'
+import { hsscolP2932012 } from './21c-benedict-xvi/hsscol-p293-2012'
+import { hsscolP2942012 } from './21c-benedict-xvi/hsscol-p294-2012'
+import { hsscolP2952011 } from './21c-benedict-xvi/hsscol-p295-2011'
+import { hsscolP2962013 } from './21c-benedict-xvi/hsscol-p296-2013'
+import { hsscolP2972012 } from './21c-benedict-xvi/hsscol-p297-2012'
+import { hsscolP2982013 } from './21c-benedict-xvi/hsscol-p298-2013'
+import { hsscolP3012013 } from './21c-benedict-xvi/hsscol-p301-2013'
+import { hsscolP3052013 } from './21c-benedict-xvi/hsscol-p305-2013'
+import { hsscolP3142007 } from './21c-benedict-xvi/hsscol-p314-2007'
+import { hsscolP3192013 } from './21c-benedict-xvi/hsscol-p319-2013'
+import { hsscolP4792009 } from './21c-benedict-xvi/hsscol-p479-2009'
+
+// ── 2026-05-28 hsscol BC 批次 — 21c-francis ──
+import { chineseRegionalBishops2017 } from './21c-francis/chinese-regional-bishops-2017'
+import { hsscolP3032014 } from './21c-francis/hsscol-p303-2014'
+import { hsscolP3042014 } from './21c-francis/hsscol-p304-2014'
+import { hsscolP3062013 } from './21c-francis/hsscol-p306-2013'
+import { hsscolP3072014 } from './21c-francis/hsscol-p307-2014'
+import { hsscolP3092013 } from './21c-francis/hsscol-p309-2013'
+import { hsscolP3102016 } from './21c-francis/hsscol-p310-2016'
+import { hsscolP3112019 } from './21c-francis/hsscol-p311-2019'
+import { hsscolP3122015 } from './21c-francis/hsscol-p312-2015'
+import { hsscolP3132015 } from './21c-francis/hsscol-p313-2015'
+import { hsscolP3152015 } from './21c-francis/hsscol-p315-2015'
+import { hsscolP3172014 } from './21c-francis/hsscol-p317-2014'
+import { hsscolP3182015 } from './21c-francis/hsscol-p318-2015'
+import { hsscolP3202014 } from './21c-francis/hsscol-p320-2014'
+import { hsscolP3212015 } from './21c-francis/hsscol-p321-2015'
+import { hsscolP3222015 } from './21c-francis/hsscol-p322-2015'
+import { hsscolP3232015 } from './21c-francis/hsscol-p323-2015'
+import { hsscolP3242015 } from './21c-francis/hsscol-p324-2015'
+import { hsscolP3262015 } from './21c-francis/hsscol-p326-2015'
+import { hsscolP3272016 } from './21c-francis/hsscol-p327-2016'
+import { hsscolP3282016 } from './21c-francis/hsscol-p328-2016'
+import { hsscolP3362019 } from './21c-francis/hsscol-p336-2019'
+import { hsscolP3392019 } from './21c-francis/hsscol-p339-2019'
+import { hsscolP3892019 } from './21c-francis/hsscol-p389-2019'
+import { hsscolP3902015 } from './21c-francis/hsscol-p390-2015'
+import { hsscolP3922018 } from './21c-francis/hsscol-p392-2018'
+import { hsscolP3982018 } from './21c-francis/hsscol-p398-2018'
+import { hsscolP4002005 } from './21c-francis/hsscol-p400-2005'
+import { hsscolP4012018 } from './21c-francis/hsscol-p401-2018'
+import { hsscolP4022020 } from './21c-francis/hsscol-p402-2020'
+import { hsscolP4032019 } from './21c-francis/hsscol-p403-2019'
+import { hsscolP4042019 } from './21c-francis/hsscol-p404-2019'
+import { hsscolP4052018 } from './21c-francis/hsscol-p405-2018'
+import { hsscolP4062019 } from './21c-francis/hsscol-p406-2019'
+import { hsscolP4072019 } from './21c-francis/hsscol-p407-2019'
+import { hsscolP4082018 } from './21c-francis/hsscol-p408-2018'
+import { hsscolP4092020 } from './21c-francis/hsscol-p409-2020'
+import { hsscolP4102019 } from './21c-francis/hsscol-p410-2019'
+import { hsscolP4112019 } from './21c-francis/hsscol-p411-2019'
+import { hsscolP4122019 } from './21c-francis/hsscol-p412-2019'
+import { hsscolP4132019 } from './21c-francis/hsscol-p413-2019'
+import { hsscolP4142014 } from './21c-francis/hsscol-p414-2014'
+import { hsscolP4152019 } from './21c-francis/hsscol-p415-2019'
+import { hsscolP4162017 } from './21c-francis/hsscol-p416-2017'
+import { hsscolP4172017 } from './21c-francis/hsscol-p417-2017'
+import { hsscolP4182018 } from './21c-francis/hsscol-p418-2018'
+import { hsscolP4192019 } from './21c-francis/hsscol-p419-2019'
+import { hsscolP4202014 } from './21c-francis/hsscol-p420-2014'
+import { hsscolP4212019 } from './21c-francis/hsscol-p421-2019'
+import { hsscolP4222018 } from './21c-francis/hsscol-p422-2018'
+import { hsscolP4232020 } from './21c-francis/hsscol-p423-2020'
+import { hsscolP4242019 } from './21c-francis/hsscol-p424-2019'
+import { hsscolP4322020 } from './21c-francis/hsscol-p432-2020'
+import { hsscolP4332017 } from './21c-francis/hsscol-p433-2017'
+import { hsscolP4342019 } from './21c-francis/hsscol-p434-2019'
+import { hsscolP4352018 } from './21c-francis/hsscol-p435-2018'
+import { hsscolP4362019 } from './21c-francis/hsscol-p436-2019'
+import { hsscolP4372020 } from './21c-francis/hsscol-p437-2020'
+import { hsscolP4382020 } from './21c-francis/hsscol-p438-2020'
+import { hsscolP4422025 } from './21c-francis/hsscol-p442-2025'
+import { hsscolP4432023 } from './21c-francis/hsscol-p443-2023'
+import { hsscolP4442024 } from './21c-francis/hsscol-p444-2024'
+import { hsscolP4451920 } from './21c-francis/hsscol-p445-1920'
+import { hsscolP4462014 } from './21c-francis/hsscol-p446-2014'
+import { hsscolP4472023 } from './21c-francis/hsscol-p447-2023'
+import { hsscolP4492021 } from './21c-francis/hsscol-p449-2021'
+import { hsscolP4502023 } from './21c-francis/hsscol-p450-2023'
+import { hsscolP4841955 } from './21c-francis/hsscol-p484-1955'
+import { hsscolP4851962 } from './21c-francis/hsscol-p485-1962'
+import { hsscolP4972025 } from './21c-francis/hsscol-p497-2025'
+import { hsscolP5132018 } from './21c-francis/hsscol-p513-2018'
+import { hsscolP5162024 } from './21c-francis/hsscol-p516-2024'
+import { hsscolP5172023 } from './21c-francis/hsscol-p517-2023'
+import { hsscolP5182022 } from './21c-francis/hsscol-p518-2022'
+import { hsscolP5192013 } from './21c-francis/hsscol-p519-2013'
+import { hsscolP5202023 } from './21c-francis/hsscol-p520-2023'
+import { hsscolP5212022 } from './21c-francis/hsscol-p521-2022'
+import { hsscolP5232022 } from './21c-francis/hsscol-p523-2022'
+import { hsscolP5242022 } from './21c-francis/hsscol-p524-2022'
+import { hsscolP5252021 } from './21c-francis/hsscol-p525-2021'
+import { hsscolP5302021 } from './21c-francis/hsscol-p530-2021'
+import { hsscolP5332025 } from './21c-francis/hsscol-p533-2025'
+import { hsscolP5342025 } from './21c-francis/hsscol-p534-2025'
+import { hsscolP5352025 } from './21c-francis/hsscol-p535-2025'
+import { theHolySee2008 } from './21c-francis/the-holy-see-2008'
+import { theHolySee2017 } from './21c-francis/the-holy-see-2017'
+import { theHolySee2019 } from './21c-francis/the-holy-see-2019'
+
 export const ALL_DOCUMENTS: PapalDocument[] = [
   laudatoSi2015,
   fratelliTutti2020,
@@ -557,6 +893,341 @@ export const ALL_DOCUMENTS: PapalDocument[] = [
   dictatusPapae1075,
   // ── added: 5c leo-i ──
   tomeOfLeo449,
+
+  // ── 2026-05-28 hsscol — 20c-john-paul-ii ──
+  catechesiTradendae1979,
+  hsscolP1651979,
+  hsscolP1682002,
+  hsscolP1691981,
+  hsscolP1701981,
+  hsscolP1721983,
+  hsscolP1731984,
+  hsscolP1741984,
+  hsscolP1751984,
+  hsscolP1781987,
+  hsscolP1791987,
+  hsscolP1811988,
+  hsscolP1821988,
+  hsscolP1831988,
+  hsscolP1841989,
+  hsscolP1852002,
+  hsscolP1871992,
+  hsscolP1881993,
+  hsscolP1911994,
+  hsscolP1931995,
+  hsscolP1941995,
+  hsscolP1961995,
+  hsscolP1971996,
+  hsscolP1981996,
+  hsscolP1991998,
+  hsscolP2001998,
+  hsscolP2011998,
+  hsscolP2021998,
+  hsscolP2041998,
+  hsscolP2101992,
+  hsscolP2122001,
+  hsscolP2132003,
+  hsscolP2141984,
+  hsscolP2152004,
+  hsscolP2171993,
+  hsscolP2181999,
+  hsscolP2192001,
+  hsscolP2202004,
+  hsscolP2232002,
+  hsscolP2242005,
+  hsscolP2252005,
+  hsscolP2262005,
+  hsscolP2302004,
+  hsscolP2312004,
+  hsscolP2322004,
+  hsscolP2332004,
+  hsscolP2341991,
+  hsscolP2431994,
+  hsscolP2442003,
+  hsscolP2452002,
+  hsscolP2462001,
+  hsscolP2472005,
+  hsscolP2492000,
+  hsscolP2502001,
+  hsscolP2512007,
+  hsscolP2521998,
+  hsscolP2702009,
+  hsscolP2772010,
+  hsscolP2992003,
+  hsscolP3002003,
+  hsscolP3451980,
+  hsscolP3501982,
+  hsscolP3531995,
+  hsscolP3622002,
+  hsscolP3632002,
+  hsscolP3642002,
+  hsscolP3652000,
+  hsscolP3661999,
+  hsscolP3672004,
+  hsscolP3831999,
+  hsscolP3841997,
+  hsscolP3852003,
+  hsscolP3862003,
+  hsscolP3871997,
+  theHolySee1994,
+
+  // ── 2026-05-28 hsscol — 20c-paul-vi ──
+  apostolicConstitutionOnTheFastAmpAbstinence1966,
+  christianoGaudio1975,
+  hsscolP0011967,
+  hsscolP0031971,
+  hsscolP0041970,
+  hsscolP0051971,
+  hsscolP0061971,
+  hsscolP0071971,
+  hsscolP0081971,
+  hsscolP0091971,
+  hsscolP0101971,
+  hsscolP0111970,
+  hsscolP0171967,
+  hsscolP0181970,
+  hsscolP0201967,
+  hsscolP0221968,
+  hsscolP0241963,
+  hsscolP0251967,
+  hsscolP0261969,
+  hsscolP0271964,
+  hsscolP0401970,
+  hsscolP0411970,
+  hsscolP0421970,
+  hsscolP0431970,
+  hsscolP0441970,
+  hsscolP0451970,
+  hsscolP0461970,
+  hsscolP0471970,
+  hsscolP0561968,
+  hsscolP0571969,
+  hsscolP0581970,
+  hsscolP0591970,
+  hsscolP0601970,
+  hsscolP0611970,
+  hsscolP0621970,
+  hsscolP0631970,
+  hsscolP0641970,
+  hsscolP0651970,
+  hsscolP0721968,
+  hsscolP1711983,
+  hsscolP4581973,
+  hsscolP4591970,
+  regiminiEcclesiae1967,
+  sacrarumIndulgentiarumRecognitio1967,
+  sacrumDiaconatus1967,
+
+  // ── 2026-05-28 hsscol — 20c-pius-xi ──
+  deAcrisMissionibusProvehendis1926,
+  diviniMagistri1929,
+  hsscolP0761931,
+  hsscolP0771935,
+  hsscolP0781922,
+  hsscolP0801926,
+
+  // ── 2026-05-28 hsscol — 20c-pius-xii ──
+  hsscolP0941939,
+  hsscolP0951940,
+  hsscolP0961940,
+  hsscolP0971940,
+  hsscolP0981940,
+  hsscolP1001941,
+  hsscolP1041943,
+  hsscolP1051951,
+  hsscolP1071943,
+  hsscolP1081943,
+  hsscolP1091944,
+  hsscolP1101944,
+  hsscolP1111945,
+  hsscolP1121945,
+  hsscolP1131945,
+  hsscolP1141946,
+  hsscolP1151946,
+  hsscolP1171947,
+  hsscolP1181947,
+  hsscolP1191948,
+  hsscolP1201949,
+  hsscolP1211949,
+  hsscolP1221951,
+  hsscolP1231951,
+  hsscolP1241956,
+  hsscolP1251956,
+  hsscolP1261958,
+  hsscolP1271949,
+  hsscolP1281950,
+  hsscolP1292002,
+  hsscolP1301951,
+  hsscolP1321952,
+  hsscolP1331952,
+  hsscolP1342002,
+  hsscolP1351952,
+  hsscolP1371952,
+  hsscolP1381953,
+  hsscolP1391953,
+  hsscolP1401953,
+  hsscolP1411954,
+  hsscolP1421954,
+  hsscolP1431954,
+  hsscolP1461955,
+  hsscolP1471955,
+  hsscolP1481955,
+  hsscolP1491955,
+  hsscolP1501956,
+  hsscolP1541957,
+  hsscolP1551957,
+  hsscolP1561957,
+  hsscolP1571957,
+  hsscolP1581957,
+  hsscolP1591957,
+  hsscolP1601957,
+  hsscolP1611958,
+  hsscolP1621958,
+  hsscolP2061955,
+  hsscolP2071956,
+  hsscolP2081957,
+  hsscolP2091958,
+  laSolennita1941,
+  votreVisite1956,
+
+  // ── 2026-05-28 hsscol — 21c-benedict-xvi ──
+  hsscolP2272006,
+  hsscolP2282006,
+  hsscolP2292006,
+  hsscolP2392006,
+  hsscolP2402005,
+  hsscolP2412007,
+  hsscolP2422007,
+  hsscolP2482006,
+  hsscolP2602005,
+  hsscolP2612007,
+  hsscolP2622005,
+  hsscolP2642006,
+  hsscolP2652008,
+  hsscolP2661970,
+  hsscolP2672009,
+  hsscolP2682009,
+  hsscolP2692006,
+  hsscolP2712005,
+  hsscolP2722006,
+  hsscolP2732009,
+  hsscolP2752010,
+  hsscolP2762010,
+  hsscolP2782009,
+  hsscolP2792011,
+  hsscolP2802011,
+  hsscolP2812010,
+  hsscolP2822011,
+  hsscolP2842011,
+  hsscolP2852011,
+  hsscolP2862011,
+  hsscolP2872010,
+  hsscolP2882012,
+  hsscolP2892012,
+  hsscolP2902012,
+  hsscolP2912012,
+  hsscolP2922012,
+  hsscolP2932012,
+  hsscolP2942012,
+  hsscolP2952011,
+  hsscolP2962013,
+  hsscolP2972012,
+  hsscolP2982013,
+  hsscolP3012013,
+  hsscolP3052013,
+  hsscolP3142007,
+  hsscolP3192013,
+  hsscolP4792009,
+
+  // ── 2026-05-28 hsscol — 21c-francis ──
+  chineseRegionalBishops2017,
+  hsscolP3032014,
+  hsscolP3042014,
+  hsscolP3062013,
+  hsscolP3072014,
+  hsscolP3092013,
+  hsscolP3102016,
+  hsscolP3112019,
+  hsscolP3122015,
+  hsscolP3132015,
+  hsscolP3152015,
+  hsscolP3172014,
+  hsscolP3182015,
+  hsscolP3202014,
+  hsscolP3212015,
+  hsscolP3222015,
+  hsscolP3232015,
+  hsscolP3242015,
+  hsscolP3262015,
+  hsscolP3272016,
+  hsscolP3282016,
+  hsscolP3362019,
+  hsscolP3392019,
+  hsscolP3892019,
+  hsscolP3902015,
+  hsscolP3922018,
+  hsscolP3982018,
+  hsscolP4002005,
+  hsscolP4012018,
+  hsscolP4022020,
+  hsscolP4032019,
+  hsscolP4042019,
+  hsscolP4052018,
+  hsscolP4062019,
+  hsscolP4072019,
+  hsscolP4082018,
+  hsscolP4092020,
+  hsscolP4102019,
+  hsscolP4112019,
+  hsscolP4122019,
+  hsscolP4132019,
+  hsscolP4142014,
+  hsscolP4152019,
+  hsscolP4162017,
+  hsscolP4172017,
+  hsscolP4182018,
+  hsscolP4192019,
+  hsscolP4202014,
+  hsscolP4212019,
+  hsscolP4222018,
+  hsscolP4232020,
+  hsscolP4242019,
+  hsscolP4322020,
+  hsscolP4332017,
+  hsscolP4342019,
+  hsscolP4352018,
+  hsscolP4362019,
+  hsscolP4372020,
+  hsscolP4382020,
+  hsscolP4422025,
+  hsscolP4432023,
+  hsscolP4442024,
+  hsscolP4451920,
+  hsscolP4462014,
+  hsscolP4472023,
+  hsscolP4492021,
+  hsscolP4502023,
+  hsscolP4841955,
+  hsscolP4851962,
+  hsscolP4972025,
+  hsscolP5132018,
+  hsscolP5162024,
+  hsscolP5172023,
+  hsscolP5182022,
+  hsscolP5192013,
+  hsscolP5202023,
+  hsscolP5212022,
+  hsscolP5232022,
+  hsscolP5242022,
+  hsscolP5252021,
+  hsscolP5302021,
+  hsscolP5332025,
+  hsscolP5342025,
+  hsscolP5352025,
+  theHolySee2008,
+  theHolySee2017,
+  theHolySee2019,
+
 ]
 
 export function findDocument(slug: string): PapalDocument | undefined {
