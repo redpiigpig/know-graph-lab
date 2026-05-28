@@ -13,25 +13,28 @@ description: Denzinger《公教會之信仰與倫理教義選集》(ebook_id 568
 - 上架歷史：[DENZINGER_HANDOFF_2026-05-27.md](../ebook-pipeline/DENZINGER_HANDOFF_2026-05-27.md)
 - Spec：[book-structure-bilingual-parallel.md](../ebook-pipeline/book-structure-bilingual-parallel.md)
 
-## 2026-05-28 狀態 — column-aware OCR 92% 完成
+## 2026-05-29 狀態 — column-aware OCR 100% 完成 ✅
 
 | 階段 | 狀態 |
 |---|---|
 | Phase 0 audit | ✅ |
-| Phase 1 column-aware re-OCR | 🟡 **895 / 967 (92%)** — quota 卡到 stale → 剩 72 頁待補 |
-| Phase 3 segment（divider-aware 模式）| ✅ 已 apply |
-| Phase 3.5 sidebar 中文標題 | ✅ 已 apply |
-| Phase 4 /creeds 重補 | ✅ 已 apply |
-| medieval-09/10/11 DH range 修正 | ✅ 已 apply（Lateran I/II/III） |
+| Phase 1 column-aware re-OCR | ✅ **967 / 967 (100%)** — Haiku 963 頁 + Gemini fallback 4 頁 |
+| Phase 3 segment（divider-aware 模式）| ✅ 3913 chunks |
+| Phase 3.5 sidebar 中文標題 | ✅ |
+| Phase 4 /creeds 重補（32 份）| ✅ |
+| medieval-09/10/11 DH range 修正 | ✅ (Lateran I/II/III) |
 
-剩 72 頁集中在 **PDF pp 2200-2400 區（附錄一/二/三/四 索引）**，少量在 mid-19c 教宗（1637、1787）和 附錄五 新教信條（2401、2409）。多半是索引材料，不阻礙 reader 主要 UX。Quota 完全恢復後（隔日）重跑：
+### Haiku content-filter blocked pages（學到的）
+
+OCR'ing 過程中 4 頁 (2346 / 2380 / 2386 / 2401，全在 **附錄五 新教信條** DH 5500-5702 區) 觸發 Anthropic content-filter 硬擋（`Output blocked by content filtering policy` 400）— 不是 quota，是安全層拒絕輸出。多少 retry 都沒用。
+
+**解法 — Gemini fallback**：寫了 [`scripts/_denzinger_recolumn_gemini_fallback.py`](../../../scripts/_denzinger_recolumn_gemini_fallback.py)（gitignored），同 prompt 同 divider 格式，用 `gemini-2.5-flash`。同樣的 4 頁 Gemini 全過。下次遇到 Haiku content-filter blocked 頁，用法：
 
 ```bash
-# resume — idempotent，895 頁會 skip
-python -X utf8 -u scripts/_denzinger_recolumn_ocr.py
-# 跑完後一鍵 ship
+python -X utf8 -u scripts/_denzinger_recolumn_gemini_fallback.py 2346 2380 2386 2401
+# 然後 ship pipeline：
 python -X utf8 -u scripts/segment_denzinger.py --apply
-python -X utf8 -u scripts/_denzinger_relabel.py
+python -X utf8 -u scripts/_denzinger_relabel.py --no-db
 python -X utf8 -u scripts/_denzinger_to_creeds.py --write --force
 ```
 
