@@ -258,10 +258,63 @@ TERM_FIXES_ANF_VOL_3 = {
     "盧米娜神": "魯米娜神",
 }
 
+TERM_FIXES_ANF_VOL_4 = {
+    # 思高聖經書名 → 和合本（跨卷統一新教譯名）
+    "瑪竇福音": "馬太福音",
+    "若望福音": "約翰福音",
+    "若望一書": "約翰一書",
+    "若望二書": "約翰二書",
+    "若望三書": "約翰三書",
+    "格林多前書": "哥林多前書",
+    "格林多後書": "哥林多後書",
+    "格林多人前書": "哥林多人前書",
+    "格林多人後書": "哥林多人後書",
+    "格林多": "哥林多",
+    "格言書": "箴言",
+    "厄則克爾": "以西結",
+    "厄則克耳": "以西結",
+    "依撒意亞": "以賽亞",
+    "厄弗所": "以弗所",
+    "斐理伯": "腓立比",
+    # 思高 vs 和合 人物
+    "厄娃": "夏娃",                  # Eve
+    "巴拉罕": "巴蘭",                # Balaam
+    # Celsus typo (俄利根《駁塞爾蘇斯》主角)
+    "蕭爾蘇斯": "塞爾蘇斯",
+    "比克爾蘇斯": "塞爾蘇斯",
+    # Valentinus — Vol 1/3 標準 瓦倫廷
+    "瓦倫提努": "瓦倫廷",
+    "瓦倫蒂努斯": "瓦倫廷",
+    # Lucian (希臘諷刺作家)
+    "露西安": "路西安",
+    # Herennius Philo
+    "海倫尼烏斯": "赫倫尼烏斯",
+    # Greek statesmen / mythological figures
+    "題斯提克利": "特米斯托克利",     # Themistocles
+    "喬卡斯塔": "約卡斯塔",          # Jocasta
+    # Oracles & places
+    "特爾斐": "德爾斐",              # Delphi
+    "米利圖": "米利都",              # Miletus
+    # Translator's name (Rev. S. Thelwall)
+    "瑟爾沃爾": "塞爾沃爾",
+    "蘭‧瑟爾沃": "塞爾沃爾",
+    # Typos & word fixes
+    "遲晚": "遲早",
+    "縞瑪瑙石": "縞瑪瑙",
+    "逍遙派": "逍遙學派",            # Peripatetics
+    # Origen of Alexandria — Vol 4 詞庫 俄利根
+    "奧利金": "俄利根",
+    "奧利根": "俄利根",
+    # Africanus
+    "亞非利加努斯": "阿弗里卡努",
+    "阿非利加努斯": "阿弗里卡努",
+}
+
 TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "c98d358d-7066-4691-a896-b7232707b0db": TERM_FIXES_ANF_VOL_1,  # ANF Vol 1
     "4e3d16fc-ef4f-420f-a3ec-56e2e92d659f": TERM_FIXES_ANF_VOL_2,  # ANF Vol 2
     "364dac2e-410f-4906-be63-8bb86b4865ee": TERM_FIXES_ANF_VOL_3,  # ANF Vol 3
+    "904661d3-16fc-4f37-bb04-f7c4aa7671e9": TERM_FIXES_ANF_VOL_4,  # ANF Vol 4
 }
 
 
