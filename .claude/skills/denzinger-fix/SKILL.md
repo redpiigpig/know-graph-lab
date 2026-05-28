@@ -13,6 +13,28 @@ description: Denzinger《公教會之信仰與倫理教義選集》(ebook_id 568
 - 上架歷史：[DENZINGER_HANDOFF_2026-05-27.md](../ebook-pipeline/DENZINGER_HANDOFF_2026-05-27.md)
 - Spec：[book-structure-bilingual-parallel.md](../ebook-pipeline/book-structure-bilingual-parallel.md)
 
+## 2026-05-28 狀態 — column-aware OCR 92% 完成
+
+| 階段 | 狀態 |
+|---|---|
+| Phase 0 audit | ✅ |
+| Phase 1 column-aware re-OCR | 🟡 **895 / 967 (92%)** — quota 卡到 stale → 剩 72 頁待補 |
+| Phase 3 segment（divider-aware 模式）| ✅ 已 apply |
+| Phase 3.5 sidebar 中文標題 | ✅ 已 apply |
+| Phase 4 /creeds 重補 | ✅ 已 apply |
+| medieval-09/10/11 DH range 修正 | ✅ 已 apply（Lateran I/II/III） |
+
+剩 72 頁集中在 **PDF pp 2200-2400 區（附錄一/二/三/四 索引）**，少量在 mid-19c 教宗（1637、1787）和 附錄五 新教信條（2401、2409）。多半是索引材料，不阻礙 reader 主要 UX。Quota 完全恢復後（隔日）重跑：
+
+```bash
+# resume — idempotent，895 頁會 skip
+python -X utf8 -u scripts/_denzinger_recolumn_ocr.py
+# 跑完後一鍵 ship
+python -X utf8 -u scripts/segment_denzinger.py --apply
+python -X utf8 -u scripts/_denzinger_relabel.py
+python -X utf8 -u scripts/_denzinger_to_creeds.py --write --force
+```
+
 ## 已知問題（修正目標）
 
 | 類別 | 量級 | 症狀 | 修法 |
