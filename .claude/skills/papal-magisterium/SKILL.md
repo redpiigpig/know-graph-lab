@@ -5,9 +5,11 @@ description: 教宗訓導文獻對照工具（/encyclicals）— 4 世紀 Damasu
 
 # Papal Magisterium — 教宗訓導文獻對照
 
-> 🟢 **Status**: Phase 1-5 已上線 2026-05-28（`/encyclicals` portal + **175 篇文件**）— 涵蓋 1216 諾森三世繼任的 honorius-iii 至 2024 方濟各 *Dilexit Nos*，共 **13c-21c 跨 39 位教宗**。架構直接複用 [[scripture-canon-portal]] 的 creeds pipeline；資料層獨立 (`data/encyclicals/`) 但 `paragraphParser.ts` / `alignDocs()` 元件共用。
+> 🟢 **Status**: Phase 1-5 已上線 2026-05-28（`/encyclicals` portal + **203 篇文件**）— 涵蓋 1216 諾森三世繼任的 honorius-iii 至 2024 方濟各 *Dilexit Nos*，共 **13c-21c 跨 41 位教宗**。架構直接複用 [[scripture-canon-portal]] 的 creeds pipeline；資料層獨立 (`data/encyclicals/`) 但 `paragraphParser.ts` / `alignDocs()` 元件共用。
 >
 > 2026-05-28 大批 ingest：vatican.va 跑完 19c-21c 9 位教宗 62 篇；接著 papalencyclicals.net + DCO 雙源 pipeline 跑下 30 位教宗 113 篇（13c-19c），含 Pius IX *Quanta Cura* / *Ineffabilis Deus* / *Syllabus*、Leo X *Exsurge Domine*、Boniface VIII *Unam Sanctam*、Benedict XIV 12 篇 encyclical 等里程碑文件。
+>
+> 2026-05-28（接續）：補齊 **20c 早期 Pius X 16 篇 + Benedict XV 12 篇 = 28 篇**（vatican.va 拉/英/義 三語齊全，中文 vatican.va 無）；Pius X *Pascendi Dominici Gregis* 1907（反現代主義雙峰文件）、Benedict XV *Pacem Dei Munus* 1920（一戰戰後和平整體框架）等 marquee 入庫。中文 sweep 確認 vatican.va 對 20c 多數 marquee（*Quadragesimo Anno* / *Populorum Progressio* / *Pacem in Terris* / *Divino Afflante Spiritu* 等）皆無中文，pipeline 既有 6 PDF + 4 HTML variants exhaustive 嘗試已達上限。
 >
 > **本 skill 與 [[scripture-canon-portal]] 的分工**：
 > - scripture-canon-portal：**集體**文件（大公會議產出的信經 / canons / dogmatic decree）+ 信條 + 教會法規 + 教父著作搜尋 + 聖經對照 + 典外
@@ -486,6 +488,12 @@ https://www.documentacatholicaomnia.eu/04z/z_{ID}-{ID},_{Pope}_PP._{Roman},_{Tit
 **20c 碧岳十一世 (6 篇，中文 0/6)**
 - [x] Mortalium Animos 1928 / Divini Illius Magistri 1929 / Casti Connubii 1930 / Quadragesimo Anno 1931 / Mit Brennender Sorge 1937 / Divini Redemptoris 1937
 
+**20c 本篤十五世 (12 篇，中文 0/12)** — 2026-05-28 補
+- [x] Ad Beatissimi Apostolorum 1914 / Humani Generis Redemptionem 1917 / Quod Iam Diu 1918 / In Hac Tanta 1919 / Paterno Iam Diu 1919 / Pacem Dei Munus Pulcherrimum 1920 / Spiritus Paraclitus 1920 / Principi Apostolorum Petro 1920 / Annus Iam Plenus 1920 / Sacra Propediem 1921 / In Praeclara Summorum 1921 / Fausto Appetente Die 1921
+
+**20c 碧岳十世 (16 篇，中文 0/16)** — 2026-05-28 補
+- [x] E Supremi 1903 / Ad Diem Illum Laetissimum 1904 / Iucunda Sane 1904 / Acerbo Nimis 1905 / Il Fermo Proposito 1905 / Vehementer Nos 1906 / Tribus Circiter 1906 / Pieni L'Animo 1906 / Gravissimo Officii Munere 1906 / Une Fois Encore 1907 / Pascendi Dominici Gregis 1907 / Communium Rerum 1909 / Editae Saepe 1910 / Iamdudum 1911 / Lacrimabili Statu 1912 / Singulari Quadam 1912
+
 **19c 良十三世 (10 篇，中文 0/10)**
 - [x] Aeterni Patris 1879 / Arcanum Divinae 1880 / Humanum Genus 1884 / Immortale Dei 1885 / Libertas 1888 / Sapientiae Christianae 1890 / Rerum Novarum 1891 / Providentissimus Deus 1893 / Divinum Illud Munus 1897 / Annum Sacrum 1899
 
@@ -553,7 +561,7 @@ https://www.documentacatholicaomnia.eu/04z/z_{ID}-{ID},_{Pope}_PP._{Roman},_{Tit
 - **P0**：中文翻譯（171 篇）／4c-12c gap fill（7 個世紀）／拉丁原文（177 篇全 placeholder）
 - **P1**：Pius X + Benedict XV 補（vatican.va 有）／summary+topics+titleZh 精修
 - **P2**：Leo XIV／Apostolic Constitution+Exhortation 完整／演說＋講道＋訊息
-- [ ] **碧岳十世 / 本篤十五**：vatican.va 提供，下次補（Pius X 8 篇 / Benedict XV 12 篇）；亦可用 papalencyclicals.net pius10 / ben15
+- [x] **碧岳十世 / 本篤十五**：2026-05-28 完成（Pius X 16 篇 / Benedict XV 12 篇 = 28 篇）；拉／英／義齊全，中文全 placeholder（vatican.va 無）
 - [ ] **良十四世**（2025-）：等台灣主教團官方中譯發布後再 ingest
 - [ ] **4-12c 早期教宗**：等 [[fathers-translation]] / Schaff NPNF Vol 12-13 中譯成熟 → 從 Migne PL 或 Schaff 補 ingest；papalencyclicals.net 對 4-10c 涵蓋極少
 - [ ] **Heading 對齊精修**：自動 align 對部分文件有誤差（如 Lumen Fidei 中文 HTML 結構特殊），可逐篇手寫 `fix_{slug}_chinese_headings.py`（參 fix_laudato_si_chinese_headings.py 模板）

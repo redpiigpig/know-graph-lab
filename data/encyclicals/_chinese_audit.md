@@ -1,8 +1,10 @@
 # 教宗訓導文獻 — 中文翻譯缺漏清單
 
-> 產出時間：2026-05-28　|　涵蓋：175 篇文件　|　目的：等《天主教大公會議文獻彙編》／光啟《公教會之信仰與倫理教義選集》（Denzinger 中譯）轉錄完成後，按本清單批次補回。
+> 產出時間：2026-05-28（晚）　|　涵蓋：203 篇文件　|　目的：等《天主教大公會議文獻彙編》／光啟《公教會之信仰與倫理教義選集》（Denzinger 中譯）轉錄完成後，按本清單批次補回。
 
-**統計**：full 4 ／ partial 10 ／ missing 161
+**統計**：full 4 ／ partial 10 ／ missing 189
+
+> 2026-05-28 晚補：Pius X 16 篇 + Benedict XV 12 篇 = 28 篇 missing（vatican.va 確認無中譯）
 
 - **full** — 中文已完整
 - **partial** — 主體已譯，少數章節標題仍為 `## ⏳ 中譯標題待補`
@@ -34,6 +36,44 @@
 | 1951-06-02 | *Evangelii Praecones* | On Promotion of Catholic Missions | encyclical | missing |
 | 1953-09-08 | *Fulgens Corona* | Proclaiming a Marian Year | encyclical | missing |
 | 1956-05-15 | *Haurietis Aquas* | On Devotion to the Sacred Heart | encyclical | missing |
+
+## 20c　本篤十五世（benedict-xv）—— 12 篇 (2026-05-28 新增)
+
+| 日期 | 拉丁名 | 英譯 | 類型 | 狀態 |
+|---|---|---|---|---|
+| 1914-11-01 | *Ad Beatissimi Apostolorum* | Appealing for Peace | encyclical | missing |
+| 1917-06-15 | *Humani Generis Redemptionem* | On Preaching the Word of God | encyclical | missing |
+| 1918-12-01 | *Quod Iam Diu* | On the Future Peace Conference | encyclical | missing |
+| 1919-05-14 | *In Hac Tanta* | On St. Boniface | encyclical | missing |
+| 1919-11-24 | *Paterno Iam Diu* | On the Children of Central Europe | encyclical | missing |
+| 1920-05-23 | *Pacem Dei Munus Pulcherrimum* | On Peace and Christian Reconciliation | encyclical | missing |
+| 1920-09-15 | *Spiritus Paraclitus* | On St. Jerome | encyclical | missing |
+| 1920-10-05 | *Principi Apostolorum Petro* | On St. Ephrem the Syrian | encyclical | missing |
+| 1920-12-01 | *Annus Iam Plenus* | On the Children of Central Europe | encyclical | missing |
+| 1921-01-06 | *Sacra Propediem* | On the Third Order of St. Francis | encyclical | missing |
+| 1921-04-30 | *In Praeclara Summorum* | On Dante | encyclical | missing |
+| 1921-06-29 | *Fausto Appetente Die* | On St. Dominic | encyclical | missing |
+
+## 20c　碧岳十世（pius-x）—— 16 篇 (2026-05-28 新增)
+
+| 日期 | 拉丁名 | 英譯 | 類型 | 狀態 |
+|---|---|---|---|---|
+| 1903-10-04 | *E Supremi* | On the Restoration of All Things in Christ | encyclical | missing |
+| 1904-02-02 | *Ad Diem Illum Laetissimum* | On the Immaculate Conception | encyclical | missing |
+| 1904-03-12 | *Iucunda Sane* | On Pope Gregory the Great | encyclical | missing |
+| 1905-04-15 | *Acerbo Nimis* | On Teaching Christian Doctrine | encyclical | missing |
+| 1905-06-11 | *Il Fermo Proposito* | On Catholic Action in Italy | encyclical | missing |
+| 1906-02-11 | *Vehementer Nos* | On the French Law of Separation | encyclical | missing |
+| 1906-04-05 | *Tribus Circiter* | On the Mariavites or Mystic Priests of Poland | encyclical | missing |
+| 1906-07-28 | *Pieni L'Animo* | On the Clergy in Italy | encyclical | missing |
+| 1906-08-10 | *Gravissimo Officii Munere* | On French Associations of Worship | encyclical | missing |
+| 1907-01-06 | *Une Fois Encore* | On the Separation of Church and State | encyclical | missing |
+| 1907-09-08 | *Pascendi Dominici Gregis* | On the Doctrines of the Modernists | encyclical | missing |
+| 1909-04-21 | *Communium Rerum* | On St. Anselm of Aosta | encyclical | missing |
+| 1910-05-26 | *Editae Saepe* | On St. Charles Borromeo | encyclical | missing |
+| 1911-05-24 | *Iamdudum* | On the Law of Separation in Portugal | encyclical | missing |
+| 1912-06-07 | *Lacrimabili Statu* | On the Indians of South America | encyclical | missing |
+| 1912-09-24 | *Singulari Quadam* | On Labor Organizations | encyclical | missing |
 
 ## 20c　碧岳十一世（pius-xi）—— 6 篇
 

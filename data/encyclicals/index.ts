@@ -77,6 +77,38 @@ import { quadragesimoAnno1931 } from './20c-pius-xi/quadragesimo-anno-1931'
 import { mitBrennenderSorge1937 } from './20c-pius-xi/mit-brennender-sorge-1937'
 import { diviniRedemptoris1937 } from './20c-pius-xi/divini-redemptoris-1937'
 
+// ── 20c Benedict XV ─────────────────────────────────────────
+import { adBeatissimiApostolorum1914 } from './20c-benedict-xv/ad-beatissimi-apostolorum-1914'
+import { humaniGenerisRedemptionem1917 } from './20c-benedict-xv/humani-generis-redemptionem-1917'
+import { quodIamDiu1918 } from './20c-benedict-xv/quod-iam-diu-1918'
+import { inHacTanta1919 } from './20c-benedict-xv/in-hac-tanta-1919'
+import { paternoIamDiu1919 } from './20c-benedict-xv/paterno-iam-diu-1919'
+import { pacemDeiMunusPulcherrimum1920 } from './20c-benedict-xv/pacem-dei-munus-pulcherrimum-1920'
+import { spiritusParaclitus1920 } from './20c-benedict-xv/spiritus-paraclitus-1920'
+import { principiApostolorumPetro1920 } from './20c-benedict-xv/principi-apostolorum-petro-1920'
+import { annusIamPlenus1920 } from './20c-benedict-xv/annus-iam-plenus-1920'
+import { sacraPropediem1921 } from './20c-benedict-xv/sacra-propediem-1921'
+import { inPraeclaraSummorum1921 } from './20c-benedict-xv/in-praeclara-summorum-1921'
+import { faustoAppetenteDie1921 } from './20c-benedict-xv/fausto-appetente-die-1921'
+
+// ── 20c Pius X ──────────────────────────────────────────────
+import { eSupremi1903 } from './20c-pius-x/e-supremi-1903'
+import { adDiemIllumLaetissimum1904 } from './20c-pius-x/ad-diem-illum-laetissimum-1904'
+import { iucundaSane1904 } from './20c-pius-x/iucunda-sane-1904'
+import { acerboNimis1905 } from './20c-pius-x/acerbo-nimis-1905'
+import { ilFermoProposito1905 } from './20c-pius-x/il-fermo-proposito-1905'
+import { vehementerNos1906 } from './20c-pius-x/vehementer-nos-1906'
+import { tribusCirciter1906 } from './20c-pius-x/tribus-circiter-1906'
+import { pieniLAnimo1906 } from './20c-pius-x/pieni-l-animo-1906'
+import { gravissimoOfficiiMunere1906 } from './20c-pius-x/gravissimo-officii-munere-1906'
+import { uneFoisEncore1907 } from './20c-pius-x/une-fois-encore-1907'
+import { pascendiDominiciGregis1907 } from './20c-pius-x/pascendi-dominici-gregis-1907'
+import { communiumRerum1909 } from './20c-pius-x/communium-rerum-1909'
+import { editaeSaepe1910 } from './20c-pius-x/editae-saepe-1910'
+import { iamdudum1911 } from './20c-pius-x/iamdudum-1911'
+import { lacrimabiliStatu1912 } from './20c-pius-x/lacrimabili-statu-1912'
+import { singulariQuadam1912 } from './20c-pius-x/singulari-quadam-1912'
+
 // ── 19c Leo XIII ────────────────────────────────────────────
 import { aeterniPatris1879 } from './19c-leo-xiii/aeterni-patris-1879'
 import { arcanumDivinae1880 } from './19c-leo-xiii/arcanum-divinae-1880'
@@ -331,6 +363,36 @@ export const ALL_DOCUMENTS: PapalDocument[] = [
   quadragesimoAnno1931,
   mitBrennenderSorge1937,
   diviniRedemptoris1937,
+  // Benedict XV
+  adBeatissimiApostolorum1914,
+  humaniGenerisRedemptionem1917,
+  quodIamDiu1918,
+  inHacTanta1919,
+  paternoIamDiu1919,
+  pacemDeiMunusPulcherrimum1920,
+  spiritusParaclitus1920,
+  principiApostolorumPetro1920,
+  annusIamPlenus1920,
+  sacraPropediem1921,
+  inPraeclaraSummorum1921,
+  faustoAppetenteDie1921,
+  // Pius X
+  eSupremi1903,
+  adDiemIllumLaetissimum1904,
+  iucundaSane1904,
+  acerboNimis1905,
+  ilFermoProposito1905,
+  vehementerNos1906,
+  tribusCirciter1906,
+  pieniLAnimo1906,
+  gravissimoOfficiiMunere1906,
+  uneFoisEncore1907,
+  pascendiDominiciGregis1907,
+  communiumRerum1909,
+  editaeSaepe1910,
+  iamdudum1911,
+  lacrimabiliStatu1912,
+  singulariQuadam1912,
   // Leo XIII
   aeterniPatris1879,
   arcanumDivinae1880,
