@@ -789,7 +789,13 @@ import { aeterniPatrisFilius1621 } from './17c-gregory-xv/aeterni-patris-filius-
 
 import { inEminentiApostolatus1738 } from './18c-clement-xii/in-eminenti-apostolatus-1738'
 
+import { apostolicaeCurae1896 } from './19c-leo-xiii/apostolicae-curae-1896'
+
+import { providasRomanorum1751 } from './18c-benedict-xiv/providas-romanorum-1751'
+
 export const ALL_DOCUMENTS: PapalDocument[] = [
+  providasRomanorum1751,
+  apostolicaeCurae1896,
   inEminentiApostolatus1738,
   aeterniPatrisFilius1621,
   romanumDecetPontificem1692,
