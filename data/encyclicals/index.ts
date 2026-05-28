@@ -793,7 +793,16 @@ import { apostolicaeCurae1896 } from './19c-leo-xiii/apostolicae-curae-1896'
 
 import { providasRomanorum1751 } from './18c-benedict-xiv/providas-romanorum-1751'
 
+import { quodApostoliciMuneris1878 } from './19c-leo-xiii/quod-apostolici-muneris-1878'
+
+import { diuturnumIllud1881 } from './19c-leo-xiii/diuturnum-illud-1881'
+
+import { tametsiFuturaProspicientibus1900 } from './19c-leo-xiii/tametsi-futura-prospicientibus-1900'
+
 export const ALL_DOCUMENTS: PapalDocument[] = [
+  tametsiFuturaProspicientibus1900,
+  diuturnumIllud1881,
+  quodApostoliciMuneris1878,
   providasRomanorum1751,
   apostolicaeCurae1896,
   inEminentiApostolatus1738,
