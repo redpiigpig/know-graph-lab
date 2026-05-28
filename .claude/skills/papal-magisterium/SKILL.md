@@ -32,11 +32,25 @@ description: 教宗訓導文獻對照工具（/encyclicals）— 4 世紀 Damasu
 >   - **maximum-illud-1919**（原 P397 PDF 為馬相伯 1947 掃描影像 → hsscol html 取代 placeholder）
 >   - casti-connubii-1930 / divini-redemptoris-1937 / mysterium-fidei-1965 / mater-et-magistra-1961 / ecclesiam-suam-1964 / dives-in-misericordia-1980 / laborem-exercens-1981 / slavorum-apostoli-1985 / dominum-et-vivificantem-1986 / ut-unum-sint-1995
 >
-> **下輪 session 待補（具體內容）**：
-> - **B 位階新建 ~25 篇 marquee teaching**（Familiaris Consortio 1981 / Vita Consecrata 1996 / Ex Corde Ecclesiae 1990 / Pastores Dabo Vobis 1992 / Reconciliatio et Paenitentia 1984 / Redemptoris Custos 1989 / Ordinatio Sacerdotalis 1994 / Patris Corde 2020 等 — 完整清單見 `_CURIA_README.md`）— hsscol 中文已有，需新建 .ts metadata + 拉/英抓 vatican.va
-> - **C 位階 ~130 篇部會文件**（需先寫 `_hsscol_curia_classify.py` 從 hsscol 文件內容（出版頁）識別 dicastery）
-> - **D 位階 ~470 篇一般文告**（hsscol 已標 166 message + 多數 unknowns）
-> - A 區 5 篇段不齊 hotfix（dilexit-nos para 19 已修；剩 lumen-fidei LA 缺 P5 / redemptor-hominis EN footer 雜訊 / redemptoris-missio ZH 只到 40/92 / ecclesia-de-eucharistia ZH 不同段號編排）
+> 2026-05-28（最深夜）：**user 訂正三區命名 → 全面 hsscol 批次 ingest**
+>
+> **三區命名（user 訂正）**：
+> - **A 區 = 訓導文件**（tier='teaching'）通諭／勸諭／憲令／自動詔書等
+> - **B 區 = 部會文件**（tier='curia'）信理部／禮儀部等 dicastery 發行
+> - **C 區 = 牧靈文件**（tier='message'）廣播詞／講詞／致函／文告／演說／講道
+>
+> 全面 batch ingest 結果（`_hsscol_batch_ingest.py` → 322 篇 + index.ts patch）：
+> - **C 區（牧靈）296 篇新建**：含 francis 87 / john-paul-ii 75 / pius-xii 62 / benedict-xvi 47 / paul-vi 45
+> - **A 區 marquee 26 篇新建**：Familiaris Consortio 1981 / Reconciliatio et Paenitentia 1984 / Vita Consecrata 1996 / Ex Corde Ecclesiae 1990 / Fidei Depositum 1992 / Patris Corde 2020 等
+> - **B 區（部會）0 篇**：內容層掃描 322 篇確認 hsscol 內 0 真正 curia 文件（6 false positives 均為 A 區 teaching 內 reference）— hsscol 是教宗本人文件庫，非部會文件庫
+>
+> 系統總計：206（原既有）+ 12（第二批對位補）+ 322（第三批新建）= **528 篇 papal-doc**（vue-tsc 過）
+>
+> **下輪 session 待補**：
+> - **B 區真正資料源**：vatican.va `/roman_curia/` 子站爬蟲（信理部 / 禮儀部 / 教育部 等 dicastery 站）— 真正的 B 區文件在這裡
+> - 88 篇 hsscol PDF/HTML 標題抽取失敗者 → Gemini OCR 救援
+> - A 區 4 篇段不齊 hotfix（lumen-fidei LA 缺 P5 / redemptor-hominis EN footer 雜訊 / redemptoris-missio ZH 只到 40/92 / ecclesia-de-eucharistia ZH 不同段號編排）
+> - 部分 hsscol 對位 slug 是 `hsscol-pXXX-YYYY` 而非 Latin name（因標題無 Latin）→ 後續可手動 rename 或補 Latin title
 >
 > **本 skill 與 [[scripture-canon-portal]] 的分工**：
 > - scripture-canon-portal：**集體**文件（大公會議產出的信經 / canons / dogmatic decree）+ 信條 + 教會法規 + 教父著作搜尋 + 聖經對照 + 典外

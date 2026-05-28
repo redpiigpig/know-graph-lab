@@ -1,5 +1,10 @@
 # Curia 部會文件資料層 (tier='curia')
 
+> 三區命名（user 2026-05-28 訂正）：
+> - **A 區 = 訓導文件**（tier='teaching'）通諭／勸諭／憲令／自動詔書等
+> - **B 區 = 部會文件**（tier='curia'）信理部／禮儀部等 dicastery 發行
+> - **C 區 = 牧靈文件**（tier='message'）廣播詞／講詞／致函／文告／演說／講道
+
 ## 目的
 本資料區用於存放教廷部會（dicastery）頒布的文件 — 訓令 / 宣言 / 法令 / 通告 等。
 與「教宗訓導」(tier='teaching') 區別在於：
@@ -7,19 +12,35 @@
 - **schema**：`PapalDocument.issuer` 欄填部會名（中文），`popeSlug` 仍可填當時教宗用於關聯展示
 
 ## 規劃中的資料來源
-- archive.hsscol.org.hk 467 項中含部會文件（**標題不明確標示為「部會」**—— 需內容層掃描識別，見下）
-- vatican.va `/roman_curia/` 子站
+- archive.hsscol.org.hk 467 項 — **內容層掃描確認：0 個真正的 B 區 curia 文件**（hsscol 主要收教宗本人文件，不是部會發行）
+- vatican.va `/roman_curia/` 子站 — 真正的 B 區資料來源（待下輪 ingest）
+- vatican.va 各 dicastery 子站（e.g. `/cdf/` for 信理部）
 
-## Status (2026-05-28 第二批)
+## Status (2026-05-28 第三批 — hsscol 全面 ingest)
 
-### 已完成
+### 已完成 (本輪)
 - ✅ **hsscol 全 467 P# 索引完成**（`data/encyclicals/_hsscol_index.json`）
-- ✅ **hsscol tier 分類報告**（`data/encyclicals/_hsscol_mapping.md` / `.json`）
-  - teaching (B 區)：43 篇含 marquee（10 對位現有 slug；33 為新 B-tier 待 ingest）
-  - curia (C 區)：**0 自動偵測** —— hsscol 標題未標示「信理部」「禮儀部」等部會名（見下方說明）
-  - message (D 區)：166 篇（廣播詞 / 講詞 / 致函 / 文告 等）
-  - unknown：170 篇（標題不含分類關鍵字，多為主題化命名 e.g.「我們要熱愛一切人」）
+- ✅ **hsscol → papal-doc 對位 + 批次 ingest**（registry: `_hsscol_ingested.json`）
+  - 第二批：12 篇對位現有 slug 補中文（取代 placeholder + 新對位）
+  - 第三批：322 篇新建 `.ts` metadata + 三語檔案（C 區 296 / A 區 marquee 26）
+- ✅ **index.ts patch**：+322 imports + ALL_DOCUMENTS entries（vue-tsc 過）
+- ✅ **B 區 curia 內容層掃描**（`_hsscol_b_zone_classify.py`）—— 6 candidates 全為 false positive；hsscol 實質沒有 B 區文件
 - ✅ **A 區段對齊審計**（`data/encyclicals/_a_zone_alignment.md`）—— 206 篇審計，14 篇段號不齊（5 篇影響 UI）
+
+### 本輪 ingest 分布（322 篇新建 + 12 篇補入）
+- A 區 marquee teaching 新增 26 篇（含 Familiaris Consortio 1981 / Reconciliatio et Paenitentia 1984 / Vita Consecrata 1996 / Ex Corde Ecclesiae 1990 / Pastores Dabo Vobis 1992 / Fidei Depositum 1992 / Ordinatio Sacerdotalis 1994 / Patris Corde 2020 等）
+- C 區 牧靈／訊息新增 296 篇（廣播詞 260 / 演說 34 / 自動詔書 6 / 憲令 5 / 勸諭 5 / 通諭 4 / 使徒書信 4 / 詔書 2 / 致函 2）
+- B 區 curia：0 篇（hsscol 內容掃描確認無）
+
+### 教宗分布
+francis 87 / john-paul-ii 75 / pius-xii 62 / benedict-xvi 47 / paul-vi 45 / pius-xi 6
+
+### 未入庫（88 篇 hsscol index_not_ok + 17 misc）
+- 64 PDFs（pdftotext 無法抽出標題；可能 Gemini OCR 救援）
+- 23 HTML（無 H1/H2 結構；可能標題在 body 內）
+- 14 skip_unknown_tier（無教宗識別）
+- 7 skip_leo_xiv（user 指令不收）
+- 3 fetch_failed / 3 no_pope_match / 1 pope_folder_missing / 2 exists
 
 ### C 區（curia）識別挑戰
 hsscol 將部會文件按**主題**（不按部會發行者）歸檔，標題從不出現「信理部訓令」之類字串。要識別 C 區需：
