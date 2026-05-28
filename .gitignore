@@ -88,3 +88,6 @@ stores/*
 /scripts/_*.json
 # Per-script output directories (e.g. scripts/_denzinger_toc/dh_titles.json)
 /scripts/_*/
+# Per-script `.bak` snapshots (e.g. data/creeds/.../*-chinese.txt.bak)
+# git history already preserves the prior version; the bak is redundant.
+*.bak
