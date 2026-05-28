@@ -5,7 +5,9 @@ description: 教宗訓導文獻對照工具（/encyclicals）— 4 世紀 Damasu
 
 # Papal Magisterium — 教宗訓導文獻對照
 
-> 🟢 **Status**: Phase 1-3 已上線 2026-05-28（`/encyclicals` portal + 62 篇通諭三/四欄對照齊全）— 涵蓋 1879 良十三 *Aeterni Patris* 至 2024 方濟各 *Dilexit Nos*，共 19c-21c 9 位教宗。架構直接複用 [[scripture-canon-portal]] 的 creeds pipeline；資料層獨立 (`data/encyclicals/`) 但 `paragraphParser.ts` / `alignDocs()` 元件共用。
+> 🟢 **Status**: Phase 1-5 已上線 2026-05-28（`/encyclicals` portal + **175 篇文件**）— 涵蓋 1216 諾森三世繼任的 honorius-iii 至 2024 方濟各 *Dilexit Nos*，共 **13c-21c 跨 39 位教宗**。架構直接複用 [[scripture-canon-portal]] 的 creeds pipeline；資料層獨立 (`data/encyclicals/`) 但 `paragraphParser.ts` / `alignDocs()` 元件共用。
+>
+> 2026-05-28 大批 ingest：vatican.va 跑完 19c-21c 9 位教宗 62 篇；接著 papalencyclicals.net + DCO 雙源 pipeline 跑下 30 位教宗 113 篇（13c-19c），含 Pius IX *Quanta Cura* / *Ineffabilis Deus* / *Syllabus*、Leo X *Exsurge Domine*、Boniface VIII *Unam Sanctam*、Benedict XIV 12 篇 encyclical 等里程碑文件。
 >
 > **本 skill 與 [[scripture-canon-portal]] 的分工**：
 > - scripture-canon-portal：**集體**文件（大公會議產出的信經 / canons / dogmatic decree）+ 信條 + 教會法規 + 教父著作搜尋 + 聖經對照 + 典外
@@ -495,10 +497,59 @@ https://www.documentacatholicaomnia.eu/04z/z_{ID}-{ID},_{Pope}_PP._{Roman},_{Tit
 - `scripts/_batch_papal_ingest.py` — 教宗等級批次（local, gitignored `/scripts/_*.py`）
 - `scripts/_gen_papal_metadata.py` — 教宗等級 .ts metadata 批次生成（local, gitignored）
 
+### 2026-05-28 papalencyclicals.net 批次成果（pope-by-pope 統計）
+
+| 世紀 | 教宗 | 文件數 | 主要 marquee |
+|---|---|---|---|
+| 19c | 碧岳九世 Pius IX | 40 | *Qui Pluribus* 1846／*Ineffabilis Deus* 1854／*Quanta Cura* 1864／*Syllabus Errorum* 1864 |
+| 19c | 額我略十六世 Gregory XVI | 8 | *Mirari Vos* 1832（首譴自由主義） |
+| 19c | 碧岳八世 Pius VIII | 1 | *Traditi Humilitati* 1829 |
+| 19c | 良十二世 Leo XII | 4 | *Ubi Primum* 1824 |
+| 19c | 碧岳七世 Pius VII | 1 | *Diu Satis* 1800 |
+| 18c | 碧岳六世 Pius VI | 3 |  |
+| 18c | 克勉十四世 Clement XIV | 4 | *Dominus Ac Redemptor* 1773（解散耶穌會） |
+| 18c | 克勉十三世 Clement XIII | 6 |  |
+| 18c | 本篤十四世 Benedict XIV | 12 | encyclical 體裁奠基 |
+| 18c | 克勉十二世 Clement XII | 1 | *In Eminenti Apostolatus* 1738（首譴共濟會） |
+| 18c | 克勉十一世 Clement XI | 1 | *Unigenitus* 1713（再譴 Jansenism） |
+| 17c | 諾森十一世 Innocent XI | 2 |  |
+| 17c | 亞歷山大七世 Alexander VII | 1 |  |
+| 16c | 克勉八世 Clement VIII | 1 |  |
+| 16c | 西斯篤五世 Sixtus V | 1 |  |
+| 16c | 額我略十三世 Gregory XIII | 1 |  |
+| 16c | 碧岳五世 Pius V | 4 | *Regnans in Excelsis* 1570 / *Quo Primum* 1570 |
+| 16c | 保祿三世 Paul III | 2 |  |
+| 16c | 良十世 Leo X | 1 | *Exsurge Domine* 1520（譴路德 41 條） |
+| 15c | 亞歷山大六世 Alexander VI | 1 | *Inter Caetera* 1493（劃地子午線） |
+| 15c | 西斯篤四世 Sixtus IV | 1 |  |
+| 15c | 尼古拉五世 Nicholas V | 1 | *Romanus Pontifex* 1455 |
+| 15c | 尤金四世 Eugene IV | 1 |  |
+| 14c | 本篤十二世 Benedict XII | 1 |  |
+| 14c | 若望廿二世 John XXII | 1 |  |
+| 14c | 克勉五世 Clement V | 2 |  |
+| 13c | 鮑尼法八世 Boniface VIII | 1 | *Unam Sanctam* 1302（最高教宗權威經典聲明） |
+| 13c | 尼古拉四世 Nicholas IV | 1 |  |
+| 13c | 尼古拉三世 Nicholas III | 1 |  |
+| 13c | 亞歷山大四世 Alexander IV | 1 |  |
+| 13c | 諾森四世 Innocent IV | 2 |  |
+| 13c | 額我略十世 Gregory X | 1 |  |
+| 13c | 額我略九世 Gregory IX | 1 |  |
+| 13c | 何諾理三世 Honorius III | 2 |  |
+
+合計 113 篇（papalencyclicals.net 批次），加上原 62 篇（vatican.va）= **175 篇**
+
+### 新增 pipeline 工具（papalencyclicals.net 雙源）
+- `scripts/scrape_papalencyclicals_net.py` — 單篇 HTML → english.txt（含段號偵測、heading 偵測、inline footnote anchor 補回、smart-quote 規範化、pope 名稱 cleanup）
+- `scripts/discover_papalencyclicals.py` — `/category/{popekey}/` → JSON 清單（title/subtitle/date/url）；只收 papalencyclicals.net HTML、跳過外站 PDF；解析「December 8, 1864」等英美式日期
+- `scripts/_batch_ingest_papalenc_pope.py` — 單一教宗的 one-stop pipeline（discover → 每篇 scrape → 自動 detect category（bull/encyclical 依年份）+ displayMode（看段號數量）→ 寫 .ts metadata + Latin/Chinese placeholder → 自動 patch index.ts imports + ALL_DOCUMENTS array + textLoader.ts POPE_LOADERS + POPE_FOLDER；支援增量 patch（重跑只加新文件，不重複既有）；word-boundary check 避免 `19c-leo-xii` 誤判為 `19c-leo-xiii` 已存在）
+- `scripts/_batch_papalenc_all_popes.py` — master batch runner，內含 30 位 pre-Pius-IX 教宗清單（pope-key ↔ pope-slug ↔ century），支援 `--start-century N --end-century M` 範圍篩選與 `--only key1,key2` 指定
+
 ### 待辦
-- [ ] **碧岳九世 (Pius IX)**：Ineffabilis Deus 1854 / Quanta Cura 1864 / Syllabus Errorum — vatican.va URL pattern 為 `/pius-ix/{lang}/documents/{slug}.html`（無 `/encyclicals/` 中間段），且文本無 paragraph numbers → 需 `displayMode: 'simple'` 顯示與適配
-- [ ] **碧岳十世 / 本篤十五**：vatican.va 提供，下次批次補（Pius X 8 篇 / Benedict XV 12 篇）
+- [ ] **拉丁原文補齊**：所有 papalencyclicals.net 批次的 113 篇 Latin 為 placeholder。下一步從 DCO Acta Sanctae Sedis / Migne PL / Bullarium Romanum PDF 抽取對應段落，逐段對位（可 LLM 輔助）
+- [ ] **中文補齊**：所有 papalencyclicals.net 批次的 113 篇 + vatican.va 39 篇缺中文 → 走 catholic.org.tw scrape／光啟《公教會之信仰與倫理教義選集》(Denzinger 中譯) OCR／Gemini 翻譯英→中（最後一步）
+- [ ] **碧岳十世 / 本篤十五**：vatican.va 提供，下次補（Pius X 8 篇 / Benedict XV 12 篇）；亦可用 papalencyclicals.net pius10 / ben15
 - [ ] **良十四世**（2025-）：等台灣主教團官方中譯發布後再 ingest
-- [ ] **中文補譯**（Phase 6）：保祿六／若望廿三／碧岳十二／十一／良十三共 39 篇缺中文 → catholic.org.tw scrape ／ 紙本 OCR（光啟《公教會之信仰與倫理教義選集》/ 《天主教大公會議文獻彙編》）
-- [ ] **4-15c 早期教宗**：等 [[fathers-translation]] / Schaff NPNF Vol 12-13 中譯成熟 → Phase 5 回頭 ingest
+- [ ] **4-12c 早期教宗**：等 [[fathers-translation]] / Schaff NPNF Vol 12-13 中譯成熟 → 從 Migne PL 或 Schaff 補 ingest；papalencyclicals.net 對 4-10c 涵蓋極少
 - [ ] **Heading 對齊精修**：自動 align 對部分文件有誤差（如 Lumen Fidei 中文 HTML 結構特殊），可逐篇手寫 `fix_{slug}_chinese_headings.py`（參 fix_laudato_si_chinese_headings.py 模板）
+- [ ] **summary/topics 精修**：papalencyclicals.net 批次自動生成的 summaryZh 為 generic template；topics 為 `[]`。可手動或 LLM 補（marquee 文件優先）
+- [ ] **titleZh 翻譯**：113 篇自動寫成 `《Quanta Cura》` 純拉丁包書名號；marquee 文件可手譯為《Quanta Cura 何等關切》等

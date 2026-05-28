@@ -69,6 +69,166 @@ const pius9Loaders = import.meta.glob(
   { query: '?raw', import: 'default' },
 ) as Record<string, () => Promise<string>>
 
+const gregoryXviLoaders = import.meta.glob(
+  './19c-gregory-xvi/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const piusViiiLoaders = import.meta.glob(
+  './19c-pius-viii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const leoXiiLoaders = import.meta.glob(
+  './19c-leo-xii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const piusViiLoaders = import.meta.glob(
+  './19c-pius-vii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const piusViLoaders = import.meta.glob(
+  './18c-pius-vi/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const clementXivLoaders = import.meta.glob(
+  './18c-clement-xiv/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const clementXiiiLoaders = import.meta.glob(
+  './18c-clement-xiii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const benedictXivLoaders = import.meta.glob(
+  './18c-benedict-xiv/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const clementXiiLoaders = import.meta.glob(
+  './18c-clement-xii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const clementXiLoaders = import.meta.glob(
+  './18c-clement-xi/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const innocentXiLoaders = import.meta.glob(
+  './17c-innocent-xi/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const alexanderViiLoaders = import.meta.glob(
+  './17c-alexander-vii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const clementViiiLoaders = import.meta.glob(
+  './16c-clement-viii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const sixtusVLoaders = import.meta.glob(
+  './16c-sixtus-v/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const piusVLoaders = import.meta.glob(
+  './16c-pius-v/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const paulIiiLoaders = import.meta.glob(
+  './16c-paul-iii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const leoXLoaders = import.meta.glob(
+  './16c-leo-x/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const alexanderViLoaders = import.meta.glob(
+  './15c-alexander-vi/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const sixtusIvLoaders = import.meta.glob(
+  './15c-sixtus-iv/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const nicholasVLoaders = import.meta.glob(
+  './15c-nicholas-v/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const eugeneIvLoaders = import.meta.glob(
+  './15c-eugene-iv/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const benedictXiiLoaders = import.meta.glob(
+  './14c-benedict-xii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const johnXxiiLoaders = import.meta.glob(
+  './14c-john-xxii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const clementVLoaders = import.meta.glob(
+  './14c-clement-v/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const bonifaceViiiLoaders = import.meta.glob(
+  './13c-boniface-viii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const nicholasIvLoaders = import.meta.glob(
+  './13c-nicholas-iv/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const nicholasIiiLoaders = import.meta.glob(
+  './13c-nicholas-iii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const alexanderIvLoaders = import.meta.glob(
+  './13c-alexander-iv/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const innocentIvLoaders = import.meta.glob(
+  './13c-innocent-iv/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const gregoryXLoaders = import.meta.glob(
+  './13c-gregory-x/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const gregoryIxLoaders = import.meta.glob(
+  './13c-gregory-ix/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const honoriusIiiLoaders = import.meta.glob(
+  './13c-honorius-iii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
 /** popeSlug → loaders；新增教宗時加一條 */
 const POPE_LOADERS: Record<string, Record<string, () => Promise<string>>> = {
   'francis': francisLoaders,
@@ -82,6 +242,38 @@ const POPE_LOADERS: Record<string, Record<string, () => Promise<string>>> = {
   'pius-x': pius10Loaders,
   'leo-xiii': leo13Loaders,
   'pius-ix': pius9Loaders,
+  'gregory-xvi': gregoryXviLoaders,
+  'pius-viii': piusViiiLoaders,
+  'leo-xii': leoXiiLoaders,
+  'pius-vii': piusViiLoaders,
+  'pius-vi': piusViLoaders,
+  'clement-xiv': clementXivLoaders,
+  'clement-xiii': clementXiiiLoaders,
+  'benedict-xiv': benedictXivLoaders,
+  'clement-xii': clementXiiLoaders,
+  'clement-xi': clementXiLoaders,
+  'innocent-xi': innocentXiLoaders,
+  'alexander-vii': alexanderViiLoaders,
+  'clement-viii': clementViiiLoaders,
+  'sixtus-v': sixtusVLoaders,
+  'pius-v': piusVLoaders,
+  'paul-iii': paulIiiLoaders,
+  'leo-x': leoXLoaders,
+  'alexander-vi': alexanderViLoaders,
+  'sixtus-iv': sixtusIvLoaders,
+  'nicholas-v': nicholasVLoaders,
+  'eugene-iv': eugeneIvLoaders,
+  'benedict-xii': benedictXiiLoaders,
+  'john-xxii': johnXxiiLoaders,
+  'clement-v': clementVLoaders,
+  'boniface-viii': bonifaceViiiLoaders,
+  'nicholas-iv': nicholasIvLoaders,
+  'nicholas-iii': nicholasIiiLoaders,
+  'alexander-iv': alexanderIvLoaders,
+  'innocent-iv': innocentIvLoaders,
+  'gregory-x': gregoryXLoaders,
+  'gregory-ix': gregoryIxLoaders,
+  'honorius-iii': honoriusIiiLoaders,
 }
 
 /** popeSlug → 資料夾前綴；reverse map from POPE_LOADERS keys */
@@ -97,6 +289,38 @@ const POPE_FOLDER: Record<string, string> = {
   'pius-x': './20c-pius-x',
   'leo-xiii': './19c-leo-xiii',
   'pius-ix': './19c-pius-ix',
+  'gregory-xvi': './19c-gregory-xvi',
+  'pius-viii': './19c-pius-viii',
+  'leo-xii': './19c-leo-xii',
+  'pius-vii': './19c-pius-vii',
+  'pius-vi': './18c-pius-vi',
+  'clement-xiv': './18c-clement-xiv',
+  'clement-xiii': './18c-clement-xiii',
+  'benedict-xiv': './18c-benedict-xiv',
+  'clement-xii': './18c-clement-xii',
+  'clement-xi': './18c-clement-xi',
+  'innocent-xi': './17c-innocent-xi',
+  'alexander-vii': './17c-alexander-vii',
+  'clement-viii': './16c-clement-viii',
+  'sixtus-v': './16c-sixtus-v',
+  'pius-v': './16c-pius-v',
+  'paul-iii': './16c-paul-iii',
+  'leo-x': './16c-leo-x',
+  'alexander-vi': './15c-alexander-vi',
+  'sixtus-iv': './15c-sixtus-iv',
+  'nicholas-v': './15c-nicholas-v',
+  'eugene-iv': './15c-eugene-iv',
+  'benedict-xii': './14c-benedict-xii',
+  'john-xxii': './14c-john-xxii',
+  'clement-v': './14c-clement-v',
+  'boniface-viii': './13c-boniface-viii',
+  'nicholas-iv': './13c-nicholas-iv',
+  'nicholas-iii': './13c-nicholas-iii',
+  'alexander-iv': './13c-alexander-iv',
+  'innocent-iv': './13c-innocent-iv',
+  'gregory-x': './13c-gregory-x',
+  'gregory-ix': './13c-gregory-ix',
+  'honorius-iii': './13c-honorius-iii',
 }
 
 function resolveLoader(popeSlug: string, textKey: string): (() => Promise<string>) | undefined {
