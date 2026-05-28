@@ -1,19 +1,7 @@
 # 第四次君士坦丁堡大公會議 (869-870)
 # DH 650–664
 # 來源：光啟文化 2013《公教會之信仰與倫理教義選集》(Denzinger 中譯)
-# 共 13 條中譯條目
-
-【DH 650】
-Can. 1. Per      法典 1  我        α',        Thy      法典 1  我
-         aequam et regiam  們既願不違反地     εύθετον     καί      們既願不違反地
-         divinae   iustitiae  走向天主正義的      βασιλικήν  ὁδόν     走向天主正義的
-         viam    inoffense    君主正道，      ης        θεἱος     君主正道，
-         veluti    quasdam    我們就應遵守聖        ἀπροσκόπτως
-         lampades   semper    教父們的定斷與         βαδίζειν    我們就應遵守聖
-         lucentos      et     思想，              ἔθελοντες, οἷόν     教父們的定斷，
-         gressus   nostros,    作為當光照我們        ἀείλαμπτες τούς
-         qui    secundum       定向天主之步履         τῶν  ἁγίων  παστέρον  作為當光照我
-         Deum       sunt,       的明燈。             ὅρους          們走向天主的
+# 共 5 條中譯條目
 
 【DH 651】
 Quapropter　　　因此，我們
@@ -44,86 +32,6 @@ quod　non　無益的有害的分
 expedire,　sed　et　辨出來。
 ¹651　參照偽狄奧尼修斯（Pseudo-Dionysius Areopagita, 六世紀）《論教會等級制》(De ecclesiastica hierarchia) 1, n. 4
 【*651】按照教會的傳統認法，聖經是聖督傳們的基礎來源，被視爲「第一種語言」。】
-
-【DH 652】
-Igitur          因此我們宣          τοιγαροῦν          因此我們宣
-        regulas,     quas          布、遵守及保存          τοὺς     ἐν     τῇ          布、遵守及保存
-        sanctae catholicae          那些規範，它們          καθολικῇ     καὶ          那些規範，它們
-        et     apostolicae          既由著名的聖宗          ἀποστολικῇ          既由著名的聖宗
-        Ecclesiae tam a          徒們，也由正統          ἐκκλησίᾳ          徒們，也由正統
-        sanctis          的大公會議與地          παραδόθεντας          的大公會議與地
-        famosissimis          區會議及任何講          θεσμούς παρά τε          區會議及任何講
-        Apostolis     quam          述天主聖情的教          τῶν ἁγίων καὶ          述天主聖情的教
-        ab orthodoxorum          父與教師，傳給          πανευφήμων          父與教師，傳給
-        universalibus          聖、公及宗徒【傳          ἀποστόλων,          聖、公及宗徒【傳
-        necnon     et          下來】的教會；          παρὰ          下來】的教會；
-                                      我們按此規          
-                                      範安排我們自己          
-                                      的生活與習慣，          
-                                      及按照法典決定          
-                                      所有聖職人員、          
-                                      且一切行基督名          
-                                      字的人【基督          
-        his     and          徒】，應服於          κρατεῖν γὰρ          徙保族【Paulus】          
-        propriam vitam et          它們【這些規範】          τὰς παραδόσεις,          明昭地勸勉，咦          
-        mores regentes et          所定的懲罰及判          ἃς παρελάβομεν          遵守或由言          
-        omnem sacerdotii          決，反過來說，          εἴτε διὰ λόγου          語，或由書信          
-        catalogum, sed et          應接受它們【這          εἴτε δι'          【參閣伊後二          
-        omnes,     qui          此規範】所定的          ἐπιστολῶν [cf. 2          15】所接受的從          
-        Christiano          恩惠及辯護；          Thess 2,15] τῶν          前發光的聖人
-
-【DH 653】
-Can.    3.             法典 3  我            γ'. Τὴν           法典 3  我
-          Sacram imaginem            們決定，對於我        ἱερὰν εἰκόνα τοῦ      們決定，對於我
-          Domini nostri               們的主耶穌基督        κυρίου   ἡμῶν        們的主耶穌基
-          Iesu  Christi  et           肖像於五人的聖         Ἰησοῦ  Χριστοῦ       督，應以對福音聖
-          omnium                      像，應以對福音聖        ὁμοίως               書同樣的光輝予以
-          Liberatoris  et             像，應以對福音聖        βιβλῳ    τῶν         崇拜。
-          Salvatoris, aequo           像，應以對福音聖        ἁγίων
-          honore cum libro            予以崇拜。              εὐαγγελίων
-
-【DH 654】
-Sicut  enim              正如我們大              "Ὅσπερ γὰρ        正如大家藉
-          per  syllabarum            家藉着【聖經】          διὰ   τῶν          著在它【書，即
-          eloquia, quae in           上的字句獲得救          ἐμφερομένων  ἐν     聖經】所提出的
-          libro  feruntur,           恩，                    αὐτῇ  συλλαβῶν      獲得拯救，
-          consequemur                同樣，                  ἐπιτυγχάνουσιν      同樣，
-          omnes, ita per             藉着圖像創作的          ἅπαντες,   οὕτω      藉着圖像創作的
-          colorum                    顏色，無論是有          διὰ  τῆς  τῶν       顏色，無論是有
-          imaginarian               學問或不識字的          χρωμάτων            學問或不識字的
-          operationem  et            人都能一目瞭然          εἰκονουργίας        人都能一目瞭然
-          sapientes  et              而獲得益處；            καὶ σοφοὶ  καὶ      而獲得益處；
-          eo,  quod  in              語言藉字句所表          τῆς ὠφελείας ἐκ
-          promptu  est,              達的，這也是圖          τοῦ προχείρου
-          perfruuntur                像藉顏色所宣講          παραπλησίουσιν
-          utilitate; quae            及推介的；              · ἅπερ γὰρ ὁ ἐν      語言藉字句所表
-          enim in syllabis                                   συλλαβῇ  λόγος,     達的，這也是圖
-          sermo, haec et                                     ταῦτα καὶ ἡ ἐν      像藉顏色所宣講
-          scriptura, quae in                                 χρώμασι  γραφὴ      及推介的。
-
-【DH 655】
-Si quis ergo              所以，誰若                Εἰ τις οὖν              誰若不崇拜
-        non      adorat              不崇拜救主基督               οὐ προσκυνεῖ τὴν        救主基督的聖
-        iconam Salvatoris            的聖像，或在他              εἰκόνα        τοῦ        像，
-        Christi,                      【基督】                    σωτῆρος
-        non      videat      formam                             Χριστοῦ, μὴ ἴδε        他在他【基督】
-        eius,      quando            於父的光榮中臨              τὴ        δευτέρα        第二次來臨
-        veniet  in  gloria            時受光榮且光榮              παρουσία      τὴν        時不應見到他
-        paterna  glorificari          自己的聖者時                τούτου μορφήν.         的形象。
-        et      glorificare           【參閱傳後一
-        sanctos suos [cf. 2           10】，不應見到
-        Th   1,10];  sed              他的形象；
-        communione                    而且應該離與他
-        ipsius et claritate;          【基督】的共融
-                                      及光輝；
-
-【DH 656】
-similiter        autem      and      imaginem          相仿地，對          Ὅμοίως  δὲ           相仿地，我
-                                      無玷天主之母瑪          καὶ τὴν εἰκόνα         們光榮及崇拜無
-        inemeratae                    利亞的聖像，也            τῆς ἀχράντου           玷及喜樂之母瑪
-        matris eius et Dei            是如此；                  μητρὸς αὐτοῦ           利亞的聖像，
-        insuper et iconas             此外，我們也繪            τῶν ἁγίων             如同聖經措語語
-                                      畫天主使們的聖
 
 【DH 657】
 法典 11　舊
@@ -182,27 +90,6 @@ similiter        autem      and      imaginem          相仿地，對          
 如此膽大妄
 為，竟與佛提烏
 斯【Photius】或
-
-【DH 663】
-Si vero quis 誰若享有或 Λιόσκορον
-aliqua saecula 擁有世俗權勢， ἐγγράφος
-vel potens, pellere 企圖驅逐以上所 γέννται τις περὶ
-tentaverit 說的宗座教宗或 τῆς
-praefatum 任何一位宗主 ἐκκλησίας τῶν
-triarcharum 則應字以絕罰。 καὶ μετὰ τῆς
-
-【DH 664】
-Porro si 但若召開大 ei δὲ 但若召開大
-Synodus 公會議， συγκροτηθείσης 公會議，
-facta fuerit etiam γέννται τις περὶ 而且會議之召開
-de sancta τῆς 是為了討論羅馬
-Romanorum ἐκκλησίας τῶν 聖教會的某一疑
-ambiguitas et ἀμφιβολία, 那麼，應在中地
-controversia, βέστιν εὐλαβὴς 並以相稱的敬意
-oportet καὶ μετὰ τῆς 先查明所陳述的
-cum convenient αἰδοῦς 然後接納解答或
-reverentia de διασπυθάνεσθαι 進一步地研討或
-proposita περὶ τοῦ 結束此問題。
 
 【DH 661】
 4bg,H 2ba,H 2bc,H 3cb；人對東西的

@@ -1,22 +1,7 @@
 # 梵一 Dei Filius — 論天主公教信仰
 # DH 3000–3045
 # 來源：光啟文化 2013《公教會之信仰與倫理教義選集》(Denzinger 中譯)
-# 共 33 條中譯條目
-
-【DH 3000】
-... Nunc autem, sedentibus Nobiscum　　...但現在，因為當世主教依據我們
-et iudicantibus universi orbis episcopis, in　　【教宗】的權威，在聖神內集合在這大
-hanc oecumenicam Synofum auctoritate　　公會議，與我們一同出席及判斷，
-innixi Dei Verbo scripto et tradito, prout　　依靠我們所接受的藉著言面與傳承，
-ab Ecclesia catholica sancte custoditum et　　由公教會傳聖地保循及忠信地闡釋的
-genuine expositum accepimu, ex hac　　天主之言；
-Petri cathedra in conspectу omnium　　我們決定由這俟舍祿【Petrus】的諸座，
-salutarem Christi doctrinam profteri et　　面對一切人，宣布及說明基督具有救恩
-declaraire constitimos, adversis erroribus　　的教義，藉著由天主所給予的我們的權
-potestate Nobis a Deo tradita proscriptis　　柄，捍絕及譴責相反的錯誤。
-Cap. 1. De Deo rerum omnium　　　第一章　論一切事物的創造者天主
-【本選集3001條：一個完全的、與世界有所區別的天主。本選集3002條：創造的
-行動；其完美、其目的及其效果。本選集3003條：天主的脆弱。】
+# 共 26 條中譯條目
 
 【DH 3004】
 Eadem sancta mater Ecclesia tenet et
@@ -223,38 +208,6 @@ potest, sicut oportet ad salutem
 *3010 奧朗治 (Orange) 第二港他區會議：水遠集 177 條。
 *3010 請參閱本選集 1525-1526 條；法典 5(本選集 3035 條)。
 
-【DH 3014】
-Quo fit, ut ipsa veluti signum levatum 教會本身好像為列邦高舉的記號
-ad nationes [cf. Is 11,12] et ad se inviret, 【參閱依十一·十二】,一方面當邀請此些
-ut nondum crediderint, et filios suos 未相信者,一方面使自己的子女更確信
-certiores faciat, firmissimo niti 他們所宣布的信仰是依靠極其穩定的
-quidem testimonio efficax subsidium 在這證據選加上依靠由上而來的能力
-accedit ex superna virtute. Etenim之有效扶助,該是仁慈的主,一方面結其
-benignissimus Dominus et errantes gratia 因龍提握在錯謬的人,
-sua excitаt atque adiuvat, ut "ad 能「求認識真理」【弟前二4】,
-agnotionem veritatis venire" [1 Tim 2,4] 另一方面,
-possint, et eos, quos de tenebris transtulit 使那由黑暗中被召進入祂奇妙之光
-in admirabile lumen suum [cf. 1 Pt 2,9; 者【參閱伯前·9；哲·13】
-Col 1,13], in hoc eodem lumine ut 藉其恩典堅固,使他們在這光明中堅
-perseverent, gratia sua confirmat, non 持,祂不拋棄【據此人】,
-deserens, nisi deseratur'. 除非祂被拋棄』。
-Quocirca minime par est condicio 所以,一些人藉着天上的信仰的禮
-eorum, qui per caeleste fidei donum 物,奉行天主救的真理,另一些人依靠
-catholicae veritatl adhaeserunt, atque 人的主張而誤認錯誤的宗教,這兩種人
-eorum, qui ducti opinionibus humanis 的情形毫不相同;
-falsam religionem sectantur; illis enim, qui 前者在救會的訓導之下接受了信仰,
-fidem sub Ecclesiae magisterio 沒有任何理由改變或懷疑此信仰2。
-possunt iustam causam mutandi aut in 既然如此,
-dubium fidem candem revocandi². Quae 「感謝掉使我們有資格,在光明中分享
-cum ita sint, 'vostas agentes Deo Patri, 聖徒福份的天父」【哥·12】,
-qui dignos nos fecit in partem sortis 就不應忽視如此大的救恩【參閱希二
-sanctorum in lumine' [Col 1,12], tantam 3】,但「尊視着信仰的創始者和完成
-ne negligamus salutem [cf. Hbr 2,3], sed 者耶穌」【希十二2】,
-"aspicientes in auctorem fidei et 「讓我們堅持不動搖地宣布我們的希
-Cap. 4. De fide et ratione 第四章 論信仰與理性
-*3014¹ 請參閱本選集 1537 條。
-*3014² 法典 6(本選集 3036 條)。
-
 【DH 3016】
 這是公教會的永恆共識過去肯定及現在肯定的，
 關於認識的兩種秩序：
@@ -384,51 +337,6 @@ intelligentiae specie et nomine
 *3021 ¹ 請參閱本選集3001條。
 *3022 ¹ 請參閱本選集3002條。
 *3023 ¹ 請參閱本選集3001條。
-
-【DH 3025】
-5. Si quis confiteatur, mundum        5. 誰若不宣佈，
-resquee omnes, quae in eo continentur, et              世界與其中所有包合的一切事物，
-spirituales et materiales secundum totam              不論精神與物質的，是由天主按其整個
-suam substantiam a Deo ex nihilo esse              實體，從無中製造的，
-aut Deum dixerit non voluntate ab              或說天主在意志方面不完全脫離
-omni necessitate libera, sed tam              必然性，卻如此必然地創造，
-necessario creasse, quam necessario amat              如同他必然地愛自己，
-aut mundum ad Dei gloriam conditum              或否認此界是為天主的光榮而建
-esse negaverit: anathema sit.              立的：那麼，這樣的人，應予以絕罰。
-2. De revelatione              2. 論啟示
-【法典1（本選集3026條）：反對否認自然神學者。法典2（本選集3027條）：反對自
-然神論。法典3（本選集3028條）：反對不受限制的理性主義。法典4（本選集3029條）：
-反對理性主義者的聖經批判。】
-
-【DH 3026】
-1. Si quis dixerit, Deum unum et              1. 誰若說，一個及真實的天主，
-verum, creatorem et Dominum nostrum,              我們的創造主與主，
-per ea, quae facta sunt, naturali rationis              藉著被製作的【萬物】，不能被人理
-humanae lumine certo cognosci non              性的本性之光確印地認識：
-possę: anathema sit'.              那麼，這樣的人，應予以絕罰！。
-
-【DH 3027】
-2. Si quis dixerit, fieri non possę aut              2. 誰若說，人不能或不便藉天主的
-non expedire, ut per revelationem divinam              啟示，對於天主以及與天主應行的敬
-homo de Deo cultusque ei exhibendo              禮，受到啟導：
-doceatur: anathema sit.              那麼，這樣的人，應予以絕罰。
-
-【DH 3028】
-3. Si quis dixerit, hominem ad              3. 誰若說，人不能藉神性的力量提
-cognitionem et perfectionem, quae              升到超越自然知識與美善；
-naturalem superet, divinitus evehi non              卻能夠及應該依靠自己，藉著不斷的進
-possę, sed ex se ipso ad omnis tandem              步，達到擁有一切眞理與美善；
-veri et boni possessionem iugi perfectu              那麼，這樣的人，應予以絕罰。
-
-【DH 3029】
-4. Si quis sacrae Scripturae libros              4. 誰若不接受聖經的完整著作連
-integros cum omnibus suis partibus, prout              同其一切部分，如同神聖特利騰大公會
-pro sacris et canonicis non susceperit aut              不按受為神聖及正典的；
-eos divinitus inspiratos esse negaverit:              或否認它們且有神聖的屬咐：
-anathema sit².              那麼，這樣的人，應予以絕罰²。
-*3026' 請參閱本選集 3004 條。
-*3029' 本選集 1501-1508 條。
-*3029' 請參閱本選集 3006 條。
 
 【DH 3044】
 Itaque supremi pastoralis Nostri officii
