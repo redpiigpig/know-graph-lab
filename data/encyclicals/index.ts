@@ -308,6 +308,9 @@ import { dictatusPapae1075 } from './11c-gregory-vii/dictatus-papae-1075'
 // ── added: 5c leo-i (CCEL Schaff NPNF2 Vol 12) ──
 import { tomeOfLeo449 } from './5c-leo-i/tome-of-leo-449'
 
+// ── 2026-05-28 B 區 (curia) — vatican.va 信理部 ──
+import { dignitasInfinita2024 } from './21c-francis/dignitas-infinita-2024'
+import { iuvenescitEcclesia2016 } from './21c-francis/iuvenescit-ecclesia-2016'
 
 
 // ── 2026-05-28 hsscol BC 批次 — 20c-john-paul-ii ──
@@ -315,9 +318,9 @@ import { catechesiTradendae1979 } from './20c-john-paul-ii/catechesi-tradendae-1
 import { hsscolP1651979 } from './20c-john-paul-ii/hsscol-p165-1979'
 import { hsscolP1682002 } from './20c-john-paul-ii/hsscol-p168-2002'
 import { hsscolP1691981 } from './20c-john-paul-ii/hsscol-p169-1981'
-import { hsscolP1701981 } from './20c-john-paul-ii/hsscol-p170-1981'
+import { familiarisConsortio1981 } from './20c-john-paul-ii/familiaris-consortio-1981'
 import { hsscolP1721983 } from './20c-john-paul-ii/hsscol-p172-1983'
-import { hsscolP1731984 } from './20c-john-paul-ii/hsscol-p173-1984'
+import { reconciliatioEtPaenitentia1984 } from './20c-john-paul-ii/reconciliatio-et-paenitentia-1984'
 import { hsscolP1741984 } from './20c-john-paul-ii/hsscol-p174-1984'
 import { hsscolP1751984 } from './20c-john-paul-ii/hsscol-p175-1984'
 import { hsscolP1781987 } from './20c-john-paul-ii/hsscol-p178-1987'
@@ -325,25 +328,25 @@ import { hsscolP1791987 } from './20c-john-paul-ii/hsscol-p179-1987'
 import { hsscolP1811988 } from './20c-john-paul-ii/hsscol-p181-1988'
 import { hsscolP1821988 } from './20c-john-paul-ii/hsscol-p182-1988'
 import { hsscolP1831988 } from './20c-john-paul-ii/hsscol-p183-1988'
-import { hsscolP1841989 } from './20c-john-paul-ii/hsscol-p184-1989'
+import { redemptorisCustos1989 } from './20c-john-paul-ii/redemptoris-custos-1989'
 import { hsscolP1852002 } from './20c-john-paul-ii/hsscol-p185-2002'
-import { hsscolP1871992 } from './20c-john-paul-ii/hsscol-p187-1992'
+import { pastoresDaboVobis1992 } from './20c-john-paul-ii/pastores-dabo-vobis-1992'
 import { hsscolP1881993 } from './20c-john-paul-ii/hsscol-p188-1993'
-import { hsscolP1911994 } from './20c-john-paul-ii/hsscol-p191-1994'
+import { ordinatioSacerdotalis1994 } from './20c-john-paul-ii/ordinatio-sacerdotalis-1994'
 import { hsscolP1931995 } from './20c-john-paul-ii/hsscol-p193-1995'
 import { hsscolP1941995 } from './20c-john-paul-ii/hsscol-p194-1995'
 import { hsscolP1961995 } from './20c-john-paul-ii/hsscol-p196-1995'
 import { hsscolP1971996 } from './20c-john-paul-ii/hsscol-p197-1996'
-import { hsscolP1981996 } from './20c-john-paul-ii/hsscol-p198-1996'
+import { vitaConsecrata1996 } from './20c-john-paul-ii/vita-consecrata-1996'
 import { hsscolP1991998 } from './20c-john-paul-ii/hsscol-p199-1998'
 import { hsscolP2001998 } from './20c-john-paul-ii/hsscol-p200-1998'
 import { hsscolP2011998 } from './20c-john-paul-ii/hsscol-p201-1998'
 import { hsscolP2021998 } from './20c-john-paul-ii/hsscol-p202-1998'
-import { hsscolP2041998 } from './20c-john-paul-ii/hsscol-p204-1998'
-import { hsscolP2101992 } from './20c-john-paul-ii/hsscol-p210-1992'
+import { adTuendamFidem1998 } from './20c-john-paul-ii/ad-tuendam-fidem-1998'
+import { fideiDepositum1992 } from './20c-john-paul-ii/fidei-depositum-1992'
 import { hsscolP2122001 } from './20c-john-paul-ii/hsscol-p212-2001'
 import { hsscolP2132003 } from './20c-john-paul-ii/hsscol-p213-2003'
-import { hsscolP2141984 } from './20c-john-paul-ii/hsscol-p214-1984'
+import { misericordiaDei2002 } from './21c-john-paul-ii/misericordia-dei-2002'
 import { hsscolP2152004 } from './20c-john-paul-ii/hsscol-p215-2004'
 import { hsscolP2171993 } from './20c-john-paul-ii/hsscol-p217-1993'
 import { hsscolP2181999 } from './20c-john-paul-ii/hsscol-p218-1999'
@@ -366,7 +369,7 @@ import { hsscolP2472005 } from './20c-john-paul-ii/hsscol-p247-2005'
 import { hsscolP2492000 } from './20c-john-paul-ii/hsscol-p249-2000'
 import { hsscolP2502001 } from './20c-john-paul-ii/hsscol-p250-2001'
 import { hsscolP2512007 } from './20c-john-paul-ii/hsscol-p251-2007'
-import { hsscolP2521998 } from './20c-john-paul-ii/hsscol-p252-1998'
+import { exCordeEcclesiae1990 } from './20c-john-paul-ii/ex-corde-ecclesiae-1990'
 import { hsscolP2702009 } from './20c-john-paul-ii/hsscol-p270-2009'
 import { hsscolP2772010 } from './20c-john-paul-ii/hsscol-p277-2010'
 import { hsscolP2992003 } from './20c-john-paul-ii/hsscol-p299-2003'
@@ -404,10 +407,10 @@ import { hsscolP0171967 } from './20c-paul-vi/hsscol-p017-1967'
 import { hsscolP0181970 } from './20c-paul-vi/hsscol-p018-1970'
 import { hsscolP0201967 } from './20c-paul-vi/hsscol-p020-1967'
 import { hsscolP0221968 } from './20c-paul-vi/hsscol-p022-1968'
-import { hsscolP0241963 } from './20c-paul-vi/hsscol-p024-1963'
-import { hsscolP0251967 } from './20c-paul-vi/hsscol-p025-1967'
+import { sacramLiturgiam1964 } from './20c-paul-vi/sacram-liturgiam-1964'
+import { proCompertoSane1967 } from './20c-paul-vi/pro-comperto-sane-1967'
 import { hsscolP0261969 } from './20c-paul-vi/hsscol-p026-1969'
-import { hsscolP0271964 } from './20c-paul-vi/hsscol-p027-1964'
+import { studiaLatinitatis1964 } from './20c-paul-vi/studia-latinitatis-1964'
 import { hsscolP0401970 } from './20c-paul-vi/hsscol-p040-1970'
 import { hsscolP0411970 } from './20c-paul-vi/hsscol-p041-1970'
 import { hsscolP0421970 } from './20c-paul-vi/hsscol-p042-1970'
@@ -477,13 +480,13 @@ import { hsscolP1301951 } from './20c-pius-xii/hsscol-p130-1951'
 import { hsscolP1321952 } from './20c-pius-xii/hsscol-p132-1952'
 import { hsscolP1331952 } from './20c-pius-xii/hsscol-p133-1952'
 import { hsscolP1342002 } from './20c-pius-xii/hsscol-p134-2002'
-import { hsscolP1351952 } from './20c-pius-xii/hsscol-p135-1952'
-import { hsscolP1371952 } from './20c-pius-xii/hsscol-p137-1952'
+import { christusDominus1953 } from './20c-pius-xii/christus-dominus-1953'
+import { cupimusImprimis1952 } from './20c-pius-xii/cupimus-imprimis-1952'
 import { hsscolP1381953 } from './20c-pius-xii/hsscol-p138-1953'
 import { hsscolP1391953 } from './20c-pius-xii/hsscol-p139-1953'
 import { hsscolP1401953 } from './20c-pius-xii/hsscol-p140-1953'
 import { hsscolP1411954 } from './20c-pius-xii/hsscol-p141-1954'
-import { hsscolP1421954 } from './20c-pius-xii/hsscol-p142-1954'
+import { sacraVirginitas1954 } from './20c-pius-xii/sacra-virginitas-1954'
 import { hsscolP1431954 } from './20c-pius-xii/hsscol-p143-1954'
 import { hsscolP1461955 } from './20c-pius-xii/hsscol-p146-1955'
 import { hsscolP1471955 } from './20c-pius-xii/hsscol-p147-1955'
@@ -496,7 +499,7 @@ import { hsscolP1561957 } from './20c-pius-xii/hsscol-p156-1957'
 import { hsscolP1571957 } from './20c-pius-xii/hsscol-p157-1957'
 import { hsscolP1581957 } from './20c-pius-xii/hsscol-p158-1957'
 import { hsscolP1591957 } from './20c-pius-xii/hsscol-p159-1957'
-import { hsscolP1601957 } from './20c-pius-xii/hsscol-p160-1957'
+import { mirandaProrsus1957 } from './20c-pius-xii/miranda-prorsus-1957'
 import { hsscolP1611958 } from './20c-pius-xii/hsscol-p161-1958'
 import { hsscolP1621958 } from './20c-pius-xii/hsscol-p162-1958'
 import { hsscolP2061955 } from './20c-pius-xii/hsscol-p206-1955'
@@ -578,7 +581,7 @@ import { hsscolP3262015 } from './21c-francis/hsscol-p326-2015'
 import { hsscolP3272016 } from './21c-francis/hsscol-p327-2016'
 import { hsscolP3282016 } from './21c-francis/hsscol-p328-2016'
 import { hsscolP3362019 } from './21c-francis/hsscol-p336-2019'
-import { hsscolP3392019 } from './21c-francis/hsscol-p339-2019'
+import { vosEstisLuxMundi2019 } from './21c-francis/vos-estis-lux-mundi-2019'
 import { hsscolP3892019 } from './21c-francis/hsscol-p389-2019'
 import { hsscolP3902015 } from './21c-francis/hsscol-p390-2015'
 import { hsscolP3922018 } from './21c-francis/hsscol-p392-2018'
@@ -618,12 +621,12 @@ import { hsscolP4382020 } from './21c-francis/hsscol-p438-2020'
 import { hsscolP4422025 } from './21c-francis/hsscol-p442-2025'
 import { hsscolP4432023 } from './21c-francis/hsscol-p443-2023'
 import { hsscolP4442024 } from './21c-francis/hsscol-p444-2024'
-import { hsscolP4451920 } from './21c-francis/hsscol-p445-1920'
+import { patrisCorde2020 } from './21c-francis/patris-corde-2020'
 import { hsscolP4462014 } from './21c-francis/hsscol-p446-2014'
 import { hsscolP4472023 } from './21c-francis/hsscol-p447-2023'
 import { hsscolP4492021 } from './21c-francis/hsscol-p449-2021'
 import { hsscolP4502023 } from './21c-francis/hsscol-p450-2023'
-import { hsscolP4841955 } from './21c-francis/hsscol-p484-1955'
+import { patrisCorde2020Alt } from './21c-francis/patris-corde-2020-alt'
 import { hsscolP4851962 } from './21c-francis/hsscol-p485-1962'
 import { hsscolP4972025 } from './21c-francis/hsscol-p497-2025'
 import { hsscolP5132018 } from './21c-francis/hsscol-p513-2018'
@@ -643,6 +646,54 @@ import { hsscolP5352025 } from './21c-francis/hsscol-p535-2025'
 import { theHolySee2008 } from './21c-francis/the-holy-see-2008'
 import { theHolySee2017 } from './21c-francis/the-holy-see-2017'
 import { theHolySee2019 } from './21c-francis/the-holy-see-2019'
+
+
+
+// ── 2026-05-28 hsscol BC 批次 — 20c-john-paul-ii ──
+import { hsscolP3701991 } from './20c-john-paul-ii/hsscol-p370-1991'
+import { hsscolP3722002 } from './20c-john-paul-ii/hsscol-p372-2002'
+import { hsscolP3732001 } from './20c-john-paul-ii/hsscol-p373-2001'
+import { hsscolP3752001 } from './20c-john-paul-ii/hsscol-p375-2001'
+import { hsscolP3762001 } from './20c-john-paul-ii/hsscol-p376-2001'
+import { hsscolP3771991 } from './20c-john-paul-ii/hsscol-p377-1991'
+import { hsscolP3821991 } from './20c-john-paul-ii/hsscol-p382-1991'
+import { hsscolP3911991 } from './20c-john-paul-ii/hsscol-p391-1991'
+
+// ── 2026-05-28 hsscol BC 批次 — 20c-pius-xii ──
+import { hsscolP1061955 } from './20c-pius-xii/hsscol-p106-1955'
+
+// ── 2026-05-28 hsscol BC 批次 — 21c-benedict-xvi ──
+import { hsscolP2632007 } from './21c-benedict-xvi/hsscol-p263-2007'
+import { hsscolP3252009 } from './21c-benedict-xvi/hsscol-p325-2009'
+import { hsscolP3332009 } from './21c-benedict-xvi/hsscol-p333-2009'
+import { hsscolP3782009 } from './21c-benedict-xvi/hsscol-p378-2009'
+import { hsscolP3792009 } from './21c-benedict-xvi/hsscol-p379-2009'
+import { hsscolP3802009 } from './21c-benedict-xvi/hsscol-p380-2009'
+import { hsscolP3812009 } from './21c-benedict-xvi/hsscol-p381-2009'
+import { hsscolP3942009 } from './21c-benedict-xvi/hsscol-p394-2009'
+import { hsscolP3952009 } from './21c-benedict-xvi/hsscol-p395-2009'
+
+// ── 2026-05-28 hsscol BC 批次 — 21c-francis ──
+import { hsscolP3112013 } from './21c-francis/hsscol-p311-2013'
+import { hsscolP3302016 } from './21c-francis/hsscol-p330-2016'
+import { hsscolP3392016 } from './21c-francis/hsscol-p339-2016'
+import { hsscolP3962019 } from './21c-francis/hsscol-p396-2019'
+import { hsscolP4291971 } from './21c-francis/hsscol-p429-1971'
+import { hsscolP4822015 } from './21c-francis/hsscol-p482-2015'
+
+
+
+// ── 2026-05-28 hsscol BC 批次 — 20c-john-paul-ii ──
+import { hsscolP2162004 } from './20c-john-paul-ii/hsscol-p216-2004'
+import { hsscolP3481994 } from './20c-john-paul-ii/hsscol-p348-1994'
+import { hsscolP3742000 } from './20c-john-paul-ii/hsscol-p374-2000'
+import { hsscolP4772001 } from './20c-john-paul-ii/hsscol-p477-2001'
+
+// ── 2026-05-28 hsscol BC 批次 — 21c-benedict-xvi ──
+import { hsscolP2832011 } from './21c-benedict-xvi/hsscol-p283-2011'
+
+// ── 2026-05-28 hsscol BC 批次 — 21c-francis ──
+import { hsscolP3492016 } from './21c-francis/hsscol-p349-2016'
 
 export const ALL_DOCUMENTS: PapalDocument[] = [
   laudatoSi2015,
@@ -894,14 +945,18 @@ export const ALL_DOCUMENTS: PapalDocument[] = [
   // ── added: 5c leo-i ──
   tomeOfLeo449,
 
+  // ── 2026-05-28 B 區 (curia) ──
+  dignitasInfinita2024,
+  iuvenescitEcclesia2016,
+
   // ── 2026-05-28 hsscol — 20c-john-paul-ii ──
   catechesiTradendae1979,
   hsscolP1651979,
   hsscolP1682002,
   hsscolP1691981,
-  hsscolP1701981,
+  familiarisConsortio1981,
   hsscolP1721983,
-  hsscolP1731984,
+  reconciliatioEtPaenitentia1984,
   hsscolP1741984,
   hsscolP1751984,
   hsscolP1781987,
@@ -909,25 +964,25 @@ export const ALL_DOCUMENTS: PapalDocument[] = [
   hsscolP1811988,
   hsscolP1821988,
   hsscolP1831988,
-  hsscolP1841989,
+  redemptorisCustos1989,
   hsscolP1852002,
-  hsscolP1871992,
+  pastoresDaboVobis1992,
   hsscolP1881993,
-  hsscolP1911994,
+  ordinatioSacerdotalis1994,
   hsscolP1931995,
   hsscolP1941995,
   hsscolP1961995,
   hsscolP1971996,
-  hsscolP1981996,
+  vitaConsecrata1996,
   hsscolP1991998,
   hsscolP2001998,
   hsscolP2011998,
   hsscolP2021998,
-  hsscolP2041998,
-  hsscolP2101992,
+  adTuendamFidem1998,
+  fideiDepositum1992,
   hsscolP2122001,
   hsscolP2132003,
-  hsscolP2141984,
+  misericordiaDei2002,
   hsscolP2152004,
   hsscolP2171993,
   hsscolP2181999,
@@ -950,7 +1005,7 @@ export const ALL_DOCUMENTS: PapalDocument[] = [
   hsscolP2492000,
   hsscolP2502001,
   hsscolP2512007,
-  hsscolP2521998,
+  exCordeEcclesiae1990,
   hsscolP2702009,
   hsscolP2772010,
   hsscolP2992003,
@@ -988,10 +1043,10 @@ export const ALL_DOCUMENTS: PapalDocument[] = [
   hsscolP0181970,
   hsscolP0201967,
   hsscolP0221968,
-  hsscolP0241963,
-  hsscolP0251967,
+  sacramLiturgiam1964,
+  proCompertoSane1967,
   hsscolP0261969,
-  hsscolP0271964,
+  studiaLatinitatis1964,
   hsscolP0401970,
   hsscolP0411970,
   hsscolP0421970,
@@ -1061,13 +1116,13 @@ export const ALL_DOCUMENTS: PapalDocument[] = [
   hsscolP1321952,
   hsscolP1331952,
   hsscolP1342002,
-  hsscolP1351952,
-  hsscolP1371952,
+  christusDominus1953,
+  cupimusImprimis1952,
   hsscolP1381953,
   hsscolP1391953,
   hsscolP1401953,
   hsscolP1411954,
-  hsscolP1421954,
+  sacraVirginitas1954,
   hsscolP1431954,
   hsscolP1461955,
   hsscolP1471955,
@@ -1080,7 +1135,7 @@ export const ALL_DOCUMENTS: PapalDocument[] = [
   hsscolP1571957,
   hsscolP1581957,
   hsscolP1591957,
-  hsscolP1601957,
+  mirandaProrsus1957,
   hsscolP1611958,
   hsscolP1621958,
   hsscolP2061955,
@@ -1162,7 +1217,7 @@ export const ALL_DOCUMENTS: PapalDocument[] = [
   hsscolP3272016,
   hsscolP3282016,
   hsscolP3362019,
-  hsscolP3392019,
+  vosEstisLuxMundi2019,
   hsscolP3892019,
   hsscolP3902015,
   hsscolP3922018,
@@ -1202,12 +1257,12 @@ export const ALL_DOCUMENTS: PapalDocument[] = [
   hsscolP4422025,
   hsscolP4432023,
   hsscolP4442024,
-  hsscolP4451920,
+  patrisCorde2020,
   hsscolP4462014,
   hsscolP4472023,
   hsscolP4492021,
   hsscolP4502023,
-  hsscolP4841955,
+  patrisCorde2020Alt,
   hsscolP4851962,
   hsscolP4972025,
   hsscolP5132018,
@@ -1227,6 +1282,52 @@ export const ALL_DOCUMENTS: PapalDocument[] = [
   theHolySee2008,
   theHolySee2017,
   theHolySee2019,
+
+
+  // ── 2026-05-28 hsscol — 20c-john-paul-ii ──
+  hsscolP3701991,
+  hsscolP3722002,
+  hsscolP3732001,
+  hsscolP3752001,
+  hsscolP3762001,
+  hsscolP3771991,
+  hsscolP3821991,
+  hsscolP3911991,
+
+  // ── 2026-05-28 hsscol — 20c-pius-xii ──
+  hsscolP1061955,
+
+  // ── 2026-05-28 hsscol — 21c-benedict-xvi ──
+  hsscolP2632007,
+  hsscolP3252009,
+  hsscolP3332009,
+  hsscolP3782009,
+  hsscolP3792009,
+  hsscolP3802009,
+  hsscolP3812009,
+  hsscolP3942009,
+  hsscolP3952009,
+
+  // ── 2026-05-28 hsscol — 21c-francis ──
+  hsscolP3112013,
+  hsscolP3302016,
+  hsscolP3392016,
+  hsscolP3962019,
+  hsscolP4291971,
+  hsscolP4822015,
+
+
+  // ── 2026-05-28 hsscol — 20c-john-paul-ii ──
+  hsscolP2162004,
+  hsscolP3481994,
+  hsscolP3742000,
+  hsscolP4772001,
+
+  // ── 2026-05-28 hsscol — 21c-benedict-xvi ──
+  hsscolP2832011,
+
+  // ── 2026-05-28 hsscol — 21c-francis ──
+  hsscolP3492016,
 
 ]
 

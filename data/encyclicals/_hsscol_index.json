@@ -9005,16 +9005,16 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P329.htm",
     "ext": "htm",
     "size": 5862,
-    "title": "",
+    "title": "第53屆世界聖召祈禱日文告",
     "headings": {
-      "title": null,
+      "title": "第53屆世界聖召祈禱日文告",
       "h1": [],
       "h2": [],
       "h3": [],
       "h4": [],
-      "first_para": null
+      "first_para": "第53屆世界聖召祈禱日文告 2016年4月17日，復活節第四主日"
     },
-    "status": "no_title"
+    "status": "ok"
   },
   "P330": {
     "p_id": "P330",
@@ -9022,16 +9022,16 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P330.htm",
     "ext": "htm",
     "size": 5624,
-    "title": "",
+    "title": "教宗方濟各2016年復活節文告",
     "headings": {
-      "title": null,
+      "title": "教宗方濟各2016年復活節文告",
       "h1": [],
       "h2": [],
       "h3": [],
       "h4": [],
-      "first_para": null
+      "first_para": "2016年復活節文告 梵蒂岡電台譯"
     },
-    "status": "no_title"
+    "status": "ok"
   },
   "P331": {
     "p_id": "P331",
@@ -9039,16 +9039,20 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P331.htm",
     "ext": "htm",
     "size": 6726,
-    "title": "",
+    "title": "「我喜歡仁愛勝過祭獻」（瑪九13）",
     "headings": {
-      "title": null,
+      "title": "教宗方濟各2016年四旬期文告",
       "h1": [],
       "h2": [],
-      "h3": [],
-      "h4": [],
-      "first_para": null
+      "h3": [
+        "「我喜歡仁愛勝過祭獻」（瑪九13）"
+      ],
+      "h4": [
+        "慈悲禧年 踐實善工"
+      ],
+      "first_para": "2016年四旬期文告 台灣明愛會譯"
     },
-    "status": "no_title"
+    "status": "ok"
   },
   "P332": {
     "p_id": "P332",
@@ -9056,16 +9060,18 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P332.htm",
     "ext": "htm",
     "size": 7616,
-    "title": "",
+    "title": "如同聖母那樣信賴慈悲的耶穌：「祂無論吩咐你們什麼，你們就作什麼。」(若二 5)",
     "headings": {
-      "title": null,
+      "title": "教宗方濟各2016年第二十四屆世界病患日文告",
       "h1": [],
       "h2": [],
-      "h3": [],
+      "h3": [
+        "如同聖母那樣信賴慈悲的耶穌：「祂無論吩咐你們什麼，你們就作什麼。」(若二 5)"
+      ],
       "h4": [],
-      "first_para": null
+      "first_para": "2016年第二十四屆世界病患日文告 臺灣地區主教團健康照護委員會譯"
     },
-    "status": "no_title"
+    "status": "ok"
   },
   "P333": {
     "p_id": "P333",
@@ -9073,16 +9079,16 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P333.htm",
     "ext": "htm",
     "size": 16260,
-    "title": "",
+    "title": "教宗本篤十六世致司鐸信函",
     "headings": {
-      "title": null,
+      "title": "教宗本篤十六世致司鐸信函",
       "h1": [],
       "h2": [],
       "h3": [],
       "h4": [],
-      "first_para": null
+      "first_para": "於聖衛雅逝世150週年宣佈司鐸年"
     },
-    "status": "no_title"
+    "status": "ok"
   },
   "P334": {
     "p_id": "P334",
@@ -9090,16 +9096,16 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P334.htm",
     "ext": "htm",
     "size": 5722,
-    "title": "",
+    "title": "第四十二屆世界傳播日文告",
     "headings": {
-      "title": null,
+      "title": "第四十二屆世界傳播日文告",
       "h1": [],
       "h2": [],
       "h3": [],
       "h4": [],
-      "first_para": null
+      "first_para": "第四十二屆世界傳播日文告"
     },
-    "status": "no_title"
+    "status": "ok"
   },
   "P335": {
     "p_id": "P335",
@@ -9107,16 +9113,16 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P335.htm",
     "ext": "htm",
     "size": 6204,
-    "title": "",
+    "title": "第四十三屆世界傳播日文告",
     "headings": {
-      "title": null,
+      "title": "第四十三屆世界傳播日文告",
       "h1": [],
       "h2": [],
       "h3": [],
       "h4": [],
-      "first_para": null
+      "first_para": "第四十三屆世界傳播日文告"
     },
-    "status": "no_title"
+    "status": "ok"
   },
   "P336": {
     "p_id": "P336",
@@ -9553,16 +9559,20 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P370.html",
     "ext": "html",
     "size": 7970,
-    "title": "",
+    "title": "受刑人的禧年 — 教宗若望保祿二世",
     "headings": {
-      "title": null,
+      "title": "2000年受刑人的禧年",
       "h1": [],
-      "h2": [],
-      "h3": [],
+      "h2": [
+        "受刑人的禧年"
+      ],
+      "h3": [
+        "教宗若望保祿二世"
+      ],
       "h4": [],
-      "first_para": null
+      "first_para": "1. 在西元二千大禧年的架構下，理當為受刑人保留特殊的一天。監獄的鐵窗不應阻礙他們接觸此一偉大的救恩事件。"
     },
-    "status": "no_title"
+    "status": "ok"
   },
   "P372": {
     "p_id": "P372",
@@ -9570,16 +9580,20 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P372.html",
     "ext": "html",
     "size": 17708,
-    "title": "",
+    "title": "2002年聖週四致司鐸書 — 教宗若望保祿二世",
     "headings": {
-      "title": null,
+      "title": "2002年聖週四致司鐸書",
       "h1": [],
-      "h2": [],
-      "h3": [],
+      "h2": [
+        "2002年聖週四致司鐸書"
+      ],
+      "h3": [
+        "教宗若望保祿二世"
+      ],
       "h4": [],
-      "first_para": null
+      "first_para": "二００二年，我任職教宗第二十四年三月十七日四旬期第五主日於梵蒂岡城若望保祿二世"
     },
-    "status": "no_title"
+    "status": "ok"
   },
   "P373": {
     "p_id": "P373",
@@ -9587,16 +9601,20 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P373.html",
     "ext": "html",
     "size": 13044,
-    "title": "",
+    "title": "2001年聖週四致司鐸書 — 教宗若望保祿二世",
     "headings": {
-      "title": null,
+      "title": "2001年聖週四致司鐸書",
       "h1": [],
-      "h2": [],
-      "h3": [],
+      "h2": [
+        "2001年聖週四致司鐸書"
+      ],
+      "h3": [
+        "教宗若望保祿二世"
+      ],
       "h4": [],
-      "first_para": null
+      "first_para": "1. 在主耶穌賜予教會聖體聖事，也是建立司鐸聖秩的日子上，我不能不向你們致上友誼之書，或更好說是親蜜的信函，希望與你們分享感恩與讚美。如今這已成為一個傳統。"
     },
-    "status": "no_title"
+    "status": "ok"
   },
   "P374": {
     "p_id": "P374",
@@ -9614,16 +9632,20 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P375.html",
     "ext": "html",
     "size": 7596,
-    "title": "",
+    "title": "2001年普世傳教節文告 — 教宗若望保祿二世",
     "headings": {
-      "title": null,
+      "title": "2001年普世傳教節文告",
       "h1": [],
-      "h2": [],
-      "h3": [],
+      "h2": [
+        "2001年普世傳教節文告"
+      ],
+      "h3": [
+        "教宗若望保祿二世"
+      ],
       "h4": [],
-      "first_para": null
+      "first_para": "紀念七十五周年傳教節－－我要永遠讚頌上主的仁慈－－（詠八十九2）"
     },
-    "status": "no_title"
+    "status": "ok"
   },
   "P376": {
     "p_id": "P376",
@@ -9631,16 +9653,20 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P376.html",
     "ext": "html",
     "size": 12568,
-    "title": "",
+    "title": "2001年世界移民日文告 — 教宗若望保祿二世",
     "headings": {
-      "title": null,
+      "title": "2001年世界移民日文告",
       "h1": [],
-      "h2": [],
-      "h3": [],
+      "h2": [
+        "2001年世界移民日文告"
+      ],
+      "h3": [
+        "教宗若望保祿二世"
+      ],
       "h4": [],
-      "first_para": null
+      "first_para": "對移民的牧靈關懷是今日達成教會使命的方法"
     },
-    "status": "no_title"
+    "status": "ok"
   },
   "P377": {
     "p_id": "P377",
@@ -9648,16 +9674,20 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P377.html",
     "ext": "html",
     "size": 7560,
-    "title": "",
+    "title": "第卅七屆聖召節文告 — 教宗若望保祿二世",
     "headings": {
-      "title": null,
+      "title": "2000年聖召節文告",
       "h1": [],
-      "h2": [],
-      "h3": [],
+      "h2": [
+        "第卅七屆聖召節文告"
+      ],
+      "h3": [
+        "教宗若望保祿二世"
+      ],
       "h4": [],
-      "first_para": null
+      "first_para": "「聖體聖事，教會一切聖召與聖職的泉源」"
     },
-    "status": "no_title"
+    "status": "ok"
   },
   "P378": {
     "p_id": "P378",
@@ -9665,16 +9695,20 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P378.html",
     "ext": "html",
     "size": 5978,
-    "title": "",
+    "title": "第44屆普世聖召節文告 — 教宗本篤十六世",
     "headings": {
-      "title": null,
+      "title": "第44屆普世聖召節文告",
       "h1": [],
-      "h2": [],
-      "h3": [],
+      "h2": [
+        "第44屆普世聖召節文告"
+      ],
+      "h3": [
+        "教宗本篤十六世"
+      ],
       "h4": [],
-      "first_para": null
+      "first_para": "為教會共融服務的聖召"
     },
-    "status": "no_title"
+    "status": "ok"
   },
   "P379": {
     "p_id": "P379",
@@ -9682,16 +9716,20 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P379.html",
     "ext": "html",
     "size": 7692,
-    "title": "",
+    "title": "第45屆普世聖召節文告 — 教宗本篤十六世",
     "headings": {
-      "title": null,
+      "title": "第45屆普世聖召節文告",
       "h1": [],
-      "h2": [],
-      "h3": [],
+      "h2": [
+        "第45屆普世聖召節文告"
+      ],
+      "h3": [
+        "教宗本篤十六世"
+      ],
       "h4": [],
-      "first_para": null
+      "first_para": "履行教會傳教使命的聖召"
     },
-    "status": "no_title"
+    "status": "ok"
   },
   "P380": {
     "p_id": "P380",
@@ -9699,16 +9737,20 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P380.html",
     "ext": "html",
     "size": 7164,
-    "title": "",
+    "title": "第四十六屆普世聖召節文告 — 教宗本篤十六世",
     "headings": {
-      "title": null,
+      "title": "第46屆普世聖召節文告",
       "h1": [],
-      "h2": [],
-      "h3": [],
+      "h2": [
+        "第四十六屆普世聖召節文告"
+      ],
+      "h3": [
+        "教宗本篤十六世"
+      ],
       "h4": [],
-      "first_para": null
+      "first_para": "信賴天主的主動召喚 -- 人的回應"
     },
-    "status": "no_title"
+    "status": "ok"
   },
   "P381": {
     "p_id": "P381",
@@ -9716,16 +9758,20 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P381.html",
     "ext": "html",
     "size": 7458,
-    "title": "",
+    "title": "第五十屆世界聖召祈禱日文告 — 教宗本篤十六世",
     "headings": {
-      "title": null,
+      "title": "第46屆普世聖召節文告",
       "h1": [],
-      "h2": [],
-      "h3": [],
+      "h2": [
+        "第五十屆世界聖召祈禱日文告"
+      ],
+      "h3": [
+        "教宗本篤十六世"
+      ],
       "h4": [],
-      "first_para": null
+      "first_para": "聖召是建立在信德基礎上之希望標記"
     },
-    "status": "no_title"
+    "status": "ok"
   },
   "P382": {
     "p_id": "P382",
@@ -9733,16 +9779,22 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P382.html",
     "ext": "html",
     "size": 7790,
-    "title": "",
+    "title": "聖言成了血肉 — 教宗若望保祿二世",
     "headings": {
-      "title": null,
+      "title": "第46屆普世聖召節文告",
       "h1": [],
-      "h2": [],
-      "h3": [],
-      "h4": [],
-      "first_para": null
+      "h2": [
+        "聖言成了血肉"
+      ],
+      "h3": [
+        "教宗若望保祿二世"
+      ],
+      "h4": [
+        "致中國教會書"
+      ],
+      "first_para": "在中國的天主教會的親愛兄弟姊妹們，"
     },
-    "status": "no_title"
+    "status": "ok"
   },
   "P383": {
     "p_id": "P383",
@@ -9875,16 +9927,21 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P391.html",
     "ext": "html",
     "size": 6390,
-    "title": "",
+    "title": "第八十八屆世界移民日文告 — 教宗若望保祿二世",
     "headings": {
-      "title": null,
+      "title": "2002年世界移民日文告",
       "h1": [],
-      "h2": [],
-      "h3": [],
+      "h2": [
+        "第八十八屆世界移民日文告"
+      ],
+      "h3": [
+        "教宗若望保祿二世",
+        "移民和宗教間的交談"
+      ],
       "h4": [],
-      "first_para": null
+      "first_para": "1. 過去數十年來，人類居住的特色是村落越來越大型，距離越來越短，通訊網則越密集。現代化交通工具的發展，使人們更方便從一個國家遷移到另一國家，從一個洲遷移到另一個洲。這個重大的社會現象帶來許多後果，其中之一就是大約有一億五千萬移民散居世界各地。這個事實促使社會和基督徒團體深思，好能在新的千年開始之際，在這個屬於各個不同文化及宗教的男女受召比鄰而居的世界上，適當地答覆此一新出現的挑戰。"
     },
-    "status": "no_title"
+    "status": "ok"
   },
   "P392": {
     "p_id": "P392",
@@ -9902,16 +9959,23 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P394.html",
     "ext": "html",
     "size": 9992,
-    "title": "",
+    "title": "第二十四屆世界青年節文告 — 教宗本篤十六世",
     "headings": {
-      "title": null,
+      "title": "2009年第二十四屆世界青年節文告",
       "h1": [],
-      "h2": [],
-      "h3": [],
-      "h4": [],
-      "first_para": null
+      "h2": [
+        "第二十四屆世界青年節文告"
+      ],
+      "h3": [
+        "教宗本篤十六世",
+        "我們已寄望於永生的天主"
+      ],
+      "h4": [
+        "弟前4：10"
+      ],
+      "first_para": "經驗顯示個人的能力與物質財產不足以保證那份人靈不斷尋求的希望。就如我在「在希望中得救」通喻中所寫，政治、科學、科技、經濟和所有其他的物質資源都不足以提供我們渴望的「大希望」。「這個大希望非天主莫屬，祂包含整個實體，祂能給我們靠自己無法獲取的事物。」(在希望中得救31)因此，忽視天主的主要後果之一，就是失去人生的方向感－這問題影響我們的社會，產生寂寞與暴力、不滿足和失去信心，這通常導致絕望。天主聖言發出了一個嘹亮清晰的警告：「凡信賴世人，以血肉的人為自己的臂膊，決心遠離上主的人，是可咒駡的！他必像一株在曠野中的檉柳，即使幸福來到，一點也不覺察」(耶十七：5-6)"
     },
-    "status": "no_title"
+    "status": "ok"
   },
   "P395": {
     "p_id": "P395",
@@ -9919,16 +9983,21 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P395.html",
     "ext": "html",
     "size": 5178,
-    "title": "",
+    "title": "第八十二屆普世傳播節文告 — 教宗本篤十六世",
     "headings": {
-      "title": null,
+      "title": "2008年第八十二屆普世傳播節文告",
       "h1": [],
-      "h2": [],
-      "h3": [],
+      "h2": [
+        "第八十二屆普世傳播節文告"
+      ],
+      "h3": [
+        "教宗本篤十六世",
+        "自我宣傳 抑 服務他人 – 今日媒體何去何從尋求真理、分享真理"
+      ],
       "h4": [],
-      "first_para": null
+      "first_para": "今年的普世傳播節主題是「自我宣傳抑服務他人–今日媒體何去何從」及「尋求真理、分享真理」，闡明傳播媒體在個人生命及社會上的重要角色。誠然，在這全球化的巨輪下，人與人之間的相處已絕無僅有，但傳播媒體卻又不能整全人際關係，社會、經濟、政治及宗教上的發展。正如我在今年一月一日的世界和平日文告所言，「那些能產生教育作用的大眾傳播媒體，尤其有特別責任去推動人們尊重家庭、申明家庭的期望和權利，與及發揚家庭的美善。」"
     },
-    "status": "no_title"
+    "status": "ok"
   },
   "P396": {
     "p_id": "P396",
@@ -9936,16 +10005,16 @@
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P396.html",
     "ext": "html",
     "size": 7372,
-    "title": "",
+    "title": "教宗方濟各2018年四旬期文告",
     "headings": {
-      "title": null,
+      "title": "教宗方濟各2018年四旬期文告",
       "h1": [],
       "h2": [],
       "h3": [],
       "h4": [],
-      "first_para": null
+      "first_para": "2018年四旬期文告"
     },
-    "status": "no_title"
+    "status": "ok"
   },
   "P397": {
     "p_id": "P397",
@@ -10446,7 +10515,10 @@
     "p_id": "P429",
     "filename": "P429.pdf",
     "url": "http://archive.hsscol.org.hk/Archive/database/document/P429.pdf",
-    "status": "fetch_failed"
+    "status": "ok",
+    "title": "論愛惜我們共同的家園",
+    "headings": null,
+    "size": 2132859
   },
   "P430": {
     "p_id": "P430",
