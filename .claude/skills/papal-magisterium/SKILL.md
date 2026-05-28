@@ -23,7 +23,20 @@ description: 教宗訓導文獻對照工具（/encyclicals）— 4 世紀 Damasu
 > - 既有 206 篇全部歸 tier='teaching'（靠 `docTier()` fallback，metadata 不動）
 > - `data/encyclicals/_CURIA_README.md` 規劃部會資料層
 >
-> **下輪 session 待補（具體內容）**：(B 位階剩 ~20 篇 marquee teaching) + (C 位階 ~130 篇部會文件) + (D 位階 ~470 篇一般文告)
+> 2026-05-28（深夜）：**A 區段對齊審計 + hsscol 全索引 + 12 篇 hsscol 對位中文補入**
+> - A 區（既有 206 篇 teaching）三語段對齊審計 → `_a_zone_alignment.md`：7 篇三語完整對齊；14 篇段號不齊（5 篇實際影響 UI 三欄顯示）；180 篇含中文 placeholder；11 篇缺 LA
+> - hsscol 全 467 P# 文件索引完成（`_hsscol_discover.py` → `_hsscol_index.json`）
+> - hsscol tier 分類報告（`_hsscol_map_tier.py` → `_hsscol_mapping.md` / `.json`）：teaching 43 / curia 0 / message 166 / unknown 170。**curia 偵測 = 0** 因 hsscol 標題按主題歸檔，未標示「信理部」等部會名 — 需內容層掃描識別
+> - 第二批 hsscol → 既有 slug 對位 12 篇中文補入（取代 placeholder / 新對位）：
+>   - **★ centesimus-annus-1991**（OCCD PDF 抽不出，hsscol html 解封）
+>   - **maximum-illud-1919**（原 P397 PDF 為馬相伯 1947 掃描影像 → hsscol html 取代 placeholder）
+>   - casti-connubii-1930 / divini-redemptoris-1937 / mysterium-fidei-1965 / mater-et-magistra-1961 / ecclesiam-suam-1964 / dives-in-misericordia-1980 / laborem-exercens-1981 / slavorum-apostoli-1985 / dominum-et-vivificantem-1986 / ut-unum-sint-1995
+>
+> **下輪 session 待補（具體內容）**：
+> - **B 位階新建 ~25 篇 marquee teaching**（Familiaris Consortio 1981 / Vita Consecrata 1996 / Ex Corde Ecclesiae 1990 / Pastores Dabo Vobis 1992 / Reconciliatio et Paenitentia 1984 / Redemptoris Custos 1989 / Ordinatio Sacerdotalis 1994 / Patris Corde 2020 等 — 完整清單見 `_CURIA_README.md`）— hsscol 中文已有，需新建 .ts metadata + 拉/英抓 vatican.va
+> - **C 位階 ~130 篇部會文件**（需先寫 `_hsscol_curia_classify.py` 從 hsscol 文件內容（出版頁）識別 dicastery）
+> - **D 位階 ~470 篇一般文告**（hsscol 已標 166 message + 多數 unknowns）
+> - A 區 5 篇段不齊 hotfix（dilexit-nos para 19 已修；剩 lumen-fidei LA 缺 P5 / redemptor-hominis EN footer 雜訊 / redemptoris-missio ZH 只到 40/92 / ecclesia-de-eucharistia ZH 不同段號編排）
 >
 > **本 skill 與 [[scripture-canon-portal]] 的分工**：
 > - scripture-canon-portal：**集體**文件（大公會議產出的信經 / canons / dogmatic decree）+ 信條 + 教會法規 + 教父著作搜尋 + 聖經對照 + 典外

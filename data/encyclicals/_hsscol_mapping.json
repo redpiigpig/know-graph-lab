@@ -1,0 +1,3425 @@
+{
+  "generated": "2026-05-28",
+  "total_indexed": 467,
+  "total_existing_slugs": 206,
+  "by_tier": {
+    "teaching": [
+      {
+        "p_id": "P014",
+        "title": "「六品聖職」自動詔書 — 教宗保祿六世 — (Sacrum Diaconatus)",
+        "tier": "teaching",
+        "category": "motu-proprio",
+        "latin": "Sacrum Diaconatus",
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P015",
+        "title": "「司鐸獨身」通諭 — 教宗保祿六世 — (Sacerdotalis Caelibatus)",
+        "tier": "teaching",
+        "category": "encyclical",
+        "latin": "Sacerdotalis Caelibatus",
+        "match_slug": "sacerdotalis-caelibatus-1967",
+        "ext": "htm"
+      },
+      {
+        "p_id": "P016",
+        "title": "「治理教會」憲章 — 教宗保祿六世 — (Regimini Ecclesiae)",
+        "tier": "teaching",
+        "category": "apostolic-const",
+        "latin": "Regimini Ecclesiae",
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P019",
+        "title": "「基督之母」通諭 — 教宗保祿六世",
+        "tier": "teaching",
+        "category": "encyclical",
+        "latin": null,
+        "match_slug": "christi-matri-1966",
+        "ext": "htm"
+      },
+      {
+        "p_id": "P021",
+        "title": "修正大赦憲令 — 教宗保祿六世 — (Sacrarum Indulgentiarum Recognitio)",
+        "tier": "teaching",
+        "category": "apostolic-const",
+        "latin": "Sacrarum Indulgentiarum Recognitio",
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P023",
+        "title": "「五月」通諭 — 教宗保祿六世 — (Mense Maio)",
+        "tier": "teaching",
+        "category": "encyclical",
+        "latin": "Mense Maio",
+        "match_slug": "mense-maio-1965",
+        "ext": "htm"
+      },
+      {
+        "p_id": "P024",
+        "title": "發展聖樂手諭 — 教宗保祿六世",
+        "tier": "teaching",
+        "category": "motu-proprio",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P025",
+        "title": "眾所周知 — 教宗保祿六世 — 天主眷顧的教宗保祿六世頒發自動詔書",
+        "tier": "teaching",
+        "category": "motu-proprio",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P027",
+        "title": "創設高級拉丁文學院敕令 — 教宗保祿六世",
+        "tier": "teaching",
+        "category": "bull",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P028",
+        "title": "宗座條正大小齋期條律憲令 — 教宗保祿六世 — (Apostolic Constitution on the Fast &amp; Abstinence)",
+        "tier": "teaching",
+        "category": "apostolic-const",
+        "latin": "Apostolic Constitution on the Fast &amp; Abstinence",
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P093",
+        "title": "「教宗」通諭 &nbsp;&nbsp;&nbsp;&nbsp; Summi Pontificatus — 教宗庇護十二世 — &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 奉獻人類與耶穌聖心的神工如何適應現代需求",
+        "tier": "teaching",
+        "category": "encyclical",
+        "latin": "Summi Pontificatus",
+        "match_slug": "summi-pontificatus-1939",
+        "ext": "htm"
+      },
+      {
+        "p_id": "P116",
+        "title": "教宗庇護十二世 — 「天主與人類間的中保」通諭 — &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一 禮儀是公開的敬禮",
+        "tier": "teaching",
+        "category": "encyclical",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P131",
+        "title": "「福音傳播者」通諭 — 教宗庇護十二世 — &nbsp;",
+        "tier": "teaching",
+        "category": "encyclical",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P135",
+        "title": "教宗庇護十二世 — 關於「聖體齋」當守之新規定頒佈敕令 — &nbsp;",
+        "tier": "teaching",
+        "category": "bull",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P137",
+        "title": "教宗勗勉中國苦難教胞通諭 — 教宗庇護十二世 — &nbsp;",
+        "tier": "teaching",
+        "category": "encyclical",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P142",
+        "title": "童貞通諭 — 教宗庇護十二世 — 通諭內容",
+        "tier": "teaching",
+        "category": "encyclical",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P152",
+        "title": "教宗庇護十二世 — 「汲水」通諭 — &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 謬論一&nbsp;",
+        "tier": "teaching",
+        "category": "encyclical",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P160",
+        "title": "通諭正文 — 一章&nbsp; 總論電影、無線電及電視’ — &nbsp;教宗庇護十二世",
+        "tier": "teaching",
+        "category": "encyclical",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P164",
+        "title": "教宗若望保祿二世 — 「人類救主」通諭 — １．走向公元二千年",
+        "tier": "teaching",
+        "category": "encyclical",
+        "latin": null,
+        "match_slug": "redemptor-hominis-1979",
+        "ext": "htm"
+      },
+      {
+        "p_id": "P170",
+        "title": "教宗若望保祿二世 — 「家庭團體」勸諭 — 前言",
+        "tier": "teaching",
+        "category": "apostolic-exhort",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P173",
+        "title": "教宗若望保祿二世 — 「論和好與懺悔」勸諭 — 文獻的起源與意義",
+        "tier": "teaching",
+        "category": "apostolic-exhort",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P176",
+        "title": "教宗若望保祿二世 — 「斯拉夫人的使徒」通諭",
+        "tier": "teaching",
+        "category": "encyclical",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P177",
+        "title": "教宗若望保祿二世 — 「主及賦予生命者——聖神」通諭 — 一&nbsp; 在最後晚餐中耶穌的敨諾與啟示",
+        "tier": "teaching",
+        "category": "encyclical",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P184",
+        "title": "教宗若望保祿二世 — 「救主的監護人」勸諭 — 與瑪利亞的婚姻",
+        "tier": "teaching",
+        "category": "apostolic-exhort",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P187",
+        "title": "教宗若望保祿二世 — 「我要給你們牧者」勸諭 — &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 世界主教代表會議後",
+        "tier": "teaching",
+        "category": "apostolic-exhort",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P191",
+        "title": "宗座牧函「司鐸聖秩」",
+        "tier": "teaching",
+        "category": "apostolic-letter",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P198",
+        "title": "教宗若望保祿二世 — 「奉獻生活」勸諭 — &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 獻身生活讚詞",
+        "tier": "teaching",
+        "category": "apostolic-exhort",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P204",
+        "title": "教宗若望保祿二世 — 為維護信仰 — &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 教宗若望保祿二世宗座自動諭令《為維護信仰》",
+        "tier": "teaching",
+        "category": "motu-proprio",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P210",
+        "title": "「信仰的寶庫」宗座憲令 — 教宗若望保祿二世",
+        "tier": "teaching",
+        "category": "apostolic-const",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P214",
+        "title": "論天主仁慈自動諭 — －談舉行懺悔聖事的某些層面－ — 教宗若望保祿二世",
+        "tier": "teaching",
+        "category": "motu-proprio",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P252",
+        "title": "天主教大學憲章 — 教宗若望保祿二世",
+        "tier": "teaching",
+        "category": "apostolic-const",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P339",
+        "title": "教宗方濟各宗座牧函 「自動諭」",
+        "tier": "teaching",
+        "category": "motu-proprio",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P346",
+        "title": "論「人的工作」通諭Laborem Exercens — 教宗若望保祿二世",
+        "tier": "teaching",
+        "category": "encyclical",
+        "latin": null,
+        "match_slug": "laborem-exercens-1981",
+        "ext": "html"
+      },
+      {
+        "p_id": "P445",
+        "title": "教宗方濟各宗座牧函",
+        "tier": "teaching",
+        "category": "apostolic-letter",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P460",
+        "title": "《新事》通諭（又名：勞工問題）",
+        "tier": "teaching",
+        "category": "encyclical",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P461",
+        "title": "教宗庇護十一世『四十年』通諭 戴明我譯",
+        "tier": "teaching",
+        "category": "encyclical",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P462",
+        "title": "「慈母與導師」通諭正文",
+        "tier": "teaching",
+        "category": "encyclical",
+        "latin": null,
+        "match_slug": "mater-et-magistra-1961",
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P463",
+        "title": "「和平」通諭",
+        "tier": "teaching",
+        "category": "encyclical",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P464",
+        "title": "教宗保祿六世「民族發展」通諭",
+        "tier": "teaching",
+        "category": "encyclical",
+        "latin": null,
+        "match_slug": "sollicitudo-rei-socialis-1987",
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P482",
+        "title": "教宗⽅濟各 致天主⼦⺠ 與所有⼼懷善念者 主教會議後宗座勸諭",
+        "tier": "teaching",
+        "category": "apostolic-exhort",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P484",
+        "title": "宗座牧函 以父親的心",
+        "tier": "teaching",
+        "category": "apostolic-letter",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P485",
+        "title": "教宗⽅濟各 通諭",
+        "tier": "teaching",
+        "category": "encyclical",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P547",
+        "title": "教宗良十四世 致全體基督徒 《我愛了你》宗座勸諭",
+        "tier": "teaching",
+        "category": "apostolic-exhort",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      }
+    ],
+    "curia": [],
+    "message": [
+      {
+        "p_id": "P001",
+        "title": "致全球公教信友廣播詞 — 教宗保祿六世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P003",
+        "title": "一九七一年和平節獻詞 — 教宗保祿六世 — 發表於一九七○年十一月十二日",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P005",
+        "title": "要以人類手足關係教育自己 — 教宗保祿六世講詞",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P009",
+        "title": "致精神病協會講詞 — 教宗保祿六世",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P010",
+        "title": "致美國兒童廣播詞 — 教宗保祿六世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P017",
+        "title": "致覲見信眾的講詞 — 教宗保祿六世",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P026",
+        "title": "聖召節文告 — 教宗保祿六世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P056",
+        "title": "致歡度結婚銀慶者講詞 — 教宗保祿六世",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P057",
+        "title": "致觀光信眾講詞 — 教宗保祿六世",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P058",
+        "title": "致聖母團講詞 — 教宗保祿六世 — 一九七Ｏ年五月四日",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P059",
+        "title": "致新婚夫妻講詞 — 教宗保祿六世 — 一九七Ｏ年十月十五日",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P065",
+        "title": "致義國主教大會講詞 — 教宗保祿六世 — 一九七Ｏ年四月十一日",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P098",
+        "title": "無任感激 — 庇護十二世 — 一九四Ｏ年聖誕廣播詞",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P100",
+        "title": "致義國公進會婦女部講詞 — 教宗庇護十二世 — 引言 父母的責任",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P104",
+        "title": "致宗座科學院講詞(一) — 教宗庇護十二世 — &nbsp;",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P105",
+        "title": "致宗座科學院講詞(二) — 教宗庇護十二世 — &nbsp;",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P106",
+        "title": "致宗座科學院講詞(三) — 教宗庇護十二世 — &nbsp;",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P107",
+        "title": "教宗庇護十二世 — 致義國公進會女青講詞 — 引言 祝賀",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P110",
+        "title": "教宗庇護十二世 — 致義國無線電從業者講詞 — 引言 致辭歡迎",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P112",
+        "title": "教宗庇護十二世 — 致義國公教婦女協會講詞 — 引言 講詞主題",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P113",
+        "title": "教宗庇護十二世 — 一九四五年八月廿六日 — 講詞大意",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P114",
+        "title": "致義國公進會女青部講詞 — 教宗庇護十二世 — &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 引言 青年女性任重道遠",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P117",
+        "title": "教宗庇護十二世 — 講 詞 正 文 — &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 引言 致辭歡迎",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P118",
+        "title": "教宗庇護十二世 — 廣播詞註釋 — 廣播詞主旨",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P120",
+        "title": "教宗庇護十二世 — 致家庭國際協會代表講詞 — &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 家庭的神聖",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P121",
+        "title": "教宗庇護十二世 — 致公教醫師講詞 — &nbsp;",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P122",
+        "title": "致公教產科醫生講詞 — 教宗庇護十二世 — &nbsp;",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P123",
+        "title": "教宗庇護十二世 — 致家庭陣線講詞 — &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 家庭運動的目標",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P124",
+        "title": "論無痛分娩講詞 — 教宗庇護十二世 — &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 無痛分娩的理論",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P125",
+        "title": "致生育國際協會大會講詞 — 教宗庇護十二世 — &nbsp;",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P126",
+        "title": "致血液學會第七屆國際大會講詞 — 教宗庇護十二世 — &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 解決遺傳病的錯誤方案",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P128",
+        "title": "「一年已過」 — 教宗庇護十二世 — 一九五O年聖誕廣播詞",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": "annus-iam-plenus-1920",
+        "ext": "htm"
+      },
+      {
+        "p_id": "P133",
+        "title": "致德國公教婦聯大會講詞 — 教宗庇護十二世 — &nbsp;",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P140",
+        "title": "教宗庇護十二世 — 致意國公教民法學大會講詞 — 論國家及國際組織",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P146",
+        "title": "致義國公進會女青部講詞 — 教宗庇護十二世 — &nbsp;",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P147",
+        "title": "教宗庇護十二世 — 致意國國際友好研究社講詞",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P156",
+        "title": "公教出版業的目標 — 教宗庇護十二世 — 致美國公教出版業大會廣播詞",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P159",
+        "title": "教宗庇護十二世 — 講詞正文 — &nbsp;",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P161",
+        "title": "致實驗心理學國際協會講詞 — 教宗庇護十二世 — Venus du monde",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P179",
+        "title": "教宗若望保祿二世 — 教宗在美國好萊塢向傳播界專業人士發表演說 — 傳播企業的諸位女士先生：",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P207",
+        "title": "教宗庇護十二世 — 一九五六年復活節講詞 — &nbsp;",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P208",
+        "title": "教宗庇護十二世 — 一九五七年復活節講詞 — &nbsp;",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P209",
+        "title": "教宗庇護十二世 — 一九五八年復活節講詞 — &nbsp;",
+        "tier": "message",
+        "category": "allocution",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P216",
+        "title": "第廿屆世界青年日文告 — 二零零四年八月六日",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P217",
+        "title": "第九及第十屆普世青年節文告 — 教宗若望保祿二世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P218",
+        "title": "第十五&#23626;世界青年節文告 — 教宗若望保祿二世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P219",
+        "title": "第十七&#23626;世界青年節文告 — 教宗若望保祿二世 — 二零零一年七月廿五日",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P220",
+        "title": "第十九&#23626;世界青年節文告 — 教宗若望保祿二世 — 二零零四年二月廿二日&nbsp;",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P223",
+        "title": "20022002年第十&#23626;世界病患日文告 — 教宗若望保祿二世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P224",
+        "title": "第十三屆世界病患日文告 — 教宗若望保祿二世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P234",
+        "title": "國際聖召節四十二屆祈禱日 — 「蒙召划到深處去」 — 教宗若望保祿二世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P239",
+        "title": "八十屆普世傳教節文告 — 教宗本篤十六世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P240",
+        "title": "第九十二屆世界移民難民日文告 — 教宗本篤十六世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P241",
+        "title": "第十五屆世界病患日文告 — 教宗本篤十六世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P242",
+        "title": "2007年四旬期文告 — 他們要瞻望他們所刺透的（若十九）",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P244",
+        "title": "2003年四旬期文告 — 教宗若望保祿二世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P245",
+        "title": "2002年四旬期文告 — 教宗若望保祿二世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P246",
+        "title": "2001年四旬期文告 — &nbsp; — 教宗若望保祿二世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P247",
+        "title": "2005年四旬期文告 — 教宗若望保祿二世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P248",
+        "title": "2006年四旬期文告 — 教宗本篤十六世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P249",
+        "title": "2000年四旬期文告 — 教宗若望保祿二世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P250",
+        "title": "2001年第九屆世界病患日文告 — 教宗若望保祿二世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P251",
+        "title": "第十二屆世界病患日文告 — 教宗若望保祿二世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P260",
+        "title": "第九十三屆世界移民難民日文告 — 移民家庭 — 教宗本篤十六世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P262",
+        "title": "第二十三屆世界青年日文告 — 教宗本篤十六世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P263",
+        "title": "教宗本笃十六世 2007 年传教日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P264",
+        "title": "教宗本笃十六世 四十一届世界传播日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P265",
+        "title": "2008年四旬期文告 — 教宗本篤十六世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P267",
+        "title": "第十七屆世界病患日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P270",
+        "title": "第廿一屆世界青年日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P273",
+        "title": "聖神修院神哲學院 二００九年普世傳教節文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P277",
+        "title": "第 47 屆世界聖召祈禱日文告 2010 年 4 月 25 日 復活期第四主日",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P284",
+        "title": "第十九屆世界病患日文告 — 教宗本篤十六世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P285",
+        "title": "第廿六屆世界青年日文告 — 教宗本篤十六世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P286",
+        "title": "第48屆國際聖召祈禱日文告 — 教宗本篤十六世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P287",
+        "title": "2010年聖誕文告 — 教宗本篤十六世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P296",
+        "title": "第廿七屆世界青年日文告 — 教宗本篤十六世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P297",
+        "title": "2012全城及全球聖誕文告 — 教宗本篤十六世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P298",
+        "title": "2013年世界和平日文告 — 教宗本篤十六世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P299",
+        "title": "2003年第37屆世界傳播日文告 — 教宗若望保祿二世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P300",
+        "title": "2003年第四十屆普世聖召節文告 — 若望保祿二世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P301",
+        "title": "2013年四旬期文告 — 教宗本篤十六世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P303",
+        "title": "第二十二屆世界病患日文告 — 教宗方濟各",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P304",
+        "title": "2014年世界和平日文告 — 教宗方濟各",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P305",
+        "title": "2013年世界移民與難民日文告 — 教宗本篤十六世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P306",
+        "title": "2013年《至全城及全球》復活節文告 — 教宗方濟各",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P307",
+        "title": "2014年世界移民與難民日文告 — 方濟各",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P309",
+        "title": "2014第51屆世界聖召祈禱日文告 — 方濟各",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P310",
+        "title": "第廿九屆世界青年日文告 — 教宗方濟各",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P312",
+        "title": "2015年四旬期文告 — 教宗方濟各",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P313",
+        "title": "2015年第二十三屆世界病患日文告 — 教宗方濟各",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P315",
+        "title": "2015年世界和平日文告 — 教宗方濟各",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P317",
+        "title": "第四十八屆世界傳播日文告 — 教宗方濟各",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P318",
+        "title": "2015年復活節文告 — 教宗方濟各",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P319",
+        "title": "第四十七屆世界傳播日文告 — 「社交網絡 : 真理和信仰之門；福傳新空間」 — 教宗本篤十六世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P320",
+        "title": "2014年《至全城及全球》聖誕節文告 — 教宗方濟各",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P321",
+        "title": "2015年世界移民難民日文告 — 「無邊境的教會、眾人的母親」 — 教宗方濟各",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P322",
+        "title": "2015年普世傳教節文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P323",
+        "title": "第52屆世界聖召祈禱日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P324",
+        "title": "第52屆世界聖召祈禱日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P325",
+        "title": "宗座文告《論仁愛工作的服務》",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P326",
+        "title": "教宗方濟各2015年聖誕文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P327",
+        "title": "教宗方濟各2016年世界和平日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P328",
+        "title": "教宗方濟各2016年1月17日第102 屆世界移民難民日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P353",
+        "title": "致全中國天主教友的簡短文告 — 若望保祿二世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P363",
+        "title": "2002年普世傳教節我要永遠讚頌上主的仁慈 — 教宗若望保祿二世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P364",
+        "title": "2002年第三十六屆大眾傳教節文告 — 教宗若望保祿二世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P365",
+        "title": "第34屆大眾傳播節文告 — 在新的千年藉著媒體宣揚基督 — 教宗若望保祿二世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P366",
+        "title": "第33屆大眾傳播節文告 — 教宗若望保祿二世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P367",
+        "title": "第38屆大眾傳播節文告 — 家有媒體，利弊較著 — 教宗若望保祿二世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P386",
+        "title": "第十一屆世界病患日文告 — 教宗若望保祿二世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P387",
+        "title": "世界觀光旅遊日文告 — 教宗若望保祿二世",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P397",
+        "title": "教宗方濟各致中國天主教信友及普世教會文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P398",
+        "title": "教宗方濟各2018年復活節文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P401",
+        "title": "教宗方濟各2019年四旬期文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P402",
+        "title": "教宗方濟各2020年四旬期文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P403",
+        "title": "教宗方濟各2019年復活節文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P404",
+        "title": "教宗方濟各第53屆世界傳播日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P405",
+        "title": "教宗方濟各第52屆世界傳播日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P406",
+        "title": "教宗方濟各第105屆世界移民和難民日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P407",
+        "title": "教宗方濟各2019年世界傳教節文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P408",
+        "title": "教宗方濟各2018年普世傳教節文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P409",
+        "title": "教宗方濟各2020年世界和平日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P410",
+        "title": "教宗方濟各2019年世界和平日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P411",
+        "title": "教宗方濟各2019年第三屆世界窮人日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P412",
+        "title": "教宗方濟各2018年第2屆世界窮人日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P413",
+        "title": "教宗方濟各2017年第1屆世界窮人日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P414",
+        "title": "教宗方濟各2020年第28屆世界病人日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P415",
+        "title": "教宗方濟各2019年第27屆世界病人日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P416",
+        "title": "教宗方濟各2018年第26屆世界病人日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P417",
+        "title": "教宗方濟各2017年第25屆世界病人日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P418",
+        "title": "教宗方濟各2019年第27屆世界病人日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P419",
+        "title": "教宗方濟各2019年第56屆世界聖召祈禱日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P420",
+        "title": "教宗方濟各2016第卅一屆世界青年日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P421",
+        "title": "教宗方濟各2017第卅二屆世界青年日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P422",
+        "title": "教宗方濟各2018第33屆世界青年日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P423",
+        "title": "教宗方濟各2020年第35屆世界青年日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P432",
+        "title": "教宗方濟各 2020 年復活節文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P433",
+        "title": "教宗方濟各 2017 年復活節文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P434",
+        "title": "教宗方濟各 聖誕節文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P435",
+        "title": "教宗方濟各聖誕節文告 2018 年 12 月 25 日",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P436",
+        "title": "教宗方濟各2016年聖誕節文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P437",
+        "title": "就「2020年5月（聖母月）」致函全體信友",
+        "tier": "message",
+        "category": "epistola",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P438",
+        "title": "第106屆世界移民及難民日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P439",
+        "title": "2025年5月18日教宗良十四世就職彌撒講道辭",
+        "tier": "message",
+        "category": "homily",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P442",
+        "title": "教宗方濟各 第 58 屆世界和平日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P443",
+        "title": "教宗方濟各 第 56 屆世界和平日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P444",
+        "title": "教宗方濟各 第 57 屆世界和平日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P446",
+        "title": "教宗方濟各第八十八屆普世傳教節文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P447",
+        "title": "2023 年普世傳教節文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P449",
+        "title": "教宗方濟各 2021 年復活節文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P450",
+        "title": "教宗方濟各 2023 年復活節文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P516",
+        "title": "教宗方濟各 聖誕節文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P518",
+        "title": "教宗方濟各 2022 年聖誕節文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P519",
+        "title": "教宗方濟各 2013 年《至全城及全球》聖誕節文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P520",
+        "title": "教宗方濟各 2023 年世界窮人日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P521",
+        "title": "第 108 屆世界移民及難民日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P523",
+        "title": "2022 年普世傳教節",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P524",
+        "title": "教宗方濟各 2022 年復活節文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P525",
+        "title": "教宗方濟各 2021 年聖誕節文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P530",
+        "title": "2021 年世界傳教節",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P533",
+        "title": "教宗方濟各 2025 年普世傳教節文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P535",
+        "title": "教宗良十四 第五屆世界祖父母及長者日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P536",
+        "title": "教宗良十四世 第十屆照料受造界祈禱日文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P537",
+        "title": "照料受造界彌撒 教宗良十四世講道",
+        "tier": "message",
+        "category": "homily",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P546",
+        "title": "教宗良十四世 2025 年聖誕文告",
+        "tier": "message",
+        "category": "message",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      }
+    ],
+    "unknown": [
+      {
+        "p_id": "P004",
+        "title": "我們要熱愛一切人 — 教宗保祿六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P006",
+        "title": "主說：「你們都是弟兄」 — 教宗保祿六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P007",
+        "title": "要同情所有人的疾苦 — 教宗保祿六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P008",
+        "title": "人類手足關係以天主的父性為基礎 — 教宗保祿六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P011",
+        "title": "我患病，你們看顧了我 — 教宗保祿六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P012",
+        "title": "傳生 — 第一部份 問題之新的觀點和教會適當的訓導權 — 問題新的形成",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P013",
+        "title": "論基督徒的喜樂 — 教宗保祿六世 — （Christiano gaudio）",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": "Christiano gaudio",
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P018",
+        "title": "制定不同宗教之婚姻的準則 — 教宗保祿六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P020",
+        "title": "基督的公教會 — 教宗保祿六世 — 設立教友參議會以及研究正義和平的宗座委員會",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P022",
+        "title": "論聖統制職務的講演 — 教宗保祿六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P040",
+        "title": "人不可能認識天主嗎？ — 教宗保祿六世 — (一)善用理智",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P041",
+        "title": "人不再需要天主嗎？ — 教宗保祿六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P042",
+        "title": "天主是一個過時的觀念嗎？ — 教宗保祿六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P043",
+        "title": "天主可由其它價值取代嗎？ — 教宗保祿六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P044",
+        "title": "為什麼人應尋求天主？ — 教宗保祿六世 — 一九七Ｏ年八月二十五日",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P045",
+        "title": "怎樣尋求天主？ — 教宗保祿六世 — 一九七Ｏ年九月二日",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P046",
+        "title": "人可能找到天主嗎？ — 教宗保祿六世 — 一九七Ｏ年九月九日",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P047",
+        "title": "怎樣解釋教義？ — 教宗保祿六世 — 一九七Ｏ年九月十六日",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P060",
+        "title": "教會是一個解放人的服從 — 教宗保祿六世 — 一九七Ｏ年元月廿八日",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P061",
+        "title": "答覆反對教會神權者的責難 — 教宗保祿六世 — 一九七Ｏ年元月廿九日",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P062",
+        "title": "信德對教會及信友的關係 — 教宗保祿六世 — 一九七Ｏ年四月八日",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P063",
+        "title": "要服從教會訓導職權 — 教宗保祿六世 — 一九七Ｏ年四月十五日",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P064",
+        "title": "要有明證信德的勇氣 — 教宗保祿六世 — 一九七Ｏ年五月二十日",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P070",
+        "title": "祂的教會 — 教宗保祿六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P071",
+        "title": "信德的奧蹟 — 教宗保祿六世 — (Mysterium Fidei)",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": "Mysterium Fidei",
+        "match_slug": "mysterium-fidei-1965",
+        "ext": "htm"
+      },
+      {
+        "p_id": "P072",
+        "title": "天主子民的信經 — 教宗保祿六世 — Solemni hac Liturgia",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P073",
+        "title": "竧间盉 — 毙﹙臔 — (Casti Connubii)",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": "Casti Connubii",
+        "match_slug": "casti-connubii-1930",
+        "ext": "htm"
+      },
+      {
+        "p_id": "P074",
+        "title": "人類導師 — 教宗庇護十一世 — (lllius Divini Magistri)",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": "Divini Magistri",
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P075",
+        "title": "預許救主 — 教宗庇護第十一世 — (Divini Redemptoris)",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": "Divini Redemptoris",
+        "match_slug": "divini-redemptoris-1937",
+        "ext": "htm"
+      },
+      {
+        "p_id": "P076",
+        "title": "振濟貧困 — 教宗庇護第十一世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P077",
+        "title": "論公教司鐸 — 教宗庇護第十一世 — 真天主的司鐸",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P078",
+        "title": "深奧難名 — 教宗庇護第十一世 — 敘述數月來所有喜事",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P079",
+        "title": "聖教會已往的成續 — 教宗庇護第十一世 — （De Acris Missionibus Provehendis)",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": "De Acris Missionibus Provehendis",
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P080",
+        "title": "余即位伊始 — 教宗庇護第十一世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P094",
+        "title": "聖善甘美 — 教宗庇護十二世 — &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 引言：答謝聖誕祝賀",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P095",
+        "title": "不良讀物的為害 — 教宗庇護十二世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P096",
+        "title": "良好讀物的功效 — 教宗庇護十二世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P097",
+        "title": "青年應善自準備 — 教宗庇謢十二世 — &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 引言 青年是教會的希望",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P099",
+        "title": "五旬節 — 教宗庇護十二世 — Nuntius radioph. “La Solennita”",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": "La Solennita",
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P108",
+        "title": "「第五次」 — 教宗庇護十二世 — 引言：黑暗的世界",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P109",
+        "title": "「良善與慈愛」 — 教宗庇護十二世 — &nbsp;",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P111",
+        "title": "「近六年來」 — 教宗庇護十二世 — 引言：戰爭雖告結束仍須祈禱和平",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P115",
+        "title": "教宗庇護十二世 — 「絕無僅有」 — &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 引言：戰後世界局勢",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P119",
+        "title": "「威 重 溫 柔」 — 教宗庇護十二世 — 兩大任務",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P127",
+        "title": "「異常親切」 — 教宗庇護十二世 — &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 引言：聖年乃來自天上的朕兆",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P129",
+        "title": "報章與輿論 — 教宗庇護十二世 — 一九五O年二月十七日",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P130",
+        "title": "「十三年」 — 教宗庇護十二世 — &nbsp;",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P132",
+        "title": "「抬起頭來」 — 教宗庇護十二世 — 人類的貧困與不幸",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P134",
+        "title": "婦 女 與 和 平 — 教宗庇護十二世 — 一九五二平四月二十四曰",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P138",
+        "title": "教宗庇護十二世 — 「光耀之榮冠」",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P139",
+        "title": "「百姓」 — 教宗庇護十二世 — 科技本身並非不善",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P141",
+        "title": "「和平之河」 — 教宗庇護十二世 — 在恐懼、錯誤、真理內共存",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P143",
+        "title": "論天地母皇通牒 — 教宗庇護十二世 — &nbsp;",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P148",
+        "title": "理想影片論 — 教宗庇護十二世 — 目錄",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P149",
+        "title": "「開放心胸」 — &nbsp;教宗庇護十二世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P150",
+        "title": "公教婦女運動 — 教宗庇護十二世 — &nbsp;",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P153",
+        "title": "閱讀的關係 — 教宗庇護十二世 — Votre Visite",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": "Votre Visite",
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P154",
+        "title": "教宗庇護十二世 — 女權運動與使徒事業 — Poussees par",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P155",
+        "title": "內修與工作間的和諧 — 教宗庇護十二世 — Vi diamo",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P157",
+        "title": "「耶路撒冷」 — 教宗庇護十二世 — &nbsp;Jerusalem",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P158",
+        "title": "教宗庇護十二世 — &nbsp; — 韓山城編譯",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P162",
+        "title": "特論子女眾多的家庭 — 教宗庇護十二世 — Tru le visite",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P165",
+        "title": "致教會司鐸函 — 教宗若望保祿二世 — &nbsp;",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P166",
+        "title": "論現時代的教理講授 — 教宗若望保祿二世 — Catechesi Tradendae",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": "Catechesi Tradendae",
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P167",
+        "title": "富於仁慈的天主 — 教宗若望保祿二世 — Dives in Misericordia",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P168",
+        "title": "論聖體聖事的奧蹟和敬禮 — 教宗若望保祿二世 — 致普世主教函",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P169",
+        "title": "教宗若望保祿二世 — —紀念第一屆君士坦丁堡大公會議一千六百週年 — II",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P171",
+        "title": "人類得救的一九五○週年 — 教宗若望保二世 — &nbsp;",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P172",
+        "title": "告全球司鐸書 — 教宗若望保祿二世 — &nbsp;",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P174",
+        "title": "&nbsp; — 教宗若望保祿二世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P175",
+        "title": "教宗若望保祿二世 — 論救贖恩惠 — 「耶穌定睛看他，就喜愛他」",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P178",
+        "title": "教宗若望保祿二世 — 教宗在南卡羅來納州基督徒合一祈禱中的證道詞",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P181",
+        "title": "第一章&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 我是葡萄樹而你們是樹枝 — 教宗若望保祿二世 — &nbsp;&nbsp;&nbsp; 「為什麼你們站在這裏整天閒著？」",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P182",
+        "title": "教宗若望保祿二世 — 聖母年：教宗若望保祿二世致天主教全體獻身人的信 — &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 壹 緒言",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P183",
+        "title": "教宗若望保祿二世 — 婦女的尊嚴與聖召 — 時代訊號",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P185",
+        "title": "教宗若望保祿二世 — 現代潮流的出生與死亡 — 「現代潮流的出生與死亡」",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P188",
+        "title": "教宗若望保祿二世 — 守獨身的恩典",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P193",
+        "title": "教宗若望保祿二世 — 致全球司鐸書",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P194",
+        "title": "教宗若望保祿二世向第五十屆聯合國大會致詞全文 — 教宗若望保祿二世 — &nbsp;",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P196",
+        "title": "讓我們給兒童一個和平的未來",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P197",
+        "title": "教宗若望保祿二世 — 第一部份 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 論教宗出缺 — 第一章 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 教宗出缺時樞機團的權力",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P199",
+        "title": "「主的日子」書函 — 教宗若望保祿二世 — 讚頌造物主的化工",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P200",
+        "title": "教宗若望保祿二世 — 司鐸生活與職務",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P201",
+        "title": "教宗若望保祿二世 — 論主教團之神學及法律性質 — 一、引言",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P202",
+        "title": "教宗若望保祿二世 — 兩千年大禧年詔令—「降生奧蹟」",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P206",
+        "title": "&nbsp; — 教宗庇護十二世 — 耶穌復活乃信友生活的基石",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P211",
+        "title": "利瑪竇到北京四百週年國際學術研討會致詞",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P212",
+        "title": "第三十五屆大眾傳播節 — 教宗若望保祿二世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P213",
+        "title": "活於感恩祭的教會 — 教宗若望保祿二世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P215",
+        "title": "主，請同我們一起住下罷! — 導言 — 教宗若望保祿二世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P225",
+        "title": "教宗若望保祿二世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P226",
+        "title": "教宗若望保祿二世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P227",
+        "title": "教宗本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P228",
+        "title": "教宗本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P229",
+        "title": "教宗本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P230",
+        "title": "教宗若望保祿二世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P231",
+        "title": "教宗若望保祿二世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P232",
+        "title": "教宗若望保祿二世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P233",
+        "title": "教宗若望保祿二世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P243",
+        "title": "無論誰因我的名， — 收留一個這樣的小孩，就是收留我 — 教宗若望保祿二世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P261",
+        "title": "教宗本笃十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P266",
+        "title": "致主教們的信函 — 教宗本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P268",
+        "title": "教宗本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P269",
+        "title": "Holy Spirit Seminary Library",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P271",
+        "title": "本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P272",
+        "title": "教宗本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P275",
+        "title": "教宗本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P276",
+        "title": "教宗本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P278",
+        "title": "向佘山聖母誦 — 教宗本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P279",
+        "title": "教宗本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P280",
+        "title": "教宗本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P281",
+        "title": "教宗本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P282",
+        "title": "教宗本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P283",
+        "title": "2011年基督徒合一祈禱週 — 宗座基督徒合一促進委員會",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P288",
+        "title": "教宗本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P289",
+        "title": "教宗本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P290",
+        "title": "教宗本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P291",
+        "title": "教宗本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P292",
+        "title": "教宗本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P293",
+        "title": "教宗本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P294",
+        "title": "教宗本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P295",
+        "title": "教宗本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "htm"
+      },
+      {
+        "p_id": "P311",
+        "title": "教宗方濟各 致主教、司鐸、度奉獻生活者及平信徒",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P314",
+        "title": "教宗本篤十六世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P316",
+        "title": "教宗致全體獻身生活者書函",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P336",
+        "title": "慈悲的主與可憐的罪人",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P337",
+        "title": "઺͉֚ጙɤʬ˰\u0001",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P340",
+        "title": "Holy Spirit Seminary Library",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P341",
+        "title": "Holy Spirit Seminary Library",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P342",
+        "title": "Holy Spirit Seminary Library",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P343",
+        "title": "會 發 展 委 員 會 出",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P344",
+        "title": "Holy Spirit Seminary Library",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P345",
+        "title": "「斯拉夫人的使命」 — 教宗若望保祿二世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P347",
+        "title": "天 主 教 台 灣",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P348",
+        "title": "教扈婚姻與家庭牧民委員會",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P349",
+        "title": "Holy Spirit Seminary Library",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P350",
+        "title": "主及賦予生命者 — 若望保祿二世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P351",
+        "title": "Holy Spirit Seminary Library",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P352",
+        "title": "願他們合而為一Ut Unum Sint — 若望保祿二世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": "Unum Sint",
+        "match_slug": "ut-unum-sint-1995",
+        "ext": "html"
+      },
+      {
+        "p_id": "P359",
+        "title": "Holy Spirit Seminary Library",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P361",
+        "title": "教宗若望保祿二世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P362",
+        "title": "「看，你的母親！」（若十九27） — 教宗若望保祿二世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P374",
+        "title": "Holy Spirit Seminary Library",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P383",
+        "title": "Holy Spirit Seminary Library",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P384",
+        "title": "聖週四致全球司鐸書 — 教宗若望保祿二世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P385",
+        "title": "第四屆世界家庭日 — 教宗若望保祿二世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "html"
+      },
+      {
+        "p_id": "P388",
+        "title": "Holy Spirit Seminary Library",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P389",
+        "title": "Holy Spirit Seminary Library",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P390",
+        "title": "Holy Spirit Seminary Library",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P392",
+        "title": "Holy Spirit Seminary Librry",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P399",
+        "title": "The Holy See",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": "The Holy See",
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P400",
+        "title": "《你們要歡喜踴躍》",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P424",
+        "title": "致青年和全體天主子民",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P425",
+        "title": "The Holy See",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": "The Holy See",
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P426",
+        "title": "The Holy See",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": "The Holy See",
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P427",
+        "title": "《你們是世界的光》",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P428",
+        "title": "The Holy See",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": "The Holy See",
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P430",
+        "title": "The Holy See",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": "The Holy See",
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P431",
+        "title": "The Holy See",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": "The Holy See",
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P440",
+        "title": "教宗良十四世向樞機團致詞",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P441",
+        "title": "良十四世教宗 首次致詞",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P458",
+        "title": "《 在 新 世 界 中 傳 福 音 》 勸 諭 （ Evangelii nuntiandi）",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P459",
+        "title": "教宗保祿六世「八十週年」公函",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P477",
+        "title": "教宗若望保禄二世",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P479",
+        "title": "�e HOLY SEE",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P497",
+        "title": "[DE - EN - ES - FR - IT - PL - PT]",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P513",
+        "title": "教宗方濟各 於世界主教會議第十五屆常務會議",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P517",
+        "title": "2023 年 12 月 25 日",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P532",
+        "title": "天主教會台灣地區主教團 Chinese Regional Bishops’ Conference",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": "Chinese Regional Bishops",
+        "match_slug": null,
+        "ext": "pdf"
+      },
+      {
+        "p_id": "P534",
+        "title": "青年禧年慶典守夜祈禱",
+        "tier": "unknown",
+        "category": "unknown",
+        "latin": null,
+        "match_slug": null,
+        "ext": "pdf"
+      }
+    ]
+  }
+}
