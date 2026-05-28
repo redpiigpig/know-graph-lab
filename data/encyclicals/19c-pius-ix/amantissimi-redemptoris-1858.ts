@@ -26,9 +26,10 @@ export const amantissimiRedemptoris1858: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org)',
       textKey: 'amantissimi-redemptoris-1858-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Amantissimi_Redemptoris',
+
     },
   ],
   displayMode: 'paragraph-aligned',

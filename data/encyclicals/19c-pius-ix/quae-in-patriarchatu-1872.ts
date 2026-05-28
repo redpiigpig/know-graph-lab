@@ -26,9 +26,10 @@ export const quaeInPatriarchatu1872: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org)',
       textKey: 'quae-in-patriarchatu-1872-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Quae_in_patriarchatu',
+
     },
   ],
   displayMode: 'paragraph-aligned',

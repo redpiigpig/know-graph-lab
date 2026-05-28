@@ -26,9 +26,10 @@ export const exQuo1756: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org)',
       textKey: 'ex-quo-1756-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Ex_quo',
+
     },
   ],
   displayMode: 'paragraph-aligned',

@@ -1,0 +1,426 @@
+{
+  "hit": [
+    {
+      "slug": "decet-romanum-pontificem-1521",
+      "url": "https://la.wikisource.org/wiki/Decet_Romanum_Pontificem",
+      "chars": 30237
+    },
+    {
+      "slug": "in-apostolatus-culmine-1538",
+      "url": "https://la.wikisource.org/wiki/In_apostolatus_culmine",
+      "chars": 9041
+    },
+    {
+      "slug": "sublimis-deus-1537",
+      "url": "https://la.wikisource.org/wiki/Sublimis_Deus",
+      "chars": 2988
+    },
+    {
+      "slug": "exponi-nobis-nuper-1571",
+      "url": "https://la.wikisource.org/wiki/Exponi_nobis_nuper",
+      "chars": 6930
+    },
+    {
+      "slug": "quo-primum-1570",
+      "url": "https://la.wikisource.org/wiki/Quo_Primum",
+      "chars": 8121
+    },
+    {
+      "slug": "regnans-in-excelsis-1570",
+      "url": "https://la.wikisource.org/wiki/Regnans_in_Excelsis",
+      "chars": 5703
+    },
+    {
+      "slug": "triumphantis-hierusalem-1590",
+      "url": "https://la.wikisource.org/wiki/Triumphantis_Hierusalem",
+      "chars": 26363
+    },
+    {
+      "slug": "super-cathedram-principis-apostolorum-1659",
+      "url": "https://la.wikisource.org/wiki/Super_Cathedram_Principis_Apostolorum",
+      "chars": 3710
+    },
+    {
+      "slug": "sollicitudo-pastoralis-1679",
+      "url": "https://la.wikisource.org/wiki/Sollicitudo_pastoralis",
+      "chars": 12043
+    },
+    {
+      "slug": "ex-quo-1756",
+      "url": "https://la.wikisource.org/wiki/Ex_quo",
+      "chars": 13040
+    },
+    {
+      "slug": "quanta-cura-1741",
+      "url": "https://la.wikisource.org/wiki/Quanta_Cura",
+      "chars": 40998
+    },
+    {
+      "slug": "vix-pervenit-1745",
+      "url": "https://la.wikisource.org/wiki/Vix_pervenit",
+      "chars": 12087
+    },
+    {
+      "slug": "mirari-vos-1832",
+      "url": "https://la.wikisource.org/wiki/Mirari_Vos",
+      "chars": 25862
+    },
+    {
+      "slug": "quo-graviora-1833",
+      "url": "https://la.wikisource.org/wiki/Quo_graviora",
+      "chars": 7683
+    },
+    {
+      "slug": "quo-graviora-1826",
+      "url": "https://la.wikisource.org/wiki/Quo_graviora",
+      "chars": 7683
+    },
+    {
+      "slug": "amantissimi-redemptoris-1858",
+      "url": "https://la.wikisource.org/wiki/Amantissimi_Redemptoris",
+      "chars": 16340
+    },
+    {
+      "slug": "beneficia-dei-1871",
+      "url": "https://la.wikisource.org/wiki/Beneficia_Dei",
+      "chars": 9650
+    },
+    {
+      "slug": "cum-nuper-1858",
+      "url": "https://la.wikisource.org/wiki/Cum_Nuper",
+      "chars": 13518
+    },
+    {
+      "slug": "cum-sancta-mater-ecclesia-1858",
+      "url": "https://la.wikisource.org/wiki/Cum_Sancta_Mater_Ecclesia",
+      "chars": 4371
+    },
+    {
+      "slug": "exultavit-cor-nostrum-1851",
+      "url": "https://la.wikisource.org/wiki/Exultavit_Cor_Nostrum",
+      "chars": 8175
+    },
+    {
+      "slug": "graves-ac-diuturnae-1875",
+      "url": "https://la.wikisource.org/wiki/Graves_ac_diuturnae",
+      "chars": 8582
+    },
+    {
+      "slug": "gravibus-ecclesiae-1874",
+      "url": "https://la.wikisource.org/wiki/Gravibus_Ecclesiae",
+      "chars": 21112
+    },
+    {
+      "slug": "maximae-quidem-1864",
+      "url": "https://la.wikisource.org/wiki/Maximae_quidem",
+      "chars": 8740
+    },
+    {
+      "slug": "neminem-vestrum-1854",
+      "url": "https://la.wikisource.org/wiki/Neminem_Vestrum",
+      "chars": 29747
+    },
+    {
+      "slug": "nemo-certe-ignorat-1852",
+      "url": "https://la.wikisource.org/wiki/Nemo_certe_ignorat",
+      "chars": 12102
+    },
+    {
+      "slug": "nostis-et-nobiscum-1849",
+      "url": "https://la.wikisource.org/wiki/Nostis_et_nobiscum",
+      "chars": 39447
+    },
+    {
+      "slug": "nullis-certe-verbis-1860",
+      "url": "https://la.wikisource.org/wiki/Nullis_Certe_Verbis",
+      "chars": 12014
+    },
+    {
+      "slug": "omnem-sollicitudinem-1874",
+      "url": "https://la.wikisource.org/wiki/Omnem_sollicitudinem",
+      "chars": 4447
+    },
+    {
+      "slug": "praedecessores-nostros-1847",
+      "url": "https://la.wikisource.org/wiki/Praedecessores_nostros",
+      "chars": 8005
+    },
+    {
+      "slug": "quae-in-patriarchatu-1872",
+      "url": "https://la.wikisource.org/wiki/Quae_in_patriarchatu",
+      "chars": 70198
+    },
+    {
+      "slug": "quanta-cura-1864",
+      "url": "https://la.wikisource.org/wiki/Quanta_Cura",
+      "chars": 40998
+    },
+    {
+      "slug": "quartus-supra-1873",
+      "url": "https://la.wikisource.org/wiki/Quartus_supra",
+      "chars": 59055
+    },
+    {
+      "slug": "qui-nuper-1859",
+      "url": "https://la.wikisource.org/wiki/Qui_Nuper",
+      "chars": 2977
+    },
+    {
+      "slug": "qui-pluribus-1846",
+      "url": "https://la.wikisource.org/wiki/Qui_pluribus",
+      "chars": 32305
+    },
+    {
+      "slug": "quod-nunquam-1875",
+      "url": "https://la.wikisource.org/wiki/Quod_nunquam",
+      "chars": 8616
+    },
+    {
+      "slug": "singulari-quidem-1856",
+      "url": "https://la.wikisource.org/wiki/Singulari_quidem",
+      "chars": 15579
+    },
+    {
+      "slug": "ubi-nos-1871",
+      "url": "https://la.wikisource.org/wiki/Ubi_Nos",
+      "chars": 14738
+    },
+    {
+      "slug": "vix-dum-a-nobis-1874",
+      "url": "https://la.wikisource.org/wiki/Vix_dum_a_nobis",
+      "chars": 14640
+    },
+    {
+      "slug": "diu-satis-1800",
+      "url": "https://la.wikisource.org/wiki/Diu_Satis",
+      "chars": 19245
+    }
+  ],
+  "miss": [
+    {
+      "slug": "ex-supernae-dispositionis-arbitrio-1595",
+      "title": "Ex Supernae Dispositionis Arbitrio"
+    },
+    {
+      "slug": "consueverunt-romani-1569",
+      "title": "Consueverunt Romani"
+    },
+    {
+      "slug": "coelestis-pastor-1687",
+      "title": "Coelestis Pastor"
+    },
+    {
+      "slug": "a-quo-primum-1751",
+      "title": "A Quo Primum"
+    },
+    {
+      "slug": "allatae-sunt-1755",
+      "title": "Allatae Sunt"
+    },
+    {
+      "slug": "annus-qui-hunc-1749",
+      "title": "Annus Qui Hunc"
+    },
+    {
+      "slug": "apostolica-constitutio-1749",
+      "title": "Apostolica Constitutio"
+    },
+    {
+      "slug": "cum-religiosi-1754",
+      "title": "Cum Religiosi"
+    },
+    {
+      "slug": "ex-omnibus-1756",
+      "title": "Ex Omnibus"
+    },
+    {
+      "slug": "magnae-nobis-1748",
+      "title": "Magnae Nobis"
+    },
+    {
+      "slug": "nimiam-licentiam-1743",
+      "title": "Nimiam Licentiam"
+    },
+    {
+      "slug": "peregrinantes-1749",
+      "title": "Peregrinantes"
+    },
+    {
+      "slug": "unigenitus-1713",
+      "title": "Unigenitus"
+    },
+    {
+      "slug": "in-eminenti-1738",
+      "title": "In eminenti"
+    },
+    {
+      "slug": "a-quo-die-1758",
+      "title": "A Quo Die"
+    },
+    {
+      "slug": "appetente-sacro-1759",
+      "title": "Appetente Sacro"
+    },
+    {
+      "slug": "christianae-reipublicae-1766",
+      "title": "Christianae Reipublicae"
+    },
+    {
+      "slug": "cum-primum-1759",
+      "title": "Cum Primum"
+    },
+    {
+      "slug": "in-dominico-agro-1761",
+      "title": "In Dominico Agro"
+    },
+    {
+      "slug": "summa-quae-1768",
+      "title": "Summa Quae"
+    },
+    {
+      "slug": "cum-summi-1769",
+      "title": "Cum Summi"
+    },
+    {
+      "slug": "decet-quam-maxime-1769",
+      "title": "Decet Quam Maxime"
+    },
+    {
+      "slug": "inscrutabili-divinae-sapientiae-1769",
+      "title": "Inscrutabili Divinae Sapientiae"
+    },
+    {
+      "slug": "salutis-nostrae-1774",
+      "title": "Salutis Nostrae"
+    },
+    {
+      "slug": "charitas-1791",
+      "title": "Charitas"
+    },
+    {
+      "slug": "inscrutabile-1775",
+      "title": "Inscrutabile"
+    },
+    {
+      "slug": "ubi-lutetiam-1792",
+      "title": "Ubi lutetiam"
+    },
+    {
+      "slug": "commissum-divinitus-1835",
+      "title": "Commissum Divinitus"
+    },
+    {
+      "slug": "cum-primum-1832",
+      "title": "Cum Primum"
+    },
+    {
+      "slug": "in-supremo-apostolatus-1839",
+      "title": "In Supremo Apostolatus"
+    },
+    {
+      "slug": "inter-praecipuas-1844",
+      "title": "Inter Praecipuas"
+    },
+    {
+      "slug": "probe-nostis-1840",
+      "title": "Probe Nostis"
+    },
+    {
+      "slug": "quas-vestro-1841",
+      "title": "Quas Vestro"
+    },
+    {
+      "slug": "singulari-nos-1834",
+      "title": "Singulari Nos"
+    },
+    {
+      "slug": "summo-iugiter-studio-1832",
+      "title": "Summo Iugiter Studio"
+    },
+    {
+      "slug": "charitate-christi-1825",
+      "title": "Charitate Christi"
+    },
+    {
+      "slug": "quod-hoc-ineunte-1824",
+      "title": "Quod Hoc Ineunte"
+    },
+    {
+      "slug": "ubi-primum-1824",
+      "title": "Ubi Primum"
+    },
+    {
+      "slug": "amantissimus-1862",
+      "title": "Amantissimus"
+    },
+    {
+      "slug": "apostolicae-nostrae-caritatis-1854",
+      "title": "Apostolicae Nostrae Caritatis"
+    },
+    {
+      "slug": "etsi-multa-1873",
+      "title": "Etsi Multa"
+    },
+    {
+      "slug": "incredibili-1863",
+      "title": "Incredibili"
+    },
+    {
+      "slug": "ineffabilis-deus-1854",
+      "title": "Ineffabilis Deus"
+    },
+    {
+      "slug": "inter-multiplices-1853",
+      "title": "Inter Multiplices"
+    },
+    {
+      "slug": "levate-1867",
+      "title": "Levate"
+    },
+    {
+      "slug": "meridionali-americae-1865",
+      "title": "Meridionali Americae"
+    },
+    {
+      "slug": "optime-noscitis-1854",
+      "title": "Optime Noscitis"
+    },
+    {
+      "slug": "optime-noscitis-1855",
+      "title": "Optime Noscitis"
+    },
+    {
+      "slug": "probe-noscitis-venerabiles-1852",
+      "title": "Probe Noscitis Venerabiles"
+    },
+    {
+      "slug": "quanto-conficiamur-moerore-1863",
+      "title": "Quanto Conficiamur Moerore"
+    },
+    {
+      "slug": "respicientes-1870",
+      "title": "Respicientes"
+    },
+    {
+      "slug": "saepe-venerabiles-fratres-1871",
+      "title": "Saepe Venerabiles Fratres"
+    },
+    {
+      "slug": "the-syllabus-of-errors-1864",
+      "title": "The Syllabus Of Errors"
+    },
+    {
+      "slug": "ubi-primum-1847",
+      "title": "Ubi Primum"
+    },
+    {
+      "slug": "ubi-primum-1849",
+      "title": "Ubi Primum"
+    },
+    {
+      "slug": "traditi-humilitati-1829",
+      "title": "Traditi Humilitati"
+    }
+  ],
+  "skipped": []
+}

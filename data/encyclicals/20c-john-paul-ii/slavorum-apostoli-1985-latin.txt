@@ -2,11 +2,11 @@ IOANNIS PAULI PP. II SUMMI PONTIFICIS EPISTULA ENCYCLICA SLAVORUM APOSTOLI AD EP
 
 Venerabiles fratres ac dilecti filii salutem et Apostolicam Benedictionem
 
-## ⏳ 拉丁標題待補
+## I. Introductio
 
-## ⏳ 拉丁標題待補
+## I. Introductio
 
-## ⏳ 拉丁標題待補
+## I. Introductio
 
 1. Slavorum Apostoli, sancti Cyrillus et Methodius, eorumque praeclarum evangelizationis opus, quod perfecerunt, in memoria sunt Ecclesiae. Quin immo licet affirmari eorum recordationem aetate nostra singularem in modum vigescere et ad praesentia referri.
 
@@ -24,7 +24,7 @@ Amplius saeculo elapso ab Epistula illa Leoniana edita, nova rerum adiuncta , in
 
 Eventus saeculi praeteriti ac praesertim proximorum horum decenniorum, ex parte effecerunt ut una cum memoria religiosa excitaretur studium, ad historiam cultumque humanum quod attinet, in ambos sanctos Fratres, quorum singularia charismata etiam melius intellegi possunt ratione habita condicionum et experimentorum, quae aetatis nostrae sunt propria. Ad hoc vim habuerunt multae res gestae, quae ut vera signa temporum ad historiam saeculi xx pertinent, atque imprimis magnus ille eventus, qui in Ecclesia exstitit: Concilium dicimus Vaticanum II . Cuius universalis Synodi magisterio et pastorali proposito ducti, ratione nova - ac quidem maturiore altioreque - hos viros possumus intueri, qui ante undecim saecula fuerunt, atque etiam in eorum vita et actione apostolica deprehendere quaedam, quae iis continentur quaeque divina Providentia in iis posuit, ea mente ut aetate nostra patefant nova plenitudine novosque frustus afferant .
 
-## ⏳ 拉丁標題待補
+## II. Adumbratio Vitae
 
 4. Exemplum sectantes Epistulae, quae a verbis “Grande Munus” incipit, vitam sancti Methodii volumus commemorare, non tamen fratris eius sancti Cyrilli sorte neglecta, quae cum illa tam arcte coniungitur. Quod quidem summatim faciemus, vestigatoribus historicis oflicio tributo singulas res accurate definiendi de iisque disceptandi.
 
@@ -52,7 +52,7 @@ Quapropter “viri et mulieres, parvi et magni, divites et pauperes, liberi et s
 
 Ut verum fateamur, opus sanctorum Fratrum, post Methodii mortem, in grave adductum est discrimen atque persecutio, qua eorum discipuli vexabantur, eo est progressa ut hi campum suum actionis missionalis derelinquere cogerentur; nihilominus semen ab Ris iactum fructus afferre non desiit atque pastoralis eorum agendi ratio, eo spectans ut veritas revelata ad populos novos perferretur - respectu habito peculiaris eorum cultus humani - ut exemplum praefulget clarissimum Ecclesiae et missionariis cuiusvis aetatis.
 
-## ⏳ 拉丁標題待補
+## III. Praecones Evangelii
 
 8. Cyrillus et Methodius, fratres, cultu humano Byzantini, facti sunt Slavorum apostoli, hac voce sensu pleno accepta. Seiunctio a patrio solo, quam Deus interdum ab hominibus a se electis postulat, si cum fide in eius promissa suscipitur, semper est arcana quaedam et fecunda condicio progressionis et auctus Populi Dei in terra. Dixit Dominus ad Abraham: “Egredere de terra tua et de cognatione tua et de domo patris tui in terram, quam monstrabo tibi. Faciamque te in gentem magnam et benedicam tibi et magnificabo nomen tuum, erisque in benedictionem” [^13].
 
@@ -76,7 +76,7 @@ Constantinus eiusque operis socii iam antea novum condiderunt alphabetum ut veri
 
 Perfecta communio in caritate Ecclesiam tuetur a quavis ratione studii partium vel exclusorii habitus gentici vel commenti phyletici, necnon ab omni arrogantia propriae nationis superextollendae. Eiusmodi communione quivis legitimus cordis humani sensus mere naturalis oportet erigatur altiusque efferatur.
 
-## ⏳ 拉丁標題待補
+## IV. Ecclesiam Dei Condiderunt
 
 12. In vitae vero instituto Apostolorum Slavorum, Cyrilli et Methodii in lumine ponere volumus peculiare quiddam, id est modum pacificum aedificandae Ecclesiae; quippe qui ratione ducerentur considerandi Ecclesiam ut unam, sanctam et universalem.
 
@@ -106,7 +106,7 @@ Aetate illa procellosa, quae etiam dimicationibus, quibus armis confligebatur, i
 
 Hoc modo se gerens, semper, quemadmodum et Constantinus Philosophus, in colloquium venit cum iis qui cogitatis eius et inceptis pastoralibus adversabantur eorumque legitimam rationem in dubitationem vocabant. Ita agens semper erit magister omnibus, qui quovis tempore, dissensiones conantur sublevare, observantes quidem multiformem plenitudinem Ecclesiae, quae secundum voluntatem Iesu Christi, conditoris sui, semper esse debet una, sancta, catholica et apostolica: hoc mandatum plena significatione expressum est in Symbolo CL Patrum Concilii oecumenici Constantinopolitani II, quod inviolabilis est professio fidei omnium Christianorum.
 
-## ⏳ 拉丁標題待補
+## V. Sensus Catholicus Ecclesiae
 
 16. Verum non argumenta dumtaxat evangelica doctrinae a sanctis Cyrillo et Methodio praedicatae sunt digna quae singulariter efferantur. Multum etiam significat demonstratque Ecclesiae, quae nunc est, catecheticus ipse ac pastoralis modus, quem in apostolico opere suo adhibebant inter gentes, quae nondum celebrari viderant mysteria divina patrio suo sermone neque Dei verbum audierant nuntiari ratione prorsus congruenti mentis suae habitui et observantiae verarum vitae condicionum sibi peculiarium.
 
@@ -132,7 +132,7 @@ Singuli homines singulaeque Nationes, sicut et omnis cultus humani civilisque fo
 
 20. Evangelicus nuntius, quem Sancti Cyrillus et Methodius Slavis interpretati sunt populis, depromentes videlicet ex Ecclesiae thesauro “nova et vetera” [^38], per nuntiationem atque catechesim transmissus est secundum veritates aeternas eodemque tempore per accommodationem ad concreta historiae adiuncta. Ob missionalia amborum Sanctorum studia populi Slavici potuerunt primum conscientiam sibi induere suae vocationis ut nempe aeternum Sanctissimae Trinitatis consilium participarent intra universalem salutis mundi dispensationem. Sic quoque proprias agnoverunt partes pro utilitate totius historiae generis humani a Deo Patre creati, a Filio redempti, a Spiritu Sancto illuminati. Propter hanc nuntiationem, suo tempore ab Ecclesiae comprobatam auctoritatibus, ab Episcopis Romanis ac Patriarchis Constantinopolitanis, Slavi ipsi una cum ceteris orbis gentibus sese habere valuerunt posteros heredesque promissionis a Deo datae Abrahamo [^39]. Ita quidem ob ecclesialem temperationem a sancto Methodio effectam necnon ex conscientia suae identitatis christianae occupaverunt hi locum sibi in Ecclesia assignatum, quae in illa iam Europae parte erat enata. Qua de causa eorum hodie posteri gratam profecto nec interituram umquam servant recordationem illius viri, qui quasi anulus est factus ipsos coniungens seriei magnorum divinae Revelationis praeconum Veteris Novique Testamenti: “Post hos autem omnes Deus misericors . . . nostro tempore nostri populi gratia, cuius nemo unquam curam gessit, ad bonum opus excitavit doctorem nostrum, beatum Methodium, cuius omnes virtutes et certamina cum his Deo gratis viris singulatim comparare non erubescimus” [^40].
 
-## ⏳ 拉丁標題待補
+## VI. Evangelium et Cultura
 
 21. Thessalonicenses Fratres non modo fidei erant heredes, verum humani cultus etiam antiquae Graeciae, per Byzantium perpetuati. Praeterea constat quantum habeat ponderis illa hereditas ad omnem Europae cultum humanum et recta obliquave via ad totius orbis. In evangelizationis opere, quod - uti praecursores in regione a Slavicis populis habitata exegerunt - simul illius rei exemplum invenitur, quae nomen hodie prae se fert “animi culturae inductionis” - nempe insertionis Evangelii in humanum autochthonum cultum - atque simul inductionis in Ecclesiae vitam ipsius illius cultus humani.
 
@@ -144,7 +144,7 @@ Versio autem Librorum sacrorum, a Cyrillo et Methodio peracta una cum discipulis
 
 Quae quidem merita de humaniore cultu omnium populorum cunctarumque Nationum Slavicarum faciunt ut certo quodam modo opus evangelicum, a sanctis Cyrillo et Methodio patratum, in horum populorum harumque nationum historia atque vita perpetuo adsit.
 
-## ⏳ 拉丁標題待補
+## VII. Momentum et Vis Millennii Christiani in Orbe Slavorum
 
 23. Apostolica missionalisque actio sanctorum Cyrilli et Methodii, quae alteram in saeculi IX incidit partem, prima efficax Slavorum evangelizatio potest haberi.
 
@@ -218,7 +218,7 @@ Verum toti pariter Europae concedito, Sanctissima Trinitas, ut ambobus deprecant
 
 ## - Ut debitam tibi laudem persolvere possint privata in vita ac publica!
 
-## ⏳ 拉丁標題待補
+## Laudes Debitae in Vita Privata et Publica
 
 31. Tibi proinde, Deus, Pater omnipotens, Deus Filius, qui mundum redemisti, Spiritus Deus, qui columen es ac sanctimoniae omnis magister, tradere optamus universalem Ecclesiam hesterni, hodierni, crastini aevi, Ecclesiam, quae et in Europa invenitur et per terras diffusa est cunctas. Tuas in manus singularem hunc commendamus thesaurum, qui tot diversis quidem consistit ex donis, novis ac veteribus, quae tot filii varii in communes divitias contulerunt.
 

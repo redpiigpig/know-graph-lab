@@ -26,9 +26,10 @@ export const sollicitudoPastoralis1679: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org)',
       textKey: 'sollicitudo-pastoralis-1679-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Sollicitudo_pastoralis',
+
     },
   ],
   displayMode: 'simple',

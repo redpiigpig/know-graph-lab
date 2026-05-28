@@ -2,9 +2,9 @@ IOANNIS PAULI PP. II SUMMI PONTIFICIS SOLLICITUDO REI SOCIALIS LITTERAE ENCYCLIC
 
 Venerabiles fratres, dilectissimi filii et filiae, salutem et apostolicam benedictionem
 
-## ⏳ 拉丁標題待補
+## I. INTRODUCTIO
 
-## ⏳ 拉丁標題待補
+## I. INTRODUCTIO
 
 1. Sollicitudo rei socialis Ecclesiae veram hominis et communitatis respiciens progressionem, quae pariter ips ius hominis omnes servet facultates ac provehat, multimodis est patefacta. Praecipuum quidem eiusdem doetrinae tradendae instrumentum novissimis temporibus in Romanorum Pontificum potissimum invenitur Magisterio, quod quidem a Leonis XIII Litteris Encyclicis sumens exordia, quarum verba initialia sunt Rerum Novarum , quasi a capite ad quod reliqua referuntur (1), identidem hac de re pertractavit, dum varia documenta socialia foras edenda interdum curabat ipsis anniversariis temporibus, quibus ilIa occurrebat memoria (2).
 
@@ -82,7 +82,7 @@ In alio contra aliquo orbe, ubi sollicitudo de bono universorum hominum communi,
 
 Haec quoque Encyclicarum Litterarum novitas vim perpetuam prae se fert ad resque accommodatam pro huius scilicet temporis mente, quae adeo subtiliter intimum percipit inter iustitiae observantiam et confirmationem pacis vinculum contractum.
 
-## ⏳ 拉丁標題待補
+## III. CONSENSUS MUNDI CONTEMPORANEI
 
 11. Primarium magisterium Litterarum Populorum Progressio suo iam tempore validam sibi undique peperit responsionem suum ob novitatis gentls. Nihil tamen dubitandum quin socialia ipsa adiuncta, in quibus hisce versamur diebus, proprie eadem dici nequeant ac viginti abhinc annos. Quam ob rem unumquodque caput leviter perstringentes volumus nonnullis insistere nostrorum temporum proprietatibus, quo doctrinam Encyclicarum Pauli VI altius perquiramus, ratione item « populorum progressionis » habita.
 
@@ -200,7 +200,7 @@ Si qua Natio, plus minusve sibi conscia, voluptati cedens veluti portis muroque 
 
 Cum Occidens videtur in quibusdam crescentis solitudinis formis sui commodi causa vivere velle, ipseque Oriens incertis de causis ignorare videtur suum esse communem participare operam ad populos miseriis levandos, tunc in conspectu adest non solum proditio iustarum exspectationum generis humani, quae inopinabilium effectuum est praenuntia, sed etiam omnino certa violatio obligationis ethicae.
 
-## ⏳ 拉丁標題待補
+## Munus ducatus inter nationes nonnisi possibilitate et voluntate late et liberaliter ad bonum commune conferendi iustificari potest.
 
 24. Si armorum fabricatio gravis est rerum perturbatio vigens in hodierno orbe terrarum, prae veris quidem ac certis hominum necessitatibus usuque instrumentorum ad eas reparandas aptorum, perturbatio haud minoris gravitatis tamen est ipsorum armorum negotiatio .
 
@@ -244,7 +244,7 @@ Quare non omnia sunt improbanda in orbe terrarum huius temporis, neque id ita fi
 
 Haec ipsa veritas Nos inducit ad cogitandum de vera natura progressionis populorum, concorditer sane cum Litteris Encyclicis, quarum anniversariam memoriam nunc celebramus quarumque doctrinam in honore esse cupimus.
 
-## ⏳ 拉丁標題待補
+## IV. VERA PROGRESSIO HUMANA
 
 27. Quod Litterae Encyclicae nobis suaserunt inspiciendum in mundo huius temporis, nobis ostendit progression em hominum non esse rectilineam, seu rem fere automatariam ac per se ipsam sine fine, perinde ac si genus humanum quibusdam sub condicionibus expedite ad aliquam veluti non definitam tendat perfectionem (49).
 
@@ -340,7 +340,7 @@ Evidens etiam est progressum, voluntatem praestitutae rerum ordinationis, qua il
 
 Recta progressus notio non potest hanc seriem neglegere considerationum - ad usum elementorum naturae pertinentium, ad opum renovationem et ad detrimenta quaestuosae immoderataeque industriae — quae nostrae conscientiae momentum morale proponunt, ex quo dignoscendus est processus (63).
 
-## ⏳ 拉丁標題待補
+## V. THEOLOGICA PERLECTIO PROBLEMATUM MODERNORUM
 
 35. Quoniam progressus est magna parte indolis moralis, patet idem affirmandum esse de impedimentis, quae ei obstant. Si annis actis post vulgatas Litteras Encyclicas, quae inscribuntur Populorum Progressio , progressus defuit — aut parvus fuit, inconstans, si non omnino contradictorius causae non possunt ex sola origine oeconomica oriri. ut iam antea memoravimus, hac in re causae etiam « politicae » se interponunt. Rationes enim, quae « populorum progressionem » provehunt aut infrenant, nonnisi indolis « politicae » sunt. Ut perversae machinationes superentur, de quibus diximus, et iis novae subiciantur rectiores et bono communitatis communi congruentiores, necessaria est efficax voluntas « politica ». Re indagata, est concludendum hanc non sufficientem fuisse.
 
@@ -412,7 +412,7 @@ Haque solida hominum coniunctio conferre debet ad efficiendum id consilium divin
 
 Multi Sancti, ab Ecclesia in Caelitum album relati, mirabilia testimonia exhibent huiusmodi coniunctionis atque exemplo praelucere possunt in difficilibus rerum adiunctis huiusce temporis. Inter cunctos memorare cupimus sanctum Petrum Claver, qui Carthagine Indiarum servis est famulatus, et sanctum Maximilianum Mariam Kolbe, qui vitam suam obtulit pro captivo sibi ignoto in publicae custodiae campo loci Auschwitz-Oswiecim .
 
-## ⏳ 拉丁標題待補
+## VI. NONNULLAE PARTICULARES DIRECTIVAE
 
 41. Ecclesiae praesto non sunt solutiones technicae quaestionis incrementi deficientis ut talis. Quod quidem iam Paulus PP. VI in Encyclicis Litteris, quas commemoramus, affirmavit (69).
 
@@ -478,7 +478,7 @@ Mutua obnoxietas in compluribus harum regionum reapse iam habetur. Eius agnitio,
 
 Solida hominum coniunctio universalis postulat, ut condicionem pernecessariam, suis legibus vivendi potestatem et liberam ipsius animi promptitudinem, etiam apud consociationes, quas memoravimus; verum etiam promptum animum ad necessaria incommoda accipienda in bonum communitatis totius mundi.
 
-## ⏳ 拉丁標題待補
+## VII. CONCLUSIO
 
 46. Populi et singuli homines suam ipsorum liberationem affectant; quorum plena progressio est signum eorum desiderii eo pertinentis ut multiplices coactiones superentur, quibus impediunturne « vita humaniore » fruantur.
 

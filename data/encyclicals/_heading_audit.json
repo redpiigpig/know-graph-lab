@@ -1,0 +1,286 @@
+[
+  {
+    "slug": "redemptor-hominis-1979",
+    "pope_dir": "20c-john-paul-ii",
+    "en_count": 10,
+    "zh_count": 15,
+    "la_count": 9,
+    "zh_miss": 1,
+    "la_miss": 0,
+    "zh_miss_idx": [
+      10
+    ],
+    "la_miss_idx": []
+  },
+  {
+    "slug": "redemptoris-missio-1990",
+    "pope_dir": "20c-john-paul-ii",
+    "en_count": 54,
+    "zh_count": 24,
+    "la_count": 53,
+    "zh_miss": 6,
+    "la_miss": 0,
+    "zh_miss_idx": [
+      1,
+      2,
+      7,
+      9,
+      17,
+      19
+    ],
+    "la_miss_idx": []
+  },
+  {
+    "slug": "sollicitudo-rei-socialis-1987",
+    "pope_dir": "20c-john-paul-ii",
+    "en_count": 10,
+    "zh_count": 0,
+    "la_count": 8,
+    "zh_miss": 0,
+    "la_miss": 8,
+    "zh_miss_idx": [],
+    "la_miss_idx": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "slug": "ut-unum-sint-1995",
+    "pope_dir": "20c-john-paul-ii",
+    "en_count": 37,
+    "zh_count": 0,
+    "la_count": 35,
+    "zh_miss": 0,
+    "la_miss": 34,
+    "zh_miss_idx": [],
+    "la_miss_idx": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ]
+  },
+  {
+    "slug": "veritatis-splendor-1993",
+    "pope_dir": "20c-john-paul-ii",
+    "en_count": 26,
+    "zh_count": 0,
+    "la_count": 25,
+    "zh_miss": 0,
+    "la_miss": 3,
+    "zh_miss_idx": [],
+    "la_miss_idx": [
+      2,
+      3,
+      8
+    ]
+  },
+  {
+    "slug": "populorum-progressio-1967",
+    "pope_dir": "20c-paul-vi",
+    "en_count": 7,
+    "zh_count": 0,
+    "la_count": 6,
+    "zh_miss": 0,
+    "la_miss": 6,
+    "zh_miss_idx": [],
+    "la_miss_idx": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "slug": "sacerdotalis-caelibatus-1967",
+    "pope_dir": "20c-paul-vi",
+    "en_count": 16,
+    "zh_count": 0,
+    "la_count": 14,
+    "zh_miss": 0,
+    "la_miss": 14,
+    "zh_miss_idx": [],
+    "la_miss_idx": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ]
+  },
+  {
+    "slug": "caritas-in-veritate-2009",
+    "pope_dir": "21c-benedict-xvi",
+    "en_count": 3,
+    "zh_count": 2,
+    "la_count": 2,
+    "zh_miss": 0,
+    "la_miss": 1,
+    "zh_miss_idx": [],
+    "la_miss_idx": [
+      0
+    ]
+  },
+  {
+    "slug": "deus-caritas-est-2005",
+    "pope_dir": "21c-benedict-xvi",
+    "en_count": 4,
+    "zh_count": 2,
+    "la_count": 3,
+    "zh_miss": 0,
+    "la_miss": 2,
+    "zh_miss_idx": [],
+    "la_miss_idx": [
+      0,
+      1
+    ]
+  },
+  {
+    "slug": "spe-salvi-2007",
+    "pope_dir": "21c-benedict-xvi",
+    "en_count": 15,
+    "zh_count": 14,
+    "la_count": 14,
+    "zh_miss": 13,
+    "la_miss": 1,
+    "zh_miss_idx": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "la_miss_idx": [
+      1
+    ]
+  },
+  {
+    "slug": "dilexit-nos-2024",
+    "pope_dir": "21c-francis",
+    "en_count": 44,
+    "zh_count": 42,
+    "la_count": 43,
+    "zh_miss": 10,
+    "la_miss": 9,
+    "zh_miss_idx": [
+      0,
+      1,
+      2,
+      5,
+      8,
+      10,
+      28,
+      29,
+      30,
+      40
+    ],
+    "la_miss_idx": [
+      1,
+      7,
+      8,
+      20,
+      21,
+      29,
+      30,
+      31,
+      36
+    ]
+  },
+  {
+    "slug": "fratelli-tutti-2020",
+    "pope_dir": "21c-francis",
+    "en_count": 54,
+    "zh_count": 53,
+    "la_count": 53,
+    "zh_miss": 17,
+    "la_miss": 0,
+    "zh_miss_idx": [
+      1,
+      2,
+      13,
+      16,
+      18,
+      22,
+      23,
+      27,
+      28,
+      34,
+      35,
+      40,
+      41,
+      45,
+      47,
+      48,
+      51
+    ],
+    "la_miss_idx": []
+  },
+  {
+    "slug": "lumen-fidei-2013",
+    "pope_dir": "21c-francis",
+    "en_count": 29,
+    "zh_count": 27,
+    "la_count": 28,
+    "zh_miss": 0,
+    "la_miss": 1,
+    "zh_miss_idx": [],
+    "la_miss_idx": [
+      1
+    ]
+  }
+]

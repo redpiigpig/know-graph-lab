@@ -26,9 +26,10 @@ export const quantaCura1864: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org)',
       textKey: 'quanta-cura-1864-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Quanta_Cura',
+
     },
   ],
   displayMode: 'paragraph-aligned',

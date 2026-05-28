@@ -26,9 +26,10 @@ export const beneficiaDei1871: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org)',
       textKey: 'beneficia-dei-1871-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Beneficia_Dei',
+
     },
   ],
   displayMode: 'paragraph-aligned',

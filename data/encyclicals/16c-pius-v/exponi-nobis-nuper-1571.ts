@@ -26,9 +26,10 @@ export const exponiNobisNuper1571: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org)',
       textKey: 'exponi-nobis-nuper-1571-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Exponi_nobis_nuper',
+
     },
   ],
   displayMode: 'simple',

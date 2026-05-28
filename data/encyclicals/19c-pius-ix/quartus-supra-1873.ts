@@ -26,9 +26,10 @@ export const quartusSupra1873: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org)',
       textKey: 'quartus-supra-1873-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Quartus_supra',
+
     },
   ],
   displayMode: 'paragraph-aligned',

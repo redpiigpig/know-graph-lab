@@ -26,9 +26,10 @@ export const nullisCerteVerbis1860: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org)',
       textKey: 'nullis-certe-verbis-1860-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Nullis_Certe_Verbis',
+
     },
   ],
   displayMode: 'paragraph-aligned',

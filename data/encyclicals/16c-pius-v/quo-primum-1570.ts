@@ -26,9 +26,10 @@ export const quoPrimum1570: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org)',
       textKey: 'quo-primum-1570-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Quo_Primum',
+
     },
   ],
   displayMode: 'simple',

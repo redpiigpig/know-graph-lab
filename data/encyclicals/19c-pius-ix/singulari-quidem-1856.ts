@@ -26,9 +26,10 @@ export const singulariQuidem1856: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org)',
       textKey: 'singulari-quidem-1856-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Singulari_quidem',
+
     },
   ],
   displayMode: 'paragraph-aligned',

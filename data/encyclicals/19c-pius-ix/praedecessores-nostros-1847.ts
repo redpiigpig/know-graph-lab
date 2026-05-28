@@ -26,9 +26,10 @@ export const praedecessoresNostros1847: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org)',
       textKey: 'praedecessores-nostros-1847-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Praedecessores_nostros',
+
     },
   ],
   displayMode: 'paragraph-aligned',

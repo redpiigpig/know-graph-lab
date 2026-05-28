@@ -26,9 +26,10 @@ export const quiNuper1859: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org)',
       textKey: 'qui-nuper-1859-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Qui_Nuper',
+
     },
   ],
   displayMode: 'simple',

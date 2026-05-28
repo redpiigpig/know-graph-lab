@@ -2,7 +2,7 @@ IOANNIS PAULI PP. II SUMMI PONTIFICIS CENTESIMUS ANNUS LITTERAE ENCYCLICAE VENER
 
 Venerati Fratres, carissimi Filii et Filiae, salutem et Apostolicam Benedictionem.
 
-## ⏳ 拉丁標題待補
+## PROOEMIUM
 
 1. CENTESIMUS ANNUS a promulgatione Litterarum Encyclicarum Decessoris Nostri v.m. Leonis XIII, quae verbis Rerum novarum incipiunt (1), multum habet in praesenti Ecclesiae et Nostri etiam Pontificatus historia momentum. Singulariter enim illae praestant, quod sollemnibus Summorum Pontificum Documentis commemoratae sunt, a quadragesimo anno postquam foras elatae erant ad nonagesimum usque. Encyclicarum Rerum novarum iter historicum aliis scriptionibus esse notatum dici potest quae de illis monebant easque simul exsequebantur (2).
 
@@ -160,7 +160,7 @@ Hac rerum progressione perlibenter denotata, aliunde tamen silentio praeteriri h
 
 CAPUT III ANNUS MCMLXXXIX
 
-## ⏳ 拉丁標題待補
+## III. ANNUS MCMLXXXIX
 
 22. Si ab orbis condicione ita descripta abundeque pariter Nostris in Litteris Sollicitudo rei socialis exposita aliquis proficiscetur, momentum inopinatum magnaeque simul spei comprehendet ipsorum eventuum his proximis annis. Eorum veluti apex attingitur per anni MCMLXXXIX eventa in Europae mediae et orientalis Nationibus sed quae temporis intervallum ac terrarum plagam multo latiorem complectuntur. Progredientibus enim annis a mcmLxxx ad mcmxc apud aliquot Americae Latinae verum etiam Africae et Asiae Civitates collabuntur quaedam dictaturae tyrannidisque gubernia ; alibi autem difficile quidem sed frugiferum suscipitur iter conversionis in civilis ordinis formas quae maiorem patiuntur participationem maioremque prae se ferunt iustitiam. Magni vero ponderis partes, quin immo et decretorias, illuc adtulit Ecclesiae officium in tutandis adiuvandisque hominis iuribus : in locis enim certa quadam doctrina permeatis, ubi copiae variarum factionum collectae sensum obscurabant communis hominum dignitatis, simpliciter at fortiter docuit Ecclesia unumquemque hominem, quaecumque ipsius interiores essent sententiae, imaginem in se Dei gestare ideoque observantiam et reverentiam mereri. Qua in adseveratione saepius consentiebat maior populi ipsius pars; id quod effecit ut contendendi viae rationesque solvendarum difficultatum politicarum quaererentur quae personae dignitatem servarent.
 

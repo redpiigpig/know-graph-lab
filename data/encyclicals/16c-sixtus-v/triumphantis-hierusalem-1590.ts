@@ -26,9 +26,10 @@ export const triumphantisHierusalem1590: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org)',
       textKey: 'triumphantis-hierusalem-1590-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Triumphantis_Hierusalem',
+
     },
   ],
   displayMode: 'paragraph-aligned',

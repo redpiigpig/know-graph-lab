@@ -26,9 +26,10 @@ export const exultavitCorNostrum1851: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org)',
       textKey: 'exultavit-cor-nostrum-1851-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Exultavit_Cor_Nostrum',
+
     },
   ],
   displayMode: 'paragraph-aligned',

@@ -26,9 +26,10 @@ export const superCathedramPrincipisApostolorum1659: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org)',
       textKey: 'super-cathedram-principis-apostolorum-1659-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Super_Cathedram_Principis_Apostolorum',
+
     },
   ],
   displayMode: 'paragraph-aligned',

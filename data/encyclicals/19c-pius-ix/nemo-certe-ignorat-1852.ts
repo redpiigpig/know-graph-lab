@@ -26,9 +26,10 @@ export const nemoCerteIgnorat1852: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org)',
       textKey: 'nemo-certe-ignorat-1852-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Nemo_certe_ignorat',
+
     },
   ],
   displayMode: 'paragraph-aligned',
