@@ -99,6 +99,7 @@ const REFINED_IDS = new Set([
   '4e3d16fc-ef4f-420f-a3ec-56e2e92d659f',  // ANF Vol 2 (Hermas/Tatian/Athenagoras/Theophilus/Clement of Alexandria)
   '364dac2e-410f-4906-be63-8bb86b4865ee',  // ANF Vol 3 (Tertullian Apologetic + Anti-Marcion)
   '904661d3-16fc-4f37-bb04-f7c4aa7671e9',  // ANF Vol 4 (Tertullian IV / Minucius Felix / Commodian / Origen — De Principiis + Contra Celsum)
+  '0e08c662-540b-4186-b250-9bca0cfe1002',  // ANF Vol 5 (Hippolytus / Cyprian / Caius / Novatian)
 ])
 
 const series = [
