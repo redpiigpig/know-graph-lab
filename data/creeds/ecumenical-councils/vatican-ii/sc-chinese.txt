@@ -1,43 +1,7 @@
 # 梵二 Sacrosanctum Concilium — 禮儀憲章
 # DH 4001–4050
 # 來源：光啟文化 2013《公教會之信仰與倫理教義選集》(Denzinger 中譯)
-# 共 25 條中譯條目
-
-【DH 4001】
-[97]　1. Sacrosanctum Concilium,　　　　　1. 神聖〔大公〕會議既然計劃目
-cum sibi proponat vitam christianam inter　　　　　　漸加強信友的基督化生活；
-fideles in dies augere; eas institutiones　　　　　　也計畫使可改變的制度更適應於我們
-quae mutationibus obnoxiae sunt, ad　　　　　　　現代的需要；
-accommodare; quidquid ad unionem　　　　　　　　也計畫促進那有助於一切信仰兄弟人
-omnium in Christum credentium conferre　　　　　士合一之事物；
-potest, fovere; et quidquid ad omnes in　　　　　　並計畫鞏固那召喚眾人歸向教會懷抱
-roborare; suum esse arbitratur peculiari　　　　　因此它〔大公會議〕認為，由於特殊理
-ratione etiam instaurandam atque　　　　　　　　　由，亦應關切禮儀之革新與發揚。
-
-【DH 4002】
-2. Liturgia enim, per quam, maxime　　　　　　2. 藉著禮儀，尤其在神性的感恩
-in divino Eucharistiae Sacrificio, "opus　　　　　　祭祀中，『履行我們拯贖的工程』」，
-nostrae Redemptionis exercetur" summe　　　　　最足以使信友以生活表達並向他人願
-eo confort ut fideles vivendo exprimant et　　　　　　示基督的奧蹟與高實教會的純正本
-cuius proprium est esse humanam simul　　　　　　　教會的特點是，她同時是人性的也是神
-ac divinam, visiblem invisibilibus　　　　　　　　　性的，是包含不可見之可見的，
-praeditan, actione ferventem et　　　　　　　　　　　熱切於行動，又潛心於默禱，
-contemplation vaccantem, in mundo　　　　　　　　存在於現世，卻又是朝聖者；
-praesenten et tamen peregrinam; et ita　　　　　　　如此地使教會內屬人性的導向願神性
-quidem ut in ea quod humanum est　　　　　　　　　的並從屬之，
-ordinetur ad divinum eique subordinetur,　　　　　　可見的導向不可見的，
-quod visibile ad invisibile, quod actionis　　　　　　行動導向默禱，
-ad contemplationem, et quod praesens ad　　　　　　並使現世的導向我們所追求的未來城
-　　　Unde cum Liturgia eos qui intus sunt　　　　　　因此，禮儀把那些在〔教會〕內的
-cotidie aedificet in tempulum sanctum in　　　　　　人每日建設為在主內的聖殿３，
-Domino, in habitaculum Dei in Spiritu³,　　　　　　成為在聖神內的天主的住所３，
-usque ad mensuram aetatis plenitudinis　　　　　　而達到其督周滿年歲的程度４，
-Christi⁴, miro modo simul vires eorum ad　　　　　己〔禮儀〕同時以奧妙的方式堅固他們
-praedicandum Christum roborat, et sic　　　　　　　以宣揚基督；並如此地把教會體示給
-*4002︰《羅馬彌撒經書》(Missale Romanum), 1962，聖神頌臨齋之後,九主日之晨歌經。
-*4002︰參照弗四－14。
-*4002︰參閱弗二21-22。
-*4002︰學堂弗四13。
+# 共 23 條中譯條目
 
 【DH 4006】
 6. Ideoque, sicut Christus missus est a Patre, ita et ipse Apostolos, repletos Spiritu Sancto, misit, non solum ut, praedicantes Evangelium omni creaturae', annuntiarent Filium Dei morte sua et resurrectione nos a potestate satanae et morte liberasse et in regnum Patris transtulisse, sed etiam ut, quod annuntiabant, opus salutis per Sacrificium et Sacramenta, circa quae tota vita liturgica vertit, exercerent. Sic per
