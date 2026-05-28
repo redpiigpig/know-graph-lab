@@ -768,6 +768,17 @@ import { hsscolP5432025 } from './21c-leo-xiv/hsscol-p543-2025'
 import { hsscolP5442025 } from './21c-leo-xiv/hsscol-p544-2025'
 import { hsscolP5452025 } from './21c-leo-xiv/hsscol-p545-2025'
 
+
+
+// ── 2026-05-28 hsscol Haiku OCR — 21c-benedict-xvi ──
+import { hsscolP3342008 } from './21c-benedict-xvi/hsscol-p334-2008'
+import { hsscolP3352009 } from './21c-benedict-xvi/hsscol-p335-2009'
+
+// ── 2026-05-28 hsscol Haiku OCR — 21c-francis ──
+import { hsscolP3292016 } from './21c-francis/hsscol-p329-2016'
+import { hsscolP3312016 } from './21c-francis/hsscol-p331-2016'
+import { hsscolP3322016 } from './21c-francis/hsscol-p332-2016'
+
 export const ALL_DOCUMENTS: PapalDocument[] = [
   laudatoSi2015,
   fratelliTutti2020,
@@ -1473,6 +1484,16 @@ export const ALL_DOCUMENTS: PapalDocument[] = [
   hsscolP5432025,
   hsscolP5442025,
   hsscolP5452025,
+
+
+  // ── 2026-05-28 hsscol Haiku — 21c-benedict-xvi ──
+  hsscolP3342008,
+  hsscolP3352009,
+
+  // ── 2026-05-28 hsscol Haiku — 21c-francis ──
+  hsscolP3292016,
+  hsscolP3312016,
+  hsscolP3322016,
 
 ]
 

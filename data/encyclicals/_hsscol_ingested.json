@@ -4937,5 +4937,60 @@
     "year": 2025,
     "title_zh": "第 40 屆世界青年日文告",
     "issuer": null
+  },
+  {
+    "p_id": "P329",
+    "slug": "hsscol-p329-2016",
+    "pope_slug": "francis",
+    "century": 21,
+    "tier": "message",
+    "category": "message",
+    "year": 2016,
+    "title_zh": "第 53 屆世界聖召祈禱日文告",
+    "issuer": null
+  },
+  {
+    "p_id": "P331",
+    "slug": "hsscol-p331-2016",
+    "pope_slug": "francis",
+    "century": 21,
+    "tier": "message",
+    "category": "message",
+    "year": 2016,
+    "title_zh": "「我喜歡仁愛勝過祭獻」（瑪9:13）",
+    "issuer": null
+  },
+  {
+    "p_id": "P332",
+    "slug": "hsscol-p332-2016",
+    "pope_slug": "francis",
+    "century": 21,
+    "tier": "message",
+    "category": "message",
+    "year": 2016,
+    "title_zh": "如同聖母那樣信賴慈悲的耶穌",
+    "issuer": null
+  },
+  {
+    "p_id": "P334",
+    "slug": "hsscol-p334-2008",
+    "pope_slug": "benedict-xvi",
+    "century": 21,
+    "tier": "message",
+    "category": "message",
+    "year": 2008,
+    "title_zh": "第 42 屆世界傳播日文告",
+    "issuer": null
+  },
+  {
+    "p_id": "P335",
+    "slug": "hsscol-p335-2009",
+    "pope_slug": "benedict-xvi",
+    "century": 21,
+    "tier": "message",
+    "category": "message",
+    "year": 2009,
+    "title_zh": "第 43 屆世界傳播日文告",
+    "issuer": null
   }
 ]
