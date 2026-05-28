@@ -46,11 +46,67 @@ description: 教宗訓導文獻對照工具（/encyclicals）— 4 世紀 Damasu
 >
 > 系統總計：206（原既有）+ 12（第二批對位補）+ 322（第三批新建）= **528 篇 papal-doc**（vue-tsc 過）
 >
-> **下輪 session 待補**：
-> - **B 區真正資料源**：vatican.va `/roman_curia/` 子站爬蟲（信理部 / 禮儀部 / 教育部 等 dicastery 站）— 真正的 B 區文件在這裡
-> - 88 篇 hsscol PDF/HTML 標題抽取失敗者 → Gemini OCR 救援
-> - A 區 4 篇段不齊 hotfix（lumen-fidei LA 缺 P5 / redemptor-hominis EN footer 雜訊 / redemptoris-missio ZH 只到 40/92 / ecclesia-de-eucharistia ZH 不同段號編排）
-> - 部分 hsscol 對位 slug 是 `hsscol-pXXX-YYYY` 而非 Latin name（因標題無 Latin）→ 後續可手動 rename 或補 Latin title
+> 2026-05-28（凌晨）：**Haiku 4.5 OCR 救援 65 篇 hsscol PDF / HTM + A 區 hotfix + B 區 2 篇 vatican.va + slug rename 20 篇**
+>
+> A 區段對齊 hotfix（3 篇對齊好）：
+> - `redemptor-hominis-1979` EN：拆 13kB 腳註串成 218 footnote-def + 修 `## 10.` heading → LA=EN=ZH=22 ✅
+> - `lumen-fidei-2013` LA：vatican.va 第 5 段未含 N. prefix 手補 → LA=EN=ZH=60 ✅
+> - `redemptoris-missio-1990` ZH：partial 接受（hsscol 僅譯 1-40，外部無完整 ZH）
+> - `ecclesia-de-eucharistia-2003`：ZH 用獨立段號編排，結構 mismatch（仍 deferred）
+>
+> B 區（curia）— vatican.va 信理部 **2 篇**：dignitas-infinita-2024（ZH 23kB） + iuvenescit-ecclesia-2016（PDF 29kB）。其他 dicastery 確認 ZH 文件極少（cfaith 整 241 中只 2 篇有中文）。
+>
+> 88 hsscol 失敗條目 retry：
+> - 23 篇 UTF-16-LE 編碼救回（discovery 沒嘗試此 encoding）
+> - 6 篇 pope-by-year fallback（屆數標題如「世界青年日文告」無教宗名）
+> - **65 篇 Claude Haiku 4.5 OCR 透過 Agent tool model='haiku' 並行處理** ★
+>   - 經文標註規則：`*經文*（瑪5:3-7）` / `（瑪5:3, 7）`（同章跳節）/ `（瑪5:3, 8:4）`（同卷跨章）/ `（瑪5:3；弟2:3）`（跨卷）
+>   - 含 21c-leo-xiv 新建資料夾 7 篇（青年禧年彌撒講道 / 世界青年日文告等）
+>   - 早 OCR 37 篇 post-process 補經文標註 + 47 篇格式正規化（、→ ,）
+>   - 5 篇早期 retry 編碼壞檔重 OCR + 5 篇未入庫 (P329/P331/P332/P334/P335) 補進
+>
+> 20 篇 A 區 marquee slug rename（`hsscol-pXXX-YYYY` → kebab-Latin）：
+> familiaris-consortio-1981 / reconciliatio-et-paenitentia-1984 / redemptoris-custos-1989 /
+> pastores-dabo-vobis-1992 / ordinatio-sacerdotalis-1994 / vita-consecrata-1996 /
+> ad-tuendam-fidem-1998 / fidei-depositum-1992 / misericordia-dei-2002 /
+> ex-corde-ecclesiae-1990 / vos-estis-lux-mundi-2019 / patris-corde-2020 等。
+>
+> **hsscol 全 467 P# 條目 status=ok**（discovery 0 fail）。系統總計 **~640+ 篇 papal-doc**。
+>
+> ---
+>
+> 🟡 **下輪 session — 中世紀（4-12c）** ⭐ user 2026-05-28 標記
+>
+> 既有覆蓋的 4-12c 教宗只有 5c Leo I *Tome of Leo* 449 + 11c Gregory VII *Dictatus Papae* 1075 兩篇 marquee（從 CCEL Schaff Vol 12 + Wikisource）。其他 4-12c 教宗全部缺。SKILL.md §2 既有規劃的「Phase 5 — 等 fathers 中譯成熟」可啟動。
+>
+> 下輪重點：
+> - **5c Leo I 「大良」**（440-461）：96 sermon + 173 letters。CCEL Schaff NPNF2 Vol 12 全文已下載，要寫 CCEL scraper（HTML 結構不同於 papalencyclicals.net）
+> - **6c Gregory I 「大額我略」**（590-604）：*Regulae Pastoralis* 591 / *Moralia in Iob* / 致 Augustine of Canterbury 諸信 / 《Registrum Epistolarum》14 冊 ~850 信。CCEL Schaff Vol 12-13 + Library of Fathers
+> - **4c Damasus I + Siricius**：*Tomus Damasi* 382 + *Directa* 385（首封 Decretal）— Migne PL 13 / Schaff NPNF2 Vol 14
+> - **5c Innocent I / Celestine I / Gelasius I**：Pelagius 論辯 + Nestorius 論辯 + 兩權說
+> - **6c Hormisdas** *Libellus Hormisdae* 515（東西合一公式）
+> - **7c Honorius I / Martin I**：Monothelitism 危機
+> - **8c Hadrian I**：致 Charlemagne 諸信
+> - **9c Nicholas I** *Responsa ad consulta Bulgarorum* 866（對保加利亞 106 問答）
+> - **11c Leo IX**（1054 東西分裂諸信）/ **Urban II**（1095 號召十字軍 Clermont 演說）
+> - **12c Alexander III**（封聖權集中改革）/ **Innocent III**（1198-1216，盛期權威，*Venerabilem Fratrem* 1202）
+>
+> 資料源（5 層 fallback，順序）：
+> 1. CCEL Schaff NPNF2 Vol 12-13（已下載）— 英文最佳
+> 2. Migne PL（Patrologia Latina）archive.org — 拉丁原文 4c-12c 全集
+> 3. Wikisource Latin/English — 中世紀詔書部分
+> 4. Bullarium Romanum — 17-18c 編纂的中世紀詔書集
+> 5. 紙本 Denzinger / 《天主教大公會議文獻彙編》— 中文摘錄
+>
+> 中譯來源：
+> - hsscol：4-12c 極少（hsscol 主力近現代）
+> - [[fathers-translation]]：Schaff Vol 12-13 翻譯成熟後同步入庫；中世紀教父 = 中世紀教宗，內容重疊
+> - [[denzinger-fix]]：DH 100-1500 範圍對位（Trent 之前部分）
+> - 需要 Gemini batch 翻譯 placeholder 補（最後手段）
+>
+> 預期工作量：~30 篇早期教宗 + 上百封 Leo I/Gregory I letter/sermon = 100-200 新 docs
+>
+> ---
 >
 > **本 skill 與 [[scripture-canon-portal]] 的分工**：
 > - scripture-canon-portal：**集體**文件（大公會議產出的信經 / canons / dogmatic decree）+ 信條 + 教會法規 + 教父著作搜尋 + 聖經對照 + 典外

@@ -27,7 +27,82 @@
 - ✅ **B 區 curia 內容層掃描**（`_hsscol_b_zone_classify.py`）—— 6 candidates 全為 false positive；hsscol 實質沒有 B 區文件
 - ✅ **A 區段對齊審計**（`data/encyclicals/_a_zone_alignment.md`）—— 206 篇審計，14 篇段號不齊（5 篇影響 UI）
 
-### 本輪 ingest 分布（322 篇新建 + 12 篇補入）
+### 2026-05-28（凌晨）續：Haiku OCR + B 區 vatican + A 區 hotfix
+
+**A 區 hotfix（3 對齊好）**
+- ✅ `redemptor-hominis-1979`：EN 拆 13kB 腳註串成 218 footnote-def + 修 `## 10.` heading → LA/EN/ZH 22 全齊
+- ✅ `lumen-fidei-2013`：vatican.va 第 5 段缺 `N.` prefix 手補 → 60 全齊
+- ⚠️ `redemptoris-missio-1990`：hsscol 譯本僅含 1-40，外部無完整 ZH，接受 partial
+- ⚠️ `ecclesia-de-eucharistia-2003`：ZH 用獨立段號編排，結構 mismatch（deferred）
+
+**B 區 vatican.va ingest 2 篇**
+- `dignitas-infinita-2024`（信理部宣言，ZH 23kB）
+- `iuvenescit-ecclesia-2016`（信理部訓令，ZH PDF 29kB）
+- 其他 dicastery 確認 vatican.va ZH 文件極少（CDF 241 中只 2 篇有中文）
+
+**88 hsscol 失敗條目 retry**
+- 23 篇 UTF-16-LE 編碼救回（原 discovery 沒嘗試此 encoding）
+- 6 篇 pope-by-year fallback
+- **65 篇 Claude Haiku 4.5 OCR**（透過 Agent tool `model='haiku'` 並行處理 PDF）
+- 8 篇早期 retry 編碼壞檔重 OCR + 5 篇未入庫補進
+
+**slug rename 20 篇 A 區 marquee**（`hsscol-pXXX-YYYY` → kebab-Latin）：
+- JP2：familiaris-consortio-1981 / vita-consecrata-1996 / pastores-dabo-vobis-1992 / ordinatio-sacerdotalis-1994 / ad-tuendam-fidem-1998 / fidei-depositum-1992 / ex-corde-ecclesiae-1990 / misericordia-dei-2002 / redemptoris-custos-1989 / reconciliatio-et-paenitentia-1984 等
+- Francis：vos-estis-lux-mundi-2019 / patris-corde-2020
+- Pius XII：sacra-virginitas-1954 / miranda-prorsus-1957 / cupimus-imprimis-1952 / christus-dominus-1953
+- Paul VI：sacram-liturgiam-1964 / pro-comperto-sane-1967 / studia-latinitatis-1964
+
+**經文標註規則**（user 訂正 2026-05-28）：
+- 連續節：`*經文*（瑪5:3-7）`
+- 同章跳節：`*經文*（瑪5:3, 7）`（半形逗號＋空格）
+- 同卷跨章：`*經文*（瑪5:3, 8:4）`
+- 跨卷：`*經文*（瑪5:3；弟2:3）`（中文分號 ；）
+- 已正規化 47 篇既有 chinese.txt（、→ ,）
+
+**系統總計**：~640+ 篇 papal-doc（vue-tsc 通過）
+
+---
+
+## 🟡 下輪 session — 中世紀（4-12c）⭐ user 標記
+**user 2026-05-28：「我之後要開新的 session 做中世紀的」**
+
+既有覆蓋的 4-12c 教宗只有 2 篇 marquee：
+- 5c Leo I *Tome of Leo* 449（CCEL Schaff Vol 12）
+- 11c Gregory VII *Dictatus Papae* 1075（Wikisource）
+
+**下輪重點教宗 / 文件**：
+- **5c Leo I「大良」**（440-461）：96 sermon + 173 letters。CCEL Schaff NPNF2 Vol 12 全文已下載
+- **6c Gregory I「大額我略」**（590-604）：*Regulae Pastoralis* 591 / *Moralia in Iob* / 致 Augustine of Canterbury 諸信
+- **4c Damasus I + Siricius**：*Tomus Damasi* 382 + *Directa* 385（首封 Decretal）
+- **5c Innocent I / Celestine I / Gelasius I**：Pelagius / Nestorius 論辯 + 兩權說
+- **6c Hormisdas** *Libellus Hormisdae* 515
+- **7c Honorius I / Martin I**：Monothelitism 危機
+- **8c Hadrian I**：致 Charlemagne 諸信
+- **9c Nicholas I** *Responsa ad consulta Bulgarorum* 866
+- **11c Leo IX**（1054 東西分裂諸信）/ **Urban II**（1095 號召十字軍 Clermont 演說）
+- **12c Alexander III** / **Innocent III**
+
+**資料源優先順序**：
+1. **CCEL Schaff NPNF2 Vol 12-13**（英文最佳；已下載）
+2. **Migne PL**（Patrologia Latina）archive.org — 拉丁原文 4c-12c 全集
+3. **Wikisource Latin/English** — 中世紀詔書部分
+4. **Bullarium Romanum** archive.org
+5. 紙本 Denzinger / 《天主教大公會議文獻彙編》— 中文摘錄
+
+**中譯來源**：
+- hsscol 對 4-12c 極少（主力近現代）
+- [[fathers-translation]] Schaff 翻譯成熟後同步入庫
+- [[denzinger-fix]] DH 100-1500 範圍對位
+- Gemini batch 翻譯 placeholder 補（最後手段）
+
+**預期工作量**：~30 篇早期教宗 + 上百封 Leo I/Gregory I letter/sermon = 100-200 新 docs
+
+**新 session 啟動 prompt 建議**：
+> 「我要做中世紀（4-12c）的教宗訓導文獻入庫。先讀 `data/encyclicals/_CURIA_README.md` 的『下輪中世紀』段、`SKILL.md` 的 Phase 5 規劃、和 `data/encyclicals/_todo.md` 的 4-12c gap 清單，然後從 5c Leo I 開始：寫 CCEL Schaff scraper 抓他的 96 sermon + 173 letter（已下載的 Schaff Vol 12），新建 `5c-leo-i/` 下諸 doc。」
+
+---
+
+### 2026-05-28（傍晚）：ingest 分布（322 篇新建 + 12 篇補入）
 - A 區 marquee teaching 新增 26 篇（含 Familiaris Consortio 1981 / Reconciliatio et Paenitentia 1984 / Vita Consecrata 1996 / Ex Corde Ecclesiae 1990 / Pastores Dabo Vobis 1992 / Fidei Depositum 1992 / Ordinatio Sacerdotalis 1994 / Patris Corde 2020 等）
 - C 區 牧靈／訊息新增 296 篇（廣播詞 260 / 演說 34 / 自動詔書 6 / 憲令 5 / 勸諭 5 / 通諭 4 / 使徒書信 4 / 詔書 2 / 致函 2）
 - B 區 curia：0 篇（hsscol 內容掃描確認無）
