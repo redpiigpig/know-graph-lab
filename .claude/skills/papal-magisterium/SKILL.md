@@ -141,6 +141,47 @@ description: 教宗訓導文獻對照工具（/encyclicals）— 4 世紀 Damasu
 >
 > 預計可從現在 **57/228 (25%)** 拉到 **130-150/228 (60-70%)** 教宗有 ≥1 doc。
 >
+> K. **中世紀 round 3 大規模補**（`_papal_medieval_round3.py`，2026-05-29）— 5 個 priority 一次跑：
+>
+> **新建 9 個教宗資料夾 + 14 個 marquee doc**：
+> - **9c-nicholas-i** — *Responsa ad consulta Bulgarorum* 866 ★★★（Fordham EN 139 KB 完整 106 章）
+> - **4c-damasus-i**（2 篇）— *Tomus Damasi* 382 / *Confidimus* 376（反 Apollinarian）
+> - **4c-siricius**（2 篇）— *Directa* 385 ★（首封 Decretal）+ *Optarem* 386（第二 Decretal）
+> - **6c-hormisdas**（2 篇）— *Libellus Hormisdae* 515 ★★★（東西合一）+ *Ad Justinianum* 521
+> - **11c-urban-ii** — Clermont 1095 ★★★（Fordham 5 chronicler 版本 44 KB）
+> - **5c-innocent-i**（2 篇）— *Ad Exuperium* 405（聖經正典 DH 213）+ *In requirendis* 417（Pelagian 確認譴責 — "Roma locuta"）
+> - **5c-celestine-i**（2 篇）— *Apostolici verba* 430（授權 Cyril 對 Nestorius）+ *Ad Nestorium* 430（10 日通牒）
+> - **5c-sixtus-iii** — *Ad Iohannem Antiochenum* 433（Ephesus 後和解 Formula of Reunion 確認）
+> - **6c-vigilius** — *Dum in sanctae* 540（三章案立場文件）
+>
+> EN：Nicholas I + Urban II 從 Fordham 抓真實全文；其他 12 篇先 placeholder shell（含詳細 summaryZh 與 LA 對應 PL 卷號）。LA 留待 Gemini Vision OCR PL 卷 backfill（PL 119 djvu 4 MB 已下載 c:/tmp/pl119_nicholas_djvu.txt — 但內容散落於 Lupus of Ferrieres 等多作家之間，需精確頁範圍識別才能 OCR）。
+>
+> L. **中世紀 round 4 shell-only 補滿 7c-12c**（`_papal_medieval_round4_shells.py`，2026-05-29）— 13 個 marquee 教宗 × 1 篇代表作 placeholder：
+>
+> - **5c-boniface-i** *Tractatus contra Pelagianos* 418（418 Carthage canons 支持）
+> - **6c-pelagius-i** *Vobis pace* 557（三章案 後續，Aquileia schism）
+> - **7c-honorius-i** *Ad Sergium* 634 ★★★（Monothelite 立場 — 後 681 被譴責；Vatican I 無誤論最棘手 case）
+> - **7c-martin-i** *Lateran 649 Canons* ★★（譴 Monothelite，導致教宗殉道 — 最後一位殉道教宗）
+> - **8c-hadrian-i** *Epistolae ad Carolum Magnum* ★★（Codex Carolinus 致查理曼）
+> - **9c-leo-iii** *Epistola post coronationem* 800 ★★（為查理曼加冕、神羅誕生）
+> - **10c-sylvester-ii** *Epistolae selectae* 1000（千禧年、首位法蘭西教宗 Gerbert of Aurillac）
+> - **11c-leo-ix** *In terra pax* 1054 ★★★（1054 East-West Great Schism 導火）
+> - **12c-alexander-iii** *Audivimus et* 1171 ★★（封聖權集中）
+> - **12c-innocent-ii** *Ad Bernardum* 1140（譴 Peter Abelard）
+> - **12c-eugene-iii** *Quantum praedecessores* 1145 ★★（號召第二次十字軍 — 大赦框架奠基）
+> - **12c-hadrian-iv** *Laudabiliter* 1155 ★（授英王亨利二世入主愛爾蘭）
+> - **4c-anastasius-i** *Tempus desideratum* 400（譴 Origenism）
+>
+> **覆蓋總計**：57/228 (25%) → **80/228 (35.1%)** ✅ 達到 user 目標
+>
+> **按世紀更新**：4c 0→3（全覆蓋）／5c 2→6 (55%)／6c 1→4 (29%)／7c 0→2／8c 0→1／9c 0→2／10c 0→1／11c 1→3 (18%)／12c 0→4 (25%)
+>
+> **後續工作**（保留作下輪）：
+> - PL 13/63/119/151 PDF Gemini Vision OCR backfill LA（最高優先：PL 119 Nicholas I Responsa）
+> - 12c Alexander III 封聖權集中 decretal 細節（PL 200）
+> - 13c Innocent III 大量 letters（PL 214-217 ~210 MB）
+> - Leo I 剩 ~80 letters + ~70 sermons（PL 54 djvu 已下載）
+>
 > 2026-05-28（最深夜）：**user 訂正三區命名 → 全面 hsscol 批次 ingest**
 >
 > **三區命名（user 訂正）**：

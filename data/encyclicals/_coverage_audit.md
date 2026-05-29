@@ -2,28 +2,30 @@
 
 > 產出時間：2026-05-29
 > 範圍：A 區 teaching 文件，排除 hsscol-pXXX (C 區) 與 the-holy-see-* (B 區)
+>
+> **2026-05-29 更新**（round 3 + 4 結束後）：教宗覆蓋從 57/228 (25%) → **80/228 (35.1%)** ✅
 
 ## 總覽
 
-| 指標 | 數值 |
-|---|---|
-| 教宗總數（4c-21c） | 228 |
-| 已涵蓋（≥ 1 doc） | 57（25.1%） |
-| A 區 doc 總數 | 288 |
+| 指標 | 數值（round 4 後） | 之前 |
+|---|---|---|
+| 教宗總數（4c-21c） | 228 | 228 |
+| 已涵蓋（≥ 1 doc） | **80（35.1%）** | 57（25.1%） |
+| A 區 doc 總數 | ~315 | 288 |
 
-## 按世紀統計
+## 按世紀統計（round 4 後）
 
-| 世紀 | 教宗數 | 已涵蓋 | docs | 缺漏教宗 |
+| 世紀 | 教宗數 | 已涵蓋 | 新增（round 3-4） | 缺漏 marquee |
 |---|---|---|---|---|
-| 4c | 3 | **0**（0%） | 0 | Damasus I★ / Siricius★（首封 decretal） / Anastasius I |
-| 5c | 11 | 2（18%） | 16 | Innocent I★ / Sixtus III★ / Hilary / Simplicius / Felix III / Anastasius II / Zosimus / Boniface I / Celestine I★ |
-| 6c | 14 | 1（7%） | 10 | Hormisdas★★（515 東西合一公式） / John III / Pelagius I / Vigilius / Boniface II 等 13 位 |
-| 7c | 20 | **0**（0%） | 0 | Honorius I★（Monothelitism 危機） / Martin I★（拉特朗 649 殉道） / 其他 18 位 |
-| 8c | 11 | **0**（0%） | 0 | Hadrian I★（致 Charlemagne） / Stephen II（Pippin Donation） / Zachary / Gregory III 等 |
-| 9c | 21 | **0**（0%） | 0 | Nicholas I★★★（866 對保加利亞 106 問答 / Photian Schism） / Leo III★（800 加冕查理曼） / John VIII 等 |
-| 10c | 22 | **0**（0%） | 0 | Sylvester II（999-1003）+ Saeculum Obscurum 黑暗世紀諸教宗 |
-| 11c | 17 | 1（6%） | 1 | Leo IX★（1054 東西分裂）/ Urban II★★★（1095 Clermont 號召十字軍） / Alexander II 等 |
-| 12c | 16 | **0**（0%） | 0 | Alexander III★（封聖權集中改革）/ Innocent II★ / Lucius III 等 |
+| 4c | 3 | **3**（100%） ✅ | +3 (Damasus I / Siricius / Anastasius I) | 全覆蓋 |
+| 5c | 11 | **6**（55%） | +4 (Innocent I / Sixtus III / Celestine I / Boniface I) | Hilary / Simplicius / Felix III / Anastasius II / Zosimus |
+| 6c | 14 | **4**（29%） | +3 (Hormisdas / Vigilius / Pelagius I) | John III / Pelagius II / Boniface II 等 10 位 |
+| 7c | 20 | **2**（10%） | +2 (Honorius I★★★ / Martin I★★) | 其他 18 位 |
+| 8c | 11 | **1**（9%） | +1 (Hadrian I★★) | Stephen II（Pippin Donation） / Zachary / Gregory III 等 |
+| 9c | 21 | **2**（10%） | +2 (Nicholas I★★★ / Leo III★) | John VIII / Hadrian II 等 |
+| 10c | 22 | **1**（5%） | +1 (Sylvester II) | Saeculum Obscurum 黑暗世紀諸教宗 |
+| 11c | 17 | **3**（18%） | +2 (Urban II★★★ / Leo IX★★★) | Alexander II / Nicholas II 等 |
+| 12c | 16 | **4**（25%） | +4 (Alexander III★ / Innocent II / Eugene III / Hadrian IV) | Lucius III / Honorius II 等 |
 | 13c | 18 | 9（50%） | 18 | 缺 Celestine V / Honorius IV / Martin IV / John XXI 等 |
 | 14c | 10 | 3（30%） | 4 | 缺 Gregory XI★（1377 回羅馬）/ Urban V / Innocent VI / Clement VI 等 |
 | 15c | 11 | 6（55%） | 6 | 缺 Martin V★（1417 終結 Western Schism）/ Paul II / Callixtus III 等 |

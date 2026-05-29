@@ -344,6 +344,71 @@ const vigiliusLoaders = import.meta.glob(
   { query: '?raw', import: 'default' },
 ) as Record<string, () => Promise<string>>
 
+const bonifaceILoaders = import.meta.glob(
+  './5c-boniface-i/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const pelagiusILoaders = import.meta.glob(
+  './6c-pelagius-i/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const honoriusILoaders = import.meta.glob(
+  './7c-honorius-i/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const martinILoaders = import.meta.glob(
+  './7c-martin-i/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const hadrianILoaders = import.meta.glob(
+  './8c-hadrian-i/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const leoIiiLoaders = import.meta.glob(
+  './9c-leo-iii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const sylvesterIiLoaders = import.meta.glob(
+  './10c-sylvester-ii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const leoIxLoaders = import.meta.glob(
+  './11c-leo-ix/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const alexanderIiiLoaders = import.meta.glob(
+  './12c-alexander-iii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const innocentIiLoaders = import.meta.glob(
+  './12c-innocent-ii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const eugeneIiiLoaders = import.meta.glob(
+  './12c-eugene-iii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const hadrianIvLoaders = import.meta.glob(
+  './12c-hadrian-iv/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const anastasiusILoaders = import.meta.glob(
+  './4c-anastasius-i/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
 /** popeSlug → loaders；新增教宗時加一條 */
 const POPE_LOADERS: Record<string, Record<string, () => Promise<string>>> = {
   'francis': francisLoaders,
@@ -412,6 +477,19 @@ const POPE_LOADERS: Record<string, Record<string, () => Promise<string>>> = {
   'celestine-i': celestineILoaders,
   'sixtus-iii': sixtusIiiLoaders,
   'vigilius': vigiliusLoaders,
+  'boniface-i': bonifaceILoaders,
+  'pelagius-i': pelagiusILoaders,
+  'honorius-i': honoriusILoaders,
+  'martin-i': martinILoaders,
+  'hadrian-i': hadrianILoaders,
+  'leo-iii': leoIiiLoaders,
+  'sylvester-ii': sylvesterIiLoaders,
+  'leo-ix': leoIxLoaders,
+  'alexander-iii': alexanderIiiLoaders,
+  'innocent-ii': innocentIiLoaders,
+  'eugene-iii': eugeneIiiLoaders,
+  'hadrian-iv': hadrianIvLoaders,
+  'anastasius-i': anastasiusILoaders,
 }
 
 /** popeSlug → 資料夾前綴；reverse map from POPE_LOADERS keys */
@@ -482,6 +560,19 @@ const POPE_FOLDER: Record<string, string> = {
   'celestine-i': './5c-celestine-i',
   'sixtus-iii': './5c-sixtus-iii',
   'vigilius': './6c-vigilius',
+  'boniface-i': './5c-boniface-i',
+  'pelagius-i': './6c-pelagius-i',
+  'honorius-i': './7c-honorius-i',
+  'martin-i': './7c-martin-i',
+  'hadrian-i': './8c-hadrian-i',
+  'leo-iii': './9c-leo-iii',
+  'sylvester-ii': './10c-sylvester-ii',
+  'leo-ix': './11c-leo-ix',
+  'alexander-iii': './12c-alexander-iii',
+  'innocent-ii': './12c-innocent-ii',
+  'eugene-iii': './12c-eugene-iii',
+  'hadrian-iv': './12c-hadrian-iv',
+  'anastasius-i': './4c-anastasius-i',
 }
 
 function resolveLoader(popeSlug: string, textKey: string): (() => Promise<string>) | undefined {

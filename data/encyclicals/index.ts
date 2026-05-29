@@ -905,7 +905,46 @@ import { adIohannemAntiochenum433 } from './5c-sixtus-iii/ad-iohannem-antiochenu
 
 import { adFlavianum540 } from './6c-vigilius/ad-flavianum-540'
 
+import { tractatusContraPelagianos418 } from './5c-boniface-i/tractatus-contra-pelagianos-418'
+
+import { vobisPace557 } from './6c-pelagius-i/vobis-pace-557'
+
+import { adSergium634 } from './7c-honorius-i/ad-sergium-634'
+
+import { lateran649Canons } from './7c-martin-i/lateran-649-canons'
+
+import { epistolaeAdCarolumMagnum } from './8c-hadrian-i/epistolae-ad-carolum-magnum'
+
+import { epistolaDeCoronatione800 } from './9c-leo-iii/epistola-de-coronatione-800'
+
+import { epistolaeSelectae1000 } from './10c-sylvester-ii/epistolae-selectae-1000'
+
+import { inTerraPax1054 } from './11c-leo-ix/in-terra-pax-1054'
+
+import { ineffabilisDeus1171 } from './12c-alexander-iii/ineffabilis-deus-1171'
+
+import { epistolaAdBernard1140 } from './12c-innocent-ii/epistola-ad-bernard-1140'
+
+import { quantumPraedecessores1145 } from './12c-eugene-iii/quantum-praedecessores-1145'
+
+import { laudabiliter1155 } from './12c-hadrian-iv/laudabiliter-1155'
+
+import { tempusDesideratum400 } from './4c-anastasius-i/tempus-desideratum-400'
+
 export const ALL_DOCUMENTS: PapalDocument[] = [
+  tempusDesideratum400,
+  laudabiliter1155,
+  quantumPraedecessores1145,
+  epistolaAdBernard1140,
+  ineffabilisDeus1171,
+  inTerraPax1054,
+  epistolaeSelectae1000,
+  epistolaDeCoronatione800,
+  epistolaeAdCarolumMagnum,
+  lateran649Canons,
+  adSergium634,
+  vobisPace557,
+  tractatusContraPelagianos418,
   adFlavianum540,
   adIohannemAntiochenum433,
   adNestorium430,
