@@ -104,9 +104,11 @@
                failed to extract volumes, ALL chapters land here — so we
                still need to show the nested section anchors under the
                current chapter.
-               TOC items use real <a href> so right-click → 開新分頁 works. -->
-          <div v-if="frontMatter.length" class="space-y-0.5 mb-3">
-            <template v-for="entry in frontMatter" :key="entry.chunk_index">
+               TOC items use real <a href> so right-click → 開新分頁 works.
+               Index-type entries are folded into a single collapsible
+              「索引」group so they don't dominate the top of the list. -->
+          <div v-if="frontMatterMain.length || indexEntries.length" class="space-y-0.5 mb-3">
+            <template v-for="entry in frontMatterMain" :key="entry.chunk_index">
               <div class="group relative">
                 <a :href="`?page=${entry.chunk_index + 1}`"
                   @click.prevent="goPage(entry.chunk_index + 1)"
@@ -136,6 +138,36 @@
                 </a>
               </div>
             </template>
+
+            <!-- Combined「索引」collapsible group -->
+            <div v-if="indexEntries.length" class="mt-1">
+              <button @click="toggleIndex"
+                class="w-full flex items-center gap-1 px-2 py-2 rounded text-sm font-medium text-stone-700 hover:bg-stone-50 transition">
+                <span class="text-stone-400 text-xs w-3 inline-block">{{ indexExpanded ? '▾' : '▸' }}</span>
+                <span class="flex-1 text-left">索引</span>
+                <span class="text-xs text-stone-400">{{ indexEntries.length }}</span>
+              </button>
+              <div v-if="indexExpanded" class="space-y-0.5 mt-0.5 ml-1 border-l border-stone-200 pl-2">
+                <template v-for="entry in indexEntries" :key="entry.chunk_index">
+                  <div class="group relative">
+                    <a :href="`?page=${entry.chunk_index + 1}`"
+                      @click.prevent="goPage(entry.chunk_index + 1)"
+                      :title="entry.title"
+                      :class="[tocBtnCls(entry), 'w-full flex items-center gap-1.5 no-underline']">
+                      <span class="flex-1 text-left truncate">{{ entry.title }}</span>
+                      <span v-if="bookmarkByChunk.get(entry.chunk_index)"
+                        class="text-[10px] px-1 py-px rounded bg-purple-100 text-purple-700 font-medium flex-shrink-0">
+                        📅 {{ fmtBookmarkDate(bookmarkByChunk.get(entry.chunk_index)!.created_at) }}
+                      </span>
+                    </a>
+                    <button v-if="bookmarkByChunk.get(entry.chunk_index)"
+                      @click.stop="deleteBookmark(bookmarkByChunk.get(entry.chunk_index)!.id)"
+                      title="移除書籤"
+                      class="absolute right-1 top-1/2 -translate-y-1/2 hidden group-hover:flex w-4 h-4 items-center justify-center rounded text-purple-700 hover:bg-purple-200 text-xs">×</button>
+                  </div>
+                </template>
+              </div>
+            </div>
           </div>
 
           <!-- Volume row (single-page volume → link; multi-page → ▸ toggle
@@ -865,6 +897,22 @@ const pageVolume = computed<string | null>(() => {
 // ── TOC grouping ──
 // Front matter = chunks with no volume (cover / preface / indexes).
 const frontMatter = computed(() => toc.value.filter(e => !e.volume));
+
+// Treat anything that looks like an index (希臘文/希伯來文/法文/印刷版頁碼 索引,
+// English "Index of …") as belonging to a single collapsible "索引" group, so
+// they don't dominate the top of the front-matter list.
+function isIndexEntry(e: TocEntry): boolean {
+  const t = (e.title || "").trim();
+  return /索引$|^索引/.test(t)
+      || /Index(?:es|ices)?(?: of|:|$)/i.test(t)
+      || /(Scripture|Greek|Hebrew|Latin|French)\s+(?:Index|Words?\s*Index|Words?\s*and\s*Phrases?)/i.test(t);
+}
+// Index entries grouped — shown as one collapsible "索引" row.
+const indexEntries = computed(() => frontMatter.value.filter(isIndexEntry));
+// Front matter MINUS index entries (cover, preface, etc. stay flat).
+const frontMatterMain = computed(() => frontMatter.value.filter(e => !isIndexEntry(e)));
+const indexExpanded = ref(false);
+function toggleIndex() { indexExpanded.value = !indexExpanded.value; }
 
 // Volumes = grouped by volume name, preserving order of first appearance.
 const volumes = computed<VolumeGroup[]>(() => {
