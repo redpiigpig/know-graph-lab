@@ -22,12 +22,20 @@ description: Denzinger《公教會之信仰與倫理教義選集》(ebook_id 568
 | Phase 0 audit | ✅ baseline 967 actionable pages |
 | Phase 1 column-aware re-OCR | ✅ **967 / 967 (100%)** — Haiku 963 頁 + Gemini fallback 4 頁 |
 | Phase 2 consolidate (recolumn overlay 加在 segmenter) | ✅ |
-| Phase 3 segmenter — divider-aware 模式 | ✅ 3913 chunks |
+| Phase 3 segmenter — divider-aware 模式 | ✅ 3913 chunks → re-segmented 2381 chunks (見下) |
 | Phase 3.5 sidebar TOC 中文標題 + 3-level 樹 | ✅ |
 | Phase 4 /creeds 重補（32 份）| ✅ |
 | medieval-09/10/11 DH range 修正 | ✅ (Lateran I/II/III，已對照詳細目錄驗證) |
+| **第一部分信經 DH 1-76 缺漏修復** (commit ad24ba7) | ✅ 見 ↓ |
 
 Reader 端 Denzinger 已是完整拉中對照版。
+
+### 2026-05-29 第二輪修正 — DH 1-76 + segmenter regex
+- 補 OCR 7 頁（pp 78/89/95-98/100）— Haiku 6 頁 + Gemini 1 頁
+- `segment_denzinger.py::overlay_recolumn()` 加 inject 邏輯：recolumn 有但 main JSONL 沒對應 page 的，會被當新 page 注入（共 31 頁）
+- `DH_MARKER` regex 從 `\d{3,5}` → `\d{1,5}` + 字母 guard（必須跟字母開頭內容）
+- 結果：DH range 從不合理的 101-8445 收斂到 1-5597；dupes 189→73、non-monotonic 122→93；sidebar 第一部分→簡單的信經 出現 DH 3/4/5/6/7 真實 entries
+- chunk 8 DH 1924 誤判（原 SKILL.md 第 5 項）連帶自動修正
 
 ---
 
@@ -35,32 +43,13 @@ Reader 端 Denzinger 已是完整拉中對照版。
 
 按優先序，每項都是 self-contained 可單獨處理。
 
-### 1. **第一部分信經 (DH 1-76) 整段缺漏** ⭐ 最影響 UX
+### ~~1. 第一部分信經 (DH 1-76) 整段缺漏~~ ✅ 2026-05-29 修
 
-**症狀**：sidebar「第一部分：信經」目前只 1 個入口（chunk 7 的引言頁），看不到宗徒信經 / 尼西亞信經 等正文。第二部分 DH 100+ 才有條目。
+實際根因有兩條（在第二輪修正記錄裡）：
+- `overlay_recolumn()` 只 overlay 不 inject — recolumn JSONL 已有 pp 76-100 但 main JSONL 沒對應 page，所以從未進 segmenter
+- `DH_MARKER` regex 限制 3-5 位數，DH 1-76 完全抓不到
 
-**根因**：PDF pp 76-87（含 DH 1-76 內容）在 main JSONL 沒對應 chunk。可能：
-- 原 OCR consolidate 階段這些頁被視為空頁
-- 或者 segmenter 把這些頁的內容誤判 dh_number（chunk 8 page 88 內容是宗徒信經「我信天主，全能的父」但被標 DH 1924）
-
-**驗證**：
-```bash
-python -X utf8 -c "
-import json
-from pathlib import Path
-for line in Path(r'G:/我的雲端硬碟/資料/電子書/_chunks/568726d3-967e-457a-ab69-7452b21d606f.jsonl').open(encoding='utf-8'):
-    c = json.loads(line)
-    pn = c.get('page_number')
-    if pn and 73 <= pn <= 95:
-        print(f'[{c[\"chunk_index\"]:03d}] page={pn} dh={c.get(\"dh_number\")} type={c.get(\"section_type\")}')
-"
-```
-
-**修法**（建議流程）：
-1. 直接抓 PDF pp 76-87 的 raw text，看內容真的是什麼
-2. 把這 12 頁丟給 `_denzinger_recolumn_ocr.py --pages 76 77 78 ... 87` 重 OCR
-3. 重跑 segment + relabel — 應該會冒出新的 DH 1-76 entries
-4. chunk 8 被誤判的 DH 1924 應該被覆蓋
+兩個都修了 → sidebar 第一部分→簡單的信經 出現 DH 3/4/5/6/7 真實 entries。
 
 ### 2. **附錄五新教信條 (DH 5500-5702) 沒 /creeds 出口**
 
@@ -99,11 +88,20 @@ chunks 存在 main JSONL（已 OCR）但 `_denzinger_to_creeds.py` 的 `COUNCIL_
 
 **修法**：改寫 ENTRY_START_RE + COUNCIL_HINT 處理 multi-line entry layout。改完 re-run `_denzinger_parse_toc.py` + `_denzinger_relabel.py`。
 
-### 5. **chunk 8 DH 1924 誤判**
+### ~~5. chunk 8 DH 1924 誤判~~ ✅ 2026-05-29 連帶修
 
-chunk 8 (page 88) content 開頭是「我信天主，全能的父，天及地的創造者」— 這是宗徒信經（DH 10/30 區段），但被標 `dh_number=1924`。Segmenter 在 page 內找到 stray 「1924」當 DH marker。
+DH_MARKER 加字母 guard 後不再把 stray 數字當 DH。
 
-跟 #1 一起修（重 OCR + 重 segment 應該會自動修正）。
+### 6. **詳細目錄 page 28-67 沒進 main JSONL** ⭐ 下次起手
+
+意外發現（修第 1 項過程中）：詳細目錄正體跨 pp 21-67，但 main JSONL chunk 6 (page 68) 只包含詳細目錄末段（4180+ Vatican II）。pp 28-67 之間有近 40 頁詳細目錄沒進 chunks。
+
+**現況**：`scripts/_denzinger_toc/entries.json` 仍是過去 session 跑出的完整版（包含 DH 1-76 標題），所以 sidebar 暫時看起來正常。**重跑 `_denzinger_parse_toc.py` 之前**必須先解決 pp 28-67 注入問題，否則 entries.json 會退化。
+
+**修法**：
+- 先確認 pp 28-67 在 recolumn JSONL 有沒有 — 沒有就 `_denzinger_recolumn_ocr.py --pages 28..67`
+- 改 `_denzinger_parse_toc.py` 不要只讀 chunk_index=6，改成合併 `chunk_type=='header' AND page in 21..68 AND content 含「詳細目錄」` 所有 chunks
+- 這項解了，第 4 項（多行 council header）才有意義跑
 
 ---
 
