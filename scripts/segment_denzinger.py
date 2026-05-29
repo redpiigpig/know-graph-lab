@@ -464,17 +464,27 @@ def consolidate_across_pages(per_page: list[list[dict]]) -> list[dict]:
     Cross-page rules:
     - Adjacent same-DH entries (entry spilled across pages) → merge content,
       append page_number to page_numbers
-    - Adjacent commentary→commentary same chapter_path → merge
+    - Adjacent commentary→commentary → merge
+    - **Entry → commentary fold**: if a commentary directly follows an entry
+      with no header break, treat the commentary's Chinese prose as the
+      entry's `content` (Denzinger lists the original text under the DH
+      number, then the Chinese intro/translation in a follow-on paragraph).
+      Eliminates the「DH 11 国王... · 註解」sidebar duplicate that just
+      truncates back to「DH 11 国王...」, AND fills the empty `content`
+      that makes the reader's 中-mode look blank.
 
     Returns a single flat list with chunk_index 0..N-1.
     """
     flat: list[dict] = []
     for page_chunks in per_page:
         for ch in page_chunks:
-            if flat and flat[-1].get("section_type") == ch.get("section_type"):
+            if flat:
                 last = flat[-1]
+                last_sec = last.get("section_type")
+                cur_sec = ch.get("section_type")
+
                 # entry-entry merge if same DH
-                if (ch["section_type"] == "entry"
+                if (last_sec == cur_sec == "entry"
                         and last.get("dh_number") == ch.get("dh_number")):
                     if ch.get("content"):
                         last["content"] = (last.get("content", "") + "\n" + ch["content"]).strip()
@@ -483,18 +493,29 @@ def consolidate_across_pages(per_page: list[list[dict]]) -> list[dict]:
                                                 + ch["source_text"]).strip()
                     last["page_numbers"].extend(ch["page_numbers"])
                     continue
-                # commentary-commentary merge if no header in between (always true here
-                # since headers create their own slot which would break the same-type check)
-                if ch["section_type"] == "commentary":
+
+                # entry → commentary fold: commentary's zh becomes entry's content
+                if last_sec == "entry" and cur_sec == "commentary":
+                    com_text = (ch.get("content") or "").strip()
+                    if com_text:
+                        last["content"] = (last.get("content", "") + "\n" + com_text).strip() \
+                            if last.get("content") else com_text
+                    last["page_numbers"].extend(ch["page_numbers"])
+                    continue
+
+                # commentary-commentary merge
+                if last_sec == cur_sec == "commentary":
                     last["content"] = (last.get("content", "") + "\n" + ch["content"]).strip()
                     last["page_numbers"].extend(ch["page_numbers"])
                     continue
+
                 # header-header merge if same chapter_path (e.g. 詳細目錄 spans pages)
-                if (ch["section_type"] == "header"
+                if (last_sec == cur_sec == "header"
                         and last.get("chapter_path") == ch.get("chapter_path")):
                     last["content"] = (last.get("content", "") + "\n\n" + ch["content"]).strip()
                     last["page_numbers"].extend(ch["page_numbers"])
                     continue
+
             flat.append(dict(ch))
 
     # Renumber chunk_index, dedupe page_numbers
