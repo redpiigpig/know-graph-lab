@@ -1,21 +1,20 @@
-"""口述訪談紀錄 → Word (.docx) 匯出工具
+"""口述訪談紀錄 → Word (.docx) 匯出工具（編輯排版版本）
 
-讀取 public/content/interviews/*.txt（與 /thesis?tab=interviews 線上頁面同源），
-套用與 Vue 元件 pages/thesis/interview/[name].vue 一致的樣式規則，
-輸出每篇一個 .docx，預設輸出到 c:/tmp/interviews-docx/。
+讀取 public/content/interviews/*.txt 並轉成 .docx。
+樣式參考：~/Desktop/nonchurch-nuxt/stores/無境界者雜誌/ 的編輯排版
+  - B5 紙張、頁邊 2cm
+  - 棕色 【口述訪談】 tag（文鼎中行書 14pt 靠右）
+  - 主標 24pt 華康中黑體 bold 置中
+  - 受訪者／時間／地點 文鼎中行書 11pt 靠右深灰
+  - 章節 14pt NSimSun bold；子章節 12pt bold
+  - 內文 12pt Times New Roman + NSimSun eastAsia，行距 1.25，無首行縮排
+  - 筆者／受訪者 棕／灰色 label，無底色塊
+  - footnote [N] 上標
 
 用法：
-  # 全部轉檔
-  python scripts/interviews_to_word.py
-
-  # 單篇（檔名片段比對，模糊匹配）
-  python scripts/interviews_to_word.py 釋昭慧
-  python scripts/interviews_to_word.py "04.06"
-
-  # 自訂輸出目錄
-  python scripts/interviews_to_word.py --out D:/exports
-
-需要：pip install python-docx
+  python scripts/interviews_to_word.py                # 全部
+  python scripts/interviews_to_word.py 釋昭慧         # 模糊比對
+  python scripts/interviews_to_word.py --out D:/x     # 自訂輸出
 """
 from __future__ import annotations
 
@@ -28,100 +27,51 @@ from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
-from docx.shared import Pt, RGBColor, Cm
+from docx.shared import Pt, RGBColor, Mm
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC_DIR = ROOT / "public" / "content" / "interviews"
 DEFAULT_OUT = Path("c:/tmp/interviews-docx")
 
-CN_FONT = "Noto Serif TC"
-EN_FONT = "Georgia"
+# ── 字型 ───────────────────────────────────────────────
+FONT_TITLE = "華康中黑體"
+FONT_DECO = "文鼎中行書"
+FONT_CN = "NSimSun"
+FONT_EN = "Times New Roman"
 
-# ── 樣式參數（對照 [name].vue 的 :deep(.i-*) CSS）────────────────────
-TITLE_PT = 22
-META_PT = 11
-SECTION_PT = 17
-SUBSECTION_PT = 14
-PARA_PT = 12
-Q_LABEL_PT = 10
-A_LABEL_PT = 10
+# ── 顏色 ───────────────────────────────────────────────
+COLOR_ACCENT = RGBColor(0x83, 0x3C, 0x0B)   # 棕色
+COLOR_LABEL = RGBColor(0x59, 0x59, 0x59)
+COLOR_BODY = RGBColor(0x11, 0x11, 0x11)
+COLOR_MUTED = RGBColor(0x59, 0x59, 0x59)
 
-COLOR_TITLE = RGBColor(0x11, 0x18, 0x27)
-COLOR_META = RGBColor(0x6B, 0x72, 0x80)
-COLOR_SECTION = RGBColor(0x37, 0x41, 0x51)
-COLOR_SUBSECTION = RGBColor(0x4B, 0x55, 0x63)
-COLOR_PARA = RGBColor(0x1F, 0x29, 0x37)
-COLOR_Q_LABEL = RGBColor(0x6B, 0x72, 0x80)
-COLOR_Q_BODY = RGBColor(0x37, 0x41, 0x51)
-COLOR_A_LABEL = RGBColor(0x7C, 0x3A, 0xED)  # 紫色
-COLOR_A_BODY = RGBColor(0x11, 0x18, 0x27)
-
-Q_SHADE = "F9FAFB"      # 問句淡灰底
-Q_BORDER = "D1D5DB"     # 問句左側 border
-SECTION_RULE = "E5E7EB"  # 章節下底線
-
+# ── 解析 ───────────────────────────────────────────────
 FOOTNOTE_PATTERN = re.compile(r"\[(\d+)\]\(#footnote\d+\)")
-ANSWER_PATTERN = re.compile(r"^([一-鿿]{1,5}(?:法師|教授|主教|和尚|居士|博士|老師|牧師|女士|先生|主任|院長|住持))：(.+)$")
+ANSWER_PATTERN = re.compile(
+    r"^([一-鿿]{1,5}(?:法師|教授|主教|和尚|居士|博士|老師|牧師|女士|先生|主任|院長|住持))：(.+)$"
+)
 META_PATTERN = re.compile(r"^(受訪者|訪問者|訪問時間|訪問地點|訪談時間|訪談地點|採訪者|採訪時間|採訪地點)：")
 SECTION_PATTERN = re.compile(r"^[一二三四五六七八九十]+、")
 SUBSECTION_PATTERN = re.compile(r"^（[一二三四五六七八九十]+）")
-NUMBERED_SUB_PATTERN = re.compile(r"^\d+\.\s+\S")  # 例: "1.  印順導師的人格典範"
+NUMBERED_SUB_PATTERN = re.compile(r"^\d+\.\s+\S")
 
 
-# ── docx 低階輔助 ───────────────────────────────────────────
-def _set_cell_or_para_shading(element, fill_hex: str) -> None:
-    """套用底色到段落 (<w:pPr><w:shd .../>)。element 是 <w:pPr>。"""
-    shd = OxmlElement("w:shd")
-    shd.set(qn("w:val"), "clear")
-    shd.set(qn("w:color"), "auto")
-    shd.set(qn("w:fill"), fill_hex)
-    element.append(shd)
-
-
-def _add_left_border(pPr, color_hex: str, size: int = 18) -> None:
-    """段落左側邊框 (對應 CSS border-left)。"""
-    pBdr = OxmlElement("w:pBdr")
-    left = OxmlElement("w:left")
-    left.set(qn("w:val"), "single")
-    left.set(qn("w:sz"), str(size))      # 1/8 pt 單位
-    left.set(qn("w:space"), "8")
-    left.set(qn("w:color"), color_hex)
-    pBdr.append(left)
-    pPr.append(pBdr)
-
-
-def _add_bottom_border(pPr, color_hex: str, size: int = 8) -> None:
-    """段落下底線 (對應 CSS border-bottom)。"""
-    pBdr = OxmlElement("w:pBdr")
-    bottom = OxmlElement("w:bottom")
-    bottom.set(qn("w:val"), "single")
-    bottom.set(qn("w:sz"), str(size))
-    bottom.set(qn("w:space"), "4")
-    bottom.set(qn("w:color"), color_hex)
-    pBdr.append(bottom)
-    pPr.append(pBdr)
-
-
-def _ensure_pPr(paragraph):
-    pPr = paragraph._p.get_or_add_pPr()
-    return pPr
-
-
-def _set_run_fonts(run, size_pt: int, color: RGBColor, *,
-                   bold: bool = False, italic: bool = False,
-                   superscript: bool = False) -> None:
+def _set_run_font(run, *, size_pt: float, color: RGBColor,
+                  font_en: str = FONT_EN, font_cn: str = FONT_CN,
+                  bold: bool = False, italic: bool = False,
+                  superscript: bool = False) -> None:
     run.font.size = Pt(size_pt)
     run.font.color.rgb = color
-    run.font.name = EN_FONT
+    run.font.name = font_en
     rPr = run._r.get_or_add_rPr()
     rFonts = rPr.find(qn("w:rFonts"))
     if rFonts is None:
         rFonts = OxmlElement("w:rFonts")
         rPr.append(rFonts)
-    rFonts.set(qn("w:ascii"), EN_FONT)
-    rFonts.set(qn("w:hAnsi"), EN_FONT)
-    rFonts.set(qn("w:eastAsia"), CN_FONT)
-    rFonts.set(qn("w:cs"), EN_FONT)
+    rFonts.set(qn("w:ascii"), font_en)
+    rFonts.set(qn("w:hAnsi"), font_en)
+    rFonts.set(qn("w:eastAsia"), font_cn)
+    rFonts.set(qn("w:cs"), font_en)
     if bold:
         run.bold = True
     if italic:
@@ -130,162 +80,170 @@ def _set_run_fonts(run, size_pt: int, color: RGBColor, *,
         run.font.superscript = True
 
 
-def _add_runs_with_footnotes(paragraph, text: str, *,
-                             size_pt: int, color: RGBColor,
-                             italic: bool = False, bold: bool = False) -> None:
-    """把 `...[39](#footnote39)...` 拆成正文 + 上標 [39] runs。"""
+def add_body_runs(paragraph, text: str, *, size_pt: float, color: RGBColor,
+                  bold: bool = False, italic: bool = False,
+                  font_en: str = FONT_EN, font_cn: str = FONT_CN) -> None:
     cursor = 0
     for m in FOOTNOTE_PATTERN.finditer(text):
         if m.start() > cursor:
             run = paragraph.add_run(text[cursor:m.start()])
-            _set_run_fonts(run, size_pt, color, italic=italic, bold=bold)
-        fn_run = paragraph.add_run(f"[{m.group(1)}]")
-        _set_run_fonts(fn_run, max(size_pt - 2, 8), color, superscript=True)
+            _set_run_font(run, size_pt=size_pt, color=color,
+                          bold=bold, italic=italic,
+                          font_en=font_en, font_cn=font_cn)
+        sup = paragraph.add_run(f"[{m.group(1)}]")
+        _set_run_font(sup, size_pt=9, color=color, superscript=True,
+                      font_en=font_en, font_cn=font_cn)
         cursor = m.end()
     if cursor < len(text):
         run = paragraph.add_run(text[cursor:])
-        _set_run_fonts(run, size_pt, color, italic=italic, bold=bold)
+        _set_run_font(run, size_pt=size_pt, color=color,
+                      bold=bold, italic=italic,
+                      font_en=font_en, font_cn=font_cn)
 
 
-# ── 段落樣式 ────────────────────────────────────────────────
+# ── 段落 ───────────────────────────────────────────────
+def add_tag(doc: Document, text: str) -> None:
+    p = doc.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+    p.paragraph_format.space_after = Pt(4)
+    run = p.add_run(text)
+    _set_run_font(run, size_pt=14, color=COLOR_ACCENT,
+                  font_en=FONT_DECO, font_cn=FONT_DECO)
+
+
 def add_title(doc: Document, text: str) -> None:
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    p.paragraph_format.space_before = Pt(6)
-    p.paragraph_format.space_after = Pt(18)
+    p.paragraph_format.space_before = Pt(4)
+    p.paragraph_format.space_after = Pt(12)
     run = p.add_run(text)
-    _set_run_fonts(run, TITLE_PT, COLOR_TITLE, bold=True)
+    _set_run_font(run, size_pt=24, color=COLOR_BODY, bold=True,
+                  font_en=FONT_TITLE, font_cn=FONT_TITLE)
 
 
 def add_meta(doc: Document, text: str) -> None:
     p = doc.add_paragraph()
-    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p.alignment = WD_ALIGN_PARAGRAPH.RIGHT
     p.paragraph_format.space_after = Pt(2)
+    p.paragraph_format.line_spacing = 1.3
     run = p.add_run(text)
-    _set_run_fonts(run, META_PT, COLOR_META)
+    _set_run_font(run, size_pt=11, color=COLOR_MUTED,
+                  font_en=FONT_DECO, font_cn=FONT_DECO)
 
 
 def add_section(doc: Document, text: str) -> None:
     p = doc.add_paragraph()
-    p.paragraph_format.space_before = Pt(22)
-    p.paragraph_format.space_after = Pt(10)
-    pPr = _ensure_pPr(p)
-    _add_bottom_border(pPr, SECTION_RULE, size=12)
+    p.paragraph_format.space_before = Pt(18)
+    p.paragraph_format.space_after = Pt(8)
+    p.paragraph_format.line_spacing = 1.3
     run = p.add_run(text)
-    _set_run_fonts(run, SECTION_PT, COLOR_SECTION, bold=True)
+    _set_run_font(run, size_pt=14, color=COLOR_BODY, bold=True,
+                  font_en=FONT_CN, font_cn=FONT_CN)
 
 
 def add_subsection(doc: Document, text: str) -> None:
     p = doc.add_paragraph()
-    p.paragraph_format.space_before = Pt(14)
-    p.paragraph_format.space_after = Pt(6)
-    run = p.add_run(text)
-    _set_run_fonts(run, SUBSECTION_PT, COLOR_SUBSECTION, bold=True)
-
-
-def add_paragraph(doc: Document, text: str) -> None:
-    p = doc.add_paragraph()
-    p.paragraph_format.first_line_indent = Pt(PARA_PT * 2)
-    p.paragraph_format.line_spacing = 1.9
+    p.paragraph_format.space_before = Pt(10)
     p.paragraph_format.space_after = Pt(4)
-    _add_runs_with_footnotes(p, text, size_pt=PARA_PT, color=COLOR_PARA)
+    p.paragraph_format.line_spacing = 1.25
+    run = p.add_run(text)
+    _set_run_font(run, size_pt=12, color=COLOR_BODY, bold=True,
+                  font_en=FONT_CN, font_cn=FONT_CN)
+
+
+def add_para(doc: Document, text: str) -> None:
+    p = doc.add_paragraph()
+    p.paragraph_format.space_after = Pt(3)
+    p.paragraph_format.line_spacing = 1.25
+    add_body_runs(p, text, size_pt=12, color=COLOR_BODY)
 
 
 def add_question(doc: Document, body: str) -> None:
     p = doc.add_paragraph()
-    p.paragraph_format.space_before = Pt(10)
-    p.paragraph_format.space_after = Pt(4)
-    p.paragraph_format.line_spacing = 1.8
-    p.paragraph_format.left_indent = Cm(0.3)
-    pPr = _ensure_pPr(p)
-    _set_cell_or_para_shading(pPr, Q_SHADE)
-    _add_left_border(pPr, Q_BORDER, size=24)
-
-    label = p.add_run("問　")
-    _set_run_fonts(label, Q_LABEL_PT, COLOR_Q_LABEL, bold=True)
-    _add_runs_with_footnotes(p, body, size_pt=PARA_PT, color=COLOR_Q_BODY, italic=True)
+    p.paragraph_format.space_before = Pt(8)
+    p.paragraph_format.space_after = Pt(3)
+    p.paragraph_format.line_spacing = 1.25
+    label = p.add_run("筆者　")
+    _set_run_font(label, size_pt=12, color=COLOR_ACCENT, bold=True,
+                  font_en=FONT_CN, font_cn=FONT_CN)
+    add_body_runs(p, body, size_pt=12, color=COLOR_BODY)
 
 
 def add_answer(doc: Document, label_text: str, body: str) -> None:
     p = doc.add_paragraph()
-    p.paragraph_format.space_before = Pt(4)
-    p.paragraph_format.space_after = Pt(10)
-    p.paragraph_format.line_spacing = 1.9
-    p.paragraph_format.first_line_indent = Pt(0)
-
+    p.paragraph_format.space_before = Pt(3)
+    p.paragraph_format.space_after = Pt(8)
+    p.paragraph_format.line_spacing = 1.25
     label = p.add_run(f"{label_text}　")
-    _set_run_fonts(label, A_LABEL_PT, COLOR_A_LABEL, bold=True)
-    _add_runs_with_footnotes(p, body, size_pt=PARA_PT, color=COLOR_A_BODY)
+    _set_run_font(label, size_pt=12, color=COLOR_LABEL, bold=True,
+                  font_en=FONT_CN, font_cn=FONT_CN)
+    add_body_runs(p, body, size_pt=12, color=COLOR_BODY)
 
 
 def add_blank(doc: Document) -> None:
     p = doc.add_paragraph()
-    p.paragraph_format.space_after = Pt(2)
+    p.paragraph_format.space_after = Pt(0)
+    p.paragraph_format.line_spacing = 1.0
 
 
-# ── 內文解析（對照 [name].vue formatInterview）────────────────────
+# ── 主流程 ─────────────────────────────────────────────
 def render(doc: Document, raw: str) -> None:
     lines = raw.splitlines()
-    is_first = True
+    title_done = False
+    add_tag(doc, "【口述訪談】")
     for line in lines:
         t = line.strip()
         if not t:
-            add_blank(doc)
+            if title_done:
+                add_blank(doc)
             continue
-
-        if is_first:
-            is_first = False
+        if not title_done:
+            title_done = True
             add_title(doc, t)
             continue
-
         if META_PATTERN.match(t):
             add_meta(doc, t)
             continue
-
         if SECTION_PATTERN.match(t):
             add_section(doc, t)
             continue
-
         if SUBSECTION_PATTERN.match(t) or NUMBERED_SUB_PATTERN.match(t):
             add_subsection(doc, t)
             continue
-
         if t.startswith("筆者："):
             add_question(doc, t[len("筆者："):])
             continue
-
         m = ANSWER_PATTERN.match(t)
         if m:
             add_answer(doc, m.group(1), m.group(2))
             continue
-
-        # 短行（≤25 字、無結尾標點）→ 視為小標題
-        if len(t) <= 25 and not re.search(r"[。，、；：？！…]$", t) and not t.startswith(("[", "【", "（", "〔")):
+        if len(t) <= 25 and not re.search(r"[。，、；：？！…]$", t) \
+                and not t.startswith(("[", "【", "（", "〔")):
             add_section(doc, t)
             continue
-
-        add_paragraph(doc, t)
+        add_para(doc, t)
 
 
 def configure_document(doc: Document) -> None:
-    # 邊距與預設字型
     for section in doc.sections:
-        section.top_margin = Cm(2.2)
-        section.bottom_margin = Cm(2.2)
-        section.left_margin = Cm(2.5)
-        section.right_margin = Cm(2.5)
+        section.page_height = Mm(257)
+        section.page_width = Mm(182)
+        section.top_margin = Mm(20)
+        section.bottom_margin = Mm(20)
+        section.left_margin = Mm(20)
+        section.right_margin = Mm(20)
     style = doc.styles["Normal"]
-    style.font.name = EN_FONT
-    style.font.size = Pt(PARA_PT)
+    style.font.name = FONT_EN
+    style.font.size = Pt(12)
     rPr = style.element.get_or_add_rPr()
     rFonts = rPr.find(qn("w:rFonts"))
     if rFonts is None:
         rFonts = OxmlElement("w:rFonts")
         rPr.append(rFonts)
-    rFonts.set(qn("w:ascii"), EN_FONT)
-    rFonts.set(qn("w:hAnsi"), EN_FONT)
-    rFonts.set(qn("w:eastAsia"), CN_FONT)
-    rFonts.set(qn("w:cs"), EN_FONT)
+    rFonts.set(qn("w:ascii"), FONT_EN)
+    rFonts.set(qn("w:hAnsi"), FONT_EN)
+    rFonts.set(qn("w:eastAsia"), FONT_CN)
+    rFonts.set(qn("w:cs"), FONT_EN)
 
 
 def convert_one(src: Path, out_dir: Path) -> Path:
@@ -299,7 +257,7 @@ def convert_one(src: Path, out_dir: Path) -> Path:
 
 
 def main() -> int:
-    ap = argparse.ArgumentParser(description="把 /thesis 口述訪談紀錄轉成 Word")
+    ap = argparse.ArgumentParser(description="把 /thesis 口述訪談紀錄轉成 Word (編輯排版)")
     ap.add_argument("filter", nargs="?", default="",
                     help="檔名片段（模糊匹配），不給就轉全部")
     ap.add_argument("--out", default=str(DEFAULT_OUT),
@@ -320,7 +278,6 @@ def main() -> int:
     if args.filter:
         needle = args.filter.lower()
         files = [f for f in files if needle in f.name.lower()]
-
     if not files:
         print("[WARN] 沒有符合的檔案。", file=sys.stderr)
         return 1
