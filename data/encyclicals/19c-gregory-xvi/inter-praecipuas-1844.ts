@@ -26,9 +26,9 @@ export const interPraecipuas1844: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org / Gregory XVI — Inter praecipuas)',
       textKey: 'inter-praecipuas-1844-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Inter_praecipuas_machinationes',
     },
   ],
   displayMode: 'paragraph-aligned',

@@ -208,16 +208,39 @@ description: 教宗訓導文獻對照工具（/encyclicals）— 4 世紀 Damasu
 >
 > **Round 5 累計**：27/228 documents 從 LA placeholder → publication-quality real LA。
 >
-> 覆蓋狀態變化（按 LA 完整度）：
-> - Round 3 + 4 結束時：30+ docs 有 LA placeholder
-> - Round 5 結束時：**~3 docs 仍 LA placeholder**（Damasus Tomus / 部分 4c 補充 / 部分 5-6c Hormisdas Ad Iustinianum 等）
+> N. **Round 6 — 13-19c 額外 23 篇 marquee LA Wikisource batch**（`_papal_wikisource_la_round6{,b,c}.py`，2026-05-29）：
+>
+> N.1 **Round 6（10 篇）**：
+> - **13c Boniface VIII *Unam sanctam* 1302 LA** ★★★（教宗權威經典聲明）
+> - **13c Nicholas III *Exiit Qui Seminat* 1279 LA** ★★（方濟會貧窮信理）
+> - **13c Nicholas IV *Supra montem* 1289 LA** ★（第三會章程）
+> - 6c Gregory I *Regulae Pastoralis* Praef. LA（牧靈神學經典 — Praefatio 1.7 KB；完整版仍待補）
+> - 19c Gregory XVI *In supremo apostolatus solio* 1839（反奴隸貿易）
+> - 19c Gregory XVI *Inter praecipuas machinationes* 1844（反聖經會社／反 vernacular Bible 不受教廷監督）
+> - 19c Pius IX *Quanto conficiamur moerore* 1863（隱含 invincible ignorance 救贖論）
+> - 19c Pius IX *Apostolicae Nostrae* 1854
+> - 19c Pius IX *Levate* 1867
+> - 19c Pius IX *Respicientes* 1870（梵蒂岡淪陷後抗議）
+>
+> N.2 **Round 6b（10 篇 19c Pius IX）**：Etsi multa luctuosa / Inter multiplices angustias / Optime noscitis (1854) / Optime noscitis (1855) / Probe Noscitis / Saepe Venerabiles / Ubi primum (1847) / Ubi primum (1849) / Incredibili afflictamur / Amantissimus humani generis
+>
+> N.3 **Round 6c（3 篇）**：
+> - **19c Pius IX *Quanta Cura* 1864 LA** ★★★（Syllabus 前置 encyclical，40 KB）
+> - **19c Gregory XVI *Mirari Vos* 1832 LA** ★★（首次譴責自由主義）
+> - 19c Gregory XVI *Vos probe nostis*
+>
+> **覆蓋狀態變化**（按 A-zone LA 完整度）：
+> - 系統總計：695 LA files（含 387 hsscol C-zone — 原本非拉丁／不適用）
+> - A-zone real LA：**206 篇**（round 6 後 +26）
+> - A-zone placeholder：102 篇（剩餘 14-19c marquee — 不在 Wikisource，需 vatican.va PDF 或 PL volumes）
 >
 > **後續工作**（保留作下輪）：
-> - PL 13 (Damasus + Siricius PDF 88 MB 已下載 c:/tmp/pl13_damasus.pdf，已找到 Tomus Damasi pages 178-187 + Siricius Directa ~p590-605) — Gemini OCR 可進一步補質量
-> - PL 151 (Urban II Clermont 已下載 51 MB) — OCR Letter to Robert + Crusade context
-> - 12c Alexander III 封聖權集中 specific decretal 細節（PL 200）
-> - 13c Innocent III ~50 letters（PL 214-217 ~210 MB）
-> - Leo I 剩 ~80 letters + ~70 sermons（PL 54 djvu 已下載）
+> - 102 篇 A-zone LA placeholder — 14-19c 散漏 marquee。可走 vatican.va 多版 PDF / DCO 03d/ / PL 200/214-217 OCR
+> - PL 13 (Damasus + Siricius PDF 88 MB 已下載): Tomus Damasi pages 178-187 + Siricius Directa ~p590-605 Gemini OCR 補質量
+> - PL 151 (Urban II Clermont): OCR Letter to Robert + Crusade context
+> - PL 200 (Alexander III) 封聖權集中 specific decretal
+> - PL 214-217 (Innocent III ~210 MB) ~50 letters
+> - Leo I 剩 ~80 letters + ~70 sermons (PL 54 djvu 已下載)
 >
 > 2026-05-28（最深夜）：**user 訂正三區命名 → 全面 hsscol 批次 ingest**
 >

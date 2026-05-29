@@ -26,9 +26,9 @@ export const inSupremoApostolatus1839: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org / Gregory XVI — In supremo apostolatus)',
       textKey: 'in-supremo-apostolatus-1839-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/In_supremo_apostolatus_solio',
     },
   ],
   displayMode: 'simple',

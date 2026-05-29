@@ -26,9 +26,9 @@ export const ubiPrimum1849: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org / Pius IX — Ubi primum 1849)',
       textKey: 'ubi-primum-1849-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Ubi_primum_(Pius_IX_1849)',
     },
   ],
   displayMode: 'paragraph-aligned',

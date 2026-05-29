@@ -26,9 +26,9 @@ export const etsiMulta1873: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org / Pius IX — Etsi multa luctuosa)',
       textKey: 'etsi-multa-1873-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Etsi_multa_luctuosa',
     },
   ],
   displayMode: 'paragraph-aligned',

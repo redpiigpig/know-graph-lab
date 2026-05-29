@@ -26,9 +26,9 @@ export const incredibili1863: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org / Pius IX — Incredibili afflictamur)',
       textKey: 'incredibili-1863-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Incredibili_afflictamur',
     },
   ],
   displayMode: 'paragraph-aligned',

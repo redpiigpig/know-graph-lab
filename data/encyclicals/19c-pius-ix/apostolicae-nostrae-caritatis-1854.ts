@@ -26,9 +26,9 @@ export const apostolicaeNostraeCaritatis1854: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org / Pius IX — Apostolicae Nostrae)',
       textKey: 'apostolicae-nostrae-caritatis-1854-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Apostolicae_Nostrae',
     },
   ],
   displayMode: 'paragraph-aligned',

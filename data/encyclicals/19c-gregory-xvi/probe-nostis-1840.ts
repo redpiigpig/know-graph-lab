@@ -26,9 +26,9 @@ export const probeNostis1840: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org / Gregory XVI — Vos probe nostis)',
       textKey: 'probe-nostis-1840-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Vos_probe_nostis',
     },
   ],
   displayMode: 'paragraph-aligned',

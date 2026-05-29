@@ -26,9 +26,9 @@ export const respicientes1870: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org / Pius IX — Respicientes ea)',
       textKey: 'respicientes-1870-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Respicientes_ea',
     },
   ],
   displayMode: 'paragraph-aligned',

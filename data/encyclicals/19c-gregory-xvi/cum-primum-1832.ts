@@ -26,9 +26,9 @@ export const cumPrimum1832: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org / Gregory XVI — Mirari Vos (1832 inaugural))',
       textKey: 'cum-primum-1832-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Mirari_Vos',
     },
   ],
   displayMode: 'paragraph-aligned',

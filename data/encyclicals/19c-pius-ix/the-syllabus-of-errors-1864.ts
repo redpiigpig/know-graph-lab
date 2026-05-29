@@ -26,9 +26,9 @@ export const theSyllabusOfErrors1864: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org / Pius IX — Quanta Cura (Syllabus 前 encyclical))',
       textKey: 'the-syllabus-of-errors-1864-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Quanta_Cura',
     },
   ],
   displayMode: 'paragraph-aligned',

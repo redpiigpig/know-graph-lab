@@ -26,9 +26,9 @@ export const exiitQuiSeminat1279: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org / Nicholas III — Exiit Qui Seminat)',
       textKey: 'exiit-qui-seminat-1279-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Exiit_Qui_Seminat',
     },
   ],
   displayMode: 'paragraph-aligned',

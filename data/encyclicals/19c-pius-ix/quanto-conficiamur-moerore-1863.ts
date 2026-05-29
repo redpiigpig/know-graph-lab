@@ -26,9 +26,9 @@ export const quantoConficiamurMoerore1863: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org / Pius IX — Quanto conficiamur)',
       textKey: 'quanto-conficiamur-moerore-1863-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Quanto_conficiamur',
     },
   ],
   displayMode: 'paragraph-aligned',

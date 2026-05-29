@@ -26,9 +26,9 @@ export const unamSanctam1302: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org / Boniface VIII — Unam sanctam)',
       textKey: 'unam-sanctam-1302-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Unam_sanctam',
     },
   ],
   displayMode: 'simple',

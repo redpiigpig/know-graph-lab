@@ -26,9 +26,9 @@ export const interMultiplices1853: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org / Pius IX — Inter multiplices)',
       textKey: 'inter-multiplices-1853-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Inter_multiplices_angustias',
     },
   ],
   displayMode: 'paragraph-aligned',

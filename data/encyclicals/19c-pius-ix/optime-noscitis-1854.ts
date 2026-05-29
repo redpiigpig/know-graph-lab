@@ -26,9 +26,9 @@ export const optimeNoscitis1854: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org / Pius IX — Optime noscitis 1854)',
       textKey: 'optime-noscitis-1854-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Optime_noscitis_(1854)',
     },
   ],
   displayMode: 'paragraph-aligned',

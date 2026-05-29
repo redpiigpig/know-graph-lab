@@ -26,9 +26,9 @@ export const saepeVenerabilesFratres1871: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org / Pius IX — Saepe Venerabiles)',
       textKey: 'saepe-venerabiles-fratres-1871-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Saepe_Venerabiles',
     },
   ],
   displayMode: 'paragraph-aligned',
