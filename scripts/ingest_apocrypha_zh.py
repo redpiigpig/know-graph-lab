@@ -84,6 +84,9 @@ SLUG_KEYWORDS: list[tuple[str, list[str]]] = [
     ('jacob-ladder',     ['雅各天梯']),
     ('jannes-jambres',   ['雅尼和佯庇', '雅尼和佯鹿', '雅店和佯', '雅店和佯庇']),
     ('joseph-history',   ['約瑟歷史']),
+    # OT vol 4 — Wisdom (note 王曉朝 vol 5 卷四 actually contains 智訓)
+    ('wisdom-solomon',   ['所羅門智訓', '所羅門智劃', '所羅門智割', '所羅門智司', '所羅門智自',
+                          '所羅門智富']),
     # OT vol 5 — Deuterocanon (Catholic / Orthodox)
     ('tobit',            ['多比傳']),
     ('judith',           ['猶滴傳']),
@@ -119,7 +122,10 @@ SLUG_KEYWORDS: list[tuple[str, list[str]]] = [
     ('p-oxy-840',        ['俄西林古蒲草紙840', '俄西林古蒲草紙 840']),
     ('logia-unknown',    ['獨立存留的耶穌語錄', '獨立存留的耶鯨語錄']),
     ('infancy-thomas',   ['多馬的耶穌嬰孩', '多罵的耶穌嬰孩', '多馬的耶鯨嬰孩', '多罵的耶鯨嬰孩']),
-    ('gthom',            ['多馬福音', '多篤福音', '多馬屆音', '多馬禧音', '多馬語音', '多馬語音', '多馬語音']),
+    ('gthom',            ['多馬福音', '多篤福音', '多馬屆音', '多馬禧音', '多馬語音', '多馬書']),
+    ('gtruth',           ['真理的福音', '真理福音']),
+    ('ghebrews',         ['希伯來人福音', '希伯來福音']),
+    ('aristobulus',      ['亞里斯多布', '亞理斯多布']),
     ('gnazarenes',       ['拿撒勒派人福音', '拿撤勒派人福音']),
     ('gebionites',       ['伊便尼派人福音']),
     ('gegyptians',       ['埃及人福音']),
@@ -178,6 +184,74 @@ SLUG_KEYWORDS: list[tuple[str, list[str]]] = [
 # Tokens / chunks we never want to map (skip explicitly).
 SKIP_CP_EQ = {'目錄', '附錄'}
 SKIP_CP_SUBSTR = ['英中對照', '版權', '出版說明']
+
+# ── Text cleanup regexes ────────────────────────────────────────────────
+# The Wang Xiaochao 王曉朝 typesetting bleeds three kinds of noise into the
+# PDF text-extract output:
+#   1. Section header reprinted on every page break: 第N部分:卷X{文獻名}{副題}
+#   2. Right-margin column line-numbers (2-8 alone on lines): "\n2\n3\n4\n5\n"
+#   3. Running header on alternating pages: 基督教典外文獻[新舊]約篇第N冊
+
+_RE_PREFIX_SECTION = re.compile(
+    r'^[\s　]*第[一二三四五六七八九十囚]+部分[:：][^\n]{1,40}\n+'
+)
+_RE_RUNNING_HEADER = re.compile(
+    r'基督教典外文獻[\s—一]*[新舊]約篇[\s—一]*第[一二三四五六七八九十]+冊'
+)
+_RE_RUNNING_HEADER_LOOSE = re.compile(
+    r'基督教典外文獻[新舊]約[^\n。，]{0,20}冊'
+)
+_RE_COL_NUMBERS = re.compile(
+    r'(?:^|\n)(?:[ \t]*\d{1,3}[ \t　]*\n){3,}'
+)
+_RE_CONSEC_NUMBER_LINE = re.compile(
+    r'(?:^|\n)[ \t]*(?:\d{1,3}[ \t　]*){4,}\n'
+)
+# Page numbers / line numbers on standalone lines (single digit, often noise)
+_RE_LONE_NUMBER_LINE = re.compile(r'\n[ \t]*\d{1,3}[ \t]*\n')
+_RE_MULTI_NEWLINE = re.compile(r'\n{3,}')
+_RE_LEADING_BLANK = re.compile(r'^[\s　\n]+')
+
+# Verse-marker detection — patterns like "1 45" / "12 1" or "11 5" surrounded by content
+_RE_VERSE_MARKER = re.compile(r'(?:^|\n|\s)(\d{1,2})\s+(\d{1,3})(?=\s+[一-鿿])')
+
+
+def clean_text(raw: str) -> str:
+    """Strip OCR-typesetting bleed-through from chunk content."""
+    t = raw
+
+    # Drop the section-header prefix when present (handles 第N部分:卷X{...}\n)
+    t = _RE_PREFIX_SECTION.sub('', t)
+
+    # Drop the running-header references (occur mid-text on page breaks)
+    t = _RE_RUNNING_HEADER.sub('', t)
+    t = _RE_RUNNING_HEADER_LOOSE.sub('', t)
+
+    # Drop the typesetting column-number runs ("2\n3\n4\n5\n6\n7\n8\n").
+    t = _RE_COL_NUMBERS.sub('\n', t)
+    t = _RE_CONSEC_NUMBER_LINE.sub('\n', t)
+
+    # Collapse 3+ newlines to 2; strip leading whitespace.
+    t = _RE_MULTI_NEWLINE.sub('\n\n', t)
+    t = _RE_LEADING_BLANK.sub('', t)
+
+    return t.strip()
+
+
+def parse_chapter(text: str) -> int | None:
+    """Extract the first chapter number from a cleaned chunk's content.
+
+    Looks for `(chapter)\s+(verse)` two-number markers surrounding Chinese text.
+    Returns None if no plausible marker found.
+    """
+    m = _RE_VERSE_MARKER.search(text)
+    if not m:
+        return None
+    ch = int(m.group(1))
+    # Wisdom of Solomon / Sirach / 1 Enoch never exceed ~150 chapters; sanity bound.
+    if 1 <= ch <= 250:
+        return ch
+    return None
 
 # Filter the OCR-noise that pollutes the front-matter pages of every volume.
 _TOPMATTER_REGEXES = [
@@ -368,12 +442,19 @@ def main():
         book_unmapped = 0
 
         for ch, slug in zip(chunks, slugs):
-            content = (ch.get('content') or '').strip()
-            if not content or len(content) < 5:
+            content_raw = (ch.get('content') or '').strip()
+            if not content_raw or len(content_raw) < 5:
                 continue
             if not slug:
                 book_unmapped += 1
                 continue
+            # Clean the OCR noise from text before storing
+            content = clean_text(content_raw)
+            if len(content) < 8:
+                # Cleaned chunk too short — was probably pure noise
+                continue
+            chapter = parse_chapter(content)
+
             order_counter.setdefault(slug, 0)
             slug_chunk_count[slug] = slug_chunk_count.get(slug, 0) + 1
 
@@ -386,6 +467,7 @@ def main():
                 'page_number': ch.get('page_number'),
                 'text': content,
                 'char_count': len(content),
+                'chapter': chapter,
             })
             order_counter[slug] += 1
 

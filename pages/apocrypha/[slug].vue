@@ -5,6 +5,18 @@
       <div class="w-px h-5 bg-gray-200" />
       <span class="text-sm font-semibold text-gray-900">{{ docData?.document?.title_zh || '典外文獻' }}</span>
       <span v-if="docData?.document" class="text-xs text-gray-400">{{ docData.document.title_en }}</span>
+      <div class="ml-auto flex items-center gap-2 text-xs">
+        <button
+          v-if="prevPage !== null"
+          @click="goToPage(prevPage)"
+          class="px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-stone-400"
+        >← 上頁</button>
+        <button
+          v-if="nextPage !== null"
+          @click="goToPage(nextPage)"
+          class="px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-stone-400"
+        >下頁 →</button>
+      </div>
     </nav>
 
     <div class="flex-1 max-w-7xl w-full mx-auto px-4 py-6">
@@ -14,7 +26,7 @@
 
       <template v-else-if="docData">
         <!-- Document header -->
-        <header class="mb-6">
+        <header class="mb-5">
           <h1 class="text-2xl font-bold text-gray-900">
             {{ docData.document.title_zh }}
           </h1>
@@ -40,6 +52,27 @@
             {{ docData.document.summary_zh }}
           </p>
         </header>
+
+        <!-- Page navigation strip -->
+        <div v-if="docData.pages.length > 1" class="mb-4 bg-white border border-gray-200 rounded-md px-3 py-2">
+          <div class="flex flex-wrap items-center gap-1">
+            <span class="text-xs text-gray-500 mr-2 shrink-0">頁：</span>
+            <NuxtLink
+              v-for="p in docData.pages"
+              :key="p"
+              :to="`/apocrypha/${slug}${p !== docData.pages[0] ? '?page=' + p : ''}`"
+              class="text-[11px] font-mono px-2 py-0.5 rounded border transition"
+              :class="p === currentPage
+                ? 'bg-stone-900 text-white border-stone-900'
+                : 'bg-white text-gray-600 border-gray-200 hover:border-stone-300'"
+            >{{ p }}</NuxtLink>
+            <NuxtLink
+              v-if="currentPage !== null"
+              :to="`/apocrypha/${slug}`"
+              class="text-[11px] px-2 py-0.5 rounded border border-dashed border-gray-300 text-gray-500 hover:border-stone-400 hover:text-stone-700 ml-2"
+            >顯示全部</NuxtLink>
+          </div>
+        </div>
 
         <!-- Column controls -->
         <div class="grid gap-3 mb-4" :style="{ gridTemplateColumns: gridCols }">
@@ -83,20 +116,24 @@
         <!-- Sections -->
         <div v-else class="space-y-1.5">
           <article
-            v-for="s in docData.sections"
+            v-for="(s, sIdx) in docData.sections"
             :key="s.order_index"
             :id="`section-${s.order_index}`"
             class="bg-white border border-gray-200 rounded-md overflow-hidden scroll-mt-20"
           >
-            <div v-if="s.section_label || s.page_number" class="flex items-baseline gap-2 px-3 py-1 bg-stone-50 border-b border-stone-100 text-[11px]">
-              <span v-if="s.section_label" class="font-mono text-stone-600">{{ cleanLabel(s.section_label) }}</span>
-              <span v-if="s.page_number" class="text-gray-400 ml-auto">p.{{ s.page_number }}</span>
+            <!-- Page break header — only when this row's page differs from the previous one -->
+            <div
+              v-if="showPageDivider(sIdx)"
+              class="flex items-center gap-2 px-3 py-1 bg-stone-50 border-b border-stone-100 text-[11px] text-stone-500"
+            >
+              <span class="font-mono">p.{{ s.page_number }}</span>
+              <span v-if="s.chapter !== null" class="font-mono text-amber-700">第 {{ s.chapter }} 章</span>
             </div>
             <div class="grid gap-px bg-gray-100" :style="{ gridTemplateColumns: gridCols }">
               <div
                 v-for="(col, idx) in columns"
                 :key="idx"
-                class="bg-white px-3 py-2.5 text-sm leading-relaxed text-gray-800"
+                class="bg-white px-3 py-2.5 text-sm leading-relaxed text-gray-800 whitespace-pre-line"
                 :class="textClassFor(col.versionCode)"
               >
                 <template v-if="col.versionCode && s.byVersion[col.versionCode]">
@@ -111,7 +148,7 @@
         <!-- Coverage hint -->
         <p class="mt-8 text-[11px] text-gray-400 leading-relaxed">
           已匯入版本：{{ availableVersionsList || '（無）' }}。
-          目前中文版本為《基督教典外文獻》OCR 直出，OCR 雜訊與卷次劃分待後續精修。
+          中文版本為《基督教典外文獻》(王曉朝主編，基督教文藝出版社) 原書文字；OCR 雜訊已清整，但章節邊界與卷次分隔仍可能需精修。
         </p>
       </template>
     </div>
@@ -122,7 +159,9 @@
 definePageMeta({ middleware: 'auth' })
 
 const route = useRoute()
+const router = useRouter()
 const slug = computed(() => String(route.params.slug))
+const currentPage = computed(() => route.query.page ? Number(route.query.page) : null)
 
 type ApocVersion = {
   code: string
@@ -136,6 +175,13 @@ type ApocVersion = {
   is_default_zh: boolean
   is_default_en: boolean
   is_default_orig: boolean
+}
+type Section = {
+  order_index: number
+  section_label: string | null
+  page_number: number | null
+  chapter: number | null
+  byVersion: Record<string, string>
 }
 type DocRes = {
   document: {
@@ -152,12 +198,9 @@ type DocRes = {
     canon_status_jsonb: Record<string, boolean> | null
     summary_zh: string | null
   }
-  sections: {
-    order_index: number
-    section_label: string | null
-    page_number: number | null
-    byVersion: Record<string, string>
-  }[]
+  sections: Section[]
+  pages: number[]
+  currentPage: number | null
 }
 
 const supabase = useSupabaseClient()
@@ -176,13 +219,15 @@ async function load() {
   error.value = null
   try {
     const headers = await authHeaders()
+    const queryParams: Record<string, any> = { slug: slug.value }
+    if (currentPage.value !== null) queryParams.page = currentPage.value
     const [v, d] = await Promise.all([
       $fetch<ApocVersion[]>('/api/apocrypha/versions', { headers }),
-      $fetch<DocRes>('/api/apocrypha/document', { headers, query: { slug: slug.value } }),
+      $fetch<DocRes>('/api/apocrypha/document', { headers, query: queryParams }),
     ])
     versions.value = v
     docData.value = d
-    columns.value = []  // reset; watchEffect picks defaults
+    columns.value = []
   } catch (e: any) {
     error.value = e?.message || String(e)
   } finally {
@@ -190,11 +235,44 @@ async function load() {
   }
 }
 onMounted(load)
-watch(slug, load)
+watch([slug, currentPage], load)
 
 useHead({
   title: () => docData.value ? `${docData.value.document.title_zh} — 典外文獻` : '典外文獻',
 })
+
+function goToPage(p: number | null) {
+  if (p === null) {
+    router.push(`/apocrypha/${slug.value}`)
+  } else {
+    router.push(`/apocrypha/${slug.value}?page=${p}`)
+  }
+}
+
+const prevPage = computed(() => {
+  if (!docData.value) return null
+  const pages = docData.value.pages
+  if (currentPage.value === null) return null
+  const i = pages.indexOf(currentPage.value)
+  return i > 0 ? pages[i - 1] : null
+})
+const nextPage = computed(() => {
+  if (!docData.value) return null
+  const pages = docData.value.pages
+  if (currentPage.value === null) {
+    return pages.length > 1 ? pages[1] : null
+  }
+  const i = pages.indexOf(currentPage.value)
+  return i >= 0 && i + 1 < pages.length ? pages[i + 1] : null
+})
+
+function showPageDivider(idx: number): boolean {
+  if (!docData.value) return false
+  const cur = docData.value.sections[idx]
+  if (idx === 0) return cur.page_number !== null
+  const prev = docData.value.sections[idx - 1]
+  return cur.page_number !== prev.page_number
+}
 
 // ── Columns ─────────────────────────────────────────────────────────────
 type ColCategory = 'chinese' | 'english' | 'source'
@@ -226,7 +304,6 @@ function pickForCategory(cat: ColCategory): string {
     if (def) return def.code
   }
   if (cat === 'source') {
-    // Prefer one matching document's original language
     const langMap: Record<string, string> = {
       greek: 'greek_orig', hebrew: 'hebrew_orig', aramaic: 'aramaic_orig',
       coptic: 'coptic_orig', syriac: 'syriac_orig', ethiopic: 'ethiopic_orig',
@@ -246,7 +323,6 @@ function pickForCategory(cat: ColCategory): string {
 
 watchEffect(() => {
   if (!availableVersions.value.length) {
-    // Still render empty columns from full versions list so user sees the picker
     if (columns.value.length > 0 || !versions.value.length) return
     const allChineseEmpty = versions.value.find(v => v.category === 'chinese')
     if (allChineseEmpty) {
@@ -262,14 +338,12 @@ watchEffect(() => {
   if (en) cols.push({ label: '英文', category: 'english', versionCode: en })
   const src = pickForCategory('source')
   if (src) cols.push({ label: '原文', category: 'source', versionCode: src })
-  // Guarantee 3 columns minimum (empty placeholders for missing)
   if (!en) cols.push({ label: '英文', category: 'english', versionCode: '' })
   if (!src) cols.push({ label: '原文', category: 'source', versionCode: '' })
   columns.value = cols
 })
 
 function optionsForCol(col: Col): ApocVersion[] {
-  // If no available data, show the full version registry filtered by category
   if (!availableVersions.value.length) {
     return (versions.value ?? []).filter(v => v.category === col.category)
   }
@@ -334,10 +408,7 @@ const CANON_LABEL: Record<string, string> = {
 }
 function canonLabel(k: string) { return CANON_LABEL[k] || k }
 
-const canonChips = computed(() => {
-  const c = docData.value?.document.canon_status_jsonb || {}
-  return c
-})
+const canonChips = computed(() => docData.value?.document.canon_status_jsonb || {})
 
 const formattedPeriod = computed(() => {
   const d = docData.value?.document
@@ -351,15 +422,6 @@ const formattedPeriod = computed(() => {
   if (low === high) return f(low)
   return `${f(low)} – ${f(high)}`
 })
-
-function cleanLabel(label: string) {
-  // Strip noise prefixes like "第一部分:" and de-dupe repeated 卷名 noise
-  return label
-    .replace(/^第[一二三四五六七八九十]+部分:/, '')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .slice(0, 60)
-}
 </script>
 
 <style scoped>
