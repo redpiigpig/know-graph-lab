@@ -64,9 +64,10 @@ CHUNKS_DIR = Path(os.environ.get("EBOOK_CHUNKS_DIR")
 # the parent_label STARTS WITH the parent key (case-insensitive).
 LETTER_CN_LABELS: list[tuple[str, str, str]] = [
     # parent_prefix, letter_substring, chinese_name
-    # ANF Vol 1
-    ("CLEMENT", "First Epistle to the Corinthians", "革利免致哥林多人前書"),
-    ("CLEMENT", "Second Epistle", "革利免致哥林多人後書"),
+    # ANF Vol 1 — Roman Clement = 克勉 (Latin tradition Clemens); Alex.
+    # Clement = 革利免 (Greek tradition Klēmēs). 2026-05-29 譯名決策.
+    ("CLEMENT", "First Epistle to the Corinthians", "克勉致哥林多人前書"),
+    ("CLEMENT", "Second Epistle", "克勉致哥林多人後書"),
     ("MATHETES", "Epistle to Diognetus", "致丟格那妥書"),
     ("MATHETES", "Diognetus", "致丟格那妥書"),
     ("POLYCARP", "Epistle to the Philippians", "坡旅甲致腓立比人書"),

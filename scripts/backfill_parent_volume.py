@@ -57,9 +57,16 @@ PARENT_RULES: list[tuple[str, str]] = [
     ("依納爵",            "依納爵"),
     ("瑪利雅致依納爵",     "依納爵"),
     ("童貞女瑪利亞致依納爵","依納爵"),
-    ("革利免致哥林多",     "羅馬的革利免"),
-    ("革利免後書",         "羅馬的革利免"),  # Vol 7 second epistle (homily)
-    ("革利免書信集",       "羅馬的革利免"),
+    # 2026-05-29 譯名決策：羅馬的克勉 (Latin tradition Clemens)
+    # vs 亞歷山卓的革利免 (Greek tradition Klēmēs)
+    ("克勉致哥林多",       "羅馬的克勉"),
+    ("克勉後書",           "羅馬的克勉"),
+    ("克勉前書",           "羅馬的克勉"),
+    ("克勉書信集",         "羅馬的克勉"),
+    # legacy 革利免致... (Roman Clement舊命名) — keep as fallback
+    ("革利免致哥林多",     "羅馬的克勉"),
+    ("革利免後書",         "羅馬的克勉"),
+    ("革利免書信集",       "羅馬的克勉"),
     # Diognetus (Mathetes)
     ("致丟格那妥",         "瑪忒特"),
     # Polycarp
@@ -150,8 +157,9 @@ PARENT_RULES: list[tuple[str, str]] = [
     # ── Vol 8 — Apocrypha / Pseudo-Clementine / Apostolic Constitutions ─
     ("十二族長遺訓",       "(舊約偽典)"),
     ("狄奧多托殘篇",       "亞歷山卓的革利免"),  # Excerpta ex Theodoto preserved by Clement of Alex
-    ("論貞潔書信二篇",     "羅馬的革利免"),       # attributed to Roman Clement (probably 3c)
-    ("偽革利免文集",       "(偽典)"),             # Pseudo-Clementine Recognitions + Homilies
+    ("論貞潔書信二篇",     "羅馬的克勉"),         # attributed to Roman Clement (probably 3c)
+    ("偽克勉文集",         "(偽典)"),             # Pseudo-Clementine Recognitions + Homilies
+    ("偽革利免文集",       "(偽典)"),             # legacy naming fallback
     ("新約偽典",           "(新約偽典)"),
     ("教令集",             "(教令集)"),
     ("厄德薩史記與其他敘利亞古文獻", "(敘利亞古文獻)"),
