@@ -1,17 +1,16 @@
 /**
  * 即時把 /thesis?tab=interviews 的訪談紀錄打包成 .docx
  *
- * 來源：public/content/interviews/{name}.txt
- * 樣式參考：~/Desktop/nonchurch-nuxt/stores/無境界者雜誌/ 的編輯排版
- *   - B5 版型、頁邊 2cm
- *   - 主標 24pt 華康中黑體 bold 置中
- *   - 棕色 【口述訪談】 tag (文鼎中行書 14pt 靠右)
- *   - 受訪者／時間／地點 文鼎中行書 11pt 靠右
+ * 樣式對齊 ~/Desktop/nonchurch-nuxt/stores/無境界者雜誌/04-第四期/4-4 與 4-5（人物專訪）
+ *   - B5 (182×257mm)、頁邊 20mm
+ *   - 【口述訪談】 tag 14pt 金 #FFC000，文鼎中行書，靠右
+ *   - 主標 24pt 華康中黑體 bold 左對齊
+ *   - 受訪者／時間／地點 文鼎中行書 預設大小靠右
  *   - 章節 14pt NSimSun bold；子章節 12pt bold
- *   - 內文 12pt Times New Roman + NSimSun eastAsia，行距 1.25，無首行縮排
- *   - 筆者／受訪者 用棕色 label，無底色塊
- *   - footnote [N] 上標
- * 每次請求現場生成 → .txt 改了就直接反映在下載出來的 Word。
+ *   - 內文 12pt Times New Roman + NSimSun，line-spacing 1.25，首行縮排以「　　」實作
+ *   - 筆者／受訪者 label 完全平樸，不加粗不上色（編輯排版風格）
+ *   - footnote [N] 9pt 上標
+ * 每次請求現場生成 → .txt 改了就反映在下載出來的 Word。
  */
 import { readFile } from 'node:fs/promises'
 import { join } from 'node:path'
@@ -24,15 +23,13 @@ import {
   convertMillimetersToTwip,
 } from 'docx'
 
-const FONT_TITLE = '華康中黑體'
-const FONT_DECO = '文鼎中行書'
-const FONT_CN = 'NSimSun'
+const FONT_TITLE_CJK = '華康中黑體'
+const FONT_DECO_CJK = '文鼎中行書'
+const FONT_BODY_CJK = 'NSimSun'
 const FONT_EN = 'Times New Roman'
 
-const COLOR_ACCENT = '833C0B'  // 棕色，編輯室裝飾用
-const COLOR_LABEL = '595959'    // 深灰，標籤用
-const COLOR_BODY = '111111'
-const COLOR_MUTED = '595959'
+const COLOR_TAG = 'FFC000'
+const COLOR_BODY = '000000'
 
 const FOOTNOTE_RE = /\[(\d+)\]\(#footnote\d+\)/g
 const ANSWER_RE = /^([一-鿿]{1,5}(?:法師|教授|主教|和尚|居士|博士|老師|牧師|女士|先生|主任|院長|住持))：(.+)$/
@@ -41,28 +38,33 @@ const SECTION_RE = /^[一二三四五六七八九十]+、/
 const SUB_RE = /^（[一二三四五六七八九十]+）/
 const NUM_SUB_RE = /^\d+\.\s+\S/
 
+const INDENT = '　　'  // 兩個全形空白 = 首行縮排 2 字
+
 interface RunOpts {
-  size?: number  // half-points
+  size?: number
   color?: string
   bold?: boolean
   italics?: boolean
   superScript?: boolean
-  font?: string
+  fontEn?: string
+  fontCjk?: string
 }
 
 function mkRun(text: string, opts: RunOpts = {}): TextRun {
+  const ascii = opts.fontEn ?? FONT_EN
+  const cjk = opts.fontCjk ?? FONT_BODY_CJK
   return new TextRun({
     text,
     bold: opts.bold,
     italics: opts.italics,
     superScript: opts.superScript,
-    size: opts.size ?? 24,
+    size: opts.size,
     color: opts.color ?? COLOR_BODY,
-    font: { name: opts.font ?? FONT_EN, eastAsia: opts.font && !/[A-Za-z]/.test(opts.font) ? opts.font : FONT_CN },
+    font: { ascii, hAnsi: ascii, cs: ascii, eastAsia: cjk },
   })
 }
 
-/** [39](#footnote39) → 上標 [39] */
+/** body 文字裡 [N](#footnoteN) → 9pt 上標 [N] */
 function bodyRuns(text: string, opts: RunOpts = {}): TextRun[] {
   const runs: TextRun[] = []
   let cursor = 0
@@ -79,65 +81,60 @@ function bodyRuns(text: string, opts: RunOpts = {}): TextRun[] {
 function tagLine(text: string): Paragraph {
   return new Paragraph({
     alignment: AlignmentType.RIGHT,
-    spacing: { after: 80 },
-    children: [mkRun(text, { font: FONT_DECO, size: 28, color: COLOR_ACCENT })],
+    spacing: { after: 60, line: 300, lineRule: 'auto' as any },
+    children: [mkRun(text, {
+      size: 28, color: COLOR_TAG,
+      fontEn: FONT_DECO_CJK, fontCjk: FONT_DECO_CJK,
+    })],
   })
 }
 
 function title(text: string): Paragraph {
   return new Paragraph({
-    alignment: AlignmentType.CENTER,
-    spacing: { before: 80, after: 240 },
-    children: [mkRun(text, { font: FONT_TITLE, size: 48, bold: true })],
+    spacing: { before: 60, after: 200, line: 300, lineRule: 'auto' as any },
+    children: [mkRun(text, {
+      size: 48, bold: true,
+      fontCjk: FONT_TITLE_CJK,
+    })],
   })
 }
 
 function meta(text: string): Paragraph {
   return new Paragraph({
     alignment: AlignmentType.RIGHT,
-    spacing: { after: 40, line: 320, lineRule: 'auto' as any },
-    children: [mkRun(text, { font: FONT_DECO, size: 22, color: COLOR_MUTED })],
+    spacing: { after: 0, line: 300, lineRule: 'auto' as any },
+    children: [mkRun(text, {
+      fontEn: FONT_DECO_CJK, fontCjk: FONT_DECO_CJK,
+    })],
   })
 }
 
 function section(text: string): Paragraph {
   return new Paragraph({
-    spacing: { before: 360, after: 160, line: 320, lineRule: 'auto' as any },
-    children: [mkRun(text, { font: FONT_CN, size: 28, bold: true })],
+    spacing: { before: 180, after: 180, line: 300, lineRule: 'auto' as any },
+    children: [mkRun(text, { size: 28, bold: true })],
   })
 }
 
 function subsection(text: string): Paragraph {
   return new Paragraph({
-    spacing: { before: 200, after: 80, line: 300, lineRule: 'auto' as any },
-    children: [mkRun(text, { font: FONT_CN, size: 24, bold: true })],
+    spacing: { before: 120, after: 60, line: 300, lineRule: 'auto' as any },
+    children: [mkRun(text, { size: 24, bold: true })],
   })
 }
 
-function para(text: string): Paragraph {
+function bodyPara(text: string): Paragraph {
   return new Paragraph({
-    spacing: { after: 60, line: 360, lineRule: 'auto' as any },
-    children: bodyRuns(text, { size: 24, color: COLOR_BODY }),
+    spacing: { after: 0, line: 300, lineRule: 'auto' as any },
+    children: bodyRuns(INDENT + text),
   })
 }
 
-function question(body: string): Paragraph {
+function dialogue(text: string): Paragraph {
+  // Q/A：label 直接含在文字裡，完全平樸，無首行縮排
   return new Paragraph({
-    spacing: { before: 160, after: 60, line: 360, lineRule: 'auto' as any },
-    children: [
-      mkRun('筆者　', { size: 24, color: COLOR_ACCENT, bold: true }),
-      ...bodyRuns(body, { size: 24, color: COLOR_BODY }),
-    ],
-  })
-}
-
-function answer(label: string, body: string): Paragraph {
-  return new Paragraph({
-    spacing: { before: 60, after: 160, line: 360, lineRule: 'auto' as any },
-    children: [
-      mkRun(`${label}　`, { size: 24, color: COLOR_LABEL, bold: true }),
-      ...bodyRuns(body, { size: 24, color: COLOR_BODY }),
-    ],
+    spacing: { after: 0, line: 300, lineRule: 'auto' as any },
+    children: bodyRuns(text),
   })
 }
 
@@ -147,26 +144,20 @@ function blank(): Paragraph {
 
 function buildParagraphs(raw: string): Paragraph[] {
   const out: Paragraph[] = []
-  const lines = raw.split(/\r?\n/)
   let titleDone = false
   out.push(tagLine('【口述訪談】'))
-  for (const line of lines) {
+  for (const line of raw.split(/\r?\n/)) {
     const t = line.trim()
-    if (!t) {
-      if (titleDone) out.push(blank())
-      continue
-    }
+    if (!t) { if (titleDone) out.push(blank()); continue }
     if (!titleDone) { titleDone = true; out.push(title(t)); continue }
     if (META_RE.test(t)) { out.push(meta(t)); continue }
     if (SECTION_RE.test(t)) { out.push(section(t)); continue }
     if (SUB_RE.test(t) || NUM_SUB_RE.test(t)) { out.push(subsection(t)); continue }
-    if (t.startsWith('筆者：')) { out.push(question(t.slice(3))); continue }
-    const ans = t.match(ANSWER_RE)
-    if (ans) { out.push(answer(ans[1], ans[2])); continue }
+    if (t.startsWith('筆者：') || ANSWER_RE.test(t)) { out.push(dialogue(t)); continue }
     if (t.length <= 25 && !/[。，、；：？！…]$/.test(t) && !/^[\[【（〔]/.test(t)) {
       out.push(section(t)); continue
     }
-    out.push(para(t))
+    out.push(bodyPara(t))
   }
   return out
 }
@@ -191,7 +182,7 @@ export default defineEventHandler(async (event) => {
     styles: {
       default: {
         document: {
-          run: { font: { name: FONT_EN, eastAsia: FONT_CN }, size: 24 },
+          run: { font: { name: FONT_EN, eastAsia: FONT_BODY_CJK }, size: 24 },
         },
       },
     },
@@ -199,7 +190,7 @@ export default defineEventHandler(async (event) => {
       properties: {
         page: {
           size: {
-            width: convertMillimetersToTwip(182),   // B5
+            width: convertMillimetersToTwip(182),
             height: convertMillimetersToTwip(257),
           },
           margin: {
