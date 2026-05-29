@@ -73,14 +73,25 @@ CHUNKS_DIR = Path(os.environ.get("EBOOK_CHUNKS_DIR")
 
 # Reuse scan's body-marker set — keep in sync.
 BODY_MARKERS = [
+    # 書信／講道體常見開頭
     "既然", "誠然", "親愛的", "讓我們", "誠如",
     "若你", "若我", "蓋此", "蓋我", "蓋經上", "蓋誠",
     "雖然", "但關於", "但是我", "然而我",
     "因此我", "正如我", "我先前", "我所說", "只要前一",
     "亞伯拉罕被", "本書信", "在已過去", "從一開始",
+    # 教父神學論述體（Hippolytus / Origen / Tertullian 常見）
+    # 注意：避免「其後／其人／其乃」這類太通用 — 容易在 title 內已出現。
+    "據說", "此人主張", "此哲", "此學派",
+    "凡此", "凡有", "蓋因", "蓋自此", "蓋若",
+    "於是", "於此", "故此", "故知", "故其",
+    "今將", "今者", "今當", "我今",
+    "彼等主張", "彼乃為",
 ]
 TITLE_CLOSE_PUNCT = re.compile(r"[。！？」）]\s*$")
 EM_DASH_SPLIT_RE = re.compile(r"^(第[一二三四五六七八九十百千零0-9]+章\s*[—\-－]+\s*)(.+)$")
+# 用來切 heading 中間的標點邊界（；。！？）— title 通常以「；」分隔多 phrase，
+# 內文則接續純文字。當 heading 長度 > 25 字且有 ; / 。等邊界時觸發。
+PUNCT_BOUNDARY_RE = re.compile(r"[；。！？]")
 
 # Per-book term consistency fixes — { wrong_term: standard_term }. The
 # standards match the volume / NCX-derived names in consolidate_by_ncx.
@@ -385,31 +396,45 @@ TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
 def find_bleed_split(heading_text: str) -> tuple[str, str] | None:
     """If heading is a bleed, return (title_proper, body_bleed); else None.
 
-    `heading_text` is the text AFTER the leading `#### ` markers. We:
-      1. Skip if heading already closes with 「。！？」」 — that's a clean
-         descriptive title with body-marker-like words used legitimately.
-      2. Split at「第X章—」boundary if present; inspect the tail.
-      3. Find the EARLIEST body marker in the tail at position > 1; split
-         the heading there.
+    `heading_text` is the text AFTER the leading `#### ` markers. Strategies:
+      A. If heading is SHORT (≤25) AND closes with 「。！？」」 → assume
+         clean descriptive title, no split. Long headings that end with
+        「。」are usually a body sentence appended to the title — keep
+         processing.
+      B. Match「第X章—」prefix; inspect the tail.
+      C. (BODY_MARKERS) Find earliest body marker in the tail at pos > 1.
+      D. (PUNCT_BOUNDARY, 2026-05-29) When B/C miss but heading is long
+         (>25 chars), split at the last 「；。！？」 in the tail when the
+         remainder after the punct is ≥ 6 chars — that's almost always
+         a bled first sentence of the body.
     """
-    if TITLE_CLOSE_PUNCT.search(heading_text):
+    if len(heading_text) <= 25 and TITLE_CLOSE_PUNCT.search(heading_text):
         return None
     m = EM_DASH_SPLIT_RE.match(heading_text)
     if not m:
         return None
     prefix, tail = m.group(1), m.group(2)
+    # Strategy C — BODY_MARKERS (highest precision)
     best_pos = None
-    best_marker = None
     for marker in BODY_MARKERS:
         pos = tail.find(marker)
         if pos >= 2 and (best_pos is None or pos < best_pos):
             best_pos = pos
-            best_marker = marker
-    if best_pos is None:
-        return None
-    title_proper = prefix + tail[:best_pos].rstrip()
-    body_bleed = tail[best_pos:].strip()
-    return title_proper, body_bleed
+    if best_pos is not None:
+        return prefix + tail[:best_pos].rstrip(), tail[best_pos:].strip()
+    # Strategy D — punctuation boundary, only for longer overflows.
+    # Vol 2-7 reality: many bleeds have no body marker (e.g. proper-noun
+    # subject「恩培多克勒乃其後…」), but the title still has 「；」phrase
+    # separators. Pick the LAST 「；。！？」 such that the remainder is a
+    # plausible body sentence (≥ 6 chars).
+    if len(heading_text) > 25:
+        positions = [m.start() for m in PUNCT_BOUNDARY_RE.finditer(tail) if m.start() >= 2]
+        for p in reversed(positions):
+            after = tail[p + 1:].strip()
+            if len(after) >= 6:
+                title_proper = prefix + tail[:p + 1].rstrip()
+                return title_proper, after
+    return None
 
 
 def sweep_t1(content: str) -> tuple[str, int]:
@@ -421,7 +446,7 @@ def sweep_t1(content: str) -> tuple[str, int]:
     i = 0
     while i < len(lines):
         line = lines[i]
-        h_match = re.match(r"^(#{3,4})\s+(.+?)\s*$", line)
+        h_match = re.match(r"^(#{1,4})\s+(.+?)\s*$", line)
         if not h_match:
             out.append(line)
             i += 1
