@@ -134,10 +134,17 @@ def looks_like_commentary(text: str) -> bool:
 
 
 def is_toc_page(content: str) -> bool:
-    """Detect a 詳細目錄 page: explicit header text, OR ≥20% lines have dot leaders."""
+    """Detect a 詳細目錄 page: explicit header text, OR ≥20% lines have dot
+    leaders. Recolumn'd pages prefix the content with `--- 拉丁文 --- / ---
+    中譯 ---` dividers, so we also peek inside the zh block."""
     head = content.lstrip()
     if any(head.startswith(h) for h in TOC_PAGE_HEADER):
         return True
+    # Recolumn 詳細目錄 pages: zh column starts with 「詳細目錄」 marker.
+    if ZH_DIVIDER in content:
+        zh_block = content.split(ZH_DIVIDER, 1)[1].lstrip()
+        if any(zh_block.startswith(h) for h in TOC_PAGE_HEADER):
+            return True
     lines = [ln for ln in content.splitlines() if ln.strip()]
     if not lines:
         return False
