@@ -381,6 +381,53 @@ git push
 
 ## 待精修書清單（按優先序）
 
+## D1 + D2 大改造（2026-05-29 完成）
+
+### D1: 1-10 章合一頁 + 註釋下沉
+
+`consolidate_by_ncx.py` 在 Vol 2-9 對 split_oversized chunks 處理不力，多數 letter 沒能合進 letter page，造成「每章一頁」過度切散。新增 [`consolidate_letters.py`](../../../scripts/consolidate_letters.py)：
+
+- 按 `volume` group consecutive chapter chunks
+- 中位數 char/chapter < 3000 → 短書信／講道 → 10 章/page 合併
+- 中位數 ≥ 3000 → 長篇論述 → 維持每章一頁（避免破壞長文閱讀體驗）
+- 跳過 front matter (封面/前言/書名頁/索引/序言/目錄)
+- 保留 parent_volume / volume / page_numbers / source_lang
+- chapter_path → `<vol> 第N-M章`（單章時 `第N章`）
+
+實證效果（chunks → 合併後）：
+```
+Vol 2:  433 → 71   (52 page + 19 other)
+Vol 3:  762 → 91   (85 page + 6 other)
+Vol 4:  742 → 152  (73 page + 79 other)
+Vol 5:  611 → 105  (63 page + 42 other)
+Vol 6:  684 → 139  (66 page + 73 other)
+Vol 7:  489 → 79   (53 page + 26 other)
+Vol 9:  349 → 92   (30 page + 62 other)
+```
+
+**坑 6: footnote 必須留 inline (不可剝到 footnotes dict)** — reader 的 `renderMarkdown` 是 SCAN content text 找 `——————` 分隔線 toggle 進 footnote mode、收集 (N) lines 到底部統一 section。如果 consolidator 把 footnote 剝掉 reader 就看不到。consolidate_letters 第一版犯了這錯，寫 [`_fix_letter_pages_inject_footnotes.py`](../../../scripts/_fix_letter_pages_inject_footnotes.py) 從 dict 重新注回 content（gitignore 一次性 hotfix，正式版 consolidate_letters 已修正）。
+
+### D2: 同教父作品在目錄相鄰（parent_volume backfill）
+
+[`backfill_parent_volume.py`](../../../scripts/backfill_parent_volume.py) — 用 90+ pattern 規則從 `volume` substring 推 `parent_volume`：
+
+- 「依納爵...」 → 「依納爵」
+- 「革利免致...」 → 「羅馬的革利免」（Vol 1 + Vol 9）
+- 「革利免《...》」「革利免勸...」 → 「亞歷山卓的革利免」（Vol 2）
+- 「特土良...」「佩爾佩圖亞...」 → 「特土良」
+- 「俄利根...」 → 「俄利根」
+- 「希波呂圖...」「居普良...」「該猶...」「諾瓦提安...」 → 對應教父
+- Vol 6 minor fathers（亞歷山卓的彼得/亞歷山大/狄奧尼修...、阿凱勞斯、美多第烏、阿諾比烏 等）
+- apocrypha (彼得福音/啟示錄/保羅異象/...) → 「(新約偽典)」/「(舊約偽典)」/「(殉道記)」
+
+實證設定：Vol 2: 431 / Vol 3: 757 / Vol 4: 734 / Vol 5: 603 / Vol 6: 677 / Vol 7: 480 / Vol 9: 336 = **4018 chunks set parent_volume**。Vol 1 原本已有 107，現累計 reader 三層樹（parent → volume → entries）完整 work across 全部 ANF。
+
+新卷的 SOP：consolidate_letters → backfill_parent_volume → validate。Reader 自動 group。
+
+---
+
+## 待精修書清單（按優先序）
+
 | Order | Book | Status | 備註 |
 |---|---|---|---|
 | ✅ 1 | ANF Vol 1 | 已精修 | 黃金模板 |
@@ -391,7 +438,7 @@ git push
 | ✅ 6 | ANF Vol 6 (Gregory Thaumaturgus + Dionysius + Africanus + Anatolius/Minor Writers + Archelaus + Methodius + Arnobius) | 已精修 | 2026-05-29 凌晨 03:36：① 846 chunks Haiku 翻完 (~3.5h, ~5-13s/chunk) ② Phase 4 generic pipeline (polish/consolidate/sweep/multi_h3/_fix_auto/validate/scan/llm_proofread/T8) ③ watchdog 抓到 Phase 4 marker → 跑 [`_fix_vol6_volumes.py`](../../../scripts/_fix_vol6_volumes.py)：PREFIX_TO_VOL 72 規則 + EN_TO_ZH_VOL 24 條 → **24 EN→ZH override + 613 prefix-match assignment + 65 unique vols** ④ validate **0 FAIL · 38 WARN · 610 INFO** ✅ ⑤ R2 + DB + REFINED_IDS + push 全自動 |
 | ✅ 7 | ANF Vol 7 (Lactantius + Venantius + Asterius + Victorinus + Dionysius + Didache + Apostolic Constitutions + 2 Clement + Nicene Creed + Early Liturgies) | 已精修 | 2026-05-29 07:43：① 493 chunks Haiku 翻完 ② Phase 5 generic pipeline 跑通 ③ **重要坑**：watchdog 跑 `_fix_vol7_volumes.py` (PREFIX_TO_VOL v1) 失敗 — Vol 7 translate 沒保留 `anf07.*.html` 在 title_en (其他 vol 都有)，0 chunks 被指派 volume ④ 改用 [`_fix_vol7_volumes_v2.py`](../../../scripts/_fix_vol7_volumes_v2.py)：用 `title_en` 英文 NCX label 做 boundary-based forward-propagate (20 個 boundary patterns) → **489 chunks 全分配，20 unique vols** ⑤ validate **0 FAIL · 0 WARN · 3 INFO** ✅
 | 🔄 8 | ANF Vol 8 (Twelve Patriarchs + Excerpts and Epistles + Apostolic Constitutions + Homilies) | **翻譯中** | 2026-05-29 早上啟動，~[1309/1463] sub-chunks，ETA ~20 分鐘；ebook_id `d09946ab-154b-4a97-853f-751cbb346221`；PID 65098；log `scripts/logs/translate_vol8_2026-05-29.log`；watchdog `_vol89_watchdog.py` 會自動跑 Phase 4 |
-| 🔄 9 | ANF Vol 9 (Gospel of Peter + Diatessaron + Apocalypses + Visio Pauli + Apocryphal Acts) | **翻譯完，Phase 4 跑完舊 T1，待重跑 enhanced T1** | 2026-05-29 早上翻完 624 chunks；ebook_id `72cb2f94-da86-4e16-bbbd-4cf3391031df`；watchdog 跑 polish/consolidate/sweep/multi_h3/_fix_auto/validate/scan 通過；validate 0 FAIL · 29 WARN · 12 INFO；scan 0 FAIL · 51 WARN；T7 1 issue (chunk 1 chapter_path 還是英文 `anf09.iv.html`) |
+| ✅ 9 | ANF Vol 9 (Gospel of Peter + Diatessaron + Apocalypses + Visio Pauli + Apocryphal Acts) | 已精修 | 2026-05-29：① 偵測 + 修復 dual-state bug — consolidate 留下 148 個英文重檔 (idx 349-496)，刪除後 497 → 349 chunks ② [`_fix_vol9_volumes.py`](../../../scripts/_fix_vol9_volumes.py) PREFIX_TO_VOL 294 + EN_TO_ZH_VOL 53 → 全部 chunks 有 vol，45 unique vols ③ T1 enhanced 55+30 fixes ④ glossary +30 person +37 term ⑤ D1 consolidate_letters 287 chapter → 30 page (349 → 92 chunks total) ⑥ D2 parent_volume 336 chunks ⑦ validate 0 FAIL · 1 WARN ✓ |
 | 10 | ANF Vol 10 (Bibliography + General Index) | 粗譯（小，4 chunks）| |
 | 11 | NPNF1 Vol 1 (Augustine Confessions) | 粗譯 | |
 | 12 | NPNF2 Vol 4 (Athanasius) | 粗譯 | |
@@ -399,9 +446,73 @@ git push
 
 ---
 
-## 🚧 下個 session 接手清單（2026-05-29 留）
+## 🚧 下個 session 接手清單（2026-05-29 18:00 留）
 
-上一輪 user 給了 Vol 2-7 + reader 大規模改造要求；前端 UI 已上線、後端 T1 加強已跑、Vol 5 失傳卷補位已上。**下個 session 起手要做這些**：
+當前 turn 主要完成：Vol 9 全套（dual-state/PREFIX/T1/glossary/REFINED_IDS）、D2 parent_volume backfill (Vol 2-9, 4018 chunks)、D1 consolidate_letters (Vol 2-9 半數 chunks 合進 page)、SKILL.md 更新。**下個 session 起手要做這些**：
+
+### 立即做（Vol 8 接手）
+
+Vol 8 (`d09946ab-154b-4a97-853f-751cbb346221`) 上個 session 已翻完 +
+watchdog 已跑 Phase 4。下一步：
+
+```bash
+EBID=d09946ab-154b-4a97-853f-751cbb346221
+
+# 1. 檢查 dual-state bug（仿 Vol 9）
+PYTHONIOENCODING=utf-8 python -c "
+import json, re
+from pathlib import Path
+p = Path('G:/我的雲端硬碟/資料/電子書/_chunks/$EBID.jsonl')
+rows = [json.loads(l) for l in p.read_text(encoding='utf-8').splitlines() if l.strip()]
+en = zh = 0
+for r in rows:
+    c = r.get('content','') or ''
+    if not c.strip(): continue
+    zhr = len(re.findall(r'[一-鿿]', c)) / max(len(c),1)
+    if zhr > 0.15: zh += 1
+    else: en += 1
+print(f'zh: {zh} / en: {en} (en>0 chunks 就有 dual-state，照 _fix_vol9_volumes.py 套路寫 _fix_vol8.py 刪英文重檔)')
+"
+
+# 2. Volume backfill
+PYTHONIOENCODING=utf-8 python scripts/_fix_vol8_volumes.py
+
+# 3. consolidate_letters
+PYTHONIOENCODING=utf-8 python scripts/consolidate_letters.py $EBID
+
+# 4. parent_volume backfill (Vol 8 vols 加進 backfill_parent_volume.py 後)
+# 看 Vol 8 出來的 unique vols 是否要補規則：
+PYTHONIOENCODING=utf-8 python -c "
+import json
+from collections import Counter
+from pathlib import Path
+p = Path('G:/我的雲端硬碟/資料/電子書/_chunks/$EBID.jsonl')
+rows = [json.loads(l) for l in p.read_text(encoding='utf-8').splitlines() if l.strip()]
+for v, c in Counter(r.get('volume') for r in rows).most_common():
+    if v: print(f'  {c:4d}  {v}')
+"
+# 補規則到 backfill_parent_volume.py 然後跑
+PYTHONIOENCODING=utf-8 python scripts/backfill_parent_volume.py $EBID
+
+# 5. T1 enhanced
+PYTHONIOENCODING=utf-8 python scripts/sweep_book_quality.py $EBID --only-t1
+PYTHONIOENCODING=utf-8 python scripts/validate_book_structure.py $EBID
+
+# 6. glossary backfill (write seed_glossary_anf_vol8.py based on _vol9 template)
+# 12 patriarchs, Pseudo-Clementine, Apostolic Constitutions, NT apocrypha 等
+
+# 7. REFINED_IDS 加 d09946ab-... 進 pages/fathers/index.vue
+
+# 8. commit + push
+```
+
+### 後續可選
+
+- 把 consolidate_letters 整合進 `_vol89_watchdog.py` 之類自動化流程（或 retire watchdog，因為已不再需要 Vol 8/9 同時跑）
+- 把 D2 的 PARENT_RULES 擴大覆蓋 Vol 8 新出現的教父／作品 cluster
+- 改 reader：頁面標題顯示 `第N-M章` 時前面也帶教父名（如「居普良《論述集》第1-10章」），現在 breadcrumb 可能只看到 vol 名
+
+### 上面這輪沒做的（後續可探索）：
 
 ### A. 等 Vol 8 翻完 + watchdog Phase 4 跑通
 - 看 `scripts/logs/translate_vol8_2026-05-29.log` 結尾出現 `ebooks row updated`
