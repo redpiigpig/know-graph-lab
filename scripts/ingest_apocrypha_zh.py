@@ -216,6 +216,79 @@ _RE_LEADING_BLANK = re.compile(r'^[\s　\n]+')
 _RE_VERSE_MARKER = re.compile(r'(?:^|\n|\s)(\d{1,2})\s+(\d{1,3})(?=\s+[一-鿿])')
 
 
+# ── Line-level garble detection ─────────────────────────────────────────
+_RE_SINGLE_LATIN_LINE = re.compile(r'^[A-Za-z··]{1,2}$')
+_RE_SYMBOL_RUN = re.compile(r'^[\*\-—_=\.·•─━]{3,}$')
+_RE_OCR_PART_HEADER = re.compile(
+    r'^第[一二三四五六七八九十囚IVXivx伊切]+[部冊]?分?[:：]?[~。\.\-]?$'
+)
+_RE_LEADING_PAGE_NUM = re.compile(r'^[ \t]*\d{1,3}[ \t]*$')
+_RE_VERSE_NUM_LINE = re.compile(r'^[ \t]*(\d{1,3})[ \t]*$')
+
+# Common OCR garble patterns that prefix section subtitles. The full set
+# encountered in 王曉朝 PDFs: 毛手.Æ / 第伊都~. / 第切都~. / T可看生命 /
+# 第切都. / 第切都~ / 第伊都. / 第伊都~ / 第切部. / 毛手. / 毛手~ etc.
+_RE_GARBLED_SUBTITLE_OPENING = re.compile(
+    r'^[第伊切都囚部冊~。\.\-Æ§¶毛手TJI\s]{1,10}[\.~。Æ§¶]\s*\n',
+    re.MULTILINE,
+)
+_RE_GARBLED_CHARS = re.compile(r'[Æ§¶◊◆●]')
+
+
+def _is_garbled_subtitle(line: str) -> bool:
+    """Heuristic: line is a 1-15 char OCR-garbled subtitle, not real prose."""
+    s = line.strip()
+    if not s or len(s) > 15:
+        return False
+    # Contains obvious garble chars
+    if _RE_GARBLED_CHARS.search(s):
+        return True
+    # Tilde + period combo (王曉朝 subtitle marker noise)
+    if '~' in s and ('.' in s or '。' in s):
+        return True
+    # Single Latin cap (T/J/I) prefix + short CJK — e.g. "T可看生命"
+    if re.match(r'^[TJIL][一-鿿]{2,6}$', s):
+        return True
+    return False
+
+
+def _is_cjk(c: str) -> bool:
+    return ('一' <= c <= '鿿') or ('㐀' <= c <= '䶿')
+
+
+def _is_noise_line(line: str, is_first: bool = False) -> bool:
+    """Decide whether a single line (already stripped) is OCR noise.
+
+    is_first: when True, allow slightly more lenient stripping of leading
+    page-number / part-header / garbled-subtitle lines.
+    """
+    s = line.strip()
+    if not s:
+        return False  # empty handled by collapsing
+    if _RE_SINGLE_LATIN_LINE.match(s):
+        return True
+    if _RE_SYMBOL_RUN.match(s):
+        return True
+    if _RE_OCR_PART_HEADER.match(s):
+        return True
+    if is_first and _RE_LEADING_PAGE_NUM.match(s):
+        # Drop the standalone page-number line that 王曉朝 PDFs print at the
+        # very top of every page (e.g. "145 \n" before the first verse).
+        return True
+    return False
+
+
+def _merge_verse_marker_with_text(t: str) -> str:
+    """Pattern '2\n歪念能使...' → '2 歪念能使...' so verse N + body sit on
+    one line and read naturally. Only fires when the standalone digit is
+    followed by a CJK character on the next line."""
+    return re.sub(
+        r'\n([ \t]*\d{1,3})[ \t]*\n([一-鿿])',
+        lambda m: '\n' + m.group(1).strip() + ' ' + m.group(2),
+        t,
+    )
+
+
 def clean_text(raw: str) -> str:
     """Strip OCR-typesetting bleed-through from chunk content."""
     t = raw
@@ -230,6 +303,37 @@ def clean_text(raw: str) -> str:
     # Drop the typesetting column-number runs ("2\n3\n4\n5\n6\n7\n8\n").
     t = _RE_COL_NUMBERS.sub('\n', t)
     t = _RE_CONSEC_NUMBER_LINE.sub('\n', t)
+
+    # Drop garbled subtitle openings ("第伊都~.\n", "毛手.Æ\n", "T可看生命\n")
+    t = _RE_GARBLED_SUBTITLE_OPENING.sub('', t)
+
+    # Line-by-line noise filter.
+    lines = t.split('\n')
+    out_lines: list[str] = []
+    seen_real_content = False
+    for raw_line in lines:
+        # is_first scope = before we've encountered our first real CJK line
+        if _is_noise_line(raw_line, is_first=not seen_real_content):
+            continue
+        # Garbled subtitle: skip whether at top or anywhere
+        if _is_garbled_subtitle(raw_line):
+            continue
+        # Detect if this line has CJK content (≥ 1 chars) → real content
+        if any(_is_cjk(c) for c in raw_line):
+            seen_real_content = True
+        out_lines.append(raw_line)
+    t = '\n'.join(out_lines)
+
+    # Merge "verse_num\nchinese..." lines together so display reads as
+    # 「1 地上的王...」 instead of split.
+    t = _merge_verse_marker_with_text(t)
+
+    # Also merge "ch verse\ntext" form: "1 2 \n他們" → "1 2 他們"
+    t = re.sub(
+        r'\n([ \t]*\d{1,2}[ \t]+\d{1,3})[ \t]*\n([一-鿿])',
+        lambda m: '\n' + m.group(1).strip() + ' ' + m.group(2),
+        t,
+    )
 
     # Collapse 3+ newlines to 2; strip leading whitespace.
     t = _RE_MULTI_NEWLINE.sub('\n\n', t)
