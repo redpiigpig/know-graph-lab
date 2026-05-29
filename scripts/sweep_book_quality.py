@@ -381,6 +381,40 @@ TERM_FIXES_ANF_VOL_5 = dict(TERM_FIXES_ANF_COMMON, **{
 TERM_FIXES_ANF_VOL_6 = dict(TERM_FIXES_ANF_COMMON)
 TERM_FIXES_ANF_VOL_7 = dict(TERM_FIXES_ANF_COMMON)
 
+# ── NPNF1 Vol 1 (Augustine: Confessions + Letters) ──────────────────────────
+# 譯名鎖定：奧古斯丁（of Hippo → 希波的奧古斯丁）。收斂思高/異體。
+TERM_FIXES_NPNF1_VOL_1 = dict(TERM_FIXES_ANF_COMMON, **{
+    "奧斯定": "奧古斯丁",          # 思高 → 新教標準
+    "奧古斯汀": "奧古斯丁",
+    "奧古斯廷": "奧古斯丁",
+    "奧古斯定": "奧古斯丁",
+    "盎博羅削": "安波羅修",        # Ambrose 思高 → 新教
+    "安博羅修": "安波羅修",
+    "盎博羅修": "安波羅修",
+    "白拉奇": "伯拉糾",            # Pelagius
+    "貝拉基": "伯拉糾",
+    "摩尼加": "莫尼卡",            # Monica (mother) — 與摩尼教 Manichaean 區隔
+    "莫尼加": "莫尼卡",
+})
+
+# ── NPNF2 Vol 4 (Athanasius) ────────────────────────────────────────────────
+# 譯名鎖定：亞他那修（NOT 阿塔那修）；Arius → 亞流。
+TERM_FIXES_NPNF2_VOL_4 = dict(TERM_FIXES_ANF_COMMON, **{
+    "阿塔那修": "亞他那修",
+    "亞塔那修": "亞他那修",
+    "阿他那修": "亞他那修",
+    "亞大納西": "亞他那修",
+    "阿他拿修": "亞他那修",
+    "阿里烏斯": "亞流",            # Arius
+    "阿里烏": "亞流",
+    "亞利烏": "亞流",
+    "阿流": "亞流",
+    "亞略": "亞流",
+    "安多尼": "安東尼",            # Antony of Egypt
+    "聖安當": "安東尼",
+    "亞歷山卓的狄奧尼修斯": "亞歷山卓的狄奧尼修",  # 詞庫 name_recommended
+})
+
 # 所有 ANF vol 都吃 ANF_COMMON baseline；per-vol specific 覆蓋 baseline。
 TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "c98d358d-7066-4691-a896-b7232707b0db": {**TERM_FIXES_ANF_COMMON, **TERM_FIXES_ANF_VOL_1},  # ANF Vol 1
@@ -390,6 +424,8 @@ TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "0e08c662-540b-4186-b250-9bca0cfe1002": TERM_FIXES_ANF_VOL_5,  # ANF Vol 5
     "dffaae40-e088-41c1-ab7f-9b96f9249661": TERM_FIXES_ANF_VOL_6,  # ANF Vol 6
     "75d8aae0-7431-4be9-baee-c57d26599653": TERM_FIXES_ANF_VOL_7,  # ANF Vol 7
+    "9edb7c37-4231-412b-83bd-78f3f793cc0a": TERM_FIXES_NPNF1_VOL_1,  # NPNF1 Vol 1 Augustine
+    "e01917ab-7429-41a0-9859-eddad413ef60": TERM_FIXES_NPNF2_VOL_4,  # NPNF2 Vol 4 Athanasius
 }
 
 

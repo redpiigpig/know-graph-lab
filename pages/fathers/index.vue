@@ -118,6 +118,8 @@ const REFINED_IDS = new Set([
   '75d8aae0-7431-4be9-baee-c57d26599653',  // ANF Vol 7 (Lactantius / Venantius / Asterius / Methodius / Arnobius)
   'd09946ab-154b-4a97-853f-751cbb346221',  // ANF Vol 8 (Twelve Patriarchs / Pseudo-Clementine / NT Apocrypha / Decretals / Edessa / Remains)
   '72cb2f94-da86-4e16-bbbd-4cf3391031df',  // ANF Vol 9 (Gospel of Peter / Diatessaron / Apocalypses / Visio Pauli / Apocryphal Acts)
+  '9edb7c37-4231-412b-83bd-78f3f793cc0a',  // NPNF1 Vol 1 (Augustine — Confessions + Letters)
+  'e01917ab-7429-41a0-9859-eddad413ef60',  // NPNF2 Vol 4 (Athanasius — Select Works and Letters)
 ])
 
 const series = [

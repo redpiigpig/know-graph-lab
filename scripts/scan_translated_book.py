@@ -166,8 +166,12 @@ def attribute_heading(heading: str,
     heading_parents = set()
     for entry in ncx_index:
         parent_low = entry["parent"].lower()
-        # First word of parent (e.g. "CLEMENT" from "CLEMENT OF ROME")
-        parent_first = parent_low.split()[0]
+        # First word of parent (e.g. "CLEMENT" from "CLEMENT OF ROME").
+        # NPNF CCEL NCX depth-1 labels can be empty → guard against IndexError.
+        parent_toks = parent_low.split()
+        if not parent_toks:
+            continue
+        parent_first = parent_toks[0]
         if parent_first and parent_first in h and len(parent_first) >= 4:
             heading_parents.add(entry["parent"])
     # Tier 1: substring on long NCX entries
