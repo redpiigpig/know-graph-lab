@@ -116,6 +116,7 @@ const REFINED_IDS = new Set([
   '0e08c662-540b-4186-b250-9bca0cfe1002',  // ANF Vol 5 (Hippolytus / Cyprian / Caius / Novatian)
   'dffaae40-e088-41c1-ab7f-9b96f9249661',  // ANF Vol 6 (Gregory Thaumaturgus / Dionysius / Africanus / Anatolius+Minor / Archelaus / Methodius / Arnobius)
   '75d8aae0-7431-4be9-baee-c57d26599653',  // ANF Vol 7 (Lactantius / Venantius / Asterius / Methodius / Arnobius)
+  '72cb2f94-da86-4e16-bbbd-4cf3391031df',  // ANF Vol 9 (Gospel of Peter / Diatessaron / Apocalypses / Visio Pauli / Apocryphal Acts)
 ])
 
 const series = [
