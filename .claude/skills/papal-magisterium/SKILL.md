@@ -111,6 +111,36 @@ description: 教宗訓導文獻對照工具（/encyclicals）— 4 世紀 Damasu
 >
 > Leo I 5c-leo-i 加總：15 → 15 docs（無新增 doc，6 篇 LA 補入提升質量；不含 djvu 6 篇先有的）— LA 涵蓋 12/15（80%）
 >
+> J. **覆蓋審計大訂正**（2026-05-29）— 之前 §0-I「下輪資料源」太悲觀。實際 archive.org 上 14 卷 Migne PL djvu + PDF 全有 + Fordham/newadvent 有大量英譯：
+>
+> **LA — Migne PL（archive.org 已驗證）**：
+> - PL 13 (Damasus + Siricius / `patrologiaecur13mign` / 89 MB)
+> - PL 54 (Leo I — **已下載 c:/tmp/pl54/**)
+> - PL 55 (Hilary / Simplicius / Felix III / `patrologiae_cursus_completus_lat_vol_055`)
+> - PL 56, 63 (Hormisdas), 77 (Gregory I Dialogi), 88, 89 (Hadrian I)
+> - **PL 119 (Nicholas I — Responsa Bulgarorum LA)**
+> - PL 144 (Leo IX), 151 (Urban II Clermont), 162 (12c)
+> - **PL 200 (Alexander III)**, 214-217 (Innocent III 3 卷完整)
+> - identifier naming 不一致：`patrologiaecur{N}mign` / `patrologiaecursu0{NNN}mign` / `patrologiae_cursus_completus_lat_vol_{NNN}` 都試過
+>
+> **EN — Fordham + newadvent（已驗證）**：
+> - Leo I *Petrine Doctrine* (Fordham `source/leo1a.asp`)
+> - Gregory I *Letters* (Fordham `source/greg1a.asp`) + *Pastoral Rule* (newadvent `fathers/3601.htm`) + *Dialogues* (tertullian.org)
+> - **Nicholas I *Responsa Bulgarorum 866* ★★★** (Fordham `basis/866nicholas-bulgar.asp` 191 KB 完整 106 問答)
+> - Schaff NPNF2 Vol 14（Damasus / Siricius 等 4c）at newadvent + ccel
+>
+> **8 步驟 work-plan**（按優先級，詳見 `data/encyclicals/_coverage_audit.md`）：
+> 1. **4c Damasus + Siricius LA** — PL 13 djvu/PDF（首封 Decretal *Directa* 385）
+> 2. **9c Nicholas I Responsa Bulgarorum 866** ★★★ — EN Fordham 已可達 + LA PL 119
+> 3. **6c Hormisdas Libellus 515** — PL 63 + Schaff EN
+> 4. **11c Urban II Clermont 1095** — PL 151 + 4 chronicler 版本
+> 5. **5-6c Christological 期** — Innocent I / Sixtus III / Celestine I / Hormisdas（PL 13/55/56/63）
+> 6. **12c Alexander III** — PL 200
+> 7. **13c Innocent III ~50 letters** — PL 214-217（3 卷 ~210 MB）
+> 8. **Leo I 剩 ~80 letters + ~70 sermons** — 已下載 PL 54 djvu + Gemini Vision OCR
+>
+> 預計可從現在 **57/228 (25%)** 拉到 **130-150/228 (60-70%)** 教宗有 ≥1 doc。
+>
 > 2026-05-28（最深夜）：**user 訂正三區命名 → 全面 hsscol 批次 ingest**
 >
 > **三區命名（user 訂正）**：
