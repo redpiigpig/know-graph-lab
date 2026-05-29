@@ -167,7 +167,21 @@ def looks_like_toc_entry(text: str) -> bool:
 # Block extraction within a page
 # ──────────────────────────────────────────────────────────────
 
-def split_into_blocks(page_content: str) -> list[dict]:
+# DH numbers 1-99 only exist in Part I (信經) which sits on PDF pp 75-114.
+# Any "DH 1-99" appearing later in the book is a false positive — typically
+# an enumeration inside a 39 Articles homily list, an appendix table row, or
+# a footnote cf. — that DH_MARKER's letter-start guard cannot distinguish.
+# We hard-gate by page number to filter those out.
+DH_LOW_RANGE_MAX_PAGE = 115
+
+
+def is_valid_dh(dh: int, pn: int | None) -> bool:
+    if dh < 100:
+        return pn is not None and pn < DH_LOW_RANGE_MAX_PAGE
+    return True
+
+
+def split_into_blocks(page_content: str, pn: int | None = None) -> list[dict]:
     """
     Walk the page text linewise. A new DH-marked line starts a new block.
     Any leading non-DH lines become a 'preamble' block. Returns blocks like:
@@ -175,6 +189,9 @@ def split_into_blocks(page_content: str) -> list[dict]:
       {kind: 'preamble' | 'dh', dh_number?: int, text: str, lang: 'zh'|'lat'|'mixed'}
 
     Headers are NOT split out here — that's phase 2 (cross-block).
+
+    `pn` (page_number) is consulted to suppress DH 1-99 false positives that
+    appear past 第一部分信經 — see DH_LOW_RANGE_MAX_PAGE.
     """
     lines = page_content.splitlines()
     blocks: list[dict] = []
@@ -191,7 +208,7 @@ def split_into_blocks(page_content: str) -> list[dict]:
 
     for ln in lines:
         m = DH_MARKER.match(ln)
-        if m:
+        if m and is_valid_dh(int(m.group(1)), pn):
             flush()
             dh = int(m.group(1))
             rest = m.group(2)
@@ -251,7 +268,7 @@ def _segment_divider_page(content: str, pn: int) -> list[dict] | None:
         cur_dh: int | None = None
         for ln in lines:
             m = DH_MARKER.match(ln)
-            if m:
+            if m and is_valid_dh(int(m.group(1)), pn):
                 cur_dh = int(m.group(1))
                 by_dh.setdefault(cur_dh, []).append(m.group(2))
             elif cur_dh is not None:
@@ -342,7 +359,7 @@ def segment_page(page: dict) -> list[dict]:
     if divider_out is not None:
         return divider_out
 
-    blocks = split_into_blocks(page["content"])
+    blocks = split_into_blocks(page["content"], pn=pn)
 
     out: list[dict] = []
 

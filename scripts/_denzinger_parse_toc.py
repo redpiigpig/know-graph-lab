@@ -168,10 +168,15 @@ def parse() -> dict:
             buf = []
             buf_done = False
             return
-        # Compose volume label: prefer most specific (letter > roman > group > pope/council)
+        # Compose volume label.
+        # Part 1: pick the deepest, most specific group label. Joining
+        # ("Ⅰ. 分成「聖三」三部分的信經 / 宗徒信經") collides in the sidebar
+        # because the truncated prefix looks identical across sub-groups,
+        # producing four "Ⅰ. 分成「聖三」三部分的..." rows. We surface only
+        # the deepest layer so each sub-group renders as its own distinct
+        # volume row.
         if cur_part and cur_part.startswith("第一部分"):
-            vol_parts = [p for p in (cur_section_group, cur_roman, cur_letter) if p]
-            volume = " / ".join(vol_parts) if vol_parts else cur_volume
+            volume = cur_letter or cur_roman or cur_section_group or cur_volume
         else:
             volume = cur_volume or cur_section_group
         entries.append({
