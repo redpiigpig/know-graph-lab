@@ -390,9 +390,83 @@ git push
 | ✅ 5 | ANF Vol 5 (Hippolytus + Cyprian + Caius + Novatian) | 已精修 | 2026-05-28 night：① Gemini 限額切到 Haiku-only (省 30s/chunk Gemini 試錯)，744 chunks 翻完 ② consolidate_by_ncx 對 Hippolytus Refutation 深層巢狀只認 6% 為 volume → 寫 [`_fix_vol5_volumes.py`](../../../scripts/_fix_vol5_volumes.py)（PREFIX_TO_VOL 43 規則 + EN_TO_ZH_VOL 24 條）補 569 chunks volume + 32 unique vols ③ llm_proofread 1845 issues / 65 TERM / 7 HEADING → 抽 7 patterns 加進 TERM_FIXES_ANF_VOL_5 + 跨卷 baseline (希玻里圖→希波呂圖／塞普良→居普良 等) ④ TERM_FIXES_ANF_COMMON baseline 抽出，Vol 1/2/3 retroactively 套 ⑤ seed_glossary_anf_vol5 入庫 ~55 條 ⑥ validate 0 FAIL · 0 WARN · 528 INFO ✅ |
 | ✅ 6 | ANF Vol 6 (Gregory Thaumaturgus + Dionysius + Africanus + Anatolius/Minor Writers + Archelaus + Methodius + Arnobius) | 已精修 | 2026-05-29 凌晨 03:36：① 846 chunks Haiku 翻完 (~3.5h, ~5-13s/chunk) ② Phase 4 generic pipeline (polish/consolidate/sweep/multi_h3/_fix_auto/validate/scan/llm_proofread/T8) ③ watchdog 抓到 Phase 4 marker → 跑 [`_fix_vol6_volumes.py`](../../../scripts/_fix_vol6_volumes.py)：PREFIX_TO_VOL 72 規則 + EN_TO_ZH_VOL 24 條 → **24 EN→ZH override + 613 prefix-match assignment + 65 unique vols** ④ validate **0 FAIL · 38 WARN · 610 INFO** ✅ ⑤ R2 + DB + REFINED_IDS + push 全自動 |
 | ✅ 7 | ANF Vol 7 (Lactantius + Venantius + Asterius + Victorinus + Dionysius + Didache + Apostolic Constitutions + 2 Clement + Nicene Creed + Early Liturgies) | 已精修 | 2026-05-29 07:43：① 493 chunks Haiku 翻完 ② Phase 5 generic pipeline 跑通 ③ **重要坑**：watchdog 跑 `_fix_vol7_volumes.py` (PREFIX_TO_VOL v1) 失敗 — Vol 7 translate 沒保留 `anf07.*.html` 在 title_en (其他 vol 都有)，0 chunks 被指派 volume ④ 改用 [`_fix_vol7_volumes_v2.py`](../../../scripts/_fix_vol7_volumes_v2.py)：用 `title_en` 英文 NCX label 做 boundary-based forward-propagate (20 個 boundary patterns) → **489 chunks 全分配，20 unique vols** ⑤ validate **0 FAIL · 0 WARN · 3 INFO** ✅
-| 8 | NPNF1 Vol 1 (Augustine Confessions) | 粗譯 | |
-| 9 | NPNF2 Vol 4 (Athanasius) | 粗譯 | |
-| 10-38 | Vol 8-10 ANF / Vol 2-14 NPNF1 / Vol 1-14 NPNF2 | 粗譯 | 重大用戶優先順序排定 |
+| 🔄 8 | ANF Vol 8 (Twelve Patriarchs + Excerpts and Epistles + Apostolic Constitutions + Homilies) | **翻譯中** | 2026-05-29 早上啟動，~[1309/1463] sub-chunks，ETA ~20 分鐘；ebook_id `d09946ab-154b-4a97-853f-751cbb346221`；PID 65098；log `scripts/logs/translate_vol8_2026-05-29.log`；watchdog `_vol89_watchdog.py` 會自動跑 Phase 4 |
+| 🔄 9 | ANF Vol 9 (Gospel of Peter + Diatessaron + Apocalypses + Visio Pauli + Apocryphal Acts) | **翻譯完，Phase 4 跑完舊 T1，待重跑 enhanced T1** | 2026-05-29 早上翻完 624 chunks；ebook_id `72cb2f94-da86-4e16-bbbd-4cf3391031df`；watchdog 跑 polish/consolidate/sweep/multi_h3/_fix_auto/validate/scan 通過；validate 0 FAIL · 29 WARN · 12 INFO；scan 0 FAIL · 51 WARN；T7 1 issue (chunk 1 chapter_path 還是英文 `anf09.iv.html`) |
+| 10 | ANF Vol 10 (Bibliography + General Index) | 粗譯（小，4 chunks）| |
+| 11 | NPNF1 Vol 1 (Augustine Confessions) | 粗譯 | |
+| 12 | NPNF2 Vol 4 (Athanasius) | 粗譯 | |
+| 13-38 | NPNF1 Vol 2-14 / NPNF2 Vol 1-3 + 5-14 + ACCS 待補卷 | 粗譯 | 重大用戶優先順序排定 |
+
+---
+
+## 🚧 下個 session 接手清單（2026-05-29 留）
+
+上一輪 user 給了 Vol 2-7 + reader 大規模改造要求；前端 UI 已上線、後端 T1 加強已跑、Vol 5 失傳卷補位已上。**下個 session 起手要做這些**：
+
+### A. 等 Vol 8 翻完 + watchdog Phase 4 跑通
+- 看 `scripts/logs/translate_vol8_2026-05-29.log` 結尾出現 `ebooks row updated`
+- 看 `scripts/logs/vol89_watchdog_console2.log` 結尾出現 Phase 4 完成
+- 自動 commit 也會跑 → 看 `git log` 是否有「ANF Vol 8 + Vol 9 overnight 翻譯 + Phase 4 自動 pipeline」
+
+### B. 對 Vol 8 + Vol 9 重跑 enhanced T1（watchdog Phase 4 跑的是「舊版」T1）
+```bash
+for ebid in d09946ab-154b-4a97-853f-751cbb346221 72cb2f94-da86-4e16-bbbd-4cf3391031df; do
+  PYTHONIOENCODING=utf-8 python scripts/sweep_book_quality.py $ebid --only-t1
+  PYTHONIOENCODING=utf-8 python scripts/validate_book_structure.py $ebid
+done
+```
+Enhanced T1 規則細節：BODY_MARKERS 擴教父論述體；新 Strategy D 用 punct boundary（`；。！？`）切；TITLE_CLOSE_PUNCT 只對 ≤25 字 heading skip；EM_DASH_SPLIT 接受 h1/h2。實證 Vol 2-7 修 **632 處** (Vol3=360 / Vol4=103 / Vol5=97 / Vol6=67 / Vol7=5)。
+
+### C. Vol 8 / 9 詞庫 backfill + REFINED_IDS 加入
+- 用 `seed_glossary_anf_vol5/6/7.py` 模板寫 `seed_glossary_anf_vol8.py`、`_vol9.py`
+- 編 `pages/fathers/index.vue` 把 Vol 8 + Vol 9 ebook_id 加進 `REFINED_IDS`
+
+### D. ⚠️ 大改造 — User 明確要求但因範圍未做（兩件大事）
+
+**D1. 1-10 章合一頁 + 章節間註釋全部下沉到 page 末尾**
+
+User 訊息原話：「**1-10章排在同一頁，註釋全都放在下面**」+「**從 vol2-7 全都是這樣**」。
+
+這牽涉：
+- `consolidate_by_ncx.py` 加 `≤10 章/頁` 強制 split — 但只對**短書信／講道**（≤10 章/封信）合併；**論述書**（如 Hippolytus 25+ 章/卷）維持一章一頁（按 AskUser 已確認的 spec）
+- 判定書信 vs 論述書：可用每章字數中位數 < ~3000 chars 視為短書信
+- Reader 端 footnote rendering — letter page 含 10 個 chapter，每章一個 separator + footnotes block；要在末尾統一收集所有 footnotes 集中渲染（SKILL.md 坑 3 已寫，但 reader code 還是 per-chapter toggle，需要驗證 Vol 5/6/7 是否實際走到「末尾集中」分支）
+- 影響面：consolidate_by_ncx 改動會讓 Vol 2-7 重 consolidate；保留 `_fix_volN.py` 的 PREFIX_TO_VOL 仍有效
+
+**D2. 同教父作品在目錄相鄰**
+
+User 訊息原話：「**不是同一位教父的作品就放在一起嗎？除非這本都是他的作品**」。
+
+實際機制：reader 用 `parent_volume` 三層樹分組（依納爵 ⊃ 致以弗所人書／致馬內夏人書）。要驗：
+- Vol 6 minor writers (Anatolius / Alexander / Pamphilus 等) 是否有 `parent_volume='亞納托利烏與小作家集'`
+- Vol 7 同卷有 Methodius + Arnobius — 不該插在 Lactantius 中間（檢查 chunk_index 順序）
+- NPNF1 Augustine 多卷之間、NPNF2 多教父合卷（如 Vol 7 Cyril + Gregory Nazianzen）的 parent_volume 設置
+- 如有錯亂寫 `_fix_<vol>_parent.py` 補 parent_volume
+
+### E. 索引 chunks 標 chapter_type='index'（可選）
+
+目前 reader 用 title regex 偵測「索引」(`isIndexEntry()` in `pages/ebook/[id].vue`) 集中。如果想更穩定，可以後端標 `chapter_type='index'` 並改 reader 用 type 判斷。**目前 regex 已 work，這項可暫緩。**
+
+### F. Vol 6/7 R010 chapter_path 殘留（可選）
+
+如果再跑一次 validate 還有 chapter_path > 35 字 WARN，照 `_fix_vol6_minor_writers_zh.py` 模板補翻譯。Vol 6 之前 38 條已修，Vol 7 0 條乾淨。
+
+---
+
+## 2026-05-29 早上 turn 紀錄（給下個 session 看）
+
+**已上線的前端改動**（commit `dfe74d9`）：
+- `/fathers` 加 ANF/NPNF1/NPNF2/ACCS 四 tab；新 `ZH_TITLES` 對應表（38 + 2 條），每張卡片中文書名
+- `/ebook/[id]` reader 目錄加「索引」collapsible group — 用 `isIndexEntry()` 偵測 `索引`/`Index`/`Indices`/`Greek Words Index` 等 title pattern
+
+**已上線的 chunks 改動**：
+- Vol 5 Hippolytus 卷二/卷三補「古代失傳」佔位 chunks（611 chunks total，原 609）— [`_fix_vol5_lost_volumes.py`](../../../scripts/_fix_vol5_lost_volumes.py)
+- Vol 6 38 條英文 chapter_path 中譯（[`_fix_vol6_minor_writers_zh.py`](../../../scripts/_fix_vol6_minor_writers_zh.py)）+ Vol 2 1 條 chapter range overlap 修正 → Vol 6 + Vol 2 都 0 FAIL · 0 WARN
+- Vol 2-7 enhanced T1 sweep — 共修 632 處 heading bleed
+
+**Gemini→Haiku 2-strike + 6h cooldown 全域規則**（commit `44f3f16`）：
+- `translate_ebook_to_zh.py` `gemini_with_haiku_fallback()` 加 `_gemini_consecutive_exhaust` + `_gemini_cooldown_until`
+- 三本 SKILL.md（fathers-translation / ebook-translate / ebook-pipeline）寫進規則
 
 ---
 
