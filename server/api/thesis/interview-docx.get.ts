@@ -130,11 +130,14 @@ function bodyPara(text: string): Paragraph {
   })
 }
 
-function dialogue(text: string): Paragraph {
-  // Q/A：label 直接含在文字裡，完全平樸，無首行縮排
+function dialogue(label: string, body: string): Paragraph {
+  // Q/A：label 加粗（筆者：／釋昭慧法師：），body 平樸
   return new Paragraph({
     spacing: { after: 0, line: 300, lineRule: 'auto' as any },
-    children: bodyRuns(text),
+    children: [
+      mkRun(label, { bold: true }),
+      ...bodyRuns(body),
+    ],
   })
 }
 
@@ -153,7 +156,9 @@ function buildParagraphs(raw: string): Paragraph[] {
     if (META_RE.test(t)) { out.push(meta(t)); continue }
     if (SECTION_RE.test(t)) { out.push(section(t)); continue }
     if (SUB_RE.test(t) || NUM_SUB_RE.test(t)) { out.push(subsection(t)); continue }
-    if (t.startsWith('筆者：') || ANSWER_RE.test(t)) { out.push(dialogue(t)); continue }
+    if (t.startsWith('筆者：')) { out.push(dialogue('筆者：', t.slice(3))); continue }
+    const ans = t.match(ANSWER_RE)
+    if (ans) { out.push(dialogue(`${ans[1]}：`, ans[2])); continue }
     if (t.length <= 25 && !/[。，、；：？！…]$/.test(t) && !/^[\[【（〔]/.test(t)) {
       out.push(section(t)); continue
     }
@@ -190,14 +195,14 @@ export default defineEventHandler(async (event) => {
       properties: {
         page: {
           size: {
-            width: convertMillimetersToTwip(182),
-            height: convertMillimetersToTwip(257),
+            width: convertMillimetersToTwip(210),   // A4
+            height: convertMillimetersToTwip(297),
           },
           margin: {
-            top: convertMillimetersToTwip(20),
-            bottom: convertMillimetersToTwip(20),
-            left: convertMillimetersToTwip(20),
-            right: convertMillimetersToTwip(20),
+            top: convertMillimetersToTwip(25),
+            bottom: convertMillimetersToTwip(25),
+            left: convertMillimetersToTwip(25),
+            right: convertMillimetersToTwip(25),
           },
         },
       },

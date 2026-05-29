@@ -158,12 +158,14 @@ def add_body(doc: Document, text: str) -> None:
     _add_body_runs(p, INDENT + text)
 
 
-def add_dialogue(doc: Document, text: str) -> None:
-    """Q/A：label 含在文字裡，平樸無加粗無上色，無首行縮排。"""
+def add_dialogue(doc: Document, label: str, body: str) -> None:
+    """Q/A：label 粗體（筆者：／釋昭慧法師：），body 平樸。"""
     p = doc.add_paragraph()
     p.paragraph_format.space_after = Pt(0)
     p.paragraph_format.line_spacing = 1.25
-    _add_body_runs(p, text)
+    label_run = p.add_run(label)
+    _set_run_font(label_run, bold=True)
+    _add_body_runs(p, body)
 
 
 def add_blank(doc: Document) -> None:
@@ -191,8 +193,11 @@ def render(doc: Document, raw: str) -> None:
             add_section(doc, t); continue
         if SUBSECTION_PATTERN.match(t) or NUMBERED_SUB_PATTERN.match(t):
             add_subsection(doc, t); continue
-        if t.startswith("筆者：") or ANSWER_PATTERN.match(t):
-            add_dialogue(doc, t); continue
+        if t.startswith("筆者："):
+            add_dialogue(doc, "筆者：", t[len("筆者："):]); continue
+        m = ANSWER_PATTERN.match(t)
+        if m:
+            add_dialogue(doc, f"{m.group(1)}：", m.group(2)); continue
         if len(t) <= 25 and not re.search(r"[。，、；：？！…]$", t) \
                 and not t.startswith(("[", "【", "（", "〔")):
             add_section(doc, t); continue
@@ -201,12 +206,12 @@ def render(doc: Document, raw: str) -> None:
 
 def configure_document(doc: Document) -> None:
     for s in doc.sections:
-        s.page_width = Mm(182)
-        s.page_height = Mm(257)
-        s.top_margin = Mm(20)
-        s.bottom_margin = Mm(20)
-        s.left_margin = Mm(20)
-        s.right_margin = Mm(20)
+        s.page_width = Mm(210)   # A4
+        s.page_height = Mm(297)
+        s.top_margin = Mm(25)
+        s.bottom_margin = Mm(25)
+        s.left_margin = Mm(25)
+        s.right_margin = Mm(25)
     style = doc.styles["Normal"]
     style.font.name = FONT_EN
     style.font.size = Pt(12)
