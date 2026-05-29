@@ -66,10 +66,14 @@ ZH_DIVIDER = "--- 中譯 ---"
 # Regex / heuristic drafts (per spec §4 — validate against real OCR)
 # ──────────────────────────────────────────────────────────────
 
-# A DH marker is a 3-5 digit number at the start of a line, followed by a space
-# and at least one more word char. We require ≥1 leading whitespace OR start-of-text
-# to avoid catching mid-sentence numbers.
-DH_MARKER = re.compile(r"(?m)^[ \t]*(\d{3,5})\s+(\S.*)")
+# A DH marker is a 1-5 digit number at the start of a line, followed by a space
+# and content starting with a *letter* (Latin / Greek / CJK / parenthesised symbol).
+# The letter-start guard suppresses false positives like trailing page numbers or
+# stray data digits while still allowing single-digit DH (DH 1-76 in Part I).
+DH_MARKER = re.compile(
+    r"(?m)^[ \t]*(\d{1,5})\s+"
+    r"([A-Za-zÀ-ÿĀ-žΑ-Ωα-ω㐀-鿿豈-﫿（(《【「『‘“].*)"
+)
 
 # TOC artifacts — dot leaders (".....") + trailing page number
 DOT_LEADER = re.compile(r"\.{5,}")
@@ -497,9 +501,11 @@ def load_pages(path: Path) -> list[dict]:
 
 def overlay_recolumn(pages: list[dict]) -> int:
     """When `_chunks/{id}.recolumn.jsonl` exists, replace the content of
-    each page present in it with the column-aware re-OCR'd version.
-    Returns the count of pages overlaid (0 if no recolumn file).
-    Idempotent — last-write-wins if the same page appears twice."""
+    each page present in it with the column-aware re-OCR'd version, and
+    INJECT new page records for recolumn pages that are missing from
+    `pages` (e.g. originals OCR'd as blank). Returns the count of pages
+    touched (overlaid + injected). Idempotent — last-write-wins if the
+    same page appears twice in recolumn."""
     if not RECOLUMN_JSONL.exists():
         return 0
     latest: dict[int, str] = {}
@@ -518,13 +524,34 @@ def overlay_recolumn(pages: list[dict]) -> int:
                 latest[pn] = content
     if not latest:
         return 0
+    existing: set[int] = set()
     n = 0
     for p in pages:
         pn = p.get("page_number")
-        if isinstance(pn, int) and pn in latest:
-            p["content"] = latest[pn]
-            p["_recolumn"] = True
-            n += 1
+        if isinstance(pn, int):
+            existing.add(pn)
+            if pn in latest:
+                p["content"] = latest[pn]
+                p["_recolumn"] = True
+                n += 1
+    injected = 0
+    for pn, content in sorted(latest.items()):
+        if pn in existing:
+            continue
+        pages.append({
+            "page_number": pn,
+            "content": content,
+            "chunk_type": "page",
+            "section_type": "page",
+            "_recolumn": True,
+            "_injected": True,
+        })
+        injected += 1
+        n += 1
+    if injected:
+        pages.sort(key=lambda c: c.get("page_number", 0))
+        print(f"  [overlay_recolumn] injected {injected} recolumn-only pages "
+              f"(absent from main JSONL)")
     return n
 
 
