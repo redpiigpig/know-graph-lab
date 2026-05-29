@@ -504,11 +504,15 @@ def consolidate_across_pages(per_page: list[list[dict]]) -> list[dict]:
                     last["page_numbers"].extend(ch["page_numbers"])
                     continue
 
-                # entry → commentary fold: commentary's zh becomes entry's content
+                # entry → commentary fold: commentary's zh becomes entry's
+                # content, but with a sentinel so the next phase
+                # (`_denzinger_consolidate_entries.py`) can re-separate
+                # 正文 from 註釋 when merging same-document chunks.
                 if last_sec == "entry" and cur_sec == "commentary":
                     com_text = (ch.get("content") or "").strip()
                     if com_text:
-                        last["content"] = (last.get("content", "") + "\n" + com_text).strip() \
+                        sentinel = "\n\n<<COMMENTARY>>\n\n"
+                        last["content"] = (last.get("content", "") + sentinel + com_text).strip() \
                             if last.get("content") else com_text
                     last["page_numbers"].extend(ch["page_numbers"])
                     continue

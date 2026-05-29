@@ -135,6 +135,8 @@ def consolidate(chunks: list[dict], entries: list[dict]) -> list[dict]:
             seed["page_numbers"] = list(c.get("page_numbers") or [c.get("page_number")])
             if (e.get("dh_end") or e.get("dh_start")) != e.get("dh_start"):
                 seed.pop("dh_number", None)
+            seed["_raw_contents"] = [c.get("content") or ""]
+            seed.pop("content", None)  # rebuilt in _bucket_commentary
             buckets[key] = seed
         else:
             merged = buckets[key]
@@ -146,8 +148,14 @@ def consolidate(chunks: list[dict], entries: list[dict]) -> list[dict]:
                     return
                 merged[field] = (a + glue + b).strip() if a else b
 
-            _append("content")
             _append("source_text")
+            # For `content`, queue raw chunks for post-merge 正文/註釋
+            # bucketing (see _bucket_commentary below). We can't bucket
+            # in-place because each chunk's content already carries
+            # `<<COMMENTARY>>` sentinels from segmenter fold, and we want
+            # to concatenate ALL正文 first, then ALL 註釋, across all
+            # chunks in this bucket.
+            merged.setdefault("_raw_contents", []).append(c.get("content") or "")
             merged["page_numbers"].extend(
                 c.get("page_numbers") or [c.get("page_number")]
             )
@@ -167,6 +175,36 @@ def consolidate(chunks: list[dict], entries: list[dict]) -> list[dict]:
 
     items.sort(key=lambda t: (t[0], t[1]))
     out = [t[2] for t in items]
+
+    # Pass C: re-bucket each merged entry's `_raw_contents` into 正文 +
+    # 註釋 sections. Each raw chunk carries `<<COMMENTARY>>` sentinels
+    # inserted by segmenter's entry→commentary fold. We split on the
+    # sentinel; the part BEFORE is 正文 (that DH's actual translation),
+    # everything AFTER is 註釋 (Denzinger's introductory prose for that
+    # DH). When the entry spans multiple DHs (e.g. DH 3-5 has 3 chunks),
+    # we concatenate all 正文 first, then ALL 註釋 — so a reader sees the
+    # full creed text followed by a single 「## 註釋」 block at the bottom.
+    SENT = "<<COMMENTARY>>"
+    for c in out:
+        raws = c.pop("_raw_contents", None)
+        if raws is None:
+            continue
+        body_parts: list[str] = []
+        notes_parts: list[str] = []
+        for raw in raws:
+            if SENT in raw:
+                body, _, notes = raw.partition(SENT)
+                body_parts.append(body.strip())
+                if notes.strip():
+                    notes_parts.append(notes.strip())
+            elif raw.strip():
+                body_parts.append(raw.strip())
+        body_text = "\n\n".join(p for p in body_parts if p)
+        notes_text = "\n\n".join(p for p in notes_parts if p)
+        if notes_text:
+            c["content"] = (body_text + "\n\n## 註釋\n\n" + notes_text).strip()
+        else:
+            c["content"] = body_text
 
     # Renumber chunk_index, dedup page_numbers, rewrite chapter_path on merged
     # chunks (label them by the TOC entry's full DH token, e.g. "DH 5503-5523

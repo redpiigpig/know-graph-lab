@@ -428,13 +428,27 @@
                  context; chapter title sits secondary. Book title is
                  dropped — it's already in the topbar. -->
             <template v-else>
-              <div class="text-stone-400 mb-10 flex items-baseline gap-2 flex-wrap">
-                <!-- DH 編號徽章：bilingual-parallel 書的 entry chunk 才顯示 -->
-                <span v-if="isBilingualMode && pageDhNumber"
-                  class="text-sm font-bold tracking-tight px-2 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200">
-                  DH {{ pageDhNumber }}
-                </span>
-                <span v-else-if="isBilingualMode && pageSectionType === 'header'"
+              <!-- bilingual-parallel (e.g. Denzinger) — give the DH entry a
+                   distinct hero header: parent breadcrumb tiny on top, DH
+                   number as a gold pill, entry title as the H1. -->
+              <div v-if="isBilingualMode && dhRangeFromPath" class="mb-12">
+                <div class="text-[11px] tracking-[0.2em] uppercase text-stone-400 mb-3 flex items-baseline gap-2 flex-wrap">
+                  <span v-if="pageVolume">{{ pageVolume }}</span>
+                </div>
+                <div class="flex items-baseline gap-4 flex-wrap">
+                  <span class="inline-flex items-baseline gap-1 px-3.5 py-1.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300 shadow-sm">
+                    <span class="text-[10px] tracking-[0.25em] font-semibold uppercase opacity-70">DH</span>
+                    <span class="text-xl font-bold tabular-nums tracking-tight">{{ dhRangeFromPath }}</span>
+                  </span>
+                  <h1 class="text-2xl lg:text-3xl font-semibold text-stone-900 tracking-tight leading-snug flex-1 min-w-0 break-words">
+                    {{ entryTitleOnly || `第 ${currentPage} 段` }}
+                  </h1>
+                </div>
+              </div>
+
+              <!-- standard breadcrumb header for non-bilingual books -->
+              <div v-else class="text-stone-400 mb-10 flex items-baseline gap-2 flex-wrap">
+                <span v-if="isBilingualMode && pageSectionType === 'header'"
                   class="text-xs font-semibold tracking-wider px-2 py-0.5 rounded bg-stone-100 text-stone-600 uppercase">標題</span>
                 <span v-else-if="isBilingualMode && pageSectionType === 'commentary'"
                   class="text-xs font-semibold tracking-wider px-2 py-0.5 rounded bg-blue-50 text-blue-700 uppercase">註解</span>
@@ -888,6 +902,21 @@ function showToast(message: string, type: "info" | "error" = "info") {
 const cleanChapterLabel = computed(() =>
   (pageChapter.value || "").replace(/\[\^\d+\]/g, "").trim()
 );
+// Strip the leading「DH N」or「DH N-M」prefix from a chapter_path so the
+// entry title can be displayed cleanly underneath a separate DH badge.
+//   "DH 6 亞美尼亞(Armenia)教會的洗禮信經" → "亞美尼亞(Armenia)教會的洗禮信經"
+//   "DH 3-5 埃及(Egypt)致會典章 (約 500 年)" → "埃及(Egypt)致會典章 (約 500 年)"
+const entryTitleOnly = computed(() => {
+  const raw = cleanChapterLabel.value;
+  return raw.replace(/^DH\s+\d+(?:-\d+)?[a-z]?\s+/, "").trim();
+});
+// Pull the DH range string out of chapter_path for the badge.
+//   "DH 6 ..." → "6"; "DH 3-5 ..." → "3-5"; "DH 5099a-b ..." → "5099a-b"
+const dhRangeFromPath = computed(() => {
+  const raw = cleanChapterLabel.value;
+  const m = raw.match(/^DH\s+(\S+)/);
+  return m ? m[1] : null;
+});
 // Volume (parent work) the current chunk belongs to — populated by polish
 // step (`volume` field on chunks). Used as the primary breadcrumb label
 // since it gives reader-relevant context (which letter/treatise they're in)
@@ -1116,7 +1145,14 @@ function renderMarkdown(md: string, chunkIndex: number | null = null): string {
     }
     else if ((h = escaped.match(/^##\s+([\s\S]+)$/))) {
       const joined = h[1].replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
-      bodyOut.push(`<h2>${inlineFmt(joined, chunkIndex)}</h2>`);
+      // `## 註釋` → special divider styling (centered, double-rule top,
+      // sparse letter-spacing). Emitted by `_denzinger_consolidate_entries.py`
+      // when a merged entry has commentary chunks folded in.
+      if (joined === "註釋" || joined === "註　釋") {
+        bodyOut.push(`<h2 class="section-notes-divider">註　釋</h2>`);
+      } else {
+        bodyOut.push(`<h2>${inlineFmt(joined, chunkIndex)}</h2>`);
+      }
     }
     else if ((h = escaped.match(/^#\s+([\s\S]+)$/))) {
       const joined = h[1].replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
@@ -2443,6 +2479,41 @@ useHead({ title: computed(() => ebook.value ? `${ebook.value.title} — 閱讀` 
   text-align: center;
   letter-spacing: 0.06em;
   line-height: 1.55;
+}
+/* Special `## 註釋` divider — emitted by consolidator when same-document
+   commentary chunks fold into a merged entry. Visually distinct from the
+   regular h2 章 heading: airy, muted, like a footnote section header. */
+.ebook-prose :deep(h2.section-notes-divider) {
+  font-size: 13px;
+  font-weight: 500;
+  color: #a8a29e;
+  margin: 4.5rem 0 2rem;
+  padding: 0;
+  border: 0;
+  text-align: center;
+  letter-spacing: 0.8em;
+  text-indent: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+.ebook-prose :deep(h2.section-notes-divider)::before,
+.ebook-prose :deep(h2.section-notes-divider)::after {
+  content: "";
+  flex: 0 0 6rem;
+  height: 1px;
+  background: #d6d3d1;
+}
+/* Paragraphs that follow the 註釋 divider — render in muted, smaller
+   type so the reader's eye treats them as supporting material. */
+.ebook-prose :deep(h2.section-notes-divider) ~ p,
+.ebook-prose :deep(h2.section-notes-divider) ~ ul,
+.ebook-prose :deep(h2.section-notes-divider) ~ ol,
+.ebook-prose :deep(h2.section-notes-divider) ~ blockquote {
+  font-size: 15px;
+  line-height: 1.85;
+  color: #57534e;
 }
 /* h3 = 節 (section). Medium-large; left-aligned with a left accent bar. */
 .ebook-prose :deep(h3) {
