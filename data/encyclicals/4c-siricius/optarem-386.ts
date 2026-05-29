@@ -26,9 +26,9 @@ export const optarem386: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補 — Migne PL 13）',
+      label: '拉丁原文 (la.wikisource.org / Siricius — Epistolae et decreta)',
       textKey: 'optarem-386-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Epistolae_et_decreta_(Siricius)',
     },
   ],
   displayMode: 'paragraph-aligned',

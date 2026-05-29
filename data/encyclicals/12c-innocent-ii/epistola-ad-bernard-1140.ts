@@ -26,9 +26,9 @@ export const epistolaAdBernard1140: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補 — Migne PL 179）',
+      label: '拉丁原文 (la.wikisource.org / Innocent II — Epistolae et privilegia /2)',
       textKey: 'epistola-ad-bernard-1140-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Epistolae_et_privilegia_(Innocentius_II)/2',
     },
   ],
   displayMode: 'paragraph-aligned',

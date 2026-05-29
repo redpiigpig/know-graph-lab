@@ -26,9 +26,9 @@ export const epistolaeSelectae1000: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補 — Migne PL 139）',
+      label: '拉丁原文 (la.wikisource.org / Silvester II — Epistolae)',
       textKey: 'epistolae-selectae-1000-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Epistolae_(Silvester_II)',
     },
   ],
   displayMode: 'paragraph-aligned',

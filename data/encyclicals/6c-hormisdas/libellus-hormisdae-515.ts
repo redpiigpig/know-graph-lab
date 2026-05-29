@@ -26,9 +26,9 @@ export const libellusHormisdae515: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補 — Migne PL 63）',
+      label: '拉丁原文 (la.wikisource.org / Hormisdas — Sicut Rationi Congruit)',
       textKey: 'libellus-hormisdae-515-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Sicut_Rationi_Congruit',
     },
   ],
   displayMode: 'paragraph-aligned',

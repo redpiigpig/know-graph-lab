@@ -26,9 +26,9 @@ export const tempusDesideratum400: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補 — Migne PL 20）',
+      label: '拉丁原文 (la.wikisource.org / Anastasius I — Epistolae et decreta)',
       textKey: 'tempus-desideratum-400-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Epistolae_et_decreta_(Anastasius_I)',
     },
   ],
   displayMode: 'paragraph-aligned',

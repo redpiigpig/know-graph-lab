@@ -26,9 +26,9 @@ export const inRequirendis417: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補 — Migne PL 20）',
+      label: '拉丁原文 (la.wikisource.org / Innocent I — Epistolae)',
       textKey: 'in-requirendis-417-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Epistolae_(Innocentius_I)',
     },
   ],
   displayMode: 'paragraph-aligned',

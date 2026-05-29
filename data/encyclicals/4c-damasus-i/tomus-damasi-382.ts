@@ -26,9 +26,9 @@ export const tomusDamasi382: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補 — Migne PL 13）',
+      label: '拉丁原文 (la.wikisource.org / Tomus Damasi (= Rescriptum))',
       textKey: 'tomus-damasi-382-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Rescriptum_(Damasus_I)',
     },
   ],
   displayMode: 'paragraph-aligned',

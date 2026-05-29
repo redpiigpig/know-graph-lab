@@ -26,9 +26,9 @@ export const responsaBulgarorum866: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補 — Migne PL 119）',
+      label: '拉丁原文 (Migne PL 119 col.977-1014 / Gemini Vision OCR)',
       textKey: 'responsa-bulgarorum-866-latin',
-      placeholder: true,
+      source: 'https://archive.org/details/patrologiaecur119mign',
     },
   ],
   displayMode: 'paragraph-aligned',

@@ -26,9 +26,9 @@ export const adFlavianum540: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補 — Migne PL 69）',
+      label: '拉丁原文 (la.wikisource.org / Vigilius — Epistolae et decreta)',
       textKey: 'ad-flavianum-540-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Epistolae_et_decreta_(Vigilius)',
     },
   ],
   displayMode: 'paragraph-aligned',

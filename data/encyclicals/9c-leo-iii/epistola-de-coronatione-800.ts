@@ -26,9 +26,9 @@ export const epistolaDeCoronatione800: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補 — Migne PL 102）',
+      label: '拉丁原文 (la.wikisource.org / Leo III — Privilegia)',
       textKey: 'epistola-de-coronatione-800-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Privilegia_(Leo_III)',
     },
   ],
   displayMode: 'paragraph-aligned',

@@ -26,9 +26,9 @@ export const adIohannemAntiochenum433: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補 — Migne PL 50）',
+      label: '拉丁原文 (la.wikisource.org / Sixtus III — Epistolae et decreta)',
       textKey: 'ad-iohannem-antiochenum-433-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Epistolae_et_decreta_(Sixtus_III)',
     },
   ],
   displayMode: 'paragraph-aligned',

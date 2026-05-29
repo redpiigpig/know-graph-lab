@@ -26,9 +26,9 @@ export const vobisPace557: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補 — Migne PL 69）',
+      label: '拉丁原文 (la.wikisource.org / Pelagius I — Epistolae)',
       textKey: 'vobis-pace-557-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Epistolae_(Pelagius_I)',
     },
   ],
   displayMode: 'paragraph-aligned',

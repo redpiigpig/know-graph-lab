@@ -26,9 +26,9 @@ export const laudabiliter1155: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補 — Migne PL 188）',
+      label: '拉丁原文 (la.wikisource.org / Laudabiliter)',
       textKey: 'laudabiliter-1155-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Laudabiliter',
     },
   ],
   displayMode: 'paragraph-aligned',

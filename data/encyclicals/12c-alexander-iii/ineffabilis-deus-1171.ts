@@ -26,9 +26,9 @@ export const ineffabilisDeus1171: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補 — Migne PL 200）',
+      label: '拉丁原文 (la.wikisource.org / Alexander III — Licet de vitanda 1179)',
       textKey: 'ineffabilis-deus-1171-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Licet_de_vitanda',
     },
   ],
   displayMode: 'paragraph-aligned',

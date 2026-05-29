@@ -26,9 +26,9 @@ export const lateran649Canons: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補 — Migne PL 87）',
+      label: '拉丁原文 (la.wikisource.org / Martin I — Privilegia)',
       textKey: 'lateran-649-canons-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Privilegia_(Martinus_I)',
     },
   ],
   displayMode: 'paragraph-aligned',

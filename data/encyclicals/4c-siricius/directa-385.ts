@@ -26,9 +26,9 @@ export const directa385: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補 — Migne PL 13）',
+      label: '拉丁原文 (la.wikisource.org / Siricius — First Decretal)',
       textKey: 'directa-385-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Epistola_Decretalis_(Siricius)',
     },
   ],
   displayMode: 'paragraph-aligned',

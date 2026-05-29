@@ -26,9 +26,9 @@ export const confidimus376: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補 — Migne PL 13）',
+      label: '拉丁原文 (la.wikisource.org / Damasus Epistolae)',
       textKey: 'confidimus-376-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Epistolae_(Damasus_I)',
     },
   ],
   displayMode: 'paragraph-aligned',

@@ -26,9 +26,9 @@ export const epistolaeAdCarolumMagnum: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補 — Migne PL 98）',
+      label: '拉丁原文 (la.wikisource.org / Hadrian I — Epistolae)',
       textKey: 'epistolae-ad-carolum-magnum-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Epistolae_(Hadrianus_I)',
     },
   ],
   displayMode: 'paragraph-aligned',
