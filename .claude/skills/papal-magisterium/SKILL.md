@@ -57,6 +57,13 @@ description: 教宗訓導文獻對照工具（/encyclicals）— 4 世紀 Damasu
 >
 > Wikisource 對 4-12c 仍非常稀疏（早期教宗多以 Migne PL 為主）。下輪需轉戰 PL／Schaff Vol 12-13 EN 抽 Leo I 173 letter + 96 sermon，並對 Damasus / Siricius / Hormisdas / Honorius I / Nicholas I / Urban II 等做 PL OCR。
 >
+> D. Leo I Schaff Vol 12 抽 14 篇 marquee（`_papal_leo_i_schaff_extract.py`）：
+> - **EN 全部從 CCEL Schaff NPNF2 Vol 12 JSONL**（ebook_id `02a08547-6fb5-44b2-8a59-9b1f625f3a54`，已 parsed 235 chunks）
+> - **7 篇 marquee 書信**：Letter 14 致 Anastasius（papal vicariate）／Letter 15 致 Turribius（反 Priscillianism ★ 36 KB）／Letter 16 致西西里主教團（洗禮節期）／Letter 27 致 Flavian（Tome 前序）／Letter 124 致巴勒斯坦修士（迦克墩後 Christology ★★ 26 KB）／Letter 156 + 165 致 Leo Augustus（迦克墩重申 + "Second Tome"）
+> - **7 篇 marquee 講道**：Sermon 3（晉鐸週年 — Petrine Primacy ★）／Sermon 21（聖誕 I — 道成肉身）／Sermon 39 + 40（Lent I + II — LA from thelatinlibrary.com ★）／Sermon 71（復活 I — Paschal Mystery）／Sermon 82（伯多祿保祿慶日 — Caput Mundi ★★）／Sermon 95（真福八端）
+> - LA：絕大多數 placeholder（Wikisource PL/54 Leo I 全是空白 stub；只 Sermon 39/40 從 thelatinlibrary.com 有完整 LA）；ZH 全 placeholder
+> - 5c-leo-i 從 1 篇變 15 篇 marquee（Tome of Leo + 7 letters + 7 sermons）
+>
 > 2026-05-28（最深夜）：**user 訂正三區命名 → 全面 hsscol 批次 ingest**
 >
 > **三區命名（user 訂正）**：

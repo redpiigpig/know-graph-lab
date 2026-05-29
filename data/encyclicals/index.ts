@@ -821,7 +821,49 @@ import { cumExInjuncto1199 } from './13c-innocent-iii/cum-ex-injuncto-1199'
 
 import { privilegiumPaupertatis1216 } from './13c-innocent-iii/privilegium-paupertatis-1216'
 
+import { letter14ToAnastasius447 } from './5c-leo-i/letter-14-to-anastasius-447'
+
+import { letter15ToTurribius447 } from './5c-leo-i/letter-15-to-turribius-447'
+
+import { letter16ToSicily447 } from './5c-leo-i/letter-16-to-sicily-447'
+
+import { letter27ToFlavian449 } from './5c-leo-i/letter-27-to-flavian-449'
+
+import { letter124ToMonksOfPalestine453 } from './5c-leo-i/letter-124-to-monks-of-palestine-453'
+
+import { letter156ToLeoAugustus457 } from './5c-leo-i/letter-156-to-leo-augustus-457'
+
+import { letter165ToLeoAugustus458 } from './5c-leo-i/letter-165-to-leo-augustus-458'
+
+import { sermon3OnBirthdayIii443 } from './5c-leo-i/sermon-3-on-birthday-iii-443'
+
+import { sermon21OnNativityI441 } from './5c-leo-i/sermon-21-on-nativity-i-441'
+
+import { sermon39OnLentI441 } from './5c-leo-i/sermon-39-on-lent-i-441'
+
+import { sermon40OnLentIi442 } from './5c-leo-i/sermon-40-on-lent-ii-442'
+
+import { sermon71OnResurrectionI443 } from './5c-leo-i/sermon-71-on-resurrection-i-443'
+
+import { sermon82OnPeterAndPaul441 } from './5c-leo-i/sermon-82-on-peter-and-paul-441'
+
+import { sermon95OnBeatitudes } from './5c-leo-i/sermon-95-on-beatitudes'
+
 export const ALL_DOCUMENTS: PapalDocument[] = [
+  sermon95OnBeatitudes,
+  sermon82OnPeterAndPaul441,
+  sermon71OnResurrectionI443,
+  sermon40OnLentIi442,
+  sermon39OnLentI441,
+  sermon21OnNativityI441,
+  sermon3OnBirthdayIii443,
+  letter165ToLeoAugustus458,
+  letter156ToLeoAugustus457,
+  letter124ToMonksOfPalestine453,
+  letter27ToFlavian449,
+  letter16ToSicily447,
+  letter15ToTurribius447,
+  letter14ToAnastasius447,
   privilegiumPaupertatis1216,
   cumExInjuncto1199,
   epistolaAdMellitum601,
