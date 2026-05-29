@@ -746,6 +746,9 @@ const pageLoading = ref(false);
 // Spec: .claude/skills/ebook-pipeline/book-structure-bilingual-parallel.md
 const pageSectionType = ref<"header" | "entry" | "commentary" | null>(null);
 const pageDhNumber = ref<number | null>(null);
+// Original PDF page (1-indexed). Surfaced in copy citations but NOT shown
+// inline — keeps the reader clean while preserving citation accuracy.
+const pagePdfPage = ref<number | null>(null);
 const dhJumpInput = ref<string>("");
 const isBilingualMode = computed(() => ebook.value?.display_mode === "bilingual-parallel");
 
@@ -1493,6 +1496,7 @@ async function loadPage(page: number) {
   pageChapter.value = data?.currentPage?.chapter_path ?? null;
   pageSectionType.value = data?.currentPage?.section_type ?? null;
   pageDhNumber.value = data?.currentPage?.dh_number ?? null;
+  pagePdfPage.value = data?.currentPage?.page_number ?? null;
   pageLoading.value = false;
   jumpPage.value = page;
 
@@ -2082,7 +2086,10 @@ function findNearestPageBeforeNode(startNode: Node | null): number | null {
   const article = (startNode as Element).closest?.("article") || document.querySelector("article");
   if (!article) return null;
   const markers = Array.from(article.querySelectorAll<HTMLElement>(".page-marker"));
-  if (!markers.length) return null;
+  // No inline {{p:N}} markers? Fall back to the chunk's own page_number
+  // metadata (Denzinger and similar bilingual-parallel books don't insert
+  // inline page-markers — citations still need the original PDF page).
+  if (!markers.length) return pagePdfPage.value ?? null;
   // Find the LAST marker that's positioned <= startNode in document order.
   let best: HTMLElement | null = null;
   for (const m of markers) {

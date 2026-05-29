@@ -175,9 +175,19 @@ def looks_like_toc_entry(text: str) -> bool:
 DH_LOW_RANGE_MAX_PAGE = 115
 
 
-def is_valid_dh(dh: int, pn: int | None) -> bool:
+_LATIN_GREEK_START = re.compile(r"^[A-ZΑ-Ω]")
+
+
+def is_valid_dh(dh: int, pn: int | None, rest: str = "") -> bool:
     if dh < 100:
-        return pn is not None and pn < DH_LOW_RANGE_MAX_PAGE
+        if pn is None or pn >= DH_LOW_RANGE_MAX_PAGE:
+            return False
+        # Denzinger Part I creed entries always open the actual document
+        # text with a Latin or Greek capital letter (Credo, Iesum,
+        # Πιστεύομεν, etc.). A DH-marker followed by Chinese / lowercase /
+        # punctuation is a stray "9 及第 10 篇" cross-reference inside
+        # prose, not a real entry start.
+        return bool(_LATIN_GREEK_START.match(rest.strip()))
     return True
 
 
@@ -208,7 +218,7 @@ def split_into_blocks(page_content: str, pn: int | None = None) -> list[dict]:
 
     for ln in lines:
         m = DH_MARKER.match(ln)
-        if m and is_valid_dh(int(m.group(1)), pn):
+        if m and is_valid_dh(int(m.group(1)), pn, m.group(2)):
             flush()
             dh = int(m.group(1))
             rest = m.group(2)
@@ -268,7 +278,7 @@ def _segment_divider_page(content: str, pn: int) -> list[dict] | None:
         cur_dh: int | None = None
         for ln in lines:
             m = DH_MARKER.match(ln)
-            if m and is_valid_dh(int(m.group(1)), pn):
+            if m and is_valid_dh(int(m.group(1)), pn, m.group(2)):
                 cur_dh = int(m.group(1))
                 by_dh.setdefault(cur_dh, []).append(m.group(2))
             elif cur_dh is not None:

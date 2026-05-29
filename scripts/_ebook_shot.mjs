@@ -49,7 +49,9 @@ const { data: linkData, error: linkErr } = await admin.auth.admin.generateLink({
 if (linkErr) { console.error('magic link failed:', linkErr); process.exit(1) }
 
 const browser = await chromium.launch({ headless: true })
-const ctx = await browser.newContext({ viewport: { width: 1900, height: 1100 } })
+const VW = parseInt(flag('vw', '1900')) || 1900
+const VH = parseInt(flag('vh', '1100')) || 1100
+const ctx = await browser.newContext({ viewport: { width: VW, height: VH } })
 const page = await ctx.newPage()
 await page.goto(linkData.properties.action_link, { waitUntil: 'domcontentloaded' })
 await page.waitForLoadState('networkidle').catch(()=>{})
