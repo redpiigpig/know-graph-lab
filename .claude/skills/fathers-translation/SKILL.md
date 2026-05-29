@@ -375,6 +375,8 @@ git push
 - `_fix_<vol>.py` 是 one-shot 腳本，gitignore (`_*` 已排除)，每卷自己寫一份
 - `validate 0 FAIL 0 WARN` 是上架硬門檻；scan 的 T2/T5 WARN 屬 consolidate ordering 副作用，可接受
 
+**Gemini→Haiku 2-strike + 6h cooldown（2026-05-29 全域規則）**：`--engine gemini` 現在不再每 chunk 浪費 ~70s 重複試 4 keys × 3 attempts；連續 2 次 keys 耗盡就鎖 Haiku-only 6h，6h 後再探一次 Gemini。Vol 8/9 起整夜 unattended 預設用 `--engine gemini`（會自動切）— 不用手動切 `--engine haiku`。詳見 [[ebook-translate#gemini-haiku-2-strike-6h-cooldown-全域規則-2026-05-29]]。
+
 ---
 
 ## 待精修書清單（按優先序）

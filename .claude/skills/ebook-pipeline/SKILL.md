@@ -308,6 +308,16 @@ Auth via `ANTHROPIC_API_KEY` or `~/.claude/.credentials.json` OAuth token. **2-s
 - Gemini rejects with `>1000 pages` → that single book auto-falls-back to Haiku inline
 - File > 50 MB → routes to Haiku directly
 
+### 跨腳本 Gemini→Haiku 2-strike + 6h cooldown 規範（2026-05-29 全域規則）
+
+**所有「Gemini-first，Haiku-fallback」的轉錄 pipeline**（OCR / EPUB 翻譯 / 音檔轉錄 / 影像轉錄）都遵守同一條規則：
+
+> 連續 2 次「Gemini 跑完所有 keys 都耗盡（429 / throttle / exhausted / >quota）」→ 立刻切到 Haiku-only 模式 6 小時 → 6 小時後下一次操作再試 Gemini，成功則 streak 歸零、cooldown 解除。
+
+實作 reference：[`scripts/translate_ebook_to_zh.py`](../../../scripts/translate_ebook_to_zh.py) `gemini_with_haiku_fallback()`、`GEMINI_FAIL_STREAK_LIMIT = 2`、`GEMINI_COOLDOWN_SECONDS = 6 * 3600`。
+
+目的：避免「每個單位浪費 ~70s 重複試 4×3 keys 才 fallback」的反覆消耗。`ocr_with_gemini.py` 也應該長成這個形狀（目前是 batch-level switch，不是 cooldown）— TODO 後續對齊。
+
 ### Scheduler
 
 Bat is a **5-step runner**: `ingest_new_books → parse_worker → ocr_with_gemini → detect_set_volumes → split_ebook_set`. Steps 4a/4b idempotent (no-op when no 套書 pending).

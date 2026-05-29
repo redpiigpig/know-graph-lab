@@ -103,7 +103,7 @@ python scripts/translate_ebook_to_zh.py <ebook_id> --engine gemini --resume
 | 引擎 | 何時用 | 注意 |
 |---|---|---|
 | **sonnet** (`SONNET_MODEL`) | 神學術語準確度最高（idle 期最佳）| OAuth；**跟互動 Claude Code (Opus/Sonnet) 共用 Max 帳號 burst rate**，互動中啟 Sonnet worker 立刻 429（2026-05-21 實測），idle 期才能用 |
-| **gemini** (`gemini-2.5-flash`) | 預設；OCR 不在跑、Gemini quota 寬時 | 4 key rotation；free tier 250 RPD × 4 keys；**遇 "all keys exhausted" 自動 fallback 到 Haiku 該段**（per-piece，不是 per-chunk） |
+| **gemini** (`gemini-2.5-flash`) | 預設；OCR 不在跑、Gemini quota 寬時 | 4 key rotation；free tier 250 RPD × 4 keys；**遇 "all keys exhausted" 自動 fallback 到 Haiku 該段**（per-piece，不是 per-chunk）；**2 次連續耗盡 → Haiku-only 模式 6 小時**（見下） |
 | **haiku** (`HAIKU_MODEL`) | Gemini 已撞牆、不想浪費 ~70s/chunk 等 4 把 key 退讓 | OAuth；跟 Sonnet 同帳號但實測限額比 Sonnet 鬆很多 — 我互動跑 Opus + worker 跑 Haiku 可並行；偶爾撞 "exceed account rate limit" 由 auto-pause 接住 |
 
 **規則**（2026-05-23 update — Schaff 全集實測）：
@@ -111,6 +111,15 @@ python scripts/translate_ebook_to_zh.py <ebook_id> --engine gemini --resume
 - 單本書 / 小批次 / 不確定 → `--engine gemini`（有 Haiku fallback 保底，反正撞牆會自動切）
 - 使用者在 idle 期、單篇要最高品質、預算寬 → `--engine sonnet`
 - 一律先看 [Quota 協調](#quota-協調) 確認狀態
+
+### Gemini→Haiku 2-strike + 6h cooldown 全域規則（2026-05-29）
+
+`translate_ebook_to_zh.py` 內建：以 Gemini 為主，**連續 2 次跑完所有 Gemini key 都耗盡（429/throttle/exhausted）就立刻切到 Haiku-only 模式，整整 6 小時內不再試 Gemini**；6 小時後下一個 chunk 自動探一次 Gemini，成功則 streak 歸零、cooldown 解除。
+
+- 計數變數：`GEMINI_FAIL_STREAK_LIMIT = 2`、`GEMINI_COOLDOWN_SECONDS = 6 * 3600`
+- 程式碼位置：`scripts/translate_ebook_to_zh.py` `gemini_with_haiku_fallback()`
+- 目的：避免「每個 chunk 浪費 ~70s 重複試 12 次才 fallback」的反覆消耗
+- 同樣的規則語義也應該套到任何 Gemini→Haiku fallback 的轉錄 pipeline（OCR / 音檔轉錄等）— 詳見 [[ebook-pipeline]] 的「跨腳本 Gemini→Haiku 2-strike 規範」段落
 
 ## Quota 協調
 

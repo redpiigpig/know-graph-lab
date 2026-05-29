@@ -75,6 +75,16 @@ def _find_gemini_keys() -> list[str]:
 GEMINI_KEYS = _find_gemini_keys()
 _key_idx = 0
 
+# Gemini → Haiku 2-strike fallback + 6h cooldown.
+# 連續兩次「跑完所有 keys 都 429/throttling」就視為配額耗盡，進入 Haiku-only 模式 6 小時。
+# 6 小時後下個 chunk 會再試 Gemini；一旦成功，streak 歸零、cooldown 解除。
+# 規則來源：使用者 2026-05-29 翻譯全域規則。
+GEMINI_FAIL_STREAK_LIMIT = 2
+GEMINI_COOLDOWN_SECONDS = 6 * 3600
+
+_gemini_consecutive_exhaust = 0
+_gemini_cooldown_until = 0.0  # epoch seconds; 0 = no cooldown active
+
 SONNET_MODEL = "claude-sonnet-4-6"
 HAIKU_MODEL = "claude-haiku-4-5-20251001"
 
@@ -415,13 +425,37 @@ def gemini_with_haiku_fallback(source: str) -> str:
     """Default engine for English → 繁中 long-running jobs. Tries Gemini first
     (free quota, no Anthropic OAuth conflict); on `all Gemini keys exhausted`
     falls back to Claude Haiku for that specific piece. Per-piece fallback —
-    not whole-chunk — so we don't pessimize 'just barely' cases."""
+    not whole-chunk — so we don't pessimize 'just barely' cases.
+
+    2-strike rule: after GEMINI_FAIL_STREAK_LIMIT consecutive `all keys exhausted`
+    events, we stop probing Gemini entirely and route everything to Haiku for
+    GEMINI_COOLDOWN_SECONDS. This avoids burning 12 retries × N keys × every
+    chunk when Gemini is hard-down on quota. After the cooldown expires the
+    next chunk probes Gemini again; success resets the streak."""
+    global _gemini_consecutive_exhaust, _gemini_cooldown_until
+    now = time.time()
+    if now < _gemini_cooldown_until:
+        # In Haiku-only cooldown window — skip Gemini probe entirely.
+        return haiku_translate(source)
     try:
-        return gemini_translate(source)
+        result = gemini_translate(source)
+        _gemini_consecutive_exhaust = 0  # success resets streak
+        return result
     except RuntimeError as e:
         msg = str(e)
         if "Gemini keys exhausted" in msg or "no Gemini API key" in msg:
-            print(f"  ↳ Gemini failed ({msg[:80]}…), falling back to Haiku", flush=True)
+            _gemini_consecutive_exhaust += 1
+            if _gemini_consecutive_exhaust >= GEMINI_FAIL_STREAK_LIMIT:
+                _gemini_cooldown_until = now + GEMINI_COOLDOWN_SECONDS
+                cooldown_hours = GEMINI_COOLDOWN_SECONDS / 3600
+                print(f"  ↳ Gemini hit {_gemini_consecutive_exhaust} consecutive exhaustions "
+                      f"— switching to Haiku-only for {cooldown_hours:.0f}h "
+                      f"(retry after {time.strftime('%H:%M', time.localtime(_gemini_cooldown_until))})",
+                      flush=True)
+            else:
+                print(f"  ↳ Gemini failed ({msg[:80]}…) — falling back to Haiku "
+                      f"[{_gemini_consecutive_exhaust}/{GEMINI_FAIL_STREAK_LIMIT} strikes]",
+                      flush=True)
             return haiku_translate(source)
         raise
 
