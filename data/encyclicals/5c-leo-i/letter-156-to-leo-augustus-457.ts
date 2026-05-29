@@ -26,9 +26,10 @@ export const letter156ToLeoAugustus457: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (Migne PL 54 OCR — archive.org)',
       textKey: 'letter-156-to-leo-augustus-457-latin',
-      placeholder: true,
+      source: 'https://archive.org/details/sanctileonismagn01leoi',
+
     },
   ],
   displayMode: 'paragraph-aligned',

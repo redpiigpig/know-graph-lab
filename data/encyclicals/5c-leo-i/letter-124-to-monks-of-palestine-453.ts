@@ -26,9 +26,10 @@ export const letter124ToMonksOfPalestine453: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (Migne PL 54 OCR — archive.org)',
       textKey: 'letter-124-to-monks-of-palestine-453-latin',
-      placeholder: true,
+      source: 'https://archive.org/details/sanctileonismagn01leoi',
+
     },
   ],
   displayMode: 'paragraph-aligned',

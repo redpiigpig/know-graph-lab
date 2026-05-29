@@ -26,9 +26,10 @@ export const letter27ToFlavian449: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (Migne PL 54 — Gemini Vision OCR)',
       textKey: 'letter-27-to-flavian-449-latin',
-      placeholder: true,
+      source: 'https://archive.org/details/sanctileonismagn01leoi',
+
     },
   ],
   displayMode: 'paragraph-aligned',

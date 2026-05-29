@@ -26,9 +26,10 @@ export const sermon71OnResurrectionI443: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (Migne PL 54 — Gemini Vision OCR)',
       textKey: 'sermon-71-on-resurrection-i-443-latin',
-      placeholder: true,
+      source: 'https://archive.org/details/sanctileonismagn01leoi',
+
     },
   ],
   displayMode: 'paragraph-aligned',

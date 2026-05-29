@@ -83,6 +83,34 @@ description: 教宗訓導文獻對照工具（/encyclicals）— 4 世紀 Damasu
 >
 > 系統總計：~675（前批）+ 9（Gregory I）+ 5（Innocent III round 2）= **~689 篇 papal-doc**（vue-tsc 過）
 >
+> H. PL 54 column-splitter + Gemini Vision OCR ★ pipeline 建成（`_papal_pl54_column_splitter.py` + `_papal_pl54_leo_backfill.py` + `_papal_gemini_pdf_ocr.py` + `_papal_pl54_gemini_batch.py`）：
+>
+> **Column-splitter（djvu.txt → cleaned LA）**：
+> - 讀 c:/tmp/pl54/leo_pl54.txt 5.4 MB djvu
+> - detect 兩欄混排 → 切左右 → 重組單欄
+> - 套字元修正表（移除 (a)(b) markers / 合連字斷行 / 去頁碼）
+> - 按 `SERMO N` / `EPISTOLA N` boundary 分篇 → c:/tmp/pl54/{sermons|letters}/SERMO_NNN.txt
+> - 產出 74 sermons + 143 letters split files
+> - **6 篇 Leo I letter LA backfill 完成**（Letters 14/15/16/124/156/165 → 5c-leo-i/）— 雖含 Greek 殘留與 OCR 字元錯誤但讀得通
+>
+> **Gemini Vision OCR（PDF → publication-quality LA）**：
+> - 下載 c:/tmp/pl54/leo_pl54.pdf 120 MB（archive.org sanctileonismagn01leoi）
+> - 對 PDF 特定頁範圍渲染 PNG → Gemini 2.5 Flash/Flash-Lite Vision
+> - prompt 規範：忽略 Greek 欄、移除頁首頁尾、保留 Cap. 章節標號、純 Latin 輸出
+> - **6 篇 Leo I 補 publication-quality LA**：Sermon 3 / 21 / 71 / 82 / 95 + Letter 27
+> - 質量：6,000-15,000 chars/篇，Cap. III. — 段首注、æ/œ 連字、章節結構完整保留；遠優於 djvu OCR
+> - 注意：Flash 跑完日 quota，剩餘改用 Flash-Lite（質量略降但仍可讀）
+> - 注意：Lite 模型曾在 footnote 區段 hallucinate loop，需手動 truncate
+>
+> I. 4c-21c 全教宗覆蓋審計（`data/encyclicals/_coverage_audit.md`）：
+> - **228 教宗 / 57 已涵蓋（25%）/ 288 A 區 docs**
+> - 全空白世紀：**4c（0/3） / 7c（0/20） / 8c（0/11） / 9c（0/21） / 10c（0/22） / 12c（0/16）**
+> - P0 marquee 缺：Damasus *Tomus Damasi* 382 / Siricius *Directa* 385（首封 decretal） / Hormisdas 515 東西合一 / Nicholas I 866 Responsa Bulgarorum / Urban II 1095 Clermont / Alexander III 封聖權集中
+> - 16-17c 散漏 marquee：Urban VIII（Galileo 1633）/ Paul V / Hadrian VI / Clement VII（Sack of Rome）
+> - 下輪資料源：archive.org Migne PL 13/55/63/75-79/88-103/119/144-150/162-166/214-217 + Mansi Concilia + Schaff NPNF2 Vol 14
+>
+> Leo I 5c-leo-i 加總：15 → 15 docs（無新增 doc，6 篇 LA 補入提升質量；不含 djvu 6 篇先有的）— LA 涵蓋 12/15（80%）
+>
 > 2026-05-28（最深夜）：**user 訂正三區命名 → 全面 hsscol 批次 ingest**
 >
 > **三區命名（user 訂正）**：
