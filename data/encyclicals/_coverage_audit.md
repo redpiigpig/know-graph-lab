@@ -59,34 +59,69 @@
 
 ## 資料源策略
 
-### 已耗盡的源
-- la.wikisource.org — 4-12c 覆蓋極稀疏
-- en.wikisource.org — 4-12c 完全空
-- papalencyclicals.net — 4-12c 無
-- CCEL Schaff NPNF2 Vol 12 — Leo I + Gregory I 已抽取
-- thelatinlibrary.com — 只有 Leo I Lent 1+2
+> **2026-05-29 訂正**：之前審計過於保守。實際 4-12c 教宗的 EN/LA 資源**很多**，
+> 只是分散在多個不同 archive.org item 與 sourcebook 站。重點：
+> - **Migne PL 個別卷的 archive.org item naming 不一致**（patrologiaecur{N}mign / patrologiaecur0{N}mign / patrologiae_cursus_completus_lat_vol_{NNN}）
+> - **Fordham Internet Medieval Sourcebook** 有 Leo I / Gregory I / Nicholas I 完整英譯
+> - **newadvent.org** 主要 host Schaff NPNF 全卷
 
-### 可用但未開發
-- **archive.org Migne PL volumes** —
-  - PL 13 = Damasus + Siricius
-  - PL 54 = Leo I（**已下載 to `c:/tmp/pl54/`** 5.4 MB djvu + 120 MB PDF）
-  - PL 55 = Hilary + Felix + Simplicius
-  - PL 63 = Hormisdas + early 6c
-  - PL 75-79 = Gregory I（complete works）
-  - PL 88-103 = 7-9c popes
-  - PL 119 = Nicholas I（含 Responsa Bulgarorum）
-  - PL 144-150 = 11c popes
-  - PL 162-166 = 12c popes
-  - PL 214-217 = Innocent III complete
+### EN 資源（已確認可達）
 
-- **Gemini Vision OCR** — 已驗證可從 PL 54 PDF 抽 clean Latin（4-7 KB/page，需 1.5s/page sleep）
-- **Mansi *Sacrorum Conciliorum Nova Collectio*** — 4-15c 大公會議 + 教宗書信原文 archive.org 全集
-- **Schaff NPNF2 Vol 14** — Damasus + Siricius 等 4c 教宗書信
+| 教宗 | 文件 | URL |
+|---|---|---|
+| Leo I | On the Petrine Doctrine | sourcebooks.fordham.edu/source/leo1a.asp |
+| Gregory I | Letters showing Papal Activity | sourcebooks.fordham.edu/source/greg1a.asp |
+| Gregory I | Pastoral Rule（完整） | newadvent.org/fathers/3601.htm |
+| Gregory I | Pastoral Rule（節錄） | sourcebooks.fordham.edu/source/590greg1-pastoralrule2.asp |
+| Gregory I | Dialogues | tertullian.org/fathers/gregory_00_dialogues_eintro.htm |
+| Nicholas I | **Responsa ad Consulta Bulgarorum 866** ★★★ | sourcebooks.fordham.edu/basis/866nicholas-bulgar.asp（191 KB!） |
+| Schaff NPNF2 Vol 14 全卷 | Damasus / Siricius / Innocent I / Sixtus III / Hormisdas / Gregory I 等 | newadvent.org + ccel.org |
 
-### 下輪 work-plan
+### LA 資源 — archive.org Migne PL（14 卷確認 djvu + PDF 可下載）
 
-1. 從 PL 54 抽 Leo I 其他 ~80 letters + ~70 sermons（用 Gemini Vision 對 PDF 頁範圍批次）
-2. 從 PL 75-79 抽 Gregory I Pastoral Rule + Moralia in Iob + Registrum Epistolarum 完整版
-3. 從 PL 13 抽 Damasus + Siricius 全部 decretals
-4. 從 PL 119 抽 Nicholas I Responsa Bulgarorum 106 問答
-5. 對 11c Urban II Clermont 演說：找 Robert the Monk / Fulcher of Chartres / Baldric of Dol 等 4 個版本的中世紀 chronicler 紀錄
+| Vol | 教宗 / 內容 | identifier | djvu | PDF |
+|---:|---|---|---|---:|
+| 13 | **Damasus + Siricius**（首封 Decretal） | `patrologiaecur13mign` | ✅ | 89 MB |
+| 54 | **Leo I**（已下載 c:/tmp/pl54/） | `patrologiaecursu0054mign` | ✅ | 120 MB |
+| 55 | Hilary + Simplicius + Felix III | `patrologiae_cursus_completus_lat_vol_055` | ✅ | 93 MB |
+| 56 | 5c 補卷 | `patrologiaecur56mign` | ✅ | 88 MB |
+| 63 | **Hormisdas**（515 東西合一） | `patrologiaecur63mign` | ✅ | 68 MB |
+| 77 | **Gregory I Dialogi + Letters** | `patrologiaecur77mign` | ✅ | 89 MB |
+| 88 | 8c popes | `patrologiaecur88mign` | ✅ | 55 MB |
+| 89 | 8-9c popes（Hadrian I 致 Charlemagne） | `patrologiaecur89mign` | ✅ | 69 MB |
+| 119 | **Nicholas I**（含 Responsa Bulgarorum LA 版） | `patrologiaecur119mign` | ✅ | 64 MB |
+| 144 | 11c（Leo IX 1054 分裂 / Alexander II） | `patrologiaecur144mign` | ✅ | 56 MB |
+| 151 | **Urban II**（含 Clermont 1095 相關） | `patrologiaecur151mign` | ✅ | 101 MB |
+| 162 | 12c | `patrologiaecur162mign` | ✅ | 84 MB |
+| 200 | **Alexander III** | `patrologiaecur200mign` | ✅ | 99 MB |
+| 214 | **Innocent III** part 1 | `patrologiaecur214mign` | ✅ | 77 MB |
+| 215 | Innocent III part 2 | `patrologiaecur215mign` | ✅ | 87 MB |
+| 217 | Innocent III part 3 | `patrologiaecur217mign` | ✅ | 48 MB |
+
+### LA 資源 — 其他
+
+- **la.wikisource.org** — 部分（Decretum Gelasianum / Venerabilem / Tomus ad Flavianum 等 marquee 30+ 篇）
+- **thelatinlibrary.com** — Leo I 部分 Lenten sermons
+- **Mansi Sacrorum Conciliorum Nova Collectio** — archive.org 31 卷全集
+- **DCO catalog index** — 確認 4-12c 諸教宗在 Migne PL 都有對應 .pdf.html metadata
+  （但 DCO 不直接 serve PDF — 須回 archive.org PL 卷抽取）
+
+### 已驗證 pipeline 工具
+
+- `_papal_pl54_column_splitter.py` — djvu.txt 兩欄混排 → 單欄切篇（74 sermons + 143 letters 從 PL 54 抽出）
+- `_papal_pl54_leo_backfill.py` — PL split → Schaff slug 對位 backfill .ts
+- `_papal_gemini_pdf_ocr.py` — PDF 特定頁範圍用 Gemini Vision OCR clean Latin（publication-quality，4-7 KB/page）
+- `_papal_pl54_gemini_batch.py` — 批次 OCR 多 doc
+
+### 下輪 work-plan（按優先級）
+
+1. **4c — Damasus + Siricius**：下載 PL 13 djvu / PDF → 抽 Damasus *Tomus Damasi* 382 + Siricius *Directa* 385（首封 decretal）+ 其他 5-6 篇 marquee LA；EN 從 Schaff NPNF2 Vol 14
+2. **9c — Nicholas I Responsa Bulgarorum 866** ★★★：EN 從 Fordham 19 KB（已驗證可達）；LA 從 PL 119 djvu/PDF
+3. **6c — Hormisdas Libellus 515**：LA 從 PL 63 djvu/PDF；EN 從 Schaff
+4. **11c — Urban II Clermont 1095 演說**：4 個 chronicler 版本（Robert/Fulcher/Baldric/Guibert）從 PL 151 + Fordham crusade section
+5. **5c-6c Christological 期**：Innocent I / Sixtus III / Celestine I / Hormisdas → PL 13/55/56/63 抽 marquee letters
+6. **12c — Alexander III 封聖權集中**：PL 200 djvu/PDF
+7. **13c — Innocent III 大量 letters**：PL 214-217（3 卷 ~210 MB），補上 *Per Venerabilem* / *Vergentis in senium* 等 marquee
+8. **Leo I 剩 ~80 letters + ~70 sermons**：用 PL 54 already-downloaded djvu + Gemini Vision OCR 對特定 marquee 頁範圍
+
+預計可從 25% 覆蓋拉到 60-70%（即 228 教宗中 130-150 位有 ≥1 doc）
