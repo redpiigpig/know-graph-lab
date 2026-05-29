@@ -175,24 +175,116 @@ SLUG_KEYWORDS: list[tuple[str, list[str]]] = [
     ('apoc-thomas',      ['多馬默示錄', '多馬gJ', '多馬歇示錄']),
 ]
 
-# Optional fallback in chapter_path string: pick a slug whose keyword appears anywhere.
-def classify(chunk: dict) -> str | None:
-    """Return slug or None."""
+# Tokens / chunks we never want to map (skip explicitly).
+SKIP_CP_EQ = {'目錄', '附錄'}
+SKIP_CP_SUBSTR = ['英中對照', '版權', '出版說明']
+
+# Filter the OCR-noise that pollutes the front-matter pages of every volume.
+_TOPMATTER_REGEXES = [
+    re.compile(r'天主教在線向您鄭重提醒'),
+    re.compile(r'Chinese Christian Literature Council'),
+    re.compile(r'^\s*The (?:Old|New) Testament Pseudepigrapha'),
+    re.compile(r'^\s*基督教典外文獻[新舊]約篇[\s\S]{0,40}$'),
+]
+
+
+def is_frontmatter(content: str) -> bool:
+    for r in _TOPMATTER_REGEXES:
+        if r.search(content):
+            return True
+    return False
+
+
+def classify_basic(chunk: dict) -> str | None:
+    """Single-chunk classification — chapter_path first, then content head."""
     cp = chunk.get('chapter_path') or ''
-    content_head = (chunk.get('content') or '')[:160]
+    content = chunk.get('content') or ''
+    content_head = content[:300]   # widen window
+
+    if cp in SKIP_CP_EQ:
+        return None
+    for sub in SKIP_CP_SUBSTR:
+        if sub in cp:
+            return None
+    if is_frontmatter(content):
+        return None
+
     haystack = cp + ' ' + content_head
-
-    # Filter: skip 目錄 / 版權頁 / 純頁碼
-    if cp == '目錄' or cp == '附錄' or cp == '附錄:第一冊英中對照條目':
-        return None
-    if '英中對照' in cp:
-        return None
-
     for slug, kws in SLUG_KEYWORDS:
         for kw in kws:
             if kw in haystack:
                 return slug
+
+    # Wider content scan (entire chunk) as last resort
+    for slug, kws in SLUG_KEYWORDS:
+        for kw in kws:
+            if kw in content:
+                return slug
     return None
+
+
+def classify_with_inheritance(chunks: list[dict]) -> list[str | None]:
+    """
+    Two-pass:
+      1. classify_basic each chunk.
+      2. For unmapped chunks, inherit from the nearest preceding MAPPED chunk
+         within the same 'cluster' (continuous unmapped block <= 30 chunks long).
+         If the next mapped chunk after the unmapped run is different, we cap
+         inheritance halfway between them, so we don't bleed across documents.
+    """
+    n = len(chunks)
+    slugs: list[str | None] = [classify_basic(c) for c in chunks]
+
+    # Mark frontmatter / 目錄 / 英中對照 chunks so they don't inherit
+    blocked = [False] * n
+    for i, c in enumerate(chunks):
+        cp = c.get('chapter_path') or ''
+        content = c.get('content') or ''
+        if cp in SKIP_CP_EQ or any(s in cp for s in SKIP_CP_SUBSTR) or is_frontmatter(content):
+            blocked[i] = True
+
+    # Pass A: fill from previous mapped chunk
+    last_slug: str | None = None
+    last_pos: int = -1
+    for i in range(n):
+        if blocked[i]:
+            last_slug = None
+            last_pos = -1
+            continue
+        if slugs[i] is not None:
+            last_slug = slugs[i]
+            last_pos = i
+            continue
+        # Search forward for next mapped chunk (within 30 ahead)
+        next_slug = None
+        next_pos = -1
+        for j in range(i + 1, min(i + 31, n)):
+            if blocked[j]:
+                break
+            if slugs[j] is not None:
+                next_slug = slugs[j]
+                next_pos = j
+                break
+
+        if last_slug is None and next_slug is None:
+            continue   # can't infer
+
+        if last_slug is None:
+            # Only forward neighbor — inherit from it
+            slugs[i] = next_slug
+        elif next_slug is None:
+            # Only backward neighbor — inherit from it (if within 30)
+            if i - last_pos <= 30:
+                slugs[i] = last_slug
+        elif last_slug == next_slug:
+            # Same on both sides — clearly part of same doc
+            slugs[i] = last_slug
+        else:
+            # Boundary: split at midpoint
+            mid = (last_pos + next_pos) // 2
+            slugs[i] = last_slug if i <= mid else next_slug
+
+    return slugs
 
 
 def fetch_chunks(ebook_id: str) -> list[dict]:
@@ -272,13 +364,13 @@ def main():
         print(f'\n=== {title} ===', flush=True)
         chunks = fetch_chunks(eid)
         print(f'  fetched {len(chunks)} chunks', flush=True)
+        slugs = classify_with_inheritance(chunks)
         book_unmapped = 0
 
-        for ch in chunks:
+        for ch, slug in zip(chunks, slugs):
             content = (ch.get('content') or '').strip()
             if not content or len(content) < 5:
                 continue
-            slug = classify(ch)
             if not slug:
                 book_unmapped += 1
                 continue
