@@ -144,6 +144,31 @@ const piusIvLoaders = import.meta.glob(
   { query: '?raw', import: 'default' },
 ) as Record<string, () => Promise<string>>
 
+const juliusIiLoaders = import.meta.glob(
+  './16c-julius-ii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const paulIvLoaders = import.meta.glob(
+  './16c-paul-iv/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const gregoryXiiiLoaders = import.meta.glob(
+  './16c-gregory-xiii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const piusIiLoaders = import.meta.glob(
+  './15c-pius-ii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const innocentViiiLoaders = import.meta.glob(
+  './15c-innocent-viii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
 const alexanderViiLoaders = import.meta.glob(
   './17c-alexander-vii/*.txt',
   { query: '?raw', import: 'default' },
@@ -289,12 +314,17 @@ const POPE_LOADERS: Record<string, Record<string, () => Promise<string>>> = {
   'alexander-vii': alexanderViiLoaders,
   'clement-viii': clementViiiLoaders,
   'sixtus-v': sixtusVLoaders,
+  'gregory-xiii': gregoryXiiiLoaders,
   'pius-v': piusVLoaders,
   'pius-iv': piusIvLoaders,
+  'paul-iv': paulIvLoaders,
   'paul-iii': paulIiiLoaders,
+  'julius-ii': juliusIiLoaders,
   'leo-x': leoXLoaders,
   'alexander-vi': alexanderViLoaders,
+  'innocent-viii': innocentViiiLoaders,
   'sixtus-iv': sixtusIvLoaders,
+  'pius-ii': piusIiLoaders,
   'nicholas-v': nicholasVLoaders,
   'eugene-iv': eugeneIvLoaders,
   'benedict-xii': benedictXiiLoaders,
@@ -342,12 +372,17 @@ const POPE_FOLDER: Record<string, string> = {
   'alexander-vii': './17c-alexander-vii',
   'clement-viii': './16c-clement-viii',
   'sixtus-v': './16c-sixtus-v',
+  'gregory-xiii': './16c-gregory-xiii',
   'pius-v': './16c-pius-v',
   'pius-iv': './16c-pius-iv',
+  'paul-iv': './16c-paul-iv',
   'paul-iii': './16c-paul-iii',
+  'julius-ii': './16c-julius-ii',
   'leo-x': './16c-leo-x',
   'alexander-vi': './15c-alexander-vi',
+  'innocent-viii': './15c-innocent-viii',
   'sixtus-iv': './15c-sixtus-iv',
+  'pius-ii': './15c-pius-ii',
   'nicholas-v': './15c-nicholas-v',
   'eugene-iv': './15c-eugene-iv',
   'benedict-xii': './14c-benedict-xii',

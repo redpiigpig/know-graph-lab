@@ -799,7 +799,25 @@ import { diuturnumIllud1881 } from './19c-leo-xiii/diuturnum-illud-1881'
 
 import { tametsiFuturaProspicientibus1900 } from './19c-leo-xiii/tametsi-futura-prospicientibus-1900'
 
+import { execrabilis1460 } from './15c-pius-ii/execrabilis-1460'
+
+import { summisDesiderantesAffectibus1484 } from './15c-innocent-viii/summis-desiderantes-affectibus-1484'
+
+import { cumTamDivino1505 } from './16c-julius-ii/cum-tam-divino-1505'
+
+import { cumNimisAbsurdum1555 } from './16c-paul-iv/cum-nimis-absurdum-1555'
+
+import { cumExApostolatusOfficio1559 } from './16c-paul-iv/cum-ex-apostolatus-officio-1559'
+
+import { interGravissimas1582 } from './16c-gregory-xiii/inter-gravissimas-1582'
+
 export const ALL_DOCUMENTS: PapalDocument[] = [
+  interGravissimas1582,
+  cumExApostolatusOfficio1559,
+  cumNimisAbsurdum1555,
+  cumTamDivino1505,
+  summisDesiderantesAffectibus1484,
+  execrabilis1460,
   tametsiFuturaProspicientibus1900,
   diuturnumIllud1881,
   quodApostoliciMuneris1878,
