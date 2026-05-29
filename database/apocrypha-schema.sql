@@ -33,7 +33,7 @@ CREATE INDEX IF NOT EXISTS apocrypha_documents_display_order ON apocrypha_docume
 CREATE TABLE IF NOT EXISTS apocrypha_versions (
   code              VARCHAR(30) PRIMARY KEY,    -- 'cct_zh' (基督教典外文獻) / 'charles_apot' / 'jbnh' (Robinson NH) /
                                                 -- 'mrjames' / 'greek_orig' / 'coptic_orig' / 'ethiopic_orig'
-  name_zh           VARCHAR(80) NOT NULL,       -- '基督教典外文獻 (王曉朝)' / 'Charles APOT 1913' / 'Robinson Nag Hammadi 1977'
+  name_zh           VARCHAR(80) NOT NULL,       -- '基督教典外文獻 (黃根春)' / 'Charles APOT 1913' / 'Robinson Nag Hammadi 1977'
   name_en           VARCHAR(160) NOT NULL,
   language          VARCHAR(20) NOT NULL,       -- 'zh-Hant' / 'en' / 'grc' / 'cop' / 'syr' / 'gez' / 'heb' / 'arc' / 'lat'
   language_zh       VARCHAR(20),                -- '繁體中文' / '英文' / '希臘文' / '科普特文' / '敘利亞文' / 'Ge''ez' / '希伯來文'

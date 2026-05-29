@@ -1,5 +1,5 @@
 -- ============================================================================
--- Apocrypha — add `genre` column + backfill per 王曉朝《基督教典外文獻》
+-- Apocrypha — add `genre` column + backfill per 黃根春《基督教典外文獻》
 -- 10-volume taxonomy. Each doc gets a fine-grained genre slug.
 --
 -- OT genres:
@@ -122,7 +122,7 @@ UPDATE apocrypha_documents SET genre = 'misc' WHERE slug IN (
 );
 
 -- Update isaiah-ascension testament to OT side (it's classified mixed but
--- in 王曉朝's organization it sits with NT 默示錄 vol).
+-- in 黃根春's organization it sits with NT 默示錄 vol).
 UPDATE apocrypha_documents SET testament = 'nt' WHERE slug = 'isaiah-ascension';
 
 -- Fall-back: anything still NULL gets 'misc' (we can refine later)

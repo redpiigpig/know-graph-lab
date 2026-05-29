@@ -1,6 +1,6 @@
 -- ============================================================================
 -- Apocrypha seed — 70+ documents + 中文 1 / 英文 placeholders + 原文 placeholders
--- Sources: 基督教典外文獻 (王曉朝主編，CCLC 10 卷) + Charlesworth APOT/OTP +
+-- Sources: 基督教典外文獻 (黃根春主編，CCLC 10 卷) + Charlesworth APOT/OTP +
 --          Schneemelcher NT Apocrypha + Robinson Nag Hammadi
 -- ============================================================================
 
@@ -972,7 +972,7 @@ INSERT INTO apocrypha_versions
    display_order, is_default_zh, is_default_en, is_default_orig)
 VALUES
 -- 中文
-('cct_zh', '基督教典外文獻 (王曉朝主編)', 'Christian Extra-Canonical Literature (ed. Wang Xiaochao)',
+('cct_zh', '基督教典外文獻 (黃根春主編)', 'Christian Extra-Canonical Literature (ed. Huang Genchun)',
  'zh-Hant', '繁體中文', 'chinese',
  false, false,
  '© 基督教文藝出版社 (Chinese Christian Literature Council, Ltd) 2008-2013；個人研究用',

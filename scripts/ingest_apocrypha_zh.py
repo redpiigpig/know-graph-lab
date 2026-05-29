@@ -1,5 +1,5 @@
 """
-Map 基督教典外文獻 (王曉朝主編) ebook_chunks → apocrypha_sections (cct_zh version).
+Map 基督教典外文獻 (黃根春主編) ebook_chunks → apocrypha_sections (cct_zh version).
 
 Strategy:
 1. Pull all chunks from the 10 main ebooks (OT 1-6 + NT 1-4).
@@ -25,7 +25,7 @@ PROJECT_REF = SUPABASE_URL.split('//')[1].split('.')[0]
 ACCESS_TOKEN = os.environ['SUPABASE_ACCESS_TOKEN']
 SERVICE_KEY = os.environ['SUPABASE_SERVICE_ROLE_KEY']
 
-# ── Source: 10 main 王曉朝 books ───────────────────────────────────────────
+# ── Source: 10 main 黃根春 books ───────────────────────────────────────────
 EBOOKS = {
     '基督教典外文獻-舊約篇-第1冊': 'b1fbff1b-cbf1-45b6-a9cd-cf0e9f943c57',
     '基督教典外文獻-舊約篇-第2冊': 'd5e5df29-2428-4dca-9f79-5ca21587d073',
@@ -84,7 +84,7 @@ SLUG_KEYWORDS: list[tuple[str, list[str]]] = [
     ('jacob-ladder',     ['雅各天梯']),
     ('jannes-jambres',   ['雅尼和佯庇', '雅尼和佯鹿', '雅店和佯', '雅店和佯庇']),
     ('joseph-history',   ['約瑟歷史']),
-    # OT vol 4 — Wisdom (note 王曉朝 vol 5 卷四 actually contains 智訓)
+    # OT vol 4 — Wisdom (note 黃根春 vol 5 卷四 actually contains 智訓)
     ('wisdom-solomon',   ['所羅門智訓', '所羅門智劃', '所羅門智割', '所羅門智司', '所羅門智自',
                           '所羅門智富']),
     # OT vol 5 — Deuterocanon (Catholic / Orthodox)
@@ -186,7 +186,7 @@ SKIP_CP_EQ = {'目錄', '附錄'}
 SKIP_CP_SUBSTR = ['英中對照', '版權', '出版說明']
 
 # ── Text cleanup regexes ────────────────────────────────────────────────
-# The Wang Xiaochao 王曉朝 typesetting bleeds three kinds of noise into the
+# The Huang Genchun 黃根春 typesetting bleeds three kinds of noise into the
 # PDF text-extract output:
 #   1. Section header reprinted on every page break: 第N部分:卷X{文獻名}{副題}
 #   2. Right-margin column line-numbers (2-8 alone on lines): "\n2\n3\n4\n5\n"
@@ -226,7 +226,7 @@ _RE_LEADING_PAGE_NUM = re.compile(r'^[ \t]*\d{1,3}[ \t]*$')
 _RE_VERSE_NUM_LINE = re.compile(r'^[ \t]*(\d{1,3})[ \t]*$')
 
 # Common OCR garble patterns that prefix section subtitles. The full set
-# encountered in 王曉朝 PDFs: 毛手.Æ / 第伊都~. / 第切都~. / T可看生命 /
+# encountered in 黃根春 PDFs: 毛手.Æ / 第伊都~. / 第切都~. / T可看生命 /
 # 第切都. / 第切都~ / 第伊都. / 第伊都~ / 第切部. / 毛手. / 毛手~ etc.
 _RE_GARBLED_SUBTITLE_OPENING = re.compile(
     r'^[第伊切都囚部冊~。\.\-Æ§¶毛手TJI\s]{1,10}[\.~。Æ§¶]\s*\n',
@@ -243,7 +243,7 @@ def _is_garbled_subtitle(line: str) -> bool:
     # Contains obvious garble chars
     if _RE_GARBLED_CHARS.search(s):
         return True
-    # Tilde + period combo (王曉朝 subtitle marker noise)
+    # Tilde + period combo (黃根春 subtitle marker noise)
     if '~' in s and ('.' in s or '。' in s):
         return True
     # Single Latin cap (T/J/I) prefix + short CJK — e.g. "T可看生命"
@@ -272,7 +272,7 @@ def _is_noise_line(line: str, is_first: bool = False) -> bool:
     if _RE_OCR_PART_HEADER.match(s):
         return True
     if is_first and _RE_LEADING_PAGE_NUM.match(s):
-        # Drop the standalone page-number line that 王曉朝 PDFs print at the
+        # Drop the standalone page-number line that 黃根春 PDFs print at the
         # very top of every page (e.g. "145 \n" before the first verse).
         return True
     return False

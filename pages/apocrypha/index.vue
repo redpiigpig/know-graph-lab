@@ -10,7 +10,7 @@
     <div class="flex-1 max-w-6xl w-full mx-auto px-6 py-10">
       <div class="mb-6">
         <h1 class="text-2xl font-bold text-gray-900 mb-1">📜 典外文獻搜索</h1>
-        <p class="text-sm text-gray-500">王曉朝主編《基督教典外文獻》10 卷 — 舊約偽典／NT 偽典／Nag Hammadi／昆蘭古卷；中文／英文／原文平行對照</p>
+        <p class="text-sm text-gray-500">黃根春主編《基督教典外文獻》10 卷 — 舊約偽典／NT 偽典／Nag Hammadi／昆蘭古卷；中文／英文／原文平行對照</p>
       </div>
 
       <!-- Search box -->
@@ -141,7 +141,7 @@
       </div>
 
       <div v-if="!searchActive" class="mt-12 text-xs text-gray-400 leading-relaxed border-t border-gray-200 pt-4">
-        <p>分類依王曉朝主編《基督教典外文獻》10 冊（基督教文藝出版社 2008-2013）原書部別。</p>
+        <p>分類依黃根春主編《基督教典外文獻》10 冊（基督教文藝出版社 2008-2013）原書部別。</p>
         <p class="mt-1">英譯：Charles APOT 1913 (PD) / M.R. James 1924 (PD) / Charlesworth OTP 1983-85 © / Robinson NHL 1977 ©；原文：critical edition + Nag Hammadi Coptic facsimiles。多數英譯與原文欄位仍待補。</p>
       </div>
     </div>
@@ -227,9 +227,9 @@ watch(activeTestament, () => {
   activeGenre.value = 'all'   // reset genre when switching testament
 })
 
-// Genre order + Chinese labels (mirrors 王曉朝 book parts)
+// Genre order + Chinese labels (mirrors 黃根春 book parts)
 const GENRE_ORDER_OT: { key: string; label: string; label_en: string }[] = [
-  { key: 'apocalyptic', label: '默示文學',         label_en: 'Apocalyptic' },
+  { key: 'apocalyptic', label: '啟示文學',         label_en: 'Apocalyptic' },
   { key: 'testaments',  label: '族長遺訓',         label_en: 'Testaments' },
   { key: 'legends',     label: '重述聖經／傳奇',   label_en: 'Rewritten / Legendary' },
   { key: 'wisdom',      label: '智慧文獻',         label_en: 'Wisdom' },

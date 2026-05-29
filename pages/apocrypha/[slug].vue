@@ -110,7 +110,7 @@
         <!-- No sections -->
         <div v-if="docData.sections.length === 0" class="text-center text-gray-400 py-16 text-sm">
           此文獻尚無任何已上架版本。<br/>
-          <span class="text-xs">中文資料源：基督教典外文獻 (王曉朝主編)；英文／原文版本待補。</span>
+          <span class="text-xs">中文資料源：基督教典外文獻 (黃根春主編)；英文／原文版本待補。</span>
         </div>
 
         <!-- Sections -->
@@ -148,7 +148,7 @@
         <!-- Coverage hint -->
         <p class="mt-8 text-[11px] text-gray-400 leading-relaxed">
           已匯入版本：{{ availableVersionsList || '（無）' }}。
-          中文版本為《基督教典外文獻》(王曉朝主編，基督教文藝出版社) 原書文字；OCR 雜訊已清整，但章節邊界與卷次分隔仍可能需精修。
+          中文版本為《基督教典外文獻》(黃根春主編，基督教文藝出版社) 原書文字；OCR 雜訊已清整，但章節邊界與卷次分隔仍可能需精修。
         </p>
       </template>
     </div>
