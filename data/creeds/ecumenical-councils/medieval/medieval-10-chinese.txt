@@ -1,7 +1,7 @@
 # 第二次拉特朗大公會議 (1139)
-# DH 715–720
+# DH 715–750
 # 來源：光啟文化 2013《公教會之信仰與倫理教義選集》(Denzinger 中譯)
-# 共 1 條中譯條目
+# 共 2 條中譯條目
 
 【DH 718】
 或若不願道歉贖罪，或若受辱而不寬恕凌辱者，或相反正義而使用武器，那麼，他所做的補贖是假的。」¹⁶。
@@ -11,3 +11,35 @@
 另有《隱修阿貝拉爾之異端命19篇章》(14 Capitula haeresum Petri Abaelardi) (E.M. Buytaert: CpChL.CM 12 [1969] 473-480 / PL 182,1049-1054)。此著作並非森斯地區會議所列19道命題之精簡版本(vgl. E.M. Buytaert: CpChL.CM 12 [1969] 458-467; J. Rivière, Les "capitula" d'Abelard condamnés au Concile de Sens, in: RechThAM 5 (1933) 16-17)。二者之間只有部分內容相同；「14篇章」的3 4 5 7 8 10 11 14相同；由某方面看，「14篇章」與「19道題」的1 2 12相同；「14篇章」的13時指「19道題」的16和19。「14篇章」的6和9與「19命題」完全無關。值得注意的是，「14篇章」的第9章有這樣一句話：「主的身體不坐在他上」("Quod corpus Domini non cadit in terram")。
 教宗依據森二世收到「19道命題」及伯爾納烏的書信(Nr. 190)，即《致依森森二世之反對具拉爾謝罷德福西罷嘻》(Tractatus contra quaedam capitula errorum Abaelardi ad Innocentium II) (Sancti Bernardi Opera 8, hrsg. von J. Leclerc + H.M. Rochais [Rom 1977] 17-40 / PL 182,1053-1072)，其後，教宗在1140(114!?)年7月16日致森斯主教宇利(Henry)書信《在宗徒的見認之下》(Testame Apostolo)，
 ¹⁷¹⁸出自教宗巨里斯的二世(Callistus II, 1119-1124)任内，1119年的土魯斯(Toulouse)地區會議(MaC 21,234AB)。此處興別收對伯多祿，布魯(Petrus de Bruis / Bruis, 約1125)。
+
+【DH 745】
+理姆斯(Reims)地區會議(1148 年 3 月 21 日開幕)
+
+教宗克金尼烏斯三世 (Eugenius III, 1145-1153) 撤任主席所領導的里姆斯 (Reims) 地區會議閉幕之後，1148年3月29日開──但泰聖會議，討論上教宗古貝 (Gilbert de la Porrée, 約 1080-1154) 的個案──以下4篇駁斥古貝被控告的錯誤：
+
+1) 天主的本質、實體，及被稱為天主的本性，慈善、智慧、天主的偉大，及一切其它這類名稱，都不是天主，而是天主據以保存在的的方式。(Quod divina essentia, substantia et natura, quae dicuntur divinitas, bonitas, sapientia, magnitudo Dei, et quaeque similia, non sit Deus, sed forma, qua est Deus.)
+
+2) 三個位格，父及子及聖體，不是一個天主，也不是一個實體，也不是任何統一體。(Quod nec unus Deus nec una substantia nec unum aliquod tres personae, Pater et Filius et Spiritus Sanctus.)
+
+3) 三個位格是據著三個統一體而為三位，即稱由三個特徵而有所區別，但此三個特徵不是三個位格自身；而是三個永遠的事物，在數字上被此有所區別，且和天主的實體有所區別。(Quod tres personae tribus unitatibus sint tria, et distinctae proprietatibus tribus, quae non hoc sint quod ipsae personae, sed sint tria aeterna, differentia numero tam a se invicem quam a substantia divina.)
+
+4) 天主的本性不會成肉體，也不會取人性。(Quod divina natura non sit incarnata nec naturam humanam suscepterit.)
+
+主教古耳以非常詳細及尖銳的辯護，說服教宗克金尼烏斯三世不應他宣佈為異端者；只有第一篇章例外，即本連集 745 條所列，得自教會歷史學家奧弗雷 (Otto von Freising, 約 1112-1158)。
+
+其後，反對主教古耳的人們在伯爾納德 (Bernard de Clairvaux, 1090-1153) 的領導之下，報告了一份信經，意圖強迫教宗克金尼烏斯三世認可古耳目，但未能成功；此信經不被納入本地區會議的文件中，也不被納入教宗的文件記錄中；它卻被關於異敎會訓導權的公開文件。
+
+【巴版】：Otto von Freising, Gesta Friderici imperatoris I 57，於G.H. Pertz 出版：MGH Scriptores (Folianten) 20 (Hannover 1868) 384 頁 32-34 行：= Kap. 61 於 G. Waitz 出版：MGH Scriptores rerum Germanicarum in usum scholarum XIV (Hannover - Leipzig 1912²) 87；MacAel 21,726E。——歸於 Gilbert 之篇章，參閱 PL 185,617A。
+
+天主聖三
+
+"只有關於第一【篇章】，羅馬教宗會決定，任何神學詞彙不應導致「本性」與「位格」之間的分離，也不應只用侵格稱天主的本質為天主，也應以主格稱天主的本質為天主」。
+
+安納斯太修四世 (Anastasius IV)：1153 年 7 月 12 日──1154 年 12 月 3 日
+阿德里亞努斯四世 (Adrianus IV)：1154 年 12 月 4 日──1159 年 9 月 1 日
+
+亞歷山大三世 (Alexander III)：1159 年 9 月 7 日──1181 年 8 月 30 日
+
+【745】拉丁文的衣格 (ablativus) 表示「藉由」的意思，「出於」；拉丁的主格 (nominativus) 表示「主體」、「主詞」。就天主的與聯屬詞，可說天主一聖三稱共同的天主本質而存在，但此處論認以「侵格」稱呼天主的本質為天主；但同時應強調天主的本質是天主聖三，即此處應說以「主格」稱呼天主的本質為天主。】
+
+- 366 -

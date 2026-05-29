@@ -38,8 +38,21 @@ const earlyLoaders = import.meta.glob(
   { query: '?raw', import: 'default' },
 ) as Record<string, () => Promise<string>>
 
+// Protestant confessions — 5 documents from Denzinger 附錄五 (DH 5500-5702).
+// textKey format: '{confession-slug}-chinese' (only Chinese available currently;
+// English/Latin/原文 待補 — placeholder versions in their respective .ts files).
+const protestantLoaders = import.meta.glob(
+  './protestant-confessions/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
 /** Vatican I document code prefixes — used to route textKey to vatican-i/ folder. */
 const VAT1_PREFIXES = new Set(['df', 'pa'])
+
+/** Protestant confession textKey prefixes — route to protestant-confessions/ */
+const PROTESTANT_PREFIXES = new Set([
+  'luther', 'augsburg', 'anglican', 'english', 'reformed', 'lima', 'taiwan',
+])
 
 function resolveLoader(textKey: string): (() => Promise<string>) | undefined {
   // Early Eastern councils 5-7: textKeys start with 'early-'
@@ -57,6 +70,9 @@ function resolveLoader(textKey: string): (() => Promise<string>) | undefined {
   const prefix = textKey.split('-')[0]
   if (VAT1_PREFIXES.has(prefix)) {
     return vat1Loaders[`./ecumenical-councils/vatican-i/${textKey}.txt`]
+  }
+  if (PROTESTANT_PREFIXES.has(prefix)) {
+    return protestantLoaders[`./protestant-confessions/${textKey}.txt`]
   }
   return vat2Loaders[`./ecumenical-councils/vatican-ii/${textKey}.txt`]
 }
@@ -112,6 +128,9 @@ export function availableTextKeys(): string[] {
   }
   for (const p of Object.keys(vat2Loaders)) {
     keys.push(p.replace('./ecumenical-councils/vatican-ii/', '').replace(/\.txt$/, ''))
+  }
+  for (const p of Object.keys(protestantLoaders)) {
+    keys.push(p.replace('./protestant-confessions/', '').replace(/\.txt$/, ''))
   }
   return keys
 }

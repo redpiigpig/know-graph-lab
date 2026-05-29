@@ -125,13 +125,28 @@ export const ECUMENICAL_COUNCILS: Creed[] = [
 ]
 
 // ── protestant-confessions ───────────────────────────────────
-export const PROTESTANT_CONFESSIONS: Creed[] = []
+// 5 份從 Denzinger 第 43 版附錄五 (DH 5500-5702) 上架；中譯由
+// _denzinger_to_creeds.py 從輔仁神學著作編譯會 2013 紙本中譯擷取。
+import { lutherSmallCatechism } from './protestant-confessions/01-luther-small-catechism'
+import { augsburgConfession } from './protestant-confessions/02-augsburg-confession'
+import { anglicanArticles } from './protestant-confessions/03-anglican-articles'
+import { reformedBelgic } from './protestant-confessions/04-reformed-belgic'
+import { limaBem } from './protestant-confessions/05-lima-bem'
+
+export const PROTESTANT_CONFESSIONS: Creed[] = [
+  lutherSmallCatechism,   // DH 5500-5502  (1529)
+  augsburgConfession,     // DH 5503-5523  (1530)
+  anglicanArticles,       // DH 5524-5562  (1571)
+  reformedBelgic,         // DH 5575-5590  (1561)
+]
 
 // ── orthodox-confessions ─────────────────────────────────────
 export const ORTHODOX_CONFESSIONS: Creed[] = []
 
 // ── ecumenical-dialogue ──────────────────────────────────────
-export const ECUMENICAL_DIALOGUES: Creed[] = []
+export const ECUMENICAL_DIALOGUES: Creed[] = [
+  limaBem,                // DH 5591-5701  (1982)  — 雖在 Denzinger 附錄五但本質為跨宗派對話文件
+]
 
 // ── apostolic-creeds（使徒信經 + 亞他那修 + 迦克墩 etc.） ─────
 import { apostlesCreed } from './apostolic-creeds/00-apostles'
