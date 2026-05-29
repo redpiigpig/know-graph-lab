@@ -1,0 +1,4 @@
+⏳ 拉丁原文待補 — Migne PL 151 (archive.org `patrologiaecur151mign`) Gemini Vision OCR
+
+下載命令：
+  python -c "import urllib.request; open('c:/tmp/pl151.pdf','wb').write(urllib.request.urlopen('https://archive.org/download/patrologiaecur151mign/patrologiaecur151mign.pdf').read())"

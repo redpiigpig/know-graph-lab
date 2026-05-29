@@ -877,7 +877,49 @@ import { regulaOrdinisSSpiritus1198 } from './13c-innocent-iii/regula-ordinis-s-
 
 import { bullaCanonizationeSCunegundis1200 } from './13c-innocent-iii/bulla-canonizatione-s-cunegundis-1200'
 
+import { responsaBulgarorum866 } from './9c-nicholas-i/responsa-bulgarorum-866'
+
+import { tomusDamasi382 } from './4c-damasus-i/tomus-damasi-382'
+
+import { confidimus376 } from './4c-damasus-i/confidimus-376'
+
+import { directa385 } from './4c-siricius/directa-385'
+
+import { optarem386 } from './4c-siricius/optarem-386'
+
+import { libellusHormisdae515 } from './6c-hormisdas/libellus-hormisdae-515'
+
+import { epistolaAdJustinianum521 } from './6c-hormisdas/epistola-ad-justinianum-521'
+
+import { clermontSpeech1095 } from './11c-urban-ii/clermont-speech-1095'
+
+import { adExuperium405 } from './5c-innocent-i/ad-exuperium-405'
+
+import { inRequirendis417 } from './5c-innocent-i/in-requirendis-417'
+
+import { apostoliciVerba431 } from './5c-celestine-i/apostolici-verba-431'
+
+import { adNestorium430 } from './5c-celestine-i/ad-nestorium-430'
+
+import { adIohannemAntiochenum433 } from './5c-sixtus-iii/ad-iohannem-antiochenum-433'
+
+import { adFlavianum540 } from './6c-vigilius/ad-flavianum-540'
+
 export const ALL_DOCUMENTS: PapalDocument[] = [
+  adFlavianum540,
+  adIohannemAntiochenum433,
+  adNestorium430,
+  apostoliciVerba431,
+  inRequirendis417,
+  adExuperium405,
+  clermontSpeech1095,
+  epistolaAdJustinianum521,
+  libellusHormisdae515,
+  optarem386,
+  directa385,
+  confidimus376,
+  tomusDamasi382,
+  responsaBulgarorum866,
   bullaCanonizationeSCunegundis1200,
   regulaOrdinisSSpiritus1198,
   mysteriaEvangelicaeLegis1205,

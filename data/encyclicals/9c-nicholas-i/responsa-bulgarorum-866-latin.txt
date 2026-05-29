@@ -1,0 +1,4 @@
+⏳ 拉丁原文待補 — Migne PL 119 (archive.org `patrologiaecur119mign`) Gemini Vision OCR
+
+下載命令：
+  python -c "import urllib.request; open('c:/tmp/pl119.pdf','wb').write(urllib.request.urlopen('https://archive.org/download/patrologiaecur119mign/patrologiaecur119mign.pdf').read())"

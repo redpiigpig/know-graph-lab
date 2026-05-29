@@ -299,6 +299,51 @@ const innocentIiiLoaders = import.meta.glob(
   { query: '?raw', import: 'default' },
 ) as Record<string, () => Promise<string>>
 
+const nicholasILoaders = import.meta.glob(
+  './9c-nicholas-i/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const damasusILoaders = import.meta.glob(
+  './4c-damasus-i/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const siriciusLoaders = import.meta.glob(
+  './4c-siricius/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const hormisdasLoaders = import.meta.glob(
+  './6c-hormisdas/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const urbanIiLoaders = import.meta.glob(
+  './11c-urban-ii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const innocentILoaders = import.meta.glob(
+  './5c-innocent-i/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const celestineILoaders = import.meta.glob(
+  './5c-celestine-i/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const sixtusIiiLoaders = import.meta.glob(
+  './5c-sixtus-iii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const vigiliusLoaders = import.meta.glob(
+  './6c-vigilius/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
 /** popeSlug → loaders；新增教宗時加一條 */
 const POPE_LOADERS: Record<string, Record<string, () => Promise<string>>> = {
   'francis': francisLoaders,
@@ -358,6 +403,15 @@ const POPE_LOADERS: Record<string, Record<string, () => Promise<string>>> = {
   'gregory-i': gregoryILoaders,
   'gelasius-i': gelasiusILoaders,
   'leo-i': leoILoaders,
+  'nicholas-i': nicholasILoaders,
+  'damasus-i': damasusILoaders,
+  'siricius': siriciusLoaders,
+  'hormisdas': hormisdasLoaders,
+  'urban-ii': urbanIiLoaders,
+  'innocent-i': innocentILoaders,
+  'celestine-i': celestineILoaders,
+  'sixtus-iii': sixtusIiiLoaders,
+  'vigilius': vigiliusLoaders,
 }
 
 /** popeSlug → 資料夾前綴；reverse map from POPE_LOADERS keys */
@@ -419,6 +473,15 @@ const POPE_FOLDER: Record<string, string> = {
   'gregory-i': './6c-gregory-i',
   'gelasius-i': './5c-gelasius-i',
   'leo-i': './5c-leo-i',
+  'nicholas-i': './9c-nicholas-i',
+  'damasus-i': './4c-damasus-i',
+  'siricius': './4c-siricius',
+  'hormisdas': './6c-hormisdas',
+  'urban-ii': './11c-urban-ii',
+  'innocent-i': './5c-innocent-i',
+  'celestine-i': './5c-celestine-i',
+  'sixtus-iii': './5c-sixtus-iii',
+  'vigilius': './6c-vigilius',
 }
 
 function resolveLoader(popeSlug: string, textKey: string): (() => Promise<string>) | undefined {

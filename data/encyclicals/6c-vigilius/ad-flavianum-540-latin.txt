@@ -1,0 +1,4 @@
+⏳ 拉丁原文待補 — Migne PL 69 (archive.org `patrologiaecur69mign`) Gemini Vision OCR
+
+下載命令：
+  python -c "import urllib.request; open('c:/tmp/pl69.pdf','wb').write(urllib.request.urlopen('https://archive.org/download/patrologiaecur69mign/patrologiaecur69mign.pdf').read())"

@@ -1,0 +1,4 @@
+⏳ 拉丁原文待補 — Migne PL 63 (archive.org `patrologiaecur63mign`) Gemini Vision OCR
+
+下載命令：
+  python -c "import urllib.request; open('c:/tmp/pl63.pdf','wb').write(urllib.request.urlopen('https://archive.org/download/patrologiaecur63mign/patrologiaecur63mign.pdf').read())"

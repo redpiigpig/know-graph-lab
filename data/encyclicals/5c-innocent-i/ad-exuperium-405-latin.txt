@@ -1,0 +1,4 @@
+⏳ 拉丁原文待補 — Migne PL 20 (archive.org `patrologiaecur20mign`) Gemini Vision OCR
+
+下載命令：
+  python -c "import urllib.request; open('c:/tmp/pl20.pdf','wb').write(urllib.request.urlopen('https://archive.org/download/patrologiaecur20mign/patrologiaecur20mign.pdf').read())"
