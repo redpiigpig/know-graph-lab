@@ -305,6 +305,7 @@ def cmd_run(limit: int | None, batch_size: int, doc_slug: str | None):
     t0 = time.time()
     total_good = 0
     total_bad = 0
+    consecutive_total_fails = 0
 
     for batch_start in range(0, len(rows), batch_size):
         batch = rows[batch_start:batch_start + batch_size]
@@ -321,6 +322,25 @@ def cmd_run(limit: int | None, batch_size: int, doc_slug: str | None):
         total_good += good
         total_bad += bad
         print(f'  → updated={good} failed={bad}', flush=True)
+
+        # Early abort: 5 consecutive total-failure batches → likely auth/quota
+        # gave out; stop wasting calls.
+        if good == 0 and bad == len(batch):
+            consecutive_total_fails += 1
+            if consecutive_total_fails >= 5:
+                print(f'\n⛔ Aborting: 5 consecutive batches all failed. '
+                      f'Likely Haiku quota or auth dropped. Stopping early '
+                      f'so progress isn\'t lost.', flush=True)
+                break
+            # Back off a bit before the next attempt
+            backoff = min(30, 5 * consecutive_total_fails)
+            print(f'  (consecutive total-fail {consecutive_total_fails}/5; '
+                  f'sleeping {backoff}s before next batch)', flush=True)
+            time.sleep(backoff)
+        else:
+            consecutive_total_fails = 0
+            # Gentle throttle on success so we don't pummel Max-plan quotas.
+            time.sleep(2)
 
     print(f'\n──── Done. total updated={total_good} failed={total_bad} '
           f'elapsed={time.time() - t0:.0f}s ────', flush=True)

@@ -10,17 +10,17 @@
     <div class="flex-1 max-w-6xl w-full mx-auto px-6 py-10">
       <div class="mb-6">
         <h1 class="text-2xl font-bold text-gray-900 mb-1">📜 典外文獻搜索</h1>
-        <p class="text-sm text-gray-500">OT 偽典 / 第二正典 + NT 偽典 + Nag Hammadi 諾斯底 + 昆蘭古卷 — 中文／英文／原文平行對照</p>
+        <p class="text-sm text-gray-500">王曉朝主編《基督教典外文獻》10 卷 — 舊約偽典／NT 偽典／Nag Hammadi／昆蘭古卷；中文／英文／原文平行對照</p>
       </div>
 
       <!-- Search box -->
-      <div class="mb-8 bg-white border border-gray-200 rounded-lg p-3 shadow-sm">
+      <div class="mb-6 bg-white border border-gray-200 rounded-lg p-3 shadow-sm">
         <form @submit.prevent="runSearch" class="flex items-center gap-2">
           <span class="text-stone-500 text-lg select-none">🔍</span>
           <input
             v-model="searchQ"
             type="text"
-            placeholder="搜尋典外文獻內文（中／英／希臘／科普特／敘利亞皆可，例：以諾、Enoch、πνεῦμα）"
+            placeholder="搜尋典外文獻內文（中／英／希臘／科普特／敘利亞皆可）"
             class="flex-1 text-sm bg-transparent border-none focus:outline-none placeholder:text-gray-300"
           />
           <select v-model="searchVersion" class="text-xs text-gray-600 bg-transparent border-l border-gray-200 pl-2 cursor-pointer">
@@ -68,30 +68,43 @@
         </div>
       </div>
 
-      <!-- Category filter -->
-      <div v-if="!searchActive" class="flex flex-wrap items-center gap-2 mb-6 text-xs">
-        <span class="text-gray-500 mr-1">類別：</span>
+      <!-- Testament top tabs -->
+      <div v-if="!searchActive" class="flex items-center gap-1 mb-3 border-b border-gray-200">
         <button
-          v-for="opt in categoryOpts"
-          :key="opt.key"
-          @click="activeCategory = opt.key"
-          class="px-3 py-1.5 rounded-full border transition"
-          :class="activeCategory === opt.key
+          v-for="t in testamentTabs"
+          :key="t.key"
+          @click="activeTestament = t.key"
+          class="px-4 py-2 -mb-px text-sm font-medium border-b-2 transition"
+          :class="activeTestament === t.key
+            ? 'border-stone-900 text-stone-900'
+            : 'border-transparent text-gray-500 hover:text-stone-700'"
+        >{{ t.label }} <span class="text-xs text-gray-400 font-normal">({{ t.count }})</span></button>
+      </div>
+
+      <!-- Genre chips for the active testament -->
+      <div v-if="!searchActive" class="flex flex-wrap items-center gap-1.5 mb-6 text-xs">
+        <button
+          v-for="g in genreChips"
+          :key="g.key"
+          @click="activeGenre = g.key"
+          class="px-3 py-1 rounded-full border transition"
+          :class="activeGenre === g.key
             ? 'bg-stone-900 text-white border-stone-900'
             : 'bg-white text-gray-600 border-gray-200 hover:border-stone-300'"
-        >{{ opt.label }} ({{ opt.count }})</button>
+        >{{ g.label }} <span class="opacity-70">({{ g.count }})</span></button>
       </div>
 
       <!-- Loading / error -->
       <div v-if="pending" class="text-center text-gray-400 py-12 text-sm">載入中…</div>
       <div v-else-if="error" class="text-center text-red-500 py-12 text-sm">{{ String(error) }}</div>
 
-      <!-- Documents grouped by category (hidden while searching) -->
+      <!-- Documents grouped by genre -->
       <div v-else-if="!searchActive">
-        <div v-for="group in groupedDocs" :key="group.key" class="mt-6">
-          <h2 class="text-sm font-semibold text-gray-700 mb-3 border-b border-gray-200 pb-1">
-            {{ group.label }}
-            <span class="text-xs text-gray-400 font-normal">{{ group.items.length }} 份</span>
+        <div v-for="group in groupedDocs" :key="group.key" class="mt-2 mb-8">
+          <h2 class="text-sm font-semibold text-stone-700 mb-3 border-b border-gray-200 pb-1.5 flex items-baseline gap-2">
+            <span>{{ group.label }}</span>
+            <span class="text-[10px] text-gray-400 font-normal">{{ group.label_en }}</span>
+            <span class="text-xs text-gray-400 font-normal ml-auto">{{ group.items.length }} 份</span>
           </h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
             <NuxtLink
@@ -109,11 +122,12 @@
               <div class="flex items-center gap-2 mt-1.5 text-[10px]">
                 <span v-if="doc.section_counts?.cct_zh"
                       class="px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700">中 {{ doc.section_counts.cct_zh }}</span>
-                <span v-if="doc.section_counts?.charles_apot || doc.section_counts?.mrjames_ntapoc || doc.section_counts?.robinson_nh || doc.section_counts?.charlesworth_otp"
+                <span v-if="hasEnglish(doc)"
                       class="px-1.5 py-0.5 rounded bg-blue-50 text-blue-700">英</span>
-                <span v-if="doc.section_counts?.greek_orig || doc.section_counts?.coptic_orig || doc.section_counts?.syriac_orig || doc.section_counts?.hebrew_orig || doc.section_counts?.aramaic_orig || doc.section_counts?.ethiopic_orig || doc.section_counts?.latin_orig"
+                <span v-if="hasOriginal(doc)"
                       class="px-1.5 py-0.5 rounded bg-amber-50 text-amber-700">原文</span>
-                <span v-if="doc.composition_low" class="text-gray-400 ml-auto">
+                <span v-if="doc.composition_low !== null || doc.composition_high !== null"
+                      class="text-gray-400 ml-auto">
                   {{ formatPeriod(doc.composition_low, doc.composition_high) }}
                 </span>
               </div>
@@ -122,13 +136,13 @@
         </div>
 
         <div v-if="filteredDocs.length === 0" class="text-center text-gray-400 py-12 text-sm">
-          所選類別內沒有文獻
+          這個類別暫無文獻
         </div>
       </div>
 
       <div v-if="!searchActive" class="mt-12 text-xs text-gray-400 leading-relaxed border-t border-gray-200 pt-4">
-        <p>中文資料來源：王曉朝主編《基督教典外文獻》10 冊（基督教文藝出版社 2008-2013）— OT 偽典 6 + NT 偽典 4。</p>
-        <p class="mt-1">英譯：Charles APOT 1913 (PD) / M.R. James 1924 (PD) / Charlesworth OTP 1983-85 © / Robinson NHL 1977 ©；原文：Schwartz/Nestle critical editions + Nag Hammadi Coptic facsimiles。多數英譯與原文欄位仍待補。</p>
+        <p>分類依王曉朝主編《基督教典外文獻》10 冊（基督教文藝出版社 2008-2013）原書部別。</p>
+        <p class="mt-1">英譯：Charles APOT 1913 (PD) / M.R. James 1924 (PD) / Charlesworth OTP 1983-85 © / Robinson NHL 1977 ©；原文：critical edition + Nag Hammadi Coptic facsimiles。多數英譯與原文欄位仍待補。</p>
       </div>
     </div>
   </div>
@@ -146,6 +160,7 @@ type ApocDoc = {
   title_orig: string | null
   category: string
   testament: 'ot' | 'nt' | 'mixed'
+  genre: string | null
   language_orig: string | null
   composition_low: number | null
   composition_high: number | null
@@ -203,42 +218,84 @@ async function load() {
 }
 onMounted(load)
 
-// ── Category filter ──────────────────────────────────────────────────────
-type CatKey = 'all' | 'ot_apocrypha' | 'ot_pseudepigrapha' | 'nt_apocrypha' | 'nag_hammadi' | 'qumran'
-const activeCategory = ref<CatKey>('all')
+// ── Testament tabs + genre chips ───────────────────────────────────────
+type Testament = 'ot' | 'nt'
+const activeTestament = ref<Testament>('ot')
+const activeGenre = ref<string>('all')
 
-const categoryOpts = computed(() => {
-  const all = docs.value
-  return [
-    { key: 'all' as const,               label: '全部',          count: all.length },
-    { key: 'ot_apocrypha' as const,      label: 'OT 第二正典',   count: all.filter(d => d.category === 'ot_apocrypha').length },
-    { key: 'ot_pseudepigrapha' as const, label: 'OT 偽典',       count: all.filter(d => d.category === 'ot_pseudepigrapha').length },
-    { key: 'nt_apocrypha' as const,      label: 'NT 偽典',       count: all.filter(d => d.category === 'nt_apocrypha').length },
-    { key: 'nag_hammadi' as const,       label: 'Nag Hammadi',   count: all.filter(d => d.category === 'nag_hammadi').length },
-    { key: 'qumran' as const,            label: '昆蘭古卷',       count: all.filter(d => d.category === 'qumran').length },
-  ]
+watch(activeTestament, () => {
+  activeGenre.value = 'all'   // reset genre when switching testament
+})
+
+// Genre order + Chinese labels (mirrors 王曉朝 book parts)
+const GENRE_ORDER_OT: { key: string; label: string; label_en: string }[] = [
+  { key: 'apocalyptic', label: '默示文學',         label_en: 'Apocalyptic' },
+  { key: 'testaments',  label: '族長遺訓',         label_en: 'Testaments' },
+  { key: 'legends',     label: '重述聖經／傳奇',   label_en: 'Rewritten / Legendary' },
+  { key: 'wisdom',      label: '智慧文獻',         label_en: 'Wisdom' },
+  { key: 'deutero',     label: '隱藏經卷／第二正典', label_en: 'Deuterocanon' },
+  { key: 'hymns',       label: '詩歌頌詞',         label_en: 'Hymns & Psalms' },
+  { key: 'fragments',   label: '希臘化猶太斷片',   label_en: 'Hellenistic-Jewish Fragments' },
+  { key: 'qumran',      label: '昆蘭古卷',         label_en: 'Qumran' },
+]
+const GENRE_ORDER_NT: { key: string; label: string; label_en: string }[] = [
+  { key: 'gospels',     label: '福音書',           label_en: 'Gospels' },
+  { key: 'papyri',      label: '蒲草紙殘片',       label_en: 'Papyrus Fragments' },
+  { key: 'acts',        label: '行傳',             label_en: 'Acts' },
+  { key: 'epistles',    label: '書信',             label_en: 'Epistles' },
+  { key: 'apocalypses', label: '默示錄',           label_en: 'Apocalypses' },
+  { key: 'dialogues',   label: '對話錄／諾斯底',   label_en: 'Dialogues / Gnostic' },
+  { key: 'misc',        label: '其他',             label_en: 'Misc' },
+]
+
+const otDocs = computed(() => docs.value.filter(d => d.testament === 'ot' || d.testament === 'mixed'))
+const ntDocs = computed(() => docs.value.filter(d => d.testament === 'nt'))
+
+const testamentTabs = computed(() => [
+  { key: 'ot' as Testament, label: '舊約典外', count: otDocs.value.length },
+  { key: 'nt' as Testament, label: '新約典外', count: ntDocs.value.length },
+])
+
+const docsForActiveTestament = computed(() =>
+  activeTestament.value === 'ot' ? otDocs.value : ntDocs.value
+)
+
+const genreChips = computed(() => {
+  const order = activeTestament.value === 'ot' ? GENRE_ORDER_OT : GENRE_ORDER_NT
+  const chips = [{ key: 'all', label: '全部', count: docsForActiveTestament.value.length }]
+  for (const g of order) {
+    const n = docsForActiveTestament.value.filter(d => d.genre === g.key).length
+    if (n > 0) chips.push({ key: g.key, label: g.label, count: n })
+  }
+  return chips
 })
 
 const filteredDocs = computed(() => {
-  if (activeCategory.value === 'all') return docs.value
-  return docs.value.filter(d => d.category === activeCategory.value)
+  if (activeGenre.value === 'all') return docsForActiveTestament.value
+  return docsForActiveTestament.value.filter(d => d.genre === activeGenre.value)
 })
 
 const groupedDocs = computed(() => {
-  const groups: { key: string; label: string; items: ApocDoc[] }[] = [
-    { key: 'ot_apocrypha',      label: 'OT 第二正典 / 次經', items: [] },
-    { key: 'ot_pseudepigrapha', label: 'OT 偽典',             items: [] },
-    { key: 'qumran',            label: '昆蘭古卷',             items: [] },
-    { key: 'nt_apocrypha',      label: 'NT 偽典',             items: [] },
-    { key: 'nag_hammadi',       label: 'Nag Hammadi 諾斯底', items: [] },
-    { key: 'lost_gospel',       label: '失傳福音書',           items: [] },
-  ]
-  for (const d of filteredDocs.value) {
-    const g = groups.find(g => g.key === d.category)
-    if (g) g.items.push(d)
+  const order = activeTestament.value === 'ot' ? GENRE_ORDER_OT : GENRE_ORDER_NT
+  const groups: { key: string; label: string; label_en: string; items: ApocDoc[] }[] = []
+  for (const g of order) {
+    const items = filteredDocs.value.filter(d => d.genre === g.key)
+    if (items.length > 0) {
+      groups.push({ key: g.key, label: g.label, label_en: g.label_en, items })
+    }
   }
-  return groups.filter(g => g.items.length > 0)
+  return groups
 })
+
+function hasEnglish(doc: ApocDoc): boolean {
+  const c = doc.section_counts ?? {}
+  return Boolean(c.charles_apot || c.mrjames_ntapoc || c.robinson_nh || c.charlesworth_otp)
+}
+function hasOriginal(doc: ApocDoc): boolean {
+  const c = doc.section_counts ?? {}
+  return Boolean(c.greek_orig || c.coptic_orig || c.syriac_orig || c.hebrew_orig
+    || c.aramaic_orig || c.ethiopic_orig || c.latin_orig)
+}
 
 function formatPeriod(low: number | null, high: number | null) {
   if (low === null && high === null) return ''
