@@ -1,0 +1,447 @@
+AuInInI.ReOrSSp 217 Auctor incertus (Innocentius III?) Parisiis J. P. Migne 1855 early modern edition, no apparatus this file was encoded in TEI xml for the University of Zurich's Corpus Corporum project (www.mlat.uzh.ch) by Ph. Roelli in 2013 Classical Latin orthography latin
+
+Auctor incertus (Innocentius III?)
+
+OBSERVATIO CRITICA.
+
+Inter praecipua charitatis Christianae officia, haud minimum religiosum munus reputatur hospitalibus inservire, atque curam aegrotorum gerere, aliorumque miserorum hominum necessitatibus succurrere; unde omni aevo excitavit Deus viros tanta misericordia praeditos, ut proximis suis tam sanctum ministerium exhibere plurimi haud dedignati sint. Inter plures igitur ordines religiosos saeculo XII et sequenti erectos, nonnulli dicti sunt Hospitalarii, ad hoc pium officium observandum specialiter deputati, prout praesens sacer ordo institutus erat, et adhuc amplissimum totius Ecclesiae catholicae hospitale sub sua directione possidet, cujus ortum miraculosum reverendissimus Ascanius Tamburinus olim abbas generalis Vallis-Umbrosae, De jure abbatum, tom. II, disput. XXIV, quaest. IV, pag. 314, quamvis alii aliter originem proferant.
+
+Verum ante alios auctores audiamus laudatum Tamburinum de ortu hujus ordinis sic loquentem: « Sancti Spiritus in Saxia ordo, seu congregatio litteris apostolicis sub Regula S. Augustini sic nuncupata, mirabile quidem habuit principium ab Innocentio III summo pontifice. Huic enim oranti facta est vox de coelo dicens: Innocenti! vade piscatum ad Tiberim fluvium. Re cum S. R. E. cardinalibus communicata ad Tiberim se contulit, et laxatis retibus, prima vice octoginta septem, secunda vero trecentos, et quadraginta extraxit infantes abortivos, ab impiis matribus suffocatos et in Tiberim projectos. Non defuit piissimo pontifici remedium divinitus revelatum. Congregatis enim quam plurimis piis hominibus, eos ad curam hospitalis Sancti Spiritus, quod Romae circa annum 1201 construxit, praefecit. Eorum cura est peregrinos et infirmos suscipere et curare, ac pueros et infantes alere. Vocantur autem fratres S. Spiritus a collegio certe magnifico sub tutela et patrocinio S. Spiritus aedificato. In Saxia autem vel quia collegium est sub saxo seu castro Neronis; vel quia Saxones Germaniae populi ibi olim habitavere. »
+
+Interim sunt nonnulli, qui hujus ordinis ortum longe antiquiorem esse volunt, asserentes, illum a S. Lazaro fratre sanctissimarum virginum Marthae et Mariae exortum fuisse, qui apud Massiliam in Galliis appulsus ibidem ordinem militarem et eximium xenodochium in honorem S. Spiritus erexisse fertur. De quo fabuloso exordio plura inferius dicenda sunt, cum sustinendo tales nugas, inter hujus sacri ordinis iniquilinos, praesertim Italos, et Gallos dirae exortae sint contentiones. Alii dein scriptores aeque inaniter ordinis principium a quodam S. Cyriaco sive Juda Quiriaco desumere volunt, prout Trithemius in Chronico Hirsaugiensi part. I, fol. 527 scribit; quorum etiam sententia omnino rejicienda est, cum nullae veritatis fundamento innitatur. Nunquam enim primis Ecclesiae saeculis reperimus aliquem determinatum Hospitalariorum ordinem institutum fuisse, et S. Cyriacus ille nec Hierosolymitanus episcopus exstitit, tempore inventae S. crucis, nec sub Juliano Apostata sedem illam occupare potuit, prout pluribus doctissimi socii Bollandiani docent tom. I Maii ejusdem Acta ad diem quartum dicti mensis eruditis notis exornantes, quem quidem Judam Quiriacum nominant.
+
+Nec desunt scriptores, qui hujus ordinis exordium summo pontifici Innocentio III non denegant, sed volunt illum non institutum fuisse sub protectione, et invocatione S. Spiritus, donec piissimus Montispessulani comes Guido constitutus est archihospitalis Romani primus magister. Et quidem in confesso est apud omnes, hunc Montispessulani comitem paulo ante Innocentium III in sua civitate erexisse insigne hospitale; illudque sub invocatione et protectione S. Spiritus instituisse, qui tamen postea ab ipso summo pontifice Romam vocatus, et archihospitalis Romani constitutus est primus magister, atque utrumque xenodochium sub invocatione S. Spiritus gubernavit, quod quidem ex mox dicendis clarius patebit.
+
+Adeoque agnoscere debemus Innocentium III papam aeque ac Guidonem comitem, pro hujus sacri ordinis institutoribus, sed sub diverso respectu, cum summus ille pontifex auctor fuerit archihospitalis, sub cujus jurisdictione omnia reliqua dependebant; piissimus autem comes erexit primum xenodochium, alteri tamen subjiciendum. Parvi enim refert, an ab initio, sacri hujus ordinis Inquilini, sub uno vel altero, nomine aegrotis inservierint, et Deo militaverint, cum inter utriusque hospitalis erectionem pauci tantum anni intercesserint. Ac sane piissimus ille pontifex per solemnem bullam anno 1204 datam, et eidem Guidoni utriusque xenodochii magistro directam, exerte dicit, hoc archihospitale Romanum ab ipso erectum esse in loco, qui dicitur ad S. Mariam in Saxia, prout ipsa bulla in Bullario Romano, tom. I, pag. 58, edita, quam et hic exhibere lubet.
+
+Bulla Innocentii III, papae confirmans erectionem archihospitalis Romani, ejusque unionem cum hospitali Montispessulani.
+
+INNOCENTIUS episcopus, servus servorum Dei GUIDONI magistro hospitalium S. Mariae in Saxia et S. Spiritus in Montepessulano, ejusque fratribus tam praesentibus, quam futuris, regularem vitam professis in perpetuum.
+
+Inter opera pietatis, etc. Vide Regestorum lib. VII, col. 377, tom. II.
+
+Datum Lateran., per manum Joannis S. R. E. subdiaconi et notarii XIII Kal. Julii, indictione VII, Incarnationis Dominicae anno 1204, pontificatus vero domini Innocentii III, anno VII.
+
+Hoc igitur xenodochium Romanum tempore erectionis nuncupabatur Hospitale S. Mariae in Saxia, et forsan ab ipsis Saxonibus-Anglis, nomen sumsit, utpote in eodem loco erectum, ubi olim piissimus Ina Saxonum Orientalium in Anglia rex ecclesiam anno 715 in honorem S. Mariae Deiparae virginis excitari curaverat. Hic quippe rex piissimus, postea et circa annum 718 Romam accedens ad visitanda loca sacra, ibidem insigne xenodochium erexit, illudque amplissimis redditibus auxit ad suscipiendos suos Saxones Orientales loca sacra visitantes. Sic etiam ad Inae pium exemplum Offa Mediterraneorum Saxonum sive Marciorum rex, ibidem hospitale regiis donis locupletavit, quod tamen deinceps ad incitas penitus redactum est. Nam anno 817 tantis flammis incenditur, ut illae non nisi miraculo exstingui potuerint; postquam nimirum piissimus pontifex Paschalis I, cum miraculosa Deiparae virginis imagine processionaliter concomitante clero, et populo ad locum accedens ignis exstinctus est. Atque etiamsi anno 847 in cineres redactum, illud pietate summi pontificis Leonis IV, ac liberalitate regum Angliae iterum restauratum sit, attamen saeculis XI et XII reperimus, illam partem civitatis Romanae, ubi situm erat, adeo devastatam per Guelphorum, et Gibellinorum factiones ut tempore Innocentii III papae anno 1198 cathedram S. Petri occupantes vix illius hospitalis Orientalium Saxonum memoria superavit. Unde merito piissimus pontifex Innocentius III illius verus restaurator, et fundator nominari debet, quamvis locus a Saxonibus antiquis habitatoribus denominationem sumpsisse videatur, cum etiamnum hodie de Sassia vel in Saxia nuncupatus sit.
+
+Verum quod miraculosum exordium attinet, etiamsi summus ille pontifex in sua laudata bulla nullam ejus memoriam faciat, ut supra dictum est, attamen ejusdem successores, Nicolaus IV et Xistus IV in suis bullis exerte de illo agunt; atque in ipso sumptuosissimo hospitali adest antiqua tabula depicta totam historiam mirabilem repraesentans, quae quidem omnia satis piam traditionem denotare possunt. Utut haec sint, reperimus quoddam vestigium hujus miraculosi exordii apud ipsas piissimi pontificis Innocentii III epistolas a clarissimo Baluzio editas, quando epist. 112, concedit indulgentias illis, qui meretrices in legitimas uxores ducerent, cum per talia prostibula, committi soleant talia frequentia infanticidia. Est autem epistola talis tenoris: « Universis Christi fidelibus, ad quos litterae istae pervenerint. Inter opera charitatis, quae imitanda nobis auctoritate sacrae paginae proponuntur, sicut Evangelica testatur auctoritas, non minimum esse errantem ab erroris sui semita revocare, ac praesertim mulieres voluptuose viventes, et admittentes indifferenter quoslibet ad commercium carnis, ut caste vivant, ad legitimi tori consortium invitare. Hoc igitur attendentes, praesentium auctoritate statuimus, ut omnibus qui publicas mulieres de lupanari extraxerint et duxerint in uxores, quod agunt, in remissionem proficiat peccatorum. Datum Romae apud S. Petrum, III Kalend. Maii, pontificatus nostri anno primo. »
+
+Cum igitur immediate post electionem summi pontificis Innocentii III factam fuisse coelestem revelationem dicant nonnulli; sic optime inferri potest, et hoc decretum circa meretricum connubia ineunda illum edidisse, simulque hoc hospitale condidisse ad suscipiendos et nutriendos tales infantes expositos, ut deinceps crimen infanticidii cessaret.
+
+Cum igitur hoc celeberrimum xenodochium perfectum fuerit anno 1201 et sic ante concessam laudatam confirmationis bullam, ejusdem magister constitutus erat Guido Montispessulani hospitalis fundator, atque tandem hospitale S. Spiritus nominari coepit. Hinc vera origo canonicorum regularium ordinis S. Spiritus deduci debet, ab utroque hospitali denominationem sumens. Gerrae enim sunt et inanes naeniae, quas proferunt nonnulli circa quemdam ordinem militarem S. Spiritus jam a primis Christianae religionis annis a S. Lazaro, ejusdemque sanctissimis sororibus Martha et Maria erectum, prout supra diximus, atque saepe laudatus Hippolytus Eliot in sua religiosorum ordinum Historia, tom. II, cap. 30, ubi quidem erudite refutat fabulosum illum ordinem militarem, quibusdam commentitiis legendis solummodo suffultum. Nullam enim aliam auctoritatem milites S. Spiritus pro sua fabulosa antiquitate adducere valent, nisi quoddam legendum ex breviario aliquo circa annum 1553 impresso desumptum, ubi in lectionibus S. Marthae haec verba legebantur: « Dum autem Magdalena devotioni et contemplationi se totam exponeret, Lazarus quoque plus militiae vacaret, Martha prudens, et sororis et fratris partes strenue gubernabat, ac famulis, et militibus sedulo ministrabat. » Nolo ego hic totam illam historiam de S. Lazaro et sanctissimis sororibus suis invertere, cum viri eruditi et catholici satis eamdem a fabulosis mendis purgarint, et ipsa verba hujus legendi valde sublestum argumentum inferant pro antiquitate talis ordinis militaris stabilienda.
+
+Interim, relictis his anilibus naeniis, ad certiora argumenta adducenda progrediamur, quae verum exordium et antiquum statum hujus ordinis denotare possunt, qui ordo apud Italos vocatur Sancti Spiritus in Saxia, et apud Gallos S. Spiritus de Montepessulano nuncupatur. In primis igitur certum est, primum hujus ordinis adhuc florentis sub protectione et praesidio S. Spiritus auctorem exstitisse praefatum Guidonem, qui labente saeculo XII apud Montempessulanum, pro sustentandis aegrotis, et pauperibus amplissimum xenodochium condiderat, et ab Innocentio III papa vocatus Romam, curam novi hospitalis ab ipso summo pontifice erecti ad S. Mariam in Saxia gessit, quod deinceps designari coepit hospitale S. Spiritus in Saxia; postquam utrumque in unum adunare voluit praedictus summus pontifex. Deinde denegare nequit, quod ab exordio hoc salubre institutum pluribus laicis, quam ecclesiasticis personis combinatum fuerit. Hospitalarii enim Montispessulani, nullis sacris ordinibus initiati erant, atque summus pontifex Innocentius III per supra adductam bullam decrevit, ut in archihospitali Romano adessent tantum quatuor clerici regulam ejusdem hospitalis adamussim observantes et sacramenta infirmis administrantes independenter a magistro, aliisque fratribus ordinis, ac soli summo pontifici subjecti, prout verba bullae declarant.
+
+Atque haec est vera et sincera origo sacri ordinis canonicorum S. Spiritus de Saxia; qui etiamsi magis a laicis, quam clericis gubernaretur, tamen ejusdem inquilinis piissimus pontifex praescripsisse videtur Regulam Augustinianam pro communi norma vitae regularis, adjectis quibusdam constitutionibus, quas et hic adjicimus. Ex quibus constitutionibus constat Regula praesens ab omnibus fratribus stricte observata, qui per illam astringuntur, non solum expositos infantes diligenter nutrire et instruere, verum etiam omnes aegrotos, et infirmos advenientes suscipere, illisque omni meliori modo inservire. Et quamvis piissimus pontifex haec duo archixenodochia, nimirum Romanum et Montispessulanum sub uno magistro conjunxerit, et hoc isti submiserit, attamen voluit quamdam bonorum separationem observari. Hinc statuit, ut omnes eleemosynae per Italiam, Siciliam, Angliam, et Hungariam collectae ad Romanum pertinerent, quemadmodum et amplissimi redditus in ipsa urbe, et vicinia siti; ad Montispessulani xenodochium pervenirent reliquae eleemosynae per Gallias, Hispaniam et alias Europae partes collectae. Postquam autem summus pontifex Honorius III hanc unionem dissolvere voluit, atque Gallis suum magistrum generalem concesserat, tunc et sacer hic ordo quodammodo dissipari coepit. Licet enim a primaevo instituto laicis et clericis mistus exstiterit, tamen ipsi laici semper hospitalariorum temporalem jurisdictionem retinentes, tandem non tanquam magistri regulares sese gesserunt, sed ut praeceptores saeculares et perpetui commendatarii vivere voluerunt, in suos usus patrimonium pauperum convertentes, nec magistro generali obedientiam praestantes. Ex quibus exorti sunt milites S. Spiritus, quamvis sub nullo ordine militari exstiterint, nec unquam sicut alii militarium ordinum inquilini ad sacra bella ineunda vocati fuerint, prout omnes historici fatentur, et ex jam dictis de fabulosa eorum origine a S. Lazaro omnino patet. Nolo ego hic referre diras rixas olim ventilatas inter hujus ordinis clericos et supposititios illos milites, cum de illis satis fuse agat saepe laudatus Hippolytus Eliot, quem lectores consulere possunt. Non enim integram historiam hujus sacri ordinis exhibere intendimus, sed solum adducimus illa, quae ad meliorem sequentium constitutionum notitiam conducere possunt, quae quidem non pro Gallis, sed pro Italis conditae videntur. Neque hic sermonem facimus de celeberrimo equestri ordine S. Spiritus adhuc apud Gallos florente, qui ab Henrico III rege institutus, nunquam cum Montispessulani hospitalariis commercium inivit, nec inter ordines religiosos numerari solet.
+
+Verum ad sacrum ordinem S. Spiritus in Saxia redeamus, qui late se extendebat, non solum apud Italos et Siculos, sed etiam per Angliam, Germaniam, Hungariam et Poloniam dispersus est; atque tandem sub pontificatu Nicolai IV iterum unionem cum Italis inire voluerunt hospitalarii Montispessulani, submissionem quamdam magistro generali Romano facientes, in cujus agnitionem eidem exsolvere promiserunt annuatim tres florenos aureos, prout ex ejusdem pontificis bulla anno 1292 data eruimus. Sunt tamen nonnulli scriptores, qui volunt Gregorium XI papam, 1370 electum hospitalarios Montispessulani in pristinam libertatem ab Honorio III ipsis concessam restituisse, cujus tamen bullam, tanquam supposititiam rejiciunt alii auctores, praesertim Launierus hujus ordinis historicus, et archihospitalis Romani superior, cum illa directa sit Berengario Gioni generali archihospitali militiae S. Spiritus primum mortuo anno 1486 vel sequenti, qui proin generalatum ultra centesimum annum protraxisse debuit, quod asserere ridiculosissimum foret. Interim ex his, aliisque adductis monumentis, omnino constat hunc sacrum ordinem S. Spiritus in Saxia mansisse clericis et laicis repletum, per aliqua saltem saecula, nec proprie religiosum exstitisse, cum laici illi, quibus subjiciebantur clerici nullis solemnibus votis religiosis astricti fuerint. Hinc exorti tot abusus et eleemosynarum dilapidationes, dum quilibet xenodochii magister, tanquam commendatarius saecularis viveret, et patrimonium pauperum in suos usus converteret, prout supra dictum est. Adeoque haud ante annum 1458 hic sacer ordo veram rationem religiosi ordinis induit, quando summus pontifex Pius II praedicto anno electus, omnes illos magistros commendatarios suppressit, et novo suo ordini militari de Bethlehem supposititias illas commendas adunavit, prout bulla illius testatur, quem exhibet clarissimus Leibnitius in suo Codice juris gentium. Ex quo tempore, sacer hic ordo vere religiosus incepit existere ab omnibus laicis magistris vel superioribus liberatus, et a solis religiosis viris gubernatus. Sic enim summus pontifex Xistus IV per solemnem bullam anno 1476 mandavit: « Statuentes ac etiam decernentes, quod ipsius ordinis hospitalia, praeceptoriae, membra et loca nulli, cujuscunque dignitatis, status, gradus, vel conditionis fuerit, praeterquam ipsius nostri hospitalis fratribus, et ordinem ipsum expresse professis, eis tamen pro solo nutu dicti praeceptoris existentis, et pro tempore ad claustrum, quoties expedierit, revocandus, in titulum vel commendam conferri valeant, sive possint. »
+
+Ex hac etiam authentica bulla in Bullario Magno Romano relata tom. I, pag. 406, discimus, quosdam Transalpinos praeceptores vel magistros, et praecipue in Gallia mandatis summorum pontificum Pii II et Pauli II non obtemperasse, sed talia hospitalia in suos usus convertisse, et generali magistro Romano debitam obedientiam denegasse, nec tanquam religiosos viros, sed potius quasi saeculares commendatarios sese gessisse, quos proin acriter his verbis perstringit omnem rerum proprietatem ab ipsis auferens: « Cum itaque, sicuti accepimus displicanter, nonnulli in ipsius hospitalis fratres, etiam praeceptorias, hospitalia, membra, et loca pia ab ipso hospitali in Saxia dependentia, obtinentes, ambitione et cupiditate caeca inducti et sub terminis non contenti temeritate propria se generales praeceptores dicti ordinis, praecipue ultramontanes nominare, etc. » Adeoque omnes milites commendatarii hujus ordinis sunt suppressi, et auctoritate apostolica reliqui omnes praeceptores et hospitalarii ubique subjiciebantur magistro generali Romano, sic enim ibidem praecipitur; « Quinimo omnes et singuli dicti ordinis praeceptores, hospitalarii, et religiosi, quos eidem praeceptori nostri hospitalis in Saxia pleno jure subesse volumus, et tanquam suo superiori obedientiam, et reverentiam congruam exhibere; ac salva hujus sedis auctoritate in omnibus sicuti unico eorum praeceptori, obtemperare teneantur, et debeant. »
+
+Ab hujus igitur bullae pontificiae promulgatione, etiam apud Gallos, omnes praeceptores, et hospitalarii S. Spiritus, sub jurisdictione magistri generalis Romani vixerunt, et per tria solemnia vota facti sunt veri religiosi, usque ad exordium saeculi XVII; nam anno 1619, summus pontifex Paulus V concessit Gallis vicarium generalem, sed a Romano generali ordinis quodammodo dependentem, et Gregorius XV papa constituit, ut talis vicarius, et visitator generalis emitteret tria vota solemnia religiosa, et habitum ordinis indueret. Adeoque non nisi anno 1625, summus pontifex Urbanus VIII ad instantiam Ludovici XIII regis, magistrum generalem xenodochii Montispessulani, aliosque praeceptores, hospitalarios per regna Galliae et Navarrae dispersos reddidit liberos a jurisdictione magistri generalis Romani. Hinc exorta est omnis disciplinae regularis relaxatio, et in illis partibus, praeceptores et magistri commendatarii iterum recrudescere coeperunt, supposititium militarem ordinem ubique introducere conantes. Et quamvis talibus usurpationibus acriter restiterint zelosiores, et magis pii praeceptores; attamen nihil effecerunt, donec anno 1700 magnanimus Galliarum rex Ludovicus XIV hunc ordinem S. Spiritus in Saxia declaravit, debere aestimari verum ordinem regularem, atque ut praeceptores illi saeculares et commendatarii supprimerentur. Sed tandem ad frequentes quorumdam magnatum aulicorum importunitates, constitutus est magister generalis hujus ordinis per Gallias quidam ex prima nobilitate regni, sub cujus directione omnes religiosi et fratres laici vivere debent, et ubique hospitalitatem in omnibus xenodochiis rite observare, qui ideo magister ordinis S. Spiritus de Montepessulano nominatur.
+
+Interea, reliqua hujus sacri ordinis xenodochia per alias regiones extra Italiam et Siciliam erecta sub jurisdictione archihospitalis Romani manserunt, quorum inquilini regulam ab Innocentio III, papa praescriptam rite observant. Hujus rei insigne praebet exemplum Memmingense hospitale in civitate imperiali ejusdem nominis situm, quod etiamsi a Lutherano magistratu quoad temporalem jurisdictionem dependeat, attamen religiosi hospitalarii publicum catholicae religionis exercitium obtinent. Nam illis integrum est in propria ecclesia pulsatis campanis rem divinam diu, noctuque solemniter celebrare, sacramenta administrare, sanctissimam eucharistiam ad aegrotos, etiam in domibus Lutheranorum decumbentes ritu catholico cum campanula et lumine deferre, mortuos publice sepelire, omnesque alias caeremonias apud orthodoxos Christianos usitatas cum debita reverentia peragere. Erat etiam olim in eodem Sueviae circulo, apud Wimpinam urbem imperialem, eximium, hujus ordinis xenodochium, quod tempore mutatae religionis ad incitas est redactum, sed illud circa medium saeculi XVII, religosi Memmingenses restaurare laborabant, et quamvis amplissimos redditus nunquam recuperare potuerint, suis tamen expensis quosdam religiosos sustentare solent. Pro his duobus hospitalibus in Germania sitis, praeceptor xenodochii Memmingensis, in recognitionem subjectionis archihospitali Romano debitae, annuatim exsolvere solebat septem Bizantinos aureos, prout ex antiquis monumentis urbis Memmingensis eruitur.
+
+Nec ambigere licet, quin reliqua amplissima xenodochia per varias catholici orbis provincias dispersa, hoc idem praestiterint, prout plurima, quae per Hispaniam, Belgium, Hungariam, Poloniam supersunt, etiamnum hodie debitum suum pensum annuatim huic archihospitali Romano tanquam supremum magistrum generalem omnium hospitalariorum S. Spiritus agnoscunt. Et quidem hoc archihospitale Romanum adeo late patet, superbis aedificiis instructum, ac amplissimis redditibus cumulatum, ut grande castellum repraesentare videatur, plura palatia variis spatiorum intervallis distincta continens, in quibus degunt varia hominum utriusque sexus genera. In uno autem palatio morantur ultra centum nutrices, quae lactant parvulos expositos; ibidem enim suscipiuntur tales infantes tam legitimi, quam illegitimi, ne fame pereant. In altero autem habitant pueri adolescentiores numero circiter quingenti, qui a piis praeceptoribus instruuntur in doctrina Christiana, aliisque diversis artibus et scientiis. In tertio dein palatio degunt totidem numero puellae, quae a sanctimonialibus feminis ejusdem ordinis in omni virtutum genere instruntur, sicut in regulari aliquo monasterio. In quarto denique palatio duo sunt longissima ambulacra, ita, ut quodlibet mille lectis sit impletum: unum quidem continet infirmos viros, alterum autem aegrotas feminas, etc. Ast praeter haec omnia et plura alia superba aedificia pro infantibus expositis et aegrotis personis etiam peregrinis advenientibus ordinata, adest ibidem magnificum coenobium a religiosis viris inhabitatum, qui diu, noctuque divinis laudibus intenti regularem vitam sub Regula S. Augustini et sequentibus constitutionibus degunt, ubi etiam magister generalis totius ordinis habitare solet. Atque in hoc archihospitali in usum infirmorum expenduntur annuatim supra ducenta millia scutorum Romanorum computando unum annum cum altero.
+
+Sed redeamus ad sequentes constitutiones exhibendas, quas anno 1564, Romae edidit reverendissimus dom. Bernardinus Cyrillus Aquilanus, totius ordinis praeceptor et generalis magister; illasque nominat Regulam sacri ordinis Sancti Spiritus in Saxia. Quae quidem constitutiones cum bulla summi pontificis Innocentii III, cum omnino conveniant; sic haud ambigere licet, quin piissimus ille pontifex hunc ordinem instituens eadem statuta religiosis utriusque sexus praescripserit; quamvis et illis etiam Regulam Augustinianam aliis hospitalariis communem pro norma vitae tradiderit. Attamen quisquis has constitutiones vel leviter perlustret, facile percipere potest, non omnia statuta hic exhibita ab exordio ordinis fuisse usitata, sed successu temporis plura ex illis fuisse superaddita.
+
+Cum enim omnino constet a primaeva institutione hunc sacrum ordinem fuisse a saecularibus potius, quam religiosis personis gubernatum, sic suppressis illis saecularibus praeceptoribus vel magistris, necesse omnino erat, non nulla condere nova statuta, omnibus utriusque sexus religiosis communia. Interim praesentes constitutiones ad gubernanda, et regenda xenodochia maxime salutares sunt. Omnesque utriusque sexus homines, praeter tria solemnia vota religiosa etiam ad gerendam specialem curam aegrotorum et infantum expositorum astringuntur. Hinc plurimis gaudent privilegiis, et eximuntur a jurisdictione omnium ordinarorium, omniaque aliorum sacrorum ordinum privilegia ipsis sunt concessa. Quod autem religiosi hujus ordinis aveant se nominare Canonicos regulares, hoc tantum evenit ex illo tempore, quo veram regularem vitam ducere coeperunt juxta Regulam S. Augustini, et postquam congregatio canonicorum regularium S. Spiritus per Gallias et Lotharingiam dispersa illi associata est. Nunquam tamen habitu canonico incedere solent; illorum enim habitus idem prorsus est cum illo clericorum saecularium, nisi quod ad distinctionem supra habitum nigrum debeant gestare crucem albam ad pectus assutam, dupliciter transversam, quarum prima minor est, prout refert Tamburinus supra laudatus. Sequitur jam ipsius Regulae tenor, prout nobis in ms, fuit communicatus
+
+REGULA ORDINIS S. SPIRITUS IN SAXIA.
+Fratribus ordinis Sancti Spiritus in Saxia ubilibet constitutis, Bernardinus Cyrillus AQUILANUS ejusdem ordinis praeceptor, et generalis magister.
+
+Regulam ordinis nostri, et veterum nostrorum instituta Patrum, fratres dilectissimi, denuo vobis ostendimus; ad quorum observantiam omni vos, quo possumus, officio, et affectu hortamur. Ut per ea nos Deus omnipotens dirigat in viam suam, et sancti ejus Spiritus munere, vestrisque precibus, si quid nostro in ordine infirmum sit, coelesti ope solidetur, sanetur aegrotum, alligetur confractum, reducatur abjectum, et pia charitatis affectione, deperditum quaeratur. Ejusdem Spiritus sancti virtus soletur inter nos, pusillanimes; et, si qui sint, inquietos corripiat; projectos, languentesque, et loca nostra sua dextera tueatur, et protegat. Mihi insuper (qui pro vobis omnibus, et me ipso rationem reddere teneor) ejus dono, vestrisque orationibus, compati et misereri dignetur. Valeat quis vestrum in Domino, et ejus in timore ipsius mandata, et regularia haec praecepta servet
+
+Romae, in sacra hospitali aede Sancti Spiritus. Kal Aprilis, 1564.
+
+EJUSDEM SACRI ORDINIS SANCTI SPIRITUS FUNDAMENTUM.
+Lectio S. Evangelii secundum Matthaeum, cap. XXV.
+
+In illo tempore, dixit Jesus discipulis suis. Cum venerit Filius, etc.: usque ad, Justi autem in vitam aeternam.
+
+STEPHANUS divina miseratione tituli S. Mariae trans Tiberim presbyter, et RAINERIUS S. Mariae in Cosmedin diaconus, cardinales: dilectis filiis, magistro, et capitulo domus S. Spiritus de Urbe Romana, et universis rectoribus, fratribus, et sororibus aliarum domorum sub ipsius ordine et magisterio commorantibus, salutem in Domino. Haec et Regula, quam de mandato et auctoritate sedis apostolicae vobis observare praecipimus, et a summo pontifice scilicet domino Innocentio papa III, data fuit, et omnibus sacrosanctae Ecclesiae cardinalibus confirmata, quae sic incipit:
+
+CAP. I.-- Sancti Spiritus adsit nobis gratia.
+In nomine Domini et individuae Trinitatis, Patris, et Filii, et Spiritus sancti, Amen. Omnibus fratribus et sororibus tam praesentibus quam futuris totius ordinis S. Spiritus praecipiendo mandamus, ut sub obedientia, in castitate, et sine proprio vivant, ad curam et servitium pauperum principaliter intendendo.
+
+CAP. II.-- De promissione novitiorum.
+Ego N. offero et trado meipsum Deo, et beatae Mariae, et sancto Spiritui, et dominis nostris infirmis, ut omnibus diebus vitae meae sim servus illorum. Promitto castitatem, cum Dei auxilio servare; et sine proprio vivere, et tibi N. et successoribus tuis obedientiam tenere, et bona ipsorum pauperum fideliter custodire. Sic me Deus adjuvet et haec sancta Evangelia.
+
+Et offerat se cum libro ad altare, etc.
+
+CAP. III.-- De receptione novitiorum.
+Per promissionem, quam Deo fecisti, et beatae Mariae. et sancto Spiritui, et dominis nostris infirmis recipimus te, et animam patris tui, et matris tuae in missis, matutinis, jejuniis et orationibus, eleemosynis, et in cunctis bene factis, quae fiunt, et fient in domo Sancti Spiritus: ut Deus talem partem tibi retribuat, qualem unusquisque nostrum habere exspectat. Et domus Sancti Spiritus panem et aquam tibi promittit, et vestem humilem dabit.
+
+Quo finito, si praeceptori sive magistro, et capitulo videtur, praeceptor sive magister, vel prior accipiat mantellum: et ostendit ei crucem, et ponat ad collum ejus dicens: Per hoc signum crucis fugiat a te omne malignum, et Christus te perducat ad regnum aeternum. Amen.
+
+His dictis, proni in terra preces pro eo faciant ad Dominum; et prior, sive magister, vel aliquis sacerdos incipiat Psalmum scilicet: Deus misereatur, cum Gloria Patri: deinde dicit Kyrie eleison. Pater noster. V\. Et ne nos inducas in tentationem. R\. Sed libera nos a malo. V\. Salvum fac servum tuum, Domine. R\. Deus meus, sperantem in te. V\. Mitte ei, Domine, auxilium de sancto. R\. Et de Sion tuere eum. V\. Esto ei, Domine, turris fortitudinis. R\. A facie inimici. V\. Domine, exaudi orationem meam. R\. Et clamor meus ad te veniat. V\. Dominus vobiscum. R\. Et cum Spiritu tuo.
+
+Oremus.
+
+Protege, Domine, famulum tuum (vel famulam tuam) et gratiae tuae dona in eo multiplica: ut ab omnibus tueatur offensis, et a temporalibus non destituatur auxiliis: sed spiritualibus sempiternis gaudeat institutis. Per Christum.
+
+Deus, cui proprium est misereri semper et parcere: suscipe deprecationem nostram: et famulum tuum, quem delictorum catena constringit, miseratio tuae pietatis absolvat. Per Christum.
+
+Deus, qui apostolis tuis sanctum dedisti Spiritum, concede famulo tuo piae petitionis effectum: ut, cui dedisti fidem, largiaris et pacem. Per Dominum nostrum.
+
+CAP. IV.-- Qualiter societas nostra petentibus detur.
+Cum aliquis societatem fratrum petit, et orationibus eorum voluerit se commendare, in capitulo prosternatur in terra. Et hic incipiat prior vel sacerdos hos psalmos: Levavi oculos meos. De profundis. Ecce quam bonum. Kyrie eleison. Pater noster. V\. Et ne nos inducas in tentationem R\. Sed libera nos a malo. V\. Salvum fac servum tuum. R\. Deus meus sperantem in te. V\. Mitte ei, Domine, auxilium de sancto. R\. Et de Sion tuere eum. V\. Ostende nobis, Domine, misericordiam tuam. R\. Et salutare tuum da nobis. V\. Domine, exaudi orationem meam. R\. Et clamor meus ad te veniat. V\. Dominus vobiscum. R\. Et cum Spiritu tuo.
+
+Oremus.
+
+Deus, qui es fons totius misericordiae, spes et consolator lugentium, vita et salus ad te clamantium, exaudi preces populi tui, et illorum, qui se in nostris orationibus commendant, ut eum tuae potentiae dextera protegat, et defendat: qui quatenus tibi soli Domino secura mente valeat deservire, atque ab omni tentationum molestia liberatus, tranquilla pacis salute pietati tuae continuas agere gratias mereatur. Per Dominum.
+
+Alia oratio.
+
+Deus, qui es justorum gloria et misericordia peccatorum: pietatem tuam humili prece deposuimus: ut famulum tuum N. benigne recipias, et pietatis tuae ei custodiam impendas, ut ex tota mente tibi deserviat, et sub tua protectione consistat. Et quando eis extrema dies advenerit, societatem sanctorum percipiat: cum quibus inenarrabilem gloriam sine fine possideat. Per Christum.
+
+Alia oratio.
+
+Precamur te, Domine, ut intercedente beata Virgine Maria cum omnibus sanctis tuis, famulo tuo N. indulgentiam tribuas peccatorum, opus ejus perficias in bonum, misericordiam et gratiam tuam ei concedas, fide, spe, et charitate eum repleas; mentem ejus ad coelestia desideria erigas, et ab omni adversitate defendas eum, et ad bonam perseverantiam perducas. Per Dominum.
+
+Post haec detur illi cum libro et stola, petita societas, priore vel sacerdote ita dicente:
+
+« Damus tibi (vel vobis) societatem nostram ex participatione orationum nostrarum, et beneficium eleemosynarum nostrarum. » Et dicitur Deo gratias.
+
+Postea osculetur a fratribus, et scribatur in libro confraternitatis, et illud etiam, quod dare promiserit in unoquoque anno: et cum defunctus fuerit, conscribatur in Kalendario.
+
+CAP. V.-- Quando aliquis offertur in pueritia in devotione paterna.
+Domine Deus omnipotens, qui es incomprehensibilis et immensus, qui tuum plasma vocatione sancta eligere dignatus es, concede huic famulo, vel puero, vitam honestam, conversationem studiosam, orationem placabilem, quatenus dignus efficiatur societate sanctorum. Per te, qui es benedictus in saecula saeculorum. Amen.
+
+CAP. VI.-- Quid fratres ex debito quaerere debeant et non amplius.
+Nullus suum aliquid praesumat dicere: Sic de primis Christi discipulis dictum est: Erant illis omnia communia (Act. IV). Procurator vero domus secundum necessitatem uniuscujusque fideliter omnibus administret, sicut etiam scriptum est: Dividebatur singulis prout cuique opus erat (ibid.). Fratres non quaerant amplius ex debito nisi panem et aquam: et vestitus eorum sit humilis, quia Domini sunt pauperes, quorum servos nos esse fatemur: nudi et sordidi incedunt, et turpe est servo, ut sit superbus, et dominus ejus sit humilis.
+
+CAP. VII.-- Quid, et a quo portetur ad mensam.
+Nemo praeter cellerarium decibo vel potu ad mensam, vel a mensa, nisi per licentiam magistri aliquid portet. Similiter si fieri potest, ad mensam simul omnes accedant, et simul post versum, surgentes discedant.
+
+CAP. VIII.-- Versus mensae, nisi clerici sint praesentes, ita fiat.
+Benedicite. Clerici respondent: Benedicite. Kyrie eleison, Christe eleison, Pater noster. Secrete dicatur. Quod si procurator domus fuerit praesens, vel qui locum ejus tenuerit, dicat: R\. Et ne nos inducas in tentationem.
+
+Alii respondeant: R\. Sed libera nos a malo.
+
+Adjungat: In nomine Patris et Filii et Spiritus sancti. Amen.
+
+Et sic ad mensam sedeant. Postea dicant omnes: Amen.
+
+Postmodum surgentes a mensa dicant: Miserere mei Deus
+
+Post subjungatur: Gloria Patri, etc. Sicut erat. Deinde, Kyrie eleison. Christe eleison. Pater noster. V\. Et ne nos inducas in tentationem. R\. Sed libera nos a malo.
+
+Dicat ille, qui benedictionem dixerat, respondentibus aliis: Sed libera nos a malo
+
+Adjungatur: Benedicamus Domino; et omnes respondeant: Deo gratias
+
+Qui vero ignoraverint, Miserere mei Deus: dicant quinquies Pater noster.
+
+CAP. IX.-- De lectore ad mensam.
+Per hebdomadam unus clericus legat, frater vero unus laicorum serviat: quibus absentibus magister per alios suppleri faciat.
+
+CAP. X.-- Ut non comedant nisi bis in die.
+Prohibemus autem fratribus, et sororibus, ut non comedant, nisi bis in die, praeter eos, qui sunt infirmi, et imbecilles. Ipsa autem imbecillitas in arbitrio et providentia magistri sit: nil ob favorem, vel gratiam personae seu, quod absit! ob invidiam, faciendo, sed cum Dei timore discrete agat.
+
+CAP. XI.-- De jejunio.
+A Dominica prima post festum Omnium Sanctorum usque ad Natalem Domini sicut in Quadragesima jejunent. Omni vero quarta et sexta feria a festo Sanctae Crucis usque ad festum Resurrectionis Domini, sicut in Quadragesima jejunent. Et qui renuerit, vino sequenti die careat; et si secundo tecerit, quarta et sexta feria, in pane et aqua jejunet.
+
+CAP. XII.-- De esu carnium.
+Carnes vero non comedant nisi ter in hebdomada: videlicet die Martis, die Jovis, et die Dominico, nisi causa infirmitatis, vel nisi festum Natalis Domini fuerit. Et qui contra fecerit, tres dies in pane et aqua jejunet.
+
+CAP. XIII.-- De recipiendis infirmis, et ministrantibus illis.
+Cum ergo venerint infirmi, vel deportati fuerint in domum Sancti Spiritus, tali modo suscipiantur: Primo de peccatis presbytero confiteantur, et religiose communicentur; et postea ad lectum deportentur, sive ducantur: et ibi quasi domini, secundum posse domus, omni die antequam fratres eant pransum, charitative reficiantur. Et Dominicis diebus sacerdotes, et clerici, fratres, et sorores cum processione in domo Sancti Spiritus pergentes, missa, vel Epistola et Evangelium tantum dicatur. Hora autem prandii pauperum, et hora coenae, campana pulsetur, ad cujus sonitum fratres, qui non sunt in operibus, statim occurrant, et devote serviant.
+
+CAP. XIV.-- De honestate fratrum, et eorum servitio circa infirmos.
+Constitutum est etiam, ut in ecclesia honestus sit eorum incessus, et conversatio idonea, scilicet ut clerici ad altare cum albis vestibus deserviant presbytero; diaconus vel subdiaconus, et, si necessitas fuerit, alius clericus hoc idem exerceat officium, et lumen in ecclesia sit semper, die, noctuque. Et ad infirmorum visitationem presbyter cum albis vestibus incedat: religiose portans corpus Domini: et diaconus praecedat, vel saltem acolytus ferens lanternam cum candela accensa, et spongiam cum aqua benedicta.
+
+CAP. XV.-- Qualiter fratres ire, et manere debent.
+In civitatibus, vel in villis seu castellis, in quibus proprias domos habuerint, nihil omnino comedant extra illas domos, nisi praelatus loci tenuerit, vel invitaverit eos. Qui autem haec praesumpserit: tribus diebus continuis jejunet in pane et aqua: et quatuordecim diebus in terra sine mensa et mappa comedet.
+
+CAP. XVI.-- De his, qui aliquo vadunt.
+Si quis ex nostris habuerit necessitatem, quoquam eundi, cum quibus magister jusserit ire, eat. In via vero videat, ne in omnibus moribus suis fiat, quod cujusdam offendat aspectum, et quod suam dedeceat sanctitatem. Sedens ad mensam, secundum posse, silentium tenere studeat.
+
+CAP. XVII.-- Ut nullus solus eat.
+Nullus pedes solus per urbem vadat, nec socium sibi sumat, nisi qui a magistro sibi fuerit sociatus, vel ab eo, qui, magistro absente, vices suas gerit. Provideat autem magister, vel qui vices suas gerit, honestam societatem. Qui sine mandato vel sine societate, ut praedictum est, ire praesumpserit, prima vice in terra sedeat: secunda duobus diebus, tertia vice septem diebus poeniteat, et quarta et sexta feria in pane et aqua jejunet.
+
+CAP. XVIII.-- De processione in hospitali.
+In hospitali ad processionem in quadragesima Sancti Martini, et majori, clerici et laici, et sorores conveniant, et dicto completorio fratres ad suum dormitorium accedant, et sorores ad suum cum silentio, ubi nullus extraneus admittatur, ad jacendum, et nunquam nudi jaceant, sed vestiti camisiis lineis aut laneis, aut aliis quibuslibet vestimentis, soli jacentes. Silentium etiam ibidem usque mane observetur; quod qui ruperit, vinum unius diei amittat, si se non correxerit, alias puniatur secundum provisionem praeceptoris.
+
+CAP. XIX.-- De silentio in ecclesia.
+Similiter silentium in ecclesia teneatur, ut non possit divinum officium impediri. Si quid autem dicendum fuerit de necessitate, in aure fratris dicatur: et qui silentium ruperit, vinum amittat.
+
+CAP. XX.-- De conservanda charitate.
+Charitatem ad omnes homines habere studeant: inter se pacem et concordiam habeant, avaritiam, invidiam, superbiam, odium, iram, detractiones, murmurationes, et malitiam a se omnino abjiciant.
+
+CAP. XXI.-- De capitulo fratrum generali.
+Per Quatuor Tempora anni primis diebus jejuniorum Quatuor Temporum praeceptor domus cum fratribus suis generale capitulum teneat, et de negotiis domus fideliter tractet. Qui si tunc forte non fecerit, infra octo dies, quam citius poterit, faciat diligenter.
+
+CAP. XXII.-- De communitate magistri.
+Sollicite autem provideat praeceptor, et communitatem fratrum, et consuetudinem laudabilem domus, et praecepta Regulae per omnia teneri faciat.
+
+CAP. XXIII.-- De communitate mensae fratrum.
+Praeceptor ad communem mensam fratrum semper comedat, nisi propter hospites, vel alias ex honesta causa seu necessaria remaneat
+
+CAP. XXIV.-- De electione magistri.
+Electio vero ejus infra mensem post decessum alterius per commune fratrum consilium celebretur, nec eligatur secundum dignitatem gentis, sed secundum vitae meritum, et sapientiae doctrinam.
+
+CAP. XXV.-- De silentio mensae.
+Ad mensam, sicut ait Apostolus (II Thess. III), fratres panem suum cum silentio comedant, lectionem sine tumultu audiant, ne solae fauces sumant cibum, sed et aures esuriant verbum Dei. Quod si necessarium fuerit loqui, uni servitorum in aure sub silentio dicat. Magister vero major, si voluerit in audientia omnium pro necessitate loqui potest: cum discretione tamen et mensura hoc faciat. Et post completorium non bibant, et in lectis silentium teneant, sicut superius scriptum est.
+
+CAP. XXVI.-- De correctione clericorum.
+Correctio vero clericorum et specialium aliorum ad praeceptorem laicum non pertineat, sed ad cardinales, quibus a domino papa ipsa domus fuerit recommendata. Ipsi vero cardinales ad tempus quandiu voluerint, alicui clerico de ipsa domo poterunt committere vices suas.
+
+CAP. XXVII.-- De officio clericorum et de primatu.
+Praefati vero clerici in diurnis et nocturnis officiis consuetudinem Romanae curiae observent, et primi in refectorio insimul in una parte ante laicos sedeant, prioritate inter eos sacrorum ordinum observata.
+
+CAP. XXVIII.-- De conditione clericorum.
+Si quando vero contigerit aliquem de clericis fratribus ad aliquam filiam destinari, vel illius clerici commiserint vices suas: ita tamen, quod secundum tenorem privilegii domini Innocentii papae tertii, semper in ipso hospitali quatuor ad minus sint clerici Regulam ejusdem hospitalis professi, qui pro nobis, et praedecessoribus nostris, ac successoribus nostris, ac fratribus vivis pariter ac defunctis specialiter obsecrantes, omnia spiritualia libere administrent.
+
+CAP. XXIX.-- De correctione clericorum.
+Clerici vero, si in his deliquerint, pro quibus laici sedebunt in terra in refectorio sine mappa, in honore ordinis clericalis in terra non sedeant, ne ex tali quasi publica poenitentia penes graves et bonos quodammodo efficiantur infames, sed loco illius poenae singulis diebus, in quibus sic poenitere debent, uno priventur ferculo, et in loco ultimo sedeant, nedum post clericos, sed post laicos fratres suos.
+
+CAP. XXX.-- De capitulo.
+Semel in hebdomada ad minus magister, vel qui locum ejus tenuerit, cum fratribus capitulum teneat. Cum sororibus vero magister capitulum teneat cum sacerdote fratre, et cum duobus aliis fratribus.
+
+CAP. XXXI.-- De poenis fornicantium.
+Si quis fratrum, vel si qua soror deprehendatur in fornicatione, volumus ipsum includi in carcerem, et per annum ibi habitet, omni occasione remota, et vita sua sit talis: Sexta feria in pane et aqua jejunet, et per totum annum non praesumat carnes manducare, nec vinum potare; et post annum, si inventus fuerit castigatus, et bonis moribus ornatus, secundum arbitrium praesidentis, in conventum cum caeteris fratribus redeat. Ita fiat in prima vice; et si secunda deprehendatur, per duos annos fiat, sicut superius est relatum. Et si forte, quod Deus avertat! tali facinore fuerit iterum deprehensus, omni vita sua absque remedio ibi habitet. Feria sexta infra octavas Natalis Domini licentiam habeat bibendi vinum. Et si opus fuerit infra Octavas Paschae similiter. Si etiam festivitas Omnium Sanctorum evenerit in sexta feria, quorum vigilia quinta feria celebratur in pane et aqua, liceat ei uti cibis conditis in ipsa festivitate; et sit in potestate praeceptoris cum consilio capituli aliquando, si necesse fuerit, poenam mitigare.
+
+CAP. XXXII.-- De fratribus altercantibus, et percutientibus alterutrum
+Frater si altercatus fuerit cum aliquo fratre, et clamorem habuerit praeceptor, talis sit poena: Septem diebus jejunet, quarta et sexta feria in pane et aqua, comedens in terra sine mensa et manutergio. Et si percusserit, quadraginta diebus manducet in terra, et si sanguinem effuderit, habitum dimittat. Si vero recesserit a domo sine voluntate praeceptoris sui, cui commissus fuerit, et postea reversus fuerit; quadraginta diebus manducet in terra jejunans quarta et sexta feria in pane, et aqua. Et per tantum temporis permaneat in loco extraneo quantum foris exstiterit.
+
+CAP. XXXIII.-- De constitutione horarum.
+Fratres cum ad matutinas surrexerint, et in ecclesia fuerint, matutinas et horas Beatae Mariae, stantes erecti, vel flexis genibus audiant, nisi infirmitas impedierit. Ad matutinas diei, et horas, dum psalmi dicuntur, lectiones leguntur et responsoria cantantur, fratres sedeant, sed a Gloria Patri propter reverentiam Trinitatis se elevent, et ad altare caput inclinent. Fratres, qui ordinati non sunt, et in Ecclesia non fuerint, pro matutinis Beatae Mariae dicant Pater noster 12; et pro matutinis diei similiter, et pro aliis horis singulis Beatae Mariae Pater noster 7; et pro illis similiter diei, et pro vesperis 9, et pro defunctis 9, similiter. Omnibus computatis, sunt 133 Pater noster.
+
+CAP. XXXIV.-- De fratribus male se habentibus.
+Frater si non bene se habens, si ab aliis fratribus bis atque ter correptus et admonitus fuerit, et diabolo instigante, se emendare noluerit, nobis mittatur pedester cum charta continenti suum delictum: tamen procuratio rara ei donetur, ut ad nos venire possit, eumque corrigemus.
+
+CAP. XXXV.-- De fratribus cum proprio viventibus.
+Si quis fratrum in morte sua proprietatem habuerit, vivensque magistro suo, vel sacerdoti ad utilitatem domus non ostenderit: nullum divinum officium pro eo agatur, sed quasi excommunicatus cum ipsa proprietate, extra coemeterium sepeliatur. Et si vivens proprietatem habuerit incolumis, eique reperta fuerit, et magistro suo celaverit, ac postea super eum inventa fuerit: ipsa pecunia ad collum ejus ligetur, et per hospitale Sancti Spiritus, vel alias domos, ubi permanserit, ducatur.
+
+CAP. XXXVI.-- De proprietariis.
+Omni anno in capitulo Pentecostes proprietarii excommunicentur, et, absolutione recepta, restituant pecuniam, et septem diebus poeniteant quarta et sexta feria jejunantes in pane et aqua. Et, si secundo reperti fuerint, poena duplicetur eis; si tertio idem crimen, quod absit! incurrerint, quadraginta diebus poeniteant, ab omni fratrum consortio separati.
+
+CAP. XXXVII.-- De officio faciendo pro fratribus et sororibus defunctis.
+Cum sit valde necessarium, firmiter praecipimus fieri, et praecipiendo mandamus, ut de omnibus fratribus et sororibus viam universae carnis ingredientibus in omnibus obedientiis quibuscunque obierint in domo S. Spiritus, 30 diebus missae pro anima fratris et sororis celebrentur. Presbyteri vero, qui fuerint in domo S. Spiritus quinque missas fratris vel sororis illius reddant. Caeteri vero, clerici duo; psalteria fratres laici, si septem psalmos sciverint, septem vicibus illos dicant: si illos nesciverint, 200 Pater noster dicant.
+
+CAP. XXXVIII.-- De judicio in capitulo.
+De omnibus clamoribus in capitulo judicetur, et discernatur secundum amorem Dei et judicium rectum. Et haec omnia, ut supra diximus, ex parte Dei omnipotentis et beatae Mariae semper virginis, et sancti Spiritus et dominorum nostrorum infirmorum praecipimus, ut cum summo studio, ita per omnia teneatur.
+
+CAP. XXXIX.-- De indumentis pauperum.
+Pauperes in hieme, laneis vestibus a festo Omnium Sanctorum usque ad Natalem Domini: et in aestate, a Pentecoste usque ad festum S. Joannis, ad minus quadraginta de pannis veteribus fratrum et etiam infirmorum vestiantur. Hanc autem eleemosynam magister cum consilio duorum fratrum, semper indigentibus, secundum charitatem Dei, non specialem affectum, vel amorem largiatur.
+
+CAP. XL.-- De pauperibus requirendis.
+Pauperes infirmi per vicos, una die cujuslibet hebdomadae, et per plateas quaerantur, et in domum Sancti Spiritus deferantur, et eorum cura diligentissime habeatur.
+
+CAP. XLI.-- De orphanis nutriendis et feminis praegnantibus.
+Orphani infantes projecti pro posse domus nutriantur: et pauperes feminae praegnantes gratanter suscipiantur, et eis charitative ministretur.
+
+CAP. XLII.-- De servitio pauperum.
+Sorores infirmis hospitalis die Martis capita, die Jovis pedes abluant; et linteamina, quando praecipitur, eis abluant.
+
+CAP. XLIII.-- De pauperibus suscipiendis.
+Communes pauperes qui in domo Sancti Spiritus hospitari voluerint, pro posse domus libenter suscipiantur, et charitative tractentur.
+
+CAP. XLIV.-- De religiosis suscipiendis.
+Si aliquis religiosus ad hospitandum in eadem domo, sive in domibus nostris venerit, quasi servus Dei benigne suscipiatur, et charitative illi subministretur.
+
+CAP. XLV.-- De hospitio magnatum.
+Si vero aliqua magna persona fuerit, speciale sibi hospitium praeparetur, et secundum possibilitatem domus, ei reverenter serviatur.
+
+CAP. XLVI.-- De peccatricibus suscipiendis.
+Mulieres peccatrices, quae pro conservanda castitate in domo Sancti Spiritus per septimanam sanctam habitare voluerint usque post octavas Paschae sine contradictione concedatur eis.
+
+CAP. XLVII.-- De litteris deferendis.
+Nullus litteras portet, nisi prius audierit legere; et si, lectis litteris, audierit in eis aliquid contineri, unde aliquod malum possit oriri, eas nullus portet; quia Urias detulit litteras mortis suae (II Reg. XI).
+
+CAP. XLVIII.-- De deposito.
+Commendationem nullus recipiat sine conscientia magistri, et aliquorum fratrum, excepto hospitalario, qui peregrinorum tantum, et forensium poterit deposita custodire.
+
+CAP. XLIX.-- Ut nulli liceat ecclesiam construere.
+Nullus construere faciat ecclesiam vel domum absque jussu magistri et capituli. Et si contra fecerit, quadraginta dies poeniteat: quarta et sexta feria in pane, et aqua jejunet.
+
+CAP. L.-- De injuriis vitandis.
+Nullus aliquem fratrem clamare audeat proditorem, vel regeneratum, neque ore foetentem, vel mentitum, vel filium meretricis, et qui in culpis istis ceciderit, sine poena non sit, sed septem diebus graviter puniatur. Et quarta et sexta feria in pane et aqua jejunet.
+
+CAP. LI.-- De sustentandis leprosis.
+Statuimus, ut si quis fratrum nostrorum, vel sororum in leprae morbum inciderit, in domo Sancti Spiritus provideatur ei tanquam uni ex aliis fratribus in aliquo loco domus.
+
+CAP. LII.-- De receptione munerum.
+Si quis ex nostris rem sibi collatam celaverit, puniatur, et tanquam proprietarius judicetur. Etsi frater aut soror eulogias vel munusculum acceperit a parentibus, vel amicis suis: non audeat ea sibi retinere, nisi de licentia, et voluntate praeceptoris, et si contra fecerit, ipsas eulogias amittat, et quatuor dies poeniteat: quarta et sexta feria in pane et aqua jejunet.
+
+CAP. LIII.-- Ut nullus vestes vendat, vel emat.
+Praecipimus firmiter et districte, ut nullus praesumat vestes vendere, vel emere, nisi de consensu magistri, vel qui locum ejus tenuerit: ut sicut pascimini ex uno cellario, sic induamini ex uno vestiario. Et vestimentum sit humile, sicut scriptum est, et a magistro, vel camerario emptum. Si vero aliter factum fuerit, magister accipiat, et ipse sit in poena septem dierum, et quarta et sexta feria in pane, et aqua jejunet.
+
+CAP. LIV.-- Si quis fratrum inciderit in haeresim.
+Si quis fratrum in haeresim, quod absit! inciderit, vel haereticorum scienter participationem, et familiaritatem habuerit, et hoc ad notitiam magistri vel fratrum pervenerit, domino papae denuntietur, vel ejus visitatori. Si quis autem alicui fratrum tantum crimen objecerit, quod probare nequiverit, poenam patiatur, quam passus esset alter. Si vero aliquis ex familiaritate haereticorum suspectus fuerit, coram capitulo moneatur, et mandetur ei ex parte capituli, ut eorum familiaritatem vitet, qui si post praeceptum capituli vitare noluerit, in carcere segregatus ab aliis, poenitentiam agat.
+
+CAP. LV.-- Qualiter fratres a fratribus sunt corrigendi.
+Fratres si duo, vel tres, vel amplius, fuerint, et unus illorum nequiter et male vivendo se habuerit; alter frater non debet eum diffamare, neque populo, neque praeceptori; sed primo per se ipsum castigare; etsi se noluerit castigare, adhibeat secum duos, vel tres ad eum castigandum; et si se emendaverit, inde gaudere debet. Si se noluerit emendare, tunc culpam ejus scribat secreto magistro suo: et secundum quod magister miserit, ita fiat de illo.
+
+CAP. LVI.-- Qualiter frater fratrem accusare debet.
+Frater alium fratrem accusare non debet, nisi possit bene probare. Qui si de illo crimina dixerit, et in probatione defecerit, eamdem poenam, quam ipse passurus esset, sustinebit.
+
+CAP. LVII.-- Qualiter fratres crucis vexillum portare debent.
+Fratres omnium obedientiarum, qui nunc, vel in antea offerunt se Deo, et hospitali Sancti Spitus, crucis signum in cappis et in mantellis deferant. In cappis ante pectus, in mantellis autem in sinistro latere, ut per illud vexillum et operationem, et obedientiam Deus nos custodiat, et a diaboli potestate nos in hoc saeculo et in futuro defendat in anima et corpore, et similiter omnes benefactores nostros.
+
+CAP. LVIII.-- De obsequiis fratrum defunctorum, et peregrinorum.
+Praecipimus etiam, ut omnia corpora mortuorum, atque aliorum Christianorum, qui post horam omnium vesperarum obierint, sepeliri usque in crastinum differantur. Et in hospitali, ubi obierint non sine lumine jaceant in feretris, de quibus indicitur, ut ante primam ad ecclesiam deferantur.
+
+CAP. LIX.-- De cunabulis puerorum.
+Ad opus infantium peregrinarum mulierum, qui in domibus Sancti Spiritus nascuntur, parva cunabula fiant: ut seorsum soli jaceant, ne aliquid incommodi infantibus possit evenire.
+
+CAP. LX.-- Ut magister proprietatem non habeat.
+Magister etiam proprietatem non habeat. Et, si inventus fuerit in morte habere, sine conscientia clerici fratris hospitalis, cui cardinalis commiserit vices suas, et camerarii, et aliorum duorum fratrum, nullum pro eo, sicut scriptum est, officium a fratribus agatur, sed quasi excommunicatus extra coemeterium sepeliatur.
+
+CAP. LXI.-- De discretione senum, et puerorum.
+Senes et pueri in discretione praeceptoris permaneant.
+
+CAP. LXII.-- De rectoribus filiarum domorum.
+Omnes filiarum domorum rectores, quas genuit domus Sancti Spiritus de Roma, a magistro et capitulo in ea rectoriam vel habitum suscipiant: nec ipsi aliquem, vel aliquam absque jussu magistri praesumant recipere; quod si fecerint, habitum amittant et pro excommunicatis judicentur, et rei perjurii habeantur, etc.
+
+CAP. LXIII.-- Ne uxoratus vel conjugatus recipiatur.
+Si aliquis vel aliqua matrimonio legali conjuncti sint, nullo modo in ordine recipiatur ad habitum, quia scriptum est: Quod Deus conjunxit homo non separet (Matth. XIX)
+
+CAP. LXIV.-- De electione magistri.
+Postquam vero magister electus fuerit, si forte deprehensus fuerit culpabilis, admoneatur a fratribus usque ter. Et si a pravitate, quod absit! viam suam non converterit, domino papae denuntietur, non cardinali visitatori, quem dominus papa dederit: et poena debita corrigatur, et etiam deponatur, si justum fuerit, et culpa ejus hoc exegerit; et alius, qui dignus sit, in locum ejus subrogetur.
+
+CAP. LXV.-- De camerariis domus.
+Domus nunquam sit sine camerario, qui plenam habeat potestatem administrandi, et providendi in necessariis fratrum, et sororum, et pauperum, tamen cum consilio magistri et capituli singulis Kalendis teneatur reddere rationem. Et si tunc non fecerit, infra spatium octo dierum facere non postponat; quod si non fecerit, dum tamen fuerit requisitum a magistro, et fratribus, in secunda, et quarta et sexta feria in pane et aqua jejunet, quousque id fecerit, et alias secundum providentiam magistri, et fratrum, si in protervia manserit, puniatur. Et si aliqui de capitulo rationem audire renuerint, magister cum residuis audiat. Quod si magistri negligentia vel malitia differretur, idem magister huic poenae subjaceat, ut sexta feria in pane et aqua jejunet. Clerici vero fratres, si voluerint, intersint: ut si minus bene actum viderint, super hoc moneant fratres suos. Et si se neglexerint emendare, proclament ad dominum papam, vel ad cardinalem, qui eis fuerit deputatus.
+
+CAP. LXVI.-- De proventu domus et expensis.
+Volumus etiam ut omnes intratae vel proventus domus reponantur in uno scrinio, in quo sint tres claves: quarum unam teneat magister, et aliam teneat capitulum et aliam camerarius. Ita tamen quod proventus, qui provenerint, primo veniant ad notitiam magistri, et capituli, et camerarii, et ex tunc in scrinio reponantur. Camerarius vero ex isto scrinio recipiat sumptus domus, quos facere debeat: et in ipso scrinio sigillum capituli reponatur.
+
+CAP. LXVIII.-- De infirmaria fratrum.
+Volumus, ut una domus sit pro infirmis fratribus, et unus frater sit infirmarius, qui de eis curam, et sollicitudinem habeat et diligentiam. Qui etiam habeat servientes, quot sibi sunt necessarii, et opportuni, et quod a camerario recipiat viginti libras provenientium in Ascensione Domini; et expensis illis, si plus fuerit opportunum, tribuatur ei a camerario sine contradictione alicujus, usque ad alium annum: et quae sibi pro infirmis petierit, de cellario tribuatur. Et ipse infirmarius ter in anno teneatur reddere rationem.
+
+CAP. LXVIII.-- De contumacia filiarum domorum.
+Si aliqua domus Sancti Spiritus in rebellione contra praeceptum Regulae insurrexerit, per magistrum cum consilio capituli acriter puniatur. Et si obedire noluerit, Romanae Ecclesiae denuntietur, et per ejus mandatum etiam saecularis potentiae auxilium requiratur.
+
+CAP. LXIX.-- De juramentis fratrum.
+Statuimus, ut nullus omnino fratrum juret, nisi pro necessariis causis domus: et tunc praebeat jusjurandum laicus de consensu praeceptoris, clericus vero de mandato cardinalis, qui eis protector fuerit deputatus vel illius, cui ipse cardinalis commiserit vices suas, nec non de conscientia praeceptoris.
+
+CAP. LXX.-- Quomodo fratres sunt suscipiendi.
+Quando aliquis confraternitatem exigit hospitalis Sancti Spiritus, praeceptor cum fratribus habeat consilium, si ipsum recipere voluerint. Si vero illum receperint, veniat coram omnibus fratribus in capitulo, et praeceptor inquirat ab eo, si fraternitatem domus voluerit, si religionem sustinere poterit, si castitatem servaverit, si obedientiam tenuerit, si sine proprio vixerit, in corde suo provideat, antequam professionem faciat. Nam ante, cum in dominio suo fuit, quod voluit, fecit; sed cum in religione erit, in potestate alterius erit. Si vero dixerit: Religionem cum Dei auxilio sustinebo, et praecepta domus voluntarie adimplebo, et dum vixero dominis infirmis servus ero; iterum praeceptor inquirat ab eo, si uxorem habuerit, aut juraverit, et si promissionem cuiquam religioni fecerit, aut debitum habuerit. Si ipse omnia ista negaverit, recipi poterit: si vero dixerit, quod uxorem habuerit, vel juraverit, vel alterius religionis fuerit, seu promissionem fecerit, vel debitum habuerit, non recipiatur, nisi litteras ab episcopo, seu a monasterio suo habuerit, et debitum solverit.
+
+CAP. LXXI.-- De receptione alicujus in probatione.
+Nulli concedatur introitus ordinis nostri nisi unius anni spatio probetur. Regula et constitutiones tunc ei legantur per ordinem, et dicatur ei: Ecce lex, sub qua militare vis. Qui si Regulam et constitutiones domus, et cuncta sibi imperata promiserit observare, et cum humilitate habitum petierit, ei habitus concedatur, et de officio suo semper in domo serviat, et hoc de voluntate praeceptoris, vel illius qui vices ejus gerit; qui si renuerit facere, tanquam elatus et inobediens, dimittatur. Non enim videtur servum se pauperum statuisse, qui quod in saeculo egit pro suis necessariis acquirendis, pro pauperibus ipsis facere dedignetur.
+
+CAP. LXXII.-- Ut nullus nostrum intret alterum ordinem.
+Nullus audeat ordinem nostrum temere transmutare, nisi ad arctiorem vitam ierit, et hoc cum litteris capituli sui faciat. Qui contra fecerit, sciat se esse in sententia excommunicationis.
+
+CAP. LXXIII.-- Ut nullus poenas statutas renuat.
+Si quis fratrum in superbia elevata poenam statutam observare renuerit, duplicetur ei poena: quam si non complerit, coram capitulo moneatur: quod si ad mandatum capituli non fecerit, crux ei auferatur sine voluntate capituli non reddenda. Si autem. cruce sibi ablata, obedientias sibi injunctas observare non vellet, secundum formam privilegii, sicut turbator domus puniatur, et adjungantur ei pro poena quatuordecim dies, quarta et sexta feria in pane et aqua jejunet.
+
+CAP. LXXIV.-- De obedientia.
+Praecipimus in virtute obedientiae fratribus et sororibus nostris obedientiam bonam non solum exhibere magistro; sed praecipimus, ut in bonis obediant sibi ipsis adinvicem fratres, scientes se per hanc obedientiam ituros ad Christum.
+
+CAP. LXXV.-- De forma juramenti, quam magister praestabit.
+Ego N. magister hospitalis Sancti Spiritus, juro et promitto, quod negotia ipsius hospitalis bona fide tractabo: ad honorem Dei et utilitatem ipsius domus: ad sustentationem pauperum et infirmorum, de quibus cum auxilio Dei curam, et diligentiam ego ipse habebo, et ab aliis faciam adhiberi. Eleemosynas et proventus ejusdem hospitalis non convertam in alios usus, nisi ad quos sunt principaliter deputati, videlicet ad sustentationem pauperum et infirmorum hospitum et familiae, de quibus nihil fraudulenter transferam, vel transmittam ad aliam domum, vel aliam quamcunque personam. Possessiones et instrumenta ipsius hospitalis nullo modo distraham, nec aliquo titulo alienabo, inconsulto Romano pontifice, cui ero per omnia obediens et fidelis. Sic Deus me adjuvet, et haec sancta Evangelia.
+
+CAP. LXXVI.-- De puellis retinendis, vel conjugandis.
+Omnibus puellis projectis domui Sancti Spiritus quae ad servitium pauperum remanere desiderant, et vivere sub obedientia, et in castitate, et sine proprio, ad curam pauperum principaliter intendendo, promittunt: concedatur eis panis et aqua domus. Aliae autem maritali conjugio copulentur.
+
+CAP. LXXVII.-- De intercessione pro fratribus.
+Volumus autem, ut si aliquis frater poenas incurrerit, quas eaedem institutiones continent, et ipsas exsolverit, si contigerit ibidem aliquem ex magnatibus interesse, seu religiosos advenire, qui magistro et capitulo preces fundant, ut eidem fratri patienti indulgere dignetur, suorum precaminum interventu, magister et capitulum eum libenter et liberaliter debeant exaudire.
+
+CAP. LXXVIII.-- Quod omnes in communi dormitorio jaceant.
+Volumus, ut nullus fratrum vel sororum seu oblatorum ad cubandum cameram habeat specialem, sed omnes in communi jaceant dormitorio; et camerarius in eodem habeat scrinium juxta lectum, in quo sint sumptus domus: quia thesaurum domus tutius ab omnibus custodiri credimus in communi dormitorio constitutum, quam in camera speciali singulari mancipatum custodiae.
+
+CAP. LXXIX.-- Ut qui habent habitum, praesint.
+Volumus, ut si frater domus, qui habet aliquam balivam et cum eo oblatus steterit; idem frater praesit oblato habitum non habenti.
+
+CAP. LXXX.-- Ut feminae capita fratrum non lavent.
+Capita fratrum feminae non lavent, nec pedes: nec lectos eorum faciant, nec calceamenta eorum extrahant. Similiter nec fratres feminis: sed viri viris, et mulieres serviant mulieribus, nisi causa infirmitatis, et hoc de licentia et mandato magistri.
+
+CAP. LXXXI.-- De fratre percutiente servientem.
+Frater si servientem domus percusserit, vel praeceptor hoc viderit, vel clamorem inde habuerit, poeniteat per septimanam. Si sanguinem fecerit, excepto de naso, per dies 40. Si vero per plagam illam obierit, habitum perdat, et ad dominum papam tendat, et ab ipso poenitentiam accipiat. Postea si litteras domini papae secum attulerit, et misericordiam quaesierit, salva justitia domus, quadraginta dies poenitentiam illo agente recipiatur.
+
+CAP. LXXXII.-- De serviente contra fratrem rixante.
+Serviens si contra fratrem rixatus fuerit, et ipse frater clamorem praeceptori fecerit, serviens per palatium justitiam reddat. Si vero latronem, aut fornicatorem, vel malefactorem vocaverit, et hoc per fratres nequiverit probare, per palatium et claustrum verberetur, et usque ad portam percutiendo ducatur, et a domo projiciatur, et merces sui servitii sibi reddatur.
+
+CAP. LXXXIII.-- De servientibus, si furtum fecerint.
+Servientes si aliquam rem hospitalis, vel panem integrum furati fuerint, aut vendiderint, et pro certo probari poterit, res illae, quas furati fuerint ad collum eorum ligentur et per palatium usque ad portam verberentur; et panem in manibus suis portantes a domo projiciantur, et postea conventio, qua servierint, eis reddatur.
+
+CAP. LXXXIV.-- De fratre transmittendo ad aliam domum.
+Statuimus ut, si frater domus Sancti Spiritus de Urbe, moraturus in aliqua domo filia transmittatur, honorifice recipiatur ibidem: et primus sit ibi post illum, qui praefuerit in eadem domo, nisi propter excessum suum, vel culpam ad illam ecclesiam transmittatur.
+
+CAP. LXXXV.-- De servientibus rixantibus.
+Servientes, si inter se rixati sunt, et clamor ad praeceptorem et fratres pervenerit, rei, qui offensas fecerunt, coram omnibus per hospitale corrigiis, vel virgis fortiter verberentur: quod si injuriosis verbis, vel sanguinolentis verberibus sese offenderint, aut gladiis, vel apidibus, seu cultellis se percusserint, reis, qui per testes fuerint comprobati, haec eis poena inferatur: per claustrum, et hospitale usque portam ducantur nudi, et durissime corrigiis flagellentur: et a domo projiciantur, mercesque eorum retineantur.
+
+CAP. LXXXVI.-- De fratribus recipiendis.
+Volumus, ut nulli tradatur habitus, nec ullus in oblatum vel in probatione recipiatur ibidem, nisi in capitulo generali; praeterquam si necessitas duxerit aliter faciendum, scilicet ut praeter generale capitulum aliquis recipiatur ibidem, et tunc sit de congruentia domini cardinalis.
+
+CAP. LXXXVII.-- De eleemosynis colligendis.
+Pro eleemosynis colligendis fideles et honestae transmittantur personae, quae sobrie vivant, et caste et laudabiliter conserventur, ne inde ordo regularis vilescat et devotio hominum retardetur.
+
+CAP. LXXXVIII.-- Ut nullus extraneus in domo retineatur
+Statuimus, ut nemini ab octo diebus ultra, victus in domo vel extra domum exhibeatur: absque voluntate et consensu praeceptoris et capituli. Ad matutinum vero omnes surgant, quando alii religiosi de Urbe surrexerint.
+
+CAP. LXXXIX.-- De visitatore domus.
+Quoniam domus ipsa Sancti Spiritus de bonis Romanae Ecclesiae dotata est, decrevimus ut semper a domino papa cardinalis petatur, qui ejusdem domus visitator sit et protector.
+
+CAP. XC.-- De his, qui superbiunt pro bonis.
+Si quis propter bona, quae Deus per eum fecit in domo Sancti Spiritus fortasse elatus, communem fratrum vitam renuerit observare, et eam duxerit segregatam quasi sufficienter bene fuerit operatus, et quod, suis meritis exigentibus, deceat ipsum mensa refectorio, et dormitorio, et singulis aliis specialibus praepotiri, acriter puniatur, adjunctis septem diebus in pane et aqua sedens in terra sine mappula. Quia taliter se habentem, hypocritam credimus, et pomposum, et quod bona, quae egit, non pro animae suae salute fecerit, sed ad quamdam inanem gloriam, aut ad tempus serviens, in tempore requiescere meditans, morem secutus illius, de quo dicitur in Evangelio: Anima mea, habes multa bona reposita in annos plurimos, requiesce, comede, et bibe (Luc. XII).
+
+CAP. XCI.-- De his qui transeunt alicubi, quam ubi praeceptor mittit.
+Praecipue hoc vitium radicitus amputandum est de ordine nostro ne quis praesumat transire de loco ad locum sine jussione magistri, quod si fecerit secundum arbitrium magistri puniatur. Nec praesumat quisquam referre foris, quaecunque viderit, aut audierit in capitulo, quia plurima destructio est: quod si quis praesumpserit, septem diebus poeniteat, et quarta et sexta feria in pane et aqua jejunet.
+
+CAP. XCII.-- Ut nullus aliquid inhonestum de domo dicat.
+Nullus autem aliquid inhonestum de domo, vel de fratre suo alicui extra domum revelare praesumat, nisi domino papae, vel fratribus ejus, seu visitatori. Quod si de illo aliquid compertum est, habitum amittat; si autem amplius id fecerit, cum magistri consilio acriter puniatur.
+
+CAP. XCIII.-- De vicario magistri eligendo.
+Magister ordinis nostri si habuerit quoquam eundi necessitatem, convocet congregationem ipse, et dicat, quo iturus est, et de fratribus eligatur unus a magistro et a capitulo, qui usque ad reditum suum regat domum. Ipse vero qui eligitur, non sit multum edax, non elatus, non turbulentus, non injuriosus, non tardus, non prodigus; sed timens Deum, animam suam custodiat, sitque memor verbi Apostolici: Qui bene administraverit, gradum bonum sibi acquirit (I Tim. III). Infirmorum, infantium, hospitum, et pauperum cum omni sollicitudine curam gerat: sciens sine dubio, quia pro his omnibus in die judicii rationem est redditurus. Et si quis ex eis, aliqua inflatus superbia, repertus fuerit reprehensibilis, correctus semel, et iterum, atque tertio, si se emendare noluerit, deponatur, et alter in loco ejus, qui dignus sit, succedat.
+
+CAP. XCIV.-- Ut nullus habitum dimittat.
+Si quis habitum spontanea voluntate dimiserit sine consilio capituli, absque certa poena non recipiatur, et disciplina: scilicet secunda, et quarta et sexta feria. Vel si jejunium ante tempus solverit, vel se a communi mensa subtraxerit, absque licentia praeceptoris; vel qui biberit usque ad ebrietatem, septem diebus poeniteat, et quarta et sexta feria sit in pane et aqua. Postea a praeceptore corripiatur, et si in ebrietate sua perseverare voluerit, et noluerit emendare, ad domum mittatur, in qua vini abundantia non existat, ne inebriari valeat.
+
+CAP. XCV.-- De balivis domus.
+Volumus, ut omnes balivae domus distribuantur de voluntate praeceptoris, et totius capituli stabiliantur et auferantur. Et si quis fratrum vel sororum contra consilium ire tentaverit: vel cum indignatione a mensa surrexerit, quatuordecim diebus poeniteat.
+
+CAP. XCVI.-- De comminationibus et indulgentiis.
+Nullus fratrum alteri faciat comminari nec etiam preces pro se procuret offerri, ut balivam habeat, vel retineat, vel aliquod indulgeatur sibi contra regularia instituta. Qui contra haec fecerit, ab omni fratrum societate projiciatur.
+
+CAP. XCVII.-- Ut eidem Regulae sorores subjaceant.
+Quidquid in Regula constitutum est, de fratribus et sororibus intelligitur, ut eidem Regulae subjaceant, quia indignum satis videretur, si in domo Sancti Spiritus acceptio vel correctio fratrum vel sororum duobus modis fieret; unde ordinatum est, ut sicut sub una Regula vivimus, ita sub eisdem judiciis Regulae subjecti esse debemus.
+
+CAP. XCVIII.-- De his qui sine jussione praeceptoris junguntur excommunicato vel inobedienti.
+Si quis frater vel soror praesumpserit sine jussione praeceptoris, vel qui vices suas gerit, fratribus vel sororibus excommunicatis, vel inobedientibus se jungere, aut loqui cum eo, vel mandatum eis dirigere, similem patiatur excommunicationis poenam vel vindictam.
+
+CAP. XCIX.-- De fratre inobediente.
+Si praeceptor fratri praeceperit, ut aliquam domum Sancti Spiritus, vel aliquod negotium domus faciat, et ipse facere noluerit, sit in septena; si secundo renuerit, similiter sit; si vero per obedientiam praeceperit, et obedire ille frater noluerit, habitum, et balivam, quam habuerit, amittat. Si quarto per obedientiam praeceperit, sit in carentia, et in carcere ponatur, comedens panem et aquam. Si vero misericordiam petierit: habitus sibi reddatur, et ad domum aliam mittatur.
+
+CAP. C.-- De fratre in villa jacente.
+Frater si in villa jacere praesumpserit, levitate corporis sui, sive timore magistri, vel quoquo modo, et domus propinqua fuerit, et in ea jacere noluerit, habitum amittat. Et si a domo recesserit, et postea reversus fuerit, et misericordiam petierit, recipiatur, et quantum temporis foris exstitit, tantum in loco extraneo permanebit. Termino expleto, magister cum fratribus habitum sibi reddant; et si eis videbitur expedire, per quadraginta dies poeniteat, et quarta et sexta feria in pane et aqua jejunet.
+
+CAP. CI.-- De fratre fallente.
+Frater si monetam in villa, aut manticam, aut bisaccias suas commendaverit, et magister de pecunia, et rebus aliis inquisierit: et ille pannos suos in villa commendasse dixerit, per quadraginta dies poeniteat. Si vero pecuniam, et bisaccias suas in villa commendasse negaverit, et postea bisacciae inventae fuerint, furti judicio condemnetur; in dispositione tamen magistri ponatur.
+
+CAP. CII.-- De fratre fugiente.
+Frater si monetam in domo, vel in hospitali acceperit, vel aliquid aliud, et ad saecularia fugerit, et pecuniam illam vivendo luxuriose, vel aliter dissipaverit, et postea ad emendationem venerit, in providentia magistri fratrum ponatur, si fuerit recipiendus. Et si eum receperint, habitum ei reddere debent, et quadraginta dies poeniteat.
+
+CAP. CIII.-- De fratre superbo et irreligioso.
+Frater si rem hospitalis, vel domus comitibus, baronibus, et saecularibus quibuslibet mutuaverit, vel plegariam fecerit, vel sub pignore pro aliquo saeculari rem hospitalis posuerit, habitum amittat, et a domo projiciatur. Si frater noviter sit receptus, a magistro per habitum conjuretur, si non a fratribus praeceptum istud audivit; si autem se non audisse dixerit, per quadraginta dies poeniteat.
+
+CAP. CIV.-- De fratribus post completorium rixantibus.
+Fratres, si post completorium rixati fuerint, vel in dormitorio verba otiosa inter se dixerint, primo debent corripi; si secundo cessare noluerint, septenae judicio puniantur; si tertio iniquis sermonibus litigaverint, videlicet manutenentes reges et principes, puniantur per quadraginta dies. Nam solent hae invidiae frequenter destructionem generare, unde tanquam ruina domus, debet a fratribus evitari. Inde Apostolus: Corrumpunt enim bonos mores colloquia mala (I Cor. XV).
+
+CAP. CV.-- De capitulo in Pentecosten.
+Ad capitulum venientes domus, in qua debet teneri, mundetur. Fratres in ea coadunentur, et prior ecclesiae cum processione clericorum diacono revestito, et subdiacono, ad capitulum veniant, et incipiant: Veni creator Spiritus, ter flectentes genua cum fratribus, et tertia vice cantato versu Veni Creator: cantetur totus hymnus. Quo finito, diaconus Evangelium legat: Cum venerit Filius hominis in sede majestatis suae. Evangelio dicto, processio ad ecclesiam redeat, fratribus in capitulo remanentibus. Tunc prior, aut frater alius, vel aliquis alius sermonem faciat. Sermone dicto, magister fratribus institutiones et Regulam S. Spiritus ostendat; eleemosynas postea vivorum et defunctorum, quas secum detulerunt, requirat; deinde fratribus jubeat, ut unusquisque balivam suam reddat. His peractis, proprium a fratribus exigat: postea domorum continentiam, et balivarum, a fratribus inquirat; si habent animalia, debitum, aut victualia; et si sint omnia prospera et taliter poterit cognoscere, quis deterius aut melius tractaverit domum, aut officium sive balivam sibi commissam. Et si magister de aliquo fratre voluerit clamorem facere, vel aliquis frater adversus fratrem, fratres audiant clamorem, similiter et responsionem. Clamoribus auditis, fratres juxta clamorem justum judicium judicent; et reus, qui per testes probatus fuerit, secundum tenorem Regulae adimpleat justitiam domus. His dictis, magister cum quibusdam fratribus eligat hospitalarium, priorem in ecclesia, camerarium in domo, et thesaurarium sive de illis, qui ante fuerant, sive de aliis, qui praecepta domus, et negotia fideliter possint adimplere. His itaque electis, ad capitulum redeant, magister et capitulum dicant, et magister eis balivas assignet, osculum pacis tribuens. Similiter praeceptores discreti sint in caeteris domibus ordinati. Iterum magister si de aliquo facto vel domus negotio fratrum consilium interrogaverit, fratres prout melius poterunt consilium praebeant: omnes autem esgardi, et electiones in providentia magistri et ejus discretione ponantur.
+
+Capitulo expleto, prior ecclesiae pro pace preces, pro domino papa, pro regibus, pro fratribus, pro benefactoribus nostris, etc. cum orationibus dicat. Orationibus dictis, fratres magistrum osculantes, et inter se osculum pacis dantes: ad balivas suas cito remeantes, animalia et res domus, quae intus et foris sunt, bene custodiant; vineas fodere, terras excolere, et seminare faciant, nam qui defecerit in semine, non gaudebit in messe. Si fortiter laboraverint, ea quae necessaria fuerint, sufficienter habebunt. Ipse Dominus tribuat omnibus fratribus et sororibus, qui per omnia vivit, et regnat, etc.
+
+Fratribus ejusdem ordinis B. Cyrillus generalis praeceptor.
+Vivendi Regulam, veteribus a Patribus nobis traditam vidistis, dilectissimi fratres. Quam quisque nostrum non precario, clam, aut vi, professus est. Suapte enim sponte nos ipsos obtulimus, et sancto Dei Spiritui, beatae Virgini et dominis infirmis tradidimus, ut perpetui essemus eorum servi. Castitatem, paupertatem, obedientiam, et humilem patientiam actu libero, nemine cogente, jurejurando, solemni voto, sumus polliciti. Ad quorum observationem nedum ex Regula ipsa, et veterum Patrum institutis, sed observantia mandatorum Dei, et Domini nostri Jesu Christi exemplo, ante emissam professionem tenebamur, et modo magis atque magis tenemur. Etenim ea omnia ipse Deus noster fecit, et docuit, ut nos ejus actione instruemur.
+
+Castitatem, quam cum Dei adjutorio servare promisimus, nos ipse Dei Filius servare praecepit, et docuit, matrem castam, et virginem sibi elegit; virgo ipse permansit, et virginum Sponsus dici voluit, nec baptizari nisi a virgine, nec matrem nisi virgini commendare sibi placuit. Visus supra montem Sion est Agnus, et vox citharizantium ante sedem Dei audita est, neque poterant dicere canticum nisi empti de terra, et qui cum mulieribus non sunt coinquinati; qui Agnum sequebantur, quocunque ibat (Apoc. XIV). Haec et similia castitatem servantibus a Domino proponuntur.
+
+Paupertatem etiam ipse Dominus noster est amplexus. Etenim, dum nascitur, in praesepe reclinatur: dum vivit, locum, in quo reclinet caput, non habet: dum moritur, nudus cruci affigitur. Non habet, unde vectigal solvat: fatigatus ex itinere aquam a muliere sibi dari petit. Pauperes sibi socios assumpsit; pauperibus beatitudinem promittit. Paupertatem itaque libenti animo sectemur, fratres, nam Domino relictus est pauper, et nobis orphanis erit adjutor.
+
+Humilitatem quoque ipse Dominus servando, servandam nobis ostendit. Ex Nazareth, humili Galilaeae vico nascitur; ex matre humili, cujus Dominus humilitatem respexerat: humiles dilexit, cum humilibus est versatus, humilitatem docuit. Discite a me, inquit, quia mitis sum et humilis (Matth. XI). Ad quam factis ostendendam Jerusalem iturus, non equum sed asinum ascendit; discipulorum pedes lavat, et in humilitatis actu inclinato capite decedit. Ejus itaque documenta imitemur, quia suscipit orationem humilium (Psal. CI), et humilia respicit, et alta a longe cognoscit (Psal. CXXXVII), et humilium semper ei placuit deprecatio, ut nos in tempore tribulationis exaudiat.
+
+Patientiam et mansuetudinem docuit, cum a Judaeis verbis et factis injurias patienter sustinuit: nunc ipsum Samaritanum, daemonium habentem, nunc in Belzebub expellentem daemones, nunc blasphemum, nunc cum peccatoribus manducantem appellando, aliisque verborum contumeliis afficiebant; factis insuper, ejecerunt eum extra civitatem, sustulerunt lapides, ut in eum jacerent; captum et ligatum, seductorem appellant; principes eum illudunt; unus ministrorum dat alapam, nunc alba, nunc purpurea veste indutum ostendunt: flagellis caedunt; praeponunt ei latronem Barabbam: morte tandem turpissima eum damnant; nec propterea a patientia et mansuetudine recedit; proditorem amicum nominans, pro persecutoribus exorans, et cum malediceretur, non maledicebat, cum pateretur, non comminabatur (I Petr. II). Nos itaque ipsius Domini nostri exemplum imitantes non malum pro malo inter nos, nec maledictum pro maledicto reddentes, vincamus in bono malum. Et injuriis affecti recurramus ad Dominum, qui facit misericordiam et judicium omnibus injuriam patientibus (Psal. CXLV), et fratribus nostris dimittamus ut nostra Dominus nobis dimittat.
+
+Obedientiam insuper, majoribus ipse Dominus exhibendam praecipit, prout ipsi Patri, et parentibus exhibuit; et descendit cum eis et venit Nazareth, et erat subditus illis (Luc. II); cibumque dicebat esse suum, voluntatem ejus, qui eum miserat perficere (Joan. IV), et voluntatem non suam, sed Patris quaerere (Matth. XII): et humilians seipsum factus obediens (Philipp. II), non mea, inquit, voluntas, sed tua fiat (Luc. XXII). Discere atque debemus exinde postquam solemni voto nos Deo tradidimus, velle, et nolle, apud nos non remansisse, sed apud eos, qui nobis praesunt; caveamusque, ne per inobedientiam incidamus in sententiam illam: Quia vocavi et renuistis, extendi manum meam, et non fuit qui aspiceret; ego quoque in interitu vestro ridebo, et subsannabo, cum vobis, quod timebatis, advenerit (Prov. I).
+
+Paupertas, patientia, obedientia, mansuetudo, et his similia, militiae nostrae fructus sunt, quos assecuti sunt Christi servi. Esurimus et sitimus, dicebat Paulus, et nudi sumus, et colaphis caedimur, et instabiles sumus, et laboramus operantes manibus nostris; maledicimur et benedicimus, persecutionem patimur, et sustinemus; blasphemamur, et obsecramus, tanquam purgamenta mundi facti sumus (I Cor. IV). Oportet ergo per patientiam currere ad propositum nobis certamen, inspieientes in auctorem fidei Jesum. Qui proposito sibi gaudio, sustinuit crucem, confusione contempta. Ea itaque omnia, ut scimus, fratres, nemine cogente, solemni voto Deo spopondimus, et ad aratrum manum misimus. Si quis nostrum aspicere retro voluerit, regno Dei non erit aptus. Minime putandum est ex eo, quod castitatem et obedientiam voverimus, susceperimusque alia regularia vota, nos beatam vitam posse consequi; si virtutibus mandatorum Dei juncta non fuerint. Quorum quidem mandatorum finis charitas est, ordinis et religionis nostrae praecipuum fundamentum: in ea igitur nostra omnia fiant opera, in ea firmati, in ea crescamus; mater est optima, fovet infirmos, exercet provectos, arguit inquietos, diversis diversa benigne exhibens; et ut filios omnes diligit. Est enim dum arguit, mitis; cum blanditur, simplex: pie saevit, sine dolore mulcet, patienter irascitur, humiliter indignatur, adversa tolerat, prospera temperat, omnia suffert, omnia credit, omnia sperat, omnia sustinet. Ipsam si amplectamur, fratres, nutriet inter nos concordiam, servabit unionem, ac in Spiritu sancto congregati, Deus pacis, et consolationis erit nobiscum, qui sit benedictus in saecula, Amen.
+
+Sequitur modo Regula S. P. Augustini, quam etiam profitentur, nempe:
+
+Ante omnia, fratres charissimi, diligatur Deus, etc.

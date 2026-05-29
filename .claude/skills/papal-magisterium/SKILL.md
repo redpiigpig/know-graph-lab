@@ -64,6 +64,25 @@ description: 教宗訓導文獻對照工具（/encyclicals）— 4 世紀 Damasu
 > - LA：絕大多數 placeholder（Wikisource PL/54 Leo I 全是空白 stub；只 Sermon 39/40 從 thelatinlibrary.com 有完整 LA）；ZH 全 placeholder
 > - 5c-leo-i 從 1 篇變 15 篇 marquee（Tome of Leo + 7 letters + 7 sermons）
 >
+> E. Gregory I Schaff Vol 12 抽 9 篇 marquee（`_papal_gregory_i_schaff_extract.py`）：
+> - **EN 全部從 CCEL Schaff NPNF2 Vol 12 JSONL** chunks 220-232
+> - **Liber Regulae Pastoralis 591** ★★★（合併 chunks 220-224 = Preface + 4 Parts, 381 KB EN）— 西方教會牧靈神學奠基
+> - **Registrum Epistolarum Book I-VIII**（chunks 225-232，每冊一 doc，60-150 KB EN each）— 590-598 教宗書信全集 Schaff 精選版
+> - 6c-gregory-i 從 1 篇變 10 篇（Epistola ad Mellitum + 9 新）
+>
+> F. Innocent III round 2 — Wikisource 5 篇 marquee（`_papal_innocent_iii_batch.py`）：
+> - **Sicut Ecclesiarum Praelatis 1199**（教廷對主教監督權）
+> - **De Miseria Humane Conditionis 1195** ★★（樞機時代神學論文，14-15c 700+ 抄本流傳）
+> - **Mysteria Evangelicae Legis et Sacramenti Eucharistiae 1205** ★（變質說神學前奏，408 KB LA！）
+> - **Regula Ordinis S. Spiritus de Saxia 1198**（中世紀最大規模醫療修會章程，82 KB LA）
+> - **Bulla de Canonizatione S. Cunegundis 1200**（封聖權集中實例）
+> - 13c-innocent-iii 從 3 篇變 8 篇
+>
+> G. Migne PL 54 LA 大規模 backfill — **archive.org djvu.txt 已下載**（5.4 MB at `c:/tmp/pl54/leo_pl54.txt`，源檔 archive.org item `sanctileonismagn01leoi`），含 Leo I 全部 Sermo/Epistola Latin。
+> 但 OCR 質量差（兩欄混排 + 字元錯誤如 `,` → `f`），需逐篇 deinterleave 與清理。延後做（規劃用 Gemini Vision OCR 重抽特定頁面，或寫 column-splitter 處理 djvu.txt）。
+>
+> 系統總計：~675（前批）+ 9（Gregory I）+ 5（Innocent III round 2）= **~689 篇 papal-doc**（vue-tsc 過）
+>
 > 2026-05-28（最深夜）：**user 訂正三區命名 → 全面 hsscol 批次 ingest**
 >
 > **三區命名（user 訂正）**：

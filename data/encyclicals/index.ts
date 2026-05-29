@@ -849,7 +849,49 @@ import { sermon82OnPeterAndPaul441 } from './5c-leo-i/sermon-82-on-peter-and-pau
 
 import { sermon95OnBeatitudes } from './5c-leo-i/sermon-95-on-beatitudes'
 
+import { liberRegulaePastoralis591 } from './6c-gregory-i/liber-regulae-pastoralis-591'
+
+import { epistolaeBookI590 } from './6c-gregory-i/epistolae-book-i-590'
+
+import { epistolaeBookIi591 } from './6c-gregory-i/epistolae-book-ii-591'
+
+import { epistolaeBookIii592 } from './6c-gregory-i/epistolae-book-iii-592'
+
+import { epistolaeBookIv593 } from './6c-gregory-i/epistolae-book-iv-593'
+
+import { epistolaeBookV594 } from './6c-gregory-i/epistolae-book-v-594'
+
+import { epistolaeBookVi595 } from './6c-gregory-i/epistolae-book-vi-595'
+
+import { epistolaeBookVii596 } from './6c-gregory-i/epistolae-book-vii-596'
+
+import { epistolaeBookViii597 } from './6c-gregory-i/epistolae-book-viii-597'
+
+import { sicutEcclesiarumPraelatis1199 } from './13c-innocent-iii/sicut-ecclesiarum-praelatis-1199'
+
+import { deMiseriaHumaneConditionis1195 } from './13c-innocent-iii/de-miseria-humane-conditionis-1195'
+
+import { mysteriaEvangelicaeLegis1205 } from './13c-innocent-iii/mysteria-evangelicae-legis-1205'
+
+import { regulaOrdinisSSpiritus1198 } from './13c-innocent-iii/regula-ordinis-s-spiritus-1198'
+
+import { bullaCanonizationeSCunegundis1200 } from './13c-innocent-iii/bulla-canonizatione-s-cunegundis-1200'
+
 export const ALL_DOCUMENTS: PapalDocument[] = [
+  bullaCanonizationeSCunegundis1200,
+  regulaOrdinisSSpiritus1198,
+  mysteriaEvangelicaeLegis1205,
+  deMiseriaHumaneConditionis1195,
+  sicutEcclesiarumPraelatis1199,
+  epistolaeBookViii597,
+  epistolaeBookVii596,
+  epistolaeBookVi595,
+  epistolaeBookV594,
+  epistolaeBookIv593,
+  epistolaeBookIii592,
+  epistolaeBookIi591,
+  epistolaeBookI590,
+  liberRegulaePastoralis591,
   sermon95OnBeatitudes,
   sermon82OnPeterAndPaul441,
   sermon71OnResurrectionI443,
