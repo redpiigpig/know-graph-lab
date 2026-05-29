@@ -32,6 +32,31 @@ description: 教宗訓導文獻對照工具（/encyclicals）— 4 世紀 Damasu
 >   - **maximum-illud-1919**（原 P397 PDF 為馬相伯 1947 掃描影像 → hsscol html 取代 placeholder）
 >   - casti-connubii-1930 / divini-redemptoris-1937 / mysterium-fidei-1965 / mater-et-magistra-1961 / ecclesiam-suam-1964 / dives-in-misericordia-1980 / laborem-exercens-1981 / slavorum-apostoli-1985 / dominum-et-vivificantem-1986 / ut-unum-sint-1995
 >
+> 2026-05-29（初）：**15-19c 缺漏教宗 audit + 4-12c 中世紀 round 1-2 開工**
+>
+> A. 15-19c gap audit 報告：22 位教宗無 doc。Wikisource 可救者 6 篇：
+> - 15c Pius II *Execrabilis* 1460（譴 conciliarism）／Innocent VIII *Summis Desiderantes Affectibus* 1484（巫術 bull）
+> - 16c Julius II *Cum Tam Divino* 1505（反 simony 教宗選舉）／Paul IV *Cum Nimis Absurdum* 1555（羅馬猶太區）／*Cum Ex Apostolatus Officio* 1559（異端教宗）／Gregory XIII *Inter Gravissimas* 1582（Gregorian 曆 ★★★）
+> - 含 4 個新教宗資料夾（pius-ii / innocent-viii / julius-ii / paul-iv）+ textLoader patch
+> - 剩 16 位 popes（Martin V / Hadrian VI / Clement VII / Urban VIII / Paul V 等）Wikisource 皆無 LA，需 DCO OCR 或 Migne PL 延後
+>
+> B. 4-12c 中世紀 round 1（`_papal_medieval_round1.py`）：
+> - 5c **Gelasius I *Decretum Gelasianum* 494** ★★（聖經正典 + 反異端禁書清單，15 KB LA）
+> - 13c **Innocent III *Venerabilem* 1202** ★（translatio imperii decretal，8 KB LA）
+> - 11c Gregory VII *Dictatus Papae* 1075 LA backfill（既有 EN，補 LA 2 KB）
+> - 5c Leo I *Tome of Leo* 449 LA backfill（既有 EN，補 LA `Tomus_ad_Flavianum` 18 KB ★★★）
+> - 含 2 個新教宗資料夾（5c-gelasius-i / 13c-innocent-iii）+ textLoader patch
+>
+> C. 4-12c round 2（`_papal_medieval_round2.py`）：
+> - 6c **Gregory I *Epistola ad Mellitum* 601** ★（致 Mellitus 論 inculturation — 異教廟改聖堂指引）
+> - 13c **Innocent III *Cum Ex Injuncto* 1199**（早期反 Waldensian decretal）
+> - 13c **Innocent III *Privilegium Paupertatis* 1216**（聖嘉勒「貧窮特權」）
+> - 含 1 個新教宗資料夾（6c-gregory-i）
+>
+> 系統總計：~650（既有）+ 6（15-19c gap）+ 2（中世紀 round 1）+ 3（round 2）+ 2 LA backfill = **~661 篇 papal-doc**（vue-tsc 過）
+>
+> Wikisource 對 4-12c 仍非常稀疏（早期教宗多以 Migne PL 為主）。下輪需轉戰 PL／Schaff Vol 12-13 EN 抽 Leo I 173 letter + 96 sermon，並對 Damasus / Siricius / Hormisdas / Honorius I / Nicholas I / Urban II 等做 PL OCR。
+>
 > 2026-05-28（最深夜）：**user 訂正三區命名 → 全面 hsscol 批次 ingest**
 >
 > **三區命名（user 訂正）**：

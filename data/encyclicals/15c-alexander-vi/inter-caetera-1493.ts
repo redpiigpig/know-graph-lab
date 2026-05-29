@@ -30,6 +30,7 @@ export const interCaetera1493: PapalDocument = {
       textKey: 'inter-caetera-1493-latin',
       source: 'https://la.wikisource.org/wiki/Inter_caetera_(quarto_nonas_Maii_1493)',
 
+    
     },
   ],
   displayMode: 'simple',

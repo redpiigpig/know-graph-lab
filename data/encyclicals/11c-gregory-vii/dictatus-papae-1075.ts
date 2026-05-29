@@ -26,9 +26,10 @@ export const dictatusPapae1075: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org)',
       textKey: 'dictatus-papae-1075-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Dictatus_Papae',
+
     },
   ],
   displayMode: 'paragraph-aligned',

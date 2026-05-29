@@ -26,9 +26,10 @@ export const tomeOfLeo449: PapalDocument = {
     },
     {
       lang: 'lat',
-      label: '拉丁原文（待補）',
+      label: '拉丁原文 (la.wikisource.org)',
       textKey: 'tome-of-leo-449-latin',
-      placeholder: true,
+      source: 'https://la.wikisource.org/wiki/Tomus_ad_Flavianum',
+
     },
   ],
   displayMode: 'paragraph-aligned',

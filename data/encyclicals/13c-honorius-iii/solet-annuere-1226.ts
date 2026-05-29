@@ -30,6 +30,7 @@ export const soletAnnuere1226: PapalDocument = {
       textKey: 'solet-annuere-1226-latin',
       source: 'https://la.wikisource.org/wiki/Solet_Annuere',
 
+    
     },
   ],
   displayMode: 'simple',

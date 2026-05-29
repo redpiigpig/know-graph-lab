@@ -811,7 +811,22 @@ import { cumExApostolatusOfficio1559 } from './16c-paul-iv/cum-ex-apostolatus-of
 
 import { interGravissimas1582 } from './16c-gregory-xiii/inter-gravissimas-1582'
 
+import { decretumGelasianum494 } from './5c-gelasius-i/decretum-gelasianum-494'
+
+import { venerabilem1202 } from './13c-innocent-iii/venerabilem-1202'
+
+import { epistolaAdMellitum601 } from './6c-gregory-i/epistola-ad-mellitum-601'
+
+import { cumExInjuncto1199 } from './13c-innocent-iii/cum-ex-injuncto-1199'
+
+import { privilegiumPaupertatis1216 } from './13c-innocent-iii/privilegium-paupertatis-1216'
+
 export const ALL_DOCUMENTS: PapalDocument[] = [
+  privilegiumPaupertatis1216,
+  cumExInjuncto1199,
+  epistolaAdMellitum601,
+  venerabilem1202,
+  decretumGelasianum494,
   interGravissimas1582,
   cumExApostolatusOfficio1559,
   cumNimisAbsurdum1555,

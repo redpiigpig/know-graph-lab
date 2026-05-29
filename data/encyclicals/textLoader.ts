@@ -284,6 +284,21 @@ const leoILoaders = import.meta.glob(
   { query: '?raw', import: 'default' },
 ) as Record<string, () => Promise<string>>
 
+const gelasiusILoaders = import.meta.glob(
+  './5c-gelasius-i/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const gregoryILoaders = import.meta.glob(
+  './6c-gregory-i/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
+const innocentIiiLoaders = import.meta.glob(
+  './13c-innocent-iii/*.txt',
+  { query: '?raw', import: 'default' },
+) as Record<string, () => Promise<string>>
+
 /** popeSlug → loaders；新增教宗時加一條 */
 const POPE_LOADERS: Record<string, Record<string, () => Promise<string>>> = {
   'francis': francisLoaders,
@@ -338,7 +353,10 @@ const POPE_LOADERS: Record<string, Record<string, () => Promise<string>>> = {
   'gregory-x': gregoryXLoaders,
   'gregory-ix': gregoryIxLoaders,
   'honorius-iii': honoriusIiiLoaders,
+  'innocent-iii': innocentIiiLoaders,
   'gregory-vii': gregoryViiLoaders,
+  'gregory-i': gregoryILoaders,
+  'gelasius-i': gelasiusILoaders,
   'leo-i': leoILoaders,
 }
 
@@ -396,7 +414,10 @@ const POPE_FOLDER: Record<string, string> = {
   'gregory-x': './13c-gregory-x',
   'gregory-ix': './13c-gregory-ix',
   'honorius-iii': './13c-honorius-iii',
+  'innocent-iii': './13c-innocent-iii',
   'gregory-vii': './11c-gregory-vii',
+  'gregory-i': './6c-gregory-i',
+  'gelasius-i': './5c-gelasius-i',
   'leo-i': './5c-leo-i',
 }
 

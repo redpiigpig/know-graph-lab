@@ -30,6 +30,7 @@ export const romanusPontifex1455: PapalDocument = {
       textKey: 'romanus-pontifex-1455-latin',
       source: 'https://la.wikisource.org/wiki/Romanus_Pontifex_in_excelso',
 
+    
     },
   ],
   displayMode: 'simple',
