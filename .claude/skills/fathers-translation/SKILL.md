@@ -430,80 +430,144 @@ Vol 9:  349 → 92   (30 page + 62 other)
 | ✅ 5 | ANF Vol 5 (Hippolytus + Cyprian + Caius + Novatian) | 已精修 | Hippolytus Refutation 深層巢狀。validate 0 FAIL · 0 WARN |
 | ✅ 6 | ANF Vol 6 (Gregory Thaumaturgus + Dionysius + Africanus + Anatolius/Minor + Archelaus + Methodius + Arnobius) | 已精修 | 多東方教父。validate 0 FAIL · 0 WARN |
 | ✅ 7 | ANF Vol 7 (Lactantius + Asterius + Victorinus + Didache + 使徒憲令 + 2 Clement + 早期禮儀) | 已精修 | title_en 走英文 NCX label 不走 anf07.* 前綴 → 用 boundary-based v2 修。validate 0 FAIL · 0 WARN |
-| 🔄 8 | ANF Vol 8 (Twelve Patriarchs + Excerpts + Pseudo-Clementine + NT Apocrypha + Decretals + 早期敘利亞文獻) | **翻譯中** | ebook `d09946ab-154b-4a97-853f-751cbb346221`；log `scripts/logs/translate_vol8_2026-05-29.log` |
+| ✅ 8 | ANF Vol 8 (Twelve Patriarchs + Excerpts + Pseudo-Clementine + NT Apocrypha + Decretals + 早期敘利亞文獻) | 已精修 | dual-state bug (1633→1238)、EN_PARENT_TO_ZH 收 133 page-vol、D1 251 chunks (112 page)、D2 247 parent、glossary +40/+28、validate 0 FAIL · 0 WARN |
 | ✅ 9 | ANF Vol 9 (彼得福音 + 狄阿特撒龍 + Apocalypses + Visio Pauli + Apocryphal Acts) | 已精修 | dual-state bug (497→349)、45 unique vols、D1 D2 都套。validate 0 FAIL · 1 WARN |
-| 10 | ANF Vol 10 (Bibliography + General Index) | 粗譯（小，4 chunks）| |
-| 11 | NPNF1 Vol 1 (Augustine Confessions) | 粗譯 | |
-| 12 | NPNF2 Vol 4 (Athanasius) | 粗譯 | |
+| 10 | ANF Vol 10 (Bibliography + General Index) | 粗譯（小，4 chunks）| 索引/書目；先看是否值得精修 |
+| 11 | NPNF1 Vol 1 (Augustine Confessions + City of God) | 粗譯 | 第一卷 NPNF — 觀察 anf*.html → npnf*.html prefix 是否走同套路 |
+| 12 | NPNF2 Vol 4 (Athanasius) | 粗譯 | 第一卷 NPNF2 |
 | 13-38 | NPNF1 Vol 2-14 / NPNF2 Vol 1-3 + 5-14 + ACCS 待補卷 | 粗譯 | 重大用戶優先順序排定 |
 
 ---
 
-## 🚧 下個 session 接手清單（2026-05-29 18:00 留）
+## 2026-05-29 譯名決策（拉丁/希臘/亞美尼亞/敘利亞四傳統分流）
 
-當前 turn 主要完成：Vol 9 全套（dual-state/PREFIX/T1/glossary/REFINED_IDS）、D2 parent_volume backfill (Vol 2-9, 4018 chunks)、D1 consolidate_letters (Vol 2-9 半數 chunks 合進 page)、SKILL.md 更新。**下個 session 起手要做這些**：
+apply_translation_decisions_20260529.py 已套到 DB + Vol 1-9 chunks。**之後新譯卷必須遵循此標準**：
 
-### 立即做（Vol 8 接手）
+| 傳統 | 原則 | 代表性對應 |
+|---|---|---|
+| 拉丁 (Roman Catholic) | Clemens/Gregorius `-us` 字尾保留古典漢語譯名 | **羅馬的克勉**（Clemens, ≠ Klēmēs）／**額我略**（去掉「大」前綴）|
+| 希臘東方教父 | 保留 `-os/-ios` 多音節，避免拉丁化字尾干擾 | **亞歷山卓的革利免**（Κλήμης）／**拿先斯的格列高里**（「里」非「理」）／**亞歷山卓的區利羅**（≠ 西里爾）／**凱撒利亞的巴西流**（≠ 大巴西略；巴西略 → 巴西流）|
+| 亞美尼亞 | 凸顯子音結尾 (`r`)，不套希臘/拉丁尾 | **啟蒙者格里高爾**（Grigor Lusavorich）|
+| 敘利亞 | 還原閃米特喉音/塞音/閉音節，拒希臘/希伯來化 | **敘利亞的厄弗冷**（Aphrem）／**尼尼微的伊沙克**（≠ 以撒）／**波斯賢士阿弗拉哈特**（亞→阿）／**他提安**（學術慣譯保留）|
 
-Vol 8 (`d09946ab-154b-4a97-853f-751cbb346221`) 上個 session 已翻完 +
-watchdog 已跑 Phase 4。下一步：
+### 同名分流（重要）
+
+- **革利免 vs 克勉**：
+  - 羅馬的克勉（Clemens, 拉丁）→ Vol 1（1st/2nd Clement）、Vol 7（2 Clement）、Vol 8（Pseudo-Clementine 偽克勉文集 + Two Epistles 論貞潔書信）、Vol 9（Epistles of Clement）
+  - 亞歷山卓的革利免（Κλήμης, 希臘）→ Vol 2（《教師》《雜文集》《富者得救》《勸勉希臘人辭》)；Vol 8 狄奧多托殘篇也是亞歷山卓的
+- **格列高里/額我略**：教宗 Gregory I → 額我略；其他 Gregory（Naz/Nyssa/Palamas/Sinai/Thaumaturgus）→ 一律「格列高里」（「里」非「理」）
+- **巴西流 vs 巴西略**：Basil the Great → 凱撒利亞的巴西流；歷史上任何 Basil(eios) → 巴西流。**禁用「巴西略」**
+
+### 新譯卷起手 checklist
+
+翻譯前先 `/translation-glossary` 頁面查 5 個 tab 對應，特別注意：
+1. 若該卷含 Pseudo-Clementine / Apocrypha → 確認 Roman Clement 用「克勉」
+2. 若含 Cappadocian Fathers (Basil/Gregory Naz/Gregory Nyssa) → 「巴西流／格列高里」
+3. 若含 Cyril of Alex. → 「區利羅」不是「西里爾」
+4. 若含 Syriac 教父 → 確認 Aphrahat 用「阿弗拉哈特」、Isaac of Nineveh 用「伊沙克」
+
+`sweep_book_quality.TERM_FIXES_ANF_COMMON` 可加 cross-vol baseline 規則，新卷翻完一律 `sweep --only-t8` 套一遍收歛變體。
+
+---
+
+## 🚧 下個 session 接手清單（2026-05-29 晚 留）
+
+**當前狀態**：ANF Vol 1-9 全部精修上架 ✓。Vol 10-12 起手。
+
+### 立即做（Vol 10-12 起手）
 
 ```bash
-EBID=d09946ab-154b-4a97-853f-751cbb346221
+# ── Vol 10：ANF Vol 10 (Bibliography + General Index, 4 chunks 小) ──
+# 先看是否值得精修（純索引/書目可能不用 D1 consolidate_letters）
+EBID_VOL10=<查 ebooks 表>
+PYTHONIOENCODING=utf-8 python -c "
+import os, requests
+from dotenv import load_dotenv
+from pathlib import Path
+load_dotenv(Path('.env'))
+URL = os.environ['SUPABASE_URL']; KEY = os.environ['SUPABASE_SERVICE_ROLE_KEY']
+r = requests.get(f'{URL}/rest/v1/ebooks?select=id,title&title=ilike.*ANF Vol 10*',
+                 headers={'apikey':KEY,'Authorization':f'Bearer {KEY}'})
+print(r.json())
+"
 
-# 1. 檢查 dual-state bug（仿 Vol 9）
+# ── Vol 11：NPNF1 Vol 1 (Augustine Confessions + City of God) ──
+# 第一卷 NPNF — title_en 是 npnf*.html 還是英文 NCX label？決定走 PREFIX vs boundary
+# Augustine 名稱統一：奥古斯丁／聖奧古斯丁／希坡的奧古斯丁（user 先決定）
+
+# ── Vol 12：NPNF2 Vol 4 (Athanasius) ──
+# 亞他那修為主 — 確認譯名（亞他那修 vs 阿塔那修）
+```
+
+**新卷標準流程**（適用 Vol 10-12 + 後續）：
+
+```bash
+EBID=<ebook_id>
+
+# 0. 備份原 JSONL (dual-state 保險)
+mv "G:/我的雲端硬碟/資料/電子書/_chunks/$EBID.jsonl" \
+   "G:/我的雲端硬碟/資料/電子書/_chunks/$EBID.en.bak.jsonl"
+
+# 1. Translate (gemini→haiku 自動切換)
+nohup python -u scripts/translate_ebook_to_zh.py $EBID --engine gemini --resume \
+   > scripts/logs/translate_$EBID.log 2>&1 &
+# 等 "ebooks row updated" marker
+
+# 2. Phase 4
+PYTHONIOENCODING=utf-8 python scripts/polish_translated_book.py $EBID
+PYTHONIOENCODING=utf-8 python scripts/consolidate_by_ncx.py $EBID
+PYTHONIOENCODING=utf-8 python scripts/sweep_book_quality.py $EBID
+PYTHONIOENCODING=utf-8 python scripts/multi_h3_splitter.py $EBID
+
+# 3. dual-state 檢查（zh vs en 比例，多卷會有 200-400 個英文重檔）
 PYTHONIOENCODING=utf-8 python -c "
 import json, re
 from pathlib import Path
-p = Path('G:/我的雲端硬碟/資料/電子書/_chunks/$EBID.jsonl')
+p = Path(f'G:/我的雲端硬碟/資料/電子書/_chunks/$EBID.jsonl')
 rows = [json.loads(l) for l in p.read_text(encoding='utf-8').splitlines() if l.strip()]
-en = zh = 0
+en = zh = 0; en_idxs = []
 for r in rows:
     c = r.get('content','') or ''
     if not c.strip(): continue
     zhr = len(re.findall(r'[一-鿿]', c)) / max(len(c),1)
     if zhr > 0.15: zh += 1
-    else: en += 1
-print(f'zh: {zh} / en: {en} (en>0 chunks 就有 dual-state，照 _fix_vol9_volumes.py 套路寫 _fix_vol8.py 刪英文重檔)')
+    else: en += 1; en_idxs.append(r['chunk_index'])
+print(f'zh:{zh} en:{en}; en 範圍 {min(en_idxs) if en_idxs else None}..{max(en_idxs) if en_idxs else None}')
 "
 
-# 2. Volume backfill
-PYTHONIOENCODING=utf-8 python scripts/_fix_vol8_volumes.py
+# 4. 客製 _fix_volN_volumes.py（從 NCX 抽 PREFIX_TO_VOL + EN_PARENT_TO_ZH + dual-state drop）
+#    模板：_fix_vol8_volumes.py（含 dual-state stage 0）／ _fix_vol7_volumes_v2.py（boundary）
 
-# 3. consolidate_letters
+# 5. consolidate_letters（D1）
 PYTHONIOENCODING=utf-8 python scripts/consolidate_letters.py $EBID
 
-# 4. parent_volume backfill (Vol 8 vols 加進 backfill_parent_volume.py 後)
-# 看 Vol 8 出來的 unique vols 是否要補規則：
-PYTHONIOENCODING=utf-8 python -c "
-import json
-from collections import Counter
-from pathlib import Path
-p = Path('G:/我的雲端硬碟/資料/電子書/_chunks/$EBID.jsonl')
-rows = [json.loads(l) for l in p.read_text(encoding='utf-8').splitlines() if l.strip()]
-for v, c in Counter(r.get('volume') for r in rows).most_common():
-    if v: print(f'  {c:4d}  {v}')
-"
-# 補規則到 backfill_parent_volume.py 然後跑
+# 6. parent_volume backfill（D2，先在 backfill_parent_volume.py 加新卷的教父 PARENT_RULES）
 PYTHONIOENCODING=utf-8 python scripts/backfill_parent_volume.py $EBID
 
-# 5. T1 enhanced
+# 7. T1 enhanced + validate
 PYTHONIOENCODING=utf-8 python scripts/sweep_book_quality.py $EBID --only-t1
 PYTHONIOENCODING=utf-8 python scripts/validate_book_structure.py $EBID
 
-# 6. glossary backfill (write seed_glossary_anf_vol8.py based on _vol9 template)
-# 12 patriarchs, Pseudo-Clementine, Apostolic Constitutions, NT apocrypha 等
+# 8. seed_glossary_anf_volN.py（按 _vol8/9 模板，遵循 2026-05-29 譯名決策）
+PYTHONIOENCODING=utf-8 python scripts/seed_glossary_anf_volN.py
 
-# 7. REFINED_IDS 加 d09946ab-... 進 pages/fathers/index.vue
+# 9. REFINED_IDS 加 ebook_id 到 pages/fathers/index.vue + ZH_TITLES 卡片中文書名
 
-# 8. commit + push
+# 10. commit + push
 ```
+
+### reader 已驗證的四個 footnote 行為（不需再動）
+
+- ✅ 短章 10/page 合併（D1，已確認 Vol 5 居普良論述集 22 頁 = 1-10, 11-20, ... 191-194）
+- ✅ 註釋集中末尾（reader `renderMarkdown` 收 `———` 後的 `(N)` 到 `<section class="footnotes">`）
+- ✅ 上下雙向連結（`[^N]` `<sup id="fnref-{c}-{N}">` ↔ `(N)` `<p id="fn-{c}-{N}">` + `↩` back-link + `:target` 黃底高亮）
+- ✅ 註釋字體較小（section.footnotes `font-size: 12.5px`，正文 16px = 78%；sup 0.75em；label 11px）
 
 ### 後續可選
 
-- consolidate_letters 整合進 `_vol89_watchdog.py` 之類自動化流程（或退役 watchdog）
-- 索引 chunks 改用 `chapter_type='index'`（reader 現用 `isIndexEntry()` regex，可動，但 type 判斷更穩定）
-- Reader breadcrumb 顯示 `<教父><作品> 第N-M章` 而非只有 vol（如「居普良《論述集》第1-10章」）
+- consolidate_letters 整合進 watchdog 自動化（目前手動跑）
+- 索引 chunks 改 `chapter_type='index'`（reader 現用 `isIndexEntry()` regex，OK 但 type 更穩）
+- Reader breadcrumb 顯示「居普良《論述集》第1-10章」而非「<vol> 第N-M章」
 
 ---
 
