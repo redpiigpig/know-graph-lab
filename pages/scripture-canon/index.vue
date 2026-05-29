@@ -74,8 +74,8 @@ const tools = [
     path: '/apocrypha',
     icon: '📜',
     title: '典外文獻搜索',
-    desc: 'OT 偽典 / 第二正典、NT 偽典、死海古卷、Nag Hammadi 諾斯底文獻全文檢索',
-    enabled: false,
+    desc: 'OT 偽典 / 第二正典、NT 偽典、死海古卷、Nag Hammadi 諾斯底文獻全文檢索；中文（基督教典外文獻 10 卷）／英文／原文三欄對照',
+    enabled: true,
   },
   {
     path: '/scripture',
