@@ -294,6 +294,46 @@ def _segment_divider_page(content: str, pn: int) -> list[dict] | None:
     lat_preambles, lat_by_dh = by_dh_in_block(lat_block)
     zh_preambles, zh_by_dh = by_dh_in_block(zh_block)
 
+    # ── Paragraph-aligned zh fallback ──────────────────────────────
+    # Denzinger's right-column 中譯 does NOT prefix each DH paragraph with
+    # a DH number — only the left-column Latin does. So `by_dh_in_block`
+    # never finds DH markers in zh_block and dumps the WHOLE zh column
+    # into zh_preambles, leaving every zh_by_dh empty. The downstream
+    # commentary fold then pours the entire page's 中譯 into the LAST
+    # DH chunk on the page, leaving the other DHs blank.
+    #
+    # Fix: when lat has DH markers and zh has none, split zh_block by
+    # blank lines (paragraphs) and align 1:1 with the ORDERED Latin DHs.
+    # This is heuristic — if the paragraph count mismatches the DH count
+    # we fall back to the old preamble-collect behaviour for safety.
+    if lat_by_dh and not zh_by_dh and zh_block.strip():
+        zh_paragraphs = [
+            p.strip() for p in re.split(r"\n{2,}", zh_block) if p.strip()
+        ]
+        ordered_dhs = sorted(lat_by_dh.keys())
+        if zh_paragraphs and len(zh_paragraphs) == len(ordered_dhs):
+            # Perfect 1:1 alignment.
+            zh_by_dh = dict(zip(ordered_dhs, zh_paragraphs))
+            zh_preambles = []
+        elif zh_paragraphs and len(zh_paragraphs) > len(ordered_dhs) >= 1:
+            # Extra zh paragraphs at the tail: zip the first N, fold the
+            # rest into the LAST DH's content (still better than dumping
+            # everything into one bucket).
+            n = len(ordered_dhs)
+            zh_by_dh = dict(zip(ordered_dhs, zh_paragraphs[:n]))
+            tail = "\n\n".join(zh_paragraphs[n:])
+            zh_by_dh[ordered_dhs[-1]] = (zh_by_dh[ordered_dhs[-1]] + "\n\n" + tail).strip()
+            zh_preambles = []
+        elif zh_paragraphs and 0 < len(zh_paragraphs) < len(ordered_dhs):
+            # Fewer zh paragraphs than DHs — likely the page covers an
+            # entry whose translation only appears for some of the DHs.
+            # Assign in order; the unmatched DHs stay zh-empty (book
+            # limitation, not OCR loss).
+            for i, dh in enumerate(ordered_dhs):
+                if i < len(zh_paragraphs):
+                    zh_by_dh[dh] = zh_paragraphs[i]
+            zh_preambles = []
+
     out: list[dict] = []
 
     # Preambles → header (if matches section pattern) or commentary
