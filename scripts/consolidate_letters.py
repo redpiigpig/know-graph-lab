@@ -62,6 +62,7 @@ ALL_BOOKS = [
     ("Vol 5", "0e08c662-540b-4186-b250-9bca0cfe1002"),
     ("Vol 6", "dffaae40-e088-41c1-ab7f-9b96f9249661"),
     ("Vol 7", "75d8aae0-7431-4be9-baee-c57d26599653"),
+    ("Vol 8", "d09946ab-154b-4a97-853f-751cbb346221"),
     ("Vol 9", "72cb2f94-da86-4e16-bbbd-4cf3391031df"),
 ]
 

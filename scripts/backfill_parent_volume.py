@@ -46,6 +46,7 @@ ALL_REFINED = [
     ("Vol 5", "0e08c662-540b-4186-b250-9bca0cfe1002"),
     ("Vol 6", "dffaae40-e088-41c1-ab7f-9b96f9249661"),
     ("Vol 7", "75d8aae0-7431-4be9-baee-c57d26599653"),
+    ("Vol 8", "d09946ab-154b-4a97-853f-751cbb346221"),
     ("Vol 9", "72cb2f94-da86-4e16-bbbd-4cf3391031df"),
 ]
 
@@ -145,6 +146,16 @@ PARENT_RULES: list[tuple[str, str]] = [
     ("使徒憲令",           "(初代禮儀典籍)"),
     ("早期禮儀",           "(初代禮儀典籍)"),
     ("尼西亞信經",         "(初代禮儀典籍)"),
+
+    # ── Vol 8 — Apocrypha / Pseudo-Clementine / Apostolic Constitutions ─
+    ("十二族長遺訓",       "(舊約偽典)"),
+    ("狄奧多托殘篇",       "亞歷山卓的革利免"),  # Excerpta ex Theodoto preserved by Clement of Alex
+    ("論貞潔書信二篇",     "羅馬的革利免"),       # attributed to Roman Clement (probably 3c)
+    ("偽革利免文集",       "(偽典)"),             # Pseudo-Clementine Recognitions + Homilies
+    ("新約偽典",           "(新約偽典)"),
+    ("教令集",             "(教令集)"),
+    ("厄德薩史記與其他敘利亞古文獻", "(敘利亞古文獻)"),
+    ("二三世紀殘篇",       "(殘篇集)"),
 
     # ── Vol 9 — Apocrypha (apocryphal works are listed by genre) ───────
     ("塔提安",             "他提安"),
