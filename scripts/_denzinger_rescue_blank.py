@@ -191,8 +191,11 @@ def main() -> int:
             continue
         zh_existing = (c.get("content") or "").strip()
         lat_existing = (c.get("source_text") or "").strip()
-        # Only target zh-empty entries that have meaningful lat.
-        if zh_existing or len(lat_existing) < 200:
+        # Target every zh-empty entry that has at least some Latin source.
+        # (Earlier threshold of 200 was a noise filter that incorrectly
+        # skipped short entries like DH 1101-1103 and DH 3190 whose
+        # Latin segments are only ~150-190 chars.)
+        if zh_existing or len(lat_existing) < 50:
             continue
         page_list = c.get("page_numbers") or []
         if not page_list:
