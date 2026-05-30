@@ -120,6 +120,9 @@ const REFINED_IDS = new Set([
   '72cb2f94-da86-4e16-bbbd-4cf3391031df',  // ANF Vol 9 (Gospel of Peter / Diatessaron / Apocalypses / Visio Pauli / Apocryphal Acts)
   '9edb7c37-4231-412b-83bd-78f3f793cc0a',  // NPNF1 Vol 1 (Augustine — Confessions + Letters)
   'e01917ab-7429-41a0-9859-eddad413ef60',  // NPNF2 Vol 4 (Athanasius — Select Works and Letters)
+  '1eb50be9-34ac-4ce3-874d-1280975851fc',  // NPNF1 Vol 2 (Augustine — City of God + On Christian Doctrine)
+  'd7f66759-3fa9-4633-abde-87003cdbcc06',  // NPNF1 Vol 3 (Augustine — On the Holy Trinity + Doctrinal/Moral Treatises)
+  '56ef3d65-c559-41f8-8d68-ba6c13e47876',  // NPNF1 Vol 4 (Augustine — Anti-Manichaean + Anti-Donatist)
 ])
 
 const series = [
