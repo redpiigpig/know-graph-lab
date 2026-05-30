@@ -1222,7 +1222,7 @@ CREATE INDEX fathers_region ON fathers (region_primary);
 
 - ✓ **Schaff 38 卷英文** — `神學/教父著作/Schaff - ANF (10 卷)/`, `Schaff - NPNF1 (14 卷)/`, `Schaff - NPNF2 (14 卷)/`
 - ✓ **中譯個別教父** ~25 本 — `神學/(各處)`：
-  - 屈梭多模《金口若望雕像講道詞選集》
+  - 金口若望《雕像講道詞選集》
   - 安波羅修《論基督教信仰》《論責任》
   - 亞他那修《論道成肉身》
   - 俄利根《駁瑟蘇斯》

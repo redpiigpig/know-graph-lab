@@ -11,7 +11,7 @@ description: 教父全集（Schaff ANF 10 卷 + NPNF1 14 卷 + NPNF2 14 卷 + AC
 
 對應 source：
 - **Schaff ANF**（Ante-Nicene Fathers）10 卷 — ~AD 100-325 教父
-- **Schaff NPNF1**（Nicene & Post-Nicene Fathers Series 1）14 卷 — 主要奧古斯丁 + 屈梭多模
+- **Schaff NPNF1**（Nicene & Post-Nicene Fathers Series 1）14 卷 — 主要奧古斯丁 + 金口若望
 - **Schaff NPNF2**（Series 2）14 卷 — 東方教父（亞他那修／巴西流／貴格利…）
 - **ACCS**（IVP Ancient Christian Commentary on Scripture）27 卷
 
@@ -533,22 +533,30 @@ ANF Vol 1-9（前次）+ **本輪：**
 
 ### 佇列（接 18 之後）
 - 19-21: NPNF1 V8 詩篇講解 2accee20-5f9d-4099-9ce9-3dda0726a74b /
-  屈梭多模 V9 論司祭職 76df31fe-e732-4aa6-88c2-d650a09fb688 /
+  金口若望 V9 論司祭職 76df31fe-e732-4aa6-88c2-d650a09fb688 /
   V10 馬太講道 0d160c29-8d61-4dbc-8f8e-d47fee694eab
-- 22-24: 屈梭多模 V11 4d73c561 / V12 bf2dd1b2 / V13 9192cb77
-- 25-27: 屈梭多模 V14 91c7023f / NPNF2 V1 優西比烏 91ff3a5e / V2 蘇格拉底 29782dd6
+- 22-24: 金口若望 V11 4d73c561 / V12 bf2dd1b2 / V13 9192cb77
+- 25-27: 金口若望 V14 91c7023f / NPNF2 V1 優西比烏 91ff3a5e / V2 蘇格拉底 29782dd6
 - 28-30: NPNF2 V3 狄奧多雷 a7e5956e / V5 尼撒貴格利 9b94e7c1 / V6 耶柔米 d229a6d4
 - 31-33: NPNF2 V7 區利羅+拿先斯 af2cf8a7 / V8 巴西流 3c48472c / V9 希拉里 709f43f9
 - 34-36: NPNF2 V10 安波羅修 fd8a09e7 / V11 24c53ede / V12 大良 02a08547
 - 37-38: NPNF2 V13 90b55879 / V14 七大公會議 63853a97 →（再 ACCS 待補卷）
 
-⚠️ 屈梭多模卷是「講道集」結構（多篇 homily），fix_npnf_tree 的 depth1/depth2 是否
+⚠️ 金口若望卷是「講道集」結構（多篇 homily），fix_npnf_tree 的 depth1/depth2 是否
    切得乾淨要先 dry-run 看；可能 depth2=每篇講道（無 book 層）→ volume=該卷著作即可。
 完整即時狀態與 IDs 另存 `c:\tmp\fathers_overnight_state.md`。
 
 ### 譯名鎖定（本輪已套，後續沿用）
 奧古斯丁（希波）·亞他那修（非阿塔那修）·亞流（非阿里烏）。Cappadocian/Cyril 見
 2026-05-29 譯名決策節。新卷翻完 `sweep --only-t8` 收斂變體。
+
+**🔴 John Chrysostom → 金口若望（2026-05-30 user 拍板，詞庫 name_recommended）**
+全專案統一：/fathers ZH_TITLES、TERM_FIXES 一律 **金口若望**，**禁用「屈梭多模」**
+（新教音譯）、「聖金口約安」（東正）、「金口約翰／克里索斯托」等變體。
+`sweep_book_quality.TERM_FIXES_NPNF1_CHRYSOSTOM` 收斂全部變體 → 金口若望。
+- 參考中譯（B 層校對用，**不照搬、不入庫**，遵「參考現成中譯本校準」節）：
+  《論司祭職》(De Sacerdotio) 有中譯本可比對語意/術語；其餘講道集網上零星中譯，
+  WebFetch 對應段落當黃金參考即可，版權內容絕不存 DB/R2。
 
 **新卷標準流程**（generic 參考）：
 

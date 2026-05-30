@@ -415,6 +415,18 @@ TERM_FIXES_NPNF2_VOL_4 = dict(TERM_FIXES_ANF_COMMON, **{
     "亞歷山卓的狄奧尼修斯": "亞歷山卓的狄奧尼修",  # 詞庫 name_recommended
 })
 
+# ── NPNF1 Chrysostom (Vol 9-14) ─────────────────────────────────────────────
+# 譯名鎖定（user 2026-05-30）：John Chrysostom → 金口若望（詞庫 name_recommended）。
+# 收斂新教音譯「屈梭多模」、東正「聖金口約安」、各式「金口約翰／克里索斯托」等變體。
+TERM_FIXES_NPNF1_CHRYSOSTOM = dict(TERM_FIXES_ANF_COMMON, **{
+    "聖若望‧屈梭多模": "金口若望", "約翰‧屈梭多模": "金口若望", "約翰·屈梭多模": "金口若望",
+    "若望‧屈梭多模": "金口若望", "屈梭多模": "金口若望",
+    "金口聖若望": "金口若望", "金口約翰": "金口若望", "聖金口約安": "金口若望",
+    "約翰‧克里索斯通": "金口若望", "約翰·克里索斯通": "金口若望",
+    "克里索斯托姆": "金口若望", "克里索斯托": "金口若望", "屈索斯敦": "金口若望",
+    "狄奧多羅": "狄奧多若",          # Theodore (of Mopsuestia, addressee)
+})
+
 # 所有 ANF vol 都吃 ANF_COMMON baseline；per-vol specific 覆蓋 baseline。
 TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "c98d358d-7066-4691-a896-b7232707b0db": {**TERM_FIXES_ANF_COMMON, **TERM_FIXES_ANF_VOL_1},  # ANF Vol 1
@@ -431,6 +443,10 @@ TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "56ef3d65-c559-41f8-8d68-ba6c13e47876": TERM_FIXES_NPNF1_VOL_1,  # NPNF1 Vol 4 Augustine (Anti-Manich/Donatist)
     "df789501-5620-4833-a0a0-6e8f1a031bb1": TERM_FIXES_NPNF1_VOL_1,  # NPNF1 Vol 5 Augustine (Anti-Pelagian)
     "7bff8a13-3c35-43d4-9b4c-b7c3c9f81076": TERM_FIXES_NPNF1_VOL_1,  # NPNF1 Vol 6 Augustine (Sermon Mount + Gospel Harmony)
+    "0069932a-7b27-4c06-9874-b74d51ad564e": TERM_FIXES_NPNF1_VOL_1,  # NPNF1 Vol 7 Augustine (Tractates on John + 1 John + Soliloquies)
+    "2accee20-5f9d-4099-9ce9-3dda0726a74b": TERM_FIXES_NPNF1_VOL_1,  # NPNF1 Vol 8 Augustine (Expositions on the Psalms)
+    "76df31fe-e732-4aa6-88c2-d650a09fb688": TERM_FIXES_NPNF1_CHRYSOSTOM,  # NPNF1 Vol 9 Chrysostom (On the Priesthood + Ascetic Treatises)
+    "0d160c29-8d61-4dbc-8f8e-d47fee694eab": TERM_FIXES_NPNF1_CHRYSOSTOM,  # NPNF1 Vol 10 Chrysostom (Homilies on Matthew)
 }
 
 

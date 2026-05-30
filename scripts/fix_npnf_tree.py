@@ -98,6 +98,49 @@ REGISTRY: dict[str, dict[str, str]] = {
         "Preface.": "__FRONT__", "Introductory Essay. St. Augustin as an Exegete.": "__FRONT__",
         "Indexes of Subjects": "__INDEX__", "Indexes": "__INDEX__",
     },
+    # Vol 18 NPNF1-07 — Augustine: Tractates on John, Homilies on 1 John, Soliloquies
+    "0069932a-7b27-4c06-9874-b74d51ad564e": {
+        "Lectures or Tractates on the Gospel According to St. John.": "約翰福音講道集",
+        "Ten Homilies on the First Epistle of John.": "約翰一書十講道",
+        "Two Books of Soliloquies.": "獨語錄",
+        "About This Book": "__FRONT__", "Title Page.": "__FRONT__", "Preface.": "__FRONT__",
+        "Indexes": "__INDEX__",
+    },
+    # Vol 19 NPNF1-08 — Augustine: Expositions on the Book of Psalms
+    "2accee20-5f9d-4099-9ce9-3dda0726a74b": {
+        "Expositions on the Book of Psalms.": "詩篇講解",
+        "About This Book": "__FRONT__", "Title Page.": "__FRONT__",
+        "Index of Subjects": "__INDEX__", "Indexes": "__INDEX__",
+    },
+    # Vol 20 NPNF1-09 — Chrysostom (金口若望): On the Priesthood + ascetic treatises/homilies/letters
+    "76df31fe-e732-4aa6-88c2-d650a09fb688": {
+        "Treatise Concerning the Christian Priesthood.": "論司祭職",
+        "An Exhortation to Theodore After His Fall.": "勸勉墮落後的狄奧多若",
+        "Letter to a Young Widow.": "致年輕寡婦書",
+        "Homilies on S. Ignatius and S. Babylas.": "論聖依納爵與聖巴比拉講道",
+        "Homily Concerning Lowliness of Mind.": "論心靈謙卑講道",
+        "Instructions to Catechumens.": "慕道者教理講授",
+        "Three Homilies Concerning the Power of Demons.": "論魔鬼的權勢三講",
+        "Homily on the Passage (Matt. xxvi. 19), 'Father If It Be Possible Let This Cup Pass from Me,' Etc., and Against Marcionists and Manichæans.": "論「父啊，倘若可行，求祢叫這杯離開我」並駁馬吉安派與摩尼派講道",
+        "Homily on the Paralytic Let Down Through the Roof: and Concerning the Equality of the Divine Father and the Son.": "論從屋頂縋下的癱子並論聖父聖子同等講道",
+        "Homily to Those Who Had Not Attended the Assembly: and on the Apostolic Saying, 'If Thine Enemy Hunger, Feed Him, Etc. (Rom. xii. 20), and Concerning Resentment of Injuries.'": "致未赴聚會者並論「仇敵若餓了就給他吃」並論寬恕傷害講道",
+        "Homily Against Publishing the Errors of the Brethren, and Uttering Imprecations upon Enemies.": "駁宣揚弟兄過錯與咒詛仇敵講道",
+        "Two Homilies on Eutropius.": "論歐特羅皮烏斯二講",
+        "A Treatise to Prove that No One Can Harm the Man Who Does Not Injure Himself.": "論無人能傷害不自害之人",
+        "Letters of St. Chrysostom to Olympias.": "致奧林匹亞書信集",
+        "Correspondence of St. Chrysostom with the Bishop of Rome.": "與羅馬主教的通信",
+        "The Homilies on the Statues to the People of Antioch.": "致安提阿人論雕像講道集",
+        "About This Book": "__FRONT__", "Title Page.": "__FRONT__", "Preface.": "__FRONT__",
+        "Prolegomena.": "__FRONT__",
+        "Indexes of Subjects": "__INDEX__", "Indexes": "__INDEX__",
+    },
+    # Vol 21 NPNF1-10 — Chrysostom (金口若望): Homilies on the Gospel of Matthew
+    "0d160c29-8d61-4dbc-8f8e-d47fee694eab": {
+        "The Homilies of St. John Chrysostom.": "馬太福音講道集",
+        "About This Book": "__FRONT__", "Title Page.": "__FRONT__",
+        "Preface to the American Edition.": "__FRONT__",
+        "Index of Subjects": "__INDEX__", "Indexes": "__INDEX__",
+    },
 }
 
 
