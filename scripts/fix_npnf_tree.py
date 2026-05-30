@@ -64,6 +64,40 @@ REGISTRY: dict[str, dict[str, str]] = {
         "Editor's Preface.": "__FRONT__", "Contents": "__FRONT__",
         "Subject Indexes": "__INDEX__", "Indexes": "__INDEX__",
     },
+    # Vol 16 NPNF1-05 — Augustine anti-Pelagian writings
+    "df789501-5620-4833-a0a0-6e8f1a031bb1": {
+        "A Treatise on the Merits and Forgiveness of Sins, and on the Baptism of Infants.": "論罪的功過與赦免及嬰兒的洗禮",
+        "A Treatise on the Spirit and the Letter.": "論聖靈與字句",
+        "A Treatise on Nature and Grace.": "論自然與恩典",
+        "A Treatise Concerning Man’s Perfection in Righteousness.": "論人在義中的完全",
+        "A Treatise Concerning Man's Perfection in Righteousness.": "論人在義中的完全",
+        "A Work on the Proceedings of Pelagius.": "論伯拉糾案的審理",
+        "A Treatise on the Grace of Christ, and on Original Sin.": "論基督的恩典與原罪",
+        "On Marriage and Concupiscence.": "論婚姻與情慾",
+        "A Treatise on the Soul and its Origin.": "論靈魂及其起源",
+        "A Treatise Against Two Letters of the Pelagians.": "駁伯拉糾派的兩封書信",
+        "A Treatise on Grace and Free Will.": "論恩典與自由意志",
+        "A Treatise on Rebuke and Grace.": "論責備與恩典",
+        "A Treatise on the Predestination of the Saints.": "論聖徒的預定",
+        "Introductory Essay on Augustin and the Pelagian Controversy.": "__FRONT__",
+        "About This Book": "__FRONT__", "Title Page.": "__FRONT__", "Credits.": "__FRONT__",
+        "Contents": "__FRONT__", "Preface to the American Edition.": "__FRONT__",
+        "Dedication of Volume I. Of the Edinburgh Edition.": "__FRONT__",
+        "Dedication of Volume II. Of the Edinburgh Edition.": "__FRONT__",
+        "Preface to Volume I. Of the Edinburgh Edition.": "__FRONT__",
+        "Preface to Volume II. Of the Edinburgh Edition.": "__FRONT__",
+        "Index of Subjects": "__INDEX__", "Indexes": "__INDEX__",
+    },
+    # Vol 17 NPNF1-06 — Augustine: Sermon on the Mount, Harmony of Gospels, NT Sermons
+    "7bff8a13-3c35-43d4-9b4c-b7c3c9f81076": {
+        "Our Lord’s Sermon on the Mount.": "主的登山寶訓",
+        "Our Lord's Sermon on the Mount.": "主的登山寶訓",
+        "The Harmony of the Gospels.": "四福音合參",
+        "Sermons on Selected Lessons of the New Testament.": "新約經課選講",
+        "About This Book": "__FRONT__", "Title Page.": "__FRONT__", "Contents": "__FRONT__",
+        "Preface.": "__FRONT__", "Introductory Essay. St. Augustin as an Exegete.": "__FRONT__",
+        "Indexes of Subjects": "__INDEX__", "Indexes": "__INDEX__",
+    },
 }
 
 

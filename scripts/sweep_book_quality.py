@@ -429,6 +429,8 @@ TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "1eb50be9-34ac-4ce3-874d-1280975851fc": TERM_FIXES_NPNF1_VOL_1,  # NPNF1 Vol 2 Augustine (City of God)
     "d7f66759-3fa9-4633-abde-87003cdbcc06": TERM_FIXES_NPNF1_VOL_1,  # NPNF1 Vol 3 Augustine (Holy Trinity)
     "56ef3d65-c559-41f8-8d68-ba6c13e47876": TERM_FIXES_NPNF1_VOL_1,  # NPNF1 Vol 4 Augustine (Anti-Manich/Donatist)
+    "df789501-5620-4833-a0a0-6e8f1a031bb1": TERM_FIXES_NPNF1_VOL_1,  # NPNF1 Vol 5 Augustine (Anti-Pelagian)
+    "7bff8a13-3c35-43d4-9b4c-b7c3c9f81076": TERM_FIXES_NPNF1_VOL_1,  # NPNF1 Vol 6 Augustine (Sermon Mount + Gospel Harmony)
 }
 
 
