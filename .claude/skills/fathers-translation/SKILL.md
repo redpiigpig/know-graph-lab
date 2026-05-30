@@ -453,10 +453,14 @@ Vol 9:  349 → 92   (30 page + 62 other)
 | ✅ 7 | ANF Vol 7 (Lactantius + Asterius + Victorinus + Didache + 使徒憲令 + 2 Clement + 早期禮儀) | 已精修 | title_en 走英文 NCX label 不走 anf07.* 前綴 → 用 boundary-based v2 修。validate 0 FAIL · 0 WARN |
 | ✅ 8 | ANF Vol 8 (Twelve Patriarchs + Excerpts + Pseudo-Clementine + NT Apocrypha + Decretals + 早期敘利亞文獻) | 已精修 | dual-state bug (1633→1238)、EN_PARENT_TO_ZH 收 133 page-vol、D1 251 chunks (112 page)、D2 247 parent、glossary +40/+28、validate 0 FAIL · 0 WARN |
 | ✅ 9 | ANF Vol 9 (彼得福音 + 狄阿特撒龍 + Apocalypses + Visio Pauli + Apocryphal Acts) | 已精修 | dual-state bug (497→349)、45 unique vols、D1 D2 都套。validate 0 FAIL · 1 WARN |
-| 10 | ANF Vol 10 (Bibliography + General Index) | 粗譯（小，4 chunks）| 索引/書目；先看是否值得精修 |
-| 11 | NPNF1 Vol 1 (Augustine Confessions + City of God) | 粗譯 | 第一卷 NPNF — 觀察 anf*.html → npnf*.html prefix 是否走同套路 |
-| 12 | NPNF2 Vol 4 (Athanasius) | 粗譯 | 第一卷 NPNF2 |
-| 13-38 | NPNF1 Vol 2-14 / NPNF2 Vol 1-3 + 5-14 + ACCS 待補卷 | 粗譯 | 重大用戶優先順序排定 |
+| ✅ 10 | ANF Vol 10 (Bibliography + General Index) | minimal | CCEL EPUB 無正文，僅 header 譯，不標精修 |
+| ✅ 11 | NPNF1 Vol 1 (Augustine Confessions + Letters) | 已精修 | consolidate_by_ncx + 中文 relabel（懺悔錄卷一-十三/書信）|
+| ✅ 12 | NPNF2 Vol 4 (Athanasius) | 已精修 | prefix-vol 22 著作 + consolidate_letters，762 TERM 收斂 |
+| ✅ 13 | NPNF1 Vol 2 (City of God + On Christian Doctrine) | 已精修 | **fix_npnf_tree.py** 首用：上帝之城 22 卷 |
+| ✅ 14 | NPNF1 Vol 3 (Holy Trinity + Doctrinal/Moral Treatises) | 已精修 | fix_npnf_tree |
+| ✅ 15 | NPNF1 Vol 4 (Anti-Manichaean + Anti-Donatist) | 已精修 | fix_npnf_tree |
+| 🔄 16-18 | NPNF1 Vol 5-7 (Anti-Pelagian / Sermon Mount / Homilies John) | 翻譯中 | 見接手清單 |
+| 19-38 | NPNF1 Vol 8 + Chrysostom Vol 9-14 / NPNF2 Vol 1-3,5-14 + ACCS 待補卷 | 粗譯 | 佇列見接手清單 |
 
 ---
 
@@ -491,36 +495,62 @@ apply_translation_decisions_20260529.py 已套到 DB + Vol 1-9 chunks。**之後
 
 ---
 
-## 🚧 下個 session 接手清單（2026-05-29 晚 留）
+## 🚧 下個 session 接手清單（2026-05-30 凌晨 留 — 整晚批次循環進行中）
 
-**當前狀態**：ANF Vol 1-9 全部精修上架 ✓。Vol 10-12 起手。
+**使用者指令**：開放式循環 — 每批 3 卷 translate → 精修 → commit，跑完自動接下一批
+（16-18、19-21…）沿教父全集順序一直跑，直到 Gemini 配額耗盡或全集完成。
+已授權整晚自動 + auto-push，不需停下來問。
 
-### 立即做（Vol 10-12 起手）
+### ✅ 已完成精修上架（commit+push）
+ANF Vol 1-9（前次）+ **本輪：**
+- Vol 10 ANF V10（書目/索引，CCEL 無正文僅 minimal header，**不標精修**）
+- Vol 11 NPNF1 V1 奧古斯丁《懺悔錄》+書信
+- Vol 12 NPNF2 V4 亞他那修全集（22 著作）
+- Vol 13 NPNF1 V2《上帝之城》22 卷 + 論基督教教義
+- Vol 14 NPNF1 V3 論聖三 + 教義/道德論集
+- Vol 15 NPNF1 V4 駁摩尼派 + 駁多納徒派
+全部 validate 0 FAIL · T9 cross-bleed 0。
 
-```bash
-# ── Vol 10：ANF Vol 10 (Bibliography + General Index, 4 chunks 小) ──
-# 先看是否值得精修（純索引/書目可能不用 D1 consolidate_letters）
-EBID_VOL10=<查 ebooks 表>
-PYTHONIOENCODING=utf-8 python -c "
-import os, requests
-from dotenv import load_dotenv
-from pathlib import Path
-load_dotenv(Path('.env'))
-URL = os.environ['SUPABASE_URL']; KEY = os.environ['SUPABASE_SERVICE_ROLE_KEY']
-r = requests.get(f'{URL}/rest/v1/ebooks?select=id,title&title=ilike.*ANF Vol 10*',
-                 headers={'apikey':KEY,'Authorization':f'Bearer {KEY}'})
-print(r.json())
-"
+### 🔄 進行中（背景 nohup，新 session 先查 log/JSONL 計數）
+**Batch 16-18 翻譯中**（log: `scripts/logs/translate_vol16/17/18.log`）：
+- 16 NPNF1 V5 駁伯拉糾派  df789501-5620-4833-a0a0-6e8f1a031bb1
+- 17 NPNF1 V6 登山寶訓+四福音合參  7bff8a13-3c35-43d4-9b4c-b7c3c9f81076（已翻完）
+- 18 NPNF1 V7 約翰福音講道+獨語錄  0069932a-7b27-4c06-9874-b74d51ad564e（最慢）
+查完成：`grep "ebooks row updated" scripts/logs/translate_vol1N.log`
 
-# ── Vol 11：NPNF1 Vol 1 (Augustine Confessions + City of God) ──
-# 第一卷 NPNF — title_en 是 npnf*.html 還是英文 NCX label？決定走 PREFIX vs boundary
-# Augustine 名稱統一：奥古斯丁／聖奧古斯丁／希坡的奧古斯丁（user 先決定）
+### 接手步驟（每批 3 卷）
+1. 等 3 卷 translate 都出 "ebooks row updated"
+2. 對每卷：`polish_translated_book.py` → 在 **`scripts/fix_npnf_tree.py`** 的
+   REGISTRY 加該 ebook_id 的 `{en著作標籤: 中文}`（"__FRONT__"/"__INDEX__" 走前言/索引）
+   → `python scripts/fix_npnf_tree.py <id>` → `consolidate_letters.py <id>`
+   → 在 `sweep_book_quality.TERM_FIXES_BY_BOOK` 加該 id（奧古斯丁卷指 `TERM_FIXES_NPNF1_VOL_1`）
+   → `sweep_book_quality.py <id>` → `validate_book_structure.py <id>`（0 FAIL 門檻）
+   → `scan_translated_book.py <id>`（確認無 T9）
+3. 名著參考校準（見上「參考現成中譯本校準」節，名著才做）
+4. 詞庫：奧古斯丁核心已 seed（`seed_glossary_npnf_vol11_12.py`）；新人物再補
+5. `pages/fathers/index.vue` REFINED_IDS + ZH_TITLES（NPNF1/2 多已有）→ commit+push
+6. 啟動下一批 3 卷 translate（先 mv .en.bak），寫 watcher，repeat
 
-# ── Vol 12：NPNF2 Vol 4 (Athanasius) ──
-# 亞他那修為主 — 確認譯名（亞他那修 vs 阿塔那修）
-```
+### 佇列（接 18 之後）
+- 19-21: NPNF1 V8 詩篇講解 2accee20-5f9d-4099-9ce9-3dda0726a74b /
+  屈梭多模 V9 論司祭職 76df31fe-e732-4aa6-88c2-d650a09fb688 /
+  V10 馬太講道 0d160c29-8d61-4dbc-8f8e-d47fee694eab
+- 22-24: 屈梭多模 V11 4d73c561 / V12 bf2dd1b2 / V13 9192cb77
+- 25-27: 屈梭多模 V14 91c7023f / NPNF2 V1 優西比烏 91ff3a5e / V2 蘇格拉底 29782dd6
+- 28-30: NPNF2 V3 狄奧多雷 a7e5956e / V5 尼撒貴格利 9b94e7c1 / V6 耶柔米 d229a6d4
+- 31-33: NPNF2 V7 區利羅+拿先斯 af2cf8a7 / V8 巴西流 3c48472c / V9 希拉里 709f43f9
+- 34-36: NPNF2 V10 安波羅修 fd8a09e7 / V11 24c53ede / V12 大良 02a08547
+- 37-38: NPNF2 V13 90b55879 / V14 七大公會議 63853a97 →（再 ACCS 待補卷）
 
-**新卷標準流程**（適用 Vol 10-12 + 後續）：
+⚠️ 屈梭多模卷是「講道集」結構（多篇 homily），fix_npnf_tree 的 depth1/depth2 是否
+   切得乾淨要先 dry-run 看；可能 depth2=每篇講道（無 book 層）→ volume=該卷著作即可。
+完整即時狀態與 IDs 另存 `c:\tmp\fathers_overnight_state.md`。
+
+### 譯名鎖定（本輪已套，後續沿用）
+奧古斯丁（希波）·亞他那修（非阿塔那修）·亞流（非阿里烏）。Cappadocian/Cyril 見
+2026-05-29 譯名決策節。新卷翻完 `sweep --only-t8` 收斂變體。
+
+**新卷標準流程**（generic 參考）：
 
 ```bash
 EBID=<ebook_id>
