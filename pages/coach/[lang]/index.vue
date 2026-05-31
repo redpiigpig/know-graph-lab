@@ -15,7 +15,10 @@
         <div class="flex-1 bg-white rounded-2xl rounded-tl-md border border-gray-100 shadow-sm p-4">
           <div v-if="briefingLoading" class="text-sm text-gray-400">{{ coach?.name }} 正在看你的進度…</div>
           <template v-else-if="briefing">
-            <p class="text-sm text-gray-800 font-medium">{{ briefing.greeting }}</p>
+            <div class="flex items-start justify-between gap-2">
+              <p class="text-sm text-gray-800 font-medium">{{ briefing.greeting }}</p>
+              <button @click="loadBriefing(true)" class="text-gray-300 hover:text-indigo-500 text-xs flex-shrink-0" title="重新生成今日簡報">↻</button>
+            </div>
             <p class="text-sm text-indigo-700 mt-1.5">🎯 {{ briefing.focus }}</p>
             <div v-if="briefing.actions?.length" class="flex flex-wrap gap-1.5 mt-2.5">
               <NuxtLink v-for="(a, i) in briefing.actions" :key="i" :to="routeFor(a.route)" class="text-xs px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 hover:bg-indigo-100 transition">{{ a.label }} →</NuxtLink>
@@ -152,10 +155,11 @@ async function loadCoach() {
   const { coaches } = await $fetch<{ coaches: any[] }>("/api/lang/coaches");
   coach.value = coaches.find((c) => c.language === lang.value);
 }
-async function loadBriefing() {
+async function loadBriefing(force = false) {
   briefingLoading.value = true;
   try {
-    const r = await authedFetch<any>(`/api/lang/briefing?language=${lang.value}`);
+    const url = `/api/lang/briefing?language=${lang.value}${force ? "&force=1" : ""}`;
+    const r = force ? await aiFetch<any>(url) : await authedFetch<any>(url);
     briefing.value = r.briefing;
     stats.value = r.stats;
   } finally {
@@ -219,13 +223,23 @@ function selectDay(cell: any) {
 
 onMounted(async () => {
   await Promise.all([loadCoach(), loadBriefing(), loadMemory(), loadCalendar()]);
-  // 若今天有活動但還沒日誌，背景產生一篇
   const today = new Date().toISOString().slice(0, 10);
   const todayAct = days.value.find((d) => d.date === today);
-  const hasToday = journals.value.some((j) => j.journal_date === today);
-  if (todayAct && todayAct.minutes >= 1 && !hasToday) {
+  const practicedToday = !!todayAct && todayAct.minutes >= 1;
+
+  // 1) 今天練了但還沒日誌 → 背景產生一篇（每天一次）
+  const hasJournalToday = journals.value.some((j) => j.journal_date === today);
+  if (practicedToday && !hasJournalToday) {
     aiFetch("/api/lang/journal/generate", { method: "POST", body: { language: lang.value } })
       .then(() => loadCalendar())
+      .catch(() => {});
+  }
+
+  // 2) 統整記憶每天最多自動刷新一次（今天有練、且記憶上次更新不是今天）
+  const memDate = memory.value?.updated_at ? memory.value.updated_at.slice(0, 10) : null;
+  if (practicedToday && memDate !== today) {
+    aiFetch("/api/lang/memory/regenerate", { method: "POST", body: { language: lang.value } })
+      .then((r: any) => { if (r?.memory) memory.value = r.memory; })
       .catch(() => {});
   }
 });

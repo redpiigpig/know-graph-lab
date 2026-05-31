@@ -17,7 +17,7 @@ export default defineEventHandler(async (event) => {
   const [profileR, progR, memR, dueR, todayActR] = await Promise.all([
     supabase.from("lang_profile").select("goal_level, target_exam, exam_date, daily_goal_minutes, interests").eq("user_id", user.id).single(),
     supabase.from("lang_progress").select("level, streak_days").eq("user_id", user.id).eq("language", language).single(),
-    supabase.from("lang_memory").select("highlights").eq("user_id", user.id).eq("language", language).single(),
+    supabase.from("lang_memory").select("highlights, briefing, briefing_date").eq("user_id", user.id).eq("language", language).single(),
     supabase.from("lang_vocab").select("id", { count: "exact", head: true }).eq("user_id", user.id).eq("language", language).lte("next_review", today),
     supabase.from("lang_activity").select("skill, minutes").eq("user_id", user.id).eq("language", language).eq("activity_date", today),
   ]);
@@ -37,9 +37,15 @@ export default defineEventHandler(async (event) => {
 - 反覆弱點：${(hl.weaknesses || []).join("、") || "（尚無紀錄）"}
 - 建議加強：${(hl.next_focus || []).join("、") || "（尚無）"}`;
 
-  const raw = await coachGemini(
-    {
-      system: `你是${coach.langLabel}教練 ${coach.name}，每次學生進來時主動給一段「今日簡報」。
+  // 每日快取：同一天只用 Gemini 生成一次簡報（統計仍每次即時算）
+  let briefing: any = null;
+  const force = getQuery(event).force === "1";
+  if (!force && memR.data?.briefing_date === today && memR.data?.briefing) {
+    briefing = memR.data.briefing;
+  } else {
+    const raw = await coachGemini(
+      {
+        system: `你是${coach.langLabel}教練 ${coach.name}，每次學生進來時主動給一段「今日簡報」。
 依學生資料，只輸出 JSON：
 {
   "greeting": "一句親切的繁體中文招呼（可帶今日狀態，如連續天數、距考試天數）",
@@ -48,17 +54,26 @@ export default defineEventHandler(async (event) => {
   "tip": "針對某個反覆弱點的一句小提醒（繁體中文，若無弱點可給通用進階建議）"
 }
 actions 給 2–3 個，route 從 chat/smalltalk/practice/review/immersion 擇一。語氣鼓勵、像真的教練。繁體中文不可簡體。`,
-      contents: [{ role: "user", parts: [{ text: ctx }] }],
-      json: true,
-      temperature: 0.6,
-      maxOutputTokens: 700,
-    },
-    { usePaid: false, userId: user.id, supabase }
-  ).catch(() => null);
+        contents: [{ role: "user", parts: [{ text: ctx }] }],
+        json: true,
+        temperature: 0.6,
+        maxOutputTokens: 700,
+      },
+      { usePaid: false, userId: user.id, supabase }
+    ).catch(() => null);
 
-  let briefing: any = null;
-  if (raw) {
-    try { briefing = parseJsonLoose(raw); } catch { briefing = null; }
+    if (raw) {
+      try { briefing = parseJsonLoose(raw); } catch { briefing = null; }
+    }
+    // 快取今日簡報（不動 updated_at，那欄代表「記憶內容」的更新時間）
+    if (briefing) {
+      await supabase
+        .from("lang_memory")
+        .upsert(
+          { user_id: user.id, language, briefing, briefing_date: today },
+          { onConflict: "user_id,language" }
+        );
+    }
   }
 
   return {
