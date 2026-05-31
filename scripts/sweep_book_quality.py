@@ -450,6 +450,7 @@ TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "4d73c561-aa4e-46b2-8e29-d331c5b9d28d": TERM_FIXES_NPNF1_CHRYSOSTOM,  # NPNF1 Vol 11 Chrysostom (Acts + Romans)
     "bf2dd1b2-ae53-43c2-8fac-7ce10e137c10": TERM_FIXES_NPNF1_CHRYSOSTOM,  # NPNF1 Vol 12 Chrysostom (1 & 2 Corinthians)
     "9192cb77-3ce2-4adb-9d90-76200e452763": TERM_FIXES_NPNF1_CHRYSOSTOM,  # NPNF1 Vol 13 Chrysostom (Galatians..Philemon)
+    "91c7023f-2e63-4b16-897a-43bdf7d5e290": TERM_FIXES_NPNF1_CHRYSOSTOM,  # NPNF1 Vol 14 Chrysostom (John + Hebrews)
 }
 
 

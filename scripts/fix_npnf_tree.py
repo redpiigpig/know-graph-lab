@@ -168,6 +168,15 @@ REGISTRY: dict[str, dict[str, str]] = {
         "About This Book": "__FRONT__", "Title Page": "__FRONT__",
         "Indexes of Subjects": "__INDEX__", "Indexes": "__INDEX__",
     },
+    # Vol 25 NPNF1-14 — Chrysostom (金口若望): Homilies on John + Hebrews
+    "91c7023f-2e63-4b16-897a-43bdf7d5e290": {
+        "The Homilies of St. John Chrysostom on the Gospel of St. John.": "約翰福音講道集",
+        "The Homilies of St. John Chrysostom on the Epistle to the Hebrews.": "希伯來書講道集",
+        "About This Book": "__FRONT__", "Title Page.": "__FRONT__", "Preface.": "__FRONT__",
+        "Comparative Table of the Works of St. Chrysostom in the American and Migne’s Editions.": "__FRONT__",
+        "Comparative Table of the Works of St. Chrysostom in the American and Migne's Editions.": "__FRONT__",
+        "Indexes of Subjects": "__INDEX__", "Indexes": "__INDEX__",
+    },
 }
 
 
