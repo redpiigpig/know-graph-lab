@@ -890,6 +890,33 @@ python scripts/repopulate_chunk_previews.py run --book <ebook_id> --force
 
 ---
 
+## Workflow H — Structure audit & NO_TOC recovery (2026-05-31)
+
+針對「文字 OCR 沒問題、但**側欄目錄空白／標題正文不分**」的書。診斷顯示**髒書 100% 是 PDF，EPUB 結構乾淨**（EPUB 只有少數目錄項異常，走 audit）；主病是 **712 本 NO_TOC**（chapter_path 全空），且其中 189 本**已 standardize 仍無目錄** → standardize 對「無內嵌書籤的掃描/論文 PDF」無能為力，需新能力。
+
+**Step 1 — 體檢（只讀 DB 預覽，不碰 Drive）**
+```bash
+python scripts/structure_audit.py            # 全館 → c:/tmp/structure_audit.json + _report.txt
+```
+6 個訊號評每本亂度：`NO_TOC`（chapter_path 空）/`BODY_AS_TITLE`/`HEADER_POLLUTE`（頁眉滲入）/`PAGENUM_NOISE`/`HEADING_BLEED`/`GIANT_CHUNK`，外加 `UNDERPARSED`(n≤2)。輸出最髒 50 本 + 病徵。
+
+**Step 2 — 修復（`fix_book_structure.py`，resumable / quota-aware）**
+```bash
+python scripts/fix_book_structure.py all                 # Job B 稽核 → Job A 補目錄，全館
+python scripts/fix_book_structure.py audit               # 只稽核（零 LLM 配額）
+python scripts/fix_book_structure.py recover [--dry-run] [--ids a,b] [--limit N]
+```
+- **Job A（recover）**：NO_TOC 的 page-chunked PDF。剝頁碼 + 固定家具頁眉 → `gemini-2.5-flash-lite` 推章節骨架 → `chapter_path` **只增不覆蓋**（鐵律保留 `page_number`）。
+  - **密度閘**：文字 < 25 字/頁 → 跳過寫入、記 `c:/tmp/needs_reocr.txt`（**防 LLM 對空 OCR 幻覺捏造假目錄**——這些書要先重 OCR）。
+  - 巨書（>280 頁）**視窗化**避免 JSON 截斷；標題經 `clean_title()` 去點線/頁碼/英文 meta + 截長；層級用 `level_from_title()` **從標題文字判**（第N篇→L1／第N章→L2／第N節·一、→L3），不信 LLM 的 level。
+- **Job B（audit）**：所有「已有目錄」的書（全 EPUB + 有 TOC 的 PDF）純規則掃 `.html/.xml` 檔名外洩、引文/詩句當標題、純數字目錄項 → `c:/tmp/toc_audit_flags.txt`，**只報告不改**（EPUB 目錄修正需人工審）。
+- **斷點續跑**：`c:/tmp/structure_fix_ledger.json` 記每本結果，重跑自動跳過已完成；4 把 Gemini key 輪替 + 429 指數退避（騎過每日配額窗口，與 OCR 排程共用配額）。
+- **安全**：reader 側欄讀 **JSONL**（穩定寫入），DB 僅供搜尋/列表，故即使某本 DB refresh 失敗側欄仍正常；JSONL 是 source of truth、可重生。
+
+> 已驗證：簡單書（史書/英文書）近乎完美；複雜論文目錄可用但尾端偶有噪音。Job A 寫入為 additive，未來要重做某本先把該書 chapter_path 清 null + 移出 ledger 再 recover。
+
+---
+
 ## Decision tree for "this book looks broken in the reader"
 
 ```
