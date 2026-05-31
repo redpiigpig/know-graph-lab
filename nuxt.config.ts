@@ -18,6 +18,14 @@ export default defineNuxtConfig({
     r2Bucket: process.env.R2_BUCKET,
     ebookChunksDir: process.env.EBOOK_CHUNKS_DIR,
     photosRoot: process.env.PHOTOS_ROOT || "G:/我的雲端硬碟/資料/儲存資料夾/辰瑋相片",
+    // Gemini（4 把 key，輪替使用；語言教練、族譜解析等共用）
+    geminiApiKey: process.env.Gemini_API_Key_1,
+    geminiApiKeys: [
+      process.env.Gemini_API_Key_1,
+      process.env.Gemini_API_Key_2,
+      process.env.Gemini_API_Key_3,
+      process.env.Gemini_API_Key_4,
+    ].filter(Boolean) as string[],
 
     // 公開配置（前端和後端都可用）
     public: {

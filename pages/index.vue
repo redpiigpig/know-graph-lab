@@ -57,6 +57,16 @@
           <span class="tool-badge bg-amber-50 text-amber-600">可用</span>
         </NuxtLink>
 
+        <!-- AI 語言教練 -->
+        <NuxtLink :to="user ? '/coach' : '/login'" class="tool-card group border-indigo-100 hover:border-indigo-300 hover:shadow-indigo-100">
+          <div class="tool-icon bg-indigo-50 text-indigo-600">🗣️</div>
+          <div class="flex-1">
+            <h2 class="tool-title">AI 語言教練</h2>
+            <p class="tool-desc">外語 VTuber 教練即時語音對話、改錯、出單字與作業；英文 Emily / 日文櫻子，更多語言陸續開放</p>
+          </div>
+          <span class="tool-badge bg-indigo-50 text-indigo-600">可用</span>
+        </NuxtLink>
+
         <!-- 概念筆記 -->
         <NuxtLink :to="user ? '/concepts' : '/login'" class="tool-card group border-cyan-100 hover:border-cyan-300 hover:shadow-cyan-100">
           <div class="tool-icon bg-cyan-50 text-cyan-600">🕸️</div>

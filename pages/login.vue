@@ -86,6 +86,12 @@
         <div v-if="error" class="p-3 bg-red-50 border border-red-100 rounded-lg">
           <p class="text-xs text-red-600">{{ error }}</p>
         </div>
+
+        <!-- 註冊入口 -->
+        <p class="text-center text-xs text-gray-400 pt-1">
+          還沒有帳號？
+          <NuxtLink to="/signup" class="text-indigo-600 hover:underline font-medium">立即註冊使用 AI 語言教練</NuxtLink>
+        </p>
       </div>
     </div>
   </div>
@@ -97,17 +103,15 @@ const user = useSupabaseUser();
 const router = useRouter();
 const config = useRuntimeConfig();
 
-const allowedEmail = config.public.allowedEmail as string;
-
 // 密碼登入
-const email = ref(allowedEmail || "");
+const email = ref("");
 const password = ref("");
 const showPassword = ref(false);
 const loginLoading = ref(false);
 const error = ref("");
 
 // Magic Link
-const magicEmail = ref(allowedEmail || "");
+const magicEmail = ref("");
 const magicLoading = ref(false);
 const magicSent = ref(false);
 
