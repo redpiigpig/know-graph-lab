@@ -106,31 +106,52 @@ def detect_header(pages: list[dict]) -> tuple[str | None, float, bool]:
     return best.strip(), round(best_cov, 3), is_constant
 
 
-# ── Gemini with key rotation ─────────────────────────────────────────────────
-# Sentinel: every key returned 429. The RUN loop parks on this and retries the
-# SAME book later — so daily-quota exhaustion never falsely marks a book "done".
-QUOTA = "__QUOTA__"
+# ── transient-failure handling ───────────────────────────────────────────────
+# ANY transient condition (quota 429, DNS/network drop, timeout) raises
+# RetryLater. The RUN loop parks on it and retries the SAME book — so neither
+# quota exhaustion nor an overnight wifi blip can crash the run or falsely mark
+# a book "done". A book is only marked done when we actually got a response.
 _key_idx = 0
+_NET_MARKERS = ("getaddrinfo", "NameResolution", "Max retries", "Connection",
+                "Timeout", "timed out", "Temporary failure", "ConnectionError",
+                "RemoteDisconnected", "ServerDisconnected", "SSLError")
 
 
-class QuotaPause(Exception):
+class RetryLater(Exception):
     pass
+
+
+def _is_transient(es: str) -> bool:
+    return ("429" in es or "RESOURCE_EXHAUSTED" in es
+            or any(m in es for m in _NET_MARKERS))
+
+
+def net(fn, *a, **k):
+    """Run a network call; retry transient failures a few times, then escalate
+    to RetryLater so the caller parks instead of crashing."""
+    for attempt in range(4):
+        try:
+            return fn(*a, **k)
+        except Exception as e:
+            if _is_transient(str(e)):
+                time.sleep(5 * (attempt + 1))
+                continue
+            raise
+    raise RetryLater(f"net: {str(fn)}")
 
 
 def gemini_json(prompt: str, max_tokens: int = 8192):
     """Call flash-lite expecting a JSON array. Rotates keys. Returns the parsed
-    list, None on a genuine non-quota failure, or the QUOTA sentinel when every
-    key is 429 (one short rotation + brief retry, then give the decision to the
-    caller — DO NOT block 30 min inside one call)."""
+    list (possibly []), or None only when a response came back but was
+    unparseable. Raises RetryLater when every key is transiently unavailable
+    (429 / network), so the caller parks and retries the SAME book later."""
     global _key_idx
     from google import genai
     from google.genai import types
     cfg = types.GenerateContentConfig(response_mime_type="application/json",
                                       temperature=0.0, max_output_tokens=max_tokens)
-    quota_hits = 0
-    attempts = 0
-    while attempts < len(GEMINI_KEYS) * 2:
-        attempts += 1
+    transient = 0
+    for attempts in range(len(GEMINI_KEYS) * 2):
         try:
             client = genai.Client(api_key=GEMINI_KEYS[_key_idx])
             r = client.models.generate_content(model=MODEL, contents=prompt, config=cfg)
@@ -138,14 +159,14 @@ def gemini_json(prompt: str, max_tokens: int = 8192):
         except Exception as e:
             es = str(e)
             _key_idx = (_key_idx + 1) % len(GEMINI_KEYS)
-            if "429" in es or "RESOURCE_EXHAUSTED" in es:
-                quota_hits += 1
-                if quota_hits % len(GEMINI_KEYS) == 0:
-                    time.sleep(8)   # brief — maybe a per-minute (not daily) limit
+            if _is_transient(es):
+                transient += 1
+                if transient % len(GEMINI_KEYS) == 0:
+                    time.sleep(8)
                 continue
             print(f"    gemini error: {es[:80]}", flush=True)
             return None
-    return QUOTA
+    raise RetryLater("gemini: all keys transient")
 
 
 def _parse_json_array(text: str) -> list | None:
@@ -233,17 +254,13 @@ def build_skeleton(pages: list[dict], header: str | None) -> str:
 
 def infer_toc(pages: list[dict], header: str | None) -> list:
     """One book -> merged TOC list. Windows huge books to dodge truncation."""
+    # RetryLater from gemini_json propagates up and parks the whole book.
     if len(pages) <= WINDOW_PAGES:
-        toc = gemini_json(PROMPT.format(skeleton=build_skeleton(pages, header)))
-        if toc == QUOTA:
-            return QUOTA
-        return toc or []
+        return gemini_json(PROMPT.format(skeleton=build_skeleton(pages, header))) or []
     merged = []
     for i in range(0, len(pages), WINDOW_PAGES):
         win = pages[i:i + WINDOW_PAGES]
         toc = gemini_json(PROMPT.format(skeleton=build_skeleton(win, header)))
-        if toc == QUOTA:
-            return QUOTA            # park the whole book; retry cleanly later
         if toc:
             merged.extend(toc)
     return merged
@@ -264,7 +281,7 @@ def save_ledger(led: dict):
 
 
 def fetch_book(eid: str) -> dict | None:
-    r = requests.get(f"{URL}/rest/v1/ebooks?id=eq.{eid}&select=*", headers=H_GET, timeout=30)
+    r = net(requests.get, f"{URL}/rest/v1/ebooks?id=eq.{eid}&select=*", headers=H_GET, timeout=30)
     return (r.json() or [None])[0]
 
 
@@ -281,8 +298,8 @@ def write_book(eid: str, chunks: list[dict]):
         se.push_to_r2(eid, jsonl_path)
     except Exception as e:
         print(f"    R2 push warn: {str(e)[:60]}", flush=True)
-    # rebuild DB previews
-    requests.delete(f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{eid}", headers=H_GET, timeout=30)
+    # rebuild DB previews (net() rides brief blips; sustained outage -> RetryLater)
+    net(requests.delete, f"{URL}/rest/v1/ebook_chunks?ebook_id=eq.{eid}", headers=H_GET, timeout=30)
     rows = []
     for c in chunks:
         row = {
@@ -297,10 +314,10 @@ def write_book(eid: str, chunks: list[dict]):
         rows.append(row)
     for i in range(0, len(rows), 25):
         batch = rows[i:i + 25]
-        rr = requests.post(f"{URL}/rest/v1/ebook_chunks", headers=H_JSON, json=batch, timeout=40)
+        rr = net(requests.post, f"{URL}/rest/v1/ebook_chunks", headers=H_JSON, json=batch, timeout=40)
         if rr.status_code not in (200, 201):
             for row in batch:
-                requests.post(f"{URL}/rest/v1/ebook_chunks", headers=H_JSON, json=row, timeout=30)
+                net(requests.post, f"{URL}/rest/v1/ebook_chunks", headers=H_JSON, json=row, timeout=30)
 
 
 # ── JOB A — recover ──────────────────────────────────────────────────────────
@@ -335,10 +352,8 @@ def recover_book(eid: str, dry_run: bool = False) -> dict:
             c["content"] = body
             n_stripped += 1
 
-    # Job A — LLM TOC
+    # Job A — LLM TOC (RetryLater propagates -> run loop parks this book)
     toc = infer_toc(pages, strip_hdr)
-    if toc == QUOTA:
-        raise QuotaPause()          # park: do NOT persist, do NOT ledger
     if not toc:
         # still persist the strip if it happened
         if n_stripped and not dry_run:
@@ -440,17 +455,19 @@ def run_recover(limit: int = 0, dry_run: bool = False, ids: list[str] | None = N
           f"({len(led)} already in ledger){' [DRY-RUN]' if dry_run else ''}", flush=True)
     quota_sleep = 600
     for i, eid in enumerate(work):
-        b = fetch_book(eid)
-        title = (b.get("title") if b else "") or eid
-        # Retry the SAME book across quota windows — never advance/ledger on quota.
+        title = eid
+        # Retry the SAME book across transient windows (quota / network) —
+        # never advance or ledger on a transient failure.
         while True:
             try:
+                b = fetch_book(eid)
+                title = (b.get("title") if b else "") or eid
                 res = recover_book(eid, dry_run=dry_run)
                 quota_sleep = 600   # reset backoff after any success
                 break
-            except QuotaPause:
-                print(f"  [{i+1}/{len(work)}] quota exhausted — parking {quota_sleep}s "
-                      f"then retrying {title[:30]}", flush=True)
+            except RetryLater:
+                print(f"  [{i+1}/{len(work)}] transient (quota/network) — parking "
+                      f"{quota_sleep}s then retrying {title[:30]}", flush=True)
                 time.sleep(quota_sleep)
                 quota_sleep = min(quota_sleep * 2, 3600)   # up to 1h between probes
                 continue
