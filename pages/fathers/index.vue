@@ -125,6 +125,7 @@ const REFINED_IDS = new Set([
   '56ef3d65-c559-41f8-8d68-ba6c13e47876',  // NPNF1 Vol 4 (Augustine — Anti-Manichaean + Anti-Donatist)
   'df789501-5620-4833-a0a0-6e8f1a031bb1',  // NPNF1 Vol 5 (Augustine — Anti-Pelagian Writings)
   '7bff8a13-3c35-43d4-9b4c-b7c3c9f81076',  // NPNF1 Vol 6 (Augustine — Sermon on the Mount + Harmony of the Gospels + NT Sermons)
+  '0069932a-7b27-4c06-9874-b74d51ad564e',  // NPNF1 Vol 7 (Augustine — Tractates on John + Homilies on 1 John + Soliloquies)
 ])
 
 const series = [
