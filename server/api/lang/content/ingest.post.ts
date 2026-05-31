@@ -5,16 +5,18 @@
  * 回傳並儲存：摘要、理解題、關鍵單字、討論題、大綱。可延伸到對話討論。
  */
 import { getCoach } from "~/server/utils/lang-coaches";
-import { callGemini, parseJsonLoose } from "~/server/utils/gemini";
+import { parseJsonLoose } from "~/server/utils/gemini";
+import { coachGemini } from "~/server/utils/coach-ai";
 
 export default defineEventHandler(async (event) => {
   const user = await requireAuth(event);
   const supabase = getAdminClient();
-  const { language, sourceType, url, text } = (await readBody(event)) as {
+  const { language, sourceType, url, text, usePaid } = (await readBody(event)) as {
     language: string;
     sourceType: "youtube" | "article";
     url?: string;
     text?: string;
+    usePaid?: boolean;
   };
   const coach = getCoach(language);
   if (!coach) throw createError({ statusCode: 400, message: "不支援的語言" });
@@ -46,13 +48,16 @@ export default defineEventHandler(async (event) => {
       ? [{ fileData: { fileUri: url!.trim(), mimeType: "video/mp4" } }, { text: "請依系統指示分析這部影片。" }]
       : [{ text: `文章內容：\n${text}` }];
 
-  const raw = await callGemini({
-    system,
-    contents: [{ role: "user", parts }],
-    json: true,
-    temperature: 0.5,
-    maxOutputTokens: 4096,
-  });
+  const raw = await coachGemini(
+    {
+      system,
+      contents: [{ role: "user", parts }],
+      json: true,
+      temperature: 0.5,
+      maxOutputTokens: 4096,
+    },
+    { usePaid: usePaid === true, userId: user.id, supabase }
+  );
 
   let analysis: any;
   try {

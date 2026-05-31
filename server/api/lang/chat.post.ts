@@ -6,17 +6,19 @@
  * 並自動持久化訊息、寫入新單字、建立作業。
  */
 import { getCoach, OUTPUT_CONTRACT } from "~/server/utils/lang-coaches";
-import { callGemini, parseJsonLoose } from "~/server/utils/gemini";
+import { parseJsonLoose } from "~/server/utils/gemini";
+import { coachGemini } from "~/server/utils/coach-ai";
 
 const WINDOW = 12; // 保留最近 12 則進 context（更早的壓進 session.summary）
 
 export default defineEventHandler(async (event) => {
   const user = await requireAuth(event);
   const supabase = getAdminClient();
-  const { language, sessionId, message } = (await readBody(event)) as {
+  const { language, sessionId, message, usePaid } = (await readBody(event)) as {
     language: string;
     sessionId?: string;
     message: string;
+    usePaid?: boolean;
   };
 
   if (!message?.trim()) throw createError({ statusCode: 400, message: "訊息不可為空" });
@@ -65,13 +67,10 @@ export default defineEventHandler(async (event) => {
   }${OUTPUT_CONTRACT}`;
 
   // 4. 呼叫 Gemini
-  const raw = await callGemini({
-    system,
-    contents,
-    json: true,
-    temperature: 0.85,
-    maxOutputTokens: 2048,
-  });
+  const raw = await coachGemini(
+    { system, contents, json: true, temperature: 0.85, maxOutputTokens: 2048 },
+    { usePaid: usePaid === true, userId: user.id, supabase }
+  );
 
   let parsed: {
     reply: string;
@@ -160,7 +159,7 @@ export default defineEventHandler(async (event) => {
 
   // 9. 背景壓縮摘要（每累積一定量就更新長期記憶；失敗不影響回覆）
   if ((count ?? 0) >= WINDOW + 8 && (count ?? 0) % 8 === 0) {
-    summarizeSession(supabase, sid!, summary, coach.name).catch(() => {});
+    summarizeSession(supabase, sid!, summary, coach.name, user.id, usePaid === true).catch(() => {});
   }
 
   return {
@@ -174,7 +173,7 @@ export default defineEventHandler(async (event) => {
 });
 
 // 將窗口外的舊訊息壓縮進 session.summary（滾動式長期記憶，控制 token）
-async function summarizeSession(supabase: any, sid: string, prevSummary: string, coachName: string) {
+async function summarizeSession(supabase: any, sid: string, prevSummary: string, coachName: string, userId: string, usePaid: boolean) {
   const { data: older } = await supabase
     .from("lang_messages")
     .select("role, content")
@@ -187,12 +186,15 @@ async function summarizeSession(supabase: any, sid: string, prevSummary: string,
   const transcript = trimmed
     .map((m: any) => `${m.role === "coach" ? coachName : "學生"}：${m.content}`)
     .join("\n");
-  const text = await callGemini({
-    system:
-      "你是學習記憶整理員。把以下語言課對話壓縮成 150 字內的繁體中文重點摘要，記錄：聊過的主題、學生的程度與常犯錯誤、已學的關鍵單字。只輸出摘要文字。",
-    contents: [{ role: "user", parts: [{ text: `${prevSummary ? `【既有摘要】${prevSummary}\n\n` : ""}【新對話】\n${transcript}` }] }],
-    temperature: 0.3,
-    maxOutputTokens: 512,
-  });
+  const text = await coachGemini(
+    {
+      system:
+        "你是學習記憶整理員。把以下語言課對話壓縮成 150 字內的繁體中文重點摘要，記錄：聊過的主題、學生的程度與常犯錯誤、已學的關鍵單字。只輸出摘要文字。",
+      contents: [{ role: "user", parts: [{ text: `${prevSummary ? `【既有摘要】${prevSummary}\n\n` : ""}【新對話】\n${transcript}` }] }],
+      temperature: 0.3,
+      maxOutputTokens: 512,
+    },
+    { usePaid, userId, supabase }
+  );
   await supabase.from("lang_sessions").update({ summary: text.trim() }).eq("id", sid);
 }

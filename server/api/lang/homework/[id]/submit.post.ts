@@ -4,13 +4,14 @@
  * 學生繳交作業 → Gemini 以該語言教練身分批改 → 回傳 feedback / corrections / score
  */
 import { getCoach } from "~/server/utils/lang-coaches";
-import { callGemini, parseJsonLoose } from "~/server/utils/gemini";
+import { parseJsonLoose } from "~/server/utils/gemini";
+import { coachGemini } from "~/server/utils/coach-ai";
 
 export default defineEventHandler(async (event) => {
   const user = await requireAuth(event);
   const supabase = getAdminClient();
   const id = getRouterParam(event, "id");
-  const { submission } = (await readBody(event)) as { submission: string };
+  const { submission, usePaid } = (await readBody(event)) as { submission: string; usePaid?: boolean };
   if (!submission?.trim()) throw createError({ statusCode: 400, message: "繳交內容不可為空" });
 
   const { data: hw } = await supabase
@@ -31,7 +32,7 @@ export default defineEventHandler(async (event) => {
   "score": 0到100的整數
 }`;
 
-  const raw = await callGemini({
+  const raw = await coachGemini({
     model: useRuntimeConfig().geminiGradeModel as string, // 批改模型（免費層預設 2.0-flash；付費可設 2.5-pro）
     system: grader,
     contents: [
@@ -47,7 +48,7 @@ export default defineEventHandler(async (event) => {
     json: true,
     temperature: 0.4,
     maxOutputTokens: 2048,
-  });
+  }, { usePaid: usePaid === true, userId: user.id, supabase });
 
   let parsed: { feedback?: string; corrections?: any[]; score?: number };
   try {

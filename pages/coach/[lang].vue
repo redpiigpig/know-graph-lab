@@ -183,10 +183,12 @@ import { useRoute } from "vue-router";
 import { authedFetch } from "~/composables/useAuthedFetch";
 import { useSpeech } from "~/composables/useSpeech";
 import { useActivityTracker } from "~/composables/useActivityTracker";
+import { useCoachAi } from "~/composables/useCoachAi";
 
 definePageMeta({ middleware: "coach-auth" });
 
 const tracker = useActivityTracker();
+const { aiFetch } = useCoachAi();
 const route = useRoute();
 const lang = computed(() => route.params.lang as string);
 
@@ -259,7 +261,7 @@ async function send() {
   scrollDown();
   sending.value = true;
   try {
-    const res = await authedFetch<any>("/api/lang/chat", {
+    const res = await aiFetch<any>("/api/lang/chat", {
       method: "POST",
       body: { language: lang.value, sessionId: sessionId.value, message: text },
     });

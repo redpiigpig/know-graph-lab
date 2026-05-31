@@ -64,8 +64,11 @@
 import { ref, computed, onMounted } from "vue";
 import { authedFetch } from "~/composables/useAuthedFetch";
 import { useSpeech } from "~/composables/useSpeech";
+import { useCoachAi } from "~/composables/useCoachAi";
 
 definePageMeta({ middleware: "coach-auth" });
+
+const { aiFetch } = useCoachAi();
 
 const PRESETS = ["AWL Sublist 1", "GRE 高頻字", "哲學學術用語", "歷史學術用語", "神學術語", "文學批評術語", "學術寫作連接詞"];
 const TTS_LANG: Record<string, string> = { en: "en-US", ja: "ja-JP" };
@@ -112,7 +115,7 @@ async function generate() {
   generating.value = true;
   genMsg.value = "";
   try {
-    const res = await authedFetch<any>("/api/lang/vocab/generate", {
+    const res = await aiFetch<any>("/api/lang/vocab/generate", {
       method: "POST",
       body: { language: language.value, theme: theme.value, count: 15 },
     });

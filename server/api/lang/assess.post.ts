@@ -4,14 +4,15 @@
  * 根據學生近期對話發言，用 Gemini 做 CEFR 評估，寫入 lang_level_history 並更新 lang_progress.level。
  */
 import { getCoach } from "~/server/utils/lang-coaches";
-import { callGemini, parseJsonLoose } from "~/server/utils/gemini";
+import { parseJsonLoose } from "~/server/utils/gemini";
+import { coachGemini } from "~/server/utils/coach-ai";
 
 const CEFR_NUM: Record<string, number> = { A1: 20, A2: 35, B1: 50, B2: 65, C1: 80, C2: 95 };
 
 export default defineEventHandler(async (event) => {
   const user = await requireAuth(event);
   const supabase = getAdminClient();
-  const { language } = (await readBody(event)) as { language: string };
+  const { language, usePaid } = (await readBody(event)) as { language: string; usePaid?: boolean };
   const coach = getCoach(language);
   if (!coach) throw createError({ statusCode: 400, message: "不支援的語言" });
 
@@ -35,7 +36,7 @@ export default defineEventHandler(async (event) => {
   const samples = (msgs ?? []).map((m) => m.content).reverse();
   if (samples.length < 3) throw createError({ statusCode: 400, message: "對話樣本太少，多聊幾句再評估" });
 
-  const raw = await callGemini({
+  const raw = await coachGemini({
     model: useRuntimeConfig().geminiGradeModel as string,
     system: `你是 CEFR 語言能力評估專家，評估學生的「${coach.langLabel}」程度。
 依據學生的發言樣本，評估其 CEFR 等級與各項分數。只輸出一個 JSON：
@@ -49,7 +50,7 @@ export default defineEventHandler(async (event) => {
     json: true,
     temperature: 0.3,
     maxOutputTokens: 1024,
-  });
+  }, { usePaid: usePaid === true, userId: user.id, supabase });
 
   let parsed: any;
   try {

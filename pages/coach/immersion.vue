@@ -100,8 +100,11 @@ import { ref, computed, onMounted } from "vue";
 import { authedFetch } from "~/composables/useAuthedFetch";
 import { useSpeech } from "~/composables/useSpeech";
 import { useActivityTracker } from "~/composables/useActivityTracker";
+import { useCoachAi } from "~/composables/useCoachAi";
 
 definePageMeta({ middleware: "coach-auth" });
+
+const { aiFetch } = useCoachAi();
 
 const LANG_LABEL: Record<string, string> = { en: "英文", ja: "日文" };
 const TTS_LANG: Record<string, string> = { en: "en-US", ja: "ja-JP" };
@@ -133,7 +136,7 @@ async function analyze() {
   content.value = null;
   discussion.value = [];
   try {
-    const res = await authedFetch<any>("/api/lang/content/ingest", {
+    const res = await aiFetch<any>("/api/lang/content/ingest", {
       method: "POST",
       body: {
         language: language.value,
@@ -167,7 +170,7 @@ async function sendDiscuss() {
   discussion.value.push({ role: "user", content: msg });
   discussLoading.value = true;
   try {
-    const res = await authedFetch<any>("/api/lang/chat", {
+    const res = await aiFetch<any>("/api/lang/chat", {
       method: "POST",
       body: { language: language.value, sessionId: content.value.session_id, message: msg },
     });

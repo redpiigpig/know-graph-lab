@@ -115,8 +115,11 @@
 import { ref, computed } from "vue";
 import { authedFetch } from "~/composables/useAuthedFetch";
 import { useSpeech } from "~/composables/useSpeech";
+import { useCoachAi } from "~/composables/useCoachAi";
 
 definePageMeta({ middleware: "coach-auth" });
+
+const { aiFetch } = useCoachAi();
 
 const SKILLS = [
   { key: "listening", label: "聽", icon: "🎧" },
@@ -166,7 +169,7 @@ async function generate() {
   selected.value = [];
   response.value = "";
   try {
-    const res = await authedFetch<any>("/api/lang/task/generate", {
+    const res = await aiFetch<any>("/api/lang/task/generate", {
       method: "POST",
       body: { language: language.value, mode: mode.value, exam: mode.value === "exam" ? exam.value : undefined, skill: skill.value, topic: topic.value || undefined },
     });
@@ -197,7 +200,7 @@ async function submit() {
     const body: any = { minutes };
     if (task.value.materials.questions?.length) body.answers = selected.value;
     else body.response = response.value;
-    const res = await authedFetch<any>(`/api/lang/task/${task.value.id}/answer`, { method: "POST", body });
+    const res = await aiFetch<any>(`/api/lang/task/${task.value.id}/answer`, { method: "POST", body });
     task.value = { ...res.task, materials: task.value.materials };
   } catch (e: any) {
     alert(e?.data?.message || "批改失敗");

@@ -4,16 +4,18 @@
  * 用 Gemini 生成一組學術單字（AWL/GRE/人文主題），含繁中釋義/音標/例句，寫入使用者單字庫（SRS 起始）。
  */
 import { getCoach } from "~/server/utils/lang-coaches";
-import { callGemini, parseJsonLoose } from "~/server/utils/gemini";
+import { parseJsonLoose } from "~/server/utils/gemini";
+import { coachGemini } from "~/server/utils/coach-ai";
 
 export default defineEventHandler(async (event) => {
   const user = await requireAuth(event);
   const supabase = getAdminClient();
-  const { language, theme, count, level } = (await readBody(event)) as {
+  const { language, theme, count, level, usePaid } = (await readBody(event)) as {
     language: string;
     theme: string;
     count?: number;
     level?: string;
+    usePaid?: boolean;
   };
   const coach = getCoach(language);
   if (!coach) throw createError({ statusCode: 400, message: "不支援的語言" });
@@ -28,7 +30,7 @@ export default defineEventHandler(async (event) => {
     .single();
   const lv = level || profile?.goal_level || "C1";
 
-  const raw = await callGemini({
+  const raw = await coachGemini({
     system: `你是${coach.langLabel}學術詞彙老師，為 CEFR ${lv} 程度、主修人文領域的學生挑選單字。
 只輸出 JSON：{ "words": [ { "word": "", "reading": "音標/假名（無則空字串）", "meaning": "繁體中文釋義", "example": "${coach.langLabel}例句", "part_of_speech": "詞性" } ] }
 要求：挑 ${n} 個符合主題且該程度該學的字；避免太初級；繁體中文，不可簡體。`,
@@ -36,7 +38,7 @@ export default defineEventHandler(async (event) => {
     json: true,
     temperature: 0.6,
     maxOutputTokens: 3072,
-  });
+  }, { usePaid: usePaid === true, userId: user.id, supabase });
 
   let words: any[] = [];
   try {

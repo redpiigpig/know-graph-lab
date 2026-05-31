@@ -15,6 +15,7 @@ export default defineEventHandler(async (event) => {
     "interests",
     "daily_goal_minutes",
     "onboarded",
+    "use_paid_key",
   ]) {
     if (k in body) allowed[k] = body[k];
   }

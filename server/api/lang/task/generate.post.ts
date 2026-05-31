@@ -5,7 +5,8 @@
  * reading/listening → 文章/聽稿 + 選擇題；writing/speaking → 題目指示。
  */
 import { getCoach } from "~/server/utils/lang-coaches";
-import { callGemini, parseJsonLoose } from "~/server/utils/gemini";
+import { parseJsonLoose } from "~/server/utils/gemini";
+import { coachGemini } from "~/server/utils/coach-ai";
 
 const SKILLS = ["listening", "speaking", "reading", "writing"];
 
@@ -51,13 +52,14 @@ function taskBrief(exam: string | undefined, skill: string, taskType: string | u
 export default defineEventHandler(async (event) => {
   const user = await requireAuth(event);
   const supabase = getAdminClient();
-  const { language, mode, exam, skill, taskType, topic } = (await readBody(event)) as {
+  const { language, mode, exam, skill, taskType, topic, usePaid } = (await readBody(event)) as {
     language: string;
     mode?: string;
     exam?: string;
     skill: string;
     taskType?: string;
     topic?: string;
+    usePaid?: boolean;
   };
   const coach = getCoach(language);
   if (!coach) throw createError({ statusCode: 400, message: "不支援的語言" });
@@ -86,13 +88,16 @@ export default defineEventHandler(async (event) => {
 ${isComprehension ? "questions 出 4 題單選，answer 用 A/B/C/D。" : "這是產出型題目，不要 questions。"}
 繁體中文不可簡體。`;
 
-  const raw = await callGemini({
-    system,
-    contents: [{ role: "user", parts: [{ text: topic ? `指定主題：${topic}` : "請出題。" }] }],
-    json: true,
-    temperature: 0.7,
-    maxOutputTokens: 3072,
-  });
+  const raw = await coachGemini(
+    {
+      system,
+      contents: [{ role: "user", parts: [{ text: topic ? `指定主題：${topic}` : "請出題。" }] }],
+      json: true,
+      temperature: 0.7,
+      maxOutputTokens: 3072,
+    },
+    { usePaid: usePaid === true, userId: user.id, supabase }
+  );
 
   let g: any;
   try {

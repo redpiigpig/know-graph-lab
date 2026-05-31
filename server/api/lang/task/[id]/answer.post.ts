@@ -5,7 +5,8 @@
  * 並記錄該技能練習時間。
  */
 import { getCoach } from "~/server/utils/lang-coaches";
-import { callGemini, parseJsonLoose } from "~/server/utils/gemini";
+import { parseJsonLoose } from "~/server/utils/gemini";
+import { coachGemini } from "~/server/utils/coach-ai";
 
 // 各考試的評分標準（rubric）
 function rubricFor(exam: string | null, skill: string) {
@@ -24,10 +25,11 @@ export default defineEventHandler(async (event) => {
   const user = await requireAuth(event);
   const supabase = getAdminClient();
   const id = getRouterParam(event, "id");
-  const { response, answers, minutes } = (await readBody(event)) as {
+  const { response, answers, minutes, usePaid } = (await readBody(event)) as {
     response?: string;
     answers?: string[];
     minutes?: number;
+    usePaid?: boolean;
   };
 
   const { data: task } = await supabase
@@ -63,7 +65,7 @@ export default defineEventHandler(async (event) => {
     // 產出型 → Gemini Pro rubric 評分
     if (!response?.trim()) throw createError({ statusCode: 400, message: "請先作答" });
     const rubric = rubricFor(task.exam, task.skill);
-    const raw = await callGemini({
+    const raw = await coachGemini({
       model: useRuntimeConfig().geminiGradeModel as string,
       system: `你是${coach?.langLabel}${task.exam ? task.exam + " " : ""}評分官。依下列 rubric 評分學生作答。
 Rubric：${rubric}
@@ -72,7 +74,7 @@ Rubric：${rubric}
       json: true,
       temperature: 0.3,
       maxOutputTokens: 2048,
-    });
+    }, { usePaid: usePaid === true, userId: user.id, supabase });
     try {
       const p = parseJsonLoose(raw);
       band = typeof p.band === "number" ? p.band : null;

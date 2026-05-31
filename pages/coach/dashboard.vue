@@ -180,6 +180,39 @@
         <p class="text-[11px] text-gray-400 mt-2">L0 新詞 → L5 精熟（間隔複習依此排程）</p>
       </div>
 
+      <!-- API 用量 / 成本 -->
+      <div class="bg-white rounded-2xl border border-gray-100 p-5">
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="text-sm font-semibold text-gray-800">Gemini 用量與估計成本</h2>
+          <button @click="toggleTier" class="text-xs px-3 py-1 rounded-full border transition"
+            :class="usePaid ? 'bg-emerald-50 border-emerald-300 text-emerald-700' : 'bg-gray-50 border-gray-200 text-gray-500'">
+            目前：{{ usePaid ? '付費 key' : '免費 key' }}（點此切換）
+          </button>
+        </div>
+        <div v-if="usage" class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div class="bg-gray-50 rounded-xl p-3">
+            <div class="text-[11px] text-gray-400">今日請求數</div>
+            <div class="text-lg font-bold text-gray-800">{{ usage.today.all.requests }}</div>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-3">
+            <div class="text-[11px] text-gray-400">今日 token</div>
+            <div class="text-lg font-bold text-gray-800">{{ fmtTok(usage.today.all.totalTokens) }}</div>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-3">
+            <div class="text-[11px] text-gray-400">今日估計成本</div>
+            <div class="text-lg font-bold text-gray-800">NT${{ usage.today.all.costTwd.toFixed(2) }}</div>
+            <div class="text-[10px] text-gray-400">免費部分計 0</div>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-3">
+            <div class="text-[11px] text-gray-400">近 30 天付費成本</div>
+            <div class="text-lg font-bold text-gray-800">NT${{ usage.last30Paid.costTwd.toFixed(2) }}</div>
+          </div>
+        </div>
+        <p class="text-[11px] text-gray-400 mt-2">
+          成本為「token × 公開單價」的估計值（免費層計 0）；實際帳單以 Google Cloud Billing 為準。免費額度用完時會跳出提示，確認後改用付費 key。
+        </p>
+      </div>
+
       <div class="flex gap-3">
         <NuxtLink :to="`/coach/${language}`" class="flex-1 text-center py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-700 transition">繼續對話練習 →</NuxtLink>
         <button @click="showOnboard = true; loadFormFromProfile()" class="px-4 py-2.5 rounded-xl bg-white border border-gray-200 text-gray-600 text-sm hover:border-indigo-300 transition">調整目標</button>
@@ -193,8 +226,11 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue";
 import { authedFetch } from "~/composables/useAuthedFetch";
+import { useCoachAi } from "~/composables/useCoachAi";
 
 definePageMeta({ middleware: "coach-auth" });
+
+const { aiFetch, usePaid, ensureLoaded, setUsePaid } = useCoachAi();
 
 const CEFR = ["A1", "A2", "B1", "B2", "C1", "C2"];
 const INTEREST_PRESETS = ["哲學", "歷史", "神學", "文學", "語言學", "社會學", "政治學", "藝術史", "宗教研究", "古典學", "人類學", "心理學"];
@@ -240,15 +276,32 @@ function loadFormFromProfile() {
   form.value.interests = Array.isArray(p.interests) ? [...p.interests] : [];
 }
 
+const usage = ref<any>(null);
+
 async function load() {
   dash.value = null;
-  const d = await authedFetch<any>(`/api/lang/dashboard?language=${language.value}`);
+  await ensureLoaded();
+  const [d, u] = await Promise.all([
+    authedFetch<any>(`/api/lang/dashboard?language=${language.value}`),
+    authedFetch<any>("/api/lang/usage").catch(() => null),
+  ]);
   dash.value = d;
+  usage.value = u;
   lastAssessNote.value = d.levelHistory?.length ? d.levelHistory[d.levelHistory.length - 1].note || "" : "";
   if (!d.profile?.onboarded) {
     loadFormFromProfile();
     showOnboard.value = true;
   }
+}
+
+async function toggleTier() {
+  await setUsePaid(!usePaid.value);
+}
+
+function fmtTok(n: number) {
+  if (!n) return "0";
+  if (n >= 1000) return (n / 1000).toFixed(1) + "k";
+  return String(n);
 }
 
 async function saveOnboard() {
@@ -277,7 +330,7 @@ async function saveOnboard() {
 async function runAssess() {
   assessing.value = true;
   try {
-    const { assessment } = await authedFetch<any>("/api/lang/assess", {
+    const { assessment } = await aiFetch<any>("/api/lang/assess", {
       method: "POST",
       body: { language: language.value },
     });
