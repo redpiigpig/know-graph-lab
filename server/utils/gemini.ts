@@ -2,7 +2,8 @@
 // Gemini REST 呼叫共用工具（含 4 把 key 輪替 + quota 退避）
 // ============================================================================
 
-type Part = { text: string };
+// Part 可為文字或 fileData（如 YouTube URL：{ fileData: { fileUri, mimeType } }）
+type Part = { text: string } | { fileData: { fileUri: string; mimeType?: string } } | Record<string, any>;
 type Content = { role: "user" | "model"; parts: Part[] };
 
 export interface GeminiCallOpts {

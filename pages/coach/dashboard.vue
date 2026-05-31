@@ -166,9 +166,9 @@
       <div class="bg-white rounded-2xl border border-gray-100 p-5">
         <div class="flex items-center justify-between mb-3">
           <h2 class="text-sm font-semibold text-gray-800">單字庫</h2>
-          <div class="flex gap-4 text-xs">
+          <div class="flex items-center gap-4 text-xs">
             <span class="text-gray-500">總計 <b class="text-gray-800">{{ dash.vocab.total }}</b></span>
-            <span class="text-amber-600">今日待複習 <b>{{ dash.vocab.dueToday }}</b></span>
+            <NuxtLink to="/coach/review" class="px-2.5 py-1 rounded-lg bg-amber-50 text-amber-700 hover:bg-amber-100 transition">今日待複習 <b>{{ dash.vocab.dueToday }}</b> →</NuxtLink>
           </div>
         </div>
         <div class="flex items-end gap-1.5 h-16">
