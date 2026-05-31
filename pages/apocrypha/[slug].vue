@@ -206,12 +206,12 @@
             <section v-if="footnotesOnPage.length > 0" class="mt-8 pt-4 border-t-2 border-stone-300 text-xs leading-relaxed text-gray-700">
               <div class="font-semibold text-stone-700 mb-2">註釋</div>
               <ol class="space-y-1 list-none pl-0">
-                <li v-for="f in footnotesOnPage" :key="f.id" :id="`fn-${f.id}`">
-                  <a :href="`#fnref-${f.id}`" class="text-amber-700 hover:underline mr-1">{{ f.marker }}</a>
-                  <span class="text-gray-500 italic">（原書註釋編號 {{ f.marker }}，本書未在當頁附註釋全文）</span>
+                <li v-for="f in footnotesOnPage" :key="f.id" :id="`fn-${f.id}`" class="flex gap-2">
+                  <a :href="`#fnref-${f.id}`" class="text-amber-700 hover:underline shrink-0 font-mono font-semibold">{{ f.marker }}</a>
+                  <span v-if="f.def" class="text-gray-700">{{ f.def }}</span>
+                  <span v-else class="text-gray-400 italic">（編號 {{ f.marker }} 的註釋未抽到）</span>
                 </li>
               </ol>
-              <p class="mt-3 text-[10px] text-gray-400">註：典外文獻 PDF 來源把註釋集中放在卷末或下一頁；目前僅渲染上標標記，全文待後續 OCR pass。</p>
             </section>
 
             <!-- Bottom pagination -->
@@ -277,6 +277,7 @@ type Section = {
   page_number: number | null
   chapter: number | null
   byVersion: Record<string, string>
+  footnotesByVersion?: Record<string, Record<string, string>>
 }
 type DocRes = {
   document: ApocDoc & {
@@ -508,38 +509,48 @@ function textClassFor(code: string) {
   return ''
 }
 
-// ── Footnote extraction ────────────────────────────────────────────
-// Match Unicode superscript digits (¹²³⁴⁵⁶⁷⁸⁹⁰) — typical 黃根春 footnote markers.
+// ── Footnote extraction & rendering ──────────────────────────────
+// Unicode superscript digits map to ASCII for lookup in footnote_defs.
 const SUPERSCRIPT_RE = /([⁰¹²³⁴⁵⁶⁷⁸⁹]+)/g
+const SUPER_TO_ASCII: Record<string, string> = {
+  '⁰': '0', '¹': '1', '²': '2', '³': '3', '⁴': '4',
+  '⁵': '5', '⁶': '6', '⁷': '7', '⁸': '8', '⁹': '9',
+}
+function superToAscii(s: string): string {
+  return s.split('').map(c => SUPER_TO_ASCII[c] ?? c).join('')
+}
 
-type Footnote = { id: string; marker: string }
+type Footnote = { id: string; marker: string; def: string | null }
+
+// Collect footnotes from the 10 sections on this page, looking up definitions
+// from each section's footnote_defs (per version_code).
 const footnotesOnPage = computed<Footnote[]>(() => {
-  const seen = new Set<string>()
-  const out: Footnote[] = []
+  const seen = new Map<string, Footnote>()  // id → footnote
   for (const s of pagedSections.value) {
-    for (const text of Object.values(s.byVersion)) {
+    for (const [versionCode, text] of Object.entries(s.byVersion)) {
       const matches = text.match(SUPERSCRIPT_RE)
       if (!matches) continue
       for (const m of matches) {
-        const id = `${s.order_index}-${m}`
+        const marker_ascii = superToAscii(m)
+        const id = `${s.order_index}-${marker_ascii}`
         if (seen.has(id)) continue
-        seen.add(id)
-        out.push({ id, marker: m })
+        const defMap = s.footnotesByVersion?.[versionCode] ?? {}
+        const def = defMap[marker_ascii] ?? null
+        seen.set(id, { id, marker: m, def })
       }
     }
   }
-  return out
+  // Sort by section order then by numeric marker
+  return Array.from(seen.values()).sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }))
 })
 
 function renderWithFootnotes(text: string, sectionIdx: number): string {
-  // Escape HTML
   const esc = text
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-  // Wrap superscript markers as anchor links
   return esc.replace(SUPERSCRIPT_RE, (m) => {
-    const id = `${sectionIdx}-${m}`
+    const id = `${sectionIdx}-${superToAscii(m)}`
     return `<a href="#fn-${id}" id="fnref-${id}" class="text-amber-700 hover:underline">${m}</a>`
   })
 }

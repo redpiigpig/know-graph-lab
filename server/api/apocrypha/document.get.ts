@@ -20,20 +20,21 @@ export default defineEventHandler(async (event) => {
 
   let sectionsQuery = supabase
     .from('apocrypha_sections')
-    .select('order_index, version_code, text, section_label, page_number, chapter, source_chunk_id')
+    .select('order_index, version_code, text, section_label, page_number, chapter, source_chunk_id, footnote_defs')
     .eq('doc_slug', slug)
     .order('order_index', { ascending: true })
   if (pageFilter !== null) sectionsQuery = sectionsQuery.eq('page_number', pageFilter)
   const { data: sections, error: sErr } = await sectionsQuery.limit(5000)
   if (sErr) throw createError({ statusCode: 500, message: sErr.message })
 
-  // Group: { order_index → { byVersion: ..., section_label, page_number, chapter } }
+  // Group: { order_index → { byVersion, footnotesByVersion, section_label, page_number, chapter } }
   const byOrder = new Map<number, {
     order_index: number
     section_label: string | null
     page_number: number | null
     chapter: number | null
     byVersion: Record<string, string>
+    footnotesByVersion: Record<string, Record<string, string>>
   }>()
   for (const row of (sections ?? []) as any[]) {
     if (!byOrder.has(row.order_index)) {
@@ -43,9 +44,14 @@ export default defineEventHandler(async (event) => {
         page_number: row.page_number,
         chapter: row.chapter,
         byVersion: {},
+        footnotesByVersion: {},
       })
     }
-    byOrder.get(row.order_index)!.byVersion[row.version_code] = row.text
+    const entry = byOrder.get(row.order_index)!
+    entry.byVersion[row.version_code] = row.text
+    if (row.footnote_defs && typeof row.footnote_defs === 'object') {
+      entry.footnotesByVersion[row.version_code] = row.footnote_defs
+    }
   }
   const sectionsOut = Array.from(byOrder.values())
     .sort((a, b) => a.order_index - b.order_index)
