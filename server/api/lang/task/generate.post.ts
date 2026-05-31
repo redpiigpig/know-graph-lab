@@ -66,12 +66,11 @@ export default defineEventHandler(async (event) => {
   if (!coach) throw createError({ statusCode: 400, message: "不支援的語言" });
   if (![...SKILLS, "translation"].includes(skill)) throw createError({ statusCode: 400, message: "skill 不正確" });
 
-  const { data: profile } = await supabase
-    .from("lang_profile")
-    .select("goal_level, interests")
-    .eq("user_id", user.id)
-    .single();
-  const lv = profile?.goal_level || "C1";
+  const [{ data: profile }, { data: prog }] = await Promise.all([
+    supabase.from("lang_profile").select("interests").eq("user_id", user.id).single(),
+    supabase.from("lang_progress").select("level").eq("user_id", user.id).eq("language", language).single(),
+  ]);
+  const lv = prog?.level || coach.defaultLevel || "A1"; // 目前程度，難度貼合現況
   const interests = Array.isArray(profile?.interests) && profile!.interests.length ? profile!.interests.join("、") : "宗教研究／人文（宗教學、神話、哲學、歷史）";
   const isComprehension = skill === "reading" || skill === "listening";
 
@@ -80,7 +79,7 @@ export default defineEventHandler(async (event) => {
   let system: string;
   if (skill === "translation") {
     const fromTo = dir === "zh2target" ? `繁體中文 → ${coach.langLabel}` : `${coach.langLabel} → 繁體中文`;
-    system = `你是${coach.langLabel}翻譯練習出題老師。為 CEFR ${lv}、興趣為「${interests}」的學生出一題翻譯練習，方向：${fromTo}。
+    system = `你是${coach.langLabel}翻譯練習出題老師。為 ${lv} 程度、興趣為「${interests}」的學生出一題翻譯練習，方向：${fromTo}。
 只輸出 JSON：
 {
   "topic": "主題",
@@ -90,7 +89,7 @@ export default defineEventHandler(async (event) => {
 }
 題材以宗教／宗教學／人文為主。繁體中文不可簡體。`;
   } else {
-    system = `你是${coach.langLabel}${exam ? exam + " 考試" : "學術"}出題老師。為 CEFR ${lv}、興趣為「${interests}」的學生出一題。
+    system = `你是${coach.langLabel}${exam ? exam + " 考試" : "學術"}出題老師。為 ${lv} 程度、興趣為「${interests}」的學生出一題。
 題型：${taskBrief(exam, skill, taskType)}
 只輸出 JSON：
 {

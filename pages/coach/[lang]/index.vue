@@ -5,7 +5,7 @@
       <div class="w-px h-5 bg-gray-200" />
       <span class="text-xl">{{ coach?.emoji }}</span>
       <span class="text-sm font-semibold text-gray-900">{{ coach?.name }} · {{ coach?.langLabel }}</span>
-      <NuxtLink to="/coach/dashboard" class="ml-auto text-xs px-2.5 py-1 rounded-lg bg-white border border-gray-200 text-gray-600 hover:border-indigo-300 transition">📊 總儀表板</NuxtLink>
+      <NuxtLink :to="`/coach/${lang}/dashboard`" class="ml-auto text-xs px-2.5 py-1 rounded-lg bg-white border border-gray-200 text-gray-600 hover:border-indigo-300 transition">📊 總儀表板</NuxtLink>
     </nav>
 
     <div class="flex-1 p-5 max-w-4xl mx-auto w-full space-y-5">
@@ -50,12 +50,28 @@
       </div>
 
       <!-- 功能磚 -->
-      <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
-        <NuxtLink :to="`/coach/${lang}/chat`" class="tile">💬<span>對話</span></NuxtLink>
-        <NuxtLink :to="`/coach/${lang}/smalltalk`" class="tile">⏱️<span>限時聊</span></NuxtLink>
-        <NuxtLink to="/coach/practice" class="tile">🎯<span>技能/考試</span></NuxtLink>
-        <NuxtLink to="/coach/review" class="tile">🗂️<span>單字複習<small v-if="stats?.vocabDue">{{ stats.vocabDue }}</small></span></NuxtLink>
-        <NuxtLink to="/coach/immersion" class="tile">📺<span>內容沉浸</span></NuxtLink>
+      <!-- 聊天區 -->
+      <div>
+        <div class="text-xs font-semibold text-gray-400 mb-1.5">跟教練聊</div>
+        <div class="grid grid-cols-3 sm:grid-cols-5 gap-3">
+          <NuxtLink :to="`/coach/${lang}/chat`" class="tile">⌨️<span>打字聊天</span></NuxtLink>
+          <NuxtLink :to="`/coach/${lang}/chat?voice=1`" class="tile">🎙️<span>口說聊天</span></NuxtLink>
+          <NuxtLink :to="`/coach/${lang}/chat?mode=qa`" class="tile">💡<span>問答・知識</span></NuxtLink>
+          <NuxtLink :to="`/coach/${lang}/chat?mode=scenario`" class="tile">🎭<span>情境角色</span></NuxtLink>
+          <NuxtLink :to="`/coach/${lang}/smalltalk`" class="tile">⏱️<span>主題限時聊</span></NuxtLink>
+        </div>
+      </div>
+
+      <!-- 學習區 -->
+      <div>
+        <div class="text-xs font-semibold text-gray-400 mb-1.5">練習與工具</div>
+        <div class="grid grid-cols-3 sm:grid-cols-5 gap-3">
+          <NuxtLink :to="`/coach/${lang}/grammar`" class="tile">📚<span>文法課</span></NuxtLink>
+          <NuxtLink :to="`/coach/${lang}/practice`" class="tile">🎯<span>技能/考試</span></NuxtLink>
+          <NuxtLink :to="`/coach/${lang}/review`" class="tile">🗂️<span>單字複習<small v-if="stats?.vocabDue">{{ stats.vocabDue }}</small></span></NuxtLink>
+          <NuxtLink :to="`/coach/${lang}/immersion`" class="tile">📺<span>內容沉浸</span></NuxtLink>
+          <NuxtLink :to="`/coach/${lang}/dashboard`" class="tile">📊<span>儀表板</span></NuxtLink>
+        </div>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-5">
@@ -147,7 +163,7 @@ const hl = computed(() => (memory.value?.highlights ?? {}) as any);
 function routeFor(r: string) {
   if (r === "chat") return `/coach/${lang.value}/chat`;
   if (r === "smalltalk") return `/coach/${lang.value}/smalltalk`;
-  if (["practice", "review", "immersion"].includes(r)) return `/coach/${r}`;
+  if (["practice", "review", "immersion"].includes(r)) return `/coach/${lang.value}/${r}`;
   return `/coach/${lang.value}/chat`;
 }
 

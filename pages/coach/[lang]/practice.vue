@@ -1,13 +1,9 @@
 <template>
   <div class="flex flex-col bg-slate-50 min-h-dvh">
     <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 z-30">
-      <NuxtLink to="/coach" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
+      <NuxtLink :to="`/coach/${language}`" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
       <div class="w-px h-5 bg-gray-200" />
       <span class="text-sm font-semibold text-gray-900">技能練習 / 考試模擬</span>
-      <select v-model="language" class="ml-auto text-xs border border-gray-200 rounded-lg px-2 py-1">
-        <option value="en">英文</option>
-        <option value="ja">日文</option>
-      </select>
     </nav>
 
     <div class="flex-1 p-5 max-w-3xl mx-auto w-full space-y-5">
@@ -126,6 +122,7 @@
 
 <script setup lang="ts">
 import { ref, computed } from "vue";
+import { useRoute } from "vue-router";
 import { authedFetch } from "~/composables/useAuthedFetch";
 import { useSpeech } from "~/composables/useSpeech";
 import { useCoachAi } from "~/composables/useCoachAi";
@@ -143,7 +140,8 @@ const SKILLS = [
 const TTS_LANG: Record<string, string> = { en: "en-US", ja: "ja-JP" };
 
 const LANG_LABEL: Record<string, string> = { en: "英文", ja: "日文" };
-const language = ref("en");
+const route = useRoute();
+const language = computed(() => route.params.lang as string);
 const mode = ref<"practice" | "exam">("practice");
 const exam = ref("TOEFL");
 const skill = ref("reading");

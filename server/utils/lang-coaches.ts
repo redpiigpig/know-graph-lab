@@ -20,7 +20,15 @@ export interface Coach {
   systemPrompt: string;    // 教練人設 + 教學法 + 結構化輸出規則
   personas?: Persona[];    // 同一位教練的多種人格（聊天時自動輪替）
   smalltalkTopics?: string[]; // small-talk 限時練習的建議議題
+  scenarios?: string[];    // 情境角色扮演的情境清單
+  levelScale: string[];    // 程度量表（CEFR / JLPT / 初中進）
+  defaultLevel: string;    // 新學習者預設程度
 }
+
+// CEFR / JLPT / 古語言量表
+const CEFR = ["A1", "A2", "B1", "B2", "C1", "C2"];
+const JLPT = ["N5", "N4", "N3", "N2", "N1"];
+const ANCIENT = ["入門", "初級", "中級", "進階"];
 
 // 教練的「子人格」——讓對話有變化，也對應不同練習情境
 export interface Persona {
@@ -61,6 +69,8 @@ export const OUTPUT_CONTRACT = `
 const COACHES: Coach[] = [
   {
     language: "en",
+    levelScale: CEFR,
+    defaultLevel: "B2",
     enabled: true,
     name: "Emily",
     nameNative: "Emily",
@@ -97,6 +107,16 @@ const COACHES: Coach[] = [
       "遠距工作 vs 進辦公室",
       "最想造訪的一座宗教聖地",
     ],
+    scenarios: [
+      "向外國學者用英文介紹你的宗教研究",
+      "英文學術／研究職面試",
+      "在書店請店員推薦一本神學書",
+      "和一位無神論者禮貌地討論信仰",
+      "在研討會茶敘認識新朋友",
+      "向牧師／神父請教一個信仰問題",
+      "在咖啡廳點餐並和店員閒聊",
+      "打電話向圖書館預約查閱善本",
+    ],
     personas: [
       { key: "friend", label: "紐約閨蜜（閒聊）", emoji: "😄", instruction: "今天用最輕鬆的閒聊語氣，像紐約的好朋友在咖啡廳聊天，多用口語和俚語，氣氛放鬆。" },
       { key: "interviewer", label: "面試官", emoji: "💼", instruction: "今天扮演專業面試官，用正式商務英語提問，追問細節，最後給面試表現的回饋。" },
@@ -107,6 +127,8 @@ const COACHES: Coach[] = [
   },
   {
     language: "ja",
+    levelScale: JLPT,
+    defaultLevel: "N5",
     enabled: true,
     name: "櫻子",
     nameNative: "さくらこ",
@@ -125,9 +147,13 @@ const COACHES: Coach[] = [
 - new_vocab 的 reading 欄位請填「假名讀音」（必要時加羅馬拼音）。
 - 主題式教學：以宗教・神話・宗教学の話題を中心に（学生は宗教研究者），人文全般、たまに理工医・生活・旅行・試験頻出テーマも。
 - 適時出單字與作業（作文／翻譯／會話）。`,
+    smalltalkTopics: ["自己紹介", "好きな本や映画", "宗教と神話の話", "週末の過ごし方", "日本の祭りと信仰", "おすすめの聖地・寺社"],
+    scenarios: ["コンビニで買い物をする", "レストランで注文する", "駅で道をたずねる", "自己紹介をする", "ホテルでチェックインする", "お寺・神社でお参りの作法をきく"],
   },
   {
     language: "de",
+    levelScale: CEFR,
+    defaultLevel: "A1",
     enabled: false,
     name: "Lukas",
     nameNative: "Lukas",
@@ -142,6 +168,8 @@ const COACHES: Coach[] = [
   },
   {
     language: "fr",
+    levelScale: CEFR,
+    defaultLevel: "A1",
     enabled: false,
     name: "Camille",
     nameNative: "Camille",
@@ -156,6 +184,8 @@ const COACHES: Coach[] = [
   },
   {
     language: "la",
+    levelScale: ANCIENT,
+    defaultLevel: "入門",
     enabled: false,
     name: "Marcus",
     nameNative: "Marcus",
@@ -171,6 +201,8 @@ const COACHES: Coach[] = [
   },
   {
     language: "grc",
+    levelScale: ANCIENT,
+    defaultLevel: "入門",
     enabled: false,
     name: "Sophia",
     nameNative: "Σοφία",

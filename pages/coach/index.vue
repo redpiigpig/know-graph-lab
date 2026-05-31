@@ -8,34 +8,11 @@
 
     <div class="flex-1 px-6 py-10">
       <div class="max-w-4xl mx-auto">
-        <div class="mb-8 flex items-start justify-between gap-4">
-          <div>
-            <h1 class="text-2xl font-bold text-gray-900">選一位語言教練開始練習</h1>
-            <p class="text-sm text-gray-500 mt-1.5">
-              每位教練有專屬人設與獨立記憶庫。語音對話（麥克風即時轉文字 + 教練語音回覆）建議用 Chrome / Edge。
-            </p>
-          </div>
-          <NuxtLink to="/coach/dashboard" class="flex-shrink-0 text-sm px-4 py-2 rounded-xl bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition whitespace-nowrap">📊 學習儀表板</NuxtLink>
-        </div>
-
-        <!-- 功能工具列 -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
-          <NuxtLink to="/coach/review" class="flex items-center gap-2 bg-white border border-gray-200 rounded-xl px-3 py-2.5 hover:border-amber-300 transition">
-            <span class="text-xl">🗂️</span>
-            <div><div class="text-sm font-medium text-gray-800">單字複習</div><div class="text-[11px] text-gray-400">SRS 間隔複習</div></div>
-          </NuxtLink>
-          <NuxtLink to="/coach/practice" class="flex items-center gap-2 bg-white border border-gray-200 rounded-xl px-3 py-2.5 hover:border-emerald-300 transition">
-            <span class="text-xl">🎯</span>
-            <div><div class="text-sm font-medium text-gray-800">技能練習</div><div class="text-[11px] text-gray-400">聽說讀寫 / 考試</div></div>
-          </NuxtLink>
-          <NuxtLink to="/coach/immersion" class="flex items-center gap-2 bg-white border border-gray-200 rounded-xl px-3 py-2.5 hover:border-sky-300 transition">
-            <span class="text-xl">📺</span>
-            <div><div class="text-sm font-medium text-gray-800">內容沉浸</div><div class="text-[11px] text-gray-400">YouTube / 文章</div></div>
-          </NuxtLink>
-          <NuxtLink to="/coach/dashboard" class="flex items-center gap-2 bg-white border border-gray-200 rounded-xl px-3 py-2.5 hover:border-indigo-300 transition">
-            <span class="text-xl">📊</span>
-            <div><div class="text-sm font-medium text-gray-800">儀表板</div><div class="text-[11px] text-gray-400">進度 / 目標</div></div>
-          </NuxtLink>
+        <div class="mb-8">
+          <h1 class="text-2xl font-bold text-gray-900">選一個語言，進入專屬學習空間</h1>
+          <p class="text-sm text-gray-500 mt-1.5">
+            每個語言有獨立的首頁、儀表板、記憶庫與所有功能。語音對話建議用 Chrome / Edge。
+          </p>
         </div>
 
         <div v-if="loading" class="text-gray-400 text-sm">載入中…</div>

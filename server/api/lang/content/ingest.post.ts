@@ -24,14 +24,15 @@ export default defineEventHandler(async (event) => {
   if (sourceType === "youtube" && !url?.trim()) throw createError({ statusCode: 400, message: "請提供 YouTube 網址" });
   if (sourceType === "article" && !text?.trim()) throw createError({ statusCode: 400, message: "請貼上文章內容" });
 
-  const { data: profile } = await supabase
-    .from("lang_profile")
-    .select("goal_level, interests")
+  const { data: prog } = await supabase
+    .from("lang_progress")
+    .select("level")
     .eq("user_id", user.id)
+    .eq("language", language)
     .single();
-  const lv = profile?.goal_level || "C1";
+  const lv = prog?.level || coach.defaultLevel || "A1";
 
-  const system = `你是${coach.langLabel}學術內容導讀老師，服務一位 CEFR ${lv}、主修人文的學生。
+  const system = `你是${coach.langLabel}內容導讀老師，服務一位「${lv}」程度、做宗教研究的學生。
 分析以下${sourceType === "youtube" ? "YouTube 影片" : "文章"}，只輸出 JSON：
 {
   "title": "內容標題（${coach.langLabel}）",

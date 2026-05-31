@@ -1,13 +1,9 @@
 <template>
   <div class="flex flex-col bg-slate-50 min-h-dvh">
     <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 z-30">
-      <NuxtLink to="/coach" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
+      <NuxtLink :to="`/coach/${language}`" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
       <div class="w-px h-5 bg-gray-200" />
       <span class="text-sm font-semibold text-gray-900">學習儀表板</span>
-      <select v-model="language" @change="load" class="ml-auto text-xs border border-gray-200 rounded-lg px-2 py-1">
-        <option value="en">英文</option>
-        <option value="ja">日文</option>
-      </select>
     </nav>
 
     <!-- Onboarding -->
@@ -21,11 +17,11 @@
             <label class="text-xs font-semibold text-gray-600">目前程度 → 目標程度</label>
             <div class="flex items-center gap-2 mt-1">
               <select v-model="form.current_level" class="flex-1 border border-gray-200 rounded-lg px-3 py-2 text-sm">
-                <option v-for="l in CEFR" :key="l" :value="l">{{ l }}</option>
+                <option v-for="l in levelScale" :key="l" :value="l">{{ l }}</option>
               </select>
               <span class="text-gray-400">→</span>
               <select v-model="form.goal_level" class="flex-1 border border-gray-200 rounded-lg px-3 py-2 text-sm">
-                <option v-for="l in CEFR" :key="l" :value="l">{{ l }}</option>
+                <option v-for="l in levelScale" :key="l" :value="l">{{ l }}</option>
               </select>
             </div>
           </div>
@@ -168,7 +164,7 @@
           <h2 class="text-sm font-semibold text-gray-800">單字庫</h2>
           <div class="flex items-center gap-4 text-xs">
             <span class="text-gray-500">總計 <b class="text-gray-800">{{ dash.vocab.total }}</b></span>
-            <NuxtLink to="/coach/review" class="px-2.5 py-1 rounded-lg bg-amber-50 text-amber-700 hover:bg-amber-100 transition">今日待複習 <b>{{ dash.vocab.dueToday }}</b> →</NuxtLink>
+            <NuxtLink :to="`/coach/${language}/review`" class="px-2.5 py-1 rounded-lg bg-amber-50 text-amber-700 hover:bg-amber-100 transition">今日待複習 <b>{{ dash.vocab.dueToday }}</b> →</NuxtLink>
           </div>
         </div>
         <div class="flex items-end gap-1.5 h-16">
@@ -225,6 +221,7 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue";
+import { useRoute } from "vue-router";
 import { authedFetch } from "~/composables/useAuthedFetch";
 import { useCoachAi } from "~/composables/useCoachAi";
 
@@ -233,6 +230,7 @@ definePageMeta({ middleware: "coach-auth" });
 const { aiFetch, usePaid, ensureLoaded, setUsePaid } = useCoachAi();
 
 const CEFR = ["A1", "A2", "B1", "B2", "C1", "C2"];
+const levelScale = ref<string[]>(CEFR);
 const INTEREST_PRESETS = ["哲學", "歷史", "神學", "文學", "語言學", "社會學", "政治學", "藝術史", "宗教研究", "古典學", "人類學", "心理學"];
 const SKILL_META = [
   { key: "listening", label: "聽", color: "bg-sky-400" },
@@ -242,7 +240,8 @@ const SKILL_META = [
 ];
 const CEFR_NUM: Record<string, number> = { A1: 20, A2: 35, B1: 50, B2: 65, C1: 80, C2: 95 };
 
-const language = ref("en");
+const route = useRoute();
+const language = computed(() => route.params.lang as string);
 const dash = ref<any>(null);
 const showOnboard = ref(false);
 const saving = ref(false);
@@ -278,9 +277,23 @@ function loadFormFromProfile() {
 
 const usage = ref<any>(null);
 
+const usageLoaded = ref(false);
+
+async function loadScale() {
+  try {
+    const { coaches } = await $fetch<{ coaches: any[] }>("/api/lang/coaches");
+    const c = coaches.find((x) => x.language === language.value);
+    if (c?.levelScale?.length) {
+      levelScale.value = c.levelScale;
+      if (!form.value.current_level || !c.levelScale.includes(form.value.current_level)) form.value.current_level = c.defaultLevel;
+      if (!c.levelScale.includes(form.value.goal_level)) form.value.goal_level = c.levelScale[c.levelScale.length - 1];
+    }
+  } catch { /* ignore */ }
+}
+
 async function load() {
   dash.value = null;
-  await ensureLoaded();
+  await Promise.all([ensureLoaded(), loadScale()]);
   const [d, u] = await Promise.all([
     authedFetch<any>(`/api/lang/dashboard?language=${language.value}`),
     authedFetch<any>("/api/lang/usage").catch(() => null),
@@ -319,7 +332,11 @@ async function saveOnboard() {
         onboarded: true,
       },
     });
-    // 把「目前程度」記成一筆等級歷史起點
+    // 設定目前程度（決定每日練習難度）
+    await authedFetch("/api/lang/progress", {
+      method: "PUT",
+      body: { language: language.value, level: form.value.current_level },
+    }).catch(() => {});
     showOnboard.value = false;
     await load();
   } finally {

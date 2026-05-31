@@ -14,30 +14,33 @@ const WINDOW = 12; // 保留最近 12 則進 context（更早的壓進 session.s
 export default defineEventHandler(async (event) => {
   const user = await requireAuth(event);
   const supabase = getAdminClient();
-  const { language, sessionId, message, usePaid } = (await readBody(event)) as {
+  const { language, sessionId, message, usePaid, mode: reqMode } = (await readBody(event)) as {
     language: string;
     sessionId?: string;
     message: string;
     usePaid?: boolean;
+    mode?: string; // free / qa / scenario（新對話用）
   };
 
   if (!message?.trim()) throw createError({ statusCode: 400, message: "訊息不可為空" });
   const coach = getCoach(language);
   if (!coach || !coach.enabled) throw createError({ statusCode: 400, message: "不支援的語言" });
 
-  // 1. 取得或建立 session（含人格）
+  // 1. 取得或建立 session（含人格 + 模式）
   let sid = sessionId;
   let summary = "";
   let personaKey: string | null = null;
+  let chatMode = ["free", "qa", "scenario"].includes(reqMode || "") ? reqMode! : "free";
   if (sid) {
     const { data: s } = await supabase
       .from("lang_sessions")
-      .select("id, summary, user_id, persona")
+      .select("id, summary, user_id, persona, mode")
       .eq("id", sid)
       .single();
     if (!s || s.user_id !== user.id) throw createError({ statusCode: 404, message: "找不到對話" });
     summary = s.summary ?? "";
     personaKey = s.persona ?? null;
+    if (s.mode) chatMode = s.mode;
   } else {
     // 新對話：依既有 session 數輪替挑一個人格（自動切換）
     const { count } = await supabase
@@ -49,7 +52,7 @@ export default defineEventHandler(async (event) => {
     personaKey = persona?.key ?? null;
     const { data: s, error } = await supabase
       .from("lang_sessions")
-      .insert({ user_id: user.id, language, title: null, persona: personaKey, mode: "chat" })
+      .insert({ user_id: user.id, language, title: null, persona: personaKey, mode: chatMode })
       .select("id")
       .single();
     if (error || !s) throw createError({ statusCode: 500, message: "建立對話失敗" });
@@ -81,8 +84,17 @@ export default defineEventHandler(async (event) => {
   }));
   contents.push({ role: "user" as const, parts: [{ text: message }] });
 
+  const modeInstr =
+    chatMode === "qa"
+      ? `【模式：問答・知識】學生會問你知識性問題（尤其宗教／宗教學／人文）。請像一位博學的助教，用${coach.langLabel}給清楚、有深度、正確的解說（可分點），reply 要資訊豐富；translation 給繁中對照。這個模式以「把知識講清楚」為主，corrections 通常留空，但你可以在最後附一個用字/表達的小提醒。`
+      : chatMode === "scenario"
+        ? `【模式：情境角色扮演】你要和學生進行角色扮演。依學生訊息設定的情境，你扮演對方角色（店員／面試官／神職人員／對話者…），保持角色、推進情境，自然對話。仍即時溫和糾正學生的錯誤（放 corrections）。`
+        : "";
+
   const system = `${coach.systemPrompt}\n\n${
-    persona ? `【今日人格】${persona.label}：${persona.instruction}\n\n` : ""
+    modeInstr ? modeInstr + "\n\n" : ""
+  }${
+    persona && chatMode === "free" ? `【今日人格】${persona.label}：${persona.instruction}\n\n` : ""
   }${
     memRow?.memory ? `【你對這位學生的長期了解】\n${memRow.memory}\n\n` : ""
   }${

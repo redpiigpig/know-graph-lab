@@ -22,18 +22,18 @@ export default defineEventHandler(async (event) => {
   if (!theme?.trim()) throw createError({ statusCode: 400, message: "請提供主題" });
   const n = Math.min(30, Math.max(5, count || 15));
 
-  // 帶入使用者程度與興趣
-  const { data: profile } = await supabase
-    .from("lang_profile")
-    .select("goal_level, interests")
-    .eq("user_id", user.id)
-    .single();
-  const lv = level || profile?.goal_level || "C1";
+  // 帶入使用者「目前程度」（不是目標）與興趣 → 難度貼合現況、逐步提升
+  const [{ data: profile }, { data: prog }] = await Promise.all([
+    supabase.from("lang_profile").select("interests").eq("user_id", user.id).single(),
+    supabase.from("lang_progress").select("level").eq("user_id", user.id).eq("language", language).single(),
+  ]);
+  const lv = level || prog?.level || coach.defaultLevel || "A1";
 
+  const beginner = ["A1", "A2", "N5", "N4", "入門", "初級"].includes(lv);
   const raw = await coachGemini({
-    system: `你是${coach.langLabel}學術詞彙老師，為 CEFR ${lv} 程度、主修人文領域的學生挑選單字。
+    system: `你是${coach.langLabel}詞彙老師，為「${lv}」程度的學生挑選單字（學生做宗教研究）。
 只輸出 JSON：{ "words": [ { "word": "", "reading": "音標/假名（無則空字串）", "meaning": "繁體中文釋義", "example": "${coach.langLabel}例句", "part_of_speech": "詞性" } ] }
-要求：挑 ${n} 個符合主題且該程度該學的字；避免太初級；繁體中文，不可簡體。`,
+要求：挑 ${n} 個符合主題且**剛好貼合 ${lv} 程度**該學的字。${beginner ? "這是初學者，請給基礎、高頻、日常／入門的常用字，不要太難。" : "可包含該程度的學術詞彙，但不要超綱太多。"}繁體中文，不可簡體。`,
     contents: [{ role: "user", parts: [{ text: `主題：${theme}` }] }],
     json: true,
     temperature: 0.6,

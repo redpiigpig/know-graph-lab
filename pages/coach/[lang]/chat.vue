@@ -53,9 +53,19 @@
           <!-- 歡迎 -->
           <div v-if="!messages.length && !sending" class="max-w-md mx-auto text-center mt-10">
             <div class="text-5xl mb-3">{{ coach?.emoji }}</div>
-            <div class="font-semibold text-gray-800">{{ coach?.name }}</div>
+            <div class="font-semibold text-gray-800">{{ coach?.name }} <span class="text-xs font-normal text-violet-600">· {{ modeLabel }}</span></div>
             <p class="text-sm text-gray-500 mt-2">{{ coach?.blurb }}</p>
-            <p class="text-xs text-gray-400 mt-3">用文字或麥克風跟我打招呼，我會用{{ coach?.langLabel }}陪你練習、隨時改錯、記新單字、出作業。</p>
+
+            <!-- 情境角色扮演：選一個情境 -->
+            <div v-if="mode === 'scenario'" class="mt-4">
+              <p class="text-xs text-gray-400 mb-2">選一個情境，教練扮演對方角色：</p>
+              <div class="flex flex-wrap gap-1.5 justify-center">
+                <button v-for="s in coach?.scenarios || []" :key="s" @click="startScenario(s)" class="text-xs px-2.5 py-1 rounded-full border border-violet-200 text-violet-700 bg-violet-50 hover:bg-violet-100 transition">{{ s }}</button>
+              </div>
+              <p class="text-[11px] text-gray-300 mt-2">或直接在下方輸入你想練的情境</p>
+            </div>
+            <p v-else-if="mode === 'qa'" class="text-xs text-gray-400 mt-3">問我任何問題（宗教／神話／宗教學／人文皆可），我用{{ coach?.langLabel }}講給你聽、附繁中對照。</p>
+            <p v-else class="text-xs text-gray-400 mt-3">用{{ voiceMode ? '麥克風' : '文字' }}跟我打招呼，我會用{{ coach?.langLabel }}陪你練習、隨時改錯、記新單字、出作業。</p>
           </div>
 
           <div v-for="(m, i) in messages" :key="m.id || i" class="flex" :class="m.role === 'user' ? 'justify-end' : 'justify-start'">
@@ -194,6 +204,12 @@ const tracker = useActivityTracker();
 const { aiFetch } = useCoachAi();
 const route = useRoute();
 const lang = computed(() => route.params.lang as string);
+const mode = computed(() => {
+  const m = route.query.mode as string;
+  return ["free", "qa", "scenario"].includes(m) ? m : "free";
+});
+const voiceMode = computed(() => route.query.voice === "1");
+const modeLabel = computed(() => ({ free: "自由聊", qa: "問答・知識", scenario: "情境角色扮演" } as any)[mode.value] || "自由聊");
 
 const persona = ref<any>(null);
 const elapsed = computed(() => {
@@ -211,8 +227,13 @@ const homework = ref<any[]>([]);
 const input = ref("");
 const sending = ref(false);
 const panel = ref<"vocab" | "homework">("vocab");
-const autoSpeak = ref(true);
+const autoSpeak = ref(false);
 const msgArea = ref<HTMLElement | null>(null);
+
+function startScenario(s: string) {
+  input.value = `我想練習這個情境：「${s}」。請你扮演對方角色，先用${coach.value?.langLabel || ''}開場。`;
+  send();
+}
 
 const speech = useSpeech();
 const sttSupported = speech.supported;
@@ -274,7 +295,7 @@ async function send() {
   try {
     const res = await aiFetch<any>("/api/lang/chat", {
       method: "POST",
-      body: { language: lang.value, sessionId: sessionId.value, message: text },
+      body: { language: lang.value, sessionId: sessionId.value, message: text, mode: mode.value },
     });
     sessionId.value = res.sessionId;
     if (res.persona) persona.value = res.persona;
@@ -353,7 +374,8 @@ watch(lang, async () => {
 });
 
 onMounted(async () => {
-  // 對話練習時間記為「說」技能（會話練習）
+  // 語音模式自動朗讀；對話練習時間記為「說」技能
+  autoSpeak.value = voiceMode.value;
   tracker.start(lang.value, "speaking", "chat");
   await Promise.all([loadCoachMeta(), loadSessions(), loadVocab(), loadHomework()]);
 });

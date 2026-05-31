@@ -1,13 +1,9 @@
 <template>
   <div class="flex flex-col bg-slate-50 min-h-dvh">
     <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 z-30">
-      <NuxtLink to="/coach/dashboard" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
+      <NuxtLink :to="`/coach/${language}`" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
       <div class="w-px h-5 bg-gray-200" />
       <span class="text-sm font-semibold text-gray-900">單字複習</span>
-      <select v-model="language" @change="reload" class="ml-auto text-xs border border-gray-200 rounded-lg px-2 py-1">
-        <option value="en">英文</option>
-        <option value="ja">日文</option>
-      </select>
     </nav>
 
     <div class="flex-1 p-5 max-w-2xl mx-auto w-full">
@@ -62,6 +58,7 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue";
+import { useRoute } from "vue-router";
 import { authedFetch } from "~/composables/useAuthedFetch";
 import { useSpeech } from "~/composables/useSpeech";
 import { useCoachAi } from "~/composables/useCoachAi";
@@ -73,7 +70,8 @@ const { aiFetch } = useCoachAi();
 const PRESETS = ["AWL Sublist 1", "GRE 高頻字", "哲學學術用語", "歷史學術用語", "神學術語", "文學批評術語", "學術寫作連接詞"];
 const TTS_LANG: Record<string, string> = { en: "en-US", ja: "ja-JP" };
 
-const language = ref("en");
+const route = useRoute();
+const language = computed(() => route.params.lang as string);
 const queue = ref<any[]>([]);
 const revealed = ref(false);
 const reviewed = ref(0);
