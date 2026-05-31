@@ -20,6 +20,7 @@
         >
           🔊 自動朗讀
         </button>
+        <NuxtLink to="/coach/dashboard" class="text-xs px-2.5 py-1 rounded-lg bg-white border border-gray-200 text-gray-600 hover:border-indigo-300 transition">📊 儀表板</NuxtLink>
         <button @click="newSession" class="text-xs px-2.5 py-1 rounded-lg bg-white border border-gray-200 text-gray-600 hover:border-indigo-300 transition">＋ 新對話</button>
       </div>
     </nav>
@@ -181,9 +182,11 @@ import { ref, computed, onMounted, nextTick, watch } from "vue";
 import { useRoute } from "vue-router";
 import { authedFetch } from "~/composables/useAuthedFetch";
 import { useSpeech } from "~/composables/useSpeech";
+import { useActivityTracker } from "~/composables/useActivityTracker";
 
-definePageMeta({ middleware: "auth" });
+definePageMeta({ middleware: "coach-auth" });
 
+const tracker = useActivityTracker();
 const route = useRoute();
 const lang = computed(() => route.params.lang as string);
 
@@ -330,10 +333,14 @@ async function submitHw(h: any) {
 
 watch(lang, async () => {
   newSession();
+  await tracker.stop();
+  tracker.start(lang.value, "speaking", "chat");
   await Promise.all([loadCoachMeta(), loadSessions(), loadVocab(), loadHomework()]);
 });
 
 onMounted(async () => {
+  // 對話練習時間記為「說」技能（會話練習）
+  tracker.start(lang.value, "speaking", "chat");
   await Promise.all([loadCoachMeta(), loadSessions(), loadVocab(), loadHomework()]);
 });
 </script>

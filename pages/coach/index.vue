@@ -8,11 +8,14 @@
 
     <div class="flex-1 px-6 py-10">
       <div class="max-w-4xl mx-auto">
-        <div class="mb-8">
-          <h1 class="text-2xl font-bold text-gray-900">選一位語言教練開始練習</h1>
-          <p class="text-sm text-gray-500 mt-1.5">
-            每位教練有專屬人設與獨立記憶庫。語音對話（麥克風即時轉文字 + 教練語音回覆）建議用 Chrome / Edge。
-          </p>
+        <div class="mb-8 flex items-start justify-between gap-4">
+          <div>
+            <h1 class="text-2xl font-bold text-gray-900">選一位語言教練開始練習</h1>
+            <p class="text-sm text-gray-500 mt-1.5">
+              每位教練有專屬人設與獨立記憶庫。語音對話（麥克風即時轉文字 + 教練語音回覆）建議用 Chrome / Edge。
+            </p>
+          </div>
+          <NuxtLink to="/coach/dashboard" class="flex-shrink-0 text-sm px-4 py-2 rounded-xl bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition whitespace-nowrap">📊 學習儀表板</NuxtLink>
         </div>
 
         <div v-if="loading" class="text-gray-400 text-sm">載入中…</div>
@@ -57,7 +60,7 @@
 import { ref, onMounted } from "vue";
 import { authedFetch } from "~/composables/useAuthedFetch";
 
-definePageMeta({ middleware: "auth" });
+definePageMeta({ middleware: "coach-auth" });
 
 const coaches = ref<any[]>([]);
 const progressMap = ref<Record<string, any>>({});

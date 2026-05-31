@@ -342,6 +342,9 @@ const loading = ref(false);
 const error = ref("");
 const success = ref("");
 
+const supabase = useSupabaseClient();
+const config = useRuntimeConfig();
+
 async function handleSignup() {
   loading.value = true;
   error.value = "";
@@ -367,25 +370,30 @@ async function handleSignup() {
   }
 
   try {
-    // 呼叫自訂註冊 API
-    const response = await $fetch("/api/auth/signup", {
-      method: "POST",
-      body: {
-        email: formData.value.email,
-        password: formData.value.password,
-        displayName: formData.value.displayName,
-        academicFields:
-          formData.value.academicFields.length > 0
-            ? formData.value.academicFields
-            : null,
-        ageRange: formData.value.ageRange || null,
+    // Supabase 原生註冊；個人資料存進 user metadata（之後寫入 lang_profile）
+    const { data, error: e } = await supabase.auth.signUp({
+      email: formData.value.email,
+      password: formData.value.password,
+      options: {
+        emailRedirectTo: `${config.public.appUrl}/coach`,
+        data: {
+          display_name: formData.value.displayName,
+          academic_fields: formData.value.academicFields,
+          age_range: formData.value.ageRange || null,
+        },
       },
     });
+    if (e) throw e;
+
+    if (data.session) {
+      // 未開啟 email 驗證 → 直接登入，前往儀表板做 onboarding
+      await navigateTo("/coach/dashboard");
+      return;
+    }
 
     success.value =
-      "註冊成功！我們已發送驗證郵件到你的信箱，請點擊郵件中的連結以啟用帳號。";
+      "註冊成功！我們已寄出驗證信到你的信箱，請點擊信中連結啟用帳號，之後即可登入使用語言教練。";
 
-    // 清空表單
     formData.value = {
       email: "",
       displayName: "",
@@ -396,7 +404,7 @@ async function handleSignup() {
       agreedToTerms: false,
     };
   } catch (err: any) {
-    error.value = err.data?.message || "註冊失敗，請稍後再試";
+    error.value = err?.message || err?.data?.message || "註冊失敗，請稍後再試";
   } finally {
     loading.value = false;
   }

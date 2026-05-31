@@ -8,11 +8,9 @@ export default defineNuxtRouteMiddleware((to) => {
     return navigateTo("/login");
   }
 
-  // email 已知且不符合白名單 → 登出
+  // email 已知且不符合白名單 → 這是站長專屬的 lab 工具，非站長導去語言教練（不登出，保留其 session）
   // 注意：email 可能尚未載入（undefined），此時跳過檢查避免誤踢
   if (allowedEmail && user.value.email && user.value.email !== allowedEmail) {
-    const supabase = useSupabaseClient();
-    supabase.auth.signOut(); // 不 await，避免 async middleware 問題
-    return navigateTo("/login");
+    return navigateTo("/coach");
   }
 });
