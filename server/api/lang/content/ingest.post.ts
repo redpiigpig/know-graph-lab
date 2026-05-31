@@ -39,7 +39,7 @@ export default defineEventHandler(async (event) => {
   "outline": ["重點1","重點2","重點3"],
   "questions": [ { "q": "${coach.langLabel}理解問題", "answer": "參考答案要點（繁中）" } ],
   "vocab": [ { "word": "", "reading": "", "meaning": "繁中釋義", "example": "" } ],
-  "discussion": ["可與教練深入討論/辯論的開放題（${coach.langLabel}）"]
+  "discussion": ["可與教練深入討論/辯論的開放題（${coach.langLabel}）"]${sourceType === "youtube" ? ',\n  "duration_minutes": 影片的實際長度（分鐘，整數，盡量準確）' : ""}
 }
 要求：questions 3–5 題、vocab 挑 6–10 個該程度學術單字、discussion 2–3 題。繁體中文不可簡體。`;
 
@@ -107,5 +107,33 @@ export default defineEventHandler(async (event) => {
     .select("*")
     .single();
 
-  return { content: saved };
+  // YouTube：把影片時長算進「聽力」時間（你說「今天看了這個」，整部片長計入）
+  let watchedMinutes = 0;
+  if (sourceType === "youtube") {
+    watchedMinutes = Math.max(0, Math.round(Number(analysis.duration_minutes) || 0));
+    if (watchedMinutes > 0) {
+      await supabase.from("lang_activity").insert({
+        user_id: user.id,
+        language,
+        skill: "listening",
+        minutes: watchedMinutes,
+        source: "youtube",
+        detail: analysis.title ?? null,
+      });
+      // 更新最後活躍 + 累計（streak 由 activity 端點/其他流程維護，這裡補時間）
+      const today = new Date().toISOString().slice(0, 10);
+      const { data: prog } = await supabase
+        .from("lang_progress")
+        .select("total_minutes")
+        .eq("user_id", user.id)
+        .eq("language", language)
+        .single();
+      await supabase.from("lang_progress").upsert(
+        { user_id: user.id, language, last_active: today, total_minutes: Math.round(((prog?.total_minutes || 0) + watchedMinutes) * 100) / 100, updated_at: new Date().toISOString() },
+        { onConflict: "user_id,language" }
+      );
+    }
+  }
+
+  return { content: saved, watchedMinutes };
 });

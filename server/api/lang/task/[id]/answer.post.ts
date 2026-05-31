@@ -61,8 +61,36 @@ export default defineEventHandler(async (event) => {
     band = Math.round((correct / total) * 100);
     scores = { correct_count: correct, total, detail };
     feedback = `答對 ${correct}/${total} 題。`;
+  } else if (task.skill === "translation") {
+    // 翻譯遊戲評分
+    if (!response?.trim()) throw createError({ statusCode: 400, message: "請先作答" });
+    const src = task.materials?.source_text ?? "";
+    const toZh = task.materials?.direction === "target2zh";
+    const raw = await coachGemini({
+      model: useRuntimeConfig().geminiGradeModel as string,
+      system: `你是${coach?.langLabel}翻譯評分老師。評學生的翻譯（方向：${toZh ? coach?.langLabel + "→繁中" : "繁中→" + coach?.langLabel}）。
+只輸出 JSON：{
+  "band": 0-100 總分,
+  "scores": { "accuracy": 0-100, "fluency": 0-100, "register": 0-100 },
+  "model_translation": "你的參考翻譯（${toZh ? "繁體中文" : coach?.langLabel}）",
+  "feedback": "繁體中文回饋：翻得好的地方、誤譯/不自然處（舉原句）、更道地的說法"
+}
+繁體中文不可簡體。`,
+      contents: [{ role: "user", parts: [{ text: `【原文】\n${src}\n\n【學生翻譯】\n${response}` }] }],
+      json: true,
+      temperature: 0.3,
+      maxOutputTokens: 2048,
+    }, { usePaid: usePaid === true, userId: user.id, supabase });
+    try {
+      const p = parseJsonLoose(raw);
+      band = typeof p.band === "number" ? p.band : null;
+      scores = p.scores ?? {};
+      feedback = (p.feedback ?? "") + (p.model_translation ? `\n\n📝 參考翻譯：${p.model_translation}` : "");
+    } catch {
+      feedback = raw;
+    }
   } else {
-    // 產出型 → Gemini Pro rubric 評分
+    // 產出型 → Gemini rubric 評分
     if (!response?.trim()) throw createError({ statusCode: 400, message: "請先作答" });
     const rubric = rubricFor(task.exam, task.skill);
     const raw = await coachGemini({
@@ -100,14 +128,15 @@ Rubric：${rubric}
     .select("*")
     .single();
 
-  // 記錄練習時間
+  // 記錄練習時間（翻譯歸入「寫」技能統計）
   const mins = Math.max(0.5, Number(minutes) || 0);
+  const activitySkill = task.skill === "translation" ? "writing" : task.skill;
   await supabase.from("lang_activity").insert({
     user_id: user.id,
     language: task.language,
-    skill: task.skill,
+    skill: activitySkill,
     minutes: Math.round(mins * 100) / 100,
-    source: task.mode === "exam" ? "exam" : "practice",
+    source: task.mode === "exam" ? "exam" : task.skill === "translation" ? "translation" : "practice",
     detail: task.topic,
   });
   // 更新 streak/last_active

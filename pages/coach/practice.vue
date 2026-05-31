@@ -26,13 +26,20 @@
         </div>
 
         <label class="text-xs font-semibold text-gray-500">技能</label>
-        <div class="grid grid-cols-4 gap-2 mt-1">
+        <div class="grid grid-cols-5 gap-2 mt-1">
           <button v-for="s in SKILLS" :key="s.key" @click="skill = s.key" class="py-2 rounded-xl border text-sm transition" :class="skill === s.key ? 'bg-indigo-50 border-indigo-300 text-indigo-700' : 'border-gray-200 text-gray-500'">
             {{ s.icon }} {{ s.label }}
           </button>
+          <button @click="skill = 'translation'" class="py-2 rounded-xl border text-sm transition" :class="skill === 'translation' ? 'bg-indigo-50 border-indigo-300 text-indigo-700' : 'border-gray-200 text-gray-500'">🔄 翻譯</button>
         </div>
 
-        <input v-model="topic" placeholder="（選填）指定主題，如：康德的義務論 / 文藝復興" class="w-full mt-3 px-3 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-indigo-400" />
+        <!-- 翻譯方向 -->
+        <div v-if="skill === 'translation'" class="mt-2 flex gap-2">
+          <button @click="direction = 'zh2target'" class="text-xs px-3 py-1.5 rounded-lg border transition" :class="direction === 'zh2target' ? 'bg-violet-50 border-violet-300 text-violet-700' : 'border-gray-200 text-gray-500'">中 → 外</button>
+          <button @click="direction = 'target2zh'" class="text-xs px-3 py-1.5 rounded-lg border transition" :class="direction === 'target2zh' ? 'bg-violet-50 border-violet-300 text-violet-700' : 'border-gray-200 text-gray-500'">外 → 中</button>
+        </div>
+
+        <input v-model="topic" placeholder="（選填）指定主題，如：奧古斯丁的恩典觀 / 創世神話" class="w-full mt-3 px-3 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-indigo-400" />
 
         <button @click="generate" :disabled="generating || (mode === 'exam' && !exam)" class="mt-3 w-full py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-semibold disabled:opacity-40 hover:bg-indigo-700 transition">
           {{ generating ? '出題中…' : '出一題' }}
@@ -54,6 +61,12 @@
 
         <!-- 閱讀：顯示短文 -->
         <div v-if="task.skill === 'reading' && task.materials.passage" class="bg-amber-50/50 rounded-xl p-4 text-sm leading-relaxed text-gray-800 whitespace-pre-wrap">{{ task.materials.passage }}</div>
+
+        <!-- 翻譯：顯示原文 -->
+        <div v-if="task.skill === 'translation' && task.materials.source_text" class="bg-violet-50/50 rounded-xl p-4">
+          <div class="text-[11px] text-violet-500 mb-1">{{ task.materials.direction === 'target2zh' ? '把下面這段翻成繁體中文' : '把下面這段翻成' + (coachLabel) }}</div>
+          <div class="text-sm leading-relaxed text-gray-800 whitespace-pre-wrap">{{ task.materials.source_text }}</div>
+        </div>
 
         <!-- 題目本體 -->
         <div class="text-sm text-gray-800 whitespace-pre-wrap font-medium">{{ task.prompt }}</div>
@@ -129,10 +142,12 @@ const SKILLS = [
 ];
 const TTS_LANG: Record<string, string> = { en: "en-US", ja: "ja-JP" };
 
+const LANG_LABEL: Record<string, string> = { en: "英文", ja: "日文" };
 const language = ref("en");
 const mode = ref<"practice" | "exam">("practice");
 const exam = ref("TOEFL");
 const skill = ref("reading");
+const direction = ref<"zh2target" | "target2zh">("zh2target");
 const topic = ref("");
 const generating = ref(false);
 const scoring = ref(false);
@@ -146,9 +161,11 @@ const sttSupported = speech.supported;
 const listening = speech.listening;
 const interim = speech.interim;
 
-const isProduction = computed(() => task.value && (task.value.skill === "writing" || task.value.skill === "speaking"));
+const coachLabel = computed(() => LANG_LABEL[language.value] || "英文");
+const isProduction = computed(() => task.value && ["writing", "speaking", "translation"].includes(task.value.skill));
 
 function skillLabel(k: string) {
+  if (k === "translation") return "翻譯";
   return SKILLS.find((s) => s.key === k)?.label || k;
 }
 function optLetter(opt: string) {
@@ -171,7 +188,7 @@ async function generate() {
   try {
     const res = await aiFetch<any>("/api/lang/task/generate", {
       method: "POST",
-      body: { language: language.value, mode: mode.value, exam: mode.value === "exam" ? exam.value : undefined, skill: skill.value, topic: topic.value || undefined },
+      body: { language: language.value, mode: mode.value, exam: mode.value === "exam" ? exam.value : undefined, skill: skill.value, direction: skill.value === "translation" ? direction.value : undefined, topic: topic.value || undefined },
     });
     task.value = res.task;
     startedAt = Date.now();

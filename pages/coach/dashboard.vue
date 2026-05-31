@@ -214,7 +214,7 @@
       </div>
 
       <div class="flex gap-3">
-        <NuxtLink :to="`/coach/${language}`" class="flex-1 text-center py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-700 transition">繼續對話練習 →</NuxtLink>
+        <NuxtLink :to="`/coach/${language}`" class="flex-1 text-center py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-700 transition">進入 {{ language === 'ja' ? '日文' : '英文' }}學習首頁 →</NuxtLink>
         <button @click="showOnboard = true; loadFormFromProfile()" class="px-4 py-2.5 rounded-xl bg-white border border-gray-200 text-gray-600 text-sm hover:border-indigo-300 transition">調整目標</button>
       </div>
     </div>

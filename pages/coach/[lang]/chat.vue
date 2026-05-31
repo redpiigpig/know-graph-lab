@@ -2,15 +2,19 @@
   <div class="flex flex-col h-dvh bg-slate-50">
     <!-- 頂列 -->
     <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 z-30 flex-shrink-0">
-      <NuxtLink to="/coach" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
+      <NuxtLink :to="`/coach/${lang}`" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
       <div class="w-px h-5 bg-gray-200" />
       <span class="text-xl">{{ coach?.emoji }}</span>
       <div>
-        <div class="text-sm font-semibold text-gray-900 leading-tight">{{ coach?.name }} <span class="text-xs text-gray-400 font-normal">{{ coach?.langLabel }}教練</span></div>
+        <div class="text-sm font-semibold text-gray-900 leading-tight">
+          {{ coach?.name }} <span class="text-xs text-gray-400 font-normal">{{ coach?.langLabel }}教練</span>
+          <span v-if="persona" class="ml-1 text-[11px] px-1.5 py-0.5 rounded-full bg-violet-50 text-violet-700">{{ persona.emoji }} {{ persona.label }}</span>
+        </div>
         <div class="text-[11px] text-gray-400 leading-tight">{{ coach?.accent }}</div>
       </div>
 
       <div class="ml-auto flex items-center gap-2">
+        <span class="text-xs px-2 py-1 rounded-lg bg-gray-50 text-gray-500 tabular-nums" title="本次練習時間">⏱ {{ elapsed }}</span>
         <button
           v-if="!coach?.voiceless"
           @click="autoSpeak = !autoSpeak"
@@ -20,7 +24,6 @@
         >
           🔊 自動朗讀
         </button>
-        <NuxtLink to="/coach/dashboard" class="text-xs px-2.5 py-1 rounded-lg bg-white border border-gray-200 text-gray-600 hover:border-indigo-300 transition">📊 儀表板</NuxtLink>
         <button @click="newSession" class="text-xs px-2.5 py-1 rounded-lg bg-white border border-gray-200 text-gray-600 hover:border-indigo-300 transition">＋ 新對話</button>
       </div>
     </nav>
@@ -192,6 +195,13 @@ const { aiFetch } = useCoachAi();
 const route = useRoute();
 const lang = computed(() => route.params.lang as string);
 
+const persona = ref<any>(null);
+const elapsed = computed(() => {
+  const s = tracker.activeSeconds.value;
+  const m = Math.floor(s / 60);
+  return `${m}:${String(s % 60).padStart(2, "0")}`;
+});
+
 const coach = ref<any>(null);
 const sessions = ref<any[]>([]);
 const sessionId = ref<string | null>(null);
@@ -240,6 +250,7 @@ async function loadSession(id: string) {
 function newSession() {
   sessionId.value = null;
   messages.value = [];
+  persona.value = null;
 }
 
 async function loadVocab() {
@@ -266,6 +277,7 @@ async function send() {
       body: { language: lang.value, sessionId: sessionId.value, message: text },
     });
     sessionId.value = res.sessionId;
+    if (res.persona) persona.value = res.persona;
     messages.value.push({
       role: "coach",
       content: res.reply,

@@ -5,7 +5,7 @@
  * 回傳 { sessionId, reply, translation, corrections[], new_vocab[], homework? }
  * 並自動持久化訊息、寫入新單字、建立作業。
  */
-import { getCoach, OUTPUT_CONTRACT } from "~/server/utils/lang-coaches";
+import { getCoach, OUTPUT_CONTRACT, pickPersona } from "~/server/utils/lang-coaches";
 import { parseJsonLoose } from "~/server/utils/gemini";
 import { coachGemini } from "~/server/utils/coach-ai";
 
@@ -25,26 +25,45 @@ export default defineEventHandler(async (event) => {
   const coach = getCoach(language);
   if (!coach || !coach.enabled) throw createError({ statusCode: 400, message: "不支援的語言" });
 
-  // 1. 取得或建立 session
+  // 1. 取得或建立 session（含人格）
   let sid = sessionId;
   let summary = "";
+  let personaKey: string | null = null;
   if (sid) {
     const { data: s } = await supabase
       .from("lang_sessions")
-      .select("id, summary, user_id")
+      .select("id, summary, user_id, persona")
       .eq("id", sid)
       .single();
     if (!s || s.user_id !== user.id) throw createError({ statusCode: 404, message: "找不到對話" });
     summary = s.summary ?? "";
+    personaKey = s.persona ?? null;
   } else {
+    // 新對話：依既有 session 數輪替挑一個人格（自動切換）
+    const { count } = await supabase
+      .from("lang_sessions")
+      .select("id", { count: "exact", head: true })
+      .eq("user_id", user.id)
+      .eq("language", language);
+    const persona = pickPersona(coach, count ?? 0);
+    personaKey = persona?.key ?? null;
     const { data: s, error } = await supabase
       .from("lang_sessions")
-      .insert({ user_id: user.id, language, title: null })
+      .insert({ user_id: user.id, language, title: null, persona: personaKey, mode: "chat" })
       .select("id")
       .single();
     if (error || !s) throw createError({ statusCode: 500, message: "建立對話失敗" });
     sid = s.id;
   }
+
+  // 統整記憶庫（跨 session 的長期了解）
+  const { data: memRow } = await supabase
+    .from("lang_memory")
+    .select("memory")
+    .eq("user_id", user.id)
+    .eq("language", language)
+    .single();
+  const persona = coach.personas?.find((p) => p.key === personaKey) ?? null;
 
   // 2. 載入最近窗口的歷史
   const { data: history } = await supabase
@@ -63,7 +82,11 @@ export default defineEventHandler(async (event) => {
   contents.push({ role: "user" as const, parts: [{ text: message }] });
 
   const system = `${coach.systemPrompt}\n\n${
-    summary ? `【先前對話摘要（長期記憶）】\n${summary}\n\n` : ""
+    persona ? `【今日人格】${persona.label}：${persona.instruction}\n\n` : ""
+  }${
+    memRow?.memory ? `【你對這位學生的長期了解】\n${memRow.memory}\n\n` : ""
+  }${
+    summary ? `【本次對話先前摘要】\n${summary}\n\n` : ""
   }${OUTPUT_CONTRACT}`;
 
   // 4. 呼叫 Gemini
@@ -169,6 +192,7 @@ export default defineEventHandler(async (event) => {
     corrections,
     new_vocab: newVocab,
     homework: homeworkRow,
+    persona: persona ? { key: persona.key, label: persona.label, emoji: persona.emoji } : null,
   };
 });
 

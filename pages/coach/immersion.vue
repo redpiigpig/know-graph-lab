@@ -55,6 +55,7 @@
         <div v-if="content.analysis.vocab?.length" class="text-xs text-emerald-600">
           ✅ 已將 {{ content.analysis.vocab.length }} 個關鍵單字加入單字庫（含複習排程）
         </div>
+        <div v-if="watchedMsg" class="text-xs text-sky-600">{{ watchedMsg }}</div>
 
         <!-- 討論 -->
         <div v-if="content.analysis.discussion?.length" class="border-t border-gray-100 pt-4">
@@ -116,6 +117,7 @@ const text = ref("");
 const analyzing = ref(false);
 const err = ref("");
 const content = ref<any>(null);
+const watchedMsg = ref("");
 const history = ref<any[]>([]);
 
 const discussion = ref<any[]>([]);
@@ -150,6 +152,8 @@ async function analyze() {
     content.value = res.content;
     // 影片→聽力，文章→閱讀
     tracker.start(language.value, mode.value === "youtube" ? "listening" : "reading", mode.value);
+    if (res.watchedMinutes > 0) watchedMsg.value = `🎧 已將影片時長 ${res.watchedMinutes} 分鐘計入今日聽力時間`;
+    else watchedMsg.value = "";
     loadHistory();
   } catch (e: any) {
     err.value = e?.data?.message || "分析失敗，請換一則內容";
