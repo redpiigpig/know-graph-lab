@@ -346,7 +346,6 @@ import { adTuendamFidem1998 } from './20c-john-paul-ii/ad-tuendam-fidem-1998'
 import { fideiDepositum1992 } from './20c-john-paul-ii/fidei-depositum-1992'
 import { hsscolP2122001 } from './20c-john-paul-ii/hsscol-p212-2001'
 import { hsscolP2132003 } from './20c-john-paul-ii/hsscol-p213-2003'
-import { misericordiaDei2002 } from './21c-john-paul-ii/misericordia-dei-2002'
 import { hsscolP2152004 } from './20c-john-paul-ii/hsscol-p215-2004'
 import { hsscolP2171993 } from './20c-john-paul-ii/hsscol-p217-1993'
 import { hsscolP2181999 } from './20c-john-paul-ii/hsscol-p218-1999'
@@ -1294,7 +1293,6 @@ export const ALL_DOCUMENTS: PapalDocument[] = [
   fideiDepositum1992,
   hsscolP2122001,
   hsscolP2132003,
-  misericordiaDei2002,
   hsscolP2152004,
   hsscolP2171993,
   hsscolP2181999,
