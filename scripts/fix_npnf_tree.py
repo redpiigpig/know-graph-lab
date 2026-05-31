@@ -141,6 +141,33 @@ REGISTRY: dict[str, dict[str, str]] = {
         "Preface to the American Edition.": "__FRONT__",
         "Index of Subjects": "__INDEX__", "Indexes": "__INDEX__",
     },
+    # Vol 22 NPNF1-11 — Chrysostom (金口若望): Homilies on Acts + Romans
+    "4d73c561-aa4e-46b2-8e29-d331c5b9d28d": {
+        "A Commentary on the Acts of the Apostles": "使徒行傳講道集",
+        "The Homilies of St. John Chrysostom on Paul's Epistle to the Romans": "羅馬書講道集",
+        "About This Book": "__FRONT__", "Series Title Page": "__FRONT__",
+        "Preface to the American Edition": "__FRONT__", "Title Page": "__FRONT__",
+        "Preface to Part I. of the Oxford Edition": "__FRONT__",
+        "Preface to Part II. of the Oxford Edition": "__FRONT__",
+        "Index of Subjects": "__INDEX__", "Indexes": "__INDEX__",
+    },
+    # Vol 23 NPNF1-12 — Chrysostom (金口若望): Homilies on 1 & 2 Corinthians
+    "bf2dd1b2-ae53-43c2-8fac-7ce10e137c10": {
+        "Homilies on First Corinthians.": "哥林多前書講道集",
+        "Homilies on Second Corinthians.": "哥林多後書講道集",
+        "About This Book": "__FRONT__", "Series Title.": "__FRONT__",
+        "Title Page.": "__FRONT__", "Preface.": "__FRONT__",
+        "Index of Subjects": "__INDEX__", "Indexes": "__INDEX__",
+    },
+    # Vol 24 NPNF1-13 — Chrysostom (金口若望): Homilies on Galatians..Philemon
+    "9192cb77-3ce2-4adb-9d90-76200e452763": {
+        "The Commentary and Homilies of St. John Chrysostom on Galatians and Ephesians.": "加拉太書與以弗所書講道集",
+        "The Homilies of St. John Chrysostom on Philippians, Colossians, and Thessalonians.": "腓立比書、歌羅西書、帖撒羅尼迦前後書講道集",
+        "The Homilies of St. John Chrysostom on Timothy, Titus, and Philemon.": "提摩太前後書、提多書、腓利門書講道集",
+        "St. Chrysostom as a Homilist.": "__FRONT__",
+        "About This Book": "__FRONT__", "Title Page": "__FRONT__",
+        "Indexes of Subjects": "__INDEX__", "Indexes": "__INDEX__",
+    },
 }
 
 

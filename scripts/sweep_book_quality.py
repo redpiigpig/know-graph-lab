@@ -447,6 +447,9 @@ TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "2accee20-5f9d-4099-9ce9-3dda0726a74b": TERM_FIXES_NPNF1_VOL_1,  # NPNF1 Vol 8 Augustine (Expositions on the Psalms)
     "76df31fe-e732-4aa6-88c2-d650a09fb688": TERM_FIXES_NPNF1_CHRYSOSTOM,  # NPNF1 Vol 9 Chrysostom (On the Priesthood + Ascetic Treatises)
     "0d160c29-8d61-4dbc-8f8e-d47fee694eab": TERM_FIXES_NPNF1_CHRYSOSTOM,  # NPNF1 Vol 10 Chrysostom (Homilies on Matthew)
+    "4d73c561-aa4e-46b2-8e29-d331c5b9d28d": TERM_FIXES_NPNF1_CHRYSOSTOM,  # NPNF1 Vol 11 Chrysostom (Acts + Romans)
+    "bf2dd1b2-ae53-43c2-8fac-7ce10e137c10": TERM_FIXES_NPNF1_CHRYSOSTOM,  # NPNF1 Vol 12 Chrysostom (1 & 2 Corinthians)
+    "9192cb77-3ce2-4adb-9d90-76200e452763": TERM_FIXES_NPNF1_CHRYSOSTOM,  # NPNF1 Vol 13 Chrysostom (Galatians..Philemon)
 }
 
 
