@@ -106,21 +106,31 @@ def detect_header(pages: list[dict]) -> tuple[str | None, float, bool]:
     return best.strip(), round(best_cov, 3), is_constant
 
 
-# ── Gemini with key rotation + backoff ──────────────────────────────────────
+# ── Gemini with key rotation ─────────────────────────────────────────────────
+# Sentinel: every key returned 429. The RUN loop parks on this and retries the
+# SAME book later — so daily-quota exhaustion never falsely marks a book "done".
+QUOTA = "__QUOTA__"
 _key_idx = 0
 
 
-def gemini_json(prompt: str, max_tokens: int = 8192) -> list | None:
-    """Call flash-lite expecting a JSON array. Rotates keys; backs off on 429.
-    Returns parsed list, or None on hard failure."""
+class QuotaPause(Exception):
+    pass
+
+
+def gemini_json(prompt: str, max_tokens: int = 8192):
+    """Call flash-lite expecting a JSON array. Rotates keys. Returns the parsed
+    list, None on a genuine non-quota failure, or the QUOTA sentinel when every
+    key is 429 (one short rotation + brief retry, then give the decision to the
+    caller — DO NOT block 30 min inside one call)."""
     global _key_idx
     from google import genai
     from google.genai import types
     cfg = types.GenerateContentConfig(response_mime_type="application/json",
                                       temperature=0.0, max_output_tokens=max_tokens)
-    backoff = 30
-    consecutive_429 = 0
-    for _ in range(len(GEMINI_KEYS) * 6):
+    quota_hits = 0
+    attempts = 0
+    while attempts < len(GEMINI_KEYS) * 2:
+        attempts += 1
         try:
             client = genai.Client(api_key=GEMINI_KEYS[_key_idx])
             r = client.models.generate_content(model=MODEL, contents=prompt, config=cfg)
@@ -129,16 +139,13 @@ def gemini_json(prompt: str, max_tokens: int = 8192) -> list | None:
             es = str(e)
             _key_idx = (_key_idx + 1) % len(GEMINI_KEYS)
             if "429" in es or "RESOURCE_EXHAUSTED" in es:
-                consecutive_429 += 1
-                if consecutive_429 >= len(GEMINI_KEYS):
-                    print(f"    all keys 429 — sleeping {backoff}s", flush=True)
-                    time.sleep(backoff)
-                    backoff = min(backoff * 2, 900)
-                    consecutive_429 = 0
+                quota_hits += 1
+                if quota_hits % len(GEMINI_KEYS) == 0:
+                    time.sleep(8)   # brief — maybe a per-minute (not daily) limit
                 continue
             print(f"    gemini error: {es[:80]}", flush=True)
             return None
-    return None
+    return QUOTA
 
 
 def _parse_json_array(text: str) -> list | None:
@@ -228,11 +235,15 @@ def infer_toc(pages: list[dict], header: str | None) -> list:
     """One book -> merged TOC list. Windows huge books to dodge truncation."""
     if len(pages) <= WINDOW_PAGES:
         toc = gemini_json(PROMPT.format(skeleton=build_skeleton(pages, header)))
+        if toc == QUOTA:
+            return QUOTA
         return toc or []
     merged = []
     for i in range(0, len(pages), WINDOW_PAGES):
         win = pages[i:i + WINDOW_PAGES]
         toc = gemini_json(PROMPT.format(skeleton=build_skeleton(win, header)))
+        if toc == QUOTA:
+            return QUOTA            # park the whole book; retry cleanly later
         if toc:
             merged.extend(toc)
     return merged
@@ -326,6 +337,8 @@ def recover_book(eid: str, dry_run: bool = False) -> dict:
 
     # Job A — LLM TOC
     toc = infer_toc(pages, strip_hdr)
+    if toc == QUOTA:
+        raise QuotaPause()          # park: do NOT persist, do NOT ledger
     if not toc:
         # still persist the strip if it happened
         if n_stripped and not dry_run:
@@ -425,13 +438,25 @@ def run_recover(limit: int = 0, dry_run: bool = False, ids: list[str] | None = N
         work = work[:limit]
     print(f"JOB A — recover: {len(work)} books to process "
           f"({len(led)} already in ledger){' [DRY-RUN]' if dry_run else ''}", flush=True)
+    quota_sleep = 600
     for i, eid in enumerate(work):
         b = fetch_book(eid)
         title = (b.get("title") if b else "") or eid
-        try:
-            res = recover_book(eid, dry_run=dry_run)
-        except Exception as e:
-            res = {"status": "error", "note": str(e)[:120]}
+        # Retry the SAME book across quota windows — never advance/ledger on quota.
+        while True:
+            try:
+                res = recover_book(eid, dry_run=dry_run)
+                quota_sleep = 600   # reset backoff after any success
+                break
+            except QuotaPause:
+                print(f"  [{i+1}/{len(work)}] quota exhausted — parking {quota_sleep}s "
+                      f"then retrying {title[:30]}", flush=True)
+                time.sleep(quota_sleep)
+                quota_sleep = min(quota_sleep * 2, 3600)   # up to 1h between probes
+                continue
+            except Exception as e:
+                res = {"status": "error", "note": str(e)[:120]}
+                break
         print(f"  [{i+1}/{len(work)}] {res['status']:14} {title[:38]} "
               f"{res.get('coverage','')} {res.get('note','')}", flush=True)
         if not dry_run:
