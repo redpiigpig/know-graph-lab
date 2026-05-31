@@ -28,13 +28,29 @@ interface CoachCtx {
   supabase: any;
 }
 
+// 只有站長（allowedEmail）能動用付費 key，避免其他註冊用戶燒錢
+async function isOwner(supabase: any, userId: string): Promise<boolean> {
+  const config = useRuntimeConfig();
+  const owner = config.public.allowedEmail as string | undefined;
+  if (!owner) return true; // 未設白名單 → 不限制
+  try {
+    const { data } = await supabase.auth.admin.getUserById(userId);
+    return data?.user?.email === owner;
+  } catch {
+    return false;
+  }
+}
+
 /**
  * 語言教練專用 Gemini 呼叫。回傳純文字。
  * 額度用完時：免費 → 429 code=free_exhausted（前端提示切換）；付費 → 429 code=paid_exhausted。
  * 成功時把 token 用量累加進 lang_api_usage。
  */
 export async function coachGemini(opts: GeminiCallOpts, ctx: CoachCtx): Promise<string> {
-  const { keys, tier } = resolveCoachKeys(ctx.usePaid);
+  // 付費 key 僅限站長使用（保護荷包）
+  let usePaid = ctx.usePaid;
+  if (usePaid && !(await isOwner(ctx.supabase, ctx.userId))) usePaid = false;
+  const { keys, tier } = resolveCoachKeys(usePaid);
   if (!keys.length) {
     throw createError({
       statusCode: 400,
