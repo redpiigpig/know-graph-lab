@@ -28,8 +28,7 @@ export default defineEventHandler(async (event) => {
     .single();
   const lv = level || profile?.goal_level || "C1";
 
-  const raw = await callGemini({
-    model: "gemini-2.5-flash",
+  const raw = await callGemini({
     system: `你是${coach.langLabel}學術詞彙老師，為 CEFR ${lv} 程度、主修人文領域的學生挑選單字。
 只輸出 JSON：{ "words": [ { "word": "", "reading": "音標/假名（無則空字串）", "meaning": "繁體中文釋義", "example": "${coach.langLabel}例句", "part_of_speech": "詞性" } ] }
 要求：挑 ${n} 個符合主題且該程度該學的字；避免太初級；繁體中文，不可簡體。`,

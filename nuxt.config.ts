@@ -26,6 +26,11 @@ export default defineNuxtConfig({
       process.env.Gemini_API_Key_3,
       process.env.Gemini_API_Key_4,
     ].filter(Boolean) as string[],
+    // 語言教練模型：固定 ID gemini-2.5-flash 免費層每日僅 20 次、且被 OCR 自動化共用耗盡；
+    // 改用 rolling alias `gemini-flash-latest`（2026-05-31 實測免費層可用，且配額桶與 OCR 用的固定 ID 分開）。
+    // 升付費後可設 GEMINI_MODEL=gemini-2.5-flash、GEMINI_GRADE_MODEL=gemini-2.5-pro 免改碼升級。
+    geminiModel: process.env.GEMINI_MODEL || "gemini-flash-latest",
+    geminiGradeModel: process.env.GEMINI_GRADE_MODEL || "gemini-flash-latest",
 
     // 公開配置（前端和後端都可用）
     public: {

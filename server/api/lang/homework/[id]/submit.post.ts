@@ -32,7 +32,7 @@ export default defineEventHandler(async (event) => {
 }`;
 
   const raw = await callGemini({
-    model: "gemini-2.5-pro", // 批改用 Pro，文法細膩度更高
+    model: useRuntimeConfig().geminiGradeModel as string, // 批改模型（免費層預設 2.0-flash；付費可設 2.5-pro）
     system: grader,
     contents: [
       {

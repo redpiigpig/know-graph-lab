@@ -86,8 +86,7 @@ export default defineEventHandler(async (event) => {
 ${isComprehension ? "questions 出 4 題單選，answer 用 A/B/C/D。" : "這是產出型題目，不要 questions。"}
 繁體中文不可簡體。`;
 
-  const raw = await callGemini({
-    model: "gemini-2.5-flash",
+  const raw = await callGemini({
     system,
     contents: [{ role: "user", parts: [{ text: topic ? `指定主題：${topic}` : "請出題。" }] }],
     json: true,

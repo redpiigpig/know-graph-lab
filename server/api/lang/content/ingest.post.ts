@@ -46,8 +46,7 @@ export default defineEventHandler(async (event) => {
       ? [{ fileData: { fileUri: url!.trim(), mimeType: "video/mp4" } }, { text: "請依系統指示分析這部影片。" }]
       : [{ text: `文章內容：\n${text}` }];
 
-  const raw = await callGemini({
-    model: "gemini-2.5-flash",
+  const raw = await callGemini({
     system,
     contents: [{ role: "user", parts }],
     json: true,

@@ -36,7 +36,7 @@ export default defineEventHandler(async (event) => {
   if (samples.length < 3) throw createError({ statusCode: 400, message: "對話樣本太少，多聊幾句再評估" });
 
   const raw = await callGemini({
-    model: "gemini-2.5-pro",
+    model: useRuntimeConfig().geminiGradeModel as string,
     system: `你是 CEFR 語言能力評估專家，評估學生的「${coach.langLabel}」程度。
 依據學生的發言樣本，評估其 CEFR 等級與各項分數。只輸出一個 JSON：
 {

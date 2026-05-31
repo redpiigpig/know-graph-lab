@@ -64,7 +64,7 @@ export default defineEventHandler(async (event) => {
     if (!response?.trim()) throw createError({ statusCode: 400, message: "請先作答" });
     const rubric = rubricFor(task.exam, task.skill);
     const raw = await callGemini({
-      model: "gemini-2.5-pro",
+      model: useRuntimeConfig().geminiGradeModel as string,
       system: `你是${coach?.langLabel}${task.exam ? task.exam + " " : ""}評分官。依下列 rubric 評分學生作答。
 Rubric：${rubric}
 只輸出 JSON：{ "band": 分數數字（依 rubric 量表）, "scores": { 各分項: 分數 }, "feedback": "繁體中文回饋：強項、弱項、如何提升到下一級（具體、可附目標語言示範）" }`,

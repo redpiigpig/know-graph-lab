@@ -65,8 +65,7 @@ export default defineEventHandler(async (event) => {
   }${OUTPUT_CONTRACT}`;
 
   // 4. 呼叫 Gemini
-  const raw = await callGemini({
-    model: "gemini-2.5-flash",
+  const raw = await callGemini({
     system,
     contents,
     json: true,
@@ -188,8 +187,7 @@ async function summarizeSession(supabase: any, sid: string, prevSummary: string,
   const transcript = trimmed
     .map((m: any) => `${m.role === "coach" ? coachName : "學生"}：${m.content}`)
     .join("\n");
-  const text = await callGemini({
-    model: "gemini-2.5-flash",
+  const text = await callGemini({
     system:
       "你是學習記憶整理員。把以下語言課對話壓縮成 150 字內的繁體中文重點摘要，記錄：聊過的主題、學生的程度與常犯錯誤、已學的關鍵單字。只輸出摘要文字。",
     contents: [{ role: "user", parts: [{ text: `${prevSummary ? `【既有摘要】${prevSummary}\n\n` : ""}【新對話】\n${transcript}` }] }],

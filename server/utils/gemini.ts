@@ -31,7 +31,7 @@ export async function callGemini(opts: GeminiCallOpts): Promise<string> {
     throw createError({ statusCode: 500, message: "未設定 Gemini API key" });
   }
 
-  const model = opts.model ?? "gemini-2.5-flash";
+  const model = opts.model ?? (config.geminiModel as string) ?? "gemini-flash-latest";
   const body: any = {
     contents: opts.contents,
     generationConfig: {
