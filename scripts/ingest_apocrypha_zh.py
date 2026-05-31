@@ -15,7 +15,7 @@ Run:  python -X utf8 scripts/ingest_apocrypha_zh.py [--dry-run]
 """
 
 from __future__ import annotations
-import os, sys, json, re, argparse
+import os, sys, json, re, argparse, time
 import requests
 from dotenv import load_dotenv
 
@@ -52,17 +52,21 @@ SLUG_KEYWORDS: list[tuple[str, list[str]]] = [
     ('vision-ezra',      ['以斯拉異象']),
     ('questions-ezra',   ['以斯拉題問', '以斯拉題間']),
     ('greek-ezra-apoc',  ['希臘語以斯拉', '希臘語以斯拉', '希瞋語以斯拉', '希隱語以斯拉']),
-    ('4-ezra',           ['以斯拉默示錄', '以斯拉敵示錄', '以斯拉歐示錄', '以斯拉毆示錄', '以斯拉敏示錄']),
+    ('4-ezra',           ['以斯拉默示錄', '以斯拉敵示錄', '以斯拉歐示錄', '以斯拉毆示錄', '以斯拉敏示錄',
+                          '以斯拉啟示錄', '以斯拉下']),
     ('sedrach-apoc',     ['塞德拉克', '寒德拉克']),
     ('abraham-apoc',     ['亞伯拉罕默示錄', '亞伯拉罕敵示錄', '亞伯拉罕歐示錄', '亞伯拉罕毆示錄',
-                          '亞伯拉罕鼠示錄', '亞伯拉罕敏示錄']),
-    ('adam-apoc',        ['亞當默示錄', '亞當敵示錄', '亞當顧示錄', '亞當歐示錄', '亞當毆示錄', '亞當鼠示錄']),
+                          '亞伯拉罕鼠示錄', '亞伯拉罕敏示錄', '亞伯拉罕啟示錄']),
+    ('adam-apoc',        ['亞當默示錄', '亞當敵示錄', '亞當顧示錄', '亞當歐示錄', '亞當毆示錄', '亞當鼠示錄',
+                          '亞當啟示錄']),
     ('elijah-apoc',      ['以利亞默示錄', '以利亞敵示錄', '以利亞歐示錄', '以利E敵示錄', '以幹1m敵',
-                          '以平1m敵', '以利亞毆', '以平1m歐']),
-    ('daniel-apoc',      ['但以理默示錄', '但以理敵示錄', '但以理歐示錄', '但以理毆示錄']),
-    ('zephaniah-apoc',   ['西番雅默示錄', '西番雅敵示錄', '西番雅歐示錄', '西番雅毆示錄']),
+                          '以平1m敵', '以利亞毆', '以平1m歐', '以利亞啟示錄']),
+    ('daniel-apoc',      ['但以理默示錄', '但以理敵示錄', '但以理歐示錄', '但以理毆示錄', '但以理啟示錄']),
+    ('zephaniah-apoc',   ['西番雅默示錄', '西番雅敵示錄', '西番雅歐示錄', '西番雅毆示錄',
+                          '西番雅啟示錄']),
     ('shem-treatise',    ['閃的論說']),
-    ('ezekiel-apoc',     ['以西結偽經', '以西結聽經', '以西結蔽經']),
+    ('ezekiel-apoc',     ['以西結偽經', '以西結聽經', '以西結蔽經',
+                          '悲劇作家以西結']),                       # Ezekiel the Tragedian — vol 6 fragments
     # OT vol 3 — Misc legends/letters/testaments
     ('2-baruch',         ['巴錄二書']),
     ('3-baruch',         ['巴錄三書']),
@@ -82,7 +86,8 @@ SLUG_KEYWORDS: list[tuple[str, list[str]]] = [
     ('test-adam',        ['亞當遺訓']),
     ('jubilees',         ['禧年書', '禱年書']),
     ('jacob-ladder',     ['雅各天梯']),
-    ('jannes-jambres',   ['雅尼和佯庇', '雅尼和佯鹿', '雅店和佯', '雅店和佯庇']),
+    ('jannes-jambres',   ['雅尼和佯庇', '雅尼和佯鹿', '雅店和佯', '雅店和佯庇',
+                          '雅尼和雅完庇', '雅尼和洋庇', '雅尼和伴贖', '雅尼和伴貴']),
     ('joseph-history',   ['約瑟歷史']),
     # OT vol 4 — Wisdom (note 黃根春 vol 5 卷四 actually contains 智訓)
     ('wisdom-solomon',   ['所羅門智訓', '所羅門智劃', '所羅門智割', '所羅門智司', '所羅門智自',
@@ -95,7 +100,9 @@ SLUG_KEYWORDS: list[tuple[str, list[str]]] = [
                           '便西拉智富', '便西拉智白', '便西拉智訪', '便西拉管自', '便西拉智副',
                           '便商拉', '便古拉', '便茜拉', '便茵拉', '便哥拉', '使西拉智']),
     ('letter-jeremiah',  ['耶利米書信']),
+    ('baruch',           ['巴錄書']),                            # Catholic deuterocanonical Baruch
     ('prayer-manasseh',  ['瑪拿西禱詞']),
+    ('psalm-151',        ['詩篇151', '詩篇 151', '詩篇一五一', '詩篇一百五十一']),
     ('1-esdras',         ['以斯拉上']),
     # OT vol 6 — Wisdom + Maccabees + Qumran
     ('1qs',              ['崑蘭社群規章', '昆蘭社群規章']),
@@ -103,19 +110,20 @@ SLUG_KEYWORDS: list[tuple[str, list[str]]] = [
     ('2-maccabees',      ['馬加比二書', '罵加比二書', '白馬加比二書', '馬加上t二書', '馬加上七二書']),
     ('3-maccabees',      ['馬加比三書', '罵加比三書', '馬加上t三書']),
     ('4-maccabees',      ['馬加比四書', '罵加比四書', '馬加上t四書', '馬加上七四書']),
-    ('ahiqar',           ['亞希誇', '直希誇']),
-    ('philo-poet',       ['史詩詩人斐羅']),
+    ('ahiqar',           ['亞希誇', '直希誇', '亞希加爾', '亞希卡爾', '亞希迦', '亞希夸',
+                          '亞希琶', '亞希巴']),                       # actual 黃根春 transliteration
+    ('philo-poet',       ['史詩詩人斐羅', '詩人斐羅', '史詩斐羅', '柬詩詩人娈羅', '史詩詩人娈羅']),
     ('demetrius-chron',  ['年代學家底米丟', '底米丟']),
     ('eupolemus',        ['尤波利蒙']),
     ('theodotus',        ['塞奧多圖']),
     ('phocylides',       ['託福西萊德']),
-    ('orphica',          ['奧菲卡']),
+    ('orphica',          ['奧菲卡', '奧菲斯', '奧菲教', '奧非卡', '奧非斯']),
     ('menander-syr',     ['敘利亞語門安德', '敘利E語門安德', '敘利E語門安德', '教利亞語門安德']),
     ('hecataeus',        ['託赫卡泰烏', '託赫卡泰鳥']),
     ('artapanus',        ['阿塔帕納']),
     ('psalms-solomon',   ['所羅門詩篇']),
     ('odes-solomon',     ['所羅門頌詩', '所羅門頌藹', '所羅門頒詩', '所羅鬥頌詩']),
-    ('joseph-prayer',    ['約瑟禱文', '約瑟疇文']),
+    ('joseph-prayer',    ['約瑟禱文', '約瑟疇文', '約瑟祈禱詞', '約瑟的禱告']),
     # NT vol 1 — Gospels & papyri
     ('protoevangelium-james', ['雅各原始福音', '雅各原蛤福音']),
     ('q-secret-mark',    ['馬可的神秘福音']),
@@ -130,9 +138,11 @@ SLUG_KEYWORDS: list[tuple[str, list[str]]] = [
     ('gebionites',       ['伊便尼派人福音']),
     ('gegyptians',       ['埃及人福音']),
     ('gpet',             ['彼得福音']),
-    ('infancy-arabic',   ['阿拉伯語耶穌嬰孩', '阿拉伯語耶鯨嬰孩']),
+    ('infancy-arabic',   ['阿拉伯語耶穌嬰孩', '阿拉伯語耶鯨嬰孩', '阿拉伯文耶穌嬰孩']),
+    ('gmary',            ['馬利亞福音', '抹大拉福音', '抹大拉馬利亞福音', '馬利亞 (抹大拉) 福音',
+                          '馬利亞（抹大拉）福音']),
+    ('gjudas',           ['猶大福音']),
     ('infancy-latin',    ['阿倫德爾抄本404', '拉T語耶穌嬰孩']),
-    ('p-strasbourg',     ['斯特拉斯堡蒲草紙']),
     ('gmatthias',        ['託罵太名福音', '託馬太名福音', '馬提亞福音']),
     ('gbart',            ['巴多羅買福音']),
     ('q-peter-preaching',['彼得的宣講']),
@@ -140,7 +150,8 @@ SLUG_KEYWORDS: list[tuple[str, list[str]]] = [
     ('p-berlin-16388',   ['柏林蒲草紙16388', '柏林蒲草紙 16388']),
     ('john-baptist-life',['施洗者約翰生平']),
     ('joseph-carpenter', ['木匠約瑟']),
-    ('p-merton-51',      ['默頓蒲草紙51', '默頓蒲草紙 51']),
+    ('p-merton-51',      ['默頓蒲草紙51', '默頓蒲草紙 51', '默頓蒲草紙', '蒲草紙51', '蒲草紙 51']),
+    ('p-strasbourg',     ['斯特拉斯堡蒲草紙', '斯特拉斯堡', '斯特拉斯保']),
     ('birth-mary',       ['馬利亞的出生', '馬利巨的出生']),
     ('abgar',            ['亞伯加傳記']),
     ('faiyum',           ['費爾語錄']),
@@ -155,8 +166,10 @@ SLUG_KEYWORDS: list[tuple[str, list[str]]] = [
     ('pilate-herod',     ['彼拉多與希律']),
     ('two-books-jeu',    ['論約伊的兩本書', '論約翰的兩本書', '論約iI的兩本書']),
     ('john-apocryphon',  ['約翰藏經', '約翰聽經', '約翰蔽經', '約串串藏經', '約翰歐']),
-    ('apoc-james-1',     ['雅各默示錄壹', '雅各敵示錄壹', '雅各歐示錄壹', '雅各毆示錄壹', '雅各廠示錄壹']),
-    ('apoc-james-2',     ['雅各默示錄貳', '雅各敵示錄貳', '雅各歐示錄貳']),
+    ('apoc-james-1',     ['雅各默示錄壹', '雅各敵示錄壹', '雅各歐示錄壹', '雅各毆示錄壹', '雅各廠示錄壹',
+                          '雅各啟示錄壹']),
+    ('apoc-james-2',     ['雅各默示錄貳', '雅各敵示錄貳', '雅各歐示錄貳',
+                          '雅各啟示錄貳']),
     ('joseph-arimathea', ['亞利馬太約瑟']),
     ('memoria-apostolorum',['使徒回憶錄']),
     ('peter-philip',     ['彼得給腓力', '彼得給僻力', '彼得給排力', '彼得給辦力', '彼得給麟力']),
@@ -165,20 +178,30 @@ SLUG_KEYWORDS: list[tuple[str, list[str]]] = [
     ('vengeance-savior', ['救主的伸冤']),
     ('gphilip',          ['腓力福音', '僻力福音', '瞬力福音', '排力福音', '聯力福音', '脫力措音']),
     ('q-mani',           ['摩尼福音']),
-    # NT vol 3 — (most chunks missing; skip)
+    # NT vol 3 — Acts 行傳 (Vision OCR text now clean — all titles match)
+    ('acts-paul',        ['保羅行傳']),
+    ('acts-peter',       ['彼得行傳']),
+    ('acts-andrew',      ['安得烈行傳', '安德烈行傳']),
+    ('acts-john',        ['約翰行傳']),
+    ('acts-thomas',      ['多馬行傳']),
+    ('acts-philip',      ['腓力行傳', '排力行傳', '僻力行傳']),
     # NT vol 4 — Letters & Apocalypses
-    ('5-6-ezra',         ['以斯拉五書及以斯拉六書']),
+    ('5-6-ezra',         ['以斯拉五書及以斯拉六書', '以斯拉五書', '以斯拉六書']),
+    ('3-cor',            ['哥林多三書', '保羅與哥林多人書信']),
+    ('didache',           ['十二使徒遺訓', '十二宗徒遺訓', '使徒遺訓', '十二使徒訓誨', '十二使徒訓示']),
     ('isaiah-ascension', ['以賽亞昇天記', '以賽亞升天記', '以賽E昇天記', '以賽直升天記']),
     ('q-laodicea',       ['老底嘉書']),
     ('clement-romance',  ['革利免', '草利兔', '革幸IJ兔', '輩利兔', '革利兔']),
-    ('apoc-paul-cop',    ['科普替語諾斯底的保羅']),
-    ('apoc-paul',        ['保羅默示錄', '保羅敵示錄', '保羅歐示錄', '保羅毆示錄']),
-    ('christian-sibyl',  ['基督教西卜', '基督教西卡', '基督教西卅', '基督教西何', '基督教西卩']),
+    ('apoc-paul-cop',    ['科普替語諾斯底的保羅', '科普特語諾斯底的保羅', '科普特諾斯底保羅']),
+    ('apoc-paul',        ['保羅默示錄', '保羅敵示錄', '保羅歐示錄', '保羅毆示錄', '保羅啟示錄']),
+    ('christian-sibyl',  ['基督教西卜', '基督教西卡', '基督教西卅', '基督教西何', '基督教西卩',
+                          '基督教西卜神諭', '基督教西比拉']),
     ('seneca-paul',      ['辛尼加與保羅', '幸尼加與保羅', '塞尼加與保羅']),
     ('pseudo-titus',     ['託提多名書']),
-    ('apoc-peter-cop',   ['科普替語諾斯底的彼得']),
-    ('apoc-peter',       ['彼得默示錄', '彼得敵示錄', '彼得歐示錄', '彼得毆示錄', '彼得宣讀', '彼得宣講集']),
-    ('apoc-thomas',      ['多馬默示錄', '多馬gJ', '多馬歇示錄']),
+    ('apoc-peter-cop',   ['科普替語諾斯底的彼得', '科普特語諾斯底的彼得', '科普特諾斯底彼得']),
+    ('apoc-peter',       ['彼得默示錄', '彼得敵示錄', '彼得歐示錄', '彼得毆示錄', '彼得宣讀', '彼得宣講集',
+                          '彼得啟示錄']),
+    ('apoc-thomas',      ['多馬默示錄', '多馬gJ', '多馬歇示錄', '多馬啟示錄']),
 ]
 
 # Tokens / chunks we never want to map (skip explicitly).
@@ -505,11 +528,18 @@ def upload_sections(rows: list[dict]) -> int:
         'Prefer': 'return=minimal',
     }
     inserted = 0
-    BATCH = 500
+    # Full Vision text per row averages ~600 chars; BATCH=500 hits PostgREST
+    # statement_timeout on later batches. 100 with 5xx retry is safe.
+    BATCH = 100
     for i in range(0, len(rows), BATCH):
         batch = rows[i:i + BATCH]
-        r = requests.post(url, headers=headers, data=json.dumps(batch))
-        if r.status_code not in (200, 201, 204):
+        for attempt in range(3):
+            r = requests.post(url, headers=headers, data=json.dumps(batch), timeout=180)
+            if r.status_code in (200, 201, 204):
+                break
+            if r.status_code >= 500 and attempt < 2:
+                time.sleep(2 * (attempt + 1))
+                continue
             print(f'  ERROR batch {i}: {r.status_code} {r.text[:400]}', flush=True)
             r.raise_for_status()
         inserted += len(batch)
