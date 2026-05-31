@@ -128,6 +128,7 @@ const REFINED_IDS = new Set([
   '0069932a-7b27-4c06-9874-b74d51ad564e',  // NPNF1 Vol 7 (Augustine — Tractates on John + Homilies on 1 John + Soliloquies)
   '2accee20-5f9d-4099-9ce9-3dda0726a74b',  // NPNF1 Vol 8 (Augustine — Expositions on the Book of Psalms)
   '76df31fe-e732-4aa6-88c2-d650a09fb688',  // NPNF1 Vol 9 (金口若望 Chrysostom — On the Priesthood + Ascetic Treatises + Homilies)
+  '0d160c29-8d61-4dbc-8f8e-d47fee694eab',  // NPNF1 Vol 10 (金口若望 Chrysostom — Homilies on the Gospel of Matthew)
 ])
 
 const series = [
