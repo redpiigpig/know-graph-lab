@@ -78,11 +78,12 @@
                       :class="[
                         'w-full flex items-center gap-1 px-2 py-1 rounded text-[12px] hover:bg-stone-50 transition',
                         d.slug === slug ? 'bg-amber-50 text-amber-800 font-medium' : 'text-stone-800',
+                        d.total_sections === 0 ? 'opacity-50' : '',
                       ]"
                     >
                       <span class="text-stone-300 text-[10px] w-3 inline-block">{{ expandedDocs.has(d.slug) ? '▾' : '▸' }}</span>
                       <span class="flex-1 text-left truncate">{{ d.title_zh_short || d.title_zh }}</span>
-                      <span v-if="d.total_sections === 0" class="text-[9px] text-gray-300">—</span>
+                      <span v-if="d.total_sections === 0" class="text-[9px] text-gray-400 italic">無中譯</span>
                     </button>
                     <!-- Expanded doc → show page list -->
                     <div v-if="expandedDocs.has(d.slug)" class="ml-3 mt-0.5 space-y-0.5">
@@ -98,7 +99,11 @@
                             : 'text-stone-500',
                         ]"
                       >
-                        <span class="text-stone-300 mr-1">·</span>節 {{ (i - 1) * PAGE_SIZE + 1 }}–{{ Math.min(i * PAGE_SIZE, d.total_sections) }}
+                        <span class="text-stone-300 mr-1">·</span>{{
+                          d.slug === slug
+                            ? (currentDocPageLabels.get(i) ?? `節 ${(i - 1) * PAGE_SIZE + 1}–${Math.min(i * PAGE_SIZE, d.total_sections)}`)
+                            : `節 ${(i - 1) * PAGE_SIZE + 1}–${Math.min(i * PAGE_SIZE, d.total_sections)}`
+                        }}
                       </NuxtLink>
                     </div>
                   </div>
@@ -142,8 +147,9 @@
             </header>
 
             <!-- Page header on subsequent pages -->
-            <header v-else class="mb-4 flex items-baseline gap-2">
+            <header v-else class="mb-4 flex items-baseline gap-2 flex-wrap">
               <h2 class="text-base font-semibold text-stone-700">{{ docData.document.title_zh }}</h2>
+              <span v-if="pageChapterRange" class="text-sm text-amber-700 font-medium">{{ pageChapterRange }}</span>
               <span class="text-xs text-stone-400">節 {{ (currentPage - 1) * PAGE_SIZE + 1 }}–{{ Math.min(currentPage * PAGE_SIZE, docData.sections.length) }}</span>
             </header>
 
@@ -341,6 +347,18 @@ const pagedSections = computed(() => {
   const start = (currentPage.value - 1) * PAGE_SIZE
   return docData.value.sections.slice(start, start + PAGE_SIZE)
 })
+// Range string like "第 28-32 章" computed from parsed chapter column on
+// the 10 visible sections.
+const pageChapterRange = computed(() => {
+  const chapters = pagedSections.value
+    .map(s => s.chapter)
+    .filter((c): c is number => c !== null && c !== undefined)
+  if (chapters.length === 0) return ''
+  const min = Math.min(...chapters)
+  const max = Math.max(...chapters)
+  if (min === max) return `第 ${min} 章`
+  return `第 ${min}–${max} 章`
+})
 function goToPage(p: number) {
   if (p < 1 || p > totalPages.value) return
   router.push(`/apocrypha/${slug.value}?page=${p}`)
@@ -405,6 +423,33 @@ function toggleDoc(s: string) {
 function docPageCount(d: ApocDoc): number {
   return Math.max(1, Math.ceil((d.total_sections || 0) / PAGE_SIZE))
 }
+
+// Chapter ranges per sidebar page for the CURRENT doc only (we have full
+// sections for the current doc, so we can derive). Other docs in the
+// sidebar fall back to "節 N–M" labels.
+const currentDocPageLabels = computed<Map<number, string>>(() => {
+  const out = new Map<number, string>()
+  if (!docData.value) return out
+  const sections = docData.value.sections
+  const pages = Math.max(1, Math.ceil(sections.length / PAGE_SIZE))
+  for (let p = 1; p <= pages; p++) {
+    const start = (p - 1) * PAGE_SIZE
+    const slice = sections.slice(start, start + PAGE_SIZE)
+    const chapters = slice
+      .map(s => s.chapter)
+      .filter((c): c is number => c !== null && c !== undefined)
+    let label: string
+    if (chapters.length === 0) {
+      label = `節 ${start + 1}–${Math.min(start + PAGE_SIZE, sections.length)}`
+    } else {
+      const min = Math.min(...chapters)
+      const max = Math.max(...chapters)
+      label = min === max ? `第 ${min} 章` : `第 ${min}–${max} 章`
+    }
+    out.set(p, label)
+  }
+  return out
+})
 
 // Auto-expand the chain for current doc on first load
 watch([allDocs, slug], () => {
