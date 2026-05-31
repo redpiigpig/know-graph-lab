@@ -199,13 +199,19 @@
             <div class="text-lg font-bold text-gray-800">NT${{ usage.today.all.costTwd.toFixed(2) }}</div>
             <div class="text-[10px] text-gray-400">免費部分計 0</div>
           </div>
-          <div class="bg-gray-50 rounded-xl p-3">
-            <div class="text-[11px] text-gray-400">近 30 天付費成本</div>
-            <div class="text-lg font-bold text-gray-800">NT${{ usage.last30Paid.costTwd.toFixed(2) }}</div>
+          <div class="rounded-xl p-3" :class="usage.paidOverCap ? 'bg-rose-50' : 'bg-gray-50'">
+            <div class="text-[11px]" :class="usage.paidOverCap ? 'text-rose-500' : 'text-gray-400'">本月付費 / 上限</div>
+            <div class="text-lg font-bold" :class="usage.paidOverCap ? 'text-rose-600' : 'text-gray-800'">
+              NT${{ (usage.monthPaid?.costTwd ?? 0).toFixed(0) }}<span class="text-xs font-normal text-gray-400"> / {{ usage.paidCapTwd }}</span>
+            </div>
+            <div v-if="usage.paidOverCap" class="text-[10px] text-rose-500">已達上限，已自動退回免費</div>
           </div>
         </div>
+        <div v-if="usage.paidOverCap" class="mt-2 text-xs bg-rose-50 text-rose-700 rounded-lg px-3 py-2">
+          ⚠️ 本月付費成本已達上限 NT${{ usage.paidCapTwd }}，已自動停用付費 key、退回免費。要提高上限請改環境變數 GEMINI_PAID_MONTHLY_CAP_TWD。
+        </div>
         <p class="text-[11px] text-gray-400 mt-2">
-          成本為「token × 公開單價」的估計值（免費層計 0）；實際帳單以 Google Cloud Billing 為準。免費額度用完時會跳出提示，確認後改用付費 key。
+          成本為「token × 公開單價」的估計值（免費層計 0）；實際帳單以 Google Cloud Billing 為準。付費 key 僅限你本人；本月超過 NT${{ usage.paidCapTwd }} 會自動退回免費。
         </p>
       </div>
 

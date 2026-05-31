@@ -41,15 +41,50 @@ async function isOwner(supabase: any, userId: string): Promise<boolean> {
   }
 }
 
+// 付費模型估計單價（USD / 1M tokens）
+const PAID_PRICES: Record<string, { in: number; out: number }> = {
+  "gemini-2.5-flash": { in: 0.3, out: 2.5 },
+  "gemini-flash-latest": { in: 0.3, out: 2.5 },
+  "gemini-2.5-flash-lite": { in: 0.1, out: 0.4 },
+  "gemini-2.0-flash": { in: 0.1, out: 0.4 },
+  "gemini-2.5-pro": { in: 1.25, out: 10 },
+};
+const USD_TO_TWD = 32;
+
+// 本月付費估計成本（NT$）
+export async function monthlyPaidCostTwd(supabase: any, userId: string): Promise<number> {
+  const monthStart = new Date().toISOString().slice(0, 7) + "-01";
+  const { data } = await supabase
+    .from("lang_api_usage")
+    .select("model, prompt_tokens, output_tokens")
+    .eq("user_id", userId)
+    .eq("tier", "paid")
+    .gte("usage_date", monthStart);
+  let usd = 0;
+  for (const r of data ?? []) {
+    const p = PAID_PRICES[r.model] || { in: 0.3, out: 2.5 };
+    usd += (Number(r.prompt_tokens) / 1e6) * p.in + (Number(r.output_tokens) / 1e6) * p.out;
+  }
+  return Math.round(usd * USD_TO_TWD * 100) / 100;
+}
+
 /**
  * 語言教練專用 Gemini 呼叫。回傳純文字。
  * 額度用完時：免費 → 429 code=free_exhausted（前端提示切換）；付費 → 429 code=paid_exhausted。
  * 成功時把 token 用量累加進 lang_api_usage。
  */
 export async function coachGemini(opts: GeminiCallOpts, ctx: CoachCtx): Promise<string> {
+  const config = useRuntimeConfig();
   // 付費 key 僅限站長使用（保護荷包）
   let usePaid = ctx.usePaid;
   if (usePaid && !(await isOwner(ctx.supabase, ctx.userId))) usePaid = false;
+  // 本月付費成本超過上限 → 自動退回免費（防爆帳單）
+  if (usePaid) {
+    const cap = Number(config.geminiPaidMonthlyCapTwd) || 0;
+    if (cap > 0 && (await monthlyPaidCostTwd(ctx.supabase, ctx.userId)) >= cap) {
+      usePaid = false;
+    }
+  }
   const { keys, tier } = resolveCoachKeys(usePaid);
   if (!keys.length) {
     throw createError({

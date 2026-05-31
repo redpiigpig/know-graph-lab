@@ -1,8 +1,16 @@
-// 語言教練專用 middleware：只要求「已登入」，不限站長白名單。
-// 任何註冊用戶都能使用 /coach（各自獨立資料）；lab 工具仍用 owner-only 的 `auth`。
+// 語言教練 middleware（已鎖回站長專屬）：需登入且 email == allowedEmail。
+// 非站長（即使有帳號）一律登出並導回登入頁。
 export default defineNuxtRouteMiddleware(() => {
   const user = useSupabaseUser();
+  const config = useRuntimeConfig();
+  const allowedEmail = config.public.allowedEmail as string | undefined;
+
   if (!user.value) {
+    return navigateTo("/login");
+  }
+  if (allowedEmail && user.value.email && user.value.email !== allowedEmail) {
+    const supabase = useSupabaseClient();
+    supabase.auth.signOut();
     return navigateTo("/login");
   }
 });

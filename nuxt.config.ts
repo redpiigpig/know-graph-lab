@@ -35,6 +35,8 @@ export default defineNuxtConfig({
     // 兩支都還沒填時，免費層 fallback 用既有的 Gemini_API_Key_* 共用池。
     geminiCoachFreeKey: process.env.GEMINI_COACH_FREE_KEY,
     geminiCoachPaidKey: process.env.GEMINI_COACH_PAID_KEY,
+    // 付費 key 每月成本上限（NT$）；本月付費估計成本超過就自動退回免費。改上限：設此 env。
+    geminiPaidMonthlyCapTwd: Number(process.env.GEMINI_PAID_MONTHLY_CAP_TWD || 500),
 
     // 公開配置（前端和後端都可用）
     public: {

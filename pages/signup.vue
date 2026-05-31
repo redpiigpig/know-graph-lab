@@ -291,6 +291,9 @@
 </template>
 
 <script setup lang="ts">
+// 此站已關閉公開註冊（私人網站，僅限授權 Email）→ 一律導回登入頁
+await navigateTo("/login");
+
 // 學術領域選項
 const academicFields = [
   { value: "computer_science", label: "資訊科學" },

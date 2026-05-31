@@ -51,6 +51,10 @@ export default defineEventHandler(async (event) => {
     };
   };
 
+  const monthStart = today.slice(0, 7) + "-01";
+  const monthPaid = sum((r) => r.tier === "paid" && r.usage_date >= monthStart);
+  const cap = Number(useRuntimeConfig().geminiPaidMonthlyCapTwd) || 0;
+
   return {
     today: {
       all: sum((r) => r.usage_date === today),
@@ -59,6 +63,9 @@ export default defineEventHandler(async (event) => {
     },
     last30: sum(() => true),
     last30Paid: sum((r) => r.tier === "paid"),
+    monthPaid,                                  // 本月付費估計成本
+    paidCapTwd: cap,                            // 每月上限（NT$）
+    paidOverCap: cap > 0 && monthPaid.costTwd >= cap, // 是否已達上限（已自動退回免費）
     note: "成本為依 token × 公開單價的估計值，免費層計 0；實際帳單以 Google Cloud Billing 為準。",
   };
 });
