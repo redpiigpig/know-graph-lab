@@ -129,6 +129,7 @@ const REFINED_IDS = new Set([
   '2accee20-5f9d-4099-9ce9-3dda0726a74b',  // NPNF1 Vol 8 (Augustine — Expositions on the Book of Psalms)
   '76df31fe-e732-4aa6-88c2-d650a09fb688',  // NPNF1 Vol 9 (金口若望 Chrysostom — On the Priesthood + Ascetic Treatises + Homilies)
   '0d160c29-8d61-4dbc-8f8e-d47fee694eab',  // NPNF1 Vol 10 (金口若望 Chrysostom — Homilies on the Gospel of Matthew)
+  'bf2dd1b2-ae53-43c2-8fac-7ce10e137c10',  // NPNF1 Vol 12 (金口若望 Chrysostom — Homilies on 1 & 2 Corinthians)
 ])
 
 const series = [
