@@ -177,6 +177,20 @@ REGISTRY: dict[str, dict[str, str]] = {
         "Comparative Table of the Works of St. Chrysostom in the American and Migne's Editions.": "__FRONT__",
         "Indexes of Subjects": "__INDEX__", "Indexes": "__INDEX__",
     },
+    # Vol 26 NPNF2-01 — Eusebius: Church History + Life of Constantine
+    "91ff3a5e-cd1f-4ab4-acb7-70cb7a80c4b9": {
+        "The Church History of Eusebius.": "教會史",
+        "The Life of Constantine with Orations of Constantine and Eusebius.": "君士坦丁傳",
+        "About This Book": "__FRONT__", "Title Page.": "__FRONT__", "Preface.": "__FRONT__",
+        "Index of Subjects": "__INDEX__", "Indexes": "__INDEX__",
+    },
+    # Vol 27 NPNF2-02 — Socrates Scholasticus + Sozomen: Ecclesiastical Histories
+    "29782dd6-ece9-446a-83ed-9cc0892d7cc7": {
+        "The Ecclesiastical History of Socrates Scholasticus.": "蘇格拉底教會史",
+        "The Ecclesiastical History of Sozomen.": "索佐門教會史",
+        "About This Book": "__FRONT__", "Title Page.": "__FRONT__",
+        "General Indexes": "__INDEX__", "Indexes": "__INDEX__",
+    },
 }
 
 

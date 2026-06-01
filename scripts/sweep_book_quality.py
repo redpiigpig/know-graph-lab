@@ -427,6 +427,17 @@ TERM_FIXES_NPNF1_CHRYSOSTOM = dict(TERM_FIXES_ANF_COMMON, **{
     "狄奧多羅": "狄奧多若",          # Theodore (of Mopsuestia, addressee)
 })
 
+# ── NPNF2 教會史家（Vol 1-3：優西比烏／蘇格拉底／索佐門／狄奧多雷）────────────
+# 譯名鎖定：Eusebius→優西比烏（該撒利亞的優西比烏）；Socrates Scholasticus→蘇格拉底；
+# Sozomen→索佐門；Constantine→君士坦丁。收斂常見音譯變體。
+TERM_FIXES_NPNF2_HISTORIANS = dict(TERM_FIXES_ANF_COMMON, **{
+    "尤西比烏斯": "優西比烏", "優西比烏斯": "優西比烏", "尤西比烏": "優西比烏",
+    "猶西比烏": "優西比烏", "攸西比烏": "優西比烏", "尤瑟比烏斯": "優西比烏",
+    "索佐曼": "索佐門", "索左門": "索佐門", "蘇佐門": "索佐門", "索佐墨諾斯": "索佐門",
+    "康斯坦丁": "君士坦丁", "君士坦汀": "君士坦丁",
+    "蘇格拉底斯": "蘇格拉底",
+})
+
 # 所有 ANF vol 都吃 ANF_COMMON baseline；per-vol specific 覆蓋 baseline。
 TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "c98d358d-7066-4691-a896-b7232707b0db": {**TERM_FIXES_ANF_COMMON, **TERM_FIXES_ANF_VOL_1},  # ANF Vol 1
@@ -451,6 +462,8 @@ TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "bf2dd1b2-ae53-43c2-8fac-7ce10e137c10": TERM_FIXES_NPNF1_CHRYSOSTOM,  # NPNF1 Vol 12 Chrysostom (1 & 2 Corinthians)
     "9192cb77-3ce2-4adb-9d90-76200e452763": TERM_FIXES_NPNF1_CHRYSOSTOM,  # NPNF1 Vol 13 Chrysostom (Galatians..Philemon)
     "91c7023f-2e63-4b16-897a-43bdf7d5e290": TERM_FIXES_NPNF1_CHRYSOSTOM,  # NPNF1 Vol 14 Chrysostom (John + Hebrews)
+    "91ff3a5e-cd1f-4ab4-acb7-70cb7a80c4b9": TERM_FIXES_NPNF2_HISTORIANS,  # NPNF2 Vol 1 Eusebius (Church History + Life of Constantine)
+    "29782dd6-ece9-446a-83ed-9cc0892d7cc7": TERM_FIXES_NPNF2_HISTORIANS,  # NPNF2 Vol 2 Socrates + Sozomen
 }
 
 
