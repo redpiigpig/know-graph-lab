@@ -133,6 +133,7 @@ const REFINED_IDS = new Set([
   '4d73c561-aa4e-46b2-8e29-d331c5b9d28d',  // NPNF1 Vol 11 (金口若望 Chrysostom — Homilies on Acts + Romans)
   '9192cb77-3ce2-4adb-9d90-76200e452763',  // NPNF1 Vol 13 (金口若望 Chrysostom — Homilies on Galatians through Philemon)
   '91c7023f-2e63-4b16-897a-43bdf7d5e290',  // NPNF1 Vol 14 (金口若望 Chrysostom — Homilies on John + Hebrews)
+  '91ff3a5e-cd1f-4ab4-acb7-70cb7a80c4b9',  // NPNF2 Vol 1 (Eusebius — Church History + Life of Constantine)
 ])
 
 const series = [
