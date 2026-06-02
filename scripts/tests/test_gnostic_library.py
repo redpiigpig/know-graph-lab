@@ -111,6 +111,33 @@ def test_parse_category_index_returns_content_doc_links_only():
     assert "Gnosis Archive" not in titles
 
 
+CATEGORY_INDEX_NOISE_HTML = """
+<html><body>
+  <a href="naghamm/thunder.html">The Thunder,
+        Perfect   Mind</a>
+  <a href="audio/Sorrow_of_Sophia.mp3">The Sorrow of Sophia (audio)</a>
+  <a href="naghamm/intro.pdf">Introduction (PDF)</a>
+  <a href="library/gs.htm">Classical Gnostic Scriptures</a>
+  <a href="naghamm/gthom.html">The Gospel of Thomas</a>
+</body></html>
+"""
+
+
+def test_parse_category_index_collapses_title_whitespace():
+    docs = gl.parse_category_index(CATEGORY_INDEX_NOISE_HTML, base_path="naghamm/nhl.html")
+    titles = [d["title"] for d in docs]
+    assert "The Thunder, Perfect Mind" in titles   # newlines + runs collapsed
+
+
+def test_parse_category_index_drops_assets_and_category_crosslinks():
+    docs = gl.parse_category_index(CATEGORY_INDEX_NOISE_HTML, base_path="naghamm/nhl.html")
+    urls = " ".join(d["url"] for d in docs)
+    assert ".mp3" not in urls            # audio dropped
+    assert ".pdf" not in urls            # pdf asset dropped
+    assert "gs.htm" not in urls          # cross-link to another category index dropped
+    assert any(d["title"] == "The Gospel of Thomas" for d in docs)
+
+
 def test_parse_category_index_resolves_relative_urls():
     docs = gl.parse_category_index(CATEGORY_INDEX_HTML, base_path="naghamm/nhl.html")
     gthom = next(d for d in docs if d["title"] == "The Gospel of Thomas")
@@ -161,6 +188,41 @@ def test_parse_document_preserves_section_order():
     i_one = next(i for i, s in enumerate(secs) if "taste death" in s)
     i_two = next(i for i, s in enumerate(secs) if "not stop seeking" in s)
     assert i_intro < i_one < i_two
+
+
+# gnosis.org real-world shape: one <p> with <br>-line-broken paragraphs,
+# blank lines marked by "&nbsp;<br>", inside nested <blockquote>.
+BR_DOC_HTML = """
+<html><head><title>The Gospel of Thomas</title></head><body>
+<blockquote><blockquote>
+  <h3 align="center">THE GOSPEL OF THOMAS</h3>
+  <p>&nbsp;<br>
+    These are the hidden sayings that the living Yeshua spoke. <br>
+    &nbsp;<br>
+    (1)<br>
+    And he said, <br>
+    Whoever discovers what these sayings mean <br>
+    will not taste death.<br>
+    &nbsp;<br>
+    (2)<br>
+    Yeshua said, <br>
+    Seek and do not stop seeking until you find.<br>
+  </p>
+</blockquote></blockquote>
+</body></html>
+"""
+
+
+def test_parse_document_splits_br_delimited_paragraphs():
+    doc = gl.parse_document(BR_DOC_HTML)
+    secs = doc["sections"]
+    # 3 logical paragraphs: intro + saying 1 + saying 2 (NOT one big blob)
+    assert len(secs) == 3
+    assert "hidden sayings" in secs[0] and "taste death" not in secs[0]
+    assert "taste death" in secs[1]
+    assert "stop seeking" in secs[2]
+    # &nbsp;-only lines are not their own sections
+    assert all(s.replace("\xa0", "").strip() for s in secs)
 
 
 # ── Alignment gate ────────────────────────────────────────────────────────
