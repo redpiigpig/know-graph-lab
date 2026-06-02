@@ -91,6 +91,19 @@ if (args.includes('--fit')) {
   }
 }
 
+// Optional: pan to a see/bishop via the page's own search box (--search "坎特伯里")
+const searchQuery = arg('search')
+if (searchQuery) {
+  const input = page.locator('input[placeholder*="搜尋"]').first()
+  await input.click({ force: true })
+  await input.fill(searchQuery)
+  await page.waitForTimeout(900)
+  const firstResult = page.locator('div.max-h-\\[420px\\] button').first()
+  const n = await firstResult.count()
+  console.log(`  search "${searchQuery}" → ${n} result(s)`)
+  if (n > 0) { await firstResult.click({ force: true }); await page.waitForTimeout(1400) }
+}
+
 // Optional: set zoom level (after centerOnJesus default), e.g. --zoom 0.6
 const zoomArg = arg('zoom')
 if (zoomArg) {
