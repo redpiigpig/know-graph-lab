@@ -49,14 +49,13 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "Know Graph Lab - 知識圖工作室",
+      title: "Workspace",
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        {
-          name: "description",
-          content: "AI-powered academic visualization tool",
-        },
+        // 私人網站：不開放搜尋引擎索引、不對外提示內容
+        { name: "robots", content: "noindex, nofollow, noarchive, nosnippet" },
+        { name: "googlebot", content: "noindex, nofollow" },
       ],
       link: [{ rel: "icon", type: "image/jpeg", href: "/logo_image.jpg" }],
     },

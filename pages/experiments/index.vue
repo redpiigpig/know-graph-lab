@@ -46,10 +46,6 @@
         </NuxtLink>
 
       </div>
-
-      <div class="mt-12 text-center text-gray-400 text-xs">
-        Know Graph Lab &nbsp;·&nbsp; 實驗網站 &nbsp;·&nbsp; 2026
-      </div>
     </div>
   </div>
 </template>

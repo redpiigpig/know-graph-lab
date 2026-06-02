@@ -5,13 +5,11 @@
       <div class="text-center mb-8">
         <img src="/images/logo-icon.svg" alt="Logo" class="w-16 h-16 mx-auto mb-4" />
         <h1 class="text-2xl font-bold text-gray-900">Know Graph Lab</h1>
-        <p class="text-gray-500 text-sm mt-1">個人學術研究工具集</p>
       </div>
 
       <div class="bg-white rounded-2xl shadow-xl p-8 space-y-5">
         <!-- 步驟 1：輸入 email 寄驗證碼 -->
         <div v-if="!codeSent" class="space-y-3">
-          <p class="text-sm text-center text-gray-600">輸入授權 Email，寄 6 位數驗證碼到信箱</p>
           <input
             v-model="email"
             type="email"
@@ -28,7 +26,6 @@
 
         <!-- 步驟 2：輸入驗證碼 -->
         <div v-else class="space-y-3">
-          <p class="text-sm text-center text-gray-600">驗證碼已寄到 <b>{{ email }}</b>，請輸入</p>
           <input
             v-model="code"
             inputmode="numeric"
@@ -52,10 +49,6 @@
         <div v-if="error" class="p-3 bg-red-50 border border-red-100 rounded-lg">
           <p class="text-xs text-red-600">{{ error }}</p>
         </div>
-
-        <p class="text-center text-[11px] text-gray-400 pt-1">
-          私人網站，僅限授權 Email 登入。每次新裝置都需 email 驗證碼——即使知道帳密，沒有信箱也無法進入。
-        </p>
       </div>
     </div>
   </div>

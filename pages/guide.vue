@@ -866,13 +866,6 @@
         </div>
       </section>
     </div>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-8">
-      <div class="max-w-7xl mx-auto px-4 text-center">
-        <p>&copy; 2026 Know Graph Lab. Made with ❤️ by the community.</p>
-      </div>
-    </footer>
   </div>
 </template>
 
