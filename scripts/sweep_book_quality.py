@@ -427,7 +427,7 @@ TERM_FIXES_NPNF1_CHRYSOSTOM = dict(TERM_FIXES_ANF_COMMON, **{
     "狄奧多羅": "狄奧多若",          # Theodore (of Mopsuestia, addressee)
 })
 
-# ── NPNF2 教會史家（Vol 1-3：優西比烏／蘇格拉底／索佐門／狄奧多雷）────────────
+# ── NPNF2 教會史家（Vol 1-3：優西比烏／蘇格拉底／索佐門／狄奧多勒）────────────
 # 譯名鎖定：Eusebius→優西比烏（該撒利亞的優西比烏）；Socrates Scholasticus→蘇格拉底；
 # Sozomen→索佐門；Constantine→君士坦丁。收斂常見音譯變體。
 TERM_FIXES_NPNF2_HISTORIANS = dict(TERM_FIXES_ANF_COMMON, **{
@@ -440,7 +440,8 @@ TERM_FIXES_NPNF2_HISTORIANS = dict(TERM_FIXES_ANF_COMMON, **{
 
 # NPNF2 Vol 3 — Theodoret（史家，繼承 HISTORIANS）+ Jerome + Rufinus
 TERM_FIXES_NPNF2_V3 = dict(TERM_FIXES_NPNF2_HISTORIANS, **{
-    "狄奧多勒": "狄奧多雷", "狄奧多雷特": "狄奧多雷", "狄奧多列": "狄奧多雷", "提阿多勒": "狄奧多雷",
+    # Theodoret → 狄奧多勒（詞庫 居魯斯的狄奧多勒）；收斂其他變體
+    "狄奧多雷特": "狄奧多勒", "狄奧多雷": "狄奧多勒", "狄奧多列": "狄奧多勒", "提阿多勒": "狄奧多勒",
     "傑羅姆": "耶柔米", "哲羅姆": "耶柔米", "耶羅米": "耶柔米", "熱羅尼莫": "耶柔米",
     "魯非努": "魯菲努斯", "魯芬努斯": "魯菲努斯", "魯非諾": "魯菲努斯", "魯弗納": "魯菲努斯",
 })
