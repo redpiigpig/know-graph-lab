@@ -123,14 +123,35 @@ def paragraph_drift(zh: str, en: str) -> Optional[float]:
     return (bigger - smaller) / bigger
 
 
+# Non-prose chapter_paths where paragraph alignment is meaningless — indexes,
+# abbreviation lists, covers, publisher ad pages. Their ZH/EN paragraph counts
+# legitimately diverge (list entries collapse/expand differently), so re-
+# translating them to "align" is pointless and (for big indexes) very costly.
+NONPROSE_PATH_RE = re.compile(
+    r"索引|目錄|Index|Indices|縮寫|略語|Abbreviation|封面|cover|"
+    r"更多.*著作|出版社的著作|版權|奧客來|參考書目|Bibliography",
+    re.I)
+
+
+def is_nonprose_chunk(chunk: dict) -> bool:
+    """True for index / abbreviation / cover / ad chunks — list-like content
+    where bilingual paragraph alignment carries no meaning."""
+    return bool(NONPROSE_PATH_RE.search(chunk.get("chapter_path") or ""))
+
+
 def alignment_gate(chunks: list[dict],
-                   threshold: float = BILINGUAL_DRIFT_RATIO) -> list[dict]:
+                   threshold: float = BILINGUAL_DRIFT_RATIO,
+                   skip_nonprose: bool = True) -> list[dict]:
     """逐段對照 gate — return the re-translation worklist.
 
-    For every bilingual chunk (has both `content` ZH and `source_text` EN),
-    flag it when paragraph_drift exceeds `threshold`: the reader pairs the
-    中英對照 columns row-by-row, so a drift past the gate means the columns
-    won't line up and the chunk is a re-translation candidate.
+    For every bilingual PROSE chunk (has both `content` ZH and `source_text`
+    EN), flag it when paragraph_drift exceeds `threshold`: the reader pairs
+    the 中英對照 columns row-by-row, so a drift past the gate means the
+    columns won't line up and the chunk is a re-translation candidate.
+
+    Index / abbreviation / cover / ad chunks are skipped by default
+    (`skip_nonprose`) — their paragraph counts legitimately diverge and
+    re-translating them to align is meaningless.
 
     Pure + importable so it runs as a post-translation quality gate (after a
     book is translated) or ad-hoc over any JSONL — independent of the full
@@ -140,6 +161,8 @@ def alignment_gate(chunks: list[dict],
         zh = c.get("content") or ""
         en = c.get("source_text") or ""
         if not zh or not en:
+            continue
+        if skip_nonprose and is_nonprose_chunk(c):
             continue
         drift = paragraph_drift(zh, en)
         if drift is not None and drift > threshold:
