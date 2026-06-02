@@ -9,8 +9,8 @@ import { callGeminiFull, type GeminiCallOpts } from "~/server/utils/gemini";
 export type Tier = "free" | "paid";
 
 // 依 usePaid 解析要用的 key 池與 tier
-export function resolveCoachKeys(usePaid: boolean): { keys: string[]; tier: Tier } {
-  const config = useRuntimeConfig();
+export function resolveCoachKeys(usePaid: boolean, cfg?: any): { keys: string[]; tier: Tier } {
+  const config = cfg ?? useRuntimeConfig();
   const paid = config.geminiCoachPaidKey as string | undefined;
   const free = config.geminiCoachFreeKey as string | undefined;
 
