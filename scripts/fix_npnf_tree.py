@@ -191,6 +191,14 @@ REGISTRY: dict[str, dict[str, str]] = {
         "About This Book": "__FRONT__", "Title Page.": "__FRONT__",
         "General Indexes": "__INDEX__", "Indexes": "__INDEX__",
     },
+    # Vol 28 NPNF2-03 — Theodoret + Jerome/Gennadius + Rufinus
+    "a7e5956e-8851-4d0f-b3d2-1f823d1bdc81": {
+        "The Ecclesiastical History, Dialogues, and Letters of Theodoret.": "狄奧多雷教會史、對話錄與書信",
+        "Jerome and Gennadius. Lives of Illustrious Men.": "耶柔米與根那狄《名人傳》",
+        "Life and Works of Rufinus with Jerome's Apology Against Rufinus.": "魯菲努斯生平與著作",
+        "About This Book": "__FRONT__", "Title Page.": "__FRONT__", "Preface.": "__FRONT__",
+        "Indexes": "__INDEX__",
+    },
 }
 
 

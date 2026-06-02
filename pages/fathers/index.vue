@@ -135,6 +135,7 @@ const REFINED_IDS = new Set([
   '91c7023f-2e63-4b16-897a-43bdf7d5e290',  // NPNF1 Vol 14 (金口若望 Chrysostom — Homilies on John + Hebrews)
   '91ff3a5e-cd1f-4ab4-acb7-70cb7a80c4b9',  // NPNF2 Vol 1 (Eusebius — Church History + Life of Constantine)
   '29782dd6-ece9-446a-83ed-9cc0892d7cc7',  // NPNF2 Vol 2 (Socrates Scholasticus + Sozomen — Ecclesiastical Histories)
+  'a7e5956e-8851-4d0f-b3d2-1f823d1bdc81',  // NPNF2 Vol 3 (Theodoret + Jerome/Gennadius + Rufinus)
 ])
 
 const series = [

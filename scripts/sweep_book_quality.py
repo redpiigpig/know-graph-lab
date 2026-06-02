@@ -438,6 +438,13 @@ TERM_FIXES_NPNF2_HISTORIANS = dict(TERM_FIXES_ANF_COMMON, **{
     "蘇格拉底斯": "蘇格拉底",
 })
 
+# NPNF2 Vol 3 — Theodoret（史家，繼承 HISTORIANS）+ Jerome + Rufinus
+TERM_FIXES_NPNF2_V3 = dict(TERM_FIXES_NPNF2_HISTORIANS, **{
+    "狄奧多勒": "狄奧多雷", "狄奧多雷特": "狄奧多雷", "狄奧多列": "狄奧多雷", "提阿多勒": "狄奧多雷",
+    "傑羅姆": "耶柔米", "哲羅姆": "耶柔米", "耶羅米": "耶柔米", "熱羅尼莫": "耶柔米",
+    "魯非努": "魯菲努斯", "魯芬努斯": "魯菲努斯", "魯非諾": "魯菲努斯", "魯弗納": "魯菲努斯",
+})
+
 # 所有 ANF vol 都吃 ANF_COMMON baseline；per-vol specific 覆蓋 baseline。
 TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "c98d358d-7066-4691-a896-b7232707b0db": {**TERM_FIXES_ANF_COMMON, **TERM_FIXES_ANF_VOL_1},  # ANF Vol 1
@@ -464,6 +471,7 @@ TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "91c7023f-2e63-4b16-897a-43bdf7d5e290": TERM_FIXES_NPNF1_CHRYSOSTOM,  # NPNF1 Vol 14 Chrysostom (John + Hebrews)
     "91ff3a5e-cd1f-4ab4-acb7-70cb7a80c4b9": TERM_FIXES_NPNF2_HISTORIANS,  # NPNF2 Vol 1 Eusebius (Church History + Life of Constantine)
     "29782dd6-ece9-446a-83ed-9cc0892d7cc7": TERM_FIXES_NPNF2_HISTORIANS,  # NPNF2 Vol 2 Socrates + Sozomen
+    "a7e5956e-8851-4d0f-b3d2-1f823d1bdc81": TERM_FIXES_NPNF2_V3,  # NPNF2 Vol 3 Theodoret + Jerome + Rufinus
 }
 
 
