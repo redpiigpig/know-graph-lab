@@ -893,6 +893,19 @@ const cv = computed(() => {
             cy += BISH_H - 2 + BISH_VG
           }
           chainEndY = cy
+          // 暫時分裂「回歸原本的軸線」：對立教宗（亞威農/比薩）這類短暫並立的支線，在末任主教
+          // 之後畫一條紅虛匯流曲線回到脊柱「該分裂結束年」的位置，表示裂痕癒合、併回主軸。
+          // 永久分裂（天主教/東正教/聖公會…church 不含「對立」）則不畫，各自延續。
+          if (br.church.includes('對立') && prevBb && prevBottomY != null) {
+            const rejoinYear = prevBb.end_year ?? prevBb.start_year
+            const rejoinY = rejoinYear != null ? approxYByYear(sp, rejoinYear, bishopMap, prevBottomY) : prevBottomY
+            const c1 = branchBishopCX + (headerCX - branchBishopCX) * 0.35
+            const c2 = headerCX - (headerCX - branchBishopCX) * 0.35
+            paths.push({
+              d: `M${branchBishopCX},${prevBottomY} C${c1},${prevBottomY} ${c2},${rejoinY} ${headerCX},${rejoinY}`,
+              stroke: '#dc2626', dashes: '2,4,8,4', width: 2, opacity: 0.7,
+            })
+          }
           // 把 lastBranchYByDepth 更新到 chain 末端，下一個兄弟分支會堆疊在後面（不蓋住主教鏈）
           if (br.bishops.length > 0) {
             lastBranchYByDepth.set(depth, chainEndY)
