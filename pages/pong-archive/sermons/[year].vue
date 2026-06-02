@@ -224,14 +224,20 @@
     <!-- ── Sermon Content ──────────────────────────────────── -->
     <section class="sd-section sd-section--content">
       <div class="sd-section-inner">
-        <h2 class="sd-section-title">講道內容</h2>
+        <div class="sd-content-head">
+          <h2 class="sd-section-title">講道內容</h2>
+          <div v-if="hasManuscript" class="sd-ver-toggle">
+            <button :class="{ on: version === 'spoken' }" @click="version = 'spoken'">實況逐字稿</button>
+            <button :class="{ on: version === 'manuscript' }" @click="version = 'manuscript'">講章手稿</button>
+          </div>
+        </div>
         <textarea
           v-if="isEditing"
-          v-model="local.content"
+          v-model="local[activeField]"
           class="sd-content-textarea sd-textarea-plain"
           rows="30"
           placeholder="講道逐字稿或摘要…"
-          @input="save('content', local.content)"
+          @input="save(activeField, local[activeField])"
         />
         <div v-else class="sd-content-body">
           <template v-for="(item, i) in contentParagraphs" :key="i">
@@ -293,6 +299,12 @@ watch(isEditing, async (on) => {
 function save(field, value) {
   saveField('pong_sermons', sermon.value?.id, field, value)
 }
+
+// ── Content versions: 實況逐字稿(content) ↔ 講章手稿(manuscript) ──
+const version = ref('spoken') // 'spoken' | 'manuscript'
+const hasManuscript = computed(() => !!(sermon.value?.manuscript || '').trim())
+const activeField = computed(() => (version.value === 'manuscript' ? 'manuscript' : 'content'))
+const activeText = computed(() => (version.value === 'manuscript' ? sermon.value?.manuscript : sermon.value?.content))
 
 function autoResize(el) {
   el.style.height = 'auto'
@@ -367,7 +379,7 @@ function normalizeSpeakerName(name) {
 }
 
 const contentParagraphs = computed(() => {
-  const t = sermon.value?.content
+  const t = activeText.value
   if (!t) return []
   return t.split(/\n+/).filter(Boolean).flatMap(line => {
     if (/^【.+】/.test(line)) return [{ type: 'section', text: line }]
@@ -509,6 +521,13 @@ const seasonColor = computed(() => {
 /* ── Sections ────────────────────────────────────────────── */
 .sd-section { padding: 40px 40px; border-bottom: 1px solid #E8E4DC; }
 .sd-section--content { padding-bottom: 80px; border-bottom: none; }
+.sd-content-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.sd-ver-toggle { display: inline-flex; border: 1px solid #D8CFBE; border-radius: 999px; overflow: hidden; }
+.sd-ver-toggle button {
+  appearance: none; border: none; background: transparent; cursor: pointer;
+  padding: 4px 14px; font-size: 0.8rem; color: #8A7E68; transition: all .15s;
+}
+.sd-ver-toggle button.on { background: #6B5B4A; color: #fff; }
 .sd-section-inner { max-width: 720px; margin: 0 auto; }
 
 .sd-section-title {
