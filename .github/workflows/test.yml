@@ -12,7 +12,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          # 用 24 對齊本機（lockfile 由 npm 11 / node 24 產生；node 20 的 npm 10 會把
+          # @emnapi/* commander crossws 判定為 lockfile 缺漏 → npm ci 掛）。
+          node-version: 24
           cache: npm
       - run: npm ci
       - run: npx nuxi prepare
