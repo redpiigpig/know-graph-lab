@@ -448,6 +448,108 @@ def audit_book(eid: str, title: str) -> dict | None:
             "samples": (fn[:2] + bq[:2] + bare[:2])[:4]}
 
 
+# ── JOB B auto-fix — mechanically clean suspect TOC entries (EPUB + has-TOC) ──
+def _derive_title(content: str) -> str | None:
+    """A filename-leak chunk starts at a spine-doc boundary, so its first
+    non-empty lines ARE its heading (CCEL EPUBs store headings as plain caps
+    lines, not markdown). Join the first 1-2 non-empty lines, cap length."""
+    lines = [l.strip() for l in (content or "").split("\n") if l.strip()]
+    if not lines:
+        return None
+    t = lines[0]
+    if len(t) < 10 and len(lines) > 1:        # short label like "CHAPTER II." -> append next
+        t = f"{t} {lines[1]}"
+    t = re.sub(r"\s+", " ", t).strip(" .。，、")
+    return t[:50] if t else None
+
+
+_HEADING_OK = re.compile(
+    r"(第[一二三四五六七八九十百千0-9]+\s*[章節篇卷部回])|^(序|序言|目錄|目次|前言|導言|導論|緒論|附錄|跋|後記|獻給|凡例|內容簡介|作者簡介)"
+    r"|^(chapter|book|part|period|section|preface|foreword|introduction|appendix|contents|symbola|biography)\b", re.I)
+
+
+def _heading_like(t: str) -> bool:
+    """A candidate is a real heading if it is short and free of mid-sentence
+    punctuation, OR matches a known heading pattern. Body sentences / captions
+    / dedications fail this and get nulled instead of becoming junk titles."""
+    if not t:
+        return False
+    if _HEADING_OK.search(t):
+        return True
+    return len(t) <= 24 and not re.search(r"[，。；！？、]", t[:-1])
+
+
+def autofix_toc(eid: str, dry_run: bool = False) -> dict:
+    """Clean suspect chapter_paths in one book's JSONL — CONSERVATIVELY:
+      - filename leak (.html/.xml) -> derive title from chunk's first lines
+      - blockquote ("> …")        -> strip ALL leading "> " markers
+      - then GATE: keep the candidate only if it looks like a heading; else set
+        null (a junk filename/quoted-body becomes no-heading, never body-junk).
+      - bare ordinals              -> left as-is (terse, not wrong).
+    Only suspect entries are touched; everything else is preserved."""
+    jsonl_path = CHUNKS_DIR / f"{eid}.jsonl"
+    if not jsonl_path.exists():
+        return {"status": "skip", "note": "no jsonl"}
+    chunks = [json.loads(l) for l in jsonl_path.read_text(encoding="utf-8").splitlines() if l.strip()]
+    n_fn = n_bq = n_null = 0
+    samples = []
+    for c in chunks:
+        cp = (c.get("chapter_path") or "").strip()
+        if not cp:
+            continue
+        kind = None
+        if FN_RE.search(cp):
+            cand = _derive_title(c.get("content") or "")
+            kind = "fn"
+        elif BQ_RE.match(cp):
+            cand = re.sub(r"^(\s*>+\s*)+", "", cp).strip()
+            kind = "bq"
+        else:
+            continue
+        cand = (cand or "").strip()
+        new = cand if _heading_like(cand) else None
+        if new is None:
+            n_null += 1
+        if kind == "fn":
+            n_fn += 1
+        else:
+            n_bq += 1
+        if len(samples) < 5:
+            samples.append(f"{cp[:18]!r}->{new!r}")
+        c["chapter_path"] = new
+    changed = n_fn + n_bq
+    if changed and not dry_run:
+        write_book(eid, chunks)
+    return {"status": "ok" if changed else "noop", "filename_fixed": n_fn,
+            "blockquote_fixed": n_bq, "nulled": n_null, "samples": samples}
+
+
+def run_audit_fix(dry_run: bool = False):
+    print("JOB B-fix — mechanically cleaning suspect TOC entries…", flush=True)
+    books = [b for b in fetch_all_books("id,title,chunk_count") if (b.get("chunk_count") or 0) > 0]
+    flagged = []
+    for b in books:
+        try:
+            if audit_book(b["id"], b.get("title") or ""):
+                flagged.append(b)
+        except Exception:
+            pass
+    print(f"  {len(flagged)} flagged books to fix{' [DRY-RUN]' if dry_run else ''}", flush=True)
+    tot_fn = tot_bq = 0
+    for i, b in enumerate(flagged):
+        try:
+            res = autofix_toc(b["id"], dry_run=dry_run)
+        except Exception as e:
+            res = {"status": "error", "note": str(e)[:100], "filename_fixed": 0, "blockquote_fixed": 0}
+        tot_fn += res.get("filename_fixed", 0)
+        tot_bq += res.get("blockquote_fixed", 0)
+        print(f"  [{i+1}/{len(flagged)}] fn={res.get('filename_fixed',0)} "
+              f"bq={res.get('blockquote_fixed',0)} {(b.get('title') or '')[:34]} "
+              f"{res.get('samples',[''])[:1]}", flush=True)
+    print(f"✓ JOB B-fix done: {tot_fn} filename leaks + {tot_bq} blockquote titles cleaned "
+          f"across {len(flagged)} books", flush=True)
+
+
 # ── worklists ────────────────────────────────────────────────────────────────
 def fetch_all_books(sel: str, filt: str = "") -> list[dict]:
     out, off = [], 0
@@ -535,7 +637,7 @@ def run_recover(limit: int = 0, dry_run: bool = False, ids: list[str] | None = N
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("mode", choices=["all", "audit", "recover"])
+    ap.add_argument("mode", choices=["all", "audit", "recover", "audit-fix"])
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--ids", default="")
@@ -546,6 +648,8 @@ def main():
     ids = [x for x in args.ids.split(",") if x] or None
     if args.mode in ("all", "audit"):
         run_audit()
+    if args.mode == "audit-fix":
+        run_audit_fix(dry_run=args.dry_run)
     if args.mode in ("all", "recover"):
         run_recover(limit=args.limit, dry_run=args.dry_run, ids=ids, rich=args.rich)
 
