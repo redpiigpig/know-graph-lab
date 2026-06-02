@@ -191,8 +191,9 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({ middleware: 'auth' });
-
+// 共用相簿資料夾瀏覽器（訓練／弘誓）。被 pages/photos/[lib]/index.vue（相簿根）
+// 與 pages/photos/[lib]/[...path].vue（巢狀資料夾）兩個 page 共用 —— middleware 與
+// definePageMeta 由各 page 宣告，元件本身只負責 UI + 資料載入。
 interface PhotoFile {
   name: string;
   kind: "image" | "video";

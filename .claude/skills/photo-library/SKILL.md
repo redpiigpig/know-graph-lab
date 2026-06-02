@@ -307,9 +307,22 @@ JSON 大致結構：
 | `/photos/chenwei` | [pages/photos/chenwei/index.vue](../../../pages/photos/chenwei/index.vue) | 辰瑋年份 grid |
 | `/photos/chenwei/[year]` | [pages/photos/chenwei/[year]/index.vue](../../../pages/photos/chenwei/[year]/index.vue) | 月份 + Other 區 |
 | `/photos/chenwei/[year]/[month]` | [pages/photos/chenwei/[year]/[month]/index.vue](../../../pages/photos/chenwei/[year]/[month]/index.vue) | 照片 grid + lightbox |
-| `/photos/training` 或 `/photos/hongshi`（含 nested path）| [pages/photos/[lib]/[[...path]].vue](../../../pages/photos/[lib]/[[...path]].vue) | 通用 folder browser（資料夾 + 照片 + lightbox）|
+| `/photos/training`、`/photos/hongshi`（相簿根）| [pages/photos/[lib]/index.vue](../../../pages/photos/[lib]/index.vue) | 通用 folder browser 根層 |
+| `/photos/training/<event>/...`（巢狀資料夾，任意深度）| [pages/photos/[lib]/[...path].vue](../../../pages/photos/[lib]/[...path].vue) | 同上，巢狀層 |
 
-`/photos/chenwei` 由靜態 `chenwei/` 子目錄取勝路由優先順序，所以即使 `[lib]/[[...path]].vue` 也會匹配 `/photos/chenwei`，靜態仍會中標。
+兩個 page 都是薄殼，只 render [components/PhotoFolderBrowser.vue](../../../components/PhotoFolderBrowser.vue)（資料夾 + 照片 + lightbox + 多選刪除全在此元件），各自 `definePageMeta({ middleware: 'auth' })`。元件靠 `useRoute().params.lib` / `.path` 同時服務根層與巢狀層。
+
+`/photos/chenwei` 由靜態 `chenwei/` 子目錄取勝路由優先順序，所以即使 `[lib]/` 動態段也會匹配 `/photos/chenwei`，靜態仍會中標。
+
+> ⚠️ **路由地雷（2026-06-02 修）**：原本用單一檔 `[lib]/[[...path]].vue`（optional catch-all）。**unplugin-vue-router 在動態 `[lib]/` 底下放 optional catch-all 不會產生任何路由** → `/photos/training`、`/photos/hongshi`、連巢狀 `/photos/training/2017` 全 404（curl 實測：`/photos`、`/photos/chenwei` 回 302，三相簿頁回 404）。資料層（index 有 4,923 訓練檔 / 50 夾）、API、library card 全正常，純粹 page route 沒生成。修法＝拆成 **`index.vue`（相簿根）+ `[...path].vue`（required catch-all，巢狀）** 兩檔共用元件，這是 Nuxt 可靠處理的 idiom。教訓：不要在動態段資料夾內單獨放 `[[...optional]]` catch-all。
+
+### 測試
+
+[test/photos/photos.spec.ts](../../../test/photos/photos.spec.ts)（vitest，22 cases）覆蓋 [server/utils/photos.ts](../../../server/utils/photos.ts) 的純邏輯：`classify` / `sourceForSegment` / `bucketDir`（含 path-traversal throw）/ `contentTypeFor` / `isLibrarySlug` / `resolveLibFolder` 守門 / `signFileUrl`+`verifyFileSig`（含竄改 reject）/ 五個 `*FromIndex` builder（用合成 index fixture 驗 chenwei year-month 與 training/hongshi folders 兩種 layout）。
+
+- 跑：`npx vitest run test/photos/photos.spec.ts`（或 `npm run test:run` 全跑）
+- **環境＝nuxt**（非 node）：photos.ts 用 auto-import `useRuntimeConfig`，node env 會丟 `[nuxt] instance unavailable`。用 `mockNuxtImport('useRuntimeConfig', …)` 注入 deterministic config，**且回傳值必須含 `app.baseURL`**，否則 nuxt env 的 router plugin 初始化會炸（覆蓋了全域 useRuntimeConfig）。
+- 最後一個 describe 是 **真實 `scripts/photo_index.json` 整合測試**：檔在就驗三相簿 `totalFiles > 0` 且 `listLibraryFolderFromIndex(idx,'training','')` 非空（直接守「訓練頁有東西可顯示」這條 invariant，避免再次只壞 route 不壞 data）；檔不在（CI / 沒跑過 build_photo_index）自動 `it.skip`，不會紅。
 
 ### 後端 API
 
