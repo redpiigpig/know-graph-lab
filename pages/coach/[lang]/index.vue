@@ -49,6 +49,17 @@
         </div>
       </div>
 
+      <!-- 今日計畫（主入口）-->
+      <NuxtLink :to="`/coach/${lang}/today`" class="block bg-gradient-to-r from-indigo-600 to-violet-600 rounded-2xl p-5 text-white hover:shadow-lg transition">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="text-base font-bold">📅 今日計畫</div>
+            <div class="text-xs text-white/80 mt-0.5">每日推薦單字 ‧ 5 篇閱讀 ‧ 5 段聽力 ‧ 口說題 ‧ 任務</div>
+          </div>
+          <span class="text-2xl">→</span>
+        </div>
+      </NuxtLink>
+
       <!-- 功能磚 -->
       <!-- 聊天區 -->
       <div>

@@ -4,6 +4,10 @@
       <NuxtLink :to="`/coach/${language}`" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
       <div class="w-px h-5 bg-gray-200" />
       <span class="text-sm font-semibold text-gray-900">單字複習</span>
+      <div class="ml-auto flex gap-1">
+        <button @click="quizMode = false" class="text-xs px-2.5 py-1 rounded-lg transition" :class="!quizMode ? 'bg-indigo-600 text-white' : 'bg-gray-50 text-gray-500'">翻卡</button>
+        <button @click="quizMode = true" class="text-xs px-2.5 py-1 rounded-lg transition" :class="quizMode ? 'bg-indigo-600 text-white' : 'bg-gray-50 text-gray-500'">選擇題</button>
+      </div>
     </nav>
 
     <div class="flex-1 p-5 max-w-2xl mx-auto w-full">
@@ -14,22 +18,41 @@
         <div v-if="current.reading" class="text-sm text-gray-400 mt-1">{{ current.reading }}</div>
         <button v-if="speech.ttsSupported.value" @click="speak" class="mt-2 text-gray-300 hover:text-indigo-500 transition">🔊 發音</button>
 
-        <Transition name="fade">
-          <div v-if="revealed" class="mt-5 pt-5 border-t border-gray-100">
-            <div class="text-lg text-gray-800">{{ current.meaning }}</div>
-            <div v-if="current.example" class="text-sm text-gray-400 mt-2 italic">{{ current.example }}</div>
+        <!-- 選擇題模式：選意思 -->
+        <template v-if="quizMode">
+          <div class="mt-5 space-y-2">
+            <button v-for="(opt, oi) in current.options" :key="oi" @click="answer(opt)" :disabled="picked !== null"
+              class="w-full text-left px-4 py-3 rounded-xl border text-sm transition"
+              :class="optionClass(opt)">
+              {{ opt }}
+            </button>
           </div>
-        </Transition>
+          <div v-if="picked !== null" class="mt-4">
+            <p v-if="picked === current.meaning" class="text-sm text-emerald-600 font-medium">✓ 答對了！</p>
+            <p v-else class="text-sm text-rose-600 font-medium">✗ 答錯了，已排進複習。正解：{{ current.meaning }}</p>
+            <div v-if="current.example" class="text-xs text-gray-400 mt-1 italic">{{ current.example }}</div>
+            <button @click="next()" class="mt-3 px-8 py-2.5 rounded-2xl bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition">下一張 →</button>
+          </div>
+        </template>
 
-        <div class="mt-7">
-          <button v-if="!revealed" @click="revealed = true" class="px-8 py-3 rounded-2xl bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition">顯示答案</button>
-          <div v-else class="grid grid-cols-4 gap-2">
-            <button @click="grade(2)" class="py-3 rounded-xl bg-rose-50 text-rose-700 text-sm font-medium hover:bg-rose-100 transition">再來一次<span class="block text-[10px] opacity-60">1天</span></button>
-            <button @click="grade(3)" class="py-3 rounded-xl bg-amber-50 text-amber-700 text-sm font-medium hover:bg-amber-100 transition">困難</button>
-            <button @click="grade(4)" class="py-3 rounded-xl bg-sky-50 text-sky-700 text-sm font-medium hover:bg-sky-100 transition">良好</button>
-            <button @click="grade(5)" class="py-3 rounded-xl bg-emerald-50 text-emerald-700 text-sm font-medium hover:bg-emerald-100 transition">簡單</button>
+        <!-- 翻卡模式 -->
+        <template v-else>
+          <Transition name="fade">
+            <div v-if="revealed" class="mt-5 pt-5 border-t border-gray-100">
+              <div class="text-lg text-gray-800">{{ current.meaning }}</div>
+              <div v-if="current.example" class="text-sm text-gray-400 mt-2 italic">{{ current.example }}</div>
+            </div>
+          </Transition>
+          <div class="mt-7">
+            <button v-if="!revealed" @click="revealed = true" class="px-8 py-3 rounded-2xl bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition">顯示答案</button>
+            <div v-else class="grid grid-cols-4 gap-2">
+              <button @click="grade(2)" class="py-3 rounded-xl bg-rose-50 text-rose-700 text-sm font-medium hover:bg-rose-100 transition">再來一次<span class="block text-[10px] opacity-60">1天</span></button>
+              <button @click="grade(3)" class="py-3 rounded-xl bg-amber-50 text-amber-700 text-sm font-medium hover:bg-amber-100 transition">困難</button>
+              <button @click="grade(4)" class="py-3 rounded-xl bg-sky-50 text-sky-700 text-sm font-medium hover:bg-sky-100 transition">良好</button>
+              <button @click="grade(5)" class="py-3 rounded-xl bg-emerald-50 text-emerald-700 text-sm font-medium hover:bg-emerald-100 transition">簡單</button>
+            </div>
           </div>
-        </div>
+        </template>
       </div>
 
       <!-- 沒有到期單字 -->
@@ -80,12 +103,39 @@ const theme = ref("");
 const generating = ref(false);
 const genMsg = ref("");
 const speech = useSpeech();
+const quizMode = ref(true); // 預設選擇題（每日推薦單字測驗）
+const picked = ref<string | null>(null);
 
 const current = computed(() => queue.value[0] || null);
+
+function optionClass(opt: string) {
+  if (picked.value === null) return "border-gray-200 text-gray-700 hover:border-indigo-300";
+  if (opt === current.value.meaning) return "border-emerald-300 bg-emerald-50 text-emerald-700";
+  if (opt === picked.value) return "border-rose-300 bg-rose-50 text-rose-600";
+  return "border-gray-100 text-gray-400";
+}
+
+// 選擇題作答：對→good(4)、錯→again(2，排進複習)
+async function answer(opt: string) {
+  if (picked.value !== null) return;
+  picked.value = opt;
+  const card = current.value;
+  const q = opt === card.meaning ? 4 : 2;
+  try {
+    await authedFetch("/api/lang/vocab/review", { method: "POST", body: { id: card.id, quality: q } });
+  } catch { /* ignore */ }
+}
+
+function next() {
+  queue.value.shift();
+  picked.value = null;
+  reviewed.value++;
+}
 
 async function reload() {
   loading.value = true;
   revealed.value = false;
+  picked.value = null;
   reviewed.value = 0;
   const { due } = await authedFetch<{ due: any[] }>(`/api/lang/vocab/review?language=${language.value}&limit=40`);
   queue.value = due;
