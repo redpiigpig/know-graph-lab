@@ -38,6 +38,34 @@ class TestSplitSections:
         assert long in secs[0]["text"]
 
 
+class TestSplitHtmlSections:
+    def test_splits_on_headings_and_collects_paragraphs(self):
+        html = (
+            "<html><body>"
+            "<h2>Chapter I. On Memory</h2><p>First para.</p><p>Second para.</p>"
+            "<h2>Chapter II. The Symbol</h2><p>Third para.</p>"
+            "</body></html>"
+        )
+        secs = drv.split_html_sections(html)
+        assert [s["heading"] for s in secs] == ["Chapter I. On Memory", "Chapter II. The Symbol"]
+        assert secs[0]["text"] == "First para.\n\nSecond para."
+        assert secs[1]["text"] == "Third para."
+
+    def test_front_matter_before_first_heading(self):
+        html = "<body><p>title page</p><h1>Chapter 1</h1><p>body</p></body>"
+        secs = drv.split_html_sections(html)
+        assert secs[0]["heading"] == "(front)"
+        assert "title page" in secs[0]["text"]
+        assert secs[1]["heading"] == "Chapter 1"
+
+    def test_headings_parse_as_anchors(self):
+        # the extracted headings must feed align_editions' anchor join
+        from align_editions import anchor_coverage
+        html = "<body><h2>Chapter I</h2><p>a</p><h2>Chapter II</h2><p>b</p></body>"
+        secs = drv.split_html_sections(html)
+        assert anchor_coverage(secs) == 1.0
+
+
 class TestRun:
     def _write(self, tmp_path, name, text):
         p = tmp_path / name

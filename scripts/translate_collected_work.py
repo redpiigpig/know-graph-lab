@@ -86,6 +86,49 @@ def load_plaintext_sections(path: str | Path) -> list[dict]:
     return split_sections(Path(path).read_text(encoding="utf-8"))
 
 
+# Heading + leaf block tags. We capture leaf-ish blocks (p/li/pre) rather than
+# containers (blockquote/div) to avoid double-counting nested text.
+_HTML_HEAD = {"h1", "h2", "h3", "h4", "h5", "h6"}
+_HTML_BLOCK = {"p", "li", "pre"}
+
+
+def split_html_sections(html: str) -> list[dict]:
+    """Split a structured HTML edition (e.g. a Project Gutenberg book) into
+    [{heading, text}] sections by `<h1>..<h6>` boundaries — clean headings, the
+    case raw OCR can't give us. Body is the leaf paragraphs under each heading,
+    joined by blank lines. bs4 is lazy-imported so the pure path stays dep-free.
+    """
+    from bs4 import BeautifulSoup  # provided via translate_ebook_to_zh's deps
+
+    soup = BeautifulSoup(html, "html.parser")
+    root = soup.body or soup
+    raw: list[dict] = []
+    cur: dict | None = None
+    for el in root.find_all(_HTML_HEAD | _HTML_BLOCK):
+        name = el.name
+        txt = el.get_text(" ", strip=True)
+        if not txt:
+            continue
+        if name in _HTML_HEAD:
+            cur = {"heading": txt, "_body": []}
+            raw.append(cur)
+        else:
+            if cur is None:
+                cur = {"heading": "(front)", "_body": []}
+                raw.append(cur)
+            cur["_body"].append(txt)
+    out = []
+    for s in raw:
+        body = "\n\n".join(s["_body"]).strip()
+        if s["heading"] != "(front)" or body:
+            out.append({"heading": s["heading"], "text": body})
+    return out
+
+
+def load_html_sections(path: str | Path) -> list[dict]:
+    return split_html_sections(Path(path).read_text(encoding="utf-8", errors="replace"))
+
+
 def default_chunks_path(ebook_id: str) -> Path:
     base = os.environ.get("EBOOK_CHUNKS_DIR")
     if not base:

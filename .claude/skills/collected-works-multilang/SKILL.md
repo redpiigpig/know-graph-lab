@@ -212,7 +212,12 @@ description: 多卷「全集」(Gesammelte Werke / Collected Works / 全集) 的
   - 殘留：段碼級（`[¶ N]`）細對齊、LLM 輔助 fallback、provisional chapter_path 的 zh 本地化 — 接真語料時再按需補。
 - [x] **驅動腳本 + 真 LLM `translate_fn`**（2026-06-02，test-first，11 例綠）— [scripts/translate_collected_work.py](../../../scripts/translate_collected_work.py)：`load_plaintext_sections`/`split_sections`（純文字/markdown → 章節 list）/ `JUNG_PROMPT_TMPL`（德→繁中、英文僅消歧義、術語鎖定）/ `make_translate_fn(engine)`（lazy import 重用 [[ebook-translate]] 的 gemini/haiku/sonnet 引擎 + split_oversized）/ `run(de,en,ebook_id,translate_fn,...)` 串 load→align→assemble→write_jsonl→(R2+DB)。測試 [scripts/tests/test_collected_work_driver.py](../../../scripts/tests/test_collected_work_driver.py) 用 stub translate_fn，零 network。
   - 真實 run 指令：`python scripts/translate_collected_work.py --de <de.txt> --en <en.txt> --ebook <id> --engine gemini --limit 2 --upload`（先 `--limit` smoke、確認再全跑）。
-- [ ] **真語料 run（pilot）**：fetch 公有領域 1912 德文 + 1916 英譯到本機 → 建 DB row → `--limit` 真翻一小段截圖驗證 → 全卷。⚠️ archive.org djvu 是 OCR 髒文字，章節錨點對齊可能要先清；若有乾淨 HTML 來源更佳。
+- [x] **HTML→sections loader**（2026-06-03，test-first）— [scripts/translate_collected_work.py](../../../scripts/translate_collected_work.py) `split_html_sections`/`load_html_sections`（bs4 lazy import；h1-h6 切段、收 p/li/pre 葉塊）。**實證**：真跑 Project Gutenberg Hinkle 英譯 HTML（[gutenberg.org/ebooks/65903](https://www.gutenberg.org/ebooks/65903)）→ 40 段、28 段標題乾淨 parse 成錨點（Part 1/2 + Chapter 1-8…）。
+- [ ] **錨點 part-scoping**（真資料浮現）：含 Part 的書章號每部重起（Part1‧Ch1 與 Part2‧Ch1 同 key）→ `anchor_coverage` 因 key 不唯一回 0。需把 chapter/section key 用最近的 part/book 加前綴（`part1/chapter1`）。
+- [ ] **真語料 run（pilot）— 卡在「乾淨德文來源」**：
+  - ✅ 英文：Project Gutenberg Hinkle 1916 HTML（公有領域、乾淨結構、loader 已實證）。
+  - ❌ 德文：1912《Wandlungen》**網路上只有 archive.org Fraktur OCR 髒文字**，無乾淨 HTML（zeno/textlog/projekt-gutenberg-de 皆無）。OCR 章節標題不成行、`anchor_coverage=0`。
+  - → 三欄（德/英/中）卡在德文欄沒乾淨來源。中文由 Claude 自己翻（user 指示）。選項：(a) Claude 為 bounded slice 手工校乾淨德文 OCR（PD，可做但短量、易錯）；(b) user 提供乾淨德文；(c) 先英→中（bilingual，等德文）。
 
 ## 起手卷決策（2026-06-02，Claude 拍板）
 
