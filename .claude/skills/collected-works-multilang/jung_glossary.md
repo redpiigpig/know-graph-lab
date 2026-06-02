@@ -4,6 +4,18 @@
 
 > 跟 `/translation-glossary`（教父/神學家）分開：榮格是深層心理學術語，自成體系。若某卷涉宗教學名詞與 `/translation-glossary` 重疊（如 gnosis 諾斯底），以 `/translation-glossary` `name_recommended` 為權威（[[feedback-glossary-strict-authority]]）。
 
+## 權威來源（2026-06-03 查證，繁體優先）
+
+譯名以下列**繁體中文**權威為準（不採簡體學界變體）：
+
+1. **心靈工坊（PsyGarden）** — 台灣《榮格全集》官方中譯出版社，繁體 Jung 譯名的最高權威。
+2. **臺灣榮格心理學會（TSAP, tsap.info）** — 〈分析心理學介紹〉用詞。
+3. **《榮格心理學辭典》**（鐘穎／愛智者書窩 譯，近年出版）— 專書詞典，選詞參酌前輩譯者。
+4. 維基百科（zh-tw）〈分析心理學〉〈自性（榮格心理學）〉條目（佐證，非主據）。
+
+✅ 已查證鎖定：原型、集體無意識、個體化、**自性（das Selbst，非「本我」）**、自我、阿尼瑪、阿尼姆斯、陰影、人格面具、情結、力比多、共時性。
+⚠️ 仍有並用變體（下表「變體」欄標明哪個是次選，翻譯時一律取「採用」欄）。
+
 ## 核心概念
 
 | 德文 (GW) | 英文 (CW) | 繁中（採用）| 變體（收斂掉）| 備註 |
@@ -11,18 +23,18 @@
 | Archetypus / Archetyp | archetype | 原型 | 原始型／太初型 | |
 | kollektives Unbewusstes | collective unconscious | 集體無意識 | 集體潛意識 | 「無意識」非「潛意識」（榮格學界慣用無意識）|
 | das Unbewusste | the unconscious | 無意識 | 潛意識 | 全集統一「無意識」|
-| Individuation | individuation | 個體化 | 個性化／自性化 | |
-| das Selbst | the Self | 自性 | 本我（×，本我=佛洛伊德 id）| **禁用「本我」**避免跟 Freud 混 |
+| Individuation | individuation | 個體化 | 自性化／個性化 | TSAP/心靈工坊主用「個體化」；「自性化」「個性化」並用但取「個體化」 |
+| das Selbst | the Self | 自性 | 本我／自我／真我／本質我（×）| 維基 zh-tw 列 6 種譯法；**取「自性」**（榮格四大原型之一、心靈中心）。**禁用「本我」**（=Freud id）|
 | das Ich | the ego | 自我 | | |
 | Anima | anima | 阿尼瑪 | 阿尼玛（簡）| 男性心中的女性意象 |
 | Animus | animus | 阿尼姆斯 | 阿尼玛斯 | 女性心中的男性意象 |
 | Schatten | shadow | 陰影 | | |
 | Persona | persona | 人格面具 | 面具／persona | |
 | Komplex | complex | 情結 | 情意綜（舊）| |
-| Libido | libido | 力比多 | 慾力／原慾 | 榮格＝廣義心理能量，非僅性慾 |
-| Synchronizität | synchronicity | 共時性 | 同時性 | |
-| Numinosum / numinos | the numinous | 努秘 | 神聖感／努祕 | 借 Otto；宗教經驗核心 |
-| Mandala | mandala | 曼陀羅 | 曼荼羅 | |
+| Libido | libido | 力比多 | 原慾／慾力 | 榮格＝廣義心理能量（非僅性慾）→ 用音譯「力比多」；「原慾」偏 Freud 性慾義，避免 |
+| Synchronizität | synchronicity | 共時性 | 同時性 | TSAP/維基定譯「共時性」（有意義的巧合）|
+| Numinosum / numinos | the numinous | 神聖性／努祕 | 努秘／神聖感 | 借 Otto（宗教學）；繁中宗教學界「神聖（者）／努祕」；翻時看脈絡，與 `/translation-glossary` 對齊 |
+| Mandala | mandala | 曼陀羅 | 曼荼羅 | 心靈工坊多用「曼陀羅」；佛教脈絡「曼荼羅」亦可 |
 | Wandlung | transformation | 轉化 | 變容／轉變 | Vol 5《轉化的象徵》|
 | Mysterium Coniunctionis | the conjunction | 神祕合體 | 對立合一 | Vol 14 |
 | Quaternität | quaternity | 四位一體性 | 四元體 | 對照 Trinität 三位一體 |
