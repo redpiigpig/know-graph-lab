@@ -1,0 +1,10 @@
+#!/bin/sh
+# 推送前自動跑測試套件；沒通過就擋下 push。
+# 要略過（緊急時）：git push --no-verify
+echo "▶ pre-push：跑測試套件…"
+if ! npm run test:run --silent; then
+  echo "✗ 測試未通過，已取消 push。修好再推，或 git push --no-verify 略過。"
+  exit 1
+fi
+echo "✓ 測試通過，繼續 push"
+exit 0

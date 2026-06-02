@@ -7,7 +7,10 @@
     "dev": "nuxt dev",
     "build": "nuxt build",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "postinstall": "git config core.hooksPath .githooks || true"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1033.0",
@@ -49,12 +52,16 @@
     "vue": "^3.4.27"
   },
   "devDependencies": {
+    "@nuxt/test-utils": "^4.0.3",
     "@nuxtjs/tailwindcss": "^6.12.0",
     "@turf/helpers": "^7.3.5",
     "@turf/intersect": "^7.3.5",
     "@turf/rewind": "^7.3.5",
+    "@vue/test-utils": "^2.4.10",
+    "happy-dom": "^20.9.0",
     "mammoth": "^1.12.0",
     "playwright": "^1.60.0",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vitest": "^4.1.8"
   }
 }
