@@ -90,7 +90,10 @@ async function sendCode() {
   });
   sending.value = false;
   if (e) {
-    error.value = e.message;
+    // shouldCreateUser:false 時，查無此帳號 Supabase 會回 "Signups not allowed for otp"
+    error.value = /signups? not allowed/i.test(e.message)
+      ? "此 Email 不在授權名單，或拼錯了"
+      : e.message;
   } else {
     codeSent.value = true;
   }
