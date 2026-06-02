@@ -207,7 +207,9 @@ description: 多卷「全集」(Gesammelte Werke / Collected Works / 全集) 的
 - [x] **基建：reader N 欄 + API passthrough**（2026-06-02，typecheck 0 error / 27 tests 綠）
   - [x] `ChunkData`([server/utils/ebook-chunks.ts](../../../server/utils/ebook-chunks.ts)) 加 `sources?` / `source_order?` + [[id].get.ts](../../../server/api/ebooks/[id].get.ts) passthrough
   - [x] reader([pages/ebook/[id].vue](../../../pages/ebook/[id].vue)) toggle 動態化（中/對照/各來源語言，用 `availableModes`/`resolveViewMode`/`langLabel`）+ `parallelColumns` 用 `zipParallel` 做 N 欄逐段（flex，N=1 等同舊「中英」、mobile 堆疊）；legacy `bi`/`en` localStorage 用 `migrateLegacyViewMode` 遷移；pure module 在 [lib/multilang-sources.ts](../../../lib/multilang-sources.ts)（client+server 共用）
-  - [ ] translate 腳本多語 JSONL 輸出變體（寫入前過 `mirrorPrimarySource`）← **下一步**
+  - [x] translate 腳本多語 JSONL 輸出（2026-06-02，test-first，21 例綠）— [scripts/multilang_chunks.py](../../../scripts/multilang_chunks.py)：`normalize_sources` / `mirror_primary_source`（Python 鏡像 TS 契約，逐例 parity）/ `build_multilang_chunk` / `validate_multilang_chunk`（寫前硬檢查）/ `assemble_multilang_chunks(aligned_units, translate_fn, source_order)`（engine boundary = `translate_fn`，prod 接 LLM、測試接 stub）/ `write_jsonl`。測試 [scripts/tests/test_multilang_chunks.py](../../../scripts/tests/test_multilang_chunks.py)。**reader（已截圖實證）讀什麼，這裡就寫什麼。**
+- [ ] **對齊步驟**（最難，跟語料綁）：把獨立編輯的德 GW + 英 CW 切成 `aligned_units`（章節錨點 > 長度比 > LLM 輔助 > 整段塞，見「跨版本段落對齊」）。`assemble_multilang_chunks` 吃它的輸出。← **下一步**
+- [ ] **接真 LLM `translate_fn`**：從原文（德）翻、英譯交叉校對；術語走 [jung_glossary.md](jung_glossary.md)；engine/quota/resume 沿用 [[ebook-translate]]。
 - [x] **視覺驗證**（2026-06-02）：手造德/英/中樣本 chunk 跑 dev server + `screenshot_book.mjs` 確認 `中/對照/德/英` toggle、3 欄逐段對齊、**body zip 補白**（英缺第 2 段 → 空白格不位移）、**footnote by-number 跨欄對齊**（英缺 (2) → 該格空白）、單來源「德」單欄模式 全部正確。
   - 📌 `screenshot_book.mjs` 已修：注入 `kgl_device_id` 呈現預先核准的 `screenshot-bot` 裝置，繞過新的 device-trust gate（`middleware/device.global.ts`）。需在 `trusted_devices` 預埋一列 `device_id='screenshot-bot', status='approved'`（已埋）。否則所有 reader 截圖（含 [[fathers-translation]] 校對 C 層）會被導去 `/device-pending`。
 - [ ] **榮格全集盡職調查表**（[jung_collected_works.md](jung_collected_works.md)）
