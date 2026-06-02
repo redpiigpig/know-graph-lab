@@ -76,7 +76,8 @@
       <!-- 學習區 -->
       <div>
         <div class="text-xs font-semibold text-gray-400 mb-1.5">練習與工具</div>
-        <div class="grid grid-cols-3 sm:grid-cols-5 gap-3">
+        <div class="grid grid-cols-3 sm:grid-cols-6 gap-3">
+          <NuxtLink :to="`/coach/${lang}/courses`" class="tile">🎓<span>主題教程</span></NuxtLink>
           <NuxtLink :to="`/coach/${lang}/grammar`" class="tile">📚<span>文法課</span></NuxtLink>
           <NuxtLink :to="`/coach/${lang}/practice`" class="tile">🎯<span>技能/考試</span></NuxtLink>
           <NuxtLink :to="`/coach/${lang}/review`" class="tile">🗂️<span>單字複習<small v-if="stats?.vocabDue">{{ stats.vocabDue }}</small></span></NuxtLink>
