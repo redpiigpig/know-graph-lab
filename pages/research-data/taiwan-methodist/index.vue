@@ -62,6 +62,15 @@
           <span class="tool-badge bg-purple-50 text-purple-600">建置中</span>
         </NuxtLink>
 
+        <NuxtLink to="/research-data/taiwan-methodist/chengzhong-bulletins" class="tool-card group border-amber-100 hover:border-amber-300 hover:shadow-amber-100">
+          <div class="tool-icon bg-amber-50 text-amber-600">📋</div>
+          <div class="flex-1">
+            <h2 class="tool-title">城中教會主日崇拜週報</h2>
+            <p class="tool-desc">台北城中教會歷年崇拜程序電子化：節期、禮儀顏色、服事人員、證道題目、經課與聖詩</p>
+          </div>
+          <span class="tool-badge bg-amber-50 text-amber-600">可用</span>
+        </NuxtLink>
+
       </div>
     </div>
   </div>
