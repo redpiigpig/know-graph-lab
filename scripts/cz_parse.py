@@ -59,7 +59,11 @@ SEASON_KW = re.compile(r"(主日|節|期|齋|復活|聖誕|降臨|將臨|顯現|
 DATE_TXT = re.compile(r"主後[^\n]{2,40}?[日]")
 HYMN_PAT = re.compile(r"(新普天頌讚|普天頌讚|世紀頌讚|新普頌|頌主新歌|聖徒詩歌|青年聖歌|讚美詩)\s*第?\s*(\d{1,3})\s*首?\s*[「『]?([^」』\n（(]{0,30})")
 SCRIP_BOOKS = r"(創世記|出埃及記|利未記|民數記|申命記|約書亞記|士師記|路得記|撒母耳記[上下]|列王紀[上下]|歷代志[上下]|以斯拉記|尼希米記|以斯帖記|約伯記|詩篇|箴言|傳道書|雅歌|以賽亞書|耶利米書|耶利米哀歌|哀歌|以西結書|但以理書|何西阿書|約珥書|阿摩司書|俄巴底亞書|約拿書|彌迦書|那鴻書|哈巴谷書|西番雅書|哈該書|撒迦利亞書|瑪拉基書|瑪垃基書|馬太福音|馬可福音|路加福音|約翰福音|使徒行傳|羅馬書|哥林多[前後]書|加拉太書|以弗所書|腓立比書|歌羅西書|帖撒羅尼迦[前後]書|提摩太[前後]書|提多書|腓利門書|希伯來書|雅各書|彼得[前後]書|約翰[壹貳參一二三]書|猶大書|啟示錄)"
-SCRIP_PAT = re.compile(SCRIP_BOOKS + r"\s*\d+[:：]\d+(?:[-–~]\d+)?(?:[,，、]\s*\d+(?:[:：]\d+)?(?:[-–~]\d+)?)*")
+_R = r"[-–—~～－]"  # hyphen / en/em dash / ascii+fullwidth tilde / fullwidth hyphen
+SCRIP_PAT = re.compile(SCRIP_BOOKS + r"\s*\d+(?:[:：]\d+(?:" + _R + r"\d+(?:[:：]\d+)?)?(?:[,，、]\s*\d+(?:[:：]\d+)?(?:" + _R + r"\d+(?:[:：]\d+)?)?)*)?")
+SCRIP_LABELS = ["經課一", "經課二", "經課三", "經課四", "讀經一", "讀經二", "讀經三",
+                "啟應文", "福音書", "書信", "舊約", "新約", "默想經文", "證道經文", "講道經文"]
+SCRIP_LABEL_RE = re.compile(r"(" + "|".join(SCRIP_LABELS) + r")")
 SERMON_LABEL = re.compile(r"(?:講道題目|證道題目|講道主題|證道主題|信息主題|講題)\s*[：:]\s*[「『]?([^」』\n｜|]{2,40})")
 SERMON_LINE = re.compile(r"^\s*(?:證|講|宣)\s*道(?:信息|主題)?(?![：:])\s+(.+)$")
 NAME_TAIL_RE = re.compile(r"\s*[一-鿿]{2,5}(?:牧師|弟兄|姊妹|傳道|會督|長老|教授|博士|先生|女士|同工|傳道師)\s*$")
@@ -167,21 +171,49 @@ def find_sermon(paras, roles):
     return None
 
 def find_scriptures(paras):
-    out = []
-    seen = set()
-    for p in paras:
-        if any(k in p for k in ("經課","讀經","啟應","福音","書信","舊約","新約","默想","證道經文","講道經文")):
-            for m in SCRIP_PAT.finditer(p):
-                ref = m.group(0).replace("：", ":")
-                if ref not in seen:
-                    seen.add(ref); out.append(ref)
-    return out[:12]
+    """Return (refs[list of str], labeled[list of {label, ref}]). refs = website display;
+    labeled = DB scripture_ref source (經課一：X / 啟應文：Y / 福音書：Z)."""
+    refs, seen, labeled, lseen = [], set(), [], set()
+    for i, p in enumerate(paras):
+        if not any(k in p for k in ("經課", "讀經", "啟應", "福音", "書信", "舊約", "新約", "默想", "證道經文", "講道經文")):
+            continue
+        lm = SCRIP_LABEL_RE.search(p)
+        if lm:
+            sm = SCRIP_PAT.search(p)
+            if not sm:  # label and ref split across lines — look ahead one para
+                nxt = paras[i + 1] if i + 1 < len(paras) else ""
+                if not SCRIP_LABEL_RE.search(nxt):
+                    sm = SCRIP_PAT.search(nxt)
+            if sm:
+                label = lm.group(1)
+                if label not in lseen:
+                    lseen.add(label); labeled.append({"label": label, "ref": sm.group(0).replace("：", ":")})
+        for m in SCRIP_PAT.finditer(p):
+            ref = m.group(0).replace("：", ":")
+            if ref not in seen:
+                seen.add(ref); refs.append(ref)
+    # DB scripture_ref: prefer the precise labeled lectionary set (>=2 slots);
+    # only fall back to the greedy unlabeled list when no real labeled set exists.
+    if len(labeled) >= 2:
+        ref_str = "；".join(f"{x['label']}：{x['ref']}" for x in labeled[:8]); is_labeled = True
+    elif labeled and len(labeled) >= len(refs):
+        ref_str = "；".join(f"{x['label']}：{x['ref']}" for x in labeled); is_labeled = True
+    else:
+        ref_str = "；".join(refs[:8]); is_labeled = False
+    return refs[:12], ref_str, is_labeled
+
+def _clean_hymn_title(t):
+    t = t.strip(" 「」『』（）()　.…·•-").strip()
+    # drop liturgical-rubric pollution that leaks past the hymn number
+    if re.search(r"……|\.\.\.|眾立|眾坐|同頌|請參|司會|司琴|普頌\s*\d|週報第", t) or len(t) < 2:
+        return ""
+    return t
 
 def find_hymns(paras):
     out = []
     for p in paras:
         for m in HYMN_PAT.finditer(p):
-            book, num, title = m.group(1), m.group(2), m.group(3).strip()
+            book, num, title = m.group(1), m.group(2), _clean_hymn_title(m.group(3))
             out.append({"book": book, "no": num, "title": title})
     # dedupe
     seen = set(); ded = []
@@ -199,7 +231,7 @@ def parse_record(rec):
     color = find_color(paras)
     service = find_service(paras, rec["file"])
     sermon = find_sermon(paras, roles)
-    scriptures = find_scriptures(paras)
+    scriptures, scripture_ref, scripture_labeled = find_scriptures(paras)
     hymns = find_hymns(paras)
     dt = None
     for p in paras[:6]:
@@ -210,6 +242,8 @@ def parse_record(rec):
     presider = roles.get("主禮") or roles.get("主理")
     # resolve missing date: loose YY-M-D filename, then Easter-relative special service
     date = rec.get("date")
+    if date:
+        date = date.translate(str.maketrans("０１２３４５６７８９", "0123456789"))
     if not date:
         m = LOOSE_DATE.search(rec["fname"])
         if m:
@@ -230,6 +264,8 @@ def parse_record(rec):
         "sermon_title": sermon,
         "roles": roles,
         "scriptures": scriptures,
+        "scripture_ref": scripture_ref,
+        "scripture_labeled": scripture_labeled,
         "hymns": hymns,
         "full_text": "\n".join(paras),
         "nchars": rec.get("nchars", 0),
