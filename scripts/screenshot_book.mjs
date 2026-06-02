@@ -36,6 +36,10 @@ const PAGES_ARG = flag('pages', null)  // "1-20" or "5,12,15"
 const VIEW = flag('view', 'bi')
 const OUT_DIR = flag('out', `c:/tmp/proofread_${EBOOK_ID.slice(0,8)}`)
 const HEADLESS = flag('headless', '1') !== '0'
+// Trusted-device id this headless browser presents. Pre-approve it once:
+//   insert into trusted_devices(user_id, device_id, status) values (…, 'screenshot-bot', 'approved')
+// Without this the device.global.ts gate bounces the shot to /device-pending.
+const DEVICE = flag('device', 'screenshot-bot')
 
 // Resolve which pages to shoot
 const admin = createClient(env.SUPABASE_URL, env.SUPABASE_SERVICE_ROLE_KEY, {
@@ -108,7 +112,10 @@ await ctx.addCookies([{
   domain: new URL(APP_BASE).hostname, path: '/', httpOnly: false, secure: false, sameSite: 'Lax'
 }])
 
-await page.addInitScript((v) => { localStorage.setItem('ebook-viewMode', v) }, VIEW)
+await page.addInitScript(({ v, d }) => {
+  localStorage.setItem('ebook-viewMode', v)
+  localStorage.setItem('kgl_device_id', d)  // present a pre-approved device
+}, { v: VIEW, d: DEVICE })
 
 let done = 0
 const t0 = Date.now()
