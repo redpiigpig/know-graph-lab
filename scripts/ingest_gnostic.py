@@ -155,43 +155,107 @@ def ingest_doc(category: str, title: str, url: str, te, engine_fn, *,
     return {"slug": slug, "title_en": title, "paras": len(zh)}
 
 
+# Overnight order: public-domain-clean categories first (Mead/Hermetica),
+# then core Gnostic, then related religions, then dedup/peripheral last.
+ALL_ORDER = ["hermetica", "mead", "gnostic_scriptures", "nag_hammadi", "valentinus",
+             "manichaean", "mandaean", "cathar", "alchemical", "modern",
+             "polemics", "christian_apocrypha", "dead_sea"]
+CONSEC_FAIL_ABORT = 4  # stop the whole run after this many docs fail in a row (quota dead)
+
+
+def done_slugs() -> set[str]:
+    """Doc slugs that already have ZH sections (for --resume skip)."""
+    r = requests.post(MGMT_QUERY, headers=H_MGMT, json={
+        "query": "SELECT DISTINCT doc_slug FROM gnostic_sections WHERE version_code = 'zh'"})
+    return {row["doc_slug"] for row in r.json()} if r.ok else set()
+
+
+def process_category(key: str, te, engine_fn, *, resume: bool, done: set[str],
+                     state: dict, limit_docs=None, limit_paras=None, dry_run=False) -> None:
+    cat = gl.CATEGORY_BY_KEY[key]
+    docs = gl.parse_category_index(fetch(gl.GNOSIS_ROOT + cat["index_path"]),
+                                   base_path=cat["index_path"])
+    if cat["dedup_against_existing"]:
+        existing = existing_en_titles()
+        before = len(docs)
+        docs = [d for d in docs if not gl.is_duplicate(d["title"], existing)]
+        print(f"[{key}] dedup: {before} → {len(docs)}", flush=True)
+    if limit_docs:
+        docs = docs[:limit_docs]
+    print(f"=== {cat['label_zh']} ({key}): {len(docs)} docs ===", flush=True)
+    for i, d in enumerate(docs):
+        slug = gl.make_slug(d["title"])
+        if resume and slug in done:
+            print(f"  ⏭ skip (done): {d['title']}", flush=True)
+            continue
+        try:
+            res = ingest_doc(key, d["title"], d["url"], te, engine_fn,
+                             display_order=cat["display_order"] * 100 + i,
+                             limit_paras=limit_paras, dry_run=dry_run)
+            if res:
+                done.add(res["slug"])
+            state["consec_fail"] = 0
+        except Exception as e:  # noqa: BLE001
+            state["consec_fail"] += 1
+            print(f"  ✗ FAIL {d['title']}: {e}  (consec={state['consec_fail']})", flush=True)
+            if state["consec_fail"] >= CONSEC_FAIL_ABORT:
+                raise SystemExit(f"aborting: {CONSEC_FAIL_ABORT} consecutive failures "
+                                 "(quota likely exhausted) — re-run with --resume later")
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--category", required=True, help="CATEGORIES key, e.g. nag_hammadi")
+    ap.add_argument("--category", help="CATEGORIES key, e.g. nag_hammadi")
+    ap.add_argument("--all", action="store_true", help="iterate every category (overnight)")
     ap.add_argument("--url", help="single document URL")
     ap.add_argument("--title", default="", help="document title (overrides parsed)")
     ap.add_argument("--list", action="store_true", help="list category docs and exit")
     ap.add_argument("--engine", default="gemini", choices=["gemini", "haiku", "sonnet"])
+    ap.add_argument("--resume", action="store_true", help="skip docs already in DB")
     ap.add_argument("--limit-docs", type=int, default=None)
     ap.add_argument("--limit-paras", type=int, default=None, help="cap paragraphs per doc (pilot)")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
+    # ── Overnight: every category ────────────────────────────────────────────
+    if args.all:
+        te, engine_fn = make_engine(args.engine)
+        done = done_slugs() if args.resume else set()
+        state = {"consec_fail": 0}
+        print(f"OVERNIGHT run · resume={args.resume} · {len(done)} docs already done", flush=True)
+        for key in ALL_ORDER:
+            try:
+                process_category(key, te, engine_fn, resume=args.resume, done=done,
+                                 state=state, limit_docs=args.limit_docs,
+                                 limit_paras=args.limit_paras, dry_run=args.dry_run)
+            except SystemExit as e:
+                print(str(e), flush=True); break
+        print(f"OVERNIGHT done · {len(done)} docs total in DB", flush=True)
+        return
+
+    if not args.category:
+        sys.exit("need --category KEY or --all")
     cat = gl.CATEGORY_BY_KEY.get(args.category)
     if not cat:
         sys.exit(f"unknown category {args.category}; valid: {list(gl.CATEGORY_BY_KEY)}")
 
-    # List / category mode → resolve doc links from the index page.
+    # List / whole-category mode → resolve doc links from the index page.
     if args.list or not args.url:
-        index_url = gl.GNOSIS_ROOT + cat["index_path"]
-        docs = gl.parse_category_index(fetch(index_url), base_path=cat["index_path"])
-        if cat["dedup_against_existing"]:
-            existing = existing_en_titles()
-            before = len(docs)
-            docs = [d for d in docs if not gl.is_duplicate(d["title"], existing)]
-            print(f"dedup: {before} → {len(docs)} (skipped {before - len(docs)} already in corpus)")
-        print(f"{cat['label_zh']} ({args.category}): {len(docs)} docs")
-        for d in docs:
-            print(f"  - {d['title']}  {d['url']}")
         if args.list:
+            docs = gl.parse_category_index(fetch(gl.GNOSIS_ROOT + cat["index_path"]),
+                                           base_path=cat["index_path"])
+            if cat["dedup_against_existing"]:
+                existing = existing_en_titles()
+                docs = [d for d in docs if not gl.is_duplicate(d["title"], existing)]
+            print(f"{cat['label_zh']} ({args.category}): {len(docs)} docs")
+            for d in docs:
+                print(f"  - {d['title']}  {d['url']}")
             return
-        if args.limit_docs:
-            docs = docs[:args.limit_docs]
         te, engine_fn = make_engine(args.engine)
-        for i, d in enumerate(docs):
-            ingest_doc(args.category, d["title"], d["url"], te, engine_fn,
-                       display_order=cat["display_order"] * 100 + i,
-                       limit_paras=args.limit_paras, dry_run=args.dry_run)
+        done = done_slugs() if args.resume else set()
+        process_category(args.category, te, engine_fn, resume=args.resume, done=done,
+                         state={"consec_fail": 0}, limit_docs=args.limit_docs,
+                         limit_paras=args.limit_paras, dry_run=args.dry_run)
         return
 
     # Single-document mode
