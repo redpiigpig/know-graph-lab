@@ -314,13 +314,53 @@ export default defineEventHandler(async (event) => {
       const arr = bishopsBySeeChurch.get(`${seeRow.see_zh}|${ch}`) ?? []
       candidates.push(...arr)
     }
-    let best: SuccRow | null = null
+    if (candidates.length === 0) return null
+    // 若 parent 教座本身有 split_year（如 科普特 451），其 rendered 主教鏈已丟掉分裂前主教，
+    // 錨點也要排除這些，否則會接到「不在樹上」的前任（如科普特諸修道院接到已被丟棄的 451 前主教）。
+    if (seeRow.split_year != null) {
+      const survivors = candidates.filter(b => (b.start_year ?? 9999) >= seeRow.split_year!)
+      if (survivors.length) { candidates.length = 0; candidates.push(...survivors) }
+    }
+    // 1) 任期「涵蓋」該年的主教（多位重疊取 start_year 最晚的）— 原行為，最精準。
+    let covering: SuccRow | null = null
     for (const b of candidates) {
       if (b.start_year != null && b.start_year <= year && (b.end_year == null || b.end_year >= year)) {
-        if (!best || (b.start_year > (best.start_year ?? -99999))) best = b
+        if (!covering || (b.start_year > (covering.start_year ?? -99999))) covering = b
       }
     }
-    return best?.id ?? null
+    if (covering) return covering.id
+    // 2) 沒有涵蓋該年的主教 → 接到「分裂/設立前最後一位」前任（start_year ≤ year 中最晚者）。
+    //    教座分裂/設立常發生在前任任滿之後（如 英格蘭教會坎特伯里 1533 vs 天主教坎特伯里末任 1532），
+    //    要求 tenure 涵蓋會落空 → 接前任才是正解，避免整支懸空、改用年份猜測亂銜接。
+    let pred: SuccRow | null = null
+    for (const b of candidates) {
+      if (b.start_year != null && b.start_year <= year) {
+        if (!pred || (b.start_year > (pred.start_year ?? -99999))) pred = b
+      }
+    }
+    if (pred) return pred.id
+    // 本教座沒有「該年(含)之前」的主教（子座早於本教座現有紀錄）→ 回 null，交給呼叫端往母座爬，
+    // 絕不接「晚於子座成立年」的未來主教（那才是年代錯亂）。
+    return null
+  }
+
+  // 沿 parent_see_id 往上找「該年(含)之前最近的真主教」：本座沒有就爬母座，直到脊柱
+  // （脊柱主教密集、可早至 1 世紀）。確保錨點永遠 ≤ 子座成立年、且是真主教，不亂銜接也不年代錯亂。
+  // 例：科普特諸修道院(320-360) 早於科普特線(451 後) → 爬到亞歷山卓脊柱，接該年的未分裂亞歷山卓主教。
+  function findAnchorBishop(startSeeId: string | null, year: number | null): string | null {
+    if (!startSeeId || year == null) return null
+    let seeId: string | null = startSeeId
+    const visited = new Set<string>()
+    while (seeId && !visited.has(seeId)) {
+      visited.add(seeId)
+      const see = seeById.get(seeId)
+      if (!see) break
+      const churches = spineSeeChurches.get(seeId) ?? [see.church]
+      const hit = findBishopAtYear(see, year, churches)
+      if (hit) return hit
+      seeId = see.parent_see_id
+    }
+    return null
   }
 
   // Spine see id → primary churches list (for cross-church bishop lookups along spine line)
@@ -351,7 +391,7 @@ export default defineEventHandler(async (event) => {
         // 如果 parent 是 spine see，跨多個 church（如 rome = 未分裂教會 + 天主教）
         // 否則只看 parent 自己的 church（避免 see_zh 相同的 daughter 攪進來）
         const parentChurches = spineSeeChurches.get(seeId) ?? [parentSee.church]
-        const parentBishopId = findBishopAtYear(parentSee, attachYear, parentChurches)
+        const parentBishopId = findAnchorBishop(seeId, attachYear)
         // Gather bishops for this branch see
         // Exact (see_zh, church) match first
         let allBishops: SuccRow[] = []
@@ -441,7 +481,7 @@ export default defineEventHandler(async (event) => {
       // Prefer the explicit rivalSplitYear or first remaining bishop's start_year.
       const foundedYear = def.rivalSplitYear ?? (rivalBishopRows[0]?.start_year ?? null) ?? rivalSee?.founded_year ?? null
       // Spine 的 rival 從 spine primaryChurches 找 parent bishop
-      const parentBishopId = findBishopAtYear(sp.see as SeeRow, foundedYear, def.primaryChurches)
+      const parentBishopId = findAnchorBishop(sp.see?.id ?? null, foundedYear)
 
       branches.push({
         id: branchId,
@@ -507,7 +547,7 @@ export default defineEventHandler(async (event) => {
         const parentSee = seeById.get(see.parent_see_id)
         if (parentSee) {
           const attachYear = see.split_year ?? see.founded_year
-          parentBishopId = findBishopAtYear(parentSee, attachYear, [parentSee.church])
+          parentBishopId = findAnchorBishop(see.parent_see_id, attachYear)
           isSplit = see.see_zh === parentSee.see_zh
         }
       }
