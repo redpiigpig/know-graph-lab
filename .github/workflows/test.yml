@@ -12,10 +12,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          # 用 24 對齊本機（lockfile 由 npm 11 / node 24 產生；node 20 的 npm 10 會把
-          # @emnapi/* commander crossws 判定為 lockfile 缺漏 → npm ci 掛）。
+          # 24 對齊本機（package.json 有 dep 要求 node>=22；lockfile 由 npm 11 產）。
           node-version: 24
           cache: npm
-      - run: npm ci
+      # 用 npm install 不用 npm ci：lockfile 在 Windows 產，缺 Linux-only optional deps
+      # (@emnapi/*)，npm ci 嚴格比對會判 out-of-sync 掛掉（npm issue #4828）；
+      # npm install 會自動補平台 optional deps。CI 不 commit lockfile，安全。
+      - run: npm install --no-audit --no-fund
       - run: npx nuxi prepare
       - run: npm run test:run
