@@ -879,6 +879,7 @@ const cv = computed(() => {
               x: bx + BRANCH_INDENT, y: cy,
               w: BRANCH_W - BRANCH_INDENT, h: BISH_H - 2,
               successionNum: bb.succession_number,
+              spineColor: sp.color,   // E3：旁支主教卡也帶脊色，與主脊／使徒立座主教卡一致
               tooltip: `${bb.name_zh}\n任期：${formatYear(bb.start_year)}–${formatYear(bb.end_year)}`,
             })
             prevBb = bb
@@ -889,8 +890,10 @@ const cv = computed(() => {
           // 把 lastBranchYByDepth 更新到 chain 末端，下一個兄弟分支會堆疊在後面（不蓋住主教鏈）
           if (br.bishops.length > 0) {
             lastBranchYByDepth.set(depth, chainEndY)
-            // Focus mode：本分支展開後，主教鏈覆蓋到 chainEndY；下方 attachY 在範圍內的兄弟分支隱形
-            focusYEnd = chainEndY
+            // Focus mode：本分支展開後，主教鏈覆蓋到「最後一任主教卡底」；下方 attachY 在範圍內的兄弟分支隱形。
+            // ⚠ 用 prevBottomY（實際卡底）而非 chainEndY——後者含末尾一個 BISH_VG 空隙，會多蓋約 90px，
+            //   把掛在更晚主教（如 590 年才設立、attach 在下方）的兄弟分支誤判成重疊而整個藏掉。
+            focusYEnd = prevBottomY ?? chainEndY
           }
           renderBranches(br.id, depth + 1, by + BRANCH_H / 2)
         }
@@ -999,6 +1002,9 @@ const cv = computed(() => {
 
   return { nodes, paths, guides, w, h }
 })
+
+// test-only：曝露 layout computed 供元件測試斷言座標（不影響渲染行為）
+defineExpose({ cv, ready })
 
 // ── Helpers ─────────────────────────────────────────────
 function formatYear(y: number | null | undefined): string {

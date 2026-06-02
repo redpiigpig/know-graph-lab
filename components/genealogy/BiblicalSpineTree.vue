@@ -176,6 +176,7 @@
 </template>
 
 <script setup lang="ts">
+import { spineFromWaypoints } from '~/utils/genealogy/spine'
 defineOptions({ name: 'BiblicalSpineTree' })
 
 interface BreadcrumbItem { id: string; name: string }
@@ -285,36 +286,9 @@ const relationKindMap = computed(() => {
 })
 
 // ── Spine path computation ────────────────────────────────────────────
-function bfsPath(src: string, dst: string, ch: Map<string, string[]>): string[] {
-  if (src === dst) return [src]
-  const queue: string[][] = [[src]]
-  const vis = new Set<string>()
-  while (queue.length) {
-    const path = queue.shift()!
-    const cur  = path[path.length - 1]
-    if (cur === dst) return path
-    if (vis.has(cur)) continue
-    vis.add(cur)
-    for (const c of ch.get(cur) ?? []) if (!vis.has(c)) queue.push([...path, c])
-  }
-  return []
-}
-
+// bfsPath / spineFromWaypoints 已抽到 ~/utils/genealogy/spine（與 Islamic 共用）。
 function resolveByName(name: string): string | undefined {
   return personByName.value.get(name)?.id
-}
-
-function spineFromWaypoints(names: string[], ch: Map<string, string[]>): string[] {
-  const ids = names.map(resolveByName).filter(Boolean) as string[]
-  if (ids.length < 2) return []
-  const path: string[] = []
-  for (let i = 0; i < ids.length - 1; i++) {
-    const seg = bfsPath(ids[i], ids[i + 1], ch)
-    if (!seg.length) return []
-    if (i === 0) path.push(...seg)
-    else path.push(...seg.slice(1))
-  }
-  return path
 }
 
 // Longest descent from a root (for recursive/single mode)
@@ -349,8 +323,8 @@ const SPINE_B_WAYPOINTS = [
 
 const isDualMode = computed(() => !props.rootId)
 
-const spineA = computed(() => isDualMode.value ? spineFromWaypoints(SPINE_A_WAYPOINTS, childrenOf.value) : [])
-const spineB = computed(() => isDualMode.value ? spineFromWaypoints(SPINE_B_WAYPOINTS, childrenOf.value) : [])
+const spineA = computed(() => isDualMode.value ? spineFromWaypoints(SPINE_A_WAYPOINTS, childrenOf.value, resolveByName, { label: 'A' }) : [])
+const spineB = computed(() => isDualMode.value ? spineFromWaypoints(SPINE_B_WAYPOINTS, childrenOf.value, resolveByName, { label: 'B' }) : [])
 const spineSingle = computed(() => isDualMode.value || !props.rootId ? [] : longestDescent(props.rootId, childrenOf.value))
 
 const jesusId  = computed(() => resolveByName('耶穌（拿撒勒人）'))
@@ -2018,6 +1992,9 @@ const cv = computed(() => {
 })
 
 const ready = computed(() => !!cv.value && cv.value.nodes.length > 0)
+
+// test-only：曝露 layout computed 供元件測試斷言座標（不影響渲染行為）
+defineExpose({ cv, hasSpine, spineA, spineB, sharedTrunkIds })
 
 // ── Expansion state — clan toggles in-place ───────────────────────────
 // Keyed by the spine parent's id (the spine person whose clan we're expanding).

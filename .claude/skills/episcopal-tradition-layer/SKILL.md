@@ -320,3 +320,16 @@ SQL 補丁批檔：[database/episcopal-fill-phase1.sql](../../database/episcopal
 - Wikipedia 對單一 IP 連續 fetch 易 429 rate-limit；agent 內部 2-3s sleep；批 146/148 撞 429 → 加 sleep 後重 retry 拿到分
 - Apply 預設 `--skip-head` 因為 Wikimedia 拒 HEAD（也常 429）
 - 偶爾 Haiku 寫出 malformed JSON（如 `"id": "15": "15"`）— 手動修一個 entry，整 batch 即可恢復
+
+## 譜系圖測試（三棵樹共用）
+
+`test/genealogy/` 有 vitest 元件測試，掛載 BiblicalSpineTree / IslamicSpineTree / EpiscopalSpineTree
+配迷你 fixture 斷言 `cv` layout（脊柱解析、卡片無重疊、婚姻線、Episcopal 預設展開策略）。
+跑法：`npm run test:run`。三棵樹各加了 test-only 的 `defineExpose({ cv, … })`。
+
+已修（2026-06-02，見 `test/genealogy/FINDINGS.md`）：
+- **E2**：focus-mode 用 `chainEndY`（含尾端 BISH_VG 空隙）多蓋 ~90px，誤藏掛在更晚主教的兄弟旁支
+  → 改用 `prevBottomY`（EpiscopalSpineTree.vue:888-896）。
+- **E3**：主脊旁支主教卡補 `spineColor`。
+- 共用脊柱解析抽到 `utils/genealogy/spine.ts`（Biblical/Islamic 去重），缺 waypoint 時 dev `console.warn` 點名斷點。
+- 「分裂旁支預設展開／設立旁支收起」是**設計**（watcher :405-418），非 bug。

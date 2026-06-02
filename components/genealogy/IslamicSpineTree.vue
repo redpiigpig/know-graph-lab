@@ -151,6 +151,7 @@
 </template>
 
 <script setup lang="ts">
+import { spineFromWaypoints } from '~/utils/genealogy/spine'
 defineOptions({ name: 'IslamicSpineTree' })
 
 type View = 'quranic' | 'sunni' | 'shia_twelver' | 'shia_ismaili' | 'shia_zaidi'
@@ -235,38 +236,13 @@ const parentsOf = computed(() => {
 })
 
 // ── Spine path: Adam → Muhammad via BFS waypoints ──
-function bfsPath(src: string, dst: string, ch: Map<string, string[]>): string[] {
-  if (src === dst) return [src]
-  const queue: string[][] = [[src]]
-  const vis = new Set<string>()
-  while (queue.length) {
-    const path = queue.shift()!
-    const cur = path[path.length - 1]
-    if (cur === dst) return path
-    if (vis.has(cur)) continue
-    vis.add(cur)
-    for (const c of ch.get(cur) ?? []) if (!vis.has(c)) queue.push([...path, c])
-  }
-  return []
-}
+// bfsPath / spineFromWaypoints 已抽到 ~/utils/genealogy/spine（與 Biblical 共用）。
 function resolveByName(name: string): string | undefined {
   return personByName.value.get(name)?.id
 }
-function spineFromWaypoints(names: string[], ch: Map<string, string[]>): string[] {
-  const ids = names.map(resolveByName).filter(Boolean) as string[]
-  if (ids.length < 2) return []
-  const path: string[] = []
-  for (let i = 0; i < ids.length - 1; i++) {
-    const seg = bfsPath(ids[i], ids[i + 1], ch)
-    if (!seg.length) return []
-    if (i === 0) path.push(...seg)
-    else path.push(...seg.slice(1))
-  }
-  return path
-}
 
 const SPINE_WAYPOINTS = ['阿丹', '努哈', '易卜拉欣', '伊斯瑪儀', '阿德南', '穆罕默德']
-const spinePath = computed(() => spineFromWaypoints(SPINE_WAYPOINTS, childrenOf.value))
+const spinePath = computed(() => spineFromWaypoints(SPINE_WAYPOINTS, childrenOf.value, resolveByName, { label: 'spine' }))
 const hasSpine = computed(() => spinePath.value.length > 0)
 const spineSet = computed(() => new Set(spinePath.value))
 
@@ -1073,6 +1049,9 @@ const cv = computed(() => {
 })
 
 const ready = computed(() => hasSpine.value && cv.value !== null)
+
+// test-only：曝露 layout computed 供元件測試斷言座標（不影響渲染行為）
+defineExpose({ cv, hasSpine, spinePath })
 
 // ── Card visual ──
 function cardClass(n: LNode) {
