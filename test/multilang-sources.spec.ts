@@ -4,9 +4,10 @@ import {
   mirrorPrimarySource,
   availableViewModes,
   resolveViewMode,
+  migrateLegacyViewMode,
   langLabel,
   zipParallel,
-} from "~/server/utils/multilang-sources";
+} from "~/lib/multilang-sources";
 
 // Contract for the collected-works multi-language schema. See
 // .claude/skills/collected-works-multilang/SKILL.md.
@@ -123,6 +124,25 @@ describe("resolveViewMode (stale-mode clamping)", () => {
     expect(resolveViewMode(null, ["de"])).toBe("zh");
     expect(resolveViewMode(undefined, ["de"])).toBe("zh");
     expect(resolveViewMode("nonsense", ["de"])).toBe("zh");
+  });
+});
+
+describe("migrateLegacyViewMode", () => {
+  it("maps legacy bi → parallel", () => {
+    expect(migrateLegacyViewMode("bi", ["en"])).toBe("parallel");
+  });
+  it("maps legacy en → primary source single-column", () => {
+    expect(migrateLegacyViewMode("en", ["en"])).toBe("src:en");
+    expect(migrateLegacyViewMode("en", ["de", "en"])).toBe("src:de"); // primary = first
+  });
+  it("legacy en with no sources → zh", () => {
+    expect(migrateLegacyViewMode("en", [])).toBe("zh");
+  });
+  it("passes through already-generalized values + null", () => {
+    expect(migrateLegacyViewMode("zh", ["de"])).toBe("zh");
+    expect(migrateLegacyViewMode("parallel", ["de"])).toBe("parallel");
+    expect(migrateLegacyViewMode("src:de", ["de"])).toBe("src:de");
+    expect(migrateLegacyViewMode(null, ["de"])).toBe("zh");
   });
 });
 
