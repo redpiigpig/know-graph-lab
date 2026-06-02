@@ -208,8 +208,13 @@ description: 多卷「全集」(Gesammelte Werke / Collected Works / 全集) 的
   - [x] `ChunkData`([server/utils/ebook-chunks.ts](../../../server/utils/ebook-chunks.ts)) 加 `sources?` / `source_order?` + [[id].get.ts](../../../server/api/ebooks/[id].get.ts) passthrough
   - [x] reader([pages/ebook/[id].vue](../../../pages/ebook/[id].vue)) toggle 動態化（中/對照/各來源語言，用 `availableModes`/`resolveViewMode`/`langLabel`）+ `parallelColumns` 用 `zipParallel` 做 N 欄逐段（flex，N=1 等同舊「中英」、mobile 堆疊）；legacy `bi`/`en` localStorage 用 `migrateLegacyViewMode` 遷移；pure module 在 [lib/multilang-sources.ts](../../../lib/multilang-sources.ts)（client+server 共用）
   - [x] translate 腳本多語 JSONL 輸出（2026-06-02，test-first，21 例綠）— [scripts/multilang_chunks.py](../../../scripts/multilang_chunks.py)：`normalize_sources` / `mirror_primary_source`（Python 鏡像 TS 契約，逐例 parity）/ `build_multilang_chunk` / `validate_multilang_chunk`（寫前硬檢查）/ `assemble_multilang_chunks(aligned_units, translate_fn, source_order)`（engine boundary = `translate_fn`，prod 接 LLM、測試接 stub）/ `write_jsonl`。測試 [scripts/tests/test_multilang_chunks.py](../../../scripts/tests/test_multilang_chunks.py)。**reader（已截圖實證）讀什麼，這裡就寫什麼。**
-- [ ] **對齊步驟**（最難，跟語料綁）：把獨立編輯的德 GW + 英 CW 切成 `aligned_units`（章節錨點 > 長度比 > LLM 輔助 > 整段塞，見「跨版本段落對齊」）。`assemble_multilang_chunks` 吃它的輸出。← **下一步**
-- [ ] **接真 LLM `translate_fn`**：從原文（德）翻、英譯交叉校對；術語走 [jung_glossary.md](jung_glossary.md)；engine/quota/resume 沿用 [[ebook-translate]]。
+- [x] **對齊步驟核心**（2026-06-02，test-first，20 例綠）— [scripts/align_editions.py](../../../scripts/align_editions.py)：`parse_chapter_number`（DE/EN/CJK 標題 + 羅馬/阿拉伯/中文數字 → 同一 key，kind 不混）/ `anchor_coverage` / `align_editions`（**錨點 join**：兩版 ≥80% 唯一錨點 → 按 key 對齊、自動 realign 亂序的 EN、de-only 留空 en、en-only 補在後；否則 **order-align** 補白 fallback）。輸出直接餵 `assemble_multilang_chunks`。測試 [scripts/tests/test_align_editions.py](../../../scripts/tests/test_align_editions.py)。
+  - 殘留：段碼級（`[¶ N]`）細對齊、LLM 輔助 fallback、provisional chapter_path 的 zh 本地化 — 接真語料時再按需補。
+- [ ] **接真 LLM `translate_fn`**：從原文（德）翻、英譯交叉校對；術語走 [jung_glossary.md](jung_glossary.md)；engine/quota/resume 沿用 [[ebook-translate]]。← **下一步（等語料）**
+
+## 起手卷決策（2026-06-02，Claude 拍板）
+
+**Pilot = 公有領域早期著作**：1912《Wandlungen und Symbole der Libido》(de, archive.org) + Hinkle 1916《Psychology of the Unconscious》(en, 公有領域)。理由：(1) 唯一**現在就能合法取得並處理**、不需使用者給檔、不碰受版權全文的 Jung 來源；(2) 兩版是**同一部作品**，能真正驗證跨版對齊；(3) 受版權的 CW 卷無論如何都要使用者提供 HTML 來源檔（不抓盜版全文）。pilot 建好的機器原封不動延伸到那些卷。詳見 [jung_collected_works.md](jung_collected_works.md)。
 - [x] **視覺驗證**（2026-06-02）：手造德/英/中樣本 chunk 跑 dev server + `screenshot_book.mjs` 確認 `中/對照/德/英` toggle、3 欄逐段對齊、**body zip 補白**（英缺第 2 段 → 空白格不位移）、**footnote by-number 跨欄對齊**（英缺 (2) → 該格空白）、單來源「德」單欄模式 全部正確。
   - 📌 `screenshot_book.mjs` 已修：注入 `kgl_device_id` 呈現預先核准的 `screenshot-bot` 裝置，繞過新的 device-trust gate（`middleware/device.global.ts`）。需在 `trusted_devices` 預埋一列 `device_id='screenshot-bot', status='approved'`（已埋）。否則所有 reader 截圖（含 [[fathers-translation]] 校對 C 層）會被導去 `/device-pending`。
 - [ ] **榮格全集盡職調查表**（[jung_collected_works.md](jung_collected_works.md)）
