@@ -55,13 +55,15 @@ describe('EpiscopalSpineTree layout', () => {
     expect(bbish).not.toContain('bbish_c-augustine') // 設立 → collapsed, no bishop card
   })
 
-  // FIX #E2 — focus-mode used chainEndY (含末尾 BISH_VG 空隙) → 多蓋約 90px，
-  // 把掛在更晚主教 (gregory, 590) 的 設立 坎特伯里 兄弟分支整個藏掉。改用 prevBottomY 後修復。
-  it('both branch sees (設立 坎特伯里 + 分裂 羅馬) render — no false focus-mode occlusion', async () => {
+  // 設立 branch 一律預設收進母主教的「+N 被立」選單（單一或多個、東方/天主教一致）；
+  // 分裂 rival（≤2 路）仍並行顯示為 header。（取代舊 E2 focus-mode 測試）
+  it('設立 branch → parent bishop menu；分裂 rival → visible header', async () => {
     const w = await mount(episcopalGood)
-    const labels = w.vm.cv.nodes.filter((n: any) => n.kind === 'branch-see').map((n: any) => n.label)
-    expect(labels.join(' ')).toContain('坎特伯里')
-    expect(labels.join(' ')).toContain('羅馬')
+    const headers = w.vm.cv.nodes.filter((n: any) => n.kind === 'branch-see').map((n: any) => n.label).join(' ')
+    const inMenu = new Set<string>()
+    for (const n of w.vm.cv.nodes) for (const mb of (n.menuBranches ?? [])) inMenu.add(mb.label)
+    expect(headers, '分裂 羅馬 rival 仍為 header').toContain('羅馬')
+    expect([...inMenu].join(' '), '設立 坎特伯里 收進選單').toContain('坎特伯里')
   })
 
   // FIX #E3 — branch bishop cards now carry spineColor (was undefined).

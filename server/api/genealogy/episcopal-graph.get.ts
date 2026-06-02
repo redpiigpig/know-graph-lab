@@ -120,6 +120,10 @@ const SPINE_DEFS: Array<{
     primaryApostleId: 'ap_thomas',                                        color: '#475569', patriarchateYear: 410 },
 ]
 
+// 7 條主軸的正統主線 church 名集合 — 任何旁支（對立/設立/分裂）都不可把這些 church 的主教
+// 吞進自己的鏈（否則早期對立支線會把整條主線吸走，如依玻里圖 split 217）。
+const SPINE_PRIMARY_CHURCHES = new Set(SPINE_DEFS.flatMap(d => d.primaryChurches))
+
 export default defineEventHandler(async (event) => {
   await requireAuth(event)
   const supabase = getAdminClient()
@@ -411,6 +415,8 @@ export default defineEventHandler(async (event) => {
           if (seeName !== k.see_zh) continue
           if (ch === k.church) continue   // already exact-matched
           if (otherSeeChurches.has(ch)) continue   // owned by another see record
+          if (SPINE_PRIMARY_CHURCHES.has(ch)) continue  // 絕不吞併主軸正統線（未分裂教會/天主教/東正教…）
+          //   — 否則早期對立支線（如依玻里圖 split 217）會把整條教宗主線都吸進來
           allBishops.push(...arr)
         }
         // If this branch see has split_year (e.g. 451 for Coptic Orthodox split from

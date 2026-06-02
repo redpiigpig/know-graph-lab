@@ -132,14 +132,20 @@
             </template>
 
             <template v-else-if="n.kind === 'branch-see'">
-              <button
-                class="flex items-center gap-1 w-full text-[10.5px] cursor-default"
-                @click.stop="toggleBranch(n.branchId!)"
-              >
-                <span class="text-[10px] text-violet-500 w-3 shrink-0">{{ isBranchExpanded(n.branchId!) ? '▾' : '▸' }}</span>
-                <span class="font-semibold truncate flex-1 text-left text-slate-800">{{ n.label }}</span>
-                <span class="text-[8px] text-slate-400 tabular-nums shrink-0">{{ n.bishopCount }}</span>
-              </button>
+              <div class="flex items-center gap-1 w-full">
+                <button
+                  class="flex items-center gap-1 flex-1 min-w-0 text-[10.5px] cursor-default"
+                  @click.stop="toggleBranch(n.branchId!)"
+                >
+                  <span class="text-[10px] text-violet-500 w-3 shrink-0">{{ isBranchExpanded(n.branchId!) ? '▾' : '▸' }}</span>
+                  <span class="font-semibold truncate flex-1 text-left text-slate-800">{{ n.label }}</span>
+                  <span class="text-[8px] text-slate-400 tabular-nums shrink-0">{{ n.bishopCount }}</span>
+                </button>
+                <button v-if="isRevealedFromMenu(n.branchId!)"
+                        class="text-[9px] text-slate-400 hover:text-rose-600 shrink-0 cursor-default px-0.5"
+                        title="收回母主教選單"
+                        @click.stop="collapseToMenu(n.branchId!)">⤺收回</button>
+              </div>
               <div v-if="n.sub" class="text-[8px] text-slate-400 truncate w-full text-left pl-3.5">{{ n.sub }}</div>
             </template>
           </div>
@@ -402,6 +408,15 @@ function revealMenuBranch(branchId: string) {
   collapsedBranches.value = cs
   openMenuBishopId.value = null
 }
+function isRevealedFromMenu(branchId: string): boolean {
+  return revealedFromMenu.value.has(branchId)
+}
+// 「收回」：把已從選單展開的旁支放回母主教的「+N 被立」選單（再按一次收起去）。
+function collapseToMenu(branchId: string) {
+  const r = new Set(revealedFromMenu.value)
+  r.delete(branchId)
+  revealedFromMenu.value = r
+}
 watch(() => props.graph, (g) => {
   if (!g) return
   // 對立式分支（is_split=true，同 see_zh 的對立教宗/Old Catholic 等）預設「展開」
@@ -476,7 +491,9 @@ const cv = computed(() => {
       if (splitSibs.length <= 2) return false
       return !revealedFromMenu.value.has(br.id)
     }
-    if (sibs.length <= 1) return false
+    // 設立／自主旁支：一律預設收進母主教的「+N 被立」選單（不論該主教設立 1 個或多個、
+    // 東方與天主教機制一致）。點選單展開、再點該支「收回」放回選單。
+    // 例：額我略一世只設立坎特伯里 1 座，照樣顯示「+1 被立」而非直接攤在外面。
     return !revealedFromMenu.value.has(br.id)
   }
   // Per bishop: how many daughter sees are currently tucked in its「+N」menu
