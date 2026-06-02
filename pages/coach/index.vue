@@ -4,7 +4,6 @@
       <NuxtLink to="/" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
       <div class="w-px h-5 bg-gray-200" />
       <span class="text-sm font-semibold text-gray-900">AI 語言教練</span>
-      <NuxtLink to="/devices" class="ml-auto text-xs px-2.5 py-1 rounded-lg bg-white border border-gray-200 text-gray-500 hover:border-indigo-300 transition">🖥️ 裝置管理</NuxtLink>
     </nav>
 
     <div class="flex-1 px-6 py-10">

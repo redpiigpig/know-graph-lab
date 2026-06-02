@@ -1,6 +1,6 @@
 ---
 name: language-coach
-description: AI 語言教練（/coach）— 外語自學系統，多語言（英文 Emily / 日文 櫻子 上線；德法拉古希臘預留）。核心：Gemini 對話 + Web Speech 語音；每語言獨立空間（首頁/儀表板/記憶/功能各自客製）。功能含五種聊天模式（打字/口說/問答知識/情境角色/限時主題）、今日計畫（每日推薦單字測驗+5閱讀+5聽力+口說+任務）、分級文法課（CEFR/JLPT）、技能練習與 TOEFL/IELTS/GRE 考試模擬、翻譯遊戲、YouTube/文章沉浸（讀聽後 MCQ+討論+評分）、統整記憶庫、教練每日簡報與日誌、SRS 單字、雙 key 成本控管。Use when 改語言教練任何功能、加語言、調人設/難度/題材、改資安（OTP 登入/裝置管理/付費上限）、接 Gemini key、debug coach 端點或頁面。
+description: AI 語言教練（/coach）— 外語自學系統，多語言（英文 Emily / 日文 櫻子 上線；德法拉古希臘預留）。核心：Gemini 對話 + Web Speech 語音；每語言獨立空間（首頁/儀表板/記憶/功能各自客製）。功能含五種聊天模式（打字/口說/問答知識/情境角色/限時主題）、今日計畫（每日推薦單字測驗+5閱讀+5聽力+口說+任務）、分級文法課（CEFR/JLPT）、技能練習與 TOEFL/IELTS/GRE 考試模擬、翻譯遊戲、YouTube/文章沉浸（讀聽後 MCQ+討論+評分）、統整記憶庫、教練每日簡報與日誌、SRS 單字、雙 key 成本控管。Use when 改語言教練任何功能、加語言、調人設/難度/題材、改資安（OTP 登入/付費上限）、接 Gemini key、debug coach 端點或頁面。
 ---
 
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：任一邊超過 2000px 會炸掉 session。
@@ -56,7 +56,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 ## 五、資安（鎖回站長專屬）
 
 - **登入 = Email OTP 6 碼**（login.vue：signInWithOtp→verifyOtp，shouldCreateUser:false）。⚠️ **Supabase Email Template「Magic Link」必須含 `{{ .Token }}`** 否則收不到碼。
-- **裝置管理**：`trusted_devices`；`device.global` middleware 未核准→`/device-pending`；`/devices` 核准/撤銷；首台自動核准防鎖死。
+- **裝置核准閘門已於 2026-06-03 移除**（單人私站、登入已靠 email OTP + allowedEmail 白名單，多一層只會把站長自己鎖在外）。`trusted_devices` 表保留但不再使用；middleware/頁面/API 皆已刪。
 - **付費 key 僅站長**（coach-ai `isOwner` 比對 allowedEmail）；coach-auth 站長專屬；`/signup` 關閉。
 - **付費每月上限 NT$500**（env `GEMINI_PAID_MONTHLY_CAP_TWD`）：超過自動退免費；儀表板顯示+警示。
 

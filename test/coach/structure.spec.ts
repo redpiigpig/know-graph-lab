@@ -15,12 +15,9 @@ describe("語言教練檔案結構完整性", () => {
     expect(has("pages/coach/index.vue")).toBe(true);
   });
 
-  it("登入/裝置相關頁面與 middleware 存在", () => {
+  it("登入相關頁面與 middleware 存在", () => {
     expect(has("pages/login.vue")).toBe(true);
-    expect(has("pages/device-pending.vue")).toBe(true);
-    expect(has("pages/devices.vue")).toBe(true);
     expect(has("middleware/coach-auth.ts")).toBe(true);
-    expect(has("middleware/device.global.ts")).toBe(true);
   });
 
   it("關鍵 server 端點都存在", () => {
@@ -38,16 +35,13 @@ describe("語言教練檔案結構完整性", () => {
       "daily.get.ts", "daily/item.post.ts", "daily/done.post.ts",
     ];
     for (const e of eps) expect(has(`server/api/lang/${e}`), `server/api/lang/${e}`).toBe(true);
-    for (const d of ["check.post.ts", "index.get.ts", "[id].patch.ts"]) {
-      expect(has(`server/api/devices/${d}`), `server/api/devices/${d}`).toBe(true);
-    }
   });
 
   it("共用 util / composable 存在", () => {
     for (const u of ["gemini.ts", "coach-ai.ts", "lang-coaches.ts", "srs.ts"]) {
       expect(has(`server/utils/${u}`)).toBe(true);
     }
-    for (const c of ["useCoachAi.ts", "useSpeech.ts", "useActivityTracker.ts", "useDevice.ts"]) {
+    for (const c of ["useCoachAi.ts", "useSpeech.ts", "useActivityTracker.ts"]) {
       expect(has(`composables/${c}`)).toBe(true);
     }
   });
@@ -73,7 +67,7 @@ describe("SKILL.md 準確性", () => {
 
   it("skill 提到的關鍵頁面/功能字眼存在", () => {
     const md = readFileSync(resolve(root, ".claude/skills/language-coach/SKILL.md"), "utf-8");
-    for (const kw of ["今日計畫", "主題教程", "文法課", "情境角色", "問答", "裝置", "OTP", "付費", "gemini-flash-latest"]) {
+    for (const kw of ["今日計畫", "主題教程", "文法課", "情境角色", "問答", "OTP", "付費", "gemini-flash-latest"]) {
       expect(md, `SKILL 應提到「${kw}」`).toContain(kw);
     }
   });
