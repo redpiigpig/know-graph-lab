@@ -29,6 +29,13 @@ export interface ChunkData {
   format?: "markdown" | "text";
   source_lang?: string | null;
   source_text?: string | null;
+  // Multi-language parallel (collected works: 德 GW + 英 CW + 繁中, …).
+  // `sources` is lang-code → text; `source_order` the column order. The PRIMARY
+  // source (source_order[0]) is mirrored into source_text/source_lang above so
+  // the legacy two-column reader keeps working. Helpers + contract live in
+  // lib/multilang-sources.ts; see .claude/skills/collected-works-multilang/.
+  sources?: Record<string, string> | null;
+  source_order?: string[] | null;
   // Bilingual-parallel books (Denzinger, future ACCS dual-language).
   // See .claude/skills/ebook-pipeline/book-structure-bilingual-parallel.md.
   section_type?: "header" | "entry" | "commentary" | null;

@@ -88,6 +88,22 @@ export function resolveViewMode(desired: string | null | undefined, source_order
   return desired && avail.includes(desired) ? desired : "zh";
 }
 
+/**
+ * Reader-side: migrate a legacy persisted view-mode value to the generalized
+ * vocabulary. Old reader stored only "zh" | "bi" | "en":
+ *   "bi" → "parallel"
+ *   "en" → the primary source's single-column mode ("src:<primary>")
+ * Already-generalized values ("zh" / "parallel" / "src:*") pass through. The
+ * result is NOT clamped — callers still run it through resolveViewMode against
+ * the current chunk's source_order.
+ */
+export function migrateLegacyViewMode(saved: string | null | undefined, source_order: string[]): ViewMode {
+  if (!saved) return "zh";
+  if (saved === "bi") return "parallel";
+  if (saved === "en") return source_order.length ? `src:${source_order[0]}` : "zh";
+  return saved;
+}
+
 /** Short CJK label for the toggle button of a language code. */
 export const LANG_LABEL: Record<string, string> = {
   zh: "中", de: "德", en: "英", la: "拉", fr: "法",

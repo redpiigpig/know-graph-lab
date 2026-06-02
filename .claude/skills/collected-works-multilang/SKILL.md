@@ -204,10 +204,11 @@ description: 多卷「全集」(Gesammelte Werke / Collected Works / 全集) 的
 ## 待辦 / 狀態
 
 - [x] **`sources` schema 純函式契約 + 測試**（test-first，2026-06-02）— [server/utils/multilang-sources.ts](../../../server/utils/multilang-sources.ts) + [test/multilang-sources.spec.ts](../../../test/multilang-sources.spec.ts)（23 例綠）。normalize / mirrorPrimarySource 向後相容 / availableViewModes / resolveViewMode stale 夾制 / langLabel / zipParallel 補白。**下游 reader 與 API 一律用這個 module，不要各自重寫 schema 判斷。**
-- [ ] **基建：reader N 欄 + API passthrough**（跟語料無關；見「Reader 多欄擴充設計」）
-  - [ ] `ChunkData`(ebook-chunks.ts) 加 `sources?` / `source_order?` + [id].get.ts passthrough
-  - [ ] reader toggle 動態化（用 `availableViewModes`/`resolveViewMode`/`langLabel`）+ parallel grid N 欄（用 `zipParallel`）
-  - [ ] translate 腳本多語 JSONL 輸出變體（寫入前過 `mirrorPrimarySource`）
+- [x] **基建：reader N 欄 + API passthrough**（2026-06-02，typecheck 0 error / 27 tests 綠）
+  - [x] `ChunkData`([server/utils/ebook-chunks.ts](../../../server/utils/ebook-chunks.ts)) 加 `sources?` / `source_order?` + [[id].get.ts](../../../server/api/ebooks/[id].get.ts) passthrough
+  - [x] reader([pages/ebook/[id].vue](../../../pages/ebook/[id].vue)) toggle 動態化（中/對照/各來源語言，用 `availableModes`/`resolveViewMode`/`langLabel`）+ `parallelColumns` 用 `zipParallel` 做 N 欄逐段（flex，N=1 等同舊「中英」、mobile 堆疊）；legacy `bi`/`en` localStorage 用 `migrateLegacyViewMode` 遷移；pure module 在 [lib/multilang-sources.ts](../../../lib/multilang-sources.ts)（client+server 共用）
+  - [ ] translate 腳本多語 JSONL 輸出變體（寫入前過 `mirrorPrimarySource`）← **下一步**
+- [ ] **視覺驗證**：跑 dev server 確認既有雙語書（ANF Vol 1）back-compat 正常 + 一個三語樣本
 - [ ] **榮格全集盡職調查表**（[jung_collected_works.md](jung_collected_works.md)）
 - [ ] **jung_glossary.md** 起手（原型/集體無意識/個體化/自性…德文為準）
 - [ ] 第一卷試做（建議從有乾淨公有領域德＋英來源的早期著作起手，驗證三欄）

@@ -47,17 +47,14 @@
                 : 'bg-white text-stone-600 border-stone-200 hover:border-amber-400 hover:text-amber-700']">
             <span>✏️</span><span>編輯</span>
           </button>
-          <!-- 中 / 對照 / 英 切換（僅在 chunk 有原文時顯示） -->
-          <div v-if="pageSourceText" class="inline-flex bg-stone-100 rounded-lg p-0.5 text-xs gap-0.5">
-            <button @click="setViewMode('zh')"
-              :class="['px-2.5 py-1 rounded-md transition',
-                viewMode==='zh' ? 'bg-white shadow-sm text-stone-900 font-medium' : 'text-stone-500 hover:text-stone-900']">中</button>
-            <button @click="setViewMode('bi')"
-              :class="['px-2.5 py-1 rounded-md transition',
-                viewMode==='bi' ? 'bg-white shadow-sm text-stone-900 font-medium' : 'text-stone-500 hover:text-stone-900']">中英</button>
-            <button @click="setViewMode('en')"
-              :class="['px-2.5 py-1 rounded-md transition',
-                viewMode==='en' ? 'bg-white shadow-sm text-stone-900 font-medium' : 'text-stone-500 hover:text-stone-900']">英</button>
+          <!-- 中 / 對照 / 各來源語言 切換（僅在 chunk 有來源原文時顯示）。
+               來源鈕由 source_order 動態生：雙語書＝中/對照/英；
+               全集三欄＝中/對照/德/英。-->
+          <div v-if="pageSourceOrder.length" class="inline-flex bg-stone-100 rounded-lg p-0.5 text-xs gap-0.5">
+            <button @click="setViewMode('zh')" :class="modeBtnClass('zh')">中</button>
+            <button @click="setViewMode('parallel')" :class="modeBtnClass('parallel')">對照</button>
+            <button v-for="lang in pageSourceOrder" :key="lang"
+              @click="setViewMode('src:' + lang)" :class="modeBtnClass('src:' + lang)">{{ sourceLabel(lang) }}</button>
           </div>
           <input v-model="pageSearch" type="text" placeholder="頁內搜尋…"
             class="hidden sm:block bg-white border border-stone-200 rounded-lg px-3 py-1.5 text-sm w-40 focus:outline-none focus:border-blue-500" />
@@ -351,7 +348,7 @@
       <!-- Reading area -->
       <div class="flex-1 overflow-y-auto bg-stone-50" ref="scrollEl">
         <article :class="['ebook-article mx-auto px-12 py-14 shadow-sm rounded-lg my-8 border border-stone-200',
-          viewMode === 'bi' && pageSourceText ? 'max-w-7xl' : 'max-w-4xl']">
+          effectiveViewMode === 'parallel' && pageSourceOrder.length ? 'max-w-7xl' : 'max-w-4xl']">
           <div v-if="pageLoading" class="space-y-3 animate-pulse">
             <div v-for="i in 8" :key="i" :class="['h-4 bg-stone-200 rounded', i % 3 === 0 ? 'w-3/4' : 'w-full']"></div>
           </div>
@@ -470,34 +467,37 @@
                 @mouseup="onTextSelectionEnd"
                 @click="onContentClick"></div>
 
-              <!-- 英文原文（單欄，無標註功能）-->
-              <div v-else-if="effectiveViewMode === 'en'"
+              <!-- 單一來源語言（單欄，無標註功能）：德／英… -->
+              <div v-else-if="currentSourceLang"
                 class="ebook-prose ebook-prose-en"
-                v-html="sourceHtml"></div>
+                v-html="currentSourceHtml"></div>
 
-              <!-- 中英對照（逐段對齊雙欄）-->
+              <!-- 對照（中 + N 來源逐段對齊；N=1 即舊「中英」）。用 flex 讓
+                   欄數隨來源數動態變化，mobile 自動垂直堆疊。-->
               <div v-else ref="contentEl"
                 class="bilingual-rows"
                 @mouseup="onTextSelectionEnd"
                 @click="onContentClick">
-                <!-- Body paragraphs paired row-by-row -->
-                <div v-for="(pair, idx) in paragraphPairs" :key="idx"
-                  class="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-x-8 gap-y-1 py-1">
-                  <div class="ebook-prose" v-html="pair.zh"></div>
-                  <div class="ebook-prose ebook-prose-en lg:border-l lg:border-stone-100 lg:pl-8"
-                    v-html="pair.en"></div>
+                <!-- Body — 中 cell + one cell per source language, zipped by row -->
+                <div v-for="(row, idx) in parallelColumns.rows" :key="idx"
+                  class="flex flex-col lg:flex-row gap-x-8 gap-y-1 py-1">
+                  <div class="ebook-prose lg:flex-[2]" v-html="row.zh"></div>
+                  <div v-for="lang in parallelColumns.langs" :key="lang"
+                    class="ebook-prose ebook-prose-en lg:flex-[3] lg:border-l lg:border-stone-100 lg:pl-8"
+                    v-html="row.cols[lang]"></div>
                 </div>
                 <!-- Unified footnote section, aligned BY NUMBER so a missing
-                     (45)/(46) in the EN side doesn't bump (47) onto the wrong
-                     row. Header spans both columns; each footnote is one row
-                     with zh + en cells. -->
-                <section v-if="footnotePairs.length" class="bilingual-footnotes ebook-prose">
+                     (45)/(46) in one column doesn't bump (47) onto the wrong
+                     row. Header spans all columns; each footnote is one row
+                     with 中 + per-language cells. -->
+                <section v-if="parallelColumns.footnotes.length" class="bilingual-footnotes ebook-prose">
                   <div class="footnotes-label">註　釋</div>
-                  <div v-for="fn in footnotePairs" :key="fn.num"
-                    class="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-x-8 footnote-row">
-                    <div v-html="fn.zh || '&nbsp;'"></div>
-                    <div class="ebook-prose-en lg:border-l lg:border-stone-100 lg:pl-8"
-                      v-html="fn.en || '&nbsp;'"></div>
+                  <div v-for="fn in parallelColumns.footnotes" :key="fn.num"
+                    class="flex flex-col lg:flex-row gap-x-8 footnote-row">
+                    <div class="lg:flex-[2]" v-html="fn.zh || '&nbsp;'"></div>
+                    <div v-for="lang in parallelColumns.langs" :key="lang"
+                      class="ebook-prose-en lg:flex-[3] lg:border-l lg:border-stone-100 lg:pl-8"
+                      v-html="fn.cols[lang] || '&nbsp;'"></div>
                   </div>
                 </section>
               </div>
@@ -698,6 +698,17 @@
 <script setup lang="ts">
 definePageMeta({ middleware: "auth" });
 
+// Multi-language parallel contract (zh + N sources). Pure helpers shared with
+// the API + translate writer. See .claude/skills/collected-works-multilang/.
+import {
+  normalizeSources,
+  availableViewModes,
+  resolveViewMode,
+  migrateLegacyViewMode,
+  langLabel,
+  zipParallel,
+} from "~/lib/multilang-sources";
+
 interface TocSection { anchor_id: string; title: string; level: number }
 interface TocEntry {
   chunk_index: number;
@@ -754,6 +765,11 @@ const currentPage = ref(parseInt(route.query.page as string ?? "1") || 1);
 const jumpPage = ref(currentPage.value);
 const pageContent = ref("");
 const pageSourceText = ref<string | null>(null);
+// Multi-language sources for the current chunk (collected works: 德/英/中…).
+// `pageSourceText` stays the PRIMARY source (source_order[0]) so all the
+// existing two-column code keeps working unchanged.
+const pageSources = ref<Record<string, string>>({});
+const pageSourceOrder = ref<string[]>([]);
 const pageChapter = ref<string | null>(null);
 const pageLoading = ref(false);
 // Bilingual-parallel extras (Denzinger and similar dual-language reference works).
@@ -766,31 +782,59 @@ const pagePdfPage = ref<number | null>(null);
 const dhJumpInput = ref<string>("");
 const isBilingualMode = computed(() => ebook.value?.display_mode === "bilingual-parallel");
 
-// View mode for bilingual books. "zh" = 中譯, "bi" = 對照, "en" = 原文.
-// Persisted across pages + reloads; gracefully degrades to "zh" if a chunk
-// has no source_text (e.g. mid-book transition between bilingual and
-// monolingual books, or a chunk that pre-dates the source-text schema).
-type ViewMode = "zh" | "bi" | "en";
+// Generalized view mode: "zh" (中) | "parallel" (對照) | `src:<lang>` (單一來源).
+// Replaces the old fixed "zh"|"bi"|"en". Persisted across pages + reloads;
+// resolveViewMode() degrades to "zh" when the current chunk lacks the requested
+// source. Legacy "bi"/"en" values are migrated on mount. Contract +
+// helpers: lib/multilang-sources.ts.
+type ViewMode = string;
 const viewMode = ref<ViewMode>("zh");
+// Raw localStorage value, applied once we know the chunk's source_order
+// (legacy "en" → src:<primary> needs the primary lang).
+const savedViewMode = ref<string | null>(null);
 // Tracks whether localStorage had an explicit preference at load time.
 // When false (first visit to any ebook), we auto-default to 'bi' the first
 // time we see a chunk with source_text — so AI-translated books open in
 // side-by-side mode by default. User clicking the toggle locks in their
 // choice via localStorage and disables auto-switching.
 const viewModeUserChosen = ref(false);
+// Modes this chunk offers (中 / 對照 / 各來源語言), and the resolved current
+// mode clamped to that set so a stale `src:de` never blanks the page.
+const availableModes = computed<ViewMode[]>(() => availableViewModes(pageSourceOrder.value));
 const effectiveViewMode = computed<ViewMode>(() =>
-  !pageSourceText.value ? "zh" : viewMode.value
+  resolveViewMode(viewMode.value, pageSourceOrder.value)
 );
+// The single source language currently shown ("src:de" → "de"), or null.
+const currentSourceLang = computed<string | null>(() =>
+  effectiveViewMode.value.startsWith("src:") ? effectiveViewMode.value.slice(4) : null
+);
+const sourceLabel = (lang: string) => langLabel(lang);
 function setViewMode(m: ViewMode) {
   viewMode.value = m;
   viewModeUserChosen.value = true;
   try { localStorage.setItem("ebook-viewMode", m); } catch { /* private mode */ }
 }
-// Auto-default to bilingual when first bilingual chunk loads (until user
-// explicitly picks a mode via the toggle).
-watch(pageSourceText, (src) => {
-  if (src && !viewModeUserChosen.value && viewMode.value === "zh") {
-    viewMode.value = "bi";
+const modeBtnClass = (m: ViewMode) => [
+  "px-2.5 py-1 rounded-md transition",
+  effectiveViewMode.value === m
+    ? "bg-white shadow-sm text-stone-900 font-medium"
+    : "text-stone-500 hover:text-stone-900",
+];
+// Apply persisted preference / auto-default once the chunk's source_order is
+// known. Fires on every chunk load but only acts until the user explicitly
+// picks a mode (viewModeUserChosen).
+watch(pageSourceOrder, (order) => {
+  if (savedViewMode.value && !viewModeUserChosen.value) {
+    // "en" → src:<primary> needs a chunk that actually has sources; wait.
+    if (savedViewMode.value === "en" && !order.length) return;
+    viewMode.value = migrateLegacyViewMode(savedViewMode.value, order);
+    savedViewMode.value = null;
+    viewModeUserChosen.value = true;
+    return;
+  }
+  // First multi-source chunk → open in 對照 by default.
+  if (order.length && !viewModeUserChosen.value && viewMode.value === "zh") {
+    viewMode.value = "parallel";
   }
 });
 const pageSearch = ref("");
@@ -1270,9 +1314,24 @@ const markdownHtml = computed(() =>
 // leaves `[^N]` as raw text instead of <sup class="footnote-ref">. Use
 // a chunk-offset (1000+) so the footnote DOM ids don't collide with the
 // Chinese column's refs (same anchor space, opposite column).
-const sourceHtml = computed(() => pageSourceText.value
-  ? renderMarkdown(pageSourceText.value, currentPage.value - 1 + 100000)
-  : "");
+// Per-language rendered full text (single-source 「德」/「英」… view modes).
+// Each source column gets a distinct footnote-id namespace (offset by
+// 100000*(col+1)) so refs across the 中 + N source columns never collide.
+const sourceHtmlByLang = computed<Record<string, string>>(() => {
+  const base = currentPage.value - 1;
+  const out: Record<string, string> = {};
+  pageSourceOrder.value.forEach((lang, li) => {
+    out[lang] = renderMarkdown(pageSources.value[lang] ?? "", base + 100000 * (li + 1));
+  });
+  return out;
+});
+const currentSourceHtml = computed(() =>
+  currentSourceLang.value ? (sourceHtmlByLang.value[currentSourceLang.value] ?? "") : ""
+);
+// CSS grid template for 對照 mode: 中 column (2fr) + one 3fr per source.
+const parallelGridTemplate = computed(
+  () => `2fr ${pageSourceOrder.value.map(() => "3fr").join(" ")}`
+);
 
 // Paragraph-level alignment for bilingual mode. Each paragraph (split on
 // blank line in source markdown) pairs with the matching translated
@@ -1338,22 +1397,6 @@ function renderFootnoteItem(num: number, text: string, chunkIdx: number): string
     `<a href="#fnref-${chunkIdx}-${num}" class="footnote-back" title="回到正文">↩</a></p>`
   );
 }
-const paragraphPairs = computed<{ zh: string; en: string }[]>(() => {
-  if (!pageContent.value || !pageSourceText.value) return [];
-  const zh = splitBodyAndFootnotes(pageContent.value).body;
-  const en = splitBodyAndFootnotes(pageSourceText.value).body;
-  const n = Math.max(zh.length, en.length);
-  const out: { zh: string; en: string }[] = [];
-  const zhChunkIdx = currentPage.value - 1;
-  const enChunkIdx = zhChunkIdx + 100000;  // offset so EN refs don't id-collide with ZH
-  for (let i = 0; i < n; i++) {
-    out.push({
-      zh: zh[i] ? renderMarkdown(zh[i], zhChunkIdx) : "",
-      en: en[i] ? renderMarkdown(en[i], enChunkIdx) : "",
-    });
-  }
-  return out;
-});
 // Footnote pairs aligned by footnote NUMBER (not paragraph index). Each
 // row has zh + en cells; either side can be empty if the LLM dropped that
 // footnote in the other language. Continuation paragraphs (one footnote
@@ -1375,17 +1418,47 @@ function parseFootnoteColumn(paras: string[], chunkIdx: number): Map<number, str
   }
   return out;
 }
-const footnotePairs = computed<{ num: number; zh: string; en: string }[]>(() => {
-  if (!pageContent.value || !pageSourceText.value) return [];
-  const zhPart = splitBodyAndFootnotes(pageContent.value).footnotes;
-  const enPart = splitBodyAndFootnotes(pageSourceText.value).footnotes;
-  if (!zhPart.length && !enPart.length) return [];
+// Generalized 對照 rendering: 中 + every source language. Body paragraphs are
+// zipped by index (zipParallel pads short columns); footnotes are aligned by
+// NUMBER across 中 + all sources. Works for N=1 (the old 中英 case) through N≥2
+// (德/英/中…). Each column renders in its own footnote-id namespace
+// (100000*(col+1)) so refs never collide. `langs` is empty when the chunk has
+// no sources, so the template falls through to single-column 中.
+interface ParallelFootnote { num: number; zh: string; cols: Record<string, string> }
+const parallelColumns = computed<{
+  langs: string[];
+  rows: { zh: string; cols: Record<string, string> }[];
+  footnotes: ParallelFootnote[];
+}>(() => {
+  const langs = pageSourceOrder.value;
+  if (!langs.length || !pageContent.value) return { langs: [], rows: [], footnotes: [] };
   const zhChunkIdx = currentPage.value - 1;
-  const enChunkIdx = zhChunkIdx + 100000;
-  const zh = parseFootnoteColumn(zhPart, zhChunkIdx);
-  const en = parseFootnoteColumn(enPart, enChunkIdx);
-  const nums = [...new Set([...zh.keys(), ...en.keys()])].sort((a, b) => a - b);
-  return nums.map(n => ({ num: n, zh: zh.get(n) ?? "", en: en.get(n) ?? "" }));
+
+  // Body — render 中 + each source, then zip by paragraph index.
+  const zhBody = splitBodyAndFootnotes(pageContent.value).body.map(p => renderMarkdown(p, zhChunkIdx));
+  const bodyByLang: Record<string, string[]> = {};
+  const fnByLang: Record<string, Map<number, string>> = {};
+  langs.forEach((lang, li) => {
+    const ns = zhChunkIdx + 100000 * (li + 1);
+    const split = splitBodyAndFootnotes(pageSources.value[lang] ?? "");
+    bodyByLang[lang] = split.body.map(p => renderMarkdown(p, ns));
+    fnByLang[lang] = parseFootnoteColumn(split.footnotes, ns);
+  });
+  const rows = zipParallel(zhBody, bodyByLang, langs);
+
+  // Footnotes — align by number across 中 + all source columns.
+  const zhFn = parseFootnoteColumn(splitBodyAndFootnotes(pageContent.value).footnotes, zhChunkIdx);
+  const nums = [...new Set([
+    ...zhFn.keys(),
+    ...langs.flatMap(l => [...fnByLang[l].keys()]),
+  ])].sort((a, b) => a - b);
+  const footnotes = nums.map(n => ({
+    num: n,
+    zh: zhFn.get(n) ?? "",
+    cols: Object.fromEntries(langs.map(l => [l, fnByLang[l].get(n) ?? ""])),
+  }));
+
+  return { langs, rows, footnotes };
 });
 
 // ── DOM-based highlight applier (handles cross-paragraph + multi-occurrence) ──
@@ -1528,7 +1601,23 @@ async function loadPage(page: number) {
     }
   }
   pageContent.value = data?.currentPage?.content ?? "";
-  pageSourceText.value = data?.currentPage?.source_text ?? null;
+  // Normalize multi-source fields (sources{} / source_order) with back-compat
+  // synthesis from the legacy source_text/source_lang. pageSourceText keeps the
+  // PRIMARY source so existing two-column code paths are untouched.
+  {
+    const cp = data?.currentPage;
+    const norm = normalizeSources({
+      sources: cp?.sources ?? null,
+      source_order: cp?.source_order ?? null,
+      source_text: cp?.source_text ?? null,
+      source_lang: cp?.source_lang ?? null,
+    });
+    pageSources.value = norm.sources;
+    pageSourceOrder.value = norm.source_order;
+    pageSourceText.value = norm.source_order.length
+      ? norm.sources[norm.source_order[0]]
+      : null;
+  }
   pageChapter.value = data?.currentPage?.chapter_path ?? null;
   pageSectionType.value = data?.currentPage?.section_type ?? null;
   pageDhNumber.value = data?.currentPage?.dh_number ?? null;
@@ -2245,15 +2334,12 @@ onMounted(async () => {
   document.addEventListener("mousedown", hidePopupsOnOutsideClick);
   document.addEventListener("copy", onReaderCopy);
 
-  // Restore view mode from previous session. If user has explicitly chosen
-  // a mode before, honor it; otherwise the watcher on pageSourceText will
-  // auto-default to 'bi' once a bilingual chunk loads.
+  // Restore view mode from the previous session. Stash the raw value; the
+  // watcher on pageSourceOrder applies it once the chunk's sources are known
+  // (legacy "bi"/"en" need migration — "en" → src:<primary>). Otherwise the
+  // same watcher auto-defaults to 對照 when a multi-source chunk loads.
   try {
-    const saved = localStorage.getItem("ebook-viewMode") as ViewMode | null;
-    if (saved === "zh" || saved === "bi" || saved === "en") {
-      viewMode.value = saved;
-      viewModeUserChosen.value = true;
-    }
+    savedViewMode.value = localStorage.getItem("ebook-viewMode");
   } catch { /* private mode */ }
 
   // Fetch shelf state + bookmarks first so we can decide whether to auto-jump.

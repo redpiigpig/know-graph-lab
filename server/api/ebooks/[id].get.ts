@@ -40,6 +40,8 @@ export default defineEventHandler(async (event) => {
           content: chunk.content,
           source_text: chunk.source_text ?? null,
           source_lang: chunk.source_lang ?? null,
+          sources: chunk.sources ?? null,
+          source_order: chunk.source_order ?? null,
           section_type: chunk.section_type ?? null,
           dh_number: chunk.dh_number ?? null,
           page_numbers: chunk.page_numbers ?? null,
