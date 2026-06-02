@@ -1,8 +1,8 @@
 name: tests
+# 只手動觸發：push/PR 自動跑會在每次 commit 失敗時寄 email（且 CI 缺 package-lock.json
+# 一直 fail），而本機 pre-push hook 已跑全套 vitest，雲端這份是重複的。
+# 想手動跑：GitHub → Actions → tests → Run workflow。
 on:
-  push:
-    branches: [master]
-  pull_request:
   workflow_dispatch:
 
 jobs:
