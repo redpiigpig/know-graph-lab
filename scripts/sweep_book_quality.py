@@ -446,6 +446,16 @@ TERM_FIXES_NPNF2_V3 = dict(TERM_FIXES_NPNF2_HISTORIANS, **{
     "魯非努": "魯菲努斯", "魯芬努斯": "魯菲努斯", "魯非諾": "魯菲努斯", "魯弗納": "魯菲努斯",
 })
 
+# NPNF2 Vol 5 — Gregory of Nyssa（迦帕多家教父）
+# 譯名鎖定（2026-05-29 決策）：Gregory → 格列高里（「里」非「理」/「利」）；Basil → 巴西流
+TERM_FIXES_NPNF2_V5 = dict(TERM_FIXES_ANF_COMMON, **{
+    "尼撒的格列高理": "尼撒的格列高里", "尼撒的格列高利": "尼撒的格列高里",
+    "尼斯的格列高里": "尼撒的格列高里", "尼撒的格里高利": "尼撒的格列高里",
+    "格列高理": "格列高里", "格列高利": "格列高里", "格里高利": "格列高里",
+    "尤諾米烏斯": "歐諾米烏", "歐諾米烏斯": "歐諾米烏", "歐諾米": "歐諾米烏",  # Eunomius
+    "巴西略": "巴西流",
+})
+
 # 所有 ANF vol 都吃 ANF_COMMON baseline；per-vol specific 覆蓋 baseline。
 TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "c98d358d-7066-4691-a896-b7232707b0db": {**TERM_FIXES_ANF_COMMON, **TERM_FIXES_ANF_VOL_1},  # ANF Vol 1
@@ -473,6 +483,7 @@ TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "91ff3a5e-cd1f-4ab4-acb7-70cb7a80c4b9": TERM_FIXES_NPNF2_HISTORIANS,  # NPNF2 Vol 1 Eusebius (Church History + Life of Constantine)
     "29782dd6-ece9-446a-83ed-9cc0892d7cc7": TERM_FIXES_NPNF2_HISTORIANS,  # NPNF2 Vol 2 Socrates + Sozomen
     "a7e5956e-8851-4d0f-b3d2-1f823d1bdc81": TERM_FIXES_NPNF2_V3,  # NPNF2 Vol 3 Theodoret + Jerome + Rufinus
+    "9b94e7c1-fa82-4910-a31f-9db1e2e040bb": TERM_FIXES_NPNF2_V5,  # NPNF2 Vol 5 Gregory of Nyssa
 }
 
 

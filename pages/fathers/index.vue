@@ -136,6 +136,7 @@ const REFINED_IDS = new Set([
   '91ff3a5e-cd1f-4ab4-acb7-70cb7a80c4b9',  // NPNF2 Vol 1 (Eusebius — Church History + Life of Constantine)
   '29782dd6-ece9-446a-83ed-9cc0892d7cc7',  // NPNF2 Vol 2 (Socrates Scholasticus + Sozomen — Ecclesiastical Histories)
   'a7e5956e-8851-4d0f-b3d2-1f823d1bdc81',  // NPNF2 Vol 3 (Theodoret + Jerome/Gennadius + Rufinus)
+  '9b94e7c1-fa82-4910-a31f-9db1e2e040bb',  // NPNF2 Vol 5 (Gregory of Nyssa — Dogmatic/Ascetic/Philosophical/Apologetic/Oratorical/Letters)
 ])
 
 const series = [
@@ -182,7 +183,7 @@ const ZH_TITLES: Record<string, string> = {
   'NPNF2-2':  '蘇格拉底、索佐門 — 教會史',
   'NPNF2-3':  '狄奧多勒、耶柔米、根那狄、魯弗納 — 歷史著作',
   'NPNF2-4':  '亞他那修 — 著作選集與書信',
-  'NPNF2-5':  '尼撒的格列高理 — 教義論集',
+  'NPNF2-5':  '尼撒的格列高里 — 教義、苦修、哲學、護教、講演、書信',
   'NPNF2-6':  '耶柔米 — 書信與著作選集',
   'NPNF2-7':  '西瑞爾、拿先斯的格列高理 — 著作選集',
   'NPNF2-8':  '巴西流 — 書信與著作選集',

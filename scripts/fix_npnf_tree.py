@@ -191,6 +191,21 @@ REGISTRY: dict[str, dict[str, str]] = {
         "About This Book": "__FRONT__", "Title Page.": "__FRONT__",
         "General Indexes": "__INDEX__", "Indexes": "__INDEX__",
     },
+    # Vol 29 NPNF2-05 — Gregory of Nyssa (按著作類型分組)
+    "9b94e7c1-fa82-4910-a31f-9db1e2e040bb": {
+        "Dogmatic Treatises.": "尼撒的格列高里：教義論集",
+        "Ascetic and Moral Treatises.": "尼撒的格列高里：苦修與道德論集",
+        "Philosophical Works.": "尼撒的格列高里：哲學著作",
+        "Apologetic Works.": "尼撒的格列高里：護教著作",
+        "Oratorical Works.": "尼撒的格列高里：講演集",
+        "Letters.": "尼撒的格列高里：書信集",
+        "Prolegomena.": "__FRONT__",
+        "About This Book": "__FRONT__", "Title Page.": "__FRONT__",
+        "Editor's Preface.": "__FRONT__", "Editor’s Preface.": "__FRONT__", "Preface.": "__FRONT__",
+        "Works on Analytical Criticism, History, and Bibliography, Consulted.": "__FRONT__",
+        "Dates of Treatises, &c., Here Translated.": "__FRONT__",
+        "Indexes": "__INDEX__",
+    },
     # Vol 28 NPNF2-03 — Theodoret + Jerome/Gennadius + Rufinus
     "a7e5956e-8851-4d0f-b3d2-1f823d1bdc81": {
         "The Ecclesiastical History, Dialogues, and Letters of Theodoret.": "狄奧多勒教會史、對話錄與書信",
