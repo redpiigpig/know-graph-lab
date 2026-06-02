@@ -65,12 +65,18 @@ function base64url(s) { return Buffer.from(s, 'utf-8').toString('base64').replac
 const cookieValue = 'base64-' + base64url(JSON.stringify(session))
 await context.addCookies([{ name: `sb-${projectRef}-auth-token`, value: cookieValue, domain: new URL(APP_BASE).hostname, path: '/', httpOnly: false, secure: false, sameSite: 'Lax' }])
 
+// Bypass the device-approval gate (device.global.ts) for headless screenshots:
+// the fresh headless browser has an unapproved device id → would redirect to
+// /device-pending. Stub the check to always report approved.
+await page.route('**/api/devices/check', route =>
+  route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ status: 'approved' }) }))
+
 console.log(`→ Loading /genealogy/episcopal-tree`)
 await page.goto(APP_BASE + '/genealogy/episcopal-tree', { waitUntil: 'domcontentloaded', timeout: 90000 })
 await page.waitForLoadState('networkidle', { timeout: 30000 }).catch(() => {})
 
-if (page.url().includes('/login')) {
-  console.error('Auth cookie not accepted, redirected to /login')
+if (page.url().includes('/login') || page.url().includes('/device-pending')) {
+  console.error('Blocked:', page.url())
   process.exit(1)
 }
 
