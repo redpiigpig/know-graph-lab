@@ -468,16 +468,21 @@ const cv = computed(() => {
   // 規則：1 個子座 → inline 顯示；2 個以上 → 全部摺成「+N 被立」選單
   // 點選單某項 → 只 reveal 那一個，同教宗的其他兄弟分支保持隱形（exclusive reveal）
   function isBranchInMenu(br: BranchIn): boolean {
-    if (br.is_split) return false   // 對立式分支永不進選單，總是並行顯示
     const sibs = branchesByParentBishop.get(br.parent_bishop_id ?? '') ?? []
+    if (br.is_split) {
+      // 對立/分裂分支：同一爭位教座 ≤2 路 → 並行對等分叉直接顯示（2-3 支看得清）；
+      // ≥3 路（如安提阿 12、羅馬 7）→ 收進「+N」選單避免畫面爆炸，點該主教再逐一 reveal。
+      const splitSibs = sibs.filter(s => s.is_split)
+      if (splitSibs.length <= 2) return false
+      return !revealedFromMenu.value.has(br.id)
+    }
     if (sibs.length <= 1) return false
     return !revealedFromMenu.value.has(br.id)
   }
-  // Per bishop: how many hidden-in-menu daughter sees
+  // Per bishop: how many daughter sees are currently tucked in its「+N」menu
   const menuCountByBishop = new Map<string, number>()
   for (const [bid, sibs] of branchesByParentBishop) {
-    if (sibs.length <= 1) continue
-    const hidden = sibs.filter(s => !revealedFromMenu.value.has(s.id))
+    const hidden = sibs.filter(s => isBranchInMenu(s))
     if (hidden.length > 0) menuCountByBishop.set(bid, hidden.length)
   }
   function expandedDepth(seeId: string): number {
@@ -829,8 +834,9 @@ const cv = computed(() => {
 
         // Connection line:
         //  - 一般 branch (is_split=false): 單一斜線
-        //  - 對立式 branch (is_split=true): 「外面一圈再回來」的曲線
-        //    Bezier control point 拉到 branch 外側，視覺上像繞出去再回到分支
+        //  - 對立/分裂式 branch (is_split=true): 從分裂前那位主教「正交分叉」出去 —
+        //    先自主教往下一小段，再水平拉到分支欄，再下到分支卡。讀起來像家譜的分叉，
+        //    而非舊版「繞一圈再回來」的弧線。紅色虛線維持分裂語意。
         let fromX: number, toX: number
         if (branchDir > 0) {
           fromX = depth === 0 ? headerX + BISH_W : bx - BRANCH_GAP
@@ -842,9 +848,9 @@ const cv = computed(() => {
         const toY = by + BRANCH_H / 2
         let dPath: string
         if (br.is_split) {
-          // 控制點往外側拉出 80px，做出「環外側再回來」的曲線
-          const outX = branchDir > 0 ? Math.max(fromX, toX) + 80 : Math.min(fromX, toX) - 80
-          dPath = `M${fromX},${attachY} C${outX},${attachY} ${outX},${toY} ${toX},${toY}`
+          // 分叉點：自分裂前主教正下方 18px 處橫向分出（家譜式 T 形分叉）
+          const forkY = attachY + 18
+          dPath = `M${fromX},${attachY} L${fromX},${forkY} L${toX},${forkY} L${toX},${toY}`
           paths.push({ d: dPath, stroke: '#dc2626', dashes: '2,4,8,4', width: 2, opacity: 0.85 })
         } else {
           dPath = `M${fromX},${attachY} L${toX},${toY}`
