@@ -20,6 +20,12 @@
     </div>
 
     <template v-else>
+      <!-- 降級提示：脊柱有斷點時，仍畫可解析的部分，並在左上角標記斷在哪 -->
+      <div v-if="spineDegraded"
+           class="absolute top-2 left-1/2 -translate-x-1/2 z-20 px-3 py-1.5 rounded-md bg-amber-100/95 border border-amber-300 text-amber-800 text-xs shadow pointer-events-none">
+        ⚠ 脊柱不完整：「{{ spineDegraded.from }}」{{ spineDegraded.to ? `→「${spineDegraded.to}」之間斷裂` : '無法解析' }}，以下僅顯示可解析的部分
+      </div>
+
       <!-- Pan/zoom canvas -->
       <div
         class="absolute top-0 left-0 origin-top-left"
@@ -176,7 +182,7 @@
 </template>
 
 <script setup lang="ts">
-import { spineFromWaypoints } from '~/utils/genealogy/spine'
+import { resolveSpineWithDiagnostics } from '~/utils/genealogy/spine'
 defineOptions({ name: 'BiblicalSpineTree' })
 
 interface BreadcrumbItem { id: string; name: string }
@@ -323,8 +329,18 @@ const SPINE_B_WAYPOINTS = [
 
 const isDualMode = computed(() => !props.rootId)
 
-const spineA = computed(() => isDualMode.value ? spineFromWaypoints(SPINE_A_WAYPOINTS, childrenOf.value, resolveByName, { label: 'A' }) : [])
-const spineB = computed(() => isDualMode.value ? spineFromWaypoints(SPINE_B_WAYPOINTS, childrenOf.value, resolveByName, { label: 'B' }) : [])
+const spineDiagA = computed(() => isDualMode.value ? resolveSpineWithDiagnostics(SPINE_A_WAYPOINTS, childrenOf.value, resolveByName, { label: 'A' }) : null)
+const spineDiagB = computed(() => isDualMode.value ? resolveSpineWithDiagnostics(SPINE_B_WAYPOINTS, childrenOf.value, resolveByName, { label: 'B' }) : null)
+const spineA = computed(() => spineDiagA.value?.path ?? [])
+const spineB = computed(() => spineDiagB.value?.path ?? [])
+// 降級提示：任一條脊柱沒能整條解析（缺 waypoint 或路徑斷裂）→ 仍畫可解析的部分，並標記斷點。
+const spineDegraded = computed<{ from: string; to: string } | null>(() => {
+  for (const d of [spineDiagA.value, spineDiagB.value]) {
+    if (d && !d.full && d.brokenAt) return d.brokenAt
+    if (d && !d.full && d.missing.length) return { from: d.missing[0], to: '' }
+  }
+  return null
+})
 const spineSingle = computed(() => isDualMode.value || !props.rootId ? [] : longestDescent(props.rootId, childrenOf.value))
 
 const jesusId  = computed(() => resolveByName('耶穌（拿撒勒人）'))
@@ -1994,7 +2010,7 @@ const cv = computed(() => {
 const ready = computed(() => !!cv.value && cv.value.nodes.length > 0)
 
 // test-only：曝露 layout computed 供元件測試斷言座標（不影響渲染行為）
-defineExpose({ cv, hasSpine, spineA, spineB, sharedTrunkIds })
+defineExpose({ cv, hasSpine, spineA, spineB, sharedTrunkIds, spineDegraded })
 
 // ── Expansion state — clan toggles in-place ───────────────────────────
 // Keyed by the spine parent's id (the spine person whose clan we're expanding).

@@ -4,8 +4,10 @@
 
 - 框架：`vitest` + `@nuxt/test-utils`（`environment: 'nuxt'`）+ happy-dom
 - 跑法：`npm run test:run`（或 `npx vitest run test/genealogy`）
-- 結果：**24 pass / 24**（含修正後的回歸測試）
+- 結果：**28 pass / 28**（迷你 fixture + 真實資料快照回歸）
 - 測試 hook：三棵樹各加一行 `defineExpose({ cv, … })`（test-only，不影響渲染）
+- 真實資料快照：`test/genealogy/fixtures/snapshots/*.json`（從 live endpoint 抓；
+  重抓 `node scripts/_snapshot_genealogy.mjs`，會用 .env 的 service role 臨時換 token）
 
 ---
 
@@ -25,13 +27,26 @@
 - **修法**：旁支主教卡補 `spineColor: sp.color`（[EpiscopalSpineTree.vue:881](../../components/genealogy/EpiscopalSpineTree.vue#L881)）。
 - **回歸測試**：`branch bishop cards carry a spineColor`。
 
-### B1 / I1（脆弱性）— 缺一個 waypoint 整棵空白、且無提示
-- **症狀**：`SPINE_*_WAYPOINTS` 任一中文名解析不到（改名／錯字／漏 disambiguator），
-  `spineFromWaypoints` 回 `[]` → 整棵樹空白，且**畫面全白、無任何訊息**，極難 debug。
-- **修法（本輪先做「可診斷」，不動視覺）**：`spineFromWaypoints` 在 dev 模式下 `console.warn`
-  指出「是哪個名字解析不到」或「哪一段斷裂」。樹仍會空白（降級渲染列為後續），但至少抓得到原因。
-- **位置**：抽出的共用模組 [utils/genealogy/spine.ts](../../utils/genealogy/spine.ts)。
-- **回歸測試**：biblical／islamic 的 broken fixture 斷言「cv 為 null **且** warn 點名了斷掉的 waypoint」。
+### B1 / I1（脆弱性）— 缺一個 waypoint 不再整棵空白（已做降級渲染）
+- **原症狀**：`SPINE_*_WAYPOINTS` 任一中文名解析不到（改名／錯字／漏 disambiguator）→
+  脊柱回 `[]` → 整棵樹空白，且**畫面全白、無任何訊息**，極難 debug。
+- **修法（降級渲染）**：新 `resolveSpineWithDiagnostics`（[utils/genealogy/spine.ts](../../utils/genealogy/spine.ts)）
+  在斷點**回傳能解析到的前綴**（而非 []），元件據此畫出可解析的部分，並在頂端顯示
+  琥珀色 banner 標記「斷在哪兩站之間」；dev 模式同時 `console.warn` 點名。
+  資料完整時 `full===true`、path 與舊版逐字相同 → happy path 不變。
+- **回歸測試**：broken fixture 斷言「`hasSpine` true、`cv` 非 null、`spineDegraded` 有值、warn 點名斷點」；
+  islamic 還斷言只畫到可解析的 4 站（阿丹→伊斯瑪儀）。
+
+### 真實資料 overlap（新增回歸）— Biblical 5 處重疊待你決定
+- 把 live `/api/genealogy/*-graph` 輸出存成快照跑碰撞檢查（密集真資料才抓得到）：
+  - **Islamic**：186 卡，**0 重疊** ✓
+  - **Episcopal**：1,585 卡，**0 重疊** ✓
+  - **Biblical**：257 卡，**5 重疊**（密集區，卡距 < NW=120）：
+    1. 哥轄 ↔ 俄南（猶大之子）／她瑪（同 row y≈3314）— 利未支 vs 猶大支子嗣子樹橫向相撞
+    2. 施洗約翰 ↔ 猶大／西門（主的兄弟）（y≈10556）— 施洗約翰被擠進主的兄弟群組
+    3. 蘇比（亞拿之姊）↔ 亞拿（聖母之母）（y≈10272，僅差 40px）— Trinubium 同列姊妹相疊
+- 這些在「亂倫群組／同列配偶／Trinubium」等手調密集區，移哪張卡是主觀取捨、動了可能波及他處 →
+  **先列出待你確認**，未動 layout。回歸測試以 baseline=5 守住「不要再變更多」；islamic/episcopal 鎖死 0。
 
 ### 去重 — `bfsPath` / `spineFromWaypoints`
 - 原本在 Biblical 與 Islamic **逐字重複**。已抽到 [utils/genealogy/spine.ts](../../utils/genealogy/spine.ts) 共用，
@@ -64,8 +79,7 @@
 
 ---
 
-## 後續（未做，視需要）
-1. **降級渲染**：waypoint 斷裂時畫出可解析的部分並標記斷點，而非整棵空白（B1/I1 的視覺版）。
-2. **真實資料 overlap 測試**：把 `/api/genealogy/*-graph` 實際輸出存成 fixture 跑 collision —
-   迷你 fixture 無重疊，真實密集資料才是 overlap bug 高發區。
-3. （可選）E2 的「使用者手動展開長鏈時的遮蔽」可再加一支模擬 toggle 的測試（需 expose `toggleBranch`）。
+## 後續（未做，待你決定）
+1. **Biblical 5 處 overlap**：要不要動 layout 把它們撥開（哥轄/俄南/她瑪、施洗約翰群組、蘇比/亞拿）。
+   屬密集區手調，建議逐處看畫面再決定撥哪張卡。
+2. （可選）E2 的「使用者手動展開長鏈時的遮蔽」可再加一支模擬 toggle 的測試（需 expose `toggleBranch`）。

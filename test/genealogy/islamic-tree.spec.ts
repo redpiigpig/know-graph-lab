@@ -78,11 +78,15 @@ describe('IslamicSpineTree layout', () => {
     expect(a.vm.cv.nodes.length).toBe(b.vm.cv.nodes.length)
   })
 
-  it('a missing waypoint (阿德南) collapses the tree AND warns which name broke', async () => {
+  // FIX (I1): missing 阿德南 now DEGRADES — renders 阿丹→伊斯瑪儀 (resolvable prefix),
+  // exposes the break, and warns. No whole-tree blank-out.
+  it('a missing waypoint (阿德南) degrades to a partial tree + warns (no blank)', async () => {
     const warn = vi.spyOn(console, 'warn').mockImplementation(() => {})
     const w = await mount(islamicBroken)
-    expect(w.vm.hasSpine).toBe(false)
-    expect(w.vm.cv).toBeNull()
+    expect(w.vm.hasSpine).toBe(true)
+    expect(w.vm.cv).not.toBeNull()
+    expect(w.vm.spinePath.length).toBe(4)   // 阿丹,努哈,易卜拉欣,伊斯瑪儀 (穆罕默德 unreachable)
+    expect(w.vm.spineDegraded).toBeTruthy()
     const msgs = warn.mock.calls.map(c => c.join(' ')).join('\n')
     expect(msgs).toContain('阿德南')
     warn.mockRestore()

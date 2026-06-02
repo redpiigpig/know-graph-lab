@@ -88,16 +88,17 @@ describe('BiblicalSpineTree layout', () => {
     }
   })
 
-  // FRAGILITY (B1): a single missing waypoint person still collapses the whole
-  // tree, but spineFromWaypoints now emits a dev warning naming the broken link
-  // instead of failing silently to a blank screen.
-  it('a missing B-line waypoint collapses the tree AND warns which name broke', async () => {
+  // FIX (B1): a missing waypoint now DEGRADES — A line still resolves, B line
+  // renders its resolvable prefix, a break banner is exposed, and a dev warning
+  // names the broken link. No more whole-tree blank-out.
+  it('a missing B-line waypoint degrades to a partial tree + warns (no blank)', async () => {
     const warn = vi.spyOn(console, 'warn').mockImplementation(() => {})
     const w = await mount(biblicalBroken)
-    expect(w.vm.hasSpine).toBe(false)
-    expect(w.vm.cv).toBeNull()
+    expect(w.vm.hasSpine).toBe(true)        // A resolves fully; B partial
+    expect(w.vm.cv).not.toBeNull()          // resolvable part still renders
+    expect(w.vm.spineDegraded).toBeTruthy() // break is marked (banner)
     const msgs = warn.mock.calls.map(c => c.join(' ')).join('\n')
-    expect(msgs).toContain('瑪塔') // names the unresolved / broken waypoint
+    expect(msgs).toContain('瑪塔')          // names the unresolved / broken waypoint
     warn.mockRestore()
   })
 })

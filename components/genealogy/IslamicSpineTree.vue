@@ -19,6 +19,12 @@
     </div>
 
     <template v-else>
+      <!-- 降級提示：脊柱有斷點時，仍畫可解析的部分，並在頂端標記斷在哪 -->
+      <div v-if="spineDegraded"
+           class="absolute top-2 left-1/2 -translate-x-1/2 z-20 px-3 py-1.5 rounded-md bg-amber-100/95 border border-amber-300 text-amber-800 text-xs shadow pointer-events-none">
+        ⚠ 脊柱不完整：「{{ spineDegraded.from }}」{{ spineDegraded.to ? `→「${spineDegraded.to}」之間斷裂` : '無法解析' }}，以下僅顯示可解析的部分
+      </div>
+
       <div
         class="absolute top-0 left-0 origin-top-left"
         :style="{
@@ -151,7 +157,7 @@
 </template>
 
 <script setup lang="ts">
-import { spineFromWaypoints } from '~/utils/genealogy/spine'
+import { resolveSpineWithDiagnostics } from '~/utils/genealogy/spine'
 defineOptions({ name: 'IslamicSpineTree' })
 
 type View = 'quranic' | 'sunni' | 'shia_twelver' | 'shia_ismaili' | 'shia_zaidi'
@@ -242,7 +248,16 @@ function resolveByName(name: string): string | undefined {
 }
 
 const SPINE_WAYPOINTS = ['阿丹', '努哈', '易卜拉欣', '伊斯瑪儀', '阿德南', '穆罕默德']
-const spinePath = computed(() => spineFromWaypoints(SPINE_WAYPOINTS, childrenOf.value, resolveByName, { label: 'spine' }))
+const spineDiag = computed(() => resolveSpineWithDiagnostics(SPINE_WAYPOINTS, childrenOf.value, resolveByName, { label: 'spine' }))
+const spinePath = computed(() => spineDiag.value.path)
+// 降級提示：脊柱沒能整條解析時，仍畫可解析的部分並標記斷點。
+const spineDegraded = computed<{ from: string; to: string } | null>(() => {
+  const d = spineDiag.value
+  if (d.full) return null
+  if (d.brokenAt) return d.brokenAt
+  if (d.missing.length) return { from: d.missing[0], to: '' }
+  return null
+})
 const hasSpine = computed(() => spinePath.value.length > 0)
 const spineSet = computed(() => new Set(spinePath.value))
 
@@ -1051,7 +1066,7 @@ const cv = computed(() => {
 const ready = computed(() => hasSpine.value && cv.value !== null)
 
 // test-only：曝露 layout computed 供元件測試斷言座標（不影響渲染行為）
-defineExpose({ cv, hasSpine, spinePath })
+defineExpose({ cv, hasSpine, spinePath, spineDegraded })
 
 // ── Card visual ──
 function cardClass(n: LNode) {
