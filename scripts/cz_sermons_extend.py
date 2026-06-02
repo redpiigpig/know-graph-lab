@@ -76,24 +76,32 @@ def main():
     sb = {s["sermon_date"]: s for s in sermons}
     print(f"備份 {len(sermons)} 列 -> c:/tmp/cz_bulletins/pong_sermons_backup.json")
 
-    # ---------- Part A: REPORT ONLY — 經課真衝突（書卷層級雙向不符）。
-    # 不自動覆蓋：週報抽取對舊年（全形標點/～範圍）不如 DB 轉錄完整，盲蓋會降級。
-    # 只標出「DB 有別卷、週報也有別卷」的雙向矛盾（如 2024-06-09），供人工確認。----------
-    conflicts = []
+    # ---------- Part A: 以週報為準覆蓋 scripture_ref（只用週報「有標籤」的高信心
+    # 經課集；無標籤低信心的不覆蓋以免降級）。--overwrite-scripture 才實際寫。----------
+    OVERWRITE = "--overwrite-scripture" in sys.argv
+    conflicts, changes = [], []
     for d, b in sorted(pang.items()):
         s = sb.get(d)
         if not s: continue
         det = json.load(open(f"public/content/chengzhong-bulletins/{b['year']}/{b['slug']}.json", encoding="utf-8"))
-        if not det.get("scripture_labeled"):
+        new = det.get("scripture_ref")
+        if not new or not det.get("scripture_labeled"):
             continue
-        bb, db = book_set(det.get("scripture_ref")), book_set(s.get("scripture_ref"))
-        only_b, only_db = bb - db, db - bb
-        if only_b and only_db:  # genuine two-way disagreement
-            conflicts.append({"date": d, "id": s["id"], "db": s.get("scripture_ref"),
-                              "bulletin": det.get("scripture_ref")})
-    print(f"\n[A] 經課『真衝突』候選（DB↔週報雙向書卷不符，需人工確認，不自動覆蓋）: {len(conflicts)} 筆")
-    for c in conflicts[:6]:
-        print(f"   {c['date']}\n     DB  : {c['db']}\n     週報: {c['bulletin']}")
+        old = s.get("scripture_ref") or ""
+        bb, db = book_set(new), book_set(old)
+        # overwrite ONLY genuine two-way conflicts (週報 = correct liturgical day,
+        # e.g. 2024-06-09). Skip subset cases where bulletin merely caught fewer
+        # readings (那是抽取不全，非 DB 錯) — 不可降級既有完整經課。
+        if not (bb - db and db - bb):
+            continue
+        conflicts.append({"date": d, "id": s["id"], "db": old, "bulletin": new})
+        if APPLY and OVERWRITE:
+            requests.patch(f"{SB}/pong_sermons?id=eq.{s['id']}", headers={**H, "Prefer": "return=minimal"},
+                           json={"scripture_ref": new})
+    print(f"\n[A] 以週報為準覆蓋 scripture_ref（僅雙向書卷衝突＝週報為正確主日）: {len(conflicts)} 筆"
+          f"{'（已寫入）' if (APPLY and OVERWRITE) else '（需 --overwrite-scripture 才寫）'}")
+    for c in conflicts[:5]:
+        print(f"   {c['date']}\n     DB : {c['db'][:64]}\n     週報: {c['bulletin'][:64]}")
 
     # ---------- Part B: create metadata-only rows for 龐 dates without a row ----------
     to_create = []
