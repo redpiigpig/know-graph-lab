@@ -146,6 +146,10 @@ schtasks /create /tn "KGLab-OCR-Daily-18" /tr "C:\Users\user\Desktop\know-graph-
 | `subcategorize_theology.py` | 4f — taxonomy | LLM 子分類器：神學 → 13 個 canonical labels (教父著作/中世紀/改教/近現代 + 教科書/概論/主題專論/倫理/靈修/詮釋/本地化)。Series subcat (Schaff/Aquinas/IVP) 自動 preserve。Rule-based 先過，剩餘批給 Gemini 25/batch |
 | `standardize_pdf_v1.py` | 4 — Plan B v1 | Font-driven heading 偵測 — body size 自動推斷 + flag-based bold + h2/h3/h4 配 size bump 規則。用於 no-TOC PDF (~285 候選)。`--inspect` 看 font histogram；`--dry-run` 預覽 chunks |
 
+## Tests
+
+Pure-function pytest suite at [`scripts/tests/`](../../../scripts/tests/README.md)（`npm run test:py`，與 Vue 的 vitest 分開）。針對轉錄品質的可測啟發式：`standardize_ebook` 章節/正文分類（`derive_chapter_title`、continuation/volume/chapter/appendix 判定、HTML→markdown 契約含 `<sup>(N)</sup>→[^N]`）、`standardize_pdf` 的 `normalize_toc`（page-level 目錄拒收、level cap、NUL strip、dedupe）+ `build_chapter_path` 階層、`collapse_cjk_spacing`、`ingest_new_books.fallback_category` 關鍵字路由。`conftest.py` 設 dummy env 讓模組可 import，全程無網路/DB/LLM。改 heuristic 後先跑。**已知 finding（xfail）**：純文字 fallback 路徑下，長 `第N章` 標題後接短正文行會被誤標成正文行（PRIORITY 1 短行規則早於 PRIORITY 2 章節 pattern）；正常 EPUB（標題走 `## heading`）不受影響。
+
 ## DB schema
 
 ```sql

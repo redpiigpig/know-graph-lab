@@ -478,6 +478,10 @@ python scripts/simp_to_trad_batch.py --previews-only <ebook_id>
 - **DB title 全英文搜不到中文**：新 ingest 預設用 `[English] Original Title` tag。翻完應 PATCH title 成 `中文書名（Original Title）` 格式（例 2026-05-22 ACCS Apocrypha vol 15）—— search 走 ilike 對 title，無中文則中文 query 命不中
 - **跨翻譯 worker 名稱不一致**（例：多比傳 vs 多俾亞傳）— Haiku 偶爾忽略 PROMPT_TMPL 的 glossary 跳譯一次。改進方向：翻完後跑一個 glossary sweep 全文取代（沿用 `parse_drive_inventory.TRAD_FIXES` 模式但範圍更廣）。**目前狀態：未實作，使用者讀時可能會看到不一致**
 
+## Tests
+
+Pure-function pytest suite at [`scripts/tests/`](../../../scripts/tests/README.md)（`npm run test:py`）涵蓋本 pipeline 的可測邏輯：`split_oversized`（切塊不丟內容、段落數守恆）、`scan_translated_book.paragraph_drift`（逐段對照 T11 指標，已抽成 module-level 可重用 gate）、`sweep_book_quality` 的 T1/T2/T3 自動修、簡→繁 `to_traditional` + TRAD_FIXES（历→歷 不為曆）。改 regex／threshold 後先跑這套抓回歸。新發現的譯文品質 bug 先寫一條 `xfail(strict=True)` 當修復目標，修好自動轉綠。
+
 ## See also
 
 - [ebook-pipeline](../ebook-pipeline/SKILL.md) — parse / OCR / standardize / 套書 split 等 ebook 上游處理
