@@ -11,7 +11,7 @@ node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-package-lock.json
+# package-lock.json 要 commit（CI 的 npm ci / setup-node cache 需要它）
 yarn.lock
 pnpm-lock.yaml
 
