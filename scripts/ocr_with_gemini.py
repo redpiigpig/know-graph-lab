@@ -534,7 +534,20 @@ def _haiku_ocr_book(haiku_client, src_path: Path, book_id: str = None) -> list:
                     time.sleep(wait_s)
 
             t_api_dur = time.time() - t_api
-            batch_text = resp.content[0].text if resp.content else ""
+            if resp is None:
+                # All batch attempts failed WITHOUT raising — happens when the
+                # final attempt hit a 401 and took the refresh+`continue` path,
+                # falling off the end of the loop. Surface the real underlying
+                # error so the caller can classify + retry it, instead of
+                # crashing with a cryptic `'NoneType' has no attribute content`
+                # that gets mis-recorded as a PERMANENT failure (the bug that
+                # stranded 37 >50 MB books on one mid-run token expiry).
+                if isinstance(last_err, BaseException):
+                    raise last_err
+                raise RuntimeError(
+                    f"haiku batch {bi}: no response after {MAX_BATCH_ATTEMPTS} attempts")
+            first = resp.content[0] if resp.content else None
+            batch_text = getattr(first, "text", "") if first is not None else ""
             chunks = _haiku_parse_response(batch_text, page_numbers)
             all_chunks.extend(chunks)
 
@@ -728,15 +741,25 @@ def process_one_haiku(haiku_client, book: dict, src_path: Path, max_retries: int
 
         except Exception as e:
             last_err = str(e)[:300]
-            is_rate = hasattr(e, "status_code") and getattr(e, "status_code", 0) in (429, 529, 503, 502)
-            if is_rate and attempt < max_retries:
+            sc = getattr(e, "status_code", 0)
+            is_rate = sc in (429, 529, 503, 502)
+            # 401 (OAuth token expired mid-run), connection blips and the
+            # no-response/NoneType path are all TRANSIENT — a re-run with a
+            # fresh token recovers them. They must NEVER mark a book as a
+            # permanent failure (the bug that stranded 37 >50 MB books).
+            el = last_err.lower()
+            is_transient = is_rate or sc == 401 or any(
+                k in el for k in ("401", "overloaded", "timeout", "timed out",
+                                  "connection", "getaddrinfo", "nonetype",
+                                  "no response", "520", "502", "503", "529"))
+            if is_transient and attempt < max_retries:
                 wait = min(2 ** attempt * 10, 120)
-                print(f"  ↻ Haiku rate limit, retry {attempt} after {wait}s")
+                print(f"  ↻ Haiku transient ({last_err[:80]}), retry {attempt} after {wait}s")
                 time.sleep(wait)
                 continue
             print(f"  ❌ Haiku {last_err[:200]}")
             print(f"     (checkpoint preserved at {ckpt_path.name} for resume)")
-            return {"status": "fail", "error": last_err, "transient": is_rate}
+            return {"status": "fail", "error": last_err, "transient": is_transient}
     return {"status": "fail", "error": last_err, "transient": True}
 
 
