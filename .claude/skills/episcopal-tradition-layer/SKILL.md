@@ -333,3 +333,13 @@ SQL 補丁批檔：[database/episcopal-fill-phase1.sql](../../database/episcopal
 - **E3**：主脊旁支主教卡補 `spineColor`。
 - 共用脊柱解析抽到 `utils/genealogy/spine.ts`（Biblical/Islamic 去重），缺 waypoint 時 dev `console.warn` 點名斷點。
 - 「分裂旁支預設展開／設立旁支收起」是**設計**（watcher :405-418），非 bug。
+
+## 衛理宗全球線（2026-06-02 接通）
+
+全球衛理公會（UMC/AME Zion/CME/GMC/南非/印度/韓國/自由衛理/台灣中華基督教衛理…）
+episcopal_sees 早已建好、且都 parent 到美國根座「巴爾的摩（衛理）」（1784 聖誕大會），
+但根座 `parent_see_id` 為 NULL → 整支孤立。已把根座接到「倫敦｜英格蘭教會」
+（見 `database/episcopal-methodist-wire.sql`），鏈路即暢通：
+羅馬教宗→坎特伯里→倫敦→巴爾的摩(衛斯理→科克→亞斯理)→…全球…→台北(蕢建華…龐君華…辛俊傑)。
+屬非正規衛斯理統緒（長老按立主教）。驗證：`node scripts/_trace_chain.mjs "台北（衛理）|中華基督教衛理公會"`。
+⚠ 殘留資料品質：孟買#1 name_zh 誤植「約翰·韋斯利」實為 Thomas Coke；部分海外座 #1 是奠基傳教士非主教——待清。

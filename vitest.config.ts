@@ -11,5 +11,9 @@ export default defineVitestConfig({
     // (e.g. multilang-sources skipping all 27). Serialize files for stability —
     // transform is cached so the wall-clock cost is small.
     fileParallelism: false,
+    // Real-data episcopal mount is heavy (300+ branches / ~4800 bishops in happy-dom);
+    // default 10s is too tight for the mount + Nuxt env hook.
+    testTimeout: 30000,
+    hookTimeout: 30000,
   },
 })
