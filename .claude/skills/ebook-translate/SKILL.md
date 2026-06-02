@@ -289,7 +289,14 @@ python scripts/sweep_book_quality.py <ebook_id>               # 真的改
 
 # 3. Re-scan 確認剩餘 WARN
 python scripts/scan_translated_book.py <ebook_id>
+
+# 4. 逐段對照 gate — 列出中英段落數對不齊、需重譯的 chunk（JSONL-only 不需 DB）
+python scripts/scan_translated_book.py <ebook_id> --gate
+python scripts/scan_translated_book.py --all --gate --json          # 全庫掃
+python scripts/scan_translated_book.py <ebook_id> --gate --gate-threshold 0.15  # 收緊門檻
 ```
+
+**逐段對照 gate（2026-06-02 新增）**：reader 的中英對照逐段左右並排，譯文段落數一旦與原文不一致整篇就錯位。`--gate` 用 `alignment_gate()`（= T11 指標 `paragraph_drift`，門檻預設 0.25）輸出「需重譯」清單。根因已在 `PROMPT_TMPL` 規則 4 補強（「段落必須逐一對應，不可合併/拆分」）；舊書（prompt 修正前翻的）需重跑該 chunk。**實測 ANF Vol 1 golden template 仍有 3 個失準 chunk（77/79/96，ZH 段落數均 < EN）— 結構驗證器抓不到，待重譯。**
 
 T1-T7 規則見 [book-structure-spec.md](../ebook-pipeline/book-structure-spec.md#翻譯品質-scan_translated_bookpy違反--warn)。
 
