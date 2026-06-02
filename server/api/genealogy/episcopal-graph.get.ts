@@ -310,7 +310,7 @@ export default defineEventHandler(async (event) => {
   // both with see_zh="坎特伯里"), looking up bishops "by see_zh only" pulls the daughter's bishops
   // into the candidate pool and the wrong attach point is returned. Pass the parent's actual
   // church list (for spines: primaryChurches; for branches: [branch.church]) to restrict scope.
-  function findBishopAtYear(seeRow: SeeRow, year: number | null, churchFilter?: string[]): string | null {
+  function findBishopAtYear(seeRow: SeeRow, year: number | null, churchFilter?: string[], splitMode = false): string | null {
     if (year == null) return null
     const churches = churchFilter ?? [seeRow.church]
     const candidates: SuccRow[] = []
@@ -324,6 +324,19 @@ export default defineEventHandler(async (event) => {
     if (seeRow.split_year != null) {
       const survivors = candidates.filter(b => (b.start_year ?? 9999) >= seeRow.split_year!)
       if (survivors.length) { candidates.length = 0; candidates.push(...survivors) }
+    }
+    // splitMode（教座分裂/對立）：分叉自「分裂前最後一位未爭議的在位者」——用 strict start_year < year，
+    // 這樣對立教宗（如亞威農 1378）會接在 額我略十一世(#199, 1370-1378) 而非同年才上任的羅馬 烏爾班六世
+    // (#200)；亦即兩支同從 #199 對等分出。略過「涵蓋」步驟。
+    if (splitMode) {
+      let predBefore: SuccRow | null = null
+      for (const b of candidates) {
+        if (b.start_year != null && b.start_year < year) {
+          if (!predBefore || (b.start_year > (predBefore.start_year ?? -99999))) predBefore = b
+        }
+      }
+      if (predBefore) return predBefore.id
+      // 沒有「嚴格早於」的前任 → 落回下方一般邏輯
     }
     // 1) 任期「涵蓋」該年的主教（多位重疊取 start_year 最晚的）— 原行為，最精準。
     let covering: SuccRow | null = null
@@ -351,7 +364,7 @@ export default defineEventHandler(async (event) => {
   // 沿 parent_see_id 往上找「該年(含)之前最近的真主教」：本座沒有就爬母座，直到脊柱
   // （脊柱主教密集、可早至 1 世紀）。確保錨點永遠 ≤ 子座成立年、且是真主教，不亂銜接也不年代錯亂。
   // 例：科普特諸修道院(320-360) 早於科普特線(451 後) → 爬到亞歷山卓脊柱，接該年的未分裂亞歷山卓主教。
-  function findAnchorBishop(startSeeId: string | null, year: number | null): string | null {
+  function findAnchorBishop(startSeeId: string | null, year: number | null, splitMode = false): string | null {
     if (!startSeeId || year == null) return null
     let seeId: string | null = startSeeId
     const visited = new Set<string>()
@@ -360,7 +373,7 @@ export default defineEventHandler(async (event) => {
       const see = seeById.get(seeId)
       if (!see) break
       const churches = spineSeeChurches.get(seeId) ?? [see.church]
-      const hit = findBishopAtYear(see, year, churches)
+      const hit = findBishopAtYear(see, year, churches, splitMode)
       if (hit) return hit
       seeId = see.parent_see_id
     }
@@ -392,10 +405,9 @@ export default defineEventHandler(async (event) => {
         // Use split_year (if set) as the attach point — that's the moment the rival
         // line diverged. Otherwise use founded_year.
         const attachYear = k.split_year ?? k.founded_year
-        // 如果 parent 是 spine see，跨多個 church（如 rome = 未分裂教會 + 天主教）
-        // 否則只看 parent 自己的 church（避免 see_zh 相同的 daughter 攪進來）
-        const parentChurches = spineSeeChurches.get(seeId) ?? [parentSee.church]
-        const parentBishopId = findAnchorBishop(seeId, attachYear)
+        // 分裂（同 see_zh）→ splitMode：分叉自分裂前最後一位未爭議在位者（對等分出）。
+        const kIsSplit = k.see_zh === parentSee.see_zh
+        const parentBishopId = findAnchorBishop(seeId, attachYear, kIsSplit)
         // Gather bishops for this branch see
         // Exact (see_zh, church) match first
         let allBishops: SuccRow[] = []
