@@ -68,9 +68,26 @@
 - Vol 5 是經典坑：CW《Symbols of Transformation》是 Jung 1952 大改寫，跟 1912《Wandlungen》結構差很多 → 別把 1912 德文跟 CW5 英文硬對。
 - 煉金術卷（12–14）大量拉丁文引文 + 圖版 → OCR 噪聲高，圖版另存。
 
-## 來源紀錄（填寫中）
+## 來源紀錄
 
 | 卷 | 德文來源 | 英文來源 | 取得狀態 |
 |---|---|---|---|
-| 早期《Wandlungen》1912 | archive.org `Jung_1912_Wandlungen`（PD）| archive.org *Psychology of the Unconscious* 1916（PD）| ⏳ 待下載驗證 |
+| 早期《Wandlungen》1912 | archive.org `Jung_1912_Wandlungen`（PD，**純掃描無文字層**，426 頁）| **Project Gutenberg #65903** Hinkle 1916 HTML（PD，乾淨結構）| ✅ 已驗證 |
 | CW 11 / 12–14 等版權卷 | 本機處理路徑 | 本機處理路徑 | — |
+
+## Pilot 實況（2026-06-03，真資料跑過）
+
+起手卷 = 1912《Wandlungen》(de) ＋ Hinkle 1916《Psychology of the Unconscious》(en)。實際跑出三個關鍵結論：
+
+1. **德文必須重 OCR**：archive.org 的 1912 PDF 是**純圖像無文字層**；archive.org 自家 djvu OCR 章節標題不成行（`anchor_coverage=0`）。**本專案 Gemini/Haiku 重 OCR 開頭 14 頁 → 乾淨還原結構**：偵測到 `ERSTER TEIL`／`Einleitung`／`I.`／`II.` 標題。✅ 路線可行。
+2. **Gemini 全 4 把 key 配額/額度耗盡**（key#1 prepay depleted、#2-4 quota exceeded）→ 走 Haiku image-OCR fallback 成功。⚠️ 影響全專案預設 OCR/翻譯引擎，user 需注意 Gemini 帳單。
+3. **🔴 德 1912 ↔ 英 1916 不逐段對齊（實證）**：Hinkle 重組了結構 —
+   - 她自己加了長篇 translator's introduction（≠ Jung 的 Einleitung）；heading 自動對齊會抓錯（把 Jung 的 Einleitung 對到 Hinkle 自序）。
+   - 用 **Ferrero 法文題詞**當指紋才定位到真對應：德 `Einleitung` = 英 `CHAPTER I — CONCERNING THE TWO KINDS OF THINKING`。
+   - 但**章內段落仍對不齊**（英 Ch I 有 74 段、德 4 段；Freud 提及散落非對應段）。→ **正確逐段三欄需人工逐句配對 + 我親譯**，非自動 run 能成。
+
+### 結論與下一步抉擇
+機械 pipeline 全部就緒且實證；卡點是**跨版逐段對齊是編輯級人工活**（Hinkle 非段落同構）。可選路徑：
+- (a) **我逐章人工配對德↔英 + 親譯**（正確但慢，一次一章的編輯工）；
+- (b) **德＋我的繁中**先上（這對能可靠對齊），英欄日後人工補（reader N 欄支援後加）；
+- (c) 換一部「德英本就逐段對應」的作品當起手（多數全集卷的英譯 Hull 版亦非段落同構，此問題普遍）。
