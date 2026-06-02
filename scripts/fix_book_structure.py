@@ -417,9 +417,13 @@ def fetch_all_books(sel: str, filt: str = "") -> list[dict]:
 
 
 def recover_worklist() -> list[str]:
+    # NO_TOC PDFs with real content. Exclude n<=2 books: those are image-only
+    # PDFs that yielded a metadata stub (total text < ~2000 chars) — they need
+    # OCR (flagged via parse_error 'no extractable text'), not TOC recovery.
     audit = json.loads(AUDIT_JSON.read_text(encoding="utf-8"))
     return [a["id"] for a in audit
-            if a["file_type"] == "pdf" and a["signals"]["no_toc_pct"] >= 0.6]
+            if a["file_type"] == "pdf" and a["signals"]["no_toc_pct"] >= 0.6
+            and a.get("n_chunks", 0) >= 3]
 
 
 def run_audit():
