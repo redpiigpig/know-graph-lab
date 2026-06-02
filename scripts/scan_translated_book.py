@@ -123,6 +123,36 @@ def paragraph_drift(zh: str, en: str) -> Optional[float]:
     return (bigger - smaller) / bigger
 
 
+def alignment_gate(chunks: list[dict],
+                   threshold: float = BILINGUAL_DRIFT_RATIO) -> list[dict]:
+    """逐段對照 gate — return the re-translation worklist.
+
+    For every bilingual chunk (has both `content` ZH and `source_text` EN),
+    flag it when paragraph_drift exceeds `threshold`: the reader pairs the
+    中英對照 columns row-by-row, so a drift past the gate means the columns
+    won't line up and the chunk is a re-translation candidate.
+
+    Pure + importable so it runs as a post-translation quality gate (after a
+    book is translated) or ad-hoc over any JSONL — independent of the full
+    DB/NCX-backed scan()."""
+    flagged: list[dict] = []
+    for c in chunks:
+        zh = c.get("content") or ""
+        en = c.get("source_text") or ""
+        if not zh or not en:
+            continue
+        drift = paragraph_drift(zh, en)
+        if drift is not None and drift > threshold:
+            flagged.append({
+                "chunk_index": c.get("chunk_index"),
+                "chapter_path": c.get("chapter_path"),
+                "zh_paras": para_count(zh),
+                "en_paras": para_count(en),
+                "drift": round(drift, 3),
+            })
+    return flagged
+
+
 def normalize_heading(s: str) -> str:
     """Strip trailing footnote refs, collapse whitespace + dashes for
     fuzzy matching of headings across source vs NCX."""
@@ -631,7 +661,39 @@ def main():
     ap.add_argument("ebook_id", nargs="?")
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--json", action="store_true")
+    ap.add_argument("--gate", action="store_true",
+                    help="逐段對照 gate — list chunks whose bilingual alignment "
+                         "drifts past the threshold (re-translation worklist). "
+                         "JSONL-only, no DB needed.")
+    ap.add_argument("--gate-threshold", type=float, default=BILINGUAL_DRIFT_RATIO,
+                    help=f"alignment drift threshold (default {BILINGUAL_DRIFT_RATIO})")
     args = ap.parse_args()
+
+    if args.gate:
+        ids = ([jp.stem for jp in sorted(CHUNKS_DIR.glob("*.jsonl"))]
+               if args.all else [args.ebook_id])
+        if not ids or ids == [None]:
+            sys.exit("usage: scan_translated_book.py <ebook_id> --gate [--gate-threshold R]")
+        report_obj = []
+        for eid in ids:
+            chunks = load_jsonl(eid)
+            if not chunks:
+                continue
+            flagged = alignment_gate(chunks, args.gate_threshold)
+            if args.json:
+                report_obj.append({"ebook_id": eid, "flagged": flagged})
+            elif flagged:
+                print(f"\n=== {eid} — {len(flagged)} chunk(s) need re-translation "
+                      f"(drift > {args.gate_threshold}) ===")
+                for f in flagged[:30]:
+                    print(f"  · chunk {f['chunk_index']} [{f['chapter_path']}]: "
+                          f"ZH={f['zh_paras']} vs EN={f['en_paras']} paras "
+                          f"(drift {f['drift']})")
+                if len(flagged) > 30:
+                    print(f"  · ... +{len(flagged)-30} more")
+        if args.json:
+            print(json.dumps(report_obj, ensure_ascii=False, indent=2))
+        return
 
     if args.all:
         # Scan every ebook whose JSONL exists locally
