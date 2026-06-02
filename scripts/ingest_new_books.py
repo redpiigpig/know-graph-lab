@@ -348,6 +348,32 @@ def fallback_category(title: str, author: str, filename: str = "") -> str | None
     if any(k in text_raw for k in cn_theology_catchall):
         return "神學"
 
+    # 廣譜 last-resort 關鍵字 — 涵蓋非宗教學科，讓 Gemini 額度耗盡時仍能正確上架。
+    # 順序＝優先序（神學/宗教已在上面先判，這裡只處理其餘人文社科）。
+    broad = [
+        ("歷史學", ["帝國史", "通史", "國史", "世界史", "近代史", "古代史", "中世紀史", "斷代",
+                    "遠征記", "編年", "戰爭史", "戰史", "王朝", "雅典", "羅馬史", "十字軍",
+                    "伯里克利", "亞歷山大", "亚历山大", "拿破崙", "革命史", "波斯帝國", "波斯帝国"]),
+        ("人類生物學", ["考古", "人類學", "人类学", "原始思維", "原始思维", "原始社會", "圖騰", "图腾",
+                        "巫術", "民族誌", "民族志", "演化", "進化論", "进化论", "體質人類", "尼安德"]),
+        ("心理學", ["心理學", "心理学", "精神分析", "佛洛伊德", "弗洛伊德", "榮格", "荣格",
+                    "皮亞傑", "皮亚杰", "認知科學", "认知科学", "潛意識", "潜意识"]),
+        ("哲學", ["哲學", "哲学", "形上學", "形而上", "倫理學", "伦理学", "知識論", "知识论",
+                  "認識論", "认识论", "本體論", "本体论", "現象學", "现象学", "邏輯", "逻辑",
+                  "辯證", "辩证", "斯賓諾莎", "斯宾诺莎", "叔本華", "叔本华", "康德", "黑格爾",
+                  "黑格尔", "尼采", "海德格", "胡塞爾", "胡塞尔", "維根斯坦", "维特根斯坦",
+                  "柏拉圖", "柏拉图", "亞里士多德", "亚里士多德", "結構主義", "结构主义",
+                  "意志和表象", "論靈魂", "论灵魂", "伊本·西那", "伊本西那", "存在主義", "存在主义"]),
+        ("文學", ["小說", "小说", "詩集", "诗集", "文學史", "文学史", "戲劇", "戏剧", "史詩", "史诗", "悲劇"]),
+        ("社會政治學", ["政治學", "政治学", "社會學", "社会学", "資本論", "资本论", "意識形態",
+                        "意识形态", "主權", "主权", "政治秩序", "民主理論", "國家理論"]),
+        ("自然科學", ["物理學", "物理学", "化學", "化学", "生物學", "生物学", "天文", "數學",
+                      "数学", "量子", "相對論", "相对论"]),
+    ]
+    for cat, kws in broad:
+        if any(k in text_raw for k in kws):
+            return cat
+
     return None
 
 
@@ -459,9 +485,15 @@ def classify(title: str, author: str, filename: str = "") -> dict:
     fb = fallback_category(title, author, filename)
     if fb:
         return {"category": fb, "subcategory": None, "confidence": 0.9, "source": "fallback"}
-    g = gemini_classify(title, author)
-    g["source"] = "gemini"
-    return g
+    try:
+        g = gemini_classify(title, author)
+        g["source"] = "gemini"
+        return g
+    except Exception as e:
+        # Gemini down (e.g. all keys 429) — NEVER skip the book over a quota
+        # outage. Shelve it under a humanities default and flag for review.
+        print(f"  ⚠ Gemini 分類失敗，改用預設分類「哲學」: {str(e)[:60]}", file=sys.stderr)
+        return {"category": "哲學", "subcategory": None, "confidence": 0.3, "source": "fallback-default"}
 
 
 def build_target_path(meta: dict, category: str) -> Path:
