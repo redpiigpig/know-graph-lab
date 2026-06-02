@@ -37,16 +37,18 @@
 - **回歸測試**：broken fixture 斷言「`hasSpine` true、`cv` 非 null、`spineDegraded` 有值、warn 點名斷點」；
   islamic 還斷言只畫到可解析的 4 站（阿丹→伊斯瑪儀）。
 
-### 真實資料 overlap（新增回歸）— Biblical 5 處重疊待你決定
-- 把 live `/api/genealogy/*-graph` 輸出存成快照跑碰撞檢查（密集真資料才抓得到）：
-  - **Islamic**：186 卡，**0 重疊** ✓
-  - **Episcopal**：1,585 卡，**0 重疊** ✓
-  - **Biblical**：257 卡，**5 重疊**（密集區，卡距 < NW=120）：
-    1. 哥轄 ↔ 俄南（猶大之子）／她瑪（同 row y≈3314）— 利未支 vs 猶大支子嗣子樹橫向相撞
-    2. 施洗約翰 ↔ 猶大／西門（主的兄弟）（y≈10556）— 施洗約翰被擠進主的兄弟群組
-    3. 蘇比（亞拿之姊）↔ 亞拿（聖母之母）（y≈10272，僅差 40px）— Trinubium 同列姊妹相疊
-- 這些在「亂倫群組／同列配偶／Trinubium」等手調密集區，移哪張卡是主觀取捨、動了可能波及他處 →
-  **先列出待你確認**，未動 layout。回歸測試以 baseline=5 守住「不要再變更多」；islamic/episcopal 鎖死 0。
+### 真實資料 overlap（新增回歸）— Biblical 5 處重疊 ✅ 已撥開
+- 把 live `/api/genealogy/*-graph` 輸出存成快照跑碰撞檢查（密集真資料才抓得到）。
+  原本：Islamic 186 卡 / Episcopal 1,585 卡 = 0；**Biblical 257 卡 = 5 重疊**。
+- **根因**：5 處全是「force-expand（預設展開）的旁支 expansion 卡」落進主迴圈已排好的
+  兄弟／妻位列，因為 force-expand 不像 user-expand 會推 occlusion box（[:1653](../../components/genealogy/BiblicalSpineTree.vue#L1653)）。
+  作者本來就用 per-clan `FORCE_EXPAND_SHIFT_X` / `FORCE_EXPAND_MIN_GEN` 來撥開——只是這 3 個 clan 沒調夠。
+- **修法**（[:1537-1539](../../components/genealogy/BiblicalSpineTree.vue#L1537-L1539)，整個 expansion 連同連接線一起平移，作者既有機制）：
+  - `利未` shift 30 → **600**：摩西世系（哥轄→暗蘭→摩西/亞倫/米利暗）整支推到猶大子嗣列右側，
+    自成一欄、與猶大世系留 ~570px 空槽（原本 30 只夠避深列 亞倫↔亞蘭，淺列 哥轄 仍卡在猶大列）。
+  - `斯多蘭（亞拿之父）` 新增 shift **-220**：把其 expansion（含 蘇比、施洗約翰）往左推，
+    一次解決 蘇比↔亞拿、施洗約翰↔西門/猶大（亞拿是 spine 妻、不在此 expansion，不動）。
+- **結果**：三棵樹真實資料 **全 0 重疊**；回歸測試從 baseline≤5 收緊成**嚴格 0**。
 
 ### 去重 — `bfsPath` / `spineFromWaypoints`
 - 原本在 Biblical 與 Islamic **逐字重複**。已抽到 [utils/genealogy/spine.ts](../../utils/genealogy/spine.ts) 共用，
@@ -79,7 +81,7 @@
 
 ---
 
-## 後續（未做，待你決定）
-1. **Biblical 5 處 overlap**：要不要動 layout 把它們撥開（哥轄/俄南/她瑪、施洗約翰群組、蘇比/亞拿）。
-   屬密集區手調，建議逐處看畫面再決定撥哪張卡。
-2. （可選）E2 的「使用者手動展開長鏈時的遮蔽」可再加一支模擬 toggle 的測試（需 expose `toggleBranch`）。
+## 後續（未做，視需要）
+1. （可選）E2 的「使用者手動展開長鏈時的遮蔽」可再加一支模擬 toggle 的測試（需 expose `toggleBranch`）。
+2. （可選）force-expand 自動撥開：目前靠 per-clan 手調常數；之後可改成「force-expand 也按列
+   占用偵測自動避讓」的通用邏輯，免得 DB 加人又要手調。

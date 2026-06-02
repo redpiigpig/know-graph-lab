@@ -1535,7 +1535,10 @@ const cv = computed(() => {
       // 但 Moses chain 寬度大 (亞倫|西坡拉|摩西|米利暗 ~580px)，會撞到 Judah 主幹 J26 的 亞蘭。
       // 用 SHIFT_X 把整個 expansion 往左推，連接線會自動補 hbar kink。
       const FORCE_EXPAND_SHIFT_X = new Map<string, number>([
-        ['利未', 30],  // Moses cluster 往右推開 30px 避 亞倫(L26) ↔ 亞蘭(希斯崙之子, J26) 撞列
+        ['利未', 600],  // Moses cluster 往右推到 Judah 子嗣列(謝拉…珥, 2788–3708)右側，避 哥轄(L24)↔她瑪/俄南 撞列
+        // 斯多蘭 expansion（含 蘇比、施洗約翰）往左推，避 蘇比↔亞拿(約亞敬妻) 與
+        // 施洗約翰↔西門/猶大(主的兄弟) 同列相撞。亞拿是 spine 妻、不在此 expansion 內，不動。
+        ['斯多蘭（亞拿之父）', -220],
       ])
       // 額外 Y 偏移：把 expansion 子嗣強制下推一行。用於 expansion col 跟 spine 妻位 X
       // 重疊的 case — 例：以利米勒 expansion 內 基連(2608) 撞 波阿斯 spine wife 路得(2568)。

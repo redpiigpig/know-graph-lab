@@ -26,14 +26,13 @@ describe('real-data: BiblicalSpineTree', () => {
     expect(w.vm.cv.nodes.length).toBeGreaterThan(100)
   })
 
-  // KNOWN BASELINE = 5 overlaps in dense regions (見 FINDINGS.md「真實資料 overlap」)：
-  //   哥轄↔俄南/她瑪、施洗約翰↔猶大/西門(主的兄弟)、蘇比↔亞拿。
-  // Guard against NEW overlaps; the 5 are documented & pending a layout decision.
-  it('card overlaps do not exceed the documented baseline (5)', async () => {
+  // 5 dense-region overlaps FIXED via FORCE_EXPAND_SHIFT_X (利未 +600, 斯多蘭 -220).
+  // Now strict 0 — guards against any new overlap creeping in.
+  it('has NO overlapping cards', async () => {
     const g = load('biblical')
     const w = await mountSuspended(Biblical, { props: { nodes: g.nodes, edges: g.edges } })
     const cols = collisions(visRects(w.vm.cv))
-    expect(cols.length, `overlaps:\n${fmt(cols)}`).toBeLessThanOrEqual(5)
+    expect(cols.length, `overlaps:\n${fmt(cols)}`).toBe(0)
   })
 })
 
