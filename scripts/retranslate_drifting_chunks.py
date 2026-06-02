@@ -123,19 +123,37 @@ def main():
             continue
         new_drift = scan.paragraph_drift(new_zh, c.get("source_text") or "")
         old_drift = f["drift"]
-        c["content"] = new_zh
-        status = "ok" if (new_drift is not None and new_drift <= args.threshold) else "STILL-DRIFTS"
+        old_zh = c.get("content") or ""
+        # Guard: only KEEP the re-translation when it genuinely improves
+        # alignment and isn't truncated. A worse-or-equal drift, or a body
+        # that shrank to <60% of the original, means re-translation regressed
+        # (often Haiku output-cap truncation on huge chunks) — keep the old
+        # content so we never make a book worse than it was.
+        truncated = len(new_zh) < 0.60 * len(old_zh) if old_zh else False
+        improved = new_drift is not None and new_drift < old_drift - 0.02
+        if improved and not truncated:
+            c["content"] = new_zh
+            status = "FIXED" if new_drift <= args.threshold else "improved"
+        else:
+            why = "truncated" if truncated else "no-improvement"
+            status = f"kept-old ({why})"
         results.append((idx, old_drift, new_drift, status))
         nd = "n/a" if new_drift is None else f"{new_drift:.3f}"
-        print(f"  drift {old_drift} → {nd}  [{status}]  ({len(new_zh)} zh chars)", flush=True)
+        print(f"  drift {old_drift} → {nd}  [{status}]  "
+              f"(old {len(old_zh)} → new {len(new_zh)} zh chars)", flush=True)
 
     print("\n=== summary ===")
     for idx, od, nd, st in results:
         nds = "n/a" if nd is None else f"{nd:.3f}"
         print(f"  chunk {idx}: {od} → {nds}  {st}")
 
+    changed = {idx for idx, _, _, st in results
+               if st == "FIXED" or st == "improved"}
     if args.no_write:
         print("\n(--no-write: JSONL/R2/DB untouched)")
+        return
+    if not changed:
+        print("\nNo chunk improved — nothing written (book left untouched).")
         return
 
     # Rewrite JSONL in place (chunk_index/order preserved — content swapped).
@@ -158,8 +176,7 @@ def main():
                    timeout=30).raise_for_status()
     print("✓ ebooks row updated")
 
-    # Refresh previews only for the chunks we changed (cheap, no full DELETE).
-    changed = {idx for idx, _, _, st in results if st != "FAILED"}
+    # Refresh previews only for the chunks we actually changed.
     for c in chunks:
         if c.get("chunk_index") not in changed:
             continue
