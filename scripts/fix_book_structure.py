@@ -252,15 +252,61 @@ def build_skeleton(pages: list[dict], header: str | None) -> str:
     return "\n".join(lines)
 
 
-def infer_toc(pages: list[dict], header: str | None) -> list:
-    """One book -> merged TOC list. Windows huge books to dodge truncation."""
-    # RetryLater from gemini_json propagates up and parks the whole book.
+# Rich skeleton: surfaces in-body heading candidates (not just the page's first
+# line) so chapters whose headings sit MID-page are visible. Used by --rich for
+# books whose chapter starts the plain skeleton misses (printed-TOC-only books).
+HEAD_CAND = re.compile(
+    r"(第[一二三四五六七八九十百千0-9]+\s*[章節篇卷部回講])|(^[一二三四五六七八九十]{1,3}\s*[、.])"
+    r"|(^\d{1,3}\s*[.、])|(^(chapter|book|part)\b)", re.I | re.M)
+
+
+def build_skeleton_rich(pages: list[dict], header: str | None) -> str:
+    lines = []
+    for c in pages:
+        body = strip_trailing_pagenum(strip_leading_pagenum((c.get("content") or "").lstrip())).lstrip()
+        if header and body.startswith(header):
+            body = body[len(header):].lstrip("\n， 　")
+        pg = c.get("page_number") or c.get("chunk_index")
+        first = re.sub(r"\s+", " ", body[:45]).strip()
+        cands = []
+        for m in HEAD_CAND.finditer(body):
+            seg = re.sub(r"\s+", " ", body[m.start():m.start() + 22]).strip()
+            if seg and seg not in cands:
+                cands.append(seg)
+            if len(cands) >= 3:
+                break
+        extra = (" ⟦" + "⟧⟦".join(cands) + "⟧") if cands else ""
+        lines.append(f"p{pg}│{first}{extra}")
+    return "\n".join(lines)
+
+
+PROMPT_RICH = """你拿到一本書的逐頁摘要，每行格式 `p<頁碼>│<該頁首行> ⟦內文標題候選⟧`。
+請輸出章節目錄。**關鍵規則**：
+- page 必須是該章/節**正文在內文中開始**的那一頁——通常對應 ⟦⟧ 內標記出現的頁。
+- **絕對不要**用書本身印刷「目錄/contents」那一頁的頁碼（那頁會一次列出全部章名，不是正文起點）。
+- 同一章名若多頁出現，取**最早的正文頁**（不是目錄頁）。
+- title 繁體、簡短、清掉 OCR 雜訊與頁眉碎片。level：1=卷/篇/部，2=章，3=節。
+- 寧缺勿濫；找不到正文起點的章寧可不列。
+
+逐頁摘要：
+{skeleton}
+
+只輸出 JSON 陣列，每筆 {{"page": <int>, "level": <1|2|3>, "title": "<標題>"}}。"""
+
+
+def infer_toc(pages: list[dict], header: str | None, rich: bool = False) -> list:
+    """One book -> merged TOC list. Windows huge books to dodge truncation.
+    rich=True surfaces mid-page heading candidates and maps to body start pages
+    (for printed-TOC-only books whose chapter starts the plain skeleton misses).
+    RetryLater from gemini_json propagates up and parks the whole book."""
+    build = build_skeleton_rich if rich else build_skeleton
+    prompt = PROMPT_RICH if rich else PROMPT
     if len(pages) <= WINDOW_PAGES:
-        return gemini_json(PROMPT.format(skeleton=build_skeleton(pages, header))) or []
+        return gemini_json(prompt.format(skeleton=build(pages, header))) or []
     merged = []
     for i in range(0, len(pages), WINDOW_PAGES):
         win = pages[i:i + WINDOW_PAGES]
-        toc = gemini_json(PROMPT.format(skeleton=build_skeleton(win, header)))
+        toc = gemini_json(prompt.format(skeleton=build(win, header)))
         if toc:
             merged.extend(toc)
     return merged
@@ -321,7 +367,7 @@ def write_book(eid: str, chunks: list[dict]):
 
 
 # ── JOB A — recover ──────────────────────────────────────────────────────────
-def recover_book(eid: str, dry_run: bool = False) -> dict:
+def recover_book(eid: str, dry_run: bool = False, rich: bool = False) -> dict:
     jsonl_path = CHUNKS_DIR / f"{eid}.jsonl"
     if not jsonl_path.exists():
         return {"status": "skip", "note": "no jsonl"}
@@ -353,7 +399,7 @@ def recover_book(eid: str, dry_run: bool = False) -> dict:
             n_stripped += 1
 
     # Job A — LLM TOC (RetryLater propagates -> run loop parks this book)
-    toc = infer_toc(pages, strip_hdr)
+    toc = infer_toc(pages, strip_hdr, rich=rich)
     if not toc:
         # still persist the strip if it happened
         if n_stripped and not dry_run:
@@ -449,7 +495,8 @@ def run_audit():
     print(f"✓ JOB B done: {len(flagged)} flagged -> {AUDIT_FLAGS}", flush=True)
 
 
-def run_recover(limit: int = 0, dry_run: bool = False, ids: list[str] | None = None):
+def run_recover(limit: int = 0, dry_run: bool = False, ids: list[str] | None = None,
+                rich: bool = False):
     led = load_ledger()
     work = ids or recover_worklist()
     work = [w for w in work if w not in led]
@@ -466,7 +513,7 @@ def run_recover(limit: int = 0, dry_run: bool = False, ids: list[str] | None = N
             try:
                 b = fetch_book(eid)
                 title = (b.get("title") if b else "") or eid
-                res = recover_book(eid, dry_run=dry_run)
+                res = recover_book(eid, dry_run=dry_run, rich=rich)
                 quota_sleep = 600   # reset backoff after any success
                 break
             except RetryLater:
@@ -492,12 +539,15 @@ def main():
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--ids", default="")
+    ap.add_argument("--rich", action="store_true",
+                    help="surface mid-page headings + map to body start pages "
+                         "(rescue for printed-TOC-only books the plain pass missed)")
     args = ap.parse_args()
     ids = [x for x in args.ids.split(",") if x] or None
     if args.mode in ("all", "audit"):
         run_audit()
     if args.mode in ("all", "recover"):
-        run_recover(limit=args.limit, dry_run=args.dry_run, ids=ids)
+        run_recover(limit=args.limit, dry_run=args.dry_run, ids=ids, rich=args.rich)
 
 
 if __name__ == "__main__":
