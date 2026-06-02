@@ -154,6 +154,16 @@ def derive_chapter_title(md_tw: str, fallback: str) -> str:
         if "圖書在版編目" in c[:50] or "图书在版编目" in c[:50]:
             return "版權頁"
 
+    # PRIORITY 0: if the very FIRST content line is an explicit chapter
+    # heading (第N章 / Chapter N …), it wins even when longer than 30 chars.
+    # Otherwise a short body line immediately after a long chapter title
+    # mislabels the chunk with the body text (plain-text fallback path, no
+    # markdown heading). The 目錄 case is unaffected — 目錄 isn't a
+    # chapter-head pattern, so PRIORITY 1 still picks it up below.
+    if candidates and (_CHAPTER_HEAD_RX.match(candidates[0])
+                       or _CHAPTER_HEAD_EN_RX.match(candidates[0])):
+        return normalize_chapter_title(candidates[0])
+
     # PRIORITY 1: earliest short non-banner line — natural document order wins
     # so "目錄" beats a later "第一章" inside a TOC chunk's content.
     for c in candidates:

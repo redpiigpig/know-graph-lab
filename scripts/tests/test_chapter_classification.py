@@ -122,20 +122,19 @@ class TestDeriveChapterTitle:
         # No following short line: PRIORITY 2 (explicit chapter pattern) wins.
         assert se.derive_chapter_title(self.LONG_CH, "file.html") == self.LONG_CH
 
-    @pytest.mark.xfail(
-        strict=True,
-        reason="FINDING: in the plain-text fallback path (no markdown heading), "
-               "a long 第N章 title followed by a SHORT body line loses to the "
-               "body line — derive_chapter_title checks PRIORITY 1 (earliest "
-               "short non-banner line, the 目錄-beats-第一章 rule) before "
-               "PRIORITY 2 (explicit chapter-head pattern). Bites degraded PDF/ "
-               "OCR chunks. Fix = let an explicit 第N章/Chapter-N match at the "
-               "FIRST content line win before the short-line rule, without "
-               "regressing the 目錄 case. See report.",
-    )
     def test_long_chapter_heading_plaintext_first_line(self):
+        # FIXED (PRIORITY 0): a long 第N章 title on the FIRST content line now
+        # wins over a following short body line, even in the plain-text
+        # fallback path (no markdown heading). Was an xfail finding.
         md = self.LONG_CH + "\n\n內文開始"
         assert se.derive_chapter_title(md, "file.html") == self.LONG_CH
+
+    def test_toc_chunk_still_prefers_table_of_contents_label(self):
+        # Regression guard for the fix: 目錄 is NOT a chapter-head pattern,
+        # so the PRIORITY 0 short-circuit must not fire — 目錄 still wins over
+        # a later 第一章 inside a TOC chunk.
+        md = "目錄\n\n第一章　緒論\n第二章……"
+        assert se.derive_chapter_title(md, "file.html") == "目錄"
 
     def test_fallback_truncates_instead_of_leaking_filename(self):
         # Long prose first line, no heading/short line: must NOT return the
