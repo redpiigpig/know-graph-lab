@@ -38,7 +38,7 @@ export default defineEventHandler(async (event) => {
   "title": "內容標題（${coach.langLabel}）",
   "summary": "繁體中文摘要（150字內）",
   "outline": ["重點1","重點2","重點3"],
-  "questions": [ { "q": "${coach.langLabel}理解問題", "answer": "參考答案要點（繁中）" } ],
+  "questions": [ { "q": "${coach.langLabel}理解問題", "options": ["A. ...","B. ...","C. ...","D. ..."], "answer": "A" } ],
   "vocab": [ { "word": "", "reading": "", "meaning": "繁中釋義", "example": "" } ],
   "discussion": ["可與教練深入討論/辯論的開放題（${coach.langLabel}）"]${sourceType === "youtube" ? ',\n  "duration_minutes": 影片的實際長度（分鐘，整數，盡量準確）' : ""}
 }
