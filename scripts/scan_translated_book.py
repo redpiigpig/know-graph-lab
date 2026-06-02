@@ -103,6 +103,26 @@ INDEX_VOLUME_RE = re.compile(r"索引|Indexes", re.I)
 BILINGUAL_DRIFT_RATIO = 0.25
 
 
+def para_count(s: str) -> int:
+    """Count non-empty paragraphs (blank-line-delimited blocks)."""
+    return sum(1 for p in (s or "").split("\n\n") if p.strip())
+
+
+def paragraph_drift(zh: str, en: str) -> Optional[float]:
+    """Relative paragraph-count drift between aligned ZH/EN text, or None
+    when either side has < 4 paragraphs (too short to measure reliably).
+
+    This is the metric behind the T11 「逐段對照」alignment gate. Exposed at
+    module level so it can be reused as a post-translation quality check
+    (e.g. flag a chunk for re-translation when the bilingual columns won't
+    line up row-by-row in the reader)."""
+    nz, ne = para_count(zh), para_count(en)
+    if nz < 4 or ne < 4:
+        return None
+    bigger, smaller = max(nz, ne), min(nz, ne)
+    return (bigger - smaller) / bigger
+
+
 def normalize_heading(s: str) -> str:
     """Strip trailing footnote refs, collapse whitespace + dashes for
     fuzzy matching of headings across source vs NCX."""
@@ -135,10 +155,19 @@ def build_ncx_index(epub_path: Path) -> list[dict]:
         letter = L["letter_label"]
         m = _INTRO_PREFIX_RE.match(letter)
         underlying = letter[m.end():].strip() if m else letter
+        # File stems (basename minus .html) for this letter — lets the T9
+        # check resolve a filename-style title_en (e.g. 'anf02.iv.ii.ii.xxxi
+        # .html', common in NPNF/ANF) back to its owning letter via prefix.
+        stems: set[str] = set()
+        for f in [L.get("letter_file", "")] + [cf for cf, _ in L.get("chapters", [])]:
+            s = re.sub(r"\.x?html?$", "", re.sub(r"#.*$", "", f or "").split("/")[-1].strip().lower())
+            if s:
+                stems.add(s)
         out.append({
             "en_norm": normalize_heading(letter),
             "en_letter_norm": normalize_heading(underlying),
             "parent": parent,
+            "file_stems": stems,
         })
     return out
 
@@ -442,8 +471,30 @@ def scan(ebook_id: str) -> list[Issue]:
             chunk_title_en = (c.get("title_en") or "").strip()
             if not chunk_title_en:
                 continue
-            chunk_letter_norm = normalize_heading(chunk_title_en)
-            chunk_parent = _entry_parent(chunk_letter_norm)
+            # title_en may be a CCEL filename ('anf02.iv.ii.ii.xxxi.html') rather
+            # than a letter title. Resolve it to its owning NCX letter by longest
+            # file-stem prefix so the comparison below isn't junk-vs-letter.
+            chunk_entry = None
+            if re.search(r"\.x?html?$", chunk_title_en.lower()):
+                cstem = re.sub(r"\.x?html?$", "", chunk_title_en.split("/")[-1].strip().lower())
+                best_len = 0
+                for e in ncx_index:
+                    for st in e.get("file_stems", ()):  # exact or dotted-prefix
+                        if (cstem == st or cstem.startswith(st + ".")) and len(st) > best_len:
+                            chunk_entry, best_len = e, len(st)
+            if chunk_entry:
+                chunk_letter_norm = chunk_entry["en_letter_norm"]
+                chunk_parent = chunk_entry["parent"].upper()
+            else:
+                chunk_letter_norm = normalize_heading(chunk_title_en)
+                chunk_parent = _entry_parent(chunk_letter_norm)
+            # If we can't pin the chunk to a filename-resolved letter NOR to an
+            # NCX parent, its title_en is a bare label (work name / chapter
+            # title) and the English letter comparison below is unreliable —
+            # it produces false 'bleeds' for a work's own title appearing as an
+            # h3 on its own page. Skip: no identity → no defensible verdict.
+            if not chunk_entry and not chunk_parent:
+                continue
             src = c.get("source_text") or ""
             if not src:
                 continue
@@ -464,6 +515,14 @@ def scan(ebook_id: str) -> list[Issue]:
                 if h_norm in seen_headings:
                     continue
                 seen_headings.add(h_norm)
+                # Back-matter index section headers (e.g.「### THEOPHILUS.」
+                # immediately followed by「#### INDEX OF SUBJECTS.」) are the
+                # per-author subject-index dividers folded into the last
+                # content page — NOT a content bleed. Skip when an index
+                # marker sits right after the heading.
+                tail = src[m.end():m.end() + 80]
+                if re.search(r"index of subjects|general index|index of|印書頁碼索引|主題索引", tail, re.I):
+                    continue
                 attributed = attribute_heading(heading, ncx_index)
                 if attributed is None:
                     continue
@@ -524,24 +583,18 @@ def scan(ebook_id: str) -> list[Issue]:
     # line-delimited paragraphs on each side. Bilingual reader pairs
     # row-by-row, so a count drift > 25% means the right column won't
     # line up with the left.
-    def _para_count(s: str) -> int:
-        return sum(1 for p in s.split("\n\n") if p.strip())
     for c in chunks:
         idx = c.get("chunk_index")
         zh = c.get("content") or ""
         en = c.get("source_text") or ""
         if not zh or not en:
             continue
-        nz = _para_count(zh)
-        ne = _para_count(en)
-        if nz < 4 or ne < 4:
+        drift = paragraph_drift(zh, en)
+        if drift is None:
             continue  # too short to meaningfully measure
-        bigger = max(nz, ne)
-        smaller = min(nz, ne)
-        drift = (bigger - smaller) / bigger
         if drift > BILINGUAL_DRIFT_RATIO:
             issues.append(Issue("T11", "INFO", idx,
-                f"paragraph count drift: ZH={nz} vs EN={ne} ({drift*100:.0f}%)"))
+                f"paragraph count drift: ZH={para_count(zh)} vs EN={para_count(en)} ({drift*100:.0f}%)"))
 
     return issues
 

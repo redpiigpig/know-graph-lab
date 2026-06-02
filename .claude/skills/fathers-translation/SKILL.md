@@ -346,8 +346,15 @@ python scripts/test_fathers_quality.py <id> ...   # 只測指定卷
 **G4 是「固定品質」的核心**：TERM_FIXES 規則更新後，舊卷要 `sweep --only-t8` 重套再測
 （2026-06-01 首跑抓到 ANF Vol1 思高書名未收斂 = 規則後加未重 sweep，重 sweep 即修）。
 
-⚠️ 已知待修（首跑發現，舊 session 卷）：ANF Vol2 T9×10 / Vol7 T9×2 殘留 cross-bleed，
-需 multi_h3_splitter / auto_fix_cross_bleeds 重跑（見「CCEL EPUB 三大坑」節）。
+### T9 偵測器精修（2026-06-01，全卷受益）
+首跑時 ANF Vol2 報 T9×10、Vol7 T9×2，**經查全是偵測誤報**（非真 bleed）。根因 +修法：
+- **檔名型 `title_en`**（`anf02.iv.ii.ii.xxxi.html`）無法跟 NCX 書信名 token 比對 → `build_ncx_index`
+  加 `file_stems`，T9 用最長 file-stem prefix 把檔名解析回正確作品再比。
+- **索引 section header**（`### THEOPHILUS.` 緊接 `#### INDEX OF SUBJECTS.`，全卷主題索引被併進
+  最後內容頁）→ h3 後 80 字內有 index marker 就跳過。
+- **標籤型 `title_en`**（純作品名/章標題，`_entry_parent` 也解不出 parent）→ 身分無法解析，
+  英文比對不可靠 → 跳過該 chunk（作品自己標題出現在自己頁面不再誤判）。
+修完 `test_fathers_quality.py` **24/24 全 PASS**。改動只縮誤報、不遮蔽身分明確 chunk 的真 bleed。
 
 ---
 
