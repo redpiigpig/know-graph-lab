@@ -629,20 +629,29 @@ def nvidia_chat(prompt: str, max_tokens: int = 2000, system: str | None = None,
     raise RuntimeError(f"NVIDIA chat failed (last: {last_err})")
 
 
+def _secondary_translate(source: str) -> str:
+    """Tier-2 → Tier-3 fallback used when Gemini (primary) is exhausted:
+    NVIDIA deepseek (2nd) → on its failure, Haiku 救急 (3rd, user 2026-06-04:
+    「Gemini 和 NVIDIA 都跑完了就換 Haiku」). Haiku shares the Claude Max OAuth
+    account, so it only fires when BOTH free pools are dry."""
+    try:
+        return nvidia_translate(source)
+    except RuntimeError as e:
+        print(f"  ↳ NVIDIA exhausted ({str(e)[:50]}…) — 救急 fallback to Haiku", flush=True)
+        return haiku_translate(source)
+
+
 def gemini_with_nvidia_fallback(source: str) -> str:
-    """Default engine for English → 繁中 long-running jobs. Tries Gemini first
-    (fast + free quota); on `all Gemini keys exhausted` falls back to NVIDIA NIM
-    for that specific piece (reliable, high-quality, no Anthropic OAuth conflict).
-    Per-piece fallback — not whole-chunk.
+    """Default engine for English → 繁中 long-running jobs. 3-tier per-piece chain:
+    Gemini (primary, fast + free) → NVIDIA deepseek (2nd) → Haiku (3rd 救急).
 
     2-strike rule: after GEMINI_FAIL_STREAK_LIMIT consecutive `all keys exhausted`
-    events, stop probing Gemini and route everything to NVIDIA for
-    GEMINI_COOLDOWN_SECONDS, then re-probe Gemini; success resets the streak.
-    (Haiku removed 2026-06-03 per user — NVIDIA is the sole fallback.)"""
+    events, stop probing Gemini and route to the NVIDIA→Haiku chain for
+    GEMINI_COOLDOWN_SECONDS, then re-probe Gemini; success resets the streak."""
     global _gemini_consecutive_exhaust, _gemini_cooldown_until
     now = time.time()
     if now < _gemini_cooldown_until:
-        return nvidia_translate(source)  # NVIDIA-only cooldown window
+        return _secondary_translate(source)  # Gemini-cooldown: NVIDIA→Haiku window
     try:
         result = gemini_translate(source)
         _gemini_consecutive_exhaust = 0
@@ -658,9 +667,9 @@ def gemini_with_nvidia_fallback(source: str) -> str:
                       f"(retry after {time.strftime('%H:%M', time.localtime(_gemini_cooldown_until))})",
                       flush=True)
             else:
-                print(f"  ↳ Gemini failed ({msg[:80]}…) — falling back to NVIDIA "
+                print(f"  ↳ Gemini failed ({msg[:80]}…) — falling back to NVIDIA→Haiku "
                       f"[{_gemini_consecutive_exhaust}/{GEMINI_FAIL_STREAK_LIMIT} strikes]", flush=True)
-            return nvidia_translate(source)
+            return _secondary_translate(source)
         raise
 
 
@@ -895,18 +904,16 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
     elif engine == "nvidia":
         translator, model_label = nvidia_translate, NVIDIA_MODELS[0]
     elif engine == "gemini":
-        # Explicit Gemini-first chain (Gemini primary, NVIDIA per-piece fallback).
-        translator, model_label = gemini_with_nvidia_fallback, "gemini-2.5-flash → nvidia fallback"
+        # Explicit Gemini-first chain (Gemini → NVIDIA → Haiku per-piece fallback).
+        translator, model_label = gemini_with_nvidia_fallback, "gemini-2.5-flash → nvidia → haiku"
     elif engine == "haiku":
-        # Haiku 全面停用 (user 2026-06-03) — redirect to default Gemini→NVIDIA chain.
-        print("  ⚠ --engine haiku 已全面停用，改用 gemini→nvidia", flush=True)
-        translator, model_label = gemini_with_nvidia_fallback, "gemini-2.5-flash → nvidia fallback"
-    else:  # default (2026-06-03): Gemini 4 keys primary, NVIDIA deepseek fallback.
-        # PROD FINDING 2026-06-03: NVIDIA-first was tried but the single free key
-        # both ReadTimeouts on 15-20K char pieces AND 429s under any sustained load,
-        # so deepseek CANNOT be primary — it sits behind Gemini as the per-piece
-        # fallback (replacing the retired Haiku) for when Gemini's 4 keys exhaust.
-        translator, model_label = gemini_with_nvidia_fallback, "gemini-2.5-flash → nvidia fallback"
+        # Haiku 現為第三層救急 (user 2026-06-04) — 走預設 3-tier 鏈即可。
+        translator, model_label = gemini_with_nvidia_fallback, "gemini-2.5-flash → nvidia → haiku"
+    else:  # default: 3-tier per-piece chain (user 2026-06-04).
+        # Gemini 4 keys (primary, fast+free) → NVIDIA deepseek 4-account (2nd) →
+        # Haiku 救急 (3rd, Claude Max OAuth — only when both free pools are dry).
+        # deepseek is NVIDIA's sole model (only one preserving paras + {{p:N}}/[^N]).
+        translator, model_label = gemini_with_nvidia_fallback, "gemini-2.5-flash → nvidia → haiku"
     print(f"Engine: {engine}  Model: {model_label}", flush=True)
 
     t_total = time.time()
