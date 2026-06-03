@@ -721,6 +721,30 @@ const cv = computed(() => {
     const headerCX = headerX + BISH_W / 2
     spineCenterX[sp.key] = headerCX
 
+    // ── 暫時分裂（對立教宗）期間：主軸往右偏移 SCHISM_DX，與左側對立支線形成「左右對等分叉」──
+    // 因對立 rival 已 renumber 成與主線平行編號，故「主教 #N 處於分裂中」⇔「存在同號 #N 的對立
+    // rival 且任期重疊」。額我略十一世#199 後 烏爾班六世#200…額我略十二世#203 右移、瑪爾定五世#204
+    // （無重疊對立）回正中 → 視覺上自額我略十一世左右分兩支、瑪爾定五世又合回。
+    const SCHISM_DX = 120
+    const rivalReignsByNum = new Map<number, Array<{ s: number; e: number }>>()
+    for (const br of g.branches) {
+      if (br.parent_spine_key !== sp.key || !br.is_split || !br.church.includes('對立')) continue
+      for (const bb of br.bishops) {
+        if (bb.succession_number == null || bb.start_year == null) continue
+        const arr = rivalReignsByNum.get(bb.succession_number) ?? []
+        arr.push({ s: bb.start_year, e: bb.end_year ?? bb.start_year })
+        rivalReignsByNum.set(bb.succession_number, arr)
+      }
+    }
+    const spineShiftOf = (b: BishopIn): number => {
+      if (b.succession_number == null || b.start_year == null) return 0
+      const rivals = rivalReignsByNum.get(b.succession_number)
+      if (!rivals) return 0
+      const bs = b.start_year, be = b.end_year ?? b.start_year
+      return rivals.some(r => r.s <= be && r.e >= bs) ? SCHISM_DX : 0
+    }
+    const spineBishopShiftMap = new Map<string, number>()  // bishop id → x 偏移（供分支 fork 起點對齊）
+
     // Render all bishops starting from #1 (don't skip apostle-himself; per user spec)
     const startIdx = 0
 
@@ -729,9 +753,14 @@ const cv = computed(() => {
     let firstBishopY: number | null = null
     let prevSpineBishop: BishopIn | null = null
     let prevSpineBottomY: number | null = null
+    let prevSpineCX = headerCX
     for (let bi = startIdx; bi < sp.bishops.length; bi++) {
       const b = sp.bishops[bi]
-      // 主教傳承軸線 per-segment：上一任卡底 → 這一任卡頂；patriarchateYear 之後加粗
+      const xShift = spineShiftOf(b)
+      const bx = headerX + xShift
+      const bcx = headerCX + xShift
+      spineBishopShiftMap.set(b.id, xShift)
+      // 主教傳承軸線 per-segment：上一任卡底 → 這一任卡頂（分裂期偏移 → 線自動斜出分叉/合流）
       // 跳號（gap）→ 點線；連續 → 實線
       if (prevSpineBishop != null && prevSpineBottomY != null) {
         const hasGap = prevSpineBishop.succession_number != null && b.succession_number != null
@@ -740,13 +769,14 @@ const cv = computed(() => {
           && b.start_year != null && b.start_year >= sp.patriarchateYear
         const segWidth = isPostPatriarchate ? 6 : 3
         paths.push({
-          d: `M${headerCX},${prevSpineBottomY} L${headerCX},${by}`,
+          d: `M${prevSpineCX},${prevSpineBottomY} L${bcx},${by}`,
           stroke: sp.color,
           width: segWidth,
           opacity: hasGap ? 0.45 : 0.65,
           dashes: hasGap ? '4,4' : '',
         })
       }
+      prevSpineCX = bcx
       bishopMap.set(b.id, by + BISH_H / 2)
       if (firstBishopY == null) firstBishopY = by
       const menuCount = menuCountByBishop.get(b.id) ?? 0
@@ -762,7 +792,7 @@ const cv = computed(() => {
         sub: b.start_year != null
           ? `${formatYear(b.start_year)}–${b.end_year != null ? formatYear(b.end_year) : ''}`
           : '',
-        x: headerX, y: by, w: BISH_W, h: BISH_H,
+        x: bx, y: by, w: BISH_W, h: BISH_H,
         successionNum: b.succession_number,
         spineColor: sp.color,
         bishopId: b.id,
@@ -856,12 +886,14 @@ const cv = computed(() => {
         //  - 對立/分裂式 branch (is_split=true): 從分裂前那位主教「正交分叉」出去 —
         //    先自主教往下一小段，再水平拉到分支欄，再下到分支卡。讀起來像家譜的分叉，
         //    而非舊版「繞一圈再回來」的弧線。紅色虛線維持分裂語意。
+        // 若 parent 主教在分裂期被右移（如比薩支的母教宗額我略十二世），fork 起點同步右移對齊。
+        const parentShift = spineBishopShiftMap.get(br.parent_bishop_id ?? '') ?? 0
         let fromX: number, toX: number
         if (branchDir > 0) {
-          fromX = depth === 0 ? headerX + BISH_W : bx - BRANCH_GAP
+          fromX = (depth === 0 ? headerX + BISH_W : bx - BRANCH_GAP) + (depth === 0 ? parentShift : 0)
           toX = bx
         } else {
-          fromX = depth === 0 ? headerX : bx + BRANCH_W + BRANCH_GAP
+          fromX = (depth === 0 ? headerX : bx + BRANCH_W + BRANCH_GAP) + (depth === 0 ? parentShift : 0)
           toX = bx + BRANCH_W
         }
         const toY = by + BRANCH_H / 2
@@ -1292,9 +1324,10 @@ function centerOnJesus() {
   const rect = viewportRef.value?.getBoundingClientRect()
   if (!rect) return
   const c = cv.value
-  const widthFit = (rect.width - 40) / c.w
-  zoom.value = Math.min(widthFit, 1)
-  panX.value = (rect.width - c.w * zoom.value) / 2
+  zoom.value = 1   // 預設 100%（不再依寬度縮成小圖）
+  const jesus = c.nodes.find((n: any) => n.kind === 'jesus')
+  const jesusCX = jesus ? jesus.x + jesus.w / 2 : c.w / 2
+  panX.value = rect.width / 2 - jesusCX * zoom.value   // 耶穌卡水平置中
   panY.value = 20
 }
 onMounted(() => { nextTick(centerOnJesus) })
