@@ -154,6 +154,21 @@ TITLE_ZH: dict[str, str] = {
     "The Mysteries of Mithra": "密特拉密儀",
 }
 
+# Page / citation markers and number-only fragments must NOT be sent to the LLM —
+# deepseek hallucinates plausible Gnostic prose for a bare "p. 126". Keep them
+# verbatim instead (language-neutral citations).
+_TRIVIAL_RE = re.compile(r"^\(?\s*(text\s*:|p{1,2}\.|pp\.|page|pat\.|cf\.|\d+\s*[-–]\s*\d+)", re.I)
+
+
+def is_trivial_source(s: str) -> bool:
+    s = (s or "").strip()
+    if len(s) < 4:
+        return True
+    if _TRIVIAL_RE.match(s):
+        return True
+    return sum(c.isalpha() and c.isascii() for c in s) < 3  # mostly digits/punct/roman
+
+
 # Seconds to sleep between paragraph calls, to keep the single free NVIDIA key
 # under its rate limit (set via --pace; 0 = full speed).
 PACE = 0.0
@@ -179,6 +194,10 @@ def translate_paragraphs(paragraphs: list[str], te, engine_fn, limit: int | None
     todo = paragraphs[:limit] if limit else paragraphs
     out: list[str] = []
     for i, p in enumerate(todo):
+        if is_trivial_source(p):       # page/citation markers → keep verbatim, no LLM
+            out.append(p.strip())
+            print(f"    · para {i + 1}/{len(todo)} (trivial, kept)", flush=True)
+            continue
         if PACE and i > 0:
             time.sleep(PACE)
         pieces = te.split_oversized(p)
