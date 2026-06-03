@@ -378,5 +378,18 @@ onMounted(async () => {
   autoSpeak.value = voiceMode.value;
   tracker.start(lang.value, "speaking", "chat");
   await Promise.all([loadCoachMeta(), loadSessions(), loadVocab(), loadHomework()]);
+
+  // 從首頁「今日推薦」帶進來的話題／情境 → 自動開場（新對話）
+  const presetTopic = route.query.topic as string | undefined;
+  const presetScenario = route.query.scenario as string | undefined;
+  if (presetScenario) {
+    startScenario(presetScenario);
+  } else if (presetTopic) {
+    input.value =
+      mode.value === "qa"
+        ? presetTopic
+        : `我想用${coach.value?.langLabel || ""}聊聊這個話題：「${presetTopic}」`;
+    send();
+  }
 });
 </script>

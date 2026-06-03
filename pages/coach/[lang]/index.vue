@@ -71,6 +71,23 @@
           <NuxtLink :to="`/coach/${lang}/chat?mode=scenario`" class="tile">🎭<span>情境角色</span></NuxtLink>
           <NuxtLink :to="`/coach/${lang}/smalltalk`" class="tile">⏱️<span>主題限時聊</span></NuxtLink>
         </div>
+
+        <!-- 今日推薦（每天輪替）：點了直接帶著話題/情境進聊天 -->
+        <div v-if="coach" class="mt-3 space-y-2">
+          <div class="text-[11px] font-semibold text-gray-400">今日推薦 · 每天換</div>
+          <div v-if="todayChat.length" class="flex flex-wrap items-center gap-1.5">
+            <span class="text-[11px] text-gray-400 w-14 flex-shrink-0">💬 聊話題</span>
+            <NuxtLink v-for="(t, i) in todayChat" :key="'c' + i" :to="`/coach/${lang}/chat?topic=${encodeURIComponent(t)}`" class="chip">{{ t }}</NuxtLink>
+          </div>
+          <div v-if="todayQa.length" class="flex flex-wrap items-center gap-1.5">
+            <span class="text-[11px] text-gray-400 w-14 flex-shrink-0">💡 問知識</span>
+            <NuxtLink v-for="(t, i) in todayQa" :key="'q' + i" :to="`/coach/${lang}/chat?mode=qa&topic=${encodeURIComponent(t)}`" class="chip">{{ t }}</NuxtLink>
+          </div>
+          <div v-if="todayScenarios.length" class="flex flex-wrap items-center gap-1.5">
+            <span class="text-[11px] text-gray-400 w-14 flex-shrink-0">🎭 演情境</span>
+            <NuxtLink v-for="(t, i) in todayScenarios" :key="'s' + i" :to="`/coach/${lang}/chat?mode=scenario&scenario=${encodeURIComponent(t)}`" class="chip">{{ t }}</NuxtLink>
+          </div>
+        </div>
       </div>
 
       <!-- 學習區 -->
@@ -179,6 +196,21 @@ const selectedDate = ref<string | null>(null);
 
 const hl = computed(() => (memory.value?.highlights ?? {}) as any);
 
+// 今日推薦：以「今天是第幾天」當種子，每天輪替一組（同一天穩定、隔天就換）
+const daySeed = (() => {
+  const [y, m, d] = todayStr.split("-").map(Number);
+  return Math.floor(Date.UTC(y, m - 1, d) / 86400000);
+})();
+function rotate(arr: any[] | undefined, count: number): string[] {
+  if (!arr?.length) return [];
+  const n = Math.min(count, arr.length);
+  const start = daySeed % arr.length;
+  return Array.from({ length: n }, (_, i) => arr[(start + i) % arr.length]);
+}
+const todayChat = computed(() => rotate(coach.value?.smalltalkTopics, 3));
+const todayQa = computed(() => rotate(coach.value?.qaTopics, 3));
+const todayScenarios = computed(() => rotate(coach.value?.scenarios, 3));
+
 function routeFor(r: string) {
   if (r === "chat") return `/coach/${lang.value}/chat`;
   if (r === "smalltalk") return `/coach/${lang.value}/smalltalk`;
@@ -258,7 +290,7 @@ function selectDay(cell: any) {
 
 onMounted(async () => {
   await Promise.all([loadCoach(), loadBriefing(), loadMemory(), loadCalendar()]);
-  const today = new Date().toISOString().slice(0, 10);
+  const today = todayStr; // 台北本地日期，跟後端 tzToday 對齊
   const todayAct = days.value.find((d) => d.date === today);
   const practicedToday = !!todayAct && todayAct.minutes >= 1;
 
@@ -285,5 +317,6 @@ onMounted(async () => {
   @apply flex flex-col items-center justify-center gap-1 bg-white border border-gray-200 rounded-2xl py-4 text-2xl hover:border-indigo-300 hover:shadow-sm transition;
 }
 .tile span { @apply text-xs font-medium text-gray-700; }
+.chip { @apply text-[11px] px-2.5 py-1 rounded-full border border-gray-200 text-gray-600 bg-white hover:border-indigo-300 hover:bg-indigo-50 hover:text-indigo-700 transition; }
 .tile small { @apply ml-1 text-[10px] px-1.5 py-0.5 rounded-full bg-amber-100 text-amber-700; }
 </style>
