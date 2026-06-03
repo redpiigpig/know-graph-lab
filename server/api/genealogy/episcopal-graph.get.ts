@@ -22,6 +22,8 @@ interface SeeRow {
   parent_see_id: string | null
   split_year: number | null
   founder_apostle_id: string | null   // 使徒源頭：當設定時表示「這個教座由某使徒直接建立」，渲染時掛在使徒底下而非 spine
+  patriarchate_start_year: number | null  // 此座升為宗主教座之年（線變粗）
+  patriarchate_end_year: number | null    // 宗主教座被撤銷之年（線再變細）；如阿奎萊亞 557-1751
 }
 
 interface SuccRow {
@@ -131,7 +133,7 @@ export default defineEventHandler(async (event) => {
   // 1. all sees
   const { data: seeRows, error: seeErr } = await supabase
     .from('episcopal_sees')
-    .select('id, see_zh, name_zh, name_en, church, tradition, founded_year, parent_see_id, split_year, founder_apostle_id')
+    .select('id, see_zh, name_zh, name_en, church, tradition, founded_year, parent_see_id, split_year, founder_apostle_id, patriarchate_start_year, patriarchate_end_year')
   if (seeErr) throw createError({ statusCode: 500, message: seeErr.message })
 
   const sees: SeeRow[] = seeRows ?? []
@@ -270,6 +272,9 @@ export default defineEventHandler(async (event) => {
     parent_see_id: string | null
     parent_spine_key: string  // root spine key
     parent_bishop_id: string | null  // bishop in the parent see whose tenure includes founded_year
+    is_split: boolean
+    patriarchate_start_year?: number | null
+    patriarchate_end_year?: number | null
     bishops: ReturnType<typeof mapBishop>[]
   }
   function mapBishop(b: SuccRow) {
@@ -465,6 +470,8 @@ export default defineEventHandler(async (event) => {
           parent_spine_key: spineKey,
           parent_bishop_id: parentBishopId,
           is_split: isSplit,
+          patriarchate_start_year: k.patriarchate_start_year ?? null,
+          patriarchate_end_year: k.patriarchate_end_year ?? null,
           bishops: allBishops.map(mapBishop),
         })
         queue.push({ seeId: k.id, spineKey })

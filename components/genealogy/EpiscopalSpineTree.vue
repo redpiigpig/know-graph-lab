@@ -291,6 +291,8 @@ interface BranchIn {
   parent_see_id: string; parent_spine_key: string
   parent_bishop_id: string | null
   is_split: boolean    // true: 教座分裂 (same see_zh as parent); false: 設立教座 (new see)
+  patriarchate_start_year?: number | null  // 升宗主教座之年 → 線變粗
+  patriarchate_end_year?: number | null    // 宗主教座撤銷之年 → 線再變細（如阿奎萊亞 557-1751）
   bishops: BishopIn[]
 }
 interface ApostolicBranchIn extends BranchIn {
@@ -880,6 +882,11 @@ const cv = computed(() => {
           const branchBishopCX = bx + BRANCH_INDENT + (BRANCH_W - BRANCH_INDENT) / 2
           let prevBb: BishopIn | null = null
           let prevBottomY: number | null = null
+          // 宗主教座期間（patriarchate_start ~ end）線變粗；此前/撤銷後變細。如阿奎萊亞 557-1751。
+          const patStart = br.patriarchate_start_year ?? null
+          const patEnd = br.patriarchate_end_year ?? null
+          const inPatriarchate = (yr: number | null | undefined) =>
+            patStart != null && yr != null && yr >= patStart && (patEnd == null || yr <= patEnd)
           for (const bb of br.bishops) {
             if (prevBb != null && prevBottomY != null) {
               const hasGap = prevBb.succession_number != null && bb.succession_number != null
@@ -887,7 +894,7 @@ const cv = computed(() => {
               paths.push({
                 d: `M${branchBishopCX},${prevBottomY} L${branchBishopCX},${cy}`,
                 stroke: sp.color,
-                width: 2,
+                width: inPatriarchate(bb.start_year) ? 6 : 2,  // 宗主教座期間加粗（同 spine 規格）
                 opacity: hasGap ? 0.5 : 0.75,
                 dashes: hasGap ? '3,4' : '',
               })
