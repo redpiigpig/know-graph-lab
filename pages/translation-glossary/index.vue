@@ -63,8 +63,8 @@
       <!-- Loading -->
       <div v-if="loading" class="text-sm text-gray-500 py-12 text-center">載入中…</div>
 
-      <!-- People table -->
-      <div v-else-if="activeTab === 'people'" class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+      <!-- People table (人名 / 君主 / 哲學家 — all theologians table by figure_type) -->
+      <div v-else-if="isPeopleTab" class="bg-white border border-gray-200 rounded-lg overflow-hidden">
         <table class="w-full text-sm">
           <thead class="bg-stone-50 border-b border-gray-200 text-xs text-gray-600">
             <tr>
@@ -74,8 +74,8 @@
               <!-- 雙翻譯欄位只在「聖經人物」sub-tab 顯示 — 一般教父的譯名
                    差異不大，多兩欄反而吵雜。聖經人物則常有保羅/保祿、
                    彼得/伯多祿、約翰/若望 等明顯分歧。-->
-              <th v-if="activePersonEra === 'biblical'" class="px-3 py-2 text-left font-medium" style="width:16%">新教變體</th>
-              <th v-if="activePersonEra === 'biblical'" class="px-3 py-2 text-left font-medium" style="width:16%">天主教變體</th>
+              <th v-if="showBiblicalCols" class="px-3 py-2 text-left font-medium" style="width:16%">新教變體</th>
+              <th v-if="showBiblicalCols" class="px-3 py-2 text-left font-medium" style="width:16%">天主教變體</th>
               <th class="px-3 py-2 text-left font-medium" style="width:20%">首次出現出處</th>
             </tr>
           </thead>
@@ -88,12 +88,12 @@
                 <td class="px-3 py-2 font-medium text-gray-900">{{ row.name_english }}</td>
                 <td class="px-3 py-2 text-gray-700 font-serif">{{ row.name_original || '—' }}</td>
                 <td class="px-3 py-2 font-semibold text-amber-700">{{ row.name_recommended || '—' }}</td>
-                <td v-if="activePersonEra === 'biblical'" class="px-3 py-2 text-gray-700">{{ row.name_protestant || '—' }}</td>
-                <td v-if="activePersonEra === 'biblical'" class="px-3 py-2 text-gray-700">{{ row.name_catholic_sgs || '—' }}</td>
+                <td v-if="showBiblicalCols" class="px-3 py-2 text-gray-700">{{ row.name_protestant || '—' }}</td>
+                <td v-if="showBiblicalCols" class="px-3 py-2 text-gray-700">{{ row.name_catholic_sgs || '—' }}</td>
                 <td class="px-3 py-2 text-gray-600 text-xs">{{ row.first_source || '—' }}</td>
               </tr>
               <tr v-if="expanded === row.id" class="border-b border-gray-200 bg-stone-50/40">
-                <td :colspan="activePersonEra === 'biblical' ? 6 : 4" class="px-5 py-4">
+                <td :colspan="showBiblicalCols ? 6 : 4" class="px-5 py-4">
                   <div v-if="!editMode" class="text-xs text-gray-700 grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div>
                       <div class="text-gray-500 mb-1">★ 中文翻譯（建議採用）</div>
@@ -177,7 +177,7 @@
               </tr>
             </template>
             <tr v-if="filteredPeople.length === 0">
-              <td :colspan="activePersonEra === 'biblical' ? 6 : 4" class="px-3 py-12 text-center text-sm text-gray-400">
+              <td :colspan="showBiblicalCols ? 6 : 4" class="px-3 py-12 text-center text-sm text-gray-400">
                 {{ theologians.length === 0 ? '尚無資料 — 請執行 scripts/seed_translation_glossary.py 批次填入' : '無符合搜尋條件的項目' }}
               </td>
             </tr>
@@ -312,14 +312,28 @@ const supabase = useSupabaseClient<any>()
 // by `person_era`); `place` / `work` / `sect` / `term` are entity_type
 // sub-buckets of theological_terms.
 const tabs = [
-  { key: 'people', label: '人名' },
-  { key: 'place',  label: '地名' },
-  { key: 'work',   label: '作品名' },
-  { key: 'sect',   label: '教派名' },
-  { key: 'term',   label: '神學名詞' },
+  { key: 'people',      label: '人名' },
+  { key: 'monarch',     label: '君主' },
+  { key: 'philosopher', label: '哲學家' },
+  { key: 'place',       label: '地名' },
+  { key: 'work',        label: '作品名' },
+  { key: 'sect',        label: '教派名' },
+  { key: 'term',        label: '神學名詞' },
 ] as const
 type TabKey = typeof tabs[number]['key']
 const activeTab = ref<TabKey>('people')
+
+// People-backed tabs all read the theologians table, split by figure_type:
+//   people → 神學家 (theologian/null) · monarch → 君主 · philosopher → 哲學家
+const PEOPLE_TABS = ['people', 'monarch', 'philosopher']
+const isPeopleTab = computed(() => PEOPLE_TABS.includes(activeTab.value))
+const isTheologianRow = (r: any) => !r.figure_type || r.figure_type === 'theologian'
+function rowMatchesTab(r: any, key: string): boolean {
+  if (key === 'people') return isTheologianRow(r)
+  return r.figure_type === key  // 'monarch' | 'philosopher'
+}
+// 雙翻譯（新教/天主教變體）只在「人名 → 聖經人物」有意義；君主/哲學家不顯示。
+const showBiblicalCols = computed(() => activeTab.value === 'people' && activePersonEra.value === 'biblical')
 
 // Sub-tabs for 人名: era-based grouping. Boundaries:
 //   biblical     — Bible characters (manual flag)
@@ -349,23 +363,29 @@ const editPerson = ref<any>({})
 const editTerm = ref<any>({})
 
 function tabCount(key: TabKey): number {
-  if (key === 'people') return theologians.value.length
+  if (key === 'people') return theologians.value.filter(isTheologianRow).length
+  if (key === 'monarch' || key === 'philosopher')
+    return theologians.value.filter(r => r.figure_type === key).length
   return terms.value.filter(t => (t.entity_type || 'term') === key).length
 }
 const activeTabCount = computed(() => tabCount(activeTab.value))
 
 function personEraCount(era: PersonEra): number {
-  if (era === 'all') return theologians.value.length
-  return theologians.value.filter(p => (p.person_era || 'early') === era).length
+  const people = theologians.value.filter(isTheologianRow)
+  if (era === 'all') return people.length
+  return people.filter(p => (p.person_era || 'early') === era).length
 }
 
 const filteredPeople = computed(() => {
   const query = q.value.trim().toLowerCase()
   const era = activePersonEra.value
+  const tab = activeTab.value
   const rows = theologians.value.filter(r => {
-    if (era !== 'all' && (r.person_era || 'early') !== era) return false
+    if (!rowMatchesTab(r, tab)) return false
+    // era sub-tabs only apply to 人名 (神學家); 君主/哲學家 是平面清單
+    if (tab === 'people' && era !== 'all' && (r.person_era || 'early') !== era) return false
     if (!query) return true
-    return [r.name_english, r.name_original, r.name_latin_std, r.name_recommended, r.first_source]
+    return [r.name_english, r.name_original, r.name_latin_std, r.name_recommended, r.role, r.first_source]
       .filter(Boolean).some((v: string) => v.toLowerCase().includes(query))
   })
   return [...rows].sort((a, b) => effectiveYear(a) - effectiveYear(b))
@@ -387,10 +407,11 @@ async function addNew() {
   const chinese = prompt('中文翻譯（必填）')?.trim()
   if (!chinese) return
   const source = prompt('首次出現出處（書名 / 卷 / chunk）')?.trim() || null
-  if (activeTab.value === 'people') {
+  if (isPeopleTab.value) {
     // For new entries, use the currently-active era sub-tab (or 'early'
     // when 「全部」 is selected — user can change after via edit modal).
     const era = activePersonEra.value === 'all' ? 'early' : activePersonEra.value
+    const figure_type = activeTab.value === 'people' ? 'theologian' : activeTab.value
     // Store the user-supplied translation as both the recommended value
     // AND the protestant slot, so the row shows up consistently in the
     // ★ 中文翻譯 column and (for biblical figures) in the dual columns.
@@ -401,6 +422,7 @@ async function addNew() {
       name_protestant: chinese,
       first_source: source,
       person_era: era,
+      figure_type,
     }).select().single()
     if (error) { alert('新增失敗：' + error.message); return }
     theologians.value.push(data)
@@ -443,7 +465,7 @@ function toggleExpand(id: string) {
     return
   }
   expanded.value = id
-  if (activeTab.value === 'people') {
+  if (isPeopleTab.value) {
     const row = theologians.value.find(r => r.id === id)
     editPerson.value = {
       name_recommended: row?.name_recommended || '',
