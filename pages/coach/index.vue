@@ -19,7 +19,7 @@
 
         <div v-else class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <component
-            :is="c.enabled ? 'NuxtLink' : 'div'"
+            :is="c.enabled ? NuxtLink : 'div'"
             v-for="c in coaches"
             :key="c.language"
             :to="c.enabled ? `/coach/${c.language}` : undefined"
@@ -54,10 +54,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
+import { ref, onMounted, resolveComponent } from "vue";
 import { authedFetch } from "~/composables/useAuthedFetch";
 
 definePageMeta({ middleware: "coach-auth" });
+
+// 用解析出的實體元件，而非字串 'NuxtLink'：字串形式靠全域元件解析，
+// dev server 重啟/某些狀態下會解析失敗 → 卡片渲染成 inert <nuxtlink> 點不進去。
+const NuxtLink = resolveComponent("NuxtLink");
 
 const coaches = ref<any[]>([]);
 const progressMap = ref<Record<string, any>>({});

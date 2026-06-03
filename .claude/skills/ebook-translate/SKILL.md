@@ -3,6 +3,9 @@ name: ebook-translate
 description: 將外文 ebook 翻譯／轉成繁體中文並入庫（reader 可讀）的完整流程。涵蓋兩條子 pipeline — (A) **英文 → 繁中（雙語入庫）**：Sonnet 4.6 或 Gemini Flash 章節級翻譯，原文 source_text 同步存進 JSONL，reader 提供「中／中英對照／英」三段切換；(B) **簡體 → 繁體（直接取代）**：opencc s2tw + TRAD_FIXES，不用 LLM，覆寫 content 不保留 source_text。Use when 使用者要把英文 ebook 翻成中文上架（例 ACCS Apocrypha、未中譯的 Schaff 卷）、補 ACCS 缺的中譯卷（vol 24-25 耶利米/哀歌等），或把舊有簡體書批次轉成繁體。本 skill 與 ebook-pipeline 並列：ebook-pipeline 處理 parse/OCR/standardize，本 skill 處理「外文／簡體 → 繁中」這一段。
 ---
 
+> ⚙️ **引擎政策（2026-06-03 更新）**：所有 LLM 工作一律**優先用 NVIDIA（輝達，`https://integrate.api.nvidia.com/v1`，預設文字模型 `deepseek-ai/deepseek-v4-flash`）**，fallback 用 Gemini，**Haiku／Anthropic 全面停用**。下文若提到用 Haiku 翻譯／校對／視覺校對／OCR／清理／下標題，一律改用 NVIDIA（視覺類用 NVIDIA 視覺模型如 `nvidia/llama-3.1-nemotron-nano-vl-8b-v1`）。
+
+
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session。使用者一說要傳截圖立刻提醒先確認尺寸。
 
 # Ebook Translate Skill

@@ -31,6 +31,17 @@ export default defineNuxtConfig({
     // 升付費後可設 GEMINI_MODEL=gemini-2.5-flash、GEMINI_GRADE_MODEL=gemini-2.5-pro 免改碼升級。
     geminiModel: process.env.GEMINI_MODEL || "gemini-flash-latest",
     geminiGradeModel: process.env.GEMINI_GRADE_MODEL || "gemini-flash-latest",
+    // 語言教練主引擎：NVIDIA NIM（無限量），Gemini 降為 fallback。
+    // 2026-06-03 改用 NVIDIA 為主：成本 0、無每日配額牆。fileData（YouTube）NVIDIA 不支援 → 自動走 Gemini。
+    // 模型：qwen3-next-80b-a3b-instruct（繁中佳、支援 JSON、穩定可用）。
+    //   ⚠️ 不用 deepseek-v4-flash：該模型在 NVIDIA 免費層長期 429，互動式教練不可靠
+    //   （deepseek 只適合翻譯腳本那種可退避重試的批次場景）。
+    nvidiaApiKeys: [
+      process.env.NVIDIA_API_Key_1,
+      process.env.NVIDIA_API_Key_2,
+      process.env.NVIDIA_API_Key_3,
+    ].filter(Boolean) as string[],
+    nvidiaModel: process.env.NVIDIA_MODEL || "qwen/qwen3-next-80b-a3b-instruct",
     // 語言教練專用雙 key：先用免費，免費額度用完 → 前端確認後改用付費。
     // 兩支都還沒填時，免費層 fallback 用既有的 Gemini_API_Key_* 共用池。
     geminiCoachFreeKey: process.env.GEMINI_COACH_FREE_KEY,

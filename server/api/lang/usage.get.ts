@@ -15,7 +15,7 @@ const PRICES: Record<string, { in: number; out: number }> = {
 const USD_TO_TWD = 32;
 
 function estCost(model: string, tier: string, promptTok: number, outTok: number) {
-  if (tier === "free") return 0; // 免費層不計費
+  if (tier === "free" || tier === "nvidia") return 0; // 免費層 / NVIDIA 無限量不計費
   const p = PRICES[model] || { in: 0.3, out: 2.5 };
   return (promptTok / 1e6) * p.in + (outTok / 1e6) * p.out;
 }
@@ -58,6 +58,7 @@ export default defineEventHandler(async (event) => {
   return {
     today: {
       all: sum((r) => r.usage_date === today),
+      nvidia: sum((r) => r.usage_date === today && r.tier === "nvidia"), // 主引擎（無限量）
       free: sum((r) => r.usage_date === today && r.tier === "free"),
       paid: sum((r) => r.usage_date === today && r.tier === "paid"),
     },

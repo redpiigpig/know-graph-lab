@@ -115,16 +115,11 @@ def proofread_chunk(c: dict, book: dict) -> dict:
         en_block=en_block,
     )
 
-    _refresh_anthropic_client_if_creds_changed()
     for attempt in range(3):
         try:
-            msg = tezh._anthropic_client.messages.create(
-                model=HAIKU_MODEL,
-                max_tokens=2000,
-                messages=[{"role": "user", "content": prompt}],
-            )
-            text = "".join(b.text for b in msg.content if hasattr(b, "text")).strip()
-            # Strip markdown fence if Haiku added one
+            # Haiku retired 2026-06-03 → NVIDIA NIM (deepseek-v4-flash) for B-layer proofread.
+            text = tezh.nvidia_chat(prompt, max_tokens=2000)
+            # Strip markdown fence if the model added one
             text = re.sub(r"^```(?:json)?\s*", "", text)
             text = re.sub(r"\s*```\s*$", "", text)
             try:

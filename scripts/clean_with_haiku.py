@@ -22,10 +22,9 @@ if sys.platform == "win32":
     sys.stderr.reconfigure(encoding="utf-8")
 
 try:
-    from anthropic import Anthropic
     import requests
 except ImportError:
-    print("Missing: pip install anthropic requests", file=sys.stderr)
+    print("Missing: pip install requests", file=sys.stderr)
     sys.exit(1)
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -41,7 +40,10 @@ H = {
 }
 
 CHUNKS_DIR = Path("G:/我的雲端硬碟/資料/電子書/_chunks")
-MODEL = "claude-haiku-4-5-20251001"
+# Haiku retired 2026-06-03 (user：haiku 全面停用) → NVIDIA NIM (OpenAI-compatible).
+NVIDIA_KEY = ENV.get("NVIDIA_API_Key_1") or ENV.get("NVIDIA_API_KEY")
+NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
+NVIDIA_MODEL = "deepseek-ai/deepseek-v4-flash"
 
 
 def fetch_books_to_clean(limit=None):
@@ -104,8 +106,9 @@ def get_book_chunks(book_id: str) -> list:
     return chunks if chunks else None
 
 
-def clean_text_batch(client: Anthropic, chunks: list) -> dict:
-    """Send chunks to Haiku for cleaning. Returns {cleaned_chunks, error?}."""
+def clean_text_batch(client, chunks: list) -> dict:
+    """Send chunks to NVIDIA NIM for cleaning (Haiku retired 2026-06-03).
+    `client` kept for signature compat but unused. Returns {cleaned_chunks, error?}."""
     if not chunks:
         return {"cleaned_chunks": [], "error": "No chunks"}
 
@@ -127,24 +130,25 @@ def clean_text_batch(client: Anthropic, chunks: list) -> dict:
     combined = "\n\n---CHUNK BREAK---\n\n".join(chunk_texts)
 
     try:
-        response = client.messages.create(
-            model=MODEL,
-            max_tokens=4096,
-            messages=[
-                {
-                    "role": "user",
-                    "content": f"""Clean this Chinese text:
+        import re as _re
+        prompt = f"""Clean this Chinese text:
 1. Convert simplified → traditional
 2. Fix formatting: spacing, paragraph breaks, remove OCR artifacts
 3. Return ONLY the cleaned text, no explanation
 
 TEXT TO CLEAN:
-{combined}""",
-                }
-            ],
+{combined}"""
+        response = requests.post(
+            NVIDIA_URL,
+            headers={"Authorization": f"Bearer {NVIDIA_KEY}", "Content-Type": "application/json"},
+            json={"model": NVIDIA_MODEL,
+                  "messages": [{"role": "user", "content": prompt}],
+                  "temperature": 0.2, "max_tokens": 8000},
+            timeout=180,
         )
-
-        cleaned_text = response.content[0].text
+        response.raise_for_status()
+        cleaned_text = _re.sub(r"<think>.*?</think>", "",
+                               response.json()["choices"][0]["message"]["content"], flags=_re.S).strip()
 
         # Split back into chunks by the marker
         cleaned_parts = cleaned_text.split("---CHUNK BREAK---")
@@ -226,14 +230,12 @@ def cmd_run(limit=None, dry_run=False):
             )
         return
 
-    # Check API key
-    if not os.getenv("ANTHROPIC_API_KEY"):
-        print("\n❌ Missing ANTHROPIC_API_KEY")
-        print("   Get one at https://console.anthropic.com/")
-        print("   Then set: export ANTHROPIC_API_KEY=sk_...")
+    # Check API key (Haiku retired 2026-06-03 → NVIDIA NIM)
+    if not NVIDIA_KEY:
+        print("\n❌ Missing NVIDIA_API_Key_1 in .env")
         sys.exit(1)
 
-    client = Anthropic()
+    client = None  # NVIDIA used directly in clean_text_batch
     ok = 0
     failed = []
 

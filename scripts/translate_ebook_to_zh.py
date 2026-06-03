@@ -113,6 +113,19 @@ _nv_key_idx = 0
 NVIDIA_MODELS = ["deepseek-ai/deepseek-v4-flash"]
 NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
 
+# 緩慢呼叫 (user 2026-06-03): the single free NVIDIA key hard-429s under bursty
+# load. Enforce a global minimum gap between NVIDIA requests so we stay under its
+# RPM ceiling instead of hammering it. _nv_throttle() blocks just long enough.
+NVIDIA_MIN_INTERVAL = 6.0  # seconds between any two NVIDIA calls (~10 RPM)
+_nv_last_call = 0.0
+
+def _nv_throttle() -> None:
+    global _nv_last_call
+    gap = NVIDIA_MIN_INTERVAL - (time.time() - _nv_last_call)
+    if gap > 0:
+        time.sleep(gap)
+    _nv_last_call = time.time()
+
 # Gemini → Haiku 2-strike fallback + 6h cooldown.
 # 連續兩次「跑完所有 keys 都 429/throttling」就視為配額耗盡，進入 Haiku-only 模式 6 小時。
 # 6 小時後下個 chunk 會再試 Gemini；一旦成功，streak 歸零、cooldown 解除。
@@ -491,9 +504,10 @@ def nvidia_translate(source: str) -> str:
         while keys_tried < len(NVIDIA_KEYS):
             key = NVIDIA_KEYS[_nv_key_idx]
             keys_tried += 1
-            for attempt, wait in enumerate((0, 5, 20), start=1):
+            for attempt, wait in enumerate((0, 30, 90, 180), start=1):
                 if wait:
                     time.sleep(wait)
+                _nv_throttle()  # 緩慢呼叫 — keep under the free key's RPM ceiling
                 try:
                     r = requests.post(
                         NVIDIA_URL,
@@ -506,7 +520,7 @@ def nvidia_translate(source: str) -> str:
                     )
                 except requests.exceptions.RequestException as e:
                     last_err = f"conn {type(e).__name__}"
-                    if attempt >= 3:
+                    if attempt >= 4:
                         break
                     continue
                 if r.status_code == 200:
@@ -519,7 +533,7 @@ def nvidia_translate(source: str) -> str:
                 if r.status_code in (429, 500, 502, 503, 504):
                     last_err = f"NVIDIA {r.status_code}"
                     print(f"  NVIDIA {r.status_code} {model} key#{_nv_key_idx} attempt {attempt}", file=sys.stderr, flush=True)
-                    if attempt >= 3:
+                    if attempt >= 4:
                         break
                     continue
                 last_err = f"NVIDIA HTTP {r.status_code}: {r.text[:200]}"
@@ -549,20 +563,21 @@ def nvidia_chat(prompt: str, max_tokens: int = 2000, system: str | None = None,
         while keys_tried < len(NVIDIA_KEYS):
             key = NVIDIA_KEYS[_nv_key_idx]
             keys_tried += 1
-            for attempt, wait in enumerate((0, 5, 20), start=1):
+            for attempt, wait in enumerate((0, 30, 90, 180), start=1):
                 if wait:
                     time.sleep(wait)
+                _nv_throttle()  # 緩慢呼叫 — keep under the free key's RPM ceiling
                 try:
                     r = requests.post(
                         NVIDIA_URL,
                         headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
                         json={"model": model, "messages": msgs,
                               "temperature": temperature, "max_tokens": max_tokens},
-                        timeout=180,
+                        timeout=300,
                     )
                 except requests.exceptions.RequestException as e:
                     last_err = f"conn {type(e).__name__}"
-                    if attempt >= 3:
+                    if attempt >= 4:
                         break
                     continue
                 if r.status_code == 200:
@@ -573,7 +588,7 @@ def nvidia_chat(prompt: str, max_tokens: int = 2000, system: str | None = None,
                     break
                 if r.status_code in (429, 500, 502, 503, 504):
                     last_err = f"NVIDIA {r.status_code}"
-                    if attempt >= 3:
+                    if attempt >= 4:
                         break
                     continue
                 last_err = f"NVIDIA HTTP {r.status_code}: {r.text[:200]}"
@@ -855,11 +870,15 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
         # Explicit Gemini-first chain (Gemini primary, NVIDIA per-piece fallback).
         translator, model_label = gemini_with_nvidia_fallback, "gemini-2.5-flash → nvidia fallback"
     elif engine == "haiku":
-        # Haiku 全面停用 (user 2026-06-03) — redirect to default NVIDIA→Gemini chain.
-        print("  ⚠ --engine haiku 已全面停用，改用 nvidia→gemini", flush=True)
-        translator, model_label = nvidia_with_gemini_fallback, f"{NVIDIA_MODELS[0]} → gemini fallback"
-    else:  # default (2026-06-03): NVIDIA deepseek-v4-flash first, Gemini per-piece fallback
-        translator, model_label = nvidia_with_gemini_fallback, f"{NVIDIA_MODELS[0]} → gemini fallback"
+        # Haiku 全面停用 (user 2026-06-03) — redirect to default Gemini→NVIDIA chain.
+        print("  ⚠ --engine haiku 已全面停用，改用 gemini→nvidia", flush=True)
+        translator, model_label = gemini_with_nvidia_fallback, "gemini-2.5-flash → nvidia fallback"
+    else:  # default (2026-06-03): Gemini 4 keys primary, NVIDIA deepseek fallback.
+        # PROD FINDING 2026-06-03: NVIDIA-first was tried but the single free key
+        # both ReadTimeouts on 15-20K char pieces AND 429s under any sustained load,
+        # so deepseek CANNOT be primary — it sits behind Gemini as the per-piece
+        # fallback (replacing the retired Haiku) for when Gemini's 4 keys exhaust.
+        translator, model_label = gemini_with_nvidia_fallback, "gemini-2.5-flash → nvidia fallback"
     print(f"Engine: {engine}  Model: {model_label}", flush=True)
 
     t_total = time.time()

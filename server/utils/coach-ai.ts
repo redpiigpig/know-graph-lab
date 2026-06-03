@@ -4,9 +4,10 @@
 //  - 免費額度用完 → 拋 code='free_exhausted'，前端跳確認後改付費
 //  - 記錄 token 用量（給網頁顯示用量與估計成本）
 // ============================================================================
-import { callGeminiFull, type GeminiCallOpts } from "~/server/utils/gemini";
+import { callGeminiFull, type GeminiCallOpts, type GeminiResult } from "~/server/utils/gemini";
+import { callNvidiaFull } from "~/server/utils/nvidia";
 
-export type Tier = "free" | "paid";
+export type Tier = "free" | "paid" | "nvidia";
 
 // 依 usePaid 解析要用的 key 池與 tier
 export function resolveCoachKeys(usePaid: boolean, cfg?: any): { keys: string[]; tier: Tier } {
@@ -68,13 +69,48 @@ export async function monthlyPaidCostTwd(supabase: any, userId: string): Promise
   return Math.round(usd * USD_TO_TWD * 100) / 100;
 }
 
+// 把 token 用量累加進 lang_api_usage（fire-and-forget，不阻塞回應）
+function recordUsage(ctx: CoachCtx, tier: Tier, result: GeminiResult) {
+  const today = new Date().toISOString().slice(0, 10);
+  ctx.supabase
+    .rpc("bump_lang_usage", {
+      p_user: ctx.userId,
+      p_date: today,
+      p_tier: tier,
+      p_model: result.model,
+      p_prompt: result.usage.promptTokens,
+      p_output: result.usage.outputTokens,
+    })
+    .then(() => {})
+    .catch(() => {});
+}
+
 /**
- * 語言教練專用 Gemini 呼叫。回傳純文字。
- * 額度用完時：免費 → 429 code=free_exhausted（前端提示切換）；付費 → 429 code=paid_exhausted。
+ * 語言教練專用 AI 呼叫。回傳純文字。
+ * 主引擎：NVIDIA NIM（deepseek-v4-flash，無限量、零成本）；失敗才落到 Gemini。
+ * Gemini 額度用完時：免費 → 429 code=free_exhausted（前端提示切換）；付費 → 429 code=paid_exhausted。
  * 成功時把 token 用量累加進 lang_api_usage。
  */
 export async function coachGemini(opts: GeminiCallOpts, ctx: CoachCtx): Promise<string> {
   const config = useRuntimeConfig();
+
+  // ── 主引擎：NVIDIA NIM（無限量）──
+  // fileData（YouTube 等多模態 part）NVIDIA 不支援 → 跳過，直接走 Gemini。
+  const nvKeys = (config.nvidiaApiKeys as string[]) || [];
+  const hasFileData = (opts.contents || []).some((c) =>
+    (c.parts || []).some((p: any) => p && typeof p === "object" && "fileData" in p)
+  );
+  if (nvKeys.length && !hasFileData) {
+    try {
+      const result = await callNvidiaFull({ ...opts, keys: nvKeys });
+      recordUsage(ctx, "nvidia", result); // NVIDIA 無限量、零成本，獨立 tier 記帳
+      return result.text;
+    } catch (e: any) {
+      // NVIDIA 失敗（額度/連線/格式）→ 落到 Gemini fallback
+      console.warn("[coach] NVIDIA 失敗，改用 Gemini：", e?.message || e);
+    }
+  }
+
   // 付費 key 僅限站長使用（保護荷包）
   let usePaid = ctx.usePaid;
   if (usePaid && !(await isOwner(ctx.supabase, ctx.userId))) usePaid = false;
@@ -108,20 +144,7 @@ export async function coachGemini(opts: GeminiCallOpts, ctx: CoachCtx): Promise<
     throw e;
   }
 
-  // 記錄用量（fire-and-forget，不阻塞回應）
-  const today = new Date().toISOString().slice(0, 10);
-  ctx.supabase
-    .rpc("bump_lang_usage", {
-      p_user: ctx.userId,
-      p_date: today,
-      p_tier: tier,
-      p_model: result.model,
-      p_prompt: result.usage.promptTokens,
-      p_output: result.usage.outputTokens,
-    })
-    .then(() => {})
-    .catch(() => {});
-
+  recordUsage(ctx, tier, result);
   return result.text;
 }
 

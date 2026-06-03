@@ -3,6 +3,9 @@ name: scripture-canon-portal
 description: 五個基督教經典/傳統對照工具的入口（/scripture 聖經多版本+教父註釋+各教會次經第二正典 / /creeds 21 次大公會議+各教會尼西亞信經+新教信條全譜 / /canon-law 教會法規 / /fathers 教父著作搜索 / /apocrypha 典外文獻搜索）。Status: **/scripture 32 版本平行對照 + /creeds 21 次大公會議 + /apocrypha 黃根春 10 卷 Vision OCR 全部上線**。2026-05-31 /apocrypha 完成：123/132 卷 (93.2%) 有內容 / 2.26M 字繁中 / 2,058 footnote / 教父-style reader（10 sections/頁 + 三層 sidebar + 註釋集中頁底 + 章節 label）。
 ---
 
+> ⚙️ **引擎政策（2026-06-03 更新）**：所有 LLM 工作一律**優先用 NVIDIA（輝達，`https://integrate.api.nvidia.com/v1`，預設文字模型 `deepseek-ai/deepseek-v4-flash`）**，fallback 用 Gemini，**Haiku／Anthropic 全面停用**。下文若提到用 Haiku 翻譯／校對／視覺校對／OCR／清理／下標題，一律改用 NVIDIA（視覺類用 NVIDIA 視覺模型如 `nvidia/llama-3.1-nemotron-nano-vl-8b-v1`）。
+
+
 # Scripture, Tradition, Canon, Fathers, Apocrypha Portal
 
 > 🟢 **Status**: 實作中 2026-05-21。`/scripture-canon` portal + `/creeds` list + `/scripture` 多版本平行對照（86 卷 × 6 版本）+ 一份範例信條已上線；其餘信條檔依「逐份新增」流程補。

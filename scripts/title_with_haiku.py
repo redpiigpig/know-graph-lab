@@ -30,7 +30,6 @@ import time
 from pathlib import Path
 
 import requests
-import anthropic
 
 sys.stdout.reconfigure(encoding="utf-8")
 
@@ -59,8 +58,27 @@ PROJECT_REF = SUPABASE_URL.replace("https://", "").split(".")[0]
 # Try to get ANTHROPIC_KEY from env, fall back to None (uses default auth)
 ANTHROPIC_KEY = ENV.get("ANTHROPIC_API_KEY")
 
-MODEL = "claude-haiku-4-5"
-MAX_TOKENS = 64
+# Haiku retired 2026-06-03 (user：haiku 全面停用) → NVIDIA NIM (OpenAI-compatible).
+NVIDIA_KEY = ENV.get("NVIDIA_API_Key_1") or ENV.get("NVIDIA_API_KEY")
+NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
+NVIDIA_MODEL = "deepseek-ai/deepseek-v4-flash"
+MAX_TOKENS = 200  # deepseek may emit brief reasoning before the title
+
+
+def _nvidia_title(system: str, user_msg: str) -> str:
+    import re as _re
+    r = requests.post(
+        NVIDIA_URL,
+        headers={"Authorization": f"Bearer {NVIDIA_KEY}", "Content-Type": "application/json"},
+        json={"model": NVIDIA_MODEL,
+              "messages": [{"role": "system", "content": system},
+                           {"role": "user", "content": user_msg}],
+              "temperature": 0.3, "max_tokens": MAX_TOKENS},
+        timeout=120,
+    )
+    r.raise_for_status()
+    txt = r.json()["choices"][0]["message"]["content"]
+    return _re.sub(r"<think>.*?</think>", "", txt, flags=_re.S).strip()
 
 SYSTEM = (
     "你是對話標題生成器。讀完使用者問題與 AI 回答後，產生 6~12 個繁體中文字、"
@@ -174,26 +192,15 @@ async def title_one(client, sem, row, retry_log):
     async with sem:
         for attempt in range(3):
             try:
-                resp = await client.messages.create(
-                    model=MODEL,
-                    max_tokens=MAX_TOKENS,
-                    system=SYSTEM,
-                    messages=[{"role": "user", "content": user_msg}],
-                )
-                raw = "".join(
-                    b.text for b in resp.content if getattr(b, "type", None) == "text"
-                )
+                # Haiku retired 2026-06-03 → NVIDIA NIM via worker thread.
+                raw = await asyncio.to_thread(_nvidia_title, SYSTEM, user_msg)
                 title = sanitize_title(raw)
-                return row["id"], title, resp.usage
-            except anthropic.RateLimitError:
-                wait = 5 * (attempt + 1)
-                retry_log.append(f"  429 on {row['id'][:8]}, sleep {wait}s")
-                await asyncio.sleep(wait)
-            except anthropic.APIError as e:
+                return row["id"], title, None
+            except Exception as e:
                 if attempt == 2:
                     retry_log.append(f"  GIVE UP {row['id'][:8]}: {e}")
                     return row["id"], None, None
-                await asyncio.sleep(2 ** attempt)
+                await asyncio.sleep(2 ** attempt * 3)
         return row["id"], None, None
 
 
@@ -204,7 +211,7 @@ async def main_async(table, limit, concurrency, flush):
     if not rows:
         return
 
-    client = anthropic.AsyncAnthropic(api_key=ANTHROPIC_KEY)
+    client = None  # Haiku retired 2026-06-03 — title_one now calls NVIDIA NIM
     sem = asyncio.Semaphore(concurrency)
     retry_log = []
 

@@ -62,9 +62,12 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 
 ## 六、模型與 key（成本）
 
-- `server/utils/gemini.ts`（callGemini/callGeminiFull + key 輪替 + usageMetadata）；`coach-ai.ts` `coachGemini`（tier 選 key + owner/budget 守門 + 用量寫 `lang_api_usage`）。
+- **主引擎＝NVIDIA NIM（2026-06-03 起）**：`server/utils/nvidia.ts` `callNvidiaFull`（OpenAI 相容、key 輪替、剝 `<think>`）。`coach-ai.ts` `coachGemini` 先試 NVIDIA → 失敗才落 Gemini。env `nvidiaApiKeys`=`NVIDIA_API_Key_1..3`、`nvidiaModel` 預設 **`qwen/qwen3-next-80b-a3b-instruct`**（繁中佳、支援 JSON、穩定）。無限量、零成本，用量記 tier=`nvidia`。
+  - ⚠️ **不要改回 `deepseek-ai/deepseek-v4-flash`**：該模型在 NVIDIA 免費層長期 429（互動式教練不可靠）；deepseek 只適合 translate 腳本那種可退避重試的批次。其餘 NVIDIA 模型（qwen3-next、llama-3.1）正常 200。
+  - **fileData（YouTube 等多模態 part）NVIDIA 不支援** → `coachGemini` 偵測到自動跳過走 Gemini。
+- **Fallback＝Gemini**：`server/utils/gemini.ts`（callGemini/callGeminiFull + key 輪替 + usageMetadata）；`coach-ai.ts` `coachGemini`（tier 選 key + owner/budget 守門 + 用量寫 `lang_api_usage`）。
 - 預設模型 **`gemini-flash-latest`**（固定 ID 2.5-flash 免費日限 20 太低；alias 配額桶分開）。env `GEMINI_MODEL`/`GEMINI_GRADE_MODEL` 可覆寫。
-- 雙 key env：`GEMINI_COACH_FREE_KEY`（空則 fallback `Gemini_API_Key_*` 池）/ `GEMINI_COACH_PAID_KEY`。免費用完→前端 `useCoachAi.aiFetch` 跳確認→切付費重試。
+- 雙 key env：`GEMINI_COACH_FREE_KEY`（空則 fallback `Gemini_API_Key_*` 池）/ `GEMINI_COACH_PAID_KEY`。Gemini 免費用完→前端 `useCoachAi.aiFetch` 跳確認→切付費重試（NVIDIA 為主後此路徑幾乎不觸發）。
 - 前端 AI 呼叫一律走 `useCoachAi().aiFetch`（自動帶 usePaid + free_exhausted 處理）。
 
 ## 七、DB 表（Supabase，全 RLS 依 user_id）

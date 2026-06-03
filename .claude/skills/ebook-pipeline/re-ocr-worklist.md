@@ -1,3 +1,6 @@
+
+> ⚙️ **引擎政策（2026-06-03 更新）**：所有 LLM 工作一律**優先用 NVIDIA（輝達，`https://integrate.api.nvidia.com/v1`，預設文字模型 `deepseek-ai/deepseek-v4-flash`）**，fallback 用 Gemini，**Haiku／Anthropic 全面停用**。下文若提到用 Haiku 翻譯／校對／視覺校對／OCR／清理／下標題，一律改用 NVIDIA（視覺類用 NVIDIA 視覺模型如 `nvidia/llama-3.1-nemotron-nano-vl-8b-v1`）。
+
 # Re-OCR 工作清單（96 本：47 OCR-fail + 49 空白正文）
 
 > 產生於 2026-06-03。「重新 OCR」= 已經 OCR 過但結果不堪用，要重打。
