@@ -504,8 +504,8 @@ Vol 9:  349 → 92   (30 page + 62 other)
 | ✅ 15 | NPNF1 Vol 4 (Anti-Manichaean + Anti-Donatist) | 已精修 | fix_npnf_tree |
 | ✅ 16-25 | NPNF1 Vol 5-14（駁伯拉糾派…奧古斯丁 V5-8 + 金口若望 V9-14）| 已精修 | 金口若望命名鎖定 |
 | ✅ 26-29 | NPNF2 Vol 1（優西比烏）/ 2（蘇格拉底+索佐門）/ 3（狄奧多勒+耶柔米）/ 5（尼撒格列高里）| 已精修 | 巢狀 override (vol26/28) |
-| 🔄 30 | NPNF2 Vol 6（耶柔米）| 翻譯中 | 見接手清單 |
-| 31-38 | NPNF2 Vol 7-14 + ACCS 待補卷 | 待續 | 佇列見接手清單 |
+| ✅ 30 | NPNF2 Vol 6（耶柔米 Jerome — 書信 + 論著 + 導論）| 已精修 | NVIDIA 4 帳號 deepseek 收尾；`_fix_vol30_jerome.py` 把 115 英文 NCX 卷名 relabel 成繁中 + 三層樹（導論/序言/論著/書信）；validate 0 FAIL/0 WARN · test_fathers_quality PASS |
+| 31-38 | NPNF2 Vol 7-14 + ACCS 待補卷 | 待續 | 佇列見接手清單；Schaff 全集 = ANF 10 + NPNF1 14 + NPNF2 14 = **38 卷**（+ ACCS 27 卷）|
 
 ---
 
@@ -554,11 +554,21 @@ auto-push。**git 在 master 跑教父**（user 拍板；feat/language-coach 是
   V4 亞他那修（前次）· V5 尼撒的格列高里
 - 譯名鎖定：**金口若望**（非屈梭多模）· **狄奧多勒**（非狄奧多雷）· **格列高里**（里非理）
 
-### 🔄 進行中（背景 nohup，**新 session 先查**）
-- **vol30 NPNF2 V6 耶柔米** `d229a6d4-14de-4e28-92de-4855c75cbf68`
-  log `scripts/logs/translate_vol30.log`；查 `grep "ebooks row updated"`，未完則看 jsonl 計數。
-  ⚠️ REGISTRY/TERM_FIXES **尚未建**（翻完先 dry-run 看結構，NPNF2 多有巢狀，比照 vol26/28 override）。
-- Monitor 用 bash 背景 while-loop 偵測「完成/Traceback/jsonl >50min 沒寫入卡死」三態。
+### ✅ 本輪完成
+- **vol30 NPNF2 V6 耶柔米** `d229a6d4-14de-4e28-92de-4855c75cbf68` — translate（NVIDIA 4 帳號 deepseek
+  收尾）→ polish → consolidate_by_ncx → `_fix_vol30_jerome.py`（115 英文 NCX 卷名 relabel 繁中 +
+  三層樹）→ validate 0 FAIL/0 WARN → test_fathers_quality PASS → REFINED_IDS。詞庫 backfill 未跑
+  （配額；可日後補）。**B 層 LLM 校對未跑**（當晚全 provider 配額耗盡）— 日後配額足時補 `llm_proofread_book.py`。
+
+### 🔄 下一卷
+- **vol31 NPNF2 V7 區利羅+拿先斯** `af2cf8a7-b169-432c-863d-632647c8ab67`（見下方接續佇列）。
+  起手：先 `/translation-glossary` 查區利羅（=亞歷山卓的區利羅，非西里爾）/拿先斯的格列高里譯名。
+
+### ⚙️ 引擎現況（2026-06-03 重做）
+- 預設 **gemini-first → NVIDIA deepseek-v4-flash fallback**；Haiku 全面停用（`5aa6fe9`）。
+- NVIDIA **4 帳號 key round-robin + 每 key 429 cooldown 120s + 全域 6s 節流**（單帳號免費日額很小，
+  ~40 分鐘耗盡；4 帳號分散）。`NVIDIA_MODELS=["deepseek-ai/deepseek-v4-flash"]`（唯一保留段落
+  對齊 + {{p:N}}/[^N] marker 的模型；qwen3-next 雖快但壓段落、毀 marker，勿用）。
 
 ### ⚙️ 操作鐵則（踩過的坑，務必遵守）
 1. **每卷上架前跑 `python scripts/test_fathers_quality.py <id>` 綠燈才算數**（G1 validate 0 FAIL /

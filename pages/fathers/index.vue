@@ -137,6 +137,7 @@ const REFINED_IDS = new Set([
   '29782dd6-ece9-446a-83ed-9cc0892d7cc7',  // NPNF2 Vol 2 (Socrates Scholasticus + Sozomen — Ecclesiastical Histories)
   'a7e5956e-8851-4d0f-b3d2-1f823d1bdc81',  // NPNF2 Vol 3 (Theodoret + Jerome/Gennadius + Rufinus)
   '9b94e7c1-fa82-4910-a31f-9db1e2e040bb',  // NPNF2 Vol 5 (Gregory of Nyssa — Dogmatic/Ascetic/Philosophical/Apologetic/Oratorical/Letters)
+  'd229a6d4-14de-4e28-92de-4855c75cbf68',  // NPNF2 Vol 6 (Jerome 耶柔米 — Letters + Treatises + Prolegomena)
 ])
 
 const series = [
