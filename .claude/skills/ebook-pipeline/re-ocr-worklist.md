@@ -134,3 +134,5 @@
 - 16 本 <50MB → 需 Gemini，但見下方 blocker。
 
 **🚧 BLOCKER（需使用者處理）**：**Gemini 全 4 把 key「prepayment credits depleted」**，Gemini OCR 整個停擺——這才是 OCR 佇列長期卡住的真正原因，不是只有那 37 本。<50MB 的書（A 段 16 本 + 原佇列 ~77 本）在儲值前都只能慢速 fallback Haiku。要去 AI Studio 檢查/儲值。
+
+**Recovery 實跑結果**：Haiku path 已驗證修好（不再 NoneType crash，正常逐 batch 跑＋checkpoint resume）。但撞到**第二道 quota 牆：Anthropic Max 帳號 rolling rate limit**（"would exceed your account's rate limit"），跑 2 本就 2-strike 暫停。→ 改用 `c:/tmp/haiku_recover_loop.sh` **過夜 auto-resume**（每 40 分重試一次，從 checkpoint 續，限制放鬆才會真正消化；我互動中會跟它搶同一個 Max 帳號，閒置/過夜才跑得動）。**兩個引擎此刻都卡 quota：Gemini 沒額度、Haiku 撞帳號上限。**
