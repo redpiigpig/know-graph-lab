@@ -7,7 +7,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 
 # AI 語言教練 Skill
 
-使用者（宗教研究者）的外語自學系統。目標：英文 B2→C2→TOEFL；日文 N5 起步。題材**以宗教/神話/宗教學為主軸**，輔以人文，少量理工醫/生活/旅遊（考試模式走真實考題）。相關偏好見 [[project_language_coach]]、[[feedback_language_coach_religious_studies]]、[[feedback_traditional_chinese_only]]。
+使用者（宗教研究者）的外語自學系統。目標：英文 **B2→C2→TOEFL**；日文 **N5→N4（初學）**。題材**以宗教/神話/宗教學為主軸**，輔以人文，少量理工醫/生活/旅遊（考試模式走真實考題）。相關偏好見 [[project_language_coach]]、[[feedback_language_coach_religious_studies]]、[[feedback_traditional_chinese_only]]、[[feedback_coach_nvidia_engine]]。
 
 部署：**Zeabur**（GitHub master 自動部署）。DB：Supabase（Management API 跑 DDL，見 [[reference_supabase_management_api]]）。
 
@@ -34,6 +34,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 - **情境角色**（scenario）：教練演對方角色（店員/面試官/神職…）
 - **限時主題聊**（smalltalk 頁）
 - 人格：`lang-coaches.ts` `personas[]`，新對話依 session 數輪替（Emily 5 種）。注入統整記憶 + 人格 + 本次摘要進 system prompt。
+- **今日推薦（每天輪替，2026-06-04）**：語言首頁聊天磚下方「今日推薦 · 每天換」三排 chip — 💬聊話題（`smalltalkTopics`）/💡問知識（`qaTopics`）/🎭演情境（`scenarios`），各 3 個，以「當天日期種子」輪替（同天穩定、隔天換）。點 chip 直接 deep-link 進 chat（`?topic=` / `?mode=qa&topic=` / `?mode=scenario&scenario=`），`chat.vue` onMounted 讀 query 自動開場。資料每語言一份：Emily/櫻子各有 `smalltalkTopics`/`scenarios`/`qaTopics`（櫻子的 qaTopics 為 **N5→N4 初學版**，漢字附假名、淺白文化/宗教題）。
 
 ## 三、今日計畫（today）— 每日自學核心
 
@@ -49,6 +50,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 - **分級文法課**（`lang_grammar` PK user+lang+**level**）：英文 B2/C1/C2、日文 N5–N1 各一套；**Gemini 依程度自動生成**（不需手動 seed）；大綱循序 + 逐課懶生成（解說/例句/練習）+ 完成度。頁 `/coach/[lang]/grammar`。
 - **主題教程**（`lang_courses`）：可選預設或自建主題（宗教文獻精讀/學術寫作/TOEFL口說/敬語/宗教神話日語…），生成循序課表，**每課標預估分鐘**，逐課懶生成 + 進度條。頁 `/coach/[lang]/courses`；端點 courses(index/create/[id]/lesson/done)。
 - **單字 SRS**（`lang_vocab`，SM-2，`server/utils/srs.ts`）：到期佇列；review 預設選擇題（對=good 錯=again→複習）；不足時從整庫補未精熟字；`vocab/generate` 依**目前程度**生成主題詞組。
+  - **♾️ 無限刷題模式（預設開，2026-06-04）**：`review.vue` 右上開關。佇列剩 ≤4 張就背景用 `vocab/generate` 生一批新學術單字（走 NVIDIA、零成本）接到佇列尾，預抓藏延遲、本 session 去重，永不停。主題池 `THEME_POOLS` **依語言**：英文走 AWL/GRE/學術；日文走 N5/N4 基礎・日常・神社祭典等初學主題（別給日文出英文考試詞）。
 - **技能練習/考試**（`lang_tasks`）：`task/generate`（TOEFL/IELTS/GRE + 一般，聽說讀寫 + 翻譯）/ `task/[id]/answer`（選擇題自動批改、寫說/翻譯用 Gemini rubric 評分）。
 - **記憶/簡報/日誌**：`lang_memory`（跨 session 長期了解 + highlights 強弱項，注入對話）；`briefing`（今日簡報，每日快取）；`lang_journal`（教練每日日誌，日曆點閱）。
 - **難度依「目前程度」非目標**：生成都讀 `lang_progress.level`；量表 `coach.levelScale`（CEFR / JLPT / 入門初中進）；`progress.put` 設目前程度。
@@ -64,11 +66,18 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 
 - **主引擎＝NVIDIA NIM（2026-06-03 起）**：`server/utils/nvidia.ts` `callNvidiaFull`（OpenAI 相容、key 輪替、剝 `<think>`）。`coach-ai.ts` `coachGemini` 先試 NVIDIA → 失敗才落 Gemini。env `nvidiaApiKeys`=`NVIDIA_API_Key_1..4`（4 帳號 key 輪替，全部不可用才落 Gemini）、`nvidiaModel` 預設 **`qwen/qwen3-next-80b-a3b-instruct`**（繁中佳、支援 JSON、穩定）。無限量、零成本，用量記 tier=`nvidia`。
   - ⚠️ **不要改回 `deepseek-ai/deepseek-v4-flash`**：該模型在 NVIDIA 免費層長期 429（互動式教練不可靠）；deepseek 只適合 translate 腳本那種可退避重試的批次。其餘 NVIDIA 模型（qwen3-next、llama-3.1）正常 200。
-  - **fileData（YouTube 等多模態 part）NVIDIA 不支援** → `coachGemini` 偵測到自動跳過走 Gemini。
+  - **fileData（YouTube 等多模態 part）NVIDIA 不支援** → `coachGemini` 偵測到自動跳過走 Gemini。**∴ YouTube 沉浸一定要有 Gemini key**；缺 key 時 `content/ingest` 回明確訊息（含「伺服器偵測到 N 把 Gemini key」），並提示可改「貼上文章」（純文字走 NVIDIA）。
 - **Fallback＝Gemini**：`server/utils/gemini.ts`（callGemini/callGeminiFull + key 輪替 + usageMetadata）；`coach-ai.ts` `coachGemini`（tier 選 key + owner/budget 守門 + 用量寫 `lang_api_usage`）。
 - 預設模型 **`gemini-flash-latest`**（固定 ID 2.5-flash 免費日限 20 太低；alias 配額桶分開）。env `GEMINI_MODEL`/`GEMINI_GRADE_MODEL` 可覆寫。
+- **Gemini key 命名容錯（2026-06-04）**：`nuxt.config` 的 `geminiApiKeys` 同時接受 `Gemini_API_Key_N` 與全大寫 `GEMINI_API_KEY_N`（Zeabur 變數區分大小寫，打錯就讀不到 → YouTube 誤報缺 key）。付費層已停用（`GEMINI_COACH_PAID_KEY` 移除），現役＝NVIDIA×4 主 + `Gemini_API_Key_1..4` 免費池 fallback。
 - 雙 key env：`GEMINI_COACH_FREE_KEY`（空則 fallback `Gemini_API_Key_*` 池）/ `GEMINI_COACH_PAID_KEY`。Gemini 免費用完→前端 `useCoachAi.aiFetch` 跳確認→切付費重試（NVIDIA 為主後此路徑幾乎不觸發）。
 - 前端 AI 呼叫一律走 `useCoachAi().aiFetch`（自動帶 usePaid + free_exhausted 處理）。
+
+## 六之二、時區・計時器・日曆（2026-06-04）
+
+- **時區一律 Asia/Taipei**：Zeabur 跑 UTC，原本 `new Date().toISOString().slice(0,10)` 會把台灣凌晨算成昨天 → streak/今日時間/日曆/到期單字全錯一天。新增 `server/utils/today.ts`（`tzToday`/`tzMonth`/`tzDaysAgo`，寫死台北），**所有「今天」日期計算都改用它**（dashboard/activity/daily/journal/briefing/chat/task/vocab/ingest…）；`srs.ts` next_review 也台北。前端日曆與月份改用 `toLocaleDateString("en-CA")`（瀏覽器本地＝台北）對齊。⚠️ 新增任何用到「今天」的端點都要用 `today.ts`，別再寫 `toISOString().slice(0,10)`。
+- **計時器**：`components/CoachTimer.vue`（吃 `useActivityTracker().activeSeconds`，⏱ mm:ss，分頁切走暫停）。chat/smalltalk 本來就有；review/practice/immersion 已補上。從進頁開始算，flush 進 `lang_activity`（review→reading、practice→當前 skill、chat→speaking…）。
+- **日曆標今天**：語言首頁日曆今天格加 ring + 「今」徽章，標題顯示「今天 X月X日（週X）」。
 
 ## 七、DB 表（Supabase，全 RLS 依 user_id）
 
@@ -87,7 +96,7 @@ chat / profile(get,put) / progress(get,put) / activity / dashboard / usage / ass
 
 1. **Supabase Auth → Email Templates → Magic Link 加 `{{ .Token }}`**（最關鍵，否則驗證碼收不到）
 2. Supabase Auth 關「Allow new signups」；建議設自訂 SMTP（預設寄信額度低）
-3. Zeabur Variables 加 `GEMINI_COACH_PAID_KEY`（改上限再加 `GEMINI_PAID_MONTHLY_CAP_TWD`）
+3. **Zeabur Variables**：`NVIDIA_API_Key_1..4`（主引擎，無限量）+ `Gemini_API_Key_1..4`（fallback；**YouTube 沉浸必須**，否則只能用貼上文章）。⚠️ 變數名稱**區分大小寫**，現支援 `Gemini_API_Key_N` 或全大寫 `GEMINI_API_KEY_N` 兩種拼法。付費 key 已棄用，不需再設。
 
 ## 待辦（次要）
 
