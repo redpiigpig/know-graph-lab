@@ -86,6 +86,12 @@
    - 用 **Ferrero 法文題詞**當指紋才定位到真對應：德 `Einleitung` = 英 `CHAPTER I — CONCERNING THE TWO KINDS OF THINKING`。
    - 但**章內段落仍對不齊**（英 Ch I 有 74 段、德 4 段；Freud 提及散落非對應段）。→ **正確逐段三欄需人工逐句配對 + 我親譯**，非自動 run 能成。
 
+### ✅ 首個真實三欄切片上架（2026-06-03）
+走 (a) 人工配對：用**內容指紋**（非 heading）確認德 Einleitung = 英 §8 INTRODUCTION（兩者皆譯同一段 Freud/Ödipus 文字，Hinkle 的 heading 對齊會抓錯）。我**親譯**引論開頭兩段德文→繁中（詞庫鎖定），建 trilingual ebook（`ebook_id 22222222-2222-4222-8222-222222222222`，test 用，3 chunks＝封面+引論 p1+p2），reader 三欄（中/德/英）逐段對齊**截圖實證成功**。
+- 方法鎖定：**逐章先用內容指紋配對 de↔en 章節，再人工逐段對齊 + 親譯**。heading／epigraph 不可靠（Ferrero 題詞在多處出現）。
+- 工具：`scripts/_jung_ocr_slice.py`（OCR slice）、`scripts/_jung_pilot_build.py`（build，皆 `_` gitignore 一次性）。
+- 擴充：同法逐段補完整章 → 再下一章；德文重 OCR 待 Gemini 配額回復或續用 Haiku。
+
 ### 結論與下一步抉擇
 機械 pipeline 全部就緒且實證；卡點是**跨版逐段對齊是編輯級人工活**（Hinkle 非段落同構）。可選路徑：
 - (a) **我逐章人工配對德↔英 + 親譯**（正確但慢，一次一章的編輯工）；
