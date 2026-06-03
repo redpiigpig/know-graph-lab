@@ -54,12 +54,18 @@ def _strip_title(title: str) -> str:
     return t.strip().lower()
 
 
+_SLUG_MAX = 110  # gnostic_documents.slug is VARCHAR(120); leave headroom
+
+
 def make_slug(title: str) -> str:
-    """URL-safe kebab slug. Drops leading 'The', parentheticals, punctuation."""
+    """URL-safe kebab slug. Drops leading 'The', parentheticals, punctuation;
+    caps length at a hyphen boundary so it fits the slug PK column."""
     t = _strip_title(title)
     s = _NONWORD.sub("-", t).strip("-")
     s = re.sub(r"-{2,}", "-", s)
-    return s
+    if len(s) > _SLUG_MAX:
+        s = s[:_SLUG_MAX].rsplit("-", 1)[0]  # cut back to last full word
+    return s.strip("-")
 
 
 def normalize_title(title: str) -> str:

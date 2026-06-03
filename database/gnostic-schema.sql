@@ -8,8 +8,8 @@
 -- ============================================================================
 
 CREATE TABLE IF NOT EXISTS gnostic_documents (
-  slug              VARCHAR(48) PRIMARY KEY,    -- 'gospel-of-thomas' / 'pistis-sophia' / 'poimandres'
-  title_zh          VARCHAR(80) NOT NULL,
+  slug              VARCHAR(120) PRIMARY KEY,    -- 'gospel-of-thomas' / 'pistis-sophia' / 'poimandres'
+  title_zh          VARCHAR(200) NOT NULL,
   title_zh_short    VARCHAR(24),
   title_en          VARCHAR(160) NOT NULL,
   title_orig        VARCHAR(160),               -- 古典語原名 (若已知)
@@ -49,7 +49,7 @@ CREATE INDEX IF NOT EXISTS gnostic_versions_category ON gnostic_versions (catego
 
 CREATE TABLE IF NOT EXISTS gnostic_sections (
   id                BIGSERIAL PRIMARY KEY,
-  doc_slug          VARCHAR(48) NOT NULL REFERENCES gnostic_documents (slug) ON DELETE CASCADE,
+  doc_slug          VARCHAR(120) NOT NULL REFERENCES gnostic_documents (slug) ON DELETE CASCADE,
   version_code      VARCHAR(30) NOT NULL REFERENCES gnostic_versions (code) ON DELETE CASCADE,
   order_index       INT NOT NULL,               -- EN↔ZH 對齊鍵 (0,1,2,…)
   section_label     VARCHAR(80),                -- 'saying 12' / '§3' / '第三章'

@@ -58,6 +58,13 @@ def test_make_slug(title, expected):
     assert gl.make_slug(title) == expected
 
 
+def test_make_slug_caps_length_at_word_boundary():
+    long = "On the Trail of the Winged God: Hermes and Hermeticism Throughout the Ages and Beyond the Renaissance"
+    s = gl.make_slug(long)
+    assert len(s) <= 110
+    assert not s.endswith("-")        # cut at a hyphen boundary, no trailing dash
+
+
 def test_make_slug_is_stable_and_url_safe():
     s = gl.make_slug("The Hymn of the Pearl — Acts of Thomas")
     assert s == s.lower()
