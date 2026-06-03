@@ -49,16 +49,30 @@ export default defineEventHandler(async (event) => {
       ? [{ fileData: { fileUri: url!.trim(), mimeType: "video/mp4" } }, { text: "請依系統指示分析這部影片。" }]
       : [{ text: `文章內容：\n${text}` }];
 
-  const raw = await coachGemini(
-    {
-      system,
-      contents: [{ role: "user", parts }],
-      json: true,
-      temperature: 0.5,
-      maxOutputTokens: 4096,
-    },
-    { usePaid: usePaid === true, userId: user.id, supabase }
-  );
+  let raw: string;
+  try {
+    raw = await coachGemini(
+      {
+        system,
+        contents: [{ role: "user", parts }],
+        json: true,
+        temperature: 0.5,
+        maxOutputTokens: 4096,
+      },
+      { usePaid: usePaid === true, userId: user.id, supabase }
+    );
+  } catch (e: any) {
+    // YouTube 影片分析只能走 Gemini（多模態），NVIDIA 主引擎不支援影片 →
+    // 沒設 Gemini key 時把錯誤講清楚，免得誤以為是 NVIDIA 的問題。
+    if (sourceType === "youtube" && (e?.data?.code === "no_free_key" || e?.data?.code === "no_paid_key")) {
+      throw createError({
+        statusCode: 400,
+        data: { code: "youtube_needs_gemini" },
+        message: "YouTube 影片分析需要 Gemini key（NVIDIA 主引擎不支援影片）。請在 Zeabur 設定 Gemini_API_Key_*，或改用「貼上文章」模式（可走 NVIDIA）。",
+      });
+    }
+    throw e;
+  }
 
   let analysis: any;
   try {
