@@ -206,14 +206,16 @@ API 對主教排序的順序：
 
 效果：點開某分支主教鏈 → 那段 Y 區域只看到該分支，其他兄弟分支自動讓位/隱形。
 
-## 多教座按立選單（exclusive reveal）
+## 多教座按立選單（exclusive reveal）— ⚠ 2026-06-03 大改見下方專節
 
-- 1 個子座 → inline 顯示
-- 2+ 子座 → 全部摺進主教卡片右側「+N 被立」紫色 badge
-  - 例外：`is_split=true` 永不進選單（總是並行顯示）
-- 點 badge → popup menu 列出所有同教宗的子座
-- 點 menu 某項 → **exclusive reveal**：只 reveal 那一個、同教宗其他兄弟子座自動回 menu 隱形
-- State：`revealedFromMenu: Set<branchId>`、`openMenuBishopId: string | null`
+- **設立/自主旁支（`is_split=false`）**：一律預設收進母主教「+N 被立」紫色 badge 選單
+  （**不論 1 個或多個、東方與天主教一致**；取代舊「1 個 inline」規則）。例：額我略一世
+  只設坎特伯里 1 座，照樣顯示「+1 被立」。
+- **分裂 rival（`is_split=true`，church 含「對立」）**：同一爭位教座 **≤2 路 → 並行直接顯示**
+  （對等分叉）；**≥3 路（安提阿 12、羅馬 7…）→ 收進選單**避免畫面爆炸。
+- 點 badge → popup menu；點某項 → **exclusive reveal**（只 reveal 這一個）。
+- revealed 後的旁支 header 多一顆 **「⤺收回」鈕** → 放回選單（兩向 toggle，`collapseToMenu`）。
+- State：`revealedFromMenu: Set<branchId>`、`openMenuBishopId`、`collapsedBranches`（split 預設不收）。
 
 ## 導航功能：搜尋框
 
@@ -226,9 +228,10 @@ API 對主教排序的順序：
 
 [scripts/episcopal-shot.mjs](../../scripts/episcopal-shot.mjs) — headless：
 - 預設 1800×1200 viewport（**勿超 2000px，會炸 session**）
-- `--zoom 0.55` 看全圖；`--zoom 1.0` 看細節
-- `--expand <branchId>` 展開某旁支；`--panX <dx>` 微調水平 pan
-- 環境變數 `APP_BASE`（dev server port）
+- `--fit` 全圖；`--zoom 1.0` 細節；`--panX <dx>` 微調水平 pan；`--expand <label>` 展開某旁支
+- **`--search "<教座/主教名>"`**（2026-06-03 新增）→ 用頁面搜尋框 pan 到指定節點（區域定位最好用）
+- **已繞過裝置核准 gate**（攔截 `/api/devices/check` 回 approved），headless 才不會被導到 /device-pending
+- 環境變數 `APP_BASE`（dev server port，如 `http://localhost:3037`）；用 service role magic-link 自動登入
 
 ## 教座清單與名單匯出
 
@@ -343,3 +346,53 @@ episcopal_sees 早已建好、且都 parent 到美國根座「巴爾的摩（衛
 羅馬教宗→坎特伯里→倫敦→巴爾的摩(衛斯理→科克→亞斯理)→…全球…→台北(蕢建華…龐君華…辛俊傑)。
 屬非正規衛斯理統緒（長老按立主教）。驗證：`node scripts/_trace_chain.mjs "台北（衛理）|中華基督教衛理公會"`。
 ⚠ 殘留資料品質：孟買#1 name_zh 誤植「約翰·韋斯利」實為 Thomas Coke；部分海外座 #1 是奠基傳教士非主教——待清。
+
+## 對立教宗／教座分裂／宗主教座升撤 — 2026-06-03 大改（重要，部分取代上方舊規則）
+
+這輪把「對立教宗 / 暫時分裂 / 宗主教座升撤 / 教座合併」整套重做。端點
+[episcopal-graph.get.ts](../../server/api/genealogy/episcopal-graph.get.ts)、元件
+[EpiscopalSpineTree.vue](../../components/genealogy/EpiscopalSpineTree.vue)。
+
+### 1) 分支錨點：接「分裂前最後一位未爭議在位者」（`findAnchorBishop` + walk-up + splitMode）
+- 三段式 + walk-up：① 任期涵蓋成立年的主教 → ② 沒有就接「成立年(含)之前最近前任」→
+  ③ 本座無前任（子座早於本座紀錄）就**沿 parent_see_id 往上爬母座直到脊柱**（脊柱主教密集、可早至 1c），
+  並排除母座 split_year 前已丟棄的主教。杜絕 null/未來/不存在錨點（年代錯亂）。
+- **`splitMode`（is_split 分裂支）**：用 **strict `start_year < split_year`** → 對立支線分叉自
+  「分裂前最後一位」而非同年才上任的對手。例：亞威農 1378 → **額我略十一世#199**（非烏爾班六世#200）、
+  比薩 1409 → 額我略十二世#203、依玻里圖 217 → 則斐林諾#15。
+- **`SPINE_PRIMARY_CHURCHES` 守則**：旁支 fallback **絕不吞併主軸正統線 church**（未分裂教會/天主教/
+  東正教/亞美尼亞使徒教會/古代東方教會）。否則早期對立支線（split 很早）會把整條主線吸走（依玻里圖 bug 根因）。
+
+### 2) 對立教宗（antipope）資料規範
+- **每位一筆**（去重；之前每位有「無編號」+「有編號」兩筆，已刪無編號）。
+- **連續平行編號**：不從 1 重來，而是與主線同號往下算（對等分裂）。西方大分裂：羅馬 #200-203 /
+  亞威農 #200-203 / 比薩 #203-204（皆 status='對立'）。
+- church = `對立教宗（X）`（如 `對立教宗（亞威農）`/`（比薩）`/`（依玻里圖）`）；**不要塞進主線 church**
+  （依玻里圖原本 church='未分裂教會' 塞主軸 → 已改成獨立對立支線）。
+- 渲染：紅虛線分叉；**末端畫紅虛 Bezier 匯流線回脊柱**（church 含「對立」才畫）＝「回歸軸線」。
+- 資料記於 `database/episcopal-western-schism.sql`、`episcopal-hippolytus-antipope.sql`。
+
+### 3) 暫時分裂「左右對等分叉」（spine 偏移）
+- 因對立 rival 已 renumber 成與主線平行，故「主教 #N 處於分裂中」⇔「存在同號 #N 對立 rival 且任期重疊」。
+- 元件 spine loop：在分裂中的主教 **右移 `SCHISM_DX`(120)**，對立支線在左（branchDir）→ **左右對等分叉**；
+  無重疊對立的主教（如瑪爾定五世 #204）**回正中** ＝ 合流。段線自動斜出成分叉/合流。比薩支母教宗被右移時
+  fork 起點同步對齊（`spineBishopShiftMap`）。overlap 12/12（未撞君士坦丁堡）。
+
+### 4) 宗主教座「升格→粗 / 撤銷→細」（區間粗細）
+- `episcopal_sees` 新增 `patriarchate_start_year` / `patriarchate_end_year`（見 `database/episcopal-patriarchate-period.sql`）。
+- 旁支主教鏈：`start_year` 落在 `[start,end]` 區間的段 **加粗(6)**、區間外 **細(2)**。例：阿奎萊亞 557-1751。
+- （7 大 spine 仍用 `SPINE_DEFS.patriarchateYear`，某年「之後」單向加粗。）
+
+### 5) 教座合併／撤銷後繼座
+- 撤銷座記 `abolished_year`；**後繼座以「設立」(不同 see_zh、無 split_year) 接到末任主教**。
+- 一分為二就建兩座、各接同一末任。例：阿奎萊亞 1751 撤 → **烏迪內(威尼斯側,7任)** + **戈里齊亞(哈布斯堡側,16任)**
+  皆接末任宗主教達尼埃萊·多爾芬（`database/episcopal-aquileia-successors.sql`）。
+
+### 6) 預設 100% 顯示
+- `centerOnJesus`：`zoom=1`、耶穌卡水平置中（不再依寬度縮成小圖）。
+
+### 7) 設立教座一律收選單 + 額我略一世 +1 被立
+- 見上方「多教座按立選單」專節（已更新）。坎特伯里→倫敦→巴爾的摩(衛理) 整條改走「選單逐層 reveal」。
+
+commits：`13e5dc0`(依玻里圖+選單+收回) `b8d883c`(西方大分裂) `5de0a0a`(宗主教座粗細)
+`6cb3bb6`(左右對等分叉+100%) `ed697cf`(阿奎萊亞分立)。驗證：`scripts/_audit_episcopal.mjs`、`_trace_chain.mjs`。
