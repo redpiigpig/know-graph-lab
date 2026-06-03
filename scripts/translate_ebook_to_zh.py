@@ -75,6 +75,38 @@ def _find_gemini_keys() -> list[str]:
 GEMINI_KEYS = _find_gemini_keys()
 _key_idx = 0
 
+
+# ── NVIDIA NIM (integrate.api.nvidia.com, OpenAI-compatible) ────────────────
+# Reliable, high-quality 繁中 fallback that REPLACES Haiku (user 2026-06-03:
+# 「haiku 全面停用」). Generous free tier → doesn't hit the rate-limit wall the
+# Anthropic OAuth account did on long overnight batches.
+def _find_nvidia_keys() -> list[str]:
+    raw = []
+    for name in ("NVIDIA_API_KEY", "NVIDIA_API_Key", "nvidia_api_key", "NVAPI_KEY"):
+        v = os.environ.get(name)
+        if v:
+            raw.append(v); break
+    for n in range(1, 11):
+        for base in ("NVIDIA_API_Key", "NVIDIA_API_KEY", "nvidia_api_key", "NVAPI_KEY"):
+            v = os.environ.get(f"{base}_{n}")
+            if v:
+                raw.append(v); break
+    keys, seen = [], set()
+    for r in raw:
+        for piece in r.split(","):
+            k = piece.strip()
+            if k and k not in seen:
+                seen.add(k); keys.append(k)
+    return keys
+
+
+NVIDIA_KEYS = _find_nvidia_keys()
+_nv_key_idx = 0
+# Primary → backups (tried in order if one 404s / errors). All produce elegant
+# Traditional Chinese on this task (benchmarked 2026-06-03).
+NVIDIA_MODELS = ["deepseek-ai/deepseek-v4-flash", "z-ai/glm-5.1", "qwen/qwen3.5-122b-a10b"]
+NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
+
 # Gemini → Haiku 2-strike fallback + 6h cooldown.
 # 連續兩次「跑完所有 keys 都 429/throttling」就視為配額耗盡，進入 Haiku-only 模式 6 小時。
 # 6 小時後下個 chunk 會再試 Gemini；一旦成功，streak 歸零、cooldown 解除。
@@ -421,25 +453,92 @@ def gemini_translate(source: str, model: str = "gemini-2.5-flash") -> str:
     raise RuntimeError(f"all {len(GEMINI_KEYS)} Gemini keys exhausted (timeouts/throttling)")
 
 
-def gemini_with_haiku_fallback(source: str) -> str:
+_THINK_RE = re.compile(r"<think>.*?</think>", re.S)
+
+
+def _to_traditional(text: str) -> str:
+    """Best-effort 繁體化 — Qwen/DeepSeek/GLM occasionally slip Simplified. opencc
+    is lazy-imported; if unavailable we return text unchanged (prompt already
+    asks for 繁體)."""
+    try:
+        from opencc import OpenCC
+        if not hasattr(_to_traditional, "_cc"):
+            _to_traditional._cc = OpenCC("s2tw")
+        return _to_traditional._cc.convert(text)
+    except Exception:
+        return text
+
+
+def nvidia_translate(source: str) -> str:
+    """Translate via NVIDIA NIM (OpenAI-compatible). Rotates keys; falls through
+    NVIDIA_MODELS on 404/persistent error. Output is run through opencc s2tw as a
+    繁體 safety net. Replaces Haiku as the Gemini fallback."""
+    global _nv_key_idx
+    if not NVIDIA_KEYS:
+        raise RuntimeError("no NVIDIA API key")
+    prompt = PROMPT_TMPL.format(source=source)
+    last_err = "?"
+    for model in NVIDIA_MODELS:
+        keys_tried = 0
+        while keys_tried < len(NVIDIA_KEYS):
+            key = NVIDIA_KEYS[_nv_key_idx]
+            keys_tried += 1
+            for attempt, wait in enumerate((0, 5, 20), start=1):
+                if wait:
+                    time.sleep(wait)
+                try:
+                    r = requests.post(
+                        NVIDIA_URL,
+                        headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
+                        json={"model": model, "messages": [{"role": "user", "content": prompt}],
+                              "temperature": 0.2, "max_tokens": 8000},
+                        timeout=180,
+                    )
+                except requests.exceptions.RequestException as e:
+                    last_err = f"conn {type(e).__name__}"
+                    if attempt >= 3:
+                        break
+                    continue
+                if r.status_code == 200:
+                    text = r.json()["choices"][0]["message"]["content"]
+                    text = _THINK_RE.sub("", text).strip()
+                    return _to_traditional(text)
+                if r.status_code == 404:
+                    last_err = f"{model} 404"
+                    break  # model unavailable → next model
+                if r.status_code in (429, 500, 502, 503, 504):
+                    last_err = f"NVIDIA {r.status_code}"
+                    print(f"  NVIDIA {r.status_code} {model} key#{_nv_key_idx} attempt {attempt}", file=sys.stderr, flush=True)
+                    if attempt >= 3:
+                        break
+                    continue
+                last_err = f"NVIDIA HTTP {r.status_code}: {r.text[:200]}"
+                break
+            else:
+                continue
+            if last_err.endswith("404"):
+                break  # try next model with the same key set
+            _nv_key_idx = (_nv_key_idx + 1) % len(NVIDIA_KEYS)
+    raise RuntimeError(f"NVIDIA translate failed (last: {last_err})")
+
+
+def gemini_with_nvidia_fallback(source: str) -> str:
     """Default engine for English → 繁中 long-running jobs. Tries Gemini first
-    (free quota, no Anthropic OAuth conflict); on `all Gemini keys exhausted`
-    falls back to Claude Haiku for that specific piece. Per-piece fallback —
-    not whole-chunk — so we don't pessimize 'just barely' cases.
+    (fast + free quota); on `all Gemini keys exhausted` falls back to NVIDIA NIM
+    for that specific piece (reliable, high-quality, no Anthropic OAuth conflict).
+    Per-piece fallback — not whole-chunk.
 
     2-strike rule: after GEMINI_FAIL_STREAK_LIMIT consecutive `all keys exhausted`
-    events, we stop probing Gemini entirely and route everything to Haiku for
-    GEMINI_COOLDOWN_SECONDS. This avoids burning 12 retries × N keys × every
-    chunk when Gemini is hard-down on quota. After the cooldown expires the
-    next chunk probes Gemini again; success resets the streak."""
+    events, stop probing Gemini and route everything to NVIDIA for
+    GEMINI_COOLDOWN_SECONDS, then re-probe Gemini; success resets the streak.
+    (Haiku removed 2026-06-03 per user — NVIDIA is the sole fallback.)"""
     global _gemini_consecutive_exhaust, _gemini_cooldown_until
     now = time.time()
     if now < _gemini_cooldown_until:
-        # In Haiku-only cooldown window — skip Gemini probe entirely.
-        return haiku_translate(source)
+        return nvidia_translate(source)  # NVIDIA-only cooldown window
     try:
         result = gemini_translate(source)
-        _gemini_consecutive_exhaust = 0  # success resets streak
+        _gemini_consecutive_exhaust = 0
         return result
     except RuntimeError as e:
         msg = str(e)
@@ -447,17 +546,19 @@ def gemini_with_haiku_fallback(source: str) -> str:
             _gemini_consecutive_exhaust += 1
             if _gemini_consecutive_exhaust >= GEMINI_FAIL_STREAK_LIMIT:
                 _gemini_cooldown_until = now + GEMINI_COOLDOWN_SECONDS
-                cooldown_hours = GEMINI_COOLDOWN_SECONDS / 3600
                 print(f"  ↳ Gemini hit {_gemini_consecutive_exhaust} consecutive exhaustions "
-                      f"— switching to Haiku-only for {cooldown_hours:.0f}h "
+                      f"— switching to NVIDIA-only for {GEMINI_COOLDOWN_SECONDS/3600:.0f}h "
                       f"(retry after {time.strftime('%H:%M', time.localtime(_gemini_cooldown_until))})",
                       flush=True)
             else:
-                print(f"  ↳ Gemini failed ({msg[:80]}…) — falling back to Haiku "
-                      f"[{_gemini_consecutive_exhaust}/{GEMINI_FAIL_STREAK_LIMIT} strikes]",
-                      flush=True)
-            return haiku_translate(source)
+                print(f"  ↳ Gemini failed ({msg[:80]}…) — falling back to NVIDIA "
+                      f"[{_gemini_consecutive_exhaust}/{GEMINI_FAIL_STREAK_LIMIT} strikes]", flush=True)
+            return nvidia_translate(source)
         raise
+
+
+# Back-compat alias: existing callers import gemini_with_haiku_fallback.
+gemini_with_haiku_fallback = gemini_with_nvidia_fallback
 
 
 # ── EPUB → ordered chunks ─────────────────────────────────────────────────
@@ -643,10 +744,14 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
 
     if engine == "sonnet":
         translator, model_label = sonnet_translate, SONNET_MODEL
+    elif engine == "nvidia":
+        translator, model_label = nvidia_translate, NVIDIA_MODELS[0]
     elif engine == "haiku":
-        translator, model_label = haiku_translate, HAIKU_MODEL
-    else:  # gemini default — falls back to Haiku per piece when keys exhausted
-        translator, model_label = gemini_with_haiku_fallback, "gemini-2.5-flash → haiku-4-5 fallback"
+        # Haiku 全面停用 (user 2026-06-03) — redirect to the Gemini→NVIDIA chain.
+        print("  ⚠ --engine haiku 已停用，改用 gemini→nvidia", flush=True)
+        translator, model_label = gemini_with_nvidia_fallback, "gemini-2.5-flash → nvidia fallback"
+    else:  # gemini default — falls back to NVIDIA per piece when keys exhausted
+        translator, model_label = gemini_with_nvidia_fallback, "gemini-2.5-flash → nvidia fallback"
     print(f"Engine: {engine}  Model: {model_label}", flush=True)
 
     t_total = time.time()

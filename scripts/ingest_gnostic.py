@@ -84,8 +84,13 @@ def existing_en_titles() -> list[str]:
 def make_engine(engine: str):
     import translate_ebook_to_zh as te
     te.PROMPT_TMPL = GNOSTIC_PROMPT_TMPL
-    fn = {"gemini": te.gemini_with_haiku_fallback, "haiku": te.haiku_translate,
-          "sonnet": te.sonnet_translate}[engine]
+    # Haiku 全面停用 (2026-06-03): default chain = Gemini → NVIDIA fallback.
+    fn = {
+        "gemini": te.gemini_with_nvidia_fallback,
+        "nvidia": te.nvidia_translate,
+        "sonnet": te.sonnet_translate,
+        "haiku": te.gemini_with_nvidia_fallback,  # redirected
+    }[engine]
     return te, fn
 
 
@@ -210,7 +215,7 @@ def main():
     ap.add_argument("--url", help="single document URL")
     ap.add_argument("--title", default="", help="document title (overrides parsed)")
     ap.add_argument("--list", action="store_true", help="list category docs and exit")
-    ap.add_argument("--engine", default="gemini", choices=["gemini", "haiku", "sonnet"])
+    ap.add_argument("--engine", default="gemini", choices=["gemini", "nvidia", "sonnet", "haiku"])
     ap.add_argument("--resume", action="store_true", help="skip docs already in DB")
     ap.add_argument("--limit-docs", type=int, default=None)
     ap.add_argument("--limit-paras", type=int, default=None, help="cap paragraphs per doc (pilot)")
