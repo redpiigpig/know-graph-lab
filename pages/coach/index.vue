@@ -18,35 +18,56 @@
         <div v-if="loading" class="text-gray-400 text-sm">載入中…</div>
 
         <div v-else class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <component
-            :is="c.enabled ? NuxtLink : 'div'"
-            v-for="c in coaches"
-            :key="c.language"
-            :to="c.enabled ? `/coach/${c.language}` : undefined"
-            class="group relative flex flex-col gap-3 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm transition"
-            :class="c.enabled ? 'hover:shadow-md hover:border-indigo-300 cursor-pointer' : 'opacity-60'"
-          >
-            <div class="flex items-center justify-between">
-              <div class="text-4xl">{{ c.emoji }}</div>
-              <div class="text-2xl">{{ c.flag }}</div>
-            </div>
-            <div>
-              <div class="flex items-center gap-2">
-                <span class="font-semibold text-gray-900 text-base group-hover:text-indigo-700 transition">{{ c.name }}</span>
-                <span class="text-xs text-gray-400">{{ c.nameNative }}</span>
+          <template v-for="c in coaches" :key="c.language">
+            <!-- 已開放：真正的 NuxtLink（用顯式標籤，編譯期保證渲染成 <a>，可點進去）-->
+            <NuxtLink
+              v-if="c.enabled"
+              :to="`/coach/${c.language}`"
+              class="group relative flex flex-col gap-3 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm transition hover:shadow-md hover:border-indigo-300 cursor-pointer"
+            >
+              <div class="flex items-center justify-between">
+                <div class="text-4xl">{{ c.emoji }}</div>
+                <div class="text-2xl">{{ c.flag }}</div>
               </div>
-              <div class="text-xs font-medium text-indigo-600 mt-0.5">{{ c.langLabel }} · {{ c.accent }}</div>
-              <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">{{ c.blurb }}</p>
-            </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="font-semibold text-gray-900 text-base group-hover:text-indigo-700 transition">{{ c.name }}</span>
+                  <span class="text-xs text-gray-400">{{ c.nameNative }}</span>
+                </div>
+                <div class="text-xs font-medium text-indigo-600 mt-0.5">{{ c.langLabel }} · {{ c.accent }}</div>
+                <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">{{ c.blurb }}</p>
+              </div>
+              <div class="flex items-center gap-2 mt-1">
+                <span v-if="progressMap[c.language]" class="text-[11px] px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700">
+                  {{ progressMap[c.language].level }}
+                </span>
+                <span v-if="c.voiceless" class="text-[11px] px-2 py-0.5 rounded-full bg-amber-50 text-amber-700">純文字（古語言）</span>
+              </div>
+            </NuxtLink>
 
-            <div class="flex items-center gap-2 mt-1">
-              <span v-if="progressMap[c.language]" class="text-[11px] px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700">
-                {{ progressMap[c.language].level }}
-              </span>
-              <span v-if="c.voiceless" class="text-[11px] px-2 py-0.5 rounded-full bg-amber-50 text-amber-700">純文字（古語言）</span>
-              <span v-if="!c.enabled" class="text-[11px] px-2 py-0.5 rounded-full bg-gray-100 text-gray-500 ml-auto">即將推出</span>
+            <!-- 即將推出：純 div，不可點 -->
+            <div
+              v-else
+              class="group relative flex flex-col gap-3 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm transition opacity-60"
+            >
+              <div class="flex items-center justify-between">
+                <div class="text-4xl">{{ c.emoji }}</div>
+                <div class="text-2xl">{{ c.flag }}</div>
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="font-semibold text-gray-900 text-base">{{ c.name }}</span>
+                  <span class="text-xs text-gray-400">{{ c.nameNative }}</span>
+                </div>
+                <div class="text-xs font-medium text-indigo-600 mt-0.5">{{ c.langLabel }} · {{ c.accent }}</div>
+                <p class="text-xs text-gray-500 mt-1.5 leading-relaxed">{{ c.blurb }}</p>
+              </div>
+              <div class="flex items-center gap-2 mt-1">
+                <span v-if="c.voiceless" class="text-[11px] px-2 py-0.5 rounded-full bg-amber-50 text-amber-700">純文字（古語言）</span>
+                <span class="text-[11px] px-2 py-0.5 rounded-full bg-gray-100 text-gray-500 ml-auto">即將推出</span>
+              </div>
             </div>
-          </component>
+          </template>
         </div>
       </div>
     </div>
@@ -54,14 +75,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, resolveComponent } from "vue";
+import { ref, onMounted } from "vue";
 import { authedFetch } from "~/composables/useAuthedFetch";
 
 definePageMeta({ middleware: "coach-auth" });
-
-// 用解析出的實體元件，而非字串 'NuxtLink'：字串形式靠全域元件解析，
-// dev server 重啟/某些狀態下會解析失敗 → 卡片渲染成 inert <nuxtlink> 點不進去。
-const NuxtLink = resolveComponent("NuxtLink");
 
 const coaches = ref<any[]>([]);
 const progressMap = ref<Record<string, any>>({});
