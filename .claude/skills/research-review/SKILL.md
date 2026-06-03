@@ -27,7 +27,8 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
 - ✅ **/works 分區** — [pages/works/index.vue](../../../pages/works/index.vue) 拆「書籍寫作 / 論文寫作」兩區（依 `kind`）
 - ✅ **reader + API** — [pages/works/[slug]/index.vue](../../../pages/works/[slug]/index.vue) 論文計畫頁底「研究回顧」分頁（按主題列書目）＋ [pages/works/[slug]/review/[ref].vue](../../../pages/works/) 原文/中譯兩欄逐段 reader；[server/api/lit-review/*.get.ts](../../../server/api/lit-review/)（entries / entry）
 - ✅ **ingest 驅動腳本** — [scripts/ingest_lit_review.py](../../../scripts/ingest_lit_review.py)（`--seed` 入書目；`--fetch-fulltext --resume` 過夜抓全文＋翻譯）；報告原文存 [scripts/data/lit_review_eight_garudhammas.md](../../../scripts/data/)
-- ⬜ **全文逐段對照**：開放取用文獻整批抓＋翻（過夜 `--fetch-fulltext --resume`，URL 多為 report 內 `......` 遮蔽需先 WebSearch 補實連結）
+- 🔄 **全文逐段對照（進行中）**：八敬法案 **14 篇開放取用 PDF 連結已補實**（Anālayo 漢堡 11 篇 `…/pdf/5-personen/analayo/*.pdf` + JBE Case/Tsedroen + Bodhi bhikkhuni.net + Hüsken 2010 alokavihara）；逐夜 `--fetch-fulltext --resume` 翻譯中（逐段持久化，Gemini→NVIDIA→Haiku）。**待補連結**：Hüsken 2000（JBE vol 7）、von Hinüber 2000（德文，無開放 PDF）、Horner 1930（PD，archive.org 整本）
+- 💡 **漢堡 Anālayo PDF 命名規律**：`buddhismuskunde.uni-hamburg.de/pdf/5-personen/analayo/{foundation,cullavagga,gurudharma,legality,revival-bhikkhuni,mahapajapati,theravadavinaya,theories-foundation,validity,bhikkhuni-controversy}.pdf`（HEAD 探測後再入庫，避免 404 算 fail）
 
 ---
 
