@@ -104,7 +104,7 @@ NVIDIA_KEYS = _find_nvidia_keys()
 _nv_key_idx = 0
 # Primary → backups (tried in order if one 404s / errors). All produce elegant
 # Traditional Chinese on this task (benchmarked 2026-06-03).
-NVIDIA_MODELS = ["deepseek-ai/deepseek-v4-flash", "z-ai/glm-5.1", "qwen/qwen3.5-122b-a10b"]
+NVIDIA_MODELS = ["qwen/qwen3-next-80b-a3b-instruct", "deepseek-ai/deepseek-v4-flash", "meta/llama-3.3-70b-instruct"]
 NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
 
 # Gemini → Haiku 2-strike fallback + 6h cooldown.
@@ -116,6 +116,12 @@ GEMINI_COOLDOWN_SECONDS = 6 * 3600
 
 _gemini_consecutive_exhaust = 0
 _gemini_cooldown_until = 0.0  # epoch seconds; 0 = no cooldown active
+
+# NVIDIA-first chain (default 2026-06-03): qwen3-next 比 Gemini Flash 更快更好 →
+# NVIDIA 當主力，Gemini 4 keys 當 fallback。對稱 2-strike + cooldown：NVIDIA 連兩次
+# 全失敗(429/exhaust) → 改走 Gemini 6h，之後再 re-probe NVIDIA。
+_nvidia_consecutive_fail = 0
+_nvidia_cooldown_until = 0.0
 
 SONNET_MODEL = "claude-sonnet-4-6"
 HAIKU_MODEL = "claude-haiku-4-5-20251001"
@@ -557,8 +563,49 @@ def gemini_with_nvidia_fallback(source: str) -> str:
         raise
 
 
+# NVIDIA → Gemini 2-strike fallback. NVIDIA is PRIMARY per 2026-06-03 benchmark
+# (deepseek-v4-flash ~14s vs Gemini ~22s, and immune to Gemini's quota 429 wall
+# which was already firing during the bench). Gemini is the per-piece fallback.
+# Haiku fully retired — never touched.
+NVIDIA_FAIL_STREAK_LIMIT = 2
+NVIDIA_COOLDOWN_SECONDS = 6 * 3600
+_nvidia_consecutive_exhaust = 0
+_nvidia_cooldown_until = 0.0
+
+
+def nvidia_with_gemini_fallback(source: str) -> str:
+    """Default engine (2026-06-03 onward): NVIDIA NIM deepseek-v4-flash first —
+    faster and not subject to Gemini's quota wall — with per-piece fallback to
+    Gemini Flash when NVIDIA is unavailable. 2-strike: after
+    NVIDIA_FAIL_STREAK_LIMIT consecutive NVIDIA exhaustions, route everything to
+    Gemini for NVIDIA_COOLDOWN_SECONDS, then re-probe NVIDIA; success resets the
+    streak. Haiku is fully retired (user 2026-06-03) — never invoked."""
+    global _nvidia_consecutive_exhaust, _nvidia_cooldown_until
+    now = time.time()
+    if now < _nvidia_cooldown_until:
+        return gemini_translate(source)  # Gemini-only cooldown window
+    try:
+        result = nvidia_translate(source)
+        _nvidia_consecutive_exhaust = 0  # success resets streak
+        return result
+    except RuntimeError as e:
+        msg = str(e)
+        _nvidia_consecutive_exhaust += 1
+        if _nvidia_consecutive_exhaust >= NVIDIA_FAIL_STREAK_LIMIT:
+            _nvidia_cooldown_until = now + NVIDIA_COOLDOWN_SECONDS
+            print(f"  ↳ NVIDIA hit {_nvidia_consecutive_exhaust} consecutive failures "
+                  f"— switching to Gemini-only for {NVIDIA_COOLDOWN_SECONDS/3600:.0f}h "
+                  f"(retry after {time.strftime('%H:%M', time.localtime(_nvidia_cooldown_until))})",
+                  flush=True)
+        else:
+            print(f"  ↳ NVIDIA failed ({msg[:80]}…) — falling back to Gemini "
+                  f"[{_nvidia_consecutive_exhaust}/{NVIDIA_FAIL_STREAK_LIMIT} strikes]", flush=True)
+        return gemini_translate(source)  # if Gemini also dies, RuntimeError bubbles → resume later
+
+
 # Back-compat alias: existing callers import gemini_with_haiku_fallback.
-gemini_with_haiku_fallback = gemini_with_nvidia_fallback
+# Now points at the NVIDIA-first chain (Haiku retired 2026-06-03).
+gemini_with_haiku_fallback = nvidia_with_gemini_fallback
 
 
 # ── EPUB → ordered chunks ─────────────────────────────────────────────────
@@ -746,12 +793,15 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
         translator, model_label = sonnet_translate, SONNET_MODEL
     elif engine == "nvidia":
         translator, model_label = nvidia_translate, NVIDIA_MODELS[0]
+    elif engine == "gemini":
+        # Explicit Gemini-first chain (Gemini primary, NVIDIA per-piece fallback).
+        translator, model_label = gemini_with_nvidia_fallback, "gemini-2.5-flash → nvidia fallback"
     elif engine == "haiku":
-        # Haiku 全面停用 (user 2026-06-03) — redirect to the Gemini→NVIDIA chain.
-        print("  ⚠ --engine haiku 已停用，改用 gemini→nvidia", flush=True)
-        translator, model_label = gemini_with_nvidia_fallback, "gemini-2.5-flash → nvidia fallback"
-    else:  # gemini default — falls back to NVIDIA per piece when keys exhausted
-        translator, model_label = gemini_with_nvidia_fallback, "gemini-2.5-flash → nvidia fallback"
+        # Haiku 全面停用 (user 2026-06-03) — redirect to default NVIDIA→Gemini chain.
+        print("  ⚠ --engine haiku 已全面停用，改用 nvidia→gemini", flush=True)
+        translator, model_label = nvidia_with_gemini_fallback, f"{NVIDIA_MODELS[0]} → gemini fallback"
+    else:  # default (2026-06-03): NVIDIA deepseek-v4-flash first, Gemini per-piece fallback
+        translator, model_label = nvidia_with_gemini_fallback, f"{NVIDIA_MODELS[0]} → gemini fallback"
     print(f"Engine: {engine}  Model: {model_label}", flush=True)
 
     t_total = time.time()
@@ -892,10 +942,12 @@ def main():
     p.add_argument("--inspect", action="store_true")
     p.add_argument("--dry-run", action="store_true")
     p.add_argument("--limit", type=int)
-    p.add_argument("--engine", choices=["gemini", "sonnet", "haiku"], default="gemini",
-                   help="Translation engine. 'gemini' uses Gemini Flash 2.5 with "
-                        "automatic per-piece fallback to Haiku when keys are exhausted. "
-                        "'sonnet' / 'haiku' use the named Claude model directly.")
+    p.add_argument("--engine", choices=["auto", "nvidia", "gemini", "sonnet", "haiku"], default="auto",
+                   help="Translation engine. DEFAULT 'auto' = NVIDIA NIM "
+                        f"({NVIDIA_MODELS[0]}) first with per-piece Gemini fallback "
+                        "(2026-06-03 benchmark: NVIDIA faster + no quota wall). "
+                        "'nvidia' = NVIDIA only. 'gemini' = Gemini-first w/ NVIDIA fallback. "
+                        "'sonnet' = Claude Sonnet. 'haiku' is RETIRED → routes to 'auto'.")
     p.add_argument("--resume", action="store_true",
                    help="Skip chapter_path already in the on-disk JSONL")
     args = p.parse_args()
