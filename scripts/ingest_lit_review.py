@@ -182,29 +182,39 @@ def fetch_url(url: str) -> tuple[str, str]:
     return "html", r.text
 
 
-def translate_paragraphs(paras: list[str], te, fn, limit: int | None, pace: float) -> list[str]:
-    todo = paras[:limit] if limit else paras
-    out: list[str] = []
-    for i, p in enumerate(todo):
-        if pace and i > 0:
+def done_zh_indices(entry_id: int) -> set:
+    """order_index values already having a zh section for this entry (for resume)."""
+    rows = rest_get("lit_review_sections",
+                    f"entry_id=eq.{entry_id}&version_code=eq.zh&select=order_index&limit=20000")
+    return {r["order_index"] for r in rows}
+
+
+def upsert_one_section(entry_id: int, i: int, orig: str, zh: str) -> None:
+    """Persist one paragraph (原文 + 中譯) immediately, so a quota abort mid-article
+    never loses translated paragraphs — the next --resume picks up the gap."""
+    rest_upsert("lit_review_sections", [
+        {"entry_id": entry_id, "version_code": "orig", "order_index": i, "text": orig, "char_count": len(orig)},
+        {"entry_id": entry_id, "version_code": "zh", "order_index": i, "text": zh, "char_count": len(zh)},
+    ], on_conflict="entry_id,version_code,order_index")
+
+
+def translate_and_store(entry_id: int, orig: list[str], te, fn, pace: float, resume: bool) -> int:
+    """Translate the still-missing paragraphs of `orig`, persisting each as it
+    completes. Returns the count translated this run. Raises on translate failure
+    (already-stored paragraphs persist)."""
+    done = done_zh_indices(entry_id) if resume else set()
+    todo = lr.missing_indices(done, len(orig))
+    print(f"      resume: {len(done)} done, {len(todo)} to translate", flush=True)
+    n = 0
+    for k, i in enumerate(todo):
+        if pace and k > 0:
             time.sleep(pace)
-        pieces = te.split_oversized(p)
-        zh = "\n\n".join(fn(piece) for piece in pieces)
-        out.append(zh.strip())
-        print(f"      · para {i + 1}/{len(todo)} ({len(p)}→{len(zh)})", flush=True)
-    return out
-
-
-def upsert_sections(entry_id: int, orig: list[str], zh: list[str]) -> None:
-    requests.delete(f"{SUPABASE_URL}/rest/v1/lit_review_sections?entry_id=eq.{entry_id}",
-                    headers=H_REST, timeout=60)
-    rows = []
-    for i, (o, z) in enumerate(zip(orig, zh)):
-        rows.append({"entry_id": entry_id, "version_code": "orig", "order_index": i, "text": o, "char_count": len(o)})
-        rows.append({"entry_id": entry_id, "version_code": "zh", "order_index": i, "text": z, "char_count": len(z)})
-    BATCH = 100
-    for i in range(0, len(rows), BATCH):
-        rest_upsert("lit_review_sections", rows[i:i + BATCH], on_conflict="entry_id,version_code,order_index")
+        pieces = te.split_oversized(orig[i])
+        zh = "\n\n".join(fn(piece) for piece in pieces).strip()
+        upsert_one_section(entry_id, i, orig[i], zh)
+        n += 1
+        print(f"      · para {i + 1}/{len(orig)} ({len(orig[i])}→{len(zh)})", flush=True)
+    return n
 
 
 def fetch_fulltext(project_slug: str, engine: str, resume: bool,
@@ -255,11 +265,12 @@ def fetch_fulltext(project_slug: str, engine: str, resume: bool,
             if dry_run:
                 continue
             orig = paras[:limit_paras] if limit_paras else paras
-            zh = translate_paragraphs(orig, te, fn, limit_paras, pace)
-            lr.assert_aligned(orig, zh)
-            upsert_sections(e["id"], orig, zh)
-            rest_patch("lit_review_entries", f"id=eq.{e['id']}", {"fulltext_status": "translated"})
-            print(f"    ✓ {len(zh)} paras × 2 versions upserted", flush=True)
+            n = translate_and_store(e["id"], orig, te, fn, pace, resume)
+            # fully done only when every paragraph now has a zh section
+            complete = len(done_zh_indices(e["id"])) >= len(orig)
+            rest_patch("lit_review_entries", f"id=eq.{e['id']}",
+                       {"fulltext_status": "translated" if complete else "fetched"})
+            print(f"    ✓ +{n} paras this run; {'complete' if complete else 'partial (re-run --resume)'}", flush=True)
             consec_fail = 0
         except Exception as exc:  # noqa: BLE001
             consec_fail += 1

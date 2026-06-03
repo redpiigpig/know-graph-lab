@@ -308,6 +308,14 @@ def extract_paragraphs_from_html(html: str) -> list[str]:
     return out
 
 
+# ── Resumable translation ─────────────────────────────────────────────────────
+def missing_indices(done: set, total: int) -> list[int]:
+    """Ordered positions in range(total) not yet translated (not in `done`).
+    Lets a quota-interrupted full-text translation resume paragraph-by-paragraph
+    instead of restarting the whole (often 400+ paragraph) article."""
+    return [i for i in range(total) if i not in done]
+
+
 # ── Alignment gate (原文 ↔ 中譯, one ZH paragraph per source paragraph) ──────
 def align_ok(src: list, zh: list) -> bool:
     return len(src) == len(zh)

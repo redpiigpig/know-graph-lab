@@ -267,6 +267,20 @@ def test_extract_paragraphs_from_html_keeps_content_drops_chrome():
         assert p.replace("\xa0", "").strip() != ""
 
 
+# ── resumable translation ─────────────────────────────────────────────────────
+def test_missing_indices_returns_untranslated_positions_in_order():
+    # paragraphs 0..5; 0,1,3 already translated → resume 2,4,5
+    assert lr.missing_indices({0, 1, 3}, 6) == [2, 4, 5]
+
+
+def test_missing_indices_empty_when_all_done():
+    assert lr.missing_indices({0, 1, 2}, 3) == []
+
+
+def test_missing_indices_all_when_none_done():
+    assert lr.missing_indices(set(), 4) == [0, 1, 2, 3]
+
+
 # ── alignment gate ────────────────────────────────────────────────────────────
 def test_align_ok_requires_equal_length():
     assert lr.align_ok(["a", "b"], ["甲", "乙"])

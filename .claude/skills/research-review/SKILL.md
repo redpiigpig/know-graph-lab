@@ -87,10 +87,12 @@ lit_review_sections (            -- 只有抓了全文的外文文獻才有
        │      → extract_paragraphs_from_text() / _from_html() → [原文段…]
        ▼
 [3] 翻譯     每段原文→繁中（ebook-translate 引擎），術語照翻譯詞庫
-       │      assert_aligned(orig, zh)  ← 段數必須相等
+       │      ⚠️ 逐段 upsert（不是整篇做完才寫）：學術 PDF 動輒 400+ 段
+       │      （foundation.pdf=456 段），quota 一定中途斷；每翻完一段立刻
+       │      存（missing_indices 算還沒翻的），--resume 從缺口接續、不重來
        ▼
-[4] 寫 DB    upsert lit_review_sections（orig + zh 各一批，同 order_index）
-       │      fulltext_status='translated'
+[4] 狀態     全篇都翻完 → fulltext_status='translated'；中途斷 → 'fetched'（部分）
+       │      reader 即時看得到已翻段落（未翻段顯示原文 + 「—」）
        ▼
 [5] reader 驗證（研究回顧分頁 → 點該筆 → 左中譯／右原文 兩欄逐段）
 ```
