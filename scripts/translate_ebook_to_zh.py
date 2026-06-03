@@ -102,9 +102,15 @@ def _find_nvidia_keys() -> list[str]:
 
 NVIDIA_KEYS = _find_nvidia_keys()
 _nv_key_idx = 0
-# Primary → backups (tried in order if one 404s / errors). All produce elegant
-# Traditional Chinese on this task (benchmarked 2026-06-03).
-NVIDIA_MODELS = ["qwen/qwen3-next-80b-a3b-instruct", "deepseek-ai/deepseek-v4-flash", "meta/llama-3.3-70b-instruct"]
+# 2026-06-03 benchmark on the fathers pipeline (which REQUIRES blank-line
+# paragraph alignment for 中英對照 + verbatim {{p:N}}/[^N] markers):
+#   deepseek-v4-flash  ✅ paras 3→3, markers kept, 上帝 term, ~15-27s  ← ONLY safe one
+#   qwen3-next-80b     ⚡2-3s but ✗ collapses 3→1 paras, ✗ {{p:N}}→{p:N}, hallucinated refs
+#   llama-3.3-70b      ✗ collapses paras, ✗ drops {{p:N}}, slow ~35s
+#   glm-5.1 ✗ 105s (reasoning) · qwen3.5-122b ✗ timeout
+# So deepseek is the SOLE NVIDIA model; on its failure the chain falls to Gemini
+# (also structurally correct), NOT to a paragraph-collapsing NVIDIA model.
+NVIDIA_MODELS = ["deepseek-ai/deepseek-v4-flash"]
 NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
 
 # Gemini → Haiku 2-strike fallback + 6h cooldown.
@@ -117,11 +123,7 @@ GEMINI_COOLDOWN_SECONDS = 6 * 3600
 _gemini_consecutive_exhaust = 0
 _gemini_cooldown_until = 0.0  # epoch seconds; 0 = no cooldown active
 
-# NVIDIA-first chain (default 2026-06-03): qwen3-next 比 Gemini Flash 更快更好 →
-# NVIDIA 當主力，Gemini 4 keys 當 fallback。對稱 2-strike + cooldown：NVIDIA 連兩次
-# 全失敗(429/exhaust) → 改走 Gemini 6h，之後再 re-probe NVIDIA。
-_nvidia_consecutive_fail = 0
-_nvidia_cooldown_until = 0.0
+# NVIDIA streak/cooldown state lives next to nvidia_with_gemini_fallback below.
 
 SONNET_MODEL = "claude-sonnet-4-6"
 HAIKU_MODEL = "claude-haiku-4-5-20251001"
@@ -498,7 +500,9 @@ def nvidia_translate(source: str) -> str:
                         headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
                         json={"model": model, "messages": [{"role": "user", "content": prompt}],
                               "temperature": 0.2, "max_tokens": 8000},
-                        timeout=180,
+                        # deepseek-v4-flash needs >180s on 15-20K char pieces (timed out
+                        # in prod 2026-06-03). 600s lets it finish big pieces as fallback.
+                        timeout=600,
                     )
                 except requests.exceptions.RequestException as e:
                     last_err = f"conn {type(e).__name__}"
@@ -526,6 +530,60 @@ def nvidia_translate(source: str) -> str:
                 break  # try next model with the same key set
             _nv_key_idx = (_nv_key_idx + 1) % len(NVIDIA_KEYS)
     raise RuntimeError(f"NVIDIA translate failed (last: {last_err})")
+
+
+def nvidia_chat(prompt: str, max_tokens: int = 2000, system: str | None = None,
+                temperature: float = 0.2) -> str:
+    """Generic NVIDIA NIM chat call (OpenAI-compatible) for NON-translation tasks
+    (proofreading / titling / cleanup) that previously used Haiku — Haiku is fully
+    retired (user 2026-06-03). Rotates keys + NVIDIA_MODELS; strips <think> blocks.
+    Does NOT run opencc (caller may need raw JSON). Raises on total failure."""
+    global _nv_key_idx
+    if not NVIDIA_KEYS:
+        raise RuntimeError("no NVIDIA API key")
+    msgs = ([{"role": "system", "content": system}] if system else []) + \
+           [{"role": "user", "content": prompt}]
+    last_err = "?"
+    for model in NVIDIA_MODELS:
+        keys_tried = 0
+        while keys_tried < len(NVIDIA_KEYS):
+            key = NVIDIA_KEYS[_nv_key_idx]
+            keys_tried += 1
+            for attempt, wait in enumerate((0, 5, 20), start=1):
+                if wait:
+                    time.sleep(wait)
+                try:
+                    r = requests.post(
+                        NVIDIA_URL,
+                        headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
+                        json={"model": model, "messages": msgs,
+                              "temperature": temperature, "max_tokens": max_tokens},
+                        timeout=180,
+                    )
+                except requests.exceptions.RequestException as e:
+                    last_err = f"conn {type(e).__name__}"
+                    if attempt >= 3:
+                        break
+                    continue
+                if r.status_code == 200:
+                    text = r.json()["choices"][0]["message"]["content"]
+                    return _THINK_RE.sub("", text).strip()
+                if r.status_code == 404:
+                    last_err = f"{model} 404"
+                    break
+                if r.status_code in (429, 500, 502, 503, 504):
+                    last_err = f"NVIDIA {r.status_code}"
+                    if attempt >= 3:
+                        break
+                    continue
+                last_err = f"NVIDIA HTTP {r.status_code}: {r.text[:200]}"
+                break
+            else:
+                continue
+            if last_err.endswith("404"):
+                break
+            _nv_key_idx = (_nv_key_idx + 1) % len(NVIDIA_KEYS)
+    raise RuntimeError(f"NVIDIA chat failed (last: {last_err})")
 
 
 def gemini_with_nvidia_fallback(source: str) -> str:

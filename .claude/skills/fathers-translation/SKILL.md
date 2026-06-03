@@ -3,6 +3,9 @@ name: fathers-translation
 description: 教父全集（Schaff ANF 10 卷 + NPNF1 14 卷 + NPNF2 14 卷 + ACCS 27 卷）中譯／精修流程。包含 CCEL EPUB packaging 問題的特殊處理、NCX-driven consolidator、multi-h3 splitter、A+B+C 三層校對、教父翻譯詞庫對接。本 skill 從 [[ebook-translate]] 分出，專責「教父原典」這一塊；ebook-translate 留給一般電子書翻譯。Use when 翻新一卷 Schaff／ACCS、補精修舊卷、`/fathers` 頁面要新增已精修書、`/translation-glossary` 詞庫要加教父詞條、Haiku 校對教父書並 backfill 名詞、處理 cross-work bleed／footnote 格式異常。
 ---
 
+> ⚙️ **引擎政策（2026-06-03 更新）**：所有 LLM 工作一律**優先用 NVIDIA（輝達，`https://integrate.api.nvidia.com/v1`，預設文字模型 `deepseek-ai/deepseek-v4-flash`）**，fallback 用 Gemini，**Haiku／Anthropic 全面停用**。下文若提到用 Haiku 翻譯／校對／視覺校對／OCR／清理／下標題，一律改用 NVIDIA（視覺類用 NVIDIA 視覺模型如 `nvidia/llama-3.1-nemotron-nano-vl-8b-v1`）。
+
+
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session。
 
 # 教父全集翻譯精修 Skill
@@ -84,7 +87,7 @@ R2 + DB previews 同步 / /fathers 頁面標「已精修」
 EBOOK=<new-vol-ebook-id>
 
 # 1. 翻譯（已有 v4 pipeline 自動跑這幾步）
-python scripts/translate_ebook_to_zh.py $EBOOK --engine haiku --resume
+python scripts/translate_ebook_to_zh.py $EBOOK --engine auto --resume   # auto = NVIDIA deepseek-v4-flash → Gemini 後備（Haiku 已全面停用 2026-06-03）
 python scripts/polish_translated_book.py $EBOOK
 python scripts/consolidate_by_ncx.py $EBOOK
 python scripts/sweep_book_quality.py $EBOOK   # 所有 T1-T3+T8
@@ -386,7 +389,7 @@ mv "G:/我的雲端硬碟/資料/電子書/_chunks/$EBOOK.jsonl" \
    "G:/我的雲端硬碟/資料/電子書/_chunks/$EBOOK.en.bak.jsonl"
 
 # 1. 翻譯 (~3-6h)
-nohup python -u scripts/translate_ebook_to_zh.py $EBOOK --engine gemini \
+nohup python -u scripts/translate_ebook_to_zh.py $EBOOK --engine auto \
    > scripts/logs/translate_$EBOOK.log 2>&1 &
 # 等 "ebooks row updated" 出現才往下
 
@@ -426,8 +429,9 @@ PYTHONIOENCODING=utf-8 python scripts/seed_glossary_anf_vol<N>.py
 ```
 
 **關鍵提示**：
-- `--engine gemini` 走 Gemini→Haiku 2-strike + 6h cooldown 自動切換（[[ebook-translate#gemini-haiku-2-strike-6h-cooldown-全域規則-2026-05-29]]）
-- 並行多卷時兩卷切不同 engine 分散 quota
+- **預設 `--engine auto`（2026-06-03）= NVIDIA NIM `deepseek-ai/deepseek-v4-flash` 先 → Gemini 後備**；2-strike + 6h cooldown 仍在（NVIDIA 連兩次掛 → 轉 Gemini-only 6h 再回探）。**Haiku 全面停用**（`--engine haiku` 會 redirect 到 auto 並印警告）。見 [[feedback-nvidia-engine-haiku-retired]]。
+- ⚠️ **NVIDIA 只能用 deepseek-v4-flash**：唯一保留段落對齊 + `{{p:N}}`/`[^N]` marker 的；qwen3-next/llama-3.3 雖快但段落崩、marker 壞，不可當 NVIDIA 主力。
+- 並行多卷時兩卷切不同 engine 分散 quota（如一卷 auto、一卷 gemini）；**同一卷切勿開兩個 process**（race 同一 JSONL → dual-state bug）
 - B-layer 跟翻譯不要同時跑（都搶 Anthropic quota）
 - `_fix_volN_volumes.py` 是 one-shot 腳本，gitignore (`_*` 已排除)
 - `validate 0 FAIL` 是上架硬門檻；scan T2/T5 WARN 可接受
