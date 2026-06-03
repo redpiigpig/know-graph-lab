@@ -633,11 +633,29 @@ def _secondary_translate(source: str) -> str:
     """Tier-2 → Tier-3 fallback used when Gemini (primary) is exhausted:
     NVIDIA deepseek (2nd) → on its failure, Haiku 救急 (3rd, user 2026-06-04:
     「Gemini 和 NVIDIA 都跑完了就換 Haiku」). Haiku shares the Claude Max OAuth
-    account, so it only fires when BOTH free pools are dry."""
+    account, so it only fires when BOTH free pools are dry.
+
+    NVIDIA 2-strike: after NVIDIA_FAIL_STREAK_LIMIT consecutive NVIDIA failures
+    we stop probing NVIDIA (which can waste up to its 15-min all-keys deadline
+    per piece) and route straight to Haiku for NVIDIA_COOLDOWN_SECONDS, then
+    re-probe NVIDIA; success resets the streak."""
+    global _nvidia_consecutive_exhaust, _nvidia_cooldown_until
+    now = time.time()
+    if now < _nvidia_cooldown_until:
+        return haiku_translate(source)  # NVIDIA-cooldown window → Haiku 救急
     try:
-        return nvidia_translate(source)
+        result = nvidia_translate(source)
+        _nvidia_consecutive_exhaust = 0
+        return result
     except RuntimeError as e:
-        print(f"  ↳ NVIDIA exhausted ({str(e)[:50]}…) — 救急 fallback to Haiku", flush=True)
+        _nvidia_consecutive_exhaust += 1
+        if _nvidia_consecutive_exhaust >= NVIDIA_FAIL_STREAK_LIMIT:
+            _nvidia_cooldown_until = now + NVIDIA_COOLDOWN_SECONDS
+            print(f"  ↳ NVIDIA hit {_nvidia_consecutive_exhaust} consecutive failures "
+                  f"— switching to Haiku-only for {NVIDIA_COOLDOWN_SECONDS/3600:.0f}h", flush=True)
+        else:
+            print(f"  ↳ NVIDIA exhausted ({str(e)[:50]}…) — 救急 fallback to Haiku "
+                  f"[{_nvidia_consecutive_exhaust}/{NVIDIA_FAIL_STREAK_LIMIT}]", flush=True)
         return haiku_translate(source)
 
 
