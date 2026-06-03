@@ -217,15 +217,15 @@ watchEffect(() => {
   if (!availableVersions.value.length) {
     if (columns.value.length > 0 || !versions.value.length) return
     columns.value = [
-      { label: '英文', category: 'english', versionCode: '' },
       { label: '中文', category: 'chinese', versionCode: '' },
+      { label: '英文', category: 'english', versionCode: '' },
     ]
     return
   }
   if (columns.value.length > 0) return
   const cols: Col[] = []
-  const en = pickForCategory('english'); cols.push({ label: '英文', category: 'english', versionCode: en })
   const zh = pickForCategory('chinese'); cols.push({ label: '中文', category: 'chinese', versionCode: zh })
+  const en = pickForCategory('english'); cols.push({ label: '英文', category: 'english', versionCode: en })
   const src = pickForCategory('source'); if (src) cols.push({ label: '原文', category: 'source', versionCode: src })
   columns.value = cols
 })

@@ -94,9 +94,78 @@ def make_engine(engine: str):
     return te, fn
 
 
+# Curated Chinese titles for well-known Gnostic / Hermetic works — higher quality
+# than LLM for proper names. Unknown titles fall back to engine translation.
+TITLE_ZH: dict[str, str] = {
+    # ── Corpus Hermeticum (Mead) ──
+    "Poemandres, the Shepherd of Men": "牧人者（人類的牧者）",
+    "The Secret Sermon on the Mountain": "山上密訓",
+    "The Gnosis of the Mind": "心智的靈知",
+    "Commentary on the Pymander": "《牧人者》註釋",
+    "An Introduction to G.R.S. Mead's translation of the Corpus Hermeticum": "G.R.S. 米德《赫密士文集》譯本導論",
+    "On the Trail of the Winged God: Hermes and Hermeticism Throughout the Ages": "循翼神之蹤：赫密士與歷代赫密士主義",
+    "To Asclepius": "致阿斯克勒庇俄斯",
+    "The Sacred Sermon": "神聖講道",
+    "The Cup or Monad": "聖杯，或太一",
+    "Though Unmanifest God Is Most Manifest": "神雖未顯，卻最為彰顯",
+    "In God Alone Is Good And Elsewhere Nowhere": "善唯在神，他處皆無",
+    "The Greatest Ill Among Men is Ignorance of God": "人間至惡乃不識神",
+    "That No One of Existing Things doth Perish": "存在之物無一消亡",
+    "On Thought and Sense": "論思維與感覺",
+    "The Key": "鑰匙",
+    "Mind Unto Hermes": "心智致赫密士",
+    "About the Common Mind": "論共通心智",
+    "A Letter of Thrice-Greatest Hermes to Asclepius": "三重至偉的赫密士致阿斯克勒庇俄斯書",
+    "The Definitions of Asclepius unto King Ammon": "阿斯克勒庇俄斯致阿蒙王的定義",
+    "Of Asclepius to the King": "阿斯克勒庇俄斯致王書",
+    "The Encomium of Kings": "諸王頌",
+    "The Perfect Sermon (The Asclepius)": "完美講道（阿斯克勒庇俄斯篇）",
+    "The Hymns of Hermes": "赫密士頌歌",
+    "Asclepius (21-29)": "阿斯克勒庇俄斯篇（21–29）",
+    "The Discourse on the Eighth and Ninth": "論第八與第九重天",
+    "Prayer of Thanksgiving": "感恩禱文",
+    "Text": "赫密士文集正文",
+    # ── Nag Hammadi / Gnostic adjacents ──
+    "The Authoritative Teaching": "權威教訓",
+    "The Thunder, Perfect Mind": "雷霆，完全的心智",
+    "The Acts of Peter and the Twelve Apostles": "彼得與十二使徒行傳",
+    "The Gospel of Thomas": "多馬福音",
+    "The Gospel of Philip": "腓力福音",
+    "The Gospel of Truth": "真理福音",
+    "The Gospel of Mary": "馬利亞福音",
+    "The Apocryphon of John": "約翰密傳",
+    "The Hypostasis of the Archons": "執政者的本質",
+    "On the Origin of the World": "論世界起源",
+    "The Sophia of Jesus Christ": "耶穌基督的智慧",
+    "Pistis Sophia": "皮斯蒂斯‧索菲亞（信仰‧智慧）",
+    # ── Mead collection ──
+    "Brief Introduction": "簡短導論",
+    "The Hymn of Jesus": "耶穌之頌歌",
+    "The Hymn of the Robe of Glory": "榮耀之袍頌歌（珍珠之歌）",
+    "Apollonius of Tyana": "提亞納的阿波羅尼烏斯",
+    "Fragments of a Faith Forgotten": "被遺忘信仰的殘篇",
+    "The Mysteries of Mithra": "密特拉密儀",
+}
+
 # Seconds to sleep between paragraph calls, to keep the single free NVIDIA key
 # under its rate limit (set via --pace; 0 = full speed).
 PACE = 0.0
+
+
+def translate_title(title_en: str, te, engine_fn) -> str:
+    """Chinese title: curated map first, else a short engine translation."""
+    if title_en in TITLE_ZH:
+        return TITLE_ZH[title_en]
+    if te is None or engine_fn is None:
+        return title_en
+    prev = te.PROMPT_TMPL
+    te.PROMPT_TMPL = ("把以下諾斯底／赫密士文獻的英文篇名翻成簡潔的繁體中文書名，"
+                      "只輸出中文書名本身，不要引號、標點或說明：\n\n{source}")
+    try:
+        zh = engine_fn(title_en).strip().strip("「」\"'。 ")
+        return zh or title_en
+    finally:
+        te.PROMPT_TMPL = prev
 
 
 def translate_paragraphs(paragraphs: list[str], te, engine_fn, limit: int | None = None) -> list[str]:
@@ -154,8 +223,9 @@ def ingest_doc(category: str, title: str, url: str, te, engine_fn, *,
     en_used = en[:len(zh)]
     gl.assert_aligned(en_used, zh)
 
+    title_zh = translate_title(title, te, engine_fn)
     upsert_document({
-        "slug": slug, "title_zh": title, "title_en": title, "category": category,
+        "slug": slug, "title_zh": title_zh, "title_en": title, "category": category,
         "source_url": url, "display_order": display_order,
     })
     rows = []
