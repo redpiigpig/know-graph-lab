@@ -79,15 +79,12 @@ description: 「翻譯定名」通用名物中譯對照工具（/translation-glo
 
 ## UI 功能
 
-**Tab 切換**：人名（神學家）/ **君主** / **哲學家** / 地名 / 作品名 / 教派名 / 神學名詞
+**Tab 切換**：翻譯原則 / 人名（含聖經人物 era）/ 哲學家 / 科學家 / 歷代帝王 / 國名與城市 /
+神祇與宗教名詞 / 神學名詞 / 地名 / 作品名 / 教派名（各領域對應上方 schema 表）。
 
-> **君主／哲學家 tab（2026-06-03）**：`theologians` 表加 `figure_type` 欄
-> （`theologian` 預設 / `monarch` / `philosopher`）；三個「人」tab 都讀 theologians
-> 依 figure_type 分流，重用 people 表渲染。`monarch` = 希臘化君主 + 羅馬皇帝（64）；
-> `philosopher` = 蘇前→新柏拉圖主義希臘羅馬哲人（37）。seed =
-> [scripts/seed_monarchs_philosophers.py](../../../scripts/seed_monarchs_philosophers.py)
-> （含 reclassify 已存在人物：柏拉圖/亞里斯多德/蘇格拉底等 theologian→philosopher）。
-> 兩 tab 平面依年代排序、無 era 子 tab、不顯示新教/天主教變體欄。
+> ⚠️ 早期曾用「theologians.figure_type 分流 monarch/philosopher」的權宜做法（2026-06-03 commit
+> 923e643），已被本頁頂「各領域獨立表」新架構取代並回收（figure_type 欄與相關 rows 已刪）。
+> 君主→`historical_rulers`、哲學家→`philosophers` 專表。
 
 **篩選**：
 - 神學家 tab：世紀（1c / 2c / ... / 20c）
