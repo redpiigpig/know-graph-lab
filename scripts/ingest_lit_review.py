@@ -266,8 +266,10 @@ def fetch_fulltext(project_slug: str, engine: str, resume: bool,
                 continue
             orig = paras[:limit_paras] if limit_paras else paras
             n = translate_and_store(e["id"], orig, te, fn, pace, resume)
-            # fully done only when every paragraph now has a zh section
-            complete = len(done_zh_indices(e["id"])) >= len(orig)
+            # fully done only when the WHOLE article is translated — never mark a
+            # --limit-paras pilot 'translated' (it truncates orig, so resume would
+            # then wrongly skip the rest of the article).
+            complete = (limit_paras is None) and len(done_zh_indices(e["id"])) >= len(paras)
             rest_patch("lit_review_entries", f"id=eq.{e['id']}",
                        {"fulltext_status": "translated" if complete else "fetched"})
             print(f"    ✓ +{n} paras this run; {'complete' if complete else 'partial (re-run --resume)'}", flush=True)
