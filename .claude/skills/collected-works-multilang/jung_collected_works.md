@@ -93,7 +93,48 @@
 - 擴充：同法逐段補完整章 → 再下一章；德文重 OCR 待 Gemini 配額回復或續用 Haiku。
 
 ### 結論與下一步抉擇
-機械 pipeline 全部就緒且實證；卡點是**跨版逐段對齊是編輯級人工活**（Hinkle 非段落同構）。可選路徑：
-- (a) **我逐章人工配對德↔英 + 親譯**（正確但慢，一次一章的編輯工）；
-- (b) **德＋我的繁中**先上（這對能可靠對齊），英欄日後人工補（reader N 欄支援後加）；
-- (c) 換一部「德英本就逐段對應」的作品當起手（多數全集卷的英譯 Hull 版亦非段落同構，此問題普遍）。
+機械 pipeline 全部就緒且實證；卡點是**跨版逐段對齊是編輯級人工活**（Hinkle 非段落同構）。User 已拍板走 **(a) 逐章人工配對 + 親譯**。
+
+---
+
+## 🚀 新 session 接手清單（2026-06-03 交棒）
+
+> User 指示：開新 session 接著把榮格三欄做下去。**方法已穩定，照下面做即可。**
+
+### 目前成果（已上架、已驗證）
+- **Test ebook**：`ebook_id = 22222222-2222-4222-8222-222222222222`（圖書館「世界宗教／深層心理學」，標題「力比多的轉化與象徵（試譯·德英中三欄）」）。
+- **已完成**：封面 + **第一章「引論」(Einleitung) 整章 5 段**，中（我親譯）／德（1912）／英（Hinkle 1916）逐段對齊。
+- JSONL：`G:/我的雲端硬碟/資料/電子書/_chunks/22222222-….jsonl`（2 chunks）。**未推 R2、未刷 previews**（dev reader 讀 local JSONL 即可；正式化時再 push）。
+
+### 穩定的 5 步方法（每章照做）
+1. **德文重 OCR**（Gemini 全耗盡 → 用 **Haiku**，user 訂閱制不計費）：
+   `python scripts/_jung_ocr_slice.py <firstPage> <lastPage>` → 寫 `c:/tmp/jung_wandlungen_de_1912_ocr.jsonl`（**會覆寫**，做新章前先存舊的或改 OUT）。先 `_jung_ocr_slice.py` 裡的 SRC 指向德文 PDF（見下「要重抓的檔」）。
+2. **內容指紋配對 de↔en 章**：**不要信 heading／Ferrero 題詞**（多處重複會誤配）。用獨特內容（人名／關鍵句）grep 英文 HTML 各 section 找真對應。已知：德 `Einleitung` = 英 §8 `INTRODUCTION`（非 §9）。
+3. **人工逐段對齊**：每個德文段落，從英文找語意對應段（Hinkle 段界與德文不同，允許一德對多英／反之）。
+4. **親譯**：德→繁中，**先查 [jung_glossary.md](jung_glossary.md) 鎖術語**（自性≠本我、無意識≠潛意識、力比多、個體化、共時性…；人名佛洛伊德≠弗洛伊德）。新人名先查 [[translation-glossary]]（已升全領域）。
+5. **建三欄**：編 `scripts/_jung_pilot_build.py` 的 `zh/de/en_` 三個 list（每章 = heading + N 段，三 list 段數**必須相等**），跑 `python scripts/_jung_pilot_build.py`。驗證 `zh=de=en` 段數相等。
+
+### 驗證 / 截圖
+- 段數對齊：讀 JSONL 比對 `content` / `sources.de` / `sources.en` 的 `\n\n` 段數。
+- 視覺：`npm run dev`（會綁 3001 若 3000 被占）→ `node scripts/screenshot_book.mjs --ebook 22222222-… --pages <N> --view parallel --base http://localhost:<port> --out c:/tmp/shot`。**device gate**：tool 已注入 `kgl_device_id=screenshot-bot`（`trusted_devices` 預埋過，勿刪）。截圖 >2000px 要先 crop（PIL）再看。完看 **停掉自己起的 dev server**（只停那個 port）。
+
+### 要重抓的檔（tmp 被清過）
+- ❌ **德文 PDF**：`c:/tmp/jung_wandlungen_de_1912.pdf` 已刪 → 重抓：`https://archive.org/download/Jung_1912_Wandlungen/Jung_1912_Wandlungen.pdf`（29MB，426 頁，純圖像 PD）。
+- ✅ 還在：`jung_wandlungen_de_1912_ocr.jsonl`(pp1-14)、`de_einleitung.txt`、`en_introduction.txt`、`en_ch1.txt`、`jung_pou_en_1916.html`(Gutenberg #65903 全文)。
+- 英文全文若沒了：`https://www.gutenberg.org/cache/epub/65903/pg65903-images.html`（被擋就用 mirrorservice.org 鏡像，見 git log）。
+
+### 待辦（優先序）
+1. **下一章**：德文 OCR `II.`（p10 起，「Über zwei Arten des Denkens / Two Kinds of Thinking」= 英 §9 `CHAPTER I`）→ 配對 → 親譯 → 加進 build。注意英文章號比德文少 1（Hinkle 把 Einleitung 當 INTRODUCTION，故她的 Ch I = 德文 Ch II）。
+2. **腳註**：目前略過書目腳註（里克林等出版資訊、Ninon 腳註）。要補的話用 reader 的 `(N)` + `———` 腳註機制（見 [[fathers-translation]] footnote 行為），三欄各自的腳註 by-number 對齊（reader `parallelColumns.footnotes` 已支援）。
+3. **正式化**：改掉「試譯」標籤／給正式書名分類／補封面圖／決定正式 `ebook_id`（目前是 test 222…）→ push R2 + 刷 previews（參 `scripts/translate_collected_work.py` 的 `_upload` 或 ebook-pipeline）。
+4. （未來）受版權 CW 卷：等 user 給乾淨來源檔，不抓盜版全文。
+
+### 基建現況（都 test-first、已 push，不用重做）
+- reader N 欄：`pages/ebook/[id].vue` + `lib/multilang-sources.ts`(27 例) + API passthrough。
+- Python 寫入器 `scripts/multilang_chunks.py`(21 例) / 對齊 `scripts/align_editions.py`(20 例) / driver `scripts/translate_collected_work.py`（含 `load_html_sections`，11 例）。full pytest 155+ passed。
+- 詞庫 [jung_glossary.md](jung_glossary.md)（心靈工坊/TSAP/《榮格心理學辭典》查證鎖定；辭典是版權書只作術語參考不轉錄）。
+
+### ⚠️ 雷區
+- Gemini 4 key 全耗盡（billing），別再排 Gemini OCR/翻譯，一律 Haiku。
+- `_jung_*.py`、`c:/tmp/*` 是一次性（`_`/tmp 已 gitignore）；別當正式碼。
+- 三欄 build 三 list 段數不等 → reader 會錯位；build 後務必驗段數。

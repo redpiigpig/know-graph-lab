@@ -213,20 +213,19 @@ description: 多卷「全集」(Gesammelte Werke / Collected Works / 全集) 的
 - [x] **驅動腳本 + 真 LLM `translate_fn`**（2026-06-02，test-first，11 例綠）— [scripts/translate_collected_work.py](../../../scripts/translate_collected_work.py)：`load_plaintext_sections`/`split_sections`（純文字/markdown → 章節 list）/ `JUNG_PROMPT_TMPL`（德→繁中、英文僅消歧義、術語鎖定）/ `make_translate_fn(engine)`（lazy import 重用 [[ebook-translate]] 的 gemini/haiku/sonnet 引擎 + split_oversized）/ `run(de,en,ebook_id,translate_fn,...)` 串 load→align→assemble→write_jsonl→(R2+DB)。測試 [scripts/tests/test_collected_work_driver.py](../../../scripts/tests/test_collected_work_driver.py) 用 stub translate_fn，零 network。
   - 真實 run 指令：`python scripts/translate_collected_work.py --de <de.txt> --en <en.txt> --ebook <id> --engine gemini --limit 2 --upload`（先 `--limit` smoke、確認再全跑）。
 - [x] **HTML→sections loader**（2026-06-03，test-first）— [scripts/translate_collected_work.py](../../../scripts/translate_collected_work.py) `split_html_sections`/`load_html_sections`（bs4 lazy import；h1-h6 切段、收 p/li/pre 葉塊）。**實證**：真跑 Project Gutenberg Hinkle 英譯 HTML（[gutenberg.org/ebooks/65903](https://www.gutenberg.org/ebooks/65903)）→ 40 段、28 段標題乾淨 parse 成錨點（Part 1/2 + Chapter 1-8…）。
-- [ ] **錨點 part-scoping**（真資料浮現）：含 Part 的書章號每部重起（Part1‧Ch1 與 Part2‧Ch1 同 key）→ `anchor_coverage` 因 key 不唯一回 0。需把 chapter/section key 用最近的 part/book 加前綴（`part1/chapter1`）。
-- [ ] **真語料 run（pilot）— 卡在「乾淨德文來源」**：
-  - ✅ 英文：Project Gutenberg Hinkle 1916 HTML（公有領域、乾淨結構、loader 已實證）。
-  - ❌ 德文：1912《Wandlungen》**網路上只有 archive.org Fraktur OCR 髒文字**，無乾淨 HTML（zeno/textlog/projekt-gutenberg-de 皆無）。OCR 章節標題不成行、`anchor_coverage=0`。
-  - → 三欄（德/英/中）卡在德文欄沒乾淨來源。中文由 Claude 自己翻（user 指示）。選項：(a) Claude 為 bounded slice 手工校乾淨德文 OCR（PD，可做但短量、易錯）；(b) user 提供乾淨德文；(c) 先英→中（bilingual，等德文）。
+- [x] **HTML→sections loader 實證**（2026-06-03）：真跑 Gutenberg Hinkle → 40 段、28 錨點（Part/Chapter）。
+- [x] **🟢 首章三欄上架（2026-06-03，pilot 成功）**：德文 1912 PDF（純圖像）→ **Haiku 重 OCR**（Gemini 4 key 全耗盡）→ **內容指紋**配對 de Einleitung=en §8 → **親譯整章「引論」5 段** → trilingual ebook（`22222222-2222-4222-8222-222222222222`）reader 三欄逐段對齊（截圖 + 段數雙驗證）。
+- [ ] **▶ 接手做下去：見 [jung_collected_works.md](jung_collected_works.md) 的「🚀 新 session 接手清單」**（5 步方法 / 待辦 / 檔案 / 雷區 / ebook_id / 指令全在那）。下一章＝德 `II.`（兩種思維）= 英 §9 Ch I。Gemini 已死一律 Haiku。
+- [ ] **錨點 part-scoping**（次要）：含 Part 的書章號每部重起 → `anchor_coverage` key 不唯一。手工配對流程不依賴它，低優先。
 
 ## 起手卷決策（2026-06-02，Claude 拍板）
 
 **Pilot = 公有領域早期著作**：1912《Wandlungen und Symbole der Libido》(de, archive.org) + Hinkle 1916《Psychology of the Unconscious》(en, 公有領域)。理由：(1) 唯一**現在就能合法取得並處理**、不需使用者給檔、不碰受版權全文的 Jung 來源；(2) 兩版是**同一部作品**，能真正驗證跨版對齊；(3) 受版權的 CW 卷無論如何都要使用者提供 HTML 來源檔（不抓盜版全文）。pilot 建好的機器原封不動延伸到那些卷。詳見 [jung_collected_works.md](jung_collected_works.md)。
 - [x] **視覺驗證**（2026-06-02）：手造德/英/中樣本 chunk 跑 dev server + `screenshot_book.mjs` 確認 `中/對照/德/英` toggle、3 欄逐段對齊、**body zip 補白**（英缺第 2 段 → 空白格不位移）、**footnote by-number 跨欄對齊**（英缺 (2) → 該格空白）、單來源「德」單欄模式 全部正確。
   - 📌 `screenshot_book.mjs` 已修：注入 `kgl_device_id` 呈現預先核准的 `screenshot-bot` 裝置，繞過新的 device-trust gate（`middleware/device.global.ts`）。需在 `trusted_devices` 預埋一列 `device_id='screenshot-bot', status='approved'`（已埋）。否則所有 reader 截圖（含 [[fathers-translation]] 校對 C 層）會被導去 `/device-pending`。
-- [ ] **榮格全集盡職調查表**（[jung_collected_works.md](jung_collected_works.md)）
-- [ ] **jung_glossary.md** 起手（原型/集體無意識/個體化/自性…德文為準）
-- [ ] 第一卷試做（建議從有乾淨公有領域德＋英來源的早期著作起手，驗證三欄）
+- [x] **榮格全集盡職調查表**（[jung_collected_works.md](jung_collected_works.md)）＋版權表＋來源紀錄
+- [x] **jung_glossary.md**（心靈工坊/TSAP/《榮格心理學辭典》查證鎖定；辭典為版權書只作參考不轉錄）
+- [x] 第一章試做成功（引論整章三欄）→ 續做見上「接手清單」
 
 ---
 
