@@ -40,6 +40,7 @@ export default defineNuxtConfig({
       process.env.NVIDIA_API_Key_1,
       process.env.NVIDIA_API_Key_2,
       process.env.NVIDIA_API_Key_3,
+      process.env.NVIDIA_API_Key_4,
     ].filter(Boolean) as string[],
     nvidiaModel: process.env.NVIDIA_MODEL || "qwen/qwen3-next-80b-a3b-instruct",
     // 語言教練專用雙 key：先用免費，免費額度用完 → 前端確認後改用付費。
