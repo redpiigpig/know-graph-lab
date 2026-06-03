@@ -19,7 +19,7 @@ for (const l of fs.readFileSync('.env', 'utf-8').split('\n')) {
 }
 const args = process.argv.slice(2)
 const flag = (n, d) => { const i = args.indexOf(`--${n}`); return i >= 0 ? args[i + 1] : d }
-const APP_BASE = flag('base', 'http://localhost:3000')
+const APP_BASE = flag('base', 'http://localhost:3003')
 const SLUG = flag('slug', 'poemandres-the-shepherd-of-men')
 const OUT_DIR = flag('out', 'c:/tmp/gnostic_shots')
 const DEVICE = 'screenshot-bot'

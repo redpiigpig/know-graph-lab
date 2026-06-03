@@ -494,6 +494,19 @@ def gemini_translate(source: str, model: str = "gemini-2.5-flash") -> str:
 
 _THINK_RE = re.compile(r"<think>.*?</think>", re.S)
 
+# Phrases that appear in our translation prompts but never in real translated
+# content — their presence means the model parroted the instructions.
+_PROMPT_ECHO_MARKERS = (
+    "只輸出這一段", "只輸出翻譯", "只輸出中文", "請提供您想翻譯", "請提供您要翻譯",
+    "我準備好為您", "準備好為您進行翻譯", "不要前言", "逐字翻成繁體中文",
+    "逐字翻譯為繁體中文", "台灣用語、中間點", "台灣用語，中間點", "中間點用「‧」",
+    "你是諾斯底", "專業譯者", "請貼上", "請輸入您想翻譯",
+)
+
+
+def _looks_like_prompt_echo(text: str) -> bool:
+    return any(m in text for m in _PROMPT_ECHO_MARKERS)
+
 
 def _to_traditional(text: str) -> str:
     """Best-effort 繁體化 — Qwen/DeepSeek/GLM occasionally slip Simplified. opencc
@@ -519,6 +532,7 @@ def nvidia_translate(source: str) -> str:
     prompt = PROMPT_TMPL.format(source=source)
     model = NVIDIA_MODELS[0]
     last_err = "?"
+    echoes = 0  # times the model parroted the prompt instead of translating
     deadline = time.time() + 900   # 15 min across all keys, then fall to Gemini
     while time.time() < deadline:
         picked = _nv_pick_key()
@@ -542,6 +556,17 @@ def nvidia_translate(source: str) -> str:
             continue
         if r.status_code == 200:
             text = _THINK_RE.sub("", r.json()["choices"][0]["message"]["content"]).strip()
+            if _looks_like_prompt_echo(text):
+                # deepseek sometimes parrots the instructions on trivial input
+                # (a lone byline/header). Retry a couple times, then degrade to
+                # the source so alignment holds instead of showing prompt junk.
+                echoes += 1
+                last_err = f"prompt-echo key#{idx}"
+                print(f"  NVIDIA prompt-echo key#{idx} (#{echoes}) — retrying", file=sys.stderr, flush=True)
+                if echoes >= 3:
+                    return source
+                _nv_rest_key(idx, 3)
+                continue
             return _to_traditional(text)
         if r.status_code == 404:
             raise RuntimeError(f"{model} 404 — model unavailable")
