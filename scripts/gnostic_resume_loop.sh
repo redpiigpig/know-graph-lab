@@ -7,6 +7,16 @@
 cd "c:/Users/user/Desktop/know-graph-lab" || exit 1
 LOG=c:/tmp/gnostic_overnight.log
 
+# Single-instance guard — refuse to start if another loop is already alive
+# (prevents the zombie-accumulation that over-hammered the keys).
+LOCK=c:/tmp/gnostic_loop.lock
+if [ -f "$LOCK" ] && kill -0 "$(cat "$LOCK" 2>/dev/null)" 2>/dev/null; then
+  echo "### another gnostic loop already running (pid $(cat "$LOCK")) — exiting $(date)" >> "$LOG"
+  exit 0
+fi
+echo $$ > "$LOCK"
+trap 'rm -f "$LOCK"' EXIT
+
 count() {
   python -X utf8 -c "import os,requests
 from dotenv import load_dotenv; load_dotenv(os.path.join(os.getcwd(),'.env'))
