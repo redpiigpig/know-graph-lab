@@ -122,3 +122,15 @@
 - 54.5% 空白 (24/44) [人類生物學/生物學] **我們人類的宇宙** — `克里斯托弗·波特，我們人類的宇宙.epub`
 - 51.4% 空白 (54/105) [歷史學/西方界域史] **國王的兩個身體** — `恩斯特·坎託洛維奇，國王的兩個身體.epub`
 - 50.4% 空白 (60/119) [歷史學/全球通史] **大西洋的故事** — `西蒙·溫撤斯特，大西洋的故事.epub`
+
+---
+
+## 處理狀態（2026-06-03）
+
+**根因修掉**：`ocr_with_gemini.py` 的 `>50MB Haiku → NoneType → 永久失敗` bug 已修（commit 6bf657e）。401/連線/None 改判 transient，可重試＋checkpoint resume，不再永久坑死。
+
+**A 段 47 本盤點**：檔案全在（先前 0.0MB「Failed to open file」是 Google Drive 雲端未 hydrate 的延遲，非真缺檔）。
+- **31 本 >50MB → 走 Haiku，已啟動 targeted recovery**（不需 Gemini）。
+- 16 本 <50MB → 需 Gemini，但見下方 blocker。
+
+**🚧 BLOCKER（需使用者處理）**：**Gemini 全 4 把 key「prepayment credits depleted」**，Gemini OCR 整個停擺——這才是 OCR 佇列長期卡住的真正原因，不是只有那 37 本。<50MB 的書（A 段 16 本 + 原佇列 ~77 本）在儲值前都只能慢速 fallback Haiku。要去 AI Studio 檢查/儲值。
