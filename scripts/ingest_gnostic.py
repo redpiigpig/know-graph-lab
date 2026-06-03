@@ -94,10 +94,17 @@ def make_engine(engine: str):
     return te, fn
 
 
+# Seconds to sleep between paragraph calls, to keep the single free NVIDIA key
+# under its rate limit (set via --pace; 0 = full speed).
+PACE = 0.0
+
+
 def translate_paragraphs(paragraphs: list[str], te, engine_fn, limit: int | None = None) -> list[str]:
     todo = paragraphs[:limit] if limit else paragraphs
     out: list[str] = []
     for i, p in enumerate(todo):
+        if PACE and i > 0:
+            time.sleep(PACE)
         pieces = te.split_oversized(p)
         zh = "\n\n".join(engine_fn(piece) for piece in pieces)
         out.append(zh.strip())
@@ -219,8 +226,12 @@ def main():
     ap.add_argument("--resume", action="store_true", help="skip docs already in DB")
     ap.add_argument("--limit-docs", type=int, default=None)
     ap.add_argument("--limit-paras", type=int, default=None, help="cap paragraphs per doc (pilot)")
+    ap.add_argument("--pace", type=float, default=0.0, help="seconds to sleep between paragraphs (rate-limit pacing)")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
+
+    global PACE
+    PACE = args.pace
 
     # ── Overnight: every category ────────────────────────────────────────────
     if args.all:
