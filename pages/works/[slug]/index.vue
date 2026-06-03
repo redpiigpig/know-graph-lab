@@ -108,8 +108,55 @@
         </div>
       </div>
 
-      <div v-else class="max-w-5xl mx-auto px-6 py-24 text-center text-gray-400 text-sm">
+      <div v-else-if="project?.kind !== 'paper'" class="max-w-5xl mx-auto px-6 py-24 text-center text-gray-400 text-sm">
         登入後可看到「書摘與構思」筆記分頁
+      </div>
+
+      <!-- 研究回顧（文獻綜述） — 論文計畫頁底，公開可見 -->
+      <div v-if="project?.kind === 'paper'" class="max-w-5xl mx-auto px-6 py-8 border-t border-gray-100">
+        <div class="mb-4">
+          <h2 class="text-base font-semibold text-gray-900">研究回顧</h2>
+          <p class="text-xs text-gray-500 mt-0.5">
+            文獻綜述 · 共 {{ litEntries.length }} 筆
+            <span v-if="litEntries.length"> · 開放取用外文文獻提供 <span class="text-teal-600">原文／逐段中譯</span> 兩欄對照</span>
+          </p>
+        </div>
+
+        <div v-if="litLoading" class="text-gray-400 text-sm py-8 text-center">載入中⋯</div>
+        <div v-else-if="litEntries.length === 0" class="text-gray-400 text-sm py-8 text-center">
+          尚無文獻綜述。
+        </div>
+
+        <div v-else class="space-y-8">
+          <section v-for="grp in litGroups" :key="grp.theme">
+            <h3 v-if="grp.theme" class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">{{ grp.theme }}</h3>
+            <div class="space-y-3">
+              <div v-for="e in grp.items" :key="e.id"
+                class="bg-white rounded-2xl border border-gray-100 p-5 transition-all"
+                :class="e.has_fulltext ? 'cursor-pointer hover:border-teal-200 hover:shadow-sm' : ''"
+                @click="() => e.has_fulltext && navigateTo(`/works/${slug}/review/${e.ref_key}`)">
+                <div class="flex flex-wrap items-center gap-1.5 mb-2">
+                  <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">{{ langLabel(e.language) }}</span>
+                  <span v-if="e.dimension" class="text-xs font-medium px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-600">{{ e.dimension }}</span>
+                  <span v-if="e.stance" class="text-xs font-medium px-2 py-0.5 rounded-full bg-rose-50 text-rose-600">立場：{{ e.stance }}</span>
+                  <span v-if="e.has_fulltext" class="text-xs font-medium px-2 py-0.5 rounded-full bg-teal-50 text-teal-700">原文／中譯對照</span>
+                </div>
+                <h4 class="text-sm font-semibold text-gray-900 leading-snug mb-1">
+                  {{ e.authors }}<span v-if="e.year"> （{{ e.year }}）</span>　{{ e.title }}
+                </h4>
+                <p v-if="e.venue" class="text-xs text-gray-500 mb-2">{{ e.venue }}</p>
+                <p v-if="e.abstract_zh" class="text-sm text-gray-700 leading-relaxed">{{ e.abstract_zh }}</p>
+                <div class="mt-2 flex items-center gap-3 text-xs">
+                  <NuxtLink v-if="e.has_fulltext" :to="`/works/${slug}/review/${e.ref_key}`" @click.stop
+                    class="text-teal-700 hover:underline font-medium">閱讀全文（原文／中譯）→</NuxtLink>
+                  <a v-if="e.fulltext_url" :href="e.fulltext_url" target="_blank" rel="noopener" @click.stop
+                    class="text-blue-600 hover:underline">原始連結 ↗</a>
+                  <span v-if="!e.has_fulltext && !e.fulltext_url" class="text-gray-300 italic">無線上全文</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     </template>
 
@@ -145,6 +192,33 @@ interface Project {
   color: string
   status: string | null
   content_json: string | null
+  kind: 'book' | 'paper'
+  paper_ref: string | null
+}
+
+interface LitEntry {
+  id: number
+  ref_key: string
+  authors: string
+  year: number | null
+  title: string
+  venue: string | null
+  language: string | null
+  theme: string | null
+  dimension: string | null
+  stance: string | null
+  abstract_zh: string | null
+  fulltext_url: string | null
+  fulltext_status: string
+  has_fulltext: boolean
+}
+
+const LANG_LABELS: Record<string, string> = {
+  en: '英文', zh: '中文', de: '德文', fr: '法文', ja: '日文',
+  la: '拉丁文', grc: '希臘文', es: '西班牙文', it: '義大利文', other: '其他',
+}
+function langLabel(code: string | null) {
+  return LANG_LABELS[code ?? ''] ?? (code || '—')
 }
 
 const project = ref<Project | null>(null)
@@ -185,6 +259,32 @@ async function loadProject() {
 
 onMounted(loadProject)
 watch(() => user.value, loadProject)
+
+// ── 研究回顧（文獻綜述）─────────────────────────────────────────────
+const litEntries = ref<LitEntry[]>([])
+const litLoading = ref(false)
+
+async function loadLitReview() {
+  if (project.value?.kind !== 'paper') { litEntries.value = []; return }
+  litLoading.value = true
+  try {
+    const res = await $fetch<{ entries: LitEntry[] }>('/api/lit-review/entries', { query: { slug: slug.value } })
+    litEntries.value = res.entries ?? []
+  } catch { litEntries.value = [] } finally { litLoading.value = false }
+}
+watch(() => project.value?.kind, loadLitReview)
+
+// Group entries by theme, preserving server order (display_order encodes theme grouping)
+const litGroups = computed(() => {
+  const groups: { theme: string; items: LitEntry[] }[] = []
+  for (const e of litEntries.value) {
+    const theme = e.theme ?? ''
+    let g = groups.find(x => x.theme === theme)
+    if (!g) { g = { theme, items: [] }; groups.push(g) }
+    g.items.push(e)
+  }
+  return groups
+})
 
 async function patch(updates: Record<string, unknown>) {
   if (!project.value) return

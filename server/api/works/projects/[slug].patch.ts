@@ -24,6 +24,8 @@ export default defineEventHandler(async (event) => {
     color?: string;
     status?: string | null;
     content_json?: unknown;
+    kind?: string;
+    paper_ref?: string | null;
   };
 
   const updates: Record<string, unknown> = { updated_at: new Date().toISOString() };
@@ -43,13 +45,15 @@ export default defineEventHandler(async (event) => {
   if (body.color !== undefined) updates.color = body.color.trim() || "amber";
   if (body.status !== undefined) updates.status = body.status?.trim() || null;
   if (body.content_json !== undefined) updates.content_json = body.content_json;
+  if (body.kind !== undefined) updates.kind = body.kind === "paper" ? "paper" : "book";
+  if (body.paper_ref !== undefined) updates.paper_ref = body.paper_ref?.trim() || null;
 
   const supabase = getAdminClient();
   const { data, error } = await supabase
     .from("writing_projects")
     .update(updates)
     .eq("slug", slug)
-    .select("id, slug, title, subtitle, description, emoji, color, status, sort_order, content_json")
+    .select("id, slug, title, subtitle, description, emoji, color, status, sort_order, content_json, kind, paper_ref")
     .maybeSingle();
 
   if (error) throw createError({ statusCode: 500, message: error.message });

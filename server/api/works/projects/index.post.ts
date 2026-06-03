@@ -21,6 +21,8 @@ export default defineEventHandler(async (event) => {
     emoji?: string;
     color?: string;
     status?: string;
+    kind?: string;
+    paper_ref?: string;
   };
 
   const title = body.title?.trim();
@@ -63,8 +65,10 @@ export default defineEventHandler(async (event) => {
       color: body.color?.trim() || "amber",
       status: body.status?.trim() || null,
       sort_order: nextOrder,
+      kind: body.kind === "paper" ? "paper" : "book",
+      paper_ref: body.paper_ref?.trim() || null,
     })
-    .select("id, slug, title, subtitle, description, emoji, color, status, sort_order")
+    .select("id, slug, title, subtitle, description, emoji, color, status, sort_order, kind, paper_ref")
     .single();
 
   if (error) throw createError({ statusCode: 500, message: error.message });
