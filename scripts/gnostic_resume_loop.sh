@@ -19,9 +19,9 @@ prev=$(count); zero=0
 echo "### RESUME LOOP start (have $prev docs) $(date)" >> "$LOG"
 for i in $(seq 1 20); do
   echo "### resume cycle $i $(date)" >> "$LOG"
-  # NVIDIA-direct + pacing: Gemini daily quota is spent, so skip probing it and
-  # run the single free NVIDIA key steadily under its rate limit (--pace).
-  python -X utf8 -u scripts/ingest_gnostic.py --all --resume --engine nvidia --pace 3 >> "$LOG" 2>&1
+  # NVIDIA-direct: 4 account keys round-robin with the engine's global min-gap
+  # throttle (_nv_throttle) + per-key 429 cooldown handling the spacing.
+  python -X utf8 -u scripts/ingest_gnostic.py --all --resume --engine nvidia >> "$LOG" 2>&1
   cur=$(count); added=$((cur - prev)); prev=$cur
   echo "### cycle $i added $added (total $cur)" >> "$LOG"
   if [ "$added" -eq 0 ]; then zero=$((zero + 1)); else zero=0; fi

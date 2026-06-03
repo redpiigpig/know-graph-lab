@@ -113,11 +113,15 @@ _nv_key_idx = 0
 NVIDIA_MODELS = ["deepseek-ai/deepseek-v4-flash"]
 NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
 
-# 緩慢呼叫 (user 2026-06-03): the single free NVIDIA key hard-429s under bursty
-# load. Enforce a global minimum gap between NVIDIA requests so we stay under its
-# RPM ceiling instead of hammering it. _nv_throttle() blocks just long enough.
-NVIDIA_MIN_INTERVAL = 6.0  # seconds between any two NVIDIA calls (~10 RPM)
+# 緩慢呼叫 + 4 帳號輪換 (user 2026-06-03): 4 NVIDIA keys from 4 separate accounts,
+# each with its own daily quota. Round-robin across them so no single account is
+# called too often, with a global min-gap so total RPM stays low. A key that 429s
+# is rested (cooldown) and skipped, so a depleted account doesn't waste retries.
+NVIDIA_MIN_INTERVAL = 6.0      # seconds between ANY two NVIDIA calls (global)
+NVIDIA_KEY_COOLDOWN = 120.0    # rest a key this long after it 429s
 _nv_last_call = 0.0
+_nv_rr = 0                     # round-robin pointer
+_nv_key_cool: dict[int, float] = {}  # key idx -> epoch until which it's resting
 
 def _nv_throttle() -> None:
     global _nv_last_call
@@ -125,6 +129,20 @@ def _nv_throttle() -> None:
     if gap > 0:
         time.sleep(gap)
     _nv_last_call = time.time()
+
+def _nv_pick_key() -> tuple[int, str] | None:
+    """Round-robin the next NVIDIA key that isn't resting. None if all are cooling."""
+    global _nv_rr
+    now = time.time()
+    for _ in range(len(NVIDIA_KEYS)):
+        idx = _nv_rr % len(NVIDIA_KEYS)
+        _nv_rr += 1
+        if _nv_key_cool.get(idx, 0.0) <= now:
+            return idx, NVIDIA_KEYS[idx]
+    return None
+
+def _nv_rest_key(idx: int, secs: float = NVIDIA_KEY_COOLDOWN) -> None:
+    _nv_key_cool[idx] = time.time() + secs
 
 # Gemini → Haiku 2-strike fallback + 6h cooldown.
 # 連續兩次「跑完所有 keys 都 429/throttling」就視為配額耗盡，進入 Haiku-only 模式 6 小時。
@@ -491,58 +509,50 @@ def _to_traditional(text: str) -> str:
 
 
 def nvidia_translate(source: str) -> str:
-    """Translate via NVIDIA NIM (OpenAI-compatible). Rotates keys; falls through
-    NVIDIA_MODELS on 404/persistent error. Output is run through opencc s2tw as a
-    繁體 safety net. Replaces Haiku as the Gemini fallback."""
-    global _nv_key_idx
+    """Translate via NVIDIA NIM (OpenAI-compatible). Round-robins across the 4
+    account keys (skipping any that recently 429'd), with a global min-gap so we
+    never burst. A depleted key is rested NVIDIA_KEY_COOLDOWN secs and skipped, so
+    it costs one quick request, not a long backoff. Output → opencc s2tw 繁體 net.
+    Gives up (→ Gemini) only if every key stays 429 for the whole deadline."""
     if not NVIDIA_KEYS:
         raise RuntimeError("no NVIDIA API key")
     prompt = PROMPT_TMPL.format(source=source)
+    model = NVIDIA_MODELS[0]
     last_err = "?"
-    for model in NVIDIA_MODELS:
-        keys_tried = 0
-        while keys_tried < len(NVIDIA_KEYS):
-            key = NVIDIA_KEYS[_nv_key_idx]
-            keys_tried += 1
-            for attempt, wait in enumerate((0, 30, 90, 180), start=1):
-                if wait:
-                    time.sleep(wait)
-                _nv_throttle()  # 緩慢呼叫 — keep under the free key's RPM ceiling
-                try:
-                    r = requests.post(
-                        NVIDIA_URL,
-                        headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
-                        json={"model": model, "messages": [{"role": "user", "content": prompt}],
-                              "temperature": 0.2, "max_tokens": 8000},
-                        # deepseek-v4-flash needs >180s on 15-20K char pieces (timed out
-                        # in prod 2026-06-03). 600s lets it finish big pieces as fallback.
-                        timeout=600,
-                    )
-                except requests.exceptions.RequestException as e:
-                    last_err = f"conn {type(e).__name__}"
-                    if attempt >= 4:
-                        break
-                    continue
-                if r.status_code == 200:
-                    text = r.json()["choices"][0]["message"]["content"]
-                    text = _THINK_RE.sub("", text).strip()
-                    return _to_traditional(text)
-                if r.status_code == 404:
-                    last_err = f"{model} 404"
-                    break  # model unavailable → next model
-                if r.status_code in (429, 500, 502, 503, 504):
-                    last_err = f"NVIDIA {r.status_code}"
-                    print(f"  NVIDIA {r.status_code} {model} key#{_nv_key_idx} attempt {attempt}", file=sys.stderr, flush=True)
-                    if attempt >= 4:
-                        break
-                    continue
-                last_err = f"NVIDIA HTTP {r.status_code}: {r.text[:200]}"
-                break
-            else:
-                continue
-            if last_err.endswith("404"):
-                break  # try next model with the same key set
-            _nv_key_idx = (_nv_key_idx + 1) % len(NVIDIA_KEYS)
+    deadline = time.time() + 900   # 15 min across all keys, then fall to Gemini
+    while time.time() < deadline:
+        picked = _nv_pick_key()
+        if picked is None:  # every key is resting — wait for the soonest to free up
+            soonest = min(_nv_key_cool.values()) if _nv_key_cool else time.time() + 5
+            time.sleep(max(1.0, min(soonest - time.time(), 30.0)))
+            continue
+        idx, key = picked
+        _nv_throttle()  # 緩慢呼叫 — global min-gap between any two NVIDIA calls
+        try:
+            r = requests.post(
+                NVIDIA_URL,
+                headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
+                json={"model": model, "messages": [{"role": "user", "content": prompt}],
+                      "temperature": 0.2, "max_tokens": 8000},
+                timeout=600,  # deepseek-v4-flash can need >180s on 15-20K char pieces
+            )
+        except requests.exceptions.RequestException as e:
+            last_err = f"conn {type(e).__name__} key#{idx}"
+            _nv_rest_key(idx, 30)  # brief rest, try another key
+            continue
+        if r.status_code == 200:
+            text = _THINK_RE.sub("", r.json()["choices"][0]["message"]["content"]).strip()
+            return _to_traditional(text)
+        if r.status_code == 404:
+            raise RuntimeError(f"{model} 404 — model unavailable")
+        if r.status_code in (429, 500, 502, 503, 504):
+            last_err = f"NVIDIA {r.status_code} key#{idx}"
+            print(f"  NVIDIA {r.status_code} key#{idx} — resting {NVIDIA_KEY_COOLDOWN:.0f}s, rotating", file=sys.stderr, flush=True)
+            _nv_rest_key(idx)
+            continue
+        last_err = f"NVIDIA HTTP {r.status_code}: {r.text[:200]}"
+        _nv_rest_key(idx)
+        continue
     raise RuntimeError(f"NVIDIA translate failed (last: {last_err})")
 
 
@@ -551,53 +561,46 @@ def nvidia_chat(prompt: str, max_tokens: int = 2000, system: str | None = None,
     """Generic NVIDIA NIM chat call (OpenAI-compatible) for NON-translation tasks
     (proofreading / titling / cleanup) that previously used Haiku — Haiku is fully
     retired (user 2026-06-03). Rotates keys + NVIDIA_MODELS; strips <think> blocks.
-    Does NOT run opencc (caller may need raw JSON). Raises on total failure."""
-    global _nv_key_idx
+    Does NOT run opencc (caller may need raw JSON). Raises on total failure.
+    Same 4-key round-robin + per-key cooldown + global throttle as nvidia_translate."""
     if not NVIDIA_KEYS:
         raise RuntimeError("no NVIDIA API key")
     msgs = ([{"role": "system", "content": system}] if system else []) + \
            [{"role": "user", "content": prompt}]
+    model = NVIDIA_MODELS[0]
     last_err = "?"
-    for model in NVIDIA_MODELS:
-        keys_tried = 0
-        while keys_tried < len(NVIDIA_KEYS):
-            key = NVIDIA_KEYS[_nv_key_idx]
-            keys_tried += 1
-            for attempt, wait in enumerate((0, 30, 90, 180), start=1):
-                if wait:
-                    time.sleep(wait)
-                _nv_throttle()  # 緩慢呼叫 — keep under the free key's RPM ceiling
-                try:
-                    r = requests.post(
-                        NVIDIA_URL,
-                        headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
-                        json={"model": model, "messages": msgs,
-                              "temperature": temperature, "max_tokens": max_tokens},
-                        timeout=300,
-                    )
-                except requests.exceptions.RequestException as e:
-                    last_err = f"conn {type(e).__name__}"
-                    if attempt >= 4:
-                        break
-                    continue
-                if r.status_code == 200:
-                    text = r.json()["choices"][0]["message"]["content"]
-                    return _THINK_RE.sub("", text).strip()
-                if r.status_code == 404:
-                    last_err = f"{model} 404"
-                    break
-                if r.status_code in (429, 500, 502, 503, 504):
-                    last_err = f"NVIDIA {r.status_code}"
-                    if attempt >= 4:
-                        break
-                    continue
-                last_err = f"NVIDIA HTTP {r.status_code}: {r.text[:200]}"
-                break
-            else:
-                continue
-            if last_err.endswith("404"):
-                break
-            _nv_key_idx = (_nv_key_idx + 1) % len(NVIDIA_KEYS)
+    deadline = time.time() + 600
+    while time.time() < deadline:
+        picked = _nv_pick_key()
+        if picked is None:
+            soonest = min(_nv_key_cool.values()) if _nv_key_cool else time.time() + 5
+            time.sleep(max(1.0, min(soonest - time.time(), 30.0)))
+            continue
+        idx, key = picked
+        _nv_throttle()
+        try:
+            r = requests.post(
+                NVIDIA_URL,
+                headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
+                json={"model": model, "messages": msgs,
+                      "temperature": temperature, "max_tokens": max_tokens},
+                timeout=300,
+            )
+        except requests.exceptions.RequestException as e:
+            last_err = f"conn {type(e).__name__} key#{idx}"
+            _nv_rest_key(idx, 30)
+            continue
+        if r.status_code == 200:
+            return _THINK_RE.sub("", r.json()["choices"][0]["message"]["content"]).strip()
+        if r.status_code == 404:
+            raise RuntimeError(f"{model} 404 — model unavailable")
+        if r.status_code in (429, 500, 502, 503, 504):
+            last_err = f"NVIDIA {r.status_code} key#{idx}"
+            _nv_rest_key(idx)
+            continue
+        last_err = f"NVIDIA HTTP {r.status_code}: {r.text[:200]}"
+        _nv_rest_key(idx)
+        continue
     raise RuntimeError(f"NVIDIA chat failed (last: {last_err})")
 
 
