@@ -498,8 +498,10 @@ Vol 9:  349 → 92   (30 page + 62 other)
 | ✅ 13 | NPNF1 Vol 2 (City of God + On Christian Doctrine) | 已精修 | **fix_npnf_tree.py** 首用：上帝之城 22 卷 |
 | ✅ 14 | NPNF1 Vol 3 (Holy Trinity + Doctrinal/Moral Treatises) | 已精修 | fix_npnf_tree |
 | ✅ 15 | NPNF1 Vol 4 (Anti-Manichaean + Anti-Donatist) | 已精修 | fix_npnf_tree |
-| 🔄 16-18 | NPNF1 Vol 5-7 (Anti-Pelagian / Sermon Mount / Homilies John) | 翻譯中 | 見接手清單 |
-| 19-38 | NPNF1 Vol 8 + Chrysostom Vol 9-14 / NPNF2 Vol 1-3,5-14 + ACCS 待補卷 | 粗譯 | 佇列見接手清單 |
+| ✅ 16-25 | NPNF1 Vol 5-14（駁伯拉糾派…奧古斯丁 V5-8 + 金口若望 V9-14）| 已精修 | 金口若望命名鎖定 |
+| ✅ 26-29 | NPNF2 Vol 1（優西比烏）/ 2（蘇格拉底+索佐門）/ 3（狄奧多勒+耶柔米）/ 5（尼撒格列高里）| 已精修 | 巢狀 override (vol26/28) |
+| 🔄 30 | NPNF2 Vol 6（耶柔米）| 翻譯中 | 見接手清單 |
+| 31-38 | NPNF2 Vol 7-14 + ACCS 待補卷 | 待續 | 佇列見接手清單 |
 
 ---
 
@@ -534,138 +536,49 @@ apply_translation_decisions_20260529.py 已套到 DB + Vol 1-9 chunks。**之後
 
 ---
 
-## 🚧 下個 session 接手清單（2026-05-30 凌晨 留 — 整晚批次循環進行中）
+## 🚧 下個 session 接手清單（2026-06-03 更新 — 新 session 監測用）
 
-**使用者指令**：開放式循環 — 每批 3 卷 translate → 精修 → commit，跑完自動接下一批
-（16-18、19-21…）沿教父全集順序一直跑，直到 Gemini 配額耗盡或全集完成。
-已授權整晚自動 + auto-push，不需停下來問。
+**使用者指令**：開放式循環 — 一次跑 1 卷（配額緊，2-way 以上會互卡），translate → 精修
+→ glossary → REFINED → commit/push，自動接下一卷沿 NPNF2 順序跑。已授權整晚自動 +
+auto-push。**git 在 master 跑教父**（user 拍板；feat/language-coach 是別人的功能分支，別碰）。
 
-### ✅ 已完成精修上架（commit+push）
-ANF Vol 1-9（前次）+ **本輪：**
-- Vol 10 ANF V10（書目/索引，CCEL 無正文僅 minimal header，**不標精修**）
-- Vol 11 NPNF1 V1 奧古斯丁《懺悔錄》+書信
-- Vol 12 NPNF2 V4 亞他那修全集（22 著作）
-- Vol 13 NPNF1 V2《上帝之城》22 卷 + 論基督教教義
-- Vol 14 NPNF1 V3 論聖三 + 教義/道德論集
-- Vol 15 NPNF1 V4 駁摩尼派 + 駁多納徒派
-全部 validate 0 FAIL · T9 cross-bleed 0。
+### ✅ 已完成精修上架（master，test_fathers_quality 全 26 卷 PASS）
+- **ANF Vol 1-9**（前次）
+- **NPNF1 全 14 卷**：V1-4（前次）+ V5-14 本輪
+  （駁伯拉糾派/登山寶訓/約翰福音講道/詩篇講解/金口若望 V9-14）
+- **NPNF2**：V1 優西比烏 · V2 蘇格拉底+索佐門 · V3 狄奧多勒+耶柔米+魯菲努斯 ·
+  V4 亞他那修（前次）· V5 尼撒的格列高里
+- 譯名鎖定：**金口若望**（非屈梭多模）· **狄奧多勒**（非狄奧多雷）· **格列高里**（里非理）
 
-### 🔄 進行中（背景 nohup，新 session 先查 log/JSONL 計數）
-**Batch 16-18 翻譯中**（log: `scripts/logs/translate_vol16/17/18.log`）：
-- 16 NPNF1 V5 駁伯拉糾派  df789501-5620-4833-a0a0-6e8f1a031bb1
-- 17 NPNF1 V6 登山寶訓+四福音合參  7bff8a13-3c35-43d4-9b4c-b7c3c9f81076（已翻完）
-- 18 NPNF1 V7 約翰福音講道+獨語錄  0069932a-7b27-4c06-9874-b74d51ad564e（最慢）
-查完成：`grep "ebooks row updated" scripts/logs/translate_vol1N.log`
+### 🔄 進行中（背景 nohup，**新 session 先查**）
+- **vol30 NPNF2 V6 耶柔米** `d229a6d4-14de-4e28-92de-4855c75cbf68`
+  log `scripts/logs/translate_vol30.log`；查 `grep "ebooks row updated"`，未完則看 jsonl 計數。
+  ⚠️ REGISTRY/TERM_FIXES **尚未建**（翻完先 dry-run 看結構，NPNF2 多有巢狀，比照 vol26/28 override）。
+- Monitor 用 bash 背景 while-loop 偵測「完成/Traceback/jsonl >50min 沒寫入卡死」三態。
 
-### 接手步驟（每批 3 卷）
-1. 等 3 卷 translate 都出 "ebooks row updated"
-2. 對每卷：`polish_translated_book.py` → 在 **`scripts/fix_npnf_tree.py`** 的
-   REGISTRY 加該 ebook_id 的 `{en著作標籤: 中文}`（"__FRONT__"/"__INDEX__" 走前言/索引）
-   → `python scripts/fix_npnf_tree.py <id>` → `consolidate_letters.py <id>`
-   → 在 `sweep_book_quality.TERM_FIXES_BY_BOOK` 加該 id（奧古斯丁卷指 `TERM_FIXES_NPNF1_VOL_1`）
-   → `sweep_book_quality.py <id>` → `validate_book_structure.py <id>`（0 FAIL 門檻）
-   → `scan_translated_book.py <id>`（確認無 T9）
-3. 名著參考校準（見上「參考現成中譯本校準」節，名著才做）
-4. 詞庫：奧古斯丁核心已 seed（`seed_glossary_npnf_vol11_12.py`）；新人物再補
-5. `pages/fathers/index.vue` REFINED_IDS + ZH_TITLES（NPNF1/2 多已有）→ commit+push
-6. 啟動下一批 3 卷 translate（先 mv .en.bak），寫 watcher，repeat
+### ⚙️ 操作鐵則（踩過的坑，務必遵守）
+1. **每卷上架前跑 `python scripts/test_fathers_quality.py <id>` 綠燈才算數**（G1 validate 0 FAIL /
+   G2 T9=0 / G3 T1=0 / G4 TERM_FIXES 變體全 0 / G5 無 dual-state）。
+2. **🔁 Drive 同步會默默還原已上架卷**（雲端舊版蓋回本地 jsonl，變體/標題 bleed 回來）。
+   `test_fathers_quality.py`（全跑）會抓到 → 對該卷 `sweep_book_quality.py <id>`（含 --only-t8/t1）
+   重套即修。**ANF Vol2 已反覆中招**，新 session 定期全跑把關。
+3. **NPNF2 巢狀 book bug**：fix_npnf_tree 把「Prolegomena 當卷一、含子書的大作 lumped 成單卷」。
+   翻完 dry-run 一看卷數爆量（如某卷 150+ chunks）就知道中招 → 寫 `_fix_vol<N>_*.py`
+   title_en prefix override（範本 `_fix_vol26_constantine.py` / `_fix_vol28_npnf2v3.py`），
+   把真子書/導論/書信拆開。override 後若 `前言` 章號重複 → 重排 `前言` 章號（見 vol26/28 做法）。
+4. **OAuth**：translate 讀 `~/.claude/.credentials.json`；token 過期會 Haiku 401。配額同時耗盡會卡死
+   →（user 登入著時）token 會自動 refresh，kill+`--resume` 重啟即接上。Gemini 全 key exhausted →
+   fallback Haiku；兩者皆掛就等配額重置。
+5. 卡死/崩潰 → kill 該卷 python 行程 + `--resume` 重啟，partial chunks 不丟。
+6. **glossary（/translation-glossary）已被改成「各領域獨立表」新架構，由別的作業負責，教父線別碰。**
 
-### 佇列（接 18 之後）
-- 19-21: NPNF1 V8 詩篇講解 2accee20-5f9d-4099-9ce9-3dda0726a74b /
-  金口若望 V9 論司祭職 76df31fe-e732-4aa6-88c2-d650a09fb688 /
-  V10 馬太講道 0d160c29-8d61-4dbc-8f8e-d47fee694eab
-- 22-24: 金口若望 V11 4d73c561 / V12 bf2dd1b2 / V13 9192cb77
-- 25-27: 金口若望 V14 91c7023f / NPNF2 V1 優西比烏 91ff3a5e / V2 蘇格拉底 29782dd6
-- 28-30: NPNF2 V3 狄奧多雷 a7e5956e / V5 尼撒貴格利 9b94e7c1 / V6 耶柔米 d229a6d4
-- 31-33: NPNF2 V7 區利羅+拿先斯 af2cf8a7 / V8 巴西流 3c48472c / V9 希拉里 709f43f9
-- 34-36: NPNF2 V10 安波羅修 fd8a09e7 / V11 24c53ede / V12 大良 02a08547
-- 37-38: NPNF2 V13 90b55879 / V14 七大公會議 63853a97 →（再 ACCS 待補卷）
-
-⚠️ 金口若望卷是「講道集」結構（多篇 homily），fix_npnf_tree 的 depth1/depth2 是否
-   切得乾淨要先 dry-run 看；可能 depth2=每篇講道（無 book 層）→ volume=該卷著作即可。
-完整即時狀態與 IDs 另存 `c:\tmp\fathers_overnight_state.md`。
-
-### 譯名鎖定（本輪已套，後續沿用）
-奧古斯丁（希波）·亞他那修（非阿塔那修）·亞流（非阿里烏）。Cappadocian/Cyril 見
-2026-05-29 譯名決策節。新卷翻完 `sweep --only-t8` 收斂變體。
-
-**🔴 John Chrysostom → 金口若望（2026-05-30 user 拍板，詞庫 name_recommended）**
-全專案統一：/fathers ZH_TITLES、TERM_FIXES 一律 **金口若望**，**禁用「屈梭多模」**
-（新教音譯）、「聖金口約安」（東正）、「金口約翰／克里索斯托」等變體。
-`sweep_book_quality.TERM_FIXES_NPNF1_CHRYSOSTOM` 收斂全部變體 → 金口若望。
-- 參考中譯（B 層校對用，**不照搬、不入庫**，遵「參考現成中譯本校準」節）：
-  《論司祭職》(De Sacerdotio) 有中譯本可比對語意/術語；其餘講道集網上零星中譯，
-  WebFetch 對應段落當黃金參考即可，版權內容絕不存 DB/R2。
-
-**新卷標準流程**（generic 參考）：
-
-```bash
-EBID=<ebook_id>
-
-# 0. 備份原 JSONL (dual-state 保險)
-mv "G:/我的雲端硬碟/資料/電子書/_chunks/$EBID.jsonl" \
-   "G:/我的雲端硬碟/資料/電子書/_chunks/$EBID.en.bak.jsonl"
-
-# 1. Translate (gemini→haiku 自動切換)
-nohup python -u scripts/translate_ebook_to_zh.py $EBID --engine gemini --resume \
-   > scripts/logs/translate_$EBID.log 2>&1 &
-# 等 "ebooks row updated" marker
-
-# 2. Phase 4
-PYTHONIOENCODING=utf-8 python scripts/polish_translated_book.py $EBID
-PYTHONIOENCODING=utf-8 python scripts/consolidate_by_ncx.py $EBID
-PYTHONIOENCODING=utf-8 python scripts/sweep_book_quality.py $EBID
-PYTHONIOENCODING=utf-8 python scripts/multi_h3_splitter.py $EBID
-
-# 3. dual-state 檢查（zh vs en 比例，多卷會有 200-400 個英文重檔）
-PYTHONIOENCODING=utf-8 python -c "
-import json, re
-from pathlib import Path
-p = Path(f'G:/我的雲端硬碟/資料/電子書/_chunks/$EBID.jsonl')
-rows = [json.loads(l) for l in p.read_text(encoding='utf-8').splitlines() if l.strip()]
-en = zh = 0; en_idxs = []
-for r in rows:
-    c = r.get('content','') or ''
-    if not c.strip(): continue
-    zhr = len(re.findall(r'[一-鿿]', c)) / max(len(c),1)
-    if zhr > 0.15: zh += 1
-    else: en += 1; en_idxs.append(r['chunk_index'])
-print(f'zh:{zh} en:{en}; en 範圍 {min(en_idxs) if en_idxs else None}..{max(en_idxs) if en_idxs else None}')
-"
-
-# 4. 客製 _fix_volN_volumes.py（從 NCX 抽 PREFIX_TO_VOL + EN_PARENT_TO_ZH + dual-state drop）
-#    模板：_fix_vol8_volumes.py（含 dual-state stage 0）／ _fix_vol7_volumes_v2.py（boundary）
-
-# 5. consolidate_letters（D1）
-PYTHONIOENCODING=utf-8 python scripts/consolidate_letters.py $EBID
-
-# 6. parent_volume backfill（D2，先在 backfill_parent_volume.py 加新卷的教父 PARENT_RULES）
-PYTHONIOENCODING=utf-8 python scripts/backfill_parent_volume.py $EBID
-
-# 7. T1 enhanced + validate
-PYTHONIOENCODING=utf-8 python scripts/sweep_book_quality.py $EBID --only-t1
-PYTHONIOENCODING=utf-8 python scripts/validate_book_structure.py $EBID
-
-# 8. seed_glossary_anf_volN.py（按 _vol8/9 模板，遵循 2026-05-29 譯名決策）
-PYTHONIOENCODING=utf-8 python scripts/seed_glossary_anf_volN.py
-
-# 9. REFINED_IDS 加 ebook_id 到 pages/fathers/index.vue + ZH_TITLES 卡片中文書名
-
-# 10. commit + push
-```
-
-### reader 已驗證的四個 footnote 行為（不需再動）
-
-- ✅ 短章 10/page 合併（D1，已確認 Vol 5 居普良論述集 22 頁 = 1-10, 11-20, ... 191-194）
-- ✅ 註釋集中末尾（reader `renderMarkdown` 收 `———` 後的 `(N)` 到 `<section class="footnotes">`）
-- ✅ 上下雙向連結（`[^N]` `<sup id="fnref-{c}-{N}">` ↔ `(N)` `<p id="fn-{c}-{N}">` + `↩` back-link + `:target` 黃底高亮）
-- ✅ 註釋字體較小（section.footnotes `font-size: 12.5px`，正文 16px = 78%；sup 0.75em；label 11px）
-
-### 後續可選
-
-- consolidate_letters 整合進 watchdog 自動化（目前手動跑）
-- 索引 chunks 改 `chapter_type='index'`（reader 現用 `isIndexEntry()` regex，OK 但 type 更穩）
-- Reader breadcrumb 顯示「居普良《論述集》第1-10章」而非「<vol> 第N-M章」
+### 接續佇列（NPNF2，逐卷；ID 見下方批次表保留區）
+V7 區利羅+拿先斯 `af2cf8a7-b169-432c-863d-632647c8ab67` / V8 巴西流 `3c48472c-fbca-48fb-9db1-ca5a08827ef3` /
+V9 希拉里+大馬色若望 `709f43f9-724c-4cd5-b6b0-570d26083d24` / V10 安波羅修 `fd8a09e7-a6ab-4818-a6d7-6722e50da773` /
+V11 `24c53ede-8787-442e-a3ba-0cd55d0effac` / V12 大良 `02a08547-6fb5-44b2-8a59-9b1f625f3a54` /
+V13 `90b55879-7179-41d7-9f6c-f6587a3dd429` / V14 七大公會議 `63853a97-68be-441c-8dce-063ae89405c5`
+→ 再 ACCS 待補卷。**翻每卷前先 `/translation-glossary` 查該卷人物 ★建議譯名**（迦帕多家/區利羅
+見 2026-05-29 譯名決策節）。
 
 ---
 
