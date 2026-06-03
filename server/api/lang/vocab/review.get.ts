@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
   const q = getQuery(event);
   const language = (q.language as string) || "en";
   const limit = Math.min(50, parseInt((q.limit as string) || "20"));
-  const today = new Date().toISOString().slice(0, 10);
+  const today = tzToday();
 
   const cols = "id, word, reading, meaning, example, part_of_speech, mastery_level, next_review";
   const { data: dueRows } = await supabase

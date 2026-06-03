@@ -4,6 +4,7 @@
       <NuxtLink :to="`/coach/${language}`" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
       <div class="w-px h-5 bg-gray-200" />
       <span class="text-sm font-semibold text-gray-900">內容沉浸（YouTube / 文章）</span>
+      <div class="ml-auto"><CoachTimer :seconds="tracker.activeSeconds" /></div>
     </nav>
 
     <div class="flex-1 p-5 max-w-3xl mx-auto w-full space-y-5">

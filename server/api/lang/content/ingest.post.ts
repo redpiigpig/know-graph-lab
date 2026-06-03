@@ -136,7 +136,7 @@ export default defineEventHandler(async (event) => {
         detail: analysis.title ?? null,
       });
       // 更新最後活躍 + 累計（streak 由 activity 端點/其他流程維護，這裡補時間）
-      const today = new Date().toISOString().slice(0, 10);
+      const today = tzToday();
       const { data: prog } = await supabase
         .from("lang_progress")
         .select("total_minutes")

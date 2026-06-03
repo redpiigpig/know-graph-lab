@@ -19,8 +19,9 @@ export interface Coach {
   voiceless?: boolean;     // true = 死語言，無 STT/TTS，純文字（拉丁/古希臘）
   systemPrompt: string;    // 教練人設 + 教學法 + 結構化輸出規則
   personas?: Persona[];    // 同一位教練的多種人格（聊天時自動輪替）
-  smalltalkTopics?: string[]; // small-talk 限時練習的建議議題
+  smalltalkTopics?: string[]; // small-talk 限時練習的建議議題（也用作打字／口說聊天的話題推薦）
   scenarios?: string[];    // 情境角色扮演的情境清單
+  qaTopics?: string[];     // 問答‧知識模式的推薦知識題（宗教／神話／宗教學為主）
   levelScale: string[];    // 程度量表（CEFR / JLPT / 初中進）
   defaultLevel: string;    // 新學習者預設程度
 }
@@ -117,6 +118,20 @@ const COACHES: Coach[] = [
       "在咖啡廳點餐並和店員閒聊",
       "打電話向圖書館預約查閱善本",
     ],
+    qaTopics: [
+      "What is the documentary hypothesis in biblical studies?",
+      "Explain the difference between myth, legend, and folktale.",
+      "What did Max Weber mean by the 'Protestant ethic'?",
+      "How did the canon of the New Testament come to be formed?",
+      "What is apophatic (negative) theology?",
+      "Compare monotheism, henotheism, and polytheism.",
+      "What is the historical-critical method of biblical interpretation?",
+      "Who was Mircea Eliade and what did he mean by 'the sacred'?",
+      "What is Gnosticism, and why did the early church oppose it?",
+      "Explain the Council of Nicaea and why it mattered.",
+      "What is the difference between exegesis and eisegesis?",
+      "How do scholars define 'religion'? Why is it contested?",
+    ],
     personas: [
       { key: "friend", label: "紐約閨蜜（閒聊）", emoji: "😄", instruction: "今天用最輕鬆的閒聊語氣，像紐約的好朋友在咖啡廳聊天，多用口語和俚語，氣氛放鬆。" },
       { key: "interviewer", label: "面試官", emoji: "💼", instruction: "今天扮演專業面試官，用正式商務英語提問，追問細節，最後給面試表現的回饋。" },
@@ -149,6 +164,16 @@ const COACHES: Coach[] = [
 - 適時出單字與作業（作文／翻譯／會話）。`,
     smalltalkTopics: ["自己紹介", "好きな本や映画", "宗教と神話の話", "週末の過ごし方", "日本の祭りと信仰", "おすすめの聖地・寺社"],
     scenarios: ["コンビニで買い物をする", "レストランで注文する", "駅で道をたずねる", "自己紹介をする", "ホテルでチェックインする", "お寺・神社でお参りの作法をきく"],
+    qaTopics: [
+      "神道と仏教の違いを説明してください。",
+      "「八百万の神（やおよろずのかみ）」とはどういう意味ですか。",
+      "古事記と日本書紀の違いは何ですか。",
+      "神社と寺の参拝作法の違いを教えてください。",
+      "「穢れ（けがれ）」と「禊（みそぎ）」について教えてください。",
+      "神仏習合とは何ですか。",
+      "お盆の由来と意味を教えてください。",
+      "日本の宗教観における自然崇拝について。",
+    ],
   },
   {
     language: "de",

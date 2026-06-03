@@ -140,7 +140,7 @@ Rubric：${rubric}
     detail: task.topic,
   });
   // 更新 streak/last_active
-  const today = new Date().toISOString().slice(0, 10);
+  const today = tzToday();
   const { data: prog } = await supabase
     .from("lang_progress")
     .select("streak_days, last_active, total_minutes")
@@ -149,7 +149,7 @@ Rubric：${rubric}
     .single();
   let streak = 1;
   if (prog?.last_active) {
-    const yest = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+    const yest = tzDaysAgo(1);
     streak = prog.last_active === today ? prog.streak_days || 1 : prog.last_active === yest ? (prog.streak_days || 0) + 1 : 1;
   }
   await supabase.from("lang_progress").upsert(

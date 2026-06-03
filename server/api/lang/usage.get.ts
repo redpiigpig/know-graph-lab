@@ -23,8 +23,8 @@ function estCost(model: string, tier: string, promptTok: number, outTok: number)
 export default defineEventHandler(async (event) => {
   const user = await requireAuth(event);
   const supabase = getAdminClient();
-  const today = new Date().toISOString().slice(0, 10);
-  const from30 = new Date(Date.now() - 29 * 86400000).toISOString().slice(0, 10);
+  const today = tzToday();
+  const from30 = tzDaysAgo(29);
 
   const { data: rows } = await supabase
     .from("lang_api_usage")

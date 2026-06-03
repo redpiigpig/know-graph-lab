@@ -90,7 +90,10 @@
         <!-- 日曆 + 教練日誌 -->
         <div class="bg-white rounded-2xl border border-gray-100 p-5">
           <div class="flex items-center justify-between mb-3">
-            <h2 class="text-sm font-semibold text-gray-800">學習日曆</h2>
+            <div class="flex items-baseline gap-2">
+              <h2 class="text-sm font-semibold text-gray-800">學習日曆</h2>
+              <span class="text-[11px] text-indigo-600 font-medium">今天 {{ todayLabel }}</span>
+            </div>
             <div class="flex items-center gap-2 text-xs">
               <button @click="shiftMonth(-1)" class="text-gray-400 hover:text-gray-700">‹</button>
               <span class="text-gray-600 tabular-nums">{{ month }}</span>
@@ -102,8 +105,9 @@
             <div v-for="(cell, i) in calendarCells" :key="i" class="aspect-square">
               <button v-if="cell" @click="selectDay(cell)"
                 class="w-full h-full rounded-lg text-[11px] flex items-center justify-center relative transition"
-                :class="dayClass(cell)">
+                :class="[dayClass(cell), cell.date === todayStr ? 'ring-2 ring-indigo-500 ring-offset-1 font-bold' : '']">
                 {{ cell.day }}
+                <span v-if="cell.date === todayStr" class="absolute -top-0.5 -right-0.5 text-[8px] px-1 rounded-full bg-indigo-600 text-white leading-tight">今</span>
                 <span v-if="cell.hasJournal" class="absolute bottom-0.5 w-1 h-1 rounded-full bg-indigo-500" />
               </button>
             </div>
@@ -165,7 +169,10 @@ const briefingLoading = ref(true);
 const memory = ref<any>(null);
 const memBusy = ref(false);
 
-const month = ref(new Date().toISOString().slice(0, 7));
+// 用瀏覽器本地時區（站長在台灣）算當月與今天，跟後端 Asia/Taipei 對齊
+const todayStr = new Date().toLocaleDateString("en-CA");
+const todayLabel = new Date().toLocaleDateString("zh-TW", { month: "long", day: "numeric", weekday: "short" });
+const month = ref(todayStr.slice(0, 7));
 const journals = ref<any[]>([]);
 const days = ref<any[]>([]);
 const selectedDate = ref<string | null>(null);

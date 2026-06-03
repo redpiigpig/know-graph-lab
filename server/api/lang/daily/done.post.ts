@@ -9,7 +9,7 @@ export default defineEventHandler(async (event) => {
   const { language, kind, id, done } = (await readBody(event)) as {
     language: string; kind: string; id: string; done: boolean;
   };
-  const today = new Date().toISOString().slice(0, 10);
+  const today = tzToday();
   const key = kind === "task" ? "tasks" : kind;
 
   const { data: row } = await supabase

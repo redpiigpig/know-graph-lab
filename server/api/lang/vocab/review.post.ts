@@ -33,7 +33,7 @@ export default defineEventHandler(async (event) => {
       repetitions: r.repetitions,
       mastery_level: r.mastery_level,
       next_review: r.next_review,
-      last_reviewed: new Date().toISOString().slice(0, 10),
+      last_reviewed: tzToday(),
       updated_at: new Date().toISOString(),
     })
     .eq("id", id)

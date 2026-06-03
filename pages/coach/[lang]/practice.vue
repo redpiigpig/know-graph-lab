@@ -4,6 +4,7 @@
       <NuxtLink :to="`/coach/${language}`" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
       <div class="w-px h-5 bg-gray-200" />
       <span class="text-sm font-semibold text-gray-900">技能練習 / 考試模擬</span>
+      <div class="ml-auto"><CoachTimer :seconds="tracker.activeSeconds" /></div>
     </nav>
 
     <div class="flex-1 p-5 max-w-3xl mx-auto w-full space-y-5">
@@ -121,15 +122,17 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { useRoute } from "vue-router";
 import { authedFetch } from "~/composables/useAuthedFetch";
 import { useSpeech } from "~/composables/useSpeech";
 import { useCoachAi } from "~/composables/useCoachAi";
+import { useActivityTracker } from "~/composables/useActivityTracker";
 
 definePageMeta({ middleware: "coach-auth" });
 
 const { aiFetch } = useCoachAi();
+const tracker = useActivityTracker();
 
 const SKILLS = [
   { key: "listening", label: "聽", icon: "🎧" },
@@ -145,6 +148,9 @@ const language = computed(() => route.params.lang as string);
 const mode = ref<"practice" | "exam">("practice");
 const exam = ref("TOEFL");
 const skill = ref("reading");
+
+// 進頁就開始計時（以目前選的技能歸類），分頁切走自動暫停
+onMounted(() => tracker.start(language.value, skill.value, "practice"));
 const direction = ref<"zh2target" | "target2zh">("zh2target");
 const topic = ref("");
 const generating = ref(false);

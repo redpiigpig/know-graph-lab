@@ -184,7 +184,7 @@ export default defineEventHandler(async (event) => {
     .update({ message_count: count ?? 0, updated_at: new Date().toISOString() })
     .eq("id", sid);
 
-  const today = new Date().toISOString().slice(0, 10);
+  const today = tzToday();
   await supabase
     .from("lang_progress")
     .upsert(

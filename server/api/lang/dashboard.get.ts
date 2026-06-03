@@ -9,9 +9,9 @@ export default defineEventHandler(async (event) => {
   const supabase = getAdminClient();
   const language = (getQuery(event).language as string) || "en";
 
-  const today = new Date().toISOString().slice(0, 10);
-  const from30 = new Date(Date.now() - 29 * 86400000).toISOString().slice(0, 10);
-  const from7 = new Date(Date.now() - 6 * 86400000).toISOString().slice(0, 10);
+  const today = tzToday();
+  const from30 = tzDaysAgo(29);
+  const from7 = tzDaysAgo(6);
 
   const [profileR, progressR, activityR, levelR, vocabAllR, vocabDueR] = await Promise.all([
     supabase.from("lang_profile").select("*").eq("user_id", user.id).single(),
@@ -60,7 +60,7 @@ export default defineEventHandler(async (event) => {
 
   const dailySeries: { date: string; minutes: number }[] = [];
   for (let i = 29; i >= 0; i--) {
-    const d = new Date(Date.now() - i * 86400000).toISOString().slice(0, 10);
+    const d = tzDaysAgo(i);
     dailySeries.push({ date: d, minutes: Math.round((byDate[d] || 0) * 10) / 10 });
   }
   const todayMinutes = Math.round((byDate[today] || 0) * 10) / 10;

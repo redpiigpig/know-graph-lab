@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
   };
   const coach = getCoach(language);
   if (!coach) throw createError({ statusCode: 400, message: "不支援的語言" });
-  const today = new Date().toISOString().slice(0, 10);
+  const today = tzToday();
 
   const { data: row } = await supabase
     .from("lang_daily")

@@ -12,7 +12,7 @@ export default defineEventHandler(async (event) => {
   const language = (getQuery(event).language as string) || "en";
   const coach = getCoach(language);
   if (!coach) throw createError({ statusCode: 400, message: "不支援的語言" });
-  const today = new Date().toISOString().slice(0, 10);
+  const today = tzToday();
 
   const [profileR, progR, memR, dueR, todayActR] = await Promise.all([
     supabase.from("lang_profile").select("goal_level, target_exam, exam_date, daily_goal_minutes, interests").eq("user_id", user.id).single(),

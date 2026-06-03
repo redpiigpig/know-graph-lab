@@ -34,7 +34,8 @@ export function sm2(prev: SrsState, q: number): SrsResult {
   ease = ease + (0.1 - (5 - q) * (0.08 + (5 - q) * 0.02));
   if (ease < 1.3) ease = 1.3;
 
-  const next = new Date(Date.now() + interval * 86400000).toISOString().slice(0, 10);
+  // 用台北時區算下次到期日（與 vocab/review 的 tzToday 比對一致）
+  const next = new Date(Date.now() + interval * 86400000).toLocaleDateString("en-CA", { timeZone: "Asia/Taipei" });
   const mastery = Math.min(5, reps);
 
   return {

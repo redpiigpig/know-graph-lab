@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
   const { language, date, usePaid } = (await readBody(event)) as { language: string; date?: string; usePaid?: boolean };
   const coach = getCoach(language);
   if (!coach) throw createError({ statusCode: 400, message: "不支援的語言" });
-  const day = date || new Date().toISOString().slice(0, 10);
+  const day = date || tzToday();
 
   // 當天活動
   const { data: acts } = await supabase

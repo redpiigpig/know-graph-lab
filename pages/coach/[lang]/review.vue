@@ -4,7 +4,9 @@
       <NuxtLink :to="`/coach/${language}`" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
       <div class="w-px h-5 bg-gray-200" />
       <span class="text-sm font-semibold text-gray-900">單字複習</span>
-      <div class="ml-auto flex gap-1">
+      <div class="ml-auto flex items-center gap-1">
+        <CoachTimer :seconds="tracker.activeSeconds" />
+        <button @click="endless = !endless" class="text-xs px-2.5 py-1 rounded-lg transition mr-1" :class="endless ? 'bg-violet-600 text-white' : 'bg-gray-50 text-gray-500'" title="刷完到期單字後自動生成新學術單字，永不停">♾️ 無限</button>
         <button @click="quizMode = false" class="text-xs px-2.5 py-1 rounded-lg transition" :class="!quizMode ? 'bg-indigo-600 text-white' : 'bg-gray-50 text-gray-500'">翻卡</button>
         <button @click="quizMode = true" class="text-xs px-2.5 py-1 rounded-lg transition" :class="quizMode ? 'bg-indigo-600 text-white' : 'bg-gray-50 text-gray-500'">選擇題</button>
       </div>
@@ -55,11 +57,18 @@
         </template>
       </div>
 
-      <!-- 沒有到期單字 -->
+      <!-- 無限模式：正在生成新題 -->
+      <div v-else-if="topping" class="bg-white rounded-3xl border border-gray-100 p-10 text-center">
+        <div class="text-4xl mb-3 animate-pulse">♾️</div>
+        <div class="font-semibold text-gray-800">正在生成新的學術單字…</div>
+        <p class="text-sm text-gray-400 mt-1">教練在幫你出新題，馬上回來。</p>
+      </div>
+
+      <!-- 沒有到期單字（非無限模式，或生成失敗）-->
       <div v-else-if="!loading" class="bg-white rounded-3xl border border-gray-100 p-10 text-center">
         <div class="text-4xl mb-3">🎉</div>
         <div class="font-semibold text-gray-800">今日複習完成！</div>
-        <p class="text-sm text-gray-400 mt-1">沒有到期的單字了。可以生成新的學術單字組繼續學。</p>
+        <p class="text-sm text-gray-400 mt-1">沒有到期的單字了。{{ endless ? "（無限模式找不到新題，可手動指定主題生成）" : "可以生成新的學術單字組繼續學，或開啟右上「♾️ 無限」自動出題。" }}</p>
       </div>
 
       <!-- 生成新單字組 -->
@@ -80,17 +89,25 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted, watch } from "vue";
 import { useRoute } from "vue-router";
 import { authedFetch } from "~/composables/useAuthedFetch";
 import { useSpeech } from "~/composables/useSpeech";
 import { useCoachAi } from "~/composables/useCoachAi";
+import { useActivityTracker } from "~/composables/useActivityTracker";
 
 definePageMeta({ middleware: "coach-auth" });
 
 const { aiFetch } = useCoachAi();
+const tracker = useActivityTracker();
 
 const PRESETS = ["AWL Sublist 1", "GRE 高頻字", "哲學學術用語", "歷史學術用語", "神學術語", "文學批評術語", "學術寫作連接詞"];
+// 無限模式自動輪替的主題池（比 PRESETS 更廣，盡量讓每批單字不重複）
+const AUTO_THEMES = [
+  "AWL Sublist 1", "AWL Sublist 2", "AWL Sublist 3", "GRE 高頻字", "GRE 進階字",
+  "哲學學術用語", "歷史學術用語", "神學術語", "宗教學術語", "聖經研究術語",
+  "文學批評術語", "社會科學術語", "學術寫作連接詞", "學術動詞", "抽象名詞",
+];
 const TTS_LANG: Record<string, string> = { en: "en-US", ja: "ja-JP" };
 
 const route = useRoute();
@@ -105,6 +122,13 @@ const genMsg = ref("");
 const speech = useSpeech();
 const quizMode = ref(true); // 預設選擇題（每日推薦單字測驗）
 const picked = ref<string | null>(null);
+
+// ── 無限刷題模式 ──
+const endless = ref(true);          // 預設開：刷完自動生成新單字
+const topping = ref(false);         // 正在背景補題
+const seen = new Set<string>();     // 本次 session 已出現過的卡片 id（避免馬上重複）
+let themeIdx = 0;
+const LOW_WATER = 4;                 // 佇列剩這麼少就先補題（預抓，藏延遲）
 
 const current = computed(() => queue.value[0] || null);
 
@@ -130,6 +154,17 @@ function next() {
   queue.value.shift();
   picked.value = null;
   reviewed.value++;
+  maybeTopUp();
+}
+
+// 抓佇列；append=true 只把「沒出現過的」新卡接到尾端（無限模式用），保留進度
+async function loadQueue(append = false) {
+  const { due } = await authedFetch<{ due: any[] }>(`/api/lang/vocab/review?language=${language.value}&limit=40`);
+  const fresh = (due || []).filter((c) => !seen.has(c.id));
+  for (const c of fresh) seen.add(c.id);
+  if (append) queue.value.push(...fresh);
+  else queue.value = fresh;
+  return fresh.length;
 }
 
 async function reload() {
@@ -137,9 +172,33 @@ async function reload() {
   revealed.value = false;
   picked.value = null;
   reviewed.value = 0;
-  const { due } = await authedFetch<{ due: any[] }>(`/api/lang/vocab/review?language=${language.value}&limit=40`);
-  queue.value = due;
+  seen.clear();
+  await loadQueue(false);
   loading.value = false;
+}
+
+// 無限模式核心：佇列見底就自動生成一批新學術單字（走 NVIDIA，免費）接上去
+async function replenish() {
+  if (!endless.value || topping.value) return;
+  topping.value = true;
+  try {
+    const theme = AUTO_THEMES[themeIdx % AUTO_THEMES.length];
+    themeIdx++;
+    await aiFetch("/api/lang/vocab/generate", {
+      method: "POST",
+      body: { language: language.value, theme, count: 15 },
+    });
+    await loadQueue(true); // 把新生成的（未出現過的）接到佇列尾
+  } catch {
+    /* 生成失敗就算了，next 次再試 */
+  } finally {
+    topping.value = false;
+  }
+}
+
+// 佇列偏低就預先補題（藏住生成延遲，讓刷題不中斷）
+function maybeTopUp() {
+  if (endless.value && !topping.value && queue.value.length <= LOW_WATER) replenish();
 }
 
 async function grade(q: number) {
@@ -148,6 +207,7 @@ async function grade(q: number) {
   queue.value.shift();
   revealed.value = false;
   reviewed.value++;
+  maybeTopUp();
   try {
     await authedFetch("/api/lang/vocab/review", { method: "POST", body: { id: card.id, quality: q } });
   } catch {
@@ -176,7 +236,15 @@ async function generate() {
   }
 }
 
-onMounted(reload);
+// 佇列被刷空時（預抓沒跟上）→ 立刻補題；開啟無限開關時若正好空了也補
+watch([current, endless], ([cur, on]) => {
+  if (on && !cur && !loading.value && !topping.value) replenish();
+});
+
+onMounted(() => {
+  tracker.start(language.value, "reading", "vocab"); // 複習計入「讀」時間，從進頁開始算
+  reload();
+});
 </script>
 
 <style scoped>

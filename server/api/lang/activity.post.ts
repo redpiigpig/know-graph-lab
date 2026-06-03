@@ -20,7 +20,7 @@ export default defineEventHandler(async (event) => {
   const mins = Math.max(0, Math.round((Number(minutes) || 0) * 100) / 100);
   if (mins <= 0) return { ok: true, skipped: true };
 
-  const today = new Date().toISOString().slice(0, 10);
+  const today = tzToday();
 
   await supabase.from("lang_activity").insert({
     user_id: user.id,
@@ -43,7 +43,7 @@ export default defineEventHandler(async (event) => {
   let streak = 1;
   if (prog?.last_active) {
     const last = prog.last_active as string;
-    const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+    const yesterday = tzDaysAgo(1);
     if (last === today) streak = prog.streak_days || 1;
     else if (last === yesterday) streak = (prog.streak_days || 0) + 1;
     else streak = 1;
