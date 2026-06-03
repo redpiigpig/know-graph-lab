@@ -19,12 +19,14 @@ export default defineNuxtConfig({
     ebookChunksDir: process.env.EBOOK_CHUNKS_DIR,
     photosRoot: process.env.PHOTOS_ROOT || "G:/我的雲端硬碟/資料/儲存資料夾/辰瑋相片",
     // Gemini（4 把 key，輪替使用；語言教練、族譜解析等共用）
-    geminiApiKey: process.env.Gemini_API_Key_1,
+    // 兼容兩種命名：Gemini_API_Key_N（原本）與 GEMINI_API_KEY_N（Zeabur 全大寫常見打法）。
+    // Zeabur 變數區分大小寫，少一個字就讀不到 → YouTube 沉浸會誤報「尚未設定 Gemini key」。
+    geminiApiKey: process.env.Gemini_API_Key_1 || process.env.GEMINI_API_KEY_1,
     geminiApiKeys: [
-      process.env.Gemini_API_Key_1,
-      process.env.Gemini_API_Key_2,
-      process.env.Gemini_API_Key_3,
-      process.env.Gemini_API_Key_4,
+      process.env.Gemini_API_Key_1 || process.env.GEMINI_API_KEY_1,
+      process.env.Gemini_API_Key_2 || process.env.GEMINI_API_KEY_2,
+      process.env.Gemini_API_Key_3 || process.env.GEMINI_API_KEY_3,
+      process.env.Gemini_API_Key_4 || process.env.GEMINI_API_KEY_4,
     ].filter(Boolean) as string[],
     // 語言教練模型：固定 ID gemini-2.5-flash 免費層每日僅 20 次、且被 OCR 自動化共用耗盡；
     // 改用 rolling alias `gemini-flash-latest`（2026-05-31 實測免費層可用，且配額桶與 OCR 用的固定 ID 分開）。

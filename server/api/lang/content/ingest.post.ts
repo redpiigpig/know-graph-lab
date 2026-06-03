@@ -65,10 +65,11 @@ export default defineEventHandler(async (event) => {
     // YouTube 影片分析只能走 Gemini（多模態），NVIDIA 主引擎不支援影片 →
     // 沒設 Gemini key 時把錯誤講清楚，免得誤以為是 NVIDIA 的問題。
     if (sourceType === "youtube" && (e?.data?.code === "no_free_key" || e?.data?.code === "no_paid_key")) {
+      const n = ((useRuntimeConfig().geminiApiKeys as string[]) || []).length;
       throw createError({
         statusCode: 400,
         data: { code: "youtube_needs_gemini" },
-        message: "YouTube 影片分析需要 Gemini key（NVIDIA 主引擎不支援影片）。請在 Zeabur 設定 Gemini_API_Key_*，或改用「貼上文章」模式（可走 NVIDIA）。",
+        message: `YouTube 影片分析需要 Gemini key（NVIDIA 主引擎不支援影片）。伺服器目前偵測到 ${n} 把 Gemini key — 若為 0，請確認 Zeabur 變數名稱正好是 Gemini_API_Key_1（區分大小寫，現在也接受全大寫 GEMINI_API_KEY_1），存檔後需重新部署。或改用「貼上文章」模式（可走 NVIDIA）。`,
       });
     }
     throw e;

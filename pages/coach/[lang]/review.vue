@@ -101,13 +101,27 @@ definePageMeta({ middleware: "coach-auth" });
 const { aiFetch } = useCoachAi();
 const tracker = useActivityTracker();
 
-const PRESETS = ["AWL Sublist 1", "GRE 高頻字", "哲學學術用語", "歷史學術用語", "神學術語", "文學批評術語", "學術寫作連接詞"];
-// 無限模式自動輪替的主題池（比 PRESETS 更廣，盡量讓每批單字不重複）
-const AUTO_THEMES = [
-  "AWL Sublist 1", "AWL Sublist 2", "AWL Sublist 3", "GRE 高頻字", "GRE 進階字",
-  "哲學學術用語", "歷史學術用語", "神學術語", "宗教學術語", "聖經研究術語",
-  "文學批評術語", "社會科學術語", "學術寫作連接詞", "學術動詞", "抽象名詞",
-];
+// 主題池依語言不同：英文走學術/考試；日文走 N5→N4 初學（簡單、文化/宗教淺白）
+const THEME_POOLS: Record<string, { presets: string[]; auto: string[] }> = {
+  en: {
+    presets: ["AWL Sublist 1", "GRE 高頻字", "哲學學術用語", "歷史學術用語", "神學術語", "文學批評術語", "學術寫作連接詞"],
+    auto: [
+      "AWL Sublist 1", "AWL Sublist 2", "AWL Sublist 3", "GRE 高頻字", "GRE 進階字",
+      "哲學學術用語", "歷史學術用語", "神學術語", "宗教學術語", "聖經研究術語",
+      "文學批評術語", "社會科學術語", "學術寫作連接詞", "學術動詞", "抽象名詞",
+    ],
+  },
+  ja: {
+    presets: ["N5 基礎單字", "N4 常用單字", "日常生活單字", "神社・お寺の基礎語", "祭りと行事", "食べ物と飲み物"],
+    auto: [
+      "N5 基礎單字", "N4 常用單字", "日常生活の動詞", "形容詞（い・な形）", "家族と人",
+      "食べ物と飲み物", "時間と日付", "場所と方向", "体と健康", "天気と季節",
+      "あいさつと丁寧表現", "神社・お寺の基礎語", "日本の祭りと行事", "数と助数詞", "学校と仕事",
+    ],
+  },
+};
+const pool = computed(() => THEME_POOLS[language.value] || THEME_POOLS.en);
+const PRESETS = computed(() => pool.value.presets);
 const TTS_LANG: Record<string, string> = { en: "en-US", ja: "ja-JP" };
 
 const route = useRoute();
@@ -182,7 +196,8 @@ async function replenish() {
   if (!endless.value || topping.value) return;
   topping.value = true;
   try {
-    const theme = AUTO_THEMES[themeIdx % AUTO_THEMES.length];
+    const themes = pool.value.auto;
+    const theme = themes[themeIdx % themes.length];
     themeIdx++;
     await aiFetch("/api/lang/vocab/generate", {
       method: "POST",
