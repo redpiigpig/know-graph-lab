@@ -3,7 +3,7 @@ name: translation-glossary
 description: 「翻譯定名」通用名物中譯對照工具（/translation-glossary，**已升為首頁頂層卡、移出聖經 portal**） — 原本只有教父／神學家＋神學名詞，2026-06-03 起擴為全領域：聖經人物／教父神學家／神學名詞（神學兩表）＋哲學家／科學家／歷代帝王／國名與城市／神祇與宗教名詞（各領域新表）＋一頁翻譯原則。核心規則：按原文不按英文、沿用良好古譯／意譯、音意結合（亞歷山卓>亞歷山大城、馬爾堡>馬布爾）、名根一致（name_root：密特→密特拉/密特里達迪、塞琉→塞琉古/塞琉西亞）。Use when 翻書前鎖定任何人名／地名／神祇／帝王／哲人科學家譯名、新增領域條目、校對名根一致性、改翻譯原則頁。串 [[ebook-translate]]。
 ---
 
-> ⚙️ **引擎政策（2026-06-03 更新）**：所有 LLM 工作一律**優先用 NVIDIA（輝達，`https://integrate.api.nvidia.com/v1`，預設文字模型 `deepseek-ai/deepseek-v4-flash`）**，fallback 用 Gemini，**Haiku／Anthropic 全面停用**。下文若提到用 Haiku 翻譯／校對／視覺校對／OCR／清理／下標題，一律改用 NVIDIA（視覺類用 NVIDIA 視覺模型如 `nvidia/llama-3.1-nemotron-nano-vl-8b-v1`）。
+> ⚙️ **引擎政策（2026-06-04 更新）**：所有 LLM 工作一律**優先用 NVIDIA（輝達，`https://integrate.api.nvidia.com/v1`，預設文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避免 429）**，第二層 fallback 用 Gemini，**第三層救急才用 Haiku（NVIDIA→Gemini→Haiku；前兩個免費池都用罄時才動 Haiku）**。視覺類用 NVIDIA 視覺模型（如 `nvidia/llama-3.1-nemotron-nano-vl-8b-v1`）。
 
 
 # Translation Glossary Skill（「翻譯定名」）

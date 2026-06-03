@@ -3,7 +3,7 @@ name: ebook-pipeline
 description: Operate the Know-Graph-Lab ebook pipeline end-to-end. Use when working on parsing books from Drive into Supabase, OCR'ing scanned PDFs (daily Gemini scheduler), back-filling DB previews from local JSONL, standardizing books (EPUB + PDF) into reader-ready markdown, or wiring the reader to chunks. The single hub for everything book-content-related.
 ---
 
-> ⚙️ **引擎政策（2026-06-03 更新）**：所有 LLM 工作一律**優先用 NVIDIA（輝達，`https://integrate.api.nvidia.com/v1`，預設文字模型 `deepseek-ai/deepseek-v4-flash`）**，fallback 用 Gemini，**Haiku／Anthropic 全面停用**。下文若提到用 Haiku 翻譯／校對／視覺校對／OCR／清理／下標題，一律改用 NVIDIA（視覺類用 NVIDIA 視覺模型如 `nvidia/llama-3.1-nemotron-nano-vl-8b-v1`）。
+> ⚙️ **引擎政策（2026-06-04 更新）**：所有 LLM 工作一律**優先用 NVIDIA（輝達，`https://integrate.api.nvidia.com/v1`，預設文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避免 429）**，第二層 fallback 用 Gemini，**第三層救急才用 Haiku（NVIDIA→Gemini→Haiku；前兩個免費池都用罄時才動 Haiku）**。視覺類用 NVIDIA 視覺模型（如 `nvidia/llama-3.1-nemotron-nano-vl-8b-v1`）。
 
 
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session（"exceeds the dimension limit for many-image requests"）。使用者一說要傳截圖，立刻提醒先確認尺寸；推薦 Win+Shift+S 框選或縮到 ≤ 1920px。

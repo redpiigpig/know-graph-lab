@@ -3,7 +3,7 @@ name: pong-thesis-flipbook
 description: 把龐牧師（或其他作者）的學位論文 PDF 做成「翻頁電子書」上架到 /pong-archive/writings — Gemini 結構化 OCR（標題層級、引文、腳註、自動章節目錄）+ R2（PDF 原檔 + 結構化 JSONL）+ 自動寫入 pong_writings + Vue 翻頁 reader（兩頁攤開／TOC 抽屜／鍵盤導航）。Use when 使用者上傳新一本學位論文 PDF 要做成 flipbook，或要重 OCR / 重排版既有 thesis，或要新增類似格式的長篇 monograph。
 ---
 
-> ⚙️ **引擎政策（2026-06-03 更新）**：所有 LLM 工作一律**優先用 NVIDIA（輝達，`https://integrate.api.nvidia.com/v1`，預設文字模型 `deepseek-ai/deepseek-v4-flash`）**，fallback 用 Gemini，**Haiku／Anthropic 全面停用**。下文若提到用 Haiku 翻譯／校對／視覺校對／OCR／清理／下標題，一律改用 NVIDIA（視覺類用 NVIDIA 視覺模型如 `nvidia/llama-3.1-nemotron-nano-vl-8b-v1`）。
+> ⚙️ **引擎政策（2026-06-04 更新）**：所有 LLM 工作一律**優先用 NVIDIA（輝達，`https://integrate.api.nvidia.com/v1`，預設文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避免 429）**，第二層 fallback 用 Gemini，**第三層救急才用 Haiku（NVIDIA→Gemini→Haiku；前兩個免費池都用罄時才動 Haiku）**。視覺類用 NVIDIA 視覺模型（如 `nvidia/llama-3.1-nemotron-nano-vl-8b-v1`）。
 
 
 # pong-thesis-flipbook — 學位論文翻頁電子書 pipeline

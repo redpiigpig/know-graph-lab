@@ -3,7 +3,7 @@ name: denzinger-fix
 description: Denzinger《公教會之信仰與倫理教義選集》(ebook_id 568726d3-967e-457a-ab69-7452b21d606f) 修正流程 — 全書 2430 頁拉中對照已完整轉錄上架，523 個 DH entries 100% 有中譯。本 skill 紀錄 pipeline 與 7-stage 自動化流程。Trigger 例：「修 Denzinger」「Denzinger 補 OCR」「Denzinger 重 segment」「Denzinger 第 N 頁壞了」「Denzinger /creeds 重補」「Denzinger 沒中譯」「Denzinger 目錄沒中文」。延伸 [[ebook-pipeline]] / [[scripture-canon-portal]]。
 ---
 
-> ⚙️ **引擎政策（2026-06-03 更新）**：所有 LLM 工作一律**優先用 NVIDIA（輝達，`https://integrate.api.nvidia.com/v1`，預設文字模型 `deepseek-ai/deepseek-v4-flash`）**，fallback 用 Gemini，**Haiku／Anthropic 全面停用**。下文若提到用 Haiku 翻譯／校對／視覺校對／OCR／清理／下標題，一律改用 NVIDIA（視覺類用 NVIDIA 視覺模型如 `nvidia/llama-3.1-nemotron-nano-vl-8b-v1`）。
+> ⚙️ **引擎政策（2026-06-04 更新）**：所有 LLM 工作一律**優先用 NVIDIA（輝達，`https://integrate.api.nvidia.com/v1`，預設文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避免 429）**，第二層 fallback 用 Gemini，**第三層救急才用 Haiku（NVIDIA→Gemini→Haiku；前兩個免費池都用罄時才動 Haiku）**。視覺類用 NVIDIA 視覺模型（如 `nvidia/llama-3.1-nemotron-nano-vl-8b-v1`）。
 
 
 # Denzinger 修正 Skill
