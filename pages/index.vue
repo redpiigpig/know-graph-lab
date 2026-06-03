@@ -147,6 +147,15 @@
           <span class="tool-badge bg-stone-50 text-stone-700">建置中</span>
         </NuxtLink>
 
+        <!-- 翻譯定名 -->
+        <NuxtLink :to="user ? '/translation-glossary' : '/login'" class="tool-card group border-amber-200 hover:border-amber-400 hover:shadow-amber-100">
+          <div class="tool-icon bg-amber-50 text-amber-700">🔤</div>
+          <div class="flex-1">
+            <h2 class="tool-title">翻譯定名</h2>
+            <p class="tool-desc">各領域名物中譯定名 — 聖經人物／教父神學家／哲學家／科學家／帝王／國名城市／神祇／神學名詞 + 翻譯原則</p>
+          </div>
+        </NuxtLink>
+
       </div>
     </div>
   </div>

@@ -1,9 +1,36 @@
 ---
 name: translation-glossary
-description: 神學家／神學名詞中譯對照工具（/translation-glossary） — ~150 位教父／神學家 + ~165 條神學名詞，每筆含原文／生卒／國籍／6 個傳統中譯（新教／思高／東正教／香港／台灣／中國學界）+ 建議譯名 + 理由。Use when 翻譯新教父書（ANF/NPNF/ACCS）前要先鎖定相關人名譯名／新增神學家／補譯名差異／使用者要校對建議譯名。本 skill 與 [[ebook-translate]] 串接，後者翻譯前都應該先來這裡確認。
+description: 「翻譯定名」通用名物中譯對照工具（/translation-glossary，**已升為首頁頂層卡、移出聖經 portal**） — 原本只有教父／神學家＋神學名詞，2026-06-03 起擴為全領域：聖經人物／教父神學家／神學名詞（神學兩表）＋哲學家／科學家／歷代帝王／國名與城市／神祇與宗教名詞（各領域新表）＋一頁翻譯原則。核心規則：按原文不按英文、沿用良好古譯／意譯、音意結合（亞歷山卓>亞歷山大城、馬爾堡>馬布爾）、名根一致（name_root：密特→密特拉/密特里達迪、塞琉→塞琉古/塞琉西亞）。Use when 翻書前鎖定任何人名／地名／神祇／帝王／哲人科學家譯名、新增領域條目、校對名根一致性、改翻譯原則頁。串 [[ebook-translate]]。
 ---
 
-# Translation Glossary Skill
+# Translation Glossary Skill（「翻譯定名」）
+
+## 🆕 2026-06-03 升級：頂層卡「翻譯定名」+ 全領域擴充
+
+`/translation-glossary` **從聖經 portal 第 6 卡升為首頁頂層卡**（移出 `/scripture-canon`），並從「神學專用」擴成「**通用名物中譯**」。
+
+**決策（user 拍板）**：保留神學兩表（theologians / theological_terms），**各新領域各建一表**：
+
+| Tab | 表 | 領域專屬欄 |
+|---|---|---|
+| 翻譯原則 | （靜態頁） | — |
+| 人名（含聖經人物 era） | theologians | person_era / role |
+| 神學名詞 / 地名 / 作品名 / 教派名 | theological_terms | entity_type |
+| 哲學家 | `philosophers` | school / era / nationality |
+| 科學家 | `scientists` | field / era / nationality |
+| 歷代帝王 | `historical_rulers` | polity / title / reign |
+| 國名與城市 | `place_names` | place_type / modern_name |
+| 神祇與宗教名詞 | `deities` | religion / entity_type / domain_of |
+
+5 張新表同一核心 shape：`name_original / name_original_lang / name_romanized / name_english / name_recommended(★) / name_variants(；分隔) / recommendation_reason / name_root / notes / sort_order`。Schema：[database/glossary-domains-schema.sql](../../../database/glossary-domains-schema.sql)（RLS 比照神學表）。純函式核心：[scripts/glossary_naming.py](../../../scripts/glossary_naming.py)（DOMAINS taxonomy + 名根一致性 + 變體解析；測試 [scripts/tests/test_glossary_naming.py](../../../scripts/tests/test_glossary_naming.py)）。
+
+### 翻譯原則（翻譯原則頁 + 全工具的鐵則）
+1. **按原文，不按英文**（希臘／拉丁／原民族語為準）。
+2. **沿用良好古譯／既有意譯**，不強制全音譯。
+3. **音意結合**：有良好音譯配意譯就結合 — 例「亞歷山卓」優於「亞歷山大城」、「馬爾堡」優於「馬布爾」。
+4. **名根一致**（`name_root`）：同一來源根的譯名要一致 — 密特拉系（root 密特）→ 密特拉／密特里達迪；塞琉古系（root 塞琉）→ 塞琉古／塞琉西亞／塞琉西亞-泰西封。`check_root_consistency()` 自動抓「掛了 root 卻沒含 root 字串」的條目（如 root 塞琉 卻寫「西流基」）。
+
+
 
 **目的**：當「不同傳統對同一個教父／神學名詞有完全不同中譯」（如 Justin Martyr = 新教 *游斯丁* / 思高 *猶斯定* / 東正教 *尤斯丁*）時，翻譯前先在 `/translation-glossary` 確認該書應採哪個譯法，避免 LLM 自選一個導致使用者糾正後要回頭修 chunks。
 

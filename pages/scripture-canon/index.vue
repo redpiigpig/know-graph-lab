@@ -10,7 +10,7 @@
       <div class="w-full max-w-4xl">
         <div class="mb-8 text-center">
           <h1 class="text-2xl font-bold text-gray-900 mb-1">📜 經典對照與註釋</h1>
-          <p class="text-sm text-gray-500">八個子工具：聖經多版本平行 / 信條 / 教會法規 / 教父著作 / 典外文獻 / 諾斯底主義文獻 / 神學家與名詞中譯 / 教宗訓導文獻</p>
+          <p class="text-sm text-gray-500">七個子工具：聖經多版本平行 / 信條 / 教會法規 / 教父著作 / 典外文獻 / 諾斯底主義文獻 / 教宗訓導文獻</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -89,13 +89,6 @@ const tools = [
     icon: '🜍',
     title: '諾斯底主義文獻',
     desc: 'The Gnostic Society Library (gnosis.org) — 拿戈瑪第經集／古典諾斯底經典／瓦倫廷／赫密士文集／摩尼教／曼達教／卡特里派 等 13 類；英文（公有領域英譯）／繁中逐段對照',
-    enabled: true,
-  },
-  {
-    path: '/translation-glossary',
-    icon: '🔤',
-    title: '神學家與名詞中譯',
-    desc: '~150 位教父／神學家 + ~300 條神學名詞的多傳統中譯對照（新教／思高／東正教／香港／台灣／中國學界）+ 建議譯名',
     enabled: true,
   },
   {
