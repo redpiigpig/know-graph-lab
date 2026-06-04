@@ -9,9 +9,25 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 
 # AI 語言教練 Skill
 
-使用者（宗教研究者）的外語自學系統。目標：英文 **B2→C2→TOEFL**；日文 **N5→N4（初學）**；**通用希臘文（Koine）入門（初學）**；**教會拉丁文（Ecclesiastical）入門（初學）**。題材**以宗教/神話/宗教學為主軸**，輔以人文，少量理工醫/生活/旅遊（考試模式走真實考題）。希臘文題材＝**神學院通用希臘文（非古典 Attic）**，循序讀新約／七十士（LXX）／使徒教父與教父文獻／信經與大公會議文獻（公元初到中世紀前）／希臘化猶太文獻（斐羅・約瑟夫斯）／哲學家／拜占庭官方文獻。拉丁文題材＝**神學院教會拉丁文（非古典）**，循序讀武加大（Vulgata）／拉丁教父（奧古斯丁・耶柔米・安博…）／禮儀信經與大公會議文獻 →延伸 **經院神學哲學（安瑟倫・倫巴德・阿奎那・波那文都拉…的 summae／quaestiones）** 與 **中世紀各學科（教會法／編年史聖徒傳／大學講義／自然哲學／醫學／七藝）**。相關偏好見 [[project_language_coach]]、[[feedback_language_coach_religious_studies]]、[[feedback_traditional_chinese_only]]、[[feedback_coach_nvidia_engine]]。
+使用者（宗教研究者）的外語自學系統。**現上線 5 語**：英文 **B2→C2→TOEFL**；日文 **N5→N4（初學）**；通用希臘文（Koine）／教會拉丁文（Ecclesiastical）／聖經希伯來文（Biblical）**三古典語皆入門（初學）**。題材**以宗教/神話/宗教學為主軸**，輔以人文，少量理工醫/生活/旅遊（考試模式走真實考題）；三古典語題材＝神學院教的版本（**非古典／非現代**），詳見下方「語言一覽」。相關偏好見 [[project_language_coach]]、[[feedback_language_coach_religious_studies]]、[[feedback_traditional_chinese_only]]、[[feedback_coach_nvidia_engine]]。
 
 部署：**Zeabur**（GitHub master 自動部署）。DB：Supabase（Management API 跑 DDL，見 [[reference_supabase_management_api]]）。
+
+---
+
+## 〇、語言一覽（5 語上線 · 全部定義在 `server/utils/lang-coaches.ts`）
+
+| code | 教練 | 量表·預設 | 語音 | 鍵盤 | TTS | 題材重點（皆宗教研究取向） |
+|---|---|---|---|---|---|---|
+| `en` | Emily 🗽 | CEFR·**B2** | 有 STT/TTS | — | en-US | 宗教/神話/宗教學為主＋人文；考試走 AWL/GRE/TOEFL |
+| `ja` | 櫻子 🌸 | JLPT·**N5** | 有 STT/TTS | **kana**（羅馬字→假名） | ja-JP | 關東標準語；N5→N4 初學，神社祭典/文化/宗教淺白題 |
+| `grc` | Sophia 🦉 | 古·**入門** | voiceless | **greek**（英文→希臘字母 Beta Code） | el-GR | **通用希臘文 Koine（非古典 Attic/荷馬）**：新約／LXX／使徒教父／信經大公會議（公元初–中世紀前）／希臘化猶太（斐羅・約瑟夫斯）／哲學家／拜占庭官方文獻 |
+| `la` | Marcus 🏛️ | 古·**入門** | voiceless | —（拉丁字母直打） | it-IT（教會式） | **教會拉丁文 Ecclesiastical（非古典）**：武加大／拉丁教父（奧古斯丁・耶柔米・安博…）／禮儀信經大公會議 →經院神哲學（安瑟倫・倫巴德・阿奎那… summae/quaestiones）→中世紀各學科（教會法／編年史聖徒傳／大學講義／自然哲學／醫學／七藝） |
+| `hbo` | Miriam 🕎 | 古·**入門** | voiceless | **hebrew**（英文→希伯來字母，RTL） | he-IL | **舊約聖經希伯來文 Biblical（非現代以色列語）**：以舊約為起點（妥拉先讀創世記詩篇／先知書／智慧文學）→死海古卷昆蘭／米示拿‧拉比希伯來文／中世紀註釋（拉希）／禮儀碑銘；底本 BHS |
+
+- **古典語三本柱（grc/la/hbo）共同政策**：`enabled:true`、`levelScale=ANCIENT(["入門","初級","中級","進階"])`、`defaultLevel="入門"`、`voiceless:true`（無 STT，chat 不顯示麥克風/自動朗讀）；人設一律「神學院版、非古典/非現代、初學者、逐字 parse、大量夾繁中」。**勿改回古典定向**（見 [[feedback_language_coach_religious_studies]]）。
+- 德 `de`(Lukas🍺) / 法 `fr`(Camille🥐) 已預留人設但 `enabled:false`。
+- 每語言 4–5 個 `personas`（聊天輪替）＋ `smalltalkTopics`/`scenarios`/`qaTopics`（首頁今日推薦 + chat 開場用），古典語皆為「精讀／文法／抄經／信經」類初學題。
 
 ---
 
@@ -36,7 +52,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 - **情境角色**（scenario）：教練演對方角色（店員/面試官/神職…）
 - **限時主題聊**（smalltalk 頁）
 - 人格：`lang-coaches.ts` `personas[]`，新對話依 session 數輪替（Emily 5 種）。注入統整記憶 + 人格 + 本次摘要進 system prompt。
-- **今日推薦（每天輪替，2026-06-04）**：語言首頁聊天磚下方「今日推薦 · 每天換」三排 chip — 💬聊話題（`smalltalkTopics`）/💡問知識（`qaTopics`）/🎭演情境（`scenarios`），各 3 個，以「當天日期種子」輪替（同天穩定、隔天換）。點 chip 直接 deep-link 進 chat（`?topic=` / `?mode=qa&topic=` / `?mode=scenario&scenario=`），`chat.vue` onMounted 讀 query 自動開場。資料每語言一份：Emily/櫻子各有 `smalltalkTopics`/`scenarios`/`qaTopics`（櫻子的 qaTopics 為 **N5→N4 初學版**，漢字附假名、淺白文化/宗教題）。
+- **今日推薦（每天輪替，2026-06-04）**：語言首頁聊天磚下方「今日推薦 · 每天換」三排 chip — 💬聊話題（`smalltalkTopics`）/💡問知識（`qaTopics`）/🎭演情境（`scenarios`），各 3 個，以「當天日期種子」輪替（同天穩定、隔天換）。點 chip 直接 deep-link 進 chat（`?topic=` / `?mode=qa&topic=` / `?mode=scenario&scenario=`），`chat.vue` onMounted 讀 query 自動開場。資料每語言各一份（`lang-coaches.ts` 各 coach 的 `smalltalkTopics`/`scenarios`/`qaTopics`）：英文宗教學取向、日文 N5→N4 初學版（漢字附假名）、**古典語三本柱皆為初學的精讀／文法／信經題**（如 grc「逐字精讀約翰福音 1:1」、hbo「從希伯來字母讀起」、la「讀一則 quaestio 的論證結構」）。
 
 ## 三、今日計畫（today）— 每日自學核心
 
@@ -49,7 +65,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 
 ## 四、其他功能
 
-- **分級文法課**（`lang_grammar` PK user+lang+**level**）：英文 B2/C1/C2、日文 N5–N1 各一套；**Gemini 依程度自動生成**（不需手動 seed）；大綱循序 + 逐課懶生成（解說/例句/練習）+ 完成度。頁 `/coach/[lang]/grammar`。
+- **分級文法課**（`lang_grammar` PK user+lang+**level**）：英文 A1–C2、日文 N5–N1、古典語 入門/初級/中級/進階 各一套；**Gemini 依程度＋`langLabel` 自動生成**（不需手動 seed；`入門/初級` 自動走初學者大綱，古典語會生字母/變格/動詞變化等基礎課）。大綱循序 + 逐課懶生成（解說/例句/練習）+ 完成度。頁 `/coach/[lang]/grammar`。
 - **主題教程**（`lang_courses`）：可選預設或自建主題（宗教文獻精讀/學術寫作/TOEFL口說/敬語/宗教神話日語…），生成循序課表，**每課標預估分鐘**，逐課懶生成 + 進度條。頁 `/coach/[lang]/courses`；端點 courses(index/create/[id]/lesson/done)。
 - **單字 SRS**（`lang_vocab`，SM-2，`server/utils/srs.ts`）：到期佇列；review 預設選擇題（對=good 錯=again→複習）；不足時從整庫補未精熟字；`vocab/generate` 依**目前程度**生成主題詞組。
   - **♾️ 無限刷題模式（預設開，2026-06-04）**：`review.vue` 右上開關。佇列剩 ≤4 張就背景用 `vocab/generate` 生一批新學術單字（走 NVIDIA、零成本）接到佇列尾，預抓藏延遲、本 session 去重，永不停。主題池 `THEME_POOLS` **依語言**：英文走 AWL/GRE/學術；日文走 N5/N4 基礎・日常・神社祭典等初學主題（別給日文出英文考試詞）；**希臘文（grc）走 新約高頻字／約翰福音／LXX／信經術語／教父／斐羅／拜占庭**；**拉丁文（la）走 武加大／福音書／信經禮儀／拉丁教父／經院術語（ens·esse·essentia）／教會法／中世紀各學科**；**希伯來文（hbo）走 舊約高頻字／創世記出埃及記／詩篇／binyanim 動詞／三母音字根／昆蘭／拉比／中世紀註釋** 等入門題材。`TTS_LANG` 也要補對應 BCP-47（grc=`el-GR`、la=`it-IT` 教會式、hbo=`he-IL`），否則 🔊 會用英文聲念。測過或沒過的卡都進 `lang_vocab`（generate upsert + review 記 SRS），各語言獨立列表。新增語言時兩處都要補。
@@ -91,8 +107,8 @@ chat / profile(get,put) / progress(get,put) / activity / dashboard / usage / ass
 
 ## 九、加語言 / 擴充
 
-- 加語言：`server/utils/lang-coaches.ts` 加一筆（language/levelScale/defaultLevel/personas/scenarios/smalltalkTopics/qaTopics/systemPrompt…），設 `enabled:true`。前後端自動支援（文法課 `grammar/index.get.ts` 已泛用：`入門/初級` 自動視為初學者，依 `langLabel` 生成）。古語言設 `voiceless:true`。
-- 古語言人設定向（勿改回）：日文關東標準語；**希臘文 `grc`＝神學院通用希臘文（Koine，非古典 Attic／荷馬），初學入門，題材＝新約／LXX／教父／信經／希臘化猶太（斐羅・約瑟夫斯）／哲學家／拜占庭官方文獻**（教練 Sophia 🦉，已 enabled）；**拉丁文 `la`＝神學院教會拉丁文（Ecclesiastical，非古典），初學入門，題材＝武加大／拉丁教父／禮儀信經大公會議 →延伸經院神哲學（阿奎那等 summae／quaestiones）與中世紀各學科**（教練 Marcus 🏛️，已 enabled，voiceless，ttsLang=it-IT 教會式發音，用拉丁字母不需轉寫鍵盤）；**希伯來文 `hbo`＝舊約聖經希伯來文（Biblical／古典，非現代以色列語），初學入門，題材＝以舊約（妥拉先讀創世記詩篇／先知書／智慧文學）為起點 →擴及死海古卷（昆蘭）／米示拿‧拉比希伯來文／中世紀註釋（拉希）／禮儀碑銘，底本 BHS**（教練 Miriam 🕎，已 enabled，voiceless，RTL，keyboard=hebrew，ttsLang=he-IL）。
+- 加語言 = `server/utils/lang-coaches.ts` 加一筆 `Coach`（language/levelScale/defaultLevel/name/langLabel/bcp47/ttsLang/accent/blurb/systemPrompt + personas/scenarios/smalltalkTopics/qaTopics），設 `enabled:true`。**前後端自動支援**：選單、首頁、chat、文法、單字、今日推薦全靠這筆資料驅動。文法課 `grammar/index.get.ts` 已泛用（`入門/初級` 自動視為初學者，依 `langLabel` 生成，不用 seed）。
+- 各語言定向／題材／鍵盤／voiceless／TTS 一覽見上方「〇、語言一覽」；**古語言定向勿改回古典/現代**。新增語言別忘了同步補 `review.vue` 的 `THEME_POOLS` 與 `TTS_LANG`（見 §四）。
 - **轉寫鍵盤（`keyboard` 欄位，目前 `"greek"` / `"kana"` / `"hebrew"`）**：打英文/羅馬字即時轉成目標文字。`chat.vue` 偵測 `coach.keyboard` 顯示「⌨️ 鍵盤」開關＋對照表面板，綁 textarea `@keydown`（`onInputKeydown` 依 keyboard 分派 greek/kana/hebrew；Enter 前先 `kana.finalize` 收殘留 ん）。訊息泡泡加 `dir="auto"`、希伯來輸入框 `dir="rtl"`。
   - **希臘文 `composables/useGreekKeyboard.ts`**：TLG **Beta Code**（h=η q=θ c=ξ x=χ y=ψ w=ω f=φ）；母音後按 `) ( / \ = | +` 加多調符號 polytonic；字尾 σ→ς + NFC。1:1 無狀態。grc 教練用。
   - **日文 `composables/useKanaKeyboard.ts`**：romaji→かな 迷你 IME，**有狀態**（`pendingLen` 暫存游標前未成假名的羅馬字，湊成即替換）。拗音(kya)、促音(雙子音→っ、tch)、撥音(nn→ん／n+子音→ん、`'` 分隔)、濁半濁、平/片切換(`kata` ref，+0x60)、片假名長音 `-`→ー。⚠️ 偵測 `e.isComposing`/`key==='Process'` 自動讓行，**不與系統 IME 衝突**。ja 教練用。
