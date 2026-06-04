@@ -69,7 +69,7 @@ export default defineEventHandler(async (event) => {
       throw createError({
         statusCode: 400,
         data: { code: "youtube_needs_gemini" },
-        message: `YouTube 影片分析需要 Gemini key（NVIDIA 主引擎不支援影片）。伺服器目前偵測到 ${n} 把 Gemini key — 若為 0，請確認 Zeabur 變數名稱正好是 Gemini_API_Key_1（區分大小寫，現在也接受全大寫 GEMINI_API_KEY_1），存檔後需重新部署。或改用「貼上文章」模式（可走 NVIDIA）。`,
+        message: `YouTube 影片分析需要 Gemini key（NVIDIA 主引擎不支援影片）。伺服器目前偵測到 ${n} 把 Gemini key — 若為 0，請確認 Zeabur 變數名稱正好是 Gemini_API_Key_OLINE_ONLY（區分大小寫，現在也接受全大寫 GEMINI_API_KEY_OLINE_ONLY），存檔後需重新部署。或改用「貼上文章」模式（可走 NVIDIA）。`,
       });
     }
     throw e;
