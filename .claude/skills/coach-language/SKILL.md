@@ -84,12 +84,13 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 
 ## 六、模型與 key（成本）
 
-- **主引擎＝NVIDIA NIM（2026-06-03 起）**：`server/utils/nvidia.ts` `callNvidiaFull`（OpenAI 相容、key 輪替、剝 `<think>`）。`coach-ai.ts` `coachGemini` 先試 NVIDIA → 失敗才落 Gemini。env `nvidiaApiKeys`=`NVIDIA_API_Key_1..4`（4 帳號 key 輪替，全部不可用才落 Gemini）、`nvidiaModel` 預設 **`qwen/qwen3-next-80b-a3b-instruct`**（繁中佳、支援 JSON、穩定）。無限量、零成本，用量記 tier=`nvidia`。
+- **🔑 線上／線下 key 分離（2026-06-04）**：線上各 AI 功能（coach 全部、族譜解析、YouTube 沉浸）**只讀「線上專用」key** `NVIDIA_API_Key_OLINE_ONLY` / `Gemini_API_Key_OLINE_ONLY`（拼字 OLINE 為既定變數名，**僅在 Zeabur 設定**）。`nuxt.config.ts` 的 `nvidiaApiKeys`/`geminiApiKeys`/`geminiApiKey` 三者皆改成只讀 `_OLINE_ONLY`。本機 `.env` 刻意**不放**這兩支，`_1..4` 共享池完全留給線下批次腳本（OCR/translate/dialogues）→ 線上線下額度徹底分離。⚠️ 三支 `dialogue_*.py` 用 `startswith('NVIDIA_API_KEY')` 前綴比對撈 key，所以 `_OLINE_ONLY` 一旦留在本機 `.env` 會被當第 5 把 key 輪進去燒掉線上額度——故必須從本機移除，不能只靠命名。⚠️ 線上為「專用」模式＝**無 `_1..4` fallback**，`_OLINE_ONLY` 失效則線上 AI 全斷；換 key 或要加保險絲時改 `nuxt.config.ts`。
+- **主引擎＝NVIDIA NIM（2026-06-03 起）**：`server/utils/nvidia.ts` `callNvidiaFull`（OpenAI 相容、key 輪替、剝 `<think>`）。`coach-ai.ts` `coachGemini` 先試 NVIDIA → 失敗才落 Gemini。env `nvidiaApiKeys`=線上專用 `NVIDIA_API_Key_OLINE_ONLY`（見上「線上／線下 key 分離」；全部不可用才落 Gemini）、`nvidiaModel` 預設 **`qwen/qwen3-next-80b-a3b-instruct`**（繁中佳、支援 JSON、穩定）。無限量、零成本，用量記 tier=`nvidia`。
   - ⚠️ **不要改回 `deepseek-ai/deepseek-v4-flash`**：該模型在 NVIDIA 免費層長期 429（互動式教練不可靠）；deepseek 只適合 translate 腳本那種可退避重試的批次。其餘 NVIDIA 模型（qwen3-next、llama-3.1）正常 200。
   - **fileData（YouTube 等多模態 part）NVIDIA 不支援** → `coachGemini` 偵測到自動跳過走 Gemini。**∴ YouTube 沉浸一定要有 Gemini key**；缺 key 時 `content/ingest` 回明確訊息（含「伺服器偵測到 N 把 Gemini key」），並提示可改「貼上文章」（純文字走 NVIDIA）。
 - **Fallback＝Gemini**：`server/utils/gemini.ts`（callGemini/callGeminiFull + key 輪替 + usageMetadata）；`coach-ai.ts` `coachGemini`（tier 選 key + owner/budget 守門 + 用量寫 `lang_api_usage`）。
 - 預設模型 **`gemini-flash-latest`**（固定 ID 2.5-flash 免費日限 20 太低；alias 配額桶分開）。env `GEMINI_MODEL`/`GEMINI_GRADE_MODEL` 可覆寫。
-- **Gemini key 命名容錯（2026-06-04）**：`nuxt.config` 的 `geminiApiKeys` 同時接受 `Gemini_API_Key_N` 與全大寫 `GEMINI_API_KEY_N`（Zeabur 變數區分大小寫，打錯就讀不到 → YouTube 誤報缺 key）。付費層已停用（`GEMINI_COACH_PAID_KEY` 移除），現役＝NVIDIA×4 主 + `Gemini_API_Key_1..4` 免費池 fallback。
+- **Gemini key 命名容錯（2026-06-04）**：`nuxt.config` 的 `geminiApiKeys`/`geminiApiKey` 同時接受 `Gemini_API_Key_OLINE_ONLY` 與全大寫 `GEMINI_API_KEY_OLINE_ONLY`（Zeabur 變數區分大小寫，打錯就讀不到 → YouTube 誤報缺 key）。付費層已停用（`GEMINI_COACH_PAID_KEY` 移除），現役＝線上專用 `NVIDIA_API_Key_OLINE_ONLY` 主 + `Gemini_API_Key_OLINE_ONLY` fallback（皆僅 Zeabur）。
 - 雙 key env：`GEMINI_COACH_FREE_KEY`（空則 fallback `Gemini_API_Key_*` 池）/ `GEMINI_COACH_PAID_KEY`。Gemini 免費用完→前端 `useCoachAi.aiFetch` 跳確認→切付費重試（NVIDIA 為主後此路徑幾乎不觸發）。
 - 前端 AI 呼叫一律走 `useCoachAi().aiFetch`（自動帶 usePaid + free_exhausted 處理）。
 
@@ -121,7 +122,7 @@ chat / profile(get,put) / progress(get,put) / activity / dashboard / usage / ass
 
 1. **Supabase Auth → Email Templates → Magic Link 加 `{{ .Token }}`**（最關鍵，否則驗證碼收不到）
 2. Supabase Auth 關「Allow new signups」；建議設自訂 SMTP（預設寄信額度低）
-3. **Zeabur Variables**：`NVIDIA_API_Key_1..4`（主引擎，無限量）+ `Gemini_API_Key_1..4`（fallback；**YouTube 沉浸必須**，否則只能用貼上文章）。⚠️ 變數名稱**區分大小寫**，現支援 `Gemini_API_Key_N` 或全大寫 `GEMINI_API_KEY_N` 兩種拼法。付費 key 已棄用，不需再設。
+3. **Zeabur Variables（線上專用，本機 .env 不放）**：`NVIDIA_API_Key_OLINE_ONLY`（主引擎，無限量）+ `Gemini_API_Key_OLINE_ONLY`（fallback；**YouTube 沉浸必須**，否則只能用貼上文章）。⚠️ 變數名稱**區分大小寫**，現支援 `Gemini_API_Key_OLINE_ONLY` 或全大寫 `GEMINI_API_KEY_OLINE_ONLY` 兩種拼法。`_1..4` 為線下批次腳本專用、不需放 Zeabur。付費 key 已棄用。
 
 ## 待辦（次要）
 
