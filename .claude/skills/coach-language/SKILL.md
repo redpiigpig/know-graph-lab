@@ -53,7 +53,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 - **問答‧知識**（qa）：像一般 AI 答題教知識，corrections 通常空
 - **情境角色**（scenario）：教練演對方角色（店員/面試官/神職…）
 - **限時主題聊**（smalltalk 頁）
-- 人格：`lang-coaches.ts` `personas[]`，新對話依 session 數輪替（Emily 5 種）。注入統整記憶 + 人格 + 本次摘要進 system prompt。
+- 人格：`lang-coaches.ts` `personas[]`，新對話依 session 數輪替（`pickPersona`）。**7 語全部都有 personas**（各 4–5 種：英文閨蜜/面試官/辯論/教授/說書人；德/法 朋友/文法/單字/文化嚮導/讀經或發音；日文 姉さん/文法/單字/文化嚮導/敬語；古典語 精讀/文法/抄經/信經…），各依該語言程度與宗教研究取向設計。注入統整記憶 + 人格 + 本次摘要進 system prompt。⚠️ 加新語言一定要附 personas，否則 `pickPersona` 回 null、人格不輪替。
 - **今日推薦（每天輪替，2026-06-04）**：語言首頁聊天磚下方「今日推薦 · 每天換」三排 chip — 💬聊話題（`smalltalkTopics`）/💡問知識（`qaTopics`）/🎭演情境（`scenarios`），各 3 個，以「當天日期種子」輪替（同天穩定、隔天換）。點 chip 直接 deep-link 進 chat（`?topic=` / `?mode=qa&topic=` / `?mode=scenario&scenario=`），`chat.vue` onMounted 讀 query 自動開場。資料每語言各一份（`lang-coaches.ts` 各 coach 的 `smalltalkTopics`/`scenarios`/`qaTopics`）：英文宗教學取向、日文 N5→N4 初學版（漢字附假名）、**古典語三本柱皆為初學的精讀／文法／信經題**（如 grc「逐字精讀約翰福音 1:1」、hbo「從希伯來字母讀起」、la「讀一則 quaestio 的論證結構」）。
 
 ## 三、今日計畫（today）— 每日自學核心
