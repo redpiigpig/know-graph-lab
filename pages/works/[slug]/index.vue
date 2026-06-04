@@ -208,6 +208,17 @@
             <div v-else class="text-gray-400 text-sm py-8 text-center">尚無修改建議。</div>
           </div>
 
+          <!-- ── 修改草稿 ── -->
+          <div v-show="activeTab === 'draft'">
+            <div class="mb-4">
+              <h2 class="text-base font-semibold text-gray-900">修改草稿</h2>
+              <p class="text-xs text-gray-500 mt-0.5">依修改建議改寫的中文草稿（英文期刊版工作底稿，待逐段英譯）</p>
+            </div>
+            <div v-if="draftLoading" class="text-gray-400 text-sm py-8 text-center">載入中⋯</div>
+            <div v-else-if="draftHtml" class="doc-prose bg-white rounded-2xl border border-gray-100 px-6 py-6 sm:px-10" v-html="draftHtml"></div>
+            <div v-else class="text-gray-400 text-sm py-8 text-center">尚無草稿。</div>
+          </div>
+
           <!-- ── 原文 ── -->
           <div v-show="activeTab === 'original'">
             <div class="mb-4 flex items-start justify-between gap-3">
@@ -428,12 +439,15 @@ const litGroups = computed(() => {
 })
 
 // ── 論文計畫分頁（研究回顧 / 修改建議 / 原文 / 書摘）─────────────────────
-type PaperTab = 'review' | 'memo' | 'original' | 'notes'
+type PaperTab = 'review' | 'memo' | 'draft' | 'original' | 'notes'
 const activeTab = ref<PaperTab>('review')
 
 const memoHtml = ref('')
 const memoLoading = ref(false)
 const memoAvailable = ref(false)
+const draftHtml = ref('')
+const draftLoading = ref(false)
+const draftAvailable = ref(false)
 const paperHtml = ref('')
 const paperLoading = ref(false)
 
@@ -442,6 +456,7 @@ const paperTabs = computed(() => {
     { key: 'review', label: '研究回顧', badge: litEntries.value.length ? String(litEntries.value.length) : undefined },
   ]
   if (memoAvailable.value) tabs.push({ key: 'memo', label: '修改建議' })
+  if (draftAvailable.value) tabs.push({ key: 'draft', label: '修改草稿' })
   if (project.value?.paper_ref) tabs.push({ key: 'original', label: '原文' })
   if (user.value) tabs.push({ key: 'notes', label: '書摘與構思' })
   return tabs
@@ -463,6 +478,18 @@ async function loadMemo() {
   } catch { memoAvailable.value = false } finally { memoLoading.value = false }
 }
 
+// 修改草稿：抓 public/content/works/<ref>-revision-draft.md → 迷你 markdown 渲染
+async function loadDraft() {
+  const ref = project.value?.paper_ref
+  if (!ref) { draftAvailable.value = false; return }
+  draftLoading.value = true
+  try {
+    const md = await $fetch<string>(`/content/works/${ref}-revision-draft.md`, { responseType: 'text' })
+    if (md && md.trim()) { draftHtml.value = renderMarkdown(md); draftAvailable.value = true }
+    else { draftAvailable.value = false }
+  } catch { draftAvailable.value = false } finally { draftLoading.value = false }
+}
+
 // 原文：抓 public/content/papers/<ref>.txt → 內嵌渲染
 async function loadPaperText() {
   const ref = project.value?.paper_ref
@@ -474,7 +501,7 @@ async function loadPaperText() {
   } catch { paperHtml.value = '' } finally { paperLoading.value = false }
 }
 
-watch(() => project.value?.paper_ref, (r) => { if (r) { loadMemo(); loadPaperText() } }, { immediate: true })
+watch(() => project.value?.paper_ref, (r) => { if (r) { loadMemo(); loadDraft(); loadPaperText() } }, { immediate: true })
 
 // ── 迷你 markdown 渲染（無外部依賴；夠用於修改建議書：標題/粗體/清單/引用/表格/連結/分隔線）──
 function esc(s: string) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') }
