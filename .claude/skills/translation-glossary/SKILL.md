@@ -46,6 +46,19 @@ description: 「翻譯定名」通用名物中譯對照工具（/translation-glo
 
 待續：① 中世紀／近代歐洲城市（教會會議城、宗改城）尚淺 ② 東亞／印度本土古都 ③ 河流山脈等自然地名 ④ 是否把 places 納入 [[ebook-translate]] glossary.md 自動 export（目前 export 只含人名）。
 
+### 🆕 2026-06-04：歷代帝王（`historical_rulers`）首批策展（95 筆）
+
+`rulers` tab 從 3 筆擴成 **95 筆人工策展**。Seed：[scripts/seed_glossary_rulers.py](../../../scripts/seed_glossary_rulers.py)（同 places 政策，純資料、`--dry`、名根自檢、`on_conflict=name_english`；加 `historical_rulers_name_english_key` unique constraint）。
+
+涵蓋：亞述/新巴比倫/瑪代/阿契美尼德波斯諸王（聖經王）、古埃及法老+托勒密、塞琉古、馬其頓、**羅馬皇帝 18 位（奧古斯都→狄奧多西，涵蓋逼迫教會諸帝）**、拜占庭、薩珊、哈里發（正統/伍麥亞/阿拔斯）、鄂圖曼蘇丹、神羅/法蘭克、近代歐洲君主、薩法維/蒙兀兒/蒙古/帖木兒、以色列猶大列王+希律。
+
+**兩條規則**：
+- **`polity` 欄對齊 `place_names` 的王朝-民族帝國名**（阿契美尼德-波斯帝國／塞琉古-希臘帝國／鄂圖曼-土耳其帝國…），使「國名與城市」與「歷代帝王」兩 tab 一致。
+- **聖經帝王：通行學界譯為 `name_recommended`，和合本/思高譯放 `name_variants`**（居魯士=古列、薛西斯=亞哈隨魯、革老丟、奧古斯都=該撒亞古士督…）；極通行的和合本譯（尼布甲尼撒/西拿基立/希西家）本即標準直接用。
+- 既成中譯分流標 `notes`：鄂圖曼(王朝/帝國) vs 奧斯曼(開國者 Osman 人名)；哈里發奧斯曼(Uthman) vs 鄂圖曼開國者 Osman 非同人。
+
+待續：① 中國/日本/印度本土帝王朝代 ② 各帝國中段諸王補全（目前每朝挑代表）③ 哲學家/科學家/神祇三 tab 仍稀疏待策展。
+
 **目的**：當「不同傳統對同一個教父／神學名詞有完全不同中譯」（如 Justin Martyr = 新教 *游斯丁* / 思高 *猶斯定* / 東正教 *尤斯丁*）時，翻譯前先在 `/translation-glossary` 確認該書應採哪個譯法，避免 LLM 自選一個導致使用者糾正後要回頭修 chunks。
 
 跟 [[ebook-translate]] 並列：
