@@ -64,11 +64,13 @@ DAY_ARGS = [a for a in sys.argv[1:] if re.match(r'\d{4}-\d{2}-\d{2}', a)]
 
 # ── turn 解析（與 dialogue_to_prose 同）──────────────────────────────
 TOKEN = re.compile(r'<h3>.*?</h3>|<h4>.*?</h4>|<p>.*?</p>', re.S)
-SPK = re.compile(r'^<p><strong class="speaker">([^<]+：)</strong>(.*)</p>$', re.S)
+# 講者起首段：class="speaker" 後可帶屬性（如 data-rc="1" 標記已重鑄）。
+SPK = re.compile(r'^<p><strong class="speaker"([^>]*)>([^<]+：)</strong>(.*)</p>$', re.S)
 def strip_tags(s): return re.sub(r'<[^>]+>', '', s)
 
 def parse_turns(html):
-    """回傳 token 串：['head', raw] 或 ['turn', speaker_label, [p_html...], plaintext]。"""
+    """回傳 token 串：['head', raw] 或 ['turn', label, [p_html...], plaintext, done]。
+    done=True 表示該 turn 已重鑄（speaker 帶 data-rc="1"）→ 跳過，逐 turn 冪等。"""
     toks = TOKEN.findall(html); out = []; cur = None
     for t in toks:
         m = SPK.match(t)
@@ -77,10 +79,10 @@ def parse_turns(html):
             out.append(['head', t])
         elif m:
             if cur: out.append(cur)
-            cur = ['turn', m.group(1), [t], None]
+            cur = ['turn', m.group(2), [t], None, ('data-rc' in m.group(1))]
         else:
             if cur: cur[2].append(t)
-            else: cur = ['turn', '', [t], None]
+            else: cur = ['turn', '', [t], None, False]
     if cur: out.append(cur)
     for o in out:
         if o[0] == 'turn':
@@ -172,7 +174,8 @@ def recompose(label, text):
 def to_paras(label, prose):
     parts = [p.strip() for p in re.split(r'\n\s*\n+', prose) if p.strip()]
     if not parts: return None
-    pfx = f'<strong class="speaker">{label}</strong>' if label else ''
+    # data-rc="1"＝已重鑄標記，供 parse_turns 偵測並跳過（逐 turn 冪等）。
+    pfx = f'<strong class="speaker" data-rc="1">{label}</strong>' if label else ''
     out = [f'<p>{pfx}{parts[0]}</p>'] + [f'<p>{p}</p>' for p in parts[1:]]
     return ''.join(out)
 
@@ -190,7 +193,8 @@ def save_ledger(done):
 # ── per-day ──────────────────────────────────────────────────────────
 def process_day(day):
     toks = parse_turns(day['html'])
-    turns = [(idx, o) for idx, o in enumerate(toks) if o[0] == 'turn' and o[3]]
+    # 只挑「有內容且尚未重鑄」的 turn（o[4]=done 標記）→ 逐 turn 冪等，re-run 不碰已重鑄
+    turns = [(idx, o) for idx, o in enumerate(toks) if o[0] == 'turn' and o[3] and not o[4]]
     if not turns: return 0, 0
     if DRY: return len(turns), 0
     done = 0
@@ -233,9 +237,12 @@ def main():
         td, dn = process_day(d)
         with lock:
             tot_turns[0] += td; tot_done[0] += dn
-            if not DAY_ARGS:
+            # 只在整天的待重鑄 turn 全數成功（含 td==0 全已重鑄）才記 ledger；
+            # 部分失敗（配額耗盡 fallback 也掛）不記 → 下次 run 自動補（逐 turn 標記跳過已成功的）
+            if not DAY_ARGS and dn == td:
                 done_dates.add(d['day_date']); save_ledger(done_dates)
-            print(f'{d["day_date"]}: {dn}/{td} turns 重鑄', flush=True)
+            flag = '' if dn == td else '  ⚠ 部分失敗，未記 ledger（待補）'
+            print(f'{d["day_date"]}: {dn}/{td} turns 重鑄{flag}', flush=True)
     with ThreadPoolExecutor(max_workers=max(1, len(GKEYS))) as ex:
         list(ex.map(run, days))
     print(f'\n完成：{tot_done[0]}/{tot_turns[0]} turns 重鑄', flush=True)
