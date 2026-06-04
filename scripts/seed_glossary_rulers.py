@@ -391,6 +391,147 @@ R("Herod the Great", "希律大帝", var="黑落德（思高）；大希律", ro
   o="Ἡρῴδης", lang="grc", polity="希律王朝（羅馬附庸）", title="王", region="黎凡特",
   rs=-37, re=-4, reason="太2屠嬰之王；擴建第二聖殿")
 
+# ════════════════════════════════════════════════════════════════════════════
+# 羅馬皇帝（中段補全）  (sort 5000–)
+# ════════════════════════════════════════════════════════════════════════════
+_order = 5000
+R("Antoninus Pius", "安東尼‧庇護", o="Antoninus Pius", lang="lat", var="安托尼努斯‧皮烏斯",
+  polity=P_ROME, title="皇帝", region="羅馬", rs=138, re=161, reason="五賢帝之一")
+R("Commodus", "康茂德", o="Commodus", lang="lat", polity=P_ROME, title="皇帝",
+  region="羅馬", rs=180, re=192, reason="馬可奧勒留之子")
+R("Caracalla", "卡拉卡拉", o="Caracalla", lang="lat", polity=P_ROME, title="皇帝",
+  region="羅馬", rs=198, re=217, reason="212年賜全帝國自由民羅馬公民權")
+R("Aurelian", "奧勒良", o="Aurelianus", lang="lat", var="奧勒利安", polity=P_ROME,
+  title="皇帝", region="羅馬", rs=270, re=275, reason="重整帝國；立「無敵太陽神」國教")
+R("Valens", "瓦倫斯", o="Valens", lang="lat", polity=P_ROME, title="皇帝（東部）",
+  region="羅馬", rs=364, re=378, reason="亞流派傾向；阿德里安堡戰死")
+R("Valentinian I", "瓦倫提尼安一世", o="Valentinianus", lang="lat", root="瓦倫提尼安",
+  polity=P_ROME, title="皇帝（西部）", region="羅馬", rs=364, re=375)
+R("Gratian", "格拉提安", o="Gratianus", lang="lat", polity=P_ROME, title="皇帝（西部）",
+  region="羅馬", rs=367, re=383, reason="棄「大祭司長」頭銜")
+R("Honorius", "霍諾留", o="Honorius", lang="lat", var="洪諾留", polity=P_ROME,
+  title="皇帝（西部）", region="羅馬", rs=393, re=423, reason="410年羅馬城遭亞拉里克劫掠時在位")
+R("Arcadius", "阿爾卡狄烏斯", o="Arcadius", lang="lat", polity=P_ROME,
+  title="皇帝（東部）", region="拜占庭", rs=383, re=408)
+R("Marcian", "馬爾西安", o="Marcianus", lang="lat", var="馬爾基安", polity=P_ROME,
+  title="皇帝（東部）", region="拜占庭", rs=450, re=457, reason="召開迦克墩大公會議(451)")
+R("Romulus Augustulus", "羅慕路斯‧奧古斯都路斯", o="Romulus Augustulus", lang="lat",
+  polity=P_ROME, title="皇帝（西部）", region="羅馬", rs=475, re=476,
+  reason="末代西羅馬皇帝，476帝國西部亡")
+
+# ════════════════════════════════════════════════════════════════════════════
+# 希臘化諸王（中段補全）  (sort 5300–)
+# ════════════════════════════════════════════════════════════════════════════
+_order = 5300
+R("Ptolemy II Philadelphus", "托勒密二世", var="費拉德爾甫斯（手足愛者）", root="托勒密",
+  o="Πτολεμαῖος", lang="grc", polity="托勒密-希臘王國", title="法老／國王", region="埃及",
+  rs=-283, re=-246, reason="傳統下贊助七十士譯本(LXX)翻譯")
+R("Antiochus I Soter", "安條克一世", var="索特爾（救主）", root="安條克", o="Ἀντίοχος",
+  lang="grc", polity=P_SEL, title="國王", region="敘利亞", rs=-281, re=-261)
+R("Seleucus IV Philopator", "塞琉古四世", var="腓羅帕特", root="塞琉", o="Σέλευκος",
+  lang="grc", polity=P_SEL, title="國王", region="敘利亞", rs=-187, re=-175,
+  reason="瑪加伯下3章遣赫略多洛取聖殿銀")
+
+# ════════════════════════════════════════════════════════════════════════════
+# 波斯／拜占庭／法蘭克（中段補全）  (sort 5500–)
+# ════════════════════════════════════════════════════════════════════════════
+_order = 5500
+R("Artaxerxes II", "亞達薛西二世", var="阿爾塔薛西斯二世", root="薛西", o="Ἀρταξέρξης",
+  lang="grc", polity=P_PERSIA, title="沙阿", region="波斯", rs=-404, re=-358)
+R("Justin I", "查士丁一世", var="優斯丁一世", root="查士丁", o="Ἰουστῖνος", lang="grc",
+  polity=P_BYZ, title="皇帝", region="拜占庭", rs=518, re=527, reason="查士丁尼之叔")
+R("Constantine V", "君士坦丁五世", var="君士坦丁努斯五世", root="君士坦丁", o="Κωνσταντῖνος",
+  lang="grc", polity=P_BYZ, title="皇帝", region="拜占庭", rs=741, re=775,
+  reason="毀像運動激進期")
+R("Irene of Athens", "伊琳娜", var="伊蕊妮女皇", o="Εἰρήνη", lang="grc", polity=P_BYZ,
+  title="女皇", region="拜占庭", rs=797, re=802, reason="召開第二次尼西亞大公會議(787)恢復敬像")
+R("Alexios I Komnenos", "阿歷克塞一世", var="阿萊克修斯一世；科穆寧", o="Ἀλέξιος",
+  lang="grc", polity=P_BYZ, title="皇帝", region="拜占庭", rs=1081, re=1118,
+  reason="第一次十字軍時在位")
+R("Charles Martel", "查理‧馬特", var="鐵鎚查理", o="Carolus Martellus", lang="lat",
+  polity="法蘭克王國（卡洛林先祖）", title="宮相", region="西歐", rs=718, re=741,
+  reason="732圖爾戰役阻阿拉伯北進；卡洛林家族奠基")
+R("Pepin the Short", "丕平", var="矮子丕平；不平", o="Pippinus", lang="lat",
+  polity="卡洛林-法蘭克帝國", title="國王", region="西歐", rs=751, re=768,
+  reason="卡洛林王朝首王；丕平獻土予教宗")
+R("Louis the Pious", "虔誠者路易", var="路易一世", root="路易", o="Ludovicus", lang="lat",
+  polity="卡洛林-法蘭克帝國", title="皇帝", region="西歐", rs=814, re=840,
+  reason="查理曼之子")
+R("Henry IV (HRE)", "亨利四世", var="海因里希四世", root="亨利", lang="de",
+  polity="神聖羅馬帝國", title="皇帝", region="中歐", rs=1084, re=1105,
+  reason="與教宗額我略七世敘任權之爭、卡諾莎悔罪")
+
+# ════════════════════════════════════════════════════════════════════════════
+# 中國歷代帝王（英文音譯 → 中文本名）  (sort 6000–)
+# ════════════════════════════════════════════════════════════════════════════
+_order = 6000
+R("Qin Shi Huang", "秦始皇", var="嬴政；始皇帝", lang="zh", polity="秦", title="皇帝",
+  region="東亞", rs=-221, re=-210, reason="首位皇帝、統一六國")
+R("Emperor Gaozu of Han", "漢高祖", var="劉邦", lang="zh", polity="漢", title="皇帝",
+  region="東亞", rs=-202, re=-195)
+R("Emperor Wu of Han", "漢武帝", var="劉徹", lang="zh", polity="漢", title="皇帝",
+  region="東亞", rs=-141, re=-87, reason="罷黜百家、獨尊儒術")
+R("Wang Mang", "王莽", lang="zh", polity="新", title="皇帝", region="東亞",
+  rs=9, re=23)
+R("Emperor Guangwu of Han", "漢光武帝", var="劉秀", lang="zh", polity="東漢", title="皇帝",
+  region="東亞", rs=25, re=57)
+R("Emperor Taizong of Tang", "唐太宗", var="李世民", lang="zh", polity="唐", title="皇帝",
+  region="東亞", rs=626, re=649, reason="貞觀之治")
+R("Wu Zetian", "武則天", var="武曌", lang="zh", polity="武周", title="皇帝（女）",
+  region="東亞", rs=690, re=705, reason="中國唯一女皇帝")
+R("Emperor Xuanzong of Tang", "唐玄宗", var="李隆基", lang="zh", polity="唐", title="皇帝",
+  region="東亞", rs=712, re=756)
+R("Emperor Taizu of Song", "宋太祖", var="趙匡胤", lang="zh", polity="宋", title="皇帝",
+  region="東亞", rs=960, re=976)
+R("Hongwu Emperor", "明太祖", var="朱元璋；洪武帝", lang="zh", polity="明", title="皇帝",
+  region="東亞", rs=1368, re=1398)
+R("Yongle Emperor", "永樂帝", var="明成祖；朱棣", lang="zh", polity="明", title="皇帝",
+  region="東亞", rs=1402, re=1424)
+R("Kangxi Emperor", "康熙帝", var="玄燁", lang="zh", polity="清", title="皇帝",
+  region="東亞", rs=1661, re=1722)
+R("Qianlong Emperor", "乾隆帝", var="弘曆", lang="zh", polity="清", title="皇帝",
+  region="東亞", rs=1735, re=1796)
+R("Empress Dowager Cixi", "慈禧太后", var="西太后；那拉氏", lang="zh", polity="清",
+  title="太后（攝政）", region="東亞", rs=1861, re=1908)
+
+# ════════════════════════════════════════════════════════════════════════════
+# 日本歷代帝王／武家  (sort 6300–)
+# ════════════════════════════════════════════════════════════════════════════
+_order = 6300
+R("Emperor Jimmu", "神武天皇", lang="ja", polity="日本（傳說）", title="天皇",
+  region="東亞", reason="傳說中首位天皇")
+R("Prince Shotoku", "聖德太子", var="廄戶皇子", lang="ja", polity="日本（飛鳥）",
+  title="攝政皇太子", region="東亞", rs=593, re=622, reason="興佛教、立十七條憲法")
+R("Emperor Kanmu", "桓武天皇", lang="ja", polity="日本（平安）", title="天皇",
+  region="東亞", rs=781, re=806, reason="遷都平安京")
+R("Minamoto no Yoritomo", "源賴朝", lang="ja", polity="鎌倉幕府", title="征夷大將軍",
+  region="東亞", rs=1192, re=1199, reason="鎌倉幕府首任將軍")
+R("Oda Nobunaga", "織田信長", lang="ja", polity="日本（戰國）", title="大名",
+  region="東亞", rs=1568, re=1582)
+R("Toyotomi Hideyoshi", "豐臣秀吉", lang="ja", polity="日本（安土桃山）", title="關白／太閤",
+  region="東亞", rs=1585, re=1598, reason="統一日本、侵朝(壬辰)")
+R("Tokugawa Ieyasu", "德川家康", lang="ja", polity="江戶幕府", title="征夷大將軍",
+  region="東亞", rs=1603, re=1605, reason="江戶幕府首任將軍")
+R("Emperor Meiji", "明治天皇", var="睦仁", lang="ja", polity="日本帝國", title="天皇",
+  region="東亞", rs=1867, re=1912, reason="明治維新")
+
+# ════════════════════════════════════════════════════════════════════════════
+# 印度歷代帝王（佛教史相關優先）  (sort 6500–)
+# ════════════════════════════════════════════════════════════════════════════
+_order = 6500
+R("Chandragupta Maurya", "旃陀羅笈多", var="月護王；旃陀笈多", lang="sa", root="旃陀羅笈多",
+  polity="孔雀王朝", title="皇帝", region="南亞", rs=-321, re=-297,
+  reason="孔雀王朝奠基者")
+R("Ashoka", "阿育王", var="阿輸迦；無憂王", lang="sa", polity="孔雀王朝", title="皇帝",
+  region="南亞", rs=-268, re=-232, reason="弘揚佛教、立石柱詔；第三次結集")
+R("Kanishka", "迦膩色迦", var="迦尼色迦", lang="sa", polity="貴霜帝國", title="皇帝",
+  region="南亞／中亞", rs=127, re=150, reason="護持大乘佛教、第四次結集")
+R("Chandragupta II", "旃陀羅笈多二世", var="超日王(Vikramaditya)", root="旃陀羅笈多", lang="sa",
+  polity="笈多王朝", title="皇帝", region="南亞", rs=380, re=415,
+  reason="笈多盛世；法顯西行所經")
+R("Harsha", "戒日王", var="曷利沙；喜增", lang="sa", polity="戒日王朝", title="皇帝",
+  region="南亞", rs=606, re=647, reason="玄奘訪印時之君")
+
 
 # ════════════════════════════════════════════════════════════════════════════
 # Main
