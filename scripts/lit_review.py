@@ -48,8 +48,19 @@ DOC_TYPE_THEMES: list[dict] = [
 ]
 DOC_TYPE_LABELS = {t["label"] for t in DOC_TYPE_THEMES}
 
+
+# ── Supplement sections: extra reading recommended for an English-journal rewrite
+# (theoretical framing + key English-language scholarship the original paper did
+# not engage). Mostly copyright → seeded as 書目＋摘要＋連結 (fulltext_status
+# 'unavailable'); they enrich the 研究回顧 without claiming a full-text translation.
+SUPPLEMENT_THEMES: list[dict] = [
+    {"key": "gender_theory", "label": "性別與佛教理論框架（英文改寫補充）", "order": 210},
+    {"key": "taiwan_en",     "label": "台灣佛教與人間佛教（英文研究）",   "order": 220},
+]
+SUPPLEMENT_LABELS = {t["label"] for t in SUPPLEMENT_THEMES}
+
 # Any header recognised as a section divider (theme assignment).
-SECTION_LABELS = THEME_LABELS | DOC_TYPE_LABELS
+SECTION_LABELS = THEME_LABELS | DOC_TYPE_LABELS | SUPPLEMENT_LABELS
 
 
 # ── Language label (語言：英文) → ISO code ───────────────────────────────────

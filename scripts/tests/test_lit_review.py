@@ -90,9 +90,25 @@ def test_doc_type_themes_cover_the_seven_bibliography_sections():
     labels = {t["label"] for t in lr.DOC_TYPE_THEMES}
     assert {"佛典與檔案", "專書著作", "期刊文章", "研討會與專書論文",
             "學位論文", "報刊與雜誌", "網路文章"} <= labels
-    # the two header families are disjoint and both feed SECTION_LABELS
+    # the header families are disjoint and all feed SECTION_LABELS
     assert lr.THEME_LABELS.isdisjoint(lr.DOC_TYPE_LABELS)
-    assert lr.SECTION_LABELS == lr.THEME_LABELS | lr.DOC_TYPE_LABELS
+    assert lr.SUPPLEMENT_LABELS.isdisjoint(lr.THEME_LABELS | lr.DOC_TYPE_LABELS)
+    assert lr.SECTION_LABELS == lr.THEME_LABELS | lr.DOC_TYPE_LABELS | lr.SUPPLEMENT_LABELS
+
+
+def test_parse_review_report_assigns_supplement_section_as_theme():
+    md = """#某論文英文改寫補充
+
+#性別與佛教理論框架（英文改寫補充）
+
+【Alan Sponberg】（1992）〈Attitudes toward Women and the Feminine in Early Buddhism〉，《Buddhism, Sexuality, and Gender》。
+語言：英文
+摘要：提出佛教看待女性的「四種態度」類型學。
+"""
+    r = lr.parse_review_report(md)
+    e = r["entries"][0]
+    assert e["theme"] == "性別與佛教理論框架（英文改寫補充）"
+    assert e["authors"] == "Alan Sponberg" and e["year"] == 1992
 
 
 # ── one entry block ───────────────────────────────────────────────────────────

@@ -104,7 +104,8 @@ def rest_patch(table: str, params: str, body: dict) -> None:
 # ── Seed ──────────────────────────────────────────────────────────────────────
 def seed(report_path: str, project_slug: str, paper_ref: str | None,
          title: str, subtitle: str | None, description: str | None,
-         entries_only: bool = False, display_offset: int = 0) -> None:
+         entries_only: bool = False, display_offset: int = 0,
+         all_unavailable: bool = False) -> None:
     md = Path(report_path).read_text(encoding="utf-8")
     parsed = lr.parse_review_report(md)
     entries = parsed["entries"]
@@ -134,7 +135,9 @@ def seed(report_path: str, project_slug: str, paper_ref: str | None,
     rows = []
     for i, e in enumerate(entries):
         status = "pending"
-        if e["language"] == "zh":
+        if all_unavailable:
+            status = "unavailable"   # 整份皆版權書目（英文改寫補充）→ 只入書目＋連結
+        elif e["language"] == "zh":
             status = "unavailable"   # zh 文獻不建逐段中譯（書目層即可）
         elif any(e["ref_key"].startswith(p) for p in UNAVAILABLE_PREFIXES):
             status = "unavailable"
@@ -310,6 +313,8 @@ def main():
                     help="seed only the bibliography entries; leave the writing_project meta untouched")
     ap.add_argument("--display-offset", type=int, default=0,
                     help="add this to every entry's display_order (sort a 2nd batch after an existing one)")
+    ap.add_argument("--all-unavailable", action="store_true",
+                    help="seed every entry as fulltext_status='unavailable' (a wholly-copyright reading list)")
     args = ap.parse_args()
 
     if args.seed:
@@ -318,7 +323,8 @@ def main():
         if not args.entries_only and not args.title:
             sys.exit("--seed needs --title (unless --entries-only)")
         seed(args.report, args.project, args.paper_ref, args.title, args.subtitle,
-             args.description, entries_only=args.entries_only, display_offset=args.display_offset)
+             args.description, entries_only=args.entries_only, display_offset=args.display_offset,
+             all_unavailable=args.all_unavailable)
     if args.fetch_fulltext:
         fetch_fulltext(args.project, args.engine, args.resume, args.only,
                        args.limit_paras, args.limit_entries, args.pace, args.dry_run)
