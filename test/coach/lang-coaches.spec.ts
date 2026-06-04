@@ -38,10 +38,13 @@ describe("教練設定 lang-coaches", () => {
     expect(ja.systemPrompt).toContain("東京出身");
     expect(ja.systemPrompt).toContain("標準語");
     expect(ja.systemPrompt).not.toContain("京都出身");
-    // 希臘文＝1 世紀聖經 Koine
+    // 希臘文＝神學院通用希臘文（Koine，非古典 Attic）
     const grc = getCoach("grc")!;
-    expect(grc.langLabel).toBe("聖經希臘文");
+    expect(grc.langLabel).toBe("通用希臘文");
     expect(grc.accent).toContain("Koine");
+    expect(grc.systemPrompt).toContain("Koine");
+    expect(grc.systemPrompt).toContain("不是古典"); // 明示非古典 Attic
+    expect(grc.keyboard).toBe("greek"); // 打英文轉希臘字母的鍵盤
     // 拉丁文＝教會拉丁
     expect(getCoach("la")!.accent).toContain("教會拉丁");
   });

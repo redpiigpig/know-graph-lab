@@ -1,6 +1,6 @@
 ---
 name: coach-language
-description: AI 語言教練（/coach）— 外語自學系統，多語言（英文 Emily / 日文 櫻子 上線；德法拉古希臘預留）。核心：Gemini 對話 + Web Speech 語音；每語言獨立空間（首頁/儀表板/記憶/功能各自客製）。功能含五種聊天模式（打字/口說/問答知識/情境角色/限時主題）、今日計畫（每日推薦單字測驗+5閱讀+5聽力+口說+任務）、分級文法課（CEFR/JLPT）、技能練習與 TOEFL/IELTS/GRE 考試模擬、翻譯遊戲、YouTube/文章沉浸（讀聽後 MCQ+討論+評分）、統整記憶庫、教練每日簡報與日誌、SRS 單字、雙 key 成本控管。Use when 改語言教練任何功能、加語言、調人設/難度/題材、改資安（OTP 登入/付費上限）、接 Gemini key、debug coach 端點或頁面。
+description: AI 語言教練（/coach）— 外語自學系統，多語言（英文 Emily / 日文 櫻子 / 通用希臘文 Sophia 上線；德法拉預留）。核心：Gemini 對話 + Web Speech 語音；每語言獨立空間（首頁/儀表板/記憶/功能各自客製）。功能含五種聊天模式（打字/口說/問答知識/情境角色/限時主題）、今日計畫（每日推薦單字測驗+5閱讀+5聽力+口說+任務）、分級文法課（CEFR/JLPT/古語言量表）、技能練習與 TOEFL/IELTS/GRE 考試模擬、翻譯遊戲、YouTube/文章沉浸（讀聽後 MCQ+討論+評分）、統整記憶庫、教練每日簡報與日誌、SRS 單字、古希臘文鍵盤（打英文即時轉希臘字母）、雙 key 成本控管。Use when 改語言教練任何功能、加語言、調人設/難度/題材、改資安（OTP 登入/付費上限）、接 Gemini key、debug coach 端點或頁面。
 ---
 
 > ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
@@ -9,7 +9,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 
 # AI 語言教練 Skill
 
-使用者（宗教研究者）的外語自學系統。目標：英文 **B2→C2→TOEFL**；日文 **N5→N4（初學）**。題材**以宗教/神話/宗教學為主軸**，輔以人文，少量理工醫/生活/旅遊（考試模式走真實考題）。相關偏好見 [[project_language_coach]]、[[feedback_language_coach_religious_studies]]、[[feedback_traditional_chinese_only]]、[[feedback_coach_nvidia_engine]]。
+使用者（宗教研究者）的外語自學系統。目標：英文 **B2→C2→TOEFL**；日文 **N5→N4（初學）**；**通用希臘文（Koine）入門（初學）**。題材**以宗教/神話/宗教學為主軸**，輔以人文，少量理工醫/生活/旅遊（考試模式走真實考題）。希臘文題材＝**神學院通用希臘文（非古典 Attic）**，循序讀新約／七十士（LXX）／使徒教父與教父文獻／信經與大公會議文獻（公元初到中世紀前）／希臘化猶太文獻（斐羅・約瑟夫斯）／哲學家／拜占庭官方文獻。相關偏好見 [[project_language_coach]]、[[feedback_language_coach_religious_studies]]、[[feedback_traditional_chinese_only]]、[[feedback_coach_nvidia_engine]]。
 
 部署：**Zeabur**（GitHub master 自動部署）。DB：Supabase（Management API 跑 DDL，見 [[reference_supabase_management_api]]）。
 
@@ -91,8 +91,9 @@ chat / profile(get,put) / progress(get,put) / activity / dashboard / usage / ass
 
 ## 九、加語言 / 擴充
 
-- 加語言：`server/utils/lang-coaches.ts` 加一筆（language/levelScale/defaultLevel/personas/scenarios/smalltalkTopics/systemPrompt…），設 `enabled:true`。前後端自動支援。古語言設 `voiceless:true`。
-- 古語言人設定向（勿改回）：日文關東標準語、希臘文 1 世紀聖經 Koine、拉丁文教會拉丁。
+- 加語言：`server/utils/lang-coaches.ts` 加一筆（language/levelScale/defaultLevel/personas/scenarios/smalltalkTopics/qaTopics/systemPrompt…），設 `enabled:true`。前後端自動支援（文法課 `grammar/index.get.ts` 已泛用：`入門/初級` 自動視為初學者，依 `langLabel` 生成）。古語言設 `voiceless:true`。
+- 古語言人設定向（勿改回）：日文關東標準語、**希臘文＝神學院通用希臘文（Koine，非古典 Attic／荷馬），初學入門程度，題材＝新約／LXX／教父／信經／希臘化猶太（斐羅・約瑟夫斯）／哲學家／拜占庭官方文獻**、拉丁文教會拉丁。希臘文 `grc` 已 `enabled:true`（教練 Sophia 🦉）。
+- **古希臘文鍵盤（`keyboard:"greek"`）**：voiceless 不能語音輸入，改提供「打英文＝希臘字母」轉寫鍵盤。邏輯在 `composables/useGreekKeyboard.ts`（純函式 + `onKeydown`/`insert`，TLG **Beta Code** 對應：h=η q=θ c=ξ x=χ y=ψ w=ω f=φ；母音後按 `) ( / \ = | +` 加多調符號 polytonic；字尾 σ 自動轉 ς + NFC 正規化）。`chat.vue` 偵測 `coach.keyboard==='greek'` 顯示「⌨️ 希臘鍵盤」開關＋對照表面板，綁 textarea `@keydown`。要再加古語言鍵盤（如科普特、敘利亞文）就擴充此 composable + 在 coach 設 `keyboard`。測試見 `test/coach/lang-coaches.spec.ts`。
 
 ## 十、使用者要手動做（部署前）
 

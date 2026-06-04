@@ -104,6 +104,46 @@
         <!-- 輸入列 -->
         <div class="border-t border-gray-100 bg-white px-3 py-2.5 flex-shrink-0">
           <div v-if="speechErr" class="text-[11px] text-rose-500 mb-1.5 px-1">{{ speechErr }}</div>
+
+          <!-- 希臘文鍵盤工具列 -->
+          <div v-if="greekKb" class="flex items-center gap-2 mb-2 px-0.5">
+            <button
+              @click="greekOn = !greekOn"
+              class="text-xs px-2.5 py-1 rounded-lg border transition flex items-center gap-1"
+              :class="greekOn ? 'bg-amber-50 border-amber-300 text-amber-800' : 'bg-white border-gray-200 text-gray-400'"
+              title="打英文字母即時轉成希臘字母（Beta Code）"
+            >⌨️ 希臘鍵盤 {{ greekOn ? '開' : '關' }}</button>
+            <button @click="showGreekHelp = !showGreekHelp" class="text-xs px-2 py-1 rounded-lg text-amber-700 hover:bg-amber-50 transition">
+              對照表 {{ showGreekHelp ? '▲' : '▼' }}
+            </button>
+            <span v-if="greekOn" class="text-[11px] text-gray-400">打 a→α、h→η、q→θ、w→ω…；母音後按 ) ( / \ = | + 加符號</span>
+          </div>
+
+          <!-- 對照表 + 點選面板 -->
+          <div v-if="greekKb && showGreekHelp" class="mb-2 p-2.5 rounded-xl bg-amber-50/60 border border-amber-100 space-y-2">
+            <div class="flex flex-wrap gap-1">
+              <button
+                v-for="p in gk.GREEK_PALETTE"
+                :key="p.latin"
+                @click="insertGreek(p.greek)"
+                class="px-2 py-1 rounded-lg bg-white border border-amber-200 text-sm hover:bg-amber-100 transition"
+                :title="`鍵盤打 ${p.latin}`"
+              >
+                <span class="text-gray-900">{{ p.greek }}</span>
+                <span class="text-[10px] text-gray-400 ml-0.5">{{ p.latin }}</span>
+              </button>
+              <button @click="insertGreek('ς')" class="px-2 py-1 rounded-lg bg-white border border-amber-200 text-sm hover:bg-amber-100 transition" title="字尾 sigma（一般自動）">
+                <span class="text-gray-900">ς</span><span class="text-[10px] text-gray-400 ml-0.5">字尾σ</span>
+              </button>
+            </div>
+            <div class="text-[11px] text-amber-800/80">
+              變音符號：母音後按
+              <span v-for="d in gk.GREEK_DIACRITICS" :key="d.key" class="inline-block mx-0.5">
+                <code class="px-1 rounded bg-white border border-amber-200">{{ d.key }}</code>={{ d.label }}
+              </span>
+            </div>
+          </div>
+
           <div class="flex items-end gap-2">
             <button
               v-if="!coach?.voiceless && sttSupported"
@@ -113,9 +153,10 @@
               :title="listening ? '停止錄音' : '按住說話'"
             >🎤</button>
             <textarea
+              ref="inputEl"
               v-model="input"
-              @keydown.enter.exact.prevent="send"
-              :placeholder="listening ? (interim || '聆聽中…') : `用${coach?.langLabel}輸入…`"
+              @keydown="onInputKeydown"
+              :placeholder="listening ? (interim || '聆聽中…') : (greekKb && greekOn ? '打英文字母 → 希臘字母（如 logos→λόγος）…' : `用${coach?.langLabel}輸入…`)"
               rows="1"
               class="flex-1 resize-none px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-indigo-400 max-h-32"
             />
@@ -197,6 +238,7 @@ import { authedFetch } from "~/composables/useAuthedFetch";
 import { useSpeech } from "~/composables/useSpeech";
 import { useActivityTracker } from "~/composables/useActivityTracker";
 import { useCoachAi } from "~/composables/useCoachAi";
+import { useGreekKeyboard } from "~/composables/useGreekKeyboard";
 
 definePageMeta({ middleware: "coach-auth" });
 
@@ -229,6 +271,37 @@ const sending = ref(false);
 const panel = ref<"vocab" | "homework">("vocab");
 const autoSpeak = ref(false);
 const msgArea = ref<HTMLElement | null>(null);
+
+// 希臘文鍵盤（打英文 → 希臘字母）：僅 keyboard:"greek" 的教練啟用
+const gk = useGreekKeyboard();
+const inputEl = ref<HTMLTextAreaElement | null>(null);
+const greekKb = computed(() => coach.value?.keyboard === "greek");
+const greekOn = ref(true); // 進 grc 預設開啟
+const showGreekHelp = ref(false);
+
+function setInput(v: string, cursor: number) {
+  input.value = v;
+  nextTick(() => inputEl.value?.setSelectionRange(cursor, cursor));
+}
+
+function onInputKeydown(e: KeyboardEvent) {
+  // Enter（無 Shift）送出；Shift+Enter 換行
+  if (e.key === "Enter" && !e.shiftKey && !e.isComposing) {
+    e.preventDefault();
+    send();
+    return;
+  }
+  if (greekKb.value && greekOn.value && inputEl.value) {
+    gk.onKeydown(e, inputEl.value, setInput);
+  }
+}
+
+function insertGreek(ch: string) {
+  if (inputEl.value) {
+    gk.insert(inputEl.value, ch, setInput);
+    inputEl.value.focus();
+  }
+}
 
 function startScenario(s: string) {
   input.value = `我想練習這個情境：「${s}」。請你扮演對方角色，先用${coach.value?.langLabel || ''}開場。`;
