@@ -51,6 +51,26 @@ H_JSON = {**H_GET, "Content-Type": "application/json", "Prefer": "return=represe
 CHUNKS_DIR = Path(os.environ.get("EBOOK_CHUNKS_DIR")
                   or r"G:\我的雲端硬碟\資料\電子書\_chunks")
 
+
+def _drive_write(path, data: str, mode: str = "a") -> None:
+    """Write to the Google-Drive (G:) chunks dir, surviving transient Drive
+    unmounts. G: occasionally drops mid-run (Drive Desktop resync); a bare
+    open() then raises FileNotFoundError and crashes the whole batch
+    (2026-06-04). Retry with backoff until the drive remounts (up to ~30 min)
+    so an overnight run pauses instead of dying."""
+    delays = [5, 15, 30, 60, 120, 300, 300, 300, 300, 300]
+    for i, d in enumerate(delays + [None]):
+        try:
+            with open(path, mode, encoding="utf-8") as f:
+                f.write(data)
+            return
+        except (FileNotFoundError, OSError) as e:
+            if d is None:
+                raise RuntimeError(f"Drive write failed after retries: {e}")
+            print(f"  ⚠ Drive write failed ({type(e).__name__}) — G: may be "
+                  f"remounting; retry in {d}s [{i+1}/{len(delays)}]", file=sys.stderr, flush=True)
+            time.sleep(d)
+
 # ── Gemini ────────────────────────────────────────────────────────────────
 
 def _find_gemini_keys() -> list[str]:
@@ -1007,8 +1027,8 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
         }
         out_chunks.append(new_chunk)
         # Append-write so an interrupted run keeps its partial output (resume).
-        with open(out_path, "a", encoding="utf-8") as f:
-            f.write(json.dumps(new_chunk, ensure_ascii=False) + "\n")
+        # _drive_write survives transient G: unmounts (else a Drive blip crashes the run).
+        _drive_write(out_path, json.dumps(new_chunk, ensure_ascii=False) + "\n", "a")
         print(f"  ✓ {len(zh)} zh chars  in {elapsed:.1f}s  (total so far: {len(out_chunks)})", flush=True)
 
     if dry_run or not out_chunks:
@@ -1029,9 +1049,7 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
     # have produced non-contiguous indices if resume hit duplicates).
     for i, c in enumerate(out_chunks):
         c["chunk_index"] = i
-    with open(out_path, "w", encoding="utf-8") as f:
-        for c in out_chunks:
-            f.write(json.dumps(c, ensure_ascii=False) + "\n")
+    _drive_write(out_path, "".join(json.dumps(c, ensure_ascii=False) + "\n" for c in out_chunks), "w")
     print(f"\nWrote {out_path}  ({out_path.stat().st_size//1024} KB)  [sorted to source order]", flush=True)
 
     # R2 + DB previews
