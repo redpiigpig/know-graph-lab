@@ -5,7 +5,7 @@
       <div class="w-px h-5 bg-gray-200" />
       <span class="text-sm font-semibold text-gray-900">單字複習</span>
       <div class="ml-auto flex items-center gap-1">
-        <CoachTimer :seconds="tracker.activeSeconds" />
+        <CoachTimer :seconds="tracker.activeSeconds.value" />
         <button @click="endless = !endless" class="text-xs px-2.5 py-1 rounded-lg transition mr-1" :class="endless ? 'bg-violet-600 text-white' : 'bg-gray-50 text-gray-500'" title="刷完到期單字後自動生成新學術單字，永不停">♾️ 無限</button>
         <button @click="quizMode = false" class="text-xs px-2.5 py-1 rounded-lg transition" :class="!quizMode ? 'bg-indigo-600 text-white' : 'bg-gray-50 text-gray-500'">翻卡</button>
         <button @click="quizMode = true" class="text-xs px-2.5 py-1 rounded-lg transition" :class="quizMode ? 'bg-indigo-600 text-white' : 'bg-gray-50 text-gray-500'">選擇題</button>

@@ -5,10 +5,12 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, unref } from "vue";
 const props = defineProps<{ seconds: number }>();
 const mmss = computed(() => {
-  const s = Math.max(0, Math.floor(props.seconds || 0));
+  // 防呆：若不慎傳進 ref 物件或非數字，unref + Number.isFinite 仍給出 0:00 而非 NaN:NaN
+  const n = Number(unref(props.seconds as any));
+  const s = Number.isFinite(n) ? Math.max(0, Math.floor(n)) : 0;
   return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
 });
 </script>

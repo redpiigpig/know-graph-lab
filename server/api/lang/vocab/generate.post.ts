@@ -33,7 +33,7 @@ export default defineEventHandler(async (event) => {
   const raw = await coachGemini({
     system: `你是${coach.langLabel}詞彙老師，為「${lv}」程度的學生挑選單字（學生做宗教研究）。
 只輸出 JSON：{ "words": [ { "word": "", "reading": "音標/假名（無則空字串）", "meaning": "繁體中文釋義", "example": "${coach.langLabel}例句", "part_of_speech": "詞性" } ] }
-要求：挑 ${n} 個符合主題且**剛好貼合 ${lv} 程度**該學的字。${beginner ? "這是初學者，請給基礎、高頻、日常／入門的常用字，不要太難。" : "可包含該程度的學術詞彙，但不要超綱太多。"}繁體中文，不可簡體。`,
+要求：挑 ${n} 個符合主題的字。${beginner ? `這是初學者，請給基礎、高頻、日常／入門的常用字，不要太難。` : `學生已達 ${lv} 程度，請挑**符合或略高於 ${lv}** 的詞彙：以學術、抽象、進階搭配詞、低頻精準用字為主。**嚴格排除低於 ${lv} 的基礎／日常常見字**（如英文 B2 就不要出 heartbeat、happy、city 這類 A1–B1 早已熟悉的字，複習它們是浪費時間）。寧可難一點、冷僻一點，也不要太簡單。`}繁體中文，不可簡體。`,
     contents: [{ role: "user", parts: [{ text: `主題：${theme}` }] }],
     json: true,
     temperature: 0.6,
