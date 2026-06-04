@@ -69,30 +69,22 @@
         </div>
       </div>
 
-      <!-- 每日對話 — 一條對話串拆成每天一頁（私人，登入者限定） -->
+      <!-- 每日對話 — 先選月份，再選日期（仿聖經 卷→章；私人，登入者限定） -->
       <div v-if="dialogueDays.length" class="max-w-5xl mx-auto px-6 py-8">
         <div class="mb-4">
           <h2 class="text-base font-semibold text-gray-900">每日對話</h2>
           <p class="text-xs text-gray-500 mt-0.5">
-            共 {{ dialogueDays.length }} 天 · {{ totalTurns }} 則 · 點入查閱每一天的對話內容
+            共 {{ dialogueDays.length }} 天 · {{ totalTurns }} 則 · 選擇月份，再挑一天查閱
           </p>
         </div>
-        <div v-for="grp in dayGroups" :key="grp.month" class="mb-6">
-          <h3 class="text-xs font-semibold text-gray-400 mb-2">{{ grp.label }}</h3>
-          <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-            <NuxtLink v-for="d in grp.items" :key="d.day_date"
-              :to="`/works/${slug}/day/${d.day_date}`"
-              class="no-underline flex items-center gap-3 px-4 py-3 rounded-xl bg-white border border-gray-100 hover:border-violet-300 hover:shadow-sm transition">
-              <div class="text-center flex-shrink-0 w-10">
-                <div class="text-lg font-bold text-violet-600 leading-none">{{ dayNum(d.day_date) }}</div>
-                <div class="text-[10px] text-gray-400 mt-0.5">{{ d.weekday?.replace('星期', '週') }}</div>
-              </div>
-              <div class="min-w-0 flex-1">
-                <div class="text-xs text-gray-700 truncate">{{ d.day_title }}</div>
-                <div class="text-[11px] text-gray-400">{{ d.n_turns }} 則對話</div>
-              </div>
-            </NuxtLink>
-          </div>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <NuxtLink v-for="grp in dayGroups" :key="grp.month"
+            :to="`/works/${slug}/month/${grp.month}`"
+            class="no-underline flex flex-col items-center justify-center gap-1 py-7 rounded-2xl bg-white border-2 border-violet-100 hover:border-violet-300 hover:shadow-lg hover:shadow-violet-100 transition">
+            <div class="text-3xl">🪈</div>
+            <div class="text-base font-bold text-gray-900">{{ grp.label }}</div>
+            <div class="text-xs text-gray-400">{{ grp.items.length }} 天 · {{ grp.turns }} 則</div>
+          </NuxtLink>
         </div>
       </div>
 
@@ -387,13 +379,13 @@ const totalTurns = computed(() => dialogueDays.value.reduce((s, d) => s + (d.n_t
 const MONTH_ZH = ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
 function dayNum(date: string) { return Number(date.split('-')[2]) }
 const dayGroups = computed(() => {
-  const groups: { month: string; label: string; items: DialogueDay[] }[] = []
+  const groups: { month: string; label: string; items: DialogueDay[]; turns: number }[] = []
   for (const d of dialogueDays.value) {
     const [y, m] = d.day_date.split('-')
     const month = `${y}-${m}`
     let g = groups.find(x => x.month === month)
-    if (!g) { g = { month, label: `${y}年${MONTH_ZH[Number(m) - 1]}`, items: [] }; groups.push(g) }
-    g.items.push(d)
+    if (!g) { g = { month, label: `${y}年${MONTH_ZH[Number(m) - 1]}`, items: [], turns: 0 }; groups.push(g) }
+    g.items.push(d); g.turns += d.n_turns || 0
   }
   return groups
 })
