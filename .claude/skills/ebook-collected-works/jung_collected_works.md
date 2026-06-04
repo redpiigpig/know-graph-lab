@@ -107,7 +107,7 @@
 ### 🆕 可續傳結構（2026-06-04 重構）
 - **每章一個 JSON**：`.claude/skills/ebook-collected-works/jung_data/chNN.json`（持久化、已 commit、不在 tmp）。
   schema：`{chunk_index, chapter_path, volume, parent_volume, title_en, rows:[{zh,de,en},…]}`。每個 row = 一個對齊段（heading 也算一 row，zh/de/en 用 `## ` 前綴）。
-- **組裝器**：`python scripts/_jung_build_all.py` → 讀 cover + 所有 `jung_data/ch*.json`（排序）→ 寫 reader JSONL + upsert DB。**內建對齊閘**：任何 chapter 的 zh/de/en row 數不等就 `SystemExit`。
+- **組裝器**：`python scripts/jung_build_all.py`（**注意：無底線前綴才不會被 `/scripts/_*.py` gitignore；已 commit**）→ 讀 cover + 所有 `jung_data/ch*.json`（排序）→ 寫 reader JSONL + upsert DB。**內建對齊閘**：任何 chapter 的 zh/de/en row 數不等就 `SystemExit`。
 - **加新章節**：用 `c:/tmp/_jung_append.py` 的 `add(zh,de,en)`+`flush()`（append 到指定 chNN.json），分批寫 `_jung_ch?_bN.py` 跑完再 `_jung_build_all.py`。每批 commit。
 - **詩／跨語字串**：用 blockquote（每行 `> ` 前綴、單 `\n`、**絕不可有 `\n\n`**），reader 才會保留換行又不破壞段對齊（renderMarkdown：blockquote split `\n`→`<br>`；一般 `<p>` 會把單 `\n` 併成空格）。
 
