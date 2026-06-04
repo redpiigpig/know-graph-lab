@@ -8,7 +8,7 @@ export default defineEventHandler(async (event) => {
   const { data, error } = await supabase
     .from("writing_projects")
     .select(
-      "id, slug, title, subtitle, description, emoji, color, status, sort_order, content_json, updated_at"
+      "id, slug, title, subtitle, description, emoji, color, status, sort_order, content_json, updated_at, kind, paper_ref"
     )
     .eq("slug", slug)
     .maybeSingle();
