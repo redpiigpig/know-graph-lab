@@ -560,15 +560,30 @@ auto-push。**git 在 master 跑教父**（user 拍板；feat/language-coach 是
   三層樹）→ validate 0 FAIL/0 WARN → test_fathers_quality PASS → REFINED_IDS。詞庫 backfill 未跑
   （配額；可日後補）。**B 層 LLM 校對未跑**（當晚全 provider 配額耗盡）— 日後配額足時補 `llm_proofread_book.py`。
 
-### 🔄 下一卷
-- **vol31 NPNF2 V7 區利羅+拿先斯** `af2cf8a7-b169-432c-863d-632647c8ab67`（見下方接續佇列）。
-  起手：先 `/translation-glossary` 查區利羅（=亞歷山卓的區利羅，非西里爾）/拿先斯的格列高里譯名。
+### 🔄 進行中（暫停 — 2026-06-04 接手即續）
+- **vol31 NPNF2 V7（耶路撒冷的西瑞爾 + 拿先斯的格列高里）** `af2cf8a7-b169-432c-863d-632647c8ab67`
+  - **翻譯到 7/173 chunks 暫停**（使用者要處理別的事；非錯誤）。log `scripts/logs/translate_vol31.log`。
+  - 英文 source 已備份 `…af2cf8a7….en.bak.jsonl`（103 chunks，防 dual-state）。jsonl 現有 7 個中文 chunk。
+  - **接手即續**：`python scripts/translate_ebook_to_zh.py af2cf8a7-b169-432c-863d-632647c8ab67 --engine auto --resume`
+    （--resume 跳過已完成 7 個，從 chunk 8 續）。背景 detached 跑 + 監控 log ✓ 計數。
+  - ⚠️ 注意是 **Cyril of JERUSALEM = 西瑞爾**（非亞歷山卓的區利羅）。拿先斯的格列高里（里非理）。
+  - 翻完照 vol30 流程精修：polish → consolidate_by_ncx → 寫 `_fix_vol31_*.py`（英文 NCX 卷名 relabel
+    繁中 + parent_volume 樹，比照 `_fix_vol30_jerome.py`）→ consolidate_letters → validate → test_fathers_quality → REFINED_IDS。
 
-### ⚙️ 引擎現況（2026-06-03 重做）
-- 預設 **gemini-first → NVIDIA deepseek-v4-flash fallback**；Haiku 全面停用（`5aa6fe9`）。
-- NVIDIA **4 帳號 key round-robin + 每 key 429 cooldown 120s + 全域 6s 節流**（單帳號免費日額很小，
-  ~40 分鐘耗盡；4 帳號分散）。`NVIDIA_MODELS=["deepseek-ai/deepseek-v4-flash"]`（唯一保留段落
-  對齊 + {{p:N}}/[^N] marker 的模型；qwen3-next 雖快但壓段落、毀 marker，勿用）。
+### ⚙️ 引擎現況（2026-06-04 重做 — 3-tier）
+- 預設 **NVIDIA → Gemini → Haiku**（user 2026-06-04 政策；見本檔頂 line 6 引擎政策 header）。
+  - **NVIDIA**（主）deepseek-v4-flash，**4 帳號 key round-robin + 每 key 429 cooldown 120s + 全域 6s 節流**。
+    `NVIDIA_MODELS=["deepseek-ai/deepseek-v4-flash"]`（唯一保留段落對齊 + {{p:N}}/[^N] marker 的模型；
+    qwen3-next 雖快但壓段落、毀 marker，**勿用**）。⚠️ **單帳號免費為「一次性/月 credit」非每日**，4 帳號約
+    40 分鐘全耗盡，過夜不一定回血。
+  - **Gemini**（2nd）4 keys，**每日太平洋午夜重置 ≈ 台灣 15:00**。
+  - **Haiku**（3rd 救急）走 Claude Max OAuth，**前兩池都乾才動**；batch 久了 Anthropic 帳號也會 429
+    （跟互動用量互搶），慢但能擠出。`_secondary`/`_gemini_or_haiku` helper。
+- **G: Drive 寫入已韌性化**（`_drive_write`，2026-06-04）：Drive 斷線會退避重試（最多 ~30min）等 remount，
+  不再 FileNotFoundError 硬崩。**踩過：6/04 上午 G: 掉線害 translate 崩在第 8 chunk**。
+- 2026-06-03→04 引擎演進記錄：原 gemini→haiku → 試 nvidia-first（單 key 429/timeout 退回 gemini-first）
+  → user 加 4 NVIDIA 帳號 → user 加 Haiku 第三層 + 政策定 NVIDIA-first → 現 3-tier。相關 commit
+  `5aa6fe9`(4-key round-robin)、Haiku 復活、NVIDIA-first、G: 韌性。
 
 ### ⚙️ 操作鐵則（踩過的坑，務必遵守）
 1. **每卷上架前跑 `python scripts/test_fathers_quality.py <id>` 綠燈才算數**（G1 validate 0 FAIL /
