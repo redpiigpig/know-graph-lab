@@ -27,7 +27,10 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
 - ✅ **/works 分區** — [pages/works/index.vue](../../../pages/works/index.vue) 拆「書籍寫作 / 論文寫作」兩區（依 `kind`）
 - ✅ **reader + API** — [pages/works/[slug]/index.vue](../../../pages/works/[slug]/index.vue) 論文計畫頁底「研究回顧」分頁（按主題列書目）＋ [pages/works/[slug]/review/[ref].vue](../../../pages/works/) 原文/中譯兩欄逐段 reader；[server/api/lit-review/*.get.ts](../../../server/api/lit-review/)（entries / entry）
 - ✅ **ingest 驅動腳本** — [scripts/ingest_lit_review.py](../../../scripts/ingest_lit_review.py)（`--seed` 入書目；`--fetch-fulltext --resume` 過夜抓全文＋翻譯）；報告原文存 [scripts/data/lit_review_eight_garudhammas.md](../../../scripts/data/)
-- 🔄 **全文逐段對照（進行中）**：八敬法案 **14 篇開放取用 PDF 連結已補實**（Anālayo 漢堡 11 篇 `…/pdf/5-personen/analayo/*.pdf` + JBE Case/Tsedroen + Bodhi bhikkhuni.net + Hüsken 2010 alokavihara）；逐夜 `--fetch-fulltext --resume` 翻譯中（逐段持久化，Gemini→NVIDIA→Haiku）。**待補連結**：Hüsken 2000（JBE vol 7）、von Hinüber 2000（德文，無開放 PDF）、Horner 1930（PD，archive.org 整本）
+- 🔄 **全文逐段對照（進行中，2026-06-04 09:35 暫停）**：八敬法案 **14 篇開放取用 PDF 連結已補實**（Anālayo 漢堡 11 篇 `…/pdf/5-personen/analayo/*.pdf` + JBE Case/Tsedroen + Bodhi bhikkhuni.net + Hüsken 2010 alokavihara）；逐段持久化翻譯（Gemini→NVIDIA→Haiku），受配額限速約 55 段/時。
+  - **目前進度（DB 真實段數）**：`foundation`（Anālayo 2016）**202/456**、`cullavagga`（2015）**3/114**，共 **205 段**入庫；其餘 12 篇 PDF 尚未開始。
+  - **▶ 新 session 接續指令**：`python -X utf8 scripts/ingest_lit_review.py --fetch-fulltext --project bajingfa --resume --engine gemini --pace 1`（`done_zh_indices` 會跳過已翻段落、從缺口接續；entry 仍標 pending/fetched 不影響 resume）。log 寫 `c:/tmp/lit_review_overnight.log`。
+  - **待補連結**：Hüsken 2000（JBE vol 7）、von Hinüber 2000（德文，無開放 PDF）、Horner 1930（PD，archive.org 整本）— 這 3 篇目前指期刊首頁，batch 自動跳過，需先 WebSearch 補實 PDF 再 patch `fulltext_url`。
 - 💡 **漢堡 Anālayo PDF 命名規律**：`buddhismuskunde.uni-hamburg.de/pdf/5-personen/analayo/{foundation,cullavagga,gurudharma,legality,revival-bhikkhuni,mahapajapati,theravadavinaya,theories-foundation,validity,bhikkhuni-controversy}.pdf`（HEAD 探測後再入庫，避免 404 算 fail）
 
 ---
