@@ -138,6 +138,7 @@ const REFINED_IDS = new Set([
   'a7e5956e-8851-4d0f-b3d2-1f823d1bdc81',  // NPNF2 Vol 3 (Theodoret + Jerome/Gennadius + Rufinus)
   '9b94e7c1-fa82-4910-a31f-9db1e2e040bb',  // NPNF2 Vol 5 (Gregory of Nyssa — Dogmatic/Ascetic/Philosophical/Apologetic/Oratorical/Letters)
   'd229a6d4-14de-4e28-92de-4855c75cbf68',  // NPNF2 Vol 6 (Jerome 耶柔米 — Letters + Treatises + Prolegomena)
+  'af2cf8a7-b169-432c-863d-632647c8ab67',  // NPNF2 Vol 7 (Cyril of Jerusalem 耶路撒冷的區利羅《教理講授》+ Gregory Nazianzen 拿先斯的格列高里《講演集》《書信集》)
 ])
 
 const series = [

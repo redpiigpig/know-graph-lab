@@ -456,6 +456,19 @@ TERM_FIXES_NPNF2_V5 = dict(TERM_FIXES_ANF_COMMON, **{
     "巴西略": "巴西流",
 })
 
+# NPNF2 Vol 7 — Cyril of Jerusalem + Gregory Nazianzen（迦帕多家 + 耶路撒冷）
+# 譯名鎖定（詞庫權威 2026-06-04）：
+#   Cyril of Jerusalem → 區利羅（西瑞爾/西里爾/居里羅 是東正教/天主教變體，非建議譯名）
+#   Gregory（Naz/Nyssa）→ 格列高里（「里」非「理」/「利」）；額我略 只保留教宗 Gregory I
+#   Basil → 巴西流（禁巴西略）；Nazianzen → 拿先斯（非納齊安）
+TERM_FIXES_NPNF2_V7 = dict(TERM_FIXES_ANF_COMMON, **{
+    "西瑞爾": "區利羅", "西里爾": "區利羅", "居里羅": "區利羅",
+    "格列高理": "格列高里", "格列高利": "格列高里", "格里高利": "格列高里",
+    "額我略": "格列高里",
+    "納齊安": "拿先斯",
+    "巴西略": "巴西流",
+})
+
 # 所有 ANF vol 都吃 ANF_COMMON baseline；per-vol specific 覆蓋 baseline。
 TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "c98d358d-7066-4691-a896-b7232707b0db": {**TERM_FIXES_ANF_COMMON, **TERM_FIXES_ANF_VOL_1},  # ANF Vol 1
@@ -484,6 +497,7 @@ TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "29782dd6-ece9-446a-83ed-9cc0892d7cc7": TERM_FIXES_NPNF2_HISTORIANS,  # NPNF2 Vol 2 Socrates + Sozomen
     "a7e5956e-8851-4d0f-b3d2-1f823d1bdc81": TERM_FIXES_NPNF2_V3,  # NPNF2 Vol 3 Theodoret + Jerome + Rufinus
     "9b94e7c1-fa82-4910-a31f-9db1e2e040bb": TERM_FIXES_NPNF2_V5,  # NPNF2 Vol 5 Gregory of Nyssa
+    "af2cf8a7-b169-432c-863d-632647c8ab67": TERM_FIXES_NPNF2_V7,  # NPNF2 Vol 7 Cyril of Jerusalem + Gregory Nazianzen
 }
 
 
