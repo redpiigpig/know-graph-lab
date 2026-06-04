@@ -488,8 +488,8 @@ Pure-function pytest suite at [`scripts/tests/`](../../../scripts/tests/README.m
 ## See also
 
 - [ebook-pipeline](../ebook-pipeline/SKILL.md) — parse / OCR / standardize / 套書 split 等 ebook 上游處理
-- [fathers-translation](../fathers-translation/SKILL.md) — 教父原典（公有領域 Schaff/CCEL）中譯精修，從本 skill 分出
-- [collected-works-multilang](../collected-works-multilang/SKILL.md) — 多卷全集「3 欄以上多語對照」（原文＋既有譯本＋繁中）；source_text/source_lang 單一來源 → `sources` 多來源 schema 的擴充版，共用本 skill 的翻譯基礎設施（engine/quota/resume）
-- [scripture-canon-portal](../scripture-canon-portal/SKILL.md) — 教父原典／信條／典外文獻網站，會引用本 skill 翻譯出來的書
+- [scripture-fathers](../scripture-fathers/SKILL.md) — 教父原典（公有領域 Schaff/CCEL）中譯精修，從本 skill 分出
+- [ebook-collected-works](../ebook-collected-works/SKILL.md) — 多卷全集「3 欄以上多語對照」（原文＋既有譯本＋繁中）；source_text/source_lang 單一來源 → `sources` 多來源 schema 的擴充版，共用本 skill 的翻譯基礎設施（engine/quota/resume）
+- [scripture-canon](../scripture-canon/SKILL.md) — 教父原典／信條／典外文獻網站，會引用本 skill 翻譯出來的書
 - [`scripts/translate_ebook_to_zh.py`](../../../scripts/translate_ebook_to_zh.py) — 核心翻譯腳本
 - [glossary.md](glossary.md) — 教父／聖經書卷／神學術語對照

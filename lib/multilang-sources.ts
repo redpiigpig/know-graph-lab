@@ -1,6 +1,6 @@
 /**
  * Multi-language parallel sources — schema contract for collected-works books
- * (德 GW + 英 CW + 繁中, etc.). See .claude/skills/collected-works-multilang/.
+ * (德 GW + 英 CW + 繁中, etc.). See .claude/skills/ebook-collected-works/.
  *
  * A chunk's display text is `content` (always the 繁中 translation). Source
  * languages live in `sources` (lang-code → text) with `source_order` giving the

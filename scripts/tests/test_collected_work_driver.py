@@ -2,7 +2,7 @@
 
 Locks section splitting + the load→align→assemble→write_jsonl run() path with a
 stub translate_fn (no network, LLM, or DB). See
-.claude/skills/collected-works-multilang/.
+.claude/skills/ebook-collected-works/.
 """
 import json
 

@@ -699,7 +699,7 @@
 definePageMeta({ middleware: "auth" });
 
 // Multi-language parallel contract (zh + N sources). Pure helpers shared with
-// the API + translate writer. See .claude/skills/collected-works-multilang/.
+// the API + translate writer. See .claude/skills/ebook-collected-works/.
 import {
   normalizeSources,
   availableViewModes,

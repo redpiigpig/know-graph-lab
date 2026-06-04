@@ -12,7 +12,7 @@ Pure functions only — no network, DB, LLM, or filesystem (except the tiny
 `write_jsonl` convenience). The actual alignment + translation engine plugs a
 `translate_fn` into `assemble_multilang_chunks`.
 
-See .claude/skills/collected-works-multilang/SKILL.md.
+See .claude/skills/ebook-collected-works/SKILL.md.
 """
 from __future__ import annotations
 

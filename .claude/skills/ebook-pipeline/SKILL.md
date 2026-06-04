@@ -1298,11 +1298,11 @@ Re-running `standardize_ebook.py <id>` on any EPUB book now:
 7. **~~16 套書 with `volume=None`~~** ✅ detect_set_volumes 已掃完所有候選，37 本 marked NOT_A_SET marker，0 本待處理。
 8. **~~17 no-hit books for enrich_metadata~~** ✅ 剩 3 本（古蘭經的故事 / 巴哈歐拉啟示錄 / 道教簡史）— 都是冷門 manual-fill only。
 9. **英→中翻譯類工作（ACCS Apocrypha vol 15 / ACCS 缺中譯卷 24-25 等）** — 移到新 skill [ebook-translate](../ebook-translate/SKILL.md)。翻譯 pipeline、glossary、引擎選擇都在那裡。
-10. **Manual sources for canon law batch 2** — Vatican CIC 1983 / CCEO 1990 / CCC + Book of Concord + Pedalion + Methodist / 1689 LBC / BFM 各新教信條 — 留給 scripture-canon-portal skill 啟動時做。
+10. **Manual sources for canon law batch 2** — Vatican CIC 1983 / CCEO 1990 / CCC + Book of Concord + Pedalion + Methodist / 1689 LBC / BFM 各新教信條 — 留給 scripture-canon skill 啟動時做。
 
 ## See also
 
 - [`EBOOK_PIPELINE.md`](../../../EBOOK_PIPELINE.md) at repo root — original design doc
 - [`scripts/haiku_cleanup_guide.md`](../../../scripts/haiku_cleanup_guide.md) — Haiku text cleanup (historical)
 - [ebook-translate](../ebook-translate/SKILL.md) — 並列 skill，處理英文 ebook → 繁中翻譯（ACCS Apocrypha 等）。本 skill 處理上游 parse/OCR/standardize，translate skill 接下游英→中
-- [scripture-canon-portal](../scripture-canon-portal/SKILL.md) — 新 skill（2026-05-21），會大量依賴本 pipeline 的 ebooks data（IVP ACCS / Schaff / 教父原典 / 基督教典外文獻 / Schaff Creeds + History 等）
+- [scripture-canon](../scripture-canon/SKILL.md) — 新 skill（2026-05-21），會大量依賴本 pipeline 的 ebooks data（IVP ACCS / Schaff / 教父原典 / 基督教典外文獻 / Schaff Creeds + History 等）

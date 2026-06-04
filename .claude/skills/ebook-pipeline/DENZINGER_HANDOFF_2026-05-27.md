@@ -20,7 +20,7 @@
 | Reader Vue (DH badge / DH jump / chip) | ✅ | dev 截圖驗過 DH 101、DH 1520 |
 | /creeds 補 23 份中譯 | ✅ | 全部 placeholder 取代為實際中譯（即使 OCR 有質量問題）|
 
-**已知遺留問題（→ 用 [denzinger-fix skill](../denzinger-fix/SKILL.md) 修）**：
+**已知遺留問題（→ 用 [scripture-denzinger skill](../scripture-denzinger/SKILL.md) 修）**：
 
 2026-05-28 baseline audit (`scripts/_denzinger_audit.py`)：
 
@@ -39,7 +39,7 @@ DH range 修正待辦：
 - medieval-09 first lateran / medieval-10 second lateran — 手動翻書補
 - Vatican II 4 份用 DH 4001+ 等新版 Denzinger 編號猜的 → 跑驗證
 
-**接續修正請用 `/denzinger-fix` skill**（trigger：「修 Denzinger」「Denzinger 第 N 頁壞了」「Denzinger DH range 不對」等）。
+**接續修正請用 `/scripture-denzinger` skill**（trigger：「修 Denzinger」「Denzinger 第 N 頁壞了」「Denzinger DH range 不對」等）。
 
 ---
 

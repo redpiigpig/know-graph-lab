@@ -3,7 +3,7 @@
 Mirrors the reader/JS spec (test/multilang-sources.spec.ts) so the Python
 pipeline emits exactly what the (screenshot-verified) reader consumes:
 `sources` + `source_order`, with the primary source mirrored into the legacy
-source_text/source_lang. See .claude/skills/collected-works-multilang/.
+source_text/source_lang. See .claude/skills/ebook-collected-works/.
 """
 import json
 

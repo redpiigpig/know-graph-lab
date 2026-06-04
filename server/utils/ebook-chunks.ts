@@ -33,7 +33,7 @@ export interface ChunkData {
   // `sources` is lang-code → text; `source_order` the column order. The PRIMARY
   // source (source_order[0]) is mirrored into source_text/source_lang above so
   // the legacy two-column reader keeps working. Helpers + contract live in
-  // lib/multilang-sources.ts; see .claude/skills/collected-works-multilang/.
+  // lib/multilang-sources.ts; see .claude/skills/ebook-collected-works/.
   sources?: Record<string, string> | null;
   source_order?: string[] | null;
   // Bilingual-parallel books (Denzinger, future ACCS dual-language).

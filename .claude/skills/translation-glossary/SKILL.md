@@ -189,7 +189,7 @@ python scripts/export_glossary_from_db.py
 ## See also
 
 - [[ebook-translate]] — 翻譯 pipeline，本 skill 是其譯名前置確認步驟
-- [[scripture-canon-portal]] — `/scripture-canon` portal hub，本 skill 是其第 6 個子工具
+- [[scripture-canon]] — `/scripture-canon` portal hub，本 skill 是其第 6 個子工具
 - [pages/translation-glossary/index.vue](../../../pages/translation-glossary/index.vue) — UI
 - [scripts/seed_translation_glossary.py](../../../scripts/seed_translation_glossary.py) — master list + 批次填
 - [database/translation-glossary-schema.sql](../../../database/translation-glossary-schema.sql) — DDL

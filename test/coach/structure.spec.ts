@@ -58,15 +58,15 @@ describe("語言教練檔案結構完整性", () => {
 });
 
 describe("SKILL.md 準確性", () => {
-  const skillPath = ".claude/skills/language-coach/SKILL.md";
-  it("skill 存在且 frontmatter name=language-coach", () => {
+  const skillPath = ".claude/skills/coach-language/SKILL.md";
+  it("skill 存在且 frontmatter name=coach-language", () => {
     expect(has(skillPath)).toBe(true);
     const md = readFileSync(resolve(root, skillPath), "utf-8");
-    expect(md).toMatch(/^---[\s\S]*name:\s*language-coach/);
+    expect(md).toMatch(/^---[\s\S]*name:\s*coach-language/);
   });
 
   it("skill 提到的關鍵頁面/功能字眼存在", () => {
-    const md = readFileSync(resolve(root, ".claude/skills/language-coach/SKILL.md"), "utf-8");
+    const md = readFileSync(resolve(root, ".claude/skills/coach-language/SKILL.md"), "utf-8");
     for (const kw of ["今日計畫", "主題教程", "文法課", "情境角色", "問答", "OTP", "付費", "gemini-flash-latest"]) {
       expect(md, `SKILL 應提到「${kw}」`).toContain(kw);
     }

@@ -18,7 +18,7 @@ A "section" is a dict: {"heading": str, "text": str}. An aligned unit is
 the primary edition's heading); the translate step localizes it later.
 
 Pure functions — no network, DB, or LLM. See
-.claude/skills/collected-works-multilang/SKILL.md.
+.claude/skills/ebook-collected-works/SKILL.md.
 """
 from __future__ import annotations
 

@@ -10,7 +10,7 @@ import {
 } from "~/lib/multilang-sources";
 
 // Contract for the collected-works multi-language schema. See
-// .claude/skills/collected-works-multilang/SKILL.md.
+// .claude/skills/ebook-collected-works/SKILL.md.
 
 describe("normalizeSources", () => {
   it("returns explicit sources honouring source_order", () => {

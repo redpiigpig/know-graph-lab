@@ -7,7 +7,7 @@
 可選擇附上「訪綱.docx」作為人名／寺院名／專有名詞參考。
 
 輸出是 Gemini 的原始轉錄文字（繁體、有標點、分段），尚未做 Q&A 標籤整理
-與分節。Q&A 整理由 Claude 在對話中完成（見 .claude/skills/thesis-interview/）。
+與分節。Q&A 整理由 Claude 在對話中完成（見 .claude/skills/writing-thesis-interview/）。
 
 用法：
   python scripts/transcribe_interview_gemini.py AUDIO --out FILE

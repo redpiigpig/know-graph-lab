@@ -1,6 +1,6 @@
 """Ingest a 研究回顧 (literature review) → writing_projects + lit_review_{entries,sections}.
 
-Two stages (see .claude/skills/research-review/SKILL.md):
+Two stages (see .claude/skills/works-research-review/SKILL.md):
 
   --seed            parse the綜述 markdown → upsert a kind='paper' writing_project
                     + upsert every bibliography entry (metadata + abstract).

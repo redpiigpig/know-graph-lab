@@ -9,4 +9,4 @@ operative 文件。
 - `OVERNIGHT_2026-05-22.md`
 
 > 注意：`DENZINGER_HANDOFF_2026-05-27.md` **沒有**搬進這裡 — 它仍被
-> `denzinger-fix` skill 當作「詳細上架歷史」引用，留在 ebook-pipeline/ 根目錄。
+> `scripture-denzinger` skill 當作「詳細上架歷史」引用，留在 ebook-pipeline/ 根目錄。

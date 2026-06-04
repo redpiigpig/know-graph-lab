@@ -1,6 +1,6 @@
 """Ingest The Gnostic Society Library (gnosis.org) → gnostic_{documents,sections}.
 
-Pipeline (see .claude/skills/gnostic-library/SKILL.md):
+Pipeline (see .claude/skills/scripture-gnostic/SKILL.md):
   fetch category index → parse_category_index → (dedup) → fetch each doc →
   parse_document → translate each EN paragraph → assert_aligned → upsert.
 

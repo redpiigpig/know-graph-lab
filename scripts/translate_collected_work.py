@@ -12,7 +12,7 @@ alignment, JSONL assembly) stay testable with a stub translate_fn — no network
 LLM, or heavy deps.
 
 Pilot: public-domain 1912《Wandlungen》(de) + Hinkle 1916《Psychology of the
-Unconscious》(en). See .claude/skills/collected-works-multilang/.
+Unconscious》(en). See .claude/skills/ebook-collected-works/.
 """
 from __future__ import annotations
 

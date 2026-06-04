@@ -3,7 +3,7 @@
 Locks parse_chapter_number's normalization (DE/EN/CJK headings → same key) and
 align_editions' anchor-join vs order-align behavior, then checks the output
 feeds straight into assemble_multilang_chunks. See
-.claude/skills/collected-works-multilang/.
+.claude/skills/ebook-collected-works/.
 """
 import align_editions as al
 import multilang_chunks as mc
