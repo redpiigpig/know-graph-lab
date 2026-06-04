@@ -310,6 +310,12 @@ watch([current, endless], ([cur, on]) => {
   if (on && !cur && !loading.value && !topping.value) replenish();
 });
 
+// 進到新單字卡 → 自動念一次（翻卡＋選擇題都套用；瀏覽器不支援 TTS 則略過）
+// 只在卡片真的「換成另一張」時觸發（比對 id），翻卡顯示答案不會重念。
+watch(current, (cur, prev) => {
+  if (cur?.word && cur.id !== prev?.id && speech.ttsSupported.value) speak();
+});
+
 onMounted(() => {
   tracker.start(language.value, "reading", "vocab"); // 複習計入「讀」時間，從進頁開始算
   reload();
