@@ -27,6 +27,7 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
   - 首案＝**c1〈昭慧法師的戒律學思想與實踐〉**，`bajingfa` 現有：八敬法綜述 29（display 0-28）＋真實參考文獻 39（[lit_review_zhaohui_references.md](../../../scripts/data/)，display 100+，全中文）＋英文改寫補充 9（[lit_review_zhaohui_en_supplement.md](../../../scripts/data/)，display 200+，版權 unavailable）＝**77 筆**。
   - **英文期刊改寫修改建議書**：[scripts/data/c1_英文期刊改寫_修改建議.md](../../../scripts/data/)（投稿定位 emic→etic／文獻回顧改 problem-driven／八敬法比較律藏六點論證鏈／逐節意見／候選期刊／action checklist）。
   - **不動論文原文 c1.txt**。
+- ✅ **論文計畫頁改分頁（2026-06-04）** — [pages/works/[slug]/index.vue](../../../pages/works/) 對 `kind='paper'` 改成 tab：**研究回顧 / 修改建議 / 原文 / 書摘**（修掉「登入後空編輯器佔滿、其它都看不到」）。修改建議＝抓 `public/content/works/<paper_ref>-revision-memo.md` 用內建迷你 markdown renderer（無外部套件）渲染；原文＝內嵌 `public/content/papers/<paper_ref>.txt`＋連到 /papers reader。memo 須同步放 public（源檔在 scripts/data/）。
 - ✅ **DB schema** — [database/lit-review-schema.sql](../../../database/lit-review-schema.sql)（`lit_review_entries` + `lit_review_sections` 兩表 + RLS public read + seed `orig`/`zh` 版本）；[database/writing-projects-v3-kind.sql](../../../database/writing-projects-v3-kind.sql)（`writing_projects` 加 `kind`(book/paper) + `paper_ref`）
 - ✅ **/works 分區** — [pages/works/index.vue](../../../pages/works/index.vue) 拆「書籍寫作 / 論文寫作」兩區（依 `kind`）
 - ✅ **reader + API** — [pages/works/[slug]/index.vue](../../../pages/works/[slug]/index.vue) 論文計畫頁底「研究回顧」分頁（按主題列書目）＋ [pages/works/[slug]/review/[ref].vue](../../../pages/works/) 原文/中譯兩欄逐段 reader；[server/api/lit-review/*.get.ts](../../../server/api/lit-review/)（entries / entry）
