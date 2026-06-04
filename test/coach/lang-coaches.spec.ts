@@ -47,8 +47,11 @@ describe("教練設定 lang-coaches", () => {
     expect(grc.keyboard).toBe("greek"); // 打英文轉希臘字母的鍵盤
     // 日文＝假名鍵盤；希臘文＝希臘鍵盤
     expect(getCoach("ja")!.keyboard).toBe("kana");
-    // 拉丁文＝教會拉丁
-    expect(getCoach("la")!.accent).toContain("教會拉丁");
+    // 拉丁文＝教會拉丁（非古典），用拉丁字母不需轉寫鍵盤
+    const la = getCoach("la")!;
+    expect(la.accent).toContain("教會拉丁");
+    expect(la.systemPrompt).toContain("不是古典");
+    expect(la.keyboard).toBeUndefined();
   });
 
   it("en/ja 啟用；古語言 voiceless", () => {

@@ -130,10 +130,22 @@ const THEME_POOLS: Record<string, { presets: string[]; auto: string[] }> = {
       "基督教禮儀與敬拜詞彙",
     ],
   },
+  // 教會拉丁文（Ecclesiastical，入門）：武加大／拉丁教父 → 經院神哲學 → 中世紀各學科
+  la: {
+    presets: ["武加大高頻字", "福音書常用字", "拉丁文代名詞與介系詞", "信經與禮儀關鍵詞", "拉丁教父常用字", "經院神學術語"],
+    auto: [
+      "武加大（Vulgata）高頻字", "武加大高頻動詞", "拉丁文代名詞・連接詞・介系詞",
+      "福音書核心字彙", "詩篇（武加大）常用字", "使徒信經與尼西亞信經關鍵詞",
+      "拉丁教父常用字（奧古斯丁／耶柔米）", "禮儀與彌撒常用字", "大公會議與教令術語",
+      "經院神學術語（ens／esse／essentia／substantia…）", "阿奎那《神學大全》常見詞",
+      "經院哲學邏輯術語（quaestio／ratio／accidens…）", "教會法（canon law）常用字",
+      "中世紀大學與七藝常用字", "聖徒傳與編年史常用字",
+    ],
+  },
 };
 const pool = computed(() => THEME_POOLS[language.value] || THEME_POOLS.en);
 const PRESETS = computed(() => pool.value.presets);
-const TTS_LANG: Record<string, string> = { en: "en-US", ja: "ja-JP", grc: "el-GR" };
+const TTS_LANG: Record<string, string> = { en: "en-US", ja: "ja-JP", grc: "el-GR", la: "it-IT" };
 
 const route = useRoute();
 const language = computed(() => route.params.lang as string);
