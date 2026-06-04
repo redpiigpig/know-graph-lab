@@ -31,6 +31,27 @@ THEMES: list[dict] = [
 THEME_LABELS = {t["label"] for t in THEMES}
 
 
+# ── Doc-type sections: for a paper's *actual* 參考文獻 (works cited) ───────────
+# The 4 THEMES above group a generated 文獻綜述 by subject matter. A paper's own
+# bibliography is instead organised by document type (佛典 / 專書 / 期刊 …), the
+# way it prints under 參考文獻. parse_review_report() recognises both header sets,
+# so one project can carry a thematic survey AND the paper's real works-cited
+# list side by side (each entry keeps the section header it sits under as theme).
+DOC_TYPE_THEMES: list[dict] = [
+    {"key": "canon",      "label": "佛典與檔案",       "order": 110},
+    {"key": "books",      "label": "專書著作",         "order": 120},
+    {"key": "journals",   "label": "期刊文章",         "order": 130},
+    {"key": "chapters",   "label": "研討會與專書論文", "order": 140},
+    {"key": "theses",     "label": "學位論文",         "order": 150},
+    {"key": "press",      "label": "報刊與雜誌",       "order": 160},
+    {"key": "web",        "label": "網路文章",         "order": 170},
+]
+DOC_TYPE_LABELS = {t["label"] for t in DOC_TYPE_THEMES}
+
+# Any header recognised as a section divider (theme assignment).
+SECTION_LABELS = THEME_LABELS | DOC_TYPE_LABELS
+
+
 # ── Language label (語言：英文) → ISO code ───────────────────────────────────
 _LANG_MAP = {
     "英文": "en", "中文": "zh", "德文": "de", "法文": "fr", "日文": "ja",
@@ -220,7 +241,7 @@ def parse_review_report(md: str) -> dict:
         # a `#`-prefixed (not `##`) header that names one of our themes
         if s.startswith("#") and not s.startswith("##"):
             header = s.lstrip("#").strip()
-            if header in THEME_LABELS:
+            if header in SECTION_LABELS:
                 flush()
                 current_theme = header
                 continue

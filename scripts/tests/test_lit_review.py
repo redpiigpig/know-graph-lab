@@ -85,6 +85,16 @@ def test_themes_cover_the_four_report_sections():
         assert t["key"] and isinstance(t["order"], int)
 
 
+def test_doc_type_themes_cover_the_seven_bibliography_sections():
+    # A paper's real 參考文獻 is grouped by document type, not by subject theme.
+    labels = {t["label"] for t in lr.DOC_TYPE_THEMES}
+    assert {"佛典與檔案", "專書著作", "期刊文章", "研討會與專書論文",
+            "學位論文", "報刊與雜誌", "網路文章"} <= labels
+    # the two header families are disjoint and both feed SECTION_LABELS
+    assert lr.THEME_LABELS.isdisjoint(lr.DOC_TYPE_LABELS)
+    assert lr.SECTION_LABELS == lr.THEME_LABELS | lr.DOC_TYPE_LABELS
+
+
 # ── one entry block ───────────────────────────────────────────────────────────
 ENTRY_ARTICLE = """【Anālayo】（2015）〈The Cullavagga on Bhikkhunī Ordination〉，《Journal of Buddhist Ethics》，第 22 卷，頁 401–448。
 語言：英文
@@ -208,6 +218,47 @@ def test_parse_review_report_ref_keys_are_unique():
     r = lr.parse_review_report(MINI_REPORT)
     keys = [e["ref_key"] for e in r["entries"]]
     assert len(keys) == len(set(keys))
+
+
+# ── doc-type (參考文獻 / works-cited) report ──────────────────────────────────
+DOCTYPE_REPORT = """#某論文參考文獻
+
+## 執行摘要
+本份為論文實際引用之書目，按文獻類型分組。
+
+#專書著作
+
+【釋昭慧】（1999）《律學今詮》，法界，台北。
+語言：中文
+所屬面向：改革實踐型
+立場：主張廢除八敬法
+摘要：昭慧法師戒律學思想的代表作。
+
+#網路文章
+
+【林建德】（2019）〈女眾剃度男眾之可能？！〉，林建德網誌（2019.11.17）。
+語言：中文
+摘要：探討女眾為男眾剃度授戒的可能性。
+> **全文**：[mind-breath.blogspot.com](https://mind-breath.blogspot.com/2019/11/blog-post_15.html)
+"""
+
+
+def test_parse_review_report_assigns_doc_type_section_as_theme():
+    r = lr.parse_review_report(DOCTYPE_REPORT)
+    by_title = {e["title"]: e for e in r["entries"]}
+    assert by_title["律學今詮"]["theme"] == "專書著作"
+    assert by_title["女眾剃度男眾之可能？！"]["theme"] == "網路文章"
+
+
+def test_parse_review_report_doc_type_book_and_web_fields():
+    r = lr.parse_review_report(DOCTYPE_REPORT)
+    by_title = {e["title"]: e for e in r["entries"]}
+    book = by_title["律學今詮"]
+    assert book["authors"] == "釋昭慧" and book["year"] == 1999
+    assert book["venue"].startswith("法界")
+    assert book["language"] == "zh" and book["stance"] == "主張廢除八敬法"
+    web = by_title["女眾剃度男眾之可能？！"]
+    assert web["fulltext_url"].endswith("blog-post_15.html")
 
 
 # ── PDF-text → paragraphs ─────────────────────────────────────────────────────

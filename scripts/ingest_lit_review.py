@@ -103,27 +103,34 @@ def rest_patch(table: str, params: str, body: dict) -> None:
 
 # ── Seed ──────────────────────────────────────────────────────────────────────
 def seed(report_path: str, project_slug: str, paper_ref: str | None,
-         title: str, subtitle: str | None, description: str | None) -> None:
+         title: str, subtitle: str | None, description: str | None,
+         entries_only: bool = False, display_offset: int = 0) -> None:
     md = Path(report_path).read_text(encoding="utf-8")
     parsed = lr.parse_review_report(md)
     entries = parsed["entries"]
     print(f"parsed {len(entries)} entries, {len(parsed['gaps'])} gaps", flush=True)
 
-    # 1) writing_projects (kind='paper')
-    rest_upsert("writing_projects", [{
-        "slug": project_slug,
-        "title": title,
-        "subtitle": subtitle,
-        "description": description or parsed["summary"],
-        "emoji": "📄",
-        "color": "teal",
-        "status": "改寫為期刊論文中",
-        "kind": "paper",
-        "paper_ref": paper_ref,
-    }], on_conflict="slug")
-    print(f"✓ project '{project_slug}' (kind=paper, paper_ref={paper_ref})", flush=True)
+    # 1) writing_projects (kind='paper') — skipped with --entries-only so adding a
+    # second bibliography (e.g. the paper's real 參考文獻 alongside a thematic
+    # survey) never clobbers the existing project title/subtitle/description.
+    if entries_only:
+        print(f"⏭ --entries-only: leaving project '{project_slug}' meta untouched", flush=True)
+    else:
+        rest_upsert("writing_projects", [{
+            "slug": project_slug,
+            "title": title,
+            "subtitle": subtitle,
+            "description": description or parsed["summary"],
+            "emoji": "📄",
+            "color": "teal",
+            "status": "改寫為期刊論文中",
+            "kind": "paper",
+            "paper_ref": paper_ref,
+        }], on_conflict="slug")
+        print(f"✓ project '{project_slug}' (kind=paper, paper_ref={paper_ref})", flush=True)
 
-    # 2) lit_review_entries
+    # 2) lit_review_entries  (display_order offset keeps a second batch sorted
+    # AFTER an existing one — survey first, then the works-cited list)
     rows = []
     for i, e in enumerate(entries):
         status = "pending"
@@ -148,7 +155,7 @@ def seed(report_path: str, project_slug: str, paper_ref: str | None,
             "abstract_zh": e["abstract"] or None,
             "fulltext_url": url,
             "fulltext_status": status,
-            "display_order": i,
+            "display_order": display_offset + i,
         })
     rest_upsert("lit_review_entries", rows, on_conflict="project_slug,ref_key")
     print(f"✓ upserted {len(rows)} entries "
@@ -299,12 +306,19 @@ def main():
     ap.add_argument("--limit-entries", type=int, default=None)
     ap.add_argument("--pace", type=float, default=0.0)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--entries-only", action="store_true",
+                    help="seed only the bibliography entries; leave the writing_project meta untouched")
+    ap.add_argument("--display-offset", type=int, default=0,
+                    help="add this to every entry's display_order (sort a 2nd batch after an existing one)")
     args = ap.parse_args()
 
     if args.seed:
-        if not args.report or not args.title:
-            sys.exit("--seed needs --report and --title")
-        seed(args.report, args.project, args.paper_ref, args.title, args.subtitle, args.description)
+        if not args.report:
+            sys.exit("--seed needs --report")
+        if not args.entries_only and not args.title:
+            sys.exit("--seed needs --title (unless --entries-only)")
+        seed(args.report, args.project, args.paper_ref, args.title, args.subtitle,
+             args.description, entries_only=args.entries_only, display_offset=args.display_offset)
     if args.fetch_fulltext:
         fetch_fulltext(args.project, args.engine, args.resume, args.only,
                        args.limit_paras, args.limit_entries, args.pace, args.dry_run)

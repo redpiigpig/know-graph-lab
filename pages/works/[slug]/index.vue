@@ -129,6 +129,11 @@
 
         <div v-else class="space-y-8">
           <section v-for="grp in litGroups" :key="grp.theme">
+            <!-- 分界：主題綜述 → 論文實際參考文獻（依文獻類型） -->
+            <div v-if="grp.firstBiblio" class="border-t border-dashed border-gray-200 pt-6 mb-4">
+              <h3 class="text-sm font-semibold text-gray-700">論文參考文獻</h3>
+              <p class="text-xs text-gray-400 mt-0.5">本文實際引用之書目，依文獻類型分類（以上為八敬法主題綜述）</p>
+            </div>
             <h3 v-if="grp.theme" class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">{{ grp.theme }}</h3>
             <div class="space-y-3">
               <div v-for="e in grp.items" :key="e.id"
@@ -274,15 +279,26 @@ async function loadLitReview() {
 }
 watch(() => project.value?.kind, loadLitReview)
 
-// Group entries by theme, preserving server order (display_order encodes theme grouping)
+// A paper's real 參考文獻 is grouped by document type (mirrors DOC_TYPE_THEMES in
+// scripts/lit_review.py); everything else is the thematic 文獻綜述 survey.
+const DOC_TYPE_LABELS = new Set([
+  '佛典與檔案', '專書著作', '期刊文章', '研討會與專書論文',
+  '學位論文', '報刊與雜誌', '網路文章',
+])
+
+// Group entries by theme, preserving server order (display_order encodes theme grouping).
+// `firstBiblio` marks the first works-cited group so the reader can divide the
+// thematic survey from the paper's actual references with a single heading.
 const litGroups = computed(() => {
-  const groups: { theme: string; items: LitEntry[] }[] = []
+  const groups: { theme: string; items: LitEntry[]; firstBiblio?: boolean }[] = []
   for (const e of litEntries.value) {
     const theme = e.theme ?? ''
     let g = groups.find(x => x.theme === theme)
     if (!g) { g = { theme, items: [] }; groups.push(g) }
     g.items.push(e)
   }
+  const firstBiblio = groups.find(g => DOC_TYPE_LABELS.has(g.theme))
+  if (firstBiblio) firstBiblio.firstBiblio = true
   return groups
 })
 

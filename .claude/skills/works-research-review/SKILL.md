@@ -22,7 +22,8 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
 
 ## 🟢 狀態
 
-- ✅ **純函式核心（test-first，26 例綠）** — [scripts/lit_review.py](../../../scripts/lit_review.py) + [scripts/tests/test_lit_review.py](../../../scripts/tests/test_lit_review.py)：ref_key / 語言偵測 / 主題 taxonomy / 單筆 block 解析 / 整份綜述解析 / PDF-text 切段（去頁碼/running header/接合斷字）/ HTML 切段 / 對齊 gate
+- ✅ **純函式核心（test-first，32 例綠）** — [scripts/lit_review.py](../../../scripts/lit_review.py) + [scripts/tests/test_lit_review.py](../../../scripts/tests/test_lit_review.py)：ref_key / 語言偵測 / 主題 taxonomy / 單筆 block 解析 / 整份綜述解析 / PDF-text 切段（去頁碼/running header/接合斷字）/ HTML 切段 / 對齊 gate
+- ✅ **論文「真實參考文獻」並存（2026-06-04）** — 同一 paper 計畫可同時掛「主題綜述」（4 主題）＋「論文實際引用書目」（依文獻類型 7 類）。parser 認得兩套標頭（`THEMES` 主題 + `DOC_TYPE_THEMES` 佛典與檔案/專書著作/期刊文章/研討會與專書論文/學位論文/報刊與雜誌/網路文章，並 `SECTION_LABELS = THEME_LABELS | DOC_TYPE_LABELS`）；ingest 加 `--entries-only`（不覆蓋既有專案 meta）＋`--display-offset N`（書目排在綜述之後）；reader（[pages/works/[slug]/index.vue](../../../pages/works/)）在第一個書目類型組前插入「論文參考文獻」分界標題。首案＝**c1〈昭慧法師的戒律學思想與實踐〉的 39 筆參考文獻**（[scripts/data/lit_review_zhaohui_references.md](../../../scripts/data/)），灌進 `bajingfa`（八敬法綜述 29 + 參考文獻 39 = 68 筆）。全為中文 → 書目層即可，無逐段中譯。**不動論文原文 c1.txt**。
 - ✅ **DB schema** — [database/lit-review-schema.sql](../../../database/lit-review-schema.sql)（`lit_review_entries` + `lit_review_sections` 兩表 + RLS public read + seed `orig`/`zh` 版本）；[database/writing-projects-v3-kind.sql](../../../database/writing-projects-v3-kind.sql)（`writing_projects` 加 `kind`(book/paper) + `paper_ref`）
 - ✅ **/works 分區** — [pages/works/index.vue](../../../pages/works/index.vue) 拆「書籍寫作 / 論文寫作」兩區（依 `kind`）
 - ✅ **reader + API** — [pages/works/[slug]/index.vue](../../../pages/works/[slug]/index.vue) 論文計畫頁底「研究回顧」分頁（按主題列書目）＋ [pages/works/[slug]/review/[ref].vue](../../../pages/works/) 原文/中譯兩欄逐段 reader；[server/api/lit-review/*.get.ts](../../../server/api/lit-review/)（entries / entry）
@@ -129,6 +130,12 @@ lit_review_sections (            -- 只有抓了全文的外文文獻才有
 3. WebSearch 補實 report 內遮蔽的全文連結（更新 report 或直接 patch `fulltext_url`）。
 4. 過夜 `python -X utf8 scripts/ingest_lit_review.py --fetch-fulltext --project <slug> --resume --engine gemini`：抓開放取用全文 → 切段 → 逐段翻 → 對齊 → upsert。
 5. 跑 reader 確認研究回顧分頁 + 兩欄逐段；commit + push（[[feedback-auto-push]]）；更新本 SKILL.md 狀態（[[feedback-skill-md-keep-current]]）。
+
+## SOP — 把某論文的「真實參考文獻」補成額外參考頁面（不動論文原文）
+1. 從論文（`public/content/papers/<id>.txt` 的「參考文獻」段）原樣轉錄成 `scripts/data/lit_review_<topic>_references.md`，**用文獻類型當 `#` 標頭**（七大類，須與 `DOC_TYPE_THEMES` 的 label 完全一致）；每筆轉成 `【作者】（年）〈題〉，《刊/書》`＋`語言：`／（可選）`所屬面向：`／`立場：`／`摘要：`／網路文章附 `> **全文**：[label](url)`。年代寫成乾淨 `（YYYY）`（避免 `（1965.03.22）` 這類抓不到年）；同題上/下把（上）（下）放進 `〈…〉` 內以免 ref_key 撞鍵。
+2. dry-parse 檢查：`python -X utf8 -c "..."` 確認 entries 數、無重複 ref_key、每筆有 theme/title。
+3. `python -X utf8 scripts/ingest_lit_review.py --seed --entries-only --display-offset 100 --report scripts/data/lit_review_<topic>_references.md --project <slug>`（`--entries-only` 不覆蓋既有專案；`--display-offset` 排在綜述之後；中文文獻自動標 `unavailable`、不抓全文）。
+4. 不要碰論文原文檔；reader 自動在第一個書目類型組前顯示「論文參考文獻」分界。
 
 ## SOP — 補單筆 / 重翻
 直接對該 `entry_id` 重抓＋重翻＋upsert（UNIQUE(entry_id,version_code,order_index) 覆蓋）。
