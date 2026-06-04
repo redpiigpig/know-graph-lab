@@ -36,6 +36,27 @@ export async function requireAdmin(event: Parameters<typeof defineEventHandler>[
   return user;
 }
 
+// Soft admin check — never throws. Returns true only for the allowed account.
+// Use when an endpoint should degrade gracefully for unauthed callers (e.g.
+// strip private content) instead of returning 401.
+export async function getIsAdmin(event: Parameters<typeof defineEventHandler>[0]) {
+  const config = useRuntimeConfig();
+  const token = getHeader(event, "authorization")?.replace("Bearer ", "");
+  if (!token) return false;
+  try {
+    const userClient = createClient(config.public.supabaseUrl, config.public.supabaseKey, {
+      global: { headers: { Authorization: `Bearer ${token}` } },
+    });
+    const {
+      data: { user },
+    } = await userClient.auth.getUser();
+    const allowedEmail = config.public.allowedEmail as string | undefined;
+    return !!user && (!allowedEmail || user.email === allowedEmail);
+  } catch {
+    return false;
+  }
+}
+
 export function getAdminClient() {
   const config = useRuntimeConfig();
   return createClient(config.public.supabaseUrl, config.supabaseServiceRoleKey, {

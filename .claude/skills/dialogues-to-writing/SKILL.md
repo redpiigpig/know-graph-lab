@@ -25,6 +25,7 @@ description: 把 /ai-dialogues 裡某一條「跨多日延續的 AI 對話串」
 | `ai_dialogue_categories` | 分類 | id, name, color（blue/violet/emerald/amber/rose/slate） |
 | `ai_dialogue_entry_categories` | 標籤 junction | **只有 dialogue_id + category_id（沒有 source 欄！）**，on_conflict=`dialogue_id,category_id` |
 | `writing_projects` | /works 卡片 | slug(unique), title, subtitle, description, emoji, color, status, sort_order, **content_json**(Tiptap HTML 字串) |
+| `dialogue_days` | **每天一頁 reader**（成品呈現） | project_slug, day_date, weekday, day_title, **html**, n_turns, sort_order；unique(project_slug,day_date) |
 
 `/ai-dialogues` 左側可依分類篩；`/works/[slug]` 只有登入者可見的 `content_json` 富文本筆記區（**無對話 reader**，所以成品就放 content_json）。REST 直連用 `SUPABASE_SERVICE_ROLE_KEY`。
 
@@ -37,9 +38,18 @@ description: 把 /ai-dialogues 裡某一條「跨多日延續的 AI 對話串」
 4. dialogue_tag_category.py  建分類 + 把整串 dialogue_id 標上去（idempotent upsert）
 5. dialogue_polish.py        NVIDIA 4-key 輪流＋間隔，把 AI 回覆潤飾成流暢對話錄 → polished.jsonl（resumable）
 6. dialogue_segment_topics.py 每天切 1–3 個主題（NVIDIA，回 JSON [{title,start,end}]）→ day_topics.json
-7. dialogue_assemble.py      組裝：依月份開 writing_projects 卡片，每天 <h2>日期（星期X）</h2>→<h3>主題：…</h3>→<p><strong>阿周那：</strong>…</p>。主卡=索引
+7. dialogue_assemble.py      組裝草稿 HTML：每天 <h2>日期（星期X）</h2>→<h3>主題：…</h3>→<p><strong>阿周那：</strong>…</p>（早期版本依月份開 writing_projects 月卡，已淘汰）
 8. dialogue_haiku_finish.py  救急收尾：NVIDIA+Gemini 都 429 時，用 Haiku 跑剩餘潤飾+主題+assemble
+9. dialogue_build_days.py     **把成品拆成「每天一頁」進 dialogue_days**（讀 DB 既有 content_json 切 <h2> 邊界，保留人工修改）→ --drop-months 刪月卡＋清主卡
 ```
+
+## 呈現：每天一頁 reader（取代月份卡片，2026-06-04）
+舊版把成品塞進 4 張月份 writing_projects 卡片（content_json），首頁一條 thread 變 5 張卡、單頁又是 ~300KB 大 blob。改成 **一條 thread = 一張主卡，內容拆成每天一筆** `dialogue_days`：
+- **主卡頁** `/works/<slug>`：generic `pages/works/[slug]/index.vue` 偵測有 `dialogue_days` 就渲染「每日對話」區（依月份分組、每天一張小卡 → 連 `/works/<slug>/day/<date>`）。
+- **每日 reader** `pages/works/[slug]/day/[date].vue`：單日 html + 前一天/後一天翻頁。
+- **API**：`GET /api/works/dialogue-days?slug=`（清單 metadata）、`GET /api/works/dialogue-days/<date>?slug=`（單日 html＋鄰日）。
+- **私密**：對話是私人夢境／榮格內容 → reader 走 `getIsAdmin`（server/utils/auth-helper.ts），未登入只看到「🔒 登入後可逐日查閱」，不外洩日期清單與內文。要改公開就拿掉 [date] 端點的 401＋清單端點直接回 days。
+- 換新 thread：`dialogue_build_days.py` 改 MAIN_SLUG / MONTH_SLUGS（或直接餵 polished 來源），pages/API 已 generic 無需改。
 
 ### 分類靠 agent fan-out（步驟 2→3 之間）
 逐則讀 2000+ 則太多，**切日期區段、開多個 general-purpose subagent 平行讀**，每個 agent 讀幾天的 `<date>.json`、依上面「對話框語氣」判準回 `{id,date,seq,topic}`，寫到 `out_NN.json`。兩段式效果好：
@@ -66,5 +76,5 @@ description: 把 /ai-dialogues 裡某一條「跨多日延續的 AI 對話串」
 - 多語全集對照 → [[ebook-collected-works]]；訪談逐字稿 → [[writing-thesis-interview]]（對話錄格式可參考其 Q&A 排版）。
 
 ## See also
-- [[project_krishna_dialogues]] — 首案：與克里須那對話（671 則、4 張月份卡片）
+- [[project_krishna_dialogues]] — 首案：與克里須那對話（671 則、一張主卡＋80 天每日 reader）
 - [[feedback_engine_nvidia_no_haiku]] — Gemini→NVIDIA→Haiku 統一引擎政策＋多 key 節流

@@ -69,8 +69,40 @@
         </div>
       </div>
 
-      <!-- 書摘與構思 — 登入者限定 -->
-      <div v-if="user" class="max-w-5xl mx-auto px-6 py-8">
+      <!-- 每日對話 — 一條對話串拆成每天一頁（私人，登入者限定） -->
+      <div v-if="dialogueDays.length" class="max-w-5xl mx-auto px-6 py-8">
+        <div class="mb-4">
+          <h2 class="text-base font-semibold text-gray-900">每日對話</h2>
+          <p class="text-xs text-gray-500 mt-0.5">
+            共 {{ dialogueDays.length }} 天 · {{ totalTurns }} 則 · 點入查閱每一天的對話內容
+          </p>
+        </div>
+        <div v-for="grp in dayGroups" :key="grp.month" class="mb-6">
+          <h3 class="text-xs font-semibold text-gray-400 mb-2">{{ grp.label }}</h3>
+          <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+            <NuxtLink v-for="d in grp.items" :key="d.day_date"
+              :to="`/works/${slug}/day/${d.day_date}`"
+              class="no-underline flex items-center gap-3 px-4 py-3 rounded-xl bg-white border border-gray-100 hover:border-violet-300 hover:shadow-sm transition">
+              <div class="text-center flex-shrink-0 w-10">
+                <div class="text-lg font-bold text-violet-600 leading-none">{{ dayNum(d.day_date) }}</div>
+                <div class="text-[10px] text-gray-400 mt-0.5">{{ d.weekday?.replace('星期', '週') }}</div>
+              </div>
+              <div class="min-w-0 flex-1">
+                <div class="text-xs text-gray-700 truncate">{{ d.day_title }}</div>
+                <div class="text-[11px] text-gray-400">{{ d.n_turns }} 則對話</div>
+              </div>
+            </NuxtLink>
+          </div>
+        </div>
+      </div>
+
+      <div v-else-if="hasDialogueDays && !user" class="max-w-5xl mx-auto px-6 py-24 text-center text-gray-400 text-sm">
+        <div class="text-3xl mb-3">🔒</div>
+        此為私人對話，登入後可逐日查閱。
+      </div>
+
+      <!-- 書摘與構思 — 登入者限定（書籍計畫；論文計畫改放分頁內） -->
+      <div v-if="user && !dialogueDays.length && project?.kind !== 'paper'" class="max-w-5xl mx-auto px-6 py-8">
         <div class="mb-3 flex items-center justify-between">
           <div>
             <h2 class="text-base font-semibold text-gray-900">書摘與構思</h2>
@@ -108,61 +140,124 @@
         </div>
       </div>
 
-      <div v-else-if="project?.kind !== 'paper'" class="max-w-5xl mx-auto px-6 py-24 text-center text-gray-400 text-sm">
+      <div v-else-if="project?.kind !== 'paper' && !hasDialogueDays" class="max-w-5xl mx-auto px-6 py-24 text-center text-gray-400 text-sm">
         登入後可看到「書摘與構思」筆記分頁
       </div>
 
-      <!-- 研究回顧（文獻綜述） — 論文計畫頁底，公開可見 -->
-      <div v-if="project?.kind === 'paper'" class="max-w-5xl mx-auto px-6 py-8 border-t border-gray-100">
-        <div class="mb-4">
-          <h2 class="text-base font-semibold text-gray-900">研究回顧</h2>
-          <p class="text-xs text-gray-500 mt-0.5">
-            文獻綜述 · 共 {{ litEntries.length }} 筆
-            <span v-if="litEntries.length"> · 開放取用外文文獻提供 <span class="text-teal-600">原文／逐段中譯</span> 兩欄對照</span>
-          </p>
+      <!-- 論文計畫：分頁（研究回顧 / 修改建議 / 原文 / 書摘與構思） -->
+      <template v-if="project?.kind === 'paper'">
+        <!-- tab 列 -->
+        <div class="max-w-5xl mx-auto px-6 border-t border-gray-100">
+          <div class="flex items-center gap-1 overflow-x-auto">
+            <button v-for="t in paperTabs" :key="t.key" @click="activeTab = t.key"
+              class="px-4 py-3 text-sm font-medium border-b-2 -mb-px whitespace-nowrap transition"
+              :class="activeTab === t.key ? 'border-teal-500 text-teal-700' : 'border-transparent text-gray-500 hover:text-gray-800'">
+              {{ t.label }}<span v-if="t.badge" class="ml-1.5 text-xs" :class="activeTab === t.key ? 'text-teal-500' : 'text-gray-400'">{{ t.badge }}</span>
+            </button>
+          </div>
         </div>
 
-        <div v-if="litLoading" class="text-gray-400 text-sm py-8 text-center">載入中⋯</div>
-        <div v-else-if="litEntries.length === 0" class="text-gray-400 text-sm py-8 text-center">
-          尚無文獻綜述。
-        </div>
-
-        <div v-else class="space-y-8">
-          <section v-for="grp in litGroups" :key="grp.theme">
-            <!-- 分界：主題綜述 → 論文實際參考文獻（依文獻類型） -->
-            <div v-if="grp.firstBiblio" class="border-t border-dashed border-gray-200 pt-6 mb-4">
-              <h3 class="text-sm font-semibold text-gray-700">論文參考文獻</h3>
-              <p class="text-xs text-gray-400 mt-0.5">本文實際引用之書目，依文獻類型分類（以上為八敬法主題綜述）</p>
+        <div class="max-w-5xl mx-auto px-6 py-8">
+          <!-- ── 研究回顧 ── -->
+          <div v-show="activeTab === 'review'">
+            <div class="mb-4">
+              <h2 class="text-base font-semibold text-gray-900">研究回顧</h2>
+              <p class="text-xs text-gray-500 mt-0.5">
+                文獻綜述 · 共 {{ litEntries.length }} 筆
+                <span v-if="litEntries.length"> · 開放取用外文文獻提供 <span class="text-teal-600">原文／逐段中譯</span> 兩欄對照</span>
+              </p>
             </div>
-            <h3 v-if="grp.theme" class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">{{ grp.theme }}</h3>
-            <div class="space-y-3">
-              <div v-for="e in grp.items" :key="e.id"
-                class="bg-white rounded-2xl border border-gray-100 p-5 transition-all"
-                :class="e.has_fulltext ? 'cursor-pointer hover:border-teal-200 hover:shadow-sm' : ''"
-                @click="() => e.has_fulltext && navigateTo(`/works/${slug}/review/${e.ref_key}`)">
-                <div class="flex flex-wrap items-center gap-1.5 mb-2">
-                  <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">{{ langLabel(e.language) }}</span>
-                  <span v-if="e.dimension" class="text-xs font-medium px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-600">{{ e.dimension }}</span>
-                  <span v-if="e.stance" class="text-xs font-medium px-2 py-0.5 rounded-full bg-rose-50 text-rose-600">立場：{{ e.stance }}</span>
-                  <span v-if="e.has_fulltext" class="text-xs font-medium px-2 py-0.5 rounded-full bg-teal-50 text-teal-700">原文／中譯對照</span>
+            <div v-if="litLoading" class="text-gray-400 text-sm py-8 text-center">載入中⋯</div>
+            <div v-else-if="litEntries.length === 0" class="text-gray-400 text-sm py-8 text-center">尚無文獻綜述。</div>
+            <div v-else class="space-y-8">
+              <section v-for="grp in litGroups" :key="grp.theme">
+                <div v-if="grp.firstBiblio" class="border-t border-dashed border-gray-200 pt-6 mb-4">
+                  <h3 class="text-sm font-semibold text-gray-700">論文參考文獻</h3>
+                  <p class="text-xs text-gray-400 mt-0.5">本文實際引用之書目，依文獻類型分類（以上為八敬法主題綜述）</p>
                 </div>
-                <h4 class="text-sm font-semibold text-gray-900 leading-snug mb-1">
-                  {{ e.authors }}<span v-if="e.year"> （{{ e.year }}）</span>　{{ e.title }}
-                </h4>
-                <p v-if="e.venue" class="text-xs text-gray-500 mb-2">{{ e.venue }}</p>
-                <p v-if="e.abstract_zh" class="text-sm text-gray-700 leading-relaxed">{{ e.abstract_zh }}</p>
-                <div class="mt-2 flex items-center gap-3 text-xs">
-                  <NuxtLink v-if="e.has_fulltext" :to="`/works/${slug}/review/${e.ref_key}`" @click.stop
-                    class="text-teal-700 hover:underline font-medium">閱讀全文（原文／中譯）→</NuxtLink>
-                  <a v-if="e.fulltext_url" :href="e.fulltext_url" target="_blank" rel="noopener" @click.stop
-                    class="text-blue-600 hover:underline">原始連結 ↗</a>
-                  <span v-if="!e.has_fulltext && !e.fulltext_url" class="text-gray-300 italic">無線上全文</span>
+                <h3 v-if="grp.theme" class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">{{ grp.theme }}</h3>
+                <div class="space-y-3">
+                  <div v-for="e in grp.items" :key="e.id"
+                    class="bg-white rounded-2xl border border-gray-100 p-5 transition-all"
+                    :class="e.has_fulltext ? 'cursor-pointer hover:border-teal-200 hover:shadow-sm' : ''"
+                    @click="() => e.has_fulltext && navigateTo(`/works/${slug}/review/${e.ref_key}`)">
+                    <div class="flex flex-wrap items-center gap-1.5 mb-2">
+                      <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">{{ langLabel(e.language) }}</span>
+                      <span v-if="e.dimension" class="text-xs font-medium px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-600">{{ e.dimension }}</span>
+                      <span v-if="e.stance" class="text-xs font-medium px-2 py-0.5 rounded-full bg-rose-50 text-rose-600">立場：{{ e.stance }}</span>
+                      <span v-if="e.has_fulltext" class="text-xs font-medium px-2 py-0.5 rounded-full bg-teal-50 text-teal-700">原文／中譯對照</span>
+                    </div>
+                    <h4 class="text-sm font-semibold text-gray-900 leading-snug mb-1">
+                      {{ e.authors }}<span v-if="e.year"> （{{ e.year }}）</span>　{{ e.title }}
+                    </h4>
+                    <p v-if="e.venue" class="text-xs text-gray-500 mb-2">{{ e.venue }}</p>
+                    <p v-if="e.abstract_zh" class="text-sm text-gray-700 leading-relaxed">{{ e.abstract_zh }}</p>
+                    <div class="mt-2 flex items-center gap-3 text-xs">
+                      <NuxtLink v-if="e.has_fulltext" :to="`/works/${slug}/review/${e.ref_key}`" @click.stop
+                        class="text-teal-700 hover:underline font-medium">閱讀全文（原文／中譯）→</NuxtLink>
+                      <a v-if="e.fulltext_url" :href="e.fulltext_url" target="_blank" rel="noopener" @click.stop
+                        class="text-blue-600 hover:underline">原始連結 ↗</a>
+                      <span v-if="!e.has_fulltext && !e.fulltext_url" class="text-gray-300 italic">無線上全文</span>
+                    </div>
+                  </div>
                 </div>
+              </section>
+            </div>
+          </div>
+
+          <!-- ── 修改建議 ── -->
+          <div v-show="activeTab === 'memo'">
+            <div class="mb-4">
+              <h2 class="text-base font-semibold text-gray-900">修改建議</h2>
+              <p class="text-xs text-gray-500 mt-0.5">改寫為英文期刊論文的學術修改建議書（顧問意見，未更動論文原文）</p>
+            </div>
+            <div v-if="memoLoading" class="text-gray-400 text-sm py-8 text-center">載入中⋯</div>
+            <div v-else-if="memoHtml" class="doc-prose bg-white rounded-2xl border border-gray-100 px-6 py-6 sm:px-10" v-html="memoHtml"></div>
+            <div v-else class="text-gray-400 text-sm py-8 text-center">尚無修改建議。</div>
+          </div>
+
+          <!-- ── 原文 ── -->
+          <div v-show="activeTab === 'original'">
+            <div class="mb-4 flex items-start justify-between gap-3">
+              <div>
+                <h2 class="text-base font-semibold text-gray-900">論文原文</h2>
+                <p class="text-xs text-gray-500 mt-0.5">研討會論文全文（改寫底稿，原樣保留）</p>
+              </div>
+              <NuxtLink v-if="project.paper_ref" :to="`/papers/${project.paper_ref}`"
+                class="flex-shrink-0 text-xs font-medium px-3 py-1.5 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50">在閱讀器開啟 →</NuxtLink>
+            </div>
+            <div v-if="paperLoading" class="text-gray-400 text-sm py-8 text-center">載入中⋯</div>
+            <div v-else-if="paperHtml" class="doc-prose paper-prose bg-white rounded-2xl border border-gray-100 px-6 py-8 sm:px-12" v-html="paperHtml"></div>
+            <div v-else class="text-gray-400 text-sm py-8 text-center">找不到原文檔。</div>
+          </div>
+
+          <!-- ── 書摘與構思（登入者限定） ── -->
+          <div v-show="activeTab === 'notes'">
+            <div class="mb-3 flex items-center justify-between">
+              <div>
+                <h2 class="text-base font-semibold text-gray-900">書摘與構思</h2>
+                <p class="text-xs text-gray-500 mt-0.5">章節草稿 · 引用筆記 · 此分頁僅登入者可見</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <button v-if="editMode" class="px-3 py-1.5 text-xs rounded-lg border border-blue-300 text-blue-700 hover:bg-blue-50" @click="showPicker = true">📎 插入引用</button>
+                <button class="px-3 py-1.5 text-xs rounded-lg border border-purple-300 text-purple-700 hover:bg-purple-50" @click="showExport = true">📄 預覽 + 書目</button>
+                <span class="text-xs text-gray-400 ml-2">{{ editMode ? notesStatus : '檢視中（按右上「編輯」可修改）' }}</span>
               </div>
             </div>
-          </section>
+            <p v-if="pickerToast" class="text-xs text-emerald-600 mb-2">{{ pickerToast }}</p>
+            <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden" style="min-height: 400px;">
+              <ClientOnly>
+                <GenealogyRichTextEditor v-if="editMode" :key="editorKey" v-model="notesHtml" @update:model-value="onNotesUpdate" />
+                <div v-else-if="notesHtml" class="prose-notes px-6 py-5" v-html="notesHtml"></div>
+                <div v-else class="px-6 py-12 text-center text-gray-400 text-sm">
+                  <div class="text-3xl mb-2">📝</div>
+                  <p>尚無筆記。按右上「編輯」開始撰寫。</p>
+                </div>
+              </ClientOnly>
+            </div>
+          </div>
         </div>
-      </div>
+      </template>
     </template>
 
     <ExcerptPicker
@@ -265,6 +360,44 @@ async function loadProject() {
 onMounted(loadProject)
 watch(() => user.value, loadProject)
 
+// ── 每日對話（一條對話串拆成每天一頁）─────────────────────────────
+interface DialogueDay { day_date: string; weekday: string; day_title: string; n_turns: number }
+const dialogueDays = ref<DialogueDay[]>([])
+const hasDialogueDays = ref(false)
+
+async function loadDialogueDays() {
+  let token = ''
+  if (user.value) {
+    const { data: { session } } = await supabase.auth.getSession()
+    token = session?.access_token ?? ''
+  }
+  try {
+    const res = await $fetch<{ days: DialogueDay[]; hasDays: boolean }>('/api/works/dialogue-days', {
+      query: { slug: slug.value },
+      headers: token ? { Authorization: `Bearer ${token}` } : {},
+    })
+    dialogueDays.value = res.days ?? []
+    hasDialogueDays.value = !!res.hasDays
+  } catch { dialogueDays.value = []; hasDialogueDays.value = false }
+}
+onMounted(loadDialogueDays)
+watch(() => user.value, loadDialogueDays)
+
+const totalTurns = computed(() => dialogueDays.value.reduce((s, d) => s + (d.n_turns || 0), 0))
+const MONTH_ZH = ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
+function dayNum(date: string) { return Number(date.split('-')[2]) }
+const dayGroups = computed(() => {
+  const groups: { month: string; label: string; items: DialogueDay[] }[] = []
+  for (const d of dialogueDays.value) {
+    const [y, m] = d.day_date.split('-')
+    const month = `${y}-${m}`
+    let g = groups.find(x => x.month === month)
+    if (!g) { g = { month, label: `${y}年${MONTH_ZH[Number(m) - 1]}`, items: [] }; groups.push(g) }
+    g.items.push(d)
+  }
+  return groups
+})
+
 // ── 研究回顧（文獻綜述）─────────────────────────────────────────────
 const litEntries = ref<LitEntry[]>([])
 const litLoading = ref(false)
@@ -301,6 +434,121 @@ const litGroups = computed(() => {
   if (firstBiblio) firstBiblio.firstBiblio = true
   return groups
 })
+
+// ── 論文計畫分頁（研究回顧 / 修改建議 / 原文 / 書摘）─────────────────────
+type PaperTab = 'review' | 'memo' | 'original' | 'notes'
+const activeTab = ref<PaperTab>('review')
+
+const memoHtml = ref('')
+const memoLoading = ref(false)
+const memoAvailable = ref(false)
+const paperHtml = ref('')
+const paperLoading = ref(false)
+
+const paperTabs = computed(() => {
+  const tabs: { key: PaperTab; label: string; badge?: string }[] = [
+    { key: 'review', label: '研究回顧', badge: litEntries.value.length ? String(litEntries.value.length) : undefined },
+  ]
+  if (memoAvailable.value) tabs.push({ key: 'memo', label: '修改建議' })
+  if (project.value?.paper_ref) tabs.push({ key: 'original', label: '原文' })
+  if (user.value) tabs.push({ key: 'notes', label: '書摘與構思' })
+  return tabs
+})
+// If the active tab disappears (e.g. logout hides 書摘), fall back to 研究回顧.
+watch(paperTabs, (tabs) => {
+  if (!tabs.some(t => t.key === activeTab.value)) activeTab.value = 'review'
+})
+
+// 修改建議：抓 public/content/works/<ref>-revision-memo.md → 迷你 markdown 渲染
+async function loadMemo() {
+  const ref = project.value?.paper_ref
+  if (!ref) { memoAvailable.value = false; return }
+  memoLoading.value = true
+  try {
+    const md = await $fetch<string>(`/content/works/${ref}-revision-memo.md`, { responseType: 'text' })
+    if (md && md.trim()) { memoHtml.value = renderMarkdown(md); memoAvailable.value = true }
+    else { memoAvailable.value = false }
+  } catch { memoAvailable.value = false } finally { memoLoading.value = false }
+}
+
+// 原文：抓 public/content/papers/<ref>.txt → 內嵌渲染
+async function loadPaperText() {
+  const ref = project.value?.paper_ref
+  if (!ref) { paperHtml.value = ''; return }
+  paperLoading.value = true
+  try {
+    const txt = await $fetch<string>(`/content/papers/${ref}.txt`, { responseType: 'text' })
+    paperHtml.value = renderPaperText(txt || '')
+  } catch { paperHtml.value = '' } finally { paperLoading.value = false }
+}
+
+watch(() => project.value?.paper_ref, (r) => { if (r) { loadMemo(); loadPaperText() } }, { immediate: true })
+
+// ── 迷你 markdown 渲染（無外部依賴；夠用於修改建議書：標題/粗體/清單/引用/表格/連結/分隔線）──
+function esc(s: string) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') }
+function inlineMd(s: string) {
+  return esc(s)
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+}
+function renderMarkdown(md: string): string {
+  const lines = md.replace(/\r\n/g, '\n').split('\n')
+  const out: string[] = []
+  let i = 0
+  let list: 'ul' | 'ol' | null = null
+  const closeList = () => { if (list) { out.push(`</${list}>`); list = null } }
+  while (i < lines.length) {
+    const t = lines[i].trim()
+    if (!t) { closeList(); i++; continue }
+    if (/^---+$/.test(t)) { closeList(); out.push('<hr>'); i++; continue }
+    // 表格：本行以 | 起，下一行為分隔列
+    if (t.startsWith('|') && i + 1 < lines.length && /^\|[\s:|-]+\|?\s*$/.test(lines[i + 1].trim())) {
+      closeList()
+      const cells = (s: string) => s.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map(c => c.trim())
+      const head = cells(t); i += 2
+      const rows: string[][] = []
+      while (i < lines.length && lines[i].trim().startsWith('|')) { rows.push(cells(lines[i])); i++ }
+      let tbl = '<table><thead><tr>' + head.map(h => `<th>${inlineMd(h)}</th>`).join('') + '</tr></thead><tbody>'
+      for (const r of rows) tbl += '<tr>' + r.map(c => `<td>${inlineMd(c)}</td>`).join('') + '</tr>'
+      out.push(tbl + '</tbody></table>'); continue
+    }
+    const h = t.match(/^(#{1,6})\s+(.*)$/)
+    if (h) { closeList(); const lvl = Math.min(h[1].length + 1, 6); out.push(`<h${lvl}>${inlineMd(h[2])}</h${lvl}>`); i++; continue }
+    if (t.startsWith('>')) {
+      closeList(); const buf: string[] = []
+      while (i < lines.length && lines[i].trim().startsWith('>')) { buf.push(lines[i].trim().replace(/^>\s?/, '')); i++ }
+      out.push(`<blockquote>${inlineMd(buf.join(' '))}</blockquote>`); continue
+    }
+    const ul = t.match(/^[-*]\s+(.*)$/)
+    if (ul) { if (list !== 'ul') { closeList(); out.push('<ul>'); list = 'ul' } out.push(`<li>${inlineMd(ul[1])}</li>`); i++; continue }
+    const ol = t.match(/^\d+[.)]\s+(.*)$/)
+    if (ol) { if (list !== 'ol') { closeList(); out.push('<ol>'); list = 'ol' } out.push(`<li>${inlineMd(ol[1])}</li>`); i++; continue }
+    closeList(); out.push(`<p>${inlineMd(t)}</p>`); i++
+  }
+  closeList()
+  return out.join('\n')
+}
+
+// ── 論文原文（.txt）內嵌渲染：沿用 /papers reader 的段落判讀（標題/小節/引用/腳註上標）──
+function renderPaperText(txt: string): string {
+  const sup = (s: string) => esc(s).replace(/\[(\d+)\]/g, '<sup>[$1]</sup>')
+  const out: string[] = []
+  let inRef = false
+  for (const raw of txt.replace(/\r\n/g, '\n').split('\n')) {
+    const t = raw.trim()
+    if (!t) continue
+    if (t === '參考文獻' || t === '參考資料' || t === '注釋' || t === '注解') { inRef = t === '注釋' || t === '注解'; out.push(`<h3>${esc(t)}</h3>`); continue }
+    if (/^[一二三四五六七八九十百]+、/.test(t)) { out.push(`<h3>${esc(t)}</h3>`); continue }
+    if (/^（[一二三四五六七八九十]+）/.test(t)) { out.push(`<h4>${esc(t)}</h4>`); continue }
+    if (t === '摘要' || t === 'Abstract') { out.push(`<h3>${esc(t)}</h3>`); continue }
+    if (/^關鍵字[：:]/.test(t) || /^Keywords[：:]/.test(t)) { out.push(`<p class="kw">${esc(t)}</p>`); continue }
+    if (/^　　　/.test(raw)) { out.push(`<blockquote>${sup(t)}</blockquote>`); continue }
+    if (inRef) { out.push(`<p class="ref">${sup(t)}</p>`); continue }
+    out.push(`<p>${sup(t.replace(/^　+/, ''))}</p>`)
+  }
+  return out.join('\n')
+}
 
 async function patch(updates: Record<string, unknown>) {
   if (!project.value) return
@@ -348,4 +596,29 @@ function onNotesUpdate(html: string) {
 .prose-notes :deep(ul)  { list-style: disc; padding-left: 1.4em; margin: 0.3em 0; }
 .prose-notes :deep(ol)  { list-style: decimal; padding-left: 1.4em; margin: 0.3em 0; }
 .prose-notes :deep(blockquote) { border-left: 3px solid #f59e0b; padding-left: 0.8em; color: #6b7280; margin: 0.4em 0; }
+
+/* 修改建議書（迷你 markdown）+ 原文 共用排版 */
+.doc-prose :deep(h2) { font-size: 1.25rem; font-weight: 700; color: #0f172a; margin: 1.4em 0 0.5em; }
+.doc-prose :deep(h3) { font-size: 1.05rem; font-weight: 700; color: #1f2937; margin: 1.2em 0 0.4em; }
+.doc-prose :deep(h4) { font-size: 0.95rem; font-weight: 600; color: #334155; margin: 1em 0 0.3em; }
+.doc-prose :deep(h5), .doc-prose :deep(h6) { font-size: 0.9rem; font-weight: 600; color: #475569; margin: 0.8em 0 0.3em; }
+.doc-prose :deep(p) { font-size: 0.9rem; line-height: 1.85; color: #374151; margin: 0 0 0.7em; }
+.doc-prose :deep(ul) { list-style: disc; padding-left: 1.5em; margin: 0.4em 0 0.8em; }
+.doc-prose :deep(ol) { list-style: decimal; padding-left: 1.6em; margin: 0.4em 0 0.8em; }
+.doc-prose :deep(li) { font-size: 0.9rem; line-height: 1.8; color: #374151; margin: 0.15em 0; }
+.doc-prose :deep(strong) { font-weight: 700; color: #0f172a; }
+.doc-prose :deep(code) { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.82em; background: #f1f5f9; color: #be123c; padding: 0.1em 0.35em; border-radius: 4px; }
+.doc-prose :deep(a) { color: #0d9488; text-decoration: underline; }
+.doc-prose :deep(blockquote) { border-left: 3px solid #14b8a6; background: #f0fdfa; padding: 0.5em 0.9em; color: #475569; margin: 0.6em 0; border-radius: 0 6px 6px 0; font-size: 0.88rem; }
+.doc-prose :deep(hr) { border: 0; border-top: 1px solid #e5e7eb; margin: 1.6em 0; }
+.doc-prose :deep(table) { width: 100%; border-collapse: collapse; margin: 0.6em 0 1em; font-size: 0.85rem; }
+.doc-prose :deep(th) { text-align: left; background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.45em 0.7em; font-weight: 600; color: #334155; }
+.doc-prose :deep(td) { border: 1px solid #e2e8f0; padding: 0.45em 0.7em; color: #475569; vertical-align: top; }
+
+.paper-prose :deep(h3) { text-align: center; margin-top: 2em; }
+.paper-prose :deep(p) { text-indent: 2em; line-height: 1.95; }
+.paper-prose :deep(p.kw) { text-indent: 0; text-align: center; font-style: italic; color: #94a3b8; font-size: 0.8rem; }
+.paper-prose :deep(p.ref) { text-indent: 0; padding-left: 1.4em; font-size: 0.82rem; color: #64748b; }
+.paper-prose :deep(blockquote) { font-family: '標楷體', 'DFKai-SB', 'BiauKai', 'KaiTi', serif; }
+.paper-prose :deep(sup) { font-size: 0.65em; color: #0d9488; vertical-align: super; }
 </style>
