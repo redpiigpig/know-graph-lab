@@ -34,6 +34,17 @@ description: 「翻譯定名」通用名物中譯對照工具（/translation-glo
 4. **名根一致**（`name_root`）：同一來源根的譯名要一致 — 密特拉系（root 密特）→ 密特拉／密特里達迪；塞琉古系（root 塞琉）→ 塞琉古／塞琉西亞／塞琉西亞-泰西封。`check_root_consistency()` 自動抓「掛了 root 卻沒含 root 字串」的條目（如 root 塞琉 卻寫「西流基」）。
 5. **王朝命名（帝國／國名）**：以王朝命名的帝國採「**王朝名-民族／國名 帝國**」格式 — 鄂圖曼-土耳其帝國／阿契美尼德-波斯帝國／薩珊-波斯帝國／阿拔斯-阿拉伯帝國／塞琉古-希臘帝國／卡洛林-法蘭克帝國。**例外**：只跟單一人物相關（一人所建、逝後即分裂或更名）→ 直接用人名，不加王朝-民族：亞歷山大帝國／帖木兒帝國／拿破崙帝國。常見短稱（鄂圖曼帝國、塞琉古帝國）放 `name_variants`。
 
+> ⚠️ **古名／古譯處理（2026-06-04，使用者逐項定奪）**：已套用使用者核可的改動：
+> - **安息帝國**（＞帕提亞，源自王朝自稱 Aršak；place_names，root 改安息）
+> - **查拉圖斯特拉**（＞瑣羅亞斯德，按阿維斯陀原文；deities entity_type=教主）
+> - **祆教**（＝瑣羅亞斯德教；deities `religion` 欄一律用此）
+> - **伊本‧西那**（＞阿維森納）、**伊本‧魯世德**（＞阿威羅伊）— 伊斯蘭學者按阿拉伯原文，拉丁化退為變體；**惟 Maimonides 維持「邁蒙尼德」不改**（使用者指定）
+> - **Yahweh → 雅威**（theological_terms 新增；僅 Yahweh 這個讀音形式用雅威，四字神名/耶和華傳統不動）
+> - **東方亞述教會 → 景教**（theological_terms 新增 sect；Nestorianism＝聶斯多留主義 教義條保留不動）
+> - **Krishna 不在此處理**（使用者另一 session 處理，deities 維持 克里希那）
+>
+> **規則**：(1) 已廢、現代無人使用的中文古譯（大秦/拂菻/大食/天竺/身毒…）**一律不用**，連變體都不放；(2) 任何「古譯／原文 vs 英文轉譯」候選，**先列清單給使用者逐項定奪，不可自行套用**（使用者明確要求的流程）。Yahweh/景教 為直接 upsert 進 theological_terms（非 seed 腳本）。
+
 ### 🆕 2026-06-04：國名與城市（`place_names`）首批策展完成（268 筆）
 
 `places` tab 從 4 筆示範擴成 **268 筆人工策展**（含王朝命名通則，見原則 5）。**這批刻意不走 LLM**——「確定譯名」需人工權威判斷（聖經傳統優先、台陸變體、名根一致），LLM 自填過去多次被使用者糾正。Seed：[scripts/seed_glossary_places.py](../../../scripts/seed_glossary_places.py)（純資料 hand-curated，`--dry` 預覽，內建重複鍵＋名根自檢，`on_conflict=name_english` idempotent；已加 `place_names_name_english_key` unique constraint）。

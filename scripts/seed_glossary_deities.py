@@ -137,11 +137,14 @@ D("Devi", "提毗", var="女神（總稱）", religion=R_HI, domain="母神")
 
 # ── 瑣羅亞斯德教 ─────────────────────────────────────────────────────────────
 _order = 2400
-R_ZO = "瑣羅亞斯德"
+R_ZO = "祆教（瑣羅亞斯德）"
+D("Zarathustra", "查拉圖斯特拉", o="𐬰𐬀𐬭𐬀𐬚𐬎𐬱𐬙𐬭𐬀", lang="ae", var="瑣羅亞斯德（英文轉譯）；蘇魯支（唐古譯）；查拉圖斯特拉",
+  religion=R_ZO, etype="教主", domain="祆教先知／教主",
+  reason="按原文：阿維斯陀語 Zaraθuštra → 查拉圖斯特拉，較英文 Zoroaster 經希臘轉來的「瑣羅亞斯德」更貼近原文")
 D("Ahura Mazda", "阿胡拉‧馬茲達", var="奧爾穆茲德(Ohrmazd)", religion=R_ZO, domain="至善光明之主")
 D("Angra Mainyu", "安格拉‧曼紐", var="阿里曼(Ahriman)", religion=R_ZO, domain="惡靈／黑暗")
 D("Mithra / Mithras", "密特拉", o="Μίθρας", lang="grc", var="密特拉斯；密司拉", root="密特",
-  religion="瑣羅亞斯德／羅馬密儀", domain="契約／太陽",
+  religion="祆教／羅馬密特拉密儀", domain="契約／太陽",
   reason="名根「密特」與密特里達迪一致；羅馬密特拉密儀")
 
 

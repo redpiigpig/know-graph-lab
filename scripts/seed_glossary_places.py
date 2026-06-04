@@ -124,10 +124,10 @@ P("Achaemenid Empire", "阿契美尼德-波斯帝國", o="", lang="peo",
   var="波斯第一帝國；阿黑門尼德", ptype="帝國", region="伊朗高原",
   period="古典", root="阿契美尼德",
   reason="王朝-民族命名：阿契美尼德王朝＋波斯。居魯士創建")
-P("Parthia", "阿薩息斯-帕提亞帝國", o="", lang="xpr",
-  var="帕提亞帝國；安息（中文古稱）", ptype="帝國", region="伊朗高原",
-  period="古典", root="帕提亞",
-  reason="王朝-民族命名：阿薩息斯王朝＋帕提亞。《史記》稱「安息」")
+P("Parthia", "安息帝國", o="", lang="xpr",
+  var="帕提亞帝國；阿薩息斯王朝", ptype="帝國", region="伊朗高原",
+  period="古典", root="安息",
+  reason="中文古譯優先：《史記》「安息」源自王朝開創者 Aršak（阿薩息斯），較英文 Parthia 更貼近其自稱")
 P("Sasanian Empire", "薩珊-波斯帝國", o="", lang="pal",
   var="薩珊波斯；薩桑；波斯第二帝國", ptype="帝國", region="伊朗高原",
   period="古典晚期", root="薩珊", reason="王朝-民族命名：薩珊王朝＋波斯")
