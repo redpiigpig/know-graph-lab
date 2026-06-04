@@ -43,13 +43,18 @@ description: 把 /ai-dialogues 裡某一條「跨多日延續的 AI 對話串」
 9. dialogue_build_days.py     **把成品拆成「每天一頁」進 dialogue_days**（讀 DB 既有 content_json 切 <h2> 邊界，保留人工修改）→ --drop-months 刪月卡＋清主卡
 ```
 
-## 呈現：每天一頁 reader（取代月份卡片，2026-06-04）
-舊版把成品塞進 4 張月份 writing_projects 卡片（content_json），首頁一條 thread 變 5 張卡、單頁又是 ~300KB 大 blob。改成 **一條 thread = 一張主卡，內容拆成每天一筆** `dialogue_days`：
-- **主卡頁** `/works/<slug>`：generic `pages/works/[slug]/index.vue` 偵測有 `dialogue_days` 就渲染「每日對話」區（依月份分組、每天一張小卡 → 連 `/works/<slug>/day/<date>`）。
-- **每日 reader** `pages/works/[slug]/day/[date].vue`：單日 html + 前一天/後一天翻頁。
-- **API**：`GET /api/works/dialogue-days?slug=`（清單 metadata）、`GET /api/works/dialogue-days/<date>?slug=`（單日 html＋鄰日）。
-- **私密**：對話是私人夢境／榮格內容 → reader 走 `getIsAdmin`（server/utils/auth-helper.ts），未登入只看到「🔒 登入後可逐日查閱」，不外洩日期清單與內文。要改公開就拿掉 [date] 端點的 401＋清單端點直接回 days。
+## 呈現：月份→日期→單日 reader（仿聖經 卷→章→經文，2026-06-04）
+舊版把成品塞進 4 張月份 writing_projects 卡片（content_json），首頁一條 thread 變 5 張卡、單頁又是 ~300KB 大 blob。改成 **一條 thread = 一張主卡，內容拆成每天一筆** `dialogue_days`，三層導覽：
+- **主卡頁** `/works/<slug>`（generic `pages/works/[slug]/index.vue`）：偵測有 `dialogue_days` 就渲染「每日對話」區＝**月份卡**（一月..四月，每月顯示天數/則數）。
+- **月份頁** `pages/works/[slug]/month/[ym].vue`（ym 如 `2026-01`）：該月的**日期格**（仿聖經章格）→ 連單日。
+- **單日 reader** `pages/works/[slug]/day/[date].vue`：單日 html + 前一天/後一天翻頁（跨月也能翻）。
+- **API**：`GET /api/works/dialogue-days?slug=`（清單 metadata，月份頁前端自行 filter）、`GET /api/works/dialogue-days/<date>?slug=`（單日 html＋鄰日）。
+- **私密**：對話是私人夢境／榮格內容 → 全走 `getIsAdmin`（server/utils/auth-helper.ts），未登入只看到「🔒」，不外洩日期清單與內文。要改公開就拿掉 [date] 端點 401＋清單端點直接回 days。
 - 換新 thread：`dialogue_build_days.py` 改 MAIN_SLUG / MONTH_SLUGS（或直接餵 polished 來源），pages/API 已 generic 無需改。
+
+### 排版整理（dialogue_days 進去後）
+1. `dialogue_format_days.py`：日期標題 h2→**h3**、主題 h3→**h4**；段首講者 `<strong>X：</strong>` 加 `class="speaker"`（reader CSS 用它做**懸掛縮排**：講者那行頂格、折行與接續段縮排兩字）；殘留 markdown `**` → `<strong>`；阿周那直接貼上的**無換行長文**依句末標點重新分段（每段約 110 字）。冪等。
+2. `dialogue_to_prose.py`：把**仍帶條列／小標／markdown 結構**的 turn（場景：/解析：/‧ 條列/編號…）送 LLM 改寫成第一人稱口語散文（per-turn；**Gemini 2.5 flash 4 key 輪流主 → NVIDIA deepseek-v4-flash fallback**；忠實不增刪；改完標記消失 → 冪等可重跑）。`--dry` 先看要改幾個 turn、可帶日期參數只跑單日。⚠️ NVIDIA deepseek 很慢（~60-76s/則），Gemini 快很多；Gemini 日配額被燒光時整批會掉到 NVIDIA 變慢。
 
 ### 分類靠 agent fan-out（步驟 2→3 之間）
 逐則讀 2000+ 則太多，**切日期區段、開多個 general-purpose subagent 平行讀**，每個 agent 讀幾天的 `<date>.json`、依上面「對話框語氣」判準回 `{id,date,seq,topic}`，寫到 `out_NN.json`。兩段式效果好：
