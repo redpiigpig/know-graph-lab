@@ -469,6 +469,16 @@ TERM_FIXES_NPNF2_V7 = dict(TERM_FIXES_ANF_COMMON, **{
     "巴西略": "巴西流",
 })
 
+# NPNF2 Vol 8 — Basil the Great = 凱撒利亞的巴西流
+# Basil → 巴西流（禁巴西略）；Caesarea → 凱撒利亞（非該撒利亞）；Gregory → 格列高里（額我略只留教宗）
+TERM_FIXES_NPNF2_V8 = dict(TERM_FIXES_ANF_COMMON, **{
+    "巴西略": "巴西流",
+    "該撒利亞": "凱撒利亞", "凱撒里亞": "凱撒利亞", "凱撒勒雅": "凱撒利亞", "該撒勒亞": "凱撒利亞",
+    "格列高理": "格列高里", "格列高利": "格列高里", "格里高利": "格列高里",
+    "額我略": "格列高里",
+    "納齊安": "拿先斯",
+})
+
 # 所有 ANF vol 都吃 ANF_COMMON baseline；per-vol specific 覆蓋 baseline。
 TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "c98d358d-7066-4691-a896-b7232707b0db": {**TERM_FIXES_ANF_COMMON, **TERM_FIXES_ANF_VOL_1},  # ANF Vol 1
@@ -498,6 +508,7 @@ TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "a7e5956e-8851-4d0f-b3d2-1f823d1bdc81": TERM_FIXES_NPNF2_V3,  # NPNF2 Vol 3 Theodoret + Jerome + Rufinus
     "9b94e7c1-fa82-4910-a31f-9db1e2e040bb": TERM_FIXES_NPNF2_V5,  # NPNF2 Vol 5 Gregory of Nyssa
     "af2cf8a7-b169-432c-863d-632647c8ab67": TERM_FIXES_NPNF2_V7,  # NPNF2 Vol 7 Cyril of Jerusalem + Gregory Nazianzen
+    "3c48472c-fbca-48fb-9db1-ca5a08827ef3": TERM_FIXES_NPNF2_V8,  # NPNF2 Vol 8 Basil the Great 凱撒利亞的巴西流
 }
 
 
