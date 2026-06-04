@@ -114,9 +114,11 @@
 ### 目前成果（已上架、已驗證）
 - **Test ebook**：`ebook_id = 22222222-2222-4222-8222-222222222222`（圖書館「世界宗教／深層心理學」，標題「力比多的轉化與象徵（試譯·德英中三欄）」）。
 - **✅ 第一章「引論」(Einleitung)**：6 rows（`ch01.json`）。
-- **✅ 第二章「論兩種思維」(Über die zwei Arten des Denkens = Hinkle Ch I)**：**全章 77 rows**（`ch02.json`，含莫里克〈少女初戀之歌〉blockquote 補譯；Hinkle 英譯本略此詩）。德 1912 ↔ 英 Hinkle 1916 ↔ 親譯繁中，逐段對齊（zh=de=en=77）✅，截圖實證 ✅。16,678 繁中字。
-- JSONL：`G:/…/_chunks/22222222-….jsonl`（3 chunks＝封面+引論+第二章）。**未推 R2、未刷 previews**（dev reader 讀 local JSONL 即可；正式化時再 push）。
-- 腳註一律略過（書目／引用 apparatus），與引論同。Hinkle 合併多個德文段時，以**英文段為 row 粒度、德文併段對齊**；德有英無之句（如 D64）併入該 row 的德/中欄。
+- **✅ 第二章「論兩種思維」(Über die zwei Arten des Denkens = Hinkle Ch I)**：**全章 77 rows**（`ch02.json`，含莫里克〈少女初戀之歌〉blockquote 補譯；Hinkle 英譯本略此詩）。逐段對齊（zh=de=en=77）✅，截圖實證 ✅。16,678 繁中字。
+- **✅ 第三章「米勒幻想的分析預備材料」(= Hinkle Ch II, The Miller Phantasies)**：**全章 20 rows**（`ch03.json`，含羅斯丹《大鼻子情聖》西哈諾訣別詩＋臨終獨白兩段法文詩補譯〔Hinkle 略〕、米勒法文自述引文）。
+- **🔄 第四章「創世讚歌」(Der Schöpferhymnus = Hinkle Ch III, The Hymn of Creation)**：**進行中，已 55 rows（標題+E1–E48+米勒英文〈創世讚歌〉三節詩+約伯哀歌+愛倫坡〈烏鴉〉兩節+浮士德/約伯「上帝打賭」引文）**。本章英文共 **91 段**（最長一章），**下一段＝E49**（浮士德 Mephisto/Satan 引文之後；德文 OCR `jung_ch4_de.txt` D140 起＝貝赫摩特/利維坦那段；英文 `jung_ch4_en.txt` E49 起）。Behemoth/Leviathan、煉金、太陽神話等宗教學重段在後半。
+- JSONL：`G:/…/_chunks/22222222-….jsonl`（5 chunks＝封面+引論+2 全章+第四章進行中）。**未推 R2、未刷 previews**。
+- 腳註一律略過（書目／引用 apparatus）。Hinkle 合併多個德文段時，以**英文段為 row 粒度、德文併段對齊**；德有英無之句（如 ch2 D64、ch4 創世讚歌德文韻譯腳註）併入該 row 德/中欄或略。**詩／聖經引文**：作者英文原詩（米勒讚歌）de=en=英文；德/法原詩（莫里克、西哈諾、浮士德）de=原文、en=Hinkle 英、zh=親譯韻文；聖經引文 zh 用和合本式。
 
 ### 穩定的 5 步方法（每章照做）
 1. **德文重 OCR**（Gemini 全耗盡 → 用 **Haiku**，user 訂閱制不計費）：

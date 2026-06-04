@@ -560,19 +560,17 @@ auto-push。**git 在 master 跑教父**（user 拍板；feat/coach-language 是
   三層樹）→ validate 0 FAIL/0 WARN → test_fathers_quality PASS → REFINED_IDS。詞庫 backfill 未跑
   （配額；可日後補）。**B 層 LLM 校對未跑**（當晚全 provider 配額耗盡）— 日後配額足時補 `llm_proofread_book.py`。
 
-### 🔄 進行中（暫停 — 2026-06-04 接手即續）
-- **vol31 NPNF2 V7（耶路撒冷的區利羅 + 拿先斯的格列高里）** `af2cf8a7-b169-432c-863d-632647c8ab67`
-  - **翻譯到 7/173 chunks 暫停**（使用者要處理別的事；非錯誤）。log `scripts/logs/translate_vol31.log`。
-  - 英文 source 已備份 `…af2cf8a7….en.bak.jsonl`（103 chunks，防 dual-state）。jsonl 現有 7 個中文 chunk。
-  - **接手即續**：`python scripts/translate_ebook_to_zh.py af2cf8a7-b169-432c-863d-632647c8ab67 --engine auto --resume`
-    （--resume 跳過已完成 7 個，從 chunk 8 續）。背景 detached 跑 + 監控 log ✓ 計數。
-  - ⚠️ **譯名（詞庫權威 2026-06-04 查證）**：Cyril of Jerusalem `name_recommended = 耶路撒冷的區利羅`；
-    Cyril of Alexandria = 亞歷山卓的區利羅。**兩個 Cyril 都譯「區利羅」**（name_root 一致），靠教座前綴分辨。
-    「西瑞爾／西里爾／居里羅」只是東正教/天主教/新教變體，**非建議譯名** — 前手 handoff 誤寫「西瑞爾」已更正。
-    精修時 TERM_FIXES_VOL31 須把 `西瑞爾`/`西里爾`/`居里羅` 全收斂成「耶路撒冷的區利羅」（見 [[feedback_glossary_strict_authority]]）。
-    拿先斯的格列高里（里非理）。
-  - 翻完照 vol30 流程精修：polish → consolidate_by_ncx → 寫 `_fix_vol31_*.py`（英文 NCX 卷名 relabel
-    繁中 + parent_volume 樹，比照 `_fix_vol30_jerome.py`）→ consolidate_letters → validate → test_fathers_quality → REFINED_IDS。
+### ✅ 本輪完成（2026-06-04）
+- **vol31 NPNF2 V7（耶路撒冷的區利羅《教理講授》+ 拿先斯的格列高里《講演集》《書信集》）** `af2cf8a7-b169-432c-863d-632647c8ab67`
+  - 翻譯 173→172 chunks（無 dual-state，zh 0.96）→ polish → consolidate_by_ncx（→137）→
+    `_fix_vol31_cyril_gregory.py`（61 英文 NCX 卷名 relabel 繁中 + 72 書信本文按 NCX 收件人群組命名 +
+    三層樹：耶路撒冷的區利羅／拿先斯的格列高里）→ consolidate_letters（→73，書信 10 封/頁）→
+    `TERM_FIXES_NPNF2_V7`（1352 處）→ validate 0 FAIL → **test_fathers_quality PASS**（G1-G5 全綠，33 TERM 變體歸零）→ REFINED_IDS。
+  - **譯名鐵則（詞庫權威）**：Cyril of Jerusalem = **耶路撒冷的區利羅**（西瑞爾/西里爾/居里羅 是變體，已收斂）；
+    Cyril of Alexandria = 亞歷山卓的區利羅（兩 Cyril 都「區利羅」，靠教座前綴分辨）；
+    Gregory（Naz/Nyssa）= **格列高里**（額我略只留教宗 Gregory I，已把誤譯的額我略 ×60 收斂）；
+    Basil = **巴西流**（禁巴西略，已收斂 ×211）；Nazianzen = **拿先斯**（非納齊安）。
+  - **未跑**（配額；可日後補）：詞庫 glossary backfill、B 層 `llm_proofread_book.py`。
 
 ### ⚙️ 引擎現況（2026-06-04 重做 — 3-tier）
 - 預設 **Gemini → NVIDIA → Haiku**（user 2026-06-04 統一政策「gemini 優先，然後 nvidia，最後 haiku」；見本檔頂 line 6 引擎政策 header）。
