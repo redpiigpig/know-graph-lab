@@ -100,14 +100,23 @@
 
 ---
 
-## 🚀 新 session 接手清單（2026-06-03 交棒）
+## 🚀 新 session 接手清單（2026-06-04 更新）
 
-> User 指示：開新 session 接著把榮格三欄做下去。**方法已穩定，照下面做即可。**
+> User 指示：開新 session 接著把榮格三欄做下去。**方法已穩定且改成可續傳結構，照下面做即可。**
+
+### 🆕 可續傳結構（2026-06-04 重構）
+- **每章一個 JSON**：`.claude/skills/ebook-collected-works/jung_data/chNN.json`（持久化、已 commit、不在 tmp）。
+  schema：`{chunk_index, chapter_path, volume, parent_volume, title_en, rows:[{zh,de,en},…]}`。每個 row = 一個對齊段（heading 也算一 row，zh/de/en 用 `## ` 前綴）。
+- **組裝器**：`python scripts/_jung_build_all.py` → 讀 cover + 所有 `jung_data/ch*.json`（排序）→ 寫 reader JSONL + upsert DB。**內建對齊閘**：任何 chapter 的 zh/de/en row 數不等就 `SystemExit`。
+- **加新章節**：用 `c:/tmp/_jung_append.py` 的 `add(zh,de,en)`+`flush()`（append 到指定 chNN.json），分批寫 `_jung_ch?_bN.py` 跑完再 `_jung_build_all.py`。每批 commit。
+- **詩／跨語字串**：用 blockquote（每行 `> ` 前綴、單 `\n`、**絕不可有 `\n\n`**），reader 才會保留換行又不破壞段對齊（renderMarkdown：blockquote split `\n`→`<br>`；一般 `<p>` 會把單 `\n` 併成空格）。
 
 ### 目前成果（已上架、已驗證）
 - **Test ebook**：`ebook_id = 22222222-2222-4222-8222-222222222222`（圖書館「世界宗教／深層心理學」，標題「力比多的轉化與象徵（試譯·德英中三欄）」）。
-- **已完成**：封面 + **第一章「引論」(Einleitung) 整章 5 段**，中（我親譯）／德（1912）／英（Hinkle 1916）逐段對齊。
-- JSONL：`G:/我的雲端硬碟/資料/電子書/_chunks/22222222-….jsonl`（2 chunks）。**未推 R2、未刷 previews**（dev reader 讀 local JSONL 即可；正式化時再 push）。
+- **✅ 第一章「引論」(Einleitung)**：6 rows（`ch01.json`）。
+- **✅ 第二章「論兩種思維」(Über die zwei Arten des Denkens = Hinkle Ch I)**：**全章 77 rows**（`ch02.json`，含莫里克〈少女初戀之歌〉blockquote 補譯；Hinkle 英譯本略此詩）。德 1912 ↔ 英 Hinkle 1916 ↔ 親譯繁中，逐段對齊（zh=de=en=77）✅，截圖實證 ✅。16,678 繁中字。
+- JSONL：`G:/…/_chunks/22222222-….jsonl`（3 chunks＝封面+引論+第二章）。**未推 R2、未刷 previews**（dev reader 讀 local JSONL 即可；正式化時再 push）。
+- 腳註一律略過（書目／引用 apparatus），與引論同。Hinkle 合併多個德文段時，以**英文段為 row 粒度、德文併段對齊**；德有英無之句（如 D64）併入該 row 的德/中欄。
 
 ### 穩定的 5 步方法（每章照做）
 1. **德文重 OCR**（Gemini 全耗盡 → 用 **Haiku**，user 訂閱制不計費）：
@@ -127,7 +136,8 @@
 - 英文全文若沒了：`https://www.gutenberg.org/cache/epub/65903/pg65903-images.html`（被擋就用 mirrorservice.org 鏡像，見 git log）。
 
 ### 待辦（優先序）
-1. **下一章**：德文 OCR `II.`（p10 起，「Über zwei Arten des Denkens / Two Kinds of Thinking」= 英 §9 `CHAPTER I`）→ 配對 → 親譯 → 加進 build。注意英文章號比德文少 1（Hinkle 把 Einleitung 當 INTRODUCTION，故她的 Ch I = 德文 Ch II）。
+1. **下一章＝第三章**：德文 `III. Vorbereitende Materialien zur Analyse der Miller'schen Phantasien`（德文 OCR txt 第 1884 行起）= 英 `CHAPTER II — THE MILLER PHANTASIES`（`jung_pou_en_1916.html` 第 3114–3376 行）。流程：用 `c:/tmp/_jung_extract_ch2.py` 改 SRC 行號重抽 de/en 段 → 配對 → 親譯 → `_jung_ch3_bN.py` append 進 `ch03.json` → build。注意英文章號比德文少 1（Hinkle Ch II = 德文 Kap III）。Miller 章起會大量出現英／法詩引文與 Miller 本人法文原文。
+   - 德文全文已在 `c:/tmp/jung_wandlungen_de_1912.txt`（23918 行，djvu 文字層，含 OCR 雜訊與行中頁碼/腳註，需清）；英文全文在 `c:/tmp/jung_pou_en_1916.html`。tmp 被清的話德文重抽見下「要重抓的檔」（或本檔來源紀錄）。
 2. **腳註**：目前略過書目腳註（里克林等出版資訊、Ninon 腳註）。要補的話用 reader 的 `(N)` + `———` 腳註機制（見 [[scripture-fathers]] footnote 行為），三欄各自的腳註 by-number 對齊（reader `parallelColumns.footnotes` 已支援）。
 3. **正式化**：改掉「試譯」標籤／給正式書名分類／補封面圖／決定正式 `ebook_id`（目前是 test 222…）→ push R2 + 刷 previews（參 `scripts/translate_collected_work.py` 的 `_upload` 或 ebook-pipeline）。
 4. （未來）受版權 CW 卷：等 user 給乾淨來源檔，不抓盜版全文。
