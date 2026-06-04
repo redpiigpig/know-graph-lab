@@ -119,10 +119,21 @@ const THEME_POOLS: Record<string, { presets: string[]; auto: string[] }> = {
       "あいさつと丁寧表現", "神社・お寺の基礎語", "日本の祭りと行事", "数と助数詞", "学校と仕事",
     ],
   },
+  // 通用希臘文（Koine，入門）：題材＝新約／LXX／教父／信經／希臘化猶太／哲學家／拜占庭
+  grc: {
+    presets: ["新約高頻字", "約翰福音核心字", "希臘文冠詞與代名詞", "信經關鍵詞", "七十士譯本基礎字", "教父文獻常用字"],
+    auto: [
+      "新約高頻字（前 100）", "新約高頻動詞", "希臘文冠詞・代名詞・連接詞", "介系詞與小品詞",
+      "約翰福音核心字彙", "馬可福音核心字彙", "七十士譯本（LXX）創世記基礎字", "詩篇（LXX）常用字",
+      "使徒教父常用字", "尼西亞信經關鍵詞", "大公會議神學術語（οὐσία／ὑπόστασις…）",
+      "斐羅與希臘化猶太文獻常用字", "希臘化哲學常用字（斯多噶／柏拉圖）", "拜占庭教會與官方文獻常用字",
+      "基督教禮儀與敬拜詞彙",
+    ],
+  },
 };
 const pool = computed(() => THEME_POOLS[language.value] || THEME_POOLS.en);
 const PRESETS = computed(() => pool.value.presets);
-const TTS_LANG: Record<string, string> = { en: "en-US", ja: "ja-JP" };
+const TTS_LANG: Record<string, string> = { en: "en-US", ja: "ja-JP", grc: "el-GR" };
 
 const route = useRoute();
 const language = computed(() => route.params.lang as string);

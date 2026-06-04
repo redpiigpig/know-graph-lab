@@ -105,22 +105,33 @@
         <div class="border-t border-gray-100 bg-white px-3 py-2.5 flex-shrink-0">
           <div v-if="speechErr" class="text-[11px] text-rose-500 mb-1.5 px-1">{{ speechErr }}</div>
 
-          <!-- 希臘文鍵盤工具列 -->
-          <div v-if="greekKb" class="flex items-center gap-2 mb-2 px-0.5">
+          <!-- 轉寫鍵盤工具列（希臘文 / 日文假名） -->
+          <div v-if="greekKb || kanaKb" class="flex items-center flex-wrap gap-2 mb-2 px-0.5">
             <button
-              @click="greekOn = !greekOn"
+              @click="kbOn = !kbOn"
               class="text-xs px-2.5 py-1 rounded-lg border transition flex items-center gap-1"
-              :class="greekOn ? 'bg-amber-50 border-amber-300 text-amber-800' : 'bg-white border-gray-200 text-gray-400'"
-              title="打英文字母即時轉成希臘字母（Beta Code）"
-            >⌨️ 希臘鍵盤 {{ greekOn ? '開' : '關' }}</button>
-            <button @click="showGreekHelp = !showGreekHelp" class="text-xs px-2 py-1 rounded-lg text-amber-700 hover:bg-amber-50 transition">
-              對照表 {{ showGreekHelp ? '▲' : '▼' }}
+              :class="kbOn ? 'bg-amber-50 border-amber-300 text-amber-800' : 'bg-white border-gray-200 text-gray-400'"
+              :title="greekKb ? '打英文字母即時轉成希臘字母（Beta Code）' : '打羅馬字即時轉成假名（系統 IME 組字時自動讓行）'"
+            >⌨️ {{ greekKb ? '希臘鍵盤' : '假名鍵盤' }} {{ kbOn ? '開' : '關' }}</button>
+
+            <!-- 假名：平/片切換 -->
+            <button
+              v-if="kanaKb"
+              @click="kana.kata.value = !kana.kata.value"
+              class="text-xs px-2.5 py-1 rounded-lg border transition"
+              :class="kana.kata.value ? 'bg-sky-50 border-sky-300 text-sky-700' : 'bg-white border-gray-200 text-gray-500'"
+              title="平假名 / 片假名切換"
+            >{{ kana.kata.value ? 'カ 片假名' : 'あ 平假名' }}</button>
+
+            <button @click="showKbHelp = !showKbHelp" class="text-xs px-2 py-1 rounded-lg text-amber-700 hover:bg-amber-50 transition">
+              對照表 {{ showKbHelp ? '▲' : '▼' }}
             </button>
-            <span v-if="greekOn" class="text-[11px] text-gray-400">打 a→α、h→η、q→θ、w→ω…；母音後按 ) ( / \ = | + 加符號</span>
+            <span v-if="kbOn && greekKb" class="text-[11px] text-gray-400">打 a→α、h→η、q→θ、w→ω…；母音後按 ) ( / \ = | + 加符號</span>
+            <span v-if="kbOn && kanaKb" class="text-[11px] text-gray-400">打羅馬字如 sakura→さくら；ん打 nn、っ打雙子音、' 分隔（kon'nichiwa）</span>
           </div>
 
-          <!-- 對照表 + 點選面板 -->
-          <div v-if="greekKb && showGreekHelp" class="mb-2 p-2.5 rounded-xl bg-amber-50/60 border border-amber-100 space-y-2">
+          <!-- 希臘文對照表 + 點選面板 -->
+          <div v-if="greekKb && showKbHelp" class="mb-2 p-2.5 rounded-xl bg-amber-50/60 border border-amber-100 space-y-2">
             <div class="flex flex-wrap gap-1">
               <button
                 v-for="p in gk.GREEK_PALETTE"
@@ -144,6 +155,23 @@
             </div>
           </div>
 
+          <!-- 假名五十音點選面板 -->
+          <div v-if="kanaKb && showKbHelp" class="mb-2 p-2.5 rounded-xl bg-sky-50/60 border border-sky-100">
+            <div class="grid grid-cols-5 gap-1 max-w-md">
+              <template v-for="(row, ri) in kana.GOJUON" :key="ri">
+                <button
+                  v-for="(h, ci) in row"
+                  :key="ri + '-' + ci"
+                  :disabled="!h"
+                  @click="insertKana(h)"
+                  class="px-1 py-1.5 rounded-lg text-sm transition"
+                  :class="h ? 'bg-white border border-sky-200 text-gray-800 hover:bg-sky-100' : 'opacity-0 pointer-events-none'"
+                >{{ h ? (kana.kata.value ? kana.toKatakana(h) : h) : '·' }}</button>
+              </template>
+            </div>
+            <p class="text-[11px] text-sky-800/70 mt-1.5">點選直接插入；或直接打羅馬字。濁音／拗音直接打（ga、kya、sha…），片假名長音打 -</p>
+          </div>
+
           <div class="flex items-end gap-2">
             <button
               v-if="!coach?.voiceless && sttSupported"
@@ -156,7 +184,7 @@
               ref="inputEl"
               v-model="input"
               @keydown="onInputKeydown"
-              :placeholder="listening ? (interim || '聆聽中…') : (greekKb && greekOn ? '打英文字母 → 希臘字母（如 logos→λόγος）…' : `用${coach?.langLabel}輸入…`)"
+              :placeholder="listening ? (interim || '聆聽中…') : (kbOn && greekKb ? '打英文字母 → 希臘字母（如 logos→λόγος）…' : (kbOn && kanaKb ? '打羅馬字 → 假名（如 sakura→さくら）…' : `用${coach?.langLabel}輸入…`))"
               rows="1"
               class="flex-1 resize-none px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-indigo-400 max-h-32"
             />
@@ -239,6 +267,7 @@ import { useSpeech } from "~/composables/useSpeech";
 import { useActivityTracker } from "~/composables/useActivityTracker";
 import { useCoachAi } from "~/composables/useCoachAi";
 import { useGreekKeyboard } from "~/composables/useGreekKeyboard";
+import { useKanaKeyboard } from "~/composables/useKanaKeyboard";
 
 definePageMeta({ middleware: "coach-auth" });
 
@@ -272,12 +301,15 @@ const panel = ref<"vocab" | "homework">("vocab");
 const autoSpeak = ref(false);
 const msgArea = ref<HTMLElement | null>(null);
 
-// 希臘文鍵盤（打英文 → 希臘字母）：僅 keyboard:"greek" 的教練啟用
+// 轉寫鍵盤（打英文 → 目標文字）：依 coach.keyboard 啟用
+//   greek = 希臘字母（Beta Code）；kana = 日文假名（romaji IME）
 const gk = useGreekKeyboard();
+const kana = useKanaKeyboard();
 const inputEl = ref<HTMLTextAreaElement | null>(null);
 const greekKb = computed(() => coach.value?.keyboard === "greek");
-const greekOn = ref(true); // 進 grc 預設開啟
-const showGreekHelp = ref(false);
+const kanaKb = computed(() => coach.value?.keyboard === "kana");
+const kbOn = ref(true); // 預設開啟（系統 IME 組字時 kana 會自動讓行）
+const showKbHelp = ref(false);
 
 function setInput(v: string, cursor: number) {
   input.value = v;
@@ -285,20 +317,28 @@ function setInput(v: string, cursor: number) {
 }
 
 function onInputKeydown(e: KeyboardEvent) {
-  // Enter（無 Shift）送出；Shift+Enter 換行
+  // Enter（無 Shift、非組字中）送出；Shift+Enter 換行
   if (e.key === "Enter" && !e.shiftKey && !e.isComposing) {
+    if (kanaKb.value && kbOn.value && inputEl.value) kana.finalize(inputEl.value, setInput); // 先收掉殘留 ん
     e.preventDefault();
     send();
     return;
   }
-  if (greekKb.value && greekOn.value && inputEl.value) {
-    gk.onKeydown(e, inputEl.value, setInput);
-  }
+  if (!kbOn.value || !inputEl.value) return;
+  if (greekKb.value) gk.onKeydown(e, inputEl.value, setInput);
+  else if (kanaKb.value) kana.onKeydown(e, inputEl.value, setInput);
 }
 
 function insertGreek(ch: string) {
   if (inputEl.value) {
     gk.insert(inputEl.value, ch, setInput);
+    inputEl.value.focus();
+  }
+}
+
+function insertKana(ch: string) {
+  if (ch && inputEl.value) {
+    kana.insert(inputEl.value, kana.kata.value ? kana.toKatakana(ch) : ch, setInput);
     inputEl.value.focus();
   }
 }
@@ -345,6 +385,7 @@ function newSession() {
   sessionId.value = null;
   messages.value = [];
   persona.value = null;
+  kana.reset();
 }
 
 async function loadVocab() {
@@ -362,6 +403,7 @@ async function send() {
   if (!text || sending.value) return;
   speech.stopListening();
   input.value = "";
+  kana.reset();
   messages.value.push({ role: "user", content: text, corrections: [] });
   scrollDown();
   sending.value = true;

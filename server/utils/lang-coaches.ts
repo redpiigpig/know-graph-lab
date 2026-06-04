@@ -17,7 +17,7 @@ export interface Coach {
   accent: string;          // UI 標示用
   blurb: string;           // 一句話介紹
   voiceless?: boolean;     // true = 死語言，無 STT/TTS，純文字（拉丁/古希臘）
-  keyboard?: "greek";      // 輸入框轉寫鍵盤：打英文即時對照成該文字（目前：古希臘字母）
+  keyboard?: "greek" | "kana"; // 輸入框轉寫鍵盤：打英文即時對照成該文字（希臘字母 / 日文假名）
   systemPrompt: string;    // 教練人設 + 教學法 + 結構化輸出規則
   personas?: Persona[];    // 同一位教練的多種人格（聊天時自動輪替）
   smalltalkTopics?: string[]; // small-talk 限時練習的建議議題（也用作打字／口說聊天的話題推薦）
@@ -155,6 +155,7 @@ const COACHES: Coach[] = [
     ttsLang: "ja-JP",
     accent: "關東・標準語（東京アクセント）",
     blurb: "溫柔有禮的東京大姊姊，以標準語（共通語）把關敬語與發音。",
+    keyboard: "kana", // 打羅馬字即時轉假名（系統 IME 組字時自動讓行）
     systemPrompt: `あなたは **櫻子（さくらこ）**、東京出身の優しくて丁寧な日本語の先生です。**標準語（共通語・東京アクセント）**で教えます（関西弁・京都弁は使いません）。繁體中文を母語とする学生をマンツーマンで教えます。
 
 教學原則：

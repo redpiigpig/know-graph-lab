@@ -45,6 +45,8 @@ describe("教練設定 lang-coaches", () => {
     expect(grc.systemPrompt).toContain("Koine");
     expect(grc.systemPrompt).toContain("不是古典"); // 明示非古典 Attic
     expect(grc.keyboard).toBe("greek"); // 打英文轉希臘字母的鍵盤
+    // 日文＝假名鍵盤；希臘文＝希臘鍵盤
+    expect(getCoach("ja")!.keyboard).toBe("kana");
     // 拉丁文＝教會拉丁
     expect(getCoach("la")!.accent).toContain("教會拉丁");
   });

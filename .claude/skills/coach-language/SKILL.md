@@ -1,6 +1,6 @@
 ---
 name: coach-language
-description: AI 語言教練（/coach）— 外語自學系統，多語言（英文 Emily / 日文 櫻子 / 通用希臘文 Sophia 上線；德法拉預留）。核心：Gemini 對話 + Web Speech 語音；每語言獨立空間（首頁/儀表板/記憶/功能各自客製）。功能含五種聊天模式（打字/口說/問答知識/情境角色/限時主題）、今日計畫（每日推薦單字測驗+5閱讀+5聽力+口說+任務）、分級文法課（CEFR/JLPT/古語言量表）、技能練習與 TOEFL/IELTS/GRE 考試模擬、翻譯遊戲、YouTube/文章沉浸（讀聽後 MCQ+討論+評分）、統整記憶庫、教練每日簡報與日誌、SRS 單字、古希臘文鍵盤（打英文即時轉希臘字母）、雙 key 成本控管。Use when 改語言教練任何功能、加語言、調人設/難度/題材、改資安（OTP 登入/付費上限）、接 Gemini key、debug coach 端點或頁面。
+description: AI 語言教練（/coach）— 外語自學系統，多語言（英文 Emily / 日文 櫻子 / 通用希臘文 Sophia 上線；德法拉預留）。核心：Gemini 對話 + Web Speech 語音；每語言獨立空間（首頁/儀表板/記憶/功能各自客製）。功能含五種聊天模式（打字/口說/問答知識/情境角色/限時主題）、今日計畫（每日推薦單字測驗+5閱讀+5聽力+口說+任務）、分級文法課（CEFR/JLPT/古語言量表）、技能練習與 TOEFL/IELTS/GRE 考試模擬、翻譯遊戲、YouTube/文章沉浸（讀聽後 MCQ+討論+評分）、統整記憶庫、教練每日簡報與日誌、SRS 單字、轉寫鍵盤（希臘文打英文＝希臘字母／日文打羅馬字＝假名）、雙 key 成本控管。Use when 改語言教練任何功能、加語言、調人設/難度/題材、改資安（OTP 登入/付費上限）、接 Gemini key、debug coach 端點或頁面。
 ---
 
 > ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
@@ -52,7 +52,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 - **分級文法課**（`lang_grammar` PK user+lang+**level**）：英文 B2/C1/C2、日文 N5–N1 各一套；**Gemini 依程度自動生成**（不需手動 seed）；大綱循序 + 逐課懶生成（解說/例句/練習）+ 完成度。頁 `/coach/[lang]/grammar`。
 - **主題教程**（`lang_courses`）：可選預設或自建主題（宗教文獻精讀/學術寫作/TOEFL口說/敬語/宗教神話日語…），生成循序課表，**每課標預估分鐘**，逐課懶生成 + 進度條。頁 `/coach/[lang]/courses`；端點 courses(index/create/[id]/lesson/done)。
 - **單字 SRS**（`lang_vocab`，SM-2，`server/utils/srs.ts`）：到期佇列；review 預設選擇題（對=good 錯=again→複習）；不足時從整庫補未精熟字；`vocab/generate` 依**目前程度**生成主題詞組。
-  - **♾️ 無限刷題模式（預設開，2026-06-04）**：`review.vue` 右上開關。佇列剩 ≤4 張就背景用 `vocab/generate` 生一批新學術單字（走 NVIDIA、零成本）接到佇列尾，預抓藏延遲、本 session 去重，永不停。主題池 `THEME_POOLS` **依語言**：英文走 AWL/GRE/學術；日文走 N5/N4 基礎・日常・神社祭典等初學主題（別給日文出英文考試詞）。
+  - **♾️ 無限刷題模式（預設開，2026-06-04）**：`review.vue` 右上開關。佇列剩 ≤4 張就背景用 `vocab/generate` 生一批新學術單字（走 NVIDIA、零成本）接到佇列尾，預抓藏延遲、本 session 去重，永不停。主題池 `THEME_POOLS` **依語言**：英文走 AWL/GRE/學術；日文走 N5/N4 基礎・日常・神社祭典等初學主題（別給日文出英文考試詞）；**希臘文（grc）走 新約高頻字／約翰福音／LXX／信經術語／教父／斐羅／拜占庭 等入門題材**。`TTS_LANG` 也要補對應 BCP-47（grc=`el-GR`），否則 🔊 會用英文聲念。測過或沒過的卡都進 `lang_vocab`（generate upsert + review 記 SRS），各語言獨立列表。新增語言時兩處都要補。
 - **技能練習/考試**（`lang_tasks`）：`task/generate`（TOEFL/IELTS/GRE + 一般，聽說讀寫 + 翻譯）/ `task/[id]/answer`（選擇題自動批改、寫說/翻譯用 Gemini rubric 評分）。
 - **記憶/簡報/日誌**：`lang_memory`（跨 session 長期了解 + highlights 強弱項，注入對話）；`briefing`（今日簡報，每日快取）；`lang_journal`（教練每日日誌，日曆點閱）。
 - **難度依「目前程度」非目標**：生成都讀 `lang_progress.level`；量表 `coach.levelScale`（CEFR / JLPT / 入門初中進）；`progress.put` 設目前程度。
@@ -93,7 +93,10 @@ chat / profile(get,put) / progress(get,put) / activity / dashboard / usage / ass
 
 - 加語言：`server/utils/lang-coaches.ts` 加一筆（language/levelScale/defaultLevel/personas/scenarios/smalltalkTopics/qaTopics/systemPrompt…），設 `enabled:true`。前後端自動支援（文法課 `grammar/index.get.ts` 已泛用：`入門/初級` 自動視為初學者，依 `langLabel` 生成）。古語言設 `voiceless:true`。
 - 古語言人設定向（勿改回）：日文關東標準語、**希臘文＝神學院通用希臘文（Koine，非古典 Attic／荷馬），初學入門程度，題材＝新約／LXX／教父／信經／希臘化猶太（斐羅・約瑟夫斯）／哲學家／拜占庭官方文獻**、拉丁文教會拉丁。希臘文 `grc` 已 `enabled:true`（教練 Sophia 🦉）。
-- **古希臘文鍵盤（`keyboard:"greek"`）**：voiceless 不能語音輸入，改提供「打英文＝希臘字母」轉寫鍵盤。邏輯在 `composables/useGreekKeyboard.ts`（純函式 + `onKeydown`/`insert`，TLG **Beta Code** 對應：h=η q=θ c=ξ x=χ y=ψ w=ω f=φ；母音後按 `) ( / \ = | +` 加多調符號 polytonic；字尾 σ 自動轉 ς + NFC 正規化）。`chat.vue` 偵測 `coach.keyboard==='greek'` 顯示「⌨️ 希臘鍵盤」開關＋對照表面板，綁 textarea `@keydown`。要再加古語言鍵盤（如科普特、敘利亞文）就擴充此 composable + 在 coach 設 `keyboard`。測試見 `test/coach/lang-coaches.spec.ts`。
+- **轉寫鍵盤（`keyboard` 欄位，目前 `"greek"` / `"kana"`）**：打英文/羅馬字即時轉成目標文字。`chat.vue` 偵測 `coach.keyboard` 顯示「⌨️ 鍵盤」開關＋對照表面板，綁 textarea `@keydown`（`onInputKeydown` 依 keyboard 分派 greek/kana；Enter 前先 `kana.finalize` 收殘留 ん）。
+  - **希臘文 `composables/useGreekKeyboard.ts`**：TLG **Beta Code**（h=η q=θ c=ξ x=χ y=ψ w=ω f=φ）；母音後按 `) ( / \ = | +` 加多調符號 polytonic；字尾 σ→ς + NFC。1:1 無狀態。grc 教練用。
+  - **日文 `composables/useKanaKeyboard.ts`**：romaji→かな 迷你 IME，**有狀態**（`pendingLen` 暫存游標前未成假名的羅馬字，湊成即替換）。拗音(kya)、促音(雙子音→っ、tch)、撥音(nn→ん／n+子音→ん、`'` 分隔)、濁半濁、平/片切換(`kata` ref，+0x60)、片假名長音 `-`→ー。⚠️ 偵測 `e.isComposing`/`key==='Process'` 自動讓行，**不與系統 IME 衝突**。ja 教練用。
+  - 純函式有單元測試 `test/coach/keyboard.spec.ts`（`romajiToKana` / `normalizeSigma`）。要再加古語言鍵盤（科普特、敘利亞文…）就照 useGreekKeyboard 模式擴充 + coach 設 `keyboard`。
 
 ## 十、使用者要手動做（部署前）
 
