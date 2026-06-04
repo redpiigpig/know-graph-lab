@@ -3,7 +3,7 @@ name: gnostic-library
 description: 諾斯底主義文獻對照工具（/gnostic）— 把 The Gnostic Society Library (gnosis.org) 的文獻收進「📜 經典對照與註釋」portal 第 8 張卡片，按 gnosis.org 自己的 13 大分類瀏覽，每篇英文（站上公有領域英譯）／繁中（我逐段翻）兩欄逐段對照。架構 DB-backed，仿 [[scripture-canon-portal]] 的 /apocrypha（documents / versions / sections 三表 + N 欄 reader），翻譯走 [[ebook-translate]] 引擎，HTML 切段／去重／對齊 gate 走 scripts/gnostic_library.py（純函式，test-first）。Use when 要新增／重抓某個 gnosis.org 分類或單篇諾斯底文獻、調 /gnostic reader、補翻譯、處理與 /apocrypha（拿戈瑪第）或 /fathers（教父駁斥）重疊的去重。
 ---
 
-> ⚙️ **引擎政策（2026-06-04 更新）**：所有 LLM 工作一律**優先用 NVIDIA（輝達，`https://integrate.api.nvidia.com/v1`，預設文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避免 429）**，第二層 fallback 用 Gemini，**第三層救急才用 Haiku（NVIDIA→Gemini→Haiku；前兩個免費池都用罄時才動 Haiku）**。視覺類用 NVIDIA 視覺模型（如 `nvidia/llama-3.1-nemotron-nano-vl-8b-v1`）。
+> ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
 
 
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖任一邊超過 2000px 會炸掉整個 session。

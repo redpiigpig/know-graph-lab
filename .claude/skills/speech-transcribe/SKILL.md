@@ -3,6 +3,8 @@ name: speech-transcribe
 description: 受邀演講／學系專題講座／公開講座的完整 pipeline — 海報資訊 OCR → ffmpeg 切音 → Gemini Audio 平行轉錄（含 PPT context）→ Claude 對話內清稿 → PPT＋海報上 R2 → 寫入 public/content/speech/ 並更新 stores/speech.ts。Use when 使用者有新一場演講的「海報＋錄音＋PPT」要上架到 /speech。
 ---
 
+> ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
+
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session（"exceeds the dimension limit for many-image requests"）。使用者一說要傳截圖，立刻提醒先確認尺寸；推薦 Win+Shift+S 框選或縮到 ≤ 1920px。
 
 # 演講活動 — 海報＋錄音＋PPT → /speech 上架 Pipeline

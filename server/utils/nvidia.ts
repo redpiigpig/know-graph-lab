@@ -1,6 +1,7 @@
 // ============================================================================
 // NVIDIA NIM 呼叫工具（integrate.api.nvidia.com，OpenAI 相容）
-//   - 語言教練主引擎（無限量）：deepseek-ai/deepseek-v4-flash
+//   - 語言教練主引擎（無限量）：qwen/qwen3-next-80b-a3b-instruct（見 DEFAULT_MODEL；
+//     /coach 不可用 deepseek-v4-flash — 長期 429）
 //   - 介面對齊 gemini.ts 的 GeminiCallOpts / GeminiResult，方便 coach-ai 共用
 //   - 會把 Gemini 風格 contents（role user/model + parts）轉成 OpenAI messages
 //   - deepseek 會吐 <think>…</think> 推理區塊，回傳前剝除

@@ -711,8 +711,9 @@ def gemini_with_nvidia_fallback(source: str) -> str:
         raise
 
 
-# NVIDIA → Gemini → Haiku chain (user policy 2026-06-04, SKILL engine header):
-# NVIDIA deepseek (primary, 4-account round-robin) → Gemini (2nd) → Haiku 救急 (3rd).
+# NVIDIA-first chain — only for explicit `--engine nvidia`. The UNIFIED default
+# is Gemini-first (gemini_with_nvidia_fallback); see engine selection below.
+# NVIDIA deepseek (4-account round-robin) → Gemini (2nd) → Haiku 救急 (3rd).
 NVIDIA_FAIL_STREAK_LIMIT = 2
 NVIDIA_COOLDOWN_SECONDS = 6 * 3600
 _nvidia_consecutive_exhaust = 0
@@ -760,8 +761,8 @@ def nvidia_with_gemini_fallback(source: str) -> str:
 
 
 # Back-compat alias: existing callers import gemini_with_haiku_fallback.
-# Now points at the NVIDIA-first chain (Haiku retired 2026-06-03).
-gemini_with_haiku_fallback = nvidia_with_gemini_fallback
+# Now points at the unified Gemini-first chain (Gemini → NVIDIA → Haiku, user 2026-06-04).
+gemini_with_haiku_fallback = gemini_with_nvidia_fallback
 
 
 # ── EPUB → ordered chunks ─────────────────────────────────────────────────
@@ -950,16 +951,16 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
     elif engine == "nvidia":
         translator, model_label = nvidia_translate, NVIDIA_MODELS[0]
     elif engine == "gemini":
-        # Explicit Gemini-first chain (Gemini → NVIDIA → Haiku per-piece fallback).
+        # Explicit Gemini-first chain (== default; Gemini → NVIDIA → Haiku per-piece).
         translator, model_label = gemini_with_nvidia_fallback, "gemini-2.5-flash → nvidia → haiku"
     elif engine == "haiku":
-        # Haiku 現為第三層救急 (user 2026-06-04) — 走預設 3-tier 鏈即可。
-        translator, model_label = nvidia_with_gemini_fallback, "deepseek-v4-flash → gemini → haiku"
-    else:  # default: NVIDIA-first 3-tier (user policy 2026-06-04, SKILL engine header).
-        # NVIDIA deepseek 4-account round-robin (primary, spares Gemini/Anthropic quota)
-        # → Gemini 4 keys (2nd) → Haiku 救急 (3rd, Claude Max — only when both free dry).
-        # deepseek is NVIDIA's sole model (only one preserving paras + {{p:N}}/[^N]).
-        translator, model_label = nvidia_with_gemini_fallback, "deepseek-v4-flash → gemini → haiku"
+        # Haiku 為第三層救急 (user 2026-06-04) — 走預設 Gemini-first 3-tier 鏈即可。
+        translator, model_label = gemini_with_nvidia_fallback, "gemini-2.5-flash → nvidia → haiku"
+    else:  # default: Gemini-first 3-tier (unified API policy 2026-06-04, SKILL engine header).
+        # Gemini 4 keys (primary, fast + free) → NVIDIA deepseek 4-account round-robin (2nd)
+        # → Haiku 救急 (3rd, Claude Max — only when both free pools dry).
+        # NVIDIA's deepseek-v4-flash is its sole model preserving paras + {{p:N}}/[^N].
+        translator, model_label = gemini_with_nvidia_fallback, "gemini-2.5-flash → nvidia → haiku"
     print(f"Engine: {engine}  Model: {model_label}", flush=True)
 
     t_total = time.time()

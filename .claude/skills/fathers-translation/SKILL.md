@@ -3,7 +3,7 @@ name: fathers-translation
 description: 教父全集（Schaff ANF 10 卷 + NPNF1 14 卷 + NPNF2 14 卷 + ACCS 27 卷）中譯／精修流程。包含 CCEL EPUB packaging 問題的特殊處理、NCX-driven consolidator、multi-h3 splitter、A+B+C 三層校對、教父翻譯詞庫對接。本 skill 從 [[ebook-translate]] 分出，專責「教父原典」這一塊；ebook-translate 留給一般電子書翻譯。Use when 翻新一卷 Schaff／ACCS、補精修舊卷、`/fathers` 頁面要新增已精修書、`/translation-glossary` 詞庫要加教父詞條、Haiku 校對教父書並 backfill 名詞、處理 cross-work bleed／footnote 格式異常。
 ---
 
-> ⚙️ **引擎政策（2026-06-04 更新）**：所有 LLM 工作一律**優先用 NVIDIA（輝達，`https://integrate.api.nvidia.com/v1`，預設文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避免 429）**，第二層 fallback 用 Gemini，**第三層救急才用 Haiku（NVIDIA→Gemini→Haiku；前兩個免費池都用罄時才動 Haiku）**。視覺類用 NVIDIA 視覺模型（如 `nvidia/llama-3.1-nemotron-nano-vl-8b-v1`）。
+> ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
 
 
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session。
@@ -87,7 +87,7 @@ R2 + DB previews 同步 / /fathers 頁面標「已精修」
 EBOOK=<new-vol-ebook-id>
 
 # 1. 翻譯（已有 v4 pipeline 自動跑這幾步）
-python scripts/translate_ebook_to_zh.py $EBOOK --engine auto --resume   # auto = NVIDIA deepseek-v4-flash → Gemini 後備（Haiku 已全面停用 2026-06-03）
+python scripts/translate_ebook_to_zh.py $EBOOK --engine auto --resume   # auto = Gemini → NVIDIA deepseek-v4-flash → Haiku 救急（2026-06-04 統一 Gemini-first）
 python scripts/polish_translated_book.py $EBOOK
 python scripts/consolidate_by_ncx.py $EBOOK
 python scripts/sweep_book_quality.py $EBOOK   # 所有 T1-T3+T8
@@ -429,7 +429,7 @@ PYTHONIOENCODING=utf-8 python scripts/seed_glossary_anf_vol<N>.py
 ```
 
 **關鍵提示**：
-- **預設 `--engine auto`（2026-06-03）= NVIDIA NIM `deepseek-ai/deepseek-v4-flash` 先 → Gemini 後備**；2-strike + 6h cooldown 仍在（NVIDIA 連兩次掛 → 轉 Gemini-only 6h 再回探）。**Haiku 全面停用**（`--engine haiku` 會 redirect 到 auto 並印警告）。見 [[feedback-nvidia-engine-haiku-retired]]。
+- **預設 `--engine auto` = Gemini → NVIDIA NIM `deepseek-ai/deepseek-v4-flash` → Haiku 救急（三層，2026-06-04 統一 Gemini-first）**；每層 2-strike + 6h cooldown（連兩次掛 → 退下一層 6h 再回探）。`--engine haiku` redirect 到 auto。見 [[feedback-nvidia-engine-haiku-retired]]。
 - ⚠️ **NVIDIA 只能用 deepseek-v4-flash**：唯一保留段落對齊 + `{{p:N}}`/`[^N]` marker 的；qwen3-next/llama-3.3 雖快但段落崩、marker 壞，不可當 NVIDIA 主力。
 - 並行多卷時兩卷切不同 engine 分散 quota（如一卷 auto、一卷 gemini）；**同一卷切勿開兩個 process**（race 同一 JSONL → dual-state bug）
 - B-layer 跟翻譯不要同時跑（都搶 Anthropic quota）
@@ -571,19 +571,19 @@ auto-push。**git 在 master 跑教父**（user 拍板；feat/language-coach 是
     繁中 + parent_volume 樹，比照 `_fix_vol30_jerome.py`）→ consolidate_letters → validate → test_fathers_quality → REFINED_IDS。
 
 ### ⚙️ 引擎現況（2026-06-04 重做 — 3-tier）
-- 預設 **NVIDIA → Gemini → Haiku**（user 2026-06-04 政策；見本檔頂 line 6 引擎政策 header）。
-  - **NVIDIA**（主）deepseek-v4-flash，**4 帳號 key round-robin + 每 key 429 cooldown 120s + 全域 6s 節流**。
+- 預設 **Gemini → NVIDIA → Haiku**（user 2026-06-04 統一政策「gemini 優先，然後 nvidia，最後 haiku」；見本檔頂 line 6 引擎政策 header）。
+  - **Gemini**（主）4 keys，**每日太平洋午夜重置 ≈ 台灣 15:00**；撞牆退 NVIDIA。
+  - **NVIDIA**（2nd）deepseek-v4-flash，**4 帳號 key round-robin + 每 key 429 cooldown 120s + 全域 6s 節流**。
     `NVIDIA_MODELS=["deepseek-ai/deepseek-v4-flash"]`（唯一保留段落對齊 + {{p:N}}/[^N] marker 的模型；
     qwen3-next 雖快但壓段落、毀 marker，**勿用**）。⚠️ **單帳號免費為「一次性/月 credit」非每日**，4 帳號約
     40 分鐘全耗盡，過夜不一定回血。
-  - **Gemini**（2nd）4 keys，**每日太平洋午夜重置 ≈ 台灣 15:00**。
   - **Haiku**（3rd 救急）走 Claude Max OAuth，**前兩池都乾才動**；batch 久了 Anthropic 帳號也會 429
     （跟互動用量互搶），慢但能擠出。`_secondary`/`_gemini_or_haiku` helper。
 - **G: Drive 寫入已韌性化**（`_drive_write`，2026-06-04）：Drive 斷線會退避重試（最多 ~30min）等 remount，
   不再 FileNotFoundError 硬崩。**踩過：6/04 上午 G: 掉線害 translate 崩在第 8 chunk**。
 - 2026-06-03→04 引擎演進記錄：原 gemini→haiku → 試 nvidia-first（單 key 429/timeout 退回 gemini-first）
-  → user 加 4 NVIDIA 帳號 → user 加 Haiku 第三層 + 政策定 NVIDIA-first → 現 3-tier。相關 commit
-  `5aa6fe9`(4-key round-robin)、Haiku 復活、NVIDIA-first、G: 韌性。
+  → user 加 4 NVIDIA 帳號 → user 加 Haiku 第三層（一度定 NVIDIA-first）→ **2026-06-04 user 改回統一 Gemini-first（Gemini→NVIDIA→Haiku）**。相關 commit
+  `5aa6fe9`(4-key round-robin)、Haiku 復活、G: 韌性。
 
 ### ⚙️ 操作鐵則（踩過的坑，務必遵守）
 1. **每卷上架前跑 `python scripts/test_fathers_quality.py <id>` 綠燈才算數**（G1 validate 0 FAIL /

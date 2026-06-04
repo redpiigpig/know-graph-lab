@@ -3,7 +3,7 @@ name: collected-works-multilang
 description: 多卷「全集」(Gesammelte Werke / Collected Works / 全集) 的「3 欄以上多語對照」翻譯與呈現流程。跟 [[ebook-translate]]（一般外文→繁中，雙語）和 [[fathers-translation]]（公有領域教父原典）並列，本 skill 專責「同一部作品有多個語言版本（原文＋既有譯本＋我的繁中）要逐段對齊、N 欄並陳」這一塊。處理三件 ebook-translate 不處理的事：(1) 多卷套書當成一個 corpus 統一 volume/parent_volume 樹；(2) source_text/source_lang 單一來源 → `sources` 多來源 schema；(3) 獨立編輯的不同語言版本「逐段對不齊」的對齊問題。Use when 使用者要把一部全集（榮格全集、佛洛伊德全集、馬克思恩格斯全集、某神學家德文＋英文＋中文…）做成原文/譯本/繁中多欄對照上架；要擴充 reader 的多欄切換；要設計或修多語 JSONL schema；要對齊跨版本段落。第一個案例＝榮格全集（德 GW＋英 CW＋繁中），見 [jung_collected_works.md](jung_collected_works.md)。
 ---
 
-> ⚙️ **引擎政策（2026-06-04 更新）**：所有 LLM 工作一律**優先用 NVIDIA（輝達，`https://integrate.api.nvidia.com/v1`，預設文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避免 429）**，第二層 fallback 用 Gemini，**第三層救急才用 Haiku（NVIDIA→Gemini→Haiku；前兩個免費池都用罄時才動 Haiku）**。視覺類用 NVIDIA 視覺模型（如 `nvidia/llama-3.1-nemotron-nano-vl-8b-v1`）。
+> ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
 
 
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session。

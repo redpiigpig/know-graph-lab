@@ -3,6 +3,8 @@ name: thesis-interview
 description: 把碩士論文口述訪談的「音檔」整理成符合 /thesis?tab=interviews 上架格式的繁體中文逐字稿。Gemini Audio 轉錄 → Claude 在對話中整理 Q&A、分節、補前言三段 → 寫入 public/content/interviews/ → 更新 stores/thesisInterviews.ts。Use when 使用者指明某位受訪者要把音檔轉成正式紀錄並上架，或要重做某位現有訪談紀錄的清理工作。
 ---
 
+> ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
+
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session（"exceeds the dimension limit for many-image requests"）。使用者一說要傳截圖，立刻提醒先確認尺寸；推薦 Win+Shift+S 框選或縮到 ≤ 1920px。
 
 # 碩士論文口述訪談 — 音檔轉文字檔 + 整理 Pipeline

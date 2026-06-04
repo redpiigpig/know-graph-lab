@@ -91,7 +91,8 @@ def existing_en_titles() -> list[str]:
 def make_engine(engine: str):
     import translate_ebook_to_zh as te
     te.PROMPT_TMPL = GNOSTIC_PROMPT_TMPL
-    # Haiku 全面停用 (2026-06-03): default chain = Gemini → NVIDIA fallback.
+    # 本工具預設 Gemini → NVIDIA fallback（per-tool 選擇，與全域 NVIDIA-first 不同；
+    # Haiku 2026-06-04 已復活為全域第三層救急，但此 ingest 鏈未納入）。
     fn = {
         "gemini": te.gemini_with_nvidia_fallback,
         "nvidia": te.nvidia_translate,

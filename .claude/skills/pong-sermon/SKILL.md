@@ -3,6 +3,8 @@ name: pong-sermon
 description: 龐君華牧師講道集所有相關流程合一 SKILL — ① Re-transcribe（YouTube→Whisper→Claude 清理→DB，處理 城中教會講道_YYYY.txt 的 ⏳ 未完成）② Polish（auto-cleaned 粗稿→publication 品質）③ Standardize（speaker label / preacher / occasion / title / scripture_ref backfill / 段落重組）④ Photo metadata（程序單照片→title / worship_team / songs / occasion / sermon_type backfill + non-Sunday calendar wire-up）。Trigger 例：「重做 2013 transcripts」「⏳ 未完成」「這篇 2024 太粗糙」「跑全集統一格式」「這份程序單對應 YYYY-MM-DD」「服事人員名單放到該場」。
 ---
 
+> ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
+
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session。一說要傳截圖立刻提醒先確認尺寸；推薦 Win+Shift+S 或縮到 ≤ 1920px。
 
 # 龐君華 講道集 — 全工作流 SKILL

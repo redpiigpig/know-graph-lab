@@ -3,7 +3,7 @@ name: ebook-translate
 description: 將外文 ebook 翻譯／轉成繁體中文並入庫（reader 可讀）的完整流程。涵蓋兩條子 pipeline — (A) **英文 → 繁中（雙語入庫）**：Sonnet 4.6 或 Gemini Flash 章節級翻譯，原文 source_text 同步存進 JSONL，reader 提供「中／中英對照／英」三段切換；(B) **簡體 → 繁體（直接取代）**：opencc s2tw + TRAD_FIXES，不用 LLM，覆寫 content 不保留 source_text。Use when 使用者要把英文 ebook 翻成中文上架（例 ACCS Apocrypha、未中譯的 Schaff 卷）、補 ACCS 缺的中譯卷（vol 24-25 耶利米/哀歌等），或把舊有簡體書批次轉成繁體。本 skill 與 ebook-pipeline 並列：ebook-pipeline 處理 parse/OCR/standardize，本 skill 處理「外文／簡體 → 繁中」這一段。
 ---
 
-> ⚙️ **引擎政策（2026-06-04 更新）**：所有 LLM 工作一律**優先用 NVIDIA（輝達，`https://integrate.api.nvidia.com/v1`，預設文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避免 429）**，第二層 fallback 用 Gemini，**第三層救急才用 Haiku（NVIDIA→Gemini→Haiku；前兩個免費池都用罄時才動 Haiku）**。視覺類用 NVIDIA 視覺模型（如 `nvidia/llama-3.1-nemotron-nano-vl-8b-v1`）。
+> ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
 
 
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session。使用者一說要傳截圖立刻提醒先確認尺寸。
@@ -79,13 +79,10 @@ push R2 + PATCH ebooks (chunk_count, standardized_at) + refresh ebook_chunks pre
 python scripts/translate_ebook_to_zh.py <ebook_id> --inspect
 
 # 跑 3 個 chunk 試水溫
-python scripts/translate_ebook_to_zh.py <ebook_id> --engine sonnet --limit 3
+python scripts/translate_ebook_to_zh.py <ebook_id> --engine auto --limit 3
 
-# 完整跑（中斷可 --resume）
-python scripts/translate_ebook_to_zh.py <ebook_id> --engine sonnet --resume
-
-# 也可改用 Gemini Flash（quota 與 OCR 不衝突）
-python scripts/translate_ebook_to_zh.py <ebook_id> --engine gemini --resume
+# 完整跑（中斷可 --resume）；auto = NVIDIA → Gemini → Haiku 救急
+python scripts/translate_ebook_to_zh.py <ebook_id> --engine auto --resume
 ```
 
 `--resume` 機制：on-disk JSONL 用 append-mode 寫，每完成一個 chunk 立刻 flush。再啟動時讀 JSONL，**match 是用 `title_en`（英文 source heading），不是 `chapter_path`**（後者是已翻譯成中文的 H2，永遠對不上 source iter 的英文 title）。所以中斷／kill 不會丟進度，重啟也不會重做。
@@ -101,28 +98,24 @@ python scripts/translate_ebook_to_zh.py <ebook_id> --engine gemini --resume
 
 ## 引擎選擇
 
-三個 `--engine` 選項：
+**預設一律 `--engine auto`** = 統一三層 fallback：**Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋節流）→ Haiku 救急**。其餘 `--engine` 選項只在特殊狀況才手動指定：
 
 | 引擎 | 何時用 | 注意 |
 |---|---|---|
-| **sonnet** (`SONNET_MODEL`) | 神學術語準確度最高（idle 期最佳）| OAuth；**跟互動 Claude Code (Opus/Sonnet) 共用 Max 帳號 burst rate**，互動中啟 Sonnet worker 立刻 429（2026-05-21 實測），idle 期才能用 |
-| **gemini** (`gemini-2.5-flash`) | 預設；OCR 不在跑、Gemini quota 寬時 | 4 key rotation；free tier 250 RPD × 4 keys；**遇 "all keys exhausted" 自動 fallback 到 Haiku 該段**（per-piece，不是 per-chunk）；**2 次連續耗盡 → Haiku-only 模式 6 小時**（見下） |
-| **haiku** (`HAIKU_MODEL`) | Gemini 已撞牆、不想浪費 ~70s/chunk 等 4 把 key 退讓 | OAuth；跟 Sonnet 同帳號但實測限額比 Sonnet 鬆很多 — 我互動跑 Opus + worker 跑 Haiku 可並行；偶爾撞 "exceed account rate limit" 由 auto-pause 接住 |
+| **auto**（預設） | 幾乎所有情況 | Gemini 主力，撞牆自動退 NVIDIA→Haiku，不需人工切換 |
+| **gemini** | == 預設鏈，想顯式標明 | 4 key rotation；free tier 250 RPD × 4 keys；撞牆自動退到 NVIDIA→Haiku |
+| **nvidia** | 並行多卷時把另一卷分流到 NVIDIA 池，或 Gemini 全乾 | ⚠️ **只能 deepseek-v4-flash**：唯一保留段落對齊 + `{{p:N}}`/`[^N]` marker；qwen3-next/llama-3.3 段落會崩、marker 會壞 |
+| **haiku** | （已 redirect 到 auto） | 第三層救急，由 auto 自動觸發，通常不需手動指定 |
+| **sonnet** | idle 期、單篇要最高神學術語品質、預算寬 | OAuth；跟互動 Claude Code 共用 Max 帳號 burst rate，互動中啟立刻 429，idle 期才能用 |
 
-**規則**（2026-05-23 update — Schaff 全集實測）：
-- **大批次（>2 本書 / >500 chunks 連跑）→ 直接 `--engine haiku`**。Gemini free tier 4 key × 250 RPD ≈ 1000 chunks 就撞牆，之後每 chunk 浪費 ~60s 跑 4×3=12 次 429 retry 才 fallback。實測 ANF Vol 1：Gemini→Haiku fallback ~72s/chunk vs 直接 Haiku ~5s/chunk（**14x 加速**）。
-- 單本書 / 小批次 / 不確定 → `--engine gemini`（有 Haiku fallback 保底，反正撞牆會自動切）
-- 使用者在 idle 期、單篇要最高品質、預算寬 → `--engine sonnet`
+**規則**：
+- 大批次、小批次、不確定 → 一律 `--engine auto`（Gemini 主、三層自動退讓）
+- 並行多卷時可把其中一卷切 `--engine nvidia` 分散 quota；**同一卷切勿開兩個 process**（race 同一 JSONL → dual-state bug）
 - 一律先看 [Quota 協調](#quota-協調) 確認狀態
 
-### Gemini→Haiku 2-strike + 6h cooldown 全域規則（2026-05-29）
+### 2-strike + 6h cooldown 全域規則
 
-`translate_ebook_to_zh.py` 內建：以 Gemini 為主，**連續 2 次跑完所有 Gemini key 都耗盡（429/throttle/exhausted）就立刻切到 Haiku-only 模式，整整 6 小時內不再試 Gemini**；6 小時後下一個 chunk 自動探一次 Gemini，成功則 streak 歸零、cooldown 解除。
-
-- 計數變數：`GEMINI_FAIL_STREAK_LIMIT = 2`、`GEMINI_COOLDOWN_SECONDS = 6 * 3600`
-- 程式碼位置：`scripts/translate_ebook_to_zh.py` `gemini_with_haiku_fallback()`
-- 目的：避免「每個 chunk 浪費 ~70s 重複試 12 次才 fallback」的反覆消耗
-- 同樣的規則語義也應該套到任何 Gemini→Haiku fallback 的轉錄 pipeline（OCR / 音檔轉錄等）— 詳見 [[ebook-pipeline]] 的「跨腳本 Gemini→Haiku 2-strike 規範」段落
+`translate_ebook_to_zh.py` 內建：每一層連續 2 次耗盡（429/throttle/exhausted）就跳下一層，並對該層上 6 小時 cooldown；cooldown 後下一個 chunk 自動探一次，成功則 streak 歸零、cooldown 解除。目的是避免「每個 chunk 浪費 ~70s 重複試十幾次才 fallback」的反覆消耗。同樣語義也套到任何轉錄 pipeline（OCR／音檔轉錄）— 詳見 [[ebook-pipeline]] 的「跨腳本 2-strike 規範」段落。
 
 ## Quota 協調
 

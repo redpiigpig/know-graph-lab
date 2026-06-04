@@ -3,7 +3,7 @@ name: research-review
 description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/works 論文計畫頁底「研究回顧」分頁）— 把一篇研討會論文升級改寫成期刊論文時，附一份結構化文獻綜述：30+ 筆書目（作者／年／題／刊／語言／所屬面向／立場／摘要／全文連結），按 4 大主題脈絡分組；開放取用的外文文獻再抓全文逐段切段、逐段翻成繁中，左欄逐段中譯／右欄原文（英、德…）兩欄對照。架構仿 [[gnostic-library]]（documents/versions/sections 三表 + N 欄 reader），翻譯走 [[ebook-translate]] 引擎，解析／切段／對齊 gate 走 scripts/lit_review.py（純函式，test-first）。同時把 /works 拆成「書籍寫作 / 論文寫作」兩區。Use when 要把某篇研討會論文放進論文寫作計畫並做文獻綜述、新增／重抓某筆文獻全文、調研究回顧 reader、補逐段翻譯、把 /works 分書籍/論文。
 ---
 
-> ⚙️ **引擎政策**：LLM 翻譯走 [[ebook-translate]] 既有 pipeline（章節級 Sonnet/Gemini + 逐段對齊 gate）。本 skill 不重造引擎、quota 協調、fallback。
+> ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
 
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：任一邊超過 2000px 會炸掉整個 session。
 

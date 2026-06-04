@@ -3,6 +3,8 @@ name: papal-magisterium
 description: 教宗訓導文獻對照工具（/encyclicals）— 4 世紀 Damasus I 至今的教宗通諭／使徒勸諭／使徒憲令／自動詔書／使徒書信／演說／講道，三欄逐段對照（拉丁／英文／中文）。按世紀分組瀏覽；與 `/scripture-canon` portal 第 7 卡片串接。架構與 [[scripture-canon-portal]] 的 `/creeds` 同源，重用 paragraphParser.ts + alignDocs() + textLoader.ts；資料源走「vatican.va + papalencyclicals.net + DCO + Migne PL + Schaff NPNF」五層 fallback；與 [[fathers]] 在 4-7c 教宗自然重疊（同一文件雙邊收，依用途不同呈現）。
 ---
 
+> ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
+
 # Papal Magisterium — 教宗訓導文獻對照
 
 ## 0. 現況（2026-05-29 round 6 結束）

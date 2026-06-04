@@ -3,7 +3,7 @@ name: dialogue-to-writing-project
 description: 把 /ai-dialogues 裡某一條「跨多日延續的 AI 對話串」找出來、整理成 /works 的寫作計畫成品。涵蓋：①依「對話框語氣」逐則認定一條 thread（不是靠關鍵字）②在 /ai-dialogues 建分類標籤把整串標起來不漏 ③把 AI 回覆用 NVIDIA 潤飾成流暢「對話錄」④每日切 1–3 個主題 ⑤組裝成可編輯的 /works 月份卡片（日期+星期+主題+雙方對話）。Use when 使用者說「把我跟某 AI 從 X 月到 Y 月那串對話找出來／做成寫作計畫／整理成對話錄」、要把 ai_dialogues_gemini／chatgpt 的某主題串標分類、要把對話潤飾分主題上 /works。第一個案例＝[[project_krishna_dialogues]]（與克里須那談夢境與榮格，671 則）。
 ---
 
-> ⚙️ **引擎政策（2026-06-04）**：LLM 一律 **NVIDIA（輝達 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流）→ Gemini → Haiku（最後救急）**。見 [[feedback_engine_nvidia_no_haiku]]。
+> ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
 
 # 對話串 → 寫作計畫 Skill
 
@@ -67,4 +67,4 @@ description: 把 /ai-dialogues 裡某一條「跨多日延續的 AI 對話串」
 
 ## See also
 - [[project_krishna_dialogues]] — 首案：與克里須那對話（671 則、4 張月份卡片）
-- [[feedback_engine_nvidia_no_haiku]] — NVIDIA→Gemini→Haiku 引擎政策＋多 key 節流
+- [[feedback_engine_nvidia_no_haiku]] — Gemini→NVIDIA→Haiku 統一引擎政策＋多 key 節流

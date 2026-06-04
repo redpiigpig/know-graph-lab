@@ -22,7 +22,7 @@ from opencc import OpenCC
 
 ROOT = Path(__file__).resolve().parents[2]
 TMP = ROOT / "tmp_sermon"
-cc = OpenCC("s2t")
+cc = OpenCC("s2tw")  # 台灣正體（與全 repo 一致；s2t 缺台灣慣用詞轉換）
 
 # Common Whisper mistranscriptions for Chinese sermons
 FIXES = {

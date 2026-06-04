@@ -67,16 +67,6 @@
           <span class="tool-badge bg-indigo-50 text-indigo-600">可用</span>
         </NuxtLink>
 
-        <!-- 概念筆記 -->
-        <NuxtLink :to="user ? '/concepts' : '/login'" class="tool-card group border-cyan-100 hover:border-cyan-300 hover:shadow-cyan-100">
-          <div class="tool-icon bg-cyan-50 text-cyan-600">🕸️</div>
-          <div class="flex-1">
-            <h2 class="tool-title">概念筆記</h2>
-            <p class="tool-desc">原子化筆記與雙向連結，織成概念網絡</p>
-          </div>
-          <span class="tool-badge bg-cyan-50 text-cyan-600">可用</span>
-        </NuxtLink>
-
         <!-- AI 對話錄 -->
         <NuxtLink :to="user ? '/ai-dialogues' : '/login'" class="tool-card group border-indigo-100 hover:border-indigo-300 hover:shadow-indigo-100">
           <div class="tool-icon bg-indigo-50 text-indigo-600">💬</div>

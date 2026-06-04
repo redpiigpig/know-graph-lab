@@ -87,7 +87,7 @@ function recordUsage(ctx: CoachCtx, tier: Tier, result: GeminiResult) {
 
 /**
  * 語言教練專用 AI 呼叫。回傳純文字。
- * 主引擎：NVIDIA NIM（deepseek-v4-flash，無限量、零成本）；失敗才落到 Gemini。
+ * 主引擎：NVIDIA NIM（qwen3-next，無限量、零成本；/coach 不可用 deepseek-v4-flash 長期 429）；失敗才落到 Gemini。
  * Gemini 額度用完時：免費 → 429 code=free_exhausted（前端提示切換）；付費 → 429 code=paid_exhausted。
  * 成功時把 token 用量累加進 lang_api_usage。
  */

@@ -3,6 +3,8 @@ name: photo-library
 description: 「照片庫」多相簿管理系統 — 三個 Drive 相簿（辰瑋／訓練／弘誓）+ /photos 網站瀏覽 + 自動分類腳本（classify_photos.py）+ 統一日期 rename 腳本（rename_photos.py）。Use when 新增一批照片要分月份／截圖／下載歸位、要新增事件資料夾、要在 /photos 加新功能（icon、filter、event tile）、調整分類規則、修網站 photo viewer、把整個資料夾的檔名統一成 `YYYY-MM-DD(N)` 格式、或當使用者問「照片在哪／怎麼整理」。
 ---
 
+> ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
+
 # 照片庫 — Drive 結構 + /photos 網站
 
 > Drive 父目錄：`G:/我的雲端硬碟/資料/儲存資料夾/`
