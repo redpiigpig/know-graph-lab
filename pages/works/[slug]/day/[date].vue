@@ -53,7 +53,7 @@ const pending = ref(true)
 const error = ref(false)
 const unauth = ref(false)
 
-useHead(() => ({ title: day.value ? `${day.value.day_title} — 與克里須那對話` : '每日對話' }))
+useHead(() => ({ title: day.value ? `${day.value.day_title} — 與克里希那對話` : '每日對話' }))
 
 async function load() {
   pending.value = true; error.value = false; unauth.value = false
@@ -88,16 +88,26 @@ watch([date, () => user.value], load)
 
 <style scoped>
 .dialogue-day :deep(h1) { display: none; }
-.dialogue-day :deep(h2) {
-  font-size: 1.35rem; font-weight: 700; color: #111827;
-  margin: 0 0 1.2em; padding-bottom: 0.5em; border-bottom: 2px solid #ede9fe;
-}
+/* 日期標題（h3） */
 .dialogue-day :deep(h3) {
+  font-size: 1.15rem; font-weight: 700; color: #111827;
+  margin: 0 0 1.1em; padding-bottom: 0.45em; border-bottom: 2px solid #ede9fe;
+}
+/* 主題小標（h4） */
+.dialogue-day :deep(h4) {
   font-size: 0.8rem; font-weight: 600; color: #7c3aed; letter-spacing: 0.05em;
   margin: 1.8em 0 0.8em; padding-left: 0.6em; border-left: 3px solid #c4b5fd;
 }
+/* 段落：預設整段縮排兩字（接續發言的第二段以後） */
 .dialogue-day :deep(p) {
   margin: 0 0 0.9em; line-height: 1.9; color: #374151; font-size: 15.5px;
+  margin-left: 2em;
 }
-.dialogue-day :deep(p strong) { color: #6d28d9; font-weight: 600; }
+/* 講者起首那段：第一行頂格（接著講者名），折行縮排兩字 */
+.dialogue-day :deep(p:has(strong.speaker)) {
+  margin-left: 0; padding-left: 2em; text-indent: -2em;
+}
+.dialogue-day :deep(strong.speaker) { color: #6d28d9; font-weight: 700; }
+/* 段內強調（原 markdown **）維持深色，不誤判成講者 */
+.dialogue-day :deep(p strong:not(.speaker)) { color: #4b5563; font-weight: 600; }
 </style>
