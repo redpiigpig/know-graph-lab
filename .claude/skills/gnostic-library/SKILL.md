@@ -32,7 +32,32 @@ description: 諾斯底主義文獻對照工具（/gnostic）— 把 The Gnostic 
 - ✅ **reader + API + portal 卡片** — [pages/gnostic/index.vue](../../../pages/gnostic/index.vue)（13 分類 tab + 搜尋）/ [pages/gnostic/[slug].vue](../../../pages/gnostic/[slug].vue)（英中兩欄逐段 + 分類側欄）/ [server/api/gnostic/*.get.ts](../../../server/api/gnostic/)（documents / document / versions / search）/ [lib/gnostic-meta.ts](../../../lib/gnostic-meta.ts) 共用分類 meta；portal 第 8 張卡片 🜍
 - ✅ **ingest 驅動腳本** — [scripts/ingest_gnostic.py](../../../scripts/ingest_gnostic.py)（`--list` / `--category` / `--url` / `--limit-paras` / `--limit-docs` / `--dry-run`）
 - ✅ **pilot 實證** — Poemandres（赫密士文集，Mead 1906 PD）前 6 段英→繁中翻譯 + upsert 成功，DB 對齊正確（中譯品質佳，術語括註如 執政官（Archon））
-- ⬜ **全量轉錄**：核心諾斯底各分類整批跑（建議過夜，gemini→haiku fallback 已驗證會自動接手）；reader 瀏覽器渲染尚未截圖驗證
+- ✅ **reader 截圖實證**（2026-06-03）：list（中文篇名卡片）+ reader（中左英右兩欄逐段）都正確。
+- 🔄 **全量轉錄進行中**（**2026-06-04 暫停，下個 session 接手**）：見下方「轉錄進度 + 接手」。
+
+### 🔖 轉錄進度 + 接手 runbook（2026-06-04 暫停點）
+
+**目前 DB**：**44 篇 / 4,020 段繁中** —
+- ✅ `hermetica` 赫密士文集 **30 篇全完成**
+- 🔄 `mead` G.R.S. Mead 文集 **14 篇**（含《密特拉密儀》中途；該篇 303 段翻到 ~65）
+- ⬜ 其餘 11 類**完全未開始**：gnostic_scriptures / valentinus / manichaean / mandaean / cathar / alchemical / modern / polemics(去重) / christian_apocrypha(去重) / dead_sea(去重) / nag_hammadi
+
+**接手指令（單一指令即可續跑）**：
+```bash
+bash scripts/gnostic_resume_loop.sh        # 自癒迴圈：--all --resume，跑完/卡住自動睡 45min 重試
+# 或單輪：python -X utf8 scripts/ingest_gnostic.py --all --resume --engine gemini
+```
+- **單一實例守衛**：迴圈用 `c:/tmp/gnostic_loop.lock`，已在跑就拒啟動（防殭屍累積搶 key）。停止用 PowerShell 殺 `resume_loop.sh`/`ingest_gnostic.py` 程序 + 刪 lock。
+- **`--resume` 跳過已入庫篇**，安全重跑。
+
+**引擎鏈（3 層，user 2026-06-04 定案）**：`--engine gemini` = **Gemini 4 key → NVIDIA deepseek-v4-flash（4 帳號 round-robin）→ Haiku 救急**。各層 2-strike + cooldown；deepseek 是 NVIDIA 唯一安全模型（其餘崩段/壞 marker）。詳見 [[ebook-translate]] `translate_ebook_to_zh.py`。⚠️ **三池都有每日上限**：一夜重度跑會三池全乾（429），靠迴圈睡 45min 等重置自癒；別同時開多個迴圈（會互相搶爆配額）。
+
+**翻譯品質防護（都已上線）**：
+- **術語鎖定**：`GNOSTIC_PROMPT_TMPL` 內嵌 35 條權威譯名表（普累若麻/移涌/巨匠造物主/執政者/索菲亞/雅達巴沃…，依張新樟《諾斯替宗教》+ 中文維基），同步入 `/translation-glossary` 神祇與宗教名詞（religion=諾斯底）。新詞補在 `scripts/seed_gnostic_glossary.py`。
+- **prompt-echo 防護**：`_looks_like_prompt_echo`（deepseek 對 trivial 輸入照抄指示 → 重試 2 次退回原文）。
+- **trivial 來源不送 LLM**：`is_trivial_source`（頁碼 `p.126`/引註/純數字 → 逐字保留，根絕幻覺）。修既有用 `scripts/fix_gnostic_echoes.py` / `fix_gnostic_trivial.py`。
+- **中文篇名**：`TITLE_ZH` 策展表 + `translate_title` 引擎兜底；既有篇名已 backfill 中文。
+- 殘留：echo 約 1 段、reader 截圖只驗過 Poemandres/Pymander/Mithra。
 
 ### 版權實證補記
 - gnosis.org 的 **Nag Hammadi 現代英譯（Meyer / Barnstone / Lambdin 等）皆有版權**（拿戈瑪第 1945 才出土，無 PD 英譯）→ 入庫須視為私人研究（站台本就 auth-gate），`source_url` 標 gnosis.org。
