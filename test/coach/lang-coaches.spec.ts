@@ -52,6 +52,12 @@ describe("教練設定 lang-coaches", () => {
     expect(la.accent).toContain("教會拉丁");
     expect(la.systemPrompt).toContain("不是古典");
     expect(la.keyboard).toBeUndefined();
+    // 希伯來文＝舊約聖經希伯來文（非現代），希伯來鍵盤、voiceless
+    const hbo = getCoach("hbo")!;
+    expect(hbo.langLabel).toBe("聖經希伯來文");
+    expect(hbo.systemPrompt).toContain("不是現代");
+    expect(hbo.keyboard).toBe("hebrew");
+    expect(hbo.voiceless).toBe(true);
   });
 
   it("en/ja 啟用；古語言 voiceless", () => {

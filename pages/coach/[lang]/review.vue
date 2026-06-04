@@ -142,10 +142,21 @@ const THEME_POOLS: Record<string, { presets: string[]; auto: string[] }> = {
       "中世紀大學與七藝常用字", "聖徒傳與編年史常用字",
     ],
   },
+  // 聖經希伯來文（Biblical，入門）：以舊約為起點，擴及昆蘭／拉比／中世紀註釋
+  hbo: {
+    presets: ["創世記常用字", "舊約高頻字", "希伯來文代名詞與介係詞", "詩篇常用字", "動詞 binyanim 入門", "聖經人名與地名"],
+    auto: [
+      "舊約（Tanakh）高頻字（前 100）", "創世記核心字彙", "出埃及記核心字彙", "詩篇常用字",
+      "希伯來文代名詞・介係詞・冠詞", "連接詞 vav 與敘述式", "常用三母音字根",
+      "動詞詞幹 binyanim（Qal／Niphal／Piel…）入門", "先知書常用字", "智慧文學（箴言／約伯）常用字",
+      "聖殿與禮儀詞彙", "死海古卷（昆蘭）常用字", "米示拿／拉比希伯來文入門字",
+      "中世紀希伯來文聖經註釋常用字", "聖經人名與地名",
+    ],
+  },
 };
 const pool = computed(() => THEME_POOLS[language.value] || THEME_POOLS.en);
 const PRESETS = computed(() => pool.value.presets);
-const TTS_LANG: Record<string, string> = { en: "en-US", ja: "ja-JP", grc: "el-GR", la: "it-IT" };
+const TTS_LANG: Record<string, string> = { en: "en-US", ja: "ja-JP", grc: "el-GR", la: "it-IT", hbo: "he-IL" };
 
 const route = useRoute();
 const language = computed(() => route.params.lang as string);

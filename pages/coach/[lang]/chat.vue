@@ -71,6 +71,7 @@
           <div v-for="(m, i) in messages" :key="m.id || i" class="flex" :class="m.role === 'user' ? 'justify-end' : 'justify-start'">
             <div class="max-w-[80%]">
               <div
+                dir="auto"
                 class="px-3.5 py-2.5 rounded-2xl text-sm leading-relaxed whitespace-pre-wrap"
                 :class="m.role === 'user' ? 'bg-indigo-600 text-white rounded-br-md' : 'bg-white border border-gray-100 text-gray-800 rounded-bl-md shadow-sm'"
               >
@@ -105,14 +106,14 @@
         <div class="border-t border-gray-100 bg-white px-3 py-2.5 flex-shrink-0">
           <div v-if="speechErr" class="text-[11px] text-rose-500 mb-1.5 px-1">{{ speechErr }}</div>
 
-          <!-- 轉寫鍵盤工具列（希臘文 / 日文假名） -->
-          <div v-if="greekKb || kanaKb" class="flex items-center flex-wrap gap-2 mb-2 px-0.5">
+          <!-- 轉寫鍵盤工具列（希臘文 / 日文假名 / 希伯來文） -->
+          <div v-if="greekKb || kanaKb || hebrewKb" class="flex items-center flex-wrap gap-2 mb-2 px-0.5">
             <button
               @click="kbOn = !kbOn"
               class="text-xs px-2.5 py-1 rounded-lg border transition flex items-center gap-1"
               :class="kbOn ? 'bg-amber-50 border-amber-300 text-amber-800' : 'bg-white border-gray-200 text-gray-400'"
-              :title="greekKb ? '打英文字母即時轉成希臘字母（Beta Code）' : '打羅馬字即時轉成假名（系統 IME 組字時自動讓行）'"
-            >⌨️ {{ greekKb ? '希臘鍵盤' : '假名鍵盤' }} {{ kbOn ? '開' : '關' }}</button>
+              :title="greekKb ? '打英文字母即時轉成希臘字母（Beta Code）' : (kanaKb ? '打羅馬字即時轉成假名（系統 IME 組字時自動讓行）' : '打英文字母即時轉成希伯來字母（由右至左）')"
+            >⌨️ {{ greekKb ? '希臘鍵盤' : (kanaKb ? '假名鍵盤' : '希伯來鍵盤') }} {{ kbOn ? '開' : '關' }}</button>
 
             <!-- 假名：平/片切換 -->
             <button
@@ -128,6 +129,7 @@
             </button>
             <span v-if="kbOn && greekKb" class="text-[11px] text-gray-400">打 a→α、h→η、q→θ、w→ω…；母音後按 ) ( / \ = | + 加符號</span>
             <span v-if="kbOn && kanaKb" class="text-[11px] text-gray-400">打羅馬字如 sakura→さくら；ん打 nn、っ打雙子音、' 分隔（kon'nichiwa）</span>
+            <span v-if="kbOn && hebrewKb" class="text-[11px] text-gray-400">打 a→א、b→ב、w→ש、x→ח…（由右至左）；字尾自動 sofit；母音點在對照表點選</span>
           </div>
 
           <!-- 希臘文對照表 + 點選面板 -->
@@ -172,6 +174,32 @@
             <p class="text-[11px] text-sky-800/70 mt-1.5">點選直接插入；或直接打羅馬字。濁音／拗音直接打（ga、kya、sha…），片假名長音打 -</p>
           </div>
 
+          <!-- 希伯來文對照表 + 點選面板（含母音點 niqqud） -->
+          <div v-if="hebrewKb && showKbHelp" class="mb-2 p-2.5 rounded-xl bg-emerald-50/60 border border-emerald-100 space-y-2" dir="rtl">
+            <div class="flex flex-wrap gap-1">
+              <button
+                v-for="p in heb.HEBREW_PALETTE"
+                :key="p.latin"
+                @click="insertHebrew(p.heb)"
+                class="px-2 py-1 rounded-lg bg-white border border-emerald-200 text-base hover:bg-emerald-100 transition"
+                :title="`鍵盤打 ${p.latin}`"
+              >
+                <span class="text-gray-900">{{ p.heb }}</span>
+                <span class="text-[10px] text-gray-400 mr-0.5" dir="ltr">{{ p.latin }}</span>
+              </button>
+            </div>
+            <div class="flex flex-wrap gap-1 items-center" dir="ltr">
+              <span class="text-[11px] text-emerald-800/80">母音點：</span>
+              <button
+                v-for="d in heb.HEBREW_NIQQUD"
+                :key="d.label"
+                @click="insertHebrew(d.mark)"
+                class="px-2 py-1 rounded-lg bg-white border border-emerald-200 text-sm hover:bg-emerald-100 transition"
+                :title="d.label"
+              >א<span class="text-gray-900">{{ d.mark }}</span></button>
+            </div>
+          </div>
+
           <div class="flex items-end gap-2">
             <button
               v-if="!coach?.voiceless && sttSupported"
@@ -184,7 +212,8 @@
               ref="inputEl"
               v-model="input"
               @keydown="onInputKeydown"
-              :placeholder="listening ? (interim || '聆聽中…') : (kbOn && greekKb ? '打英文字母 → 希臘字母（如 logos→λόγος）…' : (kbOn && kanaKb ? '打羅馬字 → 假名（如 sakura→さくら）…' : `用${coach?.langLabel}輸入…`))"
+              :dir="kbOn && hebrewKb ? 'rtl' : undefined"
+              :placeholder="listening ? (interim || '聆聽中…') : (kbOn && greekKb ? '打英文字母 → 希臘字母（如 logos→λόγος）…' : (kbOn && kanaKb ? '打羅馬字 → 假名（如 sakura→さくら）…' : (kbOn && hebrewKb ? '打英文字母 → 希伯來字母（由右至左，如 wlvm→שלום）…' : `用${coach?.langLabel}輸入…`)))"
               rows="1"
               class="flex-1 resize-none px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-indigo-400 max-h-32"
             />
@@ -268,6 +297,7 @@ import { useActivityTracker } from "~/composables/useActivityTracker";
 import { useCoachAi } from "~/composables/useCoachAi";
 import { useGreekKeyboard } from "~/composables/useGreekKeyboard";
 import { useKanaKeyboard } from "~/composables/useKanaKeyboard";
+import { useHebrewKeyboard } from "~/composables/useHebrewKeyboard";
 
 definePageMeta({ middleware: "coach-auth" });
 
@@ -302,12 +332,14 @@ const autoSpeak = ref(false);
 const msgArea = ref<HTMLElement | null>(null);
 
 // 轉寫鍵盤（打英文 → 目標文字）：依 coach.keyboard 啟用
-//   greek = 希臘字母（Beta Code）；kana = 日文假名（romaji IME）
+//   greek = 希臘字母（Beta Code）；kana = 日文假名（romaji IME）；hebrew = 希伯來字母（RTL）
 const gk = useGreekKeyboard();
 const kana = useKanaKeyboard();
+const heb = useHebrewKeyboard();
 const inputEl = ref<HTMLTextAreaElement | null>(null);
 const greekKb = computed(() => coach.value?.keyboard === "greek");
 const kanaKb = computed(() => coach.value?.keyboard === "kana");
+const hebrewKb = computed(() => coach.value?.keyboard === "hebrew");
 const kbOn = ref(true); // 預設開啟（系統 IME 組字時 kana 會自動讓行）
 const showKbHelp = ref(false);
 
@@ -327,11 +359,19 @@ function onInputKeydown(e: KeyboardEvent) {
   if (!kbOn.value || !inputEl.value) return;
   if (greekKb.value) gk.onKeydown(e, inputEl.value, setInput);
   else if (kanaKb.value) kana.onKeydown(e, inputEl.value, setInput);
+  else if (hebrewKb.value) heb.onKeydown(e, inputEl.value, setInput);
 }
 
 function insertGreek(ch: string) {
   if (inputEl.value) {
     gk.insert(inputEl.value, ch, setInput);
+    inputEl.value.focus();
+  }
+}
+
+function insertHebrew(ch: string) {
+  if (inputEl.value) {
+    heb.insert(inputEl.value, ch, setInput);
     inputEl.value.focus();
   }
 }

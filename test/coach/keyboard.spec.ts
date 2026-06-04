@@ -2,6 +2,7 @@
 import { describe, it, expect } from "vitest";
 import { romajiToKana } from "~/composables/useKanaKeyboard";
 import { normalizeSigma } from "~/composables/useGreekKeyboard";
+import { normalizeFinals } from "~/composables/useHebrewKeyboard";
 
 // 模擬逐字輸入：pending 尾巴帶到下一鍵（與 onKeydown 的緩衝/特例行為一致）
 const finN = (p: string, kata: boolean) => (p === "n" ? (kata ? "ン" : "ん") : p);
@@ -55,5 +56,30 @@ describe("希臘文 normalizeSigma（詞中 σ／詞尾 ς）", () => {
   it("詞尾末字為 ς 的 codepoint 是 U+03C2", () => {
     const r = normalizeSigma("λογοσ");
     expect(r.codePointAt(r.length - 1)).toBe(0x3c2);
+  });
+});
+
+// 逐字輸入模擬（每打一字就 normalizeFinals，與 onKeydown 行為一致）
+const LATIN2HEB: Record<string, string> = {
+  a: "א", b: "ב", g: "ג", d: "ד", h: "ה", v: "ו", z: "ז", x: "ח", f: "ט", y: "י",
+  k: "כ", l: "ל", m: "מ", n: "נ", s: "ס", e: "ע", p: "פ", c: "צ", q: "ק", r: "ר", w: "ש", t: "ת",
+};
+function typeHebrew(s: string): string {
+  let v = "";
+  for (const ch of s) { v += LATIN2HEB[ch] ?? ch; v = normalizeFinals(v); }
+  return v;
+}
+
+describe("希伯來文鍵盤 normalizeFinals（字尾形 sofit）", () => {
+  it("詞尾的 5 個字母自動換 sofit", () => {
+    expect(typeHebrew("wlvm")).toBe("שלום");   // mem → ם
+    expect(typeHebrew("mlk")).toBe("מלך");      // kaf → ך
+    expect(typeHebrew("arc")).toBe("ארץ");      // tsadi → ץ
+  });
+
+  it("詞中維持一般形，後接字母則還原", () => {
+    expect(typeHebrew("mlkym")).toBe("מלכים");  // 中 kaf 一般形、尾 mem→ם
+    expect(normalizeFinals("מ")).toBe("ם");       // 單字尾 → sofit
+    expect(normalizeFinals("מל")).toBe("מל");     // 後接字母 → 還原一般形
   });
 });
