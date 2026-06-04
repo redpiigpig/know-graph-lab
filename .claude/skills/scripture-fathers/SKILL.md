@@ -505,7 +505,8 @@ Vol 9:  349 → 92   (30 page + 62 other)
 | ✅ 16-25 | NPNF1 Vol 5-14（駁伯拉糾派…奧古斯丁 V5-8 + 金口若望 V9-14）| 已精修 | 金口若望命名鎖定 |
 | ✅ 26-29 | NPNF2 Vol 1（優西比烏）/ 2（蘇格拉底+索佐門）/ 3（狄奧多勒+耶柔米）/ 5（尼撒格列高里）| 已精修 | 巢狀 override (vol26/28) |
 | ✅ 30 | NPNF2 Vol 6（耶柔米 Jerome — 書信 + 論著 + 導論）| 已精修 | NVIDIA 4 帳號 deepseek 收尾；`_fix_vol30_jerome.py` 把 115 英文 NCX 卷名 relabel 成繁中 + 三層樹（導論/序言/論著/書信）；validate 0 FAIL/0 WARN · test_fathers_quality PASS |
-| 31-38 | NPNF2 Vol 7-14 + ACCS 待補卷 | 待續 | 佇列見接手清單；Schaff 全集 = ANF 10 + NPNF1 14 + NPNF2 14 = **38 卷**（+ ACCS 27 卷）|
+| ✅ 31 | NPNF2 Vol 7（耶路撒冷的區利羅《教理講授》+ 拿先斯的格列高里《講演集》《書信集》）| 已精修 | `_fix_vol31_cyril_gregory.py`；TERM 1352 處（西瑞爾→區利羅/額我略→格列高里/巴西略→巴西流）；test_fathers_quality PASS；glossary+B層待補 |
+| 32-38 | NPNF2 Vol 8-14 + ACCS 待補卷 | 待續 | 佇列見接手清單；Schaff 全集 = ANF 10 + NPNF1 14 + NPNF2 14 = **38 卷**（+ ACCS 27 卷）|
 
 ---
 
