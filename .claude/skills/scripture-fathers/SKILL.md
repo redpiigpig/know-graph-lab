@@ -605,7 +605,7 @@ auto-push。**git 在 master 跑教父**（user 拍板；feat/coach-language 是
 6. **glossary（/translation-glossary）已被改成「各領域獨立表」新架構，由別的作業負責，教父線別碰。**
 
 ### 接續佇列（NPNF2，逐卷；ID 見下方批次表保留區）
-V7 區利羅+拿先斯 `af2cf8a7-b169-432c-863d-632647c8ab67` / V8 巴西流 `3c48472c-fbca-48fb-9db1-ca5a08827ef3` /
+**下一卷 → V8 巴西流** `3c48472c-fbca-48fb-9db1-ca5a08827ef3`（凱撒利亞的巴西流；Basil=巴西流 禁巴西略）/
 V9 希拉里+大馬色若望 `709f43f9-724c-4cd5-b6b0-570d26083d24` / V10 安波羅修 `fd8a09e7-a6ab-4818-a6d7-6722e50da773` /
 V11 `24c53ede-8787-442e-a3ba-0cd55d0effac` / V12 大良 `02a08547-6fb5-44b2-8a59-9b1f625f3a54` /
 V13 `90b55879-7179-41d7-9f6c-f6587a3dd429` / V14 七大公會議 `63853a97-68be-441c-8dce-063ae89405c5`

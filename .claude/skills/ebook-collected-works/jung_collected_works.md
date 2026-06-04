@@ -116,7 +116,7 @@
 - **✅ 第一章「引論」(Einleitung)**：6 rows（`ch01.json`）。
 - **✅ 第二章「論兩種思維」(Über die zwei Arten des Denkens = Hinkle Ch I)**：**全章 77 rows**（`ch02.json`，含莫里克〈少女初戀之歌〉blockquote 補譯；Hinkle 英譯本略此詩）。逐段對齊（zh=de=en=77）✅，截圖實證 ✅。16,678 繁中字。
 - **✅ 第三章「米勒幻想的分析預備材料」(= Hinkle Ch II, The Miller Phantasies)**：**全章 20 rows**（`ch03.json`，含羅斯丹《大鼻子情聖》西哈諾訣別詩＋臨終獨白兩段法文詩補譯〔Hinkle 略〕、米勒法文自述引文）。
-- **🔄 第四章「創世讚歌」(Der Schöpferhymnus = Hinkle Ch III, The Hymn of Creation)**：**進行中，已 55 rows（標題+E1–E48+米勒英文〈創世讚歌〉三節詩+約伯哀歌+愛倫坡〈烏鴉〉兩節+浮士德/約伯「上帝打賭」引文）**。本章英文共 **91 段**（最長一章），**下一段＝E49**（浮士德 Mephisto/Satan 引文之後；德文 OCR `jung_ch4_de.txt` D140 起＝貝赫摩特/利維坦那段；英文 `jung_ch4_en.txt` E49 起）。Behemoth/Leviathan、煉金、太陽神話等宗教學重段在後半。
+- **🔄 第四章「創世讚歌」(Der Schöpferhymnus = Hinkle Ch III, The Hymn of Creation)**：**進行中，已 60 rows（標題+E1–E55+米勒英文〈創世讚歌〉三節詩+約伯哀歌16章+愛倫坡〈烏鴉〉兩節+浮士德/約伯「上帝打賭」+約伯記40–41章貝赫摩特/利維坦讚歌）**。本章英文共 **91 段**（最長一章），**下一段＝E56**（神的雙重本性／力比多即神性那一大段；英文 `jung_ch4_en.txt` E56 起、德文 `jung_ch4_de.txt` D155 起；注意 E49/E50/E51＝浮士德/約伯 speaker 標籤＋約伯1:11，已併入「上帝打賭」blockquote row，不另立段）。後半尚有太陽/火神話、煉金、本章收尾。
 - JSONL：`G:/…/_chunks/22222222-….jsonl`（5 chunks＝封面+引論+2 全章+第四章進行中）。**未推 R2、未刷 previews**。
 - 腳註一律略過（書目／引用 apparatus）。Hinkle 合併多個德文段時，以**英文段為 row 粒度、德文併段對齊**；德有英無之句（如 ch2 D64、ch4 創世讚歌德文韻譯腳註）併入該 row 德/中欄或略。**詩／聖經引文**：作者英文原詩（米勒讚歌）de=en=英文；德/法原詩（莫里克、西哈諾、浮士德）de=原文、en=Hinkle 英、zh=親譯韻文；聖經引文 zh 用和合本式。
 
