@@ -14,6 +14,10 @@ export function useSpeech() {
 
   let recognition: any = null;
   let onFinalCb: ((text: string) => void) | null = null;
+  // 連續聆聽控制：使用者按停才真的停；瀏覽器因靜默自動結束時自動重啟，
+  // 讓使用者中途停頓思考也不會被關掉麥克風。
+  let wantListening = false; // 使用者是否「想」繼續聽（手動按停才設 false）
+  let restartTimer: any = null;
 
   if (typeof window !== "undefined") {
     const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
@@ -21,7 +25,8 @@ export function useSpeech() {
     ttsSupported.value = "speechSynthesis" in window;
     if (SR) {
       recognition = new SR();
-      recognition.continuous = false;
+      // continuous=true：停頓一兩秒不會結束辨識，可以邊想邊說
+      recognition.continuous = true;
       recognition.interimResults = true;
 
       recognition.onresult = (e: any) => {
@@ -39,12 +44,39 @@ export function useSpeech() {
         }
       };
       recognition.onerror = (e: any) => {
-        error.value = e.error || "語音辨識錯誤";
-        listening.value = false;
+        const err = e.error || "";
+        // 'no-speech'（沒講話）/'aborted'（手動停）在連續模式下屬正常，交給 onend 處理，不報錯
+        if (err === "no-speech" || err === "aborted") return;
+        // 權限/裝置類錯誤才中止，避免無限重啟
+        if (err === "not-allowed" || err === "service-not-allowed" || err === "audio-capture") {
+          wantListening = false;
+          listening.value = false;
+        }
+        error.value = err || "語音辨識錯誤";
       };
       recognition.onend = () => {
-        listening.value = false;
         interim.value = "";
+        // 使用者還想繼續聽，但瀏覽器（多在長靜默後）自動結束 → 重啟維持麥克風開啟
+        if (wantListening) {
+          try {
+            recognition.start();
+            return;
+          } catch {
+            // start() 太快偶爾會丟錯，稍候再試一次
+            if (restartTimer) clearTimeout(restartTimer);
+            restartTimer = setTimeout(() => {
+              if (!wantListening) return;
+              try {
+                recognition.start();
+              } catch {
+                listening.value = false;
+                wantListening = false;
+              }
+            }, 250);
+            return;
+          }
+        }
+        listening.value = false;
       };
     }
   }
@@ -59,6 +91,7 @@ export function useSpeech() {
     error.value = "";
     onFinalCb = onFinal;
     recognition.lang = lang;
+    wantListening = true; // 進入連續聆聽：靜默自動結束時會自動重啟
     try {
       recognition.start();
       listening.value = true;
@@ -68,7 +101,18 @@ export function useSpeech() {
   }
 
   function stopListening() {
-    if (recognition && listening.value) recognition.stop();
+    wantListening = false; // 手動按停 → onend 不再自動重啟
+    if (restartTimer) {
+      clearTimeout(restartTimer);
+      restartTimer = null;
+    }
+    if (recognition) {
+      try {
+        recognition.stop();
+      } catch {
+        // 已停止時忽略
+      }
+    }
     listening.value = false;
   }
 

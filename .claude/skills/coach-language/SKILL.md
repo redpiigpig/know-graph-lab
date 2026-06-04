@@ -49,7 +49,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 
 ## 二、聊天五模式（chat.post.ts 依 mode 套 prompt；人格自動輪替）
 
-- **打字 / 口說**（free，voice=1 自動朗讀）
+- **打字 / 口說**（free，voice=1 自動朗讀）。🎤 語音輸入（`composables/useSpeech.ts`）為**連續聆聽**：`continuous=true` + onend keep-alive 自動重啟（`wantListening` 旗標），停頓思考不會關麥克風，**只有手動按停才停**；辨識文字即時附加到輸入框、不自動送出。`no-speech`/`aborted` 視為正常不報錯，僅權限/裝置錯誤（`not-allowed`/`audio-capture`…）才中止。
 - **問答‧知識**（qa）：像一般 AI 答題教知識，corrections 通常空
 - **情境角色**（scenario）：教練演對方角色（店員/面試官/神職…）
 - **限時主題聊**（smalltalk 頁）
