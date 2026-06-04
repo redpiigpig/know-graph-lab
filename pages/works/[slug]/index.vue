@@ -71,6 +71,9 @@
 
       <!-- 每日對話 — 先選月份，再選日期（仿聖經 卷→章；私人，登入者限定） -->
       <div v-if="dialogueDays.length" class="max-w-5xl mx-auto px-6 py-8">
+        <!-- 序（楔子）：整條對話錄的開篇引言，渲染在月份格之上 -->
+        <section v-if="prefaceHtml" class="dialogue-frame mb-8" v-html="prefaceHtml"></section>
+
         <div class="mb-4">
           <h2 class="text-base font-semibold text-gray-900">每日對話</h2>
           <p class="text-xs text-gray-500 mt-0.5">
@@ -86,6 +89,9 @@
             <div class="text-xs text-gray-400">{{ grp.items.length }} 天 · {{ grp.turns }} 則</div>
           </NuxtLink>
         </div>
+
+        <!-- 跋（收束）：整條對話錄的終篇，渲染在月份格之下 -->
+        <section v-if="codaHtml" class="dialogue-frame dialogue-frame--coda mt-10" v-html="codaHtml"></section>
       </div>
 
       <div v-else-if="hasDialogueDays && !user" class="max-w-5xl mx-auto px-6 py-24 text-center text-gray-400 text-sm">
@@ -387,6 +393,17 @@ onMounted(loadDialogueDays)
 watch(() => user.value, loadDialogueDays)
 
 const totalTurns = computed(() => dialogueDays.value.reduce((s, d) => s + (d.n_turns || 0), 0))
+
+// 對話錄的序／跋（楔子／收束）放在主卡 content_json，以 <!--CODA--> 分隔：
+// 前半＝序（渲染在月份格之上），後半＝跋（之下）。只在有 dialogue_days（私人）時顯示。
+const prefaceHtml = computed(() => {
+  if (!dialogueDays.value.length) return ''
+  return (project.value?.content_json ?? '').split('<!--CODA-->')[0] || ''
+})
+const codaHtml = computed(() => {
+  if (!dialogueDays.value.length) return ''
+  return (project.value?.content_json ?? '').split('<!--CODA-->')[1] || ''
+})
 const MONTH_ZH = ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
 function dayNum(date: string) { return Number(date.split('-')[2]) }
 const dayGroups = computed(() => {
@@ -608,6 +625,30 @@ function onNotesUpdate(html: string) {
 </script>
 
 <style scoped>
+/* 對話錄的序／跋（楔子／收束）— 居中、襯線、留白，與下方月份格形成框架感 */
+.dialogue-frame { max-width: 42rem; margin-left: auto; margin-right: auto; }
+.dialogue-frame :deep(p) {
+  font-family: '楷体', 'KaiTi', 'STKaiti', Georgia, serif;
+  font-size: 16px; line-height: 2.05; color: #4b5563;
+  text-align: justify; text-indent: 2em; margin: 0 0 0.7em;
+}
+.dialogue-frame :deep(p:first-child::first-letter) { color: #7c3aed; font-weight: 700; }
+.dialogue-frame--coda { border-top: 1px solid #ede9fe; padding-top: 1.6em; }
+.dialogue-frame--coda :deep(p) { color: #6b7280; font-size: 15px; }
+/* 題詞（楔子前的引文）— 標題與序之間 */
+.dialogue-frame :deep(.dialogue-epigraph) {
+  border: 0; margin: 0 0 2.4em; padding: 0; text-align: center;
+}
+.dialogue-frame :deep(.dialogue-epigraph p) {
+  font-family: '楷体', 'KaiTi', 'STKaiti', serif; font-style: normal;
+  text-indent: 0; text-align: center; color: #6d5b8f;
+  font-size: 15.5px; line-height: 2.1; letter-spacing: 0.03em;
+}
+.dialogue-frame :deep(.dialogue-epigraph cite) {
+  display: block; margin-top: 0.9em; font-style: normal;
+  font-size: 12.5px; color: #a78bba; letter-spacing: 0.02em;
+}
+
 .prose-notes :deep(p)   { margin: 0 0 0.4em; line-height: 1.75; color: #374151; font-size: 14px; }
 .prose-notes :deep(h1)  { font-size: 1.5rem; font-weight: 700; margin: 0.6em 0 0.3em; color: #111827; }
 .prose-notes :deep(h2)  { font-size: 1.2rem; font-weight: 600; margin: 0.5em 0 0.25em; color: #1f2937; }

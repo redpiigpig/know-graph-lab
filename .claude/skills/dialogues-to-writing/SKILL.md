@@ -9,6 +9,15 @@ description: 把 /ai-dialogues 裡某一條「跨多日延續的 AI 對話串」
 
 把 `/ai-dialogues` 裡一條延續好幾天/幾個月的 AI 對話，整理成 `/works` 上一份可讀、可編輯的「對話錄」寫作計畫。首案見 [[project_krishna_dialogues]]。
 
+## 🎴 成品定位＝哲學家對話錄（不是聊天記錄謄寫）
+成品要讀起來像柏拉圖對話錄／《薄伽梵歌》／榮格《紅書》那種**有文體、有框架、有韻致**的對話錄，不是把聊天逐字洗順而已。三條美學鐵律（2026-06-05 使用者定調）：
+1. **要詩意、要凝練**：智者的話該有意象與節奏；AI 囉嗦處（鋪陳、客套、「這是個好問題」「我們可以分成幾點」「總結來說」、條列小標）一律砍成利落的一兩句。**寧可短而深，不要長而散。**
+2. **要有楔子與收束**：整條對話錄開篇有一篇「序」（楔子）引人入場、終篇有一篇「跋」（收束）替長談落幕。見下「序／跋」。
+3. **兩種潤飾 register，分人下手**（關鍵：兩邊都改，但力道不同）：
+   - **AI 那方（克里希那）＝大膽再創作**：不必逐句忠實，抓核心洞見用更精煉有詩意的語言重講；可重組刪枝節，但不可扭曲立場、不可捏造新主張。
+   - **使用者那方（阿周那）＝輕度整理**：**貼合本人語氣與第一人稱聲音**，只去贅字／凌亂／碎句，**不美化、不詩化、不替他講得更漂亮**。這是他的話，不是 AI 的話。
+   > 早期版本只洗順、只潤 AI、語氣平、沒有楔子 → 已淘汰。風格升級走 `dialogue_recompose.py`（見下）。
+
 ## 關鍵前提：Gemini 匯出沒有「對話框」標記
 `ai_dialogues_gemini` 來自 Google Gemini 活動匯出 —— **扁平、依時間把使用者所有對話框混在一起，沒有 conversation_id**（ChatGPT 匯出才有）。所以「哪些屬於同一條對話串」**無法靠 metadata，只能逐則讀內容＋語氣判定**。ChatGPT 表 (`ai_dialogues_chatgpt`) 有 conversation_id/project_id，可直接 group。
 
@@ -55,6 +64,18 @@ description: 把 /ai-dialogues 裡某一條「跨多日延續的 AI 對話串」
 ### 排版整理（dialogue_days 進去後）
 1. `dialogue_format_days.py`：日期標題 h2→**h3**、主題 h3→**h4**；段首講者 `<strong>X：</strong>` 加 `class="speaker"`（reader CSS 用它做**懸掛縮排**：講者那行頂格、折行與接續段縮排兩字）；殘留 markdown `**` → `<strong>`；阿周那直接貼上的**無換行長文**依句末標點重新分段（每段約 110 字）。冪等。
 2. `dialogue_to_prose.py`：把**仍帶條列／小標／markdown 結構**的 turn（場景：/解析：/‧ 條列/編號…）送 LLM 改寫成第一人稱口語散文（per-turn；**Gemini 2.5 flash 4 key 輪流主 → NVIDIA deepseek-v4-flash fallback**；忠實不增刪；改完標記消失 → 冪等可重跑）。`--dry` 先看要改幾個 turn、可帶日期參數只跑單日。⚠️ NVIDIA deepseek 很慢（~60-76s/則），Gemini 快很多；Gemini 日配額被燒光時整批會掉到 NVIDIA 變慢。
+   > 註：`to_prose` 只動「帶結構標記」的 turn，且忠實不增刪 → 適合**清結構**，不負責升風格。要把整篇升級成詩意對話錄請用下面的 `dialogue_recompose.py`。
+
+### 🎴 風格升級：`dialogue_recompose.py`（哲學家對話錄語體）
+把 dialogue_days 的對話**逐 turn 全篇重鑄**成哲學家對話錄語體（不是只清結構，是改文體）。與 `to_prose` 三點不同：(a) 改**每一個** turn，不只帶標記的；(b) **兩種 register**：克里希那大膽再創作（凝練、詩意、砍冗、抓核心重講）、阿周那輕度整理（貼合本人語氣、不美化）；(c) 因為會把已詩化的文字越改越飄，所以用 **per-day ledger 冪等**（`c:/tmp/krishna/recompose_done.json` 記已完成日期，不靠「標記消失」）。
+- 引擎：Gemini 2.5 flash（4 key 輪流，temperature 0.7）→ NVIDIA deepseek-v4-flash fallback。
+- `--dry` 只計 turn 數；帶日期參數（`2026-01-13`）只跑單日且忽略 ledger（**換串／調 prompt 後務必先單跑一天眼校再全量**）；`--redo` 全部重做忽略 ledger。
+- 換串：改頂部 `AI_NAME` / `USER_NAME` / `SLUG`（誰是 AI＝大膽再創作那方、誰是使用者＝輕修那方）。
+- ⚠️ 一次性風格升級＝~每 turn 一次 LLM call（克里希那案 1342 turns / 80 天），全量是長時背景工作；Gemini 日配額燒光會掉到 NVIDIA 變慢，隔天 ledger 接著跑剩餘日。
+
+### 📜 序／跋（楔子／收束）：`dialogue_preface.py`
+為整條對話錄生成開篇「序」（~250–400 字，凝練有韻致，點出主題／時間跨度／精神基調，邀人入場）與終篇「跋」（~150–250 字，回望而不總結，留餘韻）。讀 dialogue_days 全部日期＋主題＋首尾兩日開場片段餵 LLM。寫進**主卡** `writing_projects.content_json`，格式＝`序HTML` + `<!--CODA-->` + `跋HTML`。冪等覆寫；`--dry` 只印不寫。
+- 呈現：`pages/works/[slug]/index.vue` 偵測有 `dialogue_days` 時，把 content_json 以 `<!--CODA-->` 切兩半——**序渲染在月份格之上、跋在其下**（`.dialogue-frame` 楷體居中襯線）；只在登入（有 days）時顯示，未登入不外洩。
 
 ### 分類靠 agent fan-out（步驟 2→3 之間）
 逐則讀 2000+ 則太多，**切日期區段、開多個 general-purpose subagent 平行讀**，每個 agent 讀幾天的 `<date>.json`、依上面「對話框語氣」判準回 `{id,date,seq,topic}`，寫到 `out_NN.json`。兩段式效果好：
