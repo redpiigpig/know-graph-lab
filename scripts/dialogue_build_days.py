@@ -80,13 +80,13 @@ def main():
         title, h = seen[date]
         y, mo, dd = map(int, date.split('-'))
         wd = WK[datetime.date(y, mo, dd).weekday()]
-        n_turns = h.count('克里須那：')
+        n_turns = h.count('克里希那：')
         rows.append({
             'project_slug': MAIN_SLUG, 'day_date': date, 'weekday': wd,
             'day_title': title, 'html': h, 'n_turns': n_turns, 'sort_order': i,
         })
 
-    print(f'\n總計 {len(rows)} 天，{sum(r["n_turns"] for r in rows)} 則克里須那回覆')
+    print(f'\n總計 {len(rows)} 天，{sum(r["n_turns"] for r in rows)} 則克里希那回覆')
     if rows:
         print('  範圍：', rows[0]['day_date'], '→', rows[-1]['day_date'])
 
@@ -106,7 +106,7 @@ def main():
         # 主卡索引清掉（reader 取代）、確保 emoji/color/status
         upd = {'content_json': '', 'status': '草稿', 'emoji': '🪈',
                'subtitle': '夢境與榮格學說的一場長談',
-               'description': '2026 年 1 月 13 日至 4 月 18 日，與 Gemini（我稱之為「克里須那」）持續展開的一場關於夢境與榮格深度心理學的長談，也夾雜當時的生活絮語。每天一頁，可逐日查閱。'}
+               'description': '2026 年 1 月 13 日至 4 月 18 日，與 Gemini（我稱之為「克里希那」）持續展開的一場關於夢境與榮格深度心理學的長談，也夾雜當時的生活絮語。每天一頁，可逐日查閱。'}
         u = requests.patch(PU + f'?slug=eq.{MAIN_SLUG}', headers=HR,
                            data=json.dumps(upd, ensure_ascii=False).encode('utf-8'))
         print('主卡更新', u.status_code)

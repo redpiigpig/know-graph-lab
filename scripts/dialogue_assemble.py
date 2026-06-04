@@ -51,8 +51,8 @@ links=[]
 for mo in months:
     ym=mo.replace('-','')
     slug=f'krishna-dialogues-{mo}'
-    parts=[f'<h1>與克里須那對話 · 2026年{MONTH_ZH[mo[5:]]}</h1>',
-           '<p><em>夢境與榮格學說的長談（可編輯草稿）。克里須那的回覆由 NVIDIA 潤飾成對話錄；阿周那為原話。</em></p>']
+    parts=[f'<h1>與克里希那對話 · 2026年{MONTH_ZH[mo[5:]]}</h1>',
+           '<p><em>夢境與榮格學說的長談（可編輯草稿）。克里希那的回覆由 NVIDIA 潤飾成對話錄；阿周那為原話。</em></p>']
     nday=0; nturn=0
     for d in sorted(by_month[mo]):
         nday+=1
@@ -68,11 +68,11 @@ for mo in months:
                 parts.append(f'<h3>主題：{esc(ttl)}</h3>')
             nturn+=1
             if r.get('arjuna'): parts.append(turn_html('阿周那', r['arjuna']))
-            parts.append(turn_html('克里須那', r.get('krishna','')))
+            parts.append(turn_html('克里希那', r.get('krishna','')))
     html=''.join(parts)
     # upsert card
     ex=requests.get(url,headers=H,params={'select':'slug','slug':f'eq.{slug}'}).json()
-    payload={'slug':slug,'title':f'與克里須那對話 · 2026年{MONTH_ZH[mo[5:]]}',
+    payload={'slug':slug,'title':f'與克里希那對話 · 2026年{MONTH_ZH[mo[5:]]}',
              'subtitle':f'夢境與榮格 · {mo}','emoji':'🪈','color':'violet',
              'status':'草稿','sort_order':sort,'content_json':html}
     if ex:
@@ -85,14 +85,14 @@ for mo in months:
     sort+=1
 
 # main card → index/overview
-idx=['<h1>與克里須那對話</h1>',
+idx=['<h1>與克里希那對話</h1>',
      '<p><em>夢境與榮格學說的一場長談，也是一段日子的生活絮語 · 2026-01-13 → 2026-04-18</em></p>',
-     '<p>完整對話依月份分成四「頁」（可各自編輯）。克里須那的回覆已用 NVIDIA 潤飾成流暢對話錄，阿周那為原話；每日標有日期與星期。</p>',
+     '<p>完整對話依月份分成四「頁」（可各自編輯）。克里希那的回覆已用 NVIDIA 潤飾成流暢對話錄，阿周那為原話；每日標有日期與星期。</p>',
      '<h2>分月對話（點入各卡片編輯）</h2>','<ul>']
 for mo,slug,nday,nturn in links:
     idx.append(f'<li><strong>2026年{MONTH_ZH[mo[5:]]}</strong>：{nday} 天 · {nturn} 則 — <a href="/works/{slug}">/works/{slug}</a></li>')
 idx.append('</ul>')
-idx.append('<p style="color:#888">※ 全部對話亦標籤於 /ai-dialogues 分類「與克里須那對話」。</p>')
+idx.append('<p style="color:#888">※ 全部對話亦標籤於 /ai-dialogues 分類「與克里希那對話」。</p>')
 requests.patch(url+'?slug=eq.krishna-dialogues',headers=HR,
     data=json.dumps({'content_json':''.join(idx),'status':'草稿'},ensure_ascii=False).encode('utf-8'))
 print('main index updated')

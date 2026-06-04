@@ -66,6 +66,6 @@ for d in sorted(by_date):
     print(f"{d} | {s['total']:5d} | {s['krishna']:7d} | {s['jung']:4d} | {s['dream']:5d}{star}")
 
 kdates = sorted([d for d,s in by_date.items() if s['krishna']])
-print(f"\nDates containing '克里須那': {kdates[0]} .. {kdates[-1]}  ({len(kdates)} dates)")
+print(f"\nDates containing '克里希那': {kdates[0]} .. {kdates[-1]}  ({len(kdates)} dates)")
 total_krishna = sum(s['krishna'] for s in by_date.values())
 print(f"Total entries mentioning Krishna: {total_krishna}")

@@ -11,7 +11,7 @@ E=env(); U=E['SUPABASE_URL']; K=E['SUPABASE_SERVICE_ROLE_KEY']
 H={'apikey':K,'Authorization':'Bearer '+K,'Content-Type':'application/json'}
 HR=dict(H); HR['Prefer']='return=representation'
 
-NAME='與克里須那對話'
+NAME='與克里希那對話'
 # 1. find or create category
 r=requests.get(U+'/rest/v1/ai_dialogue_categories',headers=H,params={'select':'id,name,color','name':f'eq.{NAME}'})
 existing=r.json()

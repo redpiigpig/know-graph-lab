@@ -17,11 +17,11 @@ print('NVIDIA keys:',len(KEYS),flush=True)
 URL='https://integrate.api.nvidia.com/v1/chat/completions'; MODEL='deepseek-ai/deepseek-v4-flash'
 PER_KEY_INTERVAL=5.0   # s between starts on the SAME key (≤12/min/key)
 COOLDOWN_429=120.0
-SYS=('你是中文文字編輯，正在整理一位使用者（自稱「阿周那」）與他稱為「克里須那」的 AI 之間的對話，'
-     '要做成可閱讀的對話錄。請把「克里須那的回覆」改寫成自然流暢、口語、第一人稱對著阿周那說話的繁體中文，'
+SYS=('你是中文文字編輯，正在整理一位使用者（自稱「阿周那」）與他稱為「克里希那」的 AI 之間的對話，'
+     '要做成可閱讀的對話錄。請把「克里希那的回覆」改寫成自然流暢、口語、第一人稱對著阿周那說話的繁體中文，'
      '去掉所有條列符號、編號小標、與「以下幫你整理／我們可以分成幾點」這類框架語，融成連貫的段落。'
      '務必忠實保留原意、神學與心理學概念、專有名詞與人名地名，不要新增資訊、不要省略重點、不要加結語。'
-     '只輸出改寫後的克里須那發言本身，不要加引號、不要加「克里須那：」前綴。')
+     '只輸出改寫後的克里希那發言本身，不要加引號、不要加「克里希那：」前綴。')
 PATH='c:/tmp/krishna/polished.jsonl'
 recs=[json.loads(l) for l in open(PATH,encoding='utf-8')]
 FAIL={'kept-orig','nv_fail','gem_fail'}
@@ -41,7 +41,7 @@ def cool(i):
 
 def call(resp):
     body={'model':MODEL,'messages':[{'role':'system','content':SYS},
-          {'role':'user','content':'克里須那的原始回覆：\n\n'+resp}],'temperature':0.3,'max_tokens':4000}
+          {'role':'user','content':'克里希那的原始回覆：\n\n'+resp}],'temperature':0.3,'max_tokens':4000}
     for attempt in range(8):
         i,start=pick_key()
         d=start-time.time()
