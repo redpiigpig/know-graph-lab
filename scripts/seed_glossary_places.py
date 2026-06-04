@@ -120,21 +120,25 @@ P("Saba (Sheba)", "示巴", o="", lang="", var="薩巴",
 # BLOCK 2 — 古典波斯／希臘羅馬政權  (sort 1300–)
 # ════════════════════════════════════════════════════════════════════════════
 _order = 1300
-P("Achaemenid Empire", "阿契美尼德波斯", o="", lang="peo",
+P("Achaemenid Empire", "阿契美尼德-波斯帝國", o="", lang="peo",
   var="波斯第一帝國；阿黑門尼德", ptype="帝國", region="伊朗高原",
-  period="古典", root="阿契美尼德", reason="居魯士創建之波斯帝國")
-P("Parthia", "帕提亞", o="", lang="xpr", var="安息（中文古稱）",
-  ptype="帝國", region="伊朗高原", period="古典", root="帕提亞",
-  reason="《史記》稱「安息」；史學作帕提亞")
-P("Sasanian Empire", "薩珊波斯", o="", lang="pal", var="薩桑；波斯第二帝國",
-  ptype="帝國", region="伊朗高原", period="古典晚期", root="薩珊",
-  reason="台慣用「薩珊」")
-P("Seleucid Empire", "塞琉古帝國", o="", lang="grc", var="西流基王朝（聖經系）",
-  ptype="帝國", region="敘利亞／兩河", period="希臘化", root="塞琉",
-  reason="名根「塞琉」一致（塞琉古/塞琉西亞）")
-P("Ptolemaic Kingdom", "托勒密王朝", o="", lang="grc", var="多利買（聖經系）",
-  ptype="帝國", region="埃及", period="希臘化", root="托勒密",
-  reason="希臘化埃及王朝；名根托勒密")
+  period="古典", root="阿契美尼德",
+  reason="王朝-民族命名：阿契美尼德王朝＋波斯。居魯士創建")
+P("Parthia", "阿薩息斯-帕提亞帝國", o="", lang="xpr",
+  var="帕提亞帝國；安息（中文古稱）", ptype="帝國", region="伊朗高原",
+  period="古典", root="帕提亞",
+  reason="王朝-民族命名：阿薩息斯王朝＋帕提亞。《史記》稱「安息」")
+P("Sasanian Empire", "薩珊-波斯帝國", o="", lang="pal",
+  var="薩珊波斯；薩桑；波斯第二帝國", ptype="帝國", region="伊朗高原",
+  period="古典晚期", root="薩珊", reason="王朝-民族命名：薩珊王朝＋波斯")
+P("Seleucid Empire", "塞琉古-希臘帝國", o="", lang="grc",
+  var="塞琉古帝國；西流基王朝（聖經系）", ptype="帝國", region="敘利亞／兩河",
+  period="希臘化", root="塞琉",
+  reason="王朝-民族命名：塞琉古王朝＋希臘（希臘化馬其頓-希臘王朝）；名根「塞琉」一致")
+P("Ptolemaic Kingdom", "托勒密-希臘王國", o="", lang="grc",
+  var="托勒密王朝；托勒密埃及；多利買（聖經系）", ptype="王國", region="埃及",
+  period="希臘化", root="托勒密",
+  reason="王朝-民族命名：托勒密王朝＋希臘（希臘化馬其頓-希臘王朝，統治埃及）")
 P("Macedon", "馬其頓", o="Μακεδονία", lang="grc", rom="Makedonia",
   ptype="國名", region="希臘北", period="古典", root="馬其頓",
   reason="聖經與史學一致")
@@ -163,25 +167,44 @@ P("Holy Roman Empire", "神聖羅馬帝國", o="Sacrum Romanum Imperium",
   lang="lat", ptype="帝國", region="中歐", period="中世紀", root="羅馬")
 P("Frankish Kingdom", "法蘭克王國", o="", lang="lat", var="法蘭克",
   ptype="國名", region="西歐", period="中世紀", root="法蘭克")
-P("Umayyad Caliphate", "伍麥亞王朝", o="", lang="ar",
-  var="奧米亞；倭馬亞（陸）", ptype="哈里發國", region="中東", period="中世紀",
-  root="伍麥亞")
-P("Abbasid Caliphate", "阿拔斯王朝", o="", lang="ar", var="阿巴斯",
-  ptype="哈里發國", region="中東", period="中世紀", root="阿拔斯")
-P("Fatimid Caliphate", "法蒂瑪王朝", o="", lang="ar", var="法提瑪",
-  ptype="哈里發國", region="北非／埃及", period="中世紀", root="法蒂瑪")
-P("Ottoman Empire", "鄂圖曼帝國", o="", lang="ota", var="奧斯曼帝國（陸）",
-  ptype="帝國", region="中東／巴爾幹", period="近代", root="鄂圖曼",
-  reason="台慣用「鄂圖曼」，陸作「奧斯曼」")
-P("Safavid Empire", "薩法維波斯", o="", lang="fa", var="薩非；沙法維",
-  ptype="帝國", region="伊朗高原", period="近代", root="薩法維")
-P("Mughal Empire", "蒙兀兒帝國", o="", lang="fa", var="莫臥兒（陸）",
-  ptype="帝國", region="南亞", period="近代", root="蒙兀兒",
-  reason="台慣用「蒙兀兒」，陸作「莫臥兒」")
+P("Umayyad Caliphate", "伍麥亞-阿拉伯帝國", o="", lang="ar",
+  var="伍麥亞王朝；奧米亞；倭馬亞（陸）", ptype="哈里發國", region="中東",
+  period="中世紀", root="伍麥亞", reason="王朝-民族命名：伍麥亞王朝＋阿拉伯")
+P("Abbasid Caliphate", "阿拔斯-阿拉伯帝國", o="", lang="ar",
+  var="阿拔斯王朝；阿巴斯", ptype="哈里發國", region="中東", period="中世紀",
+  root="阿拔斯", reason="王朝-民族命名：阿拔斯王朝＋阿拉伯")
+P("Fatimid Caliphate", "法蒂瑪-阿拉伯帝國", o="", lang="ar",
+  var="法蒂瑪王朝；法提瑪", ptype="哈里發國", region="北非／埃及",
+  period="中世紀", root="法蒂瑪", reason="王朝-民族命名：法蒂瑪王朝＋阿拉伯（伊斯瑪儀派）")
+P("Ottoman Empire", "鄂圖曼-土耳其帝國", o="", lang="ota",
+  var="鄂圖曼帝國；奧斯曼帝國（陸）", ptype="帝國", region="中東／巴爾幹",
+  period="近代", root="鄂圖曼", reason="王朝-民族命名：鄂圖曼王朝＋土耳其；陸作「奧斯曼」")
+P("Safavid Empire", "薩法維-波斯帝國", o="", lang="fa",
+  var="薩法維波斯；薩非；沙法維", ptype="帝國", region="伊朗高原",
+  period="近代", root="薩法維", reason="王朝-民族命名：薩法維王朝＋波斯")
+P("Mughal Empire", "蒙兀兒-印度帝國", o="", lang="fa",
+  var="蒙兀兒帝國；莫臥兒（陸）", ptype="帝國", region="南亞", period="近代",
+  root="蒙兀兒", reason="王朝-民族命名：蒙兀兒王朝＋印度；陸作「莫臥兒」")
+P("Carolingian Empire", "卡洛林-法蘭克帝國", o="", lang="lat",
+  var="查理曼帝國；加洛林帝國", ptype="帝國", region="西歐", period="中世紀",
+  root="卡洛林",
+  reason="王朝-民族命名：卡洛林王朝＋法蘭克。非單一人物（查理‧馬特→丕平→查理曼→虔誠者路易），故不用「查理曼帝國」")
 P("Mongol Empire", "蒙古帝國", o="", lang="mn", ptype="帝國",
-  region="歐亞草原", period="中世紀", root="蒙古")
+  region="歐亞草原", period="中世紀", root="蒙古",
+  reason="民族即國名，無另立王朝名（孛兒只斤為氏族），故單稱蒙古帝國")
 P("Kievan Rus'", "基輔羅斯", o="", lang="orv", ptype="政權",
   region="東歐", period="中世紀", root="羅斯")
+# ── 單一人物建立的帝國 → 例外：直接用人名，不加王朝-民族 ──────────────────
+P("Empire of Alexander the Great", "亞歷山大帝國", o="", lang="grc",
+  var="馬其頓帝國（廣義）", ptype="帝國", region="希臘—近東", period="希臘化",
+  root="亞歷山",
+  reason="單一人物例外：亞歷山大一人所建，逝後即分裂為繼業者諸國，故用人名；名根「亞歷山」一致（亞歷山卓）")
+P("Timurid Empire", "帖木兒帝國", o="", lang="fa", var="帖木兒王朝（廣義）",
+  ptype="帝國", region="中亞／波斯", period="中世紀晚期", root="帖木兒",
+  reason="單一人物例外：以征服者帖木兒為名")
+P("First French Empire", "拿破崙帝國", o="Premier Empire", lang="fr",
+  var="法蘭西第一帝國", ptype="帝國", region="西歐", period="近代", root="拿破崙",
+  reason="單一人物例外：拿破崙一世所建，史稱法蘭西第一帝國，慣以人名指稱")
 
 # ════════════════════════════════════════════════════════════════════════════
 # BLOCK 4 — 古代地區／行省／地理區  (sort 2000–)

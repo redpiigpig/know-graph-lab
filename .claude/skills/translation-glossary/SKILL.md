@@ -32,10 +32,11 @@ description: 「翻譯定名」通用名物中譯對照工具（/translation-glo
 2. **沿用良好古譯／既有意譯**，不強制全音譯。
 3. **音意結合**：有良好音譯配意譯就結合 — 例「亞歷山卓」優於「亞歷山大城」、「馬爾堡」優於「馬布爾」。
 4. **名根一致**（`name_root`）：同一來源根的譯名要一致 — 密特拉系（root 密特）→ 密特拉／密特里達迪；塞琉古系（root 塞琉）→ 塞琉古／塞琉西亞／塞琉西亞-泰西封。`check_root_consistency()` 自動抓「掛了 root 卻沒含 root 字串」的條目（如 root 塞琉 卻寫「西流基」）。
+5. **王朝命名（帝國／國名）**：以王朝命名的帝國採「**王朝名-民族／國名 帝國**」格式 — 鄂圖曼-土耳其帝國／阿契美尼德-波斯帝國／薩珊-波斯帝國／阿拔斯-阿拉伯帝國／塞琉古-希臘帝國／卡洛林-法蘭克帝國。**例外**：只跟單一人物相關（一人所建、逝後即分裂或更名）→ 直接用人名，不加王朝-民族：亞歷山大帝國／帖木兒帝國／拿破崙帝國。常見短稱（鄂圖曼帝國、塞琉古帝國）放 `name_variants`。
 
-### 🆕 2026-06-04：國名與城市（`place_names`）首批策展完成（264 筆）
+### 🆕 2026-06-04：國名與城市（`place_names`）首批策展完成（268 筆）
 
-`places` tab 從 4 筆示範擴成 **264 筆人工策展**。**這批刻意不走 LLM**——「確定譯名」需人工權威判斷（聖經傳統優先、台陸變體、名根一致），LLM 自填過去多次被使用者糾正。Seed：[scripts/seed_glossary_places.py](../../../scripts/seed_glossary_places.py)（純資料 hand-curated，`--dry` 預覽，內建重複鍵＋名根自檢，`on_conflict=name_english` idempotent；已加 `place_names_name_english_key` unique constraint）。
+`places` tab 從 4 筆示範擴成 **268 筆人工策展**（含王朝命名通則，見原則 5）。**這批刻意不走 LLM**——「確定譯名」需人工權威判斷（聖經傳統優先、台陸變體、名根一致），LLM 自填過去多次被使用者糾正。Seed：[scripts/seed_glossary_places.py](../../../scripts/seed_glossary_places.py)（純資料 hand-curated，`--dry` 預覽，內建重複鍵＋名根自檢，`on_conflict=name_english` idempotent；已加 `place_names_name_english_key` unique constraint）。
 
 涵蓋：古代近東帝國／政權、波斯希臘羅馬政權、中世紀近代帝國、古代地區／行省、兩河波斯城市、黎凡特聖經城市、埃及北非、希臘小亞、義大利西方教會史城市、**全球現代國家（國名 158）+ 首都大城**。
 
