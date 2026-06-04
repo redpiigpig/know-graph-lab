@@ -1,4 +1,4 @@
-"""Post-translation polish for AI-translated ebooks.
+r"""Post-translation polish for AI-translated ebooks.
 
 Fixes two ship-breaking issues from `translate_ebook_to_zh.py` output:
 

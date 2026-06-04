@@ -15,7 +15,7 @@ async function q(sql) {
 // Existing in DB: 1-5 (Mark, Anianus, Avilius, Kedron, Primus) church=未分裂教會
 //                 25 狄奧斯科爾一世 (Dioscorus I, 444-451) — pre-schism
 //                 38 班雅明一世 — Coptic only?
-//                 117 本篤十六世·沙努達三世, 118 教宗塔瓦德羅斯二世 — Coptic
+//                 117 本篤十六世‧沙努達三世, 118 教宗塔瓦德羅斯二世 — Coptic
 // Alexandria GO + Coptic share #1-#27, then split at Council of Chalcedon (451)
 //   #28+ are different in each tradition
 // We'll insert as church='未分裂教會' for #6-#27, then church='東正教' for GO from #28

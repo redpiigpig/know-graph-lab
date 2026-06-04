@@ -77,7 +77,7 @@ FRONTMATTER_HEADINGS = {
 
 # Regex hints — chunk's first heading line starts with these → likely chapter, not volume
 NON_VOLUME_HEADING_RX = re.compile(
-    r"^(##\s*)?(\[\d+\]|\d+\.|第\d+節|第\d+节|第\d+章|第[一二三四五六七八九十百千]+節|第[一二三四五六七八九十百千]+节)"
+    r"^(##\s*)?(\[\d+\]|\d+\.|第\d+節|第\d+节|第\d+章|第[一二三四五六七八九十百千]+節|第[一二三四五六七八九十百千]+节|第[一二三四五六七八九十百千]+章)"
 )
 
 
