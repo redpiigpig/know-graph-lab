@@ -96,7 +96,7 @@ const route = useRoute();
 const language = computed(() => route.params.lang as string);
 const { aiFetch } = useCoachAi();
 const speech = useSpeech();
-const TTS: Record<string, string> = { en: "en-US", ja: "ja-JP" };
+const TTS: Record<string, string> = { en: "en-US", de: "de-DE", fr: "fr-FR", ja: "ja-JP", grc: "el-GR", la: "it-IT", hbo: "he-IL" };
 
 const coach = ref<any>(null);
 const courses = ref<any[]>([]);

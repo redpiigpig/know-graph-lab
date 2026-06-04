@@ -119,6 +119,26 @@ const THEME_POOLS: Record<string, { presets: string[]; auto: string[] }> = {
       "あいさつと丁寧表現", "神社・お寺の基礎語", "日本の祭りと行事", "数と助数詞", "学校と仕事",
     ],
   },
+  // 德文（A1 初學）：A1 高頻字＋日常生活，隨程度再帶宗教／神話題材
+  de: {
+    presets: ["A1 高頻字", "日常生活名詞", "規則動詞現在式", "der/die/das 常見名詞", "數字與時間", "家庭與人"],
+    auto: [
+      "A1 高頻字（前 100）", "常用規則動詞", "sein／haben 與情態動詞", "家庭與人",
+      "食物與飲料", "數字・時間・日期", "城市與方向", "身體與健康", "天氣與季節",
+      "問候與禮貌用語", "der/die/das 常見名詞（含複數）", "形容詞與顏色",
+      "教堂與節慶基礎字", "宗教改革與神學基礎詞", "旅遊與交通",
+    ],
+  },
+  // 法文（A1 初學）：A1 高頻字＋日常生活，隨程度再帶宗教／神話題材
+  fr: {
+    presets: ["A1 高頻字", "日常生活名詞", "-er 動詞現在式", "le/la/un/une 常見名詞", "數字與時間", "家庭與人"],
+    auto: [
+      "A1 高頻字（前 100）", "常用 -er 動詞", "être／avoir 與基本動詞", "家庭與人",
+      "食物與飲料", "數字・時間・日期", "城市與方向", "身體與健康", "天氣與季節",
+      "問候與禮貌用語", "陰陽性常見名詞（含冠詞）", "形容詞與顏色",
+      "大教堂與節慶基礎字", "天主教與神學基礎詞", "旅遊與交通",
+    ],
+  },
   // 通用希臘文（Koine，入門）：題材＝新約／LXX／教父／信經／希臘化猶太／哲學家／拜占庭
   grc: {
     presets: ["新約高頻字", "約翰福音核心字", "希臘文冠詞與代名詞", "信經關鍵詞", "七十士譯本基礎字", "教父文獻常用字"],
@@ -156,7 +176,7 @@ const THEME_POOLS: Record<string, { presets: string[]; auto: string[] }> = {
 };
 const pool = computed(() => THEME_POOLS[language.value] || THEME_POOLS.en);
 const PRESETS = computed(() => pool.value.presets);
-const TTS_LANG: Record<string, string> = { en: "en-US", ja: "ja-JP", grc: "el-GR", la: "it-IT", hbo: "he-IL" };
+const TTS_LANG: Record<string, string> = { en: "en-US", de: "de-DE", fr: "fr-FR", ja: "ja-JP", grc: "el-GR", la: "it-IT", hbo: "he-IL" };
 
 const route = useRoute();
 const language = computed(() => route.params.lang as string);

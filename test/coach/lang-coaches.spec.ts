@@ -67,13 +67,42 @@ describe("教練設定 lang-coaches", () => {
     expect(getCoach("grc")!.voiceless).toBe(true);
   });
 
+  it("德/法已啟用：A1 初學、CEFR、有 STT/TTS（非 voiceless），題材重單字/文法/輸入", () => {
+    const de = getCoach("de")!;
+    expect(de.enabled).toBe(true);
+    expect(de.name).toBe("Lukas");
+    expect(de.langLabel).toBe("德文");
+    expect(de.levelScale).toEqual(["A1", "A2", "B1", "B2", "C1", "C2"]);
+    expect(de.defaultLevel).toBe("A1");
+    expect(de.voiceless).toBeFalsy(); // 活語言、有語音
+    expect(de.keyboard).toBeUndefined(); // 拉丁字母直打
+    expect(de.systemPrompt).toContain("A1");
+    expect(de.systemPrompt).toContain("Hochdeutsch");
+    expect(de.personas!.length).toBeGreaterThan(0);
+    expect(de.smalltalkTopics!.length).toBeGreaterThan(0);
+    expect(de.qaTopics!.length).toBeGreaterThan(0);
+
+    const fr = getCoach("fr")!;
+    expect(fr.enabled).toBe(true);
+    expect(fr.name).toBe("Camille");
+    expect(fr.langLabel).toBe("法文");
+    expect(fr.defaultLevel).toBe("A1");
+    expect(fr.voiceless).toBeFalsy();
+    expect(fr.keyboard).toBeUndefined();
+    expect(fr.systemPrompt).toContain("A1");
+    expect(fr.systemPrompt).toContain("français");
+    expect(fr.personas!.length).toBeGreaterThan(0);
+    expect(fr.scenarios!.length).toBeGreaterThan(0);
+  });
+
   it("pickPersona 依 seed 穩定輪替；無 personas 回 null", () => {
     const en = getCoach("en")!;
     const n = en.personas!.length;
     expect(pickPersona(en, 0)).toBe(en.personas![0]);
     expect(pickPersona(en, n)).toBe(en.personas![0]); // 繞回
     expect(pickPersona(en, 1)).toBe(en.personas![1 % n]);
-    expect(pickPersona(getCoach("de")!, 0)).toBeNull(); // de 無 personas
+    expect(pickPersona(getCoach("de")!, 0)).toBe(getCoach("de")!.personas![0]); // de 已啟用、有 personas
+    expect(pickPersona({ personas: [] } as any, 0)).toBeNull(); // 空 personas 回 null
   });
 
   it("publicCoaches 去掉 systemPrompt 但保留 levelScale/personas/scenarios", () => {

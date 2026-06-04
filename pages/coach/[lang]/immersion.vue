@@ -123,8 +123,8 @@ definePageMeta({ middleware: "coach-auth" });
 
 const { aiFetch } = useCoachAi();
 
-const LANG_LABEL: Record<string, string> = { en: "英文", ja: "日文" };
-const TTS_LANG: Record<string, string> = { en: "en-US", ja: "ja-JP" };
+const LANG_LABEL: Record<string, string> = { en: "英文", de: "德文", fr: "法文", ja: "日文", grc: "通用希臘文", la: "教會拉丁文", hbo: "聖經希伯來文" };
+const TTS_LANG: Record<string, string> = { en: "en-US", de: "de-DE", fr: "fr-FR", ja: "ja-JP", grc: "el-GR", la: "it-IT", hbo: "he-IL" };
 
 const route = useRoute();
 const language = computed(() => route.params.lang as string);

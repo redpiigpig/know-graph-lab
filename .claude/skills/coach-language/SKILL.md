@@ -1,6 +1,6 @@
 ---
 name: coach-language
-description: AI 語言教練（/coach）— 外語自學系統，多語言（英文 Emily / 日文 櫻子 / 通用希臘文 Sophia / 教會拉丁文 Marcus / 聖經希伯來文 Miriam 上線；德法預留）。核心：Gemini 對話 + Web Speech 語音；每語言獨立空間（首頁/儀表板/記憶/功能各自客製）。功能含五種聊天模式（打字/口說/問答知識/情境角色/限時主題）、今日計畫（每日推薦單字測驗+5閱讀+5聽力+口說+任務）、分級文法課（CEFR/JLPT/古語言量表）、技能練習與 TOEFL/IELTS/GRE 考試模擬、翻譯遊戲、YouTube/文章沉浸（讀聽後 MCQ+討論+評分）、統整記憶庫、教練每日簡報與日誌、SRS 單字、轉寫鍵盤（希臘文打英文＝希臘字母／日文打羅馬字＝假名／希伯來文打英文＝希伯來字母 RTL）、雙 key 成本控管。Use when 改語言教練任何功能、加語言、調人設/難度/題材、改資安（OTP 登入/付費上限）、接 Gemini key、debug coach 端點或頁面。
+description: AI 語言教練（/coach）— 外語自學系統，多語言（英文 Emily / 德文 Lukas / 法文 Camille / 日文 櫻子 / 通用希臘文 Sophia / 教會拉丁文 Marcus / 聖經希伯來文 Miriam 全上線）。核心：Gemini 對話 + Web Speech 語音；每語言獨立空間（首頁/儀表板/記憶/功能各自客製）。功能含五種聊天模式（打字/口說/問答知識/情境角色/限時主題）、今日計畫（每日推薦單字測驗+5閱讀+5聽力+口說+任務）、分級文法課（CEFR/JLPT/古語言量表）、技能練習與 TOEFL/IELTS/GRE 考試模擬、翻譯遊戲、YouTube/文章沉浸（讀聽後 MCQ+討論+評分）、統整記憶庫、教練每日簡報與日誌、SRS 單字、轉寫鍵盤（希臘文打英文＝希臘字母／日文打羅馬字＝假名／希伯來文打英文＝希伯來字母 RTL）、雙 key 成本控管。Use when 改語言教練任何功能、加語言、調人設/難度/題材、改資安（OTP 登入/付費上限）、接 Gemini key、debug coach 端點或頁面。
 ---
 
 > ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
@@ -9,24 +9,26 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 
 # AI 語言教練 Skill
 
-使用者（宗教研究者）的外語自學系統。**現上線 5 語**：英文 **B2→C2→TOEFL**；日文 **N5→N4（初學）**；通用希臘文（Koine）／教會拉丁文（Ecclesiastical）／聖經希伯來文（Biblical）**三古典語皆入門（初學）**。題材**以宗教/神話/宗教學為主軸**，輔以人文，少量理工醫/生活/旅遊（考試模式走真實考題）；三古典語題材＝神學院教的版本（**非古典／非現代**），詳見下方「語言一覽」。相關偏好見 [[project_language_coach]]、[[feedback_language_coach_religious_studies]]、[[feedback_traditional_chinese_only]]、[[feedback_coach_nvidia_engine]]。
+使用者（宗教研究者）的外語自學系統。**現上線 7 語**：英文 **B2→C2→TOEFL**；德文 **A1（初學）**／法文 **A1（初學）**（皆現代活語言、有 STT/TTS）；日文 **N5→N4（初學）**；通用希臘文（Koine）／教會拉丁文（Ecclesiastical）／聖經希伯來文（Biblical）**三古典語皆入門（初學）**。題材**以宗教/神話/宗教學為主軸**，輔以人文，少量理工醫/生活/旅遊（考試模式走真實考題）；三古典語題材＝神學院教的版本（**非古典／非現代**），詳見下方「語言一覽」。相關偏好見 [[project_language_coach]]、[[feedback_language_coach_religious_studies]]、[[feedback_traditional_chinese_only]]、[[feedback_coach_nvidia_engine]]。
 
 部署：**Zeabur**（GitHub master 自動部署）。DB：Supabase（Management API 跑 DDL，見 [[reference_supabase_management_api]]）。
 
 ---
 
-## 〇、語言一覽（5 語上線 · 全部定義在 `server/utils/lang-coaches.ts`）
+## 〇、語言一覽（7 語上線 · 全部定義在 `server/utils/lang-coaches.ts`）
 
 | code | 教練 | 量表·預設 | 語音 | 鍵盤 | TTS | 題材重點（皆宗教研究取向） |
 |---|---|---|---|---|---|---|
 | `en` | Emily 🗽 | CEFR·**B2** | 有 STT/TTS | — | en-US | 宗教/神話/宗教學為主＋人文；考試走 AWL/GRE/TOEFL |
+| `de` | Lukas 🍺 | CEFR·**A1** | 有 STT/TTS | — | de-DE | 標準德語 Hochdeutsch；**A1 初學重單字×文法×輸入**（der/die/das 三性＋四格 Kasus＋變位＋語序）；A1 走日常/文化，隨程度再帶宗教（路德/宗改/聖經德譯） |
+| `fr` | Camille 🥐 | CEFR·**A1** | 有 STT/TTS | — | fr-FR | 巴黎標準法語；**A1 初學重單字×文法×輸入**（陰陽性 le/la＋變位＋發音/liaison/鼻母音）；A1 走日常/文化，隨程度再帶宗教（天主教/主教座堂/laïcité） |
 | `ja` | 櫻子 🌸 | JLPT·**N5** | 有 STT/TTS | **kana**（羅馬字→假名） | ja-JP | 關東標準語；N5→N4 初學，神社祭典/文化/宗教淺白題 |
 | `grc` | Sophia 🦉 | 古·**入門** | voiceless | **greek**（英文→希臘字母 Beta Code） | el-GR | **通用希臘文 Koine（非古典 Attic/荷馬）**：新約／LXX／使徒教父／信經大公會議（公元初–中世紀前）／希臘化猶太（斐羅・約瑟夫斯）／哲學家／拜占庭官方文獻 |
 | `la` | Marcus 🏛️ | 古·**入門** | voiceless | —（拉丁字母直打） | it-IT（教會式） | **教會拉丁文 Ecclesiastical（非古典）**：武加大／拉丁教父（奧古斯丁・耶柔米・安博…）／禮儀信經大公會議 →經院神哲學（安瑟倫・倫巴德・阿奎那… summae/quaestiones）→中世紀各學科（教會法／編年史聖徒傳／大學講義／自然哲學／醫學／七藝） |
 | `hbo` | Miriam 🕎 | 古·**入門** | voiceless | **hebrew**（英文→希伯來字母，RTL） | he-IL | **舊約聖經希伯來文 Biblical（非現代以色列語）**：以舊約為起點（妥拉先讀創世記詩篇／先知書／智慧文學）→死海古卷昆蘭／米示拿‧拉比希伯來文／中世紀註釋（拉希）／禮儀碑銘；底本 BHS |
 
 - **古典語三本柱（grc/la/hbo）共同政策**：`enabled:true`、`levelScale=ANCIENT(["入門","初級","中級","進階"])`、`defaultLevel="入門"`、`voiceless:true`（無 STT，chat 不顯示麥克風/自動朗讀）；人設一律「神學院版、非古典/非現代、初學者、逐字 parse、大量夾繁中」。**勿改回古典定向**（見 [[feedback_language_coach_religious_studies]]）。
-- 德 `de`(Lukas🍺) / 法 `fr`(Camille🥐) 已預留人設但 `enabled:false`。
+- **德 `de`(Lukas🍺) / 法 `fr`(Camille🥐) 已於 2026-06-04 全面上線**（`enabled:true`）：A1 初學定向，人設明寫「打基礎＝單字×文法×輸入」、名詞一律連冠詞/性別教、隨程度再轉宗教題材；活語言有 STT/TTS、不 voiceless、無轉寫鍵盤（拉丁字母直打）。`review.vue` 的 `THEME_POOLS`/`TTS_LANG` 已補 de/fr（A1 高頻字＋日常，後段帶宗教詞）。
 - 每語言 4–5 個 `personas`（聊天輪替）＋ `smalltalkTopics`/`scenarios`/`qaTopics`（首頁今日推薦 + chat 開場用），古典語皆為「精讀／文法／抄經／信經」類初學題。
 
 ---
@@ -68,7 +70,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 - **分級文法課**（`lang_grammar` PK user+lang+**level**）：英文 A1–C2、日文 N5–N1、古典語 入門/初級/中級/進階 各一套；**Gemini 依程度＋`langLabel` 自動生成**（不需手動 seed；`入門/初級` 自動走初學者大綱，古典語會生字母/變格/動詞變化等基礎課）。大綱循序 + 逐課懶生成（解說/例句/練習）+ 完成度。頁 `/coach/[lang]/grammar`。
 - **主題教程**（`lang_courses`）：可選預設或自建主題（宗教文獻精讀/學術寫作/TOEFL口說/敬語/宗教神話日語…），生成循序課表，**每課標預估分鐘**，逐課懶生成 + 進度條。頁 `/coach/[lang]/courses`；端點 courses(index/create/[id]/lesson/done)。
 - **單字 SRS**（`lang_vocab`，SM-2，`server/utils/srs.ts`）：到期佇列；review 預設選擇題（對=good 錯=again→複習）；不足時從整庫補未精熟字；`vocab/generate` 依**目前程度**生成主題詞組。
-  - **♾️ 無限刷題模式（預設開，2026-06-04）**：`review.vue` 右上開關。佇列剩 ≤4 張就背景用 `vocab/generate` 生一批新學術單字（走 NVIDIA、零成本）接到佇列尾，預抓藏延遲、本 session 去重，永不停。主題池 `THEME_POOLS` **依語言**：英文走 AWL/GRE/學術；日文走 N5/N4 基礎・日常・神社祭典等初學主題（別給日文出英文考試詞）；**希臘文（grc）走 新約高頻字／約翰福音／LXX／信經術語／教父／斐羅／拜占庭**；**拉丁文（la）走 武加大／福音書／信經禮儀／拉丁教父／經院術語（ens·esse·essentia）／教會法／中世紀各學科**；**希伯來文（hbo）走 舊約高頻字／創世記出埃及記／詩篇／binyanim 動詞／三母音字根／昆蘭／拉比／中世紀註釋** 等入門題材。`TTS_LANG` 也要補對應 BCP-47（grc=`el-GR`、la=`it-IT` 教會式、hbo=`he-IL`），否則 🔊 會用英文聲念。測過或沒過的卡都進 `lang_vocab`（generate upsert + review 記 SRS），各語言獨立列表。新增語言時兩處都要補。
+  - **♾️ 無限刷題模式（預設開，2026-06-04）**：`review.vue` 右上開關。佇列剩 ≤4 張就背景用 `vocab/generate` 生一批新學術單字（走 NVIDIA、零成本）接到佇列尾，預抓藏延遲、本 session 去重，永不停。主題池 `THEME_POOLS` **依語言**：英文走 AWL/GRE/學術；**德文（de）／法文（fr）走 A1 高頻字＋日常生活（家庭/食物/城市/數字/問候…），名詞連冠詞，後段才帶教堂節慶與宗教/神學基礎詞**；日文走 N5/N4 基礎・日常・神社祭典等初學主題（別給日文出英文考試詞）；**希臘文（grc）走 新約高頻字／約翰福音／LXX／信經術語／教父／斐羅／拜占庭**；**拉丁文（la）走 武加大／福音書／信經禮儀／拉丁教父／經院術語（ens·esse·essentia）／教會法／中世紀各學科**；**希伯來文（hbo）走 舊約高頻字／創世記出埃及記／詩篇／binyanim 動詞／三母音字根／昆蘭／拉比／中世紀註釋** 等入門題材。`TTS_LANG` 也要補對應 BCP-47（de=`de-DE`、fr=`fr-FR`、grc=`el-GR`、la=`it-IT` 教會式、hbo=`he-IL`），否則 🔊 會用英文聲念。⚠️ **同一份 `TTS`/`TTS_LANG` 語系對照表散落在多個頁面**（`review.vue`/`practice.vue`/`immersion.vue`/`smalltalk.vue`/`grammar.vue`/`today.vue`/`courses.vue`，其中 immersion/practice 另有 `LANG_LABEL`），**新增活語言時 7 個檔都要補齊**（活語言若漏補會用英文聲念外語，2026-06-04 已全數補上 de/fr）。測過或沒過的卡都進 `lang_vocab`（generate upsert + review 記 SRS），各語言獨立列表。
 - **技能練習/考試**（`lang_tasks`）：`task/generate`（TOEFL/IELTS/GRE + 一般，聽說讀寫 + 翻譯）/ `task/[id]/answer`（選擇題自動批改、寫說/翻譯用 Gemini rubric 評分）。
 - **記憶/簡報/日誌**：`lang_memory`（跨 session 長期了解 + highlights 強弱項，注入對話）；`briefing`（今日簡報，每日快取）；`lang_journal`（教練每日日誌，日曆點閱）。
 - **難度依「目前程度」非目標**：生成都讀 `lang_progress.level`；量表 `coach.levelScale`（CEFR / JLPT / 入門初中進）；`progress.put` 設目前程度。
@@ -123,4 +125,4 @@ chat / profile(get,put) / progress(get,put) / activity / dashboard / usage / ass
 
 ## 待辦（次要）
 
-Live2D、雲端 TTS、開放德/法、AWL/GRE 詞庫實際 seed、速率限制、MFA、用量異常 email 通知、%C2 換真實 C2 wordlist。
+Live2D、雲端 TTS、AWL/GRE 詞庫實際 seed、速率限制、MFA、用量異常 email 通知、%C2 換真實 C2 wordlist。

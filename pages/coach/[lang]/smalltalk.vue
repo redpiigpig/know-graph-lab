@@ -126,7 +126,7 @@ const feedback = ref<any>(null);
 const msgArea = ref<HTMLElement | null>(null);
 let timer: any = null;
 
-const TTS: Record<string, string> = { en: "en-US", ja: "ja-JP" };
+const TTS: Record<string, string> = { en: "en-US", de: "de-DE", fr: "fr-FR", ja: "ja-JP", grc: "el-GR", la: "it-IT", hbo: "he-IL" };
 function mmss(s: number) { const m = Math.floor(s / 60); return `${m}:${String(Math.max(0, s % 60)).padStart(2, "0")}`; }
 function scoreLabel(k: string) { return ({ fluency: "流暢", grammar: "文法", vocabulary: "詞彙", topic_development: "論述" } as any)[k] || k; }
 

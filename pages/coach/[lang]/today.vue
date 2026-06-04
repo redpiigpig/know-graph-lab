@@ -137,7 +137,7 @@ const speech = useSpeech();
 const sttSupported = speech.supported;
 const listening = speech.listening;
 const interim = speech.interim;
-const TTS: Record<string, string> = { en: "en-US", ja: "ja-JP" };
+const TTS: Record<string, string> = { en: "en-US", de: "de-DE", fr: "fr-FR", ja: "ja-JP", grc: "el-GR", la: "it-IT", hbo: "he-IL" };
 
 const sections = [
   { kind: "reading", label: "今日閱讀（5）", icon: "📖" },
