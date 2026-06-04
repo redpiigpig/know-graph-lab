@@ -105,6 +105,13 @@ describe("教練設定 lang-coaches", () => {
     expect(pickPersona({ personas: [] } as any, 0)).toBeNull(); // 空 personas 回 null
   });
 
+  it("每位上線教練都有 personas（含日文，輪替才有變化）", () => {
+    for (const c of listCoaches()) {
+      expect(c.personas?.length, `${c.language} 應有 personas`).toBeGreaterThan(0);
+    }
+    expect(getCoach("ja")!.personas!.length).toBeGreaterThanOrEqual(5);
+  });
+
   it("publicCoaches 去掉 systemPrompt 但保留 levelScale/personas/scenarios", () => {
     const pub = publicCoaches();
     const en = pub.find((c: any) => c.language === "en")!;
