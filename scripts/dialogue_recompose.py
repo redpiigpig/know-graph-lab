@@ -56,11 +56,39 @@ GKEYS = gemini_keys()
 NKEYS = [E[k] for k in sorted(E) if k.upper().startswith('NVIDIA_API_KEY')]
 GMODEL = 'gemini-2.5-flash'
 NURL = 'https://integrate.api.nvidia.com/v1/chat/completions'; NMODEL = 'deepseek-ai/deepseek-v4-flash'
-print(f'gemini keys: {len(GKEYS)} | nvidia keys: {len(NKEYS)}', flush=True)
+print(f'gemini keys: {len(GKEYS)} | nvidia keys: {len(NKEYS)} | haiku: {"ON(主)" if "--haiku" in sys.argv else "off"}', flush=True)
 
 DRY = '--dry' in sys.argv
 REDO = '--redo' in sys.argv
+HAIKU = '--haiku' in sys.argv     # 主引擎用 Haiku（Claude OAuth/Max 額度，不撞 Gemini/NVIDIA 配額）
 DAY_ARGS = [a for a in sys.argv[1:] if re.match(r'\d{4}-\d{2}-\d{2}', a)]
+
+# ── Haiku（Claude OAuth，Max 額度；使用者 2026-06-05 指定用 Haiku 額度跑此重批）──
+_hclient = None
+def haiku_client():
+    global _hclient
+    if _hclient is None:
+        import anthropic
+        from pathlib import Path
+        cred = Path(os.environ.get('USERPROFILE', os.environ.get('HOME', ''))) / '.claude' / '.credentials.json'
+        tok = json.loads(cred.read_text(encoding='utf-8'))['claudeAiOauth']['accessToken']
+        _hclient = anthropic.Anthropic(auth_token=tok, timeout=150.0, max_retries=2)
+    return _hclient
+HMODEL = 'claude-haiku-4-5'
+def call_haiku(label, text):
+    import anthropic
+    cli = haiku_client()
+    for attempt in range(5):
+        try:
+            m = cli.messages.create(model=HMODEL, max_tokens=8192, system=sys_prompt(label),
+                                    messages=[{'role': 'user', 'content': text}])
+            return ''.join(b.text for b in m.content if hasattr(b, 'text')).strip()
+        except anthropic.RateLimitError:
+            time.sleep(8 * (attempt + 1))
+        except Exception:
+            if attempt == 4: return None
+            time.sleep(4 * (attempt + 1))
+    return None
 
 # ── turn 解析（與 dialogue_to_prose 同）──────────────────────────────
 TOKEN = re.compile(r'<h3>.*?</h3>|<h4>.*?</h4>|<p>.*?</p>', re.S)
@@ -169,6 +197,8 @@ def call_nvidia(label, text):
     return None
 
 def recompose(label, text):
+    if HAIKU:
+        return call_haiku(label, text) or call_gemini(label, text) or call_nvidia(label, text)
     return call_gemini(label, text) or call_nvidia(label, text)
 
 def to_paras(label, prose):
@@ -243,7 +273,8 @@ def main():
                 done_dates.add(d['day_date']); save_ledger(done_dates)
             flag = '' if dn == td else '  ⚠ 部分失敗，未記 ledger（待補）'
             print(f'{d["day_date"]}: {dn}/{td} turns 重鑄{flag}', flush=True)
-    with ThreadPoolExecutor(max_workers=max(1, len(GKEYS))) as ex:
+    workers = 8 if HAIKU else max(1, len(GKEYS))   # Haiku/Max 額度可較高並發
+    with ThreadPoolExecutor(max_workers=workers) as ex:
         list(ex.map(run, days))
     print(f'\n完成：{tot_done[0]}/{tot_turns[0]} turns 重鑄', flush=True)
 
