@@ -64,6 +64,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 - 閱讀短文 / 聽力 TTS 朗讀 + **4 選 1 理解題**（自動對答案、記時間）
 - 每項可**口說/打字討論**（/api/lang/chat 即時糾錯）+**結束給評分**（/api/lang/smalltalk/feedback）
 - **沉浸（immersion）同此流程**：YouTube/文章 → 摘要/MCQ/抽單字 → 討論(語音/文字) → 評分；YT 片長計入聽力時間
+- **YouTube 觀看記錄（2026-06-05）**：immersion 頁兩個動作鈕——「分析並出題」(走 Gemini 多模態) 與「只記錄觀看」(`content/watch`)。後者**純 fetch 不走 AI**：`server/utils/youtube-meta.ts` 用 oEmbed 抓標題 + watch 頁 `lengthSeconds` 抓時長（免 YouTube API key，本機 dev 無 AI key 也能用），記入 `lang_activity`(listening/youtube) + `lang_content`(analysis.watch_only)；抓不到時長則回 422 由前端手動輸入分鐘。頁頂橫幅顯示**今日／本月累積觀看時長 + 累計影片數**（`content/watch-stats`，從 lang_activity source=youtube 聚合）。歷史清單顯示時長與「僅記錄」標記。
 
 ## 四、其他功能
 
@@ -85,6 +86,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 ## 六、模型與 key（成本）
 
 - **🔑 線上／線下 key 分離（2026-06-04）**：線上各 AI 功能（coach 全部、族譜解析、YouTube 沉浸）**只讀「線上專用」key** `NVIDIA_API_Key_OLINE_ONLY` / `Gemini_API_Key_OLINE_ONLY`（拼字 OLINE 為既定變數名，**僅在 Zeabur 設定**）。`nuxt.config.ts` 的 `nvidiaApiKeys`/`geminiApiKeys`/`geminiApiKey` 三者皆改成只讀 `_OLINE_ONLY`。本機 `.env` 刻意**不放**這兩支，`_1..4` 共享池完全留給線下批次腳本（OCR/translate/dialogues）→ 線上線下額度徹底分離。⚠️ 三支 `dialogue_*.py` 用 `startswith('NVIDIA_API_KEY')` 前綴比對撈 key，所以 `_OLINE_ONLY` 一旦留在本機 `.env` 會被當第 5 把 key 輪進去燒掉線上額度——故必須從本機移除，不能只靠命名。⚠️ 線上為「專用」模式＝**無 `_1..4` fallback**，`_OLINE_ONLY` 失效則線上 AI 全斷；換 key 或要加保險絲時改 `nuxt.config.ts`。
+  - **本機 dev fallback（2026-06-05）**：`nuxt.config.ts` 改為「OLINE key 存在用 OLINE，**不存在才退到 `_1..4` 池**」。因 Zeabur 沒設 `_1..4`，線上仍只讀 OLINE（分離政策不變）；本機 dev 沒 OLINE → 自動用 `_1..4`，coach 生成/聊天/沉浸在 localhost 也能測（之前本機跑會報「尚未設定 Gemini key」就是因為兩池皆空）。
 - **主引擎＝NVIDIA NIM（2026-06-03 起）**：`server/utils/nvidia.ts` `callNvidiaFull`（OpenAI 相容、key 輪替、剝 `<think>`）。`coach-ai.ts` `coachGemini` 先試 NVIDIA → 失敗才落 Gemini。env `nvidiaApiKeys`=線上專用 `NVIDIA_API_Key_OLINE_ONLY`（見上「線上／線下 key 分離」；全部不可用才落 Gemini）、`nvidiaModel` 預設 **`qwen/qwen3-next-80b-a3b-instruct`**（繁中佳、支援 JSON、穩定）。無限量、零成本，用量記 tier=`nvidia`。
   - ⚠️ **不要改回 `deepseek-ai/deepseek-v4-flash`**：該模型在 NVIDIA 免費層長期 429（互動式教練不可靠）；deepseek 只適合 translate 腳本那種可退避重試的批次。其餘 NVIDIA 模型（qwen3-next、llama-3.1）正常 200。
   - **fileData（YouTube 等多模態 part）NVIDIA 不支援** → `coachGemini` 偵測到自動跳過走 Gemini。**∴ YouTube 沉浸一定要有 Gemini key**；缺 key 時 `content/ingest` 回明確訊息（含「伺服器偵測到 N 把 Gemini key」），並提示可改「貼上文章」（純文字走 NVIDIA）。
@@ -106,7 +108,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 
 ## 八、端點（`server/api/lang/*` + `server/api/devices/*`）
 
-chat / profile(get,put) / progress(get,put) / activity / dashboard / usage / assess / briefing / memory(get,regenerate) / journal(get, generate) / sessions / messages / coaches / vocab(index,generate,review get/post,[id] patch/delete) / homework / task(generate, [id]/answer) / smalltalk(start, feedback) / content(ingest, index) / grammar(index, lesson, done) / daily(get, item, done) / devices(check, index, [id] patch)。
+chat / profile(get,put) / progress(get,put) / activity / dashboard / usage / assess / briefing / memory(get,regenerate) / journal(get, generate) / sessions / messages / coaches / vocab(index,generate,review get/post,[id] patch/delete) / homework / task(generate, [id]/answer) / smalltalk(start, feedback) / content(ingest, watch, index, watch-stats) / grammar(index, lesson, done) / daily(get, item, done) / devices(check, index, [id] patch)。
 
 ## 九、加語言 / 擴充
 
