@@ -1,3 +1,21 @@
+// 線上 AI key 解析（語言教練、族譜解析、YouTube 沉浸共用）。
+// 政策：線上（Zeabur）只設 *_OLINE_ONLY；本機 dev 刻意不放 OLINE。
+// 為了讓本機 dev 也能測 coach，OLINE 不存在時才 fallback 到既有 _1..4 共享池
+// （Zeabur 沒設 _1..4，所以線上仍只會讀 OLINE，線上/線下額度分離不受影響）。
+const onlineGeminiKey =
+  process.env.Gemini_API_Key_OLINE_ONLY || process.env.GEMINI_API_KEY_OLINE_ONLY;
+const onlineNvidiaKey =
+  process.env.NVIDIA_API_Key_OLINE_ONLY || process.env.NVIDIA_API_KEY_OLINE_ONLY;
+const geminiPool = [1, 2, 3, 4]
+  .map((i) => process.env[`Gemini_API_Key_${i}`])
+  .filter(Boolean) as string[];
+const nvidiaPool = [1, 2, 3, 4]
+  .map((i) => process.env[`NVIDIA_API_Key_${i}`])
+  .filter(Boolean) as string[];
+// 線上有 OLINE 用 OLINE；本機（無 OLINE）才退到 _1..4 池。
+const geminiKeys = onlineGeminiKey ? [onlineGeminiKey] : geminiPool;
+const nvidiaKeys = onlineNvidiaKey ? [onlineNvidiaKey] : nvidiaPool;
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
@@ -18,15 +36,9 @@ export default defineNuxtConfig({
     r2Bucket: process.env.R2_BUCKET,
     ebookChunksDir: process.env.EBOOK_CHUNKS_DIR,
     photosRoot: process.env.PHOTOS_ROOT || "G:/我的雲端硬碟/資料/儲存資料夾/辰瑋相片",
-    // Gemini：線上「專用」key（語言教練、族譜解析、YouTube 沉浸等線上 AI 功能共用）。
-    // 政策（2026-06-04）：線上只讀 Gemini_API_Key_OLINE_ONLY（僅在 Zeabur 設定）；
-    // 本機 .env 刻意不放這支，_1..4 共享池完全留給線下批次腳本 → 線上線下額度徹底分離。
-    // Zeabur 變數區分大小寫，故同時容忍底線/全大寫拼法（OLINE 為使用者既定變數名）。
-    geminiApiKey:
-      process.env.Gemini_API_Key_OLINE_ONLY || process.env.GEMINI_API_KEY_OLINE_ONLY,
-    geminiApiKeys: [
-      process.env.Gemini_API_Key_OLINE_ONLY || process.env.GEMINI_API_KEY_OLINE_ONLY,
-    ].filter(Boolean) as string[],
+    // Gemini key：線上讀 OLINE，本機 dev 退到 _1..4 池（見檔首 geminiKeys 解析）。
+    geminiApiKey: geminiKeys[0],
+    geminiApiKeys: geminiKeys,
     // 語言教練模型：固定 ID gemini-2.5-flash 免費層每日僅 20 次、且被 OCR 自動化共用耗盡；
     // 改用 rolling alias `gemini-flash-latest`（2026-05-31 實測免費層可用，且配額桶與 OCR 用的固定 ID 分開）。
     // 升付費後可設 GEMINI_MODEL=gemini-2.5-flash、GEMINI_GRADE_MODEL=gemini-2.5-pro 免改碼升級。
@@ -39,9 +51,7 @@ export default defineNuxtConfig({
     //   （deepseek 只適合翻譯腳本那種可退避重試的批次場景）。
     // 同 Gemini 政策：線上只讀 NVIDIA_API_Key_OLINE_ONLY（僅 Zeabur 設定）；
     // _1..4 留給線下批次腳本（含三支用前綴比對撈 key 的 dialogue_*.py）。
-    nvidiaApiKeys: [
-      process.env.NVIDIA_API_Key_OLINE_ONLY || process.env.NVIDIA_API_KEY_OLINE_ONLY,
-    ].filter(Boolean) as string[],
+    nvidiaApiKeys: nvidiaKeys,
     nvidiaModel: process.env.NVIDIA_MODEL || "qwen/qwen3-next-80b-a3b-instruct",
     // 語言教練專用雙 key：先用免費，免費額度用完 → 前端確認後改用付費。
     // 兩支都還沒填時，免費層 fallback 用既有的 Gemini_API_Key_* 共用池。

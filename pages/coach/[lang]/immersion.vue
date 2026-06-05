@@ -8,6 +8,25 @@
     </nav>
 
     <div class="flex-1 p-5 max-w-3xl mx-auto w-full space-y-5">
+      <!-- YouTube 觀看時長統計 -->
+      <div class="bg-gradient-to-r from-indigo-50 to-sky-50 rounded-2xl border border-indigo-100 p-4 flex items-center gap-4">
+        <div class="text-2xl">📺</div>
+        <div class="flex gap-6 flex-1">
+          <div>
+            <div class="text-[11px] text-gray-500">今日觀看</div>
+            <div class="text-lg font-bold text-indigo-700">{{ fmtMin(stats.today) }}</div>
+          </div>
+          <div>
+            <div class="text-[11px] text-gray-500">本月累積</div>
+            <div class="text-lg font-bold text-indigo-700">{{ fmtMin(stats.month) }}</div>
+          </div>
+          <div>
+            <div class="text-[11px] text-gray-500">累計影片</div>
+            <div class="text-lg font-bold text-indigo-700">{{ stats.videoCount }} 部</div>
+          </div>
+        </div>
+      </div>
+
       <!-- 輸入 -->
       <div class="bg-white rounded-2xl border border-gray-100 p-5">
         <div class="flex gap-2 mb-3">
@@ -18,9 +37,27 @@
         <input v-if="mode === 'youtube'" v-model="url" placeholder="貼上 YouTube 網址（教練會直接看影片，最適合人文講座）" class="w-full px-3 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:border-indigo-400" />
         <textarea v-else v-model="text" rows="6" placeholder="貼上一段英文文章 / 論文段落…" class="w-full px-3 py-2.5 rounded-lg border border-gray-200 text-sm resize-none focus:outline-none focus:border-indigo-400" />
 
-        <button @click="analyze" :disabled="analyzing || (mode === 'youtube' ? !url.trim() : !text.trim())" class="mt-3 w-full py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-semibold disabled:opacity-40 hover:bg-indigo-700 transition">
-          {{ analyzing ? '教練分析中…（影片較長需稍候）' : '讓教練分析並出題' }}
+        <!-- YouTube：兩個動作 — 出題分析 / 只記錄觀看 -->
+        <div v-if="mode === 'youtube'" class="mt-3 grid grid-cols-2 gap-2">
+          <button @click="analyze" :disabled="analyzing || watching || !url.trim()" class="py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-semibold disabled:opacity-40 hover:bg-indigo-700 transition">
+            {{ analyzing ? '分析中…' : '分析並出題' }}
+          </button>
+          <button @click="logWatch()" :disabled="analyzing || watching || !url.trim()" class="py-2.5 rounded-xl bg-white border border-indigo-200 text-indigo-700 text-sm font-semibold disabled:opacity-40 hover:bg-indigo-50 transition" title="只把看過的影片與時長記錄下來，不出題、不討論">
+            {{ watching ? '記錄中…' : '只記錄觀看' }}
+          </button>
+        </div>
+        <button v-else @click="analyze" :disabled="analyzing || !text.trim()" class="mt-3 w-full py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-semibold disabled:opacity-40 hover:bg-indigo-700 transition">
+          {{ analyzing ? '教練分析中…' : '讓教練分析並出題' }}
         </button>
+
+        <!-- 抓不到時長 → 手動輸入分鐘 -->
+        <div v-if="needMinutes" class="mt-3 flex items-center gap-2 bg-amber-50 rounded-lg p-2.5">
+          <span class="text-xs text-amber-700 flex-1">抓不到影片長度{{ needMinutesTitle ? `「${needMinutesTitle}」` : '' }}，請手動輸入觀看分鐘數：</span>
+          <input v-model.number="manualMinutes" type="number" min="1" step="1" class="w-20 px-2 py-1 rounded border border-amber-300 text-sm" placeholder="分鐘" />
+          <button @click="logWatch(manualMinutes)" :disabled="watching || !manualMinutes" class="text-xs px-3 py-1.5 rounded-lg bg-amber-600 text-white disabled:opacity-40">記錄</button>
+        </div>
+
+        <p v-if="watchedMsg" class="text-xs text-sky-600 mt-2">{{ watchedMsg }}</p>
         <p v-if="err" class="text-xs text-rose-500 mt-2">{{ err }}</p>
       </div>
 
@@ -62,7 +99,6 @@
         <div v-if="content.analysis.vocab?.length" class="text-xs text-emerald-600">
           ✅ 已將 {{ content.analysis.vocab.length }} 個關鍵單字加入單字庫（含複習排程）
         </div>
-        <div v-if="watchedMsg" class="text-xs text-sky-600">{{ watchedMsg }}</div>
 
         <!-- 討論 -->
         <div v-if="content.analysis.discussion?.length" class="border-t border-gray-100 pt-4">
@@ -98,13 +134,15 @@
 
       <!-- 歷史 -->
       <div v-if="history.length" class="bg-white rounded-2xl border border-gray-100 p-5">
-        <h2 class="text-sm font-semibold text-gray-800 mb-2">最近分析過的內容</h2>
+        <h2 class="text-sm font-semibold text-gray-800 mb-2">看過 / 讀過的內容</h2>
         <div class="space-y-1.5">
-          <div v-for="h in history" :key="h.id" class="flex items-center gap-2 text-sm">
+          <a v-for="h in history" :key="h.id" :href="h.url || undefined" target="_blank" rel="noopener" class="flex items-center gap-2 text-sm" :class="h.url ? 'hover:bg-gray-50 rounded-lg -mx-1.5 px-1.5 py-0.5' : ''">
             <span>{{ h.source_type === 'youtube' ? '📺' : '📄' }}</span>
             <span class="text-gray-700 truncate flex-1">{{ h.title }}</span>
-            <span class="text-[11px] text-gray-300">{{ fmtDate(h.created_at) }}</span>
-          </div>
+            <span v-if="durOf(h)" class="text-[11px] text-indigo-500 flex-shrink-0">{{ durOf(h) }} 分</span>
+            <span v-if="h.analysis?.watch_only" class="text-[10px] text-gray-400 bg-gray-50 rounded px-1 flex-shrink-0">僅記錄</span>
+            <span class="text-[11px] text-gray-300 flex-shrink-0">{{ fmtDate(h.created_at) }}</span>
+          </a>
         </div>
       </div>
     </div>
@@ -136,6 +174,13 @@ const err = ref("");
 const content = ref<any>(null);
 const watchedMsg = ref("");
 const history = ref<any[]>([]);
+
+// YouTube 觀看時長統計 + 只記錄觀看
+const stats = ref<{ today: number; month: number; videoCount: number }>({ today: 0, month: 0, videoCount: 0 });
+const watching = ref(false);
+const needMinutes = ref(false);      // 抓不到時長 → 顯示手動分鐘輸入
+const needMinutesTitle = ref("");
+const manualMinutes = ref<number | null>(null);
 
 const discussion = ref<any[]>([]);
 const discussInput = ref("");
@@ -194,6 +239,56 @@ function fmtDate(s: string) {
   return s ? new Date(s).toLocaleDateString("zh-TW", { month: "numeric", day: "numeric" }) : "";
 }
 
+// 分鐘 → 「N 小時 M 分」/「M 分」
+function fmtMin(m: number) {
+  m = Math.round(m || 0);
+  if (m < 60) return `${m} 分`;
+  const h = Math.floor(m / 60);
+  const r = m % 60;
+  return r ? `${h} 小時 ${r} 分` : `${h} 小時`;
+}
+
+// 歷史卡片的影片時長（只記錄觀看與分析過皆從 analysis 取）
+function durOf(h: any) {
+  return h?.analysis?.duration_minutes || null;
+}
+
+async function loadStats() {
+  try {
+    stats.value = await authedFetch<any>(`/api/lang/content/watch-stats?language=${language.value}`);
+  } catch { /* ignore */ }
+}
+
+// 只記錄觀看：貼上網址 → 抓標題/時長 → 記入聽力時間，不出題
+async function logWatch(minutes?: number | null) {
+  if (!url.value.trim() || watching.value) return;
+  watching.value = true;
+  err.value = "";
+  watchedMsg.value = "";
+  try {
+    const res = await authedFetch<any>("/api/lang/content/watch", {
+      method: "POST",
+      body: { language: language.value, url: url.value.trim(), minutes: minutes || undefined },
+    });
+    watchedMsg.value = `🎧 已記錄「${res.title}」，${res.watchedMinutes} 分鐘計入今日聽力時間`;
+    needMinutes.value = false;
+    needMinutesTitle.value = "";
+    manualMinutes.value = null;
+    url.value = "";
+    await Promise.all([loadStats(), loadHistory()]);
+  } catch (e: any) {
+    // 抓不到時長 → 開手動分鐘輸入
+    if (e?.data?.code === "duration_unknown") {
+      needMinutes.value = true;
+      needMinutesTitle.value = e?.data?.title || "";
+    } else {
+      err.value = e?.data?.message || "記錄失敗，請確認網址";
+    }
+  } finally {
+    watching.value = false;
+  }
+}
+
 async function analyze() {
   analyzing.value = true;
   err.value = "";
@@ -221,6 +316,7 @@ async function analyze() {
     if (res.watchedMinutes > 0) watchedMsg.value = `🎧 已將影片時長 ${res.watchedMinutes} 分鐘計入今日聽力時間`;
     else watchedMsg.value = "";
     loadHistory();
+    loadStats();
   } catch (e: any) {
     err.value = e?.data?.message || "分析失敗，請換一則內容";
   } finally {
@@ -259,5 +355,8 @@ async function loadHistory() {
   history.value = c;
 }
 
-onMounted(loadHistory);
+onMounted(() => {
+  loadHistory();
+  loadStats();
+});
 </script>

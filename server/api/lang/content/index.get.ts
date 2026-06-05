@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
   const language = (getQuery(event).language as string) || "en";
   const { data } = await supabase
     .from("lang_content")
-    .select("id, source_type, url, title, summary, session_id, created_at")
+    .select("id, source_type, url, title, summary, analysis, session_id, created_at")
     .eq("user_id", user.id)
     .eq("language", language)
     .order("created_at", { ascending: false })
