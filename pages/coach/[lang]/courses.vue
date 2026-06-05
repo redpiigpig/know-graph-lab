@@ -4,7 +4,10 @@
       <NuxtLink :to="`/coach/${language}`" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
       <div class="w-px h-5 bg-gray-200" />
       <span class="text-sm font-semibold text-gray-900">主題教程</span>
-      <NuxtLink v-if="active" :to="''" @click.prevent="active = null" class="ml-auto text-xs text-indigo-600 hover:underline">← 回課程清單</NuxtLink>
+      <div class="ml-auto flex items-center gap-3">
+        <CoachTimer :seconds="tracker.activeSeconds.value" />
+        <NuxtLink v-if="active" :to="''" @click.prevent="active = null" class="text-xs text-indigo-600 hover:underline">← 回課程清單</NuxtLink>
+      </div>
     </nav>
 
     <div class="flex-1 p-5 max-w-2xl mx-auto w-full">
@@ -89,6 +92,7 @@ import { useRoute } from "vue-router";
 import { authedFetch } from "~/composables/useAuthedFetch";
 import { useCoachAi } from "~/composables/useCoachAi";
 import { useSpeech } from "~/composables/useSpeech";
+import { useActivityTracker } from "~/composables/useActivityTracker";
 
 definePageMeta({ middleware: "coach-auth" });
 
@@ -96,6 +100,7 @@ const route = useRoute();
 const language = computed(() => route.params.lang as string);
 const { aiFetch } = useCoachAi();
 const speech = useSpeech();
+const tracker = useActivityTracker();
 const TTS: Record<string, string> = { en: "en-US", de: "de-DE", fr: "fr-FR", ja: "ja-JP", grc: "el-GR", la: "it-IT", hbo: "he-IL" };
 
 const coach = ref<any>(null);
@@ -163,5 +168,8 @@ async function toggleDone(l: any) {
   await authedFetch("/api/lang/courses/done", { method: "POST", body: { courseId: active.value.id, lessonId: l.id, done: l.done } });
 }
 
-onMounted(async () => { await Promise.all([loadCoach(), loadList()]); });
+onMounted(async () => {
+  tracker.start(language.value, "reading", "course"); // 主題教程計入「讀」時間
+  await Promise.all([loadCoach(), loadList()]);
+});
 </script>

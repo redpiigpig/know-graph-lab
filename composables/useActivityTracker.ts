@@ -4,16 +4,18 @@
 // 用法：const tracker = useActivityTracker(); tracker.start('en','speaking','chat');
 //      ...頁面卸載時 tracker.stop()（composable 會自動在 unmount flush）
 //
-// ⚠️ 可靠 flush（2026-06-05）：以前「離開頁面」常沒記到，因為
-//   (1) flush 不足 30 秒就整包丟掉；(2) onUnmounted 裡 await fetch 在關分頁/SPA
-//   導航時來不及送。現在：離開頁面 force-flush（連 <30 秒也送）；切分頁/關頁用
-//   `fetch(keepalive:true)` beacon（可帶 Bearer header、請求能在頁面卸載後存活）。
+// ⚠️ 連續計時（2026-06-05 修）：以前 flush 會把 activeSeconds 歸零，導致畫面計時器
+//   每 30–60 秒就跳回 0、看似「一直重新計」。現在把「顯示用累計秒數」與「送 server 的
+//   增量」分開：activeSeconds 單調遞增、永不歸零（連續顯示）；flush 只送「尚未送出的
+//   增量」(activeSeconds - sentSeconds)，送成功才推進 sentSeconds（失敗不推進、下次重送，
+//   不會重複計）。離開頁面/切分頁用 keepalive beacon 送殘餘增量。
 // ============================================================================
 import { ref, onUnmounted } from "vue";
 import { authedFetch } from "~/composables/useAuthedFetch";
 
 export function useActivityTracker() {
-  const activeSeconds = ref(0);
+  const activeSeconds = ref(0); // 顯示用：本頁累計使用秒數，單調遞增、永不歸零
+  let sentSeconds = 0;          // 已 flush 到 server 的秒數（避免重複計）
   let language = "";
   let skill = "";
   let source = "chat";
@@ -21,7 +23,6 @@ export function useActivityTracker() {
   let flushTimer: ReturnType<typeof setInterval> | null = null;
   let running = false;
   let token = ""; // 快取 access token，給關頁時的 keepalive beacon 同步使用
-  let supabase: any = null;
 
   function tick() {
     if (typeof document !== "undefined" && document.hidden) return; // 分頁隱藏不計
@@ -29,39 +30,36 @@ export function useActivityTracker() {
     activeSeconds.value += 1;
   }
 
-  // 快取最新 token（beacon 在 pagehide 時沒空 await getSession）
   async function refreshToken() {
     try {
-      if (!supabase) supabase = useSupabaseClient();
+      const supabase = useSupabaseClient();
       const { data } = await supabase.auth.getSession();
       token = data?.session?.access_token ?? "";
     } catch { /* ignore */ }
   }
 
-  // 一般 flush（可 await、失敗會把秒數加回去重試）。
-  // force=true（離開頁面）時連不足 30 秒也送，避免短停留時間流失。
+  // flush「尚未送出的增量」。force=true（離開頁面）時降低門檻。送成功才推進 sentSeconds。
   async function flush(force = false) {
-    const secs = activeSeconds.value;
-    const floor = force ? 3 : 30; // 平時 30 秒門檻避免碎片；離開頁面降到 3 秒
-    if (secs < floor) return;
-    activeSeconds.value = 0;
-    const minutes = Math.round((secs / 60) * 100) / 100;
+    const delta = activeSeconds.value - sentSeconds;
+    const floor = force ? 3 : 30;
+    if (delta < floor) return;
+    const minutes = Math.round((delta / 60) * 100) / 100;
+    const target = activeSeconds.value;
     try {
       await authedFetch("/api/lang/activity", {
         method: "POST",
         body: { language, skill, minutes, source },
       });
-    } catch {
-      activeSeconds.value += secs; // 失敗加回去，下次再試
-    }
+      sentSeconds = target; // 成功才推進；失敗不動 → 下次補送同段增量
+    } catch { /* 失敗：sentSeconds 不變，下次重送 */ }
   }
 
-  // 關分頁 / 切走分頁時用：keepalive 讓請求在頁面卸載後仍送達（await 來不及）。
+  // 關分頁 / 切走分頁：keepalive 讓請求在頁面卸載後仍送達（await 來不及）。
   function flushBeacon() {
-    const secs = activeSeconds.value;
-    if (secs < 3 || !token) return;
-    activeSeconds.value = 0;
-    const minutes = Math.round((secs / 60) * 100) / 100;
+    const delta = activeSeconds.value - sentSeconds;
+    if (delta < 3 || !token) return;
+    const minutes = Math.round((delta / 60) * 100) / 100;
+    sentSeconds = activeSeconds.value; // beacon 無法確認結果 → 樂觀推進，避免重複送
     try {
       fetch("/api/lang/activity", {
         method: "POST",
@@ -83,7 +81,7 @@ export function useActivityTracker() {
     running = true;
     refreshToken();
     if (!timer) timer = setInterval(tick, 1000);
-    // 每 30 秒：flush 已累積時間 + 刷新 token（讓 beacon 隨時可用）
+    // 每 30 秒：把累積增量送 server + 刷新 token（顯示計時不受影響、不歸零）
     if (!flushTimer) flushTimer = setInterval(() => { flush(); refreshToken(); }, 30000);
     if (typeof window !== "undefined") {
       window.addEventListener("pagehide", flushBeacon);
@@ -91,12 +89,8 @@ export function useActivityTracker() {
     }
   }
 
-  function pause() {
-    running = false;
-  }
-  function resume() {
-    running = true;
-  }
+  function pause() { running = false; }
+  function resume() { running = true; }
 
   async function stop() {
     running = false;
@@ -106,12 +100,10 @@ export function useActivityTracker() {
       window.removeEventListener("pagehide", flushBeacon);
       document.removeEventListener("visibilitychange", onVisibility);
     }
-    await flush(true); // 離開頁面：連不足 30 秒也送
+    await flush(true); // 離開頁面：連不足 30 秒的殘餘增量也送
   }
 
-  onUnmounted(() => {
-    stop();
-  });
+  onUnmounted(() => { stop(); });
 
   return { activeSeconds, start, pause, resume, stop, flush };
 }

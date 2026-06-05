@@ -356,6 +356,8 @@ async function loadHistory() {
 }
 
 onMounted(() => {
+  // 一進頁就起計時（聽力）；之後作答/討論的時間都算進去，分析文章時 analyze() 會切成 reading
+  tracker.start(language.value, "listening", "immersion");
   loadHistory();
   loadStats();
 });
