@@ -189,7 +189,14 @@ CIC_ZH_PROMPT = """這是《天主教法典》(Codex Iuris Canonici, 1983) 官�
 
 
 def _gemini_ocr_pdf(path: Path, prompt: str, sleep: float = 1.2) -> str:
-    """OCR every page of a PDF with Gemini Vision → joined text. 2-strike quota abort."""
+    """OCR every page of a PDF with Gemini Vision → joined text.
+
+    Page-level cache: each resolved page is written to
+    c:/tmp/canon_law_zh/pages/{stem}/p{NNN}.txt immediately, so a multi-page PDF
+    accumulates progress across retries even under heavy quota contention.
+    Resume skips any page whose cache file already exists. Raises on 2 consecutive
+    all-key-429 pages (per OCR 2-strike rule) — partial pages stay cached.
+    """
     import fitz
     from google import genai
     from google.genai import types
@@ -199,9 +206,15 @@ def _gemini_ocr_pdf(path: Path, prompt: str, sleep: float = 1.2) -> str:
     if not keys:
         raise RuntimeError("no GEMINI_API_KEY")
     clients = [genai.Client(api_key=k) for k in keys]  # build once, reuse (avoid "client closed")
+    pagedir = ZH_CACHE / "pages" / path.stem
+    pagedir.mkdir(parents=True, exist_ok=True)
     doc = fitz.open(str(path))
-    out, strikes = [], 0
-    for pi in range(doc.page_count):
+    n = doc.page_count
+    strikes = 0
+    for pi in range(n):
+        pagefile = pagedir / f"p{pi:03d}.txt"
+        if pagefile.exists():  # already resolved on a previous attempt (empty = NO_TEXT)
+            continue
         page = doc.load_page(pi)
         longest = max(page.rect.width, page.rect.height)
         pix = page.get_pixmap(matrix=fitz.Matrix(1800 / longest, 1800 / longest), alpha=False)
@@ -226,13 +239,16 @@ def _gemini_ocr_pdf(path: Path, prompt: str, sleep: float = 1.2) -> str:
         if strikes >= 2:
             doc.close()
             raise RuntimeError("連 2 頁全 key 429 quota，依規範退出")
-        if ok and text and text != "# NO_TEXT":
-            text = re.sub(r"^```[a-z]*\n", "", text); text = re.sub(r"\n```$", "", text)
-            out.append(text.strip())
-        print(f"    page {pi + 1}/{doc.page_count}  {len(text)} chars", flush=True)
+        if ok:
+            clean = "" if text == "# NO_TEXT" else text
+            clean = re.sub(r"^```[a-z]*\n", "", clean); clean = re.sub(r"\n```$", "", clean)
+            pagefile.write_text(clean.strip(), encoding="utf-8")  # persist immediately
+        print(f"    page {pi + 1}/{n}  {len(text)} chars", flush=True)
         time.sleep(sleep)
     doc.close()
-    return "\n".join(out)
+    # all pages resolved → assemble from the page cache in order
+    parts = [(pagedir / f"p{pi:03d}.txt").read_text(encoding="utf-8") for pi in range(n)]
+    return "\n".join(p for p in parts if p)
 
 
 def ingest_cic_zh(*, resume: bool = True, limit_pdfs: int | None = None) -> None:
