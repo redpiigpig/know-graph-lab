@@ -1149,13 +1149,15 @@ python -X utf8 scripts/ingest_canon_law.py --doc cic-1983 --lang la # vatican.va
 
 | 文件 | la/grc | en | zh | 取得方式 |
 |---|---|---|---|---|
-| **CIC 1983**（1752 條）| ✅ vatican.va | ✅ vatican.va | ⏳ **Gemini Vision OCR**（vatican.va `/chinese/cic/` 37 PDF 字型壞，pdftotext 出亂碼）| HTML scrape + PDF OCR |
+| **CIC 1983**（1752 條）| ✅ vatican.va (la 1751) | ✅ vatican.va (en 1750) | ✅ **Haiku Vision OCR** (zh 1738) | HTML scrape + PDF OCR |
 | **CCC**（2865 段）| — | vatican.va/archive/ENG0015/ | vatican.va `/chinese/ccc/` 34 PDF（同 OCR）| HTML + PDF OCR |
 | **使徒教規 85** | grc/en = Schaff ANF Vol 8（站上 ebooks 已有）| | 待逐條翻 | DB 抽 + 翻譯 |
 | **Pedalion** | en = archive.org/details/pedalion（Cummings 1957）| | 待翻 | PDF |
 | 新教章程（Westminster FoG/DoW、衛理 Discipline、聖公 BCP）| 原文 en | | 待翻 | PDF/HTML |
 
-> ⏳ **繁中 OCR backlog**：vatican.va 中文 CIC/CCC PDF 用非 Unicode 嵌入字型，`pdftotext` 出亂碼（`第`→數字、`條`→�）。需走 Gemini Vision OCR（同 [[scripture-denzinger]] / Vatican II 中文 pipeline：PDF 頁→圖→Gemini）。OCR 後 `split_into_sections(lines,'zh')` 入 zh version，book_label 用 `cic_book_for` 或 OCR 出的 `第N卷`。
+> ✅ **CIC 繁中 OCR 完成（2026-06-05）**：vatican.va 中文 CIC PDF 用非 Unicode 嵌入字型，`pdftotext` 出亂碼（`第`→數字、`條`→�）。改走 **Haiku Vision**（`--engine haiku`）：整本 PDF 當 document block 一次 OCR，streaming + 60k tokens，重用 `translate_ebook_to_zh._make_anthropic_client`（Claude Max OAuth）。**為何 Haiku 不 Gemini**：免費 Gemini 4 key 池被並行的 jung/mueller 徹夜迴圈佔滿（key#0 prepay 耗盡、1-3 號 RPM 被搶），連單頁都擠不進；依使用者規則「免費被佔用就開 Haiku Max」。CCC 同法（`--engine haiku`，待跑）。zh 1738/1752（14 條待補）。
+
+OCR 後 `split_into_sections(lines,'zh')` 入 zh version，book_label 用 `cic_book_for`。
 
 > dedup：使徒教規 85 與 Quinisext/Trullo canons 與 `/creeds` 重疊（`dedup_against_existing=True`），依用途分別呈現。
 
