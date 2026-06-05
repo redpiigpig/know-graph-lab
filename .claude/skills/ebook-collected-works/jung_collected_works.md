@@ -117,7 +117,8 @@
 - **✅ 第二章「論兩種思維」(Über die zwei Arten des Denkens = Hinkle Ch I)**：**全章 77 rows**（`ch02.json`，含莫里克〈少女初戀之歌〉blockquote 補譯；Hinkle 英譯本略此詩）。逐段對齊（zh=de=en=77）✅，截圖實證 ✅。16,678 繁中字。
 - **✅ 第三章「米勒幻想的分析預備材料」(= Hinkle Ch II, The Miller Phantasies)**：**全章 20 rows**（`ch03.json`，含羅斯丹《大鼻子情聖》西哈諾訣別詩＋臨終獨白兩段法文詩補譯〔Hinkle 略〕、米勒法文自述引文）。
 - **✅ 第四章「創世讚歌」(Der Schöpferhymnus = Hinkle Ch III, The Hymn of Creation)**：**全章 95 rows**（`ch04.json`，含米勒英文〈創世讚歌〉三節詩、約伯哀歌16章、愛倫坡〈烏鴉〉兩節、浮士德/約伯「上帝打賭」、約伯記40–41章貝赫摩特/利維坦讚歌、塞內卡致路奇里烏斯兩段、奧古斯丁、居蒙論密特拉教、塞內卡聖林與「神住在每個正直者裡」收尾）。本章是全書最長、宗教學最豐（邏各斯/靈/童貞之母、神的雙重本性、基督教 vs 密特拉教、認罪即移情）。19,281 繁中字。
-- **🔄 第五章「飛蛾之歌」(Das Lied von der Motte = Hinkle Ch IV, The Song of the Moth)**：第一部最後一章、**全書最長（英文 105 段＋16 段詩）**。**已 27 rows（標題+E1–E23+米勒〈飛蛾〉詩+Faust黃昏/轉背/華格納對白詩+維吉爾第四牧歌+馬太10:34）**。**下一段＝E24**（同義詞鏈 歌者—聲音之神—晨星—創造者—光—太陽—火—愛之神；接「神＝渴慕/力比多、懷神於內＝即是神、密教成神」大段；德文 `jung_ch5_de.txt` D102 起、英文 `jung_ch5_en2.txt` 對應 [E#]）。
+- **🔄 第五章「飛蛾之歌」(Das Lied von der Motte = Hinkle Ch IV, The Song of the Moth)**：第一部最後一章、**全書最長（英文 105 段＋16 段詩）**。**已 44 rows（至 E31）**：含米勒〈飛蛾〉詩、Faust三段詩、維吉爾牧歌、馬太10:34、同義詞鏈、神＝力比多/懷神即是神、埃及亡靈書〈我是阿圖姆〉成神歌、密特拉禮儀希臘火之祈求、梅希特希爾德、賓根的希爾德加德、新神學家西默盎內在之光與渴慕。**下一段＝E32**（尼采〈榮耀與永恆〉詩「Stille! Großes…」→ 密特拉禮儀異象 Greek → 太陽神話；德文續讀 `jung_ch5_de.txt` D184+、英文 `jung_ch5_en2.txt` 之 [V57] 等）。
+  - ⚠️ **OCR 雷區**：本章德文腳註與正文交錯亂序——如 Symeon 渴慕引文正文被腳註拆成 D157+D183（中隔 Wesendonck/Ricarda-Huch 詩，那是**德文腳註**、Hinkle 正文置於他處 HTML 19838/19871，依英文 grain **此處略**）。**務必以 `jung_ch5_en2.txt` 英文正文順序為 row 粒度**，德文照英文段落拼接、跳腳註。
   - ⚠️ **本章英文必須用 `jung_ch5_en2.txt`（含詩節 `<div class=line>` 區塊，標 [V#]）**，不是 `jung_ch5_en.txt`（舊版漏詩）。重抽英文用 `_jung_extract_ch5_en2.py`。本章 Faust/維吉爾/埃及亡靈書等詩 Hinkle **有**英譯（de=Goethe德/拉丁、en=Hinkle、zh=親譯）；米勒〈飛蛾〉詩作者英文原作（de=en=英）。
   - 德文行界：Ch V = de txt 4004–6128（ZWEITER TEIL 在 6131）。後半有太陽神/火/力比多大量宗教學（埃及 Atum/Rê、密特拉、Byron 等）。
 - JSONL：`G:/…/_chunks/22222222-….jsonl`（5 chunks＝封面+引論+2 全章+第四章進行中）。**未推 R2、未刷 previews**。
