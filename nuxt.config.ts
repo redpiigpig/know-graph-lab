@@ -53,6 +53,8 @@ export default defineNuxtConfig({
     // _1..4 留給線下批次腳本（含三支用前綴比對撈 key 的 dialogue_*.py）。
     nvidiaApiKeys: nvidiaKeys,
     nvidiaModel: process.env.NVIDIA_MODEL || "qwen/qwen3-next-80b-a3b-instruct",
+    // NVIDIA 呼叫逾時（ms）：超時就 abort → 落到 Gemini fallback，避免 Zeabur gateway 先回 502。
+    nvidiaTimeoutMs: Number(process.env.NVIDIA_TIMEOUT_MS || 14000),
     // 語言教練專用雙 key：先用免費，免費額度用完 → 前端確認後改用付費。
     // 兩支都還沒填時，免費層 fallback 用既有的 Gemini_API_Key_* 共用池。
     geminiCoachFreeKey: process.env.GEMINI_COACH_FREE_KEY,

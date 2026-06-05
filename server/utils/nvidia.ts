@@ -49,14 +49,22 @@ export async function callNvidiaFull(opts: GeminiCallOpts & { keys?: string[] })
   };
   if (opts.json) body.response_format = { type: "json_object" };
 
+  // ⏱ 逾時保護：NVIDIA NIM（80B 大模型）偶爾很慢/卡住，沒有逾時的話 fetch 會一直
+  // 掛著、Zeabur gateway 先回 502，程式也來不及 fallback 到 Gemini。超時就 abort，
+  // 把剩餘時間預算留給 Gemini fallback（見 coach-ai.ts coachGemini 的 try/catch）。
+  const timeoutMs = Number(config.nvidiaTimeoutMs) || 14000;
+
   let lastErr = "";
   for (let i = 0; i < keys.length; i++) {
     const key = keys[(keyCursor + i) % keys.length];
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), timeoutMs);
     try {
       const res = await fetch(NVIDIA_URL, {
         method: "POST",
         headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
         body: JSON.stringify(body),
+        signal: ctrl.signal,
       });
 
       if (res.status === 429 || res.status === 503) {
@@ -88,7 +96,14 @@ export async function callNvidiaFull(opts: GeminiCallOpts & { keys?: string[] })
         },
       };
     } catch (e: any) {
+      if (e?.name === "AbortError") {
+        // 逾時＝服務慢、非單一 key 問題 → 別再試別把 key，直接跳出讓上層 fallback 到 Gemini
+        lastErr = `NVIDIA 逾時 ${timeoutMs}ms`;
+        break;
+      }
       lastErr = e?.message || "fetch failed";
+    } finally {
+      clearTimeout(timer);
     }
   }
 
