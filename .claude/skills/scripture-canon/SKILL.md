@@ -1119,44 +1119,45 @@ content/creeds/
   - 信義宗 Kirchenordnung (各國分支)
   - 浸信宗 Church Covenant 範本
 
-### 文件結構
+### 架構（DB 式，2026-06-05 上線 — 仿 /apocrypha、/gnostic）
+
+3 表（[database/canon-law-schema.sql](../../../database/canon-law-schema.sql)）：
+- `canon_law_documents`（slug PK / tradition / corpus / title_zh/en/lat / structure_note）
+- `canon_law_versions`（全域 code：`la`/`grc`/`en`/`zh`；seed 4 筆）
+- `canon_law_sections`（`order_index` = **條號/段號** 對齊鍵；`section_label`/`book_label`/`chapter_label` 給 reader 卷/題側欄樹；GIN FTS）
+- **la↔en↔zh align by order_index**；§ 子項（`Can. 5 §1/§2`）合併成同一 order_index 一列（避免重複 PK）。
+
+純函式（[scripts/canon_law.py](../../../scripts/canon_law.py)，test-first，[scripts/tests/test_canon_law.py](../../../scripts/tests/test_canon_law.py) 57 tests）：
+`CORPORA` taxonomy / `CIC_ZH_PDFS`(37) + `parse_cic_basename` / `CIC_BOOKS`+`cic_book_for`（7 卷→繁中 book_label）/ `parse_canon_label`（`Can. N §M`／`第 N 條`／`748.`／`Canon LXXXV`）/ `parse_hierarchy`（卷編題章 + LIBER/Pars/Titulus/Caput）/ `split_into_sections` / `align_report`+`assert_aligned`。
+
+API：[server/api/canon-law/](../../../server/api/canon-law/) `documents`/`versions`/`document`/`search`（逐檔照抄 gnostic）。
+UI：[pages/canon-law/index.vue](../../../pages/canon-law/index.vue)（按 tradition 分組 + 搜尋）、[pages/canon-law/[slug].vue](../../../pages/canon-law/%5Bslug%5D.vue)（分頁 + 卷/題側欄樹 + 中/英/原文三欄）。
+
+### Ingest pipeline（[scripts/ingest_canon_law.py](../../../scripts/ingest_canon_law.py)）
 
 ```
-content/canon-law/
-  catholic/
-    cic-1983.yml          # 拉丁公教會法典 — 7 books, 1752 canons
-    cceo-1990.yml         # 東方教會法典 — 30 titles, 1546 canons
-    catechism-cc.yml      # CCC 2865 paragraphs
-
-  orthodox/
-    pedalion-cummings.yml         # 1957 英譯（archive.org PD）
-    apostolic-canons.yml          # 85 條使徒教規（Schaff ANF Vol 8 已有）
-    canons-of-quinisext-trullo.yml  # 692 五六會議 canons
-    canons-of-trullo-syriac.yml   # 含敘利亞訂正版本
-
-  protestant/
-    westminster-form-of-government.yml
-    westminster-directory-of-worship.yml
-    methodist-discipline-2016.yml
-    sb-bcp-1928.yml               # 聖公宗 Book of Common Prayer
+python -X utf8 scripts/ingest_canon_law.py --seed-docs              # 建 4 個 document row
+python -X utf8 scripts/ingest_canon_law.py --doc cic-1983 --lang en # vatican.va archive 英文 HTML
+python -X utf8 scripts/ingest_canon_law.py --doc cic-1983 --lang la # vatican.va archive 拉丁（每卷一頁 cic_liberN_la.html）
 ```
 
-### 資料源 — 已有
+- 英文：`cic_index_en.html` → 多個 `cic_lib*-cann*_en.html`（連結帶 `#fragment` 要 strip）
+- 拉丁：`cic_index_la.html` → 7 個 `latin/documents/cic_liberI..VII_la.html`
+- upload 前 dedupe（同 order_index 取最長 text，去除跨引用雜訊）；schema 套用 `node scripts/apply-canon-law-schema.mjs`
 
-- ✓ **Schaff ANF Vol 8** — 含 Apostolic Constitutions + 85 Apostolic Canons
-- ✓ **Schaff NPNF2 Vol 14** — 含 Quinisext / Trullo canons
+### 資料源狀態
 
-### 資料源 — 待補
+| 文件 | la/grc | en | zh | 取得方式 |
+|---|---|---|---|---|
+| **CIC 1983**（1752 條）| ✅ vatican.va | ✅ vatican.va | ⏳ **Gemini Vision OCR**（vatican.va `/chinese/cic/` 37 PDF 字型壞，pdftotext 出亂碼）| HTML scrape + PDF OCR |
+| **CCC**（2865 段）| — | vatican.va/archive/ENG0015/ | vatican.va `/chinese/ccc/` 34 PDF（同 OCR）| HTML + PDF OCR |
+| **使徒教規 85** | grc/en = Schaff ANF Vol 8（站上 ebooks 已有）| | 待逐條翻 | DB 抽 + 翻譯 |
+| **Pedalion** | en = archive.org/details/pedalion（Cummings 1957）| | 待翻 | PDF |
+| 新教章程（Westminster FoG/DoW、衛理 Discipline、聖公 BCP）| 原文 en | | 待翻 | PDF/HTML |
 
-| 內容 | 來源 | 取得方式 |
-|---|---|---|
-| CIC 1983 | vatican.va/archive/cod-iuris-canonici/cic_index_en.html | HTML scrape |
-| CCEO 1990 | vatican.va/archive/eng0824/__P00.HTM | HTML scrape |
-| CCC | vatican.va/archive/ENG0015/_INDEX.HTM | HTML scrape |
-| Pedalion (Cummings 1957) | archive.org/details/pedalion | PDF download |
-| 衛理宗 Discipline 2016 | umc.org/en/content/book-of-discipline-2016 | PDF |
-| 聖公宗 BCP 1928 | episcopalchurch.org / archive.org | PDF |
-| 1689 LBC + 章程 | 1689londonbaptistconfession.com | PDF / HTML |
+> ⏳ **繁中 OCR backlog**：vatican.va 中文 CIC/CCC PDF 用非 Unicode 嵌入字型，`pdftotext` 出亂碼（`第`→數字、`條`→�）。需走 Gemini Vision OCR（同 [[scripture-denzinger]] / Vatican II 中文 pipeline：PDF 頁→圖→Gemini）。OCR 後 `split_into_sections(lines,'zh')` 入 zh version，book_label 用 `cic_book_for` 或 OCR 出的 `第N卷`。
+
+> dedup：使徒教規 85 與 Quinisext/Trullo canons 與 `/creeds` 重疊（`dedup_against_existing=True`），依用途分別呈現。
 
 ---
 

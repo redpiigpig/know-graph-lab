@@ -295,7 +295,7 @@ def split_into_sections(lines, lang: str) -> list[dict]:
         lab = _canon_match(line)
         if lab:
             n, _label, num_end, base_label = lab
-            rest = line[num_end:].lstrip(" .：:")  # §N + inline body after the number
+            rest = line[num_end:].lstrip(" .：:—–-")  # §N + inline body after the number/separator
             if cur is not None and cur["order_index"] == n:
                 # a §-subsection of the SAME canon → keep one row, append to body
                 if rest:

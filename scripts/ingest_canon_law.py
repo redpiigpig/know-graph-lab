@@ -41,9 +41,11 @@ CIC_INDEX = {
     "en": "https://www.vatican.va/archive/cod-iuris-canonici/cic_index_en.html",
     "la": "https://www.vatican.va/archive/cod-iuris-canonici/cic_index_la.html",
 }
+# Capture the FULL relative href (incl. eng/documents/ or latin/documents/),
+# tolerating a trailing #fragment anchor.
 CIC_PAGE_RE = {
-    "en": re.compile(r'(cic_lib\d+-cann[\d-]+_en\.html)', re.I),
-    "la": re.compile(r'(cic_liber[IVXLC]+_la\.html)', re.I),
+    "en": re.compile(r'href="([^"]*?cic_lib\d+-cann[\d-]+_en\.html)(?:#[^"]*)?"', re.I),
+    "la": re.compile(r'href="([^"]*?cic_liber[IVXLC]+_la\.html)(?:#[^"]*)?"', re.I),
 }
 
 # Footer / chrome lines that ride after the last canon on a vatican.va page.
