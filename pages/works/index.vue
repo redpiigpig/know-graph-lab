@@ -38,11 +38,11 @@
                   <div class="flex-1 min-w-0">
                     <h3 class="project-title">{{ p.title }}</h3>
                     <p class="project-desc">{{ p.description }}</p>
-                    <div class="mt-2 flex items-center gap-2 text-xs min-w-0">
-                      <span v-if="p.status" class="px-2 py-0.5 rounded-full flex-shrink-0" :class="`bg-${p.color}-50 text-${p.color}-700`">{{ p.status }}</span>
-                      <span v-if="p.kind === 'paper' && p.paper_ref" class="px-2 py-0.5 rounded-full bg-teal-50 text-teal-600 flex-shrink-0">研究回顧</span>
-                      <span v-if="p.subtitle" class="text-gray-400 italic truncate min-w-0">{{ p.subtitle }}</span>
+                    <div class="mt-2 flex flex-wrap items-center gap-2 text-xs">
+                      <span v-if="p.status" class="px-2 py-0.5 rounded-full" :class="`bg-${p.color}-50 text-${p.color}-700`">{{ p.status }}</span>
+                      <span v-if="p.kind === 'paper' && p.paper_ref" class="px-2 py-0.5 rounded-full bg-teal-50 text-teal-600">研究回顧</span>
                     </div>
+                    <p v-if="p.subtitle" class="mt-1.5 text-xs text-gray-400 italic truncate">{{ p.subtitle }}</p>
                   </div>
                 </div>
               </NuxtLink>
