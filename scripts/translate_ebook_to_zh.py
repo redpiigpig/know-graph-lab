@@ -264,8 +264,11 @@ def haiku_translate(source: str) -> str:
     """Translate via Claude Haiku 4.5. Cheaper + faster than Sonnet; ~95% of
     Sonnet's translation quality on this task per spot-checks. Used as
     automatic fallback when Gemini exhausts its 4 keys."""
+    # Patient backoffs: when Haiku is the sole engine (free pools dry, running on
+    # Claude Max OAuth), Max's rolling-window 429s should be waited out, not
+    # surfaced as a hard failure that kills the doc.
     return _anthropic_translate(HAIKU_MODEL, "Haiku", source,
-                                backoffs=(0, 30, 90, 180))  # shorter — Haiku has higher RPM
+                                backoffs=(0, 30, 90, 180, 300, 600, 600))
 
 
 MAX_CHUNK_CHARS = 20_000  # split source if larger — Sonnet 16K output cap + safety
@@ -765,6 +768,18 @@ def nvidia_with_gemini_fallback(source: str) -> str:
 gemini_with_haiku_fallback = gemini_with_nvidia_fallback
 
 
+def haiku_first(source: str) -> str:
+    """Haiku-primary chain (user 2026-06-05: 「免費的沒有或被佔用了，就去開 Haiku，
+    我有訂閱 Max」). Goes STRAIGHT to Haiku (paid Max OAuth) instead of burning time
+    on the dead free tiers first; only on Haiku failure does it fall back to the
+    Gemini→NVIDIA free chain (which revives at the daily ~15:00 Gemini reset)."""
+    try:
+        return haiku_translate(source)
+    except Exception as e:
+        print(f"  ↳ Haiku failed ({str(e)[:60]}…) — falling back to Gemini→NVIDIA free chain", flush=True)
+        return gemini_with_nvidia_fallback(source)
+
+
 # ── EPUB → ordered chunks ─────────────────────────────────────────────────
 
 def epub_to_chunks(epub_path: Path) -> list[dict]:
@@ -954,8 +969,9 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
         # Explicit Gemini-first chain (== default; Gemini → NVIDIA → Haiku per-piece).
         translator, model_label = gemini_with_nvidia_fallback, "gemini-2.5-flash → nvidia → haiku"
     elif engine == "haiku":
-        # Haiku 為第三層救急 (user 2026-06-04) — 走預設 Gemini-first 3-tier 鏈即可。
-        translator, model_label = gemini_with_nvidia_fallback, "gemini-2.5-flash → nvidia → haiku"
+        # Haiku-primary (user 2026-06-05: 免費池乾/被佔就直接開 Haiku，有 Max 訂閱)。
+        # 直打 Haiku，失敗才退 Gemini→NVIDIA 免費鏈（15:00 Gemini 重置後回血）。
+        translator, model_label = haiku_first, "haiku-4.5 → gemini → nvidia"
     else:  # default: Gemini-first 3-tier (unified API policy 2026-06-04, SKILL engine header).
         # Gemini 4 keys (primary, fast + free) → NVIDIA deepseek 4-account round-robin (2nd)
         # → Haiku 救急 (3rd, Claude Max — only when both free pools dry).
