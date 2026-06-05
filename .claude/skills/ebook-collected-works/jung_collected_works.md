@@ -124,8 +124,9 @@
 
 ### 🚧 第二部（ZWEITER TEIL）進行中
 - **✅ 第二部第一章「力比多面面觀」(Aspects of the Libido = ZWEITER TEIL 引論)**：**全章 40 rows**（`ch06.json`）。德文 6136–6627 / 英文 HTML 6116–6524。含《白騾奧義書》樓陀羅讚（2,3,4,7,8,11,12-15）+《羯陀奧義書》拇指大小內在自性、太陽=神=力比多、浮士德「眾母親」鑰匙場景＋魔鬼成善之力、拇指仙童=陽具象徵、卡比里諸神/伊達山達克堤利/尖帽=包皮、神聖男童 puer aeternus/底比斯瓶畫法勒斯=普里阿普斯、宗教英雄=力比多擬象、**「力比多」術語考**（西塞羅 Tusc.IV 拉丁定義＋斯多噶 βούλησις vs 欲念、撒路斯特、梵文 lúbhyati 哥德語 liufs 詞源、力比多=生物學界的能量〔羅伯特‧邁爾〕）。
-- **🚧 第二部第二章「力比多的概念與發生學理論」(The Conception and Genetic Theory of Libido)**：建中（`ch07.json`）。德文 6628–7385 / 英文 HTML 6525–7081（en 22 entries、無詩節）。**⏭️ 續傳指標：已到 E3／4 rows**（heading＋E1 性學三論力比多=性驅力/移置/Triebbündel＋E2 佛洛伊德妄想症長引文＋E3 早發性癡呆現實喪失）。下一段 E4 起（榮格「心靈能量」vs 力比多移置、歇斯底里/強迫症 vs 早發性癡呆、亞伯拉罕批評）。抽取腳本 `c:/tmp/_jung_extract_ch7.py`。
-- **⏭️ 後續章節**：III 力比多的轉化（英文 HTML 7082+）、IV 英雄的無意識起源、V 母親與重生的象徵、VI 為脫離母親而戰、VII 雙重母親。逐章建 `chNN.json`（英文 PART II 區段以 `_jung_extract_chN.py` 重抽 en 含詩節版；德文照英文段落拼接跳腳註）。
+- **✅ 第二部第二章「力比多的概念與發生學理論」(The Conception and Genetic Theory of Libido)**：**全章 22 rows**（`ch07.json`）。德文 6628–7385 / 英文 HTML 6525–7081（en 22 entries、無詩節）。含 性學三論力比多=性驅力/移置/Triebbündel、佛洛伊德妄想症長引文、早發性癡呆現實喪失、榮格「心靈能量」→發生學力比多再定義、批評亞伯拉罕、繁衍驅力/叔本華意志/投置、**斐涅斯-愛若斯/普羅提諾 太一-智性-世界靈魂=三位一體**（希臘 μία οὐσία ἐν τρισὶν ὑποστάσεσιν）、邏各斯與甘露/阿芙羅狄忒之鴿=聖靈、原力比多去性化（昇華 vs 壓抑）、自體情慾→自閉(Bleuler)修訂、**霍內格扁平地球偏執症+太陽陽具/施皮爾賴因酒=精液、佐西默斯煉金異象、土水=母**、象徵=情結消解入思維整體=藝術驅動力、施泰因塔爾「就像」類比驅力。西塞羅/撒路斯特拉丁＋梵文/哥德語詞源散見 Ch I 末段。抽取腳本 `c:/tmp/_jung_extract_ch7.py`。
+- **🚧 第二部第三章「力比多的轉化」(The Transformation of the Libido. A Possible Source of Primitive Human Discoveries)**：待建（`ch08.json`）。德文 ZWEITER TEIL III「Die Verlagerung der Libido als mögliche Quelle der primitiven Menschheitsentdeckungen」第 7386 行起 / 英文 HTML `CHAPTER III` 第 7082 行起（至 8168，Ch IV 在 8169）。**⏭️ 續傳指標：尚未開抽**——下一步先寫 `c:/tmp/_jung_extract_ch8.py`（仿 ch7，de 7386→Ch IV 德文起點、en HTML 7081:8168），再逐批建 ch08。
+- **⏭️ 後續章節**：IV 英雄的無意識起源（英文 HTML 8169+）、V 母親與重生的象徵（9497+）、VI 為脫離母親而戰（11983+）、VII 雙重母親（13148+）、VIII（16444+）。逐章建 `chNN.json`（英文 PART II 區段以 `_jung_extract_chN.py` 重抽 en 含詩節版；德文照英文段落拼接跳腳註）。
 
 ### 穩定的 5 步方法（每章照做）
 1. **德文重 OCR**（Gemini 全耗盡 → 用 **Haiku**，user 訂閱制不計費）：
