@@ -17,7 +17,7 @@ Examples:
   python -X utf8 scripts/ingest_canon_law.py --doc cic-1983 --lang la
 """
 from __future__ import annotations
-import os, sys, json, re, argparse, time
+import os, sys, json, re, argparse, time, base64
 from pathlib import Path
 
 import requests
@@ -251,9 +251,42 @@ def _gemini_ocr_pdf(path: Path, prompt: str, sleep: float = 1.2) -> str:
     return "\n".join(p for p in parts if p)
 
 
-def ingest_cic_zh(*, resume: bool = True, limit_pdfs: int | None = None) -> None:
+def _haiku_ocr_pdf(path: Path, prompt: str) -> str:
+    """OCR a whole PDF with Claude Haiku 4.5 via a document block (handles the
+    broken-font CIC PDFs visually). Used when the free Gemini pool is occupied by
+    other tasks — Haiku runs on the Max subscription (per user standing rule)."""
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import translate_ebook_to_zh as te  # reuse Claude Code OAuth (Max) client builder
+    b64 = base64.standard_b64encode(path.read_bytes()).decode("utf-8")
+    client = te._make_anthropic_client()
+    last = None
+    for attempt in range(4):
+        try:
+            with client.messages.stream(
+                model="claude-haiku-4-5-20251001",
+                max_tokens=60000,  # whole multi-page canon PDF in one shot
+                system=prompt,
+                messages=[{"role": "user", "content": [
+                    {"type": "document", "source": {"type": "base64", "media_type": "application/pdf", "data": b64}},
+                    {"type": "text", "text": "請依系統指示，輸出這份天主教法典 PDF 全部頁面的繁體中文正文。"},
+                ]}],
+            ) as stream:
+                msg = stream.get_final_message()
+            text = msg.content[0].text if msg.content else ""
+            if msg.stop_reason == "max_tokens":
+                print(f"    ⚠ truncated (max_tokens) — {len(text)} chars", flush=True)
+            text = re.sub(r"^```[a-z]*\n", "", text.strip()); text = re.sub(r"\n```$", "", text)
+            return text.strip()
+        except Exception as e:  # noqa: BLE001
+            last = e
+            time.sleep(5 * (attempt + 1))
+    raise RuntimeError(f"haiku OCR failed: {last}")
+
+
+def ingest_cic_zh(*, resume: bool = True, limit_pdfs: int | None = None, engine: str = "gemini") -> None:
     ZH_CACHE.mkdir(parents=True, exist_ok=True)
     pdfs = cl.CIC_ZH_PDFS[:limit_pdfs] if limit_pdfs else cl.CIC_ZH_PDFS
+    ocr = _haiku_ocr_pdf if engine == "haiku" else _gemini_ocr_pdf
     all_lines: list[str] = []
     for i, base in enumerate(pdfs):
         txt_path = ZH_CACHE / (base.replace(".pdf", ".txt"))
@@ -265,8 +298,8 @@ def ingest_cic_zh(*, resume: bool = True, limit_pdfs: int | None = None) -> None
         if not pdf_path.exists():
             r = requests.get(cl.cic_zh_url(base), headers=UA, timeout=120); r.raise_for_status()
             pdf_path.write_bytes(r.content)
-        print(f"  [{i + 1}/{len(pdfs)}] OCR {base} …", flush=True)
-        text = _gemini_ocr_pdf(pdf_path, CIC_ZH_PROMPT)
+        print(f"  [{i + 1}/{len(pdfs)}] OCR ({engine}) {base} …", flush=True)
+        text = ocr(pdf_path, CIC_ZH_PROMPT)
         txt_path.write_text(text, encoding="utf-8")
         all_lines.extend(text.splitlines())
     secs = cl.split_into_sections(all_lines, "zh")
@@ -293,6 +326,7 @@ def main():
     ap.add_argument("--doc", help="document slug, e.g. cic-1983")
     ap.add_argument("--lang", help="version code: en / la / zh")
     ap.add_argument("--limit-pages", type=int, default=None)
+    ap.add_argument("--engine", default="gemini", choices=["gemini", "haiku"], help="zh OCR engine")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
@@ -304,7 +338,7 @@ def main():
         if args.doc == "cic-1983" and args.lang in ("en", "la"):
             ingest_cic(args.lang, limit_pages=args.limit_pages, dry_run=args.dry_run)
         elif args.doc == "cic-1983" and args.lang == "zh":
-            ingest_cic_zh(resume=True, limit_pdfs=args.limit_pages)
+            ingest_cic_zh(resume=True, limit_pdfs=args.limit_pages, engine=args.engine)
         else:
             sys.exit(f"no ingest path for doc={args.doc} lang={args.lang} yet")
 
