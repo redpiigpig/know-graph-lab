@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col bg-slate-50 min-h-dvh">
     <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 z-30">
-      <NuxtLink to="/scripture-canon" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
+      <NuxtLink to="/scripture-canon/christianity" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
       <div class="w-px h-5 bg-gray-200" />
       <span class="text-sm font-semibold text-gray-900">聖經對照</span>
       <span class="text-xs text-gray-400 ml-1">{{ filteredBooks.length }} 卷 / {{ versionCount }} 個版本</span>

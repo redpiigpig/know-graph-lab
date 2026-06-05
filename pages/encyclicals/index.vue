@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col bg-stone-50 min-h-dvh">
     <nav class="flex items-center gap-3 px-4 h-12 bg-white/95 backdrop-blur border-b border-stone-200 z-30 sticky top-0">
-      <NuxtLink to="/scripture-canon" class="text-stone-400 hover:text-stone-700 transition text-lg leading-none">←</NuxtLink>
+      <NuxtLink to="/scripture-canon/christianity" class="text-stone-400 hover:text-stone-700 transition text-lg leading-none">←</NuxtLink>
       <div class="w-px h-5 bg-stone-200" />
       <span class="text-sm font-semibold text-stone-900">🕊️ 教宗訓導文獻</span>
       <span class="text-xs text-stone-400 ml-auto whitespace-nowrap">
