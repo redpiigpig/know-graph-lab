@@ -35,8 +35,12 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
 - 🔄 **全文逐段對照（進行中，2026-06-04 09:35 暫停）**：八敬法案 **14 篇開放取用 PDF 連結已補實**（Anālayo 漢堡 11 篇 `…/pdf/5-personen/analayo/*.pdf` + JBE Case/Tsedroen + Bodhi bhikkhuni.net + Hüsken 2010 alokavihara）；逐段持久化翻譯（Gemini→NVIDIA→Haiku），受配額限速約 55 段/時。
   - **目前進度（DB 真實段數）**：`foundation`（Anālayo 2016）**202/456**、`cullavagga`（2015）**3/114**，共 **205 段**入庫；其餘 12 篇 PDF 尚未開始。
   - **▶ 新 session 接續指令**：`python -X utf8 scripts/ingest_lit_review.py --fetch-fulltext --project bajingfa --resume --engine gemini --pace 1`（`done_zh_indices` 會跳過已翻段落、從缺口接續；entry 仍標 pending/fetched 不影響 resume）。log 寫 `c:/tmp/lit_review_overnight.log`。
-  - **待補連結**：Hüsken 2000（JBE vol 7）、von Hinüber 2000（德文，無開放 PDF）、Horner 1930（PD，archive.org 整本）— 這 3 篇目前指期刊首頁，batch 自動跳過，需先 WebSearch 補實 PDF 再 patch `fulltext_url`。
+  - **待補連結**：Hüsken 2000（JBE vol 7）、von Hinüber 2000（德文，無開放 PDF）— 仍無開放 PDF；Horner 1930（PD）已補 archive.org（in.ernet.dli.2015.53363，整本掃描，作參考連結，未抓全文）。
 - 💡 **漢堡 Anālayo PDF 命名規律**：`buddhismuskunde.uni-hamburg.de/pdf/5-personen/analayo/{foundation,cullavagga,gurudharma,legality,revival-bhikkhuni,mahapajapati,theravadavinaya,theories-foundation,validity,bhikkhuni-controversy}.pdf`（HEAD 探測後再入庫，避免 404 算 fail）
+- ✅ **中文書目開放取用連結回填（2026-06-05）**：`scripts/patch_lit_urls.py`（讀 `{ref_key: url}` JSON，curl 驗證後 PATCH `fulltext_url`，只動既有 ref_key）。bajingfa 已回填 **13 筆**經 curl 200 驗證的免費連結 — 釋惠敏《比丘尼受戒法與傳承之考察》(NTU 佛研 PDF×2 dup)、林崇安《八敬法的演變》(舊 ss.ncu 連結死→NTU 佛圖鏡像)、釋常圓《大愛道比丘尼經之佛教女性觀》(towisdom)、李玉珍《受戒施教》(中研院近史所)/《出家入世》(NTU museum)、楊惠南《當代台灣佛教出世性格》(NTU)、印順《初期大乘》《原始佛教聖典之集成》《教制教典與教學》《四分律》(CBETA Y0035/Y0033/Y0021/T1428)、〈阿難過在何處〉(yinshun-edu y27_04)、Horner 1930(archive.org)。
+  - **華藝（Airiti）付費牆無法直接下載**；策略＝改抓免費鏡像（臺大佛圖 buddhism.lib.ntu.edu.tw、CBETA、中研院、towisdom、yinshun-edu、archive.org）。
+  - **新增 3 筆印順／清德律學脈絡**（`lit_review_zhaohui_yinshun_qingde.md`，`--entries-only --display-offset 300`）：印順《教制教典與教學》(專書, CBETA)、釋清德《印順導師的律學思想》(專書, 法界 2001 版權)、釋清德〈印順法師戒律與教制觀之研究〉(學位論文, 香光書目)。bajingfa 現 **80 筆**。
+  - **仍無免費連結的 ~44 筆**：多為版權專書（法界／正聞《千載沉吟》《律學今詮》《令梵行久住》／英文 monographs Gross/Faure/Collett/Ohnuma/Jones/Madsen…）與昭慧散見報刊／簡體轉載／FB 的時論（廢除八敬法宣言、PlayBoy、達賴加油、奴性教育…）；前者依版權姿態維持 `unavailable`，後者因簡體轉載＋連結品質不過關，依[[feedback_traditional_chinese_only]]暫不掛。
 
 ---
 
