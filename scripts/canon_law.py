@@ -130,6 +130,53 @@ def cic_book_for(canon_no: int):
     return None
 
 
+# ── CCC (天主教教理) structure + vatican.va Chinese PDFs ──────────────────────
+CCC_PARTS: list[dict] = [
+    {"label": "卷一 信仰的宣認",     "low": 1,    "high": 1065},
+    {"label": "卷二 基督奧跡的慶典", "low": 1066, "high": 1690},
+    {"label": "卷三 在基督內的生活", "low": 1691, "high": 2557},
+    {"label": "卷四 基督徒的祈禱",   "low": 2558, "high": 2865},
+]
+
+
+def ccc_part_for(para_no: int):
+    """A CCC paragraph number → its 卷 label, or None if out of range."""
+    for p in CCC_PARTS:
+        if p["low"] <= para_no <= p["high"]:
+            return p["label"]
+    return None
+
+
+# vatican.va/chinese/ccc/ — 43 PDFs by paragraph range (NN_LOW-HIGH_ccc_zh.pdf).
+CCC_ZH_PDFS: list[str] = [
+    f"{n:02d}_{lo:04d}-{hi:04d}_ccc_zh.pdf" for n, lo, hi in [
+        (1, 1, 25), (2, 26, 49), (3, 50, 141), (4, 142, 184), (5, 185, 231),
+        (6, 232, 278), (7, 279, 354), (8, 355, 421), (9, 422, 483), (10, 484, 511),
+        (11, 512, 570), (12, 571, 630), (13, 631, 682), (14, 683, 747), (15, 748, 810),
+        (16, 811, 870), (17, 871, 945), (18, 946, 987), (19, 988, 1019), (20, 1020, 1065),
+        (21, 1066, 1209), (22, 1210, 1284), (23, 1285, 1321), (24, 1322, 1419),
+        (25, 1420, 1498), (26, 1499, 1532), (27, 1533, 1600), (28, 1601, 1666),
+        (29, 1667, 1690), (30, 1691, 1775), (31, 1776, 1876), (32, 1877, 1948),
+        (33, 1949, 1986), (34, 1987, 2051), (35, 2052, 2082), (36, 2083, 2141),
+        (37, 2142, 2257), (38, 2258, 2400), (39, 2401, 2513), (40, 2514, 2557),
+        (41, 2558, 2597), (42, 2598, 2758), (43, 2759, 2865),
+    ]
+]
+
+_CCC_NAME_RE = re.compile(r"_(\d+)-(\d+)_ccc", re.I)
+
+
+def ccc_zh_url(basename: str) -> str:
+    return VATICAN_ROOT + "chinese/ccc/" + basename
+
+
+def parse_ccc_basename(name: str) -> dict:
+    m = _CCC_NAME_RE.search(name)
+    if not m:
+        raise ValueError(f"not a CCC PDF basename: {name!r}")
+    return {"low": int(m.group(1)), "high": int(m.group(2))}
+
+
 def cic_zh_url(basename: str) -> str:
     """Bare CIC PDF basename → full vatican.va Chinese URL."""
     return VATICAN_ROOT + "chinese/cic/" + basename

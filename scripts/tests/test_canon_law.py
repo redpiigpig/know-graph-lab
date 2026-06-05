@@ -112,6 +112,36 @@ def test_cic_book_for_out_of_range():
     assert cl.cic_book_for(9999) is None
 
 
+# ── CCC structure + Chinese PDFs ──────────────────────────────────────────
+def test_ccc_parts_cover_1_to_2865():
+    parts = cl.CCC_PARTS
+    assert len(parts) == 4
+    assert parts[0]["low"] == 1 and parts[-1]["high"] == 2865
+    for prev, nxt in zip(parts, parts[1:]):
+        assert nxt["low"] == prev["high"] + 1
+    assert all(p["label"].startswith("卷") for p in parts)
+
+
+@pytest.mark.parametrize("para,expected", [
+    (1, "卷一 信仰的宣認"),
+    (1065, "卷一 信仰的宣認"),
+    (1066, "卷二 基督奧跡的慶典"),
+    (1691, "卷三 在基督內的生活"),
+    (2865, "卷四 基督徒的祈禱"),
+])
+def test_ccc_part_for(para, expected):
+    assert cl.ccc_part_for(para) == expected
+
+
+def test_ccc_zh_url_and_basenames():
+    assert cl.ccc_zh_url("01_0001-0025_ccc_zh.pdf") == \
+        "https://www.vatican.va/chinese/ccc/01_0001-0025_ccc_zh.pdf"
+    pdfs = cl.CCC_ZH_PDFS
+    assert len(pdfs) >= 40
+    lo, hi = cl.parse_ccc_basename(pdfs[0]), cl.parse_ccc_basename(pdfs[-1])
+    assert lo["low"] == 1 and hi["high"] == 2865
+
+
 # ── parse_canon_label ─────────────────────────────────────────────────────
 @pytest.mark.parametrize("line,order,label", [
     ("Can. 1", 1, "Can. 1"),

@@ -320,6 +320,58 @@ def ingest_cic_zh(*, resume: bool = True, limit_pdfs: int | None = None, engine:
     print(f"  ✓ upserted {n} zh canon rows", flush=True)
 
 
+CCC_ZH_PROMPT = """這是《天主教教理》(Catechism of the Catholic Church) 官方繁體中文版的一頁掃描。
+
+請抽出**純正文**，整理為單欄繁體中文純文字輸出。規則：
+1. 每一個編號段落，**以該段號加英文句點開頭，獨立成行**，例如「748.」，下一行起為該段正文。
+2. 卷／部分／章／條／節 等標題保留原樣，各自獨立成行（如「第一部分 信經」「第一章 …」）。
+3. 移除頁首頁尾、頁碼、running header、旁註的小字交叉參照編號。
+4. 斷行的句子接回同一段；不同段之間換行分開。
+5. 直接輸出繁體中文純文字，**不要** markdown、不要 ``` 包裝、不要任何說明。
+
+若整頁無正文，輸出單行：# NO_TEXT
+"""
+
+
+def ingest_ccc_zh(*, resume: bool = True, limit_pdfs: int | None = None, engine: str = "haiku") -> None:
+    ZH_CACHE.mkdir(parents=True, exist_ok=True)
+    pdfs = cl.CCC_ZH_PDFS[:limit_pdfs] if limit_pdfs else cl.CCC_ZH_PDFS
+    ocr = _haiku_ocr_pdf if engine == "haiku" else _gemini_ocr_pdf
+    all_lines: list[str] = []
+    for i, base in enumerate(pdfs):
+        txt_path = ZH_CACHE / (base.replace(".pdf", ".txt"))
+        if resume and txt_path.exists() and txt_path.stat().st_size > 0:
+            print(f"  [{i + 1}/{len(pdfs)}] cached {base}", flush=True)
+            all_lines.extend(txt_path.read_text(encoding="utf-8").splitlines())
+            continue
+        pdf_path = ZH_CACHE / base
+        if not pdf_path.exists():
+            r = requests.get(cl.ccc_zh_url(base), headers=UA, timeout=120); r.raise_for_status()
+            pdf_path.write_bytes(r.content)
+        print(f"  [{i + 1}/{len(pdfs)}] OCR ({engine}) {base} …", flush=True)
+        text = ocr(pdf_path, CCC_ZH_PROMPT)
+        txt_path.write_text(text, encoding="utf-8")
+        all_lines.extend(text.splitlines())
+    secs = cl.split_into_sections(all_lines, "zh")
+    best: dict[int, dict] = {}
+    for s in secs:
+        if 1 <= s["order_index"] <= 2865:  # CCC paragraph range (drop stray numbers)
+            cur = best.get(s["order_index"])
+            if cur is None or len(s["text"]) > len(cur["text"]):
+                best[s["order_index"]] = s
+    secs = [best[k] for k in sorted(best)]
+    for s in secs:
+        s["book_label"] = cl.ccc_part_for(s["order_index"]) or s.get("book_label")
+        s["section_label"] = f"{s['order_index']}"
+    print(f"  parsed {len(secs)} ccc paragraphs" + (f" (order {secs[0]['order_index']}..{secs[-1]['order_index']})" if secs else ""), flush=True)
+    rows = [{"doc_slug": "ccc", "version_code": "zh", "order_index": s["order_index"],
+             "section_label": s["label"], "book_label": s["book_label"],
+             "chapter_label": s["chapter_label"], "is_heading": False,
+             "text": s["text"], "char_count": len(s["text"])} for s in secs]
+    n = replace_sections("ccc", "zh", rows)
+    print(f"  ✓ upserted {n} ccc zh rows", flush=True)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--seed-docs", action="store_true", help="upsert canon_law_documents from CORPORA")
@@ -339,6 +391,8 @@ def main():
             ingest_cic(args.lang, limit_pages=args.limit_pages, dry_run=args.dry_run)
         elif args.doc == "cic-1983" and args.lang == "zh":
             ingest_cic_zh(resume=True, limit_pdfs=args.limit_pages, engine=args.engine)
+        elif args.doc == "ccc" and args.lang == "zh":
+            ingest_ccc_zh(resume=True, limit_pdfs=args.limit_pages, engine=args.engine)
         else:
             sys.exit(f"no ingest path for doc={args.doc} lang={args.lang} yet")
 
