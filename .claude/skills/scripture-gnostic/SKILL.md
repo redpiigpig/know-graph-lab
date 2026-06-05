@@ -45,8 +45,9 @@ description: 諾斯底主義文獻對照工具（/gnostic）— 把 The Gnostic 
 **接手指令（單一指令即可續跑）**：
 ```bash
 bash scripts/gnostic_resume_loop.sh        # 自癒迴圈：--all --resume，跑完/卡住自動睡 45min 重試
-# 或單輪：python -X utf8 scripts/ingest_gnostic.py --all --resume --engine gemini
+# 或單輪：python -X utf8 scripts/ingest_gnostic.py --all --resume --engine haiku
 ```
+> **引擎（2026-06-05 user 拍板）**：免費池（Gemini/NVIDIA）乾掉或被佔用時，**直接 `--engine haiku` 走 Claude Max OAuth**，不要空轉戳死掉的免費 key。`--engine haiku` 已修為**直連 `haiku_translate`**（原本誤 redirect 回 gemini 鏈）；`haiku_translate` backoffs 加長（0/30/90/180/300/600/600）以撐過 Max 滾動視窗 429。resume_loop.sh 預設已切 `--engine haiku`。免費池恢復後想省 Max 額度可改回 `--engine gemini`（該鏈仍會自動 cascade 到 Haiku 當第 3 層）。
 - **單一實例守衛**：迴圈用 `c:/tmp/gnostic_loop.lock`，已在跑就拒啟動（防殭屍累積搶 key）。停止用 PowerShell 殺 `resume_loop.sh`/`ingest_gnostic.py` 程序 + 刪 lock。
 - **`--resume` 跳過已入庫篇**，安全重跑。
 

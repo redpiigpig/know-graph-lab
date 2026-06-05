@@ -97,7 +97,10 @@ def make_engine(engine: str):
         "gemini": te.gemini_with_nvidia_fallback,
         "nvidia": te.nvidia_translate,
         "sonnet": te.sonnet_translate,
-        "haiku": te.gemini_with_nvidia_fallback,  # redirected
+        # Direct Haiku via Claude Max OAuth — use when the free pools (Gemini /
+        # NVIDIA) are dry or busy and we'd rather burn Max quota than idle
+        # (user 2026-06-05: 「免費的沒有或被佔用了，就去開 Haiku，我有訂閱 max」).
+        "haiku": te.haiku_translate,
     }[engine]
     return te, fn
 

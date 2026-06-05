@@ -29,9 +29,11 @@ prev=$(count); zero=0
 echo "### RESUME LOOP start (have $prev docs) $(date)" >> "$LOG"
 for i in $(seq 1 20); do
   echo "### resume cycle $i $(date)" >> "$LOG"
-  # 3-tier chain (user 2026-06-04): Gemini → NVIDIA deepseek (4-account round-robin)
-  # → Haiku 救急 when both free pools are dry. 2-strike cooldowns avoid spinning.
-  python -X utf8 -u scripts/ingest_gnostic.py --all --resume --engine gemini >> "$LOG" 2>&1
+  # Direct Haiku via Claude Max OAuth (user 2026-06-05: 「免費的沒有或被佔用了，就
+  # 去開 Haiku，我有訂閱 max」). The free pools (Gemini / NVIDIA) were exhausted, so
+  # rather than spin probing dead keys we pump straight through Max-Haiku. Patient
+  # backoffs in haiku_translate ride out Max's rolling-window 429s.
+  python -X utf8 -u scripts/ingest_gnostic.py --all --resume --engine haiku >> "$LOG" 2>&1
   cur=$(count); added=$((cur - prev)); prev=$cur
   echo "### cycle $i added $added (total $cur)" >> "$LOG"
   if [ "$added" -eq 0 ]; then zero=$((zero + 1)); else zero=0; fi
