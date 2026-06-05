@@ -40,7 +40,9 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
 - ✅ **中文書目開放取用連結回填（2026-06-05）**：`scripts/patch_lit_urls.py`（讀 `{ref_key: url}` JSON，curl 驗證後 PATCH `fulltext_url`，只動既有 ref_key）。bajingfa 已回填 **13 筆**經 curl 200 驗證的免費連結 — 釋惠敏《比丘尼受戒法與傳承之考察》(NTU 佛研 PDF×2 dup)、林崇安《八敬法的演變》(舊 ss.ncu 連結死→NTU 佛圖鏡像)、釋常圓《大愛道比丘尼經之佛教女性觀》(towisdom)、李玉珍《受戒施教》(中研院近史所)/《出家入世》(NTU museum)、楊惠南《當代台灣佛教出世性格》(NTU)、印順《初期大乘》《原始佛教聖典之集成》《教制教典與教學》《四分律》(CBETA Y0035/Y0033/Y0021/T1428)、〈阿難過在何處〉(yinshun-edu y27_04)、Horner 1930(archive.org)。
   - **華藝（Airiti）付費牆無法直接下載**；策略＝改抓免費鏡像（臺大佛圖 buddhism.lib.ntu.edu.tw、CBETA、中研院、towisdom、yinshun-edu、archive.org）。
   - **新增 3 筆印順／清德律學脈絡**（`lit_review_zhaohui_yinshun_qingde.md`，`--entries-only --display-offset 300`）：印順《教制教典與教學》(專書, CBETA)、釋清德《印順導師的律學思想》(專書, 法界 2001 版權)、釋清德〈印順法師戒律與教制觀之研究〉(學位論文, 香光書目)。bajingfa 現 **80 筆**。
-  - **仍無免費連結的 ~44 筆**：多為版權專書（法界／正聞《千載沉吟》《律學今詮》《令梵行久住》／英文 monographs Gross/Faure/Collett/Ohnuma/Jones/Madsen…）與昭慧散見報刊／簡體轉載／FB 的時論（廢除八敬法宣言、PlayBoy、達賴加油、奴性教育…）；前者依版權姿態維持 `unavailable`，後者因簡體轉載＋連結品質不過關，依[[feedback_traditional_chinese_only]]暫不掛。
+  - **仍無免費連結的條目**：多為版權專書（法界／正聞《千載沉吟》《律學今詮》《令梵行久住》／英文 monographs Gross/Faure/Collett/Ohnuma/Jones/Madsen…）與昭慧散見報刊／簡體轉載／FB 的時論；前者依版權姿態維持 `unavailable`，後者因簡體轉載＋連結品質不過關，依[[feedback_traditional_chinese_only]]暫不掛。
+- ✅ **昭慧時論回填（hongshi.org.tw，2026-06-05）**：昭慧法師個人文章在其官網 `hongshi.org.tw/master-chao-hwei-article-page.php?n=N`（穩定數字 ID）。**該站 WAF 擋 bot（WebFetch/curl 皆 403）**，無法逐頁 curl 驗證或枚舉索引；改以 Google 索引（標題精確命中）認定。已掛〈當代大愛道的二次革命——廢除八敬法宣言〉n=608（廢除八敬法宣言兩條目共用）。其餘昭慧 op-ed（奴性教育／PlayBoy／佛教與女性／論出家二眾）未能從 search 取得確切 n=，暫缺。
+- ✅ **南傳／藏傳傳承中斷與恢復 + 西方女剃男（2026-06-05，使用者指定）**：`lit_review_zhaohui_lineage.md`，7 筆英文開放取用（curl 200），歸 `#跨傳統比較`，`--display-offset 320`。南傳＝Alliance for Bhikkhunis〈A Lotus at Dawn〉(1996 薩爾納特)、Barre Center(11c 斯里蘭卡斷絕→1998 菩提伽耶恢復)；藏傳＝Thubten Chodron(根本有部比丘尼從未確立)、達賴喇嘛訪談(2007 漢堡會議兩方案、未逕行)、Lion's Roar(2022 不丹首傳 gelongma)、Buddhistdoor(尼眾現況)；西方女剃男先例＝Smith College〈Women's Ordination in Sōtō Zen〉(曹洞得度不分性別，女 roshi 為男弟子授戒)。bajingfa 現 **87 筆**（跨傳統比較 12 筆）。
 
 ---
 
