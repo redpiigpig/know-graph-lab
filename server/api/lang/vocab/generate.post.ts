@@ -6,6 +6,7 @@
 import { getCoach } from "~/server/utils/lang-coaches";
 import { parseJsonLoose } from "~/server/utils/gemini";
 import { coachGemini } from "~/server/utils/coach-ai";
+import { hasCuratedTheme, curatedWords } from "~/server/data/enVocab";
 
 export default defineEventHandler(async (event) => {
   const user = await requireAuth(event);
@@ -21,6 +22,26 @@ export default defineEventHandler(async (event) => {
   if (!coach) throw createError({ statusCode: 400, message: "不支援的語言" });
   if (!theme?.trim()) throw createError({ statusCode: 400, message: "請提供主題" });
   const n = Math.min(30, Math.max(5, count || 15));
+
+  // ── 英文預設主題：直接用「手工策展」單字，不走 AI（永遠有題、零延遲、品質穩定）──
+  if (language === "en" && hasCuratedTheme(theme)) {
+    const listKey = theme.trim().slice(0, 40);
+    // 洗牌取 n 個（每次補題給不同子集，配合 upsert 去重，逐步把整組刷完）
+    const pool = [...curatedWords(theme)].sort(() => Math.random() - 0.5).slice(0, n);
+    const rows = pool.map((w) => ({
+      user_id: user.id,
+      language,
+      word: w.word,
+      reading: null,
+      meaning: w.meaning,
+      example: w.example,
+      part_of_speech: w.pos,
+      source: "list",
+      list_key: listKey,
+    }));
+    await supabase.from("lang_vocab").upsert(rows, { onConflict: "user_id,language,word", ignoreDuplicates: true });
+    return { added: rows.length, theme: listKey, curated: true, words: rows.map((r) => ({ word: r.word, meaning: r.meaning })) };
+  }
 
   // 帶入使用者「目前程度」（不是目標）與興趣 → 難度貼合現況、逐步提升
   const [{ data: profile }, { data: prog }] = await Promise.all([

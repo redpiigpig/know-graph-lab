@@ -105,10 +105,10 @@ const tracker = useActivityTracker();
 const THEME_POOLS: Record<string, { presets: string[]; auto: string[] }> = {
   en: {
     presets: ["AWL Sublist 1", "GRE 高頻字", "哲學學術用語", "歷史學術用語", "神學術語", "文學批評術語", "學術寫作連接詞"],
+    // 無限模式用：全為「手工策展」主題（後端直接插策展單字、不走 AI）→ 永遠秒出題、不卡頓
     auto: [
-      "AWL Sublist 1", "AWL Sublist 2", "AWL Sublist 3", "GRE 高頻字", "GRE 進階字",
-      "哲學學術用語", "歷史學術用語", "神學術語", "宗教學術語", "聖經研究術語",
-      "文學批評術語", "社會科學術語", "學術寫作連接詞", "學術動詞", "抽象名詞",
+      "AWL Sublist 1", "GRE 高頻字", "哲學學術用語", "歷史學術用語",
+      "神學術語", "文學批評術語", "學術寫作連接詞",
     ],
   },
   ja: {
