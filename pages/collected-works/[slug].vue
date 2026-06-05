@@ -80,10 +80,10 @@
           <ul class="space-y-2">
             <li v-for="(w, i) in g.items" :key="i">
               <component
-                :is="w.ebookId && (w.status === 'done' || w.status === 'in-progress') ? 'NuxtLink' : 'div'"
-                :to="w.ebookId ? `/ebook/${w.ebookId}` : undefined"
+                :is="isReadable(w) ? 'NuxtLink' : 'div'"
+                :to="isReadable(w) ? `/ebook/${w.ebookId}` : undefined"
                 class="work-row group"
-                :class="w.ebookId && (w.status === 'done' || w.status === 'in-progress')
+                :class="isReadable(w)
                   ? `bg-white border-${author.color}-100 hover:border-${author.color}-300 hover:shadow-sm cursor-pointer no-underline`
                   : 'bg-gray-50 border-gray-100'"
               >
@@ -102,8 +102,8 @@
                   <div v-if="w.titleOriginal" class="text-xs text-gray-400 italic truncate">{{ w.titleOriginal }}</div>
                   <div v-if="w.note" class="text-[11px] text-gray-400 mt-0.5 leading-snug">{{ w.note }}</div>
                 </div>
-                <span class="text-[11px] px-2 py-0.5 rounded-full flex-shrink-0 self-start" :class="statusClass(w.status)">
-                  {{ statusLabel(w.status) }}
+                <span class="text-[11px] px-2 py-0.5 rounded-full flex-shrink-0 self-start" :class="statusClass(effStatus(w))">
+                  {{ statusLabel(effStatus(w)) }}
                 </span>
               </component>
             </li>
@@ -122,6 +122,32 @@ definePageMeta({ middleware: 'auth' })
 const route = useRoute()
 const store = useCollectedWorksStore()
 const author = computed(() => store.bySlug(route.params.slug as string))
+
+// Live transcription progress: a work with >1 chunk in the DB has real content,
+// so auto-upgrade a 'planned' work with an ebookId to clickable 轉錄中 without
+// hand-editing the store as the background queue fills books in.
+const liveChunks = ref<Record<string, number>>({})
+onMounted(async () => {
+  try {
+    const data = await $fetch<any>('/api/ebooks')
+    const list = Array.isArray(data) ? data : data?.ebooks ?? []
+    const m: Record<string, number> = {}
+    for (const e of list) if (e?.id) m[e.id] = e.chunk_count ?? 0
+    liveChunks.value = m
+  } catch {
+    /* hub still renders from the static store if the fetch fails */
+  }
+})
+
+function effStatus(w: CwWork): WorkStatus {
+  if (w.status === 'done') return 'done'
+  if (w.ebookId && (liveChunks.value[w.ebookId] ?? 0) > 1) return 'in-progress'
+  return w.status
+}
+function isReadable(w: CwWork): boolean {
+  const s = effStatus(w)
+  return !!w.ebookId && (s === 'done' || s === 'in-progress')
+}
 
 useHead(() => ({ title: author.value ? `${author.value.name} — 全集` : '全集' }))
 

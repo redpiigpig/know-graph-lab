@@ -116,6 +116,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         {
           title: '宗教起源與發展講座',
           titleOriginal: 'Lectures on the Origin and Growth of Religion',
+          ebookId: '44444445-4444-4444-8444-444444444444',
           year: '1878',
           yearSort: 1878,
           category: '宗教學奠基',
@@ -127,6 +128,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         {
           title: '自然宗教',
           titleOriginal: 'Natural Religion',
+          ebookId: '44444441-4444-4444-8444-444444444444',
           year: '1888',
           yearSort: 1888,
           category: 'Gifford 講座（宗教學四部）',
@@ -137,6 +139,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         {
           title: '物質宗教',
           titleOriginal: 'Physical Religion',
+          ebookId: '44444442-4444-4444-8444-444444444444',
           year: '1890',
           yearSort: 1890,
           category: 'Gifford 講座（宗教學四部）',
@@ -146,6 +149,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         {
           title: '人類學宗教',
           titleOriginal: 'Anthropological Religion',
+          ebookId: '44444443-4444-4444-8444-444444444444',
           year: '1891',
           yearSort: 1891,
           category: 'Gifford 講座（宗教學四部）',
@@ -155,6 +159,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         {
           title: '心理宗教（神智學）',
           titleOriginal: 'Theosophy, or Psychological Religion',
+          ebookId: '44444444-4444-4444-8444-444444444444',
           year: '1892',
           yearSort: 1892,
           category: 'Gifford 講座（宗教學四部）',
@@ -165,6 +170,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         {
           title: '比較神話學',
           titleOriginal: 'Comparative Mythology',
+          ebookId: '4444444b-4444-4444-8444-444444444444',
           year: '1856',
           yearSort: 1856,
           category: '語言與神話學',
@@ -174,6 +180,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         {
           title: '語言科學講座',
           titleOriginal: 'Lectures on the Science of Language',
+          ebookId: '44444446-4444-4444-8444-444444444444',
           year: '1861',
           yearSort: 1861,
           category: '語言與神話學',
@@ -184,6 +191,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         {
           title: '神話科學論集',
           titleOriginal: 'Contributions to the Science of Mythology',
+          ebookId: '4444444c-4444-4444-8444-444444444444',
           year: '1897',
           yearSort: 1897,
           category: '語言與神話學',
@@ -204,6 +212,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         {
           title: '印度能教我們什麼？',
           titleOriginal: 'India: What Can It Teach Us?',
+          ebookId: '44444449-4444-4444-8444-444444444444',
           year: '1883',
           yearSort: 1883,
           category: '印度學',
@@ -213,6 +222,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         {
           title: '印度哲學六派',
           titleOriginal: 'The Six Systems of Indian Philosophy',
+          ebookId: '4444444a-4444-4444-8444-444444444444',
           year: '1899',
           yearSort: 1899,
           category: '印度學',
@@ -223,6 +233,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         {
           title: '德國作坊雜記',
           titleOriginal: 'Chips from a German Workshop',
+          ebookId: '44444448-4444-4444-8444-444444444444',
           year: '1867–1875',
           yearSort: 1867,
           category: '文集與回憶',
