@@ -123,10 +123,17 @@ export async function coachGemini(opts: GeminiCallOpts, ctx: CoachCtx): Promise<
   }
   const { keys, tier } = resolveCoachKeys(usePaid);
   if (!keys.length) {
+    // 走到這裡＝主引擎 NVIDIA 也沒 key（或多模態才需 Gemini 而 Gemini 也沒）。
+    // 訊息點明 NVIDIA 主引擎，免得誤以為單字/聊天只吃 Gemini。
+    const noNvidia = !nvKeys.length;
     throw createError({
       statusCode: 400,
       data: { code: tier === "paid" ? "no_paid_key" : "no_free_key" },
-      message: tier === "paid" ? "尚未設定付費 Gemini key" : "尚未設定 Gemini key",
+      message: tier === "paid"
+        ? "尚未設定付費 Gemini key"
+        : noNvidia
+          ? "尚未設定 AI key（主引擎 NVIDIA 與備援 Gemini 皆無）。本機 dev 請重啟 server 讓 _1..4 池生效；線上請設 *_OLINE_ONLY。"
+          : "尚未設定 Gemini key",
     });
   }
 
