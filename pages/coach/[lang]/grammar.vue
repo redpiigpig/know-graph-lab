@@ -4,7 +4,8 @@
       <NuxtLink :to="`/coach/${language}`" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
       <div class="w-px h-5 bg-gray-200" />
       <span class="text-sm font-semibold text-gray-900">文法課</span>
-      <span v-if="syllabus.length" class="ml-auto text-xs text-gray-400">{{ doneCount }}/{{ syllabus.length }} 完成</span>
+      <NuxtLink v-if="language === 'en'" :to="`/coach/${language}/grammar-map`" class="ml-auto text-xs text-indigo-600 hover:underline">🗺️ 文法地圖</NuxtLink>
+      <span v-if="syllabus.length" class="text-xs text-gray-400" :class="language === 'en' ? 'ml-3' : 'ml-auto'">{{ doneCount }}/{{ syllabus.length }} 完成</span>
     </nav>
 
     <div class="flex-1 p-5 max-w-2xl mx-auto w-full">
@@ -147,5 +148,13 @@ async function toggleDone(l: any) {
   await authedFetch("/api/lang/grammar/done", { method: "POST", body: { language: language.value, level: level.value, lessonId: l.id, done: l.done } });
 }
 
-onMounted(async () => { await Promise.all([loadCoach(), load()]); });
+onMounted(async () => {
+  await Promise.all([loadCoach(), load()]);
+  // 從文法地圖深連結 ?open=<lessonId> 自動展開該課
+  const openParam = route.query.open as string | undefined;
+  if (openParam) {
+    const l = syllabus.value.find((s) => s.id === openParam);
+    if (l) open(l);
+  }
+});
 </script>

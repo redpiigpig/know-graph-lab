@@ -5,6 +5,7 @@
 import { getCoach } from "~/server/utils/lang-coaches";
 import { coachGemini } from "~/server/utils/coach-ai";
 import { parseJsonLoose } from "~/server/utils/gemini";
+import { curatedSyllabus } from "~/server/data/enGrammar";
 
 export default defineEventHandler(async (event) => {
   const user = await requireAuth(event);
@@ -31,6 +32,20 @@ export default defineEventHandler(async (event) => {
     .eq("language", language)
     .eq("level", lv)
     .single();
+
+  // ── 英文：用「手工策展」課程（含預嵌內容），不走 AI 生成；保留 done 進度 ──
+  if (language === "en") {
+    const doneIds = new Set(((existing?.syllabus as any[]) || []).filter((s) => s.done).map((s) => s.id));
+    const syllabus = curatedSyllabus(lv).map((s) => ({ ...s, done: doneIds.has(s.id) }));
+    // 寫回 DB（讓 lesson 端點讀到預嵌 content、done 端點可切換）；策展內容更新會自動覆寫
+    await supabase
+      .from("lang_grammar")
+      .upsert(
+        { user_id: user.id, language, level: lv, syllabus, updated_at: new Date().toISOString() },
+        { onConflict: "user_id,language,level" }
+      );
+    return { level: lv, currentLevel, levelScale: coach.levelScale, syllabus, curated: true };
+  }
 
   // 已有 → 直接回
   if (existing?.syllabus?.length) {
