@@ -185,6 +185,13 @@ def make_engine():
     if not getattr(te, "NVIDIA_KEYS", None):
         raise RuntimeError("no NVIDIA keys loaded — check .env (NVIDIA_API_Key_1..4)")
 
+    def _clean(out: str) -> str:
+        # Each EN paragraph → exactly ONE zh paragraph: drop any model-added
+        # markdown heading lines and collapse internal newlines so the reader's
+        # \n\n paragraph-split keeps zh/en/de row counts equal.
+        out = re.sub(r"(?m)^\s*#{1,6}\s.*$", "", out)
+        return re.sub(r"\s*\n\s*", " ", out).strip()
+
     def translate_para(en: str, de: str = "") -> str:
         src = en.strip()
         if not src:
@@ -192,12 +199,13 @@ def make_engine():
         if de.strip():
             src = f"{src}\n\n[德文參考 — 不要翻譯，僅供消歧義]\n{de.strip()}"
         pieces = te.split_oversized(src)
-        out = " ".join(te.nvidia_with_gemini_fallback(p) for p in pieces)
-        # Each EN paragraph → exactly ONE zh paragraph: drop any model-added
-        # markdown heading lines and collapse internal newlines so the reader's
-        # \n\n paragraph-split keeps zh/en/de row counts equal.
-        out = re.sub(r"(?m)^\s*#{1,6}\s.*$", "", out)
-        out = re.sub(r"\s*\n\s*", " ", out).strip()
+        # Retry on empty: under load the engine occasionally returns a heading-only
+        # / blank response that _clean reduces to ""; don't cache that as the translation.
+        out = ""
+        for _ in range(4):
+            out = _clean(" ".join(te.nvidia_with_gemini_fallback(p) for p in pieces))
+            if out:
+                return out
         return out
 
     return translate_para
