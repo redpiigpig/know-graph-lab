@@ -273,36 +273,52 @@ def sec_path(slug: str, i: int) -> Path:
     return work_dir(slug) / f"sec{i}.json"
 
 
-def translate_work(work: dict, translate_para, *, maxsec=None) -> int:
-    """Download + split + translate one work, resumably. Returns paragraphs done."""
+def ingest_work(work: dict) -> int:
+    """English-first ingest (NO LLM): download + split + write per-section caches
+    (en filled, zh=None where missing) + upload. The book becomes readable in
+    English immediately; translation fills 繁中 later. Returns section count."""
     txt = fetch_djvu(work["en_id"])
-    raw_lines = txt.read_text(encoding="utf-8", errors="replace").splitlines()
-    sections = build_sections(raw_lines, work["split"])
-    if maxsec:
-        sections = sections[:maxsec]
+    sections = build_sections(txt.read_text(encoding="utf-8", errors="replace").splitlines(),
+                              work["split"])
     work_dir(work["slug"]).mkdir(parents=True, exist_ok=True)
-    print(f"  {work['slug']}: {len(sections)} sections "
-          f"({sum(len(s['paras']) for s in sections)} ¶)", flush=True)
-    done = 0
     for i, s in enumerate(sections):
         cp = sec_path(work["slug"], i)
-        cache = json.loads(cp.read_text(encoding="utf-8")) if cp.exists() else {}
-        en = s["paras"]
-        zh = (cache.get("zh", []) + [None] * len(en))[:len(en)]
-        todo = [j for j in range(len(en)) if not zh[j]]
+        if cp.exists():
+            continue  # keep any existing translations
+        cp.write_text(json.dumps({"title": s["title"], "en": s["paras"],
+                                  "zh": [None] * len(s["paras"])}, ensure_ascii=False, indent=1),
+                      encoding="utf-8")
+    assemble_and_upload(work)
+    return len(sections)
+
+
+def translate_work(work: dict, translate_para, *, reupload_every: int = 12) -> int:
+    """Fill 繁中 for one already-ingested work, resumably, reading the per-section
+    caches ingest_work wrote. Re-uploads every `reupload_every` sections so the
+    reader shows Chinese landing incrementally (English stays as fallback)."""
+    done = 0
+    i = 0
+    while sec_path(work["slug"], i).exists():
+        cp = sec_path(work["slug"], i)
+        s = json.loads(cp.read_text(encoding="utf-8"))
+        en = s["en"]
+        zh = (s.get("zh") or [None] * len(en))[:len(en)] + [None] * (len(en) - len(s.get("zh") or []))
+        todo = [j for j in range(len(en)) if not (zh[j] or "").strip()]
         if todo:
-            print(f"    sec{i}「{s['title'][:40]}」 ¶={len(en)} todo={len(todo)}", flush=True)
+            print(f"    {work['slug']} sec{i}「{s['title'][:36]}」 ¶={len(en)} todo={len(todo)}", flush=True)
         for k, j in enumerate(todo, 1):
             zh[j] = translate_para(en[j], "")
             if k % 3 == 0 or k == len(todo):
-                cp.write_text(json.dumps({"title": s["title"], "en": en, "zh": zh},
-                                         ensure_ascii=False, indent=1), encoding="utf-8")
-        if not todo:  # ensure cache exists even for already-complete sections
-            cp.write_text(json.dumps({"title": s["title"], "en": en, "zh": zh},
-                                     ensure_ascii=False, indent=1), encoding="utf-8")
+                s["zh"] = zh
+                cp.write_text(json.dumps(s, ensure_ascii=False, indent=1), encoding="utf-8")
+                if LOCK.exists():
+                    LOCK.touch()
+        s["zh"] = zh
+        cp.write_text(json.dumps(s, ensure_ascii=False, indent=1), encoding="utf-8")
         done += sum(1 for z in zh if z)
-        if LOCK.exists():  # keep the lock fresh so a scheduled re-fire won't double-run
-            LOCK.touch()
+        i += 1
+        if reupload_every and i % reupload_every == 0:
+            assemble_and_upload(work)
     return done
 
 
@@ -315,7 +331,11 @@ def cover_chunk(work: dict) -> dict:
 
 
 def section_chunk(work: dict, sec: dict, ci: int) -> dict:
-    zh_rows = [f"## {sec['title']}"] + [z or "" for z in sec["zh"]]
+    # English-first: the main (繁中) column falls back to the English paragraph
+    # until its translation lands, so an ingested-but-untranslated book is still
+    # fully readable (in English) and progressively becomes Chinese.
+    zh_src = (sec.get("zh") or []) + [None] * len(sec["en"])
+    zh_rows = [f"## {sec['title']}"] + [(z or en) for z, en in zip(zh_src, sec["en"])]
     en_rows = [f"## {sec['title']}"] + sec["en"]
     c = build_multilang_chunk(
         chunk_index=ci, chapter_path=f"{work['title']} · {sec['title']}",
@@ -332,7 +352,7 @@ def assemble_and_upload(work: dict):
     i = 0
     while sec_path(work["slug"], i).exists():
         sec = json.loads(sec_path(work["slug"], i).read_text(encoding="utf-8"))
-        if any(sec.get("zh") or []):
+        if sec.get("en"):  # English-first: include any section with source text (zh may be empty → falls back to EN)
             chunks.append(section_chunk(work, sec, ci))
             ci += 1
         i += 1
@@ -447,9 +467,10 @@ def main():
         return
 
     if args.work:
-        tp = mb.make_engine()
         w = by_slug[args.work]
-        translate_work(w, tp, maxsec=args.maxsec)
+        ingest_work(w)  # English-first
+        tp = mb.make_engine()
+        translate_work(w, tp)
         if args.upload:
             assemble_and_upload(w)
         return
@@ -458,12 +479,20 @@ def main():
         if not acquire_lock():
             return
         try:
+            # Phase 1: English-first ingest — every book readable fast, no LLM.
+            for w in WORKS:
+                try:
+                    print(f"⤓ ingest {w['slug']} — {w['title']}", flush=True)
+                    ingest_work(w)
+                except Exception as e:  # noqa: BLE001
+                    print(f"  ✗ ingest {w['slug']} failed: {type(e).__name__}: {e}", flush=True)
+            # Phase 2: translate gradually; English stays as the fallback column.
             tp = mb.make_engine()
             for w in WORKS:
                 if is_done(w):
-                    print(f"  ✓ {w['slug']} already done — skip", flush=True)
+                    print(f"  ✓ {w['slug']} translated — skip", flush=True)
                     continue
-                print(f"▶ {w['slug']} — {w['title']}", flush=True)
+                print(f"▶ translate {w['slug']} — {w['title']}", flush=True)
                 try:
                     translate_work(w, tp)
                     assemble_and_upload(w)
