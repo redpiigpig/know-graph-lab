@@ -3,23 +3,11 @@
     class="min-h-screen bg-slate-50 flex flex-col"
     @click="quickCatTarget = null"
   >
-    <!-- Nav -->
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
-      <div
-        class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between gap-4"
-      >
-        <div class="flex items-center gap-4">
-          <NuxtLink
-            to="/"
-            class="text-gray-400 hover:text-gray-700 transition text-sm"
-            >← 返回主頁</NuxtLink
-          >
-          <span class="text-gray-200">|</span>
-          <span class="text-sm font-medium text-gray-700">AI 對話錄</span>
-        </div>
-        <div class="text-xs text-gray-400">{{ totalCount }} 筆對話</div>
-      </div>
-    </nav>
+    <AppHeader title="AI 對話錄" :back="{ to: '/', label: '返回主頁' }" :editable="false">
+      <template #actions>
+        <span class="text-xs text-gray-400">{{ totalCount }} 筆對話</span>
+      </template>
+    </AppHeader>
 
     <div class="flex flex-1 max-w-7xl mx-auto w-full px-6 py-6 gap-6">
       <!-- Left sidebar -->

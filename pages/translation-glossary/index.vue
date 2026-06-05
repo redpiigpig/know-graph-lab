@@ -1,21 +1,15 @@
 <template>
   <div class="flex flex-col bg-slate-50 min-h-dvh">
-    <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 z-30">
-      <NuxtLink to="/" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
-      <div class="w-px h-5 bg-gray-200" />
-      <span class="text-sm font-semibold text-gray-900">翻譯定名</span>
-      <span v-if="activeTab !== 'principles'" class="text-xs text-gray-400 ml-1">{{ activeTabCount }} 項</span>
-      <div class="ml-auto flex items-center gap-2">
-        <label class="text-xs text-gray-500 flex items-center gap-1 cursor-pointer select-none">
-          <input type="checkbox" v-model="editMode" class="accent-stone-700" /> 編輯模式
-        </label>
-      </div>
-    </nav>
+    <AppHeader title="翻譯定名" :back="{ to: '/', label: '返回主頁' }">
+      <template #actions>
+        <span v-if="activeTab !== 'principles'" class="text-xs text-gray-400">{{ activeTabCount }} 項</span>
+      </template>
+    </AppHeader>
 
     <div class="flex-1 max-w-7xl w-full mx-auto px-6 py-8">
       <div class="mb-6">
-        <h1 class="text-2xl font-bold text-gray-900 mb-1">🔤 翻譯定名</h1>
-        <p class="text-sm text-gray-500">各領域名物中譯定名對照 — 聖經人物／教父神學家／神學名詞／哲學家／科學家／歷代帝王／國名城市／神祇與宗教名詞。每筆主譯為 <span class="text-amber-700 font-medium">★ 建議中譯</span>。</p>
+        <h1 class="text-2xl font-bold text-gray-900 mb-1">翻譯定名</h1>
+        <p class="text-sm text-gray-500">各領域名物的中譯定名與翻譯原則，每筆主譯標示為 <span class="text-amber-700 font-medium">★ 建議中譯</span>。</p>
       </div>
 
       <!-- Tabs -->
@@ -305,7 +299,7 @@ const genericData = reactive<Record<string, any[]>>({ philosophers: [], scientis
 
 const q = ref('')
 const expanded = ref<string | null>(null)
-const editMode = ref(false)
+const editMode = useEditMode()
 const editPerson = ref<any>({})
 const editTerm = ref<any>({})
 const editGeneric = ref<any>({})

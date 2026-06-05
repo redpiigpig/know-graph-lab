@@ -1,27 +1,15 @@
 <template>
   <div class="min-h-screen bg-gray-50">
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <div class="flex items-center space-x-3">
-            <NuxtLink to="/" class="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition text-sm">
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
-              首頁
-            </NuxtLink>
-          </div>
-          <NuxtLink to="/" class="flex items-center gap-2">
-            <img src="/logo_image.jpg" alt="Know Graph Lab" class="w-7 h-7 rounded-md object-cover" />
-            <span class="text-xl font-bold text-gray-900">書摘庫</span>
-          </NuxtLink>
-          <button @click="handleLogout" class="text-gray-500 hover:text-red-600 transition text-sm">登出</button>
-        </div>
-      </div>
-    </nav>
+    <AppHeader title="書摘庫" :back="{ to: '/', label: '返回主頁' }" container-class="max-w-5xl" :editable="false">
+      <template #actions>
+        <button @click="handleLogout" class="text-gray-500 hover:text-red-600 transition text-sm">登出</button>
+      </template>
+    </AppHeader>
 
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="mb-8 text-center">
-        <h1 class="text-4xl font-bold text-gray-900 mb-2">書摘庫</h1>
-        <p class="text-gray-500">管理寫作素材、圖書館藏書與全文搜尋</p>
+      <div class="mb-8">
+        <h1 class="text-2xl font-bold text-gray-900 mb-1">書摘庫</h1>
+        <p class="text-sm text-gray-500">管理寫作素材、圖書館藏書與全文搜尋</p>
       </div>
 
       <div class="bg-white rounded-2xl border border-gray-200 p-4 mb-8">

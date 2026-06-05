@@ -1,10 +1,6 @@
 <template>
   <div class="flex flex-col bg-slate-50 min-h-dvh">
-    <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 z-30">
-      <NuxtLink to="/" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
-      <div class="w-px h-5 bg-gray-200" />
-      <span class="text-sm font-semibold text-gray-900">經典對照與註釋</span>
-    </nav>
+    <AppHeader title="經典對照與註釋" :back="{ to: '/', label: '返回主頁' }" :editable="false" />
 
     <div class="flex-1 flex items-start justify-center px-6 py-12">
       <div class="w-full max-w-4xl">

@@ -1,13 +1,7 @@
 <template>
   <div class="min-h-screen bg-slate-50">
 
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
-      <div class="max-w-5xl mx-auto px-6 h-14 flex items-center gap-4">
-        <NuxtLink to="/" class="text-gray-400 hover:text-gray-700 transition text-sm">← 首頁</NuxtLink>
-        <span class="text-gray-200">|</span>
-        <span class="text-sm font-medium text-gray-700">論文資料整理</span>
-      </div>
-    </nav>
+    <AppHeader title="論文資料整理" :back="{ to: '/', label: '返回主頁' }" container-class="max-w-5xl" :editable="false" />
 
     <div class="max-w-5xl mx-auto px-6 py-10">
       <div class="mb-8">
