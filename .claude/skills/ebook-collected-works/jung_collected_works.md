@@ -121,7 +121,11 @@
   - ⚠️ **OCR 雷區（續第二部沿用）**：德文腳註與正文交錯亂序——**以 `jung_ch5_en2.txt`（含詩節 [V#]）英文正文順序為 row 粒度**，德文照英文段落拼接跳腳註；Hinkle 偶把德文正文移至他處（如 Conceptio Immaculata 移到 Part II），依英文 grain 此處略、到該處再補。
 
 ### 🎉 第一部（Erster Teil）全部譯竣 — 引論＋第二～五章，共 309 段 / 62,177 繁中字
-- **⏭️ 下一步＝第二部（ZWEITER TEIL）**：德文 OCR txt 第 6131 行起；英文 `jung_pou_en_1916.html` `PART II` 第 6111 行起，第一章 `ASPECTS OF THE LIBIDO`（6116）。各章：I 力比多面面觀、II 力比多的概念與發生學理論、III 力比多的轉化、IV 英雄的無意識起源、V 母親與重生的象徵、VI 為脫離母親而戰、VII 雙重母親。逐章建 `ch06.json`…（英文 PART II 區段重抽 en2 含詩節版；德文 6131→末）。
+
+### 🚧 第二部（ZWEITER TEIL）進行中
+- **✅ 第二部第一章「力比多面面觀」(Aspects of the Libido = ZWEITER TEIL 引論)**：**全章 40 rows**（`ch06.json`）。德文 6136–6627 / 英文 HTML 6116–6524。含《白騾奧義書》樓陀羅讚（2,3,4,7,8,11,12-15）+《羯陀奧義書》拇指大小內在自性、太陽=神=力比多、浮士德「眾母親」鑰匙場景＋魔鬼成善之力、拇指仙童=陽具象徵、卡比里諸神/伊達山達克堤利/尖帽=包皮、神聖男童 puer aeternus/底比斯瓶畫法勒斯=普里阿普斯、宗教英雄=力比多擬象、**「力比多」術語考**（西塞羅 Tusc.IV 拉丁定義＋斯多噶 βούλησις vs 欲念、撒路斯特、梵文 lúbhyati 哥德語 liufs 詞源、力比多=生物學界的能量〔羅伯特‧邁爾〕）。
+- **🚧 第二部第二章「力比多的概念與發生學理論」(The Conception and Genetic Theory of Libido)**：建中（`ch07.json`）。德文 6628–7385 / 英文 HTML 6525–7081（en 22 entries、無詩節）。**⏭️ 續傳指標：已到 E3／4 rows**（heading＋E1 性學三論力比多=性驅力/移置/Triebbündel＋E2 佛洛伊德妄想症長引文＋E3 早發性癡呆現實喪失）。下一段 E4 起（榮格「心靈能量」vs 力比多移置、歇斯底里/強迫症 vs 早發性癡呆、亞伯拉罕批評）。抽取腳本 `c:/tmp/_jung_extract_ch7.py`。
+- **⏭️ 後續章節**：III 力比多的轉化（英文 HTML 7082+）、IV 英雄的無意識起源、V 母親與重生的象徵、VI 為脫離母親而戰、VII 雙重母親。逐章建 `chNN.json`（英文 PART II 區段以 `_jung_extract_chN.py` 重抽 en 含詩節版；德文照英文段落拼接跳腳註）。
 
 ### 穩定的 5 步方法（每章照做）
 1. **德文重 OCR**（Gemini 全耗盡 → 用 **Haiku**，user 訂閱制不計費）：
