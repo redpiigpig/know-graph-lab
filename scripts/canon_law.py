@@ -246,9 +246,10 @@ _CJK_CANON_RE = re.compile(r"^第\s*(\d+)\s*條\b")
 _LAT_CANON_RE = re.compile(r"^Can\.\s*(\d+)\s*(?:§\s*(\d+))?", re.I)
 _ROMAN_CANON_RE = re.compile(r"^Canon\s+([IVXLCDM]+)\b", re.I)
 _PLAIN_NUM_RE = re.compile(r"^(\d+)\.\s*$")
+_PLAIN_NUM_INLINE_RE = re.compile(r"^(\d+)\.\s+(?=\S)")  # 'N. text' on one line (opt-in)
 
 
-def _canon_match(s: str):
+def _canon_match(s: str, inline_num: bool = False):
     """Internal: (order_index, label, num_end, base_label) for a canon-opening
     line, else None.
       - label      = full marker incl. any §N ('Can. 1 §2')   ← display of a sub-marker
@@ -272,6 +273,10 @@ def _canon_match(s: str):
     m = _PLAIN_NUM_RE.match(s)
     if m:
         return int(m.group(1)), m.group(1), m.end(1), m.group(1)
+    if inline_num:
+        m = _PLAIN_NUM_INLINE_RE.match(s)
+        if m:
+            return int(m.group(1)), m.group(1), m.end(1), m.group(1)
     return None
 
 
@@ -306,7 +311,7 @@ def parse_hierarchy(line: str):
 
 
 # ── Split extracted text lines into aligned section dicts ─────────────────────
-def split_into_sections(lines, lang: str) -> list[dict]:
+def split_into_sections(lines, lang: str, inline_num: bool = False) -> list[dict]:
     """Extracted text lines (from PDF/HTML) → content section dicts:
         {order_index, label, book_label, chapter_label, text}
     order_index == canon / paragraph number (the EN↔ZH↔LA alignment key).
@@ -339,7 +344,7 @@ def split_into_sections(lines, lang: str) -> list[dict]:
             else:
                 chapter_label = h["label"]
             continue
-        lab = _canon_match(line)
+        lab = _canon_match(line, inline_num=inline_num)
         if lab:
             n, _label, num_end, base_label = lab
             rest = line[num_end:].lstrip(" .：:—–-")  # §N + inline body after the number/separator

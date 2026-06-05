@@ -259,6 +259,16 @@ def test_split_into_sections_ccc_plain_numbers():
     assert [s["order_index"] for s in secs] == [748, 749]
 
 
+def test_split_into_sections_inline_number_opt_in():
+    # Some CCC OCR pages put number + text on one line ('571. 基督…').
+    # inline_num=True captures them; default stays strict (CIC must not regress).
+    lines = ["571. 基督的十字架及復活。", "572. 教會忠於耶穌。"]
+    assert cl.split_into_sections(lines, "zh") == []  # strict default: not matched
+    secs = cl.split_into_sections(lines, "zh", inline_num=True)
+    assert [s["order_index"] for s in secs] == [571, 572]
+    assert secs[0]["text"].startswith("基督的十字架")
+
+
 # ── Slug / dedup ──────────────────────────────────────────────────────────
 @pytest.mark.parametrize("title,expected", [
     ("The Apostolic Canons", "apostolic-canons"),

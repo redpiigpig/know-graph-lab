@@ -352,7 +352,7 @@ def ingest_ccc_zh(*, resume: bool = True, limit_pdfs: int | None = None, engine:
         text = ocr(pdf_path, CCC_ZH_PROMPT)
         txt_path.write_text(text, encoding="utf-8")
         all_lines.extend(text.splitlines())
-    secs = cl.split_into_sections(all_lines, "zh")
+    secs = cl.split_into_sections(all_lines, "zh", inline_num=True)  # CCC OCR often 'N. text' inline
     best: dict[int, dict] = {}
     for s in secs:
         if 1 <= s["order_index"] <= 2865:  # CCC paragraph range (drop stray numbers)
