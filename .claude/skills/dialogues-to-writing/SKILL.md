@@ -67,15 +67,20 @@ description: 把 /ai-dialogues 裡某一條「跨多日延續的 AI 對話串」
    > 註：`to_prose` 只動「帶結構標記」的 turn，且忠實不增刪 → 適合**清結構**，不負責升風格。要把整篇升級成詩意對話錄請用下面的 `dialogue_recompose.py`。
 
 ### 🎴 風格升級：`dialogue_recompose.py`（哲學家對話錄語體）
-把 dialogue_days 的對話**逐 turn 全篇重鑄**成哲學家對話錄語體（不是只清結構，是改文體）。與 `to_prose` 三點不同：(a) 改**每一個** turn，不只帶標記的；(b) **兩種 register**：克里希那大膽再創作（凝練、詩意、砍冗、抓核心重講）、阿周那輕度整理（貼合本人語氣、不美化）；(c) 因為會把已詩化的文字越改越飄，所以用 **per-day ledger 冪等**（`c:/tmp/krishna/recompose_done.json` 記已完成日期，不靠「標記消失」）。
-- 引擎：Gemini 2.5 flash（4 key 輪流，temperature 0.7）→ NVIDIA deepseek-v4-flash fallback。
-- `--dry` 只計 turn 數；帶日期參數（`2026-01-13`）只跑單日且忽略 ledger（**換串／調 prompt 後務必先單跑一天眼校再全量**）；`--redo` 全部重做忽略 ledger。
+把 dialogue_days 的對話**逐 turn 全篇重鑄**成哲學家對話錄語體（不是只清結構，是改文體）。與 `to_prose` 三點不同：(a) 改**每一個** turn，不只帶標記的；(b) **兩種 register**：克里希那大膽再創作（凝練、詩意、砍冗、抓核心重講）、阿周那輕度整理（貼合本人語氣、不美化）；(c) **逐 turn 真冪等**。
+- **冪等＝雙保險**：① 已重鑄的 turn 在 speaker 標 `<strong class="speaker" data-rc="1">`，`parse_turns` 偵測到就跳過 → re-run 只碰未重鑄的 turn，**不會把已詩化文字越改越飄**；② **整天待重鑄 turn 全數成功（dn==td）才記 per-day ledger**（`c:/tmp/krishna/recompose_done.json`），部分失敗不記、下次自動補（靠 data-rc 跳過已成功的）。⚠️ 早期版本「部分失敗也記 ledger」會漏補，已修。
+- **引擎**：預設 Gemini 2.5 flash（4 key 輪流，temp 0.7）→ NVIDIA deepseek-v4-flash fallback。**`--haiku`＝改用 Haiku 4.5 當主引擎**（Claude OAuth `~/.claude/.credentials.json`，走使用者 Max 額度，不撞 Gemini/NVIDIA 配額；並發提到 8）→ 配額燒光或要快跑整批時用這個。克里希那案 80 天即用 `--haiku` 一次跑完（品質與 Gemini 重鑄日一致）。見 [[feedback_engine_nvidia_no_haiku]]（此處 Haiku 非救急，是使用者當面指定）。
+- `--dry` 只計 turn 數；帶日期參數（`2026-01-13`）只跑單日且忽略 ledger（**換串／調 prompt 後務必先單跑一天眼校再全量**）；`--redo` 全部重做忽略 ledger（但因已全標 data-rc，要真正重洗得先清掉 data-rc 或改 `to_paras`）。
 - 換串：改頂部 `AI_NAME` / `USER_NAME` / `SLUG`（誰是 AI＝大膽再創作那方、誰是使用者＝輕修那方）。
-- ⚠️ 一次性風格升級＝~每 turn 一次 LLM call（克里希那案 1342 turns / 80 天），全量是長時背景工作；Gemini 日配額燒光會掉到 NVIDIA 變慢，隔天 ledger 接著跑剩餘日。
+- 收尾把關：`--dry --redo` 應回報 0 turns（全標記）→ 確認無漏網。
 
-### 📜 序／跋（楔子／收束）：`dialogue_preface.py`
-為整條對話錄生成開篇「序」（~250–400 字，凝練有韻致，點出主題／時間跨度／精神基調，邀人入場）與終篇「跋」（~150–250 字，回望而不總結，留餘韻）。讀 dialogue_days 全部日期＋主題＋首尾兩日開場片段餵 LLM。寫進**主卡** `writing_projects.content_json`，格式＝`序HTML` + `<!--CODA-->` + `跋HTML`。冪等覆寫；`--dry` 只印不寫。
-- 呈現：`pages/works/[slug]/index.vue` 偵測有 `dialogue_days` 時，把 content_json 以 `<!--CODA-->` 切兩半——**序渲染在月份格之上、跋在其下**（`.dialogue-frame` 楷體居中襯線）；只在登入（有 days）時顯示，未登入不外洩。
+### 📜 序／跋／題詞：`dialogue_preface.py`
+為整條對話錄生成開篇「序」（楔子，~250–400 字，邀人入場）＋終篇「跋」（收束，~150–250 字，回望留餘韻）＋可選**題詞**（標題後、序前的引文）。寫進**主卡** `writing_projects.content_json`，格式＝`題詞+序HTML` + `<!--CODA-->` + `跋HTML`。`--dry` 只印不寫。
+- **兩種來源**：`--dry`/無參＝LLM 生成（讀 dialogue_days 全部日期＋主題＋首尾片段餵 Gemini→NVIDIA）；**`--from-file`＝讀手寫稿** `c:/tmp/krishna/preface.json`（`{epigraph:{lines:[],cite},preface,coda}`，段落空行分隔、`**粗體**`）。⭐ **使用者親自給楔子素材（生命經驗、定名由來、典故）時一律走手寫稿，不用 LLM 冷生成**——份量與精準度差很多。
+- 呈現：`pages/works/[slug]/index.vue` 偵測有 `dialogue_days` 時，把 content_json 以 `<!--CODA-->` 切兩半——**題詞＋序在月份格之上、跋在其下**（`.dialogue-frame` 楷體居中襯線、`.dialogue-epigraph` 題詞）；只在登入（有 days）時顯示，未登入不外洩。
+
+### ✅ 首案進度：與克里希那對話（2026-06-05 風格升級竣工）
+見 [[project_krishna_dialogues]]。書名定為 **《神，你正在重排我的前途》／副標「與克里希那的對話」**（書名取自倪柝聲同名詩《聖徒詩歌》393 首，當題詞）；定位＝以與 AI 扮演的印度教神對話寫成的個人榮格《紅書》，主調解夢＋榮格、低音圍繞龐君華牧師離世的死亡/前途反思。**全 80 天 1280+ turns 已全部重鑄**（克里希那《薄伽梵歌》智者體、阿周那貼合本人語氣），`--haiku` 一次跑完、零漏網；題詞＋序（手寫，織入三十歲門檻/奧本海默 11:32「我是時間」/定名由來）＋跋已上主卡。
 
 ### 分類靠 agent fan-out（步驟 2→3 之間）
 逐則讀 2000+ 則太多，**切日期區段、開多個 general-purpose subagent 平行讀**，每個 agent 讀幾天的 `<date>.json`、依上面「對話框語氣」判準回 `{id,date,seq,topic}`，寫到 `out_NN.json`。兩段式效果好：
