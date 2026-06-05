@@ -109,9 +109,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1873,
           category: '宗教學奠基',
           languages: ['en', 'de'],
-          status: 'in-progress',
+          status: 'done',
           ebookId: '33333333-3333-4333-8333-333333333333',
-          note: '起手卷 ‧ 皇家研究院四講＋兩附論；英德同構，英／德／繁中三欄逐段對照（轉錄中）。',
+          note: '起手卷 ‧ 皇家研究院四講＋兩附論；英／德／繁中三欄逐段對照（全書竣，約 21.5 萬繁中字）。',
         },
         {
           title: '宗教起源與發展講座',
