@@ -85,6 +85,33 @@ def test_cic_zh_pdfs_curated_list_is_sorted_and_covers_to_1752():
     assert max(r["cann_high"] for r in ranges) == 1752
 
 
+# ── CIC 7-book structure map (clean Chinese book labels by canon range) ───
+def test_cic_books_cover_1_to_1752_without_gaps():
+    books = cl.CIC_BOOKS
+    assert len(books) == 7
+    assert books[0]["low"] == 1
+    assert books[-1]["high"] == 1752
+    for prev, nxt in zip(books, books[1:]):
+        assert nxt["low"] == prev["high"] + 1  # contiguous, no gaps/overlap
+    assert all(b["label"].startswith("第") and "卷" in b["label"] for b in books)
+
+
+@pytest.mark.parametrize("canon,expected", [
+    (1, "第一卷 總則"),
+    (203, "第一卷 總則"),
+    (204, "第二卷 天主子民"),
+    (748, "第三卷 教會訓導職"),
+    (1752, "第七卷 程序法"),
+])
+def test_cic_book_for(canon, expected):
+    assert cl.cic_book_for(canon) == expected
+
+
+def test_cic_book_for_out_of_range():
+    assert cl.cic_book_for(0) is None
+    assert cl.cic_book_for(9999) is None
+
+
 # ── parse_canon_label ─────────────────────────────────────────────────────
 @pytest.mark.parametrize("line,order,label", [
     ("Can. 1", 1, "Can. 1"),
@@ -172,6 +199,28 @@ def test_split_into_sections_exposes_tree_pairs():
     pairs = {(s["book_label"], s["chapter_label"]) for s in secs}
     assert ("第一卷 總則", "第一題 教會法律") in pairs
     assert ("第一卷 總則", "第二題 習慣") in pairs
+
+
+def test_split_into_sections_inline_english_body():
+    # vatican.va English CIC puts marker + body on one line: 'Can. 1 The canons…'
+    lines = ["BOOK I", "Can. 1 The canons of this Code regard only the Latin Church.",
+             "Can. 2 For the most part the Code does not define the rites."]
+    secs = cl.split_into_sections(lines, "en")
+    assert [s["order_index"] for s in secs] == [1, 2]
+    assert secs[0]["text"].startswith("The canons of this Code")
+    assert secs[1]["text"].startswith("For the most part")
+
+
+def test_split_into_sections_merges_subsections_one_row_per_canon():
+    # 'Can. 5 §1.' and 'Can. 5 §2.' are the SAME canon → one row (order_index 5),
+    # both § bodies kept (else duplicate-PK 409 on insert).
+    lines = ["Can. 5 §1. A custom contrary to the law.",
+             "Can. 5 §2. Centenary customs can be tolerated.",
+             "Can. 6 The following are abrogated."]
+    secs = cl.split_into_sections(lines, "en")
+    assert [s["order_index"] for s in secs] == [5, 6]
+    assert secs[0]["label"] == "Can. 5"
+    assert "§1" in secs[0]["text"] and "§2" in secs[0]["text"]
 
 
 def test_split_into_sections_ccc_plain_numbers():

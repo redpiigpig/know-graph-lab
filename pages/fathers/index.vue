@@ -140,6 +140,7 @@ const REFINED_IDS = new Set([
   'd229a6d4-14de-4e28-92de-4855c75cbf68',  // NPNF2 Vol 6 (Jerome 耶柔米 — Letters + Treatises + Prolegomena)
   'af2cf8a7-b169-432c-863d-632647c8ab67',  // NPNF2 Vol 7 (Cyril of Jerusalem 耶路撒冷的區利羅《教理講授》+ Gregory Nazianzen 拿先斯的格列高里《講演集》《書信集》)
   '3c48472c-fbca-48fb-9db1-ca5a08827ef3',  // NPNF2 Vol 8 (Basil the Great 凱撒利亞的巴西流 — 論聖靈 + 六日創造論 + 書信集)
+  '709f43f9-724c-4cd5-b6b0-570d26083d24',  // NPNF2 Vol 9 (Hilary of Poitiers 普瓦捷的希拉里 + John of Damascus 大馬士革的若望 — 論三位一體/論會議/詩篇講道 + 正統信仰詳解)
 ])
 
 const series = [

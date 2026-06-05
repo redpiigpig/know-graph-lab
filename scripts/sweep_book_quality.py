@@ -479,6 +479,16 @@ TERM_FIXES_NPNF2_V8 = dict(TERM_FIXES_ANF_COMMON, **{
     "納齊安": "拿先斯",
 })
 
+# NPNF2 Vol 9 — Hilary of Poitiers + John of Damascus
+# Hilary=希拉里（非希拉略）；John of Damascus=大馬士革的若望（若望）。
+# ⚠️ 不收斂內文 約翰/若望：約翰福音/使徒約翰=約翰(和合本)、大馬士革的若望=若望，分工正確。
+# 只收斂明確的「作者全名」變體。
+TERM_FIXES_NPNF2_V9 = dict(TERM_FIXES_ANF_COMMON, **{
+    "希拉略": "希拉里", "希拉流": "希拉里", "依拉略": "希拉里",
+    "大馬士革的約翰": "大馬士革的若望", "約翰‧大馬士革": "大馬士革的若望",
+    "約翰·大馬士革": "大馬士革的若望", "大馬色": "大馬士革",
+})
+
 # 所有 ANF vol 都吃 ANF_COMMON baseline；per-vol specific 覆蓋 baseline。
 TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "c98d358d-7066-4691-a896-b7232707b0db": {**TERM_FIXES_ANF_COMMON, **TERM_FIXES_ANF_VOL_1},  # ANF Vol 1
@@ -509,6 +519,7 @@ TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "9b94e7c1-fa82-4910-a31f-9db1e2e040bb": TERM_FIXES_NPNF2_V5,  # NPNF2 Vol 5 Gregory of Nyssa
     "af2cf8a7-b169-432c-863d-632647c8ab67": TERM_FIXES_NPNF2_V7,  # NPNF2 Vol 7 Cyril of Jerusalem + Gregory Nazianzen
     "3c48472c-fbca-48fb-9db1-ca5a08827ef3": TERM_FIXES_NPNF2_V8,  # NPNF2 Vol 8 Basil the Great 凱撒利亞的巴西流
+    "709f43f9-724c-4cd5-b6b0-570d26083d24": TERM_FIXES_NPNF2_V9,  # NPNF2 Vol 9 Hilary of Poitiers + John of Damascus
 }
 
 

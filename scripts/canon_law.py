@@ -109,6 +109,26 @@ CIC_ZH_PDFS: list[str] = [
 
 _CIC_NAME_RE = re.compile(r"libro-([IVXLCDM]+).*?cann(\d+)(?:-(\d+))?", re.I)
 
+# CIC 7-book structure with canon ranges → clean Chinese book labels for the
+# reader sidebar tree (independent of OCR; stamped on every version's rows).
+CIC_BOOKS: list[dict] = [
+    {"label": "第一卷 總則",        "low": 1,    "high": 203},
+    {"label": "第二卷 天主子民",     "low": 204,  "high": 746},
+    {"label": "第三卷 教會訓導職",   "low": 747,  "high": 833},
+    {"label": "第四卷 教會聖化職務", "low": 834,  "high": 1253},
+    {"label": "第五卷 教會財產",     "low": 1254, "high": 1310},
+    {"label": "第六卷 教會刑法",     "low": 1311, "high": 1399},
+    {"label": "第七卷 程序法",       "low": 1400, "high": 1752},
+]
+
+
+def cic_book_for(canon_no: int):
+    """A CIC canon number → its 卷 label ('第一卷 總則'), or None if out of range."""
+    for b in CIC_BOOKS:
+        if b["low"] <= canon_no <= b["high"]:
+            return b["label"]
+    return None
+
 
 def cic_zh_url(basename: str) -> str:
     """Bare CIC PDF basename → full vatican.va Chinese URL."""
@@ -181,30 +201,38 @@ _ROMAN_CANON_RE = re.compile(r"^Canon\s+([IVXLCDM]+)\b", re.I)
 _PLAIN_NUM_RE = re.compile(r"^(\d+)\.\s*$")
 
 
-def parse_canon_label(line: str):
-    """A line → (order_index:int, label:str) if it opens a canon / paragraph,
-    else None. Handles 'Can. 1 §2.', '第 1 條', 'Canon LXXXV.', '748.'."""
-    s = line.strip()
-    if not s:
-        return None
+def _canon_match(s: str):
+    """Internal: (order_index, label, num_end, base_label) for a canon-opening
+    line, else None.
+      - label      = full marker incl. any §N ('Can. 1 §2')   ← display of a sub-marker
+      - num_end    = offset just past the canon NUMBER (before §)  ← split keeps §N+body
+      - base_label = canon marker without §N ('Can. 1')        ← one section per canon
+    """
     m = _CJK_CANON_RE.match(s)
     if m:
         n = int(m.group(1))
-        return n, f"第 {n} 條"
+        return n, f"第 {n} 條", m.end(), f"第 {n} 條"
     m = _LAT_CANON_RE.match(s)
     if m:
         n = int(m.group(1))
-        label = f"Can. {n}"
-        if m.group(2):
-            label += f" §{m.group(2)}"
-        return n, label
+        base = f"Can. {n}"
+        label = base + (f" §{m.group(2)}" if m.group(2) else "")
+        return n, label, m.end(1), base
     m = _ROMAN_CANON_RE.match(s)
     if m:
-        return roman_to_int(m.group(1)), f"Canon {m.group(1).upper()}"
+        lab = f"Canon {m.group(1).upper()}"
+        return roman_to_int(m.group(1)), lab, m.end(), lab
     m = _PLAIN_NUM_RE.match(s)
     if m:
-        return int(m.group(1)), m.group(1)
+        return int(m.group(1)), m.group(1), m.end(1), m.group(1)
     return None
+
+
+def parse_canon_label(line: str):
+    """A line → (order_index:int, label:str) if it opens a canon / paragraph,
+    else None. Handles 'Can. 1 §2.', '第 1 條', 'Canon LXXXV.', '748.'."""
+    res = _canon_match(line.strip())
+    return (res[0], res[1]) if res else None
 
 
 # ── Hierarchy heading parsing (卷/編/題/章 + LIBER/Pars/Titulus/Caput) ─────────
@@ -264,16 +292,25 @@ def split_into_sections(lines, lang: str) -> list[dict]:
             else:
                 chapter_label = h["label"]
             continue
-        lab = parse_canon_label(line)
+        lab = _canon_match(line)
         if lab:
+            n, _label, num_end, base_label = lab
+            rest = line[num_end:].lstrip(" .：:")  # §N + inline body after the number
+            if cur is not None and cur["order_index"] == n:
+                # a §-subsection of the SAME canon → keep one row, append to body
+                if rest:
+                    body.append(rest)
+                continue
             flush()
             cur = {
-                "order_index": lab[0],
-                "label": lab[1],
+                "order_index": n,
+                "label": base_label,
                 "book_label": book_label,
                 "chapter_label": chapter_label,
                 "text": "",
             }
+            if rest:
+                body.append(rest)
             continue
         if cur is not None:
             body.append(line)

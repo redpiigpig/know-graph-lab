@@ -57,7 +57,7 @@ const tools = [
     icon: '⚖️',
     title: '教會法規',
     desc: '天主教 CIC 1983 / CCEO 1990 / 教理 CCC、東正教 Pedalion + 使徒教規 85 條、新教章程',
-    enabled: false,
+    enabled: true,
   },
   {
     path: '/fathers',
