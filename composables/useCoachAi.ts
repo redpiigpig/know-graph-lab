@@ -37,11 +37,24 @@ export function useCoachAi() {
    * 呼叫 AI 端點。自動帶 usePaid；遇 free_exhausted 跳確認後切付費重試。
    * @returns 後端回應；若使用者拒絕切換則 throw 原錯誤。
    */
+  // GET/HEAD 不能帶 body → 把 usePaid 放 query string；其餘方法放 body。
+  function buildReq(url: string, opts: Record<string, any>, paid: boolean): [string, Record<string, any>] {
+    const method = String(opts.method || "GET").toUpperCase();
+    if (method === "GET" || method === "HEAD") {
+      const sep = url.includes("?") ? "&" : "?";
+      const rest = { ...opts };
+      delete rest.body;
+      return [`${url}${sep}usePaid=${paid ? "1" : "0"}`, rest];
+    }
+    const bodyBase = (opts.body as Record<string, any>) || {};
+    return [url, { ...opts, body: { ...bodyBase, usePaid: paid } }];
+  }
+
   async function aiFetch<T = any>(url: string, opts: Record<string, any> = {}): Promise<T> {
     await ensureLoaded();
-    const bodyBase = (opts.body as Record<string, any>) || {};
     try {
-      return await authedFetch<T>(url, { ...opts, body: { ...bodyBase, usePaid: usePaid.value } });
+      const [u, o] = buildReq(url, opts, usePaid.value);
+      return await authedFetch<T>(u, o);
     } catch (e: any) {
       const code = e?.data?.code;
       if (code === "free_exhausted") {
@@ -50,7 +63,8 @@ export function useCoachAi() {
         );
         if (ok) {
           await setUsePaid(true);
-          return await authedFetch<T>(url, { ...opts, body: { ...bodyBase, usePaid: true } });
+          const [u, o] = buildReq(url, opts, true);
+          return await authedFetch<T>(u, o);
         }
       } else if (code === "no_paid_key") {
         if (typeof window !== "undefined") window.alert("尚未設定付費 Gemini key，請先在 .env 填入 GEMINI_COACH_PAID_KEY。");
