@@ -38,8 +38,28 @@
           <span class="sm:hidden">{{ user ? (editMode ? '完成' : '編輯') : '登入' }}</span>
         </button>
 
-        <span v-if="user" class="text-xs text-gray-400 hidden md:inline truncate max-w-[180px]">{{ user.email }}</span>
-        <NuxtLink v-if="!user && !editable" to="/login" class="text-xs text-blue-600 hover:underline flex-shrink-0">登入</NuxtLink>
+        <!-- 帳號選單 -->
+        <div v-if="user" class="relative flex-shrink-0">
+          <button
+            @click="accountOpen = !accountOpen"
+            :title="user.email"
+            class="w-7 h-7 rounded-full bg-gray-100 text-gray-600 text-xs font-semibold flex items-center justify-center hover:bg-gray-200 transition"
+          >{{ userInitial }}</button>
+
+          <div v-if="accountOpen">
+            <!-- 點擊外部關閉 -->
+            <div class="fixed inset-0 z-40" @click="accountOpen = false" />
+            <div class="absolute right-0 mt-2 w-56 bg-white border border-gray-200 rounded-xl shadow-lg py-1 z-50">
+              <div class="px-3 py-2 border-b border-gray-100">
+                <div class="text-[11px] text-gray-400">已登入</div>
+                <div class="text-sm text-gray-700 truncate">{{ user.email }}</div>
+              </div>
+              <NuxtLink to="/settings" @click="accountOpen = false" class="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 no-underline">設定</NuxtLink>
+              <button @click="logout" class="w-full text-left px-3 py-2 text-sm text-red-600 hover:bg-red-50">登出</button>
+            </div>
+          </div>
+        </div>
+        <NuxtLink v-else to="/login" class="text-xs text-blue-600 hover:underline flex-shrink-0">登入</NuxtLink>
       </div>
     </div>
   </nav>
@@ -62,6 +82,16 @@ withDefaults(
 const user = useSupabaseUser()
 const editMode = useEditMode()
 const route = useRoute()
+const supabase = useSupabaseClient()
+
+const accountOpen = ref(false)
+const userInitial = computed(() => user.value?.email?.[0]?.toUpperCase() ?? '?')
+
+async function logout() {
+  accountOpen.value = false
+  await supabase.auth.signOut()
+  navigateTo('/login')
+}
 
 async function onEditClick() {
   if (!user.value) {

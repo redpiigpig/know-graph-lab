@@ -1,7 +1,19 @@
 <template>
   <div class="min-h-screen bg-slate-50">
 
-    <AppHeader title="實驗網站" :back="{ to: '/', label: '返回主頁' }" :editable="false" />
+    <!-- 頂部導航（實驗網站維持獨立樣式，不套用全站 AppHeader） -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
+      <div class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
+        <NuxtLink to="/" class="flex items-center gap-2.5 hover:opacity-80 transition">
+          <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-sm font-bold text-white">K</div>
+          <span class="font-semibold text-gray-900">Know Graph Lab</span>
+        </NuxtLink>
+        <div class="flex items-center gap-4">
+          <NuxtLink to="/" class="text-sm text-gray-500 hover:text-gray-900 transition">← 回到工作室</NuxtLink>
+          <span v-if="user" class="text-xs text-gray-400">{{ user.email }}</span>
+        </div>
+      </div>
+    </nav>
 
     <div class="max-w-7xl mx-auto px-6 py-10">
       <!-- 標題 -->

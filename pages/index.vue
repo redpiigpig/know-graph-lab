@@ -1,11 +1,7 @@
 <template>
   <div class="min-h-screen bg-slate-50">
 
-    <AppHeader>
-      <template #actions>
-        <NuxtLink v-if="user" to="/settings" class="text-sm text-gray-500 hover:text-gray-900 transition hidden sm:inline">設定</NuxtLink>
-      </template>
-    </AppHeader>
+    <AppHeader :editable="false" />
 
     <div class="max-w-7xl mx-auto px-6 py-10">
       <!-- 標題 -->
@@ -88,7 +84,7 @@
           </NuxtLink>
 
           <!-- 寫作計畫 -->
-          <NuxtLink to="/works" class="tool-card group border-rose-100 hover:border-rose-300 hover:shadow-rose-100">
+          <NuxtLink :to="user ? '/works' : '/login'" class="tool-card group border-rose-100 hover:border-rose-300 hover:shadow-rose-100">
             <div class="tool-icon bg-rose-50 text-rose-600">✒️</div>
             <div class="flex-1">
               <h2 class="tool-title">寫作計畫</h2>
@@ -174,7 +170,7 @@
           </NuxtLink>
 
           <!-- 實驗網站 -->
-          <NuxtLink :to="user ? '/experiments' : '/login'" class="tool-card group border-orange-100 hover:border-orange-300 hover:shadow-orange-100">
+          <NuxtLink to="/experiments" class="tool-card group border-orange-100 hover:border-orange-300 hover:shadow-orange-100">
             <div class="tool-icon bg-orange-50 text-orange-500">🧪</div>
             <div class="flex-1">
               <h2 class="tool-title">實驗網站</h2>
