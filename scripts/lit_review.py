@@ -56,6 +56,7 @@ DOC_TYPE_LABELS = {t["label"] for t in DOC_TYPE_THEMES}
 SUPPLEMENT_THEMES: list[dict] = [
     {"key": "gender_theory", "label": "性別與佛教理論框架（英文改寫補充）", "order": 210},
     {"key": "taiwan_en",     "label": "台灣佛教與人間佛教（英文研究）",   "order": 220},
+    {"key": "tw_field",      "label": "大專學佛運動與解嚴後台灣佛教（改寫補充）", "order": 230},
 ]
 SUPPLEMENT_LABELS = {t["label"] for t in SUPPLEMENT_THEMES}
 
