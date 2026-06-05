@@ -11,16 +11,22 @@ export default defineEventHandler(async (event) => {
     .order('display_order', { ascending: true })
   if (error) throw createError({ statusCode: 500, message: error.message })
 
-  const { data: counts, error: cErr } = await supabase
-    .from('canon_law_sections')
-    .select('doc_slug, version_code')
-  if (cErr) throw createError({ statusCode: 500, message: cErr.message })
-
+  // Tally per-doc per-version counts. PostgREST caps responses at 1000 rows
+  // (db-max-rows) and .limit() can't exceed it, so page through with .range().
   const tally = new Map<string, Record<string, number>>()
-  for (const row of (counts ?? []) as { doc_slug: string; version_code: string }[]) {
-    if (!tally.has(row.doc_slug)) tally.set(row.doc_slug, {})
-    const m = tally.get(row.doc_slug)!
-    m[row.version_code] = (m[row.version_code] ?? 0) + 1
+  const PAGE = 1000
+  for (let from = 0; ; from += PAGE) {
+    const { data, error: cErr } = await supabase
+      .from('canon_law_sections')
+      .select('doc_slug, version_code')
+      .range(from, from + PAGE - 1)
+    if (cErr) throw createError({ statusCode: 500, message: cErr.message })
+    for (const row of (data ?? []) as { doc_slug: string; version_code: string }[]) {
+      if (!tally.has(row.doc_slug)) tally.set(row.doc_slug, {})
+      const m = tally.get(row.doc_slug)!
+      m[row.version_code] = (m[row.version_code] ?? 0) + 1
+    }
+    if (!data || data.length < PAGE) break
   }
 
   return (docs ?? []).map((d: any) => ({

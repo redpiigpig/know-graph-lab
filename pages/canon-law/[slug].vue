@@ -44,13 +44,13 @@
               <span class="flex-1 text-left truncate">{{ bk.label || '（未分卷）' }}</span>
             </button>
             <div v-if="expandedBooks.has(bi)" class="ml-1 mt-0.5 border-l border-stone-100 pl-1">
-              <NuxtLink v-for="(ch, ci) in bk.chapters" :key="ci"
-                :to="`/canon-law/${slug}?page=${ch.page}`" @click="sidebarOpen = false"
+              <NuxtLink v-for="pg in bk.pages" :key="pg.page"
+                :to="`/canon-law/${slug}?page=${pg.page}`" @click="sidebarOpen = false"
                 :class="[
                   'block px-2 py-1 rounded text-[12px] hover:bg-stone-50 transition no-underline truncate',
-                  ch.page === currentPage ? 'bg-amber-50 text-amber-800 font-medium' : 'text-stone-700',
+                  pg.page === currentPage ? 'bg-amber-50 text-amber-800 font-medium' : 'text-stone-700',
                 ]">
-                <span class="text-stone-300 mr-1">·</span>{{ ch.label || ch.firstLabel }}
+                <span class="text-stone-300 mr-1">·</span>{{ pg.label }}
               </NuxtLink>
             </div>
           </div>
@@ -204,26 +204,30 @@ function headingBefore(i: number): boolean {
   return prev.book_label !== s.book_label || prev.chapter_label !== s.chapter_label
 }
 
-// ── Sidebar tree: book_label → chapter_label, with the page of first section ──
+// ── Sidebar tree: 卷 (book_label) → pages, each labelled by its canon range ──
+// Language-independent (uses section_label), so no per-canon / mixed-language clutter.
 const tree = computed(() => {
-  const out: { label: string | null; chapters: { label: string | null; firstLabel: string; page: number }[] }[] = []
+  const out: { label: string | null; pages: { page: number; label: string }[] }[] = []
   if (!docData.value) return out
-  docData.value.sections.forEach((s, idx) => {
-    const page = Math.floor(idx / PAGE_SIZE) + 1
+  const secs = docData.value.sections
+  for (let p = 1; p <= totalPages.value; p++) {
+    const slice = secs.slice((p - 1) * PAGE_SIZE, p * PAGE_SIZE)
+    if (!slice.length) continue
+    const book = slice[0].book_label
+    const first = slice[0].section_label || `#${slice[0].order_index}`
+    const last = slice[slice.length - 1].section_label || `#${slice[slice.length - 1].order_index}`
+    const label = first === last ? first : `${first} – ${last}`
     let bk = out[out.length - 1]
-    if (!bk || bk.label !== s.book_label) { bk = { label: s.book_label, chapters: [] }; out.push(bk) }
-    const lastCh = bk.chapters[bk.chapters.length - 1]
-    if (!lastCh || lastCh.label !== s.chapter_label) {
-      bk.chapters.push({ label: s.chapter_label, firstLabel: s.section_label || `#${s.order_index}`, page })
-    }
-  })
+    if (!bk || bk.label !== book) { bk = { label: book, pages: [] }; out.push(bk) }
+    bk.pages.push({ page: p, label })
+  }
   return out
 })
 const expandedBooks = ref(new Set<number>())
 function toggleBook(i: number) { expandedBooks.value.has(i) ? expandedBooks.value.delete(i) : expandedBooks.value.add(i); expandedBooks.value = new Set(expandedBooks.value) }
 // Expand the book containing the current page on load / page change.
 watch([tree, currentPage], () => {
-  tree.value.forEach((bk, bi) => { if (bk.chapters.some(c => c.page === currentPage.value)) expandedBooks.value.add(bi) })
+  tree.value.forEach((bk, bi) => { if (bk.pages.some(pg => pg.page === currentPage.value)) expandedBooks.value.add(bi) })
   expandedBooks.value = new Set(expandedBooks.value)
 })
 
