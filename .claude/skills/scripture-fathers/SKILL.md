@@ -172,6 +172,20 @@ translate_ebook_to_zh.py 通常會把 source HTML 檔名 (`anf04.iv.iii.i.html` 
 
 實作見 [`_fix_vol7_volumes_v2.py`](../../../scripts/_fix_vol7_volumes_v2.py)。新 vol 一開始時先 sample 5-10 個 chunks 看 title_en 形狀，**確認是 anf prefix 還是英文文字** 再決定走 PREFIX_TO_VOL 還是 boundary-based。
 
+### 坑 4.6: 深層巢狀多論著卷 — `consolidate_by_ncx` 會打散順序（NPNF2 V10 安波羅修實證 2026-06-05）
+title_en 是英文 NCX label（非 npnf 前綴）**且**該卷有深層巢狀多論著（如安波羅修：論教士職分／論聖靈／
+論其兄之死／基督信仰闡釋／論奧蹟／論懺悔／論貞女／論寡婦 各含 Intro+Book/Chapter 多層）時，
+`consolidate_by_ncx` 會**把論著標題 chunk 抽到檔尾、章節 chunk 留在前段、順序錯置**（V10 實證：
+333 chunks 中 0-298 章節無 volume、299-330 論著標題擠在尾端，章節從「第32章」開頭＝源順序已毀）。
+內容不丟但 metadata 與順序不可信，且 pre-consolidate 乾淨版會被覆蓋無法復原。
+
+**鐵則：多論著大卷（title_en=英文 NCX label）翻完後直接 boundary-walk，不要跑 `consolidate_by_ncx`。**
+boundary-walk 在乾淨源順序上 walk：論著名以 chunk 形式出現（"On the Duties of the Clergy." 等）設
+boundary、propagate current 論著到後續 "Chapter N"/"Book I" chunks（比照 `_fix_vol7_volumes_v2.py` /
+`_fix_vol33_hilary_damascus.py`）。**翻完先別 consolidate，先 sample title_en**：若見英文論著名 + "Chapter N"
+分離 → 走 boundary-walk；若 consolidate 已誤跑致順序毀 → 隔離壞檔（`.consolidate-corrupt.bak`）+ 移除
+工作 jsonl + 重譯（translate 從 EPUB 出乾淨源順序，pre-consolidate 中文無備份只能重譯）。
+
 ### 坑 5: bare volume vs book-specific volume 並存（Vol 2 實證）
 
 例：同一個 JSONL 裡同時出現 `volume='革利免《教師》'` 跟 `volume='革利免《教師》卷一/二/三'` — 前者是 polish 沒抓到 book number 的殘留 chunks，會被誤標到錯誤分組。
