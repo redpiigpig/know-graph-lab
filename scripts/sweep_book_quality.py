@@ -489,6 +489,11 @@ TERM_FIXES_NPNF2_V9 = dict(TERM_FIXES_ANF_COMMON, **{
     "約翰·大馬士革": "大馬士革的若望", "大馬色": "大馬士革",
 })
 
+# NPNF2 Vol 10 — Ambrose of Milan = 米蘭的安波羅修
+TERM_FIXES_NPNF2_V10 = dict(TERM_FIXES_ANF_COMMON, **{
+    "盎博羅削": "安波羅修", "盎博羅修": "安波羅修", "安波羅斯": "安波羅修", "安博羅修": "安波羅修",
+})
+
 # 所有 ANF vol 都吃 ANF_COMMON baseline；per-vol specific 覆蓋 baseline。
 TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "c98d358d-7066-4691-a896-b7232707b0db": {**TERM_FIXES_ANF_COMMON, **TERM_FIXES_ANF_VOL_1},  # ANF Vol 1
@@ -520,6 +525,7 @@ TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "af2cf8a7-b169-432c-863d-632647c8ab67": TERM_FIXES_NPNF2_V7,  # NPNF2 Vol 7 Cyril of Jerusalem + Gregory Nazianzen
     "3c48472c-fbca-48fb-9db1-ca5a08827ef3": TERM_FIXES_NPNF2_V8,  # NPNF2 Vol 8 Basil the Great 凱撒利亞的巴西流
     "709f43f9-724c-4cd5-b6b0-570d26083d24": TERM_FIXES_NPNF2_V9,  # NPNF2 Vol 9 Hilary of Poitiers + John of Damascus
+    "fd8a09e7-a6ab-4818-a6d7-6722e50da773": TERM_FIXES_NPNF2_V10,  # NPNF2 Vol 10 Ambrose of Milan 米蘭的安波羅修
 }
 
 

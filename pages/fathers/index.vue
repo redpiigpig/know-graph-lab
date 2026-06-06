@@ -141,6 +141,7 @@ const REFINED_IDS = new Set([
   'af2cf8a7-b169-432c-863d-632647c8ab67',  // NPNF2 Vol 7 (Cyril of Jerusalem 耶路撒冷的區利羅《教理講授》+ Gregory Nazianzen 拿先斯的格列高里《講演集》《書信集》)
   '3c48472c-fbca-48fb-9db1-ca5a08827ef3',  // NPNF2 Vol 8 (Basil the Great 凱撒利亞的巴西流 — 論聖靈 + 六日創造論 + 書信集)
   '709f43f9-724c-4cd5-b6b0-570d26083d24',  // NPNF2 Vol 9 (Hilary of Poitiers 普瓦捷的希拉里 + John of Damascus 大馬士革的若望 — 論三位一體/論會議/詩篇講道 + 正統信仰詳解)
+  'fd8a09e7-a6ab-4818-a6d7-6722e50da773',  // NPNF2 Vol 10 (Ambrose of Milan 米蘭的安波羅修 — 導論/論著選/書信選；源順序跨論著錯置故粗分三區)
 ])
 
 const series = [

@@ -524,7 +524,8 @@ Vol 9:  349 → 92   (30 page + 62 other)
 | ✅ 31 | NPNF2 Vol 7（耶路撒冷的區利羅《教理講授》+ 拿先斯的格列高里《講演集》《書信集》）| 已精修 | `_fix_vol31_cyril_gregory.py`；TERM 1352 處（西瑞爾→區利羅/額我略→格列高里/巴西略→巴西流）；test_fathers_quality PASS；glossary+B層待補 |
 | ✅ 32 | NPNF2 Vol 8（凱撒利亞的巴西流 — 論聖靈 + 六日創造論 + 書信集）| 已精修 | `_fix_vol32_basil.py`；4 作品 WORK 層+sequential；TERM 1691 處（巴西略→巴西流 ×1049/該撒利亞→凱撒利亞）；test_fathers_quality PASS；書信逐封繁中+glossary+B層待補 |
 | ✅ 33 | NPNF2 Vol 9（普瓦捷的希拉里 + 大馬士革的若望）| 已精修 | `_fix_vol33_hilary_damascus.py`（PREFIX_TO_VOL 雙作者樹：論三位一體 12 卷/論會議/詩篇講道 + 正統信仰詳解 4 卷）；Haiku-first 翻譯（免費池乾）；TERM 222 處；test_fathers_quality PASS。**約翰/若望不收斂**（約翰福音=約翰、大馬士革的若望=若望，分工正確）|
-| 34-38 | NPNF2 Vol 10-14 + ACCS 待補卷 | 待續 | 佇列見接手清單；Schaff 全集 = ANF 10 + NPNF1 14 + NPNF2 14 = **38 卷**（+ ACCS 27 卷）|
+| ✅ 34 | NPNF2 Vol 10（米蘭的安波羅修）| 已精修 | `_fix_vol34_ambrose.py`；⚠️ 章節源順序跨論著錯置（spot-check 證實）→ 不假造論著樹，**粗分三區（導論/論著選/書信選）**；隔離 consolidate 壞檔重譯；TERM 670 處（盎博羅削→安波羅修）；test PASS |
+| 35-38 | NPNF2 Vol 11-14 + ACCS 待補卷 | 待續 | 佇列見接手清單；Schaff 全集 = ANF 10 + NPNF1 14 + NPNF2 14 = **38 卷**（+ ACCS 27 卷）|
 
 ---
 
@@ -630,7 +631,7 @@ auto-push。**git 在 master 跑教父**（user 拍板；feat/coach-language 是
 6. **glossary（/translation-glossary）已被改成「各領域獨立表」新架構，由別的作業負責，教父線別碰。**
 
 ### 接續佇列（NPNF2，逐卷；ID 見下方批次表保留區）
-**下一卷 → V10 安波羅修** `fd8a09e7-a6ab-4818-a6d7-6722e50da773`（Ambrose of Milan 米蘭的安波羅修）/
+**下一卷 → V11** `24c53ede-8787-442e-a3ba-0cd55d0effac`/
 V11 `24c53ede-8787-442e-a3ba-0cd55d0effac` / V12 大良 `02a08547-6fb5-44b2-8a59-9b1f625f3a54` /
 V13 `90b55879-7179-41d7-9f6c-f6587a3dd429` / V14 七大公會議 `63853a97-68be-441c-8dce-063ae89405c5`
 → 再 ACCS 待補卷。**翻每卷前先 `/translation-glossary` 查該卷人物 ★建議譯名**（迦帕多家/區利羅
