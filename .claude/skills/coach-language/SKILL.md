@@ -68,6 +68,8 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 
 ## 四、其他功能
 
+> 🎯 **設計原則：英文內容「策展優先」（2026-06-05）**。使用者不滿意 AI 即時生成的浮動品質，故**英文的文法課/學術單字/情境實用句/短文長文範例改為手工策展**（`server/data/enGrammar.ts`/`enVocab.ts`/`enSentences.ts`/`enPassages.ts`），策展內容為可靠核心、**AI 只負責「無限延伸／換一個」**（走 NVIDIA 主→Gemini）。加內容＝改對應 data 檔。其他語言仍走 AI 生成。
+
 - **分級文法課**（`lang_grammar` PK user+lang+**level**）：日文 N5–N1、古典語 入門/初級/中級/進階 各一套；**Gemini 依程度＋`langLabel` 自動生成**（不需手動 seed）。大綱循序 + 逐課懶生成（解說/例句/練習）+ 完成度。頁 `/coach/[lang]/grammar`。
   - **英文＝手工策展（2026-06-05，不走 AI）**：`server/data/enGrammar.ts` 9 大類 ~43 文法點（時態/語態/語氣/句型/子句/名詞冠詞/動詞/連接詞/介係詞），全策展解說+例句+練習（宗教研究取向）。`grammar/index.get.ts` 偵測 `language==='en'` → 用 `curatedSyllabus(level)`（依 CEFR level 過濾、**content 預嵌**，lesson 端點直接回不走 AI）、保留 done。要加/改文法點就改 `enGrammar.ts`。
   - **🗺️ 文法地圖 `/coach/en/grammar-map`（限 en）**：分類瀏覽 + 即時關鍵字過濾 + **打字發問**（`grammar/lookup` = 關鍵字比對 + AI 分類到對應 topic id）+ 內嵌策展解說例句 + 深連回文法課（`grammar?open=<id>` 自動展開）。端點 `grammar/map`(GET 地圖資料) / `grammar/lookup`(POST 查詢)。首頁/文法課有入口（限 en）。
@@ -104,7 +106,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 - 預設模型 **`gemini-flash-latest`**（固定 ID 2.5-flash 免費日限 20 太低；alias 配額桶分開）。env `GEMINI_MODEL`/`GEMINI_GRADE_MODEL` 可覆寫。
 - **Gemini key 命名容錯（2026-06-04）**：`nuxt.config` 的 `geminiApiKeys`/`geminiApiKey` 同時接受 `Gemini_API_Key_OLINE_ONLY` 與全大寫 `GEMINI_API_KEY_OLINE_ONLY`（Zeabur 變數區分大小寫，打錯就讀不到 → YouTube 誤報缺 key）。付費層已停用（`GEMINI_COACH_PAID_KEY` 移除），現役＝線上專用 `NVIDIA_API_Key_OLINE_ONLY` 主 + `Gemini_API_Key_OLINE_ONLY` fallback（皆僅 Zeabur）。
 - 雙 key env：`GEMINI_COACH_FREE_KEY`（空則 fallback `Gemini_API_Key_*` 池）/ `GEMINI_COACH_PAID_KEY`。Gemini 免費用完→前端 `useCoachAi.aiFetch` 跳確認→切付費重試（NVIDIA 為主後此路徑幾乎不觸發）。
-- 前端 AI 呼叫一律走 `useCoachAi().aiFetch`（自動帶 usePaid + free_exhausted 處理）。
+- 前端 AI 呼叫一律走 `useCoachAi().aiFetch`（自動帶 usePaid + free_exhausted 處理）。⚠️ **`aiFetch` 對 GET/HEAD 不能塞 body**（瀏覽器會丟 "Request with GET/HEAD method cannot have body" → 頁面整個拿不到資料，例如文法課曾全空白）。已修：`aiFetch` 偵測 method，GET/HEAD 把 `usePaid` 放 **query string**、其餘方法才放 body。新增「用 aiFetch 打 GET 的端點」務必從 query 讀 usePaid（多數 GET 端點根本不需要 usePaid，直接用 `authedFetch` 更乾淨）。
 
 ## 六之二、時區・計時器・日曆（2026-06-04）
 
@@ -120,7 +122,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 
 ## 八、端點（`server/api/lang/*` + `server/api/devices/*`）
 
-chat / profile(get,put) / progress(get,put) / activity / dashboard / usage / assess / briefing / memory(get,regenerate) / journal(get, generate) / sessions / messages / coaches / vocab(index,generate,review get/post,[id] patch/delete) / homework / task(generate, [id]/answer) / smalltalk(start, feedback) / content(ingest, watch, index, watch-stats) / grammar(index, lesson, done) / daily(get, item, done) / devices(check, index, [id] patch)。
+chat / profile(get,put) / progress(get,put) / activity / dashboard / usage / assess / briefing / memory(get,regenerate) / journal(get, generate) / sessions / messages / coaches / vocab(index,generate,review get/post,[id] patch/delete) / homework / task(generate, [id]/answer) / smalltalk(start, feedback) / content(ingest, watch, index, watch-stats) / grammar(index, lesson, done, **map, lookup**) / daily(get, item, done) / devices(check, index, [id] patch) / **words(define, status get/post)** / **pronunciation** / **sentences(index, more)** / **writing(correct)**。
 
 ## 九、加語言 / 擴充
 
@@ -140,4 +142,12 @@ chat / profile(get,put) / progress(get,put) / activity / dashboard / usage / ass
 
 ## 待辦（次要）
 
-Live2D、雲端 TTS、AWL/GRE 詞庫實際 seed、速率限制、MFA、用量異常 email 通知、%C2 換真實 C2 wordlist。
+Live2D、雲端 TTS、速率限制、MFA、用量異常 email 通知、%C2 換真實 C2 wordlist。
+
+**功能藍圖（2026-06-05 競品調查後，已做打✓）**：
+- ✓ FSRS 取代 SM-2、✓ 點讀閱讀器（known/learning 著色+建卡）、✓ 發音跟讀 shadowing、✓ 克漏字 cloze、✓ 寫作逐句批改、✓ 英文內容策展化。
+- ☐ **影片字幕逐句精讀**（YouTube 抓字幕逐句切→逐句播放+點字查+跟讀+存句；目前只記觀看時長）。
+- ☐ **語塊/搭配詞（collocation）學習**（寫作批改/沉浸抽詞時一併抽固定搭配，獨立成一類詞庫；研究者寫作很需要）。
+- ☐ **沉浸抽單字→自動進 SRS**（目前抽完是斷點，沒形成「讀→抽→複習」閉環；可仿點讀閱讀器把抽到的詞含原句進 FSRS）。
+- ☐ **儀表板加「已知字成長曲線」**（用 `lang_word_status` known 計數，對長期讀原典超有感）。
+- ☐ **今日計畫納入 shadowing 與 cloze**（5 口說可指定 shadowing 句；新增每日 cloze 量）。
