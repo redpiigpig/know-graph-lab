@@ -43,7 +43,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 - `/coach/[lang]/smalltalk` = 限時主題聊（3/5/10 分倒數 + 結束評分）
 - `/coach/[lang]/grammar` = 分級文法課
 - `/coach/[lang]/practice` = 技能練習 / 考試模擬 / 翻譯遊戲
-- `/coach/[lang]/review` = 單字 SRS（翻卡 / 選擇題）
+- `/coach/[lang]/review` = 單字 SRS（翻卡 / 選擇題 / 克漏字，FSRS）；另有 `/reader` 點讀、`/shadowing` 跟讀、`/writing` 寫作批改
 - `/coach/[lang]/immersion` = YouTube/文章沉浸
 - `/coach/[lang]/dashboard` = 該語言儀表板 + Gemini 用量/成本
 
@@ -76,9 +76,12 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
   - **短文/長文**：`server/data/enPassages.ts` 6 主題（自我介紹/留學動機/分享想法/旅遊分享/學術發表）× 短文+長文 = **12 篇策展範文**（任務繁中／範文／中譯／重點句型）。流程：看任務→試寫一段→看範文→換一篇/下一篇。
   - 練到底自動用 AI（`sentences/more`：kind=sentence 或 passage+length，NVIDIA 主）補更多 → 寫作口說**無限練**。端點 `sentences`(index GET 句庫+範文 / more POST AI 延伸)。要加內容改 `enSentences.ts`/`enPassages.ts`。首頁入口（限 en），與文法課/情境角色交叉連結。
 - **主題教程**（`lang_courses`）：可選預設或自建主題（宗教文獻精讀/學術寫作/TOEFL口說/敬語/宗教神話日語…），生成循序課表，**每課標預估分鐘**，逐課懶生成 + 進度條。頁 `/coach/[lang]/courses`；端點 courses(index/create/[id]/lesson/done)。
-- **單字 SRS**（`lang_vocab`，SM-2，`server/utils/srs.ts`）：到期佇列；review 預設選擇題（對=good 錯=again→複習）；不足時從整庫補未精熟字；`vocab/generate` 依**目前程度**生成主題詞組——**非初學者採「程度下限」策略**：挑符合或略高於目前程度的字，**嚴格排除低於該程度的基礎／日常常見字**（英文 B2 就不出 heartbeat/happy 這類 A1–B1 早已熟悉的字，寧難勿易；初學者 A1/A2/N5/入門 仍給基礎高頻字）。既有的太簡單卡片不批次刪（使用者要保留自己拼錯／想練的字），靠評「簡單」拉長間隔自然淡出。
+- **單字 SRS**（`lang_vocab`，**FSRS v4.5**，`server/utils/srs.ts`，2026-06-05 由 SM-2 改）：`fsrs()` 用 difficulty/stability/retrievability 三參數（`lang_vocab` 加 `difficulty`/`stability` 欄位），依距上次複習天數算 R；同記憶率複習量少 ~20-30%、答錯不再反覆轟炸。`review.post` 已改用 fsrs；`sm2()` 保留不刪。review **三模式**：翻卡／選擇題／**克漏字**（看中文+挖空例句→打單字，對=good 錯=again；不自動朗讀免洩答案）。不足時從整庫補未精熟字；`vocab/generate` 依**目前程度**生成主題詞組——**非初學者採「程度下限」策略**：挑符合或略高於目前程度的字，**嚴格排除低於該程度的基礎／日常常見字**（英文 B2 就不出 heartbeat/happy 這類 A1–B1 早已熟悉的字，寧難勿易；初學者 A1/A2/N5/入門 仍給基礎高頻字）。既有的太簡單卡片不批次刪（使用者要保留自己拼錯／想練的字），靠評「簡單」拉長間隔自然淡出。
   - **英文預設主題＝手工策展單字（2026-06-05，不走 AI）**：`server/data/enVocab.ts` 7 預設主題（AWL/GRE/哲學/歷史/神學/文學批評/學術寫作連接詞）×15 = 105 個 B2+ 學術字（宗教研究取向，繁中釋義+例句+詞性）。`vocab/generate` 偵測 `en` + 策展主題 → 直接 upsert 策展字（**零延遲、永遠有題**），自訂主題才走 AI（NVIDIA 主→Gemini）。`review.vue` 無限模式 `THEME_POOLS.en.auto` 已改成**全策展主題** → 不再卡 AI（修無限模式不出題）。已預先 seed 105 字進站長單字庫。
   - **♾️ 無限刷題模式（預設開，2026-06-04）**：`review.vue` 右上開關。佇列剩 ≤4 張就背景用 `vocab/generate` 生一批新學術單字（英文走策展、零成本秒回；其他語言走 NVIDIA）接到佇列尾，預抓藏延遲、本 session 去重，永不停。主題池 `THEME_POOLS` **依語言**：英文走 AWL/GRE/學術；**德文（de）／法文（fr）走 A1 高頻字＋日常生活（家庭/食物/城市/數字/問候…），名詞連冠詞，後段才帶教堂節慶與宗教/神學基礎詞**；日文走 N5/N4 基礎・日常・神社祭典等初學主題（別給日文出英文考試詞）；**希臘文（grc）走 新約高頻字／約翰福音／LXX／信經術語／教父／斐羅／拜占庭**；**拉丁文（la）走 武加大／福音書／信經禮儀／拉丁教父／經院術語（ens·esse·essentia）／教會法／中世紀各學科**；**希伯來文（hbo）走 舊約高頻字／創世記出埃及記／詩篇／binyanim 動詞／三母音字根／昆蘭／拉比／中世紀註釋** 等入門題材。`TTS_LANG` 也要補對應 BCP-47（de=`de-DE`、fr=`fr-FR`、grc=`el-GR`、la=`it-IT` 教會式、hbo=`he-IL`），否則 🔊 會用英文聲念。⚠️ **同一份 `TTS`/`TTS_LANG` 語系對照表散落在多個頁面**（`review.vue`/`practice.vue`/`immersion.vue`/`smalltalk.vue`/`grammar.vue`/`today.vue`/`courses.vue`，其中 immersion/practice 另有 `LANG_LABEL`），**新增活語言時 7 個檔都要補齊**（活語言若漏補會用英文聲念外語，2026-06-04 已全數補上 de/fr）。測過或沒過的卡都進 `lang_vocab`（generate upsert + review 記 SRS），各語言獨立列表。
+- **📖 點讀閱讀器（`/coach/[lang]/reader`，2026-06-05，全語言）**：貼任意外語文字→逐字可點，點詞用 NVIDIA/Gemini 在「該句脈絡」給釋義+原形+例句（`words/define`）；標「學習中」自動把原形(含原句)加入 `lang_vocab` 進 FSRS、標「已知」著灰，狀態存 `lang_word_status`（`words/status` GET+POST）、下次遇到自動著色。LingQ 式可理解輸入，適合讀原典/論文。
+- **🗣️ 發音跟讀 shadowing（`/coach/[lang]/shadowing`，全語言）**：目標句（en 可隨機抽策展句）→🔊聽範例/🐢慢速→🎤跟讀 STT→**LCS 逐詞比對**著色(綠=唸到/紅=漏或不準)+吻合%；🧑‍🏫 AI 點評（`pronunciation` 端點）用「目標 vs 轉錄」差異反推發音弱點（Web Speech 無音素級資料，故走此法；古典語誦讀也適用）。
+- **✍️ 寫作批改（`/coach/[lang]/writing`，全語言）**：寫一段→**逐句 inline 批改**（原句刪除線/修正後綠字/為何錯）+整體點評+評分+潤飾版 TTS（`writing/correct` 端點，NVIDIA 主）。
 - **技能練習/考試**（`lang_tasks`）：`task/generate`（TOEFL/IELTS/GRE + 一般，聽說讀寫 + 翻譯）/ `task/[id]/answer`（選擇題自動批改、寫說/翻譯用 Gemini rubric 評分）。
 - **記憶/簡報/日誌**：`lang_memory`（跨 session 長期了解 + highlights 強弱項，注入對話）；`briefing`（今日簡報，每日快取）；`lang_journal`（教練每日日誌，日曆點閱）。
 - **難度依「目前程度」非目標**：生成都讀 `lang_progress.level`；量表 `coach.levelScale`（CEFR / JLPT / 入門初中進）；`progress.put` 設目前程度。
@@ -113,7 +116,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 
 ## 七、DB 表（Supabase，全 RLS 依 user_id）
 
-`lang_profile`/`lang_progress`/`lang_sessions`(persona/mode/topic/duration/feedback)/`lang_messages`/`lang_vocab`(SM-2)/`lang_homework`/`lang_activity`/`lang_level_history`/`lang_api_usage`(+bump_lang_usage RPC)/`lang_memory`(memory/highlights/briefing/briefing_date)/`lang_journal`/`lang_word_lists`/`lang_tasks`/`lang_content`/`lang_grammar`/`lang_daily`/`trusted_devices`。migration SQL 在 `database/coach-language-*.sql` 等，用 Supabase Management API 套用。
+`lang_profile`/`lang_progress`/`lang_sessions`(persona/mode/topic/duration/feedback)/`lang_messages`/`lang_vocab`(FSRS：difficulty/stability)/`lang_word_status`(known/learning 著色)/`lang_homework`/`lang_activity`/`lang_level_history`/`lang_api_usage`(+bump_lang_usage RPC)/`lang_memory`(memory/highlights/briefing/briefing_date)/`lang_journal`/`lang_word_lists`/`lang_tasks`/`lang_content`/`lang_grammar`/`lang_daily`/`trusted_devices`。migration SQL 在 `database/coach-language-*.sql` 等，用 Supabase Management API 套用。
 
 ## 八、端點（`server/api/lang/*` + `server/api/devices/*`）
 
