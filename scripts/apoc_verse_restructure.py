@@ -446,6 +446,39 @@ def all_doc_slugs():
     return [d['slug'] for d in docs]
 
 
+# Deuterocanon: slug → bible_books code. Skeleton from bible_verses (Brenton LXX —
+# best coverage incl 3-4 Macc, and LXX versification matches 黃根春). psalm-151 /
+# esther-additions have no clean bible source → handled via --zh-own / legacy.
+DEUTERO_BIBLE = {
+    'tobit': 'tob', 'judith': 'jdt', 'wisdom-solomon': 'wis', 'sirach': 'sir',
+    'baruch': 'bar', 'letter-jeremiah': 'epj', '1-maccabees': '1ma',
+    '2-maccabees': '2ma', '3-maccabees': '3ma', '4-maccabees': '4ma',
+    '1-esdras': '1es', 'prayer-manasseh': 'man',
+}
+
+
+def run_batch_bible(dry=False):
+    """Restructure all deuterocanon docs against their bible_verses (Brenton)
+    skeleton. Checkpointed (skips already-per-verse). Each book gets correct ch:v."""
+    for slug, book in DEUTERO_BIBLE.items():
+        try:
+            if is_restructured(slug):
+                print(f'[BATCH-BIBLE] skip {slug} (already per-verse)'); continue
+            DOC_SOURCES[slug] = {
+                'en_version': 'brenton_apoc', 'en_kind': 'bible',
+                'bible_book': book, 'bible_version': 'brenton',
+                'book_name': slug,
+            }
+            print(f'\n[BATCH-BIBLE] === {slug} (bible {book}) ===')
+            snapshot_from_cct_zh(slug)        # capture full ZH text before overwrite
+            do_english(slug, dry=dry)
+            do_chinese(slug, dry=dry)
+        except SystemExit:
+            raise
+        except Exception as ex:
+            print(f'[BATCH-BIBLE] {slug} FAILED: {ex}')
+
+
 # ── main ──────────────────────────────────────────────────────────────
 def is_restructured(slug) -> bool:
     """True if cct_zh already per-verse (has a non-null chapter)."""
@@ -460,6 +493,10 @@ if __name__ == '__main__':
         raise SystemExit(__doc__)
     dry = '--dry' in args
     print(f'engines: nvidia={len(NKEYS)} gemini={len(GKEYS)} prefer_nvidia={PREFER_NVIDIA}')
+
+    # Batch: deuterocanon via bible_verses (Brenton) skeleton.
+    if '--batch-bible' in args:
+        run_batch_bible(dry=dry); raise SystemExit(0)
 
     # Batch: Chinese-own restructure across all docs (skip 1-enoch + already-done).
     if '--batch-own' in args:
