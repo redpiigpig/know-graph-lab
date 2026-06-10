@@ -414,13 +414,17 @@ def is_done(work: dict) -> bool:
 
 
 # ── lock ─────────────────────────────────────────────────────────────────────
+LOCK_STALE_SECS = 25 * 60  # a live run touches the lock every ~3 paragraphs; older = dead/hung
+
+
 def acquire_lock() -> bool:
     DATA_ROOT.mkdir(parents=True, exist_ok=True)
     if LOCK.exists():
         age = time.time() - LOCK.stat().st_mtime
-        if age < 6 * 3600:  # a fresh lock means another run is active
+        if age < LOCK_STALE_SECS:  # a fresh lock means another run is active
             print(f"  another queue run holds the lock ({age/60:.0f} min old) — exiting", flush=True)
             return False
+        print(f"  stale lock ({age/60:.0f} min old, holder likely dead) — taking over", flush=True)
     LOCK.write_text(str(os.getpid()), encoding="utf-8")
     return True
 
