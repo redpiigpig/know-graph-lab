@@ -25,28 +25,32 @@ description: 諾斯底主義文獻對照工具（/gnostic）— 把 The Gnostic 
 
 ---
 
-## 🟢 狀態（2026-06-06 全量完成 · 268 篇 / 19,448 段）
+## 🟢 狀態（2026-06-06 全量完成 · 304 篇 / 20,012 段）
 
-- ✅ **純函式核心（test-first，23 例綠）** — [scripts/gnostic_library.py](../../../scripts/gnostic_library.py) + [scripts/tests/test_gnostic_library.py](../../../scripts/tests/test_gnostic_library.py)：taxonomy / slug / 去重 / 分類頁解析 / 單篇 `<br>` 逐段解析 / 對齊 gate
+- ✅ **純函式核心（test-first，25 例綠）** — [scripts/gnostic_library.py](../../../scripts/gnostic_library.py) + [scripts/tests/test_gnostic_library.py](../../../scripts/tests/test_gnostic_library.py)：taxonomy / slug / 去重 / 分類頁解析 / 單篇 `<br>` 逐段解析 / **lxml 解析不閉合 `<p>` 讚歌頁** / 對齊 gate
 - ✅ **DB schema** — [database/gnostic-schema.sql](../../../database/gnostic-schema.sql)（3 表 + RLS public read + seed `gnosis_en` / `zh` 兩版本），已 apply
 - ✅ **reader + API + portal 卡片** — [pages/gnostic/index.vue](../../../pages/gnostic/index.vue)（13 分類 tab + 搜尋）/ [pages/gnostic/[slug].vue](../../../pages/gnostic/[slug].vue)（英中兩欄逐段 + 分類側欄）/ [server/api/gnostic/*.get.ts](../../../server/api/gnostic/)（documents / document / versions / search）/ [lib/gnostic-meta.ts](../../../lib/gnostic-meta.ts) 共用分類 meta；portal 第 8 張卡片 🜍
 - ✅ **ingest 驅動腳本** — [scripts/ingest_gnostic.py](../../../scripts/ingest_gnostic.py)（`--list` / `--category` / `--url` / `--limit-paras` / `--limit-docs` / `--dry-run`）
 - ✅ **pilot 實證** — Poemandres（赫密士文集，Mead 1906 PD）前 6 段英→繁中翻譯 + upsert 成功，DB 對齊正確（中譯品質佳，術語括註如 執政官（Archon））
 - ✅ **reader 截圖實證**（2026-06-03）：list（中文篇名卡片）+ reader（中左英右兩欄逐段）都正確。
-- ✅ **全量轉錄完成**（2026-06-06 05:50 收工）：**268 篇 / 19,448 段繁中**，全 13 類掃完（alchemical gnosis.org 該類為空）。對齊 0 不齊、0 prompt-echo、0 空白段；殘留 4 段英文是書目引註／圖說（本應保留原文）。
+- ✅ **全量轉錄完成**（2026-06-06）：**304 篇 / 20,012 段繁中**，全 13 類掃完（alchemical gnosis.org 該類為空）。對齊 0 不齊、0 prompt-echo、0 空白段。
+- ✅ **不閉合 `<p>` 讚歌頁修復**（2026-06-06）：gnosis.org 摩尼教／曼達教讚歌頁是古老 HTML、`<p>` 不閉合，舊 `html.parser` 巢狀化 → 每個內容 `<p>` 被當 non-leaf 丟掉（~31 篇真文獻誤判「無段落」漏收）。改 `_doc_soup()` 用 **lxml**（HTML5 自動閉合 `<p>`），manichaean 48→**75**、mandaean 5→**14** 補齊。
+- ✅ **列表/側欄段數修復**：`documents.get.ts` 原本抓全部 sections 在 JS 端 tally → 撞 PostgREST 1000-row 上限（corpus 破 500 段後多數卡片誤標「未轉錄」）。改讀 DB 聚合 view `gnostic_section_counts`。
 
 ### 🔖 轉錄完成紀錄（2026-06-06）
 
-**最終 DB**：**268 篇 / 19,448 段繁中**，逐 order_index 對齊（en↔zh 段數全相等）—
+**最終 DB**：**304 篇 / 20,012 段繁中**，逐 order_index 對齊（en↔zh 段數全相等）—
 
 | 分類 | 篇 | 分類 | 篇 |
 |---|---|---|---|
+| manichaean 摩尼教 | 75 | dead_sea 死海古卷 | 11 |
 | polemics 教父駁斥 | 50 | cathar 卡特里 | 11 |
-| manichaean 摩尼教 | 48 | dead_sea 死海古卷 | 11 |
 | nag_hammadi 拿戈瑪第 | 30 | valentinus 瓦倫廷 | 10 |
 | hermetica 赫密士 | 30 | modern 現代 | 9 |
-| christian_apocrypha 基督教偽典 | 25 | mandaean 曼達 | 5 |
-| gnostic_scriptures 古典經典 | 22 | mead G.R.S. Mead | 17 |
+| christian_apocrypha 基督教偽典 | 25 | mead G.R.S. Mead | 17 |
+| gnostic_scriptures 古典經典 | 22 | mandaean 曼達 | 14 |
+
+> 仍未收：少數 Mead 的新約批判／神智學雜文（非諾斯底原典）、以及與 `/fathers`（Clement《雜記》、Augustine 駁摩尼教）／`/apocrypha` 重疊而依去重規則排除者。
 
 > 收尾（2026-06-06）：9 段 Haiku 對 trivial 來源（`Amen!` / `NOTES` / `(2 lines missing)` / `[illegible]` …）prompt-echo，已人工策展中譯修掉；7 段被誤判 trivial 漏翻的實質 prose（Pagels 段、編者佚失註、圖說）已補翻。完整性掃描函式見下方驗收 SQL。
 
