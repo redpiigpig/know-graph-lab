@@ -25,7 +25,7 @@ description: 諾斯底主義文獻對照工具（/gnostic）— 把 The Gnostic 
 
 ---
 
-## 🟢 狀態（2026-06-03 上線 MVP，end-to-end 已實證）
+## 🟢 狀態（2026-06-06 全量完成 · 268 篇 / 19,448 段）
 
 - ✅ **純函式核心（test-first，23 例綠）** — [scripts/gnostic_library.py](../../../scripts/gnostic_library.py) + [scripts/tests/test_gnostic_library.py](../../../scripts/tests/test_gnostic_library.py)：taxonomy / slug / 去重 / 分類頁解析 / 單篇 `<br>` 逐段解析 / 對齊 gate
 - ✅ **DB schema** — [database/gnostic-schema.sql](../../../database/gnostic-schema.sql)（3 表 + RLS public read + seed `gnosis_en` / `zh` 兩版本），已 apply
@@ -33,14 +33,24 @@ description: 諾斯底主義文獻對照工具（/gnostic）— 把 The Gnostic 
 - ✅ **ingest 驅動腳本** — [scripts/ingest_gnostic.py](../../../scripts/ingest_gnostic.py)（`--list` / `--category` / `--url` / `--limit-paras` / `--limit-docs` / `--dry-run`）
 - ✅ **pilot 實證** — Poemandres（赫密士文集，Mead 1906 PD）前 6 段英→繁中翻譯 + upsert 成功，DB 對齊正確（中譯品質佳，術語括註如 執政官（Archon））
 - ✅ **reader 截圖實證**（2026-06-03）：list（中文篇名卡片）+ reader（中左英右兩欄逐段）都正確。
-- 🔄 **全量轉錄進行中**（**2026-06-04 暫停，下個 session 接手**）：見下方「轉錄進度 + 接手」。
+- ✅ **全量轉錄完成**（2026-06-06 05:50 收工）：**268 篇 / 19,448 段繁中**，全 13 類掃完（alchemical gnosis.org 該類為空）。對齊 0 不齊、0 prompt-echo、0 空白段；殘留 4 段英文是書目引註／圖說（本應保留原文）。
 
-### 🔖 轉錄進度 + 接手 runbook（2026-06-04 暫停點）
+### 🔖 轉錄完成紀錄（2026-06-06）
 
-**目前 DB**：**44 篇 / 4,020 段繁中** —
-- ✅ `hermetica` 赫密士文集 **30 篇全完成**
-- 🔄 `mead` G.R.S. Mead 文集 **14 篇**（含《密特拉密儀》中途；該篇 303 段翻到 ~65）
-- ⬜ 其餘 11 類**完全未開始**：gnostic_scriptures / valentinus / manichaean / mandaean / cathar / alchemical / modern / polemics(去重) / christian_apocrypha(去重) / dead_sea(去重) / nag_hammadi
+**最終 DB**：**268 篇 / 19,448 段繁中**，逐 order_index 對齊（en↔zh 段數全相等）—
+
+| 分類 | 篇 | 分類 | 篇 |
+|---|---|---|---|
+| polemics 教父駁斥 | 50 | cathar 卡特里 | 11 |
+| manichaean 摩尼教 | 48 | dead_sea 死海古卷 | 11 |
+| nag_hammadi 拿戈瑪第 | 30 | valentinus 瓦倫廷 | 10 |
+| hermetica 赫密士 | 30 | modern 現代 | 9 |
+| christian_apocrypha 基督教偽典 | 25 | mandaean 曼達 | 5 |
+| gnostic_scriptures 古典經典 | 22 | mead G.R.S. Mead | 17 |
+
+> 收尾（2026-06-06）：9 段 Haiku 對 trivial 來源（`Amen!` / `NOTES` / `(2 lines missing)` / `[illegible]` …）prompt-echo，已人工策展中譯修掉；7 段被誤判 trivial 漏翻的實質 prose（Pagels 段、編者佚失註、圖說）已補翻。完整性掃描函式見下方驗收 SQL。
+
+**完工關鍵**：免費池（Gemini/NVIDIA）整夜乾掉後，切 `--engine haiku` 直連 Claude Max OAuth 一口氣翻完剩餘 ~224 篇（見引擎政策段）。
 
 **接手指令（單一指令即可續跑）**：
 ```bash
