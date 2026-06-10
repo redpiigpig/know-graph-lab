@@ -102,6 +102,7 @@
           <NuxtLink :to="`/coach/${lang}/review`" class="tile">🗂️<span>單字複習<small v-if="stats?.vocabDue">{{ stats.vocabDue }}</small></span></NuxtLink>
           <NuxtLink :to="`/coach/${lang}/immersion`" class="tile">📺<span>內容沉浸</span></NuxtLink>
           <NuxtLink :to="`/coach/${lang}/reader`" class="tile">📖<span>點讀閱讀器</span></NuxtLink>
+          <NuxtLink :to="`/coach/${lang}/shadowing`" class="tile">🗣️<span>發音跟讀</span></NuxtLink>
           <NuxtLink :to="`/coach/${lang}/dashboard`" class="tile">📊<span>儀表板</span></NuxtLink>
         </div>
       </div>
