@@ -6,94 +6,62 @@
       <div class="w-px h-5 bg-gray-200" />
       <button
         @click="sidebarOpen = !sidebarOpen"
-        :class="[
-          'flex items-center gap-1 px-2 py-1 rounded text-xs transition border',
-          sidebarOpen ? 'bg-stone-900 text-white border-stone-900' : 'bg-white text-stone-700 border-stone-200 hover:border-stone-400',
-        ]"
-      >
-        <span>📑</span><span class="hidden sm:inline">章目</span>
-      </button>
+        :class="['flex items-center gap-1 px-2 py-1 rounded text-xs transition border',
+          sidebarOpen ? 'bg-stone-900 text-white border-stone-900' : 'bg-white text-stone-700 border-stone-200 hover:border-stone-400']"
+      ><span>📑</span><span class="hidden sm:inline">目錄</span></button>
       <span class="text-sm font-semibold text-gray-900 truncate">{{ docData?.document?.title_zh || '典外文獻' }}</span>
       <span v-if="docData?.document" class="text-xs text-gray-400 truncate hidden md:inline">{{ docData.document.title_en }}</span>
-      <div v-if="chapterMode" class="ml-auto flex items-center gap-2 text-xs">
-        <button
-          @click="goToChapter(prevChapter)"
-          :disabled="prevChapter === null"
-          class="px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-stone-400 disabled:opacity-30"
-        >‹</button>
-        <span class="text-xs text-gray-500 tabular-nums">第 {{ currentChapter }} 章</span>
-        <button
-          @click="goToChapter(nextChapter)"
-          :disabled="nextChapter === null"
-          class="px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-stone-400 disabled:opacity-30"
-        >›</button>
+      <div class="ml-auto flex items-center gap-2 text-xs">
+        <button @click="goToPage(currentPage - 1)" :disabled="currentPage <= 1"
+          class="px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-stone-400 disabled:opacity-30">‹</button>
+        <span class="text-xs text-gray-500 tabular-nums">{{ currentPageLabel }}</span>
+        <button @click="goToPage(currentPage + 1)" :disabled="currentPage >= totalPages"
+          class="px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-stone-400 disabled:opacity-30">›</button>
       </div>
     </nav>
 
     <div class="flex flex-1 overflow-hidden relative">
-      <!-- Sidebar backdrop (narrow screens only) -->
-      <div
-        v-if="sidebarOpen"
-        @click="sidebarOpen = false"
-        class="lg:hidden fixed inset-0 bg-stone-900/40 z-30 transition-opacity"
-      ></div>
+      <div v-if="sidebarOpen" @click="sidebarOpen = false" class="lg:hidden fixed inset-0 bg-stone-900/40 z-30 transition-opacity"></div>
 
-      <!-- Sidebar: doc tree -->
-      <aside
-        :class="[
-          'border-r border-gray-200 bg-white overflow-y-auto flex-shrink-0 transition-transform duration-200',
-          sidebarOpen
-            ? 'fixed lg:relative inset-y-0 left-0 top-12 lg:top-0 w-72 lg:w-72 z-40 translate-x-0 shadow-xl lg:shadow-none'
-            : 'fixed lg:relative -translate-x-full w-0 lg:w-0 lg:opacity-0 lg:overflow-hidden',
-        ]"
-      >
+      <!-- Sidebar: doc tree; current doc expands into 10-chapter pages -->
+      <aside :class="['border-r border-gray-200 bg-white overflow-y-auto flex-shrink-0 transition-transform duration-200',
+        sidebarOpen ? 'fixed lg:relative inset-y-0 left-0 top-12 lg:top-0 w-72 lg:w-72 z-40 translate-x-0 shadow-xl lg:shadow-none'
+          : 'fixed lg:relative -translate-x-full w-0 lg:w-0 lg:opacity-0 lg:overflow-hidden']">
         <div class="p-3">
           <div class="text-[10px] uppercase tracking-wider text-stone-400 mb-2 px-2">典外文獻 · {{ allDocs.length }} 卷</div>
-
           <div v-for="t in testaments" :key="t.key" class="mb-3">
-            <button
-              @click="toggleTestament(t.key)"
-              class="w-full flex items-center gap-1 px-2 py-1.5 rounded text-[13px] font-bold text-stone-900 hover:bg-stone-50 transition"
-            >
+            <button @click="toggleTestament(t.key)"
+              class="w-full flex items-center gap-1 px-2 py-1.5 rounded text-[13px] font-bold text-stone-900 hover:bg-stone-50 transition">
               <span class="text-stone-500 text-xs w-3 inline-block">{{ expandedTestaments.has(t.key) ? '▾' : '▸' }}</span>
               <span class="flex-1 text-left">{{ t.label }}</span>
               <span class="text-[10px] text-stone-400 font-normal">{{ t.docCount }}</span>
             </button>
             <div v-if="expandedTestaments.has(t.key)" class="ml-1 mt-0.5 border-l border-stone-100 pl-1">
               <div v-for="g in t.genres" :key="g.key" class="mb-1.5">
-                <button
-                  @click="toggleGenre(t.key, g.key)"
-                  class="w-full flex items-center gap-1 px-2 py-1 rounded text-xs font-semibold text-stone-700 hover:bg-stone-50 transition"
-                >
+                <button @click="toggleGenre(t.key, g.key)"
+                  class="w-full flex items-center gap-1 px-2 py-1 rounded text-xs font-semibold text-stone-700 hover:bg-stone-50 transition">
                   <span class="text-stone-400 text-[10px] w-3 inline-block">{{ isGenreOpen(t.key, g.key) ? '▾' : '▸' }}</span>
                   <span class="flex-1 text-left">{{ g.label }}</span>
                   <span class="text-[10px] text-stone-400 font-normal">{{ g.docs.length }}</span>
                 </button>
                 <div v-if="isGenreOpen(t.key, g.key)" class="ml-1 mt-0.5 border-l border-stone-100 pl-1">
                   <div v-for="d in g.docs" :key="d.slug" class="mb-0.5">
-                    <button
-                      @click="toggleDoc(d.slug)"
-                      :class="[
-                        'w-full flex items-center gap-1 px-2 py-1 rounded text-[12px] hover:bg-stone-50 transition',
+                    <button @click="toggleDoc(d.slug)"
+                      :class="['w-full flex items-center gap-1 px-2 py-1 rounded text-[12px] hover:bg-stone-50 transition',
                         d.slug === slug ? 'bg-amber-50 text-amber-800 font-medium' : 'text-stone-800',
-                        d.total_sections === 0 ? 'opacity-50' : '',
-                      ]"
-                    >
+                        d.total_sections === 0 ? 'opacity-50' : '']">
                       <span class="text-stone-300 text-[10px] w-3 inline-block">{{ expandedDocs.has(d.slug) ? '▾' : '▸' }}</span>
                       <span class="flex-1 text-left truncate">{{ d.title_zh_short || d.title_zh }}</span>
                       <span v-if="d.total_sections === 0" class="text-[9px] text-gray-400 italic">無中譯</span>
                     </button>
-                    <!-- Expanded doc → chapter list (only for the current doc, where we know chapters) -->
-                    <div v-if="expandedDocs.has(d.slug) && d.slug === slug && chapterMode" class="ml-3 mt-0.5 flex flex-wrap gap-1">
-                      <button
-                        v-for="c in docData!.chapters"
-                        :key="c.chapter"
-                        @click="goToChapter(c.chapter); sidebarOpen = false"
-                        :class="[
-                          'px-1.5 py-0.5 rounded text-[11px] tabular-nums transition',
-                          c.chapter === currentChapter ? 'bg-stone-900 text-white font-medium' : 'text-stone-500 hover:bg-stone-100',
-                        ]"
-                      >{{ c.chapter }}</button>
+                    <!-- current doc → 10-chapter page list -->
+                    <div v-if="expandedDocs.has(d.slug) && d.slug === slug && chapterMode" class="ml-3 mt-0.5 space-y-0.5">
+                      <button v-for="(pg, i) in pages" :key="i"
+                        @click="goToPage(i + 1); sidebarOpen = false"
+                        :class="['block w-full text-left px-2 py-0.5 rounded text-[11px] transition',
+                          (i + 1) === currentPage ? 'bg-stone-900 text-white font-medium' : 'text-stone-500 hover:bg-stone-100']">
+                        <span class="text-stone-300 mr-1">·</span>{{ pageLabel(pg) }}
+                      </button>
                     </div>
                     <div v-else-if="expandedDocs.has(d.slug) && d.slug !== slug" class="ml-3 mt-0.5">
                       <NuxtLink :to="`/apocrypha/${d.slug}`" @click="sidebarOpen = false" class="block px-2 py-0.5 rounded text-[11px] text-stone-500 hover:bg-stone-50 no-underline">開啟 →</NuxtLink>
@@ -113,8 +81,8 @@
           <div v-else-if="error" class="text-center text-red-500 py-12 text-sm">{{ String(error) }}</div>
 
           <template v-else-if="docData">
-            <!-- Document header -->
-            <header class="mb-5 pb-4 border-b border-gray-200">
+            <!-- Document header (only on page 1) -->
+            <header v-if="currentPage === 1" class="mb-5 pb-4 border-b border-gray-200">
               <h1 class="text-2xl font-bold text-gray-900">{{ docData.document.title_zh }}</h1>
               <p class="text-sm text-gray-500 mt-1">
                 <span class="font-medium">{{ docData.document.title_en }}</span>
@@ -122,85 +90,61 @@
               </p>
               <div class="flex flex-wrap items-center gap-2 mt-2 text-xs">
                 <span class="px-2 py-0.5 rounded bg-stone-100 text-stone-700">{{ categoryLabel(docData.document.category) }}</span>
-                <span v-if="docData.document.language_orig" class="px-2 py-0.5 rounded bg-amber-50 text-amber-700">
-                  原文：{{ languageLabel(docData.document.language_orig) }}
-                </span>
+                <span v-if="docData.document.language_orig" class="px-2 py-0.5 rounded bg-amber-50 text-amber-700">原文：{{ languageLabel(docData.document.language_orig) }}</span>
                 <span v-if="formattedPeriod" class="px-2 py-0.5 rounded bg-gray-50 text-gray-600">{{ formattedPeriod }}</span>
-                <span v-for="(accepted, key) in canonChips" :key="key" v-show="accepted" class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-700">
-                  {{ canonLabel(key) }}
-                </span>
+                <span v-for="(accepted, key) in canonChips" :key="key" v-show="accepted" class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-700">{{ canonLabel(key) }}</span>
               </div>
-
               <!-- Collapsible Chinese intro -->
               <div v-if="introText" class="mt-3">
-                <button
-                  @click="introOpen = !introOpen"
-                  class="flex items-center gap-1.5 text-xs font-medium text-stone-600 hover:text-stone-900 transition"
-                >
+                <button @click="introOpen = !introOpen" class="flex items-center gap-1.5 text-xs font-medium text-stone-600 hover:text-stone-900 transition">
                   <span class="text-stone-400">{{ introOpen ? '▾' : '▸' }}</span>
                   <span>簡介{{ introOpen ? '' : '（點開）' }}</span>
                 </button>
                 <div v-if="introOpen" class="mt-2 text-sm text-gray-700 leading-relaxed border-l-2 border-stone-200 pl-3 whitespace-pre-line">{{ introText }}</div>
               </div>
             </header>
+            <header v-else class="mb-4 flex items-baseline gap-2 flex-wrap">
+              <h2 class="text-base font-semibold text-stone-700">{{ docData.document.title_zh }}</h2>
+              <span class="text-sm text-amber-700 font-medium">{{ currentPageLabel }}</span>
+            </header>
 
             <!-- Column controls -->
             <div class="grid gap-2 mb-4" :style="{ gridTemplateColumns: gridCols }">
-              <div
-                v-for="(col, idx) in columns"
-                :key="idx"
-                class="bg-white border border-gray-200 rounded px-2 py-1 flex items-center gap-1"
-              >
+              <div v-for="(col, idx) in columns" :key="idx" class="bg-white border border-gray-200 rounded px-2 py-1 flex items-center gap-1">
                 <span class="text-[10px] uppercase tracking-wide text-gray-400 mr-1">{{ col.label }}</span>
                 <select v-model="col.versionCode" class="flex-1 text-xs text-gray-800 bg-transparent border-none focus:outline-none cursor-pointer">
-                  <option v-for="v in optionsForCol(col)" :key="v.code" :value="v.code">
-                    {{ v.name_zh.replace(/（[^）]*）/g, '').trim() }}{{ v.public_domain ? '' : ' ©' }}
-                  </option>
+                  <option v-for="v in optionsForCol(col)" :key="v.code" :value="v.code">{{ v.name_zh.replace(/（[^）]*）/g, '').trim() }}{{ v.public_domain ? '' : ' ©' }}</option>
                   <option v-if="optionsForCol(col).length === 0" :value="''" disabled>（暫無資料）</option>
                 </select>
                 <button v-if="columns.length > 1" @click="removeColumn(idx)" class="text-gray-300 hover:text-red-500 text-xs px-1">✕</button>
               </div>
-              <button
-                v-if="columns.length < 4"
-                @click="addColumn"
-                class="bg-white border border-dashed border-gray-300 rounded px-2 py-1 text-xs text-gray-500 hover:border-stone-400 hover:text-stone-700"
-              >+ 對照欄</button>
+              <button v-if="columns.length < 4" @click="addColumn"
+                class="bg-white border border-dashed border-gray-300 rounded px-2 py-1 text-xs text-gray-500 hover:border-stone-400 hover:text-stone-700">+ 對照欄</button>
             </div>
 
-            <div v-if="docData.sections.length === 0" class="text-center text-gray-400 py-16 text-sm">
-              此文獻尚無任何已上架版本。
-            </div>
+            <div v-if="docData.sections.length === 0" class="text-center text-gray-400 py-16 text-sm">此文獻尚無任何已上架版本。</div>
 
-            <!-- ── Chapter mode: per-verse aligned rows ── -->
+            <!-- ── Chapter mode: 10 chapters / page, each with 第N章 heading + per-verse rows ── -->
             <template v-else-if="chapterMode">
-              <h2 class="text-lg font-bold text-stone-800 mb-3">第 {{ currentChapter }} 章</h2>
-              <div class="bg-white border border-gray-200 rounded-md divide-y divide-gray-100">
-                <div
-                  v-for="s in chapterSections"
-                  :key="s.order_index"
-                  :id="`section-${s.order_index}`"
-                  class="flex"
-                >
-                  <div class="w-9 flex-shrink-0 text-right pr-2 pt-3 text-xs font-mono text-amber-700/80 tabular-nums select-none">
-                    {{ s.verse }}
-                  </div>
-                  <div class="flex-1 grid gap-px bg-gray-100" :style="{ gridTemplateColumns: gridCols }">
-                    <div
-                      v-for="(col, idx) in columns"
-                      :key="idx"
-                      class="bg-white px-3 py-2.5 text-[15px] leading-7 text-gray-900 whitespace-pre-line"
-                      :class="textClassFor(col.versionCode)"
-                    >
-                      <template v-if="col.versionCode && s.byVersion[col.versionCode]">
-                        <span v-html="renderWithFootnotes(s.byVersion[col.versionCode], s.order_index)" />
-                      </template>
-                      <span v-else class="text-gray-300 italic text-xs">—</span>
+              <section v-for="ch in pageChapters" :key="ch" class="mb-6">
+                <h2 class="text-lg font-bold text-stone-800 mb-2 pb-1 border-b border-stone-200">第 {{ ch }} 章</h2>
+                <div class="bg-white border border-gray-200 rounded-md divide-y divide-gray-100">
+                  <div v-for="s in versesOfChapter(ch)" :key="s.order_index" :id="`section-${s.order_index}`" class="flex">
+                    <div class="w-9 flex-shrink-0 text-right pr-2 pt-2.5 text-xs font-mono text-amber-700/80 tabular-nums select-none">{{ s.verse }}</div>
+                    <div class="flex-1 grid gap-px bg-gray-100" :style="{ gridTemplateColumns: gridCols }">
+                      <div v-for="(col, idx) in columns" :key="idx"
+                        class="bg-white px-3 py-2 text-[15px] leading-7 text-gray-900 whitespace-pre-line"
+                        :class="textClassFor(col.versionCode)">
+                        <template v-if="col.versionCode && s.byVersion[col.versionCode]">
+                          <span v-html="renderWithFootnotes(s.byVersion[col.versionCode], s.order_index)" />
+                        </template>
+                        <span v-else class="text-gray-300 italic text-xs">—</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </section>
 
-              <!-- Footnotes for this chapter -->
               <section v-if="footnotesOnPage.length > 0" class="mt-6 pt-4 border-t-2 border-stone-300 text-xs leading-relaxed text-gray-700">
                 <div class="font-semibold text-stone-700 mb-2">註釋</div>
                 <ol class="space-y-1 list-none pl-0">
@@ -211,58 +155,33 @@
                 </ol>
               </section>
 
-              <!-- Chapter pagination -->
               <div class="mt-8 flex items-center justify-between">
-                <button
-                  @click="goToChapter(prevChapter)"
-                  :disabled="prevChapter === null"
-                  class="px-3 py-1.5 rounded border border-gray-200 text-sm text-gray-700 hover:border-stone-400 disabled:opacity-30"
-                >← 上一章</button>
-                <span class="text-sm text-gray-500">第 {{ currentChapter }} 章 / 共 {{ docData.chapters.length }} 章</span>
-                <button
-                  @click="goToChapter(nextChapter)"
-                  :disabled="nextChapter === null"
-                  class="px-3 py-1.5 rounded border border-gray-200 text-sm text-gray-700 hover:border-stone-400 disabled:opacity-30"
-                >下一章 →</button>
+                <button @click="goToPage(currentPage - 1)" :disabled="currentPage <= 1"
+                  class="px-3 py-1.5 rounded border border-gray-200 text-sm text-gray-700 hover:border-stone-400 disabled:opacity-30">← 上一頁</button>
+                <span class="text-sm text-gray-500">{{ currentPageLabel }} · 第 {{ currentPage }}/{{ totalPages }} 頁</span>
+                <button @click="goToPage(currentPage + 1)" :disabled="currentPage >= totalPages"
+                  class="px-3 py-1.5 rounded border border-gray-200 text-sm text-gray-700 hover:border-stone-400 disabled:opacity-30">下一頁 →</button>
               </div>
             </template>
 
-            <!-- ── Legacy mode: page-block sections (docs not yet restructured) ── -->
+            <!-- ── Legacy mode: page blocks (docs not yet rebuilt) ── -->
             <template v-else>
-              <div class="mb-3 text-xs text-amber-700 bg-amber-50 border border-amber-100 rounded px-3 py-1.5">
-                這卷尚未逐節重整（仍為整頁 OCR）；逐節對照陸續補上。
-              </div>
+              <div class="mb-3 text-xs text-amber-700 bg-amber-50 border border-amber-100 rounded px-3 py-1.5">這卷尚未逐節重整（仍為整頁 OCR）；逐節對照陸續補上。</div>
               <div class="space-y-2">
-                <article
-                  v-for="s in pagedLegacy"
-                  :key="s.order_index"
-                  :id="`section-${s.order_index}`"
-                  class="bg-white border border-gray-200 rounded-md overflow-hidden"
-                >
-                  <div v-if="s.page_number" class="flex items-center gap-2 px-3 py-1 bg-stone-50 border-b border-stone-100 text-[10px] text-stone-500">
-                    <span class="font-mono">p.{{ s.page_number }}</span>
-                  </div>
+                <article v-for="s in pagedLegacy" :key="s.order_index" :id="`section-${s.order_index}`" class="bg-white border border-gray-200 rounded-md overflow-hidden">
+                  <div v-if="s.page_number" class="flex items-center gap-2 px-3 py-1 bg-stone-50 border-b border-stone-100 text-[10px] text-stone-500"><span class="font-mono">p.{{ s.page_number }}</span></div>
                   <div class="grid gap-px bg-gray-100" :style="{ gridTemplateColumns: gridCols }">
-                    <div
-                      v-for="(col, idx) in columns"
-                      :key="idx"
-                      class="bg-white px-4 py-3 text-[15px] leading-7 text-gray-900 whitespace-pre-line"
-                      :class="textClassFor(col.versionCode)"
-                    >
-                      <template v-if="col.versionCode && s.byVersion[col.versionCode]">
-                        <span v-html="renderWithFootnotes(s.byVersion[col.versionCode], s.order_index)" />
-                      </template>
+                    <div v-for="(col, idx) in columns" :key="idx" class="bg-white px-4 py-3 text-[15px] leading-7 text-gray-900 whitespace-pre-line" :class="textClassFor(col.versionCode)">
+                      <template v-if="col.versionCode && s.byVersion[col.versionCode]"><span v-html="renderWithFootnotes(s.byVersion[col.versionCode], s.order_index)" /></template>
                       <span v-else class="text-gray-300 italic text-xs">—</span>
                     </div>
                   </div>
                 </article>
               </div>
               <div class="mt-8 flex items-center justify-between">
-                <button @click="goToLegacyPage(legacyPage - 1)" :disabled="legacyPage <= 1"
-                  class="px-3 py-1.5 rounded border border-gray-200 text-sm text-gray-700 hover:border-stone-400 disabled:opacity-30">← 上一頁</button>
-                <span class="text-sm text-gray-500">第 {{ legacyPage }} / {{ legacyTotalPages }} 頁</span>
-                <button @click="goToLegacyPage(legacyPage + 1)" :disabled="legacyPage >= legacyTotalPages"
-                  class="px-3 py-1.5 rounded border border-gray-200 text-sm text-gray-700 hover:border-stone-400 disabled:opacity-30">下一頁 →</button>
+                <button @click="goToPage(currentPage - 1)" :disabled="currentPage <= 1" class="px-3 py-1.5 rounded border border-gray-200 text-sm text-gray-700 hover:border-stone-400 disabled:opacity-30">← 上一頁</button>
+                <span class="text-sm text-gray-500">第 {{ currentPage }} / {{ totalPages }} 頁</span>
+                <button @click="goToPage(currentPage + 1)" :disabled="currentPage >= totalPages" class="px-3 py-1.5 rounded border border-gray-200 text-sm text-gray-700 hover:border-stone-400 disabled:opacity-30">下一頁 →</button>
               </div>
             </template>
           </template>
@@ -278,12 +197,13 @@ definePageMeta({ middleware: 'auth' })
 const route = useRoute()
 const router = useRouter()
 const slug = computed(() => String(route.params.slug))
+const currentPage = computed(() => Math.max(1, Number(route.query.page) || 1))
 
-const PAGE_SIZE = 10  // legacy mode only
+const CHAPTERS_PER_PAGE = 10
+const LEGACY_PAGE_SIZE = 10
 
 type ApocVersion = {
-  code: string; name_zh: string; name_en: string; language: string
-  language_zh: string | null
+  code: string; name_zh: string; name_en: string; language: string; language_zh: string | null
   category: 'chinese' | 'english' | 'source' | 'ancient'
   public_domain: boolean; display_order: number
   is_default_zh: boolean; is_default_en: boolean; is_default_orig: boolean
@@ -296,8 +216,7 @@ type ApocDoc = {
 type Section = {
   order_index: number; section_label: string | null; page_number: number | null
   chapter: number | null; verse: number | null
-  byVersion: Record<string, string>
-  footnotesByVersion?: Record<string, Record<string, string>>
+  byVersion: Record<string, string>; footnotesByVersion?: Record<string, Record<string, string>>
 }
 type DocRes = {
   document: ApocDoc & {
@@ -323,10 +242,8 @@ async function authHeaders() {
   const { data: { session } } = await supabase.auth.getSession()
   return session ? { Authorization: `Bearer ${session.access_token}` } : {}
 }
-
 async function load() {
-  pending.value = true
-  error.value = null
+  pending.value = true; error.value = null
   try {
     const headers = await authHeaders()
     const [v, d, all] = await Promise.all([
@@ -334,61 +251,63 @@ async function load() {
       $fetch<DocRes>('/api/apocrypha/document', { headers, query: { slug: slug.value } }),
       $fetch<ApocDoc[]>('/api/apocrypha/documents', { headers }),
     ])
-    versions.value = v
-    docData.value = d
-    allDocs.value = all
-    columns.value = []
-  } catch (e: any) {
-    error.value = e?.message || String(e)
-  } finally {
-    pending.value = false
-  }
+    versions.value = v; docData.value = d; allDocs.value = all; columns.value = []
+  } catch (e: any) { error.value = e?.message || String(e) } finally { pending.value = false }
 }
 onMounted(load)
 watch(slug, load)
-
 useHead({ title: () => docData.value ? `${docData.value.document.title_zh} — 典外文獻` : '典外文獻' })
 
 const introText = computed(() => docData.value?.document.intro_zh || docData.value?.document.summary_zh || '')
 
-// ── Chapter mode ──────────────────────────────────────────────────────
+// ── Chapter mode: 10 chapters per page ────────────────────────────────
 const chapterMode = computed(() => (docData.value?.chapters?.length ?? 0) > 0)
-const chapterList = computed(() => docData.value?.chapters.map(c => c.chapter) ?? [])
-const currentChapter = computed(() => {
-  const q = Number(route.query.ch)
-  if (q && chapterList.value.includes(q)) return q
-  return chapterList.value[0] ?? 1
+const chapterNums = computed(() => (docData.value?.chapters ?? []).map(c => c.chapter).sort((a, b) => a - b))
+const pages = computed<number[][]>(() => {
+  const out: number[][] = []
+  const chs = chapterNums.value
+  for (let i = 0; i < chs.length; i += CHAPTERS_PER_PAGE) out.push(chs.slice(i, i + CHAPTERS_PER_PAGE))
+  return out
 })
-const chapterSections = computed(() =>
-  (docData.value?.sections ?? []).filter(s => s.chapter === currentChapter.value)
-)
-const prevChapter = computed(() => {
-  const i = chapterList.value.indexOf(currentChapter.value)
-  return i > 0 ? chapterList.value[i - 1] : null
-})
-const nextChapter = computed(() => {
-  const i = chapterList.value.indexOf(currentChapter.value)
-  return i >= 0 && i < chapterList.value.length - 1 ? chapterList.value[i + 1] : null
-})
-function goToChapter(ch: number | null) {
-  if (ch === null) return
-  router.push(`/apocrypha/${slug.value}?ch=${ch}`)
-  if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'instant' })
+function pageLabel(pg: number[]): string {
+  if (!pg.length) return ''
+  return pg[0] === pg[pg.length - 1] ? `第 ${pg[0]} 章` : `第 ${pg[0]}–${pg[pg.length - 1]} 章`
 }
+const pageChapters = computed(() => pages.value[currentPage.value - 1] ?? [])
+const currentPageLabel = computed(() => chapterMode.value ? pageLabel(pageChapters.value) : `${currentPage.value} / ${totalPages.value}`)
+const sectionsByChapter = computed(() => {
+  const m = new Map<number, Section[]>()
+  for (const s of docData.value?.sections ?? []) {
+    if (s.chapter == null) continue
+    if (!m.has(s.chapter)) m.set(s.chapter, [])
+    m.get(s.chapter)!.push(s)
+  }
+  for (const arr of m.values()) arr.sort((a, b) => (a.verse ?? 0) - (b.verse ?? 0))
+  return m
+})
+function versesOfChapter(ch: number): Section[] { return sectionsByChapter.value.get(ch) ?? [] }
 
-// ── Legacy mode (page blocks) ─────────────────────────────────────────
-const legacyPage = computed(() => Math.max(1, Number(route.query.page) || 1))
-const legacyTotalPages = computed(() => Math.max(1, Math.ceil((docData.value?.sections.length ?? 0) / PAGE_SIZE)))
+// ── Legacy mode ───────────────────────────────────────────────────────
 const pagedLegacy = computed(() => {
   if (!docData.value) return []
-  const start = (legacyPage.value - 1) * PAGE_SIZE
-  return docData.value.sections.slice(start, start + PAGE_SIZE)
+  const start = (currentPage.value - 1) * LEGACY_PAGE_SIZE
+  return docData.value.sections.slice(start, start + LEGACY_PAGE_SIZE)
 })
-function goToLegacyPage(p: number) {
-  if (p < 1 || p > legacyTotalPages.value) return
+
+const totalPages = computed(() => chapterMode.value
+  ? Math.max(1, pages.value.length)
+  : Math.max(1, Math.ceil((docData.value?.sections.length ?? 0) / LEGACY_PAGE_SIZE)))
+
+function goToPage(p: number) {
+  if (p < 1 || p > totalPages.value) return
   router.push(`/apocrypha/${slug.value}?page=${p}`)
   if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'instant' })
 }
+
+// ── Visible sections (for footnotes) ──────────────────────────────────
+const visibleSections = computed(() => chapterMode.value
+  ? pageChapters.value.flatMap(ch => versesOfChapter(ch))
+  : pagedLegacy.value)
 
 // ── Sidebar tree ──────────────────────────────────────────────────────
 const GENRE_ORDER_OT = [
@@ -442,7 +361,6 @@ watch([allDocs, slug], () => {
 type ColCategory = 'chinese' | 'english' | 'source'
 type Col = { label: string; category: ColCategory; versionCode: string }
 const columns = ref<Col[]>([])
-
 const availableVersions = computed(() => {
   if (!docData.value || !versions.value) return [] as ApocVersion[]
   const hasData = new Set<string>()
@@ -510,7 +428,6 @@ const SUPERSCRIPT_RE = /([⁰¹²³⁴⁵⁶⁷⁸⁹]+)/g
 const SUPER_TO_ASCII: Record<string, string> = { '⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9' }
 function superToAscii(s: string): string { return s.split('').map(c => SUPER_TO_ASCII[c] ?? c).join('') }
 type Footnote = { id: string; marker: string; def: string | null }
-const visibleSections = computed(() => chapterMode.value ? chapterSections.value : pagedLegacy.value)
 const footnotesOnPage = computed<Footnote[]>(() => {
   const seen = new Map<string, Footnote>()
   for (const s of visibleSections.value) {

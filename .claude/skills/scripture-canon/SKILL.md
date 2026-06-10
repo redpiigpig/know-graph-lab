@@ -1396,26 +1396,30 @@ q-peter-preaching / christian-sibyl / orphica / joseph-prayer
 | Cross-doc boundary check（classifier inheritance bleed audit） | 小 |
 | 9 卷補譯（從其他譯本 / 自譯） | 大 |
 
-### 🔁 逐節重建 + 英文逐節對照（2026-06-10 起，golden template = 1-enoch）
+### 🔁 逐節重建 + 英文逐節對照（2026-06-10，golden template = 1-enoch）
 
-**動機**（user 2026-06-10）：原 reader 把「整頁 OCR」當 section 排進閱讀流 → 目錄/簡介/頁眉混進正文、一段塞多節、且完全沒有英文對照。改為「章:節逐節 + 英文逐節對照 + 簡介可摺疊」。
+**動機**（user）：原 reader 把「整頁 OCR」當 section 排進閱讀流 → 目錄/簡介/頁眉混進正文、一段塞多節、無英文對照。改為「章:節逐節 + 英文逐節對照 + 簡介可摺疊」。**做法須對齊本 repo 既有「三欄原文轉錄」方法論：純函式 + pytest（仿 [[scripture-gnostic]] `gnostic_library.py`、`lit_review.py`、`align_editions.py`）、先測試→再 skill→才實作、reader 仿 `pages/gnostic/[slug].vue`。** 見 [[feedback_apocrypha_verse_process]]。
 
-**資料模型改動**：
-- `apocrypha_sections` 加 `verse INT`（`chapter` 已存在）；**section = 一節**，`order_index = chapter*1000 + verse`（中英共用 → reader 同 order_index 同列對照，仿 BibleNLP/ebible 的 book/ch/verse 對齊鍵）。
-- `apocrypha_documents` 加 `intro_zh TEXT`（黃根春該卷「簡介／導論」全文，reader 預設摺疊、可點開）。
+**核心設計決策（user 2026-06-10 拍板）**：
+1. **英文骨架為權威**：公版英譯（OT 偽典 Charles APOT 1913 / NT 偽典 M.R. James 1924）的 **章:節 = 唯一骨架**；黃根春中文「貼上」骨架 1:1 → 節數跟著英文（不過度切節）、中英同 `(ch,v)` 對齊。中文某節無對應就留白或併入鄰節。
+2. **目錄／分頁 = 10 章一頁**（sidebar 列「第 1–10 章 / 11–20 章…」）。
+3. **章號、節號要在閱讀區清楚顯示**：每章「第 N 章」標題、每節節號在前。
 
-**pipeline**：[scripts/apoc_verse_restructure.py](../../../scripts/apoc_verse_restructure.py)
-- 英文：抓 CCEL 結構化 HTML（Charles APOT 1913，已有 `[ Chapter N ]` + 節號）→ 解析 (ch,v) → ingest `charles_apot`。1-enoch = 108 章 / 746 節。
-- 中文：把全文 body 分 window 餵 **NVIDIA qwen3-next**（引擎 NVIDIA-first，因徹夜 jung/mueller 迴圈把 Gemini free pool 佔滿且 request 會 hang；deepseek-v4-flash 是 reasoning 模型大 JSON 會 timeout，故 qwen 為主）→ 逐節 {chapter,verse,text} JSON。
-- **章號用「英文各章開頭內容」當 anchor 依語意對齊**（不是只數節號重置）——關鍵：兩版 versification 在短章不同，純數節會 drift。
-- 簡介：正文前段落另用 LLM 萃取 → `intro_zh`。
-- ⚠️ **資料源陷阱**：`ebook_chunks.content` 目前被截成 200 字 preview（restore_apocrypha_fulltext 未涵蓋此卷）；完整中文文字現只存在 `cct_zh` 本身。故 script 改讀 **`scripts/_apoc_snapshots/{slug}.json` 全文快照**（從當時 cct_zh 匯出，commit 進 repo 作 durable source），**永不讀會被自己覆寫的 cct_zh** → 可重複跑。批次推廣前要先修 ebook_chunks 全文回填，或為每卷建快照。
+**資料模型**：`apocrypha_sections` 加 `verse INT`（`chapter` 已存在），section = 一節，`order_index = chapter*1000+verse`（中英共用對齊鍵）；`apocrypha_documents` 加 `intro_zh TEXT`（該卷簡介，reader 摺疊）。
 
-**reader/API**：[pages/apocrypha/[slug].vue](../../../pages/apocrypha/%5Bslug%5D.vue) + [server/api/apocrypha/document.get.ts](../../../server/api/apocrypha/document.get.ts)
-- 章導覽（`?ch=N`，上/下一章）；每節一列、節號 gutter + 中／英／原文逐節對照欄；簡介摺疊卡；無目錄段。
-- **legacy fallback**：`chapters` 為空（其餘 122 卷尚未重建）→ 自動回退舊「整頁 block + 分頁」呈現，不會壞。
+**純函式模組**：[scripts/apocrypha_verses.py](../../../scripts/apocrypha_verses.py)（import-safe、無 env/網路）+ [scripts/tests/test_apocrypha_verses.py](../../../scripts/tests/test_apocrypha_verses.py)：
+`order_index`/`decode_order_index`、`chapter_pages(per=10)`/`page_label`/`page_index_for_chapter`、`parse_charles_chapters`（CCEL `[ Chapter N ]`+節號，含單節章）、`merge_verse_windows`（**clamp 到英文骨架 + keep-longest** → 殺過度切節）、`verse_rows`、`coverage`（對齊報告 gate）。
 
-**1-enoch 現況（v1，待 user 驗收）**：911 中文節 / 746 英文節 / **545 節中英對齊**；簡介 1706 字摺疊；無目錄。**已知限制**：短章（4,5,7…）兩版 versification 不同→部分 EN 無對應 ZH；少數尾章（85,106,108）有 OCR classifier bleed（混入註釋/相鄰文獻）。批次推廣到 122 卷前需 user 確認此對齊品質門檻。
+**driver**：[scripts/apoc_verse_restructure.py](../../../scripts/apoc_verse_restructure.py)
+- 英文：CCEL Charles → `parse_charles_chapters` → ingest `charles_apot`（1-enoch 108 章/746 節）= 骨架。
+- 中文：黃根春全文分 window 餵 **NVIDIA qwen3-next**（引擎 NVIDIA-first：徹夜 jung/mueller 把 Gemini free pool 佔滿且 request 會 hang；deepseek-v4-flash reasoning 模型大 JSON 會 timeout）；prompt 給「英文各章開頭內容」當語意 anchor → 中文對到正確 `(ch,v)`；輸出經 `merge_verse_windows` clamp 到骨架。
+- ⚠️ **資料源陷阱**：`ebook_chunks.content` 被截成 200 字 preview；完整中文現只存在 `cct_zh`。故 driver 讀 **`scripts/_apoc_snapshots/{slug}.json` 全文快照**（commit 進 repo 作 durable source），**永不讀會被自己覆寫的 cct_zh** → 可重複跑。批次推廣前要先修 ebook_chunks 全文回填。
+
+**reader/API**：[pages/apocrypha/[slug].vue](../../../pages/apocrypha/%5Bslug%5D.vue) + [document.get.ts](../../../server/api/apocrypha/document.get.ts)
+- **10 章一頁**（`?page=N`）；每章「第 N 章」標題 + 每節節號 gutter + 中／英／原文逐節欄（仿 gnostic 欄位選擇器）；簡介摺疊卡；無目錄段。
+- **legacy fallback**：`chapters` 為空（其餘 122 卷未重建）→ 回退舊整頁 block 呈現，不破。改完務必 `nuxt build` 跑綠。
+
+**推廣**：1-enoch 驗收 OK 後逐卷加 `DOC_SOURCES`（英文源 + source_ebooks）批次跑；缺英文公版的卷骨架改用該卷自身中文章節或 © 英譯。
 
 ### 教訓（值得記住）
 
