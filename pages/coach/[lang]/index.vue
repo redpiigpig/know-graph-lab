@@ -97,6 +97,7 @@
           <NuxtLink :to="`/coach/${lang}/courses`" class="tile">🎓<span>主題教程</span></NuxtLink>
           <NuxtLink :to="`/coach/${lang}/grammar`" class="tile">📚<span>文法課</span></NuxtLink>
           <NuxtLink v-if="lang === 'en'" :to="`/coach/${lang}/grammar-map`" class="tile">🗺️<span>文法地圖</span></NuxtLink>
+          <NuxtLink v-if="lang === 'en'" :to="`/coach/${lang}/sentences`" class="tile">💬<span>情境實用句</span></NuxtLink>
           <NuxtLink :to="`/coach/${lang}/practice`" class="tile">🎯<span>技能/考試</span></NuxtLink>
           <NuxtLink :to="`/coach/${lang}/review`" class="tile">🗂️<span>單字複習<small v-if="stats?.vocabDue">{{ stats.vocabDue }}</small></span></NuxtLink>
           <NuxtLink :to="`/coach/${lang}/immersion`" class="tile">📺<span>內容沉浸</span></NuxtLink>
