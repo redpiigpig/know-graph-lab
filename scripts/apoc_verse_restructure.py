@@ -481,9 +481,11 @@ def run_batch_bible(dry=False):
 
 # ── main ──────────────────────────────────────────────────────────────
 def is_restructured(slug) -> bool:
-    """True if cct_zh already per-verse (has a non-null chapter)."""
+    """True if cct_zh already per-verse. Keys on `verse` (only the逐節 rebuild sets
+    it) — NOT `chapter`, which the old page-OCR partially populated via
+    parse_apocrypha_chapters.py, so chapter would false-positive."""
     r = db_get(f'apocrypha_sections?doc_slug=eq.{slug}&version_code=eq.cct_zh'
-               f'&chapter=not.is.null&select=chapter&limit=1')
+               f'&verse=not.is.null&select=verse&limit=1')
     return len(r) > 0
 
 
