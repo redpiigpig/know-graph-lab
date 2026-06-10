@@ -55,9 +55,15 @@ def make_haiku_engine():
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--probe", action="store_true", help="translate one paragraph and exit")
+    ap.add_argument("--engine", choices=["haiku", "nvidia"], default="haiku",
+                    help="haiku = Claude Haiku (this driver); nvidia = mueller_build NVIDIA chain")
+    ap.add_argument("--only", default="", help="comma-separated slugs to restrict to "
+                    "(disjoint sets let two engines run in parallel without collision)")
     args = ap.parse_args()
 
-    tp = make_haiku_engine()
+    tp = make_haiku_engine() if args.engine == "haiku" else mb.make_engine()
+    tag = args.engine.capitalize()
+    only = {s.strip() for s in args.only.split(",") if s.strip()}
 
     if args.probe:
         sample = ("Religion, in the highest sense of the word, is that which "
@@ -69,7 +75,8 @@ def main():
 
     for w in ma.WORKS:
         if w["slug"] in SKIP_SLUGS:
-            print(f"  ⏭ skip {w['slug']} (left to running process)", flush=True)
+            continue
+        if only and w["slug"] not in only:
             continue
         if ma.is_done(w):
             print(f"  ✓ {w['slug']} done — skip", flush=True)
@@ -77,14 +84,14 @@ def main():
         if not ma.sec_path(w["slug"], 0).exists():
             print(f"  ⤓ ingest {w['slug']}", flush=True)
             ma.ingest_work(w)
-        print(f"▶ Haiku-translate {w['slug']} — {w['title']}", flush=True)
+        print(f"▶ {tag}-translate {w['slug']} — {w['title']}", flush=True)
         try:
             ma.translate_work(w, tp)
             ma.assemble_and_upload(w)
             print(f"  ✓ {w['slug']} complete", flush=True)
         except Exception as e:  # noqa: BLE001
             print(f"  ✗ {w['slug']} failed: {type(e).__name__}: {e}", flush=True)
-    print("haiku pass complete", flush=True)
+    print(f"{tag} pass complete", flush=True)
 
 
 if __name__ == "__main__":
