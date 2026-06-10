@@ -91,3 +91,4 @@ stores/*
 # Per-script `.bak` snapshots (e.g. data/creeds/.../*-chinese.txt.bak)
 # git history already preserves the prior version; the bak is redundant.
 *.bak
+.claude/skills/ebook-collected-works/mueller_data/_queue.lock
