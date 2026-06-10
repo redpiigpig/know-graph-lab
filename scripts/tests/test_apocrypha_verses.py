@@ -162,6 +162,47 @@ class TestCleanZhVerses:
         assert av.clean_zh_verses(raw) == {}
 
 
+class TestRenumberSequential:
+    def test_compacts_chapter_keys(self):
+        # LLM emitted chapters 3,7,9 → become 1,2,3
+        raw = {3: {1: "a", 2: "b"}, 7: {1: "c"}, 9: {1: "d"}}
+        out = av.renumber_chapters_sequential(raw)
+        assert sorted(out) == [1, 2, 3]
+        assert out[1] == {1: "a", 2: "b"}
+        assert out[3] == {1: "d"}
+
+    def test_renumbers_verses(self):
+        raw = {1: {5: "x", 9: "y"}}   # odd verse numbers → 1,2
+        out = av.renumber_chapters_sequential(raw)
+        assert out[1] == {1: "x", 2: "y"}
+
+    def test_drops_empty(self):
+        raw = {1: {1: "a"}, 2: {1: "  "}}
+        out = av.renumber_chapters_sequential(raw)
+        assert sorted(out) == [1]
+
+
+class TestExtractVerseObjects:
+    def test_valid_json(self):
+        raw = '{"verses":[{"chapter":1,"verse":1,"text":"甲"},{"chapter":1,"verse":2,"text":"乙"}],"last":[1,2]}'
+        out = av.extract_verse_objects(raw)
+        assert [(o["chapter"], o["verse"], o["text"]) for o in out] == [(1, 1, "甲"), (1, 2, "乙")]
+
+    def test_truncated_json_salvaged(self):
+        # array cut off mid-3rd object (token cap) → first two still recovered
+        raw = '{"verses":[{"chapter":1,"verse":1,"text":"甲"},{"chapter":1,"verse":2,"text":"乙"},{"chapter":1,"verse":3,"text":"丙'
+        out = av.extract_verse_objects(raw)
+        assert [(o["chapter"], o["verse"]) for o in out] == [(1, 1), (1, 2)]
+
+    def test_escaped_quotes_in_text(self):
+        raw = r'{"verses":[{"chapter":2,"verse":1,"text":"他說：\"平安\"。"}]}'
+        out = av.extract_verse_objects(raw)
+        assert out[0]["text"] == '他說："平安"。'
+
+    def test_garbage_returns_empty(self):
+        assert av.extract_verse_objects("not json at all") == []
+
+
 class TestCoverage:
     def test_full_alignment(self):
         en = {1: {1: "a", 2: "b"}}

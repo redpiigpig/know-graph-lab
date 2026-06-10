@@ -132,13 +132,17 @@ def llm_json(system: str, user: str, max_tokens=16000, temperature=0.2) -> str:
 
 # ── per-doc source config ──────────────────────────────────────────────
 DOC_SOURCES = {
+    # OT pseudepigrapha with a Charles APOT (CCEL) English edition.
     '1-enoch': {
-        'en_version': 'charles_apot',
-        'en_kind': 'ccel-enoch',
-        'en_base': 'https://www.ccel.org/c/charles/otpseudepig/enoch/',
-        'en_pages': 5,
+        'en_version': 'charles_apot', 'en_kind': 'ccel-enoch',
+        'en_base': 'https://www.ccel.org/c/charles/otpseudepig/enoch/', 'en_pages': 5,
         'book_name': '以諾一書 (1 Enoch)',
-        'source_ebooks': ['基督教典外文獻-舊約篇-第1冊'],
+    },
+    # Deuterocanon: skeleton from our own bible_verses (KJVA, correct ch:v).
+    'sirach': {
+        'en_version': 'kjva_apoc', 'en_kind': 'bible',
+        'bible_book': 'sir', 'bible_version': 'kjva',
+        'book_name': '德訓篇 / 便西拉智訓 (Sirach)',
     },
 }
 
@@ -165,12 +169,34 @@ def fetch_ccel_enoch(base, n_pages) -> str:
     return s
 
 
+def bible_skeleton(book, version) -> dict:
+    """Skeleton from our own bible_verses table (deuterocanon already ingested via
+    /scripture): {chapter: {verse: text}}. Paged to beat the 1000-row cap."""
+    out: dict = {}
+    off = 0
+    while True:
+        rows = db_get(f'bible_verses?book_code=eq.{book}&version_code=eq.{version}'
+                      f'&select=chapter,verse,text&order=chapter,verse&limit=1000&offset={off}')
+        if not rows:
+            break
+        for r in rows:
+            t = (r['text'] or '').strip()
+            if t:
+                out.setdefault(r['chapter'], {})[r['verse']] = t
+        if len(rows) < 1000:
+            break
+        off += 1000
+    return out
+
+
 def english_skeleton(slug) -> dict:
     cfg = DOC_SOURCES[slug]
-    if cfg['en_kind'] != 'ccel-enoch':
-        raise SystemExit(f'unknown en_kind {cfg["en_kind"]}')
-    raw = fetch_ccel_enoch(cfg['en_base'], cfg['en_pages'])
-    return AV.parse_charles_chapters(raw)
+    kind = cfg['en_kind']
+    if kind == 'ccel-enoch':
+        return AV.parse_charles_chapters(fetch_ccel_enoch(cfg['en_base'], cfg['en_pages']))
+    if kind == 'bible':
+        return bible_skeleton(cfg['bible_book'], cfg['bible_version'])
+    raise SystemExit(f'unknown en_kind {kind}')
 
 
 # ── DB I/O ─────────────────────────────────────────────────────────────
@@ -289,25 +315,20 @@ def do_chinese(slug, dry=False):
     frags = []
     prev_cv = None
     for wi, w in enumerate(wins):
-        out = llm_json(ZH_SYS, zh_prompt(skeleton, prev_cv, w))
         try:
-            j = json.loads(out)
-        except Exception:
-            m = re.search(r'\{.*\}', out, re.S)
-            j = json.loads(m.group(0)) if m else {'verses': []}
+            out = llm_json(ZH_SYS, zh_prompt(skeleton, prev_cv, w))
+            objs = AV.extract_verse_objects(out)
+        except Exception as ex:
+            print(f'  win {wi+1}/{len(wins)}: LLM/parse error ({ex}); skipping window')
+            frags.append({}); continue
         frag = {}
-        for it in j.get('verses', []):
-            try:
-                ch = int(it['chapter']); v = int(it['verse'])
-            except (KeyError, ValueError, TypeError):
-                continue
-            t = (it.get('text') or '').strip()
+        for it in objs:
+            t = it['text'].strip()
             if t:
-                frag.setdefault(ch, {})[v] = t
+                frag.setdefault(it['chapter'], {})[it['verse']] = t
         frags.append(frag)
-        if j.get('last'):
-            try: prev_cv = (int(j['last'][0]), int(j['last'][1]))
-            except Exception: pass
+        if objs:
+            prev_cv = (objs[-1]['chapter'], objs[-1]['verse'])
         print(f'  win {wi+1}/{len(wins)}: +{sum(len(x) for x in frag.values())} verses, last={prev_cv}')
 
     verses = AV.merge_verse_windows(frags, skeleton)   # clamp to skeleton + keep-longest
@@ -325,19 +346,149 @@ def do_chinese(slug, dry=False):
     print(f'[ZH] ingested {len(rows)} verse-rows as cct_zh')
 
 
+# ── snapshot any doc's full text from its (still page-OCR) cct_zh ───────
+def snapshot_from_cct_zh(slug, force=False):
+    """Capture a doc's full Chinese text from its current cct_zh page-OCR rows
+    into _apoc_snapshots/{slug}.json (durable; ebook_chunks is truncated). Skips
+    if a snapshot already exists unless force."""
+    path = os.path.join(os.path.dirname(__file__), '_apoc_snapshots', f'{slug}.json')
+    if os.path.exists(path) and not force:
+        return path
+    rows, off = [], 0
+    while True:
+        b = db_get(f'apocrypha_sections?doc_slug=eq.{slug}&version_code=eq.cct_zh'
+                   f'&select=order_index,verse,text&order=order_index&limit=1000&offset={off}')
+        if not b: break
+        rows += b
+        if len(b) < 1000: break
+        off += 1000
+    body = '\n'.join((f"{r['verse']} {r['text']}" if r.get('verse') else (r['text'] or '')).strip()
+                     for r in rows if (r.get('text') or '').strip())
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    json.dump({'slug': slug, 'body': body, 'source': 'cct_zh page-OCR snapshot'},
+              open(path, 'w', encoding='utf-8'), ensure_ascii=False)
+    print(f'[SNAP] {slug}: {len(rows)} rows → {len(body)} chars')
+    return path
+
+
+# ── Chinese-own skeleton (docs without PD English) ─────────────────────
+ZH_OWN_SYS = (
+    '你是嚴謹的古典文獻編輯，把一份中文典外文獻的「整頁 OCR」重排成「章:節」逐節結構，'
+    '只依「這份中文本身」的編號（沒有英文可對照）。\n'
+    '規則：\n'
+    '1. 只輸出 JSON：{"verses":[{"chapter":N,"verse":M,"text":"中文"}…],"last":[章,節]}。\n'
+    '2. 中文 OCR 行首的阿拉伯數字是節號；節號重新從 1（或明顯往回跳）即進入新的一章。'
+    '章號必須「連續遞增、絕不重頭從 1 算」：每個 window 我會告訴你本段「從第幾章開始」，'
+    '你就從那一章往後接著編（第一節通常仍屬該章，遇到節號重置才 +1 進下一章）。\n'
+    '3. text 把 OCR 換行接回成通順段落，忠實保留每個字、標點、括號 ( )（譯者補字），不改寫不翻譯不加字。\n'
+    '4. 刪除頁眉雜訊（「基督教典外文獻」「舊約篇 第N冊」等）、純頁碼、純小標題行、'
+    '頁末註釋定義行（如「1民 24:3。」）。\n'
+    '5. 處理整個 window（通常跨多章）；只有結尾被切斷的半節才略過，並在 last 回報最後一節。\n'
+    '6. 嚴禁 markdown 或解說，只有 JSON。'
+)
+
+
+def zh_own_prompt(prev_cv, window_text):
+    start = prev_cv[0] if prev_cv else 1
+    prev = f'第 {prev_cv[0]} 章第 {prev_cv[1]} 節' if prev_cv else '（這是第一段，從第 1 章開始）'
+    return (f'本段「從第 {start} 章開始往後連續編號」（上一段處理到 {prev}）。'
+            f'章號請從 {start} 繼續，不可重頭從 1 算。\n\n'
+            f'中文 OCR 全文（本 window）：\n\n{window_text}')
+
+
+def do_chinese_own(slug, dry=False):
+    snapshot_from_cct_zh(slug)
+    body = load_zh_body(slug)
+    if not body.strip():
+        print(f'[ZH-OWN] {slug}: empty body, skip'); return
+    wins = split_windows(body)
+    print(f'[ZH-OWN] {slug}: body {len(body)} chars / {len(wins)} windows')
+    frags, prev_cv = [], None
+    for wi, w in enumerate(wins):
+        try:
+            out = llm_json(ZH_OWN_SYS, zh_own_prompt(prev_cv, w))
+            objs = AV.extract_verse_objects(out)
+        except Exception as ex:
+            print(f'  win {wi+1}/{len(wins)}: LLM/parse error ({ex}); skipping window')
+            frags.append({}); continue
+        frag = {}
+        for it in objs:
+            t = it['text'].strip()
+            if t:
+                frag.setdefault(it['chapter'], {})[it['verse']] = t
+        frags.append(frag)
+        if objs:
+            prev_cv = (objs[-1]['chapter'], objs[-1]['verse'])
+        print(f'  win {wi+1}/{len(wins)}: +{sum(len(x) for x in frag.values())} verses, last={prev_cv}')
+    # merge keep-longest across overlaps (no skeleton to clamp), then renumber + clean
+    merged: dict[int, dict[int, str]] = {}
+    for frag in frags:
+        for ch, vs in frag.items():
+            for v, t in vs.items():
+                prev = merged.get(ch, {}).get(v)
+                if prev is None or len(t) > len(prev):
+                    merged.setdefault(ch, {})[v] = t
+    verses = AV.clean_zh_verses(AV.renumber_chapters_sequential(merged))
+    nch = len(verses); nv = sum(len(v) for v in verses.values())
+    print(f'[ZH-OWN] {slug}: {nch} chapters / {nv} verses')
+    if dry:
+        for ch in list(verses)[:2]:
+            print(f'  {ch}:1  {verses[ch][min(verses[ch])][:70]!r}')
+        return
+    rows = AV.verse_rows(slug, 'cct_zh', verses)
+    db_delete_version(slug, 'cct_zh')
+    db_insert_sections(rows)
+    print(f'[ZH-OWN] {slug}: ingested {len(rows)} verse-rows')
+
+
+def all_doc_slugs():
+    docs = db_get('apocrypha_documents?select=slug,display_order&order=display_order')
+    return [d['slug'] for d in docs]
+
+
 # ── main ──────────────────────────────────────────────────────────────
+def is_restructured(slug) -> bool:
+    """True if cct_zh already per-verse (has a non-null chapter)."""
+    r = db_get(f'apocrypha_sections?doc_slug=eq.{slug}&version_code=eq.cct_zh'
+               f'&chapter=not.is.null&select=chapter&limit=1')
+    return len(r) > 0
+
+
 if __name__ == '__main__':
     args = sys.argv[1:]
     if not args:
         raise SystemExit(__doc__)
-    slug = args[0]
     dry = '--dry' in args
+    print(f'engines: nvidia={len(NKEYS)} gemini={len(GKEYS)} prefer_nvidia={PREFER_NVIDIA}')
+
+    # Batch: Chinese-own restructure across all docs (skip 1-enoch + already-done).
+    if '--batch-own' in args:
+        slugs = [s for s in all_doc_slugs() if s != '1-enoch']
+        print(f'[BATCH] {len(slugs)} candidate docs')
+        for s in slugs:
+            try:
+                if is_restructured(s):
+                    print(f'[BATCH] skip {s} (already per-verse)'); continue
+                do_chinese_own(s, dry=dry)
+            except SystemExit:
+                raise
+            except Exception as ex:
+                print(f'[BATCH] {s} FAILED: {ex}')
+        raise SystemExit(0)
+
+    slug = args[0]
+    if '--snapshot' in args:
+        snapshot_from_cct_zh(slug, force='--force' in args); raise SystemExit(0)
+    if '--zh-own' in args:
+        do_chinese_own(slug, dry=dry); raise SystemExit(0)
+
+    # English-skeleton path (docs with a DOC_SOURCES entry, e.g. 1-enoch)
     do_en = '--en' in args or '--all' in args
     do_zh = '--zh' in args or '--all' in args
     if slug not in DOC_SOURCES:
-        raise SystemExit(f'no source config for {slug}; add to DOC_SOURCES')
-    print(f'engines: nvidia={len(NKEYS)} gemini={len(GKEYS)} prefer_nvidia={PREFER_NVIDIA}')
+        raise SystemExit(f'no source config for {slug}; use --zh-own (Chinese-own skeleton) '
+                         f'or add to DOC_SOURCES for English alignment')
     if do_en: do_english(slug, dry=dry)
     if do_zh: do_chinese(slug, dry=dry)
     if not (do_en or do_zh):
-        raise SystemExit('pass --en / --zh / --all')
+        raise SystemExit('pass --en / --zh / --all / --zh-own / --batch-own / --snapshot')

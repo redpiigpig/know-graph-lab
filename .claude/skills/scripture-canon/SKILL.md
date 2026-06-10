@@ -1419,7 +1419,12 @@ q-peter-preaching / christian-sibyl / orphica / joseph-prayer
 - **10 章一頁**（`?page=N`）；每章「第 N 章」標題 + 每節節號 gutter + 中／英／原文逐節欄（仿 gnostic 欄位選擇器）；簡介摺疊卡；無目錄段。
 - **legacy fallback**：`chapters` 為空（其餘 122 卷未重建）→ 回退舊整頁 block 呈現，不破。改完務必 `nuxt build` 跑綠。
 
-**推廣**：1-enoch 驗收 OK 後逐卷加 `DOC_SOURCES`（英文源 + source_ebooks）批次跑；缺英文公版的卷骨架改用該卷自身中文章節或 © 英譯。
+**推廣（分類進行，2026-06-10 定）**：骨架來源依文獻類型分三條路，**不能盲目一次批次**（無骨架的中文自編章號會過度切章，實測 sirach 自編→95 章 vs 實際 51 章）：
+1. **第二正典／次經**（sir/tob/jdt/wis/bar/1-2 Macc/1-2 Esdras…）→ 骨架直接取自我們自己的 **`bible_verses` 表**（KJVA/Brenton 英 + 思高中，皆已由 /scripture ingest，章:節正確）。driver `en_kind:'bible'`+`bible_book`/`bible_version`；英文以 `kjva_apoc` 入庫。**jub/eno/4ba 也在 bible_verses**。
+2. **OT 偽典**（Charles APOT 有的：2 Enoch、Testaments、Jubilees、4 Ezra、2 Baruch…）→ CCEL Charles（`en_kind:'ccel-enoch'`），每卷確認 CCEL 路徑。
+3. **真斷片／Nag Hammadi／昆蘭**（無標準 versification）→ `--zh-own`（中文自編章號，可接受，無 ground truth）。
+- 旗標：`--all`(英骨架)／`--zh-own`(中文自編)／`--snapshot`(從 cct_zh 存全文快照)／`--batch-own`(對未重建卷跑 zh-own，**僅適合斷片類**)；`is_restructured()` checkpoint 跳過已完成。
+- 韌性：`extract_verse_objects` 容錯解析（window 截斷不炸整卷）、章號「連續遞增不重頭」prompt、`merge_verse_windows` clamp+keep-longest、`clean_zh_verses` 去英文洩漏/行首節號殘留。全 pytest（`test_apocrypha_verses.py` 32 tests）。
 
 ### 教訓（值得記住）
 

@@ -179,6 +179,61 @@ def clean_zh_verses(verses_by_ch: dict[int, dict[int, str]]) -> dict[int, dict[i
     return out
 
 
+# ── Tolerant LLM-output parsing (windows may truncate at token cap) ───────────
+import json as _json
+
+_VERSE_OBJ_RE = re.compile(
+    r'"chapter"\s*:\s*(\d{1,3})\s*,\s*"verse"\s*:\s*(\d{1,3})\s*,\s*"text"\s*:\s*"((?:[^"\\]|\\.)*)"'
+)
+
+
+def extract_verse_objects(raw: str) -> list[dict]:
+    """Pull {chapter,verse,text} objects out of an LLM JSON reply, tolerant of
+    truncation / trailing garbage (a window may hit the token cap mid-array). Tries
+    strict json first; on failure salvages every complete verse object via regex.
+    Always returns a list of {'chapter':int,'verse':int,'text':str}."""
+    out: list[dict] = []
+    try:
+        j = _json.loads(raw)
+        for it in j.get("verses", []):
+            try:
+                out.append({"chapter": int(it["chapter"]), "verse": int(it["verse"]),
+                            "text": str(it.get("text") or "")})
+            except (KeyError, ValueError, TypeError):
+                continue
+        if out:
+            return out
+    except Exception:
+        pass
+    for m in _VERSE_OBJ_RE.finditer(raw):
+        try:
+            text = _json.loads('"' + m.group(3) + '"')   # unescape via json
+        except Exception:
+            text = m.group(3)
+        out.append({"chapter": int(m.group(1)), "verse": int(m.group(2)), "text": text})
+    return out
+
+
+# ── Chinese-own skeleton (no PD English available) ───────────────────────────
+def renumber_chapters_sequential(verses_by_ch: dict[int, dict[int, str]]) -> dict[int, dict[int, str]]:
+    """For docs with no English skeleton: remap whatever chapter keys the LLM
+    emitted to a clean 1..N sequence (preserving order), keeping each chapter's
+    verses renumbered 1..k by their sorted original verse order. Guarantees a
+    self-consistent 章:節 for the reader (10-ch pagination, 第N章 headings)."""
+    out: dict[int, dict[int, str]] = {}
+    for new_ch, old_ch in enumerate(sorted(verses_by_ch), start=1):
+        vs = verses_by_ch[old_ch]
+        out[new_ch] = {}
+        for new_v, old_v in enumerate(sorted(vs), start=1):
+            t = (vs[old_v] or "").strip()
+            if t:
+                out[new_ch][new_v] = t
+        if not out[new_ch]:
+            del out[new_ch]
+    # re-compact chapter numbers after possible empties
+    return {i + 1: out[ch] for i, ch in enumerate(sorted(out))}
+
+
 # ── DB rows ──────────────────────────────────────────────────────────────────
 def verse_rows(slug: str, version_code: str,
                verses_by_ch: dict[int, dict[int, str]]) -> list[dict]:
