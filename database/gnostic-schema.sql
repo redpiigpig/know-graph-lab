@@ -91,3 +91,15 @@ ON CONFLICT (code) DO UPDATE SET
   public_domain = EXCLUDED.public_domain, source_url = EXCLUDED.source_url,
   display_order = EXCLUDED.display_order, is_default_en = EXCLUDED.is_default_en,
   is_default_zh = EXCLUDED.is_default_zh;
+
+-- ----------------------------------------------------------------------------
+-- Per-(doc, version) section-count aggregate. The /api/gnostic/documents
+-- endpoint reads this instead of fetching every gnostic_sections row to tally
+-- client-side, which silently hit PostgREST's 1000-row cap once the corpus grew
+-- past ~500 sections (only the first docs got counted → most list/sidebar cards
+-- wrongly showed 未轉錄). One row per (doc_slug, version_code) ≈ docs×versions.
+CREATE OR REPLACE VIEW gnostic_section_counts AS
+  SELECT doc_slug, version_code, COUNT(*)::int AS n
+  FROM gnostic_sections
+  GROUP BY doc_slug, version_code;
+GRANT SELECT ON gnostic_section_counts TO anon, authenticated, service_role;
