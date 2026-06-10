@@ -292,10 +292,21 @@ def ingest_work(work: dict) -> int:
     return len(sections)
 
 
+# A segment that comes back empty this many translate passes is treated as
+# unfillable (OCR running-head / printed marginalia / junk the engine refuses)
+# and permanently skipped — the reader falls back to its English row. Without
+# this, ~1 dead segment per section keeps a near-complete book under 100% so
+# is_done() never fires, the queue re-sweeps it forever, and the remaining
+# books are starved. translate_para already retries ×4 internally, so MAX_FAIL
+# passes ≈ MAX_FAIL×4 real attempts before a segment is declared dead.
+MAX_FAIL = 3
+
+
 def translate_work(work: dict, translate_para, *, reupload_every: int = 12) -> int:
     """Fill 繁中 for one already-ingested work, resumably, reading the per-section
     caches ingest_work wrote. Re-uploads every `reupload_every` sections so the
-    reader shows Chinese landing incrementally (English stays as fallback)."""
+    reader shows Chinese landing incrementally (English stays as fallback).
+    Segments that fail MAX_FAIL passes are marked exhausted and skipped."""
     done = 0
     i = 0
     while sec_path(work["slug"], i).exists():
@@ -303,17 +314,26 @@ def translate_work(work: dict, translate_para, *, reupload_every: int = 12) -> i
         s = json.loads(cp.read_text(encoding="utf-8"))
         en = s["en"]
         zh = (s.get("zh") or [None] * len(en))[:len(en)] + [None] * (len(en) - len(s.get("zh") or []))
-        todo = [j for j in range(len(en)) if not (zh[j] or "").strip()]
+        fail = (s.get("fail") or [0] * len(en))[:len(en)] + [0] * (len(en) - len(s.get("fail") or []))
+        # skip already-translated AND exhausted (dead) segments
+        todo = [j for j in range(len(en)) if not (zh[j] or "").strip() and fail[j] < MAX_FAIL]
         if todo:
             print(f"    {work['slug']} sec{i}「{s['title'][:36]}」 ¶={len(en)} todo={len(todo)}", flush=True)
         for k, j in enumerate(todo, 1):
-            zh[j] = translate_para(en[j], "")
+            r = translate_para(en[j], "")
+            if (r or "").strip():
+                zh[j] = r
+                fail[j] = 0
+            else:
+                fail[j] += 1  # count toward MAX_FAIL so we stop re-attempting dead segments
             if k % 3 == 0 or k == len(todo):
                 s["zh"] = zh
+                s["fail"] = fail
                 cp.write_text(json.dumps(s, ensure_ascii=False, indent=1), encoding="utf-8")
                 if LOCK.exists():
                     LOCK.touch()
         s["zh"] = zh
+        s["fail"] = fail
         cp.write_text(json.dumps(s, ensure_ascii=False, indent=1), encoding="utf-8")
         done += sum(1 for z in zh if z)
         i += 1
@@ -401,15 +421,24 @@ def _upload(eid: str, chunks: list[dict], out_path: Path):
 
 
 def is_done(work: dict) -> bool:
-    """Heuristic: at least one section cache exists and has no untranslated gaps."""
+    """A work is done when every source segment is either translated or exhausted
+    (failed MAX_FAIL passes → unfillable junk, left as an English fallback row).
+    Without the exhausted clause, ~1 dead segment per section would keep a book
+    forever incomplete and the queue would never advance past it."""
     wd = work_dir(work["slug"])
     secs = sorted(wd.glob("sec*.json")) if wd.exists() else []
     if not secs:
         return False
     for p in secs:
         s = json.loads(p.read_text(encoding="utf-8"))
-        if any(z is None or z == "" for z in s.get("zh", [None])):
-            return False
+        en = s.get("en") or []
+        zh = s.get("zh") or []
+        fail = s.get("fail") or []
+        for j in range(len(en)):
+            z = zh[j] if j < len(zh) else None
+            f = fail[j] if j < len(fail) else 0
+            if not (z or "").strip() and f < MAX_FAIL:
+                return False
     return True
 
 
