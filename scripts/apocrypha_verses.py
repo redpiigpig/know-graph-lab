@@ -141,6 +141,44 @@ def merge_verse_windows(window_results, skeleton) -> dict[int, dict[int, str]]:
     return out
 
 
+# ── Mapped-text cleanup (post-LLM) ───────────────────────────────────────────
+_LEADING_VERSE_MARKERS = re.compile(r'^\s*(?:\d{1,3}\s+)+')
+_CJK_RE = re.compile(r'[㐀-鿿]')
+_LATIN_RE = re.compile(r'[A-Za-z]')
+
+
+def strip_leading_verse_markers(text: str) -> str:
+    """Drop leaked leading verse-number tokens, e.g. '7 你們…' → '你們…',
+    '10 11 他們…' → '他們…'. Only strips a run of bare numbers at the very start
+    (a number glued to CJK like '7你們' is left alone — could be meaningful)."""
+    return _LEADING_VERSE_MARKERS.sub('', text or '').strip()
+
+
+def looks_english(text: str, min_len: int = 12) -> bool:
+    """True when a *Chinese* verse slot actually holds English (the LLM copied the
+    English anchor because it found no Chinese). Heuristic: enough Latin letters,
+    essentially no CJK."""
+    t = (text or '').strip()
+    if len(t) < min_len:
+        return False
+    latin = len(_LATIN_RE.findall(t))
+    cjk = len(_CJK_RE.findall(t))
+    return latin >= 8 and cjk <= 1
+
+
+def clean_zh_verses(verses_by_ch: dict[int, dict[int, str]]) -> dict[int, dict[int, str]]:
+    """Apply per-verse cleanup to a ZH map: strip leaked leading verse markers and
+    DROP verses that are actually English (leaked anchors). Empty chapters removed."""
+    out: dict[int, dict[int, str]] = {}
+    for ch, vs in verses_by_ch.items():
+        for v, txt in vs.items():
+            t = strip_leading_verse_markers(txt)
+            if not t or looks_english(t):
+                continue
+            out.setdefault(ch, {})[v] = t
+    return out
+
+
 # ── DB rows ──────────────────────────────────────────────────────────────────
 def verse_rows(slug: str, version_code: str,
                verses_by_ch: dict[int, dict[int, str]]) -> list[dict]:

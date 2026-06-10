@@ -136,6 +136,32 @@ class TestVerseRows:
         assert r["char_count"] == 3
 
 
+class TestCleanZhVerses:
+    def test_strip_leading_verse_markers(self):
+        assert av.strip_leading_verse_markers("7 你們明白") == "你們明白"
+        assert av.strip_leading_verse_markers("10 11 他們") == "他們"
+        assert av.strip_leading_verse_markers("以諾的說辭") == "以諾的說辭"
+        # glued number is left (not a bare leading token)
+        assert av.strip_leading_verse_markers("7你們") == "7你們"
+
+    def test_looks_english(self):
+        assert av.looks_english("Another book which Enoch wrote for his son") is True
+        assert av.looks_english("以諾的說辭：這是以諾對被揀選者") is False
+        assert av.looks_english("亞撒謝(Azaz'el)教人造劍") is False   # CJK-dominant w/ latin name
+        assert av.looks_english("short") is False                      # too short
+
+    def test_clean_drops_english_and_strips_numbers(self):
+        raw = {108: {1: "Another book which Enoch wrote for his son Methuselah",
+                     2: "7 你們明白他們將把自己的靈魂帶到陰間"}}
+        out = av.clean_zh_verses(raw)
+        assert 1 not in out.get(108, {})            # English dropped
+        assert out[108][2] == "你們明白他們將把自己的靈魂帶到陰間"
+
+    def test_clean_removes_empty_chapter(self):
+        raw = {5: {1: "Only English here that should be dropped entirely now"}}
+        assert av.clean_zh_verses(raw) == {}
+
+
 class TestCoverage:
     def test_full_alignment(self):
         en = {1: {1: "a", 2: "b"}}

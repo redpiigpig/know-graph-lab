@@ -250,7 +250,8 @@ ZH_SYS = (
     '規則：\n'
     '1. 只輸出 JSON：{"verses":[{"chapter":N,"verse":M,"text":"中文"}…],"last":[章,節]}。\n'
     '2. **章:節一律以英文骨架為準**：每一段中文要判斷它在講的內容對應到英文的哪一章哪一節，就標那個 (章,節)。'
-    '英文骨架沒有的章/節，不要自己發明；中文若有多餘內容對不上，就併進最接近的那一節或捨去。\n'
+    '英文骨架沒有的章/節，不要自己發明；中文若有多餘內容對不上，就併進最接近的那一節或捨去。'
+    '**若某節找不到對應的中文，就不要輸出那一節；千萬不要把英文骨架的英文字句填進 text（text 永遠只放中文）。**\n'
     '3. text 要把 OCR 換行接回成通順段落，忠實保留每個字、標點、括號 ( )（譯者補字），不改寫不翻譯不加字。\n'
     '4. 刪除頁眉雜訊（「基督教典外文獻」「舊約篇 第N冊」）、純頁碼、純小標題行、頁末註釋定義行（如「1民 24:3。」）。\n'
     '5. 處理整個 window（通常跨多章）；只有結尾被切斷的半節才略過，並在 last 回報最後一節。\n'
@@ -310,6 +311,7 @@ def do_chinese(slug, dry=False):
         print(f'  win {wi+1}/{len(wins)}: +{sum(len(x) for x in frag.values())} verses, last={prev_cv}')
 
     verses = AV.merge_verse_windows(frags, skeleton)   # clamp to skeleton + keep-longest
+    verses = AV.clean_zh_verses(verses)                # drop leaked English / leading verse nums
     rep = AV.coverage(skeleton, verses)
     print(f'[ZH] coverage: {rep}')
     if dry:
