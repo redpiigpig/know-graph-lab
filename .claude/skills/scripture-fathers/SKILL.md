@@ -604,6 +604,37 @@ auto-push。**git 在 master 跑教父**（user 拍板；feat/coach-language 是
     validate 0 FAIL → **test_fathers_quality PASS**（34 TERM 變體歸零）→ REFINED_IDS。
   - 譯名：Basil=**巴西流**（收斂巴西略 ×1049）；Caesarea=**凱撒利亞**（收斂該撒利亞）；Gregory=**格列高里**（額我略只留教宗）。
   - **未跑**（配額）：書信 357 封逐封 recipient 繁中（目前 sequential「書信第N封」，bilingual reader 仍可見英文 recipient）、glossary backfill、B 層校對。
+- **vol33 NPNF2 V9（普瓦捷的希拉里 + 大馬士革的若望）** `709f43f9-724c-4cd5-b6b0-570d26083d24`
+  - Haiku-first 翻譯（免費池乾）131 chunks → `_fix_vol33_hilary_damascus.py`（PREFIX_TO_VOL 雙作者樹：
+    論三位一體 12 卷/論會議/詩篇講道 + 正統信仰詳解 4 卷）→ consolidate_letters 131→42 → TERM 222 處 →
+    test_fathers_quality PASS → REFINED_IDS。**約翰/若望不收斂**（約翰福音=約翰、大馬士革的若望=若望 分工正確）。
+- **vol34 NPNF2 V10（米蘭的安波羅修）** `fd8a09e7-a6ab-4818-a6d7-6722e50da773`
+  - ⚠️ **坑 4.6 踩過**：consolidate_by_ncx 對深層巢狀多論著打散順序 → 隔離 `.consolidate-corrupt.bak` + 重譯。
+  - 章節源順序**跨論著錯置**（spot-check 證實 chunk140=Faith/200=Repentance 相鄰）→ 不假造論著樹，
+    `_fix_vol34_ambrose.py` **誠實粗分三區（導論/論著選/書信選）** → consolidate_letters →55 → TERM 670 處
+    （盎博羅削→安波羅修）→ test_fathers_quality PASS → REFINED_IDS。
+
+### 🔄 進行中（2026-06-10 — 新 session 接手即續）
+- **vol35 NPNF2 V11（塞維魯 + 勒林的文森 + 約翰‧卡西安）** `24c53ede-8787-442e-a3ba-0cd55d0effac`
+  - **狀態**：**fresh 重譯中**（1214 chunks 大卷，3 作者）。原 06-06 翻到 664 撞 Haiku 牆死掉；06-10 接手
+    發現 **resume 會缺漏**（skip-set 僅 106 unique title_en，章號跨作品重複 → 665+ 撞到的被誤跳）→
+    隔離 partial 到 `.partial664.bak.jsonl`、**fresh 重譯**（log `scripts/logs/translate_vol35.log`）。
+  - **接手即查**：`wc -l` 該卷 jsonl 看是否 ≥1214（翻完）。**未翻完且 process 死 → 不要 resume，要 fresh
+    重譯**（mv 工作 jsonl 走、translate 無 skip-set 全譯；見上「關鍵提示」🚨 resume 缺漏鐵則）。
+  - 翻完精修：3 作者 → 多作品結構，**先 sample title_en**：英文 NCX label → boundary-walk（vol33/34 範本）；
+    若深層巢狀多論著致順序錯置 → 粗分（作者/作品/書信）誠實標。譯名先查 `/translation-glossary`：
+    Sulpitius Severus / Vincent of Lerins / John Cassian 的 ★建議譯名。
+  - 之後 **V12 大良** `02a08547-6fb5-44b2-8a59-9b1f625f3a54` → V13 `90b55879-7179-41d7-9f6c-f6587a3dd429`
+    → V14 七大公會議 `63853a97-68be-441c-8dce-063ae89405c5` → ACCS 待補卷。
+
+### 🧭 本輪（2026-06-05〜10）關鍵改進與教訓（新 session 必讀）
+1. **譯名修正**：Cyril of Jerusalem = **耶路撒冷的區利羅**（非西瑞爾；user 抓出、詞庫權威確認）。
+2. **cp/mv footgun**：備份英文 jsonl 必須 `mv`（移走）非 `cp` —— 留下英文檔 `--resume` 會 skip 全部英文 chunk → dual-state。見 playbook step 0。
+3. **引擎 `--engine haiku` 改 Haiku-first**（user Max 訂閱；免費池乾就直接開 Haiku，不空轉等 15:00）。見 [[feedback_engine_nvidia_no_haiku]]。
+4. **坑 4.6**：多論著大卷（title_en=英文 NCX label）**勿跑 consolidate_by_ncx**（會打散順序），翻完直接 boundary-walk。
+5. **🚨 resume 缺漏**：大卷（>500 chunk）崩潰**勿 resume**（title_en 重複→誤跳缺數百 chunk），改 fresh 重譯。
+6. **不可 kill 別人任務**（[[feedback_no_kill_other_tasks]]）；只停自己這輪啟動、且 ebook-id 精準過濾的 process。
+7. **git**：並行 mueller/jung 任務有 auto-commit/push hook，常造成 push 被拒（remote 領先）。本地 commit 安全，會跟下輪同步；**不要 stash/rebase 動到並行任務的 unstaged 檔**。
 
 ### ⚙️ 引擎現況（2026-06-04 重做 — 3-tier）
 - 預設 **Gemini → NVIDIA → Haiku**（user 2026-06-04 統一政策「gemini 優先，然後 nvidia，最後 haiku」；見本檔頂 line 6 引擎政策 header）。
