@@ -232,6 +232,39 @@ def test_parse_document_splits_br_delimited_paragraphs():
     assert all(s.replace("\xa0", "").strip() for s in secs)
 
 
+# gnosis.org Manichaean/Mandaean hymn pages: ancient HTML with UNCLOSED <p>
+# tags (HTML5 auto-closes <p> on the next <p>, but Python's html.parser nests
+# them instead → every content <p> looked "non-leaf" and got dropped → 0
+# sections). An HTML5-compliant parser must read each <p> as its own paragraph.
+# Mirrors http://gnosis.org/library/hymnfa.htm (also doubly-nested <body>).
+HYMN_DOC_HTML = """
+<html><head><title>The Hymn to the Father of Greatness</title></head><body>
+<p>
+<h2>Manichaean Scriptures</h2>
+<h6>Gnosis Archive | Library | Bookstore | Index</h6>
+<body>
+<p>The Hymn to the Father of Greatness - a hymn ascribed to Mani, in Parthian.
+<p>You are worthy of praise, beneficient Father, primeval Ancestor!
+<p>You, Lord, are the first alif and the last tau.
+<p>All gods and aeons, the deities of Light, bring praise to you.
+</body>
+</body></html>
+"""
+
+
+def test_parse_document_handles_unclosed_p_hymn_pages():
+    doc = gl.parse_document(HYMN_DOC_HTML)
+    secs = doc["sections"]
+    # all four content <p> become their own paragraph (not swallowed as non-leaf)
+    assert len(secs) == 4
+    assert "ascribed to Mani" in secs[0]
+    assert "beneficient Father" in secs[1]
+    assert "first alif" in secs[2]
+    assert "deities of Light" in secs[3]
+    # nav chrome (<h2>/<h6> menu) must not become a section
+    assert all("Gnosis Archive" not in s for s in secs)
+
+
 # ── Alignment gate ────────────────────────────────────────────────────────
 def test_align_ok_requires_equal_length():
     assert gl.align_ok(["a", "b"], ["甲", "乙"])
