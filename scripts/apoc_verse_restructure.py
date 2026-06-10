@@ -450,10 +450,13 @@ def all_doc_slugs():
 # best coverage incl 3-4 Macc, and LXX versification matches 黃根春). psalm-151 /
 # esther-additions have no clean bible source → handled via --zh-own / legacy.
 DEUTERO_BIBLE = {
+    # deuterocanon
     'tobit': 'tob', 'judith': 'jdt', 'wisdom-solomon': 'wis', 'sirach': 'sir',
     'baruch': 'bar', 'letter-jeremiah': 'epj', '1-maccabees': '1ma',
     '2-maccabees': '2ma', '3-maccabees': '3ma', '4-maccabees': '4ma',
     '1-esdras': '1es', 'prayer-manasseh': 'man',
+    # pseudepigrapha that ARE in our bible_verses (correct standard versification)
+    'jubilees': 'jub', '4-baruch': '4ba', '4-ezra': '2es',
 }
 
 
@@ -495,6 +498,24 @@ if __name__ == '__main__':
         raise SystemExit(__doc__)
     dry = '--dry' in args
     print(f'engines: nvidia={len(NKEYS)} gemini={len(GKEYS)} prefer_nvidia={PREFER_NVIDIA}')
+
+    # Master overnight chain: bible-backed docs first (correct ch:v), then
+    # Chinese-own for everything else still un-restructured.
+    if '--batch-all' in args:
+        print('[BATCH-ALL] phase 1: bible-backed (deuterocanon + jub/4ba/4ezra)')
+        run_batch_bible(dry=dry)
+        print('\n[BATCH-ALL] phase 2: Chinese-own for all remaining')
+        for s in [x for x in all_doc_slugs() if x != '1-enoch']:
+            try:
+                if is_restructured(s):
+                    print(f'[BATCH-ALL] skip {s} (done)'); continue
+                do_chinese_own(s, dry=dry)
+            except SystemExit:
+                raise
+            except Exception as ex:
+                print(f'[BATCH-ALL] {s} FAILED: {ex}')
+        print('\n[BATCH-ALL] complete')
+        raise SystemExit(0)
 
     # Batch: deuterocanon via bible_verses (Brenton) skeleton.
     if '--batch-bible' in args:
