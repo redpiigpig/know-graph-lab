@@ -7,8 +7,9 @@
       <div class="ml-auto flex items-center gap-1">
         <CoachTimer :seconds="tracker.activeSeconds.value" />
         <button @click="endless = !endless" class="text-xs px-2.5 py-1 rounded-lg transition mr-1" :class="endless ? 'bg-violet-600 text-white' : 'bg-gray-50 text-gray-500'" title="刷完到期單字後自動生成新學術單字，永不停">♾️ 無限</button>
-        <button @click="quizMode = false" class="text-xs px-2.5 py-1 rounded-lg transition" :class="!quizMode ? 'bg-indigo-600 text-white' : 'bg-gray-50 text-gray-500'">翻卡</button>
-        <button @click="quizMode = true" class="text-xs px-2.5 py-1 rounded-lg transition" :class="quizMode ? 'bg-indigo-600 text-white' : 'bg-gray-50 text-gray-500'">選擇題</button>
+        <button @click="mode = 'flip'" class="text-xs px-2.5 py-1 rounded-lg transition" :class="mode === 'flip' ? 'bg-indigo-600 text-white' : 'bg-gray-50 text-gray-500'">翻卡</button>
+        <button @click="mode = 'quiz'" class="text-xs px-2.5 py-1 rounded-lg transition" :class="mode === 'quiz' ? 'bg-indigo-600 text-white' : 'bg-gray-50 text-gray-500'">選擇題</button>
+        <button @click="mode = 'cloze'" class="text-xs px-2.5 py-1 rounded-lg transition" :class="mode === 'cloze' ? 'bg-indigo-600 text-white' : 'bg-gray-50 text-gray-500'">克漏字</button>
       </div>
     </nav>
 
@@ -16,12 +17,26 @@
       <!-- 複習卡 -->
       <div v-if="current" class="bg-white rounded-3xl border border-gray-100 shadow-sm p-8 text-center">
         <div class="text-xs text-gray-400 mb-4">剩餘 {{ queue.length }} 張 · 今日已複習 {{ reviewed }}</div>
-        <div class="text-3xl font-bold text-gray-900">{{ current.word }}</div>
-        <div v-if="current.reading" class="text-sm text-gray-400 mt-1">{{ current.reading }}</div>
-        <button v-if="speech.ttsSupported.value" @click="speak" class="mt-2 text-gray-300 hover:text-indigo-500 transition">🔊 發音</button>
+        <div v-if="mode !== 'cloze'" class="text-3xl font-bold text-gray-900">{{ current.word }}</div>
+        <div v-if="mode !== 'cloze' && current.reading" class="text-sm text-gray-400 mt-1">{{ current.reading }}</div>
+        <button v-if="mode !== 'cloze' && speech.ttsSupported.value" @click="speak" class="mt-2 text-gray-300 hover:text-indigo-500 transition">🔊 發音</button>
+
+        <!-- 克漏字模式：看中文＋挖空例句，打出單字 -->
+        <template v-if="mode === 'cloze'">
+          <div class="text-base text-gray-700 mt-1">{{ current.meaning }}</div>
+          <div v-if="clozeSentence" class="text-sm text-gray-500 mt-3 italic">{{ clozeSentence }}</div>
+          <input v-model="clozeInput" :disabled="clozeChecked" @keydown.enter="checkCloze" placeholder="打出這個單字…" class="mt-4 w-full text-center px-4 py-3 rounded-xl border text-lg focus:outline-none" :class="clozeChecked ? (clozeCorrect ? 'border-emerald-300 bg-emerald-50' : 'border-rose-300 bg-rose-50') : 'border-gray-200 focus:border-indigo-400'" />
+          <button v-if="!clozeChecked" @click="checkCloze" :disabled="!clozeInput.trim()" class="mt-3 px-8 py-2.5 rounded-2xl bg-indigo-600 text-white font-semibold disabled:opacity-40 hover:bg-indigo-700 transition">檢查</button>
+          <div v-else class="mt-4">
+            <p v-if="clozeCorrect" class="text-sm text-emerald-600 font-medium">✓ 答對了！</p>
+            <p v-else class="text-sm text-rose-600 font-medium">✗ 正解：{{ current.word }}</p>
+            <div v-if="current.example" class="text-xs text-gray-400 mt-1 italic">{{ current.example }}</div>
+            <button @click="next()" class="mt-3 px-8 py-2.5 rounded-2xl bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition">下一張 →</button>
+          </div>
+        </template>
 
         <!-- 選擇題模式：選意思 -->
-        <template v-if="quizMode">
+        <template v-else-if="mode === 'quiz'">
           <div class="mt-5 space-y-2">
             <button v-for="(opt, oi) in current.options" :key="oi" @click="answer(opt)" :disabled="picked !== null"
               class="w-full text-left px-4 py-3 rounded-xl border text-sm transition"
@@ -188,8 +203,35 @@ const theme = ref("");
 const generating = ref(false);
 const genMsg = ref("");
 const speech = useSpeech();
-const quizMode = ref(true); // 預設選擇題（每日推薦單字測驗）
+const mode = ref<"quiz" | "flip" | "cloze">("quiz"); // 預設選擇題
 const picked = ref<string | null>(null);
+
+// ── 克漏字模式 ──
+const clozeInput = ref("");
+const clozeChecked = ref(false);
+const clozeCorrect = ref(false);
+const normWord = (s: string) => (s || "").toLowerCase().trim().replace(/[^\p{L}\p{N}'’\- ]/gu, "");
+// 例句中把目標字挖空（不分大小寫、整詞）
+const clozeSentence = computed(() => {
+  const c = current.value;
+  if (!c?.example || !c?.word) return "";
+  const re = new RegExp(`\\b${c.word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "gi");
+  return c.example.replace(re, "_____");
+});
+async function checkCloze() {
+  if (clozeChecked.value || !clozeInput.value.trim()) return;
+  const c = current.value;
+  clozeChecked.value = true;
+  clozeCorrect.value = normWord(clozeInput.value) === normWord(c.word);
+  try {
+    await authedFetch("/api/lang/vocab/review", { method: "POST", body: { id: c.id, quality: clozeCorrect.value ? 4 : 2 } });
+  } catch { /* ignore */ }
+}
+function resetCloze() {
+  clozeInput.value = "";
+  clozeChecked.value = false;
+  clozeCorrect.value = false;
+}
 
 // ── 無限刷題模式 ──
 const endless = ref(true);          // 預設開：刷完自動生成新單字
@@ -221,6 +263,7 @@ async function answer(opt: string) {
 function next() {
   queue.value.shift();
   picked.value = null;
+  resetCloze();
   reviewed.value++;
   maybeTopUp();
 }
@@ -275,6 +318,7 @@ async function grade(q: number) {
   if (!card) return;
   queue.value.shift();
   revealed.value = false;
+  resetCloze();
   reviewed.value++;
   maybeTopUp();
   try {
@@ -313,6 +357,7 @@ watch([current, endless], ([cur, on]) => {
 // 進到新單字卡 → 自動念一次（翻卡＋選擇題都套用；瀏覽器不支援 TTS 則略過）
 // 只在卡片真的「換成另一張」時觸發（比對 id），翻卡顯示答案不會重念。
 watch(current, (cur, prev) => {
+  if (mode.value === "cloze") return; // 克漏字不自動念（會洩漏答案）
   if (cur?.word && cur.id !== prev?.id && speech.ttsSupported.value) speak();
 });
 

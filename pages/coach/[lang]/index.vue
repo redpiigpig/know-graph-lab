@@ -103,6 +103,7 @@
           <NuxtLink :to="`/coach/${lang}/immersion`" class="tile">📺<span>內容沉浸</span></NuxtLink>
           <NuxtLink :to="`/coach/${lang}/reader`" class="tile">📖<span>點讀閱讀器</span></NuxtLink>
           <NuxtLink :to="`/coach/${lang}/shadowing`" class="tile">🗣️<span>發音跟讀</span></NuxtLink>
+          <NuxtLink :to="`/coach/${lang}/writing`" class="tile">✍️<span>寫作批改</span></NuxtLink>
           <NuxtLink :to="`/coach/${lang}/dashboard`" class="tile">📊<span>儀表板</span></NuxtLink>
         </div>
       </div>
