@@ -445,7 +445,13 @@ PYTHONIOENCODING=utf-8 python scripts/seed_glossary_anf_vol<N>.py
 ```
 
 **關鍵提示**：
-- **預設 `--engine auto` = Gemini → NVIDIA NIM `deepseek-ai/deepseek-v4-flash` → Haiku 救急（三層，2026-06-04 統一 Gemini-first）**；每層 2-strike + 6h cooldown（連兩次掛 → 退下一層 6h 再回探）。`--engine haiku` redirect 到 auto。見 [[feedback-nvidia-engine-haiku-retired]]。
+- **預設 `--engine auto` = Gemini → NVIDIA NIM `deepseek-ai/deepseek-v4-flash` → Haiku 救急（三層，2026-06-04 統一 Gemini-first）**；每層 2-strike + 6h cooldown（連兩次掛 → 退下一層 6h 再回探）。`--engine haiku` 現為 **Haiku-first**（2026-06-05 user Max 訂閱；免費池乾就直接開 Haiku，見 [[feedback_engine_nvidia_no_haiku]]）。
+- 🚨 **`--resume` 用 title_en 當 skip key → title_en 大量重複的大卷會誤跳缺漏（NPNF2 V11 實證 2026-06-10）**：
+  V11（塞維魯+文森+卡西安，1214 chunks）崩在 664、resume 時 `skip-set size 106`（664 chunk 只 106 unique
+  title_en，章號跨作品狂重複）。resume 會把 665+ 任何 title_en 撞到前 106 的源 chunk 全跳過 → 缺數百 chunk。
+  **鐵則：大卷（>500 chunk 或多作者多作品）崩潰後不要 resume 續，改 fresh 重譯**（隔離 partial 到
+  `.partialN.bak`，移走工作 jsonl，translate 無 skip-set 全譯）。小卷 title_en 夠獨特才可安全 resume。
+  根治待辦：把 resume skip key 從純 title_en 改 (title_en, 出現序號) 複合鍵或 source-ordinal。
 - ⚠️ **NVIDIA 只能用 deepseek-v4-flash**：唯一保留段落對齊 + `{{p:N}}`/`[^N]` marker 的；qwen3-next/llama-3.3 雖快但段落崩、marker 壞，不可當 NVIDIA 主力。
 - 並行多卷時兩卷切不同 engine 分散 quota（如一卷 auto、一卷 gemini）；**同一卷切勿開兩個 process**（race 同一 JSONL → dual-state bug）
 - B-layer 跟翻譯不要同時跑（都搶 Anthropic quota）
