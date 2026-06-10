@@ -172,6 +172,23 @@ _BR_RE = re.compile(r"<br\s*/?>", re.I)
 _DOC_BLOCK_LIST = list(_DOC_BLOCK)
 
 
+def _doc_soup(html: str):
+    """Parse a document page, preferring an HTML5-compliant tree builder.
+
+    Many gnosis.org hymn pages (Manichaean / Mandaean) ship ancient HTML with
+    UNCLOSED <p> tags. HTML5 auto-closes a <p> at the next <p>; Python's stdlib
+    'html.parser' instead NESTS them, so every content <p> looked like it
+    "contained another block" and was dropped as a non-leaf → 0 sections. lxml
+    follows the HTML5 rule and reads them as siblings. Fall back to html.parser
+    when lxml isn't installed (behaviour unchanged for well-formed pages).
+    """
+    from bs4 import BeautifulSoup
+    try:
+        return BeautifulSoup(html, "lxml")
+    except Exception:
+        return BeautifulSoup(html, "html.parser")
+
+
 def _clean_para(text: str) -> str:
     t = text.replace("\xa0", " ")
     return re.sub(r"[ \t]+", " ", t).strip()
@@ -216,9 +233,7 @@ def parse_document(html: str) -> dict:
     A block that contains another block is not a leaf (avoids double-counting
     nested <blockquote>).
     """
-    from bs4 import BeautifulSoup
-
-    soup = BeautifulSoup(html, "html.parser")
+    soup = _doc_soup(html)
 
     title = ""
     head = soup.find(["h1", "h2", "h3"])
