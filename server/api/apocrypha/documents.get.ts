@@ -15,6 +15,7 @@ export default defineEventHandler(async (event) => {
   const { data: counts, error: cErr } = await supabase
     .from('apocrypha_sections')
     .select('doc_slug, version_code')
+    .limit(100000)
   if (cErr) throw createError({ statusCode: 500, message: cErr.message })
 
   const tally = new Map<string, Record<string, number>>()

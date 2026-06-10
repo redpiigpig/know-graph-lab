@@ -1,11 +1,13 @@
-// GET /api/apocrypha/document?slug=1-enoch&page=N
-// Returns one document + all its sections grouped by order_index → byVersion map.
-// If `page` query is given, returns only sections from that page_number.
+// GET /api/apocrypha/document?slug=1-enoch[&chapter=N]
+// Returns one document + its sections grouped by order_index → byVersion map.
+// Sections are now per-verse (order_index = chapter*1000 + verse). If `chapter`
+// is given, only that chapter's verses are returned (lighter payload); the full
+// chapter list is always returned for the navigator.
 export default defineEventHandler(async (event) => {
   await requireAuth(event)
   const query = getQuery(event)
   const slug = String(query.slug || '').toLowerCase()
-  const pageFilter = query.page ? Number(query.page) : null
+  const chapterFilter = query.chapter != null && query.chapter !== '' ? Number(query.chapter) : null
   if (!slug) throw createError({ statusCode: 400, message: 'slug required' })
 
   const supabase = getAdminClient()
@@ -20,19 +22,20 @@ export default defineEventHandler(async (event) => {
 
   let sectionsQuery = supabase
     .from('apocrypha_sections')
-    .select('order_index, version_code, text, section_label, page_number, chapter, source_chunk_id, footnote_defs')
+    .select('order_index, version_code, text, section_label, page_number, chapter, verse, source_chunk_id, footnote_defs')
     .eq('doc_slug', slug)
     .order('order_index', { ascending: true })
-  if (pageFilter !== null) sectionsQuery = sectionsQuery.eq('page_number', pageFilter)
-  const { data: sections, error: sErr } = await sectionsQuery.limit(5000)
+  if (chapterFilter !== null) sectionsQuery = sectionsQuery.eq('chapter', chapterFilter)
+  const { data: sections, error: sErr } = await sectionsQuery.limit(8000)
   if (sErr) throw createError({ statusCode: 500, message: sErr.message })
 
-  // Group: { order_index → { byVersion, footnotesByVersion, section_label, page_number, chapter } }
+  // Group by order_index → { byVersion, footnotesByVersion, chapter, verse, ... }
   const byOrder = new Map<number, {
     order_index: number
     section_label: string | null
     page_number: number | null
     chapter: number | null
+    verse: number | null
     byVersion: Record<string, string>
     footnotesByVersion: Record<string, Record<string, string>>
   }>()
@@ -43,6 +46,7 @@ export default defineEventHandler(async (event) => {
         section_label: row.section_label,
         page_number: row.page_number,
         chapter: row.chapter,
+        verse: row.verse,
         byVersion: {},
         footnotesByVersion: {},
       })
@@ -53,28 +57,33 @@ export default defineEventHandler(async (event) => {
       entry.footnotesByVersion[row.version_code] = row.footnote_defs
     }
   }
-  const sectionsOut = Array.from(byOrder.values())
-    .sort((a, b) => a.order_index - b.order_index)
+  const sectionsOut = Array.from(byOrder.values()).sort((a, b) => a.order_index - b.order_index)
 
-  // Compute page list (distinct page_numbers across all sections of this doc, NOT
-  // limited by pageFilter — UI needs the full page strip even when viewing one page).
-  const { data: allPagesRows, error: pErr } = await supabase
+  // Full chapter list (distinct chapters across all sections of this doc), with a
+  // verse count per chapter, for the navigator. Uses cct_zh first, falls back to
+  // any version so docs with only English still get a navigator.
+  const { data: chapRows, error: cErr } = await supabase
     .from('apocrypha_sections')
-    .select('page_number, version_code')
+    .select('chapter, verse, version_code')
     .eq('doc_slug', slug)
-    .eq('version_code', 'cct_zh')
-    .order('page_number', { ascending: true })
-  if (pErr) throw createError({ statusCode: 500, message: pErr.message })
-  const pages = Array.from(new Set(
-    (allPagesRows ?? [])
-      .map((r: any) => r.page_number)
-      .filter((p: any) => p !== null && p !== undefined)
-  )) as number[]
+    .not('chapter', 'is', null)
+    .order('chapter', { ascending: true })
+    .limit(20000)
+  if (cErr) throw createError({ statusCode: 500, message: cErr.message })
+  const chapVerses = new Map<number, Set<number>>()
+  for (const r of (chapRows ?? []) as any[]) {
+    if (r.chapter == null) continue
+    if (!chapVerses.has(r.chapter)) chapVerses.set(r.chapter, new Set())
+    if (r.verse != null) chapVerses.get(r.chapter)!.add(r.verse)
+  }
+  const chapters = Array.from(chapVerses.entries())
+    .map(([chapter, vs]) => ({ chapter, verses: vs.size }))
+    .sort((a, b) => a.chapter - b.chapter)
 
   return {
     document: doc,
     sections: sectionsOut,
-    pages,
-    currentPage: pageFilter,
+    chapters,
+    currentChapter: chapterFilter,
   }
 })

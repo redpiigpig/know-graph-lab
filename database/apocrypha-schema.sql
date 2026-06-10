@@ -21,6 +21,7 @@ CREATE TABLE IF NOT EXISTS apocrypha_documents (
   composition_high  INT,                        -- 寫作年上界
   canon_status_jsonb JSONB,                     -- {protestant:false, catholic:true, orthodox:true, ethiopian:true, …}
   summary_zh        TEXT,                       -- 1-3 句中文簡介
+  intro_zh          TEXT,                       -- 黃根春該卷「簡介／導論」全文 (reader 預設摺疊、可點開)
   display_order     INT NOT NULL,
   created_at        TIMESTAMPTZ DEFAULT now()
 );
@@ -56,10 +57,13 @@ CREATE TABLE IF NOT EXISTS apocrypha_sections (
   id                BIGSERIAL PRIMARY KEY,
   doc_slug          VARCHAR(40) NOT NULL REFERENCES apocrypha_documents (slug) ON DELETE CASCADE,
   version_code      VARCHAR(30) NOT NULL REFERENCES apocrypha_versions (code) ON DELETE CASCADE,
-  order_index       INT NOT NULL,               -- 同 doc+version 內排序鍵 (0,1,2,…)
+  order_index       INT NOT NULL,               -- 排序/對齊鍵。逐節重建後 = chapter*1000 + verse (中英共用 → 同列對照)
   section_label     VARCHAR(80),                -- 顯示用 label，例 '1:1' / 'saying 12' / '卷一 引言' / '第三章'
+  chapter           INT,                        -- 章 (逐節重建後填)
+  verse             INT,                        -- 節 (逐節重建後填)
   source_chunk_id   UUID,                       -- 來自哪個 ebook_chunk (可選)
   page_number       INT,                        -- 來源頁碼 (中文 PDF)
+  footnote_defs     JSONB,                      -- {marker: definition} per section
   text              TEXT NOT NULL,
   char_count        INT,
   UNIQUE (doc_slug, version_code, order_index)
