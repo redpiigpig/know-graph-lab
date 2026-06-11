@@ -1056,10 +1056,17 @@ def translate_book(ebook_id: str, limit: int | None, inspect: bool, dry_run: boo
     # fails on first attempt and gets resumed later (observed 2026-05-21:
     # TOBIT 1:3-22 failed and was retried after TOBIT 2:1-3:6, so the TOC
     # showed them out of biblical order). title_en is the source heading,
-    # so source.index(title_en) gives the correct row.
-    src_order = {c["title_en"]: i for i, c in enumerate(src_chunks)}
+    # so source.index(...) gives the correct row.
+    # ⚠️ Key on source_text (== content_en, the full English body, unique per
+    # chunk), NOT title_en: multi-work volumes repeat "Chapter I." / "Chapter II."
+    # across every work, so a title_en-keyed dict keeps only each label's LAST
+    # occurrence and collapses all same-labeled chunks to one sort key —
+    # scrambling reading order across works (NPNF2 V11 vol35, 2026-06-11).
+    src_order = {}
+    for i, c in enumerate(src_chunks):
+        src_order.setdefault(c["content_en"], i)
     def src_idx(chunk: dict) -> int:
-        return src_order.get(chunk.get("title_en", ""), 10**9)
+        return src_order.get(chunk.get("source_text", ""), 10**9)
     out_chunks.sort(key=src_idx)
 
     # Rewrite JSONL with renumbered chunk_index (the append-write above may
