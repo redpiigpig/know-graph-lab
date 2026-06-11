@@ -100,6 +100,23 @@ def main():
             f.write(f"  [{b.get('category')!r} → {r.category!r}] conf={r.confidence} "
                     f"| {(b.get('title') or '')[:60]!r}\n")
 
+    # human-review checklist: tick the rows you want applied; the id lets a
+    # follow-up batch script PATCH only the confirmed ones.
+    review = Path("_category_review.md")
+    with review.open("w", encoding="utf-8") as f:
+        f.write("# 分類複審清單\n\n")
+        f.write("勾選 `[x]` = 確認改成建議分類；留 `[ ]` = 不動。改完存檔，"
+                "我再依勾選批次套用（只動勾選的，不碰其他）。\n\n")
+        f.write(f"高信心不一致 {sum(1 for _, r in disagree if r.confidence >= FLAG_CONFIDENCE)} 筆"
+                "（conf≥0.5，已含我分類器可能誤判的，請憑書名判斷）：\n\n")
+        for b, r in disagree:
+            if r.confidence < FLAG_CONFIDENCE:
+                continue
+            t = (b.get("title") or "")[:64]
+            a = (b.get("author") or "")[:24]
+            f.write(f"- [ ] **{b.get('category')} → {r.category}** | {t} _({a})_ "
+                    f"<!--{b['id']}--> `{r.reason}`\n")
+
     # console summary (ascii-safe)
     n_high = sum(1 for _, r in disagree if r.confidence >= FLAG_CONFIDENCE)
     print(f"ebooks total:               {len(rows)}")

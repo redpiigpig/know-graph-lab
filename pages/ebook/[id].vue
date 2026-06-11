@@ -47,6 +47,13 @@
                 : 'bg-white text-stone-600 border-stone-200 hover:border-amber-400 hover:text-amber-700']">
             <span>✏️</span><span>編輯</span>
           </button>
+          <!-- ⬇️ 下載原檔 — 從 Drive 掛載 server 端串流；網頁來源（無原檔）不顯示 -->
+          <a v-if="ebook?.has_original"
+            :href="`/api/ebooks/${ebook.id}/original?download=1`"
+            :title="`下載原始檔案（${(ebook?.file_type || '').toUpperCase() || '原檔'}）`"
+            class="hidden md:flex items-center gap-1 px-2 py-1 rounded-md text-xs transition border bg-white text-stone-600 border-stone-200 hover:border-emerald-400 hover:text-emerald-700 flex-shrink-0">
+            <span>⬇️</span><span>原檔</span>
+          </a>
           <!-- 中 / 對照 / 各來源語言 切換（僅在 chunk 有來源原文時顯示）。
                來源鈕由 source_order 動態生：雙語書＝中/對照/英；
                全集三欄＝中/對照/德/英。-->

@@ -8,7 +8,7 @@ export default defineEventHandler(async (event) => {
 
   const { data: ebook, error } = await supabase
     .from("ebooks")
-    .select("id, title, author, file_type, chunk_count, total_pages, created_at, book_id, cover_url, subtitle, original_title, author_en, translator, publisher, publication_year, original_author, original_publish_year, category, subcategory, display_mode")
+    .select("id, title, author, file_type, file_path, chunk_count, total_pages, created_at, book_id, cover_url, subtitle, original_title, author_en, translator, publisher, publication_year, original_author, original_publish_year, category, subcategory, display_mode")
     .eq("id", id!)
     .single();
 
@@ -27,8 +27,14 @@ export default defineEventHandler(async (event) => {
   const tocLen = Array.isArray(toc) ? toc.length : 0;
   const totalChunks = Math.max(dbChunkCount, tocLen);
 
+  // Expose whether a downloadable original exists, but never leak the raw G:
+  // path to the client — the download route resolves it server-side by id.
+  const { file_path, ...ebookPublic } = ebook as typeof ebook & { file_path?: string | null };
+  const hasOriginal = !!file_path;
+
   return {
-    ...ebook,
+    ...ebookPublic,
+    has_original: hasOriginal,
     total_pages: totalChunks,
     toc,
     currentPage: chunk
