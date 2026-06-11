@@ -89,6 +89,20 @@ def test_prelabel_jung_in():
     assert C.classify_prompt("永恆少年是否被榮格學派視為病態？") == "IN"
 
 
+def test_prelabel_polish_is_out_even_with_jung_or_persona():
+    # 潤稿/修飾文字一律 OUT，壓過榮格內容、積極想像、persona 呼喚（使用者 2026-06-11 定調）
+    assert C.classify_prompt("這個關於自性的註腳再幫我修飾一下") == "OUT"
+    assert C.classify_prompt("克里須那，我覺得語氣不太像我，保留我的語氣與字數，昨晚的積極想像如下…") == "OUT"
+    assert C.classify_prompt("我接著要寫書評投稿，請記得我的語氣和行文風格") == "OUT"
+
+
+def test_prelabel_polish_narration_is_not_out():
+    # 敘述裡順帶提到潤飾（不是請我潤）＝傾訴，仍 IN（修 2026-02-12 克里須那聊雜誌被誤刪）
+    s = C.extract_signals("克里須那，我昨天在忙雜誌，覺得他先寫稿再給 ai 潤飾，ai 味太重了")
+    assert s["polish"] is False
+    assert C.prelabel(s) == "IN"  # persona_address
+
+
 def test_prelabel_active_imagination_beats_delegation():
     # 積極想像即使敘述提到 code/電腦，仍是 IN（保護 2026-02-06 那類心靈日記）
     s = C.extract_signals("昨天晚上我的積極想像，便是在電腦上看 code，你，克里須那坐在旁邊")

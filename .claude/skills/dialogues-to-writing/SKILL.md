@@ -93,10 +93,13 @@ agent fan-out 結果不可重現、難稽核。改用**純函式候選 prelabel 
 - **`scripts/dialogue_thread_classify.py`（純函式，無網路/DB/LLM，可被 pytest import）**：
   `in_date_range` 日期範圍；`extract_signals` 抽訊號；`prelabel` 只對高把握下 IN/OUT，其餘 MAYBE。
   優先序（**前者勝，這個順序是踩坑調出來的**）：
+  0. **潤稿/修飾文字請求 → OUT（最高，使用者 2026-06-11 定調「潤稿的就都不是」）**：壓過榮格/積極想像/persona 呼喚。
+     ⚠️ 必須是**祈使式**（幫我修飾/簡單修飾/修飾一下/保留我的語氣/你就修飾/這句怎麼潤…），
+     **不收裸詞「修飾/潤飾」**——否則「他先寫稿再給 ai 潤飾」這種跟克里希那聊雜誌的敘述會被誤刪。
   1. 積極想像/主動想像 → IN（心靈日記核心修練，**即使敘述提到 code/電腦**）
   2. 開頭呼喚 persona（「克里須那，…」前 8 字＋逗號）→ IN
   3. 地圖專案詞 `界域/文化圈` → OUT（使用者幾乎只在「世界劃分」專案用，**會大量誤收**，必擋）
-  4. HARD 委派（幫我寫/改/畫/翻/修、給我 sql 指令、除錯…）→ OUT
+  4. HARD 委派（幫我寫/改/畫/翻、給我 sql 指令、除錯…）→ OUT
   5. 榮格/夢 → IN（**放在 HARD 之後、SOFT 之前**：討論榮格順帶提到 api/前言仍 IN，但「幫我翻譯這段榮格」是 OUT）
   6. SOFT 技術名詞（程式/sql/書目/前言…且非榮格夢）→ OUT
   7. 其餘 → MAYBE
@@ -108,7 +111,7 @@ agent fan-out 結果不可重現、難稽核。改用**純函式候選 prelabel 
   `--dry`（只 prelabel 統計）/ `2026-01-13`（單日眼校）/ `--reagg`（**不跑 LLM，用現行 classifier 重彙整 ledger，guard 覆寫**）
   / `--diff`（對現有 tag）/ `--retag`（刪舊 junction 重寫 final_recapture.json）。
 - **教訓**：純 LLM 逐則太寬（首次 1164，maps 文化圈 思辨口吻全被收）；靠 prelabel guard 把「地圖專案」「積極想像」「榮格貼文夾 code」這三類系統性錯誤擋掉/救回，才收斂到合理區間。
-  Krishna 重抓：2,219 則 → prelabel 決 866（446 IN/420 OUT）+ MAYBE 1,353 交 LLM → **618 則 IN**（vs 舊 671：+118 −171 維持 500）。
+  Krishna 重抓：2,219 則 → prelabel + LLM → **600 則 IN**（vs 舊 671：維持 600、移除 71；含潤稿 guard 後從 618 再降至 600）。
   舊 671 id 存 `c:/tmp/krishna/_tagged_ids.json` 可回滾。**換串改 classifier 頂部關鍵字 + capture 的 SYS/CAT_ID/日期，先補 golden 再跑。**
 
 ## 引擎與配額教訓（踩過的坑）
@@ -130,5 +133,5 @@ agent fan-out 結果不可重現、難稽核。改用**純函式候選 prelabel 
 - 多語全集對照 → [[ebook-collected-works]]；訪談逐字稿 → [[writing-thesis-interview]]（對話錄格式可參考其 Q&A 排版）。
 
 ## See also
-- [[project_krishna_dialogues]] — 首案：與克里希那對話（分類 tag 2026-06-11 重抓為 618 則；一張主卡＋80 天每日 reader 內容不變）
+- [[project_krishna_dialogues]] — 首案：與克里希那對話（分類 tag 2026-06-11 重抓為 600 則；一張主卡＋80 天每日 reader 內容不變）
 - [[feedback_engine_nvidia_no_haiku]] — Gemini→NVIDIA→Haiku 統一引擎政策＋多 key 節流

@@ -40,6 +40,19 @@ ACTIVE_IMAGINATION = ("積極想像", "主動想像")
 # （使用者幾乎只在「把世界劃分界域/文化圈」這個專案裡用這兩個詞）。
 MAPS_PROJECT = ("界域", "文化圈")
 
+# 潤稿／修飾文字的請求＝一律 OUT（使用者 2026-06-11 定調：潤稿的就都不是這個框）。
+# 最高優先：即使是榮格內容、積極想像、或對克里希那呼喚，只要核心是「幫我把文字潤一下」就 OUT。
+# ⚠️ 必須是「祈使式潤稿請求」才算，不能是敘述裡順帶提到潤飾（例：「他先寫稿再給 ai 潤飾」
+# 是在跟克里希那聊雜誌＝IN，不是請我潤）。所以收的是動詞祈使句／明確指示，不收裸詞「修飾/潤飾」。
+POLISH = (
+    "幫我修飾", "幫忙修飾", "簡單修飾", "稍微修飾", "修飾一下", "修飾就好", "修飾文字",
+    "可以修飾", "需要修飾", "還要修飾", "怎麼修飾", "怎麼潤飾", "你就修飾", "負責修飾",
+    "幫我潤", "潤飾一下", "分段潤飾", "潤一下", "這句要怎麼潤", "潤稿",
+    "幫我改寫", "改寫成", "重新潤",
+    "保留我的語氣", "保留語氣", "保留我的字數", "保持字數", "記得我的語氣",
+    "用我的語氣", "用我的話語", "我的行文風格",
+)
+
 # 委派分兩級：
 # HARD＝明確「叫 AI 幫我做出/生成東西」的動詞句，可靠 OUT，連夾帶榮格詞也壓過（翻譯榮格段落仍是專案）。
 HARD_DELEGATION = (
@@ -96,6 +109,7 @@ def extract_signals(prompt: str, response: str = "") -> dict:
     p = prompt or ""
     full = p + "\n" + (response or "")
     return {
+        "polish": _has(p, POLISH),
         "persona_address": is_persona_address(p),
         "persona_mention": _has(full, PERSONA),
         "active_imagination": _has(p, ACTIVE_IMAGINATION),
@@ -112,6 +126,7 @@ def prelabel(signals: dict) -> str:
     """只對高把握者下 IN/OUT，其餘 MAYBE（交 LLM）。
 
     優先序（前者勝）：
+      0. 潤稿/修飾文字              → OUT（最高；潤稿的就不是這個框，壓過榮格/積極想像/呼喚）
       1. 積極想像/主動想像          → IN（心靈日記核心修練，即使敘述提到 code/電腦）
       2. 開頭呼喚 persona            → IN（即使夾帶委派字眼也是對克里希那傾訴）
       3. 地圖專案 界域/文化圈        → OUT（幾乎只在世界劃分專案用這兩個詞）
@@ -120,6 +135,8 @@ def prelabel(signals: dict) -> str:
       6. SOFT 技術名詞              → OUT（程式/sql/書目… 且非榮格/夢主題）
       7. 其餘                       → MAYBE
     """
+    if signals.get("polish"):
+        return "OUT"
     if signals.get("active_imagination"):
         return "IN"
     if signals.get("persona_address"):
