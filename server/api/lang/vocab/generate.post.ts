@@ -43,6 +43,35 @@ export default defineEventHandler(async (event) => {
     return { added: rows.length, theme: listKey, curated: true, words: rows.map((r) => ({ word: r.word, meaning: r.meaning })) };
   }
 
+  // ── 共用預備字庫優先（全語言）──────────────────────────────────────────────
+  // 先抽 lang_vocab_bank 裡使用者尚未擁有的字（頻率表/語料庫 + 已補繁中）；
+  // 主題若正好是某個字庫分類就限定該類，否則跨類補題 → 永遠有題、零延遲、AI 全掛也不斷糧。
+  {
+    const want = theme.trim().slice(0, 40);
+    let picked: any[] = [];
+    for (const cat of [want, null]) {
+      const { data } = await supabase.rpc("pick_vocab_bank", {
+        p_language: language, p_category: cat, p_user: user.id, p_limit: n,
+      });
+      if (data && data.length) { picked = data; break; }
+    }
+    if (picked.length) {
+      const rows = picked.map((w: any) => ({
+        user_id: user.id,
+        language,
+        word: w.word,
+        reading: w.reading ?? null,
+        meaning: w.meaning ?? "",
+        example: w.example ?? null,
+        part_of_speech: w.part_of_speech ?? null,
+        source: "bank",
+        list_key: String(w.category || want).slice(0, 40),
+      }));
+      await supabase.from("lang_vocab").upsert(rows, { onConflict: "user_id,language,word", ignoreDuplicates: true });
+      return { added: rows.length, theme: rows[0].list_key, bank: true, words: rows.map((r) => ({ word: r.word, meaning: r.meaning })) };
+    }
+  }
+
   // 帶入使用者「目前程度」（不是目標）與興趣 → 難度貼合現況、逐步提升
   const [{ data: profile }, { data: prog }] = await Promise.all([
     supabase.from("lang_profile").select("interests").eq("user_id", user.id).single(),

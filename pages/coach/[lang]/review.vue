@@ -190,7 +190,31 @@ const THEME_POOLS: Record<string, { presets: string[]; auto: string[] }> = {
   },
 };
 const pool = computed(() => THEME_POOLS[language.value] || THEME_POOLS.en);
-const PRESETS = computed(() => pool.value.presets);
+
+// 共用預備字庫的真實分類（每語言）；有就用、每天輪替一批顯示，沒有則 fallback 到內建 presets。
+const bankCats = ref<string[]>([]);
+async function loadBankCats() {
+  try {
+    const { categories } = await authedFetch<{ categories: { category: string; count: number }[] }>(
+      `/api/lang/vocab/categories?language=${language.value}`,
+    );
+    bankCats.value = (categories || []).map((c) => c.category);
+  } catch {
+    bankCats.value = [];
+  }
+}
+// 每日輪替（台北本地日期種子；同天穩定、隔天換一批標籤）
+function daySeed() {
+  return parseInt(new Date().toLocaleDateString("en-CA").replace(/-/g, ""), 10) || 0;
+}
+function rotateDaily(arr: string[], take: number) {
+  if (!arr.length) return arr;
+  const start = daySeed() % arr.length;
+  const out: string[] = [];
+  for (let i = 0; i < Math.min(take, arr.length); i++) out.push(arr[(start + i) % arr.length]);
+  return out;
+}
+const PRESETS = computed(() => (bankCats.value.length ? rotateDaily(bankCats.value, 8) : pool.value.presets));
 const TTS_LANG: Record<string, string> = { en: "en-US", de: "de-DE", fr: "fr-FR", ja: "ja-JP", grc: "el-GR", la: "it-IT", hbo: "he-IL" };
 
 const route = useRoute();
@@ -293,7 +317,7 @@ async function replenish() {
   if (!endless.value || topping.value) return;
   topping.value = true;
   try {
-    const themes = pool.value.auto;
+    const themes = bankCats.value.length ? bankCats.value : pool.value.auto;
     const theme = themes[themeIdx % themes.length];
     themeIdx++;
     await aiFetch("/api/lang/vocab/generate", {
@@ -363,6 +387,7 @@ watch(current, (cur, prev) => {
 
 onMounted(() => {
   tracker.start(language.value, "reading", "vocab"); // 複習計入「讀」時間，從進頁開始算
+  loadBankCats();
   reload();
 });
 </script>
