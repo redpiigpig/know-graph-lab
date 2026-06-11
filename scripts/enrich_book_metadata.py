@@ -136,6 +136,34 @@ def _year(s: str) -> Optional[int]:
     return int(m.group(1)) if m else None
 
 
+def clean_subjects(raw, limit: int = 8):
+    """Normalize a provider's subject list into a deduped, trimmed list.
+
+    Google Books gives `categories` (e.g. ["Religion / Christian Theology"]);
+    Open Library gives `subject` (often hundreds). These are a useful signal
+    for the main-category classifier, so we extract them even though we don't
+    PATCH them by default (schema-safe). Splits compound LCSH-style strings on
+    '/' and '--', strips, dedupes case-insensitively, preserves order.
+    """
+    if not raw:
+        return []
+    if isinstance(raw, str):
+        raw = [raw]
+    out, seen = [], set()
+    for item in raw:
+        if not item:
+            continue
+        for piece in re.split(r"\s*(?:/|--|:|；|;)\s*", str(item)):
+            piece = piece.strip()
+            key = piece.lower()
+            if piece and key not in seen:
+                seen.add(key)
+                out.append(piece)
+            if len(out) >= limit:
+                return out
+    return out
+
+
 # ── lookup providers ───────────────────────────────────────────
 _SUBTITLE_SPLITTERS = re.compile(r"[：:—\-‧·]")
 
@@ -185,8 +213,10 @@ def _gb_match(items, title, author, debug=False):
             continue
         publisher = info.get("publisher")
         year = _year(info.get("publishedDate"))
-        if publisher or year:
-            return {"publisher": publisher, "publish_year": year, "source": "google_books"}
+        subjects = clean_subjects(info.get("categories"))
+        if publisher or year or subjects:
+            return {"publisher": publisher, "publish_year": year,
+                    "subjects": subjects, "source": "google_books"}
     return None
 
 
@@ -247,8 +277,10 @@ def _ol_match(docs, title, author, debug=False):
         publisher = (d.get("publisher") or [None])[0]
         publish_dates = d.get("publish_date") or []
         year = d.get("first_publish_year") or (_year(publish_dates[0]) if publish_dates else None)
-        if publisher or year:
-            return {"publisher": publisher, "publish_year": year, "source": "open_library"}
+        subjects = clean_subjects(d.get("subject"))
+        if publisher or year or subjects:
+            return {"publisher": publisher, "publish_year": year,
+                    "subjects": subjects, "source": "open_library"}
     return None
 
 

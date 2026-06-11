@@ -126,14 +126,16 @@ schtasks /create /tn "KGLab-OCR-Daily-18" /tr "C:\Users\user\Desktop\know-graph-
 
 | Script | Phase | Purpose |
 |---|---|---|
-| `ingest_new_books.py` | 1 — ingest (**daily**) | Watches `z-lib/`. Parses filename, classifies via Gemini (+ keyword fallback), inserts ebooks row, moves file to `G:/.../電子書/{category}/`. Auto-deletes Drive dupes. See Workflow D |
+| `ingest_new_books.py` | 1 — ingest (**daily**) | Watches `z-lib/`. **Validates file integrity first** (corrupt → `z-lib/_corrupt/`, never入庫), parses filename, classifies via Gemini (+ keyword fallback + 本地評分二判), inserts ebooks row, moves file to `G:/.../電子書/{category}/`. Auto-deletes Drive dupes. 信心不足 → `_待審分類` review queue（不再 blind-dump 哲學）。See Workflow D |
+| `file_validation.py` | 1b — integrity gate | `validate_ebook(path)` 純驗檔：zero-byte/truncated/壞 PDF(PyMuPDF)/非 zip EPUB/garbage MOBI → 穩定 `reason` code。靈感來自 organize-ebooks，擋住「空 chunk」根因。CLI 可單跑 |
+| `book_classifier.py` | 1c — classifier core | 二維軸（主題×体裁）+ 加權計分（取代 first-match-wins）+ **作者錨點** + 爭議邊界消歧（政治思想史/思想史/宗教史/教父傳記/哲學家論神學）+ **信心分數**（top1/top2 margin）。`classify()→Result(category,confidence,genre,reason)`；`uncertain` 觸發 review queue。純函式 |
 | `parse_worker.py` | 2 — parse | Main parser (PyMuPDF + ebooklib). `init` / `run [--limit N] [--retry-errors]` / `status` |
 | `ocr_with_gemini.py` | 3 — OCR | Gemini Vision for scanned PDFs. 4 rotating keys; pushes JSONL to R2 inline; auto-Haiku-fallback on Gemini quota / >1000 pages. `--engine {gemini,haiku}`, `--book <id>` / `--exclude <id>` repeatable. Exits code 2 on daily quota |
 | `run_ocr_daily.bat` | orchestrator | Windows daily runner — 5-step: ingest → parse → OCR → detect_set_volumes → split_ebook_set. Logs to `scripts/logs/ocr_YYYY-MM-DD.log` |
 | `standardize_ebook.py` | 4 — standardize | EPUB → reader-ready markdown chunks. Auto-triggers 套書 split on title match. See Workflow B |
 | `standardize_pdf_lite.py` | 4 — standardize | PDF Plan A polish (s2tw + spacing collapse + publisher metadata). `page_number` preserved |
 | `standardize_pdf.py` | 4 — standardize | PDF Plan B v0 TOC-driven re-chunking. Skips books with annotations / already-chunked / page-level TOC |
-| `enrich_book_metadata.py` | 4b — backfill | Online lookup (Google Books → Open Library) for null publisher/year. Respects `metadata_locked` |
+| `enrich_book_metadata.py` | 4b — backfill | Online lookup (Google Books → Open Library, CJK-aware order) for null publisher/year + **subjects 擷取**（`clean_subjects`，餵分類器用；不 PATCH 避免 schema 風險）。title/author match 接受邏輯純函式可測。Respects `metadata_locked` |
 | `detect_set_volumes.py` | 4c — 套書 prep | Haiku detects volume boundaries in chunks → writes `volume` field or `NOT_A_SET_MARKER` |
 | `split_ebook_set.py` | 4d — 套書 split | Split multi-volume ebook into one row per volume. Idempotent (SPLIT_MARKER / annotations guard). Children get `parse_error='split from set; do not re-standardize'` |
 | `split_oversized_pdf_by_toc.py` | 3b — OCR rescue | Physically split a multi-volume PDF into per-volume PDFs using level-1 TOC bookmarks. For 套書 failing BOTH Gemini (>1000 pages) AND Haiku (content-filter). Children re-enter OCR queue |
@@ -151,7 +153,7 @@ schtasks /create /tn "KGLab-OCR-Daily-18" /tr "C:\Users\user\Desktop\know-graph-
 
 ## Tests
 
-Pure-function pytest suite at [`scripts/tests/`](../../../scripts/tests/README.md)（`npm run test:py`，與 Vue 的 vitest 分開）。針對轉錄品質的可測啟發式：`standardize_ebook` 章節/正文分類（`derive_chapter_title`、continuation/volume/chapter/appendix 判定、HTML→markdown 契約含 `<sup>(N)</sup>→[^N]`）、`standardize_pdf` 的 `normalize_toc`（page-level 目錄拒收、level cap、NUL strip、dedupe）+ `build_chapter_path` 階層、`collapse_cjk_spacing`、`ingest_new_books.fallback_category` 關鍵字路由。`conftest.py` 設 dummy env 讓模組可 import，全程無網路/DB/LLM。改 heuristic 後先跑。**已知 finding（xfail）**：純文字 fallback 路徑下，長 `第N章` 標題後接短正文行會被誤標成正文行（PRIORITY 1 短行規則早於 PRIORITY 2 章節 pattern）；正常 EPUB（標題走 `## heading`）不受影響。
+Pure-function pytest suite at [`scripts/tests/`](../../../scripts/tests/README.md)（`npm run test:py`，與 Vue 的 vitest 分開）。**492 passed**。針對轉錄品質的可測啟發式：`standardize_ebook` 章節/正文分類（`derive_chapter_title`、continuation/volume/chapter/appendix 判定、HTML→markdown 契約含 `<sup>(N)</sup>→[^N]`）、`standardize_pdf` 的 `normalize_toc`（page-level 目錄拒收、level cap、NUL strip、dedupe）+ `build_chapter_path` 階層、`collapse_cjk_spacing`、`ingest_new_books.fallback_category` 關鍵字路由。**2026-06-11 補上分類與驗檔覆蓋**：`test_file_validation`（驗檔 gate 隔離契約）、`test_book_classifier`（二維軸消歧 + 信心/隔離）、`test_categorize_root_books`（MANUAL_OVERRIDES golden set，鎖手動搬類別不被 RULES 改回去）、`test_subcategorize_theology`（`rule_based_label` 時期/主題錨點 + Schaff preserve）、`test_enrich_book_metadata`（title/author match 接受邏輯 + `clean_subjects`）。`conftest.py` 設 dummy env 讓模組可 import，全程無網路/DB/LLM。改 heuristic 後先跑。**已知 finding（xfail）**：純文字 fallback 路徑下，長 `第N章` 標題後接短正文行會被誤標成正文行（PRIORITY 1 短行規則早於 PRIORITY 2 章節 pattern）；正常 EPUB（標題走 `## heading`）不受影響。
 
 ## DB schema
 

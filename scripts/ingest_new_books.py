@@ -38,11 +38,21 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).parent))
 from parse_drive_inventory import parse_filename, to_traditional, TITLE_AUTHOR_OVERRIDES
+from file_validation import validate_ebook
+import book_classifier
 
 
 NEW_BOOK_DIR = Path(__file__).resolve().parent.parent / "z-lib"
 DRIVE_ROOT = Path("G:/我的雲端硬碟/資料/電子書")
 EBOOK_EXTS = {".pdf", ".epub", ".mobi", ".azw3", ".azw"}
+
+# Broken / truncated downloads are held here, OUT of Drive, so they never
+# produce empty chunks downstream. Reviewed manually.
+CORRUPT_DIR = NEW_BOOK_DIR / "_corrupt"
+# Books the classifiers can't place with confidence go to a review queue
+# instead of being blind-dumped into a wrong category (the old 哲學 default).
+REVIEW_CATEGORY = "_待審分類"
+REVIEW_CONFIDENCE = 0.45  # Gemini confidence below this → seek a second opinion
 INVALID_FNAME_CHARS = {
     "<": "＜", ">": "＞", ":": "：", '"': "＂", "|": "｜",
     "?": "？", "*": "＊", "\\": "＼", "/": "／",
@@ -481,6 +491,22 @@ def gemini_classify(title: str, author: str) -> dict:
     }
 
 
+def _local_or_review(title: str, author: str, filename: str, conf_floor: float = 0.0) -> dict:
+    """Deterministic local scorer, else the review queue.
+
+    Used when Gemini is unavailable or unsure. The local book_classifier is
+    explainable and offline; if it's confident we trust its category, otherwise
+    we hold the book for human review rather than guess.
+    """
+    r = book_classifier.classify(title, author, filename)
+    if r.category and not r.uncertain:
+        return {"category": r.category, "subcategory": None,
+                "confidence": max(conf_floor, r.confidence),
+                "source": f"book_classifier ({r.reason})"}
+    return {"category": REVIEW_CATEGORY, "subcategory": None,
+            "confidence": r.confidence, "source": "review-queue"}
+
+
 def classify(title: str, author: str, filename: str = "") -> dict:
     fb = fallback_category(title, author, filename)
     if fb:
@@ -488,12 +514,18 @@ def classify(title: str, author: str, filename: str = "") -> dict:
     try:
         g = gemini_classify(title, author)
         g["source"] = "gemini"
+        # A low-confidence Gemini guess is exactly what mis-shelves books.
+        # Get a deterministic second opinion before committing it.
+        if g.get("confidence", 0) < REVIEW_CONFIDENCE:
+            print(f"  ⚠ Gemini 信心低 ({g.get('confidence')}), 取本地評分器二判", file=sys.stderr)
+            return _local_or_review(title, author, filename, conf_floor=g.get("confidence", 0))
         return g
     except Exception as e:
         # Gemini down (e.g. all keys 429) — NEVER skip the book over a quota
-        # outage. Shelve it under a humanities default and flag for review.
-        print(f"  ⚠ Gemini 分類失敗，改用預設分類「哲學」: {str(e)[:60]}", file=sys.stderr)
-        return {"category": "哲學", "subcategory": None, "confidence": 0.3, "source": "fallback-default"}
+        # outage, but don't blind-dump into 哲學 either: score it locally and
+        # only quarantine if genuinely ambiguous.
+        print(f"  ⚠ Gemini 分類失敗，改用本地評分分類器: {str(e)[:60]}", file=sys.stderr)
+        return _local_or_review(title, author, filename)
 
 
 def build_target_path(meta: dict, category: str) -> Path:
@@ -569,8 +601,25 @@ def cmd_run(limit: int | None, dry_run: bool):
 
     ok = 0
     fail = 0
+    corrupt = 0
     for p in files:
         print(f"\n[{p.name}]")
+
+        # Pre-ingest integrity gate: a broken/truncated/zero download must not
+        # enter the pipeline (it would silently produce empty chunks).
+        v = validate_ebook(p)
+        if not v.ok:
+            detail = f" ({v.detail})" if v.detail else ""
+            print(f"  CORRUPT [{v.reason}]{detail} — 隔離到 _corrupt/，不入庫")
+            if not dry_run:
+                CORRUPT_DIR.mkdir(parents=True, exist_ok=True)
+                try:
+                    shutil.move(str(p), str(CORRUPT_DIR / p.name))
+                except Exception as e:
+                    print(f"    (隔離搬移失敗，檔案留原處: {e})")
+            corrupt += 1
+            continue
+
         meta = parse_book_meta(p.name)
         if not meta:
             print("  SKIP: could not parse title from filename")
@@ -627,7 +676,8 @@ def cmd_run(limit: int | None, dry_run: bool):
         ok += 1
         time.sleep(0.5)  # gentle pacing for Gemini RPM
 
-    print(f"\nDone: {ok} ingested, {fail} failed/skipped (of {len(files)} processed)")
+    print(f"\nDone: {ok} ingested, {fail} failed/skipped, {corrupt} corrupt-quarantined "
+          f"(of {len(files)} processed)")
     return ok
 
 
