@@ -1424,7 +1424,35 @@ q-peter-preaching / christian-sibyl / orphica / joseph-prayer
 2. **OT 偽典**（Charles APOT 有的：2 Enoch、Testaments、Jubilees、4 Ezra、2 Baruch…）→ CCEL Charles（`en_kind:'ccel-enoch'`），每卷確認 CCEL 路徑。
 3. **真斷片／Nag Hammadi／昆蘭**（無標準 versification）→ `--zh-own`（中文自編章號，可接受，無 ground truth）。
 - 旗標：`--all`(英骨架)／`--zh-own`(中文自編)／`--snapshot`(從 cct_zh 存全文快照)／`--batch-own`(對未重建卷跑 zh-own，**僅適合斷片類**)；`is_restructured()` checkpoint 跳過已完成。
-- 韌性：`extract_verse_objects` 容錯解析（window 截斷不炸整卷）、章號「連續遞增不重頭」prompt、`merge_verse_windows` clamp+keep-longest、`clean_zh_verses` 去英文洩漏/行首節號殘留。全 pytest（`test_apocrypha_verses.py` 32 tests）。
+- 韌性：`extract_verse_objects` 容錯解析（window 截斷不炸整卷）、章號「連續遞增不重頭」prompt、`merge_verse_windows` clamp+keep-longest、`clean_zh_verses` 去英文洩漏/行首節號殘留。全 pytest（`test_apocrypha_verses.py` 38 tests）。
+
+### 🔧 1-enoch 細修完成 + CCEL 解析器根因修復（2026-06-11，golden template 鎖定）
+
+> 觸發：使用者發現「以諾一書第 9 章英文有到 11 節，中文只有 7」。查下去是**英文骨架本身就壞**，不是中文漏譯。
+
+**根因（重要，推廣前必懂）**：舊 `parse_charles_chapters` 把 CCEL HTML 的標籤全剝掉後，用「行內裸數字遞增」猜節界。但 CCEL 把節號當 `<sup>` **浮在句子中間**（例 `slept with the <sup>9</sup> women`），所以猜出的節界落在字詞中間、且把長章尾段（如 ch9 v8-11、ch14 v8-25）整批吞進前一節。壞掉的骨架只有 **746 節**，ch14 顯示 7 節（實際 25）、ch10 顯示 6（實際 22）。中文再貼到錯位的節槽 → 看起來像漏譯，其實是骨架錯。
+
+**修法（已完成、test-locked）**：CCEL 每節其實有**唯一錨點** `<a name="章_節">`（章號也從節錨點本身取，最穩）。新增純函式 `AV.parse_ccel_anchored(raw_html)` 改用錨點切節：
+- driver `fetch_ccel_enoch` 改回傳**原始 HTML**（不再剝標籤）；`english_skeleton` 的 `ccel-enoch` 改呼叫 `parse_ccel_anchored`。
+- 結果：英文骨架 746 → **正確 968 節 / 108 章全到**（ch9=10、ch10=22、ch14=25、ch60=23…）。
+- ⚠️ **CCEL 來源本身偶爾漏錨點**（例 9:8、22:7、60:2、108:3-4），該節文字併入前一節 → 是來源限制，**呈現為覆蓋缺口而非錯位**。pytest 6 例鎖定（`TestParseCcelAnchored`），共 38 tests 綠。
+
+**中文對齊韌性大改（do_chinese）**：單輪 LLM 對齊不穩（每跑覆蓋率不同，且一個 window 連線失敗就掉整段）。三招：
+1. **逐節錨點**：`_anchor_block` 從「每章只給第 1 節開頭」改成**列出該 window 範圍每一 (章:節) 的英文開頭**（範圍 lo..lo+16、上限 220 節），長章（72/89/90）才放得準。prompt 加「長章務必鋪滿每一節，別只填前幾節就跳過」。
+2. **window 失敗重試**：每 window 最多 3 次，失敗不再靜默丟。
+3. **`--accumulate` 跨輪累積**：seed 自現有 DB cct_zh 當一個 frag，再疊新一輪 → 經 `merge_verse_windows` clamp+keep-longest，**覆蓋率單調只升不降**（zh_extra 恆 0 故聯集安全）。實測 1-enoch：單輪 ~690-723 → 累積 4 輪 690→846→884→896→**897/968（92.7%）**收斂。
+
+**1-enoch 最終狀態**：英文 968 全到、中文 **897 對齊（92.7%）、zh_extra=0（無錯位）**。剩 **71 節缺口**，集中在「長章尾段」（LLM 慣性只對章首、丟章尾）：ch54/56/60 尾、ch70-71 全、ch89(72-77)、ch90(36-42)、ch91-97 尾。**抽查確認中文都在快照裡（被提/人子/升到/千千萬萬等）→ 可救，非來源缺**。要再往上推：對這些特定 ch 範圍多跑幾輪 `--zh --accumulate`，或縮短 window / 加大 overlap 專打章尾。
+
+**reader UI 已改成跟 /scripture 一樣（2026-06-11）**：拿掉 testament→genre→doc 側邊目錄樹，改**章節 chip 列 + 上章/下章 + 一次一章**（仿 `pages/scripture/[book]/[chapter].vue`）。欄位下拉/註釋/簡介摺疊保留；legacy（未重建卷）保留整頁 block + 頁 chip。`nuxt build` 已跑綠。
+
+**⚠️ 待使用者確認**：`apocrypha_versions.cct_zh.name_zh` 目前掛「**黃根春**主編」，使用者口頭說「**黃錫木**」。兩位都與《基督教典外文獻》有關，未定奪前**不要擅改標籤**；確認後改 `name_zh`/`name_en` 一行即可。
+
+**交接給新 session（推廣其餘卷）**：
+1. 先把 1-enoch 殘餘 71 缺口用 `--zh --accumulate` 多跑幾輪收尾（可選）。
+2. 推廣照上面「三條路」分類；**OT 偽典凡走 CCEL 的一律已自動吃新的 anchored 解析器**（只要 `en_kind:'ccel-enoch'`）。
+3. 每卷標準流程：`--snapshot`（存中文全文）→ `--en`（建/修英文骨架）→ `--zh --accumulate` 跑到收斂 → 跑 gap 稽核（EN−ZH by chapter）回報缺口。
+4. **務必沿用 test-first**：動 `apocrypha_verses.py` 先補 `test_apocrypha_verses.py`。
 
 ### 教訓（值得記住）
 

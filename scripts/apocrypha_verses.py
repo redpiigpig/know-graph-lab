@@ -17,6 +17,7 @@ scripts/tests/test_apocrypha_verses.py.
 """
 from __future__ import annotations
 
+import html as _html
 import re
 
 VERSE_MULT = 1000  # order_index = chapter*VERSE_MULT + verse (verse < 1000)
@@ -108,6 +109,60 @@ def parse_charles_chapters(plain_text: str) -> dict[int, dict[int, str]]:
                 vmap[v] = txt
         if vmap:
             out[ch] = vmap
+    return out
+
+
+# ── Charles APOT (CCEL) ANCHOR-based parser (authoritative) ──────────────────
+# The CCEL Charles HTML carries an UNAMBIGUOUS per-verse anchor:
+#     <a name="9_2"><sup> 2</sup></a>  → chapter 9, verse 2 starts here.
+# and a chapter anchor  <b>[<a name="Chapter 9">Chapter 9</a>]</b>.
+# The old parse_charles_chapters() stripped these tags and then guessed verse
+# boundaries from inline bare integers — but CCEL renders the verse number as a
+# <sup> floated MID-sentence, so the guesses landed inside words and silently
+# merged trailing verses (e.g. ch9 8–11 collapsed into "verse 7"). Splitting on
+# the name="C_V" anchors instead recovers the exact versification. Verses CCEL
+# leaves un-anchored (it occasionally omits one, e.g. 9:8) fold into the prior
+# verse — surfaced as a coverage gap rather than a wrong boundary.
+_V_ANCHOR = re.compile(r'<a\s+name="(\d+)_(\d+)"\s*>.*?</a>', re.S | re.I)
+_CH_ANCHOR = re.compile(r'<a\s+name="Chapter\s+(\d+)"\s*>.*?</a>', re.S | re.I)
+_MARKER = re.compile('\x01(\\d+)\\|(\\d+)\x02|\x03(\\d+)\x04')
+
+
+def _normalize_ws(s: str) -> str:
+    s = s.replace('\x03', ' ').replace('\x04', ' ').replace('\r', '')
+    s = re.sub(r'[ \t]*\n[ \t]*', '\n', s)
+    s = re.sub(r'\n{2,}', '\n', s)
+    s = re.sub(r'[ \t]{2,}', ' ', s)
+    return s.strip()
+
+
+def parse_ccel_anchored(raw_html: str) -> dict[int, dict[int, str]]:
+    """Parse RAW CCEL Charles HTML into {chapter: {verse: text}} by splitting on
+    the `<a name="C_V">` verse anchors (the chapter number is taken from the verse
+    anchor itself, so it is robust even where the chapter heading is malformed).
+
+    Pass the concatenated raw HTML of the book's pages — NOT tag-stripped text."""
+    s = _V_ANCHOR.sub(lambda m: f'\x01{m.group(1)}|{m.group(2)}\x02', raw_html)
+    s = _CH_ANCHOR.sub(lambda m: f'\x03{m.group(1)}\x04', s)
+    s = re.sub(r'<(script|style)[^>]*>.*?</\1>', ' ', s, flags=re.S | re.I)
+    s = re.sub(r'</(p|div|br|tr|li|h\d)>', '\n', s, flags=re.I)
+    s = re.sub(r'<br\s*/?>', '\n', s, flags=re.I)
+    s = re.sub(r'<[^>]+>', ' ', s)
+    s = _html.unescape(s)
+
+    out: dict[int, dict[int, str]] = {}
+    marks = list(_MARKER.finditer(s))
+    for i, m in enumerate(marks):
+        if m.group(1) is None:        # chapter marker — skip; verses carry chapter
+            continue
+        ch, v = int(m.group(1)), int(m.group(2))
+        end = marks[i + 1].start() if i + 1 < len(marks) else len(s)
+        txt = _normalize_ws(s[m.end():end])
+        if txt:
+            # keep-longest if the same (ch,v) anchor appears twice (rare dup)
+            prev = out.get(ch, {}).get(v)
+            if prev is None or len(txt) > len(prev):
+                out.setdefault(ch, {})[v] = txt
     return out
 
 

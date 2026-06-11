@@ -99,6 +99,58 @@ class TestParseCharles:
         assert len(self.v[3]) == 1
 
 
+# Real CCEL Charles markup: per-verse <a name="C_V"> anchors, with the verse
+# number floated mid-sentence inside a <sup>. Includes ch9's real quirk where
+# CCEL omits the v8 anchor (v8 text folds into v7) and ch3 single verse.
+CCEL_ANCHORED_FIXTURE = """
+<b>[<a name="Chapter 9">Chapter 9</a>]</b><p>
+<a name="9_1"><sup> 1</sup></a> And then Michael and Gabriel looked down and saw much
+blood being <a name="9_2"><sup> 2</sup></a> shed upon the earth, and all lawlessness wrought.
+<a name="9_3"><sup> 3</sup></a> And now to you, the holy ones, the souls
+of men make their suit. <a name="9_7"><sup> 7</sup></a> And Semjaza, to whom Thou
+hast given authority, and have slept with the 8 women, and have defiled themselves.
+<a name="9_9"><sup> 9</sup></a> And the women have borne giants.
+<a name="9_11"><sup> 11</sup></a> And Thou knowest all things before they come to pass.</p>
+<b>[<a name="Chapter 3">Chapter 3</a>]</b><p>
+<a name="3_1"><sup> 1</sup></a> Observe the trees in winter, fourteen do not shed leaves.</p>
+"""
+
+
+class TestParseCcelAnchored:
+    def setup_method(self):
+        self.v = av.parse_ccel_anchored(CCEL_ANCHORED_FIXTURE)
+
+    def test_chapters_found(self):
+        assert set(self.v) == {9, 3}
+
+    def test_anchor_boundaries_not_midword(self):
+        # v1 must END at the v2 anchor, even though "blood being" wraps a line.
+        assert self.v[9][1].startswith("And then Michael")
+        assert self.v[9][1].rstrip().endswith("much\nblood being") or \
+               self.v[9][1].rstrip().endswith("blood being")
+        assert self.v[9][2].startswith("shed upon the earth")
+
+    def test_trailing_verses_not_merged(self):
+        # The whole point: 9..11 are distinct, not collapsed into v7.
+        assert set(self.v[9]) == {1, 2, 3, 7, 9, 11}
+        assert self.v[9][9].startswith("And the women have borne giants")
+        assert self.v[9][11].startswith("And Thou knowest all things")
+
+    def test_unanchored_verse_folds_into_prior(self):
+        # CCEL omits the 9:8 anchor → its text stays attached to v7 (a gap, not a
+        # wrong boundary). The bare "8" in prose is NOT taken as a verse.
+        assert 8 not in self.v[9]
+        assert "slept with the 8 women" in self.v[9][7]
+
+    def test_single_verse_chapter(self):
+        assert list(self.v[3]) == [1]
+        assert "fourteen" in self.v[3][1]
+
+    def test_chapter_taken_from_verse_anchor(self):
+        # chapter number comes from the verse anchor (9_1), robust to heading noise
+        assert 9 in self.v and 1 in self.v[9]
+
+
 class TestMergeOntoSkeleton:
     def setup_method(self):
         self.skeleton = {1: {1: "e", 2: "e"}, 2: {1: "e"}, 6: {1: "e", 2: "e", 3: "e"}}

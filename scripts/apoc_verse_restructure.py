@@ -152,21 +152,15 @@ UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
 
 
 def fetch_ccel_enoch(base, n_pages) -> str:
+    """Concatenated RAW HTML of the CCEL Charles pages. Kept raw on purpose:
+    AV.parse_ccel_anchored() splits on the <a name="C_V"> verse anchors, which the
+    old tag-stripping destroyed (forcing an unreliable inline-digit guess)."""
     full = []
     for n in range(1, n_pages + 1):
         r = requests.get(f'{base}ENOCH_{n}.HTM', headers=UA, timeout=40)
         r.encoding = r.apparent_encoding or 'utf-8'
-        t = r.text
-        t = re.sub(r'<(script|style)[^>]*>.*?</\1>', ' ', t, flags=re.S | re.I)
-        t = re.sub(r'</(p|div|br|tr|li|h\d)>', '\n', t, flags=re.I)
-        t = re.sub(r'<br\s*/?>', '\n', t, flags=re.I)
-        t = re.sub(r'<[^>]+>', ' ', t)
-        t = html.unescape(t).replace('\r', '')
-        full.append(t)
-    s = '\n'.join(full)
-    s = re.sub(r'[ \t]+', ' ', s)
-    s = re.sub(r'\n[ \t]+', '\n', s)
-    return s
+        full.append(r.text)
+    return '\n'.join(full)
 
 
 def bible_skeleton(book, version) -> dict:
@@ -193,7 +187,7 @@ def english_skeleton(slug) -> dict:
     cfg = DOC_SOURCES[slug]
     kind = cfg['en_kind']
     if kind == 'ccel-enoch':
-        return AV.parse_charles_chapters(fetch_ccel_enoch(cfg['en_base'], cfg['en_pages']))
+        return AV.parse_ccel_anchored(fetch_ccel_enoch(cfg['en_base'], cfg['en_pages']))
     if kind == 'bible':
         return bible_skeleton(cfg['bible_book'], cfg['bible_version'])
     raise SystemExit(f'unknown en_kind {kind}')
@@ -285,41 +279,81 @@ ZH_SYS = (
 )
 
 
-def _anchor_block(skeleton, lo_ch, hi_ch):
-    lines = []
+def _anchor_block(skeleton, lo_ch, hi_ch, max_verses=220):
+    """Per-VERSE anchors: each verse's English opening, so the LLM can place each
+    Chinese sentence onto a specific (ch,v) — essential for long chapters (e.g. 72,
+    89, 90) where one chapter-level anchor leaves dozens of verses unplaceable."""
+    lines, count = [], 0
     for ch in sorted(skeleton):
-        if lo_ch <= ch <= hi_ch:
-            v1 = skeleton[ch][min(skeleton[ch])]
-            opening = ' '.join(re.sub(r'\s+', ' ', v1).strip().split()[:20])
-            lines.append(f'  第 {ch} 章（共 {len(skeleton[ch])} 節）開頭：{opening}')
+        if not (lo_ch <= ch <= hi_ch):
+            continue
+        lines.append(f'第 {ch} 章（共 {len(skeleton[ch])} 節）：')
+        for v in sorted(skeleton[ch]):
+            opening = ' '.join(re.sub(r'\s+', ' ', skeleton[ch][v]).strip().split()[:9])
+            lines.append(f'  {ch}:{v} {opening}')
+            count += 1
+            if count >= max_verses:
+                return '\n'.join(lines)
     return '\n'.join(lines)
 
 
 def zh_prompt(skeleton, prev_cv, window_text):
     max_ch = max(skeleton)
     lo = max(1, (prev_cv[0] - 2) if prev_cv else 1)
-    anchors = _anchor_block(skeleton, lo, lo + 24)
+    anchors = _anchor_block(skeleton, lo, lo + 16)
     prev = f'{prev_cv[0]}:{prev_cv[1]}' if prev_cv else '（從頭開始）'
     return (f'英文骨架共 {len(skeleton)} 章，最大章號 {max_ch}（章號不得超過）。\n'
-            f'相關章節的英文開頭（用來判斷中文每段屬於哪一章哪一節）：\n{anchors}\n\n'
+            f'相關章節的「逐節英文開頭」（每個 (章:節) 一行；用來判斷中文每一句屬於哪一章哪一節）：\n{anchors}\n\n'
+            f'重要：請盡量把中文的每一句都對應到上面某一個 (章:節)；長章（如異象、天象、動物寓言段落）'
+            f'務必把整段中文鋪滿到該章的每一節，不要只填前幾節就跳過其餘。\n'
             f'上一個 window 大約處理到：{prev}。\n\n中文 OCR 全文（本 window）：\n\n{window_text}')
 
 
-def do_chinese(slug, dry=False):
+def load_existing_zh(slug) -> dict:
+    """Current cct_zh verses from the DB as {ch:{v:text}} — used to seed accumulate
+    runs so coverage is MONOTONIC across passes (a transient window failure or LLM
+    non-determinism can never lose a verse already aligned in a prior pass)."""
+    out: dict = {}
+    off = 0
+    while True:
+        rows = db_get(f'apocrypha_sections?doc_slug=eq.{slug}&version_code=eq.cct_zh'
+                      f'&select=chapter,verse,text&order=order_index&limit=1000&offset={off}')
+        if not rows:
+            break
+        for r in rows:
+            if r.get('chapter') and r.get('verse') and (r.get('text') or '').strip():
+                out.setdefault(r['chapter'], {})[r['verse']] = r['text'].strip()
+        if len(rows) < 1000:
+            break
+        off += 1000
+    return out
+
+
+def do_chinese(slug, dry=False, accumulate=False):
     skeleton = english_skeleton(slug)
     body = load_zh_body(slug)
     print(f'[ZH] skeleton {len(skeleton)} ch / {sum(len(v) for v in skeleton.values())} v | body {len(body)} chars')
 
     wins = split_windows(body)
-    print(f'[ZH] {len(wins)} windows')
+    print(f'[ZH] {len(wins)} windows | accumulate={accumulate}')
     frags = []
+    if accumulate:
+        seed = load_existing_zh(slug)
+        frags.append(seed)
+        print(f'[ZH] seeded with {sum(len(v) for v in seed.values())} existing verses')
     prev_cv = None
     for wi, w in enumerate(wins):
-        try:
-            out = llm_json(ZH_SYS, zh_prompt(skeleton, prev_cv, w))
-            objs = AV.extract_verse_objects(out)
-        except Exception as ex:
-            print(f'  win {wi+1}/{len(wins)}: LLM/parse error ({ex}); skipping window')
+        objs = None
+        for attempt in range(3):                       # retry transient all-engines failures
+            try:
+                out = llm_json(ZH_SYS, zh_prompt(skeleton, prev_cv, w))
+                objs = AV.extract_verse_objects(out)
+                break
+            except Exception as ex:
+                print(f'  win {wi+1}/{len(wins)}: attempt {attempt+1} error ({ex})')
+                time.sleep(15)
+        if not objs:
+            print(f'  win {wi+1}/{len(wins)}: giving up after retries; window kept from prior pass')
             frags.append({}); continue
         frag = {}
         for it in objs:
@@ -549,6 +583,6 @@ if __name__ == '__main__':
         raise SystemExit(f'no source config for {slug}; use --zh-own (Chinese-own skeleton) '
                          f'or add to DOC_SOURCES for English alignment')
     if do_en: do_english(slug, dry=dry)
-    if do_zh: do_chinese(slug, dry=dry)
+    if do_zh: do_chinese(slug, dry=dry, accumulate='--accumulate' in args)
     if not (do_en or do_zh):
         raise SystemExit('pass --en / --zh / --all / --zh-own / --batch-own / --snapshot')
