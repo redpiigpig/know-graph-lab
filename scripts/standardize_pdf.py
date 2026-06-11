@@ -43,6 +43,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 import time
 from datetime import datetime
@@ -66,7 +67,21 @@ except ImportError:
 # ── thresholds ─────────────────────────────────────────────────
 MIN_TOC_ENTRIES = 3            # below this, fall back to Plan A
 MIN_PAGES_PER_ENTRY = 1.2      # below this, TOC is page-level junk (e.g. 中東史: 654 entries / 661 pages)
-MAX_LEVEL = 2                  # level 0,1,2 chosen as chunk boundaries; deeper become inline headings
+MAX_LEVEL = 4                  # deepest level we'll ever descend to for chapters
+# Structural boilerplate that must never become a chapter boundary. Real
+# sections (前言/序/導論…) are NOT here on purpose.
+_BOILERPLATE_TITLE = re.compile(
+    r"^\s*("
+    r"封面|封底|[書书]封|目[錄录]|版[權权]([頁页])?|扉[頁页]|[書书]名[頁页]|"
+    r"[內内]封|蝴蝶[頁页]|空白[頁页]|"
+    r"cover|back\s*cover|contents?|table\s+of\s+contents|copyright|title\s*page|colophon"
+    r")\s*$",
+    re.IGNORECASE,
+)
+
+
+def _is_boilerplate_title(title: str) -> bool:
+    return bool(_BOILERPLATE_TITLE.match(title or ""))
 
 
 # ── annotations guard ───────────────────────────────────────────
@@ -107,34 +122,44 @@ def normalize_toc(toc, total_pages: int) -> list[dict] | None:
     if total_pages > 0 and (total_pages / len(toc)) < MIN_PAGES_PER_ENTRY:
         return None
 
-    entries = []
-    for level, title, page in toc:
-        # Some PDFs emit TOC titles with a trailing NUL ("封面\x00"); strip it
-        # at source so JSONL + DB inserts stay clean.
-        title = (title or "").replace("\x00", "").strip()
-        if not title:
-            continue
-        if level > MAX_LEVEL:
-            continue
-        page = max(1, min(int(page or 1), total_pages))
-        entries.append({"level": int(level), "title": title, "start_page": page})
+    page_cap = total_pages if total_pages > 0 else 10 ** 9
 
-    if len(entries) < MIN_TOC_ENTRIES:
-        return None
+    def _at_cap(cap: int) -> list[dict]:
+        out = []
+        for level, title, page in toc:
+            # Some PDFs emit TOC titles with a trailing NUL ("封面\x00"); strip
+            # it at source so JSONL + DB inserts stay clean.
+            title = (title or "").replace("\x00", "").strip()
+            if not title or _is_boilerplate_title(title):
+                continue
+            if level > cap:
+                continue
+            page = max(1, min(int(page or 1), page_cap))
+            out.append({"level": int(level), "title": title, "start_page": page})
+        # Collapse same-start_page duplicates (keep topmost / first).
+        seen, deduped = set(), []
+        for e in out:
+            if e["start_page"] in seen:
+                continue
+            seen.add(e["start_page"])
+            deduped.append(e)
+        return deduped
 
-    # Collapse same-start_page duplicates (keep first; merge titles? no — drop dupes)
-    seen_pages = set()
-    deduped = []
-    for e in entries:
-        if e["start_page"] in seen_pages:
-            continue
-        seen_pages.add(e["start_page"])
-        deduped.append(e)
-    if len(deduped) < MIN_TOC_ENTRIES:
-        return None
-
-    deduped.sort(key=lambda x: x["start_page"])
-    return deduped
+    # Adaptive depth: many publishers nest the *real* chapters one or two
+    # levels below a 目錄/封面 wrapper (e.g. 教會本位化 has its 8 chapters at
+    # level 3 under a level-2 "目录"). A fixed level cap throws those away and
+    # the book wrongly falls back to page-level Plan A. So descend to the
+    # SHALLOWEST cap that yields a real chapter list (≥3 non-boilerplate
+    # entries that aren't page-level dense).
+    for cap in range(1, MAX_LEVEL + 1):
+        deduped = _at_cap(cap)
+        if len(deduped) < MIN_TOC_ENTRIES:
+            continue  # too shallow — the real chapters are deeper
+        if total_pages > 0 and (total_pages / len(deduped)) < MIN_PAGES_PER_ENTRY:
+            return None  # first usable depth is page-level dense → deeper only worse
+        deduped.sort(key=lambda x: x["start_page"])
+        return deduped
+    return None
 
 
 def build_chapter_path(entries: list[dict], idx: int) -> str:

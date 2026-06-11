@@ -43,9 +43,31 @@ class TestNormalizeTocAccept:
         assert "太深的小節" not in [e["title"] for e in out]
 
     def test_nul_byte_stripped_from_title(self):
-        rows = toc((1, "封面\x00", 1), (1, "第一章", 10), (1, "第二章", 30))
+        rows = toc((1, "第一章\x00", 5), (1, "第二章", 10), (1, "第三章", 30))
         out = sp.normalize_toc(rows, 200)
-        assert out[0]["title"] == "封面"
+        assert out[0]["title"] == "第一章"
+
+    def test_boilerplate_titles_filtered(self):
+        # 封面/目录/版權頁 are structural wrappers, never chapter boundaries.
+        rows = toc((1, "封面", 1), (1, "目录", 2),
+                   (1, "第一章", 5), (1, "第二章", 30), (1, "第三章", 60),
+                   (1, "版權頁", 99))
+        out = sp.normalize_toc(rows, 120)
+        titles = [e["title"] for e in out]
+        assert titles == ["第一章", "第二章", "第三章"]
+
+    def test_deep_chapters_recovered_under_boilerplate(self):
+        # Real case 教會本位化: the actual chapters sit at level 3 beneath a
+        # level-1 封面 + level-2 目录. Adaptive depth must descend to L3 and
+        # recover them instead of falling back to page-level Plan A.
+        rows = toc((1, "封面", 1), (2, "目录", 4),
+                   (3, "中國教會的本位化神學", 5),
+                   (3, "適應當地文化是信仰的內在需求", 63),
+                   (3, "天主的子民與天主揀選的君王", 84),
+                   (3, "教父們的教訓", 125))
+        out = sp.normalize_toc(rows, 201)
+        assert out is not None and len(out) == 4
+        assert "中國教會的本位化神學" in [e["title"] for e in out]
 
     def test_page_clamped_into_range(self):
         rows = toc((1, "第一章", 0), (1, "第二章", 30), (1, "第三章", 9999))
