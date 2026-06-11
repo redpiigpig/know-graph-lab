@@ -109,6 +109,9 @@ const canvasEl = ref<HTMLCanvasElement | null>(null);
 let pdfDoc: any = null;
 let pdfjsLib: any = null;
 let rendering = false;
+// physical PDF page_number → OCR chunk_index (OCR skips blank/cover pages, so
+// chunk_index drifts from the physical page pdf.js renders).
+const pageToIdx = new Map<number, number>();
 
 // API auth is Bearer-token (not cookie), so every call — including pdf.js's
 // own fetch of the original file — must carry the Supabase access token.
@@ -137,6 +140,13 @@ async function loadPdf() {
     });
     pdfDoc = await task.promise;
     numPages.value = pdfDoc.numPages;
+    // page_number → chunk_index map for OCR-text alignment.
+    try {
+      const map: any[] = await authedFetch(`/api/ebooks/${id}/page-map`);
+      for (const m of map) {
+        if (m.page_number != null) pageToIdx.set(m.page_number, m.chunk_index);
+      }
+    } catch { /* fall back to index==page below */ }
     await buildOutline();
     await renderPage(currentPage.value);
   } catch (e: any) {
@@ -192,9 +202,19 @@ async function renderPage(n: number) {
   fetchOcr(n);
 }
 
-async function fetchOcr(n: number) {
+async function fetchOcr(physicalPage: number) {
+  // Translate the physical PDF page to the OCR chunk that covers it. The
+  // reader API addresses chunks by 1-based position (page = chunk_index + 1).
+  let idx: number;
+  if (pageToIdx.size > 0) {
+    if (!pageToIdx.has(physicalPage)) { ocrText.value = ""; return; } // blank/cover, no OCR
+    idx = pageToIdx.get(physicalPage)!;
+  } else {
+    idx = physicalPage - 1; // no map available — assume index==page
+  }
+  if (idx < 0) { ocrText.value = ""; return; }
   try {
-    const d: any = await authedFetch(`/api/ebooks/${id}?page=${n}`);
+    const d: any = await authedFetch(`/api/ebooks/${id}?page=${idx + 1}`);
     ocrText.value = d?.currentPage?.content || "";
   } catch {
     ocrText.value = "";
