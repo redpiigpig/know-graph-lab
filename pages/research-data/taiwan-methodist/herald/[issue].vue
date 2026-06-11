@@ -6,9 +6,15 @@
         <NuxtLink to="/research-data/taiwan-methodist/herald" class="text-gray-400 hover:text-gray-700 transition text-sm">← 衛報</NuxtLink>
         <span class="text-gray-200">|</span>
         <span class="text-sm font-medium text-gray-700">第 {{ issue }} 期</span>
-        <span class="text-xs text-gray-500">2002/11/30 · 將臨節第一主日</span>
+        <span class="text-xs text-gray-500">{{ meta.date_display }}<template v-if="meta.title"> · {{ meta.title }}</template></span>
         <div class="ml-auto flex items-center gap-3 text-xs text-gray-500">
-          <span>{{ currentLabel }}</span>
+          <a :href="`/api/herald/${issue}/pdf?download=1`"
+             class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-slate-100 text-slate-600 hover:bg-slate-200 transition no-underline"
+             title="下載原始掃描 PDF">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3"/></svg>
+            原始 PDF
+          </a>
+          <span class="hidden sm:inline">{{ currentLabel }}</span>
         </div>
       </div>
     </nav>
@@ -22,7 +28,8 @@
         <div class="book" :style="bookSize">
           <!-- LEFT PAGE -->
           <div class="page page-left" :class="{ 'is-blank': !leftItem }">
-            <component v-if="leftItem?.type === 'cover'" :is="CoverDesign" :issue="issue" />
+            <img v-if="leftItem?.type === 'scan'" :src="scanSrc(leftItem.idx)" class="scan-leaf" :alt="`第 ${issue} 期 第 ${leftItem.idx} 頁`" loading="lazy" />
+            <component v-else-if="leftItem?.type === 'cover'" :is="CoverDesign" :issue="issue" />
             <component v-else-if="leftItem?.type === 'back'" :is="BackCoverDesign" />
             <component v-else-if="leftItem?.type === 'text'" :is="InsidePage" :issue="issue" :page-idx="leftItem.idx" side="left" />
             <div v-else class="blank-page"></div>
@@ -31,7 +38,8 @@
 
           <!-- RIGHT PAGE -->
           <div class="page page-right" :class="{ 'is-blank': !rightItem }">
-            <component v-if="rightItem?.type === 'cover'" :is="CoverDesign" :issue="issue" />
+            <img v-if="rightItem?.type === 'scan'" :src="scanSrc(rightItem.idx)" class="scan-leaf" :alt="`第 ${issue} 期 第 ${rightItem.idx} 頁`" loading="lazy" />
+            <component v-else-if="rightItem?.type === 'cover'" :is="CoverDesign" :issue="issue" />
             <component v-else-if="rightItem?.type === 'back'" :is="BackCoverDesign" />
             <component v-else-if="rightItem?.type === 'text'" :is="InsidePage" :issue="issue" :page-idx="rightItem.idx" side="right" />
             <div v-else class="blank-page"></div>
@@ -44,12 +52,14 @@
           <!-- Flip overlay (right page flipping to left when going forward) -->
           <div v-if="flip.active" class="flip-leaf" :class="flip.dir">
             <div class="flip-face flip-front">
-              <component v-if="flip.front?.type === 'cover'" :is="CoverDesign" :issue="issue" />
+              <img v-if="flip.front?.type === 'scan'" :src="scanSrc(flip.front.idx)" class="scan-leaf" alt="" />
+              <component v-else-if="flip.front?.type === 'cover'" :is="CoverDesign" :issue="issue" />
               <component v-else-if="flip.front?.type === 'back'" :is="BackCoverDesign" />
               <component v-else-if="flip.front?.type === 'text'" :is="InsidePage" :issue="issue" :page-idx="flip.front.idx" />
             </div>
             <div class="flip-face flip-back">
-              <component v-if="flip.back?.type === 'cover'" :is="CoverDesign" :issue="issue" />
+              <img v-if="flip.back?.type === 'scan'" :src="scanSrc(flip.back.idx)" class="scan-leaf" alt="" />
+              <component v-else-if="flip.back?.type === 'cover'" :is="CoverDesign" :issue="issue" />
               <component v-else-if="flip.back?.type === 'back'" :is="BackCoverDesign" />
               <component v-else-if="flip.back?.type === 'text'" :is="InsidePage" :issue="issue" :page-idx="flip.back.idx" />
             </div>
@@ -95,21 +105,56 @@ const issue = String(route.params.issue);
 
 useHead({ title: `衛報 第 ${issue} 期 — 翻頁瀏覽` });
 
-// Items: 1 cover + 22 inside + 1 back = 24
-interface Item { type: 'cover' | 'back' | 'text'; idx: number; }
-const items: Item[] = [];
-items.push({ type: 'cover', idx: 1 });
-for (let i = 2; i <= 23; i++) items.push({ type: 'text', idx: i });
-items.push({ type: 'back', idx: 24 });
+// Per-issue manifest (public/herald/{issue}/meta.json)
+interface IssueMeta {
+  issue: number;
+  date_display: string;
+  title: string;
+  page_count: number;
+  mode: 'scan' | 'text';
+}
+const meta = ref<IssueMeta>({ issue: Number(issue), date_display: '', title: '', page_count: 0, mode: 'scan' });
 
-// Spreads: spread 0 = [blank | cover], spread 1 = [item2 | item3], ..., spread 12 = [item24 | blank]
-const spreads = computed<Array<[Item | null, Item | null]>>(() => {
-  const s: Array<[Item | null, Item | null]> = [];
-  s.push([null, items[0]]); // closed front
-  for (let i = 1; i < items.length - 1; i += 2) {
-    s.push([items[i] ?? null, items[i + 1] ?? null]);
+const scanSrc = (idx: number) => `/herald/${issue}/page-${String(idx).padStart(2, '0')}.jpg`;
+
+// Items are built from the manifest:
+//  - scan mode: every physical page is a scan leaf
+//  - text mode (issue 55): cover + structured-text inside pages + designed back cover
+interface Item { type: 'cover' | 'back' | 'text' | 'scan'; idx: number; }
+const items = ref<Item[]>([]);
+
+function buildItems() {
+  const n = meta.value.page_count || 0;
+  const out: Item[] = [];
+  if (meta.value.mode === 'text') {
+    out.push({ type: 'cover', idx: 1 });
+    for (let i = 2; i <= n - 1; i++) out.push({ type: 'text', idx: i });
+    if (n >= 2) out.push({ type: 'back', idx: n });
+  } else {
+    for (let i = 1; i <= n; i++) out.push({ type: 'scan', idx: i });
   }
-  s.push([items[items.length - 1], null]); // closed back
+  items.value = out;
+  spreadIdx.value = 0;
+}
+
+onMounted(async () => {
+  try {
+    const res = await fetch(`/herald/${issue}/meta.json`);
+    if (res.ok) meta.value = { ...meta.value, ...(await res.json()) };
+  } catch { /* fall back to defaults */ }
+  buildItems();
+});
+
+// Spreads: spread 0 = [blank | item1], spread 1 = [item2 | item3], ..., last = [itemN | blank]
+const spreads = computed<Array<[Item | null, Item | null]>>(() => {
+  const arr = items.value;
+  if (!arr.length) return [[null, null]];
+  const s: Array<[Item | null, Item | null]> = [];
+  s.push([null, arr[0]]); // closed front
+  for (let i = 1; i < arr.length - 1; i += 2) {
+    s.push([arr[i] ?? null, arr[i + 1] ?? null]);
+  }
+  s.push([arr[arr.length - 1], null]); // closed back
   return s;
 });
 
@@ -117,14 +162,18 @@ const spreadIdx = ref(0);
 const lastSpread = computed(() => spreads.value.length - 1);
 const totalSpreads = computed(() => spreads.value.length);
 
-const leftItem = computed(() => spreads.value[spreadIdx.value][0]);
-const rightItem = computed(() => spreads.value[spreadIdx.value][1]);
+const leftItem = computed(() => spreads.value[spreadIdx.value]?.[0] ?? null);
+const rightItem = computed(() => spreads.value[spreadIdx.value]?.[1] ?? null);
 
 const currentLabel = computed(() => {
   const l = leftItem.value, r = rightItem.value;
   if (!l && r?.type === 'cover') return '封面';
   if (l?.type === 'back' && !r) return '封底';
-  const parts = [l, r].filter(Boolean).map(i => `p.${i!.idx - 1}`);
+  if (!l && r?.type === 'scan') return '封面';
+  if (l?.type === 'scan' && !r) return '封底';
+  // text mode page numbering is offset by 1 (cover = leaf 1); scan mode uses raw idx
+  const pageOf = (i: Item) => (i.type === 'text' ? i.idx - 1 : i.idx);
+  const parts = [l, r].filter(Boolean).map(i => `p.${pageOf(i!)}`);
   return parts.join(' · ');
 });
 
@@ -225,6 +274,14 @@ const bookSize = computed(() => ({
   object-position: center;
   display: block;
   background: #fff;
+}
+/* Scanned-page leaves: show the whole page, never crop */
+.scan-leaf {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+  background: #fff;
+  display: block;
 }
 .page-shadow-right {
   position: absolute;
