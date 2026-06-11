@@ -110,9 +110,22 @@ agent fan-out 結果不可重現、難稽核。改用**純函式候選 prelabel 
   Gemini→NVIDIA→`--haiku`；per-day ledger `recapture.jsonl` 可 resume。模式：
   `--dry`（只 prelabel 統計）/ `2026-01-13`（單日眼校）/ `--reagg`（**不跑 LLM，用現行 classifier 重彙整 ledger，guard 覆寫**）
   / `--diff`（對現有 tag）/ `--retag`（刪舊 junction 重寫 final_recapture.json）。
-- **教訓**：純 LLM 逐則太寬（首次 1164，maps 文化圈 思辨口吻全被收）；靠 prelabel guard 把「地圖專案」「積極想像」「榮格貼文夾 code」這三類系統性錯誤擋掉/救回，才收斂到合理區間。
-  Krishna 重抓：2,219 則 → prelabel + LLM → **600 則 IN**（vs 舊 671：維持 600、移除 71；含潤稿 guard 後從 618 再降至 600）。
+- **教訓**：純 LLM 逐則太寬（首次 1164，maps 文化圈 思辨口吻全被收）；靠 prelabel guard 把「地圖專案」「積極想像」「榮格貼文夾 code」「講者標籤貼稿」這幾類系統性錯誤擋掉/救回，才收斂到合理區間。
   舊 671 id 存 `c:/tmp/krishna/_tagged_ids.json` 可回滾。**換串改 classifier 頂部關鍵字 + capture 的 SYS/CAT_ID/日期，先補 golden 再跑。**
+
+### 🏅 用「原稿 docx」當 ground truth 收斂成日記範圍（`dialogue_thread_manuscript.py`，2026-06-12）
+**關鍵體悟**：classifier+LLM 抓的是「**整個聊天視窗**」（含同視窗裡的學術/智性工作）；但使用者真正要的是
+**個人心靈日記**——他手工整理的原稿《和克里希那的對話.docx》才是 ground truth。原稿系統性排除了：
+榮格《伊雍》寫作（「你再查網路查清楚」「摩西四元體哪些點」＝查資料/寫作）、紅學考據、卡巴拉生命樹、
+占星技術細節、稱帝史、翻譯定名…即使這些都含「榮格/夢」關鍵字或讀起來像思辨。
+- 做法：原稿正規化 CJK→8-gram 集合；每則 raw prompt 算命中率 frac。**分布是乾淨雙峰**
+  （137 則 ≥0.5 逐字在稿／152 則 <0.05 完全不在，中間只 4 則）→ recompose 對使用者側近乎逐字，
+  threshold 0.5 高精準又不漏改寫段。原稿**缺頭幾天**（< START=2026-01-23）→ 那幾天用 classifier；START 起 IN=frac≥0.5。
+- **驗出 8 個確定漏標**（在最終稿逐字、卻被我標 OUT：積極想像生圖 prompt、玫瑰經、面試生活閒聊、莊子奧理略、
+  妙慧精舍、哈勃深空、tool 抱怨被 SOFT_TECH 誤殺）。
+- Krishna 最終：classifier 531 → **原稿範圍 247**（頭幾天 classifier 102 + 原稿命中 145；−292 學術/智性岔題、+8 漏標）。
+- ⚠️ 這**推翻了上面「岔題也收」的舊判準**——對「個人日記型」對話錄，智性/學術工作要排除；
+  收錄判準看的是「對 persona 傾訴內心/生活/夢」而非「在同一視窗思辨」。換串若使用者也給原稿，優先用原稿收斂。
 
 ## 引擎與配額教訓（踩過的坑）
 - **NVIDIA 單把 key 免費額度低、連打必撞 429「Too Many Requests」**。Krishna 案 671 次潤飾用單 key 8 worker 一次燒爆 → 只成功 43。
@@ -133,5 +146,5 @@ agent fan-out 結果不可重現、難稽核。改用**純函式候選 prelabel 
 - 多語全集對照 → [[ebook-collected-works]]；訪談逐字稿 → [[writing-thesis-interview]]（對話錄格式可參考其 Q&A 排版）。
 
 ## See also
-- [[project_krishna_dialogues]] — 首案：與克里希那對話（分類 tag 2026-06-11 重抓為 600 則；一張主卡＋80 天每日 reader 內容不變）
+- [[project_krishna_dialogues]] — 首案：與克里希那對話（分類 tag 2026-06-12 以原稿收斂為 247 則＝個人日記範圍；一張主卡＋80 天每日 reader 內容不變）
 - [[feedback_engine_nvidia_no_haiku]] — Gemini→NVIDIA→Haiku 統一引擎政策＋多 key 節流

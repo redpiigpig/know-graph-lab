@@ -20,6 +20,8 @@ LLM 判定與 DB 標記在 dialogue_thread_capture.py。
 """
 from __future__ import annotations
 
+import re
+
 THREAD_START = "2026-01-13"
 THREAD_END = "2026-04-18"
 
@@ -86,22 +88,31 @@ def in_date_range(date: str) -> bool:
 
 
 def is_persona_address(prompt: str) -> bool:
-    """是否「開頭呼喚 persona」——克里須那 出現在前 8 字、且後面接逗號/頓號。
+    """是否「開頭呼喚 persona」——克里須那 出現在前 8 字、且後面接逗號/感嘆（呼喚語氣）。
 
-    這是最可靠的 IN 訊號：直接對著克里希那說話。
-    把 persona 名只當題材（「克里須那開計程車」）排除——名字不在開頭、或後面不接逗號。
+    這是最可靠的 IN 訊號：直接對著克里希那說話（「克里須那，今天…」）。
+    ⚠️ **不收冒號**：「克里須那：…」是**講者標籤**，代表使用者把對話草稿/AI 回覆貼回來潤稿，
+    不是呼喚（見 is_label_paste）。也排除名字只當題材（「克里須那開計程車」）。
     """
     head = prompt[:8]
     if not _has(head, PERSONA):
         return False
-    # persona 名後面常接 中文逗號/頓號（呼喚語氣）
     for name in PERSONA:
         i = prompt.find(name)
         if 0 <= i < 8:
             after = prompt[i + len(name): i + len(name) + 1]
-            if after in ("，", "、", "！", "。", "\n", "："):
+            if after in ("，", "、", "！", "。", "\n"):
                 return True
     return False
+
+
+_LABEL_PASTE = re.compile(r'^\s*(阿周那|克里須那|克里希那|克里希納|克里斯那)\s*[:：]')
+
+
+def is_label_paste(prompt: str) -> bool:
+    """開頭是「阿周那：」「克里須那：」這種講者標籤＝把對話草稿/AI 回覆貼回來做潤稿/組稿，
+    不是 live 對話的使用者發言。一律 OUT（這些在 1/28、1/29、2/14 等組稿日大量出現）。"""
+    return bool(_LABEL_PASTE.match(prompt or ""))
 
 
 def extract_signals(prompt: str, response: str = "") -> dict:
@@ -110,6 +121,7 @@ def extract_signals(prompt: str, response: str = "") -> dict:
     full = p + "\n" + (response or "")
     return {
         "polish": _has(p, POLISH),
+        "label_paste": is_label_paste(p),
         "persona_address": is_persona_address(p),
         "persona_mention": _has(full, PERSONA),
         "active_imagination": _has(p, ACTIVE_IMAGINATION),
@@ -127,6 +139,7 @@ def prelabel(signals: dict) -> str:
 
     優先序（前者勝）：
       0. 潤稿/修飾文字              → OUT（最高；潤稿的就不是這個框，壓過榮格/積極想像/呼喚）
+      0.5 講者標籤貼稿（阿周那：/克里須那：）→ OUT（把草稿/AI 回覆貼回來組稿，非 live 發言）
       1. 積極想像/主動想像          → IN（心靈日記核心修練，即使敘述提到 code/電腦）
       2. 開頭呼喚 persona            → IN（即使夾帶委派字眼也是對克里希那傾訴）
       3. 地圖專案 界域/文化圈        → OUT（幾乎只在世界劃分專案用這兩個詞）
@@ -136,6 +149,8 @@ def prelabel(signals: dict) -> str:
       7. 其餘                       → MAYBE
     """
     if signals.get("polish"):
+        return "OUT"
+    if signals.get("label_paste"):
         return "OUT"
     if signals.get("active_imagination"):
         return "IN"

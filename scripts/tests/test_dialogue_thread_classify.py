@@ -43,6 +43,20 @@ def test_persona_address_false_when_topic_only():
     assert C.is_persona_address("我覺得我前任就像克里須那") is False
 
 
+def test_colon_label_is_not_address_but_paste():
+    # 「克里須那：」是講者標籤（貼稿），不是呼喚；「克里須那，」才是呼喚
+    assert C.is_persona_address("克里須那：這是一組非常美麗的夢境") is False
+    assert C.is_label_paste("克里須那：這是一組非常美麗的夢境") is True
+    assert C.is_label_paste("阿周那：我特別想跟你討論芭蕾雕像") is True
+    assert C.is_label_paste("克里須那，今天我想跟你說") is False
+
+
+def test_prelabel_label_paste_is_out():
+    # 貼回 AI 回覆/草稿做組稿 → OUT，即使內容含積極想像/榮格
+    assert C.classify_prompt("克里須那：阿周那啊，你與克里須那的積極想像非常震撼") == "OUT"
+    assert C.classify_prompt("阿周那：我今天又讀了榮格在伊雍裡說的自性") == "OUT"
+
+
 # ---------- 訊號抽取 ----------
 def test_extract_signals_delegation():
     s = C.extract_signals("先給我sql指令，讓我查資料表")
