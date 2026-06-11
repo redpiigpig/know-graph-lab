@@ -368,6 +368,24 @@ def verse_rows(slug: str, version_code: str,
     return rows
 
 
+# ── Monotonic accumulate guard ───────────────────────────────────────────────
+def union_fill(verses: dict[int, dict[int, str]],
+               seed: dict[int, dict[int, str]]) -> dict[int, dict[int, str]]:
+    """Re-add any (ch,v) present in `seed` but missing from `verses`, using the
+    seed text. Guarantees an --accumulate pass is MONOTONIC: keep-longest +
+    clean_zh_verses can drop a previously-aligned verse (a new longer candidate
+    that then fails the English/number cleanup), which would regress coverage
+    (observed: wisdom-solomon 435→364). The seed was itself a prior clean pass, so
+    re-filling from it never re-introduces noise. New verses in `verses` win."""
+    out: dict[int, dict[int, str]] = {ch: dict(vs) for ch, vs in verses.items()}
+    for ch, vs in seed.items():
+        for v, t in vs.items():
+            t = (t or "").strip()
+            if t and v not in out.get(ch, {}):
+                out.setdefault(ch, {})[v] = t
+    return out
+
+
 # ── Coverage / alignment gate ────────────────────────────────────────────────
 def coverage(en: dict[int, dict[int, str]], zh: dict[int, dict[int, str]]) -> dict:
     """Alignment report between the EN skeleton and the mapped ZH.

@@ -317,6 +317,28 @@ class TestExtractVerseObjects:
         assert av.extract_verse_objects("not json at all") == []
 
 
+class TestUnionFill:
+    def test_refills_dropped_seed_verse(self):
+        # a prior pass had 1:1 and 1:2; the new pass lost 1:2 (clean dropped it).
+        seed = {1: {1: "舊甲", 2: "舊乙"}}
+        verses = {1: {1: "新甲較長"}}
+        out = av.union_fill(verses, seed)
+        assert out[1][1] == "新甲較長"   # new verse wins
+        assert out[1][2] == "舊乙"        # dropped seed verse refilled → monotonic
+
+    def test_new_chapter_kept(self):
+        seed = {1: {1: "甲"}}
+        verses = {1: {1: "甲"}, 2: {1: "新章"}}
+        out = av.union_fill(verses, seed)
+        assert set(out) == {1, 2}
+
+    def test_monotonic_count(self):
+        seed = {1: {i: f"v{i}" for i in range(1, 11)}}     # 10 verses
+        verses = {1: {1: "x", 5: "y"}}                      # pass kept only 2
+        out = av.union_fill(verses, seed)
+        assert sum(len(v) for v in out.values()) == 10      # never below seed
+
+
 class TestCoverage:
     def test_full_alignment(self):
         en = {1: {1: "a", 2: "b"}}

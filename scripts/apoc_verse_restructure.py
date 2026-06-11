@@ -402,6 +402,8 @@ def do_chinese(slug, dry=False, accumulate=False):
 
     verses = AV.merge_verse_windows(frags, skeleton)   # clamp to skeleton + keep-longest
     verses = AV.clean_zh_verses(verses)                # drop leaked English / leading verse nums
+    if accumulate:
+        verses = AV.union_fill(verses, seed)           # never lose a prior-pass verse → monotonic
     rep = AV.coverage(skeleton, verses)
     print(f'[ZH] coverage: {rep}')
     if dry:
