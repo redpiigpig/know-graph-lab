@@ -119,19 +119,20 @@ def parse_turns(html):
 
 # ── 兩種 register 的 system prompt ────────────────────────────────────
 def sys_ai():
+    # 2026-06-12 改版：舊版「大膽再創作詩意」把克里須那洗成通篇紫色辭藻、把實質內容抽掉。
+    # 使用者一月手工稿才是要的風格＝清晰溫暖的散文、保留完整論點與專名、只去結構與客套、不堆砌詩化。
     return (
-        f'你是一位文體大師，正在把一則 AI（在對話裡被稱為「{AI_NAME}」）的回覆，重鑄為哲學對話錄中那位'
-        f'智者的話語——想像柏拉圖筆下的蘇格拉底、《薄伽梵歌》裡的克里希那、榮格《紅書》中與靈魂的對話。\n'
-        '要求：\n'
-        '‧ 語體：凝練、有韻致、富哲思。可用意象與節奏，像智者親口說出，而非條列式的說明文。\n'
-        '‧ 大膽再創作：不必逐句忠實。抓住這段話的核心洞見，用更精煉、更有詩意的語言重講一遍。'
-        '寧可短而深，不要長而散——把冗長處收束成一兩句利落的話。\n'
-        '‧ 砍冗：刪去所有鋪陳、客套與框架語（「這是個好問題」「我們可以分成幾點」「總結來說」），'
-        '去掉條列、編號、小標、markdown 星號。\n'
-        '‧ 守住核心：保留原意的思想內核，以及關鍵的神學／心理學／哲學概念與專有名詞、人名地名。'
-        '可重組、可刪枝節，但不可扭曲核心立場、不可無中生有捏造新主張。\n'
-        f'‧ 對象：第一人稱，對著對話者「{USER_NAME}」說話，語氣親近而深邃。\n'
-        f'只輸出{AI_NAME}這段重鑄後的話本身，不要加引號、不要加「{AI_NAME}：」前綴、不要任何說明。')
+        f'你正在整理一份個人心靈對話錄。以下是 AI（在對話裡被稱為「{AI_NAME}」，一位博學而溫暖的'
+        f'榮格派心靈導師、《薄伽梵歌》式的智者）對「{USER_NAME}」說的一段話。請重寫成流暢、溫暖、'
+        '清晰的散文：\n'
+        '‧ **保留它完整的論點、解釋、舉例與所有概念與專有名詞**（榮格心理學／神學／神話／哲學的實質內容必須留住，'
+        '不可抽掉、不可把具體內容洗成空泛比喻）。\n'
+        f'‧ 第一人稱、溫暖地對「{USER_NAME}」說話，像智者娓娓道來；可用一兩個貼切而具體的意象，'
+        '但**不要通篇堆砌詩化辭藻、不要為美而美**。寧可把道理講清楚，也不要犧牲內容去換漂亮句子。\n'
+        '‧ 去掉條列、編號、小標題、markdown 星號，以及「這是個好問題／讓我們來解讀／首先…接著…／'
+        '總結來說／我們可以分成幾點」這類框架語與客套，融成連貫段落。\n'
+        '‧ 忠實：不扭曲立場、不新增他沒講的主張、不刪實質內容。\n'
+        f'只輸出{AI_NAME}這段重寫後的話本身，不要加引號、不要加「{AI_NAME}：」前綴、不要任何說明。')
 
 def sys_user():
     return (
@@ -160,7 +161,7 @@ def call_gemini(label, text):
     if not GKEYS: return None
     body = {'systemInstruction': {'parts': [{'text': sys_prompt(label)}]},
             'contents': [{'parts': [{'text': text}]}],
-            'generationConfig': {'temperature': 0.7, 'maxOutputTokens': 8192}}
+            'generationConfig': {'temperature': 0.4, 'maxOutputTokens': 8192}}
     payload = json.dumps(body).encode('utf-8')
     for _ in range(len(GKEYS) + 2):
         i, start = _pick(g_next, 4.5)
@@ -186,7 +187,7 @@ def call_nvidia(label, text):
         if d > 0: time.sleep(d)
         try:
             req = urllib.request.Request(NURL, data=json.dumps({
-                'model': NMODEL, 'temperature': 0.7, 'max_tokens': 8192,
+                'model': NMODEL, 'temperature': 0.4, 'max_tokens': 8192,
                 'messages': [{'role': 'system', 'content': sys_prompt(label)},
                              {'role': 'user', 'content': text}]}).encode('utf-8'),
                 headers={'Authorization': 'Bearer ' + NKEYS[i], 'Content-Type': 'application/json'}, method='POST')
