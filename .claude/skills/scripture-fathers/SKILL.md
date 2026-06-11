@@ -545,7 +545,8 @@ Vol 9:  349 → 92   (30 page + 62 other)
 | ✅ 34 | NPNF2 Vol 10（米蘭的安波羅修）| 已精修 | `_fix_vol34_ambrose.py`；⚠️ 章節源順序跨論著錯置（spot-check 證實）→ 不假造論著樹，**粗分三區（導論/論著選/書信選）**；隔離 consolidate 壞檔重譯；TERM 670 處（盎博羅削→安波羅修）；test PASS |
 | ✅ 35 | NPNF2 Vol 11（蘇皮修 + 勒蘭的文生 + 若望‧格西安）| 已精修 | `_fix_vol35_reorder.py`（修 translate 排序 bug 還原順序）+ `_fix_vol35_severus_vincent_cassian.py`（boundary-walk 三作者樹）；TERM 701 處（瑪爾定/格西安/文生）；test_fathers_quality PASS · validate 0 FAIL |
 | ✅ 36 | NPNF2 Vol 12（大良 Leo + 大額我略 Gregory）| 已精修 | title_en=npnf212.* 前綴→`_fix_vol12_leo_gregory.py` PREFIX-to-vol（大良 導論/書信集/講道集 · 大額我略 導論/牧靈規則/書信集）；570→108 頁；TERM baseline-only（利奧/良 同指教宗+皇帝，刻意不收斂）；test PASS · validate 0 FAIL |
-| 37-38 | NPNF2 Vol 13-14 + ACCS 待補卷 | 待續 | 下一卷 V13；Schaff 全集 = ANF 10 + NPNF1 14 + NPNF2 14 = **38 卷**（+ ACCS 27 卷）|
+| ✅ 37 | NPNF2 Vol 13（大額我略 II + 厄弗冷 + 阿弗拉哈特）| 已精修 | `_fix_vol13_gregory_ephraim_aphrahat.py` PREFIX-to-vol（大額我略 書信集卷九-十四 · 敘利亞的厄弗冷 讚美詩/聖詩/講道 · 波斯賢士阿弗拉哈特 論證集）；277→49 頁；TERM 430 處（艾弗冷→厄弗冷/亞弗拉哈特→阿弗拉哈特/波斯智者→賢士；**圖爾的格列高裡先保護成格列高里**再 格列高裡→額我略，避免併到 Gregory of Tours；以法蓮≠艾弗冷不碰）；test PASS · validate 0 FAIL |
+| 38 | NPNF2 Vol 14（七大公會議）+ ACCS 待補卷 | 待續 | **最後一卷 V14**；Schaff 全集 = ANF 10 + NPNF1 14 + NPNF2 14 = **38 卷**（+ ACCS 27 卷）|
 
 ---
 
@@ -641,13 +642,14 @@ auto-push。**git 在 master 跑教父**（user 拍板；feat/coach-language 是
   - **譯名（user 06-11 定）**：Martin of Tours=**瑪爾定**（非馬丁=路德同形；詞庫無此聖人條目）。
   - **未跑**（可日後補）：glossary backfill、B 層 `llm_proofread_book.py`。
 
-### 🔄 進行中（2026-06-11 — 新 session 接手即續）
-- **使用者指令（06-11）**：先把 **Schaff 精修完**（V13→V14），**ACCS 先等**。
-- **V12 大良+大額我略 已精修上架**（見上）。譯名 user 拍板 **大良 + 大額我略**（兩者保留「大」平行；
-  詞庫 2026-05-29「額我略去大」規則本卷例外）。利奧/良 同指教宗大良＋皇帝利奧，刻意不做 TERM 收斂。
-- **下一卷 → V13** `90b55879-7179-41d7-9f6c-f6587a3dd429` → V14 七大公會議 `63853a97-68be-441c-8dce-063ae89405c5`。
-  - 翻每卷前先 `/translation-glossary` 查 ★建議譯名；翻完**先 spot-check 3-4 個深層 chunk 內容是否同作品
-    連續**（坑 4.7），亂了先 `_fix_*_reorder` 還原再 boundary-walk。title_en 若是 npnfNN.* 前綴 → 直接 PREFIX-to-vol（V12 範本）。
+### 🔄 進行中（2026-06-12 — 新 session 接手即續）
+- **使用者指令（06-11）**：先把 **Schaff 精修完**，**ACCS 先等**。V11/V12/V13 已上架（見上）。
+- **最後一卷 → V14 七大公會議** `63853a97-68be-441c-8dce-063ae89405c5`（精修完 Schaff NPNF2 全 14 卷收官）。
+  - 翻完**先 spot-check 3-4 個深層 chunk 內容是否同作品連續**（坑 4.7）；title_en 若 npnfNN.* 前綴 →
+    PREFIX-to-vol（V12/V13 範本 `_fix_vol12_leo_gregory.py` / `_fix_vol13_*.py`），英文 NCX → boundary-walk。
+  - **名稱收斂前必 probe 變體 + spot-check 衝突**（V12 利奧=教宗+皇帝、V13 格列高里=大額我略+圖爾的格列高里
+    雙人 → 長 key 先保護再收斂；以法蓮≠艾弗冷）。
+  - 完成後 Schaff 收官；**ACCS 27 卷待 user 指示再開**。
 
 ### 🧭 本輪（2026-06-05〜10）關鍵改進與教訓（新 session 必讀）
 1. **譯名修正**：Cyril of Jerusalem = **耶路撒冷的區利羅**（非西瑞爾；user 抓出、詞庫權威確認）。

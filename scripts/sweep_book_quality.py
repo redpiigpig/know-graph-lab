@@ -494,6 +494,18 @@ TERM_FIXES_NPNF2_V10 = dict(TERM_FIXES_ANF_COMMON, **{
     "盎博羅削": "安波羅修", "盎博羅修": "安波羅修", "安波羅斯": "安波羅修", "安博羅修": "安波羅修",
 })
 
+# NPNF2 Vol 13 — Gregory the Great II 大額我略 / Ephraim Syrus 敘利亞的厄弗冷 / Aphrahat 波斯賢士阿弗拉哈特
+# 名稱衝突防護（sweep_t8 按 key 長度遞減套用，長 key 先）：
+#   圖爾的格列高裡(Gregory of Tours)先轉成 圖爾的格列高里 保護，剩下 格列高裡=大額我略本人→額我略；
+#   以法蓮(聖經以法蓮)≠艾弗冷(教父)，不碰。
+TERM_FIXES_NPNF2_V13 = dict(TERM_FIXES_ANF_COMMON, **{
+    "圖爾的格列高裡": "圖爾的格列高里",   # Gregory of Tours 保留 格列高里（先於下一條）
+    "格列高裡": "額我略",                # 其餘 = 大額我略本人
+    "亞弗拉哈特": "阿弗拉哈特",          # Aphrahat（含 波斯智者亞弗拉哈特）
+    "波斯智者": "波斯賢士",             # 稱號統一（skill 2026-05-29）
+    "艾弗冷": "厄弗冷",                  # Ephraim Syrus（含 敘利亞的艾弗冷）；以法蓮≠此，不動
+})
+
 # NPNF2 Vol 12 — Leo the Great 大良 / Gregory the Great 大額我略（user 2026-06-11 拍板兩者保留「大」平行）
 # ⚠️ 刻意 baseline-only：利奧/良 同時指 教宗大良 與 皇帝利奧（"致利奧‧奧古斯都"=皇帝；"主教利奧"=教宗），
 # 大良/良 與 大額我略/額我略 又是行文簡稱（非錯），盲目收斂會把皇帝併進教宗或破壞行文 → 不做 V12-specific 收斂。
@@ -544,6 +556,7 @@ TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "fd8a09e7-a6ab-4818-a6d7-6722e50da773": TERM_FIXES_NPNF2_V10,  # NPNF2 Vol 10 Ambrose of Milan 米蘭的安波羅修
     "24c53ede-8787-442e-a3ba-0cd55d0effac": TERM_FIXES_NPNF2_V11,  # NPNF2 Vol 11 Sulpitius Severus + Vincent of Lerins + John Cassian
     "02a08547-6fb5-44b2-8a59-9b1f625f3a54": TERM_FIXES_NPNF2_V12,  # NPNF2 Vol 12 Leo the Great 大良 + Gregory the Great 大額我略
+    "90b55879-7179-41d7-9f6c-f6587a3dd429": TERM_FIXES_NPNF2_V13,  # NPNF2 Vol 13 Gregory II + Ephraim Syrus + Aphrahat
 }
 
 
