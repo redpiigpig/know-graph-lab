@@ -1462,6 +1462,12 @@ q-peter-preaching / christian-sibyl / orphica / joseph-prayer
 4. **路 c 斷片/Nag Hammadi/昆蘭**：`--batch-own`（中文自編，無 ground truth）。
 5. 每卷完跑 gap 稽核（EN−ZH by chapter）回報缺口；動 `apocrypha_verses.py` 一律先補 `test_apocrypha_verses.py`。
 
+**🌙 2026-06-12 過夜進度 + 重要修正（接手 session）**：
+- **英文源現實（實測）**：CCEL Charles **只有 enoch** 有 `<a name="ch_v">` 錨點格式；其餘 Charles OT 偽典 CCEL 沒有或非錨點。sacred-texts / Wesley 都 **403**。→ 路 b 改走 **pseudepigrapha.com**（`{book}/{N}.htm`，`<h5>[Chapter N]</h5>`+`<ol><li>`，**li 不閉合**）。但實測 pseudepigrapha.com **只有 jubilees** 是這格式（50 章/1305 節，已接線 `en_kind:'pseudepigrapha'` + `parse_pseudepigrapha_html` 純函式 + 5 tests）。**2-enoch / testaments / 2-3-4-baruch / psalms-solomon / sibylline 等目前無可靠 PD 英文源** → 暫留 zh-own，待未來找 archive.org Charles 全文解析或人工。
+- **4-ezra 改走路 a**：bible_verses 有 `2es`(kjva 16 章/874 節) → 已加進 `DEUTERO_BIBLE`。
+- **路 a `--batch-bible --force` 收斂成效極佳**：tobit/baruch/letter-jeremiah **100%**、sirach 96%（vs 舊單輪 59-77%）。`align_to_convergence` + `_pick_bible_version` 是關鍵。
+- ⚠️⚠️ **seed 污染重大坑**：對「原本是 zh-own（自編章號＋導論混入）」的卷跑 `--accumulate` 重做時，會 **seed 進舊的錯位資料**（do_chinese accumulate 從現有 cct_zh 取種子）→ keep-longest 可能保留錯位/導論文字。實測 **jubilees** 跑完 coverage 85% 但 ch1:1=導論、ch5/23 內容錯位。**修法：換骨架型態（zh-own→bible/pseud）時，第一輪必須 `do_chinese(accumulate=False)` 清空重做（純內容對位、clamp 會丟掉無英文對應的導論），再 accumulate 收斂。** 路 a 的 12 卷次經上一輪已是 bible 對齊（非 zh-own），故 --force seed 乾淨、不受此影響。jubilees 待 fresh 重做。
+
 ### 教訓（值得記住）
 
 - `vision_ocr_apocrypha.py` 走 page-batch（不是 PDF 全本上傳 Gemini Files API） — Flash 32K output token cap 對 350 頁書會截到 30 頁
