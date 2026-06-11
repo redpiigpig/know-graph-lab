@@ -494,6 +494,11 @@ TERM_FIXES_NPNF2_V10 = dict(TERM_FIXES_ANF_COMMON, **{
     "盎博羅削": "安波羅修", "盎博羅修": "安波羅修", "安波羅斯": "安波羅修", "安博羅修": "安波羅修",
 })
 
+# NPNF2 Vol 12 — Leo the Great 大良 / Gregory the Great 大額我略（user 2026-06-11 拍板兩者保留「大」平行）
+# ⚠️ 刻意 baseline-only：利奧/良 同時指 教宗大良 與 皇帝利奧（"致利奧‧奧古斯都"=皇帝；"主教利奧"=教宗），
+# 大良/良 與 大額我略/額我略 又是行文簡稱（非錯），盲目收斂會把皇帝併進教宗或破壞行文 → 不做 V12-specific 收斂。
+TERM_FIXES_NPNF2_V12 = dict(TERM_FIXES_ANF_COMMON)
+
 # NPNF2 Vol 11 — Sulpitius Severus 蘇皮修 / Vincent of Lerins 勒蘭的文生 / John Cassian 若望‧格西安
 # Martin of Tours = 瑪爾定 (Catholic saint convention; user 2026-06-11；非馬丁=路德同形)
 TERM_FIXES_NPNF2_V11 = dict(TERM_FIXES_ANF_COMMON, **{
@@ -538,6 +543,7 @@ TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "709f43f9-724c-4cd5-b6b0-570d26083d24": TERM_FIXES_NPNF2_V9,  # NPNF2 Vol 9 Hilary of Poitiers + John of Damascus
     "fd8a09e7-a6ab-4818-a6d7-6722e50da773": TERM_FIXES_NPNF2_V10,  # NPNF2 Vol 10 Ambrose of Milan 米蘭的安波羅修
     "24c53ede-8787-442e-a3ba-0cd55d0effac": TERM_FIXES_NPNF2_V11,  # NPNF2 Vol 11 Sulpitius Severus + Vincent of Lerins + John Cassian
+    "02a08547-6fb5-44b2-8a59-9b1f625f3a54": TERM_FIXES_NPNF2_V12,  # NPNF2 Vol 12 Leo the Great 大良 + Gregory the Great 大額我略
 }
 
 

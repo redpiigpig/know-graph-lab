@@ -143,6 +143,7 @@ const REFINED_IDS = new Set([
   '709f43f9-724c-4cd5-b6b0-570d26083d24',  // NPNF2 Vol 9 (Hilary of Poitiers 普瓦捷的希拉里 + John of Damascus 大馬士革的若望 — 論三位一體/論會議/詩篇講道 + 正統信仰詳解)
   'fd8a09e7-a6ab-4818-a6d7-6722e50da773',  // NPNF2 Vol 10 (Ambrose of Milan 米蘭的安波羅修 — 導論/論著選/書信選；源順序跨論著錯置故粗分三區)
   '24c53ede-8787-442e-a3ba-0cd55d0effac',  // NPNF2 Vol 11 (Sulpitius Severus 蘇皮修《聖瑪爾定傳》/書信/對話/神聖歷史 + Vincent of Lerins 勒蘭的文生《勸誡錄》 + John Cassian 若望‧格西安《會院規章》《會談錄》《論主之降生駁聶斯脫里》)
+  '02a08547-6fb5-44b2-8a59-9b1f625f3a54',  // NPNF2 Vol 12 (Leo the Great 大良《書信集》《講道集》 + Gregory the Great 大額我略《牧靈規則》《書信集》)
 ])
 
 const series = [
