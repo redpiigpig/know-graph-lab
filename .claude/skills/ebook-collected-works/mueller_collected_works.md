@@ -1,13 +1,13 @@
 
 > ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（`https://integrate.api.nvidia.com/v1`，`deepseek-ai/deepseek-v4-flash`，4 key 輪流＋間隔節流避 429）→ Haiku（最後救急）**。視覺／OCR 走 Gemini Vision／Haiku Vision。見 [[feedback_engine_nvidia_no_haiku]]。
 
-# 馬克思‧穆勒全集 — 案例盡職調查（版權 / 卷目 / 來源）
+# 馬克斯‧穆勒全集 — 案例盡職調查（版權 / 卷目 / 來源）
 
 第二個 ebook-collected-works 案例（繼榮格之後）。**先讀本檔再開工。**
 
 ## 一句話結論
 
-弗里德里希‧馬克思‧穆勒（Friedrich Max Müller, 1823–1900）是**宗教學（Religionswissenschaft / the science of religion）的開山祖師**。他 1900 年卒 → **全部著作早已進入公有領域（全球 life+70 = 1970 即過期）**，archive.org / Google Books / Project Gutenberg 有大量乾淨合法全文。**這是 collected-works pipeline 最乾淨的一個案例**：無盜版疑慮、無「第三方中譯不入庫」的版權閃避、來源隨手可得。
+弗里德里希‧馬克斯‧穆勒（Friedrich Max Müller, 1823–1900）是**宗教學（Religionswissenschaft / the science of religion）的開山祖師**。他 1900 年卒 → **全部著作早已進入公有領域（全球 life+70 = 1970 即過期）**，archive.org / Google Books / Project Gutenberg 有大量乾淨合法全文。**這是 collected-works pipeline 最乾淨的一個案例**：無盜版疑慮、無「第三方中譯不入庫」的版權閃避、來源隨手可得。
 
 唯一架構性差異：穆勒雖是德國人，但學術生涯在牛津，**幾乎所有學術著作以英文寫成** → 預設來源語言是**英文**，非德文。少數著作有他自己監修的**平行德文版**（如起手卷《宗教學導論》），才做真三欄；其餘卷走英＋繁中雙語（仍以 collected-works 的多卷 corpus + 專屬詞庫管理）。
 

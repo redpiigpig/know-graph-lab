@@ -201,7 +201,7 @@ dev server 起 → 磁碟認證（reuse `screenshot_book.mjs` 的 magic-link＋s
 教父走 `/translation-glossary`（神學家/神學名詞）。全集多半是**別的學科**，術語不同，**每部全集建一份專屬 glossary md**（放本 skill 資料夾）：
 
 - 榮格 → [jung_glossary.md](jung_glossary.md)（原型 Archetyp、集體無意識 kollektives Unbewusstes、個體化 Individuation、阿尼瑪/阿尼姆斯、陰影、自性 Selbst…；**德文原詞為準**，英譯只是對照）
-- 馬克思‧穆勒 → [mueller_glossary.md](mueller_glossary.md)（宗教學 the science of religion、單一神教 henotheism、語言的疾病、無限者 the Infinite、雅利安/閃/圖蘭語族…；**英文原詞為準**，德文作對照）
+- 馬克斯‧穆勒 → [mueller_glossary.md](mueller_glossary.md)（宗教學 the science of religion、單一神教 henotheism、語言的疾病、無限者 the Infinite、雅利安/閃/圖蘭語族…；**英文原詞為準**，德文作對照）
 - 規則同 ebook-translate glossary：翻譯前先鎖譯名 → 翻譯中 PROMPT 帶 glossary → 翻完跑 term sweep 收斂變體
 - 跨卷一致是硬指標（同一術語不可一卷「自性」一卷「自我」）
 - 若該全集人物/概念跟現有 `/translation-glossary` 重疊（神學家全集）→ 仍以 `/translation-glossary` `name_recommended` 為權威（[[feedback-glossary-strict-authority]]）
@@ -216,11 +216,11 @@ dev server 起 → 磁碟認證（reuse `screenshot_book.mjs` 的 magic-link＋s
 
 一句話現況：榮格全集（德 GW 20 卷 / 英 CW 20 卷 + 補卷）原文與英譯**多數仍在版權內到 2031**，網路免費全文多為盜版掃描；**僅 1929 前早期著作**（《Wandlungen und Symbole der Libido》1912 德文原典 + Hinkle 1916 英譯）有乾淨公有領域來源。逐段對齊在「同一文本的德＋英」才嚴格成立，CW 改寫本與早期德文原典是**不同版本**。
 
-### 案例 2：馬克思‧穆勒全集（宗教學家全集，2026-06-04 起）
+### 案例 2：馬克斯‧穆勒全集（宗教學家全集，2026-06-04 起）
 
 版權表、Longmans《Collected Works》18 卷目、來源、對齊策略、接手清單 → **[mueller_collected_works.md](mueller_collected_works.md)**。
 
-一句話現況：弗里德里希‧馬克思‧穆勒（Friedrich Max Müller, 1823–1900，**宗教學開山祖**）卒於 1900 → **全部著作早已公有領域、全球無限制**，archive.org/Gutenberg 有乾淨全文，是 collected-works 最乾淨案例。穆勒以**英文寫作為主** → 預設英＋繁中雙語；少數有平行德文版的卷（如起手卷《宗教學導論》1873 = 德文《Einleitung》1874，**英德同構四講＋兩附論**）做真三欄。語言策略（user 拍板）：**英＋德＋繁中三欄，僅限有德文版的卷**。起手卷＝《宗教學導論》。**這是「經典宗教學家全集」系列的第一部**（後續可接其他宗教學家）。
+一句話現況：弗里德里希‧馬克斯‧穆勒（Friedrich Max Müller, 1823–1900，**宗教學開山祖**）卒於 1900 → **全部著作早已公有領域、全球無限制**，archive.org/Gutenberg 有乾淨全文，是 collected-works 最乾淨案例。穆勒以**英文寫作為主** → 預設英＋繁中雙語；少數有平行德文版的卷（如起手卷《宗教學導論》1873 = 德文《Einleitung》1874，**英德同構四講＋兩附論**）做真三欄。語言策略（user 拍板）：**英＋德＋繁中三欄，僅限有德文版的卷**。起手卷＝《宗教學導論》。**這是「經典宗教學家全集」系列的第一部**（後續可接其他宗教學家）。
 
 ---
 
@@ -275,5 +275,5 @@ dev server 起 → 磁碟認證（reuse `screenshot_book.mjs` 的 magic-link＋s
 - [scripture-papal](../scripture-papal/SKILL.md) — 既有「拉/英/中三欄逐段對照」(alignDocs) 的 content-file 版實作，可參考對齊邏輯（但本 skill 走 ebook reader，不走 content files）
 - [jung_collected_works.md](jung_collected_works.md) — 榮格全集案例：版權表 + 卷目 + 來源
 - [jung_glossary.md](jung_glossary.md) — 榮格術語德/英/中對照
-- [mueller_collected_works.md](mueller_collected_works.md) — 馬克思‧穆勒全集案例（宗教學家全集 #1）：版權表 + 18 卷目 + 來源 + 接手清單
+- [mueller_collected_works.md](mueller_collected_works.md) — 馬克斯‧穆勒全集案例（宗教學家全集 #1）：版權表 + 18 卷目 + 來源 + 接手清單
 - [mueller_glossary.md](mueller_glossary.md) — 穆勒比較宗教學術語英/德/中對照
