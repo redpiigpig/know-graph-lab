@@ -58,22 +58,34 @@
         </ul>
       </aside>
 
-      <!-- PDF page -->
-      <main class="flex-1 overflow-auto flex justify-center items-start bg-stone-200 p-6" ref="scrollEl">
-        <ClientOnly>
-          <div class="relative">
-            <div v-if="loading" class="absolute inset-0 flex items-center justify-center text-stone-500 text-sm">
-              載入中…
+      <!-- PDF page — flipbook: big side arrows flank the page -->
+      <main class="flex-1 relative overflow-hidden bg-stone-300/60">
+        <!-- left / right flip zones -->
+        <button @click="go(currentPage - 1)" :disabled="currentPage <= 1"
+          class="group absolute left-0 top-0 bottom-0 w-16 md:w-24 z-20 flex items-center justify-center
+                 disabled:opacity-0 disabled:pointer-events-none transition"
+          aria-label="上一頁">
+          <span class="w-10 h-10 rounded-full bg-white/70 group-hover:bg-white shadow flex items-center justify-center text-stone-700 text-xl">‹</span>
+        </button>
+        <button @click="go(currentPage + 1)" :disabled="currentPage >= numPages"
+          class="group absolute right-0 top-0 bottom-0 w-16 md:w-24 z-20 flex items-center justify-center
+                 disabled:opacity-0 disabled:pointer-events-none transition"
+          aria-label="下一頁">
+          <span class="w-10 h-10 rounded-full bg-white/70 group-hover:bg-white shadow flex items-center justify-center text-stone-700 text-xl">›</span>
+        </button>
+
+        <div class="absolute inset-0 overflow-auto flex justify-center items-start p-6 md:px-28">
+          <ClientOnly>
+            <div class="relative" :class="flipping ? 'flip-anim' : ''">
+              <div v-if="loading" class="absolute inset-0 flex items-center justify-center text-stone-500 text-sm">載入中…</div>
+              <div v-if="error" class="max-w-md text-center text-rose-600 text-sm bg-white border border-rose-200 rounded-lg p-6">{{ error }}</div>
+              <canvas ref="canvasEl" class="shadow-xl bg-white rounded-sm" :class="{ 'opacity-30': loading }" />
             </div>
-            <div v-if="error" class="max-w-md text-center text-rose-600 text-sm bg-white border border-rose-200 rounded-lg p-6">
-              {{ error }}
-            </div>
-            <canvas ref="canvasEl" class="shadow-lg bg-white rounded-sm" :class="{ 'opacity-30': loading }" />
-          </div>
-          <template #fallback>
-            <div class="text-stone-500 text-sm pt-10">準備 PDF 檢視器…</div>
-          </template>
-        </ClientOnly>
+            <template #fallback>
+              <div class="text-stone-500 text-sm pt-10">準備 PDF 檢視器…</div>
+            </template>
+          </ClientOnly>
+        </div>
       </main>
 
       <!-- OCR text pane -->
@@ -100,10 +112,11 @@ const scale = ref(1.3);
 const loading = ref(true);
 const error = ref("");
 const tocOpen = ref(true);
-const showText = ref(true);
+const showText = ref(false); // OCR text collapsed by default — open on demand
 const ocrText = ref("");
 const copied = ref(false);
 const outline = ref<any[]>([]);
+const flipping = ref(false);
 
 const canvasEl = ref<HTMLCanvasElement | null>(null);
 let pdfDoc: any = null;
@@ -223,8 +236,18 @@ async function fetchOcr(physicalPage: number) {
 
 function go(n: number) {
   n = Math.max(1, Math.min(n, numPages.value || 1));
+  if (n === currentPage.value) return;
+  flipping.value = true;
+  setTimeout(() => (flipping.value = false), 260);
   currentPage.value = n;
   jump.value = n;
+}
+
+function onKey(e: KeyboardEvent) {
+  const tag = (e.target as HTMLElement)?.tagName;
+  if (tag === "INPUT" || tag === "TEXTAREA") return;
+  if (e.key === "ArrowLeft") go(currentPage.value - 1);
+  else if (e.key === "ArrowRight") go(currentPage.value + 1);
 }
 
 function gotoOutline(item: any) {
@@ -245,5 +268,20 @@ async function copyText() {
 
 watch(currentPage, (n) => renderPage(n));
 
-onMounted(loadPdf);
+onMounted(() => {
+  loadPdf();
+  window.addEventListener("keydown", onKey);
+});
+onUnmounted(() => window.removeEventListener("keydown", onKey));
 </script>
+
+<style scoped>
+.flip-anim {
+  animation: pageflip 0.26s ease;
+  transform-origin: left center;
+}
+@keyframes pageflip {
+  0% { transform: perspective(1600px) rotateY(-8deg); opacity: 0.55; }
+  100% { transform: perspective(1600px) rotateY(0deg); opacity: 1; }
+}
+</style>
