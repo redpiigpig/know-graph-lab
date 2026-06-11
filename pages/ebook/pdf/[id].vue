@@ -110,16 +110,31 @@ let pdfDoc: any = null;
 let pdfjsLib: any = null;
 let rendering = false;
 
-// Book metadata (title) — reuse the existing reader API.
-const { data: meta } = await useFetch<any>(`/api/ebooks/${id}`, { query: { page: 1 } });
-if (meta.value) title.value = meta.value.title;
+// API auth is Bearer-token (not cookie), so every call — including pdf.js's
+// own fetch of the original file — must carry the Supabase access token.
+const supabase = useSupabaseClient();
+async function getToken(): Promise<string> {
+  const { data: { session } } = await supabase.auth.getSession();
+  return session?.access_token ?? "";
+}
 
 async function loadPdf() {
   try {
+    const token = await getToken();
+    // Book title via the existing reader API.
+    try {
+      const m: any = await authedFetch(`/api/ebooks/${id}?page=1`);
+      if (m) title.value = m.title;
+    } catch { /* non-fatal */ }
+
     pdfjsLib = await import("pdfjs-dist");
     const workerUrl = (await import("pdfjs-dist/build/pdf.worker.min.mjs?url")).default;
     pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl;
-    const task = pdfjsLib.getDocument({ url: `/api/ebooks/${id}/original`, withCredentials: true });
+    const task = pdfjsLib.getDocument({
+      url: `/api/ebooks/${id}/original`,
+      httpHeaders: { Authorization: `Bearer ${token}` },
+      withCredentials: true,
+    });
     pdfDoc = await task.promise;
     numPages.value = pdfDoc.numPages;
     await buildOutline();
@@ -179,7 +194,7 @@ async function renderPage(n: number) {
 
 async function fetchOcr(n: number) {
   try {
-    const d: any = await $fetch(`/api/ebooks/${id}`, { query: { page: n } });
+    const d: any = await authedFetch(`/api/ebooks/${id}?page=${n}`);
     ocrText.value = d?.currentPage?.content || "";
   } catch {
     ocrText.value = "";
