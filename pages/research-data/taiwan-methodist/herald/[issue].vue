@@ -21,7 +21,8 @@
 
     <div class="px-4 py-8 flex flex-col items-center">
 
-      <!-- Book frame -->
+      <!-- Book frame (scrollable viewport so you can pan when zoomed in) -->
+      <div class="book-viewport">
       <div class="book-stage" :style="bookSize">
         <div class="book-shadow" :style="bookSize"></div>
 
@@ -70,6 +71,7 @@
         <button class="nav-zone nav-zone-left" :disabled="spreadIdx === 0" @click="prev" aria-label="上一頁"></button>
         <button class="nav-zone nav-zone-right" :disabled="spreadIdx === lastSpread" @click="next" aria-label="下一頁"></button>
       </div>
+      </div>
 
       <!-- Controls -->
       <div class="mt-6 flex items-center gap-3">
@@ -86,7 +88,17 @@
         </div>
       </div>
 
-      <p class="mt-4 text-xs text-gray-500">點擊書本左右兩側可翻頁，或使用鍵盤左右方向鍵</p>
+      <!-- Zoom controls -->
+      <div class="mt-3 flex items-center gap-2">
+        <button @click="zoomOut" :disabled="zoom <= ZOOM_MIN" class="ctrl-btn" title="縮小 (−)">－ 縮小</button>
+        <div class="px-3 py-2 rounded-lg bg-slate-800 text-gray-200 text-xs font-mono min-w-[64px] text-center">
+          {{ Math.round(zoom * 100) }}%
+        </div>
+        <button @click="zoomIn" :disabled="zoom >= ZOOM_MAX" class="ctrl-btn" title="放大 (+)">＋ 放大</button>
+        <button @click="zoomReset" :disabled="zoom === 1" class="ctrl-btn" title="重設 (0)">重設</button>
+      </div>
+
+      <p class="mt-4 text-xs text-gray-500">點擊書本左右兩側可翻頁（← →）；放大縮小用下方按鈕或鍵盤 + − 0。放大後可拖動捲軸瀏覽</p>
     </div>
   </div>
 </template>
@@ -203,20 +215,33 @@ function prev() {
   }, 700);
 }
 
+// Zoom
+const ZOOM_MIN = 0.5;
+const ZOOM_MAX = 3;
+const ZOOM_STEP = 0.25;
+const zoom = ref(1);
+function zoomIn() { zoom.value = Math.min(ZOOM_MAX, +(zoom.value + ZOOM_STEP).toFixed(2)); }
+function zoomOut() { zoom.value = Math.max(ZOOM_MIN, +(zoom.value - ZOOM_STEP).toFixed(2)); }
+function zoomReset() { zoom.value = 1; }
+
 function onKey(e: KeyboardEvent) {
   if (e.key === 'ArrowRight') next();
   else if (e.key === 'ArrowLeft') prev();
+  else if (e.key === '+' || e.key === '=') zoomIn();
+  else if (e.key === '-' || e.key === '_') zoomOut();
+  else if (e.key === '0') zoomReset();
 }
 onMounted(() => window.addEventListener('keydown', onKey));
 onBeforeUnmount(() => window.removeEventListener('keydown', onKey));
 
-// Book sizing — 1:1.4 aspect ratio of a leaf, two leaves side by side
-const bookWidth = ref(900);
+// Book sizing — 1:1.4 aspect ratio of a leaf, two leaves side by side.
+// baseWidth fits the viewport; the displayed book is baseWidth × zoom.
+const baseWidth = ref(900);
+const bookWidth = computed(() => Math.round(baseWidth.value * zoom.value));
 const bookHeight = computed(() => Math.round(bookWidth.value / 2 * 1.4));
 
 function resize() {
-  const w = Math.min(window.innerWidth - 40, 1100);
-  bookWidth.value = w;
+  baseWidth.value = Math.min(window.innerWidth - 40, 1100);
 }
 onMounted(() => {
   resize();
@@ -231,6 +256,15 @@ const bookSize = computed(() => ({
 </script>
 
 <style scoped>
+/* Scrollable viewport: when zoomed beyond the screen, pan via scrollbars.
+   Block-level container + margin:auto child centres when it fits and
+   overflows to the right (not clipped on the left) when it doesn't. */
+.book-viewport {
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+  padding: 8px 60px; /* room for the off-page nav zones */
+}
 .book-stage {
   position: relative;
   perspective: 2000px;
