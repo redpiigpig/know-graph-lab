@@ -13,10 +13,19 @@
 request 會 hang；deepseek-v4-flash reasoning 模型大 JSON 會 timeout。見 SKILL.md。
 
 用法：
-  python -X utf8 scripts/apoc_verse_restructure.py 1-enoch --en      # 英文骨架
-  python -X utf8 scripts/apoc_verse_restructure.py 1-enoch --zh      # 中文貼骨架
-  python -X utf8 scripts/apoc_verse_restructure.py 1-enoch --all
-  python -X utf8 scripts/apoc_verse_restructure.py 1-enoch --zh --dry # 不寫 DB
+  單卷：
+    python -X utf8 scripts/apoc_verse_restructure.py 1-enoch --en        # 英文骨架
+    python -X utf8 scripts/apoc_verse_restructure.py 1-enoch --zh        # 中文貼骨架(單輪)
+    python -X utf8 scripts/apoc_verse_restructure.py 1-enoch --zh --accumulate  # 累積一輪
+    python -X utf8 scripts/apoc_verse_restructure.py 1-enoch --all
+    python -X utf8 scripts/apoc_verse_restructure.py SLUG --zh-own        # 中文自編骨架
+    python -X utf8 scripts/apoc_verse_restructure.py SLUG --snapshot      # 存中文全文快照
+  整批(過夜)：
+    python -X utf8 scripts/apoc_verse_restructure.py --batch-bible        # 次經:bible_verses 骨架→收斂對齊
+    python -X utf8 scripts/apoc_verse_restructure.py --batch-bible --force # 連已完成卷也重跑累積
+    python -X utf8 scripts/apoc_verse_restructure.py --batch-own          # 其餘卷中文自編
+    python -X utf8 scripts/apoc_verse_restructure.py --batch-all          # phase1 bible→phase2 own
+  --dry 不寫 DB。--batch-bible 每卷 align_to_convergence(累積到覆蓋率收斂)+結尾印 summary 表。
 """
 from __future__ import annotations
 import os, sys, re, json, time, html, threading, urllib.request
@@ -373,11 +382,12 @@ def do_chinese(slug, dry=False, accumulate=False):
         for ch in [1, 3, 6, 9]:
             if ch in verses:
                 print(f'  {ch}:1  {verses[ch][min(verses[ch])][:70]!r}')
-        return
+        return rep
     rows = AV.verse_rows(slug, 'cct_zh', verses)
     db_delete_version(slug, 'cct_zh')
     db_insert_sections(rows)
     print(f'[ZH] ingested {len(rows)} verse-rows as cct_zh')
+    return rep
 
 
 # ── snapshot any doc's full text from its (still page-OCR) cct_zh ───────
@@ -480,40 +490,89 @@ def all_doc_slugs():
     return [d['slug'] for d in docs]
 
 
-# Deuterocanon: slug → bible_books code. Skeleton from bible_verses (Brenton LXX —
-# best coverage incl 3-4 Macc, and LXX versification matches 黃根春). psalm-151 /
-# esther-additions have no clean bible source → handled via --zh-own / legacy.
+# Deuterocanon: apocrypha slug → bible_books code. English skeleton comes from our
+# own bible_verses (correct standard ch:v). Per-book version is auto-picked (kjva
+# first — matches 黃根春 versification for most deuterocanon; brenton LXX fallback
+# where kjva lacks the book: 3-4 Macc, Manasseh). Books with NO bible_verses data
+# (jubilees/4-baruch/4-ezra → only in bible_books) are NOT here: they go route (b)
+# CCEL Charles. psalm-151 / esther-additions have no clean bible source → --zh-own.
 DEUTERO_BIBLE = {
-    # deuterocanon
     'tobit': 'tob', 'judith': 'jdt', 'wisdom-solomon': 'wis', 'sirach': 'sir',
     'baruch': 'bar', 'letter-jeremiah': 'epj', '1-maccabees': '1ma',
     '2-maccabees': '2ma', '3-maccabees': '3ma', '4-maccabees': '4ma',
     '1-esdras': '1es', 'prayer-manasseh': 'man',
-    # pseudepigrapha that ARE in our bible_verses (correct standard versification)
-    'jubilees': 'jub', '4-baruch': '4ba', '4-ezra': '2es',
 }
 
+# version code in bible_versions → apocrypha_versions english code to ingest under
+_BIBLE_EN = [('kjva', 'kjva_apoc'), ('brenton', 'brenton_apoc')]
 
-def run_batch_bible(dry=False):
-    """Restructure all deuterocanon docs against their bible_verses (Brenton)
-    skeleton. Checkpointed (skips already-per-verse). Each book gets correct ch:v."""
+
+def _pick_bible_version(book):
+    """(bible_version, apocrypha_en_version, skeleton) — picks the source with the
+    MOST verses (finer skeleton = more anchor points; the LLM maps by content so a
+    versification mismatch is harmless). Fixes prayer-manasseh (kjva lumps it into 1
+    verse, brenton has 15). Returns (None,None,{}) if no English exists."""
+    best = (None, None, {})
+    for bv, env in _BIBLE_EN:
+        sk = bible_skeleton(book, bv)
+        if sum(len(v) for v in sk.values()) > sum(len(v) for v in best[2].values()):
+            best = (bv, env, sk)
+    return best
+
+
+def align_to_convergence(slug, max_passes=6, min_gain=0.01):
+    """Run `do_chinese --accumulate` repeatedly until coverage plateaus (gain <
+    min_gain) or max_passes. Cumulative + clamped, so coverage only rises. Returns
+    the final coverage report (or None if every pass failed)."""
+    prev, rep = 0.0, None
+    for p in range(max_passes):
+        try:
+            rep = do_chinese(slug, accumulate=True)
+        except Exception as ex:
+            print(f'  [conv] {slug} pass {p+1} error: {ex}; stopping this book')
+            break
+        cov = rep['coverage'] if rep else 0.0
+        print(f'  [conv] {slug} pass {p+1}: coverage {cov} (+{round(cov-prev,4)})')
+        if cov - prev < min_gain:
+            break
+        prev = cov
+    return rep
+
+
+def run_batch_bible(dry=False, force=False):
+    """Restructure deuterocanon docs against their bible_verses skeleton, each
+    aligned to convergence. Checkpointed (skips already-per-verse unless force).
+    Prints a summary table. Empty-skeleton books auto-skip with a clear message."""
+    summary = []
     for slug, book in DEUTERO_BIBLE.items():
         try:
-            if is_restructured(slug):
-                print(f'[BATCH-BIBLE] skip {slug} (already per-verse)'); continue
+            if is_restructured(slug) and not force:
+                print(f'[BATCH-BIBLE] skip {slug} (already per-verse)')
+                summary.append((slug, book, '-', '-', 'skip(done)')); continue
+            bv, env, sk = _pick_bible_version(book)
+            if not sk:
+                print(f'[BATCH-BIBLE] skip {slug}: no bible_verses for {book} → route (b)/zh-own')
+                summary.append((slug, book, 0, 0, 'no-en-skeleton')); continue
             DOC_SOURCES[slug] = {
-                'en_version': 'brenton_apoc', 'en_kind': 'bible',
-                'bible_book': book, 'bible_version': 'brenton',
-                'book_name': slug,
+                'en_version': env, 'en_kind': 'bible',
+                'bible_book': book, 'bible_version': bv, 'book_name': slug,
             }
-            print(f'\n[BATCH-BIBLE] === {slug} (bible {book}) ===')
+            ev = sum(len(v) for v in sk.values())
+            print(f'\n[BATCH-BIBLE] === {slug} (bible {book} via {bv}, {ev} EN verses) ===')
             snapshot_from_cct_zh(slug)        # capture full ZH text before overwrite
             do_english(slug, dry=dry)
-            do_chinese(slug, dry=dry)
+            rep = align_to_convergence(slug) if not dry else do_chinese(slug, dry=True)
+            cov = rep['coverage'] if rep else 0.0
+            summary.append((slug, book, ev, rep['zh_verses'] if rep else 0, f'{cov:.1%}'))
         except SystemExit:
             raise
         except Exception as ex:
             print(f'[BATCH-BIBLE] {slug} FAILED: {ex}')
+            summary.append((slug, book, '?', '?', f'FAIL {ex}'))
+    print('\n[BATCH-BIBLE] ===== summary =====')
+    print(f'  {"slug":18}{"book":6}{"EN":>6}{"ZH":>6}  status')
+    for slug, book, ev, zv, st in summary:
+        print(f'  {slug:18}{book:6}{str(ev):>6}{str(zv):>6}  {st}')
 
 
 # ── main ──────────────────────────────────────────────────────────────
@@ -551,9 +610,9 @@ if __name__ == '__main__':
         print('\n[BATCH-ALL] complete')
         raise SystemExit(0)
 
-    # Batch: deuterocanon via bible_verses (Brenton) skeleton.
+    # Batch: deuterocanon via bible_verses skeleton, each aligned to convergence.
     if '--batch-bible' in args:
-        run_batch_bible(dry=dry); raise SystemExit(0)
+        run_batch_bible(dry=dry, force='--force' in args); raise SystemExit(0)
 
     # Batch: Chinese-own restructure across all docs (skip 1-enoch + already-done).
     if '--batch-own' in args:

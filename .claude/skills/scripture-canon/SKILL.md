@@ -1448,11 +1448,19 @@ q-peter-preaching / christian-sibyl / orphica / joseph-prayer
 
 **主編＝黃根春（2026-06-11 使用者最終確認）**：《基督教典外文獻》全套主編是**黃根春**；**黃錫木**僅就部分文章做校對或寫導論，不掛全套主編。`apocrypha_versions.cct_zh` 標籤維持 `name_zh='基督教典外文獻 (黃根春主編)'`、`name_en='… (ed. Huang Genchun)'`。
 
+**🌙 過夜整批入口（2026-06-12 加，路 a 一行跑）**：`python -X utf8 scripts/apoc_verse_restructure.py --batch-bible`
+- `DEUTERO_BIBLE`：12 卷次經（tobit/judith/wisdom-solomon/sirach/baruch/letter-jeremiah/1-4 Maccabees/1-esdras/prayer-manasseh）→ slug→bible_books code。**jubilees/4-baruch/4-ezra 不在此**（bible_verses 無資料，走路 b CCEL）。
+- `_pick_bible_version`：每卷自動選**節數最多**的英文版（kjva 為主、brenton 補；prayer-manasseh kjva 只 1 節→自動改 brenton 15 節）。LLM 按內容對位，故版本 versification 不需完全等於黃根春。
+- `align_to_convergence`：每卷 `do_chinese --accumulate` 反覆跑到覆蓋率增幅 <1% 或滿 6 輪（單調升、clamp、zh_extra=0）。`do_chinese` 現會回傳 coverage rep。
+- checkpoint：`is_restructured` 跳過已完成；`--force` 連已完成也重跑累積；空骨架卷自動 skip 並標 `no-en-skeleton`；2-strike/例外 try/except 換下一卷。結尾印 summary 表（slug/book/EN/ZH/status）。
+- 其餘：`--batch-own`（剩餘卷中文自編）、`--batch-all`（phase1 bible→phase2 own）。
+
 **交接給新 session（推廣其餘卷）**：
 1. 先把 1-enoch 殘餘 71 缺口用 `--zh --accumulate` 多跑幾輪收尾（可選）。
-2. 推廣照上面「三條路」分類；**OT 偽典凡走 CCEL 的一律已自動吃新的 anchored 解析器**（只要 `en_kind:'ccel-enoch'`）。
-3. 每卷標準流程：`--snapshot`（存中文全文）→ `--en`（建/修英文骨架）→ `--zh --accumulate` 跑到收斂 → 跑 gap 稽核（EN−ZH by chapter）回報缺口。
-4. **務必沿用 test-first**：動 `apocrypha_verses.py` 先補 `test_apocrypha_verses.py`。
+2. **路 a 次經**：直接 `--batch-bible` 過夜（已驗 tobit 端到端 OK）；跑完看 summary 表，低覆蓋卷再個別 `--zh --accumulate`。
+3. **路 b OT 偽典（CCEL Charles）**：jubilees/2-enoch/3-enoch/test-12-patriarchs/2-baruch/4-ezra… 要先在 `DOC_SOURCES` 補 `en_kind:'ccel-enoch'` 設定 + 確認該卷 CCEL 路徑/檔名/頁數，並把 `fetch_ccel_enoch`（目前寫死 `ENOCH_{n}.HTM`）一般化（加檔名 pattern 參數）。錨點解析 `parse_ccel_anchored` 已通用，只差抓檔。**test-first**。
+4. **路 c 斷片/Nag Hammadi/昆蘭**：`--batch-own`（中文自編，無 ground truth）。
+5. 每卷完跑 gap 稽核（EN−ZH by chapter）回報缺口；動 `apocrypha_verses.py` 一律先補 `test_apocrypha_verses.py`。
 
 ### 教訓（值得記住）
 
