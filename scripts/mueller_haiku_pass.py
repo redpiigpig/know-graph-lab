@@ -18,6 +18,7 @@ Usage:
 import argparse
 import re
 import sys
+import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -59,6 +60,8 @@ def main():
                     help="haiku = Claude Haiku (this driver); nvidia = mueller_build NVIDIA chain")
     ap.add_argument("--only", default="", help="comma-separated slugs to restrict to "
                     "(disjoint sets let two engines run in parallel without collision)")
+    ap.add_argument("--loop", action="store_true", help="self-restart until every "
+                    "--only book is_done (survives engine deaths / token expiry)")
     args = ap.parse_args()
 
     tp = make_haiku_engine() if args.engine == "haiku" else mb.make_engine()
@@ -73,25 +76,49 @@ def main():
         print("ZH:", tp(sample))
         return
 
-    for w in ma.WORKS:
-        if w["slug"] in SKIP_SLUGS:
-            continue
-        if only and w["slug"] not in only:
-            continue
-        if ma.is_done(w):
-            print(f"  ✓ {w['slug']} done — skip", flush=True)
-            continue
-        if not ma.sec_path(w["slug"], 0).exists():
-            print(f"  ⤓ ingest {w['slug']}", flush=True)
-            ma.ingest_work(w)
-        print(f"▶ {tag}-translate {w['slug']} — {w['title']}", flush=True)
+    def in_scope(w):
+        return w["slug"] not in SKIP_SLUGS and (not only or w["slug"] in only)
+
+    def all_done():
+        return all(ma.is_done(w) for w in ma.WORKS if in_scope(w))
+
+    def one_pass():
+        for w in ma.WORKS:
+            if not in_scope(w):
+                continue
+            if ma.is_done(w):
+                print(f"  ✓ {w['slug']} done — skip", flush=True)
+                continue
+            if not ma.sec_path(w["slug"], 0).exists():
+                print(f"  ⤓ ingest {w['slug']}", flush=True)
+                ma.ingest_work(w)
+            print(f"▶ {tag}-translate {w['slug']} — {w['title']}", flush=True)
+            try:
+                ma.translate_work(w, tp)
+                ma.assemble_and_upload(w)
+                print(f"  ✓ {w['slug']} complete", flush=True)
+            except Exception as e:  # noqa: BLE001
+                print(f"  ✗ {w['slug']} failed: {type(e).__name__}: {e}", flush=True)
+
+    if not args.loop:
+        one_pass()
+        print(f"{tag} pass complete", flush=True)
+        return
+
+    # --loop: keep retrying whole set until done; an engine death / token expiry
+    # that escapes the per-book guard just restarts the pass instead of stalling.
+    attempt = 0
+    while not all_done():
+        attempt += 1
+        print(f"=== {tag} loop attempt {attempt} ===", flush=True)
         try:
-            ma.translate_work(w, tp)
-            ma.assemble_and_upload(w)
-            print(f"  ✓ {w['slug']} complete", flush=True)
-        except Exception as e:  # noqa: BLE001
-            print(f"  ✗ {w['slug']} failed: {type(e).__name__}: {e}", flush=True)
-    print(f"{tag} pass complete", flush=True)
+            one_pass()
+        except BaseException as e:  # noqa: BLE001  — even SystemExit shouldn't stall the loop
+            print(f"  ‼ {tag} pass crashed: {type(e).__name__}: {e} — retry in 60s", flush=True)
+        if all_done():
+            break
+        time.sleep(60)
+    print(f"{tag} loop complete — all books done", flush=True)
 
 
 if __name__ == "__main__":
