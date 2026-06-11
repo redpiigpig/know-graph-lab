@@ -166,6 +166,64 @@ def parse_ccel_anchored(raw_html: str) -> dict[int, dict[int, str]]:
     return out
 
 
+# ── pseudepigrapha.com Charles parser (route b — books not on CCEL) ──────────
+# pseudepigrapha.com hosts Charles' OT-pseudepigrapha (Jubilees, 2 Enoch, the
+# Testaments, 2–4 Baruch, Psalms of Solomon, Sibyllines …) as one page per
+# chapter: `<h5>[Chapter N]</h5>` then an `<ol>` whose `<li>` items ARE the
+# verses (1..k). Far cleaner than the inline-number guess. The leading editorial
+# summary lives in a `<blockquote>` BEFORE the `[Chapter N]` heading, so it never
+# enters the verse list. Single-chapter works (no `[Chapter N]`) → chapter 1.
+_PSEUD_CH = re.compile(r'\[\s*Chapter\s+(\d+)\s*\]', re.I)
+_PSEUD_OL = re.compile(r'<ol\b[^>]*>(.*?)</ol>', re.S | re.I)
+_PSEUD_LI_SPLIT = re.compile(r'<li\b[^>]*>', re.I)
+
+
+def _ol_items(ol_inner: str) -> list[str]:
+    """Split an <ol> body into its <li> items. pseudepigrapha.com leaves <li>
+    UNCLOSED (no </li>), so split on the opening <li> tag rather than requiring a
+    close. Any stray </li> is removed by the later tag strip."""
+    return _PSEUD_LI_SPLIT.split(ol_inner)[1:]  # drop preamble before first <li>
+
+
+def _strip_html_text(s: str) -> str:
+    s = re.sub(r'<(script|style)[^>]*>.*?</\1>', ' ', s, flags=re.S | re.I)
+    s = re.sub(r'<br\s*/?>', ' ', s, flags=re.I)
+    s = re.sub(r'<[^>]+>', ' ', s)
+    s = _html.unescape(s)
+    s = re.sub(r'\s+', ' ', s)
+    return s.strip()
+
+
+def parse_pseudepigrapha_html(raw_html: str) -> dict[int, dict[int, str]]:
+    """Parse pseudepigrapha.com Charles chapter HTML → {chapter: {verse: text}}.
+
+    Pass the concatenated raw HTML of the chapter pages. Each `[Chapter N]`
+    heading is followed by an `<ol>`; its `<li>` children become verses 1..k.
+    If no `[Chapter N]` marker is present the whole first `<ol>` is chapter 1."""
+    out: dict[int, dict[int, str]] = {}
+    marks = list(_PSEUD_CH.finditer(raw_html))
+    if not marks:
+        ol = _PSEUD_OL.search(raw_html)
+        if ol:
+            for i, li in enumerate(_ol_items(ol.group(1)), start=1):
+                t = _strip_html_text(li)
+                if t:
+                    out.setdefault(1, {})[i] = t
+        return out
+    for j, m in enumerate(marks):
+        ch = int(m.group(1))
+        end = marks[j + 1].start() if j + 1 < len(marks) else len(raw_html)
+        region = raw_html[m.end():end]
+        ol = _PSEUD_OL.search(region)        # first <ol> after the heading
+        if not ol:
+            continue
+        for i, li in enumerate(_ol_items(ol.group(1)), start=1):
+            t = _strip_html_text(li)
+            if t:
+                out.setdefault(ch, {})[i] = t
+    return out
+
+
 # ── ZH-onto-EN-skeleton merge (driver feeds per-window LLM output here) ───────
 def merge_verse_windows(window_results, skeleton) -> dict[int, dict[int, str]]:
     """Merge per-window {chapter:{verse:text}} fragments into one map, KEEPING the

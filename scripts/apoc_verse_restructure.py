@@ -153,6 +153,12 @@ DOC_SOURCES = {
         'bible_book': 'sir', 'bible_version': 'kjva',
         'book_name': '德訓篇 / 便西拉智訓 (Sirach)',
     },
+    # Route b — OT pseudepigrapha via pseudepigrapha.com (Charles, not on CCEL).
+    'jubilees': {
+        'en_version': 'charles_apot', 'en_kind': 'pseudepigrapha',
+        'pseud_book': 'jubilees', 'pseud_chapters': 50,
+        'book_name': '禧年書 (Jubilees)',
+    },
 }
 
 
@@ -169,6 +175,24 @@ def fetch_ccel_enoch(base, n_pages) -> str:
         r = requests.get(f'{base}ENOCH_{n}.HTM', headers=UA, timeout=40)
         r.encoding = r.apparent_encoding or 'utf-8'
         full.append(r.text)
+    return '\n'.join(full)
+
+
+def fetch_pseudepigrapha(book, n_chapters) -> str:
+    """Concatenated RAW HTML of pseudepigrapha.com chapter pages {book}/{N}.htm
+    (1..n_chapters). Route b: Charles OT-pseudepigrapha not on CCEL. Parsed by
+    AV.parse_pseudepigrapha_html (`[Chapter N]` + <ol><li> = verses)."""
+    base = f'https://www.pseudepigrapha.com/{book}/'
+    full = []
+    for n in range(1, n_chapters + 1):
+        try:
+            r = requests.get(f'{base}{n}.htm', headers=UA, timeout=40)
+            if r.status_code == 200:
+                r.encoding = r.apparent_encoding or 'utf-8'
+                full.append(r.text)
+        except Exception as ex:
+            print(f'  [pseud] {book}/{n}.htm fetch error: {ex}')
+        time.sleep(0.2)
     return '\n'.join(full)
 
 
@@ -199,6 +223,8 @@ def english_skeleton(slug) -> dict:
         return AV.parse_ccel_anchored(fetch_ccel_enoch(cfg['en_base'], cfg['en_pages']))
     if kind == 'bible':
         return bible_skeleton(cfg['bible_book'], cfg['bible_version'])
+    if kind == 'pseudepigrapha':
+        return AV.parse_pseudepigrapha_html(fetch_pseudepigrapha(cfg['pseud_book'], cfg['pseud_chapters']))
     raise SystemExit(f'unknown en_kind {kind}')
 
 
@@ -501,6 +527,8 @@ DEUTERO_BIBLE = {
     'baruch': 'bar', 'letter-jeremiah': 'epj', '1-maccabees': '1ma',
     '2-maccabees': '2ma', '3-maccabees': '3ma', '4-maccabees': '4ma',
     '1-esdras': '1es', 'prayer-manasseh': 'man',
+    # 4 Ezra = 2 Esdras (ch3-14); bible_verses has 2es under kjva (16 ch / 874 v).
+    '4-ezra': '2es',
 }
 
 # version code in bible_versions → apocrypha_versions english code to ingest under

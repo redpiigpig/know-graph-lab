@@ -151,6 +151,68 @@ class TestParseCcelAnchored:
         assert 9 in self.v and 1 in self.v[9]
 
 
+# pseudepigrapha.com Charles markup: per-chapter <h5>[Chapter N]</h5> + <ol><li>.
+# Includes a leading editorial <blockquote> summary that must NOT become a verse.
+PSEUD_FIXTURE = """
+<blockquote><em>Moses receives the tables, 1-4. Apostasy, 5-9.</em></blockquote>
+<blockquote>THIS is the history of the division of the days.</blockquote>
+<h5>[Chapter 1]</h5>
+<ol>
+  <li>And it came to pass in the first year of the exodus, that God spake to Moses.</li>
+  <li>And He said: 'Come up to Me on the Mount.'</li>
+  <li>And Moses went up into the mount of God.</li>
+</ol>
+<h5>[Chapter 2]</h5>
+<ol>
+  <li>And the angel of the presence spake to Moses.</li>
+  <li>For on the first day He created the heavens.</li>
+</ol>
+"""
+
+
+class TestParsePseudepigrapha:
+    def setup_method(self):
+        self.v = av.parse_pseudepigrapha_html(PSEUD_FIXTURE)
+
+    def test_chapters_and_counts(self):
+        assert set(self.v) == {1, 2}
+        assert len(self.v[1]) == 3
+        assert len(self.v[2]) == 2
+
+    def test_verses_are_li_items_in_order(self):
+        assert self.v[1][1].startswith("And it came to pass")
+        assert self.v[1][2] == "And He said: 'Come up to Me on the Mount.'"
+        assert self.v[2][1].startswith("And the angel of the presence")
+
+    def test_summary_blockquote_not_a_verse(self):
+        # the <blockquote> summary/intro must not leak in as verse text
+        joined = " ".join(self.v[1].values()) + " ".join(self.v[2].values())
+        assert "Apostasy" not in joined
+        assert "history of the division" not in joined
+
+    def test_single_chapter_no_marker(self):
+        html = "<ol><li>First saying.</li><li>Second saying.</li></ol>"
+        v = av.parse_pseudepigrapha_html(html)
+        assert list(v) == [1]
+        assert v[1] == {1: "First saying.", 2: "Second saying."}
+
+    def test_nested_tags_stripped(self):
+        html = "<h5>[Chapter 5]</h5><ol><li>And <small>HE</small> said <i>peace</i>.</li></ol>"
+        v = av.parse_pseudepigrapha_html(html)
+        assert v[5][1] == "And HE said peace ."
+
+    def test_unclosed_li(self):
+        # pseudepigrapha.com leaves <li> UNCLOSED (no </li>) — must still split.
+        html = ("<h5>[Chapter 1]</h5><ol>\n"
+                "<li>And it came to pass in the first year.\n"
+                "<li>And He said: Come up.\n"
+                "<li>And Moses went up.\n</ol>")
+        v = av.parse_pseudepigrapha_html(html)
+        assert len(v[1]) == 3
+        assert v[1][1].startswith("And it came to pass")
+        assert v[1][3] == "And Moses went up."
+
+
 class TestMergeOntoSkeleton:
     def setup_method(self):
         self.skeleton = {1: {1: "e", 2: "e"}, 2: {1: "e"}, 6: {1: "e", 2: "e", 3: "e"}}
