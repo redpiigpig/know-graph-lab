@@ -10,9 +10,6 @@
   4. 寫 public/herald/{issue}/meta.json + 重建 public/herald/index.json。
   5. R2 上傳確認後，把原檔移出 git（搬到 SEALED_DIR）。
 
-第 55 期（2002.11.30）早已做成「結構化純文字翻頁書」(mode=text)，本腳本
-不重渲染、不覆蓋其影像/資料，只補上 meta.json（mode=text）並上傳 PDF + 列入索引。
-
 引擎政策：Gemini（4 keys 輪流）只用在「封面期號偵測」，不做全文 OCR。
 
 用法：
@@ -48,9 +45,6 @@ DETECT_CACHE = ROOT / "data" / "herald_detect_cache.json"  # 不放 public（避
 RENDER_WIDTH = 1100      # 對齊既有第 55 期影像寬度
 JPEG_QUALITY = 82
 R2_PDF_PREFIX = "herald/"
-
-# 既有第 55 期＝結構化純文字翻頁書，不動其影像/資料。
-TEXT_ISSUES = {55}
 
 
 # ── env / clients ─────────────────────────────────────────────
@@ -273,24 +267,9 @@ def cmd_run(only=None, seal=True):
     keys = gemini_keys()
     key_idx = 0
 
-    # 確保第 55 期（已存在影像/資料）有 meta + PDF 上 R2 + 列入索引
-    if (HERALD_DIR / "55").exists():
-        p55 = SRC_DIR / "2002.11.30.pdf"
-        existing_pages = len(list((HERALD_DIR / "55").glob("page-*.jpg"))) or 24
-        pdf_key55 = f"{R2_PDF_PREFIX}issue-55.pdf"
-        if p55.exists():
-            print("[55] 2002.11.30.pdf（既有結構化純文字版）")
-            pdf_key55 = upload_pdf(p55, 55)
-        write_meta(55, "2002-11-30", "將臨節第一主日", existing_pages, pdf_key55, "text")
-
     for pdf in pdfs:
         name = pdf.name
         if only and only not in name:
-            continue
-        if name == "2002.11.30.pdf":
-            # 第 55 期已單獨處理（mode=text），原檔仍 seal
-            if seal:
-                seal_original(pdf)
             continue
 
         info = cache.get(name) or {}
