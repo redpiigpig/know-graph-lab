@@ -1,0 +1,214 @@
+<template>
+  <div class="min-h-screen bg-stone-100 text-stone-900 flex flex-col">
+    <!-- Topbar -->
+    <nav class="border-b border-stone-200 bg-white sticky top-0 z-40 flex-shrink-0">
+      <div class="px-4 h-14 flex items-center justify-between gap-4">
+        <div class="flex items-center gap-3 min-w-0 flex-1">
+          <NuxtLink :to="`/ebook/${id}`" class="text-stone-500 hover:text-stone-900 text-sm flex-shrink-0">← 文字版</NuxtLink>
+          <span class="text-stone-300">·</span>
+          <button @click="tocOpen = !tocOpen"
+            :class="['flex items-center gap-1 px-2 py-1 rounded-md text-xs border flex-shrink-0',
+              tocOpen ? 'bg-stone-900 text-white border-stone-900' : 'bg-white text-stone-700 border-stone-200 hover:border-stone-400']">
+            <span>📑</span><span class="hidden sm:inline">目錄</span>
+            <span v-if="outline.length" class="text-[10px] opacity-60">({{ outline.length }})</span>
+          </button>
+          <span class="text-sm font-medium truncate">{{ title }}</span>
+          <span class="text-[11px] text-amber-700 bg-amber-50 border border-amber-200 rounded px-1.5 py-0.5 flex-shrink-0">原頁模式（原型）</span>
+        </div>
+        <div class="flex items-center gap-2 flex-shrink-0">
+          <button @click="go(currentPage - 1)" :disabled="currentPage <= 1"
+            class="w-8 h-8 rounded-lg bg-stone-100 hover:bg-stone-200 disabled:opacity-30">‹</button>
+          <input v-model.number="jump" @keyup.enter="go(jump)" type="number" :min="1" :max="numPages || 1"
+            class="w-16 bg-white border border-stone-200 rounded-lg px-2 py-1 text-center text-sm" />
+          <span class="text-xs text-stone-400">/ {{ numPages || '…' }}</span>
+          <button @click="go(currentPage + 1)" :disabled="currentPage >= numPages"
+            class="w-8 h-8 rounded-lg bg-stone-100 hover:bg-stone-200 disabled:opacity-30">›</button>
+          <div class="hidden md:flex items-center gap-1 ml-1 pl-2 border-l border-stone-200">
+            <button @click="setScale(scale - 0.2)" class="w-7 h-7 rounded bg-stone-100 hover:bg-stone-200 text-xs">−</button>
+            <span class="text-xs text-stone-400 w-10 text-center">{{ Math.round(scale * 100) }}%</span>
+            <button @click="setScale(scale + 0.2)" class="w-7 h-7 rounded bg-stone-100 hover:bg-stone-200 text-xs">+</button>
+          </div>
+          <a :href="`/api/ebooks/${id}/original?download=1`"
+            class="hidden md:flex items-center gap-1 px-2 py-1 rounded-md text-xs border bg-white text-stone-600 border-stone-200 hover:border-emerald-400 hover:text-emerald-700">
+            <span>⬇️</span><span>原檔</span>
+          </a>
+          <button @click="showText = !showText"
+            :class="['flex items-center gap-1 px-2 py-1 rounded-md text-xs border',
+              showText ? 'bg-stone-900 text-white border-stone-900' : 'bg-white text-stone-600 border-stone-200 hover:border-stone-400']">
+            <span>📝</span><span class="hidden sm:inline">文字</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="flex flex-1 min-h-0">
+      <!-- TOC sidebar -->
+      <aside v-if="tocOpen" class="w-64 border-r border-stone-200 bg-white overflow-y-auto flex-shrink-0">
+        <div v-if="!outline.length" class="p-4 text-xs text-stone-400">此 PDF 無內嵌書籤目錄。<br />可用上方頁碼直接翻頁。</div>
+        <ul v-else class="py-2">
+          <li v-for="(item, i) in outline" :key="i">
+            <button @click="gotoOutline(item)"
+              :class="['w-full text-left px-3 py-1.5 text-xs hover:bg-stone-50',
+                item._page === currentPage ? 'text-blue-700 font-medium bg-blue-50' : 'text-stone-700']"
+              :style="{ paddingLeft: (12 + item._depth * 12) + 'px' }">
+              {{ item.title }}
+              <span v-if="item._page" class="text-stone-300 ml-1">p{{ item._page }}</span>
+            </button>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- PDF page -->
+      <main class="flex-1 overflow-auto flex justify-center items-start bg-stone-200 p-6" ref="scrollEl">
+        <ClientOnly>
+          <div class="relative">
+            <div v-if="loading" class="absolute inset-0 flex items-center justify-center text-stone-500 text-sm">
+              載入中…
+            </div>
+            <div v-if="error" class="max-w-md text-center text-rose-600 text-sm bg-white border border-rose-200 rounded-lg p-6">
+              {{ error }}
+            </div>
+            <canvas ref="canvasEl" class="shadow-lg bg-white rounded-sm" :class="{ 'opacity-30': loading }" />
+          </div>
+          <template #fallback>
+            <div class="text-stone-500 text-sm pt-10">準備 PDF 檢視器…</div>
+          </template>
+        </ClientOnly>
+      </main>
+
+      <!-- OCR text pane -->
+      <aside v-if="showText" class="w-[34%] max-w-md border-l border-stone-200 bg-white overflow-y-auto flex-shrink-0">
+        <div class="px-4 py-3 border-b border-stone-100 flex items-center justify-between sticky top-0 bg-white">
+          <span class="text-xs font-medium text-stone-500">第 {{ currentPage }} 頁文字（OCR，可複製引用）</span>
+          <button @click="copyText" class="text-xs text-stone-400 hover:text-stone-700">{{ copied ? '已複製' : '複製' }}</button>
+        </div>
+        <div class="p-4 text-sm leading-relaxed whitespace-pre-wrap text-stone-800 selection:bg-amber-200">{{ ocrText || '（此頁無 OCR 文字）' }}</div>
+      </aside>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+const route = useRoute();
+const id = route.params.id as string;
+
+const title = ref("");
+const numPages = ref(0);
+const currentPage = ref(Number(route.query.page) || 1);
+const jump = ref(currentPage.value);
+const scale = ref(1.3);
+const loading = ref(true);
+const error = ref("");
+const tocOpen = ref(true);
+const showText = ref(true);
+const ocrText = ref("");
+const copied = ref(false);
+const outline = ref<any[]>([]);
+
+const canvasEl = ref<HTMLCanvasElement | null>(null);
+let pdfDoc: any = null;
+let pdfjsLib: any = null;
+let rendering = false;
+
+// Book metadata (title) — reuse the existing reader API.
+const { data: meta } = await useFetch<any>(`/api/ebooks/${id}`, { query: { page: 1 } });
+if (meta.value) title.value = meta.value.title;
+
+async function loadPdf() {
+  try {
+    pdfjsLib = await import("pdfjs-dist");
+    const workerUrl = (await import("pdfjs-dist/build/pdf.worker.min.mjs?url")).default;
+    pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl;
+    const task = pdfjsLib.getDocument({ url: `/api/ebooks/${id}/original`, withCredentials: true });
+    pdfDoc = await task.promise;
+    numPages.value = pdfDoc.numPages;
+    await buildOutline();
+    await renderPage(currentPage.value);
+  } catch (e: any) {
+    error.value = "無法載入 PDF：" + (e?.message || e);
+    loading.value = false;
+  }
+}
+
+async function buildOutline() {
+  try {
+    const raw = await pdfDoc.getOutline();
+    if (!raw) return;
+    const flat: any[] = [];
+    const walk = async (items: any[], depth: number) => {
+      for (const it of items) {
+        let page: number | null = null;
+        try {
+          let dest = it.dest;
+          if (typeof dest === "string") dest = await pdfDoc.getDestination(dest);
+          if (Array.isArray(dest) && dest[0]) {
+            const idx = await pdfDoc.getPageIndex(dest[0]);
+            page = idx + 1;
+          }
+        } catch { /* unresolved dest */ }
+        flat.push({ title: it.title, _depth: depth, _page: page });
+        if (it.items?.length) await walk(it.items, depth + 1);
+      }
+    };
+    await walk(raw, 0);
+    outline.value = flat;
+  } catch { /* no outline */ }
+}
+
+async function renderPage(n: number) {
+  if (!pdfDoc || rendering) return;
+  rendering = true;
+  loading.value = true;
+  try {
+    const page = await pdfDoc.getPage(n);
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const viewport = page.getViewport({ scale: scale.value * dpr });
+    const canvas = canvasEl.value!;
+    const ctx = canvas.getContext("2d")!;
+    canvas.width = viewport.width;
+    canvas.height = viewport.height;
+    canvas.style.width = viewport.width / dpr + "px";
+    canvas.style.height = viewport.height / dpr + "px";
+    await page.render({ canvasContext: ctx, viewport }).promise;
+  } finally {
+    rendering = false;
+    loading.value = false;
+  }
+  fetchOcr(n);
+}
+
+async function fetchOcr(n: number) {
+  try {
+    const d: any = await $fetch(`/api/ebooks/${id}`, { query: { page: n } });
+    ocrText.value = d?.currentPage?.content || "";
+  } catch {
+    ocrText.value = "";
+  }
+}
+
+function go(n: number) {
+  n = Math.max(1, Math.min(n, numPages.value || 1));
+  currentPage.value = n;
+  jump.value = n;
+}
+
+function gotoOutline(item: any) {
+  if (item._page) go(item._page);
+}
+
+function setScale(s: number) {
+  scale.value = Math.max(0.6, Math.min(3, Math.round(s * 10) / 10));
+  renderPage(currentPage.value);
+}
+
+async function copyText() {
+  if (!ocrText.value) return;
+  await navigator.clipboard.writeText(ocrText.value);
+  copied.value = true;
+  setTimeout(() => (copied.value = false), 1500);
+}
+
+watch(currentPage, (n) => renderPage(n));
+
+onMounted(loadPdf);
+</script>
