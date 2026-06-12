@@ -398,8 +398,13 @@ def assemble_and_upload(work: dict):
 
 def ensure_row(work: dict):
     import requests
-    row = {"id": work["eid"], "title": work["title"], "author": "弗里德里希‧馬克斯‧穆勒",
-           "author_en": "Friedrich Max Müller", "original_title": work["title_en"],
+    # author defaults to Müller (his own works) but is overridable so the same
+    # pipeline can ingest the Sacred Books of the East volumes, each translated
+    # by a different scholar (Legge, Bühler, …).
+    row = {"id": work["eid"], "title": work["title"],
+           "author": work.get("author", "弗里德里希‧馬克斯‧穆勒"),
+           "author_en": work.get("author_en", "Friedrich Max Müller"),
+           "original_title": work["title_en"],
            "original_publish_year": work["year"], "file_type": "epub",
            "category": work["category"], "subcategory": work["subcategory"]}
     te = _te()
