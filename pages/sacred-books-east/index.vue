@@ -60,7 +60,7 @@
         <ul class="space-y-2">
           <li v-for="v in g.volumes" :key="v.vol">
             <component
-              :is="isReadable(v) ? 'NuxtLink' : 'div'"
+              :is="isReadable(v) ? VolLink : 'div'"
               :to="isReadable(v) ? `/ebook/${v.ebookId}` : undefined"
               class="vol-row group"
               :class="isReadable(v)
@@ -101,6 +101,11 @@ definePageMeta({ middleware: 'auth' })
 useHead({ title: '東方聖書 — Know Graph Lab' })
 
 const store = useSacredBooksEastStore()
+
+// Bind the resolved component object (not the string) to <component :is> — see
+// the note in collected-works/[slug].vue. String resolution of an auto-imported
+// component can render a dead element with no href.
+const VolLink = resolveComponent('NuxtLink')
 
 const countOf = (key: string) => store.volumes.filter((v) => v.tradition === key).length
 

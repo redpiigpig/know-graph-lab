@@ -425,12 +425,48 @@ def _upload(eid: str, chunks: list[dict], out_path: Path):
     patch = {"chunk_count": len(chunks), "total_chars": total_chars,
              "total_pages": len(chunks), "parsed_at": now, "standardized_at": now}
     requests.patch(f"{te.URL}/rest/v1/ebooks?id=eq.{eid}", headers=te.H_JSON, json=patch, timeout=30)
-    requests.delete(f"{te.URL}/rest/v1/ebook_chunks?ebook_id=eq.{eid}", headers=te.H_GET, timeout=30)
     rows = [{"ebook_id": eid, "chunk_index": c["chunk_index"], "chunk_type": c["chunk_type"],
              "page_number": c["page_number"], "chapter_path": c["chapter_path"],
              "content": c["content"][:200], "char_count": len(c["content"])} for c in chunks]
+    sync_previews(eid, rows)
+
+
+def sync_previews(eid: str, rows: list[dict]):
+    """Replace ebook_chunks preview rows for one book, durably. The reader reads
+    full text from R2/JSONL, but the library search/preview uses this table, so a
+    half-finished insert (Drive/network blip) leaves stale previews. Delete then
+    insert with per-batch retry, and verify the final count matches — without
+    this, a flaky POST silently truncated previews on every re-upload."""
+    import requests
+    te = _te()
+    # ebook_chunks.chunk_type has a CHECK constraint (page/chapter/section). The
+    # cover chunk is 'cover' in the JSONL/R2 (reader uses it), but that value is
+    # rejected by the table, so a cover in batch 0 used to fail the whole batch
+    # (silently dropping ~25 previews per book). Coerce to an allowed type for
+    # the preview table only; the R2 copy the reader reads keeps 'cover'.
+    allowed = {"page", "chapter", "section"}
+    for r in rows:
+        if r.get("chunk_type") not in allowed:
+            r["chunk_type"] = "page"
+    requests.delete(f"{te.URL}/rest/v1/ebook_chunks?ebook_id=eq.{eid}", headers=te.H_GET, timeout=30)
     for i in range(0, len(rows), 25):
-        requests.post(f"{te.URL}/rest/v1/ebook_chunks", headers=te.H_JSON, json=rows[i:i + 25], timeout=60)
+        batch = rows[i:i + 25]
+        for attempt in range(4):
+            try:
+                r = requests.post(f"{te.URL}/rest/v1/ebook_chunks", headers=te.H_JSON, json=batch, timeout=60)
+                if r.status_code < 300:
+                    break
+            except Exception:  # noqa: BLE001
+                pass
+            time.sleep(2 * (attempt + 1))
+        else:
+            print(f"  ⚠ preview batch {i} failed after retries (eid {eid})", flush=True)
+    # Verify — re-post any gap so the table count matches the JSONL length.
+    got = requests.get(f"{te.URL}/rest/v1/ebook_chunks?ebook_id=eq.{eid}&select=chunk_index",
+                       headers={**te.H_GET, "Prefer": "count=exact", "Range": "0-0"}, timeout=30)
+    have = int(got.headers.get("content-range", "*/0").split("/")[-1] or 0)
+    if have != len(rows):
+        print(f"  ⚠ preview count {have}≠{len(rows)} for {eid} (will self-heal next upload)", flush=True)
 
 
 def is_done(work: dict) -> bool:

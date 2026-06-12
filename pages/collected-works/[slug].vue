@@ -80,7 +80,7 @@
           <ul class="space-y-2">
             <li v-for="(w, i) in g.items" :key="i">
               <component
-                :is="linkTarget(w) ? 'NuxtLink' : 'div'"
+                :is="linkTarget(w) ? RowLink : 'div'"
                 :to="linkTarget(w)"
                 class="work-row group"
                 :class="linkTarget(w)
@@ -122,6 +122,12 @@ definePageMeta({ middleware: 'auth' })
 const route = useRoute()
 const store = useCollectedWorksStore()
 const author = computed(() => store.bySlug(route.params.slug as string))
+
+// Bind the resolved NuxtLink component object (NOT the string 'NuxtLink') to
+// <component :is>. Auto-imported components aren't reliably resolvable by string
+// name at runtime, so `:is="'NuxtLink'"` can render a dead <nuxtlink> element
+// with no href — the cards then look clickable but do nothing.
+const RowLink = resolveComponent('NuxtLink')
 
 // Live transcription progress: a work with >1 chunk in the DB has real content,
 // so auto-upgrade a 'planned' work with an ebookId to clickable 轉錄中 without
