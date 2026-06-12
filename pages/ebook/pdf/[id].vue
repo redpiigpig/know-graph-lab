@@ -189,8 +189,39 @@ async function buildOutline() {
       }
     };
     await walk(raw, 0);
-    outline.value = flat;
+    outline.value = thinOutline(flat, numPages.value);
   } catch { /* no outline */ }
+}
+
+// Some scanned/OCR'd PDFs carry a bookmark for EVERY page — hundreds of
+// page-level entries that flood the 264px sidebar and aren't real chapters.
+// Mirror standardize_pdf.normalize_toc's MIN_PAGES_PER_ENTRY heuristic:
+//   1. collapse entries that resolve to the same page (keep the shallowest)
+//   2. if still denser than ~1.2 pages/entry, drop the deepest level and retry
+//   3. if even the top level is per-page junk, hide the outline (page nav stays)
+const MIN_PAGES_PER_ENTRY = 1.2;
+function thinOutline(flat: any[], total: number): any[] {
+  // 1) collapse same-page duplicates, keeping the topmost (lowest _depth).
+  const byPage = new Map<number, any>();
+  const noPage: any[] = [];
+  for (const e of flat) {
+    if (!e._page) { noPage.push(e); continue; }
+    const prev = byPage.get(e._page);
+    if (!prev || e._depth < prev._depth) byPage.set(e._page, e);
+  }
+  let entries = [...byPage.values()].sort((a, b) => a._page - b._page);
+  if (total <= 0 || entries.length === 0) return flat;
+
+  // 2) too dense → drop deepest levels until it reads like chapters.
+  const maxDepth = Math.max(...entries.map(e => e._depth));
+  for (let cut = maxDepth; cut >= 0; cut--) {
+    const kept = entries.filter(e => e._depth <= cut);
+    if (kept.length === 0) continue;
+    if (total / kept.length >= MIN_PAGES_PER_ENTRY) return kept;
+    entries = kept; // keep narrowing
+  }
+  // 3) even top level is per-page junk → not a usable TOC.
+  return [];
 }
 
 async function renderPage(n: number) {
