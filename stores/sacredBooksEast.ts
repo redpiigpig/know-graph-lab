@@ -77,7 +77,7 @@ export const useSacredBooksEastStore = defineStore('sacredBooksEast', () => {
   // 穆勒原版 50 卷權威編號（Oxford Clarendon, 1879–1910）。
   // 繁中卷名本站擬定；archiveId/ebookId 逐卷轉錄時補。
   const volumes = ref<SbeVolume[]>([
-    { vol: 1, titleZh: '奧義書（上）', titleEn: 'The Upanishads, Part I', translatorZh: '穆勒', translatorEn: 'F. Max Müller', year: 1879, tradition: 'veda', status: 'in-progress', ebookId: '55555501-5555-4555-8555-555555555555', archiveId: 'upanishads01mluoft', note: '英文已上架；繁中逐段翻譯進行中。內含旃多格耶、由誰、愛多列雅、憍尸多基、自在等奧義書＋導論。' },
+    { vol: 1, titleZh: '奧義書（上）', titleEn: 'The Upanishads, Part I', translatorZh: '穆勒', translatorEn: 'F. Max Müller', year: 1879, tradition: 'veda', status: 'done', ebookId: '55555501-5555-4555-8555-555555555555', archiveId: 'upanishads01mluoft', note: '英／繁中逐段對照（自譯本）。內含旃多格耶、由誰、愛多列雅、憍尸多基、自在等奧義書＋導論。' },
     { vol: 2, titleZh: '雅利安聖法（上）', titleEn: 'The Sacred Laws of the Âryas, Part I', translatorZh: '比勒', translatorEn: 'Georg Bühler', year: 1879, tradition: 'veda', status: 'planned' },
     { vol: 3, titleZh: '儒家經籍（一）：書經‧詩經宗教篇‧孝經', titleEn: 'The Texts of Confucianism, Part I', translatorZh: '理雅各', translatorEn: 'James Legge', year: 1879, tradition: 'china', status: 'planned' },
     { vol: 4, titleZh: '阿維斯陀（一）：祓魔法典', titleEn: 'The Zend-Avesta, Part I (Vendîdâd)', translatorZh: '達梅斯特', translatorEn: 'James Darmesteter', year: 1880, tradition: 'zoroastrian', status: 'in-progress', ebookId: '55555504-5555-4555-8555-555555555555', archiveId: 'zendavesta00darmgoog', note: '英文已上架；繁中翻譯進行中。' },
