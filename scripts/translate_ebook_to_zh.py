@@ -605,7 +605,7 @@ def nvidia_translate(source: str) -> str:
 
 
 def nvidia_chat(prompt: str, max_tokens: int = 2000, system: str | None = None,
-                temperature: float = 0.2) -> str:
+                temperature: float = 0.2, deadline_s: float = 600) -> str:
     """Generic NVIDIA NIM chat call (OpenAI-compatible) for NON-translation tasks
     (proofreading / titling / cleanup) that previously used Haiku — Haiku is fully
     retired (user 2026-06-03). Rotates keys + NVIDIA_MODELS; strips <think> blocks.
@@ -617,7 +617,7 @@ def nvidia_chat(prompt: str, max_tokens: int = 2000, system: str | None = None,
            [{"role": "user", "content": prompt}]
     model = NVIDIA_MODELS[0]
     last_err = "?"
-    deadline = time.time() + 600
+    deadline = time.time() + deadline_s
     while time.time() < deadline:
         picked = _nv_pick_key()
         if picked is None:

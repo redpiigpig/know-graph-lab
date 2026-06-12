@@ -148,16 +148,38 @@ def _parse_json_array(text):
     return data
 
 
+# NVIDIA 2-strike → Haiku 快速救急（避免 nvidia_chat 內建 10 分鐘 deadline 把整個 run 卡死）：
+#   · 每次 NVIDIA 嘗試只給 90s（deadline_s），逾時就換下一個引擎，不再苦等 10 分鐘。
+#   · 連續 _NV_STREAK_LIMIT 次 NVIDIA 失敗 → 暫停 NVIDIA _NV_COOLDOWN_S 秒，直接走 Gemini→Haiku
+#     （使用者訂 Claude Max，NVIDIA/Gemini 都掛時 Haiku 為可靠後盾）。冷卻後再探 NVIDIA、成功即重置。
+_NV_STREAK_LIMIT = 2
+_NV_COOLDOWN_S = 900
+_nv_fail_streak = 0
+_nv_cooldown_until = 0.0
+
+
 def llm_json(prompt, system):
-    """回 list[dict]；NVIDIA→Gemini→Haiku，各自解析失敗就換下一個引擎。"""
+    """回 list[dict]；NVIDIA→Gemini→Haiku，各自失敗就換下一個引擎。NVIDIA 2-strike 後暫停改走 Gemini→Haiku。"""
+    global _nv_fail_streak, _nv_cooldown_until
     errs = []
-    for name, fn in (("NVIDIA", lambda: T.nvidia_chat(prompt, max_tokens=7000, system=system, temperature=0.3)),
-                     ("Gemini", lambda: _gemini_json(prompt, system)),
-                     ("Haiku", lambda: _haiku_json(prompt, system))):
+    engines = []
+    if time.time() >= _nv_cooldown_until:  # 冷卻期內就跳過 NVIDIA
+        engines.append(("NVIDIA", lambda: T.nvidia_chat(prompt, max_tokens=7000, system=system, temperature=0.3, deadline_s=90)))
+    engines.append(("Gemini", lambda: _gemini_json(prompt, system)))
+    engines.append(("Haiku", lambda: _haiku_json(prompt, system)))
+    for name, fn in engines:
         try:
-            return _parse_json_array(fn())
+            out = _parse_json_array(fn())
+            if name == "NVIDIA":
+                _nv_fail_streak = 0
+            return out
         except Exception as e:  # noqa: BLE001
             errs.append(f"{name}:{type(e).__name__}:{str(e)[:80]}")
+            if name == "NVIDIA":
+                _nv_fail_streak += 1
+                if _nv_fail_streak >= _NV_STREAK_LIMIT:
+                    _nv_cooldown_until = time.time() + _NV_COOLDOWN_S
+                    print(f"  ↳ NVIDIA 連續 {_nv_fail_streak} 次失敗 — 暫停 {_NV_COOLDOWN_S // 60} 分，直接走 Gemini→Haiku", flush=True)
             continue
     raise RuntimeError("all engines failed → " + " | ".join(errs))
 
