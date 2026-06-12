@@ -3,7 +3,8 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from parse_bank import decode_greek_morph, GREEK_OPTIONS  # noqa: E402
+from parse_bank import (decode_greek_morph, GREEK_OPTIONS,  # noqa: E402
+                        decode_hebrew_morph, HEBREW_OPTIONS)
 
 
 def _golds(res):
@@ -80,3 +81,57 @@ def test_all_golds_are_valid_options():
             continue
         for f in r["fields"]:
             assert f["gold"] in GREEK_OPTIONS[f["k"]], f"{code}: {f['k']}={f['gold']} 不在選項"
+
+
+# ── 希伯來文 ────────────────────────────────────────────────────────────────
+def _hg(res):
+    return {f["k"]: f["gold"] for f in res["fields"]}
+
+
+def test_heb_verb_qal_perfect():
+    r = decode_hebrew_morph("HVqp3ms")  # ברא 創造 創 1:1
+    assert r["pos"] == "動詞"
+    assert _hg(r) == {"stem": "Qal", "conj": "完成式", "person": "第三",
+                      "gender": "陽性", "number": "單數"}
+
+
+def test_heb_stem_case_sensitive():
+    # 大小寫敏感：h=Hiphil、H=Hophal、p=Piel、P=Pual
+    assert _hg(decode_hebrew_morph("HVhi3ms"))["stem"] == "Hiphil"
+    assert _hg(decode_hebrew_morph("HVHi3ms"))["stem"] == "Hophal"
+    assert _hg(decode_hebrew_morph("HVpp3ms"))["stem"] == "Piel"
+    assert _hg(decode_hebrew_morph("HVPp3ms"))["stem"] == "Pual"
+
+
+def test_heb_noun_gender_number_state():
+    r = decode_hebrew_morph("HNcfsa")
+    assert r["pos"] == "名詞"
+    assert _hg(r) == {"gender": "陰性", "number": "單數", "state": "絕對"}
+
+
+def test_heb_construct_state():
+    assert _hg(decode_hebrew_morph("HNcmsc"))["state"] == "連屬"
+
+
+def test_heb_participle_no_person():
+    r = decode_hebrew_morph("HVqrms")  # qal 主動分詞 陽性單數
+    g = _hg(r)
+    assert g["conj"] == "主動分詞" and "person" not in g
+    assert g["gender"] == "陽性" and g["number"] == "單數"
+
+
+def test_heb_strip_optional_leading_H():
+    assert decode_hebrew_morph("Ncfsa") is not None  # 第二語素無 H 前綴也可解
+
+
+def test_heb_unknown_returns_none():
+    assert decode_hebrew_morph("HC") is None       # 連接詞
+    assert decode_hebrew_morph("HR") is None        # 介系詞
+    assert decode_hebrew_morph("") is None
+
+
+def test_heb_all_golds_valid_options():
+    for code in ("HVqp3ms", "HVHi3ms", "HNcfsa", "HNcmsc", "HVqrms"):
+        r = decode_hebrew_morph(code)
+        for f in r["fields"]:
+            assert f["gold"] in HEBREW_OPTIONS[f["k"]], f"{code}: {f['k']}={f['gold']}"

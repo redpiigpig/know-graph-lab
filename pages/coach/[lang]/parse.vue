@@ -40,12 +40,12 @@
           <!-- 經文脈絡 -->
           <div class="bg-white rounded-2xl border border-gray-100 p-4">
             <div class="text-[11px] text-indigo-500 mb-1.5">{{ cur.ref }}</div>
-            <p class="text-lg leading-loose text-gray-700" lang="grc">
+            <p class="text-lg leading-loose text-gray-700" :dir="rtl ? 'rtl' : 'ltr'">
               <span v-for="(w, i) in verseWords" :key="i"
                 :class="i === cur.target_idx ? 'bg-amber-200 text-gray-900 font-bold rounded px-1' : ''">{{ w }} </span>
             </p>
             <div class="mt-2 text-xs text-gray-400">
-              目標字：<span class="text-gray-700 font-semibold" lang="grc">{{ cur.surface }}</span>
+              目標字：<span class="text-gray-700 font-semibold" :dir="rtl ? 'rtl' : 'ltr'">{{ cur.surface }}</span>
               <span v-if="cur.translit"> （{{ cur.translit }}）</span>
               · 詞性 <span class="text-gray-600">{{ cur.pos }}</span>
             </div>
@@ -73,7 +73,7 @@
                 {{ allCorrect ? '✅ 全對！' : '部分有誤，正解見上方綠色' }}
               </p>
               <p class="text-xs text-gray-500 mt-1">
-                <span lang="grc">{{ cur.surface }}</span> ← 原形 <span lang="grc" class="font-semibold">{{ cur.lemma }}</span>
+                <span :dir="rtl ? 'rtl' : 'ltr'">{{ cur.surface }}</span> ← 原形 <span :dir="rtl ? 'rtl' : 'ltr'" class="font-semibold">{{ cur.lemma }}</span>
                 <span v-if="cur.gloss" class="text-gray-400">（{{ cur.gloss }}）</span>
                 <span class="text-gray-300"> · {{ cur.code }}</span>
               </p>
@@ -95,7 +95,7 @@
             <div class="text-xs font-semibold text-rose-400 mb-1.5">答錯的字（再看一次）</div>
             <div class="space-y-1.5">
               <div v-for="(w, i) in wrong" :key="i" class="text-xs text-gray-600 flex flex-wrap gap-x-2">
-                <span lang="grc" class="font-semibold text-gray-800">{{ w.surface }}</span>
+                <span :dir="rtl ? 'rtl' : 'ltr'" class="font-semibold text-gray-800">{{ w.surface }}</span>
                 <span class="text-gray-400">{{ w.ref }}</span>
                 <span class="text-gray-500">{{ w.fields.map((f) => f.gold).join('‧') }}</span>
                 <span class="text-gray-300">{{ w.code }}</span>
@@ -121,7 +121,7 @@ import { useActivityTracker } from "~/composables/useActivityTracker";
 definePageMeta({ middleware: "coach-auth" });
 
 interface Field { k: string; gold: string }
-interface Item { ref: string; verse: string; target_idx: number; surface: string; translit: string; lemma: string; gloss: string; pos: string; code: string; fields: Field[] }
+interface Item { ref: string; verse_words: string[]; target_idx: number; surface: string; translit: string; lemma: string; gloss: string; pos: string; code: string; fields: Field[] }
 
 const route = useRoute();
 const lang = computed(() => route.params.lang as string);
@@ -130,6 +130,7 @@ const tracker = useActivityTracker();
 const coach = ref<any>(null);
 const loading = ref(true);
 const available = ref(false);
+const rtl = ref(false);
 const total = ref(0);
 const options = ref<Record<string, string[]>>({});
 const dimLabels = ref<Record<string, string>>({});
@@ -144,8 +145,8 @@ const qCount = ref(10);
 const answered = ref(false);
 const picks = reactive<Record<string, string>>({});
 
-const cur = computed(() => items.value[idx.value] || ({ fields: [], verse: "", target_idx: -1 } as unknown as Item));
-const verseWords = computed(() => (cur.value.verse ? cur.value.verse.split(" ") : []));
+const cur = computed(() => items.value[idx.value] || ({ fields: [], verse_words: [], target_idx: -1 } as unknown as Item));
+const verseWords = computed(() => cur.value.verse_words || []);
 const answeredCount = computed(() => idx.value + (answered.value ? 1 : 0));
 const allChosen = computed(() => cur.value.fields.every((f) => picks[f.k]));
 const allCorrect = computed(() => cur.value.fields.every((f) => picks[f.k] === f.gold));
@@ -183,6 +184,7 @@ function next() {
 async function load(n: number) {
   const r = await authedFetch<any>(`/api/lang/parse?language=${lang.value}&n=${n}`);
   available.value = r.available;
+  rtl.value = !!r.rtl;
   total.value = r.total || 0;
   options.value = r.options || {};
   dimLabels.value = r.dimLabels || {};

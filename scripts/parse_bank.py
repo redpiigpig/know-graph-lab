@@ -173,10 +173,146 @@ def harvest_greek(per_lemma_cap=4, total_cap=1500):
     for t in capped:
         out.append({
             "ref": _zh_ref(t["ref"]),
-            "verse": " ".join(verses[t["ref"]]),
+            "verse_words": verses[t["ref"]],
             "target_idx": t["_idx"],
             "surface": t["surface"], "translit": t["translit"],
             "lemma": t["lemma"], "gloss": t["gloss"],
+            "pos": t["pos"], "code": t["code"], "fields": t["fields"],
+        })
+    return out
+
+
+# ── 希伯來文 morph 碼 → 繁中維度（STEPBible TAHOT / OSHB 編碼）─────────────────
+HEBREW_OPTIONS = {
+    "stem":   ["Qal", "Niphal", "Piel", "Pual", "Hiphil", "Hophal", "Hithpael"],  # 七大字幹 binyanim
+    "conj":   ["完成式", "未完成式", "敘事式", "命令式", "不定獨立", "不定附屬", "主動分詞", "被動分詞"],
+    "person": ["第一", "第二", "第三"],
+    "gender": ["陽性", "陰性", "通性"],
+    "number": ["單數", "複數", "雙數"],
+    "state":  ["絕對", "連屬"],
+}
+HEB_DIM_LABEL = {"stem": "字幹(binyan)", "conj": "動貌", "person": "人稱",
+                 "gender": "性", "number": "數", "state": "狀態"}
+
+_HB_STEM = {"q": "Qal", "N": "Niphal", "p": "Piel", "P": "Pual",
+            "h": "Hiphil", "H": "Hophal", "t": "Hithpael"}  # 大小寫敏感
+_HB_CONJ = {"p": "完成式", "i": "未完成式", "w": "敘事式", "v": "命令式",
+            "a": "不定獨立", "c": "不定附屬", "r": "主動分詞", "s": "被動分詞"}
+_HB_PERSON = {"1": "第一", "2": "第二", "3": "第三"}
+_HB_GEN = {"m": "陽性", "f": "陰性", "c": "通性", "b": "通性"}
+_HB_NUM = {"s": "單數", "p": "複數", "d": "雙數"}
+_HB_STATE = {"a": "絕對", "c": "連屬"}  # d=確定 罕見 → 不出題
+
+
+def decode_hebrew_morph(code):
+    """STEPBible 希伯來文 morph 碼（如 HVqp3ms / HNcfsa）→ 可批改維度；不可乾淨批改回 None。
+    只處理單一語素（呼叫端應先濾掉含 '/' 的多語素詞）。"""
+    code = (code or "").strip()
+    if code.startswith("H"):
+        code = code[1:]
+    if not code:
+        return None
+    pos = code[0]
+
+    # 名詞：性‧數‧狀態（type 在 code[1]，不出題）
+    if pos == "N" and len(code) >= 5:
+        gen, num, st = code[2], code[3], code[4]
+        if gen not in _HB_GEN or num not in _HB_NUM or st not in _HB_STATE:
+            return None
+        return {"pos": "名詞", "fields": [
+            {"k": "gender", "gold": _HB_GEN[gen]},
+            {"k": "number", "gold": _HB_NUM[num]},
+            {"k": "state", "gold": _HB_STATE[st]}]}
+
+    # 動詞：字幹 + 動貌 (+ 人稱性數 / 分詞性數 / 不定詞無)
+    if pos == "V" and len(code) >= 3:
+        stem, conj, rest = code[1], code[2], code[3:]
+        if stem not in _HB_STEM or conj not in _HB_CONJ:
+            return None
+        fields = [{"k": "stem", "gold": _HB_STEM[stem]},
+                  {"k": "conj", "gold": _HB_CONJ[conj]}]
+        if conj in ("p", "i", "w", "v"):  # 限定式：人稱+性+數
+            if len(rest) < 3 or rest[0] not in _HB_PERSON or rest[1] not in _HB_GEN or rest[2] not in _HB_NUM:
+                return None
+            fields += [{"k": "person", "gold": _HB_PERSON[rest[0]]},
+                       {"k": "gender", "gold": _HB_GEN[rest[1]]},
+                       {"k": "number", "gold": _HB_NUM[rest[2]]}]
+        elif conj in ("r", "s"):  # 分詞：性+數
+            if len(rest) < 2 or rest[0] not in _HB_GEN or rest[1] not in _HB_NUM:
+                return None
+            fields += [{"k": "gender", "gold": _HB_GEN[rest[0]]},
+                       {"k": "number", "gold": _HB_NUM[rest[1]]}]
+        # 不定詞（a/c）：無額外維度
+        return {"pos": "動詞", "fields": fields}
+
+    return None
+
+
+_TAHOT = ["TAHOT%20Gen-Deu%20-%20Translators%20Amalgamated%20Hebrew%20OT%20-%20STEPBible.org%20CC%20BY.txt",
+          "TAHOT%20Jos-Est%20-%20Translators%20Amalgamated%20Hebrew%20OT%20-%20STEPBible.org%20CC%20BY.txt",
+          "TAHOT%20Job-Sng%20-%20Translators%20Amalgamated%20Hebrew%20OT%20-%20STEPBible.org%20CC%20BY.txt",
+          "TAHOT%20Isa-Mal%20-%20Translators%20Amalgamated%20Hebrew%20OT%20-%20STEPBible.org%20CC%20BY.txt"]
+_HEB_BOOK_ZH = {
+    "Gen": "創世記", "Exo": "出埃及記", "Lev": "利未記", "Num": "民數記", "Deu": "申命記",
+    "Jos": "約書亞記", "Jdg": "士師記", "Rut": "路得記", "1Sa": "撒母耳記上", "2Sa": "撒母耳記下",
+    "1Ki": "列王紀上", "2Ki": "列王紀下", "1Ch": "歷代志上", "2Ch": "歷代志下", "Ezr": "以斯拉記",
+    "Neh": "尼希米記", "Est": "以斯帖記", "Job": "約伯記", "Psa": "詩篇", "Pro": "箴言",
+    "Ecc": "傳道書", "Sng": "雅歌", "Isa": "以賽亞書", "Jer": "耶利米書", "Lam": "耶利米哀歌",
+    "Eze": "以西結書", "Dan": "但以理書", "Hos": "何西阿書", "Jol": "約珥書", "Amo": "阿摩司書",
+    "Oba": "俄巴底亞書", "Jon": "約拿書", "Mic": "彌迦書", "Nah": "那鴻書", "Hab": "哈巴谷書",
+    "Zep": "西番雅書", "Hag": "哈該書", "Zec": "撒迦利亞書", "Mal": "瑪拉基書",
+}
+
+
+def _heb_zh_ref(ref):
+    book, _, cv = ref.partition(".")
+    return f"{_HEB_BOOK_ZH.get(book, book)} {cv}"
+
+
+def harvest_hebrew(per_lemma_cap=4, total_cap=1500):
+    """下載 TAHOT，只取單一語素的內容詞（N/V），解碼成題庫（含經文脈絡，RTL）。"""
+    verses, tokens = {}, []
+    for fn in _TAHOT:
+        print(f"  下載 {fn[:24]}…", flush=True)
+        r = requests.get(f"{STEP_BASE}/{fn}", timeout=240)
+        r.encoding = "utf-8"
+        for ln in r.text.splitlines():
+            if "\t" not in ln or "#" not in ln[:12] or "." not in ln[:12]:
+                continue
+            cols = ln.split("\t")
+            if len(cols) < 6 or "#" not in cols[0]:
+                continue
+            ref = cols[0].split("#")[0].strip()
+            surface = cols[1].replace("/", "").strip()  # 去掉語素分隔，併成整字
+            translit = cols[2].replace("/", "").strip()
+            gloss = cols[3].replace("/", " ").strip()
+            morph = cols[5].strip()
+            verses.setdefault(ref, []).append(surface)
+            if "/" in morph:  # 多語素（含前綴）→ 黃金答案易混淆，跳過
+                continue
+            decoded = decode_hebrew_morph(morph)
+            if decoded:
+                tokens.append({"ref": ref, "surface": surface, "translit": translit,
+                               "gloss": gloss, "code": morph, "pos": decoded["pos"],
+                               "fields": decoded["fields"], "_idx": len(verses[ref]) - 1})
+    per, capped = {}, []
+    for t in tokens:
+        key = (t["pos"], t["translit"])
+        if per.get(key, 0) >= per_lemma_cap:
+            continue
+        per[key] = per.get(key, 0) + 1
+        capped.append(t)
+    if len(capped) > total_cap:
+        step = len(capped) / total_cap
+        capped = [capped[int(i * step)] for i in range(total_cap)]
+    out = []
+    for t in capped:
+        out.append({
+            "ref": _heb_zh_ref(t["ref"]),
+            "verse_words": verses[t["ref"]],
+            "target_idx": t["_idx"],
+            "surface": t["surface"], "translit": t["translit"],
+            "lemma": t["surface"], "gloss": t["gloss"],
             "pos": t["pos"], "code": t["code"], "fields": t["fields"],
         })
     return out
@@ -190,12 +326,18 @@ def main():
         payload = {"language": "grc", "options": GREEK_OPTIONS, "dimLabels": DIM_LABEL, "items": items}
         path = OUT_DIR / "parseGreek.json"
         path.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
-        # 統計
         from collections import Counter
-        pc = Counter(i["pos"] for i in items)
-        print(f"寫入 {path}：{len(items)} 題（{dict(pc)}）")
+        print(f"寫入 {path}：{len(items)} 題（{dict(Counter(i['pos'] for i in items))}）")
+    elif which == "hebrew":
+        items = harvest_hebrew()
+        payload = {"language": "hbo", "rtl": True, "options": HEBREW_OPTIONS,
+                   "dimLabels": HEB_DIM_LABEL, "items": items}
+        path = OUT_DIR / "parseHebrew.json"
+        path.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+        from collections import Counter
+        print(f"寫入 {path}：{len(items)} 題（{dict(Counter(i['pos'] for i in items))}）")
     else:
-        print(f"未知參數：{which}（目前支援 greek；hebrew 下一版）")
+        print(f"未知參數：{which}（支援 greek / hebrew）")
 
 
 if __name__ == "__main__":
