@@ -95,6 +95,23 @@
 
 > **8 本全查實**（含意外發現的《人的圓滿》= A Christophany，對應 Opera Omnia III.2）。主力譯者**王志成、思竹**（浙大）。多為 1999–2008「宗教與世界叢書／第二軸心時代文叢」。**有完整中譯的卷一律走 REFERENCE 模式**（既有中譯主欄＋英文逐段對照，不重譯）。取檔時仍以版權頁複核。
 
+### 英文原典 ↔ 中譯 對照（archive.org，2026-06-12 查）
+
+REFERENCE 模式每卷需**英文原典＋中譯**兩檔。英文原典全在 archive.org，但**全部 `restricted=true`（inlibrary 借閱制，非免費下載）** → 同起手卷，須 user 在自己機器借閱抽文字或走 shadow library；此 sandbox 連不到鏡像。
+
+| 中譯 | 英文原典 | archive.org id | 年 |
+|---|---|---|---|
+| 印度教中未知的基督 | The Unknown Christ of Hinduism | `unknownchristofh0000raim_q2h1`(1981) / `...raim`(1967) | 1981 |
+| 看不見的和諧 | Invisible Harmony: Essays on Contemplation and Responsibility | `invisibleharmony0000pani` | 1995 |
+| 智慧的居所 | A Dwelling Place for Wisdom | `dwellingplacefor0000pani` | 1993 |
+| 文化裁軍 | Cultural Disarmament: The Way to Peace | `culturaldisarmam0000pani` | 1995 |
+| 宗教內對話 | The Intrareligious Dialogue | `intrareligiousdi0000pani`(1999) / `..._x0k9`(1978) | 1999 |
+| 宇宙—神—人共融的經驗 | The Cosmotheandric Experience | `cosmotheandricex0000pani` | 1993 |
+| 人的圓滿 | Christophany: The Fullness of Man | `christophanyfull0000pani` | 2004 |
+| 對話經（諸宗教相遇）| （中文編譯文集，無單一對應英文書）| — | — |
+
+> **全 7 本英文原典 borrow-only**（無免費全文，跟全集其餘卷一致）。實務：user 於自己機器從 archive.org 借閱或 shadow library 取**英文原典＋中譯**兩檔丟本機 → `panikkar_build.py --src <en> --zh-src <zh>` 跑 REFERENCE 模式。
+
 > 中譯本多為**簡體掃描／電子書**，取得同走 shadow library（私人自用）或圖書館。**簡體一律先 opencc s2tw + TRAD_FIXES 轉繁**再用。
 
 ### 兩種工作流（user 拍板 2026-06-12）
