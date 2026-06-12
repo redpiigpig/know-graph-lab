@@ -181,6 +181,58 @@ class TestReferenceMode:
             mc.validate_multilang_chunk(c)
 
 
+class TestChapterAlignment:
+    """REFERENCE books: front matter diverges between EN原典 and 中譯 (prefaces,
+    TOC, 作者簡介…) and OCR can fragment a chapter into repeated `## 序言` headings.
+    So before pairing chapters we merge repeated headings + drop front/end matter."""
+
+    def test_is_frontmatter(self):
+        assert pk.is_frontmatter("## Preface to the New Edition")
+        assert pk.is_frontmatter("## 序言")
+        assert pk.is_frontmatter("## 目錄")
+        assert pk.is_frontmatter("## 作者簡介")
+        assert pk.is_frontmatter("(front)")
+        assert not pk.is_frontmatter("## 2. The Dialogical Dialogue")
+        assert not pk.is_frontmatter("## 宗教內對話的山上訓道")
+
+    def test_merge_repeated_headings(self):
+        secs = [
+            {"heading": "## 序言", "paras": ["a"]},
+            {"heading": "## 序言", "paras": ["b"]},
+            {"heading": "## 第一章", "paras": ["c"]},
+        ]
+        out = pk.merge_repeated_headings(secs)
+        assert [s["heading"] for s in out] == ["## 序言", "## 第一章"]
+        assert out[0]["paras"] == ["a", "b"]
+
+    def test_chapter_sections_drops_frontmatter_and_merges(self):
+        secs = [
+            {"heading": "(front)", "paras": ["x"]},
+            {"heading": "## 序言", "paras": ["p1"]},
+            {"heading": "## 序言", "paras": ["p2"]},
+            {"heading": "## 山上訓道", "paras": ["ch1"]},
+            {"heading": "## 2. The Dialogical Dialogue", "paras": ["ch2"]},
+            {"heading": "## 目錄", "paras": ["toc"]},
+        ]
+        chs = pk.chapter_sections(secs)
+        assert [s["heading"] for s in chs] == ["## 山上訓道", "## 2. The Dialogical Dialogue"]
+
+    def test_align_reference_chapters_pairs_after_filter(self):
+        en = [
+            {"heading": "## Preface", "paras": ["pre"]},
+            {"heading": "## The Sermon", "paras": ["e1"]},
+            {"heading": "## 2. Dialogue", "paras": ["e2"]},
+        ]
+        zh = [
+            {"heading": "## 作者簡介", "paras": ["bio"]},
+            {"heading": "## 山上訓道", "paras": ["z1"]},
+            {"heading": "## 對話", "paras": ["z2"]},
+        ]
+        pairs, n_en, n_zh = pk.align_reference_chapters(en, zh)
+        assert (n_en, n_zh) == (2, 2)
+        assert pairs[0] == ("## 山上訓道", "## The Sermon", ["e1"], ["z1"])
+
+
 class TestLoadSectionsFromSrc:
     def test_split_before_reflow_keeps_headings(self, tmp_path):
         # regression: reflow on the whole doc first glued INTRODUCTION/CHAPTER into

@@ -361,6 +361,54 @@ def build_reference_chunk(
     return chunk
 
 
+# Front/end matter headings to drop before pairing chapters (EN + 簡/繁中). NOT
+# 導論/緒論/introduction — those can be real content chapters.
+_FRONTMATTER_RE = re.compile(
+    r"(?i)(preface|foreword|a note to the reader|table of contents|contents\b|"
+    r"acknowledg|^index$|bibliograph|about the author|abbreviation|glossary|"
+    r"copyright|前言|序言|序\b|自序|原版序|新版序|譯序|译序|譯者的話|译者的话|"
+    r"作者簡介|作者简介|編者|编者|目錄|目录|凡例|索引|參考書目|参考书目|"
+    r"致謝|致谢|縮寫|缩写|版權|版权|附錄|附录)")
+
+
+def is_frontmatter(heading: str) -> bool:
+    """True if a section heading is front/end matter (preface, TOC, 作者簡介…) and
+    should not be paired as a chapter. '(front)' (text before the first heading)
+    is always front matter."""
+    h = heading.lstrip("# ").strip()
+    if h == "(front)":
+        return True
+    return bool(_FRONTMATTER_RE.search(h))
+
+
+def merge_repeated_headings(sections: list[dict]) -> list[dict]:
+    """Merge consecutive sections sharing the SAME heading into one. OCR
+    (--mark-headings) re-marks a running head on every page, fragmenting one
+    chapter/preface into N sections with an identical `## ` title."""
+    out: list[dict] = []
+    for s in sections:
+        if out and out[-1]["heading"] == s["heading"]:
+            out[-1]["paras"].extend(s["paras"])
+        else:
+            out.append({"heading": s["heading"], "paras": list(s["paras"])})
+    return out
+
+
+def chapter_sections(sections: list[dict]) -> list[dict]:
+    """Real chapters only: merge OCR-fragmented repeats, then drop front/end matter."""
+    return [s for s in merge_repeated_headings(sections) if not is_frontmatter(s["heading"])]
+
+
+def align_reference_chapters(en_sections: list[dict], zh_sections: list[dict]) -> tuple[list[tuple], int, int]:
+    """Drop front matter + merge repeats on both sides, then pair the remaining
+    chapters by order → (pairs, n_en_chapters, n_zh_chapters). Caller checks the
+    two counts match before trusting the alignment (a mismatch means OCR over/
+    under-split and needs a per-book manifest)."""
+    en_ch = chapter_sections(en_sections)
+    zh_ch = chapter_sections(zh_sections)
+    return pair_sections(en_ch, zh_ch), len(en_ch), len(zh_ch)
+
+
 def pair_sections(en_sections: list[dict], zh_sections: list[dict]) -> list[tuple]:
     """Pair English + existing-中譯 sections by order (translations keep the
     author's chapter order) → [(title_zh, en_head, en_paras, zh_paras)]. Uneven
@@ -383,8 +431,11 @@ def assemble_reference(en_sections: list[dict], zh_sections: list[dict]) -> list
     (build_reference_chunk's defaults are frozen at def-time, so select_book()'s
     reassignment must be passed explicitly)."""
     chunks = [make_cover_chunk()]
-    for i, (title_zh, en_head, en_paras, zh_paras) in enumerate(
-            pair_sections(en_sections, zh_sections), start=1):
+    pairs, n_en, n_zh = align_reference_chapters(en_sections, zh_sections)
+    if n_en != n_zh:
+        print(f"  ⚠ chapter count mismatch: EN={n_en} ZH={n_zh} — pairing by order; "
+              f"verify alignment (may need a per-book chapter manifest)", flush=True)
+    for i, (title_zh, en_head, en_paras, zh_paras) in enumerate(pairs, start=1):
         chunks.append(build_reference_chunk(
             chunk_index=i, title_zh=title_zh, en_head=en_head,
             zh_paras=zh_paras, en_paras=en_paras, page_number=i + 1,
@@ -573,8 +624,11 @@ def main():
         mode = "REFERENCE (既有中譯+英文)" if reference else "SELF-TRANSLATE (英→繁中)"
         print(f"mode: {mode}")
         if reference:
-            for i, (title_zh, en_head, en_p, zh_p) in enumerate(pair_sections(en_secs, zh_secs)):
-                print(f"sec{i} 「{(title_zh or en_head)[:34]}」 ZH¶={len(zh_p)} EN¶={len(en_p)}")
+            pairs, n_en, n_zh = align_reference_chapters(en_secs, zh_secs)
+            print(f"chapters after front-matter filter: EN={n_en} ZH={n_zh}"
+                  + ("  ⚠ MISMATCH" if n_en != n_zh else "  ✓ aligned"))
+            for i, (title_zh, en_head, en_p, zh_p) in enumerate(pairs, start=1):
+                print(f"ch{i} 「{(title_zh or en_head)[:30]}」 ↔ 「{en_head[:30]}」 ZH¶={len(zh_p)} EN¶={len(en_p)}")
         else:
             for i, s in enumerate(en_secs):
                 n = len(s["paras"])
