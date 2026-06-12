@@ -121,7 +121,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1878,
           category: '宗教學奠基',
           languages: ['en'],
-          status: 'planned',
+          status: 'done',
           note: '希伯特講座（Hibbert Lectures）。',
         },
         // Gifford 四講
@@ -133,7 +133,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1888,
           category: 'Gifford 講座（宗教學四部）',
           languages: ['en'],
-          status: 'planned',
+          status: 'done',
           note: 'Longmans《全集》第一卷。',
         },
         {
@@ -144,7 +144,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1890,
           category: 'Gifford 講座（宗教學四部）',
           languages: ['en'],
-          status: 'planned',
+          status: 'done',
         },
         {
           title: '人類學宗教',
@@ -154,7 +154,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1891,
           category: 'Gifford 講座（宗教學四部）',
           languages: ['en'],
-          status: 'planned',
+          status: 'done',
         },
         {
           title: '心理宗教（神智學）',
@@ -164,7 +164,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1892,
           category: 'Gifford 講座（宗教學四部）',
           languages: ['en'],
-          status: 'planned',
+          status: 'done',
         },
         // 語言與神話學
         {
@@ -175,7 +175,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1856,
           category: '語言與神話學',
           languages: ['en'],
-          status: 'planned',
+          status: 'done',
         },
         {
           title: '語言科學講座',
@@ -185,7 +185,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1861,
           category: '語言與神話學',
           languages: ['en'],
-          status: 'planned',
+          status: 'done',
           note: '兩卷。',
         },
         {
@@ -196,7 +196,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1897,
           category: '語言與神話學',
           languages: ['en'],
-          status: 'planned',
+          status: 'done',
           note: '兩卷。',
         },
         // 印度學
@@ -217,7 +217,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1883,
           category: '印度學',
           languages: ['en'],
-          status: 'planned',
+          status: 'done',
         },
         {
           title: '印度哲學六派',
@@ -227,7 +227,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1899,
           category: '印度學',
           languages: ['en'],
-          status: 'planned',
+          status: 'done',
         },
         // 文集與譯著
         {
@@ -238,7 +238,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1867,
           category: '文集與回憶',
           languages: ['en'],
-          status: 'planned',
+          status: 'done',
           note: '全集重排為四／五卷。',
         },
         {
