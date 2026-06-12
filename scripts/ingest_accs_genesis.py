@@ -23,8 +23,11 @@ spot-check 再跑下一章。
 """
 from __future__ import annotations
 import argparse
+import base64
 import json
 import os
+import re
+import subprocess
 import sys
 import time
 from pathlib import Path
@@ -45,8 +48,14 @@ if ENV_FILE.exists():
             os.environ[k] = v
 
 sys.path.insert(0, str(ROOT / "scripts"))
-from accs_commentary import build_rows  # noqa: E402
+from accs_commentary import build_rows, build_rows_auto  # noqa: E402
 from ocr_with_gemini import _find_gemini_keys  # noqa: E402
+
+try:
+    import json_repair as _json_repair
+    HAS_JSON_REPAIR = True
+except ImportError:
+    HAS_JSON_REPAIR = False
 
 try:
     import fitz
@@ -114,6 +123,78 @@ def render_page(pdf: "fitz.Document", page_idx: int, max_dim: int = 1800) -> byt
     return pix.tobytes("png")
 
 
+# ── Haiku Vision via Max-session OAuth (claude CLI, no API key) ──────────────
+def _resolve_claude_bin() -> str:
+    if sys.platform == "win32":
+        cand = os.path.expandvars(r"%APPDATA%\npm\claude.cmd")
+        if os.path.exists(cand):
+            return cand
+    return "claude"
+
+
+CLAUDE_BIN = _resolve_claude_bin()
+
+
+def _coerce_json_array(text: str) -> list[dict]:
+    text = text.strip()
+    text = re.sub(r"^```[a-z]*\n?", "", text)
+    text = re.sub(r"\n?```$", "", text).strip()
+    try:
+        out = json.loads(text)
+    except json.JSONDecodeError:
+        if HAS_JSON_REPAIR:
+            try:
+                out = _json_repair.loads(text)
+            except Exception:
+                return []
+        else:
+            return []
+    return out if isinstance(out, list) else []
+
+
+def ocr_page_haiku(png: bytes) -> list[dict]:
+    """OCR one page → structured entries via Haiku Vision (claude CLI, Max OAuth)."""
+    b64 = base64.standard_b64encode(png).decode()
+    msg = {
+        "type": "user",
+        "message": {"role": "user", "content": [
+            {"type": "image", "source": {"type": "base64", "media_type": "image/png", "data": b64}},
+            {"type": "text", "text": PROMPT},
+        ]},
+    }
+    cmd = [
+        CLAUDE_BIN, "-p", "--model", "haiku", "--verbose",
+        "--disable-slash-commands", "--allowedTools", "",
+        "--input-format", "stream-json", "--output-format", "stream-json",
+    ]
+    cwd = r"c:\tmp" if sys.platform == "win32" else "/tmp"
+    try:
+        proc = subprocess.run(cmd, input=json.dumps(msg) + "\n", capture_output=True,
+                              text=True, encoding="utf-8", timeout=600, cwd=cwd)
+    except subprocess.TimeoutExpired:
+        print("    [Haiku timeout]", file=sys.stderr); return []
+    if proc.returncode != 0:
+        blob = (proc.stderr or "") + (proc.stdout or "")
+        if "rate_limit" in blob:
+            raise RuntimeError("Haiku rate limited，依規範退出")
+        print(f"    [Haiku exit {proc.returncode}] {(proc.stderr or '')[:160]}", file=sys.stderr)
+        return []
+    final = None
+    for line in proc.stdout.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            evt = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if evt.get("type") == "result" and evt.get("subtype") == "success":
+            final = evt.get("result", "")
+    if not final:
+        return []
+    return _coerce_json_array(final)
+
+
 def ocr_page(png: bytes) -> list[dict]:
     quota_hits = 0
     last_err = None
@@ -176,51 +257,109 @@ def upsert_rows(rows: list[dict]) -> None:
         r.raise_for_status()
 
 
+def delete_book_rows(book: str, demo_only: bool = False) -> None:
+    h = {"apikey": SUPABASE_KEY, "Authorization": f"Bearer {SUPABASE_KEY}"}
+    url = f"{SUPABASE_URL}/rest/v1/accs_commentary?book_code=eq.{book}"
+    if demo_only:
+        url += "&source_vol=like.（公有領域示範*"
+    r = requests.delete(url, headers=h, timeout=30)
+    print(f"  delete {'demo ' if demo_only else ''}rows ({book}): {r.status_code}")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--pdf", required=True)
     ap.add_argument("--book", required=True, help="bible_books.code, e.g. gen")
-    ap.add_argument("--chapter", type=int, required=True)
-    ap.add_argument("--pages", required=True, help="PDF 實體頁範圍 e.g. 30-44")
+    ap.add_argument("--chapter", type=int, default=None,
+                    help="固定章號；省略=整本 PDF 模式，章號由每則 ref 自動推（build_rows_auto）")
+    ap.add_argument("--pages", required=True, help="PDF 實體頁範圍 e.g. 30-44 或 1-316")
     ap.add_argument("--source-vol", required=True)
+    ap.add_argument("--engine", choices=["gemini", "haiku"], default="gemini",
+                    help="OCR 引擎；Gemini 配額乾時用 haiku（Max OAuth，明確下令才開）")
+    ap.add_argument("--replace", action="store_true",
+                    help="入庫前先刪該書既有 accs_commentary 列（含示範 placeholder）")
+    ap.add_argument("--resume", action="store_true",
+                    help="沿用 c:/tmp 的 per-page checkpoint，跳過已 OCR 的頁")
     ap.add_argument("--sleep", type=float, default=1.5)
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
+    ocr_fn = ocr_page_haiku if args.engine == "haiku" else ocr_page
+
+    # Per-page checkpoint on disk → long runs survive a crash; --resume skips done pages.
+    ckpt = Path(r"c:/tmp" if sys.platform == "win32" else "/tmp") / f"accs_{args.book}_{Path(args.pdf).stem}.raw.jsonl"
+    done_pages: set[int] = set()
+    if args.resume and ckpt.exists():
+        for ln in ckpt.read_text(encoding="utf-8").splitlines():
+            try:
+                done_pages.add(json.loads(ln)["page"])
+            except Exception:
+                pass
+        print(f"  [resume] {len(done_pages)} pages already in {ckpt.name}", flush=True)
+
     pdf = fitz.open(args.pdf)
     pages = parse_pages(args.pages)
-    print(f"== ACCS OCR ==  {args.book} ch{args.chapter}  pages {pages[0]}-{pages[-1]} ({len(pages)})")
+    print(f"== ACCS OCR [{args.engine}] ==  {args.book} "
+          f"ch{args.chapter if args.chapter else 'AUTO'}  pages {pages[0]}-{pages[-1]} ({len(pages)})",
+          flush=True)
 
-    raw: list[dict] = []
+    ckpt_fh = ckpt.open("a", encoding="utf-8")
     for i, p in enumerate(pages, 1):
         idx = p - 1
         if idx >= pdf.page_count:
             print(f"  page {p}: out of range"); continue
+        if p in done_pages:
+            continue
         print(f"  [{i}/{len(pages)}] page {p} ... ", end="", flush=True)
         try:
-            entries = ocr_page(render_page(pdf, idx))
-            print(f"{len(entries)} entries")
-            raw.extend(entries)
+            entries = ocr_fn(render_page(pdf, idx))
+            print(f"{len(entries)} entries", flush=True)
+            ckpt_fh.write(json.dumps({"page": p, "entries": entries}, ensure_ascii=False) + "\n")
+            ckpt_fh.flush()
         except Exception as e:
-            print(f"FAIL {e}")
+            print(f"FAIL {e}", flush=True)
             if "依規範退出" in str(e):
                 break
         time.sleep(args.sleep)
+    ckpt_fh.close()
     pdf.close()
 
-    rows = build_rows(args.book, args.chapter, raw, args.source_vol)
-    print(f"\n→ {len(raw)} raw entries → {len(rows)} rows "
-          f"({len(set((r['verse_start'], r['verse_end']) for r in rows))} pericopes)")
+    # Rebuild full raw list from checkpoint in page order (so build_rows_auto sees
+    # entries in document order → correct per-chapter pericope_order).
+    by_page: dict[int, list[dict]] = {}
+    for ln in ckpt.read_text(encoding="utf-8").splitlines():
+        try:
+            rec = json.loads(ln); by_page[rec["page"]] = rec["entries"]
+        except Exception:
+            pass
+    raw: list[dict] = []
+    for p in sorted(by_page):
+        raw.extend(by_page[p])
+
+    if args.chapter:
+        rows = build_rows(args.book, args.chapter, raw, args.source_vol)
+    else:
+        rows = build_rows_auto(args.book, raw, args.source_vol)
+    chapters = sorted(set(r["chapter"] for r in rows))
+    print(f"\n→ {len(raw)} raw entries → {len(rows)} rows · chapters {chapters} · "
+          f"{len(set((r['chapter'], r['verse_start'], r['verse_end']) for r in rows))} pericopes",
+          flush=True)
 
     if args.dry_run:
-        for r in rows[:12]:
-            tag = r["section_kind"]
+        for r in rows[:14]:
             who = r["father_name"] or "（總論）"
-            print(f"  {r['verse_start']}-{r['verse_end']} [{tag}] {who}: {r['body_zh'][:40]}…")
+            print(f"  {r['chapter']}:{r['verse_start']}-{r['verse_end']} [{r['section_kind']}] "
+                  f"{who} «{(r['work_title'] or '')}»  {len(r['body_zh'])}字")
         return
 
+    if args.replace:
+        delete_book_rows(args.book)
     upsert_rows(rows)
-    print(f"upserted {len(rows)} rows into accs_commentary")
+    print(f"upserted {len(rows)} rows into accs_commentary", flush=True)
+
+
+if __name__ == "__main__":
+    main()
 
 
 if __name__ == "__main__":

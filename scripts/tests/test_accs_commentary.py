@@ -6,8 +6,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from accs_commentary import (  # noqa: E402
     parse_verse_range,
+    parse_full_ref,
     normalize_father,
     build_rows,
+    build_rows_auto,
 )
 
 
@@ -137,3 +139,59 @@ def test_build_rows_bad_kind_defaults_comment():
     entries = [{"ref": "1:1", "kind": "xxx", "father": "巴西流", "body": "x"}]
     rows = build_rows("gen", 1, entries, "vol")
     assert rows[0]["section_kind"] == "comment"
+
+
+# ── parse_full_ref ───────────────────────────────────────────────────────────
+
+def test_full_ref_with_chapter():
+    assert parse_full_ref("1:1-2") == (1, 1, 2)
+    assert parse_full_ref("2:4") == (2, 4, 4)
+
+
+def test_full_ref_bare_verse_chapter_none():
+    assert parse_full_ref("5") == (None, 5, 5)
+    assert parse_full_ref("9-14") == (None, 9, 14)
+
+
+def test_full_ref_cross_chapter_clamped():
+    assert parse_full_ref("1:30-2:3") == (1, 30, 30)
+
+
+def test_full_ref_garbage_none():
+    assert parse_full_ref("總論") is None
+
+
+# ── build_rows_auto (whole-book, chapter from ref) ───────────────────────────
+
+def test_build_rows_auto_routes_by_chapter():
+    entries = [
+        {"ref": "1:1-2", "kind": "comment", "father": "巴西流", "body": "甲"},
+        {"ref": "1:3-5", "kind": "comment", "father": "奧古斯丁", "body": "乙"},
+        {"ref": "2:4-7", "kind": "comment", "father": "俄利根", "body": "丙"},
+    ]
+    rows = build_rows_auto("gen", entries, "vol")
+    assert [r["chapter"] for r in rows] == [1, 1, 2]
+    # pericope_order resets per chapter
+    assert rows[0]["pericope_order"] == 1
+    assert rows[1]["pericope_order"] == 2
+    assert rows[2]["pericope_order"] == 1  # chapter 2 starts fresh
+
+
+def test_build_rows_auto_carry_forward_chapter():
+    # a bare-verse ref inherits the most recent chapter
+    entries = [
+        {"ref": "3:1", "kind": "overview", "body": "導語"},
+        {"ref": "1", "kind": "comment", "father": "巴西流", "body": "承上章三"},
+    ]
+    rows = build_rows_auto("gen", entries, "vol")
+    assert rows[1]["chapter"] == 3
+
+
+def test_build_rows_auto_skips_until_chapter_known():
+    entries = [
+        {"ref": "7", "kind": "comment", "father": "巴西流", "body": "無章上下文"},
+        {"ref": "4:1", "kind": "comment", "father": "巴西流", "body": "有章"},
+    ]
+    rows = build_rows_auto("gen", entries, "vol")
+    assert len(rows) == 1
+    assert rows[0]["chapter"] == 4

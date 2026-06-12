@@ -72,6 +72,32 @@ _REF_RE = re.compile(
 )
 
 
+def parse_full_ref(ref: str) -> Optional[tuple[Optional[int], int, int]]:
+    """Like parse_verse_range but also returns the chapter when the ref carries
+    one: '1:1-2' → (1, 1, 2) · '2:4' → (2, 4, 4) · '5' → (None, 5, 5).
+
+    Used by build_rows_auto() to route a whole-book OCR run (all chapters in one
+    pass) to the right chapter. chapter is None when the ref is a bare verse.
+    """
+    if not ref:
+        return None
+    m = _REF_RE.search(ref.strip())
+    if not m:
+        return None
+    chap = int(m.group("chap")) if m.group("chap") else None
+    v1 = int(m.group("v1"))
+    v2_s = m.group("v2")
+    chap2 = m.group("chap2")
+    if v2_s is None:
+        return (chap, v1, v1)
+    v2 = int(v2_s)
+    if chap2 is not None and m.group("chap") is not None and chap2 != m.group("chap"):
+        return (chap, v1, v1)  # cross-chapter → clamp to start chapter
+    if v2 < v1:
+        return (chap, v1, v1)
+    return (chap, v1, v2)
+
+
 def parse_verse_range(ref: str, chapter: int) -> Optional[tuple[int, int]]:
     """'1:1-2' → (1, 2) · '1:1' → (1, 1) · '創 1:5' → (5, 5).
 
@@ -177,5 +203,73 @@ def build_rows(
             "source_vol": source_vol,
         })
         entry_counter[key] += 1
+
+    return rows
+
+
+def build_rows_auto(
+    book_code: str,
+    entries: list[RawEntry],
+    source_vol: str,
+    default_chapter: Optional[int] = None,
+) -> list[dict]:
+    """Whole-book variant of build_rows: chapter comes from each entry's `ref`
+    (parse_full_ref), so a single OCR pass over a multi-chapter PDF routes rows
+    to the correct chapter. Bare-verse refs (no chapter) carry forward the most
+    recently seen chapter (entries are processed in page/source order).
+
+    pericope_order / entry_order are assigned **per chapter**.
+    """
+    rows: list[dict] = []
+    # per-chapter ordering state
+    pericope_order: dict[int, dict[tuple[int, int], int]] = {}
+    entry_counter: dict[int, dict[tuple[int, int], int]] = {}
+    last_chapter = default_chapter
+
+    for e in entries:
+        body = (e.get("body") or "").strip()
+        if not body:
+            continue
+        parsed = parse_full_ref(e.get("ref", ""))
+        if parsed is None:
+            continue
+        chap, v1, v2 = parsed
+        if chap is None:
+            chap = last_chapter
+        if chap is None:
+            continue  # no chapter context yet → skip
+        last_chapter = chap
+
+        pericope_order.setdefault(chap, {})
+        entry_counter.setdefault(chap, {})
+        key = (v1, v2)
+        if key not in pericope_order[chap]:
+            pericope_order[chap][key] = len(pericope_order[chap]) + 1
+            entry_counter[chap][key] = 0
+
+        kind = e.get("kind", "comment")
+        if kind not in SECTION_KINDS:
+            kind = "comment"
+        father = normalize_father(e.get("father")) if kind == "comment" else None
+        work = (e.get("work") or "").strip() or None if kind == "comment" else None
+        heading = (e.get("heading") or "").strip() or None
+        father_en = (e.get("father_en") or "").strip() or None if kind == "comment" else None
+
+        rows.append({
+            "book_code": book_code,
+            "chapter": chap,
+            "verse_start": v1,
+            "verse_end": v2,
+            "pericope_order": pericope_order[chap][key],
+            "entry_order": entry_counter[chap][key],
+            "section_kind": kind,
+            "heading": heading,
+            "father_name": father,
+            "father_name_en": father_en,
+            "work_title": work,
+            "body_zh": body,
+            "source_vol": source_vol,
+        })
+        entry_counter[chap][key] += 1
 
     return rows
