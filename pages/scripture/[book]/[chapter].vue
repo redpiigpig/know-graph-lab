@@ -66,6 +66,25 @@
         >+ 對照欄</button>
       </div>
 
+      <!-- 教父註釋 toggle -->
+      <div class="flex items-center gap-3 mb-4">
+        <button
+          @click="toggleCommentary"
+          class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border text-xs font-medium transition"
+          :class="showCommentary
+            ? 'bg-amber-600 text-white border-amber-600'
+            : 'bg-white text-amber-700 border-amber-300 hover:border-amber-500'"
+        >
+          <span class="text-sm leading-none">{{ showCommentary ? '✦' : '✧' }}</span>
+          教父註釋（ACCS）
+        </button>
+        <span v-if="showCommentary && commentaryData" class="text-[11px] text-gray-400">
+          <template v-if="commentaryData.available">{{ commentaryData.source_vol }}‧古代基督信仰聖經註釋叢書</template>
+          <template v-else>本章尚無教父註釋資料</template>
+        </span>
+        <span v-if="commentaryPending" class="text-[11px] text-gray-400">載入註釋中…</span>
+      </div>
+
       <!-- Loading -->
       <div v-if="pending" class="text-center text-gray-400 py-12 text-sm">載入中…</div>
       <div v-else-if="error" class="text-center text-red-500 py-12 text-sm">{{ String(error) }}</div>
@@ -76,18 +95,17 @@
           此章節在已匯入的版本中尚無資料
         </div>
 
-        <div v-else class="space-y-1.5">
+        <!-- Flat view (commentary off, or no ACCS data for this chapter) -->
+        <div v-else-if="!showCommentary || !commentaryData?.available" class="space-y-1.5">
           <article
             v-for="v in chapterData.verses"
             :key="v.verse"
             class="bg-white border border-gray-200 rounded-md overflow-hidden"
           >
             <div class="grid gap-px bg-gray-100" :style="{ gridTemplateColumns: `auto ${gridCols}` }">
-              <!-- Verse number -->
               <div class="bg-stone-50 px-2 py-2 text-xs font-mono font-semibold text-stone-700 flex items-start">
                 {{ v.verse }}
               </div>
-              <!-- Each column -->
               <div
                 v-for="(col, idx) in columns"
                 :key="idx"
@@ -101,6 +119,76 @@
               </div>
             </div>
           </article>
+        </div>
+
+        <!-- Segmented view (commentary on): 經文上 · 教父註釋下，按 ACCS 段落分段 -->
+        <div v-else class="space-y-4">
+          <section
+            v-for="(seg, si) in segments"
+            :key="si"
+          >
+            <!-- pericope label chip -->
+            <div class="flex items-center gap-2 mb-1.5">
+              <span class="text-[11px] font-mono font-semibold text-stone-500">{{ seg.label }}</span>
+              <div class="flex-1 h-px bg-stone-100" />
+              <button
+                v-if="seg.commentary"
+                @click="togglePanel(si)"
+                class="text-[11px] text-amber-700 hover:text-amber-900"
+              >{{ panelOpen[si] === false ? '展開註釋 ▾' : '收合註釋 ▴' }}</button>
+            </div>
+
+            <!-- verses block -->
+            <div class="space-y-1.5">
+              <article
+                v-for="v in seg.verses"
+                :key="v.verse"
+                class="bg-white border border-gray-200 rounded-md overflow-hidden"
+              >
+                <div class="grid gap-px bg-gray-100" :style="{ gridTemplateColumns: `auto ${gridCols}` }">
+                  <div class="bg-stone-50 px-2 py-2 text-xs font-mono font-semibold text-stone-700 flex items-start">
+                    {{ v.verse }}
+                  </div>
+                  <div
+                    v-for="(col, idx) in columns"
+                    :key="idx"
+                    class="bg-white px-3 py-2 text-sm leading-relaxed text-gray-800"
+                    :class="textClassFor(col.versionCode)"
+                  >
+                    <template v-if="col.versionCode && v.byVersion[col.versionCode]">
+                      {{ v.byVersion[col.versionCode] }}
+                    </template>
+                    <span v-else class="text-gray-300 italic text-xs">—</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- commentary panel -->
+            <div
+              v-if="seg.commentary && panelOpen[si] !== false"
+              class="mt-2 border-l-2 border-amber-300 bg-amber-50/40 rounded-r-md pl-3 pr-3 py-2.5 space-y-3"
+            >
+              <div
+                v-for="(e, ei) in seg.commentary.entries"
+                :key="ei"
+              >
+                <!-- overview -->
+                <div v-if="e.section_kind === 'overview'">
+                  <p v-if="e.heading" class="text-xs font-semibold text-amber-900 mb-0.5">{{ e.heading }}</p>
+                  <p class="text-[13px] leading-relaxed text-stone-700 italic">{{ e.body_zh }}</p>
+                </div>
+                <!-- patristic comment -->
+                <div v-else>
+                  <p v-if="e.heading" class="text-xs font-semibold text-stone-600 mb-0.5">{{ e.heading }}</p>
+                  <p class="text-[13px] leading-relaxed text-stone-800">{{ e.body_zh }}</p>
+                  <p class="text-[11px] text-amber-800 mt-0.5">
+                    — <span class="font-medium">{{ e.father_name }}</span>{{ e.work_title ? ` 《${e.work_title}》` : '' }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
 
         <!-- Coverage hint -->
@@ -339,6 +427,96 @@ const nextChapter = computed(() => {
 function navigate(book: string, chapter: number) {
   router.push(`/scripture/${book}/${chapter}`)
 }
+
+// ── ACCS 教父註釋 ────────────────────────────────────────────────────────────
+type CommentaryEntry = {
+  section_kind: 'overview' | 'comment'
+  heading: string | null
+  father_name: string | null
+  work_title: string | null
+  body_zh: string
+}
+type Pericope = { verse_start: number; verse_end: number; entries: CommentaryEntry[] }
+type CommentaryRes = {
+  book: string; chapter: number; available: boolean
+  source_vol: string; pericopes: Pericope[]
+}
+
+const showCommentary = ref(false)
+const commentaryData = ref<CommentaryRes | null>(null)
+const commentaryPending = ref(false)
+const panelOpen = reactive<Record<number, boolean>>({})
+
+async function loadCommentary() {
+  commentaryPending.value = true
+  try {
+    const headers = await authHeaders()
+    commentaryData.value = await $fetch<CommentaryRes>('/api/scripture/commentary', {
+      headers,
+      query: { book: bookCode.value, chapter: chapterNum.value },
+    })
+  } catch {
+    commentaryData.value = null
+  } finally {
+    commentaryPending.value = false
+  }
+}
+
+function toggleCommentary() {
+  showCommentary.value = !showCommentary.value
+  if (showCommentary.value && !commentaryData.value) loadCommentary()
+}
+
+// Reset panel state per chapter; reload commentary if it's currently shown
+watch([bookCode, chapterNum], () => {
+  commentaryData.value = null
+  for (const k of Object.keys(panelOpen)) delete panelOpen[Number(k)]
+  if (showCommentary.value) loadCommentary()
+})
+
+function togglePanel(idx: number) {
+  panelOpen[idx] = panelOpen[idx] === false ? true : false
+}
+
+// Group chapter verses into ACCS pericopes (經文上 → 註釋下). Verses outside any
+// pericope render as their own commentary-less segment, in verse order.
+const segments = computed(() => {
+  const out: { label: string; verses: { verse: number; byVersion: Record<string, string> }[]; commentary: Pericope | null }[] = []
+  if (!chapterData.value) return out
+  const pericopes = (commentaryData.value?.pericopes ?? [])
+    .slice()
+    .sort((a, b) => a.verse_start - b.verse_start)
+  const verses = chapterData.value.verses
+  const bookShort = currentBook.value?.name_zh_short || currentBook.value?.name_zh || ''
+
+  let pIdx = 0
+  let i = 0
+  while (i < verses.length) {
+    const v = verses[i]
+    const p = pericopes[pIdx]
+    if (p && v.verse >= p.verse_start && v.verse <= p.verse_end) {
+      // collect all verses within this pericope
+      const grp: typeof verses = []
+      while (i < verses.length && verses[i].verse <= p.verse_end) {
+        grp.push(verses[i]); i++
+      }
+      const label = p.verse_start === p.verse_end
+        ? `${bookShort} ${chapterNum.value}:${p.verse_start}`
+        : `${bookShort} ${chapterNum.value}:${p.verse_start}–${p.verse_end}`
+      out.push({ label, verses: grp, commentary: p })
+      pIdx++
+    } else if (p && v.verse > p.verse_end) {
+      // pericope has no matching verses (gap) — skip it
+      pIdx++
+    } else {
+      // verse before next pericope start → standalone, no commentary
+      const label = `${bookShort} ${chapterNum.value}:${v.verse}`
+      out.push({ label, verses: [v], commentary: null })
+      i++
+    }
+  }
+  return out
+})
 </script>
 
 <style scoped>

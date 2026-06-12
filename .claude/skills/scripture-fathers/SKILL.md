@@ -664,8 +664,11 @@ auto-push。**git 在 master 跑教父**（user 拍板；feat/coach-language 是
   遞減套用，可用「長 key 先保護」處理雙人衝突（圖爾的格列高里、大額我略二世、以法蓮、皇帝李奧）。
 
 ### 🔄 下一步（待 user 指示）
-- **ACCS 27 卷**：user 06-11 指令「先 Schaff，ACCS 先等」→ Schaff 已收官，**ACCS 待 user 開口再開**。
-  ACCS 是英文聖經註釋彙編（IVP），多卷待補中譯；起手同樣先查 `/translation-glossary` 教父譯名。
+- **ACCS 走向已轉軌（2026-06-12 user 拍板）**：不再走「英文整卷翻譯上 /fathers」，改為
+  **把 ACCS 教父註釋嵌進 /scripture 聖經逐節閱讀器**（經文上‧註釋下，按段落 pericope）。
+  → 新 skill **[[scripture-accs]]**（schema/parser/OCR/reader 全到位，創世記原型先做）。
+  來源用**校園書房繁中版掃描 PDF**（Drive 27 冊 folder，含創世記）OCR，不再自譯英文。
+  本 skill（scripture-fathers）只負責教父全集整卷；ACCS 註釋嵌入歸 scripture-accs。
 
 ### 🧭 本輪（2026-06-05〜10）關鍵改進與教訓（新 session 必讀）
 1. **譯名修正**：Cyril of Jerusalem = **耶路撒冷的區利羅**（非西瑞爾；user 抓出、詞庫權威確認）。
