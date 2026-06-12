@@ -41,6 +41,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 - `/coach/[lang]/today` = **今日計畫**（見下）
 - `/coach/[lang]/chat` = 對話（`?mode=qa|scenario`、`?voice=1`）
 - `/coach/[lang]/smalltalk` = 限時主題聊（3/5/10 分倒數 + 結束評分）
+- `/coach/[lang]/alphabet` = **字母教學 + 字母測驗**（**僅非英文 6 語**：de/fr/ja/grc/la/hbo）
 - `/coach/[lang]/grammar` = 分級文法課
 - `/coach/[lang]/practice` = 技能練習 / 考試模擬 / 翻譯遊戲
 - `/coach/[lang]/review` = 單字 SRS（翻卡 / 選擇題 / 克漏字，FSRS）；另有 `/reader` 點讀、`/shadowing` 跟讀、`/writing` 寫作批改
@@ -70,6 +71,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 
 > 🎯 **設計原則：英文內容「策展優先」（2026-06-05）**。使用者不滿意 AI 即時生成的浮動品質，故**英文的文法課/學術單字/情境實用句/短文長文範例改為手工策展**（`server/data/enGrammar.ts`/`enVocab.ts`/`enSentences.ts`/`enPassages.ts`），策展內容為可靠核心、**AI 只負責「無限延伸／換一個」**（走 NVIDIA 主→Gemini）。加內容＝改對應 data 檔。其他語言仍走 AI 生成。
 
+- **🔤 字母教學 + 字母測驗（`/coach/[lang]/alphabet`，2026-06-12，僅非英文 6 語）**：使用者要複習各語言字母。**純策展、無 AI、無 DB**——字母資料在 `server/data/alphabets.ts`（每語言一份 `AlphabetSpec`，分 group：de 26字母+變音/ß；fr 26字母+重音連字；ja 平假名清音/濁半濁/拗音+片假名清音；grc 24字母+呼氣重音；la 字母教會式發音+字母組合規則 ae/oe/gn/sc/ti…；hbo 22子音+5字尾形+母音點 niqqud，RTL）。每字 `char/name/sound/example/gloss`。端點 `alphabet`(GET，英文回 available:false)。頁兩模式：**教學**（字母卡格，點🔊用 `coach.ttsLang` 朗讀 example）＋**測驗**（看字母選讀音 / 看讀音選字母 / 混合，4 選 1 即時對答＋計分＋答錯字母回顧；干擾項依答案欄位去重避免兩個正解）。計時走 `useActivityTracker(... 'reading','alphabet')`。首頁學習磚 `v-if="lang!=='en'"`。加/改字母＝改 `alphabets.ts`。
 - **分級文法課**（`lang_grammar` PK user+lang+**level**）：日文 N5–N1、古典語 入門/初級/中級/進階 各一套；**Gemini 依程度＋`langLabel` 自動生成**（不需手動 seed）。大綱循序 + 逐課懶生成（解說/例句/練習）+ 完成度。頁 `/coach/[lang]/grammar`。
   - **英文＝手工策展（2026-06-05，不走 AI）**：`server/data/enGrammar.ts` 9 大類 ~43 文法點（時態/語態/語氣/句型/子句/名詞冠詞/動詞/連接詞/介係詞），全策展解說+例句+練習（宗教研究取向）。`grammar/index.get.ts` 偵測 `language==='en'` → 用 `curatedSyllabus(level)`（依 CEFR level 過濾、**content 預嵌**，lesson 端點直接回不走 AI）、保留 done。要加/改文法點就改 `enGrammar.ts`。
   - **🗺️ 文法地圖 `/coach/en/grammar-map`（限 en）**：分類瀏覽 + 即時關鍵字過濾 + **打字發問**（`grammar/lookup` = 關鍵字比對 + AI 分類到對應 topic id）+ 內嵌策展解說例句 + 深連回文法課（`grammar?open=<id>` 自動展開）。端點 `grammar/map`(GET 地圖資料) / `grammar/lookup`(POST 查詢)。首頁/文法課有入口（限 en）。
@@ -132,7 +134,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 
 ## 八、端點（`server/api/lang/*` + `server/api/devices/*`）
 
-chat / profile(get,put) / progress(get,put) / activity / dashboard / usage / assess / briefing / memory(get,regenerate) / journal(get, generate) / sessions / messages / coaches / vocab(index,generate,**categories**,review get/post,[id] patch/delete) / homework / task(generate, [id]/answer) / smalltalk(start, feedback) / content(ingest, watch, index, watch-stats) / grammar(index, lesson, done, **map, lookup**) / daily(get, item, done) / devices(check, index, [id] patch) / **words(define, status get/post)** / **pronunciation** / **sentences(index, more)** / **writing(correct)**。
+chat / profile(get,put) / progress(get,put) / activity / dashboard / usage / assess / briefing / memory(get,regenerate) / journal(get, generate) / sessions / messages / coaches / vocab(index,generate,**categories**,review get/post,[id] patch/delete) / homework / task(generate, [id]/answer) / smalltalk(start, feedback) / content(ingest, watch, index, watch-stats) / grammar(index, lesson, done, **map, lookup**) / **alphabet** / daily(get, item, done) / devices(check, index, [id] patch) / **words(define, status get/post)** / **pronunciation** / **sentences(index, more)** / **writing(correct)**。
 
 ## 九、加語言 / 擴充
 
