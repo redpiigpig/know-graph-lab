@@ -170,11 +170,28 @@ def ocr_pdf(src: Path, *, model: str, pages: tuple[int, int] | None = None) -> l
             pass
 
 
+def extract_text_layer(src: Path, *, pages: tuple[int, int] | None = None) -> list[dict]:
+    """Pull the EMBEDDED text layer (no OCR) from a born-digital PDF → list of
+    {page,text}. For text-layer PDFs (e.g. the English Intrareligious Dialogue),
+    this is faster, free, and cleaner than Gemini OCR. Use --engine gemini only
+    for scanned books with no text layer."""
+    from pypdf import PdfReader
+    r = PdfReader(str(src))
+    n = len(r.pages)
+    lo, hi = (pages[0] - 1, pages[1]) if pages else (0, n)
+    out: list[dict] = []
+    for i in range(max(0, lo), min(n, hi)):
+        out.append({"page": i + 1, "text": (r.pages[i].extract_text() or "")})
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--pdf", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--pages", default=None, help="1-based inclusive range, e.g. 5-8 (sample/validate)")
+    ap.add_argument("--engine", default="gemini", choices=["gemini", "text"],
+                    help="gemini = OCR scanned PDF; text = pull embedded text layer (born-digital)")
     ap.add_argument("--model", default="gemini-2.5-flash")
     args = ap.parse_args()
 
@@ -187,7 +204,10 @@ def main():
         pages = (int(a), int(b))
 
     t0 = time.time()
-    page_dicts = ocr_pdf(src, model=args.model, pages=pages)
+    if args.engine == "text":
+        page_dicts = extract_text_layer(src, pages=pages)
+    else:
+        page_dicts = ocr_pdf(src, model=args.model, pages=pages)
     text = pages_to_text(page_dicts)
     Path(args.out).write_text(text, encoding="utf-8")
     ne = sum(1 for p in page_dicts if (p.get("text") or "").strip())
