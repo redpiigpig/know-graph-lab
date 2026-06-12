@@ -133,13 +133,25 @@ async function loadEpub() {
     rendition = book.renderTo(viewerEl.value!, {
       width: "100%",
       height: "100%",
-      flow: "paginated",
-      spread: "auto",
-      manager: "default",
+      // Continuous scroll: epub.js's paginated/default manager leaves the cover
+      // + first section blank on many EPUBs; scrolled-doc renders every section
+      // reliably and matches the text reader's familiar scroll feel.
+      flow: "scrolled-doc",
+      manager: "continuous",
+      // epub.js injects a layout script into its render iframe to measure
+      // content + wire internal links; without allow-scripts the iframe stays
+      // blank. The EPUB's *own* scripts are still inert (we don't load them).
+      allowScriptedContent: true,
     });
     applyFont();
     await rendition.display();
     loading.value = false;
+    // epub.js's very first paint can land before the flex container has settled
+    // its final size, leaving the opening page blank until the next navigation.
+    // Kick a re-measure on the next frame (and once more shortly after) so the
+    // first page actually renders.
+    requestAnimationFrame(() => rendition?.resize());
+    setTimeout(() => rendition?.resize(), 300);
 
     rendition.on("relocated", (loc: any) => {
       atStart.value = !!loc.atStart;
@@ -163,6 +175,7 @@ function setFont(s: number) {
   applyFont();
 }
 
+function onResize() { rendition?.resize(); }
 function next() { rendition?.next(); }
 function prev() { rendition?.prev(); }
 function gotoHref(href: string) { rendition?.display(href); }
@@ -177,9 +190,11 @@ function onKey(e: KeyboardEvent) {
 onMounted(() => {
   loadEpub();
   window.addEventListener("keyup", onKey);
+  window.addEventListener("resize", onResize);
 });
 onUnmounted(() => {
   window.removeEventListener("keyup", onKey);
+  window.removeEventListener("resize", onResize);
   try { rendition?.destroy(); book?.destroy(); } catch { /* noop */ }
 });
 </script>
