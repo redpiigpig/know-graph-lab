@@ -19,13 +19,15 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import os
+import re
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import mueller_build as mb  # noqa: E402  (loads .env, glossary prompt)
 import mueller_auto as ma  # noqa: E402
-from mueller_haiku_pass import make_haiku_engine  # noqa: E402
+import translate_ebook_to_zh as te  # noqa: E402
 
 # ── SBE registry — one dict per volume (vol 1 first; add the rest as sourced) ──
 WORKS = [
@@ -63,6 +65,88 @@ WORKS = [
 ]
 
 
+# slug → tradition (selects the glossary cheat-sheet injected into the prompt)
+TRADITION = {
+    "sbe-01-upanishads-1": "veda", "sbe-04-zend-avesta-1": "zoroastrian",
+    "sbe-06-quran-1": "islam", "sbe-10-dhammapada": "buddhism",
+    "sbe-16-yi-king": "china", "sbe-22-jaina-1": "jainism",
+}
+
+# Generic Sacred-Books-of-the-East translator prompt (the Müller one wrongly
+# claims it is translating 《宗教學導論》). {glossary} is filled per-tradition.
+SBE_PROMPT_TMPL = """你是世界宗教經典的專業譯者，正在翻譯馬克斯‧穆勒主編《東方聖書》(Sacred Books of the East) 中的一卷。把下列**英文原文**翻成**繁體中文**。
+
+規則：
+1. 嚴守繁體中文（禁簡體）；台灣用語；中間點用「‧」。
+2. 忠實學術／經典語氣，長句順為通順中文；保留括號內的外文夾注（梵文/巴利文/阿拉伯文/中文原典等）。
+3. 保留 Markdown（## 標題 / **粗體** / *斜體* / > 引文）。
+4. 專名術語鎖定下列對照（英文轉寫→繁中），出現時務必沿用：
+{glossary}
+5. 只輸出翻譯後的繁體中文，不要前言、說明或英文。
+
+英文原文：
+{source}"""
+
+_CHEATSHEET_CACHE: dict[str, str] = {}
+
+
+def tradition_glossary(tradition: str) -> str:
+    """Build a compact 'English→繁中' cheat-sheet for the prompt from the live
+    /translation-glossary deities table. Buddhist volumes get the 119-term
+    Buddhist set (religion=佛教); others get a short tradition-appropriate stub."""
+    if tradition in _CHEATSHEET_CACHE:
+        return _CHEATSHEET_CACHE[tradition]
+    religion = {"buddhism": "佛教"}.get(tradition)
+    lines: list[str] = []
+    if religion:
+        import requests
+        url = (f"{te.URL}/rest/v1/deities?religion=eq.{religion}"
+               "&select=name_english,name_recommended,name_variants&order=sort_order")
+        try:
+            rows = requests.get(url, headers=te.H_GET, timeout=30).json()
+        except Exception:  # noqa: BLE001
+            rows = []
+        for r in rows:
+            en = r.get("name_english") or ""
+            rec = r.get("name_recommended") or ""
+            # surface the romanized variant (e.g. Pali) so the model matches both
+            var = r.get("name_variants") or ""
+            alt = ""
+            m = re.search(r"\(巴\)([A-Za-zāīūṃṅñṭḍṇśṣ\-]+)", var)
+            if m:
+                alt = f"/{m.group(1)}"
+            if en and rec:
+                lines.append(f"{en}{alt}→{rec}")
+    if not lines:
+        return "（無專屬術語表，依通行學界譯名與既有古譯）"
+    out = "；".join(lines)
+    _CHEATSHEET_CACHE[tradition] = out
+    return out
+
+
+def make_sbe_engine(tradition: str):
+    """Haiku translate_para with the SBE prompt + this tradition's glossary."""
+    te.PROMPT_TMPL = SBE_PROMPT_TMPL.replace("{glossary}", tradition_glossary(tradition))
+
+    def _clean(out: str) -> str:
+        out = re.sub(r"(?m)^\s*#{1,6}\s.*$", "", out)
+        return re.sub(r"\s*\n\s*", " ", out).strip()
+
+    def translate_para(en: str, de: str = "") -> str:
+        src = en.strip()
+        if not src:
+            return ""
+        pieces = te.split_oversized(src)
+        out = ""
+        for _ in range(4):  # retry-on-empty
+            out = _clean(" ".join(te.haiku_translate(p) for p in pieces))
+            if out:
+                return out
+        return out
+
+    return translate_para
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--list", action="store_true")
@@ -84,14 +168,15 @@ def main():
 
     only = {s.strip() for s in args.only.split(",") if s.strip()}
     scope = [w for w in WORKS if not only or w["slug"] in only]
-    tp = make_haiku_engine()
 
     def one_pass():
         for w in scope:
             if ma.is_done(w):
                 print(f"  ✓ {w['slug']} done — skip", flush=True)
                 continue
-            print(f"▶ translate {w['slug']} — {w['title']}", flush=True)
+            trad = TRADITION.get(w["slug"], "")
+            tp = make_sbe_engine(trad)  # per-volume prompt: tradition glossary injected
+            print(f"▶ translate {w['slug']} — {w['title']} [{trad}]", flush=True)
             ma.ingest_work(w)  # idempotent; keeps English readable + cache fresh
             ma.translate_work(w, tp)
             ma.assemble_and_upload(w)
