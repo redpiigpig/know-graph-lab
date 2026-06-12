@@ -494,6 +494,16 @@ TERM_FIXES_NPNF2_V10 = dict(TERM_FIXES_ANF_COMMON, **{
     "盎博羅削": "安波羅修", "盎博羅修": "安波羅修", "安波羅斯": "安波羅修", "安博羅修": "安波羅修",
 })
 
+# NPNF2 Vol 14 — The Seven Ecumenical Councils（會議文獻彙編，無單一作者）
+# 僅做安全收斂：Cyril 西里爾/西瑞爾→區利羅（兩 Cyril 皆區利羅）；Nestorius 聶斯脫裡→聶斯脫里（裡→里）；
+# Gregory 異拼 格列高理/格列高裡→格列高里（此卷 Gregory 皆非教宗=Thaumaturgus/Naz/Nyssa）。
+# 不碰：額我略（大額我略二世=教宗 Gregory II ↔ Thaumaturgus 衝突）、Leo 利奧/良（教宗大良 ↔ 皇帝李奧）。
+TERM_FIXES_NPNF2_V14 = dict(TERM_FIXES_ANF_COMMON, **{
+    "西里爾": "區利羅", "西瑞爾": "區利羅",
+    "聶斯脫裡": "聶斯脫里",
+    "格列高理": "格列高里", "格列高裡": "格列高里",
+})
+
 # NPNF2 Vol 13 — Gregory the Great II 大額我略 / Ephraim Syrus 敘利亞的厄弗冷 / Aphrahat 波斯賢士阿弗拉哈特
 # 名稱衝突防護（sweep_t8 按 key 長度遞減套用，長 key 先）：
 #   圖爾的格列高裡(Gregory of Tours)先轉成 圖爾的格列高里 保護，剩下 格列高裡=大額我略本人→額我略；
@@ -557,6 +567,7 @@ TERM_FIXES_BY_BOOK: dict[str, dict[str, str]] = {
     "24c53ede-8787-442e-a3ba-0cd55d0effac": TERM_FIXES_NPNF2_V11,  # NPNF2 Vol 11 Sulpitius Severus + Vincent of Lerins + John Cassian
     "02a08547-6fb5-44b2-8a59-9b1f625f3a54": TERM_FIXES_NPNF2_V12,  # NPNF2 Vol 12 Leo the Great 大良 + Gregory the Great 大額我略
     "90b55879-7179-41d7-9f6c-f6587a3dd429": TERM_FIXES_NPNF2_V13,  # NPNF2 Vol 13 Gregory II + Ephraim Syrus + Aphrahat
+    "63853a97-68be-441c-8dce-063ae89405c5": TERM_FIXES_NPNF2_V14,  # NPNF2 Vol 14 The Seven Ecumenical Councils
 }
 
 

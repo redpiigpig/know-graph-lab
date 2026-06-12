@@ -546,7 +546,7 @@ Vol 9:  349 → 92   (30 page + 62 other)
 | ✅ 35 | NPNF2 Vol 11（蘇皮修 + 勒蘭的文生 + 若望‧格西安）| 已精修 | `_fix_vol35_reorder.py`（修 translate 排序 bug 還原順序）+ `_fix_vol35_severus_vincent_cassian.py`（boundary-walk 三作者樹）；TERM 701 處（瑪爾定/格西安/文生）；test_fathers_quality PASS · validate 0 FAIL |
 | ✅ 36 | NPNF2 Vol 12（大良 Leo + 大額我略 Gregory）| 已精修 | title_en=npnf212.* 前綴→`_fix_vol12_leo_gregory.py` PREFIX-to-vol（大良 導論/書信集/講道集 · 大額我略 導論/牧靈規則/書信集）；570→108 頁；TERM baseline-only（利奧/良 同指教宗+皇帝，刻意不收斂）；test PASS · validate 0 FAIL |
 | ✅ 37 | NPNF2 Vol 13（大額我略 II + 厄弗冷 + 阿弗拉哈特）| 已精修 | `_fix_vol13_gregory_ephraim_aphrahat.py` PREFIX-to-vol（大額我略 書信集卷九-十四 · 敘利亞的厄弗冷 讚美詩/聖詩/講道 · 波斯賢士阿弗拉哈特 論證集）；277→49 頁；TERM 430 處（艾弗冷→厄弗冷/亞弗拉哈特→阿弗拉哈特/波斯智者→賢士；**圖爾的格列高裡先保護成格列高里**再 格列高裡→額我略，避免併到 Gregory of Tours；以法蓮≠艾弗冷不碰）；test PASS · validate 0 FAIL |
-| 38 | NPNF2 Vol 14（七大公會議）+ ACCS 待補卷 | 待續 | **最後一卷 V14**；Schaff 全集 = ANF 10 + NPNF1 14 + NPNF2 14 = **38 卷**（+ ACCS 27 卷）|
+| ✅ 38 | NPNF2 Vol 14（基督教會七大公會議）| 已精修 | `_fix_vol14_councils.py` PREFIX-to-vol（trailing-dot key 防 vii./viii. 誤配；單 parent「基督教會七大公會議」+ 15 區段：7 大公會議+教區/地方會議法規+使徒法典附錄）；722→88 頁；TERM 西里爾→區利羅/聶斯脫裡→聶斯脫里/格列高理→格列高里（**避碰 大額我略二世=教宗 Gregory II、Leo 利奧/良=教宗+皇帝**）；test PASS · validate 0 FAIL。**🎉 Schaff 全集 38 卷收官** |
 
 ---
 
@@ -568,6 +568,15 @@ apply_translation_decisions_20260529.py 已套到 DB + Vol 1-9 chunks。**之後
   - 亞歷山卓的革利免（Κλήμης, 希臘）→ Vol 2（《教師》《雜文集》《富者得救》《勸勉希臘人辭》)；Vol 8 狄奧多托殘篇也是亞歷山卓的
 - **格列高里/額我略**：教宗 Gregory I → 額我略；其他 Gregory（Naz/Nyssa/Palamas/Sinai/Thaumaturgus）→ 一律「格列高里」（「里」非「理」）
 - **巴西流 vs 巴西略**：Basil the Great → 凱撒利亞的巴西流；歷史上任何 Basil(eios) → 巴西流。**禁用「巴西略」**
+- **區利羅 vs 西里爾（Κύριλλος 同字根、按人/受容傳統分流）**：
+  - 教父（希臘文底本）→ **區利羅**：亞歷山卓的區利羅、耶路撒冷的區利羅。V14 已收斂 西里爾/西瑞爾→區利羅（皆亞歷山卓主教）。
+  - 斯拉夫人的使徒 St Cyril/Constantine（9c，與美多德造字）→ 斯拉夫式 **西里爾**（即「西里爾字母 Cyrillic」）。**「西里爾」非錯字，是這一位的定名**，遇到斯拉夫使徒語境不可收斂成區利羅。
+- **科普特第五支（2026-06-12 user 提，待定名）**：四傳統（拉丁/希臘/敘利亞/亞美尼亞）可加 **科普特** 為第五支，但
+  **範圍限「名字本為科普特語」者**——希臘化亞歷山卓教父（區利羅、亞他那修）名字本是希臘名、科普特只借用，**仍走希臘**
+  （故 Cyril of Alex = 區利羅，不取科普特活誦讀音 Kirollos/كيرلس）。科普特支真正適用：沙漠/原生埃及教父，名字
+  希臘-拉丁化反失真者。**候選音譯（待 user 拍板再入庫）**：Pachomius→帕宏（ⲡⲁϧⲱⲙ Pakhom，非帕科繆）·
+  Shenoute→舍努特（ϣⲉⲛⲟⲩⲧⲉ，純科普特無希臘對應）· Pishoi/Bishoy→皮紹依 · Paphnutius→帕夫努特（Papnoute）。
+  原則：原生科普特名按波海里腔（現存禮儀腔）還原，拒希臘/拉丁尾。⚠️ 具體定名先列清單給 user 定奪再套（[[feedback_glossary_ancient_name_priority]]）。
 
 ### 新譯卷起手 checklist
 
@@ -642,14 +651,16 @@ auto-push。**git 在 master 跑教父**（user 拍板；feat/coach-language 是
   - **譯名（user 06-11 定）**：Martin of Tours=**瑪爾定**（非馬丁=路德同形；詞庫無此聖人條目）。
   - **未跑**（可日後補）：glossary backfill、B 層 `llm_proofread_book.py`。
 
-### 🔄 進行中（2026-06-12 — 新 session 接手即續）
-- **使用者指令（06-11）**：先把 **Schaff 精修完**，**ACCS 先等**。V11/V12/V13 已上架（見上）。
-- **最後一卷 → V14 七大公會議** `63853a97-68be-441c-8dce-063ae89405c5`（精修完 Schaff NPNF2 全 14 卷收官）。
-  - 翻完**先 spot-check 3-4 個深層 chunk 內容是否同作品連續**（坑 4.7）；title_en 若 npnfNN.* 前綴 →
-    PREFIX-to-vol（V12/V13 範本 `_fix_vol12_leo_gregory.py` / `_fix_vol13_*.py`），英文 NCX → boundary-walk。
-  - **名稱收斂前必 probe 變體 + spot-check 衝突**（V12 利奧=教宗+皇帝、V13 格列高里=大額我略+圖爾的格列高里
-    雙人 → 長 key 先保護再收斂；以法蓮≠艾弗冷）。
-  - 完成後 Schaff 收官；**ACCS 27 卷待 user 指示再開**。
+### ✅ Schaff 全集 38 卷收官（2026-06-12）
+- **ANF 10 + NPNF1 14 + NPNF2 14 = 38 卷全部已精修上架。** V11-V14 本輪 2026-06-11〜12 完成（見上表）。
+- 譯名鎖定彙整：蘇皮修/勒蘭的文生/若望‧格西安/瑪爾定（V11）· 大良/大額我略（V12 user 拍板保留「大」）·
+  敘利亞的厄弗冷/波斯賢士阿弗拉哈特（V13）· 區利羅/聶斯脫里/格列高里（V14）。
+- **名稱收斂鐵則（V12-V14 反覆踩到）**：收斂前必 probe 變體 + spot-check 同名異人；sweep_t8 按 key 長度
+  遞減套用，可用「長 key 先保護」處理雙人衝突（圖爾的格列高里、大額我略二世、以法蓮、皇帝李奧）。
+
+### 🔄 下一步（待 user 指示）
+- **ACCS 27 卷**：user 06-11 指令「先 Schaff，ACCS 先等」→ Schaff 已收官，**ACCS 待 user 開口再開**。
+  ACCS 是英文聖經註釋彙編（IVP），多卷待補中譯；起手同樣先查 `/translation-glossary` 教父譯名。
 
 ### 🧭 本輪（2026-06-05〜10）關鍵改進與教訓（新 session 必讀）
 1. **譯名修正**：Cyril of Jerusalem = **耶路撒冷的區利羅**（非西瑞爾；user 抓出、詞庫權威確認）。
