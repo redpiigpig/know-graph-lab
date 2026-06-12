@@ -74,6 +74,13 @@ description: 把 /ai-dialogues 裡某一條「跨多日延續的 AI 對話串」
 - 換串：改頂部 `AI_NAME` / `USER_NAME` / `SLUG`（誰是 AI＝大膽再創作那方、誰是使用者＝輕修那方）。
 - 收尾把關：`--dry --redo` 應回報 0 turns（全標記）→ 確認無漏網。
 
+### 🔧 重寫成品：手工 docx 直灌 ＋ 從 raw 重建（2026-06-12，取代爛 recompose）
+當使用者嫌「之前轉錄很爛」時（克里須那被舊 recompose 洗成通篇詩化、抽掉實質；且舊書從廣集組、收了非屬條目）：
+- **`dialogue_rewrite_from_docx.py`**：使用者**手工編輯的對話錄 docx**（日期標題「M月D日（X）」→`阿周那：`/`克里須那：`→內文）直接解析灌進 dialogue_days，零 LLM、零失真、保留使用者的敘事順序。空白日（原稿未完成）跳過不覆蓋。weekday 由日期推算。**有手工稿就優先用這個**（品質最高）。
+- **`dialogue_rebuild_from_raw.py`**：沒手工稿的日子，**從 raw（ai_dialogues_gemini）重建**，membership 用**日記範圍** id 清單（去非屬條目），阿周那＝prompt 輕整、克里須那＝**raw response 重寫成乾淨散文**。0 則 IN 的日子從 dialogue_days 刪除。opencc s2tw 保繁。
+- **關鍵：克里須那要從 raw response 重寫，不要從舊 recompose 的詩化稿重寫**——詩化稿已把實質抽掉，再洗也回不來；raw response 才有完整論點。
+- **`dialogue_recompose.py` sys_ai 已改版（2026-06-12）**：捨棄舊「大膽再創作、更有詩意」，改為**清晰溫暖散文、保留完整論點與專名、去條列客套、不堆砌詩化**，temp 0.7→0.4。要重洗既有 dialogue_days 得先清 `data-rc` 標記（可只清克里須那 turn 的，保留阿周那）。
+
 ### 📜 序／跋／題詞：`dialogue_preface.py`
 為整條對話錄生成開篇「序」（楔子，~250–400 字，邀人入場）＋終篇「跋」（收束，~150–250 字，回望留餘韻）＋可選**題詞**（標題後、序前的引文）。寫進**主卡** `writing_projects.content_json`，格式＝`題詞+序HTML` + `<!--CODA-->` + `跋HTML`。`--dry` 只印不寫。
 - **兩種來源**：`--dry`/無參＝LLM 生成（讀 dialogue_days 全部日期＋主題＋首尾片段餵 Gemini→NVIDIA）；**`--from-file`＝讀手寫稿** `c:/tmp/krishna/preface.json`（`{epigraph:{lines:[],cite},preface,coda}`，段落空行分隔、`**粗體**`）。⭐ **使用者親自給楔子素材（生命經驗、定名由來、典故）時一律走手寫稿，不用 LLM 冷生成**——份量與精準度差很多。
