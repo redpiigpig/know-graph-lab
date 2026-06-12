@@ -662,6 +662,17 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           status: 'copyright',
         },
         {
+          title: '宗教內對話',
+          titleOriginal: 'The Intrareligious Dialogue',
+          year: '1978／1999',
+          yearSort: 1978,
+          category: '文化與宗教的對話（卷六）',
+          languages: ['en'],
+          status: 'done',
+          ebookId: '55555556-5555-4555-8555-555555555555',
+          note: '「宗教內對話」概念的奠基文集（山上訓道＋10 章）。英文原典＋王志成‧思竹中譯（四川／宗教文化）逐段對照，第三方參考譯本；REFERENCE 模式自動轉錄。',
+        },
+        {
           title: '印度教與基督宗教',
           titleOriginal: 'Hinduism and Christianity (Opera Omnia VII)',
           year: '全集 VII',

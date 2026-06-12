@@ -73,6 +73,22 @@ REGISTRY = {
         "original_title": "The Intrareligious Dialogue", "year": 1999,
         "category": "世界宗教", "subcategory": "基督教",
         "volume": "宗教內對話（雷蒙‧潘尼卡）", "parent_volume": "宗教間／宗教內對話",
+        # Chapter manifest (prologue + 10 chapters, same order both sides) for
+        # split_chapters_by_manifest. EN anchors use clean tokens robust to the
+        # PDF's broken font cmap (ŚŪNYATĀ→"SONYATA" → use "BUDDHIST"; HINDU→"HINou"
+        # → "TOWARD A HIN"). ZH anchors give 第N章 + a title fallback for chapters
+        # whose number the scan-OCR dropped (第5章 → "懸置").
+        "chapters_en": [
+            "SERMON ON THE MOUNT", "RHETORIC OF THE DIALOGUE", "THE DIALOGICAL DIALOGUE",
+            "FAITH AND BELIEF", "RULES OF THE GAME", "EPOCH", "CATEGORY OF GROWTH",
+            "ECUMENICAL ECUMENISM", "RAMON LLULL", "BUDDHIST", "TOWARD A HIN",
+        ],
+        "chapters_zh": [
+            "山上訓道", ["第1章", "修辭學"], ["第2章", "對話的對話"], ["第3章", "信仰與信念"],
+            ["第4章", "遊戲規則"], ["第5章", "懸置"], ["第6章", "成長範疇", "範疇"],
+            ["第7章", "普世的普世主義"], ["第8章", "拉蒙"], ["第9章", "空與實"],
+            ["第10章", "印度教-基督教", "走向印度教"],
+        ],
     },
 }
 
@@ -492,7 +508,14 @@ def assemble_reference(en_sections: list[dict], zh_sections: list[dict]) -> list
     (build_reference_chunk's defaults are frozen at def-time, so select_book()'s
     reassignment must be passed explicitly)."""
     chunks = [make_cover_chunk()]
-    pairs, n_en, n_zh = align_reference_chapters(en_sections, zh_sections)
+    man_en = BOOK_META.get("chapters_en")
+    man_zh = BOOK_META.get("chapters_zh")
+    if man_en and man_zh:
+        en_ch = split_chapters_by_manifest(en_sections, man_en)
+        zh_ch = split_chapters_by_manifest(zh_sections, man_zh)
+        pairs, n_en, n_zh = pair_sections(en_ch, zh_ch), len(en_ch), len(zh_ch)
+    else:
+        pairs, n_en, n_zh = align_reference_chapters(en_sections, zh_sections)
     if n_en != n_zh:
         print(f"  ⚠ chapter count mismatch: EN={n_en} ZH={n_zh} — pairing by order; "
               f"verify alignment (may need a per-book chapter manifest)", flush=True)
