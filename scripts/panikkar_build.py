@@ -423,12 +423,25 @@ def split_chapters_by_manifest(sections: list[dict], anchors: list[str]) -> list
         h = _norm_anchor(s["heading"])
         match.append(next((i for i, a in enumerate(A) if a and a in h), -1))
 
-    # TOC = a window of ≤12 sections listing ≥6 distinct chapter anchors.
+    def _has_body(s: dict) -> bool:
+        return any((p or "").strip() for p in s["paras"])
+
+    # TOC = a contiguous run (≥3) of anchor headings with NO body — the contents
+    # list reads "第1章 …\n第2章 …\n…" back-to-back. Real chapters carry body, so
+    # they survive (the old fixed-window rule wrongly swallowed chapters sitting
+    # near the TOC, which is why the ZH side collapsed to 1/11).
     toc: set = set()
-    for i in range(len(secs)):
-        win = range(i, min(i + 12, len(secs)))
-        if len({match[j] for j in win if match[j] >= 0}) >= 6:
-            toc.update(j for j in win if match[j] >= 0)
+    i = 0
+    while i < len(secs):
+        if match[i] >= 0 and not _has_body(secs[i]):
+            j = i
+            while j < len(secs) and match[j] >= 0 and not _has_body(secs[j]):
+                j += 1
+            if j - i >= 3:
+                toc.update(range(i, j))
+            i = j
+        else:
+            i += 1
 
     chapters: list[dict] = []
     cur = None
