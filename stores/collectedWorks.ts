@@ -203,11 +203,13 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         {
           title: '古代梵文文學史',
           titleOriginal: 'A History of Ancient Sanskrit Literature',
+          ebookId: '4444444e-4444-4444-8444-444444444444',
           year: '1859',
           yearSort: 1859,
           category: '印度學',
           languages: ['en'],
-          status: 'planned',
+          status: 'in-progress',
+          note: '英文可讀；繁中逐段翻譯進行中。',
         },
         {
           title: '印度能教我們什麼？',
@@ -244,20 +246,24 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         {
           title: '往日時光（憶往）',
           titleOriginal: 'Auld Lang Syne',
+          ebookId: '4444444f-4444-4444-8444-444444444444',
           year: '1898',
           yearSort: 1898,
           category: '文集與回憶',
           languages: ['en'],
-          status: 'planned',
+          status: 'in-progress',
+          note: '英文可讀；繁中逐段翻譯進行中。',
         },
         {
           title: '自傳片段',
           titleOriginal: 'My Autobiography: A Fragment',
+          ebookId: '44444450-4444-4444-8444-444444444444',
           year: '1901',
           yearSort: 1901,
           category: '文集與回憶',
           languages: ['en'],
-          status: 'planned',
+          status: 'in-progress',
+          note: '英文可讀；繁中逐段翻譯進行中。',
         },
         {
           title: '東方聖書（主編）',
@@ -565,9 +571,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1964,
           category: '印度教與基督宗教（卷七）',
           languages: ['en'],
-          status: 'in-progress',
-          ebookId: '55555555-5555-4555-8555-555555555555',
-          note: '起手卷 ‧ 潘尼卡最著名代表作；英／繁中雙語逐段對照（自譯本）試譯進行中。原文即英文，西班牙文版日後可升英／西／繁中三欄。',
+          status: 'planned',
+          note: '起手卷 ‧ 潘尼卡最著名代表作。英／繁中雙語逐段對照（自譯本）pipeline 已就緒（scripts/panikkar_build.py），受版權待英文來源檔到位即開譯；原文即英文，西班牙文版日後可升英／西／繁中三欄。',
         },
         // 全集 12 卷（受版權，待合法來源）
         {

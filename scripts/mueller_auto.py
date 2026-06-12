@@ -97,6 +97,19 @@ WORKS = [
          title="德國作坊雜記（卷一）", title_en="Chips from a German Workshop, Vol. I", year=1867,
          category="宗教學", subcategory="宗教學", parent="文集與回憶",
          en_id="chipsfromagerma01mlgoog", de_id=None, split="coarse"),
+    # ── 2026-06-12 補入：印度學早期卷 + 兩本回憶錄（user 拍板「都放進去」）──
+    dict(slug="ancient-sanskrit-literature", eid="4444444e-4444-4444-8444-444444444444",
+         title="古代梵文文學史", title_en="A History of Ancient Sanskrit Literature", year=1859,
+         category="宗教學", subcategory="宗教學", parent="印度學",
+         en_id="historyofancient00mluoft", de_id=None, split="coarse"),
+    dict(slug="auld-lang-syne", eid="4444444f-4444-4444-8444-444444444444",
+         title="往日時光（憶往）", title_en="Auld Lang Syne", year=1898,
+         category="宗教學", subcategory="宗教學", parent="文集與回憶",
+         en_id="auldlangsyne00mluoft", de_id=None, split="coarse"),
+    dict(slug="my-autobiography", eid="44444450-4444-4444-8444-444444444444",
+         title="自傳片段", title_en="My Autobiography: A Fragment", year=1901,
+         category="宗教學", subcategory="宗教學", parent="文集與回憶",
+         en_id="myautobiographyf00mluoft", de_id=None, split="coarse"),
 ]
 
 # ── chapter splitting ────────────────────────────────────────────────────────
