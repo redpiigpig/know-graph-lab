@@ -399,6 +399,52 @@ def chapter_sections(sections: list[dict]) -> list[dict]:
     return [s for s in merge_repeated_headings(sections) if not is_frontmatter(s["heading"])]
 
 
+def _norm_anchor(s: str) -> str:
+    """Normalize a heading for anchor matching: strip diacritics (ŚŪNYATĀ→SUNYATA,
+    EPOCHÊ→EPOCH), drop non-alphanumerics, uppercase. CJK passes through."""
+    import unicodedata
+    s = unicodedata.normalize("NFKD", s.lstrip("# "))
+    return "".join(c for c in s if c.isalnum() and not unicodedata.combining(c)).upper()
+
+
+def split_chapters_by_manifest(sections: list[dict], anchors: list[str]) -> list[dict]:
+    """Split heading-marked sections into chapters by sequentially matching an
+    ordered list of distinctive `anchors` (one per chapter, prologue first).
+    Handles the two OCR hazards seen on scanned translations: a TABLE OF CONTENTS
+    (many chapter anchors densely clustered → detected + skipped) and RUNNING-HEAD
+    fragmentation (the same chapter title re-marked on later pages → ignored once
+    we've advanced past that anchor). Sub-section `## ` headings between chapter
+    anchors are folded into the current chapter as body lines (so they show + give
+    more rows to align on). Returns [{heading, paras}] — one per matched chapter."""
+    secs = merge_repeated_headings(sections)
+    A = [_norm_anchor(a) for a in anchors]
+    match = []
+    for s in secs:
+        h = _norm_anchor(s["heading"])
+        match.append(next((i for i, a in enumerate(A) if a and a in h), -1))
+
+    # TOC = a window of ≤12 sections listing ≥6 distinct chapter anchors.
+    toc: set = set()
+    for i in range(len(secs)):
+        win = range(i, min(i + 12, len(secs)))
+        if len({match[j] for j in win if match[j] >= 0}) >= 6:
+            toc.update(j for j in win if match[j] >= 0)
+
+    chapters: list[dict] = []
+    cur = None
+    ai = 0
+    for i, s in enumerate(secs):
+        if ai < len(anchors) and match[i] == ai and i not in toc:
+            cur = {"heading": s["heading"].lstrip("# ").strip(), "paras": list(s["paras"])}
+            chapters.append(cur)
+            ai += 1
+        elif cur is not None:
+            if s["heading"] != "(front)":
+                cur["paras"].append(s["heading"])  # keep sub-heading visible + alignable
+            cur["paras"].extend(s["paras"])
+    return chapters
+
+
 def align_reference_chapters(en_sections: list[dict], zh_sections: list[dict]) -> tuple[list[tuple], int, int]:
     """Drop front matter + merge repeats on both sides, then pair the remaining
     chapters by order → (pairs, n_en_chapters, n_zh_chapters). Caller checks the
