@@ -100,6 +100,23 @@ Extract the FULL text from EVERY page. Output ONLY a JSON object: {"pages":[{"pa
 - DO NOT translate, summarize, or interpret. Output the original text only. No markdown, no commentary.
 """
 
+# Heading-marking variant: makes chapter/section titles into Markdown `## ` lines
+# so panikkar_build's split_sections detects them consistently in BOTH the English
+# original and the Chinese translation → chapters pair up for 逐段對照. Used by the
+# collected-works REFERENCE pipeline (--mark-headings).
+PROMPT_MARK_HEADINGS = """\
+This PDF is a book that may contain Chinese (Traditional or Simplified) and/or English text.
+
+Extract the FULL text from EVERY page. Output ONLY a JSON object: {"pages":[{"page":1,"text":"..."}]}.
+- "page" is the 1-based PDF page number within THIS file.
+- "text" is the complete extracted text, preserving paragraph breaks with \\n.
+- IMPORTANT: put every chapter or major section TITLE on its own line, prefixed with "## "
+  (e.g. "## The Dialogical Dialogue", "## 第一章 對話的修辭", "## Introduction", "## 导论").
+  Mark ONLY genuine chapter/section titles this way — NOT running heads, page numbers, or footnotes.
+- Skip purely decorative pages but still include them with empty "text".
+- DO NOT translate, summarize, or interpret. Output the original text only. No commentary.
+"""
+
 PAGES_SCHEMA = {
     "type": "object",
     "properties": {
@@ -116,58 +133,120 @@ PAGES_SCHEMA = {
 }
 
 
-def ocr_pdf(src: Path, *, model: str, pages: tuple[int, int] | None = None) -> list[dict]:
-    """OCR one PDF (optionally a page slice) → list of {page,text}. Rotates Gemini
-    keys on quota. Network/LLM boundary — not unit-tested."""
+_MAX_OUTPUT_TOKENS = 32768  # whole-book single calls truncate at the 8K default → lost pages
+
+
+def _pdf_page_count(src: Path) -> int:
+    import fitz
+    doc = fitz.open(src)
+    n = len(doc)
+    doc.close()
+    return n
+
+
+def _ocr_one_call(src_slice: Path, *, model: str, prompt: str, keys: list[str]) -> list[dict]:
+    """OCR a single (ASCII-named) PDF in one Gemini call, rotating keys on quota.
+    Salvages truncated JSON via json_repair when available."""
     from google import genai
     from google.genai import types
+    try:
+        import json_repair
+    except Exception:
+        json_repair = None
+    last_err = ""
+    ki = 0
+    transient_tries = 0
+    while ki < len(keys):
+        client = genai.Client(api_key=keys[ki])
+        try:
+            up = client.files.upload(
+                file=src_slice,
+                config=types.UploadFileConfig(display_name="ocr.pdf", mime_type="application/pdf"),
+            )
+            resp = client.models.generate_content(
+                model=model,
+                contents=[up, prompt],
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json", response_schema=PAGES_SCHEMA,
+                    max_output_tokens=_MAX_OUTPUT_TOKENS,
+                ),
+            )
+            try:
+                client.files.delete(name=up.name)
+            except Exception:
+                pass
+            try:
+                data = json.loads(resp.text)
+            except json.JSONDecodeError:
+                if json_repair:
+                    data = json_repair.loads(resp.text)
+                    if not isinstance(data, dict):
+                        data = {"pages": []}
+                else:
+                    raise
+            return [p for p in data.get("pages", []) if isinstance(p, dict)]
+        except Exception as e:  # noqa: BLE001
+            last_err = str(e)[:200]
+            low = last_err.lower()
+            if any(k in low for k in ("quota", "resource_exhausted", "429")):
+                ki += 1  # daily/RPM cap on this key — move to the next key
+                if ki < len(keys):
+                    print(f"  ⟳ key #{ki} quota; rotating", flush=True)
+                    time.sleep(2)
+                continue
+            if any(k in low for k in ("503", "unavailable", "500", "internal",
+                                      "overloaded", "deadline", "timeout", "connection")):
+                # transient Gemini spike — back off + retry SAME key (up to 6×)
+                transient_tries += 1
+                if transient_tries <= 6:
+                    wait = min(10 * transient_tries, 60)
+                    print(f"  ↻ transient ({last_err[:60]}); retry in {wait}s", flush=True)
+                    time.sleep(wait)
+                    continue
+                ki += 1  # give up on this key, try next
+                transient_tries = 0
+                continue
+            raise
+    raise RuntimeError(f"all keys exhausted: {last_err}")
 
+
+def ocr_pdf(src: Path, *, model: str, pages: tuple[int, int] | None = None,
+            mark_headings: bool = False, batch: int = 0) -> list[dict]:
+    """OCR a PDF → list of {page,text} (global 1-based page numbers). Rotates
+    Gemini keys on quota. When batch>0 and the range exceeds it, OCRs in page
+    batches (whole-book single calls truncate past the output-token limit) and
+    renumbers pages globally. Network/LLM boundary — not unit-tested."""
     keys = _gemini_keys()
     if not keys:
         raise RuntimeError("no Gemini keys in .env (Gemini_API_Key_1..)")
+    prompt = PROMPT_MARK_HEADINGS if mark_headings else PROMPT
 
-    if pages:
-        upload_src = _slice_pdf(src, *pages)
+    total = _pdf_page_count(src)
+    lo, hi = (pages[0], pages[1]) if pages else (1, total)
+    lo, hi = max(1, lo), min(total, hi)
+
+    if batch and (hi - lo + 1) > batch:
+        ranges = [(s, min(s + batch - 1, hi)) for s in range(lo, hi + 1, batch)]
     else:
-        import shutil
-        upload_src = _ascii_tmp()
-        shutil.copyfile(src, upload_src)
-    try:
-        last_err = ""
-        for ki, key in enumerate(keys):
-            client = genai.Client(api_key=key)
-            try:
-                up = client.files.upload(
-                    file=upload_src,
-                    config=types.UploadFileConfig(display_name="ocr.pdf", mime_type="application/pdf"),
-                )
-                resp = client.models.generate_content(
-                    model=model,
-                    contents=[up, PROMPT],
-                    config=types.GenerateContentConfig(
-                        response_mime_type="application/json", response_schema=PAGES_SCHEMA,
-                    ),
-                )
-                try:
-                    client.files.delete(name=up.name)
-                except Exception:
-                    pass
-                data = json.loads(resp.text)
-                return [p for p in data.get("pages", []) if isinstance(p, dict)]
-            except Exception as e:  # noqa: BLE001
-                last_err = str(e)[:200]
-                low = last_err.lower()
-                if any(k in low for k in ("quota", "resource_exhausted", "429")) and ki + 1 < len(keys):
-                    print(f"  ⟳ key #{ki + 1} quota; rotating", flush=True)
-                    time.sleep(2)
-                    continue
-                raise
-        raise RuntimeError(f"all keys exhausted: {last_err}")
-    finally:
+        ranges = [(lo, hi)]
+
+    out: list[dict] = []
+    for bi, (rs, re_) in enumerate(ranges, 1):
+        sl = _slice_pdf(src, rs, re_)
         try:
-            upload_src.unlink()
-        except OSError:
-            pass
+            page_dicts = _ocr_one_call(sl, model=model, prompt=prompt, keys=keys)
+        finally:
+            try:
+                sl.unlink()
+            except OSError:
+                pass
+        for p in page_dicts:  # slice-local page (1..k) → global (rs..)
+            p["page"] = rs + (int(p.get("page", 1)) - 1)
+        out.extend(page_dicts)
+        if len(ranges) > 1:
+            ne = sum(1 for p in page_dicts if (p.get("text") or "").strip())
+            print(f"  batch {bi}/{len(ranges)} pp{rs}-{re_}: {ne} pages", flush=True)
+    return out
 
 
 def extract_text_layer(src: Path, *, pages: tuple[int, int] | None = None) -> list[dict]:
@@ -192,6 +271,10 @@ def main():
     ap.add_argument("--pages", default=None, help="1-based inclusive range, e.g. 5-8 (sample/validate)")
     ap.add_argument("--engine", default="gemini", choices=["gemini", "text"],
                     help="gemini = OCR scanned PDF; text = pull embedded text layer (born-digital)")
+    ap.add_argument("--mark-headings", action="store_true",
+                    help="mark chapter/section titles as Markdown ## (for collected-works alignment)")
+    ap.add_argument("--batch", type=int, default=20,
+                    help="pages per Gemini call (0 = whole file; >0 avoids output-token truncation)")
     ap.add_argument("--model", default="gemini-2.5-flash")
     args = ap.parse_args()
 
@@ -207,7 +290,8 @@ def main():
     if args.engine == "text":
         page_dicts = extract_text_layer(src, pages=pages)
     else:
-        page_dicts = ocr_pdf(src, model=args.model, pages=pages)
+        page_dicts = ocr_pdf(src, model=args.model, pages=pages,
+                             mark_headings=args.mark_headings, batch=args.batch)
     text = pages_to_text(page_dicts)
     Path(args.out).write_text(text, encoding="utf-8")
     ne = sum(1 for p in page_dicts if (p.get("text") or "").strip())

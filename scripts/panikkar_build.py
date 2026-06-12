@@ -52,12 +52,50 @@ if _ENV_PATH.exists():
 
 from multilang_chunks import build_multilang_chunk, validate_multilang_chunk, write_jsonl  # noqa: E402
 
-# ── Pilot config: 《The Unknown Christ of Hinduism》(1964, rev. 1981) ──
-EBOOK_ID = "55555555-5555-4555-8555-555555555555"
-VOLUME = "印度教中未識的基督（雷蒙‧潘尼卡）"
-PARENT_VOLUME = "印度教與基督宗教"
+# ── Book registry (per-volume metadata) ──────────────────────────────────────
+# Each book = one ebook row + reader. REFERENCE-mode books pair the existing 中譯
+# (main column) with the English original; SELF-TRANSLATE books render my own 繁中.
+REGISTRY = {
+    "unknown-christ": {
+        "ebook_id": "55555555-5555-4555-8555-555555555555",
+        "title": "印度教中未知的基督",
+        "subtitle": "基督宗教與印度教的交會（英／繁中對照）",
+        "author": "雷蒙‧潘尼卡", "author_en": "Raimon Panikkar",
+        "original_title": "The Unknown Christ of Hinduism", "year": 1981,
+        "category": "世界宗教", "subcategory": "基督教",
+        "volume": "印度教中未識的基督（雷蒙‧潘尼卡）", "parent_volume": "印度教與基督宗教",
+    },
+    "intrareligious-dialogue": {
+        "ebook_id": "55555556-5555-4555-8555-555555555555",
+        "title": "宗教內對話",
+        "subtitle": "英文原典＋王志成‧思竹中譯逐段對照（第三方參考譯本）",
+        "author": "雷蒙‧潘尼卡", "author_en": "Raimon Panikkar",
+        "original_title": "The Intrareligious Dialogue", "year": 1999,
+        "category": "世界宗教", "subcategory": "基督教",
+        "volume": "宗教內對話（雷蒙‧潘尼卡）", "parent_volume": "宗教間／宗教內對話",
+    },
+}
+
+# Active book (mutated by select_book()); defaults to the pilot 起手卷.
+BOOK_META = REGISTRY["unknown-christ"]
+EBOOK_ID = BOOK_META["ebook_id"]
+VOLUME = BOOK_META["volume"]
+PARENT_VOLUME = BOOK_META["parent_volume"]
 SOURCE_ORDER = ["en"]  # bilingual; 升三欄 → ["en", "es"]
 DATA_DIR = SCRIPT_DIR.parent / ".claude" / "skills" / "ebook-collected-works" / "panikkar_data" / "uch"
+
+
+def select_book(slug: str) -> dict:
+    """Point the module globals at a registry book so cover/chunks/ebook-row use
+    its ebook_id, volume tree and metadata."""
+    global BOOK_META, EBOOK_ID, VOLUME, PARENT_VOLUME
+    if slug not in REGISTRY:
+        raise SystemExit(f"unknown --book {slug!r}; known: {', '.join(REGISTRY)}")
+    BOOK_META = REGISTRY[slug]
+    EBOOK_ID = BOOK_META["ebook_id"]
+    VOLUME = BOOK_META["volume"]
+    PARENT_VOLUME = BOOK_META["parent_volume"]
+    return BOOK_META
 
 # ── OCR / text reflow ────────────────────────────────────────────────────────
 _PAGENUM_RE = re.compile(r"^[^A-Za-zÀ-ÿ]*\d{1,4}[^A-Za-zÀ-ÿ]*$")
@@ -153,6 +191,11 @@ def split_sections(text: str) -> list[dict]:
     """Split source text into [{heading, paras:[...]}] on chapter-heading anchors.
     Front matter before the first heading is kept as a '(front)' section. Long
     lines that merely mention 'Chapter 1' never split (length guard)."""
+    # Isolate markdown heading lines into their own blocks: Gemini OCR
+    # (--mark-headings) emits `## Title` on its own line but glues it to the next
+    # paragraph with a single \n; block-splitting only breaks on blank lines, so
+    # surround every `#…` heading line with blanks first.
+    text = re.sub(r"(?m)^[ \t]*(#{1,6}\s+\S.*?)[ \t]*$", r"\n\1\n", text)
     blocks = [b.strip() for b in re.split(r"\n\s*\n", text) if b.strip()]
     sections: list[dict] = []
     cur: dict | None = None
@@ -336,13 +379,16 @@ def pair_sections(en_sections: list[dict], zh_sections: list[dict]) -> list[tupl
 def assemble_reference(en_sections: list[dict], zh_sections: list[dict]) -> list[dict]:
     """Build cover + one reference chunk per paired section (existing 中譯 main,
     English aligned). No LLM — this is the path for works with a complete
-    published Chinese translation."""
+    published Chinese translation. Forwards the ACTIVE volume/parent_volume
+    (build_reference_chunk's defaults are frozen at def-time, so select_book()'s
+    reassignment must be passed explicitly)."""
     chunks = [make_cover_chunk()]
     for i, (title_zh, en_head, en_paras, zh_paras) in enumerate(
             pair_sections(en_sections, zh_sections), start=1):
         chunks.append(build_reference_chunk(
             chunk_index=i, title_zh=title_zh, en_head=en_head,
-            zh_paras=zh_paras, en_paras=en_paras, page_number=i + 1))
+            zh_paras=zh_paras, en_paras=en_paras, page_number=i + 1,
+            volume=VOLUME, parent_volume=PARENT_VOLUME))
     return chunks
 
 
@@ -417,17 +463,18 @@ def make_engine():
 def ensure_ebook_row():
     import requests
     import translate_ebook_to_zh as te
+    m = BOOK_META
     row = {
         "id": EBOOK_ID,
-        "title": "印度教中未識的基督",
-        "subtitle": "基督宗教與印度教的交會（英／繁中對照‧自譯本）",
-        "author": "雷蒙‧潘尼卡",
-        "author_en": "Raimon Panikkar",
-        "original_title": "The Unknown Christ of Hinduism",
-        "original_publish_year": 1981,
+        "title": m["title"],
+        "subtitle": m["subtitle"],
+        "author": m["author"],
+        "author_en": m["author_en"],
+        "original_title": m["original_title"],
+        "original_publish_year": m["year"],
         "file_type": "epub",
-        "category": "世界宗教",
-        "subcategory": "基督教",
+        "category": m["category"],
+        "subcategory": m["subcategory"],
     }
     r = requests.post(f"{te.URL}/rest/v1/ebooks?on_conflict=id",
                       headers={**te.H_JSON, "Prefer": "resolution=merge-duplicates"},
@@ -504,12 +551,15 @@ def main():
     ap.add_argument("--zh-src", type=str, default=None,
                     help="existing 中譯 text file → REFERENCE mode (no re-translation; "
                          "既有中譯為主欄 + 英文逐段對照，簡體自動轉繁)")
+    ap.add_argument("--book", default="unknown-christ",
+                    help=f"registry slug ({', '.join(REGISTRY)})")
     ap.add_argument("--dry", action="store_true", help="split + counts only, no LLM")
     ap.add_argument("--probe", action="store_true", help="translate one paragraph, print, exit")
     ap.add_argument("--limit", type=int, default=None, help="only first N sections")
     ap.add_argument("--upload", action="store_true", help="push R2 + DB after building")
     args = ap.parse_args()
 
+    select_book(args.book)
     if not args.src:
         ap.error("--src required (English source text)")
     reference = args.zh_src is not None

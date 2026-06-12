@@ -49,6 +49,14 @@ class TestSplitSections:
         assert "title page" in secs[0]["paras"][0]
         assert secs[1]["heading"] == "INTRODUCTION"
 
+    def test_isolates_markdown_heading_glued_to_body(self):
+        # Gemini --mark-headings emits `## Title` on its own line but glued to the
+        # next paragraph by a single newline; split must still break the section.
+        text = "## Chapter One\nbody of one.\n\n## Chapter Two\nbody of two."
+        secs = pk.split_sections(text)
+        assert [s["heading"] for s in secs] == ["## Chapter One", "## Chapter Two"]
+        assert secs[0]["paras"] == ["body of one."]
+
     def test_splits_on_cjk_headings(self):
         # existing 中譯 are split on CJK chapter headings (simplified or traditional)
         text = "导论\n\n中文正文一\n\n第一章\n\n中文正文二\n\n第二节\n\n中文正文三"
