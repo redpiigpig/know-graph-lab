@@ -49,6 +49,13 @@ class TestSplitSections:
         assert "title page" in secs[0]["paras"][0]
         assert secs[1]["heading"] == "INTRODUCTION"
 
+    def test_splits_on_cjk_headings(self):
+        # existing 中譯 are split on CJK chapter headings (simplified or traditional)
+        text = "导论\n\n中文正文一\n\n第一章\n\n中文正文二\n\n第二节\n\n中文正文三"
+        secs = pk.split_sections(text)
+        assert [s["heading"] for s in secs] == ["导论", "第一章", "第二节"]
+        assert secs[0]["paras"] == ["中文正文一"]
+
     def test_long_line_with_chapter_word_is_not_a_heading(self):
         long = ("Chapter 1 of this work is treated at length in the following "
                 "very long discursive sentence which must never split a section")
@@ -111,6 +118,59 @@ class TestCoverChunk:
         assert cover["chunk_type"] == "cover"
         assert cover["page_number"] == 1
         mc.validate_multilang_chunk(cover)
+
+
+class TestReferenceMode:
+    """已有完整中譯的卷：不重譯，把既有中譯本當主欄、與英文原典逐段對照入庫
+    （標第三方參考譯本）。content = 既有中譯，sources.en = 英文原典，逐段對齊。"""
+
+    def test_build_reference_chunk_content_is_existing_translation(self):
+        chunk = pk.build_reference_chunk(
+            chunk_index=1, title_zh="第一章", en_head="CHAPTER 1",
+            zh_paras=["既有中譯第一段", "既有中譯第二段"],
+            en_paras=["English one.", "English two."],
+            page_number=2,
+        )
+        mc.validate_multilang_chunk(chunk)
+        assert chunk["content"].split("\n\n") == ["## 第一章", "既有中譯第一段", "既有中譯第二段"]
+        assert chunk["sources"]["en"].split("\n\n") == ["## CHAPTER 1", "English one.", "English two."]
+        assert chunk["source_lang"] == "en"
+        assert chunk["source_text"] == chunk["sources"]["en"]
+
+    def test_reference_chunk_aligns_unequal_en_to_zh(self):
+        # the existing translation drives the row count; English is aligned to it
+        chunk = pk.build_reference_chunk(
+            chunk_index=1, title_zh="導論", en_head="INTRO",
+            zh_paras=["甲", "乙", "丙"], en_paras=["A.", "B."],  # en short by one
+            page_number=2,
+        )
+        n = len(chunk["content"].split("\n\n"))
+        assert len(chunk["sources"]["en"].split("\n\n")) == n
+
+    def test_pair_sections_pairs_by_order(self):
+        en = [{"heading": "CHAPTER 1", "paras": ["a"]}, {"heading": "CHAPTER 2", "paras": ["b"]}]
+        zh = [{"heading": "第一章", "paras": ["甲"]}, {"heading": "第二章", "paras": ["乙"]}]
+        pairs = pk.pair_sections(en, zh)
+        assert pairs[0] == ("第一章", "CHAPTER 1", ["a"], ["甲"])
+        assert pairs[1] == ("第二章", "CHAPTER 2", ["b"], ["乙"])
+
+    def test_pair_sections_pads_uneven_counts(self):
+        en = [{"heading": "CH1", "paras": ["a"]}, {"heading": "CH2", "paras": ["b"]}]
+        zh = [{"heading": "第一章", "paras": ["甲"]}]  # zh missing chapter 2
+        pairs = pk.pair_sections(en, zh)
+        assert len(pairs) == 2
+        assert pairs[1][3] == []  # zh paras empty for the unpaired English chapter
+
+    def test_assemble_reference_end_to_end(self):
+        en = [{"heading": "INTRODUCTION", "paras": ["First.", "Second."]}]
+        zh = [{"heading": "導論", "paras": ["第一段", "第二段"]}]
+        chunks = pk.assemble_reference(en, zh)
+        assert [c["chunk_index"] for c in chunks] == [0, 1]
+        assert chunks[0]["chunk_type"] == "cover"
+        assert chunks[1]["content"].split("\n\n") == ["## 導論", "第一段", "第二段"]
+        assert chunks[1]["sources"]["en"].split("\n\n") == ["## INTRODUCTION", "First.", "Second."]
+        for c in chunks:
+            mc.validate_multilang_chunk(c)
 
 
 class TestLoadSectionsFromSrc:

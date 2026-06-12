@@ -128,11 +128,25 @@ _HEADING_RE = re.compile(
     r"|\d{1,3}\.\s+\S.*)$", re.I)
 
 
+# CJK chapter headings (existing 中譯 are split on these). Simplified + traditional
+# forms both covered, since split runs on the raw 簡體 text before opencc.
+# A real heading is the token (第N章 / 導論 / 前言…) followed by a BOUNDARY
+# (whitespace, colon, dot, 、, or end-of-line) — NOT a continuing char like 的/是,
+# so a body sentence starting "第一章的正文。" is correctly NOT a heading.
+_CJK_HEADING_RE = re.compile(
+    r"^("
+    r"第[一二三四五六七八九十百千零〇两兩0-9]+[章節节部編编卷講讲篇回]"   # 第一章 / 第3節 …
+    r"|導論|导论|緒論|绪论|導言|导言|前言|序言|自序|序|引言|引論|引论"
+    r"|結論|结论|結語|结语|餘論|余论|附錄|附录|附論|附论|目錄|目录|凡例"
+    r"|跋|後記|后记|後語|后语|譯後記|译后记|譯序|译序|致謝|致谢"
+    r")(?:[\s：:．.、]|$).*$")
+
+
 def _is_heading(line: str) -> bool:
     s = line.strip()
     if not s or len(s) > 69:
         return False
-    return bool(_HEADING_RE.match(s))
+    return bool(_HEADING_RE.match(s) or _CJK_HEADING_RE.match(s))
 
 
 def split_sections(text: str) -> list[dict]:
@@ -264,6 +278,99 @@ def assemble_pilot(sections: list[dict], translate_para, *, source_order: list =
     return chunks
 
 
+# ── reference-translation mode (existing full 中譯 → 逐段對照, NO re-translation) ─
+# When a work already has a complete published Chinese translation (e.g. 王志成
+# 的潘尼卡譯本), we do NOT re-translate: the existing 中譯 becomes the main column
+# and the English original is shown side-by-side, paragraph-aligned. Marked as a
+# third-party reference translation (private-use, see SKILL.md). 簡體先 opencc→繁.
+def build_reference_chunk(
+    *,
+    chunk_index: int,
+    title_zh: str,
+    en_head: str,
+    zh_paras: list,
+    en_paras: list,
+    volume: str = VOLUME,
+    parent_volume: str = PARENT_VOLUME,
+    page_number: int | None = None,
+) -> dict:
+    """One section → one reader chunk where `content` is the EXISTING 中譯 (main
+    column) and `sources.en` is the English original aligned to the 中譯's
+    paragraph count. The translation drives the row count; English is padded/
+    joined onto it (align_secondary)."""
+    en_aligned = align_secondary(zh_paras, en_paras)
+    zh_rows = [f"## {title_zh}"] + [z or "" for z in zh_paras]
+    en_rows = [f"## {en_head}"] + en_aligned
+    assert len(zh_rows) == len(en_rows), \
+        f"chunk {chunk_index}: zh {len(zh_rows)} != en {len(en_rows)}"
+    chunk = build_multilang_chunk(
+        chunk_index=chunk_index,
+        chapter_path=f"{PARENT_VOLUME} · {title_zh}",
+        content_zh="\n\n".join(zh_rows),
+        sources={"en": "\n\n".join(en_rows)},
+        source_order=["en"],
+        volume=volume,
+        parent_volume=parent_volume,
+        page_number=page_number if page_number is not None else chunk_index + 1,
+        title_en=en_head,
+    )
+    validate_multilang_chunk(chunk)
+    return chunk
+
+
+def pair_sections(en_sections: list[dict], zh_sections: list[dict]) -> list[tuple]:
+    """Pair English + existing-中譯 sections by order (translations keep the
+    author's chapter order) → [(title_zh, en_head, en_paras, zh_paras)]. Uneven
+    counts are padded with empty paras so no chapter is dropped (log/inspect when
+    counts differ; a real mismatch means the split needs tuning)."""
+    out: list[tuple] = []
+    n = max(len(en_sections), len(zh_sections))
+    blank = {"heading": "", "paras": []}
+    for i in range(n):
+        en = en_sections[i] if i < len(en_sections) else blank
+        zh = zh_sections[i] if i < len(zh_sections) else blank
+        out.append((zh["heading"], en["heading"], list(en["paras"]), list(zh["paras"])))
+    return out
+
+
+def assemble_reference(en_sections: list[dict], zh_sections: list[dict]) -> list[dict]:
+    """Build cover + one reference chunk per paired section (existing 中譯 main,
+    English aligned). No LLM — this is the path for works with a complete
+    published Chinese translation."""
+    chunks = [make_cover_chunk()]
+    for i, (title_zh, en_head, en_paras, zh_paras) in enumerate(
+            pair_sections(en_sections, zh_sections), start=1):
+        chunks.append(build_reference_chunk(
+            chunk_index=i, title_zh=title_zh, en_head=en_head,
+            zh_paras=zh_paras, en_paras=en_paras, page_number=i + 1))
+    return chunks
+
+
+def load_zh_sections(src_path: Path, *, to_traditional: bool = True) -> list[dict]:
+    """Load an existing Chinese translation → [{heading, paras}]. Splits on
+    heading anchors; each blank-line block is ONE paragraph (clean digital text,
+    so no English-style reflow/merge — that would glue 中文 paragraphs, which end
+    in 。！？ not '.'); 簡體 → 繁中 via opencc s2tw (standardize_ebook.to_traditional)
+    unless disabled (tests)."""
+    text = src_path.read_text(encoding="utf-8", errors="replace")
+    conv = None
+    if to_traditional:
+        import standardize_ebook as se
+        conv = se.to_traditional
+    out: list[dict] = []
+    for s in split_sections(text):
+        paras = [re.sub(r"\s*\n\s*", "", p).strip() for p in s["paras"]]
+        paras = [p for p in paras if p]
+        head = s["heading"]
+        if conv:
+            head = conv(head)
+            paras = [conv(p) for p in paras]
+        if head == "(front)" and not paras:
+            continue
+        out.append({"heading": head, "paras": paras})
+    return out
+
+
 # ── translation engine (prod only) ───────────────────────────────────────────
 PANIKKAR_PROMPT_TMPL = """你是比較神學與宗教哲學經典的專業譯者，正在翻譯雷蒙‧潘尼卡（Raimon Panikkar）的著作《印度教中未識的基督》。把下列**英文原文**翻成**繁體中文**。
 
@@ -364,9 +471,9 @@ def _cache_path(idx: int) -> Path:
     return DATA_DIR / f"sec{idx}.json"
 
 
-def load_sections_from_src(src_path: Path) -> list[dict]:
-    """Read a plain-text English source → split into sections on heading anchors
-    FIRST, then reflow each section's body (de-wrap / de-hyphenate / heal
+def load_en_sections(src_path: Path) -> list[dict]:
+    """Read a plain-text English source → [{heading, paras}]. Split on heading
+    anchors FIRST, then reflow each section's body (de-wrap / de-hyphenate / heal
     running-head splits). Splitting before reflow is essential: reflow merges
     paragraphs that don't end in terminal punctuation, which would otherwise
     swallow the (punctuation-free) chapter headings into the preceding body."""
@@ -380,14 +487,23 @@ def load_sections_from_src(src_path: Path) -> list[dict]:
         paras = reflow(body_lines)
         if s["heading"] == "(front)" and not paras:
             continue
-        out.append({"title_zh": s["heading"], "heads": {"en": s["heading"]},
-                    "sources": {"en": paras}})
+        out.append({"heading": s["heading"], "paras": paras})
     return out
+
+
+def load_sections_from_src(src_path: Path) -> list[dict]:
+    """English sections in the assemble_pilot (self-translate) shape:
+    [{title_zh, heads:{en}, sources:{en:[paras]}}]."""
+    return [{"title_zh": s["heading"], "heads": {"en": s["heading"]},
+             "sources": {"en": s["paras"]}} for s in load_en_sections(src_path)]
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--src", type=str, help="English source text file")
+    ap.add_argument("--zh-src", type=str, default=None,
+                    help="existing 中譯 text file → REFERENCE mode (no re-translation; "
+                         "既有中譯為主欄 + 英文逐段對照，簡體自動轉繁)")
     ap.add_argument("--dry", action="store_true", help="split + counts only, no LLM")
     ap.add_argument("--probe", action="store_true", help="translate one paragraph, print, exit")
     ap.add_argument("--limit", type=int, default=None, help="only first N sections")
@@ -396,30 +512,42 @@ def main():
 
     if not args.src:
         ap.error("--src required (English source text)")
-    sections = load_sections_from_src(Path(args.src))
+    reference = args.zh_src is not None
+    en_secs = load_en_sections(Path(args.src))
+    zh_secs = load_zh_sections(Path(args.zh_src)) if reference else []
     if args.limit:
-        sections = sections[:args.limit]
+        en_secs = en_secs[:args.limit]
+        zh_secs = zh_secs[:args.limit]
 
     if args.dry:
-        for i, s in enumerate(sections):
-            head = s["heads"]["en"]
-            n = len(s["sources"]["en"])
-            first = s["sources"]["en"][0][:70] if n else "—"
-            print(f"sec{i} 「{head[:40]}」 EN¶={n} | {first}")
-        return
-
-    tp = make_engine()
-    if args.probe:
-        for s in sections:
-            if s["sources"]["en"]:
-                print("EN:", s["sources"]["en"][0][:120])
-                print("ZH:", tp(s["sources"]["en"][0]))
-                return
-        print("no body paragraphs found")
+        mode = "REFERENCE (既有中譯+英文)" if reference else "SELF-TRANSLATE (英→繁中)"
+        print(f"mode: {mode}")
+        if reference:
+            for i, (title_zh, en_head, en_p, zh_p) in enumerate(pair_sections(en_secs, zh_secs)):
+                print(f"sec{i} 「{(title_zh or en_head)[:34]}」 ZH¶={len(zh_p)} EN¶={len(en_p)}")
+        else:
+            for i, s in enumerate(en_secs):
+                n = len(s["paras"])
+                first = s["paras"][0][:66] if n else "—"
+                print(f"sec{i} 「{s['heading'][:34]}」 EN¶={n} | {first}")
         return
 
     ensure_ebook_row()
-    chunks = assemble_pilot(sections, tp, source_order=SOURCE_ORDER)
+    if reference:
+        chunks = assemble_reference(en_secs, zh_secs)
+    else:
+        tp = make_engine()
+        if args.probe:
+            for s in en_secs:
+                if s["paras"]:
+                    print("EN:", s["paras"][0][:120])
+                    print("ZH:", tp(s["paras"][0]))
+                    return
+            print("no body paragraphs found")
+            return
+        sections = [{"title_zh": s["heading"], "heads": {"en": s["heading"]},
+                     "sources": {"en": s["paras"]}} for s in en_secs]
+        chunks = assemble_pilot(sections, tp, source_order=SOURCE_ORDER)
     out = out_jsonl_path()
     write_jsonl(chunks, out)
     print(f"Wrote {out} ({len(chunks)} chunks)", flush=True)
