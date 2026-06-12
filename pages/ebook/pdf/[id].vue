@@ -4,7 +4,7 @@
     <nav class="border-b border-stone-200 bg-white sticky top-0 z-40 flex-shrink-0">
       <div class="px-4 h-14 flex items-center justify-between gap-4">
         <div class="flex items-center gap-3 min-w-0 flex-1">
-          <NuxtLink :to="`/ebook/${id}`" class="text-stone-500 hover:text-stone-900 text-sm flex-shrink-0">← 文字版</NuxtLink>
+          <NuxtLink :to="`/ebook/${id}?text=1`" class="text-stone-500 hover:text-stone-900 text-sm flex-shrink-0">← 文字版</NuxtLink>
           <span class="text-stone-300">·</span>
           <button @click="tocOpen = !tocOpen"
             :class="['flex items-center gap-1 px-2 py-1 rounded-md text-xs border flex-shrink-0',
@@ -13,7 +13,7 @@
             <span v-if="outline.length" class="text-[10px] opacity-60">({{ outline.length }})</span>
           </button>
           <span class="text-sm font-medium truncate">{{ title }}</span>
-          <span class="text-[11px] text-amber-700 bg-amber-50 border border-amber-200 rounded px-1.5 py-0.5 flex-shrink-0">原頁模式（原型）</span>
+          <span class="text-[11px] text-blue-700 bg-blue-50 border border-blue-200 rounded px-1.5 py-0.5 flex-shrink-0">原頁模式</span>
         </div>
         <div class="flex items-center gap-2 flex-shrink-0">
           <button @click="go(currentPage - 1)" :disabled="currentPage <= 1"
