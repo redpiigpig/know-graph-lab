@@ -1467,6 +1467,16 @@ q-peter-preaching / christian-sibyl / orphica / joseph-prayer
 - **4-ezra 改走路 a**：bible_verses 有 `2es`(kjva 16 章/874 節) → 已加進 `DEUTERO_BIBLE`。
 - **路 a `--batch-bible --force` 收斂成效極佳**：tobit/baruch/letter-jeremiah **100%**、sirach 96%（vs 舊單輪 59-77%）。`align_to_convergence` + `_pick_bible_version` 是關鍵。
 - ⚠️⚠️ **seed 污染重大坑**：對「原本是 zh-own（自編章號＋導論混入）」的卷跑 `--accumulate` 重做時，會 **seed 進舊的錯位資料**（do_chinese accumulate 從現有 cct_zh 取種子）→ keep-longest 可能保留錯位/導論文字。實測 **jubilees** 跑完 coverage 85% 但 ch1:1=導論、ch5/23 內容錯位。**修法：換骨架型態（zh-own→bible/pseud）時，第一輪必須 `do_chinese(accumulate=False)` 清空重做（純內容對位、clamp 會丟掉無英文對應的導論），再 accumulate 收斂。** 路 a 的 12 卷次經上一輪已是 bible 對齊（非 zh-own），故 --force seed 乾淨、不受此影響。jubilees 待 fresh 重做。
+- ⚠️ **單調性 bug 已修 `union_fill`**：`--accumulate` 設計要「覆蓋率只升不降」，但 merge keep-longest + `clean_zh_verses` 會把上一輪已對齊的節換成新候選後清掉 → **回退**（實測 wisdom-solomon 99.77%→83%、2-maccabees 81%→75%）。已加純函式 `AV.union_fill(verses, seed)`：accumulate 後把 seed 缺的節補回，保證單調。do_chinese 已接。**47 tests 綠**。回退的卷用修好的碼重跑即可恢復。
+
+**🖥️ 監督交接（2026-06-12 進行中，給新 session 盯）**：
+> **兩個背景程序正在跑**（NVIDIA qwen3-next，與徹夜 jung/mueller + 使用者 --accumulate 共用 key，故偶發 all-engines-failed＋重試、偏慢）：
+> 1. **phase 1**：`scripts/apoc_verse_restructure.py --batch-bible --force`（log `c:/tmp/route_a.log`）— 12 卷次經逐卷 align_to_convergence。**用的是修 union_fill 之前的碼**，故多輪卷有回退。
+> 2. **phase 2（自動接棒）**：`c:/tmp/overnight2.py`（log `c:/tmp/phase2.log`）— 等 phase 1 程序結束後自動：(a) 用**修好的 union_fill 碼**再跑一次 `run_batch_bible(force=True)`（recover 回退 + 做新加的 4-ezra）；(b) **jubilees FRESH**（`do_chinese(accumulate=False)` 清 zh-own 污染再 accumulate）。結尾印 `[PHASE2] DONE`。
+>
+> **次經覆蓋率（phase 1 即時，phase 2 後會更高）**：tobit 100% / judith 62%⚠ / wisdom-solomon 99.8%(回退83%，phase2 修) / sirach 96% / baruch 100% / letter-jeremiah 100% / 1-macc 86% / 2-macc 81%(回退75%) / 3-macc 83% / 4-macc・1-esdras・prayer-manasseh・4-ezra 待完成。
+>
+> **新 session 該做**：① 盯 `c:/tmp/phase2.log` 等 `[PHASE2] DONE`；中途若程序掛了（查 `Get-CimInstance ... -like '*--batch-bible*'` 或 overnight2），直接重跑 `--batch-bible --force`（checkpoint 對已達標卷無傷，union_fill 單調）。② 完成後跑**全卷 gap 稽核**（cct_zh verse-not-null 完成卷數 /132 + 各卷 EN/ZH/coverage），凡 <85% 或內容抽查錯位的卷個別 `SLUG --zh --accumulate` 再收。③ judith 62% 偏低要查（kjva 與黃根春 versification 差異大，或改試 `_pick_bible_version` 換 brenton/sigao 骨架）。④ **路 b 其餘 OT 偽典仍缺英文源**（見上）—留 zh-own。⑤ 別殺 jung/mueller/使用者的程序。⑥ 動 `apocrypha_verses.py` 先補 test。最後更新本表 + commit/push。
 
 ### 教訓（值得記住）
 
