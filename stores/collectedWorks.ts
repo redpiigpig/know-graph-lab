@@ -209,8 +209,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1859,
           category: '印度學',
           languages: ['en'],
-          status: 'in-progress',
-          note: '英文可讀；繁中逐段翻譯進行中。',
+          status: 'done',
+          note: '英／繁中逐段對照（自譯本）。',
         },
         {
           title: '印度能教我們什麼？',
@@ -252,8 +252,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1898,
           category: '文集與回憶',
           languages: ['en'],
-          status: 'in-progress',
-          note: '英文可讀；繁中逐段翻譯進行中。',
+          status: 'done',
+          note: '英／繁中逐段對照（自譯本）。',
         },
         {
           title: '自傳片段',
@@ -263,8 +263,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1901,
           category: '文集與回憶',
           languages: ['en'],
-          status: 'in-progress',
-          note: '英文可讀；繁中逐段翻譯進行中。',
+          status: 'done',
+          note: '英／繁中逐段對照（自譯本）。',
         },
         {
           title: '東方聖書（主編）',
