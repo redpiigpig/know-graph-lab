@@ -35,6 +35,7 @@ export interface CwWork {
   languages?: string[] // 可得來源語言 code，如 ['en','de']
   status: WorkStatus
   ebookId?: string // 已轉錄時連到 /ebook/[id]
+  externalUrl?: string // 連到獨立 corpus／portal（如東方聖書），優先於 ebookId
   note?: string // 備註（版權、進度…）
 }
 
@@ -268,12 +269,13 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         {
           title: '東方聖書（主編）',
           titleOriginal: 'The Sacred Books of the East',
+          externalUrl: '/sacred-books-east',
           year: '1879–1910',
           yearSort: 1879,
           category: '主編譯本集',
           languages: ['en'],
-          status: 'planned',
-          note: '五十卷東方經典英譯集；性質為譯本集，未來或獨立成 corpus。',
+          status: 'in-progress',
+          note: '五十卷東方經典英譯集；性質為譯本集，已獨立成 corpus → 點此進入專屬目錄。',
         },
       ],
     },

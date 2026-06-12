@@ -80,10 +80,10 @@
           <ul class="space-y-2">
             <li v-for="(w, i) in g.items" :key="i">
               <component
-                :is="isReadable(w) ? 'NuxtLink' : 'div'"
-                :to="isReadable(w) ? `/ebook/${w.ebookId}` : undefined"
+                :is="linkTarget(w) ? 'NuxtLink' : 'div'"
+                :to="linkTarget(w)"
                 class="work-row group"
-                :class="isReadable(w)
+                :class="linkTarget(w)
                   ? `bg-white border-${author.color}-100 hover:border-${author.color}-300 hover:shadow-sm cursor-pointer no-underline`
                   : 'bg-gray-50 border-gray-100'"
               >
@@ -147,6 +147,13 @@ function effStatus(w: CwWork): WorkStatus {
 function isReadable(w: CwWork): boolean {
   const s = effStatus(w)
   return !!w.ebookId && (s === 'done' || s === 'in-progress')
+}
+// Navigation target for a work row: an external corpus/portal (e.g. 東方聖書)
+// takes precedence; otherwise the in-site reader when the work is readable.
+// Returns undefined → the row renders as a non-clickable <div>.
+function linkTarget(w: CwWork): string | undefined {
+  if (w.externalUrl) return w.externalUrl
+  return isReadable(w) ? `/ebook/${w.ebookId}` : undefined
 }
 
 useHead(() => ({ title: author.value ? `${author.value.name} — 全集` : '全集' }))
