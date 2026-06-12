@@ -407,54 +407,56 @@ def _norm_anchor(s: str) -> str:
     return "".join(c for c in s if c.isalnum() and not unicodedata.combining(c)).upper()
 
 
-def split_chapters_by_manifest(sections: list[dict], anchors: list[str]) -> list[dict]:
+def split_chapters_by_manifest(sections: list[dict], anchors: list[str],
+                               min_chapter_chars: int = 300) -> list[dict]:
     """Split heading-marked sections into chapters by sequentially matching an
     ordered list of distinctive `anchors` (one per chapter, prologue first).
-    Handles the two OCR hazards seen on scanned translations: a TABLE OF CONTENTS
-    (many chapter anchors densely clustered → detected + skipped) and RUNNING-HEAD
-    fragmentation (the same chapter title re-marked on later pages → ignored once
-    we've advanced past that anchor). Sub-section `## ` headings between chapter
-    anchors are folded into the current chapter as body lines (so they show + give
-    more rows to align on). Returns [{heading, paras}] — one per matched chapter."""
+
+    The robust discriminator against the two OCR hazards — a TABLE OF CONTENTS
+    (every chapter title listed back-to-back) and RUNNING-HEAD fragmentation (the
+    title re-marked on later pages) — is the **following body**: a real chapter
+    carries `min_chapter_chars`+ of text before the NEXT anchor match, whereas a
+    contents-list entry's next anchor sits immediately after it (≈0 body), and a
+    running-head repeat already lies inside an accepted chapter (skipped as we've
+    advanced past that anchor). Everything between two accepted chapter starts —
+    including sub-section `## ` headings — folds into the chapter (headings kept as
+    body lines so they show + give more rows to align on)."""
+    # Each chapter anchor is a string OR a list of alternatives (match if ANY) —
+    # so a chapter whose number ("第5章") the OCR dropped still matches on its title
+    # ("懸置"). Normalize all alternatives up front.
+    alts = [[_norm_anchor(a) for a in (anc if isinstance(anc, (list, tuple)) else [anc]) if a]
+            for anc in anchors]
     secs = merge_repeated_headings(sections)
-    A = [_norm_anchor(a) for a in anchors]
     match = []
     for s in secs:
-        h = _norm_anchor(s["heading"])
-        match.append(next((i for i, a in enumerate(A) if a and a in h), -1))
+        hn = _norm_anchor(s["heading"])
+        match.append(next((i for i, A in enumerate(alts) if any(a in hn for a in A)), -1))
+    bodychars = [sum(len((p or "").strip()) for p in s["paras"]) for s in secs]
+    anchor_pos = [k for k in range(len(secs)) if match[k] >= 0]
 
-    def _has_body(s: dict) -> bool:
-        return any((p or "").strip() for p in s["paras"])
+    following: dict = {}
+    for idx, k in enumerate(anchor_pos):
+        nxt = anchor_pos[idx + 1] if idx + 1 < len(anchor_pos) else len(secs)
+        following[k] = sum(bodychars[k:nxt])
 
-    # TOC = a contiguous run (≥3) of anchor headings with NO body — the contents
-    # list reads "第1章 …\n第2章 …\n…" back-to-back. Real chapters carry body, so
-    # they survive (the old fixed-window rule wrongly swallowed chapters sitting
-    # near the TOC, which is why the ZH side collapsed to 1/11).
-    toc: set = set()
-    i = 0
-    while i < len(secs):
-        if match[i] >= 0 and not _has_body(secs[i]):
-            j = i
-            while j < len(secs) and match[j] >= 0 and not _has_body(secs[j]):
-                j += 1
-            if j - i >= 3:
-                toc.update(range(i, j))
-            i = j
-        else:
-            i += 1
+    starts: list[int] = []
+    ai = 0
+    prev = -1
+    for k in anchor_pos:
+        if ai < len(anchors) and match[k] == ai and k > prev and following[k] >= min_chapter_chars:
+            starts.append(k)
+            prev = k
+            ai += 1
 
     chapters: list[dict] = []
-    cur = None
-    ai = 0
-    for i, s in enumerate(secs):
-        if ai < len(anchors) and match[i] == ai and i not in toc:
-            cur = {"heading": s["heading"].lstrip("# ").strip(), "paras": list(s["paras"])}
-            chapters.append(cur)
-            ai += 1
-        elif cur is not None:
-            if s["heading"] != "(front)":
-                cur["paras"].append(s["heading"])  # keep sub-heading visible + alignable
-            cur["paras"].extend(s["paras"])
+    for si, k in enumerate(starts):
+        end = starts[si + 1] if si + 1 < len(starts) else len(secs)
+        paras = list(secs[k]["paras"])
+        for j in range(k + 1, end):
+            if secs[j]["heading"] != "(front)":
+                paras.append(secs[j]["heading"])
+            paras.extend(secs[j]["paras"])
+        chapters.append({"heading": secs[k]["heading"].lstrip("# ").strip(), "paras": paras})
     return chapters
 
 

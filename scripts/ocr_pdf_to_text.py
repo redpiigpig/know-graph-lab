@@ -251,6 +251,61 @@ def ocr_pdf(src: Path, *, model: str, pages: tuple[int, int] | None = None,
     return out
 
 
+def extract_text_with_font_headings(src: Path, *, heading_ratio: float = 1.18,
+                                    pages: tuple[int, int] | None = None) -> list[dict]:
+    """Born-digital PDF → list of {page,text} where LARGE-font lines are marked
+    `## heading` and paragraph breaks are recovered from vertical line gaps. Far
+    more reliable than vision OCR for chapter detection on text-layer books (the
+    English Intrareligious Dialogue), whose chapter titles are simply set in
+    bigger type. `heading_ratio` = a line is a heading if its max span size ≥
+    body_size × ratio."""
+    import fitz
+    from collections import Counter
+    doc = fitz.open(src)
+    n = len(doc)
+    lo, hi = (pages[0] - 1, pages[1]) if pages else (0, n)
+    lo, hi = max(0, lo), min(n, hi)
+
+    sizes: Counter = Counter()
+    for pi in range(lo, hi):
+        for b in doc[pi].get_text("dict").get("blocks", []):
+            for ln in b.get("lines", []):
+                for sp in ln.get("spans", []):
+                    sizes[round(sp["size"])] += len((sp.get("text") or "").strip())
+    body = sizes.most_common(1)[0][0] if sizes else 12
+
+    out: list[dict] = []
+    for pi in range(lo, hi):
+        plines = []
+        for b in doc[pi].get_text("dict").get("blocks", []):
+            for ln in b.get("lines", []):
+                spans = ln.get("spans", [])
+                txt = "".join(sp.get("text", "") for sp in spans).strip()
+                if not txt:
+                    continue
+                maxsize = max((sp["size"] for sp in spans), default=body)
+                plines.append((ln["bbox"][1], ln["bbox"][3], txt, maxsize))
+        plines.sort(key=lambda r: r[0])
+        rows: list[str] = []
+        prev_y1 = None
+        prev_h = body
+        for y0, y1, txt, sz in plines:
+            h = y1 - y0
+            if prev_y1 is not None and (y0 - prev_y1) > 0.6 * max(h, prev_h) and rows and rows[-1] != "":
+                rows.append("")  # vertical gap → paragraph break
+            if sz >= body * heading_ratio and len(txt) < 90:
+                if rows and rows[-1] != "":
+                    rows.append("")
+                rows.append("## " + txt)
+                rows.append("")
+            else:
+                rows.append(txt)
+            prev_y1, prev_h = y1, h
+        out.append({"page": pi + 1, "text": "\n".join(rows)})
+    doc.close()
+    return out
+
+
 def extract_text_layer(src: Path, *, pages: tuple[int, int] | None = None) -> list[dict]:
     """Pull the EMBEDDED text layer (no OCR) from a born-digital PDF → list of
     {page,text}. For text-layer PDFs (e.g. the English Intrareligious Dialogue),
@@ -271,8 +326,9 @@ def main():
     ap.add_argument("--pdf", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--pages", default=None, help="1-based inclusive range, e.g. 5-8 (sample/validate)")
-    ap.add_argument("--engine", default="gemini", choices=["gemini", "text"],
-                    help="gemini = OCR scanned PDF; text = pull embedded text layer (born-digital)")
+    ap.add_argument("--engine", default="gemini", choices=["gemini", "text", "font"],
+                    help="gemini = OCR scanned PDF; text = raw embedded text layer; "
+                         "font = text layer + font-size `## ` heading marking (born-digital)")
     ap.add_argument("--mark-headings", action="store_true",
                     help="mark chapter/section titles as Markdown ## (for collected-works alignment)")
     ap.add_argument("--batch", type=int, default=20,
@@ -291,6 +347,8 @@ def main():
     t0 = time.time()
     if args.engine == "text":
         page_dicts = extract_text_layer(src, pages=pages)
+    elif args.engine == "font":
+        page_dicts = extract_text_with_font_headings(src, pages=pages)
     else:
         page_dicts = ocr_pdf(src, model=args.model, pages=pages,
                              mark_headings=args.mark_headings, batch=args.batch)

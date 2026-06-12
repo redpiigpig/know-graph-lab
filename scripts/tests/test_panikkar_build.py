@@ -235,29 +235,28 @@ class TestChapterAlignment:
 
 class TestManifestChapterSplit:
     def test_matches_anchors_skips_toc_and_subsections(self):
+        big = "正文" * 200  # a real chapter's body clears min_chapter_chars
         secs = [
             {"heading": "## 目錄", "paras": []},
-            # TOC block: 7 chapter anchors densely listed → detected + skipped
+            # TOC block: chapter anchors listed back-to-back, ~no body → next anchor
+            # sits right after each → tiny "following body" → skipped
             {"heading": "## 第1章 修辭", "paras": []},
             {"heading": "## 第2章 對話", "paras": []},
             {"heading": "## 第3章 信仰", "paras": []},
             {"heading": "## 第4章 規則", "paras": []},
-            {"heading": "## 第5章 懸置", "paras": []},
-            {"heading": "## 第6章 成長", "paras": []},
-            {"heading": "## 第7章 普世", "paras": []},
-            # real chapters (spread out, with sub-sections folded in)
-            {"heading": "## 第1章 修辭", "paras": ["ch1 body"]},
+            # real chapters (substantial body, sub-sections fold in)
+            {"heading": "## 第1章 修辭", "paras": [big]},
             {"heading": "## 1. 子節", "paras": ["sub body"]},
-            {"heading": "## 第2章 對話", "paras": ["ch2 body"]},
+            {"heading": "## 第2章 對話", "paras": [big]},
         ]
-        anchors = ["第1章", "第2章", "第3章", "第4章", "第5章", "第6章", "第7章"]
+        anchors = ["第1章", "第2章", "第3章", "第4章"]
         chs = pk.split_chapters_by_manifest(secs, anchors)
         assert [c["heading"] for c in chs] == ["第1章 修辭", "第2章 對話"]
         # the sub-section heading + body fold into chapter 1
-        assert chs[0]["paras"] == ["ch1 body", "## 1. 子節", "sub body"]
+        assert chs[0]["paras"] == [big, "## 1. 子節", "sub body"]
 
     def test_diacritic_insensitive_anchor(self):
-        secs = [{"heading": "## ŚŪNYATĀ AND PLĒROMA", "paras": ["x"]}]
+        secs = [{"heading": "## ŚŪNYATĀ AND PLĒROMA", "paras": ["body " * 100]}]
         chs = pk.split_chapters_by_manifest(secs, ["SUNYATA"])
         assert len(chs) == 1
 
