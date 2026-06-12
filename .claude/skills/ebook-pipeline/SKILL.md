@@ -212,7 +212,16 @@ Denzinger/全集）仍走文字 reader，**不適用**原頁模式。
   （`getDocument({httpHeaders:{Authorization}})`），非 cookie。
 - EPUB reader `pages/ebook/epub/[id].vue`：epub.js（epubjs 0.3.93）原樣排版。epub.js
   內部 fetch 帶不了 Bearer header，所以**自己 fetch 整本 EPUB 成 ArrayBuffer 再餵 `ePub(buf)`**，
-  繞過其內部請求。paginated flow + TOC（book.navigation）+ 鍵盤 + 字級 + 進度%。
+  繞過其內部請求。TOC（book.navigation）+ 鍵盤 + 字級 + 進度%。
+  - ⚠ **必用 `flow:'scrolled-doc'` + `manager:'continuous'` + `allowScriptedContent:true`**。
+    epub.js 預設的 paginated/default 管理器在很多 EPUB 上會讓**封面與第一節渲染成空白**
+    （iframe body childCount=0），但內文章節正常——踩過這坑（2026-06-12，使用者回報「很不好」）。
+    scrolled-doc 連續捲動每節都可靠渲染，也更貼近文字 reader 體驗。少了 allow-scripts
+    iframe 也會空白（epub.js 靠注入腳本量測佈局）。
+- **UI 實機驗證 harness**：`scripts/_verify_epub_reader.mjs`（gitignored）。用 service role
+  `admin.generateLink`→`verifyOtp` 鑄真 user token（免收信），照 @supabase/ssr cookie 格式
+  （`base64-`+base64url(session)，>3180 切 `.0/.1`，cookie 名 `sb-<ref>-auth-token`）注入
+  Playwright（`channel:'chrome'`），載入需登入的頁面截圖。改 reader UI 後可直接跑來目視驗收。
 - 對齊：OCR chunk_index ≠ 實體PDF頁碼（OCR 跳過封面/空白頁）。務必用 `page-map.get.ts`
   回的 `page_number` 對齊。
 - 目錄：`thinOutline()` 仿 `normalize_toc` 的 `MIN_PAGES_PER_ENTRY=1.2` 過濾逐頁書籤
