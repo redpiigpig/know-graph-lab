@@ -194,8 +194,10 @@ def _ocr_one_call(src_slice: Path, *, model: str, prompt: str, keys: list[str]) 
                     print(f"  ⟳ key #{ki} quota; rotating", flush=True)
                     time.sleep(2)
                 continue
-            if any(k in low for k in ("503", "unavailable", "500", "internal",
-                                      "overloaded", "deadline", "timeout", "connection")):
+            if any(k in low for k in ("503", "unavailable", "500", "502", "504", "internal",
+                                      "overloaded", "deadline", "timeout", "connection",
+                                      "disconnect", "remoteprotocol", "protocolerror",
+                                      "without sending", "reset", "eof", "broken pipe")):
                 # transient Gemini spike — back off + retry SAME key (up to 6×)
                 transient_tries += 1
                 if transient_tries <= 6:
