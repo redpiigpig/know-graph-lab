@@ -170,7 +170,8 @@ ebooks (
   subtitle, original_title, author_en, translator,
   publisher, publisher_location,
   publication_year, original_publish_year, original_author,
-  category_id                    -- legacy nullable
+  category_id,                   -- legacy nullable
+  display_mode                   -- 'standard'(預設文字 reader) | 'bilingual-parallel'(Denzinger 三欄) | 'page-image'(原頁模式)
 )
 
 ebook_chunks (
@@ -182,6 +183,8 @@ ebook_chunks (
 )
 GIN index on to_tsvector('simple', content)
 
+ebook_chunks（補）：source_text / sources / source_order — 對照書多語來源；有就代表是翻譯/對照書，OCR 清理一律跳過
+
 annotations (
   id uuid PK, ebook_id FK, chunk_index,
   selected_text, context_before, context_after,
@@ -190,6 +193,42 @@ annotations (
   created_at
 )
 ```
+
+## Workflow G — 原頁模式（page-image display mode）
+
+**哲學**：掃描/無TOC/版面亂、轉錄怎麼調都跑掉的「問題書」，不跟轉錄死磕 —— 用 pdf.js
+即時渲染真實 PDF 頁面（忠實原貌），右側 OCR 文字僅供搜尋/複製。翻譯/對照書（教父/
+Denzinger/全集）仍走文字 reader，**不適用**原頁模式。
+
+### 架構
+- `ebooks.display_mode = 'page-image'` 是旗標。
+- Reader 路由：文字 reader `pages/ebook/[id].vue` 載入時若該書 `display_mode==='page-image'`
+  且 `file_type==='pdf'`，自動 `router.replace` 到 `/ebook/pdf/{id}`（中央重導，覆蓋書架/
+  搜尋/書籤/深連結所有入口）。用 `currentPage.page_number` 對齊實體頁。
+  **`?text=1` 旁路**重導，供 pdf reader 的「← 文字版」連結回到文字 reader。
+- 文字 reader 頂部「📄原頁」鈕：任何有原檔的 PDF 都可切（逃生口），不限 page-image 書。
+- PDF reader `pages/ebook/pdf/[id].vue`：pdf.js 即時渲染；API 驗證走 **Bearer header**
+  （`getDocument({httpHeaders:{Authorization}})`），非 cookie。
+- 對齊：OCR chunk_index ≠ 實體PDF頁碼（OCR 跳過封面/空白頁）。務必用 `page-map.get.ts`
+  回的 `page_number` 對齊。
+- 目錄：`thinOutline()` 仿 `normalize_toc` 的 `MIN_PAGES_PER_ENTRY=1.2` 過濾逐頁書籤
+  （同頁去重→逐層砍最深層→連 top-level 都逐頁就隱藏，翻頁導航保留）。
+
+### 腳本
+| script | 用途 |
+|---|---|
+| `audit_page_image_candidates.py` | 偵測掃描/無TOC/逐頁切問題書，產 `_page_image_review.md` 審查清單（勾選後套用）。原檔必須存在（pdf.js 才渲染得出）|
+| `_apply_page_image.py` | 讀 review 檔已勾選 `[x]` 的 id，`UPDATE display_mode='page-image'`；`--revert` 退回 standard；gitignored |
+| `_apply_ocr_clean.py` | clean_ocr_text 頁眉剝除+CJK重排批次套到掃描書（`<id>...` / `--from-file` / `--all`）；**有 source_text/sources 的對照書自動跳過**；per-file `.preclean.bak` |
+
+### 已遷移（2026-06-12）
+176 本 NEEDS_OCR（原檔全數驗證可渲染）+ 測試書《埃及、希臘與羅馬》= **177 本 page-image**。
+NEEDS_OCR 書暫無 OCR 文字 → 右側文字面板空白屬正常（讀真頁為主，OCR 補上後即可搜尋）。
+待辦：EPUB 補 epub.js 原樣渲染（⑤，未做）。
+
+### clean_ocr_text 鐵律
+必須 **title-anchored**（以已知書名為錨，只在書名出現處剝除其前的頁碼 token），**禁止刪裸數字**
+——否則會吃年份(1914)/拉丁字(Civilizations)。回歸測試 `test_clean_ocr_text.py` 鎖住。
 
 ## Drive 分類結構（10 大頂層 + subcategory + 套書子資料夾）
 
