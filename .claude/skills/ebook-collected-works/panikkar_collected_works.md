@@ -70,7 +70,7 @@
 
 | 版本 | 來源 | 狀態 | 備註 |
 |---|---|---|---|
-| 英文《The Unknown Christ of Hinduism》1981 修訂版 | 上網找全文（私人站非 PD 可用，[[feedback_jung_nonpd_english_first]]）| ⏳ 待取得（2026-06-12 未尋得乾淨合法全文）| 受版權；只入我的繁中＋英文對照欄，不貼整段原文於對話。**注意：archive.org 上的「Panikkar」多為 K.M. Panikkar（史學家），非 Raimon；勿誤用** |
+| 英文《The Unknown Christ of Hinduism》1981 修訂版 | shadow library（Anna's Archive / libgen，**私人自用，user 拍板 2026-06-12**）抓 PDF/EPUB 到本機 | ⏳ 待取得 | 受版權；只入我的繁中＋英文對照欄，不貼整段原文於對話。**注意：archive.org 上的「Panikkar」多為 K.M. Panikkar（史學家），非 Raimon；本人那兩本（`unknownchristofh0000raim` 1967 / `..._q2h1` 1981）皆 inlibrary 借閱制、djvu.txt 受限** |
 | 西班牙文《El Cristo desconocido del hinduismo》| 同上 | 日後 | 升三欄用 |
 | Opera Omnia VII《Hinduism and Christianity》(Orbis 2018) | 商業出版 | 受版權 | 卷編體例參考用 |
 

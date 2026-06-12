@@ -55,6 +55,7 @@ description: 多卷「全集」(Gesammelte Werke / Collected Works / 全集) 的
 - **reader 只顯示我自己的逐段繁中譯文 + 來源語言原文欄。** 既有的第三方**中譯本絕不入庫**（版權），只在校對時當「黃金參考」transient 使用。
 - **來源語言欄**（德文原典／英文譯本）是「對照閱讀」用途。版權內的來源文字 → 比照使用者既有書庫做法在本機 pipeline 處理；**但我（Claude）不會在對話裡貼出整段受版權的原文**，文字一律走本機 script / 檔案流轉。
 - **公有領域的卷優先**：能用合法公有領域來源的卷（早期著作）做最乾淨，標示清楚。
+- **私人自用 → 受版權卷可用 shadow library 取來源檔（user 拍板 2026-06-12）**：本站是 **auth-gate 後的私人研究圖書館、僅供使用者個人閱讀**（非公開散布）。故受版權著作若無公有領域來源、archive.org 又只借閱不放，**可從 shadow library（Anna's Archive / Library Genesis 等）抓來源 PDF/EPUB 到本機**，比照 [[feedback_jung_nonpd_english_first]]「私人站非 PD 可用、英文先輸入」。鐵則不變：(1) 一律 **English-first**，主欄是**我自己的逐段繁中譯文**（轉化作品），(2) 來源原文**只走本機檔／script**、**絕不貼進對話**，(3) 下載走 `curl`/Bash 到 `c:/tmp` 或本機，再 `--src` 餵 pipeline。⚠️ **環境網路限制**：此 sandbox 多數 shadow 鏡像（annas-archive、libgen.is/.rs）**DNS 被擋**，僅 `libgen.li` 可達且常只索引期刊書評非專書 → 抓不到時請 user 在自己機器下載後把檔丟本機（new-book drop / `c:/tmp`）。
 - 盡職調查結論寫進該全集的 case-study md（見 [jung_collected_works.md](jung_collected_works.md) 的版權表）。
 
 ---
