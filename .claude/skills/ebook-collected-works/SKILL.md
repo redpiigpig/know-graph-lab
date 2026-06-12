@@ -222,6 +222,12 @@ dev server 起 → 磁碟認證（reuse `screenshot_book.mjs` 的 magic-link＋s
 
 一句話現況：弗里德里希‧馬克斯‧穆勒（Friedrich Max Müller, 1823–1900，**宗教學開山祖**）卒於 1900 → **全部著作早已公有領域、全球無限制**，archive.org/Gutenberg 有乾淨全文，是 collected-works 最乾淨案例。穆勒以**英文寫作為主** → 預設英＋繁中雙語；少數有平行德文版的卷（如起手卷《宗教學導論》1873 = 德文《Einleitung》1874，**英德同構四講＋兩附論**）做真三欄。語言策略（user 拍板）：**英＋德＋繁中三欄，僅限有德文版的卷**。起手卷＝《宗教學導論》。**這是「經典宗教學家全集」系列的第一部**（後續可接其他宗教學家）。
 
+### 案例 3：雷蒙‧潘尼卡全集（宗教間對話／比較神學，2026-06-12 起）
+
+版權表、Opera Omnia 12 卷目、起手卷決策、來源、對齊策略、詞庫焦點、接手清單 → **[panikkar_collected_works.md](panikkar_collected_works.md)**。
+
+一句話現況：雷蒙‧潘尼卡（Raimon Panikkar, 1918–2010，**宗教間／宗教內對話與跨文化哲學巨擘**）卒於 2010 → **全部著作受版權至約 2080**，**跟榮格同型（非穆勒）**：網路無乾淨合法公有領域全文、第三方中譯不入庫。採 **English-first**（[[feedback_jung_nonpd_english_first]]，私人站非 PD 可用、英文先輸入）。他**用多語原創**（加泰隆／西／義／英／德），Opera Omnia（Jaca Book 義文／Orbis 英文，12 卷，Milena Carrara Pavan 主編）是**主題重編**，逐段三欄只在「同一文本恰有原文＋英譯」時嚴格成立 → 多數卷先英＋繁中雙語。語言策略（user 拍板 2026-06-12）：**English-first，英＋繁中雙語為預設；個別文本有平行原文版再升英＋原文＋繁中三欄**。起手卷＝**《印度教中未識的基督》**（原文即英文，1964/1981）。build 腳本 `scripts/panikkar_build.py`（test-first，13 例綠 `scripts/tests/test_panikkar_build.py`；reflow/align/section-chunk 比照 mueller_build）。**這是 collected-works 第三部、第一部「受版權當代神學家」案例。**
+
 ---
 
 ## SOP（每卷接手）
@@ -277,3 +283,5 @@ dev server 起 → 磁碟認證（reuse `screenshot_book.mjs` 的 magic-link＋s
 - [jung_glossary.md](jung_glossary.md) — 榮格術語德/英/中對照
 - [mueller_collected_works.md](mueller_collected_works.md) — 馬克斯‧穆勒全集案例（宗教學家全集 #1）：版權表 + 18 卷目 + 來源 + 接手清單
 - [mueller_glossary.md](mueller_glossary.md) — 穆勒比較宗教學術語英/德/中對照
+- [panikkar_collected_works.md](panikkar_collected_works.md) — 雷蒙‧潘尼卡全集案例（受版權當代神學家 #1，English-first）：版權表 + Opera Omnia 12 卷目 + 起手卷《印度教中未識的基督》+ 接手清單
+- [panikkar_glossary.md](panikkar_glossary.md) — 潘尼卡比較神學／宗教哲學術語英/原文/中對照（cosmotheandric、宗教內對話、Christophany…）
