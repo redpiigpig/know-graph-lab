@@ -47,13 +47,20 @@
                 : 'bg-white text-stone-600 border-stone-200 hover:border-amber-400 hover:text-amber-700']">
             <span>✏️</span><span>編輯</span>
           </button>
-          <!-- 📄 原頁模式 — pdf.js 即時渲染真實 PDF 頁面（忠實原貌）。掃描書／版面亂
-               的書讀真頁比讀轉錄好；對任何有原檔的 PDF 都當逃生口提供。 -->
+          <!-- 📄 原頁／原版模式 — 即時渲染真實原檔（PDF→pdf.js 真頁；EPUB→epub.js
+               原樣排版）。掃描書／版面亂的書讀真頁比讀轉錄好；對任何有原檔的書
+               都當逃生口提供。 -->
           <NuxtLink v-if="ebook?.has_original && ebook?.file_type === 'pdf'"
             :to="`/ebook/pdf/${ebook.id}${pagePdfPage && pagePdfPage > 1 ? `?page=${pagePdfPage}` : ''}`"
             title="原頁模式（pdf.js 渲染真實頁面）"
             class="hidden md:flex items-center gap-1 px-2 py-1 rounded-md text-xs transition border bg-white text-stone-600 border-stone-200 hover:border-blue-400 hover:text-blue-700 flex-shrink-0">
             <span>📄</span><span>原頁</span>
+          </NuxtLink>
+          <NuxtLink v-else-if="ebook?.has_original && ebook?.file_type === 'epub'"
+            :to="`/ebook/epub/${ebook.id}`"
+            title="原版模式（epub.js 原樣排版）"
+            class="hidden md:flex items-center gap-1 px-2 py-1 rounded-md text-xs transition border bg-white text-stone-600 border-stone-200 hover:border-emerald-400 hover:text-emerald-700 flex-shrink-0">
+            <span>📖</span><span>原版</span>
           </NuxtLink>
           <!-- ⬇️ 下載原檔 — 從 Drive 掛載 server 端串流；網頁來源（無原檔）不顯示 -->
           <a v-if="ebook?.has_original"
@@ -1608,15 +1615,22 @@ async function loadPage(page: number) {
   if (data) {
     if (!ebook.value) {
       ebook.value = data;
-      // Page-image books are read on the real rendered PDF — bounce to the
-      // original-page reader. Skip when the user explicitly asked for the text
-      // version (?text=1, used by the PDF reader's 「文字版」 link) so the text
-      // reader stays reachable. Carry the physical page_number for alignment
-      // (text reader paginates by chunk position; PDF reader by physical page).
-      if (data.display_mode === "page-image" && data.file_type === "pdf" && route.query.text !== "1") {
-        const pg = data?.currentPage?.page_number ?? null;
-        router.replace(`/ebook/pdf/${ebookId}${pg && pg > 1 ? `?page=${pg}` : ""}`);
-        return;
+      // Page-image books are read on the real rendered original — bounce to the
+      // native reader (PDF → pdf.js, EPUB → epub.js). Skip when the user
+      // explicitly asked for the text version (?text=1, used by the native
+      // readers' 「文字版」 link) so the text reader stays reachable.
+      if (data.display_mode === "page-image" && route.query.text !== "1") {
+        if (data.file_type === "pdf") {
+          // Carry the physical page_number for alignment (text reader paginates
+          // by chunk position; PDF reader by physical page).
+          const pg = data?.currentPage?.page_number ?? null;
+          router.replace(`/ebook/pdf/${ebookId}${pg && pg > 1 ? `?page=${pg}` : ""}`);
+          return;
+        }
+        if (data.file_type === "epub") {
+          router.replace(`/ebook/epub/${ebookId}`);
+          return;
+        }
       }
     }
     if (data.toc) {

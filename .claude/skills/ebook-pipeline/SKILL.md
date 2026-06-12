@@ -201,14 +201,18 @@ annotations (
 Denzinger/全集）仍走文字 reader，**不適用**原頁模式。
 
 ### 架構
-- `ebooks.display_mode = 'page-image'` 是旗標。
-- Reader 路由：文字 reader `pages/ebook/[id].vue` 載入時若該書 `display_mode==='page-image'`
-  且 `file_type==='pdf'`，自動 `router.replace` 到 `/ebook/pdf/{id}`（中央重導，覆蓋書架/
-  搜尋/書籤/深連結所有入口）。用 `currentPage.page_number` 對齊實體頁。
-  **`?text=1` 旁路**重導，供 pdf reader 的「← 文字版」連結回到文字 reader。
-- 文字 reader 頂部「📄原頁」鈕：任何有原檔的 PDF 都可切（逃生口），不限 page-image 書。
+- `ebooks.display_mode = 'page-image'` 是旗標（PDF 與 EPUB 共用此一旗標）。
+- Reader 路由：文字 reader `pages/ebook/[id].vue` 載入時若該書 `display_mode==='page-image'`，
+  依 file_type 自動 `router.replace`：**PDF → `/ebook/pdf/{id}`**（用 `currentPage.page_number`
+  對齊實體頁）、**EPUB → `/ebook/epub/{id}`**。中央重導覆蓋書架/搜尋/書籤/深連結所有入口。
+  **`?text=1` 旁路**重導，供原版 reader 的「← 文字版」連結回到文字 reader。
+- 文字 reader 頂部逃生口鈕：有原檔的 PDF 顯示「📄原頁」、EPUB 顯示「📖原版」，
+  任何書都可隨選切（不限 page-image 書）。
 - PDF reader `pages/ebook/pdf/[id].vue`：pdf.js 即時渲染；API 驗證走 **Bearer header**
   （`getDocument({httpHeaders:{Authorization}})`），非 cookie。
+- EPUB reader `pages/ebook/epub/[id].vue`：epub.js（epubjs 0.3.93）原樣排版。epub.js
+  內部 fetch 帶不了 Bearer header，所以**自己 fetch 整本 EPUB 成 ArrayBuffer 再餵 `ePub(buf)`**，
+  繞過其內部請求。paginated flow + TOC（book.navigation）+ 鍵盤 + 字級 + 進度%。
 - 對齊：OCR chunk_index ≠ 實體PDF頁碼（OCR 跳過封面/空白頁）。務必用 `page-map.get.ts`
   回的 `page_number` 對齊。
 - 目錄：`thinOutline()` 仿 `normalize_toc` 的 `MIN_PAGES_PER_ENTRY=1.2` 過濾逐頁書籤
@@ -222,9 +226,11 @@ Denzinger/全集）仍走文字 reader，**不適用**原頁模式。
 | `_apply_ocr_clean.py` | clean_ocr_text 頁眉剝除+CJK重排批次套到掃描書（`<id>...` / `--from-file` / `--all`）；**有 source_text/sources 的對照書自動跳過**；per-file `.preclean.bak` |
 
 ### 已遷移（2026-06-12）
-176 本 NEEDS_OCR（原檔全數驗證可渲染）+ 測試書《埃及、希臘與羅馬》= **177 本 page-image**。
-NEEDS_OCR 書暫無 OCR 文字 → 右側文字面板空白屬正常（讀真頁為主，OCR 補上後即可搜尋）。
-待辦：EPUB 補 epub.js 原樣渲染（⑤，未做）。
+**193 本 PDF → page-image**：176 NEEDS_OCR + 測試書 + 邊緣 16 本（OCR/parse 失敗但原檔可
+渲染、或標準化救不了的逐頁/無TOC 書）。NEEDS_OCR 書暫無 OCR 文字 → 右側面板空白屬正常
+（讀真頁為主，OCR 補上後即可搜尋）。同輪：2 本（評基督抹殺論/基督之友）實跑標準化進文字
+reader；4 本 0-byte 壞檔已刪（DB row + Drive 檔）。EPUB 預設仍走文字 reader（乾淨），
+「📖原版」鈕隨選；目前無 EPUB 被設為 page-image。
 
 ### clean_ocr_text 鐵律
 必須 **title-anchored**（以已知書名為錨，只在書名出現處剝除其前的頁碼 token），**禁止刪裸數字**
