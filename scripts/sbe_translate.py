@@ -124,25 +124,64 @@ def tradition_glossary(tradition: str) -> str:
     return out
 
 
+def _sonnet_translator():
+    """Sonnet translate fn. If a dedicated PAID key is set (ANTHROPIC_SONNET_API_KEY,
+    or ANTHROPIC_API_KEY) it builds a separate client so Sonnet truly bypasses the
+    Claude Max rolling-window limit that throttles the free Haiku tier; otherwise it
+    falls back to Max-Sonnet (te.sonnet_translate), which shares the Max account."""
+    key = os.environ.get("ANTHROPIC_SONNET_API_KEY") or os.environ.get("ANTHROPIC_API_KEY")
+    if not key:
+        return te.sonnet_translate
+    client = te._anthropic.Anthropic(api_key=key)
+
+    def sonnet_paid(p: str) -> str:
+        msg = client.messages.create(
+            model=te.SONNET_MODEL, max_tokens=16000,
+            messages=[{"role": "user", "content": te.PROMPT_TMPL.format(source=p)}])
+        return "".join(b.text for b in msg.content if hasattr(b, "text")).strip()
+
+    return sonnet_paid
+
+
 def make_sbe_engine(tradition: str):
-    """Haiku translate_para with the SBE prompt + this tradition's glossary."""
+    """translate_para with the SBE prompt + this tradition's glossary.
+    Engine policy: 免費層 Haiku（Claude Max）優先且**快速失敗**（短 backoff），一旦
+    免費層不動（429/連線/空回）→ 立刻改用 Sonnet 轉錄（user 2026-06-14 拍板）。
+    這同時根治「Haiku 在 429 backoff 裡睡 ~30 分鐘像當機」的停滯。"""
     te.PROMPT_TMPL = SBE_PROMPT_TMPL.replace("{glossary}", tradition_glossary(tradition))
+    sonnet_one = _sonnet_translator()
 
     def _clean(out: str) -> str:
         out = re.sub(r"(?m)^\s*#{1,6}\s.*$", "", out)
         return re.sub(r"\s*\n\s*", " ", out).strip()
+
+    def _join(fn, pieces) -> str:
+        return _clean(" ".join(fn(p) for p in pieces))
 
     def translate_para(en: str, de: str = "") -> str:
         src = en.strip()
         if not src:
             return ""
         pieces = te.split_oversized(src)
-        out = ""
-        for _ in range(4):  # retry-on-empty
-            out = _clean(" ".join(te.haiku_translate(p) for p in pieces))
-            if out:
-                return out
-        return out
+        # 1) 免費層 Haiku — 快速失敗（backoffs 0,20）：免費池不動就在 ~20s 內升級，
+        #    不再像舊版那樣在 30 分鐘的 429 backoff 裡靜默卡死。
+        try:
+            for _ in range(2):  # retry-on-empty（非例外的空回）
+                out = _join(lambda p: te._anthropic_translate(
+                    te.HAIKU_MODEL, "Haiku", p, backoffs=(0, 20)), pieces)
+                if out:
+                    return out
+        except Exception as e:  # noqa: BLE001
+            print(f"    ⚠ 免費層 Haiku 不動（{type(e).__name__}）→ 改用 Sonnet", flush=True)
+        # 2) 升級 Sonnet（有 paid key 則繞過 Max 限制）
+        try:
+            for _ in range(2):
+                out = _join(sonnet_one, pieces)
+                if out:
+                    return out
+        except Exception as e:  # noqa: BLE001
+            print(f"    ⚠ Sonnet 亦失敗（{type(e).__name__}）", flush=True)
+        return ""
 
     return translate_para
 
