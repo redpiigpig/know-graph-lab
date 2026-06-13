@@ -201,7 +201,8 @@ def ocr_page_haiku(png: bytes) -> list[dict]:
 
 
 _CLIENTS: dict = {}        # api_key → genai.Client（快取，避免 client-closed bug）
-_DEAD_KEYS: set = set()    # 本輪已 429/額度乾的 key，後續頁不再重試
+_DEAD_KEYS: set = set()    # **只放 credit/額度永久乾**的 key（如 prepayment depleted）
+_KEY_IDX = [0]             # round-robin 指標，讓負載平均分散到各 key（避單 key 撞 RPM）
 
 
 def _client(key: str):
@@ -211,11 +212,17 @@ def _client(key: str):
 
 
 def ocr_page(png: bytes) -> list[dict]:
-    last_err = None
-    live = [k for k in API_KEYS if k not in _DEAD_KEYS]
-    if not live:
-        raise RuntimeError("全部 Gemini key 額度已乾，依規範退出")
-    for key in live:
+    """單頁結構化 OCR。key round-robin；RPM 429 退避重試（**不**標死）；
+    只有 credit/額度永久乾的 key 才永久剔除；全部永久乾才退出。"""
+    n = len(API_KEYS)
+    attempts = 0
+    max_attempts = n * 4   # 給足輪詢+退避空間
+    while attempts < max_attempts:
+        live = [k for k in API_KEYS if k not in _DEAD_KEYS]
+        if not live:
+            raise RuntimeError("全部 Gemini key credit 永久乾，依規範退出")
+        key = live[_KEY_IDX[0] % len(live)]
+        _KEY_IDX[0] += 1
         try:
             resp = _client(key).models.generate_content(
                 model=MODEL,
@@ -227,24 +234,22 @@ def ocr_page(png: bytes) -> list[dict]:
                 ),
             )
             txt = (resp.text or "").strip()
-            if not txt:
-                return []
-            return json.loads(txt)
+            return json.loads(txt) if txt else []
         except Exception as e:
-            msg = str(e); last_err = e
-            if "429" in msg or "RESOURCE_EXHAUSTED" in msg or "quota" in msg.lower() or "depleted" in msg.lower():
-                _DEAD_KEYS.add(key)   # 整輪標死，不再重試此 key
-                continue
-            if "503" in msg or "UNAVAILABLE" in msg:
-                time.sleep(3); continue
+            msg = str(e).lower()
             if isinstance(e, json.JSONDecodeError):
-                print(f"    [JSON parse fail, skip page] {msg[:80]}", file=sys.stderr)
+                print(f"    [JSON parse fail, skip page] {str(e)[:80]}", file=sys.stderr)
                 return []
+            if "depleted" in msg or "prepayment" in msg or "billing" in msg:
+                _DEAD_KEYS.add(key)        # 餘額用罄 → 永久剔除
+                continue
+            if "429" in msg or "resource_exhausted" in msg or "quota" in msg or "rate" in msg \
+               or "503" in msg or "unavailable" in msg:
+                attempts += 1
+                time.sleep(min(5 * attempts, 30))   # RPM/暫時性 → 退避後換下一把
+                continue
             raise
-    # 所有 live key 這頁都掛了 → 若全死則退出，否則視為暫時性（重試下一頁）
-    if not [k for k in API_KEYS if k not in _DEAD_KEYS]:
-        raise RuntimeError("全部 Gemini key 額度已乾，依規範退出")
-    return []
+    raise RuntimeError("連續 429 達上限（可能當日額度耗盡），依規範退出")
 
 
 def parse_pages(spec: str) -> list[int]:
