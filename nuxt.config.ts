@@ -61,6 +61,9 @@ export default defineNuxtConfig({
     geminiCoachPaidKey: process.env.GEMINI_COACH_PAID_KEY,
     // 付費 key 每月成本上限（NT$）；本月付費估計成本超過就自動退回免費。改上限：設此 env。
     geminiPaidMonthlyCapTwd: Number(process.env.GEMINI_PAID_MONTHLY_CAP_TWD || 500),
+    // 自架 LanguageTool 服務 URL（寫作文法檢查，零 AI、規則式）。空＝功能不啟用。
+    // Zeabur 加一個 erikvl87/languagetool Docker 服務，把它的內網 URL 填這裡。
+    languageToolUrl: process.env.LANGUAGETOOL_URL || "",
 
     // 公開配置（前端和後端都可用）
     public: {

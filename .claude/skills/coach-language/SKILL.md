@@ -102,6 +102,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 - **🗣️ 發音跟讀 shadowing（`/coach/[lang]/shadowing`，全語言）**：目標句（en 可隨機抽策展句）→🔊聽範例/🐢慢速→🎤跟讀 STT→逐詞比對著色+吻合%；🧑‍🏫 AI 點評（`pronunciation` 端點，可選）。
   - **🔧 零服務確定性評分強化（2026-06-12）**：使用者要「API 不穩也能即時反饋」→ 把原本二元 LCS（綠=唸到/紅=漏）升級成 `composables/usePronunciationScore.ts` 純函式 `scorePronunciation()`：**詞級編輯距離對齊 + 回溯**，每個目標詞判 **hit(唸對)/near(近似，附「聽成 X」)/miss(漏或錯)**，near 用 Levenshtein 相似度≥0.6 判定並給半分；插入的多餘辨識詞不扣分；標點不計分；跨語言（拉丁/希臘/希伯來/假名）走 Unicode 字母正規化。頁面三色著色 + 「✅唸對/🟡近似/❌漏錯」統計列。**完全不呼叫任何 AI/雲端**。測試 `test/coach/pronunciation-score.spec.ts`（10 passed）。AI 點評仍保留為可選。屬「無 AI 確定性反饋」系列。
 - **✍️ 寫作批改（`/coach/[lang]/writing`，全語言）**：寫一段→**逐句 inline 批改**（原句刪除線/修正後綠字/為何錯）+整體點評+評分+潤飾版 TTS（`writing/correct` 端點，NVIDIA 主）。
+  - **🔍 LanguageTool 規則式文法檢查（零 AI，2026-06-12）**：寫作頁多一顆「文法檢查（零 AI）」按鈕，與 AI 逐句批改並存。走 `grammar-check` 端點代理到**自架 LanguageTool**（開源、上千條規則、無 LLM、穩定無額度 → 使用者「怕 API 爆」的解）。回傳每處 match（錯字片段／建議替換／規則說明），頁面 inline 顯示。只支援現代活語言（en/de/fr/es/it/ja…，`LT_LANGS`）；古典語不支援（用詞形判析／經文重組）。**需 env `LANGUAGETOOL_URL`**（Zeabur 加一個 `erikvl87/languagetool` Docker 服務，填內網 URL）；未設則按鈕回明確提示、不報錯。`level=picky`。屬「無 AI 確定性反饋」系列，與 [[feedback_engine_nvidia_no_haiku]] 的 AI 批改互補。
 - **技能練習/考試**（`lang_tasks`）：`task/generate`（TOEFL/IELTS/GRE + 一般，聽說讀寫 + 翻譯）/ `task/[id]/answer`（選擇題自動批改、寫說/翻譯用 Gemini rubric 評分）。
 - **記憶/簡報/日誌**：`lang_memory`（跨 session 長期了解 + highlights 強弱項，注入對話）；`briefing`（今日簡報，每日快取）；`lang_journal`（教練每日日誌，日曆點閱）。
 - **難度依「目前程度」非目標**：生成都讀 `lang_progress.level`；量表 `coach.levelScale`（CEFR / JLPT / 入門初中進）；`progress.put` 設目前程度。
@@ -140,7 +141,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 
 ## 八、端點（`server/api/lang/*` + `server/api/devices/*`）
 
-chat / profile(get,put) / progress(get,put) / activity / dashboard / usage / assess / briefing / memory(get,regenerate) / journal(get, generate) / sessions / messages / coaches / vocab(index,generate,**categories**,review get/post,[id] patch/delete) / homework / task(generate, [id]/answer) / smalltalk(start, feedback) / content(ingest, watch, index, watch-stats) / grammar(index, lesson, done, **map, lookup**) / **alphabet** / **parse** / **compose** / daily(get, item, done) / devices(check, index, [id] patch) / **words(define, status get/post)** / **pronunciation** / **sentences(index, more)** / **writing(correct)**。
+chat / profile(get,put) / progress(get,put) / activity / dashboard / usage / assess / briefing / memory(get,regenerate) / journal(get, generate) / sessions / messages / coaches / vocab(index,generate,**categories**,review get/post,[id] patch/delete) / homework / task(generate, [id]/answer) / smalltalk(start, feedback) / content(ingest, watch, index, watch-stats) / grammar(index, lesson, done, **map, lookup**) / **alphabet** / **parse** / **compose** / daily(get, item, done) / devices(check, index, [id] patch) / **words(define, status get/post)** / **pronunciation** / **sentences(index, more)** / **writing(correct)** / **grammar-check**（LanguageTool 規則式，零 AI）。
 
 ## 九、加語言 / 擴充
 
@@ -157,6 +158,7 @@ chat / profile(get,put) / progress(get,put) / activity / dashboard / usage / ass
 1. **Supabase Auth → Email Templates → Magic Link 加 `{{ .Token }}`**（最關鍵，否則驗證碼收不到）
 2. Supabase Auth 關「Allow new signups」；建議設自訂 SMTP（預設寄信額度低）
 3. **Zeabur Variables（線上專用，本機 .env 不放）**：`NVIDIA_API_Key_OLINE_ONLY`（主引擎，無限量）+ `Gemini_API_Key_OLINE_ONLY`（fallback；**YouTube 沉浸必須**，否則只能用貼上文章）。⚠️ 變數名稱**區分大小寫**，現支援 `Gemini_API_Key_OLINE_ONLY` 或全大寫 `GEMINI_API_KEY_OLINE_ONLY` 兩種拼法。`_1..4` 為線下批次腳本專用、不需放 Zeabur。付費 key 已棄用。
+4. **（可選）自架 LanguageTool（寫作文法檢查，零 AI）**：Zeabur 新增一個服務，Docker image `erikvl87/languagetool`（埠 8010，建議設 `Java_Xmx=512m`），部署後把它的內網 URL（如 `http://languagetool.zeabur.internal:8010`）填到變數 `LANGUAGETOOL_URL`。沒設也不影響其他功能，只是寫作頁的「文法檢查」按鈕會提示未啟用。本機測試：`docker run -d -p 8010:8010 erikvl87/languagetool` 後設 `LANGUAGETOOL_URL=http://localhost:8010`。
 
 ## 待辦（次要）
 
