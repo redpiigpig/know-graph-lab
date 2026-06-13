@@ -36,13 +36,20 @@
 
 （注：CBETA Y 編號與基金會 Y00xx 書號順序略有出入，正式化時以 XML 內 `<title level="m">` 為準逐卷對照。）
 
-## 全量執行清單（待做）
-1. [ ] `scripts/yinshun_build.py`：TEI→章節樹→單語 JSONL（`content`=正文, `page_anchor`=lb碼, `chapter_path`/`volume`/`parent_volume`；無 `sources`）。pure helpers + `scripts/tests/test_yinshun_build.py`（test-first）。
-2. [ ] REGISTRY：44 卷各一 `ebook_id`（UUID 規律配發）+ title/volume/parent_volume。
-3. [ ] 跑 1 卷（建議 Y08 佛法概論）全程：JSONL→R2→ebooks row→ebook_chunks previews→reader 截圖驗證單欄。
-4. [ ] 批 44 卷。
-5. [ ] `stores/collectedWorks.ts` 加印順 `CwAuthor`（slug `yinshun`，color 待定 amber 系；contribution/timeline 取自 chronicle；works 42 筆按上表分組）。
-6. [ ] portal hub 截圖驗證 → commit/push（[[feedback_auto_push]]）。
+## 全量執行清單（✅ 完成 2026-06-13）
+1. [x] `scripts/yinshun_build.py`：TEI→章節樹→單語 JSONL（`content`=正文；`chapter_path`/`volume`/`parent_volume`；無 `sources`；lb 邊碼/note 剝除；`_clean` 殺折行保 U+3000）。pure helpers + `scripts/tests/test_yinshun_build.py`（8 例綠）。
+2. [x] REGISTRY：`yinshun_registry.json`，44 卷（CBETA 書名 + parent_volume + `ebook_id` = `a0000000-0000-4000-8000-0000000000NN`）。
+3. [x] Y08《佛法概論》pilot：107 節 chunk → R2 + DB → reader 單欄截圖實證（章節樹側欄/正文/上下段）。
+4. [x] 批 44 卷：`--all --upload`，**44/44 入庫、5324 chunks、0 R2 fail、0 error**。
+5. [x] `stores/collectedWorks.ts` 加印順 `CwAuthor`（slug `yinshun`，amber，☸️；contribution 3 段＋timeline 13 條＋44 書目按妙雲集上/中/下篇‧華雨集‧專書分組）。
+6. [x] portal/hub 截圖驗證（hub「44/44 卷已轉錄」、emoji 佔位降級）→ commit/push。
+
+### 雷區/note
+- ebooks.id 是 **UUID 型**，REST 不能 `like`，查全集用 `id=in.(...)`。
+- `EBOOK_CHUNKS_DIR` 在 .env 是空字串 → 用 `te.CHUNKS_DIR`（已 fallback G: 雲端）。
+- 印順**無公有領域肖像** → `portraitUrl:''`，portal/hub 已加 emoji 佔位降級（`v-else` 區塊）。
+- 跑 `--all --upload` **務必在 repo 根目錄**（背景指令會繼承殘留 cwd 而失敗）。
+- 截圖 reader 全頁高達 ~3800px > 2000px 硬限 → 讀前必裁（PIL crop top ≤1850）。
 
 ## 接續案例
 - 聖嚴法師 → 法鼓全集 2020 紀念版（`ddc.shengyen.org`，doc id `輯-冊-篇`，HTML 可枚舉；2009 圓寂非 PD，私站可用）。

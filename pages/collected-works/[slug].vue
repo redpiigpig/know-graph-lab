@@ -11,11 +11,16 @@
       <section class="flex flex-col sm:flex-row gap-8 mb-12">
         <div class="flex-shrink-0 sm:w-56">
           <img
+            v-if="author.portraitUrl"
             :src="author.portraitUrl"
             :alt="author.name"
             class="w-full rounded-2xl object-cover bg-gray-100 ring-1 ring-gray-200 shadow-sm"
             loading="lazy"
           />
+          <div
+            v-else
+            class="w-full aspect-[3/4] rounded-2xl bg-gray-100 ring-1 ring-gray-200 shadow-sm flex items-center justify-center text-6xl"
+          >{{ author.emoji }}</div>
           <p v-if="author.portraitCredit" class="mt-2 text-[11px] text-gray-400 text-center">{{ author.portraitCredit }}</p>
         </div>
 

@@ -22,11 +22,16 @@
           :class="`border-${a.color}-100 hover:border-${a.color}-300 hover:shadow-${a.color}-100`"
         >
           <img
+            v-if="a.portraitUrl"
             :src="a.portraitUrl"
             :alt="a.name"
             class="w-20 h-20 rounded-xl object-cover object-top flex-shrink-0 bg-gray-100 ring-1 ring-gray-200"
             loading="lazy"
           />
+          <div
+            v-else
+            class="w-20 h-20 rounded-xl flex-shrink-0 bg-gray-100 ring-1 ring-gray-200 flex items-center justify-center text-3xl"
+          >{{ a.emoji }}</div>
           <div class="flex-1 min-w-0">
             <div class="flex items-baseline gap-2 flex-wrap">
               <h2 class="text-base font-bold text-gray-900">{{ a.name }}</h2>
