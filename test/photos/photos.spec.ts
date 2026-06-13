@@ -34,7 +34,11 @@ import {
   getYearMonthsFromIndex,
   listFilesFromIndex,
   listLibraryFolderFromIndex,
+  r2ThumbKey,
+  r2IndexKey,
 } from '~/server/utils/photos'
+import { thumbCacheKey } from '~/server/utils/photo-thumbs'
+import { createHash } from 'node:crypto'
 
 // ---- 合成 index fixture（涵蓋 chenwei year-month + training/hongshi folders 兩種 layout）----
 const file = (name: string, kind: 'image' | 'video' = 'image', ext = '.jpg') => ({
@@ -261,6 +265,31 @@ describe('listLibraryFolderFromIndex (training / hongshi folder browser)', () =>
   })
   it('returns an empty folder (not null) for an unknown subpath', () => {
     expect(listLibraryFolderFromIndex(idx as any, 'training', 'does/not/exist')).toEqual({ folders: [], files: [] })
+  })
+})
+
+// ---- R2 hybrid key helpers（守「sync 腳本算出的 key ＝ thumb 端點要的 key」這條 invariant）----
+describe('R2 hybrid keys (cloud /photos)', () => {
+  it('r2IndexKey is fixed', () => {
+    expect(r2IndexKey()).toBe('photos/index.json')
+  })
+
+  it('r2ThumbKey format = photos/thumb/{cacheKey}_{w}.webp', () => {
+    const key = thumbCacheKey(['chenwei', '2015', '11', '2015-11-14(1).jpg'])
+    expect(r2ThumbKey(key, 480)).toBe(`photos/thumb/${key}_480.webp`)
+    expect(r2ThumbKey(key, 1600)).toBe(`photos/thumb/${key}_1600.webp`)
+  })
+
+  // sync_photos_to_r2.mjs 重算 thumbCacheKey = sha256(parts.join('|')).slice(0,32)。
+  // 這裡用同演算法重算，確保端點的 thumbCacheKey 與腳本上傳的 key 對得起來。
+  it('thumbCacheKey matches the sync script algorithm (sha256 first 32 hex)', () => {
+    for (const parts of [
+      ['chenwei', '2024', '03', 'x.jpg'],
+      ['lib', 'training', '2017 忠烈祠', 'y.png'],
+    ]) {
+      const expected = createHash('sha256').update(parts.join('|')).digest('hex').slice(0, 32)
+      expect(thumbCacheKey(parts)).toBe(expected)
+    }
   })
 })
 

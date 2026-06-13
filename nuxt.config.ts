@@ -36,6 +36,9 @@ export default defineNuxtConfig({
     r2Bucket: process.env.R2_BUCKET,
     ebookChunksDir: process.env.EBOOK_CHUNKS_DIR,
     photosRoot: process.env.PHOTOS_ROOT || "G:/我的雲端硬碟/資料/儲存資料夾/辰瑋相片",
+    // 照片來源後端：'local'＝直讀本機 G: 槽（dev 預設）；'r2'＝雲端從 R2 讀 index + 縮圖
+    // （Zeabur 設 PHOTO_BACKEND=r2，原檔仍留 Drive，只有縮圖上 R2）。見 sync_photos_to_r2.mjs。
+    photoBackend: process.env.PHOTO_BACKEND || "local",
     // Gemini key：線上讀 OLINE，本機 dev 退到 _1..4 池（見檔首 geminiKeys 解析）。
     geminiApiKey: geminiKeys[0],
     geminiApiKeys: geminiKeys,
@@ -71,6 +74,8 @@ export default defineNuxtConfig({
       supabaseKey: process.env.SUPABASE_KEY,
       appUrl: process.env.APP_URL || "http://localhost:3000",
       allowedEmail: process.env.ALLOWED_EMAIL || "redpiigpig@gmail.com",
+      // 前端用：r2 後端時影片無法播（原檔不在 R2），改顯示占位。
+      photoBackend: process.env.PHOTO_BACKEND || "local",
     },
   },
 

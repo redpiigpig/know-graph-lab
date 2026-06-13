@@ -2,8 +2,9 @@ import fs from "node:fs";
 import { stat } from "node:fs/promises";
 import path from "node:path";
 import {
-  contentTypeFor, isLibrarySlug, resolveLibFilePath, verifyLibFileSig,
+  contentTypeFor, isLibrarySlug, resolveLibFilePath, verifyLibFileSig, photoBackend, classify,
 } from "~/server/utils/photos";
+import { getThumbFromR2, thumbCacheKey } from "~/server/utils/photo-thumbs";
 
 export default defineEventHandler(async (event) => {
   const lib = getRouterParam(event, "lib") || "";
@@ -21,6 +22,23 @@ export default defineEventHandler(async (event) => {
   if (!verifyLibFileSig(lib, subpath, n, exp, sig)) {
     throw createError({ statusCode: 403, message: "Invalid or expired signature" });
   }
+
+  // r2 後端（雲端）：原檔不在本機。圖片降級供 1600w 縮圖；影片無原檔 → 404（前端占位）。
+  if (photoBackend() === "r2") {
+    const cls = classify(n);
+    if (cls?.kind !== "image") {
+      throw createError({ statusCode: 404, message: "Original not available on cloud" });
+    }
+    const buffer = await getThumbFromR2(thumbCacheKey(["lib", lib, subpath, n]), 1600);
+    if (!buffer) throw createError({ statusCode: 404, message: "Not found" });
+    setResponseHeaders(event, {
+      "Content-Type": "image/webp",
+      "Content-Length": String(buffer.length),
+      "Cache-Control": "public, max-age=86400",
+    });
+    return buffer;
+  }
+
   const filePath = resolveLibFilePath(lib, subpath, n);
   const st = await stat(filePath).catch(() => null);
   if (!st || !st.isFile()) {

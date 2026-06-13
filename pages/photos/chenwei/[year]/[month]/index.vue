@@ -79,10 +79,14 @@
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
           <LazyVideoTile
-            v-else-if="f.kind === 'video'"
+            v-else-if="f.kind === 'video' && !isCloud"
             :src="f.url"
             cls="w-full h-full object-cover"
           />
+          <div v-else-if="f.kind === 'video'" class="w-full h-full flex flex-col items-center justify-center text-stone-400 bg-stone-100 p-3">
+            <div class="text-3xl">🎬</div>
+            <div class="mt-1 text-[10px] uppercase tracking-widest">影片僅本機</div>
+          </div>
           <div v-else class="w-full h-full flex flex-col items-center justify-center text-stone-400 bg-stone-100 p-3">
             <div class="text-3xl">📄</div>
             <div class="mt-1 text-[10px] uppercase tracking-widest">{{ f.ext.replace('.', '') }}</div>
@@ -130,12 +134,17 @@
             draggable="false"
           />
           <video
-            v-else-if="current.kind === 'video'"
+            v-else-if="current.kind === 'video' && !isCloud"
             :src="current.url"
             controls
             autoplay
             class="max-h-full max-w-full"
           />
+          <div v-else-if="current.kind === 'video'" class="text-stone-300 text-center p-8">
+            <div class="text-5xl mb-2">🎬</div>
+            <div class="text-sm">{{ current.name }}</div>
+            <div class="text-xs mt-2">影片僅在本機可播放</div>
+          </div>
           <div v-else class="text-stone-400 text-center p-8">
             <div class="text-5xl mb-2">📄</div>
             <div class="text-sm">{{ current.name }}</div>
@@ -161,6 +170,9 @@ interface PhotoFile {
   mtime: number;
   url: string;
 }
+
+// r2 後端（雲端）：影片原檔不在 R2，tile/lightbox 顯示占位不掛 <video>。
+const isCloud = useRuntimeConfig().public.photoBackend === "r2";
 
 const route = useRoute();
 const year = computed(() => String(route.params.year || ""));

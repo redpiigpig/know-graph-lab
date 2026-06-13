@@ -52,7 +52,48 @@ function indexPath(): string {
   return path.resolve(process.cwd(), "scripts", "photo_index.json");
 }
 
+// ── R2 hybrid key helpers（純函式，端點與 sync 腳本共用）──────────────────────
+// 原檔留 Drive（canonical），只有 index + 縮圖上 R2。
+export function r2IndexKey(): string {
+  return "photos/index.json";
+}
+export function r2ThumbKey(cacheKey: string, width: number): string {
+  return `photos/thumb/${cacheKey}_${width}.webp`;
+}
+
+function photoBackend(): "local" | "r2" {
+  return (useRuntimeConfig().photoBackend as string) === "r2" ? "r2" : "local";
+}
+
+// r2 後端無 mtime，用 TTL（5 分鐘）控記憶體 cache 重抓。
+const R2_INDEX_TTL_MS = 5 * 60 * 1000;
+let _r2IndexCache: { fetchedAt: number; data: PhotoIndex } | null = null;
+
+async function getPhotoIndexFromR2(): Promise<PhotoIndex | null> {
+  const now = Date.now();
+  if (_r2IndexCache && now - _r2IndexCache.fetchedAt < R2_INDEX_TTL_MS) {
+    return _r2IndexCache.data;
+  }
+  try {
+    const { r2SignedUrl } = await import("~/server/utils/r2");
+    const url = await r2SignedUrl(r2IndexKey(), 300);
+    const res = await fetch(url);
+    if (!res.ok) {
+      console.warn("[photo-index] R2 fetch failed:", res.status);
+      return _r2IndexCache?.data ?? null;
+    }
+    const data = (await res.json()) as PhotoIndex;
+    _r2IndexCache = { fetchedAt: now, data };
+    return data;
+  } catch (e) {
+    console.warn("[photo-index] R2 load error:", e);
+    return _r2IndexCache?.data ?? null;
+  }
+}
+
 export async function getPhotoIndex(): Promise<PhotoIndex | null> {
+  if (photoBackend() === "r2") return getPhotoIndexFromR2();
+
   const p = indexPath();
   let stat: { mtimeMs: number };
   try {
@@ -71,6 +112,8 @@ export async function getPhotoIndex(): Promise<PhotoIndex | null> {
     return null;
   }
 }
+
+export { photoBackend };
 
 export function getChenweiIndex(idx: PhotoIndex): IndexChenweiLib | null {
   return idx.libraries.chenwei ?? null;

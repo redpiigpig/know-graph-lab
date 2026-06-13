@@ -65,6 +65,28 @@ export async function getOrGenerateThumb(
   return { buffer, cached: false };
 }
 
+/**
+ * R2 hybrid：雲端從 R2 取已產好的 webp 縮圖（原檔不在雲端，不能 sharp）。
+ * 命中回 Buffer；不存在／失敗回 null（端點據此回 404）。
+ */
+export async function getThumbFromR2(
+  cacheKey: string,
+  width: number,
+): Promise<Buffer | null> {
+  if (!ALLOWED_THUMB_WIDTHS.has(width)) return null;
+  try {
+    const { r2SignedUrl } = await import("~/server/utils/r2");
+    const { r2ThumbKey } = await import("~/server/utils/photos");
+    const url = await r2SignedUrl(r2ThumbKey(cacheKey, width), 300);
+    const res = await fetch(url);
+    if (!res.ok) return null;
+    return Buffer.from(await res.arrayBuffer());
+  } catch (e) {
+    console.warn("[thumb] R2 fetch failed:", cacheKey, width, e);
+    return null;
+  }
+}
+
 /** 同步寫版（給 prewarm script 用，要確認真的寫到 disk） */
 export async function generateThumbToCache(
   origPath: string,
