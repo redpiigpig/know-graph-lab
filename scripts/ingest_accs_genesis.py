@@ -76,25 +76,30 @@ SUPABASE_URL = os.environ["SUPABASE_URL"]
 SUPABASE_KEY = os.environ["SUPABASE_SERVICE_ROLE_KEY"]
 MODEL = "gemini-2.5-flash"
 
-PROMPT = """這是《古代基督信仰聖經註釋叢書》（Ancient Christian Commentary on Scripture，校園書房中文版）一頁掃描影像，內容是某卷聖經某段經文的教父註釋。
+PROMPT = """這是《古代基督信仰聖經註釋叢書》（Ancient Christian Commentary on Scripture，校園書房繁體中文版）一頁掃描影像，內容是某卷聖經某段經文的教父註釋。
 
-本叢書體例（catena）：每個經文段落先列**經文引用**（如「1:1-2」），接著常有一段**總論**（編者導語，概述該段教父觀點），再來是若干則**教父引文**；每則引文常有一個**主題小標**，引文結尾標註**教父名**與**作品名**（有時含出處頁碼上標）。
+本叢書體例（catena）每個經文段落的版式：
+①**經文引用標題**（如「1:1-2」「1:14-19」，常為粗體置中／置左）
+②可選的**總論**（編者導語，整段斜體或縮排，概述該段教父觀點，無作者署名）
+③若干則**教父引文**；每則的版式為：**粗體主題小標**（如「聖靈所造」「洗禮的象徵」）→ 正文 → 段末以破折號標註**教父名 + 作品名**（如「— 巴西流《創世六日講道集》」，有時帶上標頁碼）。
 
-請把這頁的內容抽成結構化 JSON 陣列，每個元素一則：
-- `ref`：該則所屬經文段落，章節格式如 "1:1-2" 或 "1:5"。整頁沿用頁面上方或前文最近出現的段落引用；同段落多則共用同一 ref。
-- `kind`："overview"（總論／編者導語）或 "comment"（具名教父引文）。
-- `heading`：主題小標（若有，繁中；沒有就空字串）。
-- `father`：教父名（繁中；overview 留空字串）。
-- `father_en`：教父英文名（若頁面有標或你有把握；否則空字串）。
-- `work`：作品名（繁中；沒有就空字串）。
-- `body`：該則正文（繁中，完整段落；接回斷行；去除頁首頁尾、頁碼、上標註號）。
+請把這頁逐則抽成結構化 JSON 陣列，每元素一則：
+- `ref`：該則所屬經文段落引用，章節格式 "1:1-2" / "1:14"。沿用本頁或前文最近出現的段落標題；同段落多則共用同一 ref。
+- `kind`："overview"（總論）或 "comment"（具名教父引文）。
+- `heading`：該則正上方的**粗體主題小標**，逐字照抄繁中（總論若有標題也填；真的沒有才空字串）。**務必盡力辨識小標，不要遺漏。**
+- `father`：教父名（繁中；overview 留空）。
+- `father_en`：教父英文名（頁面有或你確定才填，否則空字串）。
+- `work`：作品名（繁中，去書名號；無則空字串）。
+- `body`：該則正文（繁中）。
 
-規則：
-1. 一律**繁體中文**輸出。
-2. 只抽**教父註釋正文**；跳過頁首 running header、頁碼、純粹的聖經經文重述區塊（經文另有來源，不要當 comment）。
-3. 跨頁未完的段落：照這頁看到的內容輸出，body 不要臆測補全。
-4. 若本頁無任何註釋正文（目錄／前言／空白頁），回傳空陣列 []。
-5. **只回傳 JSON 陣列**，不要 markdown、不要說明文字。
+**辨識準則（品質最重要）**：
+1. **逐字精確辨識**，這是繁體中文掃描印刷品：勿漏字、勿吞字、勿改字、勿自行摘要或改寫；不確定的字寧可依上下文判讀正確字，**絕不臆造**。輸出**一律繁體**（簡體一律轉繁體）。
+2. **正確斷句**：保留原標點；接回因換行斷開的句子（去掉行尾連字），但不要把兩句併成一句、也不要硬切一句。
+3. **一則引文 = 一個 entry**：不同小標或不同教父署名 → 拆成不同 entry，**絕不合併**；同一則跨欄／跨行的正文要合成完整一段。
+4. 只抽**教父註釋與總論**；跳過頁首 running header、頁碼、以及整段**重述聖經經文**的區塊（經文另有來源，不要當 comment）。
+5. **整頁是前言／序／導論／目錄／讚譽／空白頁 → 回傳空陣列 []**（這些不是逐節註釋）。
+6. 跨頁未完的段落：照本頁所見輸出，body 不要臆測補全。
+7. **只回傳 JSON 陣列**，不要 markdown 圍欄、不要任何說明文字。
 """
 
 RESPONSE_SCHEMA = {
@@ -195,13 +200,24 @@ def ocr_page_haiku(png: bytes) -> list[dict]:
     return _coerce_json_array(final)
 
 
+_CLIENTS: dict = {}        # api_key → genai.Client（快取，避免 client-closed bug）
+_DEAD_KEYS: set = set()    # 本輪已 429/額度乾的 key，後續頁不再重試
+
+
+def _client(key: str):
+    if key not in _CLIENTS:
+        _CLIENTS[key] = genai.Client(api_key=key)
+    return _CLIENTS[key]
+
+
 def ocr_page(png: bytes) -> list[dict]:
-    quota_hits = 0
     last_err = None
-    for key in API_KEYS:
+    live = [k for k in API_KEYS if k not in _DEAD_KEYS]
+    if not live:
+        raise RuntimeError("全部 Gemini key 額度已乾，依規範退出")
+    for key in live:
         try:
-            c = genai.Client(api_key=key)
-            resp = c.models.generate_content(
+            resp = _client(key).models.generate_content(
                 model=MODEL,
                 contents=[types.Part.from_bytes(data=png, mime_type="image/png"), PROMPT],
                 config=types.GenerateContentConfig(
@@ -216,10 +232,8 @@ def ocr_page(png: bytes) -> list[dict]:
             return json.loads(txt)
         except Exception as e:
             msg = str(e); last_err = e
-            if "429" in msg or "RESOURCE_EXHAUSTED" in msg or "quota" in msg.lower():
-                quota_hits += 1
-                if quota_hits >= 2:
-                    raise RuntimeError("連 2 次 429 quota，依規範退出") from e
+            if "429" in msg or "RESOURCE_EXHAUSTED" in msg or "quota" in msg.lower() or "depleted" in msg.lower():
+                _DEAD_KEYS.add(key)   # 整輪標死，不再重試此 key
                 continue
             if "503" in msg or "UNAVAILABLE" in msg:
                 time.sleep(3); continue
@@ -227,7 +241,10 @@ def ocr_page(png: bytes) -> list[dict]:
                 print(f"    [JSON parse fail, skip page] {msg[:80]}", file=sys.stderr)
                 return []
             raise
-    raise RuntimeError(f"全 key 失敗: {last_err}")
+    # 所有 live key 這頁都掛了 → 若全死則退出，否則視為暫時性（重試下一頁）
+    if not [k for k in API_KEYS if k not in _DEAD_KEYS]:
+        raise RuntimeError("全部 Gemini key 額度已乾，依規範退出")
+    return []
 
 
 def parse_pages(spec: str) -> list[int]:
