@@ -50,5 +50,24 @@ export default defineEventHandler(async (event) => {
     return { language, available: true, rtl: language === "hbo", total: verses.length, items: sample(verses, n) };
   }
 
+  // de / fr / la：用共用字庫的例句（以空白斷詞）。日文（ja）無詞間空白、需斷詞器，暫不支援。
+  if (language === "de" || language === "fr" || language === "la") {
+    const supabase = getAdminClient();
+    const { data } = await supabase
+      .from("lang_vocab_bank")
+      .select("word, meaning, example")
+      .eq("language", language)
+      .not("example", "is", null)
+      .limit(1000);
+    const pool: any[] = [];
+    for (const r of data ?? []) {
+      const ex = String(r.example || "").trim().replace(/\s+/g, " ");
+      const words = ex.split(" ").filter(Boolean);
+      if (words.length < 4 || words.length > 12) continue;
+      pool.push({ prompt: `用到「${r.word}」（${r.meaning}）的句子`, hint: "把詞排成通順的句子", words });
+    }
+    return { language, available: true, rtl: false, total: pool.length, items: sample(pool, n) };
+  }
+
   return { language, available: false, rtl: false, total: 0, items: [] };
 });

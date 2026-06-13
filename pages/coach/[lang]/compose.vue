@@ -17,7 +17,7 @@
           <div>
             <h1 class="text-lg font-bold text-gray-900">句子重組</h1>
             <p class="text-xs text-gray-500 mt-1 leading-relaxed">
-              看提示，把打散的詞卡點回正確順序，即時比對。**零 AI、確定性批改**。{{ lang === 'en' ? '英文取自情境實用句。' : '原文取自新約／舊約經文，重組＝重建該節的原文詞序。' }}
+              看提示，把打散的詞卡點回正確順序，即時比對。**零 AI、確定性批改**。{{ sourceNote }}
             </p>
           </div>
           <div>
@@ -26,7 +26,8 @@
               <button v-for="k in [10, 15, 20]" :key="k" @click="qCount = k" :class="cntClass(k)">{{ k }}</button>
             </div>
           </div>
-          <button @click="start" class="w-full py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-700 transition">開始</button>
+          <p v-if="total === 0" class="text-xs text-amber-600">此語言的例句字庫還在建置中（gloss 補到此語言後自動出現），目前暫無題目。</p>
+          <button @click="start" :disabled="total === 0" class="w-full py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-700 disabled:opacity-40 transition">開始</button>
         </div>
 
         <div v-else-if="!done" class="space-y-4">
@@ -110,7 +111,14 @@ const coach = ref<any>(null);
 const loading = ref(true);
 const available = ref(false);
 const rtl = ref(false);
+const total = ref(0);
 const items = ref<Item[]>([]);
+
+const sourceNote = computed(() => {
+  if (lang.value === "en") return "英文取自情境實用句。";
+  if (lang.value === "grc" || lang.value === "hbo") return "原文取自新約／舊約經文，重組＝重建該節的原文詞序。";
+  return "句子取自共用字庫的例句。";
+});
 
 const started = ref(false);
 const done = ref(false);
@@ -170,6 +178,7 @@ async function load(n: number) {
   const r = await authedFetch<any>(`/api/lang/compose?language=${lang.value}&n=${n}`);
   available.value = r.available;
   rtl.value = !!r.rtl;
+  total.value = r.total || 0;
   items.value = r.items || [];
 }
 async function start() {
