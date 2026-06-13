@@ -139,7 +139,7 @@
 - **🚧 第二部第七章「雙重母親」(The Dual Mother Role)**：建設中（`ch12.json`，英文 HTML 13147–16443，**294 個英文 entries / 59 詩節 — 全書最大章**）。德文＝德 VII「Das Opfer」前半（`jung_ch12_de.txt`，1234 段）。**⏭️ 進度：已建 44 rows（標題＋E1–E43）**：…海華沙前史 Mudjekeewis 奪大熊貝帶/化西風眾風之父/東風 Wabun 求愛/由風與水重生。抽取器 `c:/tmp/_jung_extract_ch12.py`（294 entries / 1234 段）。
   - **⚙️ 寫法定案（user 核可）：en/de 不由模型逐字重打，改由 fill 腳本從來源檔程式帶入；模型只寫中文。** 模板 `c:/tmp/_jung_ch12_h.py`：`ROWS=[(en_tag, is_verse, de_spec, zh),…]`；`de_spec="=en"`（榮格保留英文的海華沙等詩節）或 `["D67",…]`（德文片段 id，腳本 smart-join+去腳註+OCRFIX）；`en` 自 `jung_ch12_en.txt` 抓（verse→blockquote）、`de` 同理。每批只換 ROWS（en_tag/de id 對照＋中文），跑 → build → commit。
   - **fill 模板增強**（`c:/tmp/_jung_ch12_j.py`）：de_spec 新增兩式 — `de_slice("D85","起anchor","止anchor")`（一個德文片段被 OCR 合併成多個 en entry 時，用短 anchor 從來源檔切片）＋`de_verse(["D86",...])`（詩節每片段一行 blockquote）。**整晚自動跑、不停問**（user 指示）。
-  - **進度 153 rows（E1–V152）**：海華沙戰梅吉索貢不可傷負傷退憩松下(死人鹿皮鞋革=菌蕈)/樹擬人崇拜(印度村聖樹著衣敷油穿耳/阿濕婆塔=樹中之王=梵天毘濕奴大自在天三聯神=母樹)/退憩=交付吞噬母需鳥助/啄木鳥瑪瑪指頭髮根唯一可傷處。**下一批 E153**＝海華沙射梅吉索貢三箭(啄木Mama血染冠羽得名)/勝後剝甲取wampum…德文 D359 起。皆 PD。fill 法續。⚠️ pre-push hook 偶因平行 session race 報測試失敗，`npm test` 綠就再 pull-rebase+push（勿 --no-verify）；push race 被拒也再跑一次。
+  - **進度 157 rows（E1–E156）**：啄木鳥瑪瑪=羅慕路斯雷穆斯之母/喀耳刻變皮庫斯=戰神啄木鳥=重生母殺子夫成靈魂鳥/皮庫姆努斯皮魯姆努斯=孩童之神=善惡雙母/鳥助勸射髮下陽具點頭頂(三箭=陽具象徵)殺梅吉索貢奪貝珠甲/死者留水=魔法師即可怖母/同魚王=死水=吞噬母→娶明妮哈哈。**下一批 E157**＝老翁鑽空橡樹返少年/海華沙第十四歌發明文字象形(Gitche Manito=蛋四向尖=大靈無處不在)…德文 D379 起。皆 PD。fill 法續。⚠️ pre-push hook 偶因平行 session race 報測試失敗，`npm test` 綠就再 pull-rebase+push（勿 --no-verify）；push race 被拒也再跑一次。
 - **⏭️ 後續章節**：VIII 獻祭（en 16443–18479，建 `ch13.json`，德文＝德 VII「Das Opfer」**後半**，續用同一德文塊 de 15780–22374，新 `_jung_extract_ch13.py` 改 en 行號 16443:18479、德文 block 取 ch12 用剩的後段）。逐章流程同下方「新 session 續傳細則」（ch10 寫法通用，僅改檔名/行號）。
 
 ### 穩定的 5 步方法（每章照做）
