@@ -6,7 +6,7 @@
       <div class="w-full max-w-4xl">
         <div class="mb-8 text-center">
           <h1 class="text-2xl font-bold text-gray-900 mb-1">✝️ 基督教經典對照與註釋</h1>
-          <p class="text-sm text-gray-500">七個子工具：聖經多版本平行 / 信條 / 教會法規 / 教父著作 / 典外文獻 / 諾斯底主義文獻 / 教宗訓導文獻</p>
+          <p class="text-sm text-gray-500">七個子工具：聖經多版本平行 / 典外文獻 / 教父著作 / 信條 / 教會法規 / 教宗訓導文獻 / 諾斯底主義文獻</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -44,7 +44,29 @@
 definePageMeta({ middleware: 'auth' })
 useHead({ title: '基督教經典對照 — Know Graph Lab' })
 
+// 卡片順序（user 定）：聖經 → 典外 → 教父 → 信條 → 法規 → 教宗 → 諾斯底
 const tools = [
+  {
+    path: '/scripture',
+    icon: '📖',
+    title: '聖經對照 + 教父註釋',
+    desc: '多版本平行對照（中／英／拉／希／敘／科普特／亞美尼亞／衣索匹亞）+ 教父逐節註釋 + 各教會 OT/NT canon 標記',
+    enabled: true,
+  },
+  {
+    path: '/apocrypha',
+    icon: '📜',
+    title: '典外文獻搜索',
+    desc: 'OT 偽典 / 第二正典、NT 偽典、死海古卷、Nag Hammadi 諾斯底文獻全文檢索；中文（基督教典外文獻 10 卷）／英文／原文三欄對照',
+    enabled: true,
+  },
+  {
+    path: '/fathers',
+    icon: '✝️',
+    title: '教父著作',
+    desc: 'Schaff 全集 38 卷（ANF 10 + NPNF1 14 + NPNF2 14）+ 中譯。按系列／卷號瀏覽，連 ebook reader 閱讀。已精修狀態標記。',
+    enabled: true,
+  },
   {
     path: '/creeds',
     icon: '⛪',
@@ -60,24 +82,10 @@ const tools = [
     enabled: true,
   },
   {
-    path: '/fathers',
-    icon: '✝️',
-    title: '教父著作',
-    desc: 'Schaff 全集 38 卷（ANF 10 + NPNF1 14 + NPNF2 14）+ 中譯。按系列／卷號瀏覽，連 ebook reader 閱讀。已精修狀態標記。',
-    enabled: true,
-  },
-  {
-    path: '/apocrypha',
-    icon: '📜',
-    title: '典外文獻搜索',
-    desc: 'OT 偽典 / 第二正典、NT 偽典、死海古卷、Nag Hammadi 諾斯底文獻全文檢索；中文（基督教典外文獻 10 卷）／英文／原文三欄對照',
-    enabled: true,
-  },
-  {
-    path: '/scripture',
-    icon: '📖',
-    title: '聖經對照 + 教父註釋',
-    desc: '多版本平行對照（中／英／拉／希／敘／科普特／亞美尼亞／衣索匹亞）+ 教父逐節註釋 + 各教會 OT/NT canon 標記',
+    path: '/encyclicals',
+    icon: '🕊️',
+    title: '教宗訓導文獻',
+    desc: '個別教宗頒布的通諭／使徒勸諭／使徒憲令／自動詔書／演說；按世紀分組瀏覽，每篇拉丁／英文／中文三欄逐段對照。從 21 世紀方濟各往回做',
     enabled: true,
   },
   {
@@ -85,13 +93,6 @@ const tools = [
     icon: '🜍',
     title: '諾斯底主義文獻',
     desc: 'The Gnostic Society Library (gnosis.org) — 拿戈瑪第經集／古典諾斯底經典／瓦倫廷／赫密士文集／摩尼教／曼達教／卡特里派 等 13 類；英文（公有領域英譯）／繁中逐段對照',
-    enabled: true,
-  },
-  {
-    path: '/encyclicals',
-    icon: '🕊️',
-    title: '教宗訓導文獻',
-    desc: '個別教宗頒布的通諭／使徒勸諭／使徒憲令／自動詔書／演說；按世紀分組瀏覽，每篇拉丁／英文／中文三欄逐段對照。從 21 世紀方濟各往回做',
     enabled: true,
   },
 ]
