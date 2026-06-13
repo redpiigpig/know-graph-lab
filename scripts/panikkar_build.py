@@ -553,25 +553,30 @@ def load_zh_sections(src_path: Path, *, to_traditional: bool = True) -> list[dic
 
 
 # ── translation engine (prod only) ───────────────────────────────────────────
-PANIKKAR_PROMPT_TMPL = """你是比較神學與宗教哲學經典的專業譯者，正在翻譯雷蒙‧潘尼卡（Raimon Panikkar）的著作《印度教中未識的基督》。把下列**英文原文**翻成**繁體中文**。
+# {srclang} is filled per book (英文 / 義大利文 / 西班牙文) — Panikkar wrote his
+# works in several languages; the no-中譯 volumes are self-translated from whatever
+# original we hold (the Jaca Book Opera Omnia is Italian; others English/Spanish).
+PANIKKAR_PROMPT_TMPL = """你是比較神學與宗教哲學經典的專業譯者，正在翻譯雷蒙‧潘尼卡（Raimon Panikkar）的著作。把下列**{srclang}原文**翻成**繁體中文**。
 
 規則：
 1. 嚴守繁體中文（禁簡體）；台灣天主教用語；中間點用「‧」。
-2. 只翻譯英文原文；不要加前言或說明。
+2. 只翻譯{srclang}原文；不要加前言或說明。
 3. 忠實學術／神學散文語氣，長句可順為通順中文；保留括號內的外文夾注（梵文/拉丁文/希臘文，如 Brahman、advaita、Logos、plērōma）。
 4. 保留 Markdown（## 標題 / **粗體** / *斜體* / > 引文）。
-5. 潘尼卡自鑄詞鎖死（首見括注原詞）：cosmotheandric→宇宙神人共融、intrareligious dialogue→宗教內對話、interreligious dialogue→宗教間對話、Christophany→基督顯現、the whole Christ→全基督、the Unknown Christ→未識的基督、pluralism→多元論、advaita→不二、tempiternity→時永。聖神（非聖靈）。
+5. 潘尼卡自鑄詞鎖死（首見括注原詞）：cosmotheandric→宇宙神人共融、intrareligious dialogue→宗教內對話、interreligious dialogue→宗教間對話、Christophany→基督顯現、the whole Christ→全基督、pluralism→多元論、advaita→不二、tempiternity→時永。聖神（非聖靈）。
    印度術語對齊：Brahman→梵、ātman→阿特曼、dharma→達磨/法、karma→業、Veda→吠陀、Upaniṣad→奧義書。
    人名 Panikkar→潘尼卡（非帕尼卡）。
 6. 只輸出翻譯後的繁體中文。
 
-英文原文：
-{source}"""
+{srclang}原文：
+{{source}}"""
+
+_SRC_LABELS = {"en": "英文", "it": "義大利文", "es": "西班牙文", "de": "德文", "fr": "法文"}
 
 
-def make_engine():
+def make_engine(src_lang: str = "en"):
     import translate_ebook_to_zh as te
-    te.PROMPT_TMPL = PANIKKAR_PROMPT_TMPL
+    te.PROMPT_TMPL = PANIKKAR_PROMPT_TMPL.format(srclang=_SRC_LABELS.get(src_lang, "外文"))
 
     def _clean(out: str) -> str:
         # Each EN paragraph → exactly ONE zh paragraph: drop model-added heading
