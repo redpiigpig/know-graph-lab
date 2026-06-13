@@ -399,10 +399,25 @@ def main():
                   f"{who} «{(r['work_title'] or '')}»  {len(r['body_zh'])}字")
         return
 
+    if not rows:
+        print("  [skip] 本次無任何 rows（額度乾/全空）→ 不刪不寫，保留既有資料", flush=True)
+        return
     if args.replace:
-        delete_book_rows(args.book)
+        delete_book_rows(args.book)   # 只在確實有 rows 時才整批換，避免空結果清空
     upsert_rows(rows)
     print(f"upserted {len(rows)} rows into accs_commentary", flush=True)
+
+    # 完成標記：本書目標頁全數已在 checkpoint → 寫 .done，讓每日排程不再重跑/覆蓋
+    covered: set[int] = set()
+    for ln in ckpt.read_text(encoding="utf-8").splitlines():
+        try:
+            covered.update(_rec_pages(json.loads(ln)))
+        except Exception:
+            pass
+    if set(pages) and set(pages).issubset(covered):
+        done_marker = ckpt.with_suffix(".done")
+        done_marker.write_text(f"{len(covered)} pages\n", encoding="utf-8")
+        print(f"  [done] all {len(set(pages))} target pages OCR'd → {done_marker.name}", flush=True)
 
 
 if __name__ == "__main__":
