@@ -99,8 +99,9 @@
               :key="book.code"
               :to="`/scripture/${book.code}/1`"
               class="block bg-white border border-gray-200 rounded-md px-2 py-2 hover:border-stone-400 hover:shadow-sm transition text-center"
+              :title="bookCardName(book).full"
             >
-              <div class="font-semibold text-gray-900 text-sm leading-tight">{{ book.name_zh_short || book.name_zh }}</div>
+              <div class="font-semibold text-gray-900 text-sm leading-tight">{{ bookCardName(book).short }}</div>
               <div class="text-[10px] text-gray-400 mt-0.5">{{ book.chapter_count }} 章</div>
             </NuxtLink>
           </div>
@@ -127,6 +128,8 @@ type BibleBook = {
   code: string
   name_zh: string
   name_zh_short: string | null
+  name_sigao: string | null
+  abbr_sigao: string | null
   name_en: string
   testament: 'ot' | 'nt' | 'deutero' | 'apocrypha'
   canon_protestant: boolean
@@ -260,6 +263,14 @@ function clearSearch() {
   lastQ.value = ''
   searchResults.value = []
   searchTotal.value = 0
+}
+
+// In 天主教 view, label books with 思高本 names/abbreviations; else 和合本.
+function bookCardName(book: BibleBook): { short: string; full: string } {
+  if (activeCanon.value === 'catholic' && book.abbr_sigao) {
+    return { short: book.abbr_sigao, full: book.name_sigao || book.name_zh }
+  }
+  return { short: book.name_zh_short || book.name_zh, full: book.name_zh }
 }
 
 function bookShortName(code: string) {
