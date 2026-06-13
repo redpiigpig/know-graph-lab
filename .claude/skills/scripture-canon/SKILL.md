@@ -1469,14 +1469,15 @@ q-peter-preaching / christian-sibyl / orphica / joseph-prayer
 - ⚠️⚠️ **seed 污染重大坑**：對「原本是 zh-own（自編章號＋導論混入）」的卷跑 `--accumulate` 重做時，會 **seed 進舊的錯位資料**（do_chinese accumulate 從現有 cct_zh 取種子）→ keep-longest 可能保留錯位/導論文字。實測 **jubilees** 跑完 coverage 85% 但 ch1:1=導論、ch5/23 內容錯位。**修法：換骨架型態（zh-own→bible/pseud）時，第一輪必須 `do_chinese(accumulate=False)` 清空重做（純內容對位、clamp 會丟掉無英文對應的導論），再 accumulate 收斂。** 路 a 的 12 卷次經上一輪已是 bible 對齊（非 zh-own），故 --force seed 乾淨、不受此影響。jubilees 待 fresh 重做。
 - ⚠️ **單調性 bug 已修 `union_fill`**：`--accumulate` 設計要「覆蓋率只升不降」，但 merge keep-longest + `clean_zh_verses` 會把上一輪已對齊的節換成新候選後清掉 → **回退**（實測 wisdom-solomon 99.77%→83%、2-maccabees 81%→75%）。已加純函式 `AV.union_fill(verses, seed)`：accumulate 後把 seed 缺的節補回，保證單調。do_chinese 已接。**47 tests 綠**。回退的卷用修好的碼重跑即可恢復。
 
-**🖥️ 監督交接（2026-06-12 進行中，給新 session 盯）**：
-> **兩個背景程序正在跑**（NVIDIA qwen3-next，與徹夜 jung/mueller + 使用者 --accumulate 共用 key，故偶發 all-engines-failed＋重試、偏慢）：
-> 1. **phase 1**：`scripts/apoc_verse_restructure.py --batch-bible --force`（log `c:/tmp/route_a.log`）— 12 卷次經逐卷 align_to_convergence。**用的是修 union_fill 之前的碼**，故多輪卷有回退。
-> 2. **phase 2（自動接棒）**：`c:/tmp/overnight2.py`（log `c:/tmp/phase2.log`）— 等 phase 1 程序結束後自動：(a) 用**修好的 union_fill 碼**再跑一次 `run_batch_bible(force=True)`（recover 回退 + 做新加的 4-ezra）；(b) **jubilees FRESH**（`do_chinese(accumulate=False)` 清 zh-own 污染再 accumulate）。結尾印 `[PHASE2] DONE`。
+**🖥️ 監督交接（2026-06-13 22:00 更新，DB 實測校正）**：
+> **真實逐節覆蓋率（直接查 DB cct_zh，已用 offset 分頁避開 PostgREST 1000 列上限）**：
+> tobit 244/244 100% ✅ / wisdom-solomon 435/436 99.8% ✅ / sirach 1363/1392 97.9% ✅ / baruch 140/140 100% ✅ / letter-jeremiah 73/73 100% ✅ / 1-macc 878/924 95.0% ✅ / 4-macc 476/480 99.2% ✅ / **1-esdras 442/448 98.7% ✅（已完成）** / **prayer-manasseh 15/15 100% ✅（已完成）** / **4-ezra 1793 列 ✅（新卷已做）** / judith 211/339 62.2% ⚠ / 2-macc 463/555 83.4% ⚠ / 3-macc 189/228 82.9% ⚠ / **jubilees 1115 列＝仍是污染 zh-own，待 FRESH 重建**。
 >
-> **次經覆蓋率（phase 1 即時，phase 2 後會更高）**：tobit 100% / judith 62%⚠ / wisdom-solomon 99.8%(回退83%，phase2 修) / sirach 96% / baruch 100% / letter-jeremiah 100% / 1-macc 86% / 2-macc 81%(回退75%) / 3-macc 83% / 4-macc・1-esdras・prayer-manasseh・4-ezra 待完成。
+> **弱卷根因＝LLM key starvation，不是骨架/versification**（推翻舊假設）：judith 第 1–9 章 100%、第 10 章 13/23、**第 11–16 章整章 0 節** — 是後半本對齊視窗在 key 競爭下每輪 all-engines-failed、被「保留空窗」，故 pass2 +0.0 卡平台。**judith 不需換 brenton/sigao 骨架**，key 一空跑幾輪 `judith --zh --accumulate` 補 ch10-16 即可；2-macc/3-macc 八成同理（尾段視窗未翻）。
 >
-> **新 session 該做**：① 盯 `c:/tmp/phase2.log` 等 `[PHASE2] DONE`；中途若程序掛了（查 `Get-CimInstance ... -like '*--batch-bible*'` 或 overnight2），直接重跑 `--batch-bible --force`（checkpoint 對已達標卷無傷，union_fill 單調）。② 完成後跑**全卷 gap 稽核**（cct_zh verse-not-null 完成卷數 /132 + 各卷 EN/ZH/coverage），凡 <85% 或內容抽查錯位的卷個別 `SLUG --zh --accumulate` 再收。③ judith 62% 偏低要查（kjva 與黃根春 versification 差異大，或改試 `_pick_bible_version` 換 brenton/sigao 骨架）。④ **路 b 其餘 OT 偽典仍缺英文源**（見上）—留 zh-own。⑤ 別殺 jung/mueller/使用者的程序。⑥ 動 `apocrypha_verses.py` 先補 test。最後更新本表 + commit/push。
+> **背景程序**：`c:/tmp/overnight2.py`（先 `run_batch_bible(force=True)` monotonic 重跑 deuterocanon，再 **jubilees FRESH** `do_chinese(accumulate=False)` 清污染後 accumulate；結尾印 `[PHASE2] DONE`）。本日歷程：原 phase2(PID 24112) 在 4-maccabees 被疑似引擎層 2-strike `sys.exit()`(SystemExit 貫穿 line 597) 帶走 → 重啟為 `_whisper_venv` launcher（shim PID 20744 + 子 worker，log `c:/tmp/phase2b.log`）。22:00 時 worker 36 分鐘只燒 1.1s CPU ≒ 卡死 —— 因 key 同時被 `coach_vocab_bank gloss all`＋2×`ocr_pdf_to_text`＋jung/mueller 搶光。jubilees FRESH 排在 force batch 之後，這速度今晚到不了，故 jubilees 1115 污染列**不會被清空**（無「清了填不回」風險）。
+>
+> **新 session 該做**：① 確認 key 是否已空（他人 LLM 任務結束）；空了 phase2b 會自然推進，或直接針對 judith/2-macc/3-macc 跑 `SLUG --zh --accumulate`（3–4 輪）補尾段。② jubilees FRESH（key 空再做，starvation 下別清污染列）。③ deuterocanon 多數卷已 ≥95% 持久在 DB，force 全量重跑屬冗餘 — 若想省 key 可改只跑 jubilees + 3 弱卷的精簡腳本。④ 別殺 jung/mueller/coach/ocr_pdf 等他人程序。⑤ 動 `apocrypha_verses.py` 先補 test。⑥ 診斷腳本 `/c/tmp/probe_cov.py`・`probe2.py`・`judith_diag.py`（純 DB、不吃 key）可重用，任務全完再清。完成後更新本表 + commit/push。
 
 ### 教訓（值得記住）
 
