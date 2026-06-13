@@ -19,29 +19,76 @@ from __future__ import annotations
 import re
 from typing import Optional, TypedDict
 
+# ── 繁體強制 / 簡→繁 自動校正（opencc）─────────────────────────────────────
+# 掃描 OCR 偶爾吐簡體字殘留；站內鐵則一律繁體（[[feedback_traditional_chinese_only]]）。
+# opencc s2tw(p) 把簡體+陸用詞轉成台灣繁體用字。缺 opencc 時退化為 identity（測試會抓）。
+try:
+    import opencc as _opencc  # type: ignore
+    _S2TW = _opencc.OpenCC("s2twp")   # 簡→繁（台灣標準，含詞彙）
+except Exception:  # pragma: no cover - opencc 必裝；防呆
+    _S2TW = None
+
+
+def to_traditional(text: Optional[str]) -> str:
+    """簡體（或簡繁混雜）→ 台灣繁體。已是繁體則原樣返回。"""
+    if not text:
+        return ""
+    return _S2TW.convert(text) if _S2TW else text
+
+
+def has_simplified(text: Optional[str]) -> bool:
+    """是否含簡體字 = 台灣標準轉換器（s2twp）會改動它。
+
+    用 s2twp 而非 s2t 偵測：s2t 會把「吃/秘/群/峰」等正確台灣繁體字重寫成罕用
+    異體（喫/祕/羣/峯），造成偽陽性；s2twp 保留台灣用字，與 to_traditional 一致。
+    """
+    if not text or _S2TW is None:
+        return False
+    return _S2TW.convert(text) != text
+
+
+def normalize_body(text: Optional[str]) -> str:
+    """正文校正：簡→繁 + 收斂空白（換行/多空白→單空白）+ strip。"""
+    t = to_traditional(text)
+    t = re.sub(r"\s+", " ", t).strip()
+    return t
+
 
 # ── Father-name variants → glossary 主譯 ─────────────────────────────────────
-# ACCS 中文版偶用與本站詞庫不同的譯名（或簡體殘留）。收斂到 theologians 主譯，
-# 與 /fathers 全集一致。只收「同一人不同寫法」，不碰同名異人。
+# ACCS 中文版偶用與本站詞庫不同的譯名（或 OCR 殘留）。收斂到 theologians 主譯，
+# 與 /fathers 全集一致（[[feedback_glossary_strict_authority]]）。
+# normalize_father 會**先 to_traditional** 再查此表，故鍵一律繁體。
+# 鐵則：只收「明確全稱的同一人不同寫法」，**不碰裸名同名異人**
+# （裸「約翰」可能是使徒約翰、裸「以法連」可能是聖經以法蓮 → 不在此表）。
 FATHER_FIXES: dict[str, str] = {
+    # 金口若望 (John Chrysostom)
     "屈梭多模": "金口若望",
-    "金口约翰": "金口若望",
     "金口約翰": "金口若望",
-    "约翰·屈梭多模": "金口若望",
-    "奥古斯丁": "奧古斯丁",
-    "區利羅": "區利羅",
-    "西里尔": "區利羅",
+    "約翰·屈梭多模": "金口若望",
+    "約翰屈梭多模": "金口若望",
+    # 大馬士革的若望 (John of Damascus) — 校園版作「約翰」
+    "大馬士革的約翰": "大馬士革的若望",
+    # 格列高里系（Gregory；「里」非「理」，見 scripture-fathers 譯名決策）
+    "女撒的貴格利": "尼撒的格列高里",
+    "尼撒的貴格利": "尼撒的格列高里",
+    "拿先斯的貴格利": "拿先斯的格列高里",
+    "納西安的貴格利": "拿先斯的格列高里",
+    # 厄弗冷 (Ephrem the Syrian) — 校園版作「敘利亞人以法連」
+    "敘利亞人以法連": "敘利亞的厄弗冷",
+    "敘利亞的以法連": "敘利亞的厄弗冷",
+    # 區利羅 (Cyril)
+    "西里爾": "區利羅",
+    "西瑞爾": "區利羅",
+    # 巴西流 (Basil；禁「巴西略」)
     "巴西略": "巴西流",
     "大巴西流": "巴西流",
-    "俄利根": "俄利根",
-    "奥利金": "俄利根",
-    "耶柔米": "耶柔米",
+    # 俄利根 (Origen)
+    "奧利金": "俄利根",
+    # 耶柔米 (Jerome)
     "希耶羅尼穆斯": "耶柔米",
+    # 安波羅修 (Ambrose)
     "盎博羅削": "安波羅修",
     "安波羅斯": "安波羅修",
-    "亚他那修": "亞他那修",
-    "爱任纽": "愛任紐",
-    "特土良": "特土良",
 }
 
 SECTION_KINDS = {"overview", "comment"}
@@ -139,6 +186,7 @@ def normalize_father(name: Optional[str]) -> Optional[str]:
     n = n.strip("「」『』()（）")
     if not n:
         return None
+    n = to_traditional(n)          # 簡→繁，讓 FATHER_FIXES 鍵（繁體）能命中
     return FATHER_FIXES.get(n, n)
 
 
@@ -183,8 +231,8 @@ def build_rows(
             kind = "comment"
 
         father = normalize_father(e.get("father")) if kind == "comment" else None
-        work = (e.get("work") or "").strip() or None if kind == "comment" else None
-        heading = (e.get("heading") or "").strip() or None
+        work = (to_traditional(e.get("work")) or None) if kind == "comment" else None
+        heading = to_traditional(e.get("heading")) or None
         father_en = (e.get("father_en") or "").strip() or None if kind == "comment" else None
 
         rows.append({
@@ -199,7 +247,7 @@ def build_rows(
             "father_name": father,
             "father_name_en": father_en,
             "work_title": work,
-            "body_zh": body,
+            "body_zh": normalize_body(body),
             "source_vol": source_vol,
         })
         entry_counter[key] += 1
@@ -251,8 +299,8 @@ def build_rows_auto(
         if kind not in SECTION_KINDS:
             kind = "comment"
         father = normalize_father(e.get("father")) if kind == "comment" else None
-        work = (e.get("work") or "").strip() or None if kind == "comment" else None
-        heading = (e.get("heading") or "").strip() or None
+        work = (to_traditional(e.get("work")) or None) if kind == "comment" else None
+        heading = to_traditional(e.get("heading")) or None
         father_en = (e.get("father_en") or "").strip() or None if kind == "comment" else None
 
         rows.append({
@@ -267,7 +315,7 @@ def build_rows_auto(
             "father_name": father,
             "father_name_en": father_en,
             "work_title": work,
-            "body_zh": body,
+            "body_zh": normalize_body(body),
             "source_vol": source_vol,
         })
         entry_counter[chap][key] += 1

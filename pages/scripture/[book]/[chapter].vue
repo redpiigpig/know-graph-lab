@@ -164,25 +164,31 @@
               </article>
             </div>
 
-            <!-- commentary panel -->
+            <!-- commentary panel: 說明（overview）在上、教父註釋（comments）在下，明確分區 -->
             <div
               v-if="seg.commentary && panelOpen[si] !== false"
-              class="mt-2 border-l-2 border-amber-300 bg-amber-50/40 rounded-r-md pl-3 pr-3 py-2.5 space-y-3"
+              class="mt-2 space-y-2.5"
             >
+              <!-- 說明（編者導論） -->
               <div
-                v-for="(e, ei) in seg.commentary.entries"
-                :key="ei"
+                v-if="overviewsOf(seg).length"
+                class="border border-amber-200 bg-amber-50 rounded-md px-3.5 py-3"
               >
-                <!-- overview -->
-                <div v-if="e.section_kind === 'overview'">
-                  <p v-if="e.heading" class="text-xs font-semibold text-amber-900 mb-0.5">{{ e.heading }}</p>
-                  <p class="text-[13px] leading-relaxed text-stone-700 italic">{{ e.body_zh }}</p>
+                <div class="text-amber-800 text-base font-bold tracking-wide mb-1.5">說明</div>
+                <div v-for="(e, ei) in overviewsOf(seg)" :key="'o' + ei" class="mb-2 last:mb-0">
+                  <p v-if="e.heading" class="kaiti text-base font-bold text-amber-900 mb-1">{{ e.heading }}</p>
+                  <p class="kaiti text-[15px] leading-loose text-stone-800">{{ e.body_zh }}</p>
                 </div>
-                <!-- patristic comment -->
-                <div v-else>
-                  <p v-if="e.heading" class="text-xs font-semibold text-stone-600 mb-0.5">{{ e.heading }}</p>
-                  <p class="text-[13px] leading-relaxed text-stone-800">{{ e.body_zh }}</p>
-                  <p class="text-[11px] text-amber-800 mt-0.5">
+              </div>
+              <!-- 教父註釋（具名引文） -->
+              <div
+                v-if="commentsOf(seg).length"
+                class="border-l-2 border-stone-300 pl-3.5 space-y-3.5"
+              >
+                <div v-for="(e, ei) in commentsOf(seg)" :key="'c' + ei">
+                  <p v-if="e.heading" class="text-sm font-semibold text-stone-600 mb-0.5">{{ e.heading }}</p>
+                  <p class="text-[15px] leading-loose text-stone-800">{{ e.body_zh }}</p>
+                  <p class="text-xs text-amber-800 mt-1 text-right">
                     — <span class="font-medium">{{ e.father_name }}</span>{{ e.work_title ? ` 《${e.work_title}》` : '' }}
                   </p>
                 </div>
@@ -478,6 +484,14 @@ function togglePanel(idx: number) {
   panelOpen[idx] = panelOpen[idx] === false ? true : false
 }
 
+// Split a segment's commentary into 說明（overview）vs 教父引文（comment）
+function overviewsOf(seg: { commentary: Pericope | null }): CommentaryEntry[] {
+  return seg.commentary?.entries.filter(e => e.section_kind === 'overview') ?? []
+}
+function commentsOf(seg: { commentary: Pericope | null }): CommentaryEntry[] {
+  return seg.commentary?.entries.filter(e => e.section_kind === 'comment') ?? []
+}
+
 // Group chapter verses into ACCS pericopes (經文上 → 註釋下). Verses outside any
 // pericope render as their own commentary-less segment, in verse order.
 const segments = computed(() => {
@@ -523,5 +537,9 @@ const segments = computed(() => {
 .rtl-text {
   direction: rtl;
   unicode-bidi: bidi-override;
+}
+/* 標楷體 — 用於 ACCS「說明」導論，給古典註釋的質感 */
+.kaiti {
+  font-family: "標楷體", "DFKai-SB", "BiauKai", "TW-Kai", "AR PL UKai TW", "KaiTi", "STKaiti", serif;
 }
 </style>

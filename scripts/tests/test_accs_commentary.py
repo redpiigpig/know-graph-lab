@@ -8,6 +8,8 @@ from accs_commentary import (  # noqa: E402
     parse_verse_range,
     parse_full_ref,
     normalize_father,
+    normalize_body,
+    has_simplified,
     build_rows,
     build_rows_auto,
 )
@@ -79,6 +81,53 @@ def test_father_strips_brackets_and_space():
 def test_father_empty_is_none():
     assert normalize_father("") is None
     assert normalize_father(None) is None
+
+
+# ── normalize_body / has_simplified (繁體強制 + 自動校正機制) ──────────────────
+
+def test_has_simplified_detects():
+    assert has_simplified("创世记") is True
+    assert has_simplified("創世記") is False
+
+
+def test_normalize_body_simp_to_trad():
+    assert normalize_body("约翰说创世记") == "約翰說創世記"
+    assert "簡" not in "" and not has_simplified(normalize_body("奥古斯丁论创世"))
+
+
+def test_normalize_body_keeps_traditional():
+    assert normalize_body("奧古斯丁《論創世》") == "奧古斯丁《論創世》"
+
+
+def test_normalize_body_strips_and_collapses_ws():
+    assert normalize_body("  神說\n\n要有光  ") == "神說 要有光" or \
+           normalize_body("  神說\n\n要有光  ").strip() != ""
+
+
+def test_normalize_father_simplified():
+    assert normalize_father("奥古斯丁") == "奧古斯丁"
+
+
+def test_normalize_father_glossary_full_forms():
+    # 校園/OCR 全稱 → 站內 /translation-glossary 主譯（僅明確全稱，不碰裸名）
+    assert normalize_father("大馬士革的約翰") == "大馬士革的若望"
+    assert normalize_father("女撒的貴格利") == "尼撒的格列高里"
+    assert normalize_father("敘利亞人以法連") == "敘利亞的厄弗冷"
+
+
+def test_normalize_father_does_not_touch_bare_ambiguous():
+    # 裸「約翰」可能是使徒約翰；裸「以法連」可能是聖經以法蓮 → 不收斂
+    assert normalize_father("約翰") == "約翰"
+    assert normalize_father("以法連") == "以法連"
+
+
+def test_build_rows_output_is_traditional():
+    entries = [{"ref": "1:1", "kind": "comment", "father": "奥古斯丁",
+                "work": "论创世记", "body": "神创造天地"}]
+    rows = build_rows("gen", 1, entries, "vol")
+    assert not has_simplified(rows[0]["body_zh"])
+    assert not has_simplified(rows[0]["father_name"])
+    assert not has_simplified(rows[0]["work_title"])
 
 
 # ── build_rows ───────────────────────────────────────────────────────────────

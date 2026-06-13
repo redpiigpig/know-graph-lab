@@ -238,6 +238,12 @@ dev server 起 → 磁碟認證（reuse `screenshot_book.mjs` 的 magic-link＋s
 
 一句話現況：印順導師（1906–2005，**人間佛教思想巨擘**）全集**本即繁體中文** → collected-works 第一個**零翻譯、零跨語對齊**案例，pipeline 砍剩「解析→JSONL→DB/R2→hub」，reader 退化單欄（無 `sources`，向後相容）。來源＝**CBETA Y 系列 TEI P5 XML**（`cbeta-org/xml-p5`，44 XML=42 部，非商業可再散布，遠優於已改版的基金會官網）。`cb:mulu` 三層→章節樹、`lb` 邊碼→段碼錨點（已用 Y08《佛法概論》實證）。**同法適用接續的聖嚴法師（法鼓全集）、星雲大師全集。**
 
+### 案例 5：聖嚴法師《法鼓全集 2020 紀念版》（單一語言案例 #2，2026-06-13）
+
+來源架構、資料模型、雷區、全量清單 → **[shengyen_collected_works.md](shengyen_collected_works.md)**。
+
+一句話現況：聖嚴法師（1930–2009，**法鼓山創辦人、學問僧**）全集亦本即繁中 → 沿用印順單語 pipeline，**唯一差別＝來源解析器 HTML 而非 TEI**，下游入庫/hub/reader 全共用。來源＝ ddc.shengyen.org（法鼓文化官方數位版，SPA 殼但靜態檔可全枚舉：`all_books`110冊／`vol_dump`4079篇／`toc.html`章節樹／`html/{輯-冊-篇}.html`正文）；`p.indent`正文／`p.hN`標題／`span.pb data-page`**保留原書頁碼**。**已完成 110 冊 / 4181 chunks 上架**（`shengyen_build.py`，9 例測試綠，slug `shengyen`，teal/🥁）。雷區：requests 要帶 UA+verify=False+指數退避重試（server 高載丟連線）、`--all` 要 per-book try/except+`--resume`、reader 截圖 ~3970px 須裁、dev server 多任務衝突另起 PORT=3100。
+
 ---
 
 ## SOP（每卷接手）
