@@ -49,11 +49,13 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
 
 ## 書籍寫作：研究資料 manifest + 口述訪談 分頁（2026-06-13）
 
-`/works` 的 **書籍計畫**（`kind='book'`）也能像論文計畫一樣分頁。當 `public/content/works/<slug>-materials.json` 存在時，[pages/works/[slug]/index.vue](../../../pages/works/) 顯示分頁 **研究資料 / 口述訪談（manifest `interviews:true`）/ 書摘與構思**。無 manifest 的書維持單頁筆記；dialogue 書（克里希那）維持每日對話 UI——皆不受影響（`useBookTabs = kind!=='paper' && !dialogueDays.length && materialsAvailable`）。
+`/works` 的 **書籍計畫**（`kind='book'`）也能像論文計畫一樣分頁。當 `public/content/works/<slug>-materials.json` 存在時，[pages/works/[slug]/index.vue](../../../pages/works/) 顯示分頁 **研究資料 / 碩士文稿（manifest `thesis`）/ 口述訪談（`interviews:true`）/ 書摘與構思**。無 manifest 的書維持單頁筆記；dialogue 書（克里希那）維持每日對話 UI——皆不受影響（`useBookTabs = kind!=='paper' && !dialogueDays.length && materialsAvailable`）。
 
-- **manifest schema**：`{ book, subtitle, source, note, interviews, totalFiles, categories:[{ key,label,icon,desc, groups:[{ label, count, tag?, summary?, files?[], filesTruncated?, subdirs?[] }] }] }`。檔案只列檔名（Drive 是 canonical，見 [[feedback_drive_canonical_storage]]，不複製檔），`summary`/`subdirs` 給數量大的掃描夾（福嚴會訊、國家檔案局）摘要用。render 用 `<details>` 折疊，無外部依賴。
+- **檔案上 R2、線上下載**：所有研究資料原檔上傳 R2，key＝`dadaodao-materials/<相對路徑>`（bucket 私有），每件經 [server/api/works/material.get.ts](../../../server/api/works/) 簽名下載（**嚴格限定前綴**避免任意取用 bucket）。Drive 仍是 canonical（見 [[feedback_drive_canonical_storage]]），R2 是線上下載副本。
+- **manifest schema**：`{ book, subtitle, source, note, interviews, thesis:{title,note,pdfKey,contentBase,chapters[]}, totalFiles, totalBytes, categories:[{ key,label,icon,desc, groups:[{ label, count, size, tag?, files:[{name,key,size}] }] }] }`。每個檔案都列出 `{name,key,size}`、render 成下載連結，`<details>` 折疊每組。
+- **碩士文稿分頁**：`thesis.chapters` 章節文字讀 `thesis.contentBase`（`/content/thesis/*.txt`，與 /thesis 共用），章節側欄＋`renderThesisText`，`thesis.pdfKey` 提供論文 PDF 下載。
 - **口述訪談**：沿用 `stores/thesisInterviews.ts` 的 published 清單 + `public/content/interviews/*.txt`，reader 在 [pages/works/[slug]/interview/[name].vue](../../../pages/works/)，docx 下載走 `server/api/thesis/interview-docx`。
-- **首案＝《當代的大愛道革命》**（slug `mahaprajapati-revolution`），見 [[project_dadaodao_book]]。產生 manifest：PowerShell 走 `論文資料` 樹 → `C:\tmp\dadaodao_raw_tree.json` → `node scripts/build_dadaodao_materials.mjs`。建計畫 row：`node scripts/seed_dadaodao_project.mjs`（Management API upsert）。口述訪談已從 `/thesis` 移除（只剩 論文內容／參考資料）。
+- **首案＝《當代的大愛道革命》**（slug `mahaprajapati-revolution`），見 [[project_dadaodao_book]]。流程：① PowerShell 列檔 → `C:\tmp\dadaodao_files.json`；② `node scripts/build_dadaodao_materials.mjs`（建 manifest＋R2 keys）；③ `python -X utf8 scripts/upload_dadaodao_r2.py`（冪等上傳 5.4GB→R2，可重跑接續，log 在 `C:\tmp\dadaodao_upload.log`）；④ `node scripts/seed_dadaodao_project.mjs`（Management API upsert 計畫 row）。口述訪談已從 `/thesis` 移除（只剩 論文內容／參考資料）。**新欄位看不到通常是還沒 redeploy**（分頁 UI 在 page code 裡）。
 
 ---
 

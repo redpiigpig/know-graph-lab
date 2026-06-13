@@ -185,24 +185,55 @@
                       <span class="ml-auto text-xs text-gray-400">{{ g.count }} 件</span>
                     </summary>
                     <div class="px-3 pb-3 pt-1 border-t border-gray-50">
-                      <p v-if="g.summary" class="text-xs text-gray-500 italic py-1">{{ g.summary }}</p>
                       <ul v-if="g.files?.length" class="space-y-0.5">
-                        <li v-for="(f, fi) in g.files" :key="fi" class="flex items-baseline gap-2 text-xs text-gray-600 leading-relaxed">
-                          <span class="inline-block w-9 flex-shrink-0 text-[10px] font-mono uppercase text-gray-300 text-right">{{ fileExt(f) }}</span>
-                          <span>{{ f.replace(/\.[a-z0-9]+$/i, '') }}</span>
-                        </li>
-                      </ul>
-                      <p v-if="g.filesTruncated" class="text-xs text-gray-400 mt-1 pl-11">…另有 {{ g.filesTruncated }} 件</p>
-                      <ul v-if="g.subdirs?.length" class="grid sm:grid-cols-2 gap-x-4 gap-y-0.5 mt-1">
-                        <li v-for="(s, si) in g.subdirs" :key="si" class="flex items-baseline gap-2 text-xs text-gray-600">
-                          <span class="text-gray-300">📁</span><span class="flex-1">{{ s.name }}</span>
-                          <span class="text-gray-400">{{ s.count }}</span>
+                        <li v-for="(f, fi) in g.files" :key="fi">
+                          <a :href="`/api/works/material?key=${encodeURIComponent(f.key)}`"
+                            class="flex items-baseline gap-2 text-xs leading-relaxed rounded px-1 py-0.5 -mx-1 hover:bg-rose-50 no-underline group/file">
+                            <span class="inline-block w-9 flex-shrink-0 text-[10px] font-mono uppercase text-gray-300 text-right">{{ fileExt(f.name) }}</span>
+                            <span class="flex-1 text-gray-700 group-hover/file:text-rose-700">{{ f.name.replace(/\.[a-z0-9]+$/i, '') }}</span>
+                            <span class="flex-shrink-0 text-gray-300 group-hover/file:text-rose-400">{{ fmtSize(f.size) }} ↓</span>
+                          </a>
                         </li>
                       </ul>
                     </div>
                   </details>
                 </div>
               </section>
+            </div>
+          </div>
+
+          <!-- ── 碩士文稿正文 ── -->
+          <div v-show="bookTab === 'thesis'">
+            <div class="mb-4 flex items-start justify-between gap-3 flex-wrap">
+              <div>
+                <h2 class="text-base font-semibold text-gray-900">碩士文稿正文</h2>
+                <p class="text-xs text-gray-500 mt-0.5">{{ thesisConf?.note || '本專書改寫底稿' }}</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <a v-if="thesisConf?.pdfKey" :href="`/api/works/material?key=${encodeURIComponent(thesisConf.pdfKey)}`"
+                  class="text-xs font-medium px-3 py-1.5 rounded-lg border border-rose-300 text-rose-700 hover:bg-rose-50 no-underline">⬇ 下載論文 PDF</a>
+                <NuxtLink to="/thesis" class="text-xs font-medium px-3 py-1.5 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50">論文閱讀器 →</NuxtLink>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <aside class="w-44 flex-shrink-0 hidden md:block">
+                <div class="sticky top-4 space-y-0.5">
+                  <button v-for="ch in thesisConf?.chapters" :key="ch.id" @click="selectThesisChapter(ch.id)"
+                    :class="['w-full text-left px-3 py-2 rounded-lg text-xs transition-colors leading-snug', activeThesisChapter === ch.id ? 'bg-rose-100 text-rose-700 font-medium' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-700']">
+                    {{ ch.title }}
+                  </button>
+                </div>
+              </aside>
+              <div class="flex-1 min-w-0">
+                <div class="md:hidden mb-3">
+                  <select v-model="activeThesisChapter" @change="loadThesisChapter(activeThesisChapter)" class="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm">
+                    <option v-for="ch in thesisConf?.chapters" :key="ch.id" :value="ch.id">{{ ch.title }}</option>
+                  </select>
+                </div>
+                <div v-if="thesisLoading" class="text-gray-400 text-sm py-8 text-center">載入中⋯</div>
+                <div v-else-if="thesisHtml" class="thesis-prose bg-white rounded-2xl border border-gray-100 px-6 py-8 sm:px-10" v-html="thesisHtml"></div>
+                <div v-else class="text-gray-400 text-sm py-8 text-center">找不到此章節文字。</div>
+              </div>
             </div>
           </div>
 
@@ -546,9 +577,12 @@ const dayGroups = computed(() => {
 })
 
 // ── 書籍計畫：研究資料 manifest + 口述訪談 ─────────────────────────────
-interface MaterialGroup { label: string; count?: number; tag?: string; summary?: string; files?: string[]; filesTruncated?: number; subdirs?: { name: string; count: number }[] }
+interface MaterialFile { name: string; key: string; size: number }
+interface MaterialGroup { label: string; count?: number; size?: number; tag?: string; files?: MaterialFile[] }
 interface MaterialCategory { key: string; label: string; icon?: string; desc?: string; groups: MaterialGroup[] }
-interface Materials { book?: string; subtitle?: string; source?: string; note?: string; interviews?: boolean; totalFiles?: number; categories: MaterialCategory[] }
+interface ThesisChapter { id: string; title: string }
+interface ThesisConf { title?: string; note?: string; pdfKey?: string; contentBase?: string; chapters: ThesisChapter[] }
+interface Materials { book?: string; subtitle?: string; source?: string; note?: string; interviews?: boolean; thesis?: ThesisConf; totalFiles?: number; totalBytes?: number; categories: MaterialCategory[] }
 
 const materials = ref<Materials | null>(null)
 const materialsAvailable = ref(false)
@@ -585,20 +619,64 @@ function fileExt(name: string) {
   const m = name.match(/\.([a-z0-9]+)$/i)
   return m ? m[1].toLowerCase() : ''
 }
+function fmtSize(bytes?: number) {
+  if (!bytes) return ''
+  if (bytes >= 1024 * 1024) return `${(bytes / 1024 / 1024).toFixed(1)} MB`
+  return `${Math.max(1, Math.round(bytes / 1024))} KB`
+}
 
-// 書籍計畫分頁（研究資料 / 口述訪談 / 書摘與構思）
-type BookTab = 'materials' | 'interviews' | 'notes'
+// 碩士文稿正文（改寫底稿）
+const thesisConf = computed(() => materials.value?.thesis ?? null)
+const activeThesisChapter = ref('abstract')
+const thesisHtml = ref('')
+const thesisLoading = ref(false)
+async function loadThesisChapter(id: string) {
+  const base = thesisConf.value?.contentBase ?? '/content/thesis'
+  thesisLoading.value = true
+  try {
+    const txt = await $fetch<string>(`${base}/${id}.txt`, { responseType: 'text' })
+    thesisHtml.value = renderThesisText(txt || '')
+  } catch { thesisHtml.value = '' } finally { thesisLoading.value = false }
+}
+function selectThesisChapter(id: string) { activeThesisChapter.value = id; loadThesisChapter(id) }
+// 碩士論文段落判讀（章/節/小節/摘要/關鍵字/腳註）
+function renderThesisText(txt: string): string {
+  const sup = (s: string) => esc(s).replace(/\[(\d+)\]/g, '<sup>[$1]</sup>')
+  const out: string[] = []
+  let inEn = false
+  for (const raw of txt.replace(/\r\n/g, '\n').split('\n')) {
+    const t = raw.trim()
+    if (!t) continue
+    if (/^\d{1,3}$/.test(t)) continue // 目錄頁碼
+    if (t === '摘要') { inEn = false; out.push(`<h3 class="ttl">${esc(t)}</h3>`); continue }
+    if (t === 'Abstract') { inEn = true; out.push(`<h3 class="ttl">${esc(t)}</h3>`); continue }
+    if (/^第[一二三四五六七八九十百]+章/.test(t)) { inEn = false; out.push(`<h2>${esc(t)}</h2>`); continue }
+    if (/^第[一二三四五六七八九十百]+節/.test(t)) { out.push(`<h3>${esc(t)}</h3>`); continue }
+    if (/^附錄[一二三四五六七八九十]+/.test(t)) { out.push(`<h3>${esc(t)}</h3>`); continue }
+    if (/^[一二三四五六七八九十]+、/.test(t)) { out.push(`<h4>${esc(t)}</h4>`); continue }
+    if (/^（[一二三四五六七八九十]+）/.test(t)) { out.push(`<h5>${esc(t)}</h5>`); continue }
+    if (/^關鍵字[：:]/.test(t) || /^Keywords/.test(t)) { out.push(`<p class="kw">${esc(t)}</p>`); continue }
+    if (/^\[\d+\]/.test(t)) { out.push(`<p class="ref">${sup(t)}</p>`); continue }
+    out.push(`<p${inEn ? ' class="en"' : ''}>${sup(t)}</p>`)
+  }
+  return out.join('\n')
+}
+
+// 書籍計畫分頁（研究資料 / 碩士文稿 / 口述訪談 / 書摘與構思）
+type BookTab = 'materials' | 'thesis' | 'interviews' | 'notes'
 const bookTab = ref<BookTab>('materials')
 const useBookTabs = computed(() => project.value?.kind !== 'paper' && !dialogueDays.value.length && materialsAvailable.value)
 const bookTabs = computed(() => {
   const tabs: { key: BookTab; label: string; badge?: string }[] = [
     { key: 'materials', label: '研究資料', badge: materials.value?.totalFiles ? String(materials.value.totalFiles) : undefined },
   ]
+  if (thesisConf.value) tabs.push({ key: 'thesis', label: '碩士文稿' })
   if (showInterviews.value) tabs.push({ key: 'interviews', label: '口述訪談', badge: String(interviewsStore.published.length) })
   if (user.value) tabs.push({ key: 'notes', label: '書摘與構思' })
   return tabs
 })
 watch(bookTabs, (tabs) => { if (!tabs.some((t) => t.key === bookTab.value)) bookTab.value = 'materials' })
+watch(bookTab, (t) => { if (t === 'thesis' && !thesisHtml.value && !thesisLoading.value) loadThesisChapter(activeThesisChapter.value) })
 
 // ── 研究回顧（文獻綜述）─────────────────────────────────────────────
 const litEntries = ref<LitEntry[]>([])
@@ -856,6 +934,19 @@ function onNotesUpdate(html: string) {
 .doc-prose :deep(table) { width: 100%; border-collapse: collapse; margin: 0.6em 0 1em; font-size: 0.85rem; }
 .doc-prose :deep(th) { text-align: left; background: #f8fafc; border: 1px solid #e2e8f0; padding: 0.45em 0.7em; font-weight: 600; color: #334155; }
 .doc-prose :deep(td) { border: 1px solid #e2e8f0; padding: 0.45em 0.7em; color: #475569; vertical-align: top; }
+
+/* 碩士文稿正文 */
+.thesis-prose { font-family: 'Georgia', 'Noto Serif TC', 'Source Han Serif TC', serif; }
+.thesis-prose :deep(h2) { font-size: 1.25rem; font-weight: 700; text-align: center; margin: 2.2em 0 1.2em; letter-spacing: 0.06em; color: #111827; }
+.thesis-prose :deep(h3) { font-size: 1.05rem; font-weight: 700; margin: 1.8em 0 0.8em; color: #1f2937; }
+.thesis-prose :deep(h3.ttl) { text-align: center; }
+.thesis-prose :deep(h4) { font-size: 0.95rem; font-weight: 600; margin: 1.3em 0 0.6em; color: #374151; }
+.thesis-prose :deep(h5) { font-size: 0.9rem; font-weight: 600; margin: 1em 0 0.4em; color: #4b5563; }
+.thesis-prose :deep(p) { font-size: 0.9rem; line-height: 2.1; text-indent: 2em; margin-bottom: 0.55rem; color: #1f2937; }
+.thesis-prose :deep(p.en) { text-indent: 0; line-height: 1.9; font-family: 'Georgia', serif; }
+.thesis-prose :deep(p.kw) { text-indent: 0; border-left: 3px solid #fda4af; padding-left: 1rem; margin: 1.2em 0; color: #374151; line-height: 1.8; }
+.thesis-prose :deep(p.ref) { text-indent: 0; padding-left: 2em; font-size: 0.78rem; color: #64748b; line-height: 1.8; }
+.thesis-prose :deep(sup) { font-size: 0.65em; color: #be123c; vertical-align: super; }
 
 .paper-prose :deep(h3) { text-align: center; margin-top: 2em; }
 .paper-prose :deep(p) { text-indent: 2em; line-height: 1.95; }
