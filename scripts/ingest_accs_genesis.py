@@ -76,7 +76,7 @@ SUPABASE_URL = os.environ["SUPABASE_URL"]
 SUPABASE_KEY = os.environ["SUPABASE_SERVICE_ROLE_KEY"]
 MODEL = "gemini-2.5-flash"
 
-PROMPT = """這是《古代基督信仰聖經註釋叢書》（Ancient Christian Commentary on Scripture，校園書房繁體中文版）一頁掃描影像，內容是某卷聖經某段經文的教父註釋。
+PROMPT = """以下是《古代基督信仰聖經註釋叢書》（Ancient Christian Commentary on Scripture，校園書房繁體中文版）**連續的一至數頁**掃描影像，內容是某卷聖經某段經文的教父註釋。請依影像順序處理，把所有頁的條目**合併成單一 JSON 陣列**輸出（跨頁未完的同一則正文要接成完整一段）。
 
 本叢書體例（catena）每個經文段落的版式：
 ①**經文引用標題**（如「1:1-2」「1:14-19」，常為粗體置中／置左）
@@ -211,12 +211,13 @@ def _client(key: str):
     return _CLIENTS[key]
 
 
-def ocr_page(png: bytes) -> list[dict]:
-    """單頁結構化 OCR。key round-robin；RPM 429 退避重試（**不**標死）；
-    只有 credit/額度永久乾的 key 才永久剔除；全部永久乾才退出。"""
+def _gemini_generate(contents: list) -> list[dict]:
+    """送 contents（影像 Part… + PROMPT）給 Gemini，回傳解析後 entries。
+    key round-robin；RPM/暫時性 429 退避重試（**不**標死）；只有 credit 永久乾的
+    key 才永久剔除；全部永久乾才退出。"""
     n = len(API_KEYS)
     attempts = 0
-    max_attempts = n * 4   # 給足輪詢+退避空間
+    max_attempts = n * 4
     while attempts < max_attempts:
         live = [k for k in API_KEYS if k not in _DEAD_KEYS]
         if not live:
@@ -225,8 +226,7 @@ def ocr_page(png: bytes) -> list[dict]:
         _KEY_IDX[0] += 1
         try:
             resp = _client(key).models.generate_content(
-                model=MODEL,
-                contents=[types.Part.from_bytes(data=png, mime_type="image/png"), PROMPT],
+                model=MODEL, contents=contents,
                 config=types.GenerateContentConfig(
                     temperature=0.1,
                     response_mime_type="application/json",
@@ -238,18 +238,29 @@ def ocr_page(png: bytes) -> list[dict]:
         except Exception as e:
             msg = str(e).lower()
             if isinstance(e, json.JSONDecodeError):
-                print(f"    [JSON parse fail, skip page] {str(e)[:80]}", file=sys.stderr)
+                print(f"    [JSON parse fail, skip] {str(e)[:80]}", file=sys.stderr)
                 return []
             if "depleted" in msg or "prepayment" in msg or "billing" in msg:
-                _DEAD_KEYS.add(key)        # 餘額用罄 → 永久剔除
-                continue
+                _DEAD_KEYS.add(key); continue          # 餘額用罄 → 永久剔除
             if "429" in msg or "resource_exhausted" in msg or "quota" in msg or "rate" in msg \
                or "503" in msg or "unavailable" in msg:
                 attempts += 1
-                time.sleep(min(5 * attempts, 30))   # RPM/暫時性 → 退避後換下一把
+                time.sleep(min(5 * attempts, 30))      # RPM/暫時性 → 退避換下一把
                 continue
             raise
     raise RuntimeError("連續 429 達上限（可能當日額度耗盡），依規範退出")
+
+
+def ocr_page(png: bytes) -> list[dict]:
+    """單頁結構化 OCR（Gemini）。"""
+    return _gemini_generate([types.Part.from_bytes(data=png, mime_type="image/png"), PROMPT])
+
+
+def ocr_batch_gemini(pngs: list[bytes]) -> list[dict]:
+    """多頁一次呼叫（省額度）：N 張影像 + PROMPT → 合併 entries。
+    每條 entry 自帶 ref，故跨頁順序交給 build_rows_auto 依 ref 還原。"""
+    parts = [types.Part.from_bytes(data=p, mime_type="image/png") for p in pngs]
+    return _gemini_generate(parts + [PROMPT])
 
 
 def parse_pages(spec: str) -> list[int]:
@@ -303,41 +314,51 @@ def main():
     ap.add_argument("--resume", action="store_true",
                     help="沿用 c:/tmp 的 per-page checkpoint，跳過已 OCR 的頁")
     ap.add_argument("--sleep", type=float, default=1.5)
+    ap.add_argument("--batch", type=int, default=4,
+                    help="Gemini 每次呼叫處理幾頁（省額度；haiku 強制 1）")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
-    ocr_fn = ocr_page_haiku if args.engine == "haiku" else ocr_page
+    batch_size = 1 if args.engine == "haiku" else max(1, args.batch)
 
     # Per-page checkpoint on disk → long runs survive a crash; --resume skips done pages.
+    # 記錄相容兩種形狀：{"page":p,...}（舊單頁）與 {"pages":[...],...}（批次）。
     ckpt = Path(r"c:/tmp" if sys.platform == "win32" else "/tmp") / f"accs_{args.book}_{Path(args.pdf).stem}.raw.jsonl"
+
+    def _rec_pages(rec: dict) -> list[int]:
+        return rec.get("pages") or ([rec["page"]] if "page" in rec else [])
+
     done_pages: set[int] = set()
     if args.resume and ckpt.exists():
         for ln in ckpt.read_text(encoding="utf-8").splitlines():
             try:
-                done_pages.add(json.loads(ln)["page"])
+                done_pages.update(_rec_pages(json.loads(ln)))
             except Exception:
                 pass
         print(f"  [resume] {len(done_pages)} pages already in {ckpt.name}", flush=True)
 
     pdf = fitz.open(args.pdf)
-    pages = parse_pages(args.pages)
-    print(f"== ACCS OCR [{args.engine}] ==  {args.book} "
-          f"ch{args.chapter if args.chapter else 'AUTO'}  pages {pages[0]}-{pages[-1]} ({len(pages)})",
+    pages = [p for p in parse_pages(args.pages) if (p - 1) < pdf.page_count]
+    todo = [p for p in pages if p not in done_pages]
+    print(f"== ACCS OCR [{args.engine}] x{batch_size}p ==  {args.book} "
+          f"ch{args.chapter if args.chapter else 'AUTO'}  {len(todo)}/{len(pages)} pages to do",
           flush=True)
 
     ckpt_fh = ckpt.open("a", encoding="utf-8")
-    for i, p in enumerate(pages, 1):
-        idx = p - 1
-        if idx >= pdf.page_count:
-            print(f"  page {p}: out of range"); continue
-        if p in done_pages:
-            continue
-        print(f"  [{i}/{len(pages)}] page {p} ... ", end="", flush=True)
+    for bi in range(0, len(todo), batch_size):
+        chunk = todo[bi:bi + batch_size]
+        print(f"  [{bi + 1}-{bi + len(chunk)}/{len(todo)}] pages {chunk[0]}-{chunk[-1]} ... ",
+              end="", flush=True)
         try:
-            entries = ocr_fn(render_page(pdf, idx))
+            if args.engine == "haiku":
+                entries = ocr_page_haiku(render_page(pdf, chunk[0] - 1))
+            else:
+                pngs = [render_page(pdf, p - 1) for p in chunk]
+                entries = ocr_batch_gemini(pngs)
             print(f"{len(entries)} entries", flush=True)
-            ckpt_fh.write(json.dumps({"page": p, "entries": entries}, ensure_ascii=False) + "\n")
-            ckpt_fh.flush()
+            if not args.dry_run:   # dry-run 不污染 checkpoint
+                ckpt_fh.write(json.dumps({"pages": chunk, "entries": entries}, ensure_ascii=False) + "\n")
+                ckpt_fh.flush()
         except Exception as e:
             print(f"FAIL {e}", flush=True)
             if "依規範退出" in str(e):
@@ -346,17 +367,21 @@ def main():
     ckpt_fh.close()
     pdf.close()
 
-    # Rebuild full raw list from checkpoint in page order (so build_rows_auto sees
-    # entries in document order → correct per-chapter pericope_order).
-    by_page: dict[int, list[dict]] = {}
+    # Rebuild full raw list from checkpoint in document (page) order, so
+    # build_rows_auto sees entries in source order → correct per-chapter pericope_order.
+    recs: list[tuple[int, list[dict]]] = []
     for ln in ckpt.read_text(encoding="utf-8").splitlines():
         try:
-            rec = json.loads(ln); by_page[rec["page"]] = rec["entries"]
+            rec = json.loads(ln)
+            pgs = _rec_pages(rec)
+            if pgs:
+                recs.append((min(pgs), rec.get("entries", [])))
         except Exception:
             pass
+    recs.sort(key=lambda t: t[0])
     raw: list[dict] = []
-    for p in sorted(by_page):
-        raw.extend(by_page[p])
+    for _, entries in recs:
+        raw.extend(entries)
 
     if args.chapter:
         rows = build_rows(args.book, args.chapter, raw, args.source_vol)
@@ -378,10 +403,6 @@ def main():
         delete_book_rows(args.book)
     upsert_rows(rows)
     print(f"upserted {len(rows)} rows into accs_commentary", flush=True)
-
-
-if __name__ == "__main__":
-    main()
 
 
 if __name__ == "__main__":
