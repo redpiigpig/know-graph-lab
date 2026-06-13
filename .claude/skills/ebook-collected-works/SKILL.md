@@ -232,6 +232,12 @@ dev server 起 → 磁碟認證（reuse `screenshot_book.mjs` 的 magic-link＋s
 
 **兩種 build 模式（user 拍板 2026-06-12）**：(1) **REFERENCE 模式** `--src <en> --zh-src <zh>`：**已有完整中譯就不重譯**，把既有第三方中譯（簡→繁）當主欄、英文原典逐段對照入庫，零 LLM（潘尼卡有王志成/思竹整套中譯，起手卷《印度教中未識的基督》即走此模式）；(2) **自譯模式** `--src <en>`：無中譯的卷才走 English-first 引擎自譯。CJK 章標題（導論/第N章/第N節…）由 `_CJK_HEADING_RE` 偵測切段。
 
+### 案例 4：印順導師全集（第一個「單一語言」案例，2026-06-13 起）
+
+來源定案、CBETA TEI 結構、書目→volume 樹、版權姿態、全量清單 → **[yinshun_collected_works.md](yinshun_collected_works.md)**。
+
+一句話現況：印順導師（1906–2005，**人間佛教思想巨擘**）全集**本即繁體中文** → collected-works 第一個**零翻譯、零跨語對齊**案例，pipeline 砍剩「解析→JSONL→DB/R2→hub」，reader 退化單欄（無 `sources`，向後相容）。來源＝**CBETA Y 系列 TEI P5 XML**（`cbeta-org/xml-p5`，44 XML=42 部，非商業可再散布，遠優於已改版的基金會官網）。`cb:mulu` 三層→章節樹、`lb` 邊碼→段碼錨點（已用 Y08《佛法概論》實證）。**同法適用接續的聖嚴法師（法鼓全集）、星雲大師全集。**
+
 ---
 
 ## SOP（每卷接手）
