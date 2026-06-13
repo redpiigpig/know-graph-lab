@@ -2,12 +2,12 @@
   <div class="min-h-screen bg-slate-50">
     <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
       <div class="max-w-4xl mx-auto px-6 h-14 flex items-center gap-4">
-        <NuxtLink to="/thesis?tab=interviews" class="text-gray-400 hover:text-gray-700 transition text-sm">← 口述訪談列表</NuxtLink>
+        <NuxtLink :to="`/works/${slug}`" class="text-gray-400 hover:text-gray-700 transition text-sm">← 口述訪談列表</NuxtLink>
         <div class="flex-1"></div>
         <a
           v-if="!error"
           :href="docxUrl"
-          class="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-md bg-violet-50 text-violet-700 hover:bg-violet-100 transition"
+          class="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-md bg-rose-50 text-rose-700 hover:bg-rose-100 transition"
           :download="`${displayTitle}.docx`"
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -36,6 +36,7 @@
 
 <script setup lang="ts">
 const route = useRoute()
+const slug = computed(() => String(route.params.slug ?? ''))
 const content = ref('')
 const loading = ref(true)
 const error = ref(false)
@@ -222,8 +223,8 @@ onMounted(async () => {
   display: inline-block;
   font-size: 0.7rem;
   font-weight: 700;
-  color: #7c3aed;
-  background: #ede9fe;
+  color: #be123c;
+  background: #ffe4e6;
   border-radius: 0.25rem;
   padding: 0.15rem 0.5rem;
   letter-spacing: 0.05em;

@@ -99,8 +99,8 @@
         此為私人對話，登入後可逐日查閱。
       </div>
 
-      <!-- 書摘與構思 — 登入者限定（書籍計畫；論文計畫改放分頁內） -->
-      <div v-if="user && !dialogueDays.length && project?.kind !== 'paper'" class="max-w-5xl mx-auto px-6 py-8">
+      <!-- 書摘與構思 — 登入者限定（書籍計畫；論文計畫改放分頁內；含 manifest 的書改走下方分頁） -->
+      <div v-if="user && !dialogueDays.length && project?.kind !== 'paper' && !materialsAvailable" class="max-w-5xl mx-auto px-6 py-8">
         <div class="mb-3 flex items-center justify-between">
           <div>
             <h2 class="text-base font-semibold text-gray-900">書摘與構思</h2>
@@ -138,9 +138,136 @@
         </div>
       </div>
 
-      <div v-else-if="project?.kind !== 'paper' && !hasDialogueDays" class="max-w-5xl mx-auto px-6 py-24 text-center text-gray-400 text-sm">
+      <div v-else-if="project?.kind !== 'paper' && !hasDialogueDays && !materialsAvailable" class="max-w-5xl mx-auto px-6 py-24 text-center text-gray-400 text-sm">
         登入後可看到「書摘與構思」筆記分頁
       </div>
+
+      <!-- 書籍計畫（含研究資料 manifest）：分頁（研究資料 / 口述訪談 / 書摘與構思） -->
+      <template v-if="useBookTabs">
+        <!-- tab 列 -->
+        <div class="max-w-5xl mx-auto px-6 border-t border-gray-100">
+          <div class="flex items-center gap-1 overflow-x-auto">
+            <button v-for="t in bookTabs" :key="t.key" @click="bookTab = t.key"
+              class="px-4 py-3 text-sm font-medium border-b-2 -mb-px whitespace-nowrap transition"
+              :class="bookTab === t.key ? 'border-rose-500 text-rose-700' : 'border-transparent text-gray-500 hover:text-gray-800'">
+              {{ t.label }}<span v-if="t.badge" class="ml-1.5 text-xs" :class="bookTab === t.key ? 'text-rose-500' : 'text-gray-400'">{{ t.badge }}</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-6 py-8">
+          <!-- ── 研究資料 ── -->
+          <div v-show="bookTab === 'materials'">
+            <div class="mb-4">
+              <h2 class="text-base font-semibold text-gray-900">研究資料</h2>
+              <p class="text-xs text-gray-500 mt-0.5">
+                共 {{ materials?.totalFiles }} 件 · 依碩士論文原始分類整理
+              </p>
+              <p v-if="materials?.note" class="mt-2 text-xs text-gray-400 leading-relaxed max-w-2xl">{{ materials.note }}</p>
+              <p v-if="materials?.source" class="mt-1 text-[11px] text-gray-300 font-mono break-all">{{ materials.source }}</p>
+            </div>
+
+            <div class="space-y-6">
+              <section v-for="cat in materials?.categories" :key="cat.key" class="bg-white rounded-2xl border border-gray-100 p-5">
+                <div class="flex items-baseline gap-2 mb-1">
+                  <span class="text-lg leading-none">{{ cat.icon }}</span>
+                  <h3 class="text-sm font-bold text-gray-800">{{ cat.label }}</h3>
+                  <span class="text-xs text-gray-400">{{ cat.groups.length }} 類</span>
+                </div>
+                <p v-if="cat.desc" class="text-xs text-gray-500 mb-3 leading-relaxed">{{ cat.desc }}</p>
+
+                <div class="space-y-1.5">
+                  <details v-for="(g, gi) in cat.groups" :key="gi" class="group rounded-lg border border-gray-100 overflow-hidden">
+                    <summary class="flex items-center gap-2 px-3 py-2 cursor-pointer select-none hover:bg-gray-50 text-sm">
+                      <span class="text-gray-400 text-xs group-open:rotate-90 transition-transform">▶</span>
+                      <span class="font-medium text-gray-800">{{ g.label }}</span>
+                      <span v-if="g.tag" class="text-[10px] font-medium px-1.5 py-0.5 rounded-full bg-rose-50 text-rose-600">{{ g.tag }}</span>
+                      <span class="ml-auto text-xs text-gray-400">{{ g.count }} 件</span>
+                    </summary>
+                    <div class="px-3 pb-3 pt-1 border-t border-gray-50">
+                      <p v-if="g.summary" class="text-xs text-gray-500 italic py-1">{{ g.summary }}</p>
+                      <ul v-if="g.files?.length" class="space-y-0.5">
+                        <li v-for="(f, fi) in g.files" :key="fi" class="flex items-baseline gap-2 text-xs text-gray-600 leading-relaxed">
+                          <span class="inline-block w-9 flex-shrink-0 text-[10px] font-mono uppercase text-gray-300 text-right">{{ fileExt(f) }}</span>
+                          <span>{{ f.replace(/\.[a-z0-9]+$/i, '') }}</span>
+                        </li>
+                      </ul>
+                      <p v-if="g.filesTruncated" class="text-xs text-gray-400 mt-1 pl-11">…另有 {{ g.filesTruncated }} 件</p>
+                      <ul v-if="g.subdirs?.length" class="grid sm:grid-cols-2 gap-x-4 gap-y-0.5 mt-1">
+                        <li v-for="(s, si) in g.subdirs" :key="si" class="flex items-baseline gap-2 text-xs text-gray-600">
+                          <span class="text-gray-300">📁</span><span class="flex-1">{{ s.name }}</span>
+                          <span class="text-gray-400">{{ s.count }}</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </details>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <!-- ── 口述訪談 ── -->
+          <div v-show="bookTab === 'interviews'">
+            <div class="mb-5 flex items-center justify-between flex-wrap gap-3">
+              <div>
+                <h2 class="text-base font-semibold text-gray-900">口述訪談紀錄</h2>
+                <p class="text-xs text-gray-500 mt-0.5">共 {{ interviewsStore.published.length }} 位受訪者，2023–2025 年間完成</p>
+              </div>
+              <div class="flex gap-2 flex-wrap">
+                <button v-for="cat in interviewCategories" :key="cat" @click="activeIvCat = cat"
+                  :class="['text-xs px-3 py-1.5 rounded-full border transition-colors', activeIvCat === cat ? 'bg-rose-600 text-white border-rose-600' : 'border-gray-200 text-gray-500 hover:border-gray-400']">
+                  {{ cat }}
+                </button>
+              </div>
+            </div>
+            <div class="grid gap-3 sm:grid-cols-2">
+              <NuxtLink v-for="iv in filteredInterviews" :key="iv.id"
+                :to="`/works/${slug}/interview/${encodeURIComponent(iv.filename)}`"
+                class="bg-white rounded-xl border border-gray-100 p-4 hover:border-rose-200 hover:shadow-sm transition-all no-underline">
+                <div class="flex items-start gap-3">
+                  <div :class="['w-9 h-9 rounded-full flex items-center justify-center text-sm flex-shrink-0', ivCatStyle(iv.category)]">
+                    {{ ivCatIcon(iv.category) }}
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="flex items-baseline justify-between gap-2">
+                      <h3 class="text-sm font-semibold text-gray-900 truncate">{{ iv.name }}</h3>
+                      <span class="text-xs text-gray-400 flex-shrink-0">{{ iv.date }}</span>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-0.5">{{ iv.role }}</p>
+                    <p class="text-xs text-rose-500 mt-1.5">閱讀全文 →</p>
+                  </div>
+                </div>
+              </NuxtLink>
+            </div>
+          </div>
+
+          <!-- ── 書摘與構思（登入者限定） ── -->
+          <div v-show="bookTab === 'notes'">
+            <div class="mb-3 flex items-center justify-between">
+              <div>
+                <h2 class="text-base font-semibold text-gray-900">書摘與構思</h2>
+                <p class="text-xs text-gray-500 mt-0.5">章節草稿 · 引用筆記 · 此分頁僅登入者可見</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <button v-if="editMode" class="px-3 py-1.5 text-xs rounded-lg border border-blue-300 text-blue-700 hover:bg-blue-50" @click="showPicker = true">📎 插入引用</button>
+                <button class="px-3 py-1.5 text-xs rounded-lg border border-purple-300 text-purple-700 hover:bg-purple-50" @click="showExport = true">📄 預覽 + 書目</button>
+                <span class="text-xs text-gray-400 ml-2">{{ editMode ? notesStatus : '檢視中（按右上「編輯」可修改）' }}</span>
+              </div>
+            </div>
+            <p v-if="pickerToast" class="text-xs text-emerald-600 mb-2">{{ pickerToast }}</p>
+            <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden" style="min-height: 400px;">
+              <ClientOnly>
+                <GenealogyRichTextEditor v-if="editMode" :key="editorKey" v-model="notesHtml" @update:model-value="onNotesUpdate" />
+                <div v-else-if="notesHtml" class="prose-notes px-6 py-5" v-html="notesHtml"></div>
+                <div v-else class="px-6 py-12 text-center text-gray-400 text-sm">
+                  <div class="text-3xl mb-2">📝</div>
+                  <p>尚無筆記。按右上「編輯」開始撰寫。</p>
+                </div>
+              </ClientOnly>
+            </div>
+          </div>
+        </div>
+      </template>
 
       <!-- 論文計畫：分頁（研究回顧 / 修改建議 / 原文 / 書摘與構思） -->
       <template v-if="project?.kind === 'paper'">
@@ -417,6 +544,61 @@ const dayGroups = computed(() => {
   }
   return groups
 })
+
+// ── 書籍計畫：研究資料 manifest + 口述訪談 ─────────────────────────────
+interface MaterialGroup { label: string; count?: number; tag?: string; summary?: string; files?: string[]; filesTruncated?: number; subdirs?: { name: string; count: number }[] }
+interface MaterialCategory { key: string; label: string; icon?: string; desc?: string; groups: MaterialGroup[] }
+interface Materials { book?: string; subtitle?: string; source?: string; note?: string; interviews?: boolean; totalFiles?: number; categories: MaterialCategory[] }
+
+const materials = ref<Materials | null>(null)
+const materialsAvailable = ref(false)
+
+async function loadMaterials() {
+  if (project.value?.kind === 'paper') { materialsAvailable.value = false; return }
+  try {
+    const data = await $fetch<Materials>(`/content/works/${slug.value}-materials.json`, { responseType: 'json' })
+    if (data && Array.isArray(data.categories) && data.categories.length) { materials.value = data; materialsAvailable.value = true }
+    else materialsAvailable.value = false
+  } catch { materialsAvailable.value = false }
+}
+watch(() => project.value?.kind, loadMaterials)
+
+// 口述訪談（沿用碩士論文 store 的已發佈清單）
+const interviewsStore = useThesisInterviewsStore()
+const showInterviews = computed(() => materialsAvailable.value && !!materials.value?.interviews)
+const interviewCategories = ['全部', '法師', '學者', '宗教對話', '社運界', '其他']
+const activeIvCat = ref('全部')
+const filteredInterviews = computed(() =>
+  activeIvCat.value === '全部'
+    ? interviewsStore.published
+    : interviewsStore.published.filter((iv) => iv.category === activeIvCat.value)
+)
+function ivCatStyle(cat: string) {
+  const m: Record<string, string> = { '法師': 'bg-amber-100 text-amber-700', '學者': 'bg-blue-100 text-blue-700', '宗教對話': 'bg-green-100 text-green-700', '社運界': 'bg-rose-100 text-rose-700', '其他': 'bg-gray-100 text-gray-600' }
+  return m[cat] ?? 'bg-gray-100 text-gray-600'
+}
+function ivCatIcon(cat: string) {
+  const m: Record<string, string> = { '法師': '🪷', '學者': '📚', '宗教對話': '🕊️', '社運界': '✊', '其他': '👤' }
+  return m[cat] ?? '👤'
+}
+function fileExt(name: string) {
+  const m = name.match(/\.([a-z0-9]+)$/i)
+  return m ? m[1].toLowerCase() : ''
+}
+
+// 書籍計畫分頁（研究資料 / 口述訪談 / 書摘與構思）
+type BookTab = 'materials' | 'interviews' | 'notes'
+const bookTab = ref<BookTab>('materials')
+const useBookTabs = computed(() => project.value?.kind !== 'paper' && !dialogueDays.value.length && materialsAvailable.value)
+const bookTabs = computed(() => {
+  const tabs: { key: BookTab; label: string; badge?: string }[] = [
+    { key: 'materials', label: '研究資料', badge: materials.value?.totalFiles ? String(materials.value.totalFiles) : undefined },
+  ]
+  if (showInterviews.value) tabs.push({ key: 'interviews', label: '口述訪談', badge: String(interviewsStore.published.length) })
+  if (user.value) tabs.push({ key: 'notes', label: '書摘與構思' })
+  return tabs
+})
+watch(bookTabs, (tabs) => { if (!tabs.some((t) => t.key === bookTab.value)) bookTab.value = 'materials' })
 
 // ── 研究回顧（文獻綜述）─────────────────────────────────────────────
 const litEntries = ref<LitEntry[]>([])

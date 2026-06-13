@@ -47,6 +47,16 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
 
 ---
 
+## 書籍寫作：研究資料 manifest + 口述訪談 分頁（2026-06-13）
+
+`/works` 的 **書籍計畫**（`kind='book'`）也能像論文計畫一樣分頁。當 `public/content/works/<slug>-materials.json` 存在時，[pages/works/[slug]/index.vue](../../../pages/works/) 顯示分頁 **研究資料 / 口述訪談（manifest `interviews:true`）/ 書摘與構思**。無 manifest 的書維持單頁筆記；dialogue 書（克里希那）維持每日對話 UI——皆不受影響（`useBookTabs = kind!=='paper' && !dialogueDays.length && materialsAvailable`）。
+
+- **manifest schema**：`{ book, subtitle, source, note, interviews, totalFiles, categories:[{ key,label,icon,desc, groups:[{ label, count, tag?, summary?, files?[], filesTruncated?, subdirs?[] }] }] }`。檔案只列檔名（Drive 是 canonical，見 [[feedback_drive_canonical_storage]]，不複製檔），`summary`/`subdirs` 給數量大的掃描夾（福嚴會訊、國家檔案局）摘要用。render 用 `<details>` 折疊，無外部依賴。
+- **口述訪談**：沿用 `stores/thesisInterviews.ts` 的 published 清單 + `public/content/interviews/*.txt`，reader 在 [pages/works/[slug]/interview/[name].vue](../../../pages/works/)，docx 下載走 `server/api/thesis/interview-docx`。
+- **首案＝《當代的大愛道革命》**（slug `mahaprajapati-revolution`），見 [[project_dadaodao_book]]。產生 manifest：PowerShell 走 `論文資料` 樹 → `C:\tmp\dadaodao_raw_tree.json` → `node scripts/build_dadaodao_materials.mjs`。建計畫 row：`node scripts/seed_dadaodao_project.mjs`（Management API upsert）。口述訪談已從 `/thesis` 移除（只剩 論文內容／參考資料）。
+
+---
+
 ## 版權姿態
 
 - **全文只收開放取用 / 公有領域**：JBE（Journal of Buddhist Ethics，全卷開放）、漢堡大學 buddhismuskunde PDF、blogs.dickinson.edu、聖嚴法師數位典藏、NTU 佛研、政大學術集成、towisdom / hongshi PDF、Horner 1930（PD）。

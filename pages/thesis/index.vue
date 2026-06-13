@@ -75,91 +75,7 @@
         </div>
       </div>
 
-      <!-- ② 口述訪談 -->
-      <div v-if="activeTab === 'interviews'">
-        <div class="mb-5 flex items-center justify-between flex-wrap gap-3">
-          <div>
-            <h2 class="text-base font-semibold text-gray-900">口述訪談紀錄</h2>
-            <p class="text-xs text-gray-500 mt-0.5">共 {{ interviews.length }} 位受訪者，2023–2025 年間完成</p>
-          </div>
-          <div class="flex gap-2 flex-wrap">
-            <button v-for="cat in categories" :key="cat" @click="activeCategory = cat"
-              :class="['text-xs px-3 py-1.5 rounded-full border transition-colors', activeCategory === cat ? 'bg-purple-600 text-white border-purple-600' : 'border-gray-200 text-gray-500 hover:border-gray-400']">
-              {{ cat }}
-            </button>
-          </div>
-        </div>
-        <div class="grid gap-3 sm:grid-cols-2">
-          <NuxtLink v-for="iv in filteredInterviews" :key="iv.id"
-            :to="`/thesis/interview/${encodeURIComponent(iv.filename)}`"
-            class="bg-white rounded-xl border border-gray-100 p-4 hover:border-purple-200 hover:shadow-sm transition-all no-underline">
-            <div class="flex items-start gap-3">
-              <div :class="['w-9 h-9 rounded-full flex items-center justify-center text-sm flex-shrink-0', catStyle(iv.category)]">
-                {{ catIcon(iv.category) }}
-              </div>
-              <div class="flex-1 min-w-0">
-                <div class="flex items-baseline justify-between gap-2">
-                  <h3 class="text-sm font-semibold text-gray-900 truncate">{{ iv.name }}</h3>
-                  <span class="text-xs text-gray-400 flex-shrink-0">{{ iv.date }}</span>
-                </div>
-                <p class="text-xs text-gray-500 mt-0.5">{{ iv.role }}</p>
-                <p class="text-xs text-purple-500 mt-1.5">閱讀全文 →</p>
-              </div>
-            </div>
-          </NuxtLink>
-        </div>
-
-        <!-- Drive 上尚未有正式紀錄的訪談 -->
-        <section class="mt-10 bg-white rounded-xl border border-amber-100 p-5">
-          <div class="flex items-baseline justify-between mb-1">
-            <h3 class="text-sm font-semibold text-amber-700">Drive 上尚未有正式紀錄</h3>
-            <span class="text-xs text-amber-500">
-              共 {{ driveMissingByStatus.draft.length + driveMissingByStatus.audioOnly.length + driveMissingByStatus.outlineOnly.length }} 人
-            </span>
-          </div>
-          <p class="text-xs text-gray-500 mb-4">
-            訪談已進行（或排定），但 Drive 上沒有最終整理過的「口述訪談紀錄.docx」。
-            <span class="text-gray-400">部分人物的逐字稿已在網站上呈現，但仍待回寫成正式檔。</span>
-          </p>
-
-          <div v-if="driveMissingByStatus.draft.length" class="mb-4">
-            <h4 class="text-xs font-semibold text-gray-600 mb-2">📝 已有逐字稿草稿（m4a.txt）</h4>
-            <ul class="grid gap-1.5 sm:grid-cols-2 text-xs">
-              <li v-for="iv in driveMissingByStatus.draft" :key="iv.id" class="flex items-baseline gap-2">
-                <span :class="['inline-block px-1.5 py-0.5 rounded text-[10px]', catStyle(iv.category)]">{{ iv.category }}</span>
-                <span class="text-gray-800">{{ iv.name }}</span>
-                <span class="text-gray-400">{{ iv.date }}</span>
-              </li>
-            </ul>
-          </div>
-
-          <div v-if="driveMissingByStatus.audioOnly.length" class="mb-4">
-            <h4 class="text-xs font-semibold text-gray-600 mb-2">🎙️ 只有錄音 m4a，尚未轉文字</h4>
-            <ul class="grid gap-1.5 sm:grid-cols-2 text-xs">
-              <li v-for="iv in driveMissingByStatus.audioOnly" :key="iv.id" class="flex items-baseline gap-2">
-                <span :class="['inline-block px-1.5 py-0.5 rounded text-[10px]', catStyle(iv.category)]">{{ iv.category }}</span>
-                <span class="text-gray-800">{{ iv.name }}</span>
-                <span class="text-gray-400">{{ iv.date }}</span>
-                <span v-if="iv.note" class="text-gray-400 italic">— {{ iv.note }}</span>
-              </li>
-            </ul>
-          </div>
-
-          <div v-if="driveMissingByStatus.outlineOnly.length">
-            <h4 class="text-xs font-semibold text-gray-600 mb-2">📋 只有訪綱，連錄音也沒有</h4>
-            <ul class="grid gap-1.5 sm:grid-cols-2 text-xs">
-              <li v-for="iv in driveMissingByStatus.outlineOnly" :key="iv.id" class="flex items-baseline gap-2">
-                <span :class="['inline-block px-1.5 py-0.5 rounded text-[10px]', catStyle(iv.category)]">{{ iv.category }}</span>
-                <span class="text-gray-800">{{ iv.name }}</span>
-                <span class="text-gray-400">{{ iv.date }}</span>
-                <span v-if="iv.note" class="text-gray-400 italic">— {{ iv.note }}</span>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </div>
-
-      <!-- ③ 參考資料 -->
+      <!-- ② 參考資料 -->
       <div v-if="activeTab === 'references'">
         <div class="thesis-page">
           <div v-if="refLoading" class="flex items-center justify-center h-40 text-gray-400 text-sm">載入中⋯</div>
@@ -175,9 +91,11 @@
 useHead({ title: '碩士論文 — 印順導師人間佛教思想的傳承與實踐' })
 
 const route = useRoute()
-const activeTab = ref((route.query.tab as string) || 'content')
+// 口述訪談已移至《當代的大愛道革命》書籍計畫；舊 ?tab=interviews 連結回退到論文內容
+const VALID_TABS = ['content', 'references']
+const initialTab = (route.query.tab as string) || 'content'
+const activeTab = ref(VALID_TABS.includes(initialTab) ? initialTab : 'content')
 const activeChapter = ref('abstract')
-const activeCategory = ref('全部')
 const chapterText = ref('')
 const refRawText = ref('')
 const loading = ref(false)
@@ -186,7 +104,6 @@ const refLoading = ref(false)
 const keywords = ['人間佛教', '太虛大師', '印順導師', '昭慧法師', '性廣法師', '佛教弘誓學院']
 const tabs = [
   { id: 'content', label: '論文內容' },
-  { id: 'interviews', label: '口述訪談' },
   { id: 'references', label: '參考資料' },
 ]
 const chapters = [
@@ -322,23 +239,6 @@ watch(activeTab, async (tab) => {
 })
 
 onMounted(() => loadChapter('abstract'))
-
-// ── 訪談列表（Pinia store） ─────────────────────────────
-const interviewsStore = useThesisInterviewsStore()
-const interviews = computed(() => interviewsStore.published)
-const driveMissingByStatus = computed(() => interviewsStore.driveMissingByStatus)
-const categories = ['全部', '法師', '學者', '宗教對話', '社運界', '其他']
-const filteredInterviews = computed(() =>
-  activeCategory.value === '全部' ? interviews.value : interviews.value.filter(iv => iv.category === activeCategory.value)
-)
-function catStyle(cat: string) {
-  const m: Record<string,string> = { '法師':'bg-amber-100 text-amber-700','學者':'bg-blue-100 text-blue-700','宗教對話':'bg-green-100 text-green-700','社運界':'bg-rose-100 text-rose-700','其他':'bg-gray-100 text-gray-600' }
-  return m[cat] ?? 'bg-gray-100 text-gray-600'
-}
-function catIcon(cat: string) {
-  const m: Record<string,string> = { '法師':'🪷','學者':'📚','宗教對話':'🕊️','社運界':'✊','其他':'👤' }
-  return m[cat] ?? '👤'
-}
 </script>
 
 <style scoped>
