@@ -28,15 +28,27 @@
       <div v-if="heard || listening" class="bg-white rounded-2xl border border-gray-100 p-5 space-y-3">
         <div class="flex items-center gap-2">
           <span class="text-xs text-gray-400">你的跟讀</span>
-          <span v-if="score !== null" class="ml-auto text-sm font-bold" :class="score >= 80 ? 'text-emerald-600' : score >= 60 ? 'text-amber-600' : 'text-rose-600'">吻合 {{ score }}%</span>
+          <span v-if="heard" class="ml-auto text-sm font-bold" :class="result.score >= 80 ? 'text-emerald-600' : result.score >= 60 ? 'text-amber-600' : 'text-rose-600'">吻合 {{ result.score }}%</span>
         </div>
 
-        <!-- 逐詞 diff（目標句著色：綠=唸到、紅=漏/不準）-->
-        <div class="text-[15px] leading-loose">
-          <template v-for="(w, i) in targetWords" :key="i">
-            <span class="rounded px-0.5" :class="matched.has(i) ? 'text-emerald-700 bg-emerald-50' : 'text-rose-600 bg-rose-50 line-through decoration-rose-300'">{{ w }}</span>
+        <!-- 逐詞 diff（綠=唸對、琥珀=近似(附聽成什麼)、紅=漏/錯）-->
+        <div class="text-[15px] leading-loose" :dir="rtl ? 'rtl' : 'ltr'">
+          <template v-for="(t, i) in result.tokens" :key="i">
+            <span v-if="!t.isWord" class="text-gray-400">{{ t.text }}</span>
+            <span v-else class="rounded px-0.5"
+              :class="{
+                'text-emerald-700 bg-emerald-50': t.status === 'hit',
+                'text-amber-700 bg-amber-50': t.status === 'near',
+                'text-rose-600 bg-rose-50 line-through decoration-rose-300': t.status === 'miss',
+              }">{{ t.text }}<sup v-if="t.status === 'near' && t.heardAs" class="text-[9px] text-amber-500 no-underline">聽成 {{ t.heardAs }}</sup></span>
             <span> </span>
           </template>
+        </div>
+        <div v-if="heard" class="flex flex-wrap gap-2 text-[11px]">
+          <span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700">✅ 唸對 {{ result.hits }}</span>
+          <span v-if="result.near" class="px-2 py-0.5 rounded-full bg-amber-50 text-amber-700">🟡 近似 {{ result.near }}</span>
+          <span v-if="result.miss" class="px-2 py-0.5 rounded-full bg-rose-50 text-rose-600">❌ 漏/錯 {{ result.miss }}</span>
+          <span class="px-2 py-0.5 rounded-full bg-gray-100 text-gray-500">共 {{ result.total }} 詞</span>
         </div>
         <div class="text-xs text-gray-400">辨識聽到：「{{ heard || interim || '…' }}」</div>
 
@@ -61,6 +73,7 @@ import { authedFetch } from "~/composables/useAuthedFetch";
 import { useCoachAi } from "~/composables/useCoachAi";
 import { useSpeech } from "~/composables/useSpeech";
 import { useActivityTracker } from "~/composables/useActivityTracker";
+import { scorePronunciation } from "~/composables/usePronunciationScore";
 
 definePageMeta({ middleware: "coach-auth" });
 
@@ -74,6 +87,7 @@ const sttSupported = speech.supported;
 const listening = speech.listening;
 const interim = speech.interim;
 const TTS: Record<string, string> = { en: "en-US", de: "de-DE", fr: "fr-FR", ja: "ja-JP", grc: "el-GR", la: "it-IT", hbo: "he-IL" };
+const rtl = computed(() => language.value === "hbo");
 
 const target = ref("");
 const heard = ref("");
@@ -81,40 +95,8 @@ const critiquing = ref(false);
 const fb = ref<any>(null);
 let pool: string[] = [];
 
-function normWords(s: string): string[] {
-  return (s.toLowerCase().match(/\p{L}[\p{L}'’\-]*/gu) || []);
-}
-const targetWords = computed(() => target.value.match(/\p{L}[\p{L}'’\-]*|[^\p{L}\s]+/gu) || []);
-
-// LCS 比對：回傳「目標可點詞」中有被唸到的索引集合
-const matched = computed(() => {
-  const set = new Set<number>();
-  if (!heard.value) return set;
-  const T = normWords(target.value), H = normWords(heard.value);
-  const dp = Array.from({ length: T.length + 1 }, () => new Array(H.length + 1).fill(0));
-  for (let i = 1; i <= T.length; i++) for (let j = 1; j <= H.length; j++)
-    dp[i][j] = T[i - 1] === H[j - 1] ? dp[i - 1][j - 1] + 1 : Math.max(dp[i - 1][j], dp[i][j - 1]);
-  const matchedNorm = new Set<number>();
-  let i = T.length, j = H.length;
-  while (i > 0 && j > 0) {
-    if (T[i - 1] === H[j - 1]) { matchedNorm.add(i - 1); i--; j--; }
-    else if (dp[i - 1][j] >= dp[i][j - 1]) i--; else j--;
-  }
-  // 把 normWord 索引映射回 targetWords 裡的「可點詞」位置
-  let wi = 0;
-  targetWords.value.forEach((w, idx) => {
-    if (/\p{L}/u.test(w)) { if (matchedNorm.has(wi)) set.add(idx); wi++; }
-  });
-  return set;
-});
-const score = computed(() => {
-  if (!heard.value) return null;
-  const total = normWords(target.value).length;
-  if (!total) return null;
-  let m = 0;
-  targetWords.value.forEach((w, idx) => { if (/\p{L}/u.test(w) && matched.value.has(idx)) m++; });
-  return Math.round((m / total) * 100);
-});
+// 零服務確定性評分：詞級對齊 → 每詞 hit/near/miss + 加權吻合%
+const result = computed(() => scorePronunciation(target.value, heard.value));
 
 function speak(t: string, rate = 1) { if (t.trim()) speech.speak(t, TTS[language.value] || "en-US", rate); }
 function toggleMic() {

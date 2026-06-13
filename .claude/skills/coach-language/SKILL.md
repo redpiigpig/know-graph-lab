@@ -97,7 +97,8 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
       - **續傳/重跑**：腳本可重入（ledger 在 `C:/tmp/vocab_bank/<lang>.glossed.jsonl`，重跑自動略過已完成詞，flush-every-batch 保證 ledger=DB 不留孤兒）。**中斷後**直接再跑 `gloss all` 或單語 `gloss <lang>` 即接續。**全引擎失敗被跳過的 batch（log 出現「! batch N 全引擎失敗」，通常 NVIDIA 連線瞬斷）不會寫 ledger** → 全跑完後**再跑一次 `gloss all` 補做跳過的批次**（第二遍只剩零星未補字、很快）。`C:/tmp` ledger 別清。
       - **若要重啟整個背景任務**：先確認沒有別人的程序（[[feedback_no_kill_other_tasks]]），只停自己的 `coach_vocab*` python，再 `python scripts/coach_vocab_bank.py gloss all`（建議用背景執行）。
 - **📖 點讀閱讀器（`/coach/[lang]/reader`，2026-06-05，全語言）**：貼任意外語文字→逐字可點，點詞用 NVIDIA/Gemini 在「該句脈絡」給釋義+原形+例句（`words/define`）；標「學習中」自動把原形(含原句)加入 `lang_vocab` 進 FSRS、標「已知」著灰，狀態存 `lang_word_status`（`words/status` GET+POST）、下次遇到自動著色。LingQ 式可理解輸入，適合讀原典/論文。
-- **🗣️ 發音跟讀 shadowing（`/coach/[lang]/shadowing`，全語言）**：目標句（en 可隨機抽策展句）→🔊聽範例/🐢慢速→🎤跟讀 STT→**LCS 逐詞比對**著色(綠=唸到/紅=漏或不準)+吻合%；🧑‍🏫 AI 點評（`pronunciation` 端點）用「目標 vs 轉錄」差異反推發音弱點（Web Speech 無音素級資料，故走此法；古典語誦讀也適用）。
+- **🗣️ 發音跟讀 shadowing（`/coach/[lang]/shadowing`，全語言）**：目標句（en 可隨機抽策展句）→🔊聽範例/🐢慢速→🎤跟讀 STT→逐詞比對著色+吻合%；🧑‍🏫 AI 點評（`pronunciation` 端點，可選）。
+  - **🔧 零服務確定性評分強化（2026-06-12）**：使用者要「API 不穩也能即時反饋」→ 把原本二元 LCS（綠=唸到/紅=漏）升級成 `composables/usePronunciationScore.ts` 純函式 `scorePronunciation()`：**詞級編輯距離對齊 + 回溯**，每個目標詞判 **hit(唸對)/near(近似，附「聽成 X」)/miss(漏或錯)**，near 用 Levenshtein 相似度≥0.6 判定並給半分；插入的多餘辨識詞不扣分；標點不計分；跨語言（拉丁/希臘/希伯來/假名）走 Unicode 字母正規化。頁面三色著色 + 「✅唸對/🟡近似/❌漏錯」統計列。**完全不呼叫任何 AI/雲端**。測試 `test/coach/pronunciation-score.spec.ts`（10 passed）。AI 點評仍保留為可選。屬「無 AI 確定性反饋」系列。
 - **✍️ 寫作批改（`/coach/[lang]/writing`，全語言）**：寫一段→**逐句 inline 批改**（原句刪除線/修正後綠字/為何錯）+整體點評+評分+潤飾版 TTS（`writing/correct` 端點，NVIDIA 主）。
 - **技能練習/考試**（`lang_tasks`）：`task/generate`（TOEFL/IELTS/GRE + 一般，聽說讀寫 + 翻譯）/ `task/[id]/answer`（選擇題自動批改、寫說/翻譯用 Gemini rubric 評分）。
 - **記憶/簡報/日誌**：`lang_memory`（跨 session 長期了解 + highlights 強弱項，注入對話）；`briefing`（今日簡報，每日快取）；`lang_journal`（教練每日日誌，日曆點閱）。
