@@ -139,7 +139,7 @@
 - **🚧 第二部第七章「雙重母親」(The Dual Mother Role)**：建設中（`ch12.json`，英文 HTML 13147–16443，**294 個英文 entries / 59 詩節 — 全書最大章**）。德文＝德 VII「Das Opfer」前半（`jung_ch12_de.txt`，1234 段）。**⏭️ 進度：已建 44 rows（標題＋E1–E43）**：…海華沙前史 Mudjekeewis 奪大熊貝帶/化西風眾風之父/東風 Wabun 求愛/由風與水重生。抽取器 `c:/tmp/_jung_extract_ch12.py`（294 entries / 1234 段）。
   - **⚙️ 寫法定案（user 核可）：en/de 不由模型逐字重打，改由 fill 腳本從來源檔程式帶入；模型只寫中文。** 模板 `c:/tmp/_jung_ch12_h.py`：`ROWS=[(en_tag, is_verse, de_spec, zh),…]`；`de_spec="=en"`（榮格保留英文的海華沙等詩節）或 `["D67",…]`（德文片段 id，腳本 smart-join+去腳註+OCRFIX）；`en` 自 `jung_ch12_en.txt` 抓（verse→blockquote）、`de` 同理。每批只換 ROWS（en_tag/de id 對照＋中文），跑 → build → commit。
   - **fill 模板增強**（`c:/tmp/_jung_ch12_j.py`）：de_spec 新增兩式 — `de_slice("D85","起anchor","止anchor")`（一個德文片段被 OCR 合併成多個 en entry 時，用短 anchor 從來源檔切片）＋`de_verse(["D86",...])`（詩節每片段一行 blockquote）。**整晚自動跑、不停問**（user 指示）。
-  - **進度 72 rows（E1–E71）**：約翰福音1:1-6 太初有道邏各斯（道與神同在/萬物藉他造/生命=人的光/光照黑暗/差來名叫約翰，zh=和合本）。**下一批 E72**＝約翰1:7-9 約翰為光作見證+真光照亮每人（和合本）/比薩洗禮堂基督獻生命樹日輪繞頭+INTROITVS SOLIS 銘文（D125-126）/英雄=自己生產者故受孕史象徵化…皆 PD。fill 法續。⚠️ pre-push hook 偶因平行 session 工作樹 race 報測試失敗，直接 `npm test` 綠就再 pull-rebase+push 一次即可（勿 --no-verify）。
+  - **進度 78 rows（E1–E77）**：約翰1:7-9 為光作見證+真光照亮每人/重生太陽宣告+比薩洗禮堂基督獻生命樹 Introitus Solis/被生者=自己生產者故受孕史象徵化/海華沙青春環境。**下一批 V78**＝海華沙幼年環境詩（Gitche Gumee 湖畔諾科米斯的 wigwam，D128-131 起 de="=en"）/E79+ 諾科米斯撫養並教海華沙自然萬物之名…皆 PD。fill 法續。⚠️ pre-push hook 偶因平行 session race 報測試失敗，`npm test` 綠就再 pull-rebase+push（勿 --no-verify）。
 - **⏭️ 後續章節**：VIII 獻祭（en 16443–18479，建 `ch13.json`，德文＝德 VII「Das Opfer」**後半**，續用同一德文塊 de 15780–22374，新 `_jung_extract_ch13.py` 改 en 行號 16443:18479、德文 block 取 ch12 用剩的後段）。逐章流程同下方「新 session 續傳細則」（ch10 寫法通用，僅改檔名/行號）。
 
 ### 穩定的 5 步方法（每章照做）
