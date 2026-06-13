@@ -79,6 +79,10 @@
             : 'bg-white text-gray-600 border-gray-200 hover:border-stone-300'"
         >{{ opt.label }} ({{ opt.count }})</button>
       </div>
+      <p v-if="!searchActive && canonOrders[activeCanon]?.some(r => r.is_deutero)" class="text-[11px] text-emerald-600 mb-2">
+        <span class="inline-block w-2.5 h-2.5 rounded-sm bg-emerald-100 border border-emerald-300 align-middle mr-1" />
+        綠色 ＝ 該傳統的第二正典（次經），已依此傳統次序併入正典中
+      </p>
 
       <!-- Loading -->
       <div v-if="pending" class="text-center text-gray-400 py-12 text-sm">載入中…</div>
@@ -95,14 +99,17 @@
           </h2>
           <div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-9 gap-2">
             <NuxtLink
-              v-for="book in group.items"
-              :key="book.code"
-              :to="`/scripture/${book.code}/1`"
-              class="block bg-white border border-gray-200 rounded-md px-2 py-2 hover:border-stone-400 hover:shadow-sm transition text-center"
-              :title="bookCardName(book).full"
+              v-for="item in group.items"
+              :key="item.book.code"
+              :to="`/scripture/${item.book.code}/1`"
+              class="block rounded-md px-2 py-2 hover:shadow-sm transition text-center border"
+              :class="item.isDeutero
+                ? 'bg-emerald-50 border-emerald-300 hover:border-emerald-500'
+                : 'bg-white border-gray-200 hover:border-stone-400'"
+              :title="bookCardName(item.book).full + (item.isDeutero ? '（第二正典）' : '')"
             >
-              <div class="font-semibold text-gray-900 text-sm leading-tight">{{ bookCardName(book).short }}</div>
-              <div class="text-[10px] text-gray-400 mt-0.5">{{ book.chapter_count }} 章</div>
+              <div class="font-semibold text-sm leading-tight" :class="item.isDeutero ? 'text-emerald-800' : 'text-gray-900'">{{ bookCardName(item.book).short }}</div>
+              <div class="text-[10px] mt-0.5" :class="item.isDeutero ? 'text-emerald-500' : 'text-gray-400'">{{ item.chapterCount }} 章</div>
             </NuxtLink>
           </div>
         </div>
@@ -154,9 +161,18 @@ type SearchHit = {
   text: string
 }
 
+type CanonOrderRow = {
+  book_code: string
+  testament: 'ot' | 'nt'
+  sort_order: number
+  is_deutero: boolean
+  chapter_count: number | null
+}
+
 const supabase = useSupabaseClient()
 const books = ref<BibleBook[]>([])
 const versions = ref<BibleVersion[]>([])
+const canonOrders = ref<Record<string, CanonOrderRow[]>>({})
 const pending = ref(true)
 const error = ref<string | null>(null)
 
@@ -169,12 +185,14 @@ async function load() {
   try {
     const headers = await authHeaders()
     if (!('Authorization' in headers)) { pending.value = false; return }
-    const [b, v] = await Promise.all([
+    const [b, v, co] = await Promise.all([
       $fetch<BibleBook[]>('/api/scripture/books', { headers }),
       $fetch<BibleVersion[]>('/api/scripture/versions', { headers }),
+      $fetch<Record<string, CanonOrderRow[]>>('/api/scripture/canon-order', { headers }).catch(() => ({})),
     ])
     books.value = b
     versions.value = v
+    canonOrders.value = co || {}
   } catch (e: any) {
     error.value = e?.message || String(e)
   } finally {
@@ -205,8 +223,29 @@ const filteredBooks = computed(() => {
   return books.value.filter(b => Boolean(b[key]))
 })
 
+type CardItem = { book: BibleBook; isDeutero: boolean; chapterCount: number | null }
+
 const groupedBooks = computed(() => {
-  const groups: { key: string; label: string; items: BibleBook[] }[] = [
+  const byCode = new Map(books.value.map(b => [b.code, b]))
+  const order = canonOrders.value[activeCanon.value]
+
+  // 該傳統有自訂排序 → 用它（次經併回 OT、綠標、章數覆寫、無獨立次經組）
+  if (order && order.length) {
+    const groups: { key: string; label: string; items: CardItem[] }[] = [
+      { key: 'ot', label: '舊約', items: [] },
+      { key: 'nt', label: '新約', items: [] },
+    ]
+    for (const row of order) {
+      const book = byCode.get(row.book_code)
+      if (!book) continue
+      const g = groups.find(g => g.key === row.testament)
+      if (g) g.items.push({ book, isDeutero: row.is_deutero, chapterCount: row.chapter_count ?? book.chapter_count })
+    }
+    return groups.filter(g => g.items.length > 0)
+  }
+
+  // 其餘 canon（含 all / protestant）→ 沿用 bible_books 既有分類與排序
+  const groups: { key: string; label: string; items: CardItem[] }[] = [
     { key: 'ot',        label: '舊約',             items: [] },
     { key: 'nt',        label: '新約',             items: [] },
     { key: 'deutero',   label: '次經 / 第二正典',  items: [] },
@@ -214,7 +253,7 @@ const groupedBooks = computed(() => {
   ]
   for (const b of filteredBooks.value) {
     const g = groups.find(g => g.key === b.testament)
-    if (g) g.items.push(b)
+    if (g) g.items.push({ book: b, isDeutero: b.testament === 'deutero' || b.testament === 'apocrypha', chapterCount: b.chapter_count })
   }
   return groups.filter(g => g.items.length > 0)
 })
