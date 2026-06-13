@@ -170,8 +170,35 @@ def _sec_path(slug: str, idx: int) -> Path:
     return _data_dir(slug) / f"sec{idx}.json"
 
 
+def _split_long_paras(secs: list[dict], max_chars: int = 4000) -> list[dict]:
+    """Split any paragraph longer than max_chars on sentence boundaries. Prevents
+    oversized translate prompts (epub bodies without clean <p> splits produced a
+    single 200k-token 'paragraph' → 400 prompt-too-long). Both translate and build
+    use this, so 繁中 stays 1:1 with the (split) source paragraphs."""
+    import re
+    out: list[dict] = []
+    for s in secs:
+        np: list[str] = []
+        for p in s["paras"]:
+            if len(p) <= max_chars:
+                np.append(p)
+                continue
+            parts = re.split(r"(?<=[.!?。！？；;])\s+", p)
+            buf = ""
+            for part in parts:
+                if buf and len(buf) + len(part) + 1 > max_chars:
+                    np.append(buf)
+                    buf = part
+                else:
+                    buf = (buf + " " + part).strip() if buf else part
+            if buf:
+                np.append(buf)
+        out.append({"heading": s["heading"], "paras": np})
+    return out
+
+
 def load_orig_sections(slug: str) -> list[dict]:
-    return pb.load_en_sections(extract_original(slug))
+    return _split_long_paras(pb.load_en_sections(extract_original(slug)))
 
 
 def translate_work(slug: str, translate_para, *, save_every: int = 5, maxparas=None) -> None:
