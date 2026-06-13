@@ -157,32 +157,32 @@ def _coerce_json_array(text: str) -> list[dict]:
     return out if isinstance(out, list) else []
 
 
-def ocr_page_haiku(png: bytes) -> list[dict]:
-    """OCR one page → structured entries via Haiku Vision (claude CLI, Max OAuth)."""
-    b64 = base64.standard_b64encode(png).decode()
-    msg = {
-        "type": "user",
-        "message": {"role": "user", "content": [
-            {"type": "image", "source": {"type": "base64", "media_type": "image/png", "data": b64}},
-            {"type": "text", "text": PROMPT},
-        ]},
-    }
+def ocr_batch_claude(pngs: list[bytes], model: str = "haiku") -> list[dict]:
+    """OCR N 頁 → 合併結構化 entries，經 claude CLI（Max OAuth，無 API key）。
+    model: 'haiku'（快、品質普通）或 'sonnet'（慢、掃描中文精度高）。多圖一次呼叫。"""
+    content = []
+    for png in pngs:
+        b64 = base64.standard_b64encode(png).decode()
+        content.append({"type": "image",
+                        "source": {"type": "base64", "media_type": "image/png", "data": b64}})
+    content.append({"type": "text", "text": PROMPT})
+    msg = {"type": "user", "message": {"role": "user", "content": content}}
     cmd = [
-        CLAUDE_BIN, "-p", "--model", "haiku", "--verbose",
+        CLAUDE_BIN, "-p", "--model", model, "--verbose",
         "--disable-slash-commands", "--allowedTools", "",
         "--input-format", "stream-json", "--output-format", "stream-json",
     ]
     cwd = r"c:\tmp" if sys.platform == "win32" else "/tmp"
     try:
         proc = subprocess.run(cmd, input=json.dumps(msg) + "\n", capture_output=True,
-                              text=True, encoding="utf-8", timeout=600, cwd=cwd)
+                              text=True, encoding="utf-8", timeout=900, cwd=cwd)
     except subprocess.TimeoutExpired:
-        print("    [Haiku timeout]", file=sys.stderr); return []
+        print(f"    [{model} timeout]", file=sys.stderr); return []
     if proc.returncode != 0:
         blob = (proc.stderr or "") + (proc.stdout or "")
         if "rate_limit" in blob:
-            raise RuntimeError("Haiku rate limited，依規範退出")
-        print(f"    [Haiku exit {proc.returncode}] {(proc.stderr or '')[:160]}", file=sys.stderr)
+            raise RuntimeError(f"{model} rate limited，依規範退出")
+        print(f"    [{model} exit {proc.returncode}] {(proc.stderr or '')[:160]}", file=sys.stderr)
         return []
     final = None
     for line in proc.stdout.splitlines():
@@ -195,9 +195,7 @@ def ocr_page_haiku(png: bytes) -> list[dict]:
             continue
         if evt.get("type") == "result" and evt.get("subtype") == "success":
             final = evt.get("result", "")
-    if not final:
-        return []
-    return _coerce_json_array(final)
+    return _coerce_json_array(final) if final else []
 
 
 _CLIENTS: dict = {}        # api_key → genai.Client（快取，避免 client-closed bug）
@@ -307,8 +305,9 @@ def main():
                     help="固定章號；省略=整本 PDF 模式，章號由每則 ref 自動推（build_rows_auto）")
     ap.add_argument("--pages", required=True, help="PDF 實體頁範圍 e.g. 30-44 或 1-316")
     ap.add_argument("--source-vol", required=True)
-    ap.add_argument("--engine", choices=["gemini", "haiku"], default="gemini",
-                    help="OCR 引擎；Gemini 配額乾時用 haiku（Max OAuth，明確下令才開）")
+    ap.add_argument("--engine", choices=["gemini", "haiku", "sonnet"], default="gemini",
+                    help="OCR 引擎：gemini（每日額度限制）/ haiku（Max，快但掃描中文易錯）/ "
+                         "sonnet（Max，慢但掃描中文精度高）")
     ap.add_argument("--replace", action="store_true",
                     help="入庫前先刪該書既有 accs_commentary 列（含示範 placeholder）")
     ap.add_argument("--resume", action="store_true",
@@ -319,7 +318,7 @@ def main():
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
-    batch_size = 1 if args.engine == "haiku" else max(1, args.batch)
+    batch_size = max(1, args.batch)
 
     # Per-page checkpoint on disk → long runs survive a crash; --resume skips done pages.
     # 記錄相容兩種形狀：{"page":p,...}（舊單頁）與 {"pages":[...],...}（批次）。
@@ -350,11 +349,11 @@ def main():
         print(f"  [{bi + 1}-{bi + len(chunk)}/{len(todo)}] pages {chunk[0]}-{chunk[-1]} ... ",
               end="", flush=True)
         try:
-            if args.engine == "haiku":
-                entries = ocr_page_haiku(render_page(pdf, chunk[0] - 1))
-            else:
-                pngs = [render_page(pdf, p - 1) for p in chunk]
+            pngs = [render_page(pdf, p - 1) for p in chunk]
+            if args.engine == "gemini":
                 entries = ocr_batch_gemini(pngs)
+            else:
+                entries = ocr_batch_claude(pngs, model=args.engine)
             print(f"{len(entries)} entries", flush=True)
             if not args.dry_run:   # dry-run 不污染 checkpoint
                 ckpt_fh.write(json.dumps({"pages": chunk, "entries": entries}, ensure_ascii=False) + "\n")

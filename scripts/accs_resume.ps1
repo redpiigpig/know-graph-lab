@@ -10,7 +10,9 @@ if (Test-Path $done) { Write-Output "ACCS 創1-11 已完成（.done 存在）→
 $pdf = 'G:\我的雲端硬碟\資料\電子書\世界宗教\基督教\IVP - 古代基督信仰聖經註釋叢書 (27 冊)\古代基督信仰聖經註釋叢書1 創1-11.pdf'
 if (-not (Test-Path $pdf)) { Write-Output "PDF 不在（G: 未掛載？）→ 跳過本次"; exit 0 }
 
+# 引擎 = Sonnet（Haiku 掃描中文錯字率過高已確認；Sonnet 精度高 + Max 額度每 ~5h 滾動重置）。
+# 每 2 小時跑一次：有 Max 額度就批次推進，沒額度就快速退出；.done 後自動跳過。
 python scripts\ingest_accs_genesis.py --pdf $pdf --book gen --pages 1-316 `
-  --source-vol 'ACCS OT I（創 1–11）' --engine gemini --batch 4 --replace --resume --sleep 2 `
-  *>> scripts\logs\accs_gen_1-11_gemini.log
-Write-Output "ACCS 創1-11 resume 跑完一輪 $(Get-Date -Format 'yyyy-MM-dd HH:mm')"
+  --source-vol 'ACCS OT I（創 1–11）' --engine sonnet --batch 3 --replace --resume --sleep 2 `
+  *>> scripts\logs\accs_gen_1-11_sonnet.log
+Write-Output "ACCS 創1-11 sonnet resume 跑完一輪 $(Get-Date -Format 'yyyy-MM-dd HH:mm')"
