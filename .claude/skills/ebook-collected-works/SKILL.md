@@ -244,6 +244,12 @@ dev server 起 → 磁碟認證（reuse `screenshot_book.mjs` 的 magic-link＋s
 
 一句話現況：聖嚴法師（1930–2009，**法鼓山創辦人、學問僧**）全集亦本即繁中 → 沿用印順單語 pipeline，**唯一差別＝來源解析器 HTML 而非 TEI**，下游入庫/hub/reader 全共用。來源＝ ddc.shengyen.org（法鼓文化官方數位版，SPA 殼但靜態檔可全枚舉：`all_books`110冊／`vol_dump`4079篇／`toc.html`章節樹／`html/{輯-冊-篇}.html`正文）；`p.indent`正文／`p.hN`標題／`span.pb data-page`**保留原書頁碼**。**已完成 110 冊 / 4181 chunks 上架**（`shengyen_build.py`，9 例測試綠，slug `shengyen`，teal/🥁）。雷區：requests 要帶 UA+verify=False+指數退避重試（server 高載丟連線）、`--all` 要 per-book try/except+`--resume`、reader 截圖 ~3970px 須裁、dev server 多任務衝突另起 PORT=3100。
 
+### 案例 6：星雲大師全集（⚠️ 來源受阻，2026-06-13）
+
+來源探源、App API 路徑、現況產出 → **[hsingyun_collected_works.md](hsingyun_collected_works.md)**。
+
+一句話現況：星雲大師（1927–2023，**佛光山開山宗長**）全集**官網不出可枚舉全文**——`books.masterhsingyun.org` 是薄殼 JS app，sitemap 僅 38 URL、`/bcN/bookM` 多為空殼、無任何資料端點（與 CBETA/法鼓的乾淨來源根本不同）。**唯一全文路徑＝星雲大師全集 App 私有 JSON API，需 user 抓包提供**。現況：已建 hub（slug `hsingyun`，orange/🪷）+ **完整書目 366 部**（取自官方《著作總覽》Word HTML，status `planned`），**全文待 App API 接入**再寫 `hsingyun_build.py` 入庫。教訓：開工前先驗來源是否暴露可枚舉內容端點；薄殼 JS reader（無 sitemap 單篇 URL／無 XHR）＝硬爬不可行。
+
 ---
 
 ## SOP（每卷接手）
