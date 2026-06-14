@@ -94,3 +94,6 @@ stores/*
 # git history already preserves the prior version; the bak is redundant.
 *.bak
 .claude/skills/ebook-collected-works/mueller_data/_queue.lock
+
+# Panikkar self-translate cache holds COPYRIGHTED source text (src fields) — never commit
+.claude/skills/ebook-collected-works/panikkar_data/

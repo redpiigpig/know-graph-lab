@@ -141,24 +141,43 @@ REFERENCE 模式每卷需**英文原典＋中譯**兩檔。英文原典全在 ar
 - 跟 `/translation-glossary` 重疊處（吠陀、奧義書、梵 Brahman、達磨 dharma、業 karma、不二 advaita、三位一體…）→ **以 `name_recommended` 為權威**（[[feedback_glossary_strict_authority]]）
 - 人名：Raimon Panikkar→雷蒙‧潘尼卡（早期署名 Raimundo；不寫「帕尼卡」）；Milena Carrara Pavan→米蓮娜‧卡拉拉‧帕萬
 
-## 🚀 新 session 接手清單
+## 🚀 新 session 接手清單（2026-06-14 最新；交棒用，先讀本節）
 
-> 基建（reader N 欄、`align_editions.py`、`multilang_chunks.py`、`translate_collected_work.py`、`scripts/panikkar_build.py`）全部就緒、test-first、已 push — **不用重做**，直接接真語料。
+> 基建全就緒、test-first、已 push。核心三支：**`scripts/panikkar_build.py`（單本 REFERENCE/自譯，REGISTRY+manifest+`split_chapters_by_manifest`）＋ `scripts/panikkar_auto.py`（resumable 自譯 queue）＋ `scripts/ocr_pdf_to_text.py`（font/gemini/text 抽取）**。pytest 29 例綠。
 
-**穩定步（每章照做，比照 mueller_build）**：
-1. **取文字**：上網找英文全文（私人站）→ 抽文字 → 清行內頁碼/腳註雜訊 → 章節 sections（髒檔走 Gemini OCR reflow）。
-2. **章節切分**：英文章標題即錨點。
-3. **逐段對齊**：雙語只需英文逐段並陳；中文跟我自己分段。
-4. **親譯**：英→繁中，**先查 [panikkar_glossary.md](panikkar_glossary.md) 鎖術語**；新人名地名先查 [[translation-glossary]]。
-5. **建雙語/三欄**：`content=繁中`、`sources={en}`（或 +es/it）、`source_text` 鏡像 primary → 走 `scripts/multilang_chunks.py` 寫 JSONL → 驗 zh/en 段數相等 → R2 + previews。
+### 來源檔
+- **`z-lib/`**（repo 根，gitignore）：user 丟的全部 PDF/EPUB。中譯 8 種全查實（書目見上「中譯本叢集」表），原文 ~11 種（義/英/西，多 text-layer 可 font 抽）。
+- **版權鐵則**：OCR/抽出的文字 → `c:/tmp` 或 `panikkar_data/<slug>/`（**已 gitignore，含 src 受版權原文，絕不 commit、絕不貼對話**）。
 
-**ebook_id**：起手 pilot `55555555-5555-4555-8555-555555555555`（《印度教中未識的基督》）。
+### 規則：有中譯→REFERENCE 對照；無中譯→由原文（多義大利文）/英文自譯
 
-### ⚠️ 雷區
-- **全部受版權** → 來源檔靠 user 提供或私人站抓；**我不在對話貼整段受版權原文**，文字走本機檔案。
-- 潘尼卡英文是 20 世紀學術散文，**長句多、梵/拉丁/希臘原文夾注密**（Brahman, advaita, Logos, plērōma…）→ 譯時保留原文夾注（括號），術語鎖死。
-- **自鑄詞最易亂**（cosmotheandric / Christophany / tempiternity）→ 詞庫鎖死，跨卷一致是硬指標。
-- 段數對齊閘照跑（zh/en row 數不等 → reader 錯位）；cover chunk 0 必備（reader page 1 永遠當封面，內容從 chunk 1 起）。
+### ✅ 已上架（2 本）
+| ebook_id | 書 | 模式 |
+|---|---|---|
+| `55555556-5555-4555-8555-555555555555` | 宗教內對話 | REFERENCE（en 原典＋王志成/思竹中譯，11 章逐段 0 mismatch）|
+| `55555561-5555-4555-8555-555555555555` | 神的經驗：奧祕的聖像 | 自譯（en→繁中，39 chunks）|
+
+### 🔄 自譯 queue（`panikkar_auto.py`，user 2026-06-14 已喊停一次，要續跑再啟）
+- 重啟：`EBOOK_CHUNKS_DIR=G:/我的雲端硬碟/資料/電子書/_chunks python scripts/panikkar_auto.py --run-queue`。resumable（`panikkar_data/<slug>/orig.txt`+`sec{N}.json`），is_done 95% 門檻。
+- registry `WORKS` 8 卷，QUEUE 序：experience-of-god✅→rhythm-of-being(epub，曾 prompt-too-long 被跳、已修 `_split_long_paras`、下輪會接)→myth-faith-hermeneutics(義)→pace-interculturalita→mysticism-fullness(卷I)→religion-world-body→mundanal-silencio→vedic-experience(1222pp 殿後)。
+- 引擎 `pb.make_engine(src_lang)`（英/義/西 prompt 泛化）→ NVIDIA→Gemini→Haiku。~2,500 頁跑數日。
+- `--list` 看狀態；**各卷完成補 hub**（`stores/collectedWorks.ts` 加 done+ebookId；目前只有宗教內對話 done）。
+
+### 指令
+- REFERENCE：`python scripts/panikkar_build.py --book <slug> --src <原文.txt> --zh-src <中譯.txt> --upload`（需 registry `chapters_en`/`chapters_zh` manifest）。
+- 抽文字：`python scripts/ocr_pdf_to_text.py --pdf <p> --out <t> --engine font|gemini|text [--mark-headings --batch 20]`。
+
+### ⚠️ 對齊雷區（血淚）
+- **REFERENCE 章節對齊是最難一步**。`split_chapters_by_manifest`：用「following-body（到下一錨點正文量）」判真章 vs 目錄（**勿固定視窗 TOC，會吞鄰近真章**）；錨點 **alternatives**（第N章 OR 標題，漏章號用標題命中）；merge running-head。
+- **born-digital 原文用 `--engine font`**（字級抽標題）比視覺 OCR 可靠；壞 cmap 會亂碼（ŚŪNYATĀ→SONYATA、HINDU→HINou）→ 錨點用 clean token（BUDDHIST、TOWARD A HIN）。掃描中譯 OCR 會漏標章名/打散標題。
+- **flat 書（宗教內對話 10 章）對得齊；階層書（人的圓滿 部→章→節）義/中分段差 2:1 對不齊** → 需人工逐章 title manifest 或接受粗對。`_split_long_paras` 防 epub 超長段 prompt-too-long。
+- 段數對齊閘照跑（zh/en row 不等→錯位）；**cover chunk 0 必備**（reader page1=封面吃內容）。
+
+### ⏳ 待辦
+1. **queue 收尾**（user 喊停後續跑）：8 卷自譯跑完、rhythm-of-being 下輪補、各卷補 hub。
+2. **人的圓滿 (it+zh REFERENCE)**：階層書，要人工逐章 title manifest 精對（OCR 暫存 `c:/tmp/pk_crist_it.txt`/`pk_crist_zh.txt` 會被清需重抽）。
+3. **缺英文原典的 4 本中譯**（印度教中未知的基督/文化裁軍/看不見的和諧/對話經）：待 user 補原文丟 z-lib → REFERENCE。
+4. 自鑄詞跨卷一致（[panikkar_glossary.md](panikkar_glossary.md)）；queue 自譯初稿日後 term sweep 精修（同穆勒）。
 
 ## See also
 
