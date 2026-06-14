@@ -35,7 +35,14 @@ description: 諾斯底主義文獻對照工具（/gnostic）— 把 The Gnostic 
 > - **新增欄** `gnostic_documents.apocrypha_slug TEXT`（記錄與 /apocrypha 的對應，供日後直接匯入黃根春中譯）。
 >
 > ### ⏳ 新 session 接手清單（2026-06-14 交接）
-> 1. **正文逐段重譯（先標最差篇）** — user 嫌先前轉錄「翻譯不太好」。本批只動 title／結構，**未動 sections.text**。重譯前先跑 `python scripts/export_glossary_from_db.py` 把新補的詞庫同步進 `ebook-translate` prompt，再對最差的 doc_slug 重抓+重翻+upsert（見「SOP — 補單篇／重翻」）。挑篇可先看短篇/段數異常者，或人工抽查。
+> 1. **正文逐段重譯（先標最差篇）** — user 嫌先前轉錄「翻譯不太好」。
+>    - ✅ **2026-06-14 品質修復批次（user 拍板：先修最差的、不全翻；命名一律照詞庫權威）** — [scripts/fix_gnostic_quality.py](../../../scripts/fix_gnostic_quality.py)：**section 層外科手術**，不重抓整篇。診斷出主要敗筆是 2026-06-06 批次的 **幻覺**——短英文標題（章名／`PREFACE.`／署名／引用行）被 deepseek/gemini **無中生有膨脹成整段中文 essay**；另有未翻（英/拉丁殘留）、引擎 meta 註解外洩（「我無法完成…著作權」「以下為逐字翻譯：」）、逐字英文 gloss（「光（Light）」）。
+>      - 偵測器（高精度多訊號，已校過避開誤判如「我無法保持貞潔」這種正當第一人稱內文）：`classify()` = halluc_heading（en<70 且 zh≥2.5×en）／untranslated（latin>50%）／meta_leak（任務性 meta 開頭）／word_gloss（≥3 個小寫英文括註）。**初掃 779 段 / 110 篇**（halluc 598、untranslated 135、meta 37、gloss 9）。
+>      - 修法：對每段**從 gnosis_en 英文源重譯**（標題→只譯成短標題，幻覺自動消失；真正內文本就在相鄰 section，未受損——已抽查 against-all-heresies #72→#73 證實）。prompt 加固（ingest_gnostic.py `GNOSTIC_PROMPT_TMPL`）：禁擴寫/禁 meta/禁 gloss、非英文也照譯、人名照詞庫（Yeshua→耶穌 等）。upsert 後 `classify()` 二次把關，仍壞才跳過不蓋。
+>      - 跑法：`python -X utf8 scripts/fix_gnostic_quality.py --dry [--show N]` 預覽；`--engine haiku`（免費池乾就走 Max）跑全部；`--doc <slug>` / `--limit N` 局部；idempotent 可重跑。post-check 二次把關仍壞且 en≤80 → **保留英文源 verbatim**（短結構標記如經文引註／`Sections:`／羅馬數字／引用行，語言中性，勝過幻覺）。
+>      - **✅ 2026-06-14 haiku 全量完成**：779 段重譯（pass1 747 ✓ + pass2 35）＋手動補 4 編者註（抄本缺頁）＋homily 7 處經文引註統一成引註形（原 LLM 把「Matt. xxvi. 39.」幻覺成整節經文）。**最終 `--dry` 僅餘 4 段 flagged，全是正當 verbatim**（Abraxas 咒語 glossolalia `NAHTRIHECCUNDE…`／basilides 引用標頭—本文在 #4／Pagels 書目／`Text: R. 354` 標記）。pytest 25 例綠。
+>      - 偵測器校準教訓：①`我無法…`/`我已準備好…` 等 meta_leak 必須綁任務性脈絡（「我無法**完成/識別**」「我已準備好**接收文本**」），否則誤殺正當第一人稱內文（「我無法保持貞潔」）。②word_gloss 只抓**英文虛詞**括註（the/is/am/and…），不可抓學術音譯註（`（gnosis）（batos）（syzygy）（ruha）` 全是正當的）。
+>    - 其餘篇章之 register/命名一致性仍可續修；重譯前可先 `python scripts/export_glossary_from_db.py` 同步詞庫。挑篇可先看 `--dry` 仍 flagged 者，或人工抽查。
 > 2. **/apocrypha 中譯回填** — 23 篇已存 `gnostic_documents.apocrypha_slug` 指向 /apocrypha 對應篇。等黃根春那邊中譯做完後，依此欄把 apocrypha 的 `cct_zh` sections **直接輸入覆蓋** /gnostic 的 `zh` 版本（兩邊一致，不要自譯這 23 篇）。查連結：`SELECT slug, apocrypha_slug FROM gnostic_documents WHERE apocrypha_slug IS NOT NULL;`
 > 3. **空分類** — `dead_sea`／`alchemical` 現為空，reader 已自動隱藏（`.filter(count>0)`），CATEGORIES 仍保留 key（日後若補真原典可直接用）。
 > - 腳本可重跑（idempotent）：`curate_gnostic_naming.py --dry`（預覽）/ `--apply`；`seed_gnostic_glossary_extra.py`。
