@@ -76,6 +76,13 @@ def test_detect_language_unknown_falls_back_to_other():
     assert lr.detect_language("梵文") == "other"
 
 
+def test_detect_language_ignores_parenthetical_qualifier():
+    # a simplified-Chinese source label still resolves to zh (so it gets no
+    # 逐段 full-text fetch), full-width or ASCII parens both stripped.
+    assert lr.detect_language("中文（簡體，引用時轉繁）") == "zh"
+    assert lr.detect_language("英文 (open access)") == "en"
+
+
 # ── themes ────────────────────────────────────────────────────────────────────
 def test_themes_cover_the_four_report_sections():
     labels = {t["label"] for t in lr.THEMES}

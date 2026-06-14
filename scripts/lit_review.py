@@ -87,8 +87,14 @@ _LANG_MAP = {
 
 
 def detect_language(label: str) -> str:
-    """語言 label → ISO code; unknown → 'other'."""
-    return _LANG_MAP.get((label or "").strip(), "other")
+    """語言 label → ISO code; unknown → 'other'.
+
+    Tolerates a parenthetical qualifier after the base label, e.g.
+    「中文（簡體，引用時轉繁）」→ zh — so a simplified-Chinese source is still
+    recognised as zh (and thus gets no 逐段 full-text fetch).
+    """
+    base = re.split(r"[（(]", (label or "").strip(), maxsplit=1)[0].strip()
+    return _LANG_MAP.get(base, "other")
 
 
 # ── ref_key (stable, url-safe, per bibliography entry) ───────────────────────
