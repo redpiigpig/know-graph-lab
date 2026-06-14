@@ -30,7 +30,9 @@
               <span v-if="entry.venue" class="px-2 py-0.5 rounded bg-gray-50 text-gray-600">{{ entry.venue }}</span>
               <span v-if="entry.dimension" class="px-2 py-0.5 rounded bg-indigo-50 text-indigo-600">{{ entry.dimension }}</span>
               <span v-if="entry.stance" class="px-2 py-0.5 rounded bg-rose-50 text-rose-600">立場：{{ entry.stance }}</span>
-              <a v-if="entry.fulltext_url" :href="entry.fulltext_url" target="_blank" rel="noopener"
+              <NuxtLink v-if="isInternalUrl" :to="entry.fulltext_url!"
+                class="px-2 py-0.5 rounded bg-amber-50 text-amber-700 hover:underline">在全集閱讀器開啟 →</NuxtLink>
+              <a v-else-if="entry.fulltext_url" :href="entry.fulltext_url" target="_blank" rel="noopener"
                 class="px-2 py-0.5 rounded bg-blue-50 text-blue-600 hover:underline">原始全文 ↗</a>
             </div>
             <p v-if="entry.abstract_zh" class="mt-3 text-sm text-gray-700 leading-relaxed border-l-2 border-stone-200 pl-3">{{ entry.abstract_zh }}</p>
@@ -42,6 +44,19 @@
               <a :href="entry.fulltext_url" target="_blank" rel="noopener" class="text-blue-600 hover:underline">前往原始全文 ↗</a>
             </div>
           </div>
+
+          <!-- single-language full text (我們自轉錄的 印順／聖嚴 全集，中文單欄、無對照譯文) -->
+          <template v-else-if="singleVersion">
+            <div class="bg-stone-50 px-4 py-1.5 text-[11px] font-semibold text-stone-600 rounded-t-md sticky top-12 z-10 mb-px">
+              全文（{{ langLabel(entry.language) }}）
+            </div>
+            <div class="space-y-2">
+              <article v-for="s in pagedSections" :key="s.order_index"
+                class="bg-white border border-gray-200 rounded-md px-5 py-3 text-[15px] leading-8 text-gray-900 whitespace-pre-line">
+                {{ s.byVersion[soleVersion] }}
+              </article>
+            </div>
+          </template>
 
           <template v-else>
             <!-- column headers -->
@@ -112,6 +127,19 @@ const entry = computed(() => data.value?.entry ?? null)
 const sections = computed(() => data.value?.sections ?? [])
 
 useHead({ title: () => entry.value ? `${entry.value.title} — 研究回顧` : '研究回顧' })
+
+// Single-language full text: every section carries exactly one version code
+// (e.g. our 印順／聖嚴 全集轉錄 — Chinese only, no facing translation) → render one
+// full-width column instead of the 逐段中譯／原文 grid.
+const versionCodes = computed(() => {
+  const set = new Set<string>()
+  for (const s of sections.value) for (const k of Object.keys(s.byVersion)) set.add(k)
+  return [...set]
+})
+const singleVersion = computed(() => versionCodes.value.length === 1)
+const soleVersion = computed(() => versionCodes.value[0] ?? 'zh')
+// fulltext_url may now be an internal deep-link into the 全集 reader (/ebook/…).
+const isInternalUrl = computed(() => !!entry.value?.fulltext_url?.startsWith('/'))
 
 const totalPages = computed(() => Math.max(1, Math.ceil(sections.value.length / PAGE_SIZE)))
 const pagedSections = computed(() => {

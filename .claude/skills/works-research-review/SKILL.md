@@ -61,6 +61,33 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
 
 ---
 
+## 從「我們自己的全集轉錄」匯入全文（單語內嵌，2026-06-14）
+
+當論文引用的書目本身就是**我們已轉錄的全集篇章**（印順 `yinshun` a0000000-… 44 卷／聖嚴 `shengyen` b0000000-… 110 冊），不必抓外部連結、不必翻譯——直接把該篇 chunk 正文拉進 `lit_review_sections`（單一 `version_code='zh'`），研究回顧 reader 即**單欄全文內嵌**顯示。
+
+- 腳本：[scripts/import_corpus_fulltext.py](../../../scripts/import_corpus_fulltext.py)。`MAP: ref_key → (ebook_id, locator)`；locator 三型：`('whole',)` 整書（跳 idx 0 書名 chunk）／`('idx', n…)` 指定 chunk（法鼓全集一篇=一 chunk）／`('work', 名)` 章節路徑 `book · work · section` 中 work 段比對（**work 名在 segment[1]，非 [0]**）。chunk 正文按空行切段、剝 markdown `#`；多篇作品每節前插 `〔節名〕`。寫 `fulltext_status='translated'` + `fulltext_url=/ebook/{id}?page={firstChunk+1}`（**內部深連結**到全集 reader）。`--dry-run` 先看段數；CHUNKS_DIR 讀 `translate_ebook_to_zh.CHUNKS_DIR`（G: 雲端，44+110 JSONL 皆在本機）。
+- **單語 reader**：[pages/works/[slug]/review/[ref].vue](../../../pages/works/) 偵測 `sections` 只有一個 version code → 走 `singleVersion` 單欄「全文（中文）」分支（不再硬切 逐段中譯／原文 兩欄）。listing（index.vue）對 `language==='zh'` 顯示「全文」badge＋「閱讀全文 →」；`fulltext_url` 以 `/` 開頭時顯示「在全集閱讀器開啟 →」（內部 NuxtLink）而非外部 ↗。
+- **PostgREST 1000-row 上限雷區**：[server/api/lit-review/entry.get.ts](../../../server/api/lit-review/) 與 [entries.get.ts](../../../server/api/lit-review/) 的 sections 查詢**必須 `.range()` 分頁累加**（單次回應 max-rows=1000；整書條目如《中國禪宗史》1224 段會被截斷，且會在 `has_fulltext` 聚合時把其它條目擠掉）。已修。
+- **首案＝c12〈聖嚴法師與法鼓系統…〉（slug `yinshun-shengyan`）**：**23 條內嵌全文**（21 已引用 + 2 全集補充《中國禪宗史》讀後／太虛大師評傳，[lit_review_yinshun_shengyan_corpus_additions.md](../../../scripts/data/) `--entries-only --display-offset 200`）。**法海微波**不在 44 卷 → 維持書目層。已截圖實證（單欄 reader + listing badge，:3004 SSR + playwright）。
+- ⚠️ **多 dev server 共用 `.nuxt` 會互炸**（`ENOENT mkdir .nuxt/dev`）：驗證請**直接打使用者既有 :3004**（server route 會 HMR 熱載），**別**為了截圖另起 `PORT=3100 npm run dev`——會把 :3004 一起弄掛（[[feedback_no_kill_other_tasks]] 同源教訓）。
+
+## 🚀 新 session 接手清單：印順／法鼓 全文匯入（2026-06-14）
+
+**已完成（commit 在 master）**：c12 研究回顧 23 條已內嵌我們自轉錄的印順／聖嚴全集全文，單欄 reader + listing 連結 + API 分頁修復全上線並截圖實證。
+
+**未做、待接手的兩件事**：
+
+1. **全集補充再擴充（小，選配）** — 目前只補 2 篇（《中國禪宗史》讀後／太虛大師評傳）。要更多「主題相關但論文未引用」篇章，候選在聖嚴《評介》b…16 與印順人間佛教綱領文。流程＝加進 [lit_review_yinshun_shengyan_corpus_additions.md](../../../scripts/data/) → `ingest_lit_review.py --seed --entries-only --display-offset 200` → 算 `lr.make_ref_key` → 填進 `import_corpus_fulltext.py` 的 `MAP` → `--only` 跑。聖嚴《評介》b16 TOC：1 近代中國佛教史上的四位思想家／2 太虛大師評傳✅／3 劃時代的博士比丘／4 印順長老的佛學思想／7《中國禪宗史》讀後✅／11《成佛之道》讀後…。
+
+2. **🔴 大任務：`/works/mahaprajapati-revolution`（大愛道革命）879 件研究資料全文轉錄** — user 明確要求「都將其全文轉錄」。獨立大工程、**尚未動工**，**務必先跟 user 確認範圍與顯示位置再開跑**（5.7GB、多為受版權掃描 PDF）。詳見下節。
+
+### 大愛道革命 879 件全文轉錄 — 現況與計畫（未動工）
+
+- **來源**：manifest [public/content/works/mahaprajapati-revolution-materials.json](../../../public/content/works/)（879 件、5.7GB，已上 R2，key 前綴 `dadaodao-materials/`，私有 bucket，經 [server/api/works/material.get.ts](../../../server/api/works/) 簽名下載）。分 7 大類：思想與印順學脈絡(18 組)／性別平權／社會運動／禪觀修持／宗教對話／弘誓教團／史料與當代台灣佛教脈絡(30 組)。多為**期刊掃描 PDF**（人間佛教研究期刊／弘誓雙月刊／印順學研討會論文／學位論文）＋檔案影像。
+- **✅ 顯示管線已現成（重大！免做 UI／API）**：per-file「全文」面板（[pages/works/[slug]/index.vue](../../../pages/works/) 約 line 194，書籍計畫 manifest 分頁）按下「全文」會打 [server/api/works/material-text.get.ts](../../../server/api/works/)，它把 manifest 的 material key（`dadaodao-materials/<rel>`）映射到 **R2 key `dadaodao-fulltext/<rel>.txt`**（外文另有 `dadaodao-fulltext/<rel>.zh.txt` 繁中翻譯，面板自帶 zh/orig 切換）。**所以「轉錄」＝ OCR 每件 → 把純文字上傳到 `dadaodao-fulltext/<rel>.txt`（rel = 去掉 `dadaodao-materials/` 前綴的相對路徑）**；檔案一上傳，面板自動點亮，零前端改動。
+- **未決定（要問 user）**：(a) **範圍**——879 全做，還是先做最相關子集（思想與印順學脈絡 18 組／其中印順學 23 件、印順學研討會 22 件、侯坤宏 23 件…）？(b) **OCR 引擎**——中文掃描 PDF → Gemini Vision 為主（[[feedback_ocr_strategy]]），量大過夜批次 + 2-strike quota pause（[[feedback_ocr_two_strike_quota]]）。
+- **建議起手**：① `python` 讀 manifest 列出每件 `{key,name,size}`，從 R2 抓回（或本機 Drive 原檔，canonical 見 [[feedback_drive_canonical_storage]]）判型別（已是文字 PDF vs 掃描影像 PDF vs 圖檔）、估頁數總量；② 寫 `scripts/transcribe_dadaodao.py`（test-first 純函式 + 驅動）：抓檔→Gemini Vision OCR（繁中、保留段落）→上傳 `dadaodao-fulltext/<rel>.txt`，`--resume`（看 R2 已有 .txt 跳過）、per-file try/except、2-strike quota pause；③ 挑「思想與印順學脈絡／印順學」一組做 pilot，按面板「全文」確認顯示 OK，再 user 拍板全量過夜。R2 設定走 `useRuntimeConfig` 的 `r2Endpoint/r2AccessKey/r2SecretKey/r2Bucket`（.env 同名）。
+
 ## 版權姿態
 
 - **全文只收開放取用 / 公有領域**：JBE（Journal of Buddhist Ethics，全卷開放）、漢堡大學 buddhismuskunde PDF、blogs.dickinson.edu、聖嚴法師數位典藏、NTU 佛研、政大學術集成、towisdom / hongshi PDF、Horner 1930（PD）。

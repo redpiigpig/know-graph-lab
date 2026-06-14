@@ -22,13 +22,21 @@ export default defineEventHandler(async (event) => {
   const ids = list.map((e: any) => e.id);
   const withFulltext = new Set<number>();
   if (ids.length) {
-    const { data: secs } = await supabase
-      .from("lit_review_sections")
-      .select("entry_id")
-      .in("entry_id", ids)
-      .eq("version_code", "zh")
-      .limit(10000);
-    for (const r of (secs ?? []) as any[]) withFulltext.add(r.entry_id);
+    // Page through — PostgREST caps each response at max-rows (1000), and a single
+    // whole-book entry (中國禪宗史 ~1224 段) can fill that, starving the rest.
+    const PAGE = 1000;
+    for (let from = 0; ; from += PAGE) {
+      const { data: secs } = await supabase
+        .from("lit_review_sections")
+        .select("entry_id")
+        .in("entry_id", ids)
+        .eq("version_code", "zh")
+        .order("entry_id", { ascending: true })
+        .range(from, from + PAGE - 1);
+      const rows = (secs ?? []) as any[];
+      for (const r of rows) withFulltext.add(r.entry_id);
+      if (rows.length < PAGE) break;
+    }
   }
 
   return {

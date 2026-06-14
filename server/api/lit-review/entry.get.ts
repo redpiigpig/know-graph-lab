@@ -20,16 +20,27 @@ export default defineEventHandler(async (event) => {
   if (eErr) throw createError({ statusCode: 500, message: eErr.message });
   if (!entry) throw createError({ statusCode: 404, message: "entry not found" });
 
-  const { data: sections, error: sErr } = await supabase
-    .from("lit_review_sections")
-    .select("order_index, version_code, text")
-    .eq("entry_id", (entry as any).id)
-    .order("order_index", { ascending: true })
-    .limit(20000);
-  if (sErr) throw createError({ statusCode: 500, message: sErr.message });
+  // Page through in 1000-row windows — PostgREST caps a single response at
+  // max-rows (1000 here), and whole-book 全集 entries (e.g. 中國禪宗史 ~1224 段)
+  // exceed that. Keep fetching until a short page comes back.
+  const sections: { order_index: number; version_code: string; text: string }[] = [];
+  const PAGE = 1000;
+  for (let from = 0; ; from += PAGE) {
+    const { data: page, error: sErr } = await supabase
+      .from("lit_review_sections")
+      .select("order_index, version_code, text")
+      .eq("entry_id", (entry as any).id)
+      .order("order_index", { ascending: true })
+      .order("version_code", { ascending: true })
+      .range(from, from + PAGE - 1);
+    if (sErr) throw createError({ statusCode: 500, message: sErr.message });
+    const rows = (page ?? []) as any[];
+    sections.push(...rows);
+    if (rows.length < PAGE) break;
+  }
 
   const byOrder = new Map<number, { order_index: number; byVersion: Record<string, string> }>();
-  for (const row of (sections ?? []) as any[]) {
+  for (const row of sections as any[]) {
     if (!byOrder.has(row.order_index)) {
       byOrder.set(row.order_index, { order_index: row.order_index, byVersion: {} });
     }

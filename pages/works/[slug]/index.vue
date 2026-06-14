@@ -359,7 +359,7 @@
                       <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">{{ langLabel(e.language) }}</span>
                       <span v-if="e.dimension" class="text-xs font-medium px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-600">{{ e.dimension }}</span>
                       <span v-if="e.stance" class="text-xs font-medium px-2 py-0.5 rounded-full bg-rose-50 text-rose-600">立場：{{ e.stance }}</span>
-                      <span v-if="e.has_fulltext" class="text-xs font-medium px-2 py-0.5 rounded-full bg-teal-50 text-teal-700">原文／中譯對照</span>
+                      <span v-if="e.has_fulltext" class="text-xs font-medium px-2 py-0.5 rounded-full bg-teal-50 text-teal-700">{{ e.language === 'zh' ? '全文' : '原文／中譯對照' }}</span>
                     </div>
                     <h4 class="text-sm font-semibold text-gray-900 leading-snug mb-1">
                       {{ e.authors }}<span v-if="e.year"> （{{ e.year }}）</span>　{{ e.title }}
@@ -368,8 +368,10 @@
                     <p v-if="e.abstract_zh" class="text-sm text-gray-700 leading-relaxed">{{ e.abstract_zh }}</p>
                     <div class="mt-2 flex items-center gap-3 text-xs">
                       <NuxtLink v-if="e.has_fulltext" :to="`/works/${slug}/review/${e.ref_key}`" @click.stop
-                        class="text-teal-700 hover:underline font-medium">閱讀全文（原文／中譯）→</NuxtLink>
-                      <a v-if="e.fulltext_url" :href="e.fulltext_url" target="_blank" rel="noopener" @click.stop
+                        class="text-teal-700 hover:underline font-medium">{{ e.language === 'zh' ? '閱讀全文 →' : '閱讀全文（原文／中譯）→' }}</NuxtLink>
+                      <NuxtLink v-if="e.fulltext_url && e.fulltext_url.startsWith('/')" :to="e.fulltext_url" @click.stop
+                        class="text-amber-700 hover:underline">在全集閱讀器開啟 →</NuxtLink>
+                      <a v-else-if="e.fulltext_url" :href="e.fulltext_url" target="_blank" rel="noopener" @click.stop
                         class="text-blue-600 hover:underline">原始連結 ↗</a>
                       <span v-if="!e.has_fulltext && !e.fulltext_url" class="text-gray-300 italic">無線上全文</span>
                     </div>
