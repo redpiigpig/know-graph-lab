@@ -79,9 +79,9 @@
             : 'bg-white text-gray-600 border-gray-200 hover:border-stone-300'"
         >{{ opt.label }} ({{ opt.count }})</button>
       </div>
-      <p v-if="!searchActive && canonOrders[activeCanon]?.some(r => r.is_deutero)" class="text-[11px] text-emerald-600 mb-2">
-        <span class="inline-block w-2.5 h-2.5 rounded-sm bg-emerald-100 border border-emerald-300 align-middle mr-1" />
-        綠色 ＝ 該傳統的第二正典（次經），已依此傳統次序併入正典中
+      <p v-if="!searchActive && canonOrders[activeCanon]?.some(r => r.is_deutero || r.has_additions)" class="text-[11px] mb-2 space-x-3">
+        <span class="text-emerald-600"><span class="inline-block w-2.5 h-2.5 rounded-sm bg-emerald-100 border border-emerald-300 align-middle mr-1" />綠 ＝ 第二正典（次經）整卷</span>
+        <span class="text-amber-600"><span class="inline-block w-2.5 h-2.5 rounded-sm bg-amber-100 border border-amber-300 align-middle mr-1" />黃 ＝ 含次經補編之正典書（如但以理、詩篇；補編在書內標註）</span>
       </p>
 
       <!-- Loading -->
@@ -105,11 +105,13 @@
               class="block rounded-md px-2 py-2 hover:shadow-sm transition text-center border"
               :class="item.isDeutero
                 ? 'bg-emerald-50 border-emerald-300 hover:border-emerald-500'
-                : 'bg-white border-gray-200 hover:border-stone-400'"
-              :title="(item.fullOverride || bookCardName(item.book).full) + (item.isDeutero ? '（第二正典）' : '')"
+                : item.hasAdditions
+                  ? 'bg-amber-50 border-amber-300 hover:border-amber-500'
+                  : 'bg-white border-gray-200 hover:border-stone-400'"
+              :title="(item.fullOverride || bookCardName(item.book).full) + (item.isDeutero ? '（第二正典）' : item.hasAdditions ? '（含次經補編）' : '')"
             >
-              <div class="font-semibold text-sm leading-tight" :class="item.isDeutero ? 'text-emerald-800' : 'text-gray-900'">{{ item.shortOverride || bookCardName(item.book).short }}</div>
-              <div class="text-[10px] mt-0.5" :class="item.isDeutero ? 'text-emerald-500' : 'text-gray-400'">{{ item.chapterCount }} 章</div>
+              <div class="font-semibold text-sm leading-tight" :class="item.isDeutero ? 'text-emerald-800' : item.hasAdditions ? 'text-amber-800' : 'text-gray-900'">{{ item.shortOverride || bookCardName(item.book).short }}</div>
+              <div class="text-[10px] mt-0.5" :class="item.isDeutero ? 'text-emerald-500' : item.hasAdditions ? 'text-amber-500' : 'text-gray-400'">{{ item.chapterCount }} 章</div>
             </NuxtLink>
           </div>
         </div>
@@ -169,6 +171,8 @@ type CanonOrderRow = {
   chapter_count: number | null
   name_override: string | null
   abbr_override: string | null
+  parent_code: string | null
+  has_additions: boolean
 }
 
 const supabase = useSupabaseClient()
@@ -225,7 +229,7 @@ const filteredBooks = computed(() => {
   return books.value.filter(b => Boolean(b[key]))
 })
 
-type CardItem = { book: BibleBook; isDeutero: boolean; chapterCount: number | null; shortOverride: string | null; fullOverride: string | null }
+type CardItem = { book: BibleBook; isDeutero: boolean; hasAdditions: boolean; chapterCount: number | null; shortOverride: string | null; fullOverride: string | null }
 
 const groupedBooks = computed(() => {
   const byCode = new Map(books.value.map(b => [b.code, b]))
@@ -238,10 +242,11 @@ const groupedBooks = computed(() => {
       { key: 'nt', label: '新約', items: [] },
     ]
     for (const row of order) {
+      if (row.parent_code) continue   // 補編：併入母卷，不出獨立書卡
       const book = byCode.get(row.book_code)
       if (!book) continue
       const g = groups.find(g => g.key === row.testament)
-      if (g) g.items.push({ book, isDeutero: row.is_deutero, chapterCount: row.chapter_count ?? book.chapter_count, shortOverride: row.abbr_override, fullOverride: row.name_override })
+      if (g) g.items.push({ book, isDeutero: row.is_deutero, hasAdditions: row.has_additions, chapterCount: row.chapter_count ?? book.chapter_count, shortOverride: row.abbr_override, fullOverride: row.name_override })
     }
     return groups.filter(g => g.items.length > 0)
   }
@@ -255,7 +260,7 @@ const groupedBooks = computed(() => {
   ]
   for (const b of filteredBooks.value) {
     const g = groups.find(g => g.key === b.testament)
-    if (g) g.items.push({ book: b, isDeutero: b.testament === 'deutero' || b.testament === 'apocrypha', chapterCount: b.chapter_count, shortOverride: null, fullOverride: null })
+    if (g) g.items.push({ book: b, isDeutero: b.testament === 'deutero' || b.testament === 'apocrypha', hasAdditions: false, chapterCount: b.chapter_count, shortOverride: null, fullOverride: null })
   }
   return groups.filter(g => g.items.length > 0)
 })

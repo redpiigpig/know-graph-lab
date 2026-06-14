@@ -111,6 +111,15 @@ NAME_OVERRIDES: dict[tuple[str, str], tuple[str, str]] = {
     ("orthodox", "neh"): ("以斯拉下", "拉下"),
 }
 
+# 「補編」——不是獨立成卷，而是某卷的次經增補：併入母卷（parent_code），不出獨立書卡，
+# reader 內以「屬於次經範圍」標註該章。母卷在書卡上以黃色標示（has_additions）。
+#   蘇撒納/貝耳與大龍/阿匝黎雅 → 但以理書；詩篇151 → 詩篇；耶肋米亞書信 → 巴錄書。
+ADDITIONS: dict[str, str] = {
+    "sus": "dan", "bel": "dan", "aza": "dan", "ps2": "psa", "epj": "bar",
+}
+# 希臘以斯帖增補無獨立書卷（併在 est 經文內）→ 這些傳統的 est 標黃。
+ESTHER_GREEK = {"catholic", "orthodox", "ethiopian"}
+
 
 def main():
     dry = "--dry-run" in sys.argv
@@ -133,15 +142,26 @@ def main():
                 continue
             seen.add(code); n += 1
             ov = NAME_OVERRIDES.get((canon, code))
+            parent = ADDITIONS.get(code)
+            parent = parent if (parent and parent in member[canon]) else None
             rows.append({
                 "canon": canon, "book_code": code,
                 "testament": "nt" if code in NT else "ot",
                 "sort_order": n,
                 "is_deutero": code not in proto,
-                "chapter_count": None,   # 增補各自獨立成卷，無需覆寫章數
+                "chapter_count": None,
                 "name_override": ov[0] if ov else None,
                 "abbr_override": ov[1] if ov else None,
+                "parent_code": parent,           # 補編：所屬母卷（→不出書卡、reader 標次經）
+                "has_additions": False,          # 母卷下方統一回填
             })
+        # 回填母卷 has_additions（含補編 → 黃色）：被指為 parent 的卷，或希臘以斯帖
+        parents_with_add = {r["parent_code"] for r in rows if r["parent_code"]}
+        for r in rows:
+            if r["book_code"] in parents_with_add:
+                r["has_additions"] = True
+            if r["book_code"] == "est" and canon in ESTHER_GREEK:
+                r["has_additions"] = True
         missing = member[canon] - seen
         print(f"{canon}: {len(rows)} rows ({sum(1 for r in rows if r['is_deutero'])} deutero)"
               f"{'  MISSING=' + str(sorted(missing)) if missing else ''}")

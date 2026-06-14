@@ -21,18 +21,34 @@
     </nav>
 
     <div class="flex-1 max-w-7xl w-full mx-auto px-4 py-6">
+      <!-- 補編提示：本卷在此傳統屬某卷的次經補編 -->
+      <div v-if="asAddition" class="mb-4 text-xs bg-amber-50 border border-amber-300 rounded px-3 py-2 text-amber-800">
+        ⚠ 本卷屬於<span class="font-semibold">次經範圍</span>——為《{{ parentOfThis?.name_zh || asAddition.parent_code }}》在此傳統的補編，並非獨立一卷。
+        <NuxtLink :to="`/scripture/${asAddition.parent_code}/1${canonQS}`" class="underline hover:text-amber-950 ml-1">← 回母卷</NuxtLink>
+      </div>
+
       <!-- Chapter picker -->
       <div class="flex flex-wrap items-center gap-1 mb-4">
         <span class="text-xs text-gray-500 mr-1">章：</span>
         <NuxtLink
           v-for="ch in chapterList"
           :key="ch"
-          :to="`/scripture/${bookCode}/${ch}`"
+          :to="`/scripture/${bookCode}/${ch}${canonQS}`"
           class="text-[11px] px-2 py-0.5 rounded border transition"
           :class="ch === chapterNum
             ? 'bg-stone-900 text-white border-stone-900'
             : 'bg-white text-gray-600 border-gray-200 hover:border-stone-300'"
         >{{ ch }}</NuxtLink>
+        <!-- 補編子卷（次經）：併入母卷，黃色標示 -->
+        <template v-if="additionsOfBook.length">
+          <span class="text-[11px] text-amber-600 ml-2 mr-1">補編：</span>
+          <NuxtLink
+            v-for="a in additionsOfBook"
+            :key="a.book_code"
+            :to="`/scripture/${a.book_code}/1${canonQS}`"
+            class="text-[11px] px-2 py-0.5 rounded border border-amber-300 bg-amber-50 text-amber-700 hover:border-amber-500 transition"
+          >{{ canonBookLabel(a.book_code) }}</NuxtLink>
+        </template>
       </div>
 
       <!-- Column controls — one dropdown per visible column -->
@@ -229,6 +245,25 @@ const CANON_LABEL: Record<string, string> = {
   protestant: '新教', catholic: '天主教‧思高', orthodox: '東正教',
   syriac: '敘利亞‧Peshitta', ethiopian: '衣索匹亞',
 }
+const canonQS = computed(() => (canon.value ? `?canon=${canon.value}` : ''))
+// 本卷在此傳統的補編子卷（如但以理 → 蘇撒納/貝耳與大龍/阿匝黎雅；詩篇 → 詩151）
+const additionsOfBook = computed(() =>
+  canon.value ? (canonOrders.value[canon.value] || []).filter(r => r.parent_code === bookCode.value) : [])
+// 本卷本身是否為某卷的補編（→ 標「屬於次經範圍」）
+const asAddition = computed(() =>
+  canon.value ? (canonOrders.value[canon.value] || []).find(r => r.book_code === bookCode.value && r.parent_code) || null : null)
+const parentOfThis = computed(() => {
+  const p = asAddition.value?.parent_code
+  return p ? books.value.find(b => b.code === p) : null
+})
+function canonBookLabel(code: string): string {
+  const ov = canon.value ? (canonOrders.value[canon.value] || []).find(r => r.book_code === code)?.name_override : null
+  if (ov) return ov
+  const b = books.value.find(x => x.code === code)
+  if (!b) return code
+  return (canon.value === 'catholic' && b.name_sigao) ? b.name_sigao : (b.name_zh_short || b.name_zh)
+}
+
 // 書名：傳統若有 name_override（如東正教以斯拉A/上/下）優先；否則只有天主教用思高本，
 // 其餘所有傳統一律用和合本。
 const displayBookName = computed(() => {
@@ -294,14 +329,15 @@ async function authHeaders() {
   return session ? { Authorization: `Bearer ${session.access_token}` } : {}
 }
 
-const canonOrders = ref<Record<string, { book_code: string; name_override: string | null }[]>>({})
+type CanonRow = { book_code: string; name_override: string | null; parent_code: string | null }
+const canonOrders = ref<Record<string, CanonRow[]>>({})
 
 async function loadBootstrap() {
   const headers = await authHeaders()
   const [b, v, co] = await Promise.all([
     $fetch<BibleBook[]>('/api/scripture/books', { headers }),
     $fetch<BibleVersion[]>('/api/scripture/versions', { headers }),
-    $fetch<Record<string, { book_code: string; name_override: string | null }[]>>('/api/scripture/canon-order', { headers }).catch(() => ({})),
+    $fetch<Record<string, CanonRow[]>>('/api/scripture/canon-order', { headers }).catch(() => ({})),
   ])
   books.value = b
   versions.value = v
@@ -480,7 +516,7 @@ const nextChapter = computed(() => {
 })
 
 function navigate(book: string, chapter: number) {
-  router.push(`/scripture/${book}/${chapter}`)
+  router.push(`/scripture/${book}/${chapter}${canonQS.value}`)
 }
 
 // ── ACCS 教父註釋 ────────────────────────────────────────────────────────────
