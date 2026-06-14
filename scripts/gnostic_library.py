@@ -308,10 +308,13 @@ def latin_ratio(s: str) -> float:
     return len(re.sub(r"[^A-Za-z]", "", s)) / len(s)
 
 
-# Distinctive 文言 (classical Chinese) sentence particles that the user-mandated
-# 白話/《和合本》 register must NOT use (和合本 says 「名叫」「說」, never 名曰／焉／矣).
-# Only HIGH-PRECISION markers — 之／其／乃 are excluded (they occur in 白話 too).
-WENYAN_RE = re.compile(r"名曰|曰[：「『]|[^。！？\s]焉[。，、！]|矣[。，！]|哉[！。]")
+# Distinctive 文言 (classical Chinese) markers the user-mandated 白話/《和合本》
+# register must NOT use (和合本 says 名叫/說/你/我, never 名曰/焉/矣/汝/吾).
+# Only HIGH-PRECISION markers:
+#   · particles 名曰 / 曰： / 焉 / 矣 / 哉
+#   · classical pronouns 汝 (你) / 吾 (我) — never in 和合本, no 白話-word collision
+# Excluded (collide with 白話): 之／其／乃／遂(未遂)／彼(彼此).
+WENYAN_RE = re.compile(r"名曰|曰[：「『]|[^。！？\s]焉[。，、！]|矣[。，！]|哉[！。]|汝|吾")
 
 
 def classify_translation(en: str, zh: str) -> str | None:

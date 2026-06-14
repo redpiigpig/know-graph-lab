@@ -354,3 +354,15 @@ def test_gate_allows_baihua_union_version_register():
     assert gl.classify_translation(
         "He almost reached the gate, among the others.",
         "他幾乎到了門口，在其他人當中。") is None
+
+
+def test_gate_flags_classical_pronouns():
+    assert gl.classify_translation("Because you were absent, my son longed to learn.",
+                                   "因為汝不在時，我的兒子渴望學習。") == "wenyan"
+    assert gl.classify_translation("I was compelled to tell him.",
+                                   "吾被迫告訴他。") == "wenyan"
+
+
+def test_gate_does_not_flag_baihua_pronouns():
+    assert gl.classify_translation("Because you were absent, I told my son.",
+                                   "因為你不在，我就告訴了我的兒子。") is None
