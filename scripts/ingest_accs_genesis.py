@@ -173,21 +173,37 @@ def ocr_batch_claude(pngs: list[bytes], model: str = "haiku") -> list[dict]:
         "--input-format", "stream-json", "--output-format", "stream-json",
     ]
     cwd = r"c:\tmp" if sys.platform == "win32" else "/tmp"
+    # 用 Popen + communicate(timeout)，逾時時 **整棵 process tree 殺掉**。
+    # 關鍵：claude.cmd → node 的孫程序，Max 額度乾時 node 內部卡 rate-limit 退避並
+    # 占住 stdout pipe；subprocess.run(timeout) 只殺直系子（.cmd），communicate 仍卡在
+    # 未關閉的 pipe 上 → timeout 形同無效、本輪整個 wedge（2026-06-14 踩過）。
+    # 故逾時改用 taskkill /T 連孫殺，確保「依規範退出」真的能退。
+    flags = subprocess.CREATE_NEW_PROCESS_GROUP if sys.platform == "win32" else 0
+    proc = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+                            stderr=subprocess.PIPE, text=True, encoding="utf-8",
+                            cwd=cwd, creationflags=flags)
     try:
-        proc = subprocess.run(cmd, input=json.dumps(msg) + "\n", capture_output=True,
-                              text=True, encoding="utf-8", timeout=300, cwd=cwd)
+        out, err = proc.communicate(input=json.dumps(msg) + "\n", timeout=300)
     except subprocess.TimeoutExpired:
         # 一頁 OCR 正常 <3min；逾 5min 幾乎都是 Max 額度乾、claude CLI 內部卡退避。
-        # 視同額度耗盡 → 拋「依規範退出」讓本輪快退、別逐批各卡 5min 爬到天荒地老。
+        if sys.platform == "win32":
+            subprocess.run(["taskkill", "/F", "/T", "/PID", str(proc.pid)],
+                           capture_output=True)
+        else:
+            proc.kill()
+        try:
+            proc.communicate(timeout=10)
+        except Exception:
+            pass
         raise RuntimeError(f"{model} OCR 逾時（額度疑乾），依規範退出")
     if proc.returncode != 0:
-        blob = (proc.stderr or "") + (proc.stdout or "")
+        blob = (err or "") + (out or "")
         if "rate_limit" in blob:
             raise RuntimeError(f"{model} rate limited，依規範退出")
-        print(f"    [{model} exit {proc.returncode}] {(proc.stderr or '')[:160]}", file=sys.stderr)
+        print(f"    [{model} exit {proc.returncode}] {(err or '')[:160]}", file=sys.stderr)
         return []
     final = None
-    for line in proc.stdout.splitlines():
+    for line in (out or "").splitlines():
         line = line.strip()
         if not line:
             continue
