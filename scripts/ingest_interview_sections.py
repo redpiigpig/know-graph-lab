@@ -24,7 +24,6 @@ from pathlib import Path
 import requests
 from dotenv import load_dotenv
 
-SLUG = "mahaprajapati-revolution"
 PAGE_RE = re.compile(r"【頁\s*([0-9]+)】")
 
 load_dotenv()
@@ -33,13 +32,13 @@ K = os.environ["SUPABASE_SERVICE_ROLE_KEY"]
 H = {"apikey": K, "Authorization": f"Bearer {K}", "Content-Type": "application/json"}
 
 
-def entry_id(ref: str) -> int:
-    r = requests.get(f"{U}/rest/v1/lit_review_entries?project_slug=eq.{SLUG}&ref_key=eq.{ref}&select=id",
+def entry_id(slug: str, ref: str) -> int:
+    r = requests.get(f"{U}/rest/v1/lit_review_entries?project_slug=eq.{slug}&ref_key=eq.{ref}&select=id",
                      headers=H, timeout=30)
     r.raise_for_status()
     rows = r.json()
     if not rows:
-        sys.exit(f"no entry for ref_key={ref}")
+        sys.exit(f"no entry for {slug}/{ref}")
     return rows[0]["id"]
 
 
@@ -47,11 +46,17 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--ref", required=True)
     ap.add_argument("--out", required=True)
+    ap.add_argument("--slug", default="mahaprajapati-revolution")
+    ap.add_argument("--only-range", default="", help="只收這段印刷頁碼 lo,hi（含）")
+    ap.add_argument("--exclude-range", default="", help="排除這段印刷頁碼 lo,hi（含）")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
+    only = tuple(int(x) for x in args.only_range.split(",")) if args.only_range else None
+    excl = tuple(int(x) for x in args.exclude_range.split(",")) if args.exclude_range else None
+
     files = sorted(Path(args.out).glob("*.txt"))
-    rows, fallback, seen, skipped = [], 9000, set(), 0
+    rows, fallback, seen, skipped, filtered = [], 9000, set(), 0, 0
     for f in files:
         text = f.read_text(encoding="utf-8").strip()
         first = text.splitlines()[0] if text else ""
@@ -61,21 +66,31 @@ def main():
         m = PAGE_RE.search(text)
         if m:
             oi = int(m.group(1))
+            # page-range filters apply only to pages with a real printed number
+            if only and not (only[0] <= oi <= only[1]):
+                filtered += 1
+                continue
+            if excl and excl[0] <= oi <= excl[1]:
+                filtered += 1
+                continue
             while oi in seen:
                 oi += 1000
         else:
+            if only:           # unnumbered pages excluded when a positive range is requested
+                filtered += 1
+                continue
             oi = fallback
             fallback += 1
         seen.add(oi)
         rows.append({"oi": oi, "text": text})
 
     rows.sort(key=lambda r: r["oi"])
-    print(f"{len(files)} files → {len(rows)} sections ({skipped} empty/photo skipped)")
-    print("  first page nums:", ", ".join(str(r["oi"]) for r in rows[:12]))
+    print(f"{len(files)} files → {len(rows)} sections ({skipped} empty/photo, {filtered} out-of-range)")
+    print("  page nums:", ", ".join(str(r["oi"]) for r in rows[:12]), "..." if len(rows) > 12 else "")
     if args.dry_run:
         return
 
-    eid = entry_id(args.ref)
+    eid = entry_id(args.slug, args.ref)
     payload = [{"entry_id": eid, "version_code": "zh", "order_index": r["oi"],
                 "text": r["text"], "char_count": len(r["text"])} for r in rows]
     resp = requests.post(

@@ -81,6 +81,16 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
 4. **版權**：OCR 文字（`scripts/data/<slug>/`）與原照片夾**不進 git**（已 `.gitignore`），canonical 在 DB。
 - 別用 Read 直接開 >2000px 照片（[[feedback_screenshot_2000px]]）；OCR 走 API base64，不受此限。
 
+### 本地 PDF 期刊論文（2026-06-14）
+- **文字層乾淨**：[scripts/extract_pdf_pages.py](../../../scripts/) `--pdf … --out … --page-start <印刷起始頁>`（PyMuPDF 直抽，免 OCR，物理頁→印刷頁 1:1）。
+- **文字層亂碼／自訂字型**：[scripts/ocr_pdf_article.py](../../../scripts/) 每頁 render 成圖再 Haiku OCR，繞過壞 text layer。論文＝完整連續轉錄（不省略接續句、保留註腳）。
+- 兩者輸出 `<out>/p###.txt`（開頭 `【頁 N】`），共用 `ingest_interview_sections.py` 入庫。
+- **用完 PDF → R2 + 刪本地**（使用者政策）：[scripts/archive_ref_pdf_r2.py](../../../scripts/) `--pdf … --ref … --delete` 上傳 R2 `dadaodao-materials/研究回顧/`、把 `fulltext_url` 設成簽名下載路徑 `/api/works/material?key=…`（保留連結），成功才刪本地。照片夾則「轉錄確認無誤後直接刪資料夾」（DB + 本機 gitignored txt 雙備份；段數＝照片數即確認完整）。
+
+### 圖說例外 + 跨計畫節錄路由（2026-06-14）
+- `ocr_interview_book.py --keep-captions`：預設略過圖說，但**人名／與會者名單型圖說**（標 `〔圖說〕`）完整保留；`--stems "a,b,c"` 只重 OCR 指定頁（補抓特定圖說）。
+- `ingest_interview_sections.py` 支援 `--slug <other-project>`、`--only-range lo,hi`、`--exclude-range lo,hi`（依印刷頁碼）。**用途**：把一本訪談錄的某主題章節「改放」到別的計畫——例 恆清《杏壇衲履》第柒章「參與藏傳比丘尼傳承重建」(頁217–273) 移到 `bajingfa`(c1 昭慧戒律學) 的「跨傳統比較」，其餘留 dadaodao；含 1997 第一次漢藏比丘尼研討會與會名單（圖說保留）。
+
 ## 🚀 新 session 接手清單：印順／法鼓 全文匯入（2026-06-14）
 
 **已完成（commit 在 master）**：c12 研究回顧 23 條已內嵌我們自轉錄的印順／聖嚴全集全文，單欄 reader + listing 連結 + API 分頁修復全上線並截圖實證。

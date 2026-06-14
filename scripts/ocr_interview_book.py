@@ -20,12 +20,17 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from dadaodao_fulltext import anthropic_client, _is_quota
 
 HAIKU = "claude-haiku-4-5"
+_CAPTION_SKIP = "3. **忽略頁面中的照片／插圖及其圖說（圖片標註文字）**，只轉錄正文。\n"
+_CAPTION_KEEP = (
+    "3. 一般裝飾性圖說可略過，但**若照片下方的說明文字是一份人名／與會者名單（例如會議出席者）"
+    "，務必完整轉錄該名單**，並在其前標明「〔圖說〕」。\n"
+)
 PROMPT_TMPL = (
     "這是《{title}》的一張書頁照片。請完整轉錄頁面中的繁體中文文字，作為研究參考資料。\n"
     "要求：\n"
     "1. 大致從頁面上**有意義的小標題**開始轉錄；上一頁／上一段被切斷的殘句可省略。\n"
     "2. 逐字轉錄，保留段落與標題結構；不要翻譯、不要摘要、不要加任何說明或評論。\n"
-    "3. **忽略頁面中的照片／插圖及其圖說（圖片標註文字）**，只轉錄正文。\n"
+    "{caption}"
     "4. 若頁面看得到**印刷頁碼**，在最前面用「【頁 N】」標出；看不到頁碼就寫「【頁 ?】」。\n"
     "5. 若該頁整頁是照片、版權頁或無正文，就只輸出「【頁 ?】（無正文）」。\n"
     "只輸出轉錄文字（含開頭的頁碼標記），不要任何前言。"
@@ -53,12 +58,19 @@ def main():
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--resume", action="store_true")
     ap.add_argument("--pace", type=float, default=0.5)
+    ap.add_argument("--keep-captions", action="store_true",
+                    help="保留人名／與會者名單型圖說（標〔圖說〕）；預設略過圖說")
+    ap.add_argument("--stems", default="", help="只處理這些檔名 stem（逗號分隔）")
     args = ap.parse_args()
 
     src, out = Path(args.src), Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
-    prompt = PROMPT_TMPL.format(title=args.title)
+    prompt = PROMPT_TMPL.format(
+        title=args.title, caption=_CAPTION_KEEP if args.keep_captions else _CAPTION_SKIP)
     imgs = sorted(src.glob("*.jpg"))
+    if args.stems:
+        want = {s.strip() for s in args.stems.split(",") if s.strip()}
+        imgs = [p for p in imgs if p.stem in want]
     print(f"{len(imgs)} photos in {src.name}", flush=True)
     done = fail = strikes = 0
     for i, img in enumerate(imgs):
