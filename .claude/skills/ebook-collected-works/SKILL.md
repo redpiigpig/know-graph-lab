@@ -244,11 +244,64 @@ dev server 起 → 磁碟認證（reuse `screenshot_book.mjs` 的 magic-link＋s
 
 一句話現況：聖嚴法師（1930–2009，**法鼓山創辦人、學問僧**）全集亦本即繁中 → 沿用印順單語 pipeline，**唯一差別＝來源解析器 HTML 而非 TEI**，下游入庫/hub/reader 全共用。來源＝ ddc.shengyen.org（法鼓文化官方數位版，SPA 殼但靜態檔可全枚舉：`all_books`110冊／`vol_dump`4079篇／`toc.html`章節樹／`html/{輯-冊-篇}.html`正文）；`p.indent`正文／`p.hN`標題／`span.pb data-page`**保留原書頁碼**。**已完成 110 冊 / 4181 chunks 上架**（`shengyen_build.py`，9 例測試綠，slug `shengyen`，teal/🥁）。雷區：requests 要帶 UA+verify=False+指數退避重試（server 高載丟連線）、`--all` 要 per-book try/except+`--resume`、reader 截圖 ~3970px 須裁、dev server 多任務衝突另起 PORT=3100。
 
-### 案例 6：星雲大師全集（⚠️ 來源受阻，2026-06-13）
+### 案例 6：星雲大師全集（✅ 完成，via /ArticleDetail，2026-06-14）
 
-來源探源、App API 路徑、現況產出 → **[hsingyun_collected_works.md](hsingyun_collected_works.md)**。
+來源探源、全文端點、現況產出 → **[hsingyun_collected_works.md](hsingyun_collected_works.md)**。
 
 一句話現況：星雲大師（1927–2023，**佛光山開山宗長**）全集 — 官網 reader 殼（`/bcN/bookM` 空殼、sitemap 38 URL、無 XHR）一度誤判「不出全文」，**但 user 給出 `/ArticleDetail/artcle{N}` 後破關**：每篇免登入 server-render 全文 + 麵包屑階層（大類/冊/篇），不在 sitemap、reader 殼不揭露。**已全量上架**：crawl `artcle{1..25500}`（19,888 篇有效、err=0 未被封鎖）→ 麵包屑 `book_key` 分組成 **109 冊 / 19,997 chunks**（slug `hsingyun`，orange/🪷，按 12 大類）。`scripts/hsingyun_build.py`（parse_article/classify_breadcrumb/crawl 禮貌節流+退避+resumable/`--build --resume` per-book 容錯，10 例綠）。**教訓：薄殼 JS 站找不到內容端點時，直接問 user 要一個「實際在讀的文章 URL」往往秒破關（內文常走 sitemap 外的另一條 MVC 路由）。**
+
+---
+
+## 📕 漢傳佛教／中文「單一語言」全集 — 抓取與入庫 PLAYBOOK
+
+> 印順(CBETA)/聖嚴(法鼓全集)/星雲(masterhsingyun) 三套累積的通用做法。**任何「本即繁中、要逐冊上架的中文全集」都照這套**（榮格/穆勒/潘尼卡那套多語對齊**不適用**，這裡零翻譯零對齊）。下游入庫/hub/reader 三套完全共用，新案例**只需寫來源解析器**。
+
+### 0. 單一語言鐵則
+- **零翻譯、零跨語對齊**：`content` = 原文繁中本身；chunk **不寫 `sources`/`source_text`** → reader 自動退化單欄（[[multilang-sources]] 向後相容）。
+- 一書（冊）＝ 一個 `ebooks` row；一篇（章/節/條目）＝ 一個 chunk；`parent_volume` = 大類/著作集分組、`volume` = 書名、`chapter_path` = 書名 · [章節…] · 篇名。
+- **保留原書頁碼**（[[feedback_pdf_page_number]]）：CBETA `lb` 邊碼 / 法鼓 `span.pb data-page` / 星雲麵包屑 `pNNN` → 存進 `chunk.page_number`。
+- deterministic `ebook_id` 每作家一個命名空間：印順 `a0000000-…-NN`、聖嚴 `b0000000-…`、星雲 `c0000000-…`；registry JSON committed 進 skill 資料夾。
+
+### 1. 開工第一步：來源分級（決定可行性，**別跳過**）
+| 來源型態 | 範例 | 做法 |
+|---|---|---|
+| **結構化標記**（TEI/XML/EPUB） | CBETA `cbeta-org/xml-p5` Y 系列 | 最佳；GitHub raw 直抓，`cb:mulu`/`cb:div` 巢狀＝章節樹。非商業可再散布 |
+| **靜態每篇 HTML、可枚舉** | 法鼓 `getData.php?type=vol_dump`+`html/{id}.html` | 好；先抓「枚舉端點」(書目/篇目 JS 變數) 再逐篇抓 |
+| **薄殼 JS reader、內容端點藏起來** | 星雲 `/bcN/bookM` 空殼 | ⚠️ **別爬殼**；先找真內容路由（見 §2） |
+
+判準：`curl sitemap.xml`（單篇 URL 有沒有列？）→ playwright 看載文章時的 **XHR/network**（有沒有 `getData`/`.json`/`ArticleDetail` 之類）→ 看 `/bcN/bookM` 之類頁面 size（~9KB 空殼 vs 有內容）。
+
+### 2. 找「藏起來的內容端點」（星雲教訓，最關鍵的一招）
+薄殼站的全文常**不在 sitemap、不被 reader 殼揭露**，走另一條 server 路由（MVC `/Controller/action{id}`）。排查順序：
+1. **直接問 user 要一個「他實際在讀的文章 URL」** ← 最快，往往秒破關（星雲 `/ArticleDetail/artcle1980`）。
+2. playwright 攔截所有 response，找非資產的 GET（`.php`/`.json`/`.ashx`/`/ArticleDetail`）。
+3. 看 `getData.php?type=…` 之類 JS 變數端點（法鼓 `all_books`/`vol_dump`）。
+4. 探子網域/猜端點（`api.`/`app.`，多半不解析 → 放棄猜，回到 1）。
+
+### 3. 無乾淨目錄時：用**麵包屑/breadcrumb 反推結構**
+每篇文章頁自帶 `第N類【類名】 › 冊 › 子冊 › p篇` → **不需另一份目錄**，靠文章自身重建整棵樹：`parent_volume`=麵包屑[0]、`book_key`(分組鍵)=麵包屑[1]、`chapter_path`=麵包屑[1:]、多卷靠同一 `book_key` 自動併冊。
+
+### 4. 禮貌大量爬取（~2 萬篇，**user 叮囑別被封**）
+- **節流**：`ThreadPoolExecutor` 4 workers + 每請求小延遲(0.05s) + 指數退避(封頂 8–20s)。實測 ~7/s、err=0 全程未被封。
+- **resumable 快取**：每篇寫 `c:/tmp/<author>_cache/{N}.json`（含 `empty:true` 標記 302 空洞）→ 被擋只要停、重跑自動續，**不重抓**。
+- **監控封鎖**：看 err 計數；err 暴增＝被擋 → 停、退避久一點再續。
+- **快取留著別清**：修解析重 build 時免再爬、不再打擾對方 server（星雲快取 25500 檔保留）。
+- requests 要帶 **User-Agent + `verify=False`**（部分站直連會被丟連線）。
+
+### 5. 入庫批次韌性（聖嚴/星雲都踩過）
+Supabase/R2 偶發 `RemoteDisconnected`/`ConnectionError` → **`--all` 迴圈一定要 per-book `try/except`**（一冊失敗不中斷全批）+ 末尾重試一輪 + **`--resume`**（查 DB `id=in.(...)` 跳過已有 chunk 的冊）。首跑掛掉就 `--resume` 補齊。
+
+### 6. 共用雷區
+- `ebooks.id` 是 **UUID** → REST 查全集用 `id=in.(…)`，**不能 `like`**。
+- `EBOOK_CHUNKS_DIR` 在 .env 可能空字串 → 用 `te.CHUNKS_DIR`（已 fallback G: 雲端）。
+- **CJK 接行**：殺換行**不插空格**（`re.sub(r"[ \t]*\n[ \t\n]*","",s)`）但保留全形空格 U+3000 與英文詞間真空格（`_clean`）。
+- **截圖 reader**：全頁高 ~3800–3970px > **2000px 硬限**（會炸 session）→ 讀前 PIL crop top ≤1850。
+- **dev server 多任務衝突**：:3000 可能被別任務佔/壞（[[feedback_no_kill_other_tasks]] 不可殺）→ 自己另起 `PORT=3100/3200`；已認證 reader 首次 SSR 冷編譯 >30s → screenshot 腳本 `navigationTimeout` 拉 150s、或先 curl 暖路由。
+- **無公有領域肖像**（當代法師照片受版權）→ `portraitUrl:''`，portal/hub 已加 emoji 佔位 `v-else` 降級。
+- 截圖腳本放 `scripts/_xy_*.mjs`（`_` 前綴）跑完即刪、**別 commit**。
+
+### 7. 全文未到位時的 placeholder（星雲曾用）
+若全文一時抓不到：先建 hub + **書目**（status `planned`/`copyright`，sourceNote 標明待來源），之後全文進來再把 works `status→done`+填 `ebookId`、換掉 placeholder。誠實標示勝過硬刻殘缺爬蟲。
 
 ---
 
