@@ -9,7 +9,12 @@ const b = await chromium.launch({ headless: false, channel: 'chrome', args: ['--
 const ctx = await b.newContext({ locale: 'zh-TW' })
 await ctx.addInitScript(() => { Object.defineProperty(navigator, 'webdriver', { get: () => undefined }) })
 const pg = await ctx.newPage()
-async function pass(){ let t=await pg.title(); for(let i=0;i<40&&/just a moment|請稍候|稍候|loading/i.test(t);i++){await sleep(1000);t=await pg.title()} await sleep(1500); return t }
+const CHALLENGE = /just a moment|請稍候|稍候|loading|正在執行安全驗證|安全驗證|惡意機器人/i
+async function pass(){
+  let t=await pg.title()
+  for(let i=0;i<40 && (CHALLENGE.test(t) || CHALLENGE.test((await pg.locator('body').innerText().catch(()=>'')).slice(0,120)));i++){ await sleep(1000); t=await pg.title() }
+  await sleep(1500); return t
+}
 // Robust index load: retry if 0 entries (rate-limit / unsolved challenge symptom).
 async function loadIndex() {
   for (let attempt = 1; attempt <= 4; attempt++) {
@@ -47,7 +52,7 @@ for (const e of entries) {
       }
       return best
     })
-    if (!text || text.length<50) { console.log(`  ∅ n=${e.n} empty`); fail++; await sleep(jitter()); continue }
+    if (!text || text.length<120 || /安全驗證|惡意機器人/.test(text)) { console.log(`  ∅ n=${e.n} empty/challenge (len=${(text||'').length}) — backing off 40s`); fail++; await sleep(40000); continue }
     fs.writeFileSync(fn, JSON.stringify({n:e.n,range:e.range,text},null,2))
     ok++; if (ok%10===0||ok<3) console.log(`  ✓ n=${e.n} ${text.length} chars (${ok} done)`)
   } catch(err){ console.log(`  ✗ n=${e.n} ${err.message.slice(0,50)}`); fail++ }
