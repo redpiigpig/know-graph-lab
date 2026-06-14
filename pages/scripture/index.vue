@@ -95,9 +95,9 @@
         <div v-for="group in groupedBooks" :key="group.key" class="mt-8">
           <h2 class="text-sm font-semibold text-gray-700 mb-3 border-b border-gray-200 pb-1">
             {{ group.label }}
-            <span class="text-xs text-gray-400 font-normal">{{ group.items.length }} 卷</span>
+            <span class="text-xs text-gray-400 font-normal">{{ groupCount(group) }} 卷</span>
           </h2>
-          <div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-9 gap-2">
+          <div v-if="group.items.length" class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-9 gap-2">
             <NuxtLink
               v-for="item in group.items"
               :key="item.book.code"
@@ -113,6 +113,22 @@
               <div class="font-semibold text-sm leading-tight" :class="item.isDeutero ? 'text-emerald-800' : item.hasAdditions ? 'text-amber-800' : 'text-gray-900'">{{ item.shortOverride || bookCardName(item.book).short }}</div>
               <div class="text-[10px] mt-0.5" :class="item.isDeutero ? 'text-emerald-500' : item.hasAdditions ? 'text-amber-500' : 'text-gray-400'">{{ item.chapterCount }} 章</div>
             </NuxtLink>
+          </div>
+          <!-- 子分類（如衣索匹亞「教會秩序書」）-->
+          <div v-for="sec in group.sections" :key="sec.label" class="mt-4">
+            <h3 class="text-xs font-medium text-emerald-700 mb-2">{{ sec.label }} <span class="text-gray-400 font-normal">{{ sec.items.length }} 卷</span></h3>
+            <div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-9 gap-2">
+              <NuxtLink
+                v-for="item in sec.items"
+                :key="item.book.code"
+                :to="`/scripture/${item.book.code}/1?canon=${activeCanon}`"
+                class="block rounded-md px-2 py-2 hover:shadow-sm transition text-center border bg-emerald-50 border-emerald-300 hover:border-emerald-500"
+                :title="(item.fullOverride || bookCardName(item.book).full) + '（第二正典）'"
+              >
+                <div class="font-semibold text-sm leading-tight text-emerald-800">{{ item.shortOverride || bookCardName(item.book).short }}</div>
+                <div class="text-[10px] mt-0.5 text-emerald-500">{{ item.chapterCount }} 章</div>
+              </NuxtLink>
+            </div>
           </div>
         </div>
 
@@ -173,6 +189,7 @@ type CanonOrderRow = {
   abbr_override: string | null
   parent_code: string | null
   has_additions: boolean
+  section: string | null
 }
 
 const supabase = useSupabaseClient()
@@ -230,33 +247,48 @@ const filteredBooks = computed(() => {
 })
 
 type CardItem = { book: BibleBook; isDeutero: boolean; hasAdditions: boolean; chapterCount: number | null; shortOverride: string | null; fullOverride: string | null }
+type Group = { key: string; label: string; items: CardItem[]; sections: { label: string; items: CardItem[] }[] }
 
-const groupedBooks = computed(() => {
+function groupCount(g: Group): number {
+  return g.items.length + g.sections.reduce((n, s) => n + s.items.length, 0)
+}
+
+function pushItem(g: Group, item: CardItem, section: string | null) {
+  if (section) {
+    let sec = g.sections.find(s => s.label === section)
+    if (!sec) { sec = { label: section, items: [] }; g.sections.push(sec) }
+    sec.items.push(item)
+  } else {
+    g.items.push(item)
+  }
+}
+
+const groupedBooks = computed<Group[]>(() => {
   const byCode = new Map(books.value.map(b => [b.code, b]))
   const order = canonOrders.value[activeCanon.value]
 
-  // 該傳統有自訂排序 → 用它（次經併回 OT、綠標、章數覆寫、無獨立次經組）
+  // 該傳統有自訂排序 → 用它（次經併回正典、綠/黃標、子分類小標、無獨立次經組）
   if (order && order.length) {
-    const groups: { key: string; label: string; items: CardItem[] }[] = [
-      { key: 'ot', label: '舊約', items: [] },
-      { key: 'nt', label: '新約', items: [] },
+    const groups: Group[] = [
+      { key: 'ot', label: '舊約', items: [], sections: [] },
+      { key: 'nt', label: '新約', items: [], sections: [] },
     ]
     for (const row of order) {
       if (row.parent_code) continue   // 補編：併入母卷，不出獨立書卡
       const book = byCode.get(row.book_code)
       if (!book) continue
       const g = groups.find(g => g.key === row.testament)
-      if (g) g.items.push({ book, isDeutero: row.is_deutero, hasAdditions: row.has_additions, chapterCount: row.chapter_count ?? book.chapter_count, shortOverride: row.abbr_override, fullOverride: row.name_override })
+      if (g) pushItem(g, { book, isDeutero: row.is_deutero, hasAdditions: row.has_additions, chapterCount: row.chapter_count ?? book.chapter_count, shortOverride: row.abbr_override, fullOverride: row.name_override }, row.section)
     }
-    return groups.filter(g => g.items.length > 0)
+    return groups.filter(g => g.items.length > 0 || g.sections.length > 0)
   }
 
   // 其餘 canon（含 all / protestant）→ 沿用 bible_books 既有分類與排序
-  const groups: { key: string; label: string; items: CardItem[] }[] = [
-    { key: 'ot',        label: '舊約',             items: [] },
-    { key: 'nt',        label: '新約',             items: [] },
-    { key: 'deutero',   label: '次經 / 第二正典',  items: [] },
-    { key: 'apocrypha', label: '衣索匹亞獨有書卷', items: [] },
+  const groups: Group[] = [
+    { key: 'ot',        label: '舊約',             items: [], sections: [] },
+    { key: 'nt',        label: '新約',             items: [], sections: [] },
+    { key: 'deutero',   label: '次經 / 第二正典',  items: [], sections: [] },
+    { key: 'apocrypha', label: '衣索匹亞獨有書卷', items: [], sections: [] },
   ]
   for (const b of filteredBooks.value) {
     const g = groups.find(g => g.key === b.testament)

@@ -34,7 +34,15 @@ HJ = {**H, "Content-Type": "application/json", "Prefer": "resolution=merge-dupli
 
 NT = {"mat", "mrk", "luk", "jhn", "act", "rom", "1co", "2co", "gal", "eph", "php",
       "col", "1th", "2th", "1ti", "2ti", "tit", "phm", "heb", "jas", "1pe", "2pe",
-      "1jn", "2jn", "3jn", "jud", "rev"}
+      "1jn", "2jn", "3jn", "jud", "rev",
+      # 衣索匹亞 broader canon 新約「教會秩序書」
+      "e_didache", "e_didasc", "e_sinodos1", "e_sinodos2", "e_sinodos3",
+      "e_sinodos4", "e_kidan1", "e_kidan2"}
+
+# 新約子分類（衣索匹亞「教會秩序書」）：在新約組下另立小標。
+CHURCH_ORDER = ["e_didache", "e_didasc", "e_sinodos1", "e_sinodos2",
+                "e_sinodos3", "e_sinodos4", "e_kidan1", "e_kidan2"]
+SECTIONS: dict[str, str] = {c: "教會秩序書（含衣索匹亞六法典）" for c in CHURCH_ORDER}
 
 # ── Per-tradition canonical order (supersets; filtered to actual members) ──────
 ORTHODOX = [
@@ -83,6 +91,9 @@ ETHIOPIAN = [
     "rom", "1co", "2co", "gal", "eph", "php", "col", "1th", "2th",
     "1ti", "2ti", "tit", "phm", "heb",
     "jas", "1pe", "2pe", "1jn", "2jn", "3jn", "jud", "rev",
+    # 新約「教會秩序書」：十二使徒遺訓 + 使徒教訓 + 衣索匹亞六法典
+    "e_didache", "e_didasc", "e_sinodos1", "e_sinodos2", "e_sinodos3",
+    "e_sinodos4", "e_kidan1", "e_kidan2",
 ]
 
 # Catholic (思高/Vulgate order). 達尼爾增補(蘇撒納/貝耳與大龍/阿匝黎雅)與耶肋米亞書信
@@ -154,6 +165,7 @@ def main():
                 "abbr_override": ov[1] if ov else None,
                 "parent_code": parent,           # 補編：所屬母卷（→不出書卡、reader 標次經）
                 "has_additions": False,          # 母卷下方統一回填
+                "section": SECTIONS.get(code),    # 新約子分類（教會秩序書）
             })
         # 回填母卷 has_additions（含補編 → 黃色）：被指為 parent 的卷，或希臘以斯帖
         parents_with_add = {r["parent_code"] for r in rows if r["parent_code"]}
