@@ -52,12 +52,17 @@ import gnostic_library as gl  # noqa: E402
 classify = gl.classify_translation
 
 
-def fetch_pairs(doc: str | None = None, category: str | None = None):
+def fetch_pairs(doc: str | None = None, category: str | None = None,
+                exclude_apocrypha: bool = False, exclude_category: str | None = None):
     conds = ["e.version_code='gnosis_en'"]
     if doc:
         conds.append(f"e.doc_slug='{doc}'")
     if category:
         conds.append(f"d.category='{category}'")
+    if exclude_category:
+        conds.append(f"d.category<>'{exclude_category}'")
+    if exclude_apocrypha:               # task #2: 23 篇等黃根春回填，不可精修
+        conds.append("d.apocrypha_slug IS NULL")
     rows = mgmt(f"""
         SELECT e.doc_slug, e.order_index, e.section_label,
                e.text AS en, z.text AS zh
@@ -94,10 +99,17 @@ def main():
     ap.add_argument("--retranslate", action="store_true",
                     help="精修: re-translate EVERY section in scope (not just flagged), "
                          "forcing fresh quality through the gate")
+    ap.add_argument("--exclude-apocrypha", action="store_true",
+                    help="skip docs with apocrypha_slug (task #2: 等黃根春回填，不可動)")
+    ap.add_argument("--exclude-category", default=None, help="skip this category key")
+    ap.add_argument("--resume", action="store_true",
+                    help="ledger-resume: skip sections already done this campaign "
+                         "(c:/tmp/gnostic_refine.done); survives death/quota walls")
     ap.add_argument("--pace", type=float, default=0.0, help="sleep between calls (s)")
     args = ap.parse_args()
 
-    pairs = fetch_pairs(args.doc, args.category)
+    pairs = fetch_pairs(args.doc, args.category, args.exclude_apocrypha,
+                        args.exclude_category)
     flagged = []
     by_tag: dict[str, int] = {}
     for p in pairs:
@@ -140,16 +152,36 @@ def main():
     work = pairs if args.retranslate else flagged
     for p in work:
         p.setdefault("tag", "retranslate")
+
+    # ledger-resume: skip sections already done this campaign (survives a death /
+    # quota wall mid-run without restarting an ~18k-section job from zero).
+    LEDGER = Path("c:/tmp/gnostic_refine.done")
+    done: set[str] = set()
+    if args.resume and LEDGER.exists():
+        done = {ln.strip() for ln in LEDGER.read_text(encoding="utf-8").splitlines() if ln.strip()}
+        before = len(work)
+        work = [p for p in work if f"{p['doc_slug']}#{p['order_index']}" not in done]
+        print(f"resume: ledger has {len(done)} done · skipping {before - len(work)} · "
+              f"{len(work)} left", flush=True)
+    ledger_fh = LEDGER.open("a", encoding="utf-8") if args.resume else None
+
     todo = work[:args.limit] if args.limit else work
     mode = "精修 re-translating" if args.retranslate else "fixing"
     print(f"\n{mode} {len(todo)} sections via --engine {args.engine}\n", flush=True)
     fixed = verbatim = failed = 0
+
+    def mark_done(slug: str, oi: int):
+        if ledger_fh:
+            ledger_fh.write(f"{slug}#{oi}\n")
+            ledger_fh.flush()
+
     for i, f in enumerate(todo, 1):
         en = (f["en"] or "").strip()
         slug, oi, tag = f["doc_slug"], f["order_index"], f["tag"]
         # trivial sources (page/citation markers, pure numbers) → keep verbatim
         if ig.is_trivial_source(en):
             upsert_zh(slug, oi, en)
+            mark_done(slug, oi)
             print(f"  {i}/{len(todo)} {slug}#{oi} [{tag}] trivial→kept", flush=True)
             verbatim += 1
             continue
@@ -158,6 +190,7 @@ def main():
             # for short structural markers (ONE definition with the ingest path).
             zh, status = ig.translate_one(en, te, engine_fn)
             upsert_zh(slug, oi, zh)
+            mark_done(slug, oi)
             if status and "verbatim" in status:
                 print(f"  {i}/{len(todo)} {slug}#{oi} [{tag}] kept-verbatim ({status})",
                       flush=True)
@@ -176,6 +209,8 @@ def main():
         if args.pace:
             time.sleep(args.pace)
 
+    if ledger_fh:
+        ledger_fh.close()
     print(f"\nDONE — clean {fixed} · verbatim {verbatim} · best-effort/err {failed}",
           flush=True)
 
