@@ -15,12 +15,9 @@ const { root, files } = JSON.parse(readFileSync(SRC, 'utf8').replace(/^﻿/, '')
 const base = (rel) => rel.split('/').pop()
 const fileEntry = (f) => ({ name: base(f.rel), key: `${R2_PREFIX}/${f.rel}`, size: f.size })
 
-// ── 剔除：論文徵引資料完全未寫到且與主題（印順／昭慧／性廣人間佛教）無關的國家檔案 ──
-// 論文只徵引「印順《佛法概論》查禁」一案；以下基督教界白色恐怖案皆未引用且無關。
-const OFFTOPIC_ARCHIVE = /周聯華|衛理堂|WCC|高俊明|戴華光|李國民|聖經受政府取締|穆克禮|叛亂犯/
-function pruned(rel) {
-  return rel.startsWith('檔案/') && OFFTOPIC_ARCHIVE.test(rel)
-}
+// ── 旁及史料：論文未徵引、與印順／昭慧／性廣主題無關的基督教界白色恐怖檔案 ──
+// 不刪，改歸入「基督教與白色恐怖」類（部分衛理公會相關者另可遷至 /research-data/taiwan-methodist）。
+const CHRISTIAN_WT = /周聯華|衛理堂|WCC|高俊明|戴華光|李國民|聖經受政府取締|穆克禮|叛亂犯/
 
 // ── 二手研究專文的主題（依檔名／資料夾關鍵字）──
 const KW = {
@@ -51,6 +48,13 @@ function classify(rel) {
   if (c === '檔案') {
     if (/佛法概論/.test(rel)) return { cat: '法規檔案', sub: '印順《佛法概論》查禁案（論文徵引）' }
     if (/善導寺|道安|陳善謙/.test(rel)) return { cat: '法規檔案', sub: '善導寺相關檔案' }
+    if (CHRISTIAN_WT.test(rel)) {
+      const sub = /衛理堂|周聯華/.test(rel) ? '衛理堂與周聯華（可遷衛理公會資料）'
+        : /高俊明|戴華光|李國民/.test(rel) ? '長老教會與美麗島相關'
+        : /聖經受政府取締|穆克禮/.test(rel) ? '聖經查禁案'
+        : '其他政治案件'
+      return { cat: '基督教與白色恐怖', sub }
+    }
     return { cat: '法規檔案', sub: '國家檔案局其他卷宗（內容待全文轉錄辨識）' }
   }
   // 其餘學者二手研究（作者非三師＋議題其他主題）→ 主題研究專文，依主題分組
@@ -66,17 +70,16 @@ const CAT_META = {
   '研討會論文': { icon: '🎓', desc: '研討會發表之論文與側記' },
   '學位論文': { icon: '🎓', desc: '碩博士學位論文' },
   '雜誌與會訊': { icon: '🗞️', desc: '教界雜誌、雙月刊與會訊（《弘誓》雙月刊・《福嚴會訊》）' },
-  '法規檔案': { icon: '🗄️', desc: '政府檔案與會議記錄（論文徵引之印順查禁案＋善導寺脈絡；基督教界白色恐怖等無關卷宗已剔除）' },
+  '法規檔案': { icon: '🗄️', desc: '政府檔案與會議記錄（論文徵引之印順《佛法概論》查禁案＋善導寺脈絡＋待辨識卷宗）' },
   '工具書與彙整': { icon: '📊', desc: '彙整表格、分布圖與工具性資料' },
+  '基督教與白色恐怖': { icon: '✝️', desc: '與本書主題無關、論文未徵引的基督教界白色恐怖檔案（旁及史料；衛理堂／周聯華等可遷至衛理公會研究資料）' },
 }
-const CAT_ORDER = ['印順導師', '昭慧法師', '性廣法師', '主題研究專文', '期刊論文', '研討會論文', '學位論文', '雜誌與會訊', '法規檔案', '工具書與彙整']
+const CAT_ORDER = ['印順導師', '昭慧法師', '性廣法師', '主題研究專文', '期刊論文', '研討會論文', '學位論文', '雜誌與會訊', '法規檔案', '工具書與彙整', '基督教與白色恐怖']
 const SUB_PRIORITY = ['性別平權與大愛道', '社會運動與入世佛教', '禪觀修持與佛教養生', '宗教對話', '印順學與人間佛教思想', '當代台灣佛教（對比山頭）']
 
 // 聚合：cat → sub → files
 const cmap = new Map(CAT_ORDER.map((c) => [c, new Map()]))
-let prunedCount = 0
 for (const f of files) {
-  if (pruned(f.rel)) { prunedCount++; continue }
   const { cat, sub } = classify(f.rel)
   const g = cmap.get(cat)
   if (!g.has(sub)) g.set(sub, [])
@@ -104,12 +107,11 @@ const categories = CAT_ORDER.filter((c) => cmap.get(c).size).map((cat) => {
   return { key: cat, label: cat, icon: meta.icon, desc: meta.desc, groups, count }
 })
 
-const kept = files.length - prunedCount
 const manifest = {
   book: '當代的大愛道革命',
   subtitle: '昭慧法師與性廣法師的人間佛教思想與實踐',
   source: root,
-  note: '研究資料依論文徵引資料的文獻類別整理：印順／昭慧／性廣三師維持作者分類，其餘按文獻類別（期刊／研討會／學位論文／雜誌會訊／檔案…）與主題分類。與本書主題無關且論文未徵引的國家檔案（基督教界白色恐怖案）已剔除。原檔可線上下載。',
+  note: '研究資料依論文徵引資料的文獻類別整理：印順／昭慧／性廣三師維持作者分類，其餘按文獻類別（期刊／研討會／學位論文／雜誌會訊／法規檔案…）與主題分類。與本書主題無關、論文未徵引的基督教界白色恐怖檔案另歸「基督教與白色恐怖」類（旁及史料，可遷衛理公會研究資料）。原檔可線上下載。',
   interviews: true,
   thesis: {
     title: '印順導師人間佛教思想的傳承與實踐：以昭慧法師、性廣法師為核心',
@@ -129,12 +131,11 @@ const manifest = {
       { id: 'app4', title: '附錄四　訪談人物分類表' },
     ],
   },
-  totalFiles: kept,
-  prunedFiles: prunedCount,
-  totalBytes: files.filter((f) => !pruned(f.rel)).reduce((s, f) => s + f.size, 0),
+  totalFiles: files.length,
+  totalBytes: files.reduce((s, f) => s + f.size, 0),
   categories,
 }
 
 writeFileSync(OUT, JSON.stringify(manifest, null, 2), 'utf8')
-console.log(`Wrote ${OUT}: ${categories.length} 類, 保留 ${kept} 件（剔除 ${prunedCount}）`)
+console.log(`Wrote ${OUT}: ${categories.length} 類, ${files.length} 件`)
 for (const c of categories) console.log(`  ${c.icon} ${c.label}: ${c.count} 件 / ${c.groups.length} 組`)
