@@ -248,7 +248,7 @@ dev server 起 → 磁碟認證（reuse `screenshot_book.mjs` 的 magic-link＋s
 
 來源探源、App API 路徑、現況產出 → **[hsingyun_collected_works.md](hsingyun_collected_works.md)**。
 
-一句話現況：星雲大師（1927–2023，**佛光山開山宗長**）全集**官網不出可枚舉全文**——`books.masterhsingyun.org` 是薄殼 JS app，sitemap 僅 38 URL、`/bcN/bookM` 多為空殼、無任何資料端點（與 CBETA/法鼓的乾淨來源根本不同）。**唯一全文路徑＝星雲大師全集 App 私有 JSON API，需 user 抓包提供**。現況：已建 hub（slug `hsingyun`，orange/🪷）+ **完整書目 366 部**（取自官方《著作總覽》Word HTML，status `planned`），**全文待 App API 接入**再寫 `hsingyun_build.py` 入庫。教訓：開工前先驗來源是否暴露可枚舉內容端點；薄殼 JS reader（無 sitemap 單篇 URL／無 XHR）＝硬爬不可行。
+一句話現況：星雲大師（1927–2023，**佛光山開山宗長**）全集 — 官網 reader 殼（`/bcN/bookM` 空殼、sitemap 38 URL、無 XHR）一度誤判「不出全文」，**但 user 給出 `/ArticleDetail/artcle{N}` 後破關**：每篇免登入 server-render 全文 + 麵包屑階層（大類/冊/篇），不在 sitemap、reader 殼不揭露。**已全量上架**：crawl `artcle{1..25500}`（19,888 篇有效、err=0 未被封鎖）→ 麵包屑 `book_key` 分組成 **109 冊 / 19,997 chunks**（slug `hsingyun`，orange/🪷，按 12 大類）。`scripts/hsingyun_build.py`（parse_article/classify_breadcrumb/crawl 禮貌節流+退避+resumable/`--build --resume` per-book 容錯，10 例綠）。**教訓：薄殼 JS 站找不到內容端點時，直接問 user 要一個「實際在讀的文章 URL」往往秒破關（內文常走 sitemap 外的另一條 MVC 路由）。**
 
 ---
 

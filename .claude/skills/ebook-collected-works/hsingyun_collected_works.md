@@ -37,11 +37,14 @@ App（`org.fgs.introbookapp` / iOS `id1441930680`）幾乎必然打私有 JSON A
 - 抓包對 user＝零風險（只看自己流量）；Claude 之後大量打 API 要**節流＋退避**（比照 [[shengyen_collected_works]] 的 server 高載處理）。
 - 帳密幫助不大：問題不是「進不去」而是「不知 API 端點」；真要登入也須先看到登入＋取文兩請求。密碼走 .env 不貼聊天（[[feedback_no_secret_values_in_chat]]）。
 
-## 現況產出（2026-06-13）
-- [x] `stores/collectedWorks.ts` 加星雲 `CwAuthor`（slug `hsingyun`，orange/🪷；貢獻3段＋年表11條）。
-- [x] **書目 366 部**＝官方《著作總覽》(`bc17/book162` Word HTML) 解析的依序唯一 `《》` 書名；單一分類「星雲大師全集（全文待 App API 接入）」，status **`planned`**（待轉錄）。
-- [x] hub 截圖實證（orange/🪷 emoji 降級、366 書目「待轉錄」badge、sourceNote ⚠️ 說明）。
-- [ ] **全文待 App API**：拿到抓包後寫 `scripts/hsingyun_build.py`（API→篇→單語 chunk，下游同 yinshun/shengyen），逐冊入庫 + works status 改 `done` + 連 ebookId。
+## ✅ 現況產出（2026-06-14 全文上架完成）
+- [x] crawl `artcle{1..25500}`：**19,888 篇有效**（5612 空洞 302）、err=0 全程未被封鎖（4 workers + 延遲 + 退避，~2萬請求/約 1h）。快取 `c:/tmp/hsingyun_cache/`。
+- [x] `--build --upload`：麵包屑 `book_key` 分組 → **109 冊 / 19,997 chunks 全入庫**（ebook_id `c0000000-…`）。多卷自動併冊（金剛經講話 97 篇等）。**雷區同聖嚴**：Supabase/R2 偶發 RemoteDisconnected → `--build` 已加 per-book try/except + `--resume`（首跑 25 冊掛掉、resume 補齊 109）。
+- [x] `hsingyun_registry.json`（109 冊 title/parent_volume/ebook_id/n_articles）。
+- [x] `stores/collectedWorks.ts` 星雲 `CwAuthor`：**works[] 改 109 冊真書（status `done` + ebookId，按 12 大類分組）**，取代原 366 placeholder；sourceNote 更新（不再「待 App API」）。
+- [x] hub + reader 截圖實證（109 冊「已轉錄」連 reader；金剛經講話 96 篇全文 + 篇目樹 + 原書頁碼 p026）。
+
+> 12 大類分布：經義19 / 論叢6 / 教科書9 / 講演集3 / 文叢18 / 傳記10 / 書信1 / 日記2 / 佛光山系列6 / 行事圖影10 / 書法9 / 附錄16 冊。
 
 ## 雷區
 - 著作總覽是 Word 匯出（mso- styles），無乾淨 12 大類標頭、年代只 24 個 marker → **不要硬塞年份/大類**（會錯）；書目先用「依文件順序的唯一書名」最誠實。

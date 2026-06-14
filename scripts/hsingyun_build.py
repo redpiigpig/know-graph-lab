@@ -275,6 +275,7 @@ def main():
     ap.add_argument("--inspect", action="store_true")
     ap.add_argument("--build", action="store_true")
     ap.add_argument("--upload", action="store_true")
+    ap.add_argument("--resume", action="store_true", help="跳過 DB 已有 chunk 的冊")
     ap.add_argument("--book", type=str, default=None)
     a = ap.parse_args()
 
@@ -297,10 +298,44 @@ def main():
         books = group_books(load_cache())
         reg = build_registry()
         targets = [a.book] if a.book else sorted(books, key=book_sort_key)
+        if a.resume:
+            done = _books_with_chunks({reg[bk]["ebook_id"]: bk for bk in targets if bk in reg})
+            targets = [bk for bk in targets if bk not in done]
+            print(f"resume: 跳過 {len(done)} 已完成，剩 {len(targets)} 冊", flush=True)
+        failed = []
         for bk in targets:
-            build_book(bk, books, reg, upload=a.upload)
+            try:
+                build_book(bk, books, reg, upload=a.upload)
+            except Exception as e:  # noqa: BLE001  一冊失敗不中斷全批
+                print(f"  ✗ {bk[:24]} 失敗：{e}", flush=True)
+                failed.append(bk)
+        for bk in list(failed):  # 失敗者重試一輪
+            try:
+                print(f"  ↻ 重試 {bk[:24]}", flush=True)
+                build_book(bk, books, reg, upload=a.upload)
+                failed.remove(bk)
+            except Exception as e:  # noqa: BLE001
+                print(f"  ✗✗ {bk[:24]} 仍失敗：{e}", flush=True)
+        if failed:
+            print(f"最終失敗 {len(failed)} 冊：{[b[:16] for b in failed]}", flush=True)
         return
     ap.print_help()
+
+
+def _books_with_chunks(ebid_to_book: dict) -> set:
+    """查 DB：哪些冊已有 chunk_count>0（resume 用）。"""
+    import requests
+    import translate_ebook_to_zh as te
+    done = set()
+    ids = list(ebid_to_book)
+    for i in range(0, len(ids), 50):
+        r = requests.get(f"{te.URL}/rest/v1/ebooks", headers=te.H_GET,
+                         params={"id": "in.(" + ",".join(ids[i:i + 50]) + ")",
+                                 "select": "id,chunk_count"}, timeout=30)
+        for row in r.json():
+            if row.get("chunk_count"):
+                done.add(ebid_to_book[row["id"]])
+    return done
 
 
 if __name__ == "__main__":
