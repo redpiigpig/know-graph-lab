@@ -1,0 +1,106 @@
+<template>
+  <div class="min-h-screen bg-slate-50">
+
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
+      <div class="max-w-5xl mx-auto px-6 h-14 flex items-center gap-4">
+        <NuxtLink to="/research-data" class="text-gray-400 hover:text-gray-700 transition text-sm">← 論文資料整理</NuxtLink>
+        <span class="text-gray-200">|</span>
+        <span class="text-sm font-medium text-gray-700">印順學派與弘誓研究資料</span>
+      </div>
+    </nav>
+
+    <div class="max-w-5xl mx-auto px-6 py-10">
+      <div class="mb-8">
+        <h1 class="text-2xl font-bold text-gray-900 mb-1">印順學派與弘誓研究資料</h1>
+        <p class="text-gray-500 text-sm">佛教弘誓學院（昭慧法師、性廣法師創辦）刊物與福嚴佛學院會訊之數位典藏，作為《當代的大愛道革命》研究背景史料</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+        <NuxtLink to="/research-data/yinshun-hongshi/magazine" class="tool-card group border-rose-100 hover:border-rose-300 hover:shadow-rose-100">
+          <div class="tool-icon bg-rose-50 text-rose-600">📕</div>
+          <div class="flex-1">
+            <h2 class="tool-title">弘誓雙月刊</h2>
+            <p class="tool-desc">佛教弘誓學院機關刊物，收錄昭慧、性廣法師論述與學團紀實；每期整本掃描 PDF</p>
+          </div>
+          <span class="tool-badge bg-rose-50 text-rose-600">{{ magCount || '…' }} 期</span>
+        </NuxtLink>
+
+        <NuxtLink to="/research-data/yinshun-hongshi/log" class="tool-card group border-amber-100 hover:border-amber-300 hover:shadow-amber-100">
+          <div class="tool-icon bg-amber-50 text-amber-600">📓</div>
+          <div class="flex-1">
+            <h2 class="tool-title">學團日誌</h2>
+            <p class="tool-desc">弘誓學團逐期紀事，記錄法會、學術會議、社運參與、訪賓與院務大事</p>
+          </div>
+          <span class="tool-badge bg-amber-50 text-amber-600">{{ logCount || '…' }} 則</span>
+        </NuxtLink>
+
+        <NuxtLink to="/research-data/yinshun-hongshi/edm" class="tool-card group border-indigo-100 hover:border-indigo-300 hover:shadow-indigo-100">
+          <div class="tool-icon bg-indigo-50 text-indigo-600">✉️</div>
+          <div class="flex-1">
+            <h2 class="tool-title">弘誓電子報</h2>
+            <p class="tool-desc">弘誓學團電子報，時事評論、活動預告與弘法動態</p>
+          </div>
+          <span class="tool-badge bg-indigo-50 text-indigo-600">{{ edmCount || '建置中' }}</span>
+        </NuxtLink>
+
+        <NuxtLink to="/research-data/yinshun-hongshi/fuyan" class="tool-card group border-emerald-100 hover:border-emerald-300 hover:shadow-emerald-100">
+          <div class="tool-icon bg-emerald-50 text-emerald-600">📗</div>
+          <div class="flex-1">
+            <h2 class="tool-title">福嚴會訊</h2>
+            <p class="tool-desc">福嚴佛學院（印順導師創辦）會訊，印順學脈絡的教育與弘法記錄</p>
+          </div>
+          <span class="tool-badge bg-emerald-50 text-emerald-600">{{ fuyanCount || '…' }} 期</span>
+        </NuxtLink>
+
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref, onMounted } from 'vue';
+
+definePageMeta({ middleware: 'auth' });
+useHead({ title: '印順學派與弘誓研究資料 — 論文資料整理' });
+
+const magCount = ref(0);
+const logCount = ref(0);
+const edmCount = ref(0);
+const fuyanCount = ref(0);
+
+async function count(url: string): Promise<number> {
+  try {
+    const r = await fetch(url);
+    if (!r.ok) return 0;
+    const d = await r.json();
+    return Array.isArray(d) ? d.length : 0;
+  } catch { return 0; }
+}
+
+onMounted(async () => {
+  const base = '/content/research-data/yinshun-hongshi';
+  magCount.value = await count(`${base}/magazine-index.json`);
+  logCount.value = await count(`${base}/log-index.json`);
+  edmCount.value = await count(`${base}/edm-index.json`);
+  fuyanCount.value = await count(`${base}/fuyan-index.json`);
+});
+</script>
+
+<style scoped>
+.tool-card {
+  @apply relative flex items-start gap-4 p-5 rounded-2xl bg-white border-2 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 cursor-pointer no-underline;
+}
+.tool-icon {
+  @apply w-11 h-11 rounded-xl flex items-center justify-center text-xl select-none flex-shrink-0;
+}
+.tool-title {
+  @apply text-sm font-semibold text-gray-900 mb-0.5;
+}
+.tool-desc {
+  @apply text-xs text-gray-500 leading-relaxed;
+}
+.tool-badge {
+  @apply self-start text-xs font-medium px-2 py-0.5 rounded-full flex-shrink-0;
+}
+</style>

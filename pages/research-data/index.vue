@@ -21,6 +21,16 @@
           <span class="tool-badge bg-teal-50 text-teal-600">4 筆資料</span>
         </NuxtLink>
 
+        <!-- 印順學派與弘誓研究資料 -->
+        <NuxtLink to="/research-data/yinshun-hongshi" class="tool-card group border-rose-100 hover:border-rose-300 hover:shadow-rose-100">
+          <div class="tool-icon bg-rose-50 text-rose-600">🪷</div>
+          <div class="flex-1">
+            <h2 class="tool-title">印順學派與弘誓研究資料</h2>
+            <p class="tool-desc">佛教弘誓學院刊物典藏：弘誓雙月刊、學團日誌、弘誓電子報，與福嚴會訊</p>
+          </div>
+          <span class="tool-badge bg-rose-50 text-rose-600">4 類刊物</span>
+        </NuxtLink>
+
       </div>
     </div>
   </div>
