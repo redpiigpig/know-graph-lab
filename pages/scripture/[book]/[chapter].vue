@@ -229,12 +229,11 @@ const CANON_LABEL: Record<string, string> = {
   protestant: '新教', catholic: '天主教‧思高', orthodox: '東正教',
   syriac: '敘利亞‧Peshitta', ethiopian: '衣索匹亞',
 }
-// 書名：新教用和合本，其餘含次經傳統用思高本（思高未收的卷 fallback 和合）
+// 書名：只有天主教用思高本，其餘所有傳統一律用和合本。
 const displayBookName = computed(() => {
   const b = chapterData.value?.book
   if (!b) return ''
-  const useSigao = canon.value && canon.value !== 'protestant'
-  return (useSigao && b.name_sigao) ? b.name_sigao : b.name_zh
+  return (canon.value === 'catholic' && b.name_sigao) ? b.name_sigao : b.name_zh
 })
 
 const CANON_PREFS: Record<string, { chinese: string[]; english: string[]; source: string[] }> = {
