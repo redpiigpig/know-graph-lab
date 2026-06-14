@@ -1,7 +1,7 @@
 import type { DazangEra } from './types'
 
 // ─────────────────────────────────────────────────────────────────────────
-// 古代基督教大藏經（古典十藏）
+// 古代基督教大藏經
 //
 // 年代結界（「八百／四百」雙軌死線）：
 //   基督教文獻收錄至 公元 800 年（涵蓋前七次大公會議與東西方教父時代終結；
@@ -17,9 +17,9 @@ import type { DazangEra } from './types'
 export const ANCIENT_ERA: DazangEra = {
   key: 'ancient',
   name: '古代基督教大藏經',
-  name_en: 'Classical Christian Canon (to 800 CE)',
+  name_en: 'Ancient Christian Canon (to 800 CE)',
   glyph: '古',
-  subtitle: '古典十藏 — 經‧律‧論‧史傳‧譯校‧書信‧禮儀‧詩文‧宣道‧類書',
+  subtitle: '經‧律‧論‧史傳‧譯校‧書信‧禮儀‧詩文‧宣道‧類書',
   boundary: '基督教文獻收錄至 800 年（前七次大公會議終結）；猶太教文獻收錄至 400 年（耶柔米與拉比學術最後交集）。',
   enabled: true,
   collections: [
