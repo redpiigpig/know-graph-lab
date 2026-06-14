@@ -33,7 +33,12 @@ description: 諾斯底主義文獻對照工具（/gnostic）— 把 The Gnostic 
 > - **定名（109 筆改動）**：與 `/apocrypha`（黃根春典外文獻）重疊者**逐字對齊**並存 `apocrypha_slug`（日後直接輸入中譯，兩邊一致；23 筆已連結）；其餘自譯按詞庫權威——Thomas=多馬、Mary=馬利亞、Andrew=安得烈、Stephen=司提反、Marcion=馬吉安、Clement=革利免、Celsus=塞爾蘇斯、Heracleon=赫拉克勒翁、Basilides=巴西理德、Faustus=浮士德、Valentinus=瓦倫廷、Stromata=雜記；修簡體 论→論。
 > - **詞庫補登**（[scripts/seed_gnostic_glossary_extra.py](../../../scripts/seed_gnostic_glossary_extra.py)）：deities +11（摩尼／三重至偉的赫密士／阿斯克勒庇俄斯／牧人者／烏特拉＋拿俄賽尼／馬吉安／摩尼／曼達／卡特里／卡波克拉特各派）；theologians +4（瓦倫廷／巴爾戴桑／埃皮法內斯／阿達伊）；theological_terms +5 作品名（赫密士文集／大寶庫／凱法萊亞／狄奧多托語錄／皮斯特斯·索菲亞）。
 > - **新增欄** `gnostic_documents.apocrypha_slug TEXT`（記錄與 /apocrypha 的對應，供日後直接匯入黃根春中譯）。
-> - ⏳ **待續**：正文逐段重譯（先標最差篇）；apocrypha 中譯完成後依 `apocrypha_slug` 直接輸入覆蓋對應篇。
+>
+> ### ⏳ 新 session 接手清單（2026-06-14 交接）
+> 1. **正文逐段重譯（先標最差篇）** — user 嫌先前轉錄「翻譯不太好」。本批只動 title／結構，**未動 sections.text**。重譯前先跑 `python scripts/export_glossary_from_db.py` 把新補的詞庫同步進 `ebook-translate` prompt，再對最差的 doc_slug 重抓+重翻+upsert（見「SOP — 補單篇／重翻」）。挑篇可先看短篇/段數異常者，或人工抽查。
+> 2. **/apocrypha 中譯回填** — 23 篇已存 `gnostic_documents.apocrypha_slug` 指向 /apocrypha 對應篇。等黃根春那邊中譯做完後，依此欄把 apocrypha 的 `cct_zh` sections **直接輸入覆蓋** /gnostic 的 `zh` 版本（兩邊一致，不要自譯這 23 篇）。查連結：`SELECT slug, apocrypha_slug FROM gnostic_documents WHERE apocrypha_slug IS NOT NULL;`
+> 3. **空分類** — `dead_sea`／`alchemical` 現為空，reader 已自動隱藏（`.filter(count>0)`），CATEGORIES 仍保留 key（日後若補真原典可直接用）。
+> - 腳本可重跑（idempotent）：`curate_gnostic_naming.py --dry`（預覽）/ `--apply`；`seed_gnostic_glossary_extra.py`。
 
 ## 🟢 狀態（2026-06-06 全量完成 · 304 篇 / 20,012 段）
 
