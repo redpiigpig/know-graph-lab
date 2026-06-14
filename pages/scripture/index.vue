@@ -304,9 +304,11 @@ function clearSearch() {
   searchTotal.value = 0
 }
 
-// In 天主教 view, label books with 思高本 names/abbreviations; else 和合本.
+// 新教用和合本；其餘含次經傳統（天主教/東正教/敘利亞/衣索匹亞）一律用思高本名
+// （思高 = 唯一完整含次經的權威中文聖經；思高未收的卷 fallback 學界中文名）。
 function bookCardName(book: BibleBook): { short: string; full: string } {
-  if (activeCanon.value === 'catholic' && book.abbr_sigao) {
+  const useSigao = activeCanon.value !== 'all' && activeCanon.value !== 'protestant'
+  if (useSigao && book.abbr_sigao) {
     return { short: book.abbr_sigao, full: book.name_sigao || book.name_zh }
   }
   return { short: book.name_zh_short || book.name_zh, full: book.name_zh }

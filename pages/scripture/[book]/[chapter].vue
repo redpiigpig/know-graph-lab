@@ -3,7 +3,7 @@
     <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 z-30">
       <NuxtLink to="/scripture" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
       <div class="w-px h-5 bg-gray-200" />
-      <span class="text-sm font-semibold text-gray-900">{{ chapterData?.book?.name_zh || '聖經對照' }}</span>
+      <span class="text-sm font-semibold text-gray-900">{{ displayBookName || '聖經對照' }}</span>
       <span class="text-xs text-gray-500">{{ chapterNum }}</span>
       <span v-if="canon && CANON_LABEL[canon]" class="text-[10px] px-1.5 py-0.5 rounded-full bg-stone-100 text-stone-600">{{ CANON_LABEL[canon] }}</span>
       <div class="ml-auto flex items-center gap-2 text-xs">
@@ -229,6 +229,14 @@ const CANON_LABEL: Record<string, string> = {
   protestant: '新教', catholic: '天主教‧思高', orthodox: '東正教',
   syriac: '敘利亞‧Peshitta', ethiopian: '衣索匹亞',
 }
+// 書名：新教用和合本，其餘含次經傳統用思高本（思高未收的卷 fallback 和合）
+const displayBookName = computed(() => {
+  const b = chapterData.value?.book
+  if (!b) return ''
+  const useSigao = canon.value && canon.value !== 'protestant'
+  return (useSigao && b.name_sigao) ? b.name_sigao : b.name_zh
+})
+
 const CANON_PREFS: Record<string, { chinese: string[]; english: string[]; source: string[] }> = {
   protestant: { chinese: ['cuv1919', 'cuv2010', 'tcv'], english: ['niv', 'asv', 'kjva'], source: ['wlc', 'sblgnt'] },
   catholic:   { chinese: ['sigao'], english: ['nabre', 'drc', 'knox'], source: ['vul', 'lxx'] },
@@ -241,6 +249,8 @@ type BibleBook = {
   code: string
   name_zh: string
   name_zh_short: string | null
+  name_sigao?: string | null
+  abbr_sigao?: string | null
   name_en: string
   testament: 'ot' | 'nt' | 'deutero' | 'apocrypha'
   display_order: number
