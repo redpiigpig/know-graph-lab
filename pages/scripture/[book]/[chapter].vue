@@ -5,6 +5,7 @@
       <div class="w-px h-5 bg-gray-200" />
       <span class="text-sm font-semibold text-gray-900">{{ chapterData?.book?.name_zh || '聖經對照' }}</span>
       <span class="text-xs text-gray-500">{{ chapterNum }}</span>
+      <span v-if="canon && CANON_LABEL[canon]" class="text-[10px] px-1.5 py-0.5 rounded-full bg-stone-100 text-stone-600">{{ CANON_LABEL[canon] }}</span>
       <div class="ml-auto flex items-center gap-2 text-xs">
         <button
           v-if="prevChapter"
@@ -84,6 +85,12 @@
         </span>
         <span v-if="commentaryPending" class="text-[11px] text-gray-400">載入註釋中…</span>
       </div>
+
+      <!-- 詩篇編號提示（七十士 vs 希伯來編號差異）-->
+      <p v-if="bookCode === 'psa'" class="mb-4 text-[11px] text-amber-700 bg-amber-50 border border-amber-200 rounded px-2.5 py-1.5 leading-relaxed">
+        ⚠ 詩篇編號因傳統而異：希伯來（新教／和合本）與七十士譯本（天主教思高／東正教，詩 9 起相差一篇）不同。
+        本頁各欄採所選版本「自身」的編號；同一傳統的欄位編號一致，跨傳統對照同一篇時請留意號碼位移。
+      </p>
 
       <!-- Loading -->
       <div v-if="pending" class="text-center text-gray-400 py-12 text-sm">載入中…</div>
@@ -213,6 +220,22 @@ const route = useRoute()
 const router = useRouter()
 const bookCode = computed(() => String(route.params.book))
 const chapterNum = computed(() => Number(route.params.chapter || 1))
+type CanonKey = '' | 'protestant' | 'catholic' | 'orthodox' | 'syriac' | 'ethiopian'
+const canon = computed<CanonKey>(() => (String(route.query.canon || '') as CanonKey))
+
+// 各傳統的「預設對照版本」——同傳統的欄位採同一編號系統（如天主教思高/拉丁通行本=
+// 七十士編號、新教和合/希伯來=希伯來編號），故詩篇等編號差異自然呈現、無需重對齊。
+const CANON_LABEL: Record<string, string> = {
+  protestant: '新教', catholic: '天主教‧思高', orthodox: '東正教',
+  syriac: '敘利亞‧Peshitta', ethiopian: '衣索匹亞',
+}
+const CANON_PREFS: Record<string, { chinese: string[]; english: string[]; source: string[] }> = {
+  protestant: { chinese: ['cuv1919', 'cuv2010', 'tcv'], english: ['niv', 'asv', 'kjva'], source: ['wlc', 'sblgnt'] },
+  catholic:   { chinese: ['sigao'], english: ['nabre', 'drc', 'knox'], source: ['vul', 'lxx'] },
+  orthodox:   { chinese: ['sigao', 'tcv'], english: ['brenton', 'knox'], source: ['lxx', 'csl', 'rus_syn'] },
+  syriac:     { chinese: ['sigao', 'tcv'], english: ['kjva'], source: ['peshitta', 'lxx'] },
+  ethiopian:  { chinese: ['sigao', 'tcv'], english: ['kjva', 'brenton'], source: ['lxx'] },
+}
 
 type BibleBook = {
   code: string
@@ -321,6 +344,14 @@ const availableVersionsList = computed(() =>
 function pickForCategory(cat: ColCategory): string {
   const avail = availableVersions.value.filter(v => v.category === cat)
   if (avail.length === 0) return ''
+  // 傳統優先：若該 canon 對此類別有偏好版本且已匯入，採用之（同傳統同編號系統）
+  const prefs = canon.value ? CANON_PREFS[canon.value]?.[cat] : undefined
+  if (prefs) {
+    for (const code of prefs) {
+      const hit = avail.find(v => v.code === code)
+      if (hit) return hit.code
+    }
+  }
   // For source: prefer testament-matched (hbo for OT, grc for NT)
   if (cat === 'source' && chapterData.value) {
     const testament = chapterData.value.book.testament

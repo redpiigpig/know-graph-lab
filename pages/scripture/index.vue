@@ -101,7 +101,7 @@
             <NuxtLink
               v-for="item in group.items"
               :key="item.book.code"
-              :to="`/scripture/${item.book.code}/1`"
+              :to="activeCanon === 'all' ? `/scripture/${item.book.code}/1` : `/scripture/${item.book.code}/1?canon=${activeCanon}`"
               class="block rounded-md px-2 py-2 hover:shadow-sm transition text-center border"
               :class="item.isDeutero
                 ? 'bg-emerald-50 border-emerald-300 hover:border-emerald-500'
