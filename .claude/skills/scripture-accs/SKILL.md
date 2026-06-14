@@ -105,9 +105,16 @@ python scripts/ingest_accs_genesis.py \
   ① **G:（Google Drive 串流碟）會卸載** → PDF 不可達；`accs_resume.ps1` 已加自我修復（偵測 G: 未掛載就跑
      `launch.bat` 等 60s）。② **編 `.ps1` 掉 UTF-8 BOM** → PowerShell 5.1 以 Big5 誤讀中文 → parse error 靜默失敗；
      改 .ps1 後務必存 **UTF-8 with BOM**。③ 排程 `DisallowStartIfOnBatteries=True` + 筆電在電池 → task 永久 "Queued"
-     不執行；已改 `AllowStartIfOnBatteries`+`DontStopIfGoingOnBatteries`。④ Max 額度乾時 claude CLI 會卡死，舊
-     `TimeoutExpired` 回 `[]` 致逐批各卡到天荒地老；已改 timeout 300s 並拋「依規範退出」讓本輪快退。
-  ⑤ `--replace` 曾在「本次 0 rows」時仍 delete → 清空全書；已修為「rows 為空就不刪不寫」（這就是這次資料被清的舊雷）。
+     不執行；已改 `AllowStartIfOnBatteries`+`DontStopIfGoingOnBatteries`。④ **G: 串流碟逐頁 on-demand 抓雲端，
+     長跑時 `render_page` 會無限卡死**（python 零 CPU、無 child、卡 2h）；`accs_resume.ps1` 已改**一次性複製 PDF
+     到 `c:/tmp`（同 stem 以保 checkpoint 對得上）**、OCR 全程只讀本地檔。⑤ **Max 額度乾時 `claude.cmd`→node 孫程序
+     卡 rate-limit 退避並占住 stdout pipe**，`subprocess.run(timeout)` 只殺 .cmd、`communicate()` 仍卡在未關 pipe →
+     本輪 wedge（之後被排程 CTRL_C 收屍，`LastTaskResult=0xC000013A`）；已改 **Popen + `taskkill /F /T` 連孫殺**，
+     逾時(300s) 真能拋「依規範退出」讓本輪~5min 內乾淨退（已實測）。
+  ⑥ `--replace` 曾在「本次 0 rows」時仍 delete → 清空全書；已修為「rows 為空就不刪不寫」（這就是這次資料被清的舊雷）。
+- **2026-06-15 00:05 狀態**：上述全修＋實測，排程乾淨、不再 wedge。DB 仍 7 列（創 1:1）。**唯一卡點＝Max 額度被並行
+  任務（jung/mueller/dadaodao/coach）吃乾** → OCR 一律逾時、本輪只 re-upsert 既有 7 列就退。額度回來才會真正往前。
+  接手只需看 DB rows 有沒有長；沒長就是還在等額度，別重啟、別開 direct run。
 - **demo placeholder**：`seed_accs_genesis_demo.py`（公有領域示範）已不在庫；要清殘留用 `--delete`。
 
 ### B. /scripture「各教會傳統 canon」重構 — **已完成上架（C 工程）**
