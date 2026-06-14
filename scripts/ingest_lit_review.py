@@ -173,6 +173,9 @@ def make_engine(engine: str):
         "gemini": te.gemini_with_nvidia_fallback,
         "nvidia": te.nvidia_translate,
         "sonnet": te.sonnet_translate,
+        # Haiku-primary: straight to paid Max OAuth (separate quota pool from the
+        # Gemini free tier), so it never contends with a concurrent Gemini run.
+        "haiku": te.haiku_first,
     }[engine]
     return te, fn
 
@@ -302,7 +305,7 @@ def main():
     ap.add_argument("--title", default="")
     ap.add_argument("--subtitle", default=None)
     ap.add_argument("--description", default=None)
-    ap.add_argument("--engine", default="gemini", choices=["gemini", "nvidia", "sonnet"])
+    ap.add_argument("--engine", default="gemini", choices=["gemini", "nvidia", "sonnet", "haiku"])
     ap.add_argument("--resume", action="store_true")
     ap.add_argument("--only", default=None, help="ref_key substring filter (fetch one)")
     ap.add_argument("--limit-paras", type=int, default=None)
