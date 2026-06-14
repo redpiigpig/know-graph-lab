@@ -1,4 +1,4 @@
-# 每日自動續跑 ACCS 創世記 1-11 的 Gemini 批次 OCR（B：排程自動續跑）。
+﻿# 每日自動續跑 ACCS 創世記 1-11 的 Gemini 批次 OCR（B：排程自動續跑）。
 # Gemini 每日額度重置後（台灣約 15:00）跑此腳本，--resume 從 checkpoint 接續，
 # --batch 4 省額度，空結果不清庫（ingest 內已 guard）。全頁完成寫 .done → 自動跳過。
 $ErrorActionPreference = 'Continue'
