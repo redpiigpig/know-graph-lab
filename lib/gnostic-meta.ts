@@ -13,7 +13,7 @@ export const CATEGORY_ORDER: { key: string; label: string; label_en: string }[] 
   { key: 'polemics',            label: '教父駁斥諾斯底文獻', label_en: 'Patristic Polemical Works' },
   { key: 'christian_apocrypha', label: '基督教偽典',         label_en: 'Christian Apocrypha' },
   { key: 'alchemical',          label: '煉金術文獻',         label_en: 'Alchemical Writings' },
-  { key: 'modern',              label: '現代諾斯底文獻',     label_en: 'Modern Gnostic Texts' },
+  { key: 'modern',              label: '現代文獻與近代學術', label_en: 'Modern Texts & Scholarship' },
   { key: 'dead_sea',            label: '死海古卷',           label_en: 'Dead Sea Scrolls' },
 ]
 

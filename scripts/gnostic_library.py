@@ -33,7 +33,7 @@ CATEGORIES: list[dict] = [
     {"key": "polemics",           "label_zh": "教父駁斥諾斯底文獻", "label_en": "Patristic Polemical Works",  "index_path": "library/polem.htm",                 "display_order": 90, "dedup_against_existing": True},
     {"key": "christian_apocrypha","label_zh": "基督教偽典",         "label_en": "Christian Apocrypha",        "index_path": "library/cac.htm",                   "display_order": 100, "dedup_against_existing": True},
     {"key": "alchemical",         "label_zh": "煉金術文獻",         "label_en": "Alchemical Writings",        "index_path": "library/alch.htm",                  "display_order": 110, "dedup_against_existing": False},
-    {"key": "modern",             "label_zh": "現代諾斯底文獻",     "label_en": "Modern Gnostic Texts",       "index_path": "library/modern.htm",                "display_order": 120, "dedup_against_existing": False},
+    {"key": "modern",             "label_zh": "現代文獻與近代學術", "label_en": "Modern Texts & Scholarship", "index_path": "library/modern.htm",                "display_order": 120, "dedup_against_existing": False},
     {"key": "dead_sea",           "label_zh": "死海古卷",           "label_en": "Dead Sea Scrolls",           "index_path": "library/dss/dss.htm",               "display_order": 130, "dedup_against_existing": True},
 ]
 

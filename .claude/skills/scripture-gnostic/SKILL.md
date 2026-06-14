@@ -25,6 +25,16 @@ description: 諾斯底主義文獻對照工具（/gnostic）— 把 The Gnostic 
 
 ---
 
+## 🟢 狀態（2026-06-14 定名／清理／詞庫 · 287 篇）
+
+> **2026-06-14 定名＋清理＋詞庫批次**（user 拍板，先做定名不動正文）— [scripts/curate_gnostic_naming.py](../../../scripts/curate_gnostic_naming.py)：
+> - **刪 17 筆雜項**：整個 `dead_sea`（11 筆全是書店／時間表／資源導覽頁，非原典；真死海古卷在 `/apocrypha` 崑蘭）＋ Mead 書店頁 2＋valentinus 導覽（目錄／virtual library／bibliography）3＋NHL 索引頁 1。304→**287 篇**。
+> - **近代學者著作集中到 `modern`**（11 筆，display_order 13000+ 排該類最底＝「放下面」）：Pagels／Meyer／Rudolph／Drower／Mead 導論＋數篇研究 essay。`modern` 標籤改「現代文獻與近代學術」。
+> - **定名（109 筆改動）**：與 `/apocrypha`（黃根春典外文獻）重疊者**逐字對齊**並存 `apocrypha_slug`（日後直接輸入中譯，兩邊一致；23 筆已連結）；其餘自譯按詞庫權威——Thomas=多馬、Mary=馬利亞、Andrew=安得烈、Stephen=司提反、Marcion=馬吉安、Clement=革利免、Celsus=塞爾蘇斯、Heracleon=赫拉克勒翁、Basilides=巴西理德、Faustus=浮士德、Valentinus=瓦倫廷、Stromata=雜記；修簡體 论→論。
+> - **詞庫補登**（[scripts/seed_gnostic_glossary_extra.py](../../../scripts/seed_gnostic_glossary_extra.py)）：deities +11（摩尼／三重至偉的赫密士／阿斯克勒庇俄斯／牧人者／烏特拉＋拿俄賽尼／馬吉安／摩尼／曼達／卡特里／卡波克拉特各派）；theologians +4（瓦倫廷／巴爾戴桑／埃皮法內斯／阿達伊）；theological_terms +5 作品名（赫密士文集／大寶庫／凱法萊亞／狄奧多托語錄／皮斯特斯·索菲亞）。
+> - **新增欄** `gnostic_documents.apocrypha_slug TEXT`（記錄與 /apocrypha 的對應，供日後直接匯入黃根春中譯）。
+> - ⏳ **待續**：正文逐段重譯（先標最差篇）；apocrypha 中譯完成後依 `apocrypha_slug` 直接輸入覆蓋對應篇。
+
 ## 🟢 狀態（2026-06-06 全量完成 · 304 篇 / 20,012 段）
 
 - ✅ **純函式核心（test-first，25 例綠）** — [scripts/gnostic_library.py](../../../scripts/gnostic_library.py) + [scripts/tests/test_gnostic_library.py](../../../scripts/tests/test_gnostic_library.py)：taxonomy / slug / 去重 / 分類頁解析 / 單篇 `<br>` 逐段解析 / **lxml 解析不閉合 `<p>` 讚歌頁** / 對齊 gate

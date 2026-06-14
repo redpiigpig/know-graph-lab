@@ -412,8 +412,22 @@ def do_chinese(slug, dry=False, accumulate=False):
                 print(f'  {ch}:1  {verses[ch][min(verses[ch])][:70]!r}')
         return rep
     rows = AV.verse_rows(slug, 'cct_zh', verses)
-    db_delete_version(slug, 'cct_zh')
-    db_insert_sections(rows)
+    if not rows:
+        print('[ZH] built 0 rows; skip delete/insert to avoid wiping existing cct_zh')
+        return rep
+    # delete+insert is non-atomic: a transient network error between them once wiped
+    # baruch (delete committed, insert skipped). Retry the pair as a unit — rows
+    # stay in memory so a re-delete (idempotent) + re-insert recovers.
+    for attempt in range(3):
+        try:
+            db_delete_version(slug, 'cct_zh')
+            db_insert_sections(rows)
+            break
+        except Exception as ex:
+            print(f'[ZH] ingest attempt {attempt+1} failed ({ex}); retrying')
+            time.sleep(10)
+    else:
+        raise RuntimeError(f'{slug}: cct_zh ingest failed after 3 attempts (rows kept in memory)')
     print(f'[ZH] ingested {len(rows)} verse-rows as cct_zh')
     return rep
 
