@@ -63,10 +63,12 @@
 ### 2b. 外文全文翻譯（`.zh.txt`）— 尚未開始
 - OCR/抽出的**外文**檔案要逐段翻繁中，存 R2 `dadaodao-fulltext/<rel>.zh.txt`，reader 自動出現「原文/繁中」切換。引擎走 [[ebook-translate]]（Gemini→NVIDIA→Haiku/Sonnet）。**尚無腳本**，待寫（可仿 fulltext pipeline 加 translate stage）。
 
-### 2c. 多語研究回顧（**另一條線，疑似平行 session 已起頭**）
-- **已有書目檔**：[scripts/data/lit_review_dadaodao.md](../../../scripts/data/)（commit `3aa666df`，**非本人所建**，疑平行 session）— 中/英/德/日 ~23 筆，依 7 主題分組，OA 標記。
-- **待做**：① 用 [[works-research-review]] 的 `scripts/ingest_lit_review.py --seed --project mahaprajapati-revolution` 入 `lit_review_entries`；② **書頁啟用「研究回顧」分頁**（目前 `loadLitReview()` 只在 `kind==='paper'` 跑、tab 也只 paper 顯示——要放寬給這本 book，或加 `manifest.litReview:true` gate）；③ 過夜 `--fetch-fulltext --resume` 抓 OA 外文全文＋逐段翻譯（原文/中譯兩欄 reader `/works/[slug]/review/[ref]` 已存在）。
-- ⚠️ **先確認 lit_review_dadaodao.md 是否仍有平行 session 在寫**，別對撞。
+### 2c. 多語研究回顧（**另一條線，平行 session 同時在做—小心對撞**）
+- **書目檔**：[scripts/data/lit_review_dadaodao.md](../../../scripts/data/) — 中/英/日 16 筆，依 **5 主題軸**（`##` 標題）分組，OA 標記。（原稱「7 主題」，實際 5 主題 + 1 待補段。）
+- ✅ **已 ingest（2026-06-14, commit `e5ce8126`）**：`scripts/ingest_lit_review.py --seed --entries-only --report scripts/data/lit_review_dadaodao.md --project mahaprajapati-revolution` → `lit_review_entries` **16 筆**（14 pending / 2 zh unavailable）。**務必 `--entries-only`**：本書是 `kind='book'`，沒加會被 seed 覆寫成 `kind='paper'`。
+- ✅ **解析基建已上**：`lit_review.py` 加 `BOOK_SURVEY_THEMES`（5 軸）+ `parse_review_report` 接受 `##` 標題（commit `2d7a6309`，平行 session）；`detect_language` 容忍「中文（簡體…）」→ zh（commit `e5ce8126`）。
+- ✅ **書頁分頁已啟用**：`loadLitReview()` 已對所有計畫載入、`bookTabs` 有書目即顯示「研究回顧」分頁（commit `2d7a6309`）。**部署後**書頁出現 badge 16 的分頁。
+- **待做**：過夜 `python -X utf8 scripts/ingest_lit_review.py --fetch-fulltext --project mahaprajapati-revolution --resume --engine gemini` 抓 14 筆 OA 外文全文＋逐段翻譯（原文/中譯兩欄 reader `/works/[slug]/review/[ref]` 已存在）。⚠️ **平行 session 可能正在跑此步**——啟動前先確認，避免雙跑浪費 Gemini 配額（upsert 冪等但白翻）。
 
 ---
 
