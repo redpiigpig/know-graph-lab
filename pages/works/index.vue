@@ -264,10 +264,11 @@ async function move(groupItems: Project[], idx: number, delta: number) {
   @apply w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0;
 }
 .project-title {
-  @apply text-sm font-semibold text-gray-900 mb-1;
+  @apply text-sm font-semibold text-gray-900 mb-1 break-words;
 }
 .project-desc {
-  @apply text-xs text-gray-500 leading-relaxed line-clamp-3;
+  /* 卡片描述固定夾 3 行不溢出；描述本身也應精簡（詳述放書頁，不要塞進卡片） */
+  @apply text-xs text-gray-500 leading-relaxed line-clamp-3 break-words;
 }
 .card-tool {
   @apply w-7 h-7 rounded-md hover:bg-gray-100 flex items-center justify-center text-sm transition;

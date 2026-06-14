@@ -7,6 +7,8 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
 
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：任一邊超過 2000px 會炸掉整個 session。
 
+> 🎨 **UI/UX — 文字一律不可溢出**：卡片／徽章／標籤文字必須在框內收乾淨，用 `line-clamp-N` + `break-words`（或 `truncate`）夾住，不可讓文字撐破或被硬切到看似溢出。`/works` 卡片描述 `line-clamp-3` + `break-words`；**且描述本身要精簡**（一兩句講重點），完整介紹放書頁封面／分頁，別把長段落塞進卡片（`writing_projects.description` 寫短）。新增任何卡片／列表 UI 都套這原則。見 [[feedback_ui_no_text_overflow]]。
+
 # 研究回顧 Skill（Literature Review — 原文/中譯 逐段對照）
 
 把一篇**研討會論文**放進**論文寫作**計畫，作為改寫成**期刊論文**的工作底稿，並在該計畫頁底**「研究回顧」分頁**附一份結構化**文獻綜述**：
