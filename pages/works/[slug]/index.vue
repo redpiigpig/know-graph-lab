@@ -187,12 +187,30 @@
                     <div class="px-3 pb-3 pt-1 border-t border-gray-50">
                       <ul v-if="g.files?.length" class="space-y-0.5">
                         <li v-for="(f, fi) in g.files" :key="fi">
-                          <a :href="`/api/works/material?key=${encodeURIComponent(f.key)}`"
-                            class="flex items-baseline gap-2 text-xs leading-relaxed rounded px-1 py-0.5 -mx-1 hover:bg-rose-50 no-underline group/file">
+                          <div class="flex items-baseline gap-2 text-xs leading-relaxed rounded px-1 py-0.5 -mx-1 hover:bg-rose-50/60 group/file">
                             <span class="inline-block w-9 flex-shrink-0 text-[10px] font-mono uppercase text-gray-300 text-right">{{ fileExt(f.name) }}</span>
-                            <span class="flex-1 text-gray-700 group-hover/file:text-rose-700">{{ f.name.replace(/\.[a-z0-9]+$/i, '') }}</span>
-                            <span class="flex-shrink-0 text-gray-300 group-hover/file:text-rose-400">{{ fmtSize(f.size) }} ↓</span>
-                          </a>
+                            <span class="flex-1 text-gray-700">{{ f.name.replace(/\.[a-z0-9]+$/i, '') }}</span>
+                            <button @click="toggleText(f)" class="flex-shrink-0 text-gray-400 hover:text-rose-600">
+                              {{ textStates[f.key]?.open ? '收合' : '全文' }}
+                            </button>
+                            <a :href="`/api/works/material?key=${encodeURIComponent(f.key)}`"
+                              class="flex-shrink-0 text-gray-300 hover:text-rose-500 no-underline">{{ fmtSize(f.size) }} ↓</a>
+                          </div>
+                          <!-- 全文面板 -->
+                          <div v-if="textStates[f.key]?.open" class="ml-11 mt-1 mb-2 rounded-lg border border-gray-100 bg-gray-50/70">
+                            <div v-if="textStates[f.key].loading" class="px-3 py-3 text-[11px] text-gray-400">載入全文⋯</div>
+                            <template v-else-if="textStates[f.key].available">
+                              <div v-if="textStates[f.key].zh" class="flex items-center gap-1 px-2 pt-2">
+                                <button v-for="v in (['zh','orig'] as const)" :key="v" @click="textStates[f.key].view = v"
+                                  class="text-[10px] px-2 py-0.5 rounded-full"
+                                  :class="textStates[f.key].view === v ? 'bg-rose-100 text-rose-700' : 'text-gray-400 hover:text-gray-600'">
+                                  {{ v === 'zh' ? '繁中' : '原文' }}
+                                </button>
+                              </div>
+                              <pre class="px-3 py-2 text-[11px] leading-relaxed text-gray-700 whitespace-pre-wrap font-sans max-h-80 overflow-auto">{{ textStates[f.key].view === 'zh' && textStates[f.key].zh ? textStates[f.key].zh : textStates[f.key].text }}</pre>
+                            </template>
+                            <div v-else class="px-3 py-3 text-[11px] text-gray-400">全文尚未轉錄（OCR 進行中）。</div>
+                          </div>
                         </li>
                       </ul>
                     </div>
@@ -623,6 +641,31 @@ function fmtSize(bytes?: number) {
   if (!bytes) return ''
   if (bytes >= 1024 * 1024) return `${(bytes / 1024 / 1024).toFixed(1)} MB`
   return `${Math.max(1, Math.round(bytes / 1024))} KB`
+}
+
+// 研究資料全文（轉錄文字；外文另有 .zh 繁中翻譯）lazy-load
+interface TextState { open: boolean; loading: boolean; loaded: boolean; available: boolean; text: string | null; zh: string | null; view: 'orig' | 'zh' }
+const textStates = reactive<Record<string, TextState>>({})
+async function toggleText(f: MaterialFile) {
+  let st = textStates[f.key]
+  if (!st) { st = textStates[f.key] = { open: false, loading: false, loaded: false, available: false, text: null, zh: null, view: 'orig' } }
+  st.open = !st.open
+  if (st.open && !st.loaded && !st.loading) {
+    st.loading = true
+    try {
+      const r = await $fetch<{ available: boolean; text: string | null; zh: string | null }>(
+        '/api/works/material-text', { query: { key: f.key } })
+      st.available = r.available
+      st.text = r.text ?? null
+      st.zh = r.zh ?? null
+      st.view = r.zh ? 'zh' : 'orig'
+    } catch {
+      st.available = false
+    } finally {
+      st.loading = false
+      st.loaded = true
+    }
+  }
 }
 
 // 碩士文稿正文（改寫底稿）
