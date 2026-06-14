@@ -83,22 +83,32 @@ python scripts/ingest_accs_genesis.py \
 
 ---
 
-## 🧭 下個 session 接手清單（2026-06-14）
+## 🧭 下個 session 接手清單（2026-06-14 晚更新）
 
-### A. ACCS 創世記 OCR — **重 OCR 中，靠排程自動跑**
+### A. ACCS 創世記 OCR — **從零重 OCR 中，排程自動跑（受 Max 額度節流）**
 - **引擎演進**：原用 Haiku Vision（Gemini 額度乾），但 **Haiku 掃描中文品質不合格**（錯字「住握裙/傅變/逐生」、
-  漏字、漏小標、合併；user 退兩次）。Gemini 品質佳但**每日額度被並行任務吃光**（一天只跑得了 ~33 頁）。
-  → **定案 Sonnet**（`--engine sonnet`，Max OAuth，5h 滾動額度，品質佳）。
-- **正在跑**：Windows 排程 **`ACCS_Gen_Resume`（每 2 小時）** 執行 `scripts/accs_resume.ps1` →
+  漏字、漏小標、合併；user 退兩次）。Gemini 品質佳但**每日額度被並行任務吃光**。
+  → **定案 Sonnet**（`--engine sonnet`，Max OAuth，5h 滾動額度）。**2026-06-14 已實測 Sonnet 內容品質佳**
+  （繁體乾淨、catena 結構正確、教父名／作品名準）。
+- **資料現況（重要）**：整夜排程因下列三雷空跑 → **DB 與 checkpoint 都被清空，從零重來**。目前 DB 只有
+  **創 1:1 共 7 列**（p40-42 第一批內容，已驗 pipeline end-to-end：OCR→build_rows_auto→正規化→DB 正確）。
+  其後即撞 Max rate-limit。**只剩被退掉的 Haiku 備份** `c:/tmp/accs_gen_創1-11.haiku.bak.jsonl`（別當成品）。
+  內容頁約 PDF **p46 起**（p1-45 前言，OCR 回 0 entries 正常）。
+- **正在跑**：Windows 排程 **`ACCS_Gen_Resume`（每 2 小時，StartBoundary 02:53）** 執行 `scripts/accs_resume.ps1` →
   `ingest_accs_genesis.py --book gen --pages 1-316 --engine sonnet --batch 3 --replace --resume`。
   Max 額度有就批次推進、沒有就快退；checkpoint 在 `c:/tmp/accs_gen_*.raw.jsonl`；全頁完成寫 `.done` 後排程自動跳過。
-  log：`scripts/logs/accs_gen_1-11_sonnet.log`。
-- **接手第一件事**：看 log / DB（`accs_commentary` where book_code=gen）確認進度；**首個 Sonnet 窗口跑出的內容要
-  spot-check 品質**（小標/斷句/錯字）再信任整本。創 1-11 完成 → 跑創 12-50（PDF：`…創12-50.pdf`，OT II）。
-- **⚠️ 重要踩雷（已修，別重蹈）**：① `--replace` 曾在「本次 0 rows（額度乾）」時仍 delete → 清空全書；
-  已修為「rows 為空就不刪不寫」。② Gemini key 處理：round-robin + RPM 退避，只有 credit-depleted 才永久剔除。
-  ③ dry-run 不寫 checkpoint。④ 早期 Haiku 版資料已被 Sonnet `--replace` 換掉；Haiku checkpoint 存 `c:/tmp/accs_gen_創1-11.haiku.bak.jsonl`。
-- **demo placeholder**：`seed_accs_genesis_demo.py`（公有領域示範）已不在庫（被真 OCR 取代）；要清殘留用 `--delete`。
+  log：`scripts/logs/accs_gen_1-11_sonnet.log`。**排程＝唯一擁有者**（`MultipleInstances=IgnoreNew`），
+  **別再另開 direct run 並行**（會搶同一 checkpoint）。
+- **接手第一件事**：`Get-ScheduledTaskInfo ACCS_Gen_Resume` 看有沒有在跑＋ DB（`accs_commentary` where book_code=gen）
+  看進度。額度足時整本 ~270 內容批次；創 1-11 完成 → 跑創 12-50（PDF：`…創12-50.pdf`，OT II）。
+- **⚠️ 2026-06-14 整夜空跑的真因（皆已修，別重蹈）**：
+  ① **G:（Google Drive 串流碟）會卸載** → PDF 不可達；`accs_resume.ps1` 已加自我修復（偵測 G: 未掛載就跑
+     `launch.bat` 等 60s）。② **編 `.ps1` 掉 UTF-8 BOM** → PowerShell 5.1 以 Big5 誤讀中文 → parse error 靜默失敗；
+     改 .ps1 後務必存 **UTF-8 with BOM**。③ 排程 `DisallowStartIfOnBatteries=True` + 筆電在電池 → task 永久 "Queued"
+     不執行；已改 `AllowStartIfOnBatteries`+`DontStopIfGoingOnBatteries`。④ Max 額度乾時 claude CLI 會卡死，舊
+     `TimeoutExpired` 回 `[]` 致逐批各卡到天荒地老；已改 timeout 300s 並拋「依規範退出」讓本輪快退。
+  ⑤ `--replace` 曾在「本次 0 rows」時仍 delete → 清空全書；已修為「rows 為空就不刪不寫」（這就是這次資料被清的舊雷）。
+- **demo placeholder**：`seed_accs_genesis_demo.py`（公有領域示範）已不在庫；要清殘留用 `--delete`。
 
 ### B. /scripture「各教會傳統 canon」重構 — **已完成上架（C 工程）**
 見下方「各傳統 canon 結構」整節。四傳統書序＋次經綠卡＋補編黃標＋canon-aware reader＋衣索匹亞教會秩序書 全上線。
