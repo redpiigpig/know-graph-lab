@@ -6,7 +6,7 @@
       <div class="w-full max-w-4xl">
         <div class="mb-8 text-center">
           <h1 class="text-2xl font-bold text-gray-900 mb-1">✝️ 基督教經典對照與註釋</h1>
-          <p class="text-sm text-gray-500">七個子工具：聖經多版本平行 / 典外文獻 / 教父著作 / 信條 / 教會法規 / 教宗訓導文獻 / 諾斯底主義文獻</p>
+          <p class="text-sm text-gray-500">八個子工具：聖經多版本平行 / 典外文獻 / 教父著作 / 信條 / 教會法規 / 教宗訓導文獻 / 諾斯底主義文獻 / 基督教大藏經</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -32,7 +32,7 @@
         </div>
 
         <div class="mt-10 text-xs text-gray-400 leading-relaxed">
-          <p>本入口集合與基督教聖典／信條／法規／教父／典外文獻相關的七個對照工具。</p>
+          <p>本入口集合與基督教聖典／信條／法規／教父／典外文獻相關的八個對照工具。</p>
           <p class="mt-1">資料源：Schaff《教父著作集 38 卷》／《Creeds of Christendom 3 卷》／IVP《古代基督信仰聖經註釋叢書 27 卷》／基督教典外文獻 10 卷／梵蒂岡公開檔案 等公開出版物。</p>
         </div>
       </div>
@@ -93,6 +93,13 @@ const tools = [
     icon: '🜍',
     title: '諾斯底主義文獻',
     desc: 'The Gnostic Society Library (gnosis.org) — 拿戈瑪第經集／古典諾斯底經典／瓦倫廷／赫密士文集／摩尼教／曼達教／卡特里派 等 13 類；英文（公有領域英譯）／繁中逐段對照',
+    enabled: true,
+  },
+  {
+    path: '/dazangjing',
+    icon: '📚',
+    title: '基督教大藏經',
+    desc: '仿佛教《大藏經》的漢語藏經分類矩陣，按古代／中世紀／近代／現代四時代收錄。古代部以「古典十藏」（經‧律‧論‧史傳‧譯校‧書信‧禮儀‧詩文‧宣道‧類書）統整 800 年前基督教、400 年前猶太教及異端／外教見證文獻',
     enabled: true,
   },
 ]
