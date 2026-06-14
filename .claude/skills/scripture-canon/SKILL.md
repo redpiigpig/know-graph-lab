@@ -1469,17 +1469,35 @@ q-peter-preaching / christian-sibyl / orphica / joseph-prayer
 - ⚠️⚠️ **seed 污染重大坑**：對「原本是 zh-own（自編章號＋導論混入）」的卷跑 `--accumulate` 重做時，會 **seed 進舊的錯位資料**（do_chinese accumulate 從現有 cct_zh 取種子）→ keep-longest 可能保留錯位/導論文字。實測 **jubilees** 跑完 coverage 85% 但 ch1:1=導論、ch5/23 內容錯位。**修法：換骨架型態（zh-own→bible/pseud）時，第一輪必須 `do_chinese(accumulate=False)` 清空重做（純內容對位、clamp 會丟掉無英文對應的導論），再 accumulate 收斂。** 路 a 的 12 卷次經上一輪已是 bible 對齊（非 zh-own），故 --force seed 乾淨、不受此影響。jubilees 待 fresh 重做。
 - ⚠️ **單調性 bug 已修 `union_fill`**：`--accumulate` 設計要「覆蓋率只升不降」，但 merge keep-longest + `clean_zh_verses` 會把上一輪已對齊的節換成新候選後清掉 → **回退**（實測 wisdom-solomon 99.77%→83%、2-maccabees 81%→75%）。已加純函式 `AV.union_fill(verses, seed)`：accumulate 後把 seed 缺的節補回，保證單調。do_chinese 已接。**47 tests 綠**。回退的卷用修好的碼重跑即可恢復。
 
-**🖥️ 監督交接（2026-06-14 05:20 更新，整夜 phase2b 結果）**：
-> **真實逐節覆蓋率（force batch summary + DB 實測）**：
-> tobit 244/244 100% ✅ / wisdom-solomon 436/436 100% ✅ / sirach 1368/1392 98.3% ✅ / baruch 140/140 100% ✅ / letter-jeremiah 73/73 100% ✅ / 1-macc 899/924 97.3% ✅ / 4-macc 476/480 99.2% ✅ / 1-esdras 442/448 98.7% ✅ / prayer-manasseh 15/15 100% ✅ / 4-ezra 1802/874 87.3%（ZH>EN，zh_extra 多，versification 不同，非急）/ judith 211/339 62.2% ⚠ / 2-macc 463/555 83.4% ⚠ / 3-macc 189/228 82.9% ⚠ / **jubilees＝已 FRESH 重建：污染 1115 zh-own 已清，對齊完整 1305 節 Charles 骨架(charles_apot)，accum pass 1 = 900/1305 69%（chapter/verse 正確；pass 2-4 尚未跑完，worker 卡死於 pass2）**。
-> **10/13 卷 ≥95%。jubilees FRESH 的核心目標（清污染＋對齊正確骨架）已達成；69%→92% 屬增量。**
+**🖥️ 監督交接（2026-06-14 06:50 更新，整夜 phase2b 收工 + 交棒新 session）**：
+> **整夜結果**：phase2b（overnight2.py）已 `[PHASE2] DONE` 乾淨退出。force batch 13 卷全跑完；**jubilees FRESH 完成 = 污染 1115 zh-own 清除、對齊完整 1305 節 Charles 骨架、accum pass1-4 = 69→81→82→84.1%（1098/1305，chapter/verse 正確）**。途中抓到並修掉一個資料遺失 bug（見下），baruch 已還原。
 >
-> **弱卷根因＝LLM key starvation，不是骨架/versification**（推翻舊假設）：judith 第 1–9 章 100%、第 10 章 13/23、**第 11–16 章整章 0 節** — 是後半本對齊視窗在 key 競爭下每輪 all-engines-failed、被「保留空窗」，故 pass2 +0.0 卡平台。**judith 不需換 brenton/sigao 骨架**，key 一空跑幾輪 `judith --zh --accumulate` 補 ch10-16 即可；2-macc/3-macc 八成同理（尾段視窗未翻）。
+> **真實逐節覆蓋率（DB 實測，06:50）**：
+> | 卷 | cov | | 卷 | cov |
+> |---|---|---|---|---|
+> | tobit | 244/244 100% ✅ | | 1-esdras | 442/448 98.7% ✅ |
+> | wisdom-solomon | 436/436 100% ✅ | | prayer-manasseh | 15/15 100% ✅ |
+> | baruch | 140/140 100% ✅(已還原) | | 4-ezra | 1802 列 87.3% ⚠ |
+> | letter-jeremiah | 73/73 100% ✅ | | **jubilees** | **1098/1305 84.1%** ✅(FRESH) |
+> | sirach | 1368/1392 98.3% ✅ | | judith | 211/339 62.2% ⚠ |
+> | 1-macc | 899/924 97.3% ✅ | | 2-macc | 463/555 83.4% ⚠ |
+> | 4-macc | 476/480 99.2% ✅ | | 3-macc | 189/228 82.9% ⚠ |
 >
-> **背景程序最終結果（05:50，phase2b 已 `[PHASE2] DONE` 並乾淨退出）**：force batch 13 卷全跑完；**jubilees FRESH 完成＝污染 1115 清除、對齊完整 1305 Charles 骨架、accum pass1-4 = 69→81→82→84.1%（1098/1305，chapter/verse 正確）**。先前幾輪誤判「worker 卡死」其實是 pass2-4 輸出被 buffer 藏住、龜速跑完（CPU 低因 I/O-bound），程序退出時才 flush。
-> **⚠️ baruch 回退 bug（已修）**：稽核發現 baruch cct_zh 歸零（原 140/140 100%）。根因＝do_chinese 的 `db_delete_version('cct_zh')`→`db_insert_sections` **非交易**；baruch pass2 的 RemoteDisconnected 落在「delete 已執行、insert 被跳過」之間 → 資料遺失。**已修**：line 414 後把 delete+insert 包成 3 次重試單元（rows 留記憶體，重刪冪等＋重插可復原）＋ `if not rows: skip` 防空寫；commit 在本表同批。已啟動 `baruch --zh` 背景重建（log `c:/tmp/baruch_fix.log`，cct_zh 已空無可損）。
+> **10/14 卷 ≥95%。次經主結構全部上架完成、jubilees 污染已清。剩餘只是 4 卷的增量品質補強。**
 >
-> **新 session 該做（全部 gated on「key 已空」＝coach/panikkar/sbe_translate 收工）**：① 先確認他人 LLM 任務是否結束。② key 空後：殺掉卡死的 phase2b(shim 20744+worker)→ 直接 `jubilees --zh --accumulate` 跑 3-4 輪（**用 accumulate=True 建在現有乾淨 900 上、絕不再 accumulate=False 清空**）推向 ≥92%。③ judith(缺 ch10-16)/2-macc/3-macc 各 `SLUG --zh --accumulate` 3-4 輪補尾段（根因是 starvation 非骨架）。④ 4-ezra 87% 查 zh_extra（非急）。⑤ deuterocanon force 全量重跑屬冗餘，別再 `--batch-bible --force`；只針對個別卷收。⑥ 別殺 coach/panikkar/sbe_translate/mueller/jung。⑦ 動 `apocrypha_verses.py` 先補 test。⑧ 診斷腳本 `/c/tmp/{probe_cov,probe2,probe3,jub_check,judith_diag}.py`（純 DB、不吃 key）可重用，全完成再清。完成後更新本表 + commit/push。
+> **✅ 已修 bug — do_chinese delete+insert 非交易資料遺失**（commit 已 push）：`db_delete_version('cct_zh')`→`db_insert_sections` 之間若遇 transient 網路錯誤（baruch pass2 撞 RemoteDisconnected），會「delete 已執行、insert 被跳過」→ 整卷 cct_zh 歸零。已改成 delete+insert 包 3 次重試單元（rows 留記憶體，重刪冪等＋重插可復原）＋ `if not rows: skip` 防空寫（apoc_verse_restructure.py line ~414）。baruch 用 `--batch-bible`(no force) 重建回 140/140。
+>
+> **弱卷根因＝LLM key starvation，不是骨架/versification**：judith 第 1–9 章 100%、第 10 章 13/23、**第 11–16 章整章 0 節** — 後半本對齊視窗在 key 競爭下每輪 all-engines-failed、被「保留空窗」，故 align_to_convergence gain<0.01 只 2 pass 即停、卡 62% 平台。**judith 不需換 brenton/sigao 骨架**；2-macc/3-macc 同理（尾段視窗未翻）。
+>
+> **🔻 新 session 待辦（全部 gated on「key 已空」）**：整夜 coach_vocab_bank / panikkar_auto / sbe_translate(mueller) 一直搶光 NVIDIA/Gemini key，故以下都還沒做、先確認這些任務已收工再動：
+> 1. **jubilees 84→≥92**：`jubilees --zh --accumulate` 連跑 1-2 輪（route-b，CLI 可直接跑；**accumulate=True 建在現有乾淨 1098 上、絕不 accumulate=False 清空**）。
+> 2. **judith(缺ch10-16) / 2-macc / 3-macc 補尾段**：⚠ 這三卷是 deuterocanon，**走 DOC_SOURCES 動態、CLI `SLUG --zh --accumulate` 會報 `no source config`**（baruch 即如此）。要嘛 `--batch-bible --force`（重跑全 13 卷、monotonic 安全但慢、冗餘），要嘛寫精簡腳本：`import apoc_verse_restructure as D`，仿 run_batch_bible line586 設 `D.DOC_SOURCES[slug]={'en_version':env,'en_kind':'bible','bible_book':book,'bible_version':bv,'book_name':slug}`（env/bv 由 `D._pick_bible_version(book)` 取），再 `D.align_to_convergence(slug)` 多跑幾輪。bug 已修，不會再清空。
+> 3. **4-ezra 87.3%**（zh_verses 1802 > en 874，zh_extra 多）：查是 versification 差異還是真缺；非急。
+> 4. 別再無謂 `--batch-bible --force`（已達標卷冗餘重跑）；只針對個別弱卷收。
+> 5. **動 `apocrypha_verses.py` 前先補 test**（[[feedback_apocrypha_verse_process]]）。
+> 6. **切勿殺** coach_vocab_bank / panikkar_auto / sbe_translate / mueller_auto / dadaodao_fulltext / hsingyun_build / upload_dadaodao_r2 / ingest_accs_genesis / jung 等他人程序。
+>
+> **暫存檔（任務全完再清）**：診斷腳本 `c:/tmp/{probe_cov,probe2,probe3,jub_check,baruch_check,judith_diag}.py`（純 DB、不吃 key、可重用）；log `c:/tmp/{phase2b,baruch_fix2}.log`；`c:/tmp/overnight2.py`（已 DONE，可留參考）。
 
 ### 教訓（值得記住）
 
