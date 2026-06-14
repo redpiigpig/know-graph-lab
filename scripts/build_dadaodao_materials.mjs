@@ -1,6 +1,8 @@
 // 把碩士論文「論文資料」archive（C:\tmp\dadaodao_files.json）轉成《當代的大愛道革命》
-// 研究資料 manifest，依 7 大「主題軸」重分類（每檔依關鍵字路由），保留出處為子群組。
-// 原檔上傳 R2（scripts/upload_dadaodao_r2.py），網站經 /api/works/material 簽名下載。
+// 研究資料 manifest，**依論文徵引資料的「文獻類別」分類**（仿 ch6.txt 徵引資料）：
+//   印順／昭慧／性廣 三師維持「作者」分類；其餘按文獻類別（期刊/研討會/學位論文/雜誌會訊/檔案…）
+//   與主題分類。off-topic 且論文未徵引的國家檔案（周聯華/衛理堂/高俊明 等基督教白色恐怖案）剔除。
+// 原檔上傳 R2（upload_dadaodao_r2.py），全文 dadaodao-fulltext/，下載走 /api/works/material。
 //   重跑：PowerShell 重列檔 → C:\tmp\dadaodao_files.json，再 `node scripts/build_dadaodao_materials.mjs`
 import { readFileSync, writeFileSync } from 'node:fs'
 
@@ -13,103 +15,101 @@ const { root, files } = JSON.parse(readFileSync(SRC, 'utf8').replace(/^﻿/, '')
 const base = (rel) => rel.split('/').pop()
 const fileEntry = (f) => ({ name: base(f.rel), key: `${R2_PREFIX}/${f.rel}`, size: f.size })
 
-// ── 出處（provenance）子群組：作者名／議題／資料夾 ──
-function source(rel) {
-  const p = rel.split('/')
-  switch (p[0]) {
-    case '作者': return p[1]
-    case '議題': return p.length > 2 ? p[1] : '議題雜項'
-    case '弘誓': return p[1] === '學位論文' ? '弘誓僧團學位論文' : '《弘誓》雙月刊'
-    case '印順學研討會': return '印順學研討會'
-    case '人間佛教研究期刊': return '人間佛教研究期刊'
-    case '福嚴會訊': return '福嚴會訊'
-    case '檔案': return p.length >= 3 ? (p[2] ?? '國家檔案局') : '檔案綜覽'
-    case '表格': return '彙整表格與圖'
-    default: return p[0] || '其他'
-  }
+// ── 剔除：論文徵引資料完全未寫到且與主題（印順／昭慧／性廣人間佛教）無關的國家檔案 ──
+// 論文只徵引「印順《佛法概論》查禁」一案；以下基督教界白色恐怖案皆未引用且無關。
+const OFFTOPIC_ARCHIVE = /周聯華|衛理堂|WCC|高俊明|戴華光|李國民|聖經受政府取締|穆克禮|叛亂犯/
+function pruned(rel) {
+  return rel.startsWith('檔案/') && OFFTOPIC_ARCHIVE.test(rel)
 }
 
-// ── 7 主題軸：依檔名／資料夾關鍵字路由 ──
+// ── 二手研究專文的主題（依檔名／資料夾關鍵字）──
 const KW = {
-  gender: /八敬法|性別|女性|比丘尼|兩性|同志|同性|婚姻平權|二部受戒|大愛道|尼僧|女眾|出櫃|平權|壹同寺|女佛|Women|Nuns?|Gender|Ordination|Bhikkhuni|female/i,
-  meditation: /禪觀|禪修|禪七|四念處|帕奧|養生|四界|四大|定慧|止觀|健身|禪法|禪堂|燃燈|共修|乾淨飲食|食安/i,
-  dialogue: /天主教|主教|神父|修女|基督|長老教會|牧師|宗教對話|宗教交談|宗教對談|交談|古倫|盧俊義|洪山川|公署|跨宗教/i,
-  activism: /社運|社會運動|入世|參與佛教|engaged|動保|動物|護生|護生|生態|環保|反賭|博弈|博奕|政治|公民社會|左翼|林義雄|烈火|安樂死|安貝卡|復興運動|TBMSG|入世佛教/i,
-  historiography: /白色恐怖|查禁|善導寺|戰後|史料|口述歷史|口述訪問|年鑑|教育年鑑|遷讓|叛亂|周聯華|戴華光|高俊明|檔案|沿革/i,
+  '性別平權與大愛道': /八敬法|性別|女性|比丘尼|兩性|同志|同性|婚姻平權|二部受戒|大愛道|尼僧|女眾|出櫃|平權|壹同寺/i,
+  '社會運動與入世佛教': /社運|社會運動|入世|參與佛教|動保|動物|護生|生態|環保|反賭|博弈|博奕|政治|左翼|林義雄|烈火|安貝卡|復興運動|TBMSG/i,
+  '禪觀修持與佛教養生': /禪觀|禪修|禪七|四念處|帕奧|養生|四界|四大|定慧|止觀|健身|禪法/i,
+  '宗教對話': /天主教|主教|神父|修女|基督|長老教會|牧師|宗教對話|宗教交談|交談|古倫/i,
+  '當代台灣佛教（對比山頭）': /星雲|佛光山|聖嚴|法鼓|慈濟|證嚴|趙樸初|現代禪|心靈環保/i,
 }
-// 出處 → 預設主題（無關鍵字命中時）
-const SRC_DEFAULT = {
-  '佛教性別議題': 'gender', '昭慧法師': 'thought', '性廣法師': 'meditation',
-  '入世佛教': 'activism', '游祥洲': 'activism',
-  '法鼓山': 'historiography', '佛光山': 'historiography', '慈濟': 'historiography', '趙樸初': 'historiography', '現代禪': 'historiography', '太虛大師': 'thought',
-  '印順學': 'thought', '人間佛教研究': 'thought', '議題雜項': 'thought',
-  '印順學研討會': 'thought', '人間佛教研究期刊': 'thought',
-  '福嚴會訊': 'historiography', '檔案綜覽': 'historiography', '國家檔案局': 'historiography', '彙整表格與圖': 'historiography',
-  '《弘誓》雙月刊': 'sangha', '弘誓僧團學位論文': 'sangha',
-  '釋昭慧': 'sangha', '釋性廣': 'meditation', '釋傳法': 'sangha', '釋見岸': 'sangha',
-  '侯坤宏': 'thought', '邱敏捷': 'thought', '林建德': 'thought', '楊惠南': 'thought',
-  '江燦騰': 'thought', '藍吉富': 'thought', '闞正宗': 'thought', '李志夫': 'thought',
-  '釋悟殷': 'thought', '釋傳道': 'thought', '黃運喜': 'historiography', '釋印順': 'thought',
-  '洪山川': 'dialogue', '盧俊義': 'dialogue',
+function theme(rel) {
+  for (const [label, re] of Object.entries(KW)) if (re.test(rel)) return label
+  return '印順學與人間佛教思想' // 預設
 }
-function theme(rel, src) {
-  const hay = rel // 用整段相對路徑（含資料夾＋檔名）比對
-  for (const t of ['gender', 'meditation', 'dialogue', 'activism', 'historiography']) {
-    if (KW[t].test(hay)) return t
+
+// ── 主分類（文獻類別）；印順／昭慧／性廣 例外用作者分類 ──
+function classify(rel) {
+  const p = rel.split('/')
+  const c = p[0]
+  if (c === '作者' && p[1] === '釋印順') return { cat: '印順導師', sub: '釋印順 著作' }
+  if ((c === '作者' && p[1] === '釋昭慧') || (c === '議題' && p[1] === '昭慧法師')) return { cat: '昭慧法師', sub: '昭慧法師 著作與相關研究' }
+  if ((c === '作者' && p[1] === '釋性廣') || (c === '議題' && p[1] === '性廣法師')) return { cat: '性廣法師', sub: '性廣法師 著作與相關研究' }
+  if (c === '人間佛教研究期刊') return { cat: '期刊論文', sub: '《人間佛教研究》' }
+  if (c === '印順學研討會') return { cat: '研討會論文', sub: '印順學研討會（印順導師思想之理論與實踐）' }
+  if (c === '弘誓' && p[1] === '學位論文') return { cat: '學位論文', sub: '弘誓僧團相關學位論文' }
+  if (c === '弘誓') return { cat: '雜誌與會訊', sub: '《弘誓》雙月刊' }
+  if (c === '福嚴會訊') return { cat: '雜誌與會訊', sub: '《福嚴會訊》' }
+  if (c === '表格') return { cat: '工具書與彙整', sub: '彙整表格與圖' }
+  if (c === '檔案') {
+    if (/佛法概論/.test(rel)) return { cat: '法規檔案', sub: '印順《佛法概論》查禁案（論文徵引）' }
+    if (/善導寺|道安|陳善謙/.test(rel)) return { cat: '法規檔案', sub: '善導寺相關檔案' }
+    return { cat: '法規檔案', sub: '國家檔案局其他卷宗（內容待全文轉錄辨識）' }
   }
-  // 國家檔案局案件夾（無檔名語意）一律史料
-  if (rel.startsWith('檔案/')) return 'historiography'
-  return SRC_DEFAULT[src] ?? 'thought'
+  // 其餘學者二手研究（作者非三師＋議題其他主題）→ 主題研究專文，依主題分組
+  return { cat: '主題研究專文', sub: theme(rel) }
 }
 
-const THEME_META = {
-  thought: { label: '人間佛教思想與印順學脈絡', icon: '🌱', desc: '印順導師人間佛教的體系、印順學派的成立與分流，及太虛以降的思想傳承' },
-  gender: { label: '性別平權與大愛道革命', icon: '⚖️', desc: '八敬法廢除、女性出家與二部受戒、佛教女性研究、同志婚姻平權的佛學反思', core: true },
-  activism: { label: '社會運動與入世佛教', icon: '✊', desc: '動物保護、反賭博、生態環保、國際入世佛教與當代台灣佛教社會運動' },
-  meditation: { label: '禪觀修持與佛教養生', icon: '🧘', desc: '性廣法師的禪觀思想、帕奧禪法、四念處與「四界調和」佛教養生學' },
-  dialogue: { label: '宗教對話', icon: '🕊️', desc: '與天主教（洪山川總主教）、基督長老教會（盧俊義牧師）的跨宗教交談與合作' },
-  sangha: { label: '弘誓教團與人物', icon: '🪷', desc: '佛教弘誓學院／僧團的建置與人物、《弘誓》雙月刊、訪談錄與相關學位論文' },
-  historiography: { label: '史料與當代台灣佛教脈絡', icon: '🗄️', desc: '國家檔案局白色恐怖檔案、福嚴會訊、彙整表格，及法鼓山／佛光山／慈濟等對比山頭' },
+const CAT_META = {
+  '印順導師': { icon: '📿', desc: '印順導師（釋印順）著作與自述' },
+  '昭慧法師': { icon: '🪷', desc: '昭慧法師著作、時論與相關研究（含議題專輯）', core: true },
+  '性廣法師': { icon: '🧘', desc: '性廣法師著作、禪觀與相關研究（含議題專輯）', core: true },
+  '主題研究專文': { icon: '📚', desc: '其他學者的二手研究專文，依主題分組（非依作者）' },
+  '期刊論文': { icon: '📰', desc: '學術期刊刊載之論文' },
+  '研討會論文': { icon: '🎓', desc: '研討會發表之論文與側記' },
+  '學位論文': { icon: '🎓', desc: '碩博士學位論文' },
+  '雜誌與會訊': { icon: '🗞️', desc: '教界雜誌、雙月刊與會訊（《弘誓》雙月刊・《福嚴會訊》）' },
+  '法規檔案': { icon: '🗄️', desc: '政府檔案與會議記錄（論文徵引之印順查禁案＋善導寺脈絡；基督教界白色恐怖等無關卷宗已剔除）' },
+  '工具書與彙整': { icon: '📊', desc: '彙整表格、分布圖與工具性資料' },
 }
-const THEME_ORDER = ['thought', 'gender', 'activism', 'meditation', 'dialogue', 'sangha', 'historiography']
+const CAT_ORDER = ['印順導師', '昭慧法師', '性廣法師', '主題研究專文', '期刊論文', '研討會論文', '學位論文', '雜誌與會訊', '法規檔案', '工具書與彙整']
+const SUB_PRIORITY = ['性別平權與大愛道', '社會運動與入世佛教', '禪觀修持與佛教養生', '宗教對話', '印順學與人間佛教思想', '當代台灣佛教（對比山頭）']
 
-// 出處子群組在各主題內的排序：兩位法師與其教團優先
-const SRC_PRIORITY = ['釋昭慧', '釋性廣', '佛教性別議題', '昭慧法師', '性廣法師', '釋傳法', '釋見岸', '《弘誓》雙月刊', '弘誓僧團學位論文', '釋悟殷']
-
-// 聚合：theme → source → files
-const tmap = new Map(THEME_ORDER.map((t) => [t, new Map()]))
+// 聚合：cat → sub → files
+const cmap = new Map(CAT_ORDER.map((c) => [c, new Map()]))
+let prunedCount = 0
 for (const f of files) {
-  const src = source(f.rel)
-  const t = theme(f.rel, src)
-  const g = tmap.get(t)
-  if (!g.has(src)) g.set(src, [])
-  g.get(src).push(fileEntry(f))
+  if (pruned(f.rel)) { prunedCount++; continue }
+  const { cat, sub } = classify(f.rel)
+  const g = cmap.get(cat)
+  if (!g.has(sub)) g.set(sub, [])
+  g.get(sub).push(fileEntry(f))
 }
 
-function sortSources(names) {
-  const head = SRC_PRIORITY.filter((n) => names.includes(n))
-  const tail = names.filter((n) => !SRC_PRIORITY.includes(n)).sort((a, b) => a.localeCompare(b, 'zh-Hant'))
-  return [...head, ...tail]
+function sortSubs(cat, names) {
+  if (cat === '主題研究專文') {
+    const head = SUB_PRIORITY.filter((n) => names.includes(n))
+    return [...head, ...names.filter((n) => !SUB_PRIORITY.includes(n))]
+  }
+  return names.sort((a, b) => a.localeCompare(b, 'zh-Hant'))
 }
 
-const categories = THEME_ORDER.filter((t) => tmap.get(t).size).map((t) => {
-  const meta = THEME_META[t]
-  const gmap = tmap.get(t)
-  const groups = sortSources([...gmap.keys()]).map((src) => {
-    const fs = gmap.get(src).sort((a, b) => a.name.localeCompare(b.name, 'zh-Hant'))
-    const g = { label: src, count: fs.length, size: fs.reduce((s, f) => s + f.size, 0), files: fs }
-    if (['釋昭慧', '釋性廣', '佛教性別議題', '《弘誓》雙月刊'].includes(src)) g.tag = '核心'
+const categories = CAT_ORDER.filter((c) => cmap.get(c).size).map((cat) => {
+  const meta = CAT_META[cat]
+  const gmap = cmap.get(cat)
+  const groups = sortSubs(cat, [...gmap.keys()]).map((sub) => {
+    const fs = gmap.get(sub).sort((a, b) => a.name.localeCompare(b.name, 'zh-Hant'))
+    const g = { label: sub, count: fs.length, size: fs.reduce((s, f) => s + f.size, 0), files: fs }
+    if (['性別平權與大愛道'].includes(sub)) g.tag = '核心'
     return g
   })
   const count = groups.reduce((s, g) => s + g.count, 0)
-  return { key: t, label: meta.label, icon: meta.icon, desc: meta.desc, count, groups }
+  return { key: cat, label: cat, icon: meta.icon, desc: meta.desc, groups, count }
 })
 
+const kept = files.length - prunedCount
 const manifest = {
   book: '當代的大愛道革命',
   subtitle: '昭慧法師與性廣法師的人間佛教思想與實踐',
   source: root,
-  note: '原碩士論文研究資料全數移入並上傳雲端，依 7 大主題軸重新分類（出處保留為子群組），每件可線上下載。',
+  note: '研究資料依論文徵引資料的文獻類別整理：印順／昭慧／性廣三師維持作者分類，其餘按文獻類別（期刊／研討會／學位論文／雜誌會訊／檔案…）與主題分類。與本書主題無關且論文未徵引的國家檔案（基督教界白色恐怖案）已剔除。原檔可線上下載。',
   interviews: true,
   thesis: {
     title: '印順導師人間佛教思想的傳承與實踐：以昭慧法師、性廣法師為核心',
@@ -129,11 +129,12 @@ const manifest = {
       { id: 'app4', title: '附錄四　訪談人物分類表' },
     ],
   },
-  totalFiles: files.length,
-  totalBytes: files.reduce((s, f) => s + f.size, 0),
+  totalFiles: kept,
+  prunedFiles: prunedCount,
+  totalBytes: files.filter((f) => !pruned(f.rel)).reduce((s, f) => s + f.size, 0),
   categories,
 }
 
 writeFileSync(OUT, JSON.stringify(manifest, null, 2), 'utf8')
-console.log(`Wrote ${OUT}: ${categories.length} themes, ${manifest.totalFiles} files, ${(manifest.totalBytes / 1024 / 1024).toFixed(0)} MB`)
-for (const c of categories) console.log(`  ${c.icon} ${c.label}: ${c.count} 件 / ${c.groups.length} 出處`)
+console.log(`Wrote ${OUT}: ${categories.length} 類, 保留 ${kept} 件（剔除 ${prunedCount}）`)
+for (const c of categories) console.log(`  ${c.icon} ${c.label}: ${c.count} 件 / ${c.groups.length} 組`)
