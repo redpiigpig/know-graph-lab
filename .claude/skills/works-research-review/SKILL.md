@@ -79,14 +79,15 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
 
 1. **全集補充再擴充（小，選配）** — 目前只補 2 篇（《中國禪宗史》讀後／太虛大師評傳）。要更多「主題相關但論文未引用」篇章，候選在聖嚴《評介》b…16 與印順人間佛教綱領文。流程＝加進 [lit_review_yinshun_shengyan_corpus_additions.md](../../../scripts/data/) → `ingest_lit_review.py --seed --entries-only --display-offset 200` → 算 `lr.make_ref_key` → 填進 `import_corpus_fulltext.py` 的 `MAP` → `--only` 跑。聖嚴《評介》b16 TOC：1 近代中國佛教史上的四位思想家／2 太虛大師評傳✅／3 劃時代的博士比丘／4 印順長老的佛學思想／7《中國禪宗史》讀後✅／11《成佛之道》讀後…。
 
-2. **🔴 大任務：`/works/mahaprajapati-revolution`（大愛道革命）879 件研究資料全文轉錄** — user 明確要求「都將其全文轉錄」。獨立大工程、**尚未動工**，**務必先跟 user 確認範圍與顯示位置再開跑**（5.7GB、多為受版權掃描 PDF）。詳見下節。
+2. **🔴 大任務：`/works/mahaprajapati-revolution`（大愛道革命）879 件研究資料全文轉錄** — user 第二則訊息要求「都將其全文轉錄」。⚠️ **這不是新任務——它已是進行中的既有 pipeline**（`scripts/dadaodao_fulltext.py`，**469/879 已轉**，剩 ~410 件多為國家檔案局掃描 JPG/PDF 待 OCR）。**唯一真相在 [dadaodao_handoff.md](dadaodao_handoff.md)**（接手前先讀完），別重寫腳本、別重新規劃。
 
-### 大愛道革命 879 件全文轉錄 — 現況與計畫（未動工）
+### 大愛道革命 879 件全文轉錄 — 指向既有 handoff（勿重做）
 
-- **來源**：manifest [public/content/works/mahaprajapati-revolution-materials.json](../../../public/content/works/)（879 件、5.7GB，已上 R2，key 前綴 `dadaodao-materials/`，私有 bucket，經 [server/api/works/material.get.ts](../../../server/api/works/) 簽名下載）。分 7 大類：思想與印順學脈絡(18 組)／性別平權／社會運動／禪觀修持／宗教對話／弘誓教團／史料與當代台灣佛教脈絡(30 組)。多為**期刊掃描 PDF**（人間佛教研究期刊／弘誓雙月刊／印順學研討會論文／學位論文）＋檔案影像。
-- **✅ 顯示管線已現成（重大！免做 UI／API）**：per-file「全文」面板（[pages/works/[slug]/index.vue](../../../pages/works/) 約 line 194，書籍計畫 manifest 分頁）按下「全文」會打 [server/api/works/material-text.get.ts](../../../server/api/works/)，它把 manifest 的 material key（`dadaodao-materials/<rel>`）映射到 **R2 key `dadaodao-fulltext/<rel>.txt`**（外文另有 `dadaodao-fulltext/<rel>.zh.txt` 繁中翻譯，面板自帶 zh/orig 切換）。**所以「轉錄」＝ OCR 每件 → 把純文字上傳到 `dadaodao-fulltext/<rel>.txt`（rel = 去掉 `dadaodao-materials/` 前綴的相對路徑）**；檔案一上傳，面板自動點亮，零前端改動。
-- **未決定（要問 user）**：(a) **範圍**——879 全做，還是先做最相關子集（思想與印順學脈絡 18 組／其中印順學 23 件、印順學研討會 22 件、侯坤宏 23 件…）？(b) **OCR 引擎**——中文掃描 PDF → Gemini Vision 為主（[[feedback_ocr_strategy]]），量大過夜批次 + 2-strike quota pause（[[feedback_ocr_two_strike_quota]]）。
-- **建議起手**：① `python` 讀 manifest 列出每件 `{key,name,size}`，從 R2 抓回（或本機 Drive 原檔，canonical 見 [[feedback_drive_canonical_storage]]）判型別（已是文字 PDF vs 掃描影像 PDF vs 圖檔）、估頁數總量；② 寫 `scripts/transcribe_dadaodao.py`（test-first 純函式 + 驅動）：抓檔→Gemini Vision OCR（繁中、保留段落）→上傳 `dadaodao-fulltext/<rel>.txt`，`--resume`（看 R2 已有 .txt 跳過）、per-file try/except、2-strike quota pause；③ 挑「思想與印順學脈絡／印順學」一組做 pilot，按面板「全文」確認顯示 OK，再 user 拍板全量過夜。R2 設定走 `useRuntimeConfig` 的 `r2Endpoint/r2AccessKey/r2SecretKey/r2Bucket`（.env 同名）。
+- **權威交接文件**：[.claude/skills/works-research-review/dadaodao_handoff.md](dadaodao_handoff.md)（最後更新 2026-06-14，含完整現況/腳本/待辦/雷區）。記憶 [[project_dadaodao_book]]。
+- **現況一句話**：原檔 879 件已上 R2（`dadaodao-materials/<rel>`），全文轉錄存 `dadaodao-fulltext/<rel>.txt`（外文翻譯 `.zh.txt`），書頁每件「全文」鈕 lazy-load 走 [server/api/works/material-text.get.ts](../../../server/api/works/)。**469/879 已轉**（免 API 抽完 455＋OCR 數件）。
+- **▶ 接續＝跑既有腳本**：`python -X utf8 scripts/dadaodao_fulltext.py --ocr-only --pace 2`（冪等 resume，已轉跳過；上次 2-strike 配額停機；建議過夜迴圈）。引擎 Gemini 4-key→Sonnet(OAuth) 救援。
+- **後續線**（見 handoff §2b/2c）：外文 `.zh.txt` 翻譯 stage（尚無腳本）；多語「研究回顧」分頁（書目檔 `scripts/data/lit_review_dadaodao.md` 已由平行 session 建，待 ingest + 對 book 開分頁）。
+- **回應 user 的「都轉錄」**：即此 OCR 長尾——下一步就是設過夜 `--ocr-only` 迴圈把剩 ~410 掃描檔跑完，**不需新工程**。
 
 ## 版權姿態
 
