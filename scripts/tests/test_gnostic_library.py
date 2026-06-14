@@ -276,3 +276,81 @@ def test_assert_aligned_raises_on_mismatch():
         gl.assert_aligned(["a", "b", "c"], ["甲", "乙"])
     # no raise on match
     gl.assert_aligned(["a"], ["甲"])
+
+
+# ── Translation quality gate (classify_translation) ───────────────────────
+def test_gate_passes_a_faithful_translation():
+    assert gl.classify_translation(
+        "Yeshua said, Seek and you shall find.",
+        "耶穌說：尋求，就必尋見。") is None
+
+
+def test_gate_flags_halluc_heading():
+    # short EN heading blown up into a long fabricated ZH essay
+    assert gl.classify_translation(
+        "CHAP. XII.--THE DOCTRINES OF PTOLEMY.",
+        "第十二章\n\n托勒密派宣稱，在太一之上存在著一個超越一切名稱的存有，"
+        "他們稱之為深淵，乃一切事物之源，與沉默配偶而居。深淵與沉默流溢出努斯"
+        "與真理，努斯又流溢出邏各斯與生命，如此構成普累若麻的整體結構。索菲亞"
+        "因渴慕深淵而墮落，其情慾化為物質，巨匠造物主由此而生，無知地造作了這"
+        "個有缺陷的世界，並自命為唯一的神。"
+    ) == "halluc_heading"
+
+
+def test_gate_flags_untranslated_english_left():
+    assert gl.classify_translation(
+        "The Marcosians assert that things visible were made after the invisible.",
+        "第十七章\n\nThe Marcosians assert that the things which are visible were made"
+    ) == "untranslated"
+
+
+def test_gate_flags_meta_commentary_leak():
+    assert gl.classify_translation(
+        "(John goes from Miletus to Ephesus.)",
+        "我已準備好接收英文文本進行翻譯。請提供需要翻譯的英文段落。"
+    ) == "meta_leak"
+
+
+def test_gate_flags_word_by_word_english_gloss():
+    assert gl.classify_translation(
+        "I am the Light which is in them.",
+        "我（I）是（am）那（the）光（Light），那（the）光（Light）是（is）普累若麻。"
+    ) == "word_gloss"
+
+
+def test_gate_does_not_flag_legit_first_person_content():
+    # "我無法保持貞潔" is a real translation of "I cannot remain chaste", NOT a leak
+    assert gl.classify_translation(
+        "I cannot remain chaste; first, I do not fret at the cutting of trees.",
+        "我無法保持貞潔；首先，我不為砍伐樹木而憂慮。") is None
+
+
+def test_gate_does_not_flag_legit_scholarly_transliterations():
+    # （gnosis）（batos）（syzygy）are valid annotations, not a word-gloss leak
+    assert gl.classify_translation(
+        "Sophia, without her consort, emanated from the Pleroma.",
+        "索菲亞未經其配偶（syzygy）便從普累若麻流出，墮入無知（gnosis）的深淵（batos）。"
+    ) is None
+
+
+def test_gate_does_not_flag_a_short_heading_kept_short():
+    assert gl.classify_translation("PREFACE.", "序言") is None
+    assert gl.classify_translation("OF GOD AND THE UNIVERSE", "論神與宇宙") is None
+
+
+def test_gate_flags_wenyan_classical_drift():
+    # 白話/和合本 mandated; 名曰 / 焉 / 矣 are classical particles → flag
+    assert gl.classify_translation(
+        "There were two snakes; one was named 'Heavy-laden'. Its tail was very long.",
+        "又聞昔日有二蛇，其中一蛇名曰「負重者」。其尾甚為長焉。") == "wenyan"
+
+
+def test_gate_allows_baihua_union_version_register():
+    # proper 白話/和合本 voice must pass (uses 名叫/說/看哪/他便, not 曰/焉)
+    assert gl.classify_translation(
+        "Like a shepherd who sees a lion, he takes a lamb and sets it as a snare.",
+        "如同牧人看見獅子，他便取一隻羊羔，設為陷阱。看哪，他就這樣救了羊圈。") is None
+    # 白話 words containing 乎/其 must NOT be flagged
+    assert gl.classify_translation(
+        "He almost reached the gate, among the others.",
+        "他幾乎到了門口，在其他人當中。") is None

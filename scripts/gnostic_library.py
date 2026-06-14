@@ -265,3 +265,74 @@ def assert_aligned(en: list, zh: list) -> None:
             f"section count mismatch: {len(en)} EN vs {len(zh)} ZH "
             "(every English paragraph needs exactly one Chinese paragraph)"
         )
+
+
+# ── Translation quality gate ──────────────────────────────────────────────────
+# assert_aligned only checks COUNT (en==zh). It cannot catch the real 2026-06-06
+# failure mode: a short EN heading hallucinated into a long fabricated ZH essay
+# (count still matched, so it passed). This gate is the missing SOURCE↔OUTPUT
+# invariant — run it on every paragraph at translation time, not just post-hoc.
+#
+# Engine meta-commentary / refusal / note markers that leak into ZH content,
+# anchored near the START (leaks lead the output) and bound to task-referencing
+# context so legitimate first-person prose ("我無法保持貞潔") is NOT flagged.
+META_LEAD_RE = re.compile(
+    r"^[\s「『（(]*("
+    r"我(?:已)?準備好(?:接收|進行|翻譯|為您)|我注意到您|"
+    r"我(?:無法|不能|沒辦法)(?:完成|識別|確定|判斷|提供(?:翻譯|準確)|翻譯這|處理這|"
+    r"直接(?:轉|翻)譯|為您翻譯)|"
+    r"無法(?:識別|確定|判斷)(?:這(?:個|段)|您|此|原文|出)|"
+    r"我(?:必須|需要)坦誠(?:告知)?|我感謝您的(?:信任|請求)|"
+    r"作為(?:一個|一名)?(?:AI|人工智慧|語言模型)|很抱歉(?:，|,)?我|"
+    r"請(?:您)?提供(?:要|您要|完整|您想|需要)|您提供的(?:英文|文本|文段|內容|片段|文字)|"
+    r"你提供的(?:英文|文本|文段|內容|片段|文字)|這(?:個|段)文(?:本|字)(?:並非|不是|看起來)|"
+    r"根據(?:著作權|版權)|基於(?:著作權|版權)|"
+    r"以下(?:是|為).{0,15}(?:翻譯|譯文)|這是.{0,12}的(?:繁體中文)?翻譯|"
+    r"此處「.{0,20}」(?:應譯|建議)|建議(?:保留|譯為|使用「)|"
+    r"\*\*原文|\*\*翻譯|原文：|翻譯：|逐字翻譯[：:]|繁體中文翻譯："
+    r")")
+
+# Word-by-word English gloss leak ("我（I）是（am）那（the）光（Light）"): common
+# ENGLISH FUNCTION WORDS bracketed inline. Must NOT match legitimate scholarly
+# transliteration annotations like （gnosis）（batos）（syzygy）（ruha）.
+WORD_GLOSS_RE = re.compile(
+    r"（(?:the|is|am|are|and|of|to|in|that|which|a|an|he|she|it|was|were|be|"
+    r"for|with|i|you|they|we|his|her|this|these|those|from|by|on|at|as|but|"
+    r"or|not|all|out|into)）", re.I)
+
+
+def latin_ratio(s: str) -> float:
+    """Fraction of characters that are Latin letters (untranslated signal)."""
+    if not s:
+        return 0.0
+    return len(re.sub(r"[^A-Za-z]", "", s)) / len(s)
+
+
+# Distinctive 文言 (classical Chinese) sentence particles that the user-mandated
+# 白話/《和合本》 register must NOT use (和合本 says 「名叫」「說」, never 名曰／焉／矣).
+# Only HIGH-PRECISION markers — 之／其／乃 are excluded (they occur in 白話 too).
+WENYAN_RE = re.compile(r"名曰|曰[：「『]|[^。！？\s]焉[。，、！]|矣[。，！]|哉[！。]")
+
+
+def classify_translation(en: str, zh: str) -> str | None:
+    """Return a failure-mode tag if the ZH translation of EN is bad, else None.
+
+    Tags: empty / meta_leak / word_gloss / untranslated / halluc_heading / wenyan.
+    halluc_heading = a short EN source blown up into a long ZH essay (the
+    fabrication signal); the real body, if any, lives in an adjacent section.
+    wenyan = drifted into classical Chinese (register violation; 白話/和合本 only).
+    """
+    en, zh = (en or "").strip(), (zh or "").strip()
+    if not zh:
+        return "empty"
+    if META_LEAD_RE.match(zh):
+        return "meta_leak"
+    if len(WORD_GLOSS_RE.findall(zh)) >= 3:
+        return "word_gloss"
+    if len(zh) > 40 and latin_ratio(zh) > 0.5:
+        return "untranslated"
+    if 0 < len(en) < 70 and len(zh) >= 2.5 * len(en) and latin_ratio(zh) <= 0.5:
+        return "halluc_heading"
+    if WENYAN_RE.search(zh):
+        return "wenyan"
+    return None
