@@ -1,7 +1,18 @@
-# 星雲大師全集案例（⚠️ 來源受阻：官網不出全文）
+# 星雲大師全集案例（單一語言案例 #3）
 
-> collected-works 第三套漢傳佛教全集，但**與印順/聖嚴根本不同**：官方來源**不釋出可枚舉全文**。
-> 現況＝**先建作家 hub + 完整書目（366 部，取自官方《著作總覽》），全文待接入 App API**。
+> collected-works 第三套漢傳佛教全集。**2026-06-14 突破**：user 給出 `/ArticleDetail/artcle{N}`
+> ——每篇文章免登入 server-render 全文，自帶麵包屑階層 → **全集可枚舉、可全量入庫**（不必 App API）。
+> 下游入庫/hub/reader 與印順/聖嚴完全共用，差別只在來源解析器。
+
+## ✅ 全文端點（2026-06-14，user 提供 `artcle1980` 後找到）
+`https://books.masterhsingyun.org/ArticleDetail/artcle{N}`（N≈100–24000，~87% 有效、其餘 302）：
+- `<ul class="breadcrumb">`：`第N類【類名】 › 冊(共M冊) › 子冊 › p篇` ← **大類/冊/篇 階層全在這**，靠它反推結構不需另一份目錄。
+- `<div class="txtContent">`：`<p>` 內 `<br><br>` 分段、`<b>` 小標 → `parse_article` 切段。
+- 資料模型：parent_volume＝大類（第N類）、ebook＝冊（麵包屑第 2 項，~366 部）、chunk＝一篇 artcle、page_number 取 `pNNN`。
+- crawl `scripts/hsingyun_build.py --crawl`（**4 workers + 每請求延遲 + 指數退避 + 快取 resumable**，~2 萬篇、~2h；被擋就停、快取可續）→ `--build --upload`（快取分組成冊入庫）。test `scripts/tests/test_hsingyun_build.py`（10 例綠）。
+
+### 歷史：官網 reader 為何一開始找不到全文（仍有效的教訓）
+`/bcN/bookM` 是空殼、sitemap 僅 38 URL、無 XHR/API → 一度誤判「不出全文」。**真相是內文走另一條 MVC 路由 `/ArticleDetail/artcle{N}`，不在 sitemap、不被 reader 殼揭露。教訓：薄殼 JS 站找不到內容端點時，問 user 要一個「實際在讀的文章 URL」往往直接破關。**
 
 ## 版權
 星雲大師 1927–2023，2023 圓寂 → 非公有領域。私站 auth-gate 可收（同印順/聖嚴），但前提是**先有乾淨全文來源**。
