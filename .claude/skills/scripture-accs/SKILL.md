@@ -3,7 +3,11 @@ name: scripture-accs
 description: 把《古代基督信仰聖經註釋叢書》(ACCS, IVP/校園) 的教父註釋嵌進 /scripture 聖經閱讀器 — 經文逐節對照不動，按一個「教父註釋」鈕即在每個 ACCS 經文段落（pericope）下方展開「總論＋具名教父引文」區塊（經文上‧註釋下版面）。資料走 accs_commentary 表（verse_start..verse_end 對齊段落）；來源用校園書房繁中版掃描 PDF，Gemini 結構化 OCR→純函式 parser→入庫。與 [[scripture-fathers]] 分工：fathers 做「教父全集整卷翻譯/精修上 /fathers」；本 skill 做「ACCS 註釋嵌進聖經逐節閱讀」。Use when 要新增/重 OCR 某卷 ACCS 經文註釋、調 /scripture 註釋版面、改 accs_commentary schema 或 parser、推廣到創世記以外的書卷。
 ---
 
-> ⚙️ 引擎政策：OCR 走 **Gemini Vision（主）→ Haiku Vision（明確下令才開、一次一本）**，2-strike 429 退出（[[feedback_ocr_strategy]] / [[feedback_ocr_two_strike_quota]]）。中文一律繁體（[[feedback_traditional_chinese_only]]）。
+> ⚙️ 引擎政策（2026-06-14 更新）：掃描中文 OCR 品質 **Sonnet > Gemini ≫ Haiku**。
+> Haiku Vision 對掃描中文錯字/漏字/合併嚴重（user 退過兩次），**已棄用**。
+> Gemini 品質佳但**每日額度與 jung/mueller 等並行任務共用、常乾**。
+> → 現役引擎 = **Sonnet（`--engine sonnet`，Claude Max OAuth，5h 滾動額度）**，多頁批次（`--batch`）省額度。
+> `ingest_accs_genesis.py` 支援 `--engine gemini|haiku|sonnet`。中文一律繁體（[[feedback_traditional_chinese_only]]）。
 > 🚨 截圖／渲染頁 ≤2000px（[[feedback_screenshot_2000px]]）。
 
 # ACCS 教父註釋嵌入聖經閱讀器 Skill
@@ -72,16 +76,79 @@ python scripts/ingest_accs_genesis.py \
   [[scripture-fathers]] 譯名決策；FATHER_FIXES 只收同一人異寫，**不碰同名異人**）。
 
 ## 測試
-`python scripts/tests/test_accs_commentary.py`（或 `pytest`）— 19 例：節範圍解析（單節/連字/全形冒號/
-跨章夾斷/亂碼）、教父譯名收斂、build_rows 的 pericope/entry 排序與空 body 跳過。改 parser 必先補測試。
+`python scripts/tests/test_accs_commentary.py`（或 `pytest`）— **34 例**：節範圍解析（單節/連字/全形冒號/
+跨章夾斷/亂碼）、`parse_full_ref`/`build_rows_auto`（整本自動分章+章內 carry-forward）、教父譯名收斂、
+繁體強制（opencc s2twp）/`has_simplified`/`normalize_body`、build_rows 的 pericope/entry 排序與空 body 跳過。
+改 parser 必先補測試（user 很在意 test-first）。
 
-## 現況（2026-06-12）
-- ✅ schema / parser+測試 / API / reader UI（toggle + 經文上註釋下）/ ingest 腳本 全部到位、build 綠。
-- ⏳ **創世記 ch1 真實 ACCS 內容尚未 OCR**：當下 Gemini 配額 429（prepayment depleted）。先用
-  `scripts/seed_accs_genesis_demo.py` 灌了 **公有領域示範 placeholder**（我自寫的繁中摘要，非校園原文，
-  source_vol 標「（公有領域示範…）」）讓版面可審。**Gemini 配額回復（台灣 ~15:00）或 user 下令開 Haiku Vision 後**，
-  跑 ingest_accs_genesis.py 取代之；取代前先 `seed_accs_genesis_demo.py --delete` 清掉示範列。
-- 🔜 待 user 看過版面 → 推廣：創 1-11 全章 → 創 12-50 → 其他書卷（每卷 PDF 在同一 27 冊 folder）。
+---
+
+## 🧭 下個 session 接手清單（2026-06-14）
+
+### A. ACCS 創世記 OCR — **重 OCR 中，靠排程自動跑**
+- **引擎演進**：原用 Haiku Vision（Gemini 額度乾），但 **Haiku 掃描中文品質不合格**（錯字「住握裙/傅變/逐生」、
+  漏字、漏小標、合併；user 退兩次）。Gemini 品質佳但**每日額度被並行任務吃光**（一天只跑得了 ~33 頁）。
+  → **定案 Sonnet**（`--engine sonnet`，Max OAuth，5h 滾動額度，品質佳）。
+- **正在跑**：Windows 排程 **`ACCS_Gen_Resume`（每 2 小時）** 執行 `scripts/accs_resume.ps1` →
+  `ingest_accs_genesis.py --book gen --pages 1-316 --engine sonnet --batch 3 --replace --resume`。
+  Max 額度有就批次推進、沒有就快退；checkpoint 在 `c:/tmp/accs_gen_*.raw.jsonl`；全頁完成寫 `.done` 後排程自動跳過。
+  log：`scripts/logs/accs_gen_1-11_sonnet.log`。
+- **接手第一件事**：看 log / DB（`accs_commentary` where book_code=gen）確認進度；**首個 Sonnet 窗口跑出的內容要
+  spot-check 品質**（小標/斷句/錯字）再信任整本。創 1-11 完成 → 跑創 12-50（PDF：`…創12-50.pdf`，OT II）。
+- **⚠️ 重要踩雷（已修，別重蹈）**：① `--replace` 曾在「本次 0 rows（額度乾）」時仍 delete → 清空全書；
+  已修為「rows 為空就不刪不寫」。② Gemini key 處理：round-robin + RPM 退避，只有 credit-depleted 才永久剔除。
+  ③ dry-run 不寫 checkpoint。④ 早期 Haiku 版資料已被 Sonnet `--replace` 換掉；Haiku checkpoint 存 `c:/tmp/accs_gen_創1-11.haiku.bak.jsonl`。
+- **demo placeholder**：`seed_accs_genesis_demo.py`（公有領域示範）已不在庫（被真 OCR 取代）；要清殘留用 `--delete`。
+
+### B. /scripture「各教會傳統 canon」重構 — **已完成上架（C 工程）**
+見下方「各傳統 canon 結構」整節。四傳統書序＋次經綠卡＋補編黃標＋canon-aware reader＋衣索匹亞教會秩序書 全上線。
+**仍待**：① 8 卷衣索匹亞教會秩序書（徒遺/徒教/六法典）**只有結構與名稱、無經文內容**（需另找來源）。
+② reader 端「補編真內嵌成母卷章」（但以理 13/14、詩篇151 顯示在母卷章序內，而非連到補編書頁）——目前是母卷章選單後方連結 + 補編頁標「屬於次經範圍」。③ 詩篇完整 versification 跨傳統對齊表（目前靠「同傳統同編號系統」+ 提示）。
+
+---
+
+## 各傳統 canon 結構（`bible_canon_books`，2026-06-14 建）
+
+`/scripture` index 與 reader 依「所選 canon」呈現該傳統**自己的書序、第二正典、補編、書名**。
+
+### 資料表 `bible_canon_books`
+`canon, book_code, testament('ot'|'nt'), sort_order, is_deutero, chapter_count(覆寫;NULL=用bible_books),
+name_override, abbr_override(傳統專屬書名), parent_code(補編所屬母卷), has_additions(母卷含補編),
+section(新約子分類如「教會秩序書」)`。PK(canon,book_code)。RLS 公共讀。
+- **單一來源 = `scripts/seed_canon_order.py`**（種 catholic/orthodox/syriac/ethiopian；冪等 upsert）。
+  `database/bible-canon-order.sql` 只剩 schema（舊 catholic INSERT 已註解）。欄位 ALTER 用 Management API 加過。
+- 端點 `server/api/scripture/canon-order.get.ts` 回 `{canon: [rows]}`；index/reader 各 `$fetch` 一次。
+
+### 顏色語意（user 拍板）
+- **綠卡 = 整卷第二正典**（多比/友弟德/智慧/德訓/巴錄/瑪加伯…，`is_deutero`）。
+- **黃卡 = 含次經補編之正典書**（`has_additions`）：但以理（蘇撒納/貝耳與大龍/阿匝黎雅）、詩篇（詩151）、
+  以斯帖（希臘增補）、巴錄（耶肋米亞書信）。**補編不出獨立書卡**（`parent_code` 指母卷 → index 跳過）。
+- reader：補編卷（sus/bel/aza/ps2/epj）開啟時頂部橫幅「**屬於次經範圍**·為《母卷》補編」；母卷章選單後方列補編連結。
+
+### 各傳統重點（卷數）
+- **新教 66**：用 bible_books 預設（無此表 → fallback 和合本序）。
+- **天主教 77**：思高/拉丁通行本序；7 整卷次經 interleaved（綠）；但/以斯帖/巴（黃，補編）。
+- **東正教 82**：七十士序——**小先知在大先知前**、**公函在保羅書信前**（拜占庭）、詩151+默拿舍禱詞、4瑪加伯附錄。
+  **厄斯德拉採 LXX 命名（name_override）**：1es=以斯拉A(Ἔσδρας Αʹ)、ezr=以斯拉上、neh=以斯拉下(Ἔσδρας Βʹ)。
+- **敘利亞 72**：Peshitta——**新約 22 卷**（無 2彼/2-3約/猶/啟）。
+- **衣索匹亞 94**：禧年書/以諾一書/巴錄四書併入舊約；**新約 35** = 27 + 「**教會秩序書**」子分類（`section`）8 卷：
+  徒遺(十二使徒遺訓)/徒教(使徒教訓) + 六法典〔秩典(秩序典)/訓典(訓令典)/戒典(戒律典)/規典(規章典)/聖上(聖約前典)/聖下(聖約後典)〕。
+  **codes**：e_didache/e_didasc/e_sinodos1-4/e_kidan1-2（bible_books 已建，**無經文內容**）。
+
+### 書名政策（user 訂正）
+**只有天主教用思高本書名**（`name_sigao`/`abbr_sigao`，見 database/bible-books-sigao.sql；注意亞=亞毛斯/匝=匝加利亞/
+納=約納/瑪=瑪竇/拉=瑪拉基/若=若望 同字不同書陷阱）；**其餘所有傳統（新教/東正/敘利亞/衣索匹亞）一律和合本**。
+例外：`name_override`（如東正教以斯拉A/上/下）優先於上述。
+
+### canon-aware reader（內容差異）
+`/scripture/[book]/[chapter]?canon=X`：依傳統挑預設對照版本（DB 有 33 版本：思高/Vulgate/LXX/Peshitta/
+教會斯拉夫/亞美尼亞/科普特/俄文/Brenton…）。**同傳統欄位採同一編號系統**（天主教思高/Vulgate=七十士編號、
+新教和合/希伯來=希伯來編號）→ 詩篇等編號差異自然呈現，**免脆弱的重對齊表**。詩篇頁有編號差異提示；nav 顯示傳統標籤。
+CANON_PREFS / displayBookName / canonQS 等在 `[chapter].vue`。
+
+### 相關檔案（canon 部分）
+`database/{bible-canon-order,bible-books-sigao}.sql` · `scripts/seed_canon_order.py` ·
+`server/api/scripture/canon-order.get.ts` · `pages/scripture/index.vue` · `pages/scripture/[book]/[chapter].vue`。
 
 ## See also
 - [[scripture-fathers]] — 教父全集整卷翻譯/精修（/fathers）；ACCS 譯名決策同源
