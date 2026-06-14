@@ -93,7 +93,28 @@ def test_doc_type_themes_cover_the_seven_bibliography_sections():
     # the header families are disjoint and all feed SECTION_LABELS
     assert lr.THEME_LABELS.isdisjoint(lr.DOC_TYPE_LABELS)
     assert lr.SUPPLEMENT_LABELS.isdisjoint(lr.THEME_LABELS | lr.DOC_TYPE_LABELS)
-    assert lr.SECTION_LABELS == lr.THEME_LABELS | lr.DOC_TYPE_LABELS | lr.SUPPLEMENT_LABELS
+    assert lr.BOOK_SURVEY_LABELS.isdisjoint(
+        lr.THEME_LABELS | lr.DOC_TYPE_LABELS | lr.SUPPLEMENT_LABELS)
+    assert lr.SECTION_LABELS == (
+        lr.THEME_LABELS | lr.DOC_TYPE_LABELS | lr.SUPPLEMENT_LABELS | lr.BOOK_SURVEY_LABELS)
+
+
+def test_parse_review_report_assigns_book_survey_section_at_h2_level():
+    # A book project's survey uses `##` headers with its own thematic axes; the
+    # parser must match SECTION_LABELS regardless of heading depth.
+    md = """# 《某專書》多語研究回顧
+
+## 性別平權與大愛道革命
+
+【NTU 佛研】〈A Study of Gender Equality in Humanistic Buddhism〉，《佛教學報》
+語言：英文
+摘要：比較諸師對人間佛教性別平等的推動。
+"""
+    parsed = lr.parse_review_report(md)
+    assert len(parsed["entries"]) == 1
+    assert parsed["entries"][0]["theme"] == "性別平權與大愛道革命"
+    # the level-1 document title must NOT be mistaken for a theme
+    assert parsed["entries"][0]["theme"] != "《某專書》多語研究回顧"
 
 
 def test_parse_review_report_assigns_supplement_section_as_theme():

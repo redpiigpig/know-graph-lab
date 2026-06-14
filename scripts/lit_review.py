@@ -60,8 +60,23 @@ SUPPLEMENT_THEMES: list[dict] = [
 ]
 SUPPLEMENT_LABELS = {t["label"] for t in SUPPLEMENT_THEMES}
 
+
+# ── Book-survey themes: thematic axes for a 專書 multi-language 研究回顧 ──────────
+# A book project (kind='book', e.g.《當代的大愛道革命》) groups its survey by the
+# book's own subject axes rather than the 4 八敬法 THEMES. Headers in the report
+# may sit at any heading level (`##`), so parse_review_report matches SECTION_LABELS
+# regardless of `#` depth.
+BOOK_SURVEY_THEMES: list[dict] = [
+    {"key": "humanistic", "label": "人間佛教思想與印順學脈絡", "order": 310},
+    {"key": "gender",     "label": "性別平權與大愛道革命",     "order": 320},
+    {"key": "engaged",    "label": "社會運動與入世佛教",       "order": 330},
+    {"key": "meditation", "label": "禪觀修持與佛教養生",       "order": 340},
+    {"key": "history",    "label": "史料與當代台灣佛教脈絡",   "order": 350},
+]
+BOOK_SURVEY_LABELS = {t["label"] for t in BOOK_SURVEY_THEMES}
+
 # Any header recognised as a section divider (theme assignment).
-SECTION_LABELS = THEME_LABELS | DOC_TYPE_LABELS | SUPPLEMENT_LABELS
+SECTION_LABELS = THEME_LABELS | DOC_TYPE_LABELS | SUPPLEMENT_LABELS | BOOK_SURVEY_LABELS
 
 
 # ── Language label (語言：英文) → ISO code ───────────────────────────────────
@@ -250,8 +265,9 @@ def parse_review_report(md: str) -> dict:
 
     for ln in lines:
         s = ln.strip()
-        # a `#`-prefixed (not `##`) header that names one of our themes
-        if s.startswith("#") and not s.startswith("##"):
+        # a `#`-prefixed header (any level) that names one of our themes — a paper
+        # report uses single `#`, a book survey may use `##`; both match by label.
+        if s.startswith("#"):
             header = s.lstrip("#").strip()
             if header in SECTION_LABELS:
                 flush()

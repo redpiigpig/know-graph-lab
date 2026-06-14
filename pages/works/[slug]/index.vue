@@ -290,6 +290,51 @@
             </div>
           </div>
 
+          <!-- ── 研究回顧（文獻綜述） ── -->
+          <div v-show="bookTab === 'review'">
+            <div class="mb-4">
+              <h2 class="text-base font-semibold text-gray-900">研究回顧</h2>
+              <p class="text-xs text-gray-500 mt-0.5">
+                多語文獻綜述 · 共 {{ litEntries.length }} 筆 · 依主題脈絡分組
+                <span v-if="litEntries.length"> · 開放取用外文文獻提供 <span class="text-rose-600">原文／逐段中譯</span> 兩欄對照</span>
+              </p>
+            </div>
+            <div v-if="litLoading" class="text-gray-400 text-sm py-8 text-center">載入中⋯</div>
+            <div v-else-if="litEntries.length === 0" class="text-gray-400 text-sm py-8 text-center">尚無文獻綜述。</div>
+            <div v-else class="space-y-8">
+              <section v-for="grp in litGroups" :key="grp.theme">
+                <h3 v-if="grp.theme" class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">{{ grp.theme }}</h3>
+                <div class="space-y-3">
+                  <div v-for="e in grp.items" :key="e.id"
+                    class="bg-white rounded-2xl border border-gray-100 p-5 transition-all"
+                    :class="e.has_fulltext ? 'cursor-pointer hover:border-rose-200 hover:shadow-sm' : ''"
+                    @click="() => e.has_fulltext && navigateTo(`/works/${slug}/review/${e.ref_key}`)">
+                    <div class="flex flex-wrap items-center gap-1.5 mb-2">
+                      <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">{{ langLabel(e.language) }}</span>
+                      <span v-if="e.dimension" class="text-xs font-medium px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-600">{{ e.dimension }}</span>
+                      <span v-if="e.stance" class="text-xs font-medium px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 break-words">立場：{{ e.stance }}</span>
+                      <span v-if="e.has_fulltext" class="text-xs font-medium px-2 py-0.5 rounded-full bg-rose-50 text-rose-700">{{ e.language === 'zh' ? '全文' : '原文／中譯對照' }}</span>
+                    </div>
+                    <h4 class="text-sm font-semibold text-gray-900 leading-snug mb-1">
+                      {{ e.authors }}<span v-if="e.year"> （{{ e.year }}）</span>　{{ e.title }}
+                    </h4>
+                    <p v-if="e.venue" class="text-xs text-gray-500 mb-2">{{ e.venue }}</p>
+                    <p v-if="e.abstract_zh" class="text-sm text-gray-700 leading-relaxed">{{ e.abstract_zh }}</p>
+                    <div class="mt-2 flex flex-wrap items-center gap-3 text-xs">
+                      <NuxtLink v-if="e.has_fulltext" :to="`/works/${slug}/review/${e.ref_key}`" @click.stop
+                        class="text-rose-700 hover:underline font-medium">{{ e.language === 'zh' ? '閱讀全文 →' : '閱讀全文（原文／中譯）→' }}</NuxtLink>
+                      <NuxtLink v-if="e.fulltext_url && e.fulltext_url.startsWith('/')" :to="e.fulltext_url" @click.stop
+                        class="text-amber-700 hover:underline">在全集閱讀器開啟 →</NuxtLink>
+                      <a v-else-if="e.fulltext_url" :href="e.fulltext_url" target="_blank" rel="noopener" @click.stop
+                        class="text-blue-600 hover:underline break-all">原始連結 ↗</a>
+                      <span v-if="!e.has_fulltext && !e.fulltext_url" class="text-gray-300 italic">無線上全文</span>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
           <!-- ── 書摘與構思（登入者限定） ── -->
           <div v-show="bookTab === 'notes'">
             <div class="mb-3 flex items-center justify-between">
@@ -708,7 +753,7 @@ function renderThesisText(txt: string): string {
 }
 
 // 書籍計畫分頁（研究資料 / 碩士文稿 / 口述訪談 / 書摘與構思）
-type BookTab = 'materials' | 'thesis' | 'interviews' | 'notes'
+type BookTab = 'materials' | 'thesis' | 'interviews' | 'review' | 'notes'
 const bookTab = ref<BookTab>('materials')
 const useBookTabs = computed(() => project.value?.kind !== 'paper' && !dialogueDays.value.length && materialsAvailable.value)
 const bookTabs = computed(() => {
@@ -717,6 +762,7 @@ const bookTabs = computed(() => {
   ]
   if (thesisConf.value) tabs.push({ key: 'thesis', label: '碩士文稿' })
   if (showInterviews.value) tabs.push({ key: 'interviews', label: '口述訪談', badge: String(interviewsStore.published.length) })
+  if (litEntries.value.length) tabs.push({ key: 'review', label: '研究回顧', badge: String(litEntries.value.length) })
   if (user.value) tabs.push({ key: 'notes', label: '書摘與構思' })
   return tabs
 })
@@ -728,7 +774,8 @@ const litEntries = ref<LitEntry[]>([])
 const litLoading = ref(false)
 
 async function loadLitReview() {
-  if (project.value?.kind !== 'paper') { litEntries.value = []; return }
+  // 論文計畫一律載入；書籍計畫也可掛研究回顧（如《當代的大愛道革命》），有書目才顯示分頁。
+  if (!project.value) { litEntries.value = []; return }
   litLoading.value = true
   try {
     const res = await $fetch<{ entries: LitEntry[] }>('/api/lit-review/entries', { query: { slug: slug.value } })
