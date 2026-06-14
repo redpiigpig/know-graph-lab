@@ -72,6 +72,7 @@ BOOK_SURVEY_THEMES: list[dict] = [
     {"key": "engaged",    "label": "社會運動與入世佛教",       "order": 330},
     {"key": "meditation", "label": "禪觀修持與佛教養生",       "order": 340},
     {"key": "history",    "label": "史料與當代台灣佛教脈絡",   "order": 350},
+    {"key": "dharmadrum", "label": "法鼓山與聖嚴法師人間佛教", "order": 360},
 ]
 BOOK_SURVEY_LABELS = {t["label"] for t in BOOK_SURVEY_THEMES}
 
