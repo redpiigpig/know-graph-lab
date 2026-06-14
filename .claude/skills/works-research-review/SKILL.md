@@ -91,6 +91,24 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
 - `ocr_interview_book.py --keep-captions`：預設略過圖說，但**人名／與會者名單型圖說**（標 `〔圖說〕`）完整保留；`--stems "a,b,c"` 只重 OCR 指定頁（補抓特定圖說）。
 - `ingest_interview_sections.py` 支援 `--slug <other-project>`、`--only-range lo,hi`、`--exclude-range lo,hi`（依印刷頁碼）。**用途**：把一本訪談錄的某主題章節「改放」到別的計畫——例 恆清《杏壇衲履》第柒章「參與藏傳比丘尼傳承重建」(頁217–273) 移到 `bajingfa`(c1 昭慧戒律學) 的「跨傳統比較」，其餘留 dadaodao；含 1997 第一次漢藏比丘尼研討會與會名單（圖說保留）。
 
+## 🚀 接手清單：大愛道革命研究回顧 — 印順×聖嚴／兩學派／台灣佛教史擴充（2026-06-15）
+
+**現況**：`mahaprajapati-revolution` 研究回顧 = **45 書目 / 7 主題軸**（`lit_review.py` `BOOK_SURVEY_THEMES`：humanistic/gender/engaged/meditation/history/dharmadrum/**intellect「佛教知識化、高教與電子佛典」**）。書目來源 `scripts/data/lit_review_dadaodao.md`，`ingest_lit_review.py --seed --entries-only --project mahaprajapati-revolution`（**book 計畫務必 `--entries-only`**）。已 push 至 master。
+
+**已內嵌全文（單欄 zh，reader 可讀）**：
+- 4 本訪談錄照片：惠敏《六十感恩紀》89／李志夫《浮塵掠影》117／吳老擇《臺灣佛教一甲子》53／恆清《杏壇衲履》65（已扣藏傳章）／印順九秩祝壽文集 7
+- 邱敏捷《印順學派的成立、分流與發展》訪談錄 28
+- 林建德×3（抉擇傳承2／如來藏40／空性佛性50）＋王宣歷 融合性34（PDF；清楚層 `extract_pdf_pages.py`、亂碼層 `ocr_pdf_article.py`）
+- **PDF 已上 R2 `dadaodao-materials/研究回顧/`、`fulltext_url`=簽名下載連結、本地刪**（`archive_ref_pdf_r2.py`）；照片夾轉錄確認段數=照片數後已刪。
+- **恆清第柒章「參與藏傳比丘尼傳承重建」(頁217–273) 已改放 `bajingfa`(c1)「跨傳統比較」entry `hengqing-xizang-bhikkhuni-2007`**，含1997漢藏研討會與會名單（圖說保留，頁237）。
+
+**待辦（使用者下次開 session 做）**：
+1. **使用者會下載文獻放根目錄** → 照流程轉錄。清單見根目錄 `大愛道革命_研究回顧_建議下載文獻.txt`（A 版權需購書/借閱、B OA可下載但作者待核、C 闞正宗/江燦騰/丁敏 台大佛圖作者頁逐篇OA）。
+2. **B 段 4 筆 OA**（NTU 632505 知識化核心／CHBJ8 社會變遷／CUHK 21世紀130／晨曦社 mag171763）字型亂碼、作者待核 → render OCR 或下載核 metadata 後入 `史料/intellect` 主題。
+3. **資料修正**：現有 ja entry〈「人間仏教」：近代中国仏教改革運動と太虚〉(標「釋昭慧 等」) 疑為 **何燕生〈中国語圏における「人間仏教」〉**(J-Stage rsjars 94/2, 94_81) 標錯，待使用者確認改正。
+4. **選配**：en/ja OA（Jimmy Yu／Bingenheimer／Zimmerman-Liu／西野翠／Wittern）目前僅書目層，可 `ingest_lit_review.py --fetch-fulltext` 抓全文逐段翻譯。
+- ⚠️ commit 一律 pathspec 只提交自己的檔；平行 session 在動 `ingest_gnostic.py`/`apoc_verse_restructure.py`/`scripture-gnostic` 勿碰。
+
 ## 🚀 新 session 接手清單：印順／法鼓 全文匯入（2026-06-14）
 
 **已完成（commit 在 master）**：c12 研究回顧 23 條已內嵌我們自轉錄的印順／聖嚴全集全文，單欄 reader + listing 連結 + API 分頁修復全上線並截圖實證。
