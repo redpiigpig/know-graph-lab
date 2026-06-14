@@ -85,9 +85,16 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
 
 - **權威交接文件**：[.claude/skills/works-research-review/dadaodao_handoff.md](dadaodao_handoff.md)（最後更新 2026-06-14，含完整現況/腳本/待辦/雷區）。記憶 [[project_dadaodao_book]]。
 - **現況一句話**：原檔 879 件已上 R2（`dadaodao-materials/<rel>`），全文轉錄存 `dadaodao-fulltext/<rel>.txt`（外文翻譯 `.zh.txt`），書頁每件「全文」鈕 lazy-load 走 [server/api/works/material-text.get.ts](../../../server/api/works/)。**469/879 已轉**（免 API 抽完 455＋OCR 數件）。
-- **▶ 接續＝跑既有腳本**：`python -X utf8 scripts/dadaodao_fulltext.py --ocr-only --pace 2`（冪等 resume，已轉跳過；上次 2-strike 配額停機；建議過夜迴圈）。引擎 Gemini 4-key→Sonnet(OAuth) 救援。
-- **後續線**（見 handoff §2b/2c）：外文 `.zh.txt` 翻譯 stage（尚無腳本）；多語「研究回顧」分頁（書目檔 `scripts/data/lit_review_dadaodao.md` 已由平行 session 建，待 ingest + 對 book 開分頁）。
-- **回應 user 的「都轉錄」**：即此 OCR 長尾——下一步就是設過夜 `--ocr-only` 迴圈把剩 ~410 掃描檔跑完，**不需新工程**。
+- **▶ 接續＝跑既有腳本**：`python -X utf8 scripts/dadaodao_fulltext.py --ocr-only --pace 2`（冪等 resume，已轉跳過；上次 2-strike 配額停機；建議過夜迴圈）。引擎 Gemini 4-key→Sonnet(OAuth) 救援。⚠️ **2026-06-14：G: 雲端硬碟卸載中，OCR 全線阻塞**（來源檔在 `G:\…\論文資料`）——掛回 G: 才能接續；accs resume.ps1 已加掛載自我修復可借鏡。
+- **回應 user 的「都轉錄」**：即此 OCR 長尾——下一步就是設過夜 `--ocr-only` 迴圈把剩 ~410 掃描檔跑完，**不需新工程**（待 G: 掛回）。
+
+### ✅ 書籍計畫研究回顧分頁（kind='book'，2026-06-14 上線）
+研究回顧不再只限 `kind='paper'`。書籍計畫（如《當代的大愛道革命》）也能掛多語文獻綜述：
+- **parser**：`lit_review.py` 的 `parse_review_report` 接受**任一標題層級**的 section header（論文用 `#`、書籍綜述用 `##`，皆以 label 比對 `SECTION_LABELS`；level-1 文件標題不誤判）。書籍主題軸放 `BOOK_SURVEY_THEMES`（白名單）。新增主題軸＝加進該 list。
+- **入庫**：`ingest_lit_review.py --seed --entries-only --report scripts/data/lit_review_<book>.md --project <book-slug>`。**書籍計畫務必 `--entries-only`**，否則 seed 會把 `kind=book` 專案覆寫成 `kind=paper`/teal。
+- **書頁**：[pages/works/[slug]/index.vue](../../../pages/works/) — `loadLitReview()` 對所有計畫載入；`bookTabs` 在 `litEntries.length>0` 時才加「研究回顧」分頁（無書目的書不顯示）；列表 rose 主題、`break-words`/`flex-wrap` 防溢出。reader `/works/[slug]/review/[ref]` slug-based 共用。
+- **OA 全文**：`ingest_lit_review.py --fetch-fulltext --project <book-slug> --resume --engine gemini --pace 1`（同論文流程；掃描無文字層 PDF/403 WAF 抓不到的留 pending）。
+- **首案＝《當代的大愛道革命》**：16 筆（en11/ja3/zh2）已 ingest，OA 6 筆可抓（~243 段）過夜翻譯中。見 [dadaodao_handoff.md](dadaodao_handoff.md) §2c。
 
 ## 版權姿態
 
