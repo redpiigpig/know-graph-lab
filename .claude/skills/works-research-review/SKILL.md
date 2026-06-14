@@ -71,6 +71,16 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
 - **首案＝c12〈聖嚴法師與法鼓系統…〉（slug `yinshun-shengyan`）**：**23 條內嵌全文**（21 已引用 + 2 全集補充《中國禪宗史》讀後／太虛大師評傳，[lit_review_yinshun_shengyan_corpus_additions.md](../../../scripts/data/) `--entries-only --display-offset 200`）。**法海微波**不在 44 卷 → 維持書目層。已截圖實證（單欄 reader + listing badge，:3004 SSR + playwright）。
 - ⚠️ **多 dev server 共用 `.nuxt` 會互炸**（`ENOENT mkdir .nuxt/dev`）：驗證請**直接打使用者既有 :3004**（server route 會 HMR 熱載），**別**為了截圖另起 `PORT=3100 npm run dev`——會把 :3004 一起弄掛（[[feedback_no_kill_other_tasks]] 同源教訓）。
 
+## 訪談錄／實體書「本地照片」OCR 成參考資料（單語內嵌，2026-06-14）
+
+使用者把實體書（多為法鼓山系訪談錄）逐頁**拍照**放本機（repo 根目錄資料夾，如 `六十感恩紀：惠敏法師訪談錄/`、`浮塵掠影：李志夫先生訪談錄/`），要轉成研究回顧的**參考資料**。流程：
+
+1. **書目條目**：先在 `lit_review_<book>.md` 的 `法鼓山與聖嚴法師人間佛教` 主題下加一筆（`語言：中文`，無 OA URL），`ingest_lit_review.py --seed --entries-only` 入庫拿到 `ref_key`。
+2. **OCR**：[scripts/ocr_interview_book.py](../../../scripts/) `--src "<照片夾>" --out scripts/data/<slug> --title "<書名>"`。引擎 **Haiku 4.5 vision**（OAuth，沿用 `dadaodao_fulltext.anthropic_client`）。逐頁存 `<out>/<stem>.txt`，**冪等 `--resume`**、2-strike 配額停機。轉錄政策：從有意義小標起、殘句省略、逐字、**保留印刷頁碼成 `【頁 N】`**（[[feedback_pdf_page_number]]）。⚠️ 照片常**倒序**拍，務必靠頁碼排序。
+3. **入庫**：[scripts/ingest_interview_sections.py](../../../scripts/) `--ref <ref_key> --out scripts/data/<slug>`。解析 `【頁 N】`→`order_index`（無頁碼排 9000+），單一 `version_code='zh'` upsert 進 `lit_review_sections` → 走上節**單欄 reader**；`fulltext_status='translated'`。
+4. **版權**：OCR 文字（`scripts/data/<slug>/`）與原照片夾**不進 git**（已 `.gitignore`），canonical 在 DB。
+- 別用 Read 直接開 >2000px 照片（[[feedback_screenshot_2000px]]）；OCR 走 API base64，不受此限。
+
 ## 🚀 新 session 接手清單：印順／法鼓 全文匯入（2026-06-14）
 
 **已完成（commit 在 master）**：c12 研究回顧 23 條已內嵌我們自轉錄的印順／聖嚴全集全文，單欄 reader + listing 連結 + API 分頁修復全上線並截圖實證。
