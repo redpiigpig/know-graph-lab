@@ -140,7 +140,15 @@
   - **⚙️ 寫法定案（user 核可）：en/de 不由模型逐字重打，改由 fill 腳本從來源檔程式帶入；模型只寫中文。** 模板 `c:/tmp/_jung_ch12_h.py`：`ROWS=[(en_tag, is_verse, de_spec, zh),…]`；`de_spec="=en"`（榮格保留英文的海華沙等詩節）或 `["D67",…]`（德文片段 id，腳本 smart-join+去腳註+OCRFIX）；`en` 自 `jung_ch12_en.txt` 抓（verse→blockquote）、`de` 同理。每批只換 ROWS（en_tag/de id 對照＋中文），跑 → build → commit。
   - **fill 模板增強**（`c:/tmp/_jung_ch12_j.py`）：de_spec 新增兩式 — `de_slice("D85","起anchor","止anchor")`（一個德文片段被 OCR 合併成多個 en entry 時，用短 anchor 從來源檔切片）＋`de_verse(["D86",...])`（詩節每片段一行 blockquote）。**整晚自動跑、不停問**（user 指示）。
   - **✅ ch12 完成 294 rows。第八章 ch13 進行中**：en=jung_ch13_en.txt（E0 heading）；德文沿用 jung_ch12_de.txt（Das Opfer，ch13 由 D788 起）。**法語引文（米勒原文）整段在 D792，依 en 切片**。**進度 ch13: E1–E18（共124，約15%）**：回米勒幻象=力比多離母又奔母/神經症控訴父母/奇萬托佩爾法語獨白(遍尋百族百月無人識我靈魂/萬月後純潔靈魂生異世)/綠蝰蛇咬攻馬/別了忠實兄弟謝謝小妹妹/禱告莫使身腐→火山地震/譫妄呼Ja-ni-wa-ma(你懂我)/預言=海華沙仿白人救主(西班牙墨西哥秘魯救贖!)/作者=英雄渴慕對象=自戀(力比多繞圈/來太遲=嬰兒愛父母無法追上/萬月分隔取消亂倫)/白人女英雄尋不被解唯夢中相遇/保身無玷。**下一批 V19**＝荷爾德林《徐培里翁》詩(諸神如睡嬰無命運/靈永綻含苞/靜目觀永恆澄明)/天國至福=母腹永恆嬰孩/荷爾德林〈人〉…德文 D812 起。⚠ch13 法語段 de 用 D792 切片(OCR garbled 屬源)。皆PD。fill 法續。⚠️ pre-push hook 偶因平行 session race 報測試失敗，`npm test` 綠就再 pull-rebase+push（勿 --no-verify）；push race 被拒也再跑一次。
-- **⏭️ 後續章節**：VIII 獻祭（en 16443–18479，建 `ch13.json`，德文＝德 VII「Das Opfer」**後半**，續用同一德文塊 de 15780–22374，新 `_jung_extract_ch13.py` 改 en 行號 16443:18479、德文 block 取 ch12 用剩的後段）。逐章流程同下方「新 session 續傳細則」（ch10 寫法通用，僅改檔名/行號）。
+  **🔑🔑 ch13 新 session 接手細則（2026-06-14 交接，照做即可，目前 19/124 rows）：**
+  1. **檔案現況**：`ch13.json` 已建（chunk_index=13、chapter_path「第二部　第八章　犧牲」、title_en「THE SACRIFICE」），**已完成 row0 標題 + E1–E18，共 19 rows**。下一個要做的 en entry＝**V19**（荷爾德林《徐培里翁》詩）。
+  2. **來源檔**（c:/tmp，被清就重建）：
+     - **英文** `jung_ch13_en.txt`（124 entries，`[E0]`=標題…`[V123]`）。重建：`python c:/tmp/_jung_extract_ch13.py`（讀 `jung_pou_en_1916.html` 第 **16443:18479** 行）。
+     - **德文沿用 ch12 的** `jung_ch12_de.txt`（整個「Das Opfer」連續塊，D0–D1233）。**ch13 的德文從 D788 起接續**（D787 是 ch12 E293 用掉的最後一段；D788＝「Kehren wir nach diesem weiten Umweg…」＝ch13 E1）。不需另建德文檔。
+  3. **每批做法**（仿 `c:/tmp/_jung_ch13_a.py`…`_e.py`）：`json.load` ch13.json → `add(zh,de,en)` → 寫回（`ensure_ascii=False, indent=1`）→ `python scripts/jung_build_all.py`（對齊閘）→ `git add ch13.json && commit "feat(jung): 第八章 ch13 …[loop]" && git -c rebase.autoStash=true pull --rebase --no-edit -q && git push`（race 被拒再跑一次）。每批完更新本進度行（**注意：進度行在「✅ ch12 完成…」那條 bullet 內，用字串 replace 改 `進度 ch13: E1–EN` 與 `下一批`，別用整行 regex**）。
+  4. **⚠️ ch13 特例**：**米勒原文是法文**，德文版整段法文引文都塞在 **D792**（OCR garbled 但屬原始源，照用）；英文把它拆成多個 entry（E3 獨白／E4 綠蛇/E5 別馬/E6 禱告引言/E7 禱告+火山／E8 譫妄引言/E9 Ja-ni-wa-ma…）→ **用 `D792.find(anchor)` 切片**對應每個 en entry（見 `_jung_ch13_b.py`/`_c.py`）。其餘德文散文片段同 ch12：footnote 多、OCR 常截斷，de 取可得片段、缺口標 `[…]`，**en/zh 必須完整**（zh 親譯，模型只寫中文）。詩照 blockquote `> `；聖經和合本；歌德/尼采/荷爾德林/華格納皆 PD。
+  5. ⚠️ **絕不碰** `mueller_data/`、`mueller_build.py`、`scripts/gnostic_library.py`；中文一律繁體、中間點「‧」；**勿 `--no-verify`**。
+  6. ch13 做完 124 entries → 第二部（含德文 Das Opfer 兩英章）即全部譯竣，可更新首頁「進度」與 SKILL.md。
 
 ### 穩定的 5 步方法（每章照做）
 1. **德文重 OCR**（Gemini 全耗盡 → 用 **Haiku**，user 訂閱制不計費）：
