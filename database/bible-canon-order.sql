@@ -22,6 +22,10 @@ ALTER TABLE bible_canon_books ENABLE ROW LEVEL SECURITY;
 DROP POLICY IF EXISTS "bible_canon_books_read" ON bible_canon_books;
 CREATE POLICY "bible_canon_books_read" ON bible_canon_books FOR SELECT USING (true);
 
+-- 各傳統排序資料（天主教 77 / 東正教 82 / 敘利亞 72 / 衣索匹亞 86）改由
+-- scripts/seed_canon_order.py 統一種入（單一來源；增補書卷一律獨立綠卡）。
+-- 以下舊版天主教 INSERT 已被該腳本覆蓋，保留作 schema 範例參考。
+/*  -- superseded by seed_canon_order.py
 -- ── 天主教（思高／拉丁通行本次序；第二正典 7 卷 interleaved + 綠標；但 14 章）──────
 -- 達尼爾增補（蘇撒納/貝耳與大龍/阿匝黎雅）與耶肋米亞書信在思高本併入 達/巴，
 -- 故不列為獨立書卡（sus/bel/aza/epj 不入天主教排序）。
@@ -68,3 +72,4 @@ INSERT INTO bible_canon_books (canon, book_code, testament, sort_order, is_deute
 ON CONFLICT (canon, book_code) DO UPDATE SET
   testament = EXCLUDED.testament, sort_order = EXCLUDED.sort_order,
   is_deutero = EXCLUDED.is_deutero, chapter_count = EXCLUDED.chapter_count;
+*/

@@ -85,16 +85,33 @@ ETHIOPIAN = [
     "jas", "1pe", "2pe", "1jn", "2jn", "3jn", "jud", "rev",
 ]
 
-TRADITIONS = {"orthodox": ORTHODOX, "syriac": SYRIAC, "ethiopian": ETHIOPIAN}
+# Catholic (思高/Vulgate order). 達尼爾增補(蘇撒納/貝耳與大龍/阿匝黎雅)與耶肋米亞書信
+# 在本資料庫存為獨立書卷(sus/bel/aza/epj) → 與其他傳統一致，列為獨立綠卡置於 達/巴 之後
+# （故天主教 = 77 卷，與 canon 旗標一致）。
+CATHOLIC = [
+    "gen", "exo", "lev", "num", "deu",
+    "jos", "jdg", "rut", "1sa", "2sa", "1ki", "2ki", "1ch", "2ch", "ezr", "neh",
+    "tob", "jdt", "est", "1ma", "2ma",
+    "job", "psa", "pro", "ecc", "sng", "wis", "sir",
+    "isa", "jer", "lam", "bar", "epj", "ezk", "dan", "sus", "bel", "aza",
+    "hos", "jol", "amo", "oba", "jon", "mic", "nam", "hab", "zep", "hag", "zec", "mal",
+    "mat", "mrk", "luk", "jhn", "act",
+    "rom", "1co", "2co", "gal", "eph", "php", "col", "1th", "2th",
+    "1ti", "2ti", "tit", "phm", "heb",
+    "jas", "1pe", "2pe", "1jn", "2jn", "3jn", "jud", "rev",
+]
+
+TRADITIONS = {"catholic": CATHOLIC, "orthodox": ORTHODOX, "syriac": SYRIAC, "ethiopian": ETHIOPIAN}
 
 
 def main():
     dry = "--dry-run" in sys.argv
     books = requests.get(
-        f"{U}/rest/v1/bible_books?select=code,canon_protestant,canon_orthodox,canon_syriac,canon_ethiopian,chapter_count&limit=200",
+        f"{U}/rest/v1/bible_books?select=code,canon_protestant,canon_catholic,canon_orthodox,canon_syriac,canon_ethiopian,chapter_count&limit=200",
         headers=H, timeout=30).json()
     proto = {b["code"] for b in books if b["canon_protestant"]}
     member = {
+        "catholic": {b["code"] for b in books if b["canon_catholic"]},
         "orthodox": {b["code"] for b in books if b["canon_orthodox"]},
         "syriac":   {b["code"] for b in books if b["canon_syriac"]},
         "ethiopian":{b["code"] for b in books if b["canon_ethiopian"]},
