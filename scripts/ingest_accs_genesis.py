@@ -175,9 +175,11 @@ def ocr_batch_claude(pngs: list[bytes], model: str = "haiku") -> list[dict]:
     cwd = r"c:\tmp" if sys.platform == "win32" else "/tmp"
     try:
         proc = subprocess.run(cmd, input=json.dumps(msg) + "\n", capture_output=True,
-                              text=True, encoding="utf-8", timeout=900, cwd=cwd)
+                              text=True, encoding="utf-8", timeout=300, cwd=cwd)
     except subprocess.TimeoutExpired:
-        print(f"    [{model} timeout]", file=sys.stderr); return []
+        # 一頁 OCR 正常 <3min；逾 5min 幾乎都是 Max 額度乾、claude CLI 內部卡退避。
+        # 視同額度耗盡 → 拋「依規範退出」讓本輪快退、別逐批各卡 5min 爬到天荒地老。
+        raise RuntimeError(f"{model} OCR 逾時（額度疑乾），依規範退出")
     if proc.returncode != 0:
         blob = (proc.stderr or "") + (proc.stdout or "")
         if "rate_limit" in blob:
