@@ -229,10 +229,15 @@ const CANON_LABEL: Record<string, string> = {
   protestant: '新教', catholic: '天主教‧思高', orthodox: '東正教',
   syriac: '敘利亞‧Peshitta', ethiopian: '衣索匹亞',
 }
-// 書名：只有天主教用思高本，其餘所有傳統一律用和合本。
+// 書名：傳統若有 name_override（如東正教以斯拉A/上/下）優先；否則只有天主教用思高本，
+// 其餘所有傳統一律用和合本。
 const displayBookName = computed(() => {
   const b = chapterData.value?.book
   if (!b) return ''
+  if (canon.value) {
+    const ov = canonOrders.value[canon.value]?.find(r => r.book_code === b.code)?.name_override
+    if (ov) return ov
+  }
   return (canon.value === 'catholic' && b.name_sigao) ? b.name_sigao : b.name_zh
 })
 
@@ -289,14 +294,18 @@ async function authHeaders() {
   return session ? { Authorization: `Bearer ${session.access_token}` } : {}
 }
 
+const canonOrders = ref<Record<string, { book_code: string; name_override: string | null }[]>>({})
+
 async function loadBootstrap() {
   const headers = await authHeaders()
-  const [b, v] = await Promise.all([
+  const [b, v, co] = await Promise.all([
     $fetch<BibleBook[]>('/api/scripture/books', { headers }),
     $fetch<BibleVersion[]>('/api/scripture/versions', { headers }),
+    $fetch<Record<string, { book_code: string; name_override: string | null }[]>>('/api/scripture/canon-order', { headers }).catch(() => ({})),
   ])
   books.value = b
   versions.value = v
+  canonOrders.value = co || {}
 }
 
 async function loadChapter() {

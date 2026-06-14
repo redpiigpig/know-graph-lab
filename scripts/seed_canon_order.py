@@ -103,6 +103,14 @@ CATHOLIC = [
 
 TRADITIONS = {"catholic": CATHOLIC, "orthodox": ORTHODOX, "syriac": SYRIAC, "ethiopian": ETHIOPIAN}
 
+# 傳統專屬書名覆寫 (canon, book_code) → (全名, 簡稱)。
+# 東正教厄斯德拉採七十士譯本命名：Ἔσδρας Αʹ=以斯拉A、Ἔσδρας Βʹ(=Ezra/Neh)=以斯拉上/下。
+NAME_OVERRIDES: dict[tuple[str, str], tuple[str, str]] = {
+    ("orthodox", "1es"): ("以斯拉A", "拉A"),
+    ("orthodox", "ezr"): ("以斯拉上", "拉上"),
+    ("orthodox", "neh"): ("以斯拉下", "拉下"),
+}
+
 
 def main():
     dry = "--dry-run" in sys.argv
@@ -124,12 +132,15 @@ def main():
             if code not in member[canon] or code in seen:
                 continue
             seen.add(code); n += 1
+            ov = NAME_OVERRIDES.get((canon, code))
             rows.append({
                 "canon": canon, "book_code": code,
                 "testament": "nt" if code in NT else "ot",
                 "sort_order": n,
                 "is_deutero": code not in proto,
                 "chapter_count": None,   # 增補各自獨立成卷，無需覆寫章數
+                "name_override": ov[0] if ov else None,
+                "abbr_override": ov[1] if ov else None,
             })
         missing = member[canon] - seen
         print(f"{canon}: {len(rows)} rows ({sum(1 for r in rows if r['is_deutero'])} deutero)"

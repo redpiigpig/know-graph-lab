@@ -106,9 +106,9 @@
               :class="item.isDeutero
                 ? 'bg-emerald-50 border-emerald-300 hover:border-emerald-500'
                 : 'bg-white border-gray-200 hover:border-stone-400'"
-              :title="bookCardName(item.book).full + (item.isDeutero ? '（第二正典）' : '')"
+              :title="(item.fullOverride || bookCardName(item.book).full) + (item.isDeutero ? '（第二正典）' : '')"
             >
-              <div class="font-semibold text-sm leading-tight" :class="item.isDeutero ? 'text-emerald-800' : 'text-gray-900'">{{ bookCardName(item.book).short }}</div>
+              <div class="font-semibold text-sm leading-tight" :class="item.isDeutero ? 'text-emerald-800' : 'text-gray-900'">{{ item.shortOverride || bookCardName(item.book).short }}</div>
               <div class="text-[10px] mt-0.5" :class="item.isDeutero ? 'text-emerald-500' : 'text-gray-400'">{{ item.chapterCount }} 章</div>
             </NuxtLink>
           </div>
@@ -167,6 +167,8 @@ type CanonOrderRow = {
   sort_order: number
   is_deutero: boolean
   chapter_count: number | null
+  name_override: string | null
+  abbr_override: string | null
 }
 
 const supabase = useSupabaseClient()
@@ -223,7 +225,7 @@ const filteredBooks = computed(() => {
   return books.value.filter(b => Boolean(b[key]))
 })
 
-type CardItem = { book: BibleBook; isDeutero: boolean; chapterCount: number | null }
+type CardItem = { book: BibleBook; isDeutero: boolean; chapterCount: number | null; shortOverride: string | null; fullOverride: string | null }
 
 const groupedBooks = computed(() => {
   const byCode = new Map(books.value.map(b => [b.code, b]))
@@ -239,7 +241,7 @@ const groupedBooks = computed(() => {
       const book = byCode.get(row.book_code)
       if (!book) continue
       const g = groups.find(g => g.key === row.testament)
-      if (g) g.items.push({ book, isDeutero: row.is_deutero, chapterCount: row.chapter_count ?? book.chapter_count })
+      if (g) g.items.push({ book, isDeutero: row.is_deutero, chapterCount: row.chapter_count ?? book.chapter_count, shortOverride: row.abbr_override, fullOverride: row.name_override })
     }
     return groups.filter(g => g.items.length > 0)
   }
@@ -253,7 +255,7 @@ const groupedBooks = computed(() => {
   ]
   for (const b of filteredBooks.value) {
     const g = groups.find(g => g.key === b.testament)
-    if (g) g.items.push({ book: b, isDeutero: b.testament === 'deutero' || b.testament === 'apocrypha', chapterCount: b.chapter_count })
+    if (g) g.items.push({ book: b, isDeutero: b.testament === 'deutero' || b.testament === 'apocrypha', chapterCount: b.chapter_count, shortOverride: null, fullOverride: null })
   }
   return groups.filter(g => g.items.length > 0)
 })

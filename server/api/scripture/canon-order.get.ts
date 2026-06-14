@@ -6,7 +6,7 @@ export default defineEventHandler(async (event) => {
   const supabase = getAdminClient()
   const { data, error } = await supabase
     .from('bible_canon_books')
-    .select('canon, book_code, testament, sort_order, is_deutero, chapter_count')
+    .select('canon, book_code, testament, sort_order, is_deutero, chapter_count, name_override, abbr_override')
     .order('canon', { ascending: true })
     .order('sort_order', { ascending: true })
   if (error) throw createError({ statusCode: 500, message: error.message })
