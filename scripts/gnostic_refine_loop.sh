@@ -12,7 +12,9 @@ set -u
 LOCK=c:/tmp/gnostic_refine.lock
 LEDGER=c:/tmp/gnostic_refine.done
 TOTAL=15563                      # sections in scope (see --dry)
-ARGS="--retranslate --exclude-apocrypha --exclude-category manichaean --resume --engine haiku"
+# engine=gemini = 3-tier cascade Gemini→NVIDIA→Haiku (most resilient when one
+# pool walls; 2026-06-15 Haiku Max walled mid-run while Gemini/NVIDIA had capacity).
+ARGS="--retranslate --exclude-apocrypha --exclude-category manichaean --resume --engine gemini"
 
 if [ -f "$LOCK" ]; then echo "already running (lock $LOCK) — abort"; exit 1; fi
 echo $$ > "$LOCK"
