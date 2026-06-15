@@ -28,7 +28,7 @@ request 會 hang；deepseek-v4-flash reasoning 模型大 JSON 會 timeout。見 
   --dry 不寫 DB。--batch-bible 每卷 align_to_convergence(累積到覆蓋率收斂)+結尾印 summary 表。
 """
 from __future__ import annotations
-import os, sys, re, json, time, html, threading, urllib.request
+import os, sys, re, json, time, html, threading, urllib.request, subprocess
 import requests
 
 sys.path.insert(0, os.path.dirname(__file__))
@@ -67,8 +67,57 @@ GMODEL = 'gemini-2.5-flash'
 NKEYS = [E[k] for k in sorted(E) if k.upper().startswith('NVIDIA_API_KEY') and E[k]]
 NURL = 'https://integrate.api.nvidia.com/v1/chat/completions'
 NMODELS = ['qwen/qwen3-next-80b-a3b-instruct', 'deepseek-ai/deepseek-v4-flash']
-PREFER_NVIDIA = os.environ.get('APOC_ENGINE', 'nvidia').lower() != 'gemini'
+ENGINE = os.environ.get('APOC_ENGINE', 'nvidia').lower()   # nvidia | gemini | haiku
+PREFER_NVIDIA = ENGINE != 'gemini'
 _lock = threading.Lock()
+
+
+# ── Haiku via Claude Code CLI (Max session, free) — key-starvation救急 ────
+def _resolve_claude_bin():
+    if sys.platform == 'win32':
+        for cand in [os.path.expandvars(r'%APPDATA%\npm\claude.cmd'),
+                     os.path.expandvars(r'%APPDATA%\npm\claude.ps1')]:
+            if os.path.exists(cand):
+                return cand
+    return 'claude'
+CLAUDE_BIN = _resolve_claude_bin()
+
+# schema-constrains Haiku to the {verses:[{chapter,verse,text}],last:[..]} shape
+# that extract_verse_objects() parses.
+_VERSE_SCHEMA = {
+    'type': 'object',
+    'properties': {
+        'verses': {'type': 'array', 'items': {
+            'type': 'object',
+            'properties': {'chapter': {'type': 'integer'},
+                           'verse': {'type': 'integer'},
+                           'text': {'type': 'string'}},
+            'required': ['chapter', 'verse', 'text'],
+            'additionalProperties': False}},
+        'last': {'type': 'array', 'items': {'type': 'integer'}},
+    },
+    'required': ['verses'],
+    'additionalProperties': False,
+}
+
+
+def _try_haiku(system, user, max_tokens, temperature):
+    cmd = [CLAUDE_BIN, '-p', '--model', 'haiku', '--disable-slash-commands',
+           '--output-format', 'json', '--json-schema', json.dumps(_VERSE_SCHEMA),
+           '--system-prompt', system, '--allowedTools', '']
+    cwd = r'c:\tmp' if sys.platform == 'win32' else '/tmp'
+    try:
+        proc = subprocess.run(cmd, input=user, capture_output=True, text=True,
+                              encoding='utf-8', timeout=420, shell=False, cwd=cwd)
+        if proc.returncode != 0:
+            return None
+        payload = json.loads(proc.stdout)
+        structured = payload.get('structured_output')
+        if structured:
+            return json.dumps(structured, ensure_ascii=False)
+        return payload.get('result')
+    except Exception:
+        return None
 _gnext = [0.0] * max(1, len(GKEYS))
 _nnext = [0.0] * max(1, len(NKEYS))
 
@@ -131,12 +180,17 @@ def _try_gemini(system, user, max_tokens, temperature):
 
 
 def llm_json(system: str, user: str, max_tokens=16000, temperature=0.2) -> str:
-    order = ([_try_nvidia, _try_gemini] if PREFER_NVIDIA else [_try_gemini, _try_nvidia])
+    if ENGINE == 'haiku':                       # Haiku-first (NVIDIA/Gemini keys starved)
+        order = [_try_haiku, _try_nvidia, _try_gemini]
+    elif PREFER_NVIDIA:
+        order = [_try_nvidia, _try_gemini]
+    else:
+        order = [_try_gemini, _try_nvidia]
     for fn in order:
         out = fn(system, user, max_tokens, temperature)
         if out is not None:
             return out
-    raise RuntimeError('all engines failed (NVIDIA + Gemini)')
+    raise RuntimeError('all engines failed')
 
 
 # ── per-doc source config ──────────────────────────────────────────────
@@ -634,7 +688,7 @@ if __name__ == '__main__':
     if not args:
         raise SystemExit(__doc__)
     dry = '--dry' in args
-    print(f'engines: nvidia={len(NKEYS)} gemini={len(GKEYS)} prefer_nvidia={PREFER_NVIDIA}')
+    print(f'engines: ENGINE={ENGINE} nvidia={len(NKEYS)} gemini={len(GKEYS)} haiku={os.path.basename(CLAUDE_BIN)}')
 
     # Master overnight chain: bible-backed docs first (correct ch:v), then
     # Chinese-own for everything else still un-restructured.

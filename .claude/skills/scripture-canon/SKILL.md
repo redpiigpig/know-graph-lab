@@ -1508,6 +1508,38 @@ q-peter-preaching / christian-sibyl / orphica / joseph-prayer
 - ⚠️⚠️ **seed 污染重大坑**：對「原本是 zh-own（自編章號＋導論混入）」的卷跑 `--accumulate` 重做時，會 **seed 進舊的錯位資料**（do_chinese accumulate 從現有 cct_zh 取種子）→ keep-longest 可能保留錯位/導論文字。實測 **jubilees** 跑完 coverage 85% 但 ch1:1=導論、ch5/23 內容錯位。**修法：換骨架型態（zh-own→bible/pseud）時，第一輪必須 `do_chinese(accumulate=False)` 清空重做（純內容對位、clamp 會丟掉無英文對應的導論），再 accumulate 收斂。** 路 a 的 12 卷次經上一輪已是 bible 對齊（非 zh-own），故 --force seed 乾淨、不受此影響。jubilees 待 fresh 重做。
 - ⚠️ **單調性 bug 已修 `union_fill`**：`--accumulate` 設計要「覆蓋率只升不降」，但 merge keep-longest + `clean_zh_verses` 會把上一輪已對齊的節換成新候選後清掉 → **回退**（實測 wisdom-solomon 99.77%→83%、2-maccabees 81%→75%）。已加純函式 `AV.union_fill(verses, seed)`：accumulate 後把 seed 缺的節補回，保證單調。do_chinese 已接。**47 tests 綠**。回退的卷用修好的碼重跑即可恢復。
 
+### ⭐ 2026-06-15 Haiku 引擎 + 「範圍重建」修弱卷（根因＝classifier 邊界溢出，非 key starvation）
+
+> 觸發：交接說弱卷（judith 62%/2-macc 83%/3-macc 83%）是「LLM key starvation，不需換骨架」。使用者下令「用 HAIKU 跑」（NVIDIA/Gemini key 被整夜 coach/panikkar/mueller 搶光）。實測 Haiku 引擎完全正常出 verse，judith 仍卡死 62.2% → 推翻 key-starvation 診斷。
+
+**1. Haiku 引擎接上 driver**（[apoc_verse_restructure.py](../../../scripts/apoc_verse_restructure.py)）：原引擎鏈只有 NVIDIA→Gemini。新增 `_try_haiku`（走 Claude Code CLI `claude.cmd -p --model haiku --output-format json --json-schema`，用 **Max session 免費**，不吃 NVIDIA/Gemini key）。`APOC_ENGINE=haiku` → Haiku 優先、NVIDIA/Gemini 後備。schema 用 `_VERSE_SCHEMA` 約束輸出成 `{verses:[{chapter,verse,text}]}`，`extract_verse_objects` 直接解析。⚠️ Haiku CLI 子程序開太多會 OS thread exhaustion 崩（長 run 會中途死，但 do_chinese 末段才寫 DB＋monotonic，已寫的不丟）。
+
+**2. 真根因＝classifier inheritance bleed → 快照本身被截斷**（非引擎、非 versification）：
+- judith cct_zh/快照只到 ch11（ch12-16 全無）；但原始 Vision OCR **有完整 ch12-16**，在 ebook `05f4b0a5`（舊約篇第5冊）p43-71（斬首 p64、ch16 凱歌 p68-71）。classifier 當初把 p62+ 誤分給隔壁「以斯帖補篇」。
+- 2-macc 快照尾在 ch10；3-macc 快照**開頭竟是 2-macc ch10 內容**（2-macc 後段散落到 3-macc）。
+- **修法＝「範圍重建」**：直接從 raw `ebook_chunks` 的**正確頁範圍**重建快照，不用被 classifier 截斷的 cct_zh。換骨架型態的卷第一輪 `do_chinese(accumulate=False)` 清污染，再 `align_to_convergence`。
+
+**3. 已修頁範圍**（OCR 頁眉卷號有誤，靠**內容**判定邊界）：
+| 卷 | ebook | 頁範圍 | 備註 |
+|---|---|---|---|
+| judith | `05f4b0a5` 第5冊 | **p40-71** | 簡介 p40、ch1:1 p41（首版誤從 p43 漏 ch1）|
+| 2-macc | `6aaa0ffe` 第6冊 | **p70-114** | ch14-15(Razis/Nicanor) 被誤標「馬加比三書」實屬 2-macc |
+| 3-macc | `6aaa0ffe` 第6冊 | **p115-130** | 卷十五 篇介 p115 |
+| 4-macc | `6aaa0ffe` 第6冊 | p131+ | 已 99.2% 不動 |
+
+**4. 最終覆蓋率（DB 實測，2026-06-15）**：
+
+| 卷 | 之前 | 之後 |
+|---|---|---|
+| **judith** | 62.2% | **96.2%** (326/339, ch1-16 全到) |
+| **2-maccabees** | 83.4% | **99.8%** (554/555) |
+| **3-maccabees** | 82.9% | **94.7%** (216/228) |
+| **jubilees** | 84.1% | **86.4%** (1128/1305) |
+
+**5. ⚠️ 廣域隱患＋未竟**：
+- **不是所有 ebook 都回填全文**：第5/6冊＝700+ 字/頁（完整）；**第4冊 `a96b524b`＝200 字/頁 preview（未回填）**，full-width-dash 重複本 `3f241acf` 是空殼。故 **jubilees（第4冊）無法 raw 重建**，只能用舊 cct_zh 全文快照（61K 字、尾部混入整冊索引垃圾、被 clamp 丟）。jubilees 缺 ch17/20/21/46-50：ch46-50（摩西敘事 p139-146）疑似舊快照本身就缺 → 需重抓 **Drive Vision OCR JSONL** 才補得到。其他用第4冊的 OT 偽典若要 raw 重建，得先補全文回填。
+- 重建後的 judith/2-macc/3-macc 快照存 `_apoc_snapshots/`（gitignore，但已 force-add 作 durable source，仿 1-enoch/sirach）。
+
 **🖥️ 監督交接（2026-06-14 06:50 更新，整夜 phase2b 收工 + 交棒新 session）**：
 > **整夜結果**：phase2b（overnight2.py）已 `[PHASE2] DONE` 乾淨退出。force batch 13 卷全跑完；**jubilees FRESH 完成 = 污染 1115 zh-own 清除、對齊完整 1305 節 Charles 骨架、accum pass1-4 = 69→81→82→84.1%（1098/1305，chapter/verse 正確）**。途中抓到並修掉一個資料遺失 bug（見下），baruch 已還原。
 >
