@@ -18,6 +18,15 @@
         <p v-else class="text-xs text-gray-400 mt-1 leading-relaxed">基督教之前無正藏／外藏之分，僅立「前藏」一套目錄。</p>
       </div>
 
+      <!-- 十藏快速切換 -->
+      <div class="flex flex-wrap gap-1.5 mb-6">
+        <NuxtLink v-for="c in era.collections" :key="c.key"
+          :to="`/dazangjing/${era.key}/${c.key}/zheng`"
+          class="px-2.5 py-1 rounded-lg text-xs border bg-white text-gray-600 border-gray-200 hover:border-stone-400 transition">
+          <span class="font-serif font-semibold">{{ c.glyph }}</span> {{ c.name }}
+        </NuxtLink>
+      </div>
+
       <!-- 十藏列表 -->
       <div class="divide-y divide-gray-100 border border-gray-200 rounded-xl overflow-hidden bg-white">
         <div

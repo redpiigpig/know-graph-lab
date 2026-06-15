@@ -16,16 +16,6 @@
         <p class="text-xs text-gray-400 mt-0.5 leading-relaxed">{{ era.subtitle }}</p>
       </div>
 
-      <!-- 十藏快速切換 -->
-      <div v-if="era" class="flex flex-wrap gap-1.5 mb-3">
-        <NuxtLink v-for="c in era.collections" :key="c.key"
-          :to="`/dazangjing/${eraKey}/${c.key}/${c.soleCanonLabel ? 'zheng' : canonKey}`"
-          class="px-2.5 py-1 rounded-lg text-xs border transition"
-          :class="c.key === collKey ? 'bg-stone-900 text-white border-stone-900' : 'bg-white text-gray-600 border-gray-200 hover:border-stone-400'">
-          <span class="font-serif font-semibold">{{ c.glyph }}</span> {{ c.name }}
-        </NuxtLink>
-      </div>
-
       <!-- 標頭 -->
       <div class="mb-5">
         <div class="flex items-center gap-3 mb-1.5">
@@ -40,6 +30,16 @@
         </div>
         <p v-if="!collection.soleCanonLabel" class="text-xs text-gray-500 leading-relaxed">{{ canonLabel.desc }}</p>
         <p v-if="canon.summary" class="text-xs text-gray-600 leading-relaxed mt-1">{{ canon.summary }}</p>
+      </div>
+
+      <!-- 十藏快速切換 -->
+      <div v-if="era" class="flex flex-wrap gap-1.5 mb-3">
+        <NuxtLink v-for="c in era.collections" :key="c.key"
+          :to="`/dazangjing/${eraKey}/${c.key}/${c.soleCanonLabel ? 'zheng' : canonKey}`"
+          class="px-2.5 py-1 rounded-lg text-xs border transition"
+          :class="c.key === collKey ? 'bg-stone-900 text-white border-stone-900' : 'bg-white text-gray-600 border-gray-200 hover:border-stone-400'">
+          <span class="font-serif font-semibold">{{ c.glyph }}</span> {{ c.name }}
+        </NuxtLink>
       </div>
 
       <!-- 對照切換（單一目錄藏不顯示） -->
