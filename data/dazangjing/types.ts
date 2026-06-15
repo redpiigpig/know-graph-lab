@@ -23,6 +23,22 @@ export const TIER_LABEL: Record<CanonTier, { zh: string; titleCls: string; dotCl
   patristic: { zh: '古抄本／教父推薦入選', titleCls: 'text-sky-800', dotCls: 'bg-sky-500', rowCls: 'bg-sky-50/50' },
 }
 
+/** 外藏文獻來源（按傳統塗色） */
+export const SOURCE_META: Record<string, { zh: string; titleCls: string; dotCls: string }> = {
+  'second-temple':     { zh: '第二聖殿猶太（偽典）', titleCls: 'text-lime-700',    dotCls: 'bg-lime-500' },
+  'qumran':            { zh: '死海古卷',           titleCls: 'text-teal-700',    dotCls: 'bg-teal-500' },
+  'rabbinic':          { zh: '拉比猶太',           titleCls: 'text-emerald-700', dotCls: 'bg-emerald-500' },
+  'jewish-christian':  { zh: '猶太基督派',         titleCls: 'text-amber-700',   dotCls: 'bg-amber-500' },
+  'gnostic':           { zh: '諾斯底主義',         titleCls: 'text-rose-700',    dotCls: 'bg-rose-500' },
+  'marcionite':        { zh: '馬吉安派',           titleCls: 'text-fuchsia-700', dotCls: 'bg-fuchsia-500' },
+  'manichaean':        { zh: '摩尼教',             titleCls: 'text-orange-700',  dotCls: 'bg-orange-500' },
+  'mandaean':          { zh: '曼達教',             titleCls: 'text-cyan-700',    dotCls: 'bg-cyan-500' },
+  'heresy':            { zh: '基督教異端教派',     titleCls: 'text-red-700',     dotCls: 'bg-red-500' },
+  'pagan':             { zh: '外教與希臘化',       titleCls: 'text-violet-700',  dotCls: 'bg-violet-500' },
+  'orthodox-apocrypha':{ zh: '大公旁支偽典',       titleCls: 'text-sky-700',     dotCls: 'bg-sky-500' },
+}
+export const SOURCE_ORDER = ['second-temple','qumran','rabbinic','jewish-christian','gnostic','marcionite','manichaean','mandaean','heresy','pagan','orthodox-apocrypha']
+
 /** 單一作品（書目條目） */
 export interface DazangWork {
   /** 漢語定名 */
@@ -45,6 +61,8 @@ export interface DazangWork {
   link?: string
   /** 正典層級（僅經藏正藏塗色用；正典不設則不塗色） */
   tier?: CanonTier
+  /** 文獻來源／傳統（外藏塗色用；對應 SOURCE_META 的 key） */
+  source?: string
 }
 
 /** 藏內的「部」（子分類） */

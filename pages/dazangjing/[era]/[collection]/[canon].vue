@@ -66,6 +66,15 @@
         </span>
       </div>
 
+      <!-- 外藏來源圖例 -->
+      <div v-if="usedSources.length" class="flex flex-wrap items-center gap-x-4 gap-y-1.5 mb-6 px-3 py-2 bg-white border border-gray-200 rounded-lg text-[11px]">
+        <span class="text-gray-500">文獻來源：</span>
+        <span v-for="k in usedSources" :key="k" class="flex items-center gap-1.5">
+          <span class="inline-block w-2.5 h-2.5 rounded-full" :class="SOURCES[k].dotCls" />
+          <span :class="SOURCES[k].titleCls">{{ SOURCES[k].zh }}</span>
+        </span>
+      </div>
+
       <div v-if="total === 0" class="text-center text-gray-400 py-16 text-sm">此目錄尚未建置書目。</div>
 
       <!-- 各部：列表呈現 -->
@@ -89,7 +98,7 @@
               <div class="sm:w-2/5 sm:shrink-0">
                 <div class="flex items-baseline gap-2">
                   <span class="shrink-0 text-[11px] font-mono text-gray-300 tabular-nums">{{ runningNo(d, i) }}</span>
-                  <span class="text-sm font-medium" :class="w.tier ? TIERS[w.tier].titleCls : 'text-gray-900'">{{ w.title_zh }}</span>
+                  <span class="text-sm font-medium" :class="w.tier ? TIERS[w.tier].titleCls : (w.source && SOURCES[w.source] ? SOURCES[w.source].titleCls : 'text-gray-900')">{{ w.title_zh }}</span>
                 </div>
                 <div v-if="w.title_orig" class="ml-6 text-[11px] text-gray-400 italic leading-tight">{{ w.title_orig }}</div>
                 <div class="ml-6 mt-1 text-[11px] text-stone-500 leading-relaxed flex flex-wrap gap-x-2">
@@ -116,7 +125,7 @@
 </template>
 
 <script setup lang="ts">
-import { findEra, canonWorkCount, CANON_LABEL, TIER_LABEL, type DazangCanon, type DazangDivision, type CanonKey, type CanonTier } from '~/data/dazangjing'
+import { findEra, canonWorkCount, CANON_LABEL, TIER_LABEL, SOURCE_META, SOURCE_ORDER, type DazangCanon, type DazangDivision, type CanonKey, type CanonTier } from '~/data/dazangjing'
 
 definePageMeta({ middleware: 'auth' })
 
@@ -139,6 +148,14 @@ const usedTiers = computed<CanonTier[]>(() => {
   return (['lxx', 'eastern', 'patristic'] as CanonTier[]).filter(t => set.has(t))
 })
 const TIERS = TIER_LABEL
+const SOURCES = SOURCE_META
+// 外藏來源圖例：列出此目錄用到的來源
+const usedSources = computed<string[]>(() => {
+  if (!canon.value) return []
+  const set = new Set<string>()
+  for (const d of canon.value.divisions) for (const w of d.works) if (w.source) set.add(w.source)
+  return SOURCE_ORDER.filter(k => set.has(k))
+})
 
 useHead(() => ({ title: `${collection.value?.name ?? '大藏經'}·${canonLabel.value.zh} — Know Graph Lab` }))
 
