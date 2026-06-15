@@ -8,6 +8,21 @@
 //          （偽典／異端／猶太教／外教見證等「影子」文獻）。
 // 兩者用相同的「部」分類對照；某些部僅外藏才有（如經藏的「史傳」「遺訓」）。
 
+/**
+ * 正典層級（僅經藏正藏使用，用於塗色）。
+ *   undefined = 正典（新教 66 卷），不塗色
+ *   'lxx'       = 七十士譯本次經（天主教／東正教第二正典）
+ *   'eastern'   = 亞美尼亞／衣索比亞等東方教會次經
+ *   'patristic' = 因重要古抄本收錄與教父推薦而入選者
+ */
+export type CanonTier = 'lxx' | 'eastern' | 'patristic'
+
+export const TIER_LABEL: Record<CanonTier, { zh: string; titleCls: string; dotCls: string; rowCls: string }> = {
+  lxx: { zh: '七十士譯本次經', titleCls: 'text-amber-800', dotCls: 'bg-amber-400', rowCls: 'bg-amber-50/50' },
+  eastern: { zh: '亞美尼亞／衣索比亞次經', titleCls: 'text-violet-800', dotCls: 'bg-violet-400', rowCls: 'bg-violet-50/50' },
+  patristic: { zh: '古抄本／教父推薦入選', titleCls: 'text-sky-800', dotCls: 'bg-sky-500', rowCls: 'bg-sky-50/50' },
+}
+
 /** 單一作品（書目條目） */
 export interface DazangWork {
   /** 漢語定名 */
@@ -22,6 +37,8 @@ export interface DazangWork {
   note?: string
   /** 站內對照工具連結（該作品可在此閱讀） */
   link?: string
+  /** 正典層級（僅經藏正藏塗色用；正典不設則不塗色） */
+  tier?: CanonTier
 }
 
 /** 藏內的「部」（子分類） */

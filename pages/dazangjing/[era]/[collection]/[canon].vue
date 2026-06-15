@@ -38,6 +38,16 @@
           class="ml-auto px-3 py-1 rounded-full bg-stone-100 text-stone-700 hover:bg-stone-200 transition">→ {{ collection.portal.label }}</NuxtLink>
       </div>
 
+      <!-- 正典層級圖例 -->
+      <div v-if="usedTiers.length" class="flex flex-wrap items-center gap-x-4 gap-y-1.5 mb-6 px-3 py-2 bg-white border border-gray-200 rounded-lg text-[11px]">
+        <span class="text-gray-500">正典層級：</span>
+        <span class="flex items-center gap-1.5"><span class="inline-block w-2.5 h-2.5 rounded-full border border-gray-300 bg-white" /><span class="text-gray-700">正典（無色）</span></span>
+        <span v-for="t in usedTiers" :key="t" class="flex items-center gap-1.5">
+          <span class="inline-block w-2.5 h-2.5 rounded-full" :class="TIERS[t].dotCls" />
+          <span :class="TIERS[t].titleCls">{{ TIERS[t].zh }}</span>
+        </span>
+      </div>
+
       <div v-if="total === 0" class="text-center text-gray-400 py-16 text-sm">此目錄尚未建置書目。</div>
 
       <!-- 各部：列表呈現 -->
@@ -55,11 +65,12 @@
               :is="w.link ? 'NuxtLink' : 'div'"
               :to="w.link || undefined"
               class="flex items-baseline gap-3 px-3 py-2 transition"
-              :class="w.link ? 'hover:bg-emerald-50/60 cursor-pointer' : 'hover:bg-slate-50'"
+              :class="[w.tier ? TIERS[w.tier].rowCls : '', w.link ? 'hover:bg-emerald-50/60 cursor-pointer' : 'hover:bg-slate-50']"
             >
               <span class="shrink-0 w-7 text-right text-[11px] font-mono text-gray-300 tabular-nums">{{ runningNo(d, i) }}</span>
+              <span v-if="w.tier" class="shrink-0 self-center inline-block w-2 h-2 rounded-full" :class="TIERS[w.tier].dotCls" />
               <div class="min-w-0 flex-1">
-                <span class="text-sm font-medium text-gray-900">{{ w.title_zh }}</span>
+                <span class="text-sm font-medium" :class="w.tier ? TIERS[w.tier].titleCls : 'text-gray-900'">{{ w.title_zh }}</span>
                 <span v-if="w.title_orig" class="text-[11px] text-gray-400 italic ml-2">{{ w.title_orig }}</span>
                 <span v-if="w.author" class="text-[11px] text-stone-600 ml-2">／{{ w.author }}</span>
                 <span v-if="w.note" class="text-[11px] text-gray-500 block leading-relaxed mt-0.5">{{ w.note }}</span>
@@ -79,7 +90,7 @@
 </template>
 
 <script setup lang="ts">
-import { findEra, canonWorkCount, CANON_LABEL, type DazangCanon, type DazangDivision, type CanonKey } from '~/data/dazangjing'
+import { findEra, canonWorkCount, CANON_LABEL, TIER_LABEL, type DazangCanon, type DazangDivision, type CanonKey, type CanonTier } from '~/data/dazangjing'
 
 definePageMeta({ middleware: 'auth' })
 
@@ -93,6 +104,15 @@ const collection = computed(() => era.value?.collections.find(c => c.key === col
 const canon = computed<DazangCanon | undefined>(() => collection.value?.[canonKey.value])
 const canonLabel = computed(() => CANON_LABEL[canonKey.value])
 const total = computed(() => (canon.value ? canonWorkCount(canon.value) : 0))
+
+// 塗色圖例：僅當此目錄含分級書卷（經藏正藏）才顯示
+const usedTiers = computed<CanonTier[]>(() => {
+  if (!canon.value) return []
+  const set = new Set<CanonTier>()
+  for (const d of canon.value.divisions) for (const w of d.works) if (w.tier) set.add(w.tier)
+  return (['lxx', 'eastern', 'patristic'] as CanonTier[]).filter(t => set.has(t))
+})
+const TIERS = TIER_LABEL
 
 useHead(() => ({ title: `${collection.value?.name ?? '大藏經'}·${canonLabel.value.zh} — Know Graph Lab` }))
 
