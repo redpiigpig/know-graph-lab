@@ -27,6 +27,7 @@ description: 「印順學派與弘誓研究資料」collection（/research-data/
 
 ## 抓取雷區（已寫進測試 scripts/tests/test_hongshi.py，15 例綠）
 - **弘誓雙月刊 PDF 檔名三種變體**都要認：`hongshi-magazine-187-DATE.pdf`／`magazine190-DATE.pdf`（無連字號）／`180hongshi-ROCDATE.pdf`（號在前）。`hongshi.magazine_issue()` 統一解析。1–79 期官網無 PDF；缺 85,177-180（源站連結 404）。
+- **🆘 hongshi 被持續硬封時 → 改走 Wayback Machine**（archive.org 非 Cloudflare）：`http://archive.org/wayback/available?url=…` 取最近快照，再以 `http://web.archive.org/web/<ts>id_/<url>`（`id_` raw 修飾）抓**無工具列原始頁**，純 requests 即可。歷屆學術活動就是整天連抓後 hongshi 封鎖、改用此法抓到的（`hongshi_meeting_wayback.py`，24/30 項，6 項未存檔）。
 - **log-page.php 需 `Referer: log.php`** 否則錯誤頁；n=1–26 是空 stub（非真內容），站上學團日誌實際從 n=27 起。
 - （EDM `.htm` 多資料夾枚舉法見上方 🗑️ 註，雖已不收但 `hongshi.edm_issue()` 仍保留並測試。）
 
