@@ -35,6 +35,15 @@
           <span class="tool-badge bg-amber-50 text-amber-600">{{ logCount || '…' }} 則</span>
         </NuxtLink>
 
+        <NuxtLink to="/research-data/yinshun-hongshi/xuanzang" class="tool-card group border-violet-100 hover:border-violet-300 hover:shadow-violet-100">
+          <div class="tool-icon bg-violet-50 text-violet-600">🎓</div>
+          <div class="flex-1">
+            <h2 class="tool-title">玄奘佛學研究學報</h2>
+            <p class="tool-desc">玄奘大學宗教與文化學系學術期刊，每篇論文全文；昭慧、性廣等學者人間佛教研究重鎮</p>
+          </div>
+          <span class="tool-badge bg-violet-50 text-violet-600">{{ xzCount || '…' }} 期</span>
+        </NuxtLink>
+
         <NuxtLink to="/research-data/yinshun-hongshi/fuyan" class="tool-card group border-emerald-100 hover:border-emerald-300 hover:shadow-emerald-100">
           <div class="tool-icon bg-emerald-50 text-emerald-600">📗</div>
           <div class="flex-1">
@@ -58,6 +67,7 @@ useHead({ title: '印順學派與弘誓研究資料 — 論文資料整理' });
 const magCount = ref(0);
 const logCount = ref(0);
 const fuyanCount = ref(0);
+const xzCount = ref(0);
 
 async function count(url: string): Promise<number> {
   try {
@@ -73,6 +83,7 @@ onMounted(async () => {
   magCount.value = await count(`${base}/magazine-index.json`);
   logCount.value = await count(`${base}/log-index.json`);
   fuyanCount.value = await count(`${base}/fuyan-index.json`);
+  xzCount.value = await count(`${base}/xuanzang-index.json`);
 });
 </script>
 
