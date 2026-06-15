@@ -12,11 +12,9 @@ set -u
 LOCK=c:/tmp/gnostic_refine.lock
 LEDGER=c:/tmp/gnostic_refine.done
 TOTAL=15563                      # sections in scope (see --dry)
-# engine=nvidia = NVIDIA-first chain (NVIDIA→Gemini→Haiku). 2026-06-15: with
-# Gemini's 4 keys fully walled, the gemini-first cascade wasted ~30-60s/section
-# probing 12 dead Gemini attempts before falling through. NVIDIA-first hits the
-# one pool that still has capacity FIRST. Switch back to gemini when it resets.
-ARGS="--retranslate --exclude-apocrypha --exclude-category manichaean --resume --engine nvidia"
+# engine=haiku = direct Claude Max OAuth (user choice when免費池 dry/contended).
+# 2026-06-15 夜：免費池被並行任務搶光，user 拍板用 haiku/Max 跑。--resume 續跑。
+ARGS="--retranslate --exclude-apocrypha --exclude-category manichaean --resume --engine haiku"
 
 if [ -f "$LOCK" ]; then echo "already running (lock $LOCK) — abort"; exit 1; fi
 echo $$ > "$LOCK"
