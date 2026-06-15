@@ -4,7 +4,7 @@
       <NuxtLink to="/dazangjing" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
       <div class="w-px h-5 bg-gray-200" />
       <span class="text-sm font-semibold text-gray-900">{{ era?.name ?? '基督教大藏經' }}</span>
-      <span v-if="era" class="text-xs text-gray-400 ml-1">{{ era.collections.length }} 藏 × 2（正藏／外藏）</span>
+      <span v-if="era" class="text-xs text-gray-400 ml-1">{{ era.collections.length }} 藏{{ allSole ? '' : ' × 2（正藏／外藏）' }}</span>
     </nav>
 
     <div v-if="!era" class="flex-1 flex items-center justify-center text-gray-400 text-sm">找不到此時代。</div>
@@ -14,7 +14,8 @@
         <h1 class="text-2xl font-bold text-gray-900 mb-1">{{ era.glyph }}　{{ era.name }}</h1>
         <p class="text-sm text-gray-500">{{ era.subtitle }}</p>
         <p v-if="era.boundary" class="text-xs text-gray-400 mt-1.5 leading-relaxed">📐 年代結界：{{ era.boundary }}</p>
-        <p class="text-xs text-gray-400 mt-1 leading-relaxed">每一藏分「正藏」（尼西亞教會接受）與「外藏」（分類對照但不被接受）兩套平行目錄，各為獨立頁面。</p>
+        <p v-if="!allSole" class="text-xs text-gray-400 mt-1 leading-relaxed">每一藏分「正藏」（尼西亞教會接受）與「外藏」（分類對照但不被接受）兩套平行目錄，各為獨立頁面。</p>
+        <p v-else class="text-xs text-gray-400 mt-1 leading-relaxed">基督教之前無正藏／外藏之分，僅立「前藏」一套目錄。</p>
       </div>
 
       <!-- 十藏列表 -->
@@ -35,20 +36,29 @@
             <p class="text-xs text-gray-500 leading-relaxed mt-0.5 line-clamp-2">{{ c.summary }}</p>
           </div>
           <div class="shrink-0 flex items-center gap-1.5">
-            <NuxtLink
-              :to="`/dazangjing/${era.key}/${c.key}/zheng`"
-              class="px-2.5 py-1.5 rounded-lg bg-emerald-600 text-white text-xs font-medium hover:bg-emerald-700 transition whitespace-nowrap"
-            >正藏 <span class="opacity-80">{{ count(c.zheng) }}</span></NuxtLink>
-            <NuxtLink
-              :to="`/dazangjing/${era.key}/${c.key}/wai`"
-              class="px-2.5 py-1.5 rounded-lg bg-stone-200 text-stone-700 text-xs font-medium hover:bg-stone-300 transition whitespace-nowrap"
-            >外藏 <span class="opacity-70">{{ count(c.wai) }}</span></NuxtLink>
+            <template v-if="c.soleCanonLabel">
+              <NuxtLink
+                :to="`/dazangjing/${era.key}/${c.key}/zheng`"
+                class="px-2.5 py-1.5 rounded-lg bg-stone-900 text-white text-xs font-medium hover:bg-stone-700 transition whitespace-nowrap"
+              >{{ c.soleCanonLabel }} <span class="opacity-80">{{ count(c.zheng) }}</span></NuxtLink>
+            </template>
+            <template v-else>
+              <NuxtLink
+                :to="`/dazangjing/${era.key}/${c.key}/zheng`"
+                class="px-2.5 py-1.5 rounded-lg bg-emerald-600 text-white text-xs font-medium hover:bg-emerald-700 transition whitespace-nowrap"
+              >正藏 <span class="opacity-80">{{ count(c.zheng) }}</span></NuxtLink>
+              <NuxtLink
+                :to="`/dazangjing/${era.key}/${c.key}/wai`"
+                class="px-2.5 py-1.5 rounded-lg bg-stone-200 text-stone-700 text-xs font-medium hover:bg-stone-300 transition whitespace-nowrap"
+              >外藏 <span class="opacity-70">{{ count(c.wai) }}</span></NuxtLink>
+            </template>
           </div>
         </div>
       </div>
 
       <div class="mt-8 text-xs text-gray-400 leading-relaxed border-t border-gray-200 pt-4">
-        <p>綠＝正藏（尼西亞教會接受）；灰＝外藏（偽典／異端／猶太教／外教見證，分類與正藏對照）。數字為該目錄卷數。</p>
+        <p v-if="!allSole">綠＝正藏（尼西亞教會接受）；灰＝外藏（偽典／異端／猶太教／外教見證，分類與正藏對照）。數字為該目錄卷數。</p>
+        <p v-else>「前藏」收錄基督教與猶太教之前、對其有影響的古代異教起源文獻。數字為卷數。</p>
       </div>
     </div>
   </div>
@@ -61,6 +71,7 @@ definePageMeta({ middleware: 'auth' })
 
 const route = useRoute()
 const era = computed(() => findEra(String(route.params.era)))
+const allSole = computed(() => !!era.value && era.value.collections.length > 0 && era.value.collections.every(c => !!c.soleCanonLabel))
 useHead(() => ({ title: `${era.value?.name ?? '基督教大藏經'} — Know Graph Lab` }))
 
 function count(c: DazangCanon) { return canonWorkCount(c) }

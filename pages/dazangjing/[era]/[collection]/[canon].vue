@@ -3,7 +3,7 @@
     <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 z-30 sticky top-0">
       <NuxtLink :to="`/dazangjing/${eraKey}`" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
       <div class="w-px h-5 bg-gray-200" />
-      <span class="text-sm font-semibold text-gray-900">{{ collection?.name }}<span class="text-gray-400 mx-1">·</span>{{ canonLabel.zh }}</span>
+      <span class="text-sm font-semibold text-gray-900">{{ collection?.name }}<span class="text-gray-400 mx-1">·</span>{{ collection?.soleCanonLabel || canonLabel.zh }}</span>
       <span v-if="canon" class="text-xs text-gray-400 ml-1">{{ total }} 卷</span>
     </nav>
 
@@ -17,23 +17,25 @@
           <div>
             <h1 class="text-xl font-bold text-gray-900 leading-tight">
               {{ collection.name }}
-              <span class="text-sm font-medium px-2 py-0.5 rounded ml-1" :class="canonKey === 'zheng' ? 'bg-emerald-100 text-emerald-800' : 'bg-stone-200 text-stone-700'">{{ canonLabel.zh }}</span>
+              <span class="text-sm font-medium px-2 py-0.5 rounded ml-1" :class="collection.soleCanonLabel ? 'bg-stone-200 text-stone-700' : (canonKey === 'zheng' ? 'bg-emerald-100 text-emerald-800' : 'bg-stone-200 text-stone-700')">{{ collection.soleCanonLabel || canonLabel.zh }}</span>
             </h1>
-            <div class="text-xs text-gray-400">{{ collection.name_en }} · {{ canonLabel.en }}</div>
+            <div class="text-xs text-gray-400">{{ collection.name_en }}{{ collection.soleCanonLabel ? '' : ' · ' + canonLabel.en }}</div>
           </div>
         </div>
-        <p class="text-xs text-gray-500 leading-relaxed">{{ canonLabel.desc }}</p>
+        <p v-if="!collection.soleCanonLabel" class="text-xs text-gray-500 leading-relaxed">{{ canonLabel.desc }}</p>
         <p v-if="canon.summary" class="text-xs text-gray-600 leading-relaxed mt-1">{{ canon.summary }}</p>
       </div>
 
-      <!-- 對照切換 -->
+      <!-- 對照切換（單一目錄藏不顯示） -->
       <div class="flex items-center gap-2 mb-6 text-xs">
-        <NuxtLink :to="`/dazangjing/${eraKey}/${collKey}/zheng`"
-          class="px-3 py-1 rounded-full border transition"
-          :class="canonKey === 'zheng' ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-white text-gray-600 border-gray-200 hover:border-emerald-400'">正藏 ({{ count(collection.zheng) }})</NuxtLink>
-        <NuxtLink :to="`/dazangjing/${eraKey}/${collKey}/wai`"
-          class="px-3 py-1 rounded-full border transition"
-          :class="canonKey === 'wai' ? 'bg-stone-700 text-white border-stone-700' : 'bg-white text-gray-600 border-gray-200 hover:border-stone-400'">外藏 ({{ count(collection.wai) }})</NuxtLink>
+        <template v-if="!collection.soleCanonLabel">
+          <NuxtLink :to="`/dazangjing/${eraKey}/${collKey}/zheng`"
+            class="px-3 py-1 rounded-full border transition"
+            :class="canonKey === 'zheng' ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-white text-gray-600 border-gray-200 hover:border-emerald-400'">正藏 ({{ count(collection.zheng) }})</NuxtLink>
+          <NuxtLink :to="`/dazangjing/${eraKey}/${collKey}/wai`"
+            class="px-3 py-1 rounded-full border transition"
+            :class="canonKey === 'wai' ? 'bg-stone-700 text-white border-stone-700' : 'bg-white text-gray-600 border-gray-200 hover:border-stone-400'">外藏 ({{ count(collection.wai) }})</NuxtLink>
+        </template>
         <NuxtLink v-if="collection.portal" :to="collection.portal.to"
           class="ml-auto px-3 py-1 rounded-full bg-stone-100 text-stone-700 hover:bg-stone-200 transition">→ {{ collection.portal.label }}</NuxtLink>
       </div>

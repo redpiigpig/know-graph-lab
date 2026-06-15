@@ -79,6 +79,11 @@ export interface DazangCollection {
   summary: string
   /** 站內主要對照工具 */
   portal?: { to: string; label: string }
+  /**
+   * 單一目錄標籤。設定後此藏不分正藏／外藏，只有一套以此名稱呈現的目錄
+   * （內容放 zheng 槽）。用於前基督教大藏經——基督教之前無正／外之分，只有「前藏」。
+   */
+  soleCanonLabel?: string
   /** 正藏（尼西亞教會接受） */
   zheng: DazangCanon
   /** 外藏（對照分類，不被尼西亞教會接受） */

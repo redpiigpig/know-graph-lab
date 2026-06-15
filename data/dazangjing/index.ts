@@ -15,12 +15,13 @@ const PRE_CHRISTIAN_ERA: DazangEra = {
   enabled: true,
   collections: [
     {
-      key: 'qian',
-      name: '前藏',
-      name_en: 'Antecedent Texts',
-      glyph: '前',
+      key: 'jing',
+      name: '經藏',
+      name_en: 'Scriptures (Antecedents)',
+      glyph: '經',
       genres: '異教起源‧前驅文獻',
-      summary: '基督教與猶太教成形之前的異教起源：埃及、美索不達米亞、敘利亞、希臘、羅馬等對猶太-基督教信仰與經典有影響的文獻與傳統。目前先收亞希夸書一卷，餘卷待逐步策展。',
+      summary: '基督教與猶太教成形之前的異教起源：埃及、美索不達米亞、敘利亞、希臘、羅馬等對猶太-基督教信仰與經典有影響的文獻與傳統。基督教之前無正藏／外藏之分，僅立「前藏」一套目錄。目前先收亞希夸書一卷，餘卷待逐步策展。',
+      soleCanonLabel: '前藏',
       zheng: {
         summary: '對猶太-基督教傳統有影響的古代異教前驅文獻。',
         divisions: [
