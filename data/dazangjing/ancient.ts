@@ -840,6 +840,15 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
+            key: 'pagan-mystery', label: '外教神祕宗教部', label_en: 'Pagan Mystery & Esoteric Religions',
+            works: [
+              { title_zh: '赫密斯文集', title_orig: 'Corpus Hermeticum', author: '託名赫密斯', era: '約 1–3 世紀', place: '埃及（亞歷山卓）', language: '希臘文', intro: '託名三重偉大赫密斯的十八篇希臘文哲理對話，融合柏拉圖主義、斯多葛思想與埃及宗教，論神、宇宙、心智（Nous）與靈魂上升重生，與諾斯底主義呼應，是希臘化埃及「異教靈知」的核心經典；文藝復興時被誤為摩西同代祕傳而轟動歐洲。' },
+              { title_zh: '阿斯克勒庇俄斯', title_orig: 'Asclepius (Perfect Discourse)', author: '託名赫密斯', era: '約 2–3 世紀', place: '埃及', language: '拉丁文（希臘原本佚）', intro: '赫密斯文獻中唯一完整存於拉丁文的對話，藉赫密斯向弟子阿斯克勒庇俄斯啟示宇宙、諸神、人造神像與末世；含著名的「埃及哀歌」預言古宗教衰亡。奧古斯丁《上帝之城》曾專章駁斥其偶像神學。' },
+              { title_zh: '迦勒底神諭', title_orig: 'Chaldean Oracles', author: '託名瑣羅亞斯德傳統', era: '約 2 世紀', place: '敘利亞／小亞細亞', language: '希臘文', intro: '以神諭體六步格詩寫成的新柏拉圖—神智學殘篇，論至高父神、能動智性與靈魂藉神術（theurgy）上升歸神，被後期新柏拉圖派（楊布里科斯、普羅克洛）奉為聖典，是異教神術與基督教神祕主義對話的重要背景。' },
+              { title_zh: '密特拉禮儀文', title_orig: 'Mithras Liturgy', author: '佚名（密特拉／魔法傳統）', era: '約 2–4 世紀', place: '埃及', language: '希臘文', intro: '保存於《巴黎大魔法紙草》中的靈魂升天儀式文，引導入會者經七重天界面見光明之神與密特拉。其與密特拉密儀的確切關係雖有爭議，卻是少數存世、可一窺古代神祕宗教升天體驗的文字（該密儀主要靠雕刻與遺址傳世）。' },
+            ],
+          },
+          {
             key: 'pagan-critique', label: '外教批判部', label_en: 'Pagan Critiques',
             works: [
               { title_zh: '塞爾蘇斯《真道》', intro: '塞爾蘇斯二世紀於亞歷山卓以希臘文撰寫，是現存最早針對基督教的系統性哲學批判。他以柏拉圖主義立場斥基督教為迷信、嘲諷童女生子與復活，並指其源於猶太教而背離理性。此書本身已佚，幾乎全藉俄利根《駁塞爾修斯》的引述保存。它是研究古代異教知識界如何看待基督教的最重要外教批判文獻。', title_orig: 'Celsus, On the True Doctrine', author: '塞爾蘇斯', era: '2 世紀', place: '亞歷山卓', language: '希臘文', note: '經俄利根《駁塞爾修斯》保存' },
@@ -901,7 +910,6 @@ export const ANCIENT_ERA: DazangEra = {
               { title_zh: '塞浦路斯傳', intro: '三世紀龐提烏斯於迦太基以拉丁文撰成，是現存最早的拉丁文聖徒傳記之一。書中記述主教居普良在瘟疫與逼迫中如何以慈悲牧養信眾、最終從容殉道。作為由其執事親筆所撰的當代見證，本書開創了拉丁聖徒本傳的書寫範式，是研究三世紀北非教會領導與牧者形象塑造的珍貴文本。', title_orig: 'Vita Cypriani', author: '龐提烏斯', era: '3 世紀', place: '迦太基', language: '拉丁文', note: '主教在瘟疫中的慈悲與管理', link: '/fathers' },
               { title_zh: '安東尼傳', intro: '四世紀亞他那修於亞歷山大以希臘文撰成，敘述沙漠隱士安東尼棄世苦修、與魔鬼搏鬥的一生。本書確立了修道主義的理想典範與沙漠隱士的標準形象，流傳極廣並迅速譯為拉丁，激發西方無數人歸入修道生活。作為基督教修道運動的奠基性傳記，其在靈修史與聖徒傳文體發展上影響至為深遠。', title_orig: 'Vita Antonii', author: '亞他那修', era: '4 世紀', place: '亞歷山大', language: '希臘文', note: '確立修道主義與沙漠隱士標準', link: '/fathers' },
               { title_zh: '馬丁傳', intro: '四世紀蘇爾皮基烏‧塞維魯於高盧以拉丁文撰成，記述圖爾主教馬丁由軍人轉為苦修者、行神蹟並巡牧傳道的生平。本書將東方修道理想引入西方語境，塑造出兼具隱修與牧職的西方聖徒典範，廣受傳抄。作為西方拉丁聖徒傳的早期傑作，其對中世紀聖徒崇拜與傳記文體的形成具深遠影響。', title_orig: 'Vita Sancti Martini', author: '蘇爾皮基烏‧塞維魯', era: '4 世紀', place: '高盧', language: '拉丁文', note: '西方苦修與巡牧的典範', link: '/fathers' },
-              { title_zh: '沙漠父老傳燈錄', intro: '四至五世紀於埃及輯錄而成，以希臘文流傳，匯集沙漠隱修士的格言與軼事。全書以師徒問答與簡短故事的形式，傳遞謙卑、靜默、克己等隱修智慧，是埃及修道傳統的精神結晶。其口傳輯錄的性質保存了早期隱修生活的實況與靈修教導，是研究沙漠教父傳統與基督教靈修學的核心文獻。', title_orig: 'Apophthegmata Patrum', author: '佚名輯錄', era: '4–5 世紀', place: '埃及', language: '希臘文', note: '沙漠隱修士師徒智慧的傳遞', link: '/fathers' },
               { title_zh: '居普良行傳', intro: '約二五九年由執事彭提烏於迦太基以拉丁文撰成，記述主教居普良的生平與殉道。內容與塞浦路斯傳同源，詳述其在逼迫中堅守職分、最終就義的經過，並對其牧養與管理多所稱述。作為當代執事親撰的傳記，其在重建三世紀北非教會領袖事蹟與殉道崇敬傳統上具一手見證價值。', title_orig: 'The Life and Passion of Cyprian (by Pontius)', author: '執事彭提烏', era: '約259年', place: '迦太基', language: '拉丁文', link: '/fathers' },
               { title_zh: '使徒大他的教誨', intro: '約三世紀埃德薩教會以敘利亞文成書，記述使徒大他（亞岱）將福音傳入埃德薩、教化阿布加爾王的傳統。本書是東方敘利亞語基督教自述其使徒起源的核心文本，兼有傳記與教義訓誨內容。其反映埃德薩教會建構使徒傳承的努力，是研究敘利亞基督教起源與東方教會自我認同的重要史料。', title_orig: 'The Teaching of Addaeus the Apostle', author: '埃德薩教會', era: '約3世紀', place: '埃德薩', language: '敘利亞文', link: '/fathers' },
               { title_zh: '使徒行傳殘篇（敘利亞傳統）', intro: '散見於敘利亞文獻與古抄本邊註的使徒行傳零星殘篇，保存正典《使徒行傳》以外的使徒事蹟異聞與異文，反映東敘利亞教會獨立的使徒傳統。年代與來源不一，多屬古代晚期傳抄，以敘利亞文存世，是研究使徒時代史料流傳與東方教會記憶的補充材料。', title_orig: 'Syriac Acts of the Apostles and Martyrs', author: '敘利亞傳統', era: '約3-4世紀', place: '埃德薩', language: '敘利亞文', link: '/fathers' },
@@ -1404,6 +1412,8 @@ export const ANCIENT_ERA: DazangEra = {
               { title_zh: '自然物相志', intro: '成書於二至四世紀亞歷山卓的佚名希臘文博物典籍，以動植物與礦石的習性為題，逐條附上寓意解經，將獅子、鵜鶘、鳳凰等世俗動物學知識神聖化，使每一種受造物都成為基督奧祕的象徵。它是中世紀「動物寓言集」的源頭，譯成拉丁文、敘利亞文、亞美尼亞文等多語廣為流傳，深刻塑造了歐洲教堂雕刻、彩繪與紋章藝術近千年，可說是基督教世界觀下「自然神學」最早的通俗百科。', title_orig: 'Physiologus', author: '佚名', era: '2–4 世紀', place: '亞歷山卓', language: '希臘文', note: '基督教動物學，將世俗動物知識神聖化，影響歐洲藝術千年' },
               { title_zh: '詞源百科志', intro: '七世紀塞維亞主教依西多祿以拉丁文編纂的二十卷巨著，按詞源學貫串文法、修辭、醫學、法律、天文、地理、動物、農事乃至神學的全部古典知識，被後世譽為「中世紀的維基百科」。作者身處西哥德治下的西班牙，志在搶救行將失傳的古代學術遺產，全書以「名之本義即物之本性」為法，將希臘羅馬世俗學問整編入基督教架構，成為整個中世紀最通行的工具書與課本。', title_orig: 'Etymologiae', author: '塞維亞的依西多祿', era: '7 世紀', place: '塞維亞', language: '拉丁文', note: '中世紀的維基百科', link: '/fathers' },
               { title_zh: '早期教會著作總目提要', intro: '十九世紀愛丁堡學者羅伯茨與唐納森（Roberts & Donaldson）為《尼西亞前教父全集》英譯本所編的書目提要與索引，逐卷整理尼西亞會議前各教父著作的篇目、版本與內容綱要。它本身並非古代文獻，而是後世彙編的導覽工具，性質屬於目錄學與檢索，意義在於替龐雜的教父原典提供一套查閱地圖，使現代讀者得以系統定位早期基督教文獻。', title_orig: 'Bibliographic Synopsis / Indexes of the Ante-Nicene Fathers', author: '編者按（Roberts & Donaldson）', era: '19世紀彙編', place: '愛丁堡', language: '英文', link: '/fathers' },
+              { title_zh: '論萬物本性', title_orig: 'De Natura Rerum (Isidore)', author: '依西多祿', era: '7 世紀', place: '西班牙（塞維亞）', language: '拉丁文', intro: '塞維亞的依西多祿為西哥德王所作的自然百科，綜述天象、四季、風雨、海洋與曆法，引證老普林尼等古典作家而納入基督教框架，是中世紀早期宇宙與曆算教學的範本，與其《詞源》同為保存古典知識的支柱。' },
+              { title_zh: '文獻學與墨丘利的聯姻', title_orig: 'De Nuptiis Philologiae et Mercurii', author: '馬爾蒂亞努斯‧卡佩拉', era: '5 世紀', place: '北非（迦太基）', language: '拉丁文', intro: '以墨丘利迎娶博學少女斐洛羅嘉為寓言框架，由七位侍女依序講授文法、修辭、辯證、算術、幾何、天文、音樂「七藝」，是中世紀自由七藝課程的奠基教科書，藉異教神話包裝保存了整套古典學科體系。' },
             ],
           },
           {
@@ -1413,6 +1423,8 @@ export const ANCIENT_ERA: DazangEra = {
               { title_zh: '時間計算理法', intro: '八世紀英格蘭修士可敬者比德以拉丁文寫成的曆算名著，系統處理復活節日期的推算，貫通天文觀測、潮汐、閏餘與紀年法，被譽為古代最偉大的復活節曆算法。書中確立以基督降生為紀元起點的習慣，對「主後」紀年的普及影響深遠，使分散各地的教會得以統一節期，是中世紀科學史與時間觀念史上的里程碑。', title_orig: 'De Temporum Ratione', author: '可敬者比德', era: '8 世紀', place: '英格蘭', language: '拉丁文', note: '古代最偉大的復活節曆算法', link: '/fathers' },
               { title_zh: '逾越節曆算典則', intro: '傳為三世紀初羅馬神學家希波律陀所訂的逾越節曆算法則，約成於二二二年，以希臘文記載推算復活節日期的週期表。它是教會早期為解決東西方守節日期分歧所作的努力之一，反映尼西亞會議之前各地教會自行訂曆的局面，在曆算史上是比德系統之前的重要先驅，見證基督教曆法逐步走向統一的漫長過程。', title_orig: 'The Paschal Canon (attrib. Hippolytus)', author: '希波律陀', era: '約222年', place: '羅馬', language: '希臘文', link: '/fathers' },
               { title_zh: '逾越節曆算殘篇', intro: '三世紀勞迪西亞主教安那托留（約二七〇年）所撰逾越節曆算著作的殘存片段，以希臘文記述其十九年週期的推算法。安那托留以精通天文與數學著稱，其曆法為後世復活節計算提供重要依據，殘篇雖不完整，仍是研究早期教會曆算傳統與東方天文知識如何被基督教吸收的關鍵見證。', title_orig: 'The Paschal Canon of Anatolius of Alexandria', author: '勞迪西亞的安那托留', era: '約270年', place: '勞迪西亞', language: '希臘文', link: '/fathers' },
+              { title_zh: '論萬物本性（比德）', title_orig: 'De Natura Rerum (Bede)', author: '可敬者比德', era: '8 世紀', place: '英格蘭', language: '拉丁文', intro: '可敬者比德仿依西多祿所作的自然之書，依創造論與古典自然哲學解釋天地、星辰、潮汐與氣象，與其《論時間計算》互補，成為英格蘭修道院傳授自然知識與曆算的標準讀本。' },
+              { title_zh: '西庇阿之夢註', title_orig: 'Commentary on the Dream of Scipio', author: '馬克羅比烏斯', era: '5 世紀', place: '義大利／羅馬', language: '拉丁文', intro: '為西塞羅《論共和國》末篇〈西庇阿之夢〉所作的新柏拉圖主義註釋，闡述靈魂不朽、天球音樂與宇宙結構，是拉丁西方認識新柏拉圖宇宙論與數祕學的主要管道，深刻形塑中世紀的天界觀與數理想像。' },
             ],
           },
           {
@@ -1420,12 +1432,17 @@ export const ANCIENT_ERA: DazangEra = {
             works: [
               { title_zh: '神聖與世俗修學法要', intro: '六世紀義大利政治家卡西奧多羅斯退隱維瓦留姆修道院後所撰的拉丁文教育綱領，分「神聖之學」與「世俗之學」上下兩卷，規定修士須先通文法、修辭、辯證、算術、幾何、音樂、天文等七藝，再研讀聖經與教父。它把古典自由七藝正式納入修道教育，奠定後世修道院抄經與治學的制度，被視為中世紀大學課程的源頭。', title_orig: 'Institutiones', author: '卡西奧多羅斯', era: '6 世紀', place: '義大利', language: '拉丁文', note: '規定後世修道院必學七藝，中世紀大學制度的源頭', link: '/fathers' },
               { title_zh: '波菲利引論（基督教釋本）', intro: '新柏拉圖哲學家波菲利三世紀所作的《亞里斯多德範疇論》入門書，六世紀經波愛修譯為拉丁文並加註，遂成基督教世界研習邏輯學的標準教材。書中關於「種屬普遍概念是否實存」的提問，引爆了中世紀經院哲學的共相之爭，更為基督一性與二性的神學辯論提供概念與推理工具，是希臘邏輯學基督教化的關鍵橋樑。', title_orig: 'Isagoge (trans. Boethius)', author: '波菲利著，波愛修譯', era: '3／6 世紀', place: '羅馬', language: '希臘文／拉丁文', note: '基督二性辯論的邏輯學武器' },
+              { title_zh: '多納圖斯文法', title_orig: 'Ars Grammatica (Donatus)', author: '多納圖斯', era: '4 世紀', place: '羅馬', language: '拉丁文', intro: '羅馬文法家多納圖斯的拉丁文法綱要（《小文法》與《大文法》），條理簡明，自古代晚期至中世紀一直是拉丁文法教學的標準課本，「Donat」幾成文法的代名詞，由修道院世代抄寫流傳。' },
+              { title_zh: '普里西安文法', title_orig: 'Institutiones Grammaticae', author: '普里西安', era: '6 世紀', place: '君士坦丁堡', language: '拉丁文', intro: '普里西安在君士坦丁堡所著十八卷拉丁文法巨著，廣引古典作家例句，是古代規模最大、最完備的拉丁文法；加洛林文藝復興後成為西方文法權威，並因其引文保存了大量失傳的古典詩文。' },
+              { title_zh: '算術與音樂', title_orig: 'De Arithmetica / De Musica (Boethius)', author: '波愛修', era: '6 世紀', place: '義大利', language: '拉丁文', intro: '波愛修依新畢達哥拉斯傳統編譯的算術與音樂教本，為四藝（算術、幾何、天文、音樂）奠定拉丁術語與理論，「quadrivium」一詞即源於此，中世紀大學的數理與音樂教學悉本於斯。' },
             ],
           },
           {
             key: 'philosophy', label: '哲學玄思部', label_en: 'Christianized Philosophy',
             works: [
               { title_zh: '哲學的慰藉', intro: '六世紀羅馬政治家波愛修蒙冤下獄待死期間所撰的拉丁文名著，以散文與韻文交錯，假託「哲學女神」與作者對話，純用希臘哲學探討命運無常、惡人何以亨通、苦難的意義與上帝主權，全篇竟不直接引用聖經。它在理性框架內安頓信仰的苦難問題，成為中世紀修士最珍愛的讀物，譯本遍及各國俗語，影響但丁、喬叟等後世文豪甚鉅。', title_orig: 'De Consolatione Philosophiae', author: '波愛修', era: '6 世紀', place: '羅馬', language: '拉丁文', note: '純用希臘哲學探討命運苦難與上帝主權，中世紀修士最愛' },
+              { title_zh: '蒂邁歐篇譯註', title_orig: 'Translation & Commentary on Plato’s Timaeus', author: '卡爾西迪烏斯', era: '4 世紀', place: '義大利', language: '拉丁文', intro: '卡爾西迪烏斯將柏拉圖《蒂邁歐篇》前半譯為拉丁文並加新柏拉圖主義註釋，是中世紀拉丁西方唯一能讀到的柏拉圖原典，獨力支撐千年間西方對柏拉圖宇宙論與創造觀的認識，影響沙特爾學派甚鉅。' },
+              { title_zh: '亞里斯多德邏輯譯註', title_orig: 'Translations of Aristotle’s Organon', author: '波愛修', era: '6 世紀', place: '義大利', language: '拉丁文', intro: '波愛修翻譯並註釋亞里斯多德《範疇篇》《解釋篇》與波菲利《導論》，立志拉丁化全部柏拉圖與亞里斯多德著作（未竟）；其譯註構成中世紀早期「舊邏輯」(logica vetus) 的全部內容，是經院哲學的根基。' },
             ],
           },
         ],
@@ -1443,6 +1460,8 @@ export const ANCIENT_ERA: DazangEra = {
             works: [
               { title_zh: '所羅門遺訓', intro: '託名所羅門的希臘文驅魔與占星祕錄，敘所羅門憑神授指環役使群魔建造聖殿，逐一列舉各惡魔的名號、職司、所司星宿與制伏之法，融合猶太、希臘與近東的天使—惡魔學。約一至三世紀成書，是古代晚期魔法、占星與驅魔傳統的重要文獻。', title_orig: 'Testament of Solomon', author: '佚名（託名所羅門）', era: '1–3 世紀', place: '巴勒斯坦', language: '希臘文', note: '以神戒驅使惡魔建聖殿的驅魔與召喚祕錄' },
               { title_zh: '曼達黃道書', title_orig: 'Asfar Malwasha (Book of the Zodiac)', author: '曼達教祭司（佚名）', era: '約古代晚期', place: '下美索不達米亞', language: '曼達文', intro: '「占星之書」，曼達教的占星與曆算文獻，依黃道十二宮、行星與時辰推算命運、擇日與解夢，融合巴比倫占星傳統與曼達宇宙觀。雖屬實用占驗之術，卻深植於該派「星辰主宰物質界」的諾斯底世界觀，是了解古代晚期兩河流域民間占星與曼達祭司知識的珍貴材料；以曼達文寫成。', },
+              { title_zh: '摩尼教占星殘卷', title_orig: 'Manichaean Astrological Fragments', author: '摩尼教', era: '約 3–8 世紀', place: '中亞（吐魯番）', language: '中古波斯文／帕提亞文', intro: '吐魯番出土摩尼教殘卷中保存的星占與曆算文字，反映摩尼教把黃道、行星與光明分子的釋放週期相連的宇宙論，藉占星推定齋期與命運，是其二元神話在日常實踐中的延伸。' },
+              { title_zh: '赫密斯占星文獻', title_orig: 'Hermetic Astrology (Liber Hermetis etc.)', author: '託名赫密斯', era: '約 1–4 世紀', place: '埃及（亞歷山卓）', language: '希臘文', intro: '託名三重偉大赫密斯的占星與星象醫學文集，論黃道十二宮、行星界域（decans）對人體與命運的支配，融合埃及、巴比倫與希臘占星傳統，是希臘化埃及神祕學的代表，後世占星與煉金術奉為祖典。' },
             ],
           },
         ],
