@@ -35,6 +35,15 @@
           <span class="tool-badge bg-amber-50 text-amber-600">{{ logCount || '…' }} 則</span>
         </NuxtLink>
 
+        <NuxtLink v-if="meetCount" to="/research-data/yinshun-hongshi/meeting" class="tool-card group border-sky-100 hover:border-sky-300 hover:shadow-sky-100">
+          <div class="tool-icon bg-sky-50 text-sky-600">🎙️</div>
+          <div class="flex-1">
+            <h2 class="tool-title">歷屆學術活動</h2>
+            <p class="tool-desc">「印順導師思想之理論與實踐」國際學術會議歷屆，及性別倫理、動物倫理等研討會公告／徵稿／議程</p>
+          </div>
+          <span class="tool-badge bg-sky-50 text-sky-600">{{ meetCount || '…' }} 項</span>
+        </NuxtLink>
+
         <NuxtLink to="/research-data/yinshun-hongshi/xuanzang" class="tool-card group border-violet-100 hover:border-violet-300 hover:shadow-violet-100">
           <div class="tool-icon bg-violet-50 text-violet-600">🎓</div>
           <div class="flex-1">
@@ -68,6 +77,7 @@ const magCount = ref(0);
 const logCount = ref(0);
 const fuyanCount = ref(0);
 const xzCount = ref(0);
+const meetCount = ref(0);
 
 async function count(url: string): Promise<number> {
   try {
@@ -84,6 +94,7 @@ onMounted(async () => {
   logCount.value = await count(`${base}/log-index.json`);
   fuyanCount.value = await count(`${base}/fuyan-index.json`);
   xzCount.value = await count(`${base}/xuanzang-index.json`);
+  meetCount.value = await count(`${base}/meeting-index.json`);
 });
 </script>
 
