@@ -26,9 +26,9 @@
           <div class="tool-icon bg-rose-50 text-rose-600">🪷</div>
           <div class="flex-1">
             <h2 class="tool-title">印順學派與弘誓研究資料</h2>
-            <p class="tool-desc">佛教弘誓學院刊物典藏：弘誓雙月刊、學團日誌、弘誓電子報，與福嚴會訊</p>
+            <p class="tool-desc">佛教弘誓學院刊物典藏：弘誓雙月刊、學團日誌，與福嚴會訊</p>
           </div>
-          <span class="tool-badge bg-rose-50 text-rose-600">4 類刊物</span>
+          <span class="tool-badge bg-rose-50 text-rose-600">3 類刊物</span>
         </NuxtLink>
 
       </div>

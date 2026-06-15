@@ -30,12 +30,23 @@
           </div>
           <p v-if="cleanTitle(it.title)" class="text-xs text-gray-600 leading-relaxed line-clamp-2 mb-2 break-words">{{ cleanTitle(it.title) }}</p>
           <div class="flex flex-wrap items-center gap-2">
-            <a v-for="p in it.parts" :key="p.part"
-              :href="`/api/research-data/yinshun-hongshi-file?key=${encodeURIComponent(p.key)}&download=1`"
-              class="inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-lg border border-rose-200 text-rose-700 hover:bg-rose-50 no-underline">
-              ⬇ {{ it.parts.length > 1 ? `第${p.part}冊 PDF` : 'PDF 全本' }}
-              <span class="text-rose-300">{{ fmtSize(p.size) }}</span>
-            </a>
+            <template v-for="p in it.parts" :key="p.part">
+              <button @click="toggle(p)" class="inline-flex items-center text-xs font-medium px-2.5 py-1 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50">
+                {{ states[p.key]?.open ? '收合' : (it.parts.length > 1 ? `第${p.part}冊全文` : '全文') }}
+              </button>
+              <a :href="`/api/research-data/yinshun-hongshi-file?key=${encodeURIComponent(p.key)}&download=1`"
+                class="inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-lg border border-rose-200 text-rose-700 hover:bg-rose-50 no-underline">
+                ⬇ {{ it.parts.length > 1 ? `第${p.part}冊 PDF` : 'PDF 全本' }}
+                <span class="text-rose-300">{{ fmtSize(p.size) }}</span>
+              </a>
+            </template>
+          </div>
+          <div v-for="p in it.parts" :key="`ft-${p.part}`">
+            <div v-if="states[p.key]?.open" class="mt-2 rounded-lg border border-gray-100 bg-gray-50/70">
+              <div v-if="states[p.key].loading" class="px-3 py-3 text-[11px] text-gray-400">載入全文⋯</div>
+              <pre v-else-if="states[p.key].text" class="px-3 py-2 text-[11px] leading-relaxed text-gray-700 whitespace-pre-wrap font-sans max-h-96 overflow-auto">{{ states[p.key].text }}</pre>
+              <div v-else class="px-3 py-3 text-[11px] text-gray-400">全文尚未轉錄。</div>
+            </div>
           </div>
         </div>
       </div>
@@ -46,7 +57,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue';
+import { ref, reactive, computed, onMounted } from 'vue';
 
 definePageMeta({ middleware: 'auth' });
 useHead({ title: '弘誓雙月刊 — 印順學派與弘誓研究資料' });
@@ -55,6 +66,22 @@ interface Part { part: number; key: string; size: number }
 interface Issue { issue: number; date: string; title: string; parts: Part[] }
 const issues = ref<Issue[]>([]);
 const loaded = ref(false);
+
+interface TextState { open: boolean; loading: boolean; loaded: boolean; text: string | null }
+const states = reactive<Record<string, TextState>>({});
+async function toggle(p: Part) {
+  let st = states[p.key];
+  if (!st) st = states[p.key] = { open: false, loading: false, loaded: false, text: null };
+  st.open = !st.open;
+  if (st.open && !st.loaded && !st.loading) {
+    st.loading = true;
+    try {
+      const r = await $fetch<{ available: boolean; text: string | null }>(
+        '/api/research-data/yinshun-hongshi-text', { query: { key: p.key } });
+      st.text = r.available ? (r.text ?? null) : null;
+    } catch { st.text = null; } finally { st.loading = false; st.loaded = true; }
+  }
+}
 
 const minIssue = computed(() => issues.value.length ? Math.min(...issues.value.map(i => i.issue)) : 0);
 const maxIssue = computed(() => issues.value.length ? Math.max(...issues.value.map(i => i.issue)) : 0);
