@@ -10,8 +10,8 @@ const PRE_CHRISTIAN_ERA: DazangEra = {
   name: '前基督教大藏經',
   name_en: 'Pre-Canonical Antecedents',
   glyph: '前',
-  subtitle: '前藏 — 古代近東智慧、神話與律法的正典前驅文獻',
-  boundary: '以色列／基督教正典成形之前的古代近東文獻（被吸收、改寫或對照者）。',
+  subtitle: '前藏 — 基督教與猶太教之前的異教（埃及‧兩河‧敘利亞‧希臘‧羅馬）起源文獻',
+  boundary: '基督教與猶太教之前的古代異教文獻與傳統——埃及、兩河、敘利亞、希臘、羅馬中對猶太-基督教信仰有影響者。',
   enabled: true,
   collections: [
     {
@@ -19,35 +19,20 @@ const PRE_CHRISTIAN_ERA: DazangEra = {
       name: '前藏',
       name_en: 'Antecedent Texts',
       glyph: '前',
-      genres: '智慧‧神話‧律法',
-      summary: '古代近東的智慧文學、洪水與創造神話、法典——以色列與基督教傳統據以吸收、改寫或對照的前驅文本。',
+      genres: '異教起源‧前驅文獻',
+      summary: '基督教與猶太教成形之前的異教起源：埃及、美索不達米亞、敘利亞、希臘、羅馬等對猶太-基督教信仰與經典有影響的文獻與傳統。目前先收亞希夸書一卷，餘卷待逐步策展。',
       zheng: {
-        summary: '被以色列／猶太傳統吸收或歸化的近東前驅文獻。',
+        summary: '對猶太-基督教傳統有影響的古代異教前驅文獻。',
         divisions: [
           {
-            key: 'wisdom', label: '近東智慧文學', label_en: 'ANE Wisdom',
+            key: 'antecedents', label: '異教前驅文獻', label_en: 'Pagan Antecedents',
             works: [
-              { title_zh: '亞希夸書', title_orig: 'Story of Ahiqar', author: '佚名', era: '亞述（前 7 世紀）', place: '亞述／埃及（象島）', language: '亞蘭文', note: '宮廷智者亞希夸的箴言與宮廷陰謀傳奇，被猶太《多比傳》歸化吸收', link: '/apocrypha' },
-              { title_zh: '阿門內莫普訓言', title_orig: 'Instruction of Amenemope', author: '阿門內莫普', era: '約前 12 世紀', place: '埃及', language: '埃及文', note: '埃及智慧文學，與《箴言》22–24 章高度平行' },
-            ],
-          },
-          {
-            key: 'myth', label: '創造與洪水神話', label_en: 'Creation & Flood Myths',
-            works: [
-              { title_zh: '吉爾伽美什史詩', title_orig: 'Epic of Gilgamesh', author: '佚名（辛雷烏尼尼編訂）', era: '約前 2100–1200 年', place: '美索不達米亞', language: '阿卡德文（蘇美前身）', note: '含洪水敘事，與《創世記》挪亞洪水母題對照' },
-              { title_zh: '阿特拉哈西斯史詩', title_orig: 'Atrahasis Epic', author: '佚名', era: '約前 18 世紀', place: '巴比倫', language: '阿卡德文', note: '創造人類與洪水的巴比倫神話' },
-              { title_zh: '埃努瑪‧埃利什', title_orig: 'Enuma Elish', author: '佚名', era: '約前 12 世紀', place: '巴比倫', language: '阿卡德文', note: '巴比倫創世史詩，與《創世記》一章創造母題對照' },
-            ],
-          },
-          {
-            key: 'law', label: '古代法典', label_en: 'Ancient Law Codes',
-            works: [
-              { title_zh: '漢摩拉比法典', title_orig: 'Code of Hammurabi', author: '漢摩拉比', era: '約前 1754 年', place: '巴比倫', language: '阿卡德文', note: '與《出埃及記》約書（聖約律）平行的古巴比倫法典' },
+              { title_zh: '亞希夸書', intro: '前七世紀亞述宮廷背景的亞蘭文智慧傳奇，今存最早抄本出於埃及象島的猶太屯墾區。全篇敘述國王重臣、智者亞希夸遭養子陷害卻終獲昭雪的宮廷陰謀故事，並穿插大量箴言式的處世與道德教訓。它是近東最古老的智慧文學之一，後為猶太《多比傳》明文吸收歸化，又流傳於敘利亞、亞美尼亞、阿拉伯等多語傳統，見證以色列智慧傳統與更廣大的近東文化母體之間的深厚淵源。', title_orig: 'Story of Ahiqar', author: '佚名', era: '亞述（前 7 世紀）', place: '亞述／埃及（象島）', language: '亞蘭文', note: '宮廷智者亞希夸的箴言與宮廷陰謀傳奇，被猶太《多比傳》歸化吸收', link: '/apocrypha' },
             ],
           },
         ],
       },
-      wai: { divisions: [] },
+            wai: { divisions: [] },
     },
   ],
 }
