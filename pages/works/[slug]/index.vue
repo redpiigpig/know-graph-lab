@@ -752,6 +752,13 @@ function renderThesisText(txt: string): string {
   return out.join('\n')
 }
 
+// ── 研究回顧（文獻綜述）資料 ──────────────────────────────────────────
+// Declared BEFORE the book-tab section: bookTabs (and its watcher, which Vue
+// evaluates eagerly on setup) reads litEntries, so it must exist by then —
+// otherwise the minified build throws a TDZ error and setup() never renders.
+const litEntries = ref<LitEntry[]>([])
+const litLoading = ref(false)
+
 // 書籍計畫分頁（研究資料 / 碩士文稿 / 口述訪談 / 書摘與構思）
 type BookTab = 'materials' | 'thesis' | 'interviews' | 'review' | 'notes'
 const bookTab = ref<BookTab>('materials')
@@ -769,10 +776,7 @@ const bookTabs = computed(() => {
 watch(bookTabs, (tabs) => { if (!tabs.some((t) => t.key === bookTab.value)) bookTab.value = 'materials' })
 watch(bookTab, (t) => { if (t === 'thesis' && !thesisHtml.value && !thesisLoading.value) loadThesisChapter(activeThesisChapter.value) })
 
-// ── 研究回顧（文獻綜述）─────────────────────────────────────────────
-const litEntries = ref<LitEntry[]>([])
-const litLoading = ref(false)
-
+// ── 研究回顧（文獻綜述）載入 ─────────────────────────────────────────
 async function loadLitReview() {
   // 論文計畫一律載入；書籍計畫也可掛研究回顧（如《當代的大愛道革命》），有書目才顯示分頁。
   if (!project.value) { litEntries.value = []; return }
