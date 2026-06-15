@@ -1,0 +1,67 @@
+<template>
+  <div class="flex flex-col bg-slate-50 min-h-dvh">
+    <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 z-30">
+      <NuxtLink to="/dazangjing" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
+      <div class="w-px h-5 bg-gray-200" />
+      <span class="text-sm font-semibold text-gray-900">{{ era?.name ?? '基督教大藏經' }}</span>
+      <span v-if="era" class="text-xs text-gray-400 ml-1">{{ era.collections.length }} 藏 × 2（正藏／外藏）</span>
+    </nav>
+
+    <div v-if="!era" class="flex-1 flex items-center justify-center text-gray-400 text-sm">找不到此時代。</div>
+
+    <div v-else class="flex-1 max-w-5xl w-full mx-auto px-6 py-8">
+      <div class="mb-6">
+        <h1 class="text-2xl font-bold text-gray-900 mb-1">{{ era.glyph }}　{{ era.name }}</h1>
+        <p class="text-sm text-gray-500">{{ era.subtitle }}</p>
+        <p v-if="era.boundary" class="text-xs text-gray-400 mt-1.5 leading-relaxed">📐 年代結界：{{ era.boundary }}</p>
+        <p class="text-xs text-gray-400 mt-1 leading-relaxed">每一藏分「正藏」（尼西亞教會接受）與「外藏」（分類對照但不被接受）兩套平行目錄，各為獨立頁面。</p>
+      </div>
+
+      <!-- 十藏列表 -->
+      <div class="divide-y divide-gray-100 border border-gray-200 rounded-xl overflow-hidden bg-white">
+        <div
+          v-for="(c, i) in era.collections"
+          :key="c.key"
+          class="flex items-center gap-4 px-4 py-3.5 hover:bg-slate-50 transition"
+        >
+          <div class="shrink-0 w-9 h-9 rounded-lg bg-stone-900 text-white flex items-center justify-center text-lg font-serif">{{ c.glyph }}</div>
+          <div class="min-w-0 flex-1">
+            <div class="flex items-baseline gap-2 flex-wrap">
+              <span class="text-gray-300 text-xs font-mono">{{ String(i + 1).padStart(2, '0') }}</span>
+              <span class="font-semibold text-gray-900">{{ c.name }}</span>
+              <span class="text-[11px] text-gray-400">{{ c.name_en }}</span>
+              <span v-if="c.genres" class="text-[10px] text-stone-500 font-serif">〔{{ c.genres }}〕</span>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mt-0.5 line-clamp-2">{{ c.summary }}</p>
+          </div>
+          <div class="shrink-0 flex items-center gap-1.5">
+            <NuxtLink
+              :to="`/dazangjing/${era.key}/${c.key}/zheng`"
+              class="px-2.5 py-1.5 rounded-lg bg-emerald-600 text-white text-xs font-medium hover:bg-emerald-700 transition whitespace-nowrap"
+            >正藏 <span class="opacity-80">{{ count(c.zheng) }}</span></NuxtLink>
+            <NuxtLink
+              :to="`/dazangjing/${era.key}/${c.key}/wai`"
+              class="px-2.5 py-1.5 rounded-lg bg-stone-200 text-stone-700 text-xs font-medium hover:bg-stone-300 transition whitespace-nowrap"
+            >外藏 <span class="opacity-70">{{ count(c.wai) }}</span></NuxtLink>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 text-xs text-gray-400 leading-relaxed border-t border-gray-200 pt-4">
+        <p>綠＝正藏（尼西亞教會接受）；灰＝外藏（偽典／異端／猶太教／外教見證，分類與正藏對照）。數字為該目錄卷數。</p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { findEra, canonWorkCount, type DazangCanon } from '~/data/dazangjing'
+
+definePageMeta({ middleware: 'auth' })
+
+const route = useRoute()
+const era = computed(() => findEra(String(route.params.era)))
+useHead(() => ({ title: `${era.value?.name ?? '基督教大藏經'} — Know Graph Lab` }))
+
+function count(c: DazangCanon) { return canonWorkCount(c) }
+</script>
