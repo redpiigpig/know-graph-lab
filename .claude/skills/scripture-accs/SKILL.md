@@ -85,23 +85,18 @@ python scripts/ingest_accs_genesis.py \
 
 ## 🧭 下個 session 接手清單（2026-06-14 晚更新）
 
-### A. ACCS 創世記 OCR — **從零重 OCR 中（batch 1，已能穩定推進）**
-- **引擎演進**：原用 Haiku Vision（Gemini 額度乾），但 **Haiku 掃描中文品質不合格**（錯字「住握裙/傅變/逐生」、
-  漏字、漏小標、合併；user 退兩次）。Gemini 品質佳但**每日額度被並行任務吃光**。
-  → **定案 Sonnet**（`--engine sonnet`，Max OAuth，5h 滾動額度）。**2026-06-14 已實測 Sonnet 內容品質佳**
-  （繁體乾淨、catena 結構正確、教父名／作品名準）。
-- **資料現況（重要）**：整夜排程因下列三雷空跑 → **DB 與 checkpoint 都被清空，從零重來**。目前 DB 只有
-  **創 1:1 共 7 列**起跳（已驗 pipeline end-to-end：OCR→build_rows_auto→正規化→DB 正確）。
-  **2026-06-15 早上找到真因（非額度，見雷⑤⑥）後 batch 1 已能穩定逐頁推進**。
-  **只剩被退掉的 Haiku 備份** `c:/tmp/accs_gen_創1-11.haiku.bak.jsonl`（別當成品）。
-  內容頁約 PDF **p46 起**（p1-45 前言，OCR 回 0 entries 正常）。
-- **跑法**：`ingest_accs_genesis.py --book gen --pages 1-316 --engine sonnet --batch 1 --replace --resume`
-  （**必 batch 1**；checkpoint 在 `c:/tmp/accs_gen_*.raw.jsonl`，逐頁寫；全頁完成寫 `.done`）。
-  Windows 排程 **`ACCS_Gen_Resume`（每 2h）** 跑 `scripts/accs_resume.ps1`（已改 batch 1）；
-  **排程＝唯一擁有者**（`MultipleInstances=IgnoreNew`），跑 direct run 時先 `Disable-ScheduledTask` 免撞同一 checkpoint，
-  完成後再 `Enable`。一頁 ~1–2 分（node 冷啟動，慢但穩）。
-- **接手第一件事**：看 DB（`accs_commentary` where book_code=gen）rows 有沒有在長；創 1-11 完成 → 跑創 12-50
-  （PDF：`…創12-50.pdf`，OT II）。
+### A. ACCS 創世記 OCR — **創 1-11 全本完成 ✅（2026-06-16），下一步創 12-50**
+- **創 1-11 完成**：316/316 頁 OCR、`accs_commentary` book_code=gen **698 列**（67 總論+631 引文；chapters 1-11 全到，
+  rows/章 191/120/124/54/27/40/31/34/37/10/30）。`.done`＝`c:/tmp/accs_gen_…創1-11.raw.done`。排程 `ACCS_Gen_Resume`
+  **已 Disable**（本書任務完成）。**spot-check 品質佳**（繁體乾淨、catena 正確、教父/作品名準）；唯一小瑕：少數跨段
+  續行的 comment `father_name` 空（長引文被切兩列、attribution 落前列）——非阻斷，要的話日後做 continuation-merge。
+- **引擎**：**Sonnet**（`--engine sonnet`，Max OAuth）。Haiku 掃描中文品質不合格(user 退兩次)、Gemini key credit 乾。
+- **跑法（創 1-11 用過、創 12-50 照抄）**：`ingest_accs_genesis.py --book gen --pages 1-316 --engine sonnet
+  --batch 1 --replace --resume`（**必 batch 1**，見雷⑤；checkpoint `c:/tmp/accs_gen_*.raw.jsonl` 逐頁寫；全頁完成寫
+  `<stem>.raw.done`）。最穩跑法＝`scripts/accs_loop.ps1`（auto-relaunch 迴圈，survives crash/資源耗盡，直到 .done）。
+  排程 `ACCS_Gen_Resume`（已改 batch 1）也可，但較不穩（曾卡 Queued/不 spawn）。**direct 與排程二擇一別並行**（搶同一 checkpoint）。
+- **下一步 = 創 12-50**（PDF：`G:/…/古代基督信仰聖經註釋叢書2 創12-50.pdf`，OT II）：複製 PDF 到 c:/tmp、
+  `--source-vol 'ACCS OT II（創 12–50）'`、`--book gen`（同書、章號自動續），跑 batch-1 loop 即可。內容頁要先翻 PDF 定位。
 - **⚠️ 2026-06-14 整夜空跑的真因（皆已修，別重蹈）**：
   ① **G:（Google Drive 串流碟）會卸載** → PDF 不可達；`accs_resume.ps1` 已加自我修復（偵測 G: 未掛載就跑
      `launch.bat` 等 60s）。② **編 `.ps1` 掉 UTF-8 BOM** → PowerShell 5.1 以 Big5 誤讀中文 → parse error 靜默失敗；

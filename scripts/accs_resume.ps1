@@ -4,7 +4,8 @@
 $ErrorActionPreference = 'Continue'
 Set-Location 'c:\Users\user\Desktop\know-graph-lab'
 
-$done = 'c:\tmp\accs_gen_古代基督信仰聖經註釋叢書1 創1-11.done'
+# ingest 寫的是 ckpt.with_suffix('.done')＝<stem>.raw.done（不是 .done），路徑要對上才會 skip。
+$done = 'c:\tmp\accs_gen_古代基督信仰聖經註釋叢書1 創1-11.raw.done'
 if (Test-Path $done) { Write-Output "ACCS 創1-11 已完成（.done 存在）→ 跳過"; exit 0 }
 
 $pdf = 'G:\我的雲端硬碟\資料\電子書\世界宗教\基督教\IVP - 古代基督信仰聖經註釋叢書 (27 冊)\古代基督信仰聖經註釋叢書1 創1-11.pdf'
