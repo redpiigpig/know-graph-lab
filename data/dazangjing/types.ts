@@ -31,8 +31,12 @@ export interface DazangWork {
   title_orig?: string
   /** 作者／教父／來源社群 */
   author?: string
-  /** 年代（世紀或年份） */
+  /** 大約寫作日期（世紀或年份） */
   era?: string
+  /** 寫作地點 */
+  place?: string
+  /** 寫作語言 */
+  language?: string
   /** 一句簡述 */
   note?: string
   /** 站內對照工具連結（該作品可在此閱讀） */

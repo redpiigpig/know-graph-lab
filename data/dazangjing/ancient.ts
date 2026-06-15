@@ -207,7 +207,7 @@ export const ANCIENT_ERA: DazangEra = {
           {
             key: 'history', label: '歷史書', label_en: 'Histories', desc: '假借歷史之名對古以色列的另類重寫與別傳。',
             works: [
-              { title_zh: '偽斐洛《聖經古史》', title_orig: 'Pseudo-Philo, Liber Antiquitatum Biblicarum', era: '1 世紀', note: '亞當至大衛的另類以色列史' },
+              { title_zh: '託名斐洛《聖經古史》', title_orig: 'Pseudo-Philo, Liber Antiquitatum Biblicarum', era: '1 世紀', note: '亞當至大衛的另類以色列史' },
               { title_zh: '利甲族傳', title_orig: 'History of the Rechabites', note: '曠野純潔隱士的神祕歷史' },
               { title_zh: '約瑟史傳', title_orig: 'History of Joseph', era: '約瑟', note: '擴寫約瑟在埃及的宮廷統治史' },
               { title_zh: '以西結悲劇辭', title_orig: 'Ezekiel the Tragedian', note: '用古希臘悲劇劇本改寫的《出埃及記》' },
@@ -246,7 +246,7 @@ export const ANCIENT_ERA: DazangEra = {
               { title_zh: '約瑟禱辭', title_orig: 'Prayer of Joseph', era: '約瑟' },
               { title_zh: '敘利亞詩篇（第 152–155 篇）', title_orig: 'Syriac Psalms 152–155', era: '大衛傳統' },
               { title_zh: '所羅門頌歌', title_orig: 'Odes of Solomon', era: '2 世紀', note: '早期神祕主義混合聖詩集' },
-              { title_zh: '偽福西里德智訓', title_orig: 'Pseudo-Phocylides', note: '假借希臘詩人之名的猶太勸世文' },
+              { title_zh: '託名福西里德智訓', title_orig: 'Pseudo-Phocylides', note: '假借希臘詩人之名的猶太勸世文' },
               { title_zh: '敘利亞米南德箴言', title_orig: 'Sentences of Syriac Menander' },
               { title_zh: '銅卷藏寶錄', title_orig: 'Copper Scroll (3Q15)', note: '記載聖殿財寶藏地的非典型死海文獻', link: '/apocrypha' },
             ],
@@ -287,7 +287,7 @@ export const ANCIENT_ERA: DazangEra = {
             works: [
               { title_zh: '雅各原始福音（雅各童年福音）', title_orig: 'Protoevangelium / Infancy Gospel of James', era: '聖誕前後', note: '瑪利亞身世與耶穌誕生', link: '/apocrypha' },
               { title_zh: '多馬童年福音', title_orig: 'Infancy Gospel of Thomas', era: '童年', note: '少年耶穌展示神力的故事', link: '/apocrypha' },
-              { title_zh: '偽馬太童年福音', title_orig: 'Gospel of Pseudo-Matthew', era: '童年' },
+              { title_zh: '託名馬太童年福音', title_orig: 'Gospel of Pseudo-Matthew', era: '童年' },
               { title_zh: '阿拉伯童年福音', title_orig: 'Arabic Infancy Gospel', era: '童年' },
               { title_zh: '希伯來人福音', title_orig: 'Gospel of the Hebrews', era: '傳道', link: '/apocrypha' },
               { title_zh: '拿撒勒人福音', title_orig: 'Gospel of the Nazoreans', era: '傳道' },
@@ -323,7 +323,7 @@ export const ANCIENT_ERA: DazangEra = {
               { title_zh: '基督與阿布加爾王往來書', title_orig: 'Letter of Christ and Abgar', era: '基督', note: '耶穌親筆回信給埃德薩國王' },
               { title_zh: '蘭圖盧斯書信', title_orig: 'Letter of Lentulus', era: '基督', note: '古代唯一詳述耶穌長相的偽造公文' },
               { title_zh: '使徒書信（宗徒總函）', title_orig: 'Epistula Apostolorum', era: '十一使徒（集體）', note: '披著書信外衣的復活基督啟示對話' },
-              { title_zh: '彼得致雅各書', title_orig: 'Epistle of Peter to James', era: '彼得', note: '偽克勉文集前言' },
+              { title_zh: '彼得致雅各書', title_orig: 'Epistle of Peter to James', era: '彼得', note: '託名克勉文集前言' },
             ],
           },
           {
@@ -336,14 +336,14 @@ export const ANCIENT_ERA: DazangEra = {
           {
             key: 'pastoral', label: '教牧書信', label_en: 'Pastoral Epistles',
             works: [
-              { title_zh: '偽提多書', title_orig: 'Pseudo-Titus Epistle', era: '提多', note: '論貞潔的勸誡書' },
+              { title_zh: '託名提多書', title_orig: 'Pseudo-Titus Epistle', era: '提多', note: '論貞潔的勸誡書' },
             ],
           },
           {
             key: 'catholic-2', label: '第二大公書信', label_en: 'Second Catholic Epistles', desc: '教父推薦但未入正藏的非使徒書信。',
             works: [
               { title_zh: '克勉二書', title_orig: '2 Clement', era: '克勉（羅馬）', note: '古代最早的講道辭，教父推薦不足', link: '/apocrypha' },
-              { title_zh: '偽克勉致雅各書', title_orig: 'Pseudo-Clementine Epistles', era: '克勉（羅馬）' },
+              { title_zh: '託名克勉致雅各書', title_orig: 'Pseudo-Clementine Epistles', era: '克勉（羅馬）' },
               { title_zh: '克勉論童貞二書', title_orig: 'Two Epistles on Virginity', era: '克勉（羅馬）' },
             ],
           },
@@ -384,41 +384,59 @@ export const ANCIENT_ERA: DazangEra = {
       name_en: 'Canons & Ecclesiastical Law',
       glyph: '律',
       genres: '信經‧教令‧教規‧會規',
-      summary: '教會運作的骨架。正藏為大公會議信經教令、使徒教規與教會憲典、使徒法典（由經藏移入的教會秩序書）與修道規則；外藏為異端與分裂派的教規，以及 400 年前的猶太律法。',
+      summary: '教會運作的骨架。正藏為使徒律、大公會議律、地方會議律與修道會規（含由經藏移入的教會秩序書、各信經作卷首總綱）；外藏為異端／分裂派的宗派律，以及作為舊約根源的猶太律法（米書拿、死海社群規章等）。',
       portal: { to: '/creeds', label: '信條與大公會議' },
       zheng: {
         divisions: [
           {
-            key: 'councils', label: '大公會議部', label_en: 'Ecumenical & Local Councils',
+            key: 'apostolic', label: '使徒律部', label_en: 'Apostolic & Early Church Orders',
             works: [
-              { title_zh: '前七次大公會議信經與教令', title_orig: 'Seven Ecumenical Councils (325–787)', note: '尼西亞 325 至第二次尼西亞 787', link: '/creeds' },
-              { title_zh: '地方會議教令', title_orig: 'Local Synods', note: '安提阿‧迦太基‧老底嘉‧艾爾維拉‧特路羅 692', link: '/canon-law' },
+              { title_zh: '十二使徒遺訓', title_orig: 'Didache', era: '1 世紀末', note: '最古老的教會實踐手冊', link: '/apocrypha' },
+              { title_zh: '使徒教訓', title_orig: 'Didascalia Apostolorum', era: '3 世紀', note: '敘利亞教會生活法度', link: '/canon-law' },
+              { title_zh: '使徒憲章', title_orig: 'Apostolic Constitutions', era: '4 世紀', note: '古代大公教會法規集大成', link: '/canon-law' },
+              { title_zh: '衣索比亞教會秩序六典', title_orig: 'Sirate Tsion / Tizaz / Gitsew / Abtilis / Covenant I–II', note: '秩序典‧訓令典‧戒律典‧規章典‧聖約前後典', link: '/canon-law' },
             ],
           },
           {
-            key: 'apostolic-canons', label: '教令與教規部', label_en: 'Apostolic Canons',
+            key: 'ecumenical', label: '大公律部', label_en: 'Ecumenical Councils & Creeds',
             works: [
-              { title_zh: '使徒教規（八十五條）', title_orig: 'Apostolic Canons', link: '/canon-law' },
-              { title_zh: '使徒憲典', title_orig: 'Apostolic Constitutions', era: '4 世紀' },
-              { title_zh: '希波律陀《使徒傳統》', title_orig: 'Hippolytus, Apostolic Tradition', era: '3 世紀' },
-              { title_zh: '查士丁尼／狄奧多西法典（宗教部分）', title_orig: 'Codex Justinianus / Theodosianus', era: '5–6 世紀' },
+              { title_zh: '尼西亞信經', title_orig: 'Nicene Creed', era: '325', note: '卷首總綱，不佔卷數', link: '/creeds' },
+              { title_zh: '尼西亞—君士坦丁堡信經', title_orig: 'Niceno-Constantinopolitan Creed', era: '381', note: '卷首總綱，不佔卷數', link: '/creeds' },
+              { title_zh: '迦克墩信仰定義', title_orig: 'Chalcedonian Definition', era: '451', note: '卷首總綱，不佔卷數', link: '/creeds' },
+              { title_zh: '尼西亞大公會議錄', title_orig: 'Canons of Nicaea I', era: '325', note: '解決亞流派危機，20 條教規', link: '/creeds' },
+              { title_zh: '君士坦丁堡大公會議錄', title_orig: 'Canons of Constantinople I', era: '381', note: '確立聖靈神性，7 條教規', link: '/creeds' },
+              { title_zh: '以弗所大公會議錄', title_orig: 'Canons of Ephesus', era: '431', note: '解決涅斯多留爭議', link: '/creeds' },
+              { title_zh: '迦克墩大公會議錄', title_orig: 'Canons of Chalcedon', era: '451', note: '確立神人二性與四大教區，30 條教規', link: '/creeds' },
+              { title_zh: '第二屆君士坦丁堡大公會議錄', title_orig: 'Acts of Constantinople II', era: '553', note: '譴責三章', link: '/creeds' },
+              { title_zh: '第三屆君士坦丁堡大公會議錄', title_orig: 'Acts of Constantinople III', era: '680–681', note: '解決基督一志論危機', link: '/creeds' },
+              { title_zh: '特魯洛五六屆會議錄', title_orig: 'Canons of the Quinisext Council', era: '692', note: '東正教 102 條紀律法典', link: '/creeds' },
+              { title_zh: '第二屆尼西亞大公會議錄', title_orig: 'Acts of Nicaea II', era: '787', note: '頒布尊崇聖像教令與 22 條教規', link: '/creeds' },
             ],
           },
           {
-            key: 'apostolic-order', label: '使徒法典部', label_en: 'Church Orders', desc: '由經藏壓軸移入——性質為法規的教會秩序書。',
+            key: 'local', label: '地方律部', label_en: 'Local Synods & Western Creeds',
             works: [
-              { title_zh: '十二使徒遺訓', title_orig: 'Didache', era: '1–2 世紀', link: '/apocrypha' },
-              { title_zh: '使徒教訓', title_orig: 'Didascalia Apostolorum', note: '原譯宗徒規範' },
-              { title_zh: '衣索比亞教會秩序六典', title_orig: 'Sirate Tsion / Tizaz / Gitsew / Abtilis / Covenant I–II', note: '秩序典‧訓令典‧戒律典‧規章典‧聖約前後典' },
+              { title_zh: '使徒信經', title_orig: 'Apostles’ Creed', note: '西方本土洗禮信經，卷首總綱', link: '/creeds' },
+              { title_zh: '亞他那修信經', title_orig: 'Athanasian Creed', era: '5–6 世紀', note: '含和子句的拉丁神學總結，卷首總綱', link: '/creeds' },
+              { title_zh: '埃爾維拉教規', title_orig: 'Canons of Elvira', era: '約 305', note: '西班牙性道德與反聖像法', link: '/canon-law' },
+              { title_zh: '安居拉教規', title_orig: 'Canons of Ancyra', era: '314', note: '叛教者補贖問題', link: '/canon-law' },
+              { title_zh: '甘格拉教規', title_orig: 'Canons of Gangra', era: '約 340', note: '捍衛婚姻神聖、反極端禁慾', link: '/canon-law' },
+              { title_zh: '老底嘉教規', title_orig: 'Canons of Laodicea', era: '約 363', note: '早期正典名單與禮儀規範', link: '/canon-law' },
+              { title_zh: '迦太基教規', title_orig: 'Canons of the African Church', era: '397 & 419', note: '北非法典與西方正典確立', link: '/canon-law' },
+              { title_zh: '奧朗日會議錄', title_orig: 'Council of Orange', era: '529', note: '調和恩典論、譴責半伯拉糾主義', link: '/canon-law' },
+              { title_zh: '第三屆托雷多會議錄', title_orig: 'Third Council of Toledo', era: '589', note: '首次正式宣讀和子句', link: '/canon-law' },
+              { title_zh: '亞琛一般詔令', title_orig: 'Admonitio Generalis', era: '789', note: '查理曼宗教整頓令', link: '/canon-law' },
+              { title_zh: '法蘭克福會議錄', title_orig: 'Council of Frankfurt', era: '794', note: '拒絕東方聖像教令', link: '/canon-law' },
             ],
           },
           {
-            key: 'monastic', label: '修道規則部', label_en: 'Monastic Rules',
+            key: 'monastic', label: '修道律部', label_en: 'Monastic Rules',
             works: [
-              { title_zh: '帕科繆規章', title_orig: 'Rule of Pachomius', era: '4 世紀' },
-              { title_zh: '大巴西流規章', title_orig: 'Basil, Asketikon', era: '4 世紀' },
-              { title_zh: '聖本篤會規', title_orig: 'Rule of St. Benedict', era: '6 世紀' },
-              { title_zh: '該撒留會規', title_orig: 'Rule of Caesarius', era: '6 世紀' },
+              { title_zh: '帕科米烏斯規', title_orig: 'Rule of Pachomius', era: '4 世紀', note: '史上第一部團體修道法規（埃及）', link: '/canon-law' },
+              { title_zh: '大巴西略會規', title_orig: 'Rule of St. Basil', era: '4 世紀', note: '東方修道主義核心', link: '/canon-law' },
+              { title_zh: '奧斯定會規', title_orig: 'Rule of St. Augustine', era: '5 世紀', note: '教士群體生活綱領', link: '/canon-law' },
+              { title_zh: '哥倫巴努斯會規', title_orig: 'Rule of St. Columbanus', era: '6 世紀', note: '凱爾特嚴修傳統', link: '/canon-law' },
+              { title_zh: '本篤會規', title_orig: 'Rule of St. Benedict', era: '6 世紀', note: '奠定西方中世紀修道文明', link: '/canon-law' },
             ],
           },
         ],
@@ -426,19 +444,37 @@ export const ANCIENT_ERA: DazangEra = {
       wai: {
         divisions: [
           {
-            key: 'heretic-councils', label: '異端與分裂派教規部', label_en: 'Heretical Synods',
+            key: 'jewish', label: '猶太律部', label_en: 'Old Covenant & Second Temple Codes',
             works: [
-              { title_zh: '亞流派與聶斯多留派會議文件', title_orig: 'Arian & Nestorian Synods' },
-              { title_zh: '以弗所強盜會議', title_orig: 'Latrocinium of Ephesus', era: '449', note: '被迦克墩否定的會議' },
-              { title_zh: '孟他努派教規', title_orig: 'Montanist Canons' },
+              { title_zh: '聖約律', title_orig: 'Book of the Covenant', note: '出埃及記核心律法' },
+              { title_zh: '聖潔律', title_orig: 'Holiness Code', note: '利未記祭司與純潔法' },
+              { title_zh: '申命律', title_orig: 'Deuteronomic Code', note: '申命記重申之法' },
+              { title_zh: '聖殿法典', title_orig: 'Temple Scroll (11QT)', era: '前 2 世紀', note: '艾瑟尼曠野終極聖殿藍圖', link: '/apocrypha' },
+              { title_zh: '大馬士革盟約', title_orig: 'Damascus Document (CD)', note: '艾瑟尼社群盟約與行為法規', link: '/apocrypha' },
+              { title_zh: '社群規章', title_orig: 'Community Rule (1QS)', note: '昆蘭曠野修道生活準則', link: '/apocrypha' },
+              { title_zh: '判律辭', title_orig: 'Halakhic Letter (4QMMT)', note: '與主流教派決裂的法律裁定書', link: '/apocrypha' },
+              { title_zh: '光明戰卷', title_orig: 'War Scroll (1QM)', note: '末日決戰軍事指令', link: '/apocrypha' },
+              { title_zh: '斐洛特殊律', title_orig: 'De Specialibus Legibus', era: '1 世紀', note: '將律法歸入十誡的系統化專著' },
+              { title_zh: '米書拿法典', title_orig: 'Mishnah', era: '約 200', note: '法利賽口傳律法大成' },
+              { title_zh: '陀瑟他補典', title_orig: 'Tosefta', era: '約 300', note: '與米書拿平行的拉比補充判例' },
+              { title_zh: '禁食規', title_orig: 'Megillat Taanit', era: '1 世紀', note: '節慶與禁食的實務守則' },
             ],
           },
           {
-            key: 'jewish-law', label: '猶太律部', label_en: 'Jewish Law (to 400 CE)',
+            key: 'sectarian', label: '宗派律部', label_en: 'Sectarian & Independent Church Canons',
             works: [
-              { title_zh: '米書拿', title_orig: 'Mishnah', era: '約 200', note: '口傳律法核心' },
-              { title_zh: '陀塞他', title_orig: 'Tosefta', era: '約 300' },
-              { title_zh: '耶路撒冷塔木德（早期地層）', title_orig: 'Jerusalem Talmud', era: '約 350–400' },
+              { title_zh: '亞美尼亞正統信經', title_orig: 'Armenian Creed', note: '宗派信經卷首總綱', link: '/creeds' },
+              { title_zh: '阿弗拉哈特信仰告白', title_orig: 'Creed of Aphrahat', era: '4 世紀', note: '波斯景教母會古老閃族宣告', link: '/creeds' },
+              { title_zh: '伊薩克會議錄', title_orig: 'Synod of Isaac', era: '410', note: '東方亞述教會（景教）建制根本法典', link: '/canon-law' },
+              { title_zh: '達迪修會議錄', title_orig: 'Synod of Dadisho', era: '424', note: '脫離羅馬安提阿管轄的獨立宣言', link: '/canon-law' },
+              { title_zh: '阿卡修會議錄', title_orig: 'Synod of Acacius', era: '486', note: '接納安提阿學派、允許神職結婚', link: '/canon-law' },
+              { title_zh: '阿什蒂沙特會議錄', title_orig: 'Synod of Ashtishat', era: '364', note: '亞美尼亞本土教會奠基', link: '/canon-law' },
+              { title_zh: '德溫會議錄', title_orig: 'First Council of Dvin', era: '506', note: '正式拒絕迦克墩定讞', link: '/canon-law' },
+              { title_zh: '安提阿奉獻會議教規', title_orig: 'Canons of Antioch in Encaeniis', era: '341', note: '亞流派主導的嚴密行政教規', link: '/canon-law' },
+              { title_zh: '迦太基多納徒會議錄', title_orig: 'Donatist Council of Carthage', era: '311/312', note: '多納徒派極端聖潔紀律', link: '/canon-law' },
+              { title_zh: '耶烏密規', title_orig: 'Books of Jeu', note: '諾斯底靈魂穿越諸天密碼法規', link: '/gnostic' },
+              { title_zh: '摩尼十戒與聽者規', title_orig: 'Manichaean Precepts', note: '劃分選民與聽者的階級禁慾法度' },
+              { title_zh: '特土良嚴行規', title_orig: 'Tertullian’s Montanist Tracts', era: '約 200', note: '孟他努派禁慾底線' },
             ],
           },
         ],
@@ -451,56 +487,58 @@ export const ANCIENT_ERA: DazangEra = {
       name_en: 'Treatises & Exegesis',
       glyph: '論',
       genres: '論‧辯（護教詞）‧駁‧註‧疏‧釋',
-      summary: '教父用血淚與智慧為信仰披上的「重裝鎧甲」。正藏為正統的護教、反異端、系統教義、釋經與神祕主義；外藏為作為「對手與底色」的異端論述、猶太哲學與外教批判。',
+      summary: '教父用血淚與智慧為信仰披上的「重裝鎧甲」。正藏為正統的護教、反異端、系統教義、釋經與神祕主義；外藏為作為「對手與底色」的猶太哲學、諾斯底與摩尼教異端論述，以及外教批判。',
       portal: { to: '/fathers', label: '教父著作' },
       zheng: {
         divisions: [
           {
             key: 'apologia', label: '護教詞部', label_en: 'Apologetics',
             works: [
-              { title_zh: '游斯丁《第一、第二護教詞》《駁特里風護教詞》', title_orig: 'Justin Martyr', era: '2 世紀', link: '/fathers' },
-              { title_zh: '特土良《護教辯》', title_orig: 'Tertullian, Apologeticus', link: '/fathers' },
-              { title_zh: '致丟格那妥書‧亞他那哥拉《請願》‧提阿非羅《致奧托呂古》', title_orig: 'Diognetus / Athenagoras / Theophilus', link: '/apocrypha' },
-              { title_zh: '拉克坦提烏《神聖原理》‧亞挪比烏《駁異教》', title_orig: 'Lactantius / Arnobius', link: '/fathers' },
-              { title_zh: '奧古斯丁《上帝之城》', title_orig: 'Augustine, De Civitate Dei', era: '5 世紀', link: '/fathers' },
+              { title_zh: '第一護教詞', title_orig: 'First Apology', author: '猶斯定', era: '2 世紀', note: '寫給羅馬皇帝的正式申訴書', link: '/fathers' },
+              { title_zh: '第二護教詞', title_orig: 'Second Apology', author: '猶斯定', era: '2 世紀', link: '/fathers' },
+              { title_zh: '駁特里風護教詞', title_orig: 'Dialogue with Trypho', author: '猶斯定', era: '2 世紀', note: '針對猶太教義的學術辯論', link: '/fathers' },
+              { title_zh: '護教辯', title_orig: 'Apologeticus', author: '特土良', era: '2 世紀', link: '/fathers' },
+              { title_zh: '駁塞爾修斯', title_orig: 'Contra Celsum', author: '俄利根', era: '3 世紀', note: '古代最龐大的基督教對希臘哲學筆戰', link: '/fathers' },
             ],
           },
           {
-            key: 'adversus', label: '反異端部', label_en: 'Against Heresies',
+            key: 'refutations', label: '反異端部', label_en: 'Refutations',
             works: [
-              { title_zh: '愛任紐《駁異端論》', title_orig: 'Irenaeus, Adversus Haereses', link: '/fathers' },
-              { title_zh: '特土良《規誡異端》《駁馬吉安》《駁普拉克西亞》', title_orig: 'Tertullian', link: '/fathers' },
-              { title_zh: '希波律陀《駁諸異端》', title_orig: 'Hippolytus, Refutatio', link: '/fathers' },
-              { title_zh: '亞他那修《駁亞流辭》', title_orig: 'Athanasius, Contra Arianos', link: '/fathers' },
-              { title_zh: '愛比法紐《破百異端駁（藥箱）》', title_orig: 'Epiphanius, Panarion', link: '/fathers' },
+              { title_zh: '駁異端論', title_orig: 'Adversus Haereses', author: '愛任紐', era: '2 世紀', note: '拆解諾斯底宇宙觀的巨著', link: '/fathers' },
+              { title_zh: '駁亞流論', title_orig: 'Orationes contra Arianos', author: '亞他那修', era: '4 世紀', note: '奠定尼西亞正統的純神學論證', link: '/fathers' },
+              { title_zh: '破百異端駁', title_orig: 'Panarion', author: '愛比法紐', era: '4 世紀', note: '原名《百草藥箱》，如異端百科全書', link: '/fathers' },
             ],
           },
           {
             key: 'dogmatics', label: '系統與教義部', label_en: 'Systematic Dogmatics',
             works: [
-              { title_zh: '俄利根《基要原理論》', title_orig: 'Origen, De Principiis', note: '史上第一部系統神學', link: '/fathers' },
-              { title_zh: '亞他那修《論道成肉身》', title_orig: 'Athanasius, De Incarnatione', link: '/fathers' },
-              { title_zh: '巴西流《論聖靈》‧尼撒貴格利《大要理問答》', title_orig: 'Basil / Gregory of Nyssa', link: '/fathers' },
-              { title_zh: '奧古斯丁《論三位一體》《信望愛手冊》', title_orig: 'Augustine, De Trinitate / Enchiridion', link: '/fathers' },
-              { title_zh: '大馬士革約翰《正統信仰闡述》', title_orig: 'John of Damascus, De Fide Orthodoxa', era: '8 世紀', link: '/fathers' },
+              { title_zh: '基要原理論', title_orig: 'De Principiis', author: '俄利根', era: '3 世紀', note: '史上第一部系統神學專著', link: '/fathers' },
+              { title_zh: '論道成肉身', title_orig: 'De Incarnatione', author: '亞他那修', era: '4 世紀', link: '/fathers' },
+              { title_zh: '論聖靈', title_orig: 'De Spiritu Sancto', author: '大巴西略', era: '4 世紀', link: '/fathers' },
+              { title_zh: '三位一體論', title_orig: 'De Trinitate', author: '奧古斯丁', era: '4 世紀', note: '花二十年寫成的學術天花板', link: '/fathers' },
+              { title_zh: '上帝之城', title_orig: 'De Civitate Dei', author: '奧古斯丁', era: '5 世紀', note: '回應羅馬傾覆的歷史哲學鉅作', link: '/fathers' },
+              { title_zh: '論本性與恩典', title_orig: 'De Natura et Gratia', author: '奧古斯丁', era: '5 世紀', note: '反伯拉糾派專著', link: '/fathers' },
+              { title_zh: '正統信仰闡述論', title_orig: 'De Fide Orthodoxa', author: '大馬士革的約翰', era: '8 世紀', note: '東方教會教義的集大成', link: '/fathers' },
             ],
           },
           {
             key: 'exegesis', label: '釋經與釋祕部', label_en: 'Exegesis',
             works: [
-              { title_zh: '俄利根《雅歌疏》《約翰福音註》', title_orig: 'Origen, Commentaries', link: '/fathers' },
-              { title_zh: '屈梭多模《創世記／馬太／約翰講疏》', title_orig: 'Chrysostom, Homilies', link: '/fathers' },
-              { title_zh: '奧古斯丁《創世記字義解》《詩篇詮釋》', title_orig: 'Augustine, Commentaries', link: '/fathers' },
-              { title_zh: '耶柔米聖經註釋全集', title_orig: 'Jerome, Commentaries', link: '/fathers' },
+              { title_zh: '約翰福音註', title_orig: 'Commentary on John', author: '俄利根', era: '3 世紀', note: '逐字哲學分析的案頭註釋', link: '/fathers' },
+              { title_zh: '雅歌疏', title_orig: 'Commentary on the Song of Songs', author: '俄利根', era: '3 世紀', note: '靈意解經的代表', link: '/fathers' },
+              { title_zh: '馬太福音註', title_orig: 'Homilies on Matthew', author: '金口若望', era: '4 世紀', link: '/fathers' },
+              { title_zh: '詩篇註', title_orig: 'Commentary on the Psalms', author: '狄奧多若', era: '4 世紀', link: '/fathers' },
+              { title_zh: '先知書註', title_orig: 'Commentaries on the Prophets', author: '耶柔米', era: '4 世紀', note: '據希伯來原文逐字詞源分析', link: '/fathers' },
+              { title_zh: '創世記字義註解', title_orig: 'De Genesi ad Litteram', author: '奧古斯丁', era: '5 世紀', link: '/fathers' },
             ],
           },
           {
             key: 'mystical', label: '神祕主義部', label_en: 'Mystical Theology',
             works: [
-              { title_zh: '偽丟尼修《天階序列》《神祕神學》', title_orig: 'Pseudo-Dionysius', link: '/fathers' },
-              { title_zh: '階梯約翰《神聖攀登天階》', title_orig: 'John Climacus, The Ladder', link: '/fathers' },
-              { title_zh: '馬克西母《愛德四百則》《論神化》', title_orig: 'Maximus the Confessor', link: '/fathers' },
-              { title_zh: '尼尼微的以撒《靈修講道》', title_orig: 'Isaac of Nineveh', era: '7 世紀' },
+              { title_zh: '天階序列', title_orig: 'De Caelesti Hierarchia', author: '託名狄奧尼修斯', era: '5 世紀', note: '結合新柏拉圖主義的神聖秩序', link: '/fathers' },
+              { title_zh: '神祕神學', title_orig: 'De Mystica Theologia', author: '託名狄奧尼修斯', era: '5 世紀', link: '/fathers' },
+              { title_zh: '神聖攀登天階', title_orig: 'The Ladder of Divine Ascent', author: '階梯約翰', era: '7 世紀', note: '隱修士的靈魂攀登指南', link: '/fathers' },
+              { title_zh: '摩西生平', title_orig: 'De Vita Moysis', author: '尼撒的格列高理', era: '4 世紀', note: '探討靈魂上升的靈修專論', link: '/fathers' },
             ],
           },
         ],
@@ -508,28 +546,25 @@ export const ANCIENT_ERA: DazangEra = {
       wai: {
         divisions: [
           {
-            key: 'heretic', label: '異端論述部', label_en: 'Heterodox Treatises',
+            key: 'jewish-philosophy', label: '猶太哲學與法理部', label_en: 'Jewish Philosophy & Halakhah',
             works: [
-              { title_zh: '諾斯底論述（瓦倫廷派／塞特派）', title_orig: 'Valentinian & Sethian Gnosis', link: '/gnostic' },
-              { title_zh: '摩尼教文獻', title_orig: 'Manichaean Texts', note: '科普特科里斯文書‧《摩尼光佛教法儀略》' },
-              { title_zh: '亞流《晚宴》殘篇', title_orig: 'Arius, Thalia (fragments)' },
-              { title_zh: '聶斯多留《赫拉克利德斯之書》', title_orig: 'Nestorius, Bazaar of Heracleides' },
-              { title_zh: '伯拉糾論述殘篇', title_orig: 'Pelagius (fragments)' },
+              { title_zh: '斐洛真理論', title_orig: 'Works of Philo', author: '斐洛', era: '1 世紀', note: '教父神學術語的先驅——希臘化猶太哲學' },
+              { title_zh: '猶太教法理疏', title_orig: 'Early Rabbinic Tractates', author: '早期拉比', era: '3 世紀', note: '早期拉比釋經與法理疏解精華' },
             ],
           },
           {
-            key: 'jewish-philo', label: '猶太哲學部', label_en: 'Jewish Philosophy',
+            key: 'gnostic-manichaean', label: '諾斯底與摩尼教部', label_en: 'Gnostic & Manichaean Heresies',
             works: [
-              { title_zh: '斐洛全集', title_orig: 'Philo of Alexandria', era: '1 世紀', note: '教父神學術語的「原始碼」' },
-              { title_zh: '猶太教法理疏（早期拉比釋經）', title_orig: 'Early Rabbinic Exegesis' },
+              { title_zh: '瓦倫廷神話論', title_orig: 'Valentinian Cosmogony', author: '瓦倫廷學派', era: '2 世紀', note: '諾斯底派宇宙起源的異端體系', link: '/gnostic' },
+              { title_zh: '摩尼教義論', title_orig: 'Manichaean Treatises', author: '摩尼教', era: '3 世紀', note: '極端二元論的光明王國神話' },
             ],
           },
           {
             key: 'pagan-critique', label: '外教批判部', label_en: 'Pagan Critiques',
             works: [
-              { title_zh: '塞爾蘇斯《真道》', title_orig: 'Celsus, On the True Doctrine', note: '經俄利根《駁瑟蘇斯》保存' },
-              { title_zh: '波菲利《駁基督徒》殘篇', title_orig: 'Porphyry, Against the Christians' },
-              { title_zh: '皇帝尤利安《駁加利利人》', title_orig: 'Julian, Against the Galileans' },
+              { title_zh: '塞爾蘇斯《真道》', title_orig: 'Celsus, On the True Doctrine', era: '2 世紀', note: '經俄利根《駁塞爾修斯》保存' },
+              { title_zh: '波菲利《駁基督徒》殘篇', title_orig: 'Porphyry, Against the Christians', era: '3 世紀' },
+              { title_zh: '皇帝尤利安《駁加利利人》', title_orig: 'Julian, Against the Galileans', era: '4 世紀' },
             ],
           },
         ],
@@ -542,45 +577,68 @@ export const ANCIENT_ERA: DazangEra = {
       name_en: 'History & Hagiography',
       glyph: '史',
       genres: '紀（史）‧傳‧世家（宗統）‧表（編年）‧志',
-      summary: '基督宗教的真實人間史。正藏為教會通史、聖徒本傳、宗統記、編年表與典志；外藏為猶太背景史料、外教見證選（Testimonia）與帶奇幻情節的偽史傳。',
+      summary: '基督宗教的真實人間史。正藏為教會通史、殉道受難錄、聖徒本傳、自傳告白、宗統記、編年表與典志；外藏為猶太正史、殉道、拉比傳燈與編年史料。',
       portal: { to: '/fathers', label: '教父著作' },
       zheng: {
         divisions: [
           {
-            key: 'general-history', label: '通史部（史）', label_en: 'General Histories',
+            key: 'general-history', label: '通史部（史）', label_en: 'Ecclesiastical Histories',
             works: [
-              { title_zh: '優西比烏《教會史》', title_orig: 'Eusebius, Ecclesiastical History', link: '/fathers' },
-              { title_zh: '蘇格拉底／索佐門／提阿多勒《教會史》', title_orig: 'Socrates / Sozomen / Theodoret', link: '/fathers' },
-              { title_zh: '比德《英吉利教會史》', title_orig: 'Bede, Historia Ecclesiastica', era: '731' },
-              { title_zh: '都爾的貴格利《法蘭克人史》', title_orig: 'Gregory of Tours' },
+              { title_zh: '教會史', title_orig: 'Historia Ecclesiastica', author: '優西比烏', era: '4 世紀', note: '史上第一部教會總史', link: '/fathers' },
+              { title_zh: '教會史續編', title_orig: 'Historia Ecclesiastica (continuators)', author: '索克拉底／索佐門／提奧多勒', era: '5 世紀', note: '續寫優西比烏的古典史學三傑', link: '/fathers' },
+              { title_zh: '敘利亞教會史', title_orig: 'Historia Ecclesiastica', author: '約翰‧以弗所', era: '6 世紀', note: '東方敘利亞語教會視角', link: '/fathers' },
+              { title_zh: '亞美尼亞史', title_orig: 'History of the Armenians', author: '莫夫塞斯', era: '5 世紀', note: '民族教會建立史', link: '/fathers' },
+              { title_zh: '法蘭克人歷史', title_orig: 'Historia Francorum', author: '都爾的格列高利', era: '6 世紀', note: '蠻族改宗與帝國興衰紀實', link: '/fathers' },
+              { title_zh: '英國人教會史', title_orig: 'Historia Ecclesiastica Gentis Anglorum', author: '比德', era: '8 世紀', note: '凱爾特與羅馬傳統融合的巔峰', link: '/fathers' },
             ],
           },
           {
-            key: 'lives', label: '本傳與殉道錄部（傳）', label_en: 'Saints & Martyrs',
+            key: 'martyr-acts', label: '殉道受難錄（錄）', label_en: 'Acts of the Martyrs',
             works: [
-              { title_zh: '亞他那修《安東尼傳》', title_orig: 'Athanasius, Life of Antony', link: '/fathers' },
-              { title_zh: '波西丟《奧古斯丁傳》‧耶柔米隱士傳', title_orig: 'Possidius / Jerome, Lives', link: '/fathers' },
-              { title_zh: '《波利卡普殉道記》《佩珮圖亞殉道記》', title_orig: 'Martyrdom accounts', link: '/apocrypha' },
-              { title_zh: '帕拉迪烏《樂園（隱修史）》', title_orig: 'Palladius, Lausiac History' },
+              { title_zh: '波利卡殉道錄', title_orig: 'Martyrdom of Polycarp', era: '2 世紀', note: '最古老的真實受難紀錄', link: '/apocrypha' },
+              { title_zh: '里昂殉道錄', title_orig: 'Letter of the Churches of Vienne and Lyons', era: '2 世紀', note: '早期教會集體受難紀錄', link: '/fathers' },
+              { title_zh: '佩蓓圖與斐麗西達受難錄', title_orig: 'Passion of Perpetua and Felicity', era: '3 世紀', note: '佩蓓圖在獄中親記的日記', link: '/apocrypha' },
+              { title_zh: '巴勒斯坦殉道者', title_orig: 'Martyrs of Palestine', author: '優西比烏', era: '4 世紀', note: '優西比烏親歷的教難現場', link: '/fathers' },
             ],
           },
           {
-            key: 'succession', label: '宗統記部（世家）', label_en: 'Episcopal Succession',
+            key: 'hagiography', label: '聖徒本傳（傳）', label_en: 'Hagiographies',
             works: [
-              { title_zh: '《教宗世家記》', title_orig: 'Liber Pontificalis' },
+              { title_zh: '塞浦路斯傳', title_orig: 'Vita Cypriani', author: '龐提烏斯', era: '3 世紀', note: '主教在瘟疫中的慈悲與管理', link: '/fathers' },
+              { title_zh: '安東尼傳', title_orig: 'Vita Antonii', author: '亞他那修', era: '4 世紀', note: '確立修道主義與沙漠隱士標準', link: '/fathers' },
+              { title_zh: '馬丁傳', title_orig: 'Vita Sancti Martini', author: '蘇爾皮基烏‧塞維魯', era: '4 世紀', note: '西方苦修與巡牧的典範', link: '/fathers' },
+              { title_zh: '沙漠父老傳燈錄', title_orig: 'Apophthegmata Patrum', era: '4–5 世紀', note: '沙漠隱修士師徒智慧的傳遞', link: '/fathers' },
             ],
           },
           {
-            key: 'chronicle', label: '編年表部（表）', label_en: 'Chronicles',
+            key: 'autobiography', label: '自傳告白（記）', label_en: 'Autobiography & Confessions',
             works: [
-              { title_zh: '優西比烏—耶柔米《編年史》', title_orig: 'Eusebius–Jerome, Chronicon' },
-              { title_zh: '《復活節編年史》', title_orig: 'Chronicon Paschale' },
+              { title_zh: '懺悔錄', title_orig: 'Confessiones', author: '奧古斯丁', era: '4 世紀', note: '古代最深刻的個人生命轉折紀錄', link: '/fathers' },
+              { title_zh: '我罪論記', title_orig: 'De Vita Sua', author: '拿先斯的格列高理', era: '4 世紀', note: '以詩歌寫下的自傳', link: '/fathers' },
             ],
           },
           {
-            key: 'topography', label: '典志部（志）', label_en: 'Pilgrimage & Topography',
+            key: 'succession', label: '宗統記（世家）', label_en: 'Episcopal Successions',
             works: [
-              { title_zh: '《埃格里亞朝聖記》《波爾多朝聖者行記》', title_orig: 'Egeria / Itinerarium Burdigalense', era: '4 世紀' },
+              { title_zh: '羅馬主教世家', title_orig: 'Liber Pontificalis', era: '6 世紀', note: '歷任教宗的生平與政績', link: '/fathers' },
+              { title_zh: '亞歷山大宗統記', title_orig: 'Patriarchs of Alexandria', note: '亞歷山大城主教傳承' },
+            ],
+          },
+          {
+            key: 'chronicle', label: '編年表（表／通鑒）', label_en: 'Chronicles & Annals',
+            works: [
+              { title_zh: '編年史', title_orig: 'Chronicon', author: '優西比烏', era: '4 世紀', note: '連結世俗帝國與聖經時間線', link: '/fathers' },
+              { title_zh: '編年史（拉丁擴編）', title_orig: 'Chronicon', author: '耶柔米', era: '4 世紀', note: '定義中世紀時間基準', link: '/fathers' },
+              { title_zh: '西班牙編年史', title_orig: 'Chronica / Historia Gothorum', author: '依西多祿', era: '7 世紀', note: '西哥德王國與本土教史的對齊', link: '/fathers' },
+              { title_zh: '愛爾蘭編年史', title_orig: 'Irish Annals', note: '早期凱爾特教派的時序紀錄' },
+            ],
+          },
+          {
+            key: 'gazetteers', label: '典志部（志）', label_en: 'Travelogues & Gazetteers',
+            works: [
+              { title_zh: '波爾多朝聖志', title_orig: 'Itinerarium Burdigalense', era: '333', note: '第一份詳盡記錄聖地路徑的檔案', link: '/fathers' },
+              { title_zh: '艾格莉亞朝聖志', title_orig: 'Itinerarium Egeriae', author: '艾格莉亞', era: '4 世紀', note: '修女對耶路撒冷禮儀的詳實手記', link: '/fathers' },
+              { title_zh: '聖地景觀志', title_orig: 'De Situ Hierusalem', author: '歐歇利烏斯', era: '5 世紀', note: '早期基督徒的地理與建築紀錄', link: '/fathers' },
             ],
           },
         ],
@@ -588,18 +646,30 @@ export const ANCIENT_ERA: DazangEra = {
       wai: {
         divisions: [
           {
-            key: 'jewish-history', label: '猶太背景史料部', label_en: 'Jewish Background (to 400)',
+            key: 'jewish-chronicles', label: '猶太正史記（記）', label_en: 'Jewish Histories',
             works: [
-              { title_zh: '約瑟夫斯《猶太古史》《猶太戰記》《駁亞皮溫》', title_orig: 'Josephus', era: '1 世紀' },
-              { title_zh: '巴爾科赫巴戰地手札', title_orig: 'Bar Kokhba Letters', era: '2 世紀' },
+              { title_zh: '猶太戰記', title_orig: 'The Jewish War', author: '約瑟夫斯', era: '1 世紀', note: '反羅馬起義現場，初代教會最關鍵史料' },
+              { title_zh: '猶太古史', title_orig: 'Antiquities of the Jews', author: '約瑟夫斯', era: '1 世紀', note: '創世至羅馬統治的猶太通史' },
+              { title_zh: '猶太王國志', title_orig: 'Josippon', note: '希伯來文版猶太歷史集大成' },
             ],
           },
           {
-            key: 'pagan-testimonia', label: '外史志部（外教見證）', label_en: 'Pagan Testimonia',
+            key: 'jewish-martyr', label: '猶太殉道傳（傳）', label_en: 'Jewish Martyrologies',
             works: [
-              { title_zh: '塔西佗《編年史》論尼祿焚城段', title_orig: 'Tacitus, Annals 15.44' },
-              { title_zh: '蘇埃托尼烏斯《革老丟傳》「基斯督」段', title_orig: 'Suetonius, Claudius 25' },
-              { title_zh: '琉善《佩雷格里努斯之死》', title_orig: 'Lucian, De Morte Peregrini' },
+              { title_zh: '馬加比殉道傳', title_orig: 'The Maccabean Martyrdoms', note: '母親帶領七子為律法而死，殉道文學雛形', link: '/apocrypha' },
+            ],
+          },
+          {
+            key: 'rabbinic-succession', label: '拉比與大祭司傳燈（傳燈錄）', label_en: 'Rabbinic & Priestly Successions',
+            works: [
+              { title_zh: '拉比傳燈錄', title_orig: 'Pirkei Avot', era: '2–3 世紀', note: '又稱「先賢訓辭」，律法自摩西經拉比傳承' },
+              { title_zh: '大祭司世系記', title_orig: 'High-Priestly Successions', note: '第二聖殿時期大祭司更迭' },
+            ],
+          },
+          {
+            key: 'jewish-chronology', label: '猶太編年表（編年）', label_en: 'Jewish Chronologies',
+            works: [
+              { title_zh: '猶太編年史', title_orig: 'Seder Olam Rabbah', era: '2 世紀', note: '猶太傳統最古老的年代學' },
             ],
           },
         ],
@@ -612,35 +682,47 @@ export const ANCIENT_ERA: DazangEra = {
       name_en: 'Translation & Textual Criticism',
       glyph: '譯',
       genres: '寶抄‧譯本‧校勘‧考異',
-      summary: '人類傳遞啟示的「歷史肉身」。正藏為大公教會接受的古卷寶抄、多語大譯本與正統校勘；外藏為猶太修訂譯本與異端經本。',
+      summary: '人類傳遞啟示的「歷史肉身」。正藏為大公教會接受的古卷寶抄、東方與西方多語大譯本、譯經序論與校勘考異；外藏為猶太修訂譯本與意譯塔古姆。',
       portal: { to: '/scripture', label: '聖經多版本對照' },
       zheng: {
         divisions: [
           {
-            key: 'manuscripts', label: '古卷寶抄部', label_en: 'Great Codices',
+            key: 'codices', label: '古卷寶抄部', label_en: 'The Great Codices',
             works: [
-              { title_zh: '西乃抄本', title_orig: 'Codex Sinaiticus', era: '4 世紀' },
-              { title_zh: '梵蒂岡抄本‧亞歷山大抄本', title_orig: 'Vaticanus / Alexandrinus' },
-              { title_zh: '以法蓮重寫寶抄‧伯撒抄本', title_orig: 'Ephraemi Rescriptus / Bezae' },
+              { title_zh: '西乃山大卷', title_orig: 'Codex Sinaiticus', era: '4 世紀', note: '現存最完整最古老的新約與希臘文舊約，含外典', link: '/scripture' },
+              { title_zh: '梵蒂岡大卷', title_orig: 'Codex Vaticanus', era: '4 世紀', note: '最純淨的亞歷山大文本代表', link: '/scripture' },
+              { title_zh: '亞歷山大巨卷', title_orig: 'Codex Alexandrinus', era: '5 世紀', note: '拜占庭文本體系的早期基石', link: '/scripture' },
+              { title_zh: '伯撒雙語大卷', title_orig: 'Codex Bezae', era: '5 世紀', note: '希臘拉丁雙語，含大量西方變體', link: '/scripture' },
+              { title_zh: '艾弗冷重寫寶抄', title_orig: 'Codex Ephraemi Rescriptus', era: '5 世紀', note: '教父講章底下覆蓋著被刮掉的古老經文', link: '/scripture' },
+              { title_zh: '華盛頓四福音大卷', title_orig: 'Codex Washingtonianus', era: '4–5 世紀', note: '含獨家「弗里爾補編」', link: '/scripture' },
             ],
           },
           {
-            key: 'versions', label: '多語大譯本部', label_en: 'Multilingual Versions', desc: '止於 7 世紀大秦景教殘卷（不含 9 世紀斯拉夫文）。',
+            key: 'eastern-versions', label: '東方與希臘譯經部', label_en: 'Eastern & Greek Versions',
             works: [
-              { title_zh: '七十士譯本', title_orig: 'Septuagint (LXX)', link: '/scripture' },
-              { title_zh: '武加大拉丁譯本（耶柔米）', title_orig: 'Vulgate', link: '/scripture' },
-              { title_zh: '古拉丁譯本', title_orig: 'Vetus Latina', link: '/scripture' },
-              { title_zh: '別西大敘利亞譯本', title_orig: 'Peshitta', link: '/scripture' },
-              { title_zh: '科普特譯本（撒希地／波海里）', title_orig: 'Coptic', link: '/scripture' },
-              { title_zh: '哥德文／亞美尼亞文／喬治亞文／吉茲文譯本', title_orig: 'Gothic / Armenian / Georgian / Geʿez', link: '/scripture' },
-              { title_zh: '大秦景教殘卷', title_orig: 'Jingjiao Chinese Fragments', era: '7–8 世紀' },
+              { title_zh: '七十士希臘文大譯本', title_orig: 'Septuagint', era: '前 3–2 世紀', note: '初代教會的唯一舊約聖經', link: '/scripture' },
+              { title_zh: '四福音合參', title_orig: 'Diatessaron', author: '塔提安', era: '2 世紀', note: '四福音融合本，統治敘利亞教會數百年' },
+              { title_zh: '別西大敘利亞文大譯本', title_orig: 'Peshitta', era: '2–5 世紀', note: '東方亞蘭語系的「武加大」', link: '/scripture' },
+              { title_zh: '科普特文南北大譯本', title_orig: 'Coptic (Sahidic & Bohairic)', era: '3–4 世紀', note: '埃及修道士專用，保存古老變體', link: '/scripture' },
+              { title_zh: '吉茲文衣索比亞大譯本', title_orig: 'Geʿez Version', era: '4–5 世紀', note: '含《以諾書》與《禧年書》的巨型譯本', link: '/scripture' },
+              { title_zh: '亞美尼亞文大譯本', title_orig: 'Armenian Version', era: '5 世紀', note: '譯本之后，翻譯精美', link: '/scripture' },
             ],
           },
           {
-            key: 'critical', label: '校勘考異部', label_en: 'Textual Criticism',
+            key: 'western-versions', label: '西方與邊區譯經部', label_en: 'Western & Marginal Versions',
             works: [
-              { title_zh: '俄利根《六文本合參》', title_orig: 'Origen, Hexapla' },
-              { title_zh: '耶柔米《武加大序言》', title_orig: 'Jerome, Prefaces', note: '「希伯來真理」翻譯理論' },
+              { title_zh: '古拉丁文譯本', title_orig: 'Vetus Latina', era: '2–4 世紀', note: '耶柔米統一前的草根拉丁譯本', link: '/scripture' },
+              { title_zh: '武加大拉丁文大譯本', title_orig: 'Vulgate', author: '耶柔米', era: '4 世紀', note: '統治西方中世紀一千年', link: '/scripture' },
+              { title_zh: '哥德文烏爾菲拉譯本', title_orig: 'Gothic Bible', author: '烏爾菲拉', era: '4 世紀', note: '為日耳曼蠻族造字翻譯，現存「銀色大卷」' },
+              { title_zh: '大秦景教譯經殘卷', title_orig: 'Jingjiao Chinese Fragments', era: '7–8 世紀', note: '唐代景教中文聖經殘篇（《尊經》《一神論》）' },
+            ],
+          },
+          {
+            key: 'criticism', label: '校勘考異部', label_en: 'Prefaces & Textual Criticism',
+            works: [
+              { title_zh: '武加大譯本大序', title_orig: 'Prologus Galeatus', author: '耶柔米', era: '4 世紀', note: '西方確立正典與次經界線的最重要文獻', link: '/fathers' },
+              { title_zh: '六文本合參殘卷', title_orig: 'Hexapla', author: '俄利根', era: '3 世紀', note: '六版本舊約並列，古代版本學最高峰', link: '/fathers' },
+              { title_zh: '新約古卷異讀考異', title_orig: 'Apparatus Criticus', note: '馬可福音長短結尾、約壹三位一體逗號、行淫婦女段落真偽', link: '/scripture' },
             ],
           },
         ],
@@ -648,17 +730,13 @@ export const ANCIENT_ERA: DazangEra = {
       wai: {
         divisions: [
           {
-            key: 'jewish-versions', label: '猶太修訂譯本部', label_en: 'Jewish Recensions',
+            key: 'jewish-versions', label: '猶太譯本部', label_en: 'Jewish Versions & Targums',
             works: [
-              { title_zh: '亞居拉／辛馬庫／狄奧多田譯本', title_orig: 'Aquila / Symmachus / Theodotion', era: '2 世紀' },
-              { title_zh: '塔古姆（翁克羅斯／約拿單）', title_orig: 'Targum Onkelos / Jonathan' },
-            ],
-          },
-          {
-            key: 'heretic-versions', label: '異端經本部', label_en: 'Heretical Recensions',
-            works: [
-              { title_zh: '馬吉安經典（刪節版路加與保羅書信）', title_orig: 'Marcionite Apostolikon & Evangelion' },
-              { title_zh: '摩尼教經卷', title_orig: 'Manichaean Scriptures' },
+              { title_zh: '七十士譯本傳奇', title_orig: 'Letter of Aristeas', era: '前 2 世紀', note: '譯經神話的源頭' },
+              { title_zh: '亞居拉希臘文譯本', title_orig: 'Aquila’s Version', author: '亞居拉', era: '2 世紀', note: '猶太人反擊基督教而重譯的極度直譯本' },
+              { title_zh: '狄奧多田與辛馬庫譯本', title_orig: 'Theodotion & Symmachus', era: '2–3 世紀', note: '另兩部重要希臘文重譯本' },
+              { title_zh: '亞蘭文塔古姆譯註', title_orig: 'Targums', note: '將「上帝的道（Memra）」啟發約翰福音道成肉身' },
+              { title_zh: '撒馬利亞五經異讀考', title_orig: 'Samaritan Pentateuch', note: '撒馬利亞人修改的摩西五經關鍵段落' },
             ],
           },
         ],
@@ -671,32 +749,35 @@ export const ANCIENT_ERA: DazangEra = {
       name_en: 'Epistles',
       glyph: '信',
       genres: '函（牧函／教令）‧札（尺牘）',
-      summary: '為冷峻的法典與神學大山注入真實的人間血肉。正藏為使徒教父牧函與教父書信集；外藏為偽使徒書信與外教公函。',
+      summary: '為冷峻的法典與神學大山注入真實的人間血肉。正藏為大公通諭與牧函、神學交鋒與靈修尺牘、政教博弈奏表；外藏為猶太教戰地手札。',
       portal: { to: '/fathers', label: '教父著作' },
       zheng: {
         divisions: [
           {
-            key: 'apostolic-letters', label: '使徒教父牧函部（函）', label_en: 'Apostolic Fathers',
+            key: 'pastoral', label: '大公通諭與牧函部', label_en: 'Encyclicals & Pastoral Letters',
             works: [
-              { title_zh: '伊格那丟七書', title_orig: 'Ignatius, Seven Epistles', era: '2 世紀', link: '/apocrypha' },
-              { title_zh: '波利卡普《致腓立比人書》', title_orig: 'Polycarp', link: '/apocrypha' },
+              { title_zh: '羅馬克勉一書', title_orig: '1 Clement', author: '羅馬的克勉', era: '1 世紀末', note: '新約之外最古老的基督教文獻', link: '/apocrypha' },
+              { title_zh: '伊格那丟七函', title_orig: 'Epistles of Ignatius', author: '安提阿的伊格那丟', era: '2 世紀', note: '殉道途中的絕筆牧函，確立主教制權威', link: '/apocrypha' },
+              { title_zh: '坡旅甲致腓立比人書', title_orig: 'Polycarp to the Philippians', author: '坡旅甲', era: '2 世紀', link: '/apocrypha' },
+              { title_zh: '居普良牧函集', title_orig: 'Letters of Cyprian', author: '居普良', era: '3 世紀', note: '大逼迫中指揮信徒面對死亡的戰時通信', link: '/fathers' },
+              { title_zh: '大良獅王之諭', title_orig: 'Tome of Leo', author: '大良', era: '5 世紀', note: '終結迦克墩基督論爭議', link: '/encyclicals' },
             ],
           },
           {
-            key: 'father-letters', label: '教父書信集部', label_en: 'Patristic Letters',
+            key: 'spiritual', label: '神學交鋒與靈修尺牘部', label_en: 'Personal & Spiritual Epistles',
             works: [
-              { title_zh: '居普良書信集', title_orig: 'Cyprian, Letters', link: '/fathers' },
-              { title_zh: '巴西流／納西盎貴格利書信', title_orig: 'Basil / Gregory Nazianzen', link: '/fathers' },
-              { title_zh: '安波羅修／耶柔米／奧古斯丁書信集', title_orig: 'Ambrose / Jerome / Augustine', link: '/fathers' },
-              { title_zh: '利奧書信集‧大貴格利《登記書》', title_orig: 'Leo / Gregory the Great', link: '/encyclicals' },
+              { title_zh: '奧古斯丁與耶柔米往來尺牘', title_orig: 'Augustine–Jerome Correspondence', era: '4–5 世紀', note: '古代最精彩的學術筆戰', link: '/fathers' },
+              { title_zh: '加帕多家三傑尺牘集', title_orig: 'Letters of the Cappadocian Fathers', era: '4 世紀', note: '私信中建構三位一體神學名詞', link: '/fathers' },
+              { title_zh: '金口若望流放家書', title_orig: 'Letters of Chrysostom from Exile', author: '金口若望', era: '5 世紀', note: '流放至死前寫給女執事奧林匹亞的絕筆', link: '/fathers' },
+              { title_zh: '沙漠父老巴撒努菲答問札', title_orig: 'Letters of Barsanuphius and John', era: '6 世紀', note: '隱修士以書信回答靈修難題', link: '/fathers' },
             ],
           },
           {
-            key: 'spiritual-letters', label: '神學交鋒與靈修尺牘部（札）', label_en: 'Theological & Spiritual Letters',
+            key: 'diplomatic', label: '政教博弈奏表部', label_en: 'Diplomatic & State Letters',
             works: [
-              { title_zh: '奧古斯丁與耶柔米論戰信', title_orig: 'Augustine–Jerome Correspondence', link: '/fathers' },
-              { title_zh: '沙漠父老巴撒努菲與約翰答問札', title_orig: 'Barsanuphius and John', era: '6 世紀' },
-              { title_zh: '傑拉修《雙劍論》致阿納斯塔修', title_orig: 'Gelasius, Letter to Anastasius', link: '/encyclicals' },
+              { title_zh: '安波羅修致皇帝奏表', title_orig: 'Letters of Ambrose to Emperors', author: '安波羅修', era: '4 世紀', note: '逼狄奧多西皇帝在教會門口公開悔改', link: '/fathers' },
+              { title_zh: '傑拉修雙劍論公文', title_orig: 'Letter of Gelasius to Anastasius', author: '教宗傑拉修一世', era: '5 世紀末', note: '首次提出神權高於王權的雙劍理論', link: '/encyclicals' },
+              { title_zh: '大額我略外交尺牘', title_orig: 'Register of Gregory the Great', author: '教宗大額我略', era: '6 世紀末', note: '寫給法蘭克女王、倫巴底國王的政治信件', link: '/encyclicals' },
             ],
           },
         ],
@@ -704,16 +785,9 @@ export const ANCIENT_ERA: DazangEra = {
       wai: {
         divisions: [
           {
-            key: 'pseudo-letters', label: '偽使徒書信部', label_en: 'Pseudo-Apostolic Letters',
+            key: 'jewish-letters', label: '猶太教手札部', label_en: 'Jewish Field Letters',
             works: [
-              { title_zh: '老底嘉書‧哥林多三書', title_orig: 'Laodiceans / 3 Corinthians', link: '/apocrypha' },
-              { title_zh: '保羅與塞內加書信', title_orig: 'Paul and Seneca' },
-            ],
-          },
-          {
-            key: 'pagan-letters', label: '外教公函部', label_en: 'Pagan Correspondence',
-            works: [
-              { title_zh: '小普林尼致圖拉真書（及回信）', title_orig: 'Pliny–Trajan', era: '約 112' },
+              { title_zh: '巴爾‧科赫巴戰地手札', title_orig: 'Letters of Bar Kokhba', author: '巴爾‧科赫巴', era: '2 世紀', note: '死海山洞出土的起義軍令木簡真跡' },
             ],
           },
         ],
@@ -726,29 +800,39 @@ export const ANCIENT_ERA: DazangEra = {
       name_en: 'Liturgy',
       glyph: '儀',
       genres: '事奉聖禮‧聖事書‧日課‧祈禱',
-      summary: '最具動態感與神聖感的空間。正藏為正統的事奉聖禮、聖事日課與奧祕教理；外藏為異端禮儀與 400 年前的猶太敬拜。',
+      summary: '最具動態感與神聖感的空間。正藏為大公聖祭（事奉聖儀）、聖事密典與教規、日課與經課；外藏為 400 年前的猶太祈禱與節令禮文。',
       zheng: {
         divisions: [
           {
-            key: 'eucharist', label: '聖禮事奉部', label_en: 'Eucharistic Liturgies',
+            key: 'liturgies', label: '大公聖祭部', label_en: 'Divine Liturgies',
             works: [
-              { title_zh: '金口約翰／巴西流事奉聖禮', title_orig: 'Liturgy of Chrysostom / Basil' },
-              { title_zh: '雅各／馬可事奉聖禮', title_orig: 'Liturgy of James / Mark' },
-              { title_zh: '阿迪與馬利聖頌', title_orig: 'Anaphora of Addai and Mari', note: '東敘利亞最古老感恩經' },
-              { title_zh: '羅馬彌撒正典', title_orig: 'Canon Romanus' },
+              { title_zh: '雅各事奉聖儀', title_orig: 'Liturgy of St. James', note: '耶路撒冷與安提阿最古老的聖餐禮', link: '/fathers' },
+              { title_zh: '馬可事奉聖儀', title_orig: 'Liturgy of St. Mark', note: '亞歷山大與科普特教會專用', link: '/fathers' },
+              { title_zh: '大巴西略事奉聖儀', title_orig: 'Liturgy of St. Basil', author: '大巴西略', note: '拜占庭重大節日的超長版聖儀', link: '/fathers' },
+              { title_zh: '金口若望事奉聖儀', title_orig: 'Liturgy of St. John Chrysostom', author: '金口若望', note: '東方教會至今每日使用的標準敬拜', link: '/fathers' },
+              { title_zh: '羅馬彌撒正典', title_orig: 'Roman Canon', era: '4 世紀核心定型', note: '西方拉丁教會最古老的聖餐祈禱文' },
             ],
           },
           {
-            key: 'sacramentary', label: '聖事書與日課部', label_en: 'Sacramentaries & Hours',
+            key: 'sacramentaries', label: '聖事密典與教規部', label_en: 'Sacramentaries & Ordines',
             works: [
-              { title_zh: '傑拉修／大貴格利聖事書', title_orig: 'Gelasian / Gregorian Sacramentary' },
-              { title_zh: '拜占庭時辰經', title_orig: 'Horologion' },
+              { title_zh: '希波律陀聖事軌', title_orig: 'Apostolic Tradition', author: '希波律陀', era: '3 世紀初', note: '保留羅馬最古老的洗禮問答與按手禮', link: '/fathers' },
+              { title_zh: '傑拉修聖事密典', title_orig: 'Gelasian Sacramentary', era: '8 世紀', note: '法蘭克與羅馬混合的官方聖事手冊' },
+              { title_zh: '大額我略聖事密典', title_orig: 'Gregorian Sacramentary', author: '教宗大額我略', era: '8–9 世紀', note: '寄給查理曼大帝的官方標準版' },
+              { title_zh: '羅馬禮儀軌', title_orig: 'Ordines Romani', note: '教宗大彌撒的神職走位動線指南' },
             ],
           },
           {
-            key: 'mystagogy', label: '奧祕教理與洗禮部', label_en: 'Mystagogy & Baptism',
+            key: 'office', label: '日課與經課部', label_en: 'Divine Office & Lectionaries',
             works: [
-              { title_zh: '耶路撒冷區利羅《奧祕教理講授》', title_orig: 'Cyril of Jerusalem, Mystagogical Catecheses', link: '/fathers' },
+              { title_zh: '拜占庭時辰經', title_orig: 'Horologion', note: '東方修士每日八個祈禱時辰規程', link: '/fathers' },
+              { title_zh: '耶路撒冷大經課表', title_orig: 'Jerusalem Lectionary', era: '5 世紀', note: '規定聖誕到復活節每日讀經與堂所' },
+            ],
+          },
+          {
+            key: 'mystagogy', label: '奧祕教理部', label_en: 'Mystagogy',
+            works: [
+              { title_zh: '耶路撒冷區利羅《奧祕教理講授》', title_orig: 'Mystagogical Catecheses', author: '耶路撒冷的區利羅', era: '4 世紀', link: '/fathers' },
             ],
           },
         ],
@@ -756,17 +840,11 @@ export const ANCIENT_ERA: DazangEra = {
       wai: {
         divisions: [
           {
-            key: 'heretic-liturgy', label: '異端禮儀部', label_en: 'Heterodox Liturgies',
+            key: 'jewish-liturgy', label: '猶太祈禱與節令部', label_en: 'Jewish Liturgy (to 400 CE)',
             works: [
-              { title_zh: '諾斯底洗禮與新娘室禮儀', title_orig: 'Gnostic Baptism & Bridal Chamber', link: '/gnostic' },
-              { title_zh: '馬可斯派聖餐儀軌', title_orig: 'Marcosian Eucharist' },
-            ],
-          },
-          {
-            key: 'jewish-liturgy', label: '猶太禮儀部', label_en: 'Jewish Liturgy (to 400)',
-            works: [
-              { title_zh: '安息日獻祭之歌（天使禮儀）‧感恩聖詩卷', title_orig: 'Songs of the Sabbath Sacrifice / Hodayot', link: '/apocrypha' },
-              { title_zh: '希臘化會堂祈禱辭', title_orig: 'Hellenistic Synagogal Prayers' },
+              { title_zh: '巴勒斯坦三年期經課表', title_orig: 'Palestinian Triennial Cycle', note: '早期會堂三年讀完摩西五經的進度表' },
+              { title_zh: '古本逾越節哈加達', title_orig: 'Early Passover Haggadah', note: '逾越節家宴講述出埃及的古老儀式文本' },
+              { title_zh: '安息日獻祭之歌（天使禮儀）', title_orig: 'Songs of the Sabbath Sacrifice', note: '死海社群的敬拜詩歌', link: '/apocrypha' },
             ],
           },
         ],
@@ -778,31 +856,32 @@ export const ANCIENT_ERA: DazangEra = {
       name: '詩文藏',
       name_en: 'Poetry & Literature',
       glyph: '詩',
-      genres: '聖詠‧讚歌‧哲理‧傳奇',
-      summary: '最具美感、最能觸動靈魂的藝術聖殿。正藏為正統聖詠、哲理與敘事傳奇；外藏為諾斯底與摩尼教的讚歌。',
+      genres: '聖詠‧讚歌‧史詩‧寓言',
+      summary: '最具美感、最能觸動靈魂的藝術聖殿。正藏為聖詠與頌辭、靈戰與敘事史詩、勸世寓言與教化文學；外藏為諾斯底與摩尼教讚歌。',
       zheng: {
         divisions: [
           {
-            key: 'hymns', label: '聖詠讚美部', label_en: 'Hymns & Chants',
+            key: 'hymns', label: '聖詠與頌辭部', label_en: 'Hymns & Canticles',
             works: [
-              { title_zh: '以法蓮《讚美詩集／教導詩》', title_orig: 'Ephrem the Syrian, Hymns', era: '4 世紀' },
-              { title_zh: '羅曼努斯《孔塔基昂讚歌》', title_orig: 'Romanos, Kontakia', era: '6 世紀' },
-              { title_zh: '安波羅修聖詩‧普魯登修斯《殉道冠冕》', title_orig: 'Ambrosian Hymns / Prudentius', link: '/fathers' },
+              { title_zh: '敘利亞聖詠集', title_orig: 'Hymns of Ephrem', author: '敘利亞的艾弗冷', era: '4 世紀', note: '被譽為「聖靈的豎琴」', link: '/fathers' },
+              { title_zh: '安波羅修晨光頌', title_orig: 'Hymns of Ambrose', author: '安波羅修', era: '4 世紀', note: '為西方教會奠定格律詩傳統', link: '/fathers' },
+              { title_zh: '拜占庭聖頌（孔塔基昂）', title_orig: 'Kontakia of Romanos', author: '歌詠者羅曼努斯', era: '6 世紀', note: '拜占庭最偉大的聖詠詩人', link: '/fathers' },
+              { title_zh: '阿卡菲斯托斯讚美神頌', title_orig: 'Akathist Hymn', era: '6 世紀', note: '讚美道成肉身與聖母的站立詠唱長詩', link: '/fathers' },
             ],
           },
           {
-            key: 'philosophical', label: '哲理與自傳文學部', label_en: 'Philosophical & Autobiographical',
+            key: 'epics', label: '靈戰與敘事史詩部', label_en: 'Christian Epics',
             works: [
-              { title_zh: '波愛修斯《哲學的慰藉》', title_orig: 'Boethius, Consolation of Philosophy', link: '/fathers' },
-              { title_zh: '奧古斯丁《懺悔錄》', title_orig: 'Augustine, Confessions', link: '/fathers' },
-              { title_zh: '普魯登修斯《靈魂爭戰》', title_orig: 'Prudentius, Psychomachia' },
+              { title_zh: '靈戰記', title_orig: 'Psychomachia', author: '普魯登修斯', era: '4 世紀', note: '西方第一部偉大寓言史詩，美德與邪惡擬人搏殺', link: '/fathers' },
+              { title_zh: '福音史詩', title_orig: 'Evangeliorum libri IV', author: '尤文庫斯', era: '4 世紀', note: '以羅馬六步格詩體改寫四福音', link: '/fathers' },
+              { title_zh: '創世記韻文史詩', title_orig: 'Metrical Genesis', note: '盎格魯-撒克遜古英語宗教長詩' },
             ],
           },
           {
-            key: 'romance', label: '敘事傳奇部', label_en: 'Christian Romance',
+            key: 'fables', label: '勸世寓言與教化文學部', label_en: 'Fables & Didactic Literature',
             works: [
-              { title_zh: '《巴拉姆與約沙法傳奇》', title_orig: 'Barlaam and Josaphat', note: '釋迦牟尼生平的基督教化' },
-              { title_zh: '《克勉遊記》', title_orig: 'Clementine Recognitions / Homilies' },
+              { title_zh: '黑馬牧人書', title_orig: 'Shepherd of Hermas', author: '黑馬', era: '2 世紀', note: '曾被部分早期教會視為正典的道德勸世小說', link: '/apocrypha' },
+              { title_zh: '巴拉姆與約沙法傳奇', title_orig: 'Barlaam and Josaphat', era: '8 世紀', note: '釋迦牟尼生平基督教化的傳奇小說' },
             ],
           },
         ],
@@ -812,14 +891,14 @@ export const ANCIENT_ERA: DazangEra = {
           {
             key: 'gnostic-hymns', label: '諾斯底讚歌部', label_en: 'Gnostic Hymns',
             works: [
-              { title_zh: '〈珍珠之歌〉', title_orig: 'Hymn of the Pearl', note: '《多馬行傳》中的靈魂寓言詩', link: '/apocrypha' },
-              { title_zh: '〈三重普羅諾亞〉等諾斯底讚詩', title_orig: 'Trimorphic Protennoia etc.', link: '/gnostic' },
+              { title_zh: '〈珍珠之歌〉', title_orig: 'Hymn of the Pearl', era: '2–3 世紀', note: '《多馬行傳》中的靈魂寓言詩', link: '/apocrypha' },
+              { title_zh: '〈雷：完美理智辭〉', title_orig: 'The Thunder, Perfect Mind', era: '2–3 世紀', note: '女性神格第一人稱矛盾詩', link: '/gnostic' },
             ],
           },
           {
             key: 'manichaean-hymns', label: '摩尼教讚美詩部', label_en: 'Manichaean Psalms',
             works: [
-              { title_zh: '科普特摩尼教讚美詩集', title_orig: 'Coptic Manichaean Psalm-Book' },
+              { title_zh: '科普特摩尼教讚美詩集', title_orig: 'Coptic Manichaean Psalm-Book', era: '3–4 世紀', note: '光明王國的讚歌' },
             ],
           },
         ],
@@ -832,30 +911,39 @@ export const ANCIENT_ERA: DazangEra = {
       name_en: 'Sermons & Sayings',
       glyph: '宣',
       genres: '講‧疏‧語錄',
-      summary: '唯一能聽到「群眾回音」的迴音壁。正藏為正統釋經講疏、節期講道與沙漠語錄；外藏為異端講道與 400 年前的拉比講疏（米德拉什）。',
+      summary: '唯一能聽到「群眾回音」的迴音壁。正藏為解經講疏、節令與倫理講章、啟蒙與教理講訓、沙漠語錄與箴言；外藏為 400 年前的會堂米德拉什（拉比講疏）。',
       portal: { to: '/fathers', label: '教父著作' },
       zheng: {
         divisions: [
           {
-            key: 'expository', label: '釋經講疏部', label_en: 'Expository Homilies',
+            key: 'expository', label: '解經講疏部', label_en: 'Exegetical Homilies',
             works: [
-              { title_zh: '金口約翰《創世記／馬太／約翰福音講疏》《雕像講道》', title_orig: 'Chrysostom, Homilies', link: '/fathers' },
-              { title_zh: '奧古斯丁《講道集》《約翰福音講解》', title_orig: 'Augustine, Sermones', link: '/fathers' },
-              { title_zh: '俄利根講道集‧大貴格利《福音書講道》', title_orig: 'Origen / Gregory the Great', link: '/fathers' },
+              { title_zh: '路加福音演講錄', title_orig: 'Homilies on Luke', author: '俄利根', era: '3 世紀', note: '講道稿異常溫柔，充滿牧養關懷', link: '/fathers' },
+              { title_zh: '創世記講台疏', title_orig: 'Homilies on Genesis', author: '金口若望', era: '4 世紀', note: '研究古代安提阿平民生活的寶庫', link: '/fathers' },
+              { title_zh: '約翰福音講疏', title_orig: 'Tractates on the Gospel of John', author: '奧古斯丁', era: '5 世紀', note: '124 篇以淺白拉丁向北非平民解釋道成肉身', link: '/fathers' },
             ],
           },
           {
-            key: 'festal', label: '節期與教理講道部', label_en: 'Festal & Catechetical',
+            key: 'thematic', label: '節令與倫理講章部', label_en: 'Thematic & Festal Sermons',
             works: [
-              { title_zh: '納西盎貴格利《神學演講》', title_orig: 'Gregory Nazianzen, Theological Orations', link: '/fathers' },
-              { title_zh: '耶路撒冷區利羅《教理講授》', title_orig: 'Cyril of Jerusalem, Catechetical Lectures', link: '/fathers' },
+              { title_zh: '創世六日講', title_orig: 'Hexaemeron', author: '大巴西略', era: '4 世紀', note: '對工匠農夫口語講述創造，古代大自然百科', link: '/fathers' },
+              { title_zh: '斥富人篇', title_orig: 'Sermon to the Rich', author: '大巴西略／金口若望', era: '4 世紀', note: '古代最激進的社會正義演說', link: '/fathers' },
+              { title_zh: '大眾講章集', title_orig: 'Sermones ad Populum', author: '奧古斯丁', era: '5 世紀', note: '近 400 篇即興演說，可見群眾掌聲與抱怨', link: '/fathers' },
+              { title_zh: '大良節期講章', title_orig: 'Sermons of Leo the Great', author: '大良', era: '5 世紀', note: '奠定西方聖誕與復活節神學基調', link: '/fathers' },
             ],
           },
           {
-            key: 'desert-sayings', label: '沙漠語錄部', label_en: 'Sayings of the Desert Fathers',
+            key: 'catechetical', label: '啟蒙與教理講訓部', label_en: 'Catechetical Lectures',
             works: [
-              { title_zh: '《沙漠教父言行錄》', title_orig: 'Apophthegmata Patrum', era: '4–5 世紀' },
-              { title_zh: '艾瓦格留《實踐論格言》', title_orig: 'Evagrius, Praktikos' },
+              { title_zh: '慕道友啟蒙講訓', title_orig: 'Catechetical Lectures', author: '耶路撒冷的區利羅', era: '4 世紀', note: '23 篇在復活堂親口教導受洗者', link: '/fathers' },
+              { title_zh: '要理講授', title_orig: 'Catechetical Homilies', author: '摩普綏提亞的提奧多若', era: '4 世紀', note: '東方教會洗禮與聖餐的口頭指導', link: '/fathers' },
+            ],
+          },
+          {
+            key: 'desert-sayings', label: '沙漠語錄與箴言部', label_en: 'Sayings of the Desert',
+            works: [
+              { title_zh: '沙漠父老語錄', title_orig: 'Apophthegmata Patrum', era: '4–5 世紀', note: '長老與弟子間如禪宗公案的短小對話', link: '/fathers' },
+              { title_zh: '沙漠靈母箴言', title_orig: 'Sayings of the Desert Mothers', era: '4–5 世紀', note: '古代女性隱修大師的屬靈棒喝', link: '/fathers' },
             ],
           },
         ],
@@ -863,16 +951,12 @@ export const ANCIENT_ERA: DazangEra = {
       wai: {
         divisions: [
           {
-            key: 'rabbinic-homily', label: '拉比講疏部', label_en: 'Rabbinic Midrash (to 400)',
+            key: 'midrash', label: '會堂米德拉什部', label_en: 'Synagogue Midrash (to ~400 CE)',
             works: [
-              { title_zh: '《創世記大注釋》《利未記大注釋》', title_orig: 'Genesis / Leviticus Rabbah' },
-              { title_zh: '《米基塔》《西弗瑞》', title_orig: 'Mekhilta / Sifre' },
-            ],
-          },
-          {
-            key: 'heretic-homily', label: '異端講道部', label_en: 'Heterodox Homilies',
-            works: [
-              { title_zh: '諾斯底與摩尼教講道殘篇', title_orig: 'Gnostic & Manichaean Homilies' },
+              { title_zh: '出埃及記法理講疏', title_orig: 'Mekhilta de-Rabbi Ishmael', era: '3–4 世紀', note: '以實瑪利學派的早期米德拉什' },
+              { title_zh: '西弗雷講疏（民數記／申命記）', title_orig: 'Sifre', era: '3–4 世紀', note: '坦拿傳統的米德拉什講疏' },
+              { title_zh: '大米德拉什：創世記講疏', title_orig: 'Genesis Rabbah', era: '5 世紀', note: '巴勒斯坦拉比與教父同講創世記的口頭交鋒' },
+              { title_zh: '大米德拉什：利未記講疏', title_orig: 'Leviticus Rabbah', era: '5 世紀' },
             ],
           },
         ],
@@ -885,34 +969,34 @@ export const ANCIENT_ERA: DazangEra = {
       name_en: 'Encyclopedic Reference',
       glyph: '類',
       genres: '類書‧法要‧工具‧曆算',
-      summary: '修院認識世界的百科全書，每一種分類都指向造物主。正藏為基督教百科類書、修學法要、哲學工具與曆算自然；外藏為外教百科與占驗祕學。',
+      summary: '修院認識世界的百科全書，每一種分類都指向造物主。正藏為類書與博物志、曆算與象緯、理學與通識、哲學玄思；外藏為外教百科與占驗祕學。',
       zheng: {
         divisions: [
           {
-            key: 'encyclopedia', label: '百科類書部', label_en: 'Encyclopedias',
+            key: 'encyclopedia', label: '類書與博物志部', label_en: 'Encyclopedias & Bestiaries',
             works: [
-              { title_zh: '塞維亞的伊西多爾《詞源（百科志）》', title_orig: 'Isidore of Seville, Etymologiae', era: '7 世紀', note: '全書 20 卷的「中世紀維基百科」' },
+              { title_zh: '自然物相志', title_orig: 'Physiologus', era: '2–4 世紀', note: '基督教動物學，將世俗動物知識神聖化，影響歐洲藝術千年' },
+              { title_zh: '詞源百科志', title_orig: 'Etymologiae', author: '塞維亞的依西多祿', era: '7 世紀', note: '中世紀的維基百科', link: '/fathers' },
             ],
           },
           {
-            key: 'curriculum', label: '修學法要部', label_en: 'Educational Manuals',
+            key: 'computus', label: '曆算與象緯部', label_en: 'Computus & Cosmology',
             works: [
-              { title_zh: '卡西奧多羅斯《聖俗文獻指南》', title_orig: 'Cassiodorus, Institutiones', era: '6 世紀' },
-              { title_zh: '奧古斯丁《論基督教教義》', title_orig: 'Augustine, De Doctrina Christiana', link: '/fathers' },
-              { title_zh: '馬爾蒂亞努斯《文獻學與墨丘利的聯姻》', title_orig: 'Martianus Capella, De Nuptiis' },
+              { title_zh: '基督教寰宇地理志', title_orig: 'Christian Topography', author: '科斯馬斯', era: '6 世紀', note: '據會幕形狀畫平頂長方形宇宙圖' },
+              { title_zh: '時間計算理法', title_orig: 'De Temporum Ratione', author: '可敬者比德', era: '8 世紀', note: '古代最偉大的復活節曆算法', link: '/fathers' },
             ],
           },
           {
-            key: 'philosophy-tools', label: '哲學工具部', label_en: 'Philosophical Tools',
+            key: 'liberal-arts', label: '理學與通識部', label_en: 'Liberal Arts & Logic',
             works: [
-              { title_zh: '波愛修斯譯註《波菲利引論》', title_orig: 'Boethius, Porphyry Isagoge', note: '基督二性辯論的邏輯學武器' },
+              { title_zh: '神聖與世俗修學法要', title_orig: 'Institutiones', author: '卡西奧多羅斯', era: '6 世紀', note: '規定後世修道院必學七藝，中世紀大學制度的源頭', link: '/fathers' },
+              { title_zh: '波菲利引論（基督教釋本）', title_orig: 'Isagoge (trans. Boethius)', author: '波菲利著，波愛修譯', era: '3／6 世紀', note: '基督二性辯論的邏輯學武器' },
             ],
           },
           {
-            key: 'computus', label: '曆算與自然部', label_en: 'Computus & Nature',
+            key: 'philosophy', label: '哲學玄思部', label_en: 'Christianized Philosophy',
             works: [
-              { title_zh: '比德《論時間計算》《論萬物本性》', title_orig: 'Bede, De Temporum Ratione', era: '8 世紀' },
-              { title_zh: '科斯馬斯《基督教地形志》', title_orig: 'Cosmas, Christian Topography', era: '6 世紀' },
+              { title_zh: '哲學的慰藉', title_orig: 'De Consolatione Philosophiae', author: '波愛修', era: '6 世紀', note: '純用希臘哲學探討命運苦難與上帝主權，中世紀修士最愛' },
             ],
           },
         ],
@@ -920,15 +1004,15 @@ export const ANCIENT_ERA: DazangEra = {
       wai: {
         divisions: [
           {
-            key: 'pagan-encyclopedia', label: '外教百科部', label_en: 'Pagan Reference',
+            key: 'pagan-encyclopedia', label: '外教百科部', label_en: 'Pagan Encyclopedias',
             works: [
-              { title_zh: '老普林尼《博物志》（基督教摘要）', title_orig: 'Pliny the Elder, Natural History (excerpts)' },
+              { title_zh: '博物志', title_orig: 'Naturalis Historia', author: '老普林尼', era: '1 世紀', note: '羅馬世俗百科全書，精華選集被教會吸收' },
             ],
           },
           {
-            key: 'occult', label: '占驗祕學部', label_en: 'Occult & Magic',
+            key: 'occult', label: '占驗祕學部', label_en: 'Divination & Occult Lore',
             works: [
-              { title_zh: '《所羅門遺訓》魔法傳統', title_orig: 'Testament of Solomon', note: '被基督教引用／駁斥的驅魔與占星傳統' },
+              { title_zh: '所羅門遺訓', title_orig: 'Testament of Solomon', era: '1–3 世紀', note: '以神戒驅使惡魔建聖殿的驅魔與召喚祕錄' },
             ],
           },
         ],

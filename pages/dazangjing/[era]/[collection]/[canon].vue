@@ -72,11 +72,10 @@
               <div class="min-w-0 flex-1">
                 <span class="text-sm font-medium" :class="w.tier ? TIERS[w.tier].titleCls : 'text-gray-900'">{{ w.title_zh }}</span>
                 <span v-if="w.title_orig" class="text-[11px] text-gray-400 italic ml-2">{{ w.title_orig }}</span>
-                <span v-if="w.author" class="text-[11px] text-stone-600 ml-2">／{{ w.author }}</span>
+                <span v-if="metaLine(w)" class="block text-[11px] text-stone-600 mt-0.5">{{ metaLine(w) }}</span>
                 <span v-if="w.note" class="text-[11px] text-gray-500 block leading-relaxed mt-0.5">{{ w.note }}</span>
               </div>
-              <span v-if="w.era" class="shrink-0 text-[10px] text-gray-400 whitespace-nowrap">{{ w.era }}</span>
-              <span v-if="w.link" class="shrink-0 text-[10px] text-emerald-600 whitespace-nowrap">對照 →</span>
+              <span v-if="w.link" class="shrink-0 self-center text-[10px] text-emerald-600 whitespace-nowrap">對照 →</span>
             </component>
           </li>
         </ol>
@@ -90,7 +89,7 @@
 </template>
 
 <script setup lang="ts">
-import { findEra, canonWorkCount, CANON_LABEL, TIER_LABEL, type DazangCanon, type DazangDivision, type CanonKey, type CanonTier } from '~/data/dazangjing'
+import { findEra, canonWorkCount, CANON_LABEL, TIER_LABEL, type DazangCanon, type DazangDivision, type DazangWork, type CanonKey, type CanonTier } from '~/data/dazangjing'
 
 definePageMeta({ middleware: 'auth' })
 
@@ -117,6 +116,10 @@ const TIERS = TIER_LABEL
 useHead(() => ({ title: `${collection.value?.name ?? '大藏經'}·${canonLabel.value.zh} — Know Graph Lab` }))
 
 function count(c: DazangCanon) { return canonWorkCount(c) }
+// 書目資料行：作者 · 年代 · 地點 · 語言
+function metaLine(w: DazangWork) {
+  return [w.author, w.era, w.place, w.language].filter(Boolean).join('　·　')
+}
 // 連續卷號（跨部累計）
 function runningNo(div: DazangDivision, idx: number) {
   if (!canon.value) return idx + 1
