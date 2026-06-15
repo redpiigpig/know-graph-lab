@@ -115,3 +115,6 @@ scripts/data/yinshunpai_chengli/
 scripts/data/hengqing_xingtan/
 scripts/data/lin_kongxing/
 scripts/data/wang_ronghe/
+
+# 第三方版權論文 PDF（全文已 OCR 入 lit_review_sections，canonical 在 DB）
+學問僧的生命書寫.pdf
