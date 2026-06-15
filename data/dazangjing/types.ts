@@ -37,8 +37,10 @@ export interface DazangWork {
   place?: string
   /** 寫作語言 */
   language?: string
-  /** 一句簡述 */
+  /** 一句簡述（短，顯示於標題下） */
   note?: string
+  /** 100–200 字簡介（顯示於右欄） */
+  intro?: string
   /** 站內對照工具連結（該作品可在此閱讀） */
   link?: string
   /** 正典層級（僅經藏正藏塗色用；正典不設則不塗色） */
