@@ -10,6 +10,22 @@
     <div v-if="!collection || !canon" class="flex-1 flex items-center justify-center text-gray-400 text-sm">找不到此藏。</div>
 
     <div v-else class="flex-1 max-w-5xl w-full mx-auto px-6 py-8">
+      <!-- 時代標題＋說明 -->
+      <div v-if="era" class="mb-3">
+        <NuxtLink :to="`/dazangjing/${eraKey}`" class="text-lg font-bold text-gray-900 hover:text-stone-600 transition">{{ era.glyph }}　{{ era.name }}</NuxtLink>
+        <p class="text-xs text-gray-400 mt-0.5 leading-relaxed">{{ era.subtitle }}</p>
+      </div>
+
+      <!-- 十藏快速切換 -->
+      <div v-if="era" class="flex flex-wrap gap-1.5 mb-3">
+        <NuxtLink v-for="c in era.collections" :key="c.key"
+          :to="`/dazangjing/${eraKey}/${c.key}/${c.soleCanonLabel ? 'zheng' : canonKey}`"
+          class="px-2.5 py-1 rounded-lg text-xs border transition"
+          :class="c.key === collKey ? 'bg-stone-900 text-white border-stone-900' : 'bg-white text-gray-600 border-gray-200 hover:border-stone-400'">
+          <span class="font-serif font-semibold">{{ c.glyph }}</span> {{ c.name }}
+        </NuxtLink>
+      </div>
+
       <!-- 標頭 -->
       <div class="mb-5">
         <div class="flex items-center gap-3 mb-1.5">
