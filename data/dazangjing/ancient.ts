@@ -1073,7 +1073,7 @@ export const ANCIENT_ERA: DazangEra = {
       key: 'shuxin',
       name: '書信藏',
       name_en: 'Epistles',
-      glyph: '信',
+      glyph: '函',
       genres: '函（牧函／教令）‧札（尺牘）',
       summary: '為冷峻的法典與神學大山注入真實的人間血肉。正藏為大公通諭與牧函、神學交鋒與靈修尺牘、政教博弈奏表；外藏為猶太教戰地手札。',
       portal: { to: '/fathers', label: '教父著作' },
