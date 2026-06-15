@@ -358,6 +358,7 @@ def main():
           flush=True)
 
     ckpt_fh = ckpt.open("a", encoding="utf-8")
+    consec_exit = 0   # 連續「依規範退出」（逾時/rate-limit）計數；真乾才會連幾次
     for bi in range(0, len(todo), batch_size):
         chunk = todo[bi:bi + batch_size]
         print(f"  [{bi + 1}-{bi + len(chunk)}/{len(todo)}] pages {chunk[0]}-{chunk[-1]} ... ",
@@ -369,13 +370,19 @@ def main():
             else:
                 entries = ocr_batch_claude(pngs, model=args.engine)
             print(f"{len(entries)} entries", flush=True)
+            consec_exit = 0   # 成功一頁就歸零
             if not args.dry_run:   # dry-run 不污染 checkpoint
                 ckpt_fh.write(json.dumps({"pages": chunk, "entries": entries}, ensure_ascii=False) + "\n")
                 ckpt_fh.flush()
         except Exception as e:
             print(f"FAIL {e}", flush=True)
             if "依規範退出" in str(e):
-                break
+                # 單頁逾時多半是 CLI 偶發卡頓（batch 1 時更明顯）：跳過該頁、續跑，
+                # 該頁留在 checkpoint 之外、下輪自動重試。只有**連續 3 次**才視為真的額度乾→退。
+                consec_exit += 1
+                if consec_exit >= 3:
+                    print("  [bail] 連續 3 次逾時/rate-limit → 視為額度乾，依規範退出", flush=True)
+                    break
         time.sleep(args.sleep)
     ckpt_fh.close()
     pdf.close()
