@@ -12,9 +12,11 @@ set -u
 LOCK=c:/tmp/gnostic_refine.lock
 LEDGER=c:/tmp/gnostic_refine.done
 TOTAL=15563                      # sections in scope (see --dry)
-# engine=gemini = 3-tier cascade Gemini→NVIDIA→Haiku (most resilient when one
-# pool walls; 2026-06-15 Haiku Max walled mid-run while Gemini/NVIDIA had capacity).
-ARGS="--retranslate --exclude-apocrypha --exclude-category manichaean --resume --engine gemini"
+# engine=nvidia = NVIDIA-first chain (NVIDIA→Gemini→Haiku). 2026-06-15: with
+# Gemini's 4 keys fully walled, the gemini-first cascade wasted ~30-60s/section
+# probing 12 dead Gemini attempts before falling through. NVIDIA-first hits the
+# one pool that still has capacity FIRST. Switch back to gemini when it resets.
+ARGS="--retranslate --exclude-apocrypha --exclude-category manichaean --resume --engine nvidia"
 
 if [ -f "$LOCK" ]; then echo "already running (lock $LOCK) — abort"; exit 1; fi
 echo $$ > "$LOCK"
