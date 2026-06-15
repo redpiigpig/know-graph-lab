@@ -35,7 +35,7 @@ export const ANCIENT_ERA: DazangEra = {
         summary: '92 卷普世大正典：舊約 59 卷 + 新約 33 卷。含希伯來正典、七十士第二正典，以及達標的次經（禧年書、以諾書、巴拿巴書、克勉書、黑馬牧人書、彼得啟示錄等）。',
         divisions: [
           {
-            key: 'law', label: '律法書', label_en: 'Law', desc: '信仰的絕對基石與神聖啟示（6 卷）。',
+            key: 'law', label: '律法書部', label_en: 'Law', desc: '信仰的絕對基石與神聖啟示（6 卷）。',
             works: [
               { title_zh: '創世經', intro: '妥拉首卷，記述天地創造、人類墮落、洪水審判與亞伯拉罕、以撒、雅各、約瑟諸族長傳承，以希伯來文寫成。傳統歸於摩西，現代底本學派則視其為約前六至五世紀於巴勒斯坦由耶和華典、祭司典等多源編纂的最終定本。作為猶太教與基督教共同的信仰基石，它奠定一神創造論、人神立約與救恩史的開端，是整部正典神學與後世創造論、人觀辯論最根本的源頭文獻。', title_orig: 'Genesis', author: '傳統作者摩西／底本學派', era: '約前 6–5 世紀最終成書', place: '巴勒斯坦', language: '希伯來文', link: '/scripture' },
               { title_zh: '出埃及經', intro: '妥拉第二卷，敘述以色列人於埃及為奴、摩西蒙召、十災與逾越節、紅海得救、西奈山頒佈十誡與律法，以及會幕建造，以希伯來文寫成。傳統作者為摩西，底本學派則定其約前六至五世紀於巴勒斯坦最終成書。此卷確立出埃及為救贖典範、西奈之約為民族與律法根基，逾越節更被新約引申為基督獻祭的預表，在猶太禮儀與基督教救恩論上皆居核心地位。', title_orig: 'Exodus', author: '傳統作者摩西／底本學派', era: '約前 6–5 世紀最終成書', place: '巴勒斯坦', language: '希伯來文', link: '/scripture' },
@@ -46,7 +46,7 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'history', label: '歷史書', label_en: 'Histories', desc: '從應許之地到第二聖殿被毀的民族興衰（24 卷）。',
+            key: 'history', label: '歷史書部', label_en: 'Histories', desc: '從應許之地到第二聖殿被毀的民族興衰（24 卷）。',
             works: [
               { title_zh: '約書亞記', intro: '歷史書首卷，記述摩西繼任者約書亞率以色列人渡約旦河、攻取耶利哥、征服迦南並按支派分地的歷程，以希伯來文寫成。傳統不具名，學界多歸於約前六世紀的申命史家編纂。全卷以神信實成就應許之地為主題，既彰顯立約得地的神學，也呈現聖戰與分地制度，是理解以色列定居傳統與申命派歷史觀的開端，承先啟後地連接妥拉與往後的士師、列王時代。', title_orig: 'Joshua', author: '佚名（申命史家）', era: '約前 6 世紀', place: '巴勒斯坦', language: '希伯來文', link: '/scripture' },
               { title_zh: '士師記', intro: '歷史書第二卷，記述約書亞死後以色列在迦南陷入「背道—受壓—呼求—士師拯救」的循環，描繪底波拉、基甸、參孫等地方領袖，以希伯來文寫成。作者不具名，多歸約前六世紀申命史家。全卷以「那時以色列中沒有王，各人任意而行」收束，凸顯立約失守的混亂與神反覆施恩,既為王國興起鋪陳神學伏筆，也成為反思領導、悖逆與救恩循環的經典文本。', title_orig: 'Judges', author: '佚名（申命史家）', era: '約前 6 世紀', place: '巴勒斯坦', language: '希伯來文', link: '/scripture' },
@@ -75,7 +75,7 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'wisdom', label: '詩歌智慧書', label_en: 'Poetry & Wisdom', desc: '匯集篇、辭、箴、錄、歌、傳、訓的東方文學矩陣（9 卷）。',
+            key: 'wisdom', label: '詩歌智慧書部', label_en: 'Poetry & Wisdom', desc: '匯集篇、辭、箴、錄、歌、傳、訓的東方文學矩陣（9 卷）。',
             works: [
               { title_zh: '詩篇', intro: '希伯來聖經詩歌智慧書的核心，匯集一百五十篇讚美、哀求、感恩、智慧與登基之詩，傳統歸大衛，實為約前十至三世紀眾多詩人陸續寫成於巴勒斯坦，希伯來文，並含七十士所傳第一五一篇等補編。全卷為以色列敬拜的詩歌總集，涵蓋個人與群體的信仰經驗，是猶太會堂與基督教禮儀最常誦詠的經卷，其彌賽亞詩篇更深刻塑造新約對基督的詮釋。', title_orig: 'Psalms', author: '大衛及眾詩人', era: '約前 10–3 世紀', place: '巴勒斯坦', language: '希伯來文', note: '內含第 151–155 篇補編', link: '/scripture' },
               { title_zh: '所羅門詩篇', intro: '託名所羅門的詩集，含十八首希臘文傳世的詩歌，原文希伯來文，約前一世紀成於巴勒斯坦，多反映法利賽群體的觀點。其哀嘆龐培攻陷耶路撒冷、譴責哈斯摩尼當權者，並熱切期盼一位掃除外邦、潔淨耶路撒冷的大衛子孫彌賽亞君王。卻是研究第二聖殿末期彌賽亞期盼、法利賽虔敬與政治神學的關鍵文獻，對理解新約時代的救主觀至為重要。', tier: 'patristic', title_orig: 'Psalms of Solomon', author: '佚名（託名所羅門）', era: '約前 1 世紀', place: '巴勒斯坦', language: '希伯來文（希臘文存世）', note: '法利賽獨立詩集', link: '/apocrypha' },
@@ -90,7 +90,7 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'minor-prophets', label: '十二先知書', label_en: 'Twelve Prophets', desc: '東正教傳統，排於大先知之前（12 卷）。',
+            key: 'minor-prophets', label: '十二先知書部', label_en: 'Twelve Prophets', desc: '東正教傳統，排於大先知之前（12 卷）。',
             works: [
               { title_zh: '何西阿書', intro: '十二先知書之首，以先知何西阿娶不貞之妻歌篾為象徵，控訴北國以色列背棄盟約、隨從巴力，並宣告審判與神不離不棄的愛，希伯來文寫成，約前八世紀成於北國巴勒斯坦。全卷以婚姻意象描繪神與選民的盟約之愛與背叛之痛，情感深摯。其「我喜愛憐恤，不喜愛祭祀」為耶穌所引，是理解先知盟約神學、神的慈愛與審判並存的重要文本。', title_orig: 'Hosea', author: '何西阿', era: '約前 8 世紀', place: '巴勒斯坦（北國）', language: '希伯來文', link: '/scripture' },
               { title_zh: '阿摩司書', intro: '十二先知書之一，牧人出身的先知阿摩司於北國繁榮之際宣告審判，嚴詞譴責社會不公、欺壓窮人與虛偽敬拜，疾呼公平如大水滾滾、公義如江河滔滔，希伯來文寫成，約前八世紀成於巴勒斯坦。全卷凸顯神對列國與選民的公義要求，揭示宗教若無社會公義即屬虛妄。它是社會正義先知傳統的奠基之作，對後世倫理神學與正義呼聲影響深遠。', title_orig: 'Amos', author: '阿摩司', era: '約前 8 世紀', place: '巴勒斯坦', language: '希伯來文', link: '/scripture' },
@@ -107,7 +107,7 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'major-prophets', label: '大先知書', label_en: 'Major Prophets', desc: '古典先知的宣告、悔改與哀歌（4 卷）。',
+            key: 'major-prophets', label: '大先知書部', label_en: 'Major Prophets', desc: '古典先知的宣告、悔改與哀歌（4 卷）。',
             works: [
               { title_zh: '以賽亞書', intro: '大先知書之首，內容跨越審判、安慰與復興，含著名的以馬內利、受苦僕人與新天新地等預言，傳統歸先知以賽亞，學界多視為以賽亞及其門徒學派之作，希伯來文寫成，約前八至六世紀成於耶路撒冷。全卷神學宏富，由亞述危機延展至被擄歸回的盼望。其受苦僕人之歌深刻塑造新約對基督救贖的詮釋，被譽為「舊約中的福音書」，在彌賽亞神學中地位無可取代。', title_orig: 'Isaiah', author: '以賽亞及門徒學派', era: '約前 8–6 世紀', place: '巴勒斯坦（耶路撒冷）', language: '希伯來文', link: '/scripture' },
               { title_zh: '耶利米書', intro: '大先知書，記述先知耶利米在猶大亡國前後的悲苦事奉，宣告審判、呼籲悔改，並預言神將立「新約」於人心，由書記巴錄筆錄，希伯來文寫成，約前六世紀成於巴勒斯坦。全卷情感沉痛，先知為民族與己身的命運哀慟，被稱為「流淚的先知」。其「新約」預言為新約聖經神學的核心根據，深刻影響基督教對盟約更新與內在信仰的理解，是被擄前後最重要的先知見證。', title_orig: 'Jeremiah', author: '耶利米（書記巴錄）', era: '約前 6 世紀', place: '巴勒斯坦', language: '希伯來文', link: '/scripture' },
@@ -116,7 +116,7 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'apocalyptic-prophets', label: '天啟先知書', label_en: 'Apocalyptic Prophets', desc: '異象、天使啟示與末世神義論（4 卷）。',
+            key: 'apocalyptic-prophets', label: '天啟先知書部', label_en: 'Apocalyptic Prophets', desc: '異象、天使啟示與末世神義論（4 卷）。',
             works: [
               { title_zh: '以諾書', intro: '託名先祖以諾的天啟巨著，含守望者墮落、天文異象、夢中預言與比喻等多部分，前三至一世紀以亞蘭文成於巴勒斯坦，被譽為天啟文學傳統之父。其詳述墮落天使、巨人、末日審判與「人子」彌賽亞形象，深刻影響第二聖殿時期猶太思想，《猶大書》更直接引用。雖未入主流正典，卻為衣索匹亞教會列入正典，是研究天啟思想、天使論與新約背景不可或缺的關鍵文獻。', tier: 'eastern', title_orig: '1 Enoch', author: '託名以諾', era: '前 3–1 世紀', place: '巴勒斯坦', language: '亞蘭文', note: '天啟文學傳統之父；衣索匹亞正典', link: '/apocrypha' },
               { title_zh: '以西結書', intro: '大先知書，記述被擄於巴比倫的祭司先知以西結所見的戰車異象、聖殿被棄、枯骨復生及末後新聖殿的藍圖，希伯來文寫成，約前六世紀成於巴比倫。全卷象徵奇詭、神學宏大，宣告審判中神的榮耀離開又歸回，強調個人責任與心靈更新。其戰車異象與新聖殿異象對猶太神祕主義及基督教末世論影響深遠，是被擄時期最具想像力與盼望的先知見證。', title_orig: 'Ezekiel', author: '以西結', era: '約前 6 世紀', place: '巴比倫', language: '希伯來文', note: '被擄初期的戰車與聖殿異象', link: '/scripture' },
@@ -125,7 +125,7 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'gospels', label: '福音書', label_en: 'Gospels', desc: '基督的降世與歷史生平（4 卷）。',
+            key: 'gospels', label: '福音書部', label_en: 'Gospels', desc: '基督的降世與歷史生平（4 卷）。',
             works: [
               { title_zh: '馬太福音', intro: '新約四福音之首，以猶太基督徒視角呈現耶穌為應驗舊約預言的彌賽亞與新摩西，含登山寶訓等五大講論，傳統歸使徒馬太，希臘文寫成，約公元八〇至九〇年成於敘利亞安提阿。全卷強調耶穌成全律法、建立教會與大使命，結構嚴整、教導豐富。它銜接舊約與新約，是早期教會教理與禮儀最常引用的福音書，在正典編排上居首，對基督論與門徒倫理影響深遠。', title_orig: 'Matthew', author: '馬太', era: '約 80–90', place: '敘利亞（安提阿）', language: '希臘文', link: '/scripture' },
               { title_zh: '馬可福音', intro: '四福音中篇幅最短、成書最早者，以簡練生動的筆法刻畫耶穌為受苦與行動的神子，凸顯其大能事工與十字架之路，傳統歸馬可（彼得的傳譯），希臘文寫成，約公元六五至七〇年成於羅馬。全卷節奏急促、富臨場感，「彌賽亞的隱密」主題貫穿始終。它被視為馬太、路加福音的主要素材來源，在符類福音研究中居核心地位，是理解最早期耶穌敘事傳統的關鍵文本。', title_orig: 'Mark', author: '馬可', era: '約 65–70', place: '羅馬', language: '希臘文', link: '/scripture' },
@@ -134,13 +134,13 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'acts', label: '行傳', label_en: 'Acts', desc: '基督升天後的教會奠基行動（1 卷；十二使徒遺訓與使徒教訓已移入律藏）。',
+            key: 'acts', label: '行傳部', label_en: 'Acts', desc: '基督升天後的教會奠基行動（1 卷；十二使徒遺訓與使徒教訓已移入律藏）。',
             works: [
               { title_zh: '使徒行傳', intro: '新約唯一的教會歷史書，記述基督升天後聖靈降臨、教會誕生，及彼得、保羅等使徒由耶路撒冷向外邦傳揚福音直至羅馬的歷程，傳統歸路加，希臘文寫成，約公元八〇至九〇年成於小亞細亞或希臘。全卷以聖靈引導、福音突破族界為主線，是路加福音的續篇。它見證初代教會的奠基、宣教擴展與神學爭議，是研究早期基督教歷史、宣教神學與保羅生平不可或缺的核心文獻。', title_orig: 'Acts', author: '路加', era: '約 80–90', place: '小亞細亞／希臘', language: '希臘文', link: '/scripture' },
             ],
           },
           {
-            key: 'catholic-1', label: '第一大公書信', label_en: 'First Catholic Epistles', desc: '初代核心使徒的普世教導，東正教傳統置於保羅之前（7 卷）。',
+            key: 'catholic-1', label: '第一大公書信部', label_en: 'First Catholic Epistles', desc: '初代核心使徒的普世教導，東正教傳統置於保羅之前（7 卷）。',
             works: [
               { title_zh: '雅各書', intro: '第一大公書信之首，以智慧文學風格強調信心須有行為印證，論及試煉、言語、貧富與禱告等實踐倫理，傳統歸主的兄弟雅各，希臘文寫成，約公元五〇至六〇年成於耶路撒冷。全卷語調剛直、富道德訓誨，「信心若沒有行為就是死的」一語在宗教改革時期引發稱義之辯。它承續猶太智慧傳統，是新約倫理教導的重要代表，凸顯信仰與生活的合一。', title_orig: 'James', author: '主的兄弟雅各', era: '約 50–60', place: '巴勒斯坦（耶路撒冷）', language: '希臘文', link: '/scripture' },
               { title_zh: '彼得前書', intro: '第一大公書信之一，寫給散居小亞細亞、面臨逼迫的信徒，勉勵他們在苦難中持守盼望、聖潔行事並順服受苦如基督，傳統歸使徒彼得，希臘文寫成，約公元六〇至六四年成於羅馬（書中稱「巴比倫」）。全卷以受苦與盼望為主題，富洗禮與重生意象。它為患難中的教會提供堅實的安慰與倫理指引，是早期基督教受苦神學與信徒身分認同的重要文獻。', title_orig: '1 Peter', author: '彼得', era: '約 60–64', place: '羅馬', language: '希臘文', link: '/scripture' },
@@ -152,7 +152,7 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'pauline', label: '保羅書信', label_en: 'Pauline Epistles', desc: '外邦人使徒向各地教會的系統神學與糾正（10 卷）。',
+            key: 'pauline', label: '保羅書信部', label_en: 'Pauline Epistles', desc: '外邦人使徒向各地教會的系統神學與糾正（10 卷）。',
             works: [
               { title_zh: '羅馬書', intro: '保羅書信中神學最系統者，闡述因信稱義、罪與恩典、律法與聖靈、以色列的命運及基督徒倫理，由保羅在哥林多寫成，希臘文，約公元五七年。全卷邏輯嚴密、論證宏大，奠定基督教救恩論的根基。「義人必因信得生」與「因信稱義」的教義深刻影響奧古斯丁、馬丁路德及整個西方神學。它是保羅思想的巔峰之作，被視為基督教教義最重要的單卷文獻。', title_orig: 'Romans', author: '保羅', era: '約 57', place: '哥林多', language: '希臘文', link: '/scripture' },
               { title_zh: '哥林多前書', intro: '保羅書信之一，針對哥林多教會的分黨、淫亂、訴訟、婚姻、偶像之物、聚會秩序、屬靈恩賜及復活等實際問題逐一教導，由保羅在以弗所寫成，希臘文，約公元五三至五五年。全卷實務性強，含著名的愛之頌（十三章）與復活論述（十五章）。它生動反映初代城市教會的處境與張力，是研究早期教會生活、聖餐、恩賜與復活神學最豐富的一手文獻。', title_orig: '1 Corinthians', author: '保羅', era: '約 53–55', place: '以弗所', language: '希臘文', link: '/scripture' },
@@ -167,7 +167,7 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'pastoral', label: '教牧書信', label_en: 'Pastoral Epistles', desc: '對教會領袖的個人指導與信仰傳承（4 卷）。',
+            key: 'pastoral', label: '教牧書信部', label_en: 'Pastoral Epistles', desc: '對教會領袖的個人指導與信仰傳承（4 卷）。',
             works: [
               { title_zh: '提摩太前書', intro: '教牧書信之一，保羅指導年輕同工提摩太治理以弗所教會，論及監督執事的資格、抵禦異端、敬虔操練及對各群體的教導，希臘文寫成，約公元六二至六四年成於馬其頓。全卷關注教會組織、秩序與健全教義，是教牧管理的重要指南。它與提摩太後書、提多書合稱教牧書信，在教會職分、按立傳統與正統教導的形成上影響深遠，雖作者問題學界有議，仍為歷代教會所重。', title_orig: '1 Timothy', author: '保羅', era: '約 62–64', place: '馬其頓', language: '希臘文', link: '/scripture' },
               { title_zh: '提摩太後書', intro: '教牧書信之一，被視為保羅的臨終遺言，於羅馬獄中寫給提摩太，勉其為福音受苦、持守真道、傳道不倦，並預言末世的危險，希臘文，約公元六四至六七年。全卷情詞懇切、語帶離別，「那美好的仗我已經打過了」道盡使徒的忠勇與盼望。它強調聖經默示與傳承的重要，是保羅信仰與事奉的動人告別，對歷代傳道者的志節與聖經觀影響深遠。', title_orig: '2 Timothy', author: '保羅', era: '約 64–67', place: '羅馬（獄中）', language: '希臘文', link: '/scripture' },
@@ -176,7 +176,7 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'catholic-2', label: '第二大公書信', label_en: 'Second Catholic Epistles', desc: '希伯來書與廣泛流傳的亞使徒時代次經書信（4 卷）。',
+            key: 'catholic-2', label: '第二大公書信部', label_en: 'Second Catholic Epistles', desc: '希伯來書與廣泛流傳的亞使徒時代次經書信（4 卷）。',
             works: [
               { title_zh: '希伯來書', intro: '第二大公書信之首，以精緻希臘文論證基督超越天使、摩西與舊約祭司制度，闡發其為照麥基洗德等次的永遠大祭司、一次獻己成全救贖，作者佚名而傳統歸保羅圈子，約公元六〇至九〇年成於羅馬或義大利。全卷融合勸勉與神學，以「信」貫穿並列舉信心偉人。它是新約論基督祭司職與新約優越最系統的著作，對救贖論與基督論貢獻卓著，被譽為大祭司神學的總結。', title_orig: 'Hebrews', author: '佚名（傳統歸保羅圈）', era: '約 60–90', place: '羅馬／義大利', language: '希臘文', note: '大祭司神學的總結', link: '/scripture' },
               { title_zh: '巴拿巴書', intro: '託名使徒巴拿巴的書信，以強烈的寓意解經詮釋舊約禮儀與預言，主張其皆預表基督，並含「兩條道路」的倫理教導，希臘文寫成，約公元一〇〇至一三〇年成於亞歷山卓。全卷反映早期基督教與猶太教的分立及亞歷山卓的解經傳統，因收於西乃抄本而地位顯著，部分教父視之為近正典。它雖終未入正典，卻是研究二世紀基督教護教、寓意解經與正典形成的重要使徒教父文獻。', tier: 'patristic', title_orig: 'Epistle of Barnabas', author: '託名巴拿巴', era: '約 100–130', place: '埃及（亞歷山卓）', language: '希臘文', note: '寓意解經；西乃抄本收錄', link: '/apocrypha' },
@@ -185,7 +185,7 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'apocalypse', label: '啟示錄', label_en: 'Apocalypse', desc: '末世異象與宇宙奧祕揭示（3 卷）。',
+            key: 'apocalypse', label: '啟示錄部', label_en: 'Apocalypse', desc: '末世異象與宇宙奧祕揭示（3 卷）。',
             works: [
               { title_zh: '約翰啟示錄', intro: '新約唯一的天啟書，使徒約翰在拔摩島受異象，藉七印、七號、七碗及新天新地的景象，宣告基督終必得勝、惡者受審、神國降臨，傳統歸使徒約翰，希臘文寫成，約公元九五年成於小亞細亞。全卷象徵繁複、意象壯麗，為受逼迫的教會帶來終末的盼望與勸勉。它總結整部聖經的救恩史，奠定基督教末世論的核心，雖正典地位在東方曾有爭議，卻影響歷代信仰與藝術至深。', title_orig: 'Revelation to John', author: '約翰', era: '約 95', place: '小亞細亞（拔摩島）', language: '希臘文', link: '/scripture' },
               { title_zh: '彼得啟示錄', intro: '託名使徒彼得的天啟作品，以生動筆觸描繪天堂的福樂與地獄對各類罪人的刑罰，是現存最早詳述死後賞罰的基督教文獻，希臘文寫成，約二世紀初成於埃及。全卷因穆拉多利殘篇的收錄而一度近於正典，在早期教會頗受重視。其陰間刑罰的描寫對後世末世想像與《保羅啟示錄》乃至但丁傳統影響深遠，是研究早期基督教來世觀與正典邊界的重要文本。', tier: 'patristic', title_orig: 'Apocalypse of Peter', author: '託名彼得', era: '約 2 世紀初', place: '埃及', language: '希臘文', note: '天堂與地獄異象；穆拉多利殘篇收錄', link: '/apocrypha' },
@@ -198,13 +198,13 @@ export const ANCIENT_ERA: DazangEra = {
         summary: '與正藏 92 卷分類對照的「影子聖經」：未進正藏的偽典、諾斯底經卷、重述聖經與啟示文獻。各部按文獻所述時代排序（舊約按託名先祖／先知時代、新約按使徒順序：基督→雅各、主弟猶大→十二使徒→巴拿巴→保羅→福傳者腓力等非使徒）；正藏所無者另設「史傳」「遺訓」「使徒密訓與神祕主義」三部（律法殘卷已歸律藏、亞希夸書已歸前藏）。',
         divisions: [
           {
-            key: 'law', label: '律法書', label_en: 'Law', desc: '託名摩西傳統的律法擴充與重寫。',
+            key: 'law', label: '律法書部', label_en: 'Law', desc: '託名摩西傳統的律法擴充與重寫。',
             works: [
               { title_zh: '創世記外傳', source: 'gnostic', intro: '死海古卷昆蘭社群所傳的亞蘭文重寫聖經，年代約前 1 世紀，出土於巴勒斯坦昆蘭第一洞。以第一人稱擴寫《創世記》自挪亞至亞伯拉罕的敘事，補入拉麥之妻疑子是否墮落天使所生、撒萊美貌等情節，文體介於聖經注解與敘事傳奇之間。作者佚名，應屬艾瑟尼社群。此書並非託名某一先祖之作，而是對正典創世敘事的潤飾擴充，現存抄本殘缺。', title_orig: 'Genesis Apocryphon', author: '佚名（死海社群）', era: '前 1 世紀', place: '巴勒斯坦（昆蘭）', language: '亞蘭文', note: '亞蘭文重寫創世記', link: '/apocrypha' },
             ],
           },
           {
-            key: 'history', label: '歷史書', label_en: 'Histories', desc: '假借歷史之名對古以色列的另類重寫與別傳（史事稱「記」）。',
+            key: 'history', label: '歷史書部', label_en: 'Histories', desc: '假借歷史之名對古以色列的另類重寫與別傳（史事稱「記」）。',
             works: [
               { title_zh: '約瑟與亞西納記', source: 'second-temple', intro: '成書約前 1 至 1 世紀的希臘文傳奇小說，出自埃及流散猶太社群，作者佚名。內容補述《創世記》中約瑟所娶埃及祭司之女亞西納（亞西納斯）的故事：描寫這位拜偶像的貴族少女如何悔改、棄絕假神、領受天使賜予的「生命之蜜」而改宗，終得嫁與約瑟。全書洋溢改宗與神祕入教的象徵語言。', title_orig: 'Joseph and Aseneth', author: '佚名', era: '約前 1–1 世紀', place: '埃及', language: '希臘文', note: '埃及祭司之女改宗嫁約瑟的故事' },
               { title_zh: '雅尼和佯庇記', source: 'second-temple', intro: '約 1 至 3 世紀流傳於埃及的希臘文殘篇傳奇，作者佚名。主角雅尼與佯庇（楊尼與楊布雷）相傳是《出埃及記》中與摩西、亞倫鬥法的兩位埃及術士，其名雖不見於正典，卻見於《提摩太後書》及拉比文獻。本書鋪陳二人施法對抗摩西、終遭天譴慘死悔恨的下場，含召魂與陰間情節。它屬於擴充正典人物的「填補空白」型偽典，現僅存希臘文與拉丁文殘片。', title_orig: 'Jannes and Jambres', author: '佚名', era: '約 1–3 世紀', place: '埃及', language: '希臘文', note: '與摩西鬥法的兩位埃及術士下場' },
@@ -215,7 +215,7 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'legend', label: '史傳', label_en: 'Legends', desc: '正藏所無——託名古人的傳奇文學（個人故事稱「傳」），按人物時代排序。',
+            key: 'legend', label: '史傳部', label_en: 'Legends', desc: '正藏所無——託名古人的傳奇文學（個人故事稱「傳」），按人物時代排序。',
             works: [
               { title_zh: '始祖傳', source: 'second-temple', intro: '託名亞當傳統的偽典，希臘文本稱《摩西啟示錄》，另有拉丁文《亞當夏娃傳》等多種譯本，作者佚名，成書約 1 至 4 世紀，源出巴勒斯坦猶太環境而後經基督徒增訂。內容敷演亞當夏娃被逐出伊甸後的懊悔苦修、患病臨終、夏娃追述墮落經過及亞當見天上異象等情節。它實為填補《創世記》始祖故事空白的虔敬傳奇。', title_orig: 'Life of Adam and Eve', author: '佚名（託名亞當傳統）', era: '亞當', place: '巴勒斯坦', language: '希臘文', note: '被逐出伊甸園後的懊悔生活', link: '/apocrypha' },
               { title_zh: '巨人傳', source: 'qumran', intro: '死海古卷昆蘭社群所傳的亞蘭文偽典，年代屬第二聖殿晚期，出土於巴勒斯坦昆蘭。內容承《以諾書》守望者神話，鋪陳洪水前墮落天使與人間女子所生的巨人族——其首領的夢境、求問以諾解夢及終遭剿滅的故事。作者佚名，屬艾瑟尼社群的以諾傳統文獻群。現僅存殘篇。此書後為摩尼教吸收改編成《巨人書》，流傳至中亞，故在猶太天啟文學與摩尼教研究兩端皆具樞紐地位，見證了墮落天使神話跨宗教傳播的軌跡。', title_orig: 'Book of Giants', author: '佚名（死海社群）', era: '洪水前', place: '巴勒斯坦（昆蘭）', language: '亞蘭文', note: '死海古卷中墮落天使與巨人神話', link: '/apocrypha' },
@@ -225,7 +225,7 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'testament', label: '遺訓', label_en: 'Testaments', desc: '正藏所無——託名先祖的臨終遺言，按先祖時代排序。',
+            key: 'testament', label: '遺訓部', label_en: 'Testaments', desc: '正藏所無——託名先祖的臨終遺言，按先祖時代排序。',
             works: [
               { title_zh: '亞當遺訓', source: 'second-temple', intro: '託名始祖亞當的敘利亞文偽典，源出敘利亞基督教環境，成書約 2 至 5 世紀，作者佚名。全書藉亞當臨終向其子塞特口授為框架，內容含每日各時辰受造物讚美造物主的「時辰禱」、對洪水與末世的預言，以及天使等級論。後世抄本更附入基督降生救贖的預告。它實為揉合猶太始祖傳統與基督教救恩史的遺訓文學。此書對研究敘利亞教會的禱告傳統、宇宙論及亞當救贖論的早期形態頗具價值，是東方基督教偽典的代表之一。', title_orig: 'Testament of Adam', author: '託名亞當', era: '亞當', place: '敘利亞', language: '敘利亞文' },
               { title_zh: '亞伯拉罕遺訓', source: 'second-temple', intro: '託名族長亞伯拉罕的希臘文偽典，約 1 至 2 世紀成書於埃及流散猶太社群，作者佚名。內容別出心裁：年邁的亞伯拉罕不願交出靈魂，天使長米迦勒奉命前來，帶他乘雲遊歷天界、目睹靈魂受審的場景，最終死亡天使設法收取其魂。全書幽默而富同情，著重神的慈悲與普世審判。亦非真正遺言訓誡，而近於天界遊記。', title_orig: 'Testament of Abraham', author: '託名亞伯拉罕', era: '亞伯拉罕', place: '埃及', language: '希臘文', link: '/apocrypha' },
@@ -238,7 +238,7 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'wisdom', label: '詩歌智慧書', label_en: 'Poetry & Wisdom', desc: '未入正典的會堂非官方智慧與個人頌讚。',
+            key: 'wisdom', label: '詩歌智慧書部', label_en: 'Poetry & Wisdom', desc: '未入正典的會堂非官方智慧與個人頌讚。',
             works: [
               { title_zh: '雅各禱辭', source: 'second-temple', intro: '託名族長雅各的希臘文短篇禱文，出自埃及流散猶太或猶太基督教環境，成書約 1 至 4 世紀，作者佚名，今僅存於魔法莎草紙抄本殘片中。內容是一段呼求至高神、援用天使與奧祕聖名、祈求賜下智慧與屬天提升的祈禱。篇幅短小，帶有濃厚的神祕主義與魔法護符色彩。', title_orig: 'Prayer of Jacob', author: '佚名（託名雅各）', era: '雅各', place: '埃及', language: '希臘文' },
               { title_zh: '約瑟禱辭', source: 'second-temple', intro: '託名族長約瑟的希臘文短篇作品，源出巴勒斯坦猶太環境，成書約 1 世紀前後，作者佚名，原文久佚，今僅賴教父俄利根《約翰福音注釋》等轉引保存數則殘句。其驚人之處在於約瑟自稱本是名為「以色列」的先在天使、神的長子，因降生為人而遭天使烏列爭位。此書反映了第二聖殿晚期猶太人對天使、先在存有及人神中介者的玄思，與後世基督論及諾斯底神話的某些觀念遙相呼應，是研究早期猶太天使學與神性中介觀的珍稀片段。', title_orig: 'Prayer of Joseph', author: '佚名（託名約瑟）', era: '約瑟', place: '巴勒斯坦', language: '希臘文' },
@@ -249,7 +249,7 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'major-prophets', label: '大先知書', label_en: 'Major Prophets',
+            key: 'major-prophets', label: '大先知書部', label_en: 'Major Prophets',
             works: [
               { title_zh: '耶利米餘事（巴錄四書）', source: 'second-temple', intro: '託名先知耶利米及其書記巴錄的希臘文偽典，又名《耶利米餘事》，約 1 至 2 世紀成書於巴勒斯坦，源出猶太環境而帶明顯基督徒增修結尾，作者佚名。內容續寫耶路撒冷陷落後的故事：巴錄留守、耶利米隨民被擄、義人亞比米勒沉睡六十六年方醒等情節，末以耶利米預言基督而遭石擊殉道作結。此書是研究第二聖殿被毀創傷記憶、猶太—基督教文本過渡及「長眠—復醒」母題的重要材料，與《巴錄二書》關係密切。', title_orig: '4 Baruch / Paraleipomena Jeremiou', author: '託名耶利米／巴錄', era: '耶利米（前 6 世紀）', place: '巴勒斯坦', language: '希臘文', link: '/apocrypha' },
               { title_zh: '巴錄三書（希臘巴錄啟示錄）', source: 'second-temple', intro: '託名先知耶利米書記巴錄的希臘文天啟偽典，約 1 至 2 世紀成書於埃及亞歷山卓的猶太環境而後經基督徒增修，作者佚名，希臘文與斯拉夫文存世。內容敘巴錄為耶路撒冷被毀而悲嘆，蒙天使引領遊歷五重天，目睹建巴別塔者的刑罰、太陽鳳凰、人類善惡如何呈於神前等異象。此書屬「天界遊歷」型天啟文學，其五層天宇宙論與《以諾二書》等可互參，對研究第二聖殿晚期猶太宇宙觀、天使中保及末世賞罰觀念頗具價值。', title_orig: '3 Baruch', author: '託名巴錄', era: '巴錄（前 6 世紀）', place: '埃及（亞歷山卓）', language: '希臘文', link: '/apocrypha' },
@@ -258,7 +258,7 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'apocalyptic-prophets', label: '天啟先知書', label_en: 'Apocalyptic Prophets', desc: '舊約天啟偽典——按託名先知的時代排序。',
+            key: 'apocalyptic-prophets', label: '天啟先知書部', label_en: 'Apocalyptic Prophets', desc: '舊約天啟偽典——按託名先知的時代排序。',
             works: [
               { title_zh: '亞當啟示錄', source: 'gnostic', intro: '出自埃及、以科普特文存世的塞特派諾斯底天啟文獻，屬拿戈瑪第文庫第五冊，成書約 1 至 3 世紀，作者佚名。內容託言亞當臨終向其子塞特啟示：人類本擁有超越造物主的屬天知識，後遭創造此世的下級神祇以洪水與火加害，唯有塞特族裔藉「光照者」的降臨得救。呈現典型的塞特派救贖史觀。此書幾乎不見明顯基督教成分，被視為可能反映前基督教或非基督教諾斯底思想的關鍵文本，對研究諾斯底起源與救主觀念極具價值。', title_orig: 'Apocalypse of Adam', author: '佚名（塞特派）', era: '亞當', place: '埃及', language: '科普特文', note: '拿戈瑪第塞特派天啟', link: '/gnostic' },
               { title_zh: '以諾二書', source: 'second-temple', intro: '託名先祖以諾的天啟偽典，又稱《斯拉夫以諾書》，原以希臘文寫成、約 1 世紀成書於埃及亞歷山卓的猶太環境，今主要賴古斯拉夫文譯本存世，作者佚名。內容敘以諾被提升遊歷七層（或十層）天、面見神、受託書寫眾多書卷、返地教誨子孫後再度升天，並述及神祕的祭司麥基洗德奇異降生。', title_orig: '2 Enoch (Slavonic Enoch)', author: '託名以諾', era: '以諾', place: '埃及（亞歷山卓）', language: '希臘文（斯拉夫文存世）', note: '詳述七層天構造', link: '/apocrypha' },
@@ -274,7 +274,7 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'gospels', label: '福音書', label_en: 'Gospels', desc: '按所述時代——童年福音在前，續以言行、受難、復活後對話。',
+            key: 'gospels', label: '福音書部', label_en: 'Gospels', desc: '按所述時代——童年福音在前，續以言行、受難、復活後對話。',
             works: [
               { title_zh: '雅各童年福音（雅各原始福音）', source: 'second-temple', intro: '託名主的兄弟雅各的希臘文童年福音，又稱《雅各原始福音》，約 2 世紀成書於埃及或敘利亞，作者佚名。內容講述馬利亞的奇異身世——她由不孕的安娜所生、自幼獻於聖殿、許配年長的約瑟——直至耶穌誕生及產後仍存童貞的神蹟，旨在高舉馬利亞的純潔。此書卻是後世聖母敬禮的源頭，馬利亞父母名安娜與約阿敬、馬廄誕生等廣傳傳統皆出於此，對研究聖母論的發展、東西方聖母節期及基督教藝術影響極為深遠。', title_orig: 'Infancy Gospel / Protoevangelium of James', author: '託名雅各', era: '聖誕前後', place: '埃及／敘利亞', language: '希臘文', note: '瑪利亞身世與耶穌誕生', link: '/apocrypha' },
               { title_zh: '多馬童年福音', source: 'orthodox-apocrypha', intro: '託名使徒多馬的希臘文童年福音，約 2 世紀成書於敘利亞，作者佚名。內容填補正典對耶穌五歲至十二歲生平的空白，描寫少年耶穌施展種種神力：以泥捏麻雀使之飛、咒死冒犯他的孩童、又使之復活、令枯木結果等，呈現一個力量驚人卻尚未馴和的神童形象。此書是研究早期基督教對耶穌人性與神性張力之想像、童年敘事傳統及民間虔敬的重要材料，流傳極廣，譯本眾多，對中世紀耶穌生平文學與藝術皆有影響。', title_orig: 'Infancy Gospel of Thomas', author: '託名多馬', era: '童年', place: '敘利亞', language: '希臘文', note: '少年耶穌展示神力的故事', link: '/apocrypha' },
@@ -297,7 +297,7 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'acts', label: '行傳', label_en: 'Acts', desc: '揉合希臘冒險小說與禁慾主義的使徒傳奇，按使徒順序排列。',
+            key: 'acts', label: '行傳部', label_en: 'Acts', desc: '揉合希臘冒險小說與禁慾主義的使徒傳奇，按使徒順序排列。',
             works: [
               { title_zh: '彼得與十二使徒行傳', source: 'gnostic', intro: '拿戈瑪第文庫所出的諾斯底行傳，以科普特文存世，成書約 2 至 3 世紀於埃及，作者佚名。內容以寓言敘事為框架：彼得與眾使徒航行至一座城，遇見一位賣珍珠的商人，後者顯明即化身的基督利塔格涅斯，賜予他們醫治貧病者的使命。全篇以珍珠、行醫等象徵闡發屬靈救贖之理。此書融合使徒行傳文類與諾斯底寓言，對研究早期基督教行傳傳統的諾斯底化、象徵敘事手法及救主顯現觀念具參考價值。', title_orig: 'Acts of Peter and the Twelve', author: '佚名（諾斯底）', era: '彼得與十二使徒', place: '埃及', language: '科普特文', link: '/gnostic' },
               { title_zh: '彼得行傳', source: 'orthodox-apocrypha', intro: '託名傳統下的希臘文使徒行傳，約 2 世紀末成書於小亞細亞或羅馬，作者佚名，今存拉丁文《維切利抄本》等殘本。內容敘使徒彼得赴羅馬，與行邪術的西門當眾鬥法、令其墜地而敗，並述彼得勸化信徒守貞、終遭尼祿迫害，自願倒釘十字架殉道。此書是「殉道使徒行傳」的代表，著名的「主啊，你往何處去」（Quo Vadis）傳統即出於此，對研究早期基督教殉道觀、禁慾理想、彼得在羅馬的傳統及反魔法主題影響深遠。', title_orig: 'Acts of Peter', author: '佚名', era: '彼得', place: '小亞細亞／羅馬', language: '希臘文', note: '與行邪術的西門鬥法、倒釘十字架', link: '/apocrypha' },
@@ -316,7 +316,7 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'catholic-1', label: '第一大公書信', label_en: 'First Catholic Epistles', desc: '按使徒順序：基督→雅各、主弟猶大→十二使徒。',
+            key: 'catholic-1', label: '第一大公書信部', label_en: 'First Catholic Epistles', desc: '按使徒順序：基督→雅各、主弟猶大→十二使徒。',
             works: [
               { title_zh: '基督致阿布加爾王書', source: 'orthodox-apocrypha', intro: '託名基督親筆的敘利亞文短簡，源出敘利亞埃德薩傳統，成書約 3 至 4 世紀，作者佚名，賴教父優西比烏《教會史》引述而廣傳。內容為埃德薩王阿布加爾因病致書耶穌求醫並請其避難，耶穌回信婉拒親往，但應許差遣門徒前去醫治、賜福該城。此書是埃德薩使徒傳承傳說的核心，後世更衍生出「不假人手所成」的基督聖像（曼迪里翁）傳統，被視為護城聖物，對研究東方基督教起源神話、聖像崇拜及書信類偽典影響深遠。', title_orig: 'Letter of Christ to Abgar', author: '託名基督', era: '基督', place: '敘利亞（埃德薩）', language: '敘利亞文', note: '耶穌親筆回信給埃德薩國王' },
               { title_zh: '使徒書信（宗徒總函）', source: 'orthodox-apocrypha', intro: '託名全體使徒的書信體啟示文獻，原以希臘文寫成，今賴科普特文與吉茲文譯本存世，成書約 2 世紀中葉於埃及或小亞細亞，作者佚名。其外形雖為使徒致普世教會的書信，內容實為復活的基督與十一使徒之間的長篇問答對話，闡述道成肉身、復活、末世與救恩，並刻意駁斥諾斯底幻影說。', title_orig: 'Epistula Apostolorum', author: '託名眾使徒', era: '十一使徒（集體）', place: '埃及／小亞細亞', language: '希臘文（科普特文與吉茲文存世）', note: '披著書信外衣的復活基督啟示對話' },
@@ -324,7 +324,7 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'pauline', label: '保羅書信', label_en: 'Pauline Epistles',
+            key: 'pauline', label: '保羅書信部', label_en: 'Pauline Epistles',
             works: [
               { title_zh: '致老底嘉人書', source: 'orthodox-apocrypha', intro: '託名使徒保羅致老底嘉教會的拉丁文短簡，流傳於西方拉丁地區，成書約 2 至 4 世紀，作者佚名。其撰作緣於《歌羅西書》四章提及一封致老底嘉的信，後人遂偽造補足。全篇內容貧乏，多由《腓立比書》等保羅真書信的詞句拼湊而成，並無新意。此書雖屬拙劣的偽託之作，卻在中世紀西方廣為流傳、一度被收入若干拉丁文聖經抄本，是研究偽託書信的生成機制、正典邊界的模糊性及中世紀聖經傳抄史的典型案例。', title_orig: 'Epistle to the Laodiceans', author: '託名保羅', era: '保羅', place: '西方（拉丁地區）', language: '拉丁文', link: '/apocrypha' },
               { title_zh: '保羅致塞內加書', source: 'orthodox-apocrypha', intro: '託名使徒保羅與羅馬斯多葛哲人塞內加往來的拉丁文書信集，共十四封，成書約 4 世紀，作者佚名。內容虛構二人惺惺相惜、互通音問，塞內加盛讚保羅的書信，甚至暗示向尼祿引介基督信仰。亦無史實根據。此書旨在為基督教攀附當時備受推崇的塞內加，藉以提升信仰的文化聲望，調和保羅與斯多葛哲學。教父耶柔米曾據此將塞內加列入聖徒名錄。此書是研究早期基督教與希羅哲學關係、護教攀附策略及偽託書信現象的有趣文獻。', title_orig: 'Correspondence of Paul and Seneca', author: '佚名（託名保羅與塞內加）', era: '保羅', place: '羅馬', language: '拉丁文', note: '試圖連結保羅與斯多葛哲學' },
@@ -332,13 +332,13 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'pastoral', label: '教牧書信', label_en: 'Pastoral Epistles',
+            key: 'pastoral', label: '教牧書信部', label_en: 'Pastoral Epistles',
             works: [
               { title_zh: '託名提多書', source: 'orthodox-apocrypha', intro: '託名使徒保羅同工提多的拉丁文書信，流傳於西方高盧與西班牙地區，成書約 5 至 8 世紀，作者佚名。全篇是一篇熱情洋溢、措辭激烈的守貞勸誡書，極力頌揚童貞與禁慾的崇高、嚴詞警告婚姻與情慾的危險，並大量引用聖經與諸多次經行傳為據。此書是研究中世紀早期西方禁慾主義、嚴格守貞運動及次經如何被援引為禁慾論據的重要文獻，其大量引用的失佚使徒行傳片段，更使它成為復原某些散佚偽典內容的珍貴間接來源。', title_orig: 'Pseudo-Titus Epistle', author: '託名提多', era: '提多', place: '西方（高盧／西班牙）', language: '拉丁文', note: '論貞潔的勸誡書' },
             ],
           },
           {
-            key: 'catholic-2', label: '第二大公書信', label_en: 'Second Catholic Epistles', desc: '教父推薦但未入正藏的非使徒書信。',
+            key: 'catholic-2', label: '第二大公書信部', label_en: 'Second Catholic Epistles', desc: '教父推薦但未入正藏的非使徒書信。',
             works: [
               { title_zh: '克勉二書', source: 'orthodox-apocrypha', intro: '託名羅馬的克勉、實則別有作者的希臘文作品，成書約 2 世紀中葉於羅馬或哥林多，作者佚名。它雖傳統與《克勉一書》並稱「克勉書信」，實際並非書信，而是現存最古老的基督教講道辭（證道集）之一，勸勉信徒悔改、節制、行善以待基督再臨與末日審判。它雖見於亞歷山大抄本等古卷，卻因教父推薦不足而未入正藏。此書是研究二世紀教會講道實踐、悔改與末世教導及早期禮儀生活的重要文獻，見證了「講道」作為文類的早期形態。', title_orig: '2 Clement', author: '佚名（託名克勉）', era: '克勉（羅馬）', place: '羅馬／哥林多', language: '希臘文', note: '古代最早的講道辭，教父推薦不足', link: '/apocrypha' },
               { title_zh: '克勉致雅各書', source: 'second-temple', intro: '託名羅馬的克勉致主的兄弟雅各的希臘文書信，源出敘利亞的猶太基督教環境，成書約 2 至 4 世紀，作者佚名，作為《偽克勉文集》的引言而流傳。內容託言彼得臨終前按立克勉為羅馬主教接班人，並由克勉致書耶路撒冷的雅各，報告彼得的安息與遺命，闡述主教職權的傳承。此書是研究早期教會主教統緒觀念、羅馬主教權威的建構及偽克勉文獻傳統的重要文本，反映了二至四世紀教會藉使徒傳承確立聖職制度的努力。', title_orig: 'Epistle of Clement to James', author: '託名克勉', era: '克勉（羅馬）', place: '敘利亞', language: '希臘文' },
@@ -346,7 +346,7 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'apocalypse', label: '啟示錄', label_en: 'Apocalypse', desc: '新約天啟偽典——按使徒順序排列。',
+            key: 'apocalypse', label: '啟示錄部', label_en: 'Apocalypse', desc: '新約天啟偽典——按使徒順序排列。',
             works: [
               { title_zh: '雅各第一啟示錄', source: 'gnostic', intro: '託名主的兄弟雅各的華倫泰派諾斯底啟示，拿戈瑪第文庫及柴可斯抄本所出，以科普特文存世（原文希臘文），成書約 2 至 3 世紀於埃及，作者佚名。內容敘復活的基督於受難前後向雅各啟示屬天奧祕，教導他靈魂升天時如何回答各層執政者的盤問，以掙脫物質世界、返回光明之境。此書是研究華倫泰派救贖論、靈魂上升儀式（通關密語）及雅各在諾斯底傳統中作為密傳領受者地位的核心文本之一。', title_orig: 'First Apocalypse of James', author: '託名雅各（華倫泰派）', era: '主的兄弟雅各', place: '埃及', language: '希臘文（科普特文存世）', link: '/gnostic' },
               { title_zh: '雅各第二啟示錄', source: 'gnostic', intro: '託名主的兄弟雅各的諾斯底啟示，拿戈瑪第文庫所出，以科普特文存世（原文希臘文），成書約 2 至 3 世紀於埃及，作者佚名。內容以雅各的講道與啟示為主，敘其領受復活基督的密傳教導、宣講救贖之道，末以雅各在耶路撒冷聖殿遭眾人推下並以石擊殉道的動人場景作結。此書既含諾斯底救贖思想，又保存了雅各殉道的早期傳統（與教父所載互參），對研究諾斯底基督論、雅各形象的多重塑造及早期殉道敘事具參考價值。', title_orig: 'Second Apocalypse of James', author: '託名雅各（諾斯底）', era: '主的兄弟雅各', place: '埃及', language: '希臘文（科普特文存世）', link: '/gnostic' },
@@ -369,7 +369,7 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'gnostic-treatise', label: '使徒密訓與神祕主義', label_en: 'Gnostic & Mystical Treatises', desc: '正藏所無——拿戈瑪第出土、披著使徒外衣的諾斯底宇宙論與神祕主義。',
+            key: 'gnostic-treatise', label: '使徒密訓與神祕主義部', label_en: 'Gnostic & Mystical Treatises', desc: '正藏所無——拿戈瑪第出土、披著使徒外衣的諾斯底宇宙論與神祕主義。',
             works: [
               { title_zh: '約翰密傳', source: 'gnostic', intro: '塞特派諾斯底神話的奠基之作，拿戈瑪第文庫存有多份抄本，以科普特文存世（原文希臘文），成書約 2 世紀於埃及，作者佚名，二世紀教父愛任紐已述及其思想。內容託言復活的基督向使徒約翰啟示完整的諾斯底宇宙論：至高神的流出、智慧索菲亞的失誤、瞎眼造物主雅達巴沃斯的誕生、人類受造與得救之道。', title_orig: 'Apocryphon of John', author: '佚名（塞特派）', era: '2 世紀', place: '埃及', language: '希臘文（科普特文存世）', note: '諾斯底神話百科，詳解造物主的墮落', link: '/gnostic' },
               { title_zh: '執政官本源論', source: 'gnostic', intro: '拿戈瑪第文庫所出的塞特派諾斯底論著，以科普特文存世（原文希臘文），成書約 3 世紀於埃及，作者佚名。內容大膽重釋《創世記》：宣稱創造並轄制此世的「執政官」（archons）乃源出智慧失誤而生的瞎眼邪神所造，舊約的造物主實為傲慢無知的下級神祇，亞當夏娃與蛇的故事被徹底翻轉，蛇成了帶來真知的救者。', title_orig: 'Hypostasis of the Archons', author: '佚名（塞特派）', era: '3 世紀', place: '埃及', language: '希臘文（科普特文存世）', note: '顛覆創世記，舊約神為瞎眼邪神', link: '/gnostic' },
