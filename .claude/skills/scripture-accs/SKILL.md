@@ -85,36 +85,39 @@ python scripts/ingest_accs_genesis.py \
 
 ## 🧭 下個 session 接手清單（2026-06-14 晚更新）
 
-### A. ACCS 創世記 OCR — **從零重 OCR 中，排程自動跑（受 Max 額度節流）**
+### A. ACCS 創世記 OCR — **從零重 OCR 中（batch 1，已能穩定推進）**
 - **引擎演進**：原用 Haiku Vision（Gemini 額度乾），但 **Haiku 掃描中文品質不合格**（錯字「住握裙/傅變/逐生」、
   漏字、漏小標、合併；user 退兩次）。Gemini 品質佳但**每日額度被並行任務吃光**。
   → **定案 Sonnet**（`--engine sonnet`，Max OAuth，5h 滾動額度）。**2026-06-14 已實測 Sonnet 內容品質佳**
   （繁體乾淨、catena 結構正確、教父名／作品名準）。
 - **資料現況（重要）**：整夜排程因下列三雷空跑 → **DB 與 checkpoint 都被清空，從零重來**。目前 DB 只有
-  **創 1:1 共 7 列**（p40-42 第一批內容，已驗 pipeline end-to-end：OCR→build_rows_auto→正規化→DB 正確）。
-  其後即撞 Max rate-limit。**只剩被退掉的 Haiku 備份** `c:/tmp/accs_gen_創1-11.haiku.bak.jsonl`（別當成品）。
+  **創 1:1 共 7 列**起跳（已驗 pipeline end-to-end：OCR→build_rows_auto→正規化→DB 正確）。
+  **2026-06-15 早上找到真因（非額度，見雷⑤⑥）後 batch 1 已能穩定逐頁推進**。
+  **只剩被退掉的 Haiku 備份** `c:/tmp/accs_gen_創1-11.haiku.bak.jsonl`（別當成品）。
   內容頁約 PDF **p46 起**（p1-45 前言，OCR 回 0 entries 正常）。
-- **正在跑**：Windows 排程 **`ACCS_Gen_Resume`（每 2 小時，StartBoundary 02:53）** 執行 `scripts/accs_resume.ps1` →
-  `ingest_accs_genesis.py --book gen --pages 1-316 --engine sonnet --batch 3 --replace --resume`。
-  Max 額度有就批次推進、沒有就快退；checkpoint 在 `c:/tmp/accs_gen_*.raw.jsonl`；全頁完成寫 `.done` 後排程自動跳過。
-  log：`scripts/logs/accs_gen_1-11_sonnet.log`。**排程＝唯一擁有者**（`MultipleInstances=IgnoreNew`），
-  **別再另開 direct run 並行**（會搶同一 checkpoint）。
-- **接手第一件事**：`Get-ScheduledTaskInfo ACCS_Gen_Resume` 看有沒有在跑＋ DB（`accs_commentary` where book_code=gen）
-  看進度。額度足時整本 ~270 內容批次；創 1-11 完成 → 跑創 12-50（PDF：`…創12-50.pdf`，OT II）。
+- **跑法**：`ingest_accs_genesis.py --book gen --pages 1-316 --engine sonnet --batch 1 --replace --resume`
+  （**必 batch 1**；checkpoint 在 `c:/tmp/accs_gen_*.raw.jsonl`，逐頁寫；全頁完成寫 `.done`）。
+  Windows 排程 **`ACCS_Gen_Resume`（每 2h）** 跑 `scripts/accs_resume.ps1`（已改 batch 1）；
+  **排程＝唯一擁有者**（`MultipleInstances=IgnoreNew`），跑 direct run 時先 `Disable-ScheduledTask` 免撞同一 checkpoint，
+  完成後再 `Enable`。一頁 ~1–2 分（node 冷啟動，慢但穩）。
+- **接手第一件事**：看 DB（`accs_commentary` where book_code=gen）rows 有沒有在長；創 1-11 完成 → 跑創 12-50
+  （PDF：`…創12-50.pdf`，OT II）。
 - **⚠️ 2026-06-14 整夜空跑的真因（皆已修，別重蹈）**：
   ① **G:（Google Drive 串流碟）會卸載** → PDF 不可達；`accs_resume.ps1` 已加自我修復（偵測 G: 未掛載就跑
      `launch.bat` 等 60s）。② **編 `.ps1` 掉 UTF-8 BOM** → PowerShell 5.1 以 Big5 誤讀中文 → parse error 靜默失敗；
      改 .ps1 後務必存 **UTF-8 with BOM**。③ 排程 `DisallowStartIfOnBatteries=True` + 筆電在電池 → task 永久 "Queued"
      不執行；已改 `AllowStartIfOnBatteries`+`DontStopIfGoingOnBatteries`。④ **G: 串流碟逐頁 on-demand 抓雲端，
      長跑時 `render_page` 會無限卡死**（python 零 CPU、無 child、卡 2h）；`accs_resume.ps1` 已改**一次性複製 PDF
-     到 `c:/tmp`（同 stem 以保 checkpoint 對得上）**、OCR 全程只讀本地檔。⑤ **Max 額度乾時 `claude.cmd`→node 孫程序
-     卡 rate-limit 退避並占住 stdout pipe**，`subprocess.run(timeout)` 只殺 .cmd、`communicate()` 仍卡在未關 pipe →
-     本輪 wedge（之後被排程 CTRL_C 收屍，`LastTaskResult=0xC000013A`）；已改 **Popen + `taskkill /F /T` 連孫殺**，
-     逾時(300s) 真能拋「依規範退出」讓本輪~5min 內乾淨退（已實測）。
-  ⑥ `--replace` 曾在「本次 0 rows」時仍 delete → 清空全書；已修為「rows 為空就不刪不寫」（這就是這次資料被清的舊雷）。
-- **2026-06-15 00:05 狀態**：上述全修＋實測，排程乾淨、不再 wedge。DB 仍 7 列（創 1:1）。**唯一卡點＝Max 額度被並行
-  任務（jung/mueller/dadaodao/coach）吃乾** → OCR 一律逾時、本輪只 re-upsert 既有 7 列就退。額度回來才會真正往前。
-  接手只需看 DB rows 有沒有長；沒長就是還在等額度，別重啟、別開 direct run。
+     到 `c:/tmp`（同 stem 以保 checkpoint 對得上）**、OCR 全程只讀本地檔。
+  ⑤ **OCR 卡死的真因（一整夜誤判成「Max 額度乾」，其實不是）**：(a) 我自己加的
+     `subprocess.CREATE_NEW_PROCESS_GROUP` flag 會改 `claude.cmd`→node 的 console/stdin 行為，**每個含圖請求都卡到
+     300s 逾時**（即使 Max 回 `rate_limit status=allowed`）；移除 flag 後單頁秒回。(b) **多圖一次呼叫（batch≥2）也卡**
+     ——~2MB 單行 stream-json 撐爆 CLI parser；**必 `--batch 1`**（一頁一呼叫）。逾時用 **Popen + `taskkill /F /T` 連孫殺**
+     才能真退（但別加 PROCESS_GROUP flag）。診斷招式：`claude -p --model sonnet "OK"` 純文字若秒回＝Max 沒問題，
+     問題在含圖請求本身。⑥ **單頁偶發逾時別 break 整輪**：batch 1 時一頁卡頓會停掉整本；已改**跳過該頁續跑、連續 3 次才退**。
+  ⑦ `--replace` 曾在「本次 0 rows」時仍 delete → 清空全書；已修為「rows 為空就不刪不寫」（這就是這次資料被清的舊雷）。
+- **2026-06-15 早上狀態**：找到真因後 **batch 1 已能穩定逐頁推進**；DB rows 從 7→33→持續長中。一頁 ~1–2 分（node 冷啟動）。
+  接手只需看 DB rows 有沒有在長；要手動推就 `Disable-ScheduledTask` 後跑 direct（batch 1），完成寫 `.done` 再 `Enable`。
 - **demo placeholder**：`seed_accs_genesis_demo.py`（公有領域示範）已不在庫；要清殘留用 `--delete`。
 
 ### B. /scripture「各教會傳統 canon」重構 — **已完成上架（C 工程）**
