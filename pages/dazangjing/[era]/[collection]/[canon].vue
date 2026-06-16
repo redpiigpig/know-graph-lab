@@ -102,7 +102,7 @@
                 </div>
                 <div v-if="w.title_orig" class="ml-6 text-[11px] text-gray-400 italic leading-tight">{{ w.title_orig }}</div>
                 <div class="ml-6 mt-1 text-[11px] text-stone-500 leading-relaxed flex flex-wrap gap-x-2">
-                  <span class="text-gray-400">第 {{ runningNo(d, i) }} 卷</span>
+                  <span v-if="w.extent" class="text-gray-400">{{ w.extent }}</span>
                   <span v-if="w.author">{{ w.author }}</span>
                   <span v-if="w.era">{{ w.era }}</span>
                   <span v-if="w.place">{{ w.place }}</span>

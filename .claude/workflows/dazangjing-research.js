@@ -12,7 +12,8 @@ export const meta = {
 //   canonLabel, goal:{ goal, zhengScope:[], waiScope:[], sources:[] },
 //   existingTitles:[...]  // 該時代既有 title_zh，用於去重
 // }
-const a = args || {}
+let a = args || {}
+if (typeof a === 'string') { try { a = JSON.parse(a) } catch (e) { a = {} } }
 const scope = a.canon === 'wai' ? (a.goal?.waiScope || []) : (a.goal?.zhengScope || [])
 const sources = (a.goal?.sources && a.goal.sources.length) ? a.goal.sources : ['權威學術全集與工具書']
 const existing = new Set((a.existingTitles || []).map((t) => String(t).replace(/\s/g, '')))

@@ -53,6 +53,8 @@ export interface DazangWork {
   place?: string
   /** 寫作語言 */
   language?: string
+  /** 該作品「自身」的內容規模（非在藏中的排序卷號），如「全 18 卷」「63 篇」「四部」「約 2 萬字」 */
+  extent?: string
   /** 一句簡述（短，顯示於標題下） */
   note?: string
   /** 100–200 字簡介（顯示於右欄） */
