@@ -75,7 +75,7 @@
         </span>
       </div>
 
-      <div v-if="total === 0" class="text-center text-gray-400 py-16 text-sm">此目錄尚未建置書目。</div>
+      <div v-if="total === 0" class="text-center text-gray-400 py-16 text-sm">{{ canon.summary ? '本目錄依「正典封閉」留白——詳見上方說明。' : '此目錄尚未建置書目。' }}</div>
 
       <!-- 各部：列表呈現 -->
       <section v-for="d in canon.divisions" :key="d.key" class="mb-8">

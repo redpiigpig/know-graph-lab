@@ -16,44 +16,11 @@ export const EARLY_MODERN_ERA: DazangEra = {
   name_en: 'Scripture Pitaka',
   glyph: '經',
   genres: '譯本‧校勘‧外經',
-  summary: '近代基督教大藏經之經藏，收近代聖經譯本、經文校勘與新興一神教啟示經典。承文藝復興人文主義「回到原典」(ad fontes) 精神，伊拉斯謨重編希臘文新約，宗教改革各語譯本使聖經走入民間，近代校勘學奠定文本批判基礎；外經部則收摩門教與巴哈伊教等近代新啟示經典。',
+  summary: '近代基督教大藏經之經藏。依正典封閉法則，正經藏留白（伊拉斯謨校勘、宗教改革各語譯本與近代校勘學成果已歸譯校藏）；外經藏收摩門教與巴哈伊教等近代自稱新啟示的經典。',
   portal: { to: '/scripture', label: '聖經閱讀器' },
   zheng: {
-    summary: '正經部收近代各語聖經譯本與經文校勘成果。自伊拉斯謨 1516 年希臘文新約問世，宗教改革者以民族語言翻譯聖經，天主教亦推出杜埃-蘭斯譯本回應；十八世紀經文校勘學興起，為現代聖經文本研究立下根基。',
-    divisions: [
-      {
-        key: 'yuandian',
-        label: '原典校勘部',
-        label_en: 'Critical Editions of the Original',
-        desc: '回到希臘文原典的人文主義校勘成果。',
-        works: [
-          { title_zh: '新工具(伊拉斯謨希臘文新約)', title_orig: 'Novum Instrumentum omne', author: '伊拉斯謨(Erasmus)', era: '1516', place: '巴塞爾', language: '希臘文‧拉丁文', intro: '荷蘭人文主義者伊拉斯謨編訂的第一部印行希臘文新約，希臘文與其新拉丁譯文並列。承「回到原典」精神，欲以原文校正當時通行的武加大拉丁本之訛誤。雖底本晚出、〈啟示錄〉末節曾回譯自拉丁文而留下瑕疵，卻成為後世「公認經文」(Textus Receptus) 之源頭，路德與丁道爾翻譯時皆據此而譯，影響整個宗教改革時代的聖經翻譯。', link: '/scripture' }
-        ]
-      },
-      {
-        key: 'minyu',
-        label: '民族語譯本部',
-        label_en: 'Vernacular Translations',
-        desc: '宗教改革使聖經以各民族語言走入家庭。',
-        works: [
-          { title_zh: '路德德文聖經', title_orig: 'Biblia, das ist die gantze Heilige Schrifft Deudsch', author: '馬丁‧路德(Martin Luther)', era: '1522新約／1534全書', place: '威登堡', language: '德文', intro: '路德據伊拉斯謨希臘文新約與希伯來文舊約譯成的德文聖經，1522 年先出新約，1534 年全書完成。他主張「望著平民百姓的口」而譯，以中部高地德語為基準，文字生動流暢，不僅使德國平民得以自讀聖經，更奠定現代標準德語的基礎，是宗教改革「唯獨聖經」原則的具體成果。', link: '/scripture' },
-          { title_zh: '丁道爾英譯聖經', title_orig: 'The New Testament (Tyndale)', author: '威廉‧丁道爾(William Tyndale)', era: '1526新約', place: '沃姆斯／安特衛普', language: '英文', intro: '丁道爾據希臘文與希伯來文原典譯成的英文聖經，是第一部直接由原文譯出並付印的英文新約。他立志要使「扶犁的農夫」也比神職人員更懂聖經，因觸怒當局而流亡歐陸印行，1536 年被處火刑。其譯文簡潔有力，許多名句為後來欽定本所沿用，被譽為英文聖經之父。', link: '/scripture' },
-          { title_zh: '欽定本聖經', title_orig: 'The Holy Bible (King James Version)', author: '英王詹姆士一世詔命譯經委員會', era: '1611', place: '倫敦', language: '英文', intro: '英王詹姆士一世詔命約五十位學者分組翻譯的英文聖經官方版本，1611 年出版。譯者廣納丁道爾以降的英譯傳統，文辭莊重典雅、音韻鏗鏘，三百餘年間為英語世界教會公用標準本，對英語文學與語言影響深遠，至今仍被視為英文散文的典範之一。', link: '/scripture' },
-          { title_zh: '杜埃-蘭斯聖經', title_orig: 'The Holie Bible (Douay-Rheims)', author: '英格蘭學院流亡學者(主筆 Gregory Martin)', era: '1582新約／1609-10舊約', place: '蘭斯／杜埃', language: '英文', intro: '流亡歐陸的英格蘭天主教學者所譯的英文聖經，新約 1582 年於蘭斯、舊約 1609-10 年於杜埃出版。為回應新教各譯本，譯者以武加大拉丁本為底本，務求忠實貼近教會傳統用語，保留大量拉丁化詞彙。是英語天主教界長期通用的標準譯本，與欽定本分立於新舊教兩大傳統。', link: '/scripture' },
-          { title_zh: '神天聖書', title_orig: '神天聖書', author: '馬禮遜(Robert Morrison)‧米憐(William Milne)', era: '1823', place: '麻六甲', language: '中文(文言)', intro: '英國倫敦會傳教士馬禮遜與米憐合譯的第一部完整中文聖經，1823 年於麻六甲刊行，共二十一卷。馬禮遜 1807 年來華，在嚴禁傳教的處境下苦學中文、編纂華英字典並譯經。譯文為文言體，雖艱深古奧，卻開啟基督教聖經漢譯之先河，為日後和合本等中文譯本鋪路。', link: '/scripture' }
-        ]
-      },
-      {
-        key: 'jiaokan',
-        label: '近代校勘部',
-        label_en: 'Modern Textual Criticism',
-        desc: '十八世紀興起的聖經文本批判學。',
-        works: [
-          { title_zh: '米爾希臘文新約', title_orig: 'Novum Testamentum Graecum, cum lectionibus variantibus', author: '約翰‧米爾(John Mill)', era: '1707', place: '牛津', language: '希臘文', intro: '牛津學者米爾窮三十年之力編成的希臘文新約校勘本，1707 年出版。他遍蒐當時可得的抄本、古譯本與教父引文，整理出約三萬處異文附於正文之下。雖正文仍沿用公認經文，但其龐大的異文資料首度向世人揭示新約傳抄歷史之複雜，被視為近代聖經文本批判學的奠基之作。' },
-          { title_zh: '本格爾希臘文新約', title_orig: 'Novum Testamentum Graecum', author: '本格爾(Johann Albrecht Bengel)', era: '1734', place: '圖賓根', language: '希臘文', intro: '德國敬虔派學者本格爾編訂的希臘文新約校勘本，1734 年出版。他首倡將抄本分門別類、依「較難讀法為原」(lectio difficilior potior) 等原則評斷異文優劣，並以符號標示讀法可信度，奠定文本批判的方法學基礎。本格爾兼具敬虔信仰與嚴謹學術，其《新約釋義》亦影響深遠，被尊為近代聖經校勘學之父之一。' }
-        ]
-      }
-    ]
+    summary: '正典封閉法則：使徒時代新約正典封閉後，基督教不再有新「正經」。近代各語聖經譯本（路德、欽定、杜埃、神天聖書）與經文校勘成果一律歸入譯校藏；此處正經藏留白，以書架之空無宣告「啟示已在基督裡完成」。外經藏則收近代自稱新啟示的摩門教與巴哈伊教經典。',
+    divisions: [],
   },
   wai: {
     summary: '外經部收近代興起之新一神教所奉的新啟示經典。十九世紀北美與中東先後出現摩門教與巴哈伊教，二者皆自承領受新的神聖啟示，編成獨立於聖經之外的經典體系，反映近代宗教在傳統之外另闢啟示泉源的時代現象。',
