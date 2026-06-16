@@ -18,6 +18,19 @@
           三軌奠基於「隱密的上帝」與「社會學邊界」：<b>前藏</b>＝邊界劃分之前的原始啟示母體；
           <b>正藏</b>＝群體教會論邊界之內的家族記憶（非啟示壟斷）；<b>外藏</b>＝邊界之外、隱密上帝的平行啟示與神聖見證（「外」無貶義）。
         </p>
+        <div class="flex items-center gap-2 mt-4">
+          <input
+            v-model="q"
+            type="search"
+            placeholder="🔍 搜尋書卷或作者（中英文）…"
+            class="flex-1 px-3.5 py-2 text-sm bg-white border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-stone-400"
+            @keyup.enter="goSearch"
+          />
+          <button
+            class="shrink-0 text-sm font-medium text-white bg-stone-900 hover:bg-stone-700 rounded-xl px-4 py-2 transition"
+            @click="goSearch"
+          >搜尋</button>
+        </div>
         <NuxtLink
           to="/dazangjing/about"
           class="inline-flex items-center gap-1.5 mt-3 text-xs font-medium text-stone-700 hover:text-stone-900 border border-stone-300 hover:border-stone-400 rounded-full px-3 py-1.5 transition"
@@ -62,6 +75,12 @@
 
 <script setup lang="ts">
 import { ERAS } from '~/data/dazangjing'
+
+const q = ref('')
+const goSearch = () => {
+  const k = q.value.trim()
+  navigateTo(k ? `/dazangjing/search?q=${encodeURIComponent(k)}` : '/dazangjing/search')
+}
 
 definePageMeta({ middleware: 'auth' })
 useHead({ title: '基督教大藏經 — Know Graph Lab' })
