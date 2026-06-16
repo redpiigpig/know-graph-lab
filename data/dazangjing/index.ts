@@ -2,6 +2,7 @@ import type { DazangEra } from './types'
 import { ANCIENT_ERA } from './ancient'
 import { MEDIEVAL_ERA } from './medieval'
 import { EARLY_MODERN_ERA } from './early-modern'
+import { MODERN_ERA } from './modern'
 
 export * from './types'
 
@@ -45,16 +46,7 @@ export const ERAS: DazangEra[] = [
   ANCIENT_ERA,
   MEDIEVAL_ERA,
   EARLY_MODERN_ERA,
-  {
-    key: 'modern',
-    name: '現代基督教大藏經',
-    name_en: 'Modern Christian Canon (1800–)',
-    glyph: '現',
-    subtitle: '自由神學‧普世合一‧第三世界神學‧漢語神學',
-    boundary: '1800 年至今。',
-    enabled: false,
-    collections: [],
-  },
+  MODERN_ERA,
 ]
 
 export function findEra(key: string): DazangEra | undefined {
