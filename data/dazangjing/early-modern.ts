@@ -313,7 +313,26 @@ export const EARLY_MODERN_ERA: DazangEra = {
         works: [
           { title_zh: '基督教遠征中國史', title_orig: 'De Christiana expeditione apud Sinas', author: '利瑪竇撰‧金尼閣編譯（Matteo Ricci / Nicolas Trigault）', era: '1615', place: '奧格斯堡', language: '拉丁文', intro: '此書俗稱利瑪竇「中國劄記」，由金尼閣將利氏義大利文手記譯成拉丁文並補述而成。書中既記耶穌會士習漢語、結交士大夫、以天文曆算與西學叩開明朝宮廷的「適應策略」，也以歐洲讀者陌生的眼光，細描中國的疆域、科舉、宗教與風俗。它是西方系統認識中國的開山之作，更是「文化適應宣教」路線的綱領，深刻形塑日後中西交流與禮儀之爭。' },
           { title_zh: '沙勿略書簡所載日本宣教', title_orig: 'Epistolae S. Francisci Xaverii', author: '方濟‧沙勿略（Francis Xavier）', era: '1549–1552', place: '日本‧果阿', language: '拉丁文‧葡萄牙文', intro: '沙勿略自果阿與日本寄回歐洲的書簡，是天主教進入日本最早的親歷紀錄。信中熱切描述薩摩、山口、京都之行，分析日本人尚理重榮的民族性，反省如何透過辯論與本地語彙傳講福音，也坦陳語言隔閡與佛僧敵意的挫折。這批書簡既是宣教實況報告，也是近代跨文化傳教方法的雛形，激勵大批耶穌會士東來，奠定「吉利支丹」時代的開端。' },
-          { title_zh: '近代海外宣道會史', title_orig: 'History of the Modern Missionary Societies', author: '佚名輯（新教宣道會傳統）', era: '十九世紀', place: '倫敦', language: '英文', intro: '此編綜述十八世紀末以降新教宣教運動的勃興，自威廉‧克里赴印度、倫敦會與美部會的設立，到向非洲、太平洋與中國內地的拓展。書中以各差會為單元，記其成立宗旨、籌款體制、宣教士派遣與本地教會建立，並反映福音奮興與帝國擴張交織的時代氛圍。它把零散的差會報告整合為一部運動史，是理解新教全球化與近代宣教神學的入門綱要。' }
+          { title_zh: '近代海外宣道會史', title_orig: 'History of the Modern Missionary Societies', author: '佚名輯（新教宣道會傳統）', era: '十九世紀', place: '倫敦', language: '英文', intro: '此編綜述十八世紀末以降新教宣教運動的勃興，自威廉‧克里赴印度、倫敦會與美部會的設立，到向非洲、太平洋與中國內地的拓展。書中以各差會為單元，記其成立宗旨、籌款體制、宣教士派遣與本地教會建立，並反映福音奮興與帝國擴張交織的時代氛圍。它把零散的差會報告整合為一部運動史，是理解新教全球化與近代宣教神學的入門綱要。' },
+          { title_zh: '中華大帝國史', title_orig: 'Historia del Gran Reino de la China', author: '門多薩(Juan González de Mendoza)', era: '1585', place: '羅馬', language: '西班牙文', intro: '奧斯定會士門多薩（Juan González de Mendoza）受教宗委託編纂，於一五八五年在羅馬刊行，是歐洲第一部全面詳述中國的專著。全書匯整早期赴華傳教士、使節與商旅的見聞，記述中國的疆域、物產、典章制度、宗教風俗與印刷火炮等技藝。出版後數十年間譯成多種歐洲語文、再版數十次，成為大航海時代歐洲認識中國的權威讀本，深刻形塑近代早期歐人的「中華帝國」想像。' },
+          { title_zh: '中華帝國全志', title_orig: 'Description géographique, historique, chronologique, politique et physique de l’Empire de la Chine', author: '杜赫德(Jean-Baptiste Du Halde)', era: '1735', place: '巴黎', language: '法文', intro: '耶穌會士杜赫德（Jean-Baptiste Du Halde）雖未親至中國，卻匯集在華會士寄回的報導、書信與譯稿，於一七三五年在巴黎刊行此四卷巨著。內容涵蓋中國各省地理、歷史沿革、政制律法、經濟物產、儒家經典與醫藥技藝，並附精細地圖。全書集耶穌會在華觀察之大成，迅即譯成多國文字，成為啟蒙時代歐洲認識中國的權威，伏爾泰（Voltaire）等思想家皆深受其影響。' },
+          { title_zh: '中國上古史', title_orig: 'Sinicae Historiae Decas Prima', author: '衛匡國(Martino Martini)', era: '1658', place: '慕尼黑', language: '拉丁文', intro: '耶穌會士衛匡國（Martino Martini）依據中國正史與編年典籍，於一六五八年在慕尼黑刊行，是首部以西文向歐洲系統介紹中國上古信史的著作。全書自伏羲（伏羲氏）述起，歷述三皇五帝、夏商周三代以至西漢，並推算中國紀年遠早於通行的聖經編年。此說在歐洲引發年代學與《聖經》紀年的激烈爭論，對近代早期西方的世界史框架與漢學奠基影響深遠。' },
+          { title_zh: '中國新史', title_orig: 'Nouvelle relation de la Chine', author: '安文思(Gabriel de Magalhães)', era: '1688', place: '巴黎', language: '法文(原葡文)', intro: '葡萄牙籍耶穌會士安文思（Gabriel de Magalhães）久居北京、供職清廷，以葡文撰成此書，身後於一六八八年在巴黎譯為法文刊行。全書為其親歷的第一手記述，描繪清初中國的政治體制、官僚科舉、宮廷生活、京城風貌、語言文字與物產工藝，尤詳於北京城與皇宮見聞。內容兼具細膩觀察與切身體驗，是十七世紀歐洲認識清初中國政教與社會的重要文獻。' }
+        ]
+      },
+      {
+        key: 'overseas-ethnography',
+        label: '域外民族誌部',
+        label_en: 'Records of Overseas Peoples and Customs',
+        desc: '近代天主教宣教士（多為耶穌會）對中國以外各地——日本、印度、美洲、非洲、大洋洲——民族、風俗、自然與宗教的記錄。',
+        works: [
+          { title_zh: '日本史', title_orig: 'História do Japão', author: '路易斯‧佛洛伊斯(Luís Fróis)', era: '約 1583–1597(稿本)', place: '日本', language: '葡萄牙文', intro: '久居日本三十餘年的耶穌會士佛洛伊斯(Luís Fróis)所撰，逐年詳載戰國時代日本的政教局勢、群雄戰亂與庶民風俗，對織田信長等人物有近身觀察。其筆下兼及佛教宗派與神道信仰，是歐人理解十六世紀日本社會的第一手史料；另著有歐洲與日本文化對照之作，以條列方式並陳兩地禮俗、衣食、婦女與信仰的差異，開比較民族誌之先聲。' },
+          { title_zh: '印度習俗報告', title_orig: 'Informatio de quibusdam moribus nationis Indicae', author: '羅伯托‧德‧諾比利(Roberto de Nobili)', era: '約 1613', place: '印度馬杜賴(Madurai)', language: '拉丁文', intro: '在南印度馬杜賴(Madurai)宣教的耶穌會士諾比利(Roberto de Nobili)所撰，主張須區分宗教信仰與印度社會習俗，認為種姓、聖線等多屬世俗風俗而非異教崇拜。為此他採行婆羅門式生活與服飾以親近上層，記述當地種姓制度、潔淨觀與印度禮俗，是耶穌會「適應策略」在印度的代表文獻，亦為南印度社會的早期民族誌觀察。' },
+          { title_zh: '印度自然與道德史', title_orig: 'Historia natural y moral de las Indias', author: '何塞‧德‧阿科斯塔(José de Acosta)', era: '1590', place: '塞維利亞(Sevilla)', language: '西班牙文', intro: '耶穌會士阿科斯塔(José de Acosta)根據親歷祕魯與墨西哥的見聞而成，前半論新大陸的地理、氣候、礦產與動植物，後半記述印第安民族的宗教、曆法、政制與風俗。他嘗試以自然因果解釋美洲物種與人群的由來，並比較阿茲特克、印加的信仰與制度，是歐洲認識新大陸自然史與美洲原住民民族誌的開創性著作，影響後世博物學與宗教史甚鉅。' },
+          { title_zh: '耶穌會通訊集(新法蘭西報告)', title_orig: 'Relations des Jésuites de la Nouvelle-France', author: '在新法蘭西的耶穌會士', era: '1632–1673', place: '巴黎', language: '法文', intro: '北美新法蘭西(今加拿大魁北克一帶)的耶穌會士逐年寄回法國、彙編刊行的報告集。傳教士深入原住民部落，詳載休倫(Huron)、易洛魁(Iroquois)、阿爾岡昆等民族的語言、習俗、信仰、戰爭與季節生活，並記錄宣教的艱辛與殉道。內容兼具傳教紀錄與細緻觀察，是十七世紀北美原住民民族誌與語言研究最重要的第一手史料之一。' },
+          { title_zh: '衣索比亞史', title_orig: 'História da Etiópia', author: '佩德羅‧派斯(Pedro Páez)', era: '約 1622', place: '衣索比亞', language: '葡萄牙文', intro: '久居衣索比亞的耶穌會士派斯(Pedro Páez)所撰，以親身遊歷與通曉當地語言的見聞，詳載衣索比亞的歷史、地理、物產與風土。他是公認首位親抵並記述青尼羅河源頭的歐洲人，書中亦深入描寫衣索比亞正教會的禮儀、教義與宮廷政教關係，駁正前人傳聞之誤，為歐洲認識東北非高原民族與基督教古國的重要史料。' },
+          { title_zh: '靈性征服', title_orig: 'La Conquista Espiritual', author: '安東尼奧‧魯伊斯‧德‧蒙托亞(Antonio Ruiz de Montoya)', era: '1639', place: '馬德里', language: '西班牙文', intro: '耶穌會士蒙托亞(Antonio Ruiz de Montoya)記述其在巴拉圭一帶建立瓜拉尼(Guaraní)歸化區(reductions)的經過，描寫瓜拉尼人的生活、習俗、信仰與遷徙，以及歸化區面對奴隸獵人時的處境。作者通曉瓜拉尼語，另編有瓜拉尼語法與辭典，本書因而兼具宣教史、南美原住民民族誌與語言保存的多重價值，是認識瓜拉尼民族的關鍵文獻。' },
+          { title_zh: '馬里亞納宣教記', title_orig: 'Marianas Mission Records', author: '迭戈‧路易斯‧德‧桑維托雷斯(Diego Luis de San Vitores)', era: '1668–1672', place: '關島(Guam，馬里亞納群島)', language: '西班牙文', intro: '耶穌會士桑維托雷斯(Diego Luis de San Vitores)在馬里亞納群島(關島一帶)宣教期間留下的記錄，是大洋洲密克羅尼西亞查莫羅(Chamorro)人最早的民族誌與宣教文獻，描寫其社會組織、習俗與信仰。作者致力於當地傳教並最終在島上殉道，相關報告為後世研究查莫羅原住民早期歷史、語言與歐人接觸提供了珍貴的第一手資料。' }
         ]
       },
       {
@@ -401,6 +420,19 @@ export const EARLY_MODERN_ERA: DazangEra = {
         ]
       },
       {
+        key: 'overseas-mission-versions',
+        label: '域外宣教譯本部',
+        label_en: 'Overseas Mission Vernacular Versions',
+        desc: '近代新教宣教士為亞、非、美洲非漢語民族首譯的聖經，多為該語言史上第一部聖經。',
+        works: [
+          { title_zh: '艾略特印第安語聖經', title_orig: 'Mamusse Wunneetupanatamwe Up-Biblum God', author: '艾略特(John Eliot)', era: '1663', place: '麻薩諸塞劍橋', language: '麻薩諸塞(阿爾岡昆)語', intro: '清教徒宣教士艾略特(John Eliot)為麻薩諸塞原住民所譯，是北美大陸印刷出版的第一部完整聖經，也是英語世界最早將整本聖經譯入無文字傳統民族語言的壯舉。他先為阿爾岡昆語建立拼寫系統，再逐卷迻譯，於劍橋印行。此譯本見證了「祈禱城鎮」中的早期原住民歸信，雖該語言後來幾近失傳，近年卻成為族群復興語言的珍貴依據。' },
+          { title_zh: '克里塞蘭坡諸語聖經', title_orig: 'Bible (Bengali, Sanskrit, etc.)', author: '克里(William Carey)及塞蘭坡同工', era: '孟加拉文新約 1801 起，多語陸續', place: '印度塞蘭坡', language: '孟加拉文等四十餘種印度語言', intro: '被尊為近代新教宣教之父的克里(William Carey)與塞蘭坡同工(Serampore Trio)在丹麥屬地塞蘭坡主持的大規模譯經工程。自一八〇一年孟加拉文新約問世起，數十年間陸續以梵文及四十餘種印度次大陸語言迻譯刊行，奠定南亞各民族文字聖經的根基。雖部分早期譯本以準確度受後人檢討，其拓荒規模與對印度諸語印刷文化的貢獻仍無可取代。' },
+          { title_zh: '耶德遜緬甸語聖經', title_orig: 'The Holy Bible (Burmese)', author: '耶德遜(Adoniram Judson)', era: '新約 1832‧全本 1834', place: '緬甸毛淡棉', language: '緬甸文', intro: '美國浸信會宣教士耶德遜(Adoniram Judson)歷經牢獄與喪親之苦，在緬甸數十年間完成的緬甸文聖經，新約於一八三二年、全本於一八三四年告成。他同時編纂緬英辭典，為緬甸文聖經研究立下標準。此譯本文辭典雅、流傳廣遠，至今仍是緬甸教會公認沿用的標準譯本，堪稱新教在東南亞最深遠的譯經成果之一。' },
+          { title_zh: '馬丁波斯文與烏爾都文新約', title_orig: 'New Testament (Persian & Hindustani)', author: '馬丁(Henry Martyn)', era: '約 1810–1812', place: '印度‧波斯', language: '波斯文‧烏爾都文', intro: '劍橋才俊馬丁(Henry Martyn)受聘東印度公司隨軍牧師後投身譯經，於印度與波斯之間完成烏爾都文(印度斯坦文)及波斯文新約。他語言天賦過人，譯文以精審典雅見稱，深得波斯文人推重。惜其積勞成疾，一八一二年返英途中病逝於小亞細亞，年僅三十一歲，所留精譯遂成早逝宣教學者的不朽見證。' },
+          { title_zh: '莫法特茨瓦納文聖經', title_orig: 'The Holy Bible (Setswana)', author: '莫法特(Robert Moffat)', era: '全本 1857', place: '南非庫魯曼', language: '茨瓦納文', intro: '倫敦傳道會宣教士莫法特(Robert Moffat)長年駐守南非庫魯曼(Kuruman)宣教站，為茨瓦納人建立文字並逐卷迻譯，於一八五七年完成全本聖經。這是非洲本土語言中第一部譯齊的整本聖經，他更親自設印刷機刊行。莫法特亦是探險家李文斯頓(David Livingstone)的岳父與同工，其譯經奠定了南部非洲教會以母語誦讀聖言的傳統。' }
+        ]
+      },
+      {
         key: 'text-criticism',
         label: '經文考據部',
         label_en: 'Principles of Textual Criticism',
@@ -423,7 +455,10 @@ export const EARLY_MODERN_ERA: DazangEra = {
         desc: '歐洲學者首度將伊斯蘭與東方宗教經典直譯為歐語,開比較宗教文獻之先。',
         works: [
           { title_zh: '古蘭經', title_orig: 'The Koran, Commonly Called the Alcoran of Mohammed', author: '薩爾 (George Sale)', era: '一七三四年', place: '倫敦', language: '英文', intro: '英國東方學者薩爾直接由阿拉伯原文譯成的英文古蘭經,並附長篇「緒論」(Preliminary Discourse) 評介伊斯蘭的歷史與教義。譯文力求準確,態度遠較前人公允,長期是英語世界最權威的古蘭經譯本,亦為啟蒙時代歐洲認識伊斯蘭的主要窗口,影響極為深遠。' },
-          { title_zh: '東方宗教經典初譯', title_orig: 'Oupnek\'hat (Anquetil-Duperron) 等', author: '安克蒂爾-杜佩龍 (Abraham Hyacinthe Anquetil-Duperron) 等', era: '十八世紀末', place: '巴黎', language: '拉丁文‧法文', intro: '安克蒂爾-杜佩龍率先將祆教《阿維斯陀》與印度《奧義書》(由波斯文轉譯) 介紹入歐,其拉丁文《奧義書》譯本曾深深觸動叔本華。此類東方經典的初譯篳路藍縷、訛誤難免,卻打開了歐洲認識亞洲宗教的門徑,催生了十九世紀比較宗教與東方學的勃興。' }
+          { title_zh: '東方宗教經典初譯', title_orig: 'Oupnek\'hat (Anquetil-Duperron) 等', author: '安克蒂爾-杜佩龍 (Abraham Hyacinthe Anquetil-Duperron) 等', era: '十八世紀末', place: '巴黎', language: '拉丁文‧法文', intro: '安克蒂爾-杜佩龍率先將祆教《阿維斯陀》與印度《奧義書》(由波斯文轉譯) 介紹入歐,其拉丁文《奧義書》譯本曾深深觸動叔本華。此類東方經典的初譯篳路藍縷、訛誤難免,卻打開了歐洲認識亞洲宗教的門徑,催生了十九世紀比較宗教與東方學的勃興。' },
+          { title_zh: '中國哲學家孔子', title_orig: 'Confucius Sinarum Philosophus', author: '柏應理(Philippe Couplet)、殷鐸澤(Prospero Intorcetta)等', era: '1687', place: '巴黎', language: '拉丁文', intro: '由柏應理(Philippe Couplet)領銜彙整、殷鐸澤(Prospero Intorcetta)等耶穌會士數十年之力，將《大學》《中庸》《論語》譯為拉丁文並題獻法王路易十四。書前附孔子傳與中國經籍源流，是歐洲認識孔子與儒學的奠基之作，深刻塑造萊布尼茲、伏爾泰等啟蒙思想家對中國的想像，開歐洲漢學與比較宗教之先河。其「以儒詮教」的調適立場，亦預示了往後激烈的中國禮儀之爭。' },
+          { title_zh: '四書拉丁譯稿', title_orig: 'Tetrabiblion Sinense de moribus (羅明堅譯稿)', author: '羅明堅(Michele Ruggieri)', era: '約 1590 年代(稿本)', place: '羅馬', language: '拉丁文', intro: '由最早入華耶穌會士之一羅明堅(Michele Ruggieri)所譯，是史上第一份《四書》的西文(拉丁文)翻譯，比刊行的《中國哲學家孔子》早近一世紀。譯稿完成後未付梓，長埋羅馬耶穌會與義大利圖書館檔案中，遲至近世方重見天日，學界始知西方接觸儒典之始遠早於前人所想，為歐洲漢學與中西經典互譯的真正開端留下珍貴的最初見證。' },
+          { title_zh: '中華帝國六經', title_orig: 'Sinensis Imperii Libri Classici Sex', author: '衛方濟(François Noël)', era: '1711', place: '布拉格', language: '拉丁文', intro: '由耶穌會士衛方濟(François Noël)續譯，將六部儒家經典——含《大學》《中庸》《論語》《孟子》《孝經》與《小學》——譯為拉丁文於布拉格刊行，首度把《孟子》全帙系統地引入歐洲。其譯本與同年另刊的中國禮儀考辯相呼應，正值中國禮儀之爭白熱之際，既擴充了歐洲對儒家倫理的整體認識，亦成為當時論辯祭祖祭孔性質的重要文獻依據。' }
         ]
       },
       {
@@ -698,6 +733,20 @@ export const EARLY_MODERN_ERA: DazangEra = {
           { title_zh: '戴德生內地會方略', title_orig: 'China’s Spiritual Need and Claims', author: '戴德生', era: '1865–1875', place: '英國／中國內地', language: '英文', intro: '中國內地會創辦人戴德生的宣教呼籲與方略著作。書中以數字陳明中國內陸億萬未聞福音之眾，激發英美教會的差傳負擔。戴德生主張宣教士入鄉隨俗、著華服、深入內地，採「憑信心仰望供應、不公開募款」的信心差傳模式。內地會由此成為跨宗派國際差會的先聲，其方略與屬靈原則深刻影響二十世紀的福音派宣教運動。' },
         ],
       },
+      {
+        key: 'mission-periodicals',
+        label: '宣教刊物部',
+        label_en: 'Missionary Periodicals',
+        desc: '近代來華新教宣教士創辦的中文與英文期刊，開近代中文報刊之先河，兼為傳教、西學東漸與漢學研究的園地。',
+        works: [
+          { title_zh: '察世俗每月統記傳', title_orig: 'Chinese Monthly Magazine', author: '米憐(William Milne)', era: '1815–1821', place: '麻六甲', language: '漢文', intro: '由倫敦會宣教士米憐(William Milne)在馬禮遜支持下於麻六甲創辦，是史上第一份近代中文期刊。以南洋華僑與識字華人為對象，木刻雕版、章回體行文，內容融貫基督教義、天文地理與西學新知，藉淺白文體傳教兼啟蒙。它開近代中文報刊之先河，奠定宣教士以期刊溝通中西文化的範式。' },
+          { title_zh: '東西洋考每月統記傳', title_orig: 'Eastern Western Monthly Magazine', author: '郭實獵(Karl Gützlaff)', era: '1833–1838', place: '廣州‧新加坡', language: '漢文', intro: '由普魯士宣教士郭實獵(Karl Gützlaff)創辦，是中國境內出版的第一份近代中文期刊。以廣州一帶官紳士人為對象，刻意淡化教義、強調西方政教科學與時事，欲扭轉華人視外邦為夷狄之見。它把近代報刊由南洋帶入中土，是晚清士人認識世界的早期窗口，深具中西交流的開創意義。' },
+          { title_zh: '遐邇貫珍', title_orig: 'Chinese Serial', author: '麥都思、奚禮爾、理雅各等', era: '1853–1856', place: '香港', language: '漢文', intro: '由倫敦會麥都思、奚禮爾、理雅各(James Legge)等主持，是香港第一份中文刊物，也是首份採用西式鉛字活版印刷的近代中文期刊。面向香港及華南讀者，率先引入新聞報導與商業廣告版面，兼載西學與時事。它在近代報刊史上開鉛印與新聞、廣告體例之先，為中文新式報業奠基。' },
+          { title_zh: '六合叢談', title_orig: 'Shanghae Serial', author: '偉烈亞力(Alexander Wylie)', era: '1857–1858', place: '上海', language: '漢文', intro: '由倫敦會宣教士偉烈亞力(Alexander Wylie)主編，是上海第一份近代中文期刊，亦為綜合性新學刊物。以江南士人與知識階層為對象，系統介紹西方天文、數學、物理等科學新知，兼及時事文藝。它把西學東漸的重心推向上海，成為晚清士人吸收近代科學的重要媒介。' },
+          { title_zh: '萬國公報', title_orig: 'A Review of the Times', author: '林樂知(Young John Allen)', era: '1868/1874–1907', place: '上海', language: '漢文', intro: '由美南監理會宣教士林樂知(Young John Allen)創辦，是晚清最具影響力的教會兼時事刊物。面向官紳士大夫與改革精英，廣傳西方政教制度與維新思想，康有為、梁啟超等皆深受其薰染。它由教會刊物躍為輿論重鎮，深刻牽動戊戌變法前後的思想風潮，在近代中西交流史上影響深遠。' },
+          { title_zh: '教務雜誌', title_orig: 'The Chinese Recorder', author: '在華新教宣教士群', era: '1867–1941', place: '福州‧上海', language: '英文', intro: '由在華新教宣教士群體合辦，是在華宣教士最重要的英文機關刊物。以各差會宣教士為讀者，記錄宣教事業、教會動態與差會合作，並刊載大量漢學、民俗與宗教研究。它既是近代在華新教史的第一手檔案，也是西方漢學與中國研究的重要園地，見證中西文化長期互動。' }
+        ],
+      },
     ],
   },
   wai: {
@@ -744,6 +793,20 @@ export const EARLY_MODERN_ERA: DazangEra = {
         works: [
           { title_zh: '近代系統神學教本', title_orig: 'Institutio Theologiae Elencticae', author: '弗朗西斯‧圖雷廷', era: '1679–1685', place: '日內瓦', language: '拉丁文', intro: '改革宗正統盛期神學家圖雷廷的系統神學鉅著，以「辯難式」逐題設問、立論、駁斥對手，涵蓋神論、預定、基督救贖至教會與末世各大題目。論證嚴密、引據賅博，是十七世紀經院化改革宗神學的集大成之作。此書長期作為神學院教本，十九世紀普林斯頓學派奉為圭臬，深刻形塑近代保守長老宗的教義架構，可視為新教系統神學「百科化」的代表。' },
           { title_zh: '克魯登經文彙編', title_orig: 'A Complete Concordance to the Holy Scriptures', author: '亞歷山大‧克魯登', era: '1737', place: '倫敦', language: '英文', intro: '克魯登獨力編纂的英文欽定本聖經全書字詞索引，逐字標出每一語詞在聖經中的出處與上下文,並附人地名與專題小註。此書編排精審、檢索便捷,使傳道人與信徒得以迅速查考經文、比對用語,是英語世界最通行的聖經工具書之一。克魯登一生數度修訂,身後續有增補,流通逾兩百年。它代表近代「以工具書馴服龐大文本」的努力,為解經與講道預備提供基礎設施。' },
+        ],
+      },
+      {
+        key: 'mission-lexicography',
+        label: '宣教辭書與語文部',
+        label_en: 'Missionary Lexicography and Philology',
+        desc: '近代來華宣教士為習漢語、譯經傳教所編的字典、辭書與注音語文工具，多開漢外辭書與漢語拼音之先。',
+        works: [
+          { title_zh: '華英字典', title_orig: 'A Dictionary of the Chinese Language', author: '馬禮遜(Robert Morrison)', era: '1815–1823', place: '澳門', language: '漢文‧英文', intro: '由首位來華基督新教宣教士馬禮遜(Robert Morrison)歷時逾十五載編成，共六大冊，是史上第一部漢英／英漢對照大字典。全書廣收漢字字義、詞例與經史用語，並附部首與音序檢索，為西人習漢語立下典範。馬禮遜編纂之初衷在於譯經傳教，此書遂成其漢譯《聖經》與布道事工的根基，亦深刻影響其後一世紀的漢學與雙語辭書事業。' },
+          { title_zh: '葡漢辭典', title_orig: 'Dicionário Português-Chinês', author: '羅明堅(Michele Ruggieri)、利瑪竇(Matteo Ricci)', era: '約 1583–1588(稿本)', place: '廣東肇慶', language: '葡萄牙文‧漢文', intro: '由耶穌會士羅明堅(Michele Ruggieri)與利瑪竇(Matteo Ricci)在肇慶傳教期間合編的稿本，是史上第一部歐洲語言與漢語對照的辭典。書中以葡萄牙文詞條對應漢字釋義，並嘗試以羅馬字標注字音，反映早期傳教士摸索漢語語音的歷程。此稿長期湮沒於羅馬檔案館，直至近世方被重新發現，為明末中西語言接觸與耶穌會適應策略的珍貴見證。' },
+          { title_zh: '西儒耳目資', title_orig: '西儒耳目資', author: '金尼閣(Nicolas Trigault)', era: '1626', place: '杭州', language: '漢文(羅馬字注音)', intro: '由耶穌會士金尼閣(Nicolas Trigault)在華士人協助下編成，是首部以羅馬字母系統為漢字注音的韻書。全書設聲母、韻母與聲調符號，建立一套完整的拉丁字母拼讀方案，供西儒辨音識字、士人察音解韻之用。此書承接利瑪竇等人的注音嘗試而集其大成，被視為漢語拼音化的先驅，對後世音韻學與漢語羅馬字方案影響深遠。' },
+          { title_zh: '英漢字典', title_orig: 'Chinese and English Dictionary', author: '麥都思(Walter Henry Medhurst)', era: '1842–1843', place: '巴達維亞', language: '英文‧漢文', intro: '由倫敦會宣教士麥都思(Walter Henry Medhurst)在巴達維亞主持的傳教印刷所編印，承馬禮遜之緒而成。全書以英文詞條對應漢字釋義與譯詞，廣採口語與書面用例，便於西人習漢語、譯文獻與布道之需。麥都思精於印刷與漢語，此書用字精審、編排清晰，是十九世紀中葉新教宣教士辭書事業承先啟後的重要一環，亦為其後英漢辭書所取資。' },
+          { title_zh: '英華字典', title_orig: 'English and Chinese Dictionary', author: '羅存德(Wilhelm Lobscheid)', era: '1866–1869', place: '香港', language: '英文‧漢文', intro: '由德裔宣教士羅存德(Wilhelm Lobscheid)在香港編成，分數冊陸續刊行，是十九世紀規模最大的英漢辭書之一。全書收錄大量對應西學新事物的譯詞與新造詞語，涵蓋政治、科學、宗教諸領域。這些譯詞經由幕末明治的日本辭書轉介，再回流影響近代中國，成為東亞新詞匯流的關鍵樞紐，於漢語近代詞彙史與宣教文教事業皆具深遠意義。' },
+          { title_zh: '漢英韻府', title_orig: 'A Syllabic Dictionary of the Chinese Language', author: '衛三畏(Samuel Wells Williams)', era: '1874', place: '上海', language: '漢文‧英文', intro: '由美部會宣教士兼漢學家衛三畏(Samuel Wells Williams)編成，以音節排序、按韻檢字而得名「韻府」。全書廣收漢字字音、字義與詞例，並標注官話與方音讀法，兼具辭書與正音工具之用。衛三畏久居中國、譯經辦報，此書凝聚其畢生漢語造詣，編排嚴謹、釋義詳贍，長期為西人研習漢語與從事宣教、翻譯所倚重，是晚清漢英辭書的集大成之作。' }
         ],
       },
       {
