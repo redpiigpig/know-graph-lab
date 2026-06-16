@@ -1,6 +1,7 @@
 import type { DazangEra } from './types'
 import { ANCIENT_ERA } from './ancient'
 import { MEDIEVAL_ERA } from './medieval'
+import { EARLY_MODERN_ERA } from './early-modern'
 
 export * from './types'
 
@@ -43,16 +44,7 @@ export const ERAS: DazangEra[] = [
   PRE_CHRISTIAN_ERA,
   ANCIENT_ERA,
   MEDIEVAL_ERA,
-  {
-    key: 'early-modern',
-    name: '近代基督教大藏經',
-    name_en: 'Early Modern Christian Canon (1500–1800)',
-    glyph: '近',
-    subtitle: '宗教改革‧反改革‧宣教擴張‧敬虔運動',
-    boundary: '1500 年（宗教改革）至 1800 年。',
-    enabled: false,
-    collections: [],
-  },
+  EARLY_MODERN_ERA,
   {
     key: 'modern',
     name: '現代基督教大藏經',
