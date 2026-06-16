@@ -5,6 +5,7 @@ import { EARLY_MODERN_ERA } from './early-modern'
 import { MODERN_ERA } from './modern'
 
 export * from './types'
+export * from './collection-goals'
 
 // 四個時代：古代 → 中世紀 → 近代 → 現代
 // 仿佛教《大藏經》「正藏／續藏」的切割：古代為「正藏」，中世紀以降為「續藏」。

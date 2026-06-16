@@ -18,6 +18,10 @@
           三軌奠基於「隱密的上帝」與「社會學邊界」：<b>前藏</b>＝邊界劃分之前的原始啟示母體；
           <b>正藏</b>＝群體教會論邊界之內的家族記憶（非啟示壟斷）；<b>外藏</b>＝邊界之外、隱密上帝的平行啟示與神聖見證（「外」無貶義）。
         </p>
+        <NuxtLink
+          to="/dazangjing/about"
+          class="inline-flex items-center gap-1.5 mt-3 text-xs font-medium text-stone-700 hover:text-stone-900 border border-stone-300 hover:border-stone-400 rounded-full px-3 py-1.5 transition"
+        >📖 編纂凡例與分類標準 →</NuxtLink>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
