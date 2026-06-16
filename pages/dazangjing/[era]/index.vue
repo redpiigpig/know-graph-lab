@@ -14,8 +14,8 @@
         <h1 class="text-2xl font-bold text-gray-900 mb-1">{{ era.glyph }}　{{ era.name }}</h1>
         <p class="text-sm text-gray-500">{{ era.subtitle }}</p>
         <p v-if="era.boundary" class="text-xs text-gray-400 mt-1.5 leading-relaxed">📐 年代結界：{{ era.boundary }}</p>
-        <p v-if="!allSole" class="text-xs text-gray-400 mt-1 leading-relaxed">每一藏分「正藏」（尼西亞教會接受）與「外藏」（分類對照但不被接受）兩套平行目錄，各為獨立頁面。</p>
-        <p v-else class="text-xs text-gray-400 mt-1 leading-relaxed">基督教之前無正藏／外藏之分，僅立「前藏」一套目錄。</p>
+        <p v-if="!allSole" class="text-xs text-gray-400 mt-1 leading-relaxed">每一藏分「正藏」（教會論邊界之內的群體記憶）與「外藏」（邊界之外、隱密上帝的平行啟示與見證，「外」無貶義）兩套平行目錄，各為獨立頁面。</p>
+        <p v-else class="text-xs text-gray-400 mt-1 leading-relaxed">基督教之前無正／外之分，僅立「前藏」——邊界劃分之前的原始啟示母體。</p>
       </div>
 
       <!-- 十藏快速切換 -->
@@ -66,8 +66,8 @@
       </div>
 
       <div class="mt-8 text-xs text-gray-400 leading-relaxed border-t border-gray-200 pt-4">
-        <p v-if="!allSole">綠＝正藏（尼西亞教會接受）；灰＝外藏（偽典／異端／猶太教／外教見證，分類與正藏對照）。數字為該目錄卷數。</p>
-        <p v-else>「前藏」收錄基督教與猶太教之前、對其有影響的古代異教起源文獻。數字為卷數。</p>
+        <p v-if="!allSole">綠＝正藏（教會論／社會學邊界之內的群體記憶）；灰＝外藏（邊界之外、隱密上帝的平行啟示與神聖見證，無貶義）。數字為該目錄卷數。</p>
+        <p v-else>「前藏」＝邊界劃分之前的原始啟示母體——普遍之道在人類文明初期的漫溢、全人類共享的屬靈資產。數字為卷數。</p>
       </div>
     </div>
   </div>

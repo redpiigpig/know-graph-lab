@@ -169,7 +169,6 @@ export const MODERN_ERA: DazangEra = {
           { title_zh: '相遇中的真理', title_orig: 'Wahrheit als Begegnung', author: '布倫納（Emil Brunner）', era: '1938', place: '瑞士', language: '德文', intro: '布倫納與巴特同屬辯證神學陣營，卻在「自然神學」與「接觸點」議題上與之決裂。他主張人雖墮落仍存上帝形像的形式殘餘，可作啟示的接觸點，真理不是抽象命題而是位格的相遇。本書發展其「我與你」的真理觀，將位格相遇置於信仰知識論核心，是新正統內部分歧與人格主義神學的重要文獻。' },
           { title_zh: '新約與神話學', title_orig: 'Neues Testament und Mythologie', author: '布特曼（Rudolf Bultmann）', era: '1941', place: '德國', language: '德文', intro: '布特曼提出「去神話化」綱領，主張新約以第一世紀神話宇宙觀包裹福音，現代人無法照字面接受，須以存在主義詮釋抽繹其生存呼召。福音的核心不在神蹟史實而在向人發出的本真存在抉擇。此文引爆二十世紀最激烈的詮釋學論戰，深刻形塑歷史耶穌研究、聖經詮釋與存在神學的走向。' },
           { title_zh: '作門徒的代價', title_orig: 'Nachfolge', author: '潘霍華（Dietrich Bonhoeffer）', era: '1937', place: '德國', language: '德文', intro: '潘霍華在納粹陰影下寫成，痛斥「廉價恩典」即不需悔改、不需作門徒的恩典，呼籲信徒付上「重價恩典」的代價跟隨基督。書中以登山寶訓為核心，闡明順服與信心不可分割，呼召教會在極權時代具體地背十字架。此書是二十世紀屬靈經典，亦預示作者日後以身殉道的抉擇。' },
-          { title_zh: '獄中書簡', title_orig: 'Widerstand und Ergebung', author: '潘霍華（Dietrich Bonhoeffer）', era: '1951', place: '德國', language: '德文', intro: '潘霍華因參與抵抗希特勒被囚後，於獄中寫給友人與家人的書信與札記結集。其中提出「成年世界」中的「非宗教詮釋」、「無宗教的基督教」與「為他人而存在的教會」等斷片式構想，震撼戰後神學界，啟發世俗神學與上帝之死運動。字裡行間兼具神學銳見與殉道者的信仰平安，於作者就義後出版。' },
           { title_zh: '人的本性與命運', title_orig: 'The Nature and Destiny of Man', author: '尼布爾（Reinhold Niebuhr）', era: '1941–1943', place: '美國', language: '英文', intro: '尼布爾的吉福德講座，以基督教現實主義剖析人性。他主張人既是受造有限又有自我超越，焦慮中以驕傲與情慾陷入罪，個人或可成聖而群體罪性難除。本書批判自由派的進步樂觀與正統的悲觀宿命，重提原罪的現實意涵，深刻影響美國公共神學、政治倫理與冷戰時代的道德思考。' }
         ]
       },
@@ -702,7 +701,6 @@ export const MODERN_ERA: DazangEra = {
         label_en: 'Global and Contextual Mission',
         desc: '普世宣教運動文獻、本色化神學與華人福音運動的宣教實踐。',
         works: [
-          { title_zh: '洛桑信約', title_orig: 'The Lausanne Covenant', author: '洛桑世界福音化大會', era: '一九七四年', place: '瑞士洛桑', language: '英文', intro: '一九七四年第一屆洛桑世界福音化大會通過的宣言，由斯托得（John Stott）主筆起草。文件重申聖經權威與普世宣教的迫切，並將社會關懷納入福音使命，平衡傳福音與社會責任。此信約成為當代福音派宣教神學的綱領性文獻，引領其後數十年的全球宣教運動。' },
           { title_zh: '本色化神學論集', title_orig: 'Essays on Contextual Theology', author: '宋泉盛等', era: '二十世紀後半', place: '亞洲', language: '中文‧英文', intro: '亞洲、非洲與拉美神學家探討福音如何在本土文化處境中生根的論述彙編，主張神學須回應在地的歷史、苦難與宗教經驗。此一處境化進路挑戰西方宣教的文化包袱，推動宣教由「移植」轉向「道成肉身」式的本色見證，是現代普世宣教思想的重要轉折。' },
           { title_zh: '中國福音化異象', title_orig: 'The China Evangelization Vision', author: '趙天恩', era: '一九七〇–二〇〇四年', place: '香港‧台灣', language: '中文', intro: '華人宣教學者趙天恩提出「三化異象」——中國福音化、教會國度化、文化基督化——的宣教論述與文獻彙編。其畢生致力於中國教會史研究與福音運動推展，將普世宣教關懷落實於華人處境，是二十世紀末華人本色宣教思想的代表，故收於全球與處境宣教部。' }
         ]

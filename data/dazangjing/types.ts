@@ -110,9 +110,12 @@ export interface DazangCollection {
 
 export type CanonKey = 'zheng' | 'wai'
 
+// 三軌定義（user 2026-06-16 神學重構，奠基於「隱密的上帝」與「社會學邊界」）：
+//   正藏不代表啟示壟斷或絕對無誤，僅是群體為維繫認同所劃下的「教會論邊界之內」的家族記憶；
+//   外藏無貶義，僅標示「社會學邊界之外」——隱密的上帝按其自由所開展的平行啟示與神聖見證。
 export const CANON_LABEL: Record<CanonKey, { zh: string; en: string; desc: string }> = {
-  zheng: { zh: '正藏', en: 'Canonical', desc: '尼西亞教會（大公傳統）接受的文獻' },
-  wai: { zh: '外藏', en: 'Extra-Canonical', desc: '分類與正藏對照、但不被尼西亞教會接受（偽典／異端／猶太教／外教見證）' },
+  zheng: { zh: '正藏', en: 'Within the Boundary', desc: '基督教群體為維繫自身認同所劃下的「教會論與社會學邊界」之內的歷史紀錄——群體的家族記憶與自我建構，並非啟示的壟斷或絕對無誤。' },
+  wai: { zh: '外藏', en: 'Beyond the Boundary', desc: '隱密的上帝在群體邊界之外、按其絕對自由所開展的平行啟示與神聖見證；「外」僅標示社會學邊界之外，並無貶義。' },
 }
 
 /** 一個時代（古代／中世紀／近代／現代） */

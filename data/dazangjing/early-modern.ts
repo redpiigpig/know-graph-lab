@@ -220,7 +220,6 @@ export const EARLY_MODERN_ERA: DazangEra = {
         works: [
           { title_zh: '思想錄', title_orig: 'Pensées', author: '布萊茲‧巴斯卡', era: '一六七〇', place: '法蘭西‧巴黎', language: '法文', intro: '數學家兼神學家巴斯卡未竟的護教學遺稿，由後人輯為片斷集。書中剖析人性的偉大與悲慘、理性的限度與心的理由，著名的「巴斯卡賭注」論證信仰上帝在理性上仍屬明智之選。巴斯卡反對純理性的自然神學，主張唯藉耶穌基督方能認識上帝。文字警策深邃，兼具哲思與靈性，是法語護教文學不朽之作。' },
           { title_zh: '類比論', title_orig: 'The Analogy of Religion, Natural and Revealed', author: '約瑟‧巴特勒', era: '一七三六', place: '英格蘭‧倫敦', language: '英文', intro: '英國國教主教巴特勒回應自然神論之護教鉅著，主張自然界與啟示宗教之間存在類比關係：人若接受自然界的奧秘與不確定，便無理由僅因啟示有奧秘而拒之。巴特勒以蓋然性論證反駁理神論者對神蹟與啟示的質疑，論理穩健周密。此書被視為十八世紀英語護教學的最高成就,影響紐曼等後世思想家。' },
-          { title_zh: '自然神學', title_orig: 'Natural Theology', author: '威廉‧佩利', era: '一八〇二', place: '英格蘭‧倫敦', language: '英文', intro: '佩利闡發設計論證的經典著作，以「鐘表匠類比」聞名：荒野拾得鐘表，必推知有製造者；觀察自然界精巧的設計，亦必推知有造物的智慧設計者。佩利廣引生物器官的精密構造為證，論述上帝的存在與屬性。此書是達爾文之前自然神學的集大成之作，深刻影響維多利亞時代的宗教思想,也成為後來演化論論戰的核心對象。' }
         ]
       }
     ]
@@ -426,7 +425,6 @@ export const EARLY_MODERN_ERA: DazangEra = {
         label_en: 'Rationalist Biblical Criticism',
         desc: '啟蒙思想家以理性與歷史眼光檢視聖經,動搖其神聖權威的傳統根基。',
         works: [
-          { title_zh: '神學政治論', title_orig: 'Tractatus Theologico-Politicus', author: '斯賓諾莎 (Baruch Spinoza)', era: '一六七〇年', place: '阿姆斯特丹 (匿名刊行)', language: '拉丁文', intro: '斯賓諾莎匿名刊行之作,主張當以理性與歷史方法考察聖經,析論摩西五經的成書、先知的性質與神蹟的可解,否定字面默示之說。他把聖經視為人類歷史的文獻而非超然天啟,被尊為近代聖經批判學的開山,其論點震動教界,亦為政教分離與思想自由張本。' },
           { title_zh: '殘篇', title_orig: 'Fragmente eines Ungenannten (Wolfenbütteler Fragmente)', author: '雷馬魯斯 (Hermann Samuel Reimarus)', era: '一七七四至一七七八年遺稿刊行', place: '漢堡‧渥爾芬比特爾', language: '德文', intro: '漢堡學者雷馬魯斯生前秘不示人的遺稿,由萊辛以無名氏「殘篇」之名陸續刊布。文中以理性論駁神蹟與復活,區分歷史上的耶穌與門徒所傳的基督,直指福音乃門徒所造。其說掀起軒然大波,被視為「歷史耶穌的探尋」之濫觴,深刻轉變了近代福音書研究的方向。' }
         ]
       }
