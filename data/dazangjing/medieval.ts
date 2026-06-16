@@ -452,7 +452,7 @@ export const MEDIEVAL_ERA: DazangEra = {
 },
     {
   key: 'shuxin',
-  name: '書信藏',
+  name: '書函藏',
   name_en: 'Letters and Decretals',
   glyph: '函',
   genres: '牧函‧詔書‧尺牘',
@@ -595,7 +595,7 @@ export const MEDIEVAL_ERA: DazangEra = {
 },
     {
   key: 'shiwen',
-  name: '詩文藏',
+  name: '詩藝藏',
   name_en: 'Poetry and Arts Treasury',
   glyph: '詩',
   genres: '聖詠‧史詩‧戲劇‧藝術',

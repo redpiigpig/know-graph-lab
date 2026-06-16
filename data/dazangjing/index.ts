@@ -41,13 +41,26 @@ const PRE_CHRISTIAN_ERA: DazangEra = {
   ],
 }
 
+// 十藏定稿順序（user 2026-06-16，word-2 最後結論）：經‧律‧論‧宣‧函‧儀‧詩‧譯‧史‧類。
+// 各時代資料檔內部可任意排列；此處統一依 CANON_ORDER 重排，作為全站顯示順序的單一真相。
+export const CANON_ORDER = ['jing', 'lu', 'lun', 'xuandao', 'shuxin', 'liyi', 'shiwen', 'yijiao', 'shizhuan', 'leishu']
+
+function orderCollections(era: DazangEra): DazangEra {
+  return {
+    ...era,
+    collections: [...era.collections].sort(
+      (a, b) => CANON_ORDER.indexOf(a.key) - CANON_ORDER.indexOf(b.key),
+    ),
+  }
+}
+
 export const ERAS: DazangEra[] = [
   PRE_CHRISTIAN_ERA,
   ANCIENT_ERA,
   MEDIEVAL_ERA,
   EARLY_MODERN_ERA,
   MODERN_ERA,
-]
+].map(orderCollections)
 
 export function findEra(key: string): DazangEra | undefined {
   return ERAS.find(e => e.key === key)

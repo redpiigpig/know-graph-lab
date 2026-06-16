@@ -475,7 +475,7 @@ export const EARLY_MODERN_ERA: DazangEra = {
 },
     {
   key: 'shuxin',
-  name: '書信藏',
+  name: '書函藏',
   name_en: 'Canon of Epistles and Encyclicals',
   glyph: '函',
   genres: '牧函‧通諭‧宣教書簡',
@@ -617,8 +617,8 @@ export const EARLY_MODERN_ERA: DazangEra = {
 },
     {
   key: 'shiwen',
-  name: '詩文藏',
-  name_en: 'The Poetry & Letters Canon',
+  name: '詩藝藏',
+  name_en: 'Poetry and Arts Treasury',
   glyph: '詩',
   genres: '聖詩‧史詩‧寓言文學',
   summary: '收一五〇〇至一九〇〇年間以詩歌、史詩與寓言承載信仰的文學典籍。正藏分聖詩、宗教史詩與文學、神祕與默想詩三部,自會眾傳唱的聖詩,到彌爾頓的恢宏史詩、班揚的天路寓言,再到神祕主義者的默想詩篇,呈現近代基督教如何藉文學想像表達救恩、罪愆與靈魂與神的契合；外藏錄新興宗教詩文與啟蒙時代的哲理詩,以見宗教情感在主流之外與新思潮中的多樣表達。',

@@ -5,7 +5,7 @@ export const MODERN_ERA: DazangEra = {
   key: 'modern',
   name: '現代基督教大藏經',
   name_en: 'Modern Christian Canon',
-  glyph: '現',
+  glyph: '今',
   subtitle: '普世合一運動‧新正統與處境神學‧全球與漢語基督教',
   boundary: '按時代精神斷代——以 1910 年愛丁堡世界宣教會議開啟的普世合一運動為主軸：約 1900／1910 至今。',
   enabled: true,
@@ -443,7 +443,7 @@ export const MODERN_ERA: DazangEra = {
 },
     {
   key: 'shuxin',
-  name: '書信藏',
+  name: '書函藏',
   name_en: 'Canon of Letters and Encyclicals',
   glyph: '函',
   genres: '通諭‧普世合一書信‧牧函',
@@ -593,8 +593,8 @@ export const MODERN_ERA: DazangEra = {
 },
     {
   key: 'shiwen',
-  name: '詩文藏',
-  name_en: 'Poetry & Literature Canon',
+  name: '詩藝藏',
+  name_en: 'Poetry and Arts Treasury',
   glyph: '詩',
   genres: '文學‧聖詩‧藝術',
   summary: '收錄二十世紀以降的基督教文學、現代聖詩與靈修詩篇，自陀思妥耶夫斯基的承先，至路易斯、托爾金、艾略特、奧康納、遠藤周作的小說與戲劇，及霍普金斯、湯瑪斯的詩藝；外藏以拉斯塔法里與雷鬼神學的讚美詩為主軸，旁及新興宗教靈性文學。',
