@@ -33,20 +33,24 @@ CODE_KW = ["```", "console.log", "def ", "function ", "import ", "程式碼",
            "python", "javascript", "npm ", "報錯", "stack trace", "編譯"]
 IMAGE_KW = ["畫一", "畫個", "幫我畫", "生成圖", "生成一張", "做一張圖", "DALL",
             "插圖", "示意圖", "logo", "海報"]
+POST_KW = ["貼文", "po文", "PO文", "發文", "粉專", "粉絲專頁", "臉書", "facebook",
+           "instagram", "限動", "文案", "宣傳", "公告", "推文"]
 
 LEDGER_DIR = Path("c:/tmp")
 
 SYSTEM = (
-    "你是一位對話分類助理。使用者想刪掉兩類對話：(1) coding=寫程式/除錯/技術實作"
-    "（請求或回應主要在寫程式碼、debug、設定環境、API 串接等）；(2) image=請 AI"
-    "生成圖片/插圖/海報/logo（DALL·E 類繪圖請求）。其餘一律 keep——尤其是哲學、"
-    "宗教學、學術、寫作、翻譯、一般問答，即使夾帶程式或圖片詞彙也要 keep。\n"
-    "判斷依對話的『主要目的』，不要因為偶爾提到一個技術詞就誤判。"
+    "你是一位對話分類助理。使用者想刪掉三類對話：\n"
+    "(1) coding=寫程式/除錯/技術實作（請求或回應主要在寫程式碼、debug、設定環境、API 串接等）；\n"
+    "(2) image=請 AI 生成圖片/插圖/海報/logo（DALL·E 類繪圖請求，含後續修圖往返）；\n"
+    "(3) post=社群貼文/行銷文案/公告草稿（請 AI 幫忙寫臉書/IG/粉專貼文、宣傳文案、"
+    "活動公告、網站更新通知等對外發佈的短文）。\n"
+    "其餘一律 keep——尤其是哲學、宗教學、學術研究、論文/書籍寫作、翻譯、一般問答，"
+    "即使夾帶程式/圖片/貼文詞彙也要 keep。判斷依對話的『主要目的』，不要因為偶爾提到一個詞就誤判。"
 )
 
 PROMPT_TMPL = (
-    "逐則判斷下列對話屬於 coding / image / keep。嚴格只輸出 JSON 陣列：\n"
-    '  {{"i": <編號>, "label": "coding"|"image"|"keep"}}\n'
+    "逐則判斷下列對話屬於 coding / image / post / keep。嚴格只輸出 JSON 陣列：\n"
+    '  {{"i": <編號>, "label": "coding"|"image"|"post"|"keep"}}\n'
     "不要任何說明文字。\n\n對話：\n{items}"
 )
 
@@ -68,7 +72,7 @@ def llm_label(batch: list[dict]) -> list[dict]:
 
 def candidate_ids(table: str) -> set[str]:
     ids: set[str] = set()
-    for kw in CODE_KW + IMAGE_KW:
+    for kw in CODE_KW + IMAGE_KW + POST_KW:
         flt = f"prompt.ilike.*{kw}*,response.ilike.*{kw}*"
         offset, page = 0, 1000
         while True:
@@ -120,7 +124,7 @@ def run(source: str, batch_size: int, execute: bool, limit: int | None) -> None:
     print(f"ledger 已判 {len(done)}・待判 {len(todo)}", flush=True)
 
     lf = ledger.open("a", encoding="utf-8")
-    samples = {"coding": [], "image": []}
+    samples = {"coding": [], "image": [], "post": []}
     try:
         for i in range(0, len(todo), batch_size):
             ids = todo[i:i + batch_size]
@@ -135,7 +139,7 @@ def run(source: str, batch_size: int, execute: bool, limit: int | None) -> None:
             vmap = {v.get("i"): v for v in verdicts if isinstance(v, dict)}
             for idx, d in enumerate(rows):
                 label = (vmap.get(idx, {}) or {}).get("label", "keep")
-                if label not in ("coding", "image", "keep"):
+                if label not in ("coding", "image", "post", "keep"):
                     label = "keep"
                 lf.write(json.dumps({"id": d["id"], "label": label}, ensure_ascii=False) + "\n")
                 done[d["id"]] = label
@@ -146,12 +150,13 @@ def run(source: str, batch_size: int, execute: bool, limit: int | None) -> None:
     finally:
         lf.close()
 
-    to_del = [i for i, l in done.items() if l in ("coding", "image") and i in set(cand)]
+    to_del = [i for i, l in done.items() if l in ("coding", "image", "post") and i in set(cand)]
     n_code = sum(1 for l in done.values() if l == "coding")
     n_img = sum(1 for l in done.values() if l == "image")
+    n_post = sum(1 for l in done.values() if l == "post")
     n_keep = sum(1 for l in done.values() if l == "keep")
-    print(f"\n判定結果：coding {n_code}・image {n_img}・keep {n_keep}", flush=True)
-    for lab in ("coding", "image"):
+    print(f"\n判定結果：coding {n_code}・image {n_img}・post {n_post}・keep {n_keep}", flush=True)
+    for lab in ("coding", "image", "post"):
         if samples[lab]:
             print(f"  {lab} 樣本：", flush=True)
             for s in samples[lab]:
