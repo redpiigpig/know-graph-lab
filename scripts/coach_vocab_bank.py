@@ -125,12 +125,26 @@ def _gemini_json(prompt, system):
     raise RuntimeError("all Gemini keys exhausted")
 
 
-def _haiku_json(prompt, system):
-    T._refresh_anthropic_client_if_creds_changed()
-    msg = T._anthropic_client.messages.create(
-        model=T.HAIKU_MODEL, max_tokens=8000,
-        system=system, messages=[{"role": "user", "content": prompt}])
-    return "".join(b.text for b in msg.content if hasattr(b, "text")).strip()
+def _haiku_json(prompt, system, _tries=4):
+    """Haiku（Claude Max OAuth）。401＝token 已輪替 → 強制重讀 credentials.json 再試；
+    429＝Max rolling-window → 等過再試（與 translate 的 _anthropic_translate 同策略）。"""
+    last = None
+    for attempt in range(_tries):
+        T._refresh_anthropic_client_if_creds_changed()
+        try:
+            msg = T._anthropic_client.messages.create(
+                model=T.HAIKU_MODEL, max_tokens=8000,
+                system=system, messages=[{"role": "user", "content": prompt}])
+            return "".join(b.text for b in msg.content if hasattr(b, "text")).strip()
+        except T._anthropic.AuthenticationError:
+            T._anthropic_client_cred_mtime = 0.0  # 逼下次 refresh 重建 client（讀新 token）
+            last = "401"
+            continue
+        except T._anthropic.RateLimitError:
+            time.sleep(20 * (attempt + 1))
+            last = "429"
+            continue
+    raise RuntimeError(f"Haiku failed after {_tries} tries (last={last})")
 
 
 def _parse_json_array(text):
@@ -158,15 +172,24 @@ _nv_fail_streak = 0
 _nv_cooldown_until = 0.0
 
 
-def llm_json(prompt, system):
-    """回 list[dict]；NVIDIA→Gemini→Haiku，各自失敗就換下一個引擎。NVIDIA 2-strike 後暫停改走 Gemini→Haiku。"""
+def llm_json(prompt, system, engine="auto"):
+    """回 list[dict]；engine=auto 走 NVIDIA→Gemini→Haiku（NVIDIA 2-strike 後暫停改走 Gemini→Haiku）；
+    engine=haiku/nvidia/gemini 則強制單一引擎（用於某些引擎已耗盡額度時直攻可用的那個）。"""
     global _nv_fail_streak, _nv_cooldown_until
     errs = []
-    engines = []
-    if time.time() >= _nv_cooldown_until:  # 冷卻期內就跳過 NVIDIA
-        engines.append(("NVIDIA", lambda: T.nvidia_chat(prompt, max_tokens=7000, system=system, temperature=0.3, deadline_s=90)))
-    engines.append(("Gemini", lambda: _gemini_json(prompt, system)))
-    engines.append(("Haiku", lambda: _haiku_json(prompt, system)))
+    _ENG = {
+        "nvidia": ("NVIDIA", lambda: T.nvidia_chat(prompt, max_tokens=7000, system=system, temperature=0.3, deadline_s=90)),
+        "gemini": ("Gemini", lambda: _gemini_json(prompt, system)),
+        "haiku": ("Haiku", lambda: _haiku_json(prompt, system)),
+    }
+    if engine in _ENG:
+        engines = [_ENG[engine]]
+    else:
+        engines = []
+        if time.time() >= _nv_cooldown_until:  # 冷卻期內就跳過 NVIDIA
+            engines.append(_ENG["nvidia"])
+        engines.append(_ENG["gemini"])
+        engines.append(_ENG["haiku"])
     for name, fn in engines:
         try:
             out = _parse_json_array(fn())
@@ -454,7 +477,7 @@ def _load_done(lang):
     return done
 
 
-def cmd_gloss(lang, limit=None):
+def cmd_gloss(lang, limit=None, engine="auto"):
     cands = [json.loads(l) for l in candidates_path(lang).open(encoding="utf-8")]
     done = _load_done(lang)
     pending = [c for c in cands if c["word"] not in done]
@@ -471,7 +494,7 @@ def cmd_gloss(lang, limit=None):
     for i in range(0, len(pending), GLOSS_BATCH):
         batch = pending[i:i + GLOSS_BATCH]
         try:
-            res = llm_json(_gloss_prompt(lang, batch), _gloss_system(lang))
+            res = llm_json(_gloss_prompt(lang, batch), _gloss_system(lang), engine=engine)
         except Exception as e:  # noqa: BLE001
             print(f"  ! batch {i//GLOSS_BATCH} 全引擎失敗，跳過：{str(e)[:120]}", flush=True)
             continue
@@ -532,6 +555,7 @@ def main():
     ap.add_argument("lang", nargs="?", default="all")
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--force", action="store_true")
+    ap.add_argument("--engine", choices=["auto", "haiku", "nvidia", "gemini"], default="auto")
     a = ap.parse_args()
     if a.cmd == "status":
         cmd_status()
@@ -543,7 +567,7 @@ def main():
         if a.cmd in ("harvest", "run"):
             cmd_harvest(lang, force=a.force)
         if a.cmd in ("gloss", "run"):
-            cmd_gloss(lang, limit=a.limit)
+            cmd_gloss(lang, limit=a.limit, engine=a.engine)
 
 
 if __name__ == "__main__":
