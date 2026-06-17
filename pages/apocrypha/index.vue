@@ -1,11 +1,10 @@
 <template>
   <div class="flex flex-col bg-slate-50 min-h-dvh">
-    <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 z-30">
-      <NuxtLink to="/scripture-canon/christianity" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
-      <div class="w-px h-5 bg-gray-200" />
-      <span class="text-sm font-semibold text-gray-900">典外文獻搜索</span>
-      <span class="text-xs text-gray-400 ml-1">{{ filteredDocs.length }} 份 / {{ versions.length }} 個版本</span>
-    </nav>
+    <AppHeader title="典外文獻搜索" :back="{ to: '/scripture-canon/christianity', label: '經典對照' }" container-class="max-w-6xl">
+      <template #actions>
+        <span class="text-xs text-gray-400">{{ filteredDocs.length }} 份 / {{ versions.length }} 個版本</span>
+      </template>
+    </AppHeader>
 
     <div class="flex-1 max-w-6xl w-full mx-auto px-6 py-10">
       <div class="mb-6">
