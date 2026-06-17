@@ -1571,11 +1571,13 @@ q-peter-preaching / christian-sibyl / orphica / joseph-prayer
 | **judith** | 62.2% | **96.2%** (326/339, ch1-16 全到) |
 | **2-maccabees** | 83.4% | **99.8%** (554/555) |
 | **3-maccabees** | 82.9% | **94.7%** (216/228) |
-| **jubilees** | 84.1% | **86.4%** (1128/1305) |
+| **jubilees** | 84.1% | **97.9%** (1277/1305, ch1-50 全到, 只剩 ch21) |
 
-**5. ⚠️ 廣域隱患＋未竟**：
-- **不是所有 ebook 都回填全文**：第5/6冊＝700+ 字/頁（完整）；**第4冊 `a96b524b`＝200 字/頁 preview（未回填）**，full-width-dash 重複本 `3f241acf` 是空殼。故 **jubilees（第4冊）無法 raw 重建**，只能用舊 cct_zh 全文快照（61K 字、尾部混入整冊索引垃圾、被 clamp 丟）。jubilees 缺 ch17/20/21/46-50：ch46-50（摩西敘事 p139-146）疑似舊快照本身就缺 → 需重抓 **Drive Vision OCR JSONL** 才補得到。其他用第4冊的 OT 偽典若要 raw 重建，得先補全文回填。
-- 重建後的 judith/2-macc/3-macc 快照存 `_apoc_snapshots/`（gitignore，但已 force-add 作 durable source，仿 1-enoch/sirach）。
+**5. jubilees → Drive JSONL 全文重抓（97.9%）**：
+- **根因**：第4冊 ebook `a96b524b` 的 `ebook_chunks` 只回填 200 字/頁 **preview**（restore_apocrypha_fulltext.py 對 OT4 沒生效），full-width-dash 重複本 `3f241acf` 是空殼 → 無法 raw 重建。舊 cct_zh 快照（61K 字）尾部混整冊索引垃圾、且本身缺 ch46-50（摩西敘事）。
+- **修法**：全文一直在 **Drive Vision OCR JSONL** `G:/我的雲端硬碟/資料/電子書/_chunks/{ebook_id}.jsonl`（每頁 `content` 全文，427 records）。直接讀 JSONL **p6-146**（卷七，p147 起卷八雅各天梯）重建快照＝**88,726 字**（含 ch46-50、無垃圾）→ `align_to_convergence` accumulate → **86.4%→97.9%**（補回 ch17/20/46-50；剩 ch21 一章）。
+- **⚠️ 廣域隱患仍在**：第4冊整冊 ebook_chunks 未回填全文。其他用第4冊的 OT 偽典（卷八雅各天梯/卷九雅尼…）要 raw 重建前，先跑 `restore_apocrypha_fulltext.py` OT4 或直接讀該 JSONL。第5/6冊＝700+ 字/頁（完整、可 raw 重建）。
+- 重建後的 judith/2-macc/3-macc/jubilees 快照存 `_apoc_snapshots/`（gitignore，但已 force-add 作 durable source，仿 1-enoch/sirach）。
 
 **🖥️ 監督交接（2026-06-14 06:50 更新，整夜 phase2b 收工 + 交棒新 session）**：
 > **整夜結果**：phase2b（overnight2.py）已 `[PHASE2] DONE` 乾淨退出。force batch 13 卷全跑完；**jubilees FRESH 完成 = 污染 1115 zh-own 清除、對齊完整 1305 節 Charles 骨架、accum pass1-4 = 69→81→82→84.1%（1098/1305，chapter/verse 正確）**。途中抓到並修掉一個資料遺失 bug（見下），baruch 已還原。
