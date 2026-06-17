@@ -29,8 +29,8 @@ const CAND_SCHEMA = {
           title_zh: { type: 'string' }, title_orig: { type: 'string' },
           author: { type: 'string' }, era: { type: 'string' },
           place: { type: 'string' }, language: { type: 'string' },
-          division: { type: 'string' }, intro: { type: 'string' },
-          source_citation: { type: 'string' },
+          division: { type: 'string' }, parent: { type: 'string' }, extent: { type: 'string' },
+          intro: { type: 'string' }, source_citation: { type: 'string' },
         },
         required: ['title_zh', 'author', 'era', 'place', 'language', 'intro', 'source_citation'],
       },
@@ -57,6 +57,8 @@ const batches = await parallel(sources.map((src) => () =>
     `收錄範圍：\n- ${scope.join('\n- ')}\n\n` +
     `請**僅**根據權威來源「${src}」，列出 8–15 部「符合此時代×藏×正/外、且尚未被收錄」的真實文獻。\n` +
     `每部需給：title_zh(繁體中文定名，沿用良好古譯、託名不寫偽)、title_orig(原文/西文名)、author(或傳說作者)、era(寫作年代)、place(寫作地點)、language、division(建議歸入的「部」名)、intro(100–160字繁中簡介)、source_citation(出處：書目/頁碼/可查證網址)。\n` +
+    `合集處理：遇「合集」（塔木德／聖訓集／摩門經／全集等）請枚舉其正典子單位為個別卷，各標 parent(母合集名)；子單位太短碎者則整部一卷並以 extent(內部規模，如「63 篇」)標示。\n` +
+    `廣度：本藏正藏目標至少 100 卷，請盡量周延列舉（含次要但真實的文獻），但仍須真實可查。\n` +
     `鐵則：寧缺勿濫，任何不確定其真實存在或 metadata 者一律不列。`,
     { label: `research:${String(src).slice(0, 20)}`, phase: 'Research', schema: CAND_SCHEMA },
   ).then((r) => (r?.works || []))))
@@ -70,10 +72,21 @@ for (const w of cands) {
   seen.add(k)
   fresh.push(w)
 }
-log(`候選 ${cands.length} 筆 → 去重(對既有${existing.size}筆)後 ${fresh.length} 筆待查核`)
+log(`候選 ${cands.length} 筆 → 對既有去重(${existing.size}筆)後 ${fresh.length} 筆`)
+
+phase('Consolidate')
+let merged = fresh
+if (fresh.length > 1) {
+  const m = await agent(
+    `以下多來源候選書目可能含「同一部書、不同譯名」的近似重複。請合併重複者：每部只留一筆，選 metadata 最完整者、title_zh 取最通行定名，保留 parent/extent/division。輸出去重後清單。\n${JSON.stringify(fresh)}`,
+    { label: 'consolidate', phase: 'Consolidate', schema: CAND_SCHEMA },
+  )
+  if (m && m.works && m.works.length) merged = m.works
+}
+log(`近似重複合併：${fresh.length} → ${merged.length}`)
 
 phase('Verify')
-const verified = await parallel(fresh.map((w) => () =>
+const verified = await parallel(merged.map((w) => () =>
   agent(
     `對抗式查核這筆大藏經候選書目是否為「真實存在的文獻」且 metadata 正確。預設懷疑，查不到可靠佐證就判 isReal=false。\n` +
     `候選：${JSON.stringify(w)}\n` +
@@ -85,11 +98,12 @@ const proposed = verified
   .filter(Boolean)
   .filter((w) => w._isReal && (w._confidence ?? 0) >= 0.6)
 
-log(`查核通過 ${proposed.length} / ${fresh.length} 筆，產出待審提案`)
+log(`查核通過 ${proposed.length} / ${merged.length} 筆，產出待審提案`)
 return {
   target: { era: a.era, collection: a.collection, canon: a.canon },
   candidateCount: cands.length,
   freshCount: fresh.length,
+  mergedCount: merged.length,
   proposedCount: proposed.length,
   proposed,
 }
