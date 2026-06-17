@@ -1,13 +1,7 @@
 <template>
   <div v-if="report" class="min-h-screen bg-slate-50">
 
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
-      <div class="max-w-6xl mx-auto px-6 h-14 flex items-center gap-4">
-        <NuxtLink to="/research-data/taiwan-methodist/pong-reports" class="text-gray-400 hover:text-gray-700 transition text-sm">← 龐君華牧師歷年事工報告</NuxtLink>
-        <span class="text-gray-200">|</span>
-        <span class="text-sm font-medium text-gray-700 truncate">第 {{ report.sessionNumber }} 屆 · {{ report.title }}</span>
-      </div>
-    </nav>
+    <AppHeader :title="`第 ${report.sessionNumber} 屆 · ${report.title}`" :back="{ to: '/research-data/taiwan-methodist/pong-reports', label: '事工報告' }" container-class="max-w-6xl" />
 
     <div class="max-w-6xl mx-auto px-6 py-8 grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
 

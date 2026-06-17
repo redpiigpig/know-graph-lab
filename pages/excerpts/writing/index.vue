@@ -1,23 +1,10 @@
 <template>
   <div class="min-h-screen bg-gray-50">
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-14">
-          <div class="flex items-center gap-2 text-sm text-gray-500">
-            <NuxtLink to="/excerpts" class="hover:text-blue-600 transition flex items-center gap-1.5">
-              <img src="/logo_image.jpg" alt="logo" class="w-5 h-5 rounded object-cover" />
-              <span>書摘庫</span>
-            </NuxtLink>
-            <span>›</span>
-            <span class="font-semibold text-purple-700">著作書摘</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <button @click="showCreate = true" class="text-xs px-3 py-1.5 rounded-lg bg-purple-600 text-white hover:bg-purple-500 transition">+ 新增著作頁面</button>
-            <button @click="handleLogout" class="text-gray-500 hover:text-red-600 transition text-sm">登出</button>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <AppHeader title="著作書摘" :back="{ to: '/excerpts', label: '書摘庫' }" container-class="max-w-5xl">
+      <template #actions>
+        <button @click="showCreate = true" class="text-xs px-3 py-1.5 rounded-lg bg-purple-600 text-white hover:bg-purple-500 transition">+ 新增著作頁面</button>
+      </template>
+    </AppHeader>
 
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <div class="flex items-center gap-4 mb-8">

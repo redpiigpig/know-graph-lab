@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-slate-50">
 
-    <AppHeader title="論文資料整理" :back="{ to: '/', label: '返回主頁' }" container-class="max-w-5xl" :editable="false" />
+    <AppHeader title="論文資料整理" :back="{ to: '/', label: '返回主頁' }" container-class="max-w-5xl" />
 
     <div class="max-w-5xl mx-auto px-6 py-10">
       <div class="mb-8">

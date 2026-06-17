@@ -1,18 +1,14 @@
 <template>
   <div class="flex flex-col bg-stone-50 min-h-dvh">
-    <!-- Top nav — mirrors /scripture/[book]/[chapter] -->
-    <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 z-30 sticky top-0">
-      <NuxtLink to="/apocrypha" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
-      <div class="w-px h-5 bg-gray-200" />
-      <span class="text-sm font-semibold text-gray-900 truncate">{{ docData?.document?.title_zh || '典外文獻' }}</span>
-      <span class="text-xs text-gray-500 truncate">{{ currentLabel }}</span>
-      <div class="ml-auto flex items-center gap-2 text-xs">
+    <AppHeader :title="docData?.document?.title_zh || '典外文獻'" :back="{ to: '/apocrypha', label: '典外文獻' }" container-class="max-w-7xl">
+      <template #actions>
+        <span class="text-xs text-gray-500 truncate">{{ currentLabel }}</span>
         <button v-if="prevTarget" @click="goPrev"
-          class="px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-stone-400">← {{ chapterMode ? '上章' : '上頁' }}</button>
+          class="px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-stone-400 text-xs">← {{ chapterMode ? '上章' : '上頁' }}</button>
         <button v-if="nextTarget" @click="goNext"
-          class="px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-stone-400">{{ chapterMode ? '下章' : '下頁' }} →</button>
-      </div>
-    </nav>
+          class="px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-stone-400 text-xs">{{ chapterMode ? '下章' : '下頁' }} →</button>
+      </template>
+    </AppHeader>
 
     <div class="flex-1 max-w-7xl w-full mx-auto px-4 py-6">
       <div v-if="pending" class="text-center text-gray-400 py-12 text-sm">載入中…</div>

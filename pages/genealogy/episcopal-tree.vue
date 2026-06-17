@@ -1,23 +1,19 @@
 <template>
   <div class="flex flex-col bg-slate-50" style="height: 100dvh;">
-    <!-- Nav -->
-    <nav class="flex items-center gap-2 px-4 h-12 bg-white border-b border-gray-100 flex-shrink-0 z-30">
-      <NuxtLink to="/genealogy" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
-      <div class="w-px h-5 bg-gray-200" />
-      <span class="text-sm font-semibold text-gray-900">使徒統緒族譜圖</span>
-      <span v-if="graph" class="text-xs text-gray-400 ml-1">
-        {{ graph.spines.length }} 大宗主教座 · {{ graph.branches.length }} 旁支
-      </span>
-      <div class="flex-1" />
-
-      <div class="flex items-center gap-0.5 bg-gray-100 rounded-lg p-0.5">
-        <NuxtLink
-          to="/genealogy/episcopal"
-          class="text-xs px-2.5 py-1 rounded-md font-medium transition text-gray-500 hover:text-gray-700"
-        >表格</NuxtLink>
-        <span class="text-xs px-2.5 py-1 rounded-md font-medium bg-white shadow-sm text-gray-900">族譜圖</span>
-      </div>
-    </nav>
+    <AppHeader title="使徒統緒族譜圖" :back="{ to: '/genealogy/episcopal', label: '使徒統緒' }" container-class="max-w-full">
+      <template #actions>
+        <span v-if="graph" class="text-xs text-gray-400">
+          {{ graph.spines.length }} 大宗主教座 · {{ graph.branches.length }} 旁支
+        </span>
+        <div class="flex items-center gap-0.5 bg-gray-100 rounded-lg p-0.5">
+          <NuxtLink
+            to="/genealogy/episcopal"
+            class="text-xs px-2.5 py-1 rounded-md font-medium transition text-gray-500 hover:text-gray-700"
+          >表格</NuxtLink>
+          <span class="text-xs px-2.5 py-1 rounded-md font-medium bg-white shadow-sm text-gray-900">族譜圖</span>
+        </div>
+      </template>
+    </AppHeader>
 
     <div class="flex-1 min-h-0 relative">
       <ClientOnly>

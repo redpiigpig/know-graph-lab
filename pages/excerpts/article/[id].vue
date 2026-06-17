@@ -1,22 +1,6 @@
 <template>
   <div class="min-h-screen bg-gray-50">
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-14">
-          <div class="flex items-center gap-2 text-sm text-gray-500">
-            <NuxtLink to="/excerpts" class="hover:text-blue-600 transition flex items-center gap-1.5">
-              <img src="/logo_image.jpg" alt="logo" class="w-5 h-5 rounded object-cover" />
-              <span>書摘庫</span>
-            </NuxtLink>
-            <span>›</span>
-            <NuxtLink to="/excerpts/article" class="hover:text-green-600 transition">文章書摘</NuxtLink>
-            <span>›</span>
-            <span class="font-semibold text-gray-900 truncate max-w-xs">{{ overview?.project?.name ?? '載入中…' }}</span>
-          </div>
-          <button @click="handleLogout" class="text-gray-500 hover:text-red-600 transition text-sm">登出</button>
-        </div>
-      </div>
-    </nav>
+    <AppHeader :title="overview?.project?.name ?? '載入中…'" :back="{ to: '/excerpts/article', label: '文章書摘' }" container-class="max-w-7xl" />
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 

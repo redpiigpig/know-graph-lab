@@ -1,24 +1,20 @@
 <template>
   <div class="flex flex-col bg-slate-50 min-h-dvh">
-    <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 z-30">
-      <NuxtLink to="/scripture" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
-      <div class="w-px h-5 bg-gray-200" />
-      <span class="text-sm font-semibold text-gray-900">{{ displayBookName || '聖經對照' }}</span>
-      <span class="text-xs text-gray-500">{{ chapterNum }}</span>
-      <span v-if="canon && CANON_LABEL[canon]" class="text-[10px] px-1.5 py-0.5 rounded-full bg-stone-100 text-stone-600">{{ CANON_LABEL[canon] }}</span>
-      <div class="ml-auto flex items-center gap-2 text-xs">
+    <AppHeader :title="`${displayBookName || '聖經對照'} ${chapterNum}`" :back="{ to: '/scripture', label: '聖經對照' }" container-class="max-w-7xl">
+      <template #actions>
+        <span v-if="canon && CANON_LABEL[canon]" class="text-[10px] px-1.5 py-0.5 rounded-full bg-stone-100 text-stone-600">{{ CANON_LABEL[canon] }}</span>
         <button
           v-if="prevChapter"
           @click="navigate(prevChapter.book, prevChapter.chapter)"
-          class="px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-stone-400"
+          class="text-xs px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-stone-400"
         >← 上章</button>
         <button
           v-if="nextChapter"
           @click="navigate(nextChapter.book, nextChapter.chapter)"
-          class="px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-stone-400"
+          class="text-xs px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-stone-400"
         >下章 →</button>
-      </div>
-    </nav>
+      </template>
+    </AppHeader>
 
     <div class="flex-1 max-w-7xl w-full mx-auto px-4 py-6">
       <!-- 補編提示：本卷在此傳統屬某卷的次經補編 -->

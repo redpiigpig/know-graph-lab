@@ -1,30 +1,33 @@
 <template>
   <div class="flex flex-col bg-stone-50 min-h-dvh">
-    <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 z-30 sticky top-0">
-      <NuxtLink to="/gnostic" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
-      <div class="w-px h-5 bg-gray-200" />
-      <button
-        @click="sidebarOpen = !sidebarOpen"
-        :class="['flex items-center gap-1 px-2 py-1 rounded text-xs transition border',
-          sidebarOpen ? 'bg-stone-900 text-white border-stone-900' : 'bg-white text-stone-700 border-stone-200 hover:border-stone-400']"
-      ><span>📑</span><span class="hidden sm:inline">目錄</span></button>
-      <span class="text-sm font-semibold text-gray-900 truncate">{{ docData?.document?.title_zh || '諾斯底主義文獻' }}</span>
-      <span v-if="docData?.document" class="text-xs text-gray-400 truncate hidden md:inline">{{ docData.document.title_en }}</span>
-      <div class="ml-auto flex items-center gap-2 text-xs">
+    <AppHeader :title="docData?.document?.title_zh || '諾斯底主義文獻'" :back="{ to: '/gnostic', label: '諾斯底主義文獻' }" container-class="max-w-5xl">
+      <template #breadcrumb>
+        <span class="text-gray-200 hidden sm:inline">|</span>
+        <NuxtLink to="/gnostic" class="text-gray-400 hover:text-gray-700 transition text-sm flex-shrink-0 hidden sm:inline">← 諾斯底主義文獻</NuxtLink>
+        <span class="text-gray-200">|</span>
+        <button
+          @click="sidebarOpen = !sidebarOpen"
+          :class="['flex items-center gap-1 px-2 py-1 rounded text-xs transition border flex-shrink-0',
+            sidebarOpen ? 'bg-stone-900 text-white border-stone-900' : 'bg-white text-stone-700 border-stone-200 hover:border-stone-400']"
+        ><span>📑</span><span class="hidden sm:inline">目錄</span></button>
+        <span class="text-sm font-medium text-gray-700 truncate">{{ docData?.document?.title_zh || '諾斯底主義文獻' }}</span>
+        <span v-if="docData?.document" class="text-xs text-gray-400 truncate hidden md:inline">{{ docData.document.title_en }}</span>
+      </template>
+      <template #actions>
         <button @click="goToPage(currentPage - 1)" :disabled="currentPage <= 1"
-          class="px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-stone-400 disabled:opacity-30">‹</button>
+          class="text-xs px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-stone-400 disabled:opacity-30">‹</button>
         <span class="text-xs text-gray-500 tabular-nums">{{ currentPage }} / {{ totalPages }}</span>
         <button @click="goToPage(currentPage + 1)" :disabled="currentPage >= totalPages"
-          class="px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-stone-400 disabled:opacity-30">›</button>
-      </div>
-    </nav>
+          class="text-xs px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-stone-400 disabled:opacity-30">›</button>
+      </template>
+    </AppHeader>
 
     <div class="flex flex-1 overflow-hidden relative">
       <div v-if="sidebarOpen" @click="sidebarOpen = false" class="lg:hidden fixed inset-0 bg-stone-900/40 z-30 transition-opacity"></div>
 
       <!-- Sidebar: category → doc tree -->
       <aside :class="['border-r border-gray-200 bg-white overflow-y-auto flex-shrink-0 transition-transform duration-200',
-        sidebarOpen ? 'fixed lg:relative inset-y-0 left-0 top-12 lg:top-0 w-72 lg:w-72 z-40 translate-x-0 shadow-xl lg:shadow-none'
+        sidebarOpen ? 'fixed lg:relative inset-y-0 left-0 top-14 lg:top-0 w-72 lg:w-72 z-40 translate-x-0 shadow-xl lg:shadow-none'
           : 'fixed lg:relative -translate-x-full w-0 lg:w-0 lg:opacity-0 lg:overflow-hidden']">
         <div class="p-3">
           <div class="text-[10px] uppercase tracking-wider text-stone-400 mb-2 px-2">諾斯底主義文獻 · {{ allDocs.length }} 篇</div>

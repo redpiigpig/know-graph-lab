@@ -1,25 +1,13 @@
 <template>
   <div class="min-h-screen bg-gray-50">
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-14">
-          <div class="flex items-center gap-2 text-sm text-gray-500">
-            <NuxtLink to="/" class="hover:text-blue-600 transition flex items-center gap-1.5">
-              <img src="/logo_image.jpg" alt="logo" class="w-5 h-5 rounded object-cover" />
-              <span>知識圖工作室</span>
-            </NuxtLink>
-            <span>›</span>
-            <span class="font-medium text-gray-900">概念筆記</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <NuxtLink to="/concepts/graph"
-              class="px-3 py-1.5 text-xs rounded-lg border border-cyan-300 text-cyan-700 hover:bg-cyan-50">🕸 概念圖</NuxtLink>
-            <button class="px-3 py-1.5 text-xs rounded-lg bg-cyan-600 text-white hover:bg-cyan-500"
-              @click="showCreate = true">+ 新概念</button>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <AppHeader title="概念筆記" :back="{ to: '/', label: '返回主頁' }" container-class="max-w-5xl">
+      <template #actions>
+        <NuxtLink to="/concepts/graph"
+          class="px-3 py-1.5 text-xs rounded-lg border border-cyan-300 text-cyan-700 hover:bg-cyan-50">🕸 概念圖</NuxtLink>
+        <button class="px-3 py-1.5 text-xs rounded-lg bg-cyan-600 text-white hover:bg-cyan-500"
+          @click="showCreate = true">+ 新概念</button>
+      </template>
+    </AppHeader>
 
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <div class="mb-8">

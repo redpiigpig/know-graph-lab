@@ -1,25 +1,22 @@
 <template>
   <div class="flex flex-col bg-slate-50" style="height: 100dvh;">
-    <!-- Nav -->
-    <nav class="flex items-center gap-2 px-4 h-12 bg-white border-b border-gray-100 flex-shrink-0 z-30">
-      <NuxtLink to="/genealogy" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
-      <div class="w-px h-5 bg-gray-200" />
-      <span class="text-sm font-semibold text-gray-900">聖經人物族譜</span>
-      <span class="text-xs text-gray-400 ml-1">{{ people.length > 0 ? `${people.length} 人` : '' }}</span>
-      <div class="flex-1" />
-      <!-- View link -->
-      <div class="flex items-center gap-0.5 bg-gray-100 rounded-lg p-0.5">
-        <span class="text-xs px-2.5 py-1 rounded-md font-medium bg-white shadow-sm text-gray-900">表格</span>
-        <NuxtLink
-          to="/genealogy/biblical-tree"
-          class="text-xs px-2.5 py-1 rounded-md font-medium transition text-gray-500 hover:text-gray-700"
-        >族譜圖</NuxtLink>
-      </div>
-      <button
-        class="text-xs px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-medium transition shadow-sm ml-1"
-        @click="openAdd"
-      >+ 新增人物</button>
-    </nav>
+    <AppHeader title="聖經人物族譜" :back="{ to: '/genealogy', label: '圖譜工具' }" container-class="max-w-full">
+      <template #actions>
+        <span class="text-xs text-gray-400">{{ people.length > 0 ? `${people.length} 人` : '' }}</span>
+        <!-- View link -->
+        <div class="flex items-center gap-0.5 bg-gray-100 rounded-lg p-0.5">
+          <span class="text-xs px-2.5 py-1 rounded-md font-medium bg-white shadow-sm text-gray-900">表格</span>
+          <NuxtLink
+            to="/genealogy/biblical-tree"
+            class="text-xs px-2.5 py-1 rounded-md font-medium transition text-gray-500 hover:text-gray-700"
+          >族譜圖</NuxtLink>
+        </div>
+        <button
+          class="text-xs px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-medium transition shadow-sm"
+          @click="openAdd"
+        >+ 新增人物</button>
+      </template>
+    </AppHeader>
 
     <!-- Filter bar -->
     <div class="flex items-center gap-2 px-4 h-10 bg-white border-b border-gray-100 flex-shrink-0">

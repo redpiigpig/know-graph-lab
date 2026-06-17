@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col bg-slate-50 min-h-dvh">
-    <AppHeader title="圖譜工具" :back="{ to: '/', label: '返回主頁' }" :editable="false" />
+    <AppHeader title="圖譜工具" :back="{ to: '/', label: '返回主頁' }" />
 
     <div class="flex-1 flex items-center justify-center p-8">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-3xl">

@@ -1,17 +1,14 @@
 <template>
   <div class="flex flex-col bg-stone-50 min-h-dvh">
-    <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 z-30 sticky top-0">
-      <NuxtLink :to="`/works/${slug}`" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
-      <div class="w-px h-5 bg-gray-200" />
-      <span class="text-sm font-semibold text-gray-900 truncate">{{ day?.day_title || '每日對話' }}</span>
-      <span v-if="day" class="text-xs text-gray-400 hidden md:inline">{{ day.n_turns }} 則</span>
-      <div class="ml-auto flex items-center gap-2 text-xs">
+    <AppHeader :title="day?.day_title || '每日對話'" :back="{ to: `/works/${slug}`, label: '寫作計畫' }" container-class="max-w-3xl">
+      <template #actions>
+        <span v-if="day" class="text-xs text-gray-400 hidden md:inline">{{ day.n_turns }} 則</span>
         <button @click="go(prev)" :disabled="!prev"
-          class="px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-violet-400 disabled:opacity-30">‹ 前一天</button>
+          class="px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-violet-400 disabled:opacity-30 text-xs">‹ 前一天</button>
         <button @click="go(next)" :disabled="!next"
-          class="px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-violet-400 disabled:opacity-30">後一天 ›</button>
-      </div>
-    </nav>
+          class="px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-violet-400 disabled:opacity-30 text-xs">後一天 ›</button>
+      </template>
+    </AppHeader>
 
     <div class="flex-1 overflow-y-auto">
       <div class="max-w-3xl w-full mx-auto px-5 py-8">

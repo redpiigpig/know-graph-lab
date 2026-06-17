@@ -1,12 +1,11 @@
 <template>
   <div v-if="creed" class="flex flex-col bg-stone-50 min-h-dvh">
-    <nav class="flex items-center gap-3 px-4 h-12 bg-white/95 backdrop-blur border-b border-stone-200 z-30 sticky top-0">
-      <NuxtLink to="/creeds" class="text-stone-400 hover:text-stone-700 transition text-lg leading-none">←</NuxtLink>
-      <div class="w-px h-5 bg-stone-200" />
-      <span class="text-sm font-semibold text-stone-900 truncate">{{ creed.nameZh }}</span>
-      <span v-if="creed.nameLat" class="text-xs italic text-stone-400 truncate hidden sm:inline">{{ creed.nameLat }}</span>
-      <span class="text-xs text-stone-400 ml-auto whitespace-nowrap">{{ creed.year }}</span>
-    </nav>
+    <AppHeader :title="creed.nameZh" :back="{ to: '/creeds', label: '信條對照' }" container-class="max-w-[1400px]">
+      <template #actions>
+        <span v-if="creed.nameLat" class="text-xs italic text-stone-400 truncate hidden sm:inline max-w-[16rem]">{{ creed.nameLat }}</span>
+        <span class="text-xs text-stone-400 whitespace-nowrap">{{ creed.year }}</span>
+      </template>
+    </AppHeader>
 
     <div class="flex-1 max-w-[1400px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <!-- Header -->

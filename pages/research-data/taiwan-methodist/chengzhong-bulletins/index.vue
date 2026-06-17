@@ -1,13 +1,7 @@
 <template>
   <div class="min-h-screen bg-slate-50">
 
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
-      <div class="max-w-6xl mx-auto px-6 h-14 flex items-center gap-4">
-        <NuxtLink to="/research-data/taiwan-methodist" class="text-gray-400 hover:text-gray-700 transition text-sm">← 台灣衛理公會研究資料</NuxtLink>
-        <span class="text-gray-200">|</span>
-        <span class="text-sm font-medium text-gray-700">城中教會主日崇拜週報</span>
-      </div>
-    </nav>
+    <AppHeader title="城中教會主日崇拜週報" :back="{ to: '/research-data/taiwan-methodist', label: '台灣衛理公會研究資料' }" container-class="max-w-6xl" />
 
     <div class="max-w-6xl mx-auto px-6 py-8">
       <div class="mb-6">

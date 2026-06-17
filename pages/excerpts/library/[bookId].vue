@@ -1,32 +1,16 @@
 <template>
   <div class="min-h-screen bg-gray-50">
-    <!-- 導航欄 -->
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-14">
-          <div class="flex items-center gap-2 text-sm text-gray-500">
-            <NuxtLink to="/excerpts" class="hover:text-blue-600 transition flex items-center gap-1.5">
-              <img src="/logo_image.jpg" alt="logo" class="w-5 h-5 rounded object-cover" />
-              <span>書摘庫</span>
-            </NuxtLink>
-            <span>›</span>
-            <NuxtLink to="/excerpts/library" class="hover:text-blue-600 transition">書摘圖書館</NuxtLink>
-            <span>›</span>
-            <span class="font-medium text-gray-900 truncate max-w-xs">{{ book?.title ?? '載入中…' }}</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <button class="px-3 py-1.5 text-xs rounded-lg bg-blue-600 text-white hover:bg-blue-500" @click="showCreate = true">+ 新增文摘</button>
-            <button class="px-3 py-1.5 text-xs rounded-lg border border-blue-300 text-blue-700 hover:bg-blue-50" @click="showOCR = true">上傳照片</button>
-            <button class="px-3 py-1.5 text-xs rounded-lg border border-blue-300 text-blue-700 hover:bg-blue-50" @click="showCSV = true">上傳 CSV</button>
-            <button class="px-3 py-1.5 text-xs rounded-lg border border-emerald-300 text-emerald-700 hover:bg-emerald-50"
-              :disabled="!book?.excerpts?.length" @click="exportMarkdown">📋 匯出 Markdown</button>
-            <button class="px-3 py-1.5 text-xs rounded-lg border border-purple-300 text-purple-700 hover:bg-purple-50"
-              :disabled="!book" @click="showCite = true">📚 引用</button>
-            <button @click="handleLogout" class="text-gray-500 hover:text-red-600 transition text-sm">登出</button>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <AppHeader :title="book?.title ?? '載入中…'" :back="{ to: '/excerpts/library', label: '書摘圖書館' }" container-class="max-w-4xl">
+      <template #actions>
+        <button class="px-3 py-1.5 text-xs rounded-lg bg-blue-600 text-white hover:bg-blue-500" @click="showCreate = true">+ 新增文摘</button>
+        <button class="px-3 py-1.5 text-xs rounded-lg border border-blue-300 text-blue-700 hover:bg-blue-50" @click="showOCR = true">上傳照片</button>
+        <button class="px-3 py-1.5 text-xs rounded-lg border border-blue-300 text-blue-700 hover:bg-blue-50" @click="showCSV = true">上傳 CSV</button>
+        <button class="px-3 py-1.5 text-xs rounded-lg border border-emerald-300 text-emerald-700 hover:bg-emerald-50"
+          :disabled="!book?.excerpts?.length" @click="exportMarkdown">📋 匯出 Markdown</button>
+        <button class="px-3 py-1.5 text-xs rounded-lg border border-purple-300 text-purple-700 hover:bg-purple-50"
+          :disabled="!book" @click="showCite = true">📚 引用</button>
+      </template>
+    </AppHeader>
 
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 

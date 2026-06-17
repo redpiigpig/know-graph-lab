@@ -1,24 +1,28 @@
 <template>
   <div v-if="doc" class="flex flex-col bg-stone-50 min-h-dvh">
-    <nav class="flex items-center gap-2 px-4 h-12 bg-white/95 backdrop-blur border-b border-stone-200 z-30 sticky top-0 overflow-x-auto">
-      <NuxtLink :to="popeBackUrl" class="text-stone-400 hover:text-stone-700 transition text-lg leading-none">←</NuxtLink>
-      <div class="w-px h-5 bg-stone-200" />
-      <NuxtLink to="/encyclicals" class="text-sm font-semibold text-stone-700 hover:text-stone-900 transition whitespace-nowrap">🕊️</NuxtLink>
-      <span class="text-stone-300">/</span>
-      <NuxtLink
-        :to="`/encyclicals/century/${doc.century}`"
-        class="text-sm text-stone-500 hover:text-stone-900 transition whitespace-nowrap"
-      >{{ doc.century }} 世紀</NuxtLink>
-      <span class="text-stone-300">/</span>
-      <NuxtLink
-        v-if="pope"
-        :to="`/encyclicals/pope/${pope.slug}`"
-        class="text-sm text-stone-500 hover:text-stone-900 transition whitespace-nowrap"
-      >{{ pope.nameZh }}</NuxtLink>
-      <span class="text-stone-300">/</span>
-      <span class="text-sm font-semibold text-stone-900 truncate">{{ doc.titleZh }}</span>
-      <span class="text-xs text-stone-400 ml-auto whitespace-nowrap font-mono">{{ doc.promulgationDate }}</span>
-    </nav>
+    <AppHeader container-class="max-w-[1400px]">
+      <template #breadcrumb>
+        <span class="text-gray-200 hidden sm:inline">|</span>
+        <NuxtLink :to="popeBackUrl" class="text-stone-400 hover:text-stone-700 transition whitespace-nowrap flex-shrink-0">←</NuxtLink>
+        <NuxtLink to="/encyclicals" class="text-sm font-semibold text-stone-700 hover:text-stone-900 transition whitespace-nowrap flex-shrink-0">🕊️</NuxtLink>
+        <span class="text-stone-300">/</span>
+        <NuxtLink
+          :to="`/encyclicals/century/${doc.century}`"
+          class="text-sm text-stone-500 hover:text-stone-900 transition whitespace-nowrap flex-shrink-0"
+        >{{ doc.century }} 世紀</NuxtLink>
+        <span class="text-stone-300">/</span>
+        <NuxtLink
+          v-if="pope"
+          :to="`/encyclicals/pope/${pope.slug}`"
+          class="text-sm text-stone-500 hover:text-stone-900 transition whitespace-nowrap flex-shrink-0"
+        >{{ pope.nameZh }}</NuxtLink>
+        <span class="text-stone-300">/</span>
+        <span class="text-sm font-semibold text-stone-900 truncate">{{ doc.titleZh }}</span>
+      </template>
+      <template #actions>
+        <span class="text-xs text-stone-400 whitespace-nowrap font-mono">{{ doc.promulgationDate }}</span>
+      </template>
+    </AppHeader>
 
     <div class="flex-1 max-w-[1400px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <!-- Header -->

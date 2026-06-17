@@ -1,11 +1,10 @@
 <template>
   <div class="flex flex-col bg-slate-50 min-h-dvh">
-    <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 z-30 sticky top-0">
-      <NuxtLink :to="`/works/${slug}`" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
-      <div class="w-px h-5 bg-gray-200" />
-      <span class="text-sm font-semibold text-gray-900">{{ monthLabel }}</span>
-      <span v-if="monthDays.length" class="text-xs text-gray-400">{{ monthDays.length }} 天 · {{ monthTurns }} 則</span>
-    </nav>
+    <AppHeader :title="monthLabel" :back="{ to: `/works/${slug}`, label: '寫作計畫' }" container-class="max-w-4xl">
+      <template #actions>
+        <span v-if="monthDays.length" class="text-xs text-gray-400">{{ monthDays.length }} 天 · {{ monthTurns }} 則</span>
+      </template>
+    </AppHeader>
 
     <div class="flex-1 max-w-4xl w-full mx-auto px-6 py-10">
       <div v-if="pending" class="text-center text-gray-400 py-16 text-sm">載入中…</div>

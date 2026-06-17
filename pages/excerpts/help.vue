@@ -1,14 +1,6 @@
 <template>
   <div class="min-h-screen bg-gray-50 text-gray-900">
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
-      <div class="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <NuxtLink to="/excerpts" class="text-gray-500 hover:text-blue-600 text-sm transition">← 書摘庫</NuxtLink>
-          <span class="text-gray-300">·</span>
-          <span class="font-semibold text-sm">使用說明</span>
-        </div>
-      </div>
-    </nav>
+    <AppHeader title="使用說明" :back="{ to: '/excerpts', label: '書摘庫' }" container-class="max-w-4xl" />
 
     <main class="max-w-4xl mx-auto px-6 py-12">
       <header class="mb-16">

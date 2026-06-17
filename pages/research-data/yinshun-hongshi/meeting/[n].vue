@@ -1,10 +1,6 @@
 <template>
   <div class="min-h-screen bg-slate-50">
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
-      <div class="max-w-3xl mx-auto px-6 h-14 flex items-center gap-4">
-        <NuxtLink to="/research-data/yinshun-hongshi/meeting" class="text-gray-400 hover:text-gray-700 transition text-sm">← 歷屆學術活動</NuxtLink>
-      </div>
-    </nav>
+    <AppHeader :back="{ to: '/research-data/yinshun-hongshi/meeting', label: '歷屆學術活動' }" container-class="max-w-3xl" />
     <div class="max-w-3xl mx-auto px-6 py-10">
       <div v-if="item" class="mb-6">
         <div class="flex items-center gap-2 mb-2">

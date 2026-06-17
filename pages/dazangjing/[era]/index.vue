@@ -1,11 +1,10 @@
 <template>
   <div class="flex flex-col bg-slate-50 min-h-dvh">
-    <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 z-30">
-      <NuxtLink to="/dazangjing" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
-      <div class="w-px h-5 bg-gray-200" />
-      <span class="text-sm font-semibold text-gray-900">{{ era?.name ?? '基督教大藏經' }}</span>
-      <span v-if="era" class="text-xs text-gray-400 ml-1">{{ era.collections.length }} 藏{{ allSole ? '' : ' × 2（正藏／外藏）' }}</span>
-    </nav>
+    <AppHeader :title="era?.name ?? '基督教大藏經'" :back="{ to: '/dazangjing', label: '基督教大藏經' }" container-class="max-w-5xl">
+      <template #actions>
+        <span v-if="era" class="text-xs text-gray-400">{{ era.collections.length }} 藏{{ allSole ? '' : ' × 2（正藏／外藏）' }}</span>
+      </template>
+    </AppHeader>
 
     <div v-if="!era" class="flex-1 flex items-center justify-center text-gray-400 text-sm">找不到此時代。</div>
 

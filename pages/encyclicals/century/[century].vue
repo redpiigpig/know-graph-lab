@@ -1,13 +1,17 @@
 <template>
   <div class="flex flex-col bg-stone-50 min-h-dvh">
-    <nav class="flex items-center gap-3 px-4 h-12 bg-white/95 backdrop-blur border-b border-stone-200 z-30 sticky top-0">
-      <NuxtLink to="/encyclicals" class="text-stone-400 hover:text-stone-700 transition text-lg leading-none">←</NuxtLink>
-      <div class="w-px h-5 bg-stone-200" />
-      <span class="text-sm font-semibold text-stone-900">🕊️ 教宗訓導文獻</span>
-      <span class="text-stone-300">/</span>
-      <span class="text-sm text-stone-700">{{ century }} 世紀</span>
-      <span class="text-xs text-stone-400 ml-auto whitespace-nowrap">{{ popes.length }} 位教宗 / {{ docCount }} 篇</span>
-    </nav>
+    <AppHeader container-class="max-w-5xl">
+      <template #breadcrumb>
+        <span class="text-gray-200 hidden sm:inline">|</span>
+        <NuxtLink to="/encyclicals" class="text-stone-400 hover:text-stone-700 transition whitespace-nowrap flex-shrink-0">←</NuxtLink>
+        <NuxtLink to="/encyclicals" class="text-sm font-semibold text-stone-900 hover:text-stone-700 transition whitespace-nowrap flex-shrink-0">🕊️ 教宗訓導文獻</NuxtLink>
+        <span class="text-stone-300">/</span>
+        <span class="text-sm text-stone-700">{{ century }} 世紀</span>
+      </template>
+      <template #actions>
+        <span class="text-xs text-stone-400 whitespace-nowrap">{{ popes.length }} 位教宗 / {{ docCount }} 篇</span>
+      </template>
+    </AppHeader>
 
     <div class="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <header class="mb-8 pb-6 border-b border-stone-200">

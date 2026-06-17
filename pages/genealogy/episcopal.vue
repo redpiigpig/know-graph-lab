@@ -1,34 +1,30 @@
 <template>
   <div class="flex flex-col bg-slate-50" style="height: 100dvh;">
 
-    <!-- ── Nav ────────────────────────────────────────────── -->
-    <nav class="flex items-center gap-2 px-4 h-12 bg-white border-b border-gray-100 flex-shrink-0 z-30">
-      <NuxtLink to="/genealogy" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
-      <div class="w-px h-5 bg-gray-200" />
-      <span class="text-sm font-semibold text-gray-900">使徒統緒</span>
-      <template v-if="selectedSee">
-        <span class="text-gray-300 text-sm">/</span>
-        <span class="text-xs text-gray-500">{{ selectedSee.tradition }}</span>
-        <span class="text-gray-300 text-sm">/</span>
-        <span class="text-xs font-medium text-gray-700">{{ selectedSee.name_zh }}</span>
+    <AppHeader title="使徒統緒" :back="{ to: '/genealogy', label: '圖譜工具' }" container-class="max-w-full">
+      <template #actions>
+        <template v-if="selectedSee">
+          <span class="text-xs text-gray-500">{{ selectedSee.tradition }}</span>
+          <span class="text-gray-300 text-sm">/</span>
+          <span class="text-xs font-medium text-gray-700">{{ selectedSee.name_zh }}</span>
+        </template>
+
+        <!-- View toggle: 表格 / 族譜圖 -->
+        <div class="flex items-center gap-0.5 bg-gray-100 rounded-lg p-0.5">
+          <span class="text-xs px-2.5 py-1 rounded-md font-medium bg-white shadow-sm text-gray-900">表格</span>
+          <NuxtLink
+            to="/genealogy/episcopal-tree"
+            class="text-xs px-2.5 py-1 rounded-md font-medium transition text-gray-500 hover:text-gray-700"
+          >族譜圖</NuxtLink>
+        </div>
+
+        <button
+          v-if="selectedSee"
+          class="text-xs px-3 py-1.5 rounded-lg bg-violet-500 hover:bg-violet-600 text-white font-medium transition shadow-sm"
+          @click="openAdd"
+        >+ 新增主教</button>
       </template>
-      <div class="flex-1" />
-
-      <!-- View toggle: 表格 / 族譜圖 -->
-      <div class="flex items-center gap-0.5 bg-gray-100 rounded-lg p-0.5 mr-2">
-        <span class="text-xs px-2.5 py-1 rounded-md font-medium bg-white shadow-sm text-gray-900">表格</span>
-        <NuxtLink
-          to="/genealogy/episcopal-tree"
-          class="text-xs px-2.5 py-1 rounded-md font-medium transition text-gray-500 hover:text-gray-700"
-        >族譜圖</NuxtLink>
-      </div>
-
-      <button
-        v-if="selectedSee"
-        class="text-xs px-3 py-1.5 rounded-lg bg-violet-500 hover:bg-violet-600 text-white font-medium transition shadow-sm"
-        @click="openAdd"
-      >+ 新增主教</button>
-    </nav>
+    </AppHeader>
 
     <!-- ── Two-panel body ─────────────────────────────────── -->
     <div class="flex flex-1 min-h-0">

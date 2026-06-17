@@ -1,26 +1,13 @@
 <template>
   <div class="min-h-screen bg-gray-50">
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-14">
-          <div class="flex items-center gap-2 text-sm text-gray-500">
-            <NuxtLink to="/excerpts" class="hover:text-blue-600 transition flex items-center gap-1.5">
-              <img src="/logo_image.jpg" alt="logo" class="w-5 h-5 rounded object-cover" />
-              <span>書摘庫</span>
-            </NuxtLink>
-            <span>›</span>
-            <span class="font-semibold text-blue-700">書摘圖書館</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <NuxtLink to="/excerpts/help"
-              class="w-7 h-7 flex items-center justify-center rounded-lg border border-gray-200 text-gray-500 hover:text-blue-600 hover:border-blue-300 text-xs transition" title="使用說明">?</NuxtLink>
-            <button @click="showCreateBook = true" class="text-xs px-3 py-1.5 rounded-lg bg-blue-600 text-white hover:bg-blue-500 transition">+ 新增書籍</button>
-            <button @click="showBulkImport = true" class="text-xs px-3 py-1.5 rounded-lg border border-purple-300 text-purple-700 hover:bg-purple-50 transition" title="批次貼 ISBN / DOI">📥 批次匯入</button>
-            <button @click="handleLogout" class="text-gray-500 hover:text-red-600 transition text-sm">登出</button>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <AppHeader title="書摘圖書館" :back="{ to: '/excerpts', label: '書摘庫' }" container-class="max-w-7xl">
+      <template #actions>
+        <NuxtLink to="/excerpts/help"
+          class="w-7 h-7 flex items-center justify-center rounded-lg border border-gray-200 text-gray-500 hover:text-blue-600 hover:border-blue-300 text-xs transition" title="使用說明">?</NuxtLink>
+        <button @click="showCreateBook = true" class="text-xs px-3 py-1.5 rounded-lg bg-blue-600 text-white hover:bg-blue-500 transition">+ 新增書籍</button>
+        <button @click="showBulkImport = true" class="text-xs px-3 py-1.5 rounded-lg border border-purple-300 text-purple-700 hover:bg-purple-50 transition" title="批次貼 ISBN / DOI">📥 批次匯入</button>
+      </template>
+    </AppHeader>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <!-- 標題 -->

@@ -1,5 +1,6 @@
 <template>
   <div class="flex flex-col h-dvh bg-slate-50">
+    <AppHeader title="AI 語言教練" :back="{ to: `/coach/${lang}`, label: '教練首頁' }" container-class="max-w-full" />
     <!-- 頂列 -->
     <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 z-30 flex-shrink-0">
       <NuxtLink :to="`/coach/${lang}`" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>

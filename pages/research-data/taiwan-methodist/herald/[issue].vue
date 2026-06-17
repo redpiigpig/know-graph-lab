@@ -1,23 +1,18 @@
 <template>
   <div class="min-h-screen bg-slate-900">
 
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40 shadow-sm">
-      <div class="max-w-7xl mx-auto px-6 h-14 flex items-center gap-4">
-        <NuxtLink to="/research-data/taiwan-methodist/herald" class="text-gray-400 hover:text-gray-700 transition text-sm">← 衛報</NuxtLink>
-        <span class="text-gray-200">|</span>
-        <span class="text-sm font-medium text-gray-700">第 {{ issue }} 期</span>
+    <AppHeader :title="`第 ${issue} 期`" :back="{ to: '/research-data/taiwan-methodist/herald', label: '衛報' }" container-class="max-w-7xl">
+      <template #actions>
         <span class="text-xs text-gray-500">{{ meta.date_display }}<template v-if="meta.title"> · {{ meta.title }}</template></span>
-        <div class="ml-auto flex items-center gap-3 text-xs text-gray-500">
-          <a :href="`/api/herald/${issue}/pdf?download=1`"
-             class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-slate-100 text-slate-600 hover:bg-slate-200 transition no-underline"
-             title="下載原始掃描 PDF">
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3"/></svg>
-            原始 PDF
-          </a>
-          <span class="hidden sm:inline">{{ currentLabel }}</span>
-        </div>
-      </div>
-    </nav>
+        <a :href="`/api/herald/${issue}/pdf?download=1`"
+           class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-slate-100 text-slate-600 hover:bg-slate-200 transition no-underline text-xs"
+           title="下載原始掃描 PDF">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3"/></svg>
+          原始 PDF
+        </a>
+        <span class="hidden sm:inline text-xs text-gray-500">{{ currentLabel }}</span>
+      </template>
+    </AppHeader>
 
     <div class="px-4 py-8 flex flex-col items-center">
 

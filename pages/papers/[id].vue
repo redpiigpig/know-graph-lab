@@ -1,19 +1,19 @@
 <template>
   <div :class="['min-h-screen', isEditorial ? 'bg-amber-50/40' : 'bg-slate-50']">
 
-    <nav :class="['border-b sticky top-0 z-40', isEditorial ? 'bg-orange-700 border-orange-800' : 'bg-white border-gray-200']">
-      <div class="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
-        <NuxtLink
-          :to="isEditorial ? '/papers?type=editorial' : '/papers'"
-          :class="['transition text-sm', isEditorial ? 'text-orange-100 hover:text-white' : 'text-gray-400 hover:text-gray-700']"
-        >← {{ isEditorial ? '報紙社論' : '學術著作目錄' }}</NuxtLink>
+    <AppHeader
+      :title="isEditorial ? '報紙社論' : '學術著作目錄'"
+      :back="isEditorial ? { to: '/papers?type=editorial', label: '報紙社論' } : { to: '/papers', label: '學術著作目錄' }"
+      container-class="max-w-3xl"
+    >
+      <template #actions>
         <a
           v-if="isEditorial && editorialMeta?.originalUrl"
           :href="editorialMeta.originalUrl" target="_blank" rel="noopener"
-          class="text-xs font-medium text-orange-100 hover:text-white bg-orange-800/40 hover:bg-orange-800 px-3 py-1.5 rounded transition"
+          class="text-xs font-medium text-orange-700 hover:text-orange-900 bg-orange-50 hover:bg-orange-100 px-3 py-1.5 rounded transition"
         >查看 tcnn.org.tw 原文 →</a>
-      </div>
-    </nav>
+      </template>
+    </AppHeader>
 
     <!-- 報紙抬頭（社論專用） -->
     <div v-if="isEditorial && editorialMeta" class="bg-white border-b-4 border-double border-orange-700">

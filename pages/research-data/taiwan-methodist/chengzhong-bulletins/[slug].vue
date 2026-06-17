@@ -1,13 +1,7 @@
 <template>
   <div class="min-h-screen bg-slate-50">
 
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
-      <div class="max-w-4xl mx-auto px-6 h-14 flex items-center gap-4">
-        <NuxtLink to="/research-data/taiwan-methodist/chengzhong-bulletins" class="text-gray-400 hover:text-gray-700 transition text-sm">← 城中週報</NuxtLink>
-        <span class="text-gray-200">|</span>
-        <span class="text-sm font-medium text-gray-700">{{ rec?.date || slug }}</span>
-      </div>
-    </nav>
+    <AppHeader :title="rec?.date || slug" :back="{ to: '/research-data/taiwan-methodist/chengzhong-bulletins', label: '城中週報' }" container-class="max-w-4xl" />
 
     <div v-if="rec" class="max-w-4xl mx-auto px-6 py-8">
 

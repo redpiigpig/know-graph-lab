@@ -1,9 +1,7 @@
 <template>
   <div class="min-h-screen bg-slate-50">
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
-      <div class="max-w-4xl mx-auto px-6 h-14 flex items-center gap-4">
-        <NuxtLink :to="`/works/${slug}`" class="text-gray-400 hover:text-gray-700 transition text-sm">← 口述訪談列表</NuxtLink>
-        <div class="flex-1"></div>
+    <AppHeader :title="displayTitle" :back="{ to: `/works/${slug}`, label: '口述訪談列表' }" container-class="max-w-4xl">
+      <template #actions>
         <a
           v-if="!error"
           :href="docxUrl"
@@ -17,8 +15,8 @@
           </svg>
           下載 Word
         </a>
-      </div>
-    </nav>
+      </template>
+    </AppHeader>
 
     <div class="max-w-4xl mx-auto px-6 py-8">
       <div v-if="loading" class="flex items-center justify-center h-64 text-gray-400 text-sm">載入中⋯</div>

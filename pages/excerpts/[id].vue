@@ -1,28 +1,10 @@
 <template>
   <div class="min-h-screen bg-gray-50">
-    <!-- 導航欄 -->
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <button
-            @click="router.back()"
-            class="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition"
-          >
-            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
-            <span class="font-medium">返回書摘庫</span>
-          </button>
-          <div class="flex items-center space-x-4">
-            <NuxtLink to="/excerpts" class="text-gray-600 hover:text-blue-600 transition text-sm flex items-center gap-1.5">
-              <img src="/logo_image.jpg" alt="logo" class="w-5 h-5 rounded object-cover" />
-              <span>書摘庫</span>
-            </NuxtLink>
-            <NuxtLink to="/settings" class="text-gray-600 hover:text-blue-600 transition text-sm">API Keys</NuxtLink>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <AppHeader title="書摘詳細" :back="{ to: '/excerpts', label: '書摘庫' }" container-class="max-w-4xl">
+      <template #actions>
+        <NuxtLink to="/settings" class="text-gray-600 hover:text-blue-600 transition text-sm">API Keys</NuxtLink>
+      </template>
+    </AppHeader>
 
     <!-- 載入中 -->
     <div v-if="loading" class="max-w-4xl mx-auto px-4 py-12">

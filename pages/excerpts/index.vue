@@ -1,10 +1,6 @@
 <template>
   <div class="min-h-screen bg-gray-50">
-    <AppHeader title="書摘庫" :back="{ to: '/', label: '返回主頁' }" container-class="max-w-5xl" :editable="false">
-      <template #actions>
-        <button @click="handleLogout" class="text-gray-500 hover:text-red-600 transition text-sm">登出</button>
-      </template>
-    </AppHeader>
+    <AppHeader title="書摘庫" :back="{ to: '/', label: '返回主頁' }" container-class="max-w-5xl" />
 
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="mb-8">

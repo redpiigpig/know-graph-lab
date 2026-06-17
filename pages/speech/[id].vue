@@ -1,9 +1,7 @@
 <template>
   <div class="min-h-screen bg-slate-50">
-    <!-- Nav header — 左：回上一頁、右：編輯按鈕；container 跟內文同寬 -->
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
-      <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between gap-4">
-        <NuxtLink to="/speech" class="text-gray-400 hover:text-gray-700 transition text-sm">← 演講活動</NuxtLink>
+    <AppHeader :title="merged?.title || '演講活動'" :back="{ to: '/speech', label: '演講活動' }" container-class="max-w-6xl">
+      <template #actions>
         <div v-if="canEdit" class="flex gap-2">
           <template v-if="!editMode">
             <button @click="startEdit" class="px-3 py-1.5 rounded bg-rose-600 hover:bg-rose-700 text-white text-xs font-medium transition">編輯</button>
@@ -13,8 +11,8 @@
             <button @click="saveEdit" :disabled="saving" class="px-3 py-1.5 rounded bg-rose-600 hover:bg-rose-700 disabled:opacity-50 text-white text-xs font-medium transition">{{ saving ? '儲存中…' : '儲存' }}</button>
           </template>
         </div>
-      </div>
-    </nav>
+      </template>
+    </AppHeader>
 
     <div v-if="!talk" class="text-center text-gray-400 py-20 text-sm">找不到這場演講</div>
 

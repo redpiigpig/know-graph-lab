@@ -1,13 +1,7 @@
 <template>
   <div class="min-h-screen bg-slate-50">
 
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
-      <div class="max-w-3xl mx-auto px-6 h-14 flex items-center gap-4">
-        <NuxtLink to="/research-data/yinshun-hongshi/log" class="text-gray-400 hover:text-gray-700 transition text-sm">← 學團日誌</NuxtLink>
-        <span class="text-gray-200">|</span>
-        <span class="text-sm font-medium text-gray-700">第 {{ n }} 期</span>
-      </div>
-    </nav>
+    <AppHeader :title="`第 ${n} 期`" :back="{ to: '/research-data/yinshun-hongshi/log', label: '學團日誌' }" container-class="max-w-3xl" />
 
     <div class="max-w-3xl mx-auto px-6 py-10">
       <div v-if="entry" class="mb-6">

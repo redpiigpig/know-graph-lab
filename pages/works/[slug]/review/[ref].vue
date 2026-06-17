@@ -1,18 +1,17 @@
 <template>
   <div class="flex flex-col bg-stone-50 min-h-dvh">
-    <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 z-30 sticky top-0">
-      <NuxtLink :to="`/works/${slug}`" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
-      <div class="w-px h-5 bg-gray-200" />
-      <span class="text-sm font-semibold text-gray-900 truncate">{{ entry?.title || '研究回顧' }}</span>
-      <span v-if="entry" class="text-xs text-gray-400 truncate hidden md:inline">{{ entry.authors }}<span v-if="entry.year"> ({{ entry.year }})</span></span>
-      <div v-if="totalPages > 1" class="ml-auto flex items-center gap-2 text-xs">
-        <button @click="goToPage(currentPage - 1)" :disabled="currentPage <= 1"
-          class="px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-stone-400 disabled:opacity-30">‹</button>
-        <span class="text-gray-500 tabular-nums">{{ currentPage }} / {{ totalPages }}</span>
-        <button @click="goToPage(currentPage + 1)" :disabled="currentPage >= totalPages"
-          class="px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-stone-400 disabled:opacity-30">›</button>
-      </div>
-    </nav>
+    <AppHeader :title="entry?.title || '研究回顧'" :back="{ to: `/works/${slug}`, label: '寫作計畫' }" container-class="max-w-5xl">
+      <template #actions>
+        <span v-if="entry" class="text-xs text-gray-400 truncate hidden md:inline">{{ entry.authors }}<span v-if="entry.year"> ({{ entry.year }})</span></span>
+        <div v-if="totalPages > 1" class="flex items-center gap-2 text-xs">
+          <button @click="goToPage(currentPage - 1)" :disabled="currentPage <= 1"
+            class="px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-stone-400 disabled:opacity-30">‹</button>
+          <span class="text-gray-500 tabular-nums">{{ currentPage }} / {{ totalPages }}</span>
+          <button @click="goToPage(currentPage + 1)" :disabled="currentPage >= totalPages"
+            class="px-2 py-1 rounded border border-gray-200 text-gray-600 hover:border-stone-400 disabled:opacity-30">›</button>
+        </div>
+      </template>
+    </AppHeader>
 
     <div class="flex-1 overflow-y-auto">
       <div class="max-w-5xl w-full mx-auto px-4 py-6">
@@ -47,7 +46,7 @@
 
           <!-- single-language full text (我們自轉錄的 印順／聖嚴 全集，中文單欄、無對照譯文) -->
           <template v-else-if="singleVersion">
-            <div class="bg-stone-50 px-4 py-1.5 text-[11px] font-semibold text-stone-600 rounded-t-md sticky top-12 z-10 mb-px">
+            <div class="bg-stone-50 px-4 py-1.5 text-[11px] font-semibold text-stone-600 rounded-t-md sticky top-14 z-10 mb-px">
               全文（{{ langLabel(entry.language) }}）
             </div>
             <div class="space-y-2">
@@ -60,7 +59,7 @@
 
           <template v-else>
             <!-- column headers -->
-            <div class="grid grid-cols-2 gap-px bg-gray-100 rounded-t-md overflow-hidden mb-px sticky top-12 z-10">
+            <div class="grid grid-cols-2 gap-px bg-gray-100 rounded-t-md overflow-hidden mb-px sticky top-14 z-10">
               <div class="bg-stone-50 px-4 py-1.5 text-[11px] font-semibold text-stone-600">逐段中譯</div>
               <div class="bg-stone-50 px-4 py-1.5 text-[11px] font-semibold text-stone-600">{{ langLabel(entry.language) }}原文</div>
             </div>

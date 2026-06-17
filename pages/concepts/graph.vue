@@ -1,22 +1,10 @@
 <template>
   <div class="min-h-screen bg-gray-50">
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-14">
-          <div class="flex items-center gap-2 text-sm text-gray-500">
-            <NuxtLink to="/" class="hover:text-blue-600 flex items-center gap-1.5">
-              <img src="/logo_image.jpg" alt="logo" class="w-5 h-5 rounded object-cover" />
-              <span>知識圖工作室</span>
-            </NuxtLink>
-            <span>›</span>
-            <NuxtLink to="/concepts" class="hover:text-cyan-600">概念筆記</NuxtLink>
-            <span>›</span>
-            <span class="font-medium text-gray-900">概念圖</span>
-          </div>
-          <span class="text-xs text-gray-400">{{ data.nodes.length }} 概念 · {{ data.edges.length }} 連結</span>
-        </div>
-      </div>
-    </nav>
+    <AppHeader title="概念圖" :back="{ to: '/concepts', label: '概念筆記' }" container-class="max-w-7xl">
+      <template #actions>
+        <span class="text-xs text-gray-400">{{ data.nodes.length }} 概念 · {{ data.edges.length }} 連結</span>
+      </template>
+    </AppHeader>
 
     <div class="max-w-7xl mx-auto px-4 py-6">
       <div v-if="loading" class="text-center text-gray-400 py-20">載入中…</div>

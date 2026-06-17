@@ -1,24 +1,21 @@
 <template>
   <div class="flex flex-col bg-slate-50" style="height: 100dvh;">
-    <!-- Nav -->
-    <nav class="flex items-center gap-2 px-4 h-12 bg-white border-b border-gray-100 flex-shrink-0 z-30">
-      <NuxtLink to="/genealogy" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
-      <div class="w-px h-5 bg-gray-200" />
-      <span class="text-sm font-semibold text-gray-900">聖經人物族譜圖</span>
-      <span v-if="peopleCount" class="text-xs text-gray-400 ml-1">{{ peopleCount }} 人</span>
-      <div class="flex-1" />
+    <AppHeader title="聖經人物族譜圖" :back="{ to: '/genealogy/biblical', label: '聖經人物族譜' }" container-class="max-w-full">
+      <template #actions>
+        <span v-if="peopleCount" class="text-xs text-gray-400">{{ peopleCount }} 人</span>
 
-      <!-- 耶穌弟兄詮釋 toggle 已移至族譜圖內浮動 widget（局部按鈕） -->
+        <!-- 耶穌弟兄詮釋 toggle 已移至族譜圖內浮動 widget（局部按鈕） -->
 
-      <!-- View link -->
-      <div class="flex items-center gap-0.5 bg-gray-100 rounded-lg p-0.5">
-        <NuxtLink
-          to="/genealogy/biblical"
-          class="text-xs px-2.5 py-1 rounded-md font-medium transition text-gray-500 hover:text-gray-700"
-        >表格</NuxtLink>
-        <span class="text-xs px-2.5 py-1 rounded-md font-medium bg-white shadow-sm text-gray-900">族譜圖</span>
-      </div>
-    </nav>
+        <!-- View link -->
+        <div class="flex items-center gap-0.5 bg-gray-100 rounded-lg p-0.5">
+          <NuxtLink
+            to="/genealogy/biblical"
+            class="text-xs px-2.5 py-1 rounded-md font-medium transition text-gray-500 hover:text-gray-700"
+          >表格</NuxtLink>
+          <span class="text-xs px-2.5 py-1 rounded-md font-medium bg-white shadow-sm text-gray-900">族譜圖</span>
+        </div>
+      </template>
+    </AppHeader>
 
     <!-- 族譜圖（含浮動耶穌弟兄詮釋 toggle） -->
     <div class="flex-1 min-h-0 relative">

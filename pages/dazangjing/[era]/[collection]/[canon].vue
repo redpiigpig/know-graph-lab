@@ -1,11 +1,10 @@
 <template>
   <div class="flex flex-col bg-slate-50 min-h-dvh">
-    <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 z-30 sticky top-0">
-      <NuxtLink :to="`/dazangjing/${eraKey}`" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
-      <div class="w-px h-5 bg-gray-200" />
-      <span class="text-sm font-semibold text-gray-900">{{ collection?.name }}<span class="text-gray-400 mx-1">·</span>{{ collection?.soleCanonLabel || canonLabel.zh }}</span>
-      <span v-if="canon" class="text-xs text-gray-400 ml-1">{{ total }} 卷</span>
-    </nav>
+    <AppHeader :title="`${collection?.name ?? ''} · ${collection?.soleCanonLabel || canonLabel.zh}`" :back="{ to: `/dazangjing/${eraKey}`, label: era?.name ?? '基督教大藏經' }" container-class="max-w-5xl">
+      <template #actions>
+        <span v-if="canon" class="text-xs text-gray-400">{{ total }} 卷</span>
+      </template>
+    </AppHeader>
 
     <div v-if="!collection || !canon" class="flex-1 flex items-center justify-center text-gray-400 text-sm">找不到此藏。</div>
 

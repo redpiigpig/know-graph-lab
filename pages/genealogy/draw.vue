@@ -1,18 +1,15 @@
 <template>
   <div class="genealogy-page flex flex-col bg-slate-50" style="height: 100dvh;">
-    <!-- Nav -->
-    <nav class="flex items-center gap-3 px-4 h-12 bg-white border-b border-gray-100 flex-shrink-0 z-30">
-      <NuxtLink to="/genealogy" class="text-gray-400 hover:text-gray-700 transition text-lg leading-none">←</NuxtLink>
-      <div class="w-px h-5 bg-gray-200" />
-      <input
-        v-model="projectTitle"
-        class="text-sm font-semibold text-gray-900 bg-transparent border-none outline-none hover:bg-gray-50 focus:bg-gray-50 px-2 py-0.5 rounded-lg w-48 transition"
-        placeholder="族譜名稱…"
-      />
-      <span class="text-xs text-gray-300">族譜繪製</span>
-      <div class="flex-1" />
-      <span class="text-xs text-gray-300">{{ saveStatus }}</span>
-    </nav>
+    <AppHeader title="族譜繪製" :back="{ to: '/genealogy', label: '圖譜工具' }" container-class="max-w-full">
+      <template #actions>
+        <input
+          v-model="projectTitle"
+          class="text-sm font-semibold text-gray-900 bg-transparent border-none outline-none hover:bg-gray-50 focus:bg-gray-50 px-2 py-0.5 rounded-lg w-48 transition"
+          placeholder="族譜名稱…"
+        />
+        <span class="text-xs text-gray-300">{{ saveStatus }}</span>
+      </template>
+    </AppHeader>
 
     <!-- Toolbar -->
     <GenealogyToolbar
