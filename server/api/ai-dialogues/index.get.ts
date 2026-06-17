@@ -40,10 +40,16 @@ export default defineEventHandler(async (event) => {
     }
 
     if (category) {
+      // Include child categories so filtering a parent aggregates all its sub-categories
+      const { data: children } = await supabase
+        .from('ai_dialogue_categories')
+        .select('id')
+        .eq('parent_id', category)
+      const catIds = [category, ...((children ?? []).map((c: any) => c.id))]
       const { data: entryIds } = await supabase
         .from('ai_dialogue_entry_categories')
         .select('dialogue_id')
-        .eq('category_id', category)
+        .in('category_id', catIds)
       const ids = (entryIds ?? []).map((r: any) => r.dialogue_id)
       if (ids.length === 0) {
         // Skip this table if no matching entries

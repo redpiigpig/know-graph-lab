@@ -114,32 +114,71 @@
 
           <div class="my-2 border-t border-gray-100"></div>
 
-          <div
-            v-for="cat in categories"
-            :key="cat.id"
-            class="group flex items-center gap-1"
-          >
-            <button
-              @click="selectFilter('cat:' + cat.id)"
-              :class="[
-                'flex-1 text-left px-3 py-1.5 rounded-lg text-sm transition flex items-center gap-2',
-                activeFilter === 'cat:' + cat.id
-                  ? 'bg-blue-50 text-blue-700 font-medium'
-                  : 'text-gray-600 hover:bg-gray-100',
-              ]"
-            >
-              <span
-                :class="['w-2 h-2 rounded-full shrink-0', colorDot(cat.color)]"
-              ></span>
-              <span class="truncate">{{ cat.name }}</span>
-            </button>
-            <button
-              @click="deleteCategory(cat)"
-              class="opacity-0 group-hover:opacity-100 text-gray-300 hover:text-red-400 transition text-xs px-1"
-            >
-              ×
-            </button>
-          </div>
+          <template v-for="cat in topLevelCategories" :key="cat.id">
+            <div class="group flex items-center gap-0.5">
+              <!-- expand chevron (only if has children) -->
+              <button
+                v-if="childrenOf(cat.id).length"
+                @click="toggleCat(cat.id)"
+                class="w-4 shrink-0 text-gray-400 hover:text-gray-600 transition text-xs"
+              >
+                {{ expandedCats.includes(cat.id) ? "▾" : "▸" }}
+              </button>
+              <span v-else class="w-4 shrink-0"></span>
+              <button
+                @click="selectFilter('cat:' + cat.id)"
+                :class="[
+                  'flex-1 text-left px-2 py-1.5 rounded-lg text-sm transition flex items-center gap-2 min-w-0',
+                  activeFilter === 'cat:' + cat.id
+                    ? 'bg-blue-50 text-blue-700 font-medium'
+                    : 'text-gray-600 hover:bg-gray-100',
+                ]"
+              >
+                <span
+                  :class="['w-2 h-2 rounded-full shrink-0', colorDot(cat.color)]"
+                ></span>
+                <span class="truncate">{{ cat.name }}</span>
+              </button>
+              <button
+                @click="deleteCategory(cat)"
+                class="opacity-0 group-hover:opacity-100 text-gray-300 hover:text-red-400 transition text-xs px-1"
+              >
+                ×
+              </button>
+            </div>
+            <!-- children -->
+            <div v-if="expandedCats.includes(cat.id)" class="ml-4">
+              <div
+                v-for="child in childrenOf(cat.id)"
+                :key="child.id"
+                class="group flex items-center gap-0.5"
+              >
+                <button
+                  @click="selectFilter('cat:' + child.id)"
+                  :class="[
+                    'flex-1 text-left px-2 py-1 rounded-lg text-sm transition flex items-center gap-2 min-w-0',
+                    activeFilter === 'cat:' + child.id
+                      ? 'bg-blue-50 text-blue-700 font-medium'
+                      : 'text-gray-500 hover:bg-gray-100',
+                  ]"
+                >
+                  <span
+                    :class="[
+                      'w-1.5 h-1.5 rounded-full shrink-0',
+                      colorDot(child.color),
+                    ]"
+                  ></span>
+                  <span class="truncate">{{ child.name }}</span>
+                </button>
+                <button
+                  @click="deleteCategory(child)"
+                  class="opacity-0 group-hover:opacity-100 text-gray-300 hover:text-red-400 transition text-xs px-1"
+                >
+                  ×
+                </button>
+              </div>
+            </div>
+          </template>
         </div>
 
         <!-- Month section -->
@@ -411,6 +450,15 @@
           class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm mb-3 focus:outline-none focus:ring-2 focus:ring-blue-200"
           @keydown.enter="createCategory"
         />
+        <select
+          v-model="newCatParent"
+          class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm mb-3 focus:outline-none focus:ring-2 focus:ring-blue-200 text-gray-700"
+        >
+          <option :value="null">（頂層分類）</option>
+          <option v-for="p in topLevelCategories" :key="p.id" :value="p.id">
+            ↳ 歸入「{{ p.name }}」
+          </option>
+        </select>
         <div class="flex gap-2 mb-4">
           <button
             v-for="c in colorOptions"
@@ -497,6 +545,8 @@ const sourceCounts = ref<Record<string, number>>({});
 const showNewCategory = ref(false);
 const newCatName = ref("");
 const newCatColor = ref("blue");
+const newCatParent = ref<string | null>(null);
+const expandedCats = ref<string[]>([]);
 const deleteTarget = ref<any>(null);
 const quickCatTarget = ref<string | null>(null);
 
@@ -541,6 +591,13 @@ async function loadCategories() {
   categories.value = await $fetch<any[]>("/api/ai-dialogue-categories", {
     headers: h,
   });
+  // expand parents that have children (so sub-categories are visible by default)
+  const parentsWithKids = categories.value
+    .filter((c: any) => c.parent_id)
+    .map((c: any) => c.parent_id);
+  for (const pid of parentsWithKids) {
+    if (!expandedCats.value.includes(pid)) expandedCats.value.push(pid);
+  }
 }
 
 async function loadEntries() {
@@ -659,6 +716,18 @@ function sourceCount(src: string) {
   return sourceCounts.value[src] ?? 0;
 }
 
+const topLevelCategories = computed(() =>
+  categories.value.filter((c: any) => !c.parent_id),
+);
+function childrenOf(id: string): any[] {
+  return categories.value.filter((c: any) => c.parent_id === id);
+}
+function toggleCat(id: string) {
+  expandedCats.value = expandedCats.value.includes(id)
+    ? expandedCats.value.filter((x: string) => x !== id)
+    : [...expandedCats.value, id];
+}
+
 function datesForMonth(month: string) {
   return allDates.value.filter((d) => d.date.startsWith(month));
 }
@@ -696,9 +765,18 @@ async function createCategory() {
   await $fetch("/api/ai-dialogue-categories", {
     method: "POST",
     headers: h,
-    body: { name: newCatName.value, color: newCatColor.value },
+    body: {
+      name: newCatName.value,
+      color: newCatColor.value,
+      parent_id: newCatParent.value,
+    },
   });
+  // keep parent expanded so the new child is visible
+  if (newCatParent.value && !expandedCats.value.includes(newCatParent.value)) {
+    expandedCats.value.push(newCatParent.value);
+  }
   newCatName.value = "";
+  newCatParent.value = null;
   showNewCategory.value = false;
   await loadCategories();
 }
