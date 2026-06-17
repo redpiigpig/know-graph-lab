@@ -21,11 +21,11 @@
       <div class="ml-auto flex items-center gap-2 sm:gap-3">
         <slot name="actions" />
 
-        <!-- 編輯按鈕（除實驗網站之外的所有頁面） -->
+        <!-- 編輯按鈕：只對站長（allowedEmail）顯示，其他登入者看不到 -->
         <button
-          v-if="editable"
+          v-if="editable && isEditor"
           @click="onEditClick"
-          :title="user ? (editMode ? '退出編輯模式' : '進入編輯模式') : '登入後可編輯'"
+          :title="editMode ? '退出編輯模式' : '進入編輯模式'"
           :class="[
             'text-xs px-2.5 sm:px-3 py-1.5 rounded-lg transition flex items-center gap-1.5 flex-shrink-0',
             editMode && user
@@ -80,6 +80,7 @@ withDefaults(
 )
 
 const user = useSupabaseUser()
+const isEditor = useIsEditor()
 const editMode = useEditMode()
 const route = useRoute()
 const supabase = useSupabaseClient()
