@@ -88,6 +88,8 @@ def harvest() -> list[dict]:
         for a in soup.find_all("a", href=True):
             if ".pdf" not in a["href"].lower():
                 continue
+            if "file:" in a["href"].lower():        # editor-pasted local path, broken
+                continue
             raw = a["href"] if a["href"].startswith("http") else BASE + a["href"]
             norm = unquote(raw)                       # %BD%9B… and readable form → same
             if norm in seen:
@@ -111,7 +113,11 @@ def harvest() -> list[dict]:
         for a in arts:
             k = re.sub(r"[\(（]\s*\d+\s*[\)）]\s*$", "", a["title"]).strip()
             a["title"] = k
-            if k and k not in uniq:
+            if not k:
+                continue
+            # prefer a real http(s) link over an editor-pasted file:/// local path
+            cur = uniq.get(k)
+            if cur is None or (not cur["pdf"].lower().startswith("http") and a["pdf"].lower().startswith("http")):
                 uniq[k] = a
         it["articles"] = list(uniq.values())
         print(f"  期{it['issue']}: {len(it['articles'])} articles ({len(arts)} raw)", flush=True)
