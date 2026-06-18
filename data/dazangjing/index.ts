@@ -302,11 +302,6 @@ const PRE_CHRISTIAN_ERA: DazangEra = {
               { title_zh: '沉思錄（馬可·奧理略）', title_orig: 'Marcus Aurelius, Meditations (Τὰ εἰς ἑαυτόν)', author: '馬可‧奧理略', era: '約 2 世紀後期（約 170–180 年）', place: '羅馬帝國（多瑙河前線等地）', language: '古希臘文', intro: '羅馬皇帝兼斯多葛哲人馬可‧奧理略寫給自己的省思札記，原題《致我自己》。以希臘文記錄面對權位、無常與死亡時的自律、克己與順應宇宙理性之道，反覆默想萬物流轉、人皆同源於普世理性。其內省的靈性日記體與道德嚴肅性，被視為異教智慧逼近基督教虔敬的最高峰之一。' },
             ],
           },
-          {
-            key: 'roman', label: '羅馬哲學部', label_en: 'Roman Philosophy',
-            works: [
-            ],
-          },
         ],
       },
       wai: { divisions: [] },
