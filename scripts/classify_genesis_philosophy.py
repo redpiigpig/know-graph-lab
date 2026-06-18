@@ -299,35 +299,67 @@ def nvidia_chat(system: str, prompt: str) -> str:
 
 
 _haiku_client = None
+_haiku_cred_mtime = 0.0
+
+
+def _cred_path() -> Path:
+    return Path(os.environ.get("USERPROFILE", os.environ.get("HOME", ""))) / ".claude" / ".credentials.json"
+
+
+def _refresh_haiku_client(force: bool = False) -> None:
+    """OAuth access token rotates every few hours while the interactive Claude Code
+    session is open. Rebuild the client whenever credentials.json changes (or on
+    force after a 401), so a long batch run never holds a stale token."""
+    global _haiku_client, _haiku_cred_mtime
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    if api_key:
+        if _haiku_client is None:
+            import anthropic
+            _haiku_client = anthropic.Anthropic(api_key=api_key, timeout=300, max_retries=2)
+        return
+    cred = _cred_path()
+    if not cred.exists():
+        raise RuntimeError("no anthropic creds")
+    m = cred.stat().st_mtime
+    if force or _haiku_client is None or m > _haiku_cred_mtime:
+        import anthropic
+        tok = json.loads(cred.read_text(encoding="utf-8"))["claudeAiOauth"]["accessToken"]
+        _haiku_client = anthropic.Anthropic(auth_token=tok, timeout=300, max_retries=2)
+        _haiku_cred_mtime = m
 
 
 def haiku_chat(system: str, prompt: str) -> str:
-    global _haiku_client
     import anthropic
-    if _haiku_client is None:
-        api_key = os.environ.get("ANTHROPIC_API_KEY")
-        if api_key:
-            _haiku_client = anthropic.Anthropic(api_key=api_key, timeout=300, max_retries=2)
-        else:
-            cred = Path(os.environ.get("USERPROFILE", os.environ.get("HOME", ""))) / ".claude" / ".credentials.json"
-            tok = json.loads(cred.read_text(encoding="utf-8"))["claudeAiOauth"]["accessToken"]
-            _haiku_client = anthropic.Anthropic(auth_token=tok, timeout=300, max_retries=2)
-    msg = _haiku_client.messages.create(
-        model="claude-haiku-4-5-20251001", max_tokens=4000, system=system,
-        messages=[{"role": "user", "content": prompt}],
-    )
-    return "".join(b.text for b in msg.content if hasattr(b, "text")).strip()
-
-
-def llm_classify(batch: list[dict]) -> list[dict]:
-    prompt = PROMPT_TMPL.format(items=_build_items(batch))
-    for name, fn in (("Gemini", gemini_chat), ("NVIDIA", nvidia_chat), ("Haiku", haiku_chat)):
+    _refresh_haiku_client()
+    for attempt in range(2):
         try:
-            raw = fn(SYSTEM, prompt)
-            return _parse_json(raw)
-        except Exception as e:
-            print(f"  · {name} 失敗：{type(e).__name__} {str(e)[:120]}", flush=True)
-    raise RuntimeError("三引擎全失敗")
+            msg = _haiku_client.messages.create(
+                model="claude-haiku-4-5-20251001", max_tokens=4000, system=system,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            return "".join(b.text for b in msg.content if hasattr(b, "text")).strip()
+        except anthropic.AuthenticationError:
+            if attempt == 0:
+                _refresh_haiku_client(force=True)  # token rotated — re-read & retry once
+                continue
+            raise
+    raise RuntimeError("haiku auth failed")
+
+
+def llm_classify(batch: list[dict], max_rounds: int = 4, wait: int = 90) -> list[dict]:
+    """Try Gemini→NVIDIA→Haiku. If ALL three fail (transient rate-limit storm or
+    token rotation), wait and retry the whole chain rather than dropping the batch."""
+    prompt = PROMPT_TMPL.format(items=_build_items(batch))
+    for rnd in range(max_rounds):
+        for name, fn in (("Gemini", gemini_chat), ("NVIDIA", nvidia_chat), ("Haiku", haiku_chat)):
+            try:
+                return _parse_json(fn(SYSTEM, prompt))
+            except Exception as e:
+                print(f"  · {name} 失敗：{type(e).__name__} {str(e)[:120]}", flush=True)
+        if rnd < max_rounds - 1:
+            print(f"  三引擎全失敗，等待 {wait}s 後重試（第 {rnd + 1}/{max_rounds} 輪）", flush=True)
+            time.sleep(wait)
+    raise RuntimeError("三引擎連續多輪全失敗")
 
 
 def _parse_json(raw: str) -> list[dict]:
