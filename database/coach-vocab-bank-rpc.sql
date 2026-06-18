@@ -26,5 +26,17 @@ language sql stable as $$
   order by min(freq_rank) nulls last, category;
 $$;
 
+-- 該語言字庫的分級標籤 + 數量（字典瀏覽頁「分級」分頁用）。
+create or replace function public.vocab_bank_levels(p_language text)
+returns table(level text, n bigint)
+language sql stable as $$
+  select coalesce(level, '—') as level, count(*)::bigint as n
+  from public.lang_vocab_bank
+  where language = p_language and glossed = true
+  group by coalesce(level, '—')
+  order by min(freq_rank) nulls last, level;
+$$;
+
 grant execute on function public.pick_vocab_bank(text, text, uuid, int) to authenticated, service_role, anon;
 grant execute on function public.vocab_bank_categories(text) to authenticated, service_role, anon;
+grant execute on function public.vocab_bank_levels(text) to authenticated, service_role, anon;
