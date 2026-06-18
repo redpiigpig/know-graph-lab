@@ -54,12 +54,13 @@ const batches = await parallel(sources.map((src) => () =>
     `你在為「基督教大藏經」研究候選書目（這是嚴謹的漢語神學文獻編目，務必準確、勿杜撰）。\n` +
     `目標時代＝${a.eraName}（斷代＝時代精神：${a.boundary}）。\n` +
     `目標分類＝${a.collectionName}‧${a.canonLabel}。\n` +
-    `收錄範圍：\n- ${scope.join('\n- ')}\n\n` +
-    `請**僅**根據權威來源「${src}」，列出 8–15 部「符合此時代×藏×正/外、且尚未被收錄」的真實文獻。\n` +
-    `每部需給：title_zh(繁體中文定名，沿用良好古譯、託名不寫偽)、title_orig(原文/西文名)、author(或傳說作者)、era(寫作年代)、place(寫作地點)、language、division(建議歸入的「部」名)、intro(100–160字繁中簡介)、source_citation(出處：書目/頁碼/可查證網址)。\n` +
-    `合集處理：遇「合集」（塔木德／聖訓集／摩門經／全集等）請枚舉其正典子單位為個別卷，各標 parent(母合集名)；子單位太短碎者則整部一卷並以 extent(內部規模，如「63 篇」)標示。\n` +
-    `廣度：本藏正藏目標至少 100 卷，請盡量周延列舉（含次要但真實的文獻），但仍須真實可查。\n` +
-    `鐵則：寧缺勿濫，任何不確定其真實存在或 metadata 者一律不列。`,
+    `你的任務是「目錄式系統枚舉」，不是憑記憶舉例：走查權威圖書館目錄與全集叢書的目次，把屬於此(時代×藏×正/外)、尚未被收錄的真實書卷逐一抄列，力求窮盡（本批請列 15–30 部以上）。\n` +
+    `‧ 主查圖書館目錄：美國國會圖書館 catalog.loc.gov（按 LCC 基督教分類 BR 教會史／BS 聖經／BT 教義／BV 實踐神學‧禮儀‧講道‧宣教／BX 各宗派）、梵蒂岡圖書館 opac.vatlib.it 與 digi.vatlib.it、WorldCat、HathiTrust、Internet Archive。\n` +
+    `‧ 本批指定全集／來源：「${src}」——走其卷目、作者著作表、主題分類逐一枚舉。\n` +
+    `收錄範圍定向（提示，非窮舉）：${scope.join('；')}。\n` +
+    `每部需給：title_zh(繁體中文定名，沿用良好古譯、託名不寫偽)、title_orig(原文/西文名)、author(或傳說作者)、era(寫作年代)、place(寫作地點)、language、division(建議歸入的「部」名)、intro(100–160字繁中簡介)、source_citation(務必附可查證出處：LCCN／卷號／目錄 URL／全集頁碼)。\n` +
+    `合集處理：遇「合集」（塔木德／聖訓集／摩門經／全集等）請枚舉其正典子單位為個別卷，各標 parent(母合集名)；子單位太短碎者則整部一卷並以 extent 標示。\n` +
+    `鐵則：寧缺勿濫，不確定真實存在或 metadata 者一律不列；但目錄明載者與合集子卷應盡量收全。`,
     { label: `research:${String(src).slice(0, 20)}`, phase: 'Research', schema: CAND_SCHEMA },
   ).then((r) => (r?.works || []))))
 
