@@ -37,6 +37,28 @@ language sql stable as $$
   order by min(freq_rank) nulls last, level;
 $$;
 
+-- 批次寫入語意主題：一次更新整批 [{word, theme}]（theme 分類腳本用）。
+create or replace function public.set_vocab_themes(p_language text, p_pairs jsonb)
+returns void language sql as $$
+  update public.lang_vocab_bank b
+  set theme = x.theme, updated_at = now()
+  from jsonb_to_recordset(p_pairs) as x(word text, theme text)
+  where b.language = p_language and b.word = x.word;
+$$;
+
+-- 該語言字庫的語意主題標籤 + 數量（字典「主題」分頁用），依數量排序。
+create or replace function public.vocab_bank_themes(p_language text)
+returns table(theme text, n bigint)
+language sql stable as $$
+  select theme, count(*)::bigint as n
+  from public.lang_vocab_bank
+  where language = p_language and glossed = true and theme is not null
+  group by theme
+  order by count(*) desc, theme;
+$$;
+
 grant execute on function public.pick_vocab_bank(text, text, uuid, int) to authenticated, service_role, anon;
 grant execute on function public.vocab_bank_categories(text) to authenticated, service_role, anon;
 grant execute on function public.vocab_bank_levels(text) to authenticated, service_role, anon;
+grant execute on function public.set_vocab_themes(text, jsonb) to authenticated, service_role, anon;
+grant execute on function public.vocab_bank_themes(text) to authenticated, service_role, anon;

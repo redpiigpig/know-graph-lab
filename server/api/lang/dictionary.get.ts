@@ -14,9 +14,10 @@ export default defineEventHandler(async (event) => {
   const language = (q.language as string) || "en";
   if (!getCoach(language)) throw createError({ statusCode: 400, message: "不支援的語言" });
 
-  const sort = ["alpha", "level", "category"].includes(q.sort as string) ? (q.sort as string) : "alpha";
+  const sort = ["alpha", "level", "category", "theme"].includes(q.sort as string) ? (q.sort as string) : "alpha";
   const level = (q.level as string) || "";
   const category = (q.category as string) || "";
+  const theme = (q.theme as string) || "";
   // 去除會破壞 PostgREST or() / ilike 萬用字元的字元
   const search = ((q.q as string) || "").trim().replace(/[,()*:%]/g, "").slice(0, 60);
   const page = Math.max(0, parseInt((q.page as string) || "0", 10) || 0);
@@ -29,14 +30,13 @@ export default defineEventHandler(async (event) => {
     .eq("glossed", true);
   if (level) query = query.eq("level", level);
   if (category) query = query.eq("category", category);
+  if (theme) query = query.eq("theme", theme);
   if (search) query = query.or(`word.ilike.*${search}*,meaning.ilike.*${search}*`);
 
   if (sort === "alpha") {
     query = query.order("word", { ascending: true });
-  } else if (sort === "level") {
-    query = query.order("freq_rank", { ascending: true, nullsFirst: false }).order("word", { ascending: true });
   } else {
-    // category：以頻率排序（同類字頻近，閱讀順）
+    // level / category / theme：以頻率排序（同組字頻近，閱讀順）
     query = query.order("freq_rank", { ascending: true, nullsFirst: false }).order("word", { ascending: true });
   }
   query = query.range(page * limit, page * limit + limit - 1);
@@ -47,14 +47,17 @@ export default defineEventHandler(async (event) => {
   // facet 只在第一頁取（之後分頁不重抓，省往返）
   let levels: any[] = [];
   let categories: any[] = [];
+  let themes: any[] = [];
   if (page === 0) {
-    const [{ data: lvls }, { data: cats }] = await Promise.all([
+    const [{ data: lvls }, { data: cats }, { data: thms }] = await Promise.all([
       supabase.rpc("vocab_bank_levels", { p_language: language }),
       supabase.rpc("vocab_bank_categories", { p_language: language }),
+      supabase.rpc("vocab_bank_themes", { p_language: language }),
     ]);
     levels = (lvls ?? []).map((r: any) => ({ level: r.level, count: Number(r.n) }));
     categories = (cats ?? []).map((r: any) => ({ category: r.category, count: Number(r.n) }));
+    themes = (thms ?? []).map((r: any) => ({ theme: r.theme, count: Number(r.n) }));
   }
 
-  return { rows: data ?? [], total: count ?? 0, page, limit, sort, levels, categories };
+  return { rows: data ?? [], total: count ?? 0, page, limit, sort, levels, categories, themes };
 });

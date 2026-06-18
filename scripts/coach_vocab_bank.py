@@ -540,6 +540,100 @@ def cmd_gloss(lang, limit=None, engine="auto"):
     print(f"[{lang}] gloss 完成，本次新增 {processed} 字（DB 已補釋義 {db_count(lang, True)}）", flush=True)
 
 
+# ════════════════════════════════════════════════════════════════════════════
+#  語意主題分類（theme）— 一次性 LLM 批次把每個已 gloss 字打上固定主題標籤
+#  跑完後字典「主題」分頁＝純讀 DB、零 AI。reentrant：只抓 theme is null 的字。
+# ════════════════════════════════════════════════════════════════════════════
+THEME_LIST = [
+    "神‧神學", "聖經人物‧地名", "敬拜‧禮儀", "教會‧群體‧教派", "罪‧救恩‧倫理",
+    "情感‧心智", "人‧身體‧家庭", "食物‧飲食", "自然‧動植物", "時間‧節期",
+    "空間‧方位", "數量‧度量", "言語‧文書", "行動‧移動", "社會‧政治‧律法",
+    "工藝‧器物‧建築", "性質‧抽象", "功能詞",
+]
+THEME_SET = set(THEME_LIST)
+THEME_BATCH = 100
+
+
+def _theme_system():
+    return ("你是詞彙語意分類員，服務做宗教/神話/宗教學研究的學生。"
+            "依每個字的繁中釋義，從固定主題清單挑**唯一最貼切**的一個主題。"
+            "宗教相關字優先歸到對應的宗教主題；連接詞/介系詞/冠詞/代名詞等歸「功能詞」。"
+            "務必只用清單內的主題字串，不可自創。")
+
+
+def _theme_prompt(batch):
+    lines = []
+    for i, r in enumerate(batch):
+        pos = f"（{r['part_of_speech']}）" if r.get("part_of_speech") else ""
+        lines.append(f"{i+1}. {r['word']}{pos}：{r.get('meaning') or ''}")
+    items = "\n".join(lines)
+    themes = "｜".join(THEME_LIST)
+    return (f"主題清單（只能從中選一）：{themes}\n\n"
+            f"為下列 {len(batch)} 個字各選一個主題。只輸出 JSON 陣列，順序與輸入一致，"
+            f'每項：{{"word":"原字","theme":"主題（清單內字串）"}}\n\n字：\n{items}')
+
+
+def classify_theme(batch, engine="auto"):
+    res = llm_json(_theme_prompt(batch), _theme_system(), engine=engine)
+    out = []
+    for i, r in enumerate(batch):
+        d = res[i] if i < len(res) and isinstance(res[i], dict) else {}
+        theme = (d.get("theme") or "").strip()
+        if theme not in THEME_SET:
+            theme = "性質‧抽象"  # 落在清單外就丟通用桶，避免污染主題
+        out.append({"word": r["word"], "theme": theme})
+    return out
+
+
+def fetch_unthemed(lang, limit, offset):
+    q = (f"{_SB_URL}/rest/v1/lang_vocab_bank?language=eq.{lang}&glossed=eq.true"
+         f"&theme=is.null&select=word,meaning,part_of_speech&order=freq_rank.asc.nullslast"
+         f"&limit={limit}&offset={offset}")
+    r = requests.get(q, headers=_SB_HEADERS, timeout=60)
+    r.raise_for_status()
+    return r.json()
+
+
+def set_themes(lang, pairs):
+    r = requests.post(
+        f"{_SB_URL}/rest/v1/rpc/set_vocab_themes",
+        headers={**_SB_HEADERS, "Prefer": "return=minimal"},
+        data=json.dumps({"p_language": lang, "p_pairs": pairs}).encode("utf-8"),
+        timeout=120,
+    )
+    if r.status_code not in (200, 204):
+        print(f"  ! set_themes HTTP {r.status_code}: {r.text[:200]}", flush=True)
+
+
+def cmd_theme(lang, limit=None, engine="auto"):
+    # 一次抓齊所有未分類字（分頁進記憶體），失敗的批次留 null、下次重跑補上
+    pending, off = [], 0
+    while True:
+        page = fetch_unthemed(lang, 1000, off)
+        if not page:
+            break
+        pending.extend(page)
+        off += len(page)
+        if len(page) < 1000:
+            break
+    if limit:
+        pending = pending[:limit]
+    print(f"[{lang}] theme：待分類 {len(pending)} 字", flush=True)
+    done = 0
+    for i in range(0, len(pending), THEME_BATCH):
+        batch = pending[i:i + THEME_BATCH]
+        try:
+            pairs = classify_theme(batch, engine=engine)
+        except Exception as e:  # noqa: BLE001
+            print(f"  ! batch {i//THEME_BATCH} 分類失敗，跳過（下次補）：{str(e)[:100]}", flush=True)
+            continue
+        set_themes(lang, pairs)
+        done += len(pairs)
+        if (i // THEME_BATCH) % 5 == 0:
+            print(f"  [{lang}] 已分類 {done}/{len(pending)}", flush=True)
+    print(f"[{lang}] theme 完成，本次分類 {done} 字", flush=True)
+
+
 def cmd_status():
     print(f"{'lang':5} {'candidates':>11} {'glossed(ledger)':>16} {'DB total':>9} {'DB glossed':>11}")
     for lang in TARGETS:
@@ -555,7 +649,7 @@ def cmd_status():
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["harvest", "gloss", "run", "status"])
+    ap.add_argument("cmd", choices=["harvest", "gloss", "theme", "run", "status"])
     ap.add_argument("lang", nargs="?", default="all")
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--force", action="store_true")
@@ -572,6 +666,8 @@ def main():
             cmd_harvest(lang, force=a.force)
         if a.cmd in ("gloss", "run"):
             cmd_gloss(lang, limit=a.limit, engine=a.engine)
+        if a.cmd == "theme":
+            cmd_theme(lang, limit=a.limit, engine=a.engine)
 
 
 if __name__ == "__main__":

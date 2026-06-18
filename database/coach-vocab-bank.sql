@@ -20,9 +20,13 @@ create table if not exists public.lang_vocab_bank (
   unique (language, word)
 );
 
+-- 語意主題（神/聖經人物/敬拜/家庭/食物/自然…）— 字典「主題」分頁用；由 LLM 一次性批次分類
+alter table public.lang_vocab_bank add column if not exists theme text;
+
 create index if not exists idx_vocab_bank_lang_cat   on public.lang_vocab_bank(language, category);
 create index if not exists idx_vocab_bank_lang_glos  on public.lang_vocab_bank(language, glossed);
 create index if not exists idx_vocab_bank_lang_freq  on public.lang_vocab_bank(language, freq_rank);
+create index if not exists idx_vocab_bank_lang_theme on public.lang_vocab_bank(language, theme);
 
 alter table public.lang_vocab_bank enable row level security;
 

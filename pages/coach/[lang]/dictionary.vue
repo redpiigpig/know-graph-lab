@@ -14,8 +14,9 @@
       <div class="bg-white rounded-2xl border border-gray-100 p-4 space-y-3">
         <div class="flex items-center gap-2">
           <button @click="setSort('alpha')" :class="tabClass('alpha')">🔤 字母順序</button>
+          <button @click="setSort('theme')" :class="tabClass('theme')">🎯 主題</button>
           <button @click="setSort('level')" :class="tabClass('level')">📊 分級</button>
-          <button @click="setSort('category')" :class="tabClass('category')">🗂️ 分類</button>
+          <button @click="setSort('category')" :class="tabClass('category')">🗂️ 頻率分類</button>
           <span class="ml-auto text-[11px] text-gray-400">共 {{ total.toLocaleString() }} 字</span>
         </div>
 
@@ -23,8 +24,17 @@
           :placeholder="`搜尋單字或中文釋義…`"
           class="w-full px-3 py-2 rounded-xl border border-gray-200 text-sm focus:border-indigo-400 focus:outline-none" />
 
-        <!-- facet chips：分級/分類 -->
-        <div v-if="sort === 'level' && levels.length" class="flex flex-wrap items-center gap-1.5">
+        <!-- facet chips：主題/分級/分類 -->
+        <div v-if="sort === 'theme'" class="flex flex-wrap items-center gap-1.5">
+          <template v-if="themes.length">
+            <button @click="pickFilter('')" :class="chipClass(activeFilter === '')">全部</button>
+            <button v-for="t in themes" :key="t.theme" @click="pickFilter(t.theme)" :class="chipClass(activeFilter === t.theme)">
+              {{ t.theme }}<span class="opacity-60"> · {{ t.count }}</span>
+            </button>
+          </template>
+          <span v-else class="text-[11px] text-amber-600">語意主題分類建置中…（背景批次跑完即顯示）</span>
+        </div>
+        <div v-else-if="sort === 'level' && levels.length" class="flex flex-wrap items-center gap-1.5">
           <button @click="pickFilter('')" :class="chipClass(activeFilter === '')">全部</button>
           <button v-for="l in levels" :key="l.level" @click="pickFilter(l.level)" :class="chipClass(activeFilter === l.level)">
             {{ l.level }}<span class="opacity-60"> · {{ l.count }}</span>
@@ -76,7 +86,7 @@ import { useActivityTracker } from "~/composables/useActivityTracker";
 definePageMeta({ middleware: "coach-auth" });
 
 interface Word { word: string; reading?: string; meaning?: string; example?: string; part_of_speech?: string; category?: string; level?: string }
-interface Resp { rows: Word[]; total: number; page: number; limit: number; sort: string; levels: { level: string; count: number }[]; categories: { category: string; count: number }[] }
+interface Resp { rows: Word[]; total: number; page: number; limit: number; sort: string; levels: { level: string; count: number }[]; categories: { category: string; count: number }[]; themes: { theme: string; count: number }[] }
 
 const route = useRoute();
 const lang = computed(() => route.params.lang as string);
@@ -86,7 +96,7 @@ const TTS: Record<string, string> = { en: "en-US", de: "de-DE", fr: "fr-FR", ja:
 
 const coach = ref<any>(null);
 const rtl = computed(() => lang.value === "hbo");
-const sort = ref<"alpha" | "level" | "category">("alpha");
+const sort = ref<"alpha" | "level" | "category" | "theme">("alpha");
 const activeFilter = ref("");
 const search = ref("");
 const rows = ref<Word[]>([]);
@@ -94,6 +104,7 @@ const total = ref(0);
 const page = ref(0);
 const levels = ref<Resp["levels"]>([]);
 const categories = ref<Resp["categories"]>([]);
+const themes = ref<Resp["themes"]>([]);
 const loading = ref(true);
 const loadingMore = ref(false);
 
@@ -118,7 +129,7 @@ function buildUrl(p: number) {
 async function fetchPage(p: number, append: boolean) {
   const r = await authedFetch<Resp>(buildUrl(p));
   total.value = r.total;
-  if (p === 0) { levels.value = r.levels; categories.value = r.categories; }
+  if (p === 0) { levels.value = r.levels; categories.value = r.categories; themes.value = r.themes || []; }
   rows.value = append ? [...rows.value, ...r.rows] : r.rows;
   page.value = p;
 }
@@ -131,7 +142,7 @@ async function loadMore() {
   loadingMore.value = true;
   try { await fetchPage(page.value + 1, true); } finally { loadingMore.value = false; }
 }
-function setSort(s: "alpha" | "level" | "category") {
+function setSort(s: "alpha" | "level" | "category" | "theme") {
   if (sort.value === s) return;
   sort.value = s; activeFilter.value = ""; reload();
 }
