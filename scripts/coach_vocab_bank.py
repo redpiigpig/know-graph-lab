@@ -144,6 +144,10 @@ def _haiku_json(prompt, system, _tries=4):
             time.sleep(20 * (attempt + 1))
             last = "429"
             continue
+        except (T._anthropic.APIConnectionError, T._anthropic.APITimeoutError):
+            time.sleep(5 * (attempt + 1))  # 連線瞬斷 → 短退避再試，避免整批被跳過
+            last = "conn"
+            continue
     raise RuntimeError(f"Haiku failed after {_tries} tries (last={last})")
 
 
