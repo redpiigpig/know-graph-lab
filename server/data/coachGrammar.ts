@@ -524,7 +524,523 @@ const HBO: GrammarTopic[] = [
   },
 ];
 
-export const COACH_GRAMMAR: Record<string, GrammarTopic[]> = { grc: GRC, la: LA, hbo: HBO };
+// ── 德文 Hochdeutsch（A1 初學）────────────────────────────────────────────────
+const DE: GrammarTopic[] = [
+  {
+    id: "de-articles-gender",
+    en: "Three Genders & Articles",
+    title: "三性與冠詞 der/die/das",
+    levels: ["A1"],
+    summary: "名詞分陽/陰/中，定冠詞 der/die/das、不定冠詞 ein/eine；名詞一律大寫。",
+    keywords: ["gender", "性", "der die das", "冠詞", "ein", "名詞大寫"],
+    content: {
+      explanation:
+        "德文名詞有三種性：陽性 der、陰性 die、中性 das（複數一律 die）。性別常無邏輯可循，**背名詞要連冠詞一起背**。\n不定冠詞（a/an）：陽/中 ein、陰 eine。\n所有名詞**字首一律大寫**（der Tag, die Kirche, das Buch）。",
+      examples: [
+        { target: "der Mann", translation: "（那個）男人", note: "陽性" },
+        { target: "die Kirche", translation: "教會／教堂", note: "陰性" },
+        { target: "das Buch", translation: "書", note: "中性" },
+      ],
+      practice: [
+        { q: "「ein」與「eine」分別配哪種性？", answer: "ein＝陽性/中性；eine＝陰性。" },
+        { q: "德文名詞書寫有什麼特別規則？", answer: "字首一律大寫。" },
+      ],
+    },
+  },
+  {
+    id: "de-cases",
+    en: "The Four Cases",
+    title: "四格 Nominativ/Akkusativ/Dativ/Genitiv",
+    levels: ["A1"],
+    summary: "德文靠格標角色：主格、賓格（受詞）、與格（間受）、屬格（所有）。",
+    keywords: ["case", "格", "Nominativ", "Akkusativ", "Dativ", "Genitiv"],
+    content: {
+      explanation:
+        "德文用**格**標語法角色，冠詞會隨格變化：\n‧主格（Nom.）＝主詞：der Mann。\n‧賓格（Akk.）＝直接受詞：陽性 der→den（den Mann）。\n‧與格（Dat.）＝間接受詞/某些介系詞後：der→dem、die→der、das→dem。\n‧屬格（Gen.）＝所有（of）。\n陰/中性在主格與賓格同形，先掌握陽性的 der→den→dem 變化最有感。",
+      examples: [
+        { target: "Der Mann liest das Buch.", translation: "這男人讀這本書。", note: "der＝主格、das Buch＝賓格" },
+        { target: "Ich gebe dem Kind ein Buch.", translation: "我給這孩子一本書。", note: "dem Kind＝與格（間接受詞）" },
+        { target: "das Wort Gottes", translation: "神的話", note: "Gottes＝屬格（神的）" },
+      ],
+      practice: [
+        { q: "陽性 der 當直接受詞（賓格）時變成？", answer: "den。" },
+        { q: "間接受詞『給某人』用哪一格？", answer: "與格 Dativ（如 dem Kind）。" },
+      ],
+    },
+  },
+  {
+    id: "de-present",
+    en: "Present Tense (regular verbs)",
+    title: "動詞現在式變位",
+    levels: ["A1"],
+    summary: "去 -en 取字幹＋人稱字尾：-e, -st, -t, -en, -t, -en。",
+    keywords: ["verb", "動詞", "present", "現在式", "conjugation", "變位", "machen"],
+    content: {
+      explanation:
+        "規則動詞取不定式去 -en 的字幹＋人稱字尾。以 machen（做）為例：ich mache／du machst／er(sie/es) macht／wir machen／ihr macht／sie/Sie machen。\n德文現在式可表現在與近未來。Sie（大寫）是禮貌的『您』。",
+      examples: [
+        { target: "Ich glaube an Gott.", translation: "我信神。", note: "glauben→glaube" },
+        { target: "Sie betet jeden Tag.", translation: "她每天禱告。", note: "第三人稱單數 -t：betet" },
+        { target: "Wir singen.", translation: "我們唱歌。", note: "wir 用 -en" },
+      ],
+      practice: [
+        { q: "machen 的『du（你）』形式是？", answer: "machst。" },
+        { q: "第三人稱單數（er/sie/es）的字尾通常是？", answer: "-t（如 macht、betet）。" },
+      ],
+    },
+  },
+  {
+    id: "de-sein-haben",
+    en: "sein & haben",
+    title: "sein（是）與 haben（有）",
+    levels: ["A1"],
+    summary: "兩個最重要的不規則動詞，務必背熟。",
+    keywords: ["sein", "haben", "是", "有", "to be", "to have"],
+    content: {
+      explanation:
+        "sein（是）：ich bin, du bist, er ist, wir sind, ihr seid, sie sind。\nhaben（有）：ich habe, du hast, er hat, wir haben, ihr habt, sie haben。\n兩者極高頻，也是日後構成完成式的助動詞。",
+      examples: [
+        { target: "Gott ist Liebe.", translation: "神是愛。", note: "ist＝第三人稱單數" },
+        { target: "Ich bin müde.", translation: "我累了。", note: "bin＝我是" },
+        { target: "Wir haben Zeit.", translation: "我們有時間。", note: "haben＝有" },
+      ],
+      practice: [
+        { q: "『他是』德文怎麼說？", answer: "er ist。" },
+        { q: "haben 的『du（你）』形式？", answer: "hast。" },
+      ],
+    },
+  },
+  {
+    id: "de-word-order",
+    en: "Word Order (V2)",
+    title: "語序：動詞置第二位",
+    levels: ["A1"],
+    summary: "主句中變位動詞恆在第二位；句首放別的成分，主詞就退到動詞後。",
+    keywords: ["word order", "語序", "V2", "verb second", "Inversion"],
+    content: {
+      explanation:
+        "德文主句的鐵則：**變位動詞在第二位（V2）**。\n若句首不是主詞（而是時間/地點等），主詞就移到動詞之後（倒裝）：Heute **bete** ich.（今天我禱告。）\nyes/no 問句把動詞提到句首：Glaubst du?（你信嗎？）",
+      examples: [
+        { target: "Ich gehe heute in die Kirche.", translation: "我今天去教堂。", note: "正常語序：主詞-動詞" },
+        { target: "Heute gehe ich in die Kirche.", translation: "今天我去教堂。", note: "句首放 heute→動詞仍第二位、主詞後移" },
+        { target: "Liest du die Bibel?", translation: "你讀聖經嗎？", note: "yes/no 問句動詞句首" },
+      ],
+      practice: [
+        { q: "把『Ich lese heute.』改成以 heute 開頭。", answer: "Heute lese ich.（動詞仍第二位）。" },
+        { q: "德文主句變位動詞固定在第幾位？", answer: "第二位（V2）。" },
+      ],
+    },
+  },
+  {
+    id: "de-negation",
+    en: "Negation: nicht & kein",
+    title: "否定 nicht 與 kein",
+    levels: ["A1"],
+    summary: "nicht 否定動詞/形容詞/整句；kein 否定帶不定冠詞或無冠詞的名詞。",
+    keywords: ["negation", "否定", "nicht", "kein"],
+    content: {
+      explanation:
+        "**nicht**：否定動詞、形容詞或整句（通常放句尾或被否定詞前）：Ich glaube **nicht**.\n**kein**：否定名詞（取代 ein 或無冠詞複數）：Ich habe **kein** Buch.（我沒有書。）kein 像 ein 一樣隨性、格變化（kein/keine…）。",
+      examples: [
+        { target: "Das ist nicht wahr.", translation: "那不是真的。", note: "nicht 否定形容詞" },
+        { target: "Ich habe keine Zeit.", translation: "我沒有時間。", note: "keine＋陰性名詞 Zeit" },
+        { target: "Er betet nicht.", translation: "他不禱告。", note: "nicht 否定動詞，放句尾" },
+      ],
+      practice: [
+        { q: "『我沒有錢（Geld，中性）』怎麼說？", answer: "Ich habe kein Geld." },
+        { q: "否定一個動詞用 nicht 還是 kein？", answer: "nicht。" },
+      ],
+    },
+  },
+  {
+    id: "de-pronouns-possessive",
+    en: "Pronouns & Possessives",
+    title: "人稱代名詞與所有冠詞",
+    levels: ["A1"],
+    summary: "ich/du/er…；所有用 mein/dein/sein…，字尾隨名詞性與格。",
+    keywords: ["pronoun", "代名詞", "possessive", "mein", "dein", "所有"],
+    content: {
+      explanation:
+        "人稱代名詞（主格）：ich, du, er/sie/es, wir, ihr, sie/Sie。\n所有冠詞像 ein 一樣變化：mein（我的）、dein（你的）、sein（他的）、ihr（她的/他們的）、unser（我們的）。字尾隨被擁有名詞的性與格：mein Vater（我父）／meine Mutter（我母）。",
+      examples: [
+        { target: "mein Gott", translation: "我的神", note: "陽性→mein" },
+        { target: "meine Kirche", translation: "我的教會", note: "陰性→meine" },
+        { target: "Sie ist meine Schwester.", translation: "她是我的姊妹。", note: "meine＋陰性" },
+      ],
+      practice: [
+        { q: "『你的（陰性名詞）』所有冠詞是？", answer: "deine（如 deine Mutter）。" },
+        { q: "所有冠詞字尾依什麼變化？", answer: "依被擁有名詞的性與格。" },
+      ],
+    },
+  },
+  {
+    id: "de-modals",
+    en: "Modal Verbs (intro)",
+    title: "情態動詞入門",
+    levels: ["A1"],
+    summary: "können/müssen/wollen…＋句尾原形動詞（框架結構）。",
+    keywords: ["modal", "情態動詞", "können", "müssen", "wollen", "Satzklammer"],
+    content: {
+      explanation:
+        "情態動詞表能力/必須/意願：können（能）、müssen（必須）、wollen（想要）、dürfen（可以）、sollen（應該）、mögen（喜歡）。\n用法：情態動詞變位放第二位，**主要動詞用原形放句尾**（句框 Satzklammer）：Ich **muss** heute **beten**.",
+      examples: [
+        { target: "Ich kann Deutsch lesen.", translation: "我能讀德文。", note: "kann（第二位）… lesen（句尾原形）" },
+        { target: "Wir müssen gehen.", translation: "我們必須走。", note: "müssen＋gehen" },
+        { target: "Sie will beten.", translation: "她想禱告。", note: "wollen→will" },
+      ],
+      practice: [
+        { q: "情態動詞句中，主要動詞放哪裡、用什麼形式？", answer: "放句尾、用原形（不定式）。" },
+        { q: "können 的『ich』形式？", answer: "kann。" },
+      ],
+    },
+  },
+];
+
+// ── 法文 Parisien（A1 初學）──────────────────────────────────────────────────
+const FR: GrammarTopic[] = [
+  {
+    id: "fr-gender-articles",
+    en: "Gender & Articles",
+    title: "陰陽性與冠詞 le/la、un/une",
+    levels: ["A1"],
+    summary: "名詞分陰陽性；定冠詞 le/la/les、不定冠詞 un/une/des。",
+    keywords: ["gender", "性", "le la les", "un une", "冠詞", "article"],
+    content: {
+      explanation:
+        "法文名詞分陽性、陰性。定冠詞：陽 le、陰 la、複數 les（母音前 le/la 縮為 l'）。\n不定冠詞：陽 un、陰 une、複數 des。\n**背名詞要連冠詞一起背**（le livre, la table）。",
+      examples: [
+        { target: "le Dieu", translation: "神", note: "陽性→le（一般說 Dieu 不加冠詞）" },
+        { target: "la prière", translation: "禱告", note: "陰性→la" },
+        { target: "l'église", translation: "教堂／教會", note: "母音前縮為 l'" },
+      ],
+      practice: [
+        { q: "陰性名詞用哪個不定冠詞？", answer: "une。" },
+        { q: "le/la 在母音開頭的字前會怎樣？", answer: "縮寫成 l'（如 l'église）。" },
+      ],
+    },
+  },
+  {
+    id: "fr-etre-avoir",
+    en: "être & avoir",
+    title: "être（是）與 avoir（有）",
+    levels: ["A1"],
+    summary: "兩個最重要的不規則動詞，也是複合過去式的助動詞。",
+    keywords: ["être", "avoir", "是", "有", "to be", "to have"],
+    content: {
+      explanation:
+        "être（是）：je suis, tu es, il/elle est, nous sommes, vous êtes, ils/elles sont。\navoir（有）：j'ai, tu as, il a, nous avons, vous avez, ils ont。\n兩者極高頻，也用來構成複合過去式（passé composé）。",
+      examples: [
+        { target: "Dieu est amour.", translation: "神是愛。", note: "est＝第三人稱單數" },
+        { target: "Je suis prêt.", translation: "我準備好了。", note: "suis＝我是" },
+        { target: "Nous avons la foi.", translation: "我們有信心。", note: "avons＝我們有" },
+      ],
+      practice: [
+        { q: "『他是』法文怎麼說？", answer: "il est。" },
+        { q: "avoir 的『je（我）』形式（含縮寫）？", answer: "j'ai。" },
+      ],
+    },
+  },
+  {
+    id: "fr-er-verbs",
+    en: "-er Verbs (Present)",
+    title: "第一組 -er 動詞現在式",
+    levels: ["A1"],
+    summary: "最大宗規則動詞：去 -er＋字尾 -e, -es, -e, -ons, -ez, -ent。",
+    keywords: ["verb", "動詞", "-er", "present", "現在式", "parler"],
+    content: {
+      explanation:
+        "-er 結尾的規則動詞（如 parler 說）最多。去 -er 取字幹＋字尾：je parle, tu parles, il parle, nous parlons, vous parlez, ils parlent。\n注意 -e/-es/-ent 結尾**都不發音**，三者聽起來一樣。",
+      examples: [
+        { target: "Je prie chaque jour.", translation: "我每天禱告。", note: "prier→prie" },
+        { target: "Nous chantons.", translation: "我們唱歌。", note: "nous→-ons" },
+        { target: "Ils adorent Dieu.", translation: "他們敬拜神。", note: "ils→-ent（不發音）" },
+      ],
+      practice: [
+        { q: "parler 的『nous（我們）』形式？", answer: "parlons。" },
+        { q: "-e、-es、-ent 三個字尾發音上有何特點？", answer: "都不發音，聽起來相同。" },
+      ],
+    },
+  },
+  {
+    id: "fr-negation",
+    en: "Negation: ne … pas",
+    title: "否定 ne … pas",
+    levels: ["A1"],
+    summary: "把動詞夾在 ne 與 pas 之間；口語常省略 ne。",
+    keywords: ["negation", "否定", "ne pas"],
+    content: {
+      explanation:
+        "法文否定用**雙詞框** ne … pas，把變位動詞夾在中間：Je **ne** crois **pas**.（我不信。）ne 在母音前縮為 n'（Je n'ai pas）。\n口語裡 ne 常被省略（Je crois pas）。",
+      examples: [
+        { target: "Ce n'est pas vrai.", translation: "這不是真的。", note: "n'est pas（est 母音前 ne→n'）" },
+        { target: "Je ne comprends pas.", translation: "我不懂。", note: "ne…pas 夾動詞" },
+        { target: "Il ne prie pas.", translation: "他不禱告。", note: "prie 夾在 ne…pas 中" },
+      ],
+      practice: [
+        { q: "把『Je parle.』改成否定。", answer: "Je ne parle pas." },
+        { q: "ne 在母音前要怎麼變？", answer: "縮為 n'（如 n'est pas）。" },
+      ],
+    },
+  },
+  {
+    id: "fr-adjectives",
+    en: "Adjective Agreement & Position",
+    title: "形容詞陰陽性與位置",
+    levels: ["A1"],
+    summary: "形容詞隨名詞陰陽/單複數變化；多數放名詞後。",
+    keywords: ["adjective", "形容詞", "agreement", "一致", "position"],
+    content: {
+      explanation:
+        "形容詞要與名詞在性、數一致：陰性常加 -e、複數加 -s（saint→sainte→saints→saintes）。\n**多數形容詞放在名詞之後**（l'esprit saint）；少數常用短詞（grand, petit, bon, beau…）放前面。",
+      examples: [
+        { target: "le Saint-Esprit", translation: "聖靈", note: "saint 在此固定搭配" },
+        { target: "la vie éternelle", translation: "永生", note: "éternelle＝陰性一致，放名詞後" },
+        { target: "une bonne nouvelle", translation: "好消息（福音）", note: "bonne 短詞放前、陰性化" },
+      ],
+      practice: [
+        { q: "形容詞配陰性名詞通常加什麼字尾？", answer: "-e（如 saint→sainte）。" },
+        { q: "法文形容詞一般放名詞前還是後？", answer: "多數放後（少數常用短詞放前）。" },
+      ],
+    },
+  },
+  {
+    id: "fr-questions",
+    en: "Asking Questions",
+    title: "疑問句三種方式",
+    levels: ["A1"],
+    summary: "語調上揚／est-ce que 開頭／主謂倒裝。",
+    keywords: ["question", "疑問句", "est-ce que", "inversion", "倒裝"],
+    content: {
+      explanation:
+        "法文問句三法：\n①口語把陳述句語調上揚：Tu crois?\n②句首加 **Est-ce que**：Est-ce que tu crois?\n③主謂**倒裝**（較正式）：Crois-tu?\n疑問詞（qui 誰、que 什麼、où 哪裡、quand 何時、pourquoi 為何）放句首。",
+      examples: [
+        { target: "Est-ce que vous priez?", translation: "你們禱告嗎？", note: "est-ce que 中性問法" },
+        { target: "Où est l'église?", translation: "教堂在哪裡？", note: "où＝哪裡" },
+        { target: "Crois-tu en Dieu?", translation: "你信神嗎？", note: "倒裝 crois-tu" },
+      ],
+      practice: [
+        { q: "用 est-ce que 問『你說法文嗎』。", answer: "Est-ce que tu parles français?" },
+        { q: "『哪裡』的疑問詞是？", answer: "où。" },
+      ],
+    },
+  },
+  {
+    id: "fr-possessive",
+    en: "Possessive Adjectives",
+    title: "所有形容詞 mon/ma/mes",
+    levels: ["A1"],
+    summary: "依被擁有名詞的性與數：mon/ma/mes、ton/ta/tes、son/sa/ses…",
+    keywords: ["possessive", "所有形容詞", "mon", "ma", "mes"],
+    content: {
+      explanation:
+        "所有形容詞隨**被擁有的名詞**性數變化（不是隨擁有者）：\n我的＝mon（陽）/ma（陰）/mes（複）；你的＝ton/ta/tes；他/她的＝son/sa/ses。\n注意：陰性名詞若以母音開頭，用 mon/ton/son（發音順）：mon âme（我的靈魂）。",
+      examples: [
+        { target: "mon père", translation: "我的父親", note: "陽性→mon" },
+        { target: "ma mère", translation: "我的母親", note: "陰性→ma" },
+        { target: "mon âme", translation: "我的靈魂", note: "陰性但母音開頭→用 mon" },
+      ],
+      practice: [
+        { q: "『我的（陰性子音開頭名詞）』用哪個？", answer: "ma（如 ma mère）。" },
+        { q: "son/sa/ses 是隨擁有者還是被擁有名詞變化？", answer: "隨被擁有的名詞（性數）。" },
+      ],
+    },
+  },
+  {
+    id: "fr-prepositions-contraction",
+    en: "à / de & Contractions",
+    title: "介系詞 à/de 與縮合",
+    levels: ["A1"],
+    summary: "à＋le=au、à＋les=aux；de＋le=du、de＋les=des。",
+    keywords: ["preposition", "介系詞", "à", "de", "au", "du", "縮合", "contraction"],
+    content: {
+      explanation:
+        "à（到/在）與 de（的/從）碰到定冠詞 le/les 必須**縮合**：\nà＋le→au、à＋les→aux；de＋le→du、de＋les→des。（à la、de la 不縮。）\nde 也表所有：la parole de Dieu（神的話）。",
+      examples: [
+        { target: "Je vais à l'église.", translation: "我去教堂。", note: "à＋l'（母音前不縮）" },
+        { target: "la maison de Dieu", translation: "神的家", note: "de＝的" },
+        { target: "Il parle au prêtre.", translation: "他對神父說話。", note: "à＋le→au" },
+      ],
+      practice: [
+        { q: "à＋les 縮合成？", answer: "aux。" },
+        { q: "de＋le 縮合成？", answer: "du。" },
+      ],
+    },
+  },
+];
+
+// ── 日文 關東標準語（N5 初學）────────────────────────────────────────────────
+const JA: GrammarTopic[] = [
+  {
+    id: "ja-desu",
+    en: "～は～です Sentence",
+    title: "基本句型 〜は〜です",
+    levels: ["N5"],
+    summary: "「A は B です」＝A 是 B；は 是主題助詞（讀 wa）。",
+    keywords: ["です", "は", "wa", "基本句型", "topic"],
+    content: {
+      explanation:
+        "最基本句型：**〔主題〕は〔內容〕です**。は 當助詞時讀作「wa」。です 是禮貌的斷定（是）。\n否定：〜では ありません（口語 〜じゃ ありません）。疑問：句尾加 か。",
+      examples: [
+        { target: "わたしは 学生です。", translation: "我是學生。", note: "は 讀 wa；です＝是" },
+        { target: "これは 神社です。", translation: "這是神社。", note: "これ＝這個" },
+        { target: "学生では ありません。", translation: "（我）不是學生。", note: "否定 では ありません" },
+      ],
+      practice: [
+        { q: "助詞 は 當主題標記時怎麼讀？", answer: "讀作 wa。" },
+        { q: "『〜です』的否定形是？", answer: "〜では ありません（口語 じゃ ありません）。" },
+      ],
+    },
+  },
+  {
+    id: "ja-particles",
+    en: "Core Particles",
+    title: "基本助詞 は/が/を/に/へ/で",
+    levels: ["N5"],
+    summary: "は主題、が主詞、を受詞、に時間/歸著、へ方向、で場所/手段。",
+    keywords: ["particle", "助詞", "は", "が", "を", "に", "で", "へ"],
+    content: {
+      explanation:
+        "助詞接在詞後標角色：\n‧は＝主題（wa）‧が＝主詞 ‧を＝直接受詞（o）\n‧に＝時間點/到達點/存在處 ‧へ＝方向（e）‧で＝動作場所或手段。\n例：神社で お参りを します。（在神社參拜。）",
+      examples: [
+        { target: "本を 読みます。", translation: "讀書。", note: "を＝受詞標記（讀 o）" },
+        { target: "七時に 起きます。", translation: "七點起床。", note: "に＝時間點" },
+        { target: "神社で お祭りが あります。", translation: "在神社有祭典。", note: "で＝場所、が＝主詞" },
+      ],
+      practice: [
+        { q: "直接受詞用哪個助詞？怎麼讀？", answer: "を，讀作 o。" },
+        { q: "表示動作發生的『場所』用哪個助詞？", answer: "で（如 神社で）。" },
+      ],
+    },
+  },
+  {
+    id: "ja-verb-groups",
+    en: "Verb Groups & ます-form",
+    title: "動詞三類與 ます形",
+    levels: ["N5"],
+    summary: "動詞分三類；禮貌體用 ます（否定 ません、過去 ました）。",
+    keywords: ["verb", "動詞", "ます", "groups", "三類", "ru-verb", "u-verb"],
+    content: {
+      explanation:
+        "日語動詞分三類：①五段（u 動詞，如 読む）②一段（ru 動詞，如 食べる）③不規則（する、来る）。\n禮貌體 **ます形**：食べる→食べます、読む→読みます、する→します。否定 〜ません、過去 〜ました、過去否定 〜ませんでした。",
+      examples: [
+        { target: "お祈りを します。", translation: "（我）禱告／祈禱。", note: "する→します" },
+        { target: "毎日 聖書を 読みます。", translation: "每天讀聖經。", note: "読む→読みます" },
+        { target: "肉を 食べません。", translation: "（我）不吃肉。", note: "食べる→食べません（否定）" },
+      ],
+      practice: [
+        { q: "『食べる』的禮貌否定形？", answer: "食べません。" },
+        { q: "する 的 ます形？", answer: "します。" },
+      ],
+    },
+  },
+  {
+    id: "ja-adjectives",
+    en: "い-adjectives & な-adjectives",
+    title: "形容詞 い形與 な形",
+    levels: ["N5"],
+    summary: "い形容詞直接接名詞；な形容詞接名詞要加 な。",
+    keywords: ["adjective", "形容詞", "い形", "な形", "i-adjective", "na-adjective"],
+    content: {
+      explanation:
+        "兩類形容詞：\n‧**い形容詞**（以い結尾，如 高い、楽しい）：直接修飾名詞（高い山），否定 〜くないです。\n‧**な形容詞**（如 静か、有名）：修飾名詞要加 な（静かな 神社），否定 〜では ありません。\n過去：い形 〜かったです；な形 〜でした。",
+      examples: [
+        { target: "高い 山。", translation: "高的山。", note: "い形容詞直接接名詞" },
+        { target: "静かな 教会。", translation: "安靜的教會。", note: "な形容詞＋な" },
+        { target: "この 話は おもしろいです。", translation: "這個故事很有趣。", note: "い形容詞當述語" },
+      ],
+      practice: [
+        { q: "な形容詞修飾名詞時要加什麼？", answer: "加 な（如 静かな 神社）。" },
+        { q: "い形容詞『楽しい』的禮貌否定？", answer: "楽しくないです。" },
+      ],
+    },
+  },
+  {
+    id: "ja-demonstratives",
+    en: "これ/それ/あれ & か",
+    title: "指示詞 これ/それ/あれ 與疑問 か",
+    levels: ["N5"],
+    summary: "こ近/そ中/あ遠；句尾加 か變疑問。",
+    keywords: ["これ", "それ", "あれ", "ko-so-a", "指示詞", "か", "疑問"],
+    content: {
+      explanation:
+        "指示體系依距離：これ（這，近說話者）／それ（那，近聽者）／あれ（那，雙方都遠）。修飾名詞用 この/その/あの＋名詞。\n疑問句把 **か** 加在句尾（不必倒裝）：これは 何ですか。（這是什麼？）",
+      examples: [
+        { target: "これは 何ですか。", translation: "這是什麼？", note: "か＝疑問" },
+        { target: "その 本を ください。", translation: "請給我那本書。", note: "その＋名詞" },
+        { target: "あれは 神社です。", translation: "那（遠處）是神社。", note: "あれ＝遠指" },
+      ],
+      practice: [
+        { q: "把『これは 本です』改成疑問句。", answer: "これは 本ですか。" },
+        { q: "離說話者近的『這個』指示詞是？", answer: "これ（修飾名詞用 この）。" },
+      ],
+    },
+  },
+  {
+    id: "ja-te-form",
+    en: "て-form (intro)",
+    title: "て形入門",
+    levels: ["N5", "N4"],
+    summary: "連接動作、請求（〜てください）、進行（〜ています）的萬用形。",
+    keywords: ["て形", "te-form", "てください", "ています"],
+    content: {
+      explanation:
+        "て形是日語樞紐形：連接句子（〜て、〜）、請求（〜て ください）、進行/狀態（〜て います）。\n變化依類別：食べる→食べて；読む→読んで；行く→行って；する→して；来る→来て。",
+      examples: [
+        { target: "聖書を 読んで ください。", translation: "請讀聖經。", note: "読む→読んで＋ください＝請求" },
+        { target: "今 お祈りを して います。", translation: "現在正在禱告。", note: "して います＝進行" },
+        { target: "教会へ 行って、祈ります。", translation: "去教會，然後禱告。", note: "て形連接動作" },
+      ],
+      practice: [
+        { q: "『請吃』日文怎麼說？", answer: "食べて ください。" },
+        { q: "『〜て います』表示什麼？", answer: "正在進行或持續的狀態。" },
+      ],
+    },
+  },
+  {
+    id: "ja-past",
+    en: "Past Tense",
+    title: "過去式 〜ました/〜でした",
+    levels: ["N5"],
+    summary: "動詞 〜ました（否定 〜ませんでした）；名詞/な形 〜でした；い形 〜かったです。",
+    keywords: ["past", "過去式", "ました", "でした", "かった"],
+    content: {
+      explanation:
+        "禮貌體過去：\n‧動詞：〜ます→〜ました（否定 〜ませんでした）。\n‧名詞・な形容詞：です→でした（否定 では ありませんでした）。\n‧い形容詞：〜いです→〜かったです（おいしい→おいしかったです）。",
+      examples: [
+        { target: "お祭りに 行きました。", translation: "（我）去了祭典。", note: "行きます→行きました" },
+        { target: "それは 神社でした。", translation: "那（曾）是神社。", note: "です→でした" },
+        { target: "楽しかったです。", translation: "（那時）很開心。", note: "い形過去 〜かったです" },
+      ],
+      practice: [
+        { q: "『読みます』的過去否定？", answer: "読みませんでした。" },
+        { q: "い形容詞『おいしい』的過去式？", answer: "おいしかったです。" },
+      ],
+    },
+  },
+  {
+    id: "ja-more-particles",
+    en: "と / も / から / まで & Counters",
+    title: "助詞 と/も/から/まで 與數量詞",
+    levels: ["N5", "N4"],
+    summary: "と和/も也/から從/まで到；數量詞依物品種類不同。",
+    keywords: ["と", "も", "から", "まで", "助詞", "counter", "數量詞"],
+    content: {
+      explanation:
+        "更多助詞：と＝和（A と B）／も＝也（私も）／から＝從（起點/原因）／まで＝到（終點）。\n數量詞依物品分類（人＝〜人、書本＝〜冊、細長物＝〜本…），常接動詞前：本を 三冊 読みます。",
+      examples: [
+        { target: "聖書と 賛美歌。", translation: "聖經和讚美詩。", note: "と＝和" },
+        { target: "九時から 始まります。", translation: "九點開始。", note: "から＝從（起點）" },
+        { target: "私も 行きます。", translation: "我也去。", note: "も＝也" },
+      ],
+      practice: [
+        { q: "『從…到…』用哪兩個助詞？", answer: "から…まで。" },
+        { q: "『我也』日文怎麼說？", answer: "私も。" },
+      ],
+    },
+  },
+];
+
+export const COACH_GRAMMAR: Record<string, GrammarTopic[]> = { grc: GRC, la: LA, hbo: HBO, de: DE, fr: FR, ja: JA };
 export const CURATED_GRAMMAR_LANGS = new Set(Object.keys(COACH_GRAMMAR));
 
 // 依量表級別過濾、帶入預嵌 content（lesson 端點直接回、不走 AI）
