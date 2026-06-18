@@ -6,6 +6,7 @@
 import { getCoach } from "~/server/utils/lang-coaches";
 import { coachGemini } from "~/server/utils/coach-ai";
 import { parseJsonLoose } from "~/server/utils/gemini";
+import { CURATED_PASSAGE_LANGS, pickDailyPassages } from "~/server/data/coachPassages";
 
 // 各程度「主動詞彙量」概估（占比用），英文 CEFR；其餘語言用近似
 const VOCAB_TARGET: Record<string, number> = {
@@ -51,6 +52,29 @@ export default defineEventHandler(async (event) => {
     .single();
 
   let plan: any = existing?.plan;
+  const baseTasks = (due: number) => [
+    { id: "t1", label: `複習 ${Math.min(20, due || 0) || 10} 個到期單字`, done: false },
+    { id: "t2", label: "讀完 1 篇推薦文章並討論", done: false },
+    { id: "t3", label: "聽完 1 段並作答", done: false },
+    { id: "t4", label: "完成 1 題口說", done: false },
+    { id: "t5", label: "上 1 堂文法課", done: false },
+  ];
+
+  // ── 古典語（grc/la/hbo）：閱讀/聽力改抽策展經文短文庫，完全不走 AI ──
+  if (!plan?.reading?.length && CURATED_PASSAGE_LANGS.has(language)) {
+    const rd = pickDailyPassages(language, today + "|r", 5);
+    const ls = pickDailyPassages(language, today + "|l", 5);
+    plan = {
+      tasks: baseTasks(dueCount ?? 0),
+      reading: rd.map((p, i) => ({ id: `r${i + 1}`, topic: p.title, bankId: p.id, content: null, session_id: null, done: false })),
+      listening: ls.map((p, i) => ({ id: `l${i + 1}`, topic: p.title, bankId: p.id, content: null, session_id: null, done: false })),
+      speaking: rd.slice(0, 5).map((p, i) => ({ id: `s${i + 1}`, prompt: `用${coach.langLabel}朗讀並討論：${p.title}（${p.summary}）`, done: false })),
+    };
+    await supabase
+      .from("lang_daily")
+      .upsert({ user_id: user.id, language, plan_date: today, plan }, { onConflict: "user_id,language,plan_date" });
+  }
+
   if (!plan?.reading?.length) {
     const interests = "宗教／宗教學／神話為主軸，輔以人文，偶爾理工醫/生活/旅遊";
     const raw = await coachGemini(

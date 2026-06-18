@@ -151,13 +151,22 @@ const daily = ref<any>(null);
 const loading = ref(true);
 const open = ref<string | null>(null);
 
-function optLetter(opt: string) { return (opt.trim().match(/^([A-D])/i)?.[1] || "").toUpperCase(); }
+// 選項鍵：AI 格式「A. …」取字母；策展全文選項則回整段文字。兼容兩種。
+function optLetter(opt: string) {
+  const m = opt.trim().match(/^([A-D])[.)、：:\s]/i);
+  return m ? m[1].toUpperCase() : opt.trim();
+}
+// 正解鍵：單一 A-D 字母→大寫；否則整段文字。
+function ansKey(answer: any) {
+  const a = String(answer ?? "").trim();
+  return /^[A-D]$/i.test(a) ? a.toUpperCase() : a;
+}
 function optClass(item: any, qi: number, opt: string) {
   if (!item._graded) return "hover:bg-gray-50";
-  const ans = String(item.content.questions[qi].answer || "").toUpperCase();
-  const letter = optLetter(opt);
-  if (letter === ans) return "bg-emerald-50 text-emerald-700";
-  if (letter === (item._sel[qi] || "").toUpperCase()) return "bg-rose-50 text-rose-600";
+  const ans = ansKey(item.content.questions[qi].answer);
+  const key = optLetter(opt);
+  if (key === ans) return "bg-emerald-50 text-emerald-700";
+  if (key === (item._sel[qi] || "")) return "bg-rose-50 text-rose-600";
   return "";
 }
 function play(t: string) { if (t) speech.speak(t, TTS[language.value] || "en-US"); }
@@ -196,7 +205,7 @@ async function openItem(kind: string, item: any) {
 async function grade(kind: string, item: any) {
   const qs = item.content.questions || [];
   let correct = 0;
-  qs.forEach((q: any, i: number) => { if ((item._sel[i] || "").toUpperCase() === String(q.answer).toUpperCase()) correct++; });
+  qs.forEach((q: any, i: number) => { if ((item._sel[i] || "") === ansKey(q.answer)) correct++; });
   item._correct = correct;
   item._graded = true;
   // 記錄閱讀/聽力時間

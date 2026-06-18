@@ -6,6 +6,7 @@
 import { getCoach } from "~/server/utils/lang-coaches";
 import { coachGemini } from "~/server/utils/coach-ai";
 import { parseJsonLoose } from "~/server/utils/gemini";
+import { CURATED_PASSAGE_LANGS, passageById } from "~/server/data/coachPassages";
 
 export default defineEventHandler(async (event) => {
   const user = await requireAuth(event);
@@ -44,9 +45,16 @@ export default defineEventHandler(async (event) => {
     content = { prompt: item.prompt };
   } else {
     const isReading = kind === "reading";
-    const raw = await coachGemini(
-      {
-        system: `你是${coach.langLabel}出題老師，為「${lv}」程度、做宗教研究的學生產一則${isReading ? "閱讀短文" : "聽力段落"}。主題：「${item.topic}」。
+    // 古典語：item 帶 bankId → 直接取策展經文短文，零 AI
+    const bankP = item.bankId && CURATED_PASSAGE_LANGS.has(language) ? passageById(language, item.bankId) : null;
+    if (bankP) {
+      content = isReading
+        ? { title: bankP.title, passage: bankP.text, questions: bankP.questions, summary: bankP.summary }
+        : { title: bankP.title, audio_text: bankP.text, questions: bankP.questions, summary: bankP.summary };
+    } else {
+      const raw = await coachGemini(
+        {
+          system: `你是${coach.langLabel}出題老師，為「${lv}」程度、做宗教研究的學生產一則${isReading ? "閱讀短文" : "聽力段落"}。主題：「${item.topic}」。
 只輸出 JSON：{
   "title": "標題（${coach.langLabel}）",
   "${isReading ? "passage" : "audio_text"}": "${isReading ? "閱讀短文" : "聽力稿（將由系統朗讀，學生看不到）"}（${coach.langLabel}，貼合 ${lv} 程度，200–300 字）",
@@ -54,14 +62,15 @@ export default defineEventHandler(async (event) => {
   "summary": "繁中一句摘要"
 }
 questions 出 4 題單選。繁體中文不可簡體。`,
-        contents: [{ role: "user", parts: [{ text: item.topic }] }],
-        json: true,
-        temperature: 0.6,
-        maxOutputTokens: 2048,
-      },
-      { usePaid: usePaid === true, userId: user.id, supabase }
-    );
-    try { content = parseJsonLoose(raw); } catch { throw createError({ statusCode: 502, message: "生成失敗，請重試" }); }
+          contents: [{ role: "user", parts: [{ text: item.topic }] }],
+          json: true,
+          temperature: 0.6,
+          maxOutputTokens: 2048,
+        },
+        { usePaid: usePaid === true, userId: user.id, supabase }
+      );
+      try { content = parseJsonLoose(raw); } catch { throw createError({ statusCode: 502, message: "生成失敗，請重試" }); }
+    }
   }
 
   // 建立討論 session（讀完/聽完/口說都可延伸討論）

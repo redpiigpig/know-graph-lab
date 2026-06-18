@@ -6,6 +6,7 @@ import { getCoach } from "~/server/utils/lang-coaches";
 import { coachGemini } from "~/server/utils/coach-ai";
 import { parseJsonLoose } from "~/server/utils/gemini";
 import { curatedSyllabus } from "~/server/data/enGrammar";
+import { CURATED_GRAMMAR_LANGS, curatedGrammarSyllabus } from "~/server/data/coachGrammar";
 
 export default defineEventHandler(async (event) => {
   const user = await requireAuth(event);
@@ -45,6 +46,23 @@ export default defineEventHandler(async (event) => {
         { onConflict: "user_id,language,level" }
       );
     return { level: lv, currentLevel, levelScale: coach.levelScale, syllabus, curated: true };
+  }
+
+  // ── 古典語（grc/la/hbo）：手工策展課程（含預嵌內容），不走 AI；保留 done ──
+  // 該級別有策展內容才用；中級/進階暫無策展 → 落到下方既有邏輯（DB 或 AI）。
+  if (CURATED_GRAMMAR_LANGS.has(language)) {
+    const curated = curatedGrammarSyllabus(language, lv);
+    if (curated.length) {
+      const doneIds = new Set(((existing?.syllabus as any[]) || []).filter((s) => s.done).map((s) => s.id));
+      const syllabus = curated.map((s) => ({ ...s, done: doneIds.has(s.id) }));
+      await supabase
+        .from("lang_grammar")
+        .upsert(
+          { user_id: user.id, language, level: lv, syllabus, updated_at: new Date().toISOString() },
+          { onConflict: "user_id,language,level" }
+        );
+      return { level: lv, currentLevel, levelScale: coach.levelScale, syllabus, curated: true };
+    }
   }
 
   // 已有 → 直接回
