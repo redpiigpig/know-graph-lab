@@ -91,10 +91,11 @@ python scripts/ingest_accs_genesis.py \
   小瑕＝少數跨段續行 comment 的 `father_name` 空（非阻斷）。
 - **🔴 創 12-50 進行中（接手主要關注這個）**：PDF `c:/tmp/古代基督信仰聖經註釋叢書1 創12-50.pdf`（654 頁，已複製到本地）。
   **靠排程 `ACCS_Gen2_Resume`（每 2h，battery-ok，IgnoreNew）跑 `scripts/accs_resume_g2.ps1`**。
-  進度（2026-06-16 交接時）≈ **154/654 頁、chapters 12-15+ 已入庫**（DB gen 總列數 698→現 800+，1-11 完整保留）。
-  checkpoint `c:/tmp/accs_gen_…創12-50.raw.jsonl`、log `scripts/logs/accs_gen_12-50.log`、完成寫 `…創12-50.raw.done`。
-  **接手第一件事**：`Get-ScheduledTaskInfo ACCS_Gen2_Resume` + 查 DB `accs_commentary` gen 的 chapter>=12 列數有沒有在長。
-  654 頁很大、含 relaunch 估計跑 1+ 天；排程會自動續到 `.done`。
+  進度（2026-06-16 交接時）≈ **154/654 頁、chapters 12-19 已入庫**（DB gen 總列 **968** ＝ 698[1-11] + 270[12-19]，
+  1-11 完整保留）。checkpoint `c:/tmp/accs_gen_…創12-50.raw.jsonl`、log `scripts/logs/accs_gen_12-50.log`、完成寫 `…創12-50.raw.done`。
+  ⚠️ **交接當下 Max Sonnet 正被 rate-limit**（OT II 大量 OCR + 長 session 把 5h 滾動窗燒乾；log 見 `[bail] 連續 3 次 rate-limit`）
+  → 排程每 2h 觸發但**這幾輪幾乎 0 進度**，要等 Max 5h 窗刷新才會往前。**這次是真 quota（不是 2026-06-15 那個 flag bug）**。
+  **接手第一件事**：`Get-ScheduledTaskInfo ACCS_Gen2_Resume` + 查 DB gen chapter>=12 列數有沒有在長；沒長多半就是還在等 Max 窗（別亂改、別加 --replace）。654 頁含等 quota 估計跑數天。
 - **🚨 創 12-50 鐵則**：跑 12-50 **絕不可加 `--replace`**！`--replace` 刪光整個 book_code=gen（含創 1-11 698 列）。
   12-50 章號與 1-11 不重疊，**直接 upsert 累加**即可（`accs_resume_g2.ps1` 已是無 --replace）。
 - **引擎**：**Sonnet**（`--engine sonnet`，Max OAuth）。Haiku 退兩次、Gemini key credit 乾。**必 `--batch 1`**（見雷⑤）。
