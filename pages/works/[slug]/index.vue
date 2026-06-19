@@ -69,6 +69,24 @@
         </div>
       </div>
 
+      <!-- 叢書：書目（一張卡片下的多本書，各有章節閱讀器） -->
+      <div v-if="seriesBooks.length" class="max-w-5xl mx-auto px-6 py-8">
+        <div class="mb-4">
+          <h2 class="text-base font-semibold text-gray-900">書目</h2>
+          <p class="text-xs text-gray-500 mt-0.5">本叢書共 {{ seriesBooks.length }} 冊 · 點選一冊閱讀（各冊內含章節目錄）</p>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <NuxtLink v-for="(b, i) in seriesBooks" :key="b.id"
+            :to="`/works/${slug}/book/${b.id}`"
+            class="no-underline group flex flex-col p-6 rounded-2xl bg-white border-2 border-violet-100 hover:border-violet-300 hover:shadow-lg hover:shadow-violet-100 transition">
+            <div class="text-xs text-violet-400 mb-2">第{{ ['一','二','三','四','五','六','七','八','九','十'][i] || (i+1) }}部</div>
+            <h3 class="text-lg font-bold text-gray-900 leading-snug">{{ b.title }}</h3>
+            <p class="text-xs text-gray-500 mt-1.5 leading-relaxed break-words">{{ b.subtitle }}</p>
+            <div class="mt-3 text-xs text-violet-600">{{ b.nChapters }} 章 · 閱讀 →</div>
+          </NuxtLink>
+        </div>
+      </div>
+
       <!-- 每日對話 — 先選月份，再選日期（仿聖經 卷→章；私人，登入者限定） -->
       <div v-if="dialogueDays.length" class="max-w-5xl mx-auto px-6 py-8">
         <!-- 序（楔子）：整條對話錄的開篇引言，渲染在月份格之上 -->
@@ -651,6 +669,17 @@ interface Materials { book?: string; subtitle?: string; source?: string; note?: 
 
 const materials = ref<Materials | null>(null)
 const materialsAvailable = ref(false)
+
+// 叢書（一張卡片下含多本書，每本書各有章節閱讀器）— 如創生哲學三部曲
+interface SeriesBook { id: string; title: string; subtitle: string; nChapters: number }
+const seriesBooks = ref<SeriesBook[]>([])
+async function loadSeriesBooks() {
+  try {
+    const data = await $fetch<{ books: SeriesBook[] }>(`/content/works/${slug.value}-books.json`, { responseType: 'json' })
+    seriesBooks.value = Array.isArray(data?.books) ? data.books : []
+  } catch { seriesBooks.value = [] }
+}
+watch(() => project.value?.slug, loadSeriesBooks)
 
 async function loadMaterials() {
   if (project.value?.kind === 'paper') { materialsAvailable.value = false; return }

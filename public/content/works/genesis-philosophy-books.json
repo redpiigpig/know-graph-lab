@@ -1,0 +1,30 @@
+{
+ "series": "創生哲學",
+ "note": "倫理學三部曲初稿",
+ "books": [
+  {
+   "id": "A",
+   "title": "愛的萬物論",
+   "subtitle": "導論主體倫理學的本質",
+   "file": "/content/works/genesis/A.html",
+   "nChapters": 10,
+   "chars": 45585
+  },
+  {
+   "id": "B",
+   "title": "虛構的烏托邦",
+   "subtitle": "群體、社會與制度性的良善",
+   "file": "/content/works/genesis/B.html",
+   "nChapters": 10,
+   "chars": 45003
+  },
+  {
+   "id": "C",
+   "title": "人類之子",
+   "subtitle": "應用倫理——生命、動物、環境、星球、AI（含日擇原理）",
+   "file": "/content/works/genesis/C.html",
+   "nChapters": 8,
+   "chars": 40285
+  }
+ ]
+}
