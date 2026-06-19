@@ -74,7 +74,7 @@ const sweeps = await parallel(subjects.map((subj) => () =>
     `任務：實際查上述目錄，把與基督教相關、屬此切入點的真實書目紀錄逐一抄出（本批力求 20–40 筆）。\n` +
     `只列目錄實際回傳者；每筆給 title_orig(原文書題)、author、year(出版或寫作年)、place、language、locator(紀錄定位：DNB/BnF 控制號或 SRU 命中、OpenLibrary key、loc.gov/item 或 id.loc.gov URL、archive.org id 之一)。\n` +
     `查不到實際紀錄者一律不列。`,
-    { label: `sweep:${String(subj).slice(0, 18)}`, phase: 'Sweep', schema: RAW_SCHEMA },
+    { label: `sweep:${String(subj).slice(0, 18)}`, phase: 'Sweep', schema: RAW_SCHEMA, model: 'sonnet' },
   ).then((r) => (r?.records || []))))
 
 const raw = sweeps.flat().filter(Boolean)
@@ -110,7 +110,7 @@ const classified = await parallel(fresh.map((r) => () =>
     `${ERA_RULES}\n${CANG_RULES}\n` +
     `輸出：title_zh(繁體中文定名，沿用良好古譯、不杜撰)、title_orig、author、era(前/古/中/近/現)、cang(十藏其一的全名如「論藏」)、canon(正/外)、division(建議「部」名)、place、language、eraYear(寫作/成書年代)、intro(100–160字繁中簡介)、locator(沿用)、inScope(布林：是否真與基督教大藏經相關且值得收；現代純學術研究專著/二手研究若非原典，且不屬類書工具書，設 false)。\n` +
     `分類拿不準時 inScope 仍可為 true，但 era/cang/canon 給最合理判斷。純粹現代二手學術研究、與基督教無關者 inScope=false。`,
-    { label: `classify:${String(r.title_orig).slice(0, 16)}`, phase: 'Classify', schema: CLASS_SCHEMA },
+    { label: `classify:${String(r.title_orig).slice(0, 16)}`, phase: 'Classify', schema: CLASS_SCHEMA, model: 'sonnet' },
   )))
 
 const inscope = classified.filter(Boolean).filter((w) => w.inScope && w.title_zh)
@@ -130,7 +130,7 @@ const verified = await parallel(inscope.map((w) => () =>
   agent(
     `對抗式查核這筆大藏經候選是否為「真實存在的文獻」、metadata 正確、且 era/cang/canon 分類合理。預設懷疑，查不到可靠佐證判 isReal=false。\n` +
     `候選：${JSON.stringify(w)}\n回傳 isReal、confidence(0–1)、corrected(需修正欄位物件，含分類修正)、note。`,
-    { label: `verify:${String(w.title_zh).slice(0, 16)}`, phase: 'Verify', schema: VERDICT_SCHEMA },
+    { label: `verify:${String(w.title_zh).slice(0, 16)}`, phase: 'Verify', schema: VERDICT_SCHEMA, model: 'sonnet' },
   ).then((v) => ({ ...w, ...((v && v.corrected) || {}), _isReal: v?.isReal, _confidence: v?.confidence, _note: v?.note }))))
 
 const proposed = verified.filter(Boolean).filter((w) => w._isReal && (w._confidence ?? 0) >= 0.6)
