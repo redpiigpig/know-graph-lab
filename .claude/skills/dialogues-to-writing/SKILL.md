@@ -160,30 +160,31 @@ agent fan-out 結果不可重現、難稽核。改用**純函式候選 prelabel 
 - 對話**來源頁** `/ai-dialogues`：本 skill。對話**翻譯/簡繁**走 [[ebook-translate]] 引擎觀念。
 - 多語全集對照 → [[ebook-collected-works]]；訪談逐字稿 → [[writing-thesis-interview]]（對話錄格式可參考其 Q&A 排版）。
 
-## 🚧 進行中交接：創生哲學階層分類 + 寫程式/生圖/貼文清除（2026-06-18 起，待新 session 續）
+## ✅ 已完成交接：創生哲學階層分類 + 寫程式/生圖/貼文清除（2026-06-19 竣工）
 
 第二案＝把 ChatGPT/Gemini 對話批次分類，跟首案（Krishna 一條 thread 做成 /works）不同，
 這案是**整庫 LLM 掛標 + 清除**。詳見 [[project_ai_dialogues_genesis_philosophy]]。
 
-### 已完成
+### 分類掛標 ✅ 完成
 - `/ai-dialogues` 分類改**父子階層**（`ai_dialogue_categories` 加 `parent_id` 自參照；
   側欄可展開；過濾父分類時 entries API 聚合子分類）。**已 push。**
 - 建好分類（id 固定）：
   - 創生哲學(父) `286d5b27-7835-49d2-a099-0c8c3500644e`
   - 倫理學 `903eb0a5-…` / 認識論 `86d570ad-…` / 本體論 `fd4f51fb-…` / 價值論 `a6baf7d3-…` / 存有論 `f39aa75b-…`
 - 🚨 **移除了 `ai_dialogue_entry_categories.dialogue_id` 指向舊統一表 `ai_dialogues` 的外鍵**
-  （app 讀分表 `ai_dialogues_chatgpt`(13,043)/`_gemini`(2,594)，純靠 dialogue_id join；
-  舊表只 11,042 筆、缺 4,595 筆 chatgpt → 掛標 FK 23503。別把這外鍵加回去。）
-- **分類掛標≈完成**：ledger `c:/tmp/genesis_classify_chatgpt.jsonl`(4,159/4,279)＋`_gemini.jsonl`(146)。
-  創生哲學已標 ~3,224；子類 存有論~2038/倫理~1358/認識~1190/本體~816/價值~361。
-  剩 ~120 筆 chatgpt 補跑：`python scripts/classify_genesis_philosophy.py --source chatgpt`（ledger 自動續）。
+  （app 讀分表 `ai_dialogues_chatgpt`/`_gemini`，純靠 dialogue_id join；
+  舊表缺 4,595 筆 chatgpt → 掛標 FK 23503。別把這外鍵加回去。）
+- **全量判完**：ledger `c:/tmp/genesis_classify_chatgpt.jsonl`(4,279)＋`_gemini.jsonl`(146)。
+  創生哲學 tagged 共 **3,316 筆**（2026-06-19 補跑最後 120 筆 chatgpt：92 屬、掛標 266）。
 
-### ⏳ 進行中：purge 乾跑（**還沒刪任何東西**）
+### purge 清除 ✅ 完成（2026-06-19 使用者確認後真刪）
 - `scripts/purge_coding_image_dialogues.py` 把候選判成 **coding / image / post(社群貼文/文案/公告草稿) / keep**，
-  **預設 dry-run**；ledger `c:/tmp/purge_chatgpt.jsonl`。續跑：
-  `python scripts/purge_coding_image_dialogues.py --source chatgpt`（乾跑出報告：各 label 數＋樣本＋預計刪除數）。
-- ⛔ **真刪要使用者點頭後**才加 `--execute`（不可逆；刪前先刪 entry_categories）。dry 報告先給使用者看樣本
-  （已知會誤判，如「臉書貼文草稿」早期被標 coding，故人工確認關不可省）。
+  **預設 dry-run**；ledger `c:/tmp/purge_chatgpt.jsonl`（1,853 全判完）。
+- 乾跑報告：coding 621・image 137・post 161・keep 934 → **預計刪 919**；與創生哲學 tagged **零重疊**。
+- 使用者點頭 → `--execute` 真刪 **919 筆**（先刪 entry_categories 再刪對話，不可逆）。
+  chatgpt 表 **13,043 → 12,124**（驗證抽查刪除 id 已不存在）。
+- ⛔ 重跑教訓：`--execute` 會**重 fetch 候選+讀 ledger**，已判過的不再跑 LLM，只做刪除。
+  gemini 源（`--source gemini`）尚未跑 purge（使用者只要清 ChatGPT；如要清 gemini 同法）。
 
 ### ⚠️ 這案踩過的坑（新 session 必看）
 - **引擎現況**：Gemini/NVIDIA 免費配額已耗盡 → 全靠 **Haiku**（Max OAuth）在跑。隔日配額會回復。
