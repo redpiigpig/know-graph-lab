@@ -90,10 +90,12 @@ def upsert_rows(rows):
             r.raise_for_status()
 
 
-def db_count(lang, glossed_only=False):
+def db_count(lang, glossed_only=False, themed_only=False):
     q = f"{_SB_URL}/rest/v1/lang_vocab_bank?language=eq.{lang}&select=id"
     if glossed_only:
         q += "&glossed=eq.true"
+    if themed_only:
+        q += "&glossed=eq.true&theme=not.is.null"
     r = requests.get(q, headers={**_SB_HEADERS, "Prefer": "count=exact", "Range": "0-0"}, timeout=60)
     cr = r.headers.get("content-range", "*/0")
     return int(cr.split("/")[-1]) if "/" in cr else 0
@@ -635,16 +637,16 @@ def cmd_theme(lang, limit=None, engine="auto"):
 
 
 def cmd_status():
-    print(f"{'lang':5} {'candidates':>11} {'glossed(ledger)':>16} {'DB total':>9} {'DB glossed':>11}")
+    print(f"{'lang':5} {'candidates':>11} {'glossed(ledger)':>16} {'DB total':>9} {'DB glossed':>11} {'DB themed':>11}")
     for lang in TARGETS:
         cp, gpth = candidates_path(lang), glossed_path(lang)
         nc = sum(1 for _ in cp.open(encoding="utf-8")) if cp.exists() else 0
         ng = sum(1 for _ in gpth.open(encoding="utf-8")) if gpth.exists() else 0
         try:
-            dt, dg = db_count(lang), db_count(lang, True)
+            dt, dg, dth = db_count(lang), db_count(lang, True), db_count(lang, themed_only=True)
         except Exception:  # noqa: BLE001
-            dt = dg = -1
-        print(f"{lang:5} {nc:>11} {ng:>16} {dt:>9} {dg:>11}")
+            dt = dg = dth = -1
+        print(f"{lang:5} {nc:>11} {ng:>16} {dt:>9} {dg:>11} {dth:>11}")
 
 
 def main():
