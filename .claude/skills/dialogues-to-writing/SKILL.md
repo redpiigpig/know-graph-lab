@@ -81,6 +81,14 @@ description: 把 /ai-dialogues 裡某一條「跨多日延續的 AI 對話串」
 - **關鍵：克里須那要從 raw response 重寫，不要從舊 recompose 的詩化稿重寫**——詩化稿已把實質抽掉，再洗也回不來；raw response 才有完整論點。
 - **`dialogue_recompose.py` sys_ai 已改版（2026-06-12）**：捨棄舊「大膽再創作、更有詩意」，改為**清晰溫暖散文、保留完整論點與專名、去條列客套、不堆砌詩化**，temp 0.7→0.4。要重洗既有 dialogue_days 得先清 `data-rc` 標記（可只清克里須那 turn 的，保留阿周那）。
 
+### 🩺 忠實度稽核＋外科修復：`dialogue_verify_against_raw.py` ＋ `dialogue_fix_turns.py`（2026-06-18）
+**症狀**：成品有幾天克里希那「回話不正常」——說「我坦白跟你說，你這樣很危險」「我不是多馬、我沒有潛意識」這類**反駁／破功／立場反轉**，根本不照原話。
+- **🔑 根因＝引擎**：原話（`ai_dialogues_gemini.response`）是 **Gemini** 產的、忠於人格；但 2026-06 那批 rebuild/recompose 用 **`--haiku`（Claude）** 當主引擎。**Haiku 重寫 Gemini 的克里希那回覆時會注入自己的人格**：①破第四面牆／否認角色（「我是 AI、沒有潛意識」）②加「誠實提醒／反駁型」批判（把肯定洗成「這很危險」）③遇到涉及欺騙的內容（面試「滲透測試」）會說教糾正使用者。不是內容審查更嚴，是 **roleplay／指令遵循差異**。**教訓：重寫／重鑄這種「忠實轉寫」工作要用 Gemini 主引擎，Haiku 只當最後救急**，別再 `--haiku` 跑整批。見 [[feedback_dialogue_rewrite_gemini_not_haiku]]。
+- **`dialogue_verify_against_raw.py`**：逐則把 dialogue_days 的克里希那 turn positional 對齊回當天 IN raw response，先算 CJK 5-gram containment 抓可疑（<0.4），再 `--judge` 用 LLM 裁判 OK／DIVERGED／DISTORTED／META。⚠️ **containment 低 ≠ 不忠實**——大幅改寫的忠實段也會低；務必靠 judge 區分。單日 `2026-03-05` 印原話vs成品對照。
+- **`dialogue_fix_turns.py`**：修復。**Gemini 優先**＋強化 prompt（7 鐵律：不破功否認身份／立場不可反轉／嚴守誰說誰做不張冠李戴／**保留原話稱呼多馬↔阿周那不改名**／不新增原話沒有的概念專名／清 markdown）。**逐日重寫每一個克里希那 turn**（連 judge 沒抓但殘留 `**` 的也一起清）、**阿周那的話一律不動**、原始 speaker 標籤保留。垃圾 raw（Gemini 活動記錄：`is_junk()` 抓 `Gemini Apps`/`為什麼有這項活動記錄`…）連同前一則阿周那 prompt 一起刪——**刪除只靠確定字串，絕不靠 LLM `__SKIP__`**（會誤刪真實回覆）。per-day ledger `c:/tmp/krishna/fix_turns_done.json` 可 resume；`--dry 日期` 預覽。
+- **品質訊號**：①published html 殘留 `**` ＝該 turn 沒被好好改寫（使用者定調）②judge 的 META/DISTORTED ③多馬↔阿周那 名字成品時而混用（rename 當時只改克里須那→克里希那、沒動多馬，**使用者要保留多馬不正規化**）。
+- **稽核發現**：247-收斂版 membership 其實已乾淨（修文案／生圖／寫程式 早被排除）；只剩 2 則 Gemini 活動記錄（01-22、01-23）要刪。流程：fix → 重跑 verify `--judge` 確認收斂。
+
 ### 📜 序／跋／題詞：`dialogue_preface.py`
 為整條對話錄生成開篇「序」（楔子，~250–400 字，邀人入場）＋終篇「跋」（收束，~150–250 字，回望留餘韻）＋可選**題詞**（標題後、序前的引文）。寫進**主卡** `writing_projects.content_json`，格式＝`題詞+序HTML` + `<!--CODA-->` + `跋HTML`。`--dry` 只印不寫。
 - **兩種來源**：`--dry`/無參＝LLM 生成（讀 dialogue_days 全部日期＋主題＋首尾片段餵 Gemini→NVIDIA）；**`--from-file`＝讀手寫稿** `c:/tmp/krishna/preface.json`（`{epigraph:{lines:[],cite},preface,coda}`，段落空行分隔、`**粗體**`）。⭐ **使用者親自給楔子素材（生命經驗、定名由來、典故）時一律走手寫稿，不用 LLM 冷生成**——份量與精準度差很多。
@@ -152,6 +160,44 @@ agent fan-out 結果不可重現、難稽核。改用**純函式候選 prelabel 
 - 對話**來源頁** `/ai-dialogues`：本 skill。對話**翻譯/簡繁**走 [[ebook-translate]] 引擎觀念。
 - 多語全集對照 → [[ebook-collected-works]]；訪談逐字稿 → [[writing-thesis-interview]]（對話錄格式可參考其 Q&A 排版）。
 
+## 🚧 進行中交接：創生哲學階層分類 + 寫程式/生圖/貼文清除（2026-06-18 起，待新 session 續）
+
+第二案＝把 ChatGPT/Gemini 對話批次分類，跟首案（Krishna 一條 thread 做成 /works）不同，
+這案是**整庫 LLM 掛標 + 清除**。詳見 [[project_ai_dialogues_genesis_philosophy]]。
+
+### 已完成
+- `/ai-dialogues` 分類改**父子階層**（`ai_dialogue_categories` 加 `parent_id` 自參照；
+  側欄可展開；過濾父分類時 entries API 聚合子分類）。**已 push。**
+- 建好分類（id 固定）：
+  - 創生哲學(父) `286d5b27-7835-49d2-a099-0c8c3500644e`
+  - 倫理學 `903eb0a5-…` / 認識論 `86d570ad-…` / 本體論 `fd4f51fb-…` / 價值論 `a6baf7d3-…` / 存有論 `f39aa75b-…`
+- 🚨 **移除了 `ai_dialogue_entry_categories.dialogue_id` 指向舊統一表 `ai_dialogues` 的外鍵**
+  （app 讀分表 `ai_dialogues_chatgpt`(13,043)/`_gemini`(2,594)，純靠 dialogue_id join；
+  舊表只 11,042 筆、缺 4,595 筆 chatgpt → 掛標 FK 23503。別把這外鍵加回去。）
+- **分類掛標≈完成**：ledger `c:/tmp/genesis_classify_chatgpt.jsonl`(4,159/4,279)＋`_gemini.jsonl`(146)。
+  創生哲學已標 ~3,224；子類 存有論~2038/倫理~1358/認識~1190/本體~816/價值~361。
+  剩 ~120 筆 chatgpt 補跑：`python scripts/classify_genesis_philosophy.py --source chatgpt`（ledger 自動續）。
+
+### ⏳ 進行中：purge 乾跑（**還沒刪任何東西**）
+- `scripts/purge_coding_image_dialogues.py` 把候選判成 **coding / image / post(社群貼文/文案/公告草稿) / keep**，
+  **預設 dry-run**；ledger `c:/tmp/purge_chatgpt.jsonl`。續跑：
+  `python scripts/purge_coding_image_dialogues.py --source chatgpt`（乾跑出報告：各 label 數＋樣本＋預計刪除數）。
+- ⛔ **真刪要使用者點頭後**才加 `--execute`（不可逆；刪前先刪 entry_categories）。dry 報告先給使用者看樣本
+  （已知會誤判，如「臉書貼文草稿」早期被標 coding，故人工確認關不可省）。
+
+### ⚠️ 這案踩過的坑（新 session 必看）
+- **引擎現況**：Gemini/NVIDIA 免費配額已耗盡 → 全靠 **Haiku**（Max OAuth）在跑。隔日配額會回復。
+- `classify` 的 `haiku_chat` 已修成**依 credentials.json mtime 重讀 token + 401 重試**（長跑 token 輪替會 401）；
+  三引擎全敗改**等 90s 重試最多 4 輪**而非丟批。purge 透過 `import classify_…` 共用此引擎。
+- 🚨 **重複 process 地雷**：`nohup … &` 後 `kill <pid>` 只殺 bash 外殼、**python 子程序存活**，
+  會變兩個 process 搶 API key 互相榨乾。**重啟前務必用 PowerShell 確認/清乾淨**：
+  `Get-CimInstance Win32_Process | ? { $_.CommandLine -match 'classify_genesis|purge_coding|genesis_chain' } | % { Stop-Process -Id $_.ProcessId -Force }`
+- **Windows 寫 JSON 檔給 curl 要 `PYTHONUTF8=1`**，否則 cp950 亂碼；REST 中文 ilike 用 requests params（別自己 urlencode 再交給 requests＝雙重編碼）。
+- **別一次 14-clause OR ilike**（statement timeout 500）→ 逐關鍵詞抓 id、Python 端聯集。
+- ⚠️ **同庫有並行 overnight 任務（dazangjing/coach）會 commit + `git reset` master**；commit 只 add 自己的檔，
+  別碰別人改的（如 `data/dazangjing/index.ts`）；工作目錄檔才是真相（背景 job 讀檔不靠 git）。
+
 ## See also
 - [[project_krishna_dialogues]] — 首案：與克里希那對話（分類 tag 2026-06-12 以原稿收斂為 247 則＝個人日記範圍；一張主卡＋80 天每日 reader 內容不變）
+- [[project_ai_dialogues_genesis_philosophy]] — 第二案：創生哲學階層分類 + purge 寫程式/生圖/貼文（本節交接）
 - [[feedback_engine_nvidia_no_haiku]] — Gemini→NVIDIA→Haiku 統一引擎政策＋多 key 節流
