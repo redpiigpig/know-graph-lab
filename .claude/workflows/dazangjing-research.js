@@ -48,19 +48,39 @@ const VERDICT_SCHEMA = {
   required: ['isReal', 'confidence'],
 }
 
+// 實測可用的真實圖書館目錄 endpoint（2026-06-19 親測，非模型記憶）。
+// 鐵律：研究 agent 必須真的 WebFetch / WebSearch 這些 endpoint，只列「目錄實際回傳」的書。
+const CATALOG_GUIDE =
+  `【目錄查詢手冊——你必須真的上網查，禁止憑記憶杜撰書名】\n` +
+  `先用 ToolSearch 載入 WebFetch 與 WebSearch（query: "select:WebFetch,WebSearch"），再實際呼叫：\n` +
+  `① 德國國家圖書館 DNB（SRU，開放可用 ✅）：\n` +
+  `   https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&recordSchema=oai_dc&maximumRecords=30&query=WOE%3D<關鍵詞用+號連>\n` +
+  `   （WOE=任意詞；可用作者名或拉丁/德文書題或主題詞。回 dc:title/dc:creator/dc:date）\n` +
+  `② 法國國家圖書館 BnF（SRU，開放可用 ✅）：\n` +
+  `   http://catalogue.bnf.fr/api/SRU?version=1.2&operation=searchRetrieve&maximumRecords=30&query=bib.author+all+%22<作者>%22+and+bib.subject+all+%22<主題>%22\n` +
+  `   （也可 bib.title all "..."；回 MARCXML，看 datafield 200/700/210）\n` +
+  `③ OpenLibrary（開放 JSON ✅，英文書目廣度）：\n` +
+  `   https://openlibrary.org/search.json?limit=30&fields=title,author_name,first_publish_year,language&q=<關鍵詞用+號連>\n` +
+  `④ 美國國會圖書館 LoC（JSON/SRU 被擋，改用 WebSearch 限定網域）：\n` +
+  `   WebSearch(query:"<作者或書題> works", allowed_domains:["loc.gov","catalog.loc.gov","id.loc.gov"])\n` +
+  `   權威人名/主題用 id.loc.gov（規範作者拼法、LCC 主題），書目用 loc.gov/item。\n` +
+  `⑤ Internet Archive（開放，可補全文）：https://archive.org/advancedsearch.php?output=json&rows=30&fl[]=title&fl[]=creator&fl[]=year&q=<查詢>\n` +
+  `（HathiTrust 403、WorldCat 需金鑰、梵蒂岡 opac 回全館分面殼——這三者抓不動，別倚賴；能查到再加分。）\n` +
+  `每筆 source_citation 必須是「目錄實際回傳的紀錄定位」：DNB/BnF 控制號或 SRU 命中、OpenLibrary key、loc.gov/item URL、id.loc.gov URL、archive.org id 之一。查不到實際紀錄的書一律不列。`
+
 phase('Research')
 const batches = await parallel(sources.map((src) => () =>
   agent(
-    `你在為「基督教大藏經」研究候選書目（這是嚴謹的漢語神學文獻編目，務必準確、勿杜撰）。\n` +
+    `你在為「基督教大藏經」研究候選書目（嚴謹漢語神學文獻編目，務必準確、勿杜撰）。\n` +
     `目標時代＝${a.eraName}（斷代＝時代精神：${a.boundary}）。\n` +
     `目標分類＝${a.collectionName}‧${a.canonLabel}。\n` +
-    `你的任務是「目錄式系統枚舉」，不是憑記憶舉例：走查權威圖書館目錄與全集叢書的目次，把屬於此(時代×藏×正/外)、尚未被收錄的真實書卷逐一抄列，力求窮盡（本批請列 15–30 部以上）。\n` +
-    `‧ 主查圖書館目錄：美國國會圖書館 catalog.loc.gov（按 LCC 基督教分類 BR 教會史／BS 聖經／BT 教義／BV 實踐神學‧禮儀‧講道‧宣教／BX 各宗派）、梵蒂岡圖書館 opac.vatlib.it 與 digi.vatlib.it、WorldCat、HathiTrust、Internet Archive。\n` +
-    `‧ 本批指定全集／來源：「${src}」——走其卷目、作者著作表、主題分類逐一枚舉。\n` +
+    `${CATALOG_GUIDE}\n` +
+    `你的任務是「目錄驅動系統枚舉」：實際查上述目錄，把屬於此(時代×藏×正/外)、尚未被收錄的真實書卷逐一抄列，力求窮盡（本批請列 15–30 部以上）。\n` +
+    `‧ 本批側重來源／主題視角：「${src}」——以此為查詢切入點（作者群、全集卷目、主題詞），但務必交叉查 ≥2 個上列 endpoint 確認紀錄存在。\n` +
     `收錄範圍定向（提示，非窮舉）：${scope.join('；')}。\n` +
-    `每部需給：title_zh(繁體中文定名，沿用良好古譯、託名不寫偽)、title_orig(原文/西文名)、author(或傳說作者)、era(寫作年代)、place(寫作地點)、language、division(建議歸入的「部」名)、intro(100–160字繁中簡介)、source_citation(務必附可查證出處：LCCN／卷號／目錄 URL／全集頁碼)。\n` +
-    `合集處理：遇「合集」（塔木德／聖訓集／摩門經／全集等）請枚舉其正典子單位為個別卷，各標 parent(母合集名)；子單位太短碎者則整部一卷並以 extent 標示。\n` +
-    `鐵則：寧缺勿濫，不確定真實存在或 metadata 者一律不列；但目錄明載者與合集子卷應盡量收全。`,
+    `每部需給：title_zh(繁體中文定名，沿用良好古譯、託名不寫偽)、title_orig(原文/西文名)、author、era(寫作年代)、place、language、division(建議歸入的「部」名)、intro(100–160字繁中簡介)、source_citation(目錄實際回傳的紀錄定位，見手冊)。\n` +
+    `合集處理：遇「合集」（塔木德／聖訓集／全集等）枚舉其子單位為個別卷，各標 parent；太短碎者整部一卷並以 extent 標示。\n` +
+    `鐵則：寧缺勿濫，目錄查不到實際紀錄或 metadata 不明者一律不列；目錄明載者與合集子卷盡量收全。`,
     { label: `research:${String(src).slice(0, 20)}`, phase: 'Research', schema: CAND_SCHEMA },
   ).then((r) => (r?.works || []))))
 
