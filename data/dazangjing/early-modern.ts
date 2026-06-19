@@ -187,6 +187,8 @@ export const EARLY_MODERN_ERA: DazangEra = {
           { title_zh: '神學要義', title_orig: 'Loci communes rerum theologicarum', author: '腓力‧墨蘭頓', era: '一五二一', place: '德意志‧維滕貝格', language: '拉丁文', intro: '墨蘭頓以羅馬書為綱所撰的首部新教系統神學，依「罪、律法、恩典」等主題分章論述，文字清晰條理嚴謹。此書是路德宗教義的首次有序整理，路德盛讚其價值。墨蘭頓以人文主義學養將改教信念體系化，奠定新教教義學的方法論基礎，數度增訂再版，影響德意志神學教育達一世紀之久。' },
           { title_zh: '六十七條結論', title_orig: 'Schlussreden', author: '慈運理', era: '一五二三', place: '瑞士‧蘇黎世', language: '德文', intro: '慈運理為蘇黎世公開辯論所擬的六十七條提綱，系統陳述其改革主張：唯獨基督為救恩之本、福音不靠教會權威而自證、否定彌撒為獻祭、反對聖徒崇拜與修道誓願。此文確立瑞士德語區改革的神學方向，慈運理的聖餐象徵論與路德的真實臨在論分歧，後於馬爾堡會談中公開,成為新教內部長期爭議之源。' },
           { title_zh: '基督教要義', title_orig: 'Institutio Christianae religionis', author: '約翰‧加爾文', era: '一五三六至一五五九', place: '瑞士‧日內瓦', language: '拉丁文', intro: '加爾文畢生增訂的新教神學鉅著，由初版六章擴至終版四卷八十章，依「認識上帝、認識救主、領受恩典、外在恩具」架構，涵蓋神論、基督論、救恩論、教會論與聖禮。書中系統闡發預定揀選、唯獨恩典與聖經權威，文筆莊嚴邏輯縝密。此書是改革宗傳統最權威的教義總綱，影響長老會、歸正宗及整個加爾文主義世界。' }
+        ,
+          { title_zh: '特倫托會議議事錄附解毒劑', title_orig: 'Acta Synodi Tridentinae cum Antidoto', author: '加爾文（Jean Calvin）', era: '1547', place: '瑞士日內瓦', language: '拉丁文', intro: '加爾文於特倫托大公會議第一期（1545–1547）結束後，逐條引錄議事決議並附以反駁——即所謂「解毒劑」（Antidotum）。全書針對天主教反宗教改革所確立的稱義論、聖禮觀、傳統與聖經關係等核心教義，從改革宗立場作系統性護教駁論，是十六世紀新教與天主教神學論爭最重要的原典文獻之一，充分體現改革宗正統建構期的神學論辯風格。' }
         ]
       },
       {
@@ -225,7 +227,19 @@ export const EARLY_MODERN_ERA: DazangEra = {
           { title_zh: '類比論', title_orig: 'The Analogy of Religion, Natural and Revealed', author: '約瑟‧巴特勒', era: '一七三六', place: '英格蘭‧倫敦', language: '英文', intro: '英國國教主教巴特勒回應自然神論之護教鉅著，主張自然界與啟示宗教之間存在類比關係：人若接受自然界的奧秘與不確定，便無理由僅因啟示有奧秘而拒之。巴特勒以蓋然性論證反駁理神論者對神蹟與啟示的質疑，論理穩健周密。此書被視為十八世紀英語護教學的最高成就,影響紐曼等後世思想家。' },
         ]
       }
-    ]
+    ,
+      {
+        key: 'modern-protestant-systematics',
+        label: '近代新教系統神學部',
+        label_en: 'Modern Protestant Systematics (19c)',
+        desc: '十九世紀新教（浸信會、信義宗、自由派）系統神學教本，於達爾文主義與聖經批判衝擊下重構教義體系。',
+        works: [
+          { title_zh: '系統神學', title_orig: 'Systematic Theology', author: '史壯（Augustus Hopkins Strong）', era: '1886（1907–1909 三卷定本）', place: '美國紐約州羅徹斯特', language: '英文', intro: '史壯（Augustus Hopkins Strong，1836–1921）為美國浸信會神學家，長期擔任羅徹斯特神學院院長（1872–1912）暨系統神學講席。本書為其畢生心血之系統神學巨著，初版於 1886 年，後歷經數度增補，至 1907–1909 年定本共三卷（神論、人論、救贖論），涵蓋神論、人論、基督論、救贖論與末世論。史壯融合改革宗加爾文神學傳統與十九世紀有機進化思想，試圖在護教框架內回應達爾文主義衝擊。其嚴謹的聖經實證進路與宏大的體系建構，使本書成為近代新教保守正統神學最具代表性的教科書之一，廣泛影響北美浸信會與福音派神學院逾百年。' },
+          { title_zh: '基督教神學綱要', title_orig: 'An Outline of Christian Theology', author: '克拉克（William Newton Clarke）', era: '1898', place: '美國紐約', language: '英文', intro: '克拉克（William Newton Clarke，1841–1912）為美國浸信會神學家，本書是十九世紀末北美自由派新教神學的代表性系統神學綱要。全書依神論、人論、基督論、救贖論、教會論、末世論次序鋪陳，以歷史批判精神與福音信仰相調和，嘗試將啟蒙後的理性主義與正統新教信仰整合為一貫神學體系。此書廣泛用於北美神學院，奠定二十世紀初自由神學的論述格局，為近代新教系統神學的重要一手原典。' },
+          { title_zh: '信義宗教義綱要', title_orig: 'Kompendium der Dogmatik', author: '路德哈特（Christoph Ernst Luthardt）', era: '1865', place: '德國萊比錫', language: '德文', intro: '路德哈特（Christoph Ernst Luthardt，1823–1902）為德國萊比錫大學路德宗系統神學教授，以捍衛正統信義宗神學著稱。本書德文原題《Kompendium der Dogmatik》（1865 年初版，1893 年第九版），依傳統教義綱要次序論述上帝論、基督論、救贖論與末世論，力抗十九世紀自由主義神學浪潮，維護信條主義立場。英語神學院流通者係魏德納（R. F. Weidner）1888 年據本書改編之《教義神學導論》，非直接譯本。' }
+        ]
+      }
+      ]
   },
   wai: {
     summary: '外藏收近代啟蒙以降質疑、改造或另立啟示信仰的思想：自然神論與懷疑論瓦解傳統護教，理性宗教與泛神論重構神聖觀念，新興宗教神學則開出基督教傳統之外的新教義體系。',
@@ -266,7 +280,17 @@ export const EARLY_MODERN_ERA: DazangEra = {
           { title_zh: '教義與聖約', title_orig: 'Doctrine and Covenants', author: '約瑟‧斯密等', era: '一八三五', place: '北美‧俄亥俄／密蘇里', language: '英文', intro: '摩門教（耶穌基督後期聖徒教會）的核心經典之一，輯錄創教者約瑟‧斯密及後繼領袖所宣稱領受的啟示。內容涉及教會組織、聖職體系、聖殿教儀、永恆婚姻與救恩計畫等獨特教義。此書與摩門經、無價珍珠並列為該教標準經典，是理解摩門神學體系的關鍵文獻，反映十九世紀美國新興宗教對基督教傳統的重大改造與擴充。' }
         ]
       }
-    ]
+    ,
+      {
+        key: 'anti-trinitarian-radical',
+        label: '反三一與激進改革部',
+        label_en: 'Anti-Trinitarian and Radical Reformation',
+        desc: '宗教改革激進翼對尼西亞三一教義的否定，啟唯一神論與蘇西尼主義之先。',
+        works: [
+          { title_zh: '三位一體謬誤論七卷', title_orig: 'De Trinitatis erroribus libri septem', author: '塞爾維特（Michael Servetus）', era: '1531', place: '阿爾薩斯哈根諾（Hagenau）', language: '拉丁文', intro: '西班牙神學家塞爾維特（米迦勒‧塞爾韋圖斯，約 1511–1553）於 1531 年在哈根諾出版的反三位一體論著作，為宗教改革時代最激進的神學挑戰之一。全書七卷以聖經文本為據，主張尼西亞三位一體教義係希臘哲學污染之產物，耶穌非永恆的第二位格而是神性之子。此書同時觸怒天主教與改教陣營，終致塞爾維特 1553 年於日內瓦被審判火刑。本書為近代唯一神論與反尼西亞神學的奠基原典，具有不可忽略的神學史地位。' }
+        ]
+      }
+      ]
   }
 },
     {
@@ -789,6 +813,8 @@ export const EARLY_MODERN_ERA: DazangEra = {
         works: [
           { title_zh: '近代系統神學教本', title_orig: 'Institutio Theologiae Elencticae', author: '弗朗西斯‧圖雷廷', era: '1679–1685', place: '日內瓦', language: '拉丁文', intro: '改革宗正統盛期神學家圖雷廷的系統神學鉅著，以「辯難式」逐題設問、立論、駁斥對手，涵蓋神論、預定、基督救贖至教會與末世各大題目。論證嚴密、引據賅博，是十七世紀經院化改革宗神學的集大成之作。此書長期作為神學院教本，十九世紀普林斯頓學派奉為圭臬，深刻形塑近代保守長老宗的教義架構，可視為新教系統神學「百科化」的代表。' },
           { title_zh: '克魯登經文彙編', title_orig: 'A Complete Concordance to the Holy Scriptures', author: '亞歷山大‧克魯登', era: '1737', place: '倫敦', language: '英文', intro: '克魯登獨力編纂的英文欽定本聖經全書字詞索引，逐字標出每一語詞在聖經中的出處與上下文,並附人地名與專題小註。此書編排精審、檢索便捷,使傳道人與信徒得以迅速查考經文、比對用語,是英語世界最通行的聖經工具書之一。克魯登一生數度修訂,身後續有增補,流通逾兩百年。它代表近代「以工具書馴服龐大文本」的努力,為解經與講道預備提供基礎設施。' },
+        
+          { title_zh: '基督教神學學生手冊', title_orig: 'The Student\'s Handbook of Christian Theology', author: '菲爾德（Benjamin Field）著；西蒙斯（John C. Symons）編', era: '1870', place: '英國倫敦（Hodder & Stoughton）', language: '英文', intro: '菲爾德（Benjamin Field，1823–1869）為循道宗牧師，原著 1868 年首刊於墨爾本；菲爾德逝世後由西蒙斯（John Christian Symons）整理其最終修訂、增補小傳，以「第二版」形式於 1870 年倫敦出版。書以神學生為對象，系統整理基督教神學各要項，涵蓋神論、基督論、救贖論、教會論等，條目簡明，代表十九世紀英語新教（循道宗）學院神學手冊傳統，具工具書性質。' }
         ],
       },
       {

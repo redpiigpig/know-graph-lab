@@ -148,6 +148,8 @@ export const MODERN_ERA: DazangEra = {
           { title_zh: '三一與上帝國', title_orig: 'The Trinity and the Kingdom', author: '莫特曼（Jürgen Moltmann）', era: '1980', place: '德國慕尼黑（München）', language: '德文', intro: '莫特曼的社會三一論代表作（德文原題 Trinität und Reich Gottes）。他批判西方一神論與君主制神觀對政治壓迫的助長，主張以三一位格間相互內在（perichoresis）的團契為範式，建構一種彼此關連、開放受苦的上帝觀，並引申出反對宰制的社會與教會願景。此書將三一論從抽象教義轉為具批判力的政治神學資源，影響當代三一論的復興。' },
           { title_zh: '不！答布倫納', title_orig: 'Nein! Antwort an Emil Brunner', author: '巴特（Karl Barth）', era: '1934', place: '瑞士／德國', language: '德文', intro: '巴特針對布倫納〈自然與恩典〉的激烈駁論。布倫納主張人墮落後仍存「接觸點」與自然啟示的可能，巴特斷然以「不！」回應，堅決否定任何自然神學，認為這正是德國基督徒迎合納粹的神學病根。此文標誌辯證神學內部巴特與布倫納的決裂，是二十世紀「自然神學論戰」最尖銳的文獻，界定了新正統對啟示獨一性的立場。' },
           { title_zh: '基督與文化', title_orig: 'Christ and Culture', author: '理查‧尼布爾（H. Richard Niebuhr）', era: '1951', place: '美國', language: '英文', intro: '理查‧尼布爾以「基督與文化」的張力為軸，歸納基督教史上五種典型立場：基督反乎文化、基督屬乎文化、基督在文化之上、基督與文化弔詭並立、基督轉化文化。他剖析各型的洞見與限度而傾向轉化論。此書成為討論信仰與文化關係繞不開的經典框架，深刻影響神學、倫理與宣教思考，至今仍是相關論辯的起點。' }
+        ,
+          { title_zh: '為眾人：合乎福音精神的新教神學', title_orig: 'Einer für Alle: Evangelische Theologie im Geist des Evangeliums', author: '達爾費特（Ingolf U. Dalferth）', era: '2026', place: '德國萊比錫', language: '德文', intro: '達爾費特（Ingolf U. Dalferth）為當代著名新教系統神學家，長期執教蘇黎世大學與克萊蒙特神學院。本書以「為眾人之一」為核心命題，從基督代贖的結構出發，系統闡述新教神學在福音精神中的內在邏輯，涵蓋神學認識論、基督論與救贖論的整合論述。全書屬原創系統神學著作，代表當代德語新教神學的前沿思考，與巴特、潘能伯格傳統一脈相承。' }
         ]
       },
       {
@@ -197,6 +199,9 @@ export const MODERN_ERA: DazangEra = {
           { title_zh: '論作基督徒', title_orig: 'Christ sein（英譯 On Being a Christian）', author: '龔漢斯（Hans Küng）', era: '德文1974／英譯1976', place: '德國慕尼黑（R. Piper Verlag, München）', language: '德文', intro: '龔漢斯面向「信而不安者」與現代人的大部頭護教與基督信仰總論暢銷書，德文版甫出即售逾二十萬冊。聚焦耶穌基督的生平、教導及其神性本質，論述各基督教群體之共通核心與選擇相信基督教的理由，主張跟隨耶穌引向真正人性的存在。與《上帝存在嗎？》同為其挑戰訓導、面向世俗世界的代表巨著；英譯使這位學院神學家廣為大眾所知。' },
           { title_zh: '上帝存在嗎？今日的解答', title_orig: 'Existiert Gott?（英譯 Does God Exist? An Answer for Today）', author: '龔漢斯（Hans Küng）', era: '德文1978／英譯1980', place: '德國慕尼黑（Piper）', language: '德文（英譯）', intro: '龔漢斯篇幅龐大的有神論辯護巨著，循近代思想史（笛卡兒、黑格爾、費爾巴哈、尼采、佛洛伊德至虛無主義）追問上帝存在問題，主張對實在的基本信任已蘊含對上帝的肯定。為當代天主教基要神學的重要文獻。' },
           { title_zh: '基督教導論：使徒信經講釋', title_orig: 'Einführung in das Christentum: Vorlesungen über das apostolische Glaubensbekenntnis', author: '拉辛格（Joseph Ratzinger，後為教宗本篤十六世）', era: '1968', place: '德國慕尼黑（Kösel-Verlag, München）', language: '德文', intro: '拉辛格任杜賓根大學教義學教授時，1967 年夏季學期的講座結集，其最重要、最廣為閱讀的著作之一。依《使徒信經》逐條開展，以更具當代共鳴的語言重述基督教信仰的核心，闡述信與知、上帝的位格性、基督論的「敘事」面向與教會中的信仰處所。初版印四千五百冊，至 1969 年累計售出四萬五千冊，譯為二十三種語言，為近代神學最具影響力文本之一，奠定其神學聲望，亦預示其日後作為信理部長與教宗的神學立場。' }
+        ,
+          { title_zh: '神學的新時代', title_orig: 'Un nouvel âge de la théologie', author: '革弗雷（Claude Geffré）', era: '1972', place: '法國巴黎', language: '法文', intro: '法國道明會神學家革弗雷（Claude Geffré，1926–2017）回應梵二後天主教神學轉型而作的方法論宣言。本書以詮釋學為核心，探問在現代性、世俗化與宗教多元衝擊下，神學如何重新確立自身的語言與任務。革弗雷繼承呂格爾詮釋傳統，主張神學必須以批判性詮釋重讀啟示，方能對當代人有效言說。全書是天主教現代神學詮釋轉向的代表性原典，與龔漢斯、拉納同列後梵二時期歐陸神學的重要一環。' },
+          { title_zh: '神學之鄉：認識神學人物與思潮', title_orig: 'Au pays de la théologie', author: '謝努（Bruno Chenu）；諾什（Marcel Neusch）', era: '1994', place: '法國巴黎', language: '法文', intro: '本書為法國道明會神學家謝努（Bruno Chenu, 1942–2003）與聖母升天會神學家諾什（Marcel Neusch, 1935–2015）合著的二十世紀神學概覽，以約三十篇簡介呈現當代重要神學家與神學思潮，兼及依勒內、奧古斯丁、托馬斯‧阿奎那、路德等奠基者，每篇附選讀文本與書目。原版 1979 年由 Centurion 出版，1994 年由 Cerf 修訂再版，為面向非專業讀者的入門神學導覽。' }
         ]
       },
       {
@@ -253,6 +258,8 @@ export const MODERN_ERA: DazangEra = {
           { title_zh: '確證的基督教信念', title_orig: 'Warranted Christian Belief', author: '普蘭丁格（Alvin Plantinga）', era: '2000', place: '美國／英國（Oxford University Press, New York/Oxford）', language: '英文', intro: '普蘭丁格「確證」（warrant）知識論三部曲的壓卷之作，繼《保證：當前論辯》與《保證與恰當功能》之後出版。他將「恰當功能」概念應用於基督教信仰，檢視「確證」在有神論信念中的角色，論證接受基督教信念是否合理、正當、有確證，主張基督教信念若由正常運作的認知官能所形成即具確證，從而（若為真）即構成知識；他區辨「事實問題」與「法理問題」，並援「神性感」與聖靈之工。為改革宗知識論的集大成扛鼎之作。', extent: '528 pp.' },
           { title_zh: '福音派神學要義', title_orig: 'Essentials of Evangelical Theology', author: '布勒施（Donald G. Bloesch）', era: '1978–1979', place: '美國舊金山（Harper & Row, San Francisco）', language: '英文', intro: '布勒施兩卷本福音派系統神學的代表作。卷一論上帝、權威與救恩，卷二論生命、職事與盼望。他立足新正統與福音派之間，既肯定聖經的權威與福音的客觀性，又批判基要派的命題主義與自由派的內在主義，倡導一種「進步保守」的福音派立場。此書是二十世紀後期主流福音派系統神學兼具廣度與平衡的重要著作，在英語神學教育中流傳甚廣。', extent: '全二卷' },
           { title_zh: '基督教神學導論', title_orig: 'Christian Theology: An Introduction', author: '麥格夫（Alister E. McGrath）', era: '1994（多版修訂）', place: '英國牛津（Blackwell / Wiley-Blackwell, Oxford）', language: '英文', intro: '麥格夫廣為使用、當今國際上最受推崇、使用最廣的基督教神學標準教科書之一。綜述兩千年基督教思想的主要概念、主題與發展，兼顧歷史神學、來源與系統神學，由福音派背景學者所撰、跨宗派通用，歷經多版增訂（最新為 2024 年第七版，與 Matthew J. Thomas 合著），為當代神學教育的入門經典。', extent: '510 pp.' }
+        ,
+          { title_zh: '基督教神學：系統與聖經神學', title_orig: 'Christian Theology, Systematic and Biblical', author: '班克羅夫特（Emery H. Bancroft）', era: '1925', place: '美國紐約州（Bible School Park, NY）', language: '英文', intro: '美國浸信會神學家班克羅夫特（Emery H. Bancroft，卒 1944）所著系統神學教本，融合系統神學與聖經神學方法，逐題梳理上帝論、基督論、救恩論、聖靈論、末世論等核心教義，以歸納聖經為基礎，輔以保守福音派正統框架。全書結構清晰，長期用作浸信會神學院教材，代表二十世紀初新教保守系統神學的典型範式，兼具教學與護教功能。' }
         ]
       },
       {
@@ -342,6 +349,8 @@ export const MODERN_ERA: DazangEra = {
         desc: '當代對諸宗教真理地位與基督教獨一性的多元論挑戰。',
         works: [
           { title_zh: '宗教多元論', title_orig: 'An Interpretation of Religion', author: '希克（John Hick）', era: '1989', place: '英國', language: '英文', intro: '希克是宗教多元論最系統的倡導者。他主張各大宗教都是人類對同一「終極實在」的不同文化回應,如同盲人摸象,沒有一個傳統可獨佔真理。他呼籲基督論從「上帝道成肉身」轉向隱喻式理解,使基督教放棄獨一救恩的宣稱。此書以康德的現象/本體之分為架構,是宗教神學中多元論立場的奠基之作,激起與排他論、兼容論的長久論辯。' }
+        ,
+          { title_zh: '猶太教的基督教神學？', title_orig: 'Eine jüdische Theologie des Christentums?', author: '阿倫斯（Jehoschua Ahrens）', era: '2026', place: '德國弗萊堡', language: '德文', intro: '猶太教拉比阿倫斯（Jehoschua Ahrens）以問號破題，嘗試從猶太傳統內部建構一套對基督教的神學詮釋，探討猶太人能否在不放棄一神信仰原則的前提下，正面神學地看待耶穌運動及其影響。全書置身當代猶太—基督對話脈絡（《真理之言》宣言後），既是護教式回應也是建構性神學嘗試，屬外藏中猶太思想與基督教交鋒的現代代表作，具大藏經「他者見證」的典型功能。' }
         ]
       }
     ]
@@ -847,6 +856,8 @@ export const MODERN_ERA: DazangEra = {
           { title_zh: '新約神學辭典', title_orig: 'Theologisches Wörterbuch zum Neuen Testament', author: '基特爾（Gerhard Kittel）、弗里德里希（Gerhard Friedrich）主編', era: '一九三三–一九七九年', place: '德國斯圖加特', language: '德文', intro: '簡稱 TDNT，按希臘文神學詞彙逐條考釋其在七十士譯本、古典文獻與新約中的意涵，集眾多德語聖經學者之力歷時數十年完成，共十巨冊。此書為二十世紀新約字義研究的權威工具，英譯本流通全球神學院,雖其「詞彙神學」方法後遭巴爾批評,仍為現代聖經辭典的里程碑。' },
           { title_zh: '天主教百科全書', title_orig: 'The Catholic Encyclopedia', author: '赫伯曼（Charles Herbermann）等主編', era: '一九〇七–一九一四年', place: '美國紐約', language: '英文', intro: '二十世紀初由美國天主教學者編纂的十五卷大型百科,涵蓋教義、教會史、禮儀、聖徒、教會法與宗教文化各領域,條目詳實、引證豐富。雖立場明確、部分內容已隨梵二更新,其廣度與學術性使其長期為英語世界查考天主教知識的標準參考,故列神學辭典與百科部。' },
           { title_zh: '新國際聖經神學辭典', title_orig: 'New International Dictionary of New Testament Theology', author: '布朗（Colin Brown）主編', era: '一九七五–一九七八年', place: '英國', language: '英文', intro: '以新約神學概念為綱、按英文主題詞統攝相關希臘文詞群的綜合辭典,源自德文《神學概念辭典》並大幅增訂英語資料。全書兼顧字義考據與神學綜述,較 TDNT 更便於主題式查考,成為福音派聖經研究的重要案頭工具,廣為神學院採用。' }
+        ,
+          { title_zh: '基督教神學百科全書', title_orig: 'Encyclopedia of Christian Theology', author: '拉科斯特（Jean-Yves Lacoste）主編', era: '2005（法文原版 1998）', place: '美國紐約（Routledge）', language: '英文', intro: '法國現象學哲學家暨神學家拉科斯特主編，原以法文《批判神學辭典》由法國大學出版社（PUF）出版（1998 年初版），2005 年英譯擴編，由 Routledge 出版三冊套書。條目逾五百三十篇，逾二百五十位學者出自十五國撰稿，涵蓋系統神學、歷史神學、聖經詮釋、禮儀與靈修等核心範疇，廣納天主教、新教、東正教及普世合一運動視角，是當代最具份量的跨宗派基督教神學參考工具書之一。', extent: '三冊（逾 530 條目）' }
         ]
       },
       {
@@ -870,6 +881,8 @@ export const MODERN_ERA: DazangEra = {
           { title_zh: '聖經彙編', title_orig: 'Strong\'s Exhaustive Concordance of the Bible', author: '史特朗（James Strong）', era: '一八九〇年', place: '美國', language: '英文', intro: '史特朗主編的欽定本聖經全字彙編,將每個英文字逐一索引至經文,並附希伯來文與希臘文原文編號(史特朗編號),使不諳原文者亦能查考字義。此書於二十世紀廣為流通並數位化,成為英語聖經研究最普及的查經工具,其原文編號系統至今仍為各類聖經軟體沿用。' },
           { title_zh: '尼西亞前後教父集', title_orig: 'Ante-Nicene and Nicene and Post-Nicene Fathers', author: '沙夫（Philip Schaff）等編', era: '一八八五–一九〇〇年', place: '美國', language: '英文', intro: '沙夫主編的英譯教父原典大型叢刊,含尼西亞前教父十卷與尼西亞後教父兩系各十四卷,將希臘、拉丁教父著作系統英譯並加註。此叢刊與法國《基督教資料叢書》(SC)、《基督教拉丁文獻全集》(CCSL)同為現代研究教父學不可或缺的文獻彙編,流通逾百年仍為英語世界基準。' },
           { title_zh: '現代神學書目大全', title_orig: 'A Bibliography of Modern Theology', author: '各神學圖書館協會編', era: '二十世紀', place: '歐美', language: '英文‧德文', intro: '彙集現代神學各學科重要著作與期刊論文的分類書目工具,按聖經研究、歷史神學、系統神學、實踐神學等領域編排,並隨學術發展持續增補。此類書目為研究者掌握文獻、進行學術回顧的基礎工具,反映現代神學知識生產的規模與分工,故收於工具書與文獻彙編部。' }
+        ,
+          { title_zh: '神學實踐入門（第五卷：實踐）', title_orig: 'Initiation à la pratique de la théologie, vol. 5: Pratique', author: 'Bernard Lauret、François Refoulé 主編（集體撰著）', era: '1987', place: '法國巴黎', language: '法文', intro: '法國學者集體撰著之多卷本《神學實踐入門》第五卷，主題為「實踐」（Pratique），涵蓋實踐神學各領域，包括禮儀、牧養、宣教與基督徒倫理實踐等。全系列為法語天主教神學界二十世紀重要參考工具書，系統導引神學研究方法與各分支學科，供神學院教學與自學使用。本卷聚焦神學如何落實於教會生活與社會行動，具百科式導引性質。' }
         ]
       }
     ]
