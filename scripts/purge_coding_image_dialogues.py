@@ -23,6 +23,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+import time
 from pathlib import Path
 
 import requests
@@ -55,19 +56,23 @@ PROMPT_TMPL = (
 )
 
 
-def llm_label(batch: list[dict]) -> list[dict]:
+def llm_label(batch: list[dict], max_rounds: int = 4, wait: int = 90) -> list[dict]:
     items = []
     for i, d in enumerate(batch):
         p = (d.get("prompt") or "").strip().replace("\n", " ")[:500]
         rsp = (d.get("response") or "").strip().replace("\n", " ")[:600]
         items.append(f"[{i}] 提問：{p}\n    回應：{rsp}")
     prompt = PROMPT_TMPL.format(items="\n\n".join(items))
-    for name, fn in (("Gemini", C.gemini_chat), ("NVIDIA", C.nvidia_chat), ("Haiku", C.haiku_chat)):
-        try:
-            return C._parse_json(fn(SYSTEM, prompt))
-        except Exception as e:
-            print(f"  · {name} 失敗：{type(e).__name__} {str(e)[:100]}", flush=True)
-    raise RuntimeError("三引擎全失敗")
+    for rnd in range(max_rounds):
+        for name, fn in (("Gemini", C.gemini_chat), ("NVIDIA", C.nvidia_chat), ("Haiku", C.haiku_chat)):
+            try:
+                return C._parse_json(fn(SYSTEM, prompt))
+            except Exception as e:
+                print(f"  · {name} 失敗：{type(e).__name__} {str(e)[:100]}", flush=True)
+        if rnd < max_rounds - 1:
+            print(f"  三引擎全失敗，等待 {wait}s 後重試（第 {rnd + 1}/{max_rounds} 輪）", flush=True)
+            time.sleep(wait)
+    raise RuntimeError("三引擎連續多輪全失敗")
 
 
 def candidate_ids(table: str) -> set[str]:

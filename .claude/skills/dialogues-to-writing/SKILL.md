@@ -177,14 +177,20 @@ agent fan-out 結果不可重現、難稽核。改用**純函式候選 prelabel 
 - **全量判完**：ledger `c:/tmp/genesis_classify_chatgpt.jsonl`(4,279)＋`_gemini.jsonl`(146)。
   創生哲學 tagged 共 **3,316 筆**（2026-06-19 補跑最後 120 筆 chatgpt：92 屬、掛標 266）。
 
-### purge 清除 ✅ 完成（2026-06-19 使用者確認後真刪）
+### purge 清除 ✅ 完成（2026-06-19 使用者確認後真刪，chatgpt + gemini 皆已清）
 - `scripts/purge_coding_image_dialogues.py` 把候選判成 **coding / image / post(社群貼文/文案/公告草稿) / keep**，
-  **預設 dry-run**；ledger `c:/tmp/purge_chatgpt.jsonl`（1,853 全判完）。
-- 乾跑報告：coding 621・image 137・post 161・keep 934 → **預計刪 919**；與創生哲學 tagged **零重疊**。
-- 使用者點頭 → `--execute` 真刪 **919 筆**（先刪 entry_categories 再刪對話，不可逆）。
-  chatgpt 表 **13,043 → 12,124**（驗證抽查刪除 id 已不存在）。
-- ⛔ 重跑教訓：`--execute` 會**重 fetch 候選+讀 ledger**，已判過的不再跑 LLM，只做刪除。
-  gemini 源（`--source gemini`）尚未跑 purge（使用者只要清 ChatGPT；如要清 gemini 同法）。
+  **預設 dry-run**；ledger `c:/tmp/purge_{source}.jsonl`。
+- **chatgpt**：候選 1,853 → 乾跑 coding 621・image 137・post 161・keep 934 → 使用者點頭 → 真刪 **919 筆**；
+  表 **13,043 → 12,124**。
+- **gemini**：候選 608 → coding 261・image 11・post 17・keep 319 → 使用者點頭 → 真刪 **289 筆**；
+  表 **2,594 → 2,305**。兩源都與創生哲學 tagged（3,316，exact count 驗證未受影響）**零重疊**。
+- ⛔ 重跑教訓：`--execute` 會**重 fetch 候選+讀 ledger**，已判過的不再跑 LLM，只做刪除（先刪 entry_categories 再刪對話，不可逆）。
+- 🩹 **2 個修正（2026-06-19）**：
+  ① `llm_label` 原本三引擎全失敗就**丟批**（gemini 跑時 Gemini/NVIDIA 配額盡＋Haiku 一度 429 → 跳了 296 批）；
+     已仿 classify 改成**等 90s 重試最多 4 輪**才放棄。
+  ② `classify_genesis_philosophy.fetch_already_tagged` 用 Range 分頁但**無 ORDER BY → 重複呼叫時多時少**
+     （量到 2,888↔3,316 跳動）；只用於 classify 跳過已標項（idempotent 無害），但做 overlap 稽核別信它——
+     **要精確算就直接對「目標 id 子集」查 entry_categories**（in.<ids> + in.<cat_ids>），或用 `count=exact` header。
 
 ### ⚠️ 這案踩過的坑（新 session 必看）
 - **引擎現況**：Gemini/NVIDIA 免費配額已耗盡 → 全靠 **Haiku**（Max OAuth）在跑。隔日配額會回復。
