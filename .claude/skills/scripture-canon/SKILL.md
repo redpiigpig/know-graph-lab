@@ -1587,7 +1587,7 @@ q-peter-preaching / christian-sibyl / orphica / joseph-prayer
 | **judith** | 62.2% | **96.2%** (326/339, ch1-16 全到) |
 | **2-maccabees** | 83.4% | **99.8%** (554/555) |
 | **3-maccabees** | 82.9% | **94.7%** (216/228) |
-| **jubilees** | 84.1% | **97.9%** (1277/1305, ch1-50 全到, 只剩 ch21) |
+| **jubilees** | 84.1% | **97.9%** (1277/1305, ch1-50 全到, 只剩 ch21) — **ch21 = 不可復原來源缺口**：查全 427 頁 JSONL，黃根春中文本身就把 ch21:1-25（亞伯拉罕教以撒獻祭/血/祭壇用木）併進/簡化掉了，頁碼 p67-71 連續無缺頁、中文從 ch20 直跳 ch21:26→ch22。**別再當「OCR 章號糊掉可救」去重跑**，97.9% 即天花板。|
 
 **5. jubilees → Drive JSONL 全文重抓（97.9%）**：
 - **根因**：第4冊 ebook `a96b524b` 的 `ebook_chunks` 只回填 200 字/頁 **preview**（restore_apocrypha_fulltext.py 對 OT4 沒生效），full-width-dash 重複本 `3f241acf` 是空殼 → 無法 raw 重建。舊 cct_zh 快照（61K 字）尾部混整冊索引垃圾、且本身缺 ch46-50（摩西敘事）。
