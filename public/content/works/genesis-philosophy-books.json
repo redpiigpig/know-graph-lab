@@ -53,6 +53,32 @@
      "nChapters": 6
     }
    ]
+  },
+  {
+   "branch": "本體論三部曲",
+   "books": [
+    {
+     "id": "O1",
+     "title": "創生公式：生成的本體論",
+     "subtitle": "本體論正論——正式提出創生三原理（生成三要素）與創生公式",
+     "file": "/content/works/genesis/O1.html",
+     "nChapters": 8
+    },
+    {
+     "id": "O2",
+     "title": "觀察即創生：量子本體論",
+     "subtitle": "創生本體論在物理實在上的試驗場",
+     "file": "/content/works/genesis/O2.html",
+     "nChapters": 6
+    },
+    {
+     "id": "O3",
+     "title": "主體的生成：意識與自我的本體論",
+     "subtitle": "主體性本體論的核心——主體／意識「是什麼、如何生成」",
+     "file": "/content/works/genesis/O3.html",
+     "nChapters": 7
+    }
+   ]
   }
  ]
 }
