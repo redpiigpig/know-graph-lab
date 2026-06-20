@@ -119,14 +119,14 @@
             >{{ r.label }}</button>
           </div>
 
-          <!-- 轉寫鍵盤工具列（希臘文 / 日文假名 / 希伯來文） -->
-          <div v-if="greekKb || kanaKb || hebrewKb" class="flex items-center flex-wrap gap-2 mb-2 px-0.5">
+          <!-- 轉寫鍵盤工具列（希臘 / 假名 / 希伯來內建；其餘字母系走通用鍵盤） -->
+          <div v-if="anyKb" class="flex items-center flex-wrap gap-2 mb-2 px-0.5">
             <button
               @click="kbOn = !kbOn"
               class="text-xs px-2.5 py-1 rounded-lg border transition flex items-center gap-1"
               :class="kbOn ? 'bg-amber-50 border-amber-300 text-amber-800' : 'bg-white border-gray-200 text-gray-400'"
-              :title="greekKb ? '打英文字母即時轉成希臘字母（Beta Code）' : (kanaKb ? '打羅馬字即時轉成假名（系統 IME 組字時自動讓行）' : '打英文字母即時轉成希伯來字母（由右至左）')"
-            >⌨️ {{ greekKb ? '希臘鍵盤' : (kanaKb ? '假名鍵盤' : '希伯來鍵盤') }} {{ kbOn ? '開' : '關' }}</button>
+              :title="'打英文/羅馬字即時轉成目標文字'"
+            >⌨️ {{ greekKb ? '希臘鍵盤' : (kanaKb ? '假名鍵盤' : (hebrewKb ? '希伯來鍵盤' : (scriptKb ? scriptKb.label : '鍵盤'))) }} {{ kbOn ? '開' : '關' }}</button>
 
             <!-- 假名：平/片切換 -->
             <button
@@ -143,6 +143,33 @@
             <span v-if="kbOn && greekKb" class="text-[11px] text-gray-400">打 a→α、h→η、q→θ、w→ω…；母音後按 ) ( / \ = | + 加符號</span>
             <span v-if="kbOn && kanaKb" class="text-[11px] text-gray-400">打羅馬字如 sakura→さくら；ん打 nn、っ打雙子音、' 分隔（kon'nichiwa）</span>
             <span v-if="kbOn && hebrewKb" class="text-[11px] text-gray-400">打 a→א、b→ב、w→ש、x→ח…（由右至左）；字尾自動 sofit；母音點在對照表點選</span>
+            <span v-if="kbOn && scriptKb" class="text-[11px] text-gray-400">{{ scriptKb.hint }}</span>
+          </div>
+
+          <!-- 通用字母系對照表（西里爾/科普特/阿拉伯/敘利亞/亞美尼亞/喬治亞）+ 點選面板 -->
+          <div v-if="scriptKb && showKbHelp" class="mb-2 p-2.5 rounded-xl bg-teal-50/60 border border-teal-100 space-y-2" :dir="scriptKb.rtl ? 'rtl' : 'ltr'">
+            <div class="flex flex-wrap gap-1">
+              <button
+                v-for="(p, i) in scriptKb.palette"
+                :key="i"
+                @click="insertScript(p.ch)"
+                class="px-2 py-1 rounded-lg bg-white border border-teal-200 text-base hover:bg-teal-100 transition"
+                :title="p.label || (p.latin ? `鍵盤打 ${p.latin}` : '')"
+              >
+                <span class="text-gray-900">{{ p.ch }}</span>
+                <span v-if="p.latin" class="text-[10px] text-gray-400 ml-0.5" dir="ltr">{{ p.latin }}</span>
+              </button>
+            </div>
+            <div v-if="scriptKb.marks.length" class="flex flex-wrap gap-1 items-center" dir="ltr">
+              <span class="text-[11px] text-teal-800/80">附加符號：</span>
+              <button
+                v-for="m in scriptKb.marks"
+                :key="m.label"
+                @click="insertScript(m.mark)"
+                class="px-2 py-1 rounded-lg bg-white border border-teal-200 text-sm hover:bg-teal-100 transition"
+                :title="m.label"
+              >ا<span class="text-gray-900">{{ m.mark }}</span></button>
+            </div>
           </div>
 
           <!-- 希臘文對照表 + 點選面板 -->
@@ -225,8 +252,8 @@
               ref="inputEl"
               v-model="input"
               @keydown="onInputKeydown"
-              :dir="kbOn && hebrewKb ? 'rtl' : undefined"
-              :placeholder="listening ? (interim || '聆聽中…') : (kbOn && greekKb ? '打英文字母 → 希臘字母（如 logos→λόγος）…' : (kbOn && kanaKb ? '打羅馬字 → 假名（如 sakura→さくら）…' : (kbOn && hebrewKb ? '打英文字母 → 希伯來字母（由右至左，如 wlvm→שלום）…' : `用${coach?.langLabel}輸入…`)))"
+              :dir="kbOn && kbRtl ? 'rtl' : undefined"
+              :placeholder="listening ? (interim || '聆聽中…') : (kbOn && greekKb ? '打英文字母 → 希臘字母（如 logos→λόγος）…' : (kbOn && kanaKb ? '打羅馬字 → 假名（如 sakura→さくら）…' : (kbOn && hebrewKb ? '打英文字母 → 希伯來字母（由右至左，如 wlvm→שלום）…' : (kbOn && scriptKb ? `打英文/羅馬字 → ${scriptKb.label.replace('鍵盤','')}（見對照表）…` : `用${coach?.langLabel}輸入…`))))"
               rows="1"
               class="flex-1 resize-none px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-indigo-400 max-h-32"
             />
@@ -311,6 +338,7 @@ import { useCoachAi } from "~/composables/useCoachAi";
 import { useGreekKeyboard } from "~/composables/useGreekKeyboard";
 import { useKanaKeyboard } from "~/composables/useKanaKeyboard";
 import { useHebrewKeyboard } from "~/composables/useHebrewKeyboard";
+import { getScriptKeyboard } from "~/composables/useScriptKeyboard";
 
 definePageMeta({ middleware: "coach-auth" });
 
@@ -353,6 +381,10 @@ const inputEl = ref<HTMLTextAreaElement | null>(null);
 const greekKb = computed(() => coach.value?.keyboard === "greek");
 const kanaKb = computed(() => coach.value?.keyboard === "kana");
 const hebrewKb = computed(() => coach.value?.keyboard === "hebrew");
+// 其餘字母系文字（西里爾/科普特/阿拉伯/敘利亞/亞美尼亞/喬治亞）走資料驅動的通用鍵盤
+const scriptKb = computed(() => getScriptKeyboard(coach.value?.keyboard));
+const anyKb = computed(() => greekKb.value || kanaKb.value || hebrewKb.value || !!scriptKb.value);
+const kbRtl = computed(() => hebrewKb.value || !!scriptKb.value?.rtl);
 const kbOn = ref(true); // 預設開啟（系統 IME 組字時 kana 會自動讓行）
 const showKbHelp = ref(false);
 
@@ -381,6 +413,7 @@ function onInputKeydown(e: KeyboardEvent) {
   if (greekKb.value) gk.onKeydown(e, inputEl.value, setInput);
   else if (kanaKb.value) kana.onKeydown(e, inputEl.value, setInput);
   else if (hebrewKb.value) heb.onKeydown(e, inputEl.value, setInput);
+  else if (scriptKb.value) scriptKb.value.onKeydown(e, inputEl.value, setInput);
 }
 
 function insertGreek(ch: string) {
@@ -400,6 +433,13 @@ function insertHebrew(ch: string) {
 function insertKana(ch: string) {
   if (ch && inputEl.value) {
     kana.insert(inputEl.value, kana.kata.value ? kana.toKatakana(ch) : ch, setInput);
+    inputEl.value.focus();
+  }
+}
+
+function insertScript(ch: string) {
+  if (ch && inputEl.value && scriptKb.value) {
+    scriptKb.value.insert(inputEl.value, ch, setInput);
     inputEl.value.focus();
   }
 }

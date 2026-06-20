@@ -203,7 +203,10 @@ chat / profile(get,put) / progress(get,put) / activity / dashboard / usage / ass
   - **希臘文 `composables/useGreekKeyboard.ts`**：TLG **Beta Code**（h=η q=θ c=ξ x=χ y=ψ w=ω f=φ）；母音後按 `) ( / \ = | +` 加多調符號 polytonic；字尾 σ→ς + NFC。1:1 無狀態。grc 教練用。
   - **日文 `composables/useKanaKeyboard.ts`**：romaji→かな 迷你 IME，**有狀態**（`pendingLen` 暫存游標前未成假名的羅馬字，湊成即替換）。拗音(kya)、促音(雙子音→っ、tch)、撥音(nn→ん／n+子音→ん、`'` 分隔)、濁半濁、平/片切換(`kata` ref，+0x60)、片假名長音 `-`→ー。⚠️ 偵測 `e.isComposing`/`key==='Process'` 自動讓行，**不與系統 IME 衝突**。ja 教練用。
   - **希伯來文 `composables/useHebrewKeyboard.ts`**：22 子音單鍵（學術轉寫，1:1），字尾形 sofit 自動（כ→ך מ→ם נ→ן פ→ף צ→ץ，詞尾換／詞中還原，類比希臘字尾 σ），母音點 niqqud 走點選面板。**RTL**（輸入框 dir=rtl、字串/游標仍邏輯順序）。hbo 教練用。
-  - 純函式有單元測試 `test/coach/keyboard.spec.ts`（`romajiToKana` / `normalizeSigma` / `normalizeFinals`）。要再加古語言鍵盤（科普特、敘利亞文…）就照 useGreekKeyboard 模式擴充 + coach 設 `keyboard`。
+  - **通用字母系鍵盤 `composables/useScriptKeyboard.ts`（2026-06-20）**：**資料驅動工廠**——給一份 Latin→目標字母單鍵對照表（+ 點選額外字母 extras / 附加符號 marks）就生出與希臘/希伯來同介面的 handler。`SCRIPT_SPECS` 內建 6 文字：`cyrillic`(教會斯拉夫 chu，含古字母 ѣ ѡ ѫ…)、`coptic`(科普特 cop，希臘衍生＋7 世俗體字母)、`arabic`(古典阿拉伯 ar，**RTL**，大寫鍵當不同字母 H→ح S→ص T→ط，harakat 點選)、`syriac`(敘利亞 syr，**RTL** Estrangela)、`armenian`(亞美尼亞 hy)、`georgian`(喬治亞 ka，unicase 大寫鍵當送氣/擠喉對立字母)。`bicameral` 文字大寫鍵自動產生大寫字母；`caseSensitive` 文字大寫鍵直接查表。`亞蘭 arc` 沿用 `hebrew`、`古典希臘 att` 沿用 `greek`。
+    - **chat.vue 整合**：`scriptKb = getScriptKeyboard(coach.keyboard)`（greek/kana/hebrew 回 null，保留各自特例邏輯）；`anyKb`/`kbRtl` 統一工具列顯示與 RTL；通用對照表面板（teal 色）列 palette＋marks 點選。
+    - **未做（abugida/音節文字，需有狀態 IME）**：天城體（梵 sa／半摩揭陀 pra）、藏文（bo）、吉茲 fidäl（gez）——這些子音帶固有母音、母音以 matra 結合、且有疊寫/連寫，非「1 鍵 1 字」，要另寫有狀態 composable。
+  - 純函式單元測試 `test/coach/keyboard.spec.ts`（假名/希臘/希伯來）＋ `test/coach/script-keyboard.spec.ts`（6 通用鍵盤，7 cases）。再加字母系古語言＝在 `SCRIPT_SPECS` 加一筆 spec + coach 設 `keyboard`；加 abugida 要另寫有狀態 composable。
 
 ## 十、使用者要手動做（部署前）
 

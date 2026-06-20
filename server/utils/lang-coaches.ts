@@ -35,7 +35,7 @@ export interface Coach {
   accent: string;          // UI 標示用
   blurb: string;           // 一句話介紹
   voiceless?: boolean;     // true = 死語言，無 STT/TTS，純文字（拉丁/古希臘）
-  keyboard?: "greek" | "kana" | "hebrew"; // 輸入框轉寫鍵盤：打英文即時對照成該文字（希臘字母 / 日文假名 / 希伯來字母）
+  keyboard?: "greek" | "kana" | "hebrew" | "cyrillic" | "coptic" | "arabic" | "syriac" | "armenian" | "georgian"; // 輸入框轉寫鍵盤：打英文即時對照成該文字（希臘/假名/希伯來內建；其餘字母系走 useScriptKeyboard）
   romanizations?: Romanization[]; // 可切換的羅馬字系統（台語：教羅 POJ ↔ 台羅 TL；客語：白話字 ↔ 客拼）；第 0 筆為預設
   systemPrompt: string;    // 教練人設 + 教學法 + 結構化輸出規則
   personas?: Persona[];    // 同一位教練的多種人格（聊天時自動輪替）
@@ -641,6 +641,7 @@ const COACHES: Coach[] = [
     accent: "新教會斯拉夫文（Synodal，東正教斯拉夫系禮儀）",
     blurb: "帶你從西里爾字母讀起、精讀福音書、詩篇與事奉聖禮的教會斯拉夫文老師（非現代俄文）。",
     voiceless: true,
+    keyboard: "cyrillic",
     systemPrompt: `You are **Kyrill（Кѷрі́ллъ）**，一位**教會斯拉夫文（Church Slavonic）**教師——斯拉夫系東正教（俄羅斯、塞爾維亞、保加利亞…）的**禮儀古典語言，不是現代俄文（Modern Russian）**。你教一位母語繁體中文、做宗教研究的學生。
 
 關於學生（很重要）：
@@ -759,6 +760,7 @@ const COACHES: Coach[] = [
     accent: "古典敘利亞文（Estrangela；東/西兩傳統）",
     blurb: "帶你從 Estrangela 字體讀起、精讀 Peshitta 與聖以法蓮的古典敘利亞文老師（兼述東西兩傳統）。",
     voiceless: true,
+    keyboard: "syriac",
     systemPrompt: `You are **Ephrem（ܐܦܪܝܡ）**，一位**古典敘利亞文（Classical Syriac）**教師——基督教的亞蘭語方言（埃德薩亞蘭文），東方各教會的禮儀與神學語言。你教一位母語繁體中文、做宗教研究的學生。
 
 關於學生（很重要）：
@@ -797,6 +799,7 @@ const COACHES: Coach[] = [
     accent: "薩希德方言（Sahidic，納戈瑪第與聖經）",
     blurb: "帶你從科普特字母讀起、精讀納戈瑪第諾斯底文獻與科普特聖經的老師（薩希德方言）。",
     voiceless: true,
+    keyboard: "coptic",
     systemPrompt: `You are **Shenoute（Ϣⲉⲛⲟⲩⲧⲉ）**，一位**科普特文（Coptic）**教師——古埃及語的最後階段，用**希臘字母＋7 個源自世俗體（Demotic）的字母**書寫。教學以**薩希德方言（Sahidic）**為主（學界與納戈瑪第文獻的標準），適時提及波海里方言（Bohairic，科普特正教現行禮儀）。你教一位母語繁體中文、做宗教研究、熟悉諾斯底主義的學生。
 
 關於學生（很重要）：
@@ -871,6 +874,7 @@ const COACHES: Coach[] = [
     accent: "古典亞美尼亞文（Grabar，亞美尼亞使徒教會）",
     blurb: "帶你從 Mesrop 字母讀起、精讀「譯本之后」亞美尼亞文聖經與教父譯文的老師。",
     voiceless: true,
+    keyboard: "armenian",
     systemPrompt: `You are **Mesrop（Մեսրոպ）**，一位**古典亞美尼亞文（Grabar／Classical Armenian）**教師——亞美尼亞使徒教會的經典語言，用 5 世紀 Mesrop Mashtots 所創的**亞美尼亞字母**書寫，自成印歐語一支。你教一位母語繁體中文、做宗教研究的學生。
 
 關於學生（很重要）：
@@ -908,6 +912,7 @@ const COACHES: Coach[] = [
     accent: "古典喬治亞文（Old Georgian，喬治亞正教）",
     blurb: "帶你從 Asomtavruli 字母讀起、精讀古喬治亞文聖經與早期教父譯文的老師。",
     voiceless: true,
+    keyboard: "georgian",
     systemPrompt: `You are **Nino（ნინო）**，一位**古典喬治亞文（Old Georgian）**教師——喬治亞正教的經典語言，自成卡特韋利語系（與印歐、閃語皆無親緣），用古老的 **Asomtavruli／Nuskhuri** 字母書寫。你教一位母語繁體中文、做宗教研究的學生。
 
 關於學生（很重要）：
@@ -1171,6 +1176,7 @@ const COACHES: Coach[] = [
     ttsLang: "ar-SA",
     accent: "古典／古蘭阿拉伯文（الفصحى）",
     blurb: "帶你從阿拉伯字母讀起、精讀古蘭經、聖訓與伊斯蘭神哲學的古典阿拉伯文老師。",
+    keyboard: "arabic",
     systemPrompt: `أنت **سِيبَوَيْه**，一位**古典阿拉伯文（Classical Arabic／الفصحى）**教師——古蘭經與古典伊斯蘭學術的語言。你教一位母語繁體中文、做宗教研究的學生。（古典阿拉伯文有現代標準語 MSA 近親，發音可用 TTS 朗讀，但本教練聚焦古蘭與古典文獻。）
 
 關於學生（很重要）：
