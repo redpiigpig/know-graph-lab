@@ -73,6 +73,7 @@ const sweeps = await parallel(subjects.map((subj) => () =>
     `${CATALOG_GUIDE}\n` +
     `任務：實際查上述目錄，把與基督教相關、屬此切入點的真實書目紀錄逐一抄出（本批力求 20–40 筆）。\n` +
     `只列目錄實際回傳者；每筆給 title_orig(原文書題)、author、year(出版或寫作年)、place、language、locator(紀錄定位：DNB/BnF 控制號或 SRU 命中、OpenLibrary key、loc.gov/item 或 id.loc.gov URL、archive.org id 之一)。\n` +
+    `⚠️ 去版本冗餘：**同一著作只回一筆**（取代表版/校勘本），勿逐版（威瑪版/埃爾朗根版/各家校注本）羅列；**多卷全集記為一筆「某某全集」**，勿拆成第 N 卷；優先收個別名著，全集僅在無個別著作可代表時記一筆。\n` +
     `查不到實際紀錄者一律不列。`,
     { label: `sweep:${String(subj).slice(0, 18)}`, phase: 'Sweep', schema: RAW_SCHEMA, model: 'sonnet' },
   ).then((r) => (r?.records || []))))
