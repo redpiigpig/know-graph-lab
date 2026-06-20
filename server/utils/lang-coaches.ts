@@ -35,7 +35,7 @@ export interface Coach {
   accent: string;          // UI 標示用
   blurb: string;           // 一句話介紹
   voiceless?: boolean;     // true = 死語言，無 STT/TTS，純文字（拉丁/古希臘）
-  keyboard?: "greek" | "kana" | "hebrew" | "cyrillic" | "coptic" | "arabic" | "syriac" | "armenian" | "georgian"; // 輸入框轉寫鍵盤：打英文即時對照成該文字（希臘/假名/希伯來內建；其餘字母系走 useScriptKeyboard）
+  keyboard?: "greek" | "kana" | "hebrew" | "cyrillic" | "coptic" | "arabic" | "syriac" | "armenian" | "georgian" | "devanagari" | "geez" | "tibetan"; // 轉寫鍵盤：希臘/假名/希伯來內建；字母系走 useScriptKeyboard；abugida(天城體/吉茲/藏文)走 useAbugidaKeyboard
   romanizations?: Romanization[]; // 可切換的羅馬字系統（台語：教羅 POJ ↔ 台羅 TL；客語：白話字 ↔ 客拼）；第 0 筆為預設
   systemPrompt: string;    // 教練人設 + 教學法 + 結構化輸出規則
   personas?: Persona[];    // 同一位教練的多種人格（聊天時自動輪替）
@@ -837,6 +837,7 @@ const COACHES: Coach[] = [
     accent: "古典吉茲文（Ethiopic，衣索比亞正教）",
     blurb: "帶你從吉茲音節文字讀起、精讀以諾書、禧年書與衣索比亞正教文獻的老師。",
     voiceless: true,
+    keyboard: "geez",
     systemPrompt: `You are **Yared（ያሬድ）**，一位**古典吉茲文（Gəʿəz／Classical Ethiopic）**教師——衣索比亞與厄利垂亞正教的禮儀與經典語言，屬閃語族，用**吉茲音節文字（fidäl，abugida）**書寫。你教一位母語繁體中文、做宗教研究的學生。
 
 關於學生（很重要）：
@@ -1216,6 +1217,7 @@ const COACHES: Coach[] = [
     accent: "古典梵文（天城體；吠陀與佛教）",
     blurb: "帶你從天城體與 IAST 讀起、精讀吠陀、奧義書與大乘佛典的梵文老師。",
     voiceless: true,
+    keyboard: "devanagari",
     systemPrompt: `You are **Pāṇini（पाणिनि，梵文文法之祖）**，一位**梵文（Sanskrit）**教師——印度教與大乘佛教的經典語言，印歐語印度-雅利安支，用**天城體（Devanāgarī）**書寫（學界並用 IAST 拉丁轉寫）。你教一位母語繁體中文、做宗教研究的學生。
 
 關於學生（很重要）：
@@ -1290,6 +1292,7 @@ const COACHES: Coach[] = [
     accent: "古典藏文（藏傳佛教大藏經）",
     blurb: "帶你從藏文字母與 Wylie 轉寫讀起、精讀甘珠爾／丹珠爾的古典藏文老師。",
     voiceless: true,
+    keyboard: "tibetan",
     systemPrompt: `You are **Thonmi Sambhota（吞彌‧桑布扎，藏文字母創制者）**，一位**古典／文言藏文（Classical Literary Tibetan）**教師——藏傳佛教大藏經的語言，用**藏文字母（Uchen 有頭字）**書寫。你教一位母語繁體中文、做宗教研究的學生。
 
 關於學生（很重要）：
@@ -1327,6 +1330,7 @@ const COACHES: Coach[] = [
     accent: "半摩揭陀俗語（耆那教聖典）",
     blurb: "帶你以轉寫讀起、精讀耆那教《阿含經》(Āgama) 的半摩揭陀俗語老師。",
     voiceless: true,
+    keyboard: "devanagari",
     systemPrompt: `You are **Sudharma（蘇達摩，耆那教祖師之一）**，一位**半摩揭陀俗語（Ardhamāgadhī Prākrit）**教師——耆那教（Jainism）白衣派聖典的語言，中古印度-雅利安「俗語」(Prākrit) 的一支，傳統用天城體或其變體書寫（本教練以轉寫並行）。你教一位母語繁體中文、做宗教研究的學生。
 
 關於學生（很重要）：

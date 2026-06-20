@@ -339,6 +339,7 @@ import { useGreekKeyboard } from "~/composables/useGreekKeyboard";
 import { useKanaKeyboard } from "~/composables/useKanaKeyboard";
 import { useHebrewKeyboard } from "~/composables/useHebrewKeyboard";
 import { getScriptKeyboard } from "~/composables/useScriptKeyboard";
+import { getAbugidaKeyboard } from "~/composables/useAbugidaKeyboard";
 
 definePageMeta({ middleware: "coach-auth" });
 
@@ -381,8 +382,8 @@ const inputEl = ref<HTMLTextAreaElement | null>(null);
 const greekKb = computed(() => coach.value?.keyboard === "greek");
 const kanaKb = computed(() => coach.value?.keyboard === "kana");
 const hebrewKb = computed(() => coach.value?.keyboard === "hebrew");
-// 其餘字母系文字（西里爾/科普特/阿拉伯/敘利亞/亞美尼亞/喬治亞）走資料驅動的通用鍵盤
-const scriptKb = computed(() => getScriptKeyboard(coach.value?.keyboard));
+// 其餘文字：字母系走無狀態通用鍵盤；abugida（天城體/吉茲/藏文）走有狀態重轉寫鍵盤
+const scriptKb = computed(() => getScriptKeyboard(coach.value?.keyboard) || getAbugidaKeyboard(coach.value?.keyboard));
 const anyKb = computed(() => greekKb.value || kanaKb.value || hebrewKb.value || !!scriptKb.value);
 const kbRtl = computed(() => hebrewKb.value || !!scriptKb.value?.rtl);
 const kbOn = ref(true); // 預設開啟（系統 IME 組字時 kana 會自動讓行）
@@ -510,6 +511,7 @@ async function send() {
   speech.stopListening();
   input.value = "";
   kana.reset();
+  scriptKb.value?.reset?.(); // 清掉 abugida 的逐鍵緩衝（天城體/吉茲/藏文）
   messages.value.push({ role: "user", content: text, corrections: [] });
   scrollDown();
   sending.value = true;
