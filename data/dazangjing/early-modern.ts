@@ -56,9 +56,9 @@ export const EARLY_MODERN_ERA: DazangEra = {
   name_en: 'Discipline Pitaka',
   glyph: '律',
   genres: '會議‧信條‧法典',
-  summary: '近代基督教大藏經之律藏，收近代大公會議決議、新教各派信條與教會章程，及新興宗教與啟蒙世俗政權的宗教法度。宗教改革使基督教分裂為眾多宗派，各以信條界定信仰、以章程規範體制；天主教則以特利騰大公會議重整教規回應改革；啟蒙時代更生出政教關係的世俗立法。',
+  summary: '近代基督教大藏經之律藏，收近代大公會議決議、新教各派信條與教會章程，及新興宗教與啟蒙世俗政權的宗教法度。宗教改革使基督教分裂為眾多宗派，各以信條界定信仰、以章程規範體制；天主教則以脫利騰大公會議重整教規回應改革；啟蒙時代更生出政教關係的世俗立法。',
   zheng: {
-    summary: '正經部收近代天主教大公會議與教廷法度、新教各派信條，及各宗派教會治理章程。特利騰大公會議奠定反改革時代的天主教規制，新教則以奧斯堡、西敏等信條確立各自正統，教會章程則規範長老、公理、衛理諸制的運作。',
+    summary: '正經部收近代天主教大公會議與教廷法度、新教各派信條，及各宗派教會治理章程。脫利騰大公會議奠定反改革時代的天主教規制，新教則以奧斯堡、西敏等信條確立各自正統，教會章程則規範長老、公理、衛理諸制的運作。',
     divisions: [
       {
         key: 'gonghui',
@@ -66,7 +66,7 @@ export const EARLY_MODERN_ERA: DazangEra = {
         label_en: 'Councils and the Holy See',
         desc: '反改革時代天主教的會議決議與教廷法度。',
         works: [
-          { title_zh: '特利騰大公會議文獻', title_orig: 'Canones et Decreta Concilii Tridentini', author: '特利騰大公會議', era: '1545-1563', place: '特利騰(特倫托)', language: '拉丁文', intro: '天主教為回應宗教改革而召開的大公會議，斷續歷時十八年。會議重申聖傳與聖經並重、七件聖事、煉獄與善功等教義，駁斥新教主張，並整頓神職紀律、設立修院制度。其決議奠定此後四百年天主教信仰與規制的基礎，開啟反改革(天主教改革)時代，是近代天主教最關鍵的會議。', link: '/creeds' },
+          { title_zh: '脫利騰大公會議文獻', title_orig: 'Canones et Decreta Concilii Tridentini', author: '脫利騰大公會議', era: '1545-1563', place: '脫利騰', language: '拉丁文', intro: '天主教為回應宗教改革而召開的大公會議，斷續歷時十八年。會議重申聖傳與聖經並重、七件聖事、煉獄與善功等教義，駁斥新教主張，並整頓神職紀律、設立修院制度。其決議奠定此後四百年天主教信仰與規制的基礎，開啟反改革(天主教改革)時代，是近代天主教最關鍵的會議。', link: '/creeds' },
           { title_zh: '梵蒂岡第一屆大公會議文獻', title_orig: 'Constitutiones Dogmaticae Concilii Vaticani', author: '梵蒂岡第一屆大公會議', era: '1869-1870', place: '羅馬', language: '拉丁文', intro: '教宗庇護九世召開的大公會議，1869 年開議，因普法戰爭爆發於 1870 年中斷。會議通過《信仰憲章》闡明信仰與理性關係，並通過《永恆牧者》憲章，正式定斷教宗於信仰道德事務上「從寶座發言」時的不謬權。教宗無謬論引發部分天主教徒分立出舊天主教會，是近代天主教教權發展的關鍵里程碑。', link: '/creeds' },
           { title_zh: '禁書目錄', title_orig: 'Index Librorum Prohibitorum', author: '羅馬教廷', era: '1559首版', place: '羅馬', language: '拉丁文', intro: '羅馬教廷頒布的禁讀書籍清單，1559 年由教宗保祿四世首度公布，後迭經增訂。旨在保護信徒免受異端與有害思想侵擾，列入大量新教著作、哲學與科學作品。反映反改革時代教會對思想與出版的管控，亦折射近代思想與教權的張力，至 1966 年方廢止。' }
         ]
@@ -218,7 +218,7 @@ export const EARLY_MODERN_ERA: DazangEra = {
           { title_zh: '六十七條結論', title_orig: 'Schlussreden', author: '慈運理', era: '一五二三', place: '瑞士‧蘇黎世', language: '德文', intro: '慈運理為蘇黎世公開辯論所擬的六十七條提綱，系統陳述其改革主張：唯獨基督為救恩之本、福音不靠教會權威而自證、否定彌撒為獻祭、反對聖徒崇拜與修道誓願。此文確立瑞士德語區改革的神學方向，慈運理的聖餐象徵論與路德的真實臨在論分歧，後於馬爾堡會談中公開,成為新教內部長期爭議之源。' },
           { title_zh: '基督教要義', title_orig: 'Institutio Christianae religionis', author: '約翰‧加爾文', era: '一五三六至一五五九', place: '瑞士‧日內瓦', language: '拉丁文', intro: '加爾文畢生增訂的新教神學鉅著，由初版六章擴至終版四卷八十章，依「認識上帝、認識救主、領受恩典、外在恩具」架構，涵蓋神論、基督論、救恩論、教會論與聖禮。書中系統闡發預定揀選、唯獨恩典與聖經權威，文筆莊嚴邏輯縝密。此書是改革宗傳統最權威的教義總綱，影響長老會、歸正宗及整個加爾文主義世界。' }
         ,
-          { title_zh: '特倫托會議議事錄附解毒劑', title_orig: 'Acta Synodi Tridentinae cum Antidoto', author: '加爾文（Jean Calvin）', era: '1547', place: '瑞士日內瓦', language: '拉丁文', intro: '加爾文於特倫托大公會議第一期（1545–1547）結束後，逐條引錄議事決議並附以反駁——即所謂「解毒劑」（Antidotum）。全書針對天主教反宗教改革所確立的稱義論、聖禮觀、傳統與聖經關係等核心教義，從改革宗立場作系統性護教駁論，是十六世紀新教與天主教神學論爭最重要的原典文獻之一，充分體現改革宗正統建構期的神學論辯風格。' }
+          { title_zh: '脫利騰會議議事錄附解毒劑', title_orig: 'Acta Synodi Tridentinae cum Antidoto', author: '加爾文（Jean Calvin）', era: '1547', place: '瑞士日內瓦', language: '拉丁文', intro: '加爾文於脫利騰大公會議第一期（1545–1547）結束後，逐條引錄議事決議並附以反駁——即所謂「解毒劑」（Antidotum）。全書針對天主教反宗教改革所確立的稱義論、聖禮觀、傳統與聖經關係等核心教義，從改革宗立場作系統性護教駁論，是十六世紀新教與天主教神學論爭最重要的原典文獻之一，充分體現改革宗正統建構期的神學論辯風格。' }
         ,
           { title_zh: '論教宗哈德良提案之審議建言', title_orig: 'Suggestio deliberandi super propositione Hadriani Nerobergae facta', author: '慈運理（Ulrich Zwingli, 1484–1531）', era: '1522年11月', place: '蘇黎世（Zürich）', language: '拉丁文', intro: '瑞士改教家慈運理一五二二年匿名所撰的論爭性建言。針對教宗哈德良六世於紐倫堡帝國會議向德意志諸侯提出、欲鎮壓路德運動之提案，作者以「兼顧基督公共福祉與德意志自由」之姿向諸侯陳辭，主張不應屈從羅馬壓制，應審慎權衡而捍衛福音與德意志之自由。屬宗教改革早期反教廷權柄的護教論爭文獻，是理解慈運理政教立場的重要原典。' },
           { title_zh: '主之言論：在我父家裏有許多住處（約翰福音第十四章釋義）', title_orig: 'Tractatio verborum Domini, in domo Patris mei mansiones multae sunt', author: '布靈格（Heinrich Bullinger, 1504–1575）', era: '1562', place: '蘇黎世（Zürich）', language: '拉丁文', intro: '蘇黎世改革宗領袖、慈運理繼任者布靈格之著作，據《約翰福音》第十四章「在我父家裏有許多住處」逐節釋義，論證信徒得救之盼望確鑿無疑，並闡明基督升天所往、被選者所歸之天乃在至高之處的實在所在。本書承續聖餐論爭脈絡，藉「右坐天父」之經文駁斥路德派「基督身體無所不在」（ubiquity）之說，為宗教改革時期改革宗釋經與系統教義之代表作。' },
@@ -279,9 +279,9 @@ export const EARLY_MODERN_ERA: DazangEra = {
           { title_zh: '神學論點彙編', title_orig: 'Compendium Locorum Theologicorum', author: '萊昂哈德‧胡特(Leonhard Hutter)', era: '1610', place: 'Wittenberg', language: '拉丁文', intro: '萊昂哈德‧胡特(1563–1616)著，宗教改革後路德宗正統派的代表作。以主題方式(loci theologici)系統彙編新教正統神學論點與教父見證，涵蓋上帝論、基督論、拯救論等核心教義。透過聖經與教父文獻的逐主題辯證，確立宗教改革後第一代正統神學的護教立場，深刻影響17–18世紀新教神學教育與體系建制。1609年被普魯士令指定為薩克遜三所公學(Fürstenschulen)的標準教材。' },
           { title_zh: '基督教和諧書', title_orig: 'Libri Christianae Concordiae', author: 'Leonhard Hutter（萊昂哈德‧胡特）', era: '1608', place: 'Wittenberg（威騰堡）', language: '拉丁文', intro: '萊昂哈德‧胡特著。威騰堡路德宗正統神學家所作的護教兼教義和諧論文。將新教改革的多家學說（路德、慈運理、加爾文等）的神學主張納入統一框架，試圖消除新教內部神學分歧。成為十七世紀路德宗正統神學的重要典籍，代表近代宗教改革後正統神學運動之護教精神，對後世新教教義綜合具有深遠影響。' },
           { title_zh: '加爾文主義者猶太化論', title_orig: 'Calvinus judaïzans, hoc est Judaïcae glossae et corruptelae, quibus Johannes Calvinus illustrissima Scripturae Sacrae loca et testimonia de gloriosa Trinitate corrumpere non exhorruit. Addita est corruptelarum confutatio per Aegidium Hunnium', author: '埃吉迪烏斯‧亨尼烏斯（Aegidius Hunnius）', era: '1595', place: '維騰堡（Witebergae）', language: '拉丁文', intro: '亨尼烏斯於維騰堡發表的系統神學駁論著作。針對加爾文預定論及其聖經詮釋提出激進批評，聲稱改革宗教義背離早期教會傳統，傾向於猶太拉比思想。本書特別攻擊加爾文對三位一體論的詮釋，指其採納猶太釋義傳統而扭曲聖經。作為16世紀末新教內部論爭的重要文獻，體現路德宗正統對加爾文主義的神學防衛，涵蓋預定論、恩典論、聖禮論與三位一體論等核心教義差異。' },
-          { title_zh: '特倫特會議考辨', title_orig: 'Examinis Concilii Tridentini', author: '馬丁·凱姆尼茨', era: '1565–1573', place: 'Frankfurt', language: '拉丁文', intro: '馬丁·凱姆尼茨所著四卷本系統考辨著作，逐條檢視特倫特公會議（1545–1563）之教令，以路德宗正統立場反駁天主教反宗教改革神學。本書為新教正統時期之重要護教與系統神學文獻，確立路德教會對聖體聖事、恩典論、因信稱義等要點之教義立場，在近代西方基督教思想與教會論戰中佔重要地位。' },
+          { title_zh: '脫利騰會議考辨', title_orig: 'Examinis Concilii Tridentini', author: '馬丁·凱姆尼茨', era: '1565–1573', place: 'Frankfurt', language: '拉丁文', intro: '馬丁·凱姆尼茨所著四卷本系統考辨著作，逐條檢視脫利騰公會議（1545–1563）之教令，以路德宗正統立場反駁天主教反宗教改革神學。本書為新教正統時期之重要護教與系統神學文獻，確立路德教會對聖體聖事、恩典論、因信稱義等要點之教義立場，在近代西方基督教思想與教會論戰中佔重要地位。' },
           { title_zh: '神人之約的經濟', title_orig: 'De oeconomia foederum Dei cum hominibus libri quatuor', author: 'Herman Witsius（威特西烏斯）', era: '1677', place: 'Leeuwarden', language: '拉丁文', intro: '荷蘭改革宗神學家威特西烏斯的重要系統神學著作，以「約」(covenant)為核心框架，闡述從舊約到新約神與人的盟約關係，分四卷論述護教論、救贖論與實踐神學。此書奠定了近代改革宗盟約神學傳統的經典地位，對後世英美清教與改革宗正統產生深遠影響。盟約神學成為宗教改革後新教系統神學的重要支柱，聯繫聖經解釋與教義組織。' },
-          { title_zh: '特倫托公會議解剖——歷史與神學研究', title_orig: 'Concilii Tridentini anatome historico-theologica', author: 'Johann Heinrich Heidegger', era: '1672', place: '蘇黎世', language: '拉丁文', intro: '改革宗神學家海德格爾對特倫托大公會議(1545–1563)的系統解析。該卷為十七世紀新教對天主教反宗教改革的權威回應，深入檢視大公會議在聖傳、聖事、因信稱義等教義的決議，並展開護教辯論。海德格爾以歷史與神學雙軌分析馬里亞尼等天主教思想家的論述，代表改革宗正統(Reformed Orthodoxy)對特倫托的系統性批判。' },
+          { title_zh: '脫利騰公會議解剖——歷史與神學研究', title_orig: 'Concilii Tridentini anatome historico-theologica', author: 'Johann Heinrich Heidegger', era: '1672', place: '蘇黎世', language: '拉丁文', intro: '改革宗神學家海德格爾對脫利騰大公會議(1545–1563)的系統解析。該卷為十七世紀新教對天主教反宗教改革的權威回應，深入檢視大公會議在聖傳、聖事、因信稱義等教義的決議，並展開護教辯論。海德格爾以歷史與神學雙軌分析馬里亞尼等天主教思想家的論述，代表改革宗正統(Reformed Orthodoxy)對脫利騰的系統性批判。' },
           { title_zh: '神學精髓的精髓', title_orig: 'Medulla Medullae theologiae christianae', author: '約翰‧海因里希‧海德格爾（Johann Heinrich Heidegger）', era: '1697', place: '瑞士蘇黎世', language: '拉丁文', intro: '《神學精髓的精髓》由蘇黎世改革宗神學家海德格爾於一六九七年出版，是近代改革宗經院正統神學的集大成之作。全書採經院辯論體例，系統闡述改革宗的聖經觀、三一論、預定論、救恩論與教會論，並針對天主教、路德宗與其他異議立場逐一進行護教反駁。此書以簡潔而嚴密的拉丁文呈現改革宗信仰的理性架構，是十七世紀末歐洲改革宗神學教育的重要教科書，深刻影響後世日內瓦與普林斯頓等改革宗傳統。' },
           { title_zh: '布爾曼神學與神約經綸綜述', title_orig: 'Synopsis theologiae et speciatim oeconomiae Foederum Dei', author: '弗蘭西斯庫斯·布爾曼（Franciscus Burman / Frans Burman）', era: '1671', place: '烏得勒支（Utrecht', language: '拉丁文', intro: '布爾曼（1628–1679）為荷蘭改革宗神學家，1662年起任烏得勒支大學神學教授。本書乃其系統神學集大成之作，1671年於烏得勒支首版。核心論旨「神約經綸」（oeconomiae Foederum Dei）——即上帝透過聖約與人類聖恩互動的全景敘述——構成約翰·卡克思（Johannes Cocceius）聯邦神學的哲學基礎。全書以救贖史與神學經院哲學雙軌貫穿創造、墮落、救贖三軸線，嘗試調和笛卡爾理性主義與改革宗正統神學。拉丁文原著，在荷蘭與英語世界新教神學教育中傳播三世紀，代表改革宗聯邦神學與卡笛兒主義結合的典範之作。' },
           { title_zh: '精選神學諸論爭', title_orig: 'Selectarum disputationum theologicarum [pars prima]', author: '吉斯伯特·韋提烏斯', era: '1648', place: '烏特勒支', language: '拉丁文', intro: '荷蘭改革宗神學家韋提烏斯（1589–1676）所著。本作為其系統神學諸論爭之精選集，首卷成書於1648年。全書采取經院式論爭體例，逐一開展改革宗正統對宗教改革後期諸爭議之系統性辯護，涵蓋聖經論、救贖論、聖禮學、教會論等核心教義。代表17世紀中葉荷蘭改革宗神學之巔峰成就，與同時代新教正統及敬虔運動思想密切相關。' },
@@ -392,7 +392,7 @@ export const EARLY_MODERN_ERA: DazangEra = {
         desc: '近代新教殉道錄與天主教反改革聖徒傳記，記信仰者受難與成聖的見證。',
         works: [
           { title_zh: '殉道者之書', title_orig: 'Acts and Monuments', author: '約翰‧福克斯（John Foxe）', era: '1563', place: '倫敦', language: '英文', intro: '福克斯這部巨著俗稱「殉道者之書」，自早期教會殉道追溯至英格蘭瑪麗一世治下被焚的新教徒，以血淚交織的個案串起一部「真教會受逼迫」的通史。書中詳載審訊對話、火刑場景與臨終遺言，並配以木刻插圖，文字煽動而動人。它塑造了英語世界的新教認同與反羅馬情緒，數百年間僅次於聖經而廣為流傳，是理解英國宗教改革集體記憶的關鍵文本。' },
-          { title_zh: '反改革聖徒傳記', title_orig: 'Vitae Sanctorum / Acta Sanctorum', author: '波蘭定會（Bollandists，約翰‧博蘭德等）', era: '1643 起', place: '安特衛普', language: '拉丁文', intro: '此為耶穌會博蘭德學派啟動的浩大聖徒傳集成，按教會曆逐日蒐羅古今聖人事蹟。面對新教對聖徒崇拜的攻擊，編者一反中世紀傳奇的浮誇，力求考訂史源、辨偽存真，開創批判性聖傳學。其中收入特倫特會議後新封的反改革聖徒，如羅耀拉、沙勿略、加爾默羅會德蘭等，既見證天主教靈修的更新，也展示近代史料考證方法在教會史上的萌芽。' },
+          { title_zh: '反改革聖徒傳記', title_orig: 'Vitae Sanctorum / Acta Sanctorum', author: '波蘭定會（Bollandists，約翰‧博蘭德等）', era: '1643 起', place: '安特衛普', language: '拉丁文', intro: '此為耶穌會博蘭德學派啟動的浩大聖徒傳集成，按教會曆逐日蒐羅古今聖人事蹟。面對新教對聖徒崇拜的攻擊，編者一反中世紀傳奇的浮誇，力求考訂史源、辨偽存真，開創批判性聖傳學。其中收入脫利騰會議後新封的反改革聖徒，如羅耀拉、沙勿略、加爾默羅會德蘭等，既見證天主教靈修的更新，也展示近代史料考證方法在教會史上的萌芽。' },
           { title_zh: '近代殉道錄', title_orig: 'Martyrologium recentius', author: '佚名輯錄（天主教傳信部所傳）', era: '十七至十八世紀', place: '羅馬', language: '拉丁文', intro: '此錄彙集近代天主教在海外宣教與歐洲宗教衝突中殉難者的事蹟，以日本、越南、北美與英倫三島為重心。文中逐一記下殉道者姓名、會籍、受刑日期與方式，並附目擊者證詞與骸骨遺物去向，體例近於封聖程序的卷宗。它不僅是敬禮資料，更保存了宣教前線遭遇本地政權鎮壓的第一手線索，為近代教難史提供具體的人物與年代座標。' }
         ]
       },
@@ -643,7 +643,7 @@ export const EARLY_MODERN_ERA: DazangEra = {
   genres: '公禱‧彌撒‧聖詩集',
   summary: '收一五〇〇至一九〇〇年間基督宗教各傳統的崇拜禮文與聖樂典籍。正藏分新教禮儀、反改革禮儀、聖樂與聖詩集三部，呈現宗教改革後公禱書、彌撒經書與崇拜程序如何在不同教會中定型；外藏錄新興宗教與民間祕儀的儀軌，旁及共濟會等結社禮文。所收皆為塑造近代信眾敬拜生活的核心文本，藉以見禮儀如何承載教義、規範會眾、凝聚群體。',
   zheng: {
-    summary: '新教與天主教在宗教改革後各自整飭崇拜禮文，並以聖樂相輔。本部三分而觀其全：改教者重訂母語崇拜，特利騰會議統一羅馬禮，作曲家則以詩篇與受難曲將神學化為聲音。',
+    summary: '新教與天主教在宗教改革後各自整飭崇拜禮文，並以聖樂相輔。本部三分而觀其全：改教者重訂母語崇拜，脫利騰會議統一羅馬禮，作曲家則以詩篇與受難曲將神學化為聲音。',
     divisions: [
       {
         key: 'protestant_liturgy',
@@ -661,10 +661,10 @@ export const EARLY_MODERN_ERA: DazangEra = {
         key: 'counter_reformation_liturgy',
         label: '反改革禮儀部',
         label_en: 'Counter-Reformation Liturgy',
-        desc: '特利騰會議後羅馬天主教統一頒行的彌撒、日課與聖事禮典，確立四百年通行的特倫多禮。',
+        desc: '脫利騰會議後羅馬天主教統一頒行的彌撒、日課與聖事禮典，確立四百年通行的特倫多禮。',
         works: [
-          { title_zh: '羅馬彌撒經書', title_orig: 'Missale Romanum', author: '教宗庇護五世（Pius V）頒行', era: '一五七〇年', place: '羅馬', language: '拉丁文', intro: '特利騰會議授權、教宗庇護五世以《Quo primum》詔書頒行的羅馬天主教彌撒定本，統一了西方拉丁禮的彌撒舉行方式，史稱特倫多彌撒。經書詳載每日彌撒的禱文、經課、儀節與禮規，廢止諸多地方禮而立羅馬禮為通則。此本歷經數次小幅修訂沿用近四百年至一九六二年，是反改革時期天主教禮儀統一的核心成果，象徵教會面對新教挑戰的制度回應。' },
-          { title_zh: '羅馬日課經', title_orig: 'Breviarium Romanum', author: '教宗庇護五世（Pius V）頒行', era: '一五六八年', place: '羅馬', language: '拉丁文', intro: '特利騰改革後庇護五世頒行的天主教時辰祈禱定本，規範神職與修會每日七時辰的誦經、聖詠、讀經與禱文。日課以聖詠貫穿一週、配合教會年曆與聖人紀念，是神職人員的法定祈禱義務。此本整理繁雜的中世紀傳統,使全教會時辰祈禱趨於一致，與《羅馬彌撒經書》並為特倫多禮的兩大支柱，維繫了近代天主教靈修生活的節律與統一。' },
+          { title_zh: '羅馬彌撒經書', title_orig: 'Missale Romanum', author: '教宗庇護五世（Pius V）頒行', era: '一五七〇年', place: '羅馬', language: '拉丁文', intro: '脫利騰會議授權、教宗庇護五世以《Quo primum》詔書頒行的羅馬天主教彌撒定本，統一了西方拉丁禮的彌撒舉行方式，史稱特倫多彌撒。經書詳載每日彌撒的禱文、經課、儀節與禮規，廢止諸多地方禮而立羅馬禮為通則。此本歷經數次小幅修訂沿用近四百年至一九六二年，是反改革時期天主教禮儀統一的核心成果，象徵教會面對新教挑戰的制度回應。' },
+          { title_zh: '羅馬日課經', title_orig: 'Breviarium Romanum', author: '教宗庇護五世（Pius V）頒行', era: '一五六八年', place: '羅馬', language: '拉丁文', intro: '脫利騰改革後庇護五世頒行的天主教時辰祈禱定本，規範神職與修會每日七時辰的誦經、聖詠、讀經與禱文。日課以聖詠貫穿一週、配合教會年曆與聖人紀念，是神職人員的法定祈禱義務。此本整理繁雜的中世紀傳統,使全教會時辰祈禱趨於一致，與《羅馬彌撒經書》並為特倫多禮的兩大支柱，維繫了近代天主教靈修生活的節律與統一。' },
           { title_zh: '羅馬聖事禮典', title_orig: 'Rituale Romanum', author: '教宗保祿五世（Paul V）頒行', era: '一六一四年', place: '羅馬', language: '拉丁文', intro: '保祿五世頒行的天主教司鐸禮儀手冊，匯集彌撒與日課之外的各項聖事與祝福禮文，含洗禮、告解、病人傅油、婚配、葬禮、驅魔及各類降福。相較彌撒經書,此典更貼近堂區牧靈日常，為司鐸施行聖事提供統一範本。它補全了特倫多禮儀體系的最後一環，使天主教自生到死的禮儀照顧全面標準化，沿用至梵二前，影響近代天主教牧養實務甚鉅。' },
         ],
       },
