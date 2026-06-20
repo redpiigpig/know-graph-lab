@@ -14,12 +14,13 @@ const WINDOW = 12; // 保留最近 12 則進 context（更早的壓進 session.s
 export default defineEventHandler(async (event) => {
   const user = await requireAuth(event);
   const supabase = getAdminClient();
-  const { language, sessionId, message, usePaid, mode: reqMode } = (await readBody(event)) as {
+  const { language, sessionId, message, usePaid, mode: reqMode, romanization } = (await readBody(event)) as {
     language: string;
     sessionId?: string;
     message: string;
     usePaid?: boolean;
     mode?: string; // free / qa / scenario（新對話用）
+    romanization?: string; // 台語/客語：選用的羅馬字系統 key（教羅/台羅…）
   };
 
   if (!message?.trim()) throw createError({ statusCode: 400, message: "訊息不可為空" });
@@ -91,7 +92,16 @@ export default defineEventHandler(async (event) => {
         ? `【模式：情境角色扮演】你要和學生進行角色扮演。依學生訊息設定的情境，你扮演對方角色（店員／面試官／神職人員／對話者…），保持角色、推進情境，自然對話。仍即時溫和糾正學生的錯誤（放 corrections）。`
         : "";
 
+  // 羅馬字系統（台語/客語可切換教羅↔台羅）：注入所選系統的標音指示
+  let romanInstr = "";
+  if (coach.romanizations?.length) {
+    const chosen = coach.romanizations.find((r) => r.key === romanization) ?? coach.romanizations[0];
+    romanInstr = `【羅馬字系統】${chosen.instruction}`;
+  }
+
   const system = `${coach.systemPrompt}\n\n${
+    romanInstr ? romanInstr + "\n\n" : ""
+  }${
     modeInstr ? modeInstr + "\n\n" : ""
   }${
     persona && chatMode === "free" ? `【今日人格】${persona.label}：${persona.instruction}\n\n` : ""

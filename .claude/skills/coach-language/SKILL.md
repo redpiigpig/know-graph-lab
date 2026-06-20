@@ -15,7 +15,11 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 
 ---
 
-## 〇、語言一覽（7 語上線 · 全部定義在 `server/utils/lang-coaches.ts`）
+## 〇、語言一覽（**33 語上線** · 全部定義在 `server/utils/lang-coaches.ts`）
+
+> **2026-06-20 大擴充**：從 7 語擴到 **33 語**，新增 26 個宗教研究原典語言教練，並引入**語言分類**（`CATEGORIES`，8 大類，`coaches.get.ts` 一併回傳、`/coach` 選單依類分組）。下表為原 7 語細目；新增 26 語見表後「新增語言（8 大類）」。
+> - **分類 key**：`modern`(現代) / `classical-west`(古典西方) / `hebrew-aramaic`(希伯來與亞蘭) / `eastern-christian`(東方基督教) / `ancient-near-east`(古代近東) / `iran-islam`(古波斯與伊斯蘭) / `dharmic-eastasian`(印度佛教與東亞古典) / `taiwan`(臺灣本土)。
+> - **羅馬字切換**（`Coach.romanizations[]`，第 0 筆為預設）：台語 `nan`（教羅 POJ ↔ 台羅）、客語 `hak`（白話字 ↔ 客拼）。chat.vue 顯示切換鈕（存 localStorage `coach-roman-<lang>`）、`chat.post.ts` 把所選系統的 `instruction` 注入 system prompt。要加可切換羅馬字的語言＝在 coach 加 `romanizations`。
 
 | code | 教練 | 量表·預設 | 語音 | 鍵盤 | TTS | 題材重點（皆宗教研究取向） |
 |---|---|---|---|---|---|---|
@@ -30,6 +34,42 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 - **古典語三本柱（grc/la/hbo）共同政策**：`enabled:true`、`levelScale=ANCIENT(["入門","初級","中級","進階"])`、`defaultLevel="入門"`、`voiceless:true`（無 STT，chat 不顯示麥克風/自動朗讀）；人設一律「神學院版、非古典/非現代、初學者、逐字 parse、大量夾繁中」。**勿改回古典定向**（見 [[feedback_language_coach_religious_studies]]）。
 - **德 `de`(Lukas🍺) / 法 `fr`(Camille🥐) 已於 2026-06-04 全面上線**（`enabled:true`）：A1 初學定向，人設明寫「打基礎＝單字×文法×輸入」、名詞一律連冠詞/性別教、隨程度再轉宗教題材；活語言有 STT/TTS、不 voiceless、無轉寫鍵盤（拉丁字母直打）。`review.vue` 的 `THEME_POOLS`/`TTS_LANG` 已補 de/fr（A1 高頻字＋日常，後段帶宗教詞）。
 - 每語言 4–5 個 `personas`（聊天輪替）＋ `smalltalkTopics`/`scenarios`/`qaTopics`（首頁今日推薦 + chat 開場用），古典語皆為「精讀／文法／抄經／信經」類初學題。
+
+### 新增語言（2026-06-20，26 語，依 8 大類）
+
+> 古語言一律 `ANCIENT` 量表·`入門`·`voiceless`（古文字以「轉寫＋逐字 parse＋大量繁中」教學）。`es`/`ar` 非 voiceless（有 TTS）。`arc` 沿用 `hebrew` 鍵盤（方體字共用）；`att` 沿用 `greek` 鍵盤。新增轉寫鍵盤（西里爾/科普特/阿拉伯/敘利亞/天城體/藏文…）為**後續待辦**，目前其餘新語先靠貼上/AI 教字。
+
+| 類 | code · 教練 | langLabel | 題材重點 |
+|---|---|---|---|
+| 現代 | `es` Lucía 🌹 | 西班牙文 | CEFR·A1，有 TTS；天主教/聖週/聖經西譯 |
+| 古典西方 | `att` Theano 🏺 | 古典希臘文 | **Attic/荷馬（非 Koine）**：荷馬‧赫西俄德‧悲劇‧柏拉圖‧前蘇格拉底‧希臘神話與祕儀；greek 鍵盤 |
+| 古典西方 | `chu` Kyrill ⛪ | 教會斯拉夫文 | **新教會斯拉夫文 Synodal（非現代俄文）**：福音書/詩篇/事奉聖禮；東正教斯拉夫系 |
+| 希伯來與亞蘭 | `arc` Ezra 📜 | 亞蘭文 | **聖經亞蘭文＋塔古姆（方體字，猶太傳統）**：但以理/以斯拉/Onkelos；hebrew 鍵盤 |
+| 希伯來與亞蘭 | `mid` Yahya 💧 | 曼達文 | 曼達教諾斯底經典《金茲拉巴》；東亞蘭語方言 |
+| 東方基督教 | `syr` Ephrem ✝️ | 古典敘利亞文 | **Estrangela 為主，東(Madnḥāyā/景教)/西(Serṭo)兩傳統並述**：Peshitta/聖以法蓮 |
+| 東方基督教 | `cop` Shenoute ☧ | 科普特文 | **薩希德方言（Nag Hammadi/聖經）**；科普特字母；連 /gnostic |
+| 東方基督教 | `gez` Yared 🎼 | 吉茲文 | 衣索比亞正教；fidäl 音節文字；唯存《以諾書》《禧年書》 |
+| 東方基督教 | `hy` Mesrop ✍️ | 古典亞美尼亞文 | Grabar；「譯本之后」聖經；保存失傳教父譯本 |
+| 東方基督教 | `ka` Nino ✝️ | 古典喬治亞文 | 古喬治亞文聖經；多人稱動詞；Asomtavruli |
+| 古代近東 | `akk` Sîn-lēqi 𒀭 | 阿卡德文 | **楔形文字（亞述-巴比倫兩方言）**：埃努瑪埃利什/吉爾伽美什；轉寫教學 |
+| 古代近東 | `uga` Ilimilku 🐂 | 烏加列文 | **青銅時代迦南宗教**：巴力史詩；對照希伯來；轉寫教學 |
+| 古代近東 | `egy` Thoth 𓅓 | 古埃及文 | 中古埃及語·聖書體；亡靈書/阿吞讚歌；轉寫＋Gardiner |
+| 古代近東 | `phn` Kadmos ⚓ | 腓尼基-布匿文 | **鐵器時代迦南/字母之母**：Baal/Tanit；對照希伯來 |
+| 古波斯與伊斯蘭 | `peo` Darayavush 🏛️ | 古波斯文 | 阿契美尼德楔形；貝希斯敦銘文/阿胡拉馬茲達 |
+| 古波斯與伊斯蘭 | `ae` Zarathushtra 🔥 | 阿維斯陀文 | 祆教聖典《迦薩》《阿維斯陀》；含巴列維 Zand 註釋 |
+| 古波斯與伊斯蘭 | `ar` Sibawayh ☪️ | 古典阿拉伯文 | **古典/古蘭 فصحى**（有 TTS）：古蘭/聖訓/kalām/falsafa/基督教阿拉伯文 |
+| 印度佛教東亞 | `sa` Panini 🕉️ | 梵文 | 天城體＋IAST；吠陀/奧義書/大乘佛典梵本（梵漢對照） |
+| 印度佛教東亞 | `pi` Buddhaghosa ☸️ | 巴利文 | 羅馬轉寫；上座部三藏/法句經（南北傳對照） |
+| 印度佛教東亞 | `bo` Thonmi ☸️ | 藏文 | 藏文字母＋Wylie；甘珠爾/丹珠爾（梵藏漢對照） |
+| 印度佛教東亞 | `pra` Sudharma 🪷 | 半摩揭陀俗語 | 耆那教《阿含經》；梵→俗音變；對照梵巴 |
+| 印度佛教東亞 | `lzh` 崇文 📜 | 文言文（古典漢文） | 漢譯佛典/道藏/儒家；虛詞/句讀/訓詁/通假（母語讀者當研究語言精讀） |
+| 臺灣本土 | `nan` 金水伯 🛕 | 台語 | 漢字＋羅馬字（**教羅↔台羅可切**）；廟宇民間信仰/巴克禮聖經 |
+| 臺灣本土 | `hak` 阿源 🏞️ | 客語 | 四縣腔，漢字＋羅馬字（**白話字↔客拼可切**）；伯公/客語聖經 |
+| 臺灣本土 | `ami` Kacaw 🌊 | 阿美語 | 南島語·族語書寫系統；焦點系統；豐年祭/口傳神話/長老教會聖經 |
+| 臺灣本土 | `tay` Yumin ⛰️ | 泰雅語 | 南島語·族語書寫系統；gaga 規範/祖靈 utux/長老教會聖經 |
+
+- **迦南宗教**併入 `uga`（青銅時代）＋`phn`（鐵器時代），未另開「迦南文」教練。**亞述/巴比倫**＝`akk` 兩方言，未拆。
+- 所有新語的 `THEME_POOLS`（review.vue）與 `TTS`/`TTS_LANG`（12 個前端檔）已補（voiceless 的 TTS 為就近 BCP-47 名義值，實際不朗讀）。
 
 ---
 
@@ -172,11 +212,11 @@ chat / profile(get,put) / progress(get,put) / activity / dashboard / usage / ass
 3. **Zeabur Variables（線上專用，本機 .env 不放）**：`NVIDIA_API_Key_OLINE_ONLY`（主引擎，無限量）+ `Gemini_API_Key_OLINE_ONLY`（fallback；**YouTube 沉浸必須**，否則只能用貼上文章）。⚠️ 變數名稱**區分大小寫**，現支援 `Gemini_API_Key_OLINE_ONLY` 或全大寫 `GEMINI_API_KEY_OLINE_ONLY` 兩種拼法。`_1..4` 為線下批次腳本專用、不需放 Zeabur。付費 key 已棄用。
 4. **（可選）自架 LanguageTool（寫作文法檢查，零 AI）**：Zeabur 新增一個服務，Docker image `erikvl87/languagetool`（埠 8010，建議設 `Java_Xmx=512m`），部署後把它的內網 URL（如 `http://languagetool.zeabur.internal:8010`）填到變數 `LANGUAGETOOL_URL`。沒設也不影響其他功能，只是寫作頁的「文法檢查」按鈕會提示未啟用。本機測試：`docker run -d -p 8010:8010 erikvl87/languagetool` 後設 `LANGUAGETOOL_URL=http://localhost:8010`。
 
-## 待辦（次要）
+## 功能藍圖（次要增強，2026-06-05 競品調查後，已做打✓）
 
-Live2D、雲端 TTS、速率限制、MFA、用量異常 email 通知、%C2 換真實 C2 wordlist。
+> **已收斂（2026-06-20）**：C2 wordlist 需求已由共用字庫達成（en `lang_vocab_bank` 30000 字，含「C2 罕用精準字」頻率帶 rank>15000，全數 glossed＋themed）；Live2D／雲端 TTS／速率限制／MFA／用量異常 email 通知＝個人自用站不需要，已從待辦移除。
 
-**功能藍圖（2026-06-05 競品調查後，已做打✓）**：
+**藍圖細項**：
 - ✓ FSRS 取代 SM-2、✓ 點讀閱讀器（known/learning 著色+建卡）、✓ 發音跟讀 shadowing、✓ 克漏字 cloze、✓ 寫作逐句批改、✓ 英文內容策展化。
 - ☐ **影片字幕逐句精讀**（YouTube 抓字幕逐句切→逐句播放+點字查+跟讀+存句；目前只記觀看時長）。
 - ☐ **語塊/搭配詞（collocation）學習**（寫作批改/沉浸抽詞時一併抽固定搭配，獨立成一類詞庫；研究者寫作很需要）。

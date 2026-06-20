@@ -107,6 +107,18 @@
         <div class="border-t border-gray-100 bg-white px-3 py-2.5 flex-shrink-0">
           <div v-if="speechErr" class="text-[11px] text-rose-500 mb-1.5 px-1">{{ speechErr }}</div>
 
+          <!-- 羅馬字系統切換（台語：教羅↔台羅；客語：白話字↔客拼） -->
+          <div v-if="romanList.length" class="flex items-center flex-wrap gap-2 mb-2 px-0.5">
+            <span class="text-[11px] text-gray-400">羅馬字：</span>
+            <button
+              v-for="r in romanList"
+              :key="r.key"
+              @click="setRoman(r.key)"
+              class="text-xs px-2.5 py-1 rounded-lg border transition"
+              :class="roman === r.key ? 'bg-teal-50 border-teal-300 text-teal-800' : 'bg-white border-gray-200 text-gray-500'"
+            >{{ r.label }}</button>
+          </div>
+
           <!-- 轉寫鍵盤工具列（希臘文 / 日文假名 / 希伯來文） -->
           <div v-if="greekKb || kanaKb || hebrewKb" class="flex items-center flex-wrap gap-2 mb-2 px-0.5">
             <button
@@ -344,6 +356,14 @@ const hebrewKb = computed(() => coach.value?.keyboard === "hebrew");
 const kbOn = ref(true); // 預設開啟（系統 IME 組字時 kana 會自動讓行）
 const showKbHelp = ref(false);
 
+// 羅馬字系統切換（台語：教羅 POJ ↔ 台羅；客語：白話字 ↔ 客拼）；存 localStorage
+const romanList = computed<any[]>(() => coach.value?.romanizations || []);
+const roman = ref<string>("");
+function setRoman(key: string) {
+  roman.value = key;
+  localStorage.setItem(`coach-roman-${lang.value}`, key);
+}
+
 function setInput(v: string, cursor: number) {
   input.value = v;
   nextTick(() => inputEl.value?.setSelectionRange(cursor, cursor));
@@ -408,6 +428,11 @@ async function scrollDown() {
 async function loadCoachMeta() {
   const { coaches } = await $fetch<{ coaches: any[] }>("/api/lang/coaches");
   coach.value = coaches.find((c) => c.language === lang.value);
+  // 初始化羅馬字系統：localStorage 優先，否則用第一個（預設）
+  if (romanList.value.length) {
+    const saved = localStorage.getItem(`coach-roman-${lang.value}`);
+    roman.value = saved && romanList.value.some((r) => r.key === saved) ? saved : romanList.value[0].key;
+  }
 }
 
 async function loadSessions() {
@@ -451,7 +476,7 @@ async function send() {
   try {
     const res = await aiFetch<any>("/api/lang/chat", {
       method: "POST",
-      body: { language: lang.value, sessionId: sessionId.value, message: text, mode: mode.value },
+      body: { language: lang.value, sessionId: sessionId.value, message: text, mode: mode.value, romanization: roman.value || undefined },
     });
     sessionId.value = res.sessionId;
     if (res.persona) persona.value = res.persona;

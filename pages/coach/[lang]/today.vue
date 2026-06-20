@@ -138,7 +138,7 @@ const speech = useSpeech();
 const sttSupported = speech.supported;
 const listening = speech.listening;
 const interim = speech.interim;
-const TTS: Record<string, string> = { en: "en-US", de: "de-DE", fr: "fr-FR", ja: "ja-JP", grc: "el-GR", la: "it-IT", hbo: "he-IL" };
+const TTS: Record<string, string> = { en: "en-US", de: "de-DE", fr: "fr-FR", es: "es-ES", ja: "ja-JP", grc: "el-GR", att: "el-GR", la: "it-IT", hbo: "he-IL", arc: "he-IL", chu: "ru-RU", syr: "ar-SY", cop: "ar-EG", gez: "am-ET", hy: "hy-AM", ka: "ka-GE", ar: "ar-SA", akk: "ar-IQ", uga: "ar-SY", egy: "ar-EG", phn: "ar-LB", peo: "fa-IR", ae: "fa-IR", mid: "ar-IQ", sa: "hi-IN", pi: "hi-IN", pra: "hi-IN", bo: "bo", lzh: "zh-TW", nan: "zh-TW", hak: "zh-TW", ami: "zh-TW", tay: "zh-TW" };
 
 const sections = [
   { kind: "reading", label: "今日閱讀（5）", icon: "📖" },
