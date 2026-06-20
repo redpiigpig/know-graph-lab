@@ -107,24 +107,82 @@ const TB_CONS: Record<string, string> = {
 const TB_VOWEL: Record<string, string> = { i: "ི", u: "ུ", e: "ེ", o: "ོ" }; // a = 固有母音
 const TB_KEYS = byLenDesc(TB_CONS);
 const TB_SUBJOIN_OFFSET = 0x50; // 全形子音 U+0F40.. → 後加（疊寫）子音 U+0F90..
+const tbSubjoin = (ch: string) => String.fromCodePoint(ch.codePointAt(0)! + TB_SUBJOIN_OFFSET);
 
-export function translitTibetan(roman: string): string {
+// 藏文正字疊寫規則（自動找字根 ming gzhi）
+const TB_PREFIX = new Set(["g", "d", "b", "m", "'"]);            // 前加字 sngon 'jug
+const TB_SUPER: Record<string, Set<string>> = {                  // 上加字 mgo can → 可帶的字根
+  r: new Set(["k", "g", "ng", "j", "ny", "t", "d", "n", "b", "m", "ts", "dz"]),
+  l: new Set(["k", "g", "ng", "c", "j", "t", "d", "p", "b", "h"]),
+  s: new Set(["k", "g", "ng", "ny", "t", "d", "n", "p", "b", "m", "ts"]),
+};
+const TB_SUB: Record<string, Set<string>> = {                    // 下加字 'dogs can → 可附的字根
+  y: new Set(["k", "kh", "g", "p", "ph", "b", "m"]),
+  r: new Set(["k", "kh", "g", "t", "th", "d", "n", "p", "ph", "b", "m", "s", "h"]),
+  l: new Set(["k", "g", "b", "r", "s", "z"]),
+  w: new Set(["k", "kh", "g", "c", "ny", "t", "d", "ts", "tsh", "zh", "z", "r", "l", "sh", "s", "h"]),
+};
+interface TbOnset { prefix?: string; super?: string; root: string; sub?: string; }
+function parseTbOnset(cs: string[]): TbOnset {
+  if (cs.length === 1) return { root: cs[0] };
+  if (cs.length === 2) {
+    const [a, b] = cs;
+    if (TB_SUB[b]?.has(a)) return { root: a, sub: b };       // 字根 + 下加字（如 ky, gr）
+    if (TB_SUPER[a]?.has(b)) return { super: a, root: b };   // 上加字 + 字根（如 rk, sg）
+    return { prefix: a, root: b };                            // 前加字 + 字根（如 bg）
+  }
+  // 3+ 個：有前加字就剝掉再遞迴；否則 上加+字根+下加
+  const [a, ...rest] = cs;
+  if (TB_PREFIX.has(a)) return { prefix: a, ...parseTbOnset(rest) };
+  const [s, r, sub] = cs;
+  return { super: s, root: r, sub };
+}
+function renderTbOnset(cs: string[]): string {
+  if (!cs.length) return "";
+  const p = parseTbOnset(cs);
+  let out = "";
+  if (p.prefix) out += TB_CONS[p.prefix];
+  out += p.super ? TB_CONS[p.super] + tbSubjoin(TB_CONS[p.root]) : TB_CONS[p.root];
+  if (p.sub) out += tbSubjoin(TB_CONS[p.sub]);
+  return out;
+}
+
+// 顯式疊寫模式（buffer 含 "+"）：每個子音全形，"+" 把下一個子音變後加形（梵文/不規則疊字用）
+function translitTibetanManual(roman: string): string {
   let out = "", i = 0, prevCons = false, subjoinNext = false;
   while (i < roman.length) {
-    if (roman[i] === "+") { subjoinNext = true; i++; continue; } // 顯式疊寫下一個子音
+    if (roman[i] === "+") { subjoinNext = true; i++; continue; }
     const cons = longest(TB_KEYS, roman, i);
-    if (cons) {
-      i += cons.length;
-      let g = TB_CONS[cons];
-      if (subjoinNext) { g = String.fromCodePoint(g.codePointAt(0)! + TB_SUBJOIN_OFFSET); subjoinNext = false; }
-      out += g; prevCons = true; continue;
-    }
+    if (cons) { i += cons.length; out += subjoinNext ? tbSubjoin(TB_CONS[cons]) : TB_CONS[cons]; subjoinNext = false; prevCons = true; continue; }
     const v = roman[i];
-    if (v === "a") { if (!prevCons) out += "ཨ"; i++; prevCons = false; continue; } // a：子音後固有(不輸出)，否則 ཨ
+    if (v === "a") { if (!prevCons) out += "ཨ"; i++; prevCons = false; continue; }
     if (TB_VOWEL[v] !== undefined) { out += TB_VOWEL[v]; i++; prevCons = false; continue; }
     out += roman[i]; i++; prevCons = false;
   }
   return out;
+}
+
+// 自動疊寫（一個 buffer = 一個音節，由 tsheg/空白分隔）：解析 前加/上加/字根/下加 + 母音 + 後加字
+export function translitTibetan(roman: string): string {
+  if (roman.includes("+")) return translitTibetanManual(roman); // 顯式模式（梵文等不規則疊字）
+  const onset: string[] = [], suffix: string[] = [];
+  let vowel: string | null = null, sawVowel = false, tail = "", i = 0;
+  while (i < roman.length) {
+    const c = longest(TB_KEYS, roman, i);
+    if (c) { i += c.length; (sawVowel ? suffix : onset).push(c); continue; }
+    const ch = roman[i]; i++;
+    if ("aiueo".includes(ch)) {
+      if (!sawVowel) { vowel = ch; sawVowel = true; }
+      else if (ch !== "a") tail += TB_VOWEL[ch] ?? "";        // 罕見的第二母音
+    } else tail += ch;                                         // 未知字元原樣
+  }
+  let out = renderTbOnset(onset);
+  if (sawVowel) {
+    if (!onset.length) out += "ཨ";                            // 字首獨立母音用 ཨ 承載
+    if (vowel && vowel !== "a") out += TB_VOWEL[vowel];
+  }
+  for (const s of suffix) out += TB_CONS[s];                   // 後加字＝全形
+  return out + tail;
 }
 
 // ════════════════════════════════════════════════════════════════════════════
@@ -219,7 +277,7 @@ const geez: AbugidaSpec = {
 };
 const tibetan: AbugidaSpec = {
   key: "tibetan", label: "藏文鍵盤", translit: translitTibetan, bufRe: /[a-zA-Z'+]/, wordSep: "་",
-  hint: "Wylie：打 k kh g ng…；母音 i u e o（a 為固有）；疊字用 + 顯式堆（如 r+k）；空白＝音節點 tsheg ་",
+  hint: "Wylie：打整個音節自動疊寫（bsgrubs→བསྒྲུབས、rgyal→རྒྱལ）；母音 i u e o（a 固有）；空白＝音節點 tsheg；梵文不規則疊字用 + 顯式堆",
   palette: [
     { ch: "ཀ", latin: "k" }, { ch: "ཁ", latin: "kh" }, { ch: "ག", latin: "g" }, { ch: "ང", latin: "ng" },
     { ch: "ཅ", latin: "c" }, { ch: "ཇ", latin: "j" }, { ch: "ཏ", latin: "t" }, { ch: "ད", latin: "d" },

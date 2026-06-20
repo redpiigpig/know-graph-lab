@@ -65,7 +65,16 @@ describe("藏文 translitTibetan（Wylie，+顯式疊寫）", () => {
     expect(translitTibetan("ki")).toBe("ཀི");
     expect(translitTibetan("ku")).toBe("ཀུ");
   });
-  it("顯式疊寫 +（後加子音）", () => {
+  it("自動疊寫：正字法找字根（前加/上加/字根/下加/後加）", () => {
+    expect(translitTibetan("bsgrubs")).toBe("བསྒྲུབས"); // 前加b 上加s 字根g 下加r 母音u 後加b 再後加s
+    expect(translitTibetan("rgyal")).toBe("རྒྱལ");      // 上加r 字根g 下加y 母音a 後加l
+    expect(translitTibetan("sgrub")).toBe("སྒྲུབ");
+    expect(translitTibetan("bkra")).toBe("བཀྲ");        // 前加b 字根k 下加r
+    expect(translitTibetan("bod")).toBe("བོད");         // 西藏：字根b 母音o 後加d
+    expect(translitTibetan("sangs")).toBe("སངས");       // 字根s 母音a 後加ng s
+    expect(translitTibetan("'gro")).toBe("འགྲོ");       // 前加' 字根g 下加r 母音o
+  });
+  it("顯式疊寫 +（梵文/不規則）仍可用", () => {
     expect(translitTibetan("r+k")).toBe("རྐ"); // ར + 後加ka(ྐ)
   });
 });
