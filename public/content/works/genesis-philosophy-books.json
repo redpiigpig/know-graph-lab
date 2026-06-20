@@ -98,6 +98,32 @@
      "nChapters": 6
     }
    ]
+  },
+  {
+   "branch": "存有論三部曲",
+   "books": [
+    {
+     "id": "B1",
+     "title": "空無與創生前態：存有的邊界",
+     "subtitle": "存有的起點與邊界——空無、前態、存有者分類",
+     "file": "/content/works/genesis/B1.html",
+     "nChapters": 7
+    },
+    {
+     "id": "B2",
+     "title": "默然與不可言說：語言的邊界",
+     "subtitle": "存有的不可言說性——默然、語言界線、自指",
+     "file": "/content/works/genesis/B2.html",
+     "nChapters": 7
+    },
+    {
+     "id": "B3",
+     "title": "神聖、虛無與終極存在",
+     "subtitle": "存有的終極現場——神聖、虛無、永恆與終末",
+     "file": "/content/works/genesis/B3.html",
+     "nChapters": 7
+    }
+   ]
   }
  ]
 }
