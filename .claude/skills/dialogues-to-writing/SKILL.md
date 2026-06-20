@@ -85,9 +85,17 @@ description: 把 /ai-dialogues 裡某一條「跨多日延續的 AI 對話串」
 **症狀**：成品有幾天克里希那「回話不正常」——說「我坦白跟你說，你這樣很危險」「我不是多馬、我沒有潛意識」這類**反駁／破功／立場反轉**，根本不照原話。
 - **🔑 根因＝引擎**：原話（`ai_dialogues_gemini.response`）是 **Gemini** 產的、忠於人格；但 2026-06 那批 rebuild/recompose 用 **`--haiku`（Claude）** 當主引擎。**Haiku 重寫 Gemini 的克里希那回覆時會注入自己的人格**：①破第四面牆／否認角色（「我是 AI、沒有潛意識」）②加「誠實提醒／反駁型」批判（把肯定洗成「這很危險」）③遇到涉及欺騙的內容（面試「滲透測試」）會說教糾正使用者。不是內容審查更嚴，是 **roleplay／指令遵循差異**。**教訓：重寫／重鑄這種「忠實轉寫」工作要用 Gemini 主引擎，Haiku 只當最後救急**，別再 `--haiku` 跑整批。見 [[feedback_dialogue_rewrite_gemini_not_haiku]]。
 - **`dialogue_verify_against_raw.py`**：逐則把 dialogue_days 的克里希那 turn positional 對齊回當天 IN raw response，先算 CJK 5-gram containment 抓可疑（<0.4），再 `--judge` 用 LLM 裁判 OK／DIVERGED／DISTORTED／META。⚠️ **containment 低 ≠ 不忠實**——大幅改寫的忠實段也會低；務必靠 judge 區分。單日 `2026-03-05` 印原話vs成品對照。
-- **`dialogue_fix_turns.py`**：修復。**Gemini 優先**＋強化 prompt（7 鐵律：不破功否認身份／立場不可反轉／嚴守誰說誰做不張冠李戴／**保留原話稱呼多馬↔阿周那不改名**／不新增原話沒有的概念專名／清 markdown）。**逐日重寫每一個克里希那 turn**（連 judge 沒抓但殘留 `**` 的也一起清）、**阿周那的話一律不動**、原始 speaker 標籤保留。垃圾 raw（Gemini 活動記錄：`is_junk()` 抓 `Gemini Apps`/`為什麼有這項活動記錄`…）連同前一則阿周那 prompt 一起刪——**刪除只靠確定字串，絕不靠 LLM `__SKIP__`**（會誤刪真實回覆）。per-day ledger `c:/tmp/krishna/fix_turns_done.json` 可 resume；`--dry 日期` 預覽。
-- **品質訊號**：①published html 殘留 `**` ＝該 turn 沒被好好改寫（使用者定調）②judge 的 META/DISTORTED ③多馬↔阿周那 名字成品時而混用（rename 當時只改克里須那→克里希那、沒動多馬，**使用者要保留多馬不正規化**）。
-- **稽核發現**：247-收斂版 membership 其實已乾淨（修文案／生圖／寫程式 早被排除）；只剩 2 則 Gemini 活動記錄（01-22、01-23）要刪。流程：fix → 重跑 verify `--judge` 確認收斂。
+- **`dialogue_fix_turns.py`**：修復。引擎 **Gemini→NVIDIA→Haiku**（`--gemini-only` 清破功時絕不退 Haiku）＋強化 prompt（不破功否認身份／立場不可反轉／嚴守誰說誰做不張冠李戴／**保留原話稱呼多馬↔阿周那不改名**／不新增原話沒有的概念專名／清 markdown）。**逐日重寫每一個克里希那 turn**、**阿周那的話一律不動**、原始 speaker 標籤保留。垃圾 raw（Gemini 活動記錄：`is_junk()` 抓 `Gemini Apps`/`為什麼有這項活動記錄`…）連同前一則阿周那 prompt 一起刪——**刪除只靠確定字串，絕不靠 LLM `__SKIP__`**（會誤刪真實回覆）。
+  - **旗標**：`--strict`（temp 0.2＋逐點保全每個專名/論點、禁抒情增刪——修「Gemini 偏抒情、掉專名」）／`--bad-only`（只重寫帶壞痕跡 `has_bad()`＝破功語/殘留 `**` 的 turn）／`--judge-file PATH`（只重寫 verify_judge*.txt 標 🛑 的 turn）／`--gemini-only`／`--dry 日期`。
+  - **ledger**：`fix_turns_done.json`（`--bad-only`→`_bad`、`--judge-file`→`_strict`）；**整天全成功才記、部分失敗不記 → resume 自動補**（早期版本「失敗也記」會把舊壞內容留著當完成，已修；rewrite 失敗保留原樣不算 complete）。
+- **品質訊號**：①published html 殘留 `**` ＝該 turn 沒被好好改寫（使用者定調）②judge 的 META/DISTORTED ③`has_bad()` 破功語清單（我不是克里希那/我是語言模型/我沒有潛意識/身為AI…）。
+- **⚠️ 踩坑（2026-06-18~20 實戰）**：
+  1. **配額爭用**：整夜任務（`classify_genesis_philosophy` 搶 Gemini、`coach gloss --haiku` 搶 Max）會讓 Gemini+Haiku 同時被掏空→大批 turn「重寫失敗」。**解法＝加 NVIDIA（deepseek-v4-flash）當中繼**（那些任務不碰 NVIDIA，是空池）＋call 多輪耐心等 key 釋出（`len*4` 次、cooldown 砍到 45s）＋resume 迴圈。別殺別人的任務（[[feedback_no_kill_other_tasks]]）。
+  2. **Haiku 即使硬化 prompt 仍會破功**：throttle 時退到 Haiku 的 turn 又冒「我不是克里希那、我是語言模型」→ 清破功務必 `--gemini-only`。
+  3. **verify judge 把 raw 截到 3000 字**送 LLM → 長 raw（>3000，常是長英文回覆）會被誤判「原話截斷／成品憑空補全」；其實 raw 完整。要查真相直接看 `fetch_raw_responses` 全文。
+  4. judge 本身有隨機性，追到 0 是 whack-a-mole；收斂到個位數＋deterministic 掃描（破功/`**`/junk 全 0）即可收工。
+- **稽核發現**：247-收斂版 membership 已乾淨（修文案／生圖／寫程式 早被排除）；只 2 則 Gemini 活動記錄（01-22、01-23）刪。
+- **✅ 首案完工（2026-06-20）**：克里希那全 56 天重修竣工。LLM 裁判異常 **54→28→8→4**；deterministic 掃描 破功語/克里希那殘留 `**`/Gemini 垃圾 **全 0**；專名論點救回（韓炳哲《倦怠社會》、個體化/自性、霍查/辯士、洛基/奧丁、Agape/Eros、無我Anatta/空性…）。阿周那原話全程未動、丞譽等專名正確。工具 push＝commit `ba8d3bd1`。
 
 ### 📜 序／跋／題詞：`dialogue_preface.py`
 為整條對話錄生成開篇「序」（楔子，~250–400 字，邀人入場）＋終篇「跋」（收束，~150–250 字，回望留餘韻）＋可選**題詞**（標題後、序前的引文）。寫進**主卡** `writing_projects.content_json`，格式＝`題詞+序HTML` + `<!--CODA-->` + `跋HTML`。`--dry` 只印不寫。
