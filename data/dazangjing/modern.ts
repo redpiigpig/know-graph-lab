@@ -349,8 +349,6 @@ export const MODERN_ERA: DazangEra = {
         desc: '當代對諸宗教真理地位與基督教獨一性的多元論挑戰。',
         works: [
           { title_zh: '宗教多元論', title_orig: 'An Interpretation of Religion', author: '希克（John Hick）', era: '1989', place: '英國', language: '英文', intro: '希克是宗教多元論最系統的倡導者。他主張各大宗教都是人類對同一「終極實在」的不同文化回應,如同盲人摸象,沒有一個傳統可獨佔真理。他呼籲基督論從「上帝道成肉身」轉向隱喻式理解,使基督教放棄獨一救恩的宣稱。此書以康德的現象/本體之分為架構,是宗教神學中多元論立場的奠基之作,激起與排他論、兼容論的長久論辯。' }
-        ,
-          { title_zh: '猶太教的基督教神學？', title_orig: 'Eine jüdische Theologie des Christentums?', author: '阿倫斯（Jehoschua Ahrens）', era: '2026', place: '德國弗萊堡', language: '德文', intro: '猶太教拉比阿倫斯（Jehoschua Ahrens）以問號破題，嘗試從猶太傳統內部建構一套對基督教的神學詮釋，探討猶太人能否在不放棄一神信仰原則的前提下，正面神學地看待耶穌運動及其影響。全書置身當代猶太—基督對話脈絡（《真理之言》宣言後），既是護教式回應也是建構性神學嘗試，屬外藏中猶太思想與基督教交鋒的現代代表作，具大藏經「他者見證」的典型功能。' }
         ]
       }
     ]
