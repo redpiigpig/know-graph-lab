@@ -79,6 +79,25 @@
      "nChapters": 7
     }
    ]
+  },
+  {
+   "branch": "價值論二部曲",
+   "books": [
+    {
+     "id": "V1",
+     "title": "願然：意欲、秩序與美",
+     "subtitle": "願然的理論建構與美學",
+     "file": "/content/works/genesis/V1.html",
+     "nChapters": 6
+    },
+    {
+     "id": "V2",
+     "title": "意義、愛與神聖",
+     "subtitle": "願然的應用——意義、愛、神聖與時代診斷",
+     "file": "/content/works/genesis/V2.html",
+     "nChapters": 6
+    }
+   ]
   }
  ]
 }
