@@ -69,21 +69,24 @@
         </div>
       </div>
 
-      <!-- 叢書：書目（一張卡片下的多本書，各有章節閱讀器） -->
-      <div v-if="seriesBooks.length" class="max-w-5xl mx-auto px-6 py-8">
+      <!-- 叢書：書目（一張卡片下的多本書，可依子系列分組；各有章節閱讀器） -->
+      <div v-if="seriesBookCount" class="max-w-5xl mx-auto px-6 py-8">
         <div class="mb-4">
           <h2 class="text-base font-semibold text-gray-900">書目</h2>
-          <p class="text-xs text-gray-500 mt-0.5">本叢書共 {{ seriesBooks.length }} 冊 · 點選一冊閱讀（各冊內含章節目錄）</p>
+          <p class="text-xs text-gray-500 mt-0.5">本叢書共 {{ seriesBookCount }} 冊 · 點選一冊閱讀（各冊內含章節目錄）</p>
         </div>
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <NuxtLink v-for="(b, i) in seriesBooks" :key="b.id"
-            :to="`/works/${slug}/book/${b.id}`"
-            class="no-underline group flex flex-col p-6 rounded-2xl bg-white border-2 border-violet-100 hover:border-violet-300 hover:shadow-lg hover:shadow-violet-100 transition">
-            <div class="text-xs text-violet-400 mb-2">第{{ ['一','二','三','四','五','六','七','八','九','十'][i] || (i+1) }}部</div>
-            <h3 class="text-lg font-bold text-gray-900 leading-snug">{{ b.title }}</h3>
-            <p class="text-xs text-gray-500 mt-1.5 leading-relaxed break-words">{{ b.subtitle }}</p>
-            <div class="mt-3 text-xs text-violet-600">{{ b.nChapters }} 章 · 閱讀 →</div>
-          </NuxtLink>
+        <div v-for="g in seriesGroups" :key="g.branch" class="mb-7">
+          <h3 v-if="g.branch" class="text-xs font-semibold text-violet-400 uppercase tracking-widest mb-3">{{ g.branch }}</h3>
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <NuxtLink v-for="(b, i) in g.books" :key="b.id"
+              :to="`/works/${slug}/book/${b.id}`"
+              class="no-underline group flex flex-col p-6 rounded-2xl bg-white border-2 border-violet-100 hover:border-violet-300 hover:shadow-lg hover:shadow-violet-100 transition">
+              <div class="text-xs text-violet-400 mb-2">第{{ CN_NUM[i] || (i + 1) }}部</div>
+              <h3 class="text-lg font-bold text-gray-900 leading-snug">{{ b.title }}</h3>
+              <p class="text-xs text-gray-500 mt-1.5 leading-relaxed break-words">{{ b.subtitle }}</p>
+              <div class="mt-3 text-xs text-violet-600">{{ b.nChapters }} 章 · 閱讀 →</div>
+            </NuxtLink>
+          </div>
         </div>
       </div>
 
@@ -670,14 +673,19 @@ interface Materials { book?: string; subtitle?: string; source?: string; note?: 
 const materials = ref<Materials | null>(null)
 const materialsAvailable = ref(false)
 
-// 叢書（一張卡片下含多本書，每本書各有章節閱讀器）— 如創生哲學三部曲
+// 叢書（一張卡片下含多本書，可再依「子系列／分支」分組；各冊有章節閱讀器）— 如創生哲學
 interface SeriesBook { id: string; title: string; subtitle: string; nChapters: number }
-const seriesBooks = ref<SeriesBook[]>([])
+interface SeriesGroup { branch: string; books: SeriesBook[] }
+const seriesGroups = ref<SeriesGroup[]>([])
+const seriesBookCount = computed(() => seriesGroups.value.reduce((s, g) => s + g.books.length, 0))
+const CN_NUM = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十']
 async function loadSeriesBooks() {
   try {
-    const data = await $fetch<{ books: SeriesBook[] }>(`/content/works/${slug.value}-books.json`, { responseType: 'json' })
-    seriesBooks.value = Array.isArray(data?.books) ? data.books : []
-  } catch { seriesBooks.value = [] }
+    const data = await $fetch<{ groups?: SeriesGroup[]; books?: SeriesBook[] }>(`/content/works/${slug.value}-books.json`, { responseType: 'json' })
+    if (Array.isArray(data?.groups)) seriesGroups.value = data.groups
+    else if (Array.isArray(data?.books)) seriesGroups.value = [{ branch: '', books: data.books }]
+    else seriesGroups.value = []
+  } catch { seriesGroups.value = [] }
 }
 watch(() => project.value?.slug, loadSeriesBooks)
 

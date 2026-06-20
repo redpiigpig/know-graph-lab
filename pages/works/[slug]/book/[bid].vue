@@ -58,17 +58,20 @@ const slug = computed(() => String(route.params.slug))
 const bid = computed(() => String(route.params.bid))
 
 interface BookMeta { id: string; title: string; subtitle: string; file: string; nChapters: number }
+interface BookGroup { branch: string; books: BookMeta[] }
 
-const books = ref<BookMeta[]>([])
+const groups = ref<BookGroup[]>([])
 const html = ref('')
 const toc = ref<{ id: string; title: string }[]>([])
 const activeId = ref('')
 const pending = ref(true)
 
-const book = computed(() => books.value.find(b => b.id === bid.value) || null)
-const bookIdx = computed(() => books.value.findIndex(b => b.id === bid.value))
-const prevBook = computed(() => bookIdx.value > 0 ? books.value[bookIdx.value - 1] : null)
-const nextBook = computed(() => bookIdx.value >= 0 && bookIdx.value < books.value.length - 1 ? books.value[bookIdx.value + 1] : null)
+// The group containing the current book (prev/next stay within the same sub-series).
+const curGroup = computed(() => groups.value.find(g => g.books.some(b => b.id === bid.value)) || null)
+const book = computed(() => curGroup.value?.books.find(b => b.id === bid.value) || null)
+const bookIdx = computed(() => curGroup.value?.books.findIndex(b => b.id === bid.value) ?? -1)
+const prevBook = computed(() => curGroup.value && bookIdx.value > 0 ? curGroup.value.books[bookIdx.value - 1] : null)
+const nextBook = computed(() => curGroup.value && bookIdx.value >= 0 && bookIdx.value < curGroup.value.books.length - 1 ? curGroup.value.books[bookIdx.value + 1] : null)
 
 useHead(() => ({ title: book.value ? `${book.value.title} — 創生哲學` : '創生哲學' }))
 
@@ -95,12 +98,16 @@ function scrollTo(id: string) {
 async function load() {
   pending.value = true
   try {
-    const manifest = await $fetch<{ books: BookMeta[] }>(`/content/works/${slug.value}-books.json`, { responseType: 'json' })
-    books.value = manifest.books ?? []
-    const b = books.value.find(x => x.id === bid.value)
+    const manifest = await $fetch<{ groups?: BookGroup[]; books?: BookMeta[] }>(`/content/works/${slug.value}-books.json`, { responseType: 'json' })
+    groups.value = Array.isArray(manifest?.groups)
+      ? manifest.groups
+      : (Array.isArray(manifest?.books) ? [{ branch: '', books: manifest.books }] : [])
+    const b = groups.value.flatMap(g => g.books).find(x => x.id === bid.value)
     if (b) {
       const raw = await $fetch<string>(b.file, { responseType: 'text' })
       html.value = processHtml(raw)
+    } else {
+      html.value = ''
     }
   } catch { html.value = '' } finally { pending.value = false }
 }
