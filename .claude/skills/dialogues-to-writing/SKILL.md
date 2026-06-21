@@ -229,11 +229,13 @@ agent fan-out 結果不可重現、難稽核。改用**純函式候選 prelabel 
 
 ### ⏳ item③ 待辦（精修＋序跋＋引用，未完）
 精修規格見 `c:/tmp/genesis_ethics/intro_schedule.md`：①專名/符號**英文首現、先正式提出才能用、不得前引、不得越卷**②補**榮格淵源**(個體化+陰影整合;A1點明/A5展開)＋**鏡像神經元同理機制**(A3點/A7論證「不利他即損己」)③每章末加 `<section class="chapter-recap">`「本章摘要」+「論證分析圖 argmap」(前提→推論→結論,格式見 intro_schedule.md)。
-- ✅ 倫理學：序跋(A/B/C `_preface.html`/`_coda.html`)已寫；精修完成 **A 全10章 + B1–B8**（在 draft/，**尚未重組部署**）。
-- ⏳ 1. 補完倫理 **B9、B10、C1–C8** 精修（同規格）。
-- ⏳ 2. **回填引用（章級＋關鍵概念級）**：各章末摘要下加「本章主要依據對話：C-…/G-…」；關鍵術語/公式處標首提它的編號。id→seq_label 對照：themes/digest 的 (id) 是 8 碼前綴，回 DB 查 seq_label。
-- ⏳ 3. 重組倫理 A/B/C（序+章+跋+引用，序在首 section、跋在末）→ 部署 → commit。
-- ⏳ 4. 其餘四套(認識/本體/價值/存有)比照：各排 intro_schedule→序跋→逐章精修→引用→重組→部署。各套引入時程表要新寫（仿倫理那份）。
+- ✅ **倫理學全 28 章精修竣工＋重組部署（2026-06-21，commit `530ad33e`）**：A 全10/B 全10/C 全8 章皆達 B8 黃金標準（英文首現＋章末 recap/argmap）；序跋齊備；A/B/C.html 已用精修 draft 重新部署上線。
+  - 組裝改用**可重跑腳本 `scripts/assemble_genesis_book.py`**：`python scripts/assemble_genesis_book.py ethics A 10 B 10 C 8` → 讀 draft 的 `_preface`/`NN`/`_coda`（自動抽 body 片段、容錯 full-doc 或 fragment）、每章包 `<section class="chapter">`、沿用既有部署檔 `<header class="book-head">`，輸出 `public/content/works/genesis/{A,B,C}.html`。**日後改 draft（如回填引用）只要再跑一次即可重組。**
+  - 越卷把關修正：C7「願然」→「主觀意欲」、C3 colloquial「願然」→「意欲」、C 書名 thesis 同步（價值論 reserved 詞不入倫理卷）；術語統一 **反身自嗜**（reflexive self-cannibalism，依鎖定詞庫，C2 一度誤改「噬」已正規化）。
+- ⏳ 1. ~~補完倫理 B9/B10/C1–C8 精修~~ ✅ 完成（2026-06-21）。
+- ⏳ 2. **回填引用（章級＋關鍵概念級）＝下一步**：各章末摘要下加「本章主要依據對話：C-…/G-…」；關鍵術語/公式處標首提它的編號。id→seq_label 對照：themes/digest 的 (id) 是 8 碼前綴，回 DB 查 seq_label。**做法＝改 draft 各章再跑 `assemble_genesis_book.py` 重組部署**（A/B/C 目前已部署精修版但「尚無引用」，回填後須重跑一次）。
+- ⏳ 3. ~~重組倫理 A/B/C 部署~~ ✅ 已部署（**惟尚未含引用**，見上條，回填後重跑）。
+- ⏳ 4. 其餘四套(認識/本體/價值/存有)比照：各排 intro_schedule→序跋→逐章精修→引用→重組→部署。各套引入時程表要新寫（仿倫理那份）；組裝用同一支 `assemble_genesis_book.py epi E1 8 …`（series 名對應 `c:/tmp/genesis_{epi,ont,val,bei}`）。
 - ⏳ 5. （另案）**回頭重檢 /ai-dialogues 五域分類**：舊邊界標的，與精修後邊界不一致；成書已用正確邊界，但標籤該重標（用 `classify_genesis_philosophy.py` 思路加細則）。
 
 ### 引擎/坑
