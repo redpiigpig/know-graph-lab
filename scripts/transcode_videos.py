@@ -27,7 +27,7 @@ PHOTOS_ROOT = Path(r"G:/我的雲端硬碟/資料/儲存資料夾")
 LIB_DIR = {"training": "訓練相片", "hongshi": "弘誓相片"}
 
 VID_EXT = {".mp4", ".mov", ".m4v", ".webm", ".mkv", ".avi"}
-HEVC_OK_CONTAINER = {".mp4", ".mov", ".m4v"}  # 這些容器能裝 hevc，保留原副檔名
+HEVC_OK_CONTAINER = {".mp4", ".mov"}  # 保留原副檔名；.m4v 的 ipod muxer 不收 hvc1 → 轉成 .mp4
 
 CQ = "26"
 PRESET = "p6"
@@ -66,7 +66,7 @@ def ffprobe(path):
         ["ffprobe", "-v", "error", "-show_entries",
          "format=duration:stream=codec_type,codec_name,width,height",
          "-of", "json", path],
-        capture_output=True, text=True)
+        capture_output=True, text=True, encoding="utf-8", errors="replace")
     data = json.loads(out.stdout or "{}")
     dur = float(data.get("format", {}).get("duration") or 0)
     vcodec = acodec = None
@@ -158,10 +158,10 @@ def main():
                "-b:v", "0", "-pix_fmt", "yuv420p", "-tag:v", "hvc1",
                *acodec_args, "-movflags", "+faststart", str(work)]
         t0 = time.time()
-        r = subprocess.run(cmd, capture_output=True, text=True)
+        r = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace")
         dt = time.time() - t0
         if r.returncode != 0 or not work.exists():
-            log(f"{tag} ENCODE-FAIL {j['name']}: {r.stderr.strip()[:200]}")
+            log(f"{tag} ENCODE-FAIL {j['name']}: {(r.stderr or '').strip()[:200]}")
             ledger[src] = {"status": "encode_fail"}; save_ledger(ledger)
             if work.exists():
                 work.unlink()
