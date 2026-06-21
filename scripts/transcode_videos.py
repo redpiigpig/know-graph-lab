@@ -113,6 +113,10 @@ def main():
     for j in todo:
         by_lib[j["lib"]] = by_lib.get(j["lib"], 0) + 1
 
+    if "--count" in args:        # 純 ASCII 整數，給 retry-loop 判斷是否跑乾
+        print(len(todo))
+        return
+
     print(f"待處理 {len(todo)} 支，共 {tot/1e9:.1f} GB（{by_lib}），ledger 已記錄 {len(ledger)} 筆")
     if list_only:
         for j in todo[:40]:
@@ -169,7 +173,9 @@ def main():
             log(f"{tag} VERIFY-FAIL {j['name']}: {e}"); work.unlink(); ledger[src] = {"status": "verify_fail"}; save_ledger(ledger); continue
         newsize = work.stat().st_size
         ok_dur = abs(dur1 - dur0) <= max(DUR_TOL, dur0 * 0.01)
-        ok_dim = (w1, h1) == (w, h)
+        # 直式手機影片有旋轉旗標（存儲 WxH、顯示 HxW）；ffmpeg 重編會把旋轉烤進畫面
+        # 輸出真‧HxW（視覺正確）。故長寬對調也算通過，只擋真正的解析度改變。
+        ok_dim = sorted((w1, h1)) == sorted((w, h))
         ok_small = newsize <= j["size"] * REPLACE_RATIO
         if not (ok_dur and ok_dim):
             log(f"{tag} REJECT {j['name']} dur {dur0:.1f}->{dur1:.1f} dim {w}x{h}->{w1}x{h1}")
