@@ -217,7 +217,7 @@ agent fan-out 結果不可重現、難稽核。改用**純函式候選 prelabel 
 第三案＝把已分類的「創生哲學」對話**綜整成整套學術專書**，掛在 /works `genesis-philosophy` 卡片下。詳見 [[project_ai_dialogues_genesis_philosophy]]。
 
 ### 已完成並上線
-- **五大主題 14 冊**（manifest groups 5 子系列）：**倫理 A/B/C 已 v2 精修＝A9/B13/C9（見下「v2 大改版」）**；其餘四套仍**舊初稿**＝認識論 E1/E2/E3(24,E2含數學10章)、本體論 O1/O2/O3(21)、價值論 V1/V2(12)、存有論 B1/B2/B3(21)。檔在 `public/content/works/genesis/{id}.html`；manifest `public/content/works/genesis-philosophy-books.json`（`{groups:[{branch,books:[{id,title,subtitle,file,nChapters}]}]}`）。
+- **五大主題 15 冊全數 v2 精修＋序跋＋每節級引用完工（2026-06-22）**：倫理 A8/B13/C9（A 為 v2.1）、認識論 E1 8/E2 10/E3 6、本體論 O1 8/O2 6/O3 7、價值論 V1 6/V2 6、存有論 B1 7/B2 7/B3 7。每章皆 chapter-recap+argmap、英文首現、公式先論述後導出、越層紅線、每節「本節主要依據對話」引用＋章末彙整，各冊序跋齊備。檔在 `public/content/works/genesis/{id}.html`；manifest `public/content/works/genesis-philosophy-books.json`（`{groups:[{branch,books:[{id,title,subtitle,file,nChapters}]}]}`）。治理文件＝各 `c:/tmp/genesis_{ethics,epi,ont,val,bei}/intro_schedule.md`。
 - reader：`pages/works/[slug]/index.vue`（書目依 branch 分組）＋`pages/works/[slug]/book/[bid].vue`（書→章 TOC＋鄰冊＋已加 .vol-preface/.vol-coda/.chapter-recap/.argmap 樣式）。book id 不可重複。
 - **對話編號系統**：`ai_dialogues_{chatgpt,gemini}.seq_label`＝C-#####(12,124)/G-#####(2,305)；/ai-dialogues 顯示＋頂部編號查閱框（`server/api/ai-dialogues/by-seq.get.ts`）。重編用 Management API（`SUPABASE_ACCESS_TOKEN`、ref `vloqgautkahgmqcwgfuo`、window-function UPDATE）。
 
@@ -243,8 +243,14 @@ A《愛的萬物論》**9→8 章**重構（intro_schedule v2.1）：①**序自
 - ✅ 1. **回填每節級對話編號引用（intro_schedule §6）完工（2026-06-21）**：工具＝`scripts/genesis_cite_backfill.py`（純函式＋`scripts/tests/test_genesis_cite_backfill.py` 5 測全綠）。
   鏈路：①`build-map`＝抓 `ai_dialogues_{chatgpt,gemini}` 全 14,429 筆 id+seq_label，建 8 碼前綴→seq_label `c:/tmp/genesis_ethics/seq_label_map.json`（**前綴全域唯一、0 碰撞**已驗）。②`load_terms`＝從 `notes_*.json` glossary 聚合 term→ids（311 詞、813 id，僅 2 id 不在 map＝已 purge 的，靜默丟）。③`tag`＝每個內容 `<h3>` 文字比對 glossary 術語（**比對鍵 ≥3 字**＝關鍵踩坑：「行善≠誠實」拆出通用 2 字「誠實」會污染每節排名，門檻擋掉；體系核心詞皆 ≥3），取本節頻次最高前 4 術語的 id→seq_label，插 `<p class="section-source">本節主要依據對話：…</p>`；**章末再加 `chapter-source` 彙整全章**（補 B6/B7 純史述節無術語命中的缺口）。**冪等**（重跑先 strip 再插）。
   跑：`python scripts/genesis_cite_backfill.py tag ethics A 9 B 13 C 9` → A 52 節/B 61 節/C 38 節＋各章末彙整 → `assemble_genesis_book.py ethics A 9 B 13 C 9` 重組部署。193 distinct labels 全部 valid、ordering 正確（引用皆在 chapter-recap 前）。reader CSS `.section-source`/`.chapter-source` 已加（`[slug]/book/[bid].vue`）。**換套（E/O/V/B-存有）：跑 `tag <series> …` 即可**（series 對 `c:/tmp/genesis_<series>/notes_*.json`；seq_label_map 共用 ethics 的）。
-- ⏳ 2. **其餘四套(認識 E/本體 O/價值 V/存有 B-存有)比照三卷分工原則重檢＋精修**：各套照 intro_schedule v2 風格新寫引入時程表→序跋→逐章精修(英文首現/先論述後導出/越層紅線/章末 recap+argmap)→引用→重組部署。注意這四套目前還是**舊初稿**(未經 v2 精修)。
-- ⏳ 3. （另案）**回頭重檢 /ai-dialogues 五域分類**：舊邊界標的，與 v2 邊界不一致；成書已用正確邊界，標籤該重標。
+- ✅ 2. **其餘四套(認識 E/本體 O/價值 V/存有 B-存有)v2 精修＋序跋＋引用＋部署 全數完工（2026-06-22 整夜自動跑）**：各套皆新撰治理文件 `c:/tmp/genesis_{epi,ont,val,bei}/intro_schedule.md`（三卷分工/越層紅線/章目首現/先論述後導出/recap 格式）→ sonnet subagent 逐章精修(一波≤6，保留實質做加值升級：章末 recap+argmap、英文首現、公式先論述後導出、越層紅線)→ 每冊序跋 → `genesis_cite_backfill tag <series>` 回填引用 → `assemble_genesis_book.py <series>` 重組 → build 綠 → commit。
+  - **認識論 E**：E1 8/E2 10/E3 6＝24 章（commit fb1b6d77）。**citation 改 chunk-based**(themes 詞彙×chunk 全文→seq_label；E/O/V/B 的對話 id 在 `chunk_*.json` 非 themes)。
+  - **本體論 O**：O1 8/O2 6/O3 7＝21 章（commit 620509a2）。本套正式命名創生三原理/創生公式。
+  - **價值論 V**：V1 6/V2 6＝12 章（commit 71b65ed3）。
+  - **存有論 B-存有**：B1 7/B2 7/B3 7＝21 章（B3-7 兼整套叢書總收束）。
+  - 🔑 **draft 目錄已全部改名對齊部署檔名**：`genesis_{epi,ont,val,bei}/draft/{1,2,3}`→`{E1..,O1..,V1..,B1..}`（generic 組裝器/cite 工具以 BOOK 名同時當 draft 目錄與輸出檔名）。換套精修複用此流程：寫治理文件→subagent 波→tag→assemble→build→commit。
+  - 🔑 **越層踩坑**：subagent 普遍會主動清掉前引/越層（E1/05 移走 E2 不二論三律、E2/09 移走創生公式 G=f(...)、A3 deferral 句寫了耗散結構被抓出）——精修時 §2 越層紅線要寫進每個 prompt。
+- ⏳ 3. （另案）**回頭重檢 /ai-dialogues 五域分類**：舊邊界標的，與 v2 邊界不一致；成書已用正確邊界，標籤該重標。**(尚未做)**
 - 🚧 風格範例：精修黃金檔＝`c:/tmp/genesis_ethics/draft/B/08.html`(異化與公共性)；地基章範例＝`A/01.html`；史章範例＝`B/06.html`、`B/07.html`。
 
 ### 引擎/坑
