@@ -155,4 +155,7 @@ onBeforeUnmount(() => observer?.disconnect())
 .book-prose :deep(.arg-step) { @apply text-[13px] leading-relaxed text-violet-800 bg-violet-50 border border-violet-200 rounded-lg px-3 py-2; }
 .book-prose :deep(.arg-conclusion) { @apply text-[13px] leading-relaxed font-medium text-emerald-900 bg-emerald-50 border border-emerald-300 rounded-lg px-3 py-2; }
 .book-prose :deep(.arg-op) { @apply text-center text-gray-400 text-xs leading-none; }
+/* 每節／章末對話編號引用（intro_schedule §6） */
+.book-prose :deep(.section-source) { @apply mt-3 mb-6 text-[12px] leading-relaxed text-gray-400 border-l-2 border-violet-100 pl-3; }
+.book-prose :deep(.chapter-source) { @apply mt-6 pt-3 border-l-0 border-t border-dashed border-violet-100 text-gray-500; }
 </style>

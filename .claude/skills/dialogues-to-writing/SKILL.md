@@ -235,7 +235,9 @@ agent fan-out 結果不可重現、難稽核。改用**純函式候選 prelabel 
 - 三卷現況 **A9 / B13 / C9**，manifest 同步。組裝一律 `python scripts/assemble_genesis_book.py ethics A 9 B 13 C 9`（改 draft 後重跑即重組部署；序跋/章皆從 `c:/tmp/genesis_ethics/draft/{A,B,C}/` 讀）。
 
 ### ⏳ item③ 待辦（新 session 從這裡接）
-- ⏳ 1. **回填每節級對話編號引用（intro_schedule §6 新粒度）**：每個 `<h3>` 小節末標「本節主要依據對話：C-…/G-…」(章末可彙整)。id→seq_label：themes/digest 的 8 碼前綴回 DB 查 `ai_dialogues_{chatgpt,gemini}.seq_label`。做法＝改 draft 各章 → 跑 `assemble_genesis_book.py` 重組(A/B/C 已部署但尚無引用)。
+- ✅ 1. **回填每節級對話編號引用（intro_schedule §6）完工（2026-06-21）**：工具＝`scripts/genesis_cite_backfill.py`（純函式＋`scripts/tests/test_genesis_cite_backfill.py` 5 測全綠）。
+  鏈路：①`build-map`＝抓 `ai_dialogues_{chatgpt,gemini}` 全 14,429 筆 id+seq_label，建 8 碼前綴→seq_label `c:/tmp/genesis_ethics/seq_label_map.json`（**前綴全域唯一、0 碰撞**已驗）。②`load_terms`＝從 `notes_*.json` glossary 聚合 term→ids（311 詞、813 id，僅 2 id 不在 map＝已 purge 的，靜默丟）。③`tag`＝每個內容 `<h3>` 文字比對 glossary 術語（**比對鍵 ≥3 字**＝關鍵踩坑：「行善≠誠實」拆出通用 2 字「誠實」會污染每節排名，門檻擋掉；體系核心詞皆 ≥3），取本節頻次最高前 4 術語的 id→seq_label，插 `<p class="section-source">本節主要依據對話：…</p>`；**章末再加 `chapter-source` 彙整全章**（補 B6/B7 純史述節無術語命中的缺口）。**冪等**（重跑先 strip 再插）。
+  跑：`python scripts/genesis_cite_backfill.py tag ethics A 9 B 13 C 9` → A 52 節/B 61 節/C 38 節＋各章末彙整 → `assemble_genesis_book.py ethics A 9 B 13 C 9` 重組部署。193 distinct labels 全部 valid、ordering 正確（引用皆在 chapter-recap 前）。reader CSS `.section-source`/`.chapter-source` 已加（`[slug]/book/[bid].vue`）。**換套（E/O/V/B-存有）：跑 `tag <series> …` 即可**（series 對 `c:/tmp/genesis_<series>/notes_*.json`；seq_label_map 共用 ethics 的）。
 - ⏳ 2. **其餘四套(認識 E/本體 O/價值 V/存有 B-存有)比照三卷分工原則重檢＋精修**：各套照 intro_schedule v2 風格新寫引入時程表→序跋→逐章精修(英文首現/先論述後導出/越層紅線/章末 recap+argmap)→引用→重組部署。注意這四套目前還是**舊初稿**(未經 v2 精修)。
 - ⏳ 3. （另案）**回頭重檢 /ai-dialogues 五域分類**：舊邊界標的，與 v2 邊界不一致；成書已用正確邊界，標籤該重標。
 - 🚧 風格範例：精修黃金檔＝`c:/tmp/genesis_ethics/draft/B/08.html`(異化與公共性)；地基章範例＝`A/01.html`；史章範例＝`B/06.html`、`B/07.html`。
