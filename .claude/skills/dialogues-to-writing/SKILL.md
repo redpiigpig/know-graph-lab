@@ -212,6 +212,33 @@ agent fan-out 結果不可重現、難稽核。改用**純函式候選 prelabel 
 - ⚠️ **同庫有並行 overnight 任務（dazangjing/coach）會 commit + `git reset` master**；commit 只 add 自己的檔，
   別碰別人改的（如 `data/dazangjing/index.ts`）；工作目錄檔才是真相（背景 job 讀檔不靠 git）。
 
+## 🚧 進行中交接：創生哲學叢書（分類對話→五大主題著作，2026-06-21 起，新 session 續）
+
+第三案＝把已分類的「創生哲學」對話**綜整成整套學術專書**，掛在 /works `genesis-philosophy` 卡片下。詳見 [[project_ai_dialogues_genesis_philosophy]]。
+
+### 已完成並上線
+- **五大主題全套初稿 14 冊 106 章**（manifest groups 5 子系列）：倫理 A/B/C(28)、認識論 E1/E2/E3(24,E2含數學10章)、本體論 O1/O2/O3(21)、價值論 V1/V2(12)、存有論 B1/B2/B3(21)。檔在 `public/content/works/genesis/{id}.html`；manifest `public/content/works/genesis-philosophy-books.json`（`{groups:[{branch,books:[{id,title,subtitle,file,nChapters}]}]}`）。
+- reader：`pages/works/[slug]/index.vue`（書目依 branch 分組）＋`pages/works/[slug]/book/[bid].vue`（書→章 TOC＋鄰冊＋已加 .vol-preface/.vol-coda/.chapter-recap/.argmap 樣式）。book id 不可重複。
+- **對話編號系統**：`ai_dialogues_{chatgpt,gemini}.seq_label`＝C-#####(12,124)/G-#####(2,305)；/ai-dialogues 顯示＋頂部編號查閱框（`server/api/ai-dialogues/by-seq.get.ts`）。重編用 Management API（`SUPABASE_ACCESS_TOKEN`、ref `vloqgautkahgmqcwgfuo`、window-function UPDATE）。
+
+### 製作管線（每套可重複；一波 subagent ≤6，會撞 session limit，多數檔在限制前已寫出、檢查 draft 夾補缺章）
+撈該 facet 對話(`classify_genesis_philosophy.get_category_ids()` 拿 cat id→`entry_categories` 抓 dialogue_id→分表抓 prompt/response)→切 chunk→sonnet subagent 主題地圖(map_NN.json)→合併 `*_themes.json`→寫詳細藍圖 `*_blueprint.html`(每章核心論證)→每章一個 sonnet subagent 寫初稿→組裝 book html(header+章 section)→manifest 加 group→build→commit。各套工料在 `c:/tmp/genesis_ethics/`(draft/A,B,C + genesis_ethics_content.html + master_digest.json)、`c:/tmp/genesis_epi/`、`c:/tmp/genesis_ont/`、`c:/tmp/genesis_val/`、`c:/tmp/genesis_bei/`。
+
+### 🔑 邊界（使用者歷次裁定，寫各套務必守）
+四然↔卷：識然=認識論、應然=倫理學、願然=價值論、默然=存有論；本體論=「生成的存在如何結構」。**量子→本體論；數學(的本質=怎麼認識)→認識論；空無/默然/神聖/虛無/終極→存有論；願然/美→價值論；誠實/善→倫理學；創生公式/生成三要素(關係性/身體性/歷時性)→本體論卷一正式提出**。寫某卷不得搬別卷術語。
+
+### ⏳ item③ 待辦（精修＋序跋＋引用，未完）
+精修規格見 `c:/tmp/genesis_ethics/intro_schedule.md`：①專名/符號**英文首現、先正式提出才能用、不得前引、不得越卷**②補**榮格淵源**(個體化+陰影整合;A1點明/A5展開)＋**鏡像神經元同理機制**(A3點/A7論證「不利他即損己」)③每章末加 `<section class="chapter-recap">`「本章摘要」+「論證分析圖 argmap」(前提→推論→結論,格式見 intro_schedule.md)。
+- ✅ 倫理學：序跋(A/B/C `_preface.html`/`_coda.html`)已寫；精修完成 **A 全10章 + B1–B8**（在 draft/，**尚未重組部署**）。
+- ⏳ 1. 補完倫理 **B9、B10、C1–C8** 精修（同規格）。
+- ⏳ 2. **回填引用（章級＋關鍵概念級）**：各章末摘要下加「本章主要依據對話：C-…/G-…」；關鍵術語/公式處標首提它的編號。id→seq_label 對照：themes/digest 的 (id) 是 8 碼前綴，回 DB 查 seq_label。
+- ⏳ 3. 重組倫理 A/B/C（序+章+跋+引用，序在首 section、跋在末）→ 部署 → commit。
+- ⏳ 4. 其餘四套(認識/本體/價值/存有)比照：各排 intro_schedule→序跋→逐章精修→引用→重組→部署。各套引入時程表要新寫（仿倫理那份）。
+- ⏳ 5. （另案）**回頭重檢 /ai-dialogues 五域分類**：舊邊界標的，與精修後邊界不一致；成書已用正確邊界，但標籤該重標（用 `classify_genesis_philosophy.py` 思路加細則）。
+
+### 引擎/坑
+subagent 用 sonnet、一波≤6（曾撞「session limit · resets 11am/7pm」）；撞了就看 draft 夾哪些 `chapter-recap`/檔已寫、只補缺的。build 前若遇 RollupError(client.manifest) 多半是 stale `.nuxt`，`rm -rf .nuxt` 重build。commit 只 add 自己的檔。
+
 ## See also
 - [[project_krishna_dialogues]] — 首案：與克里希那對話（分類 tag 2026-06-12 以原稿收斂為 247 則＝個人日記範圍；一張主卡＋80 天每日 reader 內容不變）
 - [[project_ai_dialogues_genesis_philosophy]] — 第二案：創生哲學階層分類 + purge 寫程式/生圖/貼文（本節交接）
