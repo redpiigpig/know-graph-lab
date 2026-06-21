@@ -196,8 +196,61 @@ def load_terms(series):
     return term_keys, term_ids, prefix_map
 
 
+def load_terms_chunks(series, per_term=6):
+    """E/O/V/B 用：themes 詞彙 × chunk 全文搜尋 → term→ids。
+
+    倫理卷的 notes 有 glossary[].ids（人工策展）；其餘四套無，改以
+    `{series}_themes.json` 的 themes[].terms＋concepts＋genesis_principles 為詞彙，
+    在 chunk_*.json（{id,p,r}）全文搜尋命中 → 取詞頻最高的前 per_term 個 chunk id
+    （指向該概念最核心的對話）。id→seq_label 共用 ethics 的 seq_label_map。
+    """
+    tmp = _tmp(series)
+    themes = json.load(open(tmp / f"{series}_themes.json", encoding="utf-8"))
+    vocab = set()
+    for t in themes.get("themes", []):
+        for w in t.get("terms", []):
+            vocab.add(w)
+    for key in ("concepts", "genesis_principles"):
+        for w in themes.get(key, []):
+            if isinstance(w, str):
+                vocab.add(w)
+    chunks = []
+    for f in sorted(tmp.glob("chunk_*.json")):
+        for c in json.load(open(f, encoding="utf-8")):
+            chunks.append((c["id"], (c.get("p", "") or "") + " " + (c.get("r", "") or "")))
+    term_keys, term_ids = {}, {}
+    for term in vocab:
+        keys = term_match_keys(term)
+        if not keys:
+            continue
+        scored = []
+        for cid, text in chunks:
+            cnt = sum(text.count(k) for k in keys)
+            if cnt:
+                scored.append((cnt, cid))
+        if not scored:
+            continue
+        scored.sort(key=lambda x: -x[0])
+        seen, ids = set(), []
+        for _, cid in scored:
+            if cid not in seen:
+                seen.add(cid)
+                ids.append(cid)
+            if len(ids) >= per_term:
+                break
+        term_keys[term] = keys
+        term_ids[term] = ids
+    prefix_map = json.load(open(_tmp("ethics") / "seq_label_map.json", encoding="utf-8"))
+    return term_keys, term_ids, prefix_map
+
+
+def load_for(series):
+    """ethics 走 notes glossary；其餘走 chunk 全文搜尋。"""
+    return load_terms(series) if series == "ethics" else load_terms_chunks(series)
+
+
 def cmd_dry(series, book, ch):
-    term_keys, term_ids, pm = load_terms(series)
+    term_keys, term_ids, pm = load_for(series)
     f = _tmp(series) / "draft" / book / f"{int(ch):02d}.html"
     html = strip_existing(f.read_text(encoding="utf-8"))
     content, _ = split_content_recap(html)
@@ -218,7 +271,7 @@ def cmd_dry(series, book, ch):
 
 
 def cmd_tag(series, pairs):
-    term_keys, term_ids, pm = load_terms(series)
+    term_keys, term_ids, pm = load_for(series)
     for book, n in pairs:
         d = _tmp(series) / "draft" / book
         tot = 0
