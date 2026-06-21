@@ -914,9 +914,227 @@ const mid: AlphabetSpec = {
   ],
 };
 
+// ── 腓尼基-布匿文 phn（22 子音 abjad，字母之母）────────────────────────────
+const phn: AlphabetSpec = {
+  language: "phn",
+  title: "腓尼基字母 · 𐤀𐤋𐤐 𐤁𐤕",
+  intro: "22 個子音、由右至左，是希臘／希伯來／拉丁字母的共同祖型。字序與希伯來相同。例字為腓尼基/布匿詞（需 Noto 等字型才顯示，否則為方框）。",
+  rtl: true,
+  groups: [
+    {
+      key: "letters", label: "22 個字母",
+      letters: [
+        { char: "𐤀", name: "ʾalp 阿勒夫", sound: "ʾ（喉塞）", example: "𐤀𐤋", gloss: "El（神）" },
+        { char: "𐤁", name: "bet 貝特", sound: "b", example: "𐤁𐤏𐤋", gloss: "Baal（巴力）" },
+        { char: "𐤂", name: "gaml 伽姆勒", sound: "g", example: "𐤂𐤓", gloss: "客旅" },
+        { char: "𐤃", name: "delt 戴勒特", sound: "d", example: "𐤃𐤋", gloss: "門" },
+        { char: "𐤄", name: "he 黑", sound: "h", example: "𐤄𐤀", gloss: "這" },
+        { char: "𐤅", name: "waw 瓦烏", sound: "w", example: "𐤅", gloss: "和" },
+        { char: "𐤆", name: "zen 贊", sound: "z", example: "𐤆𐤁𐤇", gloss: "獻祭" },
+        { char: "𐤇", name: "ḥet 黑特", sound: "ḥ（咽擦）", example: "𐤇𐤉", gloss: "活的" },
+        { char: "𐤈", name: "ṭet 泰特", sound: "ṭ（重音 t）", example: "𐤈𐤁", gloss: "好" },
+        { char: "𐤉", name: "yod 約德", sound: "y", example: "𐤉𐤃", gloss: "手" },
+        { char: "𐤊", name: "kaf 卡夫", sound: "k", example: "𐤊𐤄𐤍", gloss: "祭司" },
+        { char: "𐤋", name: "lamd 拉姆德", sound: "l", example: "𐤋𐤁", gloss: "心" },
+        { char: "𐤌", name: "mem 梅姆", sound: "m", example: "𐤌𐤋𐤊", gloss: "君王" },
+        { char: "𐤍", name: "nun 努恩", sound: "n", example: "𐤍𐤐𐤔", gloss: "魂" },
+        { char: "𐤎", name: "semk 撒梅克", sound: "s", example: "𐤎𐤐𐤓", gloss: "書" },
+        { char: "𐤏", name: "ʿen 阿因", sound: "ʿ（濁咽）", example: "𐤏𐤁𐤃", gloss: "僕人" },
+        { char: "𐤐", name: "pe 佩", sound: "p", example: "𐤐𐤍", gloss: "面" },
+        { char: "𐤑", name: "ṣade 察德", sound: "ṣ（重音 s）", example: "𐤑𐤃𐤍", gloss: "西頓" },
+        { char: "𐤒", name: "qof 科夫", sound: "q（小舌 k）", example: "𐤒𐤓𐤕", gloss: "城（迦太基 Qart）" },
+        { char: "𐤓", name: "raš 雷什", sound: "r", example: "𐤓𐤁", gloss: "大" },
+        { char: "𐤔", name: "šin 辛", sound: "š（sh）", example: "𐤔𐤌𐤔", gloss: "太陽" },
+        { char: "𐤕", name: "taw 陶", sound: "t", example: "𐤕𐤍𐤕", gloss: "塔尼特（女神）" },
+      ],
+    },
+  ],
+};
+
+// ── 烏加列文 uga（30 個楔形字母 abjad）──────────────────────────────────────
+const uga: AlphabetSpec = {
+  language: "uga",
+  title: "烏加列字母 · 𐎜𐎂𐎗𐎚",
+  intro: "青銅時代迦南宗教的楔形「字母」——用楔形筆畫寫出的 30 個子音字母（含 3 個 ʾ 母音變體）。由左至右。例字取自《巴力史詩》（需楔形字型）。",
+  groups: [
+    {
+      key: "letters", label: "30 個楔形字母",
+      letters: [
+        { char: "𐎀", name: "ʾalpa", sound: "ʾa", example: "𐎛𐎍", gloss: "El（神）" },
+        { char: "𐎁", name: "beta", sound: "b", example: "𐎁𐎓𐎍", gloss: "Baal（巴力）" },
+        { char: "𐎂", name: "gamla", sound: "g", example: "𐎂", gloss: "g" },
+        { char: "𐎃", name: "ḫa", sound: "ḫ（喉擦）", example: "𐎃", gloss: "ḫ" },
+        { char: "𐎄", name: "delta", sound: "d", example: "𐎄", gloss: "d" },
+        { char: "𐎅", name: "ho", sound: "h", example: "𐎅", gloss: "h" },
+        { char: "𐎆", name: "wo", sound: "w", example: "𐎆", gloss: "w" },
+        { char: "𐎇", name: "zeta", sound: "z", example: "𐎇", gloss: "z" },
+        { char: "𐎈", name: "ḥota", sound: "ḥ（咽擦）", example: "𐎈", gloss: "ḥ" },
+        { char: "𐎉", name: "ṭet", sound: "ṭ（重音 t）", example: "𐎉", gloss: "ṭ" },
+        { char: "𐎊", name: "yod", sound: "y", example: "𐎊", gloss: "y" },
+        { char: "𐎋", name: "kaf", sound: "k", example: "𐎋", gloss: "k" },
+        { char: "𐎌", name: "šin", sound: "š（sh）", example: "𐎌", gloss: "š" },
+        { char: "𐎍", name: "lamda", sound: "l", example: "𐎍", gloss: "l" },
+        { char: "𐎎", name: "mem", sound: "m", example: "𐎎𐎍𐎋", gloss: "君王" },
+        { char: "𐎏", name: "ḏal", sound: "ḏ（濁齒擦）", example: "𐎏", gloss: "ḏ" },
+        { char: "𐎐", name: "nun", sound: "n", example: "𐎐", gloss: "n" },
+        { char: "𐎑", name: "ẓu", sound: "ẓ", example: "𐎑", gloss: "ẓ" },
+        { char: "𐎒", name: "samka", sound: "s", example: "𐎒", gloss: "s" },
+        { char: "𐎓", name: "ʿain", sound: "ʿ（濁咽）", example: "𐎓𐎁𐎄", gloss: "僕人" },
+        { char: "𐎔", name: "pu", sound: "p", example: "𐎔", gloss: "p" },
+        { char: "𐎕", name: "ṣade", sound: "ṣ（重音 s）", example: "𐎕", gloss: "ṣ" },
+        { char: "𐎖", name: "qopa", sound: "q（小舌 k）", example: "𐎖", gloss: "q" },
+        { char: "𐎗", name: "raša", sound: "r", example: "𐎗", gloss: "r" },
+        { char: "𐎘", name: "ṯanna", sound: "ṯ（無聲齒擦）", example: "𐎘", gloss: "ṯ" },
+        { char: "𐎙", name: "ġain", sound: "ġ（濁喉擦）", example: "𐎙", gloss: "ġ" },
+        { char: "𐎚", name: "to", sound: "t", example: "𐎚", gloss: "t" },
+        { char: "𐎛", name: "ʾi", sound: "ʾi", example: "𐎛𐎍", gloss: "El（神）" },
+        { char: "𐎜", name: "ʾu", sound: "ʾu", example: "𐎜", gloss: "ʾu" },
+        { char: "𐎝", name: "ssu（分隔）", sound: "詞/音分隔", example: "𐎝", gloss: "分隔符" },
+      ],
+    },
+  ],
+};
+
+// ── 古埃及文 egy（24 個單音符，textbook「字母」）──────────────────────────────
+const egy: AlphabetSpec = {
+  language: "egy",
+  title: "聖書體單音符 · 𓂝𓃀𓎡",
+  intro: "埃及聖書體有上千符號（音符／義符／決定符）。入門先學 24 個「單音符（uniliteral）」——相當於字母。聖書體不寫母音；轉寫用學界慣例。另有雙音符與決定符（見註）。需聖書體字型。",
+  groups: [
+    {
+      key: "uniliteral", label: "24 個單音符",
+      note: "雙音符（如 𓏠 mn、𓇋𓏏 jt）與決定符（義類符號）入門後再學。",
+      letters: [
+        { char: "𓄿", name: "禿鷲 ꜣ", sound: "ꜣ（喉/近 a）", example: "𓄿", gloss: "ꜣ" },
+        { char: "𓇋", name: "蘆葦 j", sound: "j／i（半母音）", example: "𓇋𓏏𓆑", gloss: "父" },
+        { char: "𓏭", name: "雙蘆葦 y", sound: "y", example: "𓏭", gloss: "y" },
+        { char: "𓂝", name: "手臂 ꜥ", sound: "ʿ（濁咽）", example: "𓂝", gloss: "手臂／ʿ" },
+        { char: "𓅱", name: "鵪鶉雛 w", sound: "w／u", example: "𓅱", gloss: "w" },
+        { char: "𓃀", name: "腿足 b", sound: "b", example: "𓃀", gloss: "b" },
+        { char: "𓊪", name: "蓆凳 p", sound: "p", example: "𓊪𓏏𓎛", gloss: "卜塔（Ptah）" },
+        { char: "𓆑", name: "角蝰 f", sound: "f", example: "𓆑", gloss: "f" },
+        { char: "𓅓", name: "貓頭鷹 m", sound: "m", example: "𓅓", gloss: "m" },
+        { char: "𓈖", name: "水波 n", sound: "n", example: "𓈖", gloss: "水／n" },
+        { char: "𓂋", name: "口 r", sound: "r", example: "𓂋", gloss: "口／r" },
+        { char: "𓉔", name: "蘆棚 h", sound: "h", example: "𓉔", gloss: "h" },
+        { char: "𓎛", name: "撚芯 ḥ", sound: "ḥ（咽擦）", example: "𓎛", gloss: "ḥ" },
+        { char: "𓐍", name: "胎盤 ḫ", sound: "ḫ（喉擦）", example: "𓐍", gloss: "ḫ" },
+        { char: "𓄡", name: "獸腹 ẖ", sound: "ẖ（軟顎擦）", example: "𓄡", gloss: "ẖ" },
+        { char: "𓋴", name: "摺布 s", sound: "s", example: "𓋴", gloss: "s" },
+        { char: "𓈙", name: "水池 š", sound: "š（sh）", example: "𓈙", gloss: "池／š" },
+        { char: "𓈎", name: "山坡 q", sound: "q（ḳ，小舌）", example: "𓈎", gloss: "q" },
+        { char: "𓎡", name: "提籃 k", sound: "k", example: "𓎡", gloss: "籃／k" },
+        { char: "𓎼", name: "甕座 g", sound: "g", example: "𓎼", gloss: "g" },
+        { char: "𓏏", name: "麵包 t", sound: "t", example: "𓏏", gloss: "麵包／t" },
+        { char: "𓍿", name: "繫繩 ṯ", sound: "ṯ（tj／ch）", example: "𓍿", gloss: "ṯ" },
+        { char: "𓂧", name: "手 d", sound: "d", example: "𓂧", gloss: "手／d" },
+        { char: "𓆓", name: "眼鏡蛇 ḏ", sound: "ḏ（dj）", example: "𓆓𓂧", gloss: "穩定（djed）" },
+      ],
+    },
+  ],
+};
+
+// ── 古波斯文 peo（阿契美尼德楔形：半音節）────────────────────────────────────
+const peo: AlphabetSpec = {
+  language: "peo",
+  title: "古波斯楔形文字 · 𐎠𐎼𐎡𐎹",
+  intro: "阿契美尼德王室文字：3 個母音符＋一組「子音＋a（少數＋i/u）」音節符＋少量表意符與詞分隔。由左至右。例字取自貝希斯敦銘文（需楔形字型）。",
+  groups: [
+    {
+      key: "vowels", label: "母音",
+      letters: [
+        { char: "𐎠", name: "a", sound: "a", example: "𐎠𐎭𐎶", gloss: "我（adam）" },
+        { char: "𐎡", name: "i", sound: "i", example: "𐎡", gloss: "i" },
+        { char: "𐎢", name: "u", sound: "u", example: "𐎢", gloss: "u" },
+      ],
+    },
+    {
+      key: "syllables", label: "音節符號（子音＋a，部分另有 i/u 形）",
+      letters: [
+        { char: "𐎣", name: "ka", sound: "ka", example: "𐎣", gloss: "ka" },
+        { char: "𐎥", name: "ga", sound: "ga", example: "𐎥", gloss: "ga" },
+        { char: "𐎧", name: "xa", sound: "xa（喉擦）", example: "𐎧𐏁𐎠𐎹𐎰𐎡𐎹", gloss: "王（xšāyaθiya）" },
+        { char: "𐎨", name: "ça", sound: "ça", example: "𐎨", gloss: "ça" },
+        { char: "𐎩", name: "ja", sound: "ja", example: "𐎩", gloss: "ja" },
+        { char: "𐎫", name: "ta", sound: "ta", example: "𐎫", gloss: "ta" },
+        { char: "𐎭", name: "da", sound: "da", example: "𐎭𐎠𐎼𐎹𐎺𐎢𐏁", gloss: "大流士（Dārayavauš）" },
+        { char: "𐎰", name: "θa", sound: "θa（th）", example: "𐎰", gloss: "θa" },
+        { char: "𐎱", name: "pa", sound: "pa", example: "𐎱", gloss: "pa" },
+        { char: "𐎲", name: "ba", sound: "ba", example: "𐎲", gloss: "ba" },
+        { char: "𐎳", name: "fa", sound: "fa", example: "𐎳", gloss: "fa" },
+        { char: "𐎴", name: "na", sound: "na", example: "𐎴", gloss: "na" },
+        { char: "𐎶", name: "ma", sound: "ma", example: "𐎶", gloss: "ma" },
+        { char: "𐎹", name: "ya", sound: "ya", example: "𐎹", gloss: "ya" },
+        { char: "𐎺", name: "va", sound: "va", example: "𐎺", gloss: "va" },
+        { char: "𐎼", name: "ra", sound: "ra", example: "𐎼", gloss: "ra" },
+        { char: "𐎻", name: "la", sound: "la", example: "𐎻", gloss: "la" },
+        { char: "𐎿", name: "sa", sound: "sa", example: "𐎿", gloss: "sa" },
+        { char: "𐏀", name: "za", sound: "za", example: "𐏀", gloss: "za" },
+        { char: "𐏁", name: "ša", sound: "ša（sh）", example: "𐏁", gloss: "ša" },
+        { char: "𐏂", name: "ha", sound: "ha", example: "𐏂", gloss: "ha" },
+      ],
+    },
+    {
+      key: "logograms", label: "表意符與分隔",
+      letters: [
+        { char: "𐏃", name: "Auramazdā（表意符）", sound: "阿胡拉‧馬茲達", example: "𐏃", gloss: "至高神" },
+        { char: "𐏐", name: "詞分隔符", sound: "斜楔，分開單詞", example: "𐏐", gloss: "分隔" },
+      ],
+    },
+  ],
+};
+
+// ── 阿卡德文 akk（楔形文字入門：非字母，列代表性符號）────────────────────────
+const akk: AlphabetSpec = {
+  language: "akk",
+  title: "阿卡德楔形文字（入門）· 𒀝𒅗𒁺𒌑",
+  intro: "阿卡德楔形不是字母——有數百個符號，分「音節符（CV／VC／CVC）」「表意符（一符一詞）」「限定符（標類別、不發音）」三類。此處列代表性範例入門，學習以拉丁轉寫為主。需楔形字型。",
+  groups: [
+    {
+      key: "syllabograms", label: "音節符（範例）",
+      letters: [
+        { char: "𒀀", name: "a", sound: "a", example: "𒀀", gloss: "a／水（logogram A）" },
+        { char: "𒂊", name: "e", sound: "e", example: "𒂊", gloss: "e" },
+        { char: "𒄿", name: "i", sound: "i", example: "𒄿", gloss: "i" },
+        { char: "𒌋", name: "u", sound: "u", example: "𒌋", gloss: "u" },
+        { char: "𒁀", name: "ba", sound: "ba", example: "𒁀", gloss: "ba" },
+        { char: "𒁕", name: "da", sound: "da", example: "𒁕", gloss: "da" },
+        { char: "𒂵", name: "ga", sound: "ga", example: "𒂵", gloss: "ga" },
+        { char: "𒅗", name: "ka", sound: "ka", example: "𒅗", gloss: "ka" },
+        { char: "𒆷", name: "la", sound: "la", example: "𒆷", gloss: "la" },
+        { char: "𒈠", name: "ma", sound: "ma", example: "𒈠", gloss: "ma" },
+        { char: "𒈾", name: "na", sound: "na", example: "𒈾", gloss: "na" },
+        { char: "𒊭", name: "ša", sound: "ša（sh）", example: "𒊭", gloss: "ša" },
+      ],
+    },
+    {
+      key: "logograms", label: "常見表意符（一符一詞）",
+      letters: [
+        { char: "𒀭", name: "DINGIR / AN", sound: "ilu（神）", example: "𒀭", gloss: "神／天" },
+        { char: "𒈗", name: "LUGAL", sound: "šarru（王）", example: "𒈗", gloss: "君王" },
+        { char: "𒂍", name: "É", sound: "bītu（屋）", example: "𒂍", gloss: "房屋／殿" },
+        { char: "𒈬", name: "LÚ", sound: "awīlu（人）", example: "𒈬", gloss: "人" },
+        { char: "𒆳", name: "KUR", sound: "mātu（地）", example: "𒆳", gloss: "land／山" },
+        { char: "𒀀𒀀", name: "A.A", sound: "—", example: "𒀀", gloss: "（複合範例）" },
+      ],
+    },
+    {
+      key: "determinatives", label: "限定符（標類別，不發音）",
+      note: "寫在詞前/後，標示該詞屬「神／人／地名／木製品」等類別。",
+      letters: [
+        { char: "𒀭", name: "DINGIR（神名前）", sound: "不發音", example: "𒀭𒀫𒌓", gloss: "馬爾杜克前的神限定符" },
+        { char: "𒁹", name: "DIŠ（男人名前）", sound: "不發音", example: "𒁹", gloss: "男性人名限定符" },
+        { char: "𒄑", name: "GIŠ（木製品前）", sound: "不發音", example: "𒄑", gloss: "木製品限定符" },
+        { char: "𒆳", name: "KUR（地/國名前）", sound: "不發音", example: "𒆳", gloss: "地名限定符" },
+      ],
+    },
+  ],
+};
+
 export const ALPHABETS: Record<string, AlphabetSpec> = {
   de, fr, ja, grc, la, hbo,
   att, arc, chu, ar, syr, cop, hy, ka, sa, pra, bo, gez, mid,
+  phn, uga, egy, peo, akk,
 };
 
 /** 取某語言的字母表（無則 undefined；英文不提供，使用者已熟）。 */

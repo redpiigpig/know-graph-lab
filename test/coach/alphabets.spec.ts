@@ -25,6 +25,13 @@ describe("字母教學資料 alphabets", () => {
       expect(alphabetForClient(lang), `缺 ${lang} 字母表`).toBeTruthy();
   });
 
+  it("古文字也有文字教學（楔形/聖書體/腓尼基）", () => {
+    for (const lang of ["phn", "uga", "egy", "peo", "akk"])
+      expect(alphabetForClient(lang), `缺 ${lang} 文字教學`).toBeTruthy();
+    expect(alphabetForClient("phn")!.groups[0].letters.length).toBe(22); // 腓尼基 22 子音
+    expect(alphabetForClient("egy")!.groups[0].letters.length).toBe(24); // 埃及 24 單音符
+  });
+
   it("RTL 文字標 rtl=true（希伯來/亞蘭/阿拉伯/敘利亞/曼達）", () => {
     for (const lang of ["hbo", "arc", "ar", "syr", "mid"]) expect(alphabetForClient(lang)!.rtl).toBe(true);
     for (const lang of ["chu", "hy", "ka", "sa", "bo", "gez"]) expect(alphabetForClient(lang)!.rtl).toBeFalsy();
