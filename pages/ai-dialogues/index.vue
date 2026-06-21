@@ -5,6 +5,11 @@
   >
     <AppHeader title="AI 對話錄" :back="{ to: '/', label: '返回主頁' }" :editable="false">
       <template #actions>
+        <form @submit.prevent="doLookup" class="flex items-center gap-1">
+          <input v-model="lookupSeq" placeholder="編號查閱 C-/G-"
+            class="w-32 px-2 py-1 text-xs font-mono rounded border border-gray-200 focus:border-blue-400 outline-none" />
+          <button type="submit" class="text-xs px-2 py-1 rounded bg-blue-600 text-white hover:bg-blue-700">查</button>
+        </form>
         <span class="text-xs text-gray-400">{{ totalCount }} 筆對話</span>
       </template>
     </AppHeader>
@@ -299,6 +304,7 @@
                     </div>
                   </div>
                   <div class="flex items-center gap-1.5 shrink-0">
+                    <span v-if="entry.seq_label" class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-gray-100 text-gray-500" title="對話編號（可在書中引用查閱）">{{ entry.seq_label }}</span>
                     <span class="text-xs text-gray-400">{{
                       formatTime(entry.dialogue_time)
                     }}</span>
@@ -516,6 +522,24 @@
         </div>
       </div>
     </div>
+
+    <!-- 編號查閱結果 modal -->
+    <div v-if="lookupOpen" class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4" @click="lookupOpen = false">
+      <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[80vh] overflow-auto p-6 shadow-xl" @click.stop>
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-sm font-mono px-2 py-0.5 rounded bg-gray-100 text-gray-600">{{ lookupResult?.seq_label }}</span>
+          <button @click="lookupOpen = false" class="text-gray-400 hover:text-gray-700">×</button>
+        </div>
+        <div v-if="lookupErr" class="text-sm text-rose-600">{{ lookupErr }}</div>
+        <template v-else-if="lookupResult">
+          <p class="text-xs text-gray-400 mb-3">{{ lookupResult.dialogue_date }} {{ lookupResult.source === 'chatgpt' ? 'ChatGPT' : 'Gemini' }}</p>
+          <h4 class="text-xs font-semibold text-gray-500 mb-1">提問</h4>
+          <p class="text-sm text-gray-800 whitespace-pre-wrap mb-4">{{ lookupResult.prompt }}</p>
+          <h4 class="text-xs font-semibold text-gray-500 mb-1">回應</h4>
+          <p class="text-sm text-gray-700 whitespace-pre-wrap">{{ lookupResult.response }}</p>
+        </template>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -549,6 +573,24 @@ const newCatParent = ref<string | null>(null);
 const expandedCats = ref<string[]>([]);
 const deleteTarget = ref<any>(null);
 const quickCatTarget = ref<string | null>(null);
+
+// 編號查閱（書中引用 C-/G- 回查原始對話）
+const lookupSeq = ref("");
+const lookupOpen = ref(false);
+const lookupErr = ref("");
+const lookupResult = ref<any>(null);
+async function doLookup() {
+  const seq = lookupSeq.value.trim();
+  if (!seq) return;
+  lookupOpen.value = true;
+  lookupErr.value = "";
+  lookupResult.value = null;
+  try {
+    lookupResult.value = await $fetch("/api/ai-dialogues/by-seq", { query: { seq } });
+  } catch (e: any) {
+    lookupErr.value = e?.data?.message ?? "查閱失敗";
+  }
+}
 
 // ── Auth helper ────────────────────────────────────────────────────
 async function authHeader() {

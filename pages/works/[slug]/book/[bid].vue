@@ -142,4 +142,17 @@ onBeforeUnmount(() => observer?.disconnect())
 .book-prose :deep(blockquote) { @apply border-l-4 border-violet-200 pl-4 italic text-gray-600 my-5; }
 .book-prose :deep(ul) { @apply list-disc pl-6 mb-4 space-y-1 text-[15px] leading-relaxed text-gray-800; }
 .book-prose :deep(strong) { @apply font-semibold text-gray-900; }
+/* 序／跋 */
+.book-prose :deep(.vol-preface), .book-prose :deep(.vol-coda) { @apply mb-12 px-5 py-5 rounded-2xl bg-violet-50/40 border border-violet-100; }
+.book-prose :deep(.vol-preface h2), .book-prose :deep(.vol-coda h2) { @apply text-xl text-violet-800 mt-0 mb-4; }
+.book-prose :deep(.vol-preface p), .book-prose :deep(.vol-coda p) { @apply text-[15px] leading-[2] text-gray-700; }
+/* 章末摘要與論證分析圖 */
+.book-prose :deep(.chapter-recap) { @apply mt-8 pt-5 border-t border-dashed border-gray-200; }
+.book-prose :deep(.chapter-recap h3) { @apply text-sm font-bold text-violet-600 uppercase tracking-widest mt-5 mb-2.5; }
+.book-prose :deep(.recap-points) { @apply list-disc pl-6 space-y-1 text-[14px] text-gray-700; }
+.book-prose :deep(.argmap) { @apply flex flex-col items-stretch gap-1.5 my-3 max-w-xl; }
+.book-prose :deep(.arg-premise) { @apply text-[13px] leading-relaxed text-gray-700 bg-gray-50 border border-gray-200 rounded-lg px-3 py-2; }
+.book-prose :deep(.arg-step) { @apply text-[13px] leading-relaxed text-violet-800 bg-violet-50 border border-violet-200 rounded-lg px-3 py-2; }
+.book-prose :deep(.arg-conclusion) { @apply text-[13px] leading-relaxed font-medium text-emerald-900 bg-emerald-50 border border-emerald-300 rounded-lg px-3 py-2; }
+.book-prose :deep(.arg-op) { @apply text-center text-gray-400 text-xs leading-none; }
 </style>

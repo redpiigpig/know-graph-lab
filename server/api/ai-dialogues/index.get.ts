@@ -28,7 +28,7 @@ export default defineEventHandler(async (event) => {
     let query = supabase
       .from(tableName)
       .select(`
-        id, dialogue_date, dialogue_time, prompt, response
+        id, seq_label, dialogue_date, dialogue_time, prompt, response
       `, { count: 'exact' })
       .order('dialogue_date', { ascending: false })
       .order('dialogue_time', { ascending: false })
