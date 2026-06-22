@@ -6,24 +6,24 @@
    "branch": "倫理學三部曲",
    "books": [
     {
-     "id": "A",
+     "id": "A1",
      "title": "愛的萬物論",
      "subtitle": "純粹個人倫理學：主體、誠實與愛的生成",
-     "file": "/content/works/genesis/A.html",
+     "file": "/content/works/genesis/A1.html",
      "nChapters": 8
     },
     {
-     "id": "B",
+     "id": "A2",
      "title": "虛構的烏托邦",
      "subtitle": "群體、社會與制度性的良善",
-     "file": "/content/works/genesis/B.html",
+     "file": "/content/works/genesis/A2.html",
      "nChapters": 13
     },
     {
-     "id": "C",
+     "id": "A3",
      "title": "人類之子",
      "subtitle": "應用倫理——生命、動物、環境、星球、AI",
-     "file": "/content/works/genesis/C.html",
+     "file": "/content/works/genesis/A3.html",
      "nChapters": 9
     }
    ]
