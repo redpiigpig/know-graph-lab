@@ -217,7 +217,7 @@ agent fan-out 結果不可重現、難稽核。改用**純函式候選 prelabel 
 第三案＝把已分類的「創生哲學」對話**綜整成整套學術專書**，掛在 /works `genesis-philosophy` 卡片下。詳見 [[project_ai_dialogues_genesis_philosophy]]。
 
 ### 已完成並上線
-- **五大主題 15 冊全數 v2 精修＋序跋＋每節級引用完工（2026-06-22）**：倫理 A8/B13/C9（A 為 v2.1）、認識論 E1 8/E2 10/E3 6、本體論 O1 8/O2 6/O3 7、價值論 V1 6/V2 6、存有論 B1 7/B2 7/B3 7。每章皆 chapter-recap+argmap、英文首現、公式先論述後導出、越層紅線、每節「本節主要依據對話」引用＋章末彙整，各冊序跋齊備。檔在 `public/content/works/genesis/{id}.html`；manifest `public/content/works/genesis-philosophy-books.json`（`{groups:[{branch,books:[{id,title,subtitle,file,nChapters}]}]}`）。治理文件＝各 `c:/tmp/genesis_{ethics,epi,ont,val,bei}/intro_schedule.md`。
+- **五大主題 15 冊全數 v2 精修＋序跋＋每節級引用完工（2026-06-22）**：倫理 M1 8/M2 13/M3 9（v2.1）、認識論 E1 8/E2 10/E3 6、本體論 O1 8/O2 6/O3 7、價值論 V1 6/V2 6、存有論 B1 7/B2 7/B3 7。每章皆 chapter-recap+argmap、英文首現、公式先論述後導出、越層紅線、每節「本節主要依據對話」引用＋章末彙整，各冊序跋齊備。檔在 `public/content/works/genesis/{id}.html`；manifest `public/content/works/genesis-philosophy-books.json`（`{groups:[{branch,books:[{id,title,subtitle,file,nChapters}]}]}`）。治理文件＝各 `c:/tmp/genesis_{ethics,epi,ont,val,bei}/intro_schedule.md`。
 - reader：`pages/works/[slug]/index.vue`（書目依 branch 分組）＋`pages/works/[slug]/book/[bid].vue`（書→章 TOC＋鄰冊＋已加 .vol-preface/.vol-coda/.chapter-recap/.argmap 樣式）。book id 不可重複。
 - **對話編號系統**：`ai_dialogues_{chatgpt,gemini}.seq_label`＝C-#####(12,124)/G-#####(2,305)；/ai-dialogues 顯示＋頂部編號查閱框（`server/api/ai-dialogues/by-seq.get.ts`）。重編用 Management API（`SUPABASE_ACCESS_TOKEN`、ref `vloqgautkahgmqcwgfuo`、window-function UPDATE）。
 
@@ -232,7 +232,7 @@ agent fan-out 結果不可重現、難稽核。改用**純函式候選 prelabel 
 - **✅ A《愛的萬物論》9 章**（commit `2dee7ba9`）：新地基章 A1（定義倫理場＋論證為何可數學化＝描述模型非控制模型＋個人尺度符號總表）；A3 主體性生成改現象學推導（胡塞爾/列維納斯/沙特/海德格/梅洛龐蒂/榮格→關係性/身體性/歷時性，**去「裂口」、不命名「生成三要素」**）；A4 hi/fc/vc **先論述後導出**＋鏡像神經元；A7 愛的公式＝倫理之愛 agape，補保羅愛之頌(林前13)＋**信望愛由 L=hn₀×R×E 導出**(信→hn₀/望→R/愛→E)；A8 數學化抵抗清群體符號；A9 結語純個人。**A 序補「創生哲學撰寫旨趣」**（以現象學為工具接引宗教世界觀、面對多元流變時代的主體與意義；創生＝道生/緣生/易生/梵生跨傳統同源）。
 - **✅ B《虛構的烏托邦》13 章**（commit `adcb634a` 改 11 章、`5844137b` 加史 2 章）：原 A7意義→B2（H 後先論述再導出意義公式 M）；**新增人類社會倫理史兩章**＝B6「社會的起源與原始的倫理」(演化/人類學社會組成＋noble savage 霍布斯vs盧梭，H/EVI 判決)＋B7「政體的倫理史」(帝國/貴族/王權→民主→極權與革命，T/H 貫穿)；裂口異托邦留 B10。⚠️ **B 的「演化」＝社會文化演化，與 C 的宇宙/生物演化分層**，B 不得用日擇/耗散結構/性善/反身自嗜。
 - **✅ C《人類之子》9 章**（commit `adcb634a`）：原 A8性善演化→C3「性善的宇宙演化根基」(接 C2 日擇)；**C9 結語加三大格言 capstone**(可以/應該/終將，「終將」扣 C2日擇＋C3)；C 為末卷可用 A/B 全部裝置(EVI/MHI/H/裂口異托邦在 C 合法)。
-- 三卷現況 **A8（v2.1）/ B13 / C9**，manifest 同步。組裝一律 `python scripts/assemble_genesis_book.py ethics A 8 B 13 C 9`（改 draft 後重跑即重組部署；序跋/章皆從 `c:/tmp/genesis_ethics/draft/{A,B,C}/` 讀）。
+- 三卷現況 **M1 8章（愛的萬物論，v2.1）/ M2 13章（虛構的烏托邦）/ M3 9章（人類之子）**，manifest 同步。**book id A/B/C→A1/A2/A3→最終 M1/M2/M3**（倫理=Morality，前綴與 E/O/V/B 一致；2026-06-22 定）。組裝一律 `python scripts/assemble_genesis_book.py ethics M1 8 M2 13 M3 9`（改 draft 後重跑即重組部署；draft 目錄已改名 `c:/tmp/genesis_ethics/draft/{M1,M2,M3}/`）。⚠️ 治理文件 intro_schedule §3 仍以 A/B/C 當「卷內章」簡寫（A=愛的萬物論、B=虛構的烏托邦、C=人類之子），對應 draft 目錄 M1/M2/M3。
 
 #### 🔄 A 卷 v2.1 再改版（2026-06-21，使用者 5+ 道指令，已部署）
 A《愛的萬物論》**9→8 章**重構（intro_schedule v2.1）：①**序自成一章**＝A1 序章（創生旨趣；刪 `draft/A/_preface.html`）；②**「數學化」與「誠實萬德之綱」合併**＝A4（誠實＝唯一通用變量→以 hi 為第一變數→生成整套個人尺度公式的正當性；倫理場 E 與符號**隨 hi 依序生成**、取消預先符號總表）；③A2**加 Sandel《正義》＋電車難題等思想實驗＋三古典限制＋晚近研究**（原 A4 §一三大路移入）；④A3**從兒童現象學起**＝第一照顧者/原生家庭→他者先於主體→**倫理學是第一哲學（列維納斯）**＋Freud/Jung 陰影情結→fc/vc 心理發生（本我/超我、面具/阿尼瑪‧阿尼姆斯）＋身體感→邊界＋發展心理學（Piaget/Kohlberg）＋**演化論動物倫理＋鏡像反射→同理心（個體尺度）**＋三特性最初即俱在（fc/vc 概念首現移至 A3，形式定義仍 A4）；⑤**愛的公式後就地收數學化反思、不另立章**＝原 A8 拆入 A4 前半＋A7 末。原 A1 地基章與原 A8 取消；原 A9 結語→A8（重寫對齊新弧）。
