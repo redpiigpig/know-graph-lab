@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-共用學習單字庫建置器 — 為語言教練 7 語各建一份「權威頻率/語料庫 + LLM 補繁中釋義」的策展字庫。
+共用學習單字庫建置器 — 為語言教練各語言建一份「權威頻率/語料庫 + LLM 補繁中釋義」的策展字庫。
 
 來源（皆免費 / 公有領域 / CC-BY）：
   en/de/fr  FrequencyWords (hermitdave, OpenSubtitles 頻率表) → 取前 N，依頻率分 CEFR 級帶
@@ -9,6 +9,12 @@
   grc       STEPBible TAGNT（譯者匯整希臘文新約 CC-BY）        → 詞元 + 英義 + 詞性 + 書卷，依新約頻率分帶
   hbo       STEPBible TAHOT（譯者匯整希伯來文舊約 CC-BY）      → 詞元 + 英義 + 詞性，依舊約頻率分帶
   la        Clementine Vulgate (seven1m/open-bibles, USFX)   → 表面詞頻 → LLM 還原詞元（武加大頻率分帶）
+  arc       STEPBible TAHOT 的亞蘭文段落（morph 首字 A）       → 詞元 + 英義 + 詞性（聖經亞蘭文，~600 詞窮盡）
+  att       STEPBible TAGNT（先共用 grc 新約語料為基底）        → 詞元 + 英義（古典希臘 Attic）
+  ar        Quran JSON (risan/quran-json)                    → 表面詞頻 → LLM 還原詞元（古蘭阿拉伯文）
+  sa        Bhagavad Gita (gita/gita, 天城體)                 → 表面詞頻 → LLM 還原詞元（梵文）
+  pi        VRI Tipiṭaka XML (VipassanaTech, 羅馬轉寫 UTF-16)  → 表面詞頻 → LLM 還原詞元（巴利文）
+  # 待補（語料零碎）：syr 敘利亞(SEDRA/CAL)、cop 科普特(Scriptorium CONLLU)、bo 藏文(OpenPecha)
 
 流程：
   harvest <lang|all>          下載來源 + 解析 → ledger（C:/tmp/vocab_bank/<lang>.candidates.jsonl）
@@ -42,7 +48,8 @@ LEDGER_DIR = Path("C:/tmp/vocab_bank")
 LEDGER_DIR.mkdir(parents=True, exist_ok=True)
 
 # ── 目標字數（grc/hbo 取語料庫實有詞元，可能略少於目標即整部語料窮盡）──────────────
-TARGETS = {"en": 30000, "de": 6000, "fr": 6000, "ja": 9000, "grc": 6000, "hbo": 8000, "la": 6000}
+TARGETS = {"en": 30000, "de": 6000, "fr": 6000, "ja": 9000, "grc": 6000, "hbo": 8000, "la": 6000,
+           "arc": 1000, "att": 6000, "ar": 6000, "sa": 3000, "pi": 6000}
 GLOSS_BATCH = 40          # 每次 LLM 一批詞數（deepseek ~30s/call，加大批量攤平延遲）
 UPSERT_BATCH = 200        # 每次寫 DB 筆數
 
@@ -407,6 +414,92 @@ def harvest_vulgate(target):
     return out
 
 
+def harvest_stepbible_aramaic(target):
+    """聖經亞蘭文：但以理／以斯拉的亞蘭文段落（TAHOT 中 morph 以 A 開頭者）。整部窮盡 ~700 詞元。"""
+    files = ["TAHOT%20Jos-Est%20-%20Translators%20Amalgamated%20Hebrew%20OT%20-%20STEPBible.org%20CC%20BY.txt",  # Ezra
+             "TAHOT%20Isa-Mal%20-%20Translators%20Amalgamated%20Hebrew%20OT%20-%20STEPBible.org%20CC%20BY.txt"]  # Daniel
+    seg_re = re.compile(r"\{?(H\d{4}[A-Z]?)=([֐-׿][֐-׿֑-ׇ]*)=([^/}=]*)")
+    freq, info = {}, {}
+    for fn in files:
+        txt = _http_text(f"{STEP_BASE}/{fn}")
+        for line in txt.splitlines():
+            head = line[:12]
+            if "." not in head or "#" not in head:
+                continue
+            cols = line.split("\t")
+            if len(cols) < 6 or not cols[5].startswith("A"):  # 只取亞蘭文（morph 首字 A）
+                continue
+            pos = None
+            pm = re.match(r"A([A-Z])", cols[5])
+            if pm:
+                pos = _HEB_POS.get(pm.group(1))
+            for m in seg_re.finditer(line):
+                strong, lemma, gloss = m.group(1), m.group(2), m.group(3).strip(" :»").split("»")[0].strip()
+                if strong.startswith("H9"):
+                    continue
+                freq[lemma] = freq.get(lemma, 0) + 1
+                if lemma not in info:
+                    info[lemma] = {"gloss": gloss or None, "pos": pos}
+    ranked = sorted(freq.items(), key=lambda kv: -kv[1])
+    out = []
+    for rank, (lemma, _c) in enumerate(ranked[:target], start=1):
+        meta = info[lemma]
+        out.append({"word": lemma, "reading": None, "pos": meta["pos"], "en_gloss": meta["gloss"],
+                    "category": _corpus_band(rank, "聖經亞蘭文"), "level": "入門" if rank <= 300 else "進階",
+                    "freq_rank": rank, "source": "stepbible"})
+    return out
+
+
+def _http_raw(url):
+    r = requests.get(url, timeout=300)
+    r.raise_for_status()
+    return r.content
+
+
+def _rank_surface(freq, target, corpus, source):
+    """表面詞頻 → 候選（詞元由 gloss 階段 LLM 還原，仿武加大）。多取 2.5x 緩衝。"""
+    ranked = sorted(freq.items(), key=lambda kv: -kv[1])
+    out = []
+    for rank, (surf, _c) in enumerate(ranked[:int(target * 2.5)], start=1):
+        out.append({"word": surf, "reading": None, "pos": None, "en_gloss": None,
+                    "category": _corpus_band(rank, corpus), "level": "入門" if rank <= 700 else "進階",
+                    "freq_rank": rank, "source": source})
+    return out
+
+
+def harvest_quran_arabic(target):
+    """古蘭阿拉伯文表面詞頻（去 harakat／tatweel，alef-wasla 正規化）。"""
+    data = json.loads(_http_text("https://raw.githubusercontent.com/risan/quran-json/main/data/quran.json"))
+    text = json.dumps(data, ensure_ascii=False).replace("ٱ", "ا")
+    text = re.sub(r"[ً-ْٰـ]", "", text)
+    freq = {}
+    for w in re.findall(r"[ء-ي]{2,}", text):
+        freq[w] = freq.get(w, 0) + 1
+    return _rank_surface(freq, target, "古蘭", "quran-surface")
+
+
+def harvest_sanskrit(target):
+    """梵文天城體表面詞頻（《薄伽梵歌》語料；去 danda 與數字）。"""
+    data = json.loads(_http_text("https://raw.githubusercontent.com/gita/gita/main/data/verse.json"))
+    text = re.sub(r"[।॥०-९]", " ", " ".join(v.get("text", "") for v in data))
+    freq = {}
+    for w in re.findall(r"[ऀ-ॿ]{2,}", text):
+        freq[w] = freq.get(w, 0) + 1
+    return _rank_surface(freq, target, "梵典", "gita-surface")
+
+
+def harvest_pali(target):
+    """巴利文羅馬轉寫表面詞頻（VRI 三藏 XML；自動辨識 UTF-16）。"""
+    raw = _http_raw("https://raw.githubusercontent.com/VipassanaTech/tipitaka-xml/main/romn/s0201m.mul.xml")
+    txt = raw.decode("utf-16") if raw[:2] in (b"\xff\xfe", b"\xfe\xff") else raw.decode("utf-8", "ignore")
+    txt = re.sub(r"<[^>]+>", " ", txt)
+    freq = {}
+    for w in re.findall(r"[a-zA-ZāīūṅñṭḍṇḷṃĀĪŪṄÑṬḌṆḶṂ]{2,}", txt):
+        w = w.lower()
+        freq[w] = freq.get(w, 0) + 1
+    return _rank_surface(freq, target, "三藏", "tipitaka-surface")
+
+
 HARVESTERS = {
     "en": lambda: harvest_freqwords("en", TARGETS["en"]),
     "de": lambda: harvest_freqwords("de", TARGETS["de"]),
@@ -415,10 +508,18 @@ HARVESTERS = {
     "grc": lambda: harvest_stepbible_greek(TARGETS["grc"]),
     "hbo": lambda: harvest_stepbible_hebrew(TARGETS["hbo"]),
     "la": lambda: harvest_vulgate(TARGETS["la"]),
+    # 2026-06-22 新增 8 乾淨語料中的 5 個（其餘 syr/cop/bo 語料零碎，後補）
+    "arc": lambda: harvest_stepbible_aramaic(TARGETS["arc"]),     # 聖經亞蘭文（重用 TAHOT，A 開頭 morph）
+    "att": lambda: harvest_stepbible_greek(TARGETS["att"]),       # 古典希臘文（先共用 grc 新約語料為基底）
+    "ar": lambda: harvest_quran_arabic(TARGETS["ar"]),            # 古典阿拉伯文（古蘭表面詞頻）
+    "sa": lambda: harvest_sanskrit(TARGETS["sa"]),                # 梵文（薄伽梵歌天城體表面詞頻）
+    "pi": lambda: harvest_pali(TARGETS["pi"]),                    # 巴利文（三藏羅馬轉寫表面詞頻）
 }
 
 LANG_LABEL = {"en": "英文", "de": "德文", "fr": "法文", "ja": "日文",
-              "grc": "通用希臘文（新約 Koine）", "hbo": "聖經希伯來文", "la": "教會拉丁文（武加大）"}
+              "grc": "通用希臘文（新約 Koine）", "hbo": "聖經希伯來文", "la": "教會拉丁文（武加大）",
+              "arc": "聖經亞蘭文", "att": "古典希臘文（Attic）", "ar": "古典阿拉伯文（古蘭）",
+              "sa": "梵文", "pi": "巴利文"}
 
 
 def candidates_path(lang):
@@ -449,8 +550,9 @@ def cmd_harvest(lang, force=False):
 def _gloss_system(lang):
     base = (f"你是{LANG_LABEL[lang]}詞彙教師，為做宗教/神話/宗教學研究的學生編字庫。"
             "務必輸出繁體中文（台灣用語，不可簡體）。")
-    if lang == "la":
-        return base + "給你的是武加大拉丁文的「表面字形」，請還原為字典詞元（lemma）後再解釋。"
+    if lang in ("la", "ar", "sa", "pi"):
+        src = {"la": "武加大拉丁文", "ar": "古蘭阿拉伯文", "sa": "梵文天城體", "pi": "巴利文"}[lang]
+        return base + f"給你的是{src}的「表面字形」，請還原為字典詞元（lemma）後再解釋。"
     if lang in ("de", "fr"):
         g = "der/die/das 與複數" if lang == "de" else "le/la 陰陽性"
         return base + f"名詞請在 reading 標出冠詞與性別（{g}）。"
@@ -661,7 +763,7 @@ def main():
         cmd_status()
         return
     # all 的順序：使用者最常用/被卡住的古典語與較小語言先跑，英文（3 萬）量最大擺最後
-    ORDER = ["grc", "hbo", "la", "ja", "de", "fr", "en"]
+    ORDER = ["arc", "att", "ar", "sa", "pi", "grc", "hbo", "la", "ja", "de", "fr", "en"]
     langs = ORDER if a.lang == "all" else [a.lang]
     for lang in langs:
         if a.cmd in ("harvest", "run"):
