@@ -586,7 +586,8 @@ async function doLookup() {
   lookupErr.value = "";
   lookupResult.value = null;
   try {
-    lookupResult.value = await $fetch("/api/ai-dialogues/by-seq", { query: { seq } });
+    const h = await authHeader();
+    lookupResult.value = await $fetch("/api/ai-dialogues/by-seq", { query: { seq }, headers: h });
   } catch (e: any) {
     lookupErr.value = e?.data?.message ?? "查閱失敗";
   }

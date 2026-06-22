@@ -35,7 +35,8 @@
               </select>
             </div>
 
-            <article class="book-prose bg-white rounded-2xl border border-gray-100 px-6 py-8 sm:px-12 sm:py-10" v-html="html"></article>
+            <article class="book-prose bg-white rounded-2xl border border-gray-100 px-6 py-8 sm:px-12 sm:py-10"
+              v-html="html" @mouseover="onCiteOver" @mouseout="onCiteOut"></article>
 
             <!-- prev / next book -->
             <div class="mt-8 flex items-center justify-between gap-3">
@@ -49,6 +50,24 @@
         </div>
       </template>
     </div>
+
+    <!-- 引用 hover 預覽浮窗 -->
+    <Teleport to="body">
+      <div v-if="preview.visible" class="cite-pop" :style="{ top: preview.top + 'px', left: preview.left + 'px' }"
+        @mouseenter="cancelHide" @mouseleave="hidePreview">
+        <div class="cite-pop-head">
+          <span class="cite-pop-label">{{ preview.label }}</span>
+          <span v-if="preview.date" class="cite-pop-date">{{ preview.date }}</span>
+        </div>
+        <div v-if="preview.loading" class="cite-pop-loading">載入中…</div>
+        <div v-else-if="preview.error" class="cite-pop-error">{{ preview.error }}</div>
+        <template v-else>
+          <p v-if="preview.title" class="cite-pop-title">{{ preview.title }}</p>
+          <p v-if="preview.prompt" class="cite-pop-q"><span class="cite-pop-tag">問</span>{{ preview.prompt }}</p>
+          <p v-if="preview.response" class="cite-pop-a"><span class="cite-pop-tag">答</span>{{ preview.response }}</p>
+        </template>
+      </div>
+    </Teleport>
   </div>
 </template>
 
@@ -94,6 +113,75 @@ function scrollTo(id: string) {
   const el = document.getElementById(id)
   if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
+
+// ── 引用 hover 預覽 ───────────────────────────────────────────────
+// by-seq 端點需登入；本頁公開，故未登入時優雅提示。結果快取避免重抓。
+const supabase = useSupabaseClient()
+const preview = reactive({
+  visible: false, loading: false, error: '', label: '',
+  date: '', title: '', prompt: '', response: '', top: 0, left: 0,
+})
+const cite_cache = new Map<string, any>()
+let hideTimer: ReturnType<typeof setTimeout> | null = null
+let reqToken = 0
+
+function clamp(s: string | null | undefined, n: number) {
+  const t = (s ?? '').trim()
+  return t.length > n ? t.slice(0, n) + '…' : t
+}
+
+function placePopup(rect: DOMRect) {
+  const W = 360, margin = 12
+  let left = rect.left + window.scrollX
+  if (left + W > window.scrollX + window.innerWidth - margin)
+    left = window.scrollX + window.innerWidth - W - margin
+  preview.left = Math.max(window.scrollX + margin, left)
+  preview.top = rect.bottom + window.scrollY + 6
+}
+
+async function onCiteOver(e: MouseEvent) {
+  const a = (e.target as HTMLElement)?.closest?.('.cite-seq') as HTMLElement | null
+  if (!a) return
+  if (hideTimer) { clearTimeout(hideTimer); hideTimer = null }
+  const label = (a.textContent || '').trim()
+  if (!label) return
+  placePopup(a.getBoundingClientRect())
+  preview.label = label
+  preview.visible = true
+  preview.error = ''
+  const my = ++reqToken
+
+  if (cite_cache.has(label)) { Object.assign(preview, cite_cache.get(label), { visible: true, loading: false, error: '' }); return }
+
+  preview.loading = true
+  preview.title = preview.prompt = preview.response = preview.date = ''
+  try {
+    const { data: { session } } = await supabase.auth.getSession()
+    if (!session?.access_token) {
+      if (my === reqToken) { preview.loading = false; preview.error = '登入後可預覽對話內容' }
+      return
+    }
+    const d: any = await $fetch('/api/ai-dialogues/by-seq', {
+      query: { seq: label }, headers: { Authorization: `Bearer ${session.access_token}` },
+    })
+    const payload = {
+      date: d.dialogue_date || '', title: clamp(d.title, 60),
+      prompt: clamp(d.prompt, 160), response: clamp(d.response, 320),
+    }
+    cite_cache.set(label, payload)
+    if (my === reqToken) Object.assign(preview, payload, { loading: false })
+  } catch (err: any) {
+    if (my === reqToken) { preview.loading = false; preview.error = err?.data?.message || '查閱失敗' }
+  }
+}
+
+function onCiteOut(e: MouseEvent) {
+  const a = (e.target as HTMLElement)?.closest?.('.cite-seq')
+  if (!a) return
+  hidePreview()
+}
+function hidePreview() { hideTimer = setTimeout(() => { preview.visible = false }, 180) }
+function cancelHide() { if (hideTimer) { clearTimeout(hideTimer); hideTimer = null } }
 
 async function load() {
   pending.value = true
@@ -161,4 +249,22 @@ onBeforeUnmount(() => observer?.disconnect())
 /* 引用編號＝可點擊連結，連到 /ai-dialogues 編號查閱 */
 .book-prose :deep(.cite-seq) { @apply font-mono text-violet-500/80 no-underline rounded px-0.5 transition-colors; }
 .book-prose :deep(.cite-seq:hover) { @apply text-violet-700 underline bg-violet-50; }
+</style>
+
+<style scoped>
+/* 引用 hover 預覽浮窗（Teleport 到 body，故不放 scoped book-prose 內） */
+.cite-pop {
+  @apply fixed z-50 w-[360px] max-w-[calc(100vw-24px)] rounded-xl border border-violet-100 bg-white shadow-xl shadow-violet-100/50 px-4 py-3 text-left;
+}
+.cite-pop-head { @apply flex items-center justify-between mb-1.5; }
+.cite-pop-label { @apply font-mono text-xs font-semibold text-violet-600; }
+.cite-pop-date { @apply text-[11px] text-gray-400; }
+.cite-pop-loading { @apply text-xs text-gray-400 py-1; }
+.cite-pop-error { @apply text-xs text-amber-600 py-1; }
+.cite-pop-title { @apply text-sm font-semibold text-gray-800 mb-1.5 leading-snug; }
+.cite-pop-q, .cite-pop-a { @apply text-[12.5px] leading-relaxed text-gray-600 mb-1.5; }
+.cite-pop-a { @apply text-gray-700; }
+.cite-pop-tag { @apply inline-block mr-1.5 px-1 rounded text-[10px] font-medium align-[1px]; }
+.cite-pop-q .cite-pop-tag { @apply bg-gray-100 text-gray-500; }
+.cite-pop-a .cite-pop-tag { @apply bg-violet-100 text-violet-600; }
 </style>
