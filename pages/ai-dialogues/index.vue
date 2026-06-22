@@ -705,6 +705,12 @@ onMounted(async () => {
     loadSourceCounts(),
   ]);
   await loadEntries();
+  // 從書中引用連結（/ai-dialogues?seq=C-00241）進來時，自動開啟編號查閱
+  const seqParam = (useRoute().query.seq as string | undefined)?.trim();
+  if (seqParam) {
+    lookupSeq.value = seqParam;
+    await doLookup();
+  }
 });
 
 // Reload months when source filter changes, reload entries when any filter changes

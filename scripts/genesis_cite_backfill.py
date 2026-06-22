@@ -95,6 +95,13 @@ def section_seq_labels(body_text, term_keys, term_ids, prefix_map,
     return labels[:cap]
 
 
+def _link(labels):
+    """把 seq_label 清單轉成可點擊連結（連到 /ai-dialogues 編號查閱），、分隔。"""
+    return "、".join(
+        f'<a href="/ai-dialogues?seq={l}" class="cite-seq">{l}</a>' for l in labels
+    )
+
+
 def tag_html(html, term_keys, term_ids, prefix_map, **kw):
     """為每個內容 <h3> 小節插入 section-source，章末再加一行 chapter-source 彙整全章；
     冪等。回傳 (new_html, n_tagged)。
@@ -120,7 +127,7 @@ def tag_html(html, term_keys, term_ids, prefix_map, **kw):
         out.append(content[prev_end:e])
         if labels:
             out.append(
-                f'\n\n<p class="section-source">本節主要依據對話：{"、".join(labels)}</p>'
+                f'\n\n<p class="section-source">本節主要依據對話：{_link(labels)}</p>'
             )
             n += 1
         prev_end = e
@@ -133,7 +140,7 @@ def tag_html(html, term_keys, term_ids, prefix_map, **kw):
     if chap:
         chap_line = (
             f'\n\n<p class="section-source chapter-source">本章主要依據對話：'
-            f'{"、".join(chap)}</p>'
+            f'{_link(chap)}</p>'
         )
     return "".join(out) + chap_line + recap, n
 

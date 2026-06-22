@@ -50,9 +50,10 @@ def test_tag_html_idempotent():
     out1, n1 = gc.tag_html(html, tk, ti, pm)
     out2, n2 = gc.tag_html(out1, tk, ti, pm)
     assert n1 == 1 and n2 == 1  # 只標內容節，recap 不標
-    assert out1 == out2  # 冪等
-    assert "本節主要依據對話：C-00001" in out1
-    assert "本章主要依據對話：C-00001" in out1  # 章末彙整
+    assert out1 == out2  # 冪等（重跑 strip 連結也要乾淨）
+    # 引用為可點擊連結，連到 /ai-dialogues 編號查閱
+    assert '本節主要依據對話：<a href="/ai-dialogues?seq=C-00001" class="cite-seq">C-00001</a>' in out1
+    assert "本章主要依據對話：" in out1  # 章末彙整
     # 兩種 source（每節 + 章末）各一
     assert out1.count('class="section-source"') == 1
     assert out1.count("chapter-source") == 1

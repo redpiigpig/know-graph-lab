@@ -158,4 +158,7 @@ onBeforeUnmount(() => observer?.disconnect())
 /* 每節／章末對話編號引用（intro_schedule §6） */
 .book-prose :deep(.section-source) { @apply mt-3 mb-6 text-[12px] leading-relaxed text-gray-400 border-l-2 border-violet-100 pl-3; }
 .book-prose :deep(.chapter-source) { @apply mt-6 pt-3 border-l-0 border-t border-dashed border-violet-100 text-gray-500; }
+/* 引用編號＝可點擊連結，連到 /ai-dialogues 編號查閱 */
+.book-prose :deep(.cite-seq) { @apply font-mono text-violet-500/80 no-underline rounded px-0.5 transition-colors; }
+.book-prose :deep(.cite-seq:hover) { @apply text-violet-700 underline bg-violet-50; }
 </style>
