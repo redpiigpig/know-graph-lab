@@ -210,5 +210,11 @@
       ]
     }
   ],
-  "in_corpus_count": 10
+  "in_corpus_count": 10,
+  "_inserted_2026-06-24": [
+    "列王的榮耀 Kebra Nagast -> medieval/史傳藏正/通史與編年部",
+    "哀歌之書 Gregory of Narek -> medieval/詩文藏正/聖詠與聖頌部",
+    "論大衛與掃羅 Chrysostom -> ancient/解經講疏部"
+  ],
+  "_note": "其餘 keep_primary 經查均已在 corpus；西方大館 seed 已飽和，下一步擴東方專門庫"
 }

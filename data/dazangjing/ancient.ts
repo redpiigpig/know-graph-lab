@@ -1437,6 +1437,7 @@ export const ANCIENT_ERA: DazangEra = {
               { title_zh: '提多書講疏', intro: '約四世紀金口若望於君士坦丁堡以希臘文講述提多書的講道集，闡發按真道設立長老、抵禦異端與善行教導，並勸勉各階層信徒過敬虔生活。講辭簡明實用，兼顧教會秩序與倫理。它與提摩太書講疏同屬教牧書信講道，共同呈現金口若望對教會治理與信徒品格的關懷。', title_orig: 'Homilies on the Epistle to Titus', author: '金口若望', era: '約 4 世紀', place: '君士坦丁堡', language: '希臘文', link: '/fathers' },
               { title_zh: '腓利門書講疏', intro: '約四世紀金口若望於君士坦丁堡以希臘文講述腓利門書的講道集，借保羅為逃奴阿尼西母代求一事，闡發饒恕、和好與基督裡平等的精神。講辭從這封最短的保羅書信引申深刻的倫理教訓。它是早期教會處理奴隸問題與人際和好的重要見證，展現金口若望以小見大的講道功力。', title_orig: 'Homilies on the Epistle to Philemon', author: '金口若望', era: '約 4 世紀', place: '君士坦丁堡', language: '希臘文', link: '/fathers' },
               { title_zh: '希伯來書講疏', intro: '約四世紀金口若望於君士坦丁堡以希臘文講述希伯來書的講道集，闡發基督超越天使、摩西與舊約祭司的至高大祭司職分與新約優越性。講辭結構嚴整、神學厚重，於其逝後由筆錄整理成書。它是古代希伯來書詮釋的重要里程碑，對東西方理解基督祭司論與兩約關係影響深遠。', title_orig: 'Homilies on the Epistle to the Hebrews', author: '金口若望', era: '約 4 世紀', place: '君士坦丁堡', language: '希臘文', link: '/fathers' },
+              { title_zh: '論大衛與掃羅', intro: '四世紀安提阿的金口若望以希臘文宣講的三篇講道，借撒母耳記中大衛兩度有機會殺掃羅卻甘願饒過仇敵的事蹟，闡發不念舊惡、以德報怨與克制復仇之心的倫理教訓。講辭情理交融，將舊約敘事化為日常待人接物的勸勉，呼籲信徒效法大衛的寬厚。是研究金口若望倫理講道、以及安提阿學派如何由經文引申道德應用的代表性短講。', title_orig: 'De Davide et Saule homiliae tres', author: '金口若望', era: '約 4 世紀', place: '安提阿', language: '希臘文', link: '/fathers' },
             ],
           },
           {
