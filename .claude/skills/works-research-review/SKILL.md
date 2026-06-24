@@ -134,6 +134,19 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
 - **OA 全文**：`ingest_lit_review.py --fetch-fulltext --project <book-slug> --resume --engine gemini --pace 1`（同論文流程；掃描無文字層 PDF/403 WAF 抓不到的留 pending）。
 - **首案＝《當代的大愛道革命》**：16 筆（en11/ja3/zh2）已 ingest，OA 6 筆可抓（~243 段）過夜翻譯中。見 [dadaodao_handoff.md](dadaodao_handoff.md) §2c。
 
+## 創生哲學叢書：每卷參考資料庫（book_id scope，2026-06-24）
+
+`/works/genesis-philosophy` 是 15 卷的**單一叢書專案**（kind=book，seriesGroups）。使用者要為**每一卷**建一份「最新研究參考資料庫」（自然科學／心理學／哲學／宗教與神話四領域），作為**改寫每卷的依據**。因為 15 卷共用一個 `project_slug`，研究回顧改用 **`book_id` 逐卷 scope**：
+
+- **schema**：`lit_review_entries` 加 `book_id TEXT NOT NULL DEFAULT ''`，唯一鍵改 `(project_slug, book_id, ref_key)`（migration [scripts/apply-lit-review-book-id.mjs](../../../scripts/)，冪等；既有論文/書計畫 `book_id=''` 零影響）。
+- **四領域 theme**：`lit_review.py` `GENESIS_THEMES`＝自然科學/心理學/哲學/宗教與神話（已入 `SECTION_LABELS`）。report 用 `## 自然科學` 等四個標頭分組；每筆 `所屬面向：`＝該卷章節名（如 主體的誕生／愛的公式／死亡倫理），reader 顯示為 indigo 章節徽章；`立場：`＝支持/補充/反例。
+- **research**：每卷開 **4 個並行 general-purpose agent**（一領域一個），各 WebSearch ~10 筆真實近期文獻（DOI/URL 驗證），回傳 paste-ready block（繁中摘要含關鍵發現＋與該卷關聯）。組成 `scripts/data/lit_review_genesis_<BID>.md`。
+- **ingest**：`python -X utf8 scripts/ingest_lit_review.py --seed --entries-only --book-id <BID> --project genesis-philosophy --report scripts/data/lit_review_genesis_<BID>.md`。
+- **API**：`/api/lit-review/entries?slug=genesis-philosophy&bookId=<BID>`（加 `bookId` filter）。
+- **reader**：書閱讀器 [pages/works/[slug]/book/[bid].vue](../../../pages/works/) 加「本文／研究回顧」分頁，依四領域分組（叢書專案頁本身無 lit-review render path，不受影響）。
+- **全文層（選配，過夜）**：OA 文獻 `--fetch-fulltext --book-id <BID> --project genesis-philosophy --resume`（同既有流程，逐段中譯、原文/中譯對照）。
+- **狀態**：✅ **M1《愛的萬物論》＝範本，37 筆**（自然 10／心理 10／哲學 9／宗教 8），book-level 已上線；全文逐段中譯待跑。待推其餘 14 卷（M2/M3、E1-3、O1-3、V1-3、B1-3）。⚠️ 新章/新書代擬內容尚未回填 C-xxxxx 對話引用。
+
 ## 版權姿態
 
 - **全文只收開放取用 / 公有領域**：JBE（Journal of Buddhist Ethics，全卷開放）、漢堡大學 buddhismuskunde PDF、blogs.dickinson.edu、聖嚴法師數位典藏、NTU 佛研、政大學術集成、towisdom / hongshi PDF、Horner 1930（PD）。
