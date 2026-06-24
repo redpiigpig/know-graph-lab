@@ -1,18 +1,22 @@
-// GET /api/lit-review/entries?slug=<project_slug>
+// GET /api/lit-review/entries?slug=<project_slug>[&bookId=<book_id>]
 // All literature-review bibliography entries for a 論文寫作 project, ordered.
+// `bookId` scopes to one volume within a 叢書 project (創生哲學 卷, e.g. 'M1').
 // `has_fulltext` marks entries that have aligned 原文/中譯 sections (reader-ready).
 export default defineEventHandler(async (event) => {
   const slug = String(getQuery(event).slug || "");
   if (!slug) throw createError({ statusCode: 400, message: "slug required" });
+  const bookId = String(getQuery(event).bookId || "");
 
   const supabase = getAdminClient();
 
-  const { data: entries, error } = await supabase
+  let query = supabase
     .from("lit_review_entries")
     .select(
       "id, ref_key, authors, year, title, venue, language, theme, dimension, stance, abstract_zh, fulltext_url, fulltext_status, display_order"
     )
-    .eq("project_slug", slug)
+    .eq("project_slug", slug);
+  if (bookId) query = query.eq("book_id", bookId);
+  const { data: entries, error } = await query
     .order("display_order", { ascending: true })
     .order("id", { ascending: true });
   if (error) throw createError({ statusCode: 500, message: error.message });

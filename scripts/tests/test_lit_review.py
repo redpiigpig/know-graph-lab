@@ -102,8 +102,11 @@ def test_doc_type_themes_cover_the_seven_bibliography_sections():
     assert lr.SUPPLEMENT_LABELS.isdisjoint(lr.THEME_LABELS | lr.DOC_TYPE_LABELS)
     assert lr.BOOK_SURVEY_LABELS.isdisjoint(
         lr.THEME_LABELS | lr.DOC_TYPE_LABELS | lr.SUPPLEMENT_LABELS)
-    assert lr.SECTION_LABELS == (
+    assert lr.GENESIS_THEME_LABELS.isdisjoint(
         lr.THEME_LABELS | lr.DOC_TYPE_LABELS | lr.SUPPLEMENT_LABELS | lr.BOOK_SURVEY_LABELS)
+    assert lr.SECTION_LABELS == (
+        lr.THEME_LABELS | lr.DOC_TYPE_LABELS | lr.SUPPLEMENT_LABELS
+        | lr.BOOK_SURVEY_LABELS | lr.GENESIS_THEME_LABELS)
 
 
 def test_parse_review_report_assigns_book_survey_section_at_h2_level():

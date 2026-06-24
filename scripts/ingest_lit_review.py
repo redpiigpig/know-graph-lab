@@ -105,7 +105,7 @@ def rest_patch(table: str, params: str, body: dict) -> None:
 def seed(report_path: str, project_slug: str, paper_ref: str | None,
          title: str, subtitle: str | None, description: str | None,
          entries_only: bool = False, display_offset: int = 0,
-         all_unavailable: bool = False) -> None:
+         all_unavailable: bool = False, book_id: str = "") -> None:
     md = Path(report_path).read_text(encoding="utf-8")
     parsed = lr.parse_review_report(md)
     entries = parsed["entries"]
@@ -146,6 +146,7 @@ def seed(report_path: str, project_slug: str, paper_ref: str | None,
             url = None
         rows.append({
             "project_slug": project_slug,
+            "book_id": book_id,
             "ref_key": e["ref_key"],
             "authors": e["authors"],
             "year": e["year"],
@@ -160,7 +161,7 @@ def seed(report_path: str, project_slug: str, paper_ref: str | None,
             "fulltext_status": status,
             "display_order": display_offset + i,
         })
-    rest_upsert("lit_review_entries", rows, on_conflict="project_slug,ref_key")
+    rest_upsert("lit_review_entries", rows, on_conflict="project_slug,book_id,ref_key")
     print(f"✓ upserted {len(rows)} entries "
           f"({sum(1 for r in rows if r['fulltext_status'] == 'pending')} pending full text)", flush=True)
 
@@ -232,10 +233,13 @@ def translate_and_store(entry_id: int, orig: list[str], te, fn, pace: float, res
 
 def fetch_fulltext(project_slug: str, engine: str, resume: bool,
                    only: str | None, limit_paras: int | None,
-                   limit_entries: int | None, pace: float, dry_run: bool) -> None:
+                   limit_entries: int | None, pace: float, dry_run: bool,
+                   book_id: str = "") -> None:
     sel = "id,ref_key,title,language,fulltext_url,fulltext_status"
-    entries = rest_get("lit_review_entries",
-                       f"project_slug=eq.{project_slug}&select={sel}&order=display_order")
+    q = f"project_slug=eq.{project_slug}&select={sel}&order=display_order"
+    if book_id:
+        q += f"&book_id=eq.{book_id}"
+    entries = rest_get("lit_review_entries", q)
     todo = []
     for e in entries:
         if only and only not in e["ref_key"]:
@@ -318,6 +322,8 @@ def main():
                     help="add this to every entry's display_order (sort a 2nd batch after an existing one)")
     ap.add_argument("--all-unavailable", action="store_true",
                     help="seed every entry as fulltext_status='unavailable' (a wholly-copyright reading list)")
+    ap.add_argument("--book-id", default="",
+                    help="per-volume scope within a 叢書 project (e.g. genesis 卷 'M1'); '' for normal paper/book projects")
     args = ap.parse_args()
 
     if args.seed:
@@ -327,10 +333,11 @@ def main():
             sys.exit("--seed needs --title (unless --entries-only)")
         seed(args.report, args.project, args.paper_ref, args.title, args.subtitle,
              args.description, entries_only=args.entries_only, display_offset=args.display_offset,
-             all_unavailable=args.all_unavailable)
+             all_unavailable=args.all_unavailable, book_id=args.book_id)
     if args.fetch_fulltext:
         fetch_fulltext(args.project, args.engine, args.resume, args.only,
-                       args.limit_paras, args.limit_entries, args.pace, args.dry_run)
+                       args.limit_paras, args.limit_entries, args.pace, args.dry_run,
+                       book_id=args.book_id)
     if not args.seed and not args.fetch_fulltext:
         sys.exit("need --seed and/or --fetch-fulltext")
 

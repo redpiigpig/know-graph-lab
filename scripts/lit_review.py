@@ -77,8 +77,21 @@ BOOK_SURVEY_THEMES: list[dict] = [
 ]
 BOOK_SURVEY_LABELS = {t["label"] for t in BOOK_SURVEY_THEMES}
 
+
+# ── Genesis-philosophy themes: the 4 research domains for each 創生哲學 volume's
+# 參考資料庫 (per-volume reference DB, scoped by book_id). Every 創生哲學 卷 groups
+# its 研究回顧 by these 4 domains; used to rewrite the volume against current research.
+GENESIS_THEMES: list[dict] = [
+    {"key": "science",    "label": "自然科學",   "order": 410},
+    {"key": "psychology", "label": "心理學",     "order": 420},
+    {"key": "philosophy", "label": "哲學",       "order": 430},
+    {"key": "religion",   "label": "宗教與神話", "order": 440},
+]
+GENESIS_THEME_LABELS = {t["label"] for t in GENESIS_THEMES}
+
 # Any header recognised as a section divider (theme assignment).
-SECTION_LABELS = THEME_LABELS | DOC_TYPE_LABELS | SUPPLEMENT_LABELS | BOOK_SURVEY_LABELS
+SECTION_LABELS = (THEME_LABELS | DOC_TYPE_LABELS | SUPPLEMENT_LABELS
+                  | BOOK_SURVEY_LABELS | GENESIS_THEME_LABELS)
 
 
 # ── Language label (語言：英文) → ISO code ───────────────────────────────────

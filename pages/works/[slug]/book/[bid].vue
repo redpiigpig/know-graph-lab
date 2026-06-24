@@ -26,6 +26,19 @@
 
           <!-- content -->
           <div class="flex-1 min-w-0">
+            <!-- 本文 / 研究回顧 分頁 -->
+            <div class="flex items-center gap-1 border-b border-gray-200 mb-6">
+              <button @click="tab = 'book'"
+                class="px-4 py-2 text-sm font-medium border-b-2 -mb-px transition"
+                :class="tab === 'book' ? 'border-violet-500 text-violet-700' : 'border-transparent text-gray-500 hover:text-gray-800'">本文</button>
+              <button @click="tab = 'review'"
+                class="px-4 py-2 text-sm font-medium border-b-2 -mb-px transition"
+                :class="tab === 'review' ? 'border-violet-500 text-violet-700' : 'border-transparent text-gray-500 hover:text-gray-800'">
+                研究回顧<span v-if="litEntries.length" class="ml-1 text-xs" :class="tab === 'review' ? 'text-violet-500' : 'text-gray-400'">{{ litEntries.length }}</span>
+              </button>
+            </div>
+
+            <div v-show="tab === 'book'">
             <!-- mobile chapter jump -->
             <div class="lg:hidden mb-4">
               <select @change="scrollTo(($event.target as HTMLSelectElement).value)"
@@ -45,6 +58,46 @@
               <span v-else></span>
               <NuxtLink v-if="nextBook" :to="`/works/${slug}/book/${nextBook.id}`"
                 class="text-sm text-violet-700 hover:underline no-underline">{{ nextBook.title }} →</NuxtLink>
+            </div>
+            </div>
+
+            <!-- 研究回顧（本卷參考資料庫） -->
+            <div v-show="tab === 'review'">
+              <div class="mb-5">
+                <h2 class="text-base font-semibold text-gray-900">研究回顧</h2>
+                <p class="text-xs text-gray-500 mt-0.5">
+                  參考資料庫 · 共 {{ litEntries.length }} 筆 · 依四領域分組（自然科學／心理學／哲學／宗教與神話）· 改寫本卷的依據
+                </p>
+              </div>
+              <div v-if="litLoading" class="text-gray-400 text-sm py-8 text-center">載入中⋯</div>
+              <div v-else-if="!litEntries.length" class="text-gray-400 text-sm py-12 text-center">本卷尚無研究回顧。</div>
+              <div v-else class="space-y-8">
+                <section v-for="grp in litGroups" :key="grp.theme">
+                  <h3 class="text-xs font-semibold text-violet-400 uppercase tracking-widest mb-3">{{ grp.theme }}<span class="ml-2 text-gray-300 normal-case">{{ grp.items.length }}</span></h3>
+                  <div class="space-y-3">
+                    <div v-for="e in grp.items" :key="e.id" class="bg-white rounded-2xl border border-gray-100 p-5">
+                      <div class="flex flex-wrap items-center gap-1.5 mb-2">
+                        <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">{{ langLabel(e.language) }}</span>
+                        <span v-if="e.dimension" class="text-xs font-medium px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-600 break-words">{{ e.dimension }}</span>
+                        <span v-if="e.stance" class="text-xs font-medium px-2 py-0.5 rounded-full break-words"
+                          :class="e.stance === '反例' ? 'bg-rose-50 text-rose-600' : 'bg-amber-50 text-amber-700'">立場：{{ e.stance }}</span>
+                      </div>
+                      <h4 class="text-sm font-semibold text-gray-900 leading-snug mb-1 break-words">
+                        {{ e.authors }}<span v-if="e.year">（{{ e.year }}）</span>　{{ e.title }}
+                      </h4>
+                      <p v-if="e.venue" class="text-xs text-gray-500 mb-2 break-words">{{ e.venue }}</p>
+                      <p v-if="e.abstract_zh" class="text-sm text-gray-700 leading-relaxed break-words">{{ e.abstract_zh }}</p>
+                      <div class="mt-2 flex flex-wrap items-center gap-3 text-xs">
+                        <NuxtLink v-if="e.has_fulltext" :to="`/works/${slug}/review/${e.ref_key}`"
+                          class="text-violet-700 hover:underline font-medium">閱讀全文（原文／中譯）→</NuxtLink>
+                        <a v-else-if="e.fulltext_url" :href="e.fulltext_url" target="_blank" rel="noopener"
+                          class="text-blue-600 hover:underline break-all">原始連結 ↗</a>
+                        <span v-else class="text-gray-300 italic">無線上全文</span>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
             </div>
           </div>
         </div>
@@ -84,6 +137,35 @@ const html = ref('')
 const toc = ref<{ id: string; title: string }[]>([])
 const activeId = ref('')
 const pending = ref(true)
+
+// 本文 / 研究回顧（本卷參考資料庫，依四領域分組）分頁
+interface LitEntry {
+  id: number; ref_key: string; authors: string; year: number | null; title: string
+  venue: string | null; language: string | null; theme: string | null; dimension: string | null
+  stance: string | null; abstract_zh: string | null; fulltext_url: string | null; has_fulltext: boolean
+}
+const tab = ref<'book' | 'review'>('book')
+const litEntries = ref<LitEntry[]>([])
+const litLoading = ref(false)
+const LANG_LABELS: Record<string, string> = { en: '英文', zh: '中文', de: '德文', fr: '法文', ja: '日文', la: '拉丁文', grc: '希臘文', es: '西班牙文', it: '義大利文' }
+function langLabel(c: string | null) { return LANG_LABELS[c ?? ''] ?? (c || '—') }
+const litGroups = computed(() => {
+  const g: { theme: string; items: LitEntry[] }[] = []
+  for (const e of litEntries.value) {
+    const t = e.theme ?? ''
+    let x = g.find(y => y.theme === t)
+    if (!x) { x = { theme: t, items: [] }; g.push(x) }
+    x.items.push(e)
+  }
+  return g
+})
+async function loadReview() {
+  litLoading.value = true
+  try {
+    const d = await $fetch<{ entries: LitEntry[] }>('/api/lit-review/entries', { query: { slug: slug.value, bookId: bid.value } })
+    litEntries.value = d.entries ?? []
+  } catch { litEntries.value = [] } finally { litLoading.value = false }
+}
 
 // The group containing the current book (prev/next stay within the same sub-series).
 const curGroup = computed(() => groups.value.find(g => g.books.some(b => b.id === bid.value)) || null)
@@ -199,8 +281,8 @@ async function load() {
     }
   } catch { html.value = '' } finally { pending.value = false }
 }
-onMounted(load)
-watch(() => bid.value, load)
+onMounted(() => { load(); loadReview() })
+watch(() => bid.value, () => { tab.value = 'book'; load(); loadReview() })
 
 // Highlight the chapter currently in view.
 let observer: IntersectionObserver | null = null

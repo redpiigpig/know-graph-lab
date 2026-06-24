@@ -10,6 +10,7 @@
 CREATE TABLE IF NOT EXISTS lit_review_entries (
   id              BIGSERIAL PRIMARY KEY,
   project_slug    TEXT NOT NULL REFERENCES writing_projects (slug) ON DELETE CASCADE ON UPDATE CASCADE,
+  book_id         TEXT NOT NULL DEFAULT '',   -- per-volume scope within a 叢書 project（創生哲學 卷 'M1'…）；'' for normal projects
   ref_key         TEXT NOT NULL,              -- make_ref_key()：'analayo-2016-the-foundation-history'
   authors         TEXT NOT NULL DEFAULT '',
   year            INT,
@@ -24,7 +25,7 @@ CREATE TABLE IF NOT EXISTS lit_review_entries (
   fulltext_status TEXT NOT NULL DEFAULT 'pending',  -- pending / fetched / translated / unavailable
   display_order   INT NOT NULL DEFAULT 0,
   created_at      TIMESTAMPTZ DEFAULT now(),
-  UNIQUE (project_slug, ref_key)
+  CONSTRAINT lit_review_entries_project_book_ref_key UNIQUE (project_slug, book_id, ref_key)
 );
 CREATE INDEX IF NOT EXISTS lit_review_entries_project ON lit_review_entries (project_slug, display_order);
 
