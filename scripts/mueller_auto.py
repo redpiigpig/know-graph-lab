@@ -327,7 +327,8 @@ def translate_work(work: dict, translate_para, *, reupload_every: int = 12) -> i
         s = json.loads(cp.read_text(encoding="utf-8"))
         en = s["en"]
         zh = (s.get("zh") or [None] * len(en))[:len(en)] + [None] * (len(en) - len(s.get("zh") or []))
-        fail = (s.get("fail") or [0] * len(en))[:len(en)] + [0] * (len(en) - len(s.get("fail") or []))
+        raw_fail = s.get("fail") or []
+        fail = raw_fail[:len(en)] + [0] * max(0, len(en) - len(raw_fail))
         # skip already-translated AND exhausted (dead) segments
         todo = [j for j in range(len(en)) if not (zh[j] or "").strip() and fail[j] < MAX_FAIL]
         if todo:
