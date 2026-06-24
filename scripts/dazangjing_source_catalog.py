@@ -57,6 +57,34 @@ SEED_QUERIES = [
     "Life of Nino",
 ]
 
+# Eastern-tradition + diversity-first queries (user 2026-06-24: 越東方／越多元越優先；
+# 西方希臘/拉丁教父於既有 corpus 已飽和，增量在科普特/敘利亞/亞美尼亞/喬治亞/衣索匹亞/
+# 阿拉伯基督教/波斯景教，以及女性與非西方作者）。
+EASTERN_QUERIES = [
+    # Coptic
+    "Shenoute of Atripe canons", "Besa life of Shenoute", "Pachomius koinonia rules",
+    "Coptic Synaxarium", "Paphnutius histories monks Upper Egypt", "Severus ibn al-Muqaffa History Patriarchs",
+    # Ethiopic / Ge'ez
+    "Fetha Nagast", "Ethiopian Synaxarium", "Gadla Lalibela", "Giyorgis of Sagla Book of Mystery",
+    "Zara Yaqob Mahafa Berhan", "Taamra Maryam miracles of Mary", "Gädlä Täklä Haymanot",
+    # Syriac
+    "Jacob of Serugh memre", "Narsai homilies", "Isaac of Nineveh ascetical homilies",
+    "Aphrahat Demonstrations", "John of Ephesus Lives Eastern Saints", "Babai the Great",
+    "Acts of the Persian Martyrs", "History of Mar Aba", "Book of the Bee Solomon of Basra",
+    # Armenian
+    "Movses Khorenatsi History of Armenians", "Eznik of Kolb Against the Sects",
+    "Yeghishe Vardan Armenian War", "Koriun Life of Mashtots", "Nerses Shnorhali",
+    "Gregory of Narek Book of Lamentations",
+    # Georgian
+    "Giorgi Mtatsmindeli", "Ioane Zosime", "Martyrdom of Abo of Tiflis", "Georgian Chronicles Kartlis Tskhovreba",
+    # Arabic Christian
+    "Theodore Abu Qurrah", "Eutychius of Alexandria Annals", "Sawirus ibn al-Muqaffa",
+    # Women / non-Western voices
+    "Egeria Itinerarium pilgrimage", "Life of Macrina Gregory of Nyssa", "Life of Melania the Younger",
+    "Life of Mary of Egypt", "Sayings Desert Mothers ammas", "Perpetua Felicitas passion",
+    "Heliand Old Saxon gospel", "Ethiopic Book of Enoch", "Nubian Christian texts Old Dongola",
+]
+
 REPOSITORIES: list[dict[str, Any]] = [
     {
         "key": "loc",
@@ -81,6 +109,22 @@ REPOSITORIES: list[dict[str, Any]] = [
         "mode": "bnf_sru",
         "endpoint": "https://catalogue.bnf.fr/api/SRU",
         "status": "sru",
+    },
+    {
+        "key": "openlibrary",
+        "name": "Open Library",
+        "country": "global",
+        "mode": "openlibrary_json",
+        "endpoint": "https://openlibrary.org/search.json",
+        "status": "api",
+    },
+    {
+        "key": "archive_org",
+        "name": "Internet Archive",
+        "country": "global",
+        "mode": "archive_json",
+        "endpoint": "https://archive.org/advancedsearch.php",
+        "status": "api",
     },
     {
         "key": "bl",
@@ -219,10 +263,20 @@ REPOSITORIES: list[dict[str, Any]] = [
 ]
 
 
-def fetch_text(url: str, timeout: int = 30) -> str:
-    req = urllib.request.Request(url, headers={"User-Agent": "know-graph-lab catalog harvester"})
-    with urllib.request.urlopen(req, timeout=timeout) as resp:
-        return resp.read().decode("utf-8", errors="replace")
+USER_AGENT = "Mozilla/5.0 (know-graph-lab research; redpiigpig@gmail.com)"
+
+
+def fetch_text(url: str, timeout: int = 30, retries: int = 3) -> str:
+    last: Exception | None = None
+    for attempt in range(retries):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                return resp.read().decode("utf-8", errors="replace")
+        except Exception as exc:  # transient TLS reset / timeout — back off and retry
+            last = exc
+            time.sleep(1.5 * (attempt + 1))
+    raise last  # type: ignore[misc]
 
 
 def text_or_none(value: Any) -> str:
@@ -259,6 +313,56 @@ def loc_records(repo: dict[str, Any], query: str, limit: int) -> list[dict[str, 
                 "classification_status": "unclassified",
             }
         )
+    return out
+
+
+def openlibrary_records(repo: dict[str, Any], query: str, limit: int) -> list[dict[str, Any]]:
+    params = urllib.parse.urlencode({
+        "q": query, "limit": str(limit),
+        "fields": "title,author_name,first_publish_year,language,key,edition_count",
+    })
+    url = f"{repo['endpoint']}?{params}"
+    data = json.loads(fetch_text(url))
+    out = []
+    for item in data.get("docs", [])[:limit]:
+        out.append({
+            "source": repo["key"],
+            "query": query,
+            "title": simplify_space(text_or_none(item.get("title"))),
+            "author": simplify_space("; ".join(item.get("author_name", [])[:3])),
+            "date": simplify_space(text_or_none(item.get("first_publish_year"))),
+            "language": simplify_space("; ".join(item.get("language", [])[:3])),
+            "subjects": [],
+            "url": f"https://openlibrary.org{item.get('key')}" if item.get("key") else repo["endpoint"],
+            "raw_id": item.get("key", ""),
+            "classification_status": "unclassified",
+        })
+    return out
+
+
+def archive_records(repo: dict[str, Any], query: str, limit: int) -> list[dict[str, Any]]:
+    # Restrict to texts; exclude obvious non-book media.
+    q = f"({query}) AND mediatype:texts"
+    params = [("q", q), ("rows", str(limit)), ("output", "json")]
+    for f in ("identifier", "title", "creator", "year", "language"):
+        params.append(("fl[]", f))
+    url = f"{repo['endpoint']}?{urllib.parse.urlencode(params)}"
+    data = json.loads(fetch_text(url))
+    out = []
+    for item in data.get("response", {}).get("docs", [])[:limit]:
+        ident = item.get("identifier", "")
+        out.append({
+            "source": repo["key"],
+            "query": query,
+            "title": simplify_space(text_or_none(item.get("title"))),
+            "author": simplify_space(text_or_none(item.get("creator"))),
+            "date": simplify_space(text_or_none(item.get("year"))),
+            "language": simplify_space(text_or_none(item.get("language"))),
+            "subjects": [],
+            "url": f"https://archive.org/details/{ident}" if ident else repo["endpoint"],
+            "raw_id": ident,
+            "classification_status": "unclassified",
+        })
     return out
 
 
@@ -367,23 +471,30 @@ def sru_records(repo: dict[str, Any], query: str, limit: int) -> list[dict[str, 
     return records[:limit]
 
 
-def harvest(limit: int, sleep_seconds: float) -> dict[str, Any]:
+MODE_DISPATCH = {
+    "loc_json": loc_records,
+    "dnb_sru": sru_records,
+    "bnf_sru": sru_records,
+    "openlibrary_json": openlibrary_records,
+    "archive_json": archive_records,
+}
+
+
+def harvest(limit: int, sleep_seconds: float, queries: list[str]) -> dict[str, Any]:
     manifest = {
         "description": "First-pass source catalog for Christian Dazangjing. Candidate records need curation before insertion.",
         "repositories": REPOSITORIES,
-        "queries": SEED_QUERIES,
+        "queries": queries,
     }
     rows = []
     errors = []
     for repo in REPOSITORIES:
-        if repo["mode"] == "manual":
+        fn = MODE_DISPATCH.get(repo["mode"])
+        if fn is None:  # manual queue / no machine endpoint
             continue
-        for query in SEED_QUERIES:
+        for query in queries:
             try:
-                if repo["mode"] == "loc_json":
-                    rows.extend(loc_records(repo, query, limit))
-                else:
-                    rows.extend(sru_records(repo, query, limit))
+                rows.extend(fn(repo, query, limit))
             except Exception as exc:
                 errors.append({"source": repo["key"], "query": query, "error": str(exc)})
             time.sleep(sleep_seconds)
@@ -394,10 +505,13 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--limit", type=int, default=5)
     parser.add_argument("--sleep", type=float, default=0.25)
+    parser.add_argument("--queries", choices=["seed", "eastern", "all"], default="seed",
+                        help="which query set to harvest (seed=Western patristic; eastern=diversity/Eastern; all=both)")
     parser.add_argument("--out", default=str(OUT_DIR / "seed-records.json"))
     args = parser.parse_args()
 
-    data = harvest(args.limit, args.sleep)
+    queries = {"seed": SEED_QUERIES, "eastern": EASTERN_QUERIES, "all": SEED_QUERIES + EASTERN_QUERIES}[args.queries]
+    data = harvest(args.limit, args.sleep, queries)
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")

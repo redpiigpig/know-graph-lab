@@ -14,9 +14,9 @@ human confirms.
 """
 from __future__ import annotations
 
+import argparse
 import json
 import re
-import sys
 import unicodedata
 from collections import defaultdict
 from pathlib import Path
@@ -85,10 +85,10 @@ def corpus_index() -> tuple[set[str], set[str], dict[str, str]]:
     return orig, zh, zh_raw
 
 
-def load_keep() -> list[dict]:
+def load_keep(ledger: Path) -> list[dict]:
     """Latest row per record_key, decision=keep_primary_work."""
     latest: dict[str, dict] = {}
-    for line in LEDGER.read_text(encoding="utf-8").splitlines():
+    for line in ledger.read_text(encoding="utf-8").splitlines():
         line = line.strip()
         if not line:
             continue
@@ -117,7 +117,12 @@ def prefix_hit(cand: str, corpus: set[str]) -> str:
 
 
 def main() -> None:
-    keep = load_keep()
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--ledger", default=str(LEDGER))
+    ap.add_argument("--out", default=str(DATA / "source-catalog" / "curation-worklist.json"))
+    args = ap.parse_args()
+
+    keep = load_keep(Path(args.ledger))
     c_orig, c_zh, _ = corpus_index()
 
     groups: dict[str, list[dict]] = defaultdict(list)
@@ -155,7 +160,7 @@ def main() -> None:
         c = e["rows"][0]["classification"]
         print(f"  {c.get('title_zh')}  <-  {str(c.get('title_orig'))[:45]}  ~= corpus[{e['corpus_hit'][:30]}]")
 
-    out = DATA / "source-catalog" / "curation-worklist.json"
+    out = Path(args.out)
     out.write_text(json.dumps(
         {"new_works": [{"era_keys": sorted({r["classification"].get("eraKey") for r in e["rows"]}),
                         "collection_keys": sorted({r["classification"].get("collectionKey") for r in e["rows"]}),
