@@ -80,11 +80,11 @@
           <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <NuxtLink v-for="(b, i) in g.books" :key="b.id"
               :to="`/works/${slug}/book/${b.id}`"
-              class="no-underline group flex flex-col p-6 rounded-2xl bg-white border-2 border-violet-100 hover:border-violet-300 hover:shadow-lg hover:shadow-violet-100 transition">
+              class="no-underline group flex flex-col min-w-0 p-6 rounded-2xl bg-white border-2 border-violet-100 hover:border-violet-300 hover:shadow-lg hover:shadow-violet-100 transition">
               <div class="text-xs text-violet-400 mb-2">第{{ CN_NUM[i] || (i + 1) }}部</div>
-              <h3 class="text-lg font-bold text-gray-900 leading-snug">{{ b.title }}</h3>
-              <p class="text-xs text-gray-500 mt-1.5 leading-relaxed break-words">{{ b.subtitle }}</p>
-              <div class="mt-3 text-xs text-violet-600">{{ b.nChapters }} 章 · 閱讀 →</div>
+              <h3 class="text-lg font-bold text-gray-900 leading-snug break-words line-clamp-2">{{ b.title }}</h3>
+              <p class="text-xs text-gray-500 mt-1.5 leading-relaxed break-words line-clamp-2">{{ b.subtitle }}</p>
+              <div class="mt-auto pt-3 text-xs text-violet-600">{{ b.nChapters }} 章 · 閱讀 →</div>
             </NuxtLink>
           </div>
         </div>
