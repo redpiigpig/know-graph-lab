@@ -65,14 +65,14 @@
 所屬面向：AI倫理
 立場：反例
 摘要：以決策理論框架形式化「工具趨同」與「追求權力」，結論是「權力是趨同的工具性目標」雖部分為真，但在不知道智能體具體目標時預測力有限。對 M3「AI倫理」構成審慎反例：駁斥權力追求為 AI 必然湧現的善惡論斷，要求更細緻的對齊分析。
-> **全文**：[arXiv:2506.06352](https://arxiv.org/abs/2506.06352)
+> **全文**：[arXiv:2506.06352](https://arxiv.org/pdf/2506.06352)
 
 【Krauss, L. M. & Starkman, G. D.】（2000）〈Life, the Universe, and Nothing: Life and Death in an Ever-Expanding Universe〉，《The Astrophysical Journal》
 語言：英文
 所屬面向：熱寂與永續共生圈
 立場：反例
 摘要：駁斥 Dyson「永恆智能」設想，證明在加速膨脹（暗能量主導）的宇宙中，任何文明的整合意識壽命雖可極其漫長卻終究有限。對 M3「熱寂與永續共生圈」構成關鍵反例：永續共生圈面對的不只是熱寂，更是膨脹宇宙設下的資訊處理硬上限。
-> **全文**：[arXiv:astro-ph/9902189](https://arxiv.org/abs/astro-ph/9902189)
+> **全文**：[arXiv:astro-ph/9902189](https://arxiv.org/pdf/astro-ph/9902189)
 
 ## 心理學
 
