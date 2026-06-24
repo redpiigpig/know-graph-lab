@@ -160,6 +160,16 @@
           </NuxtLink>
 
           <!-- 照片管理 -->
+          <!-- Happy English 國小英語 -->
+          <NuxtLink :to="user ? '/english' : '/login'" class="tool-card group border-amber-100 hover:border-amber-300 hover:shadow-amber-100">
+            <div class="tool-icon bg-amber-50 text-amber-600">🌈</div>
+            <div class="flex-1">
+              <h2 class="tool-title">Happy English</h2>
+              <p class="tool-desc">國小英語 1000 字 ‧ 單字／聽力／口說／造句測驗</p>
+            </div>
+            <span class="tool-badge tool-badge--ready">可用</span>
+          </NuxtLink>
+
           <NuxtLink :to="user ? '/photos' : '/login'" class="tool-card group border-pink-100 hover:border-pink-300 hover:shadow-pink-100">
             <div class="tool-icon bg-pink-50 text-pink-600">📷</div>
             <div class="flex-1">
