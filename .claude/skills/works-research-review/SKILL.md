@@ -136,6 +136,8 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
 
 ## 創生哲學叢書：每卷參考資料庫（book_id scope，2026-06-24）
 
+> 🚩 **接手請先讀**：[genesis_refdb_handoff.md](genesis_refdb_handoff.md)（完整進度表、流程、選書政策、各卷章節與 prompt 範本、剩餘工作）。
+
 `/works/genesis-philosophy` 是 15 卷的**單一叢書專案**（kind=book，seriesGroups）。使用者要為**每一卷**建一份「最新研究參考資料庫」（自然科學／心理學／哲學／宗教與神話四領域），作為**改寫每卷的依據**。因為 15 卷共用一個 `project_slug`，研究回顧改用 **`book_id` 逐卷 scope**：
 
 - **schema**：`lit_review_entries` 加 `book_id TEXT NOT NULL DEFAULT ''`，唯一鍵改 `(project_slug, book_id, ref_key)`（migration [scripts/apply-lit-review-book-id.mjs](../../../scripts/)，冪等；既有論文/書計畫 `book_id=''` 零影響）。
