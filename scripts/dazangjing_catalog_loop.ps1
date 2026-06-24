@@ -3,7 +3,8 @@ param(
   [string]$Command = "health",
   [int]$IntervalSeconds = 3600,
   [int]$MaxRecords = 0,
-  [string]$InputPath = ""
+  [string]$InputPath = "",
+  [string]$LedgerPath = ""
 )
 
 $ErrorActionPreference = "Stop"
@@ -49,6 +50,9 @@ if ($Command -eq "start") {
   if ($InputPath) {
     $argsList += @("--input", $InputPath)
   }
+  if ($LedgerPath) {
+    $argsList += @("--ledger", $LedgerPath)
+  }
   if ($MaxRecords -gt 0) {
     $argsList += @("--max-records", "$MaxRecords")
   }
@@ -76,6 +80,9 @@ if ($Command -eq "once") {
   $argsList = @($Script, "once")
   if ($InputPath) {
     $argsList += @("--input", $InputPath)
+  }
+  if ($LedgerPath) {
+    $argsList += @("--ledger", $LedgerPath)
   }
   if ($MaxRecords -gt 0) {
     $argsList += @("--max-records", "$MaxRecords")
