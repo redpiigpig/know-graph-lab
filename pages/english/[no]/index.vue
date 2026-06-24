@@ -11,6 +11,10 @@
           <h1 class="text-2xl font-extrabold text-gray-800">{{ lesson.title_zh }}</h1>
           <p class="text-sm text-gray-400">{{ lesson.title_en }} ‧ {{ lesson.grammar }}</p>
         </div>
+        <div class="ml-auto text-right">
+          <span class="inline-block text-xs px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 font-bold whitespace-nowrap">⏱ 本次 {{ clock }}</span>
+          <div class="text-[11px] text-gray-400 mt-1">今日 {{ todayMinutes }} 分鐘</div>
+        </div>
       </div>
 
       <!-- 測驗入口 -->
@@ -101,8 +105,13 @@ const { data: lessons } = await useFetch<any[]>("/content/english/lessons.json",
 const lesson = computed(() => (lessons.value || []).find((l) => l.no === no));
 
 const best = ref<Record<string, number>>({});
+const todayMinutes = ref(0);
 const { speak } = useSpeech();
 const tracker = useEnglishTracker();
+const clock = computed(() => {
+  const s = Math.max(0, Math.floor(tracker.activeSeconds.value));
+  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+});
 
 function say(text: string) { speak(text, "en-US", 0.75); }
 function scoreColor(p: number) { return p >= 80 ? "text-emerald-600" : p >= 60 ? "text-amber-600" : "text-rose-600"; }
@@ -124,8 +133,12 @@ function playPassage() {
 onMounted(async () => {
   tracker.start("lesson");
   try {
-    const s = await authedFetch<{ best: Record<string, number> }>("/api/english/scores");
+    const [s, p] = await Promise.all([
+      authedFetch<{ best: Record<string, number> }>("/api/english/scores"),
+      authedFetch<{ today_minutes: number }>("/api/english/progress"),
+    ]);
     best.value = s.best || {};
+    todayMinutes.value = p.today_minutes ?? 0;
   } catch { /* ignore */ }
 });
 onBeforeUnmount(() => { if (passageTimer) clearTimeout(passageTimer); });

@@ -8,9 +8,31 @@ const has = (p: string) => existsSync(resolve(root, p));
 
 describe("Happy English 教學網站結構完整性", () => {
   it("portal 頁面都存在", () => {
-    for (const p of ["pages/english/index.vue", "pages/english/[no]/index.vue", "pages/english/[no]/[quiz].vue"]) {
+    for (const p of [
+      "pages/english/index.vue",
+      "pages/english/[no]/index.vue",
+      "pages/english/[no]/[quiz].vue",
+      "pages/english/review/[range].vue",
+      "components/EnglishQuizRunner.vue",
+      "utils/englishQuiz.ts",
+    ]) {
       expect(has(p), p).toBe(true);
     }
+  });
+
+  it("複習測驗：段考 + 總複習，計分 API 接受 review_*", () => {
+    const score = readFileSync(resolve(root, "server/api/english/score.post.ts"), "utf8");
+    expect(score).toMatch(/review_\(all/); // isReviewType regex
+    const home = readFileSync(resolve(root, "pages/english/index.vue"), "utf8");
+    for (const t of ["review_1_5", "review_6_10", "review_11_15", "review_16_20", "review_all"]) {
+      expect(home.includes(t), `home review ${t}`).toBe(true);
+    }
+  });
+
+  it("單元頁顯示學習計時（⏱）", () => {
+    const hub = readFileSync(resolve(root, "pages/english/[no]/index.vue"), "utf8");
+    expect(hub).toContain("activeSeconds");
+    expect(hub).toContain("⏱");
   });
 
   it("登入 middleware 限定 julia5868 與站長", () => {
@@ -43,12 +65,15 @@ describe("Happy English 教學網站結構完整性", () => {
     }
   });
 
-  it("5 種測驗 type 都在 quiz 頁面被處理", () => {
-    const src = readFileSync(resolve(root, "pages/english/[no]/[quiz].vue"), "utf8");
+  it("5 種測驗 type 都在 quiz 產生器被處理", () => {
+    const src = readFileSync(resolve(root, "utils/englishQuiz.ts"), "utf8");
     for (const t of ["vocab", "listening", "speaking", "sentence", "comprehensive"]) {
       expect(src.includes(`"${t}"`), `quiz type ${t}`).toBe(true);
     }
-    // 朗讀速度 0.75 倍
-    expect(src).toContain("0.75");
+  });
+
+  it("朗讀速度為 0.75 倍", () => {
+    const runner = readFileSync(resolve(root, "components/EnglishQuizRunner.vue"), "utf8");
+    expect(runner).toContain("0.75");
   });
 });

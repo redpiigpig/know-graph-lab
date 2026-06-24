@@ -28,7 +28,27 @@
         </div>
       </section>
 
+      <!-- 複習測驗：每 5 單元段考 + 總複習 -->
+      <section class="mb-6">
+        <h2 class="text-sm font-bold text-gray-500 mb-2 px-1">🏆 複習測驗</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5">
+          <NuxtLink
+            v-for="r in reviews" :key="r.range"
+            :to="`/english/review/${r.range}`"
+            class="rounded-2xl p-3 text-center no-underline transition hover:-translate-y-0.5 hover:shadow-md text-white"
+            :class="r.range === 'all' ? 'col-span-2 sm:col-span-1' : ''"
+            :style="{ background: r.range === 'all' ? 'linear-gradient(135deg,#7C3AED,#DB2777)' : '#8E7CC3' }"
+          >
+            <div class="text-2xl">{{ r.range === 'all' ? '👑' : '🏆' }}</div>
+            <div class="text-sm font-bold mt-1 leading-tight">{{ r.label }}</div>
+            <div v-if="best[`0:${r.type}`] != null" class="text-xs font-bold mt-1 bg-white/25 rounded-full px-2 py-0.5 inline-block">★ {{ best[`0:${r.type}`] }}</div>
+            <div v-else class="text-[11px] text-white/70 mt-1">未測驗</div>
+          </NuxtLink>
+        </div>
+      </section>
+
       <!-- 課程格 -->
+      <h2 class="text-sm font-bold text-gray-500 mb-2 px-1">📚 20 個單元</h2>
       <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <NuxtLink
           v-for="(l, i) in lessons"
@@ -82,6 +102,14 @@ const { data: lessons } = await useFetch<Lesson[]>("/content/english/lessons.jso
 
 const progress = ref({ today_minutes: 0, total_minutes: 0, streak_days: 0 });
 const best = ref<Record<string, number>>({});
+
+const reviews = [
+  { range: "1-5", label: "第 1–5 課", type: "review_1_5" },
+  { range: "6-10", label: "第 6–10 課", type: "review_6_10" },
+  { range: "11-15", label: "第 11–15 課", type: "review_11_15" },
+  { range: "16-20", label: "第 16–20 課", type: "review_16_20" },
+  { range: "all", label: "總複習", type: "review_all" },
+];
 
 function scoreClass(p: number) {
   if (p >= 80) return "bg-emerald-100 text-emerald-700";
