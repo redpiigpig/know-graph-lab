@@ -146,9 +146,14 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
 - **ingest**：`python -X utf8 scripts/ingest_lit_review.py --seed --entries-only --book-id <BID> --project genesis-philosophy --report scripts/data/lit_review_genesis_<BID>.md`。
 - **API**：`/api/lit-review/entries?slug=genesis-philosophy&bookId=<BID>`（加 `bookId` filter）。
 - **reader**：書閱讀器 [pages/works/[slug]/book/[bid].vue](../../../pages/works/) 加「本文／研究回顧」分頁，依四領域分組（叢書專案頁本身無 lit-review render path，不受影響）。
-- **全文層（選配，過夜）**：OA 文獻 `--fetch-fulltext --book-id <BID> --project genesis-philosophy --resume`（同既有流程，逐段中譯、原文/中譯對照）。
+- **全文層（選配，過夜；可交辦 Codex）**：OA 文獻 `--fetch-fulltext --project genesis-philosophy --resume`（不加 `--book-id` 即全 15 卷一次掃完，genesis 共 **538 筆待抓**；逐段中譯、原文/中譯對照）。
+  - **引擎**：`--engine` 四選一＝`gemini`（內含 gemini→nvidia 自動 fallback）／`nvidia`／`sonnet`／`haiku`。⚠️ `haiku`＝`haiku_first`，走**付費 Max OAuth、獨立額度池**（與免費 Gemini/NVIDIA key 不同池），免費 key 全 429 時用 `--engine haiku` 最能繞過限流。
+  - **resume 安全**：已譯段落記在 `done_zh_indices`，`--resume` 從缺口接、不重做；**連續 4 次失敗（`CONSEC_FAIL_ABORT=4`，quota/network）會自動 abort**並提示「re-run with --resume later」，限流退去再跑同指令即接續。
+  - **正常會跳過**（維持書目層、非錯誤）：付費牆（Nature/Science/Wiley/Annual Reviews）、擋 bot 的 MDPI（403）、版權書、`language=zh` 中文書目。**只有 OA 抓得到**（SEP/IEP/arXiv `/pdf/`/PMC/OA PDF）。
+  - log → `c:/tmp/lit_review_genesis_fulltext.log`。**Codex 交辦 prompt 見本 skill `genesis_codex_fulltext_prompt.md`**。
 - **選書政策（使用者 2026-06-24 指定）**：優先**經典／得獎／公認／教科書級**研究；前沿只納公認里程碑（如 Cogitate 2025 Nature）；避免未證實或爭議過大（已剔 IIT 偽科學公開信、working paper、小刊）。**每卷都要加中文（華語學界）研究**：另開中文代理一輪 → `lit_review_genesis_<BID>_zh.md`，依四領域歸組，`--display-offset 100` 排在英文之後（中文文獻維持書目層、不抓全文）。
-- **狀態**：✅ **倫理學三部曲 115 筆**（M1 37／M2 39／M3 39，**待補中文**）＋✅ **認識論三部曲 118 筆**（E1 39＝31英+8中／E2 39＝29英+10中／E3 40＝31英+9中）。report 在 `scripts/data/lit_review_genesis_{M1,M2,M3,E1,E2,E3}.md`(+`_zh`)。全文逐段中譯背景跑 `--fetch-fulltext`。**待辦**：① M1-M3 補中文；② O1-3／V1-3／B1-3 共 9 卷（英文經典＋中文）。⚠️ 跨領域同 ref_key 一卷內只留一筆；作者不確定寧缺。新章/新書代擬內容尚未回填 C-xxxxx。
+- **狀態（2026-06-24 結案）**：🎉 **全 15 卷英文＋中文書目皆完成，約 663 筆**——M1/M2/M3、E1/E2/E3、O1/O2/O3、V1/V2/V3、B1/B2/B3 五系列。report 在 `scripts/data/lit_review_genesis_{<BID>}.md`(+`_zh`)，皆 dry-parse `DUP=[]` 過、commit 在 master。**書目層結案**。⚠️ 跨領域同 ref_key 一卷內只留一筆（跨卷重覆＝允許）；作者不確定寧缺。新章/新書代擬內容尚未回填 C-xxxxx。
+- **剩餘＝全文逐段中譯（選配，已交辦 Codex）**：見上「全文層」。2026-06-24 嘗試過夜跑時 Gemini/NVIDIA/Sonnet **三引擎全 429（帳號層級限流）**，故停手改交 Codex 用 `--engine haiku`（Max 獨立池）或限流退去後 `--engine sonnet --resume`。
 
 ## 版權姿態
 
