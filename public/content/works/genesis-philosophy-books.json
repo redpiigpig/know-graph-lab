@@ -81,7 +81,7 @@
    ]
   },
   {
-   "branch": "價值論二部曲",
+   "branch": "價值論三部曲",
    "books": [
     {
      "id": "V1",
@@ -96,6 +96,13 @@
      "subtitle": "願然的應用——意義、愛、神聖與時代診斷",
      "file": "/content/works/genesis/V2.html",
      "nChapters": 6
+    },
+    {
+     "id": "V3",
+     "title": "世界理論",
+     "subtitle": "心識、藝術與虛構——世界的生成",
+     "file": "/content/works/genesis/V3.html",
+     "nChapters": 5
     }
    ]
   },
@@ -114,7 +121,7 @@
      "title": "默然與不可言說：語言的邊界",
      "subtitle": "存有的不可言說性——默然、語言界線、自指",
      "file": "/content/works/genesis/B2.html",
-     "nChapters": 7
+     "nChapters": 6
     },
     {
      "id": "B3",
