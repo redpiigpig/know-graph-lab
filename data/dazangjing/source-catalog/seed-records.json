@@ -1,0 +1,2164 @@
+{
+  "manifest": {
+    "description": "First-pass source catalog for Christian Dazangjing. Candidate records need curation before insertion.",
+    "repositories": [
+      {
+        "key": "loc",
+        "name": "Library of Congress",
+        "country": "US",
+        "mode": "loc_json",
+        "endpoint": "https://www.loc.gov/books/",
+        "status": "api"
+      },
+      {
+        "key": "dnb",
+        "name": "Deutsche Nationalbibliothek",
+        "country": "DE",
+        "mode": "dnb_sru",
+        "endpoint": "https://services.dnb.de/sru/dnb",
+        "status": "sru"
+      },
+      {
+        "key": "bnf",
+        "name": "Bibliotheque nationale de France",
+        "country": "FR",
+        "mode": "bnf_sru",
+        "endpoint": "https://catalogue.bnf.fr/api/SRU",
+        "status": "sru"
+      },
+      {
+        "key": "bl",
+        "name": "British Library",
+        "country": "UK",
+        "mode": "manual",
+        "endpoint": "https://search.bl.uk/",
+        "status": "manual_queue",
+        "note": "No stable public JSON/SRU endpoint confirmed in this pass."
+      },
+      {
+        "key": "rsl",
+        "name": "Russian State Library",
+        "country": "RU",
+        "mode": "manual",
+        "endpoint": "https://www.rsl.ru/",
+        "status": "manual_queue"
+      },
+      {
+        "key": "nlr",
+        "name": "National Library of Russia",
+        "country": "RU",
+        "mode": "manual",
+        "endpoint": "https://nlr.ru/",
+        "status": "manual_queue"
+      },
+      {
+        "key": "vatican_library",
+        "name": "Biblioteca Apostolica Vaticana",
+        "country": "VA",
+        "mode": "manual",
+        "endpoint": "https://opac.vatlib.it/",
+        "status": "manual_queue"
+      },
+      {
+        "key": "vatican_archive",
+        "name": "Archivio Apostolico Vaticano",
+        "country": "VA",
+        "mode": "manual",
+        "endpoint": "https://www.archivioapostolicovaticano.va/",
+        "status": "manual_queue"
+      },
+      {
+        "key": "constantinople",
+        "name": "Ecumenical Patriarchate of Constantinople",
+        "country": "TR",
+        "mode": "manual",
+        "endpoint": "https://ec-patr.org/",
+        "status": "manual_queue"
+      },
+      {
+        "key": "alexandria_patriarchate",
+        "name": "Greek Orthodox Patriarchate of Alexandria and All Africa",
+        "country": "EG",
+        "mode": "manual",
+        "endpoint": "https://www.patriarchateofalexandria.com/",
+        "status": "manual_queue"
+      }
+    ],
+    "queries": [
+      "Augustine De civitate Dei",
+      "Athanasius De incarnatione",
+      "Eusebius Historia ecclesiastica",
+      "John Chrysostom homiliae",
+      "Gregory Nazianzen orationes",
+      "Basil Caesarea Hexaemeron",
+      "Corpus iuris canonici",
+      "Thomas Aquinas Summa theologiae",
+      "Bonaventure Itinerarium mentis in Deum",
+      "Meister Eckhart sermons",
+      "Martin Luther De servo arbitrio",
+      "Calvin Institutio religionis christianae",
+      "Book of Common Prayer",
+      "Philokalia",
+      "Symeon Metaphrastes Menologion",
+      "Michael the Syrian Chronicle",
+      "Bar Hebraeus Chronicon Ecclesiasticum",
+      "Codex Vaticanus",
+      "Septuagint",
+      "Nag Hammadi Library"
+    ]
+  },
+  "records": [
+    {
+      "source": "loc",
+      "query": "Augustine De civitate Dei",
+      "title": "City of God.",
+      "author": "augustine, saint, bishop of hippo, 354",
+      "date": "1400-01-01",
+      "language": "latin",
+      "subjects": [
+        "illuminations",
+        "354 to 430",
+        "codex",
+        "italy"
+      ],
+      "url": "https://www.loc.gov/item/2021667905/",
+      "raw_id": "http://www.loc.gov/item/2021667905/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Augustine De civitate Dei",
+      "title": "City of God.",
+      "author": "augustine, saint, bishop of hippo, 354; jenson, nicolas",
+      "date": "1475-01-01",
+      "language": "latin",
+      "subjects": [
+        "410 to 430",
+        "italy"
+      ],
+      "url": "https://www.loc.gov/item/2021666883/",
+      "raw_id": "http://www.loc.gov/item/2021666883/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Augustine De civitate Dei",
+      "title": "Augustine and the art of ruling in the Carolingian imperial period : Political Discourse in Alcuin of York and Hincmar of Rheims",
+      "author": "mösch, sophia",
+      "date": "2019",
+      "language": "english",
+      "subjects": [
+        "archbishop of reims",
+        "politics and government",
+        "alcuin",
+        "approximately 806-882",
+        "hincmar",
+        "holy roman empire",
+        "735-804",
+        "354-430"
+      ],
+      "url": "https://www.loc.gov/item/2019718777/",
+      "raw_id": "http://www.loc.gov/item/2019718777/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Athanasius De incarnatione",
+      "title": "De incarnatione Verbi Dei, together with three essays subsidiary to the same",
+      "author": "hawkesworth, alan spencer",
+      "date": "1897",
+      "language": "english",
+      "subjects": [
+        "incarnation"
+      ],
+      "url": "https://www.loc.gov/item/34034691/",
+      "raw_id": "http://www.loc.gov/item/34034691/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Athanasius De incarnatione",
+      "title": "The festal letters of Athanasius, discovered in an ancient Syriac version,",
+      "author": "athanasius; cureton, william",
+      "date": "1848",
+      "language": "english",
+      "subjects": [],
+      "url": "https://www.loc.gov/item/12030585/",
+      "raw_id": "http://www.loc.gov/item/12030585/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Athanasius De incarnatione",
+      "title": "[Dzayn aṛ baghdzalin ...]",
+      "author": "athanasius; grigor; cyril",
+      "date": "1717",
+      "language": "armenian",
+      "subjects": [
+        "cyril",
+        "approximately 370-444",
+        "person and offices",
+        "commentaries",
+        "de incarnatione unigeniti",
+        "saint, patriarch of alexandria",
+        "jesus christ"
+      ],
+      "url": "https://www.loc.gov/item/2005554951/",
+      "raw_id": "http://www.loc.gov/item/2005554951/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Eusebius Historia ecclesiastica",
+      "title": "Historia ecclesiastica.",
+      "author": "lessing j. rosenwald collection (library of congress); eusebius; rufinus",
+      "date": "1474",
+      "language": "latin",
+      "subjects": [
+        "utrecht",
+        "netherlands",
+        "incunabula",
+        "primitive and early church, ca. 30-600",
+        "church history"
+      ],
+      "url": "https://www.loc.gov/item/65058853/",
+      "raw_id": "http://www.loc.gov/item/65058853/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Eusebius Historia ecclesiastica",
+      "title": "Ecclesiastica historia diui Eusebii. Et Ecclesiastica historia gentis Anglorum Venerabilis Bede. Cu[m] vtraru[m]q[ue] historiarum per singulos libros recollecta capitulorum annotatione",
+      "author": "bede; john davis batchelder collection (library of congress); eusebius; otto vollbehr collection (library of congress)",
+      "date": "1500",
+      "language": "latin",
+      "subjects": [
+        "sources",
+        "civilization, ancient",
+        "france",
+        "incunabula",
+        "great britain",
+        "primitive and early church, ca. 30-600",
+        "middle ages, 600",
+        "church history"
+      ],
+      "url": "https://www.loc.gov/item/74227804/",
+      "raw_id": "http://www.loc.gov/item/74227804/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Eusebius Historia ecclesiastica",
+      "title": "The ecclesiastical history of Eusebius Pamphilus : Bishop of Caesarea, in Palestine.",
+      "author": "crusé, christian frederic; eusebius",
+      "date": "1833",
+      "language": "english",
+      "subjects": [
+        "primitive and early church, ca. 30-600",
+        "church history"
+      ],
+      "url": "https://www.loc.gov/item/tmp96030657/",
+      "raw_id": "http://www.loc.gov/item/tmp96030657/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "John Chrysostom homiliae",
+      "title": "Catalogue of manuscripts and early printed books from the libraries of William Morris, Richard Bennett, Bertram fourth earl of Ashburnham, and other sources, now forming portion of the library of J. Pierpont Morgan.",
+      "author": "pierpont morgan library; ashburnham, bertram ashburnham; morris, william; duff, e. gordon (edward gordon); morgan, j. pierpont (john pierpont); james, m. r. (montague rhodes); lessing j. rosenwald collection (library of congress); proctor, robert; pollard, alfred w. (alfred william); aldrich, stephen; bennett, richard",
+      "date": "1906",
+      "language": "english",
+      "subjects": [
+        "private libraries",
+        "morris, william",
+        "incunabula",
+        "facsimiles",
+        "earl of",
+        "pierpont morgan library",
+        "ashburnham, bertram ashburnham",
+        "england"
+      ],
+      "url": "https://www.loc.gov/item/08004427/",
+      "raw_id": "http://www.loc.gov/item/08004427/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "John Chrysostom homiliae",
+      "title": "Fine books",
+      "author": "lessing j. rosenwald reference collection (library of congress); pollard, alfred w. (alfred william); levis, howard coppuck",
+      "date": "1912",
+      "language": "english",
+      "subjects": [
+        "printing",
+        "illustration of books",
+        "history"
+      ],
+      "url": "https://www.loc.gov/item/2023657001/",
+      "raw_id": "http://www.loc.gov/item/2023657001/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "John Chrysostom homiliae",
+      "title": "Bibliotheca Lindesiana ... Catalogue of the printed books preserved at Haigh hall, Wigan, co. pal. Lancast",
+      "author": "lessing j. rosenwald collection (library of congress); crawford, james ludovic lindsay",
+      "date": "1910",
+      "language": "english",
+      "subjects": [
+        "earl of",
+        "private libraries",
+        "crawford, james ludovic lindsay",
+        "early printed books",
+        "england",
+        "rare books",
+        "incunabula",
+        "great britain"
+      ],
+      "url": "https://www.loc.gov/item/10027735/",
+      "raw_id": "http://www.loc.gov/item/10027735/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Gregory Nazianzen orationes",
+      "title": "Gregory of Nazianzum.",
+      "author": "cox, g. v. (george valentine); ullmann, carl",
+      "date": "1851",
+      "language": "english",
+      "subjects": [
+        "of nazianzus, saint",
+        "primitive and early church, ca. 30-600",
+        "gregory",
+        "church history"
+      ],
+      "url": "https://www.loc.gov/item/37035865/",
+      "raw_id": "http://www.loc.gov/item/37035865/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Gregory Nazianzen orationes",
+      "title": "The pulpit and platform; being discourses, arguments and orations",
+      "author": "young, john",
+      "date": "1854",
+      "language": "english",
+      "subjects": [
+        "19th century",
+        "baptists, english",
+        "sermons"
+      ],
+      "url": "https://www.loc.gov/item/01010359/",
+      "raw_id": "http://www.loc.gov/item/01010359/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Gregory Nazianzen orationes",
+      "title": "The magus, or Celestial intelligencer; being a complete system of occult philosophy ... Exhibiting the sciences of natural magic; alchymy, or hermetic philosophy ... the constellatory practice, or talismanic magic ... magnetism, and cabalistical or ceremonial magic ... To which is addedd Biographia antique; or, The lives of the most eminent philosophers, magi &c",
+      "author": "barrett, francis",
+      "date": "1801",
+      "language": "english",
+      "subjects": [
+        "occultism",
+        "alchemy",
+        "magic"
+      ],
+      "url": "https://www.loc.gov/item/11015009/",
+      "raw_id": "http://www.loc.gov/item/11015009/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Basil Caesarea Hexaemeron",
+      "title": "Physica sacra, iconibvs æneis illus",
+      "author": "scheuchzer, johann jakob; lessing j. rosenwald collection (library of congress); pfeffel, johann andreas",
+      "date": "1731",
+      "language": "latin",
+      "subjects": [
+        "natural history",
+        "germany",
+        "bible",
+        "augsburg",
+        "illustrations",
+        "pictorial works",
+        "pre-linnean works"
+      ],
+      "url": "https://www.loc.gov/item/49038767/",
+      "raw_id": "http://www.loc.gov/item/49038767/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Basil Caesarea Hexaemeron",
+      "title": "Bibliotheca Lindesiana ... Catalogue of the printed books preserved at Haigh hall, Wigan, co. pal. Lancast",
+      "author": "crawford, james ludovic lindsay; lessing j. rosenwald collection (library of congress)",
+      "date": "1910",
+      "language": "english",
+      "subjects": [
+        "catalogs",
+        "great britain",
+        "private libraries",
+        "early printed books",
+        "crawford, james ludovic lindsay",
+        "england",
+        "rare books",
+        "incunabula"
+      ],
+      "url": "https://www.loc.gov/item/10027735/",
+      "raw_id": "http://www.loc.gov/item/10027735/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Basil Caesarea Hexaemeron",
+      "title": "Unknown God, known in his activities : incomprehensibility of God during the Trinitarian controversy of the 4th century",
+      "author": "stępień, tomasz",
+      "date": "2018",
+      "language": "english",
+      "subjects": [
+        "trinity",
+        "4th century",
+        "history of doctrines",
+        "church history",
+        "church controversies",
+        "knowableness",
+        "early church, ca. 30-600",
+        "god (christianity)"
+      ],
+      "url": "https://www.loc.gov/item/2020719645/",
+      "raw_id": "http://www.loc.gov/item/2020719645/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Thomas Aquinas Summa theologiae",
+      "title": "Elements of moral theology based on the Summa theologiae of St. Thomas Aquinas.",
+      "author": "elmendorf, j. j. (john jay)",
+      "date": "1892",
+      "language": "english",
+      "subjects": [],
+      "url": "https://www.loc.gov/item/unk82008812/",
+      "raw_id": "http://www.loc.gov/item/unk82008812/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Thomas Aquinas Summa theologiae",
+      "title": "De la philosophie de St Thomas d'Aquin",
+      "author": "cacheux, (narcisse)",
+      "date": "1858",
+      "language": "french",
+      "subjects": [
+        "aquinas, saint",
+        "thomas"
+      ],
+      "url": "https://www.loc.gov/item/89184156/",
+      "raw_id": "http://www.loc.gov/item/89184156/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Thomas Aquinas Summa theologiae",
+      "title": "The conception of a kingdom of ends in Augustine, Aquinas,",
+      "author": "stokes, ella harrison",
+      "date": "1912",
+      "language": "english",
+      "subjects": [
+        "leibniz, gottfried wilhelm",
+        "utopias",
+        "kingdom of god",
+        "freiherr von",
+        "of hippo, saint",
+        "thomas",
+        "aquinas, saint",
+        "354-430"
+      ],
+      "url": "https://www.loc.gov/item/13003217/",
+      "raw_id": "http://www.loc.gov/item/13003217/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Bonaventure Itinerarium mentis in Deum",
+      "title": "The weight of love : affect, ecstasy, and union in the theology of Bonaventure",
+      "author": "davis, robert glenn",
+      "date": "2017-01-01",
+      "language": "english",
+      "subjects": [
+        "bonaventure",
+        "saint, cardinal",
+        "history of doctrines",
+        "love",
+        "middle ages, 600",
+        "christianity",
+        "religious aspects"
+      ],
+      "url": "https://www.loc.gov/item/2020715524/",
+      "raw_id": "http://www.loc.gov/item/2020715524/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Bonaventure Itinerarium mentis in Deum",
+      "title": "The weight of love : affect, ecstasy, and union in the theology of Bonaventure",
+      "author": "davis, robert glenn",
+      "date": "2017",
+      "language": "english",
+      "subjects": [
+        "bonaventure",
+        "saint, cardinal",
+        "history of doctrines",
+        "love",
+        "middle ages, 600",
+        "christianity",
+        "religious aspects"
+      ],
+      "url": "https://www.loc.gov/item/2020426086/",
+      "raw_id": "http://www.loc.gov/item/2020426086/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Bonaventure Itinerarium mentis in Deum",
+      "title": "Catalogus librorum bibliothecae illustrissimi viri Caroli Henrici Comitis de Hoym, olim Regis Poloniae Augusti II. apud regem Christianissimum legati extraordinarii",
+      "author": "martin, gabriel",
+      "date": "1738",
+      "language": "latin",
+      "subjects": [
+        "private libraries",
+        "graf von",
+        "early printed books",
+        "early works to 1800",
+        "hoym, karl heinrich",
+        "rare books",
+        "germany",
+        "bibliography"
+      ],
+      "url": "https://www.loc.gov/item/09024503/",
+      "raw_id": "http://www.loc.gov/item/09024503/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Meister Eckhart sermons",
+      "title": "\"Paradisus anime intelligentis\" : Studien zu einer dominikanischen Predigtsammlung aus dem Umkreis Meister Eckharts",
+      "author": "hasebrink, burkhard; palmer, nigel f.; schiewer, hans-jochen",
+      "date": "2009",
+      "language": "german",
+      "subjects": [
+        "geschichte 1300",
+        "aufsatzsammlung",
+        "history and criticism",
+        "dominikaner",
+        "congresses",
+        "meister",
+        "kongress",
+        "paradisus anime intelligentis"
+      ],
+      "url": "//lccn.loc.gov/2009674330",
+      "raw_id": "http://lccn.loc.gov/2009674330",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Meister Eckhart sermons",
+      "title": "Meister Eckehart,",
+      "author": "funke, mary elizabeth",
+      "date": "1916",
+      "language": "english",
+      "subjects": [
+        "meister",
+        "eckhart"
+      ],
+      "url": "https://www.loc.gov/item/17001238/",
+      "raw_id": "http://www.loc.gov/item/17001238/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Meister Eckhart sermons",
+      "title": "Dr. Eckhart's boys,",
+      "author": "seifert, emma; ireland, mary eliza (haines)",
+      "date": "1901",
+      "language": "english",
+      "subjects": [],
+      "url": "https://www.loc.gov/item/18020853/",
+      "raw_id": "http://www.loc.gov/item/18020853/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Martin Luther De servo arbitrio",
+      "title": "The table talk or familiar discourse of Martin Luther",
+      "author": "luther, martin; hazlitt, william",
+      "date": "1848",
+      "language": "english",
+      "subjects": [
+        "table-talk"
+      ],
+      "url": "https://www.loc.gov/item/81483890/",
+      "raw_id": "http://www.loc.gov/item/81483890/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Martin Luther De servo arbitrio",
+      "title": "The life of Martin Luther : related from original authorities",
+      "author": "meurer, moritz",
+      "date": "1848",
+      "language": "english",
+      "subjects": [
+        "luther, martin"
+      ],
+      "url": "https://www.loc.gov/item/tmp96031602/",
+      "raw_id": "http://www.loc.gov/item/tmp96031602/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Martin Luther De servo arbitrio",
+      "title": "Tributes to the memory of Martin Luther.",
+      "author": "croll, p. c. (philip columbus)",
+      "date": "1884",
+      "language": "english",
+      "subjects": [],
+      "url": "https://www.loc.gov/item/unk83018594/",
+      "raw_id": "http://www.loc.gov/item/unk83018594/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Calvin Institutio religionis christianae",
+      "title": "Calvin--Saint or Sinner?",
+      "author": "selderhuis, h. j.; theologische universiteit apeldoorn. instituut voor reformatieonderzoek",
+      "date": "2010",
+      "language": "english; german",
+      "subjects": [
+        "congresses",
+        "conference papers and proceedings",
+        "calvin, jean"
+      ],
+      "url": "https://www.loc.gov/item/2020719861/",
+      "raw_id": "http://www.loc.gov/item/2020719861/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Calvin Institutio religionis christianae",
+      "title": "Calvin Und Calvinismus : Europaische Perspektiven",
+      "author": "selderhuis, h. j.; dingel, irene",
+      "date": "2011",
+      "language": "english; german",
+      "subjects": [
+        "congresses",
+        "conference papers and proceedings",
+        "calvinism",
+        "calvin, jean"
+      ],
+      "url": "https://www.loc.gov/item/2020719511/",
+      "raw_id": "http://www.loc.gov/item/2020719511/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Calvin Institutio religionis christianae",
+      "title": "Auslegung und Hermeneutik der Bibel in der Reformationszeit",
+      "author": "christ-von wedel, christine; grosse, sven",
+      "date": "2017",
+      "language": "german",
+      "subjects": [
+        "criticism, interpretation, etc",
+        "hermeneutics",
+        "16th century",
+        "reformation",
+        "bible",
+        "early works to 1800",
+        "history"
+      ],
+      "url": "https://www.loc.gov/item/2017001340/",
+      "raw_id": "http://www.loc.gov/item/2017001340/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Book of Common Prayer",
+      "title": "The Book of common prayer; its origin and growth,",
+      "author": "benton, josiah h., (josiah henry)",
+      "date": "1910",
+      "language": "english",
+      "subjects": [
+        "church of england",
+        "book of common prayer"
+      ],
+      "url": "https://www.loc.gov/item/10015385/",
+      "raw_id": "http://www.loc.gov/item/10015385/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Book of Common Prayer",
+      "title": "The Book of common prayer,",
+      "author": "church of england",
+      "date": "1869",
+      "language": "susu",
+      "subjects": [
+        "texts",
+        "susu language"
+      ],
+      "url": "https://www.loc.gov/item/44037871/",
+      "raw_id": "http://www.loc.gov/item/44037871/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Book of Common Prayer",
+      "title": "The book of common prayer,",
+      "author": "hill, john; company for propagation of the gospel in new england; nelles, abraham; church of england",
+      "date": "1842",
+      "language": "english",
+      "subjects": [
+        "texts",
+        "mohawk language"
+      ],
+      "url": "https://www.loc.gov/item/33020146/",
+      "raw_id": "http://www.loc.gov/item/33020146/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Philokalia",
+      "title": "Checklist of manuscripts in St. Catherine's monastery,",
+      "author": "library of congress; clark, kenneth willis; saint catherine (monastery : mount sinai)",
+      "date": "1952-01-01",
+      "language": "english",
+      "subjects": [
+        "egypt",
+        "saint catherine (monastery : mount sinai)",
+        "manuscripts, oriental",
+        "library",
+        "manuscripts",
+        "catalogs",
+        "sinai",
+        "manuscripts, greek"
+      ],
+      "url": "https://www.loc.gov/item/52060038/",
+      "raw_id": "http://www.loc.gov/item/52060038/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Philokalia",
+      "title": "Gregory of Nazianzum.",
+      "author": "cox, g. v. (george valentine); ullmann, carl",
+      "date": "1851",
+      "language": "english",
+      "subjects": [
+        "of nazianzus, saint",
+        "primitive and early church, ca. 30-600",
+        "gregory",
+        "church history"
+      ],
+      "url": "https://www.loc.gov/item/37035865/",
+      "raw_id": "http://www.loc.gov/item/37035865/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Philokalia",
+      "title": "Non-identity theodicy : a grace-based response to the problem of evil",
+      "author": "vitale, vincent raphael",
+      "date": "2020",
+      "language": "english",
+      "subjects": [
+        "theodicy",
+        "good and evil",
+        "religious aspects"
+      ],
+      "url": "https://www.loc.gov/item/2020718964/",
+      "raw_id": "http://www.loc.gov/item/2020718964/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Symeon Metaphrastes Menologion",
+      "title": "British manuscripts project; a checklist of the microfilms prepared in England and Wales for the American Council of Learned Societies, 1941-1945",
+      "author": "american council of learned societies; born, lester k.; library of congress. processing department; born, lester k. (lester kruger)",
+      "date": "1955",
+      "language": "english",
+      "subjects": [
+        "microfilms",
+        "manuscripts",
+        "great britain",
+        "catalogs"
+      ],
+      "url": "https://www.loc.gov/item/55060041/",
+      "raw_id": "http://www.loc.gov/item/55060041/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Symeon Metaphrastes Menologion",
+      "title": "A dictionary of Christian antiquities",
+      "author": "smith, william",
+      "date": "",
+      "language": "english",
+      "subjects": [],
+      "url": "https://www.loc.gov/item/tmp81063944/",
+      "raw_id": "http://www.loc.gov/item/tmp81063944/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Symeon Metaphrastes Menologion",
+      "title": "[(Vol. 15, LOO-MEM)] Werner encyclopædia. A standard work of reference in art, literature, science, history, geography, commerce, biography, discovery and invention ...",
+      "author": "",
+      "date": "1909",
+      "language": "english",
+      "subjects": [
+        "encyclopedias and dictionaries"
+      ],
+      "url": "https://www.loc.gov/item/09005234/resource/gdcmassbookdig.wernerencyclopae15unse",
+      "raw_id": "http://www.loc.gov/item/09005234/resource/gdcmassbookdig.wernerencyclopae15unse",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Michael the Syrian Chronicle",
+      "title": "Annales, or, A generall chronicle of England",
+      "author": "matthewes, augustine; levis, howard coppuck; meighan, richard; stow, john; beale, john; buck, george; lessing j. rosenwald collection (library of congress); alsop, bernard; fawcett, thomas; howes, edmund",
+      "date": "1632",
+      "language": "english",
+      "subjects": [
+        "history",
+        "universities and colleges",
+        "london",
+        "early works to 1800",
+        "to 1485",
+        "england",
+        "tudors",
+        "great britain"
+      ],
+      "url": "https://www.loc.gov/item/02013355/",
+      "raw_id": "http://www.loc.gov/item/02013355/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Michael the Syrian Chronicle",
+      "title": "The inner life of Syria, Palestine, and the Holy Land",
+      "author": "burton, isabel",
+      "date": "1875",
+      "language": "english",
+      "subjects": [
+        "description and travel",
+        "syria",
+        "social life and customs",
+        "palestine"
+      ],
+      "url": "https://www.loc.gov/item/05003455/",
+      "raw_id": "http://www.loc.gov/item/05003455/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Michael the Syrian Chronicle",
+      "title": "The Howadji in Syria. By George William Curtis",
+      "author": "curtis, george william",
+      "date": "1867",
+      "language": "english",
+      "subjects": [
+        "description and travel",
+        "syria"
+      ],
+      "url": "https://www.loc.gov/item/15025137/",
+      "raw_id": "http://www.loc.gov/item/15025137/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Bar Hebraeus Chronicon Ecclesiasticum",
+      "title": "Bibliotheca Lindesiana ... Catalogue of the printed books preserved at Haigh hall, Wigan, co. pal. Lancast",
+      "author": "crawford, james ludovic lindsay; lessing j. rosenwald collection (library of congress)",
+      "date": "1910",
+      "language": "english",
+      "subjects": [
+        "catalogs",
+        "great britain",
+        "private libraries",
+        "early printed books",
+        "crawford, james ludovic lindsay",
+        "england",
+        "rare books",
+        "incunabula"
+      ],
+      "url": "https://www.loc.gov/item/10027735/",
+      "raw_id": "http://www.loc.gov/item/10027735/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Bar Hebraeus Chronicon Ecclesiasticum",
+      "title": "The Arab conquest of Egypt and the last thirty years of the Roman dominion,",
+      "author": "butler, alfred joshua",
+      "date": "1902",
+      "language": "english",
+      "subjects": [
+        "egypt",
+        "history",
+        "30 b.c.-640 a.d"
+      ],
+      "url": "https://www.loc.gov/item/03006949/",
+      "raw_id": "http://www.loc.gov/item/03006949/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Bar Hebraeus Chronicon Ecclesiasticum",
+      "title": "The preaching of Islam; a history of the propagation of the Muslim faith,",
+      "author": "arnold, thomas walker",
+      "date": "1913-01-01",
+      "language": "english",
+      "subjects": [
+        "islamic empire",
+        "islam"
+      ],
+      "url": "https://www.loc.gov/item/13035745/",
+      "raw_id": "http://www.loc.gov/item/13035745/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Codex Vaticanus",
+      "title": "Alphabetum Romanum [Codex Vaticanus 6852]",
+      "author": "mardersteig, giovanni; lessing j. rosenwald collection (library of congress); press collection (library of congress); biblioteca apostolica vaticana; feliciano, felice; boothroyd, r. h. (ronald herbert); officina bodoni",
+      "date": "1960",
+      "language": "italian; english",
+      "subjects": [
+        "alphabet",
+        "writing",
+        "history"
+      ],
+      "url": "//lccn.loc.gov/66098247",
+      "raw_id": "http://lccn.loc.gov/66098247",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Codex Vaticanus",
+      "title": "A calendar of fate: life and death in two Mexican codices in the Vatican Library",
+      "author": "calnek, edward e.; burland, cottie arthur",
+      "date": "1973",
+      "language": "english",
+      "subjects": [
+        "codex borgianus",
+        "codex vaticanus lat",
+        "codices",
+        "calendrics",
+        "codices -- mexico",
+        "aztecs -- calendrics",
+        "aztecs",
+        "aztecs -- religion"
+      ],
+      "url": "https://www.loc.gov/item/hlas-bi74101260/",
+      "raw_id": "http://www.loc.gov/item/hlas-bi74101260/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Codex Vaticanus",
+      "title": "Antiquities of Mexico : comprising fac-similes of ancient Mexican paintings and hieroglyphics, preserved in the royal libraries of Paris, Berlin and Dresden, in the Imperial library of Vienna, in the Vatican library, in the Borgian museum at Rome, in the library of the Institute at Bologna, and in the Bodleian Library at Oxford, together with The monuments of New Spain by M. Dupaix, with their respective scales of measurement and accompanying descriptions",
+      "author": "bernardino; fernández de oviedo y valdés, gonzalo; dupaix, guillermo; cortés, hernán; jay i. kislak collection (library of congress); alva ixtlilxóchitl, fernando de; simón, pedro; aglio, agostino; alvarado tezozómoc, fernando; adair, james; veytia, mariano; kingsborough, edward king",
+      "date": "1831",
+      "language": "italian; french; english; spanish",
+      "subjects": [
+        "to 1519",
+        "history",
+        "mexico",
+        "bodleian library",
+        "codex ríos",
+        "ethnology",
+        "nahuatl language",
+        "england"
+      ],
+      "url": "https://www.loc.gov/item/2006566784/",
+      "raw_id": "http://www.loc.gov/item/2006566784/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Septuagint",
+      "title": "My septuagint.",
+      "author": "deems, charles f.",
+      "date": "1892",
+      "language": "english",
+      "subjects": [],
+      "url": "https://www.loc.gov/item/unk82069385/",
+      "raw_id": "http://www.loc.gov/item/unk82069385/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Septuagint",
+      "title": "Translated Hallelujahs : a linguistic and exegetical commentary on select Septuagint Psalms",
+      "author": "smith, jannes",
+      "date": "2011",
+      "language": "english",
+      "subjects": [
+        "psalms",
+        "kommentar",
+        "bible",
+        "versions",
+        "criticism, interpretation, etc"
+      ],
+      "url": "//lccn.loc.gov/2011519110",
+      "raw_id": "http://lccn.loc.gov/2011519110",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Septuagint",
+      "title": "Law, prophets, and wisdom : on the provenance of translators and their books in the Septuagint version",
+      "author": "cook, johann; kooij, arie van der",
+      "date": "2012",
+      "language": "english",
+      "subjects": [
+        "old testament",
+        "greek",
+        "ijob",
+        "bibel",
+        "übersetzung",
+        "übersetzer",
+        "septuagint",
+        "translating"
+      ],
+      "url": "//lccn.loc.gov/2013443312",
+      "raw_id": "http://lccn.loc.gov/2013443312",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Nag Hammadi Library",
+      "title": "The Gospel of Thomas and Plato : a study of the impact of Platonism on the \"Fifth Gospel\"",
+      "author": "miroshnikov, ivan",
+      "date": "2018",
+      "language": "english",
+      "subjects": [
+        "plato",
+        "influence",
+        "platonists",
+        "gospel of thomas (coptic gospel)",
+        "criticism, interpretation, etc"
+      ],
+      "url": "https://www.loc.gov/item/2018039018/",
+      "raw_id": "http://www.loc.gov/item/2018039018/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Nag Hammadi Library",
+      "title": "The Holy Koran in the Library of Congress : a bibliography",
+      "author": "library of congress; tadrus, fawzi m.",
+      "date": "1993",
+      "language": "english",
+      "subjects": [
+        "library of congress",
+        "qurʼan",
+        "catalogs",
+        "bibliography"
+      ],
+      "url": "https://www.loc.gov/item/93026271/",
+      "raw_id": "http://www.loc.gov/item/93026271/",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "loc",
+      "query": "Nag Hammadi Library",
+      "title": "Library of Congress Classification - Schedule BR-BX",
+      "author": "library of congress cds",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://www.loc.gov/aba/publications/Archived-LCC2023/LCC_BR-BX2023TEXT.pdf",
+      "raw_id": "https://www.loc.gov/aba/publications/Archived-LCC2023/LCC_BR-BX2023TEXT.pdf",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Eusebius Historia ecclesiastica",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DEusebius+Historia+ecclesiastica&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Eusebius Historia ecclesiastica",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DEusebius+Historia+ecclesiastica&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Eusebius Historia ecclesiastica",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DEusebius+Historia+ecclesiastica&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Corpus iuris canonici",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DCorpus+iuris+canonici&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Corpus iuris canonici",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DCorpus+iuris+canonici&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Corpus iuris canonici",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DCorpus+iuris+canonici&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Thomas Aquinas Summa theologiae",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DThomas+Aquinas+Summa+theologiae&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Thomas Aquinas Summa theologiae",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DThomas+Aquinas+Summa+theologiae&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Meister Eckhart sermons",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DMeister+Eckhart+sermons&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Meister Eckhart sermons",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DMeister+Eckhart+sermons&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Meister Eckhart sermons",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DMeister+Eckhart+sermons&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Book of Common Prayer",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DBook+of+Common+Prayer&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Book of Common Prayer",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DBook+of+Common+Prayer&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Book of Common Prayer",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DBook+of+Common+Prayer&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Philokalia",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DPhilokalia&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Philokalia",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DPhilokalia&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Philokalia",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DPhilokalia&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Codex Vaticanus",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DCodex+Vaticanus&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Codex Vaticanus",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DCodex+Vaticanus&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Codex Vaticanus",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DCodex+Vaticanus&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Septuagint",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DSeptuagint&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Septuagint",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DSeptuagint&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Septuagint",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DSeptuagint&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Nag Hammadi Library",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DNag+Hammadi+Library&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Nag Hammadi Library",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DNag+Hammadi+Library&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "dnb",
+      "query": "Nag Hammadi Library",
+      "title": "",
+      "author": "",
+      "date": "",
+      "language": "",
+      "subjects": [],
+      "url": "https://services.dnb.de/sru/dnb?version=1.1&operation=searchRetrieve&query=WOE%3DNag+Hammadi+Library&recordSchema=MARC21-xml&maximumRecords=3",
+      "raw_id": "",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Augustine De civitate Dei",
+      "title": "City of God against the pagans , in seven volumes... [De Civitate Dei contra paganos.]",
+      "author": "Augustin (0354-0430 ; saint). Auteur du texte",
+      "date": "1965",
+      "language": "eng",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb32909397d",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb32909397d",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Augustine De civitate Dei",
+      "title": "De Civitate Dei. Book X / Augustine ; edited with an introduction, translation and commentary by P. G. Walsh",
+      "author": "Augustin (0354-0430 ; saint). Auteur du texte",
+      "date": "2014",
+      "language": "eng; lat",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb45070922d",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb45070922d; ISBN 9780856688485",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Augustine De civitate Dei",
+      "title": "De Civitate Dei. Books XI and XII / Augustine ; edited with an introduction, translation and commentary by P. G. Walsh",
+      "author": "Augustin (0354-0430 ; saint). Auteur du texte",
+      "date": "2016",
+      "language": "eng; lat",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb45070955c",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb45070955c; ISBN 9780856688713",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Athanasius De incarnatione",
+      "title": "De Incarnatione Verbi / Athanasius ; Einleitung, Übersetzung, Kommentar von E.P. Meijering",
+      "author": "Athanase (0295?-0373 ; saint). Auteur du texte",
+      "date": "1989",
+      "language": "ger",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb35085105x",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb35085105x; ISBN 9050630235",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Athanasius De incarnatione",
+      "title": "Contra Gentes ; De Incarnatione / Athanasius ; ed. and transl. by Robert W. Thomson,...",
+      "author": "Athanase (0295?-0373 ; saint). Auteur du texte; Athanase (0295?-0373 ; saint). Auteur du texte",
+      "date": "1971",
+      "language": "eng",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb34812913t",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb34812913t; ISBN 0198268017",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Athanasius De incarnatione",
+      "title": "The \"De Incarnatione\" of Athanasius / Part 1, by George J. Ryan,... [- Part. 2. by Robert Pierce Casey]",
+      "author": "Athanase (0295?-0373 ; saint). Auteur du texte",
+      "date": "1946",
+      "language": "eng",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb31737440c",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb31737440c",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Eusebius Historia ecclesiastica",
+      "title": "L'Historia ecclesiastica d'Eusebio Cesariense, tradotta dal latino nella lingua volgare. [M. Tramezino edidit.]",
+      "author": "Eusèbe de Césarée (0265?-0340). Auteur du texte",
+      "date": "1547",
+      "language": "ita",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb30410575j",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb30410575j",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Eusebius Historia ecclesiastica",
+      "title": "L'Histoire ecclésiastique [d'Eusèbe], translatée de latin en françois par messire Claude de Seyssel,... [Avec le prologue de Ruffin.]",
+      "author": "Eusèbe de Césarée (0265?-0340). Auteur du texte",
+      "date": "1567",
+      "language": "fre",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb30410567x",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb30410567x",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Eusebius Historia ecclesiastica",
+      "title": "Histoire ecclésiastique / Eusèbe de Césarée. IV, Introduction / par Gustave Bardy ; index par Pierre Périchon,...",
+      "author": "Eusèbe de Césarée (0265?-0340). Auteur du texte",
+      "date": "1960",
+      "language": "fre",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb33000872v",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb33000872v",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "John Chrysostom homiliae",
+      "title": "Rhetoric and tradition : John Chrysostom on Noah and the flood / by Hagit Amirav",
+      "author": "Amirav, Hagit. Auteur du texte",
+      "date": "2003",
+      "language": "eng",
+      "subjects": [
+        "Noé (personnage biblique)",
+        "Bible. A.T.. Genèse -- Exégèse -- 30-600 (Église primitive)",
+        "Jean Chrysostome (0347?-0407 ; saint). Homélies sur la Genèse",
+        "Déluge"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb40138629k",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb40138629k; ISBN 9042912839",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "John Chrysostom homiliae",
+      "title": "The Homilies of S. John Chrysostom,... on the statues or to the people of Antioch / S. John Chrysostom ; translated with notes... [by E. Budge.]",
+      "author": "Jean Chrysostome (0347?-0407 ; saint). Auteur du texte",
+      "date": "1842",
+      "language": "eng",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb30649716q",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb30649716q",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "John Chrysostom homiliae",
+      "title": "Johannis Chrysostomi De Davide et Saule homiliae tres / quas edidit Francesca Prometea Barone",
+      "author": "Jean Chrysostome (0347?-0407 ; saint). Auteur du texte",
+      "date": "2008",
+      "language": "grc",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb41411477f",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb41411477f; ISBN 9782503527970",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Gregory Nazianzen orationes",
+      "title": "Theologische Reden / Gregor von Nazianz ; übersetzt und eingeleitet von Hermann Josef Sieben",
+      "author": "Grégoire de Nazianze (0330?-0390? ; saint). Auteur du texte",
+      "date": "1996",
+      "language": "ger",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb38947141d",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb38947141d; ISBN 3451238004",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Gregory Nazianzen orationes",
+      "title": "@ . Discours et morceaux choisis de saint Basile et de saint Grégoire de Nazianze. Édition classique publiée sous la direction de M. l'abbé Cruice",
+      "author": "Grégoire de Nazianze (0330?-0390? ; saint). Auteur du texte",
+      "date": "1852",
+      "language": "mul",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb30538745p",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb30538745p",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Gregory Nazianzen orationes",
+      "title": "Homélies, XXXVIII-XXXIX, XL, I, XLV, XLI. Textes introduits par Dom Thomas Becquet, O.S.B., choisis, présentés et traduits par Edmond Devolver / Grégoire de Nazianze",
+      "author": "Grégoire de Nazianze (0330?-0390? ; saint). Auteur du texte",
+      "date": "1962",
+      "language": "fre",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb33031558b",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb33031558b",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Basil Caesarea Hexaemeron",
+      "title": "L'Hexaéméron [ @ ] de Saint Basile. Thèse [Texte et traduction annotée]... / par Stanislas Giet,...",
+      "author": "Basile de Césarée (0329?-0379 ; saint). Auteur du texte",
+      "date": "1950",
+      "language": "fre",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb31770531t",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb31770531t",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Basil Caesarea Hexaemeron",
+      "title": "Étude historique et littéraire sur saint Basile, suivie de l'Hexaméron, traduit en français, par Eugène Fialon,...",
+      "author": "Fialon, Eugène (1824-1896). Auteur du texte; Basile de Césarée (0329?-0379 ; saint). Auteur du texte",
+      "date": "1865",
+      "language": "fre",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb30433998f",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb30433998f",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Basil Caesarea Hexaemeron",
+      "title": "Homélies sur l'Hexaéméron...[ @ ] Introduction et traduction de Stanislas Giet,... 2e édition revue et augmentée / Basile de Césarée",
+      "author": "Basile de Césarée (0329?-0379 ; saint). Auteur du texte",
+      "date": "1968",
+      "language": "fre",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb32914665m",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb32914665m",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Corpus iuris canonici",
+      "title": "Die Strafgewalt der Kirche : das geltende kirchliche Strafrecht, dargestellt auf der Grundlage seiner Entwicklungsgeschichte / von Wilhelm Rees",
+      "author": "Rees, Wilhelm (1955-....). Auteur du texte",
+      "date": "1993",
+      "language": "ger",
+      "subjects": [
+        "Droit pénal (droit canonique)"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb37647382w",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb37647382w; ISBN 3428077903",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Corpus iuris canonici",
+      "title": "Ein liber septimus für das Corpus iuris canonici : der Versuch einer nachtridentinischen Kompilation / von Elisabeth Dickerhof-Borello",
+      "author": "Dickerhof-Borello, Elisabeth. Auteur du texte",
+      "date": "2002",
+      "language": "ger",
+      "subjects": [
+        "Corpus juris canonici",
+        "Droit canonique -- 1500-1800"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb400510838",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb400510838; ISBN 3412123013",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Corpus iuris canonici",
+      "title": "Die außerliturgische Klerikerkleidung nach Can. 284 CIC : eine rechtsgeschichtliche, rechtssystematische und rechtskritische Untersuchung / Wolfgang F. Rothe",
+      "author": "Rothe, Wolfgang F. (1967-....). Auteur du texte",
+      "date": "2014",
+      "language": "ger",
+      "subjects": [
+        "Corpus juris canonici",
+        "Vêtements liturgiques",
+        "Droit canonique"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb43818929m",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb43818929m; ISBN 9783830676478",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Thomas Aquinas Summa theologiae",
+      "title": "Summa theologiae / St Thomas Aquinas",
+      "author": "Thomas d'Aquin (1225?-1274 ; saint). Auteur du texte",
+      "date": "1964",
+      "language": "eng",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb34305631k",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb34305631k",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Thomas Aquinas Summa theologiae",
+      "title": "The Routledge guidebook to Aquinas' \"Summa Theologiae\" / Jason T. Eberl",
+      "author": "Eberl, Jason T.. Auteur du texte",
+      "date": "2016",
+      "language": "eng",
+      "subjects": [
+        "Thomas d'Aquin (1225?-1274 ; saint). Somme théologique"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb450915010",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb450915010; ISBN 9781138777163",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Thomas Aquinas Summa theologiae",
+      "title": "Thomas Aquinas's \"Summa theologiae\" : a biography / Bernard McGinn",
+      "author": "McGinn, Bernard (1937-....). Auteur du texte",
+      "date": "2014",
+      "language": "eng",
+      "subjects": [
+        "Thomas d'Aquin (1225?-1274 ; saint). Somme théologique"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb438028108",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb438028108; ISBN 9780691154268",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Bonaventure Itinerarium mentis in Deum",
+      "title": "Atti / del Symposium sull'\"Itinerarium mentis in Deum\" di San Bonaventura, La Verna, 14-17 Settembre 1988",
+      "author": "Symposium sull'\"Itinerarium mentis in Deum\" di San Bonaventura (1988 ; La Verna, Italie). Auteur du texte",
+      "date": "1988",
+      "language": "ita",
+      "subjects": [
+        "Bonaventure (1221?-1274 ; saint). Itinerarium mentis in Deum"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb350748340",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb350748340",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Bonaventure Itinerarium mentis in Deum",
+      "title": "Works of St. Bonaventure. Volume II, Itinerarium mentis in Deum : Latin text from the Quaracchi edition ([Revised and expanded edition]) new English translation by Zachary Hayes, ... ; introduction and commentary by Philotheus Boehner, ...",
+      "author": "Bonaventure (1221?-1274 ; saint). Auteur du texte",
+      "date": "2002",
+      "language": "eng",
+      "subjects": [
+        "Mystique -- Christianisme",
+        "Dieu -- Christianisme"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb45688258n",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb45688258n; ISBN 1576591859",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Bonaventure Itinerarium mentis in Deum",
+      "title": "Die eherne Schlange und andere kleine Prosa / Konrad Weiss ; [hrsg. von Friedhelm Kemp] ; [in Zusammenarb. mit Karl Neuwirth]",
+      "author": "Weiss, Konrad (1880-1940). Auteur du texte; Bonaventure (1221?-1274 ; saint). Auteur du texte",
+      "date": "1990",
+      "language": "ger",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb35584686r",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb35584686r; ISBN 3768199843",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Meister Eckhart sermons",
+      "title": "Lectura Eckhardi : Predigten Meister Eckharts von Fachgelehrten gelesen und gedeutet / herausgegeben von Georg Steer und Loris Sturlese ; koordiniert von Dagmar Gottschall",
+      "author": "Eckhart, Johannes (1260?-1327?). Auteur du texte",
+      "date": "2017",
+      "language": "ger",
+      "subjects": [
+        "Eckhart, Johannes (1260?-1327?)"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb45576039z",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb45576039z; ISBN 3170205714",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Meister Eckhart sermons",
+      "title": "Sermons ([Réimpr.]) Maître Eckhart ; introd. et trad. de Jeanne Ancelet-Hustache",
+      "author": "Eckhart, Johannes. Auteur du texte",
+      "date": "1992",
+      "language": "fre",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb37491170k",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb37491170k; ISBN 2020056283",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Meister Eckhart sermons",
+      "title": "Dieu au-delà de Dieu : sermons XXXI à LX / maître Eckhart ; trad. et présentés par Gwendoline Jarczyk et Pierre-Jean Labarrière",
+      "author": "Eckhart, Johannes (1260?-1327?). Auteur du texte",
+      "date": "1999",
+      "language": "fre",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb37071106c",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb37071106c; ISBN 2226107282",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Martin Luther De servo arbitrio",
+      "title": "Traité du serf arbitre : De servo arbitrio / Martin Luther ; texte traduit, présenté et annoté par Denis de Rougemont ; préface de M. le professeur A. Jundt",
+      "author": "Luther, Martin (1483-1546). Auteur du texte",
+      "date": "1937",
+      "language": "fre",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb410675854",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb410675854",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Martin Luther De servo arbitrio",
+      "title": "Theology as freedom : on Martin Luther's \"De servo arbitrio\" / Andrea Vestrucci",
+      "author": "Vestrucci, Andrea (1981-....). Auteur du texte",
+      "date": "2019",
+      "language": "eng",
+      "subjects": [
+        "Luther, Martin (1483-1546). De servo arbitrio",
+        "Liberté -- Christianisme -- Doctrines religieuses -- 16e siècle"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb45715618h",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb45715618h; ISBN 9783161569753",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Martin Luther De servo arbitrio",
+      "title": "I. Traité du serf arbitre(De servo arbitrio), texte traduit, présenté et annoté par Denis de Rougemont. Préface de M. le professeur A. Jundt / Oeuvres de Martin Luther",
+      "author": "Luther, Martin (1483-1546). Auteur du texte",
+      "date": "1937",
+      "language": "fre",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb324007008",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb324007008",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Calvin Institutio religionis christianae",
+      "title": "Calvin's interpretation of \"The Lord's Prayer\" : a rhetorical approach / by J.H. Mazaheri",
+      "author": "Mazaheri, John Homayoun (1951-2018). Auteur du texte",
+      "date": "2017",
+      "language": "eng",
+      "subjects": [
+        "Calvin, Jean (1509-1564). Christianae religionis institutio"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb45359534k",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb45359534k; ISBN 9783823381198",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Calvin Institutio religionis christianae",
+      "title": "Institution of the Christian religion... / Jean Calvin ; translated and annotated by Ford Lewis Battles,..",
+      "author": "Calvin, Jean (1509-1564). Auteur du texte",
+      "date": "1975",
+      "language": "eng",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb352966816",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb352966816; ISBN 0804204896",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Calvin Institutio religionis christianae",
+      "title": "Christianae religionis institutio, totam fere pietatis summam et quicquid est in doctrina salutis cognitu necessarium complectens... Joanne Calvino, Noviodunensi, auctore",
+      "author": "Calvin, Jean (1509-1564). Auteur du texte",
+      "date": "1536",
+      "language": "lat",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb301880960",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb301880960",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Book of Common Prayer",
+      "title": "The Book of common prayer, 1559 : the Elizabethan prayer book / edited by John E. Booty",
+      "author": "",
+      "date": "2005",
+      "language": "eng",
+      "subjects": [
+        "Book of common prayer (Church of England)",
+        "Church of England"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb42633300z",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb42633300z; ISBN 0813925177",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Book of Common Prayer",
+      "title": "The making of the Scottish prayer book of 1637 / by Gordon Donaldson,...",
+      "author": "Donaldson, Gordon (1913-1993). Auteur du texte",
+      "date": "1954",
+      "language": "eng",
+      "subjects": [
+        "Book of common prayer (Church of Scotland)"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb32037714k",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb32037714k",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Book of Common Prayer",
+      "title": "The book of common prayer and administration of the sacrements and other rites and ceremonies of the church according to the use of the Church of England together with the psalter or psalms of David.... (Standard ed.)",
+      "author": "",
+      "date": "1992",
+      "language": "eng",
+      "subjects": [
+        "Book of common prayer (Church of England)"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb375128828",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb375128828; ISBN 0521502322",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Philokalia",
+      "title": "[Recueil. Catalogues de libraire] / Zinos Books",
+      "author": "Zinos books. Auteur du texte",
+      "date": "2006",
+      "language": "eng",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb47263420g",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb47263420g",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Philokalia",
+      "title": "Le Christ dans la \"Philocalie\" / Jacques Touraille",
+      "author": "Touraille, Jacques (1925-....). Auteur du texte",
+      "date": "1995",
+      "language": "fre",
+      "subjects": [
+        "Philocalie"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb35769285f",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb35769285f; ISBN 2718906502",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Philokalia",
+      "title": "Petite philocalie de la prière du coeur / traduite de présentée par Jean Gouillard",
+      "author": "",
+      "date": "1968",
+      "language": "fre",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb33135274w",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb33135274w",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Symeon Metaphrastes Menologion",
+      "title": "Illustrated manuscripts of the Metaphrastian Menologion / Nancy patterson Sevcenko",
+      "author": "Ševčenko, Nancy Patterson (1939-....). Auteur du texte",
+      "date": "1990",
+      "language": "eng",
+      "subjects": [
+        "Siméon le Métaphraste",
+        "Enluminure byzantine",
+        "Manuscrits byzantins",
+        "Saints chrétiens -- Dans l'art"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb45158491j",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb45158491j; ISBN 0226696308",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Symeon Metaphrastes Menologion",
+      "title": "Metaphrasis : a Byzantine concept of rewriting and its hagiographical products / edited by Stavroula Constantinou, Christian Høgel ; with the assistance of Andria Andreou",
+      "author": "",
+      "date": "2021",
+      "language": "eng; fre",
+      "subjects": [
+        "Hagiographie chrétienne",
+        "Philologie grecque byzantine",
+        "Transmission des textes -- Moyen âge"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb46749568h",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb46749568h; ISBN 9789004392175",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Michael the Syrian Chronicle",
+      "title": "The \"Description of the times\" by Mōr Michael the Great (1126-1199) : a study on its historical and its historiographical context / by Dorothea Weltecke ; translated by Anthony Runia ; revised by Dorothea Weltecke and Thomas Palmer",
+      "author": "Weltecke, Dorothea (1967-....). Auteur du texte",
+      "date": "2021",
+      "language": "eng",
+      "subjects": [
+        "Miẖāʾīl al-Suryānī (1126-1199). Chronique",
+        "Chroniques syriaques",
+        "Histoire universelle",
+        "Eglise syrienne orthodoxe -- Historiographie"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb46789009f",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb46789009f; ISBN 9789042936584",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Michael the Syrian Chronicle",
+      "title": "From high priest to patriarch : history and authority in the Ecclesiastical history of Bar 'Ebroyo / Marianna Mazzola",
+      "author": "Mazzola, Marianna (1988-....). Auteur du texte",
+      "date": "2020",
+      "language": "eng",
+      "subjects": [
+        "Barhebraeus, Gregorius Abū al-Faraǧ (1226-1286)",
+        "Églises orientales -- Histoire"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb46871786v",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb46871786v; ISBN 9789042942318",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Bar Hebraeus Chronicon Ecclesiasticum",
+      "title": "Eklesyasthiki. [Chronicon ecclesiasticum.]",
+      "author": "Barhebraeus, Gregorius Abū al-Faraǧ (1226-1286). Auteur du texte",
+      "date": "",
+      "language": "lat",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb393779640",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb393779640",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Bar Hebraeus Chronicon Ecclesiasticum",
+      "title": "Gregorii Barhebraei Chronicon ecclesiasticum, quod... ediderunt, latinitate donarunt... Joannes Baptista Abbeloos,... et Thomas Josephus Lamy",
+      "author": "Barhebraeus, Gregorius Abū al-Faraǧ (1226-1286). Auteur du texte",
+      "date": "1872-1877",
+      "language": "lat",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb30001151s",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb30001151s",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Codex Vaticanus",
+      "title": "From Erasmus to Maius : the history of Codex Vaticanus in New Testament textual scholarship / An-Ting Yi.",
+      "author": "Yi, An-Ting. Auteur du texte",
+      "date": "2024",
+      "language": "eng",
+      "subjects": [
+        "Bible. N.T. -- Exégèse",
+        "Biblioteca apostolica vaticana -- Manuscrit. Cod. Vat. Gr. 1209 -- Histoire"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb47529765d",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb47529765d; ISBN 9783111453613",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Codex Vaticanus",
+      "title": "The first chapters : dividing the text of scripture in codex vaticanus and its predecessors / C.E. Hill",
+      "author": "Hill, Charles Evan (1956-....). Auteur du texte",
+      "date": "2021",
+      "language": "eng",
+      "subjects": [
+        "Bible. N.T.",
+        "Manuscrits grecs",
+        "Biblioteca apostolica vaticana -- Manuscrit. Cod. Vat. Gr. 1209"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb46885443x",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb46885443x; ISBN 0198836023",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Codex Vaticanus",
+      "title": "Bibliorum sacrorum Graecorum Codex Vaticanus B / reproduction en fac similé du manuscrit vat. Graecus 1209 ; Paul Canart, Pierre-Maurice Bogaert, Stephan Pisano",
+      "author": "",
+      "date": "1999",
+      "language": "grc; fre; eng",
+      "subjects": [
+        "Biblioteca apostolica vaticana -- Manuscrit. Cod. Vat. Gr. 1209"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb389748479",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb389748479",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Septuagint",
+      "title": "Translating a translation : the LXX and its modern translations in the context of early Judaism / edited by H. Ausloos,... [et al.]",
+      "author": "",
+      "date": "2008",
+      "language": "eng",
+      "subjects": [
+        "Bible. A.T. -- Versions grecques -- Septante -- Traduction"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb41408323q",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb41408323q; ISBN 9789042920385",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Septuagint",
+      "title": "Toward a theology of the Septuagint : Stellenbosch Congress on the Septuagint, 2018 / edited by Johann Cook and Martin Rösel",
+      "author": "International organization for Septuagint and cognate studies. Congress (19 ; 2018 ; Stellenbosch, Afrique du Sud). Auteur du texte",
+      "date": "2020",
+      "language": "eng; ger",
+      "subjects": [
+        "Bible. A. T. -- Versions grecques -- Septante -- Théologie"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb46592724f",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb46592724f; ISBN 9781628372700",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Septuagint",
+      "title": "Tradition and innovation : English and German studies on the Septuagint / Martin Rösel",
+      "author": "Rösel, Martin (1961-....). Auteur du texte",
+      "date": "2018",
+      "language": "eng; ger",
+      "subjects": [
+        "Bible. A. T. -- Versions grecques -- Septante",
+        "Bible. A.T. -- Exégèse"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb465394211",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb465394211; ISBN 9780884143239",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Nag Hammadi Library",
+      "title": "Nag Hammadi Deutsch",
+      "author": "",
+      "date": "2001",
+      "language": "ger",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb39972570n",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb39972570n",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Nag Hammadi Library",
+      "title": "Les manuscrits de Nag Hammadi / [édités par] Pr James Robinson ; traduit par Carole Hennebault",
+      "author": "",
+      "date": "2009",
+      "language": "fre",
+      "subjects": [],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb42044048j",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb42044048j",
+      "classification_status": "unclassified"
+    },
+    {
+      "source": "bnf",
+      "query": "Nag Hammadi Library",
+      "title": "Concordance des textes de Nag Hammadi. Les codices XIB, XII, XIII / par Wolf-Peter Funk et Paul-Hubert Poirier",
+      "author": "Funk, Wolf-Peter (1943-2021). Auteur du texte",
+      "date": "2002",
+      "language": "cop",
+      "subjects": [
+        "Manuscrits de Nag Hammadi"
+      ],
+      "url": "http://catalogue.bnf.fr/ark:/12148/cb39147416s",
+      "raw_id": "http://catalogue.bnf.fr/ark:/12148/cb39147416s; ISBN 2763779034",
+      "classification_status": "unclassified"
+    }
+  ],
+  "errors": [
+    {
+      "source": "loc",
+      "query": "Corpus iuris canonici",
+      "error": "The read operation timed out"
+    }
+  ]
+}

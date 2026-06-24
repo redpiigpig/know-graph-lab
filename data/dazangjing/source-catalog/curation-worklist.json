@@ -1,0 +1,214 @@
+{
+  "new_works": [
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "駁異教徒；論道成肉身",
+      "title_orig": "Contra Gentes ; De Incarnatione",
+      "author": "Athanasius",
+      "reason_zh": "此為亞他那修的兩部重要神學著作，屬於教父文獻，應收錄。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "wai"
+      ],
+      "n_editions": 1,
+      "title_zh": "巴爾赫佈雷教會編年史",
+      "title_orig": "Gregorii Barhebraei Chronicon ecclesiasticum",
+      "author": "Barhebraeus, Gregorius Abū al-Faraǧ (1226-1286)",
+      "reason_zh": "巴爾赫佈雷（Bar Hebraeus）為13世紀敘利亞正教會主教，其《教會編年史》為東方教會歷史重要著作，屬史傳類。雖非正典，但為早期教會史核心文獻，應予保留。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "六日創世講道集",
+      "title_orig": "Homélies sur l'Hexaéméron",
+      "author": "Basil of Caesarea",
+      "reason_zh": "巴西流（大巴西流）的《六日創世講道集》是教父時期的重要講道作品，屬於正典教父文獻，應歸入「shiwen」類。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "納西盎的格列高利講道集（第38、39、40、1、45、41篇）",
+      "title_orig": "Homélies, XXXVIII-XXXIX, XL, I, XLV, XLI. Textes introduits par Dom Thomas Becquet, O.S.B., choisis, présentés et traduits par Edmond Devolver / Grégoire de Nazianze",
+      "author": "Grégoire de Nazianze (0330?-0390? ; saint)",
+      "reason_zh": "此為納西盎的格列高利（聖師）的講道集，屬教父著作，內容為神學講道，非聖經正典本身，故歸入『shiwen』類。作者活躍於4世紀，屬古代教父時期。在基督教大藏經中通常視為正典文獻。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "聖金口約翰馬太福音講道集",
+      "title_orig": "The Homilies of S. John Chrysostom,... on the Gospel of St. Matthew",
+      "author": "John Chrysostom (c. 347–407)",
+      "reason_zh": "約翰·屈梭多模（金口聖若望）的《馬太福音講道集》是教父時代的重要講道作品，屬於正典教父文獻。此條目為英文譯本，但原作品時代為古代，故保留為主要作品。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "金口約翰論安提阿民眾講道集",
+      "title_orig": "The Homilies of S. John Chrysostom,... on the statues or to the people of Antioch",
+      "author": "John Chrysostom (0347?-0407 ; saint)",
+      "reason_zh": "約翰·屈梭多模（金口約翰）是教父，其講道集屬於教父著作，非聖經正典，故歸入「shiwen」類。作品年代為古代晚期。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "信仰讚歌",
+      "title_orig": "The hymns on faith",
+      "author": "聖厄弗冷 (Éphrem le Syrien)",
+      "reason_zh": "聖厄弗冷（約306–373）為敘利亞教父，其《信仰讚歌》屬教父詩歌作品，非聖經正典經文，故歸入「詩文」類。作品時代為古代，在東方基督教傳統中具有正典地位。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "天堂頌詩",
+      "title_orig": "Hymns on paradise",
+      "author": "聖厄弗冷",
+      "reason_zh": "聖厄弗冷（Ephrem the Syrian）是4世紀敘利亞教父，其《天堂頌詩》為教父時代的讚美詩作品，屬於東方教會傳統的重要文獻。此書為現代英譯本，但原作為古代教父作品，應保留為正藏文獻。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "金口約翰論大衛與掃羅三篇講道詞",
+      "title_orig": "Johannis Chrysostomi De Davide et Saule homiliae tres",
+      "author": "John Chrysostom",
+      "reason_zh": "此為金口約翰（約347-407年）的三篇講道詞，屬教父著作，內容為聖經人物大衛與掃羅的講解。雖為2008年現代校勘本，但原始作品為古代教父講道，應歸入「shiwen」類。在基督教大藏經中，教父講道詞通常被視為正藏文獻。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "wai"
+      ],
+      "n_editions": 1,
+      "title_zh": "凱布拉·納加斯特",
+      "title_orig": "Kebra Nagast",
+      "author": "unknown",
+      "reason_zh": "《凱布拉·納加斯特》是埃塞俄比亞中世紀的重要歷史與傳說文獻，記述示巴女王與所羅門王的故事及約櫃的傳說，屬於教會歷史與傳統敘事，非聖經正典，故歸類為史傳（shizhuan）且為外典（wai）。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "納雷科的聖額我略祈禱書註釋",
+      "title_orig": "Meknutʻiwn Aghōtʻitsʻ ew Nerboghinatsʻ Srboyn Grigori Narekatsʻwoy hreshtakakan vardapeti",
+      "author": "hakōb (雅各伯)",
+      "reason_zh": "此為亞美尼亞教會聖師納雷科的聖額我略（Grigor Narekatsʻi, 951–1003）《悲禱書》（Matean oghbergutʻean）之註釋，作者為雅各伯（hakōb）。原作品《悲禱書》為中世紀亞美尼亞教會重要靈修與祈禱經典，常被視為亞美尼亞使徒教會的正典文獻。本記錄雖為1745年印本，但所收內容為中世紀聖師作品，故保留為正典文獻。",
+      "sources": [
+        "loc"
+      ]
+    }
+  ],
+  "in_corpus_count": 10
+}

@@ -1,0 +1,5 @@
+# transient loop runtime artifacts
+catalog-loop-heartbeat.json
+catalog-loop.log
+catalog-loop.pid
+*.test.jsonl
