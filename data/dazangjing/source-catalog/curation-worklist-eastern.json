@@ -1,0 +1,26 @@
+{
+  "new_works": [
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "liyi"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "以信告白",
+      "title_orig": "Hawatov khostovanim",
+      "author": "Nerses Shnorhali, Saint",
+      "reason_zh": "此為亞美尼亞教會聖師聖聶爾謝斯·什諾爾哈利（Nerses Shnorhali）所著之重要禮儀詩歌，屬於亞美尼亞禮儀傳統中的核心文本。",
+      "sources": [
+        "openlibrary"
+      ]
+    }
+  ],
+  "in_corpus_count": 0,
+  "_inserted_2026-06-25_count": 18,
+  "_note": "東方 harvest 377→人工 triage(撞額度)→入庫 18 筆真正缺漏；loop 仍在補完 350 engine=none，待後續再 curate"
+}
