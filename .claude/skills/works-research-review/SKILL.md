@@ -145,7 +145,8 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
 - **API**：`/api/lit-review/entries?slug=genesis-philosophy&bookId=<BID>`（加 `bookId` filter）。
 - **reader**：書閱讀器 [pages/works/[slug]/book/[bid].vue](../../../pages/works/) 加「本文／研究回顧」分頁，依四領域分組（叢書專案頁本身無 lit-review render path，不受影響）。
 - **全文層（選配，過夜）**：OA 文獻 `--fetch-fulltext --book-id <BID> --project genesis-philosophy --resume`（同既有流程，逐段中譯、原文/中譯對照）。
-- **狀態**：✅ **倫理學三部曲完成，115 筆**——M1《愛的萬物論》37（範本）＋M2《虛構的烏托邦》39＋M3《人子》39，皆 book-level 上線（report 在 `scripts/data/lit_review_genesis_{M1,M2,M3}.md`）；全文逐段中譯待過夜 `--fetch-fulltext --book-id`。待推 E1-3／O1-3／V1-3／B1-3 共 12 卷。⚠️ 跨領域去重（如 Foucault 異托邦、Whitehouse 大神）一卷內同 ref_key 只留一筆；作者不確定的條目寧缺。新章/新書代擬內容尚未回填 C-xxxxx 對話引用。
+- **選書政策（使用者 2026-06-24 指定）**：優先**經典／得獎／公認／教科書級**研究；前沿只納公認里程碑（如 Cogitate 2025 Nature）；避免未證實或爭議過大（已剔 IIT 偽科學公開信、working paper、小刊）。**每卷都要加中文（華語學界）研究**：另開中文代理一輪 → `lit_review_genesis_<BID>_zh.md`，依四領域歸組，`--display-offset 100` 排在英文之後（中文文獻維持書目層、不抓全文）。
+- **狀態**：✅ **倫理學三部曲 115 筆**（M1 37／M2 39／M3 39，**待補中文**）＋✅ **認識論三部曲 118 筆**（E1 39＝31英+8中／E2 39＝29英+10中／E3 40＝31英+9中）。report 在 `scripts/data/lit_review_genesis_{M1,M2,M3,E1,E2,E3}.md`(+`_zh`)。全文逐段中譯背景跑 `--fetch-fulltext`。**待辦**：① M1-M3 補中文；② O1-3／V1-3／B1-3 共 9 卷（英文經典＋中文）。⚠️ 跨領域同 ref_key 一卷內只留一筆；作者不確定寧缺。新章/新書代擬內容尚未回填 C-xxxxx。
 
 ## 版權姿態
 
