@@ -50,7 +50,7 @@ LEDGER_DIR.mkdir(parents=True, exist_ok=True)
 # ── 目標字數（grc/hbo 取語料庫實有詞元，可能略少於目標即整部語料窮盡）──────────────
 TARGETS = {"en": 30000, "de": 6000, "fr": 6000, "ja": 9000, "grc": 6000, "hbo": 8000, "la": 6000,
            "arc": 1000, "att": 6000, "ar": 6000, "sa": 3000, "pi": 6000,
-           "cop": 4000, "bo": 4000}
+           "cop": 4000, "bo": 4000, "es": 6000, "syr": 4000, "hy": 4000, "ka": 4000}
 GLOSS_BATCH = 40          # 每次 LLM 一批詞數（deepseek ~30s/call，加大批量攤平延遲）
 UPSERT_BATCH = 200        # 每次寫 DB 筆數
 
@@ -519,8 +519,23 @@ def harvest_tibetan(target):
     return _rank_surface(freq, target, "藏文聖經", "ebible-bo-surface")
 
 
+BEBLIA = "https://raw.githubusercontent.com/Beblia/Holy-Bible-XML-Format/master"
+
+def harvest_beblia(fn, char_class, corpus, source, target, strip_marks=None):
+    """Beblia 聖經 XML（<verse number=N>…</verse>）→ 指定字符類表面詞頻。"""
+    xml = _http_text(f"{BEBLIA}/{fn}")
+    joined = " ".join(re.findall(r"<verse[^>]*>([^<]+)</verse>", xml))
+    if strip_marks:
+        joined = re.sub(strip_marks, "", joined)
+    freq = {}
+    for w in re.findall(char_class, joined):
+        freq[w] = freq.get(w, 0) + 1
+    return _rank_surface(freq, target, corpus, source)
+
+
 HARVESTERS = {
     "en": lambda: harvest_freqwords("en", TARGETS["en"]),
+    "es": lambda: harvest_freqwords("es", TARGETS["es"]),
     "de": lambda: harvest_freqwords("de", TARGETS["de"]),
     "fr": lambda: harvest_freqwords("fr", TARGETS["fr"]),
     "ja": lambda: harvest_jlpt(TARGETS["ja"]),
@@ -535,12 +550,17 @@ HARVESTERS = {
     "pi": lambda: harvest_pali(TARGETS["pi"]),                    # 巴利文（三藏羅馬轉寫表面詞頻）
     "cop": lambda: harvest_coptic(TARGETS["cop"]),                # 科普特文（eBible 科普特新約表面詞頻）
     "bo": lambda: harvest_tibetan(TARGETS["bo"]),                 # 藏文（eBible 藏文聖經，tsheg 斷音節）
+    "syr": lambda: harvest_beblia("AramaicBible.xml", r"[܀-ݏ]{2,}", "敘利亞聖經", "beblia-syr-surface",
+                                  TARGETS["syr"], strip_marks=r"[ܰ-݊]"),   # Peshitta（敘利亞字體），去母音點
+    "hy": lambda: harvest_beblia("ArmenianBible.xml", r"[Ա-Ֆա-և]{2,}", "亞美尼亞聖經", "beblia-hy-surface", TARGETS["hy"]),
+    "ka": lambda: harvest_beblia("GeorgianBible.xml", r"[ა-ჿ]{2,}", "喬治亞聖經", "beblia-ka-surface", TARGETS["ka"]),
 }
 
 LANG_LABEL = {"en": "英文", "de": "德文", "fr": "法文", "ja": "日文",
               "grc": "通用希臘文（新約 Koine）", "hbo": "聖經希伯來文", "la": "教會拉丁文（武加大）",
               "arc": "聖經亞蘭文", "att": "古典希臘文（Attic）", "ar": "古典阿拉伯文（古蘭）",
-              "sa": "梵文", "pi": "巴利文", "cop": "科普特文", "bo": "藏文"}
+              "sa": "梵文", "pi": "巴利文", "cop": "科普特文", "bo": "藏文",
+              "es": "西班牙文", "syr": "古典敘利亞文", "hy": "古典亞美尼亞文", "ka": "古典喬治亞文"}
 
 
 def candidates_path(lang):
@@ -571,9 +591,10 @@ def cmd_harvest(lang, force=False):
 def _gloss_system(lang):
     base = (f"你是{LANG_LABEL[lang]}詞彙教師，為做宗教/神話/宗教學研究的學生編字庫。"
             "務必輸出繁體中文（台灣用語，不可簡體）。")
-    if lang in ("la", "ar", "sa", "pi", "cop", "bo"):
+    if lang in ("la", "ar", "sa", "pi", "cop", "bo", "syr", "hy", "ka"):
         src = {"la": "武加大拉丁文", "ar": "古蘭阿拉伯文", "sa": "梵文天城體", "pi": "巴利文",
-               "cop": "科普特文（薩希德/波海里）", "bo": "藏文（音節）"}[lang]
+               "cop": "科普特文（薩希德/波海里）", "bo": "藏文（音節）",
+               "syr": "敘利亞文（Peshitta）", "hy": "亞美尼亞文", "ka": "喬治亞文"}[lang]
         extra = "藏文是以 tsheg 斷出的音節，請判斷其所屬詞並還原。" if lang == "bo" else ""
         return base + f"給你的是{src}的「表面字形」，請還原為字典詞元（lemma）後再解釋。{extra}"
     if lang in ("de", "fr"):
@@ -786,7 +807,8 @@ def main():
         cmd_status()
         return
     # all 的順序：使用者最常用/被卡住的古典語與較小語言先跑，英文（3 萬）量最大擺最後
-    ORDER = ["arc", "att", "ar", "sa", "pi", "cop", "bo", "grc", "hbo", "la", "ja", "de", "fr", "en"]
+    ORDER = ["arc", "att", "ar", "sa", "pi", "cop", "bo", "syr", "hy", "ka",
+             "grc", "hbo", "la", "ja", "de", "fr", "es", "en"]
     langs = ORDER if a.lang == "all" else [a.lang]
     for lang in langs:
         if a.cmd in ("harvest", "run"):
