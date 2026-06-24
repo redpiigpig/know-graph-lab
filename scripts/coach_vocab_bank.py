@@ -50,7 +50,8 @@ LEDGER_DIR.mkdir(parents=True, exist_ok=True)
 # ── 目標字數（grc/hbo 取語料庫實有詞元，可能略少於目標即整部語料窮盡）──────────────
 TARGETS = {"en": 30000, "de": 6000, "fr": 6000, "ja": 9000, "grc": 6000, "hbo": 8000, "la": 6000,
            "arc": 1000, "att": 6000, "ar": 6000, "sa": 3000, "pi": 6000,
-           "cop": 4000, "bo": 4000, "es": 6000, "syr": 4000, "hy": 4000, "ka": 4000}
+           "cop": 4000, "bo": 4000, "es": 6000, "syr": 4000, "hy": 4000, "ka": 4000,
+           "nan": 6000, "hak": 6000}
 GLOSS_BATCH = 40          # 每次 LLM 一批詞數（deepseek ~30s/call，加大批量攤平延遲）
 UPSERT_BATCH = 200        # 每次寫 DB 筆數
 
@@ -533,9 +534,60 @@ def harvest_beblia(fn, char_class, corpus, source, target, strip_marks=None):
     return _rank_surface(freq, target, corpus, source)
 
 
+def _moedict_example(exs):
+    """萌典例句標記：台語 ￹漢字￺台羅￻華義 或 客語 ￹客語￻華義 → 清成可讀字串。"""
+    if not exs:
+        return None
+    m = re.match(r"￹(.+?)￺(.+?)￻(.*)", exs[0]) or re.match(r"￹(.+?)￻(.*)", exs[0])
+    if not m:
+        return exs[0].replace("￹", "").replace("￺", "（").replace("￻", "）")[:160]
+    g = m.groups()
+    out = f"{g[0]}（{g[1]}）{g[2]}" if len(g) == 3 else f"{g[0]}　{g[1]}"
+    return out.strip()[:160]
+
+
+def _parse_moedict(url, source, corpus, limit, hakka=False):
+    """g0v 萌典資料（台語/客語）→ 已含繁中釋義+例句的完整候選（preglossed，免 LLM）。
+    客語多腔讀音取四縣腔；跳過本字未定（□）詞條。"""
+    data = json.loads(_http_text(url))
+    rows = []
+    for entry in data:
+        title = (entry.get("title") or "").strip()
+        hets = entry.get("heteronyms") or []
+        if not title or "□" in title or not hets:   # 本字未定字跳過
+            continue
+        het = hets[0]
+        trs = (het.get("trs") or het.get("pinyin") or "").strip()
+        if hakka and trs:                            # 客語多腔，取四縣腔（四⃞…）
+            mm = re.search("四⃞(\\S+)", trs)
+            trs = mm.group(1) if mm else trs.split()[0]
+        reading = re.sub("[⃞⃣]", "", trs) or None  # 去除腔別方框標記
+        defs = het.get("definitions") or []
+        meaning = "；".join(d.get("def", "").strip() for d in defs if d.get("def"))[:200]
+        if not meaning:
+            continue
+        pos = (defs[0].get("type") if defs else None) or None
+        example = None
+        for d in defs:
+            example = _moedict_example(d.get("example"))
+            if example:
+                break
+        rows.append({"word": title, "reading": reading, "meaning": meaning, "pos": pos,
+                     "example": example, "category": corpus, "level": "入門",
+                     "stroke": entry.get("stroke_count") or 99, "source": source, "preglossed": True})
+    rows.sort(key=lambda r: r["stroke"])  # 筆畫少者（≈較基礎）優先
+    out = rows[:limit]
+    for rank, r in enumerate(out, start=1):
+        r["freq_rank"] = rank
+        r.pop("stroke", None)
+    return out
+
+
 HARVESTERS = {
     "en": lambda: harvest_freqwords("en", TARGETS["en"]),
     "es": lambda: harvest_freqwords("es", TARGETS["es"]),
+    "nan": lambda: _parse_moedict("https://raw.githubusercontent.com/g0v/moedict-data-twblg/master/dict-twblg.json", "moedict-twblg", "臺灣閩南語常用詞", TARGETS["nan"]),
+    "hak": lambda: _parse_moedict("https://raw.githubusercontent.com/g0v/moedict-data-hakka/master/dict-hakka.json", "moedict-hakka", "臺灣客家語常用詞", TARGETS["hak"], hakka=True),
     "de": lambda: harvest_freqwords("de", TARGETS["de"]),
     "fr": lambda: harvest_freqwords("fr", TARGETS["fr"]),
     "ja": lambda: harvest_jlpt(TARGETS["ja"]),
@@ -560,7 +612,8 @@ LANG_LABEL = {"en": "英文", "de": "德文", "fr": "法文", "ja": "日文",
               "grc": "通用希臘文（新約 Koine）", "hbo": "聖經希伯來文", "la": "教會拉丁文（武加大）",
               "arc": "聖經亞蘭文", "att": "古典希臘文（Attic）", "ar": "古典阿拉伯文（古蘭）",
               "sa": "梵文", "pi": "巴利文", "cop": "科普特文", "bo": "藏文",
-              "es": "西班牙文", "syr": "古典敘利亞文", "hy": "古典亞美尼亞文", "ka": "古典喬治亞文"}
+              "es": "西班牙文", "syr": "古典敘利亞文", "hy": "古典亞美尼亞文", "ka": "古典喬治亞文",
+              "nan": "台語（臺灣閩南語）", "hak": "客語（臺灣客家語）"}
 
 
 def candidates_path(lang):
@@ -633,6 +686,33 @@ def cmd_gloss(lang, limit=None, engine="auto"):
     cands = [json.loads(l) for l in candidates_path(lang).open(encoding="utf-8")]
     done = _load_done(lang)
     pending = [c for c in cands if c["word"] not in done]
+
+    # 預先策展（moedict 台/客語）：候選已含繁中釋義+例句，直接 upsert，不呼叫 LLM
+    if cands and cands[0].get("preglossed"):
+        if limit:
+            pending = pending[:limit]
+        print(f"[{lang}] 預策展 upsert：候選 {len(cands)}、已完成 {len(done)}、待處理 {len(pending)}", flush=True)
+        gp = glossed_path(lang)
+        buf = []
+        with gp.open("a", encoding="utf-8") as gf:
+            for c in pending:
+                buf.append({
+                    "language": lang, "word": c["word"],
+                    "reading": c.get("reading") or None,
+                    "meaning": T._to_traditional(c.get("meaning") or ""),
+                    "example": T._to_traditional(c.get("example") or "") or None,
+                    "part_of_speech": c.get("pos") or None,
+                    "category": c.get("category"), "level": c.get("level"),
+                    "freq_rank": c.get("freq_rank"), "source": c["source"], "glossed": True,
+                })
+                gf.write(json.dumps({"word": c["word"]}, ensure_ascii=False) + "\n")
+                if len(buf) >= UPSERT_BATCH:
+                    upsert_rows(buf); buf = []
+        if buf:
+            upsert_rows(buf)
+        print(f"[{lang}] 預策展完成，upsert {len(pending)} 字", flush=True)
+        return
+
     is_lemma_dedup = lang == "la"  # 拉丁文按 LLM 還原的詞元去重
     if is_lemma_dedup:
         done_lemmas = set(done)  # done 已是詞元
@@ -807,7 +887,7 @@ def main():
         cmd_status()
         return
     # all 的順序：使用者最常用/被卡住的古典語與較小語言先跑，英文（3 萬）量最大擺最後
-    ORDER = ["arc", "att", "ar", "sa", "pi", "cop", "bo", "syr", "hy", "ka",
+    ORDER = ["arc", "att", "ar", "sa", "pi", "cop", "bo", "syr", "hy", "ka", "nan", "hak",
              "grc", "hbo", "la", "ja", "de", "fr", "es", "en"]
     langs = ORDER if a.lang == "all" else [a.lang]
     for lang in langs:
