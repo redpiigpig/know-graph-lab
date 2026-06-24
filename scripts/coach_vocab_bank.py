@@ -52,7 +52,7 @@ TARGETS = {"en": 30000, "de": 6000, "fr": 6000, "ja": 9000, "grc": 6000, "hbo": 
            "arc": 1000, "att": 6000, "ar": 6000, "sa": 3000, "pi": 6000,
            "cop": 4000, "bo": 4000, "es": 6000, "syr": 4000, "hy": 4000, "ka": 4000,
            "nan": 6000, "hak": 6000, "peo": 100, "phn": 100, "uga": 100, "chu": 100, "gez": 100,
-           "akk": 100, "egy": 100, "ae": 100, "pra": 100, "mid": 100}
+           "akk": 100, "egy": 100, "ae": 100, "pra": 100, "mid": 100, "ami": 100, "tay": 100}
 GLOSS_BATCH = 40          # 每次 LLM 一批詞數（deepseek ~30s/call，加大批量攤平延遲）
 UPSERT_BATCH = 200        # 每次寫 DB 筆數
 
@@ -763,6 +763,35 @@ CURATED = {
         ("ࡁࡉࡕ", "bit", "房屋", "名詞", "—"),
         ("ࡔࡅࡌࡀ", "šuma", "名", "名詞", "b-šuma d-hiia（奉生命之名）"),
     ],
+    # 阿美語 — 教育部族語書寫系統核心詞（保守高把握：數字/親屬/自然/信仰）；例句從略（不杜撰文法）
+    "ami": [
+        ("cecay", None, "一", "數詞", "—"), ("tosa", None, "二", "數詞", "—"),
+        ("tolo", None, "三", "數詞", "—"), ("sepat", None, "四", "數詞", "—"),
+        ("lima", None, "五", "數詞", "—"), ("enem", None, "六", "數詞", "—"),
+        ("pito", None, "七", "數詞", "—"), ("falo", None, "八", "數詞", "—"),
+        ("siwa", None, "九", "數詞", "—"), ("mo'tep", None, "十", "數詞", "—"),
+        ("tamdaw", None, "人", "名詞", "—"), ("wama", None, "父親", "名詞", "—"),
+        ("wina", None, "母親", "名詞", "—"), ("wawa", None, "孩子", "名詞", "—"),
+        ("loma'", None, "家／房屋", "名詞", "—"), ("cidal", None, "太陽／日", "名詞", "—"),
+        ("folad", None, "月亮", "名詞", "—"), ("nanom", None, "水", "名詞", "—"),
+        ("riyar", None, "海", "名詞", "—"), ("kilang", None, "樹", "名詞", "—"),
+        ("Kawas", None, "神靈／祖靈（傳統信仰）", "名詞", "—"),
+        ("Nga'ay ho", None, "你好（問候語）", "片語", "—"),
+    ],
+    # 泰雅語 — 教育部族語書寫系統核心詞（保守高把握）；例句從略
+    "tay": [
+        ("qutux", None, "一", "數詞", "—"), ("sazing", None, "二", "數詞", "—"),
+        ("cyugal", None, "三", "數詞", "—"), ("payat", None, "四", "數詞", "—"),
+        ("magal", None, "五", "數詞", "—"),
+        ("squliq", None, "人", "名詞", "—"), ("yaba", None, "父親", "名詞", "—"),
+        ("yaya", None, "母親", "名詞", "—"), ("laqi", None, "孩子", "名詞", "—"),
+        ("mlikuy", None, "男人", "名詞", "—"), ("kneril", None, "女人", "名詞", "—"),
+        ("ngasal", None, "家／房屋", "名詞", "—"), ("wagi", None, "太陽", "名詞", "—"),
+        ("qsya'", None, "水", "名詞", "—"), ("rgyax", None, "山", "名詞", "—"),
+        ("llyung", None, "河", "名詞", "—"),
+        ("utux", None, "祖靈／神靈（傳統信仰）", "名詞", "—"),
+        ("gaga", None, "祖訓／規範（gaya）", "名詞", "—"),
+    ],
 }
 
 
@@ -840,6 +869,8 @@ HARVESTERS = {
     "ae": lambda: harvest_curated("ae"),     # 阿維斯陀文（轉寫核心詞）
     "pra": lambda: harvest_curated("pra"),   # 半摩揭陀俗語（天城體核心詞）
     "mid": lambda: harvest_curated("mid"),   # 曼達文（曼達字母核心詞）
+    "ami": lambda: harvest_curated("ami"),   # 阿美語（族語書寫系統核心詞）
+    "tay": lambda: harvest_curated("tay"),   # 泰雅語（族語書寫系統核心詞）
     "de": lambda: harvest_freqwords("de", TARGETS["de"]),
     "fr": lambda: harvest_freqwords("fr", TARGETS["fr"]),
     "ja": lambda: harvest_jlpt(TARGETS["ja"]),
@@ -867,7 +898,8 @@ LANG_LABEL = {"en": "英文", "de": "德文", "fr": "法文", "ja": "日文",
               "es": "西班牙文", "syr": "古典敘利亞文", "hy": "古典亞美尼亞文", "ka": "古典喬治亞文",
               "nan": "台語（臺灣閩南語）", "hak": "客語（臺灣客家語）", "peo": "古波斯文",
               "phn": "腓尼基-布匿文", "uga": "烏加列文", "chu": "教會斯拉夫文", "gez": "吉茲文",
-              "akk": "阿卡德文", "egy": "古埃及文", "ae": "阿維斯陀文", "pra": "半摩揭陀俗語", "mid": "曼達文"}
+              "akk": "阿卡德文", "egy": "古埃及文", "ae": "阿維斯陀文", "pra": "半摩揭陀俗語", "mid": "曼達文",
+              "ami": "阿美語", "tay": "泰雅語"}
 
 
 def candidates_path(lang):
