@@ -311,10 +311,12 @@ def latin_ratio(s: str) -> float:
 # Distinctive 文言 (classical Chinese) markers the user-mandated 白話/《和合本》
 # register must NOT use (和合本 says 名叫/說/你/我, never 名曰/焉/矣/汝/吾).
 # Only HIGH-PRECISION markers:
-#   · particles 名曰 / 曰： / 焉 / 矣 / 哉
+#   · particles 名曰 / 曰： / 焉 / 矣
 #   · classical pronouns 汝 (你) / 吾 (我) — never in 和合本, no 白話-word collision
 # Excluded (collide with 白話): 之／其／乃／遂(未遂)／彼(彼此).
-WENYAN_RE = re.compile(r"名曰|曰[：「『]|[^。！？\s]焉[。，、！]|矣[。，！]|哉[！。]|汝|吾")
+# 哉 dropped: the 和合本 itself uses 哉-exclamations freely (禍哉/哀哉/聖哉/深哉),
+# so it is the TARGET register, not 文言 drift — every corpus hit was a false flag.
+WENYAN_RE = re.compile(r"名曰|曰[：「『]|[^。！？\s]焉[。，、！]|矣[。，！]|汝|吾")
 
 
 def classify_translation(en: str, zh: str) -> str | None:

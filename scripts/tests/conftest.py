@@ -16,6 +16,7 @@ from pathlib import Path
 # Dummy creds so `URL = os.environ["SUPABASE_URL"]` doesn't KeyError on import.
 os.environ.setdefault("SUPABASE_URL", "http://dummy.local")
 os.environ.setdefault("SUPABASE_SERVICE_ROLE_KEY", "dummy-service-role-key")
+os.environ.setdefault("SUPABASE_ACCESS_TOKEN", "dummy-access-token")
 os.environ.setdefault("R2_BUCKET", "dummy-bucket")
 os.environ.setdefault("R2_ACCOUNT_ID", "dummy")
 os.environ.setdefault("R2_ACCESS_KEY_ID", "dummy")

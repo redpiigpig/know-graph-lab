@@ -174,7 +174,10 @@ TITLE_ZH: dict[str, str] = {
 # Page / citation markers and number-only fragments must NOT be sent to the LLM —
 # deepseek hallucinates plausible Gnostic prose for a bare "p. 126". Keep them
 # verbatim instead (language-neutral citations).
-_TRIVIAL_RE = re.compile(r"^\(?\s*(text\s*:|p{1,2}\.|pp\.|page|pat\.|cf\.|\d+\s*[-–]\s*\d+)", re.I)
+# `page\b` not bare `page`: the citation marker is always a whole word — bare
+# `page` false-matched prose starting "Pagels…" (Elaine Pagels, the prominent
+# gnostic scholar) and skipped real content as if it were a page reference.
+_TRIVIAL_RE = re.compile(r"^\(?\s*(text\s*:|p{1,2}\.|pp\.|page\b|pat\.|cf\.|\d+\s*[-–]\s*\d+)", re.I)
 
 
 def is_trivial_source(s: str) -> bool:

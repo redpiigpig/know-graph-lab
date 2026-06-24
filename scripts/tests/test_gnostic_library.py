@@ -366,3 +366,15 @@ def test_gate_flags_classical_pronouns():
 def test_gate_does_not_flag_baihua_pronouns():
     assert gl.classify_translation("Because you were absent, I told my son.",
                                    "因為你不在，我就告訴了我的兒子。") is None
+
+
+def test_gate_allows_hehe_ben_zai_exclamations():
+    # 和合本 uses 哉-exclamations freely (聖哉 Sanctus 啟4:8, 禍哉 woe 太23,
+    # 哀哉 lament 啟18) — these are the TARGET register, not 文言 drift.
+    assert gl.classify_translation(
+        "They all said with one voice: Holy, Holy, Holy! Amen.",
+        "他們都同聲說：「聖哉，聖哉，聖哉！阿們！」") is None
+    assert gl.classify_translation(
+        "they deserve woe from the Creator.", "他們才該遭受造物主的禍哉。") is None
+    # genuine 文言 drift via real markers (汝/曰/矣) is still flagged
+    assert gl.classify_translation("Well said, my son!", "善哉！汝言是也。") == "wenyan"
