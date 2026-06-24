@@ -145,7 +145,7 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
 - **API**：`/api/lit-review/entries?slug=genesis-philosophy&bookId=<BID>`（加 `bookId` filter）。
 - **reader**：書閱讀器 [pages/works/[slug]/book/[bid].vue](../../../pages/works/) 加「本文／研究回顧」分頁，依四領域分組（叢書專案頁本身無 lit-review render path，不受影響）。
 - **全文層（選配，過夜）**：OA 文獻 `--fetch-fulltext --book-id <BID> --project genesis-philosophy --resume`（同既有流程，逐段中譯、原文/中譯對照）。
-- **狀態**：✅ **M1《愛的萬物論》＝範本，37 筆**（自然 10／心理 10／哲學 9／宗教 8），book-level 已上線；全文逐段中譯待跑。待推其餘 14 卷（M2/M3、E1-3、O1-3、V1-3、B1-3）。⚠️ 新章/新書代擬內容尚未回填 C-xxxxx 對話引用。
+- **狀態**：✅ **倫理學三部曲完成，115 筆**——M1《愛的萬物論》37（範本）＋M2《虛構的烏托邦》39＋M3《人子》39，皆 book-level 上線（report 在 `scripts/data/lit_review_genesis_{M1,M2,M3}.md`）；全文逐段中譯待過夜 `--fetch-fulltext --book-id`。待推 E1-3／O1-3／V1-3／B1-3 共 12 卷。⚠️ 跨領域去重（如 Foucault 異托邦、Whitehouse 大神）一卷內同 ref_key 只留一筆；作者不確定的條目寧缺。新章/新書代擬內容尚未回填 C-xxxxx 對話引用。
 
 ## 版權姿態
 
