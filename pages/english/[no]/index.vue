@@ -78,6 +78,29 @@
           </p>
         </div>
       </section>
+
+      <!-- 學完了 → 頁尾測驗 CTA -->
+      <section class="rounded-3xl border-2 p-5 mb-12 text-center" :style="{ borderColor: accent + '55', background: accent + '0D' }">
+        <div class="text-3xl mb-1">🎯</div>
+        <h2 class="font-extrabold text-gray-800">學完這課了嗎？來測驗闖關！</h2>
+        <p class="text-sm text-gray-500 mt-0.5 mb-4">五種測驗都挑戰看看，分數會記錄下來，可以重複測驗</p>
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
+          <NuxtLink
+            v-for="q in quizzes" :key="q.type" :to="`/english/${lesson.no}/${q.type}`"
+            class="rounded-2xl bg-white border-2 p-3 text-center no-underline transition hover:-translate-y-0.5 hover:shadow"
+            :style="{ borderColor: accent + '40' }"
+          >
+            <div class="text-2xl">{{ q.icon }}</div>
+            <div class="text-xs font-bold text-gray-700 mt-1">{{ q.label }}</div>
+            <div v-if="best[`${lesson.no}:${q.type}`] != null" class="text-[11px] font-bold mt-0.5" :class="scoreColor(best[`${lesson.no}:${q.type}`])">★ {{ best[`${lesson.no}:${q.type}`] }}</div>
+            <div v-else class="text-[11px] text-gray-300 mt-0.5">未測驗</div>
+          </NuxtLink>
+        </div>
+        <NuxtLink :to="`/english/${lesson.no}/comprehensive`"
+          class="inline-block mt-4 px-6 py-2.5 rounded-full text-white font-bold no-underline" :style="{ background: accent }">
+          🏆 直接挑戰綜合測驗
+        </NuxtLink>
+      </section>
     </main>
 
     <div v-else class="max-w-3xl mx-auto px-4 py-20 text-center text-gray-400">載入中…</div>
