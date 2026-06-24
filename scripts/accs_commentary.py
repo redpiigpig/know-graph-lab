@@ -334,3 +334,101 @@ def build_rows_auto(
         entry_counter[chap][key] += 1
 
     return rows
+
+
+# ── Blank-father resolution (跨頁/跨段續行片段救援) ───────────────────────────
+# OCR 把一則具名教父引文拆成多列時，續行列常 father_name 空。兩種純函式救援：
+#  (1) 續行併入：blank-father comment 的前一則 comment 若**句中斷裂**（末字非
+#      句末標點），代表它是同一段引文的後半 → 併入前列、繼承其 father。
+#  (2) 作品回填：殘留 blank-father comment 若其 work_title 在全書**唯一對應**某
+#      father → 直接補 father（不動 body，零文字風險）。
+# 兩者皆不丟失任何正文（(1) 把文字移進前列、(2) 完全不碰 body）。
+
+_SENT_END = ("。", "！", "？", "」", "』", "）", "”", ".", "!", "?", ")")
+
+
+def _ends_sentence(text: Optional[str]) -> bool:
+    """末字是否為句末標點（用來判斷前列是否『句中斷裂』）。"""
+    t = (text or "").rstrip()
+    return bool(t) and t[-1] in _SENT_END
+
+
+def build_work_father_map(rows: list[dict]) -> dict[str, str]:
+    """work_title → father_name，僅收**全書唯一對應**單一 father 的作品。"""
+    wf: dict[str, set[str]] = {}
+    for r in rows:
+        if r.get("section_kind") != "comment":
+            continue
+        w = (r.get("work_title") or "").strip()
+        f = (r.get("father_name") or "").strip()
+        if w and f:
+            wf.setdefault(w, set()).add(f)
+    return {w: next(iter(fs)) for w, fs in wf.items() if len(fs) == 1}
+
+
+def plan_blank_father_fixes(
+    rows: list[dict], work_father: Optional[dict[str, str]] = None
+) -> dict:
+    """規劃（不執行）blank-father 救援。rows 需含 chapter / pericope_order /
+    entry_order / section_kind / father_name / work_title / body_zh（id 選填）。
+
+    回傳 {"merges": [...], "father_sets": [...], "work_father": {...}}：
+      merges      — [{"target": row, "sources": [row,...], "new_body", "new_work"}]
+                    （sources 併入 target，應 DELETE；target 應 UPDATE body/work）
+      father_sets — [{"row": row, "father": str}]（應 UPDATE father_name）
+    純規劃，不變動傳入的 dict。
+    """
+    if work_father is None:
+        work_father = build_work_father_map(rows)
+
+    groups: dict[tuple, list[dict]] = {}
+    for r in rows:
+        groups.setdefault((r["chapter"], r["pericope_order"]), []).append(r)
+
+    merges: list[dict] = []
+    father_sets: list[dict] = []
+
+    for grp in groups.values():
+        grp = sorted(grp, key=lambda r: r["entry_order"])
+        out: list[dict] = []          # 本段保留下來的列
+        state: dict[int, dict] = {}   # id(row) → {"body","work","sources"}
+        for r in grp:
+            is_blank = (
+                r.get("section_kind") == "comment"
+                and not (r.get("father_name") or "").strip()
+            )
+            if is_blank and out:
+                prev = out[-1]
+                st = state[id(prev)]
+                if prev.get("section_kind") == "comment" and not _ends_sentence(st["body"]):
+                    st["body"] = st["body"].rstrip() + (r.get("body_zh") or "").lstrip()
+                    if not (st["work"] or "").strip() and (r.get("work_title") or "").strip():
+                        st["work"] = r.get("work_title")
+                    st["sources"].append(r)
+                    continue
+            if is_blank:
+                w = (r.get("work_title") or "").strip()
+                if w in work_father:
+                    father_sets.append({"row": r, "father": work_father[w]})
+            state[id(r)] = {
+                "body": r.get("body_zh") or "",
+                "work": r.get("work_title"),
+                "sources": [],
+            }
+            out.append(r)
+        for r in out:
+            st = state[id(r)]
+            if st["sources"]:
+                new_work = (
+                    st["work"]
+                    if (not (r.get("work_title") or "").strip() and st["work"])
+                    else None
+                )
+                merges.append({
+                    "target": r,
+                    "sources": st["sources"],
+                    "new_body": st["body"],
+                    "new_work": new_work,
+                })
+
+    return {"merges": merges, "father_sets": father_sets, "work_father": work_father}

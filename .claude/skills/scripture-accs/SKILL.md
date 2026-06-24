@@ -99,8 +99,15 @@ python scripts/ingest_accs_genesis.py \
 - **本輪修正的教父譯名收斂**（對齊 `/translation-glossary` 主譯，已寫進 `FATHER_FIXES` + 補測試 + DB UPDATE 共 198 列）：
   奧利振→俄利根（5）；敘利亞人以法蓮→敘利亞的厄弗冷（139，OCR 草頭 蓮≠連）；
   亞歷山太/大的區利羅·西里爾·濟利祿→亞歷山卓的區利羅（39）；亞歷山太/大的革利免→亞歷山卓的革利免（14）；亞歷山太的斐羅→亞歷山卓的斐羅（1）。
-- **唯一殘留（非阻斷）**：121/1731 引文 `father_name` 空＝跨頁/跨段續行片段（句中斷裂），reader 顯示正文但無署名。
-  欲修需 parser 偵測「續行併入前一 entry」，較侵入，暫留。
+- **blank-father 救援（2026-06-25）**：`scripts/accs_resolve_blank_fathers.py`（純函式 `plan_blank_father_fixes` + pytest）
+  把空 `father_name` 從 **121 → 54**：①續行併入（前列 comment 句中斷裂→併 body+繼承 father，刪 46 來源列）45 則；
+  ②作品回填（work_title 全書唯一對應某 father→補名）21 則。body 字數守恆（405730 不變、零文字損失）。
+  → DB gen 列數 1,960 → **1,914**（刪的是被併走的續行碎片，非內容流失）。
+- **殘留 54（非阻斷）**：多為跨頁續行碎片（具名在上一頁、本頁無 inline 標注）＋歧義作品
+  （創世記講道集 ×14＝金口若望/俄利根皆有、創世記註釋 ×12、講道集 ×6、無作品 ×6）。
+  Vision 探針證實：本頁常無 inline 署名，但**頁末註腳來源碼（FC/PG/CSEL 冊號）可權威反推作者**
+  （例 FC 82=金口若望《創世記講道集》）。要全清需 ~51 次 footnote-aware Sonnet Vision（慢、計費、需人工覆核 high-conf），
+  尚未跑（待 user 拍板）。reader 顯示正文只是無署名，不影響閱讀。
 - **🚨 鐵則（若日後重跑）**：跑 12-50 **絕不可加 `--replace`**！會刪光整個 book_code=gen（含創 1-11）。章號不重疊，直接 upsert 累加。
 - **引擎**：**Sonnet**（`--engine sonnet`，Max OAuth）。Haiku 退兩次、Gemini key credit 乾。**必 `--batch 1`**（見雷⑤）。
 - **跑法慣例**：單次 pass＝`accs_resume_g2.ps1`（排程用）；曾試 `accs_loop*.ps1` auto-relaunch 迴圈，但**detached loop process 會被系統反覆 reap 死掉**（不適合無人值守）→ **改用 OS 排程**（survives reboot/登出/session 切換）。

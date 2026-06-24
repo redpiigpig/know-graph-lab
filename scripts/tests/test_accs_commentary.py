@@ -12,6 +12,9 @@ from accs_commentary import (  # noqa: E402
     has_simplified,
     build_rows,
     build_rows_auto,
+    build_work_father_map,
+    plan_blank_father_fixes,
+    _ends_sentence,
 )
 
 
@@ -137,6 +140,98 @@ def test_normalize_father_does_not_touch_bare_ambiguous():
     # 裸「約翰」可能是使徒約翰；裸「以法連」可能是聖經以法蓮 → 不收斂
     assert normalize_father("約翰") == "約翰"
     assert normalize_father("以法連") == "以法連"
+
+
+# ── blank-father 救援（plan_blank_father_fixes / build_work_father_map）────────
+
+def _row(ch, po, eo, kind, father, work, body):
+    return {"chapter": ch, "pericope_order": po, "entry_order": eo,
+            "section_kind": kind, "father_name": father, "work_title": work,
+            "body_zh": body}
+
+
+def test_ends_sentence():
+    assert _ends_sentence("祂創造了天地。") is True
+    assert _ends_sentence("造男造女」") is True
+    assert _ends_sentence("肉體真的") is False        # 句中斷裂
+    assert _ends_sentence("") is False
+
+
+def test_build_work_father_map_only_unique():
+    rows = [
+        _row(1, 1, 0, "comment", "安波羅修", "論樂園", "甲"),
+        _row(1, 2, 0, "comment", "安波羅修", "論樂園", "乙"),
+        _row(1, 3, 0, "comment", "奧古斯丁", "懺悔錄", "丙"),
+        _row(1, 4, 0, "comment", "耶柔米", "書信集", "丁"),
+        _row(1, 5, 0, "comment", "比德", "書信集", "戊"),   # 書信集 → 2 位 → 非唯一
+    ]
+    m = build_work_father_map(rows)
+    assert m["論樂園"] == "安波羅修"
+    assert m["懺悔錄"] == "奧古斯丁"
+    assert "書信集" not in m
+
+
+def test_plan_merge_continuation_inherits_father():
+    # 前一則 comment 句中斷裂 → blank 續行併入、繼承 father
+    rows = [
+        _row(1, 1, 0, "comment", "金口若望", "創世記講道集", "上帝說要有光，"),
+        _row(1, 1, 1, "comment", None, None, "於是就有了光。"),
+    ]
+    plan = plan_blank_father_fixes(rows, work_father={})
+    assert len(plan["merges"]) == 1
+    mg = plan["merges"][0]
+    assert mg["target"] is rows[0]
+    assert mg["sources"] == [rows[1]]
+    assert mg["new_body"] == "上帝說要有光，於是就有了光。"
+    assert plan["father_sets"] == []
+
+
+def test_plan_merge_fills_work_from_source():
+    # 前列有 father 無 work、續行有 work → 併入時補上 work
+    rows = [
+        _row(1, 1, 0, "comment", "富爾根狄", None, "聖父聖子聖靈本質上是一位上帝，"),
+        _row(1, 1, 1, "comment", None, "致彼得書：論信心", "按我們的形像造了他們」。"),
+    ]
+    plan = plan_blank_father_fixes(rows, work_father={})
+    assert plan["merges"][0]["new_work"] == "致彼得書：論信心"
+
+
+def test_plan_no_merge_when_prev_ends_clean():
+    # 前列乾淨結束（。）→ 不併入；改走 work 回填（若唯一）
+    rows = [
+        _row(1, 1, 0, "comment", "安波羅修", "論樂園", "上帝造出這一切。"),
+        _row(1, 1, 1, "comment", None, "論樂園", "那日定為聖日。"),
+    ]
+    plan = plan_blank_father_fixes(rows)  # work_father 自動建（論樂園→安波羅修）
+    assert plan["merges"] == []
+    assert len(plan["father_sets"]) == 1
+    assert plan["father_sets"][0]["row"] is rows[1]
+    assert plan["father_sets"][0]["father"] == "安波羅修"
+
+
+def test_plan_no_merge_into_overview():
+    # 前列是 overview（即使句中斷裂）也不併入 comment（避免汙染總論）
+    rows = [
+        _row(1, 1, 0, "overview", None, None, "這段經文教父註釋甚多，"),
+        _row(1, 1, 1, "comment", None, "論樂園", "上帝造園。"),
+    ]
+    plan = plan_blank_father_fixes(rows, work_father={"論樂園": "安波羅修"})
+    assert plan["merges"] == []
+    assert plan["father_sets"][0]["father"] == "安波羅修"
+
+
+def test_plan_preserves_total_body_length():
+    rows = [
+        _row(1, 1, 0, "comment", "金口若望", None, "甲甲甲甲甲"),
+        _row(1, 1, 1, "comment", None, None, "乙乙乙"),
+        _row(1, 1, 2, "comment", "奧古斯丁", None, "丙丙丙丙。"),
+    ]
+    before = sum(len(r["body_zh"]) for r in rows)
+    plan = plan_blank_father_fixes(rows, work_father={})
+    after = sum(len(m["new_body"]) for m in plan["merges"]) + \
+        sum(len(r["body_zh"]) for r in rows
+            if all(r not in m["sources"] and r is not m["target"] for m in plan["merges"]))
+    assert before == after
 
 
 def test_build_rows_output_is_traditional():
