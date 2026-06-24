@@ -83,21 +83,25 @@ python scripts/ingest_accs_genesis.py \
 
 ---
 
-## 🧭 下個 session 接手清單（2026-06-14 晚更新）
+## 🧭 下個 session 接手清單（2026-06-24 晚更新）
 
-### A. ACCS 創世記 OCR — **創 1-11 完成 ✅；創 12-50 OCR 中（排程跑，2026-06-16）**
-- **創 1-11 完成**：316/316 頁、`accs_commentary` book_code=gen **698 列**（67 總論+631 引文，chapters 1-11 全到）。
-  `.done`＝`c:/tmp/accs_gen_…創1-11.raw.done`；排程 `ACCS_Gen_Resume` **已 Disable**。spot-check 品質佳；
-  小瑕＝少數跨段續行 comment 的 `father_name` 空（非阻斷）。
-- **🔴 創 12-50 進行中（接手主要關注這個）**：PDF `c:/tmp/古代基督信仰聖經註釋叢書1 創12-50.pdf`（654 頁，已複製到本地）。
-  **靠排程 `ACCS_Gen2_Resume`（每 2h，battery-ok，IgnoreNew）跑 `scripts/accs_resume_g2.ps1`**。
-  進度（2026-06-16 交接時）≈ **154/654 頁、chapters 12-19 已入庫**（DB gen 總列 **968** ＝ 698[1-11] + 270[12-19]，
-  1-11 完整保留）。checkpoint `c:/tmp/accs_gen_…創12-50.raw.jsonl`、log `scripts/logs/accs_gen_12-50.log`、完成寫 `…創12-50.raw.done`。
-  ⚠️ **交接當下 Max Sonnet 正被 rate-limit**（OT II 大量 OCR + 長 session 把 5h 滾動窗燒乾；log 見 `[bail] 連續 3 次 rate-limit`）
-  → 排程每 2h 觸發但**這幾輪幾乎 0 進度**，要等 Max 5h 窗刷新才會往前。**這次是真 quota（不是 2026-06-15 那個 flag bug）**。
-  **接手第一件事**：`Get-ScheduledTaskInfo ACCS_Gen2_Resume` + 查 DB gen chapter>=12 列數有沒有在長；沒長多半就是還在等 Max 窗（別亂改、別加 --replace）。654 頁含等 quota 估計跑數天。
-- **🚨 創 12-50 鐵則**：跑 12-50 **絕不可加 `--replace`**！`--replace` 刪光整個 book_code=gen（含創 1-11 698 列）。
-  12-50 章號與 1-11 不重疊，**直接 upsert 累加**即可（`accs_resume_g2.ps1` 已是無 --replace）。
+### A. ACCS 創世記 OCR — **全書完成 ✅（創 1-50，2026-06-24）**
+- **創 1-11 完成**：316/316 頁、698 列（67 總論+631 引文）。`.done`＝`c:/tmp/accs_gen_…創1-11.raw.done`；
+  排程 `ACCS_Gen_Resume` **已 Disable**。
+- **創 12-50 完成 ✅（2026-06-24）**：654/654 頁全 OCR、`…創12-50.raw.done` 已寫。排程 `ACCS_Gen2_Resume` **已 Disable**
+  （比照 1-11 完成後收尾慣例）。內容頁到 PDF p.551 為止，p.552-654 為空白頁/索引（正確產 0 entries）。
+  收尾跑法＝`Disable-ScheduledTask` 後跑 direct（batch 1）；rate-limit/網路 blip 用 `c:/tmp/accs_g2_loop.sh`
+  迴圈重啟續傳（remaining 0 才停），最後一輪含 upsert 全本 1262 列。
+- **全 Genesis DB 終態（book_code=gen）**：**1,960 列**（229 總論 + 1,731 引文）、**49 章**（**唯缺第 36 章**＝以掃族譜，
+  ACCS OT II 本身無釋經，非漏 OCR；ch33/34/35 同樣稀疏 3/2/5 列）、90 位具名教父。
+- **品質再稽核（2026-06-24 全書）全綠**：blank_body=0、bad_verse_range=0、簡體殘留=0、亂碼=0。
+  視覺核對 p.549（創 50:17-20）與 DB 逐則吻合（敘利亞的厄弗冷/金口若望、節範圍、作品名皆對）。
+- **本輪修正的教父譯名收斂**（對齊 `/translation-glossary` 主譯，已寫進 `FATHER_FIXES` + 補測試 + DB UPDATE 共 198 列）：
+  奧利振→俄利根（5）；敘利亞人以法蓮→敘利亞的厄弗冷（139，OCR 草頭 蓮≠連）；
+  亞歷山太/大的區利羅·西里爾·濟利祿→亞歷山卓的區利羅（39）；亞歷山太/大的革利免→亞歷山卓的革利免（14）；亞歷山太的斐羅→亞歷山卓的斐羅（1）。
+- **唯一殘留（非阻斷）**：121/1731 引文 `father_name` 空＝跨頁/跨段續行片段（句中斷裂），reader 顯示正文但無署名。
+  欲修需 parser 偵測「續行併入前一 entry」，較侵入，暫留。
+- **🚨 鐵則（若日後重跑）**：跑 12-50 **絕不可加 `--replace`**！會刪光整個 book_code=gen（含創 1-11）。章號不重疊，直接 upsert 累加。
 - **引擎**：**Sonnet**（`--engine sonnet`，Max OAuth）。Haiku 退兩次、Gemini key credit 乾。**必 `--batch 1`**（見雷⑤）。
 - **跑法慣例**：單次 pass＝`accs_resume_g2.ps1`（排程用）；曾試 `accs_loop*.ps1` auto-relaunch 迴圈，但**detached loop process 會被系統反覆 reap 死掉**（不適合無人值守）→ **改用 OS 排程**（survives reboot/登出/session 切換）。
   **排程與 direct run 二擇一、別並行**（搶同一 checkpoint）。**換 session／離開電腦時靠排程自動跑**。

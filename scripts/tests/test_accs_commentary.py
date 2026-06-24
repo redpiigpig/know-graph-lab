@@ -113,6 +113,24 @@ def test_normalize_father_glossary_full_forms():
     assert normalize_father("大馬士革的約翰") == "大馬士革的若望"
     assert normalize_father("女撒的貴格利") == "尼撒的格列高里"
     assert normalize_father("敘利亞人以法連") == "敘利亞的厄弗冷"
+    # OCR 把「以法連」誤打成草頭「以法蓮」也要收斂
+    assert normalize_father("敘利亞人以法蓮") == "敘利亞的厄弗冷"
+
+
+def test_normalize_father_alexandria_city_unified():
+    # 亞歷山卓城（glossary 主譯）— 太/大 兩種 OCR 變體與西里爾/濟利祿異譯全收斂
+    assert normalize_father("亞歷山太的區利羅") == "亞歷山卓的區利羅"
+    assert normalize_father("亞歷山大的區利羅") == "亞歷山卓的區利羅"
+    assert normalize_father("亞歷山大的西里爾") == "亞歷山卓的區利羅"
+    assert normalize_father("亞歷山大的濟利祿") == "亞歷山卓的區利羅"
+    assert normalize_father("亞歷山太的革利免") == "亞歷山卓的革利免"
+    assert normalize_father("亞歷山太的斐羅") == "亞歷山卓的斐羅"
+
+
+def test_normalize_father_origen_variants():
+    # 俄利根（glossary 主譯）— 新教「奧利金」、天主教「奧利振」皆收斂
+    assert normalize_father("奧利金") == "俄利根"
+    assert normalize_father("奧利振") == "俄利根"
 
 
 def test_normalize_father_does_not_touch_bare_ambiguous():
