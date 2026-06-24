@@ -696,6 +696,7 @@ export const ANCIENT_ERA: DazangEra = {
               { title_zh: '論議事錄駁亞流', intro: '希拉流四世紀於普瓦捷以拉丁文撰寫，又名《論會議》。希拉流流放東方期間,向西方拉丁主教介紹東方各次會議的信經與爭論，努力化解東西方因用語誤解而生的隔閡，爭取雙方在反亞流立場上的合一。此書是拉丁教會理解東方三一神學的橋樑，被譽為「西方的亞他那修」之代表作，在東西方神學溝通與尼西亞正統傳播史上意義獨特。', title_orig: 'On the Councils (De Synodis)', author: '希拉流', era: '約 4 世紀', place: '普瓦捷', language: '拉丁文', link: '/fathers' },
               { title_zh: '駁聶斯多留論主道成肉身', intro: '卡西安五世紀於馬賽以拉丁文寫成，共七卷，受羅馬主教委託駁斥君士坦丁堡主教聶斯多留的基督論。聶斯多留主張基督具二位格、拒稱瑪利亞為「上帝之母」。卡西安論證基督位格的合一與神人二性的聯合，捍衛道成肉身的整全。此書是西方教會回應聶斯多留爭論的早期重要文獻，為以弗所會議前的基督論辯護，在道成肉身教義史上具參考價值。', title_orig: 'On the Incarnation of the Lord, Against Nestorius', author: '卡西安', era: '約 5 世紀', place: '馬賽', language: '拉丁文', link: '/fathers' },
               { title_zh: '駁謬論諸文', intro: '敘利亞的艾弗冷四世紀於埃德薩以敘利亞文寫成的詩體聖詩與講道集，內含對異端的駁斥。艾弗冷以優美的敘利亞韻文反駁馬吉安、巴爾代桑、摩尼教及亞流派等異端,將神學論戰融入可吟唱的聖詩中。此舉使正統教義得以藉禮儀詩歌深植信眾人心，別具感染力。艾弗冷被尊為「聖靈的豎琴」，其作品在敘利亞基督教文學與反異端傳統史上地位崇高。', title_orig: 'Hymns and Homilies (Refutation of heresies)', author: '敘利亞的艾弗冷', era: '約 4 世紀', place: '埃德薩', language: '敘利亞文', link: '/fathers' },
+              { title_zh: '駁異端', title_orig: 'Ełc Ałandocʻ (De Deo / Against the Sects)', author: '科爾布的埃茲尼克（Eznik Kołbacʻi）', era: '約 440 年代', place: '亞美尼亞', language: '古典亞美尼亞文', intro: '亞美尼亞主教埃茲尼克所撰，是現存最早以亞美尼亞文原創（非翻譯）的神學論著。全書系統駁斥四類錯謬：異教多神論、波斯祆教的善惡二元論、希臘命定哲學與馬吉安／諾斯底異端，捍衛獨一善神的創造與自由意志。文辭犀利、論證縝密，既是亞美尼亞教會初代護教神學的高峰，也是研究薩珊波斯祆教教義的珍貴外部見證。' },
             ],
           },
           {
@@ -757,6 +758,7 @@ export const ANCIENT_ERA: DazangEra = {
               { title_zh: '勸誡錄', intro: '雷蘭的文森五世紀於高盧雷蘭以拉丁文寫成,提出辨別正統信仰的著名判準。文森主張真正的大公信仰乃「凡眾人所信、各處所信、歷代所信者」（即普遍性、古老性、一致性三標準），藉此抵禦各種新興異端。此「文森準則」成為衡量教義正統與發展的經典原則,對後世（尤其在教義發展問題上）影響深遠,在教會傳統論與正統判準史上具劃時代的重要地位。', title_orig: 'The Commonitory (Commonitorium)', author: '雷蘭的文森', era: '約 5 世紀', place: '雷蘭（高盧）', language: '拉丁文', link: '/fathers' },
               { title_zh: '大卷宗致弗拉維安', intro: '大良五世紀於羅馬以拉丁文撰寫,致函君士坦丁堡主教弗拉維安,駁斥歐迪奇的基督一性論。大良精確闡述基督一位格內神人二性的聯合,二性各保其完整屬性而不相混淆。此卷宗於451年迦克墩會議上被宣讀,獲與會教父高呼「彼得藉大良發言」而成為會議信仰定義的基礎。它是基督論發展的里程碑,確立了迦克墩正統,在教義史上具決定性的崇高地位。', title_orig: 'The Tome of Leo (Letter to Flavian)', author: '大良', era: '約 5 世紀', place: '羅馬', language: '拉丁文', link: '/fathers' },
               { title_zh: '司牧守則', intro: '大額我略六世紀於羅馬以拉丁文寫成,是中世紀最具影響力的教牧指南。額我略論述牧者應有的品格、進入聖職的審慎,以及如何因應不同性情、處境的信眾施以合宜的勸導,既要默觀又要行動。此書被譯成多種語文、廣為流傳,成為主教與神父培育的標準教本,深刻塑造中世紀的牧養理念,在教牧神學與教會教育史上具劃時代的崇高地位。', title_orig: 'The Book of Pastoral Rule (Regula Pastoralis)', author: '大額我略', era: '約 6 世紀', place: '羅馬', language: '拉丁文', link: '/fathers' },
+              { title_zh: '合一之書', title_orig: 'Liber de Unione (Book of Union)', author: '大巴拜（Babai the Great）', era: '約 7 世紀初', place: '波斯（東方教會）', language: '古典敘利亞文', intro: '東方教會（景教）神學家、修院領袖大巴拜的基督論代表作，系統闡述基督具完整神人二性（qnome）卻為一個位格（parsopa）的教義，奠定東方教會官方基督論。撰於薩珊波斯教會無大公牧首的動盪期，巴拜實際統領教會並整肅修規，本書遂成東方教會正統信仰與身分認同的神學基石。' },
             ],
           },
           {
@@ -795,6 +797,7 @@ export const ANCIENT_ERA: DazangEra = {
               { title_zh: '神聖攀登天階', intro: '階梯約翰（西奈山的約翰）七世紀於西奈山以希臘文撰寫，是東方修道靈修的經典。全書以三十級階梯比喻隱修士克服情慾、操練德行、攀向與神合一的歷程，內容務實而深刻。此書在東正教傳統中地位崇高，四旬期常被誦讀，影響後世靜修主義（Hesychasm）的修行論述，是研究修道靈修學不可或缺的文獻。', title_orig: 'The Ladder of Divine Ascent', author: '階梯約翰', era: '7 世紀', place: '西奈山', language: '希臘文', note: '隱修士的靈魂攀登指南', link: '/fathers' },
               { title_zh: '摩西生平', intro: '尼撒的格列高理四世紀於尼撒以希臘文撰寫的靈修專論，分述摩西的生平史事與其屬靈寓意。他以摩西登西奈山入「神聖的黑暗」象徵靈魂無止境地趨近不可窮盡的神，提出「永恆進步」（epektasis）的著名思想。此書是基督教神祕神學的奠基之作，深刻影響否定神學與靈修上升論的後世發展。', title_orig: 'De Vita Moysis', author: '尼撒的格列高理', era: '4 世紀', place: '尼撒', language: '希臘文', note: '探討靈魂上升的靈修專論', link: '/fathers' },
               { title_zh: '何等富人得救論', intro: '亞歷山卓的克勉約二〇〇年於亞歷山卓以希臘文寫成，詮釋馬可福音中富有少年的故事。克勉主張關鍵不在實際捨棄財富，而在心靈擺脫對財富的執著，為富裕信徒開出得救之道。此論調和福音的嚴格要求與都會基督徒的處境，是早期教會財富倫理與靈修教導的重要文本，展現亞歷山卓學派的詮釋智慧。', title_orig: 'Who Is the Rich Man That Shall Be Saved?', author: '亞歷山卓的克勉', era: '約200年', place: '亞歷山卓', language: '希臘文', link: '/fathers' },
+              { title_zh: '修行講道集', title_orig: 'Ascetical Homilies (Mēmrē d-iḥidāyutā)', author: '尼尼微的伊薩克（敘利亞的聖以撒）', era: '約 7 世紀後期', place: '尼尼微／波斯（東方教會）', language: '古典敘利亞文', intro: '東方教會主教、隱修士尼尼微的伊薩克所撰苦修與密契神學講道集，論述靜默、痛悔、純淨之心與對神之愛的默觀經驗，並以「神的憐憫無遠弗屆」的恢宏視野著稱。其著作超越教派藩籬，廣受東正教、敘利亞、希臘乃至俄羅斯靈修傳統推崇，譯成多種語言，是基督教密契傳統中影響最深遠的東方文獻之一。' },
             ],
           },
         ],
@@ -935,9 +938,10 @@ export const ANCIENT_ERA: DazangEra = {
           { title_zh: '以弗所約翰《教會史》第三部', title_orig: 'The Third Part of the Ecclesiastical History of John, Bishop of Ephesus', author: '以弗所的約翰（John of Ephesus，約507–588）', era: '約563–588年成書；1860年牛津首次英譯出版', place: 'Oxford', language: 'Syriac / English', intro: '以弗所主教約翰為六世紀敘利亞米亞腓系（非卡爾西頓）史家，其《教會史》第三部（現存最完整部分）以古敘利亞文記述查士丁尼時代至提比略二世的東部帝國教政大事，涵蓋波斯傳教、努比亞受洗、異端迫害及修道院動態，為研究拜占庭東部教會與近東基督教擴張的第一手史料，亦是現存最重要的敘利亞語教會史著作之一。' },
           { title_zh: '亞美尼亞人史（阿伽桑格羅斯）', title_orig: 'History of the Armenians (Patmutʻiwn Hayotsʻ) by Agathangelos', author: '阿伽桑格羅斯（Agathangelos）', era: '5 世紀（記 4 世紀初事）', place: '亞美尼亞', language: '亞美尼亞文', intro: '五世紀亞美尼亞文史著，記述啟蒙者聖格列高利（Gregory the Illuminator）使亞美尼亞於 301 年歸信、成為首個以基督教為國教之國的事蹟，並含〈聖格列高利訓言〉。為亞美尼亞教會建教的奠基史傳，與摩西‧科雷尼亞《亞美尼亞史》並列亞美尼亞古典史學雙璧。' },
           { title_zh: '不列顛的毀滅與征服', title_orig: 'De excidio et conquestu Britanniae', author: '吉爾達斯（Gildas）', era: '約 540', place: '不列顛', language: '拉丁文', intro: '六世紀不列顛修士吉爾達斯所撰，以先知式哀歌體痛斥不列顛諸王與教士的腐敗，並回溯羅馬撤離後不列顛遭撒克遜人入侵的歷史。為盎格魯—撒克遜入侵時期僅存的本土一手記述，兼具教會講道、道德訓誡與民族史性質，是研究後羅馬不列顛的關鍵文獻。' },
-          { title_zh: '金口若望生平對話錄', title_orig: 'Dialogue on the Life of John Chrysostom (Dialogus de vita Joannis Chrysostomi)', author: '赫勒諾波利的帕拉狄烏斯（Palladius）', era: '約 408', place: '君士坦丁堡／羅馬', language: '希臘文', intro: '《勞西亞克史》作者帕拉狄烏斯所撰，以對話體為遭罷黜流放的君士坦丁堡宗主教金口若望（John Chrysostom）辯護，記述其受審、放逐與「橡樹會議」始末。為金口若望事件最早、最重要的一手史傳，呈現晚期古代教會政爭與主教遭迫害的實況。' }
+          { title_zh: '金口若望生平對話錄', title_orig: 'Dialogue on the Life of John Chrysostom (Dialogus de vita Joannis Chrysostomi)', author: '赫勒諾波利的帕拉狄烏斯（Palladius）', era: '約 408', place: '君士坦丁堡／羅馬', language: '希臘文', intro: '《勞西亞克史》作者帕拉狄烏斯所撰，以對話體為遭罷黜流放的君士坦丁堡宗主教金口若望（John Chrysostom）辯護，記述其受審、放逐與「橡樹會議」始末。為金口若望事件最早、最重要的一手史傳，呈現晚期古代教會政爭與主教遭迫害的實況。' },
         
         
+              { title_zh: '亞美尼亞史', title_orig: 'Patmutʻiwn Hayotsʻ (History of the Armenians)', author: '霍列納的莫夫謝斯（Movsēs Xorenacʻi）', era: '傳 5 世紀（一說 8 世紀）', place: '亞美尼亞', language: '古典亞美尼亞文', extent: '全三卷', intro: '被尊為「史家之父」的莫夫謝斯所撰亞美尼亞民族通史，自傳說始祖哈伊克敘至五世紀聖譯經師時代，融會聖經譜系、希臘史源與本土口傳，建構亞美尼亞作為諾亞後裔獨立民族、最早歸信基督之國的歷史認同。為亞美尼亞史學奠基之作，雖成書年代學界有爭，其對亞美尼亞民族與教會自我理解的塑造無可取代。' },
             ],
           },
           {
@@ -1002,9 +1006,11 @@ export const ANCIENT_ERA: DazangEra = {
           { title_zh: '聖日耳曼努斯傳', title_orig: 'Vita Germani (Life of Germanus of Auxerre)', author: '里昂的康士坦提烏斯（Constantius of Lyon）', era: '約 480', place: '高盧歐塞爾', language: '拉丁文', intro: '里昂教士康士坦提烏斯所撰，記述歐塞爾主教聖日耳曼努斯（約 378–448）的生平，含其兩度赴不列顛駁斥伯拉糾派（「哈利路亞之役」）的著名事蹟。為高盧主教傳統與五世紀不列顛教會狀況的重要一手史料。' },
           { title_zh: '希帕提烏斯傳', title_orig: 'Life of Hypatius (by Callinicus)', author: '卡利尼科斯（Callinicus）', era: '約 450', place: '比提尼亞（君士坦丁堡近郊）', language: '希臘文', intro: '修士卡利尼科斯所撰，記述比提尼亞魯菲尼亞納修道院長希帕提烏斯（約 366–446）的苦修、醫病驅邪與牧養事蹟，兼及其反對重開異教競技的行動。為五世紀君士坦丁堡近郊修道生活的第一手記述。' },
           { title_zh: '聖帕科繆傳', title_orig: 'Life of Pachomius (Vita Pachomii, Bohairic & Greek)', author: '科普特／希臘文佚名（帕科繆修團）', era: '4 世紀（事）；古傳本 4–5 世紀', place: '上埃及塔本內西', language: '科普特文', intro: '記述共住制修道（cenobitic）創始人聖帕科繆（約 292–348）在上埃及塔本內西創立修團、訂立會規的生平，存科普特（波海拉、薩希迪方言）與希臘文多種傳本。帕科繆首創組織化團體修道，影響東西方修道制度深遠。本傳為埃及本土修道制度起源的核心史傳。' },
-          { title_zh: '加薩的波菲利傳', title_orig: 'Life of Porphyry of Gaza (by Mark the Deacon)', author: '執事馬可（Mark the Deacon）', era: '5 世紀', place: '巴勒斯坦加薩', language: '希臘文', intro: '執事馬可所撰，記述加薩主教波菲利（卒 420）在仍以異教為主的加薩城傳教、拆毀馬爾納斯神廟、建立教堂的事蹟。為晚期古代基督教與在地異教信仰衝突、城市基督教化過程的生動一手記述，呈現帝國邊緣城鎮的宗教變遷。' }
+          { title_zh: '加薩的波菲利傳', title_orig: 'Life of Porphyry of Gaza (by Mark the Deacon)', author: '執事馬可（Mark the Deacon）', era: '5 世紀', place: '巴勒斯坦加薩', language: '希臘文', intro: '執事馬可所撰，記述加薩主教波菲利（卒 420）在仍以異教為主的加薩城傳教、拆毀馬爾納斯神廟、建立教堂的事蹟。為晚期古代基督教與在地異教信仰衝突、城市基督教化過程的生動一手記述，呈現帝國邊緣城鎮的宗教變遷。' },
         
         
+              { title_zh: '馬什托茨傳', title_orig: 'Varkʻ Mashtotsʻi (Life of Mashtots)', author: '科里溫（Koriwn）', era: '約 443–451 年', place: '亞美尼亞', language: '古典亞美尼亞文', intro: '亞美尼亞字母創制者聖梅斯羅布‧馬什托茨的弟子科里溫，為其師所作傳記，公認為亞美尼亞文學史上第一部原創作品。書中記述馬什托茨如何蒙啟發創製亞美尼亞字母、推動聖經與典籍的翻譯運動（「黃金時代」），使福音得以亞美尼亞語廣傳。既是聖徒傳，也是一個民族的文字與基督教文明誕生的第一手見證。' },
+              { title_zh: '小梅蘭尼亞傳', title_orig: 'Vita Sanctae Melaniae Junioris (Life of Melania the Younger)', author: '杰隆提烏斯（Gerontius）', era: '約 452–453 年', place: '耶路撒冷', language: '希臘文／拉丁文', intro: '由其門徒、橄欖山修院院長杰隆提烏斯為聖梅蘭尼亞（約383–439）所作傳記。出身羅馬最顯赫元老家族的梅蘭尼亞與夫婿散盡富可敵國的家產濟貧、解放奴隸、廣建修院，終隱修於耶路撒冷。本傳生動呈現古代晚期貴族婦女如何以財富與身分投身禁慾與慈善，是研究羅馬基督教化、女性修道與晚期古代社會經濟的珍貴文獻。' },
             ],
           },
           {
@@ -1012,8 +1018,9 @@ export const ANCIENT_ERA: DazangEra = {
             works: [
               { title_zh: '懺悔錄', intro: '四世紀奧古斯丁於希波以拉丁文撰成，以向上帝祈禱告白的形式回顧自身由放縱、求道至歸信的心路歷程。本書是古代最深刻的個人生命轉折紀錄，開創了西方自傳體與內省式靈修書寫的先河。其對記憶、時間與意志的哲學思辨亦影響深遠，是研究奧古斯丁思想與基督教內在性傳統的核心經典。', title_orig: 'Confessiones', author: '奧古斯丁', era: '4 世紀', place: '希波', language: '拉丁文', note: '古代最深刻的個人生命轉折紀錄', link: '/fathers' },
               { title_zh: '我罪論記', intro: '四世紀拿先斯的格列高理於拿先斯以希臘文寫成，以詩歌體裁記述自身的生平與內心掙扎。本書是罕見的韻文自傳，將個人經歷、神學反思與情感抒發熔於一爐，展現作者作為神學家兼詩人的雙重才華。作為東方教父少見的自傳性詩作，其在希臘基督教文學與個人靈修書寫研究上具獨特價值。', title_orig: 'De Vita Sua', author: '拿先斯的格列高理', era: '4 世紀', place: '拿先斯', language: '希臘文', note: '以詩歌寫下的自傳', link: '/fathers' },
-          { title_zh: '聖博德自述書（Confessio）', title_orig: 'Confessio (Saint Patrick)', author: '聖博德（Saint Patrick）', era: '5 世紀', place: '愛爾蘭／不列顛', language: '拉丁文', intro: '愛爾蘭使徒聖博德（Patrick，五世紀）親筆的自述告白，回顧少年時被擄為奴、在愛爾蘭牧羊、蒙召歸主、後重返愛爾蘭傳教的歷程，並為其使命辯護。為不列顛群島最早的本土基督徒自傳，出自曾為奴隸者之手，呈現邊陲、被擄階層的信仰見證。' }
+          { title_zh: '聖博德自述書（Confessio）', title_orig: 'Confessio (Saint Patrick)', author: '聖博德（Saint Patrick）', era: '5 世紀', place: '愛爾蘭／不列顛', language: '拉丁文', intro: '愛爾蘭使徒聖博德（Patrick，五世紀）親筆的自述告白，回顧少年時被擄為奴、在愛爾蘭牧羊、蒙召歸主、後重返愛爾蘭傳教的歷程，並為其使命辯護。為不列顛群島最早的本土基督徒自傳，出自曾為奴隸者之手，呈現邊陲、被擄階層的信仰見證。' },
         
+              { title_zh: '朝聖行記', title_orig: 'Itinerarium Egeriae (Peregrinatio)', author: '埃格里亞（Egeria）', era: '約 381–384 年', place: '高盧／西班牙（朝聖至東方）', language: '拉丁文', intro: '一位西方修女（或貴族女信徒）埃格里亞東遊聖地三年的書信體遊記，寫給家鄉的姊妹們。她詳述西奈、耶路撒冷、埃及等地的聖蹟巡禮，尤其鉅細靡遺地記錄耶路撒冷教會四世紀的禮儀年、聖週與每日崇拜實況。既是現存最早出自女性之手的拉丁旅行文學，也是復原早期教會禮儀史無可替代的第一手史料。' },
             ],
           },
           {
@@ -1438,6 +1445,8 @@ export const ANCIENT_ERA: DazangEra = {
               { title_zh: '腓利門書講疏', intro: '約四世紀金口若望於君士坦丁堡以希臘文講述腓利門書的講道集，借保羅為逃奴阿尼西母代求一事，闡發饒恕、和好與基督裡平等的精神。講辭從這封最短的保羅書信引申深刻的倫理教訓。它是早期教會處理奴隸問題與人際和好的重要見證，展現金口若望以小見大的講道功力。', title_orig: 'Homilies on the Epistle to Philemon', author: '金口若望', era: '約 4 世紀', place: '君士坦丁堡', language: '希臘文', link: '/fathers' },
               { title_zh: '希伯來書講疏', intro: '約四世紀金口若望於君士坦丁堡以希臘文講述希伯來書的講道集，闡發基督超越天使、摩西與舊約祭司的至高大祭司職分與新約優越性。講辭結構嚴整、神學厚重，於其逝後由筆錄整理成書。它是古代希伯來書詮釋的重要里程碑，對東西方理解基督祭司論與兩約關係影響深遠。', title_orig: 'Homilies on the Epistle to the Hebrews', author: '金口若望', era: '約 4 世紀', place: '君士坦丁堡', language: '希臘文', link: '/fathers' },
               { title_zh: '論大衛與掃羅', intro: '四世紀安提阿的金口若望以希臘文宣講的三篇講道，借撒母耳記中大衛兩度有機會殺掃羅卻甘願饒過仇敵的事蹟，闡發不念舊惡、以德報怨與克制復仇之心的倫理教訓。講辭情理交融，將舊約敘事化為日常待人接物的勸勉，呼籲信徒效法大衛的寬厚。是研究金口若望倫理講道、以及安提阿學派如何由經文引申道德應用的代表性短講。', title_orig: 'De Davide et Saule homiliae tres', author: '金口若望', era: '約 4 世紀', place: '安提阿', language: '希臘文', link: '/fathers' },
+              { title_zh: '詩體講道集（納爾賽）', title_orig: 'Mēmrē (Metrical Homilies of Narsai)', author: '納爾賽（Narsai，「聖靈的豎琴」）', era: '5 世紀', place: '埃德薩—尼西比斯（東方教會）', language: '古典敘利亞文', extent: '現存約 80 篇', intro: '東方教會（景教）神學家納爾賽以敘利亞文韻律體（mēmrā）寫成的講道詩集，題材涵蓋創造、救恩史、節期與聖事，神學上承安提阿學派與摩普綏提亞的狄奧多若。他主理尼西比斯學院，奠定東方教會的釋經與禮儀講道傳統，被譽為「聖靈的豎琴」，與撒魯格的雅各並列敘利亞詩體神學雙璧。' },
+              { title_zh: '詩體講道集（撒魯格的雅各）', title_orig: 'Mēmrē (Homilies of Jacob of Serugh)', author: '撒魯格的雅各（Yaʿqūb Sarūgāyā，「聖靈的笛」）', era: '約 451–521 年', place: '撒魯格（敘利亞正教）', language: '古典敘利亞文', extent: '傳作 760 篇講道詩', intro: '敘利亞正教（米亞腓索）主教雅各以十二音節韻律體寫成的大量講道詩，逐一默想聖經敘事與救恩奧蹟，文風和煦、意象豐贍，避開激烈的基督論爭辯而專注靈修牧養。與納爾賽並稱敘利亞詩體神學雙峰，被尊為「聖靈的笛」，其作品至今仍於敘利亞諸教會禮儀中誦唱，是東方詩體神學影響最深遠者之一。' },
             ],
           },
           {
