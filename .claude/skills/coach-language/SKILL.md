@@ -15,6 +15,17 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 
 ---
 
+## 📌 近期大改 progress（2026-06-20～22，全 push master）
+
+1. **語言 7→33**：新增 26 個宗教研究原典語言教練（`lang-coaches.ts`）＋ `CATEGORIES` 8 大類選單分組 ＋ 台/客語教羅↔台羅切換（`romanizations`）。詳見「〇、語言一覽」。
+2. **轉寫鍵盤 12 文字**（打英文/羅馬字→目標文字）：希臘/假名/希伯來（內建）＋ `useScriptKeyboard.ts` 無狀態工廠 6 種（西里爾/科普特/阿拉伯/敘利亞/亞美尼亞/喬治亞）＋ `useAbugidaKeyboard.ts` 有狀態 3 種（天城體/吉茲/藏文，**藏文含 EWTS 自動疊寫**）。詳見「九、加語言/擴充」末。測試 `script-keyboard.spec`(7)＋`abugida-keyboard.spec`(14)。
+3. **字母教學頁 6→24 語**：`server/data/alphabets.ts` 補 18 種書寫系統（含古文字楔形/聖書體/腓尼基/古波斯，學「符號」用）。測試 `alphabets.spec`。Latin系/漢字刻意不做。
+4. **文字創造族譜** `/genealogy/scripts`：`data/scriptGenealogy.ts` 96 種書寫系統演化 DAG（烏魯克→…），longest-path 分層+d3-zoom+譜系高亮+深連教練。測試 `script-genealogy.spec`。
+5. **vocab bank 全 32 語預建（不用 runtime AI）**：`coach_vocab_bank.py` 三來源——harvest 11 語（待站長 `gloss all`）／萌典直灌 nan/hak／CURATED 策展 12 語（死語言+原民，preglossed 已 upsert）。詳見「四‧共用預備字庫」。
+> ⚠️ **站長待辦**：`python scripts/coach_vocab_bank.py gloss all` → `theme all`（跑那 11 個 harvest 語言的 LLM 補繁中＋主題；14 個 preglossed 已完成不用跑）。
+
+---
+
 ## 〇、語言一覽（**33 語上線** · 全部定義在 `server/utils/lang-coaches.ts`）
 
 > **2026-06-20 大擴充**：從 7 語擴到 **33 語**，新增 26 個宗教研究原典語言教練，並引入**語言分類**（`CATEGORIES`，8 大類，`coaches.get.ts` 一併回傳、`/coach` 選單依類分組）。下表為原 7 語細目；新增 26 語見表後「新增語言（8 大類）」。
