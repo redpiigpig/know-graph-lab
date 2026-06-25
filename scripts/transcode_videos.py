@@ -32,6 +32,8 @@ HEVC_OK_CONTAINER = {".mp4", ".mov"}  # 保留原副檔名；.m4v 的 ipod muxer
 CQ = "26"
 PRESET = "p6"
 MIN_BYTES = {"training": 20 * 1024 * 1024, "hongshi": 50 * 1024 * 1024}
+# 訓練相簿不轉碼的頂層夾（使用者政策）：純下載片/已壓縮，HEVC 再壓無益或刻意保留
+TRAIN_EXCLUDE_TOP = {"2017", "fitcasting", "一般相片", "新增資料夾"}
 REPLACE_RATIO = 0.85          # 壓後須 ≤ 原始 85% 才替換
 ALREADY_HEVC_BITRATE = 12e6   # 已是 hevc 且 < 12Mbps 視為已優化，跳過
 DUR_TOL = 1.0                 # 時長容忍秒數
@@ -88,6 +90,10 @@ def collect():
             continue
         minb = MIN_BYTES[lib]
         for sub, fn in node.get("folders", {}).items():
+            if lib == "training":
+                top = sub.replace("\\", "/").split("/")[0]
+                if top in TRAIN_EXCLUDE_TOP:
+                    continue
             for f in fn["files"]:
                 ext = f["ext"].lower()
                 if ext in VID_EXT and f["size"] >= minb:
