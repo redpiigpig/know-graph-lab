@@ -292,6 +292,17 @@ def fetch_fulltext(project_slug: str, engine: str, resume: bool,
             print(f"    ✓ +{n} paras this run; {'complete' if complete else 'partial (re-run --resume)'}", flush=True)
             consec_fail = 0
         except Exception as exc:  # noqa: BLE001
+            # Permanent HTTP errors (paywall/forbidden/not-found/gone) are NOT a
+            # quota/network problem — mark the entry unavailable and keep going so
+            # a wall of paywalled DOIs can't trip the consecutive-failure abort.
+            status = getattr(getattr(exc, "response", None), "status_code", None)
+            if status in (401, 403, 404, 410):
+                if not dry_run:
+                    rest_patch("lit_review_entries", f"id=eq.{e['id']}",
+                               {"fulltext_status": "unavailable"})
+                print(f"    ⏭ {status} not-OA → unavailable", flush=True)
+                consec_fail = 0
+                continue
             consec_fail += 1
             print(f"    ✗ FAIL: {exc}  (consec={consec_fail})", flush=True)
             if consec_fail >= CONSEC_FAIL_ABORT:
