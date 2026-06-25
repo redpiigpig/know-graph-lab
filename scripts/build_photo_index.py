@@ -288,6 +288,14 @@ def main():
         data["layout"] = meta["layout"]
         index["libraries"][slug] = data
 
+    # 防呆：若三個 library 全 0 檔（多半是 G: 暫時未掛載 / Drive 斷線），
+    # 絕不可用這份空殼覆寫既有 index（曾因此導致 chenwei 補檔誤判全缺而過量複製 86GB）。
+    grand = sum(d.get("totalFiles", 0) for d in index["libraries"].values())
+    if grand == 0:
+        print("!! 所有 library 皆 0 檔 — 疑 G: 未掛載/Drive 斷線，拒絕覆寫既有 index，直接離開",
+              file=sys.stderr)
+        sys.exit(2)
+
     # Atomic write: 先寫 .tmp 再 rename
     tmp_path = OUTPUT_PATH.with_suffix(".json.tmp")
     tmp_path.write_text(

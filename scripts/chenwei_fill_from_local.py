@@ -56,6 +56,12 @@ def main():
     L("=== chenwei fill START ===")
     gmul = gsizes()
     L(f"G chenwei size-multiset distinct={len(gmul)}")
+    # 防呆：index 的 chenwei 基準若異常小（空/壞 index），全部會被誤判為缺 → 過量複製。
+    # 寧可中止。正常 chenwei distinct size ~12,700。
+    if len(gmul) < 2000:
+        L(f"!! ABORT: G chenwei 基準只有 {len(gmul)} 個 size（<2000），index 疑空/壞。"
+          f" 先重跑 build_photo_index.py 確認 chenwei totalFiles 正常再來。")
+        raise SystemExit(2)
     led = load_led()
     copied=raw=heic_new=heic_skip=skip=fail=0; bytes_c=0
     for root,_,files in os.walk(C):
