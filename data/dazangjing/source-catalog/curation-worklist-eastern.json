@@ -2,6 +2,242 @@
   "new_works": [
     {
       "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "聖像崇敬論：哈蘭主教塔奧多羅·阿布·古拉阿拉伯語論文英譯",
+      "title_orig": "A treatise on the veneration of the holy icons written in arabic by Theodore Abū Qurrah",
+      "author": "塔奧多羅·阿布·古拉（約755–830）；譯者：西德尼·格里菲斯",
+      "reason_zh": "同一塔奧多羅·阿布·古拉聖像論文之英譯本，原作同屬古代敘利亞/麥基托派神學一手文獻。此條目與i=4為同一原作之不同語言譯本，保留（視為同一一手文獻的版本之一，已有原作性質認定）；若去重僅保留其一則歸版本類，此處依規則視為一手文獻的呈現。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "澄明信仰之珍珠（精粹之珠）",
+      "title_orig": "Ad-Durr at-tamīn fī īḍāḥ ad-Dīn",
+      "author": "塞維魯斯·伊本·穆卡法（科普特教會主教，10世紀）",
+      "reason_zh": "科普特教會主教塞維魯斯·伊本·穆卡法所著阿拉伯語神學論著，闡明科普特正統信仰，屬中世紀科普特教會一手神學文獻，歸入論藏（lun）。1971年印本。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 2,
+      "title_zh": "《阿弗拉哈特示範講道集》",
+      "title_orig": "Aphrahat demonstrations",
+      "author": "Aphraates the Persian sage",
+      "reason_zh": "阿弗拉哈特（波斯智者）《示範講道集》，1999年版，作者即原典作者，屬敘利亞基督教4世紀原典，歸 lun（論藏）。",
+      "sources": [
+        "openlibrary",
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 2,
+      "title_zh": "《阿弗拉哈特示範講道集》第一冊（瓦拉萬諾利卡爾譯）",
+      "title_orig": "Aphrahat Demonstrations I",
+      "author": "Kuriakose Valavanolickal",
+      "reason_zh": "阿弗拉哈特（Aphrahat，「波斯智者」，約280–345年）為敘利亞東方教會最早重要神學家，此為其《示範講道集》（Demonstrations）第一冊，由瓦拉萬諾利卡爾翻譯，原典屬4世紀敘利亞基督教原典，歸 lun（論藏）。",
+      "sources": [
+        "openlibrary",
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 2,
+      "title_zh": "《阿弗拉哈特示範講道集》第二冊（瓦拉萬諾利卡爾譯）",
+      "title_orig": "Aphrahat Demonstrations II",
+      "author": "Kuriakose Valavanolickal",
+      "reason_zh": "同 i=35，阿弗拉哈特《示範講道集》第二冊，由瓦拉萬諾利卡爾翻譯，原典屬4世紀敘利亞基督教原典，歸 lun（論藏）。",
+      "sources": [
+        "openlibrary",
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 3,
+      "title_zh": "《尼尼微的瑪爾依撒格苦行講道集》（貝達版）",
+      "title_orig": "The Ascetical Homilies of Mar Isaac of Nineveh",
+      "author": "Paul Bedjan",
+      "reason_zh": "貝達（Paul Bedjan）整理的敘利亞文版依撒格講道集，2007年版，原典屬古代東方教會文獻，歸 shiwen（詩文藏）。作者欄列貝達為編者，實際原典作者為依撒格。",
+      "sources": [
+        "openlibrary",
+        "openlibrary",
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 2,
+      "title_zh": "《尼尼微的依撒格苦行講道集》",
+      "title_orig": "The ascetical homilies of Saint Isaac the Syrian",
+      "author": "Isaac Bishop of Nineveh",
+      "reason_zh": "尼尼微主教依撒格（Isaac of Nineveh，約613–700年）為東方教會（景教）重要靈修神學家，此為其苦行靈修講道集，1984年版，屬古代東方教會原典，歸 shiwen（詩文藏）。",
+      "sources": [
+        "openlibrary",
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "敘利亞聖以撒苦修講道集",
+      "title_orig": "The Ascetical Homilies Of Saint Isaac The Syrian - Holy Transfiguration Monastery",
+      "author": "Saint Isaac the Syrian",
+      "reason_zh": "敘利亞聖以撒（Isaac of Nineveh，約7世紀）苦修講道集，屬東方教會（敘利亞教會）原典，神秘主義靈修文獻，收入詩文藏（shiwen）。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "大巴貝《聯合之書》拉丁版（Vaschalde 校訂）",
+      "title_orig": "Babai Magni Liber de unione / edidit A. Vaschalde",
+      "author": "大巴貝（景教；Babai the Great）",
+      "reason_zh": "Vaschalde 校訂的《聯合之書》敘利亞原文拉丁注本，屬原典學術校訂版，仍含原典文本，可視為原典入藏；惟與 i=10 有重疊，若以 i=10 為主則可標重複版本。以原典性質評為保留。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "雅魚禱文",
+      "title_orig": "Bank̕ Čap̕aw / Nerses Shnorhali",
+      "author": "聖納爾西斯‧紹諾哈里（Nerses Shnorhali，1102–1173）",
+      "reason_zh": "聖納爾西斯‧紹諾哈里（亞美尼亞教會天主教長）所著詩歌禱文集，亞美尼亞文原典（1928年版），為中世紀亞美尼亞教會重要詩禱一手文獻，歸詩文藏。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "jing"
+      ],
+      "canons": [
+        "wai"
+      ],
+      "n_editions": 2,
+      "title_zh": "上埃及科普特次典文獻（上埃及方言）",
+      "title_orig": "Coptic Apocrypha in the dialect of Upper Egypt",
+      "author": "Budge, E. A. Wallis",
+      "reason_zh": "Budge輯錄的科普特次典文獻，包含上埃及方言的科普特次典/外典文本（原典集成），屬東方教會外典文獻，收入外典範疇；此為文獻彙編，含原典內容，列為保留。collectionKey暫定jing（次典/經典類），canon=wai。",
+      "sources": [
+        "archive_org",
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "liyi"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 2,
+      "title_zh": "科普特教會聖人曆（節期書）",
+      "title_orig": "Coptic synaxarium",
+      "author": "",
+      "reason_zh": "《科普特聖人曆》（Synaxarium）為科普特教會聖人節期曆書，記錄聖徒事蹟與禮儀行事，約於13世紀定型，屬禮儀典籍，歸 liyi（禮儀藏）。",
+      "sources": [
+        "openlibrary",
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
         "medieval"
       ],
       "collection_keys": [
@@ -11,16 +247,1561 @@
         "zheng"
       ],
       "n_editions": 1,
-      "title_zh": "以信告白",
-      "title_orig": "Hawatov khostovanim",
-      "author": "Nerses Shnorhali, Saint",
-      "reason_zh": "此為亞美尼亞教會聖師聖聶爾謝斯·什諾爾哈利（Nerses Shnorhali）所著之重要禮儀詩歌，屬於亞美尼亞禮儀傳統中的核心文本。",
+      "title_zh": "科普特殉道曆科亞克月二十三日及其紀念條目",
+      "title_orig": "The Coptic Synaxarium on the 23-rd of Khoiak and its commemorations",
+      "author": "Danneskiold-Samsøe, Irène",
+      "reason_zh": "科普特殉道曆（Synaxarium）為科普特正教禮儀典籍，屬初期至中世紀累積的聖徒紀念傳統；此為部分摘錄，仍屬原典禮儀文獻類。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "埃及教會宗主教史：基里爾二世至基里爾五世（公元1235–1894年）",
+      "title_orig": "Cyril II-Cyril V : A.D. 1235-1894",
+      "author": "Severus ibn al-Muqaffaʿ et al.",
+      "reason_zh": "賽維魯斯‧伊本‧穆卡法及後繼編年史家所著《埃及教會宗主教史》，為科普特教會重要史料，屬教會史類原典。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "精粹之珠：論信仰宣明（第1–5章，含阿拉伯語文本）",
+      "title_orig": "«Das Buch der kostbaren Perle» von Severus Ibn al-Muqaffaʿ",
+      "author": "塞維魯斯·伊本·穆卡法",
+      "reason_zh": "同i=8之同一著作（精粹之珠）之德語導論加阿拉伯語原文版（第1–5章），一手文獻性質同i=8，歸入論藏（lun）。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "波斯智者阿弗拉哈特《演示集》",
+      "title_orig": "The Demonstrations of Aphrahat The Persian Sage",
+      "author": "Aphrahat",
+      "reason_zh": "阿弗拉哈特《演示集》另一版本，疑與i=31/33重複，原典性質確定，暫列保留，建議人工去重。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "埃格麗雅朝聖日記（英譯注本）",
+      "title_orig": "Diary of a pilgrimage / Egeria",
+      "author": "埃格麗雅（4世紀末）",
+      "reason_zh": "埃格麗雅朝聖日記（Itinerarium Egeriae）係4世紀末基督教朝聖文學重要一手文獻，記錄聖地禮儀與地理，歸入史傳藏（shizhuan）。本條目為英譯注本，以原作性質認定。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "聖像辯護論：論聖像崇敬",
+      "title_orig": "La difesa delle icone: trattato sulla venerazione delle immagini",
+      "author": "塔奧多羅·阿布·古拉（約750–820）",
+      "reason_zh": "哈蘭主教塔奧多羅·阿布·古拉所著阿拉伯語神學論文，論聖像崇敬，係敘利亞/麥基托派傳統重要一手神學論著，原作約成於古代末期（8–9世紀），歸入論藏（lun）。本條目為義大利譯本，但以原作性質認定。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "大馬士革的約翰：與撒拉森人的辯論",
+      "title_orig": "Disputation Between a Christian and a Saracen",
+      "author": "大馬士革的約翰（St. John of Damascus）",
+      "reason_zh": "大馬士革的約翰（約 676–749）所作護教辯論原典，屬古代教父論著，收錄為論藏（lun）。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "埃蓋莉婭朝聖記",
+      "title_orig": "Egeria",
+      "author": "埃蓋莉婭（Egeria）；George E. Gingras",
+      "reason_zh": "埃蓋莉婭為4世紀末西方朝聖者，其朝聖日記（Itinerarium Egeriae）是古代基督教禮儀與聖地朝聖的重要原典文獻。1970年版為英譯現代版，原典屬古代。collectionKey 用 shiwen 因其體裁為書信/日記性質之旅行記述。",
       "sources": [
         "openlibrary"
       ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "埃格麗雅之旅（英譯新版含輔助文獻）",
+      "title_orig": "Egeria's travels: newly translated with supporting documents and notes",
+      "author": "埃格麗雅（4世紀末）；譯者：約翰·威爾金森",
+      "reason_zh": "同i=12，同一埃格麗雅朝聖日記之另一英譯版，一手文獻性質相同，歸入史傳藏。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "liyi"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "衣索匹亞聖品歷",
+      "title_orig": "The Ethiopian Synaxarium",
+      "author": "",
+      "reason_zh": "衣索匹亞正教《聖品歷》，作者及年份不詳，疑為i=19/20同一文獻另一版本，屬禮儀藏原典，暫列保留。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "pre"
+      ],
+      "collection_keys": [
+        "jing"
+      ],
+      "canons": [
+        "wai"
+      ],
+      "n_editions": 1,
+      "title_zh": "衣索匹亞語《以諾書》",
+      "title_orig": "The Ethiopic version of the book of Enoch",
+      "author": "",
+      "reason_zh": "《以諾書》（1 Enoch）為衣索匹亞正教會正典，屬前基督教時代猶太偽典，但在衣索匹亞正教傳統中視為正典；歸外典（wai）但具重要收藏價值；1906 年為學術版本，原典組成時代為前基督教期（pre）。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "亞歷山大宗主教厄提基烏斯年史（第二卷）",
+      "title_orig": "Eutychii Patriarchae Alexandrini Annalium II",
+      "author": "薩義德‧伊本‧巴特里克（Eutychius）",
+      "reason_zh": "亞歷山大宗主教厄提基烏斯（877–940）所著阿拉伯語教會史年鑑，屬史傳藏（shizhuan），為重要的東方教會一手史料。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "駁異端（亞美尼亞原文版）",
+      "title_orig": "Եղծ Աղանդոց / Eznik",
+      "author": "科爾布的以斯尼克（Eznik of Kołb）",
+      "reason_zh": "以斯尼克《駁異端》亞美尼亞文原典版（1951年刊本，為瓦爾達南英雄戰役1500週年紀念版），為亞美尼亞教父論著一手原典，歸論藏。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "論天主（駁異端）",
+      "title_orig": "Eznik de Kołb De Deo",
+      "author": "Eznik",
+      "reason_zh": "與第24筆同一原典，葉次尼克的《論天主》（De Deo）拉丁文版本形式，為5世紀亞美尼亞教父著作。若第24筆已收，此筆可視為重複版本；但作為獨立版本收錄亦有價值，建議人工審查。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "駁異端（含注釋及索引）",
+      "title_orig": "Ճառք ընդդէմ Աղանդոց / Eznik Kołbaci",
+      "author": "科爾布的以斯尼克（Eznik of Kołb）",
+      "reason_zh": "《駁異端》第二冊，含注釋與索引的學術版本，仍含原典文本，可視為校訂原典版本入藏；與 i=28 為同一著作不同版次，可標為學術校訂版。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "liyi"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "阿帕舍努特沙漠節禮儀：上埃及白修道院遊行禮儀文本",
+      "title_orig": "The feast of the desert of Apa Shenoute: a liturgical procession from the White Monastery in Upper Egypt",
+      "author": "（編）斯蒂芬·戴維斯、丹尼爾·施里弗、瑪麗·法拉格",
+      "reason_zh": "科普特白修道院阿帕舍努特（謝努特）節慶禮儀遊行文本之現代批判版，含原文及譯文，原始禮儀文本屬科普特教會一手禮儀文獻，歸入禮儀藏（liyi）。信心略低因確切成文年代需核實。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "lu"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "《費塔那加斯特》（伊本‧阿薩勒原著阿拉伯—革茲文版）",
+      "title_orig": "Fetḥa nagaśt nebābunā tergwāméw",
+      "author": "al-Ṣafī Abū al-Faḍāʼil Mājid Ibn al-ʻAssāl",
+      "reason_zh": "此條目明確標出原著者伊本‧阿薩勒（Ibn al-Assāl，科普特法學家，13世紀），為《費塔那加斯特》之阿拉伯–革茲對照文版，原典屬教會法典，歸 lu（律藏）。",
+      "sources": [
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "lu"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "《費塔‧納加斯特》（諸王律例）：阿比西尼亞教會與民事法典",
+      "title_orig": "\"Fetha Nagast\" o \"legislazione dei Re\" : codice ecclesiastico e civile di Abissinia",
+      "author": "Guidi, Ignazio",
+      "reason_zh": "《費塔‧納加斯特》為衣索匹亞東方正教傳統的中世紀教會法典，原典組成於13世紀，屬律藏類原典代表。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 2,
+      "title_zh": "《塔克拉‧海馬諾特傳》",
+      "title_orig": "Gadla Takla Hāymānot",
+      "author": "",
+      "reason_zh": "《塔克拉‧海馬諾特傳》（Gadla Takla Hāymānot）為衣索匹亞正教會重要聖徒傳，記述衣索匹亞修道主義奠基人塔克拉‧海馬諾特（約1215–1313年）事蹟，原典約形成於14世紀，歸 shizhuan（史傳藏）。",
+      "sources": [
+        "openlibrary",
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "shuxin"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "公函",
+      "title_orig": "General epistle",
+      "author": "Nerses Shnorhali, Saint",
+      "reason_zh": "亞美尼亞宗主教聖內爾塞斯·什諾爾哈利（約1102–1173 CE）所著公函原典，屬中世紀亞美尼亞教會書信文獻，1996年為出版年。",
+      "sources": [
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "《聖安巴謝努達傳》（阿拉伯文版）",
+      "title_orig": "Ḥayāt al-Qiddīs al-Anbā Shinūdah raʾīs al-mutawaḥḥidīn",
+      "author": "Besa Abbot of Athripe",
+      "reason_zh": "同為貝薩所撰謝努達傳記之阿拉伯文版本（1986年印行），原著成於5世紀末，屬科普特聖徒傳原典，歸 shizhuan（史傳藏）。版本不同但原典相同，保留為正典文獻。",
+      "sources": [
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "《論靈性知識的綱要》",
+      "title_orig": "Headings on spiritual knowledge",
+      "author": "Isaac Bishop of Nineveh",
+      "reason_zh": "尼尼微主教依撒格所著靈性知識綱要，屬其著作集第二部分，2022年版，原典為7世紀東方教會（景教）靈修神學著作，歸 lun（論藏）。",
+      "sources": [
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "大公會議史（第二卷）",
+      "title_orig": "Histoire des conciles (Second livre)",
+      "author": "薩威魯斯‧伊本‧穆卡法（Sāwīrus ibn al-Muqaffaʻ）",
+      "reason_zh": "薩威魯斯主教所著大公會議史，為獨立著作，記述基督教大公會議歷程，屬科普特教會重要史學原典。",
+      "sources": [
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "大公會議史：第二書（伊索比亞版本研究）",
+      "title_orig": "Histoire des Conciles: second livre. Etude de la version éthiopienne",
+      "author": "塞維魯斯·伊本·穆卡法",
+      "reason_zh": "塞維魯斯·伊本·穆卡法所著大公會議史，屬科普特教會重要教會史一手文獻，本條目含伊索比亞文版本研究及阿拉伯文版本，以原作性質認定歸入史傳藏（shizhuan）。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "聖婦辣德貢傳及聖瑪克蓮娜傳",
+      "title_orig": "Histoire de sainte Radegonde... suivie de l'Histoire de sainte Macrine, par Grégoire de Nisse",
+      "author": "皮杜（辣德貢傳）；尼撒的額我略（瑪克蓮娜傳）",
+      "reason_zh": "此條目含兩部聖人傳記：尼撒額我略《瑪克蓮娜傳》（古代一手文獻）及皮杜改寫的辣德貢傳（近代初期）。核心一手文獻為瑪克蓮娜傳，歸入史傳藏（shizhuan）；辣德貢部分為近代改寫，混合性質，整體標記為keep，信心略低。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "xuandao"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "講道選集（敘利亞的以撒，德賽爾法文選譯本）",
+      "title_orig": "Homélies / saint Isaac le Syrien ; extraits choisis et traduits par l'archimandrite Placide Deseille",
+      "author": "Isaac de Ninive",
+      "reason_zh": "尼尼微的以撒（敘利亞的以撒）的講道選集法文譯本，為其靈修原典的另一語言版本；選集形式雖有節略，但原典內容明確，屬玄道藏類。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "論使徒多馬與主的復活：賽魯吉的雅各講道",
+      "title_orig": "Homily on the Apostle Thomas and the Resurrection of our Lord / Jacob of Serugh",
+      "author": "Yaʿqūb al-Sarūǧī (0451-0521)",
+      "reason_zh": "賽魯吉的雅各（451–521）的講道，敘利亞教父原典，屬詩文/講道類，由Forness編輯並翻譯，為原典校勘版。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "lu"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "《費塔那加斯特》（義大利文版）",
+      "title_orig": "Il Fetha nagast, o, Legislazione dei re",
+      "author": "Ignazio Guidi",
+      "reason_zh": "圭迪（Ignazio Guidi）義大利文譯本，1936年出版，原典為13世紀衣索匹亞教會法典，歸 lu（律藏）。",
+      "sources": [
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "尼尼微以撒神秘論著",
+      "title_orig": "Isaac of Nineveh, Mystic Treatises",
+      "author": "",
+      "reason_zh": "尼尼微的以撒神秘論著集，屬敘利亞教會原典，靈修神秘主義文獻，收入詩文藏（shiwen）。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "賽魯吉的雅各：六日創世論",
+      "title_orig": "Jacob of Serugh's Hexaemeron / edited and translated by T. Muraoka",
+      "author": "Yaʿqūb al-Sarūǧī (0451-0521)",
+      "reason_zh": "賽魯吉的雅各（451–521）的《六日創世論》，敘利亞教父原典，以詩文論述創世，屬古代教父論著類。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "旅行日記（法譯本）",
+      "title_orig": "Journal de voyage / Ethérie",
+      "author": "埃格麗雅（4世紀末）；譯者：海倫娜·貝特萊",
+      "reason_zh": "同i=12，埃格麗雅朝聖日記法譯本，一手文獻性質相同，歸入史傳藏。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "理性之燈（薩維魯斯‧伊本‧穆卡法）",
+      "title_orig": "Kitab misbah al-aql (كتاب مصباح العقل), Sawirus Ibn Al-Muqaffa'",
+      "author": "薩維魯斯‧伊本‧穆卡法（Sawirus Ibn Al-Muqaffa'，科普特教父，約 10 世紀）",
+      "reason_zh": "科普特正教主教薩維魯斯（約 10 世紀）著作，為神學論著原典，屬論藏（lun）；1978 年為現代校訂版，原典組成時代為古代，故 eraKey 定 ancient。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "智識之燈",
+      "title_orig": "The Lamp of the Intellect",
+      "author": "薩威魯斯‧伊本‧穆卡法（Sāwīrus ibn al-Muqaffaʻ）",
+      "reason_zh": "薩威魯斯主教另一重要著作《智識之燈》，為科普特神學論著，闡述基督信仰基本教義，屬獨立原典，非《宗主教史》版次。",
+      "sources": [
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 2,
+      "title_zh": "聖瑪克利納傳",
+      "title_orig": "The Life of Saint Macrina",
+      "author": "尼撒的貴格利（Gregorius Nyssenus）",
+      "reason_zh": "尼撒的貴格利所著其姊瑪克利納的聖徒傳記，為古代基督教重要聖徒傳記原典。1987年版為現代英譯，原典屬古代。",
+      "sources": [
+        "openlibrary",
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "埃及聖瑪利亞傳",
+      "title_orig": "The Life of Saint Mary of Egypt",
+      "author": "（匿名，傳統上歸於耶路撒冷的索佛羅尼烏斯）",
+      "reason_zh": "埃及聖瑪利亞傳記傳統上歸於耶路撒冷宗主教索佛羅尼烏斯（約634–638 CE），為古代基督教重要聖徒傳記原典。1800年版無現代編輯介入，視為原典版。",
+      "sources": [
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 2,
+      "title_zh": "《納爾賽禮儀講道集》",
+      "title_orig": "The liturgical homilies of Narsai",
+      "author": "Narsai",
+      "reason_zh": "納爾賽（Narsai，約399–503年）為東方教會（景教）重要神學家，此為其禮儀講道原典，1909年版，屬古代東方教會（景教）原典文獻，歸 shiwen（詩文藏）。",
+      "sources": [
+        "openlibrary",
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "那西的禮儀講道英譯本（孔納利譯）",
+      "title_orig": "The liturgical homilies of Narsai / translated into English with an introduction by Dom R. H. Connolly",
+      "author": "Narsāy (0399-0502)",
+      "reason_zh": "那西（約399–502），景教（東方教會）重要神學詩人，其禮儀講道為敘利亞教會古代原典，此為英譯本。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "《衣索匹亞聖母瑪利亞奇蹟書》",
+      "title_orig": "Le livre éthiopien des miracles de Marie",
+      "author": "Gérard Colin",
+      "reason_zh": "科林（Gérard Colin）編譯的衣索匹亞革茲文《聖母奇蹟書》（Täʾammǝra Māryām），為衣索匹亞正教會重要靈修文學原典，約14–15世紀定型，屬聖徒奇蹟敘事類，歸 shizhuan（史傳藏）。",
+      "sources": [
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "百圖亞殉道傳",
+      "title_orig": "The martyrdom of Perpetua",
+      "author": "百圖亞（Perpetua）等",
+      "reason_zh": "《百圖亞與費利琪塔殉道傳》（Passio Perpetuae et Felicitatis）為早期基督教最重要的殉道一手文獻之一，約成書於 203 年，歸史傳藏（shizhuan）。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "伯特‧伊雷恩山殉道士傳",
+      "title_orig": "The martyrs of Mount Ber'ain / edited and translated by Sebastian P. Brock",
+      "author": "（Sebastian P. Brock 編譯）",
+      "reason_zh": "敘利亞教會殉道錄原典（Brock 編譯，2015），含原典文本，為古代一手史傳文獻，歸史傳藏。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "哀嘆之書",
+      "title_orig": "Matean oghbergutʻean",
+      "author": "Grigor Narekatsʻi, Saint",
+      "reason_zh": "亞美尼亞詩人聖格里高爾·納雷卡齊（約951–1003 CE）所著《哀嘆之書》（Matean Voghbergutyan），亞美尼亞基督教重要祈禱詩集原典，1763年為抄本/印本年，屬中世紀亞美尼亞教會詩文。",
+      "sources": [
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "納爾賽講道集與詩歌（明加納輯本第一卷）",
+      "title_orig": "Mingana - Narsai Homiliae et carmina [vol 1]",
+      "author": "",
+      "reason_zh": "納爾賽（Narsai，約410–503年）為東方亞述教會（景教）最重要的神學詩人與講道家，明加納輯錄其講道及詩歌，屬古代東方教會（景教）原典，收入詩文藏（shiwen）。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "unknown"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "上埃及方言科普特雜錄",
+      "title_orig": "Miscellaneous Coptic texts in the dialect of Upper Egypt",
+      "author": "Budge, E. A. Wallis; British Museum",
+      "reason_zh": "Budge輯錄上埃及方言科普特雜錄，含多種類型文本，屬科普特教會文獻彙集，性質混雜，暫列保留，具體分藏需人工審定。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "亞美尼亞人的歷史",
+      "title_orig": "Movsisi Xorenats'woy Patmut'iwn Hayots' [Movses Xorenatsi's History of the Armenians]",
+      "author": "Moses of Xoren; Movses Khorenatsi",
+      "reason_zh": "莫夫謝斯‧霍列納茨（Movses Khorenatsi，約5世紀）所著《亞美尼亞人的歷史》，為亞美尼亞基督教教會最重要的一手史傳文獻，記錄亞美尼亞基督教化過程，屬史傳藏。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "xuandao"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "尼尼微的以撒神秘論著（韋辛克英譯本）",
+      "title_orig": "Mystic treatises by Isaac of Nineveh, translated from Bedjan's Syriac text...",
+      "author": "Isaac de Ninive",
+      "reason_zh": "尼尼微的以撒（約7世紀）為景教（東方教會）重要靈修神學家，其神秘論著為敘利亞靈修文學的經典原典，屬玄道藏類。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "那西講道集：第一卷",
+      "title_orig": "Narsai. The homilies. Volume 1.",
+      "author": "Butts, Aaron M.",
+      "reason_zh": "那西講道集原典的現代校勘版，雖由Butts主編，但核心內容為古代東方教會教父那西的講道原典。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "《納爾賽誕生、顯現、受難、復活及升天詩文講道集》",
+      "title_orig": "Narsai's metrical homilies on the nativity, epiphany, passion, resurrection and ascension",
+      "author": "Narsai",
+      "reason_zh": "納爾賽所撰以格律詩體寫成的講道集，涵蓋耶穌誕生、顯現、受難、復活、升天主題，為東方教會（景教）5世紀詩歌講道原典，歸 shiwen（詩文藏）。",
+      "sources": [
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "lu"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "《費塔那加斯特》（革茲—阿姆哈拉文版）",
+      "title_orig": "Nebabenā Tiregwāméw",
+      "author": "Fetha Nagast",
+      "reason_zh": "《費塔那加斯特》之革茲—阿姆哈拉對照版本，1966年出版，原典屬衣索匹亞教會法典，歸 lu（律藏）。",
+      "sources": [
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "pre"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "wai"
+      ],
+      "n_editions": 1,
+      "title_zh": "以諾書（英譯本，查爾斯譯校）",
+      "title_orig": "The Book of Enoch, translated from professor Dillmann's Ethiopic text, emended and revised... by R. H. Charles",
+      "author": "（偽典）；譯者：R·H·查爾斯",
+      "reason_zh": "《以諾書》係猶太偽典，原作約成於公元前3–1世紀，非基督教正典，歸入外藏（wai）。本條目為伊索比亞文本的英譯版（查爾斯1893年版），eraKey標pre（前基督教原作），collectionKey暫用lun（神學/宗教論著性質），建議視具體大藏經框架考量是否收入外藏。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "pre"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "wai"
+      ],
+      "n_editions": 1,
+      "title_zh": "先知以諾書（英文首譯本，勞倫斯譯）",
+      "title_orig": "The Book of Enoch the Prophet, an apocryphal production... now first translated from an Ethiopic Ms in the Bodleian library, by Richard Laurence",
+      "author": "（偽典）；首譯：理查德·勞倫斯",
+      "reason_zh": "《以諾書》勞倫斯1821年英文首譯本，係伊索比亞文抄本的最早英譯，歷史上具有獨特文獻意義；原典屬猶太偽典（外藏，wai），以諾書在伊索比亞正教中具一定正典地位，此譯本具史料價值。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 2,
+      "title_zh": "《衣索匹亞教會聖人書》（巴吉譯本）",
+      "title_orig": "Book of the saints of the Ethiopian church",
+      "author": "E. A. Wallis Budge",
+      "reason_zh": "巴吉（E. A. Wallis Budge）翻譯的衣索匹亞教會革茲文聖人曆書，原典為衣索匹亞正教會中世紀時期形成的聖人傳記集（Synaxarium），屬聖徒傳原典，歸 shizhuan（史傳藏）。",
+      "sources": [
+        "openlibrary",
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "liyi"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "衣索匹亞教會聖人名錄（英譯本）",
+      "title_orig": "The Book of the Saints of the Ethiopian Church: a translation of the Ethiopic Synaxarium",
+      "author": "",
+      "reason_zh": "衣索匹亞正教教會《聖品歷》（Mashafa Senkesar）的英文翻譯，原典為中世紀衣索匹亞禮儀曆書，屬東方教會禮儀藏（liyi），列為保留。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "liyi"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "衣索匹亞教會聖人名錄（英譯本，另一版）",
+      "title_orig": "The Book of the Saints of the Ethiopian Church: a translation of the Ethiopic Synaxarium ... made from the manuscripts Oriental 660 and 661 in the British Museum",
+      "author": "",
+      "reason_zh": "與i=19、20相同文獻，疑為重複條目，原典性質確定，暫列保留，建議人工去重合併。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "衣索匹亞教會聖徒之書：衣索匹亞殉道曆英譯本（巴吉譯，1928年）",
+      "title_orig": "The Book of the Saints of the Ethiopian Church : a translation of the Ethiopic synaxarium... / made... by Sir E. A. Wallis Budge",
+      "author": null,
+      "reason_zh": "衣索匹亞教會殉道曆（Synaxarium）為衣索匹亞正教傳統的聖徒紀念禮儀典籍，屬中世紀累積的教會史傳原典；此為英譯本，但原典價值明確。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "liyi"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "衣索匹亞教會聖人名錄縮微膠片版（英譯本）",
+      "title_orig": "The book of the saints of the Ethiopian church [microform]. A translation of the Ethiopic synaxarium Mashafa senkesar",
+      "author": "YaItyopya ortodoks tawahedo béta kerestiyan. Mashafa senkesar; Budge, E. A. Wallis",
+      "reason_zh": "與i=19同一文獻的縮微膠片版本，原典相同，疑重複，暫列保留，人工去重；屬衣索匹亞正教禮儀藏。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 2,
+      "title_zh": "大巴貝聯合之書（英文譯本含敘利亞原文）",
+      "title_orig": "The Book of Union of Babai the Great",
+      "author": "大巴貝（景教；Babai the Great）",
+      "reason_zh": "大巴貝（約553–628）為東方教會（景教）最重要神學家，《聯合之書》論基督二性一位，為一手神學論著原典；此版含敘利亞原文及英譯，具原典性質，歸論藏。",
+      "sources": [
+        "bnf",
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "哀嘆以德薩",
+      "title_orig": "Oghb Edeseay [Lament for Edessa]",
+      "author": "Nerses Shnorhali",
+      "reason_zh": "聖納爾謝斯‧許諾爾哈利（Nerses Shnorhali，1102-1173，亞美尼亞大牧首）所著哀歌，以1144年十字軍失守以德薩（今烏爾法）為題，為亞美尼亞中世紀基督教詩歌中的重要一手文獻，屬詩文藏。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "xuandao"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "論禁慾生活（尼尼微的以撒，漢斯貝利英譯本）",
+      "title_orig": "On ascetical life / St Isaac of Nineveh",
+      "author": "Isaac de Ninive",
+      "reason_zh": "尼尼微的以撒的禁慾靈修論著，敘利亞教會古代原典，屬玄道藏（靈修神學）類。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "聖佩爾培圖阿與費利奇達斯殉道記",
+      "title_orig": "La passione delle SS. Perpetua e Felicita",
+      "author": "（Giuseppe Sola 編，原典匿名，約3世紀初）",
+      "reason_zh": "《佩爾培圖阿與費利奇達斯殉道記》（Passio Perpetuae et Felicitatis）為3世紀初重要殉道原典，保存了殉道者本人的親筆記述，屬古代基督教核心文獻。1921年義大利文譯版，原典屬古代。",
+      "sources": [
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "亞美尼亞史（亞美尼亞原文版）",
+      "title_orig": "Patmowtʹiwn Hayocʹ / Movsēs Xorenacʹi",
+      "author": "科連那的摩西（Moses Khorenats'i）",
+      "reason_zh": "《亞美尼亞史》亞美尼亞文原典版（1827年刊本），為亞美尼亞教會歷史文獻原典，歸史傳藏。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "雅茲蓋德一世統治下的波斯殉道錄",
+      "title_orig": "Persian martyr acts under King Yazdgird I / edited and translated by Geoffrey Herman",
+      "author": "（Geoffrey Herman 編譯）",
+      "reason_zh": "波斯教會古代殉道錄原典編譯本（Herman 編，2016），含原文及英譯，為敘利亞教會一手史傳文獻，歸史傳藏。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "lu"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "《帕霍謬規章》（科普特文）",
+      "title_orig": "Pi-Kanōn n̄ te pi-Agios Paḫōmios pha ti-koinonia",
+      "author": "Saint Pachomius",
+      "reason_zh": "此為聖帕霍謬（Pachomius，約290–346年）所制定之修道共同體規章（Koinonia規章），為基督教修道律法原典，屬 lu（律藏）。科普特教會傳統，歸 zheng。",
+      "sources": [
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "liyi"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "聖納爾塞斯·克拉延祈禱文（二十四語版）",
+      "title_orig": "Preces S. Niersis Clajensis, viginti quatuor linguis editae",
+      "author": "納爾塞斯·施諾爾哈利（1102–1173，聖人）",
+      "reason_zh": "亞美尼亞教會聖人納爾塞斯·施諾爾哈利（天恩者）所著祈禱文，原作約成於12世紀中葉，屬亞美尼亞禮儀/靈修傳統一手文獻，歸入禮儀藏（liyi）。1823年為多語對照版印本，以原作年代分類。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "liyi"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "聖納爾謝斯‧許諾爾哈利之祈禱：三十三種語言版本",
+      "title_orig": "Preces Sancti Nersetis Clajensis Armeniorum Patriarchae; triginta tribus linguis editae",
+      "author": "Armenian Church. Liturgy and ritual; Nerses, Shnorhali",
+      "reason_zh": "聖納爾謝斯‧許諾爾哈利的祈禱文，1862年以33種語言出版，原典為12世紀亞美尼亞禮儀祈禱文，屬禮儀藏。雖為多語版本，但所收為一手禮儀原典。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "liyi"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "東敘利亞教會信仰告白",
+      "title_orig": "Profession of faith, east Syriac church",
+      "author": "",
+      "reason_zh": "東敘利亞（景教）教會的信仰告白，屬禮儀文本或信條，為一手原典；確切年代不明，一般認為形成於古代教會時期，屬景教正典文獻。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "埃及聖徒列傳：雅各比科普特殉道曆中的殉道者、宗主教與修道聖徒彙編",
+      "title_orig": "The saints of Egypt : An alphabetical compendium of martyrs, patriarchs and sainted ascetes in the Coptic calendar...",
+      "author": "O'Leary, De Lacy",
+      "reason_zh": "以科普特殉道曆為依據編成的聖徒傳記彙編，底層來源為科普特教會中世紀原典；現代編輯者整理呈現，但主要內容為傳統聖徒傳記資料。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "羅馬女元老聖梅拉尼亞（小）：當代文獻彙編",
+      "title_orig": "Santa Melania giuniore, senatrice romana. Documenti contemporanei e note",
+      "author": "（彙編者不明）",
+      "reason_zh": "1905年出版，彙集小梅拉尼亞相關當代文獻（contemporanei），若含一手史料文獻則有保留價值；因性質介於史料彙編與一手文獻之間，信心略低，歸入史傳藏，建議人工複核確認是否含一手文本。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "早期殉道者真實事蹟集",
+      "title_orig": "Some authentic acts of the early martyrs",
+      "author": "",
+      "reason_zh": "收錄早期基督教殉道事蹟（Passiones）的文獻集，屬一手史傳原典，為教父時代殉道文學，歸史傳藏（shizhuan）；1933 年為現代編校版，原典時代為古代。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "liyi"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 2,
+      "title_zh": "科普特教會聖人曆（節期書）",
+      "title_orig": "Synaxarium",
+      "author": "St. Mary's Coptic Church (Savage, Md.)",
+      "reason_zh": "科普特聖人曆書之馬里蘭州聖母科普特教堂版本，原典屬中世紀科普特禮儀典籍，歸 liyi（禮儀藏）。",
+      "sources": [
+        "openlibrary",
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "liyi"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 3,
+      "title_zh": "《亞歷山大城聖人曆》",
+      "title_orig": "Synaxarium Alexandrinum",
+      "author": "Coptic Church",
+      "reason_zh": "《亞歷山大城聖人曆》為科普特教會亞歷山大禮儀傳統的節期曆書，1905年版，原典屬中世紀，歸 liyi（禮儀藏）。",
+      "sources": [
+        "openlibrary",
+        "archive_org",
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "liyi"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "科普特教會聖品歷（德文版）",
+      "title_orig": "Synaxarium: Das ist heligen-kalender der coptischen Christen",
+      "author": "Ferdinand Wüstenfeld, Coptic Church",
+      "reason_zh": "科普特教會聖品歷的德文版本，原典為科普特禮儀曆書，Wüstenfeld為編者/譯者，1879年版。原典本身屬中世紀科普特禮儀文獻，收入禮儀藏，列為保留（版本具學術價值，含原典文本）。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "阿布‧庫拉著作集",
+      "title_orig": "Theodore Ābu Qurrah",
+      "author": "Thāwdhūrus Abū Qurrah",
+      "reason_zh": "Theodore Abū Qurrah（達奧杜魯斯‧阿布‧庫拉）為東方基督教重要神學家，活躍於8–9世紀，著有多篇護教、神學論文，屬敘利亞/麥爾基特傳統原典著作集。2005年版為現代譯本版，原典屬中世紀。",
+      "sources": [
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "阿布‧庫拉著作（基督教東方文庫）",
+      "title_orig": "Theodore Abu Qurrah (Library of the Christian East)",
+      "author": "Theodore Abu Qurrah",
+      "reason_zh": "「基督教東方文庫」系列收錄的阿布‧庫拉神學論文原典英譯，作者為原作者 Theodore Abu Qurrah 本人，屬東方教會神學著作原典（麥爾基特傳統），應保留。",
+      "sources": [
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "三部波斯殉道錄：米勒斯主教、澤比納及其同伴、伯特‧卡什卡雷四十殉道士",
+      "title_orig": "Three Persian martyr acts : the acts of Miles... The martyrdom of Zebina... The martyrdom of the forty martyrs of Beth Kashkraye",
+      "author": "（Harvey、Durmaz、Payne 等譯）",
+      "reason_zh": "波斯教會殉道錄（Acta Martyrum）古代一手文獻，含英譯及原典介紹；此版為 2023 年英譯本，原典為古代敘利亞教會文獻，歸史傳藏。此版含原典文本介紹，可視為翻譯版原典入藏，或標為版本；因有原典性質且為重要一手文獻，判保留。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "shiwen"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "聖納爾謝斯‧許諾爾哈利著作集",
+      "title_orig": "Tn. Nersisi Shnorhalwoy haraberakan",
+      "author": "Nerses, Shnorhali Saint Nerses",
+      "reason_zh": "1830年出版的聖納爾謝斯‧許諾爾哈利著作集，原典為12世紀亞美尼亞大牧首所作，屬詩文/書牘類一手文獻彙編，建議人工確認收錄範圍。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "medieval"
+      ],
+      "collection_keys": [
+        "shuxin"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "亞美尼亞大牧首聖納爾謝斯‧許諾爾哈利牧函",
+      "title_orig": "Tught' e\"ndhanrakan Nersesi kat'ughikosi hayots' [Epistola Pastoralis S. Nersetis Clajensis]",
+      "author": "Nerses Shnorhali",
+      "reason_zh": "聖納爾謝斯‧許諾爾哈利所著牧函，為12世紀亞美尼亞大牧首致全體信眾的書牘，屬書信藏。",
+      "sources": [
+        "archive_org"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "馬什托茨生平（古典亞美尼亞原文影印版）",
+      "title_orig": "Varkʻ Mashtotsʻi ([Facsimile ed.]) Koriwn ; introduction by Krikor H. Maksoudian",
+      "author": "科里溫（Koriun）",
+      "reason_zh": "科里溫《馬什托茨生平》1941年影印版含古典亞美尼亞文原典，為亞美尼亞教會傳記一手文獻，雖為影印版仍具原典性質，歸史傳藏。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "瓦爾丹與亞美尼亞戰爭",
+      "title_orig": "Vasn Vardanay ew Hayotsʻ Paterazmin",
+      "author": "Saint Eghishē",
+      "reason_zh": "亞美尼亞教會史家聖艾格歇（Saint Eghishē，約5世紀）所著《瓦爾丹與亞美尼亞戰爭》史傳，記載亞美尼亞基督徒反抗波斯薩珊帝國逼迫改宗之戰役，屬古代亞美尼亞教會重要史傳原典。",
+      "sources": [
+        "openlibrary"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "聖梅拉尼亞拉丁傳（批判版）",
+      "title_orig": "La vie latine de Sainte Mélanie / Gérontius",
+      "author": "革隆提烏斯（5世紀）；編注：帕特里克·勞倫斯",
+      "reason_zh": "革隆提烏斯《梅拉尼亞傳》拉丁文批判版（含法語譯文及注釋），一手文獻原文本身，與i=23同一原作之不同語言版本，歸入史傳藏（shizhuan）。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "瑪克蓮娜傳（節選）",
+      "title_orig": "Vie de Macrine: extraits / Grégoire de Nysse",
+      "author": "尼撒的額我略（約335–394）",
+      "reason_zh": "同i=18，瑪克蓮娜傳之法語節選版，一手文獻性質相同，歸入史傳藏。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "shizhuan"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "聖瑪克蓮娜傳",
+      "title_orig": "La vita di s. Macrina / S. Gregorio di Nissa",
+      "author": "尼撒的額我略（約335–394）",
+      "reason_zh": "尼撒的額我略所著瑪克蓮娜傳記，屬古代基督教聖人傳記一手文獻，歸入史傳藏（shizhuan）。本條目為義大利譯本，以原作性質認定。",
+      "sources": [
+        "bnf"
+      ]
+    },
+    {
+      "era_keys": [
+        "ancient"
+      ],
+      "collection_keys": [
+        "lun"
+      ],
+      "canons": [
+        "zheng"
+      ],
+      "n_editions": 1,
+      "title_zh": "駁斥異端（德譯本）",
+      "title_orig": "Des Wardapet Eznik von Kolb Wider die Sekten",
+      "author": "Eznik",
+      "reason_zh": "亞美尼亞教父葉次尼克（Eznik of Kolb，5世紀）所著《駁斥異端》（De Deo），為亞美尼亞基督教最重要的護教論著作之一，屬論藏。此條目為德譯版，但原典身份明確，應以原典收錄。",
+      "sources": [
+        "archive_org"
+      ]
     }
   ],
-  "in_corpus_count": 0,
-  "_inserted_2026-06-25_count": 18,
-  "_note": "東方 harvest 377→人工 triage(撞額度)→入庫 18 筆真正缺漏；loop 仍在補完 350 engine=none，待後續再 curate"
+  "in_corpus_count": 23
 }

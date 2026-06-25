@@ -153,7 +153,7 @@ def main() -> None:
         canons = sorted({row["classification"].get("canon") for row in e["rows"]})
         print(f"[{','.join(eras)} | {','.join(colls)} | {','.join(canons)}] "
               f"{c.get('title_zh')}  <-  {str(c.get('title_orig'))[:55]}  "
-              f"(x{e['n_editions']}, {c.get('author','')[:24]})")
+              f"(x{e['n_editions']}, {(c.get('author') or '')[:24]})")
     print()
     print("=== already-in-corpus (skipped) ===")
     for e in in_corpus:
