@@ -37,9 +37,11 @@
 - ingest：`python -X utf8 scripts/ingest_lit_review.py --seed --entries-only --book-id <BID> --project genesis-philosophy --report <md>`。dry-parse 與格式見 `genesis_refdb_handoff.md`。
 - 全文逐段轉錄(OA only)背景任務：`scripts/ingest_lit_review.py --fetch-fulltext --project genesis-philosophy --resume --engine gemini`（log `c:/tmp/lit_review_genesis_fulltext.log`）。本輪修過 abort 邏輯：401/403/404/410 付費牆標 unavailable 不計連續中止。
 
-## 五、待續五項（給新 session）
-1. **檢查 OA 進度**：`lit_review_entries.fulltext_status` 各狀態統計（translated/fetched/pending/unavailable），背景抓取是否還在跑、是否該 `--resume` 續排 501 筆 pending。
-2. **C-xxxxx 對話編號回填，可能要重新分**：新章(E2 ch7/8、E3 ch4/9)目前標「對話編號待回填」無 cite-seq；且**遷建章是從舊結構搬來的，其 section-source 的 C 編號是按舊章節脈絡指派的，重排後可能對不上新章主題**——需重新核對哪些對話真正支撐新章/新節，重新分派 cite-seq。
-3. **reader 抽查**：三卷 `/works/genesis-philosophy/book/<BID>` 顯示（章節徽章、本章摘要、論證分析圖、跨卷引用是否成立、有無斷裂）。
-4. **最新研究以「每一節」分類**：目前研究回顧的 `所屬面向` 多為章級；要細化到**每一小節(h3)**逐節掛文獻，並補齊 E1、E3（目前對話地圖只做了 E2 哲學域）。
-5. **每節找「對話/相反/支持」文獻**：仿 E2 對話地圖，為三卷**每一節**找出可對話、對立、支持的當代文獻（盟友/foil/旁證），逐筆入 `lit_review_entries`（立場=補充/反例/支持），尤其補 E1（中世紀三教、休謨、胡塞爾 epoché）與 E3（意識難問題、他心、AI意識、人格同一性/Parfit、怪圈）。
+## 五、五項待續（2026-06-25 全部完成）
+1. ✅ **OA 進度**：`fulltext_status` 統計完成；背景抓取曾停、已 `--resume`（`scripts/ingest_lit_review.py --fetch-fulltext --resume --engine gemini`，log `c:/tmp/lit_review_genesis_fulltext.log`）。pending 全英文、付費牆自動標 unavailable。
+2. ✅ **cite-seq 全卷重整**：`genesis_cite_backfill.py tag epi E1 8 E2 11 E3 10`（詞頻法 strip+重算，依當前本文重分）→ 122 內容節全部 ≥5 則對話；新章補齊；2 純史述節手動補（E1 ch1§2、E3 ch9§1）。重組部署＋push。
+3. ✅ **reader 抽查**：結構徽章/摘要/argmap/跨卷引用正常；禁用舊詞=0（「六階段」僅存於「五階段而非六階段」對照句）。
+4. ✅ **逐節(h3)分類**：所有 lit_review 條目 `所屬面向` 已細化到 canonical 小節（見 `scripts/data/lit_review_genesis_section_map.md`）。**跨卷重歸位**：舊 E1 的範式/後現代/碎形/準科學性條目移 E2；E2 的知行合一/蓋提爾/強弱認識論移 E3、意向性移 E1。重排後 E1=81 / E2=50 / E3=115，全部 0 非 canonical。
+5. ✅ **每節三類文獻**：10 個平行子代理研究重點章（E1 ch2/5/6/7、E3 ch3/4/6/7/8/9），去重後 E1 +49、E3 +73 筆（盟友/foil/旁證，立場齊備、WebSearch 查證）。報告 `scripts/data/lit_review_genesis_{E1,E3}_dialogue_ch*.md` + `_combined.md`。E2 哲學域對話地圖原已存在。
+
+> 後續可選：① E2 非哲學域逐節對話地圖（item5 只做重點章，E1 meta 章 ch1/3/4/8、E3 ch1/2/5/10 未補新文獻）；② 子代理標「待核」的少數條目（年份/DOI）上線前複查；③ OA 全文續抓直到 pending 收斂。
