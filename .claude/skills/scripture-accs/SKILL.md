@@ -83,7 +83,21 @@ python scripts/ingest_accs_genesis.py \
 
 ---
 
-## 🧭 下個 session 接手清單（2026-06-24 晚更新）
+## 🧭 下個 session 接手清單（2026-06-25 晚更新）
+
+### A0. ACCS 出埃及記 OCR — **OCR 中（排程 ACCS_Exo_Resume，2026-06-25 起跑）🔴 接手關注**
+- **來源**：合卷 PDF `古代基督信仰聖經註釋叢書2-5 出 利 民 申.pdf`（ACCS OT III＝出/利/民/申 四書，614 頁，
+  已複製本地 `c:/tmp/古代基督信仰聖經註釋叢書2-5 出利民申.pdf`）。**只跑出埃及記**。
+- **🚨 頁界（已人工核定，務必照用）**：目錄(PDF 11)書頁 出 1 / 利 229 / 民 289 / 申 385。offset PDF=書頁+44。
+  → **出埃及記內容＝PDF 45–272**（45=「出埃及記」標題頁、48=書頁4 出 1.7、272=書頁228 出 40 末、**273=「利未記」標題頁**）。
+  **絕不可跑過 272**！利未記 ref 也是「1:1」會誤掛 exo ch1。
+- **跑法**：排程 `ACCS_Exo_Resume`（每 2h、battery-ok、IgnoreNew）跑 `scripts/accs_resume_exo.ps1`：
+  `ingest_accs_genesis.py --book exo --pages 45-272 --source-vol 'ACCS OT III（出埃及記）' --engine sonnet --batch 1 --resume`。
+  checkpoint `c:/tmp/accs_exo_…出利民申.raw.jsonl`、log `scripts/logs/accs_exo.log`、完成寫 `…raw.done`。
+  **🚨 絕不可 --replace**（清光 book_code=exo）。dry-run 已驗 parse OK（PDF47→3 entries、auto 章路由正常）。
+- **接手第一件事**：`Get-ScheduledTaskInfo ACCS_Exo_Resume` + 查 DB `accs_commentary` book_code=exo 列數有沒有在長。
+  2026-06-25 起跑當下 Sonnet 5h 窗剛被創世記 ~60 次 Vision 燒乾→頭幾輪多半 rate-limit 空跑，等窗刷新才推進。228 頁估數天。
+  完成後比照慣例 `Disable-ScheduledTask ACCS_Exo_Resume`，再跑 blank-father 救援（`accs_resolve_blank_fathers.py --book exo` ＋ 視需要 Vision）。
 
 ### A. ACCS 創世記 OCR — **全書完成 ✅（創 1-50，2026-06-24）**
 - **創 1-11 完成**：316/316 頁、698 列（67 總論+631 引文）。`.done`＝`c:/tmp/accs_gen_…創1-11.raw.done`；
