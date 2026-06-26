@@ -33,14 +33,15 @@
 → 自動 combine 該卷所有 `*_dialogue_ch*.md`、去重(ref_key)、dry-parse、`ingest_lit_review.py --seed --entries-only --book-id <VOL> --display-offset 200`。冪等。
 （先 `… dry <VOL>` 看 DUP=[]/miss/stance/themes 再 apply。）
 
-### (C) 既有 ref-DB 條目逐節分類（M3/O*/V*/B*，仿 E1/E2/E3 做法）
-M3/O/V/B 的原始 ~44 筆 refdb「所屬面向」仍是章級或舊描述，要細化到 canonical h3 小節。
-- canonical 小節標籤＝`scripts/genesis_research/clean_inv.json`（每卷每章的乾淨 sections 字串）。
-- 做法仿 session-1：dump 各卷既有條目→子代理逐筆給 `{new_book_id,new_dimension}`→REST PATCH（含跨卷衝突檢查）。
-- 這些卷主題單一，跨卷搬移應極少（不像 E 三卷重排）。
+### (C) 既有 ref-DB 條目逐節分類（M3/O*/V*/B*）✅ 2026-06-26 完成
+M3/O/V/B 的原始 410 筆 refdb（display_order<200）「所屬面向」原為章級，**已全部細化到 canonical h3 小節**。
+- 工具：`scripts/genesis_research/reclassify_refdb.py`（**走 Gemini→NVIDIA→Haiku Python 引擎，不佔 Claude 額度**）。
+  每卷把全卷 canonical 小節清單（編號＋所屬章）+ 既有條目（title/目前章/abstract_zh）丟引擎，回傳每筆最貼切小節編號 → REST PATCH dimension。
+- 結果：10 卷 × orig 全部 now-canonical（still-chapter=0）。ledger `c:/tmp/genesis_research/reclassify_refdb.jsonl` 存 {id,old,new} 可還原。
+- 不做跨卷搬移（dimension 已隱含該 book 的章；主題單一）。canonical 標籤＝`clean_inv.json`。
 
-### (D) 子代理標「待核」條目複查
-各 `*_dialogue_ch*.md` 摘要內標「（細節待核）」的少數條目（個別 DOI/年份/SEP 署名），上線前可快速複查。
+### (D) 子代理標「待核」條目複查 — 殘 5 筆（已誠實標記，低風險）
+全量僅剩 5 處「（細節待核）」（4 檔）：B2-ch3 Johnston《Encyclopedia of Lacanian Psychoanalysis》無年份、B2-ch3 Panasiuk SSRN working paper、M2-ch1 Buchanan&Powell 2018、M2-ch6 城市起源科普綜述、O1-ch3 Watson/Frette 1996 Nature 署名。皆為真實著作僅單一 metadata 待補，照規格誠實標記，非杜撰；上線前要精修可逐筆查。
 
 ### (E) OA 全文抓取（背景、獨立引擎、不佔 session 額度）
 `python -X utf8 scripts/ingest_lit_review.py --fetch-fulltext --project genesis-philosophy --resume --engine gemini --pace 1`（log `c:/tmp/lit_review_genesis_fulltext.log`）。新增 M1/M2 等英文條目的 OA 全文逐筆翻譯入 lit_review_sections。
