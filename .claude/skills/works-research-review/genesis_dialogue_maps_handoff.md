@@ -10,9 +10,11 @@
 - **既有 ref-DB 逐節分類**：E1/E2/E3 共 124 筆已細化到 canonical h3 小節並跨卷重歸位（E1=81/E2=50/E3=115）。
 - **M1（7 章）、M2（ch1–11）對話地圖**已研究+入庫：M1=162 筆、M2=214 筆（含原 refdb + 對話地圖，去重後 upsert，display-offset 200）。
 
-## 二、DB 現況（lit_review_entries, project_slug=genesis-philosophy；2026-06-26 09:06）
-M1=162 M2=214 M3=48 E1=81 E2=50 E3=115 O1=44 O2=44 O3=45 V1=45 V2=41 V3=46 B1=48 B2=44 B3=47（**共 1074**）
-- M3/O*/V*/B* 仍是**原始 refdb 章級**數字（~44–48）＝對話地圖**尚未**做。
+## 二、DB 現況（lit_review_entries, project_slug=genesis-philosophy）
+- 2026-06-26 15:16 更新：**M1/M2/M3/E1/E2/E3/O1/O2/O3 對話地圖皆已 ingest**。
+  本窗口 apply：M2=198 M3=110 E1=82 E2=133 E3=114 O1=94 O2=56 O3=75（idempotent upsert，display-offset 200）。
+- 尚未做對話地圖（仍原始 refdb 章級 ~41–46）：**V1（部分，ch1-4 已研究待補 ch5-6）、V2、V3、B1、B2、B3**。
+- ⚠️ M2 有 1 筆缺 stance（None）→ 上線前 (D) 複查。
 
 ## 三、待續工作
 ### (A) 研究剩餘 87 章對話地圖 ← 主工作，吃 session 額度
@@ -55,7 +57,8 @@ M3/O/V/B 的原始 ~44 筆 refdb「所屬面向」仍是章級或舊描述，要
 ## 五、續跑標準循環（每個配額窗口重複）
 1. `cp scripts/genesis_research/{thesis,clean_inv,worklist}.json /c/tmp/genesis_research/`（若 tmp 被清）
 2. `python -X utf8 scripts/genesis_research/gen_workflow.py`（重生 WORK＝磁碟上尚缺的章）
-3. `Workflow({scriptPath:"scripts/genesis_research/research_workflow.mjs"})` 背景跑；通知回來看 done/failed。
+3. 啟 Workflow 背景跑；通知回來看 done/failed。
+   - 🚨 **用 inline `script` 參數，別用 `scriptPath`**：本機 permission hook 讀檔會把 UTF-8 中文誤判成「control characters」而擋下（"script contains control characters"）。把 `c:/tmp/genesis_research/research_workflow.mjs` 內容整段貼進 `script` 即可（meta.description 與 RULES 內的 en-dash `–` 先換成 ASCII `-`，WORK 標題保持原樣以對得上 clean_inv.json）。
 4. 對「該卷所有章都齊」的卷：`ingest_all.py apply <那些卷>`。
 5. `git add scripts/data/lit_review_genesis_<VOL>_dialogue_*.md && git commit && git push`（pre-push 跑 vitest 要綠；遇 remote 並行 push 衝突就 `git fetch` 後重 push，**別 force**）。
 6. failed 多半是 `session limit · resets <時間>`：等該時間過後回到步驟 2。每窗口約 ~18 章。
