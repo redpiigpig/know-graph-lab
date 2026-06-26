@@ -1,0 +1,63 @@
+# 創生哲學 15 卷「逐節對話地圖」全量補完 — 交接（2026-06-26）
+
+> 接續：把**全 15 卷每一小節**都掛上「盟友(支持/補充)/foil(反例)/旁證」當代文獻（仿 E2 對話地圖），
+> 並把**既有 ref-DB 條目逐節分類**。瓶頸＝Claude **session 額度**：每個配額窗口約只能跑 **~18 章**研究子代理，
+> 全部 105 章要橫跨數個重置窗口。記憶見 [[project_genesis_reference_db]]、[[project_genesis_epistemology_trilogy]]。
+> 前一份 E1/E2/E3 收尾交接見 `genesis_trilogy_handoff.md`（五項已完成）。
+
+## 一、已完成（已 push）
+- **E1/E2/E3**：原始五項全完成（cite-seq 重整、reader 抽查、逐節分類+跨卷重歸位、重點章對話地圖）。
+- **既有 ref-DB 逐節分類**：E1/E2/E3 共 124 筆已細化到 canonical h3 小節並跨卷重歸位（E1=81/E2=50/E3=115）。
+- **M1（7 章）、M2（ch1–11）對話地圖**已研究+入庫：M1=162 筆、M2=214 筆（含原 refdb + 對話地圖，去重後 upsert，display-offset 200）。
+
+## 二、DB 現況（lit_review_entries, project_slug=genesis-philosophy；2026-06-26 09:06）
+M1=162 M2=214 M3=48 E1=81 E2=50 E3=115 O1=44 O2=44 O3=45 V1=45 V2=41 V3=46 B1=48 B2=44 B3=47（**共 1074**）
+- M3/O*/V*/B* 仍是**原始 refdb 章級**數字（~44–48）＝對話地圖**尚未**做。
+
+## 三、待續工作
+### (A) 研究剩餘 87 章對話地圖 ← 主工作，吃 session 額度
+尚未產報告檔的章（磁碟上無 `scripts/data/lit_review_genesis_<VOL>_dialogue_ch<rc>.md`）：
+- **M2**: ch12, ch13
+- **M3**: ch1–9（全）
+- **E1**: ch1, ch3, ch4, ch8（新章；ch2/5/6/7 已做）
+- **E2**: ch1–11（全）
+- **E3**: ch1, ch2, ch5, ch10（新章；ch3/4/6/7/8/9 已做）
+- **O1**: ch1–7  **O2**: ch1–6  **O3**: ch1–7
+- **V1**: ch1–6  **V2**: ch1–6  **V3**: ch1–5
+- **B1**: ch1–7  **B2**: ch1–6  **B3**: ch1–7
+
+### (B) 逐卷 ingest（每當某卷所有章報告檔齊）
+`python -X utf8 scripts/genesis_research/ingest_all.py apply <VOL> [<VOL>…]`
+→ 自動 combine 該卷所有 `*_dialogue_ch*.md`、去重(ref_key)、dry-parse、`ingest_lit_review.py --seed --entries-only --book-id <VOL> --display-offset 200`。冪等。
+（先 `… dry <VOL>` 看 DUP=[]/miss/stance/themes 再 apply。）
+
+### (C) 既有 ref-DB 條目逐節分類（M3/O*/V*/B*，仿 E1/E2/E3 做法）
+M3/O/V/B 的原始 ~44 筆 refdb「所屬面向」仍是章級或舊描述，要細化到 canonical h3 小節。
+- canonical 小節標籤＝`scripts/genesis_research/clean_inv.json`（每卷每章的乾淨 sections 字串）。
+- 做法仿 session-1：dump 各卷既有條目→子代理逐筆給 `{new_book_id,new_dimension}`→REST PATCH（含跨卷衝突檢查）。
+- 這些卷主題單一，跨卷搬移應極少（不像 E 三卷重排）。
+
+### (D) 子代理標「待核」條目複查
+各 `*_dialogue_ch*.md` 摘要內標「（細節待核）」的少數條目（個別 DOI/年份/SEP 署名），上線前可快速複查。
+
+### (E) OA 全文抓取（背景、獨立引擎、不佔 session 額度）
+`python -X utf8 scripts/ingest_lit_review.py --fetch-fulltext --project genesis-philosophy --resume --engine gemini --pace 1`（log `c:/tmp/lit_review_genesis_fulltext.log`）。新增 M1/M2 等英文條目的 OA 全文逐筆翻譯入 lit_review_sections。
+
+## 四、工具（已存進 repo `scripts/genesis_research/`，因 c:/tmp 會被清）
+- `research_workflow.mjs` — Workflow 腳本（WORK 內嵌剩餘章；每波 6、每章重試；每章一子代理寫報告檔）。
+- `gen_workflow.py` — **重生**上面腳本：掃描 `scripts/data/*_dialogue_ch*.md`，把磁碟上**還沒產出**的章重新內嵌成 WORK。⚠️先跑這支再啟 workflow，才不會重做已完成章、浪費額度。
+- `ingest_all.py` — 逐卷 combine+dedup+dry/apply（見上 B）。
+- `thesis.json` — 15 卷 domain + 核心主張（子代理判斷盟友/foil 用）。
+- `clean_inv.json` — 15 卷每章 sections（canonical 小節標籤，去 `一、` 前綴）。`worklist.json`／`all_sections.py` 同源。
+- ⚠️ 子代理 prompt 內寫死讀 `c:/tmp/genesis_research/{thesis,clean_inv}.json`。**新 session 若 c:/tmp 已清，先：**
+  `mkdir -p /c/tmp/genesis_research && cp scripts/genesis_research/{thesis,clean_inv,worklist}.json /c/tmp/genesis_research/`
+
+## 五、續跑標準循環（每個配額窗口重複）
+1. `cp scripts/genesis_research/{thesis,clean_inv,worklist}.json /c/tmp/genesis_research/`（若 tmp 被清）
+2. `python -X utf8 scripts/genesis_research/gen_workflow.py`（重生 WORK＝磁碟上尚缺的章）
+3. `Workflow({scriptPath:"scripts/genesis_research/research_workflow.mjs"})` 背景跑；通知回來看 done/failed。
+4. 對「該卷所有章都齊」的卷：`ingest_all.py apply <那些卷>`。
+5. `git add scripts/data/lit_review_genesis_<VOL>_dialogue_*.md && git commit && git push`（pre-push 跑 vitest 要綠；遇 remote 並行 push 衝突就 `git fetch` 後重 push，**別 force**）。
+6. failed 多半是 `session limit · resets <時間>`：等該時間過後回到步驟 2。每窗口約 ~18 章。
+- 🚨 別 16 並發猛打（會觸發伺服器端 429 過載）；wave=6 已內建。
+- 🚨 別 force-reset master；repo 有並行 session 在動（jung/panikkar/gnostic 等未暫存變更不是本工作，別碰）。

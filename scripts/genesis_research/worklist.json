@@ -1,0 +1,737 @@
+[
+{
+"vol": "M1",
+"realch": 1,
+"invch": 2,
+"title": "第一章　為何需要主體性倫理學",
+"nsec": 5
+},
+{
+"vol": "M1",
+"realch": 2,
+"invch": 3,
+"title": "第二章　主體的誕生",
+"nsec": 7
+},
+{
+"vol": "M1",
+"realch": 3,
+"invch": 4,
+"title": "第三章　召喚的結構",
+"nsec": 4
+},
+{
+"vol": "M1",
+"realch": 4,
+"invch": 5,
+"title": "第四章　倫理陰影與補償",
+"nsec": 5
+},
+{
+"vol": "M1",
+"realch": 5,
+"invch": 6,
+"title": "第五章　誠實作為萬德之綱與倫理的數學化",
+"nsec": 9
+},
+{
+"vol": "M1",
+"realch": 6,
+"invch": 7,
+"title": "第六章　愛的公式",
+"nsec": 17
+},
+{
+"vol": "M1",
+"realch": 7,
+"invch": 8,
+"title": "第七章　死亡倫理",
+"nsec": 3
+},
+{
+"vol": "M2",
+"realch": 1,
+"invch": 2,
+"title": "第一章　從個人 hi 到社會 H 與意義的生成",
+"nsec": 11
+},
+{
+"vol": "M2",
+"realch": 2,
+"invch": 3,
+"title": "第二章　倫理能見度與可居性",
+"nsec": 4
+},
+{
+"vol": "M2",
+"realch": 3,
+"invch": 4,
+"title": "第三章　暴政的解剖",
+"nsec": 6
+},
+{
+"vol": "M2",
+"realch": 4,
+"invch": 5,
+"title": "第四章　民主的誠實度門檻",
+"nsec": 5
+},
+{
+"vol": "M2",
+"realch": 5,
+"invch": 6,
+"title": "第五章　社會的起源與原始的倫理",
+"nsec": 8
+},
+{
+"vol": "M2",
+"realch": 6,
+"invch": 7,
+"title": "第六章　宗教倫理與起源異托邦",
+"nsec": 7
+},
+{
+"vol": "M2",
+"realch": 7,
+"invch": 8,
+"title": "第七章　政體的倫理史",
+"nsec": 4
+},
+{
+"vol": "M2",
+"realch": 8,
+"invch": 9,
+"title": "第八章　極權政治與轉型正義",
+"nsec": 5
+},
+{
+"vol": "M2",
+"realch": 9,
+"invch": 10,
+"title": "第九章　異化、現代性與公共性",
+"nsec": 7
+},
+{
+"vol": "M2",
+"realch": 10,
+"invch": 11,
+"title": "第十章　現代社會的職業倫理場",
+"nsec": 5
+},
+{
+"vol": "M2",
+"realch": 11,
+"invch": 12,
+"title": "第十一章　人權批判與全球主體倫理憲章",
+"nsec": 4
+},
+{
+"vol": "M2",
+"realch": 12,
+"invch": 13,
+"title": "第十二章　制度性無政府主義與裂口異托邦",
+"nsec": 12
+},
+{
+"vol": "M2",
+"realch": 13,
+"invch": 14,
+"title": "第十三章　結語：虛構的烏托邦",
+"nsec": 5
+},
+{
+"vol": "M3",
+"realch": 1,
+"invch": 2,
+"title": "第一章　導論：倫理的外推",
+"nsec": 9
+},
+{
+"vol": "M3",
+"realch": 2,
+"invch": 3,
+"title": "第二章　日擇原理",
+"nsec": 4
+},
+{
+"vol": "M3",
+"realch": 3,
+"invch": 4,
+"title": "第三章　性善的宇宙演化根基",
+"nsec": 4
+},
+{
+"vol": "M3",
+"realch": 4,
+"invch": 5,
+"title": "第四章　生命倫理",
+"nsec": 3
+},
+{
+"vol": "M3",
+"realch": 5,
+"invch": 6,
+"title": "第五章　動物倫理",
+"nsec": 4
+},
+{
+"vol": "M3",
+"realch": 6,
+"invch": 7,
+"title": "第六章　環境與生態倫理",
+"nsec": 4
+},
+{
+"vol": "M3",
+"realch": 7,
+"invch": 8,
+"title": "第七章　星球與宇宙倫理",
+"nsec": 4
+},
+{
+"vol": "M3",
+"realch": 8,
+"invch": 9,
+"title": "第八章　AI 倫理",
+"nsec": 4
+},
+{
+"vol": "M3",
+"realch": 9,
+"invch": 10,
+"title": "第九章　熱寂與永續共生圈",
+"nsec": 6
+},
+{
+"vol": "E1",
+"realch": 1,
+"invch": 2,
+"title": "第一章　認識論的歪斜與本質的幽靈",
+"nsec": 3
+},
+{
+"vol": "E1",
+"realch": 3,
+"invch": 4,
+"title": "第三章　現象即本質：認識論的新方法（上）",
+"nsec": 3
+},
+{
+"vol": "E1",
+"realch": 4,
+"invch": 5,
+"title": "第四章　柏拉圖的棺材板：方法論的刀（下）",
+"nsec": 3
+},
+{
+"vol": "E1",
+"realch": 8,
+"invch": 9,
+"title": "第八章　結語：驅魔之後",
+"nsec": 3
+},
+{
+"vol": "E2",
+"realch": 1,
+"invch": 2,
+"title": "第一章　亞里斯多德邏輯的限制與重構：不二論三律",
+"nsec": 5
+},
+{
+"vol": "E2",
+"realch": 2,
+"invch": 3,
+"title": "第二章　不二論作為後設邏輯",
+"nsec": 5
+},
+{
+"vol": "E2",
+"realch": 3,
+"invch": 4,
+"title": "第三章　語言與意向性：知識的條件",
+"nsec": 5
+},
+{
+"vol": "E2",
+"realch": 4,
+"invch": 5,
+"title": "第四章　數學作為認識：哥德爾與知識的界限",
+"nsec": 5
+},
+{
+"vol": "E2",
+"realch": 5,
+"invch": 6,
+"title": "第五章　範疇論 vs 集合論：關係性認識",
+"nsec": 4
+},
+{
+"vol": "E2",
+"realch": 6,
+"invch": 7,
+"title": "第六章　科學與人文學科作為認識：方法與準科學性",
+"nsec": 4
+},
+{
+"vol": "E2",
+"realch": 7,
+"invch": 8,
+"title": "第七章　物理為何能描述宇宙：共構",
+"nsec": 5
+},
+{
+"vol": "E2",
+"realch": 8,
+"invch": 9,
+"title": "第八章　我們為何能認識宇宙：本體論與認識論同構",
+"nsec": 5
+},
+{
+"vol": "E2",
+"realch": 9,
+"invch": 10,
+"title": "第九章　知識範式五階段",
+"nsec": 4
+},
+{
+"vol": "E2",
+"realch": 10,
+"invch": 11,
+"title": "第十章　現代的困局與後現代思潮的解構：貢獻與極限",
+"nsec": 4
+},
+{
+"vol": "E2",
+"realch": 11,
+"invch": 12,
+"title": "第十一章　可轉譯的大敘事：碎形次大敘事聯盟",
+"nsec": 5
+},
+{
+"vol": "E3",
+"realch": 1,
+"invch": 2,
+"title": "第一章　認識的主體：強認識論與弱認識論",
+"nsec": 4
+},
+{
+"vol": "E3",
+"realch": 2,
+"invch": 3,
+"title": "第二章　知行合一與蓋提爾問題的重構",
+"nsec": 5
+},
+{
+"vol": "E3",
+"realch": 5,
+"invch": 6,
+"title": "第五章　具身認識論",
+"nsec": 4
+},
+{
+"vol": "E3",
+"realch": 10,
+"invch": 11,
+"title": "第十章　結語：主體的誕生與認識的謙卑",
+"nsec": 4
+},
+{
+"vol": "O1",
+"realch": 1,
+"invch": 2,
+"title": "第一章　導論：本體論作為「生成的學問」",
+"nsec": 4
+},
+{
+"vol": "O1",
+"realch": 2,
+"invch": 3,
+"title": "第二章　生成三要素：關係性、身體性、歷時性（創生三原理）",
+"nsec": 6
+},
+{
+"vol": "O1",
+"realch": 3,
+"invch": 4,
+"title": "第三章　創生公式：條件、閾值與自我循環維持",
+"nsec": 6
+},
+{
+"vol": "O1",
+"realch": 4,
+"invch": 5,
+"title": "第四章　存在的三態：創生前態、創生態、創生殘態",
+"nsec": 5
+},
+{
+"vol": "O1",
+"realch": 5,
+"invch": 6,
+"title": "第五章　創生剃刀：可意向性即存有條件",
+"nsec": 4
+},
+{
+"vol": "O1",
+"realch": 6,
+"invch": 7,
+"title": "第六章　本體論＝認識論（ontology = epistemology）：存在的可描述性",
+"nsec": 5
+},
+{
+"vol": "O1",
+"realch": 7,
+"invch": 8,
+"title": "第七章　存在的譜系：從完全意向性到非存在",
+"nsec": 6
+},
+{
+"vol": "O2",
+"realch": 1,
+"invch": 2,
+"title": "第一章　導論：為什麼量子是本體論問題",
+"nsec": 5
+},
+{
+"vol": "O2",
+"realch": 2,
+"invch": 3,
+"title": "第二章　坍縮即創生：觀察、波函數與共構生成",
+"nsec": 4
+},
+{
+"vol": "O2",
+"realch": 3,
+"invch": 4,
+"title": "第三章　退相干與巨觀世界的穩定生成",
+"nsec": 5
+},
+{
+"vol": "O2",
+"realch": 4,
+"invch": 5,
+"title": "第四章　量子邏輯與古典邏輯：觀測尺度生成律",
+"nsec": 4
+},
+{
+"vol": "O2",
+"realch": 5,
+"invch": 6,
+"title": "第五章　反柏拉圖理型論：疊加態才是實在",
+"nsec": 4
+},
+{
+"vol": "O2",
+"realch": 6,
+"invch": 7,
+"title": "第六章　結語：生成的宇宙與待解的主體",
+"nsec": 2
+},
+{
+"vol": "O3",
+"realch": 1,
+"invch": 2,
+"title": "第一章　導論：主體作為本體論問題",
+"nsec": 4
+},
+{
+"vol": "O3",
+"realch": 2,
+"invch": 3,
+"title": "第二章　意識作為複合創生態",
+"nsec": 4
+},
+{
+"vol": "O3",
+"realch": 3,
+"invch": 4,
+"title": "第三章　自指漩渦：主體性如何從關係性湧現",
+"nsec": 4
+},
+{
+"vol": "O3",
+"realch": 4,
+"invch": 5,
+"title": "第四章　自我同一性：意向性、身體與歷時",
+"nsec": 4
+},
+{
+"vol": "O3",
+"realch": 5,
+"invch": 6,
+"title": "第五章　主體作為超限存在者",
+"nsec": 5
+},
+{
+"vol": "O3",
+"realch": 6,
+"invch": 7,
+"title": "第六章　AI 主體性的本體生成",
+"nsec": 4
+},
+{
+"vol": "O3",
+"realch": 7,
+"invch": 8,
+"title": "第七章　結語：神人互構與主體的創生",
+"nsec": 4
+},
+{
+"vol": "V1",
+"realch": 1,
+"invch": 2,
+"title": "第一章　導論：價值論作為「願然」之學",
+"nsec": 5
+},
+{
+"vol": "V1",
+"realch": 2,
+"invch": 3,
+"title": "第二章　願然與慾望：意欲的純化",
+"nsec": 5
+},
+{
+"vol": "V1",
+"realch": 3,
+"invch": 4,
+"title": "第三章　願然的四象限與熵的宇宙方向性",
+"nsec": 4
+},
+{
+"vol": "V1",
+"realch": 4,
+"invch": 5,
+"title": "第四章　美的共振生成論",
+"nsec": 4
+},
+{
+"vol": "V1",
+"realch": 5,
+"invch": 6,
+"title": "第五章　美的相對客觀性（relative objectivity）與文化主觀性（cultural subjectivity）",
+"nsec": 4
+},
+{
+"vol": "V1",
+"realch": 6,
+"invch": 7,
+"title": "第六章　真善美聖的四向度階層",
+"nsec": 5
+},
+{
+"vol": "V2",
+"realch": 1,
+"invch": 2,
+"title": "第一章　意義的困難問題",
+"nsec": 4
+},
+{
+"vol": "V2",
+"realch": 2,
+"invch": 3,
+"title": "第二章　虛無主義的價值論診斷",
+"nsec": 4
+},
+{
+"vol": "V2",
+"realch": 3,
+"invch": 4,
+"title": "第三章　愛作為願然的最高運動",
+"nsec": 4
+},
+{
+"vol": "V2",
+"realch": 4,
+"invch": 5,
+"title": "第四章　神聖性與空無美學",
+"nsec": 4
+},
+{
+"vol": "V2",
+"realch": 5,
+"invch": 6,
+"title": "第五章　主體作為最高價值",
+"nsec": 4
+},
+{
+"vol": "V2",
+"realch": 6,
+"invch": 7,
+"title": "第六章　結語：願然與第二軸心時代",
+"nsec": 4
+},
+{
+"vol": "V3",
+"realch": 1,
+"invch": 2,
+"title": "第一章　在場世界論：潛生界、意想界、存在界",
+"nsec": 6
+},
+{
+"vol": "V3",
+"realch": 2,
+"invch": 3,
+"title": "第二章　心為工畫師：唯識、心理學與世界的生成",
+"nsec": 3
+},
+{
+"vol": "V3",
+"realch": 3,
+"invch": 4,
+"title": "第三章　藝術與文學作為世界創造",
+"nsec": 3
+},
+{
+"vol": "V3",
+"realch": 4,
+"invch": 5,
+"title": "第四章　科幻、電影與動畫：意想界的工程學",
+"nsec": 3
+},
+{
+"vol": "V3",
+"realch": 5,
+"invch": 6,
+"title": "第五章　結語：世界理論在價值論中的位置",
+"nsec": 2
+},
+{
+"vol": "B1",
+"realch": 1,
+"invch": 2,
+"title": "第一章　導論：存有論作為「默然」之學",
+"nsec": 4
+},
+{
+"vol": "B1",
+"realch": 2,
+"invch": 3,
+"title": "第二章　空無的本體地位",
+"nsec": 5
+},
+{
+"vol": "B1",
+"realch": 3,
+"invch": 4,
+"title": "第三章　創生前態：存在的第三態",
+"nsec": 4
+},
+{
+"vol": "B1",
+"realch": 4,
+"invch": 5,
+"title": "第四章　存有者的分類學",
+"nsec": 5
+},
+{
+"vol": "B1",
+"realch": 5,
+"invch": 6,
+"title": "第五章　超限存在者與不可通約的臨在",
+"nsec": 5
+},
+{
+"vol": "B1",
+"realch": 6,
+"invch": 7,
+"title": "第六章　創生剃刀：可意向性即存有條件",
+"nsec": 4
+},
+{
+"vol": "B1",
+"realch": 7,
+"invch": 8,
+"title": "第七章　結語：存有的邊界地形學（Boundary Topography of Being）",
+"nsec": 5
+},
+{
+"vol": "B2",
+"realch": 1,
+"invch": 2,
+"title": "第一章　默然向度：語言與意向性失效之處",
+"nsec": 4
+},
+{
+"vol": "B2",
+"realch": 2,
+"invch": 3,
+"title": "第二章　語言的自我創生與否定性自指",
+"nsec": 4
+},
+{
+"vol": "B2",
+"realch": 3,
+"invch": 4,
+"title": "第三章　空無刺透存有：哥德爾縫隙作為創生起點",
+"nsec": 5
+},
+{
+"vol": "B2",
+"realch": 4,
+"invch": 5,
+"title": "第四章　銜尾蛇：存有的動態自指實在",
+"nsec": 4
+},
+{
+"vol": "B2",
+"realch": 5,
+"invch": 6,
+"title": "第五章　空無的數學形式化：零、無限與 ת",
+"nsec": 4
+},
+{
+"vol": "B2",
+"realch": 6,
+"invch": 7,
+"title": "第六章　結語：維摩一默",
+"nsec": 4
+},
+{
+"vol": "B3",
+"realch": 1,
+"invch": 2,
+"title": "第一章　神聖性：空無以神聖的方式臨在",
+"nsec": 4
+},
+{
+"vol": "B3",
+"realch": 2,
+"invch": 3,
+"title": "第二章　空無神學：神是不存在的，但也是創生的",
+"nsec": 5
+},
+{
+"vol": "B3",
+"realch": 3,
+"invch": 4,
+"title": "第三章　空無的三一結構與神聖語言",
+"nsec": 3
+},
+{
+"vol": "B3",
+"realch": 4,
+"invch": 5,
+"title": "第四章　虛無主義的存有論診斷",
+"nsec": 4
+},
+{
+"vol": "B3",
+"realch": 5,
+"invch": 6,
+"title": "第五章　永恆的不可能與死亡的存有論",
+"nsec": 5
+},
+{
+"vol": "B3",
+"realch": 6,
+"invch": 7,
+"title": "第六章　宇宙的終末與自我創生",
+"nsec": 4
+},
+{
+"vol": "B3",
+"realch": 7,
+"invch": 8,
+"title": "第七章　結語：神人互構與默然的承擔",
+"nsec": 4
+}
+]
