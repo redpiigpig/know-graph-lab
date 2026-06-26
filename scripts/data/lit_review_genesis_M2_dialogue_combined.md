@@ -219,6 +219,20 @@
 
 ---
 
+【Zimbardo, P. G. & Franco, Z. E.】（2006）〈The Banality of Heroism〉，《Greater Good (Greater Good Science Center, UC Berkeley)》
+語言：英文
+所屬面向：讓誠實平凡地發生
+立場：支持
+摘要：津巴多與佛朗哥提出「英雄主義的平庸性」，主張對應於阿倫特「邪惡的平庸性」，普通人在特定情境下也能行英雄之舉，故應「民主化英雄概念」、訓練人人成為日常英雄。此正面支持本節：道德高度（含誠實）可在平凡人身上平凡地發生，無須訴諸聖人。
+> **全文**：[Greater Good: The Banality of Heroism](https://greatergood.berkeley.edu/article/item/the_banality_of_heroism)
+
+【Han, H. et al.】（2017）〈Attainable and Relevant Moral Exemplars Are More Effective than Extraordinary Exemplars in Promoting Voluntary Service Engagement〉，《Frontiers in Psychology》
+語言：英文
+所屬面向：讓誠實平凡地發生
+立場：補充
+摘要：實證研究發現「可企及、相關的平凡道德楷模」比超凡聖人型楷模更能促進志願服務行為。此旁證補充本節：要讓誠實「平凡地發生」，制度與教育應仰賴可效法的平凡楷模，而非高不可攀的聖人標竿，呼應本書「不需要聖人」的一貫立場。
+> **全文**：[Frontiers in Psychology](https://doi.org/10.3389/fpsyg.2017.00283)
+
 
 ## 哲學
 
@@ -1180,6 +1194,201 @@
 逐節覆蓋：第1節（缺陷）3 筆＝支持2＋反例1；第2節（以責任取代權利）2 筆＝補充2（含中文）；第3節（憲章三原則）2 筆＝補充2；第4節（召喚性而非強制性）2 筆＝補充1＋反例1。每節皆達 ≥1 反例或可對照 foil＋≥1 支持／補充。
 標為「待核」筆數：3 筆（李明輝書出版社／年份；Cubie 軟法文出處版本；Nussbaum 2011《Creating Capabilities》章節對應）。
 
+【Berlin, I.】（1958/1969）〈Two Concepts of Liberty〉，《Four Essays on Liberty (Oxford University Press)》
+語言：英文
+所屬面向：消極倫理的陷阱：自由主義的結構性盲點
+立場：補充
+摘要：柏林區分「消極自由」（免於干涉）與「積極自由」（自我主宰），並警告積極自由易被「真自由」之名挾持為極權。此文正是本節所診斷之「自由主義盲點」的經典源頭——本章承認柏林對積極自由的警覺，卻反向指出純消極自由把倫理責任懸空，故引為對話旁證。
+> **全文**：[SEP: Positive and Negative Liberty](https://plato.stanford.edu/entries/liberty-positive-negative/)
+
+【Nozick, R.】（1974）〈Anarchy, State, and Utopia〉，《Basic Books》
+語言：英文
+所屬面向：消極倫理的陷阱：自由主義的結構性盲點
+立場：反例
+摘要：諾齊克論證唯有「守夜人式最小國家」在道德上正當，國家權力只限於防暴力、竊盜與詐欺，並以「烏托邦作為過濾裝置」收尾。其以個人權利為唯一準繩、拒絕積極義務的立場，恰是本章「消極倫理」的最強形式，構成核心反例。
+> **全文**：[SEP: Nozick's Political Philosophy](https://plato.stanford.edu/entries/nozick-political/)
+
+【Wolff, R. P.】（1970）〈In Defense of Anarchism〉，《Harper & Row / University of California Press》
+語言：英文
+所屬面向：積極倫理：制度性無政府主義的核心要求
+立場：補充
+摘要：沃爾夫論證個人自律與國家權威互斥，自律不可讓渡故國家正當性崩解，是哲學無政府主義的經典文本。本節「制度性無政府主義」承接此一自律優先的直覺，但把焦點從「拒絕服從」轉為「制度自我縮減的積極義務」，故引為旁證而非全盤採用。
+> **全文**：[Wikipedia: In Defense of Anarchism](https://en.wikipedia.org/wiki/In_Defense_of_Anarchism)
+
+【Engels, F.】（1872/1874）〈On Authority（Dell'Autorità）〉，《Almanacco Repubblicano》
+語言：英文（原文義大利文／德文）
+所屬面向：積極倫理：制度性無政府主義的核心要求
+立場：反例
+摘要：恩格斯主張革命是「最具權威性之事」，沒有權威就無法對抗資本，斥反權威主義為對複雜社會的幼稚反應。此文是馬克思主義對無政府主義的經典駁斥，正面否定本節「去中心化即倫理進步」的前提，構成關鍵反例。
+> **全文**：[On Authority (marxists.org)](https://www.marxists.org/archive/marx/works/1872/10/authority.htm)
+
+【Scott, J. C.】（2012）〈Two Cheers for Anarchism: Six Easy Pieces on Autonomy, Dignity, and Meaningful Work and Play〉，《Princeton University Press》
+語言：英文
+所屬面向：積極倫理：制度性無政府主義的核心要求
+立場：支持
+摘要：史考特提出「無政府主義式的看待方式」，肯定自由人的創造與道德判斷，並警告企業以「自主的幻覺」收編工人的真自由。其溫和、非教條的無政府主義為本節「制度性無政府主義」提供可操作的當代支持。
+> **全文**：[Princeton UP: Two Cheers for Anarchism](https://press.princeton.edu/books/paperback/9780691161037/two-cheers-for-anarchism)
+
+【Scott, J. C.】（1998）〈Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed〉，《Yale University Press》
+語言：英文
+所屬面向：逆帝國主義：國家作為自我縮減的架構
+立場：支持
+摘要：史考特指出國家為求「可讀性」而強制同質化人口與地景，高度現代主義工程因抹除地方知識而屢屢失敗。此論為本節「國家應自我縮減」提供強力經驗支持：國家權力的擴張本身即倫理風險之源。
+> **全文**：[Wikipedia: Seeing Like a State](https://en.wikipedia.org/wiki/Seeing_Like_a_State)
+
+【Hardt, M. & Negri, A.】（2000）〈Empire〉，《Harvard University Press》
+語言：英文
+所屬面向：逆帝國主義：國家作為自我縮減的架構
+立場：反例
+摘要：哈特與奈格里主張當代主權已是「去領土化、去中心」的全球網絡「帝國」，反抗主體是內在於帝國的「諸眾」。其論點與本節「國家自我縮減即逆帝國」相左：縮減民族國家未必削弱宰制，反可能讓位於更瀰散的帝國權力，構成反例。
+> **全文**：[Radical Philosophy: Empire, or multitude](https://www.radicalphilosophy.com/article/empire-or-multitude)
+
+【Clastres, P.】（1974/1989）〈Society Against the State: Essays in Political Anthropology〉，《Zone Books》
+語言：英文（原文法文）
+所屬面向：逆帝國主義：國家作為自我縮減的架構
+立場：補充
+摘要：克拉斯特以南美原住民田野論證無國家社會並非「尚未演化」，而是主動把強制性權力排除於酋長之外的刻意建構。此說為本節「自我縮減的架構」提供人類學旁證：社會可以制度性地拒絕權力集中。
+> **全文**：[Society Against the State (PDF)](http://faculty.washington.edu/mpurcell/clastres.pdf)
+
+【Pius XI（教宗庇護十一世）】（1931）〈Quadragesimo Anno（四十年通諭，subsidiarity 之奠定）〉，《Vatican / Catholic Social Teaching》
+語言：英文（原文拉丁文）
+所屬面向：下層的義務：從家庭到宗教到公司的去中心化要求
+立場：補充
+摘要：輔助性原則主張事務應由能勝任的「最小、最低、最不集中」之單位處理，較大組織僅在較小者無法時方介入。此原則與本節「下層的去中心化義務」結構同形，提供宗教倫理傳統的旁證；惟其保留「上層在必要時協助」，與全面去中心略有張力。
+> **全文**：[Wikipedia: Subsidiarity (Catholicism)](https://en.wikipedia.org/wiki/Subsidiarity_(Catholicism))
+
+【Graeber, D.】（2004）〈Fragments of an Anarchist Anthropology〉，《Prickly Paradigm Press》
+語言：英文
+所屬面向：下層的義務：從家庭到宗教到公司的去中心化要求
+立場：支持
+摘要：格雷伯主張人類學最能盤點全球既存的另類社會與經濟組織，並把這些去中心化的替代方案「呈現給世界」。此書為本節「家庭—宗教—公司皆負去中心義務」提供既有實踐的支持，呼應預構式政治。
+> **全文**：[The Anarchist Library: Fragments of an Anarchist Anthropology](https://theanarchistlibrary.org/library/david-graeber-fragments-of-an-anarchist-anthropology)
+
+【Maeckelbergh, M.】（2011）〈Doing is Believing: Prefiguration as Strategic Practice in the Alterglobalization Movement〉，《Social Movement Studies, 10(1)》
+語言：英文
+所屬面向：制度性無政府主義的歷史位置與內在張力
+立場：補充
+摘要：梅克伯格界定「預構式政治」為手段與目的合一的實踐——「鬥爭的方式即我們所追求的」。後續批評指其過度重視過程而難以擴及大型異質動員。此一兼具理論與內在張力的概念，正映照本節所言「制度性無政府主義的內在張力」。
+> **全文**：[Anthropology Encyclopedia: Prefigurative politics](https://www.anthroencyclopedia.com/entry/prefigurative-politics)
+
+【Popper, K.】（1945）〈The Open Society and Its Enemies〉，《Routledge》
+語言：英文
+所屬面向：制度性無政府主義的歷史位置與內在張力
+立場：反例
+摘要：波柏批判「烏托邦式社會工程」因無理性方法判定理想而終訴諸暴力，主張以「點滴社會工程」漸進改良取代整體藍圖。其對任何整全性社會改造方案的不信任，對本章激進去中心方案構成方法論反例與警誡。
+> **全文**：[Wikipedia: The Open Society and Its Enemies](https://en.wikipedia.org/wiki/The_Open_Society_and_Its_Enemies)
+
+【Foucault, M.】（1967/1984）〈Of Other Spaces: Utopias and Heterotopias（Des espaces autres）〉，《Architecture/Mouvement/Continuité; Diacritics 16 (1986)》
+語言：英文（原文法文）
+所屬面向：異托邦不是烏托邦的謙遜版本
+立場：支持
+摘要：傅柯區分「烏托邦」（無真實場所）與「異托邦」（真實存在的反場所，被實現的烏托邦），列舉船、墓園、監獄、花園等例。此文是本章「裂口異托邦」的直接概念基底，支持「異托邦非烏托邦之謙遜版本」而是另一範疇的真實他者空間。
+> **全文**：[Of Other Spaces (MIT PDF)](https://web.mit.edu/allanmc/www/foucault1.pdf)
+
+【Levitas, R.】（2013）〈Utopia as Method: The Imaginary Reconstitution of Society〉，《Palgrave Macmillan》
+語言：英文
+所屬面向：裂口異托邦的正式定義
+立場：補充
+摘要：列維塔斯把烏托邦重構為「方法」而非藍圖或目標——一種反身、對話、探索可能未來的整體性方法（含考古、本體、建築三向度）。此說為本節「裂口異托邦」之非藍圖式定義提供烏托邦研究旁證：烏托邦作為引力與方法，而非終點。
+> **全文**：[Springer: Utopia as Method](https://link.springer.com/book/10.1057/9781137314253)
+
+【Polletta, F.】（1999）〈"Free Spaces" in Collective Action〉，《Theory and Society, 28(1), 1–38》
+語言：英文
+所屬面向：裂口異托邦的結構性特徵
+立場：支持
+摘要：波萊塔界定「自由空間」為脫離支配群體直接控制、自願參與、孕育反霸權意識的小規模場域，並指出概念因定義不一而分析力受損。此文為本節「裂口異托邦的結構性特徵」提供社會運動學的直接對應與精緻化，亦自承其概念邊界問題。
+> **全文**：[Free Spaces in Collective Action (PDF)](http://faculty.sites.uci.edu/polletta/files/2011/03/Free-Spaces-in-Collective-Action.pdf)
+
+【Juris, J. S.】（2008）〈Networking Futures: The Movements against Corporate Globalization〉，《Duke University Press》
+語言：英文
+所屬面向：田野政治化：研究者作為異托邦的組成分子
+立場：支持
+摘要：朱里斯提出「戰鬥民族誌」（militant ethnography），放棄客觀主義立場，以同時身為組織者與人類學家的雙重位置產出對運動更深的理論洞見。此正是本節「研究者作為異托邦組成分子」的方法論直接支持與當代範例。
+> **全文**：[Militant Ethnography (jeffreyjuris.com)](http://www.jeffreyjuris.com/research/militant-ethnography-political-engagement-and-social-movements-research)
+
+【de Certeau, M.】（1980/1984）〈The Practice of Everyday Life（L'invention du quotidien）〉，《University of California Press》
+語言：英文（原文法文）
+所屬面向：裂口的維護：日常實踐的向度
+立場：補充
+摘要：德塞托區分強者的「策略」（具空間／制度位置）與弱者的「戰術」（即興、機會性、寄生於支配空間），主張日常消費實踐即政治抵抗。此說為本節「裂口的日常維護」提供旁證：裂口的存續仰賴無數微觀戰術而非一次性建制。
+> **全文**：[Wikipedia: The Practice of Everyday Life](https://en.wikipedia.org/wiki/The_Practice_of_Everyday_Life)
+
+【Maeckelbergh, M.】（2009）〈The Will of the Many: How the Alterglobalisation Movement is Changing the Face of Democracy〉，《Pluto Press》
+語言：英文
+所屬面向：制度與棲居的雙向工程：本章的方法論回應
+立場：補充
+摘要：梅克伯格主張運動透過「手段即目的」的預構實踐當下重建民主關係，把制度設計與生活實踐扣合。此一「邊建制邊棲居」的雙向取向，呼應本節「制度與棲居的雙向工程」之方法論回應，提供旁證。
+> **全文**：[Anthropology Encyclopedia: Prefigurative politics](https://www.anthroencyclopedia.com/entry/prefigurative-politics)
+
+---
+
+【Bloch, E.】（2014）〈Ernst Bloch (Stanford Encyclopedia of Philosophy)〉，《Stanford Encyclopedia of Philosophy》
+語言：英文
+所屬面向：烏托邦的「虛構性」是其力量之源
+立場：補充
+摘要：布洛赫的「具體烏托邦」與「尚未（noch nicht）」範疇把烏托邦定位為「尚未存在的可能性」而非幻想，是指向人與世界「能夠成為什麼」的踏腳石。此旁證補充本節：正因烏托邦尚未實現、保有虛構性，它才成為希望與行動的動力源。
+> **全文**：[SEP: Ernst Bloch](https://plato.stanford.edu/entries/bloch/)
+
+【Ricoeur, P.】（2004）〈Memory, History, Forgetting〉，《University of Chicago Press》
+語言：英文
+所屬面向：時間是群體倫理的軸線：全書四階段回顧
+立場：支持
+摘要：呂格爾論證集體記憶與「應盡的記憶（obliged memory）」把群體的歷史時間性與倫理責任、社會凝聚綁在一起，我們在時間中的存在原就是共享的歷史框架。此支持本節核心：群體倫理必須沿時間軸展開，回顧（記憶）本身即是倫理行動。
+> **全文**：[Ricoeur Studies: The Time of Collective Memory](https://ricoeur.pitt.edu/ojs/index.php/ricoeur/article/view/471)
+
+【Jonas, H.】（1984）〈The Imperative of Responsibility: In Search of an Ethics for the Technological Age〉，《University of Chicago Press》
+語言：英文
+所屬面向：時間是群體倫理的軸線：全書四階段回顧
+立場：補充
+摘要：約納斯主張技術時代的倫理必須由「對未來世代的責任」奠基，其格律要求行動須與地球上真正人類生活的長存相容。此旁證補充本節：群體倫理的時間軸不只回望（記憶），也前瞻（對未來世代的義務），把倫理拉長為跨世代的縱深。
+> **全文**：[Philopedia: The Imperative of Responsibility](https://philopedia.org/works/the-imperative-of-responsibility-in-search-of-an-ethics-for-the-technological-age/)
+
+【Allen, A.】（2016）〈The End of Progress: Decolonizing the Normative Foundations of Critical Theory〉，《Columbia University Press》
+語言：英文
+所屬面向：時間是群體倫理的軸線：全書四階段回顧
+立場：反例
+摘要：艾倫以「悲觀歸納」拆解批判理論中進步史觀的規範基礎，認為以「歷史進步」來證成倫理規範是歐洲中心、自我恭賀式的幻覺。此為 foil：本節以四階段回顧暗示沿時間軸的群體倫理積累，艾倫則質疑任何「階段—進步」敘事的正當性，逼本章說明四階段回顧是否落入她所批判的進步神話。
+> **全文**：[NDPR Review: The End of Progress](https://ndpr.nd.edu/reviews/the-end-of-progress-decolonizing-the-normative-foundations-of-critical-theory/)
+
+---
+
+## 小節三：虛構的視界：烏托邦不是藍圖而是引力
+
+【Reinhardt, K.】（2026）〈Kant on Utopia〉，《European Journal of Philosophy》
+語言：英文
+所屬面向：虛構的視界：烏托邦不是藍圖而是引力
+立場：支持
+摘要：萊因哈特闡述康德視理想政治秩序為「理性理念」的調節性（regulative）功能——不以可行性論斷，卻是政治思考不可或缺的定向；對永久和平的合理希望使人願意服從道德法則。此正面支持本節：烏托邦作為調節性理念正是「引力／視界」而非「藍圖」的哲學原型。
+> **全文**：[Wiley: Kant on Utopia](https://doi.org/10.1111/ejop.70044)
+
+【Rawls, J.】（1999）〈The Law of Peoples〉，《Harvard University Press》
+語言：英文
+所屬面向：虛構的視界：烏托邦不是藍圖而是引力
+立場：補充
+摘要：羅爾斯提出「現實的烏托邦（realistic utopia）」概念，在「天真理想主義」與「犬儒順從」之間導航——烏托邦因「可能存在」而現實、因「結合合理與正義」而烏托邦。此旁證補充本節：視界式烏托邦須兼具引力（理想）與可行性錨點，與「不是藍圖而是引力」的張力高度呼應。
+> **全文**：[Wikipedia: The Law of Peoples](https://en.wikipedia.org/wiki/The_Law_of_Peoples)
+
+【Singer, P.】（2011）〈The Expanding Circle: Ethics, Evolution, and Moral Progress〉，《Princeton University Press》
+語言：英文
+所屬面向：交棒第三卷：倫理場的邊界擴張
+立場：支持
+摘要：辛格主張利他自親屬／部落起步，憑理性的普遍化能力把道德關懷的圓圈逐步外擴至全人類乃至非人動物。此直接支持本節「倫理場的邊界擴張」的外推圖式，並與第三卷《人子》把倫理外推到非人、星球與宇宙尺度的綱領相呼應。
+> **全文**：[Princeton University Press: The Expanding Circle](https://press.princeton.edu/books/paperback/9780691150697/the-expanding-circle)
+
+【Jonas, H.】（1984）〈The Imperative of Responsibility〉，《University of Chicago Press》
+語言：英文
+所屬面向：交棒第三卷：倫理場的邊界擴張
+立場：補充
+摘要：約納斯把責任倫理從人際當下擴及不在場、不可會面的未來世代與技術文明的自然後果。此旁證補充本節：邊界擴張不僅是「圈子變大」，更是責任向不可互惠對象（後代、自然）的質性延伸，為交棒第三卷的非人倫理提供責任論基礎。
+> **全文**：[PWD: Responsibility to Others in the Future](https://www.philosophy-world-democracy.org/articles-1/responsibility-to-others)
+
+【Ignatieff, M.】（2017）〈The Ordinary Virtues: Moral Order in a Divided World〉，《Harvard University Press》
+語言：英文
+所屬面向：讓誠實平凡地發生
+立場：反例
+摘要：伊格納蒂耶夫經八國田野發現，真正在民眾生活中起作用的是寬容、信任、韌性等「平凡德行」，且這些德行是「反理論、反意識形態」、優先在地與具體者。此可作 foil：本節欲讓誠實「平凡地發生」，但伊氏強調平凡德行恰恰抗拒理論化與普遍框架，質疑能否把「誠實」收編進 H 之類的形式化普遍體系而不失其平凡的在地質地。
+> **全文**：[LSE Review of Books: The Ordinary Virtues](https://blogs.lse.ac.uk/lsereviewofbooks/2017/10/27/book-review-the-ordinary-virtues-moral-order-in-a-divided-world-by-michael-ignatieff/)
+
 
 ## 宗教與神話
 
@@ -1328,3 +1537,28 @@
 立場：支持
 摘要：論文集探討軸心突破的「後果」與遺產如何持續形塑後世倫理與制度，主張軸心遺產是現代性的隱性常數。支撐本節「起源異托邦遺產—倫理常數」的長時段論旨。
 > **全文**：[Harvard University Press](https://www.hup.harvard.edu/books/9780674066496)
+
+【Durkheim, É.（涂爾幹）】（1912）〈宗教生活的基本形式（Les formes élémentaires de la vie religieuse）〉，《Alcan / 商務印書館中譯》
+語言：中文（原文法文）
+所屬面向：早期基督教的裂口與共謀：一個歷史的警告
+立場：補充
+摘要：涂爾幹論證宗教是「社會事實」，氏族在「分散謀食」與「集體歡騰」週期中經由儀式生成集體意識與神聖感。此說提供旁證：早期基督教的裂口性社群同樣靠集體儀式維繫，但集體歡騰一旦被建制收編即可能轉為共謀，呼應本節歷史警告。
+> **全文**：[維基百科：宗教生活的基本形式](https://zh.wikipedia.org/zh-tw/%E5%AE%97%E6%95%99%E7%94%9F%E6%B4%BB%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%BD%A2%E5%BC%8F)
+
+【Drake, H. A.】（2000）〈Constantine and the Bishops: The Politics of Intolerance〉，《Johns Hopkins University Press》
+語言：英文
+所屬面向：早期基督教的裂口與共謀：一個歷史的警告
+立場：反例
+摘要：德雷克主張君士坦丁以務實的「廣納聯盟」政策整合基督教，並非單純的犬儒算計亦非純粹皈依，而是把帝國傳統重新導向新的神學中心。此一「裂口被帝國收編為共謀」的歷史，正是本節警告的核心反面範例：曾為裂口的早期教會如何與權力合流。
+> **全文**：[Wikipedia: Constantine the Great and Christianity](https://en.wikipedia.org/wiki/Constantine_the_Great_and_Christianity)
+
+【Gray, J.】（2007）〈Black Mass: Apocalyptic Religion and the Death of Utopia〉，《Farrar, Straus and Giroux》
+語言：英文
+所屬面向：烏托邦的「虛構性」是其力量之源
+立場：反例
+摘要：格雷主張現代烏托邦是世俗化的末世論神話，二十世紀因相信「可達成的人間天堂」而導致數千萬人遭屠殺，故主張烏托邦已死。此為強力 foil：本節肯認烏托邦的虛構性為正面力量，格雷則指控正是這種「把虛構當可達成」的衝動製造暴力，逼問本章如何在不退回藍圖主義的前提下保住烏托邦的正當性。
+> **全文**：[Wikipedia: Black Mass](https://en.wikipedia.org/wiki/Black_Mass:_Apocalyptic_Religion_and_the_Death_of_Utopia)
+
+---
+
+## 小節二：時間是群體倫理的軸線：全書四階段回顧

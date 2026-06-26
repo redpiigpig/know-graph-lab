@@ -27,6 +27,77 @@
 
 ## 哲學
 
+【Smith, D. W.】（2018）〈Phenomenology〉，《Stanford Encyclopedia of Philosophy》
+語言：英文
+所屬面向：識然：世界如何向認識主體開顯
+立場：支持
+摘要：胡塞爾意義下的意向性指意識總是「關於某物」的指向性，現象學專研經驗如何將世界給予主體。此條目為本節「識然＝世界向認識主體開顯」提供最直接的學理支撐，是本卷以意向性界定認識邊界的盟友。
+> **全文**：[SEP: Phenomenology](https://plato.stanford.edu/entries/phenomenology/)
+
+【Varela, F. J., Thompson, E., & Rosch, E.】（1991）〈The Embodied Mind: Cognitive Science and Human Experience〉，《MIT Press》
+語言：英文
+所屬面向：識然：世界如何向認識主體開顯
+立場：補充
+摘要：提出「生成（enaction）」論：認知不是既予之心對既予世界的再現，而是身體行動史中「帶出（bringing forth）」一個相互依存的世界。為「世界在認識行動中向主體開顯、而非被動接收彼岸實在」提供認知科學旁證。
+> **全文**：[MIT Press: Enaction / The Embodied Mind](https://mitpress.mit.edu/9780262526012/enaction/)
+
+【Soteriou, M.】（2020）〈The Disjunctive Theory of Perception〉，《Stanford Encyclopedia of Philosophy》
+語言：英文
+所屬面向：識然：世界如何向認識主體開顯
+立場：補充
+摘要：麥道爾（McDowell）的選言論與直接實在論主張，在順遂知覺中世界本身直接進入經驗，反對把感覺與料插在主體與世界之間的笛卡兒式中介。可作為「現象不是隔開實在的屏障、而是實在的開顯」的當代知覺哲學旁證。
+> **全文**：[SEP: The Disjunctive Theory of Perception](https://plato.stanford.edu/entries/perception-disjunctive/)
+
+【Stang, N. F.】（2022）〈Kant's Transcendental Idealism〉，《Stanford Encyclopedia of Philosophy》
+語言：英文
+所屬面向：識然：世界如何向認識主體開顯
+立場：反例
+摘要：康德嚴格區分現象（appearances）與物自身（things in themselves），主張認識僅及於現象、物自身原則上不向認識開顯。此正是本卷「識然」要驅逐的「彼岸不開顯」結構，構成本節最典型的 foil。
+> **全文**：[SEP: Kant's Transcendental Idealism](https://plato.stanford.edu/entries/kant-transcendental-idealism/)
+
+---
+
+## 第二節　本質的幽靈：一個導引隱喻
+
+【Bird, A., & Tobin, E.】（2024）〈Natural Kinds〉，《Stanford Encyclopedia of Philosophy》
+語言：英文
+所屬面向：本質的幽靈：一個導引隱喻
+立場：補充
+摘要：系統梳理本質論與反本質論之爭：本質論主張自然類具有作為成員充要條件的本質，反本質論／約定論則主張我們無從觸及自然中的真實分界、邊界由旨趣劃定。為本卷「本質的幽靈」隱喻提供當代分析哲學的論爭座標，並標示反本質一方的論據。
+> **全文**：[SEP: Natural Kinds](https://plato.stanford.edu/entries/natural-kinds/)
+
+【Kripke, S. A.】（1980）〈Naming and Necessity〉，《Harvard University Press》
+語言：英文
+所屬面向：本質的幽靈：一個導引隱喻
+立場：反例
+摘要：以剛性指示詞論證自然類詞（水＝H₂O、金＝原子序79）指向必然的微觀本質，被視為亞里斯多德式本質論在當代的復活。此即本卷所謂「把真實安置在現象背後的本質」之最有力現代版本，是本節核心 foil。
+> **全文**：[Wikipedia: Naming and Necessity](https://en.wikipedia.org/wiki/Naming_and_Necessity)
+
+【Westerhoff, J.】（2022）〈Nāgārjuna〉，《Stanford Encyclopedia of Philosophy》
+語言：英文
+所屬面向：本質的幽靈：一個導引隱喻
+立場：支持
+摘要：中觀派以「空（śūnyatā）」即諸法無自性（svabhāva），龍樹的核心批判正是針對被視為不依他、不變、非緣生的「自性」這種隱藏實存。與本卷「東方早已驅魔、現象之外無本質可藏」的論旨高度同盟，支持「本質的幽靈」可被解消。
+> **全文**：[SEP: Nāgārjuna](https://plato.stanford.edu/entries/nagarjuna/)
+
+---
+
+## 第三節　本卷的走法
+
+【Worrall, J.】（1989）〈Structural Realism: The Best of Both Worlds?〉，《Dialectica》
+語言：英文
+所屬面向：本卷的走法
+立場：反例
+摘要：結構實在論主張科學理論承載的真理只是數學／結構內容，不可知的「不可觀察對象本性」仍被保留在現象背後。此立場仍為「本質的幽靈」留下棲身的彼岸結構，與本卷「現象即本質、不留殘影」的走法構成方法論上的對照 foil。
+> **全文**：[Dialectica: Structural Realism (DOI)](https://doi.org/10.1111/j.1746-8361.1989.tb00933.x)
+
+【Smith, A. D.】（2003）〈Husserl and the Cartesian Meditations〉，《Routledge》
+語言：英文
+所屬面向：本卷的走法
+立場：補充
+摘要：系統重構胡塞爾現象學還原與「回到事物本身」的方法步驟，說明懸擱（epoché）如何作為描述現象結構的操作程序。為本卷「以現象學為工具、逐步操作判準」的走法提供方法論先例與旁證（部分章節細節待核）。
+> **全文**：[Routledge: Husserl and the Cartesian Meditations](https://www.routledge.com/Husserl-and-the-Cartesian-Meditations/Smith/p/book/9780415289771)
+
 【Owen, G. E. L.】（1961）〈Tithenai ta phainomena〉，《Aristote et les problèmes de méthode》(éd. S. Mansion, Louvain), pp. 83–103
 語言：英文
 所屬面向：亞里斯多德的現象忠誠與經驗主義的起源
@@ -84,6 +155,153 @@
 立場：反例
 摘要：Palmer 以「模態」詮釋巴門尼德：alētheia 之路講「必然存在者」、doxa 之路講「偶然存在者」而非純粹幻象，故第二部分宇宙論為正當。此為對「巴門尼德＝表象 vs 真實之古老根」標準讀法的有力 foil：若 doxa 不被貶為幻象、二路皆有正當對象，則「本質的幽靈」未必源於巴門尼德式貶抑。
 > **全文**：[Oxford Academic 書目](https://academic.oup.com/book/9526)
+
+---
+
+【Husserl, E.】（1900–1901／2001）〈Logical Investigations〉，《Routledge》
+語言：英文
+所屬面向：意向性即世界邊界
+立場：支持
+摘要：胡塞爾承繼布倫塔諾，將「意向性」定義為意識「總是關於某物」的根本指向性，並指出意向對象不必實存即可被意識所指向。此說為「凡可被認識者皆落入意向性之內、意向性劃定可被開顯之世界的邊界」提供現象學基石，是本節的核心盟友。
+> **全文**：[SEP: Phenomenology](https://plato.stanford.edu/entries/phenomenology/)
+
+【Wittgenstein, L.】（1921）〈Tractatus Logico-Philosophicus, 5.6–5.641〉，《Routledge & Kegan Paul》
+語言：英文
+所屬面向：意向性即世界邊界
+立場：補充
+摘要：維根斯坦「我的語言的界限意謂我的世界的界限」（5.6），且「主體是世界的界限」（如眼之於視域），徹底實行的唯我論恰與純粹實在論合一（5.64）。此命題以語言版本旁證了「邊界由認識主體的指向結構劃定」的洞見，補強本節從另一傳統切入的同源論述。
+> **全文**：[Tractatus 5.6 (English)](https://www.kfs.org/jonathan/witt/t56en.html)
+
+【McDowell, J.】（1994）〈Mind and World〉，《Harvard University Press》
+語言：英文
+所屬面向：意向性即世界邊界
+立場：反例
+摘要：麥道爾主張「概念領域是無界的（unbounded），其外無物」，以此抵擋觀念論指控並避免「所予神話」。此立場把劃界工作交給概念／理由空間而非意向性，且否認有「外於概念者」可供談論，與本節「意向性劃出一條邊界、邊界之外仍可形式地指涉」的構想構成張力與反例。
+> **全文**：[Forum Philosophicum: Conceptualized Experience in McDowell](https://forumphilosophicum.ignatianum.edu.pl/docannexe/file/6342/6._szalek.pdf)
+
+---
+
+### 第二小節：凡落入存在者，在現象中完整給出自身
+
+【Husserl, E.】（1913／1982）〈Ideas I, §24「一切原則之原則」〉，《Martinus Nijhoff》
+語言：英文
+所屬面向：凡落入存在者，在現象中完整給出自身
+立場：支持
+摘要：胡塞爾的「一切原則之原則」主張：每一原初給予的直觀都是認識的合法源泉，凡在直觀中原初地呈現給我們者，皆應「就其所呈現者」接受之，但僅限於其所呈現的範圍內。此「原初給予性」原則直接支持「凡落入存在者者即在現象中完整自我給出」的論點。
+> **全文**：[SEP: Husserl](https://plato.stanford.edu/entries/husserl/)
+
+【Marion, J.-L.】（1997／2002）〈Being Given: Toward a Phenomenology of Givenness〉，《Stanford University Press》
+語言：英文
+所屬面向：凡落入存在者，在現象中完整給出自身
+立場：補充
+摘要：馬里翁把現象學推到「給予性（donation）」的徹底化，提出「飽和現象」——其給予溢出主體的認識架構而完整無餘地自我給出。此說旁證了「現象在自身中完整給出、無須背後本質」的方向，並提示「完整給出」可有過剩而非短缺的形態。
+> **全文**：[Being Given (Stanford UP)](https://www.sup.org/books/theory-and-philosophy/being-given)
+
+【Kant, I.】（1781／1787）〈Critique of Pure Reason：現象與物自身之分〉，《Cambridge University Press》
+語言：英文
+所屬面向：凡落入存在者，在現象中完整給出自身
+立場：反例
+摘要：康德區分現象（appearances）與物自身（noumena）：我們所經驗者僅是現象，物自身則可被思而不可被知。此即典型「本質的幽靈」——存在者並未在現象中完整給出自身，而保留一個原則上不向認識開顯的彼岸殘餘，正是本節要驅逐的對立案例。
+> **全文**：[SEP: Kant's Transcendental Idealism](https://plato.stanford.edu/entries/kant-transcendental-idealism/)
+
+---
+
+### 第三小節：現象即本質：命題的正式提出
+
+【Husserl, E.】（1913／1982）〈Ideas I：本質直觀（Wesensschau）與本質還原〉，《Martinus Nijhoff》
+語言：英文
+所屬面向：現象即本質：命題的正式提出
+立場：支持
+摘要：胡塞爾以「本質直觀」（Wesensschau）主張本質（eidos）可經由自由變更法在直觀中被非推論地直接把握，本質就是在變更中持續維持的同一者。此說把本質拉回現象與直觀之內，是「現象即本質」命題最直接的現象學盟友。
+> **全文**：[IEP: Phenomenology](https://iep.utm.edu/phenom/)
+
+【Heidegger, M.】（1927／1962）〈Being and Time, §7 現象學的方法概念〉，《Blackwell》
+語言：英文
+所屬面向：現象即本質：命題的正式提出
+立場：補充
+摘要：海德格把「現象」界定為「自身顯示自身者（that which shows itself in itself）」，並批判以含混的「顯象（appearance）」來界定現象是顛倒了正確關係。此「現象即自我顯示」的界定旁證了「不在現象背後另立本質」的方法姿態，補強本節命題的存在論側翼。
+> **全文**：[PMC: Heidegger's phenomenology of the inconspicuous](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6435217/)
+
+【Plato】（c. 380 BCE）〈Republic／Phaedo：理型論〉，《SEP: Plato's Middle Period Metaphysics》
+語言：英文
+所屬面向：現象即本質：命題的正式提出
+立場：反例
+摘要：柏拉圖的兩個世界結構把真實本質（理型）安置於可感現象之外的超越界，現象僅「分有」理型而本身不具完整實在；本質唯由理性把握，感官只得意見。此即本卷指認的病源「柏拉圖本質主義轉向」，與「現象即本質」構成最根本的反例對立。
+> **全文**：[SEP: Plato's Middle Period Metaphysics](https://plato.stanford.edu/entries/plato-metaphysics/)
+
+【Baker, A.】（2022）〈Simplicity〉，《Stanford Encyclopedia of Philosophy》
+語言：英文
+所屬面向：從奧坎剃刀到柏拉圖的棺材板
+立場：補充
+摘要：系統區分句法簡單性（elegance）與本體簡單性（parsimony／奧坎剃刀「如無必要，勿增實體」），並回顧從神學到機率論的各種辯護。本章把自己的「棺材板」明說為奧坎剃刀的延伸與激進化，此條提供奧坎剃刀的權威定義與譜系作為論述起點，故為旁證。
+> **全文**：[SEP: Simplicity](https://plato.stanford.edu/entries/simplicity/)
+
+【Sober, E.】（2015）〈Ockham's Razors: A User's Manual〉，《Cambridge University Press》
+語言：英文
+所屬面向：從奧坎剃刀到柏拉圖的棺材板
+立場：補充
+摘要：把奧坎剃刀拆解為「簡約剃刀」與「精簡剃刀」兩類，主張剃刀只有在特定推論脈絡（如模型選擇 AIC）中才有客觀效力，並非無條件的形上學戒律。此書為本章「把剃刀升級為判準」提供當代最完整的剃刀操作學，但其謹慎立場也提醒本章：刀不能無前提地揮，屬旁證兼方法警示。
+> **全文**：[NDPR Review / Cambridge](https://ndpr.nd.edu/reviews/ockhams-razors-a-users-manual/)
+
+【Psillos, S.】（1999）〈Scientific Realism: How Science Tracks Truth〉，《Routledge》
+語言：英文
+所屬面向：從奧坎剃刀到柏拉圖的棺材板
+立場：反例
+摘要：以「最佳解釋推論」（IBE）辯護科學實在論，主張我們有理由相信成功理論所設定的不可觀察實體（電子、場）真實存在。這正是本章要斬的對象——把真實安置在現象背後而向認識「間接」開顯；Psillos 反過來論證這種背後設定是合理且必要的，構成對「棺材板」最強的正面反例。
+> **全文**：[SEP: Scientific Realism](https://plato.stanford.edu/entries/scientific-realism/)
+
+【van Fraassen, B. C.】（1980）〈The Scientific Image〉，《Oxford University Press》
+語言：英文
+所屬面向：從奧坎剃刀到柏拉圖的棺材板
+立場：支持
+摘要：建構經驗論主張理論只求「經驗適當」，對不可觀察實體的存在保持存而不論（agnostic），接受理論不等於相信其背後設定為真。這與本章「現象中完整給出即夠，背後本質不必信入」高度同盟，是一把較溫和、只懸置不斬殺的近親之刀，故為支持。
+> **全文**：[SEP: Constructive Empiricism](https://plato.stanford.edu/entries/constructive-empiricism/)
+
+### 〔小節二〕為什麼是「柏拉圖的」棺材板
+
+【Balaguer, M.】（2024）〈Platonism in Metaphysics〉，《Stanford Encyclopedia of Philosophy》
+語言：英文
+所屬面向：為什麼是「柏拉圖的」棺材板
+立場：反例
+摘要：界定並（部分）辯護柏拉圖主義——抽象對象（非時空、非因果的理型／共相）確實存在。本章把「柏拉圖的」三字釘在「兩個世界、真實在現象背後」這個病源上；此條代表被點名的對立傳統本身的當代陳述與最強表述，是命名所指的直接反例。
+> **全文**：[SEP: Platonism in Metaphysics](https://plato.stanford.edu/entries/platonism/)
+
+【Rodriguez-Pereyra, G.】（2023）〈Nominalism in Metaphysics〉，《Stanford Encyclopedia of Philosophy》
+語言：英文
+所屬面向：為什麼是「柏拉圖的」棺材板
+立場：支持
+摘要：唯名論否認共相與抽象對象，並提出「認識論論證」：因果惰性的抽象物如何能被認識？故拒斥之。這與本章「不向認識開顯者即無本體席位」的判準同盟，為「為何要把柏拉圖式理型釘進棺材」提供西方內部的支持性盟友。
+> **全文**：[SEP: Nominalism in Metaphysics](https://plato.stanford.edu/entries/nominalism-metaphysics/)
+
+【Carnap, R.】（1931）〈Überwindung der Metaphysik durch logische Analyse der Sprache〉，《Erkenntnis》Vol. 2, pp. 219–241
+語言：德文
+所屬面向：為什麼是「柏拉圖的」棺材板
+立場：補充
+摘要：主張形上學命題（含對「存有本質」「絕對者」的斷言）無法被經驗檢證，故為無認識內容的假命題，應透過語言邏輯分析予以克服。此文是 20 世紀最激烈的一次「驅逐本質的幽靈」嘗試，與本章把柏拉圖式彼岸判為認識上空轉的姿態同調，作為譜系上的近代旁證（其過度——連倫理價值也一併判為無意義——亦反襯本章須避開的陷阱）。
+> **全文**：[Erkenntnis, DOI 10.1007/BF02028153](https://doi.org/10.1007/BF02028153)
+
+### 〔小節三〕判準如何操作
+
+【Popper, K.】（1959）〈The Logic of Scientific Discovery〉，《Hutchinson／Routledge》（德文原版 1935《Logik der Forschung》）
+語言：英文
+所屬面向：判準如何操作
+立場：補充
+摘要：以可否證性作為科學與形上學的劃界判準：唯有能與經驗衝突、可被經驗推翻的陳述才有經驗內容。這為本章「判準如何操作」提供一個經典可運作的操作型範例——把抽象的「向認識開顯」具體化為「可被經驗觸及／挑戰」，是方法論操作面的旁證。
+> **全文**：[SEP: Karl Popper](https://plato.stanford.edu/entries/popper/)
+
+【Laudan, L.】（1983）〈The Demise of the Demarcation Problem〉，收於 R. S. Cohen & L. Laudan 編《Physics, Philosophy and Psychoanalysis》，《D. Reidel》, pp. 111–127
+語言：英文
+所屬面向：判準如何操作
+立場：反例
+摘要：主張哲學史上一切劃界判準（可檢證、可否證等）都無法給出區分科學／非科學的充要條件，皆會誤分某些領域，故「劃界問題已死」。這是對本章「能否提出一把乾淨運作的判準刀」最尖銳的反例——警告任何單一操作判準都可能落入誤斬或漏斬。
+> **全文**：[Laudan 1983 (handout PDF)](https://sites.pitt.edu/~jdnorton/teaching/Phil_Sci_Core/HPS_2501_2020/handouts/Laudan-Demise.pdf)
+
+【Carnap, R.】（1959）〈The Elimination of Metaphysics Through Logical Analysis of Language〉（A. Pap 譯），收於 A. J. Ayer 編《Logical Positivism》，《The Free Press》, pp. 60–81
+語言：英文
+所屬面向：判準如何操作
+立場：支持
+摘要：英譯版完整呈現以「可檢證性」為刀、逐句判定形上語句為假命題的操作程序（含對海德格「虛無自身虛無化」的著名解剖）。提供一個「判準如何逐句揮刀」的具體操作示範，與本章把「現象即本質」化為可施行判準的目標同盟，故為支持。
+> **全文**：[Internet Archive: Ayer, Logical Positivism](https://archive.org/details/logicalpositivis0000unse)
 
 ---
 
@@ -319,6 +537,41 @@
 立場：補充
 摘要：Smith 綜述現象學作為「對顯現之物的第一人稱研究」傳統，並交代從胡塞爾意向性到海德格、梅洛龐蒂的存有論／身體轉向。為本節「完成現象學」之主張提供傳統定位與旁證——顯示現象學史一路都在追問「顯現本身」，而創生哲學把這條線推到「現象即本質」的單一終點。
 > **全文**：[SEP: Phenomenology](https://plato.stanford.edu/entries/phenomenology/)
+
+【Diaz, E.】（2024）〈The critical limits of phenomenology: Husserlian phenomenology as a modest metaphysics of appearance〉，《European Journal of Philosophy》32(3): 778–800
+語言：英文
+所屬面向：回望：幽靈、方法、驅魔
+立場：支持
+摘要：論證胡塞爾現象學並非懸置一切形上學，而是容許一種「謙遜的顯象形上學」——對象作為經驗的構成項被給出，現象本身即可承載關於對象的較強主張，無須訴諸現象背後的內在性質。此說正面支持本節「以現象學驅逐幽靈、把本質安置於開顯之中」的回望主線。
+> **全文**：[DOI 10.1111/ejop.12910](https://doi.org/10.1111/ejop.12910)
+
+【Quine, W. V. O.】（1951）〈Two Dogmas of Empiricism〉，《The Philosophical Review》60(1): 20–43
+語言：英文
+所屬面向：回望：幽靈、方法、驅魔
+立場：補充
+摘要：奎因拆解分析／綜合二分與化約論兩大教條，主張意義並非由語詞背後固定不變的本質定義所決定，並模糊了思辨形上學與自然科學的界線。作為旁證，它顯示二十世紀分析傳統也以另一條路徑切斷「現象背後另有真實」的預設，與本卷驅魔史相互印證。
+> **全文**：[JSTOR 2181906](https://doi.org/10.2307/2181906)
+
+【Sellars, W.】（1956）〈Empiricism and the Philosophy of Mind〉，《Minnesota Studies in the Philosophy of Science》Vol. 1
+語言：英文
+所屬面向：柏拉圖的棺材板是持續的工作
+立場：補充
+摘要：塞拉斯揭穿「所與神話」——以為有非概念、無可置疑的感覺所與可作知識的基底；他主張一切知覺經驗皆已是概念性的，沒有躲在概念之外、自我給出的純粹基底。作為旁證，它顯示「驅魔」需反覆進行：幽靈會以「所與」之名一再還魂，呼應棺材板需持續壓住的論點。
+> **全文**：[全文 PDF（Bailey）](https://andrewmbailey.com/wpa/SellarsMyth.pdf)
+
+【Ladyman, J.; Ross, D.】（2007）《Every Thing Must Go: Metaphysics Naturalized》，Oxford University Press
+語言：英文
+所屬面向：通向卷二與卷三
+立場：支持
+摘要：拉德曼與羅斯提出本體結構實在論，主張物理理論描述的是關係結構而非自我持存的個體——「沒有物，結構才是一切」，對象被清除了內在本質、同一性與個體性。此說把反本質主義綱領正面推進到本體論層面，呼應本卷由認識論「現象即本質」交棒給卷二（本體論／共構）的路線。
+> **全文**：[OUP 書頁](https://global.oup.com/academic/product/every-thing-must-go-9780199276196)
+
+【Gabriel, M.】（2015）《Fields of Sense: A New Realist Ontology》，Edinburgh University Press
+語言：英文
+所屬面向：通向卷二與卷三
+立場：反例
+摘要：嘉布瑞爾的新實在論反對相關主義與建構論，主張存在無數彼此不可化約、心靈獨立的「意義場」，任何對心靈獨立對象的視角本身也與對象同樣真實而非被構造。此說與本卷將通向的「認識與存有共構／同構」立場相牴觸，構成過渡至卷二、卷三時必須回應的反例。
+> **全文**：[Edinburgh UP 導論 PDF](https://edinburghuniversitypress.com/pub/media/wysiwyg/pdfs/samples/Gabriel_-_Fields_of_Sense_-_Introduction.pdf)
 
 
 ## 宗教與神話
