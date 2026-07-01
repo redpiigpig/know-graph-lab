@@ -13,7 +13,9 @@
 - ✅ **M1/M2/E1/E2 off-canonical 重分類**：這四卷參考資料在較早 session 建，dimension 是章級/舊版章節標籤與現行 clean_inv 不一致。`reclassify_offcanon.py`（Gemini 引擎，對齊條件＝off-canonical 不看 display_order，ledger 可還原）已把 M1(45)/M2(48)/E1(48)/E2 原生(15) 全部對齊 canonical。**現況 M1/M2/E1 off=0**。
 - ✅ **E2 加「知識的判準：從 JTB 到誠實生成論」章**（clean_inv 第二章後，5 小節：蓋提爾/誠實生成論/誠實是知識的條件/強弱認識論/知行合一）。37 筆蓋提爾群組已歸入該章、**E2 off-canonical = 0**（DB live）。
 - ✅ **新 E3《認識你自己》已建並入庫**（2026-06-27）：clean_inv/worklist/thesis 手工建 7 章 27 節（導論反身認識→意識與潛意識→**涂爾幹樞紐**身體儀式集體表徵→符號與詮釋→權力制度慣習→跨物種環境→結語）。research workflow(inline) 7/7 完成 → `ingest_all.py apply E3`，**E3=79 筆、0 off-canonical**，各章 7–13 筆。舊《主體的誕生》報告檔已歸檔 `scripts/data/_archive_e3_zhutide/`。
-- 📌 E3 book HTML（`public/content/works/genesis/E3.html`）仍是舊《主體的誕生》——**新《認識你自己》書稿本文屬使用者寫作工作流**；本卷研究 DB 已先行做為寫作 scaffold。clean_inv[E3] 是手工建（非 all_sections.py 從 HTML 生），日後書稿寫好可用 all_sections.py 重生對齊。
+- ✅ **E3 book HTML 已改寫為《認識你自己》正文初稿**（2026-06-27）：使用者選「連正文一起起草」。header 換書名/副標/thesis；序+7章27節+跋，每章一 subagent 依對話地圖真實文獻起草（Gertler/Durkheim/Peirce/Cassirer/Ricoeur/Foucault/Bourdieu/Berger&Luckmann/Nagel…），`assemble_genesis_book.py epi E3 7` 組裝，books.json nChapters=7。舊《主體的誕生》book 備份 `_archive_e3_zhutide/E3_主體的誕生_book.html`；drafts 在 `c:/tmp/genesis_epi/draft/E3/`。
+  - ⏳ **正文待使用者精修**（AI 初稿）＋**回填各節 `<p class="section-source">` C-xxxxx 對話引用**（本次略，需對話語料對應）。
+  - 小提醒：book h3「Berger &amp; Luckmann」是正確 HTML escape，與 clean_inv/DB 的「&」渲染相同；日後若用 all_sections.py 從 HTML 重生 clean_inv 需 unescape 才對得上。
 - 🚩 **舊 E3 相關檔仍在**：`scripts/data/lit_review_genesis_E3_dialogue_ch*.md`（主體的誕生研究，內容已屬 O3）與 `clean_inv.json`/`worklist.json` 的 E3 條目仍是舊章節——**建新 E3 前要先換掉這些**，否則 gen_workflow 會誤判 E3 已完成。
 
 ## 一、已完成（已 push）
