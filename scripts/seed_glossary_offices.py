@@ -762,6 +762,202 @@ R("Clan", "氏族", o="מִשְׁפָּחָה", lang="he", etype="行政區", po
 R("Clan Head", "宗長", polity="以色列士師時期", register="商周制",
   level="二級", tier="地方", var="家長", reason="氏族之長")
 
+# ════════════════════════════════════════════════════════════════════════════
+# 阿茲特克帝國（春秋制：三方同盟霸業＋納貢城邦，如迦太基）
+# ════════════════════════════════════════════════════════════════════════════
+_order = 2400
+R("Huey Tlatoani", "大君", o="huēyi tlahtoāni", lang="nah", polity="阿茲特克帝國", register="春秋制",
+  level="中央", tier="中央", var="大酋長；大發言人", reason="三方同盟之霸主，如春秋霸主")
+R("Cihuacoatl", "冢宰", o="cihuācōātl", lang="nah", polity="阿茲特克帝國", register="春秋制",
+  level="中央", tier="中央", var="副君；蛇女", reason="輔佐大君之最高副手")
+R("Calpixqui", "收貢使", o="calpixqui", lang="nah", polity="阿茲特克帝國", register="春秋制",
+  level="監察", tier="財政", var="收貢官", reason="派駐屬邦徵貢之官")
+R("Altepetl", "城邦", o="āltepētl", lang="nah", etype="行政區", polity="阿茲特克帝國", register="春秋制",
+  level="一級", tier="地方", var="納貢城邦", reason="納貢自治之城邦")
+R("Aztec Tlatoani", "城主", o="tlahtoāni", lang="nah", polity="阿茲特克帝國", register="春秋制",
+  level="一級", tier="地方", var="城邦君；侯", reason="城邦之君")
+R("Calpulli", "里坊", o="calpōlli", lang="nah", etype="行政區", polity="阿茲特克帝國", register="春秋制",
+  level="二級", tier="地方", var="坊", reason="城邦下之里坊/氏族區")
+R("Calpulli Head", "坊正", polity="阿茲特克帝國", register="春秋制",
+  level="二級", tier="地方", reason="里坊之長")
+
+# ════════════════════════════════════════════════════════════════════════════
+# 印加帝國（遼金元制：四方＋十進位戶籍，如薩珊四方＋元萬戶千戶百戶）
+# ════════════════════════════════════════════════════════════════════════════
+_order = 6500
+R("Sapa Inca", "皇帝", o="Sapa Inka", lang="qu", polity="印加帝國", register="遼金元制",
+  level="中央", tier="中央", var="印加王；獨一之君", reason="太陽神之子、帝國共主")
+R("Inca Viceroy", "冢宰", o="apuskipay", lang="qu", polity="印加帝國", register="遼金元制",
+  level="中央", tier="中央", var="首相", reason="輔政首輔")
+R("Suyu (Quarter)", "方", o="suyu", lang="qu", etype="行政區", polity="印加帝國", register="遼金元制",
+  level="超一級", tier="地方", var="四方；Tawantinsuyu", reason="帝國分四方（四方之地）")
+R("Apu (Quarter Governor)", "都督", o="apu", lang="qu", polity="印加帝國", register="遼金元制",
+  level="超一級", tier="軍事", var="四方都督", reason="一方之最高長官，如薩珊四方都督")
+R("Wamani (Province)", "省", o="wamani", lang="qu", etype="行政區", polity="印加帝國", register="遼金元制",
+  level="一級", tier="地方", var="州", reason="一級行政區")
+R("Tokrikoq", "省長", o="t'oqrikoq", lang="qu", polity="印加帝國", register="遼金元制",
+  level="一級", tier="地方", var="州牧", reason="省之總督")
+R("Hunu (10000)", "萬戶", o="hunu", lang="qu", etype="行政區", polity="印加帝國", register="遼金元制",
+  level="二級", tier="地方", var="一萬戶", reason="十進位戶籍：一萬戶")
+R("Waranqa (1000)", "千戶", o="waranqa", lang="qu", etype="行政區", polity="印加帝國", register="遼金元制",
+  level="三級", tier="地方", var="一千戶", reason="十進位戶籍：一千戶")
+R("Pachaca (100)", "百戶", o="pachaka", lang="qu", etype="行政區", polity="印加帝國", register="遼金元制",
+  level="三級", tier="地方", var="一百戶", reason="十進位戶籍：一百戶")
+
+# ════════════════════════════════════════════════════════════════════════════
+# 薩法維-波斯帝國（明清制：什葉派火藥帝國，如鄂圖曼鏡像）
+# ════════════════════════════════════════════════════════════════════════════
+_order = 7500
+R("Safavid Grand Vizier", "首相", o="e'temād al-dowleh", lang="fa", polity="薩法維-波斯帝國",
+  register="明清制", level="中央", tier="中央", var="大維齊爾", reason="沙阿之下最高執政")
+R("Safavid Sadr", "大宗伯", o="ṣadr", lang="fa", polity="薩法維-波斯帝國", register="明清制",
+  level="中央", tier="中央", var="掌教", reason="什葉派宗教/宗教財產最高官")
+R("Qurchibashi", "兵部尚書", o="qūrchī-bāshī", lang="fa", polity="薩法維-波斯帝國", register="明清制",
+  level="中央", tier="軍事", var="禁衛統帥", reason="紅頭禁衛騎兵統帥")
+R("Mostoufi al-Mamalek", "戶部尚書", o="mostoufi al-mamālek", lang="fa", polity="薩法維-波斯帝國",
+  register="明清制", level="中央", tier="財政", reason="全國財計首長")
+R("Safavid Province", "省", o="velāyat", lang="fa", etype="行政區", polity="薩法維-波斯帝國",
+  register="明清制", level="一級", tier="地方", var="總督區", reason="一級行政區")
+R("Beglarbegi", "總督", o="beglarbegi", lang="fa", polity="薩法維-波斯帝國", register="明清制",
+  level="一級", tier="地方", var="眾伯之伯", reason="省級總督")
+R("Safavid Khan", "汗", o="khān", lang="fa", polity="薩法維-波斯帝國", register="明清制",
+  level="一級", tier="軍事", var="部族總管", reason="紅頭部族之汗，領封省")
+R("Safavid District", "府", o="mahāl", lang="fa", etype="行政區", polity="薩法維-波斯帝國",
+  register="明清制", level="二級", tier="地方", reason="省下之府")
+R("Kalantar", "道臺", o="kalāntar", lang="fa", polity="薩法維-波斯帝國", register="明清制",
+  level="二級", tier="地方", var="市政官", reason="城市/區之行政首長")
+
+# ════════════════════════════════════════════════════════════════════════════
+# 馬利帝國（明清制：西非黃金貿易帝國，屬邦如土司）
+# ════════════════════════════════════════════════════════════════════════════
+_order = 7650
+R("Mansa", "皇帝", o="mansa", lang="man", polity="馬利帝國", register="明清制",
+  level="中央", tier="中央", var="曼薩；王", reason="馬利帝國共主")
+R("Mali Chief Minister", "首相", polity="馬利帝國", register="明清制",
+  level="中央", tier="中央", reason="宮廷首輔")
+R("Mali Province", "省", etype="行政區", polity="馬利帝國", register="明清制",
+  level="一級", tier="地方", var="dyamani", reason="帝國直轄省")
+R("Farba", "總督", o="farba", lang="man", polity="馬利帝國", register="明清制",
+  level="一級", tier="地方", var="farin；省長", reason="曼薩派駐之省級總督")
+R("Mali Vassal King", "土司", etype="行政區", polity="馬利帝國", register="明清制",
+  level="羈縻", tier="地方", var="屬邦君長", reason="臣服納貢之傳統小王，如明清土司")
+R("Mali District", "縣", etype="行政區", polity="馬利帝國", register="明清制",
+  level="二級", tier="地方", reason="省下之縣")
+
+# ════════════════════════════════════════════════════════════════════════════
+# 暹羅（明清制：阿瑜陀耶/曼谷 薩克迪納制；沿用既有漢名對照，多【提】）
+# ════════════════════════════════════════════════════════════════════════════
+_order = 7750
+R("Samuha Nayok", "大冢宰", o="สมุหนายก", lang="th", polity="暹羅", register="明清制",
+  level="中央", tier="中央", var="北方民政首相；Mahatthai", reason="掌北方與民政之首相【提】")
+R("Samuha Kalahom", "大司馬", o="สมุหกลาโหม", lang="th", polity="暹羅", register="明清制",
+  level="中央", tier="軍事", var="南方軍務首相", reason="掌南方與軍務之首相【提】")
+R("Chatusadom", "四曹", o="จตุสดมภ์", lang="th", etype="機構", polity="暹羅", register="明清制",
+  level="中央", tier="中央", var="四柱：京兆/宮/庫/田", reason="四部（城/宮/庫/田）【提】")
+R("Mueang", "府", o="เมือง", lang="th", etype="行政區", polity="暹羅", register="明清制",
+  level="一級", tier="地方", var="城", reason="城/府級行政區【提】")
+R("Chao Mueang", "知府", o="เจ้าเมือง", lang="th", polity="暹羅", register="明清制",
+  level="一級", tier="地方", var="城主", reason="府之長官【提】")
+R("Amphoe", "縣", o="อำเภอ", lang="th", etype="行政區", polity="暹羅", register="明清制",
+  level="二級", tier="地方", reason="府下之縣【提】")
+
+# ════════════════════════════════════════════════════════════════════════════
+# 衣索比亞帝國（周封建五等爵：所羅門系基督教封建君主，Ras 如諸侯）
+# ════════════════════════════════════════════════════════════════════════════
+_order = 8700
+R("Negusa Nagast", "皇帝", o="ንጉሠ ነገሥት", lang="am", polity="衣索比亞帝國", register="周封建五等爵",
+  level="中央", tier="中央", var="王中之王", reason="所羅門系皇帝（萬王之王）")
+R("Ethiopian Chief Minister", "大相", o="bitwoded", lang="am", polity="衣索比亞帝國", register="周封建五等爵",
+  level="中央", tier="中央", var="Tsehafe Tezaz；掌詔", reason="宮廷首輔")
+R("Abuna", "大宗伯", o="ጳጳስ", lang="am", polity="衣索比亞帝國", register="周封建五等爵",
+  level="中央", tier="中央", var="都主教；教長", reason="衣索比亞教會最高主教")
+R("Ethiopian Sub-kingdom", "王國", etype="行政區", polity="衣索比亞帝國", register="周封建五等爵",
+  level="超一級", tier="封爵", var="Negus 之國", reason="區域王（Negus）之國，如戈賈姆/紹阿")
+R("Ras (Duke)", "公", o="ራስ", lang="am", polity="衣索比亞帝國", register="周封建五等爵",
+  level="一級", tier="封爵", var="大公；拉斯", reason="最高世襲貴族，如公爵")
+R("Dejazmach", "伯", o="ደጃዝማች", lang="am", polity="衣索比亞帝國", register="周封建五等爵",
+  level="二級", tier="封爵", var="太守；郡伯", reason="省級貴族武將")
+
+# ════════════════════════════════════════════════════════════════════════════
+# 日本（律令制）（漢字圈自有：仿唐律令，官名漢字直用不另譯）
+# ════════════════════════════════════════════════════════════════════════════
+_order = 9000
+R("Daijo-daijin", "太政大臣", o="太政大臣", lang="ja", polity="日本（律令制）", register="漢字圈自有",
+  level="中央", tier="中央", var="≈唐尚書令", reason="律令制最高官（漢字直用）")
+R("Daijokan", "太政官", o="太政官", lang="ja", etype="機構", polity="日本（律令制）", register="漢字圈自有",
+  level="中央", tier="中央", var="≈唐三省", reason="最高行政機構（漢字直用）")
+R("Hassho", "八省", o="八省", lang="ja", etype="機構", polity="日本（律令制）", register="漢字圈自有",
+  level="中央", tier="中央", var="≈唐六部", reason="八個中央省（漢字直用）")
+R("Japanese Do (Circuit)", "道", o="道", lang="ja", etype="行政區", polity="日本（律令制）", register="漢字圈自有",
+  level="超一級", tier="地方", var="五畿七道", reason="數國之上的循環大區（漢字直用）")
+R("Kuni (Province)", "國", o="國", lang="ja", etype="行政區", polity="日本（律令制）", register="漢字圈自有",
+  level="一級", tier="地方", var="≈唐州", reason="一級行政區（漢字直用）")
+R("Kokushi", "國司", o="國司", lang="ja", polity="日本（律令制）", register="漢字圈自有",
+  level="一級", tier="地方", var="守；≈唐刺史", reason="國之長官（漢字直用）")
+R("Japanese Gun (District)", "郡", o="郡", lang="ja", etype="行政區", polity="日本（律令制）", register="漢字圈自有",
+  level="二級", tier="地方", reason="國下之郡（漢字直用）")
+R("Gunji", "郡司", o="郡司", lang="ja", polity="日本（律令制）", register="漢字圈自有",
+  level="二級", tier="地方", reason="郡之長官（漢字直用）")
+
+# ════════════════════════════════════════════════════════════════════════════
+# 日本（幕府）（漢字圈自有：武家政權，官名漢字直用不另譯）
+# ════════════════════════════════════════════════════════════════════════════
+_order = 9100
+R("Tenno (nominal)", "天皇", o="天皇", lang="ja", polity="日本（幕府）", register="漢字圈自有",
+  level="中央", tier="中央", var="虛位共主", reason="名義共主，實權旁落幕府（漢字直用）")
+R("Shogun", "將軍", o="征夷大將軍", lang="ja", polity="日本（幕府）", register="漢字圈自有",
+  level="中央", tier="中央", var="幕府；征夷大將軍", reason="武家政權實際統治者（漢字直用）")
+R("Roju", "老中", o="老中", lang="ja", polity="日本（幕府）", register="漢字圈自有",
+  level="中央", tier="中央", var="大老", reason="江戶幕府之執政（漢字直用）")
+R("Bugyo", "奉行", o="奉行", lang="ja", polity="日本（幕府）", register="漢字圈自有",
+  level="中央", tier="中央", var="行政/司法長官", reason="各類職掌之奉行官（漢字直用）")
+R("Han (Domain)", "藩", o="藩", lang="ja", etype="行政區", polity="日本（幕府）", register="漢字圈自有",
+  level="一級", tier="地方", var="大名領", reason="大名之領國（漢字直用）")
+R("Daimyo", "大名", o="大名", lang="ja", polity="日本（幕府）", register="漢字圈自有",
+  level="一級", tier="地方", var="諸侯", reason="領藩之諸侯（漢字直用）")
+R("Shugo", "守護", o="守護", lang="ja", polity="日本（幕府）", register="漢字圈自有",
+  level="一級", tier="軍事", var="鎌倉/室町軍事守護", reason="令制國之軍事守護（漢字直用）")
+R("Jito", "地頭", o="地頭", lang="ja", polity="日本（幕府）", register="漢字圈自有",
+  level="二級", tier="地方", var="莊園管理", reason="莊園/公領之管理官（漢字直用）")
+R("Daikan", "代官", o="代官", lang="ja", polity="日本（幕府）", register="漢字圈自有",
+  level="二級", tier="地方", var="郡代", reason="幕府直轄地之地方官（漢字直用）")
+
+# ════════════════════════════════════════════════════════════════════════════
+# 朝鮮（李朝）（漢字圈自有：仿明六曹，官名漢字直用不另譯）
+# ════════════════════════════════════════════════════════════════════════════
+_order = 9200
+R("Yeonguijeong", "領議政", o="領議政", lang="ko", polity="朝鮮（李朝）", register="漢字圈自有",
+  level="中央", tier="中央", var="首相；≈明內閣首輔", reason="議政府之首（漢字直用）")
+R("Uijeongbu", "議政府", o="議政府", lang="ko", etype="機構", polity="朝鮮（李朝）", register="漢字圈自有",
+  level="中央", tier="中央", reason="最高議政機構（漢字直用）")
+R("Yukjo", "六曹", o="六曹", lang="ko", etype="機構", polity="朝鮮（李朝）", register="漢字圈自有",
+  level="中央", tier="中央", var="≈明六部", reason="六個中央曹（漢字直用）")
+R("Korean Do (Province)", "道", o="道", lang="ko", etype="行政區", polity="朝鮮（李朝）", register="漢字圈自有",
+  level="一級", tier="地方", var="八道", reason="一級行政區（漢字直用）")
+R("Gwanchalsa", "觀察使", o="觀察使", lang="ko", polity="朝鮮（李朝）", register="漢字圈自有",
+  level="一級", tier="地方", var="監司；道長官", reason="道之長官（漢字直用）")
+R("Suryeong", "守令", o="守令", lang="ko", polity="朝鮮（李朝）", register="漢字圈自有",
+  level="二級", tier="地方", var="府尹/牧使/郡守/縣令", reason="府牧郡縣之長官通稱（漢字直用）")
+
+# ════════════════════════════════════════════════════════════════════════════
+# 越南（阮朝）（漢字圈自有：仿清六部，官名漢字直用不另譯）
+# ════════════════════════════════════════════════════════════════════════════
+_order = 9300
+R("Vietnamese Emperor", "皇帝", o="皇帝", lang="vi", polity="越南（阮朝）", register="漢字圈自有",
+  level="中央", tier="中央", var="大越皇帝", reason="阮朝皇帝（漢字直用）")
+R("Noi cac", "內閣", o="內閣", lang="vi", etype="機構", polity="越南（阮朝）", register="漢字圈自有",
+  level="中央", tier="中央", reason="中樞機要（漢字直用）")
+R("Luc bo", "六部", o="六部", lang="vi", etype="機構", polity="越南（阮朝）", register="漢字圈自有",
+  level="中央", tier="中央", var="≈清六部", reason="六個中央部（漢字直用）")
+R("Tinh (Province)", "省", o="省", lang="vi", etype="行政區", polity="越南（阮朝）", register="漢字圈自有",
+  level="一級", tier="地方", reason="一級行政區（漢字直用）")
+R("Tong doc", "總督", o="總督", lang="vi", polity="越南（阮朝）", register="漢字圈自有",
+  level="一級", tier="地方", var="巡撫(Tuần phủ)", reason="省級總督/巡撫（漢字直用；仿清）")
+R("Phu (Prefecture)", "府", o="府", lang="vi", etype="行政區", polity="越南（阮朝）", register="漢字圈自有",
+  level="二級", tier="地方", var="知府", reason="省下之府（漢字直用）")
+R("Huyen (District)", "縣", o="縣", lang="vi", etype="行政區", polity="越南（阮朝）", register="漢字圈自有",
+  level="三級", tier="地方", var="知縣", reason="府下之縣（漢字直用）")
+
 
 # ── 自檢 ────────────────────────────────────────────────────────────────────
 def selfcheck() -> bool:

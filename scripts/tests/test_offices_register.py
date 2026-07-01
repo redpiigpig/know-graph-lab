@@ -97,6 +97,18 @@ def test_more_empires_mapped_by_gestalt():
     assert gn.register_for_polity("查理曼-卡洛林帝國") == "周封建五等爵"
 
 
+def test_sinographic_register_and_new_world_and_safavid():
+    # 漢字圈（日/韓/越）直用原稱；印加十進位遼金元；阿茲特克霸業春秋；薩法維明清
+    assert "漢字圈自有" in {r["label_zh"] for r in gn.ADMIN_REGISTERS}
+    assert gn.register_for_polity("日本（律令制）") == "漢字圈自有"
+    assert gn.register_for_polity("朝鮮（李朝）") == "漢字圈自有"
+    assert gn.register_for_polity("越南（阮朝）") == "漢字圈自有"
+    assert gn.register_for_polity("印加帝國") == "遼金元制"
+    assert gn.register_for_polity("阿茲特克帝國") == "春秋制"
+    assert gn.register_for_polity("薩法維-波斯帝國") == "明清制"
+    assert gn.register_for_polity("衣索比亞帝國") == "周封建五等爵"
+
+
 def test_rome_spans_two_registers_early_han_late_weijin():
     assert gn.registers_for_polity("羅馬帝國") == ["漢制", "魏晉制"]
     assert gn.register_for_polity("羅馬帝國") == "漢制"     # first is the default

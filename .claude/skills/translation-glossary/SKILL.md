@@ -81,7 +81,7 @@ description: 「翻譯定名」通用名物中譯對照工具（/translation-glo
 **問題（使用者）**：翻外國政權的官名／職務名／行政區名過去**過於重複、沒有層次感** —— 動不動「總督／行省」，時代也對不上。要的是**外國政權官制與行政區跟漢字文化圈有「時代對應＋政體體例對應」**，中國詞不夠可借日／韓／越漢字官職。
 
 **核心設計（兩層）**：
-1. **register 對應（制對應）**：把外國政權按「**社會發展階段＋政治氣質**」（共時性，非日曆年代）對到一個朝代 register。純核心 `ADMIN_REGISTERS`（**10 桶**）：商周制／春秋制／戰國秦制／漢制／魏晉制／唐制／**宋制**／**遼金元制**／明清制／周封建五等爵。**遼金元制**（南北面雙軌、萬戶千戶百戶、達魯花赤）專供**游牧/征服帝國**（安息/塞爾柱/蒙古諸汗國/帖木兒）；拜占庭跨唐[軍區]/宋[晚期文官]兩制（如羅馬跨漢/魏晉）。
+1. **register 對應（制對應）**：把外國政權按「**社會發展階段＋政治氣質**」（共時性，非日曆年代）對到一個朝代 register。純核心 `ADMIN_REGISTERS`（**11 桶**）：商周制／春秋制／戰國秦制／漢制／魏晉制／唐制／**宋制**／**遼金元制**／明清制／周封建五等爵。**遼金元制**（南北面雙軌、萬戶千戶百戶、達魯花赤）專供**游牧/征服帝國**（安息/塞爾柱/蒙古諸汗國/帖木兒）；拜占庭跨唐[軍區]/宋[晚期文官]兩制（如羅馬跨漢/魏晉）。
 2. **逐條對照**：每個外國職／區劃 → 建議中譯，掛上所屬 register；**舊的扁平譯（總督；行省）降到 `name_variants`** 供對照。
 
 **關鍵洞見**：**「總督／行省／副王」不是錯，是明清 register 的詞** —— 只用在奧斯曼／蒙兀兒／俄／近世殖民帝國，不套波斯／羅馬／亞述。且帝國晚期逐層對到魏晉三級（`大區行臺(行臺尚書令)→州(刺史)→郡(太守)`）＝使用者要的「層次感」。
@@ -93,10 +93,10 @@ description: 「翻譯定名」通用名物中譯對照工具（/translation-glo
 - 純核心：[scripts/glossary_naming.py](../../../scripts/glossary_naming.py)（`ADMIN_REGISTERS` / `REGISTER_BY_POLITY`（羅馬＝["漢制","魏晉制"]）/ `registers_for_polity` / `check_register_valid` / `check_register_matches_polity`）
 - 測試：[scripts/tests/test_offices_register.py](../../../scripts/tests/test_offices_register.py)（21 綠）
 - Schema：[database/glossary-offices-schema.sql](../../../database/glossary-offices-schema.sql)（`official_titles`；新欄 `register` / `admin_level` / `entity_type` / `polity`；unique=(name_english, polity)）
-- Seed：[scripts/seed_glossary_offices.py](../../../scripts/seed_glossary_offices.py)（hand-curated **301 筆**、`--dry` 預覽＋自檢、`--replace` 全量重灌、`on_conflict=name_english,polity`）
+- Seed：[scripts/seed_glossary_offices.py](../../../scripts/seed_glossary_offices.py)（hand-curated **374 筆**、`--dry` 預覽＋自檢、`--replace` 全量重灌、`on_conflict=name_english,polity`）
 - UI：[pages/translation-glossary/index.vue](../../../pages/translation-glossary/index.vue) tab「官制與行政區」（GENERIC 表 + register 子篩選 chip，依 sort_order 呈發展階段順序＝層次感）
 
-**狀態（2026-07-01）**：✅ 表已建、Vue tab 已接、seed **301 筆**上線 —— **每個帝國撐開成完整權力金字塔**（中央≥部長級→〔超一級〕→一級→二級〔→三級〕），每政權皆備 中央＋一級＋二級。巴比倫定楚職**縣公**＋兩層省制（大尹→縣公）。⏳ 各帝國中段【提】細項使用者可於 UI 逐項校訂；文體翻譯（台語文讀／粵語）屬「漢譯世界史計畫」更大願景，本表只做官職／行政區定名。
+**狀態（2026-07-01）**：✅ 表已建、Vue tab 已接、seed **374 筆**上線 —— **每個帝國撐開成完整權力金字塔**（中央≥部長級→〔超一級〕→一級→二級〔→三級〕），每政權皆備 中央＋一級＋二級。巴比倫定楚職**縣公**＋兩層省制（大尹→縣公）。⏳ 各帝國中段【提】細項使用者可於 UI 逐項校訂；文體翻譯（台語文讀／粵語）屬「漢譯世界史計畫」更大願景，本表只做官職／行政區定名。
 
 **SOP**：翻書前定書中政權 → 查 register →（不夠用查日韓越）→ 抽官名/區劃清單逐項對照（hand-curated 不走 LLM）→ 定案進 seed（先 `--dry` 過自檢）→ `export_glossary_from_db.py` 同步 cheat sheet。
 
