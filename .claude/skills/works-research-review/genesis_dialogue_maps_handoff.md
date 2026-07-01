@@ -10,7 +10,9 @@
 - ✅ **E3→O3 資料遷移已完成**：`migrate_e3_to_o3.py --apply`（Gemini 引擎，ledger 可還原）。舊 E3《主體的誕生》155 筆：24 筆與 O3 重複→刪、131 筆遷 O3。
 - ✅ **蓋提爾/誠實生成論群組再撥 E2**：使用者定案這 39 筆通用認識論(蓋提爾/誠實生成論/強弱認識論/知行合一)歸卷二 E2《認識的形式地基》，非主體本體論。`move_gettier_to_e2.py --apply`（還原原 E3 dimension、display_order 500+，ledger 可還原）：37 筆撥 E2、2 筆(Nagel1961/Worrall1989 E2 已有)刪 O3 副本。
 - **現況：E3=0、O3=210（118 原生+92 主體/意識遷入）、E2=214（177 原生+37 蓋提爾群組）。**
-- ⏳ **待使用者定奪**：新 E3《認識你自己》主題軸章節（已提精修 8 章草案，含涂爾幹「圖騰/身體儀式/社會建構」為連結軸；待確認章數與「符號/身體」是否與 E2ch3/O3 太近）。核可後建 E3 新 clean_inv/worklist → 研究/對話地圖。
+- ✅ **M1/M2/E1/E2 off-canonical 重分類**：這四卷參考資料在較早 session 建，dimension 是章級/舊版章節標籤與現行 clean_inv 不一致。`reclassify_offcanon.py`（Gemini 引擎，對齊條件＝off-canonical 不看 display_order，ledger 可還原）已把 M1(45)/M2(48)/E1(48)/E2 原生(15) 全部對齊 canonical。**現況 M1/M2/E1 off=0**。
+- ⚠️ **E2 蓋提爾/誠實生成論 37 筆仍 off-canonical（刻意）**：force-classify 會被亂塞（18 筆被丟到「意向性時序」等錯格），已 revert 回原本 13 個 coherent 標籤（蓋提爾/誠實生成論/強弱認識論/知行合一…）。**根因＝E2 clean_inv 缺這個子題的家**。待使用者定奪：在 E2「乙 認識的形式地基」下加一章「知識的判準：從 JTB 到誠實生成論」(~5 小節)，這 37 筆即入該章成 canonical。
+- ⏳ **待使用者定奪（其二）**：新 E3《認識你自己》主題軸章節（已提精修 7 章草案，涂爾幹「圖騰/身體儀式/社會建構」為連結軸第三章）。核可後建 E3 新 clean_inv/worklist → 研究/對話地圖。
 - 🚩 **舊 E3 相關檔仍在**：`scripts/data/lit_review_genesis_E3_dialogue_ch*.md`（主體的誕生研究，內容已屬 O3）與 `clean_inv.json`/`worklist.json` 的 E3 條目仍是舊章節——**建新 E3 前要先換掉這些**，否則 gen_workflow 會誤判 E3 已完成。
 
 ## 一、已完成（已 push）
