@@ -1,21 +1,18 @@
 # -*- coding: utf-8 -*-
-"""柏拉圖對話錄 → 希臘/英/繁中三欄（collected-works 哲學群，pipeline ① 多語對照）。
+"""古希臘哲學經典（柏拉圖／亞里斯多德）→ 希臘/英/繁中三欄（collected-works 哲學群，pipeline ① 多語對照）。
 
-來源＝Perseus canonical-greekLit Unicode TEI（皆公有領域）：
-  grc  = tlg0059.tlgNNN.perseus-grc2.xml（Unicode 希臘原文）
-  eng  = tlg0059.tlgNNN.perseus-eng2.xml（Fowler 英譯，Loeb 1914，PD）
-兩版皆以 **Stephanus 節（milestone unit="section" n="17a"…）** 為錨點 → 完美對齊。
-
-對齊粒度＝Stephanus 節：每節 grc/en/繁中各一段，一個 Stephanus「頁」(17,18…) = 一個 reader chunk。
-繁中**逐節**翻（從希臘、Fowler 英譯僅供消歧義），join('\\n\\n') → 段數必等於來源段數。
+來源＝Perseus canonical-greekLit Unicode TEI（希臘原文＝Burnet/Bywater… PD；英譯＝Fowler/Shorey/Rackham…，
+多屬 PD，個別受版權者僅作私人研究庫參考欄，主欄是我自希臘原文的自譯 → [[feedback_jung_nonpd_english_first]]）。
+兩版皆以同一 **錨點 milestone** 對齊：柏拉圖＝Stephanus 節（`unit="section" n="17a"`）、
+亞里斯多德＝Bekker 頁（`unit="page" n="1094a"`）。逐節/逐頁翻繁中，段數必等於來源 → reader zipParallel 對齊。
 
 用法：
-  python scripts/plato_build.py apology --limit 1            # smoke：只做第 17 頁
-  python scripts/plato_build.py apology                      # 全 26 頁，寫 JSONL
-  python scripts/plato_build.py apology --upload             # 全跑 + R2 + DB previews + ensure row
+  python scripts/plato_build.py <slug> --limit 1        # smoke
+  python scripts/plato_build.py <slug> --upload         # 全跑 + R2 + DB + ensure row（resumable：逐節快取）
+  python scripts/plato_build.py --list                  # 列出所有 slug
 """
 from __future__ import annotations
-import argparse, io, json, os, re, sys
+import argparse, io, re, sys
 from pathlib import Path
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
@@ -23,66 +20,90 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import multilang_chunks as mc  # noqa: E402
 
 CACHE = Path("c:/tmp/plato_cache")
-BASE = "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0059"
+RAW = "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data"
+_P, _A = "柏拉圖", "亞里斯多德"
+_UNIT_LABEL = {"section": "斯提法努斯", "page": "貝克爾"}
+_PARENT = {_P: "柏拉圖對話錄", _A: "亞里斯多德著作"}
+_CJK = "一二三四五六七八九十十一十二十三十四"
 
-# ── 對話錄 registry（逐部擴充；ebook_id 命名空間 7000…＝哲學/柏拉圖）──────────────
-DIALOGUES = {
-    "apology": {
-        "tlg": "tlg002",
-        "ebook_id": "70000000-0000-4000-8000-000000000001",
-        "title_zh": "蘇格拉底的申辯",
-        "title_orig": "Ἀπολογία Σωκράτους",
-        "author": "柏拉圖",
-        "author_en": "Plato",
-        "category": "世界宗教",            # ebooks.category 有 CHECK；'世界宗教' 為已知合法值
-        "subcategory": "古希臘哲學",
-        "file_path": "PERSEUS/plato-apology-trilingual",
-        "volume": "蘇格拉底的申辯",
-        "parent_volume": "柏拉圖對話錄‧早期",
-    },
-    "republic": {
-        "tlg": "tlg030",
-        "ebook_id": "70000000-0000-4000-8000-000000000002",
-        "title_zh": "理想國",
-        "title_orig": "Πολιτεία",
-        "author": "柏拉圖",
-        "author_en": "Plato",
-        "category": "世界宗教",
-        "subcategory": "古希臘哲學",
-        "file_path": "PERSEUS/plato-republic-trilingual",
-        "volume": "理想國",                 # base（封面用）；內文卷別 volume 由 book 覆蓋
-        "parent_volume": "柏拉圖對話錄",
-        # 英譯＝Shorey（Loeb 1935）受版權至約 2031；本站 auth-gate 私人研究庫、英文僅參考欄、
-        # 主欄為我自希臘原文（Burnet, PD）的自譯 → 同 [[feedback_jung_nonpd_english_first]] 姿態。
-        "eng_note": "Shorey（Loeb 1935，受版權‧私人庫參考）",
-    },
-}
+# (slug, author, tlg, ebook_n, title_zh[對齊 store], title_orig, anchor, grc_kind[, eng_note])
+_TABLE = [
+    ("apology", _P, "tlg002", 1, "蘇格拉底的申辯", "Ἀπολογία Σωκράτους", "section", "grc2"),
+    ("republic", _P, "tlg030", 2, "理想國", "Πολιτεία", "section", "grc2", "Shorey（Loeb 1935，受版權‧私人庫參考）"),
+    ("euthyphro", _P, "tlg001", 3, "歐緒弗洛", "Εὐθύφρων", "section", "grc1"),
+    ("crito", _P, "tlg003", 4, "克里同", "Κρίτων", "section", "grc2"),
+    ("phaedo", _P, "tlg004", 5, "斐多", "Φαίδων", "section", "grc2"),
+    ("cratylus", _P, "tlg005", 6, "克拉底魯", "Κρατύλος", "section", "grc2"),
+    ("theaetetus", _P, "tlg006", 7, "泰阿泰德", "Θεαίτητος", "section", "grc2"),
+    ("sophist", _P, "tlg007", 8, "智者", "Σοφιστής", "section", "grc2"),
+    ("statesman", _P, "tlg008", 9, "政治家", "Πολιτικός", "section", "grc2"),
+    ("parmenides-d", _P, "tlg009", 10, "巴門尼德", "Παρμενίδης", "section", "grc2"),
+    ("philebus", _P, "tlg010", 11, "斐利布斯", "Φίληβος", "section", "grc2"),
+    ("symposium", _P, "tlg011", 12, "會飲", "Συμπόσιον", "section", "grc2"),
+    ("phaedrus", _P, "tlg012", 13, "斐德羅", "Φαῖδρος", "section", "grc2"),
+    ("protagoras-d", _P, "tlg022", 22, "普羅塔哥拉", "Πρωταγόρας", "section", "grc2"),
+    ("gorgias-d", _P, "tlg023", 23, "高爾吉亞", "Γοργίας", "section", "grc2"),
+    ("meno", _P, "tlg024", 24, "美諾", "Μένων", "section", "grc2"),
+    ("timaeus", _P, "tlg031", 31, "蒂邁歐", "Τίμαιος", "section", "grc2"),
+    ("critias", _P, "tlg032", 32, "克里底亞", "Κριτίας", "section", "grc2"),
+    ("laws", _P, "tlg034", 34, "法律篇", "Νόμοι", "section", "grc2"),
+    ("letters", _P, "tlg036", 36, "書信集（含第七封信）", "Ἐπιστολαί", "section", "grc2"),
+    # 亞里斯多德（Perseus 有 grc+eng 的 6 部；Bekker 頁錨點）
+    ("nicomachean-ethics", _A, "tlg010", 51, "尼各馬可倫理學", "Ἠθικὰ Νικομάχεια", "page", "grc2", "Rackham（Loeb 1926，PD）"),
+    ("eudemian-ethics", _A, "tlg009", 52, "歐德謨倫理學", "Ἠθικὰ Εὐδήμεια", "page", "grc2"),
+    ("metaphysics", _A, "tlg025", 53, "形上學", "τὰ Μετὰ τὰ Φυσικά", "page", "grc2"),
+    ("politics", _A, "tlg035", 54, "政治學", "Πολιτικά", "page", "grc2"),
+    ("poetics", _A, "tlg034", 55, "詩學", "Περὶ ποιητικῆς", "page", "grc2"),
+    ("rhetoric", _A, "tlg038", 56, "修辭學", "Ῥητορική", "page", "grc2"),
+]
 
-SEC_RE = re.compile(r'<milestone[^>]*unit="section"[^>]*\bn="([^"]+)"[^>]*/>')
 
-PLATO_PROMPT_TMPL = """你是古希臘哲學經典的專業譯者。把下列**古希臘文（阿提卡/柏拉圖）原典**翻成**繁體中文**。
+def _mk(row) -> dict:
+    slug, author, tlg, n, tz, to, anchor, grc = row[:8]
+    note = row[8] if len(row) > 8 else None
+    return {"slug": slug, "author": author, "author_en": "Plato" if author == _P else "Aristotle",
+            "tlg": tlg, "ebook_id": f"70000000-0000-4000-8000-{n:012d}",
+            "title_zh": tz, "title_orig": to, "anchor": anchor, "grc_kind": grc,
+            "unit_label": _UNIT_LABEL[anchor], "parent_volume": _PARENT[author],
+            "category": "世界宗教", "subcategory": "古希臘哲學",
+            "file_path": f"PERSEUS/greek-{slug}-trilingual", "eng_note": note}
+
+
+WORKS = {r[0]: _mk(r) for r in _TABLE}
+
+_MS_RE = re.compile(r'<milestone\b([^>]*?)/?>')
+_BOOK_RE = re.compile(r'<div\b[^>]*subtype="book"[^>]*?\bn="([^"]+)"')
+
+
+def _attr(s: str, name: str):
+    m = re.search(rf'\b{name}="([^"]+)"', s)
+    return m.group(1) if m else None
+
+
+PROMPT_TMPL = """你是古希臘哲學經典的專業譯者。把下列**古希臘文原典**翻成**繁體中文**。
 
 規則：
 1. 嚴守繁體中文（禁簡體）；學術散文語氣，忠實流暢，不加註不改寫。
 2. 從希臘原文翻譯；附上的英文（既有英譯）僅供消歧義參考，**不要翻譯英文**。
-3. 術語鎖定（希臘為準）：εἶδος/ἰδέα→理型、λόγος→邏各斯（依文脈亦可「話語/理性」）、
-   νοῦς→努斯/心智、ψυχή→靈魂、ἀρετή→德性、εὐδαιμονία→幸福、δαίμων/δαιμόνιον→神靈/靈異徵兆、
-   ἀσέβεια→不敬神、σοφία→智慧、ἔλεγχος→詰問。人名／地名：Σωκράτης→蘇格拉底、
-   Ἀθηναῖοι→雅典人、Μέλητος→美勒托、Ἄνυτος→阿尼圖斯、Δελφοί→德爾斐。
+3. 術語鎖定（希臘為準）：εἶδος/ἰδέα→理型、οὐσία→實體、λόγος→邏各斯（依文脈亦可話語/理性）、
+   νοῦς→努斯/心智、ψυχή→靈魂、ἀρετή→德性、εὐδαιμονία→幸福、μεσότης→中庸、
+   δύναμις/ἐνέργεια→潛能/實現、σοφία→智慧、δίκαιοσύνη→正義、ἔλεγχος→詰問、
+   δαίμων/δαιμόνιον→神靈/靈異徵兆。人名：Σωκράτης→蘇格拉底、Πλάτων→柏拉圖、Ἀθηναῖοι→雅典人。
 4. **只輸出一段連續的繁體中文譯文**，不要分段、不要節號、不要前言或說明。
 
 {source}"""
 
 
 def fetch(slug: str) -> tuple[str, str]:
-    d = DIALOGUES[slug]
+    d = WORKS[slug]
     CACHE.mkdir(parents=True, exist_ok=True)
+    auth_tlg = "tlg0059" if d["author"] == _P else "tlg0086"
     out = []
-    for kind in ("grc2", "eng2"):
-        fn = CACHE / f"tlg0059.{d['tlg']}.perseus-{kind}.xml"
+    for kind in (d["grc_kind"], "eng2"):
+        fn = CACHE / f"{auth_tlg}.{d['tlg']}.perseus-{kind}.xml"
         if not fn.exists() or fn.stat().st_size < 2000:
             import requests
-            url = f"{BASE}/{d['tlg']}/tlg0059.{d['tlg']}.perseus-{kind}.xml"
+            url = f"{RAW}/{auth_tlg}/{d['tlg']}/{auth_tlg}.{d['tlg']}.perseus-{kind}.xml"
             fn.write_text(requests.get(url, timeout=60).text, encoding="utf-8")
         out.append(fn.read_text(encoding="utf-8"))
     return out[0], out[1]
@@ -102,17 +123,13 @@ def _clean(t: str) -> str:
     return re.sub(r'\s+', ' ', t).strip()
 
 
-_BOOK_RE = re.compile(r'<div\b[^>]*subtype="book"[^>]*\bn="([^"]+)"')
-_CJK = "一二三四五六七八九十"
-
-
-def parse_units(xml: str) -> list[tuple]:
-    """Ordered [(book_or_None, section_id, text)] — book from enclosing
-    <div subtype="book" n="N">（多卷作品如理想國）；無 book div 時 book=None。"""
+def parse_units(xml: str, anchor: str) -> list[tuple]:
+    """Ordered [(book_or_None, anchor_id, text)]；anchor＝section(Stephanus)/page(Bekker)。
+    milestone 屬性順序不定 → 用 _attr 逐一取，別假設 unit 在 n 前。"""
     b = _body(xml)
-    books = [(m.group(1), m.start()) for m in _BOOK_RE.finditer(b)]  # doc order
+    books = [(m.group(1), m.start()) for m in _BOOK_RE.finditer(b)]
 
-    def book_of(pos: int):
+    def book_of(pos):
         bk = None
         for n, st in books:
             if st < pos:
@@ -121,52 +138,51 @@ def parse_units(xml: str) -> list[tuple]:
                 break
         return bk
 
-    marks = list(SEC_RE.finditer(b))
+    marks = [(m.start(), m.end(), _attr(m.group(1), "n"))
+             for m in _MS_RE.finditer(b) if _attr(m.group(1), "unit") == anchor]
     out = []
-    for i, m in enumerate(marks):
-        end = marks[i + 1].start() if i + 1 < len(marks) else len(b)
-        txt = _clean(b[m.end():end])
+    for i, (st, en, n) in enumerate(marks):
+        if not n:
+            continue
+        end = marks[i + 1][0] if i + 1 < len(marks) else len(b)
+        txt = _clean(b[en:end])
         if txt:
-            out.append((book_of(m.start()), m.group(1), txt))
+            out.append((book_of(st), n, txt))
     return out
 
 
-def _page(sec: str) -> str:
-    m = re.match(r'(\d+)', sec)
-    return m.group(1) if m else sec
+def _num(anchor_id: str) -> str:
+    m = re.match(r'(\d+)', anchor_id)
+    return m.group(1) if m else anchor_id
 
 
 def _book_label(bk):
     if not bk:
         return None
-    if bk.isdigit() and 1 <= int(bk) <= 10:
+    if bk.isdigit() and 1 <= int(bk) <= len(_CJK):
         return f"第{_CJK[int(bk) - 1]}卷"
     return f"卷{bk}"
 
 
 def build_units(slug: str, grc: list, eng: list) -> list[dict]:
-    """One unit per (book, Stephanus page); carries per-section (grc,en). 多卷作品
-    volume＝『理想國‧第N卷』、chapter_path 帶卷別 → reader sidebar 依卷分組。"""
     from collections import OrderedDict
-    d = DIALOGUES[slug]
-    eng_map = {sec: txt for _bk, sec, txt in eng}
+    d = WORKS[slug]
+    eng_map = {aid: txt for _bk, aid, txt in eng}
     groups: "OrderedDict[tuple, list]" = OrderedDict()
-    for bk, sec, g in grc:
-        if sec not in eng_map:
+    for bk, aid, g in grc:
+        if aid not in eng_map:
             continue
-        groups.setdefault((bk, _page(sec)), []).append((sec, g, eng_map[sec]))
+        groups.setdefault((bk, _num(aid)), []).append((aid, g, eng_map[aid]))
     units = []
-    for (bk, pg), secs in groups.items():
+    for (bk, num), secs in groups.items():
         lbl = _book_label(bk)
-        vol = f"{d['title_zh']}‧{lbl}" if lbl else d["volume"]
-        cp = (f"{d['title_zh']} · {lbl} · 斯提法努斯 {pg}" if lbl
-              else f"{d['title_zh']} · 斯提法努斯 {pg}")
+        vol = f"{d['title_zh']}‧{lbl}" if lbl else d["title_zh"]
+        cp = (f"{d['title_zh']} · {lbl} · {d['unit_label']} {num}" if lbl
+              else f"{d['title_zh']} · {d['unit_label']} {num}")
         units.append({
-            "chapter_path": cp,
-            "page_number": int(pg),
-            "volume": vol,
+            "chapter_path": cp, "page_number": int(num), "volume": vol,
             "parent_volume": d["parent_volume"],
-            "title_en": f"{('Bk ' + bk + ' ') if bk else ''}Stephanus {pg}",
+            "title_en": f"{('Bk ' + bk + ' ') if bk else ''}{d['unit_label']} {num}",
             "sources": {"grc": "\n\n".join(g for _s, g, _e in secs),
                         "en": "\n\n".join(e for _s, _g, e in secs)},
             "_sections": [(s, g, e) for s, g, e in secs],
@@ -175,13 +191,10 @@ def build_units(slug: str, grc: list, eng: list) -> list[dict]:
 
 
 def _prepend_cover(slug: str, content_chunks: list[dict]) -> list[dict]:
-    """Chunk 0 = 犧牲封面（reader isCoverPage=currentPage===1 會吞掉 chunk 0 內容）→
-    真正內容從 chunk 1 起。同 mueller_build.make_cover_chunk。"""
-    d = DIALOGUES[slug]
+    d = WORKS[slug]
     cover = mc.build_multilang_chunk(
-        chunk_index=0, chapter_path="封面", content_zh="## 封面",
-        sources={}, source_order=[], volume=d["volume"],
-        parent_volume=d["parent_volume"], chunk_type="cover", page_number=1)
+        chunk_index=0, chapter_path="封面", content_zh="## 封面", sources={}, source_order=[],
+        volume=d["title_zh"], parent_volume=d["parent_volume"], chunk_type="cover", page_number=1)
     mc.validate_multilang_chunk(cover)
     for i, c in enumerate(content_chunks, start=1):
         c["chunk_index"] = i
@@ -189,31 +202,32 @@ def _prepend_cover(slug: str, content_chunks: list[dict]) -> list[dict]:
 
 
 def make_translate_fn(engine: str, slug: str):
-    """逐節翻＋**逐節快取**（`c:/tmp/plato_cache/<slug>_zh/<section>.txt`）→ 大部（理想國
-    1355 節）中途掛掉重跑自動續，不重翻。翻完的節就跳過。"""
+    """逐節翻＋逐節快取（`c:/tmp/plato_cache/<slug>_zh/<id>.txt`）→ 大部中途掛掉重跑自動續。"""
     import translate_ebook_to_zh as te
-    te.PROMPT_TMPL = PLATO_PROMPT_TMPL
-    engine_fn = {"gemini": te.gemini_with_haiku_fallback,
-                 "haiku": te.haiku_translate,
+    te.PROMPT_TMPL = PROMPT_TMPL
+    engine_fn = {"gemini": te.gemini_with_haiku_fallback, "haiku": te.haiku_translate,
                  "sonnet": te.sonnet_translate}[engine]
     cdir = CACHE / f"{slug}_zh"
     cdir.mkdir(parents=True, exist_ok=True)
 
+    def _flat(s: str) -> str:  # 一節＝一段：壓平內部換行，否則 reader zip 會錯位
+        return re.sub(r'\s+', ' ', s).strip()
+
     def translate_fn(unit: dict) -> str:
         zhs, fresh = [], 0
         for sec, g, e in unit["_sections"]:
-            cf = cdir / f"{sec}.txt"
-            if cf.exists() and cf.read_text(encoding="utf-8").strip():
-                zhs.append(cf.read_text(encoding="utf-8").strip())
+            cf = cdir / (re.sub(r'[^\w.-]', '_', sec) + ".txt")
+            cached = cf.read_text(encoding="utf-8").strip() if cf.exists() else ""
+            if cached:
+                zhs.append(_flat(cached))
                 continue
-            src = f"{g}\n\n[既有英譯參考（勿翻）]\n{e}"
-            zh = engine_fn(src).strip()
+            zh = _flat(engine_fn(f"{g}\n\n[既有英譯參考（勿翻）]\n{e}"))
             cf.write_text(zh, encoding="utf-8")
             zhs.append(zh)
             fresh += 1
         if fresh:
-            print(f"  ↳ p{unit['page_number']} {unit['chapter_path']} (+{fresh} 節)")
-        return "\n\n".join(zhs)  # 段數 == 來源節數 → reader zip 對齊
+            print(f"  ↳ {unit['chapter_path']} (+{fresh})")
+        return "\n\n".join(zhs)
 
     return translate_fn
 
@@ -221,50 +235,42 @@ def make_translate_fn(engine: str, slug: str):
 def ensure_ebook_row(slug: str) -> None:
     import translate_ebook_to_zh as te
     import requests
-    d = DIALOGUES[slug]
-    r = requests.get(f"{te.URL}/rest/v1/ebooks?id=eq.{d['ebook_id']}&select=id",
-                     headers=te.H_GET, timeout=30)
+    d = WORKS[slug]
+    r = requests.get(f"{te.URL}/rest/v1/ebooks?id=eq.{d['ebook_id']}&select=id", headers=te.H_GET, timeout=30)
     if r.ok and r.json():
         return
-    # NB: 多語靠 chunk 的 sources/source_order 判定，display_mode 用 'standard'（同 Jung）。
-    # ebooks 有 CHECK：file_type ∈ {epub,pdf}、無 status/source_lang 欄。
     row = {"id": d["ebook_id"], "title": f"{d['title_zh']}（希英繁三欄）",
-           "author": d["author"], "author_en": d.get("author_en", ""),
-           "file_type": "epub", "file_path": d.get("file_path", f"PERSEUS/{slug}"),
-           "category": d["category"], "subcategory": d.get("subcategory", "古希臘哲學"),
-           "original_title": d["title_orig"], "translator": "Claude（希臘直譯）",
-           "display_mode": "standard"}
-    r = requests.post(f"{te.URL}/rest/v1/ebooks", headers=te.H_JSON, json=row, timeout=30)
-    r.raise_for_status()  # loud on CHECK/constraint failures (別再靜默失敗)
+           "author": d["author"], "author_en": d["author_en"], "file_type": "epub",
+           "file_path": d["file_path"], "category": d["category"], "subcategory": d["subcategory"],
+           "original_title": d["title_orig"], "translator": "Claude（希臘直譯）", "display_mode": "standard"}
+    requests.post(f"{te.URL}/rest/v1/ebooks", headers=te.H_JSON, json=row, timeout=30).raise_for_status()
     print(f"  ✓ inserted ebooks row {d['ebook_id']}")
 
 
-def run(slug: str, *, engine="gemini", limit=None, upload=False) -> list[dict]:
-    d = DIALOGUES[slug]
+def run(slug: str, *, engine="haiku", limit=None, upload=False) -> list[dict]:
+    d = WORKS[slug]
     grc_xml, eng_xml = fetch(slug)
-    grc, eng = parse_units(grc_xml), parse_units(eng_xml)
+    grc, eng = parse_units(grc_xml, d["anchor"]), parse_units(eng_xml, d["anchor"])
     units = build_units(slug, grc, eng)
-    print(f"[{slug}] {len(grc)} grc / {len(eng)} en sections → {len(units)} pages"
+    print(f"[{slug}] {d['author']}《{d['title_zh']}》 {len(grc)}/{len(eng)} {d['anchor']} → {len(units)} 頁"
           f"{' / eng=' + d['eng_note'] if d.get('eng_note') else ''}")
     if limit:
         units = units[:limit]
     tfn = make_translate_fn(engine, slug)
-    chunks = mc.assemble_multilang_chunks(units, tfn, ["grc", "en"], volume=d["volume"])
-    for c, u in zip(chunks, units):  # assemble 不轉 page_number → 補回（Stephanus 頁）
+    chunks = mc.assemble_multilang_chunks(units, tfn, ["grc", "en"], volume=d["title_zh"])
+    for c, u in zip(chunks, units):
         c["page_number"] = u["page_number"]
-    chunks = _prepend_cover(slug, chunks)  # reader 強制 page1=封面 → chunk 0 必為犧牲封面
-    # per-chunk 段數對齊閘（跳過封面 chunk 0，其 sources 為空）
+    chunks = _prepend_cover(slug, chunks)
     for c in chunks:
         if c.get("chunk_type") == "cover" or not c.get("sources"):
             continue
-        nz = len(c["content"].split("\n\n"))
-        ng = len(c["sources"]["grc"].split("\n\n"))
-        ne = len(c["sources"]["en"].split("\n\n"))
+        nz, ng, ne = (len(c["content"].split("\n\n")), len(c["sources"]["grc"].split("\n\n")),
+                      len(c["sources"]["en"].split("\n\n")))
         if not (nz == ng == ne):
             print(f"  ⚠ chunk {c['chunk_index']} (p{c['page_number']}) 段數不齊 zh={nz} grc={ng} en={ne}")
     out = Path(f"c:/tmp/plato_{slug}.jsonl")
     mc.write_jsonl(chunks, out)
-    print(f"  ✓ wrote {out}  ({len(chunks)} chunks, {sum(len(c['content']) for c in chunks)} 繁中字)")
+    print(f"  ✓ {out.name}  {len(chunks)} chunks / {sum(len(c['content']) for c in chunks)} 繁中字")
     if upload:
         ensure_ebook_row(slug)
         from translate_collected_work import _upload
@@ -274,9 +280,14 @@ def run(slug: str, *, engine="gemini", limit=None, upload=False) -> list[dict]:
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("dialogue", choices=list(DIALOGUES))
-    ap.add_argument("--engine", default="gemini")
+    ap.add_argument("work", nargs="?", choices=list(WORKS))
+    ap.add_argument("--engine", default="haiku")
     ap.add_argument("--limit", type=int)
     ap.add_argument("--upload", action="store_true")
+    ap.add_argument("--list", action="store_true")
     a = ap.parse_args()
-    run(a.dialogue, engine=a.engine, limit=a.limit, upload=a.upload)
+    if a.list or not a.work:
+        for s, d in WORKS.items():
+            print(f"  {s:22} {d['author']}《{d['title_zh']}》 {d['ebook_id']} anchor={d['anchor']}")
+    else:
+        run(a.work, engine=a.engine, limit=a.limit, upload=a.upload)

@@ -4,7 +4,7 @@
     <nav class="border-b border-stone-200 bg-white sticky top-0 z-40 flex-shrink-0">
       <div class="px-4 h-14 flex items-center justify-between gap-4">
         <div class="flex items-center gap-3 min-w-0 flex-1">
-          <NuxtLink to="/ebook" class="text-stone-500 hover:text-stone-900 text-sm transition flex-shrink-0">← 書架</NuxtLink>
+          <NuxtLink :to="backTarget.to" class="text-stone-500 hover:text-stone-900 text-sm transition flex-shrink-0">{{ backTarget.label }}</NuxtLink>
           <span class="text-stone-300">·</span>
           <!-- Always-visible TOC button (on lg+ it still toggles a slide-over;
                on narrow screens it's the only way to see the TOC). -->
@@ -773,6 +773,17 @@ const supabase = useSupabaseClient();
 const router = useRouter();
 const route = useRoute();
 const ebookId = route.params.id as string;
+
+// 全集書：若此 ebook 屬於某位 collected-works 作家，「返回」回到作家 hub 而非電子圖書館。
+const cwStore = useCollectedWorksStore();
+const backTarget = computed(() => {
+  for (const a of cwStore.authors) {
+    if (a.works.some((w) => w.ebookId === ebookId)) {
+      return { to: `/collected-works/${a.slug}`, label: `← ${a.name}` };
+    }
+  }
+  return { to: "/ebook", label: "← 書架" };
+});
 
 async function getToken() {
   const { data: { session } } = await supabase.auth.getSession();
