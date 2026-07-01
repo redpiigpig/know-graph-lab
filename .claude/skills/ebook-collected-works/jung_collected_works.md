@@ -22,16 +22,20 @@
 
 ## 公有領域可用的早期著作（乾淨來源）
 
-這些 1929 前出版，美國公有領域，有合法全文（archive.org / Wikisource）：
+> **PD 判準（2026 更新）**：美國公有領域＝**1930 年及以前出版**（2026-01-01 起 1930 出版品入 PD）。故「1930 前的德文原典」與「1930 前的早期英譯」（Hinkle／Constance Long／M. D. Eder／Baynes／Peterson & Brill…）皆乾淨可用。**Hull 譯 CW（1953–1979）永遠不可用**（版權內）。
 
-| 著作 | 德文原典 | 英譯（公有領域）| 對齊可行性 |
+這些 1930 前出版，美國公有領域，有合法全文（Gutenberg HTML / archive.org djvu / Wikisource）：
+
+| 著作 | 德文原典 | 英譯（公有領域，≤1930）| 對齊可行性 |
 |---|---|---|---|
-| 《Wandlungen und Symbole der Libido》(1912, Deuticke) | ✅ archive.org 全文 | ✅ *Psychology of the Unconscious*（Hinkle 譯, 1916）| ⚠️ 德＝1912 原典、英＝1916 譯**同源**，可逐段對；但**≠** CW Vol 5《Symbols of Transformation》(Hull 改寫本) |
-| 《Über die Psychologie der Dementia praecox》(1907) | ✅ | 部分 | — |
-| *Collected Papers on Analytical Psychology* | — | ✅ (1916/1917) | 英文文集 |
-| *The Theory of Psychoanalysis* | 1913 講稿 | ✅ (1915) | — |
-| *VII Sermones ad Mortuos*（七次對死者的佈道）| ✅ (1916 私印) | ✅ | 短篇，易做三欄 demo |
-| 《Psychologische Typen》(1921) | ✅ 德文 1921（美 PD）| Baynes 英譯受版權 | 德文 PD，英譯不一定 |
+| 《Wandlungen und Symbole der Libido》(1912, Deuticke) | ✅ archive.org 全文（純圖像，需重 OCR）| ✅ *Psychology of the Unconscious*（Hinkle 譯, 1916, Gutenberg #65903 HTML）| ⚠️ 德＝1912 原典、英＝1916 譯**同源**，可逐段對；但**≠** CW Vol 5《Symbols of Transformation》(Hull 改寫本)。**✅ 全卷 ch01–13 已完成** |
+| 《Psychologische Typen》(1921) / *Psychological Types* | ✅ **德文 1921 Gutenberg #61543 HTML（乾淨全文！）** | ✅ Baynes 英譯 1923（IA full text）| ✅ 1923 英譯英＋繁中雙欄已完成；**德文 1921 現有乾淨 HTML → 可補成德英中三欄**（宗教學價值：含諾斯底型別素材） |
+| *Collected Papers on Analytical Psychology*（Constance Long 編）| — | ✅ **Gutenberg #48225 HTML（2nd ed. 15 章文集）** | 英文文集（無平行德文）→ 英＋繁中雙語。**含諾斯底/宗教相關章：Ch I 論所謂神祕現象、Ch XI 心理型別、Ch XIV 無意識歷程心理學** |
+| *The Theory of Psychoanalysis*（1912 Fordham 講稿）| 《Versuch einer Darstellung…》1913 | ✅ **Gutenberg #66041 HTML（1915 單行本）** | 英＋繁中雙語 |
+| *Studies in Word-Association*（＝《Diagnostische Assoziationsstudien》）| ✅ 德文 1906/1909 | ✅ **M. D. Eder 譯 1918, archive `studiesinwordass00jung` djvu.txt（Gutenberg 沒有）** | 英＋繁中雙語（字詞聯想／情結起源） |
+| *The Psychology of Dementia Praecox*（《Über die Psychologie der Dementia praecox》1907）| ✅ 德文 1907 | ✅ **Peterson & Brill 譯 1909, archive `psychologyofdeme00junguoft` djvu.txt** | 英＋繁中雙語。⚠️ 別抓 `psychologyofdeme0000jung`（現代 CW3 重印，borrow-only 版權內） |
+| *VII / Septem Sermones ad Mortuos*（對死者的七次佈道）| ✅ 德文 1916 私印 | ✅ Baynes 英譯 1925；**Wikisource 完整轉錄 + gnosis.org** | **🔴 宗教學最高相關：託名「亞歷山卓的巴西里得斯」的諾斯底佈道**。短篇，易做三欄 demo。⚠️ **用 1925 Baynes／1916 德文；勿用 MDR (1962) 附錄版（版權內）** |
+| *The Association Method*（1910 Clark 三講，含〈兒童心靈的衝突〉）| — | ✅ **Wikisource 完整轉錄**（*Am. J. Psychology* v.21）| 英＋繁中雙語 |
 
 **建議起手卷**：用《Wandlungen》(1912 德) + 《Psychology of the Unconscious》(1916 英 Hinkle) 做第一個三欄樣本 — 兩版同源、皆公有領域、來源乾淨，最適合驗證 reader N 欄 + 對齊 pipeline。**標清楚這是 1912/1916 早期版，非 CW Vol 5。**
 
@@ -75,8 +79,35 @@
 
 | 卷 | 德文來源 | 英文來源 | 取得狀態 |
 |---|---|---|---|
-| 早期《Wandlungen》1912 | archive.org `Jung_1912_Wandlungen`（PD，**純掃描無文字層**，426 頁）| **Project Gutenberg #65903** Hinkle 1916 HTML（PD，乾淨結構）| ✅ 已驗證 |
+| 早期《Wandlungen》1912 | archive.org `Jung_1912_Wandlungen`（PD，**純掃描無文字層**，426 頁）| **Project Gutenberg #65903** Hinkle 1916 HTML（PD，乾淨結構）| ✅ 已驗證，全卷完成 |
+| 早期《Psychological Types》1923 | **Gutenberg #61543** `Psychologische Typen` 1921 HTML（PD，乾淨全文，**新查證**）| Internet Archive `psychological_types` djvu full text（Baynes 1923）| ⚙️ 英＋繁中 257 chunks 已完成（ebook `22222223-…`）；**德文源到位 → 可升三欄** |
 | CW 11 / 12–14 等版權卷 | 本機處理路徑 | 本機處理路徑 | — |
+
+### 🆕 新查證的乾淨全文來源（2026-07-01，兩路調查交叉確認）
+
+**Project Gutenberg 全部榮格 holdings（僅 4 本，皆乾淨 HTML）**：#65903 Hinkle《Psychology of the Unconscious》(有)、**#48225《Collected Papers on Analytical Psychology》(Constance Long 編)**、**#66041《The Theory of Psychoanalysis》(1915)**、**#61543 德文《Psychologische Typen》(1921)**。
+
+| 著作 | 版本／年 | 來源與 URL | text-layer 品質 |
+|---|---|---|---|
+| 德文《Psychologische Typen》| 1921 | Gutenberg #61543 `gutenberg.org/ebooks/61543` | ✅ Gutenberg HTML 乾淨（**補三欄的關鍵德文源**）|
+| *Collected Papers on Analytical Psychology* | Long 編 1916/17（1920 重印）| Gutenberg #48225 `gutenberg.org/files/48225/48225-h/48225-h.htm` | ✅ Gutenberg HTML 乾淨 |
+| *The Theory of Psychoanalysis* | 1915 | Gutenberg #66041 `gutenberg.org/cache/epub/66041/pg66041-images.html` | ✅ Gutenberg HTML 乾淨 |
+| *Studies in Word-Association*（Eder 譯）| 1918 | archive `studiesinwordass00jung`（`/stream/studiesinwordass00jung/studiesinwordass00jung_djvu.txt`）| ✅ archive djvu.txt 可用（**Gutenberg 沒有**）|
+| *The Psychology of Dementia Praecox*（Peterson & Brill）| 1909 | archive `psychologyofdeme00junguoft`（`_djvu.txt` 456K）| ✅ archive djvu.txt 可用（ABBYY OCR）|
+| *The Seven Sermons to the Dead* | 1917/1925 | Wikisource `en.wikisource.org/wiki/The_Seven_Sermons_to_the_Dead` + gnosis.org | ✅ Wikisource 完整轉錄（諾斯底短篇）|
+| *The Association Method* | 1910 | Wikisource `en.wikisource.org/wiki/The_American_Journal_of_Psychology/Volume_21/The_Association_Method` | ✅ Wikisource 完整轉錄 |
+
+**⛔ 陷阱 / 抓不到（別浪費時間）**：
+- archive `twoessaysonanaly00jung`＝1970 Bollingen (Hull) 版、borrow-only、**版權內**；`psychologyofdeme0000jung`＝現代 CW3 重印、gated。一律避開。
+- **《Contributions to Analytical Psychology》(Baynes 1928)** 與 **《Two Essays on Analytical Psychology》(Baynes 1928 初版)** — 兩者理論上 US-PD（≤1930），但網路只找到 gated 的後期 Bollingen 重印，**無免費乾淨掃描**。若要用需 HathiTrust 深挖或請 user 自機下載 1928 初版。
+- Standard Ebooks／sacred-texts／gutenberg.net.au（AU 版權到 2032）**皆無榮格**。
+
+### 📌 建議下一步優先序（皆乾淨、皆 ≤1930 US-PD、English-first）
+
+1. **《Psychological Types》升三欄** — 已有 Baynes 1923 英＋繁中，接上 Gutenberg #61543 德文 1921 → 德英中三欄（宗教學：諾斯底型別）。**投報最高**（英中半成品已在）。
+2. **《Seven Sermons to the Dead》** — 短、諾斯底、宗教學最相關、Wikisource 乾淨 → 快速三欄 demo（德 1916＋Baynes 1925 英＋繁中）。
+3. **《Collected Papers on Analytical Psychology》(#48225)** — 15 章文集，挑宗教相關章（I 神祕現象／XI 型別／XIV 無意識歷程）英＋繁中。
+4. 《Theory of Psychoanalysis》(#66041)、《Studies in Word-Association》、《Dementia Praecox》(1909) — 偏臨床，宗教學價值低，排後。
 
 ## Pilot 實況（2026-06-03，真資料跑過）
 
@@ -122,7 +153,7 @@
 
 ### 🎉 第一部（Erster Teil）全部譯竣 — 引論＋第二～五章，共 309 段 / 62,177 繁中字
 
-### 🚧 第二部（ZWEITER TEIL）進行中
+### 🎉 第二部（ZWEITER TEIL）全部譯竣 — 第一～八章，共 896 段 / 190,521 繁中字
 - **✅ 第二部第一章「力比多面面觀」(Aspects of the Libido = ZWEITER TEIL 引論)**：**全章 40 rows**（`ch06.json`）。德文 6136–6627 / 英文 HTML 6116–6524。含《白騾奧義書》樓陀羅讚（2,3,4,7,8,11,12-15）+《羯陀奧義書》拇指大小內在自性、太陽=神=力比多、浮士德「眾母親」鑰匙場景＋魔鬼成善之力、拇指仙童=陽具象徵、卡比里諸神/伊達山達克堤利/尖帽=包皮、神聖男童 puer aeternus/底比斯瓶畫法勒斯=普里阿普斯、宗教英雄=力比多擬象、**「力比多」術語考**（西塞羅 Tusc.IV 拉丁定義＋斯多噶 βούλησις vs 欲念、撒路斯特、梵文 lúbhyati 哥德語 liufs 詞源、力比多=生物學界的能量〔羅伯特‧邁爾〕）。
 - **✅ 第二部第二章「力比多的概念與發生學理論」(The Conception and Genetic Theory of Libido)**：**全章 22 rows**（`ch07.json`）。德文 6628–7385 / 英文 HTML 6525–7081（en 22 entries、無詩節）。含 性學三論力比多=性驅力/移置/Triebbündel、佛洛伊德妄想症長引文、早發性癡呆現實喪失、榮格「心靈能量」→發生學力比多再定義、批評亞伯拉罕、繁衍驅力/叔本華意志/投置、**斐涅斯-愛若斯/普羅提諾 太一-智性-世界靈魂=三位一體**（希臘 μία οὐσία ἐν τρισὶν ὑποστάσεσιν）、邏各斯與甘露/阿芙羅狄忒之鴿=聖靈、原力比多去性化（昇華 vs 壓抑）、自體情慾→自閉(Bleuler)修訂、**霍內格扁平地球偏執症+太陽陽具/施皮爾賴因酒=精液、佐西默斯煉金異象、土水=母**、象徵=情結消解入思維整體=藝術驅動力、施泰因塔爾「就像」類比驅力。西塞羅/撒路斯特拉丁＋梵文/哥德語詞源散見 Ch I 末段。抽取腳本 `c:/tmp/_jung_extract_ch7.py`。
 - **✅ 第二部第三章「力比多的轉化——原始人類發明的一個可能源頭」(The Transformation of the Libido)**：**全章 71 rows**（`ch08.json`，17,971 繁中字）。德文 7386–8947 / 英文 HTML 7082–8168（en 71 entries，6 詩節）。含 緊張性憂鬱患者太陽穴鑽洞案例、力比多前性發展階段（蝴蝶蛹期）/退行兩案例、**普羅米修斯=印度鑽火木 Pramantha**（Kuhn manthâmi-μανθάνω、弗勒癸阿斯火鷹、婆利古）、鑽火木=陽具/阿耆尼自女陰生、韋伯取火祭儀、**梨俱吠陀鑽火之歌**、Nodfyr+1268拉內科斯特拉丁、瓦昌迪求孕舞、取火=交媾替代物/節奏為要、亂倫禁忌→去性化→大地母親農耕、**廣林奧義書創世神話**（阿特曼裂分為夫妻、自口手生火）、口手前性區（口=女陰手=陽具）、語言起源=驅力轉外那一刻、**愛多列雅/廣林奧義書 火-言語-自我之光**、詞根 bhâ/svénô/své 發聲=太陽、**歌德浮士德序幕二詩/荷爾德林太陽少年/曼尼利烏斯/梵語 têjas 八義**、神祕合唱、agnis=阿耆尼=基督中介者、**但以理3烈火窯+1471貧民聖經三一/合一**、以賽亞/厄弗冷、阿耆尼=蘇摩=不死之藥=力比多、**取火=劫奪/被禁之物=手淫/阿拉丁神燈**、縱火手淫案例、儀式=對手淫退行的法律防護、Diana of Aricia 扯枝=manthâmi reiben/reissen 亂倫層。抽取腳本 `c:/tmp/_jung_extract_ch8.py`。
@@ -136,19 +167,11 @@
   4. ⚠️ **絕不碰** `mueller_data/`、`mueller_build.py`、`scripts/gnostic_library.py`（別的 session）；中文一律繁體、中間點用「‧」。
 - **✅ 第二部第六章「為脫離母親而戰」(The Battle for Deliverance from the Mother)**：**全章 76 rows**（`ch11.json`，英文 HTML 11982–13147，76 entries / 11 詩節，17,681 繁中字）。森林=聖樹=母親、奇萬托佩爾戲劇法文開場、E6 馬=動物性無意識巨段（諸神坐騎/魔鬼馬蹄足=陽具/閃電=馬）、戴歐尼修斯牛蹄禱辭、馬=風/火/光、四馬戰車=時間、廣林奧義書獻祭之馬、埃永獅頭時間神、馬=死亡之樹/特洛伊木馬、莎翁卡西烏斯=母親認同、阿普列尤斯戰鬥=交媾、約伯記箭靶+尼采〈魔術師〉〈寧錄〉二詩=自獵自縊內傾、霍普特曼《沉鐘》、維濕奴入定生梵天、菲羅克忒忒斯毒蛇咬足、埃及 Rê–Isis 讚歌（毒蟲螫太陽神=母親害死/索真名=力比多回母/退回天牛）、回望渴慕=麻痺毒蛇/參孫大利拉、密特拉負牛+基督背十字架、獻祭=放棄母親=爭取自立、箭傷=交媾象徵=新生即過往之死。抽取腳本 `c:/tmp/_jung_extract_ch11.py`。
   - **🔑 章界映射關鍵（Hinkle 重組）— 已實證更正**：**德文版第二部後段只有兩章** — 德 VI「Der Kampf um die Befreiung von der Mutter」(de 14189–15781) ＝ **英文 Ch VI（≈1:1，已 76 rows 完成）**；德 VII「Das Opfer」(de 15780–22374，至 Register 索引前) ＝ **英文 Ch VII「Dual Mother Role」＋ Ch VIII「The Sacrifice」兩章合併**（Hinkle 把德文 Das Opfer 拆成兩英章；兩者開頭皆「奇萬托佩爾獨白」可驗證）。英文章界：VI=HTML 11982–13147、VII=13147–16443、VIII=16443–18479。
-- **🚧 第二部第七章「雙重母親」(The Dual Mother Role)**：建設中（`ch12.json`，英文 HTML 13147–16443，**294 個英文 entries / 59 詩節 — 全書最大章**）。德文＝德 VII「Das Opfer」前半（`jung_ch12_de.txt`，1234 段）。**⏭️ 進度：已建 44 rows（標題＋E1–E43）**：…海華沙前史 Mudjekeewis 奪大熊貝帶/化西風眾風之父/東風 Wabun 求愛/由風與水重生。抽取器 `c:/tmp/_jung_extract_ch12.py`（294 entries / 1234 段）。
+- **✅ 第二部第七章「雙重母親」(The Dual Mother Role)**：**全章 294 rows**（`ch12.json`，英文 HTML 13147–16443，59 詩節，47,623 繁中字）。德文＝德 VII「Das Opfer」前半（`jung_ch12_de.txt`，1234 段）。含海華沙前史、雙重母親、英雄與母親幻想、神話/詩節大量對照。抽取器 `c:/tmp/_jung_extract_ch12.py`。
   - **⚙️ 寫法定案（user 核可）：en/de 不由模型逐字重打，改由 fill 腳本從來源檔程式帶入；模型只寫中文。** 模板 `c:/tmp/_jung_ch12_h.py`：`ROWS=[(en_tag, is_verse, de_spec, zh),…]`；`de_spec="=en"`（榮格保留英文的海華沙等詩節）或 `["D67",…]`（德文片段 id，腳本 smart-join+去腳註+OCRFIX）；`en` 自 `jung_ch12_en.txt` 抓（verse→blockquote）、`de` 同理。每批只換 ROWS（en_tag/de id 對照＋中文），跑 → build → commit。
   - **fill 模板增強**（`c:/tmp/_jung_ch12_j.py`）：de_spec 新增兩式 — `de_slice("D85","起anchor","止anchor")`（一個德文片段被 OCR 合併成多個 en entry 時，用短 anchor 從來源檔切片）＋`de_verse(["D86",...])`（詩節每片段一行 blockquote）。**整晚自動跑、不停問**（user 指示）。
-  - **✅ ch12 完成 294 rows。第八章 ch13 進行中**：en=jung_ch13_en.txt（E0 heading）；德文沿用 jung_ch12_de.txt（Das Opfer，ch13 由 D788 起）。**法語引文（米勒原文）整段在 D792，依 en 切片**。**進度 ch13: E1–E61（共124，約50%）**：回米勒幻象=力比多離母又奔母/神經症控訴父母/奇萬托佩爾法語獨白(遍尋百族百月無人識我靈魂/萬月後純潔靈魂生異世)/綠蝰蛇咬攻馬/別了忠實兄弟謝謝小妹妹/禱告莫使身腐→火山地震/譫妄呼Ja-ni-wa-ma(你懂我)/預言=海華沙仿白人救主(西班牙墨西哥秘魯救贖!)/作者=英雄渴慕對象=自戀(力比多繞圈/來太遲=嬰兒愛父母無法追上/萬月分隔取消亂倫)/白人女英雄尋不被解唯夢中相遇/保身無玷。**下一批 V62**＝帕特摩斯(少許失落非惡/神工似人工/礦坑二鐵埃特納熔岩/願有力造像見靈)/E63 唯一盼望:喚醒未被擄之死者…德文 D1043 起。⚠荷爾德林〈阿基里斯〉Hinkle只標題→en標題、德詩體略。⚠荷爾德林〈致自然〉〈帕利諾迪亞〉詩體 Hinkle 未譯→en 僅標題，德詩體(D845-902)暫 German-only 略(日後可補)。⚠ch13 法語段 de 用 D792 切片(OCR garbled 屬源)。皆PD。fill 法續。⚠️ pre-push hook 偶因平行 session race 報測試失敗，`npm test` 綠就再 pull-rebase+push（勿 --no-verify）；push race 被拒也再跑一次。
-  **🔑🔑 ch13 新 session 接手細則（2026-06-14 交接，照做即可，目前 19/124 rows）：**
-  1. **檔案現況**：`ch13.json` 已建（chunk_index=13、chapter_path「第二部　第八章　犧牲」、title_en「THE SACRIFICE」），**已完成 row0 標題 + E1–E18，共 19 rows**。下一個要做的 en entry＝**V19**（荷爾德林《徐培里翁》詩）。
-  2. **來源檔**（c:/tmp，被清就重建）：
-     - **英文** `jung_ch13_en.txt`（124 entries，`[E0]`=標題…`[V123]`）。重建：`python c:/tmp/_jung_extract_ch13.py`（讀 `jung_pou_en_1916.html` 第 **16443:18479** 行）。
-     - **德文沿用 ch12 的** `jung_ch12_de.txt`（整個「Das Opfer」連續塊，D0–D1233）。**ch13 的德文從 D788 起接續**（D787 是 ch12 E293 用掉的最後一段；D788＝「Kehren wir nach diesem weiten Umweg…」＝ch13 E1）。不需另建德文檔。
-  3. **每批做法**（仿 `c:/tmp/_jung_ch13_a.py`…`_e.py`）：`json.load` ch13.json → `add(zh,de,en)` → 寫回（`ensure_ascii=False, indent=1`）→ `python scripts/jung_build_all.py`（對齊閘）→ `git add ch13.json && commit "feat(jung): 第八章 ch13 …[loop]" && git -c rebase.autoStash=true pull --rebase --no-edit -q && git push`（race 被拒再跑一次）。每批完更新本進度行（**注意：進度行在「✅ ch12 完成…」那條 bullet 內，用字串 replace 改 `進度 ch13: E1–EN` 與 `下一批`，別用整行 regex**）。
-  4. **⚠️ ch13 特例**：**米勒原文是法文**，德文版整段法文引文都塞在 **D792**（OCR garbled 但屬原始源，照用）；英文把它拆成多個 entry（E3 獨白／E4 綠蛇/E5 別馬/E6 禱告引言/E7 禱告+火山／E8 譫妄引言/E9 Ja-ni-wa-ma…）→ **用 `D792.find(anchor)` 切片**對應每個 en entry（見 `_jung_ch13_b.py`/`_c.py`）。其餘德文散文片段同 ch12：footnote 多、OCR 常截斷，de 取可得片段、缺口標 `[…]`，**en/zh 必須完整**（zh 親譯，模型只寫中文）。詩照 blockquote `> `；聖經和合本；歌德/尼采/荷爾德林/華格納皆 PD。
-  5. ⚠️ **絕不碰** `mueller_data/`、`mueller_build.py`、`scripts/gnostic_library.py`；中文一律繁體、中間點「‧」；**勿 `--no-verify`**。
-  6. ch13 做完 124 entries → 第二部（含德文 Das Opfer 兩英章）即全部譯竣，可更新首頁「進度」與 SKILL.md。
+- **✅ 第二部第八章「犧牲」(The Sacrifice)**：**全章 124 rows**（`ch13.json`，英文 HTML 16443–18479，`[E0]` 標題至 `[V123]`，26,069 繁中字）。en=`jung_ch13_en.txt`；德文沿用 `jung_ch12_de.txt`（Das Opfer，ch13 由 D788 起）。米勒法語原文整段在 D792，前段依 en 切片；後段德文 OCR/章界不穩時，de 欄保守留空，en/zh 完整。內容已補至尾聲：幼兒幻想古拙性與亂倫退行、犧牲幼兒性英雄、工作與昇華、Viśvakarman/Purusha、荷爾德林深處智慧、密特拉與基督犧牲、蛇/普里阿普斯/洪水/火山、Ja-ni-wa-ma 與魏爾倫〈Mon Rêve Familier〉詩題。**第二部（英文 Ch I–VIII；德文後段 Das Opfer 拆為英 Ch VII–VIII）已全部譯竣。**
+  - **保留提醒**：荷爾德林〈阿基里斯〉Hinkle 只給標題→en 標題；荷爾德林〈致自然〉〈帕利諾迪亞〉詩體 Hinkle 未譯→en 僅標題，德詩體（D845–902）暫 German-only 略，日後若要做德文補遺可再回補。中文一律繁體、中間點「‧」；勿動 `mueller_data/`、`mueller_build.py`、`scripts/gnostic_library.py`。
 
 ### 穩定的 5 步方法（每章照做）
 1. **德文重 OCR**（Gemini 全耗盡 → 用 **Haiku**，user 訂閱制不計費）：
