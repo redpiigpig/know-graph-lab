@@ -3,906 +3,632 @@
 
 ## 自然科學
 
-【Nagel, E.】（1961）〈The Structure of Science: Problems in the Logic of Scientific Explanation〉，《Harcourt, Brace & World》
+【Maturana, H. R., & Varela, F. J.】（1987）〈The Tree of Knowledge: The Biological Roots of Human Understanding〉，《Shambhala》
 語言：英文
-所屬面向：強認識論的核心命題：認識即可還原性
-立場：補充
-摘要：內格爾把科學還原界定為「以橋接原理把高階理論演繹自低階理論」的關係，是「認識即可還原性」最經典的形式化。可作為本節描述「強認識論」如何把認識理解為向更基礎層級的還原與演繹的旁證範本。
-> **全文**：[SEP: Reductionism in Biology](https://plato.stanford.edu/entries/reduction-biology/)
-
-【Quine, W. V.】（1969）〈Epistemology Naturalized〉，《Ontological Relativity and Other Essays, Columbia University Press》
-語言：英文
-所屬面向：強認識論的核心命題：認識即可還原性
+所屬面向：識然的展開：從心靈到社會與生命
 立場：支持
-摘要：蒯因主張認識論應併入自然科學，研究「從感覺刺激到世界信念」的心理歷程，是把認識完全還原為自然因果鏈的強綱領代表。支持本節指認「認識即可還原性」確為近代認識論的主導取向。
-> **全文**：[PhilArchive: Epistemology Naturalized](https://philarchive.org/rec/QUIEN)
+摘要：以自創生（autopoiesis）與聖地牙哥認知理論主張「認識與生命歷程不可分」——認知不是對外在世界的再現，而是活著本身帶出（bringing forth）世界。強力支持本節把識然從心靈往下延展到生命／生物層，將「認識」奠基於生命的自我維持。
+> **全文**：[Google Books: The Tree of Knowledge](https://books.google.com/books/about/Tree_of_Knowledge.html?id=dExSNKl4RWAC)
 
-【Maturana, H. R. & Varela, F. J.】（1980）〈Autopoiesis and Cognition: The Realization of the Living〉，《Boston Studies in the Philosophy of Science》42，D. Reidel
+【Clark, A., & Chalmers, D.】（1998）〈The Extended Mind〉，《Analysis》58(1), 7–19
 語言：英文
-所屬面向：自指系統：認識意識的結構條件
+所屬面向：識然的展開：從心靈到社會與生命
 立場：補充
-摘要：兩位智利生物學家提出「自生系統（autopoiesis）」——生命系統是運作上封閉、唯一指涉自身的自我生產統一體，並據此將認知界定為生命的根本運作。為本節提供旁證：自我指涉的封閉性是生命與認知（乃至意識）得以成立的結構前提。
-> **全文**：[DOI 10.1007/978-94-009-8947-4](https://doi.org/10.1007/978-94-009-8947-4)
+摘要：延展心靈論與 4E（具身／嵌入／生成／延展）認知主張認知歷程可跨越顱骨、分佈於身體與環境之中。旁證本節「識然的展開」：認識不封閉於個體心靈，而向身體、社會與環境外溢，接應從心靈到社會與生命的層層開展。
+> **全文**：[Unfinishable Map: Embodied Cognition & the Extended Mind](https://unfinishablemap.org/concepts/embodied-cognition/)
 
-【Cogitate Consortium (Ferrante, O., Gorska-Klimowska, U. et al.)】（2025）〈Adversarial testing of global neuronal workspace and integrated information theories of consciousness〉，《Nature》642(8066)，133–142
+【Nagel, T.】（1974）〈What Is It Like to Be a Bat?〉，《The Philosophical Review》83(4), 435–450
 語言：英文
-所屬面向：反身困難與測不準邊界
-立場：補充
-摘要：256 名受試者以 fMRI／MEG／iEEG 同步受測的預註冊對抗式合作（GNWT vs IIT），兩理論各遭部分證偽（IIT 缺後皮質持續同步；GNWT 缺刺激終止時的點火）。此里程碑（IIT 僅取此對抗式研究，不取爭議過大的支持文獻）為本節旁證：主流意識理論皆可錯，呼應「外部觀測意識」的認識邊界與謙卑。
-> **全文**：[DOI 10.1038/s41586-025-08888-1](https://doi.org/10.1038/s41586-025-08888-1)
-
-【Tononi, G., Boly, M., Massimini, M. & Koch, C.】（2016）〈Integrated information theory: from consciousness to its physical substrate〉，《Nature Reviews Neuroscience》17(7)，450–461
-語言：英文
-所屬面向：反身困難與測不準邊界
+所屬面向：識然的展開：從心靈到社會與生命
 立場：反例
-摘要：IIT 自現象經驗的公設出發，主張意識的物理基質須是「內在因果效力的極大值（最大 Φ）」，並宣稱在原則上可量化經驗的質與量。此處僅取其作為「強整合／不可化約」立場的里程碑 foil（IIT 有偽科學爭議，故不採其爭議性支持證據）：其極大化原則本身蘊含——意識的觀測單位必為一不可分割的自指整體，外部分割式測量遭遇邊界。
-> **全文**：[DOI 10.1038/nrn.2016.44](https://doi.org/10.1038/nrn.2016.44)
+摘要：內格爾論證經驗的主觀性格（「作為某物是什麼樣子」）無法被任何客觀化約分析所捕捉。對「識然可順利從心靈往生命、跨物種外推」構成反例：跨物種的主觀認識存在不可通約的界限，提醒本卷外推須正視主觀性的抗拒。
+> **全文**：[PDF: What Is It Like to Be a Bat?](https://rintintin.colorado.edu/~vancecd/phil201/Nagel.pdf)
 
 ---
 
-## 第四節：意識認識論的整體位置
-
-【Seth, A. K. & Bayne, T.】（2022）〈Theories of consciousness〉，《Nature Reviews Neuroscience》23，439–452
+【Campbell, D. T.】（1974）〈Evolutionary Epistemology〉，收於 Schilpp, P. A. 編《The Philosophy of Karl Popper》，Open Court，頁 413–463
 語言：英文
-所屬面向：意識認識論的整體位置
+所屬面向：生物學的認識論：演化認識論與生物符號學
+立場：支持
+摘要：Campbell 提出「盲目變異與選擇性保留」為一切知識增長的通則，把認識過程納入演化的選擇機制，並命名「演化認識論」。作為盟友，它為本節「生物學的認識論」提供核心綱領：知識的判準與能力本身是演化的產物，識然有其自然史根基。
+> **全文**：[SEP：Evolutionary Epistemology](https://plato.stanford.edu/entries/epistemology-evolutionary/)
+
+【von Uexküll, J.】（1934）〈Streifzüge durch die Umwelten von Tieren und Menschen（A Foray into the Worlds of Animals and Humans）〉，《Julius Springer》（英譯：University of Minnesota Press, 2011）
+語言：德文
+所屬面向：生物學的認識論：演化認識論與生物符號學
 立場：補充
-摘要：權威回顧四大意識理論——高階理論、全域工作空間、再進入／預測處理、整合資訊論——並坦言當前理論彼此關係不明、是否可經驗區辨仍待解。為本節提供總體地圖：界定「把意識當認識對象」時可選的理論前設與其互不可化約的處境。
-> **全文**：[DOI 10.1038/s41583-022-00587-4](https://doi.org/10.1038/s41583-022-00587-4)
+摘要：Uexküll 以「環境界」（Umwelt）與「功能圈」概念主張每一物種依其感受器與效應器構築獨屬的主觀意義世界，是生物符號學的理論先聲。作為旁證，它把「認識」下放到生物層次的符號—意義關係，為本節生物符號學進路提供源頭文獻。（附註：Uexküll 本人反對達爾文式自然選擇，與演化認識論在框架上有張力。）
+> **全文**：[明尼蘇達大學出版社](https://www.upress.umn.edu/9780816659005/a-foray-into-the-worlds-of-animals-and-humans/)
 
-【Dehaene, S., Changeux, J.-P. & Naccache, L.】（2011）〈The Global Neuronal Workspace Model of Conscious Access: From Neuronal Architectures to Clinical Applications〉，收於《Characterizing Consciousness》，Springer
+【de Waal, F. B. M.】（1999）〈Anthropomorphism and Anthropodenial: Consistency in Our Thinking about Humans and Other Animals〉，《Philosophical Topics》27(1): 255–280
 語言：英文
-所屬面向：意識認識論的整體位置
-立場：支持
-摘要：Dehaene 等延伸 Baars 全域工作空間（GWT），以額頂網路「全域點火」說明資訊由無意識轉為意識可及（conscious access），並具神經與臨床可操作性。此為本節盟友：把意識定位為「全域可廣播之資訊存取」，提供一個弱湧現／功能式、原則上可外部觀測的意識認識論定位。
-> **全文**：[DOI 10.1007/978-3-642-18015-6_4](https://doi.org/10.1007/978-3-642-18015-6_4)
-
-【Seth, A. K. & Hohwy, J.】（2021）〈Predictive processing as an empirical theory for consciousness science〉，《Cognitive Neuroscience》12(2)，89–90
-語言：英文
-所屬面向：意識認識論的整體位置
-立場：支持
-摘要：Seth 與 Hohwy 主張預測處理（predictive processing／主動推論）本身非意識理論，卻是建構意識科學、系統性辨識神經相關物的理想基礎框架。此盟友把意識的整體位置錨定在「大腦的貝氏生成模型」，與弱湧現／全域工作空間相容，與強湧現難問題對峙。（按：本筆為 commentary 性質短文，期卷頁細節待核。）
-> **全文**：[DOI 10.1080/17588928.2020.1838467](https://doi.org/10.1080/17588928.2020.1838467)
-
-【Chalmers, D. J.】（1995）〈Facing Up to the Problem of Consciousness〉，《Journal of Consciousness Studies》2(3)，200–219
-語言：英文
-所屬面向：意識認識論的整體位置
+所屬面向：生物學的認識論：演化認識論與生物符號學
 立場：反例
-摘要：Chalmers 區分意識的「易問題」（功能／可及性，如辨識、報告）與唯一的「難問題」（主觀經驗何以存在），並主張非化約的經驗理論須在基本自然律中新增屬性（自然主義的性質二元論）。此 foil 標定本章整體位置的對立極：功能式（GWT／預測處理）定位無法觸及難問題，意識認識論必須正視此界限。
-> **全文**：[consc.net/papers/facing.html](https://consc.net/papers/facing.html)
+摘要：de Waal 一方面批評素樸擬人論，另一方面提出「反擬人論」（anthropodenial）——先驗否認動物有類人心理同樣是偏誤，主張以演化連續性校準對動物認識的判斷。作為 foil，它對「以人類認識為唯一標尺」的生物學認識論提出反例，主張識然的跨物種延伸須在擬人與反擬人兩偏誤之間取得平衡。
+> **全文**：[DOI](https://doi.org/10.5840/philtopics199927122)
+
+【Hoffmeyer, J.】（2008）〈Biosemiotics: An Examination into the Signs of Life and the Life of Signs〉，《University of Scranton Press》
+語言：英文
+所屬面向：生物學的認識論：演化認識論與生物符號學
+立場：補充
+摘要：Hoffmeyer 系統化生物符號學，主張生命本身即符號歷程，需要一套「以有機體為主體」的理論與自然選擇原則並置，並援引 Uexküll 的環境界理論。作為旁證，它把本節的生物學認識論推向「生命＝符號」的統整框架，呼應識然在生命尺度上的展開。
+> **全文**：[出版社頁面](https://www.scrantonpress.com/)（細節待核）
+
+---
+
+## 附記
+- 立場分布：支持 4／補充 5／反例 3（共 12 筆）。每節皆含至少 1 反例 + 1 支持或補充。
+- 待核：Hoffmeyer（2008）出版社連結為機構通用頁，未取得穩定書目 DOI／ISBN 頁，標「（細節待核）」。
+- 捨棄：原擬引之《歐美研究》51(4) 一文因 PDF 為壓縮二進位無法核實題名／作者／主題，為免杜撰予以捨棄。
 
 
 ## 心理學
 
-【Clark, A.】（2016）〈Surfing Uncertainty: Prediction, Action, and the Embodied Mind〉，《Oxford University Press》
+【Araujo, S.F.】（2016）〈Wundt and the Philosophical Foundations of Psychology〉，《Springer》（另見 Stanford Encyclopedia of Philosophy「Wilhelm Maximilian Wundt」條目）
 語言：英文
-所屬面向：知識即再現：觀察即模擬，全等模擬即創造
-立場：支持
-摘要：克拉克整合預測加工理論，主張大腦是「預測機器」，知覺即以內在生成模型主動模擬感官成因、再以預測誤差修正。強力支持本節「觀察即模擬」：認識本質上是腦內對世界的再現與重建，而非被動接收。
-> **全文**：[NDPR Review](https://ndpr.nd.edu/reviews/surfing-uncertainty-prediction-action-and-the-embodied-mind/)
-
-【Varela, F. J., Thompson, E., & Rosch, E.】（1991）〈The Embodied Mind: Cognitive Science and Human Experience〉，《MIT Press》
-語言：英文
-所屬面向：弱認識論的誠實：身體性、歷史性與「再現的暴力」
+所屬面向：內省法的興衰：馮特、詹姆士與第一人稱的限制
 立場：補充
-摘要：瓦雷拉等提出「生成認知」（enaction），主張認知與世界在具身行動中互相帶出，認識與身體不可分割。為本節「身體性」向度提供認知科學旁證，但其反再現立場也使它對純再現論構成張力。
-> **全文**：[MIT Press: The Embodied Mind](https://mitpress.mit.edu/9780262720212/the-embodied-mind/)
+摘要：SEP 條目釐清馮特其實把「自我觀察」（selbstbeobachtung）判為不科學，只允許嚴格控制下的「內部知覺」（innere wahrnehmung）作實驗方法，且僅限感官經驗的基本面向，思維與情緒須改用文化心理學的歷史—人類學方法。此為本節旁證：第一人稱通道從一開始就被馮特本人劃定了嚴格邊界，內省不是萬能認識工具。
+> **全文**：[SEP: Wilhelm Maximilian Wundt](https://plato.stanford.edu/entries/wilhelm-wundt/)
 
----
-
-## 第四節　強弱之間：後後現代認識論的位置
-
-【Lau, H. & Rosenthal, D.】（2011）〈Empirical support for higher-order theories of conscious awareness〉，《Trends in Cognitive Sciences》15(8)，365–373
+【Schwitzgebel, E.】（2011）〈Perplexities of Consciousness〉，《MIT Press》
 語言：英文
-所屬面向：自指系統：認識意識的結構條件
-立場：支持
-摘要：高階理論主張：一個心理狀態之所以為意識狀態，繫於另一個「對該狀態的高階表徵（higher-order representation）」——這正是一種系統對自身狀態的自指表徵。文中援引盲視、前額葉差異等實證支持。此為本節最強盟友：意識的認識結構即「表徵自身狀態」的高階（自指）機制。
-> **全文**：[DOI 10.1016/j.tics.2011.05.009](https://doi.org/10.1016/j.tics.2011.05.009)
+所屬面向：內省法的興衰：馮特、詹姆士與第一人稱的限制
+立場：反例
+摘要：施維茨格貝爾以夢的色彩、心像、情緒等案例系統論證內省「不可靠」——它並不整體上產生為真或有據的信念，甚至系統性導向錯誤。此為對笛卡兒式「內省高度可靠」觀點的當代反例，深化本節「第一人稱限制」的論證。
+> **全文**：[MIT Press: Perplexities of Consciousness](https://mitpress.mit.edu/9780262525220/perplexities-of-consciousness/)
+
+【Costall, A.】（2006）〈'Introspectionism' and the mythical origins of scientific psychology〉，《Consciousness and Cognition, 15(4), 634–654》
+語言：英文
+所屬面向：內省法的興衰：馮特、詹姆士與第一人稱的限制
+立場：補充
+摘要：柯斯托爾論證教科書所述「內省主義興盛後被行為主義推翻」多為後設神話，馮特與詹姆士對內省的態度遠比通說審慎複雜。此旁證提醒：「內省法的興衰」敘事本身須被認識論地檢視，不可照單全收。
+> **全文**：[doi:10.1016/j.concog.2006.09.008](https://doi.org/10.1016/j.concog.2006.09.008)
 
 ---
 
-## 第三節：反身困難與測不準邊界
+### 小節二　深度心理學的解釋學：佛洛伊德、榮格與潛意識如何被認識
+
+【Ricoeur, P.】（1970）〈Freud and Philosophy: An Essay on Interpretation〉，《Yale University Press》（法文原著 1965）
+語言：英文（譯自法文）
+所屬面向：深度心理學的解釋學：佛洛伊德、榮格與潛意識如何被認識
+立場：支持
+摘要：呂格爾把精神分析定位為「懷疑的解釋學」，主張潛意識不是被觀察而是被詮釋——透過對意識表層的系統性懷疑，追索被遮蔽的驅力意義。此直接支持本節「潛意識如何被認識」＝解釋學式認識而非實證觀察的核心主張。
+> **全文**：[SEP: Paul Ricoeur](https://plato.stanford.edu/entries/ricoeur/)
+
+【Grünbaum, A.】（1984）〈The Foundations of Psychoanalysis: A Philosophical Critique〉，《University of California Press》
+語言：英文
+所屬面向：深度心理學的解釋學：佛洛伊德、榮格與潛意識如何被認識
+立場：反例
+摘要：格倫鮑姆同時反對兩邊：既批佛洛伊德「合拍論證」（Tally Argument）在臨床上循環無效，也駁斥哈伯瑪斯／呂格爾把精神分析重構為解釋學是逃避科學檢證。對本節構成雙重反例——潛意識若要被「認識」，解釋學進路未必比實證進路更站得住。
+> **全文**：[UC Press: The Foundations of Psychoanalysis](https://www.ucpress.edu/books/the-foundations-of-psychoanalysis/paper)
+
+【Popper, K.】（1963）〈Conjectures and Refutations: The Growth of Scientific Knowledge〉，《Routledge & Kegan Paul》
+語言：英文
+所屬面向：深度心理學的解釋學：佛洛伊德、榮格與潛意識如何被認識
+立場：反例
+摘要：波普爾以可否證性劃界，判定佛洛伊德與阿德勒的深度心理學為偽科學：任何行為皆可事後被其解釋，故無風險預測、無法被否證。此為對「深度心理學能認識潛意識」最尖銳的反例，逼問其知識論資格。
+> **全文**：[SEP: Karl Popper](https://plato.stanford.edu/entries/popper/)
+
+【Wilson, T.D.】（2002）〈Strangers to Ourselves: Discovering the Adaptive Unconscious〉，《Harvard University Press》
+語言：英文
+所屬面向：深度心理學的解釋學：佛洛伊德、榮格與潛意識如何被認識
+立場：補充
+摘要：威爾森提出「適應性潛意識」，主張自我之所以對己隱晦，不是佛洛伊德式壓抑，而是心智為效率而平行運作；並建議「觀察自己實際所為與他人評價」比內省更能認識自己。此旁證為深度心理學的潛意識概念提供後佛洛伊德的實證改寫版本。
+> **全文**：[Harvard University Press: Strangers to Ourselves](https://www.hup.harvard.edu/books/9780674013827)
+
+---
+
+### 小節三　認知無意識：實驗心理學逼近看不見的歷程
+
+【Kihlstrom, J.F.】（1987）〈The Cognitive Unconscious〉，《Science, 237(4821), 1445–1452》
+語言：英文
+所屬面向：認知無意識：實驗心理學逼近看不見的歷程
+立場：支持
+摘要：基爾斯特隆綜整自動化歷程、內隱記憶、閾下知覺、催眠等實驗證據，論證「認知無意識」——大量非意識結構與歷程可被實驗操作逼近而不必仰賴內省。此為本節核心支持文獻，示範實驗心理學如何「認識看不見的歷程」。
+> **全文**：[doi:10.1126/science.3629249](https://doi.org/10.1126/science.3629249)
+
+【Newell, B.R. & Shanks, D.R.】（2014）〈Unconscious influences on decision making: A critical review〉，《Behavioral and Brain Sciences, 37(1), 1–19》
+語言：英文
+所屬面向：認知無意識：實驗心理學逼近看不見的歷程
+立場：反例
+摘要：紐威爾與尚克斯以敏感度、資訊、即時性、相關性四準則嚴格檢視，主張多數宣稱的「無意識影響決策」在方法上站不住——覺察量測不夠敏感造成假分離。此反例質疑實驗心理學是否真的逼近了「看不見的歷程」，抑或量測假象。
+> **全文**：[doi:10.1017/S0140525X12003214](https://doi.org/10.1017/S0140525X12003214)
+
+【Schacter, D.L.】（1987）〈Implicit Memory: History and Current Status〉，《Journal of Experimental Psychology: Learning, Memory, and Cognition, 13(3), 501–518》
+語言：英文
+所屬面向：認知無意識：實驗心理學逼近看不見的歷程
+立場：補充
+摘要：夏克特系統整理內隱記憶的實驗史與分離範式，展示無需外顯回憶亦可測得先前經驗對表現的影響。此旁證為「實驗逼近看不見歷程」提供具體方法學基礎，與 Kihlstrom 互補。
+> **全文**：[doi:10.1037/0278-7393.13.3.501](https://doi.org/10.1037/0278-7393.13.3.501)
+
+---
+
+### 小節四　具身認知：身體作為個體層面的認識機制
+
+【Varela, F.J., Thompson, E. & Rosch, E.】（1991）〈The Embodied Mind: Cognitive Science and Human Experience〉，《MIT Press》
+語言：英文
+所屬面向：具身認知：身體作為個體層面的認識機制
+立場：支持
+摘要：本書首倡「生成／履現」（enaction）：認知不是先在心智對先在世界的再現，而是有機體在身體—環境互動史中「帶出」意義域。此為本節核心支持——身體正是個體層面認識得以發生的機制，而非被動載體。
+> **全文**：[IEP: Enactivism](https://iep.utm.edu/enactivism/)
+
+【Lakoff, G. & Johnson, M.】（1999）〈Philosophy in the Flesh: The Embodied Mind and Its Challenge to Western Thought〉，《Basic Books》
+語言：英文
+所屬面向：具身認知：身體作為個體層面的認識機制
+立場：補充
+摘要：雷可夫與詹森主張心智本質上是具身的、思維多屬無意識、抽象概念大量為隱喻，且隱喻根植於共通身體經驗；並指此發現直接動搖「以內省理解心智」的現象學式主體。此旁證把具身認識機制延伸到概念與語言層面。
+> **全文**：[Internet Archive: Philosophy in the Flesh](https://archive.org/details/philosophyinfles00lako)
+
+【Goldinger, S.D., Papesh, M.H., Barnhart, A.S., Hansen, W.A. & Hout, M.C.】（2016）〈The poverty of embodied cognition〉，《Psychonomic Bulletin & Review, 23(4), 959–978》
+語言：英文
+所屬面向：具身認知：身體作為個體層面的認識機制
+立場：反例
+摘要：戈丁格等人批評具身認知的核心原則要嘛過度含糊（「知覺受身體影響」誰都同意），要嘛毫無新意，且對經典實驗現象既無法解釋、也提不出可檢驗預測。此為對「身體作為認識機制」主張的直接反例，要求其兌現經驗承諾。
+> **全文**：[doi:10.3758/s13423-015-0860-1](https://doi.org/10.3758/s13423-015-0860-1)
 
 
 ## 哲學
 
-【Worrall, J.】（1989）〈Structural Realism: The Best of Both Worlds?〉，《Dialectica, 43(1–2), 99–124》
+【Gertler, B.】（2021）〈Self-Knowledge〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：強認識論的核心命題：認識即可還原性
-立場：補充
-摘要：渥羅爾主張科學跨理論變遷中保存的是「結構」，我們可對理論的數學結構作實在論承諾。為「認識可捕捉世界可還原的結構」提供當代精緻版旁證，但也以「結構」限縮了強認識論的還原雄心。
-> **全文**：[https://doi.org/10.1111/j.1746-8361.1989.tb00933.x](https://doi.org/10.1111/j.1746-8361.1989.tb00933.x)
+所屬面向：認識你自己：德爾斐箴言與反身認識的起點
+立場：支持
+摘要：SEP 系統整理「對自身心靈狀態的知識」的三個特殊性——認知上格外穩固、由專屬第一人稱方法取得、對自身狀態的宣稱享有特殊權威。此即創生哲學以德爾斐箴言為總綱、把「反身認識」立為知識論起點的當代學理支撐。
+> **全文**：[SEP: Self-Knowledge](https://plato.stanford.edu/entries/self-knowledge/)
 
-【Nagel, T.】（1974）〈What Is It Like to Be a Bat?〉，《The Philosophical Review, 83(4), 435–450》
+【Smith, J.】（2020）〈Self-Consciousness〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：強認識論的核心命題：認識即可還原性
+所屬面向：認識你自己：德爾斐箴言與反身認識的起點
+立場：補充
+摘要：本條目把德爾斐箴言直接連上自我意識與反身自指（reflexive self-reference）——「以自身為自身而非他物來指涉」的能力，並引 Nozick「成為一個我，就是具備反身自我指涉的能力」。補足本節從古希臘箴言到當代自我意識哲學的橋接。
+> **全文**：[SEP: Self-Consciousness](https://plato.stanford.edu/entries/self-consciousness/)
+
+【Nisbett, R. E., & Wilson, T. D.】（1977）〈Telling More than We Can Know: Verbal Reports on Mental Processes〉，《Psychological Review》84, 231–259
+語言：英文
+所屬面向：認識你自己：德爾斐箴言與反身認識的起點
 立場：反例
-摘要：湯瑪斯‧內格爾論證主觀經驗的「像什麼」面向無法被任何客觀／物理還原描述窮盡。直接構成「認識即可還原性」的反例：存在原則上不可還原為第三人稱結構的認識對象。
-> **全文**：[https://doi.org/10.2307/2183914](https://doi.org/10.2307/2183914)
+摘要：經典實驗證據顯示人對高階認知歷程幾無直接內省通路，「自我報告」往往是事後套用素樸因果理論而非真正的內省。這對「認識你自己」＝可靠反身自知構成最強反例：反身認識若素樸自信便會系統性失真，逼使本卷把反身認識重構為需被規訓的功課而非天賦透明。
+> **全文**：[PDF: Telling More than We Can Know](https://home.csulb.edu/~cwallis/382/readings/482/nisbett%20saying%20more.pdf)
+
+【Sellars, W.】（1956）〈Empiricism and the Philosophy of Mind〉，《University of Pittsburgh / Minnesota Studies》
+語言：英文
+所屬面向：認識你自己：德爾斐箴言與反身認識的起點
+立場：反例
+摘要：塞拉斯拆穿「所與神話」（Myth of the Given），否定有不可修正、前概念的內在直接給予作為知識地基；並以「瓊斯神話」論證內省本身是後天習得的理論性建構。對「反身直觀即確定自知」構成根本反例，支持本卷把識然理解為概念中介下的生成而非透明所與。
+> **全文**：[IEP / SEP: Wilfrid Sellars](https://plato.stanford.edu/entries/sellars/)
 
 ---
 
-## 第二節　知識即再現：觀察即模擬，全等模擬即創造
-
-【Rorty, R.】（1979）〈Philosophy and the Mirror of Nature〉，《Princeton University Press》
+【Goldman, A., & O'Connor, C.】（2024）〈Social Epistemology〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：知識即再現：觀察即模擬，全等模擬即創造
-立場：反例
-摘要：羅蒂以「自然之鏡」隱喻批判把知識當作「準確再現實在」的再現論，主張知識來自實踐互動與對話協商而非鏡映。構成本節「知識即再現」命題的根本反例與對手立場。
-> **全文**：[Wikipedia: Philosophy and the Mirror of Nature](https://en.wikipedia.org/wiki/Philosophy_and_the_Mirror_of_Nature)
-
-【Haraway, D.】（1988）〈Situated Knowledges: The Science Question in Feminism and the Privilege of Partial Perspective〉，《Feminist Studies, 14(3), 575–599》
-語言：英文
-所屬面向：弱認識論的誠實：身體性、歷史性與「再現的暴力」
+所屬面向：各學科「如何認識」：跨學科知識論的問題意識
 立場：支持
-摘要：哈洛威否定「從無處俯視」的全知客觀，主張一切知識都是具身、局部、處境化的「處境知識」，並以「部分視角」為更誠實的客觀性。強力支持本節弱認識論對身體性與歷史性的誠實坦承。
-> **全文**：[https://doi.org/10.2307/3178066](https://doi.org/10.2307/3178066)
+摘要：社會知識論把「知識」的社會維度（見證、集體主體、科學社群、學科分工）系統化，主張認識不能化約為孤立個體的心理事件。支持本節「各學科各自如何認識」的問題意識——認識論須向多元社會實踐與學科方法開放。
+> **全文**：[SEP: Social Epistemology](https://plato.stanford.edu/entries/epistemology-social/)
 
-【Spivak, G. C.】（1988）〈Can the Subaltern Speak?〉，《Marxism and the Interpretation of Culture, University of Illinois Press, 271–313》
-語言：英文
-所屬面向：弱認識論的誠實：身體性、歷史性與「再現的暴力」
-立場：支持
-摘要：史碧瓦克區分政治代表（Vertretung）與論述再現（Darstellung），指西方知識分子「為他者發聲」往往以自身語彙覆寫被壓迫者的經驗，構成「認識暴力」。直接為本節「再現的暴力」命題提供奠基性文獻。
-> **全文**：[Spivak, Can the Subaltern Speak? (PDF)](https://jan.ucc.nau.edu/~sj6/Spivak%20CanTheSubalternSpeak.pdf)
-
-【Harding, S.】（1995）〈"Strong Objectivity": A Response to the New Objectivity Question〉，《Synthese, 104(3), 331–349》
-語言：英文
-所屬面向：強弱之間：後後現代認識論的位置
-立場：支持
-摘要：哈丁提出「強客觀性」，主張從處境出發、加上嚴格的反身自我批判，反而能達到比價值中立更強的客觀性。直接呼應本節「強弱之間」——以承認處境性（弱）來強化客觀性（強）的調和位置。
-> **全文**：[https://doi.org/10.1007/BF01064504](https://doi.org/10.1007/BF01064504)
-
-【Massimi, M.】（2022）〈Perspectival Realism〉，《Oxford University Press》
-語言：英文
-所屬面向：強弱之間：後後現代認識論的位置
+【Foucault, M.】（1966／1970）〈The Order of Things: An Archaeology of the Human Sciences〉，《Éditions Gallimard / Pantheon》
+語言：英文（法文原著中譯）
+所屬面向：各學科「如何認識」：跨學科知識論的問題意識
 立場：補充
-摘要：馬西米主張「視角實在論」：科學知識永遠是歷史與文化處境化的，卻仍可對「現象」作實在論承諾，靠多元知識社群的視角協作而成長。為本節「後後現代認識論」如何同時容納處境性與實在性提供最新範式旁證。
-> **全文**：[https://doi.org/10.1093/oso/9780197555620.001.0001](https://doi.org/10.1093/oso/9780197555620.001.0001)
+摘要：傅柯以「知識型」（épistème）與「歷史先驗」考掘博物學、政治經濟學、語文學等學科如何在不同時代被同一套隱含規則所結構。旁證本節：各學科「如何認識」並非中性方法，而受歷史條件形塑，跨學科知識論須揭示此深層配置。
+> **全文**：[Philopedia: The Order of Things](https://philopedia.org/works/the-order-of-things-an-archaeology-of-the-human-sciences/)
 
-【Tiwald, J. & Van Norden, B. (eds.)／Stanford Encyclopedia of Philosophy】（2014, rev.）〈Wang Yangming〉，《Stanford Encyclopedia of Philosophy》
+【Oppenheim, P., & Putnam, H.】（1958）〈Unity of Science as a Working Hypothesis〉，《Minnesota Studies in the Philosophy of Science》2, 3–36
 語言：英文
-所屬面向：知行合一的認識論重讀：兩種真理向度的統一
-立場：支持
-摘要：SEP 詳述王陽明「知行合一」（zhi xing heyi）的核心主張——真知不能與行動分離，知是行的明覺精察、行是知的真切篤實。此說正面支持本節把「命題式真理」與「實踐式真理」收攏為同一認識歷程的兩個向度，為「知行合一的認識論重讀」提供權威的原典詮釋根基。
-> **全文**：[SEP: Wang Yangming](https://plato.stanford.edu/entries/wang-yangming/)
-
-【Frisina, W. G. 等／Stanford Encyclopedia of Philosophy】（2022）〈Epistemology in Chinese Philosophy〉，《Stanford Encyclopedia of Philosophy》
-語言：英文
-所屬面向：知行合一的認識論重讀：兩種真理向度的統一
-立場：補充
-摘要：該條目指出中國哲學的知識論與倫理學內在交纏，王陽明的良知與知行合一正是「知識不可與道德實踐切割」的典範。此為旁證，補充本節「兩種真理向度的統一」並非孤立論斷，而與整個中國知識論傳統的「知行不二」結構一致。
-> **全文**：[SEP: Epistemology in Chinese Philosophy](https://plato.stanford.edu/entries/chinese-epistemology/)
-
-【Ryle, G.】（1949）〈Knowledge How（The Concept of Mind）〉，《Stanford Encyclopedia of Philosophy（Knowledge How）》
-語言：英文
-所屬面向：知行合一的認識論重讀：兩種真理向度的統一
+所屬面向：各學科「如何認識」：跨學科知識論的問題意識
 立場：反例
-摘要：賴爾以「知道如何（knowing-how）」對抗「知道那樣（knowing-that）」，反對「主智主義傳說」把實踐能力化約為命題知識，主張兩者是不同種類的知識。此為 foil：它把知與行截然兩分、拒絕統一，正好與本節「知行合一、兩種真理向度統一」的立場相對峙，逼問創生哲學如何避免賴爾式的無窮後退。
-> **全文**：[SEP: Knowledge How](https://plato.stanford.edu/entries/knowledge-how/)
+摘要：本文主張科學可經「微觀化約」層層下溯到基本粒子物理，構成單一統一體系。此還原論統一觀恰與本節「各學科各有不可化約的認識方式」相反，是最鮮明的 foil：若學科皆可化約為物理，跨學科知識論的多元問題意識即被取消。
+> **全文**：[PDF: Unity of Science as a Working Hypothesis](https://home.csulb.edu/~cwallis/382/readings/690/recieved/oppenheim.unity.of.science.marked.pdf)
 
 ---
-
-### 小節二　蓋提爾問題：JTB 的崩解與靜態知識觀的極限
-
-【Gettier, E. L.】（1963）〈Is Justified True Belief Knowledge?〉，《Analysis 23(6): 121–123》
-語言：英文
-所屬面向：蓋提爾問題：JTB 的崩解與靜態知識觀的極限
-立場：支持
-摘要：蓋提爾以兩個反例證明「有正當理由的真信念」（JTB）並非知識的充分條件——人可碰巧為真而非真正擁有知識。這是本節的核心奠基文獻，直接支持「JTB 崩解、靜態知識觀失效」的論斷。
-> **全文**：[Gettier 1963 (PDF)](https://fitelson.org/proseminar/gettier.pdf)
-
-【Ichikawa, J. & Steup, M.／Stanford Encyclopedia of Philosophy】（2018）〈The Analysis of Knowledge〉，《Stanford Encyclopedia of Philosophy》
-語言：英文
-所屬面向：蓋提爾問題：JTB 的崩解與靜態知識觀的極限
-立場：補充
-摘要：SEP 系統回顧蓋提爾之後半世紀「JTB＋第四條件」修補方案的反覆失敗，顯示靜態三件式分析難以堵住層出不窮的反例。此為旁證，補充本節「靜態知識觀的極限」並非作者一人之見，而是學界對 JTB 範式的共同診斷。
-> **全文**：[SEP: The Analysis of Knowledge](https://plato.stanford.edu/entries/knowledge-analysis/)
-
-【Lehrer, K. & Paxson, T. D.】（1969）〈Knowledge: Undefeated Justified True Belief〉，《The Journal of Philosophy 66(8): 225–237》
-語言：英文
-所屬面向：蓋提爾問題：JTB 的崩解與靜態知識觀的極限
-立場：反例
-摘要：萊勒與帕克森不放棄 JTB 框架，主張加上「無可推翻性（indefeasibility）」第四條件即可修補蓋提爾難題、保留靜態的真信念分析。此為 foil：它代表「靜態知識觀仍可被搶救」的對立路線，與本節「JTB 應被歷程典範取代」的結論直接衝突。
-> **全文**：[Lehrer & Paxson 1969 (PDC)](https://www.pdcnet.org/jphil/content/jphil_1969_0066_0008_0225_0237)
-
----
-
-### 小節三　誠實生成論：以認知歷程的誠實度取代碰巧為真
-
-【Greco, J.】（2010）〈Achieving Knowledge: A Virtue-Theoretic Account of Epistemic Normativity〉，《Cambridge University Press》
-語言：英文
-所屬面向：誠實生成論：以認知歷程的誠實度取代碰巧為真
-立場：支持
-摘要：葛雷柯主張知識是「認知成就」——真信念須因主體運用認知能力而達成，方能歸功於主體並排除蓋提爾式運氣。這正面支持「誠實生成論」以歷程／成就取代「碰巧為真」的核心策略：知識繫於認知歷程的品質而非運氣巧合。
-> **全文**：[SEP: Virtue Epistemology](https://plato.stanford.edu/entries/epistemology-virtue/)
-
-【Pritchard, D.】（2012）〈Anti-Luck Virtue Epistemology〉，《The Journal of Philosophy 109(3): 247–279》
-語言：英文
-所屬面向：誠實生成論：以認知歷程的誠實度取代碰巧為真
-立場：補充
-摘要：普里查德的「反運氣德性知識論」並列安全性（anti-luck）與能力（ability）兩條件，主張知識須同時排除運氣並源於認知能力。此為旁證，補充「以歷程／能力取代碰巧為真」是當代知識論的主流修補方向，為誠實生成論提供同盟性的理論座標。
-> **全文**：[SEP: Virtue Epistemology](https://plato.stanford.edu/entries/epistemology-virtue/)
-
-【Sosa, E.】（2007）〈A Virtue Epistemology: Apt Belief and Reflective Knowledge, Vol. I〉，《Oxford University Press》
-語言：英文
-所屬面向：誠實生成論：以認知歷程的誠實度取代碰巧為真
-立場：補充
-摘要：索薩以「適切信念（apt belief）」——真因為展現認知能力（accurate because adroit）——分析知識，並區分動物知識與反思知識。此旁證支持誠實生成論的取向：知識的規範性錨定於認知表現的恰當性，而非真值與運氣的偶然吻合。
-> **全文**：[SEP: Virtue Epistemology](https://plato.stanford.edu/entries/epistemology-virtue/)
-
-【Goldman, A. I.】（1979）〈What Is Justified Belief?〉，《Stanford Encyclopedia of Philosophy（Reliabilist Epistemology）》
-語言：英文
-所屬面向：誠實生成論：以認知歷程的誠實度取代碰巧為真
-立場：反例
-摘要：高德曼的歷程可靠論主張：信念正當與否取決於產生它的歷程是否「可靠」，且主體無須了解該歷程（外在論）。此為 foil：它同樣訴諸「歷程」卻把規範性放在客觀可靠率上，與誠實生成論強調主體「誠實度」這一具承擔性、可內省向度的歷程品質正面對立。
-> **全文**：[SEP: Reliabilist Epistemology](https://plato.stanford.edu/entries/reliabilism/)
-
----
-
-### 小節四　知識論接壤倫理學：認識即承擔
 
 【Zagzebski, L. T.】（1996）〈Virtues of the Mind: An Inquiry into the Nature of Virtue and the Ethical Foundations of Knowledge〉，《Cambridge University Press》
 語言：英文
-所屬面向：知識論接壤倫理學：認識即承擔
+所屬面向：誠實生成論作為判準的接引（判準本身見卷二）
 立場：支持
-摘要：札格澤博斯基主張知識源於「理智德性的行動」，並把理智德性視為道德德性的對應物、以實踐智慧統合二者。這直接支持本節「知識論接壤倫理學、認識即承擔」：認識行為本身帶有德性責任的規範重量。
-> **全文**：[SEP: Virtue Epistemology](https://plato.stanford.edu/entries/epistemology-virtue/)
+摘要：札格澤布斯基把知識奠基於智性德性，並主張智性德性與道德德性同源、良知與誠實貫穿認知歷程。這正是本卷「識然通向應然」與「誠實生成論」判準的當代學理支柱：認識的成立內含品格與誠實的規範向度。
+> **全文**：[Cambridge: Virtues of the Mind](https://www.cambridge.org/core/books/virtues-of-the-mind/4C29D940655E5EB27FFFA25141F7526B)
 
 【Code, L.】（1987）〈Epistemic Responsibility〉，《University Press of New England / Brown University Press》
 語言：英文
-所屬面向：知識論接壤倫理學：認識即承擔
+所屬面向：誠實生成論作為判準的接引（判準本身見卷二）
 立場：補充
-摘要：寇德主張認識論應以「知性責任」為核心，知性責任是首要的理智德性，知識在處境化的「認知者」之對話中生成。此旁證強化本節論點：認識不是中立的真值匹配，而是負責任主體的承擔活動。
-> **全文**：[IEP: Virtue Epistemology](https://iep.utm.edu/virtue-epistemology/)
+摘要：柯德主張知識評價不能窮盡於「純認識論」標準，認識者須為其認識負責，智性德性與責任把認識論導向倫理與社會脈絡。旁證本節：以誠實／負責為認識判準的接引，把識然與應然在方法論上縫合。
+> **全文**：[PhilPapers: Epistemic Responsibility](https://philpapers.org/rec/CODER)
 
-【Williamson, T.】（2000）〈Knowledge and Its Limits〉，《Oxford University Press》
+【Turri, J., Alfano, M., & Greco, J.】（2021）〈Virtue Epistemology〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：知識論接壤倫理學：認識即承擔
+所屬面向：誠實生成論作為判準的接引（判準本身見卷二）
 立場：反例
-摘要：威廉森的「知識優先」主張知識是不可再分析的、最一般的事實性心靈狀態（factive mental state），拒絕把知識拆解為信念＋正當性＋其他條件的合取。此為 foil：若知識本身不可分析、亦非由倫理性「承擔」構成，本節「認識即承擔、知識論接壤倫理學」的化約方向便受到根本質疑。
-> **全文**：[Williamson, Knowledge First Epistemology (PDF)](https://fphil.uniba.sk/fileadmin/fif/katedry_pracoviska/kfdf/Personal/Nuhlicek/Literatura/Teorie_zdovodnenia/Williamson__T._-_Knowledge_First_Epistemology__2011_.pdf)
-
----
-
-### 小節五　誠實生成論的認識論地位：超越 JTB 的歷程典範
-
-【Piaget, J.】（1970）〈Genetic Epistemology〉，《Columbia University Press》
-語言：英文
-所屬面向：誠實生成論的認識論地位：超越 JTB 的歷程典範
-立場：補充
-摘要：皮亞傑的「發生認識論」把知識理解為主體在與世界互動中持續自我建構的歷程，知識奠基於行動的協調與運思結構之發生史。此旁證為「歷程典範」提供發展心理學側的支援：知識本就是動態生成而非靜態的命題持有，呼應誠實生成論「以歷程取代狀態」的定位。
-> **全文**：[Genetic Epistemology (Wikipedia)](https://en.wikipedia.org/wiki/Genetic_epistemology)
-
-【Sosa, E.】（1980/1991）〈The Raft and the Pyramid: Coherence versus Foundations in the Theory of Knowledge〉，《Midwest Studies in Philosophy 5: 3–25》
-語言：英文
-所屬面向：誠實生成論的認識論地位：超越 JTB 的歷程典範
-立場：支持
-摘要：索薩在此奠定德性知識論的綱領，主張以認知能力（intellectual virtue）的展現作為知識的根基，超越基礎論與融貫論的靜態結構之爭。此支持本節把誠實生成論定位為「歷程典範」：知識的正當性來自能力之恰當運作的動態歷程，而非命題集合的靜態關係。
+摘要：SEP 梳理德性可靠論（Goldman、Sosa：把德性理解為知覺、記憶等可靠的真值導向官能）與德性責任論之分歧。可靠論這一支恰對「以誠實品格為判準」構成 foil——若德性只是產生真信念的可靠官能，則誠實作為道德品格對「知識成立」並非必要，逼本卷須說明誠實生成論何以優於純可靠論。
 > **全文**：[SEP: Virtue Epistemology](https://plato.stanford.edu/entries/epistemology-virtue/)
 
-【Williamson, T.】（2000）〈Knowledge and Its Limits（knowledge as prime, unanalyzable）〉，《Oxford University Press》
-語言：英文
-所屬面向：誠實生成論的認識論地位：超越 JTB 的歷程典範
+【Lévi-Strauss, C.】（1962／1963）〈Totemism（Needham 譯）〉，《Beacon Press》
+語言：英文（原文法文）
+所屬面向：圖騰與集體歡騰：宗教生活的基本形式
 立場：反例
-摘要：威廉森主張知識是「質數性的（prime）」、不可被任何內在條件合取所窮盡，因此任何「分析—重構」知識的方案（含以歷程或誠實度重構）原則上皆告失敗。此為 foil：它從根本否定「以新典範取代 JTB 分析」這一工程的可行性，迫使誠實生成論交代自身相對於「知識不可分析論」的方法論地位。
-> **全文**：[NDPR: Williamson on Knowledge](https://ndpr.nd.edu/reviews/williamson-on-knowledge/)
+摘要：李維史陀主張「圖騰制」根本不是一種宗教，而是西方人類學強加的人造範疇；它其實是人類藉自然物種差異來思考社會結構的一套「分類認知系統」（good to think with）。此為對涂爾幹的正面反例：把圖騰的解釋由「集體情感／宗教能量」轉為「普遍的認知—邏輯結構」，直接挑戰本章的社會情感起源論。
+> **全文**：[Lévi-Strauss Totemism 講解與書目](https://egyankosh.ac.in/bitstream/123456789/27549/1/Unit-14.pdf)
 
-【Chalmers, D. J.】（2006）〈Strong and Weak Emergence〉，收於 P. Clayton & P. Davies 編《The Re-Emergence of Emergence》，Oxford University Press
+【Evans-Pritchard, E. E.】（1965）〈Theories of Primitive Religion〉，《Clarendon Press》
 語言：英文
-所屬面向：強湧現與弱湧現
+所屬面向：圖騰與集體歡騰：宗教生活的基本形式
 立場：反例
-摘要：Chalmers 嚴格區分弱湧現（高層現象原則上可由低層演繹）與強湧現（原則上無法演繹，需新增基本自然律），並主張意識（現象經驗）是當前唯一可信的強湧現候選。此文是本節「意識屬哪種湧現＝認識論前設」的直接 foil：若意識強湧現，則弱湧現式的化約解釋註定不完備。
-> **全文**：[consc.net/papers/emergence.pdf](https://consc.net/papers/emergence.pdf)
+摘要：埃文思—普里查批評涂爾幹以澳洲宗教為「最簡單／最早」暗藏演化論階序，且集體歡騰無法解釋日常宗教情感；並指出神聖與世俗在許多傳統中相互滲透、非截然二分。作為反例，同時衝擊本章第一節（集體歡騰起源論）與第四節（神聖／世俗二分）。
+> **全文**：[Evans-Pritchard 1965 全文 PDF](https://monoskop.org/images/e/e1/Evans_Pritchard_E_E_Theories_of_Primitive_Religion_1965.pdf)
 
-【Bedau, M. A.】（1997）〈Weak Emergence〉，《Philosophical Perspectives》11，375–399
+【Pizarro, J. J., Zumeta, L. N., Bouchat, P., Włodarczyk, A., Rimé, B., Basabe, N., Amutio, A., & Páez, D.】（2022）〈Emotional processes, collective behavior, and social movements: A meta-analytic review of collective effervescence outcomes during collective gatherings and demonstrations〉，《Frontiers in Psychology》第 13 卷
 語言：英文
-所屬面向：強湧現與弱湧現
+所屬面向：圖騰與集體歡騰：宗教生活的基本形式
 立場：支持
-摘要：Bedau 給出「弱湧現」的標準定義——高層型態雖無法簡潔預測、卻可由低層機制經模擬／逐步推導而原則上可解釋，且不需新增基本律。此為本節盟友：把意識安置為弱湧現，可保留物理主義式認識路徑，與強湧現論形成認識論對峙。但 Bedau 亦坦承弱湧現無法消解意識的傳統形上難題。
-> **全文**：[DOI 10.1111/0029-4624.31.s11.17](https://doi.org/10.1111/0029-4624.31.s11.17)
+摘要：本後設分析（k=50、N=182,738）以實證確認集體歡騰與自我超越情緒（r=0.58）、群體認同、社會整合強相關，且效果可延續於聚會之後。作為當代里程碑式盟友，把涂爾幹百年前的思辨命題轉為可量化的社會心理學證據，支撐「儀式聚集生成集體表徵」的機制。
+> **全文**：[doi:10.3389/fpsyg.2022.974683](https://doi.org/10.3389/fpsyg.2022.974683)
 
-【O'Connor, T.】（2021）〈Emergent Properties〉，《Stanford Encyclopedia of Philosophy》（Winter 2021 edition）
+【Polanyi, M.】（1966）〈The Tacit Dimension〉，《Doubleday》
 語言：英文
-所屬面向：強湧現與弱湧現
+所屬面向：身體儀式作為認識的載體：實踐知識與默會之知
+立場：支持
+摘要：博蘭尼以「我們所知多於我們所能言說」（we know more than we can tell）確立默會之知（tacit knowledge）：一切明言的認識底下都有一層具身、個人而難以形式化的實踐知識。此為本節核心盟友，為「身體儀式作為認識載體」提供知識論根據——儀式所傳遞的正是不能被命題窮盡的默會之知。
+> **全文**：[Polanyi 默會之知專文](https://www.polanyisociety.org/TAD%20WEB%20ARCHIVE/TAD30-2/TAD30-2-pg11-23-pdf.pdf)
+
+【Stanley, J., & Williamson, T.】（2001）〈Knowing How〉，《The Journal of Philosophy》第 98 卷第 8 期，頁 411–444
+語言：英文
+所屬面向：身體儀式作為認識的載體：實踐知識與默會之知
+立場：反例
+摘要：史丹利與威廉森為「主智論」辯護，主張「知道如何」（knowing-how）其實是「知道那個」（knowing-that）的一種，即命題知識，並反駁萊爾的無窮後退論證。作為反例：若一切實踐知識皆可化約為命題知識，則本節「儀式／默會之知是不可命題化的獨立認識」之核心主張須直接應答。
+> **全文**：[Stanley & Williamson 2001 PDF](http://www.thatmarcusfamily.org/philosophy/Course_Websites/Readings/Stanley%20and%20Williamson%20-%20Knowing%20How.pdf)
+
+【Durkheim, É., & Mauss, M.】（1903／1963）〈Primitive Classification（Needham 譯）〉，《Cohen & West / University of Chicago Press》
+語言：英文（原文法文）
+所屬面向：集體表徵與認識範疇的社會起源：時間、空間、因果
+立場：支持
+摘要：涂爾幹與牟斯提出「社會中心論」（sociocentrisme）：最早的邏輯範疇即社會範疇——「胞族是最初的類，氏族是最初的種」，時間、空間、因果、數等認識範疇皆由社會組織形式決定。此為本節第一手核心盟友，直接奠定「認識範疇的社會起源」命題。
+> **全文**：[Primitive Classification 1963 全文 PDF](https://monoskop.org/images/4/4d/Durkheim_Emile_Mauss_Marcel_Primitive_Classification_2nd_ed_1969.pdf)
+
+【Walsh, P. D.】（2024）〈Social cognition and the origin of concepts in Durkheim's sociology of knowledge〉，《Journal for the Theory of Social Behaviour》第 54 卷第 1 期，頁 86–103
+語言：英文
+所屬面向：集體表徵與認識範疇的社會起源：時間、空間、因果
 立場：補充
-摘要：SEP 權威詞條系統梳理「湧現屬性」的本體論（強）與認識論（弱）兩條進路、其與化約論／物理主義的關係，以及對意識的應用爭議。為本節提供概念地圖，界定「意識是哪種湧現」何以是一個認識論前設而非經驗結論。
-> **全文**：[plato.stanford.edu/entries/properties-emergent](https://plato.stanford.edu/entries/properties-emergent/)
+摘要：華爾許以批判實在論重探涂爾幹的知識社會學，主張《宗教生活的基本形式》對範疇之「社會基礎」的論證應循本體論而非認識論理路來理解，藉此救援涂爾幹免於「把真理化約為社會共識」之譏。作為當代旁證：既肯定範疇社會起源說，又修正其認識論越界之處。（作者名首字母細節待核）
+> **全文**：[doi:10.1111/jtsb.12406](https://doi.org/10.1111/jtsb.12406)
+
+【Boyer, P.】（2001）〈Religion Explained: The Evolutionary Origins of Religious Thought〉，《Basic Books》
+語言：英文
+所屬面向：集體表徵與認識範疇的社會起源：時間、空間、因果
+立場：反例
+摘要：博耶爾主張宗教表徵與認識傾向受「人類心腦的普遍性質」約束，「最小反直覺」概念因契合先天認知模板而易被記憶傳遞——宗教並非社會情感或社會結構的投影，而是為他用途演化之認知系統的副產品。作為反例，直接對撞涂爾幹—牟斯的「範疇＝社會範疇投影」，把起源由社會拉回普遍認知。
+> **全文**：[Religion Explained 條目與書目](https://en.wikipedia.org/wiki/Religion_Explained)
+
+【Atkin, A.】（2013）〈Peirce's Theory of Signs〉，《Stanford Encyclopedia of Philosophy》
+語言：英文
+所屬面向：記號學：Peirce 與符號三元關係中的認識
+立場：支持
+摘要：權威地重構皮爾斯「符號—對象—詮釋項」（representamen–object–interpretant）三元符號論，強調意義不是符號與對象的二元指涉，而由詮釋項的持續詮釋所生成。此說直接支撐本節「認識總經由符號三元中介、意義在詮釋中生成」的論點。
+> **全文**：[SEP: Peirce's Theory of Signs](https://plato.stanford.edu/entries/peirce-semiotics/)
+
+【Saussure, F. de】（1916/1959）〈Course in General Linguistics〉，《Philosophical Library / McGraw-Hill》
+語言：英文（原文法文）
+所屬面向：記號學：Peirce 與符號三元關係中的認識
+立場：反例
+摘要：索緒爾提出「能指／所指」二元符號模型，符號意義純由語言系統內部差異與社會約定的任意性決定，不涉指涉對象與詮釋項。這與皮爾斯三元論構成根本對立，是本節「三元 vs 二元」中介論的反例。
+> **全文**：[Internet Archive: Course in General Linguistics](https://archive.org/details/courseingenerall00saus)
+
+【Short, T. L.】（2007）〈Peirce's Theory of Signs〉，《Cambridge University Press》
+語言：英文
+所屬面向：記號學：Peirce 與符號三元關係中的認識
+立場：補充
+摘要：系統釐清皮爾斯符號論中「無限符號過程」（semiosis）與最終詮釋項的關係，補強三元關係如何避免詮釋的無窮倒退。為本節「符號中介的認識何以能收束為知識」提供旁證。
+> **全文**：[Cambridge: Peirce's Theory of Signs](https://doi.org/10.1017/CBO9780511498350)
 
 ---
 
-## 第二節：自指系統——認識意識的結構條件
+### 小節：象徵形式：Cassirer 與作為符號動物的人
 
-【Hofstadter, D. R.】（2007）〈I Am a Strange Loop〉，Basic Books
+【Friedman, M.】（2011）〈Ernst Cassirer〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：自指系統：認識意識的結構條件
+所屬面向：象徵形式：Cassirer 與作為符號動物的人
 立場：支持
-摘要：Hofstadter 主張「我」與意識自我源於大腦符號系統中的**自指迴圈（strange loop）**——一個對自身範疇進行表徵、具向下因果的高層型態，並援引 Gödel 自指公式為類比。此為本節核心盟友：自指／遞迴結構正是「系統能認識自身（含意識）」的結構性條件。
-> **全文**：[en.wikipedia.org/wiki/I_Am_a_Strange_Loop](https://en.wikipedia.org/wiki/I_Am_a_Strange_Loop)
+摘要：權威闡述卡西勒《象徵形式的哲學》：語言、神話、藝術、科學皆為人形塑經驗的「象徵形式」，並將康德的先天形式改造為文化—歷史可變的符號中介。直接支持本節「人是 animal symbolicum、認識經象徵形式而成立」的核心。
+> **全文**：[SEP: Ernst Cassirer](https://plato.stanford.edu/entries/cassirer/)
 
-【Levine, J.】（1983）〈Materialism and Qualia: The Explanatory Gap〉，《Pacific Philosophical Quarterly》64，354–361
+【Cassirer, E.】（1944）〈An Essay on Man: An Introduction to a Philosophy of Human Culture〉，《Yale University Press》
 語言：英文
-所屬面向：反身困難與測不準邊界
-立場：反例
-摘要：Levine 提出「解釋鴻溝」：即便接受物理主義，物理事實與感質之間仍存在無法被解釋消弭的認識落差，並把 Kripke 的形上論證轉化為認識論論證。此 foil 直接支撐本章「測不準邊界」的認識論性質——鴻溝不必是本體裂縫，而是觀測／解釋的結構限制。
-> **全文**：[DOI 10.1111/j.1468-0114.1983.tb00207.x](https://doi.org/10.1111/j.1468-0114.1983.tb00207.x)
-
-【O'Connor, T.; Wong, H. Y.】（2020, rev.）〈Emergent Properties〉，《Stanford Encyclopedia of Philosophy》
-語言：英文
-所屬面向：難問題與從無到有的暈眩
+所屬面向：象徵形式：Cassirer 與作為符號動物的人
 立場：補充
-摘要：本條梳理弱／強突現之分，並指出意識（連同意向性、能動性）是最常被提出需要「強突現」處理的現象，因為意識在不同面向上長期抗拒以任何物理詞彙作本體刻畫。作為旁證，本文為「從無到有」的暈眩提供了形上學語彙與選項地圖，框定本章如何在突現論與化約論之間落腳。（作者署名以 SEP 最新版本頁為準，細節待核）
-> **全文**：[SEP: Emergent Properties](https://plato.stanford.edu/entries/properties-emergent/)
+摘要：卡西勒在此提出以「符號動物」（animal symbolicum）取代「理性動物」界定人，主張人與世界之間插入了語言、神話、藝術、宗教、科學的符號網。為本節提供第一手經典表述的旁證。
+> **全文**：[Internet Archive: An Essay on Man](https://archive.org/details/essayonmanintrod0000cass)
+
+【Sperber, D.】（1975）〈Rethinking Symbolism〉，《Cambridge University Press》
+語言：英文
+所屬面向：象徵形式：Cassirer 與作為符號動物的人
+立場：反例
+摘要：斯柏伯反對把象徵當成一套「編碼—解碼」的符號系統（含對結構主義的批判），主張象徵是認知—心理的喚起機制，並無固定意義配對。此說質疑「象徵形式作為穩定認識形式」的預設，構成本節反例。
+> **全文**：[Cambridge Core: Rethinking Symbolism](https://www.cambridge.org/core/journals/language-in-society/article/abs/dan-sperber-rethinking-symbolism-cambridge-studies-in-anthropology-cambridge-university-press-1975-pp-xiii-153/55C6A0E06F2364CD9E40326F1A46E1C9)
 
 ---
 
-### 小節二：自指漩渦：主體性從關係捲出
+### 小節：詮釋學循環：Ricoeur、Gadamer 與理解的結構
 
-【McGinn, C.】（1989）〈Can We Solve the Mind–Body Problem?〉，《Mind》98(391), 349–366
+【Ramberg, B. & Gjesdal, K.】（2005）〈Hermeneutics〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：自指漩渦：主體性從關係捲出
+所屬面向：詮釋學循環：Ricoeur、Gadamer 與理解的結構
+立場：支持
+摘要：權威梳理詮釋學循環：前判斷（prejudice）使理解成為可能而非障礙，理解在部分與整體、文本與詮釋者「視域融合」中生成。直接支持本節「理解具循環結構、認識經詮釋中介」的主張。
+> **全文**：[SEP: Hermeneutics](https://plato.stanford.edu/entries/hermeneutics/)
+
+【Hirsch, E. D.】（1967）〈Validity in Interpretation〉，《Yale University Press》
+語言：英文
+所屬面向：詮釋學循環：Ricoeur、Gadamer 與理解的結構
 立場：反例
-摘要：McGinn 的「神祕論」主張身心問題雖有自然的解，但因人類認知存在「認知封閉」（如微積分之於老鼠），我們在原則上無法掌握連結意識與大腦的性質，故解釋永屬不可及之謎。作為 foil：與本節「以開放自指捲出主體性、不留不可解剩餘」正面對立，McGinn 主張剩餘恰恰永遠不可開顯。
-> **全文**：[PhilPapers: MCGCWS](https://philpapers.org/rec/MCGCWS)
+摘要：赫希主張文本意義由作者原意客觀決定，是詮釋有效性的唯一判準，並直接批評加達默的視域融合導致相對主義。此立場否定「理解必然循環且受前見中介」，構成本節的方法論反例。
+> **全文**：[Google Books: Validity in Interpretation](https://books.google.com/books/about/Validity_in_Interpretation.html?id=CcjUGVlekQQC)
 
 ---
 
-### 小節三：共構的誕生
+### 小節：神話與宗教象徵：象徵系統如何承載知識
 
-【Varela, F. J.】（1996）〈Neurophenomenology: A Methodological Remedy for the Hard Problem〉，《Journal of Consciousness Studies》3(4), 330–349
+【Geertz, C.】（1973）〈Religion as a Cultural System〉（收於《The Interpretation of Cultures》），《Basic Books》
 語言：英文
-所屬面向：共構的誕生
+所屬面向：神話與宗教象徵：象徵系統如何承載知識
 立場：支持
-摘要：Varela 回應 Chalmers，提出神經現象學——以嚴格的第一人稱現象學訓練與第三人稱認知科學「相互約束」，讓經驗結構與神經動力學彼此共同決定，而非單向化約。作為核心盟友：直接體現本節「意識與世界一起睜開眼、本體論與認識論同構」的方法論版本。
-> **全文**：[unstable.nl (PDF)](https://unstable.nl/andreas/ai/langcog/part3/varela_npmrhp.pdf)
+摘要：紀爾茲界定宗教為一套「象徵系統」，透過形塑存在秩序的觀念而確立情緒與動機，並以「厚描述」詮釋象徵所承載的「意義之網」。直接支持本節「宗教象徵系統承載並中介知識」的論點。
+> **全文**：[Internet Archive: The Interpretation of Cultures](https://archive.org/details/interpretationof0000geer)
 
-【Thompson, E.】（2007）〈Mind in Life: Biology, Phenomenology, and the Sciences of Mind〉，《Belknap / Harvard University Press》
-語言：英文
-所屬面向：共構的誕生
-立場：支持
-摘要：Thompson 提出「凡有生命處即有心」的連續性論題：生命與心智共享自我組織原則，心智的自組織是生命自組織的豐富化版本，藉此縫合生物學與現象學、收窄解釋鴻溝。作為盟友，為本節「共構」提供生命—心智同構的系統論證。
-> **全文**：[Harvard University Press](https://www.hup.harvard.edu/books/9780674057517)
-
-【Thompson, E.; Stapleton, M.】（2009）〈Making Sense of Sense-Making: Reflections on Enactive and Extended Mind Theories〉，《Topoi》28(1), 23–30
-語言：英文
-所屬面向：共構的誕生
+【Eliade, M.】（1959）〈The Sacred and the Profane: The Nature of Religion〉，《Harcourt, Brace & World》
+語言：英文（原文法文/羅馬尼亞文）
+所屬面向：神話與宗教象徵：象徵系統如何承載知識
 立場：補充
-摘要：本文釐清 enactivism 的核心並非自生性本身，而是「自主性」與「意義建構」（sense-making）——自主系統依其自帶規範主動帶出一個對它而言有意義的世界。作為旁證，補強本節「世界與意識共同睜開眼」中世界之意義非預存、而是隨主體共構這一論點。
-> **全文**：[upaya.org (PDF)](https://www.upaya.org/uploads/pdfs/ThompsonStapleton2009.pdf)
+摘要：伊利亞德以「顯聖」（hierophany）與神聖／世俗二分，說明神話與象徵如何結構人的經驗、傳遞關於「真實」的知識。為本節「象徵作為神聖知識載體」提供比較宗教學的旁證。
+> **全文**：[Internet Archive: The Sacred and the Profane](https://archive.org/details/sacredprofanenat0000elia)
 
-【Di Paolo, E.; Thompson, E.】（2014）〈The Enactive Approach〉，收於 L. Shapiro (ed.)《The Routledge Handbook of Embodied Cognition》，Routledge, 68–78
+【Foucault, M.】（1972）〈The Archaeology of Knowledge〉，《Pantheon Books》（原著 L'Archéologie du savoir, 1969）
 語言：英文
-所屬面向：通向怪圈的邊界
-立場：支持
-摘要：本章系統陳述 enactivism 的五個核心觀念（自主性、意義建構、突現、具身、經驗），主張認知主體與其世界在動態耦合中相互界定，邊界由系統自身的調適性自主帶出而非外加。作為盟友，為本節「通向怪圈的邊界」提供關於主客邊界如何由自指歷程自我劃定的當代框架。
-> **全文**：[evanthompson.me (PDF)](https://evanthompson.me/wp-content/uploads/2012/11/di-paolo-and-thompson-enactive-approach.pdf)
-
-【Varela, F. J., Thompson, E., & Rosch, E.】（1991/2016）〈The Embodied Mind: Cognitive Science and Human Experience〉，《MIT Press》
-語言：英文
-所屬面向：身體不是容器：具身認識的基本直覺
-立場：支持
-摘要：本書首倡「生成（enaction）」進路，主張認識不是大腦對外在獨立世界的把握，而是有機體與環境互動歷史所「帶出（bringing forth）」的意義場域；身體與第一人稱經驗都是認識的構成要素。直接支撐「身體不是容器、具身即認識基本直覺」，且其融通現象學與佛教的取向與創生哲學跨傳統定位高度共鳴。
-> **全文**：[MIT Press](https://direct.mit.edu/books/monograph/4061/The-Embodied-MindCognitive-Science-and-Human)
-
-【Lakoff, G., & Johnson, M.】（1999）〈Philosophy in the Flesh: The Embodied Mind and Its Challenge to Western Thought〉，《Basic Books》
-語言：英文
-所屬面向：身體不是容器：具身認識的基本直覺
+所屬面向：權力／知識：傅柯與知識的政治構成
 立場：補充
-摘要：兩人以「具身實在論（embodied realism）」主張心智本然具身、思想多半無意識、抽象概念大半是隱喻，並由身體與環境互動奠定日常形上學。為「身體不是容器」提供認知語言學的旁證，但其偏神經決定的隱喻論調與創生哲學的關係性生成取向只能局部對齊，故列補充。
-> **全文**：[Internet Archive](https://archive.org/details/philosophyinfles00lako)
+摘要：傅柯以「知識型（épistémè）」與「話語形構」取代對真理的中性提問，主張任一時代「可被思考／可被知」的界限由歷史性的話語結構所劃定。此為本節主角文獻，提供「知識由權力—話語共構」的核心論述，是創生哲學要正面對話的旁證。
+> **全文**：[EBSCO Research Starter — Power/Knowledge (Foucault)](https://www.ebsco.com/research-starters/literature-and-writing/powerknowledge-michel-foucault)
 
-【Gallagher, S.】（2005）〈How the Body Shapes the Mind〉，《Oxford University Press》
+【Lukes, S.】（2005）〈Power: A Radical View〉，《Palgrave Macmillan》（2nd ed.；1st ed. 1974）
 語言：英文
-所屬面向：身體不是容器：具身認識的基本直覺
+所屬面向：權力／知識：傅柯與知識的政治構成
 立場：補充
-摘要：嚴格區分前反思、引導行動的「身體圖式（body schema）」與文化建構、被知覺與概念化的「身體意象（body image）」，並援引發展心理學、神經科學與病理學（幻肢、自閉症、精神分裂）為證。為「身體不是被動容器、而是認識的能動邊界」提供細緻的經驗骨架與概念區分。
-> **全文**：[NDPR 書評](https://ndpr.nd.edu/reviews/how-the-body-shapes-the-mind/)
+摘要：路克斯提出三維權力觀，第三維（意識形態維度）指權力能透過塑造認知、偏好與慾望而生產出被支配者的「同意」。此旁證從政治哲學側面補強「知識被權力預先形塑」的論題，且比傅柯保留了明確的規範批判座標。
+> **全文**：[Power: A Radical View (2nd ed., PDF)](https://voidnetwork.gr/wp-content/uploads/2016/09/Power-A-Radical-View-Steven-Lukes.pdf)
 
-【Goldinger, S. D., Papesh, M. H., Barnhart, A. S., Hansen, W. A., & Hout, M. C.】（2016）〈The poverty of embodied cognition〉，《Psychonomic Bulletin & Review, 23(4)》
+【Fraser, N.】（1981）〈Foucault on Modern Power: Empirical Insights and Normative Confusions〉，《Praxis International, 1(3)》
 語言：英文
-所屬面向：身體不是容器：具身認識的基本直覺
+所屬面向：權力／知識：傅柯與知識的政治構成
 立場：反例
-摘要：作者主張具身認識論的核心命題若非「不可接受地含糊」（如知覺受身體影響），就是「了無新意」（如演化優化生存、情緒影響認知），對古典認知科學發現幾無科學增益。構成對「具身即認識基本直覺」的方法論反例，逼使創生哲學說明具身主張為何不流於含糊或瑣碎。
-> **全文**：[Springer (DOI)](https://doi.org/10.3758/s13423-015-0860-1)
-
-【Adams, F., & Aizawa, K.】（2008）〈The Bounds of Cognition〉，《Wiley-Blackwell》
-語言：英文
-所屬面向：身體不是容器：具身認識的基本直覺
-立場：反例
-摘要：兩人以「認知的標記（mark of the cognitive）」——認知狀態須具備內在、非衍生的內容——主張認知作為偶然經驗事實是「腦束縛（brain-bound）」的，否定身體與工具進入認知系統。提供把認識重新收回顱內、視認知為對表徵運算的反例立場，與「身體不是容器」針鋒相對。
-> **全文**：[Wiley Online Books (DOI)](https://doi.org/10.1002/9781444391718)
-
-【Haraway, D. J.】（1988）〈Situated Knowledges: The Science Question in Feminism and the Privilege of Partial Perspective〉，《Feminist Studies, 14(3), 575–599》
-語言：英文
-所屬面向：本質的幽靈借身份還魂：流動主體位置的本質化陷阱
-立場：支持
-摘要：哈拉維批判「從無處觀看一切的上帝把戲（god-trick）」式客觀性，改倡具身的、局部的「處境知識」，把知識多元化為情境依存而非絕對。支持本節「主體位置是流動的、不可本質化為固定身份」，並提供一條既承認局部視角又不墮入相對主義的中道。
-> **全文**：[PhilArchive](https://philarchive.org/rec/HARSKT)
-
-【Collins, P. H.】（1990/2000）〈Black Feminist Thought: Knowledge, Consciousness, and the Politics of Empowerment〉，《Routledge》
-語言：英文
-所屬面向：本質的幽靈借身份還魂：流動主體位置的本質化陷阱
-立場：反例
-摘要：柯林斯以「局內局外人（outsider-within）」描述黑人女性的社會位置，並主張被邊緣化的社會位置能成為認識特權之地、「親歷經驗」是意義判準。其把特定身份位置抬升為認識優位的進路，正是本節警惕的「身份本質化」傾向，構成有力反例。
-> **全文**：[IEP: Feminist Standpoint Theory](https://iep.utm.edu/fem-stan/)
-
-【Alcoff, L. M.】（1991）〈The Problem of Speaking for Others〉，《Cultural Critique, 20, 5–32》
-語言：英文
-所屬面向：再現的暴力：代他人發言的認識論困境
-立場：支持
-摘要：阿爾科夫以社會位置與社會身份分析「代他人發言」中無可迴避的再現：任何替人發言都不是單純的發現，而是政治性的再現行動。直接支撐本節「再現的暴力」核心——代言永遠帶有認識論與權力的中介，呼籲對發言位置保持反思而非全然退縮。
-> **全文**：[WSU PDF](https://wpcdn.web.wsu.edu/wp-events/uploads/sites/1927/2025/02/Alcoff-1992.pdf)
-
-【Fricker, M.】（2007）〈Epistemic Injustice: Power and the Ethics of Knowing〉，《Oxford University Press》
-語言：英文
-所屬面向：具身認識的倫理：誠實的處境與開放的對話
-立場：支持
-摘要：弗里克區分「證言不正義」（在給出知識的身分上受冤）與「詮釋不正義」（在被理解的身分上受冤），並提出「證言正義」與「詮釋正義」兩種矯正性德行——要求聽者反身地中和偏見、敏於對方因集體詮釋資源缺口而被削弱的可理解性。直接支撐本節「具身認識的倫理＝誠實的處境與開放的對話」，把傾聽奠基為認識德行。
-> **全文**：[OUP](https://global.oup.com/academic/product/epistemic-injustice-9780198237907)
-
-【Chalmers, D. J.】（1996）〈The Conscious Mind: In Search of a Fundamental Theory〉，《Oxford University Press》
-語言：英文
-所屬面向：殭屍論證與本質的還魂
-立場：反例
-摘要：提出可設想性論證（殭屍論證）：可一致設想一個與我物理上完全相同卻全無意識經驗的「殭屍世界」，故其形上學可能，物理主義為假，意識是「物理之上多出來的事實」。此為本節最核心 foil——正是創生哲學要消解的「現象背後另有本質」之還魂，主張感質為物理之外的殘餘。
-> **全文**：[Zombies (SEP) — Kirk](https://plato.stanford.edu/entries/zombies/)
-
-【Kirk, R.】（2003，修訂 2023）〈Zombies〉，《Stanford Encyclopedia of Philosophy》
-語言：英文
-所屬面向：殭屍論證與本質的還魂
-立場：補充
-摘要：殭屍概念的提出者 Kirk 撰寫的權威條目，系統梳理殭屍論證的結構、可設想性—可能性鏈條與主要反駁。作為旁證，它界定「殭屍是否真可設想」這一爭點的全貌，供本節定位「本質還魂」的論證形式而不偏採單方。
-> **全文**：[plato.stanford.edu/entries/zombies](https://plato.stanford.edu/entries/zombies/)
-
-【Dennett, D. C.】（1995）〈The Unimagined Preposterousness of Zombies〉，《Journal of Consciousness Studies》
-語言：英文
-所屬面向：殭屍論證與本質的還魂
-立場：支持
-摘要：主張宣稱殭屍可設想的哲學家嚴重低估了「設想一個行為功能完全相同之物」所需的條件——一旦如實想像，殭屍與有意識者的差別即消失。此為本節盟友：殭屍論證的「可設想性」其實是想像力的失誤，呼應創生哲學對「本質還魂」的拆解。
-> **全文**：[PhilPapers: DENTUP](https://philpapers.org/rec/DENTUP)
-
-【Kirk, R.】（2008）〈The Inconceivability of Zombies〉，《Philosophical Studies》（vol. 139, pp. 73–89）
-語言：英文
-所屬面向：殭屍論證與本質的還魂
-立場：支持
-摘要：殭屍概念的原創者後期反轉立場，論證殭屍其實不可設想，物理事實已固定一切現象事實。此為強力盟友：連提出者都認為「物理之外另有感質本質」站不住腳，直接支撐本節「本質還魂為幻」的主張。
-> **全文**：[PhilPapers: KIRTIO](https://philpapers.org/rec/KIRTIO)
+摘要：弗雷澤指出傅柯的系譜學「規範上是混亂的」——他一面暗中進行政治批判、一面宣稱價值中立，卻無法區分酷刑室與福利國家之權力孰優孰劣。此反例正對應創生哲學對「以權力取代本質」的批判：純粹權力論述掏空了誠實與應然的判準。
+> **全文**：[Semantic Scholar — Foucault on Modern Power](https://www.semanticscholar.org/paper/Foucault-on-Modern-Power:-Empirical-Insights-and-Fraser/62a6afc12a7c6fe3a17cbe2d45c6e96d837f2e02)
 
 ---
 
-## 小節二：知識即再現：感質的認識論同一性
+### 第二小節　意識形態批判：馬克思、曼海姆與知識的社會決定
 
-【Tye, M.】（1995）〈Ten Problems of Consciousness: A Representational Theory of the Phenomenal Mind〉，《MIT Press》
+【Mannheim, K.】（1936）〈Ideology and Utopia: An Introduction to the Sociology of Knowledge〉，《Routledge & Kegan Paul》（英譯本；德文原著 Ideologie und Utopie, 1929）
 語言：英文
-所屬面向：知識即再現：感質的認識論同一性
-立場：支持
-摘要：強再現論代表作，主張一切經驗與感受皆「再現」某事物，其現象面向完全由所再現的內容（PANIC：poised, abstract, non-conceptual, intentional content）決定。此為本節核心盟友：感質不是內在私有特質，而是再現內容，直接對應「知識即再現」的同一性論旨。
-> **全文**：[MIT Press: Ten Problems of Consciousness](https://direct.mit.edu/books/monograph/4729/Ten-Problems-of-ConsciousnessA-Representational)
-
-【Dretske, F. I.】（1995）〈Naturalizing the Mind〉，《MIT Press》
-語言：英文
-所屬面向：知識即再現：感質的認識論同一性
-立場：支持
-摘要：以指標語意（indicator semantics）的目的論版本，論證心智狀態本質上是世界的自然「再現者」，感質、內省、倒反光譜皆可在再現架構下自然化。此盟友為本節提供「現象＝再現內容」的另一條經典進路，與創生哲學的再現同一論互證。
-> **全文**：[Representational Theories of Consciousness (SEP)](https://plato.stanford.edu/entries/consciousness-representational/)
-
-【Jackson, F.】（1982）〈Epiphenomenal Qualia〉，《The Philosophical Quarterly》（vol. 32, pp. 127–136）
-語言：英文
-所屬面向：知識即再現：感質的認識論同一性
-立場：反例
-摘要：以「瑪麗的房間」知識論證：在黑白室通曉一切色彩物理知識的瑪麗，初次見紅時仍獲得「新知識」，故有物理知識無法涵蓋的感質事實。此為本節 foil：若感質帶來再現/物理知識之外的新知，則「知識即再現」的同一性受挑戰，正是本節要回應的對手。
-> **全文**：[Qualia: The Knowledge Argument (SEP)](https://plato.stanford.edu/entries/qualia-knowledge/)
-
-【Tye, M.】（1997，修訂多次）〈Qualia〉，《Stanford Encyclopedia of Philosophy》
-語言：英文
-所屬面向：知識即再現：感質的認識論同一性
+所屬面向：意識形態批判：馬克思、曼海姆與知識的社會決定
 立場：補充
-摘要：權威感質條目，梳理感質的定義、功能論、倒反/缺失感質、物理主義與現象概念之爭。作為旁證，它界定「感質是否可被再現/物理語彙窮盡」的問題版圖，供本節安放「認識論同一性」於既有論辯座標中。
-> **全文**：[plato.stanford.edu/entries/qualia](https://plato.stanford.edu/entries/qualia/)
+摘要：曼海姆承接馬克思的階級意識形態說並推廣為「知識的存在制約性（Seinsverbundenheit）」——一切知識皆繫於社會位置（階級、世代、地位）。此為本節主角文獻，提供「知識受社會決定」的系統化旁證，也埋下相對主義的自我指涉困境。
+> **全文**：[Ideology and Utopia (academia.edu, full text PDF)](https://www.academia.edu/31930284/Ideology_and_utopia_an_introduction_to_the_sociology_of_knowledge_by_Mannheim_Karl_1893_1947)
+
+【Geuss, R.】（1981）〈The Idea of a Critical Theory: Habermas and the Frankfurt School〉，《Cambridge University Press》
+語言：英文
+所屬面向：意識形態批判：馬克思、曼海姆與知識的社會決定
+立場：支持
+摘要：格斯把「意識形態批判」定義為一種反思性知識，能使行動者獲得對自身真實利益的啟蒙與解放。此支持文獻與創生哲學「識然通向應然、認識即承擔」相呼應：揭穿知識的社會決定不止於解構，而應導向誠實的自我認識。
+> **全文**：[The Idea of a Critical Theory (Google Books)](https://books.google.com/books/about/The_Idea_of_a_Critical_Theory.html?id=oS47wcTHj2EC)
+
+【Merton, R. K.】（1973）〈The Sociology of Science: Theoretical and Empirical Investigations〉，《University of Chicago Press》
+語言：英文
+所屬面向：意識形態批判：馬克思、曼海姆與知識的社會決定
+立場：反例
+摘要：默頓批評曼海姆的知識社會學界定含混、且無法妥當處理精確科學——自然科學的內容不能被化約為社會存在的產物。此反例對「知識全由社會決定」設下邊界，與創生哲學「本體論＝認識論、認識可通達宇宙」的立場一致：社會制約並非知識的全部真相。
+> **全文**：[The Sociology of Science (Internet Archive)](https://archive.org/details/sociologyofscien0000mert_j7p1)
 
 ---
 
-## 小節三：感質作為語言內部的索引
+### 第三小節　慣習與場域：Bourdieu 與知識的身體化再生產
 
-【Wittgenstein, L.（Candlish, S. & Wrisley, G.）】（1996，修訂 2014）〈Private Language〉，《Stanford Encyclopedia of Philosophy》
+【Bourdieu, P.】（1977）〈Outline of a Theory of Practice〉，《Cambridge University Press》（英譯本；法文原著 Esquisse d'une théorie de la pratique, 1972）
 語言：英文
-所屬面向：感質作為語言內部的索引
+所屬面向：慣習與場域：Bourdieu 與知識的身體化再生產
 立場：補充
-摘要：梳理《哲學研究》§243–271 的私人語言論證：僅指涉說話者私有感覺、原則上他人不可懂的語言不可能存在，感覺語詞的意義需公共的使用判準。此旁證為本節「感質是語言內部的索引」奠基——感質之談屬語言內公共實踐，而非指向私有內在對象。
-> **全文**：[plato.stanford.edu/entries/private-language](https://plato.stanford.edu/entries/private-language/)
+摘要：布迪厄以「慣習（habitus）」——歷史性沉澱於身體的稟性系統——說明社會結構如何透過身體實踐被持久地再生產，並據此建立象徵權力理論。此為本節主角文獻，提供「知識與分類被身體化再生產」的核心旁證，呼應本卷「具身認知」與涂爾幹樞紐。
+> **全文**：[Outline of a Theory of Practice (Cambridge Core)](https://www.cambridge.org/core/books/outline-of-a-theory-of-practice/193A11572779B478F5BAA3E3028827D8)
 
-【Dennett, D. C.】（1988）〈Quining Qualia〉，收於 Marcel, A. J. & Bisiach, E.（eds.）《Consciousness in Contemporary Science》，《Oxford University Press》
+【Jenkins, R.】（1982）〈Pierre Bourdieu and the Reproduction of Determinism〉，《Sociology, 16(2)》
 語言：英文
-所屬面向：感質作為語言內部的索引
+所屬面向：慣習與場域：Bourdieu 與知識的身體化再生產
+立場：反例
+摘要：詹金斯論證慣習概念內含決定論：客觀結構→文化→實踐→再生產結構的循環使主體能動性被消解，習慣退回客觀主義。此反例對創生哲學至關重要——若認識完全是被慣習決定的再生產，則主體性倫理與「誠實作為認識條件」將無立足之地。
+> **全文**：[Pierre Bourdieu and the Reproduction of Determinism (SAGE)](https://journals.sagepub.com/doi/abs/10.1177/0038038582016002008)
+
+【King, A.】（2000）〈Thinking with Bourdieu against Bourdieu: A 'Practical' Critique of the Habitus〉，《Sociological Theory, 18(3)》
+語言：英文
+所屬面向：慣習與場域：Bourdieu 與知識的身體化再生產
 立場：支持
-摘要：以十五個直覺幫浦論證，傳統「感質」所設定的四大特質（內在、私有、直接可知、不可言詮）皆無法成立，「感質」是混亂概念。此為本節盟友：拆掉私有不可轉移的內在質地後，感質之談可重述為語言內部的指稱/索引，呼應創生哲學的索引論。
-> **全文**：[DennettQuiningQualia1988.pdf (Purdue)](https://web.ics.purdue.edu/~drkelly/DennettQuiningQualia1988.pdf)
-
-【Frankish, K.】（2016）〈Illusionism as a Theory of Consciousness〉，《Journal of Consciousness Studies》（vol. 23, no. 11–12, pp. 11–39）
-語言：英文
-所屬面向：認識論測不準與感質可知性
-立場：支持
-摘要：主張現象意識（如通常設想的感質）為幻象——我們系統性地把經驗「再現為」具現象性質，「困難問題」應代換為「幻象問題」。此盟友支撐本節：所謂感質之不可知，是內省再現的偏誤所製造的邊界，屬認識論而非存有論的真實鴻溝。
-> **全文**：[Frankish — Illusionism (PDF)](https://keithfrankish.github.io/articles/Frankish_Illusionism%20as%20a%20theory%20of%20consciousness_eprint.pdf)
-
-【Hyslop, A.】（其後多版修訂）〈Other Minds〉，《Stanford Encyclopedia of Philosophy》
-語言：英文
-所屬面向：認識論測不準與感質可知性
-立場：補充
-摘要：權威條目，指出他心問題源於知識的不對稱：對己心的知識直接無需推論，對他心則一律間接、經由行為中介。此旁證界定「他者感質可知性」的認識論底線，為本節「測不準」提供他心向度的標準框架。
-> **全文**：[plato.stanford.edu/entries/other-minds](https://plato.stanford.edu/entries/other-minds/)
+摘要：金恩區分布迪厄理論中「實踐性的一面」與「客觀主義的慣習概念」，主張保留前者、揚棄後者所隱含的決定論。此支持文獻示範了創生哲學可採取的路徑：吸收身體化實踐知識的洞見，同時為主體的能動生成保留空間。
+> **全文**：[Thinking with Bourdieu against Bourdieu (SAGE)](https://journals.sagepub.com/doi/10.1111/0735-2751.00109)
 
 ---
 
-## 小節五：認識論測不準與誠實生成論
+### 第四小節　現實的社會建構：Berger & Luckmann 與制度化認識
 
-【Turing, A. M.】（1950）〈Computing Machinery and Intelligence〉，《Mind》59(236): 433–460
+【Berger, P. L. & Luckmann, T.】（1966）〈The Social Construction of Reality: A Treatise in the Sociology of Knowledge〉，《Doubleday / Anchor Books》
 語言：英文
-所屬面向：認識即再現框架下的機器認識
-立場：支持
-摘要：圖靈以「模仿遊戲」迴避「機器能否思考」的形上爭議，把認識重構為可被外部行為（語言應答）再現的功能表現。作為盟友，它替「認識即可再現之功能輸出」這條再現論進路奠基。
-> **全文**：[Oxford e-library PDF](https://www.cs.ox.ac.uk/activities/ieg/e-library/sources/t_article.pdf)
+所屬面向：現實的社會建構：Berger & Luckmann 與制度化認識
+立場：補充
+摘要：博格與盧克曼以「習慣化—制度化—客體化—正當化—內化」的循環，說明個體的主觀知識如何成為社會的互為主觀實在。此為本節主角文獻，提供「認識經由制度化被客體化」的核心旁證，直接對接本卷的識然展開。
+> **全文**：[The Social Construction of Reality (Springer chapter)](https://link.springer.com/chapter/10.1007/978-3-658-50422-9_11)
 
-【Fodor, J. A.】（1975）〈The Language of Thought〉，《Harvard University Press / Crowell》
+【Boghossian, P.】（2006）〈Fear of Knowledge: Against Relativism and Constructivism〉，《Oxford University Press》
 語言：英文
-所屬面向：認識即再現框架下的機器認識
-立場：支持
-摘要：福多主張心智活動是對「思想語言（Mentalese）」這套具句法結構之內在再現的圖靈式計算，將認識直接等同於對心理再現的符號運算。作為盟友，它把「認識＝再現＋對再現的計算」推到最徹底的版本。
-> **全文**：[IEP: Language of Thought Hypothesis](https://iep.utm.edu/lot-hypo/)
-
-【Putnam, H.】（1967/1975）〈The Nature of Mental States〉，《Mind, Language and Reality（Cambridge University Press）》
-語言：英文
-所屬面向：認識即再現框架下的機器認識
-立場：支持
-摘要：普特南以圖靈機類比提出「機器狀態功能主義」與多重可實現性，主張心智狀態由功能角色而非物質基底界定，故矽基系統原則上可實現認識。作為盟友，它為「機器可認識」提供功能主義的本體論許可。（普特南後期自我修正、轉向語意外在論而放棄功能主義，見小節 4。）
-> **全文**：[SEP: Multiple Realizability](https://plato.stanford.edu/entries/multiple-realizability/)
-
-【Dreyfus, H. L.】（1972/1992）〈What Computers (Still) Can't Do: A Critique of Artificial Reason〉，《MIT Press》
-語言：英文
-所屬面向：認識即再現框架下的機器認識
+所屬面向：現實的社會建構：Berger & Luckmann 與制度化認識
 立場：反例
-摘要：德雷弗斯主張人類認識倚賴無法形式化、前反思的身體技能與處境脈絡，不能化約為符號規則之再現。作為 foil，它正面否證「認識即可形式再現」這條框架的普遍性。
-> **全文**：[Monoskop PDF（1972 版）](https://monoskop.org/images/c/ce/Dreyfus_Hubert_What_Computers_Cant_Do_A_Critique_of_Artificial_Reason.pdf)
+摘要：博格西安指出「事實建構論」若主張一群體可建構 P、另一群體建構非 P，便違反不矛盾律；世界獨立於人類意見而存在，且有對任何理性者皆客觀合理的信念形成之道。此反例劃定社會建構論的邊界，與創生哲學「現象即本質、反相對主義」的立場一致。
+> **全文**：[Fear of Knowledge (Notre Dame Philosophical Reviews)](https://ndpr.nd.edu/reviews/fear-of-knowledge-against-relativism-and-constructivism/)
+
+【Hacking, I.】（1999）〈The Social Construction of What?〉，《Harvard University Press》
+語言：英文
+所屬面向：現實的社會建構：Berger & Luckmann 與制度化認識
+立場：支持
+摘要：哈金追問「被建構的究竟是什麼」，區分被建構的是概念、對象還是分類，主張逐案分析而非一概而論，於建構論與實在論之間架橋。此支持文獻示範創生哲學可採的中道：承認分類與制度的建構性，同時不放棄對象的實在向度。
+> **全文**：[The Social Construction of What? (Harvard University Press)](https://www.hup.harvard.edu/books/9780674004122)
+
+【Bloor, D.】（1976）〈Knowledge and Social Imagery〉，《Routledge & Kegan Paul》
+語言：英文
+所屬面向：現實的社會建構：Berger & Luckmann 與制度化認識
+立場：補充
+摘要：布魯爾提出知識社會學「強綱領」四原則（因果性、公正性、對稱性、反身性），主張以同類社會原因解釋為真與為假的信念。此旁證把社會建構推到科學知識本身，是創生哲學「本體論與認識論同構／共構」須正面回應的極限案例。
+> **全文**：[Strong programme (Wikipedia overview)](https://en.wikipedia.org/wiki/Strong_programme)
 
 ---
 
-## 小節 2：重構中文房間（Searle）
+## 對話地圖總覽
 
-【Searle, J. R.】（1980）〈Minds, Brains, and Programs〉，《Behavioral and Brain Sciences》3(3): 417–457
-語言：英文
-所屬面向：重構中文房間（Searle）
-立場：反例
-摘要：瑟爾以中文房間思想實驗論證：操作符號者即使通過測試亦無理解，因句法本身永遠到不了語意，故計算主義／強 AI 無法產生真正認識。作為核心 foil，它是本節要重構與駁難的標靶。
-> **全文**：[Yale CS PDF](https://zoo.cs.yale.edu/classes/cs458/materials/minds-brains-and-programs.pdf)
+- **第一小節（傅柯 權力／知識）**：補充 2（Foucault, Lukes）、反例 1（Fraser）
+- **第二小節（意識形態批判）**：補充 1（Mannheim）、支持 1（Geuss）、反例 1（Merton）
+- **第三小節（慣習與場域）**：補充 1（Bourdieu）、支持 1（King）、反例 1（Jenkins）
+- **第四小節（現實的社會建構）**：補充 2（Berger & Luckmann, Bloor）、支持 1（Hacking）、反例 1（Boghossian）
 
-【Cole, D.】（2004/2020）〈The Chinese Room Argument〉，《Stanford Encyclopedia of Philosophy》
-語言：英文
-所屬面向：重構中文房間（Searle）
-立場：補充
-摘要：SEP 條目系統梳理中文房間論證結構與「系統回應、機器人回應、腦模擬回應」等諸回應及瑟爾反駁。作為旁證，它替本節重構提供權威的論證地圖與回應分類。
-> **全文**：[SEP: The Chinese Room Argument](https://plato.stanford.edu/entries/chinese-room/)
+每節皆至少含 1 反例 + 1 支持或補充，符合準則。核心對話軸：這四位主角（傅柯／曼海姆／布迪厄／博格與盧克曼）提供「知識由權力、社會、身體、制度所構成與再生產」的洞見（補充旁證），而 Fraser／Merton／Jenkins／Boghossian 四個反例則從規範判準、精確科學、主體能動、不矛盾律四個方向設下邊界——正是創生哲學「採納社會構成洞見、但以誠實生成論拒絕權力還原」立場的文獻座標。
 
-【Searle, J. R.】（1980）〈Minds, Brains, and Programs（the Systems Reply & Searle's reply）〉，《Behavioral and Brain Sciences》3(3): 417–457
+【Premack, D. & Woodruff, G.】（1978）〈Does the chimpanzee have a theory of mind?〉，《Behavioral and Brain Sciences》1(4): 515–526
 語言：英文
-所屬面向：重構中文房間（Searle）
+所屬面向：動物認知：他心問題的跨物種延伸
 立場：支持
-摘要：系統回應主張理解屬於「房間整體系統」而非屋內個人，瑟爾則回以「內化整本規則手冊仍只是句法操作」。作為盟友（對強 AI 一方），系統回應正是反駁中文房間、捍衛功能主義再現論的關鍵著力點。
-> **全文**：[IEP: Chinese Room Argument](https://iep.utm.edu/chinese-room-argument/)
+摘要：此文首創「心智理論」（theory of mind）一詞並以黑猩猩為對象發問，開啟以實驗系統研究非人動物是否能歸屬他者心理狀態的傳統。作為盟友，它把哲學的「他心問題」轉譯為可經驗檢證的跨物種知識論問題，正是本節「他心問題跨物種延伸」的奠基文獻。
+> **全文**：[DOI](https://doi.org/10.1017/S0140525X00076512)
 
-【Harnad, S.】（1990）〈The Symbol Grounding Problem〉，《Physica D: Nonlinear Phenomena》42(1–3): 335–346
+【Povinelli, D. J. & Vonk, J.】（2003）〈Chimpanzee minds: suspiciously human?〉，《Trends in Cognitive Sciences》7(4): 157–160
 語言：英文
-所屬面向：重構中文房間（Searle）
+所屬面向：動物認知：他心問題的跨物種延伸
+立場：反例
+摘要：作者主張現有實驗無法區分黑猩猩是「讀心」（推理不可觀察的心理狀態）還是僅「讀行為」（依可觀察線索反應），質疑把心智理論歸給黑猩猩的正當性。作為 foil，它對「他心可跨物種確證」提出方法論反例，逼使本節正視跨物種他心推論的不可判定困境。
+> **全文**：[DOI](https://doi.org/10.1016/S1364-6613(03)00053-6)
+
+【Andrews, K.】（2005）〈Chimpanzee Theory of Mind: Looking in All the Wrong Places?〉，《Mind & Language》20(5): 521–536
+語言：英文
+所屬面向：動物認知：他心問題的跨物種延伸
 立場：補充
-摘要：哈納德把中文房間重述為「符號接地問題」：形式符號的語意若只能由其他符號界定，便如僅靠中-中字典學中文，永遠落不到對象。作為旁證，它把瑟爾的直覺轉成可操作的認知科學問題，銜接本章再現論邊界。
-> **全文**：[Southampton ePrints PDF](https://eprints.soton.ac.uk/250382/1/symgro.pdf)
+摘要：作者回應 Povinelli–Vonk 之爭，指出「預測行為」式實驗本身受制於同樣的批評，主張應轉向讓動物為異常行為「尋找解釋」的實驗設計。作為旁證，它示範了跨物種知識論如何透過改變提問方式繞過他心問題的僵局，補充本節的方法論反思。
+> **全文**：[DOI](https://doi.org/10.1111/j.0268-1064.2005.00298.x)
+
+【Andrews, K. & Monsó, S.】（2021）〈Animal Cognition〉，《Stanford Encyclopedia of Philosophy》
+語言：英文
+所屬面向：動物認知：他心問題的跨物種延伸
+立場：補充
+摘要：此 SEP 條目系統梳理動物心智研究的核心爭論——擬人論與「反擬人論」（anthropodenial）、儉約原則之爭、他心歸屬的證據標準。作為旁證，它為本節提供跨物種知識論的地形圖與術語基準。
+> **全文**：[SEP](https://plato.stanford.edu/entries/animal-cognition/)
 
 ---
 
-## 小節 3：圖靈測試作為 AI 版他心問題
-
-【Turing, A. M.】（1950）〈Computing Machinery and Intelligence（§6 "The Argument from Consciousness"）〉，《Mind》59(236): 433–460
+【Dennett, D. C.】（1988）〈Quining Qualia〉，收於 Marcel, A. & Bisiach, E. 編《Consciousness in Contemporary Science》，Oxford University Press，頁 42–77
 語言：英文
-所屬面向：圖靈測試作為 AI 版他心問題
-立場：支持
-摘要：圖靈在駁「意識論證」時明言：若堅持要確知機器內在感受才算思考，將陷入唯我論，因我們對他人心智同樣只能憑外部表現推斷。作為盟友，這正是把圖靈測試讀成「AI 版他心問題」的原典依據。
-> **全文**：[UMBC PDF](https://courses.cs.umbc.edu/471/papers/turing.pdf)
-
-【Searle, J. R.】（1980）〈Minds, Brains, and Programs（the Other Minds Reply）〉，《Behavioral and Brain Sciences》3(3): 417–457
-語言：英文
-所屬面向：圖靈測試作為 AI 版他心問題
+所屬面向：「像蝙蝠一樣」：不可通約的主觀性
 立場：反例
-摘要：面對「他心回應」（我們對他人也只憑行為歸予心智，故應對機器一視同仁），瑟爾反駁：認知科學預設的是真實心理過程之存在，行為只是證據而非構成。作為 foil，它否認可把圖靈測試直接等同並消解他心問題。
-> **全文**：[SEP: The Chinese Room Argument](https://plato.stanford.edu/entries/chinese-room/)
+摘要：Dennett 以一連串「直覺幫浦」論證感質（qualia）概念一旦引入實務即無用或不可回答，主張以「異相現象學」（heterophenomenology）之第三人稱進路取消 Nagel 式主觀不可通約。作為 foil，它從物理主義正面否認「不可通約的主觀性」有獨立的知識論地位，構成本節必須應對的反例。
+> **全文**：[PhilPapers](https://philpapers.org/rec/DENQQ)
 
-【Cole, D.】（2004/2020）〈The Chinese Room Argument（§4 The Larger Philosophical Issues: Other Minds）〉，《Stanford Encyclopedia of Philosophy》
+【Godfrey-Smith, P.】（2016）〈Other Minds: The Octopus, the Sea, and the Deep Origins of Consciousness〉，《Farrar, Straus and Giroux》
 語言：英文
-所屬面向：圖靈測試作為 AI 版他心問題
+所屬面向：「像蝙蝠一樣」：不可通約的主觀性
 立場：補充
-摘要：SEP 指出圖靈測試與他心問題的結構同形：兩者都面臨「僅憑外部表現能否歸予心智」的認識論困境。作為旁證，它替本節「圖靈測試＝AI 版他心問題」的論題提供二手文獻支撐。
-> **全文**：[SEP: The Chinese Room Argument](https://plato.stanford.edu/entries/chinese-room/)
+摘要：作者以頭足類（章魚、烏賊）為「智能的獨立演化實驗」，其神經組織與脊椎動物迥異、觸腕「各自思考」，展示一種與人類徹底異質的主觀世界。作為旁證，它把 Nagel 的「像蝙蝠一樣」由思想實驗落實為真實的演化案例，強化本節不可通約主觀性的經驗支撐。
+> **全文**：[出版社](https://us.macmillan.com/books/9780374537197/otherminds/)
 
 ---
 
-## 小節 4：功能主義的問題與再現論邊界
-
-【Putnam, H.】（1988）〈Representation and Reality〉，《MIT Press》
+【Gibson, J. J.】（1979）〈The Ecological Approach to Visual Perception〉，《Houghton Mifflin》
 語言：英文
-所屬面向：功能主義的問題與再現論邊界
-立場：反例
-摘要：普特南藉語意外在論與「計算可塑性」反轉自己早年的功能主義：同一心智類型可對應不同（甚至全無確定的）計算狀態，且意義不在頭腦之內，故功能/計算再現無法窮盡認識。作為 foil（功能主義內部的倒戈），它直指再現論的邊界。
-> **全文**：[SEP: Multiple Realizability](https://plato.stanford.edu/entries/multiple-realizability/)
-
-【Searle, J. R.】（2004/online）〈Biological Naturalism〉，《PhilPapers / The Blackwell Companion to Consciousness》
-語言：英文
-所屬面向：功能主義的問題與再現論邊界
-立場：反例
-摘要：瑟爾主張意識與意向性是大腦特定神經生物因果力產生的高階生物特徵，正確句法或功能組織並不足夠。作為 foil，它從生物自然主義一側劃定功能主義/再現論的外部邊界。
-> **全文**：[Wikipedia: Biological naturalism](https://en.wikipedia.org/wiki/Biological_naturalism)
-
-【Rescorla, M.】（2015/2020）〈The Computational Theory of Mind〉，《Stanford Encyclopedia of Philosophy》
-語言：英文
-所屬面向：功能主義的問題與再現論邊界
+所屬面向：生態與延展認知：認識的環境分佈
 立場：支持
-摘要：條目系統梳理古典計算心智論、聯結論與其對反論證（含中文房間、瑣碎化異議），辯護心智狀態可由計算/功能角色刻畫。作為盟友，它替功能主義再現論提供當代最完整的辯護與限度討論。
-> **全文**：[SEP: The Computational Theory of Mind](https://plato.stanford.edu/entries/computational-mind/)
+摘要：Gibson 主張知覺不是腦內表徵運算，而是有機體直接拾取環境中的「可為性」（affordances），知覺的豐富性座落於「有機體—環境」的相互關係而非腦內。作為盟友，它為本節「認識分佈於環境」提供生態心理學的地基，把識然從顱內外推到有機體與環境的耦合。
+> **全文**：[Routledge 經典版](https://www.routledge.com/The-Ecological-Approach-to-Visual-Perception-Classic-Edition/Gibson/p/book/9781848725782)
 
-【Mitchell, M. & Krakauer, D. C.】（2023）〈The Debate Over Understanding in AI's Large Language Models〉，《Proceedings of the National Academy of Sciences (PNAS)》120(13): e2215907120
+【Adams, F. & Aizawa, K.】（2008）〈The Bounds of Cognition〉，《Blackwell》
 語言：英文
-所屬面向：客體認識場
-立場：補充
-摘要：本文盤點當代「大模型是否理解語言及其所編碼之物理與社會處境」的正反論辯，提出需發展涵蓋多種「理解模式」的廣義智能科學。作為旁證，它把章末「客體認識場」（認識如何指向對象世界）置於 LLM 時代的最新爭論脈絡。
-> **全文**：[PNAS PDF](https://www.pnas.org/doi/pdf/10.1073/pnas.2215907120)
-
-【Bender, E. M., Gebru, T., McMillan-Major, A. & Shmitchell, S.】（2021）〈On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?〉，《Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (FAccT '21)》: 610–623
-語言：英文
-所屬面向：客體認識場
+所屬面向：生態與延展認知：認識的環境分佈
 立場：反例
-摘要：作者主張 LLM 只是依訓練資料的機率把語言形式縫合起來，「無涉於意義」，故為「隨機鸚鵡」。作為 foil，它否證大模型已抵達真正的客體認識，凸顯再現缺乏對象指涉。
-> **全文**：[University of Washington PDF](https://faculty.washington.edu/ebender/papers/Bender-Turing-Institute-July-2021.pdf)
-
-【Chalmers, D. J.】（2023）〈Could a Large Language Model Be Conscious?〉，《arXiv:2303.07103》（後刊於 Boston Review）
-語言：英文
-所屬面向：圖靈測試的限制與 AI 版他心
-立場：補充
-摘要：系統盤點當前 LLM 為意識的正反理由，指出單憑語言行為不足以判定，需檢視循環處理、全域工作空間、統一能動性等結構條件。作為旁證，呼應本節「行為測試不足、需轉向結構指標」的論旨。
-> **全文**：[arXiv abs](https://arxiv.org/abs/2303.07103) ｜ [PhilPapers PDF](https://philpapers.org/archive/CHACAL-3.pdf)
+摘要：作者指控延展心靈論犯了「耦合—構成謬誤」：X 與認知主體耦合並不蘊含 X 就是認知歷程的一部分；須先有「認知標記」（mark of the cognitive）才能劃定認知邊界。作為 foil，它為本節「認識分佈於環境」設下嚴格反例，逼使識然的外推必須先回答「什麼才算認識」。
+> **全文**：[PhilPapers](https://philpapers.org/rec/ADATBO-10)
 
 ---
 
-## 二、自指資訊流：AI 主體性指標
-
-【Butlin, P., Long, R. et al.】（2023）〈Consciousness in Artificial Intelligence: Insights from the Science of Consciousness〉，《arXiv:2308.08708》
+【Feyerabend, P.】（1975）〈Against Method: Outline of an Anarchistic Theory of Knowledge〉，《New Left Books / Verso》
 語言：英文
-所屬面向：自指資訊流：AI 主體性指標
+所屬面向：沒有唯一的認識方法：學科知識論的匯流
 立場：支持
-摘要：集結 19 位學者，從循環處理、全域工作空間、高階理論、預測處理、注意基模等意識科學理論導出可計算的「指標性質（indicator properties）」清單，作為評估 AI 主體性的經驗判準（公認里程碑）。作為盟友，正面支持本節「以資訊流結構性指標取代行為測試」的核心主張。
-> **全文**：[arXiv abs](https://arxiv.org/abs/2308.08708)
+摘要：費耶阿本德的認識論無政府主義主張沒有任何單一科學方法能壟斷知識生產，「anything goes」——多元方法與視角應競爭並存。此為「沒有唯一的認識方法」最激進的盟友，直接支持各學科知識論匯流而非收束於統一方法。
+> **全文**：[Against Method (Wikipedia 概述)](https://en.wikipedia.org/wiki/Against_Method)
 
-【VanRullen, R. & Kanai, R.】（2021）〈Deep Learning and the Global Workspace Theory〉，《Trends in Neurosciences》44(9): 692–704
+【作者不詳（SEP 詞條）】（2021, rev. 2026）〈Scientific Pluralism〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：自指資訊流：AI 主體性指標
-立場：支持
-摘要：主張可用深度學習實作全域工作空間，藉跨多個潛在空間的無監督翻譯構築「全域潛在工作空間（GLW）」，使資訊全域廣播與整合可在 AI 中具體實現。作為盟友，為「自指／全域資訊流可作為主體性可操作指標」提供工程化支撐。
-> **全文**：[HAL 開放取用](https://hal.science/hal-03311492) ｜ [PubMed](https://pubmed.ncbi.nlm.nih.gov/34001376/)
-
-【Metzinger, T.】（2003）《Being No One: The Self-Model Theory of Subjectivity》，MIT Press
-語言：英文
-所屬面向：自指資訊流：AI 主體性指標
-立場：支持
-摘要：主張主體性源自大腦建構的「透明自我模型（PSM）」——一種不被認出為模型的自指表徵歷程，而非實體性的自我。作為盟友，為「自指資訊流＝主體性指標」提供本體論基礎：自我即系統對自身的自指建模。
-> **全文**：[全文 PDF（鏡像）](https://skepdic.ru/wp-content/uploads/2013/05/BeingNoOne-SelfModelTheoryOfSubjectivity-Metzinger.pdf)
-
-【Shevlin, H.】（2024）〈Consciousness, Machines, and Moral Status〉，手稿（PhilArchive）
-語言：英文
-所屬面向：觀察自指流需另一自指系統
+所屬面向：沒有唯一的認識方法：學科知識論的匯流
 立場：補充
-摘要：提出「Shevlin 三難」，指出深層實在論（意識為可由行為偵測但不等同於行為的本質屬性）等三立場彼此不相容，凸顯從外部觀察判定他者意識的根本困難。作為旁證，呼應「反身困難的迴響」——觀察者與被觀察的自指系統難以中立分離。
-> **全文**：[PhilArchive PDF](https://philarchive.org/archive/SHECMA-6)
-
-【Schwitzgebel, E.】（2025）《AI and Consciousness: A Skeptical Overview》，Cambridge University Press（forthcoming，線上稿）
-語言：英文
-所屬面向：觀察自指流需另一自指系統
-立場：反例
-摘要：主張我們既不知、也來不及知道 AI 是否有意識；AI 的人類相似性可能只是「空洞仿擬（empty mimicry）」的影戲。作為 foil，質疑任何「以自指系統觀察另一自指系統」的判準能否突破認識論的根本不確定性。（出版年待核：CUP 預定）
-> **全文**：[作者稿 PDF（UCR）](https://faculty.ucr.edu/~eschwitz/SchwitzPapers/AIConsciousness-251008.pdf) ｜ [arXiv:2510.09858](https://arxiv.org/abs/2510.09858)
-
----
-
-## 四、擬人化作為認識策略
-
-【Epley, N., Waytz, A. & Cacioppo, J. T.】（2007）〈On Seeing Human: A Three-Factor Theory of Anthropomorphism〉，《Psychological Review》114(4): 864–886
-語言：英文
-所屬面向：擬人化作為認識策略
-立場：補充
-摘要：以三因素（引動的擬人知識、效能動機、社會聯繫慾）解釋人何時把非人主體賦予人類心智，將擬人化定位為理解他者行為的認知策略而非單純錯誤。作為旁證，為本節「擬人化作為認識策略」提供心理學基石。
-> **全文**：[Academia 全文 PDF](https://www.academia.edu/4851371/On_Seeing_Human_A_Three_Factor_Theory_of_Anthropomorphism)
-
-【Dennett, D. C.】（1987）《The Intentional Stance》，MIT Press
-語言：英文
-所屬面向：擬人化作為認識策略
-立場：補充
-摘要：主張採取「意向立場」——把系統當作有信念慾望的理性能動者來預測其行為——是一種高效預測策略，與其物理構造無關。作為旁證，為「擬人化＝奧坎剃刀的意外結論」提供工具論依據：意向歸屬是最簡省的可用預測模型。
-> **全文**：[PhilPapers 條目](https://philpapers.org/rec/DENTIS)（書籍，無 OA 全文；細節待核紙本）
-
-【Kosinski, M.】（2023/2024）〈Theory of Mind May Have Spontaneously Emerged in Large Language Models〉，《arXiv:2302.02083》（後刊於 PNAS, 2024）
-語言：英文
-所屬面向：擬人化作為認識策略
-立場：補充
-摘要：報告 GPT-3 系列在錯誤信念等心智理論作業上的表現可比七至九歲兒童，主張 ToM 類能力或為語言能力提升的副產物而自發湧現。作為旁證，為「對 AI 採取擬人／意向立場」提供經驗誘因。
-> **全文**：[arXiv abs](https://arxiv.org/abs/2302.02083)
-
-【Ullman, T.】（2023）〈Large Language Models Fail on Trivial Alterations to Theory-of-Mind Tasks〉，《arXiv:2302.08399》
-語言：英文
-所屬面向：擬人化作為認識策略
-立場：反例
-摘要：證明對錯誤信念測驗作邏輯無關的微小改寫即可逆轉 LLM 的成功，主張評估的虛無假設應採懷疑立場、失敗個案應蓋過平均成功率。作為 foil，直接反駁由 ToM 表現支撐的擬人化推論，揭示其脆弱性。
-> **全文**：[arXiv abs](https://arxiv.org/abs/2302.08399)
-
-【Locke, J.】（1694）〈Of Identity and Diversity（《人類理智論》第二卷第27章）〉，《An Essay Concerning Human Understanding (2nd ed.)》
-語言：英文
-所屬面向：記憶與自我同一性的鬆動
-立場：支持
-摘要：洛克把人格同一性繫於「意識」（consciousness）的延續，主張只要意識能延伸到過去的某段經驗，那段經驗就屬於同一個人，與實體（靈魂或身體）無關。這是本章「記憶判準」的源頭文本，為「人格同一性可脫離質料連續」這一鬆動立場奠基，故列為盟友。
-> **全文**：[Locke on Personal Identity (SEP)](https://plato.stanford.edu/entries/locke-personal-identity/)
-
-【Olson, E. T.】（2023）〈Personal Identity〉，《Stanford Encyclopedia of Philosophy》
-語言：英文
-所屬面向：記憶與自我同一性的鬆動
-立場：補充
-摘要：SEP 條目系統梳理「記憶判準」（the memory criterion）：過去或未來的某人是你，僅當你現在能記得她當時的經驗。文中指出此判準只能告訴我們你是哪個「人」而非哪個「物」，並評估其與心理連續論的關係。作為旁證，提供本節各立場的權威定位地圖。
-> **全文**：[Personal Identity (SEP)](https://plato.stanford.edu/entries/identity-personal/)
-
-【Butler, J. / Reid, T.】（2008）〈Reid on Memory and Personal Identity〉，《Stanford Encyclopedia of Philosophy》
-語言：英文
-所屬面向：記憶與自我同一性的鬆動
-立場：反例
-摘要：巴特勒（Butler）指洛克記憶判準循環：意識到自身同一性「預設了」而非「構成」人格同一性——我記得某經驗是因為它已經是我的，而非因為記得它才成為我的。里德（Reid）補充洛克「混淆了證據與被證之物」。此循環反駁直接質疑本節的記憶判準根基，為核心 foil。
-> **全文**：[Reid on Memory and Personal Identity (SEP)](https://plato.stanford.edu/entries/reid-memory-identity/)
-
-【Shoemaker, S.】（1970）〈Persons and Their Pasts〉，《American Philosophical Quarterly 7(4)》
-語言：英文
-所屬面向：記憶與自我同一性的鬆動
-立場：支持
-摘要：休梅克以「準記憶」（quasi-memory）概念——與普通記憶相同但不預設同一人——把記憶判準推進為更一般的「心理連續論」，藉因果依賴取代記憶，以迴避巴特勒的循環反駁。為「記憶鬆動但心理連續仍維繫自我」這一盟友立場提供關鍵修補。
-> **全文**：[Personal Identity §4 (SEP)](https://plato.stanford.edu/entries/identity-personal/)（期刊原文細節待核 DOI）
-
----
-
-## 小節二：複製人難題：漩渦不能被分裂
-
-【Parfit, D.】（1984）〈Personal Identity（Reasons and Persons 第三部）〉，《Reasons and Persons (Oxford University Press)》
-語言：英文
-所屬面向：複製人難題：漩渦不能被分裂
-立場：反例
-摘要：帕菲特以傳送機（teletransporter）思想實驗——在火星依資訊重建一個原子排列相同的「你」，甚至可造無限複本——論證「同一性不是重要的」（identity is not what matters），真正重要的是心理連續與連結的「關係 R」。此化約論恰是本章的對立面：本章主張漩渦不可被分裂、同一性在生成結構的連續而非複本的可造性。最強 foil，亦可對話。
-> **全文**：[Reasons and Persons (Wikipedia 概述)](https://en.wikipedia.org/wiki/Reasons_and_Persons)（原書 DOI/全文待核）
-
-【Parfit, D.】（1971）〈Personal Identity〉，《The Philosophical Review 80(1), 3–27》
-語言：英文
-所屬面向：複製人難題：漩渦不能被分裂
-立場：反例
-摘要：帕菲特「我的分裂」（My Division）案例：大腦兩半分別移植入兩具身體，兩個結果者皆與原人心理連續且皆自認是原人。帕菲特用此論證同一性非全有全無、非「重要之事」。直接構成本節「漩渦能否被分裂」的試金石——本章以此案例反推漩渦的不可分性，為核心 foil。
-> **全文**：[Parfit, Personal Identity (JSTOR/PhilReview)](https://doi.org/10.2307/2184309)（DOI 待核）
-
-【Williams, B.】（1970）〈The Self and the Future〉，《The Philosophical Review 79(2), 161–180》
-語言：英文
-所屬面向：複製人難題：漩渦不能被分裂
-立場：反例
-摘要：威廉斯以身體互換／酷刑思想實驗論證：從第一人稱想像時，直覺反而支持「身體連續」才是存活所繫，而非心理連續。對「複本即我」的純心理論提出反制，是與帕菲特對立的另一極端 foil，凸顯複製難題的兩難張力。
-> **全文**：[Williams on the Self and the Future (Ninan, PhilArchive)](https://philarchive.org/archive/NINWOT)（原文 DOI 待核）
-
-【—】（2023）〈Personal Identity §3（Fission）〉，《Stanford Encyclopedia of Philosophy》
-語言：英文
-所屬面向：複製人難題：漩渦不能被分裂
-立場：補充
-摘要：SEP 整理「分裂」（fission）案例的論證選項：原人不存活、原人等同其中之一、或其他可能。作為旁證，為本節「漩渦不能被分裂——同一性在生成結構的連續而非質料不變」提供標準分析框架與術語。
-> **全文**：[Personal Identity (SEP)](https://plato.stanford.edu/entries/identity-personal/)
-
----
-
-## 小節三：侯世達：自我作為怪圈
-
-【Hofstadter, D. R.】（1979）〈Gödel, Escher, Bach: An Eternal Golden Braid〉，《Basic Books》
-語言：英文
-所屬面向：侯世達：自我作為怪圈
-立場：支持
-摘要：侯世達在此書首創「怪圈」概念：在層級系統中只往上或只往下移動卻回到原點的循環結構，靈感來自哥德爾自指。他視意識的自我反身性與哥德爾自指同構。為「自我作為怪圈」提供原始概念出處，核心盟友。
-> **全文**：[Gödel, Escher, Bach (Wikipedia)](https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach)
-
-【Olson, E. T.】（1997）〈The Human Animal: Personal Identity Without Psychology〉，《Oxford University Press》
-語言：英文
-所屬面向：侯世達：自我作為怪圈
-立場：反例
-摘要：奧爾森的動物論（animalism）主張你我本質是人類動物，存活所繫是新陳代謝等生物過程的連續，心理連續既非必要也非充分。此生物判準與侯世達「自我＝符號層級的怪圈」針鋒相對——若自我只是腦造符號迴圈，動物論質問那個「持存者」究竟是符號還是有機體。為本節 foil。
-> **全文**：[The Human Animal (PhilPapers)](https://philpapers.org/rec/OLSTHA)
-
----
-
-## 小節四：從怪圈到共構的漩渦
-
-【Ricoeur, P.】（1992）〈Oneself as Another (Soi-même comme un autre, 1990)〉，《University of Chicago Press》
-語言：英文（譯自法文）
-所屬面向：從怪圈到共構的漩渦
-立場：支持
-摘要：里柯區分「同（idem，恆常不變的同一）」與「自身（ipse，貫穿變化的自身性）」，主張自我同一性由敘事構成，且敘事身分本質上需與他者「共著」（co-authorship），含倫理向度。其「貫變化而自持＋與他者共構」與本節從孤立怪圈推進到「共構的漩渦」高度共鳴，核心盟友。
-> **全文**：[Paul Ricoeur (SEP)](https://plato.stanford.edu/entries/ricoeur/)
-
-【Schechtman, M.】（1996）〈The Constitution of Selves〉，《Cornell University Press》
-語言：英文
-所屬面向：從怪圈到共構的漩渦
-立場：支持
-摘要：謝赫特曼的「敘事自我構成觀」（NSCV）主張人格由持續的自傳式敘事構成，且敘事須能向他人articulate、被他人視為真實可解。其「自我須在他者可理解的敘事中構成」為「共構的漩渦」提供當代敘事同一性支撐，盟友。
-> **全文**：[Narrative and fission（書評, Taylor & Francis）](https://www.tandfonline.com/doi/abs/10.1080/09515089708573216)（原書 DOI 待核）
-
-【Parfit, D.】（1984）〈What matters is Relation R（Reasons and Persons 第三部）〉，《Reasons and Persons (Oxford University Press)》
-語言：英文
-所屬面向：從怪圈到共構的漩渦
-立場：反例
-摘要：帕菲特的化約論結論「同一性不重要、重要的是關係 R（心理連結與連續）」雖否定深層自我，卻與本節形成關鍵對話：若連個體自我都可化約，本章如何主張「共構的漩渦」是更高層的真實而非另一種幻象？作為迫使本節自證的 foil。
-> **全文**：[Reasons and Persons (Wikipedia 概述)](https://en.wikipedia.org/wiki/Reasons_and_Persons)（原書 DOI 待核）
-
-【—】（2023）〈Personal Identity §4（Psychological Continuity）〉，《Stanford Encyclopedia of Philosophy》
-語言：英文
-所屬面向：從怪圈到共構的漩渦
-立場：補充
-摘要：SEP 梳理心理連續論的諸版本與其對巴特勒循環反駁的回應，並標示敘事進路在當代爭論中的位置。作為旁證，為「從怪圈到共構的漩渦」這一推進提供學術座標與術語界定。
-> **全文**：[Personal Identity (SEP)](https://plato.stanford.edu/entries/identity-personal/)
-
-【Longino, H. E.】（1990）〈Science as Social Knowledge: Values and Objectivity in Scientific Inquiry〉，《Princeton University Press》
-語言：英文
-所屬面向：識然在五觀中的位置：不是起點，也不是終點
-立場：補充
-摘要：朗吉諾提出「脈絡經驗論」，主張客觀性不來自單一主體的抽離，而來自多元視角在社群中批判互動的結構。此說為「識然不是某個特權起點、而是多觀並置之中介」提供旁證，支持本節把認識安放在五觀之間而非奠基點的定位。
-> **全文**：[Princeton University Press](https://press.princeton.edu/books/paperback/9780691020518/science-as-social-knowledge)
-
-【DeRose, K. 等／Rysiew, P. 編】（2024）〈Epistemic Contextualism〉，《Stanford Encyclopedia of Philosophy》
-語言：英文
-所屬面向：識然在五觀中的位置：不是起點，也不是終點
-立場：補充
-摘要：脈絡論主張「知道」一詞的真值隨脈絡標準而變，可同時容納強義（哲學的）與弱義（日常的）兩種用法。這為本節「識然隨觀點與尺度而定位、不固著於單一終點」的論旨提供旁證，也與後文強弱認識論並存呼應。
-> **全文**：[plato.stanford.edu](https://plato.stanford.edu/entries/contextualism-epistemology/)
+摘要：SEP 科學多元論詞條主張「沒有唯一普世的科學方法」，科學實踐的去統一性（disunity）與認識、社會多樣性是成功科學的生產性特徵而非缺陷。作為旁證，為本節「學科各自如何認識」的匯流提供當代科學哲學的權威支撐。（作者姓名細節待核）
+> **全文**：[SEP: Scientific Pluralism](https://plato.stanford.edu/entries/scientific-pluralism/)
 
 【Nagel, T.】（1986）〈The View from Nowhere〉，《Oxford University Press》
 語言：英文
-所屬面向：識然在五觀中的位置：不是起點，也不是終點
-立場：反例
-摘要：內格爾雖承認人永遠無法完全跳出自身，卻仍把「來自無何有之鄉的觀點」設為一個漸近追求的客觀終點。此一以「越客觀越真」為方向的階梯式圖像，正是本節要拒斥的「認識有一個特權終點」的對立立場，構成 foil。
-> **全文**：[Wikipedia 條目](https://en.wikipedia.org/wiki/The_View_from_Nowhere)
-
----
-
-## 第二節　認識的測不準與再現的暴力：強弱認識論的必要並存
-
-【Rorty, R.／Ramberg, B. 與 Dieleman, S.】（2022）〈Richard Rorty〉，《Stanford Encyclopedia of Philosophy》
-語言：英文
-所屬面向：認識的測不準與再現的暴力：強弱認識論的必要並存
-立場：補充
-摘要：羅蒂以《哲學與自然之鏡》攻擊「知識即心對外界的精確再現」，主張應以信念的社會證成取代再現精確性。此一反再現論立場為本節「再現的暴力」與弱認識論的誠實提供旁證，但其徹底相對化又被本節「強弱必須並存」所節制。
-> **全文**：[plato.stanford.edu](https://plato.stanford.edu/entries/rorty/)
-
-【Sellars, W.】（1956）〈Empiricism and the Philosophy of Mind〉，《University of Minnesota Press（後 Harvard UP, 1997）》
-語言：英文
-所屬面向：認識的測不準與再現的暴力：強弱認識論的必要並存
-立場：反例
-摘要：塞拉斯批判「所與神話」，論證沒有任何非概念的感覺所與能單獨擔當知識基礎，知識是相互支撐的整體系統。此說否定了「強認識論之可還原、可全等再現」的基礎主義前設，構成本節主張「強認識論仍有其必要地位」的有力 foil。
-> **全文**：[Sellars 原文 PDF](https://andrewmbailey.com/wpa/SellarsMyth.pdf)
-
----
-
-## 第三節　誠實是知識的條件：識然通向應然
-
-【Battaly, H.／Turri, J. 等編】（2019）〈Virtue Epistemology〉，《Stanford Encyclopedia of Philosophy》
-語言：英文
-所屬面向：誠實是知識的條件：識然通向應然
+所屬面向：反身認識的完成：認識你自己作為識然入口
 立場：支持
-摘要：德性知識論以認識主體與社群的智性德性（誠實、正直、謙卑等）為評價核心，把知識規範性安放在主體品格上。這直接支持本節「誠實作為知識條件」與「知識論接壤倫理學」的論旨，亦呼應誠實生成論以認知歷程之誠實取代靜態 JTB。
-> **全文**：[plato.stanford.edu](https://plato.stanford.edu/entries/epistemology-virtue/)
+摘要：內格爾論證客觀化衝動（「無所從來的觀點」）永遠無法徹底擺脫主體視角，任何實際觀點都是某人的觀點，客觀與主觀須並存。此支持「反身認識」——認識必回指認識者自身，是識然入口的哲學盟友。
+> **全文**：[The View from Nowhere (OUP)](https://global.oup.com/academic/product/the-view-from-nowhere-9780195056440)
 
-【Cohon, R.／Hume, D.】（2018）〈Hume's Moral Philosophy（含 is–ought）〉，《Stanford Encyclopedia of Philosophy》
+【Putnam, H.】（2002）〈The Collapse of the Fact/Value Dichotomy and Other Essays〉，《Harvard University Press》
 語言：英文
-所屬面向：誠實是知識的條件：識然通向應然
+所屬面向：識然通向應然：呼應卷二的誠實生成論
+立場：支持
+摘要：普特南主張事實與價值「糾纏」（entanglement），科學判準（簡潔、融貫、歸納一致）本身即是價值判斷，事實客觀／價值主觀的二分為經驗論最後的教條而崩解。此直接支持「識然通向應然」——認識與價值不可截然二分。
+> **全文**：[The Collapse of the Fact/Value Dichotomy (Goodreads)](https://www.goodreads.com/book/show/193690.The_Collapse_of_the_Fact_Value_Dichotomy_and_Other_Essays)
+
+【MacIntyre, A.】（1981）〈After Virtue: A Study in Moral Theory〉，《University of Notre Dame Press》
+語言：英文
+所屬面向：識然通向應然：呼應卷二的誠實生成論
+立場：補充
+摘要：麥金泰爾論證「不能從 is 推出 ought」的現代前提來自暗中取消人的 telos；一旦恢復功能性目的概念（如手錶「應」準時報時），事實即蘊含應然。作為旁證，為本節「識然通向應然」提供以目的論重建事實-價值橋樑的路徑。
+> **全文**：[After Virtue (Wikipedia)](https://en.wikipedia.org/wiki/After_Virtue)
+
+【Hume, D.】（1739–40）〈A Treatise of Human Nature（is–ought 段落）〉，《London: John Noon》
+語言：英文
+所屬面向：識然通向應然：呼應卷二的誠實生成論
 立場：反例
-摘要：休謨主張不能由純粹「實然」前提有效推出「應然」結論（休謨法則）。本節「識然通向應然」恰要跨越此鴻溝，故休謨之 is–ought 斷裂正是必須回應的對立立場，構成 foil；本節以誠實作為認識與倫理的共同底層條件來鬆動該斷裂。
-> **全文**：[plato.stanford.edu](https://plato.stanford.edu/entries/hume-moral/)
+摘要：休謨的「休謨斷頭台」主張純描述性的事實前提無法推導出倫理或評價性結論，是「識然通向應然」的經典反例。本節須正面回應此 is–ought 鴻溝，方能為誠實生成論的價值跨越辯護。
+> **全文**：[Is–ought problem (Wikipedia)](https://en.wikipedia.org/wiki/Is%E2%80%93ought_problem)
+
+
+## 宗教與神話
+
+【Durkheim, É.】（1912／1995）〈The Elementary Forms of Religious Life（Fields 譯本）〉，《The Free Press》
+語言：英文（原文法文）
+所屬面向：圖騰與集體歡騰：宗教生活的基本形式
+立場：支持
+摘要：涂爾幹以澳洲原住民圖騰制為「最基本的宗教形式」，主張儀式聚集所激發的「集體歡騰」（collective effervescence）產生一股準電流般的道德能量，被投射到圖騰符號上而成為神聖之源。此為本章樞紐的第一手來源與核心盟友：宗教與集體表徵不是外加於認識的，而是認識範疇賴以生成的社會母體。
+> **全文**：[Durkheim 1912 掃描本](https://durkheim.uchicago.edu/Summaries/forms.html)
+
+【Eliade, M.】（1957／1959）〈The Sacred and the Profane: The Nature of Religion（Trask 譯）〉，《Harcourt, Brace & World》
+語言：英文（原文法文／德文）
+所屬面向：神聖／世俗二分作為分類認識的原型
+立場：補充
+摘要：伊利亞德以「顯聖」（hierophany）論神聖如何闖入世俗經驗，使空間與時間對宗教人而言不再均質，而分裂為神聖與世俗兩域。作為旁證：它從宗教現象學側面支撐「神聖／世俗二分是一種原型分類認識」，但其視神聖為自成一格的先驗範疇，與涂爾幹的社會起源說形成張力，可供本章對照。
+> **全文**：[Eliade 1957 全文掃描](https://archive.org/stream/The-Sacred-And-The-Profane/The-Sacred-and-the-Profane-Mircea-Eliade_djvu.txt)
+
+【Douglas, M.】（1966）〈Purity and Danger: An Analysis of Concepts of Pollution and Taboo〉，《Routledge & Kegan Paul》
+語言：英文
+所屬面向：神聖／世俗二分作為分類認識的原型
+立場：補充
+摘要：道格拉斯提出「污穢即錯位之物」（dirt is matter out of place），主張潔淨與污染並非物質固有性質，而是分類系統遭違逆時的符號效應——「有污穢處即有系統」。作為旁證延伸涂爾幹二分：神聖／世俗、潔／不潔的邊界是集體分類的產物，污穢範疇因此是社會建構的認識裝置。
+> **全文**：[Purity and Danger 條目與書目](https://en.wikipedia.org/wiki/Purity_and_Danger)
 
 ---
 
-## 第四節　主體的誕生與「現象即本質」：認識論三部曲的總收束
+【作者不詳（Wikipedia 條目）】（古典希臘）〈Know thyself（γνῶθι σεαυτόν）〉，《Delphic Maxims / Wikipedia 概述》
+語言：英文
+所屬面向：反身認識的完成：認識你自己作為識然入口
+立場：補充
+摘要：德爾斐箴言「認識你自己」刻於阿波羅神廟入口，從古希臘宗教、柏拉圖靈魂論到現代精神分析，一直是知識論的樞紐命令而非單純倫理格言。作為旁證，為本節「認識你自己作為識然入口」提供跨傳統的源頭定位。（原始出處為刻銘，細節待核）
+> **全文**：[Know thyself (Wikipedia)](https://en.wikipedia.org/wiki/Know_thyself)
