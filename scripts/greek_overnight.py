@@ -13,15 +13,17 @@ from __future__ import annotations
 import io, sys, traceback
 from pathlib import Path
 
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-import plato_build as pb  # noqa: E402
+import plato_build as pb  # noqa: E402  (import 時已把 sys.stdout 設成 utf-8；勿再重包＝雙包會關掉 buffer)
 
 LOG = Path("c:/tmp/greek_overnight.log")
 
 
 def log(msg: str) -> None:
-    print(msg, flush=True)
+    try:
+        print(msg, flush=True)
+    except (ValueError, OSError):
+        pass  # stdout 被關（背景管線）仍續寫檔，不讓整夜 queue 掛掉
     with io.open(LOG, "a", encoding="utf-8") as f:
         f.write(msg + "\n")
 
