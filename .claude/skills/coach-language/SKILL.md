@@ -92,6 +92,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 - `/coach/[lang]/today` = **今日計畫**（見下）
 - `/coach/[lang]/chat` = 對話（`?mode=qa|scenario`、`?voice=1`）
 - `/coach/[lang]/smalltalk` = 限時主題聊（3/5/10 分倒數 + 結束評分）
+- `/coach/[lang]/course` = **課程逐課複習**（**目前僅 la**：教會拉丁課，母音子音/單字/認讀/聽寫/發音五分頁，零 AI）
 - `/coach/[lang]/alphabet` = **字母教學 + 字母測驗**（**僅非英文 6 語**：de/fr/ja/grc/la/hbo）
 - `/coach/[lang]/parse` = **詞形判析（parsing）自動批改**（零 AI；grc 新約 + hbo 舊約）
 - `/coach/[lang]/compose` = **句子重組（受限寫作題型）**（零 AI；en 情境句 + grc/hbo 經文 + de/fr/la 字庫例句；ja 無詞間空白暫不支援）
@@ -124,6 +125,8 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 ## 四、其他功能
 
 > 🎯 **設計原則：英文內容「策展優先」（2026-06-05）**。使用者不滿意 AI 即時生成的浮動品質，故**英文的文法課/學術單字/情境實用句/短文長文範例改為手工策展**（`server/data/enGrammar.ts`/`enVocab.ts`/`enSentences.ts`/`enPassages.ts`），策展內容為可靠核心、**AI 只負責「無限延伸／換一個」**（走 NVIDIA 主→Gemini）。加內容＝改對應 data 檔。其他語言仍走 AI 生成。
+
+- **⛪ 課程複習頁（`/coach/[lang]/course`，2026-07-01，目前僅 la，零 AI）**：使用者實際在上的「教會拉丁文（一）· 羅梅洛班」課程，**每週一份講義逐課複習+測驗**。策展資料 `server/data/latinCourse.ts`（`courseForClient()`；`LESSONS` 每筆 `CourseLesson` 含 `vowels`/`diphthongs`/`consonants`(form/sound/rule/examples)/`vocab`(latin/zh/note)，例句中譯全沿用講義本身）。端點 `course`(GET，讀 data 檔零 AI)。頁面**課次切換 + 五分頁**：①**母音子音**（單/雙母音+子音拼讀規則卡格，點🔊朗讀例字 it-IT 教會音）②**單字**（禮儀單字/短語翻卡+🔊）③**認讀**（拼讀規則測驗：看情境如「c 在 e、i 前」→4選1選讀音，專練 c/g/sc 軟硬、ti、gn、s/x 濁化；干擾項用 sound 去重避免兩正解）④**聽寫**（🔊教會音朗讀→打字→`normLatin` 正規化逐字比對，不計大小寫/長短音記號/標點，零AI；單字/短語兩題型）⑤**發音跟讀**（🔊範讀/🐢慢速→🎤跟讀→`scorePronunciation` 純函式逐詞著色評分）。加新課＝在 `latinCourse.ts` 的 `LESSONS` 加一筆。首頁學習磚 `v-if="lang==='la'"`。屬「無 AI 確定性反饋」系列。
 
 - **🔤 字母教學 + 字母測驗（`/coach/[lang]/alphabet`，**2026-06-21 擴至 19 語**）**：使用者要複習各語言字母。**純策展、無 AI、無 DB**——字母資料在 `server/data/alphabets.ts`（每語言一份 `AlphabetSpec`，分 group）。**原 6 語**：de/fr/ja/grc/la/hbo。**新增 13 種書寫系統（接轉寫鍵盤）**：att(重用 grc)、arc(重用 hbo 方體字)、chu(西里爾+教會斯拉夫古字母)、ar(28字母+harakat,RTL)、syr(22 Estrangela 子音,RTL)、cop(希臘衍生24+7世俗體)、hy(亞美尼亞38)、ka(喬治亞33 Mkhedruli)、sa(天城體 母音+子音)、pra(重用 sa)、bo(藏文30子音+母音記號)、gez(吉茲33基字+7母音階示範)、mid(曼達22,RTL)。端點 `alphabet` 只讀 `alphabetForClient`，加進 `ALPHABETS` 即自動開頁。**古文字也補了文字教學（2026-06-21）**：phn(腓尼基22子音)、uga(烏加列30楔形字母)、egy(聖書體24單音符＋雙音符/決定符註)、peo(古波斯：母音+音節符+表意符)、akk(楔形入門：音節符/表意符/限定符三類範例，非字母全列)。**仍無字母表（刻意）**＝Latin系(es/nan/hak/ami/tay)、漢字(lzh)、ae/pi（pi 用羅馬轉寫、ae 後補）（點磚顯示「未提供」）。測試 `test/coach/alphabets.spec.ts`。每字 `char/name/sound/example/gloss`。端點 `alphabet`(GET，英文回 available:false)。頁兩模式：**教學**（字母卡格，點🔊用 `coach.ttsLang` 朗讀 example）＋**測驗**（看字母選讀音 / 看讀音選字母 / 混合，4 選 1 即時對答＋計分＋答錯字母回顧；干擾項依答案欄位去重避免兩個正解）。計時走 `useActivityTracker(... 'reading','alphabet')`。首頁學習磚 `v-if="lang!=='en'"`。加/改字母＝改 `alphabets.ts`。
   - **🎤 字母語音搶答（alphabet.vue 第三模式，2026-06-18，ja/grc/la/hbo）**：使用者要「看字母→限時用講的唸出名稱」。看字母→倒數 3/5/8 秒內用 Web Speech STT 唸字母名稱→純函式模糊比對（`heardMatches`：比對 name/sound/char/tts，含 Levenshtein≥0.6、子字串包含）唸對即過。**辨識語系**：古典語名稱皆羅馬轉寫（alpha/aleph…）故用 **en-US** 辨識最穩、ja 用 **ja-JP**（`RECOG` 表）。不支援/唸不出來→「看答案」fallback。零後端零 AI，屬「無 AI 確定性反饋」系列。

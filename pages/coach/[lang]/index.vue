@@ -95,6 +95,7 @@
       <div>
         <div class="text-xs font-semibold text-gray-400 mb-1.5">練習與工具</div>
         <div class="grid grid-cols-3 sm:grid-cols-6 gap-3">
+          <NuxtLink v-if="lang === 'la'" :to="`/coach/${lang}/course`" class="tile">⛪<span>課程複習</span></NuxtLink>
           <NuxtLink v-if="lang !== 'en'" :to="`/coach/${lang}/alphabet`" class="tile">🔤<span>字母教學/測驗</span></NuxtLink>
           <NuxtLink v-if="['grc', 'hbo'].includes(lang)" :to="`/coach/${lang}/parse`" class="tile">🧩<span>詞形判析</span></NuxtLink>
           <NuxtLink v-if="['en', 'grc', 'hbo', 'de', 'fr', 'la'].includes(lang)" :to="`/coach/${lang}/compose`" class="tile">🔀<span>句子重組</span></NuxtLink>
