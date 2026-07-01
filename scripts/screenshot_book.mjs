@@ -119,6 +119,9 @@ await page.addInitScript(({ v, d }) => {
 
 let done = 0
 const t0 = Date.now()
+// First authenticated navigation cold-compiles the reader route (can exceed the
+// 30s default). Raise the navigation timeout so the first page doesn't time out.
+page.setDefaultNavigationTimeout(Number(flag('nav', 150000)))
 for (const p of pages) {
   const url = `${APP_BASE}/ebook/${EBOOK_ID}?page=${p}`
   await page.goto(url, { waitUntil: 'domcontentloaded' })

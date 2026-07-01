@@ -1300,15 +1300,15 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           note: '德 1912 原典＋Hinkle 1916 英譯，德／英／繁中三欄已完成（≠ CW 第五卷改寫本）。',
         },
         {
-          title: '心理類型（1923英譯早期版）',
-          titleOriginal: 'Psychological Types: or, The Psychology of Individuation',
-          year: '1923',
+          title: '心理類型（1921德文·1923英譯·繁中三欄）',
+          titleOriginal: 'Psychologische Typen (1921) / Psychological Types (1923)',
+          year: '1921/1923',
           yearSort: 1923,
           category: '早期著作（公有領域）',
-          languages: ['en'],
+          languages: ['de', 'en'],
           status: 'done',
           ebookId: '22222223-2222-4222-8222-222222222223',
-          note: 'Baynes 1923 英譯早期版，Internet Archive full text；英→繁中雙欄已完成（≠ 受版權 Hull CW6）。',
+          note: '德文 1921 原典（Gutenberg #61543）＋Baynes 1923 英譯（Internet Archive）＋繁中，德／英／繁中三欄已完成（≠ 受版權 Hull CW6）。定義章依見出字對照、敘事章逐段對齊。',
         },
         // 精神醫學與實驗心理學（早期）
         {

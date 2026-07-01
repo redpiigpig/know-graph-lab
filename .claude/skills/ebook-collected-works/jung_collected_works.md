@@ -80,7 +80,7 @@
 | 卷 | 德文來源 | 英文來源 | 取得狀態 |
 |---|---|---|---|
 | 早期《Wandlungen》1912 | archive.org `Jung_1912_Wandlungen`（PD，**純掃描無文字層**，426 頁）| **Project Gutenberg #65903** Hinkle 1916 HTML（PD，乾淨結構）| ✅ 已驗證，全卷完成 |
-| 早期《Psychological Types》1923 | **Gutenberg #61543** `Psychologische Typen` 1921 HTML（PD，乾淨全文，**新查證**）| Internet Archive `psychological_types` djvu full text（Baynes 1923）| ⚙️ 英＋繁中 257 chunks 已完成（ebook `22222223-…`）；**德文源到位 → 可升三欄** |
+| 早期《Psychological Types》1921/1923 | **Gutenberg #61543** `Psychologische Typen` 1921 HTML（PD，乾淨全文）| Internet Archive `psychological_types` djvu full text（Baynes 1923）| ✅ **德英中三欄已完成（2026-07-01）**，ebook `22222223-…`，258 chunks、德文覆蓋 234/257；截圖實證（敘事章 p13、定義章 p229） |
 | CW 11 / 12–14 等版權卷 | 本機處理路徑 | 本機處理路徑 | — |
 
 ### 🆕 新查證的乾淨全文來源（2026-07-01，兩路調查交叉確認）
