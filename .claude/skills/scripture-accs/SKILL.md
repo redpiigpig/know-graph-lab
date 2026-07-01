@@ -85,6 +85,12 @@ python scripts/ingest_accs_genesis.py \
 
 ## 🧭 下個 session 接手清單（2026-06-25 晚更新）
 
+> **2026-07-01 狀態快照**：exo ✅710 列 / lev ✅53 列 已入庫。**num 🔴 全 96 頁 OCR 回空**（checkpoint 每頁 entries:[]，
+> 但 PDF p.339=民5.5-10 實有滿頁教父註釋 → 系統性失敗，多半出+利燒乾 Sonnet 5h 窗後緊接跑 num）；因無 `.done`，
+> resume 判「96/96 已完成」空轉 ~4 天、deu 連帶未跑。**已把壞 checkpoint 退避**（`c:/tmp/accs_num_BAD_empty_backup_20260701.raw.jsonl`）
+> → 下次 `ACCS_OTIII_Resume` 會從頭重 OCR num（新窗，應如 exo/lev 跑得過），完成後自動接 deu。接手先看 `accs_num_…出利民申.raw.jsonl`
+> 是否重新長出非空 entries、num DB 列數有無 >0。**根因待修**：`ingest_accs_genesis.py` 應把「整頁空回應」當 retry，勿當 0-entry 正常頁寫入 checkpoint。
+
 ### A0. ACCS OT III（出/利/民/申）OCR — **OCR 中（排程 ACCS_OTIII_Resume，2026-06-25 起跑）🔴 接手關注**
 - **來源**：合卷 PDF `古代基督信仰聖經註釋叢書2-5 出 利 民 申.pdf`（ACCS OT III＝出/利/民/申 四書，614 頁，
   已複製本地 `c:/tmp/古代基督信仰聖經註釋叢書2-5 出利民申.pdf`）。**四書一起跑**（user 2026-06-25 指定）。
