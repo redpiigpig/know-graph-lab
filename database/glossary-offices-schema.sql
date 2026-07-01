@@ -28,9 +28,10 @@ CREATE TABLE IF NOT EXISTS official_titles (
   updated_at            TIMESTAMPTZ DEFAULT now()
 );
 
--- name_english 可能跨政權撞名（Governor/Prefect 到處都是）→ unique 用 (name_english, polity)
-CREATE UNIQUE INDEX IF NOT EXISTS official_titles_en_polity_key
-  ON official_titles (name_english, COALESCE(polity, ''));
+-- name_english 可能跨政權撞名（Governor/Prefect 到處都是）→ unique 用 (name_english, polity)。
+-- 用具名 constraint（非 expression index）才能供 PostgREST on_conflict=name_english,polity。
+ALTER TABLE official_titles DROP CONSTRAINT IF EXISTS official_titles_en_polity_uq;
+ALTER TABLE official_titles ADD CONSTRAINT official_titles_en_polity_uq UNIQUE (name_english, polity);
 CREATE INDEX IF NOT EXISTS official_titles_register  ON official_titles (register);
 CREATE INDEX IF NOT EXISTS official_titles_polity    ON official_titles (polity);
 CREATE INDEX IF NOT EXISTS official_titles_root      ON official_titles (name_root);

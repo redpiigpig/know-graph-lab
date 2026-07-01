@@ -58,6 +58,14 @@
           >{{ e.label }} <span class="ml-0.5 text-[10px] opacity-70">{{ personEraCount(e.key) }}</span></button>
         </div>
 
+        <!-- Sub-tabs (官制與行政區 only) — 朝代 register 桶（依發展階段排序，呈現層次感） -->
+        <div v-if="activeTab === 'offices'" class="flex flex-wrap items-center gap-1 mb-4">
+          <button v-for="r in officeRegisters" :key="r.key" @click="activeRegister = r.key"
+            class="text-xs px-2.5 py-1 rounded-full border transition"
+            :class="activeRegister === r.key ? 'bg-stone-900 text-white border-stone-900' : 'bg-white text-gray-600 border-gray-200 hover:border-stone-300'"
+          >{{ r.key === 'all' ? '全部' : r.key }} <span class="ml-0.5 text-[10px] opacity-70">{{ r.count }}</span></button>
+        </div>
+
         <!-- Search -->
         <div class="flex flex-wrap items-center gap-2 mb-4">
           <input v-model="q" type="search" placeholder="搜尋（原文／英文／中譯／名根任一）"
@@ -259,6 +267,7 @@ const tabs = [
   { key: 'rulers',       label: '歷代帝王' },
   { key: 'places',       label: '國名與城市' },
   { key: 'deities',      label: '神祇與宗教名詞' },
+  { key: 'offices',      label: '官制與行政區' },
 ] as const
 type TabKey = typeof tabs[number]['key']
 const activeTab = ref<TabKey>('principles')
@@ -270,6 +279,7 @@ const GENERIC: Record<string, { table: string; extras: [string, string][] }> = {
   rulers:       { table: 'historical_rulers', extras: [['polity', '朝代/帝國'], ['title', '稱號'], ['region', '地區']] },
   places:       { table: 'place_names',       extras: [['place_type', '類型'], ['modern_name', '今名'], ['region', '地區']] },
   deities:      { table: 'deities',           extras: [['religion', '宗教'], ['entity_type', '類型'], ['domain_of', '掌管']] },
+  offices:      { table: 'official_titles',   extras: [['register', '官制'], ['polity', '政權'], ['admin_level', '層級'], ['entity_type', '類型']] },
 }
 const TERM_TABS = ['term', 'place', 'work', 'sect']
 const isTermTab = computed(() => TERM_TABS.includes(activeTab.value))
@@ -292,10 +302,24 @@ type PersonEra = typeof personEras[number]['key']
 const activePersonEra = ref<PersonEra>('all')
 const showBiblicalCols = computed(() => activeTab.value === 'people' && activePersonEra.value === 'biblical')
 
+// 官制與行政區 register 子篩選（依 sort_order 首見順序 = 發展階段順序）
+const activeRegister = ref<string>('all')
+const officeRegisters = computed(() => {
+  const rows = [...(genericData.official_titles || [])].sort((a, b) => (a.sort_order ?? 9999) - (b.sort_order ?? 9999))
+  const seen: string[] = []
+  const counts: Record<string, number> = {}
+  for (const r of rows) {
+    const reg = r.register || '（未分類）'
+    if (!seen.includes(reg)) seen.push(reg)
+    counts[reg] = (counts[reg] || 0) + 1
+  }
+  return [{ key: 'all', count: rows.length }, ...seen.map(k => ({ key: k, count: counts[k] }))]
+})
+
 const loading = ref(true)
 const theologians = ref<any[]>([])
 const terms = ref<any[]>([])
-const genericData = reactive<Record<string, any[]>>({ philosophers: [], scientists: [], historical_rulers: [], place_names: [], deities: [] })
+const genericData = reactive<Record<string, any[]>>({ philosophers: [], scientists: [], historical_rulers: [], place_names: [], deities: [], official_titles: [] })
 
 const q = ref('')
 const expanded = ref<string | null>(null)
@@ -339,9 +363,11 @@ const filteredGeneric = computed(() => {
   if (!(activeTab.value in GENERIC)) return []
   const rows = genericData[GENERIC[activeTab.value].table] || []
   const query = q.value.trim().toLowerCase()
+  const reg = activeTab.value === 'offices' ? activeRegister.value : 'all'
   const out = rows.filter(r => {
+    if (reg !== 'all' && (r.register || '（未分類）') !== reg) return false
     if (!query) return true
-    return [r.name_english, r.name_original, r.name_romanized, r.name_recommended, r.name_variants, r.name_root]
+    return [r.name_english, r.name_original, r.name_romanized, r.name_recommended, r.name_variants, r.name_root, r.polity, r.register]
       .filter(Boolean).some((v: string) => v.toLowerCase().includes(query))
   })
   return [...out].sort((a, b) => (a.sort_order ?? 9999) - (b.sort_order ?? 9999) || String(a.name_english).localeCompare(String(b.name_english)))
@@ -424,7 +450,7 @@ async function saveGeneric(id: string) {
 }
 
 onMounted(async () => {
-  const [p, t, ph, sc, ru, pl, de] = await Promise.all([
+  const [p, t, ph, sc, ru, pl, de, of] = await Promise.all([
     supabase.from('theologians').select('*'),
     supabase.from('theological_terms').select('*').order('sort_order', { ascending: true, nullsFirst: false }),
     supabase.from('philosophers').select('*'),
@@ -432,6 +458,7 @@ onMounted(async () => {
     supabase.from('historical_rulers').select('*'),
     supabase.from('place_names').select('*'),
     supabase.from('deities').select('*'),
+    supabase.from('official_titles').select('*'),
   ])
   theologians.value = p.data || []
   terms.value = t.data || []
@@ -440,6 +467,7 @@ onMounted(async () => {
   genericData.historical_rulers = ru.data || []
   genericData.place_names = pl.data || []
   genericData.deities = de.data || []
+  genericData.official_titles = of.data || []
   loading.value = false
 })
 </script>

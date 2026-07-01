@@ -29,10 +29,16 @@ def test_offices_domain_added_with_own_table():
 
 
 # ── Register taxonomy ───────────────────────────────────────────────────────
-def test_eight_dev_stage_registers_span_shangzhou_to_mingqing_plus_feudal():
+def test_dev_stage_registers_span_shangzhou_to_mingqing_plus_song_liaoyuan_feudal():
     labels = {r["label_zh"] for r in gn.ADMIN_REGISTERS}
-    assert {"商周制", "春秋制", "戰國秦制", "漢制", "魏晉制", "唐制", "明清制",
-            "周封建五等爵"} <= labels
+    assert {"商周制", "春秋制", "戰國秦制", "漢制", "魏晉制", "唐制", "宋制",
+            "遼金元制", "明清制", "周封建五等爵"} <= labels
+
+
+def test_liaojinyuan_register_carries_nomadic_dual_admin_vocab():
+    # 游牧/征服王朝：南北面官雙軌 + 十進位軍事編制 + 達魯花赤
+    ljy = gn.REGISTER_BY_KEY["liao_jin_yuan"]
+    assert "達魯花赤" in ljy["local"] and "萬戶" in ljy["local"]
 
 
 def test_each_register_has_profile_fields():
@@ -60,8 +66,19 @@ def test_register_for_polity_follows_dev_stage_mapping():
     assert gn.register_for_polity("古埃及") == "商周制"
     assert gn.register_for_polity("新亞述帝國") == "戰國秦制"
     assert gn.register_for_polity("阿契美尼德-波斯帝國") == "戰國秦制"
-    assert gn.register_for_polity("拜占庭帝國") == "唐制"
     assert gn.register_for_polity("鄂圖曼-土耳其帝國") == "明清制"
+
+
+def test_nomadic_empires_map_to_liaojinyuan():
+    # 游牧帝國用遼金元詞（使用者 2026-07-01）
+    assert gn.register_for_polity("安息-帕提亞帝國") == "遼金元制"
+    assert gn.register_for_polity("蒙古帝國") == "遼金元制"
+    assert gn.register_for_polity("帖木兒帝國") == "遼金元制"
+
+
+def test_byzantium_spans_tang_theme_then_song_civil():
+    assert gn.registers_for_polity("拜占庭帝國") == ["唐制", "宋制"]
+    assert gn.register_for_polity("拜占庭帝國") == "唐制"
 
 
 def test_rome_spans_two_registers_early_han_late_weijin():

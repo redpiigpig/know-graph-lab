@@ -65,9 +65,9 @@ R("Nomarch", "州伯", etype="官職", polity="古埃及", register="商周制",
 _order = 2000
 R("Babylonian Province", "畿", etype="行政區", polity="古巴比倫", register="春秋制",
   level="一級", tier="地方", reason="巴比倫城富庶精華區；漢摩拉比≈齊桓霸業立法（使用者定調）")
-R("Babylonian Governor", "大尹", etype="官職", polity="新巴比倫帝國", register="春秋制",
-  level="一級", tier="地方", var="令尹；牧",
-  reason="⚠️令尹為中央宰輔，地方首長暫定「大尹」（管富庶城市與神廟），待使用者定奪大尹/牧")
+R("Babylonian Governor", "縣公", etype="官職", polity="新巴比倫帝國", register="春秋制",
+  level="一級", tier="地方", var="令尹；大尹；牧",
+  reason="使用者定調巴比倫用楚國職位；楚縣之長特稱「公」（葉公/白公），別於中央宰輔令尹")
 R("Assyrian Province", "鎮", etype="行政區", polity="新亞述帝國", register="戰國秦制",
   level="一級", tier="軍事", var="行省", root="鎮",
   reason="軍事佔領據點、肅殺氣（使用者定調用「鎮」）")
@@ -169,6 +169,41 @@ R("Amir", "經略使", o="أمير", lang="ar", rom="Wali", etype="官職",
   reason="軍政合一、邊疆經營，如唐宋經略安撫使；初期征服可作都護（使用者定調）")
 R("Vizier", "宰相", o="وزير", lang="ar", etype="官職", polity="阿拔斯-阿拉伯帝國",
   register="唐制", level="中央", tier="中央", reason="波斯化文官體系之首")
+# 東羅馬晚期中央文官層（宋制）— 拜占庭跨唐(軍區)/宋(文官) 兩制
+R("Kephale", "知州", o="κεφαλή", lang="grc", etype="官職", polity="拜占庭帝國",
+  register="宋制", level="一級", tier="地方", var="總督；城市長官",
+  reason="晚期（帕列奧列格）中央派任之府/城長官，如宋「知某州事」")
+R("Logothete", "三司使", o="λογοθέτης", lang="grc", etype="官職", polity="拜占庭帝國",
+  register="宋制", level="中央", tier="中央", var="度支使；大臣",
+  reason="掌財政之中央大臣（logothetes tou genikou），如宋三司使")
+
+# ════════════════════════════════════════════════════════════════════════════
+# 4.5b 游牧/征服帝國（遼金元制）— 南北面雙軌、十進位軍事編制、達魯花赤
+# ════════════════════════════════════════════════════════════════════════════
+_order = 5500
+R("Vassal Kingdom", "屬國", etype="行政區", polity="安息-帕提亞帝國", register="遼金元制",
+  level="羈縻", tier="地方", reason="安息治希臘城市(南面)＋伊朗部族(北面)雙軌，多封屬國")
+R("Marzban", "招討使", o="marzbān", lang="pal", etype="官職", polity="安息-帕提亞帝國",
+  register="遼金元制", level="一級", tier="軍事", var="邊境總督；馬爾茲班",
+  reason="邊疆軍事鎮守者，如遼宋招討使")
+R("Iqta", "食邑", o="إقطاع", lang="ar", etype="行政區", polity="塞爾柱-突厥帝國",
+  register="遼金元制", level="一級", tier="軍事", var="采邑；封地",
+  reason="以軍事義務換取之土地采邑，如遼金元/封建食邑")
+R("Khanate", "汗國", o="ᠬᠠᠨ", lang="mn", etype="行政區", polity="蒙古帝國", register="遼金元制",
+  level="帝國", tier="地方", reason="大汗分封諸子之汗國（伊兒/金帳/察合台）")
+R("Great Khan", "大汗", o="ᠶᠡᠺᠡ ᠬᠠᠭᠠᠨ", lang="mn", rom="Yeke Khagan", etype="官職",
+  polity="蒙古帝國", register="遼金元制", level="中央", tier="中央", var="可汗",
+  reason="草原共主，如遼金元之可汗/大汗")
+R("Darughachi", "達魯花赤", o="ᠳᠠᠷᠤᠭᠠᠴᠢ", lang="mn", etype="官職", polity="蒙古帝國",
+  register="遼金元制", level="一級", tier="地方", var="監臨官；鎮守官",
+  reason="蒙古派駐地方之最高監臨官，元代本即漢譯「達魯花赤」")
+R("Tumen", "萬戶", o="ᠲᠦᠮᠡᠨ", lang="mn", etype="行政區", polity="蒙古帝國", register="遼金元制",
+  level="一級", tier="軍事", var="土綿",
+  reason="十進位軍事編制（一萬戶/兵），如元萬戶")
+R("Minghan", "千戶", o="ᠮᠢᠩᠭᠠᠨ", lang="mn", etype="行政區", polity="蒙古帝國", register="遼金元制",
+  level="二級", tier="軍事", reason="千戶編制，如元千戶／金猛安")
+R("Jaghun", "百戶", o="ᠵᠠᠭᠤᠨ", lang="mn", etype="行政區", polity="蒙古帝國", register="遼金元制",
+  level="三級", tier="軍事", reason="百戶編制，如元百戶／金謀克")
 # 中世紀西歐封建五等爵（周封建五等爵；傳統譯已 register-正確）
 R("Duke", "公", lang="la", etype="封爵", polity="中世紀西歐封建", register="周封建五等爵",
   tier="封爵", reason="五等爵之首，傳統譯已正確")
