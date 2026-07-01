@@ -302,7 +302,7 @@ def build_section_chunk(
         sources[lang] = "\n\n".join(rows)
     chunk = build_multilang_chunk(
         chunk_index=chunk_index,
-        chapter_path=f"{PARENT_VOLUME} · {title_zh}",
+        chapter_path=f"{parent_volume} · {title_zh}",
         content_zh="\n\n".join(zh_rows),
         sources=sources,
         source_order=source_order,
@@ -574,7 +574,7 @@ PANIKKAR_PROMPT_TMPL = """你是比較神學與宗教哲學經典的專業譯者
 _SRC_LABELS = {"en": "英文", "it": "義大利文", "es": "西班牙文", "de": "德文", "fr": "法文"}
 
 
-def make_engine(src_lang: str = "en"):
+def make_engine(src_lang: str = "en", backend: str = "auto"):
     import translate_ebook_to_zh as te
     te.PROMPT_TMPL = PANIKKAR_PROMPT_TMPL.format(srclang=_SRC_LABELS.get(src_lang, "外文"))
 
@@ -590,9 +590,28 @@ def make_engine(src_lang: str = "en"):
         if not src:
             return ""
         pieces = te.split_oversized(src)
+
+        def translate_piece(piece: str) -> str:
+            if backend == "ollama":
+                return te.ollama_translate(piece)
+            if backend == "haiku":
+                return te.haiku_translate(piece)
+            if backend == "gemini":
+                return te.gemini_translate(piece)
+            if backend == "gemini-first":
+                return te.gemini_with_nvidia_fallback(piece)
+            if backend == "nvidia":
+                return te.nvidia_translate(piece)
+            # 'auto' default = unified Gemini-first chain (Gemini → NVIDIA → Haiku,
+            # each tier 2-strike). Flipped from NVIDIA-first 2026-07-01: NVIDIA
+            # deepseek is long-term 429, and NVIDIA-first burned its full ~15-min
+            # all-keys deadline per piece before falling through — the queue spun on
+            # "429 resting 120s rotating" instead of waking Gemini/Haiku.
+            return te.gemini_with_nvidia_fallback(piece)
+
         out = ""
         for _ in range(4):  # retry-on-empty (engine occasionally returns blank under load)
-            out = _clean(" ".join(te.nvidia_with_gemini_fallback(p) for p in pieces))
+            out = _clean(" ".join(translate_piece(p) for p in pieces))
             if out:
                 return out
         return out

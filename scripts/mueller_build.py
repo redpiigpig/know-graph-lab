@@ -16,8 +16,10 @@ supervised parallel translation). Per volume:
 Resumable: each section's {en,de,zh} rows cache to mueller_data/<vol>/secN.json;
 a rerun only translates paragraphs whose zh is still missing.
 
-Engine: no Gemini key in this env → NVIDIA-first chain (te.nvidia_with_gemini_fallback
-= NVIDIA deepseek 4-key round-robin → Gemini → Haiku 救急). See
+Engine: unified Gemini-first chain (te.gemini_with_nvidia_fallback = Gemini 4-key
+round-robin → NVIDIA deepseek → Haiku 救急, each tier 2-strike). Flipped from
+NVIDIA-first 2026-07-01 (NVIDIA long-term 429 stalled the queue; Gemini keys DO
+load here — 4 of them). See
 .claude/skills/ebook-collected-works/mueller_collected_works.md.
 
   python scripts/mueller_build.py --dry            # clean+align counts only, no LLM
@@ -203,7 +205,7 @@ def make_engine():
         # / blank response that _clean reduces to ""; don't cache that as the translation.
         out = ""
         for _ in range(4):
-            out = _clean(" ".join(te.nvidia_with_gemini_fallback(p) for p in pieces))
+            out = _clean(" ".join(te.gemini_with_nvidia_fallback(p) for p in pieces))
             if out:
                 return out
         return out
