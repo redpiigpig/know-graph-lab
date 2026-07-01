@@ -11,6 +11,7 @@ interface IndexFile {
   ext: string;
   size: number;
   mtime: number;
+  driveId?: string; // 影片才有：雲端版靠此嵌 Drive 播放器
 }
 interface IndexFolderNode {
   folders: { name: string; fileCount: number; subfolderCount: number }[];
@@ -141,6 +142,7 @@ export interface PhotoFile {
   size: number;
   mtime: number;
   url: string;
+  driveId?: string; // 影片才有：雲端版前端用它嵌 Drive 播放器
 }
 
 // 多相簿支援：辰瑋（年-月-事件）/ 訓練（平鋪事件）/ 弘誓（民國年-事件）
@@ -489,6 +491,7 @@ function indexFileToPhotoFile(
     size: f.size,
     mtime: f.mtime,
     url: signer(f.name),
+    ...(f.driveId ? { driveId: f.driveId } : {}),
   };
 }
 

@@ -122,3 +122,6 @@ scripts/data/wang_ronghe/
 # 媒體優化 ledger（runtime state）
 scripts/transcode_ledger.json
 scripts/heic_convert_ledger.json
+.gcp/
+.env.bak.*
+/scripts/drive_ids.json

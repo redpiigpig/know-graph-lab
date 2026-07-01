@@ -36,6 +36,27 @@ VIDEO_EXTS = {".mp4", ".mov", ".m4v", ".webm", ".mkv"}
 
 OUTPUT_PATH = Path(__file__).parent / "photo_index.json"
 
+# Drive 檔案 ID（由 harvest_drive_ids.py 從本機 Google Drive for Desktop DB 抽出，無需 SA/API）。
+# 給影片用：雲端版靠 driveId 嵌 Drive 播放器（原檔不在 R2）。
+DRIVE_IDS_PATH = Path(__file__).parent / "drive_ids.json"
+_FULL_ID_MAP = {}
+
+
+def _load_drive_ids():
+    if not DRIVE_IDS_PATH.exists():
+        print("  (無 drive_ids.json，跳過 driveId 標註；先跑 harvest_drive_ids.py)")
+        return
+    data = json.load(open(DRIVE_IDS_PATH, encoding="utf-8"))
+    for slug, lib in LIBRARIES.items():
+        groot = PHOTOS_PARENT / lib["folder"]
+        for rel, did in data.get(slug, {}).items():
+            _FULL_ID_MAP[os.path.normcase(str(groot / rel))] = did
+    print(f"  載入 {len(_FULL_ID_MAP)} 個 Drive 檔案 ID")
+
+
+def drive_id_for(full_path):
+    return _FULL_ID_MAP.get(os.path.normcase(str(full_path)))
+
 
 def classify(name: str):
     ext = os.path.splitext(name)[1].lower()
@@ -67,13 +88,18 @@ def list_files(dir_path: Path):
             st = e.stat()
         except OSError:
             continue
-        out.append({
+        obj = {
             "name": e.name,
             "kind": kind,
             "ext": ext,
             "size": st.st_size,
             "mtime": st.st_mtime * 1000.0,  # ms, 對齊 fs.stat().mtimeMs
-        })
+        }
+        if kind == "video":
+            did = drive_id_for(e.path)
+            if did:
+                obj["driveId"] = did
+        out.append(obj)
     # numeric-aware sort 跟 server 端 localeCompare(undefined,{numeric:true}) 比不完全一樣，
     # 但 rename 後的 YYYY-MM-DD(N).ext 命名空間下純字串排序已等價。
     out.sort(key=lambda x: x["name"])
@@ -216,13 +242,18 @@ def build_folder_lib(root: Path):
                     st = e.stat()
                 except OSError:
                     continue
-                files.append({
+                obj = {
                     "name": e.name,
                     "kind": kind,
                     "ext": ext,
                     "size": st.st_size,
                     "mtime": st.st_mtime * 1000.0,
-                })
+                }
+                if kind == "video":
+                    did = drive_id_for(e.path)
+                    if did:
+                        obj["driveId"] = did
+                files.append(obj)
 
         files.sort(key=lambda x: x["name"])
         folder_entries.sort(key=lambda t: t[0])
@@ -264,6 +295,7 @@ def build_folder_lib(root: Path):
 
 def main():
     t0 = time.time()
+    _load_drive_ids()
     index = {
         "version": 1,
         "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%S"),

@@ -83,9 +83,19 @@
             :src="f.url"
             cls="w-full h-full object-cover"
           />
+          <img
+            v-else-if="f.kind === 'video' && f.driveId && !failedThumbs.has(f.driveId)"
+            :src="`https://drive.google.com/thumbnail?id=${f.driveId}&sz=w480`"
+            :alt="f.name"
+            loading="lazy"
+            decoding="async"
+            referrerpolicy="no-referrer"
+            @error="failedThumbs.add(f.driveId)"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
           <div v-else-if="f.kind === 'video'" class="w-full h-full flex flex-col items-center justify-center text-stone-400 bg-stone-100 p-3">
             <div class="text-3xl">🎬</div>
-            <div class="mt-1 text-[10px] uppercase tracking-widest">影片僅本機</div>
+            <div class="mt-1 text-[10px] uppercase tracking-widest">{{ f.driveId ? '影片' : '影片僅本機' }}</div>
           </div>
           <div v-else class="w-full h-full flex flex-col items-center justify-center text-stone-400 bg-stone-100 p-3">
             <div class="text-3xl">📄</div>
@@ -140,6 +150,20 @@
             autoplay
             class="max-h-full max-w-full"
           />
+          <div v-else-if="current.kind === 'video' && current.driveId" class="w-full h-full flex flex-col items-center justify-center gap-3 py-4">
+            <iframe
+              :src="`https://drive.google.com/file/d/${current.driveId}/preview`"
+              class="w-full max-w-4xl flex-1 rounded border-0 bg-black"
+              allow="autoplay; fullscreen"
+              allowfullscreen
+            />
+            <a
+              :href="`https://drive.google.com/file/d/${current.driveId}/view`"
+              target="_blank"
+              rel="noopener"
+              class="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded text-xs shrink-0"
+            >▶ 用 Google Drive 開啟（若上方無法播放請點這）</a>
+          </div>
           <div v-else-if="current.kind === 'video'" class="text-stone-300 text-center p-8">
             <div class="text-5xl mb-2">🎬</div>
             <div class="text-sm">{{ current.name }}</div>
@@ -171,8 +195,10 @@ interface PhotoFile {
   url: string;
 }
 
-// r2 後端（雲端）：影片原檔不在 R2，tile/lightbox 顯示占位不掛 <video>。
+// r2 後端（雲端）：影片原檔不在 R2，改用 driveId 嵌 Drive 播放器（見 template）。
 const isCloud = useRuntimeConfig().public.photoBackend === "r2";
+// Drive 縮圖若被擋（iPad 第三方 cookie）就 fallback 成 🎬 占位。
+const failedThumbs = reactive(new Set<string>());
 
 const route = useRoute();
 const year = computed(() => String(route.params.year || ""));
