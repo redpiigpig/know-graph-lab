@@ -204,8 +204,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 13,
           category: '中期對話錄（理型論成熟）',
           languages: ['grc', 'en'],
-          status: 'planned',
-          note: '十卷鉅著：正義、理型、洞穴寓言、哲人王、靈魂三分。全集核心。',
+          status: 'in-progress',
+          ebookId: '70000000-0000-4000-8000-000000000002',
+          note: '十卷鉅著：正義、理型、洞穴寓言、哲人王、靈魂三分。全集核心。希臘（Burnet）／英（Shorey）／繁中按 Stephanus 節三欄，依卷分組，轉錄中（278 頁）。',
         },
         {
           title: '斐德羅',
