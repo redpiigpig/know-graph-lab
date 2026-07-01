@@ -2157,6 +2157,17 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           note: 'cosmotheandric（宇宙神人共融）招牌概念的總成。',
         },
         {
+          title: '神話、信仰與詮釋學',
+          titleOriginal: 'Mito, fede ed ermeneutica（Myth, Faith and Hermeneutics）',
+          year: '義文版 2000',
+          yearSort: 13,
+          category: '奧祕與詮釋學（卷九）',
+          languages: ['it'],
+          status: 'done',
+          ebookId: '55555564-5555-4555-8555-555555555555',
+          note: '義大利文原典＋繁中逐段自譯（Ollama 粗譯 → Haiku 複審），103 節 / 707 段 / 123 chunks，全段覆蓋。',
+        },
+        {
           title: '奧祕與詮釋學：神話、象徵與禮儀',
           titleOriginal: 'Mystery and Hermeneutics: Myth, Symbol, and Ritual (Opera Omnia IX.1)',
           year: '全集 IX.1',
