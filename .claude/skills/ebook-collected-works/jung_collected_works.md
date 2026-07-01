@@ -34,7 +34,7 @@
 | *The Theory of Psychoanalysis*（1912 Fordham 講稿）| 《Versuch einer Darstellung…》1913 | ✅ **Gutenberg #66041 HTML（1915 單行本）** | 英＋繁中雙語 |
 | *Studies in Word-Association*（＝《Diagnostische Assoziationsstudien》）| ✅ 德文 1906/1909 | ✅ **M. D. Eder 譯 1918, archive `studiesinwordass00jung` djvu.txt（Gutenberg 沒有）** | 英＋繁中雙語（字詞聯想／情結起源） |
 | *The Psychology of Dementia Praecox*（《Über die Psychologie der Dementia praecox》1907）| ✅ 德文 1907 | ✅ **Peterson & Brill 譯 1909, archive `psychologyofdeme00junguoft` djvu.txt** | 英＋繁中雙語。⚠️ 別抓 `psychologyofdeme0000jung`（現代 CW3 重印，borrow-only 版權內） |
-| *VII / Septem Sermones ad Mortuos*（對死者的七次佈道）| ✅ 德文 1916 私印 | ✅ Baynes 英譯 1925；**Wikisource 完整轉錄 + gnosis.org** | **🔴 宗教學最高相關：託名「亞歷山卓的巴西里得斯」的諾斯底佈道**。短篇，易做三欄 demo。⚠️ **用 1925 Baynes／1916 德文；勿用 MDR (1962) 附錄版（版權內）** |
+| *VII / Septem Sermones ad Mortuos*（對死者的七次佈道）| ✅ 德文 1916 私印（klarerblick.de 全文）| ✅ gnosis.org 英譯 + 繁中（已在 /gnostic）| **✅ 德英中三欄完成（2026-07-01）**，**掛在 /gnostic（諾斯底庫）非另建 ebook** — 既有英+繁中 182 段直接加德文第三欄（`de_1916` 版），榮格 hub 書目用 `externalUrl` 連過去。詳見下「§ 跨 portal 復用」 |
 | *The Association Method*（1910 Clark 三講，含〈兒童心靈的衝突〉）| — | ✅ **Wikisource 完整轉錄**（*Am. J. Psychology* v.21）| 英＋繁中雙語 |
 
 **建議起手卷**：用《Wandlungen》(1912 德) + 《Psychology of the Unconscious》(1916 英 Hinkle) 做第一個三欄樣本 — 兩版同源、皆公有領域、來源乾淨，最適合驗證 reader N 欄 + 對齊 pipeline。**標清楚這是 1912/1916 早期版，非 CW Vol 5。**
@@ -104,10 +104,22 @@
 
 ### 📌 建議下一步優先序（皆乾淨、皆 ≤1930 US-PD、English-first）
 
-1. **《Psychological Types》升三欄** — 已有 Baynes 1923 英＋繁中，接上 Gutenberg #61543 德文 1921 → 德英中三欄（宗教學：諾斯底型別）。**投報最高**（英中半成品已在）。
-2. **《Seven Sermons to the Dead》** — 短、諾斯底、宗教學最相關、Wikisource 乾淨 → 快速三欄 demo（德 1916＋Baynes 1925 英＋繁中）。
+1. ✅ **《Psychological Types》升三欄（已完成 2026-07-01）** — Baynes 1923 英＋繁中接上 Gutenberg #61543 德文 1921 → 德英中三欄。
+2. ✅ **《Seven Sermons to the Dead》（已完成 2026-07-01）** — 見下「§ 跨 portal 復用」。
 3. **《Collected Papers on Analytical Psychology》(#48225)** — 15 章文集，挑宗教相關章（I 神祕現象／XI 型別／XIV 無意識歷程）英＋繁中。
 4. 《Theory of Psychoanalysis》(#66041)、《Studies in Word-Association》、《Dementia Praecox》(1909) — 偏臨床，宗教學價值低，排後。
+
+### § 跨 portal 復用：《七篇致亡靈的佈道》德英中三欄（2026-07-01）
+
+**教訓：某文獻若已在別的 portal 收過（英+繁中），不要在 collected-works 另建重複 ebook — 直接在原 portal 加來源欄，再用 `externalUrl` 從作家 hub 連過去。**
+
+- 《七篇致亡靈的佈道》(VII Sermones ad Mortuos, 1916) 早已在 **/gnostic 諾斯底庫**（`doc_slug=seven-sermones-to-the-dead`，gnosis.org 英 182 段＋繁中 182 段逐段對照）。
+- 做法：**只加德文原典第三欄**，不重譯、不另建 ebook。`scripts/sermons_add_german.py`（無底線＝已 commit）：
+  1. 德文 1916 全文取自 **klarerblick.de「Sieben Reden an die Toten」**（Jung 本文 PD；`Die Toten kamen zurück von Jerusalem`… 到 `Schlagwörter:` 前）。
+  2. 對齊：德文 176 段 ↔ 英文本文 145 段（`order_index>36`，前 36 段是 gnosis.org 編者前言/TOC，德文無 → 留空），`align_paras`（沿用 jung_ptypen 的長度型 DP）；比 ~1.2 幾近 1:1，對齊近乎完美。
+  3. 入庫：`gnostic_versions` 加 `code=de_1916`（`category='source'`, `is_default_orig=true`）＋ `gnostic_sections` 140 段德文。
+- **reader 自動三欄**：`pages/gnostic/[slug].vue` 的 `columnsInit` 見 `is_default_orig` 版就自動補「原文」欄（中/英/德）；`availableVersions` 依 doc 內有無 section 過濾 → **加 `de_1916` 只影響本 doc、不動其他 303 篇**。截圖實證：標題＋Pleroma 三欄同段。
+- **作家 hub 露出**：`stores/collectedWorks.ts` 榮格書目加一筆 `externalUrl: '/gnostic/seven-sermons-to-the-dead'`（`externalUrl` 優先於 `ebookId`，同東方聖書用法）→ 榮格 hub 點該書直接跳 /gnostic reader，零內容重複、兩 portal 皆露出。
 
 ## Pilot 實況（2026-06-03，真資料跑過）
 

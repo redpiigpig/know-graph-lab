@@ -96,7 +96,15 @@ const grouped = computed(() => {
     if (iy === -1) return -1
     return ix - iy
   })
-  return keys.map((discipline) => ({ discipline, authors: map.get(discipline)! }))
+  // 組內依 sortYear（生年，BCE 為負）排序；缺 sortYear 者維持插入序、排在有值者之後
+  return keys.map((discipline) => ({
+    discipline,
+    authors: map
+      .get(discipline)!
+      .map((a, i) => ({ a, i }))
+      .sort((x, y) => (x.a.sortYear ?? Infinity) - (y.a.sortYear ?? Infinity) || x.i - y.i)
+      .map((o) => o.a),
+  }))
 })
 
 function progress(a: CwAuthor) {

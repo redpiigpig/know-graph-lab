@@ -46,6 +46,7 @@ export interface CwAuthor {
   nameOriginal?: string
   lifespan: string // "1823–1900"
   disciplineGroup: string // 學科分組（portal 依此分區：哲學／社會學／宗教學／神學／佛學／心理學／人類學…）
+  sortYear?: number // 學科組內排序用（生年；BCE 為負）。缺省者維持陣列插入序、排在有值者之後
   discipline: string // 一句話定位（portal 卡片副標）
   fields: string[] // 領域標籤
   portraitUrl: string
@@ -77,6 +78,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
       nameOriginal: 'Πλάτων',
       lifespan: '約前 428/427–348/347',
       disciplineGroup: '哲學',
+      sortYear: -428,
       discipline: '西方哲學奠基者之一；以蘇格拉底對話錄探究理型、正義、靈魂與理想城邦',
       fields: ['古希臘哲學', '形上學', '知識論', '政治哲學', '倫理學'],
       portraitUrl:
@@ -329,6 +331,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
       nameOriginal: 'Ἀριστοτέλης',
       lifespan: '前 384–322',
       disciplineGroup: '哲學',
+      sortYear: -384,
       discipline: '古希臘哲學集大成者、邏輯學創立者；著述橫跨邏輯、形上學、倫理、政治、物理與生物學',
       fields: ['古希臘哲學', '邏輯學', '形上學', '倫理學', '自然哲學'],
       portraitUrl:
@@ -572,174 +575,614 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
     },
 
     // ────────────────────────────────────────────────────────────────
-    // 前蘇格拉底與蘇格拉底（哲學的黎明；殘篇與間接傳述為主）
+    // 泰利斯（米利都學派的開創者、公認的「哲學之父」；首度以自）
     // ────────────────────────────────────────────────────────────────
     {
-      slug: 'presocratics',
-      name: '前蘇格拉底與蘇格拉底',
-      nameEn: 'The Presocratics & Socrates',
-      nameOriginal: 'οἱ φυσικοί / Σωκράτης',
-      lifespan: '約前 7–4 世紀',
+      slug: 'thales',
+      name: '泰利斯',
+      nameEn: 'Thales of Miletus',
+      nameOriginal: 'Θαλῆς',
+      lifespan: '約前 624–546',
       disciplineGroup: '哲學',
-      discipline: '西方哲學的黎明：從米利都自然哲學到蘇格拉底的倫理轉向；著作多僅存殘篇或賴後人轉述',
-      fields: ['前蘇格拉底哲學', '自然哲學', '殘篇學', '蘇格拉底思想', '辯士學派'],
-      portraitUrl:
-        'https://commons.wikimedia.org/wiki/Special:FilePath/Socrates%20Louvre.jpg?width=500',
-      portraitCredit: '蘇格拉底胸像‧羅浮宮‧Wikimedia Commons（公有領域）',
-      color: 'stone',
-      emoji: '🌀',
+      sortYear: -624,
+      discipline: '米利都學派的開創者、公認的「哲學之父」；首度以自然本身（水）解釋萬物本原',
+      fields: ['前蘇格拉底哲學', '米利都學派', '自然哲學', '早期科學'],
+      portraitUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Thales.jpg?width=500',
+      portraitCredit: '泰利斯像‧Wikimedia Commons（公有領域）',
+      color: 'blue',
+      emoji: '🌊',
       contribution: [
-        '**前蘇格拉底哲學家（Presocratics）**是西方哲學的開端。約自前六世紀起，米利都的**泰利斯、阿那克西曼德、阿那克西美尼**首度不訴諸神話、而以自然本身（水、無限者 apeiron、氣）解釋萬物本原（archē），開啟了理性探索宇宙的傳統。其後**赫拉克利特**言萬物流變與邏各斯（logos）、**巴門尼德與伊利亞學派**論「存有」不變不動、**畢達哥拉斯學派**以數為萬物之本，多元論者**恩培多克勒、阿那克薩哥拉**與原子論者**留基伯、德謨克利特**則試圖調和變化與不變。',
-        '這些思想家的著作**幾乎全部散佚，僅賴後世作者引用而存殘篇（fragments）**；現代研究以第爾斯—克蘭茨（**Diels-Kranz, DK**）的《前蘇格拉底殘篇》編號為準，區分「殘篇（B，原文引語）」與「見證（A，間接記述）」。',
-        '**蘇格拉底（約前 470–399）**帶來哲學的「倫理轉向」：他不談自然而問「人應當如何生活」，以**詰問法（elenchus）**與**「自知其無知」**震動雅典，終以「敗壞青年、不敬城邦諸神」被判飲鴆而死。他**未留下任何著作**，其形象與思想主要透過弟子**柏拉圖的對話錄**與**色諾芬的回憶**流傳，並與同時代收費授業的**辯士（Sophists，普羅泰戈拉、高爾吉亞）**形成鮮明對照。',
+        '泰利斯是**米利都學派**的開創者，古代「七賢」之一，亞里斯多德稱他為**第一位哲學家**。他首度不訴諸神話、而主張萬物的本原（archē）是**水**，並認為「萬物皆充滿神靈」，把對世界的解釋從神話推向自然本身——這一步被視為西方哲學與科學的起點。',
+        '傳說他曾預言前 585 年的一次日食、以幾何測量金字塔高度、憑觀星預估橄欖豐收而壟斷榨油機獲利，以證明哲學家「若願意也能致富」。他本人**未留下任何著作**，思想全賴亞里斯多德與第歐根尼‧拉爾修等後人轉述。',
       ],
-      sourceNote:
-        '本 hub 為「哲學黎明」的匯編：前蘇格拉底諸家與蘇格拉底本人皆無完整傳世著作，材料為殘篇（Diels-Kranz 編號）與後人轉述（第歐根尼‧拉爾修《哲人言行錄》、色諾芬、柏拉圖）。相關希臘原文與十九世紀英譯（如 John Burnet、Hermann Diels）多屬公有領域。多數條目待逐步彙編轉錄。',
+      sourceNote: '泰利斯無傳世著作，材料為後人見證（DK 11）；相關希臘見證與十九世紀英譯（如 John Burnet《Early Greek Philosophy》）屬公有領域。',
       timeline: [
-        { year: '約前 585', text: '泰利斯預言日食（傳說），米利都學派興起，西方哲學發端。' },
-        { year: '約前 6 世紀', text: '畢達哥拉斯於義大利南部克羅頓創立教團，以數與靈魂輪迴為教。' },
-        { year: '約前 500', text: '赫拉克利特於以弗所倡「萬物流變」與邏各斯。' },
-        { year: '約前 490', text: '巴門尼德《論自然》立「存有」之學，芝諾以悖論護師說。' },
-        { year: '約前 450', text: '恩培多克勒（四根說）、阿那克薩哥拉（努斯）活躍；辯士運動興起於雅典。' },
-        { year: '約前 440', text: '留基伯與德謨克利特提出原子論。' },
-        { year: '約前 470', text: '蘇格拉底生於雅典。' },
-        { year: '前 399', text: '蘇格拉底受審，飲鴆而死，哲學自此「從天上召回人間」。' },
+        { year: '約前 624', text: '生於愛奧尼亞的米利都。' },
+        { year: '前 585', text: '據傳準確預言日全食，聲名大噪。' },
+        { year: '約前 546', text: '卒，年約七十八。' },
       ],
       works: [
-        // 米利都學派
         {
-          title: '米利都學派殘篇（泰利斯‧阿那克西曼德‧阿那克西美尼）',
-          titleOriginal: 'The Milesian School — Fragments (DK 11–13)',
+          title: '泰利斯見證與殘篇',
+          titleOriginal: 'Thales — Testimonia (DK 11)',
           year: '約前 6 世紀',
           yearSort: 1,
-          category: '自然哲學的開端',
+          category: '見證與殘篇',
           languages: ['grc', 'en'],
           status: 'planned',
-          note: '本原（archē）：水、無限者（apeiron）、氣。',
+          note: '本原為水；「萬物皆充滿神靈」。無親筆著作，賴亞里斯多德與第歐根尼‧拉爾修轉述。',
         },
+      ],
+    },
+
+    // ────────────────────────────────────────────────────────────────
+    // 阿那克西曼德（米利都學派；以「無限者（apeiron）」為萬物）
+    // ────────────────────────────────────────────────────────────────
+    {
+      slug: 'anaximander',
+      name: '阿那克西曼德',
+      nameEn: 'Anaximander',
+      nameOriginal: 'Ἀναξίμανδρος',
+      lifespan: '約前 610–546',
+      disciplineGroup: '哲學',
+      sortYear: -610,
+      discipline: '米利都學派；以「無限者（apeiron）」為萬物本原，並繪製首幅世界地圖',
+      fields: ['前蘇格拉底哲學', '米利都學派', '自然哲學', '宇宙論'],
+      portraitUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Anaximander.jpg?width=500',
+      portraitCredit: '阿那克西曼德像‧Wikimedia Commons（公有領域）',
+      color: 'sky',
+      emoji: '♾️',
+      contribution: [
+        '阿那克西曼德是泰利斯的後繼者，主張萬物的本原不是任何具體元素，而是**無定形、無限的「無限者（ἄπειρον, apeiron）」**——萬物由它分化而出、又復歸於它。他被認為寫下了**西方第一部散文體哲學著作**《論自然》，並提出樸素的演化與宇宙生成觀（人類最初由魚狀生物演變而來）。',
+        '他還繪製了**最早的世界地圖**、引入日晷指針（gnomon）測時，是自然哲學由觀察走向抽象思辨的關鍵人物。',
+      ],
+      sourceNote: '《論自然》僅存極少殘篇（DK 12），餘賴後人見證；希臘殘篇與 Burnet/Diels 英譯屬公有領域。',
+      timeline: [
+        { year: '約前 610', text: '生於米利都。' },
+        { year: '約前 6 世紀中', text: '著《論自然》、繪世界地圖、立日晷。' },
+        { year: '約前 546', text: '卒。' },
+      ],
+      works: [
         {
-          title: '赫拉克利特殘篇',
-          titleOriginal: 'Ἡράκλειτος — Fragments (DK 22)',
+          title: '《論自然》殘篇',
+          titleOriginal: 'Περὶ φύσεως — Fragments (DK 12)',
+          year: '約前 6 世紀',
+          yearSort: 1,
+          category: '殘篇',
+          languages: ['grc', 'en'],
+          status: 'planned',
+          note: '本原＝無限者（apeiron）；西方第一部散文哲學著作，今僅存殘句與見證。',
+        },
+      ],
+    },
+
+    // ────────────────────────────────────────────────────────────────
+    // 阿那克西美尼（米利都學派末位大師；以「氣（aēr）」為本原，藉）
+    // ────────────────────────────────────────────────────────────────
+    {
+      slug: 'anaximenes',
+      name: '阿那克西美尼',
+      nameEn: 'Anaximenes',
+      nameOriginal: 'Ἀναξιμένης',
+      lifespan: '約前 586–526',
+      disciplineGroup: '哲學',
+      sortYear: -586,
+      discipline: '米利都學派末位大師；以「氣（aēr）」為本原，藉稀薄與凝聚說明萬物生成',
+      fields: ['前蘇格拉底哲學', '米利都學派', '自然哲學'],
+      portraitUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Anaximenes.jpg?width=500',
+      portraitCredit: '阿那克西美尼像‧Wikimedia Commons（公有領域）',
+      color: 'cyan',
+      emoji: '🌬️',
+      contribution: [
+        '阿那克西美尼是米利都學派的第三位、也是最後一位大師。他主張萬物的本原是**氣（ἀήρ, aēr）**：氣**稀薄化**則成火，**凝聚**則依次成風、雲、水、土、石。他首度提出以「稀薄與凝聚」這一**量的機制**解釋質的變化，使自然哲學更趨系統。',
+        '他並以「氣即靈魂、統攝人身，正如氣息與空氣包覆整個宇宙」類比小宇宙與大宇宙，影響後世甚深。',
+      ],
+      sourceNote: '殘篇極少（DK 13），賴後人見證；希臘殘篇與 Burnet/Diels 英譯屬公有領域。',
+      timeline: [
+        { year: '約前 586', text: '生於米利都。' },
+        { year: '約前 6 世紀', text: '提出「氣」本原與稀薄／凝聚說。' },
+        { year: '約前 526', text: '卒。' },
+      ],
+      works: [
+        {
+          title: '殘篇與見證',
+          titleOriginal: 'Fragments (DK 13)',
+          year: '約前 6 世紀',
+          yearSort: 1,
+          category: '殘篇',
+          languages: ['grc', 'en'],
+          status: 'planned',
+          note: '本原＝氣；稀薄成火、凝聚成土石。',
+        },
+      ],
+    },
+
+    // ────────────────────────────────────────────────────────────────
+    // 畢達哥拉斯（畢達哥拉斯學派與教團的創立者；以「數為萬物之本」）
+    // ────────────────────────────────────────────────────────────────
+    {
+      slug: 'pythagoras',
+      name: '畢達哥拉斯',
+      nameEn: 'Pythagoras',
+      nameOriginal: 'Πυθαγόρας',
+      lifespan: '約前 570–495',
+      disciplineGroup: '哲學',
+      sortYear: -570,
+      discipline: '畢達哥拉斯學派與教團的創立者；以「數為萬物之本」與靈魂輪迴之說貫通數學、音樂與宗教',
+      fields: ['前蘇格拉底哲學', '畢達哥拉斯學派', '數理哲學', '靈魂論'],
+      portraitUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Kapitolinischer%20Pythagoras%20adjusted.jpg?width=500',
+      portraitCredit: '畢達哥拉斯胸像‧卡比托利歐博物館‧Wikimedia Commons（公有領域）',
+      color: 'violet',
+      emoji: '🔢',
+      contribution: [
+        '畢達哥拉斯於義大利南部克羅頓創立兼具**哲學、宗教與政治**性格的教團。其學派主張**「數（arithmos）是萬物的本原」**，宇宙是可以用數與比例把握的和諧秩序（「天體的和諧」），並發現音程與弦長的整數比、以及後世歸名於他的**畢氏定理**。',
+        '在宗教面，他們信奉**靈魂輪迴（metempsychosis）**與靈魂不朽，主張以淨化（含飲食戒律與數學沉思）使靈魂上升。畢達哥拉斯**本人未留著作**、教義以「師云（autos epha）」口耳相傳，深刻影響了巴門尼德、柏拉圖乃至新柏拉圖主義。',
+      ],
+      sourceNote: '畢達哥拉斯與早期學派無可靠親筆著作，材料為見證與後期偽託文獻（DK 14、58）；希臘見證與十九世紀英譯屬公有領域。',
+      timeline: [
+        { year: '約前 570', text: '生於薩摩斯島。' },
+        { year: '約前 530', text: '移居克羅頓，創立教團。' },
+        { year: '約前 495', text: '卒於梅塔蓬圖姆。' },
+      ],
+      works: [
+        {
+          title: '畢達哥拉斯學派見證與殘篇',
+          titleOriginal: 'Pythagoreans — Testimonia (DK 14, 58)',
+          year: '約前 6–5 世紀',
+          yearSort: 1,
+          category: '見證與殘篇',
+          languages: ['grc', 'en'],
+          status: 'planned',
+          note: '數為萬物之本、靈魂輪迴、天體和諧；教義口傳，無可靠親筆。',
+        },
+      ],
+    },
+
+    // ────────────────────────────────────────────────────────────────
+    // 色諾芬尼（游吟哲人；批判擬人化神觀，趨向唯一、不動、以心思）
+    // ────────────────────────────────────────────────────────────────
+    {
+      slug: 'xenophanes',
+      name: '色諾芬尼',
+      nameEn: 'Xenophanes',
+      nameOriginal: 'Ξενοφάνης',
+      lifespan: '約前 570–478',
+      disciplineGroup: '哲學',
+      sortYear: -565,
+      discipline: '游吟哲人；批判擬人化神觀，趨向唯一、不動、以心思統攝萬有的「一神」',
+      fields: ['前蘇格拉底哲學', '宗教哲學', '神學批判', '知識論'],
+      portraitUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Xenophanes%20in%20Thomas%20Stanley%20History%20of%20Philosophy.jpg?width=500',
+      portraitCredit: '色諾芬尼像‧Thomas Stanley《History of Philosophy》‧Wikimedia Commons（公有領域）',
+      color: 'teal',
+      emoji: '🌐',
+      contribution: [
+        '色諾芬尼是游走各城邦的哀歌與諷刺詩人兼哲人，以**批判擬人化的神觀**著稱：他譏諷荷馬與赫西俄德把偷盜、姦淫等惡行加諸諸神，指出「若牛馬能作畫，也會把神畫成牛馬」。他趨向一個**唯一、不像凡人、以心念（noos）遍動萬有而自身不動的神**，被視為哲學一神論與自然神學的先聲——對宗教研究格外重要。',
+        '在知識論上他區分**確定的真知與人的臆測**，主張「沒有人見過、也不會有人確知關於神與萬物的真理」，開了古代懷疑論的端緒。',
+      ],
+      sourceNote: '哀歌與諷刺詩殘篇（DK 21）賴後人引用而存；希臘殘篇與 Burnet/Diels 英譯屬公有領域。',
+      timeline: [
+        { year: '約前 570', text: '生於愛奧尼亞的科洛封。' },
+        { year: '約前 6–5 世紀', text: '流亡各地，作詩批判擬人神觀。' },
+        { year: '約前 478', text: '卒，享壽逾九十。' },
+      ],
+      works: [
+        {
+          title: '哀歌與諷刺詩殘篇',
+          titleOriginal: 'Ἐλεγεῖαι / Σίλλοι — Fragments (DK 21)',
+          year: '約前 6–5 世紀',
+          yearSort: 1,
+          category: '殘篇',
+          languages: ['grc', 'en'],
+          status: 'planned',
+          note: '批判擬人神觀，趨向唯一不動之神；真知與臆測之分。',
+        },
+      ],
+    },
+
+    // ────────────────────────────────────────────────────────────────
+    // 赫拉克利特（以弗所的「晦澀者」；言萬物流變、對立統一，以「邏）
+    // ────────────────────────────────────────────────────────────────
+    {
+      slug: 'heraclitus',
+      name: '赫拉克利特',
+      nameEn: 'Heraclitus',
+      nameOriginal: 'Ἡράκλειτος',
+      lifespan: '約前 535–475',
+      disciplineGroup: '哲學',
+      sortYear: -535,
+      discipline: '以弗所的「晦澀者」；言萬物流變、對立統一，以「邏各斯（logos）」為宇宙的理法',
+      fields: ['前蘇格拉底哲學', '形上學', '邏各斯', '辯證思想'],
+      portraitUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Heraclitus%2C%20Johannes%20Moreelse.jpg?width=500',
+      portraitCredit: '莫雷爾斯《赫拉克利特》‧Wikimedia Commons（公有領域）',
+      color: 'orange',
+      emoji: '🔥',
+      contribution: [
+        '赫拉克利特因文風隱晦而號稱**「晦澀者」**。他主張**萬物恆變**——「人不能兩次踏進同一條河」、「一切皆流（panta rhei）」——並以**火**為萬物的基本形態與變化的象徵。變化背後有一恆常的理法即**邏各斯（λόγος, logos）**，是宇宙共通的尺度與言說。',
+        '他洞見**對立即統一**：上與下、生與死、戰爭與和平相反相成，「衝突是萬物之父」。「邏各斯」概念經斯多噶學派傳入希臘化思想，並在《約翰福音》「太初有道（Logos）」中獲得神學的迴響，對宗教研究影響深遠。',
+      ],
+      sourceNote: '《論自然》殘篇（DK 22）約存百餘則，賴後人引用；希臘殘篇與十九世紀英譯屬公有領域。',
+      timeline: [
+        { year: '約前 535', text: '生於以弗所貴族之家。' },
+        { year: '約前 500', text: '著《論自然》，藏於阿爾忒彌斯神廟。' },
+        { year: '約前 475', text: '卒。' },
+      ],
+      works: [
+        {
+          title: '《論自然》殘篇',
+          titleOriginal: 'Περὶ φύσεως — Fragments (DK 22)',
           year: '約前 500',
-          yearSort: 2,
-          category: '自然哲學的開端',
+          yearSort: 1,
+          category: '殘篇',
           languages: ['grc', 'en'],
           status: 'planned',
-          note: '萬物流變、邏各斯、對立統一；「人不能兩次踏進同一條河」。',
+          note: '萬物流變、對立統一、邏各斯為宇宙理法；「一切皆流」。',
         },
-        // 伊利亞學派
+      ],
+    },
+
+    // ────────────────────────────────────────────────────────────────
+    // 巴門尼德（伊利亞學派奠基者；以教誨詩論證「存有」不生不滅、）
+    // ────────────────────────────────────────────────────────────────
+    {
+      slug: 'parmenides',
+      name: '巴門尼德',
+      nameEn: 'Parmenides',
+      nameOriginal: 'Παρμενίδης',
+      lifespan: '約前 515–450',
+      disciplineGroup: '哲學',
+      sortYear: -515,
+      discipline: '伊利亞學派奠基者；以教誨詩論證「存有」不生不滅、不動為一，開西方本體論',
+      fields: ['前蘇格拉底哲學', '伊利亞學派', '本體論', '形上學'],
+      portraitUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Parmenides.jpg?width=500',
+      portraitCredit: '巴門尼德像‧Wikimedia Commons（公有領域）',
+      color: 'stone',
+      emoji: '🗿',
+      contribution: [
+        '巴門尼德是**伊利亞學派**的奠基者、西方**本體論（存有之學）**的開創者。他以一首教誨詩《論自然》立論：**「存有者存在，非存有者不存在」**——真正的「存有（τὸ ἐόν）」不生不滅、不可分、不動、圓滿為一；生成與變化只是感官所見的「意見之路」，不是理智所達的「真理之路」。',
+        '他把**思維與存有等同**（「能被思與能存在是同一回事」），主張唯理智可通達真實。此說直接挑戰赫拉克利特的流變觀，逼出恩培多克勒、原子論者的回應，並深刻型塑了柏拉圖的理型論與整個西方形上學。',
+      ],
+      sourceNote: '《論自然》教誨詩殘篇（DK 28）賴辛普里丘等後人引用而較完整存世；希臘殘篇與英譯屬公有領域。',
+      timeline: [
+        { year: '約前 515', text: '生於義大利南部的伊利亞。' },
+        { year: '約前 5 世紀', text: '著教誨詩《論自然》。' },
+        { year: '約前 450', text: '據柏拉圖《巴門尼德篇》曾赴雅典與少年蘇格拉底論辯。' },
+      ],
+      works: [
         {
-          title: '巴門尼德〈論自然〉殘篇',
-          titleOriginal: 'Παρμενίδης, Περὶ φύσεως — Fragments (DK 28)',
-          year: '約前 490',
-          yearSort: 3,
-          category: '伊利亞學派（存有之學）',
+          title: '《論自然》教誨詩殘篇',
+          titleOriginal: 'Περὶ φύσεως — Fragments (DK 28)',
+          year: '約前 5 世紀',
+          yearSort: 1,
+          category: '殘篇',
           languages: ['grc', 'en'],
           status: 'planned',
           note: '存有為一、不生不滅、不動；真理之路與意見之路。',
         },
+      ],
+    },
+
+    // ────────────────────────────────────────────────────────────────
+    // 阿那克薩哥拉（多元論者；以無數「種子」與統攝萬物的「努斯（no）
+    // ────────────────────────────────────────────────────────────────
+    {
+      slug: 'anaxagoras',
+      name: '阿那克薩哥拉',
+      nameEn: 'Anaxagoras',
+      nameOriginal: 'Ἀναξαγόρας',
+      lifespan: '約前 500–428',
+      disciplineGroup: '哲學',
+      sortYear: -500,
+      discipline: '多元論者；以無數「種子」與統攝萬物的「努斯（nous，心智）」解釋宇宙秩序',
+      fields: ['前蘇格拉底哲學', '多元論', '宇宙論', '自然哲學'],
+      portraitUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Anaxagoras%20Lebiedzki%20Rahl.jpg?width=500',
+      portraitCredit: '阿那克薩哥拉像（Rahl 壁畫）‧Wikimedia Commons（公有領域）',
+      color: 'indigo',
+      emoji: '🌀',
+      contribution: [
+        '阿那克薩哥拉把哲學帶入雅典，是伯里克利與（傳說中）歐里庇得斯的老師。他主張萬物由無數質性不同的**「種子（spermata）」**構成，「一切之中皆含一切」；而使混沌分化、生出秩序的，是一種純粹、無所不知的**「努斯（νοῦς, nous，心智）」**——這是西方思想史上首度以**心智／理性原理**作為宇宙的動力因。',
+        '他還以自然主義解釋天象，主張太陽是一團熾熱的石頭、月光是反射的日光，因此被控**不敬神**而被逐出雅典。「努斯」之說啟發了蘇格拉底與柏拉圖對目的論的追問（見《斐多》）。',
+      ],
+      sourceNote: '《論自然》殘篇（DK 59）賴辛普里丘引用而存；希臘殘篇與英譯屬公有領域。',
+      timeline: [
+        { year: '約前 500', text: '生於愛奧尼亞的克拉佐美奈。' },
+        { year: '約前 480–450', text: '居雅典約三十年，授學伯里克利。' },
+        { year: '約前 450', text: '以不敬神罪被逐，避居蘭薩庫斯。' },
+        { year: '約前 428', text: '卒。' },
+      ],
+      works: [
         {
-          title: '芝諾悖論殘篇',
-          titleOriginal: 'Ζήνων — Fragments (DK 29)',
-          year: '約前 460',
-          yearSort: 4,
-          category: '伊利亞學派（存有之學）',
+          title: '《論自然》殘篇',
+          titleOriginal: 'Περὶ φύσεως — Fragments (DK 59)',
+          year: '約前 5 世紀',
+          yearSort: 1,
+          category: '殘篇',
           languages: ['grc', 'en'],
           status: 'planned',
-          note: '阿基里斯與烏龜、飛矢不動等運動悖論。',
+          note: '種子（種質）「一切含一切」，努斯（心智）推動並安排萬物。',
         },
-        // 畢達哥拉斯與多元論
+      ],
+    },
+
+    // ────────────────────────────────────────────────────────────────
+    // 芝諾（伊利亞的）（巴門尼德的弟子；以「阿基里斯與烏龜」等悖論反證多）
+    // ────────────────────────────────────────────────────────────────
+    {
+      slug: 'zeno-elea',
+      name: '芝諾（伊利亞的）',
+      nameEn: 'Zeno of Elea',
+      nameOriginal: 'Ζήνων ὁ Ἐλεάτης',
+      lifespan: '約前 495–430',
+      disciplineGroup: '哲學',
+      sortYear: -495,
+      discipline: '巴門尼德的弟子；以「阿基里斯與烏龜」等悖論反證多與運動之不可能，護師之一元說',
+      fields: ['前蘇格拉底哲學', '伊利亞學派', '悖論', '辯證法'],
+      portraitUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Zeno%20of%20Elea%20Tibaldi%20or%20Carducci%20Escorial.jpg?width=500',
+      portraitCredit: '芝諾像‧埃斯科里亞爾‧Wikimedia Commons（公有領域）',
+      color: 'rose',
+      emoji: '🏹',
+      contribution: [
+        '伊利亞的芝諾是巴門尼德的弟子，亞里斯多德稱他為**辯證法的發明者**。為捍衛老師「存有為一、運動不實」之說，他設計了一系列著名的**悖論**：**阿基里斯追不上烏龜、飛矢不動、二分法**——藉歸謬論證：若承認「多」與「運動」為真，將導出矛盾。',
+        '這些悖論觸及**無限可分與連續性**的深刻難題，兩千餘年來不斷激發數學與哲學（極限、無窮、微積分）的反思，至今仍是形上學與數學基礎的經典課題。',
+      ],
+      sourceNote: '悖論殘篇（DK 29）賴亞里斯多德《物理學》與辛普里丘轉述；希臘見證與英譯屬公有領域。',
+      timeline: [
+        { year: '約前 495', text: '生於義大利南部的伊利亞。' },
+        { year: '約前 5 世紀中', text: '隨巴門尼德赴雅典，提出諸悖論。' },
+        { year: '約前 430', text: '據傳因謀刺僭主遇害。' },
+      ],
+      works: [
         {
-          title: '畢達哥拉斯學派見證與殘篇',
-          titleOriginal: 'Πυθαγόρας / Pythagoreans (DK 14–58)',
-          year: '約前 530',
-          yearSort: 5,
-          category: '畢達哥拉斯與多元論',
+          title: '悖論殘篇與見證',
+          titleOriginal: 'Fragments & Testimonia (DK 29)',
+          year: '約前 5 世紀',
+          yearSort: 1,
+          category: '殘篇',
           languages: ['grc', 'en'],
           status: 'planned',
-          note: '數為萬物之本、靈魂輪迴、天體和諧。',
+          note: '阿基里斯與烏龜、飛矢不動、二分法等運動與多之悖論。',
         },
+      ],
+    },
+
+    // ────────────────────────────────────────────────────────────────
+    // 恩培多克勒（多元論者；以地水火氣「四根」與「愛‧爭」二力解釋）
+    // ────────────────────────────────────────────────────────────────
+    {
+      slug: 'empedocles',
+      name: '恩培多克勒',
+      nameEn: 'Empedocles',
+      nameOriginal: 'Ἐμπεδοκλῆς',
+      lifespan: '約前 494–434',
+      disciplineGroup: '哲學',
+      sortYear: -494,
+      discipline: '多元論者；以地水火氣「四根」與「愛‧爭」二力解釋生成，兼具自然哲學與宗教救贖之教',
+      fields: ['前蘇格拉底哲學', '多元論', '自然哲學', '靈魂輪迴'],
+      portraitUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Empedocles%20in%20Thomas%20Stanley%20History%20of%20Philosophy.jpg?width=500',
+      portraitCredit: '恩培多克勒像‧Thomas Stanley《History of Philosophy》‧Wikimedia Commons（公有領域）',
+      color: 'emerald',
+      emoji: '🌍',
+      contribution: [
+        '恩培多克勒是西西里的詩人、醫者兼哲人。他調和巴門尼德與流變說，提出萬物由**四種永恆的「根（rhizōmata）」——地、水、火、氣**依比例混合而成，其聚散由兩種宇宙力**「愛（Philia）」與「爭（Neikos）」**交替主導，構成生成毀滅的循環。這一「四元素」框架經亞里斯多德吸收，主導西方自然觀近兩千年。',
+        '他另有宗教詩《淨化》，講**靈魂輪迴與墮落‧救贖**：靈魂因罪墮入肉身輪迴，須經淨化而重返神聖。傳說他縱身埃特納火山以示成神。自然哲學與宗教救贖並存於一身，對宗教研究別具意義。',
+      ],
+      sourceNote: '《論自然》與《淨化》殘篇（DK 31）賴後人引用而存；希臘殘篇與英譯屬公有領域。',
+      timeline: [
+        { year: '約前 494', text: '生於西西里的阿克拉加斯。' },
+        { year: '約前 5 世紀中', text: '著《論自然》《淨化》，行醫問政。' },
+        { year: '約前 434', text: '卒（傳說投身埃特納火山）。' },
+      ],
+      works: [
         {
-          title: '恩培多克勒〈論自然〉〈淨化〉殘篇',
-          titleOriginal: 'Ἐμπεδοκλῆς — Fragments (DK 31)',
-          year: '約前 450',
-          yearSort: 6,
-          category: '畢達哥拉斯與多元論',
+          title: '《論自然》殘篇',
+          titleOriginal: 'Περὶ φύσεως — Fragments (DK 31)',
+          year: '約前 5 世紀',
+          yearSort: 1,
+          category: '殘篇',
           languages: ['grc', 'en'],
           status: 'planned',
-          note: '四根（地水火氣）＋愛與爭二力。',
+          note: '四根（地水火氣）＋愛與爭二力的聚散循環。',
         },
         {
-          title: '阿那克薩哥拉殘篇',
-          titleOriginal: 'Ἀναξαγόρας — Fragments (DK 59)',
-          year: '約前 450',
-          yearSort: 7,
-          category: '畢達哥拉斯與多元論',
+          title: '《淨化》殘篇',
+          titleOriginal: 'Καθαρμοί / Purifications — Fragments (DK 31)',
+          year: '約前 5 世紀',
+          yearSort: 2,
+          category: '殘篇',
           languages: ['grc', 'en'],
           status: 'planned',
-          note: '種子（種質）與「努斯（nous，心智）」推動萬物。',
+          note: '靈魂輪迴、墮落與淨化救贖之宗教詩。',
         },
-        // 原子論與辯士
+      ],
+    },
+
+    // ────────────────────────────────────────────────────────────────
+    // 普羅泰戈拉（最著名的辯士；倡「人是萬物的尺度」的相對主義，並）
+    // ────────────────────────────────────────────────────────────────
+    {
+      slug: 'protagoras',
+      name: '普羅泰戈拉',
+      nameEn: 'Protagoras',
+      nameOriginal: 'Πρωταγόρας',
+      lifespan: '約前 490–420',
+      disciplineGroup: '哲學',
+      sortYear: -490,
+      discipline: '最著名的辯士；倡「人是萬物的尺度」的相對主義，並對神之有無存而不論',
+      fields: ['前蘇格拉底哲學', '辯士學派', '相對主義', '修辭學'],
+      portraitUrl: '',
+      color: 'amber',
+      emoji: '💬',
+      contribution: [
+        '普羅泰戈拉是**辯士（Sophists）**中最著名者，以收費傳授修辭與「德性（aretē）」游走希臘各城。他最著名的命題是**「人是萬物的尺度（πάντων χρημάτων μέτρον ἄνθρωπος）」**——事物如何顯現，因人而異，真理與價值皆相對於人的感知與處境，開西方**相對主義**之端。',
+        '在宗教上，他以**「論神，我無法確知其存在或不存在」**的存疑立場聞名，據傳因此獲罪、著作遭焚。他也是最早系統反思論辯技藝（「每一論題皆有正反兩說」）的思想家，是柏拉圖《普羅泰戈拉》《泰阿泰德》的重要對話者。',
+      ],
+      sourceNote: '殘篇極少（DK 80），賴柏拉圖、第歐根尼‧拉爾修等轉述；希臘見證與英譯屬公有領域。',
+      timeline: [
+        { year: '約前 490', text: '生於色雷斯的阿布德拉。' },
+        { year: '約前 5 世紀中', text: '游雅典，與伯里克利交好，為城邦立法。' },
+        { year: '約前 420', text: '卒（傳說渡海遇難）。' },
+      ],
+      works: [
         {
-          title: '德謨克利特殘篇（原子論）',
-          titleOriginal: 'Δημόκριτος — Fragments (DK 68)',
-          year: '約前 430',
-          yearSort: 8,
-          category: '原子論與辯士學派',
+          title: '殘篇與見證',
+          titleOriginal: 'Fragments (DK 80)',
+          year: '約前 5 世紀',
+          yearSort: 1,
+          category: '殘篇',
           languages: ['grc', 'en'],
           status: 'planned',
-          note: '原子與虛空；伊比鳩魯與後世唯物論的先驅。',
+          note: '「人是萬物的尺度」；論神存而不論；正反兩說之術。',
+        },
+      ],
+    },
+
+    // ────────────────────────────────────────────────────────────────
+    // 高爾吉亞（辯士與修辭大師；以〈論非存在〉推向虛無論，並以華）
+    // ────────────────────────────────────────────────────────────────
+    {
+      slug: 'gorgias',
+      name: '高爾吉亞',
+      nameEn: 'Gorgias',
+      nameOriginal: 'Γοργίας',
+      lifespan: '約前 483–375',
+      disciplineGroup: '哲學',
+      sortYear: -483,
+      discipline: '辯士與修辭大師；以〈論非存在〉推向虛無論，並以華麗辭章奠定修辭術',
+      fields: ['前蘇格拉底哲學', '辯士學派', '修辭學', '懷疑論'],
+      portraitUrl: '',
+      color: 'purple',
+      emoji: '🗣️',
+      contribution: [
+        '高爾吉亞是西西里出身的辯士與**修辭術大師**，以華麗對稱的辭章（「高爾吉亞式修辭」）風靡雅典。其論著**〈論非存在，或論自然〉**以三重命題把伊利亞學派的推理推向極致的**虛無論**：一、無物存在；二、即使有物存在，也不可被認知；三、即使可認知，也不可被傳達於人。',
+        '他的〈海倫頌〉與〈帕拉墨得斯的辯護〉是修辭示範的名篇，主張言辭（logos）有近乎魔法的力量，能左右人心。他是柏拉圖同名對話《高爾吉亞》的主角，代表修辭術與哲學之爭的一方。',
+      ],
+      sourceNote: '〈論非存在〉〈海倫頌〉〈帕拉墨得斯的辯護〉殘篇（DK 82）賴後人引述而存；希臘見證與英譯屬公有領域。',
+      timeline: [
+        { year: '約前 483', text: '生於西西里的萊翁蒂尼。' },
+        { year: '前 427', text: '奉使雅典，其修辭轟動一時。' },
+        { year: '約前 375', text: '卒，享壽逾百歲。' },
+      ],
+      works: [
+        {
+          title: '〈論非存在〉殘篇',
+          titleOriginal: 'Περὶ τοῦ μὴ ὄντος — Fragments (DK 82)',
+          year: '約前 5 世紀',
+          yearSort: 1,
+          category: '殘篇',
+          languages: ['grc', 'en'],
+          status: 'planned',
+          note: '三重虛無論：無物存在／不可知／不可傳達。',
         },
         {
-          title: '辯士殘篇（普羅泰戈拉‧高爾吉亞）',
-          titleOriginal: 'Πρωταγόρας · Γοργίας — Fragments (DK 80, 82)',
-          year: '約前 440',
-          yearSort: 9,
-          category: '原子論與辯士學派',
+          title: '〈海倫頌〉〈帕拉墨得斯的辯護〉',
+          titleOriginal: 'Ἑλένης ἐγκώμιον / Παλαμήδης',
+          year: '約前 5 世紀',
+          yearSort: 2,
+          category: '修辭名篇',
           languages: ['grc', 'en'],
           status: 'planned',
-          note: '「人是萬物的尺度」；相對主義與修辭術。',
+          note: '修辭示範，論言辭（logos）左右人心的力量。',
         },
-        // 蘇格拉底
+      ],
+    },
+
+    // ────────────────────────────────────────────────────────────────
+    // 蘇格拉底（西方倫理哲學的轉捩者；以詰問法與「自知其無知」追）
+    // ────────────────────────────────────────────────────────────────
+    {
+      slug: 'socrates',
+      name: '蘇格拉底',
+      nameEn: 'Socrates',
+      nameOriginal: 'Σωκράτης',
+      lifespan: '前 470–399',
+      disciplineGroup: '哲學',
+      sortYear: -470,
+      discipline: '西方倫理哲學的轉捩者；以詰問法與「自知其無知」追問「人應當如何生活」，未留任何著作',
+      fields: ['古希臘哲學', '倫理學', '詰問法', '蘇格拉底思想'],
+      portraitUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Socrates%20Louvre.jpg?width=500',
+      portraitCredit: '蘇格拉底胸像‧羅浮宮‧Wikimedia Commons（公有領域）',
+      color: 'rose',
+      emoji: '💭',
+      contribution: [
+        '蘇格拉底把哲學**「從天上召回人間」**：他不再究問自然本原，而專注於**倫理與人生**——「人應當如何生活」「什麼是正義、勇敢、虔敬、善」。他以**詰問法（elenchus）**在雅典街頭與人對話，層層追問使對方暴露自身觀念的矛盾，並以**「我唯一知道的，就是我一無所知」**的自覺為愛智的起點。',
+        '他主張**「德性即知識」「無人有意作惡」**，關心的是靈魂的照料勝於財富名聲。前 399 年，他以「敗壞青年、不敬城邦諸神、另立新神」的罪名受審，從容飲鴆而死。他**未留下任何著作**，思想與形象主要透過弟子**柏拉圖的對話錄**與**色諾芬的回憶**流傳，並啟迪了昔勒尼、犬儒、斯多噶等眾多學派。',
+      ],
+      sourceNote: '蘇格拉底本人無著作；一手材料為柏拉圖對話錄（見「柏拉圖」hub）與色諾芬《回憶蘇格拉底》《申辯》《會飲》，皆公有領域。',
+      timeline: [
+        { year: '前 470', text: '生於雅典，父為石匠、母為助產士。' },
+        { year: '前 431–404', text: '伯羅奔尼撒戰爭期間從軍，以勇敢著稱。' },
+        { year: '前 399', text: '以不敬神與敗壞青年罪受審，飲鴆而死。' },
+      ],
+      works: [
         {
           title: '蘇格拉底（無著作；思想見柏拉圖與色諾芬）',
           titleOriginal: 'Σωκράτης — sine scripto',
-          year: '約前 470–399',
-          yearSort: 11,
-          category: '蘇格拉底與蘇格拉底學派',
+          year: '前 470–399',
+          yearSort: 1,
+          category: '無親筆著作',
+          languages: ['grc', 'en'],
           status: 'planned',
-          note: '蘇格拉底本人未留著作；其思想見於柏拉圖對話錄（見「柏拉圖」hub）與下列色諾芬諸篇。',
+          note: '思想見於柏拉圖對話錄（另見「柏拉圖」hub）與色諾芬諸篇。',
         },
         {
           title: '色諾芬《回憶蘇格拉底》',
           titleOriginal: 'Ξενοφῶν, Ἀπομνημονεύματα / Memorabilia',
           year: '約前 371',
-          yearSort: 12,
-          category: '蘇格拉底與蘇格拉底學派',
+          yearSort: 2,
+          category: '一手見證',
           languages: ['grc', 'en'],
           status: 'planned',
           note: '色諾芬另有《蘇格拉底的申辯》《會飲》《經濟論》，皆蘇格拉底形象一手材料。',
         },
-        // 彙編來源
+      ],
+    },
+
+    // ────────────────────────────────────────────────────────────────
+    // 德謨克利特（原子論的集大成者；主張萬物由不可分的「原子」與「）
+    // ────────────────────────────────────────────────────────────────
+    {
+      slug: 'democritus',
+      name: '德謨克利特',
+      nameEn: 'Democritus',
+      nameOriginal: 'Δημόκριτος',
+      lifespan: '約前 460–370',
+      disciplineGroup: '哲學',
+      sortYear: -460,
+      discipline: '原子論的集大成者；主張萬物由不可分的「原子」與「虛空」構成，兼富倫理格言',
+      fields: ['前蘇格拉底哲學', '原子論', '唯物論', '倫理學'],
+      portraitUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Democritus2.jpg?width=500',
+      portraitCredit: '德謨克利特像‧Wikimedia Commons（公有領域）',
+      color: 'sky',
+      emoji: '⚛️',
+      contribution: [
+        '德謨克利特承其師**留基伯**，集**原子論**之大成。他主張萬物由無數**不可分割的微粒「原子（atomos）」**與其運動所在的**「虛空（kenon）」**構成；原子在質上相同，只因形狀、次序、位置之別而組成萬千事物，一切生成毀滅皆為原子的聚散——這是古代最徹底的**機械論與唯物論**世界觀，也是近代原子論的遙遠先驅。',
+        '他著述極豐（傳說達數十種，涵蓋自然、數學、倫理、音樂），今僅存倫理格言殘篇，主張以**「歡愉（euthymia）」——心靈的安寧與知足**為人生至善，故有「歡笑的哲學家」之稱。其自然學說經**伊比鳩魯**與盧克萊修承續而流傳後世。',
+      ],
+      sourceNote: '殘篇（DK 68）以倫理格言為主，賴後人引用；希臘殘篇與英譯屬公有領域。留基伯（DK 67）殘篇並存。',
+      timeline: [
+        { year: '約前 460', text: '生於色雷斯的阿布德拉。' },
+        { year: '約前 5 世紀', text: '遍遊埃及、波斯等地，博學著述。' },
+        { year: '約前 370', text: '卒，享高壽。' },
+      ],
+      works: [
         {
-          title: '第歐根尼‧拉爾修《哲人言行錄》',
-          titleOriginal: 'Διογένης Λαέρτιος, Βίοι φιλοσόφων / Lives of the Eminent Philosophers',
-          year: '約 3 世紀',
-          yearSort: 21,
-          category: '古代彙編與殘篇集',
+          title: '德謨克利特殘篇',
+          titleOriginal: 'Fragments (DK 68)',
+          year: '約前 5 世紀',
+          yearSort: 1,
+          category: '殘篇',
           languages: ['grc', 'en'],
           status: 'planned',
-          note: '十卷，古代哲學家傳記與學說的最重要匯編，眾多殘篇賴此保存。',
+          note: '原子與虛空；倫理以「歡愉（euthymia）」為至善。',
         },
         {
-          title: '第爾斯—克蘭茨《前蘇格拉底殘篇》（編號依據）',
-          titleOriginal: 'Die Fragmente der Vorsokratiker (Diels–Kranz)',
-          year: '1903',
-          yearSort: 22,
-          category: '古代彙編與殘篇集',
+          title: '留基伯殘篇與見證',
+          titleOriginal: 'Λεύκιππος — Fragments (DK 67)',
+          year: '約前 5 世紀',
+          yearSort: 2,
+          category: '殘篇',
           languages: ['grc', 'en'],
           status: 'planned',
-          note: '現代前蘇格拉底研究的標準殘篇編號體系（DK），本 hub 各殘篇條目即依此編排。',
+          note: '原子論的創始者，德謨克利特之師。',
         },
       ],
     },
@@ -754,6 +1197,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
       nameOriginal: 'Ἐπίκουρος',
       lifespan: '前 341–270',
       disciplineGroup: '哲學',
+      sortYear: -341,
       discipline: '伊比鳩魯學派創立者；以原子論的自然觀與快樂主義倫理學，倡導心靈的寧靜（ataraxia）',
       fields: ['希臘化哲學', '伊比鳩魯主義', '原子論', '快樂主義倫理學'],
       portraitUrl:
@@ -849,6 +1293,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
       nameOriginal: 'Ἐπίκτητος',
       lifespan: '約 50–135',
       disciplineGroup: '哲學',
+      sortYear: 50,
       discipline: '斯多噶學派代表；主張分辨「操之在我」與「不操之在我」，以理性順應自然而得內在自由',
       fields: ['希臘化哲學', '斯多噶主義', '倫理學', '實踐哲學'],
       portraitUrl:
@@ -934,6 +1379,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
       nameOriginal: 'Πλωτῖνος',
       lifespan: '約 204/5–270',
       disciplineGroup: '哲學',
+      sortYear: 204,
       discipline: '新柏拉圖主義奠基者；以「太一—智性—靈魂」三本體與流溢說重構柏拉圖傳統，深刻影響後世哲學與神學',
       fields: ['古代晚期哲學', '新柏拉圖主義', '形上學', '神祕主義'],
       portraitUrl:
@@ -1310,6 +1756,17 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           ebookId: '22222223-2222-4222-8222-222222222223',
           note: '德文 1921 原典（Gutenberg #61543）＋Baynes 1923 英譯（Internet Archive）＋繁中，德／英／繁中三欄已完成（≠ 受版權 Hull CW6）。定義章依見出字對照、敘事章逐段對齊。',
         },
+        {
+          title: '七篇致亡靈的佈道',
+          titleOriginal: 'VII Sermones ad Mortuos (1916)',
+          year: '1916',
+          yearSort: 1916,
+          category: '早期著作（公有領域）',
+          languages: ['de', 'en'],
+          status: 'done',
+          externalUrl: '/gnostic/seven-sermons-to-the-dead',
+          note: '託名「亞歷山卓的巴西里得斯」的諾斯底佈道（私印 1916）。收於諾斯底文獻庫，德文原典（1916）／英譯／繁中三欄逐段對照。',
+        },
         // 精神醫學與實驗心理學（早期）
         {
           title: '精神醫學研究',
@@ -1519,7 +1976,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
       nameEn: 'Raimon Panikkar',
       nameOriginal: 'Raimon Panikkar',
       lifespan: '1918–2010',
-      disciplineGroup: '神學',
+      disciplineGroup: '宗教學',
       discipline:
         '宗教間／宗教內對話與跨文化哲學巨擘；天主教神父，提出「宇宙神人共融」與《印度教中未識的基督》',
       fields: ['比較神學', '宗教哲學', '宗教間對話', '印度學', '三一神學'],
