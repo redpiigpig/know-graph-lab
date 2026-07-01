@@ -65,9 +65,12 @@ R("Nomarch", "州伯", etype="官職", polity="古埃及", register="商周制",
 _order = 2000
 R("Babylonian Province", "畿", etype="行政區", polity="古巴比倫", register="春秋制",
   level="一級", tier="地方", reason="巴比倫城富庶精華區；漢摩拉比≈齊桓霸業立法（使用者定調）")
-R("Babylonian Governor", "縣公", etype="官職", polity="新巴比倫帝國", register="春秋制",
-  level="一級", tier="地方", var="令尹；大尹；牧",
-  reason="使用者定調巴比倫用楚國職位；楚縣之長特稱「公」（葉公/白公），別於中央宰輔令尹")
+R("Bel Pihati (Babylonian)", "大尹", o="bēl pīhāti", lang="akk", etype="官職",
+  polity="新巴比倫帝國", register="春秋制", level="一級", tier="地方", var="省長；總督", root="尹",
+  reason="統轄大省/富庶城邦群之一級總管（如「河外 Ebir-nāri」黎凡特大省）；王莽改太守曰大尹、宋亦有大尹，帶南方尹味且高於縣公")
+R("Shakin Temi", "縣公", o="šākin ṭēmi", lang="akk", etype="官職", polity="新巴比倫帝國",
+  register="春秋制", level="二級", tier="地方", var="令尹；牧",
+  reason="城邑之長（巴比倫城等），隸大尹之下；使用者定調用楚職，楚縣之長特稱「公」（葉公/白公），別於中央宰輔令尹")
 R("Assyrian Province", "鎮", etype="行政區", polity="新亞述帝國", register="戰國秦制",
   level="一級", tier="軍事", var="行省", root="鎮",
   reason="軍事佔領據點、肅殺氣（使用者定調用「鎮」）")
