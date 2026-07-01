@@ -15,7 +15,11 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 
 ---
 
-## 📌 近期大改 progress（2026-06-20～22，全 push master）
+## 📌 近期大改 progress
+
+- **2026-07-01 · ⛪ 教會拉丁課程複習頁 `/coach/la/course`**（零 AI）：使用者實際在上的「教會拉丁文（一）· 羅梅洛班」課程，每週講義逐課複習。策展 `server/data/latinCourse.ts`（`LESSONS` 每課含母音/雙母音/子音拼讀規則/禮儀單字）＋端點 `course`＋五分頁（母音子音・單字・認讀・聽寫・發音跟讀）。加新課＝加一筆 `CourseLesson`。詳見「四」與 [[project_church_latin_course]]。
+
+### 2026-06-20～22（全 push master）
 
 1. **語言 7→33**：新增 26 個宗教研究原典語言教練（`lang-coaches.ts`）＋ `CATEGORIES` 8 大類選單分組 ＋ 台/客語教羅↔台羅切換（`romanizations`）。詳見「〇、語言一覽」。
 2. **轉寫鍵盤 12 文字**（打英文/羅馬字→目標文字）：希臘/假名/希伯來（內建）＋ `useScriptKeyboard.ts` 無狀態工廠 6 種（西里爾/科普特/阿拉伯/敘利亞/亞美尼亞/喬治亞）＋ `useAbugidaKeyboard.ts` 有狀態 3 種（天城體/吉茲/藏文，**藏文含 EWTS 自動疊寫**）。詳見「九、加語言/擴充」末。測試 `script-keyboard.spec`(7)＋`abugida-keyboard.spec`(14)。
