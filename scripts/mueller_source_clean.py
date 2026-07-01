@@ -33,9 +33,12 @@ from pathlib import Path
 # „ (U+201E) is handled per-language: real in German, OCR junk in English.
 _JUNK_SYMBOLS = "•■♦►▼▲◄●○◊¶§™€"
 _CONTROL = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f-\x9f​-‏﻿­]")
+# Scan boilerplate, incl. OCR-mangled variants ("tine Internet Arciiive",
+# "IVIicrosoft"): the "Digitized by … Corporation/Foundation" span, and any bare
+# archive.org URL token (prefix http/littp/www/./none; archive→arciiive/arcliive).
 _SCAN_BOILERPLATE = re.compile(
-    r"\s*Digitized by (?:the Internet Archive|Google|Microsoft)\b.*?"
-    r"(?:Corporation|University[^.]*|archive\.org\S*|\.)\s*", re.I)
+    r"\s*Digitized by\b.{0,110}?(?:Corporation|Foundation|University\b[^.]*)", re.I)
+_ARCHIVE_URL = re.compile(r"\s*\S*ar[hcli]+ive\.org/\S+", re.I)
 _HYPHEN_WRAP = re.compile(r"([a-z])-\s+([a-z])")
 _MULTISPACE = re.compile(r"[ \t]{2,}")
 
@@ -45,6 +48,7 @@ def clean_source(text: str, lang: str = "en") -> str:
         return text
     s = _CONTROL.sub("", text)
     s = _SCAN_BOILERPLATE.sub(" ", s)
+    s = _ARCHIVE_URL.sub(" ", s)
     junk = _JUNK_SYMBOLS if lang == "de" else _JUNK_SYMBOLS + "„"
     for ch in junk:
         s = s.replace(ch, "")

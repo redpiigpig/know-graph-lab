@@ -27,6 +27,19 @@ def test_removes_scan_boilerplate():
     assert "Digitized" not in out and out.startswith("15 EAST")
 
 
+def test_removes_archive_url_and_ocr_mangled_boilerplate():
+    # bare archive.org URL (no "Digitized by" prefix), keeps real PREFACE text
+    out = clean_source("rights reserved} http://www.archive.org/details/"
+                       "anthropologicalrOOml PREFACE, In lecturing")
+    assert "archive.org" not in out and "PREFACE, In lecturing" in out
+    # OCR-mangled: "Arciiive", "littp", "arcliive.org"
+    out2 = clean_source("Digitized by tine Internet Arciiive in 2007 witii funding "
+                        "from IVIicrosoft Corporation littp://www.arcliive.org/"
+                        "details/auldlangsyneOOmluoft AULD LANG SYNE")
+    assert "Corporation" not in out2 and "arcliive.org" not in out2
+    assert out2.strip().endswith("AULD LANG SYNE")
+
+
 def test_german_low_quote_preserved_only_in_de():
     assert "„" in clean_source("Er sagte: „Gott ist Liebe", "de")
     assert "„" not in clean_source("„ 45. line Dvaraka.", "en")
