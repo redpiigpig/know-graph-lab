@@ -93,10 +93,10 @@ description: 「翻譯定名」通用名物中譯對照工具（/translation-glo
 - 純核心：[scripts/glossary_naming.py](../../../scripts/glossary_naming.py)（`ADMIN_REGISTERS` / `REGISTER_BY_POLITY`（羅馬＝["漢制","魏晉制"]）/ `registers_for_polity` / `check_register_valid` / `check_register_matches_polity`）
 - 測試：[scripts/tests/test_offices_register.py](../../../scripts/tests/test_offices_register.py)（21 綠）
 - Schema：[database/glossary-offices-schema.sql](../../../database/glossary-offices-schema.sql)（`official_titles`；新欄 `register` / `admin_level` / `entity_type` / `polity`；unique=(name_english, polity)）
-- Seed：[scripts/seed_glossary_offices.py](../../../scripts/seed_glossary_offices.py)（hand-curated **216 筆**、`--dry` 預覽＋自檢、`--replace` 全量重灌、`on_conflict=name_english,polity`）
+- Seed：[scripts/seed_glossary_offices.py](../../../scripts/seed_glossary_offices.py)（hand-curated **245 筆**、`--dry` 預覽＋自檢、`--replace` 全量重灌、`on_conflict=name_english,polity`）
 - UI：[pages/translation-glossary/index.vue](../../../pages/translation-glossary/index.vue) tab「官制與行政區」（GENERIC 表 + register 子篩選 chip，依 sort_order 呈發展階段順序＝層次感）
 
-**狀態（2026-07-01）**：✅ 表已建、Vue tab 已接、seed **216 筆**上線 —— **每個帝國撐開成完整權力金字塔**（中央≥部長級→〔超一級〕→一級→二級〔→三級〕），每政權皆備 中央＋一級＋二級。巴比倫定楚職**縣公**＋兩層省制（大尹→縣公）。⏳ 各帝國中段【提】細項使用者可於 UI 逐項校訂；文體翻譯（台語文讀／粵語）屬「漢譯世界史計畫」更大願景，本表只做官職／行政區定名。
+**狀態（2026-07-01）**：✅ 表已建、Vue tab 已接、seed **245 筆**上線 —— **每個帝國撐開成完整權力金字塔**（中央≥部長級→〔超一級〕→一級→二級〔→三級〕），每政權皆備 中央＋一級＋二級。巴比倫定楚職**縣公**＋兩層省制（大尹→縣公）。⏳ 各帝國中段【提】細項使用者可於 UI 逐項校訂；文體翻譯（台語文讀／粵語）屬「漢譯世界史計畫」更大願景，本表只做官職／行政區定名。
 
 **SOP**：翻書前定書中政權 → 查 register →（不夠用查日韓越）→ 抽官名/區劃清單逐項對照（hand-curated 不走 LLM）→ 定案進 seed（先 `--dry` 過自檢）→ `export_glossary_from_db.py` 同步 cheat sheet。
 

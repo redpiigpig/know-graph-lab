@@ -81,6 +81,12 @@ def test_byzantium_spans_tang_theme_then_song_civil():
     assert gn.register_for_polity("拜占庭帝國") == "唐制"
 
 
+def test_hre_is_feudal_and_sasanian_is_tang():
+    # 神羅＝諸侯共主(周天子御諸侯)；薩珊＝四方都督(拜占庭之鏡像對手)
+    assert gn.register_for_polity("神聖羅馬帝國") == "周封建五等爵"
+    assert gn.register_for_polity("薩珊-波斯帝國") == "唐制"
+
+
 def test_rome_spans_two_registers_early_han_late_weijin():
     assert gn.registers_for_polity("羅馬帝國") == ["漢制", "魏晉制"]
     assert gn.register_for_polity("羅馬帝國") == "漢制"     # first is the default
