@@ -33,7 +33,10 @@ DIALOGUES = {
         "title_zh": "蘇格拉底的申辯",
         "title_orig": "Ἀπολογία Σωκράτους",
         "author": "柏拉圖",
-        "category": "世界宗教／哲學",
+        "author_en": "Plato",
+        "category": "世界宗教",            # ebooks.category 有 CHECK；'世界宗教' 為已知合法值
+        "subcategory": "古希臘哲學",
+        "file_path": "PERSEUS/plato-apology-trilingual",
         "volume": "蘇格拉底的申辯",
         "parent_volume": "柏拉圖對話錄‧早期",
     },
@@ -122,6 +125,20 @@ def build_units(slug: str, grc: dict, eng: dict) -> list[dict]:
     return units
 
 
+def _prepend_cover(slug: str, content_chunks: list[dict]) -> list[dict]:
+    """Chunk 0 = 犧牲封面（reader isCoverPage=currentPage===1 會吞掉 chunk 0 內容）→
+    真正內容從 chunk 1 起。同 mueller_build.make_cover_chunk。"""
+    d = DIALOGUES[slug]
+    cover = mc.build_multilang_chunk(
+        chunk_index=0, chapter_path="封面", content_zh="## 封面",
+        sources={}, source_order=[], volume=d["volume"],
+        parent_volume=d["parent_volume"], chunk_type="cover", page_number=1)
+    mc.validate_multilang_chunk(cover)
+    for i, c in enumerate(content_chunks, start=1):
+        c["chunk_index"] = i
+    return [cover] + content_chunks
+
+
 def make_translate_fn(engine: str = "gemini"):
     import translate_ebook_to_zh as te
     te.PROMPT_TMPL = PLATO_PROMPT_TMPL
@@ -147,10 +164,16 @@ def ensure_ebook_row(slug: str) -> None:
                      headers=te.H_GET, timeout=30)
     if r.ok and r.json():
         return
+    # NB: 多語靠 chunk 的 sources/source_order 判定，display_mode 用 'standard'（同 Jung）。
+    # ebooks 有 CHECK：file_type ∈ {epub,pdf}、無 status/source_lang 欄。
     row = {"id": d["ebook_id"], "title": f"{d['title_zh']}（希英繁三欄）",
-           "author": d["author"], "category": d["category"],
-           "source_lang": "grc", "display_mode": "multilang", "status": "ready"}
-    requests.post(f"{te.URL}/rest/v1/ebooks", headers=te.H_JSON, json=row, timeout=30)
+           "author": d["author"], "author_en": d.get("author_en", ""),
+           "file_type": "epub", "file_path": d.get("file_path", f"PERSEUS/{slug}"),
+           "category": d["category"], "subcategory": d.get("subcategory", "古希臘哲學"),
+           "original_title": d["title_orig"], "translator": "Claude（希臘直譯）",
+           "display_mode": "standard"}
+    r = requests.post(f"{te.URL}/rest/v1/ebooks", headers=te.H_JSON, json=row, timeout=30)
+    r.raise_for_status()  # loud on CHECK/constraint failures (別再靜默失敗)
     print(f"  ✓ inserted ebooks row {d['ebook_id']}")
 
 
@@ -166,6 +189,7 @@ def run(slug: str, *, engine="gemini", limit=None, upload=False) -> list[dict]:
     chunks = mc.assemble_multilang_chunks(units, tfn, ["grc", "en"], volume=d["volume"])
     for c, u in zip(chunks, units):  # assemble 不轉 page_number → 補回（Stephanus 頁）
         c["page_number"] = u["page_number"]
+    chunks = _prepend_cover(slug, chunks)  # reader 強制 page1=封面 → chunk 0 必為犧牲封面
     # per-chunk 段數對齊閘
     for c in chunks:
         nz = len(c["content"].split("\n\n"))
