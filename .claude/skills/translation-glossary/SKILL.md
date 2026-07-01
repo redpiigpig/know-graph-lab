@@ -1,6 +1,6 @@
 ---
 name: translation-glossary
-description: 「翻譯定名」通用名物中譯對照工具（/translation-glossary，**已升為首頁頂層卡、移出聖經 portal**） — 原本只有教父／神學家＋神學名詞，2026-06-03 起擴為全領域：聖經人物／教父神學家／神學名詞（神學兩表）＋哲學家／科學家／歷代帝王／國名與城市／神祇與宗教名詞（各領域新表）＋一頁翻譯原則。核心規則：按原文不按英文、沿用良好古譯／意譯、音意結合（亞歷山卓>亞歷山大城、馬爾堡>馬布爾）、名根一致（name_root：密特→密特拉/密特里達迪、塞琉→塞琉古/塞琉西亞）。Use when 翻書前鎖定任何人名／地名／神祇／帝王／哲人科學家譯名、新增領域條目、校對名根一致性、改翻譯原則頁。串 [[ebook-translate]]。
+description: 「翻譯定名」通用名物中譯對照工具（/translation-glossary，**已升為首頁頂層卡、移出聖經 portal**） — 原本只有教父／神學家＋神學名詞，2026-06-03 起擴為全領域：聖經人物／教父神學家／神學名詞（神學兩表）＋哲學家／科學家／歷代帝王／國名與城市／神祇與宗教名詞（各領域新表）＋一頁翻譯原則。核心規則：按原文不按英文、沿用良好古譯／意譯、音意結合（亞歷山卓>亞歷山大城、馬爾堡>馬布爾）、名根一致（name_root：密特→密特拉/密特里達迪、塞琉→塞琉古/塞琉西亞）。Use when 翻書前鎖定任何人名／地名／神祇／帝王／哲人科學家譯名、新增領域條目、校對名根一致性、改翻譯原則頁。串 [[ebook-translate]]。2026-07-01 加「官制與行政區」分頁：外國政權官名／職務／行政區名按「朝代 register」中譯（商周/戰國秦/漢/魏晉/唐/明清…），解決「總督/行省」氾濫、無層次感；見 [offices_register_blueprint.md](offices_register_blueprint.md)。
 ---
 
 > ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
@@ -76,6 +76,29 @@ description: 「翻譯定名」通用名物中譯對照工具（/translation-glo
 
 待續：各帝國更中段諸王、東亞/印度更多帝王、哲學家中世紀經院（多與 theologians 重疊）、是否把各 tab 納入 [[ebook-translate]] glossary.md export。
 
+### 🆕 2026-07-01：官制與行政區（`official_titles`）+ 朝代 register 對應
+
+**問題（使用者）**：翻外國政權的官名／職務名／行政區名過去**過於重複、沒有層次感** —— 動不動「總督／行省」，時代也對不上。要的是**外國政權官制與行政區跟漢字文化圈有「時代對應＋政體體例對應」**，中國詞不夠可借日／韓／越漢字官職。
+
+**核心設計（兩層）**：
+1. **register 對應（制對應）**：把外國政權按「**社會發展階段＋政治氣質**」（共時性，非日曆年代）對到一個朝代 register。純核心 `ADMIN_REGISTERS`（8 桶）：商周制／春秋制／戰國秦制／漢制／魏晉制／唐制／明清制／周封建五等爵。
+2. **逐條對照**：每個外國職／區劃 → 建議中譯，掛上所屬 register；**舊的扁平譯（總督；行省）降到 `name_variants`** 供對照。
+
+**關鍵洞見**：**「總督／行省／副王」不是錯，是明清 register 的詞** —— 只用在奧斯曼／蒙兀兒／俄／近世殖民帝國，不套波斯／羅馬／亞述。且帝國晚期逐層對到魏晉三級（`大區行臺(行臺尚書令)→州(刺史)→郡(太守)`）＝使用者要的「層次感」。
+
+**使用者已定調範例**：埃及 Nome/Nomarch＝州／州伯；亞述 Shaknu＝鎮監；波斯 Satrap＝州／州伯；希臘化 Strategos＝郡／郡尉；羅馬前期 Provincia＝行省（Proconsul 牧／Legatus 都護），埃及特區 Praefectus＝大尹，猶太 Praefectus（本丟彼拉多）＝都尉（隸敘利亞大行省的**郡**非行省）；羅馬晚期三級＝大區行臺／州刺史／郡太守；東羅馬 Theme/Strategos＝軍道／節度使；阿拉伯 Wilayah/Amir＝道／經略使；奧斯曼 Sanjak/-bey＝旗／旗主；西班牙 Viceroy＝副王、Captain General＝提督；英 Governor-General/Governor/Lt.Gov＝大總督／總督／巡撫；法 Résident supérieur＝統監（借日治朝鮮詞）。Shophet＝士師。
+
+**檔案**：
+- 藍圖＋全對照總表：[offices_register_blueprint.md](offices_register_blueprint.md)（阿卡德→近世殖民；【核】使用者定調 vs【提】AI 提案待拍板）
+- 純核心：[scripts/glossary_naming.py](../../../scripts/glossary_naming.py)（`ADMIN_REGISTERS` / `REGISTER_BY_POLITY`（羅馬＝["漢制","魏晉制"]）/ `registers_for_polity` / `check_register_valid` / `check_register_matches_polity`）
+- 測試：[scripts/tests/test_offices_register.py](../../../scripts/tests/test_offices_register.py)（21 綠）
+- Schema：[database/glossary-offices-schema.sql](../../../database/glossary-offices-schema.sql)（`official_titles`；新欄 `register` / `admin_level` / `entity_type` / `polity`；unique=(name_english, polity)）
+- Seed：[scripts/seed_glossary_offices.py](../../../scripts/seed_glossary_offices.py)（hand-curated 57 筆、`--dry` 預覽＋自檢、`on_conflict=name_english,polity`）
+
+**待使用者定奪（seed 進 DB 前）**：巴比倫**地方**首長（令尹是中央官）＝大尹 or 牧？蒙兀兒/俄/法/奧德/荷/日 那批【提】細項採用否。文體翻譯（台語文讀／粵語）屬「漢譯世界史計畫」更大願景，本表先只做官職／行政區定名。
+
+**SOP**：翻書前定書中政權 → 查 register →（不夠用查日韓越）→ 抽官名/區劃清單逐項對照（hand-curated 不走 LLM）→ 定案進 seed（先 `--dry` 過自檢）→ `export_glossary_from_db.py` 同步 cheat sheet。
+
 **目的**：當「不同傳統對同一個教父／神學名詞有完全不同中譯」（如 Justin Martyr = 新教 *游斯丁* / 思高 *猶斯定* / 東正教 *尤斯丁*）時，翻譯前先在 `/translation-glossary` 確認該書應採哪個譯法，避免 LLM 自選一個導致使用者糾正後要回頭修 chunks。
 
 跟 [[ebook-translate]] 並列：
@@ -124,7 +147,8 @@ description: 「翻譯定名」通用名物中譯對照工具（/translation-glo
 ## UI 功能
 
 **Tab 切換**：翻譯原則 / 人名（含聖經人物 era）/ 哲學家 / 科學家 / 歷代帝王 / 國名與城市 /
-神祇與宗教名詞 / 神學名詞 / 地名 / 作品名 / 教派名（各領域對應上方 schema 表）。
+神祇與宗教名詞 / 官制與行政區 / 神學名詞 / 地名 / 作品名 / 教派名（各領域對應上方 schema 表）。
+「官制與行政區」（`official_titles`）另有 `register`（八桶）／`admin_level`／`entity_type` 篩選。
 
 > ⚠️ 早期曾用「theologians.figure_type 分流 monarch/philosopher」的權宜做法（2026-06-03 commit
 > 923e643），已被本頁頂「各領域獨立表」新架構取代並回收（figure_type 欄與相關 rows 已刪）。
