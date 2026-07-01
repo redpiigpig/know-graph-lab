@@ -16,18 +16,27 @@
 - ✅ **E3 book HTML 已改寫為《認識你自己》正文初稿**（2026-06-27）：使用者選「連正文一起起草」。header 換書名/副標/thesis；序+7章27節+跋，每章一 subagent 依對話地圖真實文獻起草（Gertler/Durkheim/Peirce/Cassirer/Ricoeur/Foucault/Bourdieu/Berger&Luckmann/Nagel…），`assemble_genesis_book.py epi E3 7` 組裝，books.json nChapters=7。舊《主體的誕生》book 備份 `_archive_e3_zhutide/E3_主體的誕生_book.html`；drafts 在 `c:/tmp/genesis_epi/draft/E3/`。
   - ⏳ **正文待使用者精修**（AI 初稿）＋**回填各節 `<p class="section-source">` C-xxxxx 對話引用**（本次略，需對話語料對應）。
   - 小提醒：book h3「Berger &amp; Luckmann」是正確 HTML escape，與 clean_inv/DB 的「&」渲染相同；日後若用 all_sections.py 從 HTML 重生 clean_inv 需 unescape 才對得上。
-- 🚩 **舊 E3 相關檔仍在**：`scripts/data/lit_review_genesis_E3_dialogue_ch*.md`（主體的誕生研究，內容已屬 O3）與 `clean_inv.json`/`worklist.json` 的 E3 條目仍是舊章節——**建新 E3 前要先換掉這些**，否則 gen_workflow 會誤判 E3 已完成。
+- ✅ 舊 E3 檔已全數換掉：舊 dialogue 報告檔歸檔 `_archive_e3_zhutide/`、clean_inv/worklist/thesis 的 E3 已換成《認識你自己》7 章。**本次重排全部完成。**
+
+### 零之尾、下一步（使用者精修，非本工作流）
+1. E3《認識你自己》正文精修（AI 初稿在 `public/content/works/genesis/E3.html`）+ 回填 C-xxxxx 對話引用 → 改 `c:/tmp/genesis_epi/draft/E3/*.html` 後重跑 `assemble_genesis_book.py epi E3 7`。
+2. （可選）O3 第二章 54 筆偏重，想勻可再分類；(D) 待核 5 筆；M2 曾有 1 筆 null stance 已修。
+3. 工具全在 `scripts/genesis_research/`：`migrate_e3_to_o3.py`／`move_gettier_to_e2.py`／`reclassify_offcanon.py`／`reclassify_refdb.py`（皆 Gemini 引擎、ledger 在 `c:/tmp/genesis_research/*.jsonl` 可還原）。⚠️ Workflow 續跑一律用 inline `script`（[[feedback_workflow_inline_script_not_scriptpath]]）。
 
 ## 一、已完成（已 push）
 - **E1/E2/E3**：原始五項全完成（cite-seq 重整、reader 抽查、逐節分類+跨卷重歸位、重點章對話地圖）。
 - **既有 ref-DB 逐節分類**：E1/E2/E3 共 124 筆已細化到 canonical h3 小節並跨卷重歸位（E1=81/E2=50/E3=115）。
 - **M1（7 章）、M2（ch1–11）對話地圖**已研究+入庫：M1=162 筆、M2=214 筆（含原 refdb + 對話地圖，去重後 upsert，display-offset 200）。
 
-## 二、DB 現況（lit_review_entries, project_slug=genesis-philosophy）
-- 2026-06-26 15:16 更新：**M1/M2/M3/E1/E2/E3/O1/O2/O3 對話地圖皆已 ingest**。
-  本窗口 apply：M2=198 M3=110 E1=82 E2=133 E3=114 O1=94 O2=56 O3=75（idempotent upsert，display-offset 200）。
-- 尚未做對話地圖（仍原始 refdb 章級 ~41–46）：**V1（部分，ch1-4 已研究待補 ch5-6）、V2、V3、B1、B2、B3**。
-- ⚠️ M2 有 1 筆缺 stance（None）→ 上線前 (D) 複查。
+## 二、DB 現況（lit_review_entries, project_slug=genesis-philosophy；2026-06-27 收尾）
+**全 15 卷對話地圖皆已入庫；全卷 off-canonical = 0。TOTAL = 2093。**
+```
+M1=162 M2=245 M3=156 E1=113 E2=214 E3=79
+O1=134 O2=93  O3=210 V1=113 V2=111 V3=90
+B1=132 B2=107 B3=134
+```
+- E3=79（新《認識你自己》7 章）、O3=210（含主體材料 92 遷入）、E2=214（含蓋提爾章 37）。
+- 各卷 dimension 全對齊現行 clean_inv canonical 小節。
 
 ## 三、待續工作
 ### (A) 研究剩餘 87 章對話地圖 ← 主工作，吃 session 額度
