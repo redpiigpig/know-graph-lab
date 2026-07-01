@@ -5,6 +5,12 @@
 > 全部 105 章要橫跨數個重置窗口。記憶見 [[project_genesis_reference_db]]、[[project_genesis_epistemology_trilogy]]。
 > 前一份 E1/E2/E3 收尾交接見 `genesis_trilogy_handoff.md`（五項已完成）。
 
+## ⚠️ 零、2026-06-27 認識論卷三重排（進行中）
+使用者定案「**主體的生成／誕生屬本體論 O3，不屬認識論**」。見 [[project_genesis_epistemology_trilogy]]。
+- ✅ **E3→O3 資料遷移已完成**：`scripts/genesis_research/migrate_e3_to_o3.py --apply`（走 Gemini 引擎，ledger `c:/tmp/genesis_research/migrate_e3_to_o3.jsonl` 可還原）。舊 E3《主體的誕生》155 筆：24 筆與 O3 重複→刪、131 筆 book_id→O3 + dimension 重歸 O3 canonical 小節 + display_order offset 400。**現況 E3=0、O3=249**（118 原生 + 131 遷入，全部 dimension∈O3 canonical）。
+- ⏳ **待使用者定奪**：新 E3《認識你自己》(心理學意識/潛意識認識論→社會學/宗教學/政治學/人類學/跨物種/生物學) 的 **章節架構**（已提 10 章草案）＋ **誠實生成論/蓋提爾的歸屬**（暫隨主體材料進 O3）。核可後才建 E3 新 clean_inv/worklist → 研究/對話地圖。
+- 🚩 **舊 E3 相關檔仍在**：`scripts/data/lit_review_genesis_E3_dialogue_ch*.md`（主體的誕生研究，內容已屬 O3）與 `clean_inv.json`/`worklist.json` 的 E3 條目仍是舊章節——**建新 E3 前要先換掉這些**，否則 gen_workflow 會誤判 E3 已完成。
+
 ## 一、已完成（已 push）
 - **E1/E2/E3**：原始五項全完成（cite-seq 重整、reader 抽查、逐節分類+跨卷重歸位、重點章對話地圖）。
 - **既有 ref-DB 逐節分類**：E1/E2/E3 共 124 筆已細化到 canonical h3 小節並跨卷重歸位（E1=81/E2=50/E3=115）。
