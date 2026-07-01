@@ -112,8 +112,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1,
           category: '早期對話錄（蘇格拉底問題）',
           languages: ['grc', 'en'],
-          status: 'planned',
-          note: '蘇格拉底受審自辯，全集起手首選之一。',
+          status: 'in-progress',
+          ebookId: '70000000-0000-4000-8000-000000000001',
+          note: '起手卷 ‧ 希臘原文（Perseus TEI）＋Fowler 英譯（PD）＋繁中逐段自譯，按 Stephanus 節三欄對照。',
         },
         {
           title: '克里同',
