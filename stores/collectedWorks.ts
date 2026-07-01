@@ -146,14 +146,14 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           note: '節制（卡爾米德）、勇敢（拉刻斯）、友愛（呂西斯）、靈感（伊安）、美（大／小希庇亞斯）等蘇格拉底短篇。',
         },
         {
-          title: '普羅泰戈拉',
+          title: '普羅塔哥拉',
           titleOriginal: 'Πρωταγόρας / Protagoras',
           year: '早期',
           yearSort: 5,
           category: '早期對話錄（蘇格拉底問題）',
           languages: ['grc', 'en'],
           status: 'planned',
-          note: '德性可教否？與大辯士普羅泰戈拉的交鋒。',
+          note: '德性可教否？與大辯士普羅塔哥拉的交鋒。',
         },
         {
           title: '高爾吉亞',
@@ -904,11 +904,11 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
     },
 
     // ────────────────────────────────────────────────────────────────
-    // 芝諾（伊利亞的）（巴門尼德的弟子；以「阿基里斯與烏龜」等悖論反證多）
+    // 伊利亞的芝諾（巴門尼德的弟子；以「阿基里斯與烏龜」等悖論反證多）
     // ────────────────────────────────────────────────────────────────
     {
       slug: 'zeno-elea',
-      name: '芝諾（伊利亞的）',
+      name: '伊利亞的芝諾',
       nameEn: 'Zeno of Elea',
       nameOriginal: 'Ζήνων ὁ Ἐλεάτης',
       lifespan: '約前 495–430',
@@ -996,11 +996,11 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
     },
 
     // ────────────────────────────────────────────────────────────────
-    // 普羅泰戈拉（最著名的辯士；倡「人是萬物的尺度」的相對主義，並）
+    // 普羅塔哥拉（最著名的辯士；倡「人是萬物的尺度」的相對主義，並）
     // ────────────────────────────────────────────────────────────────
     {
       slug: 'protagoras',
-      name: '普羅泰戈拉',
+      name: '普羅塔哥拉',
       nameEn: 'Protagoras',
       nameOriginal: 'Πρωταγόρας',
       lifespan: '約前 490–420',
@@ -1012,8 +1012,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
       color: 'amber',
       emoji: '💬',
       contribution: [
-        '普羅泰戈拉是**辯士（Sophists）**中最著名者，以收費傳授修辭與「德性（aretē）」游走希臘各城。他最著名的命題是**「人是萬物的尺度（πάντων χρημάτων μέτρον ἄνθρωπος）」**——事物如何顯現，因人而異，真理與價值皆相對於人的感知與處境，開西方**相對主義**之端。',
-        '在宗教上，他以**「論神，我無法確知其存在或不存在」**的存疑立場聞名，據傳因此獲罪、著作遭焚。他也是最早系統反思論辯技藝（「每一論題皆有正反兩說」）的思想家，是柏拉圖《普羅泰戈拉》《泰阿泰德》的重要對話者。',
+        '普羅塔哥拉是**辯士（Sophists）**中最著名者，以收費傳授修辭與「德性（aretē）」游走希臘各城。他最著名的命題是**「人是萬物的尺度（πάντων χρημάτων μέτρον ἄνθρωπος）」**——事物如何顯現，因人而異，真理與價值皆相對於人的感知與處境，開西方**相對主義**之端。',
+        '在宗教上，他以**「論神，我無法確知其存在或不存在」**的存疑立場聞名，據傳因此獲罪、著作遭焚。他也是最早系統反思論辯技藝（「每一論題皆有正反兩說」）的思想家，是柏拉圖《普羅塔哥拉》《泰阿泰德》的重要對話者。',
       ],
       sourceNote: '殘篇極少（DK 80），賴柏拉圖、第歐根尼‧拉爾修等轉述；希臘見證與英譯屬公有領域。',
       timeline: [
@@ -1766,6 +1766,17 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           status: 'done',
           externalUrl: '/gnostic/seven-sermons-to-the-dead',
           note: '託名「亞歷山卓的巴西里得斯」的諾斯底佈道（私印 1916）。收於諾斯底文獻庫，德文原典（1916）／英譯／繁中三欄逐段對照。',
+        },
+        {
+          title: '分析心理學論文集（英譯早期版）',
+          titleOriginal: 'Collected Papers on Analytical Psychology (Constance Long ed., 1917)',
+          year: '1917',
+          yearSort: 1917,
+          category: '早期著作（公有領域）',
+          languages: ['en'],
+          status: 'in-progress',
+          ebookId: '22222224-2222-4222-8222-222222222224',
+          note: 'Constance Long 編 15 篇論文集（Gutenberg #48225，公有領域）。英→繁中對照，優先譯宗教相關章：I 神祕現象、XI 心理類型、XIV 無意識歷程的心理學。',
         },
         // 精神醫學與實驗心理學（早期）
         {
