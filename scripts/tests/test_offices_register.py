@@ -87,6 +87,16 @@ def test_hre_is_feudal_and_sasanian_is_tang():
     assert gn.register_for_polity("薩珊-波斯帝國") == "唐制"
 
 
+def test_more_empires_mapped_by_gestalt():
+    # 迦太基商業寡頭/孔雀法家集權/笈多封建盛世/草原汗國/卡洛林分封建國
+    assert gn.register_for_polity("迦太基") == "春秋制"
+    assert gn.register_for_polity("孔雀-印度帝國") == "戰國秦制"
+    assert gn.register_for_polity("笈多-印度帝國") == "魏晉制"
+    assert gn.register_for_polity("匈奴帝國") == "遼金元制"
+    assert gn.register_for_polity("突厥汗國") == "遼金元制"
+    assert gn.register_for_polity("查理曼-卡洛林帝國") == "周封建五等爵"
+
+
 def test_rome_spans_two_registers_early_han_late_weijin():
     assert gn.registers_for_polity("羅馬帝國") == ["漢制", "魏晉制"]
     assert gn.register_for_polity("羅馬帝國") == "漢制"     # first is the default
