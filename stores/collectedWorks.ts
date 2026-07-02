@@ -1802,7 +1802,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           languages: ['en'],
           status: 'in-progress',
           ebookId: '22222224-2222-4222-8222-222222222224',
-          note: 'Constance Long 編 15 篇論文集（Gutenberg #48225，公有領域）。英→繁中對照，優先譯宗教相關章：I 神祕現象、XI 心理類型、XIV 無意識歷程的心理學。',
+          note: 'Constance Long 編 15 篇論文集（Gutenberg #48225，公有領域）。英→繁中對照。✅ 已完成宗教相關 3 章（I 神祕現象／XI 心理類型／XIV 無意識歷程，共 119 段）；其餘 12 章待譯。',
         },
         // 精神醫學與實驗心理學（早期）
         {

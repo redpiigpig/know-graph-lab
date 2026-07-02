@@ -106,7 +106,7 @@
 
 1. ✅ **《Psychological Types》升三欄（已完成 2026-07-01）** — Baynes 1923 英＋繁中接上 Gutenberg #61543 德文 1921 → 德英中三欄。
 2. ✅ **《Seven Sermons to the Dead》（已完成 2026-07-01）** — 見下「§ 跨 portal 復用」。
-3. **《Collected Papers on Analytical Psychology》(#48225)** — 15 章文集，挑宗教相關章（I 神祕現象／XI 型別／XIV 無意識歷程）英＋繁中。
+3. ⚙️ **《Collected Papers on Analytical Psychology》(#48225)（進行中）** — 15 章文集，`scripts/jung_collected_papers_translate.py`（NVIDIA-first 引擎，checkpoint 可續傳）。**✅ 已完成宗教相關 3 章（I 神祕現象 53 段／XI 型別 7 段／XIV 無意識歷程 59 段＝119 段）**，ebook `22222224-…`，reader 英繁中雙欄截圖實證。**其餘 12 章待譯**：`python scripts/jung_collected_papers_translate.py --chapters 2,3,4,5,6,7,8,9,10,12,13,15 --engine nvidia`（同腳本、續傳）。解析雷區：本文章標＝`<h2>CHAPTER N</h2>`，前付 TOC 的 `<p class="p2">` 別當章界。
 4. 《Theory of Psychoanalysis》(#66041)、《Studies in Word-Association》、《Dementia Praecox》(1909) — 偏臨床，宗教學價值低，排後。
 
 ### § 跨 portal 復用：《七篇致亡靈的佈道》德英中三欄（2026-07-01）
