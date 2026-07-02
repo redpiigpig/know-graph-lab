@@ -207,7 +207,7 @@ def make_translate_fn(engine: str, slug: str):
     import translate_ebook_to_zh as te
     te.PROMPT_TMPL = PROMPT_TMPL
     engine_fn = {"gemini": te.gemini_with_haiku_fallback, "haiku": te.haiku_translate,
-                 "sonnet": te.sonnet_translate}[engine]
+                 "sonnet": te.sonnet_translate, "nvidia": te.nvidia_translate}[engine]
     cdir = CACHE / f"{slug}_zh"
     cdir.mkdir(parents=True, exist_ok=True)
 

@@ -142,11 +142,30 @@ const intro = computed(() => collectedWorksIntros[ebookId])
 const page = ref(Math.max(1, Number(route.query.p) || 1))
 const jump = ref(page.value)
 
-const { data, pending, refresh } = await useAsyncData(
-  () => `cw-${ebookId}-${page.value}`,
-  () => $fetch<any>(`/api/ebooks/${ebookId}?includeToc=1&page=${page.value}`),
-  { watch: [page] }
-)
+// Fetch client-side (like /ebook) — the /api/ebooks route requireAuth()s a
+// Bearer token, so we must attach the Supabase session access_token (a bare
+// cookie/SSR fetch 401s).
+const supabase = useSupabaseClient()
+async function getToken(): Promise<string | null> {
+  const { data: { session } } = await supabase.auth.getSession()
+  return session?.access_token ?? null
+}
+const data = ref<any>(null)
+const pending = ref(true)
+async function load() {
+  pending.value = true
+  try {
+    const token = await getToken()
+    data.value = await $fetch<any>(`/api/ebooks/${ebookId}?includeToc=1&page=${page.value}`,
+      token ? { headers: { Authorization: `Bearer ${token}` } } : {})
+  } catch (e) {
+    console.error('collected-works reader load failed', e)
+  } finally {
+    pending.value = false
+  }
+}
+onMounted(load)
+watch(page, load)
 
 const totalPages = computed(() => data.value?.total_pages ?? 1)
 const cur = computed(() => data.value?.currentPage ?? null)
