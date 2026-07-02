@@ -17,6 +17,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import plato_build as pb  # noqa: E402  (import 時已把 sys.stdout 設成 utf-8；勿再重包＝雙包會關掉 buffer)
 
 LOG = Path("c:/tmp/greek_overnight.log")
+# NVIDIA (deepseek-v4-flash, 4-key rotation + throttle) — generous free tier，
+# 不像 Haiku(Claude Max) 那樣 bulk 撞 429。可 `--engine haiku/gemini` 覆蓋。
+ENGINE = sys.argv[sys.argv.index("--engine") + 1] if "--engine" in sys.argv else "nvidia"
 
 
 def log(msg: str) -> None:
@@ -46,7 +49,7 @@ def main() -> None:
         d = pb.WORKS[slug]
         try:
             log(f"[run ] {slug}  {d['author']}《{d['title_zh']}》 …")
-            chunks = pb.run(slug, engine="haiku", upload=True)
+            chunks = pb.run(slug, engine=ENGINE, upload=True)
             marker.write_text("ok", encoding="utf-8")
             ok.append(slug)
             log(f"[ok  ] {slug}  {len(chunks)} chunks")
