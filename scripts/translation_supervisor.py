@@ -48,16 +48,20 @@ JOBS = (
 # Online-review jobs: replace provenance=ollama drafts with Gemini-first quality
 # and publish a work once it has no local drafts left. Selected only when there
 # is a backlog AND Gemini is reachable (see choose_mode); otherwise we draft.
+# Backends set to Haiku (Claude Max OAuth): with Gemini generation 429-dead and
+# NVIDIA ~33s/para, Haiku (~1.4s/para, patient backoffs) is the only fast+reliable
+# review engine right now. sbe has no direct "haiku" option → "cloud" (Haiku-first
+# → Sonnet). When Gemini quota returns, flip these back to gemini-first.
 REVIEW_JOBS = (
     {
         "id": "sbe",
         "script": "sbe_translate.py",
-        "args": ["--review-local-step", "--backend", "gemini-first", "--upload"],
+        "args": ["--review-local-step", "--backend", "cloud", "--upload"],
     },
     {
         "id": "panikkar",
         "script": "panikkar_auto.py",
-        "args": ["--review-queue-step", "--backend", "gemini-first", "--upload"],
+        "args": ["--review-queue-step", "--backend", "haiku", "--upload"],
     },
 )
 
@@ -138,10 +142,24 @@ def gemini_reachable() -> bool:
         return False
 
 
-def choose_mode(drafts_waiting: int, gemini_up: bool) -> str:
-    """REVIEW when there's an Ollama-draft backlog and Gemini is reachable (drain
-    it to final quality fast); otherwise DRAFT locally (Ollama never 429s)."""
-    if drafts_waiting > 0 and gemini_up:
+def review_engine_up() -> bool:
+    """A cloud review engine is usable: Gemini reachable, OR Haiku via Claude Max
+    OAuth (creds file present) / an Anthropic API key. Haiku is the current review
+    backend, so a present credential is enough to prefer review over drafting."""
+    if gemini_reachable():
+        return True
+    if os.environ.get("ANTHROPIC_API_KEY"):
+        return True
+    cred = (Path(os.environ.get("USERPROFILE") or os.environ.get("HOME", ""))
+            / ".claude" / ".credentials.json")
+    return cred.exists()
+
+
+def choose_mode(drafts_waiting: int, engine_up: bool) -> str:
+    """REVIEW when there's an Ollama-draft backlog and a cloud review engine is
+    usable (drain it to final quality); otherwise DRAFT locally (Ollama never
+    429s)."""
+    if drafts_waiting > 0 and engine_up:
         return "review"
     return "draft"
 
@@ -266,7 +284,7 @@ def run_local_step(job: dict, paragraphs: int,
 
 
 def one_cycle(idle_required: int, paragraphs: int, timeout_minutes: int,
-              review_paras: int = 6, dry_run: bool = False) -> str:
+              review_paras: int = 20, dry_run: bool = False) -> str:
     previous: dict = {}
     try:
         previous = json.loads(STATE_PATH.read_text(encoding="utf-8"))
@@ -275,8 +293,8 @@ def one_cycle(idle_required: int, paragraphs: int, timeout_minutes: int,
     idle = int(user_idle_seconds())
     draft_counts = local_draft_counts()
     waiting = sum(draft_counts.values())
-    gemini_up = gemini_reachable()
-    mode = choose_mode(waiting, gemini_up)             # 'review' | 'draft'
+    engine_up = review_engine_up()
+    mode = choose_mode(waiting, engine_up)             # 'review' | 'draft'
     jobs = REVIEW_JOBS if mode == "review" else JOBS
     batch = review_paras if mode == "review" else paragraphs
     job_index = int(previous.get("next_job_index") or 0) % len(jobs)
@@ -288,7 +306,7 @@ def one_cycle(idle_required: int, paragraphs: int, timeout_minutes: int,
         "idle_required": idle_required,
         "on_ac_power": on_ac_power(),
         "ollama_ready": ollama_ready(),
-        "gemini_reachable": gemini_up,
+        "review_engine_up": engine_up,
         "local_drafts_waiting_review": waiting,
         "drafts_by_job": draft_counts,
         "selected_job": job["id"],
@@ -340,12 +358,11 @@ def main() -> None:
     ap.add_argument("--interval", type=int, default=60)
     ap.add_argument("--idle-seconds", type=int, default=0)
     ap.add_argument("--step-paras", type=int, default=3)
-    ap.add_argument("--review-paras", type=int, default=6,
-                    help="paragraphs per online-review batch. Kept SMALL so a "
-                         "batch finishes and checkpoints well inside the timeout "
-                         "even when cloud engines are throttled (~30-160s/para "
-                         "via the NVIDIA/Haiku fallback); a 40-para batch used to "
-                         "hit the 45-min timeout (rc=124) and waste the whole run.")
+    ap.add_argument("--review-paras", type=int, default=20,
+                    help="paragraphs per online-review batch. Sized for Haiku "
+                         "(~1.4s/para): finishes well inside the timeout and "
+                         "checkpoints. (A 40-para batch on the slow Gemini/NVIDIA "
+                         "cascade used to hit the 45-min timeout rc=124.)")
     ap.add_argument("--timeout-minutes", type=int, default=45)
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
