@@ -36,6 +36,9 @@ export interface ChunkData {
   // lib/multilang-sources.ts; see .claude/skills/ebook-collected-works/.
   sources?: Record<string, string> | null;
   source_order?: string[] | null;
+  // Per-段 citation labels aligned 1:1 with content/sources `\n\n` 段 — the
+  // collected-works reader's left citation column (Stephanus 17a / Bekker 1094a).
+  anchors?: string[] | null;
   // Bilingual-parallel books (Denzinger, future ACCS dual-language).
   // See .claude/skills/ebook-pipeline/book-structure-bilingual-parallel.md.
   section_type?: "header" | "entry" | "commentary" | null;

@@ -91,6 +91,7 @@ def build_multilang_chunk(
     chunk_type: str = "chapter",
     page_number: int | None = None,
     title_en: str | None = None,
+    anchors: list | None = None,
 ) -> dict:
     """Assemble one reader-ready multilang chunk (already mirrored).
 
@@ -98,6 +99,9 @@ def build_multilang_chunk(
     is {lang: text} for every non-zh column; `source_order` defaults to the
     sources' insertion order. Optional `volume` / `parent_volume` drive the
     sidebar tree; `title_en` is the source heading used by --resume dedupe.
+    `anchors` is an optional per-段 citation list (e.g. Stephanus/Bekker
+    ["17a","17b",…]) aligned 1:1 with the content/sources `\\n\\n` 段 — the
+    collected-works reader shows it as the left citation column.
     """
     chunk: dict = {
         "chunk_index": chunk_index,
@@ -115,6 +119,8 @@ def build_multilang_chunk(
         chunk["parent_volume"] = parent_volume
     if title_en is not None:
         chunk["title_en"] = title_en
+    if anchors:
+        chunk["anchors"] = list(anchors)
     return mirror_primary_source(chunk)
 
 
@@ -165,6 +171,7 @@ def assemble_multilang_chunks(
             volume=unit.get("volume", volume),
             parent_volume=(parent_volume_fn(unit) if parent_volume_fn else unit.get("parent_volume")),
             title_en=unit.get("title_en"),
+            anchors=unit.get("anchors"),
         )
         validate_multilang_chunk(chunk)
         out.append(chunk)

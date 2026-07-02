@@ -185,6 +185,7 @@ def build_units(slug: str, grc: list, eng: list) -> list[dict]:
             "title_en": f"{('Bk ' + bk + ' ') if bk else ''}{d['unit_label']} {num}",
             "sources": {"grc": "\n\n".join(g for _s, g, _e in secs),
                         "en": "\n\n".join(e for _s, _g, e in secs)},
+            "anchors": [s for s, _g, _e in secs],  # 每段引用號（Stephanus 17a／Bekker 1094a）
             "_sections": [(s, g, e) for s, g, e in secs],
         })
     return units

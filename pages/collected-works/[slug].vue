@@ -160,11 +160,12 @@ function isReadable(w: CwWork): boolean {
   return !!w.ebookId && (s === 'done' || s === 'in-progress')
 }
 // Navigation target for a work row: an external corpus/portal (e.g. 東方聖書)
-// takes precedence; otherwise the in-site reader when the work is readable.
+// takes precedence; otherwise the全集專屬三欄 reader when the work is readable
+// (全集不再走 /ebook UI — 見 pages/collected-works/[slug]/[work].vue)。
 // Returns undefined → the row renders as a non-clickable <div>.
 function linkTarget(w: CwWork): string | undefined {
   if (w.externalUrl) return w.externalUrl
-  return isReadable(w) ? `/ebook/${w.ebookId}` : undefined
+  return isReadable(w) ? `/collected-works/${route.params.slug}/${w.ebookId}` : undefined
 }
 
 useHead(() => ({ title: author.value ? `${author.value.name} — 全集` : '全集' }))
