@@ -85,24 +85,24 @@
       "books": [
         {
           "id": "V1",
-          "title": "願然：意欲、秩序與美",
-          "subtitle": "願然的理論建構與美學",
+          "title": "各種生死觀",
+          "subtitle": "價值論三部曲‧卷一／生死作為價值的第一現場",
           "file": "/content/works/genesis/V1.html",
-          "nChapters": 6
+          "nChapters": 7
         },
         {
           "id": "V2",
-          "title": "意義、愛與神聖",
-          "subtitle": "願然的應用——意義、愛、神聖與時代診斷",
+          "title": "美學觀",
+          "subtitle": "價值論三部曲‧卷二／美的生成、判斷與藝術",
           "file": "/content/works/genesis/V2.html",
           "nChapters": 6
         },
         {
           "id": "V3",
-          "title": "世界理論",
-          "subtitle": "心識、藝術與虛構——世界的生成",
+          "title": "世界與生活",
+          "subtitle": "價值論三部曲‧卷三／在場世界論與住世者的實踐",
           "file": "/content/works/genesis/V3.html",
-          "nChapters": 5
+          "nChapters": 9
         }
       ]
     },

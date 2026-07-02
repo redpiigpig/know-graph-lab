@@ -34,8 +34,12 @@ def log(msg: str) -> None:
 def main() -> None:
     force = "--force" in sys.argv
     only = sys.argv[sys.argv.index("--only") + 1:] if "--only" in sys.argv else None
-    # 佇列：republic 先（大部、續快取）→ 其餘柏拉圖 → 亞里斯多德；apology 已完成跳過
-    order = [s for s in pb.WORKS if s != "apology"]
+    # 佇列：先跑快取近全／中小部（快速鎖定 done marker），最後才跑兩部巨著
+    # republic/laws（~1355/1500 節、易被 NVIDIA 偶發 ConnectionError 卡在前面擋住整批）。
+    # apology 已完成跳過。
+    _BIG = ["republic", "laws"]
+    order = [s for s in pb.WORKS if s != "apology" and s not in _BIG]
+    order += [s for s in _BIG if s in pb.WORKS]
     if only:
         order = [s for s in order if s in only]
     log(f"=== greek overnight：{len(order)} 部待處理 ===")

@@ -193,7 +193,7 @@
   "realch": 8,
   "invch": 9,
   "title": "第八章　AI 倫理",
-  "nsec": 4
+  "nsec": 5
  },
  {
   "vol": "M3",
@@ -354,7 +354,7 @@
   "realch": 7,
   "invch": 8,
   "title": "第七章　存在的譜系：從完全意向性到非存在",
-  "nsec": 6
+  "nsec": 7
  },
  {
   "vol": "O2",
@@ -451,85 +451,92 @@
   "vol": "V1",
   "realch": 1,
   "invch": 2,
-  "title": "第一章　導論：價值論作為「願然」之學",
-  "nsec": 5
+  "title": "第一章　導論：生死作為價值論的第一現場",
+  "nsec": 4
  },
  {
   "vol": "V1",
   "realch": 2,
   "invch": 3,
-  "title": "第二章　願然與慾望：意欲的純化",
-  "nsec": 5
+  "title": "第二章　意義的困難問題",
+  "nsec": 4
  },
  {
   "vol": "V1",
   "realch": 3,
   "invch": 4,
-  "title": "第三章　願然的四象限與熵的宇宙方向性",
+  "title": "第三章　軸心傳統的生死觀（一）：印度與中國",
   "nsec": 4
  },
  {
   "vol": "V1",
   "realch": 4,
   "invch": 5,
-  "title": "第四章　美的共振生成論",
+  "title": "第四章　軸心傳統的生死觀（二）：希臘與亞伯拉罕傳統",
   "nsec": 4
  },
  {
   "vol": "V1",
   "realch": 5,
   "invch": 6,
-  "title": "第五章　美的相對客觀性（relative objectivity）與文化主觀性（cultural subjectivity）",
+  "title": "第五章　現代性的生死觀：世俗化、存在主義與醫療化",
   "nsec": 4
  },
  {
   "vol": "V1",
   "realch": 6,
   "invch": 7,
-  "title": "第六章　真善美聖的四向度階層",
-  "nsec": 5
+  "title": "第六章　虛無主義的價值論診斷",
+  "nsec": 4
+ },
+ {
+  "vol": "V1",
+  "realch": 7,
+  "invch": 8,
+  "title": "第七章　結語：創生哲學的生死觀",
+  "nsec": 4
  },
  {
   "vol": "V2",
   "realch": 1,
   "invch": 2,
-  "title": "第一章　意義的困難問題",
-  "nsec": 4
+  "title": "第一章　導論：美學作為願然的核心分支",
+  "nsec": 3
  },
  {
   "vol": "V2",
   "realch": 2,
   "invch": 3,
-  "title": "第二章　虛無主義的價值論診斷",
+  "title": "第二章　美的共振生成論",
   "nsec": 4
  },
  {
   "vol": "V2",
   "realch": 3,
   "invch": 4,
-  "title": "第三章　愛作為願然的最高運動",
+  "title": "第三章　美的相對客觀性（relative objectivity）與文化主觀性（cultural subjectivity）",
   "nsec": 4
  },
  {
   "vol": "V2",
   "realch": 4,
   "invch": 5,
-  "title": "第四章　神聖性與空無美學",
-  "nsec": 4
+  "title": "第四章　藝術與文學作為世界創造",
+  "nsec": 3
  },
  {
   "vol": "V2",
   "realch": 5,
   "invch": 6,
-  "title": "第五章　主體作為最高價值",
+  "title": "第五章　神聖性與空無美學",
   "nsec": 4
  },
  {
   "vol": "V2",
   "realch": 6,
   "invch": 7,
-  "title": "第六章　結語：願然與第二軸心時代",
-  "nsec": 4
+  "title": "第六章　結語：鑑賞力作為願然的修養",
+  "nsec": 3
  },
  {
   "vol": "V3",
@@ -549,29 +556,57 @@
   "vol": "V3",
   "realch": 3,
   "invch": 4,
-  "title": "第三章　藝術與文學作為世界創造",
+  "title": "第三章　科幻、電影與動畫：意想界的工程學",
   "nsec": 3
  },
  {
   "vol": "V3",
   "realch": 4,
   "invch": 5,
-  "title": "第四章　科幻、電影與動畫：意想界的工程學",
-  "nsec": 3
+  "title": "第四章　住世者的修養：演算法時代守住誠實度",
+  "nsec": 4
  },
  {
   "vol": "V3",
   "realch": 5,
   "invch": 6,
-  "title": "第五章　結語：世界理論在價值論中的位置",
-  "nsec": 2
+  "title": "第五章　願然與慾望：意欲的純化",
+  "nsec": 5
+ },
+ {
+  "vol": "V3",
+  "realch": 6,
+  "invch": 7,
+  "title": "第六章　願然的四象限與熵的宇宙方向性",
+  "nsec": 4
+ },
+ {
+  "vol": "V3",
+  "realch": 7,
+  "invch": 8,
+  "title": "第七章　愛作為願然的最高運動",
+  "nsec": 4
+ },
+ {
+  "vol": "V3",
+  "realch": 8,
+  "invch": 9,
+  "title": "第八章　主體作為最高價值",
+  "nsec": 4
+ },
+ {
+  "vol": "V3",
+  "realch": 9,
+  "invch": 10,
+  "title": "第九章　結語：誠實作畫與第二軸心時代",
+  "nsec": 6
  },
  {
   "vol": "B1",
   "realch": 1,
   "invch": 2,
   "title": "第一章　導論：存有論作為「默然」之學",
-  "nsec": 4
+  "nsec": 7
  },
  {
   "vol": "B1",
@@ -718,7 +753,7 @@
   "realch": 2,
   "invch": 2,
   "title": "第二章　意識與潛意識：心理學的認識論",
-  "nsec": 4
+  "nsec": 5
  },
  {
   "vol": "E3",

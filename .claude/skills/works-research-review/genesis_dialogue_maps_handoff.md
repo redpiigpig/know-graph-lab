@@ -5,6 +5,19 @@
 > 全部 105 章要橫跨數個重置窗口。記憶見 [[project_genesis_reference_db]]、[[project_genesis_epistemology_trilogy]]。
 > 前一份 E1/E2/E3 收尾交接見 `genesis_trilogy_handoff.md`（五項已完成）。
 
+## ⚠️ 零之二、2026-07-02 價值論三部曲重排＋五然四德移存有論（已完成）
+使用者定案：**V1《各種生死觀》(7章)／V2《美學觀》(6章)／V3《世界與生活》(9章)**；**五然四德總說移 B1 導論一起說明**。
+五然＝實然(本體論)／識然(認識論)／應然(倫理學)／願然(價值論)／默然(存有論)；四德＝實然+識然共證「真」、應然=善、願然=美、默然=聖（無真不成善→美→聖階序）。全 15 卷書稿「四然」已全改「五然」（含 B2/B3/E2 內文）。
+- ✅ **HTML 重組**（一次性腳本，舊稿歸檔 `scripts/data/_archive_v_pre_reorg_2026-07-02/`，含 B1/B3/O1/E3/M3 修改前副本）：
+  - 舊V1：ch1導論+ch6真善美聖→B1 導論新節；ch2/ch3→新V3 第五/六章；ch4/ch5→新V2 第二/三章。
+  - 舊V2：ch1/ch2→新V1 第二/六章；ch3/ch5→新V3 第七/八章；ch4→新V2 第五章；ch6→併入新V3 第九章結語。
+  - 舊V3：ch3→新V2 第四章；ch1/2/4 留 V3（ch4 改第三章）；ch5→新V3 第九章（改題「誠實作畫與第二軸心時代」）。
+  - 新章（正文=綱要+草記，**待使用者精修**）：V1 導論/軸心×2/現代性/結語、V2 導論/鑑賞力結語、V3 第四章「住世者的修養：演算法時代守住誠實度」。
+- ✅ **AI 討論點分配**（源自《世界理論》跨領域討論）：O1 第七章加「三層世界的質性躍升：虛構存有者的本體地位」；E3 第二章加「預測編碼與貝氏大腦：知覺作為受控的幻覺」；M3 第八章加「意想界的強制覆寫：演算法、世界種子與注意力倫理」；價值論端＝新V3 第四章+第九章。
+- ✅ **clean_inv/worklist/thesis/books.json 全部同步**（clean_inv 自最終 HTML 重生，B1 ch1=7節、O1 ch7=7節、E3 ch2=5節、M3 ch8=5節）。
+- ✅ **DB 遷移完成**：`migrate_v_reorg.py --apply`（確定性規則，非 LLM；ledger `c:/tmp/genesis_research/migrate_v_reorg.jsonl`）。223 筆 book_id/dimension 搬移＋1 筆 Friston 2010 與 V3 同 ref_key 重複→刪(id=954)＋4 筆 B1「默然：四然→五然的最後向度」改名。**現況 V1=35、V2=80、V3=160、B1=170，四卷 off-canonical=0。**
+- ⏳ 後續：①新章對話地圖研究尚未跑（V1 新五章、V2 新兩章、V3 ch4，及 O1/E3/M3 新節）— 跑 gen_workflow 前 **必須先把新 clean_inv/worklist 複製到 c:/tmp/genesis_research/**；②搬入 B1 的 38 筆掛在兩個大節上，可再用 reclassify 細分；③轉入章內文殘留舊卷章次引用，各卷序的 editor-note 已註明對照表。
+
 ## ⚠️ 零、2026-06-27 認識論卷三重排（進行中）
 使用者定案「**主體的生成／誕生屬本體論 O3，不屬認識論**」。見 [[project_genesis_epistemology_trilogy]]。
 - ✅ **E3→O3 資料遷移已完成**：`migrate_e3_to_o3.py --apply`（Gemini 引擎，ledger 可還原）。舊 E3《主體的誕生》155 筆：24 筆與 O3 重複→刪、131 筆遷 O3。

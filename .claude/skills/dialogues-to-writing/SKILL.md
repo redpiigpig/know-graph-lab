@@ -225,7 +225,7 @@ agent fan-out 結果不可重現、難稽核。改用**純函式候選 prelabel 
 撈該 facet 對話(`classify_genesis_philosophy.get_category_ids()` 拿 cat id→`entry_categories` 抓 dialogue_id→分表抓 prompt/response)→切 chunk→sonnet subagent 主題地圖(map_NN.json)→合併 `*_themes.json`→寫詳細藍圖 `*_blueprint.html`(每章核心論證)→每章一個 sonnet subagent 寫初稿→組裝 book html(header+章 section)→manifest 加 group→build→commit。各套工料在 `c:/tmp/genesis_ethics/`(draft/A,B,C + genesis_ethics_content.html + master_digest.json)、`c:/tmp/genesis_epi/`、`c:/tmp/genesis_ont/`、`c:/tmp/genesis_val/`、`c:/tmp/genesis_bei/`。
 
 ### 🔑 邊界（使用者歷次裁定，寫各套務必守）
-四然↔卷：識然=認識論、應然=倫理學、願然=價值論、默然=存有論；本體論=「生成的存在如何結構」。**量子→本體論；數學(的本質=怎麼認識)→認識論；空無/默然/神聖/虛無/終極→存有論；願然/美→價值論；誠實/善→倫理學；創生公式/生成三要素(關係性/身體性/歷時性)→本體論卷一正式提出**。寫某卷不得搬別卷術語。
+五然↔卷（2026-07-02 定案，原四然＋實然）：實然=本體論、識然=認識論、應然=倫理學、願然=價值論、默然=存有論；四德對應＝實然+識然共證「真」、應然=善、願然=美、默然=聖（無真不成善、無善不成美、無美不成聖）；五然四德總說安置於 B1 導論一起說明。**量子→本體論；數學(的本質=怎麼認識)→認識論；空無/默然/神聖/虛無/終極→存有論；願然/美→價值論；誠實/善→倫理學；創生公式/生成三要素(關係性/身體性/歷時性)→本體論卷一正式提出**。寫某卷不得搬別卷術語。
 
 ### 🔁 倫理三部曲 v2 大改版（2026-06-21，已全數部署；治理文件 `c:/tmp/genesis_ethics/intro_schedule.md` v2）
 **使用者定三卷分工總原則（最高層級）：A＝純粹個人倫理 / B＝群體倫理 / C＝生物與宇宙論倫理。** 據此把內容歸位、跨卷搬移、加地基章與歷史章。intro_schedule.md v2 是精修必遵的治理文件（含越層紅線、公式「先論述後導出」、每節級來源標註）。
