@@ -38,7 +38,13 @@ def main() -> None:
     # republic/laws（~1355/1500 節、易被 NVIDIA 偶發 ConnectionError 卡在前面擋住整批）。
     # apology 已完成跳過。
     _BIG = ["republic", "laws"]
+
+    def _cache_n(s):  # 已翻節數 → 最接近完成的先跑，每個 burst 先鎖定 done
+        d = pb.CACHE / f"{s}_zh"
+        return len(list(d.glob("*.txt"))) if d.exists() else 0
+
     order = [s for s in pb.WORKS if s != "apology" and s not in _BIG]
+    order.sort(key=_cache_n, reverse=True)
     order += [s for s in _BIG if s in pb.WORKS]
     if only:
         order = [s for s in order if s in only]
