@@ -143,7 +143,7 @@ def _sonnet_translator():
     return sonnet_paid
 
 
-def make_sbe_engine(tradition: str):
+def make_sbe_engine(tradition: str, backend: str = "cloud"):
     """translate_para with the SBE prompt + this tradition's glossary.
     Engine policy: 免費層 Haiku（Claude Max）優先且**快速失敗**（短 backoff），一旦
     免費層不動（429/連線/空回）→ 立刻改用 Sonnet 轉錄（user 2026-06-14 拍板）。
@@ -163,6 +163,15 @@ def make_sbe_engine(tradition: str):
         if not src:
             return ""
         pieces = te.split_oversized(src)
+        if backend == "ollama":
+            return _join(te.ollama_translate, pieces)
+        if backend == "gemini-first":
+            return _join(te.gemini_with_nvidia_fallback, pieces)
+        if backend == "haiku":
+            # Direct Haiku with patient backoffs (waits out Max's rolling-window
+            # 429s) — no Sonnet fallback. Much steadier than 'cloud' when the whole
+            # backlog runs on Max: matches panikkar's fast --backend haiku path.
+            return _join(te.haiku_translate, pieces)
         # 1) 免費層 Haiku — 快速失敗（backoffs 0,20）：免費池不動就在 ~20s 內升級，
         #    不再像舊版那樣在 30 分鐘的 429 backoff 裡靜默卡死。
         try:
@@ -186,12 +195,56 @@ def make_sbe_engine(tradition: str):
     return translate_para
 
 
+def run_local_draft_step(max_total_paras: int) -> int:
+    """Translate a bounded SBE draft batch via Ollama; checkpoint only."""
+    for work in WORKS:
+        if ma.is_done(work):
+            continue
+        tradition = TRADITION.get(work["slug"], "")
+        engine = make_sbe_engine(tradition, backend="ollama")
+        translated = ma.translate_work(
+            work, engine, reupload_every=0,
+            max_total_paras=max_total_paras, engine_name="ollama")
+        print(f"SUPERVISOR_RESULT job=sbe-local-draft slug={work['slug']} "
+              f"translated={translated}", flush=True)
+        return translated
+    print("SUPERVISOR_RESULT job=sbe-local-draft all-done translated=0", flush=True)
+    return 0
+
+
+def run_review_step(max_total_paras: int, backend: str, do_upload: bool) -> int:
+    for work in WORKS:
+        if not ma.count_local_drafts(work):
+            continue
+        tradition = TRADITION.get(work["slug"], "")
+        engine = make_sbe_engine(tradition, backend=backend)
+        reviewed = ma.review_local_drafts(
+            work, engine, engine_name=backend,
+            max_total_paras=max_total_paras)
+        remaining = ma.count_local_drafts(work)
+        if do_upload and remaining == 0:
+            ma.assemble_and_upload(work)
+        print(f"SUPERVISOR_RESULT job=sbe-online-review slug={work['slug']} "
+              f"reviewed={reviewed} remaining={remaining}", flush=True)
+        return reviewed
+    print("SUPERVISOR_RESULT job=sbe-online-review no-local-drafts reviewed=0", flush=True)
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--list", action="store_true")
     ap.add_argument("--ingest", default="", help="slug — English-first ingest, no LLM")
     ap.add_argument("--only", default="", help="comma-separated slugs to translate")
     ap.add_argument("--loop", action="store_true", help="self-restart until in scope is_done")
+    ap.add_argument("--local-draft-step", action="store_true",
+                    help="bounded Ollama pass; checkpoint only, never upload")
+    ap.add_argument("--review-local-step", action="store_true",
+                    help="bounded online replacement of provenance=ollama")
+    ap.add_argument("--backend", choices=["cloud", "gemini-first", "haiku"], default="gemini-first")
+    ap.add_argument("--max-total-paras", type=int, default=3)
+    ap.add_argument("--upload", action="store_true")
+    ap.add_argument("--local-draft-status", action="store_true")
     args = ap.parse_args()
 
     by_slug = {w["slug"]: w for w in WORKS}
@@ -199,6 +252,16 @@ def main():
     if args.list:
         for w in WORKS:
             print(f"  [{'✓' if ma.is_done(w) else ' '}] {w['slug']:24s} {w['title']}  ({w['en_id']})")
+        return
+    if args.local_draft_status:
+        for work in WORKS:
+            print(f"{work['slug']}\tollama_drafts={ma.count_local_drafts(work)}")
+        return
+    if args.local_draft_step:
+        run_local_draft_step(max(1, args.max_total_paras))
+        return
+    if args.review_local_step:
+        run_review_step(max(1, args.max_total_paras), args.backend, args.upload)
         return
 
     if args.ingest:

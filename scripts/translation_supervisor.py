@@ -56,7 +56,7 @@ REVIEW_JOBS = (
     {
         "id": "sbe",
         "script": "sbe_translate.py",
-        "args": ["--review-local-step", "--backend", "cloud", "--upload"],
+        "args": ["--review-local-step", "--backend", "haiku", "--upload"],
     },
     {
         "id": "panikkar",
