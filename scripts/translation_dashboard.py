@@ -477,6 +477,36 @@ def _state(done: int, total: int, running: bool, updated: float | None,
     return "未開始"
 
 
+# ── status buckets (shared by the summary cards + their click-to-filter) ──────
+ATTENTION_STATES = ("錯誤", "疑似停滯", "待匯入/檢查", "待線上複核", "429 受限")
+DONE_RETENTION_DAYS = 3  # a task finished this long ago drops off the board
+
+
+def state_category(state: str) -> str:
+    """Map a fine-grained state to one of the four summary buckets."""
+    if state == "執行中":
+        return "running"
+    if state == "完成":
+        return "complete"
+    if state in ATTENTION_STATES:
+        return "attention"
+    return "paused"
+
+
+def is_stale_done(state: str, updated_at: float | None, now: float,
+                  days: int = DONE_RETENTION_DAYS) -> bool:
+    """A completed task whose files haven't moved in `days` days — safe to hide
+    so the board shows current work (files are NOT deleted)."""
+    return (state == "完成" and updated_at is not None
+            and now - updated_at > days * 86400)
+
+
+def _is_junk_accs_file(name: str) -> bool:
+    """Backup/bad/empty raw dumps that would list a book twice (e.g.
+    accs_num_BAD_empty_backup_… beside the real accs_num_…)."""
+    return bool(re.search(r"(?i)_(bad|backup|empty|old|bak)(?:_|\b)", name))
+
+
 def scan_jung(running: bool) -> list[WorkProgress]:
     rows: list[WorkProgress] = []
     if not JUNG_ROOT.exists():
@@ -600,6 +630,8 @@ def scan_accs(processes: list[dict[str, Any]]) -> list[WorkProgress]:
     rows = []
     commands = [str(p.get("CommandLine") or "").lower() for p in processes]
     for path in sorted(TMP_ROOT.glob("accs_*.raw.jsonl")):
+        if _is_junk_accs_file(path.name):   # skip BAD/backup dumps → no dup rows
+            continue
         match = re.match(r"accs_([a-z0-9]+)_", path.name, re.I)
         if not match:
             continue
@@ -940,6 +972,8 @@ class Dashboard:
             "paused": tk.StringVar(value="0"),
             "attention": tk.StringVar(value="0"),
         }
+        self.filter_category: str | None = None   # click a summary card to filter
+        self.card_frames: dict[str, Any] = {}
         self._style()
         self._build()
         self.refresh()
@@ -989,11 +1023,18 @@ class Dashboard:
             ("attention", "需要注意", self.COLORS["yellow"]),
         ]
         for key, label, color in specs:
-            card = tk.Frame(cards, bg=self.COLORS["panel"], padx=16, pady=11)
+            card = tk.Frame(cards, bg=self.COLORS["panel"], padx=16, pady=11, cursor="hand2")
             card.pack(side="left", expand=True, fill="x", padx=6)
-            tk.Label(card, textvariable=self.summary_vars[key], bg=self.COLORS["panel"], fg=color,
-                     font=("Segoe UI", 21, "bold")).pack(anchor="w")
-            tk.Label(card, text=label, bg=self.COLORS["panel"], fg=self.COLORS["muted"]).pack(anchor="w")
+            num = tk.Label(card, textvariable=self.summary_vars[key], bg=self.COLORS["panel"],
+                           fg=color, font=("Segoe UI", 21, "bold"), cursor="hand2")
+            num.pack(anchor="w")
+            cap = tk.Label(card, text=f"{label}　▸", bg=self.COLORS["panel"],
+                           fg=self.COLORS["muted"], cursor="hand2")
+            cap.pack(anchor="w")
+            # click anywhere on the card → filter the 全部 tab to this bucket
+            for widget in (card, num, cap):
+                widget.bind("<Button-1>", lambda _e, k=key: self._toggle_filter(k))
+            self.card_frames[key] = card
 
         self.notebook = self.ttk.Notebook(self.root)
         self.notebook.pack(fill="both", expand=True, padx=24)
@@ -1147,28 +1188,61 @@ class Dashboard:
         # Runtime generation warnings follow the 10-second local refresh cadence,
         # independently of the slower, token-free connectivity probe.
         self._apply_api_statuses(self.api_statuses)
+        counts = {"running": 0, "complete": 0, "paused": 0, "attention": 0}
+        for r in rows:
+            counts[state_category(r.state)] += 1
+        for key, var in self.summary_vars.items():
+            var.set(str(counts[key]))
+        self.refreshing = False
+        self._render_trees()
+
+    def _row_visible(self, row: WorkProgress, now: float) -> bool:
+        """Which rows show in the trees, given the active card filter and the
+        3-day done-retention rule."""
+        if self.filter_category is not None:
+            return state_category(row.state) == self.filter_category
+        # no filter: hide tasks that finished 3+ days ago (files are kept)
+        return not is_stale_done(row.state, row.updated_at, now)
+
+    def _render_trees(self) -> None:
+        now = datetime.now().timestamp()
+        hidden = 0
         for group, tree in self.trees.items():
             tree.delete(*tree.get_children())
-            for idx, row in enumerate(rows):
+            for idx, row in enumerate(self.rows):
                 if group != "全部" and row.group != group:
                     continue
-                pct = f"{row.done:,} / {row.total:,} {row.unit}　{row.percent:5.1f}%" if row.total else "尚無資料"
+                if not self._row_visible(row, now):
+                    if group == "全部":
+                        hidden += 1
+                    continue
+                pct = (f"{row.done:,} / {row.total:,} {row.unit}　{row.percent:5.1f}%"
+                       if row.total else "尚無資料")
                 state = ("● " if row.running else "○ ") + row.state
                 tree.insert("", "end", iid=f"{group}:{idx}",
                             values=(state, row.title, pct, row.current, row.updated_text),
                             tags=(self._row_tag(row),))
-        running = sum(1 for r in rows if r.state == "執行中")
-        complete = sum(1 for r in rows if r.state == "完成")
-        attention = sum(1 for r in rows if r.state in (
-            "錯誤", "疑似停滯", "待匯入/檢查", "待線上複核", "429 受限"))
-        self.summary_vars["running"].set(str(running))
-        self.summary_vars["complete"].set(str(complete))
-        self.summary_vars["paused"].set(str(len(rows) - running - complete - attention))
-        self.summary_vars["attention"].set(str(attention))
-        self.status_text.set(
-            f"更新於 {datetime.now():%Y-%m-%d %H:%M:%S}　偵測到 {running} 條執行中流水線　"
-            f"資料皆來自本機檔案與程序列表")
-        self.refreshing = False
+        running = sum(1 for r in self.rows if r.state == "執行中")
+        if self.filter_category is not None:
+            label = {"running": "正在執行", "complete": "已完成",
+                     "paused": "暫停／等待", "attention": "需要注意"}[self.filter_category]
+            self.status_text.set(f"篩選：{label}（再點一次卡片或此列取消）　"
+                                 f"共 {sum(1 for r in self.rows if state_category(r.state) == self.filter_category)} 筆")
+        else:
+            extra = f"　已隱藏 {hidden} 個完成逾 {DONE_RETENTION_DAYS} 天的任務" if hidden else ""
+            self.status_text.set(
+                f"更新於 {datetime.now():%Y-%m-%d %H:%M:%S}　偵測到 {running} 條執行中流水線{extra}")
+
+    def _toggle_filter(self, key: str) -> None:
+        self.filter_category = None if self.filter_category == key else key
+        for k, frame in self.card_frames.items():
+            frame.configure(bg=self.COLORS["panel2"] if k == self.filter_category
+                            else self.COLORS["panel"])
+            for child in frame.winfo_children():
+                child.configure(bg=frame.cget("bg"))
+        if self.filter_category is not None:      # jump to 全部 so the filter is visible
+            self.notebook.select(0)
+        self._render_trees()
 
     def _selected_row(self) -> WorkProgress | None:
         tab = self.notebook.tab(self.notebook.select(), "text")
