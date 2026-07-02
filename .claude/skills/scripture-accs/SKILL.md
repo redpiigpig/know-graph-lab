@@ -89,6 +89,10 @@ python scripts/ingest_accs_genesis.py \
 > **deu ⏳ 0 列，未開始**——排程已重新啟用（Ready），會跳過出/利/民、等 Sonnet 5h 窗回血後自動跑申命記（Gemini 4 key credit **永久乾**，deu 只能靠 Sonnet）。
 > — num 收尾始末：7/01 退避空 checkpoint 後由排程 Sonnet 逐頁重 OCR 至 95/96；最後 p.379 卡在 Sonnet 額度牆（Gemini 亦乾）。**由 Claude 直接判讀該頁**補 3 則（19:9 居普良《書信集》、19:11-22 概述、19:15 帕特留《解釋舊約與新約》）＋接回 p.378 ref 19:2（比德）跨頁截斷續文，手工寫進 checkpoint 正確頁序後 `--resume`（0 頁待 OCR）走 parser upsert + 寫 `.done`。
 > **根因仍待修**：`ingest_accs_genesis.py` 應把「整頁空回應」當 retry，勿當 0-entry 正常頁寫入 checkpoint（7/01 那次全空空轉 4 天的元凶）。
+>
+> **📌 num 待收尾（user 2026-07-02 指定「之後跟 deu 一起做」）**——7/02 抽查（p.339 內容全對、36 章齊、空 body/father 0）發現兩類：
+> **①教父譯名同一人多寫法要收斂**（對齊 `/translation-glossary` 主譯再 UPDATE）：安波羅修/安博(Ambrose)、特土良/特士良(Tertullian)、拿先斯的格列高里/納西盎的貴格利(Naz. Gregory)、塞普勒斯的狄奧多勒/狄奧多雷(Theodoret)；另 father 欄雜訊 3 筆（「託區利羅名作品」「八經註釋集萃」「多儒」＝疑截斷自迦修多儒）。
+> **②跨頁截斷續文未併回** 約十餘筆（例 5:6「…這句話是甚麼意思？聖」、7:89「…處理疑」、8:7「…蒙揀選事」）——比照創世記「續行併入」逐筆把下一頁頁首半句接回。兩道等 deu OCR 完一起跑（比照 Genesis 收尾）。
 
 ### A0. ACCS OT III（出/利/民/申）OCR — **OCR 中（排程 ACCS_OTIII_Resume，2026-06-25 起跑）🔴 接手關注**
 - **來源**：合卷 PDF `古代基督信仰聖經註釋叢書2-5 出 利 民 申.pdf`（ACCS OT III＝出/利/民/申 四書，614 頁，
