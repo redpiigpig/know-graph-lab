@@ -10,7 +10,7 @@
   python scripts/greek_overnight.py --only nicomachean-ethics poetics   # 只跑指定部
 """
 from __future__ import annotations
-import io, sys, traceback
+import io, sys, time, traceback
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -47,19 +47,27 @@ def main() -> None:
             log(f"[skip] {slug}（已完成）")
             continue
         d = pb.WORKS[slug]
-        try:
-            log(f"[run ] {slug}  {d['author']}《{d['title_zh']}》 …")
-            chunks = pb.run(slug, engine=ENGINE, upload=True)
-            marker.write_text("ok", encoding="utf-8")
-            ok.append(slug)
-            log(f"[ok  ] {slug}  {len(chunks)} chunks")
-        except KeyboardInterrupt:
-            log("[中斷] 使用者停止；已完成部保留 marker，重跑自動續。")
-            raise
-        except Exception as e:  # noqa: BLE001
+        # 每部重試 3 次：NVIDIA 偶發 ConnectionError 會廢掉一整部（一節掛全部掛），
+        # 但快取保住已翻節 → 重試只從掛掉處續，不重翻。
+        done_ok = False
+        for attempt in range(1, 4):
+            try:
+                log(f"[run ] {slug}  {d['author']}《{d['title_zh']}》 …（第 {attempt} 次）")
+                chunks = pb.run(slug, engine=ENGINE, upload=True)
+                marker.write_text("ok", encoding="utf-8")
+                ok.append(slug)
+                log(f"[ok  ] {slug}  {len(chunks)} chunks")
+                done_ok = True
+                break
+            except KeyboardInterrupt:
+                log("[中斷] 使用者停止；已完成部保留 marker，重跑自動續。")
+                raise
+            except Exception as e:  # noqa: BLE001
+                log(f"[retry] {slug} 第 {attempt}/3 次失敗：{e}")
+                time.sleep(20)
+        if not done_ok:
             fail.append(slug)
-            log(f"[FAIL] {slug}: {e}")
-            log(traceback.format_exc())
+            log(f"[FAIL] {slug}（3 次皆失敗，快取保留，之後重跑自動續）")
     log(f"=== 完成：{len(ok)} ok / {len(fail)} fail / {len(skip)} skip ===")
     log(f"ok={ok}")
     if fail:
