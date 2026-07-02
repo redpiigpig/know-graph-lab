@@ -208,7 +208,12 @@ def main() -> None:
         if part.exists():
             continue
         save_status(current=u["key"], done=done, total=len(todo))
-        zh_parts = [te._to_traditional(engine_fn(s)) for s in te.split_oversized(u["en"])]
+        try:
+            zh_parts = [te._to_traditional(engine_fn(s)) for s in te.split_oversized(u["en"])]
+        except Exception as exc:  # noqa: BLE001 — one transient engine failure must not abort the batch
+            print(f"  SKIP {u['key']}: {type(exc).__name__} {str(exc)[:120]}", flush=True)
+            time.sleep(10)
+            continue
         part.write_text(json.dumps({"key": u["key"], "en": u["en"], "zh": "\n\n".join(zh_parts),
                                     "at": dt.datetime.now().isoformat(timespec="seconds")},
                                    ensure_ascii=False, indent=1), encoding="utf-8")
