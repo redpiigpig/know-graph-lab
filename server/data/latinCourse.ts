@@ -12,6 +12,7 @@ export interface CoursePhone {
   sound: string;     // 讀音（IPA + 中文提示）
   rule?: string;     // 規則說明
   examples: string;  // 例字（空白分隔，取自講義）
+  say?: string;      // 按字母本身時餵給 it-IT TTS 的載體音節（如 c 軟音 → "ce"）；缺省用第一個例字
 }
 export interface CourseVocab {
   latin: string;     // 拉丁文（單字或短語）
@@ -45,61 +46,61 @@ const LESSON_1: CourseLesson = {
   subtitle: "第 1–2 堂：字母、單雙母音、子音拼讀、音節與重音",
   date: "2026-07-01",
   vowels: [
-    { form: "a", sound: "[a] 阿", examples: "papa a ab ad" },
-    { form: "e", sound: "[e] 耶", examples: "et me te sed ex que ave" },
-    { form: "i", sound: "[i] 伊", examples: "in hic ibi enim via vita" },
-    { form: "o", sound: "[o] 喔", examples: "non do ego homo oro" },
-    { form: "u", sound: "[u] 烏", examples: "cum tu manus" },
-    { form: "y", sound: "[i] 伊（希臘外來字）", examples: "hymnus mysterium" },
-    { form: "ae（Æ）", sound: "[e] 念 e", rule: "ae 合成一個 e 音", examples: "saeculum saepe Galilaea" },
-    { form: "oe（Œ）", sound: "[e] 念 e", rule: "oe 合成一個 e 音", examples: "poena proelium" },
+    { form: "a", sound: "[a] 阿", say: "a", examples: "papa a ab ad" },
+    { form: "e", sound: "[e] 耶", say: "e", examples: "et me te sed ex que ave" },
+    { form: "i", sound: "[i] 伊", say: "i", examples: "in hic ibi enim via vita" },
+    { form: "o", sound: "[o] 喔", say: "o", examples: "non do ego homo oro" },
+    { form: "u", sound: "[u] 烏", say: "u", examples: "cum tu manus" },
+    { form: "y", sound: "[i] 伊（希臘外來字）", say: "i", examples: "hymnus mysterium" },
+    { form: "ae（Æ）", sound: "[e] 念 e", rule: "ae 合成一個 e 音", say: "e", examples: "saeculum saepe Galilaea" },
+    { form: "oe（Œ）", sound: "[e] 念 e", rule: "oe 合成一個 e 音", say: "e", examples: "poena proelium" },
   ],
   diphthongs: [
-    { form: "au", sound: "[au̯] ㄠ", examples: "aut laudo autem Paulus" },
-    { form: "eu", sound: "[eu̯] ㄟㄨ", examples: "Europa seu heus euge" },
-    { form: "ei", sound: "[ei̯] ㄟ", examples: "deinde" },
-    { form: "ui", sound: "[ui̯]", examples: "cui hui huic" },
+    { form: "au", sound: "[au̯] ㄠ", say: "au", examples: "aut laudo autem Paulus" },
+    { form: "eu", sound: "[eu̯] ㄟㄨ", say: "eu", examples: "Europa seu heus euge" },
+    { form: "ei", sound: "[ei̯] ㄟ", say: "ei", examples: "deinde" },
+    { form: "ui", sound: "[ui̯]", say: "ui", examples: "cui hui huic" },
   ],
   consonants: [
     // 基本子音
-    { form: "p", sound: "[p] ㄅ", rule: "不送氣", examples: "papa populus panis" },
-    { form: "b", sound: "[b] ㆠ 濁音", rule: "如閩南語「肉 bah」", examples: "beatus bonus debita" },
-    { form: "t", sound: "[t] ㄉ", rule: "不送氣", examples: "testamentum totus tuus terra" },
-    { form: "t + i + 母音", sound: "[ts] ㄗ", rule: "ti 後接母音、且前面無 s/t/x", examples: "laetitia gratia potentia" },
-    { form: "d", sound: "[d] 濁音", rule: "如日語「ときどき」", examples: "Deus Dominus de" },
-    { form: "f", sound: "[f] ㄈ", examples: "filius filia festum feria" },
-    { form: "m", sound: "[m] ㄇ", examples: "Maria enim familia missa" },
-    { form: "n", sound: "[n] ㄋ", examples: "nam non mensa nomen" },
-    { form: "l", sound: "[l] ㄌ", examples: "laudo culpa apostolus" },
-    { form: "r", sound: "[r] 彈舌", rule: "練習：tl > tr > br/pr > gr", examples: "rosa gloria gratia pro per Petrus" },
+    { form: "p", sound: "[p] ㄅ", rule: "不送氣", say: "pa", examples: "papa populus panis" },
+    { form: "b", sound: "[b] ㆠ 濁音", rule: "如閩南語「肉 bah」", say: "ba", examples: "beatus bonus debita" },
+    { form: "t", sound: "[t] ㄉ", rule: "不送氣", say: "ta", examples: "testamentum totus tuus terra" },
+    { form: "t + i + 母音", sound: "[ts] ㄗ", rule: "ti 後接母音、且前面無 s/t/x", say: "zia", examples: "laetitia gratia potentia" },
+    { form: "d", sound: "[d] 濁音", rule: "如日語「ときどき」", say: "da", examples: "Deus Dominus de" },
+    { form: "f", sound: "[f] ㄈ", say: "fa", examples: "filius filia festum feria" },
+    { form: "m", sound: "[m] ㄇ", say: "ma", examples: "Maria enim familia missa" },
+    { form: "n", sound: "[n] ㄋ", say: "na", examples: "nam non mensa nomen" },
+    { form: "l", sound: "[l] ㄌ", say: "la", examples: "laudo culpa apostolus" },
+    { form: "r", sound: "[r] 彈舌", rule: "練習：tl > tr > br/pr > gr", say: "ra", examples: "rosa gloria gratia pro per Petrus" },
     // c 的軟硬
-    { form: "c（ca/co/cu、字尾）", sound: "[k] ㄍ", rule: "不送氣；後接 a/o/u 或在字尾", examples: "cum culpa coram nunc" },
-    { form: "c 在 e、i 前", sound: "[tʃ]", rule: "後有 e/i（含 ae/oe），但前面無 s/x", examples: "cena caelum facio cibus dicit" },
-    { form: "ch", sound: "[k] ㄍ", rule: "外來語居多", examples: "Christus chorus Pascha" },
-    { form: "k", sound: "[k] ㄍ", rule: "極少，外來語", examples: "Kyrie kalendae" },
-    { form: "qu", sound: "[kw]", rule: "後面必接母音", examples: "qui quoque aqua antiquus" },
+    { form: "c（ca/co/cu、字尾）", sound: "[k] ㄍ", rule: "不送氣；後接 a/o/u 或在字尾", say: "ca", examples: "cum culpa coram nunc" },
+    { form: "c 在 e、i 前", sound: "[tʃ]", rule: "後有 e/i（含 ae/oe），但前面無 s/x", say: "ce", examples: "cena caelum facio cibus dicit" },
+    { form: "ch", sound: "[k] ㄍ", rule: "外來語居多", say: "che", examples: "Christus chorus Pascha" },
+    { form: "k", sound: "[k] ㄍ", rule: "極少，外來語", say: "ca", examples: "Kyrie kalendae" },
+    { form: "qu", sound: "[kw]", rule: "後面必接母音", say: "qua", examples: "qui quoque aqua antiquus" },
     // g 的軟硬
-    { form: "g（ga/go/gu）", sound: "[g] ㆣ 濁音", rule: "如閩南語「牛 gû」", examples: "gaudium gloria ergo frango" },
-    { form: "g 在 e、i 前", sound: "[dʒ]", rule: "後接 e/i", examples: "ager angelus regina evangelium" },
-    { form: "gn", sound: "[ɲ] ㄬ", rule: "想成 ng + [j]", examples: "agnus regnum magnus signum" },
+    { form: "g（ga/go/gu）", sound: "[g] ㆣ 濁音", rule: "如閩南語「牛 gû」", say: "ga", examples: "gaudium gloria ergo frango" },
+    { form: "g 在 e、i 前", sound: "[dʒ]", rule: "後接 e/i", say: "ge", examples: "ager angelus regina evangelium" },
+    { form: "gn", sound: "[ɲ] ㄬ", rule: "想成 ng + [j]", say: "gna", examples: "agnus regnum magnus signum" },
     // sc 的軟硬
-    { form: "sc（sca/sco/scu）", sound: "[sk] ㄙㄍ", examples: "episcopus discumbere" },
-    { form: "sc 在 e、i 前", sound: "[ʃ]", rule: "後接 e/i（含 ae/oe/ei/eu）", examples: "scio discipulus nescio ascendit" },
+    { form: "sc（sca/sco/scu）", sound: "[sk] ㄙㄍ", say: "sca", examples: "episcopus discumbere" },
+    { form: "sc 在 e、i 前", sound: "[ʃ]", rule: "後接 e/i（含 ae/oe/ei/eu）", say: "sce", examples: "scio discipulus nescio ascendit" },
     // s 的清濁
-    { form: "s", sound: "[s] ㄙ", examples: "sine sum es est" },
-    { form: "s 在母音之間", sound: "[z]", rule: "夾在兩母音中間濁化", examples: "causa ecclesia rosa Josephus" },
+    { form: "s", sound: "[s] ㄙ", say: "sa", examples: "sine sum es est" },
+    { form: "s 在母音之間", sound: "[z]", rule: "夾在兩母音中間濁化", say: "rosa", examples: "causa ecclesia rosa Josephus" },
     // x
-    { form: "x", sound: "[ks]", examples: "pax lex rex calix crux dextera" },
-    { form: "x 在母音之間", sound: "[gz]", rule: "夾在兩母音中間濁化", examples: "dixit exaudio exemplum" },
-    { form: "xc 在 e、i 前", sound: "[kʃ]", examples: "in excelsis excipio" },
+    { form: "x", sound: "[ks]", say: "ics", examples: "pax lex rex calix crux dextera" },
+    { form: "x 在母音之間", sound: "[gz]", rule: "夾在兩母音中間濁化", say: "exaudio", examples: "dixit exaudio exemplum" },
+    { form: "xc 在 e、i 前", sound: "[kʃ]", say: "excelsis", examples: "in excelsis excipio" },
     // v / j
-    { form: "v / u（母音前）", sound: "[v] ㄪ", rule: "教會式念 v，非古典 w", examples: "vita voluntas servus" },
-    { form: "j / i（母音前）", sound: "[j] ㄧ 子音", examples: "Jesus Jacobus justus" },
+    { form: "v / u（母音前）", sound: "[v] ㄪ", rule: "教會式念 v，非古典 w", say: "va", examples: "vita voluntas servus" },
+    { form: "j / i（母音前）", sound: "[j] ㄧ 子音", say: "ia", examples: "Jesus Jacobus justus" },
     // h 與外來語 ph/th
-    { form: "h", sound: "不發音", examples: "hora hodie hic hymnus" },
-    { form: "h 在 i 與 i 之間", sound: "[k] ㄍ", examples: "mihi nihil" },
-    { form: "ph", sound: "[f] ㄈ", rule: "外來語", examples: "propheta Josephus philosophia" },
-    { form: "th", sound: "[t] ㄉ", rule: "外來語", examples: "Thomas Sabaoth theologia" },
+    { form: "h", sound: "不發音", say: "ora", examples: "hora hodie hic hymnus" },
+    { form: "h 在 i 與 i 之間", sound: "[k] ㄍ", say: "miki", examples: "mihi nihil" },
+    { form: "ph", sound: "[f] ㄈ", rule: "外來語", say: "fa", examples: "propheta Josephus philosophia" },
+    { form: "th", sound: "[t] ㄉ", rule: "外來語", say: "ta", examples: "Thomas Sabaoth theologia" },
   ],
   vocab: [
     // 高頻單字

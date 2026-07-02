@@ -17,7 +17,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 
 ## 📌 近期大改 progress
 
-- **2026-07-01 · ⛪ 教會拉丁課程複習頁 `/coach/la/course`**（零 AI）：使用者實際在上的「教會拉丁文（一）· 羅梅洛班」課程，每週講義逐課複習。策展 `server/data/latinCourse.ts`（`LESSONS` 每課含母音/雙母音/子音拼讀規則/禮儀單字）＋端點 `course`＋五分頁（母音子音・單字・認讀・聽寫・發音跟讀）。加新課＝加一筆 `CourseLesson`。詳見「四」與 [[project_church_latin_course]]。
+- **2026-07-01 · ⛪ 教會拉丁課程複習頁 `/coach/la/course`**（零 AI）：使用者實際在上的「教會拉丁文（一）· 羅梅洛班」課程，每週講義逐課複習。策展 `server/data/latinCourse.ts`（`LESSONS` 每課含母音/雙母音/子音拼讀規則/禮儀單字）＋端點 `course`＋五分頁（母音子音・單字・認讀・聽寫・發音跟讀）。加新課＝加一筆 `CourseLesson`。母音子音分頁：**字母本身與每個例字都是獨立朗讀鈕**（`CoursePhone.say` = 餵 it-IT TTS 的載體音節，如 c 軟音→"ce"、gn→"gna"，避免 TTS 唸成義大利字母名；缺省退第一個例字）；本頁朗讀預設 **0.75x**（🐢 慢速 0.6 不變）。詳見「四」與 [[project_church_latin_course]]。
 
 ### 2026-06-20～22（全 push master）
 

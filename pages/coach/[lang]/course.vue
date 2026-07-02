@@ -46,16 +46,25 @@
               <span v-if="sec.note" class="text-[11px] text-gray-400">{{ sec.note }}</span>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              <button v-for="(l, i) in sec.items" :key="i" @click="speakWord(firstWord(l.examples))"
-                class="text-left bg-slate-50 hover:bg-indigo-50 border border-gray-100 hover:border-indigo-200 rounded-xl p-2.5 transition group">
-                <div class="flex items-baseline gap-2">
-                  <span class="text-lg font-semibold text-gray-900 leading-none">{{ l.form }}</span>
+              <div v-for="(l, i) in sec.items" :key="i"
+                class="text-left bg-slate-50 border border-gray-100 rounded-xl p-2.5">
+                <button type="button" @click="speakPhone(l)" :title="`朗讀 ${l.form} 的發音`"
+                  class="flex items-baseline gap-2 rounded-lg -mx-1 px-1 hover:bg-indigo-50 transition group">
+                  <span class="text-lg font-semibold text-gray-900 leading-none group-hover:text-indigo-700">{{ l.form }}</span>
                   <span class="text-sm text-indigo-600">{{ l.sound }}</span>
-                  <span class="ml-auto text-gray-300 group-hover:text-indigo-500 text-sm">🔊</span>
-                </div>
+                  <span class="text-xs text-gray-300 group-hover:text-indigo-500" aria-hidden="true">🔊</span>
+                </button>
                 <div v-if="l.rule" class="text-[11px] text-gray-500 mt-1">{{ l.rule }}</div>
-                <div v-if="l.examples" class="text-[11px] text-gray-400 mt-0.5 truncate">例：{{ l.examples }}</div>
-              </button>
+                <div v-if="l.examples" class="flex flex-wrap items-center gap-1.5 mt-2">
+                  <span class="text-[11px] text-gray-400">例：</span>
+                  <button v-for="word in splitExamples(l.examples)" :key="word"
+                    type="button" @click="speakWord(word)"
+                    class="px-2 py-1 rounded-md bg-white border border-gray-200 text-xs text-gray-700 hover:text-indigo-700 hover:border-indigo-300 hover:bg-indigo-50 transition"
+                    :title="`朗讀 ${word}`">
+                    {{ word }} <span aria-hidden="true">🔊</span>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </template>
@@ -118,10 +127,15 @@
                 <span class="font-semibold">{{ readCur.item.form }} = {{ readCur.item.sound }}</span>
               </p>
               <p v-if="readCur.item.rule" class="text-xs text-gray-500 mt-1">{{ readCur.item.rule }}</p>
-              <p v-if="readCur.item.examples" class="text-xs text-gray-400 mt-1">
-                例：{{ readCur.item.examples }}
-                <button @click="speakWord(firstWord(readCur.item.examples))" class="ml-1 text-indigo-500 hover:text-indigo-700">🔊</button>
-              </p>
+              <div v-if="readCur.item.examples" class="flex flex-wrap items-center justify-center gap-1.5 mt-2">
+                <span class="text-xs text-gray-400">例：</span>
+                <button v-for="word in splitExamples(readCur.item.examples)" :key="word"
+                  type="button" @click="speakWord(word)"
+                  class="px-2 py-1 rounded-md bg-slate-50 border border-gray-200 text-xs text-gray-700 hover:text-indigo-700 hover:border-indigo-300 transition"
+                  :title="`朗讀 ${word}`">
+                  {{ word }} <span aria-hidden="true">🔊</span>
+                </button>
+              </div>
               <button @click="nextRead" class="mt-3 px-6 py-2 rounded-xl bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-700 transition">
                 {{ read.idx + 1 < read.qs.length ? '下一題 →' : '看結果' }}
               </button>
@@ -273,7 +287,7 @@ import { scorePronunciation, type PronScore } from "~/composables/usePronunciati
 
 definePageMeta({ middleware: "coach-auth" });
 
-interface Phone { form: string; sound: string; rule?: string; examples: string }
+interface Phone { form: string; sound: string; rule?: string; examples: string; say?: string }
 interface Vocab { latin: string; zh: string; note?: string }
 interface Lesson { id: string; no: number; title: string; subtitle?: string; vowels: Phone[]; diphthongs: Phone[]; consonants: Phone[]; vocab: Vocab[] }
 interface CourseSpec { language: string; title: string; intro: string; ttsLang: string; lessons: Lesson[] }
@@ -302,11 +316,15 @@ function scopeClass(s: string) {
   return `text-xs px-3 py-1.5 rounded-lg border transition ${dictScope.value === s ? "bg-indigo-600 border-indigo-600 text-white" : "bg-white border-gray-200 text-gray-600 hover:border-indigo-300"}`;
 }
 
-function speakWord(text: string, rate = 1) {
+function speakWord(text: string, rate = 0.75) {
   speech.speak(text, ttsLang.value, rate);
 }
-function firstWord(examples: string) {
-  return (examples || "").split(/\s+/)[0] || examples;
+// 按字母／音組本身：用資料層的 say 載體音節（it-IT TTS 才不會唸成字母名），缺省退回第一個例字
+function speakPhone(p: Phone) {
+  speakWord(p.say || splitExamples(p.examples)[0] || p.form);
+}
+function splitExamples(examples: string) {
+  return (examples || "").trim().split(/\s+/).filter(Boolean);
 }
 function selectLesson(i: number) {
   lessonIdx.value = i;
@@ -409,7 +427,7 @@ function startDict() {
 function resetDict() {
   Object.assign(dict, { started: false, done: false, idx: 0, score: 0, items: [], wrong: [], answered: false, correct: false, input: "" });
 }
-function playDict(rate = 1) { speakWord(dictCur.value.latin, rate); }
+function playDict(rate = 0.75) { speakWord(dictCur.value.latin, rate); }
 function submitDict() {
   if (dict.answered || !dict.input.trim()) return;
   dict.answered = true;
