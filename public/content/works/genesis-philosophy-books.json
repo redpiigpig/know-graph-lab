@@ -62,14 +62,14 @@
           "title": "創生公式：生成的本體論",
           "subtitle": "本體論正論——正式提出創生三原理（生成三要素）與創生公式",
           "file": "/content/works/genesis/O1.html",
-          "nChapters": 8
+          "nChapters": 9
         },
         {
           "id": "O2",
-          "title": "觀察即創生：量子本體論",
-          "subtitle": "創生本體論在物理實在上的試驗場",
+          "title": "從量子到宇宙",
+          "subtitle": "本體論三部曲‧卷二／量子、時空與宇宙的生成本體論",
           "file": "/content/works/genesis/O2.html",
-          "nChapters": 6
+          "nChapters": 9
         },
         {
           "id": "O3",
@@ -88,21 +88,21 @@
           "title": "各種生死觀",
           "subtitle": "價值論三部曲‧卷一／生死作為價值的第一現場",
           "file": "/content/works/genesis/V1.html",
-          "nChapters": 7
+          "nChapters": 9
         },
         {
           "id": "V2",
           "title": "美學觀",
           "subtitle": "價值論三部曲‧卷二／美的生成、判斷與藝術",
           "file": "/content/works/genesis/V2.html",
-          "nChapters": 6
+          "nChapters": 8
         },
         {
           "id": "V3",
           "title": "世界與生活",
           "subtitle": "價值論三部曲‧卷三／在場世界論與住世者的實踐",
           "file": "/content/works/genesis/V3.html",
-          "nChapters": 9
+          "nChapters": 5
         }
       ]
     },
