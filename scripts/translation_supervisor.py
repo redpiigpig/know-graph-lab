@@ -266,7 +266,7 @@ def run_local_step(job: dict, paragraphs: int,
 
 
 def one_cycle(idle_required: int, paragraphs: int, timeout_minutes: int,
-              review_paras: int = 40, dry_run: bool = False) -> str:
+              review_paras: int = 6, dry_run: bool = False) -> str:
     previous: dict = {}
     try:
         previous = json.loads(STATE_PATH.read_text(encoding="utf-8"))
@@ -340,9 +340,12 @@ def main() -> None:
     ap.add_argument("--interval", type=int, default=60)
     ap.add_argument("--idle-seconds", type=int, default=0)
     ap.add_argument("--step-paras", type=int, default=3)
-    ap.add_argument("--review-paras", type=int, default=40,
-                    help="paragraphs per online-review batch (bigger: Gemini is "
-                         "fast and we want to drain the backlog)")
+    ap.add_argument("--review-paras", type=int, default=6,
+                    help="paragraphs per online-review batch. Kept SMALL so a "
+                         "batch finishes and checkpoints well inside the timeout "
+                         "even when cloud engines are throttled (~30-160s/para "
+                         "via the NVIDIA/Haiku fallback); a 40-para batch used to "
+                         "hit the 45-min timeout (rc=124) and waste the whole run.")
     ap.add_argument("--timeout-minutes", type=int, default=45)
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
