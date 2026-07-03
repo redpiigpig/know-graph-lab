@@ -196,8 +196,10 @@ def ocr_batch_claude(pngs: list[bytes], model: str = "haiku") -> list[dict]:
         blob = (err or "") + (out or "")
         if "rate_limit" in blob:
             raise RuntimeError(f"{model} rate limited，依規範退出")
-        print(f"    [{model} exit {proc.returncode}] {(err or '')[:160]}", file=sys.stderr)
-        return []
+        # 🚨 任何非零退出都是「本頁失敗」，一律 raise（→ 留在 checkpoint 外、下輪重試）。
+        # 絕不可 return []：rate-limit/錯誤訊息格式不一定含 'rate_limit'，吞成空頁會讓整章
+        # 漏掉又假 .done（2026-07-03 申命記 26-32 章 26 頁被誤記空頁的根因）。
+        raise RuntimeError(f"{model} exit {proc.returncode}: {(err or out or '')[:160]}")
     final = None
     for line in (out or "").splitlines():
         line = line.strip()
@@ -209,6 +211,9 @@ def ocr_batch_claude(pngs: list[bytes], model: str = "haiku") -> list[dict]:
             continue
         if evt.get("type") == "result" and evt.get("subtype") == "success":
             final = evt.get("result", "")
+    if final is None:
+        # 沒拿到 success result event＝回應被截斷/出錯，不是「空頁」→ raise 重試，別記空。
+        raise RuntimeError(f"{model} 無 success result event（回應截斷/出錯），依規範退出")
     return _coerce_json_array(final) if final else []
 
 
