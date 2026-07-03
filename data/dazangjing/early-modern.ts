@@ -746,6 +746,20 @@ export const EARLY_MODERN_ERA: DazangEra = {
           { title_zh: '日內瓦崇拜程序', title_orig: 'La Forme des prières et chants ecclésiastiques', author: '加爾文（Jean Calvin）', era: '一五四二年', place: '日內瓦', language: '法文', intro: '加爾文為日內瓦改革宗教會所訂的崇拜禮文，確立以宣道、認罪、代禱與會眾齊唱韻文詩篇為核心的簡樸敬拜形態。其崇拜觀力求回歸聖經，去除被視為人為的儀節，強調神言居中、會眾參與。此程序成為歐陸與蘇格蘭長老制崇拜的範式，奠定改革宗「以神之道規範敬拜」的原則，後世清教徒崇拜傳統多由此衍生。' },
           { title_zh: '德意志彌撒', title_orig: 'Deutsche Messe und Ordnung Gottesdiensts', author: '路德（Martin Luther）', era: '一五二六年', place: '威登堡', language: '德文', intro: '路德為德語會眾編訂的母語崇拜禮，繼一五二三年拉丁《彌撒程式》之後再進一步，將禮文與經課改以德文舉行，並大量採會眾唱詩取代神職獨誦。路德保留彌撒架構而剔除被視為違背因信稱義的獻祭觀念，使聖餐成為領受恩典之宴。此禮為信義宗崇拜定調，亦開啟新教會眾聖詩傳統，影響後世德語敬拜深遠。' },
           { title_zh: '公眾崇拜指南', title_orig: 'A Directory for the Public Worship of God', author: '西敏會議（Westminster Assembly）', era: '一六四五年', place: '倫敦／西敏', language: '英文', intro: '英國長老派與清教徒於內戰期間制訂，意在取代《公禱書》的崇拜準則。不提供逐字禱文，而以指引方式規範崇拜各環節，主張禱告當出於牧者帶領、依聖經精神自由發揮，反對固定誦文與被視為人為的儀節。內容涵蓋讀經、講道、聖禮、婚喪等。此指南體現清教徒崇拜的「規範原則」，深刻影響蘇格蘭與北美長老宗及公理宗的敬拜形態。' },
+          { title_zh: '路德洗禮小冊', title_orig: 'Das Taufbüchlein', author: '馬丁‧路德', era: '1523（1526 修訂）', place: '維滕堡', language: '德文', intro: '路德把拉丁洗禮禮文譯為德語並漸次刪削驅魔等儀節的小冊，使會眾首度以母語參與聖禮。其修訂軌跡具體呈現宗教改革「禮儀漸進本地化」的策略，為路德宗各邦教會洗禮禮文的共同底本。' },
+          { title_zh: '拉丁彌撒儀式', title_orig: 'Formula Missae et Communionis', author: '馬丁‧路德', era: '1523', place: '維滕堡', language: '拉丁文', intro: '路德改革彌撒的第一步：保留拉丁文與大部分儀節，惟刪去奉獻經文等「祭獻」語言，恢復會眾領杯。本儀式與其後的德意志彌撒並行，確立路德宗「禮儀保守改革」的雙軌格局，影響北歐諸國教會至今。' },
+          { title_zh: '蘇黎世聖餐禮文', title_orig: 'Action oder Brauch des Nachtmahls', author: '茨溫利', era: '1525', place: '蘇黎世', language: '德文', intro: '茨溫利廢除彌撒後為蘇黎世制定的聖餐禮文：木盤木杯傳遞會眾，全程無歌唱、無祭壇，唯讀經與紀念。它把「紀念說」神學化為最簡樸的禮儀形式，是改革宗禮儀傳統激進一翼的原型文獻。' },
+          { title_zh: '史特拉斯堡崇拜禮文', title_orig: 'Grund und Ursach / Strassburger Gottesdienstordnung', author: '馬丁‧布塞爾', era: '1524–1539', place: '史特拉斯堡', language: '德文', intro: '布塞爾在史特拉斯堡漸次定型的德語崇拜程序，以講道為中心而保留每主日聖餐理想，並創詩篇會眾唱詠之風。加爾文流亡此城時深受其式塑，日內瓦禮文實承其緒，是改革宗禮儀的隱形母本。' },
+          { title_zh: '科隆簡明教程', title_orig: 'Einfaltigs Bedencken (Consultatio)', author: '赫爾曼‧馮‧維德（布塞爾、墨蘭頓執筆）', era: '1543', place: '科隆', language: '德文／拉丁文', intro: '科隆大主教赫爾曼委託布塞爾與墨蘭頓起草的教區改革方案，含完整禮儀與教理規劃，事雖敗於帝國幹預，其禮文卻經克蘭麥大量移入《公禱書》。一部流產的德意志改革方案竟成英格蘭禮儀的血脈，是禮儀史的著名轉渡。' },
+          { title_zh: '公共秩序書', title_orig: 'The Book of Common Order', author: '約翰‧諾克斯', era: '1564', place: '愛丁堡', language: '英文', intro: '諾克斯自日內瓦流亡社群禮文發展而成的蘇格蘭教會崇拜手冊，附韻文詩篇，供牧者以自由祈禱為主軸的框架。它確立蘇格蘭長老宗「有秩序而不拘禮文」的崇拜傳統，行用近一世紀直至西敏指南取代。' },
+          { title_zh: '一六三七年蘇格蘭公禱書', title_orig: 'The Booke of Common Prayer for the Use of the Church of Scotland', author: '勞德與蘇格蘭主教團', era: '1637', place: '愛丁堡', language: '英文', intro: '查理一世與勞德強加蘇格蘭的公禱書，聖餐禮文較英格蘭版更近古公教傳統，頒行首日即在聖吉爾斯座堂引發擲凳暴動，直接點燃主教戰爭與三國內戰。一部禮書掀翻三個王國，是禮儀政治學最極端的案例。' },
+          { title_zh: '薩伏依禮文', title_orig: 'The Savoy Liturgy (Reformed Liturgy)', author: '理查‧巴克斯特', era: '1661', place: '倫敦薩伏依會議', language: '英文', intro: '王政復闢後薩伏依會議上，巴克斯特倉促數日間為清教一方起草的替代禮文，全依聖經語言鋪陳聖餐與主日崇拜。方案遭主教方否決，次年兩千清教牧者被逐出國教，本禮文遂成英格蘭不從國教傳統的禮儀紀念碑。' },
+          { title_zh: '衛斯理主日崇拜書', title_orig: 'The Sunday Service of the Methodists in North America', author: '約翰‧衛斯理', era: '1784', place: '倫敦（為北美編）', language: '英文', intro: '衛斯理為獨立後的北美循道會眾修訂《公禱書》而成的崇拜書，刪節日課、簡化條文並附其按立文書。它標誌循道運動由國教內團契轉為自立教會，是美國衛理公會禮儀傳統的奠基文件。' },
+          { title_zh: '美國聖公會公禱書', title_orig: 'The Book of Common Prayer (Protestant Episcopal Church, 1789)', author: '美國聖公會總議會', era: '1789', place: '費城', language: '英文', intro: '美國獨立後聖公會自訂的公禱書，刪去為英王代禱，聖餐祝謝文採蘇格蘭主教傳統的呼求聖靈禱文，較英格蘭版更近東方古禮。它是公禱書傳統首度跨出王權框架的改編，此後全球聖公宗各自訂本皆循此例。' },
+          { title_zh: '摩拉維亞弟兄會禮文集', title_orig: 'Liturgien der Brüdergemeine', author: '親岑多夫與合一弟兄會', era: '1727–1789', place: '赫恩胡特', language: '德文', intro: '重生的合一弟兄會在赫恩胡特發展出的禮文體系：愛筵、守望禱告、受難週逐日禮與復活節晨禮，歌唱貫穿一切。其「歌唱崇拜」與節期創意深刻影響衛斯理與後世新教，是敬虔運動禮儀創造力的結晶。' },
+          { title_zh: '瑞典教會手冊', title_orig: 'Then Swenska Kyrkeordningen / Handbok', author: '勞倫提烏斯‧彼得裡', era: '1571', place: '烏普薩拉', language: '瑞典文', intro: '瑞典首任新教總主教勞倫提烏斯‧彼得裡編訂的教會手冊與禮規，保留主教制、祭衣與大量中世紀儀節而注入福音派講道。瑞典教會「保守的宗教改革」由此定型，為路德宗禮儀光譜中最近公教的一翼。' },
+          { title_zh: '達特恩詩篇與禮文', title_orig: 'De Psalmen Davids / Liturgie (Petrus Dathenus)', author: '彼得‧達特恩', era: '1566', place: '法蘭肯塔爾（普法爾茨）', language: '荷蘭文', intro: '流亡牧師達特恩把日內瓦詩篇與普法爾茨禮文譯為荷蘭語，附洗禮聖餐禮文與教理問答，旋為荷蘭歸正教會採用逾兩世紀。低地國會眾至今傳唱其詩篇韻文，是荷蘭改革宗敬拜傳統的立基文本。' }
+        
         ],
       },
       {
@@ -757,6 +771,16 @@ export const EARLY_MODERN_ERA: DazangEra = {
           { title_zh: '羅馬彌撒經書', title_orig: 'Missale Romanum', author: '教宗庇護五世（Pius V）頒行', era: '一五七〇年', place: '羅馬', language: '拉丁文', intro: '脫利騰會議授權、教宗庇護五世以《Quo primum》詔書頒行的羅馬天主教彌撒定本，統一了西方拉丁禮的彌撒舉行方式，史稱特倫多彌撒。經書詳載每日彌撒的禱文、經課、儀節與禮規，廢止諸多地方禮而立羅馬禮為通則。此本歷經數次小幅修訂沿用近四百年至一九六二年，是反改革時期天主教禮儀統一的核心成果，象徵教會面對新教挑戰的制度回應。' },
           { title_zh: '羅馬日課經', title_orig: 'Breviarium Romanum', author: '教宗庇護五世（Pius V）頒行', era: '一五六八年', place: '羅馬', language: '拉丁文', intro: '脫利騰改革後庇護五世頒行的天主教時辰祈禱定本，規範神職與修會每日七時辰的誦經、聖詠、讀經與禱文。日課以聖詠貫穿一週、配合教會年曆與聖人紀念，是神職人員的法定祈禱義務。此本整理繁雜的中世紀傳統,使全教會時辰祈禱趨於一致，與《羅馬彌撒經書》並為特倫多禮的兩大支柱，維繫了近代天主教靈修生活的節律與統一。' },
           { title_zh: '羅馬聖事禮典', title_orig: 'Rituale Romanum', author: '教宗保祿五世（Paul V）頒行', era: '一六一四年', place: '羅馬', language: '拉丁文', intro: '保祿五世頒行的天主教司鐸禮儀手冊，匯集彌撒與日課之外的各項聖事與祝福禮文，含洗禮、告解、病人傅油、婚配、葬禮、驅魔及各類降福。相較彌撒經書,此典更貼近堂區牧靈日常，為司鐸施行聖事提供統一範本。它補全了特倫多禮儀體系的最後一環，使天主教自生到死的禮儀照顧全面標準化，沿用至梵二前，影響近代天主教牧養實務甚鉅。' },
+          { title_zh: '羅馬主教禮書', title_orig: 'Pontificale Romanum', author: '克萊孟八世頒布', era: '1595–1596', place: '羅馬', language: '拉丁文', intro: '特倫託改革後統一頒布的主教專用禮書，收按立、堅振、祝聖教堂與祝福修院等主教禮典，取代各地紛雜的中世紀主教禮書。它與彌撒經書、日課經合構特倫託禮儀體系的骨架，行用至二十世紀禮儀改革。' },
+          { title_zh: '主教典禮書', title_orig: 'Caeremoniale Episcoporum', author: '克萊孟八世頒布', era: '1600', place: '羅馬', language: '拉丁文', intro: '規範主教座堂禮儀排場與職司分工的典禮書：主教大禮彌撒的每一鞠躬、持杖、脫冠皆有明文。它把巴洛克天主教的視覺神學編成條文，是研究近代天主教禮儀空間與身體語言的第一手法典。' },
+          { title_zh: '羅馬殉道聖人錄', title_orig: 'Martyrologium Romanum', author: '巴羅尼烏斯修訂', era: '1583–1586', place: '羅馬', language: '拉丁文', intro: '教會史家巴羅尼烏斯考訂歷代殉道者與聖人紀唸的官方名錄，按曆日編排供日課誦讀。特倫託改革以此清理中世紀聖人崇敬的訛濫，兼具禮儀書與史學工程雙重性格，為天主教曆法敬禮的權威底冊。' },
+          { title_zh: '額我略聖詠美第奇版', title_orig: 'Editio Medicaea (Graduale Romanum)', author: '阿內裡奧與蘇裡亞諾修訂', era: '1614–1615', place: '羅馬美第奇印書坊', language: '拉丁文', intro: '特倫託後官方刊行的額我略聖詠標準本，依當時審美削平中世紀旋律的裝飾音型。此版通行近三百年，至索雷姆修道院復原古譜方被取代，是聖詠傳統「近代化改寫」的著名案例，禮儀音樂史的關鍵座標。' },
+          { title_zh: '聖母小日課修訂本', title_orig: 'Officium parvum Beatae Mariae Virginis (Pius V)', author: '庇護五世頒布', era: '1571', place: '羅馬', language: '拉丁文', intro: '庇護五世修訂頒行的聖母小日課，為平信徒與善會提供簡化的每日祈禱框架，附諸聖連禱。時值勒班陀之役，玫瑰經與小日課的普及構成近代天主教平信徒敬禮的雙翼，本書即其官定文本。' },
+          { title_zh: '一七三八年巴黎彌撒經書', title_orig: 'Missale Parisiense', author: '巴黎總主教文提米耶主持', era: '1738', place: '巴黎', language: '拉丁文', intro: '法國教會自主編訂的「新加利剛」彌撒經書，經文悉出聖經、對經重新譜排，體現高盧主義的禮儀自信。十九世紀蓋朗熱力主羅馬統一而將其廢除，然其經文編排竟多為二十世紀羅馬新彌撒吸收，是禮儀史的迂迴伏筆。' },
+          { title_zh: '論彌撒聖祭', title_orig: 'De sacrosancto missae sacrificio', author: '本篤十四世（蘭貝提尼）', era: '1748', place: '羅馬', language: '拉丁文', intro: '學者教宗本篤十四世論彌撒的專著，逐段考釋禮文源流與神學義蘊，兼裁決禮儀疑難。出自教宗之手的禮儀學術著作史所罕見，是十八世紀天主教禮儀學的權威總結。' },
+          { title_zh: '蓋朗熱禮儀年', title_orig: 'L\'Année liturgique', author: '普羅斯佩‧蓋朗熱', era: '1841–1866', place: '索雷姆修道院', language: '法文', intro: '索雷姆修道院重建者蓋朗熱按禮儀年逐日詮釋彌撒與日課的鉅著十五卷，教平信徒「隨教會的禱」。本書掀起近代禮儀運動的第一波，使禮儀由教士專業重新成為信眾靈修的泉源，影響直達二十世紀禮儀改革。' },
+          { title_zh: '索雷姆額我略聖詠復原本', title_orig: 'Liber Gradualis (Solesmes)', author: '波蒂埃與索雷姆聖詠學派', era: '1883', place: '索雷姆修道院', language: '拉丁文', intro: '索雷姆修士波蒂埃據中世紀抄本比勘復原的額我略聖詠刊本，推翻通行三百年的美第奇版。其古譜學方法開宗教音樂文獻學之先，一九〇三年獲教宗欽定為普世範本，是十九世紀「回到源頭」運動的音樂豐碑。' }
+        
         ],
       },
       {
@@ -768,7 +792,105 @@ export const EARLY_MODERN_ERA: DazangEra = {
           { title_zh: '日內瓦詩篇', title_orig: 'Psautier de Genève', author: '馬羅（Clément Marot）、貝扎（Théodore de Bèze）詞，布爾喬亞（Louis Bourgeois）等曲', era: '一五六二年', place: '日內瓦', language: '法文', intro: '加爾文倡導、由馬羅與貝扎韻譯全部一百五十篇詩篇、布爾喬亞等配以樸實旋律的會眾詩篇集,一五六二年成全本。其曲調莊重易唱，專為改革宗強調的會眾齊唱而作，去除複音與樂器，力求人人同聲頌讚。此詩篇集風行歐陸法語、荷語及蘇格蘭改革宗教會，成為改革宗崇拜音樂的典範與身分標記，其旋律亦廣為後世聖詩沿用。' },
           { title_zh: '馬太受難曲', title_orig: 'Matthäus-Passion BWV 244', author: '巴赫（Johann Sebastian Bach）', era: '一七二七年', place: '萊比錫', language: '德文', intro: '巴赫為路德宗受難週崇拜所譜的大型受難曲，以馬太福音耶穌受難敘事為本，融合福音史詠唱、會眾聖詠、詠嘆調與合唱，編制達雙合唱團與雙管弦樂。作品在萊比錫聖多馬教會受難節禮拜中演出，將聖經敘事、信徒默想與會眾參與熔於一爐,既是禮儀亦是藝術。其深沉的神學默想與恢宏結構,被推為西方宗教音樂巔峰，亦代表路德宗將音樂奉為事奉的傳統。', note: '此處以《馬太受難曲》為巴赫受難曲與清唱劇之代表，其《約翰受難曲》及眾多教會清唱劇同屬此一禮儀聖樂體系。' },
           { title_zh: '彌賽亞', title_orig: 'Messiah HWV 56', author: '韓德爾（George Frideric Handel）', era: '一七四一年', place: '倫敦／都柏林', language: '英文', intro: '韓德爾以英文聖經經文（由詹寧斯編選）譜成的神劇，分預言降生、受難救贖、復活得勝三部，串起基督救恩全貌。一七四二年於都柏林首演，其中哈利路亞大合唱尤為傳世名篇。雖屬音樂廳神劇而非教堂禮儀，卻深植於新教崇拜文化，常於將臨節與復活節演出,成為英語世界最具代表性的宗教聲樂作品，以恢宏合唱頌揚救主，影響後世聖樂與會眾敬拜想像甚深。' },
+          { title_zh: '教宗瑪爾切羅彌撒', title_orig: 'Missa Papae Marcelli', author: '帕萊斯特里納', era: '約 1562', place: '羅馬', language: '拉丁文', intro: '帕萊斯特里納的六聲部彌撒曲，傳說以其歌詞清晰說服特倫託會議保留複音音樂。傳說雖經渲染，本曲確為「羅馬風格」的典範：聲部勻淨、詞義透明，此後四百年天主教會奉之為教會音樂的黃金準繩。' },
+          { title_zh: '拉索懺悔詩篇', title_orig: 'Psalmi Davidis poenitentiales', author: '奧蘭多‧迪‧拉索', era: '1584 刊（作約 1560 年代）', place: '慕尼黑', language: '拉丁文', intro: '拉索為巴伐利亞公爵譜寫的七首懺悔詩篇連篇曲，情感刻畫細入肌理，原以泥金抄本秘藏宮廷。它把文藝復興複音的修辭表現力推向極致，是反宗教改革時代「以音樂懺悔」的最深沉文獻。' },
+          { title_zh: '維多利亞聖週響應曲集', title_orig: 'Officium Hebdomadae Sanctae', author: '託馬斯‧路易斯‧德‧維多利亞', era: '1585', place: '羅馬', language: '拉丁文', intro: '西班牙司鐸作曲家維多利亞為聖週禮儀譜寫的全套音樂，暗夜禮響應曲哀切如泣，被視為天主教神秘主義的音樂化身。他終身只寫宗教音樂，本集是特倫託改革靈性最純粹的聲音結晶。' },
+          { title_zh: '寄望於他', title_orig: 'Spem in alium', author: '託馬斯‧塔利斯', era: '約 1570', place: '英格蘭', language: '拉丁文', intro: '塔利斯為八組五聲部合唱共四十聲部而作的巨型經文歌，聲浪如穹頂環抱，為西方音樂史空間音響的奇蹟。成於新教英格蘭而以拉丁文歌詞頌上帝眷顧，其創作背景至今成謎，益增此曲的傳奇色彩。' },
+          { title_zh: '伯德三聲部至五聲部彌撒曲', title_orig: 'Masses for Three, Four and Five Voices', author: '威廉‧伯德', era: '約 1592–1595', place: '英格蘭', language: '拉丁文', intro: '天主教徒伯德在新教英格蘭冒禁為地下彌撒譜寫的三套彌撒曲，秘密刊行不署標題頁。音樂內斂深摯，為受迫害群體的密室禮儀而生，是信仰堅忍與藝術完美合一的絕品，今日已成英國合唱經典。' },
+          { title_zh: '蒙臺威爾第聖母晚禱', title_orig: 'Vespro della Beata Vergine', author: '克勞迪奧‧蒙臺威爾第', era: '1610', place: '曼託瓦／威尼斯', language: '拉丁文', intro: '蒙臺威爾第把新生的歌劇語彙傾注於晚禱音樂：獨唱花腔、迴聲對答與古聖詠定旋律並置，開巴洛克宗教音樂之門。本作獻給教宗而終老威尼斯聖馬可，是禮儀音樂由文藝復興轉入巴洛克的分水嶺。' },
+          { title_zh: '許茨神聖交響曲', title_orig: 'Symphoniae sacrae', author: '海因裡希‧許茨', era: '1629–1650', place: '德勒斯登／威尼斯', language: '拉丁文／德文', intro: '許茨三度出版的聖經經文協唱曲集，把威尼斯的協奏風格嫁接於德語聖經，三十年戰爭的凋敝迫使他以最小編制寫出最深的哀懇。他是巴哈之前德國最偉大的教會作曲家，本集為德語宗教音樂的奠基石。' },
+          { title_zh: '巴哈約翰受難曲', title_orig: 'Johannes-Passion', author: '約翰‧塞巴斯蒂安‧巴哈', era: '1724', place: '萊比錫', language: '德文', intro: '巴哈就任萊比錫樂長後首部受難曲，以約翰福音的莊嚴基督論為軸，戲劇張力較馬太受難曲更為峻急。開篇合唱「主，我們的主宰」如宇宙迴旋，本作與馬太受難曲同為路德宗禮儀音樂的至高雙峰。' },
+          { title_zh: '巴哈B小調彌撒', title_orig: 'Messe in h-Moll', author: '約翰‧塞巴斯蒂安‧巴哈', era: '1749 完成', place: '萊比錫', language: '拉丁文', intro: '路德宗樂長巴哈晚年集畢生技藝完成的拉丁大彌撒，跨越宗派藩籬把信經逐句築成音響的大教堂。全曲超出任何實際禮儀所需，儼然音樂神學的總結性告白，屢被譽為西方音樂的最高成就。' },
+          { title_zh: '巴哈聖誕神劇', title_orig: 'Weihnachts-Oratorium', author: '約翰‧塞巴斯蒂安‧巴哈', era: '1734', place: '萊比錫', language: '德文', intro: '巴哈為聖誕至主顯十二日節期編成的六部連環清唱劇，田園搖籃曲與號角合唱交織降生的奧秘與喜樂。本作依禮儀年逐日演出的設計，示範教會音樂如何伴隨會眾行走節期，至今仍是普世聖誕音樂的中心。' },
+          { title_zh: '海頓創世記', title_orig: 'Die Schöpfung', author: '約瑟夫‧海頓', era: '1798', place: '維也納', language: '德文', intro: '海頓晚年以創世記與失樂園為本的神劇，「要有光」的C大調爆發為音樂史最著名的一瞬。啟蒙時代的自然頌讚與虔誠信仰在此渾然一體，海頓自言作曲時「未曾如此虔敬」，是古典時期宗教音樂的巔峰。' },
+          { title_zh: '莫札特安魂曲', title_orig: 'Requiem in d-Moll KV 626', author: '莫札特（絕筆，敘斯邁爾補成）', era: '1791', place: '維也納', language: '拉丁文', intro: '莫札特臨終未竟的安魂彌撒，「落淚之日」寫至第八小節而筆落人亡，由弟子補全。神秘的委託與天才之死使本曲籠罩傳奇，其「震怒之日」與「奇妙號聲」把末日經文烙進世界的聽覺記憶。' },
+          { title_zh: '貝多芬莊嚴彌撒', title_orig: 'Missa solemnis', author: '路德維希‧範‧貝多芬', era: '1819–1823', place: '維也納', language: '拉丁文', intro: '貝多芬自認畢生最偉大的作品，題辭「發自內心——願它再抵達人心」。降B大調的信經如信仰的攻堅戰，羔羊經中戰鼓逼近而祈和平之聲愈切。本作把個人靈魂的搏鬥注入彌撒通用文，是禮儀文本交響化的極限。' },
+          { title_zh: '孟德爾頌以利亞', title_orig: 'Elias', author: '費利克斯‧孟德爾頌', era: '1846', place: '伯明罕首演', language: '德文／英文', intro: '猶太裔新教作曲家孟德爾頌以列王紀先知敘事譜成的神劇，迦密山鬥法與微聲中的上帝戲劇性十足。本作接續韓德爾-海頓神劇傳統而注入浪漫抒情，首演即轟動，成為英語世界合唱節文化的支柱曲目。' },
+          { title_zh: '布拉姆斯德意志安魂曲', title_orig: 'Ein deutsches Requiem', author: '約翰內斯‧布拉姆斯', era: '1868', place: '不來梅首演', language: '德文', intro: '布拉姆斯棄拉丁通用文，自路德聖經親選經文譜成的安魂曲，不為亡者求息止而為生者求安慰。「凡有血氣者盡如草」的送葬進行曲沉痛如大地脈搏，是新教聖經靈性最偉大的音樂表達之一。' },
+          { title_zh: '威爾第安魂曲', title_orig: 'Messa da Requiem', author: '朱塞佩‧威爾第', era: '1874', place: '米蘭', language: '拉丁文', intro: '威爾第為文豪曼佐尼逝世週年譜寫的安魂彌撒，「震怒之日」的大鼓重擊為音樂會的震撼名場面。歌劇之王以劇場火焰燃燒禮儀經文，虔敬與戲劇的邊界之辯隨之百年不休，本作自身則已成安魂曲傳統的高峰。' },
+          { title_zh: '佛瑞安魂曲', title_orig: 'Requiem op. 48', author: '加布裡埃爾‧佛瑞', era: '1887–1890', place: '巴黎馬德萊娜教堂', language: '拉丁文', intro: '教堂樂師佛瑞刻意淡去震怒之日、以「在天國」的童聲收束的安魂曲，靜謐如搖籃曲，自稱「死亡的搖籃曲」。它代表法國教會音樂的內斂路線，與威爾第的戲劇路線互為兩極，同列安魂曲雙璧。' },
+          { title_zh: '布魯克納感恩曲', title_orig: 'Te Deum', author: '安東‧布魯克納', era: '1884', place: '維也納', language: '拉丁文', intro: '虔誠的管風琴師布魯克納自視為「獻給上帝」的感恩頌，C大調的巨大音塊如大教堂石柱層層升起。他把交響樂的宏偉歸還禮儀讚歌，臨終猶囑以此曲代未完成的第九交響曲終樂章，是十九世紀信仰交響化的極致。' },
+          { title_zh: '柴可夫斯基金口若望事奉聖禮', title_orig: 'Литургия святого Иоанна Златоуста', author: '彼得‧柴可夫斯基', era: '1878', place: '莫斯科', language: '教會斯拉夫文', intro: '柴可夫斯基為正教事奉聖禮全套禮文譜寫的無伴奏合唱，突破帝國教會對禮儀音樂的出版壟斷而涉訟，勝訴後開俄國作曲家自由創作教會音樂之路。本作是俄羅斯「新禮儀樂派」的先聲，拉赫瑪尼諾夫承其餘緒。' },
+          { title_zh: '博爾特尼揚斯基聖頌協唱曲集', title_orig: 'Духовные концерты Бортнянского', author: '德米特里‧博爾特尼揚斯基', era: '約 1780–1825', place: '聖彼得堡', language: '教會斯拉夫文', intro: '烏克蘭出身的宮廷樂長博爾特尼揚斯基融義大利技法與斯拉夫聖詠寫成的三十五首聖頌協唱曲，貝多芬亦為之傾倒。他確立俄國無伴奏教會合唱的古典風範，其曲目至今仍為正教詩班的核心保留曲。' },
+          { title_zh: '夏邦蒂埃感恩曲', title_orig: 'Te Deum H.146', author: '馬克-安託萬‧夏邦蒂埃', era: '約 1692', place: '巴黎', language: '拉丁文', intro: '夏邦蒂埃為路易十四時代勝利慶典譜寫的感恩頌，D大調前奏的號角迴旋曲光輝奪目。本作是法國巴洛克「大經文歌」傳統的代表，見證禮儀音樂與王權慶典的共生，前奏曲今為歐洲廣播聯盟的會歌。' },
+          { title_zh: '維瓦爾第榮耀頌', title_orig: 'Gloria RV 589', author: '安東尼奧‧維瓦爾第', era: '約 1715', place: '威尼斯憐憫院', language: '拉丁文', intro: '「紅髮神父」維瓦爾第為威尼斯孤女院詩班譜寫的榮耀頌，明亮的協奏風格使禮儀讚歌如節慶陽光。孤女院的女聲合唱是巴洛克威尼斯的奇景，本作即其音樂事工的結晶，湮沒兩百年後重光而風行世界。' },
+          { title_zh: '佩爾戈萊西聖母悼歌', title_orig: 'Stabat Mater', author: '喬瓦尼‧佩爾戈萊西', era: '1736', place: '波佐利', language: '拉丁文', intro: '廿六歲的佩爾戈萊西肺病垂死中為那不勒斯善會寫成的聖母悼歌，女聲二重的哀婉開篇成為十八世紀最流行的宗教音樂，巴哈亦改編之。天才早夭與哀母題材相映，本作是巴洛克晚期虔敬感性的代表作。' },
+          { title_zh: '羅西尼聖母悼歌', title_orig: 'Stabat Mater (Rossini)', author: '焦阿基諾‧羅西尼', era: '1842', place: '巴黎', language: '拉丁文', intro: '歌劇退休後的羅西尼以美聲筆法譜寫的聖母悼歌，詠嘆調式的獨唱華彩引發「劇場侵入聖所」的著名論戰。本作與其晚年《小莊嚴彌撒》同為十九世紀義大利宗教音樂的代表，雅俗之辯的核心標本。' },
+          { title_zh: '古諾聖則濟利亞莊嚴彌撒', title_orig: 'Messe solennelle de Sainte-Cécile', author: '夏爾‧古諾', era: '1855', place: '巴黎', language: '拉丁文', intro: '曾志於司鐸的古諾獻給音樂主保聖則濟利亞的莊嚴彌撒，旋律甜美如祈禱的歌劇。本作風靡第二帝國的巴黎，代表十九世紀法國「浪漫虔敬」的教會音樂路線，亦是聖則濟利亞節音樂傳統的名作。' },
+          { title_zh: '李斯特基督', title_orig: 'Christus', author: '法蘭茲‧李斯特', era: '1862–1866', place: '羅馬', language: '拉丁文', intro: '晚年領受小品級的李斯特以三部十四曲鋪陳基督生平的神劇，自額我略聖詠素材織出前瞻的和聲語言。本作是他「以現代音樂更新教會藝術」宣言的實踐，湮沒百年後始獲公認為十九世紀宗教音樂的巨構。' },
+          { title_zh: '德弗札克聖母悼歌', title_orig: 'Stabat Mater op. 58', author: '安東寧‧德弗札克', era: '1877', place: '布拉格', language: '拉丁文', intro: '德弗札克連喪三子後譜寫的聖母悼歌，把個人喪慟沉入中世紀哀歌文本，終曲於「樂園的榮耀」中破涕成光。本作使他揚名英倫，是捷克民族樂派獻給普世教會的第一件大禮，喪子之痛昇華為信仰安慰的典範。' },
+          { title_zh: '瓦爾特維滕堡聖歌小冊', title_orig: 'Geystliche gesangk Buchleyn', author: '約翰‧瓦爾特（路德合作）', era: '1524', place: '維滕堡', language: '德文', intro: '路德的音樂夥伴瓦爾特編印的四聲部聖歌集，為新教史上第一部合唱聖詩集，收路德〈上主是我堅固保障〉前身諸曲。它確立「眾讚歌」為路德宗敬拜的核心，此一傳統直通巴哈的清唱劇宇宙。' },
+          { title_zh: '波希米亞弟兄會聖詩集', title_orig: 'Kancionál Jednoty bratrské', author: '波希米亞弟兄合一會', era: '1501（1561 大擴編）', place: '布拉格／伊萬奇採', language: '捷克文', intro: '胡斯運動後裔弟兄合一會刊行的捷克語聖詩集，一五〇一年初版被視為史上第一部民族語會眾聖詩集。歷次擴編收詩逾七百首，流亡後由誇美紐斯續編，是新教會眾歌唱傳統真正的起點。' },
+          { title_zh: '史滕霍爾德-霍普金斯詩篇全集', title_orig: 'The Whole Booke of Psalmes (Sternhold & Hopkins)', author: '史滕霍爾德與霍普金斯', era: '1562', place: '倫敦', language: '英文', intro: '英格蘭第一部完整韻文詩篇集，通用格律配民謠式曲調，與聖經、公禱書合訂進入每個教堂與家庭，兩百年間刊行逾六百版。它是英語世界會眾歌唱的實際起點，「舊版詩篇」之名沿用至瓦茨時代。' },
+          { title_zh: '蘇格蘭韻文詩篇', title_orig: 'The Psalms of David in Meeter (Scottish Psalter)', author: '西敏會議與蘇格蘭教會修訂', era: '1650', place: '愛丁堡', language: '英文', intro: '蘇格蘭教會定本韻文詩篇，字句忠實而格律齊整，〈耶和華是我牧者〉（Crimond 調）由此傳唱世界。長老宗「唯獨詩篇」的敬拜傳統以此為聖典，蘇格蘭至今守之，是韻文詩篇文化的活化石。' },
+          { title_zh: '海灣詩篇書', title_orig: 'The Bay Psalm Book', author: '麻薩諸塞灣清教牧者群譯', era: '1640', place: '劍橋（麻薩諸塞）', language: '英文', intro: '英屬北美刊行的第一部書籍：清教移民自希伯來原文重譯的韻文詩篇，序言申明「寧要真確、不求文采」。本書見證新大陸敬拜自給的決心，存世初版十一部為美洲印刷與宗教史的頭號文物。' },
+          { title_zh: '神聖豎琴', title_orig: 'The Sacred Harp', author: '懷特與金（編）', era: '1844', place: '喬治亞州', language: '英文', intro: '美國南方形符記譜的無伴奏聖歌集，四形音符使不識譜的鄉民圍成方陣放聲而歌。「神聖豎琴歌唱」至今聚會不輟，是美國民間宗教音樂最強韌的活傳統，草根敬拜文化的代表文獻。' },
+          { title_zh: '美國奴隸歌曲集', title_orig: 'Slave Songs of the United States', author: '艾倫、韋爾與加里森（輯）', era: '1867', place: '紐約', language: '英文', intro: '南北戰爭甫結束即輯錄的黑人靈歌一百三十六首，為非裔美國人宗教歌唱最早的系統文獻，〈走下去，摩西〉諸曲賴以傳世。靈歌自苦難中鍛出的盼望神學，經此書進入世界音樂史，是黑人教會敬拜的元典。' },
+          { title_zh: '桑基福音聖歌集', title_orig: 'Sacred Songs and Solos', author: '艾拉‧桑基', era: '1873–1903 增編', place: '倫敦／紐約', language: '英文', intro: '慕迪佈道大會的歌手桑基編纂的福音聖歌集，副歌易記、伴奏簡明，隨佈道浪潮售逾八千萬冊。「福音詩歌」文類由此定型，芬妮‧克羅斯比諸作賴以流通，是近代大眾佈道音樂文化的總匯。' },
+          { title_zh: '十字架上七言', title_orig: 'Die sieben letzten Worte unseres Erlösers am Kreuze', author: '約瑟夫‧海頓', era: '1786（合唱版 1796）', place: '加地斯／維也納', language: '德文／器樂', intro: '海頓應加地斯聖洞教堂聖週默想禮之邀而作：主教每誦一言，樂隊奏一段慢板引導會眾默想。作品後改編為弦樂四重奏與神劇版本，是禮儀默想直接催生器樂經典的罕例，聖週音樂傳統的名作。' },
+          { title_zh: '舒伯特降E大調彌撒', title_orig: 'Messe Nr. 6 Es-Dur D 950', author: '法蘭茲‧舒伯特', era: '1828', place: '維也納', language: '拉丁文', intro: '舒伯特逝世前數月完成的最後彌撒曲，聖哉經的賦格與羔羊經的暗湧把個人的死亡預感織入禮儀經文。他慣於信經中略去「唯一聖而公教會」一句，其信仰的私人性與音樂的懇切同為後世聚訟的謎題。' }
+        
+        
         ],
+      },
+      {
+        key: 'eastern-liturgy',
+        label: '東方禮儀部',
+        label_en: 'Eastern Liturgies',
+        desc: '近代東方教會的禮儀書刊印傳統——基輔、莫斯科、亞美尼亞、馬龍派與科普特的禮典與刊本。',
+        works: [
+          { title_zh: '莫吉拉大禮典', title_orig: 'Trebnik (Euchologion) Petra Mohyly', author: '基輔都主教彼得‧莫吉拉', era: '1646', place: '基輔洞窟修道院', language: '教會斯拉夫文', intro: '基輔都主教莫吉拉編訂的大型禮典，收聖事與各式祝福禮文並附牧養指引，參酌希臘與拉丁學術而自成體系。它是近代東正教禮儀書刊印的最大工程，斯拉夫正教世界沿用其文本至今，兼證基輔學術的黃金時代。' },
+          { title_zh: '尼康修訂事奉聖禮書', title_orig: 'Sluzhebnik (Nikonian revision)', author: '莫斯科宗主教尼康主持', era: '1655', place: '莫斯科', language: '教會斯拉夫文', intro: '宗主教尼康依希臘刊本校訂俄國事奉聖禮書，改三指畫十字等儀節，引發舊禮儀派大分裂，百萬信徒寧受迫害不從新禮。一部禮書的修訂撕裂俄羅斯宗教社會兩百年，是禮儀文本與民族認同糾纏的最沉重案例。' },
+          { title_zh: '亞美尼亞初刊祈禱書', title_orig: 'Urbatagirk', author: '哈科布‧梅加帕特（刊印）', era: '1512', place: '威尼斯', language: '亞美尼亞文', intro: '亞美尼亞史上第一部印刷書籍：威尼斯刊行的《週五書》祈禱文集，收治病禳災禱文與納雷克的格列高利禱詞選。流散商人社群以印刷術續命民族禮儀傳統，本書是東方基督教印刷文化的破曉之作。' },
+          { title_zh: '馬龍派羅馬刊本彌撒書', title_orig: 'Missale Chaldaicum iuxta ritum ecclesiae nationis Maronitarum', author: '馬龍派教會（羅馬東方語文印書院刊）', era: '1592–1594', place: '羅馬', language: '敘利亞文', intro: '羅馬美第奇東方印書院為馬龍派刊行的敘利亞語彌撒經書，是東方禮儀書在西方付印的先聲。它見證與羅馬共融的東方教會如何藉印刷保存古敘利亞禮儀，兼為近代東方學與教會外交交會的產物。' },
+          { title_zh: '圖基科普特禮書刊本', title_orig: 'Missale Coptice et Arabice (Raphael Tuki)', author: '拉斐爾‧圖基', era: '1736–1764', place: '羅馬', language: '科普特文／阿拉伯文', intro: '科普特出身的羅馬主教圖基整理刊行的科普特-阿拉伯雙語禮書系列，含彌撒、日課與聖事禮文，為科普特禮儀首度系統付印。這批刊本長期為埃及教會實際使用，是科普特禮儀文本近代傳承的樞紐。' }
+        
+        ]
+      },
+      {
+        key: 'devotional-prayer',
+        label: '祈禱與敬虔書部',
+        label_en: 'Prayer Books and Devotional Manuals',
+        desc: '近代東西方的祈禱書、默想手冊與敬虔生活指南——自路德小祈禱書至朝聖者之路。',
+        works: [
+          { title_zh: '路德小祈禱書', title_orig: 'Betbüchlein', author: '馬丁‧路德', era: '1522', place: '維滕堡', language: '德文', intro: '路德為取代中世紀繁蕪的祈禱書而編的小冊，以十誡、信經、主禱文為骨架教人禱告，後續增詩篇與受難默想。它把改革的核心教導化為家庭靈修的日用品，是新教敬虔文獻的第一塊基石。' },
+          { title_zh: '安德魯斯私禱集', title_orig: 'Preces Privatae', author: '蘭斯洛特‧安德魯斯', era: '約 1600–1626（1648 刊）', place: '倫敦', language: '希臘文／拉丁文', intro: '欽定本聖經主譯者安德魯斯以希臘拉丁文為自己編織的私禱手冊，按日按時輯綴聖經與古教會禱文，手稿浸滿淚痕。死後刊行而成聖公會靈修珍典，展示高教會派學識與虔敬合一的禱告世界。' },
+          { title_zh: '泰勒聖潔生活', title_orig: 'The Rule and Exercises of Holy Living', author: '傑瑞米‧泰勒', era: '1650', place: '威爾斯（內戰流亡中）', language: '英文', intro: '聖公會神學家泰勒於清教當政、國教崩解之際寫成的聖潔生活指南，教平信徒在無教會可依時自行操練時間、貞潔與敬虔。文體華美如祈禱的散文詩，與姊妹作《聖潔死亡》同為英語靈修文學的冠冕。' },
+          { title_zh: '貝利敬虔的實踐', title_orig: 'The Practice of Piety', author: '路易斯‧貝利', era: '約 1611', place: '威爾斯班戈', language: '英文', intro: '班戈主教貝利的敬虔生活全書，自晨禱至臨終逐項指引，兼附齋戒與領聖餐之法。本書刊行逾七十版、譯成歐洲諸語乃至麻薩諸塞印第安語，清教徒班揚由妻子的嫁妝書中讀到的正是它，堪稱十七世紀第一暢銷靈修書。' },
+          { title_zh: '科西私禱集', title_orig: 'A Collection of Private Devotions', author: '約翰‧科西', era: '1627', place: '倫敦', language: '英文', intro: '科西應宮廷女官之需按時辰祈禱傳統編成的私禱集，恢復七時課架構而全取材聖經與古教會。清教徒抨其「羅馬化」，本書遂成國教會內部禮儀路線之爭的標本，亦是英語時辰靈修的優美範本。' },
+          { title_zh: '與神同在的操練', title_orig: 'The Practice of the Presence of God', author: '勞倫斯弟兄', era: '1692 輯刊', place: '巴黎加爾默羅會院', language: '法文', intro: '赤足加爾默羅會廚房雜役勞倫斯弟兄的談話與書信輯錄，教人在洗碗鍋灶間時時轉念向神，「廚房與祭壇無別」。小書百餘頁而流傳三百年，跨越宗派為天主教與新教共愛，是日常靈修觀最樸素有力的表述。' },
+          { title_zh: '簡易祈禱法', title_orig: 'Moyen court et très facile de faire oraison', author: '蓋恩夫人', era: '1685', place: '格勒諾布爾', language: '法文', intro: '蓋恩夫人教導人人皆可行的「單純注視」祈禱小書，主張放下自我意志沉入上帝臨在。書捲入寂靜主義論戰，作者繫獄巴士底而書遭禁毀，卻經芬乃倫與衛斯理傳入新教靈修血脈，是爭議與影響俱鉅的女性靈修經典。' },
+          { title_zh: '屬靈爭戰', title_orig: 'Il combattimento spirituale', author: '羅倫佐‧斯庫波利', era: '1589', place: '威尼斯', language: '義大利文', intro: '戲阿蒂尼會士斯庫波利以「不信自己、全信上帝、善用身心、恆常祈禱」四兵器教導內心爭戰的手冊。沙雷氏的方濟終身攜之如聖經，東正教尼哥底母亦改編為《隱形爭戰》，是天主教與正教共尊的靈修兵法。' },
+          { title_zh: '入德之門', title_orig: 'Introduction à la vie dévote', author: '方濟‧沙雷氏', era: '1609', place: '安錫', language: '法文', intro: '日內瓦主教沙雷氏為在俗貴婦「菲羅泰」寫的敬虔生活指南，主張虔敬不必出世，士兵、商婦、朝臣各按身分成聖。文筆溫雅如春風，刊行即風靡歐洲，是天主教改革「在俗成聖」靈修的定音之作。' },
+          { title_zh: '宗教在靈魂中的興起與長進', title_orig: 'The Rise and Progress of Religion in the Soul', author: '腓力‧多德里奇', era: '1745', place: '北安普敦', language: '英文', intro: '不從國教牧者多德里奇追蹤靈魂自覺醒至成熟的階段指南，逐章附禱文。威伯福斯自承因本書歸正而投身廢奴，其教育與敬虔並重的路線影響福音派兩百年，是十八世紀英語靈修的代表作。' },
+          { title_zh: '摩拉維亞每日箴言', title_orig: 'Die Losungen', author: '親岑多夫與赫恩胡特弟兄會', era: '1731 創刊', place: '赫恩胡特', language: '德文', intro: '親岑多夫自一七二八年起每日抽選聖句分發社區，一七三一年起印行為年冊《每日箴言》，抽籤定舊約句、配新約句與詩句，至今年年不輟、譯行數十語。近三百年無一日中斷的讀經日課，是敬虔運動最長壽的遺產。' },
+          { title_zh: '朝聖者之路', title_orig: 'Откровенные рассказы странника', author: '佚名俄羅斯朝聖者', era: '約 1850–1860 年代', place: '俄羅斯（喀山刊 1881）', language: '俄文', intro: '佚名跛足朝聖者自述以「耶穌禱文」行遍俄羅斯的靈程記，把《慕善集》的心禱傳統化為道路上的故事。本書使不停息的耶穌禱文自修室走向大眾，二十世紀西傳後成為東正教靈修的世界名片。' },
+          { title_zh: '聖潔之路', title_orig: 'The Way of Holiness', author: '菲比‧帕爾默', era: '1843', place: '紐約', language: '英文', intro: '衛理會平信徒婦女帕爾默以「祭壇神學」教導即時完全成聖：奉獻於壇、憑信宣告。她主持的週二聚會孕育聖潔運動，本書為其綱領，開女性講道與五旬節運動之先河，十九世紀美國靈修史的樞紐文獻。' },
+          { title_zh: '天主聖教日課', title_orig: '天主聖教日課', author: '耶穌會士與中國奉教士人編訂', era: '約 1602–1638 定型', place: '北京／江南', language: '中文', intro: '晚明耶穌會與中國信徒合編的中文祈禱日課，將拉丁禱文譯為典雅文言，晨昏課、玫瑰經與諸聖禱文俱備。此書歷清代教難而抄傳不絕，行用至二十世紀，是漢語天主教敬禮傳統的根本文本。' },
+          { title_zh: '禱告與默想書', title_orig: 'Libro de la oración y meditación', author: '路易斯‧德‧格拉納達', era: '1554', place: '里斯本', language: '西班牙文', intro: '道明會士格拉納達教導默想方法與材料的手冊，按週安排受難、死亡與天恩諸題。本書為十六世紀歐洲最暢銷書籍之一，譯成諸語逾百版，德蘭亦其讀者，卻一度被列禁書目錄，見證靈修普及與教權戒備的拉鋸。' },
+          { title_zh: '肯恩主教禱文與頌歌手冊', title_orig: 'A Manual of Prayers... with Morning and Evening Hymns', author: '託馬斯‧肯恩', era: '1695', place: '溫徹斯特', language: '英文', intro: '不宣誓派主教肯恩為溫徹斯特公學學子編寫的禱告手冊，附其晨歌晚歌，末節「讚美真神萬福之源」成為英語世界傳唱最廣的三一頌。小書見證公學靈修傳統，一節頌歌則流入普世崇拜的血液。' },
+          { title_zh: '隱形爭戰', title_orig: 'Ὁ Ἀόρατος Πόλεμος (Unseen Warfare)', author: '聖山的尼哥底母（改編斯庫波利）', era: '1796', place: '阿索斯聖山', language: '希臘文', intro: '聖山的尼哥底母把義大利靈修經典《屬靈爭戰》改編入東正教傳統，注入耶穌禱文與心禱教導，後經俄國隱修者提阿凡再訂。一部天主教手冊經正教兩度轉化而成《慕善集》傳統的姊妹篇，是跨傳統靈修交流的奇蹟文本。' }
+        
+        
+        ]
+      },
+      {
+        key: 'liturgical-scholarship',
+        label: '禮儀學部',
+        label_en: 'Liturgical Scholarship',
+        desc: '近代禮儀源流考證與註釋——聖莫爾學派、義大利博學派與安立甘禮儀學的奠基著作。',
+        works: [
+          { title_zh: '斯帕羅公禱書釋義', title_orig: 'A Rationale upon the Book of Common Prayer', author: '安東尼‧斯帕羅', era: '1655', place: '劍橋', language: '英文', intro: '聖公會主教斯帕羅在公禱書遭禁的共和時期撰寫的逐項釋義，溯源古教會以辯護其合法。本書為公禱書註釋傳統的奠基作，王政復闢後屢刊不輟，是安立甘禮儀自我理解的經典文本。' },
+          { title_zh: '論禮儀事務', title_orig: 'Rerum liturgicarum libri duo', author: '喬瓦尼‧博納', era: '1671', place: '羅馬', language: '拉丁文', intro: '熙篤會樞機博納考證彌撒禮儀源流的兩卷專著，遍稽抄本古籍而持論平允，兼具靈修家的溫度。本書開近代禮儀學實證研究之風，與其《引向天國之路》諸靈修作並傳，是十七世紀禮儀博學的代表。' },
+          { title_zh: '高盧禮儀論', title_orig: 'De liturgia gallicana libri tres', author: '讓‧馬比雍', era: '1685', place: '巴黎聖日耳曼德佩修道院', language: '拉丁文', intro: '古文書學之父馬比雍據新發現抄本重構法蘭克教會古禮的專著，附呂克瑟伊經課書刊佈。本書把禮儀史研究奠於文獻批判之上，聖莫爾學派「以檔案治教會史」的典範，禮儀學作為科學的起點之一。' },
+          { title_zh: '羅馬古禮儀集', title_orig: 'Liturgia Romana vetus', author: '洛多維科‧穆拉托里', era: '1748', place: '摩德納', language: '拉丁文', intro: '義大利史學巨匠穆拉托里輯刊羅馬古聖禮書的集成，收良俸、傑拉修與額我略三大聖事書並詳序考辨。本書使近代學界首度得窺特倫託以前的羅馬禮原貌，為禮儀溯源研究的標準史料庫。' },
+          { title_zh: '彌撒禮儀史釋', title_orig: 'Explication littérale, historique et dogmatique des prières et des cérémonies de la messe', author: '皮埃爾‧勒布倫', era: '1716–1726', place: '巴黎', language: '法文', intro: '奧拉託利會士勒布倫以法語逐段解釋彌撒經文與儀節的四卷鉅著，兼比較東西方諸禮，考史而歸於奧義。本書把禮儀學識帶給識字信眾，是法國禮儀啟蒙的代表作，至今仍為彌撒史的重要參考。' },
+          { title_zh: '東方禮儀集成', title_orig: 'Liturgiarum orientalium collectio', author: '歐塞布‧雷諾多', era: '1716', place: '巴黎', language: '拉丁文（譯自科普特／敘利亞文）', intro: '東方學家雷諾多輯譯科普特與敘利亞諸安納弗拉禱文的兩卷集成，首度讓西方系統得見東方聖餐禮的全幅譜系。本書為比較禮儀學的奠基文獻，後世論聖餐禱文源流者無不由此入手。' },
+          { title_zh: '普世教會禮儀大全', title_orig: 'Codex liturgicus ecclesiae universae', author: '約瑟夫‧阿洛伊修斯‧阿瑟曼尼', era: '1749–1766', place: '羅馬', language: '拉丁文（多語文本）', intro: '馬龍派東方學世家阿瑟曼尼編纂的十三卷禮儀總集，東西方洗禮、按立、婚喪諸禮文並蓄，附考證。本書氣魄為禮儀文獻學空前，雖未竟全功，仍是十八世紀「普世禮儀知識」工程的最大紀念碑。' },
+          { title_zh: '禮儀源流', title_orig: 'Origines liturgicae', author: '威廉‧帕爾默', era: '1832', place: '牛津', language: '英文', intro: '牛津學者帕爾默考證公禱書禮文上溯古教會源頭的專著，證安立甘禮儀承自初代傳統而非新創。本書直接滋養同年啟動的牛津運動，是聖公宗禮儀自覺與禮儀學復興的引爆文獻。' },
+          { title_zh: '安立甘禮儀指南', title_orig: 'Directorium Anglicanum', author: '約翰‧珀奇斯（初版主編）', era: '1858', place: '倫敦', language: '英文', intro: '牛津運動禮儀派編纂的公禱書儀節指南，詳訂祭衣、燭光、鞠躬與香爐之用，附圖說。它把禮儀復興由書齋推向聖所，引發「儀式主義」訴訟浪潮，是十九世紀英國教會禮儀戰爭的核心手冊。' }
+        
+        ]
       },
     ],
   },
