@@ -316,6 +316,10 @@ onBeforeUnmount(() => observer?.disconnect())
 .book-prose :deep(.vol-preface), .book-prose :deep(.vol-coda) { @apply mb-12 px-5 py-5 rounded-2xl bg-violet-50/40 border border-violet-100; }
 .book-prose :deep(.vol-preface h2), .book-prose :deep(.vol-coda h2) { @apply text-xl text-violet-800 mt-0 mb-4; }
 .book-prose :deep(.vol-preface p), .book-prose :deep(.vol-coda p) { @apply text-[15px] leading-[2] text-gray-700; }
+/* 章首故事引子 */
+.book-prose :deep(.chapter-fable) { @apply mb-8 px-5 py-4 rounded-2xl bg-amber-50/50 border border-amber-100; }
+.book-prose :deep(.chapter-fable p) { @apply text-[15px] leading-[2] text-gray-700 italic; }
+.book-prose :deep(.chapter-fable p.fable-bridge) { @apply not-italic text-gray-800 border-t border-dashed border-amber-200 pt-3 mt-3 mb-0; }
 /* 章末摘要與論證分析圖 */
 .book-prose :deep(.chapter-recap) { @apply mt-8 pt-5 border-t border-dashed border-gray-200; }
 .book-prose :deep(.chapter-recap h3) { @apply text-sm font-bold text-violet-600 uppercase tracking-widest mt-5 mb-2.5; }

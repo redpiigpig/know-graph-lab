@@ -1,5 +1,12 @@
 # 創生哲學 15 卷「逐節對話地圖」全量補完 — 交接（2026-06-26）
 
+## 🔄 零之四、2026-07-03 全 15 卷「章首故事引子」工程（進行中，session 額度中斷）
+使用者定案：**每一卷每一章都以一則相關故事開場再進行探討**（定錨：愛的公式→小王子、陰影/個體化→聖誕頌歌、召喚→佛陀出家）。
+- **總表**＝`scripts/genesis_research/fable_map.md`（122 章每章一故事＋鐵則＋插入格式）。格式＝`<div class="chapter-fable"><p>故事2-4段</p><p class="fable-bridge">橋接段</p></div>` 插在該章 `</h2>` 緊後；**不動任何 h2/h3**，clean_inv／DB 不受影響。reader 樣式已加（pages/works/[slug]/book/[bid].vue `.chapter-fable`）。
+- **進度（2026-07-03 00:40，session limit resets 06:00）**：✅ M1(7) M3(9) E1(8) E2(11) E3(7)；🔶 M2 只完成第1–4章，**第5–13章待補**；⬜ O1 O2 O3 V1 V2 V3 B1 B2 B3 九卷未動。
+- **續跑方式**：per-卷子代理（wave ≤6），prompt 樣板＝「Read fable_map.md 該卷表格→每章 Grep h2→Read 後40-60行→Edit 插入 div（新章 editor-note 前）→自我驗證 h2/h3 前後不變＋chapter-fable=章數」。大檔（O1/O3 180-210KB）勿整檔 Read。M2 的代理只做第5–13章。
+- 完工後：全卷驗證（h2/h3 對 clean_inv、section 平衡、無「四然」、無星號）→ build 測試 → commit push。
+
 > 接續：把**全 15 卷每一小節**都掛上「盟友(支持/補充)/foil(反例)/旁證」當代文獻（仿 E2 對話地圖），
 > 並把**既有 ref-DB 條目逐節分類**。瓶頸＝Claude **session 額度**：每個配額窗口約只能跑 **~18 章**研究子代理，
 > 全部 105 章要橫跨數個重置窗口。記憶見 [[project_genesis_reference_db]]、[[project_genesis_epistemology_trilogy]]。
