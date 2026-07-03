@@ -673,7 +673,29 @@ export const EARLY_MODERN_ERA: DazangEra = {
         works: [
           { title_zh: '路德書信集', title_orig: 'Luthers Briefe', author: '馬丁‧路德 (Martin Luther)', era: '一五〇〇年代至一五四六年', place: '威登堡', language: '德文‧拉丁文', intro: '路德一生所遺數千封書信的彙編,對象遍及諸侯、同道、友人與家人。其中既有針砭時弊、闡發教義的論戰之筆,也有撫慰患難、教養子女的溫厚之言。書信坦率熱烈,喜怒形於辭色,既補正其神學著作,更鮮活呈現這位改革家的性情與信仰歷程,是理解宗教改革不可或缺的第一手文獻。' },
           { title_zh: '加爾文書信集', title_orig: 'Calvini Epistolae', author: '約翰‧加爾文 (John Calvin)', era: '一五三〇年代至一五六四年', place: '日內瓦', language: '拉丁文‧法文', intro: '加爾文與歐洲各地改革者、君侯及受逼迫信徒往還的書信彙編。他藉書信指導各地教會、調停爭端、堅固殉道者之心,影響遠及法、英、蘇格蘭與東歐。文字謹嚴而懇切,既是改革宗網絡得以維繫的紐帶,也展露這位日內瓦改革家牧者的一面,為其神學體系增添血肉。' },
-          { title_zh: '慈運理書信', title_orig: 'Zwinglis Briefwechsel', author: '烏爾里希‧慈運理 (Huldrych Zwingli)', era: '一五一〇年代至一五三一年', place: '蘇黎世', language: '拉丁文‧德文', intro: '蘇黎世改革家慈運理與人文學者、同道及各方政要往來的書信。內容涉及聖餐之爭、與路德的歧見、瑞士諸邦的宗教與政局。書信兼具人文素養與改革熱忱,既見其與伊拉斯謨等學人的淵源,也記錄了瑞士德語區改革的曲折,是研究改革陣營內部分合的重要見證。' }
+          { title_zh: '慈運理書信', title_orig: 'Zwinglis Briefwechsel', author: '烏爾里希‧慈運理 (Huldrych Zwingli)', era: '一五一〇年代至一五三一年', place: '蘇黎世', language: '拉丁文‧德文', intro: '蘇黎世改革家慈運理與人文學者、同道及各方政要往來的書信。內容涉及聖餐之爭、與路德的歧見、瑞士諸邦的宗教與政局。書信兼具人文素養與改革熱忱,既見其與伊拉斯謨等學人的淵源,也記錄了瑞士德語區改革的曲折,是研究改革陣營內部分合的重要見證。' },
+          { title_zh: '墨蘭頓書信集', title_orig: 'Epistolae Philippi Melanchthonis', author: '菲利普‧墨蘭頓', era: '1518–1560', place: '維滕堡', language: '拉丁文', intro: '「德意志之師」墨蘭頓存世書信近萬封，調停路德宗內外紛爭、起草信條、與全歐學界通問，是宗教改革最大的書信網絡。其信兼具人文學者的優雅與調和者的憂勞，為改革運動的日常肌理留下最完整的檔案。' },
+          { title_zh: '貝扎書信集', title_orig: 'Correspondance de Théodore de Bèze', author: '泰奧多爾‧貝扎', era: '1548–1605', place: '日內瓦', language: '拉丁文／法文', intro: '加爾文接班人貝扎主持日內瓦近半世紀的往來書信，指導法蘭西胡格諾教會度過宗教戰爭與聖巴多羅買之夜，兼與各國改革宗領袖協調。現代校刊本達數十冊，是國際加爾文主義成形的第一手網絡檔案。' },
+          { title_zh: '布塞爾書信集', title_orig: 'Correspondance de Martin Bucer', author: '馬丁‧布塞爾', era: '1524–1551', place: '史特拉斯堡／劍橋', language: '拉丁文／德文', intro: '史特拉斯堡改革家布塞爾以書信斡旋於路德與茨溫利之間，力促聖餐和解，晚年流亡英格蘭續以書信襄助克蘭麥改革。其信是宗教改革「合一路線」的完整紀錄，教會合一運動屢屢回望的先例。' },
+          { title_zh: '布林格書信集', title_orig: 'Briefwechsel Heinrich Bullingers', author: '海因裡希‧布林格', era: '1531–1575', place: '蘇黎世', language: '拉丁文／德文', intro: '茨溫利繼任者布林格存世書信一萬二千封，為十六世紀歐洲之最，通信對象自英格蘭女王至匈牙利牧者。蘇黎世由此成為改革宗世界的資訊樞紐，這批書信是宗教改革國際史無可替代的底層檔案。' },
+          { title_zh: '諾克斯書信集', title_orig: 'Letters of John Knox', author: '約翰‧諾克斯', era: '1548–1572', place: '日內瓦／愛丁堡', language: '英文', intro: '蘇格蘭改革家諾克斯的書信，自划船奴生涯倖存後致信徒的牧函、與母后攝政的對峙文書，至寫給岳母包斯夫人的靈修私信，剛烈與柔情並存。這批信是蘇格蘭宗教改革的私人卷宗，諾克斯人格的雙面鏡。' },
+          { title_zh: '克蘭麥書信集', title_orig: 'Letters of Thomas Cranmer', author: '託馬斯‧克蘭麥', era: '1533–1556', place: '坎特伯裡', language: '英文／拉丁文', intro: '坎特伯裡大主教克蘭麥的書信，邀布塞爾、維米利等歐陸學者赴英共建改革，並謀劃普世新教信條會議。至其繫獄反覆與終局的信件，呈現公禱書之父在王權與良心夾縫中的全部掙扎。' },
+          { title_zh: '廷代爾獄中書信', title_orig: 'Letter from Vilvoorde Prison', author: '威廉‧廷代爾', era: '1535', place: '維爾福德堡（布拉班特）', language: '拉丁文', intro: '英譯聖經先驅廷代爾就義前自維爾福德獄中致典獄官的短信，只求一頂暖帽、一支蠟燭與他的希伯來文聖經、文法與辭典，「好在黑暗中繼續工作」。寥寥數行成為譯經者堅忍的千古見證，英語聖經史最動人的文物。' },
+          { title_zh: '門諾‧西門斯書信集', title_orig: 'Brieven van Menno Simons', author: '門諾‧西門斯', era: '1536–1561', place: '低地國／荷爾斯泰因', language: '荷蘭文', intro: '和平再洗禮派領袖門諾亡命二十五年間致散居會眾的牧函，安慰受迫姊妹、調解教會紛爭、申辯非暴力立場。頭懸賞格而書信不輟，這批信件把瀕滅的再洗禮運動凝聚為延續至今的門諾會傳統。' },
+          { title_zh: '殉道者之鏡獄中書信', title_orig: 'Martelaersspiegel: gevangenisbrieven', author: '荷蘭再洗禮派殉道者群', era: '1535–1592（1660 輯刊）', place: '低地國', language: '荷蘭文', intro: '《殉道者之鏡》輯錄的再洗禮派死囚書信：織工、主婦、少女在火刑前夕致兒女與會眾的訣別信，字句樸拙而信念如鐵。平民殉道者的親筆聲音在教會史上極為罕見，這批信是草根信仰史的最強文獻。' },
+          { title_zh: '瑪格麗特與布里索內往來書信', title_orig: 'Correspondance de Marguerite d\'Angoulême et Guillaume Briçonnet', author: '納瓦拉的瑪格麗特／紀堯姆‧布里索內', era: '1521–1524', place: '莫城／法蘭西宮廷', language: '法文', intro: '法王之妹瑪格麗特與莫城主教布里索內的靈修通信百餘封，主教以密契言語引導公主，莫城改革圈的福音思想賴此滲入宮廷。這批信是法蘭西宗教改革前夜的溫床文獻，兼為女性靈修書寫的傑作。' },
+          { title_zh: '珍‧格雷獄中書信', title_orig: 'Letters and Prayers of Lady Jane Grey', author: '珍‧格雷', era: '1553–1554', place: '倫敦塔', language: '英文', intro: '「九日女王」珍‧格雷就刑前的書信與禱文：致父親的寬恕、致妹妹凱瑟琳附於希臘文新約上的遺言、與費肯漢神父的辯道紀錄。十六歲少女以學識與信仰直面斷頭臺，這批文字是改革時代最清亮的殉道之聲。' },
+          { title_zh: '牛津殉道者獄中書信', title_orig: 'Prison Letters of Ridley and Latimer', author: '裡德利與拉蒂默', era: '1554–1555', place: '牛津博卡多獄', language: '英文', intro: '瑪麗女王治下繫獄牛津的主教裡德利與拉蒂默彼此打氣、致信同道的獄中書信，拉蒂默名言「我們今日要點燃一支蠟燭，靠神恩典永不熄滅」即出火刑柱上。這批信經福克斯《殉道者之書》傳世，是英格蘭新教認同的奠基文本。' },
+          { title_zh: '薩多雷託與加爾文往來書函', title_orig: 'Sadoleto\'s Letter and Calvin\'s Reply', author: '雅各‧薩多雷託／約翰‧加爾文', era: '1539', place: '里昂／史特拉斯堡', language: '拉丁文', intro: '人文主義樞機薩多雷託致函日內瓦勸其重歸羅馬，流亡中的加爾文受託覆函，六日寫就的答書申明改革非分裂、乃回歸古教會。攻守雙方俱屬一流之筆，這組往來被譽為新舊兩造最高水平的一次交鋒。' },
+          { title_zh: '奧科蘭帕迪烏斯書信集', title_orig: 'Briefe und Akten zum Leben Oekolampads', author: '約翰內斯‧奧科蘭帕迪烏斯', era: '1522–1531', place: '巴塞爾', language: '拉丁文', intro: '巴塞爾改革家、希臘文教父學者奧科蘭帕迪烏斯的書信，記其推動城市改革、參與馬堡會談並首倡教會自主懲戒制。其信學養醇厚，是上萊茵人文主義與宗教改革交融的代表檔案。' },
+          { title_zh: '維米利書信集', title_orig: 'Epistolae Petri Martyris Vermilii', author: '彼得‧馬蒂爾‧維米利', era: '1542–1562', place: '史特拉斯堡／牛津／蘇黎世', language: '拉丁文', intro: '義大利流亡改革家維米利的書信，輾轉史特拉斯堡、牛津、蘇黎世而通問全歐，為英格蘭聖餐神學與歸正教義的定型出力至鉅。其信見證義大利福音運動菁英流亡後如何反哺北方改革，跨國新教網絡的典型個案。' },
+          { title_zh: '拉斯科書信集', title_orig: 'Epistolae Iohannis a Lasco', author: '約翰‧拉斯科', era: '1540–1560', place: '埃姆登／倫敦／波蘭', language: '拉丁文', intro: '波蘭貴族改革家拉斯科的書信，自弗里斯蘭到倫敦流亡者教會再返波蘭推動改革，與全歐同道往還。他為伊拉斯謨晚年摯友並購其藏書，其信是東歐宗教改革與流亡教會制度史的樞紐文獻。' },
+          { title_zh: '朱里厄致法蘭西受迫信徒牧函', title_orig: 'Lettres pastorales adressées aux fidèles de France', author: '皮埃爾‧朱里厄', era: '1686–1689', place: '鹿特丹', language: '法文', intro: '南特敕令廢除後，流亡牧師朱里厄每兩週自荷蘭秘密寄入法國的牧函，堅固被迫改宗的胡格諾信徒，兼發展反暴政的政治神學。這批地下書信網絡是信仰抵抗與早期人權論述交會的重要文獻。' },
+          { title_zh: '澤爾夫人書信與護教文', title_orig: 'Schriften und Briefe der Katharina Schütz Zell', author: '卡塔琳娜‧舒茲‧澤爾', era: '1524–1558', place: '史特拉斯堡', language: '德文', intro: '史特拉斯堡牧師之妻澤爾夫人以印行書信為受迫信徒辯護、慰問流亡婦女、駁斥責難教士婚姻者，自稱「教會之母」。她是宗教改革中著述最多的平信徒女性，其書信開創女性公開神學寫作的先例。' },
+          { title_zh: '莫拉塔書信集', title_orig: 'Epistolae Olympiae Moratae', author: '奧林匹亞‧莫拉塔', era: '1550–1555', place: '費拉拉／德意志', language: '拉丁文／希臘文', intro: '費拉拉宮廷才女莫拉塔精希臘拉丁之學，因信奉新教流亡德意志，戰亂病困中致師友的書信與希臘文詩篇改寫傳世。廿九歲早逝的她被譽為文藝復興最有學問的女性之一，書信集是人文學識與福音信仰合一的絕唱。' },
+          { title_zh: '福克斯書信集', title_orig: 'Epistles of George Fox', author: '喬治‧福克斯', era: '1652–1691', place: '英格蘭各地／獄中', language: '英文', intro: '貴格會創始人福克斯致「真理之友」的四百餘封公函，多成於八次繫獄之中，教導靜默聚會、拒誓與和平見證。這批書信是無聖職教派賴以維繫的組織血脈，友會傳統至今誦讀不輟。' },
+          { title_zh: '瑪格麗特‧費爾書信', title_orig: 'Letters of Margaret Fell', author: '瑪格麗特‧費爾', era: '1652–1702', place: '斯沃斯莫爾莊園', language: '英文', intro: '「貴格會之母」費爾以斯沃斯莫爾莊園為運動樞紐，致各地聚會、國王與繫獄友人的書信數百封，並為婦女講道權著文辯護。她本人四度入獄而通信不絕，是十七世紀女性宗教領導力的最完整檔案。' }
+        
         ]
       },
       {
@@ -685,7 +707,83 @@ export const EARLY_MODERN_ERA: DazangEra = {
           { title_zh: '沙勿略書簡', title_orig: 'Epistolae S. Francisci Xaverii', author: '方濟‧沙勿略 (Francis Xavier)', era: '一五四〇年代至一五五二年', place: '印度果阿‧日本', language: '葡萄牙文‧拉丁文', intro: '耶穌會「東方使徒」沙勿略自印度、馬六甲、日本寄回歐洲的書簡。信中熱切報告東亞傳教的艱辛與盼望,描繪當地民情風俗,並籲求歐洲教會增派人手。其書簡傳誦一時,激起無數青年投身海外宣教,既是天主教近代海外傳教的開篇,也是歐洲認識東亞的早期重要文獻。' },
           { title_zh: '利瑪竇書信', title_orig: 'Opere storiche del P. Matteo Ricci', author: '利瑪竇 (Matteo Ricci)', era: '一五八〇年代至一六一〇年', place: '中國肇慶‧南京‧北京', language: '義大利文‧拉丁文', intro: '耶穌會士利瑪竇在華期間寄回歐洲的書信,詳述其學習漢語、結交士大夫、以學術傳教的「適應」策略,並記錄明末中國的政教風土。書信坦陳傳教的困頓與權宜,是理解利瑪竇路線與明末中西交流的核心史料,與其漢文著述互為表裡,影響後世耶穌會在華事業甚鉅。' },
           { title_zh: '中國書簡集', title_orig: 'Lettres édifiantes et curieuses, écrites des missions étrangères', author: '在華耶穌會士群', era: '一七〇二至一七七六年陸續刊行', place: '巴黎', language: '法文', intro: '法國耶穌會編刊的海外宣教書簡集,其中關於中國者尤為大宗。在華傳教士以書信詳述中國的政制、科學、曆算、禮俗與宗教,內容博洽。此集風行歐洲,既為傳教募資,也成為啟蒙時代歐人想像「中華帝國」的主要來源,深刻塑造了萊布尼茲、伏爾泰等人的中國觀。' },
-          { title_zh: '近代宣教士家書', title_orig: 'Letters and Journals of Protestant Missionaries', author: '近代新教宣教士群 (馬禮遜、克理 William Carey 等)', era: '十八世紀末至十九世紀', place: '中國‧印度‧南洋', language: '英文', intro: '近代新教宣教運動興起後,馬禮遜、克理等宣教士寄回母會與家人的書信日誌。信中既述異域傳教的孤苦與成果,也記錄當地語言、社會與信仰,並向母會報告需用、籲求代禱。這些家書多經宣教刊物刊布,既維繫差會與工場的聯繫,也激勵後繼者,是近代新教海外宣教的鮮活記錄。' }
+          { title_zh: '近代宣教士家書', title_orig: 'Letters and Journals of Protestant Missionaries', author: '近代新教宣教士群 (馬禮遜、克理 William Carey 等)', era: '十八世紀末至十九世紀', place: '中國‧印度‧南洋', language: '英文', intro: '近代新教宣教運動興起後,馬禮遜、克理等宣教士寄回母會與家人的書信日誌。信中既述異域傳教的孤苦與成果,也記錄當地語言、社會與信仰,並向母會報告需用、籲求代禱。這些家書多經宣教刊物刊布,既維繫差會與工場的聯繫,也激勵後繼者,是近代新教海外宣教的鮮活記錄。' },
+          { title_zh: '耶穌會日本年信', title_orig: 'Cartas que os padres e irmãos da Companhia de Jesus escreveram dos reynos de Japão', author: '在日耶穌會士群', era: '1549–1614', place: '日本諸口岸／歐洲刊行', language: '葡萄牙文／西班牙文', intro: '沙勿略以降在日耶穌會士的年度書信，報導大名改宗、信長秀吉政局與教會消長，於歐洲結集刊行而風靡一時。這批年信是歐洲認識日本的第一手管道，兼為日本戰國史與初期天主教史的核心史料。' },
+          { title_zh: '諾佈雷加巴西書簡', title_orig: 'Cartas do Brasil (Manuel da Nóbrega)', author: '曼努埃爾‧達‧諾佈雷加', era: '1549–1570', place: '巴伊亞／聖保羅', language: '葡萄牙文', intro: '首任巴西耶穌會省會長諾佈雷加的書簡，記原住民宣教、抗議殖民者奴役印第安人、創建聖保羅學院的始末。他與安謝塔同為巴西教會與城市的奠基人，這批信是南美宣教與殖民倫理之爭最早的文獻。' },
+          { title_zh: '範禮安巡閱使書信', title_orig: 'Cartas e escritos de Alessandro Valignano', author: '範禮安', era: '1573–1606', place: '果阿／澳門／日本', language: '義大利文／葡萄牙文', intro: '耶穌會東方巡閱使範禮安的書信與方策，定「文化適應」路線：令傳教士習日語華語、遣天正少年使節赴歐、命利瑪竇入華。其信是「適應主義」宣教戰略的決策檔案，東亞天主教史的總設計圖。' },
+          { title_zh: '白晉與萊布尼茲往來書信', title_orig: 'Correspondance Bouvet–Leibniz', author: '白晉／萊布尼茲', era: '1697–1707', place: '北京／漢諾威', language: '法文／拉丁文', intro: '康熙宮廷的耶穌會士白晉與哲學家萊布尼茲的通信，白晉以易經卦象附會二進位算術，萊布尼茲驚為先聖遺數。這組書信是中西哲學數學相遇最奇特的一章，「索隱派」漢學與歐洲中國熱的思想現場。' },
+          { title_zh: '巴多明致科學院書信', title_orig: 'Lettres du Père Parrenin à l\'Académie des Sciences', author: '巴多明', era: '1723–1740', place: '北京', language: '法文', intro: '耶穌會士巴多明自北京致法蘭西科學院的長信，報告滿文解剖學譯著、中國天文曆算與博物見聞，兼答杜赫德諸問。這批信展示在華傳教士充當中歐科學情報樞紐的角色，啟蒙時代「中國知識」的直接源頭。' },
+          { title_zh: '樊恩書信與備忘錄', title_orig: 'Letters and Memoranda of Henry Venn', author: '亨利‧樊恩', era: '1841–1872', place: '倫敦英行教會總部', language: '英文', intro: '英行教會總幹事樊恩三十年間致各工場的書信與政策備忘錄，提出教會當「自養、自治、自傳」而宣教士應功成身退的原則，並力挺克勞瑟出任非洲主教。三自原則自此成為宣教學的中心語彙，這批文書即其原始出處。' },
+          { title_zh: '賈德森夫婦緬甸書信', title_orig: 'Letters of Adoniram and Ann Judson', author: '賈德森與安‧賈德森', era: '1813–1850', place: '仰光／阿瓦', language: '英文', intro: '美國首批海外宣教士賈德森夫婦自緬甸的書信：緬文譯經、獄中之難與安氏營救丈夫的紀實，經教會報刊轉載而感動全美。安‧賈德森的書信尤開女性宣教書寫之先，是美國宣教運動的奠基敘事。' },
+          { title_zh: '利文斯敦書信集', title_orig: 'Letters of David Livingstone', author: '大衛‧利文斯敦', era: '1841–1873', place: '南非／中非', language: '英文', intro: '宣教探險家利文斯敦自非洲腹地的書信，揭露東非奴隸貿易慘狀並籲以「商業與基督教」根除之，致《紐約先驅報》信末「願上天豐厚祝福凡助癒此世界瘡口者」鐫於其西敏寺墓。這批信改變了歐美對非洲的道德視線。' },
+          { title_zh: '慕拉第書信', title_orig: 'Letters of Lottie Moon', author: '慕拉第', era: '1873–1912', place: '山東登州／平度', language: '英文', intro: '美南浸信會女宣教士慕拉第自山東的書信，力陳單身女性宣教的權利、抗議差會餉源枯竭，促成「聖誕奉獻」傳統。她饑荒中讓食至死，其書信塑造美南浸信會宣教文化逾百年，女性宣教史的豐碑。' },
+          { title_zh: '英諾肯提阿拉斯加書信', title_orig: 'Письма Иннокентия (Вениаминова)', author: '英諾肯提（韋尼阿米諾夫）', era: '1824–1868', place: '阿拉斯加／雅庫次克', language: '俄文', intro: '「美洲宗徒」英諾肯提自阿留申群島與西伯利亞的書信，記創製阿留申文字、乘皮舟巡島施洗與譯經始末，後任莫斯科都主教猶力主宣教本地化。這批信是正教宣教學的實踐檔案，阿拉斯加正教傳統的源頭。' },
+          { title_zh: '黃嗣永帛書', title_orig: '黃嗣永帛書', author: '黃嗣永', era: '1801', place: '朝鮮堤川', language: '漢文', intro: '辛酉教難中朝鮮教友黃嗣永以細字書於絹帛、擬送北京主教的萬言密信，詳述殉教實況並乞西方援手。帛書事洩而作者凌遲，原件輾轉入藏梵蒂岡。它是朝鮮天主教受難史最悲愴的文獻，東亞教案史的第一級史料。' },
+          { title_zh: '齊根巴爾格書信與哈勒報告', title_orig: 'Hallesche Berichte (Ziegenbalg)', author: '巴多羅買‧齊根巴爾格', era: '1706–1719', place: '特蘭克巴（南印度）', language: '德文', intro: '更正教史上第一位海外宣教士齊根巴爾格自丹屬特蘭克巴的書信，經哈勒敬虔派刊為連續報告，記泰米爾文譯經、印刷與與婆羅門的對話。這批報告開新教宣教期刊之先河，兼為歐洲印度學的早期泉源。' },
+          { title_zh: '克勞瑟主教書信', title_orig: 'Letters of Samuel Ajayi Crowther', author: '塞繆爾‧阿賈伊‧克勞瑟', era: '1841–1891', place: '尼日河流域／拉哥斯', language: '英文', intro: '約魯巴出身、獲救奴隸而成聖公會首位非洲主教的克勞瑟，其書信記尼日宣教、約魯巴文譯經與晚年遭歐洲少壯派奪權的屈辱。這批信是非洲人主導宣教的先聲及其挫敗的檔案，後殖民教會史的原點文獻。' },
+          { title_zh: '摩拉維亞宣教書信集', title_orig: 'Briefe der Herrnhuter Missionare', author: '赫恩胡特宣教士群', era: '1732–1800 年代', place: '格陵蘭／加勒比／南非', language: '德文', intro: '摩拉維亞弟兄會自一七三二年遣使加勒比奴隸與格陵蘭因紐特人起，宣教士書信經《社區報導》流通各聚會。有宣教士自願賣身入蔗園與奴同工，這批信是近代新教宣教運動真正的第一批田野文獻。' },
+          { title_zh: '坎皮恩勇敢宣言', title_orig: 'Campion\'s Brag (Challenge to the Privy Council)', author: '埃德蒙‧坎皮恩', era: '1580', place: '倫敦（地下）', language: '英文', intro: '耶穌會士坎皮恩潛回新教英格蘭前留下的自白書，聲明此行「唯關靈魂之事」、願與樞密院公開辯道，文氣慷慨如檄。宣言地下傳抄震動朝野，作者翌年車裂殉道，此文遂成英格蘭天主教地下時代的精神旗幟。' },
+          { title_zh: '艾略特印第安宣教書信', title_orig: 'The Eliot Indian Tracts', author: '約翰‧艾略特', era: '1643–1671', place: '麻薩諸塞', language: '英文', intro: '「印第安人使徒」艾略特致英格蘭資助者的系列書信報告，記阿爾岡昆語譯經、「祈禱鎮」建設與原住民信徒問道實錄。這批小冊催生史上第一個宣教差會（新英格蘭福音傳播公司），北美宣教文獻的起點。' },
+          { title_zh: '夸克海岸角書信', title_orig: 'Letters of Philip Quaque', author: '菲利普‧夸克', era: '1766–1811', place: '黃金海岸海岸角城堡', language: '英文', intro: '芳蒂族出身、英國聖公會首位非洲按立司鐸夸克，自黃金海岸奴隸堡壘任隨軍牧師五十年的書信，向倫敦報告在奴隸貿易陰影下傳道的孤絕與掙扎。這批信是十八世紀非洲聖職者處境的獨一無二自述。' },
+          { title_zh: '馬廷書信集', title_orig: 'Letters of Henry Martyn', author: '亨利‧馬廷', era: '1806–1812', place: '印度／波斯', language: '英文', intro: '劍橋數學狀元出身的馬廷放棄前程赴印度，六年間譯成烏爾都語、波斯語新約，書信與日記記「願為神燃盡」的心志，三十一歲客死土耳其途中。其書信經傳記流傳，成為十九世紀宣教獻身精神的象徵文本。' }
+        
+        ]
+      },
+      {
+        key: 'spiritual-letters',
+        label: '靈修尺牘部',
+        label_en: 'Spiritual Letters',
+        desc: '近代天主教、新教與東正教的靈修指導書信——自依納爵、大德蘭至盧瑟福、提阿凡的屬靈通信傳統。',
+        works: [
+          { title_zh: '依納爵羅耀拉書信集', title_orig: 'Epistolae S. Ignatii de Loyola', author: '依納爵‧羅耀拉', era: '1524–1556', place: '羅馬', language: '西班牙文／拉丁文', intro: '耶穌會創始人依納爵存世書信近七千件，自羅馬總會所調度全球初創的傳教網絡，兼致貴婦與會士的靈修指導，「凡事為愈顯主榮」貫串其間。這批信是近代最大修會的創業檔案與依納爵靈修的實踐註腳。' },
+          { title_zh: '鮑榮茂牧函與書信', title_orig: 'Epistolae S. Caroli Borromaei', author: '嘉祿‧鮑榮茂', era: '1560–1584', place: '米蘭', language: '義大利文／拉丁文', intro: '米蘭總主教鮑榮茂推行特倫託改革的牧函與書信，鉅細靡遺規劃堂區探訪、修院教育與瘟疫救濟，大疫中親率教士入疫區。這批文書是「特倫託模範主教」治理教區的完整樣本，近代天主教牧靈制度的原型。' },
+          { title_zh: '文生‧德‧保祿書信集', title_orig: 'Correspondance de S. Vincent de Paul', author: '文生‧德‧保祿', era: '1607–1660', place: '巴黎', language: '法文', intro: '「慈善使徒」文生存世書信三萬餘件，調度遣使會與仁愛女修會的濟貧網絡：棄嬰、囚犯、戰災難民無所不及，事無鉅細皆以柔和之筆處置。這批信是十七世紀法國慈善革命的日常檔案，行動靈修的第一文獻。' },
+          { title_zh: '露薏絲‧德‧馬裡亞克書信', title_orig: 'Lettres de Louise de Marillac', author: '露薏絲‧德‧馬裡亞克', era: '1626–1660', place: '巴黎', language: '法文', intro: '仁愛女修會共同創始人露薏絲致各地姊妹的書信，指導首個走出隱院、入戶服務窮人的女修會如何在街巷間持守祈禱。與文生的通信互為表裡，這批信是女性主動修會誕生的第一手紀錄。' },
+          { title_zh: '大德蘭書信集', title_orig: 'Epistolario de Santa Teresa de Jesús', author: '亞維拉的德蘭', era: '1561–1582', place: '亞維拉／各創院途中', language: '西班牙文', intro: '大德蘭存世書信四百餘封，奔走十七座革新隱院之間，與國王、省會長、女兒們周旋院務、笑談病痛、密授祈禱。文筆機敏潑辣如其人，與其密契著作互補，呈現改革者兼密契者的血肉日常。' },
+          { title_zh: '十字若望靈修書信', title_orig: 'Cartas de San Juan de la Cruz', author: '十字若望', era: '1581–1591', place: '格拉納達／塞哥維亞', language: '西班牙文', intro: '十字若望存世書信僅三十餘封，多致加爾默羅會修女，以「黑夜」與「一無所有」的語言撫慰靈魂的枯乾。臨終前遭會內整肅而信件多被焚毀，殘存者字字如金，是其密契神學最親切的註腳。' },
+          { title_zh: '沙雷氏靈修書信集', title_orig: 'Lettres spirituelles de S. François de Sales', author: '方濟‧沙雷氏', era: '1593–1622', place: '安錫', language: '法文', intro: '沙雷氏存世書信數千封，大半為靈修指導，以溫柔的常識引導貴婦、修女與市民在各自身分中愛慕天主。《入德之門》即自書信增訂而成，這批信是「溫良靈修」傳統的活水源頭，靈修指導文學的典範。' },
+          { title_zh: '尚達爾夫人書信集', title_orig: 'Lettres de S. Jeanne de Chantal', author: '尚達爾的珍妮', era: '1610–1641', place: '安錫／各聖母訪親會院', language: '法文', intro: '寡居男爵夫人尚達爾與沙雷氏共創聖母訪親會，晚年獨力治理八十餘院，致各院姊妹的書信教導「除了愛，別無所求」的單純祈禱。她親歷喪夫喪子喪師的暗夜，書信中的堅忍溫柔是女性靈修領導的高峰文獻。' },
+          { title_zh: '芬乃倫靈修書信集', title_orig: 'Lettres spirituelles de Fénelon', author: '弗朗索瓦‧芬乃倫', era: '1689–1715', place: '凡爾賽／康佈雷', language: '法文', intro: '康佈雷總主教芬乃倫致宮廷男女的靈修書信，以外科醫生般的精準剖露自愛的千般偽裝，導向純粹之愛。他因護蓋恩夫人失寵遭貶而風骨不改，書信集跨越教派為衛斯理等新教領袖珍愛，法語靈修散文的絕品。' },
+          { title_zh: '考薩德靈修書信', title_orig: 'Lettres spirituelles (L\'Abandon à la providence divine)', author: '讓-皮埃爾‧德‧考薩德', era: '1731–1740', place: '南錫', language: '法文', intro: '耶穌會士考薩德致訪親會修女的靈修書信，教導「當下時刻的聖事」——在每一刻的本分與際遇中領受天主。書信身後百餘年方輯刊為《委順於天主聖意》，遂成近代天主教靈修最受愛讀的小書之一。' },
+          { title_zh: '貝魯爾書信集', title_orig: 'Correspondance du cardinal de Bérulle', author: '皮埃爾‧德‧貝魯爾', era: '1600–1629', place: '巴黎', language: '法文', intro: '法蘭西奧拉託利會創始人貝魯爾樞機的書信，推動「法蘭西學派」以降生聖言為中心的司鐸靈修，兼涉迎加爾默羅會入法與宮廷政務。這批信是十七世紀法國靈修復興的樞紐檔案，近代司鐸培育神學的源頭。' },
+          { title_zh: '安傑莉克‧阿爾諾書信', title_orig: 'Lettres de la Mère Angélique Arnauld', author: '安傑莉克‧阿爾諾', era: '1620–1661', place: '波爾-羅亞爾修道院', language: '法文', intro: '波爾-羅亞爾女院長安傑莉克十一歲領院、十七歲厲行改革，其書信記修院革新與楊森派風暴中的堅持，「純潔如天使、驕傲如魔鬼」之譏正見其剛烈。這批信是法國十七世紀女性修道自主與良心抗爭的核心文獻。' },
+          { title_zh: '盧瑟福書信集', title_orig: 'Letters of Samuel Rutherford', author: '塞繆爾‧盧瑟福', era: '1636–1661', place: '亞伯丁（流放中）／聖安德魯斯', language: '英文', intro: '蘇格蘭盟約派神學家盧瑟福被禁講道流放期間致教區信徒的書信，以熾烈的婚愛意象詠慕基督，「我浸在祂的愛中如魚在水」。司布真譽為「僅次於聖經最接近天堂的書」，清教靈修文學的最高峰。' },
+          { title_zh: '牛頓心聲書信集', title_orig: 'Cardiphonia (John Newton)', author: '約翰‧牛頓', era: '1780', place: '倫敦／奧爾尼', language: '英文', intro: '前奴船船長、〈奇異恩典〉作者牛頓的靈修書信集《心聲》，以過來人的坦率輔導掙扎中的信徒，兼與威伯福斯通信堅其廢奴之志。書信平實如談心，是福音派靈修輔導文學的典範之作。' },
+          { title_zh: '衛斯理書信集', title_orig: 'Letters of John Wesley', author: '約翰‧衛斯理', era: '1735–1791', place: '倫敦／巡迴各地', language: '英文', intro: '衛斯理五十年馬背生涯中的書信數千封，調度循道會社、指導平信徒傳道人、臨終前勉威伯福斯抗擊奴隸制「直到它消滅」。這批信是循道運動的組織神經與屬靈日誌，十八世紀福音復興的總檔案。' },
+          { title_zh: '懷特腓書信集', title_orig: 'Letters of George Whitefield', author: '喬治‧懷特腓', era: '1734–1770', place: '英美兩洲巡迴', language: '英文', intro: '大覺醒佈道家懷特腓橫渡大西洋十三次，其書信聯絡英美復興網絡、與衛斯理論辯預定而終存弟兄之情。書信與其日誌同為跨大西洋福音主義成形的第一手文獻，佈道家內心世界的直接紀錄。' },
+          { title_zh: '蘇珊娜‧衛斯理書信', title_orig: 'Letters of Susanna Wesley', author: '蘇珊娜‧衛斯理', era: '1709–1742', place: '愛普沃斯', language: '英文', intro: '衛斯理兄弟之母蘇珊娜致子女的書信，詳述其家庭教育法與每週逐一約談兒女的屬靈指導，約翰的「循規蹈矩」精神即其家學。這批信使她被尊為「循道會之母」，母職靈修與教育史的經典文獻。' },
+          { title_zh: '施本爾神學諮議書信', title_orig: 'Theologische Bedencken', author: '菲利普‧雅各‧施本爾', era: '1700–1705 輯刊', place: '柏林', language: '德文', intro: '敬虔主義之父施本爾晚年輯刊的神學諮議書信四卷，answering 各地牧者信徒的良心疑難，把《敬虔願望》的綱領化為個案指導。這批信展示敬虔運動以書信網絡重塑德國教會的實際運作。' },
+          { title_zh: '法蘭克哈勒書信', title_orig: 'Briefe August Hermann Franckes', author: '奧古斯特‧赫爾曼‧法蘭克', era: '1692–1727', place: '哈勒', language: '德文', intro: '哈勒敬虔派領袖法蘭克的書信，聯絡孤兒院、聖經社與丹麥-哈勒差會的全球網絡，通信遠及倫敦、莫斯科與特蘭克巴。這批信是敬虔主義「以機構改造世界」藍圖的檔案，近代新教慈善與宣教事業的母體。' },
+          { title_zh: '麥克謙書信集', title_orig: 'Letters of Robert Murray M\'Cheyne', author: '羅伯特‧莫瑞‧麥克謙', era: '1836–1843', place: '丹地', language: '英文', intro: '蘇格蘭牧者麥克謙廿九歲早逝，其書信以聖潔的迫切勸勉會眾「按你所是的來到基督面前」，與其讀經曆並傳。身後《紀念集》風行英語世界，這批信是十九世紀福音派靈修的醇正標本。' },
+          { title_zh: '提阿凡隱士書信集', title_orig: 'Письма Феофана Затворника', author: '隱士提阿凡', era: '1866–1894', place: '維沙隱修院', language: '俄文', intro: '俄國主教提阿凡退隱維沙廿八年，以書信指導各地信徒的祈禱與日常成聖，存世數千封，兼譯《慕善集》為俄文。這批信把愛索斯的心禱傳統化為平信徒可行的家常功課，十九世紀俄國靈修的最大寶庫。' },
+          { title_zh: '奧普提納安博長老書信', title_orig: 'Письма Оптинского старца Амвросия', author: '奧普提納的安博', era: '1860–1891', place: '奧普提納隱修院', language: '俄文', intro: '奧普提納長老安博臥病斗室而日接百函，以諧語與洞見答俗人修士的萬般疑難，杜思妥也夫斯基筆下的佐西馬長老即以他為原型。這批書信是俄國長老制度（starchestvo）牧養智慧的第一手結集。' }
+        
+        ]
+      },
+      {
+        key: 'scholars-controversy',
+        label: '學者論戰與公共書信部',
+        label_en: 'Scholarly and Public Letters',
+        desc: '人文學者、科學家與公共人物以書信進行的信仰論辯——自伊拉斯謨、帕斯卡至紐曼、徐光啟。',
+        works: [
+          { title_zh: '伊拉斯謨書信集', title_orig: 'Opus Epistolarum Erasmi', author: '德西德里烏斯‧伊拉斯謨', era: '1484–1536', place: '鹿特丹／巴塞爾等地', language: '拉丁文', intro: '人文主義王者伊拉斯謨存世書信三千餘封，與君王、教宗、改革家與學者通問，儼然「文人共和國」的通訊總部。書信兼具文章典範與時代實錄，其於路德事件中的迂迴自持尤為思想史聚訟之點。' },
+          { title_zh: '莫爾獄中書信', title_orig: 'Prison Letters of Thomas More', author: '託馬斯‧莫爾', era: '1534–1535', place: '倫敦塔', language: '英文', intro: '《烏託邦》作者莫爾拒認王上為教會元首而繫獄倫敦塔，以炭條寫給愛女瑪格麗特的訣別書信，論良心不可讓渡、笑談死亡如歸。這批信是良心自由史的最高文獻，「國王的好僕人，但首先是上帝的」之語千古迴響。' },
+          { title_zh: '致外省人書', title_orig: 'Les Provinciales', author: '布萊茲‧帕斯卡', era: '1656–1657', place: '巴黎（匿名刊行）', language: '法文', intro: '帕斯卡為楊森派辯護、以假託外省友人的十八封公開信譏刺耶穌會決疑論，機鋒諧趣使全巴黎爭誦。書信雖被列入禁書而文體革命已成，法語散文自此有了現代的明快，宗教論戰文學的不朽傑作。' },
+          { title_zh: '波舒哀與萊布尼茲教會合一通信', title_orig: 'Correspondance Bossuet–Leibniz sur la réunion des Églises', author: '波舒哀／萊布尼茲', era: '1691–1702', place: '巴黎／漢諾威', language: '法文／拉丁文', intro: '天主教雄辯家波舒哀與哲學家萊布尼茲就新舊教會復合的十年通信，逐條磋商特倫託教令的可讓與不可讓，終因「教會不可錯」一關而決裂。這組信是近代最認真的一次合一談判，普世運動的先驅檔案。' },
+          { title_zh: '牛頓與本特利論神書信', title_orig: 'Four Letters from Sir Isaac Newton to Doctor Bentley', author: '以撒‧牛頓', era: '1692–1693', place: '劍橋', language: '英文', intro: '本特利據《原理》預備波義耳講座護教講道，牛頓覆以四函，申明重力體系「非出於盲目自然，必有智慧全能者設計」。這組書信是牛頓親筆的自然神學表白，科學革命與護教學聯盟的奠基文本。' },
+          { title_zh: '伽利略致克莉絲蒂娜夫人書', title_orig: 'Lettera a Madama Cristina di Lorena', author: '伽利略‧伽利萊', era: '1615', place: '佛羅倫斯', language: '義大利文', intro: '伽利略致托斯卡納大公夫人的長信，申論「聖經教人如何上天堂，不教人天如何運行」，主張經文詮釋當讓位於已證明的自然真理。此信是科學與聖經詮釋關係的元典文本，四百年後仍是相關討論的起點。' },
+          { title_zh: '紐曼致諾福克公爵書', title_orig: 'A Letter Addressed to the Duke of Norfolk', author: '約翰‧亨利‧紐曼', era: '1875', place: '伯明罕', language: '英文', intro: '格萊斯頓抨擊教宗不可錯誤論使天主教徒不能效忠國家，紐曼以致諾福克公爵公開信作答，界定不可錯誤的範圍並申言「先敬良心，後敬教宗」。此信是良心與教會權威關係最精緻的近代論述，梵二良心論的先聲。' },
+          { title_zh: '果戈裡與友人書簡選', title_orig: 'Выбранные места из переписки с друзьями', author: '尼古拉‧果戈裡', era: '1847', place: '聖彼得堡刊行', language: '俄文', intro: '《死魂靈》作者果戈裡晚年刊行的書信選，宣講東正教的俄羅斯使命與靈魂改造，別林斯基以著名公開信痛斥其背叛啟蒙。這場書信論戰撕開俄國思想界「信仰與西化」的百年裂縫，杜思妥也夫斯基的問題意識由此而出。' },
+          { title_zh: '徐光啟辨學章疏', title_orig: '辨學章疏', author: '徐光啟', era: '1616', place: '北京', language: '漢文', intro: '南京教案起，禮部侍郎徐光啟冒斥逐之險上疏為天主教辯，申言其教「事天愛人」可補儒佛、願以身家保西士無他，並倡「以西法佐曆」。此疏是中國士大夫公開衛教的第一文，儒家基督徒身分的奠基文獻。' },
+          { title_zh: '拉瓦特爾與門德爾松論戰書信', title_orig: 'Lavater–Mendelssohn Briefwechsel', author: '約翰‧拉瓦特爾／摩西‧門德爾松', era: '1769–1770', place: '蘇黎世／柏林', language: '德文', intro: '蘇黎世牧師拉瓦特爾公開致函猶太哲學家門德爾松，迫其駁斥基督教或受洗；門德爾松以尊嚴與剋制答之，申明忠於祖傳信仰與理性寬容。這組書信震動啟蒙歐洲，是猶太解放與宗教寬容論爭的標誌事件。' },
+          { title_zh: '施萊爾馬赫致呂克書信', title_orig: 'Sendschreiben an Lücke', author: '弗里德里希‧施萊爾馬赫', era: '1829', place: '柏林', language: '德文', intro: '施萊爾馬赫就《信仰論》再版致友人呂克的兩封公開信，自陳如何在近代科學與歷史批判中重述信仰，「難道基督教要與野蠻共存亡？」。此信是現代神學方法論的自我告白，理解其體系的最佳門徑。' },
+          { title_zh: '朗塞與馬比雍論修道學問書信', title_orig: 'Controverse Rancé–Mabillon', author: '德‧朗塞／讓‧馬比雍', era: '1691–1693', place: '特拉普／巴黎', language: '法文', intro: '特拉普改革者朗塞主張修士當勞動苦修、不當治學，馬比雍以《修道研究論》溫文答辯，申明學問亦是祈禱。這場君子之爭界定了修道生活中苦行與學術的張力，本篤傳統自我理解的經典交鋒。' },
+          { title_zh: '盧卡里斯書信集', title_orig: 'Epistolae Cyrilli Lucaris', author: '基裡羅斯‧盧卡里斯', era: '1602–1638', place: '君士坦丁堡／亞歷山卓', language: '希臘文／拉丁文', intro: '君士坦丁堡宗主教盧卡里斯與坎特伯裡、日內瓦及荷蘭改革宗的通信，贈英王亞歷山卓抄本、遣士子留學西歐，終遭鄂圖曼絞殺。其加爾文化的信仰告白掀起正教百年風暴，這批信是正教與新教相遇最深的一次檔案。' },
+          { title_zh: '奧科姆書信', title_orig: 'Letters of Samson Occom', author: '參孫‧奧科姆', era: '1765–1792', place: '新英格蘭／倫敦', language: '英文', intro: '莫希幹族牧師奧科姆為印第安慈善學校赴英募款的書信，及發現善款轉建達特茅斯學院而背棄原住民後的抗議文字。他是北美原住民首位按立牧師與出版作家，書信是原住民基督徒自我發聲的開端文獻。' },
+          { title_zh: '惠特利書信', title_orig: 'Letters of Phillis Wheatley', author: '菲利斯‧惠特利', era: '1770–1784', place: '波士頓', language: '英文', intro: '非洲出生、七歲被販為奴的詩人惠特利致奧科姆論自由的書信名篇：「每個人心中都植有對自由的原則性渴望」，以福音邏輯直刺蓄奴的偽善。她是美國第一位出版著作的非裔作者，書信是黑人神學傳統的晨星。' },
+          { title_zh: '漢娜‧莫爾書信集', title_orig: 'Letters of Hannah More', author: '漢娜‧莫爾', era: '1774–1833', place: '布里斯托一帶', language: '英文', intro: '劇作家出身的福音派作家漢娜‧莫爾與克拉朋聯盟同道的往來書信，記其創辦貧童主日學校、以廉價道德小冊對抗激進思潮並襄助廢奴運動。她是十八世紀末英國最具影響力的女性公共知識分子，書信集是福音派社會改革網絡的女性視角檔案。' },
+          { title_zh: '格里姆凱論兩性平等書信', title_orig: 'Letters on the Equality of the Sexes', author: '莎拉‧格里姆凱', era: '1838', place: '波士頓', language: '英文', intro: '南方蓄奴世家出身的貴格會廢奴者莎拉‧格里姆凱以聖經論證兩性受造平等的公開書信集，直言「男人握著聖經誤譯的權柄」。本書是以釋經爭女權的第一部系統著作，基督教女性主義的奠基文獻。' }
+        
         ]
       },
       {
@@ -696,7 +794,21 @@ export const EARLY_MODERN_ERA: DazangEra = {
         works: [
           { title_zh: '主的羔羊', title_orig: 'Unigenitus Dei Filius', author: '教宗克勉十一世 (Clemens PP. XI)', era: '一七一三年', place: '羅馬', language: '拉丁文', intro: '教宗克勉十一世頒行的詔書,譴責楊森派神學家奎內爾 (Pasquier Quesnel) 著作中一〇一條命題,涉及恩寵、得救與閱讀聖經等爭議。此詔在法國引發長達數十年的楊森派之爭,撕裂教會與王室,牽動高盧主義與教廷權威之辯,是近代天主教內部最重大的教義紛爭之一,影響法國宗教政局至深。', link: '/encyclicals' },
           { title_zh: '上主的牧者', title_orig: 'Dominus ac Redemptor', author: '教宗克勉十四世 (Clemens PP. XIV)', era: '一七七三年', place: '羅馬', language: '拉丁文', intro: '教宗克勉十四世迫於歐洲諸天主教王室壓力而頒的詔書,下令解散耶穌會。此舉終結了該會二百餘年的全球事業,海外傳教與教育網絡為之中斷,中國禮儀之爭後本已受挫的在華傳教更形凋零。直至一八一四年方由庇護七世復會,此詔成為近代天主教史上最具爭議的決定之一。', link: '/encyclicals' },
-          { title_zh: '永恆之父', title_orig: 'Aeterni Patris', author: '教宗良十三世 (Leo PP. XIII)', era: '一八七九年', place: '羅馬', language: '拉丁文', intro: '教宗良十三世頒行的通諭,號召復興聖多瑪斯‧阿奎那的士林哲學,以為信仰與理性、教會與近代學術對話的根基。此諭開啟了新士林主義 (新多瑪斯主義) 的興盛,深刻塑造了二十世紀天主教的哲學與神學教育,是近代教廷回應理性主義與世俗思潮的關鍵文獻。', link: '/encyclicals' }
+          { title_zh: '永恆之父', title_orig: 'Aeterni Patris', author: '教宗良十三世 (Leo PP. XIII)', era: '一八七九年', place: '羅馬', language: '拉丁文', intro: '教宗良十三世頒行的通諭,號召復興聖多瑪斯‧阿奎那的士林哲學,以為信仰與理性、教會與近代學術對話的根基。此諭開啟了新士林主義 (新多瑪斯主義) 的興盛,深刻塑造了二十世紀天主教的哲學與神學教育,是近代教廷回應理性主義與世俗思潮的關鍵文獻。', link: '/encyclicals' },
+          { title_zh: '主啊，興起詔書', title_orig: 'Exsurge Domine', author: '教宗良十世', era: '1520', place: '羅馬', language: '拉丁文', intro: '良十世限令路德六十日內撤回四十一條主張的詔書，開篇引詩篇「主啊，興起，野豬闖入你的葡萄園」。路德當眾焚之於維滕堡城門，決裂遂不可逆。此詔是宗教改革分水嶺的官方文本，教廷面對改革的第一份正式回應。' },
+          { title_zh: '御於至尊詔書', title_orig: 'Regnans in Excelsis', author: '教宗庇護五世', era: '1570', place: '羅馬', language: '拉丁文', intro: '庇護五世絕罰伊莉莎白一世並解除其臣民效忠的詔書，反使英格蘭天主教徒盡蒙叛國之嫌，迫害驟烈。此詔為教宗廢立權的最後一次實際行使，其適得其反的後果成為政教關係史的經典教訓。' },
+          { title_zh: '禮儀之爭教廷禁約', title_orig: 'Ex illa die / Ex quo singulari', author: '克萊孟十一世／本篤十四世', era: '1715／1742', place: '羅馬', language: '拉丁文', intro: '教廷就中國禮儀之爭頒布的兩道禁約，斷禁教友祭祖祀孔，康熙批「以後不必西洋人在中國行教」，雍正繼以禁教。兩詔終結耶穌會適應路線，中西相遇的百年窗口就此關閉，直至一九三九年方告解除。' },
+          { title_zh: '論法蘭西教士民事組織詔書', title_orig: 'Charitas (quae)', author: '教宗庇護六世', era: '1791', place: '羅馬', language: '拉丁文', intro: '庇護六世譴責法國大革命《教士民事組織法》及宣誓教士的詔書，斷其祝聖為「褻聖」，法國教會遂裂為宣誓與拒誓兩半。此詔開啟教廷與革命現代性的百年對峙，亦預告教宗本人被擄客死的命運。' },
+          { title_zh: '汝等驚異通諭', title_orig: 'Mirari Vos', author: '教宗額我略十六世', era: '1832', place: '羅馬', language: '拉丁文', intro: '額我略十六世駁斥拉梅內派「自由天主教」的通諭，斥良心自由為「瘋話」、出版自由為毒泉。拉梅內遂棄教而去。此諭是十九世紀教廷對自由主義的第一聲斷喝，其立場至梵二《信仰自由宣言》方告翻轉。' },
+          { title_zh: '何等關懷通諭與謬說要錄', title_orig: 'Quanta Cura et Syllabus Errorum', author: '教宗庇護九世', era: '1864', place: '羅馬', language: '拉丁文', intro: '庇護九世頒布通諭並附八十條《謬說要錄》，總斥理性主義、政教分離與「教宗應與進步、自由主義及現代文明和解」之說。歐洲輿論譁然，本篤文件是「圍城心態」天主教的紀念碑，梵一權威路線的前奏。' },
+          { title_zh: '不可言喻的天主詔書', title_orig: 'Ineffabilis Deus', author: '教宗庇護九世', era: '1854', place: '羅馬', language: '拉丁文', intro: '庇護九世欽定聖母無染原罪為信理的詔書，為教宗首度不經大公會議獨自定斷信理，四年後露德顯現自稱「無原罪者」更添聲勢。此詔是聖母敬禮與教宗權威同步登頂的文本，直接預備了梵一的不可錯誤論。' },
+          { title_zh: '上智天主通諭', title_orig: 'Providentissimus Deus', author: '教宗良十三世', era: '1893', place: '羅馬', language: '拉丁文', intro: '良十三世論聖經研究的通諭，鼓勵原文與東方學訓練以應對高等批判，同時重申默感無誤。它是教廷正面回應近代聖經學的第一份大憲章，梵二《啟示憲章》的百年伏線，天主教聖經運動皆溯源於此。' },
+          { title_zh: '聖神恩賜通諭', title_orig: 'Divinum Illud Munus', author: '教宗良十三世', era: '1897', place: '羅馬', language: '拉丁文', intro: '良十三世論聖神在教會與靈魂中工作的通諭，籲全教會每年聖神降臨節前作九日敬禮。適值靈恩復興前夜，此諭被視為天主教聖神神學復甦的先聲，二十世紀「聖神的世紀」的官方序曲。' },
+          { title_zh: '東方教會尊嚴通諭', title_orig: 'Orientalium Dignitas', author: '教宗良十三世', era: '1894', place: '羅馬', language: '拉丁文', intro: '良十三世保障東方禮天主教會禮儀與法統的通諭，嚴禁拉丁傳教士誘使東方信徒改禮。它扭轉數百年拉丁化政策，宣認東方傳統為普世教會的瑰寶，是近代教廷東方政策的轉捩文件與合一運動的遠因。' },
+          { title_zh: '傳信部致代牧訓令', title_orig: 'Instructio Vicariorum Apostolicorum (1659)', author: '教廷傳信部', era: '1659', place: '羅馬', language: '拉丁文', intro: '傳信部致首批赴東亞宗座代牧的訓令，明言「勿移植歐洲風俗，唯傳信仰」，尊重各民族禮俗除非顯悖信德。此文為教廷本地化政策最開明的表述，與其後禮儀之爭的禁令對照如兩個教會，宣教學史的必讀文獻。' },
+          { title_zh: '眾教會之關懷詔書', title_orig: 'Sollicitudo omnium ecclesiarum', author: '教宗庇護七世', era: '1814', place: '羅馬', language: '拉丁文', intro: '拿破崙覆亡之年，庇護七世頒詔恢復被解散四十一年的耶穌會，稱船遇風暴豈可拒斥老練槳手。流亡歸來的教宗以此詔重整教會元氣，耶穌會旋即重返教育與宣教前線，是復闢時代天主教復興的標誌文件。' }
+        
+        
         ]
       }
     ]
