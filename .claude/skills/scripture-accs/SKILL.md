@@ -89,7 +89,10 @@ python scripts/ingest_accs_genesis.py \
 > **deu ⏳ 0 列，未開始**——排程已重新啟用（Ready），會跳過出/利/民、等 Sonnet 5h 窗回血後自動跑申命記（Gemini 4 key credit **永久乾**，deu 只能靠 Sonnet）。
 > — num 收尾始末：7/01 退避空 checkpoint 後由排程 Sonnet 逐頁重 OCR 至 95/96；最後 p.379 卡在 Sonnet 額度牆（Gemini 亦乾）。**由 Claude 直接判讀該頁**補 3 則（19:9 居普良《書信集》、19:11-22 概述、19:15 帕特留《解釋舊約與新約》）＋接回 p.378 ref 19:2（比德）跨頁截斷續文，手工寫進 checkpoint 正確頁序後 `--resume`（0 頁待 OCR）走 parser upsert + 寫 `.done`。
 > **根因已修 ✅（2026-07-03）**：`ocr_batch_claude` 兩條「吞失敗成空頁」路徑已改 raise——(a) 非零退出即使 blob 不含 `rate_limit` 字串也 raise（不再 `return []`）；(b) 無 success result event（回應截斷）也 raise。只有模型明確回空陣列才記空頁。這就是 7/01 num 全空 & 7/03 deu 26–32 章 26 頁被誤記空頁的元凶。
-> **deu 重 OCR 中（2026-07-03）**：deu 首輪假 `.done`（161 列但缺 2,3,26–32 章＝p.491–516 等 38 頁被誤記空）。已丟掉 38 空頁記錄＋刪 `.done`，背景迴圈 `c:/tmp/accs_deu_reocr.sh`（Sonnet）重 OCR 中；排程 `ACCS_OTIII_Resume` 暫時 Disabled 避免並行，deu 完成後記得重新 Enable（或本卷全完成就維持 Disabled）。
+> **✅ ACCS OT III 四書全數 OCR 完成（2026-07-03）**：exo 710 / lev 53 / num 271 / **deu 262** 列，全 `.done`，排程 `ACCS_OTIII_Resume` 已 **Disabled**（本卷收工慣例）。deu 空 body 0、章 1+4–34 齊（2–3 章 ACCS 本來沒收，p433 版面即從 1:31 跳 4:10，屬正常，比照 Genesis 缺 ch36）。
+> — deu 收尾插曲：首輪假 `.done`（缺 26–32 章 26 頁被誤記空頁）→ 改根因 code 後重 OCR 補回 91/94；最後 3 頁（460/499/506）Sonnet Vision 額度乾，其中 460+506 由 Claude 直接判讀補（12:28 羅馬的革利免/12:32 十二使徒遺訓/13:3 萊林斯的萬桑；31:6 奧古斯丁/31:30 利米西亞納的尼塞塔/32:1 帕特留）＋接回 p459(12:3 奧古斯丁)、p505(概述) 兩處跨頁續尾，`--resume` 寫 `.done`。
+>
+> **📌 num＋deu 兩卷待收尾（user 指定一起做）**：①教父譯名同一人多寫法收斂（num: 安波羅修/安博、特土良/特士良、拿先斯的格列高里/納西盎的貴格利、塞普勒斯的狄奧多勒/狄奧多雷＋雜訊 3 筆；deu 亦需掃一次）；②跨頁截斷續文併回＋blank/null father 救援（含 deu p461 萊林斯的萬桑 tail father 空、12:32 十二使徒遺訓匿名等），比照 Genesis「續行併入」。
 >
 > **📌 num 待收尾（user 2026-07-02 指定「之後跟 deu 一起做」）**——7/02 抽查（p.339 內容全對、36 章齊、空 body/father 0）發現兩類：
 > **①教父譯名同一人多寫法要收斂**（對齊 `/translation-glossary` 主譯再 UPDATE）：安波羅修/安博(Ambrose)、特土良/特士良(Tertullian)、拿先斯的格列高里/納西盎的貴格利(Naz. Gregory)、塞普勒斯的狄奧多勒/狄奧多雷(Theodoret)；另 father 欄雜訊 3 筆（「託區利羅名作品」「八經註釋集萃」「多儒」＝疑截斷自迦修多儒）。
