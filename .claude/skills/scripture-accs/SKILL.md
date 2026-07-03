@@ -92,7 +92,12 @@ python scripts/ingest_accs_genesis.py \
 > **✅ ACCS OT III 四書全數 OCR 完成（2026-07-03）**：exo 710 / lev 53 / num 271 / **deu 262** 列，全 `.done`，排程 `ACCS_OTIII_Resume` 已 **Disabled**（本卷收工慣例）。deu 空 body 0、章 1+4–34 齊（2–3 章 ACCS 本來沒收，p433 版面即從 1:31 跳 4:10，屬正常，比照 Genesis 缺 ch36）。
 > — deu 收尾插曲：首輪假 `.done`（缺 26–32 章 26 頁被誤記空頁）→ 改根因 code 後重 OCR 補回 91/94；最後 3 頁（460/499/506）Sonnet Vision 額度乾，其中 460+506 由 Claude 直接判讀補（12:28 羅馬的革利免/12:32 十二使徒遺訓/13:3 萊林斯的萬桑；31:6 奧古斯丁/31:30 利米西亞納的尼塞塔/32:1 帕特留）＋接回 p459(12:3 奧古斯丁)、p505(概述) 兩處跨頁續尾，`--resume` 寫 `.done`。
 >
-> **📌 num＋deu 兩卷待收尾（user 指定一起做）**：①教父譯名同一人多寫法收斂（num: 安波羅修/安博、特土良/特士良、拿先斯的格列高里/納西盎的貴格利、塞普勒斯的狄奧多勒/狄奧多雷＋雜訊 3 筆；deu 亦需掃一次）；②跨頁截斷續文併回＋blank/null father 救援（含 deu p461 萊林斯的萬桑 tail father 空、12:32 十二使徒遺訓匿名等），比照 Genesis「續行併入」。
+> **✅ num＋deu 兩道收尾完成（2026-07-03）**：
+> **① 教父譯名收斂**：`FATHER_FIXES` 補 13 條（安博→安波羅修、特士良→特土良、納西盎的貴格利→拿先斯的格列高里、多儒→迦修多儒、狄奧多雷→塞普勒斯的狄奧多勒、遊斯丁/殉道者遊斯丁→殉道者猶斯定、富爾根狄/福耳根提烏斯→富爾根修、神行者貴格利→奇蹟行者格列高里、託X名作品→託名X）＋補測試（`test_father_variant_otiii_num_deu`，44 例綠）；**全 corpus DB UPDATE 34 列**（gen/exo/lev 一併一致化），零殘留變體。deu 裸「革利免」(32:20 work=導師基督)→亞歷山卓的革利免個案修（裸革利免不入全域，他處可能羅馬的革利免）。
+> **② 續行併入＋blank father 救援**：`accs_resolve_blank_fathers.py --apply`：num 8/17（4 併入+4 回填）、deu 7/8（5 併入+2 回填），body 字數守恆。再手工 backfill 4 筆（num 17:1-11《論先祖約瑟》→安波羅修、22:5-5→阿爾勒的凱撒留、32:1-5《解釋舊約與新約》→帕特留、deu 6:4-9《馬太福音講道集》→金口若望）＋num 26:2「八經註釋集萃」工作名移出 father 欄。
+> **終態**：num 267 列/blank-father **6**、deu 257 列/blank-father **0**。
+> **⏳ num 殘留 6 筆** blank-father（14:26-35/16:15-24/16:36-40/16:41-50/17:12/21:1-9，通用《講道集》《創世記講道集》《福音書講道集》，father 於前頁截斷、ref 裸節）＝無訊號尾巴，需頁級 footnote-Vision 取證（比照 Genesis 第三階段），未亂猜。
+> **⚠️ 待 user 定奪**：Theodoret「塞普勒斯（Cyprus）」疑為「居魯斯（Cyrus）」之誤，glossary name_recommended=居魯斯的狄奧多勒；是否全 corpus 改 Cyrus？暫收斂到 ACCS 主流「塞普勒斯的狄奧多勒」。
 >
 > **📌 num 待收尾（user 2026-07-02 指定「之後跟 deu 一起做」）**——7/02 抽查（p.339 內容全對、36 章齊、空 body/father 0）發現兩類：
 > **①教父譯名同一人多寫法要收斂**（對齊 `/translation-glossary` 主譯再 UPDATE）：安波羅修/安博(Ambrose)、特土良/特士良(Tertullian)、拿先斯的格列高里/納西盎的貴格利(Naz. Gregory)、塞普勒斯的狄奧多勒/狄奧多雷(Theodoret)；另 father 欄雜訊 3 筆（「託區利羅名作品」「八經註釋集萃」「多儒」＝疑截斷自迦修多儒）。

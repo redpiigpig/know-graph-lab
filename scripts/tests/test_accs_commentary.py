@@ -72,6 +72,22 @@ def test_father_variant_to_glossary():
     assert normalize_father("巴西略") == "巴西流"
 
 
+def test_father_variant_otiii_num_deu():
+    # ACCS OT III（num/deu）收斂新增的同人異寫
+    assert normalize_father("安博") == "安波羅修"
+    assert normalize_father("特士良") == "特土良"
+    assert normalize_father("納西盎的貴格利") == "拿先斯的格列高里"
+    assert normalize_father("多儒") == "迦修多儒"
+    assert normalize_father("狄奧多雷") == "塞普勒斯的狄奧多勒"
+    assert normalize_father("遊斯丁") == "殉道者猶斯定"
+    assert normalize_father("殉道者遊斯丁") == "殉道者猶斯定"
+    assert normalize_father("福耳根提烏斯") == "富爾根修"
+    assert normalize_father("富爾根狄") == "富爾根修"
+    assert normalize_father("神行者貴格利") == "奇蹟行者格列高里"
+    assert normalize_father("託區利羅名作品") == "託名區利羅"
+    assert normalize_father("託丟尼修") == "託名丟尼修"
+
+
 def test_father_passthrough_unknown():
     assert normalize_father("愛任紐") == "愛任紐"
 

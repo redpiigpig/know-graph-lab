@@ -104,6 +104,30 @@ FATHER_FIXES: dict[str, str] = {
     # 安波羅修 (Ambrose)
     "盎博羅削": "安波羅修",
     "安波羅斯": "安波羅修",
+    "安博": "安波羅修",
+    # 特土良 (Tertullian；glossary name_recommended)
+    "特士良": "特土良",
+    # 拿先斯的格列高里（Greg. Naz.；補 OCR 變體「納西盎」）
+    "納西盎的貴格利": "拿先斯的格列高里",
+    # 迦修多儒 (Cassiodorus；OCR 截頭「多儒」，work=詩篇註釋佐證)
+    "多儒": "迦修多儒",
+    # 塞普勒斯的狄奧多勒 (Theodoret；ACCS 主流拼法。⚠️ 塞普勒斯=Cyprus 疑為 Cyrus 之誤，
+    #   glossary 作「居魯斯的狄奧多勒」；是否全 corpus 改 Cyrus 待 user 定奪，暫先收斂到主流)
+    "狄奧多雷": "塞普勒斯的狄奧多勒",
+    # 殉道者猶斯定 (Justin Martyr；glossary + 一律「猶斯定」不寫遊/游斯丁)
+    "遊斯丁": "殉道者猶斯定",
+    "殉道者遊斯丁": "殉道者猶斯定",
+    "游斯丁": "殉道者猶斯定",
+    # 富爾根修 (Fulgentius of Ruspe；glossary name_recommended)
+    "富爾根狄": "富爾根修",
+    "福耳根提烏斯": "富爾根修",
+    # 奇蹟行者格列高里 (Gregory Thaumaturgus；glossary)
+    "神行者貴格利": "奇蹟行者格列高里",
+    # 註：裸「革利免」不放全域（他處可能指羅馬的革利免）；靠 work 判斷個案處理。
+    # 偽託類統一「託名X」（Pseudo-）
+    "託區利羅名作品": "託名區利羅",
+    "託革利免名作品": "託名革利免",
+    "託丟尼修": "託名丟尼修",
 }
 
 SECTION_KINDS = {"overview", "comment"}
