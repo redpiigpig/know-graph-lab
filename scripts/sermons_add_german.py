@@ -29,8 +29,7 @@ DOC = "seven-sermons-to-the-dead"
 VCODE = "de_1916"
 EN_CODE = "gnosis_en"
 BODY_START = 36  # order_index of the title; 0–35 = gnosis.org editorial front matter
-DE_SRC = Path(r"C:/Users/user/AppData/Local/Temp/claude/c--Users-user-Desktop-know-graph-lab"
-              r"/f9977fac-506a-4c1a-bed5-8e59876d2d0c/scratchpad/klar_text.txt")
+DE_SRC = Path(".claude/skills/scripture-gnostic/sermons_de_1916.json")
 DE_TITLE = ("Die sieben Belehrungen der Toten, geschrieben von Basilides in Alexandria, "
             "der Stadt, wo der Osten den Westen berührt.")
 
@@ -56,11 +55,9 @@ def fetch_en_sections() -> list[dict]:
 
 
 def load_german_paras() -> list[str]:
-    t = DE_SRC.read_text(encoding="utf-8", errors="replace")
-    i = t.find("Die Toten kamen zurück von Jerusalem")
-    j = t.find("Schlagwörter:", i)
-    body = t[i:j if j > i else len(t)].strip()
-    return [re.sub(r"\s+", " ", p).strip() for p in body.split("\n") if p.strip()]
+    reden = json.loads(DE_SRC.read_text(encoding="utf-8"))["reden"]
+    return [re.sub(r"\s+", " ", p).strip()
+            for k in ["I", "II", "III", "IV", "V", "VI", "VII"] for p in reden[k] if p.strip()]
 
 
 def build_alignment() -> dict[int, str]:

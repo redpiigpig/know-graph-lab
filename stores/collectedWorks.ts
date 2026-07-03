@@ -1788,10 +1788,10 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1916',
           yearSort: 1916,
           category: '早期著作（公有領域）',
-          languages: ['en'],
+          languages: ['de', 'en'],
           status: 'done',
           externalUrl: '/gnostic/seven-sermons-to-the-dead',
-          note: '託名「亞歷山卓的巴西里得斯」的諾斯底佈道（私印 1916）。收於諾斯底文獻庫，英譯／繁中逐段對照（德文 1916 原典列待補）。',
+          note: '託名「亞歷山卓的巴西里得斯」的諾斯底佈道（私印 1916）。收於諾斯底文獻庫，德文 1916 原典／英譯／繁中三欄逐段對照。',
         },
         {
           title: '分析心理學論文集（英譯早期版）',
