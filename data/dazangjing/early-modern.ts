@@ -1505,8 +1505,6 @@ export const EARLY_MODERN_ERA: DazangEra = {
         label_en: 'Source Collections and Critical Editions',
         desc: '近代學術對教會文獻的大規模輯刊——自博蘭德聖傳、曼西會議集、米涅教父文庫至魏瑪版路德全集。',
         works: [
-          { title_zh: '米涅拉丁教父文庫', title_orig: 'Patrologia Latina', author: '雅克-保羅‧米涅（主編）', era: '1844–1855', place: '巴黎', language: '拉丁文', intro: '米涅神父以流水線印坊重印自特土良至英諾森三世的拉丁教會作者二百二十一巨冊，廉價供應每一座修院書房。雖多沿舊版而校勘粗疏，至今仍是引用拉丁教父的通用座標，出版史的巴別塔工程。' },
-          { title_zh: '米涅希臘教父文庫', title_orig: 'Patrologia Graeca', author: '雅克-保羅‧米涅（主編）', era: '1857–1866', place: '巴黎', language: '希臘文／拉丁文', intro: '米涅繼拉丁文庫後推出的希臘教父一百六十一冊，希拉對照自克勉至貝薩裡翁。印坊大火焚其基業而文庫長存，希臘教父文本近兩世紀的標準出處，「PG 欄碼」即學界的通用語。' },
           { title_zh: '大公會議大全', title_orig: 'Sacrorum Conciliorum nova et amplissima collectio', author: '喬瓦尼‧多梅尼科‧曼西', era: '1759–1798', place: '佛羅倫斯／威尼斯', language: '拉丁文', intro: '盧卡總主教曼西集歷代會議文獻之大成的三十一冊（後補至五十三冊），自使徒時代迄近代諸會議決議俱錄。引用大公與地方會議的標準總集，教會法史研究的基座文獻。' },
           { title_zh: '聖徒行傳大全', title_orig: 'Acta Sanctorum', author: '博蘭德學社', era: '1643 起', place: '安特衛普／布魯塞爾', language: '拉丁文', intro: '耶穌會博蘭德學社按聖人曆日考訂刊佈聖傳原始文獻的大全，三百餘年續修至六十八巨冊。以批判方法整理聖傳而屢觸禁忌，史料考證學的搖籃，聖人研究的第一泉源。' },
           { title_zh: '日耳曼歷史文獻集成', title_orig: 'Monumenta Germaniae Historica', author: '施泰因發起（佩茨首任主編）', era: '1826 起', place: '法蘭克福／柏林／慕尼黑', language: '拉丁文', intro: '「對祖國的神聖之愛賦予靈魂」為銘的德意志中世紀文獻集成，書信、法典、編年史按科學校勘刊佈，樹立近代史料編纂的標準。中世紀教會史研究的軍火庫，本藏多處書函律藏條目皆賴其刊本。' },
@@ -1519,7 +1517,9 @@ export const EARLY_MODERN_ERA: DazangEra = {
           { title_zh: '不列顛教會會議集', title_orig: 'Concilia Magnae Britanniae et Hiberniae', author: '大衛‧威爾金斯', era: '1737', place: '倫敦', language: '拉丁文', intro: '威爾金斯輯英格蘭與愛爾蘭自古至宗教改革的教會會議文獻四巨冊，取代斯佩爾曼舊編。不列顛教會法制史的標準總集，十九世紀方由哈登-斯塔布斯部分修訂。' },
           { title_zh: '尼西亞前後教父英譯文庫', title_orig: 'Ante-Nicene Fathers / Nicene and Post-Nicene Fathers', author: '羅伯茨、唐納森與沙夫、韋斯（主編）', era: '1867–1900', place: '愛丁堡／紐約', language: '英文', intro: '愛丁堡先行、沙夫續成的教父英譯三系三十八卷，把教父著作帶入英語牧者與平信徒書房。至今仍是公有領域教父英譯的通行本，本站教父翻譯工程的直接底本。' },
           { title_zh: '牛津教父文庫', title_orig: 'A Library of Fathers of the Holy Catholic Church', author: '普西、紐曼與基布爾（主編）', era: '1838–1885', place: '牛津', language: '英文', intro: '牛津運動三傑主持的教父英譯文庫四十八卷，以「回到未分裂教會」為志，紐曼譯亞他那修尤為名譯。安立甘公教復興的學術支柱，英語教父閱讀文化的開端。' },
-          { title_zh: '法布里修斯偽典集', title_orig: 'Codex pseudepigraphus Veteris Testamenti / Codex apocryphus Novi Testamenti', author: '約翰‧阿爾伯特‧法布里修斯', era: '1703–1723', place: '漢堡', language: '拉丁文／希臘文', intro: '法布里修斯輯刊新舊約偽典文本的雙料文集，首度把散佚的次經偽典整編成可徵引的學術語料。典外文獻研究的奠基工程，本藏經藏外典諸條目的學史源頭。' }
+          { title_zh: '法布里修斯偽典集', title_orig: 'Codex pseudepigraphus Veteris Testamenti / Codex apocryphus Novi Testamenti', author: '約翰‧阿爾伯特‧法布里修斯', era: '1703–1723', place: '漢堡', language: '拉丁文／希臘文', intro: '法布里修斯輯刊新舊約偽典文本的雙料文集，首度把散佚的次經偽典整編成可徵引的學術語料。典外文獻研究的奠基工程，本藏經藏外典諸條目的學史源頭。' },
+          { title_zh: '義大利史料集成', title_orig: 'Rerum Italicarum Scriptores', author: '洛多維科‧穆拉托里（主編）', era: '1723–1751', place: '米蘭', language: '拉丁文／義大利文', intro: '穆拉托里輯刊五百至一千五百年間義大利編年史與教會文獻的廿八巨冊集成，兼撰考辨序論。義大利史學的奠基工程，中世紀教會史料的南歐大庫，「穆拉托里殘篇」即其發現之一。' }
+        
         
         ]
       },
