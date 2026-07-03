@@ -1833,9 +1833,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1918,
           category: '早期著作（公有領域）',
           languages: ['en'],
-          status: 'in-progress',
-          ebookId: '22222227-2222-4222-8222-222222222227',
-          note: 'M. D. Eder 1918 英譯（Internet Archive，公有領域）。蘇黎世精神醫學診所的字詞聯想實驗（約 500 頁，含大量反應數據表）。英→繁中逐段對照，翻譯中。',
+          status: 'planned',
+          note: 'M. D. Eder 1918 英譯（Internet Archive，公有領域）。蘇黎世精神醫學診所的字詞聯想實驗（約 500 頁，近半為反應數據表格）。閱讀價值低、暫緩翻譯；日後如需再排入。',
         },
         // 精神醫學與實驗心理學（早期）
         {
