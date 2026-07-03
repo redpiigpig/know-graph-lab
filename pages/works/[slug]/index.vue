@@ -460,9 +460,13 @@
 
           <!-- ── 修改草稿 ── -->
           <div v-show="activeTab === 'draft'">
-            <div class="mb-4">
-              <h2 class="text-base font-semibold text-gray-900">修改草稿</h2>
-              <p class="text-xs text-gray-500 mt-0.5">依修改建議改寫的中文草稿（英文期刊版工作底稿，待逐段英譯）</p>
+            <div class="mb-4 flex items-start justify-between gap-3">
+              <div>
+                <h2 class="text-base font-semibold text-gray-900">修改草稿</h2>
+                <p class="text-xs text-gray-500 mt-0.5">依修改建議改寫的中文草稿（英文期刊版工作底稿，待逐段英譯）</p>
+              </div>
+              <a v-if="draftAvailable && project?.paper_ref" :href="`/api/works/draft-docx?ref=${project.paper_ref}`"
+                class="flex-shrink-0 text-xs font-medium px-3 py-1.5 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50">⬇ 下載 Word</a>
             </div>
             <div v-if="draftLoading" class="text-gray-400 text-sm py-8 text-center">載入中⋯</div>
             <div v-else-if="draftHtml" class="doc-prose bg-white rounded-2xl border border-gray-100 px-6 py-6 sm:px-10" v-html="draftHtml"></div>
