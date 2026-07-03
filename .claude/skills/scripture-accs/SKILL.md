@@ -85,6 +85,15 @@ python scripts/ingest_accs_genesis.py \
 
 ## 🧭 下個 session 接手清單（2026-06-25 晚更新）
 
+> **📖 ACCS 舊約進度總表**：OT I/II 創世記 ✅｜OT III 出/利/民/申 ✅（+num/deu 收尾）｜**OT IV 書/士/得/撒 🟡 OCR 中（2026-07-04 起跑）**｜OT V 王/代/拉/尼/斯 ⏳ 待做。之後才輪詩歌書(伯/詩/箴/傳/歌)、先知書。
+>
+> **🟡 ACCS OT IV（書士得撒）OCR 中（排程 `ACCS_OTIV_Resume`，2026-07-04 起跑）**：
+> 合卷 PDF `古代基督信仰聖經註釋叢書6-10 書士得撒.pdf`（724 頁，已複製本地 c:/tmp）。目錄 PDF p.11，**offset PDF=書頁+42**（5 標題頁全驗：jos/jdg/rut/1sa/2sa）。
+> **頁界**：jos 43-184 / jdg 185-298 / rut 299-318 / 1sa 319-512 / 2sa 513-612（613=附錄）。book_code jos/jdg/rut/1sa/2sa 皆在 bible_books。
+> 排程 `scripts/accs_resume_otiv.ps1`（每書 --book+頁界分開跑、sonnet、batch 1、resume、6h、IgnoreNew、電池可跑；**絕不 --replace/越界**）。log `scripts/logs/accs_otiv.log`、checkpoint/`.done` 同 OT III 慣例。dry-run 已驗 jos p46→3 entries。
+> **接手**：看各書 checkpoint 頁數在長否；每書完成後比照創世記做兩道收尾（教父譯名收斂 FATHER_FIXES＋blank father 救援 `accs_resolve_blank_fathers.py`）。全卷完成 `Disable-ScheduledTask ACCS_OTIV_Resume`。**引擎僅 Sonnet Vision（Gemini 4 key 永久乾）**，額度回血才推進、多日。
+> **接著 OT V**：PDF `11-17 王代拉尼斯.pdf`（同資料夾）＝1ki/2ki/1ch/2ch/ezr/neh/est，尚未定頁界/建排程。
+>
 > **2026-07-02 狀態快照**：exo ✅710 / lev ✅53 / **num ✅271 列（36 章齊、空 body 0、空 father 0）已 `.done`** 完成入庫。
 > **deu ⏳ 0 列，未開始**——排程已重新啟用（Ready），會跳過出/利/民、等 Sonnet 5h 窗回血後自動跑申命記（Gemini 4 key credit **永久乾**，deu 只能靠 Sonnet）。
 > — num 收尾始末：7/01 退避空 checkpoint 後由排程 Sonnet 逐頁重 OCR 至 95/96；最後 p.379 卡在 Sonnet 額度牆（Gemini 亦乾）。**由 Claude 直接判讀該頁**補 3 則（19:9 居普良《書信集》、19:11-22 概述、19:15 帕特留《解釋舊約與新約》）＋接回 p.378 ref 19:2（比德）跨頁截斷續文，手工寫進 checkpoint 正確頁序後 `--resume`（0 頁待 OCR）走 parser upsert + 寫 `.done`。
