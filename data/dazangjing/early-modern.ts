@@ -1069,7 +1069,9 @@ export const EARLY_MODERN_ERA: DazangEra = {
           { title_zh: '金戈聖詩', title_orig: 'Salmer af Thomas Kingo', author: '託馬斯‧金戈', era: '1674–1699', place: '丹麥歐登塞', language: '丹麥文', intro: '丹麥主教金戈的聖詩集為丹挪教會欽定歌本，受難詩沉鬱如北海冬濤，〈破曉金光〉則燦然生輝。他奠定丹麥語聖詩傳統，「金戈聖詩集」之名沿用至今，北歐巴洛克虔敬的第一詩筆。' },
           { title_zh: '格倫特維聖詩', title_orig: 'Salmer af N. F. S. Grundtvig', author: '尼古拉‧格倫特維', era: '1810–1872', place: '哥本哈根', language: '丹麥文', intro: '丹麥國父級神學家格倫特維作聖詩千餘首，以「活的話語」神學詠教會為古今信眾的相逢之家，〈教會是古老的房屋〉傳唱北歐。其聖詩與平民高校運動共同塑造丹麥的民族靈魂，聖詩作為民族教育的極致案例。' },
           { title_zh: '瓦林瑞典聖詩集', title_orig: 'Den svenska psalmboken 1819 (Wallin)', author: '約翰‧奧洛夫‧瓦林（主編）', era: '1819', place: '斯德哥爾摩', language: '瑞典文', intro: '日後的烏普薩拉大主教瓦林主編兼改寫的瑞典聖詩集，融正統、敬虔與啟蒙語彙於一爐，人稱「北方的大衛琴」。此集通行瑞典教會逾一世紀，是國教聖詩集編纂藝術的典範。' },
-          { title_zh: '提拉克馬拉提聖詩', title_orig: 'Marathi Hymns of Narayan Vaman Tilak', author: '納拉揚‧瓦曼‧提拉克', era: '1895–1919', place: '印度馬哈拉施特拉', language: '馬拉提文', intro: '婆羅門詩人提拉克歸信後以馬拉提語的奉愛（bhakti）詩體寫基督讚歌數百首，自稱「印度的大門通往基督的是奉愛之路」。其詩至今為馬拉提教會主要歌本，福音本色化詩歌的先驅典範。' }
+          { title_zh: '提拉克馬拉提聖詩', title_orig: 'Marathi Hymns of Narayan Vaman Tilak', author: '納拉揚‧瓦曼‧提拉克', era: '1895–1919', place: '印度馬哈拉施特拉', language: '馬拉提文', intro: '婆羅門詩人提拉克歸信後以馬拉提語的奉愛（bhakti）詩體寫基督讚歌數百首，自稱「印度的大門通往基督的是奉愛之路」。其詩至今為馬拉提教會主要歌本，福音本色化詩歌的先驅典範。' },
+          { title_zh: '慈光導引', title_orig: 'Lead, Kindly Light (The Pillar of the Cloud)', author: '約翰‧亨利‧紐曼', era: '1833', place: '地中海船上', language: '英文', intro: '紐曼於西西里熱病初癒、歸舟困於風平的橙船上寫下的祈禱詩，「慈光導引，於幽暗中引我前行——我不求看見遠景，一步已足」。此詩成為英語世界最深入人心的信靠聖詩，維多利亞時代信仰徬徨的共同禱詞。' }
+        
         
         ],
       },
@@ -1097,12 +1099,10 @@ export const EARLY_MODERN_ERA: DazangEra = {
           { title_zh: '米開朗基羅宗教十四行詩', title_orig: 'Rime spirituali di Michelangelo', author: '米開朗基羅‧博納羅蒂', era: '約 1536–1560', place: '羅馬', language: '義大利文', intro: '晚年的米開朗基羅在十四行詩中懺悔藝術偶像化的一生，「繪畫與雕塑再不能安慰靈魂，唯有那在十字架上張臂的愛」。巨匠以詩卸下鑿刀的自白，文藝復興藝術宗教性的最深獨語。' },
           { title_zh: '科隆納靈性詩篇', title_orig: 'Rime spirituali di Vittoria Colonna', author: '維多利亞‧科隆納', era: '約 1538–1547', place: '羅馬／維泰博', language: '義大利文', intro: '寡居侯爵夫人科隆納的靈性十四行詩，唯獨恩典的暗流出入其間，與米開朗基羅的詩藝友誼傳為佳話。她是義大利福音派改革圈（spirituali）的中心人物，文藝復興女性宗教詩的第一名家。' },
           { title_zh: '夜思', title_orig: 'Night Thoughts', author: '愛德華‧楊格', era: '1742–1745', place: '赫特福德郡', language: '英文', intro: '喪妻失女的牧師楊格於長夜默想死亡、審判與永生的萬行無韻詩，風靡全歐半世紀，布雷克為之繪製巨幅插畫。「墓園詩派」以此為宗，啟蒙盛世裡死亡沉思的暗流主脈。' },
-          { title_zh: '霍普金斯詩集', title_orig: 'Poems of Gerard Manley Hopkins', author: '傑拉德‧曼利‧霍普金斯', era: '1876–1889（1918 刊）', place: '威爾斯／都柏林', language: '英文', intro: '耶穌會士霍普金斯生前焚稿守默，身後刊行的〈德意志號的沉沒〉〈上帝的莊嚴〉以彈跳節奏迸發受造界的神聖內景。維多利亞埋沒的孤音成為現代詩的先知，司鐸詩人傳統的近代最高峰。' },
           { title_zh: '羅塞蒂宗教詩', title_orig: 'Religious Poems of Christina Rossetti', author: '克莉絲蒂娜‧羅塞蒂', era: '1862–1893', place: '倫敦', language: '英文', intro: '前拉斐爾派才女羅塞蒂兩度為信仰退婚，其宗教詩清冷如霜夜，〈在淒涼的隆冬〉譜曲後成聖誕經典。奉獻與剋制鍛出的詩藝，維多利亞女性宗教抒情的最純粹聲音。' },
           { title_zh: '傑隆修斯之夢（紐曼詩作）', title_orig: 'The Dream of Gerontius (poem)', author: '約翰‧亨利‧紐曼', era: '1865', place: '伯明罕', language: '英文', intro: '紐曼樞機描寫靈魂臨終過渡與煉淨之旅的長詩，守護天使的引領與「慈光」的迴響貫穿全篇。本詩使天主教末世想像重入英語文學主流，埃爾加據以譜成同名神劇，維多利亞宗教詩的壓卷。' },
           { title_zh: '惠特利詩集', title_orig: 'Poems on Various Subjects, Religious and Moral', author: '菲利斯‧惠特利', era: '1773', place: '波士頓／倫敦', language: '英文', intro: '被擄為奴的西非少女惠特利出版的詩集，為非裔美洲人第一部著作，頌詩與輓歌俱以福音盼望為底色。出版前須經波士頓名流「查驗」其真偽，本書的存在本身即是對奴役邏輯的詩學反駁。' },
           { title_zh: '頌上帝', title_orig: 'Бог (Ода)', author: '加夫里拉‧傑爾查文', era: '1784', place: '聖彼得堡', language: '俄文', intro: '俄國詩宗傑爾查文的頌詩《上帝》，自「我是蟲，我是神」的張力詠造物主的無限，譯成多語乃至傳入日本中國。俄語宗教抒情詩的開山名篇，普希金之前俄詩的最高峰。' },
-          { title_zh: '卡拉馬助夫兄弟們', title_orig: 'Братья Карамазовы', author: '費奧多爾‧杜斯妥也夫斯基', era: '1880', place: '聖彼得堡', language: '俄文', intro: '杜斯妥也夫斯基的絕筆鉅著，宗教大法官的詰問與佐西馬長老的「人人為人人有罪」在弒父案中交鋒。它把神義論寫成小說的極限，二十世紀神學家人手一冊的「第五福音書」級文學。' },
           { title_zh: '約婚夫婦', title_orig: 'I promessi sposi', author: '亞歷山德羅‧曼佐尼', era: '1827（1842 定本）', place: '米蘭', language: '義大利文', intro: '曼佐尼歸信後寫成的歷史小說，瘟疫與強權下的平民婚約由天意迂迴成全，波羅梅奧樞機與悔改的「無名氏」為文學史最動人的恩典肖像。義大利國民小說，天主教敘事藝術的近代巔峰。' },
           { title_zh: '湯姆叔叔的小屋', title_orig: 'Uncle Tom\'s Cabin', author: '哈麗葉特‧比徹‧斯托', era: '1852', place: '緬因州', language: '英文', intro: '牧師之家出身的斯托夫人以基督式受難的黑奴湯姆控訴蓄奴制，首年售三十萬冊，林肯戲稱她「發動大戰的小婦人」。福音派良知寫成的小說撼動國史，宗教文學社會力量的最大案例。' },
           { title_zh: '賓虛：基督的故事', title_orig: 'Ben-Hur: A Tale of the Christ', author: '盧‧華萊士', era: '1880', place: '新墨西哥', language: '英文', intro: '南北戰爭將軍華萊士為查證信仰而寫成的耶穌時代小說，猶太王子的復仇之路終結於十字架下的饒恕。本書超越《湯姆叔叔的小屋》成為十九世紀美國最暢銷小說，聖經史詩文類的市場開創者。' },
@@ -1112,7 +1112,9 @@ export const EARLY_MODERN_ERA: DazangEra = {
           { title_zh: '聖誕頌歌', title_orig: 'A Christmas Carol', author: '查爾斯‧狄更斯', era: '1843', place: '倫敦', language: '英文', intro: '狄更斯的聖誕小書使守財奴一夜之間被三靈引領悔改，「願上帝祝福我們每一個人」自此成為聖誕的公共祝詞。本書重塑了英語世界的聖誕想像，把節期靈性譯為城市時代的慈善倫理。' },
           { title_zh: '北風的背後', title_orig: 'At the Back of the North Wind', author: '喬治‧麥克唐納', era: '1871', place: '倫敦', language: '英文', intro: '蘇格蘭牧師麥克唐納的童話小說，馬夫之子小鑽石隨北風夜行，死亡化為溫柔的引路者。他開創基督教奇幻文類，路易斯自認「凡我所寫皆引用麥克唐納」，現代靈性奇幻的祖師之作。' },
           { title_zh: '聖戰', title_orig: 'The Holy War', author: '約翰‧班揚', era: '1682', place: '貝德福德', language: '英文', intro: '班揚以「人靈城」的失陷與光復寓言救贖史，沙代大王與魔王迪亞波羅斯反覆爭奪人心的城門。規模逾《天路歷程》而寓意更繁密，清教寓言文學的第二高峰。' },
-          { title_zh: '三巴集', title_orig: '三巴集（天學詩）', author: '吳歷（漁山）', era: '約 1690–1718', place: '上海／澳門', language: '漢文', intro: '清初畫壇六大家之一吳歷入耶穌會為司鐸，以宋詩格律詠三位一體、聖體與澳門教會生活，結為《三巴集》。士大夫詩學與天主教義的真正融合首見於此，漢語基督教文學的開山詩集。' }
+          { title_zh: '三巴集', title_orig: '三巴集（天學詩）', author: '吳歷（漁山）', era: '約 1690–1718', place: '上海／澳門', language: '漢文', intro: '清初畫壇六大家之一吳歷入耶穌會為司鐸，以宋詩格律詠三位一體、聖體與澳門教會生活，結為《三巴集》。士大夫詩學與天主教義的真正融合首見於此，漢語基督教文學的開山詩集。' },
+          { title_zh: '悼念集', title_orig: 'In Memoriam A.H.H.', author: '阿弗雷德‧丁尼生', era: '1850', place: '英格蘭', language: '英文', intro: '丁尼生為亡友哈勒姆寫作十七年的一百三十一首輓歌組詩，於地質學與演化陰影下追問不朽，「寧可愛過而失去」出於此。維多利亞女王喪偶後奉為聖經之次的安慰之書，信仰與懷疑角力的世紀之詩。' }
+        
         
         ],
       },
