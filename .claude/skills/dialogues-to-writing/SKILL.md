@@ -217,7 +217,12 @@ agent fan-out 結果不可重現、難稽核。改用**純函式候選 prelabel 
 第三案＝把已分類的「創生哲學」對話**綜整成整套學術專書**，掛在 /works `genesis-philosophy` 卡片下。詳見 [[project_ai_dialogues_genesis_philosophy]]。
 
 ### 已完成並上線
-- **五大主題 15 冊全數 v2 精修＋序跋＋每節級引用完工（2026-06-22）**：倫理 M1 8/M2 13/M3 9（v2.1）、認識論 E1 8/E2 10/E3 6、本體論 O1 8/O2 6/O3 7、價值論 V1 6/V2 6、存有論 B1 7/B2 7/B3 7。每章皆 chapter-recap+argmap、英文首現、公式先論述後導出、越層紅線、每節「本節主要依據對話」引用＋章末彙整，各冊序跋齊備。檔在 `public/content/works/genesis/{id}.html`；manifest `public/content/works/genesis-philosophy-books.json`（`{groups:[{branch,books:[{id,title,subtitle,file,nChapters}]}]}`）。治理文件＝各 `c:/tmp/genesis_{ethics,epi,ont,val,bei}/intro_schedule.md`。
+- **🔄 2026-07-02〜03 大改版（三件事一次完成，現況以此為準；細節見 `works-research-review/genesis_dialogue_maps_handoff.md` 零之二〜零之四）**：
+  1. **價值論三部曲重排**＝V1《各種生死觀》9章（生死=願然總配置；意欲純化＋四象限保留本卷——四象限即生與死之間的意義座標；巡禮章一律用意欲/願然/四象限向度討論並各加「四象限讀法」節，非中性哲學史）／V2《美學觀》8章（共振生成論＋愛＋主體作為最高價值＝完整願然階梯）／V3《世界與生活》5章（在場世界論＋新章「住世者的修養：演算法時代守住誠實度」＋誠實作畫結語）。**現象學方法＝三種態度：直觀／現成／遍執**（使用者定名，V1/V2 導論各立一節）。**五然四德總說移 B1 導論**（實然/識然/應然/願然/默然；實然+識然共證真、應然善、願然美、默然聖；全 15 卷「四然」已全改「五然」）。《世界理論》讀後的跨領域討論點分掛：O1 ch7 虛構存有者本體地位／E3 ch2 預測編碼×唯識／M3 ch8 演算法強制覆寫倫理。
+  2. **本體論擴編**＝O1 加第八章〈創生哲學的本體論自我定位〉（生成第一哲學/經驗主義品格/形式剛性＋內容彈性；次大敘事僅簡述互見 E2）共 9 章；O2 改題**《從量子到宇宙》**9章（量子 5 章不動＋弦論/古典相對論/宇宙 3 新章，結語=存在者的有限與無限）。
+  3. **章首故事引子全 15 卷 122 章完工**＝每章 h2 後 `<div class="chapter-fable">`（故事 2-4 段＋fable-bridge 橋接段，不含 h3、不動正文）；總表 `scripts/genesis_research/fable_map.md`（定錨：愛的公式→小王子、陰影個體化→聖誕頌歌、召喚→佛陀出家）；reader 樣式 `.chapter-fable` 已加。換故事＝改該區塊＋同步總表一列。
+  - **現行章數（=clean_inv/worklist/books.json canonical）**：M1 7／M2 13／M3 9；E1 8／E2 11／E3 7；O1 9／O2 9／O3 7；V1 9／V2 8／V3 5；B1 7／B2 6／B3 7＝122 章。舊 V 卷稿 archive 在 `scripts/data/_archive_v_pre_reorg_2026-07-02/`。ref-DB 已隨重排遷移（migrate_v_reorg.py / migrate_v_reorg2.py，確定性非 LLM；V1=73/V2=116/V3=86/B1=170，off-canonical=0）。**新章正文＝綱要草記（章內有 editor-note 標記），待使用者精修；V 卷新章與 O1 ch8/O2 ch6-8 的對話地圖研究未跑。**
+- **五大主題 15 冊全數 v2 精修＋序跋＋每節級引用完工（2026-06-22；章數已被上述 2026-07 重排更新）**：倫理 M1 8/M2 13/M3 9（v2.1）、認識論 E1 8/E2 10/E3 6、本體論 O1 8/O2 6/O3 7、價值論 V1 6/V2 6、存有論 B1 7/B2 7/B3 7。每章皆 chapter-recap+argmap、英文首現、公式先論述後導出、越層紅線、每節「本節主要依據對話」引用＋章末彙整，各冊序跋齊備。檔在 `public/content/works/genesis/{id}.html`；manifest `public/content/works/genesis-philosophy-books.json`（`{groups:[{branch,books:[{id,title,subtitle,file,nChapters}]}]}`）。治理文件＝各 `c:/tmp/genesis_{ethics,epi,ont,val,bei}/intro_schedule.md`。
 - reader：`pages/works/[slug]/index.vue`（書目依 branch 分組）＋`pages/works/[slug]/book/[bid].vue`（書→章 TOC＋鄰冊＋已加 .vol-preface/.vol-coda/.chapter-recap/.argmap 樣式）。book id 不可重複。
 - **對話編號系統**：`ai_dialogues_{chatgpt,gemini}.seq_label`＝C-#####(12,124)/G-#####(2,305)；/ai-dialogues 顯示＋頂部編號查閱框（`server/api/ai-dialogues/by-seq.get.ts`）。重編用 Management API（`SUPABASE_ACCESS_TOKEN`、ref `vloqgautkahgmqcwgfuo`、window-function UPDATE）。
 
