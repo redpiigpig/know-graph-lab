@@ -1788,10 +1788,10 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1916',
           yearSort: 1916,
           category: '早期著作（公有領域）',
-          languages: ['de', 'en'],
+          languages: ['en'],
           status: 'done',
           externalUrl: '/gnostic/seven-sermons-to-the-dead',
-          note: '託名「亞歷山卓的巴西里得斯」的諾斯底佈道（私印 1916）。收於諾斯底文獻庫，德文原典（1916）／英譯／繁中三欄逐段對照。',
+          note: '託名「亞歷山卓的巴西里得斯」的諾斯底佈道（私印 1916）。收於諾斯底文獻庫，英譯／繁中逐段對照（德文 1916 原典列待補）。',
         },
         {
           title: '分析心理學論文集（英譯早期版）',
@@ -1800,9 +1800,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1917,
           category: '早期著作（公有領域）',
           languages: ['en'],
-          status: 'in-progress',
+          status: 'done',
           ebookId: '22222224-2222-4222-8222-222222222224',
-          note: 'Constance Long 編 15 篇論文集（Gutenberg #48225，公有領域）。英→繁中對照。✅ 已完成宗教相關 3 章（I 神祕現象／XI 心理類型／XIV 無意識歷程，共 119 段）；其餘 12 章待譯。',
+          note: 'Constance Long 編 15 篇論文集（Gutenberg #48225，公有領域）。全 15 章英→繁中逐段對照已完成（285 段）：I 神祕現象、II 聯想實驗、III 父親、IX 精神分析要點、XI 心理類型、XIII 精神病內容、XIV 無意識歷程、XV 無意識概念等。',
         },
         // 精神醫學與實驗心理學（早期）
         {
