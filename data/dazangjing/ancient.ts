@@ -1957,6 +1957,61 @@ export const ANCIENT_ERA: DazangEra = {
               { title_zh: '沙漠靈母箴言', intro: '四至五世紀埃及沙漠女性隱修者的希臘文佚名輯錄，收錄西娜克勒蒂卡等隱修教母的屬靈箴言與棒喝式教導，與沙漠父老語錄相輝映。其言辭剛健而充滿洞見，展現古代女性靈修大師的權威。它見證早期女性在隱修運動中的領導地位，是研究古代基督教女性靈修與沙漠傳統不可或缺的珍貴文獻。', title_orig: 'Sayings of the Desert Mothers', author: '沙漠教母（佚名輯錄）', era: '4–5 世紀', place: '埃及', language: '希臘文', note: '古代女性隱修大師的屬靈棒喝', link: '/fathers' },
             ],
           },
+          {
+            key: 'greek-homilies', label: '希臘教父講道部', label_en: 'Greek Patristic Homilies',
+            works: [
+          { title_zh: '墨利托論逾越', title_orig: 'Peri Pascha (On Pascha)', author: '撒狄斯的墨利托', era: '約 165', place: '小亞細亞撒狄斯', language: '希臘文', intro: '撒狄斯主教墨利托詠嘆逾越羔羊即基督的講道，排比激越如詩。現存最早的復活節講道，二世紀修辭講壇的瑰寶，亦含早期反猶語句的爭議源頭。' },
+          { title_zh: '俄利根出埃及記講道', title_orig: 'Homilies on Exodus', author: '俄利根', era: '3 世紀', place: '凱撒利亞', language: '希臘文（拉丁譯存）', intro: '俄利根釋出埃及記、以過紅海預表洗禮的講道。舊約事件基督論預表的講壇典範，早期教會釋經神學的活教材。' },
+          { title_zh: '俄利根利未記講道', title_orig: 'Homilies on Leviticus', author: '俄利根', era: '3 世紀', place: '凱撒利亞', language: '希臘文（拉丁譯存）', intro: '俄利根將利未記祭儀逐一寓解為屬靈真理的講道。禮儀律法靈意化的極致樣本，寓意釋經傳統的核心文本。' },
+          { title_zh: '俄利根約書亞記講道', title_orig: 'Homilies on Joshua', author: '俄利根', era: '3 世紀', place: '凱撒利亞', language: '希臘文（拉丁譯存）', intro: '俄利根以約書亞徵戰喻信徒屬靈爭戰的講道，耶穌與約書亞同名之解尤具巧思。舊約敘事靈修化的講壇實例，早期屬靈爭戰神學的源頭。' },
+          { title_zh: '俄利根耶利米書講道', title_orig: 'Homilies on Jeremiah', author: '俄利根', era: '3 世紀', place: '凱撒利亞', language: '希臘文', intro: '俄利根釋耶利米書、論先知受苦與神的管教的講道，希臘原文罕見地大量留存。先知書講道的珍稀希臘原典，俄利根釋經法的直接見證。' },
+          { title_zh: '巴西略詩篇講道', title_orig: 'Homilies on the Psalms (Basil)', author: '該撒利亞的巴西略', era: '4 世紀', place: '卡帕多細亞', language: '希臘文', intro: '大巴西略講解詩篇、兼論音樂與德行的講道。卡帕多細亞牧養講壇的名篇，詩篇靈修與倫理教導的結合。' },
+          { title_zh: '尼撒的格列高利真福八端講道', title_orig: 'Homilies on the Beatitudes', author: '尼撒的格列高利', era: '約 378', place: '尼撒', language: '希臘文', intro: '尼撒的格列高利逐一講解八福、以之為靈魂上升階梯的八篇講道。神秘神學與登山寶訓交融的講壇傑作，東方靈修的經典。' },
+          { title_zh: '尼撒的格列高利雅歌講道', title_orig: 'Homilies on the Song of Songs', author: '尼撒的格列高利', era: '約 390', place: '尼撒', language: '希臘文', intro: '尼撒的格列高利以雅歌喻靈魂與神永恆愛戀、不斷向前的十五篇講道。「永遠向前」神秘神學的巔峰表述，寓意釋經的靈修高峰。' },
+          { title_zh: '尼撒的格列高利傳道書講道', title_orig: 'Homilies on Ecclesiastes', author: '尼撒的格列高利', era: '4 世紀', place: '尼撒', language: '希臘文', intro: '尼撒的格列高利釋傳道書、論超越虛空以慕永恆的講道，內含反奴隸制的著名段落。古代最明確譴責奴隸制的文本之一，講壇倫理的先聲。' },
+          { title_zh: '阿斯特里烏斯講道集', title_orig: 'Homilies of Asterius of Amasea', author: '阿馬西亞的阿斯特里烏斯', era: '約 400', place: '本都阿馬西亞', language: '希臘文', intro: '主教阿斯特里烏斯描繪聖徒殉道畫像、斥奢華的講道，藝格描寫生動。晚期古代講壇修辭的名家，聖藝與講道結合的珍稀樣本。' },
+          { title_zh: '普羅克洛斯論聖母講道', title_orig: 'Homilies on the Theotokos (Proclus)', author: '君士坦丁堡的普羅克洛斯', era: '約 430', place: '君士坦丁堡', language: '希臘文', intro: '普羅克洛斯當聶斯脫留面前頌讚「誕神女」的講道，引爆以弗所爭議。馬利亞神學講壇的關鍵文獻，正統基督論的講道宣言。' },
+          { title_zh: '加巴拉的塞維裡安創世講道', title_orig: 'Homilies on Creation (Severian of Gabala)', author: '加巴拉的塞維裡安', era: '約 400', place: '敘利亞加巴拉／君士坦丁堡', language: '希臘文', intro: '塞維裡安論創世六日、宇宙如帳幕的六篇講道，字面釋經而反寓意。安提阿字面釋經的講壇代表，金口若望的政敵兼講壇對手。' },
+          { title_zh: '以哥唸的安非羅基烏斯講道', title_orig: 'Homilies of Amphilochius of Iconium', author: '以哥唸的安非羅基烏斯', era: '4 世紀', place: '小亞細亞以哥念', language: '希臘文', intro: '卡帕多細亞第四教父安非羅基烏斯論節期與基督生平的講道。卡帕多細亞講壇傳統的補充,聖靈神學論戰的參與之聲。' },
+          { title_zh: '馬卡里烏斯屬靈講道集', title_orig: 'Spiritual Homilies (Pseudo-Macarius)', author: '託名大馬卡里烏斯', era: '約 4 世紀末', place: '敘利亞—美索不達米亞', language: '希臘文', intro: '託名馬卡里烏斯論心靈經驗神恩、聖靈內住的五十篇屬靈講道。東方心靈靈修的源頭文獻,影響靜修派與後世敬虔運動至深。' },
+          { title_zh: '耶路撒冷的赫西基烏斯講道', title_orig: 'Homilies of Hesychius of Jerusalem', author: '耶路撒冷的赫西基烏斯', era: '5 世紀', place: '耶路撒冷', language: '希臘文', intro: '司鐸赫西基烏斯論節期與聖母的講道,聖地禮儀講壇的代表。五世紀巴勒斯坦講道傳統的見證,禮儀年講章的珍稀樣本。' },
+          { title_zh: '金口若望論保羅頌辭', title_orig: 'Homilies in Praise of St. Paul', author: '金口若望', era: '約 390', place: '安提阿', language: '希臘文', intro: '金口若望頌讚使徒保羅生平德行的七篇講道,情辭激越。教父頌聖講道的巔峰,金口修辭藝術的代表作。' },
+          { title_zh: '金口若望論不可測之神', title_orig: 'On the Incomprehensible Nature of God', author: '金口若望', era: '386–387', place: '安提阿', language: '希臘文', intro: '金口若望駁極端亞流派、論神本質不可測的十二篇講道。否定神學的講壇表述,四世紀三一論戰的牧養前線。' },
+          { title_zh: '俄利根民數記講道', title_orig: 'Homilies on Numbers', author: '俄利根', era: '3 世紀', place: '凱撒利亞', language: '希臘文（魯菲努斯拉丁譯存）', intro: '俄利根釋民數記行程與祭儀、寓為靈魂旅程的講道。曠野行旅屬靈化的講壇樣本，寓意釋經傳統的又一環。' },
+          { title_zh: '俄利根士師記講道', title_orig: 'Homilies on Judges', author: '俄利根', era: '3 世紀', place: '凱撒利亞', language: '希臘文（拉丁譯存）', intro: '俄利根以士師興衰喻信徒屬靈起落的講道。舊約歷史書靈修化的講壇實例，早期教會道德釋經的見證。' },
+          { title_zh: '俄利根詩篇講道', title_orig: 'Homilies on the Psalms (Origen)', author: '俄利根', era: '3 世紀', place: '凱撒利亞', language: '希臘文', intro: '俄利根講解詩篇、二〇一二年慕尼黑新發現希臘原稿的講道集。俄利根研究的世紀新出土，詩篇靈修講壇的直接原典。' },
+          { title_zh: '拿先斯的格列高利神學五講', title_orig: 'Five Theological Orations', author: '拿先斯的格列高利', era: '380', place: '君士坦丁堡', language: '希臘文', intro: '「神學家」格列高利在君士坦丁堡駁歐諾米派、精述三一的五篇講辭。東方三一神學的講壇巔峰，其「神學家」尊號即由此奠定。' },
+          { title_zh: '金口若望論懺悔講道', title_orig: 'Homilies on Repentance (Chrysostom)', author: '金口若望', era: '約 387', place: '安提阿', language: '希臘文', intro: '金口若望勸人悔改、論神慈憫無盡的九篇講道。安提阿牧養講壇的懇切之聲，悔改神學的講道經典。' },
+          { title_zh: '以法蓮散文講道集', title_orig: 'Prose Homilies of Ephrem', author: '敘利亞的以法蓮', era: '4 世紀', place: '埃德薩', language: '敘利亞文', intro: '以法蓮以散文體論悔改、末日與德行的講道，別於其詩體瑪達沙。敘利亞散文講壇的早期樣本，詩人教父的另一講道面貌。' }
+        
+            ],
+          },
+          {
+            key: 'latin-homilies', label: '拉丁教父講道部', label_en: 'Latin Patristic Homilies',
+            works: [
+          { title_zh: '拉溫納的伯多祿講道集', title_orig: 'Sermons of Peter Chrysologus', author: '拉溫納的伯多祿（金言者）', era: '5 世紀', place: '義大利拉溫納', language: '拉丁文', intro: '「金言者」伯多祿短小精悍、意象鮮明的講道近兩百篇。西方講壇簡潔風格的典範,拉丁節期講道的重要遺存。' },
+          { title_zh: '都靈的馬克西母講道集', title_orig: 'Sermons of Maximus of Turin', author: '都靈的馬克西母', era: '約 400–420', place: '義大利都靈', language: '拉丁文', intro: '主教馬克西母論節期、殉道者與斥殘存異教的講道。北義大利基督教化實況的講壇記錄,五世紀拉丁講道的鮮活樣本。' },
+          { title_zh: '佈雷西亞的高登提烏斯講道', title_orig: 'Sermons of Gaudentius of Brescia', author: '佈雷西亞的高登提烏斯', era: '約 400', place: '義大利佈雷西亞', language: '拉丁文', intro: '主教高登提烏斯論逾越與聖禮的講道集,聖髑與禮儀並重。北義講壇的教義樣本,安波羅修圈子的講道遺產。' },
+          { title_zh: '維羅納的澤諾講道集', title_orig: 'Tractates of Zeno of Verona', author: '維羅納的澤諾', era: '4 世紀', place: '義大利維羅納', language: '拉丁文', intro: '非洲裔主教澤諾論洗禮、節期與斥亞流的講道小品。四世紀北義講壇的早期樣本,兼具非洲修辭色彩的拉丁講道。' },
+          { title_zh: '亞爾的凱撒裡烏斯講道集', title_orig: 'Sermons of Caesarius of Arles', author: '亞爾的凱撒裡烏斯', era: '約 502–542', place: '高盧亞爾', language: '拉丁文', intro: '凱撒裡烏斯以極淺白拉丁向鄉民講道、斥迷信勸行善的兩百餘篇講章。中世紀通俗講道的奠基,平信徒牧養講壇的典範。' },
+          { title_zh: '大額我略福音講道', title_orig: 'Homilies on the Gospels (Gregory the Great)', author: '大額我略', era: '約 591', place: '羅馬', language: '拉丁文', intro: '教宗大額我略講解主日福音的四十篇講道,牧養懇切多引軼事。中世紀講道範本的源頭,西方主日講壇傳統的奠基文獻。' },
+          { title_zh: '大額我略以西結書講道', title_orig: 'Homilies on Ezekiel', author: '大額我略', era: '約 593', place: '羅馬', language: '拉丁文', intro: '大額我略釋以西結異象、倫巴底圍城陰影下的講道,末篇痛陳時艱。默觀與行動並論的講壇名篇,六世紀末羅馬危局的見證。' },
+          { title_zh: '比德福音講道集', title_orig: 'Homilies on the Gospels (Bede)', author: '可敬者比德', era: '8 世紀', place: '諾森布里亞', language: '拉丁文', intro: '史家比德為修院節期所撰的五十篇福音講道,教父傳統的英倫傳承。加洛林講道選集的重要來源,盎格魯撒克遜學問的講壇成果。' },
+          { title_zh: '法斯圖斯講道集', title_orig: 'Sermons of Faustus of Riez', author: '裡耶茲的法斯圖斯', era: '5 世紀', place: '高盧裡耶茲', language: '拉丁文', intro: '勒林出身主教法斯圖斯論恩寵與德行的講道,半伯拉糾立場鮮明。高盧修道講壇的代表,恩寵之爭中間路線的講道見證。' },
+          { title_zh: '瓦萊裡安講道集', title_orig: 'Homilies of Valerian of Cimiez', author: '西米茲的瓦萊裡安', era: '5 世紀', place: '高盧西米茲', language: '拉丁文', intro: '主教瓦萊裡安論德行與紀律的二十篇講道。五世紀普羅旺斯講壇的樣本,高盧道德講道傳統的一環。' },
+          { title_zh: '卡西安論八惡念講道', title_orig: 'On the Eight Vices (from the Institutes)', author: '卡西安', era: '約 425', place: '馬賽', language: '拉丁文', intro: '卡西安剖析暴食、貪婪、憤怒等八惡念及其對治的講論。沙漠靈修西傳的道德講壇，日後七宗罪說的拉丁中繼。' }
+        
+            ],
+          },
+          {
+            key: 'mystagogy', label: '聖禮啟蒙講道部', label_en: 'Mystagogical Catechesis',
+            works: [
+          { title_zh: '金口若望初信洗禮講授', title_orig: 'Baptismal Instructions (John Chrysostom)', author: '金口若望', era: '約 388–390', place: '安提阿', language: '希臘文', intro: '金口若望向受洗者講解洗禮意義與基督徒生活的講授集,二十世紀新發現多篇。安提阿入教教理的鮮活記錄,聖禮講道的第一手文獻。' },
+          { title_zh: '安波羅修論奧蹟', title_orig: 'De Mysteriis', author: '米蘭的安波羅修', era: '約 390', place: '米蘭', language: '拉丁文', intro: '安波羅修向新信徒講解洗禮與聖體奧義的奧蹟講授。西方聖禮神學的奠基文獻,拉丁奧蹟講道傳統的源頭。' },
+          { title_zh: '雷梅西亞納的尼西塔斯教理講授', title_orig: 'Instructions of Niceta of Remesiana', author: '雷梅西亞納的尼西塔斯', era: '約 400', place: '達契亞雷梅西亞納', language: '拉丁文', intro: '巴爾幹主教尼西塔斯為慕道者所撰的信經與洗禮講授。多瑙河邊陲宣教的教理文獻,《你是天主》讚歌傳統的關聯人物。' }
+        
+            ],
+          },
         ],
       },
       wai: {
