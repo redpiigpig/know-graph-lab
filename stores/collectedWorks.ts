@@ -1843,7 +1843,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1902–07',
           yearSort: 1,
           category: '精神醫學與實驗心理學（早期）',
-          status: 'copyright',
+          status: 'in-progress',
+          ebookId: '22220000-0000-4222-8222-000000000001',
           note: '全集 CW 1 ＝ GW 1。德文原典 1929 前出版部分屬公有領域；Hull 英譯仍受版權。',
         },
         {
@@ -1852,7 +1853,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1904–10',
           yearSort: 2,
           category: '精神醫學與實驗心理學（早期）',
-          status: 'copyright',
+          status: 'in-progress',
+          ebookId: '22220000-0000-4222-8222-000000000002',
           note: '全集 CW 2 ＝ GW 2。德文原典 1929 前出版部分屬公有領域；Hull 英譯仍受版權。',
         },
         {
@@ -1861,7 +1863,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1907–58',
           yearSort: 3,
           category: '精神醫學與實驗心理學（早期）',
-          status: 'copyright',
+          status: 'in-progress',
+          ebookId: '22220000-0000-4222-8222-000000000003',
           note: '全集 CW 3 ＝ GW 3。含 1907《早發性癡呆心理學》（德文原典公有領域）。',
         },
         // 精神分析與力比多理論
@@ -1871,7 +1874,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1906–16',
           yearSort: 4,
           category: '精神分析與力比多理論',
-          status: 'copyright',
+          status: 'in-progress',
+          ebookId: '22220000-0000-4222-8222-000000000004',
           note: '全集 CW 4 ＝ GW 4。部分早期德文論文 1929 前公有領域；Hull 英譯仍受版權。',
         },
         {
@@ -1880,7 +1884,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1952',
           yearSort: 5,
           category: '精神分析與力比多理論',
-          status: 'copyright',
+          status: 'in-progress',
+          ebookId: '22220000-0000-4222-8222-000000000005',
           note: '全集 CW 5 ＝ GW 5。1912《力比多的轉化與象徵》的大幅改寫本；受版權至 2031，待合法來源（早期版見上「早期著作」）。',
         },
         // 分析心理學核心理論
@@ -1890,7 +1895,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1921',
           yearSort: 6,
           category: '分析心理學核心理論',
-          status: 'copyright',
+          status: 'in-progress',
+          ebookId: '22220000-0000-4222-8222-000000000006',
           note: '全集 CW 6 ＝ GW 6。',
         },
         {
@@ -1899,7 +1905,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1917／28',
           yearSort: 7,
           category: '分析心理學核心理論',
-          status: 'copyright',
+          status: 'in-progress',
+          ebookId: '22220000-0000-4222-8222-000000000007',
           note: '全集 CW 7 ＝ GW 7。',
         },
         {
@@ -1908,7 +1915,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1916–52',
           yearSort: 8,
           category: '分析心理學核心理論',
-          status: 'copyright',
+          status: 'in-progress',
+          ebookId: '22220000-0000-4222-8222-000000000008',
           note: '全集 CW 8 ＝ GW 8。含〈論心靈能量〉〈共時性〉。',
         },
         // 原型與集體無意識
@@ -1918,7 +1926,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1934–55',
           yearSort: 9.1,
           category: '原型與集體無意識',
-          status: 'copyright',
+          status: 'in-progress',
+          ebookId: '22220000-0000-4222-8222-000000000091',
           note: '全集 CW 9 第一分冊 ＝ GW 9/1。對宗教研究高度相關（原型、母親原型、曼陀羅）。',
         },
         {
@@ -1927,7 +1936,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1951',
           yearSort: 9.2,
           category: '原型與集體無意識',
-          status: 'copyright',
+          status: 'in-progress',
+          ebookId: '22220000-0000-4222-8222-000000000092',
           note: '全集 CW 9 第二分冊 ＝ GW 9/2。對宗教研究高度相關（基督象徵、自性、雙魚座時代）。',
         },
         // 文明與宗教
@@ -1937,7 +1947,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1918–59',
           yearSort: 10,
           category: '文明與宗教',
-          status: 'copyright',
+          status: 'in-progress',
+          ebookId: '22220000-0000-4222-8222-000000000010',
           note: '全集 CW 10 ＝ GW 10。',
         },
         {
@@ -1946,7 +1957,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1932–52',
           yearSort: 11,
           category: '文明與宗教',
-          status: 'copyright',
+          status: 'in-progress',
+          ebookId: '22220000-0000-4222-8222-000000000011',
           note: '全集 CW 11 ＝ GW 11。對宗教研究最相關。',
         },
         // 煉金術三部曲
@@ -1956,7 +1968,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1944',
           yearSort: 12,
           category: '煉金術三部曲',
-          status: 'copyright',
+          status: 'in-progress',
+          ebookId: '22220000-0000-4222-8222-000000000012',
           note: '全集 CW 12 ＝ GW 12。煉金術三部之一。',
         },
         {
@@ -1965,7 +1978,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1929–54',
           yearSort: 13,
           category: '煉金術三部曲',
-          status: 'copyright',
+          status: 'in-progress',
+          ebookId: '22220000-0000-4222-8222-000000000013',
           note: '全集 CW 13 ＝ GW 13。煉金術三部之一（含《金花的祕密》評註、佐西默斯異象）。',
         },
         {
@@ -1974,7 +1988,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1955–56',
           yearSort: 14,
           category: '煉金術三部曲',
-          status: 'copyright',
+          status: 'in-progress',
+          ebookId: '22220000-0000-4222-8222-000000000014',
           note: '全集 CW 14 ＝ GW 14。煉金術三部之一；榮格晚年集大成。',
         },
         // 藝術、治療與人格
@@ -1984,7 +1999,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1922–41',
           yearSort: 15,
           category: '藝術、治療與人格',
-          status: 'copyright',
+          status: 'in-progress',
+          ebookId: '22220000-0000-4222-8222-000000000015',
           note: '全集 CW 15 ＝ GW 15。',
         },
         {
@@ -1993,7 +2009,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1921–51',
           yearSort: 16,
           category: '藝術、治療與人格',
-          status: 'copyright',
+          status: 'in-progress',
+          ebookId: '22220000-0000-4222-8222-000000000016',
           note: '全集 CW 16 ＝ GW 16。',
         },
         {
@@ -2002,7 +2019,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1910–25',
           yearSort: 17,
           category: '藝術、治療與人格',
-          status: 'copyright',
+          status: 'in-progress',
+          ebookId: '22220000-0000-4222-8222-000000000017',
           note: '全集 CW 17 ＝ GW 17。',
         },
         {
@@ -2011,7 +2029,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           year: '1939–55',
           yearSort: 18,
           category: '藝術、治療與人格',
-          status: 'copyright',
+          status: 'in-progress',
+          ebookId: '22220000-0000-4222-8222-000000000018',
           note: '全集 CW 18 ＝ GW 18。雜文與短篇彙編。',
         },
         // 工具卷（書目與索引）
@@ -2031,7 +2050,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 20,
           category: '工具卷（書目與索引）',
           status: 'copyright',
-          note: '全集 CW 20（無 GW 對應）。工具卷（索引）。',
+          note: '全集 CW 20（無 GW 對應）。工具卷（索引），不翻譯。',
         },
       ],
     },
