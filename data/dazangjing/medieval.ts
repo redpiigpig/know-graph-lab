@@ -72,7 +72,20 @@ export const MEDIEVAL_ERA: DazangEra = {
           { title_zh: '維埃納會議(第十五次大公會議)', title_orig: 'Concilium Viennense', author: '教宗克勉五世', era: '1311–1312', place: '維埃納', language: '拉丁文', intro: '維埃納會議由身處亞維農的教宗克勉五世召開，在法王腓力四世施壓下解散聖殿騎士團，沒收其財產轉予醫院騎士團。會議亦譴責方濟會內部「屬靈派」對使徒貧窮的激進主張、處理自由靈異端，並頒布有關教會改革與東方語言教席的法規。它深刻反映亞維農時期教宗受法國王權左右的處境。', link: '/creeds' },
           { title_zh: '康斯坦茨會議(第十六次大公會議)', title_orig: 'Concilium Constantiense', author: '教宗額我略十二世退位‧馬丁五世當選', era: '1414–1418', place: '康斯坦茨', language: '拉丁文', intro: '康斯坦茨會議召開以終結西方大分裂，當時羅馬、亞維農、比薩三位教宗並立。會議罷黜並安排退位，選出馬丁五世重歸統一。其法令《神聖》(Haec Sancta)宣告大公會議權力高於教宗（會議至上論），並判處胡斯為異端火刑、譴責威克里夫。它是中世紀晚期教會危機與會議運動的核心事件，影響後世教會憲政之爭。', link: '/creeds' },
           { title_zh: '巴塞爾—費拉拉—佛羅倫斯會議(第十七次大公會議)', title_orig: 'Concilium Basiliense-Ferrariense-Florentinum', author: '教宗尤金四世', era: '1431–1445', place: '巴塞爾‧費拉拉‧佛羅倫斯', language: '拉丁文‧希臘文', intro: '此會先於巴塞爾召開以延續改革與會議至上主張，後因與教宗尤金四世衝突而遷至費拉拉、佛羅倫斯。其在佛羅倫斯階段達成與東正教、亞美尼亞、科普特等教會的合一協議（雖多未能持久），並界定煉獄、聖靈雙發等教義。會議至上派則在巴塞爾另立對立教宗。它是教會合一努力與教宗對抗會議運動的關鍵戰場。', link: '/creeds' },
-          { title_zh: '第五次拉特朗會議(第十八次大公會議)', title_orig: 'Concilium Lateranense V', author: '教宗儒略二世‧良十世', era: '1512–1517', place: '羅馬‧拉特朗', language: '拉丁文', intro: '第五次拉特朗會議由教宗儒略二世召開、良十世續行，旨在反制法王支持的比薩分裂會議並推動教會改革。會議重申教宗權高於大公會議、譴責靈魂可朽論、規範印刷出版審查，並通過與法國的《波隆那教務專約》。然其改革法令多流於空文，會議閉幕僅數月後馬丁·路德即發起九十五條論綱，宗教改革旋即爆發。', link: '/creeds' }
+          { title_zh: '第五次拉特朗會議(第十八次大公會議)', title_orig: 'Concilium Lateranense V', author: '教宗儒略二世‧良十世', era: '1512–1517', place: '羅馬‧拉特朗', language: '拉丁文', intro: '第五次拉特朗會議由教宗儒略二世召開、良十世續行，旨在反制法王支持的比薩分裂會議並推動教會改革。會議重申教宗權高於大公會議、譴責靈魂可朽論、規範印刷出版審查，並通過與法國的《波隆那教務專約》。然其改革法令多流於空文，會議閉幕僅數月後馬丁·路德即發起九十五條論綱，宗教改革旋即爆發。', link: '/creeds' },
+          { title_zh: '亞琛會議法令', title_orig: 'Institutio canonicorum Aquisgranensis', author: '亞琛改革會議（虔誠者路易召集）', era: '816–817', place: '亞琛', language: '拉丁文', intro: '虔誠者路易召集的亞琛會議為座堂教士與修女團體制定的生活規章。加洛林教會改革的立法高峰，「詠禮司鐸」制度的奠基文件。' },
+          { title_zh: '上帝的和平與休戰法令', title_orig: 'Pax et Treuga Dei', author: '沙魯／圖盧日等地方會議', era: '989 起', place: '亞奎丹', language: '拉丁文', intro: '法蘭西主教會議宣告保護非武裝者、限定徵戰日期的和平法令，違者絕罰。教會以屬靈制裁馴化封建暴力的運動文本，中世紀和平理念的制度嘗試。' },
+          { title_zh: '克萊蒙會議法令', title_orig: 'Concilium Claromontanum', author: '教宗烏爾班二世主持', era: '1095', place: '克萊蒙', language: '拉丁文', intro: '烏爾班二世宣講收復聖地並頒赦罪之恩的會議，「上帝所願」呼聲由此而起。第一次十字軍的發動文件，贖罪制度與聖戰觀念交會的法律時刻。' },
+          { title_zh: '倫敦會議法令（1102）', title_orig: 'Concilium Londoniense (1102)', author: '坎特伯裡總主教安瑟倫主持', era: '1102', place: '倫敦西敏', language: '拉丁文', intro: '安瑟倫主持的倫敦會議法令，首度明文譴責販賣英格蘭人為奴的貿易。中世紀教會反奴隸買賣的先聲條文，改革派主教立法的代表案例。' },
+          { title_zh: '神聖會議法令', title_orig: 'Haec sancta synodus', author: '康斯坦茨大公會議', era: '1415', place: '康斯坦茨', language: '拉丁文', parent: '康斯坦茨會議(第十六次大公會議)', intro: '康斯坦茨會議宣告大公會議權柄直接來自基督、教宗亦當服從的法令。公會議主義的憲章文本，其效力之爭至今仍是教會學的活問題。' },
+          { title_zh: '頻仍法令', title_orig: 'Frequens', author: '康斯坦茨大公會議', era: '1417', place: '康斯坦茨', language: '拉丁文', parent: '康斯坦茨會議(第十六次大公會議)', intro: '康斯坦茨會議規定大公會議須定期召開的法令，欲使會議成為教會常設憲政機制。公會議主義的制度設計，後為教宗復權運動束之高閣。' },
+          { title_zh: '比薩會議法令', title_orig: 'Concilium Pisanum', author: '兩系樞機聯合召集', era: '1409', place: '比薩', language: '拉丁文', intro: '兩系樞機為終結大分裂聯合召開的會議，廢黜兩教宗另立其一，反致三宗鼎立。公會議路線的初次實驗，康斯坦茨最終解決的失敗序章。' },
+          { title_zh: '布拉格四條款', title_orig: 'Čtyři artikuly pražské', author: '胡斯派聯合綱領', era: '1420', place: '布拉格', language: '捷克文／拉丁文', intro: '胡斯派各翼共同的四條綱領：自由講道、平信徒領杯、教產充公與公罪公罰。捷克宗教革命的憲章，聖杯派身分的信仰旗幟。' },
+          { title_zh: '巴塞爾公約', title_orig: 'Compactata Basileensia', author: '巴塞爾會議與胡斯派代表', era: '1436', place: '巴塞爾／伊赫拉瓦', language: '拉丁文／捷克文', intro: '巴塞爾會議與溫和胡斯派達成的和解公約，允波希米亞平信徒領杯。大公會議與「異端」談判成約的孤例，中歐宗教和平的先驅文件。' },
+          { title_zh: '一二七七年巴黎譴責', title_orig: 'Condemnatio Parisiensis (1277)', author: '巴黎主教唐皮耶', era: '1277', place: '巴黎', language: '拉丁文', intro: '唐皮耶主教譴責二百一十九條亞里斯多德主義命題的法令，波及阿奎那部分論題。信仰與哲學邊界的著名劃線，中世紀科學思想史的爭議轉折點。' },
+          { title_zh: '黑衣修士會議譴責法令', title_orig: 'Blackfriars Council (1382)', author: '坎特伯裡總主教考特尼主持', era: '1382', place: '倫敦黑衣修士院', language: '拉丁文', intro: '考特尼主持譴責威克里夫二十四條命題的會議，地震適至而得「地震會議」之名。羅拉德運動遭壓制的法律開端，宗教改革前史的英格蘭一頁。' },
+          { title_zh: '巴黎大學章程', title_orig: 'Statuta Universitatis Parisiensis (Robertus de Courçon)', author: '教廷使節羅貝爾‧德‧庫爾松', era: '1215', place: '巴黎', language: '拉丁文', intro: '教廷使節為巴黎大學頒定的章程，課程、學位與教師資格成文。中世紀大學建制的代表文件，教會孕育大學體制的法律見證。' }
+        
         ]
       },
       {
@@ -85,7 +98,23 @@ export const MEDIEVAL_ERA: DazangEra = {
           { title_zh: '科普特教會法大全', title_orig: 'al-Majmūʿ al-Ṣafawī', author: '薩菲‧伊本‧阿薩爾(al-Ṣafī ibn al-ʿAssāl)', era: '約 1238', place: '埃及開羅', language: '阿拉伯文', intro: '科普特學者薩菲‧伊本‧阿薩爾彙編的教會法大全，將歷代大公會議與地方會議教規、使徒教規、宗主教裁決及拜占庭民法整理為體系化的阿拉伯文法典。它成為科普特正教會官方的教會法準繩，並為衣索比亞教會所採用（即吉茲文《王法 Fetha Nagast》的根源）。此書是中世紀科普特教會在伊斯蘭治下整理自身律法傳統的集大成之作。' },
           { title_zh: '巴爾‧赫布雷烏斯教會法典(指南書)', title_orig: 'Ktābā d-Hudāyē (Nomocanon)', author: '巴爾‧赫布雷烏斯(Bar Hebraeus)', era: '13 世紀', place: '美索不達米亞', language: '敘利亞文', intro: '敘利亞正教會東方瑪弗里安巴爾‧赫布雷烏斯編纂的教會法典，敘利亞文名《指南書》。全書分四十章，系統整理敘利亞正教（雅各派）的教會法規與世俗法，涵蓋教會體制、聖職、婚姻、繼承與訴訟。它是西敘利亞傳統最完整、最具權威的法典，長期作為敘利亞正教會的法律準據。巴爾‧赫布雷烏斯學識淵博，兼長神學、史學與科學，此書是其法學代表作。' },
           { title_zh: '西斯會議與亞達納會議', title_orig: 'Councils of Sis (1307) and Adana (1316)', author: '奇里乞亞亞美尼亞使徒教會', era: '1307／1316', place: '奇里乞亞西斯', language: '亞美尼亞文', intro: '奇里乞亞亞美尼亞王國晚期，為換取拉丁西方對抗馬穆魯克的奧援，亞美尼亞使徒教會於西斯（1307）與亞達納（1316）兩度召開宗主教會議，議決在禮儀與教義上向羅馬教會靠攏。決議引發本土教會與大亞美尼亞神職的強烈反彈，合一終未持久。兩會議是中世紀東方教會在政治壓力下尋求與西方合一的代表性事件，深刻牽動亞美尼亞教會的認同之爭。' },
-          { title_zh: '德布雷米特馬克會議', title_orig: 'Council of Debre Mitmaq', author: '衣索比亞正教（札拉‧雅各布皇帝召開）', era: '1450', place: '衣索比亞德布雷米特馬克', language: '吉茲文', intro: '衣索比亞皇帝札拉‧雅各布召開的全國教會會議，旨在平息困擾衣索比亞教會逾一世紀的「安息日之爭」。會議裁定基督徒當同守猶太安息日（週六）與主日（週日），調和了亞歷山卓科普特母會所反對的本土守安息傳統。此會議鞏固了王權對教會的主導，是中世紀衣索比亞正教制度與禮儀整合的關鍵，反映其獨特的猶太—基督教綜合特色。' }
+          { title_zh: '德布雷米特馬克會議', title_orig: 'Council of Debre Mitmaq', author: '衣索比亞正教（札拉‧雅各布皇帝召開）', era: '1450', place: '衣索比亞德布雷米特馬克', language: '吉茲文', intro: '衣索比亞皇帝札拉‧雅各布召開的全國教會會議，旨在平息困擾衣索比亞教會逾一世紀的「安息日之爭」。會議裁定基督徒當同守猶太安息日（週六）與主日（週日），調和了亞歷山卓科普特母會所反對的本土守安息傳統。此會議鞏固了王權對教會的主導，是中世紀衣索比亞正教制度與禮儀整合的關鍵，反映其獨特的猶太—基督教綜合特色。' },
+          { title_zh: '佛提烏十四題法典', title_orig: 'Nomocanon XIV titulorum (recensio Photiana)', author: '君士坦丁堡牧首佛提烏（修訂本）', era: '883', place: '君士坦丁堡', language: '希臘文', intro: '教會法規與帝國法令按十四主題合編的法典，佛提烏修訂本成為拜占庭教會的標準法源。「法典-教規合編」體例的定型之作，東正教法制的千年骨架。' },
+          { title_zh: '首次二次會議法規', title_orig: 'Synodus Prima-Secunda (861)', author: '君士坦丁堡會議（佛提烏主持）', era: '861', place: '君士坦丁堡聖使徒教堂', language: '希臘文', intro: '佛提烏首任內召開的大會議，十七條法規嚴整修道建院與主教紀律。拜占庭修道法制的重要立法，佛提烏與羅馬爭端的序幕場景。' },
+          { title_zh: '聖索菲亞會議法令', title_orig: 'Synodus Sanctae Sophiae (879–880)', author: '君士坦丁堡會議', era: '879–880', place: '君士坦丁堡聖索菲亞', language: '希臘文', intro: '恢復佛提烏職位並獲羅馬使節與會確認的大會議，兼申信經不得增添。東方視之為第八次大公會議的候選，東西方共融最後的和解時刻之一。' },
+          { title_zh: '靜修派會議法令', title_orig: 'Synodi Palamiticae (1341, 1347, 1351)', author: '君士坦丁堡歷次會議', era: '1341–1351', place: '君士坦丁堡', language: '希臘文', intro: '裁定帕拉瑪斯靜修神學為正統、確立神之本質與能量之分的歷次會議法令。晚期拜占庭神學的定調立法，正統禮儀年「帕拉瑪斯主日」的法源。' },
+          { title_zh: '佐納拉斯教會法注釋', title_orig: 'Commentarii in canones (Ioannes Zonaras)', author: '約翰‧佐納拉斯', era: '約 1130', place: '君士坦丁堡', language: '希臘文', intro: '史家佐納拉斯遍注歷代會議法規的注釋全集，考訂立法本意而直言時弊。拜占庭教會法學三大家之首，正教法規詮釋的基準著作。' },
+          { title_zh: '巴爾薩蒙教會法注釋', title_orig: 'Commentarii in Nomocanonem (Theodorus Balsamon)', author: '安提阿牧首巴爾薩蒙', era: '約 1170–1195', place: '君士坦丁堡', language: '希臘文', intro: '巴爾薩蒙奉敕注釋法典與教規全帙，兼答各方教律疑問。拜占庭法學的集大成者，帝國法與教會法關係的權威裁量。' },
+          { title_zh: '布拉斯塔雷斯字母法規大全', title_orig: 'Syntagma alphabeticum (Matthaeus Blastares)', author: '馬太‧布拉斯塔雷斯', era: '1335', place: '帖撒羅尼迦', language: '希臘文', intro: '按希臘字母排列主題的教會法便覽，僧侶布拉斯塔雷斯為實務檢索而編。拜占庭法學的普及化定本，旋譯入斯拉夫世界沿用數百年。' },
+          { title_zh: '弗拉基米爾與雅羅斯拉夫教會規章', title_orig: 'Церковные уставы Владимира и Ярослава', author: '基輔大公弗拉基米爾與雅羅斯拉夫', era: '11 世紀', place: '基輔', language: '教會斯拉夫文', intro: '基輔羅斯兩代大公劃定教會法庭管轄與什一奉獻的規章。斯拉夫政教關係的奠基文件，羅斯受洗後教會建制的法律見證。' },
+          { title_zh: '掌舵書', title_orig: 'Кормчая книга', author: '斯拉夫教會（譯編自拜占庭法典）', era: '13 世紀（1274 弗拉基米爾會議採行）', place: '塞爾維亞／羅斯', language: '教會斯拉夫文', intro: '拜占庭教會法典的斯拉夫譯編本，以「掌舵」喻導引教會之船。羅斯與巴爾幹教會數百年的法律聖書，斯拉夫法制史的源頭文獻。' },
+          { title_zh: '薩瓦法典', title_orig: 'Законоправило светог Саве (Zakonopravilo)', author: '塞爾維亞首任總主教聖薩瓦', era: '1219', place: '塞爾維亞', language: '教會斯拉夫文', intro: '聖薩瓦為新獲自主的塞爾維亞教會編譯的教會-民事法典。塞爾維亞教會自立的法律基石，斯拉夫掌舵書系的權威定本。' },
+          { title_zh: '亞美尼亞法典', title_orig: 'Datastanagirk\' (Mkhitar Gosh)', author: '姆希塔爾‧戈什', era: '約 1184', place: '亞美尼亞', language: '亞美尼亞文', intro: '修士戈什編纂的亞美尼亞教會-民事法典，教規與習慣法熔於一爐。無主權時代亞美尼亞人的自治法源，後隨僑社行用至波蘭與印度。' },
+          { title_zh: '引導之書', title_orig: 'Kitāb al-Hudā', author: '馬龍派教會（阿拉伯文法典彙編）', era: '1059', place: '黎巴嫩山', language: '阿拉伯文', intro: '馬龍派彙譯教規與教義訓示的阿拉伯文法典。伊斯蘭統治下山地教會的自治法本，馬龍派中世紀法制僅存的重要見證。' },
+          { title_zh: '普雷斯拉夫會議決議', title_orig: 'Преславски събор (893)', author: '保加利亞會議（鮑里斯與西美昂治下）', era: '893', place: '普雷斯拉夫', language: '教會斯拉夫文', intro: '保加利亞遷都普雷斯拉夫並定斯拉夫語為教會與國家用語的大會議。斯拉夫禮儀文明的立國決議，古教會斯拉夫文黃金時代的制度起點。' },
+          { title_zh: '魯伊斯-烏爾布尼西會議法規', title_orig: 'რუის-ურბნისის კრება', author: '喬治亞教會會議（建設者大衛召集）', era: '1103', place: '喬治亞魯伊斯', language: '喬治亞文', intro: '建設者大衛召集整頓喬治亞教會的大會議，罷黜失格主教並嚴訂敘任紀律。喬治亞黃金時代的教會憲章，高加索基督教法制的代表文獻。' },
+          { title_zh: '奎隆銅板特許狀', title_orig: 'Tharisāppaḷḷi Copper Plates', author: '文奈杜王阿雅安（頒予敘利亞教會）', era: '849', place: '印度奎隆', language: '古馬拉雅拉姆文／波斯文簽署', intro: '南印度王室頒予聖多馬基督徒教會土地與特權的銅板文書，附波斯、阿拉伯與猶太商人簽署見證。印度教會最古的法律實物，馬拉巴海岸多元共處的第一手見證。' }
+        
         ]
       },
       {
@@ -98,6 +127,17 @@ export const MEDIEVAL_ERA: DazangEra = {
           { title_zh: '額我略九世教令集', title_orig: 'Decretales Gregorii IX / Liber Extra', author: '教宗額我略九世命雷蒙·德·佩尼亞福特編', era: '1234', place: '羅馬', language: '拉丁文', intro: '《額我略九世教令集》（又稱《集外篇》）由教宗額我略九世委任道明會法學家雷蒙·德·佩尼亞福特彙編，收錄格拉提安《教令集》之後的教宗教令與會議法規，刪汰過時、整理成五卷（審判、聖職、婚姻等主題）。它是首部由教宗權威頒布、具普遍約束力的官方教會法典，取代此前的私人彙編，成為中世紀教會法的標準法源，地位至為崇高。' },
           { title_zh: '卜尼法八世教令第六書', title_orig: 'Liber Sextus', author: '教宗卜尼法八世', era: '1298', place: '羅馬', language: '拉丁文', intro: '《第六書》由教宗卜尼法八世頒布，續補《額我略九世教令集》五卷之後的新教令，故稱「第六書」。它整理了里昂會議以來的法規與教宗裁決，並附著名的法律格言彙編。此書是《教會法大全》的重要組成，反映中世紀盛期教宗立法的成熟，卜尼法八世亦藉以強化教宗至上的主張，後與法王腓力四世的衝突即與此相關。' },
               { title_zh: '列王律法', title_orig: 'Fetḥa Nagast (Law of the Kings)', author: '輯自伊本‧阿薩爾教會法（Ibn al-ʿAssāl）等', era: '約 13 世紀彙編、15 世紀傳入衣索匹亞', place: '埃及→衣索匹亞', language: '阿拉伯文→吉茲文', intro: '衣索匹亞教會與帝國長期奉行的教會兼民事法典，源出十三世紀科普特學者伊本‧阿薩爾以阿拉伯文編纂的教會法總集，後譯為吉茲文傳入衣索匹亞，兼採使徒憲章、大公會議教規與羅馬—拜占庭民法。內容含教會聖統、聖事、婚姻、繼承、契約與刑罰諸法，作為帝國根本法直行至二十世紀，是研究東方教會法與衣索匹亞政教制度的核心文獻。' },
+          { title_zh: '偽伊西多爾教令集', title_orig: 'Decretales Pseudo-Isidorianae', author: '佚名（法蘭克教士群，託名塞維亞的伊西多爾）', era: '約 850', place: '蘭斯一帶', language: '拉丁文', intro: '法蘭克教士假託古教宗名義偽造的大型教令集，維護主教免受都主教與世俗權侵奪。中世紀最成功的偽文書工程，君士坦丁贈禮亦廁身其中，教宗權理論意外的助產士。' },
+          { title_zh: '雷吉諾教會紀律二書', title_orig: 'De synodalibus causis et disciplinis ecclesiasticis', author: '普呂姆的雷吉諾', era: '約 906', place: '特里爾', language: '拉丁文', intro: '雷吉諾為主教巡察教區編纂的法規問答手冊，兼收著名的「夜騎婦人」條目。加洛林之後教會法整編的先驅，主教視察制度的操作指南。' },
+          { title_zh: '布爾夏德教令集', title_orig: 'Decretum Burchardi', author: '沃姆斯主教布爾夏德', era: '約 1012–1023', place: '沃姆斯', language: '拉丁文', intro: '布爾夏德輯錄兩千餘條教規的二十卷教令集，第十九卷「糾正者」為著名的懺悔則例。格拉提安之前最通行的教會法典，中世紀民間信仰研究的意外寶庫。' },
+          { title_zh: '伊沃教令集', title_orig: 'Decretum et Panormia Ivonis', author: '沙特爾主教伊沃', era: '約 1094', place: '沙特爾', language: '拉丁文', intro: '伊沃輯纂的教令集及其通行縮編本，序言提出寬嚴互濟的法律解釋原則。敘任權之爭中調和路線的法學基礎，格拉提安方法論的直接先驅。' },
+          { title_zh: '克萊孟教令集', title_orig: 'Constitutiones Clementinae', author: '教宗克萊孟五世（若望二十二世頒行）', era: '1317', place: '亞維儂', language: '拉丁文', intro: '克萊孟五世彙整維埃納會議法令與本朝教令的法典，身後由若望二十二世頒行。教會法大全的第四部件，亞維儂教廷立法的代表成果。' },
+          { title_zh: '若望二十二世常行教令', title_orig: 'Extravagantes Johannis XXII', author: '教宗若望二十二世', era: '1325 輯', place: '亞維儂', language: '拉丁文', intro: '若望二十二世流通教令的彙編，因行於法典之外得名「常行教令」。與《共通常行教令》同補教會法大全的末篇，中世紀教宗立法的收尾卷帙。' },
+          { title_zh: '林德伍德教省法規彙編', title_orig: 'Provinciale (seu Constitutiones Angliae)', author: '威廉‧林德伍德', era: '1433', place: '倫敦', language: '拉丁文', intro: '林德伍德輯注坎特伯裡教省歷代法規的彙編，逐條附學理注釋。中世紀英格蘭教會法的總集，英國教會法學的奠基文本。' },
+          { title_zh: '喬巴姆聽告解大全', title_orig: 'Summa confessorum (Thomas de Chobham)', author: '託馬斯‧喬巴姆', era: '約 1216', place: '索爾茲伯裡', language: '拉丁文', intro: '喬巴姆為聽告解司鐸編寫的實務大全，職業倫理逐行業剖析。拉特朗四世年度告解制的配套手冊，中世紀日常道德生活的透視鏡。' },
+          { title_zh: '雷蒙德判例大全', title_orig: 'Summa de casibus poenitentiae', author: '佩尼亞福特的雷蒙德', era: '約 1224–1234', place: '巴塞隆納', language: '拉丁文', intro: '《額我略九世教令集》總編纂雷蒙德為告解實務撰寫的判例大全。教會法與良心法庭的接榫之作，道明會法學傳統的代表手冊。' },
+          { title_zh: '霍斯蒂恩西斯金言大全', title_orig: 'Summa aurea (Hostiensis)', author: '蘇薩的亨利（霍斯蒂恩西斯樞機）', era: '約 1253', place: '巴黎／羅馬', language: '拉丁文', intro: '教會法學巨擘霍斯蒂恩西斯系統疏解教令法的大全，以文筆金聲玉振得名。中世紀教會法學的頂峰著作，「教宗權充盈」理論的經典表述。' }
+        
         ]
       },
       {
@@ -109,7 +149,24 @@ export const MEDIEVAL_ERA: DazangEra = {
           { title_zh: '熙篤會憲章(愛德憲章)', title_orig: 'Carta Caritatis', author: '熙篤會創立者(傳斯蒂芬·哈丁 Stephen Harding)', era: '約 1114–1119', place: '熙篤(Cîteaux)', language: '拉丁文', intro: '《愛德憲章》是熙篤會的根本會憲，在遵行本篤會規之外，確立熙篤各院之間的聯合架構：母院對子院的視察、年度全體院長大會、以及以「愛德」而非財產隸屬維繫的聯合。它主張回歸本篤精神，強調勞動、簡樸與隱修。此憲章創設了跨院的修會聯邦治理模式，影響後世眾多修會組織，是中世紀修道改革的制度典範。' },
           { title_zh: '方濟會規(定型會規)', title_orig: 'Regula Bullata', author: '亞西西的方濟各(Franciscus Assisiensis)', era: '1223', place: '亞西西‧羅馬', language: '拉丁文', intro: '《定型會規》是方濟各於 1223 年定稿、經教宗何諾三世以詔書批准的方濟會正式會規。它規定弟兄們效法基督的貧窮，不擁有任何財產、托缽行乞、巡迴宣道，並服從教會與會內長上。相較早期較長的會規，此本更簡要而具法律效力。它界定了托缽修會的全新生活形態，使「使徒貧窮」制度化，後因詮釋分歧引發會內「屬靈派」與「住院派」的長期爭論。' },
           { title_zh: '道明會憲章', title_orig: 'Constitutiones Ordinis Praedicatorum', author: '道明(Dominicus)及早期總會', era: '約 1216–1228', place: '土魯斯‧波隆那', language: '拉丁文', intro: '道明會憲章是宣道兄弟會（道明會）的根本法規，在採用奧斯定會規之外另立會憲，規定以宣道與救靈為宗旨、重視神學研讀、實行托缽貧窮，並建立以總會、省會、各院議會逐級代議與選舉的治理制度。其代議式架構被譽為中世紀最先進的修會憲政之一。它使學術研究與宣道使命制度化，深刻影響經院神學的興盛（阿奎那、大阿爾伯特皆出此會）。' },
-          { title_zh: '加爾都西會規(慣例集)', title_orig: 'Consuetudines Cartusiae', author: '加爾都西會圭格一世(Guigo I)', era: '約 1127', place: '大沙特勒斯(Grande Chartreuse)', language: '拉丁文', intro: '《慣例集》是加爾都西會第五任院長圭格一世彙編成文的會規，記錄此前隱修慣例，確立加爾都西獨特的「半隱修」生活：會士各居獨立小室、多數時間於室內獨自祈禱勞作研讀，僅部分時刻共聚禮儀。它將嚴格的緘默、獨居與本篤式團體生活相結合，會規以從不改革著稱（其銘言謂「從未改革，因從未敗壞」），是中世紀最嚴苦的隱修傳統之根本文獻。' }
+          { title_zh: '加爾都西會規(慣例集)', title_orig: 'Consuetudines Cartusiae', author: '加爾都西會圭格一世(Guigo I)', era: '約 1127', place: '大沙特勒斯(Grande Chartreuse)', language: '拉丁文', intro: '《慣例集》是加爾都西會第五任院長圭格一世彙編成文的會規，記錄此前隱修慣例，確立加爾都西獨特的「半隱修」生活：會士各居獨立小室、多數時間於室內獨自祈禱勞作研讀，僅部分時刻共聚禮儀。它將嚴格的緘默、獨居與本篤式團體生活相結合，會規以從不改革著稱（其銘言謂「從未改革，因從未敗壞」），是中世紀最嚴苦的隱修傳統之根本文獻。' },
+          { title_zh: '克呂尼慣例集', title_orig: 'Consuetudines Cluniacenses', author: '克呂尼修士伯爾納與烏爾裡希（輯錄）', era: '11 世紀', place: '克呂尼', language: '拉丁文', intro: '克呂尼修院日課、禮儀與院務慣例的成文輯錄，詳至燭火與手勢暗語。本篤會規的克呂尼實施細則，中世紀修道日常最細密的白描。' },
+          { title_zh: '阿尼安改革法令', title_orig: 'Capitulare monasticum (817)', author: '阿尼安的本篤主導、亞琛會議頒', era: '817', place: '亞琛', language: '拉丁文', intro: '阿尼安的本篤推動帝國全境修院一體遵行本篤會規的法令。「一規一慣例」的加洛林修道統一工程，本篤會規獨尊地位的法律確立。' },
+          { title_zh: '熙篤會總會議法規集', title_orig: 'Statuta capitulorum generalium Ordinis Cisterciensis', author: '熙篤會歷年總會議', era: '1134 起輯錄', place: '熙篤', language: '拉丁文', intro: '熙篤會年度總會議決議的累積法規集，農莊經營至抄書規範鉅細靡遺。愛德憲章之下的動態立法，中世紀跨國組織治理的檔案標本。' },
+          { title_zh: '普雷蒙特雷會規章', title_orig: 'Statuta Ordinis Praemonstratensis', author: '普雷蒙特雷會（聖諾伯特創始）', era: '約 1140 成文', place: '普雷蒙特雷', language: '拉丁文', intro: '諾伯特所創詠禮司鐸會的規章，奧斯定會規之上疊加熙篤式總會議制。修道嚴規與牧靈使命結合的體制設計，白衣詠禮司鐸的生活法度。' },
+          { title_zh: '聖殿騎士團會規', title_orig: 'Regula pauperum commilitonum Christi Templique Salomonici', author: '特魯瓦會議頒（伯爾納鐸襄贊）', era: '1129', place: '特魯瓦', language: '拉丁文／古法文', intro: '特魯瓦會議為聖殿騎士團頒定的會規，修道三願與軍事紀律熔鑄一體。「新騎士制度」的法律文本，修士武人這一中世紀悖論的章程化。' },
+          { title_zh: '醫院騎士團會規', title_orig: 'Regula Hospitalariorum (Raymond du Puy)', author: '雷蒙‧杜‧皮伊', era: '約 1153', place: '耶路撒冷', language: '拉丁文', intro: '醫院騎士團首任總團長杜‧皮伊訂立的會規，「以病者為主」的服侍條文先於軍事職能。醫護修會法制的源頭文件，馬爾他騎士團傳統的根本章程。' },
+          { title_zh: '條頓騎士團規章', title_orig: 'Statuten des Deutschen Ordens', author: '條頓騎士團', era: '約 1264 成文', place: '阿卡／普魯士', language: '中古德文／拉丁文', intro: '條頓騎士團的會規與慣例彙編，聖殿與醫院兩團法制的德語綜合。騎士修會治理波羅的海領邦的制度文本，德意志東向拓殖的規章側影。' },
+          { title_zh: '克拉拉會規', title_orig: 'Regula Sanctae Clarae', author: '亞西西的克拉拉', era: '1253', place: '亞西西聖達彌盎', language: '拉丁文', intro: '克拉拉臨終前兩日獲教宗批准的會規，堅守徹底神貧不容產業。史上首部由女性為女修會撰寫並獲準的會規，方濟神貧理想的女性法典。' },
+          { title_zh: '方濟非定型會規', title_orig: 'Regula non bullata', author: '亞西西的方濟', era: '1221', place: '亞西西', language: '拉丁文', intro: '方濟未經教宗璽印批准的早期會規，福音語句與勸勉交織近乎靈修文本。定型會規之前的原初理想文件，方濟精神最少修剪的法度形態。' },
+          { title_zh: '方濟第三會規章', title_orig: 'Memoriale propositi (Regula Tertii Ordinis)', author: '方濟會第三會（尼各老四世 1289 定版）', era: '1221／1289', place: '義大利', language: '拉丁文', intro: '在俗信徒不離家庭職業而行悔改生活的第三會規章。平信徒修道理想的制度化容器，中世紀城市敬虔運動的法律外衣。' },
+          { title_zh: '加爾默羅原始會規', title_orig: 'Regula Sancti Alberti', author: '耶路撒冷宗主教阿爾伯特', era: '約 1209', place: '迦密山', language: '拉丁文', intro: '阿爾伯特為迦密山隱士撰寫的簡短會規，獨居靜默晝夜默想主法。加爾默羅傳統的根本法度，大德蘭改革所回歸的「原始會規」本文。' },
+          { title_zh: '布里吉特會規', title_orig: 'Regula Sancti Salvatoris', author: '瑞典的布里吉特（自述基督啟示）', era: '1370 獲准', place: '瓦茨泰納／羅馬', language: '拉丁文', intro: '布里吉特自陳得自基督啟示的救主會規，男女雙修院同屬女院長治理。北歐女先知的立法文本，中世紀晚期女性宗教權威的制度高峰。' },
+          { title_zh: '共同生活弟兄會章程', title_orig: 'Consuetudines Fratrum Vitae Communis', author: '共同生活弟兄會（格羅特傳統）', era: '約 1380–1400', place: '德文特', language: '拉丁文', intro: '不發聖願而共財共住的平信徒團體章程，以抄書與辦學自養。新虔敬運動的制度容器，《效法基督》所出土壤的生活法度。' },
+          { title_zh: '斯圖狄奧斯修院典章', title_orig: 'Typikon monasterii Studii', author: '斯圖狄奧斯的狄奧多若傳統', era: '9 世紀', place: '君士坦丁堡', language: '希臘文', intro: '狄奧多若整頓斯圖狄奧斯修院的典章傳統，日課勞動與抄書坊制度並詳。拜占庭修道復興的章程原型，東方典章文類的源頭之一。' },
+          { title_zh: '聖山典章', title_orig: 'Typikon Athonis (Tragos)', author: '阿託斯修道長老會議（皇帝約翰一世確認）', era: '972', place: '阿託斯聖山', language: '希臘文', intro: '皇帝確認的阿託斯聖山首部典章，羊皮原件「山羊皮卷」猶存。修道共和國的建國憲法，千年聖山自治的法律起點。' },
+          { title_zh: '艾弗格提斯修院典章', title_orig: 'Typikon Euergetidis', author: '艾弗格提斯修院（提摩太院長編）', era: '11 世紀末', place: '君士坦丁堡郊', language: '希臘文', intro: '君士坦丁堡艾弗格提斯修院的典章，禮儀與治理條文後為各地新院廣泛抄用。拜占庭修道法制的樣板文本，典章傳抄網絡的樞紐文件。' }
+        
         ]
       },
       {
@@ -118,7 +175,50 @@ export const MEDIEVAL_ERA: DazangEra = {
         label_en: 'Inquisition and Practice',
         desc: '異端裁判的程序手冊與司法實踐文獻。',
         works: [
-          { title_zh: '異端裁判實踐手冊', title_orig: 'Practica Inquisitionis Heretice Pravitatis', author: '伯爾納德·桂(Bernard Gui)', era: '約 1323–1324', place: '土魯斯', language: '拉丁文', intro: '《異端裁判實踐手冊》是道明會裁判官伯爾納德·桂依其多年審理經驗編成的程序指南，分述各異端派別（卡特里、瓦勒度、貝甘會、猶太改宗者等）的信仰特徵、審訊問答範例、判決與懲罰程式，以及裁判所的檔案與行政實務。它是研究中世紀異端裁判運作最重要的第一手文獻，系統呈現裁判程序如何制度化，在法制史與宗教史上均具核心價值。' }
+          { title_zh: '異端裁判實踐手冊', title_orig: 'Practica Inquisitionis Heretice Pravitatis', author: '伯爾納德·桂(Bernard Gui)', era: '約 1323–1324', place: '土魯斯', language: '拉丁文', intro: '《異端裁判實踐手冊》是道明會裁判官伯爾納德·桂依其多年審理經驗編成的程序指南，分述各異端派別（卡特里、瓦勒度、貝甘會、猶太改宗者等）的信仰特徵、審訊問答範例、判決與懲罰程式，以及裁判所的檔案與行政實務。它是研究中世紀異端裁判運作最重要的第一手文獻，系統呈現裁判程序如何制度化，在法制史與宗教史上均具核心價值。' },
+          { title_zh: '艾梅里克裁判官指南', title_orig: 'Directorium Inquisitorum', author: '尼古拉‧艾梅里克', era: '1376', place: '亞維儂', language: '拉丁文', intro: '亞拉岡總裁判官艾梅里克集程序、法理與異端名錄於一書的指南，十六世紀經佩尼亞增注再版通行。裁判法學的系統化頂點，近代宗教審判的操作藍本。' },
+          { title_zh: '女巫之槌', title_orig: 'Malleus Maleficarum', author: '海因裡希‧克拉馬（署名併斯普倫格）', era: '1486', place: '斯派爾', language: '拉丁文', intro: '克拉馬論證巫術實在、教示偵訊定罪之法的手冊，挾教宗詔書與神學院背書行世。獵巫時代最惡名昭彰的文本，性別偏見與司法暴力交織的黑暗經典。' },
+          { title_zh: '富尼耶審訊登記簿', title_orig: 'Registre d\'Inquisition de Jacques Fournier', author: '帕米耶主教雅克‧富尼耶（後為本篤十二世）', era: '1318–1325', place: '帕米耶', language: '拉丁文（歐克語口供）', intro: '富尼耶主教審訊卡特里派殘餘的完整登記簿，村民口供鉅細靡遺。《蒙塔尤》所據的著名史料，中世紀庶民心態史的第一礦脈。' },
+          { title_zh: '西班牙裁判所訓令', title_orig: 'Instrucciones del Santo Oficio (Torquemada)', author: '託爾克馬達', era: '1484', place: '塞維亞', language: '西班牙文', intro: '首任大裁判官託爾克馬達為新設西班牙裁判所頒定的程序訓令。王權裁判體制的組織法，近代國家宗教審查機器的第一份章程。' },
+          { title_zh: '里昂窮人宣誓書', title_orig: 'Professio fidei Valdesii', author: '里昂的瓦勒度（宣誓文本）', era: '1180', place: '里昂', language: '拉丁文', intro: '商人瓦勒度在教廷使節前宣認正統信仰的誓文，隨後其運動仍遭絕罰。瓦勒度派歷史的第一份法律文件，貧窮運動與教制衝突的起點見證。' }
+        
+        ]
+      },
+      {
+        key: 'papal-bulls',
+        label: '教宗詔書與特許部',
+        label_en: 'Papal Bulls and Privileges',
+        desc: '中世紀教宗詔書、協約與特許狀，教宗權運作的法律文書。',
+        works: [
+          { title_zh: '主的名義法令', title_orig: 'In nomine Domini', author: '教宗尼各老二世', era: '1059', place: '拉特朗', language: '拉丁文', intro: '尼各老二世將教宗選舉權收歸樞機團的法令，排除皇帝與羅馬貴族幹預。教宗選舉制度的奠基文件，額我略改革的第一聲號角。' },
+          { title_zh: '沃姆斯協約', title_orig: 'Concordatum Wormatiense', author: '教宗加里斯都二世與皇帝亨利五世', era: '1122', place: '沃姆斯', language: '拉丁文', intro: '教宗與皇帝就主教敘任權達成的協約，屬靈授職與世俗封授分離。半世紀敘任權之爭的和解文件，近代政教二元論的中世紀根源。' },
+          { title_zh: '克呂尼創建特許狀', title_orig: 'Charta fundationis Cluniacensis', author: '亞奎丹公爵虔誠者威廉', era: '910', place: '克呂尼', language: '拉丁文', intro: '威廉公爵捐建克呂尼修院並宣告其僅屬聖彼得、免受一切俗權與主教管轄的特許狀。修道自由的憲章文本，兩百年克呂尼改革帝國的出生證書。' },
+          { title_zh: '遇險之際憲章', title_orig: 'Ubi periculum', author: '教宗額我略十世（第二次里昂會議頒）', era: '1274', place: '里昂', language: '拉丁文', intro: '額我略十世制定教宗選舉閉門會議制的憲章，樞機遲不決者遞減飲食。三年空位危機催生的制度發明，「conclave」一詞與制度的法律起點。' },
+          { title_zh: '廢除異端詔書', title_orig: 'Ad abolendam', author: '教宗路爵三世', era: '1184', place: '維羅納', language: '拉丁文', intro: '路爵三世與皇帝腓特烈一世協同頒布的反異端教令，令主教定期巡查並開列必究教派名單。主教裁判制度的奠基文件，中世紀壓制異端法制的起點。' },
+          { title_zh: '剷除詔書', title_orig: 'Ad extirpanda', author: '教宗依諾增爵四世', era: '1252', place: '佩魯賈', language: '拉丁文', intro: '依諾增爵四世授權裁判所對異端嫌疑人施用刑訊的詔書，並命城邦政權配合執行。裁判制度最黑暗的法律授權，中世紀司法與信仰強制交纏的標記。' },
+          { title_zh: '猶太人保護詔書', title_orig: 'Sicut Judaeis', author: '歷代教宗（加里斯都二世起反覆重頒）', era: '1120 起', place: '羅馬', language: '拉丁文', intro: '歷代教宗重頒的猶太人保護詔書，禁止強迫受洗、傷害人身與侵奪財產。中世紀反猶暴潮中的法律堤防，教會對猶太政策雙面性的正面一頁。' },
+          { title_zh: '最深切願望詔書', title_orig: 'Summis desiderantes affectibus', author: '教宗依諾增爵八世', era: '1484', place: '羅馬', language: '拉丁文', intro: '依諾增爵八世授權克拉馬與斯普倫格在德意志追訴行巫者的詔書。獵巫運動的教廷背書文件，兩年後《女巫之槌》即挾之而行。' },
+          { title_zh: '可憎之事詔書', title_orig: 'Execrabilis', author: '教宗庇護二世', era: '1460', place: '曼圖亞', language: '拉丁文', intro: '庇護二世宣告凡越過教宗上訴大公會議者絕罰的詔書，昔日的公會議派健將親手封殺公會議主義。十五世紀教宗復權的法律句點，立場逆轉的著名個案。' },
+          { title_zh: '奧斯定隱修會聯合詔書', title_orig: 'Licet ecclesiae catholicae', author: '教宗亞歷山大四世', era: '1256', place: '羅馬', language: '拉丁文', intro: '亞歷山大四世將義大利諸隱修團體合併為奧斯定隱修會的詔書。託缽修會第四支的誕生文件，日後路德所出修會的法律起點。' },
+          { title_zh: '藉可敬弟兄詔書', title_orig: 'Per venerabilem', author: '教宗依諾增爵三世', era: '1202', place: '羅馬', language: '拉丁文', intro: '依諾增爵三世致蒙彼利埃伯爵、闡發教宗於世俗事務「因罪介入」權的教令。中世紀教宗權法理的關鍵條文，後入額我略九世教令集成為經典判例。' },
+          { title_zh: '祂知曉詔書', title_orig: 'Novit ille', author: '教宗依諾增爵三世', era: '1204', place: '羅馬', language: '拉丁文', intro: '依諾增爵三世介入英法戰爭、主張教宗有權審斷君王涉罪之爭的教令。教宗仲裁世俗政爭的理論宣言，中世紀教會主權論的代表文本。' },
+          { title_zh: '傾向異端詔書', title_orig: 'Vergentis in senium', author: '教宗依諾增爵三世', era: '1199', place: '羅馬', language: '拉丁文', intro: '依諾增爵三世將異端比附羅馬法叛國罪、沒收其財產並累及子嗣的教令。異端罪重刑化的法律里程碑，後世裁判制度的嚴酷源頭。' },
+          { title_zh: '古人記述詔書', title_orig: 'Antiquorum habet fida relatio', author: '教宗卜尼法八世', era: '1300', place: '羅馬', language: '拉丁文', intro: '卜尼法八世宣告首個聖年、頒赴羅馬朝聖者全大赦的詔書。天主教禧年制度的創始文件，中世紀朝聖與赦罪經濟的法律起點。' }
+        
+        ]
+      },
+      {
+        key: 'national-law',
+        label: '各國教會法部',
+        label_en: 'National Church Laws',
+        desc: '各王國規範教會事務的法典與憲章，政教關係的在地法制。',
+        works: [
+          { title_zh: '克拉倫登憲章', title_orig: 'Constitutions of Clarendon', author: '英王亨利二世', era: '1164', place: '克拉倫登', language: '拉丁文', intro: '亨利二世申明王權對教士審判與教會上訴管轄的十六條憲章，貝克特拒署而流亡。坎特伯裡血案的法律導火線，英格蘭政教管轄之爭的核心文本。' },
+          { title_zh: '焚燒異端法', title_orig: 'De heretico comburendo', author: '英格蘭國會（亨利四世治下）', era: '1401', place: '倫敦', language: '拉丁文', intro: '英格蘭國會授權以火刑處死頑抗異端的法律，矛頭直指羅拉德派。英國史上首部焚燒異端的成文法，日後殉道世紀的法律工具。' },
+          { title_zh: '聖史蒂芬教會法令', title_orig: 'Decreta Sancti Stephani regis', author: '匈牙利國王史蒂芬一世', era: '約 1000–1038', place: '艾斯特根', language: '拉丁文', intro: '匈牙利開國聖王史蒂芬的法令集，建堂什一與主日守禮入法。馬扎爾人基督教化的立法工程，中歐新王國「以法立教」的樣板。' },
+          { title_zh: '冰島基督教法', title_orig: 'Kristinréttr (Grágás)', author: '冰島全體大會（灰雁法典教會編）', era: '約 1122–1133 成文', place: '冰島辛格韋德利', language: '古諾斯文', intro: '冰島自由邦灰雁法典中的基督教法編，洗禮葬儀與主教職權按本地議會傳統成文。無王之國的教會法奇例，北歐邊陲基督教化的法律化石。' },
+          { title_zh: '古拉廷教會法', title_orig: 'Gulaþingslǫg (kristinn réttr)', author: '挪威古拉廷議會', era: '11–12 世紀成文', place: '挪威古拉廷', language: '古諾斯文', intro: '挪威西部古拉廷議會法典中的教會法章，聖俗條文同卷並存。維京社會接納基督教的立法切片，挪威法制史的最古地層之一。' }
+        
         ]
       }
     ]
