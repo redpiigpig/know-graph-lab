@@ -1811,9 +1811,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           yearSort: 1913,
           category: '早期著作（公有領域）',
           languages: ['en'],
-          status: 'in-progress',
+          status: 'done',
           ebookId: '22222225-2222-4222-8222-222222222225',
-          note: '1912 Fordham 大學九講（Gutenberg #66041，公有領域）。榮格與佛洛伊德決裂前的力比多理論修訂。英→繁中逐段對照，翻譯中。',
+          note: '1912 Fordham 大學九講（Gutenberg #66041，公有領域）。榮格與佛洛伊德決裂前的力比多理論修訂。英→繁中逐段對照已完成（88 段）。',
         },
         {
           title: '早發性癡呆心理學',
