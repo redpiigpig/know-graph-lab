@@ -479,6 +479,90 @@ export const ANCIENT_ERA: DazangEra = {
               { title_zh: '教父談道錄', intro: '約五世紀由卡西安所撰的修道靈修經典，拉丁文寫就，成於馬賽。全書以卡西安與埃及沙漠教父對談的形式呈現，二十四篇談道深入探討辨別之德祈禱默觀靈魂諸德與屬靈爭戰等課題。它是東方沙漠靈修智慧的西方總集，與修院規制互補，前者論外在規制後者論內在靈修，深刻塑造了西方修道靈修傳統，為本篤會規所推崇，於默觀神學與靈修史上影響極為深遠。', title_orig: 'The Conferences (Collationes)', author: '卡西安', era: '約 5 世紀', place: '馬賽', language: '拉丁文', link: '/fathers' },
             ],
           },
+          {
+            key: 'early-synods', label: '早期地方會議部', label_en: 'Early Local Synods',
+            works: [
+          { title_zh: '阿爾勒會議教規', title_orig: 'Concilium Arelatense (314)', author: '阿爾勒會議', era: '314', place: '高盧阿爾勒', language: '拉丁文', intro: '君士坦丁召集處置多納圖派的西方大會，判洗禮有效不論施者德行。首次帝國規模的西方會議，教會與皇帝協同立法的開端，尼西亞的先聲。' },
+          { title_zh: '安提阿會議教規', title_orig: 'Canones Concilii Antiocheni (341)', author: '安提阿獻堂會議', era: '341', place: '安提阿', language: '希臘文', intro: '安提阿獻堂會議二十五條教規，詳定主教管轄與上訴程序。東方教會治理法規的骨幹之一，後入各教規總集通行拜占庭世界。' },
+          { title_zh: '新凱撒利亞會議教規', title_orig: 'Canones Concilii Neocaesariensis', author: '新凱撒利亞會議', era: '約 315', place: '卡帕多細亞新凱撒利亞', language: '希臘文', intro: '新凱撒利亞會議規範神職婚姻與悔罪程序的十五條教規。現存最古的地方教規之一，早期教會紀律的原始文本。' },
+          { title_zh: '撒狄卡會議教規', title_orig: 'Canones Concilii Sardicensis', author: '撒狄卡會議', era: '343', place: '撒狄卡', language: '希臘文／拉丁文', intro: '撒狄卡會議賦被黜主教上訴羅馬之權的教規。羅馬首席權主張的早期法源，日後教宗權論辯屢引的關鍵條文。' },
+          { title_zh: '希波會議教規', title_orig: 'Concilium Hipponense (393)', author: '希波會議', era: '393', place: '北非希波', language: '拉丁文', intro: '奧古斯丁與會的北非會議，首度開列與後世相合的聖經正典目錄。西方正典史的重要文件，北非教會立法傳統的代表。' },
+          { title_zh: '託雷多第四會議教規', title_orig: 'Concilium Toletanum IV (633)', author: '塞維亞的伊西多爾主持', era: '633', place: '西班牙託雷多', language: '拉丁文', intro: '伊西多爾主持的西哥德全國會議，統一西班牙禮儀並規範王位與猶太政策。西哥德政教一體的立法高峰，中世紀西班牙教會的憲章。' },
+          { title_zh: '布拉加第一會議教規', title_orig: 'Concilium Bracarense I (561)', author: '布拉加會議', era: '561', place: '西班牙布拉加', language: '拉丁文', intro: '駁斥普里西利安二元異端的伊比利亞會議，逐條定罪其教義。西北伊比利亞正統重建的文件，反摩尼—諾斯底立法的樣本。' },
+          { title_zh: '阿格德會議教規', title_orig: 'Concilium Agathense (506)', author: '凱撒裡烏斯主持', era: '506', place: '高盧阿格德', language: '拉丁文', intro: '凱撒裡烏斯主持的西哥德治下高盧會議，規範神職紀律與教產。六世紀高盧教會法的樞紐文件，後為諸教規集廣引。' },
+          { title_zh: '奧爾良第一會議教規', title_orig: 'Concilium Aurelianense I (511)', author: '克洛維召集', era: '511', place: '高盧奧爾良', language: '拉丁文', intro: '克洛維受洗後召集的法蘭克首次全國會議，規範庇護權與教產。墨洛溫王國政教關係的奠基文件，法蘭克教會立法的起點。' },
+          { title_zh: '惠特比會議裁決', title_orig: 'Synod of Whitby (664)', author: '惠特比會議', era: '664', place: '諾森布里亞惠特比', language: '拉丁文', intro: '英格蘭裁定復活節與剃髮從羅馬制而非凱爾特製的會議。英倫教會歸向羅馬的轉捩點，島嶼與大公傳統合流的關鍵裁決。' },
+          { title_zh: '赫特福德會議教規', title_orig: 'Council of Hertford (672)', author: '坎特伯裡的狄奧多主持', era: '672', place: '英格蘭赫特福德', language: '拉丁文', intro: '坎特伯裡總主教狄奧多召集、英格蘭教會首次全國會議的十條教規。統一英格蘭教會組織的奠基文件，英倫教省制度的起點。' },
+          { title_zh: '格倫戴洛赫會議與愛爾蘭教規', title_orig: 'Canones Hibernenses (early Irish synods)', author: '愛爾蘭諸會議', era: '6–7 世紀', place: '愛爾蘭', language: '拉丁文', intro: '帕特里克傳統下的早期愛爾蘭會議教規群，補贖與教產別具凱爾特色彩。島嶼教會自成一格的法規遺存，凱爾特基督教制度的第一手文獻。' },
+          { title_zh: '該撒利亞的猶西比烏信經', title_orig: 'Creed of Caesarea (Eusebius)', author: '該撒利亞的猶西比烏', era: '325', place: '尼西亞', language: '希臘文', intro: '猶西比烏在尼西亞會議上提呈的本教會受洗信經，會議據以擴充成尼西亞信經。尼西亞信經的藍本之一，正統信經成形過程的直接見證。' },
+          { title_zh: '耶路撒冷的濟利祿信仰授課', title_orig: 'Catechetical Creed of Jerusalem', author: '耶路撒冷的濟利祿', era: '約 350', place: '耶路撒冷', language: '希臘文', intro: '濟利祿授慕道者的信仰要理所本的耶路撒冷洗禮信經。地方洗禮信經的珍貴實例，尼西亞—君士坦丁堡信經的近親文本。' },
+          { title_zh: '西爾米烏姆信經諸式', title_orig: 'Sirmium Creeds (Dated Creed)', author: '西爾米烏姆歷次會議', era: '351–359', place: '潘諾尼亞西爾米烏姆', language: '拉丁文／希臘文', intro: '亞流爭議白熱期西爾米烏姆諸會議發布的信經草案，含著名的「紀年信經」。四世紀信仰公式激烈拉鋸的實錄，「全世界驚覺自己成了亞流派」的背景文獻。' },
+          { title_zh: '裡米尼—塞琉西亞信經', title_orig: 'Creed of Rimini-Seleucia (360)', author: '裡米尼與塞琉西亞雙會議', era: '359–360', place: '裡米尼／塞琉西亞', language: '拉丁文／希臘文', intro: '皇帝強推、東西雙會通過的折衷「相似派」信經。亞流爭議中帝國幹預教義的高峰，正統一度被官方信經取代的證物。' },
+          { title_zh: '託雷多第十一會議信經', title_orig: 'Creed of the Eleventh Council of Toledo', author: '託雷多第十一會議', era: '675', place: '西班牙託雷多', language: '拉丁文', intro: '西哥德託雷多會議精細表述三一與基督論的長篇信仰宣認。西方三一神學的成熟表述，中世紀西班牙教義精確化的代表。' },
+          { title_zh: '安基拉的巴西略信仰陳述', title_orig: 'Homoiousian Statement (Basil of Ancyra)', author: '安基拉的巴西略', era: '358', place: '安基拉', language: '希臘文', intro: '「本質相似派」領袖巴西略調和正統與亞流的信仰陳述。四世紀中間路線神學的代表文獻，尼西亞正統復振前的過渡表述。' },
+          { title_zh: '甘格拉會議譴責書', title_orig: 'Synodical Letter of Gangra', author: '甘格拉會議', era: '約 340', place: '帕夫拉戈尼亞甘格拉', language: '希臘文', intro: '甘格拉會議譴責過激禁慾派輕視婚姻與財產的通函與教規。教會對極端苦修設限的早期立法，正統禁慾觀的界定文獻。' },
+          { title_zh: '米萊維會議教規', title_orig: 'Concilium Milevitanum (416)', author: '米萊維會議', era: '416', place: '北非米萊維', language: '拉丁文', intro: '奧古斯丁與會、致函教宗定罪伯拉糾的北非會議。恩寵之爭的關鍵立法，北非—羅馬協同對抗伯拉糾主義的文件。' },
+          { title_zh: '沃拜斯會議教規', title_orig: 'Concilium Vasense (Vaison, 529)', author: '凱撒裡烏斯主持', era: '529', place: '高盧沃拜斯', language: '拉丁文', intro: '凱撒裡烏斯主持、規定堂區設校育才並推廣三聖頌的高盧會議。中世紀堂區教育與禮儀西傳的立法源頭，六世紀高盧牧養改革的文件。' },
+          { title_zh: '奧朗日第二會議恩寵教規', title_orig: 'Second Council of Orange (529)', author: '凱撒裡烏斯主持', era: '529', place: '高盧奧朗日', language: '拉丁文', intro: '凱撒裡烏斯主持、裁定半伯拉糾主義並確立恩寵先行的會議教規。奧古斯丁恩寵論的官方認證，西方救恩論爭議的收束文件。' }
+        
+            ],
+          },
+          {
+            key: 'eastern-canons', label: '東方教會律部', label_en: 'Eastern Church Canons',
+            works: [
+          { title_zh: '東方會議集', title_orig: 'Synodicon Orientale', author: '東方教會歷代大公會議（彙編）', era: '410–775 彙編', place: '波斯塞琉西亞—泰西封', language: '敘利亞文', intro: '東方教會（景教）自四一〇年伊薩克會議以降歷次大公會議決議的總集。波斯帝國內基督教自治體制的法典，東方教會史的第一手法規寶庫。' },
+          { title_zh: '伊薩克會議教規', title_orig: 'Synod of Isaac (410)', author: '大公牧首伊薩克', era: '410', place: '塞琉西亞—泰西封', language: '敘利亞文', intro: '波斯教會採納尼西亞信經、確立大公牧首體制的建制會議。東方教會脫離帝國教會自立的奠基文件，薩珊治下基督教組織的憲章。' },
+          { title_zh: '主之遺訓', title_orig: 'Testamentum Domini', author: '佚名（敘利亞教會）', era: '約 5 世紀', place: '敘利亞', language: '敘利亞文（希臘原型）', intro: '託言復活基督親授的教會規程，禮儀祈禱與聖職職守詳備，末世訓示為框架。東方教會秩序文獻的集大成，早期禮儀與教制的珍稀全景。' },
+          { title_zh: '希波律陀教規', title_orig: 'Canons of Hippolytus', author: '託名希波律陀', era: '約 336', place: '埃及', language: '科普特文／阿拉伯文（希臘原型）', intro: '源出羅馬《使徒傳統》、經埃及教會改寫的教會秩序文獻，聖職按立與禮儀規程並載。教會秩序文類東傳的一環，科普特教制的法規源頭。' },
+          { title_zh: '使徒教會秩序', title_orig: 'Apostolic Church Order (Ecclesiastical Canons of the Apostles)', author: '佚名（埃及教會）', era: '約 300', place: '埃及', language: '希臘文', intro: '託名十二使徒各述教規的教會秩序小典，論聖職與婦女職事。早期教會組織文獻的一支，含女性教會角色的珍稀早期討論。' },
+          { title_zh: '衣索比亞教規總集', title_orig: 'Sinodos (Ethiopian canonical collection)', author: '衣索比亞教會（譯編自科普特—阿拉伯）', era: '古典期彙編', place: '衣索比亞', language: '吉茲文', intro: '衣索比亞教會譯編的使徒教規與教會秩序總集，含多種秩序文獻。非洲古教會法規的獨特容器，吉茲文教制傳統的核心文本。' },
+          { title_zh: '亞美尼亞教規書', title_orig: 'Kanonagirk\' Hayots\'', author: '亞美尼亞教會（沙哈皮萬等會議）', era: '4–8 世紀彙編', place: '亞美尼亞', language: '亞美尼亞文', intro: '亞美尼亞教會自沙哈皮萬會議以降歷代教規的總集。高加索教會自治法制的骨幹，亞美尼亞基督教千年秩序的法典。' },
+          { title_zh: '波斯歷代會議教規', title_orig: 'Canons of the Persian Synods (Yahballaha, Acacius, Babai)', author: '東方教會歷任牧首', era: '5–6 世紀', place: '波斯', language: '敘利亞文', intro: '雅巴拉哈、阿卡基烏斯、巴拜等牧首會議的教規，規範神職婚姻與教省制。東方教會脫離西方獨立發展的法規見證，薩珊基督教組織的檔案。' },
+          { title_zh: '埃及的迪迪穆斯教規殘篇', title_orig: 'Canonical Fragments (Alexandrian tradition)', author: '亞歷山卓教會傳統', era: '4–5 世紀', place: '埃及', language: '希臘文／科普特文', intro: '亞歷山卓教會傳下規範齋期、聖職與悔罪的教規殘篇。埃及教會紀律的零星實錄，科普特教制形成期的補充文獻。' },
+          { title_zh: '敘利亞教父會規', title_orig: 'Canons of the Syriac Fathers (Rabbula, Maruta)', author: '拉布拉、馬魯塔等', era: '5 世紀', place: '埃德薩／邁法爾克特', language: '敘利亞文', intro: '拉布拉與馬魯塔等敘利亞主教為修士與神職所訂的教規。敘利亞本土教會紀律的一手文獻，東方教制與希臘傳統交會的樣本。' },
+          { title_zh: '馬魯塔尼西亞教規', title_orig: 'Canons of Marutha of Maypherkat', author: '邁法爾克特的馬魯塔', era: '約 410', place: '波斯／邁法爾克特', language: '敘利亞文', intro: '主教馬魯塔為波斯教會譯介尼西亞會規並增補的教規集。尼西亞正統東傳波斯的橋樑文獻，東方教會採納大公傳統的實錄。' },
+          { title_zh: '格魯吉亞教會會規', title_orig: 'Canons of the Georgian Church (early)', author: '喬治亞教會', era: '6–8 世紀', place: '喬治亞', language: '喬治亞文', intro: '喬治亞教會早期規範禮儀與神職的教規遺存。高加索基督教自治法制的早期見證，喬治亞教會秩序的源頭文本。' }
+        
+            ],
+          },
+          {
+            key: 'latin-monastic-rules', label: '拉丁修道律部', label_en: 'Latin Monastic Rules',
+            works: [
+          { title_zh: '導師會規', title_orig: 'Regula Magistri', author: '佚名（義大利修士）', era: '約 500–525', place: '義大利羅馬近郊', language: '拉丁文', intro: '篇幅浩繁、問答體的匿名會規，本篤會規據以刪節改寫。本篤會規的直接藍本，西方修道立法源流研究的關鍵長文。' },
+          { title_zh: '凱撒裡烏斯童貞女會規', title_orig: 'Regula ad virgines (Caesarius of Arles)', author: '亞爾的凱撒裡烏斯', era: '約 512–534', place: '高盧亞爾', language: '拉丁文', intro: '凱撒裡烏斯為亞爾女修院所訂、西方最早專為女性撰寫的會規，嚴守圍院。女性隱修立法的奠基文獻，中世紀女修制度的原型。' },
+          { title_zh: '奧勒良會規', title_orig: 'Regula Aureliani', author: '亞爾的奧勒良', era: '約 546', place: '高盧亞爾', language: '拉丁文', intro: '凱撒裡烏斯繼任者奧勒良為男女修院所訂的會規，承其師嚴規而更細。高盧修道立法傳統的延續，六世紀普羅旺斯修院生活的實錄。' },
+          { title_zh: '四教父會規', title_orig: 'Regula Quattuor Patrum', author: '勒林修院教父', era: '約 400–410', place: '高盧勒林', language: '拉丁文', intro: '勒林島修院四位長老共議而成的會規，以問答定修院日常。高盧修道運動最早的會規，勒林學派靈修的制度起點。' },
+          { title_zh: '東方會規', title_orig: 'Regula Orientalis', author: '佚名（高盧修士，據帕科繆傳統）', era: '約 5 世紀', place: '高盧', language: '拉丁文', intro: '以帕科繆與《四教父會規》為底改編的拉丁會規。東方共修制西傳的中繼文本，埃及與高盧修道傳統的接榫。' },
+          { title_zh: '伊西多爾修院會規', title_orig: 'Regula Isidori', author: '塞維亞的伊西多爾', era: '約 615–620', place: '西班牙塞維亞', language: '拉丁文', intro: '伊西多爾為西班牙修院所訂、兼重勞動與學問的會規。西哥德修道制度的立法，古代學問存續於修院的制度保證。' },
+          { title_zh: '弗魯克圖奧蘇斯會規', title_orig: 'Regula Fructuosi', author: '布拉加的弗魯克圖奧蘇斯', era: '約 640', place: '西班牙', language: '拉丁文', intro: '弗魯克圖奧蘇斯為伊比利亞修院訂立的嚴格會規，附修士互約條款。西哥德修道熱潮的立法高峰，「約章式」修道制的代表。' },
+          { title_zh: '保羅與斯德望會規', title_orig: 'Regula Pauli et Stephani', author: '保羅與斯德望', era: '6 世紀', place: '義大利', language: '拉丁文', intro: '義大利修院實務取向的會規，專注日常紀律細節。本篤前後義大利多元會規並存的樣本，修道立法過渡期的見證。' },
+          { title_zh: '塔納特會規', title_orig: 'Regula Tarnantensis', author: '佚名（高盧修士）', era: '約 6 世紀', place: '高盧', language: '拉丁文', intro: '高盧某修院匯採前代會規而成的綜合規章。前本篤時代高盧修道立法多樣性的實例，會規互相援引的文本標本。' },
+          { title_zh: '霍爾西修斯訓誨', title_orig: 'Liber Orsiesii (Instructions of Horsiesios)', author: '霍爾西修斯', era: '4 世紀', place: '埃及塔本尼西', language: '科普特文（拉丁譯存）', intro: '帕科繆第二繼承者霍爾西修斯臨終訓誨其修士的遺教，共修理想的總結。帕科繆修道制的思想遺囑，耶柔米拉丁譯本廣傳西方。' },
+          { title_zh: '迦薩的多羅泰烏斯訓言', title_orig: 'Instructions of Dorotheus of Gaza', author: '迦薩的多羅泰烏斯', era: '6 世紀', place: '巴勒斯坦迦薩', language: '希臘文', intro: '多羅泰烏斯論謙卑、良心與棄絕己意的修道訓言集。拜占庭修道靈修的入門經典，東正教院修教育的常備讀本。' },
+          { title_zh: '埃瓦格里烏斯實踐論', title_orig: 'Praktikos (Evagrius Ponticus)', author: '本都的埃瓦格里烏斯', era: '4 世紀', place: '埃及', language: '希臘文', intro: '埃瓦格里烏斯系統剖析八種惡念、指引屬靈操練的修道論著。日後七宗罪說的源頭，沙漠心理學與默觀神學的奠基之作。' },
+          { title_zh: '埃及的謝努特會規', title_orig: 'Canons of Shenoute (White Monastery Rules)', author: '阿特里佩的舍努特', era: '5 世紀', place: '上埃及白修道院', language: '科普特文', intro: '舍努特為白修道院立定、以誓約約束脩士的嚴格會規群。埃及本土大型修院的立法實錄，科普特修道紀律的第一手文獻。' },
+          { title_zh: '帕科繆訓誡與規制', title_orig: 'Praecepta et Instituta (Pachomius)', author: '帕科繆', era: '4 世紀', place: '埃及塔本尼西', language: '科普特文（耶柔米拉丁譯存）', intro: '帕科繆共修規制的訓誡、律例、判例與懲則四編，耶柔米譯為拉丁。集體隱修法規的原始全帙，東西方修道立法的共同源頭。' },
+          { title_zh: '魯斯佩的富爾根提烏斯修道規', title_orig: 'Rule attributed to Fulgentius', author: '魯斯佩的富爾根提烏斯（傳）', era: '6 世紀', place: '北非', language: '拉丁文', intro: '傳為北非主教富爾根提烏斯所訂的修道規範。汪達爾治下北非修道傳統的遺存，奧古斯丁修道理想的延續文本。' }
+        
+            ],
+          },
+          {
+            key: 'penitentials-collections', label: '補贖與教規彙編部', label_en: 'Penitentials and Canon Collections',
+            works: [
+          { title_zh: '芬尼安補贖規', title_orig: 'Penitential of Finnian', author: '芬尼安', era: '6 世紀', place: '愛爾蘭', language: '拉丁文', intro: '現存最早的愛爾蘭補贖書，逐罪定私下告解與補贖的等級。凱爾特私人告解制度的奠基文獻，中世紀懺悔實踐的源頭。' },
+          { title_zh: '哥倫巴努斯補贖規', title_orig: 'Paenitentiale Columbani', author: '哥倫巴努斯', era: '約 600', place: '高盧／義大利', language: '拉丁文', intro: '哥倫巴努斯隨愛爾蘭修士傳入歐陸的補贖書，分修士與俗人論罰。私人告解制度西傳歐陸的關鍵載體，凱爾特補贖傳統的擴散樣本。' },
+          { title_zh: '庫米安補贖規', title_orig: 'Paenitentiale Cummeani', author: '庫米安', era: '約 650', place: '愛爾蘭', language: '拉丁文', intro: '庫米安按八惡念編排補贖條目的愛爾蘭補贖書，體系嚴整。凱爾特補贖文學的成熟之作，後世補贖書廣為承襲的範本。' },
+          { title_zh: '坎特伯裡的狄奧多補贖規', title_orig: 'Paenitentiale Theodori', author: '坎特伯裡的狄奧多（門徒輯錄）', era: '7 世紀末', place: '英格蘭坎特伯裡', language: '拉丁文', intro: '總主教狄奧多判例經門徒輯成的補贖書，英格蘭教會實務問答豐富。盎格魯撒克遜教會紀律的一手檔案，補贖書傳統的英倫高峰。' },
+          { title_zh: '狄奧尼修教規彙編', title_orig: 'Collectio Dionysiana', author: '小狄奧尼修斯', era: '約 500', place: '羅馬', language: '拉丁文', intro: '小狄奧尼修斯譯編希臘教規與教宗教令的總集，兼創主曆紀年。西方教會法的奠基彙編，中世紀教會法典的直接源頭。' },
+          { title_zh: '古代教會法典', title_orig: 'Statuta Ecclesiae Antiqua', author: '佚名（高盧，傳恩諾狄烏斯圈）', era: '約 475', place: '高盧亞爾', language: '拉丁文', intro: '高盧輯成、規範聖職按立與教會生活的教規集，長期託名迦太基會議。中世紀按立禮文的重要來源，高盧教會法整編的代表。' },
+          { title_zh: '愛爾蘭教規集', title_orig: 'Collectio canonum Hibernensis', author: '魯本與庫佈雷奈烏斯（輯）', era: '約 700–725', place: '愛爾蘭', language: '拉丁文', intro: '愛爾蘭修士按主題分卷輯錄聖經、教父與會議法規的教規集，首開系統分類。中世紀教會法主題編排的先驅，影響加洛林教會法深遠。' },
+          { title_zh: '克斯內爾教規彙編', title_orig: 'Collectio Quesnelliana', author: '佚名（羅馬或高盧）', era: '約 5 世紀末', place: '羅馬／高盧', language: '拉丁文', intro: '最早的拉丁教規教令總集之一，收會議法規與教宗書信。狄奧尼修彙編之前的西方教會法容器，五世紀羅馬法規的實錄。' },
+          { title_zh: '巴西略教規書信', title_orig: 'Canonical Letters of Basil', author: '大巴西略', era: '約 374–375', place: '卡帕多細亞凱撒利亞', language: '希臘文', intro: '大巴西略致阿姆菲羅基烏斯、逐條裁定悔罪補贖的三封教規書信。東方教會補贖法規的支柱文本，拜占庭教規總集的核心來源。' },
+          { title_zh: '比德補贖規', title_orig: 'Paenitentiale Bedae', author: '可敬者比德（傳）', era: '8 世紀', place: '諾森布里亞', language: '拉丁文', intro: '傳為比德所輯的補贖書，承坎特伯裡狄奧多傳統而條理化。盎格魯撒克遜補贖文學的一環，加洛林補贖書的重要來源。' },
+          { title_zh: '教宗西里修以降教令集', title_orig: 'Early Papal Decretals (Siricius to Leo)', author: '羅馬歷任教宗（彙編）', era: '384–461', place: '羅馬', language: '拉丁文', intro: '自西里修至大良的早期教宗教令彙編，逐條答覆各地教規疑問。西方教會法典的原始素材，教宗立法權成形期的文件總匯。' }
+        
+            ],
+          },
         ],
       },
       wai: {
