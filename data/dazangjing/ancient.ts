@@ -1151,7 +1151,27 @@ export const ANCIENT_ERA: DazangEra = {
           { title_zh: '奧克西林庫斯蒲草紙聖經群', title_orig: 'Oxyrhynchus Biblical Papyri', author: '埃及教會（佚名抄手群）', era: '2–6 世紀', place: '奧克西林庫斯', language: '希臘文', intro: '埃及垃圾丘出土的數十萬紙片中包含新約殘篇數十件與七十士殘卷無數。日常基督徒的廉價讀本群像，聖經流通社會史的第一手地層。' },
           { title_zh: '馬爾沙利安先知書抄本', title_orig: 'Codex Marchalianus (Q)', author: '埃及抄坊', era: '6 世紀', place: '埃及', language: '希臘文', intro: '七十士先知書的安色爾大抄本，頁緣富六欄本異文注記。赫西基烏斯型文本與六欄本符號的雙料證人，梵蒂岡圖書館的七十士重鎮。' },
           { title_zh: '聖奧古斯丁福音書', title_orig: 'St Augustine Gospels', author: '義大利抄坊（額我略遣宣教攜往）', era: '6 世紀', place: '義大利（後藏坎特伯裡／劍橋）', language: '拉丁文', intro: '傳為大額我略贈坎特伯裡的奧古斯丁攜英的福音書，附路加像與受難連環小圖。英格蘭基督教的開教聖書，至今坎特伯裡大主教就職仍按此書宣誓。' },
-          { title_zh: '利奇菲爾德福音書', title_orig: 'Lichfield Gospels (St Chad Gospels)', author: '島嶼抄坊', era: '約 730', place: '威爾斯／麥西亞', language: '拉丁文', intro: '與林迪斯法恩齊名的島嶼福音書，頁緣古威爾斯語土地契註記為威爾斯語最早文獻之一。利奇菲爾德座堂千年守藏，島嶼書藝與凱爾特語文的雙料珍品。' }
+          { title_zh: '利奇菲爾德福音書', title_orig: 'Lichfield Gospels (St Chad Gospels)', author: '島嶼抄坊', era: '約 730', place: '威爾斯／麥西亞', language: '拉丁文', intro: '與林迪斯法恩齊名的島嶼福音書，頁緣古威爾斯語土地契註記為威爾斯語最早文獻之一。利奇菲爾德座堂千年守藏，島嶼書藝與凱爾特語文的雙料珍品。' },
+          { title_zh: '科伊斯林保羅書信抄本', title_orig: 'Codex Coislinianus (Hp 015)', author: '凱撒利亞系抄坊', era: '6 世紀', place: '巴勒斯坦', language: '希臘文', intro: '保羅書信的安色爾抄本，卷末題記自稱「據凱撒利亞圖書館帕姆菲盧斯手校本勘正」。散葉流落巴黎聖彼得堡等八地，凱撒利亞校勘傳統的第一物證。' },
+          { title_zh: '勞德行傳雙語抄本', title_orig: 'Codex Laudianus (Ea 08)', author: '薩丁尼亞抄坊', era: '6–7 世紀', place: '薩丁尼亞（後藏牛津）', language: '希臘文／拉丁文', intro: '使徒行傳的希拉對欄雙語抄本，輾轉北傳為比德注行傳所用，勞德大主教捐藏牛津。行傳「西方文本」的重要證人，古抄本跨海旅行史的著名個案。' },
+          { title_zh: '科頓創世記', title_orig: 'Cotton Genesis', author: '亞歷山卓抄坊', era: '5–6 世紀', place: '埃及', language: '希臘文', intro: '附三百餘幅細密畫的創世記抄本，一七三一年科頓文庫大火焚餘殘片。威尼斯聖馬可創世記鑲嵌即摹其圖，插圖聖經傳統的燒毀母本，藝術史的幽靈原典。' },
+          { title_zh: '阿什伯納姆五經', title_orig: 'Ashburnham Pentateuch', author: '地中海西部抄坊', era: '6–7 世紀', place: '義大利／西班牙／北非（存巴黎）', language: '拉丁文', intro: '滿幅敘事插圖的拉丁五經抄本，場景擠滿日常細節如連環壁畫，出處成謎。早期拉丁舊約插圖的最大遺存，圖像敘事研究的謎樣傑作。' },
+          { title_zh: '佈雷西亞紫皮福音抄本', title_orig: 'Codex Brixianus (f)', author: '北義抄坊（東哥德圈）', era: '6 世紀', place: '拉溫納一帶', language: '拉丁文', intro: '紫皮銀墨的古拉丁福音抄本，文本與哥德譯本關係密切，或出雙語對照工程。銀色抄本的拉丁姊妹，哥德-拉丁文本交流的關鍵證人。' },
+          { title_zh: '維羅納古拉丁福音抄本', title_orig: 'Codex Veronensis (b)', author: '北義抄坊', era: '5 世紀', place: '維羅納', language: '拉丁文', intro: '紫皮銀字的古拉丁福音書，歐洲型文本的代表證人。耶柔米修訂所面對的「歐洲舊譯」實貌，維羅納章立圖書館的鎮館古卷之一。' },
+          { title_zh: '科爾比古拉丁福音抄本', title_orig: 'Codex Corbeiensis secundus (ff2)', author: '高盧抄坊', era: '5 世紀', place: '高盧（科爾比修道院舊藏）', language: '拉丁文', intro: '科爾比修道院舊藏的古拉丁福音抄本，歐洲型文本的核心證人之一。法蘭西古拉丁傳統的代表遺存，今藏巴黎國家圖書館。' },
+          { title_zh: '聖加侖武加大福音殘抄', title_orig: 'Codex Sangallensis 1395', author: '義大利抄坊（半安色爾體）', era: '約 410–420', place: '維羅納一帶（存聖加侖）', language: '拉丁文', intro: '耶柔米生前或身後數年即抄成的武加大福音殘葉，為武加大現存最古證人。譯本墨跡未乾即有的抄本，文本史罕見的「近原稿」標本。' },
+          { title_zh: '威尼斯七十士抄本', title_orig: 'Codex Venetus (V)', author: '拜占庭抄坊', era: '8 世紀', place: '君士坦丁堡圈（存威尼斯）', language: '希臘文', intro: '七十士舊約的晚期安色爾大抄本，與西奈梵蒂岡亞歷山大並列四大七十士證人之末。哥廷根校勘本的常備底本，馬爾恰納圖書館的希臘聖經重鎮。' },
+          { title_zh: '弗裡爾舊約抄本群', title_orig: 'Freer Old Testament Manuscripts', author: '埃及抄坊', era: '3–5 世紀', place: '埃及', language: '希臘文', intro: '弗裡爾購藏的申命記約書亞卷與詩篇殘抄，與其四福音大卷同組華府聖經抄本群。美洲收藏早期聖經抄本的開端，七十士文本史的重要證人。' },
+          { title_zh: '九六七號蒲草紙', title_orig: 'Papyrus 967', author: '埃及抄手', era: '2–3 世紀', place: '埃及', language: '希臘文', intro: '但以理、以西結與以斯帖的蒲草紙冊子，保存六欄本改動前的「古希臘」但以理原譯。七十士文本史的頭號地層化石，證明教會後來改用狄奧多田本的關鍵物證。' },
+          { title_zh: '穆迪勒科普特詩篇抄本', title_orig: 'Mudil Psalter', author: '埃及抄手', era: '約 400', place: '中埃及穆迪勒（少女墓中出土）', language: '科普特文（中埃及方言）', intro: '一九八四年自少女頭下出土的完整科普特詩篇冊子，為現存最古的完整詩篇抄本之一。陪葬聖書習俗的動人物證，開羅科普特博物館的鎮館之寶。' },
+          { title_zh: '彼得堡紫皮福音抄本', title_orig: 'Codex Petropolitanus Purpureus (N 022)', author: '君士坦丁堡宮廷抄坊', era: '6 世紀', place: '小亞細亞', language: '希臘文', intro: '紫皮銀墨的福音大抄本，十字軍劫掠後散葉七國，主體歸聖彼得堡。拜占庭皇家抄本工業的代表遺物，紫皮抄本家族的最大成員。' },
+          { title_zh: '貝拉特紫皮福音抄本', title_orig: 'Codex Beratinus (Φ 043)', author: '拜占庭抄坊', era: '6 世紀', place: '阿爾巴尼亞貝拉特', language: '希臘文', intro: '阿爾巴尼亞教會守護千年的紫皮福音抄本，二戰中信徒冒死藏匿倖存。巴爾幹古抄本傳承的象徵，已列聯合國教科文組織世界記憶名錄。' },
+          { title_zh: '扎金索斯重寫本', title_orig: 'Codex Zacynthius (Ξ 040)', author: '拜占庭學術抄坊', era: '6–7 世紀', place: '拜占庭（後出扎金索斯島）', language: '希臘文', intro: '路加福音正文四周環抄教父注釋的重寫本下層，為現存最古的鏈式注釋抄本。經文與注釋同頁編排的最早實物，釋經鏈傳統的抄本源頭。' },
+          { title_zh: '卡羅林哥德拉丁雙語殘抄', title_orig: 'Codex Carolinus', author: '義大利抄坊', era: '6–7 世紀', place: '義大利（重寫本存沃爾芬比特爾）', language: '哥德文／拉丁文', intro: '羅馬書的哥德-拉丁對欄殘葉，藏於重寫本下層。銀色抄本之外哥德語聖經僅存的大宗證人，日耳曼語文獻學的珍稀地層。' },
+          { title_zh: '白修道院抄本群', title_orig: 'White Monastery Codices', author: '阿特里佩白修道院繕寫室', era: '4–8 世紀（藏書累積）', place: '上埃及索哈格', language: '科普特文（沙希地）', intro: '舍努特的白修道院千年書庫，近代被撕散賣往歐美各館，學界至今逐葉數位重組。沙希地科普特文獻的最大單一來源，抄本離散與虛擬重聚的世紀工程。' },
+          { title_zh: '厄謝爾古拉丁抄本', title_orig: 'Codex Usserianus Primus', author: '愛爾蘭抄坊', era: '約 600–650', place: '愛爾蘭', language: '拉丁文', intro: '愛爾蘭現存最古的福音抄本，文本屬古拉丁混武加大的凱爾特型。島嶼聖經文化的第一層地基，都柏林三一學院藏。' },
+          { title_zh: '杜拉合參殘片', title_orig: 'Dura Parchment 24', author: '杜拉-歐羅普斯教會', era: '256 年前', place: '幼發拉底河杜拉-歐羅普斯', language: '希臘文', intro: '羅馬邊城杜拉毀於二五六年，城堞下出土的羊皮殘片存合參式福音文句。塔提安合參唯一的希臘文直接證人，帶考古絕對年代的最早福音文本之一。' }
+        
         
             ],
           },
@@ -1208,7 +1228,13 @@ export const ANCIENT_ERA: DazangEra = {
           { title_zh: '論福音書的和諧', title_orig: 'De consensu evangelistarum', author: '希波的奧古斯丁', era: '約 400', place: '希波', language: '拉丁文', intro: '奧古斯丁四卷詳辨四福音敘事次序與措辭出入，立「意同而詞異無損真實」的調和原則。福音和諧學的古典大全，此後千年協調難題的標準庫。' },
           { title_zh: '論蘇撒拿真偽書信', title_orig: 'Epistulae Africani et Origenis de Susanna', author: '朱利烏斯‧阿非利加努斯與俄利根', era: '約 240', place: '埃瑪烏斯／凱撒利亞', language: '希臘文', intro: '阿非利加努斯以希臘文雙關語證蘇撒拿傳非希伯來原作，俄利根長信答辯教會用本的權威。古代最精彩的一場文獻真偽論戰，高等批判的兩千年遠祖。' },
           { title_zh: '論啟示錄作者考', title_orig: 'De promissionibus (apud Eusebium HE VII)', author: '亞歷山卓的狄奧尼修斯', era: '約 260', place: '亞歷山卓', language: '希臘文', intro: '狄奧尼修斯以文體、語法與思想比較論證啟示錄非福音書作者約翰所寫。古代風格批評的最高成就，現代作者問題研究屢屢回引的先驅文本。' },
-          { title_zh: '主道論集殘篇', title_orig: 'Logiōn kyriakōn exēgēseōs (Papias)', author: '希拉波利斯的帕皮亞斯', era: '約 110–130', place: '希拉波利斯', language: '希臘文', intro: '帕皮亞斯五卷解主道之書僅存殘句：馬可為彼得傳譯而作、馬太以希伯來語彙纂主道。福音書起源最早的外部證言，兩千年福音批評無不自此起步。' }
+          { title_zh: '主道論集殘篇', title_orig: 'Logiōn kyriakōn exēgēseōs (Papias)', author: '希拉波利斯的帕皮亞斯', era: '約 110–130', place: '希拉波利斯', language: '希臘文', intro: '帕皮亞斯五卷解主道之書僅存殘句：馬可為彼得傳譯而作、馬太以希伯來語彙纂主道。福音書起源最早的外部證言，兩千年福音批評無不自此起步。' },
+          { title_zh: '盧菲努斯譯序集', title_orig: 'Praefationes Rufini', author: '阿奎萊亞的盧菲努斯', era: '397–410', place: '阿奎萊亞', language: '拉丁文', intro: '盧菲努斯翻譯俄利根與教父著作的序言群，自陳刪潤原則而引爆與耶柔米的翻譯大戰。希臘神學拉丁化的工作日誌，翻譯倫理論爭的第一手文獻。' },
+          { title_zh: '波愛修論直譯序', title_orig: 'In Isagogen Porphyrii commenta (praefatio secunda)', author: '波愛修', era: '約 510', place: '羅馬', language: '拉丁文', intro: '波愛修於波菲利《引論》二注序言申明「字對字」直譯原則，甘冒不雅以存真。與耶柔米「意對意」相對的另一極，中世紀學術翻譯的方法論憲章。' },
+          { title_zh: '穆拉託利正典殘篇', title_orig: 'Fragmentum Muratorianum', author: '佚名（羅馬教會圈）', era: '約 170–200（一說 4 世紀）', place: '羅馬', language: '拉丁文', intro: '穆拉托里自米蘭抄本發現的正典書目殘篇，逐卷評注可讀與否，或為最早的新約正典目錄。正典形成史的第一號證物，其年代之爭至今未息。' },
+          { title_zh: '切爾滕納姆正典書目', title_orig: 'Canon Mommsenianus (Cheltenham List)', author: '北非教會（佚名）', era: '約 359', place: '北非', language: '拉丁文', intro: '附行數統計的拉丁正典書目，逐卷記其篇幅以防抄工偷減。四世紀北非教會的正典快照，行數計量學（stichometry）的代表文獻。' },
+          { title_zh: '克拉羅蒙塔努斯行數書目', title_orig: 'Catalogus Claromontanus', author: '佚名（希臘原型拉丁傳抄）', era: '約 300–350', place: '亞歷山卓？（存於克拉羅蒙塔努斯抄本）', language: '拉丁文', intro: '夾抄於克拉羅蒙塔努斯抄本中的正典書目，附各卷行數，兼列黑馬牧人與巴拿巴等邊緣書。正典邊界流動期的珍貴目擊，與穆拉託利殘篇並讀的書目雙證。' }
+        
         
             ],
           },
