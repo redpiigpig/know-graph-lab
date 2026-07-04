@@ -1439,7 +1439,15 @@ export const EARLY_MODERN_ERA: DazangEra = {
         
           { title_zh: '懲戒之益處，或論希伯來書第十二章五至十一節之七篇講道', title_orig: 'Profit des chastimens, ou Sept sermons sur l\'exhortation contenue en l\'Epist. aux Hébrieux chap. XII. v. 5.6.7.8.9.10.11. faits en l\'église de Genève', author: 'Bénédict Turrettini（圖雷蒂尼），1588-1631', era: '1630', place: '日內瓦（Geneva）', language: '法文', intro: '日內瓦改革宗牧師暨神學家圖雷蒂尼（系統神學家弗朗西斯‧圖雷蒂尼之父）於日內瓦教會所講的七篇連續講道，逐節詮釋《希伯來書》十二章五至十一節「主所愛的祂必管教」之勸勉，闡發苦難與懲戒對信徒的屬靈益處與慈父般的管教神學。屬十七世紀初新教正統時期的牧養佈道作品，兼具加爾文派釋經與敬虔勸勉色彩，1630 年由 P. Aubert 在日內瓦印行。' },
           { title_zh: '五十講道集：論基督教信仰諸要義（分三卷）', title_orig: 'Sermonum decades quinque, de potissimis christianae religionis capitibus, in tres tomos digestae', author: 'Bullinger, Heinrich (1504-1575)（亨利‧布靈格）', era: '1549–1552', place: '蘇黎世（Zürich）', language: '拉丁文', intro: '瑞士改革宗神學家、慈運理繼任者布靈格的代表作《五十講道集》（Decades），原以五個「十講」共五十篇系統講道，闡述基督教信仰核心要義：神的話、信經、十誡、聖事、教會、稱義與善行等，兼具講道與教義綱要性質。此書於英格蘭被列為神職人員必讀，深刻形塑改革宗正統。本筆為 1586 年蘇黎世拉丁文三卷合訂重印本。' },
-          { title_zh: '論基督之言六篇講道', title_orig: 'Sei homilie sopra le parole di Iesu Christo', author: '貝內迪克‧圖瑞汀（Bénédict Turrettini，1588-1631）', era: '1623', place: '日內瓦（Geneva）', language: '義大利文', intro: '日內瓦改革宗牧師暨神學教授圖瑞汀以義大利文寫成的六篇講道集，逐篇默想基督的話語，向僑居日內瓦的義大利歸正信徒群體宣講。作者為盧卡流亡家族後裔、名神學家弗朗西斯‧圖瑞汀之父，曾將多特會議信條引入法國。本書屬十七世紀新教正統與敬虔交會時期的牧養講道，文字虔敬、辯才出眾，見證宗教改革後義語歸正講道傳統。' }
+          { title_zh: '論基督之言六篇講道', title_orig: 'Sei homilie sopra le parole di Iesu Christo', author: '貝內迪克‧圖瑞汀（Bénédict Turrettini，1588-1631）', era: '1623', place: '日內瓦（Geneva）', language: '義大利文', intro: '日內瓦改革宗牧師暨神學教授圖瑞汀以義大利文寫成的六篇講道集，逐篇默想基督的話語，向僑居日內瓦的義大利歸正信徒群體宣講。作者為盧卡流亡家族後裔、名神學家弗朗西斯‧圖瑞汀之父，曾將多特會議信條引入法國。本書屬十七世紀新教正統與敬虔交會時期的牧養講道，文字虔敬、辯才出眾，見證宗教改革後義語歸正講道傳統。' },
+          { title_zh: '茨溫利講道與神學', title_orig: 'Predigten und Schriften (Huldrych Zwingli)', author: '烏爾裡希‧茨溫利', era: '1520 年代', place: '蘇黎世', language: '德文', intro: '蘇黎世改革家茨溫利逐卷連續講解聖經的講道與《論真假宗教》。改革宗連續解經講道的開創者，瑞士宗教改革的講壇奠基。' },
+          { title_zh: '布靈格十講集', title_orig: 'Sermonum Decades quinque (Decades)', author: '海因裡希‧布靈格', era: '1549–1551', place: '蘇黎世', language: '拉丁文', intro: '茨溫利繼承者布靈格系統陳述改革宗信仰的五十篇講道，英格蘭教會列為教士必讀。改革宗教義講道的教科書，蘇黎世神學傳播歐洲的載體。' },
+          { title_zh: '拉蒂默講道集', title_orig: 'Sermons (Hugh Latimer)', author: '休‧拉蒂默', era: '1548–1552', place: '倫敦', language: '英文', intro: '英格蘭改革家、殉道者拉蒂默痛斥社會不公的「犁頭講道」，御前直言無諱。都鐸英語講壇的良心之聲，火刑前「點亮永不熄滅之燭」名言的主人。' },
+          { title_zh: '諾克斯講道與教會史', title_orig: 'The History of the Reformation in Scotland', author: '約翰‧諾克斯', era: '1560 年代', place: '愛丁堡', language: '英文（蘇格蘭語）', intro: '蘇格蘭改革家諾克斯的講道與宗教改革史，講壇雷霆撼動王座。蘇格蘭長老宗的奠基之聲，改革派政治講道的猛烈典型。' },
+          { title_zh: '墨蘭頓講道範本', title_orig: 'Postilla Melanchthoniana', author: '菲利普‧墨蘭頓', era: '1540s', place: '維滕貝格', language: '拉丁文', intro: '路德的同工墨蘭頓為青年傳道人編寫的節期講道範本集。宗教改革講道教育的教材，路德宗講壇範式的傳播載體。' },
+          { title_zh: '貝扎講道與神學', title_orig: 'Sermons sur l\'histoire de la Passion (Théodore de Bèze)', author: '泰奧多爾‧德‧貝扎', era: '1592', place: '日內瓦', language: '法文', intro: '加爾文繼承者貝扎論基督受難史的系列講道。日內瓦改革宗講壇的第二代宗師，法語改革宗講道傳統的鞏固者。' },
+          { title_zh: '布塞珥講道與牧養論', title_orig: 'Von der waren Seelsorge (Martin Bucer)', author: '馬丁‧布塞珥', era: '1538', place: '斯特拉斯堡', language: '德文', intro: '斯特拉斯堡改革家布塞珥論真牧養職分的著作與講道。改革宗牧養神學的奠基文獻，加爾文與英國改革的橋樑人物。' }
+        
         ],
       },
       {
@@ -1469,7 +1477,15 @@ export const EARLY_MODERN_ERA: DazangEra = {
           { title_zh: '珍寶：基督徒知足之心', title_orig: 'The Rare Jewel of Christian Contentment', author: '傑利邁亞‧巴羅斯(Jeremiah Burroughs)', era: 'c.1650s', place: 'Edinburgh', language: '英文', intro: '傑利邁亞‧巴羅斯所撰的靈修講道集，以「知足」為中心主題，揭示基督徒應如何面對生活困頓與心靈掙扎。本著作為英國清教運動中重要的牧養文獻，強調信心與順服的靈性修養，深刻影響近代基督教敬虔傳統與新教靈修實踐。透過系統論述，引導信眾在上帝主權下尋求內心平安與靈命成長。' },
           { title_zh: '罪之大惡', title_orig: 'The Evil of Evils, or The Exceeding Sinfulness of Sin', author: '耶利米亞‧伯羅斯（Jeremiah Burroughs）', era: '17 世紀', place: 'Edinburgh (original); USA 1992 modern edition', language: '英文', intro: '英國清教牧師伯羅斯的倫理護教著作，深入論述罪的本質與危害，強調罪乃人類靈性的根本敗壞。作品結合聖經詮釋與靈修實踐指導，闡明救恩論中罪的關鍵地位，代表 17 世紀清教倫理思想的重要成果。' },
           { title_zh: '天路確然指南', title_orig: 'A Sure Guide to Heaven', author: '約瑟夫‧艾倫（Joseph Alleine）', era: '1688', place: '倫敦', language: '英文', intro: '英國清教牧師艾倫之代表靈性著作。書中系統闡述新教救贖論與個人靈命轉變之道，強調信仰的確定性與實踐性。全書分明論證救贖的必要性、基督的中保地位、信心的性質，並提供靈魂自我檢驗的實踐指南。代表十七世紀英國清教敬虔運動對個人救贖與靈命成長的系統神學與護教反思，與同時代敬虔派在德國的運動並行發展，共同塑造近代新教靈性傳統。' },
-          { title_zh: '天堂被風暴奪取', title_orig: 'Heaven Taken by Storm', author: 'Thomas Watson', era: '1669', place: '倫敦', language: '英文', intro: '托馬斯‧華特遜（1620–1686）著，清教運動中期倫敦威斯敏斯德禮拜堂牧師的代表講道集。以馬太福音 11:12「天堂被風暴奪取」為題，論述信仰的熱忱與屬靈爭戰；融合加爾文宗精微的約德論與經驗主義敬虔，是英文清教宣教傳統的典範著作，深刻影響後世新教講道學與靈命塑造。' }
+          { title_zh: '天堂被風暴奪取', title_orig: 'Heaven Taken by Storm', author: 'Thomas Watson', era: '1669', place: '倫敦', language: '英文', intro: '托馬斯‧華特遜（1620–1686）著，清教運動中期倫敦威斯敏斯德禮拜堂牧師的代表講道集。以馬太福音 11:12「天堂被風暴奪取」為題，論述信仰的熱忱與屬靈爭戰；融合加爾文宗精微的約德論與經驗主義敬虔，是英文清教宣教傳統的典範著作，深刻影響後世新教講道學與靈命塑造。' },
+          { title_zh: '歐文屬靈心思講道', title_orig: 'Sermons (John Owen)', author: '約翰‧歐文', era: '1650s–1680s', place: '英格蘭', language: '英文', intro: '清教神學巨擘歐文論屬靈心思與治死罪惡的講章。清教講壇的思想高峰，改革宗經驗神學的講道結晶。' },
+          { title_zh: '福萊威講道集', title_orig: 'The Fountain of Life (John Flavel)', author: '約翰‧福萊威', era: '1671', place: '英格蘭達特茅斯', language: '英文', intro: '清教牧者福萊威論基督救贖之工的四十二篇講道。清教基督論講道的名著，牧養溫度與教義深度兼具的代表作。' },
+          { title_zh: '愛德華滋神聖之美講道', title_orig: 'A Divine and Supernatural Light', author: '約拿單‧愛德華滋', era: '1734', place: '北安普頓', language: '英文', intro: '愛德華滋論屬靈之光直接照亮人心的講道，大覺醒的神學宣言。美洲清教講壇的哲思巔峰，宗教情感論的講道原型。' },
+          { title_zh: '戴維斯維吉尼亞講道', title_orig: 'Sermons on Important Subjects (Samuel Davies)', author: '塞繆爾‧戴維斯', era: '1750s', place: '維吉尼亞', language: '英文', intro: '維吉尼亞長老會佈道家戴維斯向白人與黑奴同時傳道的講章。南方大覺醒的代表之聲，最早向奴隸群體大規模宣教的講壇。' },
+          { title_zh: '厄斯金兄弟福音講道', title_orig: 'Sermons (Ebenezer and Ralph Erskine)', author: '厄本尼澤與拉爾夫‧厄斯金', era: '1720s–1750s', place: '蘇格蘭', language: '英文（蘇格蘭語）', intro: '蘇格蘭分立教會的厄斯金兄弟論白白恩典的福音講道。蘇格蘭福音復興的講壇代表，「馬羅神學」爭議的核心人物。' },
+          { title_zh: '羅蘭‧希爾露天佈道', title_orig: 'Village Dialogues and Sermons (Rowland Hill)', author: '羅蘭‧希爾', era: '1770s–1830s', place: '倫敦', language: '英文', intro: '跨宗派露天佈道家羅蘭‧希爾風趣動人的講章與村談。福音派巡迴佈道的名家，主日學與宣教運動的推手。' },
+          { title_zh: '李維香格里高蘇格蘭復興講道', title_orig: 'Sermons of the Kilsyth and Dundee Revival (W. C. Burns / M\'Cheyne)', author: '羅伯特‧默裡‧麥克謙', era: '1839–1843', place: '蘇格蘭鄧迪', language: '英文', intro: '蘇格蘭青年牧者麥克謙聖潔動人的講道與書信，鄧迪復興的核心。十九世紀蘇格蘭奮興的聖徒典範，其屬靈日記傳頌至今。' }
+        
         ],
       },
       {
@@ -1482,7 +1498,14 @@ export const EARLY_MODERN_ERA: DazangEra = {
           { title_zh: '馬禮遜宣教方略', title_orig: 'Memoirs and Missionary Plans of Robert Morrison', author: '羅伯特‧馬禮遜（馬禮遜）', era: '1807–1834', place: '中國廣州、澳門', language: '英文／中文', intro: '倫敦會首位來華新教宣教士馬禮遜的差傳規劃與文獻彙編。面對清廷禁教與語言重障，他採「以文字為先」的方略：習漢語、譯聖經、編『華英字典』、辦學設印刷所，為日後在華宣教奠定根基。其方略文獻記錄了在艱難處境中循序佈道、培養本地同工的構想。馬禮遜之路徑，成為十九世紀來華差傳的開端與範式。' },
           { title_zh: '戴德生內地會方略', title_orig: 'China’s Spiritual Need and Claims', author: '戴德生', era: '1865–1875', place: '英國／中國內地', language: '英文', intro: '中國內地會創辦人戴德生的宣教呼籲與方略著作。書中以數字陳明中國內陸億萬未聞福音之眾，激發英美教會的差傳負擔。戴德生主張宣教士入鄉隨俗、著華服、深入內地，採「憑信心仰望供應、不公開募款」的信心差傳模式。內地會由此成為跨宗派國際差會的先聲，其方略與屬靈原則深刻影響二十世紀的福音派宣教運動。' },
         
-          { title_zh: '吸引萬民歸依真教之唯一方式', title_orig: 'De unico vocationis modo omnium gentium ad veram religionem', author: '拉斯卡薩斯（Bartolomé de las Casas）', era: '約1537年', place: 'Mexico', language: '拉丁文', intro: '西班牙道明會士、恰帕斯主教拉斯卡薩斯（1484–1566）約於1537年寫成本書，現存第一部分。論旨鮮明：基督教傳教的唯一合法途徑是以理性說服與仁愛感召，而非武力征服。作者以《新約》福音書為基礎，系統駁斥暴力佈道之合理性，並直指西班牙殖民征服對原住民的不義。本書是天主教傳教神學史上最早的護教人道主義文獻之一，對近代宗教寬容論與傳教倫理學影響深遠。' }
+          { title_zh: '吸引萬民歸依真教之唯一方式', title_orig: 'De unico vocationis modo omnium gentium ad veram religionem', author: '拉斯卡薩斯（Bartolomé de las Casas）', era: '約1537年', place: 'Mexico', language: '拉丁文', intro: '西班牙道明會士、恰帕斯主教拉斯卡薩斯（1484–1566）約於1537年寫成本書，現存第一部分。論旨鮮明：基督教傳教的唯一合法途徑是以理性說服與仁愛感召，而非武力征服。作者以《新約》福音書為基礎，系統駁斥暴力佈道之合理性，並直指西班牙殖民征服對原住民的不義。本書是天主教傳教神學史上最早的護教人道主義文獻之一，對近代宗教寬容論與傳教倫理學影響深遠。' },
+          { title_zh: '愛德華滋敘利亞宣教講道', title_orig: 'Sermons to the Nestorians (Justin Perkins tradition)', author: '賈斯汀‧珀金斯與波斯本地傳道', era: '1834–1869', place: '波斯烏爾米耶', language: '新敘利亞文', intro: '美部會在波斯向東方教會（景教後裔）宣教、以新敘利亞文所作的講章與見證。中東本土古教會的復興嘗試，新敘利亞文書面化的宣教成果。' },
+          { title_zh: '克勞瑟約魯巴宣教日誌', title_orig: 'Journals (Samuel Ajayi Crowther)', author: '塞繆爾‧阿賈伊‧克勞瑟', era: '1843–1864', place: '奈及利亞尼日河', language: '英文／約魯巴文', intro: '獲釋奴隸、首位非裔聖公會主教克勞瑟溯尼日河宣教的日誌與講道，並譯約魯巴語聖經。非洲人宣教非洲的典範，本土主教制與本色化的先驅之聲。' },
+          { title_zh: '馬士曼印度宣教與譯經', title_orig: 'Missionary Labours (Joshua Marshman)', author: '約書亞‧馬士曼', era: '1799–1837', place: '印度塞蘭坡', language: '英文／孟加拉文', intro: '塞蘭坡三傑之一馬士曼在孟加拉宣教、辦學與譯經的記述。近代印度宣教與本土語文教育的奠基，亞洲宣教方法論的實踐樣本。' },
+          { title_zh: '李文斯頓宣教旅行記', title_orig: 'Missionary Travels and Researches in South Africa', author: '大衛‧李文斯頓', era: '1857', place: '倫敦', language: '英文', intro: '李文斯頓橫越非洲、以宣教與反奴貿易並舉的旅行記述。維多利亞時代非洲宣教的象徵，「基督教、商業與文明」宣教觀的代表。' },
+          { title_zh: '郭士立中國沿海佈道記', title_orig: 'Journal of Three Voyages along the Coast of China', author: '郭實獵（郭士立）', era: '1834', place: '廣州', language: '英文', intro: '郭實獵沿中國海岸散發福音書冊的佈道航行記，倡本土傳道人先鋒之議。近代來華宣教方法的爭議樣本，福漢會與華人佈道網絡的先聲。' },
+          { title_zh: '賓威廉客旅講道', title_orig: 'Sermons and Chinese Preaching (William Chalmers Burns)', author: '賓為霖', era: '1847–1868', place: '廈門／汕頭／北京', language: '英文／漢文', intro: '英國長老會宣教士賓為霖深入民間、以漢語佈道並譯《天路歷程》的講道與書信。以身作則融入華人的宣教典範，感召戴德生的屬靈前輩。' }
+        
         ],
       },
       {
@@ -1497,6 +1520,97 @@ export const EARLY_MODERN_ERA: DazangEra = {
           { title_zh: '六合叢談', title_orig: 'Shanghae Serial', author: '偉烈亞力(Alexander Wylie)', era: '1857–1858', place: '上海', language: '漢文', intro: '由倫敦會宣教士偉烈亞力(Alexander Wylie)主編，是上海第一份近代中文期刊，亦為綜合性新學刊物。以江南士人與知識階層為對象，系統介紹西方天文、數學、物理等科學新知，兼及時事文藝。它把西學東漸的重心推向上海，成為晚清士人吸收近代科學的重要媒介。' },
           { title_zh: '萬國公報', title_orig: 'A Review of the Times', author: '林樂知(Young John Allen)', era: '1868/1874–1907', place: '上海', language: '漢文', intro: '由美南監理會宣教士林樂知(Young John Allen)創辦，是晚清最具影響力的教會兼時事刊物。面向官紳士大夫與改革精英，廣傳西方政教制度與維新思想，康有為、梁啟超等皆深受其薰染。它由教會刊物躍為輿論重鎮，深刻牽動戊戌變法前後的思想風潮，在近代中西交流史上影響深遠。' },
           { title_zh: '教務雜誌', title_orig: 'The Chinese Recorder', author: '在華新教宣教士群', era: '1867–1941', place: '福州‧上海', language: '英文', intro: '由在華新教宣教士群體合辦，是在華宣教士最重要的英文機關刊物。以各差會宣教士為讀者，記錄宣教事業、教會動態與差會合作，並刊載大量漢學、民俗與宗教研究。它既是近代在華新教史的第一手檔案，也是西方漢學與中國研究的重要園地，見證中西文化長期互動。' }
+        ],
+      },
+      {
+        key: 'catholic-preaching',
+        label: '天主教講壇部',
+        label_en: 'Catholic Pulpit',
+        desc: '近代天主教經典講道、追思演說與默想講章，法國古典講壇與伊比利亞、拉美講道傳統並收。',
+        works: [
+          { title_zh: '博須埃追思演說集', title_orig: 'Oraisons funèbres', author: '雅克‧博須埃', era: '1669–1687', place: '巴黎', language: '法文', intro: '莫城主教博須埃為王后與親王所作的追思演說，「夫人將死，夫人已死」一句震動全法。法國古典講壇的巔峰，將死亡與人世虛榮化為莊嚴詩篇的雄辯典範。' },
+          { title_zh: '博須埃四旬期講道集', title_orig: 'Sermons de Carême', author: '雅克‧博須埃', era: '1660 年代', place: '巴黎', language: '法文', intro: '博須埃在羅浮宮御前所講的四旬期系列講章，論死亡、財富與良心，宮廷肅然。太陽王時代講壇雄辯的樣板，古典法語散文的錘鍊之地。' },
+          { title_zh: '布爾達盧道德講道集', title_orig: 'Sermons (Bourdaloue)', author: '路易‧布爾達盧', era: '1670 年代', place: '巴黎', language: '法文', intro: '耶穌會士布爾達盧邏輯縝密、直刺良心的道德講章，聽眾自覺被逐一點名。「講壇的理性之王」，與博須埃並峙的法國古典講道雙峰。' },
+          { title_zh: '馬西雍講道集', title_orig: 'Sermons (Massillon)', author: '讓‧巴蒂斯特‧馬西雍', era: '1699–1718', place: '巴黎', language: '法文', intro: '克萊蒙主教馬西雍柔和動人的講章，御前「小齋期」講道令路易十五為之動容。法國古典講壇的抒情一翼，伏爾泰譽其文體為法語散文典範。' },
+          { title_zh: '維埃拉講道集', title_orig: 'Sermões (António Vieira)', author: '安東尼奧‧維埃拉', era: '1655–1697', place: '巴西馬拉尼昂／里斯本', language: '葡萄牙文', intro: '耶穌會士維埃拉在巴西為原住民與非洲奴隸疾呼、痛斥奴役者的講章，「聖安東尼向魚講道」寓意諷世。巴洛克葡語講壇的巔峰，殖民地良心的雄辯之聲。' },
+          { title_zh: '路易斯講道與默想', title_orig: 'Obras (Fray Luis de Granada)', author: '格拉納達的路易斯', era: '1554–1588', place: '里斯本／格拉納達', language: '西班牙文', intro: '道明會士格拉納達的路易斯的講道與默想著作，《祈禱與默想之書》風行天主教世界。西班牙黃金時代靈修講道的大師，講道術與默觀傳統的集成者。' },
+          { title_zh: '阿維拉的若望書信與講道', title_orig: 'Audi filia y Sermones (Juan de Ávila)', author: '阿維拉的若望', era: '16 世紀', place: '安達盧西亞', language: '西班牙文', intro: '「安達盧西亞的使徒」阿維拉的若望的講道與屬靈書信，影響大德蘭與方濟沙雷。西班牙教區傳道復興的推手，天主教改革講壇的靈修導師。' },
+          { title_zh: '塞涅裡四旬期講道集', title_orig: 'Quaresimale (Paolo Segneri)', author: '保羅‧塞涅裡', era: '17 世紀', place: '義大利', language: '義大利文', intro: '耶穌會士塞涅裡赤足巡迴義大利鄉間佈道的四旬期講章，樸實動人催人悔改。義大利民間傳道復興的代表，巴洛克天主教巡迴佈道的典範。' },
+          { title_zh: '拉科代爾聖母院講演集', title_orig: 'Conférences de Notre-Dame de Paris', author: '亨利‧拉科代爾', era: '1835–1851', place: '巴黎', language: '法文', intro: '重振法國道明會的拉科代爾在巴黎聖母院向青年知識分子的護教講演，座無虛席。革命後天主教講壇復興的號角，信仰與自由對話的十九世紀典範。' },
+          { title_zh: '紐曼講道集', title_orig: 'Parochial and Plain Sermons', author: '若望‧亨利‧紐曼', era: '1834–1843', place: '牛津', language: '英文', intro: '紐曼任牛津聖母堂牧者時的講章，內省深邃、文辭清澈，牛津運動的靈魂之聲。英語講道文學的高峰，其後皈依羅馬前的心路詩篇。' },
+          { title_zh: '費內隆屬靈書信與講道', title_orig: 'Œuvres spirituelles (Fénelon)', author: '弗朗索瓦‧費內隆', era: '1690s–1710s', place: '康佈雷', language: '法文', intro: '康佈雷總主教費內隆論純愛與內在生活的屬靈書信與講道。法國寂靜主義爭議的中心，天主教靈修講道的溫柔一脈。' },
+          { title_zh: '沙雷的方濟講道與勸勉', title_orig: 'Sermons et entretiens (François de Sales)', author: '沙雷的方濟', era: '1600s–1620s', place: '日內瓦／安錫', language: '法文', intro: '《成聖捷徑》作者沙雷的方濟溫和平易、面向平信徒的講道與勸勉。天主教改革後平信徒靈修的推手，溫柔講道傳統的宗師。' },
+          { title_zh: '聖文生‧德‧保祿使命講道', title_orig: 'Conférences (Vincent de Paul)', author: '文生‧德‧保祿', era: '1630s–1650s', place: '巴黎', language: '法文', intro: '遣使會創立者文生‧德‧保祿向鄉間窮人與傳教士的樸實講道與訓話。天主教社會關懷講壇的典範，鄉村使命與慈善事業的靈魂。' },
+          { title_zh: '利古裡的亞豐索講道與默想', title_orig: 'Opere (Alfonso Maria de\' Liguori)', author: '利古裡的亞豐索', era: '18 世紀', place: '那不勒斯', language: '義大利文', intro: '贖主會創立者亞豐索論救贖大愛與聖母的講道與默想，《永生的準備》風行。天主教民間靈修的大師，倫理神學與講壇並重的教會聖師。' }
+        
+        ],
+      },
+      {
+        key: 'pietist-holiness',
+        label: '敬虔與成聖講道部',
+        label_en: 'Pietist and Holiness Preaching',
+        desc: '德語敬虔運動、莫拉維亞與英美成聖運動的講道與勸修文獻。',
+        works: [
+          { title_zh: '阿恩特真基督教', title_orig: 'Vier Bücher vom wahren Christentum', author: '約翰‧阿恩特', era: '1605–1610', place: '布倫瑞克', language: '德文', intro: '阿恩特論內在重生與效法基督的四卷勸修書，敬虔運動的靈修母本。路德宗最暢銷的靈修經典之一，斯佩納與衛斯理皆蒙其澤。' },
+          { title_zh: '弗蘭克講道與孤院見證', title_orig: 'Segensvolle Fußstapfen (August Hermann Francke)', author: '奧古斯特‧赫爾曼‧弗蘭克', era: '1701', place: '哈勒', language: '德文', intro: '弗蘭克記述哈勒孤兒院憑信心興辦的見證與講道，敬虔付諸慈善事業。敬虔運動社會實踐的典範文獻，近代信心事工與宣教機構的先聲。' },
+          { title_zh: '親岑多夫講道集', title_orig: 'Reden (Nikolaus Ludwig von Zinzendorf)', author: '親岑多夫伯爵', era: '18 世紀', place: '黑恩胡特', language: '德文', intro: '莫拉維亞弟兄會領袖親岑多夫論「心的宗教」與基督寶血的講道。近代普世宣教的先驅之聲，衛斯理靈性轉折的推手，情感敬虔的代表。' },
+          { title_zh: '芬尼奮興講座', title_orig: 'Lectures on Revivals of Religion', author: '查爾斯‧芬尼', era: '1835', place: '紐約', language: '英文', intro: '奮興佈道家芬尼論如何促成復興的講座，新measures引發神學爭議。美國第二次大覺醒的方法論宣言，現代佈道術的爭議源頭。' },
+          { title_zh: '凱瑟琳‧布思女性佈道論', title_orig: 'Female Ministry', author: '凱瑟琳‧布思', era: '1859', place: '倫敦', language: '英文', intro: '救世軍「軍母」布思為女性講道權辯護的小冊與講道，力主女子同得聖召。救世軍男女平等事奉的神學基石，維多利亞時代女性講壇的宣言。' },
+          { title_zh: '慕迪佈道講章', title_orig: 'Sermons (Dwight L. Moody)', author: '德懷特‧慕迪', era: '1875–1899', place: '芝加哥／倫敦', language: '英文', intro: '鞋商出身的佈道家慕迪平白懇切、以愛為題的大型佈道講章，桑基聖詩相和。近代城市佈道會的原型，跨大西洋福音運動的代表人物。' },
+          { title_zh: '司布真講壇', title_orig: 'The Metropolitan Tabernacle Pulpit', author: '查爾斯‧司布真', era: '1855–1892', place: '倫敦', language: '英文', intro: '「講道王子」司布真在倫敦大會堂逐週講道的講章結集，數千篇風行全球。維多利亞時代最偉大的講壇，改革宗福音講道的文字寶庫。' },
+          { title_zh: '貝裡奇鄉村佈道', title_orig: 'The Christian World Unmasked (John Berridge)', author: '約翰‧貝裡奇', era: '1773', place: '英格蘭埃弗頓', language: '英文', intro: '福音派巡迴佈道家貝裡奇詼諧懇切的鄉村講道。英格蘭福音復興的草根之聲，衛斯理與懷特腓的同工。' },
+          { title_zh: '波士頓生命之道', title_orig: 'Human Nature in its Fourfold State (Thomas Boston)', author: '託馬斯‧波士頓', era: '1720', place: '蘇格蘭埃特里克', language: '英文（蘇格蘭語）', intro: '蘇格蘭牧者波士頓論人性四境（無罪、墮落、恩典、榮耀）的講道結集。蘇格蘭平民神學的經典，鄉村講壇教義教育的典範。' },
+          { title_zh: '弗萊契爾論成聖', title_orig: 'Checks to Antinomianism (John Fletcher)', author: '約翰‧弗萊契爾', era: '1771–1775', place: '英格蘭馬德利', language: '英文', intro: '衛斯理的神學繼承人弗萊契爾論成聖與反律法主義的辯護文集。循道神學的系統化奠基，衛斯理主義成聖論的權威闡釋。' }
+        
+        ],
+      },
+      {
+        key: 'african-american-preaching',
+        label: '非裔美洲講道部',
+        label_en: 'African American Preaching',
+        desc: '近代非裔美洲教會的講道、靈歌與見證，奴役與解放處境下的信仰之聲。',
+        works: [
+          { title_zh: '艾倫非洲衛理講道與生平', title_orig: 'The Life Experience and Gospel Labors of Richard Allen', author: '理查‧艾倫', era: '1833', place: '費城', language: '英文', intro: '獲釋奴隸、非洲衛理聖公會創立者艾倫的講道與自傳。黑人自主教會的奠基之聲，非裔美洲講壇傳統的源頭文獻。' },
+          { title_zh: '海恩斯講道集', title_orig: 'Sermons (Lemuel Haynes)', author: '萊繆爾‧海恩斯', era: '1785–1820', place: '佛蒙特', language: '英文', intro: '美國首位受按立的非裔牧者海恩斯的講章，牧養白人會眾並論奴隸與自由。革命時代黑人講壇的先聲，加爾文主義與廢奴良心的結合。' },
+          { title_zh: '耶麗娜‧李講道與靈程記', title_orig: 'The Life and Religious Experience of Jarena Lee', author: '耶麗娜‧李', era: '1836', place: '費城', language: '英文', intro: '非洲衛理聖公會首位女講道者耶麗娜‧李的巡迴佈道自述，跨越性別與種族雙重藩籬。黑人女性講壇的破冰之作，十九世紀美國宗教史的獨特之聲。' },
+          { title_zh: '賈斯珀「日頭果然行動」講道', title_orig: 'De Sun Do Move (John Jasper)', author: '約翰‧賈斯珀', era: '約 1878', place: '里奇蒙', language: '英文', intro: '獲釋奴隸賈斯珀以民間語言演繹聖經、講「日頭果然行動」的名篇。非裔口傳講道藝術的代表，民間釋經與修辭激情的活標本。' },
+          { title_zh: '特納非洲宣教講道', title_orig: 'Sermons and Addresses (Henry McNeal Turner)', author: '亨利‧麥克尼爾‧特納', era: '1868–1900', place: '喬治亞／賴比瑞亞', language: '英文', intro: '非洲衛理主教特納論黑人尊嚴、「上帝是黑人」與返非宣教的講道。重建時代黑人講壇的政治之聲，非裔美洲返非運動的宗教旗手。' },
+          { title_zh: '阿曼達‧史密斯佈道自述', title_orig: 'An Autobiography (Amanda Berry Smith)', author: '阿曼達‧貝裡‧史密斯', era: '1893', place: '美國／印度／賴比瑞亞', language: '英文', intro: '獲釋奴隸出身的成聖佈道家阿曼達‧史密斯橫跨美印非三洲的佈道自述。黑人女性跨國宣教的傳奇，聖潔運動與世界宣教的交會之聲。' },
+          { title_zh: '索傑納‧特魯斯見證與演說', title_orig: 'Narrative of Sojourner Truth', author: '索傑納‧特魯斯', era: '1850', place: '美國', language: '英文', intro: '獲自由的女奴、巡迴佈道家特魯斯的見證與「我豈不是女人」演說。廢奴與女權交會的先知之聲，非裔女性講壇的傳奇人物。' },
+          { title_zh: '艾伯薩隆‧瓊斯感恩講道', title_orig: 'A Thanksgiving Sermon (Absalom Jones)', author: '艾伯薩隆‧瓊斯', era: '1808', place: '費城', language: '英文', intro: '首位非裔聖公會牧者瓊斯慶祝廢除奴隸貿易的感恩講道。黑人聖公會的奠基之聲，以出埃及記詮釋黑人解放的早期範例。' }
+        
+        ],
+      },
+      {
+        key: 'chinese-preaching',
+        label: '漢語宣道部',
+        label_en: 'Chinese-Language Preaching',
+        desc: '近代華人佈道家與本土傳道人的講章、勸世文與見證，漢語基督教宣道的自立之聲。',
+        works: [
+          { title_zh: '梁發勸世良言', title_orig: '勸世良言', author: '梁發', era: '1832', place: '廣州', language: '漢文', intro: '華人首位牧師梁發輯譯聖經與自撰講論而成的佈道文集，洪秀全得之而萌拜上帝之念。華人自撰宣道文獻的開山之作，深刻牽動太平天國與近代中國史。' },
+          { title_zh: '何進善訓真篇', title_orig: '訓真篇', author: '何進善（何福堂）', era: '約 1852', place: '香港', language: '漢文', intro: '華人早期牧者何進善以文言撰寫的護教勸世論著，析辨真道以曉華人。華南本土傳道文獻的代表，倫敦會華人自立傳道的早期成果。' },
+          { title_zh: '席勝魔悔改見證與詩歌', title_orig: '席勝魔傳道見證', author: '席勝魔（席子直）', era: '約 1880–1896', place: '山西', language: '漢文', intro: '由秀才、鴉片癮者轉為佈道家的席勝魔戒煙傳道的見證與自撰詩歌，設戒煙所遍山西。內地會華人佈道的傳奇，本土奮興與社會改造結合的典型。' },
+          { title_zh: '王元深聖道東來考', title_orig: '聖道東來考', author: '王元深', era: '1899', place: '廣東', language: '漢文', intro: '巴色會華人牧者王元深考述基督教東傳源流的著作，兼含佈道與教會史。客家教會本土書寫的先聲，華人自述信仰源流的早期嘗試。' },
+          { title_zh: '謝洪賚勸學與佈道文', title_orig: '謝洪賚文集', author: '謝洪賚', era: '1890 年代', place: '上海', language: '漢文', intro: '清末華人基督徒學者謝洪賚融會西學與信仰的講論與勸學文字。士人型華人佈道的代表，教育救國與福音傳播並行的知識分子之聲。' },
+          { title_zh: '俞國楨自立會講章', title_orig: '中國耶穌教自立會講論', author: '俞國楨', era: '1900 前後', place: '上海', language: '漢文', intro: '倡導華人教會自立自養的俞國楨的講章與主張，脫離差會而自組教會。華人教會三自運動的先聲，本色化與教會自主的早期論述。' },
+          { title_zh: '賓為霖廈語佈道文', title_orig: '廈門白話佈道文（賓為霖與本地傳道）', author: '賓為霖與閩南本地傳道人', era: '1850 年代', place: '廈門', language: '閩南白話字', intro: '以閩南白話字寫就的佈道講章與勸信文，供不識漢字的信徒誦讀。方言宣道文獻的代表，白話字識字運動與本土傳道結合的產物。' },
+          { title_zh: '倪柝聲前身：福州本土講道', title_orig: '福州美以美會華人講章', author: '福州華人傳道群', era: '1870–1900', place: '福州', language: '漢文／福州話', intro: '福州美以美會華人傳道人以官話與福州話所作的講章結集。華東本土講壇的縮影，方言與官話並用的宣道實態見證。' }
+        
+        ],
+      },
+      {
+        key: 'orthodox-anglican-pulpit',
+        label: '正教與聖公會講壇部',
+        label_en: 'Orthodox and Anglican Pulpit',
+        desc: '近代東正教與英國國教講壇名家的講道與默想，禮儀傳統中的講道藝術。',
+        works: [
+          { title_zh: '扎東斯克的季洪講道與默想', title_orig: 'Сочинения (Тихон Задонский)', author: '扎東斯克的季洪', era: '18 世紀', place: '俄羅斯扎東斯克', language: '俄文', intro: '俄國主教聖季洪論真基督教與屬靈爭戰的講道與默想，杜斯妥也夫斯基筆下佐西馬長老之原型。俄國正教靈修講道的高峰，東方敬虔文學的代表。' },
+          { title_zh: '莫斯科的斐拉列特講道集', title_orig: 'Слова и речи (Филарет Московский)', author: '莫斯科的斐拉列特', era: '19 世紀', place: '莫斯科', language: '俄文', intro: '莫斯科都主教斐拉列特莊重深湛的講道與《東正教基督教教理問答》。十九世紀俄國教會的思想中樞，正教講壇與教理教育的權威之聲。' },
+          { title_zh: '羅斯托夫的季米特里講道與聖傳', title_orig: 'Четьи-Минеи (Димитрий Ростовский)', author: '羅斯托夫的季米特里', era: '1684–1705', place: '羅斯托夫', language: '教會斯拉夫文', intro: '羅斯托夫都主教季米特里編纂的聖徒月課大全與講道，俄國最通行的聖傳集。斯拉夫聖傳文學的集大成，正教講壇與民間敬虔的橋樑。' },
+          { title_zh: '安德魯斯講道集', title_orig: 'XCVI Sermons (Lancelot Andrewes)', author: '蘭斯洛特‧安德魯斯', era: '1600–1620', place: '倫敦', language: '英文', intro: '欽定本譯經領袖之一安德魯斯的御前講道，字句雕琢、旁徵博引，艾略特譽之。詹姆士一世時代英國國教講壇的巔峰，玄學派講道文體的代表。' },
+          { title_zh: '多恩講道集', title_orig: 'Sermons (John Donne)', author: '約翰‧多恩', era: '1620 年代', place: '倫敦', language: '英文', intro: '詩人牧者多恩任聖保羅座堂主任時的講道，論死亡與救恩激越深沉。「喪鐘為誰而鳴」之作者的講壇遺產，英語玄學講道的文學高峰。' },
+          { title_zh: '泰勒聖潔生死論', title_orig: 'The Rule and Exercises of Holy Living and Holy Dying', author: '傑瑞米‧泰勒', era: '1650–1651', place: '英格蘭', language: '英文', intro: '「英國講壇的莎士比亞」泰勒論聖潔生活與善終的勸修雙書，文采斐然。英國國教靈修文學的經典，清教與國教之間的敬虔橋樑。' }
+        
         ],
       },
     ],
