@@ -93,7 +93,20 @@ export const EARLY_MODERN_ERA: DazangEra = {
           { title_zh: '多特勒支信條', title_orig: 'Dordtse Geloofsbelijdenis', author: '荷蘭門諾派眾長老', era: '1632', place: '荷蘭多特勒支', language: '荷蘭文', intro: '荷蘭門諾派眾教會於多特勒支會議通過的信條，1632 年成文，旨在統合門諾派各支派的信仰，與改革宗的《多特信經》同地異源。全文十八條，承襲施萊特海姆傳統，闡明成人洗禮、洗足禮、不抵抗(和平主義)、拒絕宣誓與對犯罪者「迴避」的規矩。為北美門諾會、阿米希派普遍採用，是門諾傳統流傳最廣的信條。', link: '/creeds' },
           { title_zh: '薩伏依宣言', title_orig: 'The Savoy Declaration', author: '英格蘭公理會諸教會', era: '1658', place: '倫敦薩伏依宮', language: '英文', intro: '英格蘭公理會(獨立派)領袖於倫敦薩伏依宮集會通過的信仰與體制宣言，1658 年成文。教義部分大體沿襲西敏信條，唯修訂教會論諸條，確立各地方教會在基督之下自主自治的公理制原則，另附教會體制綱領。是公理宗最重要的信條，與西敏信條同源而體制相異，影響英美公理會教會甚鉅。', link: '/creeds' },
           { title_zh: '真基督教神學辯護(巴克萊辯護書)', title_orig: 'An Apology for the True Christian Divinity', author: '巴克萊(Robert Barclay)', era: '1678', place: '蘇格蘭／鹿特丹', language: '拉丁文‧英文', intro: '貴格會(公誼會)神學家巴克萊為其信仰所作的系統辯護，1676 年拉丁文版、1678 年英文版問世。全書十五題，闡述「內在之光」、直接的聖靈啟示、廢除聖禮儀文與神職、反對宣誓與戰爭等貴格主張，並駁斥對貴格派的指控。貴格會本無成文信經，本書遂被奉為公誼會信仰的權威表述。', link: '/creeds' },
-          { title_zh: '新罕布夏浸信會信條', title_orig: 'The New Hampshire Baptist Confession', author: '新罕布夏浸信會聯會', era: '1833', place: '美國新罕布夏', language: '英文', intro: '美國新罕布夏浸信會聯會制定的信條，1833 年通過。相較於 1689 倫敦浸信會信條的嚴格加爾文主義，本信條語調溫和、淡化預定論色彩，反映十九世紀美國浸信會的神學取向。全文簡明，廣為美南浸信會等採用，並成為後來《浸信會信仰與信息》的藍本，是美國浸信會流傳最廣的信條之一。', link: '/creeds' }
+          { title_zh: '新罕布夏浸信會信條', title_orig: 'The New Hampshire Baptist Confession', author: '新罕布夏浸信會聯會', era: '1833', place: '美國新罕布夏', language: '英文', intro: '美國新罕布夏浸信會聯會制定的信條，1833 年通過。相較於 1689 倫敦浸信會信條的嚴格加爾文主義，本信條語調溫和、淡化預定論色彩，反映十九世紀美國浸信會的神學取向。全文簡明，廣為美南浸信會等採用，並成為後來《浸信會信仰與信息》的藍本，是美國浸信會流傳最廣的信條之一。', link: '/creeds' },
+          { title_zh: '路德小要理問答', title_orig: 'Der Kleine Katechismus', author: '馬丁‧路德', era: '1529', place: '維滕貝格', language: '德文', intro: '路德視察薩克森教區驚於無知而為家長與兒童編寫的小要理，十誡信經主禱文聖禮逐條淺解。「這是什麼意思？」的問句迴響五百年，新教教理教育的第一書。' },
+          { title_zh: '路德大要理問答', title_orig: 'Der Große Katechismus', author: '馬丁‧路德', era: '1529', place: '維滕貝格', language: '德文', intro: '路德為牧者與教師詳解信仰要目的大要理，講道體例夾敘夾議。與小要理同入協同書的教導雙璧，路德神學的平民化總述。' },
+          { title_zh: '日內瓦要理問答', title_orig: 'Catéchisme de l\'Église de Genève', author: '約翰‧加爾文', era: '1542', place: '日內瓦', language: '法文', intro: '加爾文以問答體重寫的日內瓦教會要理，信仰、律法、禱告與聖禮四部井然。改革宗要理傳統的源頭活水，海德堡與西敏要理的共同先驅。' },
+          { title_zh: '法國信條', title_orig: 'Confessio Gallicana', author: '法國改革宗教會首屆全國總會（加爾文草稿）', era: '1559', place: '巴黎', language: '法文', intro: '法國改革宗教會秘密召開首屆總會通過的信條，以加爾文草稿為底。胡格諾教會在迫害中自我立憲的文件，拉羅歇爾會議確認後又稱拉羅歇爾信條。' },
+          { title_zh: '拉科夫要理問答', title_orig: 'Katechizm Rakowski (Racovian Catechism)', author: '波蘭兄弟會（索齊尼派）', era: '1605', place: '拉科夫', language: '波蘭文／拉丁文', intro: '波蘭兄弟會系統陳述一位論神學的要理問答，否認三位一體與代贖而高舉理性釋經。近代反三一傳統的信仰綱領，歐洲各國屢遭焚禁而流傳不絕。' },
+          { title_zh: '抗辯五條', title_orig: 'Remonstrantie (The Five Arminian Articles)', author: '阿民念派牧者聯署', era: '1610', place: '海牙', language: '荷蘭文', intro: '阿民念身後其徒聯署呈遞荷蘭國會的五條抗辯，就預定、救贖範圍與恩典可拒性修正正統加爾文主義。多特會議「五要點」所回應的原文本，阿民念主義的信仰憲章。' },
+          { title_zh: '費城浸信會信條', title_orig: 'The Philadelphia Confession of Faith', author: '費城浸信會聯會', era: '1742', place: '費城', language: '英文', intro: '北美最早浸信會聯會以倫敦一六八九年信條為底增訂的信仰標準。美洲浸信會正統的奠基文件，南北浸信傳統共同的信仰母本。' },
+          { title_zh: '莫拉維亞弟兄會紀律規程', title_orig: 'Ratio Disciplinae Unitatis Fratrum', author: '合一弟兄會（誇美紐斯編訂本 1660）', era: '1616（1660 刊行）', place: '波希米亞／阿姆斯特丹', language: '拉丁文', intro: '波希米亞弟兄會的教會紀律與治理規程，誇美紐斯流亡中刊行以存教統。白山之役後隱藏教會的制度火種，親岑多夫復興莫拉維亞教會的法統依據。' },
+          { title_zh: '愛爾蘭信條', title_orig: 'The Irish Articles of Religion', author: '愛爾蘭教會（烏雪主導）', era: '1615', place: '都柏林', language: '英文', intro: '烏雪主導起草的一百零四條愛爾蘭教會信條，加爾文主義色彩較三十九條鮮明。西敏信條的直接底本，安立甘與清教神學交會的中繼文件。' },
+          { title_zh: '第一瑞士信條', title_orig: 'Confessio Helvetica prior', author: '布靈格、米科尼烏斯等瑞士神學家', era: '1536', place: '巴塞爾', language: '拉丁文／德文', intro: '瑞士諸邦教會首度共同制定的信條，欲兼作與路德宗合一的基礎。瑞士改革宗聯合的第一份信仰文件，四十年後第二瑞士信條的先聲。' },
+          { title_zh: '蘇黎世共識', title_orig: 'Consensus Tigurinus', author: '加爾文與布靈格', era: '1549', place: '蘇黎世', language: '拉丁文', intro: '加爾文與布靈格就聖餐教義達成的共識文件，彌合日內瓦與蘇黎世的路線分歧。改革宗傳統合流的關鍵協定，卻也觸發與路德宗的第二輪聖餐論戰。' },
+          { title_zh: '瑞士共識公式', title_orig: 'Formula Consensus Helvetica', author: '海德格與圖雷蒂尼等', era: '1675', place: '蘇黎世', language: '拉丁文', intro: '瑞士正統派為抵禦索繆學派修正而制定的共識公式，連希伯來文母音符號的默示都在申明之列。改革宗經院正統的最後信條，嚴格主義時代的紀念碑。' }
+        
         ]
       },
       {
@@ -106,7 +119,117 @@ export const EARLY_MODERN_ERA: DazangEra = {
           { title_zh: '劍橋綱領(公理會盟約)', title_orig: 'The Cambridge Platform', author: '新英格蘭公理會諸教會', era: '1648', place: '麻薩諸塞劍橋', language: '英文', intro: '新英格蘭公理會教會於麻州劍橋會議制定的教會治理綱領，1648 年通過。在信仰上接受西敏信條，但在體制上確立會眾獨立自治的公理制：各地方教會自主、以信徒立約結成、由會眾選立職事。是北美公理宗教會體制的奠基文件，深刻影響清教徒移民社會的教會與政治傳統。' },
           { title_zh: '衛理會規程(大綱)', title_orig: 'The Large Minutes / The Book of Discipline', author: '約翰‧衛斯理(John Wesley)及衛理公會', era: '1743起編', place: '英國／美國', language: '英文', intro: '衛理公會的規程章典，源於衛斯理與同工歷年年議會問答彙編的《大綱》，後發展為美國衛理公會的《規程》。規範循道組會、班會、巡迴牧者、年議會與會督制等獨特體制，並列倫理生活準則。是衛理宗教會治理與紀律的根本文獻，將衛斯理的奮興運動制度化為有組織的教會。' }
         ,
-          { title_zh: '沃蒂烏斯教會政治學', title_orig: 'Gisberti Voetii Politicae ecclesiasticae [partes I-III]', author: '吉斯貝圖·沃蒂烏斯 (Gisbertus Voetius)', era: '1663-1676', place: '阿姆斯特丹', language: '拉丁文', intro: '沃蒂烏斯為十七世紀荷蘭改革宗神學家與烏特勒支大學神學教授。本書三卷系統闡述教會政治秩序與組織原則，成為宗教改革後新教正統派的重要論著。內容涵蓋教會治理結構、牧職權限、長老制度與基督教國家的政教關係，特別強調聖經在教會政治中的權威性。此作影響深遠，塑造了改革宗與敬虔主義神學傳統對教會組織的理解，是近代新教政治神學的典範文獻。' }
+          { title_zh: '沃蒂烏斯教會政治學', title_orig: 'Gisberti Voetii Politicae ecclesiasticae [partes I-III]', author: '吉斯貝圖·沃蒂烏斯 (Gisbertus Voetius)', era: '1663-1676', place: '阿姆斯特丹', language: '拉丁文', intro: '沃蒂烏斯為十七世紀荷蘭改革宗神學家與烏特勒支大學神學教授。本書三卷系統闡述教會政治秩序與組織原則，成為宗教改革後新教正統派的重要論著。內容涵蓋教會治理結構、牧職權限、長老制度與基督教國家的政教關係，特別強調聖經在教會政治中的權威性。此作影響深遠，塑造了改革宗與敬虔主義神學傳統對教會組織的理解，是近代新教政治神學的典範文獻。' },
+          { title_zh: '蘇格蘭第一治理書', title_orig: 'The First Book of Discipline', author: '諾克斯等六約翰', era: '1560', place: '愛丁堡', language: '英文（蘇格蘭語）', intro: '諾克斯等人為新生的蘇格蘭教會起草的治理書，教區重整、濟貧與全民教育的藍圖並陳。蘇格蘭宗教改革的建國綱領，堂會制度與國民教育理想的源頭。' },
+          { title_zh: '蘇格蘭第二治理書', title_orig: 'The Second Book of Discipline', author: '梅爾維爾主導', era: '1578', place: '愛丁堡', language: '英文（蘇格蘭語）', intro: '梅爾維爾主導修訂的治理書，確立教會屬靈管轄獨立於王權、長老制四級議會的原則。「兩個國度」論的憲章文本，蘇格蘭長老制的定型文件。' },
+          { title_zh: '蘇格蘭國民盟約', title_orig: 'The National Covenant', author: '蘇格蘭盟約派（亨德森與約翰斯頓起草）', era: '1638', place: '愛丁堡灰衣修士教堂', language: '英文', intro: '抗拒查理一世強推禮書而全民簽署的國民盟約，灰衣修士墓園的簽名場面成民族記憶。盟約派時代的開卷文件，信仰自決與抵抗權的蘇格蘭表述。' },
+          { title_zh: '神聖同盟與盟約', title_orig: 'The Solemn League and Covenant', author: '蘇格蘭總會與英格蘭國會', era: '1643', place: '愛丁堡／倫敦', language: '英文', intro: '蘇格蘭與英格蘭國會為宗教統一與共同防衛締結的盟約，西敏會議由此有蘇格蘭顧問列席。三王國戰爭的宗教軸心文件，長老制輸出英格蘭的未竟藍圖。' },
+          { title_zh: '視察員訓令', title_orig: 'Unterricht der Visitatoren', author: '墨蘭頓（路德作序）', era: '1528', place: '維滕貝格', language: '德文', intro: '墨蘭頓為薩克森教會視察起草的訓令，規範講道、學校與牧者生活。新教領邦教會體制的第一份施政文件，宗教改革由運動轉為建制的起點。' },
+          { title_zh: '丹麥-挪威教會條例', title_orig: 'Kirkeordinansen', author: '布根哈根起草', era: '1537／1539', place: '哥本哈根', language: '拉丁文／丹麥文', intro: '路德的同工布根哈根為丹麥-挪威王國制定的教會條例，主教改稱監督而體制全面路德化。北歐國教會的奠基法典，斯堪地那維亞宗教改革的制度樣板。' },
+          { title_zh: '烏普薩拉會議決議', title_orig: 'Uppsala mötes beslut', author: '瑞典全國教會會議', era: '1593', place: '烏普薩拉', language: '瑞典文', intro: '瑞典全國會議確認奧斯堡信條、拒斥禮儀妥協的決議。瑞典教會路德宗認同的定錨文件，「瑞典永為一體同信」誓言所出。' },
+          { title_zh: '多特教會條例', title_orig: 'Kerkorde van Dordrecht', author: '多特總會', era: '1619', place: '多德雷赫特', language: '荷蘭文', intro: '多特總會通過的教會條例，堂會、區會、總會三級與呼召程序詳備。荷蘭改革宗政體的標準章程，隨移民傳至南非與北美的治理母法。' },
+          { title_zh: '日內瓦教會法令', title_orig: 'Ordonnances ecclésiastiques', author: '約翰‧加爾文', era: '1541', place: '日內瓦', language: '法文', intro: '加爾文重返日內瓦後制定的教會法令，牧師、教師、長老、執事四職與監督會制度確立。改革宗教會體制的原型設計，日內瓦「聖城」實驗的制度骨架。' },
+          { title_zh: '一六〇四年教會法規', title_orig: 'Canons of 1604', author: '坎特伯裡教省會議（班克羅夫特主導）', era: '1604', place: '倫敦', language: '英文／拉丁文', intro: '詹姆士一世初年通過的一百四十一條教會法規，禮儀服制與教會法庭全面成文化。英格蘭教會沿用近三百五十年的法典，清教徒不從國教的法律分界線。' },
+          { title_zh: '瑞典一六八六年教會法', title_orig: 'Kyrkolagen 1686', author: '瑞典王國（卡爾十一世治下）', era: '1686', place: '斯德哥爾摩', language: '瑞典文', intro: '卡爾十一世頒布的教會法，全民識字查經的家戶考問制度入法。瑞典國教體制兩百餘年的根本大法，北歐全民識字奇蹟的制度推手。' }
+        
+        ]
+      },
+      {
+        key: 'jiaozong-fagui',
+        label: '教宗法令與信理部',
+        label_en: 'Papal Decrees and Catholic Norms',
+        desc: '近代教宗詔書、通諭與天主教要理規範，反改革至十九世紀的教廷法度。',
+        works: [
+          { title_zh: '庇護四世信德宣認', title_orig: 'Professio fidei Tridentina', author: '教宗庇護四世', era: '1564', place: '羅馬', language: '拉丁文', intro: '脫利騰會議閉幕後庇護四世頒定的信仰宣認格式，凡任聖職者皆須宣誓。反改革時代天主教正統的試金石，四百年間入教與就職的法定誓文。' },
+          { title_zh: '卡尼修斯要理問答', title_orig: 'Summa Doctrinae Christianae', author: '伯多祿‧卡尼修斯', era: '1555', place: '維也納', language: '拉丁文／德文', intro: '耶穌會士卡尼修斯為德語區編寫的大中小三級要理問答，刊行數百版遍及歐洲。天主教對抗路德要理的主力教材，「卡尼修斯」在德語中一度即要理問答的代名詞。' },
+          { title_zh: '白敏要理問答', title_orig: 'Dottrina cristiana breve', author: '羅伯‧白敏', era: '1597', place: '羅馬', language: '義大利文', intro: '樞機白敏奉教宗克勉八世之命編寫的簡明要理，問答淺白供兒童與平民記誦。譯成數十種語言隨宣教全球流傳，天主教要理教育三百年的通行讀本。' },
+          { title_zh: '格里曆改革詔書', title_orig: 'Inter gravissimas', author: '教宗格列高利十三世', era: '1582', place: '羅馬', language: '拉丁文', intro: '格列高利十三世頒布曆法改革的詔書，刪十日並改置閏之法，格里曆由此誕生。教會法令改寫全人類時間座標的孤例，復活節計算引發的科學工程。' },
+          { title_zh: '教廷改組憲章', title_orig: 'Immensa aeterni Dei', author: '教宗西斯篤五世', era: '1588', place: '羅馬', language: '拉丁文', intro: '西斯篤五世設立十五個常設聖部的宗座憲章，樞機團由議事會轉為分部行政。近代教廷官僚體制的誕生證書，沿用至梵二後改革的治理骨架。' },
+          { title_zh: '崇高的天主詔書', title_orig: 'Sublimis Deus', author: '教宗保祿三世', era: '1537', place: '羅馬', language: '拉丁文', intro: '保祿三世申明美洲原住民為真正的人、有權享自由財產且應以福音感召而非奴役的詔書。殖民時代人權論述的教會源頭，拉斯卡薩斯陣營的法理後盾。' },
+          { title_zh: '自那一日詔書', title_orig: 'Ex illa die', author: '教宗克勉十一世', era: '1715', place: '羅馬', language: '拉丁文', intro: '克勉十一世重申禁止中國信徒祭祖祀孔的詔書，禮儀之爭至此定讞。康熙聞之禁教，中西第一次深度文明對話的法律句點。' },
+          { title_zh: '奇特之事詔書', title_orig: 'Ex quo singulari', author: '教宗本篤十四世', era: '1742', place: '羅馬', language: '拉丁文', intro: '本篤十四世最終裁定中國禮儀之爭、要求宣教士宣誓遵禁的詔書。適應路線的百年實驗被畫上句號，直至一九三九年方獲鬆綁。' },
+          { title_zh: '至大關懷詔書', title_orig: 'Omnium sollicitudinum', author: '教宗本篤十四世', era: '1744', place: '羅馬', language: '拉丁文', intro: '本篤十四世裁定印度馬拉巴禮儀之爭的詔書，禁止宣教士容許種姓習俗入教會生活。與中國禁令並列的亞洲禮儀雙判，適應宣教學的另一頁挫折。' },
+          { title_zh: '五命題裁定詔書', title_orig: 'Cum occasione', author: '教宗依諾增爵十世', era: '1653', place: '羅馬', language: '拉丁文', intro: '依諾增爵十世裁定揚森《奧古斯丁》五命題為異端的詔書，恩寵論爭由此白熱化。巴斯卡《致外省人書》的直接背景，事實與法理之辨的著名案例。' },
+          { title_zh: '在至高者座位詔書', title_orig: 'In eminenti apostolatus specula', author: '教宗克勉十二世', era: '1738', place: '羅馬', language: '拉丁文', intro: '克勉十二世首度禁止天主教徒加入共濟會的詔書，違者絕罰。教會與啟蒙結社兩百年對峙的第一紙禁令，後代教宗一再重申的先例。' },
+          { title_zh: '抵達之際通諭', title_orig: 'Vix pervenit', author: '教宗本篤十四世', era: '1745', place: '羅馬', language: '拉丁文', intro: '本篤十四世重申貸款取利本質為高利貸之罪的通諭，兼容外在名目的補償。中世紀高利貸禁令在商業時代的最後防線，教會經濟倫理轉型的座標文件。' },
+          { title_zh: '謬說要錄', title_orig: 'Syllabus errorum', author: '教宗庇護九世', era: '1864', place: '羅馬', language: '拉丁文', intro: '庇護九世隨《何等關懷》通諭附列八十條當代謬說的清單，泛神論至政教分離俱在譴責之列。教會與現代性正面對撞的宣言，十九世紀政教論戰的引爆點。' },
+          { title_zh: '傳信部創立詔書', title_orig: 'Inscrutabili Divinae Providentiae', author: '教宗額我略十五世', era: '1622', place: '羅馬', language: '拉丁文', intro: '額我略十五世創設傳信部統籌全球宣教的詔書，宣教事務自此收歸教廷直轄。脫離保教權掣肘的制度嘗試，近代天主教宣教體制的奠基文件。' },
+          { title_zh: '使徒關懷詔書', title_orig: 'Apostolicae curae', author: '教宗良十三世', era: '1896', place: '羅馬', language: '拉丁文', intro: '良十三世裁定聖公會聖秩「全然無效」的詔書，安立甘方面隨即發表反駁。聖公會與羅馬對話百年未解的法理節點，大公運動繞不開的文件。' },
+          { title_zh: '至聖的天主詔書', title_orig: 'Benedictus Deus (1564)', author: '教宗庇護四世', era: '1564', place: '羅馬', language: '拉丁文', intro: '庇護四世批准脫利騰大公會議全部法令並保留解釋權於教廷的詔書。反改革法制生效的鑰匙文件，會議與教宗權柄關係的定調之筆。' },
+          { title_zh: '審慎周詳詔書', title_orig: 'Sollicita ac provida', author: '教宗本篤十四世', era: '1753', place: '羅馬', language: '拉丁文', intro: '本篤十四世改革禁書審查程序的憲章，明定審查官須聽取辯護並附理由。書報檢查史上罕見的正當程序化嘗試，開明教宗立法的代表作。' },
+          { title_zh: '信仰的創始者詔書', title_orig: 'Auctorem fidei', author: '教宗庇護六世', era: '1794', place: '羅馬', language: '拉丁文', intro: '庇護六世譴責皮斯托亞會議八十五條命題的詔書，揚森主義與國家教會論一併定讞。十八世紀改革公會議主義的法律終局，教會內啟蒙路線的封頂判決。' },
+          { title_zh: '何等程度詔書', title_orig: 'Quod aliquantum', author: '教宗庇護六世', era: '1791', place: '羅馬', language: '拉丁文', intro: '庇護六世譴責法國《教士公民組織法》的詔書，斥其以國權改組教會為裂教之舉。教會與大革命決裂的法律文件，十九世紀政教對抗的開幕辭。' }
+        
+        ]
+      },
+      {
+        key: 'zhengjiao-chiling',
+        label: '政教敕令部',
+        label_en: 'Church-State Edicts',
+        desc: '各國君主與議會規範宗教事務的敕令法案，寬容與禁教並見。',
+        works: [
+          { title_zh: '容教詔令', title_orig: '康熙容教詔（1692）', author: '清聖祖康熙帝', era: '1692', place: '北京', language: '中文', intro: '康熙帝準天主教自由傳習、將教堂比照佛道寺觀保護的詔令。耶穌會曆算外交的收穫頂點，禮儀之爭後被禁教政策取代的短暫黃金時代見證。' },
+          { title_zh: '伴天連追放令', title_orig: 'バテレン追放令', author: '豐臣秀吉', era: '1587（1614 德川禁教令繼之）', place: '筑前箱崎／江戶', language: '日文', intro: '豐臣秀吉驅逐傳教士的追放令，德川幕府一六一四年全面禁教繼之。吉利支丹世紀的終結法令，潛伏基督徒兩百五十年地下信仰的起點。' },
+          { title_zh: '西發裡亞和約宗教條款', title_orig: 'Pax Westphalica (Instrumenta Pacis Osnabrugensis et Monasteriensis)', author: '神聖羅馬帝國與列強使節', era: '1648', place: '明斯特／奧斯納布呂克', language: '拉丁文', intro: '三十年戰爭終戰和約中確立路德宗、改革宗與天主教平等地位的宗教條款。「教隨國定」的最終定型與馴化，近代主權國家與宗教多元並存的法律起點。' },
+          { title_zh: '奧格斯堡宗教和約', title_orig: 'Augsburger Religionsfrieden', author: '神聖羅馬帝國議會', era: '1555', place: '奧格斯堡', language: '德文', intro: '帝國議會承認路德宗合法地位的和約，確立「誰的領地，誰的宗教」原則。宗教戰爭第一階段的止戰法，也埋下三十年戰爭的未解伏筆。' },
+          { title_zh: '託爾達敕令', title_orig: 'Edictum Tordense', author: '外西凡尼亞議會（約翰‧西吉斯蒙德治下）', era: '1568', place: '託爾達', language: '匈牙利文／拉丁文', intro: '外西凡尼亞議會宣告牧者得自由講道、信仰乃天主恩賜不得強制的敕令，天主教、路德、改革與一位論四教並容。歐洲最早的宗教寬容立法之一，一位論教會的法定出生證。' },
+          { title_zh: '華沙聯盟公約', title_orig: 'Konfederacja warszawska', author: '波蘭立陶宛聯邦貴族議會', era: '1573', place: '華沙', language: '波蘭文', intro: '波蘭立陶宛貴族盟誓宗教歧異不得引發流血的公約，入列世界記憶名錄。宗教戰爭世紀中的「無火刑之國」憲章，貴族共和寬容傳統的基石。' },
+          { title_zh: '至尊法案', title_orig: 'Act of Supremacy', author: '英格蘭國會', era: '1534', place: '倫敦', language: '英文', intro: '國會宣告亨利八世為英格蘭教會唯一至上元首的法案。英國宗教改革的法律開端，摩爾與費舍爾以死拒誓的那道命題。' },
+          { title_zh: '一五五九年統一法案', title_orig: 'Act of Uniformity 1559', author: '英格蘭國會', era: '1559', place: '倫敦', language: '英文', intro: '伊利莎白一世重定公禱書為全國唯一合法禮儀並強制赴教堂的法案。「伊利莎白宗教解決」的支柱，安立甘中間路線的法律骨架。' },
+          { title_zh: '一六六二年統一法案', title_orig: 'Act of Uniformity 1662', author: '英格蘭國會', era: '1662', place: '倫敦', language: '英文', intro: '王政復闢後強制牧者全盤接受公禱書的法案，兩千餘清教牧者於「聖巴多羅買日」被逐出聖職。英國不從國教派誕生的法律時刻，國教與自由教會分流的閘門。' },
+          { title_zh: '維吉尼亞宗教自由法', title_orig: 'Virginia Statute for Religious Freedom', author: '湯瑪斯‧傑佛遜（起草）', era: '1786', place: '里奇蒙', language: '英文', intro: '傑佛遜起草、麥迪遜推動通過的宗教自由法，廢除國教稅並保障信仰不受強制。美國憲法第一修正案的直接前身，政教分離的世界性範本。' },
+          { title_zh: '教士公民組織法', title_orig: 'Constitution civile du clergé', author: '法國國民制憲議會', era: '1790', place: '巴黎', language: '法文', intro: '法國大革命將教區改劃、主教民選並令教士宣誓效忠國家的法律。法國教會分裂為宣誓派與拒誓派的分水嶺，革命與教會百年恩怨的起點。' }
+        
+        ]
+      },
+      {
+        key: 'dongfang-zhengjiao',
+        label: '正教與東方教會法規部',
+        label_en: 'Orthodox and Eastern Church Norms',
+        desc: '近代東正教與東方諸教會的會議決議、信仰宣認與教會規程。',
+        works: [
+          { title_zh: '彼得大帝教會規程', title_orig: 'Духовный регламент', author: '費奧凡‧普羅科波維奇（起草）', era: '1721', place: '聖彼得堡', language: '俄文', intro: '彼得大帝廢牧首制、設神聖治理會議統轄俄國教會的規程，普羅科波維奇起草。俄國教會兩百年國家化的憲法，一九一七年恢復牧首制方告終結。' },
+          { title_zh: '耶路撒冷會議決議', title_orig: 'Confessio Dosithei (Synodus Hierosolymitana)', author: '耶路撒冷牧首都西塞斯主持', era: '1672', place: '耶路撒冷／伯利恆', language: '希臘文', intro: '都西塞斯召集駁斥盧卡里斯加爾文傾向的會議，其信仰宣認成為近代正教最權威的教義文件之一。正教對宗教改革的正式回答，「伯利恆會議」的定調之作。' },
+          { title_zh: '莫吉拉正教信仰宣認', title_orig: 'Confessio Orthodoxa', author: '基輔都主教彼得‧莫吉拉', era: '1642（雅西會議修訂）', place: '基輔／雅西', language: '拉丁文／希臘文', intro: '莫吉拉以問答體系統陳述正教信仰的宣認，雅西會議修訂後獲四大牧首確認。正教「信條化時代」的代表文件，基輔學術融會東西方法的結晶。' },
+          { title_zh: '莫斯科大公會議決議（1666–1667）', title_orig: 'Московский большой собор', author: '俄國教會與東方牧首聯席會議', era: '1666–1667', place: '莫斯科', language: '俄文／希臘文', intro: '確認尼康禮儀改革、絕罰拒改舊禮者並廢黜尼康本人的大會議。舊禮儀派大分裂的法律定點，俄國宗教史最深的一道裂痕。' },
+          { title_zh: '百章會議決議', title_orig: 'Стоглав', author: '莫斯科教會會議（伊凡四世召集）', era: '1551', place: '莫斯科', language: '教會斯拉夫文', intro: '伊凡雷帝召集、決議輯為百章的莫斯科教會會議，規範禮儀、聖像、教產與神職紀律。莫斯科「第三羅馬」自我立法的代表文獻，後為一六六七年會議部分推翻。' },
+          { title_zh: '佈列斯特聯合條款', title_orig: 'Unio Brestensis', author: '基輔都主教區主教團', era: '1596', place: '佈列斯特', language: '教會斯拉夫文／拉丁文', intro: '基輔都主教區與羅馬共融、保留拜占庭禮儀的聯合條款。烏克蘭希臘禮天主教會的誕生文件，東西教會之間四百年張力的法律起點。' },
+          { title_zh: '盧卡里斯東方信仰宣認', title_orig: 'Confessio fidei (Cyrillus Lucaris)', author: '君士坦丁堡牧首昔利爾‧盧卡里斯', era: '1629', place: '日內瓦刊行', language: '拉丁文／希臘文', intro: '牧首盧卡里斯以近乎加爾文立場發表的信仰宣認，震動東西教界，身後屢遭會議譴責。正教與新教相遇最戲劇性的文本，改革思想入東方的孤峰見證。' },
+          { title_zh: '迪安珀會議法令', title_orig: 'Synod of Diamper (Udayamperoor)', author: '果阿總主教梅內塞斯主持', era: '1599', place: '印度烏達亞姆佩魯爾', language: '葡萄牙文／敘利亞文', intro: '葡萄牙教會強令印度聖多馬基督徒拉丁化、焚毀敘利亞禮書的會議法令。馬拉巴教會自主傳統的斷點，一六五三年「歪十字架誓言」反彈的遠因。' },
+          { title_zh: '黎巴嫩山會議法令', title_orig: 'Synodus Montis Libani', author: '馬龍派教會（阿西馬尼協理）', era: '1736', place: '黎巴嫩魯韋薩谷', language: '阿拉伯文／拉丁文', intro: '馬龍派全面整編禮儀教區與修會制度的大會議，東方學家阿西馬尼自羅馬回鄉協理。馬龍派近代體制的奠基法典，東方公教會自我改革的代表案例。' },
+          { title_zh: '克勞狄信仰確據', title_orig: 'Confessio Claudii', author: '衣索比亞皇帝格拉夫德沃斯（克勞狄）', era: '1555', place: '衣索比亞', language: '吉茲文', intro: '衣索比亞皇帝親筆回應耶穌會改宗壓力的信仰宣認，申明本國教會傳統的正統性。非洲君主的神學自辯書，衣索比亞教會面對歐洲的自主宣言。' }
+        
+        ]
+      },
+      {
+        key: 'xiuhui-huixian',
+        label: '修會會憲部',
+        label_en: 'Religious Order Constitutions',
+        desc: '近代新創與改革修會的會憲會規，天主教修道生活的制度文本。',
+        works: [
+          { title_zh: '耶穌會會憲', title_orig: 'Constitutiones Societatis Iesu', author: '依納爵‧羅耀拉', era: '1558（正式頒行）', place: '羅馬', language: '西班牙文／拉丁文', intro: '依納爵晚年親撰的耶穌會根本大法，取消詠經團、設長上集權與第四願服從教宗。近代最具效能的修會憲章，靈修與組織學結合的經典文本。' },
+          { title_zh: '耶穌會研究規程', title_orig: 'Ratio Studiorum', author: '耶穌會（阿誇維瓦總會長任內定版）', era: '1599', place: '羅馬', language: '拉丁文', intro: '耶穌會統一全球學院課程與教學法的研究規程，古典人文與士林哲學階梯井然。近代歐洲最大教育網絡的操作手冊，全球數百學院同步的課程憲法。' },
+          { title_zh: '加爾默羅赤足會憲', title_orig: 'Constituciones de las Carmelitas Descalzas', author: '亞維拉的德蘭', era: '1581（阿爾卡拉定版）', place: '亞維拉／阿爾卡拉', language: '西班牙文', intro: '大德蘭為改革後的赤足加爾默羅女修會親訂的會憲，靜默祈禱與貧窮團體生活成文。女性靈修家自立修會法度的里程碑，赤足改革運動的制度結晶。' },
+          { title_zh: '烏爾蘇拉會規', title_orig: 'Regola della Compagnia di Sant\'Orsola', author: '安琪拉‧梅里奇', era: '1535', place: '佈雷西亞', language: '義大利文', intro: '梅里奇為在俗女性團體撰寫的會規，成員留居家中而共守貞潔與服務。女性使徒生活的制度創新，後世烏爾蘇拉教育修會的規章源頭。' },
+          { title_zh: '慈善姊妹會會規', title_orig: 'Règles des Filles de la Charité', author: '文生‧德‧保祿與露薏絲‧德‧瑪利亞克', era: '1633 創會（會規 1655 定）', place: '巴黎', language: '法文', intro: '文生與露薏絲為服務貧病的姊妹團體共訂的會規，「以病人為主人」而不入隱院。女修會走出圍牆的制度突破，近代慈善護理體系的規章起點。' }
+        
+        ]
+      },
+      {
+        key: 'quanqiu-fagui',
+        label: '全球教會法規部',
+        label_en: 'Global Church Norms',
+        desc: '歐洲之外教省會議法令與新興教會章程，基督教全球化的法度見證。',
+        works: [
+          { title_zh: '太平天國天條書', title_orig: '天條書', author: '太平天國（洪秀全頒）', era: '1852', place: '永安／天京', language: '中文', intro: '太平天國頒行的宗教法規，十款天條改寫十誡並附讚美與悔罪儀文。基督教教規本土化最激烈的實驗文本，太平宗教體制的根本律法。' },
+          { title_zh: '塞蘭坡宣教盟約', title_orig: 'The Serampore Form of Agreement', author: '克理威廉、馬士曼與沃德', era: '1805', place: '印度塞蘭坡', language: '英文', intro: '塞蘭坡三傑共訂的宣教團體盟約，尊重印度文化、培養本地牧者與自養原則成文。近代宣教方法論的先知性文件，本色化與三自思想的百年先聲。' },
+          { title_zh: '非洲衛理聖公會紀律規程', title_orig: 'The Doctrines and Discipline of the African Methodist Episcopal Church', author: '理查‧艾倫等', era: '1817', place: '費城', language: '英文', intro: '獲釋奴隸艾倫創立非洲衛理聖公會後頒行的教義與紀律規程。黑人教會自立建制的第一部法典，種族壓迫下信仰自主的法律宣言。' },
+          { title_zh: '利馬第三屆教省會議法令', title_orig: 'Tercer Concilio Limense', author: '利馬總主教莫格羅維霍主持', era: '1582–1583', place: '利馬', language: '西班牙文／克丘亞文', intro: '聖圖裡比奧主持的利馬教省會議，法令並命以西班牙文、克丘亞文與艾馬拉文三語要理教導原住民。美洲教會立法的高峰，安地斯語言首批印刷品的催生者。' },
+          { title_zh: '墨西哥第三屆教省會議法令', title_orig: 'Tercer Concilio Provincial Mexicano', author: '墨西哥總主教孔特雷拉斯主持', era: '1585', place: '墨西哥城', language: '西班牙文／拉丁文', intro: '整合新西班牙教會法度的教省會議，原住民牧養與神職紀律並規。墨西哥教會三百年的根本法典，與利馬會議並列美洲雙柱。' },
+          { title_zh: '果阿第一屆教省會議法令', title_orig: 'Primeiro Concílio Provincial de Goa', author: '果阿總主教加斯帕主持', era: '1567', place: '果阿', language: '葡萄牙文／拉丁文', intro: '葡屬亞洲首次教省會議的法令，規範改宗程序並禁強迫受洗。保教權體制下亞洲教會立法的起點，殖民與宣教張力的法律切片。' },
+          { title_zh: '蘭柏四綱領', title_orig: 'The Lambeth Quadrilateral', author: '蘭柏會議（1888 決議）', era: '1888', place: '倫敦蘭柏宮', language: '英文', intro: '蘭柏會議定聖經、信經、二聖禮與歷史主教制四項為教會合一基礎的綱領。普世聖公宗自我定義的憲章，大公對話沿用至今的四邊座標。' },
+          { title_zh: '普魯士聯合教會敕令', title_orig: 'Unionsurkunde der Evangelischen Kirche in Preußen', author: '腓特烈‧威廉三世', era: '1817', place: '柏林', language: '德文', intro: '普魯士王敕令路德宗與改革宗合併為聯合福音教會，紀念宗教改革三百年。國家主導教會合併的代表案例，「老路德派」出走美澳的歷史推力。' }
+        
         ]
       }
     ]
