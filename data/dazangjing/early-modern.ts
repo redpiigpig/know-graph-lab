@@ -1515,10 +1515,11 @@ export const EARLY_MODERN_ERA: DazangEra = {
           { title_zh: '魯伊納特殉道者真行錄', title_orig: 'Acta primorum martyrum sincera et selecta', author: '提耶裡‧魯伊納特', era: '1689', place: '巴黎', language: '拉丁文', intro: '馬比雍高弟魯伊納特自浩繁聖傳中甄選文獻可信的原始殉道紀錄七十餘篇，剔除後世增飾。「真行錄」的批判標準沿用至今，古代殉道研究的第一手文獻選集。' },
           { title_zh: '東方文庫', title_orig: 'Bibliotheca Orientalis Clementino-Vaticana', author: '約瑟夫‧西門‧阿瑟曼尼', era: '1719–1728', place: '羅馬', language: '拉丁文／敘利亞文', intro: '馬龍派學者阿瑟曼尼整理梵蒂岡敘利亞抄本編成的東方教會文獻總覽，敘利亞正統與東方教會著作家首度系統呈現於西方。歐洲敘利亞學的奠基文庫，本藏東方諸條目的源頭書志。' },
           { title_zh: '不列顛教會會議集', title_orig: 'Concilia Magnae Britanniae et Hiberniae', author: '大衛‧威爾金斯', era: '1737', place: '倫敦', language: '拉丁文', intro: '威爾金斯輯英格蘭與愛爾蘭自古至宗教改革的教會會議文獻四巨冊，取代斯佩爾曼舊編。不列顛教會法制史的標準總集，十九世紀方由哈登-斯塔布斯部分修訂。' },
-          { title_zh: '尼西亞前後教父英譯文庫', title_orig: 'Ante-Nicene Fathers / Nicene and Post-Nicene Fathers', author: '羅伯茨、唐納森與沙夫、韋斯（主編）', era: '1867–1900', place: '愛丁堡／紐約', language: '英文', intro: '愛丁堡先行、沙夫續成的教父英譯三系三十八卷，把教父著作帶入英語牧者與平信徒書房。至今仍是公有領域教父英譯的通行本，本站教父翻譯工程的直接底本。' },
           { title_zh: '牛津教父文庫', title_orig: 'A Library of Fathers of the Holy Catholic Church', author: '普西、紐曼與基布爾（主編）', era: '1838–1885', place: '牛津', language: '英文', intro: '牛津運動三傑主持的教父英譯文庫四十八卷，以「回到未分裂教會」為志，紐曼譯亞他那修尤為名譯。安立甘公教復興的學術支柱，英語教父閱讀文化的開端。' },
           { title_zh: '法布里修斯偽典集', title_orig: 'Codex pseudepigraphus Veteris Testamenti / Codex apocryphus Novi Testamenti', author: '約翰‧阿爾伯特‧法布里修斯', era: '1703–1723', place: '漢堡', language: '拉丁文／希臘文', intro: '法布里修斯輯刊新舊約偽典文本的雙料文集，首度把散佚的次經偽典整編成可徵引的學術語料。典外文獻研究的奠基工程，本藏經藏外典諸條目的學史源頭。' },
-          { title_zh: '義大利史料集成', title_orig: 'Rerum Italicarum Scriptores', author: '洛多維科‧穆拉托里（主編）', era: '1723–1751', place: '米蘭', language: '拉丁文／義大利文', intro: '穆拉托里輯刊五百至一千五百年間義大利編年史與教會文獻的廿八巨冊集成，兼撰考辨序論。義大利史學的奠基工程，中世紀教會史料的南歐大庫，「穆拉托里殘篇」即其發現之一。' }
+          { title_zh: '義大利史料集成', title_orig: 'Rerum Italicarum Scriptores', author: '洛多維科‧穆拉托里（主編）', era: '1723–1751', place: '米蘭', language: '拉丁文／義大利文', intro: '穆拉托里輯刊五百至一千五百年間義大利編年史與教會文獻的廿八巨冊集成，兼撰考辨序論。義大利史學的奠基工程，中世紀教會史料的南歐大庫，「穆拉托里殘篇」即其發現之一。' },
+          { title_zh: '教會作家文獻史', title_orig: 'Scriptorum Ecclesiasticorum Historia Literaria', author: '威廉‧凱夫', era: '1688–1698', place: '倫敦', language: '拉丁文', intro: '凱夫按世紀編列歷代教會作家生平著作的文獻史巨著，逐位考訂真偽與版本。英國教父學術的代表工程，十八世紀學者案頭的教父書目總覽。' }
+        
         
         
         ]
