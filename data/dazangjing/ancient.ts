@@ -1548,6 +1548,15 @@ export const ANCIENT_ERA: DazangEra = {
               { title_zh: '靈史史詩', title_orig: 'De Spiritalis Historiae Gestis of Avitus', author: '維埃納的阿維圖斯', era: '6 世紀', place: '高盧（維埃納）', language: '拉丁文', intro: '高盧主教阿維圖斯所作的五卷拉丁聖經史詩，鋪敘創世、原罪、洪水、出埃及與紅海渡越，以維吉爾式詩藝重述救恩史，被視為米爾頓《失樂園》的遠祖，是古代晚期聖經史詩的高峰。', link: '/fathers' },
               { title_zh: '使徒行傳史詩', title_orig: 'De Actibus Apostolorum of Arator', author: '阿拉托爾', era: '6 世紀', place: '羅馬', language: '拉丁文', intro: '次執事阿拉托爾將《使徒行傳》改寫為兩卷拉丁詩，於羅馬聖伯多祿堂公開朗誦轟動一時，兼重敘事與寓意解經，是中世紀學校的標準讀本，示範了聖經史詩與釋經的結合。', link: '/fathers' },
               { title_zh: '科莫迪安訓誨詩', title_orig: 'Instructiones / Carmen Apologeticum of Commodian', author: '科莫迪安', era: '3–5 世紀', place: '北非？', language: '拉丁文', intro: '現存最早以通俗拉丁韻文寫成的基督教教誨詩集，以離合詩勸異教徒與猶太人歸主、責備信徒並描繪末世，語言質樸、格律不拘，是早期拉丁基督教民間詩歌的珍稀見證。', link: '/fathers' },
+          { title_zh: '創世記史詩（阿維圖斯）', title_orig: 'De spiritalis historiae gestis', author: '維埃納的阿維圖斯', era: '約 500', place: '高盧維埃納', language: '拉丁文', intro: '高盧主教阿維圖斯以五卷詩敷演創世、失樂園與出埃及的釋經史詩。彌爾頓《失樂園》的古代先聲，晚期高盧拉丁史詩的代表。' },
+          { title_zh: '福音書四卷', title_orig: 'Evangeliorum libri quattuor', author: '尤文庫斯', era: '約 330', place: '西班牙', language: '拉丁文', intro: '祭司尤文庫斯以維吉爾式六步格改寫四福音的史詩，君士坦丁時代的開山之作。首部拉丁聖經史詩，古典詩律承載福音的破冰嘗試。' },
+          { title_zh: '使徒行傳詩', title_orig: 'De actibus apostolorum (Arator)', author: '阿拉託爾', era: '544', place: '羅馬', language: '拉丁文', intro: '副祭阿拉託爾在羅馬聖伯多祿鎖鏈堂公開朗誦的使徒行傳史詩，寓意釋經層層鋪陳。六世紀羅馬詩壇的盛事，中世紀學校的常讀範本。' },
+          { title_zh: '論若望之殉', title_orig: 'Laudes Domini', author: '佚名（高盧詩人）', era: '約 320–330', place: '高盧奧頓', language: '拉丁文', intro: '記奧頓一椿墓中神蹟並頌君士坦丁的短史詩，或為現存最早的拉丁基督教敘事詩。君士坦丁時代地方詩藝的稀見樣本，拉丁基督教詩的濫觴之一。' },
+          { title_zh: '福音合參詩', title_orig: 'Heliand', author: '佚名（撒克遜詩人）', era: '約 830', place: '薩克森', language: '古撒克遜文', intro: '以日耳曼頭韻史詩體改寫福音、耶穌化身部族領主的古撒克遜長詩。福音本土化的驚人實驗，日耳曼世界基督教化的詩化里程碑。' },
+          { title_zh: '創世記（古英語詩）', title_orig: 'Genesis (Junius Manuscript)', author: '佚名（盎格魯撒克遜詩人）', era: '7–10 世紀', place: '英格蘭', language: '古英語', intro: '尤尼烏斯抄本所收古英語創世詩，敘天使墮落與人類始祖，插入譯自古撒克遜的「創世記乙篇」。英語聖經史詩的開端，撒旦形象的早期文學塑造。' },
+          { title_zh: '基督頌三部', title_orig: 'Christ (Cynewulf and the Exeter Book)', author: '辛紐武夫及佚名', era: '8–9 世紀', place: '英格蘭', language: '古英語', intro: '埃克塞特書所收詠基督降臨、昇天與末日的三聯古英語詩，「望星辰」一節啟迪託爾金。古英語基督教詩的抒情高峰，英倫詩藝與拉丁禮儀的交會。' },
+          { title_zh: '卡德蒙讚歌', title_orig: 'Cædmon\'s Hymn', author: '卡德蒙', era: '約 670', place: '諾森布里亞惠特比', language: '古英語', intro: '牧人卡德濛濛神啟即席詠出的創造頌，比德記其事而錄其詩。現存最早的古英語詩，英語基督教詩歌的傳說起點。' }
+        
             ],
           },
           {
@@ -1555,6 +1564,97 @@ export const ANCIENT_ERA: DazangEra = {
             works: [
               { title_zh: '黑馬牧人書', intro: '二世紀羅馬的基督教啟示與勸悔文學，藉牧人天使、貴婦與高塔異象及大量比喻，教導信徒悔改、守貞與行善。曾被部分早期教會（如西乃抄本）視為近正典，後列為教父推薦的「準正典」道德勸世之作；以希臘文寫成，是早期基督教寓言文學的代表。', title_orig: 'Shepherd of Hermas', author: '黑馬', era: '2 世紀', place: '羅馬', language: '希臘文', note: '曾被部分早期教會視為正典的道德勸世小說', link: '/apocrypha' },
               { title_zh: '巴拉姆與約沙法傳奇', intro: '八世紀傳為大馬士革的約翰所作、以希臘文寫成的傳奇小說，敘印度王子約沙法在隱士巴拉姆引導下歸信基督的歷程。其情節實源於釋迦牟尼生平的基督教化改寫，經中亞輾轉傳入。此作見證佛教故事跨宗教流轉並融入基督教聖徒傳統的奇特歷程，在比較宗教與中世紀傳奇文學研究上極富價值。', title_orig: 'Barlaam and Josaphat', author: '大馬士革的約翰（傳）', era: '8 世紀', place: '耶路撒冷', language: '希臘文', note: '釋迦牟尼生平基督教化的傳奇小說' },
+          { title_zh: '居普良的盛宴', title_orig: 'Cena Cypriani', author: '佚名（託名居普良）', era: '約 5 世紀', place: '北非／義大利', language: '拉丁文', intro: '讓聖經人物齊赴一場荒誕婚宴、各依經文取物就座的戲謔文本。中世紀「顛倒節」表演的腳本源頭，聖經記憶術與狂歡文學的奇特混血。' },
+          { title_zh: '亞歷山大與蛇國傳奇', title_orig: 'Alexander and the Brahmans (Christian recension)', author: '佚名（基督教改編）', era: '4–6 世紀', place: '埃及／敘利亞', language: '希臘文／敘利亞文', intro: '亞歷山大訪婆羅門裸行智者、辯論苦樂生死的傳奇之基督教改本，禁慾理想借異邦智者之口而出。跨文化勸世文學的東西中繼，隱修苦行論的異教包裝。' },
+          { title_zh: '七聖童傳奇', title_orig: 'Legend of the Seven Sleepers of Ephesus', author: '佚名（敘利亞教會）', era: '5–6 世紀', place: '以弗所／敘利亞', language: '敘利亞文／希臘文', intro: '七青年避教難匿洞沉睡兩百年、醒後見帝國已奉基督的傳奇，復活信仰的民間寓言。東西方共傳並入古蘭經的跨宗教故事，殉道與復活主題的通俗載體。' }
+        
+            ],
+          },
+          {
+            key: 'latin-doctrinal-verse', label: '拉丁教義與殉道詩部', label_en: 'Latin Doctrinal and Martyr Verse',
+            works: [
+          { title_zh: '殉道者冠冕', title_orig: 'Peristephanon', author: '普魯登修斯', era: '約 405', place: '西班牙', language: '拉丁文', intro: '普魯登修斯歌詠西班牙與羅馬殉道者的十四首讚詩，血染競技場的場景以華麗詩律再現。拉丁殉道詩的巔峰之作，聖人崇敬與古典詩藝交融的紀念碑。' },
+          { title_zh: '神格化', title_orig: 'Apotheosis', author: '普魯登修斯', era: '約 400', place: '西班牙', language: '拉丁文', intro: '普魯登修斯以詩體駁斥否認基督神性諸異端的教義長詩。以韻文為正統辯護的嘗試，拉丁教義詩的代表文本。' },
+          { title_zh: '罪源論', title_orig: 'Hamartigenia', author: '普魯登修斯', era: '約 400', place: '西班牙', language: '拉丁文', intro: '普魯登修斯探究罪惡起源、駁馬吉安二元論的教義詩。惡之問題的詩化神學，靈魂善惡交戰主題的先聲。' },
+          { title_zh: '駁敘馬庫斯', title_orig: 'Contra Symmachum', author: '普魯登修斯', era: '約 402', place: '西班牙', language: '拉丁文', intro: '普魯登修斯回應元老敘馬庫斯保留勝利女神祭壇之請的兩卷論戰詩。異教與基督教羅馬交替之際的詩壇檄文，古都信仰轉型的文學見證。' },
+          { title_zh: '雙約景圖', title_orig: 'Dittochaeon', author: '普魯登修斯', era: '約 400', place: '西班牙', language: '拉丁文', intro: '普魯登修斯為新舊約場景各題四行的圖說詩集，或為教堂壁畫的榜題。詩與畫相配的早期範例，基督教藝術與文學互證的珍稀文本。' },
+          { title_zh: '讚美天主', title_orig: 'De laudibus Dei', author: '德拉孔提烏斯', era: '約 490', place: '迦太基', language: '拉丁文', intro: '汪達爾治下的迦太基詩人德拉孔提烏斯繫獄中所作的護教長詩，歌詠創造與神的慈憫。北非拉丁詩最後的光焰，蠻族王國中的基督教詩藝見證。' },
+          { title_zh: '勸誡詩', title_orig: 'Commonitorium', author: '奧倫提烏斯', era: '約 430', place: '高盧', language: '拉丁文', intro: '高盧主教奧倫提烏斯勸人棄世向天的訓誨長詩，蠻族入侵陰影下的末世警語。五世紀高盧動盪的詩化寫照，勸世詩傳統的代表。' },
+          { title_zh: '維吉爾集句基督頌', title_orig: 'Cento vergilianus de laudibus Christi', author: '法爾託妮亞‧普洛芭', era: '約 360', place: '羅馬', language: '拉丁文', intro: '貴族女詩人普洛芭截取維吉爾詩句重組而成的基督生平頌歌。現存最早女性基督教詩人的完整作品，集句詩體與古典改寫的著名實驗。' },
+          { title_zh: '論復活', title_orig: 'Carmen de resurrectione mortuorum', author: '偽特土良（科莫狄安圈）', era: '3–4 世紀', place: '北非', language: '拉丁文', intro: '託名特土良的復活教義韻文，論末日肉身復活與審判。早期拉丁末世論詩的樣本，通俗韻律傳教的又一見證。' },
+          { title_zh: '論天意', title_orig: 'Carmen de providentia Dei', author: '佚名（普洛斯佩爾圈）', era: '約 416', place: '高盧', language: '拉丁文', intro: '哥特劫掠後高盧詩人為神的護理辯護的長詩，回應災難中的信仰動搖。奧古斯丁天意論的詩化回響，苦難神義論的五世紀表述。' },
+          { title_zh: '馬卡比詩', title_orig: 'De Machabaeis (Passio Machabaeorum)', author: '馬裡烏斯‧維克託利烏斯（傳）', era: '約 430', place: '高盧馬賽', language: '拉丁文', intro: '歌詠馬加比七子殉難的拉丁教義詩，舊約殉道典範的詩化重述。跨兩約殉道敘事的橋樑文本，早期拉丁聖經史詩的一支。' },
+          { title_zh: '創世論', title_orig: 'Alethia', author: '克勞狄烏斯‧馬裡烏斯‧維克託利烏斯', era: '約 425', place: '高盧馬賽', language: '拉丁文', intro: '維克託利烏斯敷演創世記首章至巴別塔的釋經史詩，題名意為「真理」。拉丁創世詩傳統的代表，五世紀高盧修辭教育的產物。' },
+          { title_zh: '帕斯卡爾與遺孀勸慰詩', title_orig: 'Ad uxorem (Carmen ad coniugem)', author: '普洛斯佩爾（傳）', era: '5 世紀', place: '高盧／羅馬', language: '拉丁文', intro: '詩人致妻勸其偕老守貞、同赴永生的哀婉短詩。晚期古代基督教婚姻靈修的詩化樣本，夫妻共修理想的溫柔表述。' },
+          { title_zh: '讚頌集', title_orig: 'Cathemerinon', author: '普魯登修斯', era: '約 405', place: '西班牙', language: '拉丁文', intro: '普魯登修斯按日課時辰與節期編寫的十二首讚詩，晨起就寢與聖誕主顯皆入詩。「伯利恆之上晨星升」等篇入拉丁禮儀傳唱千年，基督教抒情詩的奠基集。' },
+          { title_zh: '逾越詩集', title_orig: 'Carmen Paschale (Sedulius)', author: '塞杜利烏斯', era: '約 425–450', place: '義大利', language: '拉丁文', intro: '塞杜利烏斯以五卷詩敷演基督神蹟的福音史詩，附散文改寫《逾越之作》。中世紀學校誦讀的拉丁範本，「從東方旭日升起之地」聖詩即出其手。' },
+          { title_zh: '論殉道者頌詩', title_orig: 'Madrāšê on the Martyrs (Ephrem tradition)', author: '以法蓮傳統', era: '4–5 世紀', place: '埃德薩', language: '敘利亞文', intro: '敘利亞傳統詠讚波斯教難殉道者的詩組，帝國邊境教難的詩化紀念。東方殉道詩的代表，敘利亞教會集體記憶的頌歌。' },
+          { title_zh: '哀歌體殉難詩', title_orig: 'Carmen de martyrio Maccabaeorum (Hilarianus tradition)', author: '佚名（拉丁教會）', era: '4–5 世紀', place: '北非／義大利', language: '拉丁文', intro: '以哀歌格律詠馬加比母子殉難的拉丁詩，堅忍至死的舊約典範化為韻文。拉丁殉道詩的舊約一翼，兩約殉道連續體的詩化見證。' },
+          { title_zh: '聖梅達德頌', title_orig: 'Carmina (Venantius Fortunatus, misc.)', author: '維南提烏斯‧福爾圖納圖斯', era: '6 世紀', place: '高盧普瓦捷', language: '拉丁文', intro: '福爾圖納圖斯為主教、聖徒與貴族所作的頌詩、墓銘與應酬詩集。墨洛溫高盧宮廷與教會詩藝的縮影，中世紀拉丁抒情詩的過渡樞紐。' },
+          { title_zh: '君王旌旗前進', title_orig: 'Vexilla Regis prodeunt', author: '維南提烏斯‧福爾圖納圖斯', era: '569', place: '高盧普瓦捷', language: '拉丁文', intro: '福爾圖納圖斯為真十字架聖髑入普瓦捷所作的十字架進行讚詩，「君王旌旗前進」。拉丁受難禮儀詩的名篇，中世紀聖週傳唱的十字架頌。' },
+          { title_zh: '論鳳凰復生詩', title_orig: 'Carmen de ave phoenice (Christian reading)', author: '佚名（拉丁教會，託名拉克坦提烏斯）', era: '4 世紀', place: '北非／義大利', language: '拉丁文', intro: '以鳳凰浴火重生寓復活的拉丁詩，古典神話讀為基督教象徵。復活象徵詩的拉丁樣本，物性寓言與復活神學的詩化交會。' },
+          { title_zh: '論童女殉道詩（優拉利亞）', title_orig: 'Passio Eulaliae (Peristephanon III)', author: '普魯登修斯', era: '約 405', place: '西班牙', language: '拉丁文', intro: '普魯登修斯詠西班牙少女優拉利亞殉道的讚詩，稚齡就義而白雪覆屍。伊比利亞殉道詩的名篇，女性殉道敘事的詩化典範。' }
+        
+            ],
+          },
+          {
+            key: 'syriac-verse', label: '敘利亞詩教部', label_en: 'Syriac Verse Homilies',
+            works: [
+          { title_zh: '以法蓮駁異端詩', title_orig: 'Madrāšê against Heresies', author: '敘利亞的以法蓮', era: '4 世紀', place: '埃德薩', language: '敘利亞文', intro: '以法蓮駁斥巴代桑、馬吉安與摩尼的教義詩組，以合唱可歌的瑪達沙體對抗異端聖歌。「以詩戰詩」的正統動員，敘利亞婦女詩班傳唱正道的見證。' },
+          { title_zh: '論信德詩', title_orig: 'Madrāšê de Fide', author: '敘利亞的以法蓮', era: '4 世紀', place: '埃德薩', language: '敘利亞文', intro: '以法蓮詠讚聖子與聖父同尊的信德詩組，含著名的「珍珠」系列以珠喻道。尼西亞信仰的敘利亞詩化，東方教父詩神學的高峰。' },
+          { title_zh: '樂園頌', title_orig: 'Hymni de Paradiso', author: '敘利亞的以法蓮', era: '4 世紀', place: '埃德薩／尼西比斯', language: '敘利亞文', intro: '以法蓮以十五首詩描繪樂園的層階與聖徒歸宿，感官意象豐盈。敘利亞末世想像的詩化巔峰，但丁天堂圖景的遠親。' },
+          { title_zh: '論主降誕詩', title_orig: 'Hymni de Nativitate', author: '敘利亞的以法蓮', era: '4 世紀', place: '埃德薩', language: '敘利亞文', intro: '以法蓮詠嘆道成肉身奧秘的聖誕詩組，馬利亞獨白與悖論修辭交織。敘利亞聖誕禮儀的詩根，「至大者成至小」神學的詩表。' },
+          { title_zh: '教會頌', title_orig: 'Hymni de Ecclesia', author: '敘利亞的以法蓮', era: '4 世紀', place: '埃德薩', language: '敘利亞文', intro: '以法蓮以新婦、方舟與樂土等象喻詠讚教會的詩組。敘利亞教會論的詩化表述，象徵神學傳統的源頭文本。' },
+          { title_zh: '敘魯格的雅各詩教集', title_orig: 'Mêmrê (Jacob of Serugh)', author: '敘魯格的雅各', era: '約 500', place: '敘利亞巴特南', language: '敘利亞文', intro: '「聖靈之笛」雅各以十二音節詩體講道近八百篇，敷演聖經場景細膩如畫。敘利亞韻文講道的集大成者，與以法蓮並列的東方詩壇雙峰。' },
+          { title_zh: '納賽詩教集', title_orig: 'Mêmrê (Narsai)', author: '納賽', era: '5 世紀', place: '尼西比斯', language: '敘利亞文', intro: '東方教會學派宗師納賽的韻文講道集，釋經與禮儀詮解並重。東敘利亞（景教）傳統的詩教奠基，尼西比斯學派的文學遺產。' },
+          { title_zh: '巴萊詩集', title_orig: 'Madrāšê (Balai)', author: '巴萊', era: '5 世紀', place: '敘利亞阿勒坡一帶', language: '敘利亞文', intro: '敘利亞詩人巴萊的教義與紀念詩，五音節「巴萊格律」以其得名。敘利亞詩律史的一環，教堂落成與主教紀唸的禮儀詩樣本。' },
+          { title_zh: '基裡羅納詩集', title_orig: 'Mêmrê (Cyrillona)', author: '基裡羅納', era: '約 396', place: '敘利亞', language: '敘利亞文', intro: '敘利亞詩人基裡羅納詠嘆逾越、蝗災與匈人入侵的詩篇。時事入詩的敘利亞早例，以法蓮之後最富才情的東方詩人之一。' },
+          { title_zh: '論靈魂與肉身對話詩', title_orig: 'Sûgîtâ (Dialogue Soghyatha)', author: '佚名（敘利亞教會）', era: '5–6 世紀', place: '敘利亞', language: '敘利亞文', intro: '以問答對唱體演出聖經人物辯論的蘇吉塔詩，馬利亞與天使、亞伯與該隱皆成對手。敘利亞戲劇性禮儀詩的代表體裁，東方教會會眾參與詠唱的活文學。' },
+          { title_zh: '論尼西比斯詩集', title_orig: 'Carmina Nisibena', author: '敘利亞的以法蓮', era: '4 世紀', place: '尼西比斯', language: '敘利亞文', intro: '以法蓮詠家鄉尼西比斯圍城得救與論死亡陰間的詩組，史事與神學交織。敘利亞城市詩與末世詩的合璧，邊城信仰記憶的詩化檔案。' },
+          { title_zh: '論齋戒詩', title_orig: 'Hymni de Ieiunio', author: '敘利亞的以法蓮', era: '4 世紀', place: '埃德薩', language: '敘利亞文', intro: '以法蓮詠大齋期禁食悔改的詩組，身心操練與屬靈更新並勸。敘利亞苦修靈修的詩化教材，東方齋期禮儀詩的源頭之一。' },
+          { title_zh: '論童貞詩', title_orig: 'Hymni de Virginitate', author: '敘利亞的以法蓮', era: '4 世紀', place: '埃德薩', language: '敘利亞文', intro: '以法蓮詠讚守貞奉獻與屬靈婚約的詩組，象徵神學層層鋪展。敘利亞獨身靈修的詩化神學，「立約之子女」群體的頌歌。' },
+          { title_zh: '以撒的講道詩', title_orig: 'Mêmrê (Isaac of Antioch)', author: '安提阿的以撒', era: '5 世紀', place: '安提阿／埃德薩', language: '敘利亞文', intro: '敘利亞詩人以撒論鸚鵡詠三聖頌、論安提阿地震等時事講道詩。以法蓮與雅各之間承先啟後的詩教一環，敘利亞韻文講道的過渡樣本。' },
+          { title_zh: '斯泰利特的西面頌讚', title_orig: 'Mêmrâ on Simeon the Stylite', author: '敘魯格的雅各', era: '約 521', place: '敘利亞', language: '敘利亞文', intro: '雅各為柱頭苦修士西面所作的紀念講道詩，柱上苦行的驚世場景詩化再現。敘利亞聖徒詩傳的名篇，極端苦修理想的文學塑造。' },
+          { title_zh: '論戰車異象詩', title_orig: 'Mêmrâ on the Chariot (Ezekiel)', author: '敘魯格的雅各', era: '約 500', place: '敘利亞', language: '敘利亞文', intro: '雅各敷演以西結戰車異象的釋經詩，神秘默觀與教義釋經並冶。敘利亞奧秘釋經詩的代表，東方默觀傳統的文學窗口。' },
+          { title_zh: '論創世六日詩', title_orig: 'Mêmrê on the Hexaemeron (Narsai)', author: '納賽', era: '5 世紀', place: '尼西比斯', language: '敘利亞文', intro: '納賽敷演創世六日的釋經講道詩，安提阿字面釋經的東方詩表。東敘利亞創世神學的詩化，尼西比斯學派聖經教育的教材。' },
+          { title_zh: '樂園盜賊對話詩', title_orig: 'Soghitha on the Good Thief', author: '佚名（敘利亞教會）', era: '5–6 世紀', place: '敘利亞', language: '敘利亞文', intro: '以對唱體演出十字架上悔改盜賊與樂園守門天使論辯的蘇吉塔詩。敘利亞戲劇性禮儀詩的名篇，救恩白白賜予主題的詩化辯證。' },
+          { title_zh: '論約拿與尼尼微詩', title_orig: 'Mêmrâ on Jonah and the Ninevites', author: '敘魯格的雅各', era: '約 500', place: '敘利亞', language: '敘利亞文', intro: '雅各敷演約拿宣道、尼尼微舉城悔改的釋經詩，東敘利亞「尼尼微人齋」禮儀所本。悔改神學的詩化名篇，敘利亞齋期傳統的文學根據。' },
+          { title_zh: '論教會與貞女對話詩', title_orig: 'Soghitha on the Church and the Virgin', author: '佚名（敘利亞教會）', era: '5–6 世紀', place: '敘利亞', language: '敘利亞文', intro: '以對唱體演出教會與童貞馬利亞互述尊榮的蘇吉塔詩。敘利亞馬利亞論與教會論交織的詩化辯證，會眾對唱禮儀詩的又一名篇。' }
+        
+            ],
+          },
+          {
+            key: 'epigram-ekphrasis', label: '銘文與聖藝部', label_en: 'Epigrams and Sacred Art',
+            works: [
+          { title_zh: '達瑪穌殉道銘詩', title_orig: 'Epigrammata Damasiana', author: '教宗達瑪穌一世', era: '366–384', place: '羅馬', language: '拉丁文', intro: '教宗達瑪穌為羅馬地下墓穴殉道者所題、由書法家菲洛卡魯斯刻石的銘詩。詩、金石與聖徒崇敬三合一的工程，羅馬殉道地形學的詩化地圖。' },
+          { title_zh: '拿先斯的格列高利銘詩', title_orig: 'Epigrammata (Anthologia Graeca VIII)', author: '拿先斯的格列高利', era: '4 世紀', place: '卡帕多細亞', language: '希臘文', intro: '神學家格列高利悼亡與斥盜墓的銘體短詩逾兩百首，全數收入《希臘詩選》第八卷。基督教銘詩傳統的希臘高峰，古典詩體承載信仰情感的範例。' },
+          { title_zh: '聖費利克斯生日頌', title_orig: 'Natalicia (Carmina Natalicia)', author: '諾拉的保利努斯', era: '約 395–407', place: '諾拉', language: '拉丁文', intro: '保利努斯每年於主保聖費利克斯瞻禮日所作的頌詩，兼描其新建教堂的壁畫與佈局。聖所贊助與藝術描寫的第一手詩證，早期基督教建築的文學快照。' },
+          { title_zh: '聖保羅堂鑲嵌題詩', title_orig: 'Tituli (church tituli)', author: '諾拉的保利努斯／普魯登修斯等', era: '4–5 世紀', place: '羅馬／諾拉', language: '拉丁文', intro: '為教堂鑲嵌畫與聖經場景配寫的榜題詩集，指引信眾解讀壁上圖像。圖文並行的敬拜設計，早期教堂視覺神學的語言註腳。' },
+          { title_zh: '圖形詩集', title_orig: 'Carmina figurata', author: '奧普塔提亞努斯‧波菲利烏斯', era: '約 325', place: '羅馬', language: '拉丁文', intro: '波菲利烏斯獻給君士坦丁、以字母排出十字與圖案的視覺詩，藏頭嵌字暗藏頌詞。君士坦丁時代宮廷詩藝的奇觀，具象詩傳統的古代源頭。' },
+          { title_zh: '聖索菲亞大教堂讚', title_orig: 'Descriptio Sanctae Sophiae', author: '沉默者保羅', era: '約 563', place: '君士坦丁堡', language: '希臘文', intro: '宮廷詩人保羅在重建圓頂落成典禮上朗誦的六步格長詩，逐一描繪聖索菲亞的光影穹頂與大理石。拜占庭藝格描寫詩的頂峰，失落內景的文字重建。' },
+          { title_zh: '加薩教堂藝格描寫', title_orig: 'Ekphraseis (Choricius of Gaza)', author: '加薩的科裡基烏斯', era: '6 世紀', place: '巴勒斯坦加薩', language: '希臘文', intro: '加薩修辭學派的科裡基烏斯詳描聖色爾吉與聖司提反兩教堂鑲嵌畫的講辭。已毀教堂圖像計畫的唯一見證，藝格描寫作為藝術史料的典型。' },
+          { title_zh: '美索不達米亞教堂讚歌', title_orig: 'Sûgîtâ on the Cathedral of Edessa', author: '佚名（埃德薩教會）', era: '6 世紀', place: '埃德薩', language: '敘利亞文', intro: '詠讚埃德薩主教座堂、以其穹頂比擬宇宙與聖索菲亞的敘利亞詩。東方藝格描寫的珍稀樣本，敘利亞建築象徵神學的文學結晶。' },
+          { title_zh: '魯特威爾十字架銘詩', title_orig: 'The Dream of the Rood (Ruthwell Cross)', author: '佚名（盎格魯撒克遜詩人）', era: '7–8 世紀', place: '諾森布里亞', language: '古英語（盧恩文銘刻）', intro: '以十字架自述受難的古英語異象詩，殘句以盧恩字母刻於魯特威爾石十字架。詩、石雕與銘文三合一的傑作，英語基督教詩與物質文化的交會巔峰。' }
+        
+            ],
+          },
+          {
+            key: 'greek-hymnody', label: '希臘讚歌與禮儀詩部', label_en: 'Greek Hymnody and Liturgical Poetry',
+            works: [
+          { title_zh: '救主基督頌', title_orig: 'Hymnus Christi Salvatoris (Paidagogos III)', author: '亞歷山卓的克萊門', era: '約 200', place: '亞歷山卓', language: '希臘文', intro: '克萊門《導師》卷末的基督頌，以「未馴之駒的韁繩」等意象呼求牧養眾靈的基督。現存署名最早的希臘基督教讚詩，教父詩藝的開篇之作。' },
+          { title_zh: '歡欣之光', title_orig: 'Phos Hilaron', author: '佚名（早期希臘教會）', era: '3 世紀', place: '希臘東方', language: '希臘文', intro: '黃昏點燈時詠唱的古頌，讚三一之光「歡欣聖光」。現存仍在使用的最古基督教讚詩之一，東正教晚禱的核心詩章。' },
+          { title_zh: '童貞女之宴讚歌', title_orig: 'Hymn of the Virgins (Symposium)', author: '奧林匹斯的美多丟', era: '約 290', place: '小亞細亞', language: '希臘文', intro: '美多丟《宴飲篇》壓卷、以字母藏頭詠貞潔的合唱讚歌。仿柏拉圖對話而綴以基督教詩章的巧構，希臘詩體讚歌的早期典範。' },
+          { title_zh: '奧克西林庫斯讚美詩', title_orig: 'Oxyrhynchus Hymn (P.Oxy. 1786)', author: '佚名（埃及教會）', era: '3 世紀末', place: '埃及奧克西林庫斯', language: '希臘文', intro: '蒲草紙殘片上附古希臘樂譜的三一頌讚，令諸星諸水同聲和唱。現存最早帶樂譜的基督教讚詩，早期教會音樂的唯一實聲遺存。' },
+          { title_zh: '辛尼修讚詩集', title_orig: 'Hymni (Synesius)', author: '昔蘭尼的辛尼修', era: '約 405', place: '昔蘭尼', language: '希臘文', intro: '哲人主教辛尼修融新柏拉圖思辨於基督頌讚的九首詩，多利安古方言寫成。哲學與信仰交響的希臘讚詩，晚期古代智性靈修的詩化。' },
+          { title_zh: '羅曼諾斯孔塔基昂集', title_orig: 'Kontakia (Romanos the Melodist)', author: '歌詠者羅曼諾斯', era: '6 世紀', place: '君士坦丁堡', language: '希臘文', intro: '羅曼諾斯以疊句合唱的孔塔基昂敷演聖經場景近六十首，戲劇性對白扣人心絃。拜占庭聖詩的莎士比亞，希臘禮儀詩的黃金頂點。' },
+          { title_zh: '至尊聖母護城頌', title_orig: 'Akathistos Prooimion (Tē Hypermachō)', author: '佚名（君士坦丁堡教會）', era: '7 世紀', place: '君士坦丁堡', language: '希臘文', intro: '六二六年君城解圍後為謝聖母而加的阿卡菲斯托斯序頌「常勝的統帥」。城市得救與聖母庇護交織的禮儀記憶，拜占庭馬利亞敬禮的詩核。' },
+          { title_zh: '塞維魯讚歌集', title_orig: 'Hymns of Severus of Antioch', author: '安提阿的塞維魯', era: '6 世紀', place: '安提阿', language: '希臘文（敘利亞文存世）', intro: '一性論領袖塞維魯所編的節期讚歌集，希臘原文佚而敘利亞譯本全存。敘利亞正教禮儀詩的骨幹，跨語言傳承保全的教父詩集。' },
+          { title_zh: '科斯馬斯聖頌集', title_orig: 'Kanones (Cosmas of Maiuma)', author: '瑪尤瑪的科斯馬斯', era: '8 世紀', place: '耶路撒冷／瑪尤瑪', language: '希臘文', intro: '大馬士革約翰義兄科斯馬斯所制的節期聖頌典（卡農），聖誕主顯詩章傳唱至今。拜占庭卡農體的共同奠基者，東方禮儀年的詩律骨架。' },
+          { title_zh: '羅馬讚美詩體集', title_orig: 'Hymni (Ambrosian corpus)', author: '米蘭的安波羅修及安波羅修體傳統', era: '4 世紀起', place: '米蘭', language: '拉丁文', intro: '安波羅修創制的四音步八行讚詩體及其後繼作品群，會眾分部對唱以抗異端。拉丁禮儀讚詩的母體，西方教會集體歌唱傳統的源頭。' },
+          { title_zh: '論光明頌', title_orig: 'Hymnus de Luce (Prudentius tradition)', author: '普魯登修斯傳統', era: '4–5 世紀', place: '西班牙／義大利', language: '拉丁文', intro: '詠基督為真光、破暗迎晨的拉丁晨禱讚詩，取自讚頌集傳統而入日課。拉丁光明神學的禮儀詩表，晨禱傳統的詩化核心。' },
+          { title_zh: '造物之聖神', title_orig: 'Veni Creator Spiritus', author: '傳茅斯的拉巴努斯前身傳統', era: '約 8 世紀', place: '法蘭克', language: '拉丁文', intro: '呼求聖神降臨的拉丁讚詩「造物之聖神請降臨」，五旬節與按立禮傳唱。西方聖神論禮儀詩的核心，加洛林讚詩傳統的名篇。' },
+          { title_zh: '聖體頌歌（早期）', title_orig: 'Sancti venite (Antiphonary of Bangor)', author: '佚名（愛爾蘭教會）', era: '7 世紀', place: '愛爾蘭班戈', language: '拉丁文', intro: '班戈對唱集所收的領聖體讚詩「聖者請前來」，凱爾特禮儀的珍稀遺存。現存最早的領聖體專用讚詩之一，島嶼教會禮儀詩的代表。' }
+        
             ],
           },
         ],
