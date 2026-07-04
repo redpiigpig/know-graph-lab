@@ -1311,6 +1311,12 @@ export const ANCIENT_ERA: DazangEra = {
               { title_zh: '書信集', intro: '希波主教奧古斯丁約於五世紀所寫的書信集，以拉丁文寫於希波。內容廣涉神學辯論、教會紀律、駁斥多納徒派與伯拉糾派、牧養關懷及個人友誼，思想深邃且文采斐然。是研究五世紀北非教會、奧古斯丁神學發展與晚期羅馬社會最豐富的一手檔案之一。', title_orig: 'Letters of St. Augustine', author: '希波的奧古斯丁', era: '約 5 世紀', place: '希波', language: '拉丁文', link: '/fathers' },
               { title_zh: '書信集（流放家書）', intro: '君士坦丁堡主教金口若望於約五世紀遭放逐期間所寫的書信，以希臘文寫於君士坦丁堡與流放地。寫給女執事奧林匹亞及眾多友人，於困苦中仍堅信神的護佑、勸慰失意者。是研究五世紀教會政爭與基督徒在苦難中持守盼望的動人見證。', title_orig: 'Letters of St. Chrysostom (to Olympias and others, from exile)', author: '金口若望', era: '約 5 世紀', place: '君士坦丁堡', language: '希臘文', link: '/fathers' },
               { title_zh: '論聖靈致塞拉皮翁書', intro: '亞歷山卓主教亞他那修約於四世紀致圖伊斯主教塞拉皮翁的書信，以希臘文寫於亞歷山卓。針對否認聖靈神性的「敵聖靈派」，系統論證聖靈與聖父聖子同質同尊，是三一神學中聖靈論的奠基文獻。為日後君士坦丁堡會議確立聖靈神性鋪路，神學意義重大。', title_orig: 'Letters to Serapion on the Holy Spirit', author: '亞他那修', era: '約 4 世紀', place: '亞歷山卓', language: '希臘文', link: '/fathers' },
+          { title_zh: '金口若望致奧林匹雅書', title_orig: 'Letters to Olympias', author: '金口若望', era: '404–407', place: '流放地庫庫索斯', language: '希臘文', intro: '金口若望流放中致女執事奧林匹雅、勸其於逼迫中不失喜樂的十七封書信。「無人能傷害不自傷者」名論出此，逆境靈修與女性事奉的溫暖尺牘。' },
+          { title_zh: '神秘者狄奧尼修書信集', title_orig: 'The Ten Letters of Pseudo-Dionysius', author: '託名亞略巴古的狄奧尼修', era: '約 500', place: '敘利亞', language: '希臘文', intro: '《神秘神學》作者附於文集的十封書信，論神聖幽暗與位階奧義。中世紀神秘主義的源頭尺牘，否定神學傳統的書信結晶。' },
+          { title_zh: '大馬士革的約翰致論聖像書', title_orig: 'Three Treatises on the Divine Images', author: '大馬士革的約翰', era: '約 730', place: '巴勒斯坦聖薩巴修道院', language: '希臘文', intro: '大馬士革的約翰駁毀像令、以道成肉身為聖像辯護的三篇論書。破壞聖像之爭中護像派的神學支柱，第二次尼西亞會議所本的尺牘。' },
+          { title_zh: '帕拉狄烏斯致勞蘇書', title_orig: 'The Lausiac History (dedicatory epistle)', author: '赫勒諾波利的帕拉狄烏斯', era: '約 419', place: '小亞細亞', language: '希臘文', intro: '帕拉狄烏斯致宮廷大臣勞蘇、輯錄埃及隱修士言行的《勞西亞史》獻書。沙漠隱修見聞的第一手彙編，早期修道史的珍貴尺牘框架。' },
+          { title_zh: '迦太基的德爾都良致殉道者書', title_orig: 'Ad Martyras', author: '德爾都良', era: '約 197', place: '迦太基', language: '拉丁文', intro: '德爾都良致獄中待決殉道者、勉其堅忍的短書。拉丁基督教最早的獄中牧函之一，北非殉道精神的激勵尺牘。' }
+        
             ],
           },
           {
@@ -1323,6 +1329,94 @@ export const ANCIENT_ERA: DazangEra = {
               { title_zh: '致德米特里亞書', intro: '迦太基主教居普良約於252年致外教人德米特里亞的論辯書信，以拉丁文寫於迦太基。回應對方將天災瘟疫歸咎於基督徒不拜諸神的指控，反指世界衰敗源於人類罪惡與偶像崇拜，並勸其悔改歸主。是三世紀基督徒回應外教輿論攻擊的重要護教文獻。', title_orig: 'Treatise to Demetrian', author: '居普良', era: '約252年', place: '迦太基', language: '拉丁文', link: '/fathers' },
               { title_zh: '大良書信集', intro: '羅馬主教大良一世約於五世紀所寫的書信集，以拉丁文寫於羅馬。內容涵蓋基督論辯護（含《大良之卷》）、教會紀律、羅馬首席權的主張及對各地教會的牧養指導。展現五世紀羅馬主教權威的鞏固與西方教會領導地位的確立，是教宗制度發展史的關鍵材料。', title_orig: 'The Letters of Leo the Great', author: '大良', era: '約 5 世紀', place: '羅馬', language: '拉丁文', link: '/fathers' },
               { title_zh: '大額我略書信集', intro: '教宗大額我略一世約於六世紀所寫的書信集（《書信錄》），以拉丁文寫於羅馬。逾八百封，涉及教產管理、傳教差派、政教斡旋與牧養訓誨，事無鉅細。自稱「眾僕之僕」，展現謙卑而務實的治理風格，是研究六世紀末教廷行政與中世紀教會奠基的第一手寶庫。', title_orig: 'The Letters of Gregory the Great (Registrum Epistolarum)', author: '大額我略', era: '約 6 世紀', place: '羅馬', language: '拉丁文', link: '/fathers' },
+            ],
+          },
+          {
+            key: 'early-episcopal-letters', label: '早期主教與教宗書函部', label_en: 'Early Episcopal and Papal Letters',
+            works: [
+          { title_zh: '哥林多的狄奧尼修書信', title_orig: 'Letters of Dionysius of Corinth', author: '哥林多的狄奧尼修', era: '約 170', place: '哥林多', language: '希臘文', intro: '哥林多主教狄奧尼修致各地教會的七封大公書信，尤瑟比留《教會史》引存殘句。二世紀主教通信網絡的珍稀見證，早期教會相互扶持的第一手側影。' },
+          { title_zh: '羅馬的哥爾乃略書信', title_orig: 'Letters of Cornelius of Rome', author: '羅馬主教哥爾乃略', era: '251–253', place: '羅馬', language: '拉丁文／希臘文', intro: '羅馬主教哥爾乃略論諾窪天分裂與失足者復和的書信，與居普良往還。三世紀羅馬教會實況的直接文獻，教會紀律之爭的關鍵一手材料。' },
+          { title_zh: '凱撒利亞的菲爾米利安書信', title_orig: 'Epistle of Firmilian to Cyprian', author: '凱撒利亞的菲爾米利安', era: '256', place: '卡帕多細亞凱撒利亞', language: '希臘文（拉丁譯存）', intro: '卡帕多細亞主教菲爾米利安支持居普良、駁羅馬斯德望重洗立場的長信。東方教會介入異端洗禮之爭的宣言，三世紀跨區教義論戰的名篇。' },
+          { title_zh: '西里修教令書信', title_orig: 'Decretales Siricii', author: '教宗西里修', era: '385', place: '羅馬', language: '拉丁文', intro: '教宗西里修致西班牙主教希馬裡烏的訓令書信，現存最早具法律效力的教宗教令。教宗教令傳統的起點文件，羅馬主教立法權的第一聲。' },
+          { title_zh: '依諾森一世書信集', title_orig: 'Epistolae Innocentii I', author: '教宗依諾森一世', era: '401–417', place: '羅馬', language: '拉丁文', intro: '教宗依諾森一世論教會紀律與伯拉糾爭議的書信，奧古斯丁「羅馬已言，案遂結」典出於此。五世紀初羅馬首席權主張的展現，恩寵之爭的教廷文件。' },
+          { title_zh: '策肋定一世致東方書信', title_orig: 'Epistolae Caelestini I', author: '教宗策肋定一世', era: '430–431', place: '羅馬', language: '拉丁文', intro: '教宗策肋定一世授權濟利祿處置聶斯脫留的書信，兼命奧古斯丁弟子巴拉狄反伯拉糾。以弗所會議的羅馬授權文件，教宗與東方教會協同的樣本。' },
+          { title_zh: '何弭達信條書函', title_orig: 'Formula Hormisdae', author: '教宗何弭達', era: '519', place: '羅馬', language: '拉丁文', intro: '教宗何弭達要求東方主教簽署、申明羅馬永守正信的信仰公式書。結束阿卡西烏分裂、重建東西共融的文件，教宗無誤論日後所引的先例。' },
+          { title_zh: '教宗瑪爾定一世流放書信', title_orig: 'Epistolae Martini I', author: '教宗瑪爾定一世', era: '649–655', place: '羅馬／克里米亞流放地', language: '拉丁文', intro: '教宗瑪爾定一世因拒基督一志論、遭皇帝擄至克里米亞流放途中所寫的書信。為信仰受苦的教宗絕筆，一志論爭議中西方立場的殉道見證。' },
+          { title_zh: '阿加託致君士坦丁堡書函', title_orig: 'Epistola Agathonis ad Constantinum', author: '教宗阿加託', era: '680', place: '羅馬', language: '拉丁文', intro: '教宗阿加託致第三次君士坦丁堡大公會議、申明基督兩志兩性的長函。第六次大公會議正統定調的羅馬文件，兩志論的權威表述。' },
+          { title_zh: '教宗額我略二世致利奧書信', title_orig: 'Epistolae Gregorii II ad Leonem', author: '教宗額我略二世', era: '726–730', place: '羅馬', language: '拉丁文', intro: '教宗額我略二世抗議皇帝利奧三世毀像令、為聖像辯護的書信。破壞聖像之爭中西方立場的開篇，東西教會漸行漸遠的預兆文件。' },
+          { title_zh: '亞歷山卓的狄奧尼修牧養書信', title_orig: 'Pastoral Letters of Dionysius of Alexandria', author: '亞歷山卓的狄奧尼修', era: '約 248–265', place: '亞歷山卓', language: '希臘文', intro: '亞歷山卓主教狄奧尼修在瘟疫與教難中的牧養書信，記信徒捨身照護病患。三世紀城市教難與慈惠的動人記述，早期基督徒面對瘟疫的第一手見證。' },
+          { title_zh: '馬克西母致塔拉修書函', title_orig: 'Letters of Maximus the Confessor', author: '宣信者馬克西母', era: '約 630–655', place: '迦太基／君士坦丁堡', language: '希臘文', intro: '宣信者馬克西母論愛德、基督兩志與教會合一的書信集。拜占庭神學高峰期的思想通信，一志論爭議中正統陣營的智性核心。' },
+          { title_zh: '亞歷山卓的濟利祿復活節書函', title_orig: 'Festal Letters of Cyril of Alexandria', author: '亞歷山卓的濟利祿', era: '約 414–442', place: '亞歷山卓', language: '希臘文', intro: '濟利祿逐年宣告齋期與復活節、兼論教義的節期書函。亞歷山卓主教年度通諭傳統的延續，五世紀教會生活與神學的一手記錄。' },
+          { title_zh: '亞他那修節期書函', title_orig: 'Festal Letters of Athanasius', author: '亞歷山卓的亞他那修', era: '329–373', place: '亞歷山卓', language: '希臘文（敘利亞、科普特譯存）', intro: '亞他那修逐年頒發的復活節書函，第三十九封首列廿七卷新約正典目錄。新約正典史的里程碑文件，亞歷山卓年度通諭的最著名一環。' },
+          { title_zh: '塞維魯書信集', title_orig: 'Letters of Severus of Antioch', author: '安提阿的塞維魯', era: '約 512–538', place: '安提阿／埃及流放', language: '希臘文（敘利亞譯存）', intro: '一性論領袖塞維魯論教義與教政的大量書信，希臘原文多佚而敘利亞譯本存。非迦克墩派神學的核心文獻，敘利亞正教傳統的奠基尺牘。' },
+          { title_zh: '傑拉修書信與論著', title_orig: 'Letters and Tractates of Gelasius I', author: '教宗傑拉修一世', era: '492–496', place: '羅馬', language: '拉丁文', intro: '教宗傑拉修一世致皇帝阿納斯塔修、闡明「兩權」分立的書信與論著。中世紀政教二元論的奠基文獻，教權高於君權主張的經典尺牘。' },
+          { title_zh: '維吉利烏斯裁決書函', title_orig: 'Letters of Pope Vigilius (Constitutum)', author: '教宗維吉利烏斯', era: '548–554', place: '君士坦丁堡', language: '拉丁文', intro: '教宗維吉利烏斯在三章案中反覆搖擺、與查士丁尼周旋的書信與裁決書。教宗受制於皇權的難堪見證，第二次君士坦丁堡會議前後的政教文獻。' },
+          { title_zh: '利比裡烏斯與費利克斯書信', title_orig: 'Letters of Liberius', author: '教宗利比裡烏斯', era: '352–366', place: '羅馬', language: '拉丁文', intro: '教宗利比裡烏斯在亞流爭議中致同僚、記其流放與妥協的書信。四世紀羅馬教會在信仰壓力下的實況，教宗軟弱一頁的爭議文獻。' }
+        
+            ],
+          },
+          {
+            key: 'eastern-monastic-letters', label: '東方隱修與敘利亞書函部', label_en: 'Eastern Monastic and Syriac Letters',
+            works: [
+          { title_zh: '安東尼七書', title_orig: 'Seven Letters of St. Antony', author: '大安東尼', era: '4 世紀', place: '埃及', language: '科普特文（希臘、敘利亞、拉丁譯存）', intro: '沙漠隱修之父安東尼致眾修院的七封書信，論自知、悔改與屬靈長進。沙漠靈修最古的第一手文本，隱修神學的源頭尺牘。' },
+          { title_zh: '阿摩那斯書信', title_orig: 'Letters of Ammonas', author: '阿摩那斯', era: '4 世紀', place: '埃及', language: '希臘文／敘利亞文', intro: '安東尼繼承者阿摩那斯論靜默與聖靈能力的書信。沙漠師徒傳承的珍貴環節，早期隱修屬靈指導的尺牘樣本。' },
+          { title_zh: '帕科繆書信', title_orig: 'Letters of Pachomius', author: '帕科繆', era: '4 世紀', place: '埃及塔本尼西', language: '科普特文（耶柔米拉丁譯存）', intro: '共修制創立者帕科繆致院長的書信，部分以密碼字母寫成。集體隱修制度的創始文獻，共住修道管理的第一手尺牘。' },
+          { title_zh: '佩魯西烏的伊西多爾書信集', title_orig: 'Letters of Isidore of Pelusium', author: '佩魯西烏的伊西多爾', era: '5 世紀', place: '埃及佩魯西烏', language: '希臘文', intro: '隱修士伊西多爾論釋經與德行的書信近兩千封傳世。晚期古代篇幅最巨的書信集之一，安提阿釋經與埃及靈修交會的寶庫。' },
+          { title_zh: '安基拉的尼祿書信集', title_orig: 'Letters of Nilus of Ancyra', author: '安基拉的尼祿', era: '5 世紀', place: '小亞細亞安基拉', language: '希臘文', intro: '隱修神學家尼祿論修道生活與屬靈爭戰的大量書信。金口若望門下的靈修導師，拜占庭隱修尺牘傳統的代表。' },
+          { title_zh: '阿弗拉哈特論證集', title_orig: 'Demonstrations of Aphrahat', author: '波斯智者阿弗拉哈特', era: '337–345', place: '波斯', language: '敘利亞文', intro: '「波斯智者」阿弗拉哈特以書信體撰成的二十三篇論證集，論信德、齋戒、立約之子與猶太爭辯。未染希臘哲學的閃族基督教最古文獻，東方教會神學的源頭。' },
+          { title_zh: '尼尼微的以撒靈修書函', title_orig: 'Ascetical Homilies and Letters of Isaac of Nineveh', author: '尼尼微的以撒', era: '7 世紀', place: '波斯／尼尼微', language: '敘利亞文', intro: '東方教會隱修主教以撒論靜觀、痛悔與神聖之愛的靈修書函，後為希臘正教廣譯珍藏。跨教派共尊的東方靈修大師，默觀傳統的深湛尺牘。' },
+          { title_zh: '埃德薩的拉布拉書信', title_orig: 'Letters of Rabbula of Edessa', author: '埃德薩的拉布拉', era: '5 世紀', place: '埃德薩', language: '敘利亞文', intro: '埃德薩主教拉布拉整頓教區、論教規與異端的書信。五世紀敘利亞教會治理的一手文獻，安提阿與亞歷山卓神學拉鋸的側影。' },
+          { title_zh: '貝薩書信集', title_orig: 'Letters of Besa', author: '白修道院院長貝薩', era: '5 世紀', place: '上埃及阿特里佩', language: '科普特文', intro: '舍努特繼承者貝薩訓誡修士修女的書信集，語峻情切。沙希地科普特散文的代表，埃及本土隱修團體內部生活的直接記錄。' },
+          { title_zh: '舍努特書函與訓誡', title_orig: 'Letters and Canons of Shenoute', author: '阿特里佩的舍努特', era: '約 385–465', place: '上埃及白修道院', language: '科普特文', intro: '白修道院大院長舍努特治院、斥異教與護貧的書函訓誡。科普特文學的巔峰人物，埃及本土基督教最有力的聲音。' },
+          { title_zh: '迦薩的巴撒努菲與約翰答問補篇', title_orig: 'Further Correspondence of Barsanuphius and John', author: '迦薩的巴撒努菲與先知約翰', era: '6 世紀', place: '巴勒斯坦迦薩', language: '希臘文', intro: '兩位隱居長老以書面答覆修士與俗人疑難的問答書逾八百則。晚期古代靈修指導的活檔案，隱士與世界以尺牘相通的獨特文獻。' },
+          { title_zh: '以法蓮書信與遺訓', title_orig: 'Letters and Testament of Ephrem', author: '敘利亞的以法蓮', era: '4 世紀', place: '埃德薩', language: '敘利亞文', intro: '敘利亞教父以法蓮致友人的書信與臨終遺訓，樸實中見謙卑。敘利亞散文尺牘的早期樣本，詩人教父的另一面貌。' },
+          { title_zh: '敘利亞的腓羅克塞努斯書信', title_orig: 'Letters of Philoxenus of Mabbug', author: '馬布格的腓羅克塞努斯', era: '約 485–518', place: '敘利亞馬布格', language: '敘利亞文', intro: '一性論主教腓羅克塞努斯論靈修生活與基督論的書信。敘利亞散文的典範作者，非迦克墩派靈修與教義並重的尺牘。' }
+        
+            ],
+          },
+          {
+            key: 'latin-epistolary', label: '拉丁書信文學部', label_en: 'Latin Epistolary Literature',
+            works: [
+          { title_zh: '諾拉的保利努斯書信集', title_orig: 'Epistulae Paulini Nolani', author: '諾拉的保利努斯', era: '約 394–410', place: '諾拉', language: '拉丁文', intro: '棄世歸隱的貴族主教保利努斯致奧古斯丁、耶柔米與蘇爾皮基烏的書信，友情與神學交織。晚期古代基督教友誼網絡的溫暖見證，拉丁書信文學的雅緻樣本。' },
+          { title_zh: '西多尼烏斯書信集', title_orig: 'Epistulae Sidonii Apollinaris', author: '西多尼烏斯‧阿波利納里斯', era: '約 470–480', place: '高盧克萊蒙', language: '拉丁文', intro: '高盧貴族主教西多尼烏斯描繪蠻族入主前後高盧世態的九卷書信。羅馬秩序瓦解之際的第一手側寫，晚期拉丁書信藝術的集大成。' },
+          { title_zh: '魯裡基烏斯書信集', title_orig: 'Epistulae Ruricii', author: '利摩日的魯裡基烏斯', era: '約 480–507', place: '高盧利摩日', language: '拉丁文', intro: '高盧主教魯裡基烏斯致親友同僚的書信集，文雅酬酢間見教會日常。西哥德治下高盧教會生活的縮影，貴族書信文化的延續。' },
+          { title_zh: '維埃納的阿維圖斯書信集', title_orig: 'Epistulae Aviti Viennensis', author: '維埃納的阿維圖斯', era: '約 500–518', place: '高盧維埃納', language: '拉丁文', intro: '高盧主教阿維圖斯致勃艮第王與各地主教、勸勉歸正正統的書信。蠻族王國基督教化的外交尺牘，亞流派轉正統的關鍵見證。' },
+          { title_zh: '恩諾狄烏斯書信集', title_orig: 'Epistulae Ennodii', author: '帕維亞的恩諾狄烏斯', era: '約 503–521', place: '義大利帕維亞', language: '拉丁文', intro: '帕維亞主教恩諾狄烏斯的書信與頌辭，東哥德治下義大利的文教實況。晚期古代修辭文化的存續樣本，教會與蠻族宮廷交涉的文獻。' },
+          { title_zh: '魯斯佩的富爾根提烏斯書信集', title_orig: 'Epistulae Fulgentii Ruspensis', author: '魯斯佩的富爾根提烏斯', era: '約 507–532', place: '北非魯斯佩', language: '拉丁文', intro: '汪達爾治下流放的北非主教富爾根提烏斯論恩寵與正統的書信。奧古斯丁神學的忠實傳人，亞流蠻族統治下正統信仰的守護尺牘。' },
+          { title_zh: '亞爾的凱撒裡烏斯書信與訓誡', title_orig: 'Epistulae et Regula Caesarii Arelatensis', author: '亞爾的凱撒裡烏斯', era: '約 502–542', place: '高盧亞爾', language: '拉丁文', intro: '高盧主教凱撒裡烏斯致修女院的書信與會規，兼含大量通俗講道。半伯拉糾之爭的終結者，高盧牧養與女修制度的奠基尺牘。' },
+          { title_zh: '費蘭都斯書信與執事守則', title_orig: 'Epistulae Ferrandi Diaconi', author: '迦太基的費蘭都斯', era: '6 世紀', place: '迦太基', language: '拉丁文', intro: '迦太基執事費蘭都斯論教規與三章案的書信，兼輯北非教規總覽。查士丁尼時代北非教會立場的文獻，富爾根提烏斯門下的法學尺牘。' },
+          { title_zh: '塞維亞的伊西多爾書信集', title_orig: 'Epistulae Isidori Hispalensis', author: '塞維亞的伊西多爾', era: '約 600–636', place: '西班牙塞維亞', language: '拉丁文', intro: '「中世紀最後教父」伊西多爾致主教與學者論教規學問的書信。西哥德西班牙文教復興的側影，古代知識向中世紀過渡的尺牘見證。' },
+          { title_zh: '布拉加的馬丁書信與教規', title_orig: 'Epistulae et Canones Martini Bracarensis', author: '布拉加的馬丁', era: '6 世紀', place: '西班牙布拉加', language: '拉丁文', intro: '使蘇維匯人歸正的布拉加主教馬丁致同僚論教規與斥鄉民迷信的書信。伊比利亞西北基督教化的文獻，《斥鄉愚》民俗史料的作者尺牘。' },
+          { title_zh: '辛尼修書信集', title_orig: 'Letters of Synesius of Cyrene', author: '昔蘭尼的辛尼修', era: '約 399–413', place: '昔蘭尼', language: '希臘文', intro: '哲人主教辛尼修描繪利比亞邊城生活、蠻族劫掠與教政的書信。晚期古代希臘書信文學的名篇，哲學家轉任主教的心境實錄。' }
+        
+            ],
+          },
+          {
+            key: 'conciliar-letters', label: '大公會議書函部', label_en: 'Conciliar Letters',
+            works: [
+          { title_zh: '濟利祿致聶斯脫留三書', title_orig: 'Three Letters of Cyril to Nestorius', author: '亞歷山卓的濟利祿', era: '429–430', place: '亞歷山卓', language: '希臘文', intro: '濟利祿駁聶斯脫留基督論、附十二絕罰條的三封書信。以弗所會議的教義綱領文件，正統基督論「一位」表述的鋒刃尺牘。' },
+          { title_zh: '聶斯脫留書信與辯詞', title_orig: 'Letters of Nestorius (and the Bazaar of Heracleides)', author: '聶斯脫留', era: '428–451', place: '君士坦丁堡／埃及流放', language: '希臘文（敘利亞譯存）', intro: '聶斯脫留答濟利祿與自辯的書信，及晚年託名《赫拉克利德市集》的申辯。被定為異端者的第一手聲音，基督論爭議另一方的珍稀文獻。' },
+          { title_zh: '復和信經書函', title_orig: 'Formula of Reunion (433)', author: '安提阿的約翰與濟利祿', era: '433', place: '安提阿／亞歷山卓', language: '希臘文', intro: '以弗所會議後安提阿與亞歷山卓兩派妥協達成的復和信經書函。基督論兩派短暫和解的文本，迦克墩定義的重要前身。' },
+          { title_zh: '以巴致馬裡書函', title_orig: 'Letter of Ibas to Mari', author: '埃德薩的以巴', era: '433', place: '埃德薩', language: '敘利亞文（希臘譯存）', intro: '埃德薩主教以巴述以弗所爭議、評濟利祿與聶斯脫留的書信。「三章案」爭議的核心文件之一，第二次君士坦丁堡會議譴責的對象。' },
+          { title_zh: '尼西亞會議大公書函', title_orig: 'Synodical Letter of the Council of Nicaea', author: '第一次尼西亞大公會議', era: '325', place: '尼西亞', language: '希臘文', intro: '尼西亞會議致亞歷山卓教會、宣告亞流受譴與復活節統一的大公書函。首次大公會議對外的官方通函，正統決議的傳布文件。' },
+          { title_zh: '撒狄卡會議大公書函', title_orig: 'Encyclical Letters of the Council of Serdica', author: '撒狄卡會議', era: '343', place: '撒狄卡', language: '希臘文／拉丁文', intro: '撒狄卡會議東西兩派各自發出的大公書函，暴露亞流爭議中的分裂。四世紀教會東西裂痕的文獻見證，上訴羅馬條款的早期文本。' },
+          { title_zh: '利奧致弗拉維安書', title_orig: 'Tomus ad Flavianum (Leo\'s Tome)', author: '教宗大良一世', era: '449', place: '羅馬', language: '拉丁文', intro: '教宗大良致君士坦丁堡主教弗拉維安、界定基督兩性一位的教義書函。迦克墩會議歡呼「伯多祿藉良而言」的文本，西方基督論的權威表述。' },
+          { title_zh: '狄奧多勒致教友書函補篇', title_orig: 'Further Letters of Theodoret', author: '居魯士的狄奧多勒', era: '約 431–457', place: '敘利亞居魯士', language: '希臘文', intro: '狄奧多勒論三章案、為安提阿學派辯護並記邊區牧養的書信。基督論爭議中安提阿一方的博學之聲，五世紀教會政爭的一手尺牘。' },
+          { title_zh: '亞美尼亞書信之書', title_orig: 'Girk\' T\'ght\'ots\' (Book of Letters)', author: '亞美尼亞歷代主教（彙編）', era: '5–8 世紀彙編', place: '亞美尼亞', language: '亞美尼亞文', intro: '彙集亞美尼亞教會與拜占庭、敘利亞、喬治亞往來教義書信的文獻總集。高加索教會自立與基督論立場的第一手檔案，亞美尼亞教會史的尺牘寶庫。' }
+        
+            ],
+          },
+          {
+            key: 'insular-missionary-letters', label: '島嶼與傳教書函部', label_en: 'Insular and Missionary Letters',
+            works: [
+          { title_zh: '帕特里克懺悔錄', title_orig: 'Confessio Patricii', author: '聖帕特里克', era: '5 世紀', place: '愛爾蘭', language: '拉丁文', intro: '愛爾蘭宗徒帕特里克自述蒙召與宣教的懺悔錄，質樸真摯。愛爾蘭最古的文字文獻，凱爾特基督教的第一人稱奠基之聲。' },
+          { title_zh: '帕特里克致科羅提庫斯書', title_orig: 'Epistola ad Coroticus', author: '聖帕特里克', era: '5 世紀', place: '愛爾蘭', language: '拉丁文', intro: '帕特里克譴責擄殺愛爾蘭新信徒的不列顛軍閥科羅提庫斯的公開信。早期基督教反奴役與人道抗議的文獻，主教為羊群仗義執言的尺牘。' },
+          { title_zh: '哥倫巴努斯書信集', title_orig: 'Epistulae Columbani', author: '哥倫巴努斯', era: '約 600–615', place: '高盧／義大利', language: '拉丁文', intro: '愛爾蘭傳教士哥倫巴努斯致教宗與高盧主教、直言不諱論復活節與教規的書信。凱爾特教會與羅馬張力的一手文獻，島嶼傳教精神的尺牘。' },
+          { title_zh: '波尼法爵書信集', title_orig: 'Epistolae Bonifatii', author: '波尼法爵（溫弗裡德）', era: '約 716–754', place: '日耳曼／美因茨', language: '拉丁文', intro: '「日耳曼宗徒」盎格魯撒克遜人波尼法爵傳教、求援與論教規的書信，含婦女修院院長之通信。八世紀跨海傳教網絡的珍貴檔案，中歐基督教化的一手尺牘。' },
+          { title_zh: '阿爾昆書信集', title_orig: 'Epistolae Alcuini', author: '約克的阿爾昆', era: '約 780–804', place: '亞琛／圖爾', language: '拉丁文', intro: '加洛林文教復興靈魂阿爾昆致查理曼與各地學者教會的書信逾三百封。查理曼帝國學術政教的第一手檔案，中世紀學問復興的尺牘核心。' },
+          { title_zh: '比德致埃格伯特書', title_orig: 'Epistola ad Ecgbertum', author: '可敬者比德', era: '734', place: '諾森布里亞', language: '拉丁文', intro: '史家比德臨終前致約克主教埃格伯特、力陳教會改革之弊的書信。盎格魯撒克遜教會自省的名篇，比德史學之外的牧養遺言。' },
+          { title_zh: '阿爾德海姆書信與詩文', title_orig: 'Epistulae Aldhelmi', author: '馬姆斯伯裡的阿爾德海姆', era: '7 世紀末', place: '威塞克斯', language: '拉丁文', intro: '西撒克遜學者主教阿爾德海姆論復活節爭議與拉丁學問的書信詩文。盎格魯撒克遜拉丁文學的開山人物，島嶼與羅馬教會接軌的尺牘。' }
+        
             ],
           },
         ],
