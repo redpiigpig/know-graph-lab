@@ -1,91 +1,146 @@
 /**
  * 把 /works 論文計畫「修改草稿」（public/content/works/<ref>-revision-draft.md）
- * 即時轉成 .docx 下載。md 改了，下載出來的 Word 就跟著變。
+ * 即時轉成「歷史論文格式」的 .docx 下載。md 改了，下載出來的 Word 就跟著變。
  *
- * 樣式：A4、頁邊 25mm、內文 12pt Times New Roman + NSimSun、首行縮排兩全形空白；
- * # 主標 20pt／## 節標 16pt／### 子標 14pt 加粗；> 引文灰色縮排；- 條列前置「‧」；
- * 行內 **粗體** 轉 bold run；--- 與 markdown 語法符號不輸出。
+ * 版式（對齊根目錄「腳註版」交付檔）：
+ *   - A4、頁邊 25mm；內文 12pt Times New Roman + 新細明體，首行縮排兩字，行距 1.5
+ *   - # 主標 18pt 置中／## 節標 14pt／### 子標 12pt 加粗
+ *   - > 引文 → 標楷體、左右內縮的獨立引文段
+ *   - - 條列 → 懸掛縮排書目
+ *   - 行內 〔註N〕 → 真‧頁下腳註（w:footnote）；註文取自文末「## 註釋」段的〔註N〕清單
+ *   - 「## 註釋」整段本身不再印出（已轉為腳註）；行內 **粗體** 照樣加粗
  */
 import { readFile } from 'node:fs/promises'
 import { join } from 'node:path'
 import {
   AlignmentType,
   Document,
+  FootnoteReferenceRun,
   Packer,
   Paragraph,
   TextRun,
   convertMillimetersToTwip,
 } from 'docx'
 
-const FONT_BODY_CJK = 'NSimSun'
-const FONT_EN = 'Times New Roman'
-const INDENT = '　　'
+const BODY_CJK = '新細明體'
+const QUOTE_CJK = '標楷體'
+const EN = 'Times New Roman'
 
-interface RunOpts { size?: number; bold?: boolean; color?: string }
+interface RunOpts { size?: number; bold?: boolean; color?: string; cjk?: string }
 
-function runsWithBold(text: string, opts: RunOpts = {}): TextRun[] {
-  // 行內 **bold** → bold run；其餘平樸
-  const runs: TextRun[] = []
-  const re = /\*\*(.+?)\*\*/g
-  let cursor = 0
-  const mk = (t: string, bold?: boolean) => new TextRun({
-    text: t,
-    bold: bold ?? opts.bold,
-    size: opts.size,
-    color: opts.color ?? '000000',
-    font: { ascii: FONT_EN, hAnsi: FONT_EN, cs: FONT_EN, eastAsia: FONT_BODY_CJK },
-  })
-  for (const m of text.matchAll(re)) {
-    if (m.index! > cursor) runs.push(mk(text.slice(cursor, m.index!)))
-    runs.push(mk(m[1], true))
-    cursor = m.index! + m[0].length
+const mkRun = (text: string, o: RunOpts = {}) => new TextRun({
+  text,
+  bold: o.bold,
+  size: o.size ?? 24,
+  color: o.color ?? '000000',
+  font: { ascii: EN, hAnsi: EN, cs: EN, eastAsia: o.cjk ?? BODY_CJK },
+})
+
+/** 行內解析：**粗體** + 〔註N〕→ 腳註參照（notes[N] 存在才轉） */
+function inlineRuns(text: string, notes: Record<number, string>, o: RunOpts = {}): (TextRun | FootnoteReferenceRun)[] {
+  const out: (TextRun | FootnoteReferenceRun)[] = []
+  // 先切腳註標記，段內再處理粗體
+  const parts = text.split(/(〔註\d+〕)/)
+  for (const part of parts) {
+    const fn = part.match(/^〔註(\d+)〕$/)
+    if (fn) {
+      const n = Number(fn[1])
+      if (notes[n]) { out.push(new FootnoteReferenceRun(n)); continue }
+      out.push(mkRun(part, o)); continue
+    }
+    let cursor = 0
+    for (const m of part.matchAll(/\*\*(.+?)\*\*/g)) {
+      if (m.index! > cursor) out.push(mkRun(part.slice(cursor, m.index!), o))
+      out.push(mkRun(m[1], { ...o, bold: true }))
+      cursor = m.index! + m[0].length
+    }
+    if (cursor < part.length) out.push(mkRun(part.slice(cursor), o))
   }
-  if (cursor < text.length) runs.push(mk(text.slice(cursor)))
-  return runs.length ? runs : [mk('')]
+  return out.length ? out : [mkRun('', o)]
 }
 
-function para(children: TextRun[]): Paragraph {
-  return new Paragraph({
-    spacing: { after: 0, line: 300, lineRule: 'auto' as any },
-    children,
-  })
+const L = { line: 360, lineRule: 'auto' as any }
+
+/** 抽出文末「## 註釋」段 → {N: 註文}，並回傳去掉該段的正文行 */
+function extractNotes(lines: string[]): { notes: Record<number, string>; body: string[] } {
+  const idx = lines.findIndex(l => /^##\s+註釋\s*$/.test(l.trim()))
+  if (idx < 0) return { notes: {}, body: lines }
+  const notes: Record<number, string> = {}
+  for (const l of lines.slice(idx + 1)) {
+    const m = l.trim().match(/^〔註(\d+)〕(.+)$/)
+    if (m) notes[Number(m[1])] = m[2].trim()
+  }
+  return { notes, body: lines.slice(0, idx) }
 }
 
-function buildParagraphs(md: string): Paragraph[] {
+function buildParagraphs(md: string): { paragraphs: Paragraph[]; notes: Record<number, string> } {
+  const rawLines = md.split(/\r?\n/)
+  const { notes, body } = extractNotes(rawLines)
   const out: Paragraph[] = []
-  for (const line of md.split(/\r?\n/)) {
+  let seenAbstract = false
+  for (const line of body) {
     const t = line.trim()
     if (!t || t === '---') { out.push(new Paragraph({ spacing: { after: 0, line: 240, lineRule: 'auto' as any }, children: [] })); continue }
-    if (t.startsWith('### ')) { out.push(para(runsWithBold(t.slice(4), { size: 28, bold: true }))); continue }
-    if (t.startsWith('## ')) { out.push(para(runsWithBold(t.slice(3), { size: 32, bold: true }))); continue }
+
     if (t.startsWith('# ')) {
       out.push(new Paragraph({
         alignment: AlignmentType.CENTER,
-        spacing: { after: 200, line: 300, lineRule: 'auto' as any },
-        children: runsWithBold(t.slice(2), { size: 40, bold: true }),
+        spacing: { before: 120, after: 120, ...L },
+        children: [mkRun(t.slice(2), { size: 36, bold: true })],
+      }))
+      continue
+    }
+    if (t.startsWith('### ')) {
+      const inner = t.slice(4)
+      if (/^摘要/.test(inner)) seenAbstract = true
+      // 副標／作者資訊型 ### 一律置中；一般子章節（（一）…）靠左加粗
+      const isSubsection = /^（[一二三四五六七八九十]+）/.test(inner)
+      out.push(new Paragraph({
+        alignment: isSubsection ? undefined : AlignmentType.CENTER,
+        spacing: { before: isSubsection ? 200 : 60, after: isSubsection ? 100 : 60, ...L },
+        children: [mkRun(inner, { size: isSubsection ? 24 : 22, bold: true })],
+      }))
+      continue
+    }
+    if (t.startsWith('## ')) {
+      out.push(new Paragraph({
+        spacing: { before: 280, after: 140, ...L },
+        children: [mkRun(t.slice(3), { size: 28, bold: true })],
       }))
       continue
     }
     if (t.startsWith('> ')) {
       out.push(new Paragraph({
-        indent: { left: convertMillimetersToTwip(10) },
-        spacing: { after: 0, line: 300, lineRule: 'auto' as any },
-        children: runsWithBold(t.slice(2), { size: 22, color: '595959' }),
+        indent: { left: 720, right: 480 },
+        spacing: { before: 120, after: 120, ...L },
+        children: inlineRuns(t.slice(2), notes, { cjk: QUOTE_CJK }),
       }))
       continue
     }
     if (/^[-*]\s+/.test(t)) {
       out.push(new Paragraph({
-        indent: { left: convertMillimetersToTwip(6) },
-        spacing: { after: 0, line: 300, lineRule: 'auto' as any },
-        children: runsWithBold('‧ ' + t.replace(/^[-*]\s+/, '')),
+        indent: { left: 480, hanging: 480 },
+        spacing: { after: 60, ...L },
+        children: inlineRuns(t.replace(/^[-*]\s+/, ''), notes),
       }))
       continue
     }
-    if (/^〔註\d+〕/.test(t)) { out.push(para(runsWithBold(t, { size: 20 }))); continue }
-    out.push(para(runsWithBold(INDENT + t)))
+    // 摘要前的短行（作者／系所）置中；關鍵詞與正文首行縮排
+    if (!seenAbstract && t.length <= 30 && !/[。，、；：？！]/.test(t)) {
+      out.push(new Paragraph({
+        alignment: AlignmentType.CENTER,
+        spacing: { after: 60, ...L },
+        children: inlineRuns(t, notes),
+      }))
+      continue
+    }
+    out.push(new Paragraph({
+      indent: { firstLine: 480 },
+      spacing: { after: 0, ...L },
+      children: inlineRuns(t, notes),
+    }))
   }
-  return out
+  return { paragraphs: out, notes }
 }
 
 export default defineEventHandler(async (event) => {
@@ -102,17 +157,25 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 404, message: `Draft not found: ${safe}` })
   }
 
-  // 檔名用草稿第一個 # 標題，抓不到就用 ref
   const title = md.match(/^#\s+(.+)$/m)?.[1]?.trim() || `${safe}-draft`
+
+  const { paragraphs, notes } = buildParagraphs(md)
+  const footnotes = Object.fromEntries(
+    Object.entries(notes as Record<number, string>).map(([n, text]) => [Number(n), {
+      children: [new Paragraph({
+        spacing: { after: 0, line: 240, lineRule: 'auto' as any },
+        children: [mkRun(' ' + text, { size: 20 })],
+      })],
+    }]),
+  )
 
   const doc = new Document({
     creator: '論文寫作計畫',
     title,
     styles: {
-      default: {
-        document: { run: { font: { name: FONT_EN, eastAsia: FONT_BODY_CJK }, size: 24 } },
-      },
+      default: { document: { run: { font: { name: EN, eastAsia: BODY_CJK }, size: 24 } } },
     },
+    footnotes: Object.keys(footnotes).length ? footnotes : undefined,
     sections: [{
       properties: {
         page: {
@@ -125,7 +188,7 @@ export default defineEventHandler(async (event) => {
           },
         },
       },
-      children: buildParagraphs(md),
+      children: paragraphs,
     }],
   })
 
