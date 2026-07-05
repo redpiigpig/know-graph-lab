@@ -17,7 +17,7 @@
         <!-- Cover -->
         <div style="flex-shrink:0; width:220px;">
           <div style="aspect-ratio:400/560; border:1px solid #e2e2e2; border-radius:3px; overflow:hidden; background:#f7f7f7; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-            <img v-if="issue.cover" :src="issue.cover" :alt="`第${n}期封面`" style="width:100%; height:100%; object-fit:cover; display:block;" />
+            <img v-if="issue.cover" :src="`${issue.cover}?v=3`" :alt="`第${n}期封面`" style="width:100%; height:100%; object-fit:cover; display:block;" />
           </div>
           <a v-if="issue.url" :href="issue.url" target="_blank" rel="noopener"
             style="display:block; text-align:center; margin-top:12px; font-size:13px; color:#888; text-decoration:none; font-family:Arial,'Microsoft JhengHei',sans-serif;"

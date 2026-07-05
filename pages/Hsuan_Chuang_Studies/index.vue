@@ -32,7 +32,7 @@
             transform: hover === issue.issue ? 'translateY(-3px)' : 'none',
             transition:'box-shadow 0.18s, transform 0.18s'
           }">
-            <img v-if="issue.cover" :src="issue.cover" :alt="`第${issue.issue}期封面`"
+            <img v-if="issue.cover" :src="`${issue.cover}?v=3`" :alt="`第${issue.issue}期封面`"
               style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy" />
             <div v-else style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:#bbb; font-size:14px;">
               {{ lang === 'zh' ? '無封面' : 'No cover' }}
