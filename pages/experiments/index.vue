@@ -45,6 +45,16 @@
           <span class="tool-badge bg-stone-50 text-stone-600">示範</span>
         </NuxtLink>
 
+        <!-- 大兵日記 -->
+        <NuxtLink to="/soldier-diary" class="tool-card group border-lime-200 hover:border-lime-400 hover:shadow-lime-100">
+          <div class="tool-icon bg-lime-50 text-lime-700">🎖️</div>
+          <div class="flex-1">
+            <h2 class="tool-title">大兵日記</h2>
+            <p class="tool-desc">軍事化自律養成模擬：儀隊操課、屬性成長、軍階晉升與每日回報</p>
+          </div>
+          <span class="tool-badge bg-lime-50 text-lime-700">建置中</span>
+        </NuxtLink>
+
       </div>
     </div>
   </div>
