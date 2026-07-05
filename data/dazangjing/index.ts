@@ -581,11 +581,50 @@ const PRE_CHRISTIAN_ERA: DazangEra = {
       name_en: 'Translation (Antecedents)',
       glyph: '譯',
       genres: '譯本‧校勘',
-      summary: '古代文本跨語言的翻譯與傳抄（待續搜羅）。',
+      summary: '基督教譯經與校勘技藝的前身——近東雙語釋文、多語敕令、希羅譯論與文字載體技術。這些純異教（非猶太系）的翻譯與傳抄傳統，構成七十士譯本與俄利根校勘之前的技術母體。',
       soleCanonLabel: '前藏',
       zheng: {
         divisions: [
-
+          {
+            key: 'ane-translation', label: '近東翻譯與釋文部', label_en: 'Near Eastern Translation and Glossing',
+            works: [
+          { title_zh: '烏拉＝胡布魯詞彙表', title_orig: 'Urra = ḫubullu (lexical series)', author: '佚名（巴比倫抄寫學校）', era: '約公元前 2 千紀（標準版定型於前 1 千紀）', place: '巴比倫尼亞', language: '蘇美爾語—阿卡德語（雙欄對照）', intro: '二十四塊泥板的蘇美爾—阿卡德雙語詞彙大表，逐詞左蘇美爾、右阿卡德對照，涵蓋草木器物職官。人類最古的系統性雙語對照工程，翻譯與辭書技藝的共同源頭，其「逐欄對譯」正是後世對照本聖經的遠祖。' },
+          { title_zh: '蘇美爾—阿卡德逐行釋文', title_orig: 'Sumerian-Akkadian Interlinear Bilinguals', author: '佚名（巴比倫、亞述抄寫者）', era: '約公元前 2 千紀', place: '美索不達米亞', language: '蘇美爾語／阿卡德語', intro: '蘇美爾語聖典（讚歌、咒文）逐行下附阿卡德語譯文的雙語抄本，蘇美爾語作為死語仍禮儀傳習、由阿卡德語釋讀。「聖典古語＋通行語逐行對譯」的最早範式，正如後世拉丁—白話對照本，是逐行釋經傳統的近東前身。' },
+          { title_zh: '埃杜巴抄寫學校校勘傳統', title_orig: 'É-dubba scribal collation tradition', author: '佚名（蘇美爾—巴比倫抄寫學校）', era: '約公元前 3–1 千紀', place: '美索不達米亞', language: '蘇美爾語／阿卡德語', intro: '「泥板屋」抄寫學校的抄錄、校對與定本傳統，泥板末附抄手、母本來源與校讀題記（colophon）。文本校勘與版本題記的最古制度，亞歷山卓校勘學之前兩千年的文獻管理術。' },
+          { title_zh: '哈圖沙多語儀典與條約', title_orig: 'Hattusa Multilingual Rituals and Treaties', author: '佚名（赫梯王室檔案）', era: '約公元前 14–13 世紀', place: '赫梯（哈圖沙）', language: '赫梯語／阿卡德語／胡里語／盧維語等', intro: '赫梯王室檔案中蘇美爾—阿卡德—赫梯多語並列的詞表、儀典與國際條約。青銅時代近東多語行政與外交翻譯的實錄，多語並置文本的早期高峰。' }
+        
+            ],
+          },
+          {
+            key: 'multilingual-monuments', label: '多語敕令與銘刻部', label_en: 'Multilingual Decrees and Inscriptions',
+            works: [
+          { title_zh: '羅塞塔石碑', title_orig: 'Rosetta Stone (Memphis Decree)', author: '埃及祭司會議（托勒密五世朝）', era: '公元前 196 年', place: '埃及孟斐斯', language: '聖書體／世俗體／希臘文（三體對照）', intro: '托勒密五世的祭司敕令，同文以聖書體、世俗體與希臘文三體刻寫，十九世紀商博良據以破譯象形文字。古代多語官方文告的代表，翻譯即權力傳布的鐵證。' },
+          { title_zh: '卡諾普斯敕令', title_orig: 'Canopus Decree', author: '埃及祭司會議（托勒密三世朝）', era: '公元前 238 年', place: '埃及卡諾普斯', language: '聖書體／世俗體／希臘文', intro: '托勒密三世的三語祭司敕令，含閏日曆改議，體例先於羅塞塔石碑。托勒密埃及「一詔三文」制度的實例，多語政令翻譯常態化的見證。' },
+          { title_zh: '帝國亞蘭文行政文書', title_orig: 'Achaemenid Imperial Aramaic (Reichsaramäisch)', author: '阿契美尼德王室書記局', era: '約公元前 6–4 世紀', place: '波斯帝國（自埃及象島至巴克特里亞）', language: '帝國亞蘭文', intro: '阿契美尼德帝國以亞蘭文為橫跨歐亞非的行政通用語，詔令在各省口譯為地方語施行。文本跨語言、跨帝國流動的機制本身，亞蘭文日後成為耶穌與塔古姆之語的政治前提。' }
+        
+            ],
+          },
+          {
+            key: 'greco-roman-philology', label: '希羅譯論與校勘部', label_en: 'Greco-Roman Translation Theory and Philology',
+            works: [
+          { title_zh: '李維烏斯拉丁譯奧德賽', title_orig: 'Odusia (Livius Andronicus, Latin Odyssey)', author: '李維烏斯‧安德羅尼庫斯', era: '約公元前 3 世紀中葉', place: '羅馬', language: '拉丁文（譯自希臘文）', intro: '被擄希臘人安德羅尼庫斯將荷馬《奧德賽》譯為拉丁薩圖爾努斯格律，開羅馬文學之端。西方第一部大型文學翻譯，「羅馬以翻譯承接希臘文明」整個工程的起點。' },
+          { title_zh: '論最優秀的演說家', title_orig: 'De optimo genere oratorum (Cicero)', author: '西塞羅', era: '公元前 46 年', place: '羅馬', language: '拉丁文', intro: '西塞羅為其譯希臘演說所作的序論，提出「不逐字，而傳其力與意」（non verbum pro verbo）。西方翻譯理論的奠基文本，耶柔米《論最佳翻譯法》即實名引之為據，異教譯論交棒基督教譯經的關鍵環節。' },
+          { title_zh: '詩藝（翻譯格言段）', title_orig: 'Ars Poetica (Horace)', author: '賀拉斯', era: '約公元前 19–18 年', place: '羅馬', language: '拉丁文', intro: '賀拉斯論詩之作，「忠實譯者不逐字對譯」（nec verbum verbo）一語成後世翻譯論爭的常引格言。與西塞羅並列為古典「意譯」原則的雙源，直接進入耶柔米以降的譯經方法辯論。' },
+          { title_zh: '亞歷山卓荷馬校勘與校勘符號', title_orig: 'Alexandrian Homeric Philology and Critical Signs', author: '澤諾多託斯、拜占庭的阿里斯托芬、阿里斯塔庫斯', era: '約公元前 3–2 世紀', place: '埃及亞歷山卓', language: '希臘文', intro: '亞歷山卓圖書館諸校勘家整理荷馬文本，發明除號（obelos ÷）、星號（asterisk ※）等校勘符號標示衍文與異讀。文本批判學的奠基工程，俄利根《六文本合參》原封搬用其符號，異教語文學直接移植進聖經校勘的實例。' },
+          { title_zh: '珀加蒙文獻學與寓意釋讀', title_orig: 'Pergamene Philology (Crates of Mallos)', author: '馬洛斯的克拉特斯', era: '約公元前 2 世紀', place: '珀加蒙', language: '希臘文', intro: '珀加蒙學派克拉特斯以寓意（allegoria）釋讀荷馬，與亞歷山卓的字面—類推派相抗。寓意釋經法的異教源頭，斐洛與亞歷山卓教父寓意解經的方法前身。' }
+        
+            ],
+          },
+          {
+            key: 'script-technology', label: '文字載體技術部', label_en: 'Writing-System Technology',
+            works: [
+          { title_zh: '腓尼基字母', title_orig: 'The Phoenician Alphabet', author: '佚名（腓尼基／迦南書記）', era: '約公元前 11 世紀（源出更早原西奈字母）', place: '迦南—腓尼基（比布魯斯、烏加里特一帶）', language: '腓尼基語', intro: '以二十二個輔音字母記音的書寫系統，希臘、亞蘭、希伯來、拉丁諸文字皆由此衍生。人類表音文字的共祖，整個聖經抄寫、翻譯與傳布事業所賴的底層技術，迦南對文本文明最深的貢獻。' },
+          { title_zh: '烏加里特楔形字母', title_orig: 'Ugaritic Cuneiform Alphabet', author: '佚名（烏加里特書記）', era: '約公元前 13 世紀', place: '迦南（烏加里特／拉斯沙姆拉）', language: '烏加里特語', intro: '以楔形筆畫寫成的三十字母表音系統，附已知最早的字母順序（abecedary）泥板。字母原理與楔形載體的獨特結合，迦南書寫技術的實驗標本，字母順序傳統的最古實證。' },
+          { title_zh: '楔形文字書寫系統', title_orig: 'The Cuneiform Writing System', author: '佚名（蘇美爾書記）', era: '約公元前 3200 年起', place: '蘇美爾（烏魯克）', language: '蘇美爾語（後承載阿卡德、赫梯、埃蘭諸語）', intro: '人類最早的完整書寫系統之一，一符多音、跨語言借用，承載近東三千年文獻。文本文明的開端技術，其一符可讀多語的特性，使雙語釋文與多語銘刻成為可能。' },
+          { title_zh: '埃及聖書體與世俗體', title_orig: 'Egyptian Hieroglyphic and Demotic Scripts', author: '佚名（埃及書記，「生命之屋」per-ankh）', era: '約公元前 3200 年起', place: '古埃及', language: '古埃及語（諸階段）', intro: '聖書體、僧侶體與世俗體三階書寫並行，繕寫所「生命之屋」世代傳習抄錄。埃及文本傳承的技術體系，三體並存正是羅塞塔石碑多體對照的內在條件。' }
+        
+            ],
+          },
         ],
       },
       wai: { divisions: [] },
@@ -690,11 +729,51 @@ const PRE_CHRISTIAN_ERA: DazangEra = {
       name_en: 'Reference (Antecedents)',
       glyph: '類',
       genres: '彙編',
-      summary: '古代的彙編、辭書與占驗類文獻（待續搜羅）。',
+      summary: '基督教百科與工具書的前身——美索不達米亞列錄科學、埃及名錄、希羅百科與印度學統。這些純異教（非猶太系）的知識彙編傳統，構成伊西多爾《詞源》與教父引文集之前的體例母體。',
       soleCanonLabel: '前藏',
       zheng: {
         divisions: [
-
+          {
+            key: 'mesopotamian-lists', label: '美索不達米亞列錄部', label_en: 'Mesopotamian List Science',
+            works: [
+          { title_zh: '烏拉＝胡布魯列錄科學', title_orig: 'Urra = ḫubullu as List Science (Listenwissenschaft)', author: '佚名（巴比倫抄寫學校）', era: '約公元前 2–1 千紀', place: '巴比倫尼亞', language: '蘇美爾語—阿卡德語', intro: '按類（木、蘆、陶、皮、金、地、獸、職…）臚列萬物的多板詞表，以分類窮舉為知識形式。「列錄科學」的代表，人類最古的百科式知識排序，類書「以類相從」體例的近東深根。' },
+          { title_zh: '埃努瑪‧阿努‧恩利爾徵兆系列', title_orig: 'Enūma Anu Enlil (celestial omen series)', author: '佚名（巴比倫祭司）', era: '約公元前 2–1 千紀（標準版定型於前 1 千紀）', place: '巴比倫尼亞', language: '阿卡德語', intro: '約七十塊泥板的天象徵兆大彙編，逐條「若某天象，則某事」窮舉星月日食之兆。系統彙編式的佔驗百科，「條列—歸類」知識工程的典型，佔驗類書的近東原型。' },
+          { title_zh: '舒瑪‧伊茲布畸形徵兆系列', title_orig: 'Šumma izbu (teratological omen series)', author: '佚名（巴比倫祭司）', era: '約公元前 1 千紀', place: '巴比倫尼亞', language: '阿卡德語', intro: '逐條臚列畸胎異產之兆的徵兆系列，以窮舉異常現象為體。近東「條列窮舉」知識法的又一標本，分類彙編傳統的組成部分。' },
+          { title_zh: '薩基庫診斷手冊', title_orig: 'Sakikkû (Diagnostic Handbook)', author: '埃薩吉爾-金-阿普利（Esagil-kīn-apli 編定）', era: '約公元前 11 世紀', place: '巴比倫尼亞（波爾西帕）', language: '阿卡德語', intro: '四十塊泥板的診斷—預後手冊，逐條「若病人如此，則其病如彼」，並附署名編者的整編序。具名編纂的醫學徵兆百科，古代學術「編定標準版」意識的珍稀自述。' },
+          { title_zh: '亞述巴尼拔圖書館', title_orig: 'The Library of Ashurbanipal (Nineveh)', author: '亞述巴尼拔', era: '公元前 7 世紀', place: '亞述（尼尼微）', language: '阿卡德語／蘇美爾語', intro: '亞述王亞述巴尼拔蒐羅全境泥板、系統編目而成的宮廷圖書館，出土逾三萬件。史上第一座有系統徵集與編目的圖書館，「以館藏窮盡天下知識」之志的最早實現，類書與工具書事業的遠祖。' }
+        
+            ],
+          },
+          {
+            key: 'egyptian-onomastica', label: '埃及名錄部', label_en: 'Egyptian Onomastica',
+            works: [
+          { title_zh: '阿蒙尼摩比名錄', title_orig: 'Onomasticon of Amenope', author: '阿蒙尼摩比', era: '約公元前 1100 年', place: '古埃及', language: '晚埃及語', intro: '署名阿蒙尼摩比、按類臚列天地萬物（天象、水、地貌、人職、城邑、穀糧…）的名物總錄，序言自稱「教導、明察萬物之書」。埃及分類名錄的代表，以類系物的原型百科，與美索不達米亞詞表東西輝映。' },
+          { title_zh: '拉美西姆名錄', title_orig: 'Ramesseum Onomasticon', author: '佚名（埃及書記）', era: '約公元前 1750 年', place: '古埃及（底比斯）', language: '中埃及語', intro: '現存最古的埃及名錄之一，分類臚列城邑、建築、職官與物產。埃及「以類系名」知識傳統的早期實證，名錄體百科的濫觴。' }
+        
+            ],
+          },
+          {
+            key: 'greco-roman-encyclopedia', label: '希羅百科與學說彙纂部', label_en: 'Greco-Roman Encyclopedia and Doxography',
+            works: [
+          { title_zh: '學科九書', title_orig: 'Disciplinarum libri IX (Varro)', author: '馬爾庫斯‧特倫提烏斯‧瓦羅', era: '約公元前 33 年', place: '羅馬', language: '拉丁文', intro: '瓦羅分九科（文法、修辭、辯證、幾何、算術、天文、樂理、醫學、建築）綜述學術的百科鉅著，原書佚而框架傳世。「七藝」（後略去醫學、建築）的直接祖本，伊西多爾《詞源》與中世紀學制的體例母體。' },
+          { title_zh: '神聖與人事之古物', title_orig: 'Antiquitates rerum humanarum et divinarum (Varro)', author: '馬爾庫斯‧特倫提烏斯‧瓦羅', era: '約公元前 47 年', place: '羅馬', language: '拉丁文', intro: '瓦羅四十一卷分類彙述羅馬制度、地理、人事與宗教的古物百科，奧古斯丁《上帝之城》大量引駁。羅馬宗教與制度知識的總匯，教父藉以認識並批判異教的百科藍本。' },
+          { title_zh: '博物志', title_orig: 'Naturalis Historia (Pliny the Elder)', author: '老普林尼', era: '公元 77 年', place: '羅馬', language: '拉丁文', intro: '老普林尼三十七卷、含兩萬條目的自然百科，天文地理動植礦與人文工藝無所不包，自稱徵引兩千卷。西方現存最早的完整百科全書，中世紀至文藝復興博物知識的權威母本。' },
+          { title_zh: '卡利馬科斯書目', title_orig: 'Pinakes (Callimachus)', author: '卡利馬科斯', era: '約公元前 3 世紀', place: '埃及亞歷山卓', language: '希臘文', intro: '卡利馬科斯為亞歷山卓圖書館編纂的一百二十卷分類作者書目，按文類與字母排列並附小傳。目錄學與書目學的鼻祖，一切工具書、辭典與圖書分類的遠祖。' },
+          { title_zh: '阿提卡之夜', title_orig: 'Noctes Atticae (Aulus Gellius)', author: '奧盧斯‧革利烏斯', era: '約公元 2 世紀', place: '羅馬／雅典', language: '拉丁文', intro: '革利烏斯博採文法、法律、哲學、史事雜考而成的隨筆彙編，體例散而題自成篇。「雜纂—摘記」式類書的代表，教父與中世紀常引的知識雜俎母型。' },
+          { title_zh: '哲人學說彙纂', title_orig: 'Placita philosophorum (Aëtius, doxography)', author: '傳埃提烏斯', era: '約公元 1–2 世紀', place: '希臘化世界', language: '希臘文', intro: '按主題臚列各派哲人主張的「學說彙纂」（doxography），如「論本原」下列泰利斯、阿那克西曼德諸說。學說分條彙纂的體裁代表，教父引文集（catena）與異端誌「羅列諸家」手法的前身。' }
+        
+            ],
+          },
+          {
+            key: 'indian-sastra', label: '印度學統與詞源部', label_en: 'Indian Śāstra and Etymology',
+            works: [
+          { title_zh: '波你尼八篇書', title_orig: 'Aṣṭādhyāyī (Pāṇini)', author: '波你尼', era: '約公元前 5–4 世紀', place: '古印度（犍陀羅）', language: '梵文', intro: '波你尼以近四千條規則系統描述梵語構詞造句的文法巨典，形式之嚴密逼近符號演算。人類最早的形式化語法系統，印度「以規則窮盡語言」學統的巔峰，語言分析工具書的東方高峰。' },
+          { title_zh: '耶斯迦尼祿多', title_orig: 'Nirukta (Yāska)', author: '耶斯迦', era: '約公元前 5 世紀', place: '古印度', language: '梵文', intro: '耶斯迦解釋《吠陀》難字的詞源學專著，附《尼犍豆》(nighaṇṭu) 詞彙表，以語根釋義。印度詞源學（vyākaraṇa 支）的奠基，與伊西多爾《詞源》以語源解義的方法驚人平行，辭書與詞源學的東方源頭。' },
+          { title_zh: '吠陀支學統', title_orig: 'Vedāṅga (the six auxiliary disciplines)', author: '佚名（婆羅門學統）', era: '約公元前 1 千紀', place: '古印度', language: '梵文', intro: '為傳習《吠陀》而立的六門輔助學科（語音、格律、文法、詞源、天文、儀軌），系統分科以護持聖典。印度「以分科學統護持經典」的體系，與希羅七藝、教父三學四藝並為經典教育的分科母型。' },
+          { title_zh: '阿闥婆吠陀咒術彙編', title_orig: 'Atharvaveda (as compiled formulae)', author: '佚名（婆羅門祭司）', era: '約公元前 1200–1000 年', place: '古印度', language: '吠陀梵文', intro: '分類彙集治病、禳災、增益諸咒的吠陀本集，以功能歸類編次咒文。印度最早的功能分類彙編之一，「以類系咒」編纂法的吠陀實例，與近東咒文叢書遙相對映。' }
+        
+            ],
+          },
         ],
       },
       wai: { divisions: [] },
