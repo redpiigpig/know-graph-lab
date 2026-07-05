@@ -312,11 +312,63 @@ const PRE_CHRISTIAN_ERA: DazangEra = {
       name_en: 'Proclamation (Antecedents)',
       glyph: '宣',
       genres: '勸諭',
-      summary: '古代勸諭與宗教宣講文獻（待續搜羅）。',
+      summary: '基督教講道與道德勸諭技藝的前身——埃及訓誨文學、美索不達米亞智慧對話、波斯倫理勸抉與希羅修辭勸世。這些純異教（非猶太系）的教誨傳統，構成教父講道術之前的勸諭母體。',
       soleCanonLabel: '前藏',
       zheng: {
         divisions: [
-
+          {
+            key: 'egyptian-instruction', label: '埃及訓誨部', label_en: 'Egyptian Instruction (Sebayt)',
+            works: [
+          { title_zh: '卜塔霍特普訓誨', title_orig: 'The Instruction of Ptahhotep', author: '卜塔霍特普（傳為第五王朝維齊爾）', era: '約公元前 2400 年（現存中王國抄本）', place: '古埃及', language: '中埃及語', intro: '老維齊爾卜塔霍特普向子嗣傳授處世、謙遜、慎言與敬上的三十七則格言訓誨。世界最古的完整訓誨文獻之一，「父誡子」勸世體的祖型，道德勸諭文學的源頭活水。' },
+          { title_zh: '阿蒙尼摩比訓誨', title_orig: 'The Instruction of Amenemope', author: '阿蒙尼摩比', era: '約公元前 1300–1000 年', place: '古埃及', language: '晚埃及語', intro: '阿蒙尼摩比三十章的智慧訓誨，勸人知足、公正、慎言、憐貧。與《箴言》22:17–24:22「三十言」有直接文本淵源（學界公認箴言取材於此），是埃及訓誨影響希伯來—基督教勸世傳統的鐵證。' },
+          { title_zh: '阿尼訓誨', title_orig: 'The Instruction of Any', author: '阿尼', era: '約公元前 1550–1069 年（新王國）', place: '古埃及', language: '晚埃及語', intro: '書吏阿尼教導其子敬神、持家、擇友與言行的訓誨，末附父子關於「能否受教」的辯答。新王國市民階層的道德教本，訓誨文學貼近日常倫理的代表。' },
+          { title_zh: '對美里卡拉王的訓誨', title_orig: 'The Instruction Addressed to King Merikare', author: '佚名（傳為前朝法老遺訓）', era: '約公元前 2025 年（第一中間期後）', place: '古埃及', language: '中埃及語', intro: '託為老王向繼位者美里卡拉傳授治國、公義與敬神之道的王室訓誨，含「神愛順命者」「善行勝於獻牲」等語。「君王寶鑑」體的最古範本，政教倫理勸諭的埃及源頭。' },
+          { title_zh: '杜阿夫之子赫提訓誨', title_orig: 'The Satire of the Trades (Instruction of Dua-Khety)', author: '杜阿夫之子赫提', era: '約公元前 1900 年（中王國）', place: '古埃及', language: '中埃及語', intro: '父親送子入書吏學校途中，歷數各行辛苦、獨頌書吏之尊的勸學訓誨。勸學勵志文的古典，「唯有學問可貴」主題的最早鋪陳，教育勸諭的埃及名篇。' }
+        
+            ],
+          },
+          {
+            key: 'mesopotamian-wisdom', label: '美索不達米亞智慧勸誡部', label_en: 'Mesopotamian Wisdom and Counsel',
+            works: [
+          { title_zh: '智慧勸誡', title_orig: 'Counsels of Wisdom', author: '佚名（巴比倫智者）', era: '約公元前 2 千紀中', place: '巴比倫尼亞', language: '阿卡德語', intro: '父對子的巴比倫道德訓誡，勸戒惡交、慎言、待人以善、敬神守禮，「勿以惡報惡」等語與後世倫理相通。美索不達米亞版的訓誨文學，近東道德勸世的阿卡德代表。' },
+          { title_zh: '悲觀對話', title_orig: 'The Dialogue of Pessimism', author: '佚名（巴比倫智者）', era: '約公元前 1000 年', place: '巴比倫尼亞', language: '阿卡德語', intro: '主僕十番對話，主人每提一念，僕人先贊後駁，層層瓦解一切行動的意義，終及生死虛無。近東懷疑—勸世文學的奇篇，與《傳道書》「虛空」母題並置研究的關鍵文本。' },
+          { title_zh: '舒魯帕克訓誡', title_orig: 'The Instructions of Shuruppak', author: '託名舒魯帕克（傳為洪前智王）', era: '約公元前 2600 年', place: '蘇美爾', language: '蘇美爾語', intro: '洪水前古王舒魯帕克向子齊烏蘇德拉傳授的處世箴言，勸慎言、公正、遠惡。現存最古的訓誨文獻之一，蘇美爾「父誡子」勸世傳統的源頭，早於埃及訓誨。' },
+          { title_zh: '阿希卡爾箴言', title_orig: 'The Words of Ahiqar', author: '託名阿希卡爾（亞述宮廷賢臣）', era: '約公元前 7–5 世紀（象島亞蘭文抄本）', place: '亞述／後傳於埃及象島', language: '亞蘭文', intro: '亞述賢臣阿希卡爾教養姪兒的箴言與寓言，跨語言傳遍近東地中海，《多俾亞傳》引其人其事。近東智慧勸世跨文化流傳的典範，箴言—寓言合體勸諭的活化石。' }
+        
+            ],
+          },
+          {
+            key: 'persian-exhortation', label: '波斯倫理勸抉部', label_en: 'Persian Ethical Exhortation',
+            works: [
+          { title_zh: '伽薩', title_orig: 'The Gāthās of Zarathustra', author: '查拉圖斯特拉', era: '約公元前 1200–1000 年（一說更晚）', place: '古伊朗', language: '古阿維斯陀語', intro: '祆教先知查拉圖斯特拉親撰的十七首讚歌，呼籲人在真理（asha）與謊言（druj）之間自由抉擇、追隨善念善言善行。倫理二元勸抉的最古宗教詩，「呼召決斷」式勸世的先知源頭，深刻塑造末世論與良心抉擇傳統。' },
+          { title_zh: '耶斯那禮讚勸世', title_orig: 'Yasna (liturgical exhortation)', author: '佚名（祆教祭司傳統）', era: '約公元前 1 千紀', place: '古伊朗', language: '阿維斯陀語', intro: '祆教主祭典《耶斯那》中環繞《伽薩》的禮讚與勸勉文，於獻祭中反覆申明善惡抉擇與敬奉阿胡拉‧馬茲達。禮儀中行勸諭的祆教範式，「講道嵌入敬拜」結構的東方前身。' }
+        
+            ],
+          },
+          {
+            key: 'greco-roman-protreptic', label: '希羅修辭與勸諭部', label_en: 'Greco-Roman Rhetoric and Protreptic',
+            works: [
+          { title_zh: '勸勉篇', title_orig: 'Protrepticus (Aristotle)', author: '亞里斯多德', era: '約公元前 4 世紀', place: '雅典', language: '古希臘文', intro: '亞里斯多德勸人歸向哲學生活的勸世之作，原書佚而殘篇賴後世徵引傳世。「勸勉體」(protreptikos) 的命名之作，革利免《勸勉希臘人》書名與體裁的直接源頭，勸皈依文類的希臘祖本。' },
+          { title_zh: '提勒斯殘篇', title_orig: 'The Teles Fragments (Cynic diatribes)', author: '提勒斯', era: '約公元前 3 世紀', place: '希臘（麥加拉一帶）', language: '古希臘文', intro: '現存最早的犬儒「勸世談」(diatribe) 實例，論流亡、貧窮、自足，引比昂之語以通俗哲理勸慰大眾。街頭哲學佈道體的最古標本，diatribe 文類的直接見證。' },
+          { title_zh: '雅典葬禮演說傳統', title_orig: 'The Epitaphios (Funeral Oration) Tradition', author: '佚名（雅典演說傳統，伯里克利為代表）', era: '約公元前 5–4 世紀', place: '雅典', language: '古希臘文', intro: '雅典國葬中頌讚亡者、勸勉生者的公開演說傳統，以修昔底德所記伯里克利葬禮演說為典型。頌讚—勸勉合體的公共演說範式，尼撒的格列高利、安波羅修追思講章的異教前身。' },
+          { title_zh: '演說術原理', title_orig: 'Institutio Oratoria (Quintilian)', author: '昆體良', era: '約公元 95 年', place: '羅馬', language: '拉丁文', intro: '昆體良十二卷的修辭教育集大成，論演說者的養成、佈局、風格與品德（「善於言說的善人」）。羅馬修辭學的總綱，奧古斯丁《論基督教教義》卷四據以奠立基督教講道術的技術母本。' }
+        
+            ],
+          },
+          {
+            key: 'mission-antecedents', label: '宣教與宗教宣傳前身部', label_en: 'Antecedents of Mission and Religious Propaganda',
+            works: [
+          { title_zh: '阿育王摩崖與石柱敕令', title_orig: 'The Edicts of Ashoka (Rock and Pillar Edicts)', author: '孔雀王朝阿育王', era: '約公元前 3 世紀中葉', place: '古印度（遍佈南亞、犍陀羅至阿富汗）', language: '俗語（婆羅米／佉盧文，另有希臘文—亞蘭文雙語本）', intro: '阿育王皈依佛法後刻於全境岩石與石柱、公告「達摩」（正法）並勸行非暴力寬容的敕令；文中點名安條克、托勒密等希臘化君主，並記其遣使傳法四方。前基督教最具體的有組織宗教宣傳與差傳，「刻石公告＋差遣使團」的普世傳教原型，遠勝希羅任何對應物。' },
+          { title_zh: '佛教傳教團與錫蘭傳法', title_orig: 'The Buddhist Missions (Mahinda to Sri Lanka)', author: '佚名（上座部傳統，《島史》《大史》所記）', era: '約公元前 3 世紀', place: '錫蘭（斯里蘭卡）／犍陀羅', language: '巴利語', intro: '阿育王之子摩哂陀奉遣赴錫蘭傳法、立僧團的傳教事蹟，載於《島史》《大史》。跨海跨族的組織性傳教實例，「差傳—植教—譯經」模式的最早展演，佛教素材西傳（《巴拉姆與約沙法》）的遠因。' },
+          { title_zh: '伊西斯自述頌', title_orig: 'The Isis Aretalogy (e.g. the Kyme Aretalogy)', author: '佚名（伊西斯祭司傳統）', era: '約公元前 1 世紀—公元 2 世紀', place: '埃及／地中海世界（庫麥、安達羅斯等地出土）', language: '希臘文', intro: '以女神第一人稱自我宣告的頌文（「我是伊西斯，天地之主…我立法度、我分晝夜」），刻石傳布以招徠信眾。密儀宗教跨族群傳播的宣傳文，其「我是…」(egō eimi) 自我宣稱形式，與約翰福音「我是」諸語有形式批判上的實聯。' },
+          { title_zh: '祆教普世末世論', title_orig: 'Zoroastrian Universal Eschatology (Saoshyant, Frashokereti)', author: '佚名（祆教傳統，阿維斯陀晚期至中古波斯）', era: '約公元前 1 千紀（觀念累積）', place: '古伊朗', language: '阿維斯陀語／中古波斯語', intro: '祆教關於救世主（Saoshyant）降臨、死人復活、末日火煉與世界更新（Frashōkereti）的普世末世藍圖。「訊息驅動的普世宗教」最早的範型，經第二聖殿猶太教中介深塑基督教末世論與救主期待，是宗教宣傳「以終末呼召萬民」的東方源頭。' },
+          { title_zh: '密特拉密儀的跨帝國傳布', title_orig: 'The Diffusion of the Mithraic Mysteries', author: '佚名（密特拉密儀傳統）', era: '約公元前 1 世紀—公元 4 世紀', place: '羅馬帝國（軍團與商路沿線）', language: '拉丁文／希臘文（多為圖像與銘刻）', intro: '源出伊朗密特拉神、經羅馬軍團與商旅沿帝國傳布的密儀，以入教等級、共餐與圖像敘事跨族群招徠。自願入教、跨族傳播的擴散機制（非勸人改宗的 mission），與早期基督教在同一土壤競逐信眾的著名對照。' },
+          { title_zh: '犬儒巡遊傳道', title_orig: 'The Cynic Itinerant Preacher (Diogenes, Crates)', author: '佚名（犬儒傳統，第歐根尼、克拉特斯為代表）', era: '約公元前 4–3 世紀', place: '希臘世界', language: '古希臘文', intro: '犬儒哲人雲遊各城、安貧行乞、逢人針砭勸德的生活實踐，第歐根尼、克拉特斯為典型。「巡迴傳道者」人格的異教原型——雲遊、簡樸、當眾勸世，但止於勸德而不勸改宗，為福音巡迴佈道者提供了外在形象前身。' },
+          { title_zh: '帝國福音語彙與皇帝崇拜', title_orig: 'Imperial euangelion and the Ruler Cult (Priene Calendar Inscription)', author: '佚名（亞細亞行省議會）', era: '公元前 9 年', place: '小亞細亞普里耶涅', language: '希臘文', intro: '普里耶涅曆法碑以「福音」(euangelion) 稱奧古斯都誕辰為「世界的好消息之始」，屬帝國崇拜的宣傳語彙。基督教「福音」一詞所挪用並顛覆的異教母語，「反向繼承」宗教宣傳詞彙的關鍵物證。' },
+          { title_zh: '摩尼普世傳教設計', title_orig: 'Mani\'s Design of a Universal Missionary Religion', author: '摩尼', era: '公元 3 世紀', place: '薩珊波斯', language: '敘利亞文／中古波斯語', intro: '摩尼自覺融祆教、基督教與佛教而設計一「普世傳教宗教」，親撰經典、遣使東西、多語譯經以覆蓋天下。史上首個自覺「為普世傳教而設計」的宗教，惟與基督教同代（3 世紀），列此以標宗教宣傳自覺化的頂點與對照。' }
+        
+            ],
+          },
         ],
       },
       wai: { divisions: [] },
