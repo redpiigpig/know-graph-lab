@@ -17,8 +17,11 @@ import sys
 import time
 from pathlib import Path
 
+import io
+
 import requests
 from bs4 import BeautifulSoup
+from PIL import Image, ImageChops, ImageOps
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import xuanzang as xz  # noqa: E402  pure: parse_issue_no
@@ -85,13 +88,45 @@ def harvest_index() -> list[dict]:
     return [out[k] for k in sorted(out, reverse=True)]
 
 
-def cover_url(soup: BeautifulSoup) -> str | None:
-    """第一張 cms 圖即封面縮圖；升到 400x560 portrait。"""
+COVER_W, COVER_H = 400, 560  # 統一封面尺寸（portrait 5:7）
+
+
+def cover_original_url(soup: BeautifulSoup) -> str | None:
+    """第一張 cms 圖即封面；取原尺寸（cms/0/0）供本地裁切。"""
     for img in soup.find_all("img", src=True):
         m = re.search(r"/ird/img/cms/\d+/\d+/(\d+/\d{4}-\d{2}/\S+\.(?:jpg|jpeg|png))", img["src"], re.I)
         if m:
-            return f"{BASE}/ird/img/cms/400/560/{m.group(1)}"
+            return f"{BASE}/ird/img/cms/0/0/{m.group(1)}"
     return None
+
+
+def _trim_white(im: Image.Image) -> Image.Image:
+    bg = Image.new("RGB", im.size, (255, 255, 255))
+    diff = ImageChops.difference(im, bg).convert("L").point(lambda x: 255 if x > 18 else 0)
+    bb = diff.getbbox()
+    return im.crop(bb) if bb else im
+
+
+def process_cover(data: bytes) -> bytes:
+    """統一成 400x560 滿版正面封面：
+    - 寬版全展（前+書背+封底，ratio>1.5）→ 取中央正面（cx≈0.67W，ratio 0.71）
+    - 掃描薄白邊（裁切後仍填 ≥65%）→ 去白邊
+    - 稀疏文字封面（早期，裁切後 <65%）→ 保留原圖不裁
+    最後一律 ImageOps.fit 填滿，不留白、大小一致。"""
+    im = Image.open(io.BytesIO(data)).convert("RGB")
+    w, h = im.size
+    if w / h > 1.5:
+        fw = int(h * 0.71)
+        cx = int(w * 0.67)
+        im = im.crop((cx - fw // 2, 0, cx + fw // 2, h))
+    else:
+        t = _trim_white(im)
+        if t.width >= 0.65 * w and t.height >= 0.65 * h:
+            im = t
+    im = ImageOps.fit(im, (COVER_W, COVER_H), Image.LANCZOS)
+    out = io.BytesIO()
+    im.save(out, "JPEG", quality=88)
+    return out.getvalue()
 
 
 def parse_articles(soup: BeautifulSoup) -> list[dict]:
@@ -130,16 +165,15 @@ def main():
     result = []
     for it in issues:
         soup = BeautifulSoup(get(it["url"]).text, "html.parser")
-        cov = cover_url(soup)
+        cov = cover_original_url(soup)
         arts = parse_articles(soup)
         cover_path = ""
         if cov:
-            ext = ".png" if cov.lower().endswith(".png") else ".jpg"
-            fn = f"v{it['issue']:02d}{ext}"
+            fn = f"v{it['issue']:02d}.jpg"
             dest = COVERS / fn
             try:
                 if not dest.exists():
-                    dest.write_bytes(get(cov).content)
+                    dest.write_bytes(process_cover(get(cov).content))
                 cover_path = f"/Hsuan_Chuang_Studies/covers/{fn}"
             except Exception as e:  # noqa: BLE001
                 print(f"  期{it['issue']} cover fail: {e}", flush=True)
