@@ -1,6 +1,5 @@
-/** 長官後台 — 新增兵員（手動建帳號，無開放註冊）。 */
+/** 長官後台 — 新增兵員（手動建帳號，無開放註冊；五品質皆從 0 起）。 */
 import { sdSupabase, sdRequireChief } from '~/server/utils/soldierDiary'
-import { ATTR_START } from '~/data/soldierDiaryConfig'
 
 export default defineEventHandler(async (event) => {
   sdRequireChief(event)
@@ -12,7 +11,7 @@ export default defineEventHandler(async (event) => {
   if (!nm || !cs || !pw)
     throw createError({ statusCode: 400, message: '姓名、代號、通行碼皆為必填' })
   if (cs === (process.env.SOLDIER_CHIEF_CALLSIGN || '教官'))
-    throw createError({ statusCode: 400, message: '此代號保留給長官，請換一個' })
+    throw createError({ statusCode: 400, message: '此代號保留給教官，請換一個' })
 
   const supabase = sdSupabase()
   const { data: existing } = await supabase
@@ -24,8 +23,6 @@ export default defineEventHandler(async (event) => {
     .insert({
       name: nm, callsign: cs, access_code: pw,
       squad: String(squad || '').trim(), note: String(note || '').trim(),
-      attr_strength: ATTR_START, attr_endurance: ATTR_START,
-      attr_discipline: ATTR_START, attr_bearing: ATTR_START,
     })
     .select('id')
     .single()

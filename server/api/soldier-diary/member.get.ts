@@ -1,9 +1,9 @@
 /**
- * 兵員個人檔案 + 日記清單。
+ * 兵員個人檔案 + 日記清單 + 軍種進度。
  * recruit 只能看自己；chief 可帶 ?id= 看任一人。
  */
 import { sdSupabase, sdRequireAuth } from '~/server/utils/soldierDiary'
-import { rankForXp, computeBadges, computeStreak } from '~/data/soldierDiaryConfig'
+import { rankForXp, computeBadges, computeStreak, branchStates, activeBranch } from '~/data/soldierDiaryConfig'
 import { tzToday } from '~/server/utils/today'
 
 export default defineEventHandler(async (event) => {
@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
   const supabase = sdSupabase()
   const { data: m, error } = await supabase
     .from('sd_members')
-    .select('id, name, callsign, squad, xp, attr_strength, attr_endurance, attr_discipline, attr_bearing, status, note, created_at, last_login')
+    .select('id, name, callsign, squad, xp, q_obedience, q_strength, q_endurance, q_composure, q_challenge, status, note, created_at, last_login')
     .eq('id', targetId)
     .maybeSingle()
   if (error) throw createError({ statusCode: 500, message: error.message })
@@ -32,31 +32,29 @@ export default defineEventHandler(async (event) => {
     .order('id', { ascending: false })
 
   const logList = logs || []
-  const attrs = {
-    strength: m.attr_strength, endurance: m.attr_endurance,
-    discipline: m.attr_discipline, bearing: m.attr_bearing,
+  const qualities = {
+    obedience: m.q_obedience, strength: m.q_strength, endurance: m.q_endurance,
+    composure: m.q_composure, challenge: m.q_challenge,
   }
   const today = tzToday()
   const dates = logList.map((l) => l.log_date)
   const streak = computeStreak(dates, today)
-  const totalDrillMin = logList.reduce((s, l) => s + (Number(l.payload?.durationMin) || 0), 0)
-  const badges = computeBadges({
-    logCount: logList.length,
-    streak,
-    maxAttr: Math.max(attrs.strength, attrs.endurance, attrs.discipline, attrs.bearing),
-    totalDrillMin,
-    xp: m.xp,
-  })
+  const totalTrainMin = logList.reduce((s, l) => s + (Number(l.payload?.durationMin) || 0), 0)
+  const badges = computeBadges({ logCount: logList.length, streak, totalTrainMin, xp: m.xp, qualities })
+  const active = activeBranch(qualities)
 
   return {
     member: {
       id: m.id, name: m.name, callsign: m.callsign, squad: m.squad,
-      status: m.status, note: m.note, xp: m.xp, attrs,
+      status: m.status, note: m.note, xp: m.xp, qualities,
       rankInfo: rankForXp(m.xp),
+      branches: branchStates(qualities),
+      currentBranch: active ? active.key : null,
+      graduated: !active,
       createdAt: m.created_at, lastLogin: m.last_login,
     },
     logs: logList,
-    stats: { streak, totalDrillMin, logCount: logList.length, todayLogged: dates.includes(today) },
+    stats: { streak, totalTrainMin, logCount: logList.length, todayLogged: dates.includes(today) },
     badges,
   }
 })

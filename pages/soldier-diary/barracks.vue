@@ -18,19 +18,21 @@
       <div v-else-if="!members.length" class="sd-panel sdb-empty">尚無兵員，切到「編成」新增第一名。</div>
       <div v-else class="sd-panel sdb-roster">
         <div class="sdb-row sdb-row--head">
-          <span>軍階</span><span>代號 / 姓名</span><span>小隊</span><span>XP</span>
-          <span>素質（力/耐/律/儀）</span><span>日記</span><span>最近回報</span>
+          <span>軍階</span><span>代號 / 姓名</span><span>當前軍種</span><span>已破</span><span>XP</span><span>日記</span><span>最近回報</span>
         </div>
         <button v-for="m in members" :key="m.id" class="sdb-row" @click="openMember(m.id)">
           <span class="sdb-rank"><b>{{ m.rank.insignia }}</b>{{ m.rank.name }}</span>
           <span>
-            <b class="sdb-cs">{{ m.callsign }}</b>
-            <span class="sdb-nm">{{ m.name }}</span>
+            <b class="sdb-cs">{{ m.callsign }}</b><span class="sdb-nm">{{ m.name }}</span>
             <span v-if="m.status === 'discharged'" class="sdb-discharged">退伍</span>
           </span>
-          <span class="sdb-squad">{{ m.squad || '—' }}</span>
+          <span class="sdb-branch">
+            <template v-if="m.graduated"><b class="sdb-grad">👑 結訓</b></template>
+            <template v-else-if="m.currentBranch">{{ m.currentBranch.name }}<em>{{ qName(m.currentBranch.quality) }}</em></template>
+            <template v-else>—</template>
+          </span>
+          <span class="sdb-conq">{{ m.conqueredCount }}/5</span>
           <span class="sdb-xp">{{ m.xp }}</span>
-          <span class="sdb-attrs">{{ m.attrs.strength }}/{{ m.attrs.endurance }}/{{ m.attrs.discipline }}/{{ m.attrs.bearing }}</span>
           <span>{{ m.logCount }}<span v-if="m.pendingCount" class="sdb-pending">{{ m.pendingCount }}待閱</span></span>
           <span class="sdb-last">{{ m.lastReport || '—' }}</span>
         </button>
@@ -44,14 +46,14 @@
       <div v-else class="sdb-review-list">
         <div v-for="l in pendingLogs" :key="l.id" class="sd-panel sdb-review">
           <div class="sdb-review-top">
-            <b class="sdb-cs">{{ l.memberCallsign }}</b>
-            <span class="sdb-nm">{{ l.memberName }}</span>
+            <b class="sdb-cs">{{ l.memberCallsign }}</b><span class="sdb-nm">{{ l.memberName }}</span>
+            <span v-if="branchMap[l.type]" class="sdb-branch-tag" :style="{ color: branchMap[l.type].color }">{{ branchMap[l.type].name }}</span>
             <span class="sdb-review-date">{{ l.logDate }}</span>
             <span class="sdb-review-xp">+{{ l.xpAwarded }} XP</span>
             <span class="sdb-log-self">自評 {{ '★'.repeat(l.selfScore || 0) }}</span>
           </div>
           <div class="sdb-review-body">
-            <span v-for="k in (l.payload?.drillItems || [])" :key="k" class="sdd-log-tag">{{ drillName(k) }}</span>
+            <span v-for="k in (l.payload?.trainingItems || [])" :key="k" class="sdd-log-tag">{{ itemName(k) }}</span>
             <span v-if="l.payload?.durationMin" class="sdb-dur">{{ l.payload.durationMin }}分</span>
           </div>
           <p v-if="l.payload?.note" class="sdb-review-note">「{{ l.payload.note }}」</p>
@@ -67,11 +69,11 @@
       </div>
     </section>
 
-    <!-- 編成（新增兵員） -->
+    <!-- 編成 -->
     <section v-show="tab === 'enlist'" class="sdb-enlist-wrap">
       <div class="sd-panel sd-panel--raised sdb-enlist">
         <p class="sd-eyebrow">新增兵員</p>
-        <p class="sd-sub sdb-enlist-sub">帳號由教官建立配發；兵員以「代號＋通行碼」登入。</p>
+        <p class="sd-sub sdb-enlist-sub">帳號由教官建立配發；兵員以「代號＋通行碼」登入，從陸軍開始一一突破。</p>
         <div class="sdb-form-row">
           <div class="sdb-field"><label class="sd-label">姓名</label><input v-model="nf.name" class="sd-input" placeholder="真實姓名" /></div>
           <div class="sdb-field"><label class="sd-label">代號</label><input v-model="nf.callsign" class="sd-input" placeholder="登入用代號（唯一）" /></div>
@@ -87,7 +89,7 @@
       </div>
     </section>
 
-    <!-- 兵員詳情 modal -->
+    <!-- 兵員詳情 -->
     <div v-if="detail" class="sdb-modal" @click.self="detail = null">
       <div class="sd-panel sd-panel--raised sdb-detail">
         <button class="sdb-close" @click="detail = null">✕</button>
@@ -99,13 +101,21 @@
           </div>
         </div>
 
+        <!-- 軍種進度 -->
+        <div class="sdb-detail-branches">
+          <span v-for="b in detail.member.branches" :key="b.branch.key" class="sdb-br-chip"
+                :class="{ 'sdb-br-chip--done': b.conquered, 'sdb-br-chip--active': b.active, 'sdb-br-chip--lock': b.locked }"
+                :style="{ '--bc': b.branch.color }">
+            {{ b.branch.name }} {{ b.quality }}
+          </span>
+        </div>
+
         <div class="sdb-detail-cols">
-          <!-- 屬性 / 獎懲 -->
           <div class="sdb-detail-panel">
-            <p class="sd-eyebrow">調整素質與獎懲</p>
-            <div v-for="a in ATTRIBUTES" :key="a.key" class="sdb-attr-edit">
-              <span class="sdb-attr-lbl"><b :style="{ color: a.color }">{{ a.short }}</b>{{ a.name }}</span>
-              <input v-model.number="editAttrs[a.key]" type="number" min="0" max="100" class="sd-input sdb-attr-num" />
+            <p class="sd-eyebrow">調整品質與獎懲</p>
+            <div v-for="q in QUALITIES" :key="q.key" class="sdb-attr-edit">
+              <span class="sdb-attr-lbl"><b :style="{ color: q.color }">{{ q.short }}</b>{{ q.name }}</span>
+              <input v-model.number="editQ[q.key]" type="number" min="0" max="100" class="sd-input sdb-attr-num" />
             </div>
             <div class="sdb-detail-row">
               <div class="sdb-field"><label class="sd-label">XP 增減</label><input v-model.number="editXpDelta" type="number" class="sd-input" placeholder="±XP" /></div>
@@ -122,18 +132,18 @@
             <p v-if="detailMsg" class="sd-ok sdb-detail-msg">{{ detailMsg }}</p>
           </div>
 
-          <!-- 日記史 -->
           <div class="sdb-detail-panel">
             <p class="sd-eyebrow">日記紀錄（{{ detail.logs.length }} 篇）</p>
             <div class="sdb-detail-logs">
               <div v-for="l in detail.logs" :key="l.id" class="sdb-detail-log">
                 <div class="sdd-log-top">
                   <span class="sdd-log-date">{{ l.log_date }}</span>
+                  <span v-if="branchMap[l.type]" class="sdb-branch-tag" :style="{ color: branchMap[l.type].color }">{{ branchMap[l.type].name }}</span>
                   <span class="sdd-log-xp">+{{ l.xp_awarded }}</span>
                   <span v-if="l.status === 'reviewed'" class="sdd-log-reviewed">已閱</span>
                 </div>
                 <div class="sdd-log-body">
-                  <span v-for="k in (l.payload?.drillItems || [])" :key="k" class="sdd-log-tag">{{ drillName(k) }}</span>
+                  <span v-for="k in (l.payload?.trainingItems || [])" :key="k" class="sdd-log-tag">{{ itemName(k) }}</span>
                 </div>
                 <p v-if="l.payload?.note" class="sdd-log-note">「{{ l.payload.note }}」</p>
               </div>
@@ -149,7 +159,7 @@
 <script setup lang="ts">
 import { ref, reactive, computed, onMounted } from 'vue'
 import { useSoldierSession } from '~/composables/useSoldierSession'
-import { ATTRIBUTES, drillItemMap } from '~/data/soldierDiaryConfig'
+import { QUALITIES, branchMap, trainingItemMap, qualityMap } from '~/data/soldierDiaryConfig'
 
 definePageMeta({ layout: 'soldier-diary' })
 useHead({ title: '營區指揮台 — 大兵日記' })
@@ -169,7 +179,8 @@ const pendingLogs = ref<any[]>([])
 const loadingReview = ref(false)
 const pendingCount = computed(() => members.value.reduce((s, m) => s + (m.pendingCount || 0), 0))
 
-const drillName = (k: string) => drillItemMap[k]?.name || k
+const itemName = (k: string) => trainingItemMap[k]?.name || k
+const qName = (k: string) => qualityMap[k as keyof typeof qualityMap]?.name || k
 
 async function loadRoster() {
   loadingRoster.value = true
@@ -188,7 +199,6 @@ async function loadReview() {
   } finally { loadingReview.value = false }
 }
 
-/* ── 批閱 ── */
 const reviewDraft = reactive<Record<number, { score: number; note: string; xpDelta: number | null }>>({})
 const reviewing = ref<number | null>(null)
 const setScore = (id: number, n: number) => { reviewDraft[id].score = n }
@@ -203,7 +213,6 @@ async function doReview(l: any) {
   } finally { reviewing.value = null }
 }
 
-/* ── 編成 ── */
 const nf = reactive({ name: '', callsign: '', code: '', squad: '', note: '' })
 const enlisting = ref(false)
 const enlistMsg = ref(''); const enlistErr = ref('')
@@ -221,13 +230,10 @@ async function enlist() {
   } finally { enlisting.value = false }
 }
 
-/* ── 詳情 ── */
 const detail = ref<any>(null)
-const editAttrs = reactive<Record<string, number>>({ strength: 0, endurance: 0, discipline: 0, bearing: 0 })
+const editQ = reactive<Record<string, number>>({ obedience: 0, strength: 0, endurance: 0, composure: 0, challenge: 0 })
 const editXpDelta = ref<number | null>(null)
-const editCode = ref('')
-const editSquad = ref('')
-const editNote = ref('')
+const editCode = ref(''); const editSquad = ref(''); const editNote = ref('')
 const savingMember = ref(false)
 const detailMsg = ref('')
 
@@ -235,14 +241,9 @@ async function openMember(id: number) {
   detailMsg.value = ''
   const r: any = await authedFetch(`/api/soldier-diary/member?id=${id}`)
   detail.value = r
-  editAttrs.strength = r.member.attrs.strength
-  editAttrs.endurance = r.member.attrs.endurance
-  editAttrs.discipline = r.member.attrs.discipline
-  editAttrs.bearing = r.member.attrs.bearing
-  editXpDelta.value = null
-  editCode.value = ''
-  editSquad.value = r.member.squad || ''
-  editNote.value = r.member.note || ''
+  for (const q of QUALITIES) editQ[q.key] = r.member.qualities[q.key]
+  editXpDelta.value = null; editCode.value = ''
+  editSquad.value = r.member.squad || ''; editNote.value = r.member.note || ''
 }
 
 async function saveMember() {
@@ -252,10 +253,8 @@ async function saveMember() {
     await authedFetch('/api/soldier-diary/member-update', {
       method: 'POST',
       body: {
-        id: detail.value.member.id,
-        attrs: { ...editAttrs },
-        xpDelta: editXpDelta.value || undefined,
-        code: editCode.value || undefined,
+        id: detail.value.member.id, qualities: { ...editQ },
+        xpDelta: editXpDelta.value || undefined, code: editCode.value || undefined,
         squad: editSquad.value, note: editNote.value,
       },
     })
@@ -291,22 +290,24 @@ onMounted(async () => {
 .sdb-empty { padding: 32px; }
 
 .sdb-roster { overflow-x: auto; }
-.sdb-row { display: grid; grid-template-columns: 120px 1.4fr 0.9fr 60px 1.2fr 90px 100px; align-items: center; gap: 10px; width: 100%; padding: 11px 16px; border: none; background: none; border-bottom: 1px solid var(--sd-line); color: var(--sd-khaki); font-size: 0.82rem; text-align: left; cursor: pointer; }
+.sdb-row { display: grid; grid-template-columns: 118px 1.4fr 1.2fr 56px 60px 88px 100px; align-items: center; gap: 10px; width: 100%; padding: 11px 16px; border: none; background: none; border-bottom: 1px solid var(--sd-line); color: var(--sd-khaki); font-size: 0.82rem; text-align: left; cursor: pointer; }
 .sdb-row--head { color: var(--sd-muted); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; cursor: default; background: #171a11; }
 button.sdb-row:hover:not(.sdb-row--head) { background: rgba(122,139,63,0.08); }
 .sdb-rank b { color: var(--sd-brass); margin-right: 6px; }
 .sdb-cs { color: var(--sd-olive-bright); font-weight: 700; margin-right: 8px; }
 .sdb-nm { color: var(--sd-khaki); }
 .sdb-discharged { color: var(--sd-red); font-size: 0.68rem; border: 1px solid var(--sd-red); padding: 0 5px; border-radius: 2px; margin-left: 6px; }
-.sdb-squad { color: var(--sd-muted); }
+.sdb-branch em { color: var(--sd-muted); font-style: normal; font-size: 0.72rem; margin-left: 6px; }
+.sdb-grad { color: var(--sd-brass); }
+.sdb-conq { color: var(--sd-khaki); font-variant-numeric: tabular-nums; }
 .sdb-xp { color: var(--sd-sand); font-weight: 700; }
-.sdb-attrs { color: var(--sd-khaki); font-variant-numeric: tabular-nums; }
 .sdb-pending { color: var(--sd-red); font-size: 0.68rem; margin-left: 6px; }
 .sdb-last { color: var(--sd-muted); font-size: 0.76rem; }
 
 .sdb-review-list { display: flex; flex-direction: column; gap: 12px; }
 .sdb-review { padding: 16px 18px; }
 .sdb-review-top { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.sdb-branch-tag { font-size: 0.74rem; font-weight: 700; }
 .sdb-review-date { color: var(--sd-muted); font-size: 0.8rem; }
 .sdb-review-xp { color: var(--sd-brass); font-size: 0.8rem; }
 .sdb-log-self { color: var(--sd-muted); font-size: 0.78rem; }
@@ -332,11 +333,16 @@ button.sdb-row:hover:not(.sdb-row--head) { background: rgba(122,139,63,0.08); }
 .sdb-detail { width: 100%; max-width: 820px; padding: 26px 28px; position: relative; }
 .sdb-close { position: absolute; top: 14px; right: 16px; background: none; border: none; color: var(--sd-muted); font-size: 1rem; cursor: pointer; }
 .sdb-close:hover { color: var(--sd-red); }
-.sdb-detail-head { display: flex; gap: 14px; align-items: center; margin-bottom: 20px; }
+.sdb-detail-head { display: flex; gap: 14px; align-items: center; margin-bottom: 16px; }
 .sdd-rank-badge { width: 52px; height: 52px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 2px solid var(--sd-brass); border-radius: 4px; color: var(--sd-brass); font-size: 1.1rem; font-weight: 700; background: rgba(203,164,58,0.08); }
 .sdb-detail-name { font-size: 1.2rem; margin: 0 0 4px; }
 .sdd-id-meta { display: flex; gap: 10px; align-items: center; margin: 0; }
 .sdd-name { color: var(--sd-khaki); font-size: 0.84rem; }
+.sdb-detail-branches { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 18px; }
+.sdb-br-chip { font-size: 0.72rem; padding: 3px 9px; border-radius: 2px; border: 1px solid var(--sd-line); color: var(--sd-muted); background: #171a11; }
+.sdb-br-chip--done { border-color: var(--bc); color: var(--bc); }
+.sdb-br-chip--active { border-color: var(--sd-brass); color: var(--sd-brass); font-weight: 700; }
+.sdb-br-chip--lock { opacity: 0.4; }
 .sdb-detail-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .sdb-attr-edit { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 8px 0; }
 .sdb-attr-lbl { font-size: 0.82rem; color: var(--sd-khaki); }
@@ -347,7 +353,7 @@ button.sdb-row:hover:not(.sdb-row--head) { background: rgba(122,139,63,0.08); }
 .sdb-detail-msg { margin-top: 10px; }
 .sdb-detail-logs { max-height: 360px; overflow-y: auto; }
 .sdb-detail-log { padding: 9px 0; border-bottom: 1px solid var(--sd-line); }
-.sdd-log-top { display: flex; gap: 10px; align-items: center; }
+.sdd-log-top { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
 .sdd-log-date { font-weight: 700; color: var(--sd-sand); font-size: 0.82rem; }
 .sdd-log-xp { color: var(--sd-brass); font-size: 0.78rem; }
 .sdd-log-reviewed { color: var(--sd-olive-bright); font-size: 0.68rem; border: 1px solid var(--sd-olive); padding: 0 5px; border-radius: 2px; }
@@ -357,7 +363,7 @@ button.sdb-row:hover:not(.sdb-row--head) { background: rgba(122,139,63,0.08); }
 @media (max-width: 720px) {
   .sdb-detail-cols { grid-template-columns: 1fr; }
   .sdb-form-row { flex-direction: column; gap: 0; }
-  .sdb-row { grid-template-columns: 100px 1.4fr 70px 60px; }
+  .sdb-row { grid-template-columns: 100px 1.3fr 1fr 50px; }
   .sdb-row > span:nth-child(5), .sdb-row > span:nth-child(6), .sdb-row > span:nth-child(7) { display: none; }
 }
 </style>

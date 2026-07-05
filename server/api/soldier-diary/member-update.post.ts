@@ -1,10 +1,14 @@
 /**
- * 長官後台 — 更新兵員：可改小隊/備註/狀態、重設通行碼、手動微調屬性或 XP（獎懲）。
+ * 長官後台 — 更新兵員：改小隊/備註/狀態、重設通行碼、手動微調五品質或 XP（獎懲）。
  */
 import { sdSupabase, sdRequireChief } from '~/server/utils/soldierDiary'
-import { ATTR_MIN, ATTR_MAX } from '~/data/soldierDiaryConfig'
+import { QUALITY_MIN, QUALITY_MAX, QUALITIES } from '~/data/soldierDiaryConfig'
 
-const clampAttr = (n: number) => Math.max(ATTR_MIN, Math.min(ATTR_MAX, Math.round(n)))
+const clampQ = (n: number) => Math.max(QUALITY_MIN, Math.min(QUALITY_MAX, Math.round(n)))
+const COL: Record<string, string> = {
+  obedience: 'q_obedience', strength: 'q_strength', endurance: 'q_endurance',
+  composure: 'q_composure', challenge: 'q_challenge',
+}
 
 export default defineEventHandler(async (event) => {
   sdRequireChief(event)
@@ -24,14 +28,13 @@ export default defineEventHandler(async (event) => {
   if (body.status === 'active' || body.status === 'discharged') patch.status = body.status
   if (typeof body.code === 'string' && body.code.trim()) patch.access_code = body.code.trim()
 
-  // 屬性覆寫（絕對值）
-  const a = body.attrs || {}
-  if (typeof a.strength === 'number') patch.attr_strength = clampAttr(a.strength)
-  if (typeof a.endurance === 'number') patch.attr_endurance = clampAttr(a.endurance)
-  if (typeof a.discipline === 'number') patch.attr_discipline = clampAttr(a.discipline)
-  if (typeof a.bearing === 'number') patch.attr_bearing = clampAttr(a.bearing)
+  // 五品質覆寫（絕對值）
+  const q = body.qualities || {}
+  for (const def of QUALITIES) {
+    if (typeof q[def.key] === 'number') patch[COL[def.key]] = clampQ(q[def.key])
+  }
 
-  // XP 增減（獎懲）
+  // XP 增減 / 覆寫（獎懲）
   if (typeof body.xpDelta === 'number' && body.xpDelta !== 0)
     patch.xp = Math.max(0, cur.xp + Math.round(body.xpDelta))
   if (typeof body.xp === 'number') patch.xp = Math.max(0, Math.round(body.xp))
