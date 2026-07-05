@@ -21,7 +21,7 @@ import io
 
 import requests
 from bs4 import BeautifulSoup
-from PIL import Image, ImageChops, ImageOps
+from PIL import Image, ImageOps
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import xuanzang as xz  # noqa: E402  pure: parse_issue_no
@@ -100,11 +100,28 @@ def cover_original_url(soup: BeautifulSoup) -> str | None:
     return None
 
 
-def _trim_white(im: Image.Image) -> Image.Image:
-    bg = Image.new("RGB", im.size, (255, 255, 255))
-    diff = ImageChops.difference(im, bg).convert("L").point(lambda x: 255 if x > 18 else 0)
-    bb = diff.getbbox()
-    return im.crop(bb) if bb else im
+def _trim_white(im: Image.Image, thr: int = 230) -> Image.Image:
+    """去除四周近白邊框：以整列／整欄平均亮度判界，門檻介於封面本體與白邊之間，
+    忽略孤立殘點（getbbox 會被殘點卡住無法裁淨，如 v7 底部淺灰白邊）。"""
+    g = im.convert("L")
+    w, h = im.size
+    px = g.load()
+    xs, ys = range(0, w, 4), range(0, h, 4)
+    row_white = lambda y: sum(px[x, y] for x in xs) / len(xs) > thr
+    col_white = lambda x: sum(px[x, y] for y in ys) / len(ys) > thr
+    t = 0
+    while t < h - 1 and row_white(t):
+        t += 1
+    b = h - 1
+    while b > t and row_white(b):
+        b -= 1
+    l = 0
+    while l < w - 1 and col_white(l):
+        l += 1
+    r = w - 1
+    while r > l and col_white(r):
+        r -= 1
+    return im.crop((l, t, r + 1, b + 1))
 
 
 def process_cover(data: bytes) -> bytes:
