@@ -16,11 +16,18 @@
           <aside class="w-48 flex-shrink-0 hidden lg:block">
             <div class="sticky top-4 space-y-0.5 max-h-[80vh] overflow-auto pr-1">
               <p class="text-[11px] font-semibold text-gray-400 uppercase tracking-widest mb-2 px-2">目錄</p>
-              <button v-for="(t, i) in toc" :key="i" @click="scrollTo(t.id)"
-                :class="['w-full text-left px-2 py-1.5 rounded-lg text-xs leading-snug transition-colors',
-                         activeId === t.id ? 'bg-violet-100 text-violet-700 font-medium' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-700']">
-                {{ t.title }}
-              </button>
+              <div v-for="(t, i) in toc" :key="i" class="group flex items-center gap-0.5">
+                <button @click="scrollTo(t.id)"
+                  :class="['flex-1 min-w-0 text-left px-2 py-1.5 rounded-lg text-xs leading-snug transition-colors truncate',
+                           activeId === t.id ? 'bg-violet-100 text-violet-700 font-medium' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-700']">
+                  {{ t.title }}
+                </button>
+                <button v-if="speech.supported" @click="startSpeak(t.id)" :title="`朗讀「${t.title}」`"
+                  :class="['flex-shrink-0 w-6 h-6 rounded-md grid place-items-center text-[13px] transition',
+                           speech.readingId === t.id ? 'text-violet-600 opacity-100' : 'text-gray-400 opacity-0 group-hover:opacity-100 hover:text-violet-600 hover:bg-violet-50']">
+                  <span v-if="speech.readingId === t.id" class="animate-pulse">🔊</span><span v-else>▶</span>
+                </button>
+              </div>
             </div>
           </aside>
 
@@ -39,6 +46,39 @@
             </div>
 
             <div v-show="tab === 'book'">
+            <!-- 朗讀控制列（瀏覽器原生語音合成；分章／全文） -->
+            <div v-if="speech.supported" class="flex items-center flex-wrap gap-2 mb-5 px-3 py-2 rounded-xl bg-white border border-gray-100">
+              <button v-if="!speech.playing" @click="startSpeak()"
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-violet-600 text-white text-sm font-medium hover:bg-violet-700 transition">
+                <span>▶</span> 朗讀全文
+              </button>
+              <template v-else>
+                <button @click="togglePause"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-violet-100 text-violet-700 text-sm font-medium hover:bg-violet-200 transition">
+                  {{ speech.paused ? '▶ 繼續' : '⏸ 暫停' }}
+                </button>
+                <button @click="stopSpeak"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 text-gray-600 text-sm font-medium hover:bg-gray-200 transition">
+                  ⏹ 停止
+                </button>
+                <span class="text-xs text-gray-500 min-w-0 truncate">
+                  正在朗讀：<span class="text-violet-600 font-medium">{{ readingTitle || '⋯' }}</span>
+                </span>
+              </template>
+              <label class="ml-auto flex items-center gap-1.5 text-xs text-gray-500 flex-shrink-0">
+                語速
+                <select v-model.number="speech.rate"
+                  class="px-1.5 py-1 border border-gray-200 rounded-md text-xs bg-white text-gray-700">
+                  <option :value="0.75">0.75×</option>
+                  <option :value="0.9">0.9×</option>
+                  <option :value="1">1×</option>
+                  <option :value="1.15">1.15×</option>
+                  <option :value="1.3">1.3×</option>
+                  <option :value="1.5">1.5×</option>
+                </select>
+              </label>
+            </div>
+
             <!-- mobile chapter jump -->
             <div class="lg:hidden mb-4">
               <select @change="scrollTo(($event.target as HTMLSelectElement).value)"
@@ -265,6 +305,120 @@ function onCiteOut(e: MouseEvent) {
 function hidePreview() { hideTimer = setTimeout(() => { preview.visible = false }, 180) }
 function cancelHide() { if (hideTimer) { clearTimeout(hideTimer); hideTimer = null } }
 
+// ── 朗讀（瀏覽器原生 SpeechSynthesis，分章排隊播放） ──────────────
+// 內容已用 <h2 id="ch-N"> 分章；逐章從已渲染的 DOM 抽純文字，切成短句
+// utterance 排隊播放（短句避開 Chrome 長語句 ~15s 截斷 bug，並可逐章高亮）。
+const speech = reactive({ supported: false, playing: false, paused: false, readingId: '', rate: 1 })
+const readingTitle = computed(() => toc.value.find(t => t.id === speech.readingId)?.title ?? '')
+
+let voice: SpeechSynthesisVoice | null = null
+let queue: { chId: string; text: string }[] = []
+let qi = 0
+let keepAlive: ReturnType<typeof setInterval> | null = null
+
+function pickVoice() {
+  const vs = window.speechSynthesis?.getVoices?.() ?? []
+  voice = vs.find(v => /^zh[-_]tw/i.test(v.lang))
+       || vs.find(v => /^zh[-_]hk/i.test(v.lang))
+       || vs.find(v => /^zh/i.test(v.lang))
+       || null
+}
+
+// 逐章抽文字：走 .book-prose 直接子節點，遇 <h2> 換章；移除引用編號/論證符號/出處註腳等雜訊
+function chapterTextMap(): { id: string; title: string; text: string }[] {
+  const article = document.querySelector('.book-prose')
+  if (!article) return []
+  const res: { id: string; title: string; text: string }[] = []
+  let cur: { id: string; title: string; parts: string[] } | null = null
+  const flush = () => { if (cur && cur.parts.length) res.push({ id: cur.id, title: cur.title, text: cur.parts.join('\n') }) }
+  for (const node of Array.from(article.children)) {
+    const el = node as HTMLElement
+    if (el.tagName === 'H2') {
+      flush()
+      const title = (el.textContent || '').trim()
+      cur = { id: el.id || `ch-x`, title, parts: title ? [title] : [] }
+      continue
+    }
+    if (!cur) cur = { id: 'ch-0', title: '', parts: [] }
+    const c = el.cloneNode(true) as HTMLElement
+    c.querySelectorAll('.cite-seq, .arg-op, .section-source, .chapter-source').forEach(n => n.remove())
+    const t = (c.textContent || '').replace(/[ \t]+/g, ' ').replace(/\n{2,}/g, '\n').trim()
+    if (t) cur.parts.push(t)
+  }
+  flush()
+  return res
+}
+
+// 切成 ≤120 字的短句 utterance（依中文標點斷句後合併）
+function toChunks(text: string, chId: string): { chId: string; text: string }[] {
+  const sents = text.split(/(?<=[。！？；\n])/).map(s => s.trim()).filter(Boolean)
+  const out: { chId: string; text: string }[] = []
+  let buf = ''
+  for (const s of sents) {
+    if (buf && (buf + s).length > 120) { out.push({ chId, text: buf }); buf = s }
+    else buf += s
+  }
+  if (buf) out.push({ chId, text: buf })
+  return out
+}
+
+function speakNext() {
+  const synth = window.speechSynthesis
+  if (!synth || qi >= queue.length) { stopSpeak(); return }
+  const chunk = queue[qi]
+  if (chunk.chId !== speech.readingId) {
+    speech.readingId = chunk.chId
+    activeId.value = chunk.chId
+    scrollTo(chunk.chId)
+  }
+  const u = new SpeechSynthesisUtterance(chunk.text)
+  u.lang = 'zh-TW'
+  if (voice) u.voice = voice
+  u.rate = speech.rate
+  u.onend = () => { if (speech.playing) { qi++; speakNext() } }
+  u.onerror = () => { if (speech.playing) { qi++; speakNext() } }
+  synth.speak(u)
+}
+
+// chapterId 有值＝只念該章；否則念全文
+function startSpeak(chapterId?: string) {
+  const synth = window.speechSynthesis
+  if (!synth) return
+  synth.cancel()
+  pickVoice()
+  const chapters = chapterTextMap()
+  const chosen = chapterId ? chapters.filter(c => c.id === chapterId) : chapters
+  queue = chosen.flatMap(c => toChunks(c.text, c.id))
+  qi = 0
+  if (!queue.length) return
+  speech.playing = true; speech.paused = false; speech.readingId = ''
+  armKeepAlive()
+  speakNext()
+}
+
+function togglePause() {
+  const synth = window.speechSynthesis
+  if (!synth || !speech.playing) return
+  if (speech.paused) { synth.resume(); speech.paused = false }
+  else { synth.pause(); speech.paused = true }
+}
+
+function stopSpeak() {
+  window.speechSynthesis?.cancel()
+  speech.playing = false; speech.paused = false; speech.readingId = ''
+  queue = []; qi = 0
+  if (keepAlive) { clearInterval(keepAlive); keepAlive = null }
+}
+
+// Chrome 長時間播放會自行暫停；定時 pause→resume 續命
+function armKeepAlive() {
+  if (keepAlive) clearInterval(keepAlive)
+  keepAlive = setInterval(() => {
+    const s = window.speechSynthesis
+    if (s && speech.playing && !speech.paused) { s.pause(); s.resume() }
+  }, 9000)
+}
+
 async function load() {
   pending.value = true
   try {
@@ -281,8 +435,15 @@ async function load() {
     }
   } catch { html.value = '' } finally { pending.value = false }
 }
-onMounted(() => { load(); loadReview() })
-watch(() => bid.value, () => { tab.value = 'book'; load(); loadReview() })
+onMounted(() => {
+  load(); loadReview()
+  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+    speech.supported = true
+    pickVoice()
+    window.speechSynthesis.onvoiceschanged = pickVoice
+  }
+})
+watch(() => bid.value, () => { stopSpeak(); tab.value = 'book'; load(); loadReview() })
 
 // Highlight the chapter currently in view.
 let observer: IntersectionObserver | null = null
@@ -296,7 +457,7 @@ watch(html, async () => {
   }, { rootMargin: '0px 0px -75% 0px' })
   document.querySelectorAll('.book-prose h2[id]').forEach(el => observer!.observe(el))
 })
-onBeforeUnmount(() => observer?.disconnect())
+onBeforeUnmount(() => { observer?.disconnect(); stopSpeak() })
 </script>
 
 <style scoped>
