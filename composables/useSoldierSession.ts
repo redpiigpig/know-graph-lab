@@ -1,11 +1,12 @@
 /**
- * 大兵日記 登入 session（localStorage，30 天）＋帶 token 的 $fetch 包裝。
+ * 大兵日記 登入 session（localStorage）＋帶 token 的 $fetch 包裝。
  * chief（教官）與 recruit（兵員）共用同一 session 物件，以 role 區分。
+ * session 存效期很長（等同「這台裝置登入一次就一直登入」）。
  */
 import { ref, computed } from 'vue'
 
 const SESSION_KEY = 'soldier_diary_session'
-const SESSION_DAYS = 30
+const SESSION_DAYS = 3650 // 約 10 年，實質長駐
 
 export interface SoldierSession {
   token: string
@@ -40,11 +41,8 @@ export function useSoldierSession() {
 
   if (import.meta.client && !loaded) loadSession()
 
-  async function login(callsign: string, code: string) {
-    const result = await $fetch<any>('/api/soldier-diary/login', {
-      method: 'POST',
-      body: { callsign, code },
-    })
+  /** 把登入結果（含 token）寫進長效 session，兩種登入路徑共用 */
+  function saveResult(result: any): SoldierSession {
     const data: SoldierSession = {
       token: result.token,
       id: result.id,
@@ -56,6 +54,24 @@ export function useSoldierSession() {
     if (import.meta.client) localStorage.setItem(SESSION_KEY, JSON.stringify(data))
     session.value = data
     return data
+  }
+
+  /** 兵員：代號＋通行碼 */
+  async function login(callsign: string, code: string) {
+    const result = await $fetch<any>('/api/soldier-diary/login', {
+      method: 'POST',
+      body: { callsign, code },
+    })
+    return saveResult(result)
+  }
+
+  /** 教官：以 Supabase Email OTP 驗證後拿到的 access token 換發教官 session */
+  async function loginChiefWithSupabaseToken(accessToken: string) {
+    const result = await $fetch<any>('/api/soldier-diary/login-email', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${accessToken}` },
+    })
+    return saveResult(result)
   }
 
   function logout() {
@@ -76,5 +92,5 @@ export function useSoldierSession() {
   const isChief = computed(() => session.value?.role === 'chief')
   const isRecruit = computed(() => session.value?.role === 'recruit')
 
-  return { session, isLoggedIn, isChief, isRecruit, login, logout, loadSession, authedFetch }
+  return { session, isLoggedIn, isChief, isRecruit, login, loginChiefWithSupabaseToken, logout, loadSession, authedFetch }
 }
