@@ -1,5 +1,11 @@
 <template>
   <div class="sd-wrap">
+    <div v-if="isChief" class="sdd-chief-bar">
+      <NuxtLink to="/soldier-diary/barracks" class="sd-btn sd-btn--ghost sd-btn--sm">← 返回營區</NuxtLink>
+      <span class="sdd-chief-note">
+        教官檢視 · 代填模式<template v-if="member">：{{ member.name }}（{{ member.callsign }}）</template>
+      </span>
+    </div>
     <div v-if="loading" class="sdd-loading">整隊中…</div>
 
     <template v-else-if="member">
@@ -125,6 +131,45 @@
               </label>
             </div>
 
+            <div class="sdd-abstinence" :class="{ 'sdd-abstinence--on': form.abstinence.enabled }">
+              <div class="sdd-abstinence-head">
+                <div>
+                  <p class="sd-label sdd-abstinence-title">禁慾挑戰</p>
+                  <p class="sdd-abstinence-sub">設定目標，每日據實回報成果。</p>
+                </div>
+                <button type="button" class="sdd-abstinence-toggle" @click="toggleAbstinence">
+                  {{ form.abstinence.enabled ? '取消本日回報' : '設定挑戰' }}
+                </button>
+              </div>
+              <template v-if="form.abstinence.enabled">
+                <div class="sdd-abstinence-grid">
+                  <div class="sdd-field">
+                    <label class="sd-label">目標天數</label>
+                    <div class="sdd-days-input">
+                      <input v-model.number="form.abstinence.targetDays" type="number" min="1" max="3650" class="sd-input" />
+                      <span>天</span>
+                    </div>
+                  </div>
+                  <div class="sdd-field">
+                    <label class="sd-label">挑戰進度</label>
+                    <div class="sdd-days-count">
+                      第 <b>{{ abstinenceElapsedDays }}</b> 天
+                      <span>成功 {{ abstinenceSuccessDays }}／{{ form.abstinence.targetDays || 1 }} 天</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="sdd-abstinence-bar">
+                  <div :style="{ width: abstinencePercent + '%' }" />
+                </div>
+                <label class="sd-label">今日成果</label>
+                <div class="sdd-result-buttons">
+                  <button type="button" :class="{ 'is-success': form.abstinence.result === 'success' }" @click="form.abstinence.result = 'success'">✓ 成功</button>
+                  <button type="button" :class="{ 'is-failure': form.abstinence.result === 'failure' }" @click="form.abstinence.result = 'failure'">✕ 失敗</button>
+                </div>
+                <p v-if="abstinenceStatusText" class="sdd-abstinence-state">{{ abstinenceStatusText }}</p>
+              </template>
+            </div>
+
             <label class="sd-label">一句話心得</label>
             <textarea v-model="form.note" class="sd-textarea" rows="2" placeholder="今日訓練感想、遇到的困難、明日目標…" maxlength="500" />
 
@@ -159,6 +204,10 @@
           <div class="sdd-log-body">
             <span v-for="k in (l.payload?.trainingItems || [])" :key="k" class="sdd-log-tag">{{ itemName(k) }}</span>
             <span v-if="l.payload?.durationMin" class="sdd-log-dur">{{ l.payload.durationMin }}分</span>
+            <span v-if="l.payload?.abstinence" class="sdd-log-abstinence" :class="'is-' + (l.payload.abstinence.result || 'pending')">
+              禁慾 {{ l.payload.abstinence.result === 'success' ? '成功' : l.payload.abstinence.result === 'failure' ? '失敗' : '待回報' }}
+              · {{ l.payload.abstinence.targetDays }}天
+            </span>
           </div>
           <p v-if="l.payload?.note" class="sdd-log-note">「{{ l.payload.note }}」</p>
           <div v-if="l.officer_note || l.officer_score" class="sdd-log-officer">
@@ -168,6 +217,18 @@
           </div>
         </div>
       </section>
+
+      <!-- 基本守則 -->
+      <section class="sd-panel sdd-block sdd-rules">
+        <button class="sdd-rules-toggle" @click="showRules = !showRules">
+          <span>📜 基本守則</span><span class="sdd-rules-caret">{{ showRules ? '▲' : '▼' }}</span>
+        </button>
+        <ol v-show="showRules" class="sdd-rules-list">
+          <li v-for="(r, i) in CODE_OF_CONDUCT" :key="i">
+            <b>{{ r.title }}</b><span>{{ r.desc }}</span>
+          </li>
+        </ol>
+      </section>
     </template>
   </div>
 </template>
@@ -176,7 +237,7 @@
 import { ref, reactive, computed, onMounted } from 'vue'
 import { useSoldierSession } from '~/composables/useSoldierSession'
 import {
-  QUALITIES, BRANCHES, DAILY_MISSIONS, branchMap, trainingItemMap, qualityMap,
+  QUALITIES, BRANCHES, DAILY_MISSIONS, CODE_OF_CONDUCT, branchMap, trainingItemMap, qualityMap,
   computeLogRewards,
 } from '~/data/soldierDiaryConfig'
 
@@ -184,9 +245,12 @@ definePageMeta({ layout: 'soldier-diary' })
 useHead({ title: '我的日記 — 大兵日記' })
 
 const { session, isChief, loadSession, authedFetch } = useSoldierSession()
+const route = useRoute()
+const viewId = computed(() => (route.query.id ? Number(route.query.id) : null))
 
 const loading = ref(true)
 const submitting = ref(false)
+const showRules = ref(false)
 const member = ref<any>(null)
 const logs = ref<any[]>([])
 const stats = ref<any>({ streak: 0, logCount: 0, totalTrainMin: 0, todayLogged: false })
@@ -200,6 +264,12 @@ const form = reactive({
   missions: [] as string[],
   selfScore: 3,
   note: '',
+  abstinence: {
+    enabled: false,
+    targetDays: 30,
+    startDate: '',
+    result: null as 'success' | 'failure' | null,
+  },
 })
 
 const today = computed(() => new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Taipei' }))
@@ -212,19 +282,60 @@ const preview = computed(() => computeLogRewards(
   { trainingItems: form.trainingItems, durationMin: form.durationMin, missions: form.missions, note: form.note },
   form.selfScore,
 ))
-const canSubmit = computed(() => form.trainingItems.length > 0 || form.missions.length > 0)
+const canSubmit = computed(() => {
+  const hasContent = form.trainingItems.length > 0 || form.missions.length > 0 || form.abstinence.enabled
+  return hasContent && (!form.abstinence.enabled || !!form.abstinence.result)
+})
+const abstinenceElapsedDays = computed(() => {
+  const start = form.abstinence.startDate
+  if (!start) return 1
+  const diff = Date.parse(`${today.value}T00:00:00Z`) - Date.parse(`${start}T00:00:00Z`)
+  return Number.isFinite(diff) ? Math.max(1, Math.floor(diff / 86_400_000) + 1) : 1
+})
+const abstinenceSuccessDays = computed(() => {
+  const saved = stats.value.abstinence
+  let count = saved?.startDate === form.abstinence.startDate ? Number(saved.successDays || 0) : 0
+  const todayLog = logs.value.find((l: any) => l.log_date === today.value)
+  if (todayLog?.payload?.abstinence?.result === 'success' && todayLog.payload.abstinence.startDate === form.abstinence.startDate) count--
+  if (form.abstinence.result === 'success') count++
+  return Math.max(0, count)
+})
+const abstinencePercent = computed(() => Math.min(100, Math.round(abstinenceSuccessDays.value / Math.max(1, form.abstinence.targetDays || 1) * 100)))
+const abstinenceStatusText = computed(() => {
+  if (!form.abstinence.result) return '請選擇今天成功或失敗後再呈報。'
+  if (form.abstinence.result === 'failure') return '本日將記為失敗；下次可重新設定一輪挑戰。'
+  if (abstinenceSuccessDays.value >= form.abstinence.targetDays) return '達成目標！呈報後完成本輪挑戰。'
+  return ''
+})
 
 const itemName = (k: string) => trainingItemMap[k]?.name || k
 const qName = (k: string) => qualityMap[k as keyof typeof qualityMap]?.name || k
 
+function toggleAbstinence() {
+  form.abstinence.enabled = !form.abstinence.enabled
+  if (form.abstinence.enabled) {
+    form.abstinence.startDate = today.value
+    form.abstinence.result = null
+  }
+}
+
 async function load() {
   loading.value = true
   try {
-    const r: any = await authedFetch('/api/soldier-diary/member')
+    const url = viewId.value ? `/api/soldier-diary/member?id=${viewId.value}` : '/api/soldier-diary/member'
+    const r: any = await authedFetch(url)
     member.value = r.member
     logs.value = r.logs
     stats.value = r.stats
     badges.value = r.badges
+    form.abstinence.enabled = false
+    form.abstinence.result = null
+    const abstinence = r.stats?.abstinence
+    if (abstinence?.status === 'active') {
+      form.abstinence.enabled = true
+      form.abstinence.targetDays = abstinence.targetDays
+      form.abstinence.startDate = abstinence.startDate
+    }
     const todayLog = r.logs.find((l: any) => l.log_date === today.value)
     if (todayLog?.payload) {
       form.trainingItems = [...(todayLog.payload.trainingItems || [])]
@@ -232,6 +343,12 @@ async function load() {
       form.missions = [...(todayLog.payload.missions || [])]
       form.note = todayLog.payload.note || ''
       form.selfScore = todayLog.self_score || 3
+      if (todayLog.payload.abstinence) {
+        form.abstinence.enabled = true
+        form.abstinence.targetDays = todayLog.payload.abstinence.targetDays
+        form.abstinence.startDate = todayLog.payload.abstinence.startDate
+        form.abstinence.result = todayLog.payload.abstinence.result
+      }
     }
   } catch (e: any) {
     err.value = e?.data?.message || '載入失敗'
@@ -247,8 +364,10 @@ async function submit() {
     const r: any = await authedFetch('/api/soldier-diary/log-create', {
       method: 'POST',
       body: {
+        memberId: viewId.value || undefined,
         trainingItems: form.trainingItems, durationMin: form.durationMin,
         missions: form.missions, selfScore: form.selfScore, note: form.note,
+        abstinence: { ...form.abstinence },
       },
     })
     if (r.conqueredBranch) msg.value = `🎉 突破「${r.conqueredBranch}」！${r.graduated ? '五軍全數結訓！' : '解鎖下一軍種。'}`
@@ -265,13 +384,16 @@ async function submit() {
 onMounted(async () => {
   loadSession()
   if (!session.value) return navigateTo('/soldier-diary/login')
-  if (isChief.value) return navigateTo('/soldier-diary/barracks')
+  // 教官：無指定兵員時回營區；帶 ?id= 時進入該兵日記（可代填）
+  if (isChief.value && !viewId.value) return navigateTo('/soldier-diary/barracks')
   await load()
 })
 </script>
 
 <style scoped>
 .sdd-loading { text-align: center; color: var(--sd-muted); padding: 60px; letter-spacing: 0.1em; }
+.sdd-chief-bar { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; padding: 9px 12px; border: 1px solid var(--sd-brass); border-radius: 4px; background: rgba(203,164,58,0.08); }
+.sdd-chief-note { color: var(--sd-brass); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; }
 
 .sdd-idcard { display: flex; justify-content: space-between; gap: 20px; padding: 22px 24px; flex-wrap: wrap; }
 .sdd-id-left { display: flex; gap: 16px; align-items: center; }
@@ -340,6 +462,27 @@ onMounted(async () => {
 .sdd-check--on { border-color: var(--sd-olive); background: rgba(122,139,63,0.16); color: var(--sd-sand); }
 .sdd-check input { accent-color: var(--sd-olive); }
 .sdd-check em { color: var(--sd-olive); font-style: normal; font-size: 0.72rem; }
+.sdd-abstinence { margin: 2px 0 16px; padding: 13px 14px; border: 1px dashed var(--sd-line); border-radius: 4px; background: rgba(18,20,13,0.45); }
+.sdd-abstinence--on { border-style: solid; border-color: var(--sd-olive); background: rgba(122,139,63,0.08); }
+.sdd-abstinence-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.sdd-abstinence-title { margin: 0; color: var(--sd-sand); }
+.sdd-abstinence-sub { margin: 3px 0 0; color: var(--sd-muted); font-size: 0.72rem; }
+.sdd-abstinence-toggle { border: 1px solid var(--sd-line); border-radius: 3px; padding: 5px 9px; color: var(--sd-khaki); background: #171a11; font-size: 0.72rem; cursor: pointer; }
+.sdd-abstinence--on .sdd-abstinence-toggle { color: var(--sd-muted); }
+.sdd-abstinence-grid { display: grid; grid-template-columns: minmax(120px, 0.7fr) 1.3fr; gap: 14px; margin-top: 13px; }
+.sdd-days-input { display: flex; align-items: center; gap: 7px; }
+.sdd-days-input .sd-input { width: 100%; }
+.sdd-days-input span { color: var(--sd-muted); font-size: 0.76rem; }
+.sdd-days-count { min-height: 36px; display: flex; align-items: center; gap: 5px; color: var(--sd-khaki); font-size: 0.82rem; }
+.sdd-days-count b { color: var(--sd-brass); font-size: 1.15rem; }
+.sdd-days-count span { margin-left: auto; color: var(--sd-olive-bright); font-size: 0.74rem; }
+.sdd-abstinence-bar { height: 7px; margin: 2px 0 12px; overflow: hidden; border: 1px solid var(--sd-line); border-radius: 4px; background: #0f110a; }
+.sdd-abstinence-bar div { height: 100%; background: linear-gradient(90deg, var(--sd-olive), var(--sd-brass)); transition: width 0.25s; }
+.sdd-result-buttons { display: flex; gap: 8px; }
+.sdd-result-buttons button { flex: 1; border: 1px solid var(--sd-line); border-radius: 3px; padding: 8px; color: var(--sd-muted); background: #171a11; cursor: pointer; font-weight: 700; }
+.sdd-result-buttons button.is-success { border-color: var(--sd-olive-bright); color: var(--sd-olive-bright); background: rgba(122,139,63,0.16); }
+.sdd-result-buttons button.is-failure { border-color: var(--sd-red); color: #e7776e; background: rgba(185,28,28,0.12); }
+.sdd-abstinence-state { margin: 8px 0 0; color: var(--sd-brass); font-size: 0.72rem; }
 .sdd-row { display: flex; gap: 14px; margin-bottom: 14px; }
 .sdd-field { flex: 1; }
 .sdd-stars { display: flex; gap: 3px; }
@@ -349,6 +492,14 @@ onMounted(async () => {
 .sdd-preview-xp { color: var(--sd-brass); font-size: 0.92rem; }
 .sdd-preview-attr { color: var(--sd-olive-bright); }
 .sdd-block .sd-ok, .sdd-block .sd-error { margin-bottom: 10px; }
+
+.sdd-rules { margin-top: 14px; }
+.sdd-rules-toggle { display: flex; justify-content: space-between; align-items: center; width: 100%; background: none; border: none; cursor: pointer; color: var(--sd-sand); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.06em; padding: 0; }
+.sdd-rules-caret { color: var(--sd-muted); font-size: 0.7rem; }
+.sdd-rules-list { margin: 14px 0 0; padding-left: 20px; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px 20px; }
+.sdd-rules-list li { color: var(--sd-khaki); font-size: 0.82rem; line-height: 1.6; }
+.sdd-rules-list li b { color: var(--sd-sand); display: block; letter-spacing: 0.04em; }
+.sdd-rules-list li span { color: var(--sd-muted); font-size: 0.76rem; }
 
 .sdd-history { margin-top: 14px; }
 .sdd-log { padding: 12px 0; border-bottom: 1px solid var(--sd-line); }
@@ -362,6 +513,9 @@ onMounted(async () => {
 .sdd-log-body { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
 .sdd-log-tag { font-size: 0.72rem; color: var(--sd-khaki); background: #171a11; border: 1px solid var(--sd-line); padding: 1px 7px; border-radius: 2px; }
 .sdd-log-dur { font-size: 0.72rem; color: var(--sd-muted); }
+.sdd-log-abstinence { font-size: 0.72rem; padding: 1px 7px; border: 1px solid var(--sd-line); border-radius: 2px; color: var(--sd-muted); }
+.sdd-log-abstinence.is-success { border-color: var(--sd-olive); color: var(--sd-olive-bright); }
+.sdd-log-abstinence.is-failure { border-color: var(--sd-red); color: #e7776e; }
 .sdd-log-note { color: var(--sd-khaki); font-size: 0.82rem; margin: 6px 0 0; font-style: italic; }
 .sdd-log-officer { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 8px; padding: 7px 10px; background: rgba(203,164,58,0.06); border-left: 2px solid var(--sd-brass); font-size: 0.8rem; color: var(--sd-khaki); }
 .sdd-officer-tag { color: var(--sd-brass); font-weight: 700; font-size: 0.72rem; }
@@ -370,5 +524,6 @@ onMounted(async () => {
   .sdd-cols { grid-template-columns: 1fr; }
   .sdd-stats { grid-template-columns: repeat(2, 1fr); }
   .sdd-branches { grid-template-columns: repeat(2, 1fr); }
+  .sdd-abstinence-grid { grid-template-columns: 1fr; gap: 6px; }
 }
 </style>

@@ -55,6 +55,9 @@
           <div class="sdb-review-body">
             <span v-for="k in (l.payload?.trainingItems || [])" :key="k" class="sdd-log-tag">{{ itemName(k) }}</span>
             <span v-if="l.payload?.durationMin" class="sdb-dur">{{ l.payload.durationMin }}分</span>
+            <span v-if="l.payload?.abstinence" class="sdb-abstinence" :class="'is-' + (l.payload.abstinence.result || 'pending')">
+              禁慾 {{ abstinenceResultName(l.payload.abstinence.result) }} · 目標 {{ l.payload.abstinence.targetDays }} 天
+            </span>
           </div>
           <p v-if="l.payload?.note" class="sdb-review-note">「{{ l.payload.note }}」</p>
           <div class="sdb-review-actions">
@@ -86,6 +89,56 @@
         <p v-if="enlistMsg" class="sd-ok">{{ enlistMsg }}</p>
         <p v-if="enlistErr" class="sd-error">{{ enlistErr }}</p>
         <button class="sd-btn" :disabled="enlisting" @click="enlist">{{ enlisting ? '建立中…' : '完成編成' }}</button>
+      </div>
+    </section>
+
+    <!-- 項目一覽 -->
+    <section v-show="tab === 'catalog'" class="sdb-catalog">
+      <p class="sd-sub sdb-cat-intro">兵員一次只能操練「當前軍種」的項目，該品質練滿 100 即突破、解鎖下一軍種；五種全破即結訓。</p>
+
+      <div class="sd-panel sd-panel--raised sdb-cat-branch sdb-cat-rules">
+        <h3 class="sdb-cat-branch-name">📜 基本守則</h3>
+        <ol class="sdb-rules-list">
+          <li v-for="(r, i) in CODE_OF_CONDUCT" :key="i">
+            <b>{{ r.title }}</b><span>{{ r.desc }}</span>
+          </li>
+        </ol>
+      </div>
+
+      <div v-for="b in BRANCHES" :key="b.key" class="sd-panel sdb-cat-branch" :style="{ '--bc': b.color }">
+        <div class="sdb-cat-branch-head">
+          <span class="sdb-cat-order">{{ b.order }}</span>
+          <div>
+            <h3 class="sdb-cat-branch-name">{{ b.name }} <em>{{ b.nameEn }}</em></h3>
+            <p class="sdb-cat-branch-sub">代表品質：<b :style="{ color: qColor(b.quality) }">{{ qName(b.quality) }}</b> · {{ b.motto }}</p>
+          </div>
+        </div>
+        <div class="sdb-cat-items">
+          <div v-for="it in b.items" :key="it.key" class="sdb-cat-item">
+            <span class="sdb-cat-item-name">{{ it.name }}</span>
+            <span class="sdb-cat-item-desc">{{ it.desc }}</span>
+            <span class="sdb-cat-item-gain">品質+{{ it.gain }} · {{ it.xp }}XP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sd-panel sdb-cat-branch">
+        <h3 class="sdb-cat-branch-name">每日紀律任務</h3>
+        <div class="sdb-cat-items">
+          <div v-for="m in DAILY_MISSIONS" :key="m.key" class="sdb-cat-item">
+            <span class="sdb-cat-item-name">{{ m.name }}</span>
+            <span class="sdb-cat-item-gain">+{{ m.xp }}XP · 服從+{{ m.obedience }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sd-panel sdb-cat-branch">
+        <h3 class="sdb-cat-branch-name">軍階階梯（封頂上士）</h3>
+        <div class="sdb-cat-ranks">
+          <span v-for="r in RANKS" :key="r.key" class="sdb-cat-rank">
+            <b>{{ r.insignia }}</b>{{ r.name }}<em>{{ r.minXp }}XP</em>
+          </span>
+        </div>
       </div>
     </section>
 
@@ -125,6 +178,7 @@
             <div class="sdb-field"><label class="sd-label">備註</label><input v-model="editNote" class="sd-input" /></div>
             <div class="sdb-detail-actions">
               <button class="sd-btn sd-btn--sm" :disabled="savingMember" @click="saveMember">儲存變更</button>
+              <NuxtLink class="sd-btn sd-btn--sm sd-btn--ghost" :to="`/soldier-diary/diary?id=${detail.member.id}`">進入單兵日記</NuxtLink>
               <button class="sd-btn sd-btn--sm sd-btn--ghost" @click="toggleDischarge">
                 {{ detail.member.status === 'discharged' ? '復役' : '辦理退伍' }}
               </button>
@@ -144,6 +198,9 @@
                 </div>
                 <div class="sdd-log-body">
                   <span v-for="k in (l.payload?.trainingItems || [])" :key="k" class="sdd-log-tag">{{ itemName(k) }}</span>
+                  <span v-if="l.payload?.abstinence" class="sdb-abstinence" :class="'is-' + (l.payload.abstinence.result || 'pending')">
+                    禁慾 {{ abstinenceResultName(l.payload.abstinence.result) }} · {{ l.payload.abstinence.targetDays }}天
+                  </span>
                 </div>
                 <p v-if="l.payload?.note" class="sdd-log-note">「{{ l.payload.note }}」</p>
               </div>
@@ -159,18 +216,19 @@
 <script setup lang="ts">
 import { ref, reactive, computed, onMounted } from 'vue'
 import { useSoldierSession } from '~/composables/useSoldierSession'
-import { QUALITIES, branchMap, trainingItemMap, qualityMap } from '~/data/soldierDiaryConfig'
+import { QUALITIES, BRANCHES, DAILY_MISSIONS, RANKS, CODE_OF_CONDUCT, branchMap, trainingItemMap, qualityMap } from '~/data/soldierDiaryConfig'
 
 definePageMeta({ layout: 'soldier-diary' })
 useHead({ title: '營區指揮台 — 大兵日記' })
 
 const { session, isChief, loadSession, authedFetch } = useSoldierSession()
 
-const tab = ref<'roster' | 'review' | 'enlist'>('roster')
+const tab = ref<'roster' | 'review' | 'enlist' | 'catalog'>('roster')
 const tabs = [
   { k: 'roster' as const, label: '名冊' },
   { k: 'review' as const, label: '待批閱' },
   { k: 'enlist' as const, label: '編成' },
+  { k: 'catalog' as const, label: '項目一覽' },
 ]
 
 const members = ref<any[]>([])
@@ -181,6 +239,8 @@ const pendingCount = computed(() => members.value.reduce((s, m) => s + (m.pendin
 
 const itemName = (k: string) => trainingItemMap[k]?.name || k
 const qName = (k: string) => qualityMap[k as keyof typeof qualityMap]?.name || k
+const qColor = (k: string) => qualityMap[k as keyof typeof qualityMap]?.color || 'var(--sd-khaki)'
+const abstinenceResultName = (result: string | null) => result === 'success' ? '成功' : result === 'failure' ? '失敗' : '待回報'
 
 async function loadRoster() {
   loadingRoster.value = true
@@ -314,6 +374,9 @@ button.sdb-row:hover:not(.sdb-row--head) { background: rgba(122,139,63,0.08); }
 .sdb-review-body { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
 .sdd-log-tag { font-size: 0.72rem; color: var(--sd-khaki); background: #171a11; border: 1px solid var(--sd-line); padding: 1px 7px; border-radius: 2px; }
 .sdb-dur { color: var(--sd-muted); font-size: 0.72rem; }
+.sdb-abstinence { color: var(--sd-muted); border: 1px solid var(--sd-line); border-radius: 2px; padding: 1px 7px; font-size: 0.72rem; }
+.sdb-abstinence.is-success { color: var(--sd-olive-bright); border-color: var(--sd-olive); }
+.sdb-abstinence.is-failure { color: #e7776e; border-color: var(--sd-red); }
 .sdb-review-note { color: var(--sd-khaki); font-style: italic; font-size: 0.84rem; margin: 8px 0; }
 .sdb-review-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 8px; }
 .sdb-stars { display: flex; gap: 2px; }
@@ -359,6 +422,29 @@ button.sdb-row:hover:not(.sdb-row--head) { background: rgba(122,139,63,0.08); }
 .sdd-log-reviewed { color: var(--sd-olive-bright); font-size: 0.68rem; border: 1px solid var(--sd-olive); padding: 0 5px; border-radius: 2px; }
 .sdd-log-body { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 5px; }
 .sdd-log-note { color: var(--sd-khaki); font-size: 0.8rem; font-style: italic; margin: 5px 0 0; }
+
+.sdb-catalog { display: flex; flex-direction: column; gap: 12px; }
+.sdb-cat-intro { margin: 0 0 4px; }
+.sdb-cat-rules { border-left: 3px solid var(--sd-brass); }
+.sdb-rules-list { margin: 10px 0 0; padding-left: 20px; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px 20px; }
+.sdb-rules-list li { color: var(--sd-khaki); font-size: 0.82rem; line-height: 1.6; }
+.sdb-rules-list li b { color: var(--sd-sand); display: block; letter-spacing: 0.04em; }
+.sdb-rules-list li span { color: var(--sd-muted); font-size: 0.76rem; }
+.sdb-cat-branch { padding: 16px 18px; border-left: 3px solid var(--bc, var(--sd-line)); }
+.sdb-cat-branch-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.sdb-cat-order { width: 30px; height: 30px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 1px solid var(--bc); color: var(--bc); border-radius: 50%; font-weight: 900; font-size: 0.9rem; }
+.sdb-cat-branch-name { color: var(--sd-sand); font-size: 1rem; font-weight: 700; margin: 0; letter-spacing: 0.06em; }
+.sdb-cat-branch-name em { color: var(--sd-muted); font-style: normal; font-size: 0.7rem; font-family: 'Stardos Stencil', sans-serif; margin-left: 8px; }
+.sdb-cat-branch-sub { color: var(--sd-muted); font-size: 0.78rem; margin: 3px 0 0; }
+.sdb-cat-items { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; }
+.sdb-cat-item { display: flex; flex-direction: column; gap: 2px; padding: 9px 11px; border: 1px solid var(--sd-line); border-radius: 3px; background: #171a11; }
+.sdb-cat-item-name { color: var(--sd-sand); font-size: 0.84rem; font-weight: 700; }
+.sdb-cat-item-desc { color: var(--sd-muted); font-size: 0.72rem; line-height: 1.5; }
+.sdb-cat-item-gain { color: var(--sd-olive-bright); font-size: 0.7rem; margin-top: 2px; }
+.sdb-cat-ranks { display: flex; flex-wrap: wrap; gap: 8px; }
+.sdb-cat-rank { display: inline-flex; align-items: center; gap: 5px; font-size: 0.78rem; color: var(--sd-khaki); padding: 5px 10px; border: 1px solid var(--sd-line); border-radius: 2px; background: #171a11; }
+.sdb-cat-rank b { color: var(--sd-brass); }
+.sdb-cat-rank em { color: var(--sd-muted); font-style: normal; font-size: 0.68rem; margin-left: 3px; }
 
 @media (max-width: 720px) {
   .sdb-detail-cols { grid-template-columns: 1fr; }

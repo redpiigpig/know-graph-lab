@@ -3,7 +3,10 @@
  * recruit 只能看自己；chief 可帶 ?id= 看任一人。
  */
 import { sdSupabase, sdRequireAuth } from '~/server/utils/soldierDiary'
-import { rankForXp, computeBadges, computeStreak, branchStates, activeBranch } from '~/data/soldierDiaryConfig'
+import {
+  rankForXp, computeBadges, computeStreak, branchStates, activeBranch,
+  computeAbstinenceProgress,
+} from '~/data/soldierDiaryConfig'
 import { tzToday } from '~/server/utils/today'
 
 export default defineEventHandler(async (event) => {
@@ -42,6 +45,7 @@ export default defineEventHandler(async (event) => {
   const totalTrainMin = logList.reduce((s, l) => s + (Number(l.payload?.durationMin) || 0), 0)
   const badges = computeBadges({ logCount: logList.length, streak, totalTrainMin, xp: m.xp, qualities })
   const active = activeBranch(qualities)
+  const abstinence = computeAbstinenceProgress(logList, today)
 
   return {
     member: {
@@ -54,7 +58,7 @@ export default defineEventHandler(async (event) => {
       createdAt: m.created_at, lastLogin: m.last_login,
     },
     logs: logList,
-    stats: { streak, totalTrainMin, logCount: logList.length, todayLogged: dates.includes(today) },
+    stats: { streak, totalTrainMin, logCount: logList.length, todayLogged: dates.includes(today), abstinence },
     badges,
   }
 })

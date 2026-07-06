@@ -26,6 +26,25 @@ export const RANKS: Rank[] = [
   { key: 'ssg', name: '上士', nameEn: 'Staff Sergeant', minXp: 1420, insignia: '❯❯❯' },
 ]
 
+/* ─────────────────────────  基本守則  ───────────────────────── */
+
+export interface Rule {
+  title: string
+  desc: string
+}
+
+/** 大兵日記基本守則 —— 純軍事化自律的行為準則 */
+export const CODE_OF_CONDUCT: Rule[] = [
+  { title: '服從命令，令行禁止', desc: '教官與長官下達的指令確實執行，不打折扣。' },
+  { title: '準時出操，作息規律', desc: '按表操課、不遲到早退，養成規律的日常節奏。' },
+  { title: '內務整潔，物品定位', desc: '棉被摺角、環境清潔、裝備定位，維持整齊的生活空間。' },
+  { title: '軍容嚴整，儀容端正', desc: '服裝整齊、理容乾淨、抬頭挺胸，隨時保持標準軍姿。' },
+  { title: '據實回報，不虛報浮誇', desc: '每日日記誠實記錄訓練成果，成功失敗都據實呈報。' },
+  { title: '循序漸進，安全第一', desc: '量力而為、充分暖身，避免運動傷害，長久才能持續。' },
+  { title: '堅持到底，貫徹始終', desc: '一一突破五大軍種，遇到瓶頸不半途而廢。' },
+  { title: '尊重同袍，團隊為重', desc: '小隊互助、彼此砥礪，共同精進、榮辱與共。' },
+]
+
 export interface RankProgress {
   rank: Rank
   next: Rank | null
@@ -116,6 +135,7 @@ export const BRANCHES: Branch[] = [
       { key: 'situp', name: '仰臥起坐', desc: '核心肌群訓練', gain: 3, xp: 8 },
       { key: 'pullup', name: '引體向上', desc: '上肢與背肌拉力', gain: 5, xp: 12 },
       { key: 'ruck', name: '負重行軍', desc: '背負裝備行進', gain: 4, xp: 12 },
+      { key: 'squat', name: '深蹲', desc: '徒手或負重深蹲，練下肢肌力', gain: 4, xp: 10 },
     ],
   },
   {
@@ -126,6 +146,7 @@ export const BRANCHES: Branch[] = [
       { key: 'shuttle', name: '折返跑', desc: '折返衝刺耐乳酸', gain: 4, xp: 10 },
       { key: 'swim', name: '游泳耐力', desc: '長距離游泳', gain: 4, xp: 11 },
       { key: 'cardio', name: '有氧續航', desc: '飛輪、跳繩等有氧', gain: 3, xp: 9 },
+      { key: 'jumpingjack', name: '開合跳', desc: '開合跳暖身與心肺耐力', gain: 3, xp: 8 },
     ],
   },
   {
@@ -140,12 +161,14 @@ export const BRANCHES: Branch[] = [
   },
   {
     key: 'mp', name: '憲兵', nameEn: 'MILITARY POLICE', order: 5, quality: 'challenge',
-    color: '#b91c1c', motto: '軍紀最高標準，挑戰極限',
+    color: '#b91c1c', motto: '禮兵儀隊，軍紀最高標準',
     items: [
-      { key: 'rifle_drill', name: '儀隊操槍', desc: '持槍、托槍、花式操槍', gain: 5, xp: 13 },
-      { key: 'combined_pt', name: '綜合體能', desc: '國軍體能三項綜合測驗', gain: 5, xp: 13 },
-      { key: 'combat_skill', name: '戰技訓練', desc: '軍事技能與應用戰技', gain: 4, xp: 12 },
-      { key: 'extreme', name: '極限挑戰', desc: '突破個人紀錄的挑戰', gain: 6, xp: 15 },
+      { key: 'stand_guard', name: '站崗', desc: '定點站哨，長時間標準衛兵姿勢', gain: 4, xp: 11 },
+      { key: 'handover_freeze', name: '交接定格', desc: '衛兵交接的定格動作與走位', gain: 5, xp: 13 },
+      { key: 'salute_freeze', name: '敬禮定格', desc: '舉手禮、持槍禮的定格保持', gain: 4, xp: 11 },
+      { key: 'chant', name: '口號', desc: '呼口令、答數、精神答數', gain: 3, xp: 9 },
+      { key: 'stare', name: '瞪眼', desc: '凝視訓練，長時間不眨眼、不動搖', gain: 5, xp: 12 },
+      { key: 'rifle', name: '練槍', desc: '操槍、托槍、拋接與花式槍法', gain: 5, xp: 13 },
     ],
   },
 ]
@@ -221,6 +244,57 @@ export interface DiaryPayload {
   durationMin: number
   missions: string[]
   note: string
+  abstinence?: AbstinenceEntry
+}
+
+export type AbstinenceResult = 'success' | 'failure'
+
+export interface AbstinenceEntry {
+  targetDays: number
+  startDate: string
+  result: AbstinenceResult | null
+}
+
+export interface AbstinenceProgress {
+  targetDays: number
+  startDate: string
+  elapsedDays: number
+  successDays: number
+  status: 'active' | 'completed' | 'failed'
+}
+
+interface AbstinenceLog {
+  log_date: string
+  payload?: { abstinence?: AbstinenceEntry } | null
+}
+
+/**
+ * 從日記中找出最近一次禁慾挑戰，並計算日曆進度與成功回報天數。
+ * 同一起始日視為同一輪挑戰；任一天回報失敗即結束該輪。
+ */
+export function computeAbstinenceProgress(
+  logs: AbstinenceLog[],
+  today: string,
+): AbstinenceProgress | null {
+  const entries = (Array.isArray(logs) ? logs : [])
+    .filter((l) => l?.payload?.abstinence && /^\d{4}-\d{2}-\d{2}$/.test(l.payload.abstinence.startDate))
+    .sort((a, b) => b.log_date.localeCompare(a.log_date))
+  const latest = entries[0]?.payload?.abstinence
+  if (!latest) return null
+
+  const targetDays = Math.max(1, Math.min(3650, Math.floor(Number(latest.targetDays) || 1)))
+  const challengeEntries = entries.filter((l) => l.payload?.abstinence?.startDate === latest.startDate)
+  const successDays = new Set(
+    challengeEntries.filter((l) => l.payload?.abstinence?.result === 'success').map((l) => l.log_date),
+  ).size
+  const failed = challengeEntries.some((l) => l.payload?.abstinence?.result === 'failure')
+  const startMs = Date.parse(`${latest.startDate}T00:00:00Z`)
+  const todayMs = Date.parse(`${today}T00:00:00Z`)
+  const elapsedDays = Number.isFinite(startMs) && Number.isFinite(todayMs)
+    ? Math.max(1, Math.floor((todayMs - startMs) / 86_400_000) + 1)
+    : 1
+  const status = failed ? 'failed' : successDays >= targetDays ? 'completed' : 'active'
+  return { targetDays, startDate: latest.startDate, elapsedDays, successDays, status }
 }
 
 export interface LogRewards {

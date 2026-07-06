@@ -38,6 +38,7 @@ export default defineEventHandler(async (event) => {
   const items = active
     ? rawItems.filter((k) => trainingItemMap[k]?.branchKey === active.key)
     : rawItems.filter((k) => !!trainingItemMap[k])
+  const logDate = /^\d{4}-\d{2}-\d{2}$/.test(body?.logDate) ? body.logDate : tzToday()
 
   const payload: DiaryPayload = {
     trainingItems: items,
@@ -45,12 +46,23 @@ export default defineEventHandler(async (event) => {
     missions: Array.isArray(body?.missions) ? body.missions.map(String) : [],
     note: String(body?.note || '').slice(0, 500),
   }
+  if (body?.abstinence?.enabled) {
+    const startDate = String(body.abstinence.startDate || '')
+    const result = body.abstinence.result === 'success' || body.abstinence.result === 'failure'
+      ? body.abstinence.result
+      : null
+    if (!result) throw createError({ statusCode: 400, message: '請選擇禁慾任務今日成功或失敗' })
+    payload.abstinence = {
+      targetDays: Math.max(1, Math.min(3650, Math.floor(Number(body.abstinence.targetDays) || 1))),
+      startDate: /^\d{4}-\d{2}-\d{2}$/.test(startDate) && startDate <= logDate ? startDate : logDate,
+      result,
+    }
+  }
   const selfScore = Math.max(0, Math.min(5, Math.floor(Number(body?.selfScore) || 0)))
 
-  if (payload.trainingItems.length === 0 && payload.missions.length === 0)
+  if (payload.trainingItems.length === 0 && payload.missions.length === 0 && !payload.abstinence)
     throw createError({ statusCode: 400, message: '至少要記錄一項當前軍種的操練或一項任務' })
 
-  const logDate = /^\d{4}-\d{2}-\d{2}$/.test(body?.logDate) ? body.logDate : tzToday()
   const type = active ? active.key : 'graduate'
   const reward = computeLogRewards(payload, selfScore)
 
