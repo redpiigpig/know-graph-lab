@@ -65,7 +65,14 @@
                   正在朗讀：<span class="text-violet-600 font-medium">{{ readingTitle || '⋯' }}</span>
                 </span>
               </template>
-              <label class="ml-auto flex items-center gap-1.5 text-xs text-gray-500 flex-shrink-0">
+              <label v-if="zhVoices.length" class="ml-auto flex items-center gap-1.5 text-xs text-gray-500 flex-shrink-0 min-w-0">
+                <span class="hidden sm:inline">語音</span>
+                <select v-model="voiceURI"
+                  class="px-1.5 py-1 border border-gray-200 rounded-md text-xs bg-white text-gray-700 max-w-[9rem] truncate">
+                  <option v-for="v in zhVoices" :key="v.voiceURI" :value="v.voiceURI">{{ voiceLabel(v) }}</option>
+                </select>
+              </label>
+              <label class="flex items-center gap-1.5 text-xs text-gray-500 flex-shrink-0" :class="{ 'ml-auto': !zhVoices.length }">
                 語速
                 <select v-model.number="speech.rate"
                   class="px-1.5 py-1 border border-gray-200 rounded-md text-xs bg-white text-gray-700">
@@ -311,17 +318,45 @@ function cancelHide() { if (hideTimer) { clearTimeout(hideTimer); hideTimer = nu
 const speech = reactive({ supported: false, playing: false, paused: false, readingId: '', rate: 1 })
 const readingTitle = computed(() => toc.value.find(t => t.id === speech.readingId)?.title ?? '')
 
-let voice: SpeechSynthesisVoice | null = null
+// 可選中文語音清單（優先神經／自然語音，避開舊款電子音）。使用者可自選，記到 localStorage。
+const zhVoices = ref<SpeechSynthesisVoice[]>([])
+const voiceURI = ref('')
+const VOICE_KEY = 'works-reader-voice'
 let queue: { chId: string; text: string }[] = []
 let qi = 0
 let keepAlive: ReturnType<typeof setInterval> | null = null
 
-function pickVoice() {
+// 語音品質評分：神經／線上（Natural/Online/Neural）＞ Google ＞ 台灣優先
+function voiceScore(v: SpeechSynthesisVoice): number {
+  const n = v.name.toLowerCase(), l = v.lang.toLowerCase()
+  let s = 0
+  if (/natural|neural|online/.test(n)) s += 40
+  if (/premium|enhanced/.test(n)) s += 20
+  if (/google/.test(n)) s += 12
+  if (/hsiaochen|hsiaoyu|yating|zhiwei|hanhan/.test(n)) s += 4 // 有 Natural 版時仍會被上面加權超過
+  if (l.startsWith('zh-tw')) s += 8
+  else if (l.startsWith('zh-hk')) s += 4
+  return s
+}
+
+function loadVoices() {
   const vs = window.speechSynthesis?.getVoices?.() ?? []
-  voice = vs.find(v => /^zh[-_]tw/i.test(v.lang))
-       || vs.find(v => /^zh[-_]hk/i.test(v.lang))
-       || vs.find(v => /^zh/i.test(v.lang))
-       || null
+  zhVoices.value = vs.filter(v => /^zh/i.test(v.lang)).sort((a, b) => voiceScore(b) - voiceScore(a))
+  if (!zhVoices.value.length) return
+  const saved = (() => { try { return localStorage.getItem(VOICE_KEY) || '' } catch { return '' } })()
+  if (saved && zhVoices.value.some(v => v.voiceURI === saved)) voiceURI.value = saved
+  else if (!voiceURI.value || !zhVoices.value.some(v => v.voiceURI === voiceURI.value)) voiceURI.value = zhVoices.value[0].voiceURI
+}
+
+const currentVoice = computed(() => zhVoices.value.find(v => v.voiceURI === voiceURI.value) ?? null)
+watch(voiceURI, (u) => { try { localStorage.setItem(VOICE_KEY, u) } catch {} })
+
+// 精簡顯示名：去掉 "Microsoft "、括號語系尾綴，標「自然」
+function voiceLabel(v: SpeechSynthesisVoice): string {
+  let n = v.name.replace(/^Microsoft\s+/i, '').replace(/\s*-\s*Chinese.*$/i, '').replace(/\s*\(.*\)\s*$/, '').trim()
+  const natural = /natural|neural|online/i.test(v.name) ? ' · 自然' : ''
+  const region = v.lang.toLowerCase().startsWith('zh-tw') ? '台' : v.lang.toLowerCase().startsWith('zh-hk') ? '港' : v.lang.toLowerCase().startsWith('zh-cn') ? '陸' : ''
+  return `${n}${region ? `（${region}）` : ''}${natural}`
 }
 
 // 逐章抽文字：走 .book-prose 直接子節點，遇 <h2> 換章；移除引用編號/論證符號/出處註腳等雜訊
@@ -372,8 +407,8 @@ function speakNext() {
     scrollTo(chunk.chId)
   }
   const u = new SpeechSynthesisUtterance(chunk.text)
-  u.lang = 'zh-TW'
-  if (voice) u.voice = voice
+  u.lang = currentVoice.value?.lang || 'zh-TW'
+  if (currentVoice.value) u.voice = currentVoice.value
   u.rate = speech.rate
   u.onend = () => { if (speech.playing) { qi++; speakNext() } }
   u.onerror = () => { if (speech.playing) { qi++; speakNext() } }
@@ -385,7 +420,7 @@ function startSpeak(chapterId?: string) {
   const synth = window.speechSynthesis
   if (!synth) return
   synth.cancel()
-  pickVoice()
+  if (!zhVoices.value.length) loadVoices()
   const chapters = chapterTextMap()
   const chosen = chapterId ? chapters.filter(c => c.id === chapterId) : chapters
   queue = chosen.flatMap(c => toChunks(c.text, c.id))
@@ -439,8 +474,8 @@ onMounted(() => {
   load(); loadReview()
   if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
     speech.supported = true
-    pickVoice()
-    window.speechSynthesis.onvoiceschanged = pickVoice
+    loadVoices()
+    window.speechSynthesis.onvoiceschanged = loadVoices
   }
 })
 watch(() => bid.value, () => { stopSpeak(); tab.value = 'book'; load(); loadReview() })
