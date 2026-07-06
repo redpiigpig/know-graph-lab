@@ -46,44 +46,64 @@
             </div>
 
             <div v-show="tab === 'book'">
-            <!-- 朗讀控制列（瀏覽器原生語音合成；分章／全文） -->
-            <div v-if="speech.supported" class="flex items-center flex-wrap gap-2 mb-5 px-3 py-2 rounded-xl bg-white border border-gray-100">
-              <button v-if="!speech.playing" @click="startSpeak()"
-                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-violet-600 text-white text-sm font-medium hover:bg-violet-700 transition">
-                <span>▶</span> 朗讀全文
-              </button>
-              <template v-else>
-                <button @click="togglePause"
-                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-violet-100 text-violet-700 text-sm font-medium hover:bg-violet-200 transition">
-                  {{ speech.paused ? '▶ 繼續' : '⏸ 暫停' }}
+            <!-- 朗讀控制列（Gemini 雲端 TTS ／ 裝置語音；分章／全文） -->
+            <div v-if="speech.supported" class="mb-5 px-3 py-2 rounded-xl bg-white border border-gray-100">
+              <div class="flex items-center flex-wrap gap-2">
+                <button v-if="!speech.playing" @click="startSpeak()"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-violet-600 text-white text-sm font-medium hover:bg-violet-700 transition">
+                  <span>▶</span> 朗讀全文
                 </button>
-                <button @click="stopSpeak"
-                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 text-gray-600 text-sm font-medium hover:bg-gray-200 transition">
-                  ⏹ 停止
-                </button>
-                <span class="text-xs text-gray-500 min-w-0 truncate">
-                  正在朗讀：<span class="text-violet-600 font-medium">{{ readingTitle || '⋯' }}</span>
-                </span>
-              </template>
-              <label v-if="zhVoices.length" class="ml-auto flex items-center gap-1.5 text-xs text-gray-500 flex-shrink-0 min-w-0">
-                <span class="hidden sm:inline">語音</span>
-                <select v-model="voiceURI"
-                  class="px-1.5 py-1 border border-gray-200 rounded-md text-xs bg-white text-gray-700 max-w-[9rem] truncate">
-                  <option v-for="v in zhVoices" :key="v.voiceURI" :value="v.voiceURI">{{ voiceLabel(v) }}</option>
-                </select>
-              </label>
-              <label class="flex items-center gap-1.5 text-xs text-gray-500 flex-shrink-0" :class="{ 'ml-auto': !zhVoices.length }">
-                語速
-                <select v-model.number="speech.rate"
-                  class="px-1.5 py-1 border border-gray-200 rounded-md text-xs bg-white text-gray-700">
-                  <option :value="0.75">0.75×</option>
-                  <option :value="0.9">0.9×</option>
-                  <option :value="1">1×</option>
-                  <option :value="1.15">1.15×</option>
-                  <option :value="1.3">1.3×</option>
-                  <option :value="1.5">1.5×</option>
-                </select>
-              </label>
+                <template v-else>
+                  <button @click="togglePause"
+                    class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-violet-100 text-violet-700 text-sm font-medium hover:bg-violet-200 transition">
+                    {{ speech.paused ? '▶ 繼續' : '⏸ 暫停' }}
+                  </button>
+                  <button @click="stopSpeak"
+                    class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 text-gray-600 text-sm font-medium hover:bg-gray-200 transition">
+                    ⏹ 停止
+                  </button>
+                  <span class="text-xs text-gray-500 min-w-0 truncate">
+                    <span v-if="speech.loading" class="text-violet-500">生成語音中⋯</span>
+                    <template v-else>正在朗讀：<span class="text-violet-600 font-medium">{{ readingTitle || '⋯' }}</span></template>
+                  </span>
+                </template>
+
+                <!-- 引擎切換 -->
+                <div class="ml-auto flex items-center gap-1 rounded-lg bg-gray-100 p-0.5 flex-shrink-0">
+                  <button @click="speech.engine = 'gemini'"
+                    :class="['px-2 py-1 rounded-md text-xs font-medium transition', speech.engine === 'gemini' ? 'bg-white text-violet-700 shadow-sm' : 'text-gray-500 hover:text-gray-700']">Gemini 雲端</button>
+                  <button @click="speech.engine = 'device'" :disabled="!speech.deviceSupported"
+                    :class="['px-2 py-1 rounded-md text-xs font-medium transition disabled:opacity-40', speech.engine === 'device' ? 'bg-white text-violet-700 shadow-sm' : 'text-gray-500 hover:text-gray-700']">裝置</button>
+                </div>
+
+                <!-- 音色：依引擎切換來源 -->
+                <label v-if="speech.engine === 'gemini'" class="flex items-center gap-1.5 text-xs text-gray-500 flex-shrink-0">
+                  <span class="hidden sm:inline">音色</span>
+                  <select v-model="geminiVoice" class="px-1.5 py-1 border border-gray-200 rounded-md text-xs bg-white text-gray-700">
+                    <option v-for="v in GEMINI_VOICES" :key="v.id" :value="v.id">{{ v.label }}</option>
+                  </select>
+                </label>
+                <label v-else-if="zhVoices.length" class="flex items-center gap-1.5 text-xs text-gray-500 flex-shrink-0 min-w-0">
+                  <span class="hidden sm:inline">語音</span>
+                  <select v-model="voiceURI" class="px-1.5 py-1 border border-gray-200 rounded-md text-xs bg-white text-gray-700 max-w-[9rem] truncate">
+                    <option v-for="v in zhVoices" :key="v.voiceURI" :value="v.voiceURI">{{ voiceLabel(v) }}</option>
+                  </select>
+                </label>
+
+                <label class="flex items-center gap-1.5 text-xs text-gray-500 flex-shrink-0">
+                  語速
+                  <select v-model.number="speech.rate" class="px-1.5 py-1 border border-gray-200 rounded-md text-xs bg-white text-gray-700">
+                    <option :value="0.75">0.75×</option>
+                    <option :value="0.9">0.9×</option>
+                    <option :value="1">1×</option>
+                    <option :value="1.15">1.15×</option>
+                    <option :value="1.3">1.3×</option>
+                    <option :value="1.5">1.5×</option>
+                  </select>
+                </label>
+              </div>
+              <p v-if="speech.error" class="mt-1.5 text-xs text-amber-600">{{ speech.error }}</p>
+              <p v-else-if="speech.engine === 'gemini'" class="mt-1.5 text-[11px] text-gray-400">Gemini 雲端音色最自然，逐段即時生成（首次播放會稍等一下）。</p>
             </div>
 
             <!-- mobile chapter jump -->
@@ -312,19 +332,40 @@ function onCiteOut(e: MouseEvent) {
 function hidePreview() { hideTimer = setTimeout(() => { preview.visible = false }, 180) }
 function cancelHide() { if (hideTimer) { clearTimeout(hideTimer); hideTimer = null } }
 
-// ── 朗讀（瀏覽器原生 SpeechSynthesis，分章排隊播放） ──────────────
-// 內容已用 <h2 id="ch-N"> 分章；逐章從已渲染的 DOM 抽純文字，切成短句
-// utterance 排隊播放（短句避開 Chrome 長語句 ~15s 截斷 bug，並可逐章高亮）。
-const speech = reactive({ supported: false, playing: false, paused: false, readingId: '', rate: 1 })
+// ── 朗讀（雙引擎：Gemini 雲端 TTS ／ 裝置原生 SpeechSynthesis） ──────
+// 內容已用 <h2 id="ch-N"> 分章；逐章從已渲染的 DOM 抽純文字排隊播放，逐章高亮。
+//   • device：SpeechSynthesis，切 ≤120 字短句（避開 Chrome ~15s 截斷 bug）。
+//   • gemini：呼叫 /api/works/tts 逐段生成 WAV 播放，切 ~500 字並預抓下一段接續。
+type Engine = 'gemini' | 'device'
+const speech = reactive({
+  supported: false, deviceSupported: false,
+  playing: false, paused: false, loading: false,
+  readingId: '', rate: 1, engine: 'gemini' as Engine, error: '',
+})
 const readingTitle = computed(() => toc.value.find(t => t.id === speech.readingId)?.title ?? '')
 
-// 可選中文語音清單（優先神經／自然語音，避開舊款電子音）。使用者可自選，記到 localStorage。
+// Gemini 預建音色（多語，會自動判讀中文）
+const GEMINI_VOICES = [
+  { id: 'Kore', label: 'Kore · 沉穩' }, { id: 'Aoede', label: 'Aoede · 輕柔' },
+  { id: 'Leda', label: 'Leda · 年輕' }, { id: 'Charon', label: 'Charon · 知性' },
+  { id: 'Zephyr', label: 'Zephyr · 明亮' }, { id: 'Puck', label: 'Puck · 活潑' },
+  { id: 'Orus', label: 'Orus · 穩重' }, { id: 'Callirrhoe', label: 'Callirrhoe · 隨和' },
+]
+const geminiVoice = ref('Kore')
+
+// 裝置端可選中文語音（優先神經／自然語音，避開舊款電子音）
 const zhVoices = ref<SpeechSynthesisVoice[]>([])
 const voiceURI = ref('')
-const VOICE_KEY = 'works-reader-voice'
+const VOICE_KEY = 'works-reader-voice', GVOICE_KEY = 'works-reader-gvoice', ENGINE_KEY = 'works-reader-engine'
+
 let queue: { chId: string; text: string }[] = []
 let qi = 0
 let keepAlive: ReturnType<typeof setInterval> | null = null
+// gemini 播放狀態
+let audioEl: HTMLAudioElement | null = null
+const segCache = new Map<number, string>()          // 段索引 → objectURL
+const segAborts = new Map<number, AbortController>() // 進行中的抓取，停止時中止
+let playToken = 0                                     // 每次 start 遞增，作廢舊的非同步流程
 
 // 語音品質評分：神經／線上（Natural/Online/Neural）＞ Google ＞ 台灣優先
 function voiceScore(v: SpeechSynthesisVoice): number {
@@ -350,6 +391,10 @@ function loadVoices() {
 
 const currentVoice = computed(() => zhVoices.value.find(v => v.voiceURI === voiceURI.value) ?? null)
 watch(voiceURI, (u) => { try { localStorage.setItem(VOICE_KEY, u) } catch {} })
+watch(geminiVoice, (v) => { try { localStorage.setItem(GVOICE_KEY, v) } catch {} })
+watch(() => speech.engine, (e) => { try { localStorage.setItem(ENGINE_KEY, e) } catch {}; stopSpeak() })
+// 語速即時套用到 gemini 音檔（device 引擎則於下一句生效）
+watch(() => speech.rate, (r) => { if (audioEl) audioEl.playbackRate = r })
 
 // 精簡顯示名：去掉 "Microsoft "、括號語系尾綴，標「自然」
 function voiceLabel(v: SpeechSynthesisVoice): string {
@@ -384,65 +429,41 @@ function chapterTextMap(): { id: string; title: string; text: string }[] {
   return res
 }
 
-// 切成 ≤120 字的短句 utterance（依中文標點斷句後合併）
-function toChunks(text: string, chId: string): { chId: string; text: string }[] {
+// 依中文標點斷句後合併成 ≤max 字的段（device 短句避 15s bug；gemini 較長省請求）
+function toChunks(text: string, chId: string, max: number): { chId: string; text: string }[] {
   const sents = text.split(/(?<=[。！？；\n])/).map(s => s.trim()).filter(Boolean)
   const out: { chId: string; text: string }[] = []
   let buf = ''
   for (const s of sents) {
-    if (buf && (buf + s).length > 120) { out.push({ chId, text: buf }); buf = s }
+    if (buf && (buf + s).length > max) { out.push({ chId, text: buf }); buf = s }
     else buf += s
   }
   if (buf) out.push({ chId, text: buf })
   return out
 }
 
-function speakNext() {
-  const synth = window.speechSynthesis
-  if (!synth || qi >= queue.length) { stopSpeak(); return }
-  const chunk = queue[qi]
-  if (chunk.chId !== speech.readingId) {
+// 切到某段時：更新章節高亮並捲動
+function markChapter(i: number) {
+  const chunk = queue[i]
+  if (chunk && chunk.chId !== speech.readingId) {
     speech.readingId = chunk.chId
     activeId.value = chunk.chId
     scrollTo(chunk.chId)
   }
-  const u = new SpeechSynthesisUtterance(chunk.text)
+}
+
+// ── 引擎 A：裝置原生 SpeechSynthesis ──────────────────────────────
+function speakNext() {
+  const synth = window.speechSynthesis
+  if (!synth || !speech.playing || qi >= queue.length) { stopSpeak(); return }
+  markChapter(qi)
+  const u = new SpeechSynthesisUtterance(queue[qi].text)
   u.lang = currentVoice.value?.lang || 'zh-TW'
   if (currentVoice.value) u.voice = currentVoice.value
   u.rate = speech.rate
-  u.onend = () => { if (speech.playing) { qi++; speakNext() } }
+  u.onend = () => { if (speech.playing && !speech.paused) { qi++; speakNext() } }
   u.onerror = () => { if (speech.playing) { qi++; speakNext() } }
   synth.speak(u)
-}
-
-// chapterId 有值＝只念該章；否則念全文
-function startSpeak(chapterId?: string) {
-  const synth = window.speechSynthesis
-  if (!synth) return
-  synth.cancel()
-  if (!zhVoices.value.length) loadVoices()
-  const chapters = chapterTextMap()
-  const chosen = chapterId ? chapters.filter(c => c.id === chapterId) : chapters
-  queue = chosen.flatMap(c => toChunks(c.text, c.id))
-  qi = 0
-  if (!queue.length) return
-  speech.playing = true; speech.paused = false; speech.readingId = ''
-  armKeepAlive()
-  speakNext()
-}
-
-function togglePause() {
-  const synth = window.speechSynthesis
-  if (!synth || !speech.playing) return
-  if (speech.paused) { synth.resume(); speech.paused = false }
-  else { synth.pause(); speech.paused = true }
-}
-
-function stopSpeak() {
-  window.speechSynthesis?.cancel()
-  speech.playing = false; speech.paused = false; speech.readingId = ''
-  queue = []; qi = 0
-  if (keepAlive) { clearInterval(keepAlive); keepAlive = null }
 }
 
 // Chrome 長時間播放會自行暫停；定時 pause→resume 續命
@@ -452,6 +473,120 @@ function armKeepAlive() {
     const s = window.speechSynthesis
     if (s && speech.playing && !speech.paused) { s.pause(); s.resume() }
   }, 9000)
+}
+
+// ── 引擎 B：Gemini 雲端 TTS（逐段抓 WAV，預抓下一段） ──────────────
+function sleep(ms: number, token: number) {
+  return new Promise<void>((res, rej) => setTimeout(() => (token === playToken ? res() : rej(new Error('stale'))), ms))
+}
+
+// 抓某段音檔並快取為 objectURL。免費層偶爾 429/OTHER，retries>0 時退避重試
+// （播放主路徑會重試以避免中斷；預抓則不重試，不跟主路徑搶額度）。
+async function fetchSeg(i: number, token: number, retries = 0): Promise<string> {
+  if (segCache.has(i)) return segCache.get(i)!
+  let lastErr: any
+  for (let a = 0; a <= retries; a++) {
+    if (token !== playToken) throw new Error('stale')
+    const ctrl = new AbortController()
+    segAborts.set(i, ctrl)
+    try {
+      const buf = await $fetch<Blob>('/api/works/tts', {
+        method: 'POST', responseType: 'blob', signal: ctrl.signal,
+        body: { text: queue[i].text, voice: geminiVoice.value },
+      })
+      if (token !== playToken) throw new Error('stale')
+      const url = URL.createObjectURL(buf)
+      segCache.set(i, url)
+      return url
+    } catch (e: any) {
+      lastErr = e
+      if (e?.message === 'stale' || token !== playToken) throw e
+      if (a < retries) await sleep(2500 + a * 2500, token) // 2.5s,5s,7.5s… 退避
+    } finally { segAborts.delete(i) }
+  }
+  throw lastErr
+}
+
+async function playGeminiAt(i: number, token: number) {
+  if (token !== playToken || !speech.playing) return
+  if (i >= queue.length) { stopSpeak(); return }
+  markChapter(i)
+  let url: string
+  try {
+    if (!segCache.has(i)) speech.loading = true
+    url = await fetchSeg(i, token, 4) // 主路徑退避重試，避免免費層瞬時 429/OTHER 中斷朗讀
+  } catch (e: any) {
+    if (token !== playToken) return
+    if (e?.message !== 'stale') {
+      const quota = e?.statusCode === 429 || e?.data?.data?.code === 'quota_exhausted'
+      speech.error = quota
+        ? 'Gemini 免費語音額度暫時用盡，稍後再試，或改用「裝置」引擎（免費不限量）。'
+        : (e?.data?.message || 'Gemini 語音暫時無法生成，可改用「裝置」引擎。')
+      stopSpeak()
+    }
+    return
+  }
+  if (token !== playToken || !speech.playing) return
+  speech.loading = false
+  if (!audioEl) return
+  audioEl.src = url
+  audioEl.playbackRate = speech.rate
+  audioEl.play().catch(() => {})
+  // 預抓下一段（不重試，不與主路徑搶額度），接續時就不用等
+  if (i + 1 < queue.length && !segCache.has(i + 1)) fetchSeg(i + 1, token, 0).catch(() => {})
+}
+
+function onGeminiEnded() {
+  if (speech.engine !== 'gemini' || !speech.playing || speech.paused) return
+  qi++
+  playGeminiAt(qi, playToken)
+}
+
+// ── 共用控制 ──────────────────────────────────────────────────────
+// chapterId 有值＝只念該章；否則念全文
+function startSpeak(chapterId?: string) {
+  stopSpeak()
+  speech.error = ''
+  const gemini = speech.engine === 'gemini'
+  if (!gemini) {
+    if (!window.speechSynthesis) return
+    if (!zhVoices.value.length) loadVoices()
+  }
+  const chapters = chapterTextMap()
+  const chosen = chapterId ? chapters.filter(c => c.id === chapterId) : chapters
+  queue = chosen.flatMap(c => toChunks(c.text, c.id, gemini ? 500 : 120))
+  qi = 0
+  if (!queue.length) return
+  speech.playing = true; speech.paused = false; speech.readingId = ''
+  const token = ++playToken
+  if (gemini) playGeminiAt(0, token)
+  else { armKeepAlive(); speakNext() }
+}
+
+function togglePause() {
+  if (!speech.playing) return
+  if (speech.engine === 'gemini') {
+    if (speech.paused) { audioEl?.play().catch(() => {}); speech.paused = false }
+    else { audioEl?.pause(); speech.paused = true }
+  } else {
+    const synth = window.speechSynthesis
+    if (!synth) return
+    if (speech.paused) { synth.resume(); speech.paused = false }
+    else { synth.pause(); speech.paused = true }
+  }
+}
+
+function stopSpeak() {
+  playToken++            // 作廢所有進行中的 gemini 抓取／播放流程
+  window.speechSynthesis?.cancel()
+  if (audioEl) { audioEl.pause(); audioEl.removeAttribute('src'); audioEl.load() }
+  for (const c of segAborts.values()) c.abort()
+  segAborts.clear()
+  for (const url of segCache.values()) URL.revokeObjectURL(url)
+  segCache.clear()
+  speech.playing = false; speech.paused = false; speech.loading = false; speech.readingId = ''
+  queue = []; qi = 0
+  if (keepAlive) { clearInterval(keepAlive); keepAlive = null }
 }
 
 async function load() {
@@ -472,10 +607,26 @@ async function load() {
 }
 onMounted(() => {
   load(); loadReview()
-  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-    speech.supported = true
-    loadVoices()
-    window.speechSynthesis.onvoiceschanged = loadVoices
+  if (typeof window !== 'undefined') {
+    speech.supported = true // gemini 引擎只需 fetch + <audio>，一律可用
+    speech.deviceSupported = 'speechSynthesis' in window
+    // 還原偏好
+    try {
+      const e = localStorage.getItem(ENGINE_KEY) as Engine | null
+      if (e === 'device' && speech.deviceSupported) speech.engine = 'device'
+      else if (e === 'gemini' || e === 'device') speech.engine = 'gemini'
+      const gv = localStorage.getItem(GVOICE_KEY)
+      if (gv && GEMINI_VOICES.some(v => v.id === gv)) geminiVoice.value = gv
+    } catch {}
+    if (!speech.deviceSupported) speech.engine = 'gemini'
+    // 準備 gemini 播放用的 <audio>
+    audioEl = new Audio()
+    audioEl.onended = onGeminiEnded
+    audioEl.onerror = () => { if (speech.engine === 'gemini' && speech.playing) onGeminiEnded() }
+    if (speech.deviceSupported) {
+      loadVoices()
+      window.speechSynthesis.onvoiceschanged = loadVoices
+    }
   }
 })
 watch(() => bid.value, () => { stopSpeak(); tab.value = 'book'; load(); loadReview() })
