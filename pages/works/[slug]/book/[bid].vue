@@ -16,17 +16,32 @@
           <aside class="w-48 flex-shrink-0 hidden lg:block">
             <div class="sticky top-4 space-y-0.5 max-h-[80vh] overflow-auto pr-1">
               <p class="text-[11px] font-semibold text-gray-400 uppercase tracking-widest mb-2 px-2">目錄</p>
-              <div v-for="(t, i) in toc" :key="i" class="group flex items-center gap-0.5">
-                <button @click="scrollTo(t.id)"
-                  :class="['flex-1 min-w-0 text-left px-2 py-1.5 rounded-lg text-xs leading-snug transition-colors truncate',
-                           activeId === t.id ? 'bg-violet-100 text-violet-700 font-medium' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-700']">
-                  {{ t.title }}
-                </button>
-                <button v-if="speech.supported" @click="startSpeak(t.id)" :title="`朗讀「${t.title}」`"
-                  :class="['flex-shrink-0 w-6 h-6 rounded-md grid place-items-center text-[13px] transition',
-                           speech.readingId === t.id ? 'text-violet-600 opacity-100' : 'text-gray-400 opacity-0 group-hover:opacity-100 hover:text-violet-600 hover:bg-violet-50']">
-                  <span v-if="speech.readingId === t.id" class="animate-pulse">🔊</span><span v-else>▶</span>
-                </button>
+              <div v-for="(t, i) in toc" :key="i" class="mb-0.5">
+                <div class="group flex items-center gap-0.5">
+                  <button @click="scrollTo(t.id)"
+                    :class="['flex-1 min-w-0 text-left px-2 py-1.5 rounded-lg text-xs leading-snug transition-colors truncate',
+                             activeId === t.id ? 'bg-violet-100 text-violet-700 font-medium' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-700']">
+                    {{ t.title }}
+                  </button>
+                  <button v-if="speech.supported" @click="startSpeak(t.id)" :title="`朗讀整章「${t.title}」`"
+                    :class="['flex-shrink-0 w-6 h-6 rounded-md grid place-items-center text-[13px] transition',
+                             speech.readingId === t.id ? 'text-violet-600 opacity-100' : 'text-gray-400 opacity-0 group-hover:opacity-100 hover:text-violet-600 hover:bg-violet-50']">
+                    <span v-if="speech.readingId === t.id" class="animate-pulse">🔊</span><span v-else>▶</span>
+                  </button>
+                </div>
+                <!-- 小節：可單獨朗讀 -->
+                <div v-for="s in (t.sections || [])" :key="s.id" class="group flex items-center gap-0.5 pl-2.5">
+                  <button @click="scrollTo(s.id)"
+                    :class="['flex-1 min-w-0 text-left px-2 py-1 rounded-lg text-[11px] leading-snug transition-colors truncate',
+                             activeId === s.id ? 'bg-violet-50 text-violet-700 font-medium' : 'text-gray-400 hover:bg-gray-100 hover:text-gray-600']">
+                    {{ s.title }}
+                  </button>
+                  <button v-if="speech.supported" @click="startSpeak(s.id)" :title="`只朗讀本節「${s.title}」`"
+                    :class="['flex-shrink-0 w-6 h-6 rounded-md grid place-items-center text-[12px] transition',
+                             speech.readingId === s.id ? 'text-violet-600 opacity-100' : 'text-gray-300 opacity-0 group-hover:opacity-100 hover:text-violet-600 hover:bg-violet-50']">
+                    <span v-if="speech.readingId === s.id" class="animate-pulse">🔊</span><span v-else>▶</span>
+                  </button>
+                </div>
               </div>
             </div>
           </aside>
@@ -203,7 +218,7 @@ interface BookGroup { branch: string; books: BookMeta[] }
 
 const groups = ref<BookGroup[]>([])
 const html = ref('')
-const toc = ref<{ id: string; title: string }[]>([])
+const toc = ref<{ id: string; title: string; sections?: { id: string; title: string }[] }[]>([])
 const activeId = ref('')
 const pending = ref(true)
 
@@ -245,17 +260,25 @@ const nextBook = computed(() => curGroup.value && bookIdx.value >= 0 && bookIdx.
 
 useHead(() => ({ title: book.value ? `${book.value.title} — 創生哲學` : '創生哲學' }))
 
-// Inject ids into <h2> headings and build a table of contents from them.
+// Inject ids into <h2>/<h3> headings and build a nested table of contents.
+// 章＝h2（ch-N），小節＝h3（sec-N-M，可單獨朗讀）；章末「本章摘要／論證分析圖」不列為可播小節。
 function processHtml(raw: string): string {
-  let n = 0
-  const items: { id: string; title: string }[] = []
-  const out = raw.replace(/<h2([^>]*)>([\s\S]*?)<\/h2>/g, (_m, attrs, inner) => {
-    const id = `ch-${++n}`
+  let nc = 0, ns = 0
+  const chapters: { id: string; title: string; sections: { id: string; title: string }[] }[] = []
+  const out = raw.replace(/<(h2|h3)([^>]*)>([\s\S]*?)<\/\1>/g, (_m, tag, attrs, inner) => {
     const title = inner.replace(/<[^>]+>/g, '').trim()
-    items.push({ id, title })
-    return `<h2 id="${id}"${attrs}>${inner}</h2>`
+    if (tag === 'h2') {
+      const id = `ch-${++nc}`; ns = 0
+      chapters.push({ id, title, sections: [] })
+      return `<h2 id="${id}"${attrs}>${inner}</h2>`
+    }
+    const id = `sec-${nc}-${++ns}`
+    if (chapters.length && !/本章摘要|論證分析圖/.test(title)) {
+      chapters[chapters.length - 1].sections.push({ id, title })
+    }
+    return `<h3 id="${id}"${attrs}>${inner}</h3>`
   })
-  toc.value = items
+  toc.value = chapters
   return out
 }
 
@@ -344,7 +367,10 @@ const speech = reactive({
   playing: false, paused: false, loading: false,
   readingId: '', rate: 1, engine: 'gemini' as Engine, error: '',
 })
-const readingTitle = computed(() => toc.value.find(t => t.id === speech.readingId)?.title ?? '')
+const readingTitle = computed(() => {
+  const flat = toc.value.flatMap(c => [{ id: c.id, title: c.title }, ...(c.sections ?? [])])
+  return flat.find(t => t.id === speech.readingId)?.title ?? ''
+})
 
 // Gemini 預建音色（多語，會自動判讀中文）
 const GEMINI_VOICES = [
@@ -431,6 +457,28 @@ function chapterTextMap(): { id: string; title: string; text: string }[] {
   }
   flush()
   return res
+}
+
+// 抽單一小節文字：從該 <h3> 起，走同層兄弟到下一個 h3／h2／區塊（章末 recap section）為止；
+// 略過出處註腳（.section-source／.chapter-source）與引用編號／論證符號。
+function sectionTextById(secId: string): { id: string; title: string; text: string } {
+  const h = document.getElementById(secId)
+  if (!h) return { id: secId, title: '', text: '' }
+  const title = (h.textContent || '').trim()
+  const parts: string[] = title ? [title] : []
+  const clean = (el: Element) => {
+    const c = el.cloneNode(true) as HTMLElement
+    c.querySelectorAll('.cite-seq, .arg-op, .section-source, .chapter-source').forEach(n => n.remove())
+    return (c.textContent || '').replace(/[ \t]+/g, ' ').replace(/\n{2,}/g, '\n').trim()
+  }
+  let node = h.nextElementSibling
+  while (node && !['H2', 'H3', 'SECTION'].includes(node.tagName)) {
+    if (!node.classList.contains('section-source') && !node.classList.contains('chapter-source')) {
+      const t = clean(node); if (t) parts.push(t)
+    }
+    node = node.nextElementSibling
+  }
+  return { id: secId, title, text: parts.join('\n') }
 }
 
 // 依中文標點斷句後合併成 ≤max 字的段（device 短句避 15s bug；gemini 較長省請求）
@@ -547,8 +595,8 @@ function onGeminiEnded() {
 }
 
 // ── 共用控制 ──────────────────────────────────────────────────────
-// chapterId 有值＝只念該章；否則念全文
-function startSpeak(chapterId?: string) {
+// targetId：ch-N＝只念該章；sec-N-M＝只念該小節；空＝念全文
+function startSpeak(targetId?: string) {
   stopSpeak()
   speech.error = ''
   const gemini = speech.engine === 'gemini'
@@ -556,9 +604,15 @@ function startSpeak(chapterId?: string) {
     if (!window.speechSynthesis) return
     if (!zhVoices.value.length) loadVoices()
   }
-  const chapters = chapterTextMap()
-  const chosen = chapterId ? chapters.filter(c => c.id === chapterId) : chapters
-  queue = chosen.flatMap(c => toChunks(c.text, c.id, gemini ? 500 : 120))
+  const max = gemini ? 500 : 120
+  if (targetId && targetId.startsWith('sec-')) {
+    const sec = sectionTextById(targetId)
+    queue = toChunks(sec.text, targetId, max)
+  } else {
+    const chapters = chapterTextMap()
+    const chosen = targetId ? chapters.filter(c => c.id === targetId) : chapters
+    queue = chosen.flatMap(c => toChunks(c.text, c.id, max))
+  }
   qi = 0
   if (!queue.length) return
   speech.playing = true; speech.paused = false; speech.readingId = ''
