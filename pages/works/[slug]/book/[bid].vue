@@ -103,7 +103,9 @@
                 </label>
               </div>
               <p v-if="speech.error" class="mt-1.5 text-xs text-amber-600">{{ speech.error }}</p>
-              <p v-else-if="speech.engine === 'gemini'" class="mt-1.5 text-[11px] text-gray-400">Gemini 雲端音色最自然，逐段即時生成（首次播放會稍等一下）。</p>
+              <p v-else-if="speech.engine === 'gemini'" class="mt-1.5 text-[11px] text-gray-400">Gemini 雲端音色最自然，但免費額度小、長讀易用盡；用盡時可改「裝置」引擎（免費不限量）。</p>
+              <p v-else-if="speech.engine === 'device' && !currentVoiceIsNatural" class="mt-1.5 text-[11px] text-amber-600">目前是裝置內建的機械音。想要自然中文語音？用 <b>Microsoft Edge</b> 開啟本頁，上面「語音」選單會多出「HsiaoChen · 自然」等神經語音——免費、不限量、音質接近雲端。</p>
+              <p v-else-if="speech.engine === 'device'" class="mt-1.5 text-[11px] text-gray-400">已選用神經語音（· 自然），免費不限量。</p>
             </div>
 
             <!-- mobile chapter jump -->
@@ -390,6 +392,8 @@ function loadVoices() {
 }
 
 const currentVoice = computed(() => zhVoices.value.find(v => v.voiceURI === voiceURI.value) ?? null)
+// 目前選用的裝置語音是否為神經／自然聲線（否＝老款電子音，提示改用 Edge 取得免費神經語音）
+const currentVoiceIsNatural = computed(() => /natural|neural|online/i.test(currentVoice.value?.name || ''))
 watch(voiceURI, (u) => { try { localStorage.setItem(VOICE_KEY, u) } catch {} })
 watch(geminiVoice, (v) => { try { localStorage.setItem(GVOICE_KEY, v) } catch {} })
 watch(() => speech.engine, (e) => { try { localStorage.setItem(ENGINE_KEY, e) } catch {}; stopSpeak() })
