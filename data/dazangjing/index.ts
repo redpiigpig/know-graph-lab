@@ -83,6 +83,15 @@ const PRE_CHRISTIAN_ERA: DazangEra = {
             key: 'persia', label: '波斯啟示部', label_en: 'Persian Revelation',
             works: [
               { title_zh: '伽薩頌詩', title_orig: 'Gathas (Gāθās)', author: '傳為先知瑣羅亞斯德（查拉圖斯特拉）', era: '古伊朗（學界多繫於前 1000 年以前，語言層約前 600 年）', place: '古伊朗（東伊朗地區）', language: '古阿維斯陀文', intro: '《阿維斯陀》中最古老的核心，是十七首阿維斯陀文古頌詩，傳為先知瑣羅亞斯德親作，長期口傳後始書錄。頌詩向至高善神阿胡拉‧馬茲達祈禱頌讚，闡發善惡二元對立、自由抉擇、末日審判與善終得救的教義。其一神傾向、二元論與末世論，被認為深刻影響了猶太教與基督教的天使、撒旦、審判與復活觀念，是波斯啟示母體的根本經典。' },
+          { title_zh: '亞什特諸神頌', title_orig: 'The Yashts (Avestan hymns to the yazatas)', author: '佚名（祆教祭司傳統）', era: '約公元前 1 千紀', place: '古伊朗', language: '阿維斯陀文', intro: '《阿維斯陀》中獻給密特拉、阿娜希塔、韋雷特拉格納等神祇(yazata)的頌歌,保存《伽薩》之外更古的印伊神話層。祆教神話與禮儀的寶庫,密特拉頌尤與後世密特拉密儀相關,是波斯宗教多神底層與一神改革並存的見證。' }
+        
+            ],
+          },
+          {
+            key: 'greek-scripture', label: '希臘神諭部', label_en: 'Greek Oracles',
+            works: [
+          { title_zh: '德爾菲神諭', title_orig: 'The Delphic Oracles', author: '德爾菲阿波羅祭司（皮媞亞）', era: '約公元前 8 世紀—公元 4 世紀', place: '古希臘（德爾菲）', language: '古希臘文', intro: '德爾菲阿波羅神廟女祭司皮媞亞的神諭,「認識你自己」「毋過度」箴刻於廟門,左右希臘城邦大事千年。異教神諭傳統的中樞,其神人溝通模式與基督教先知、預言傳統形成對照;教父並以德爾菲之衰宣告基督降世使邪靈緘默。' }
+        
             ],
           },
         ],
@@ -138,6 +147,26 @@ const PRE_CHRISTIAN_ERA: DazangEra = {
             key: 'law', label: '古代律法部', label_en: 'Ancient Law',
             works: [
               { title_zh: '漢摩拉比法典', title_orig: 'The Code of Hammurabi', author: '漢摩拉比王', era: '約前 1750 年', place: '巴比倫', language: '阿卡德文（楔形文字）', intro: '古巴比倫漢摩拉比王頒布的法典，刻於黑石碑上，碑頂浮雕王自太陽神沙瑪什手中領受權柄。含序言、約 282 條判例式律法與跋語，涵蓋商業、婚姻、傷害、奴隸等，以「以眼還眼」的同態報復著稱。其體例與條文與出埃及記《約書》多有可比之處，是研究西奈律法近東背景的首要對照文獻。' },
+            ],
+          },
+          {
+            key: 'greco-roman-law', label: '希臘羅馬法部', label_en: 'Greek and Roman Law',
+            works: [
+          { title_zh: '十二表法', title_orig: 'The Twelve Tables (Leges Duodecim Tabularum)', author: '羅馬十人立法委員會', era: '約公元前 451–450 年', place: '羅馬', language: '拉丁文', intro: '羅馬共和早期成文於銅表、公佈於廣場的根本法,涵蓋訴訟、債務、家父權、繼承與傷害。羅馬法的奠基文獻、西方成文法傳統的源頭,其法學體系經查士丁尼《民法大全》成為教會法(canon law)的骨架與方法母體。' },
+          { title_zh: '梭倫立法', title_orig: 'The Laws of Solon', author: '梭倫', era: '約公元前 594 年', place: '雅典', language: '古希臘文', intro: '雅典政治家梭倫廢除債務奴役、按財產定政治權利的改革立法,刻於旋轉木軸(axones)。西方憲政與公民法的先驅,「以法止亂、以中道立制」的典範,其公民權與司法改革深植西方法政傳統。' },
+          { title_zh: '德拉古法', title_orig: 'The Laws of Draco', author: '德拉古', era: '約公元前 621 年', place: '雅典', language: '古希臘文', intro: '雅典最早的成文法,以刑罰嚴酷著稱(「draconian」一詞所本),然其區分故意殺人與過失殺人的殺人法影響深遠。成文法取代血親復仇的關鍵一步,司法由私力救濟轉為公權裁斷的里程碑。' },
+          { title_zh: '哥爾廷法典', title_orig: 'The Gortyn Code', author: '哥爾廷城邦（佚名）', era: '約公元前 5 世紀', place: '克里特島哥爾廷', language: '多利安希臘文', intro: '刻於克里特哥爾廷城牆、以牛耕式迴行書寫的城邦法典,詳規婚姻、離婚、繼承、收養與奴隸地位,尤重婦女財產權。現存最完整的古希臘法典石刻,古代地方成文法與社會史的無價實物。' }
+        
+            ],
+          },
+          {
+            key: 'eastern-law', label: '東方法典部', label_en: 'Eastern Law Codes',
+            works: [
+          { title_zh: '李悝法經', title_orig: 'The Canon of Laws (Fǎ Jīng) of Li Kui', author: '李悝', era: '約公元前 400 年（戰國魏）', place: '戰國‧魏', language: '上古漢語', intro: '戰國魏相李悝纂集諸國刑法而成的《法經》六篇(盜、賊、囚、捕、雜、具),為中國成文法典之祖,商鞅承之入秦。中華法系的奠基文獻,「以刑統罪」體系的源頭,與近東、希羅法典並為世界成文法三大獨立傳統之一。' },
+          { title_zh: '睡虎地秦律', title_orig: 'The Qin Statutes (Shuihudi Bamboo Slips)', author: '秦代官吏（佚名）', era: '約公元前 3 世紀（睡虎地秦簡）', place: '秦（今湖北雲夢）', language: '上古漢語（秦隸）', intro: '湖北睡虎地秦墓出土的竹簡秦律,含田律、廄苑律、金布律等及《法律答問》《封診式》,是李悝—商鞅法系的實物。中華法系運作的第一手實錄,呈現秦法之細密嚴整,與羅馬十二表法東西相映。' },
+          { title_zh: '達摩經（印度法經）', title_orig: 'The Dharmasūtras (Gautama, Baudhāyana, Āpastamba, Vasiṣṭha)', author: '喬達摩、包達耶那、阿帕斯坦巴、婆私瑟陀（傳）', era: '約公元前 6–2 世紀', place: '古印度', language: '梵文', intro: '婆羅門學派傳授的散文體法經,規範四種姓職責、人生四階段、儀軌、飲食與贖罪,為印度法(dharmaśāstra)之始,早於《摩奴法典》。印度宗教—社會法的奠基文獻,「以法(dharma)貫通宗教義務與社會秩序」的南亞傳統源頭。' },
+          { title_zh: '溫迪達德（祆教潔淨律）', title_orig: 'The Vendidad (Vīdēvdād)', author: '佚名（祆教祭司傳統）', era: '約公元前 1 千紀（阿維斯陀晚期）', place: '古伊朗', language: '阿維斯陀文', intro: '《阿維斯陀》中專論潔淨與禳除的律法書,詳規屍體處理、潔淨儀軌、贖罪與驅邪,以問答體展開。祆教宗教法與潔淨體系的核心,其潔淨—不潔範疇與利未記聖潔律遙相對照,是波斯宗教律法的代表文本。' }
+        
             ],
           },
         ],
