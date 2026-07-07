@@ -407,6 +407,29 @@ const PRE_CHRISTIAN_ERA: DazangEra = {
             key: 'letters', label: '哲人書簡部', label_en: 'Philosophers Letters',
             works: [
               { title_zh: '道德書信集', title_orig: 'Seneca, Epistulae Morales ad Lucilium (Moral Epistles)', author: '塞內加', era: '約 62–65 年', place: '羅馬帝國（羅馬／坎帕尼亞）', language: '拉丁文', intro: '斯多葛哲人塞內加致友人盧基利烏斯的一百二十四封道德書信，論德行、死亡、時間、良心與內在自由，文風親切而充滿格言。其對良心自省、捨棄外物、神內住人心的論述與基督教倫理高度相通，致教父耶柔米將其列入聖徒名錄，後世更偽造《保羅致塞內加書》以攀附之，足見其與早期信仰的深厚淵源。' },
+          { title_zh: '伊比鳩魯三書簡', title_orig: 'Epicurus, Letters to Herodotus, Pythocles, and Menoeceus', author: '伊比鳩魯', era: '約公元前 300 年', place: '雅典', language: '古希臘文', intro: '伊比鳩魯以三封書信向弟子綱要式陳述其物理學(致希羅多德)、天象(致皮托克勒斯)與倫理(致美諾寇斯)體系,末者含「死亡與我們無關」名論。以書信體傳授整套教義的最早典範,正是保羅、教父以書信立教這一形式的異教前身。' },
+          { title_zh: '柏拉圖書信集（第七封信）', title_orig: 'Plato, Epistles (esp. the Seventh Letter)', author: '柏拉圖（傳）', era: '約公元前 4 世紀', place: '雅典', language: '古希臘文', intro: '託名柏拉圖的十三封書信,以第七封最著,自述其西西里政治參與與哲學不可書寫盡的知識論主張。哲人以書信自陳生平與思想的早期範例,書信作為思想載體的希臘源頭。' },
+          { title_zh: '伊索克拉底《致尼科克勒斯》', title_orig: 'Isocrates, To Nicocles / Nicocles', author: '伊索克拉底', era: '約公元前 370 年', place: '雅典', language: '古希臘文', intro: '修辭家伊索克拉底致塞浦路斯君王尼科克勒斯的勸諭書,教君王治國之道與德行。「君王寶鑑」書信體的希臘奠基,道德勸諭書信的典範,影響後世勸世尺牘與教牧書信甚深。' },
+          { title_zh: '伊索克拉底《致德謨尼庫斯》', title_orig: 'Isocrates, To Demonicus', author: '伊索克拉底（傳）', era: '約公元前 4 世紀', place: '雅典', language: '古希臘文', intro: '致青年德謨尼庫斯的道德勸勉書,以格言連綴教其立身處世、敬神修德。青年品德教育書信的古典,基督教勸勉青年尺牘(如致提摩太)的異教先聲,中世紀學校長讀。' },
+          { title_zh: '犬儒書信集', title_orig: 'The Cynic Epistles (pseudonymous letters of Diogenes, Crates, etc.)', author: '託名第歐根尼、克拉特斯等', era: '約公元前 3 世紀—公元 1 世紀', place: '希臘化世界', language: '古希臘文', intro: '託名犬儒諸師的書信集,倡安貧、自足、棄俗、針砭世人。以書信推廣苦行倫理的典型,其棄絕財物、雲遊勸世的理想,與早期基督教修道及巡迴傳道書信形成鮮明對照與潛在淵源。' },
+          { title_zh: '提亞納的阿波羅尼烏斯書信', title_orig: 'Letters of Apollonius of Tyana', author: '提亞納的阿波羅尼烏斯', era: '公元 1 世紀', place: '小亞細亞', language: '古希臘文', intro: '新畢達哥拉斯派聖哲阿波羅尼烏斯的書信,論神明、獻祭與德行,語簡而峻。這位與耶穌同代、行神蹟的異教「神人」之尺牘,是比較宗教學上與福音書對觀的著名個案,見證聖哲書信的宗教權威。' },
+          { title_zh: '西塞羅《致阿提庫斯書》', title_orig: 'Cicero, Epistulae ad Atticum', author: '西塞羅', era: '公元前 68–44 年', place: '羅馬', language: '拉丁文', intro: '西塞羅致摯友阿提庫斯的私人書信,坦露其政治風波中的內心、猶疑與哀樂,毫無修飾。西方私人書信文學的奠基,「以書信袒露自我」傳統的源頭,奧古斯丁《懺悔錄》式自省的遠親。' },
+          { title_zh: '西塞羅《致友人書》', title_orig: 'Cicero, Epistulae ad Familiares', author: '西塞羅', era: '公元前 62–43 年', place: '羅馬', language: '拉丁文', intro: '西塞羅與各界友人往來的書信總集,兼具問候、論政、薦舉、慰唁諸體。拉丁書信各體式的範本庫,教父書信(問候、勸慰、薦信)體例的修辭前身。' },
+          { title_zh: '小普林尼書信集', title_orig: 'Pliny the Younger, Epistulae (incl. Ep. 10.96 to Trajan)', author: '小普林尼', era: '公元 100–113 年', place: '羅馬／比提尼亞', language: '拉丁文', intro: '小普林尼精心結撰的書信十卷,末卷含其任比提尼亞總督時致圖拉真皇帝、詢問如何處置基督徒的名信(10.96)——記早期基督徒黎明聚會、向基督唱詩如敬神。這是基督教崇拜最早的外邦第一手見證,書信體同時是文學典範與宗教史料。' },
+          { title_zh: '賀拉斯書信集', title_orig: 'Horace, Epistulae', author: '賀拉斯', era: '約公元前 20–13 年', place: '羅馬', language: '拉丁文', intro: '賀拉斯以詩體書信論人生、哲理與詩藝(《詩藝》即其一),閒適中見智慧。詩體書信(verse epistle)的拉丁典範,將道德勸世寓於書信詩的形式,影響後世訓誨詩與書信體文學。' },
+          { title_zh: '弗龍託與奧勒留通信', title_orig: 'The Correspondence of Fronto and Marcus Aurelius', author: '科爾內利烏斯‧弗龍託', era: '公元 2 世紀', place: '羅馬', language: '拉丁文', intro: '修辭大師弗龍託與其弟子、後為皇帝的馬可‧奧勒留往來的書信,師徒情誼與修辭切磋躍然。師徒書信的溫情典範,與教父屬靈師徒尺牘(如金口若望致奧林匹雅)形成人文對照。' }
+        
+            ],
+          },
+          {
+            key: 'ane-letters', label: '近東書簡部', label_en: 'Ancient Near Eastern Letters',
+            works: [
+          { title_zh: '阿馬爾納書信', title_orig: 'The Amarna Letters', author: '埃及與近東諸王及封臣（佚名書記）', era: '約公元前 1360–1332 年', place: '埃及阿瑪爾納', language: '阿卡德語（外交通用語）', intro: '埃及新王國宮廷檔案中三百餘塊泥板,為法老與巴比倫、亞述、米坦尼諸王及迦南封臣往來的外交書信,以阿卡德語書寫。青銅時代國際書信體系的最大遺存,「書信作為跨國溝通媒介」的最古大宗實證,含迦南地名與早期以色列背景。' },
+          { title_zh: '馬裡書信', title_orig: 'The Mari Letters', author: '馬裡王室與官員（佚名書記）', era: '約公元前 1800–1760 年', place: '馬裡（幼發拉底中游）', language: '阿卡德語', intro: '馬裡王宮檔案數千封書信,涉政務、軍情、外交、先知傳諭與日常,尤以「先知向王傳神諭」諸信著稱。近東行政與先知書信的寶庫,「神藉使者傳言於王」母題與希伯來先知傳統相映,書信體宗教溝通的古老見證。' },
+          { title_zh: '赫卡納赫特書信', title_orig: 'The Heqanakht Letters', author: '赫卡納赫特', era: '約公元前 1950 年', place: '古埃及（底比斯一帶）', language: '中埃及語', intro: '中王國一位名赫卡納赫特的祭司兼地主寄回家中的私人書信,叮囑耕作、家用與家人糾紛,語氣急切真實。現存最早的私人家書之一,「以書信處理日常人倫」的古埃及實例,私人尺牘傳統的源頭。' },
+          { title_zh: '古亞述商人書信', title_orig: 'Old Assyrian Merchant Letters (Kültepe/Kanesh)', author: '亞述商人（佚名）', era: '約公元前 1950–1750 年', place: '安納託利亞卡尼什（今屈爾泰佩）', language: '古亞述語（阿卡德方言）', intro: '亞述商人於安納託利亞貿易殖民地留下的數千封商業書信,論貨物、債務、合夥與家事,不乏妻子致遠行丈夫的信。古代長途商業書信網絡的實錄,「書信維繫離散社群」的最早大宗見證,與後世教會書信網絡遙相對映。' },
+          { title_zh: '大流士致加達塔斯書', title_orig: 'The Letter of Darius to Gadatas', author: '大流士一世（傳，希臘文轉刻）', era: '約公元前 5 世紀（希臘文碑約公元 2 世紀）', place: '波斯帝國／小亞細亞', language: '希臘文（傳自古波斯／亞蘭文）', intro: '阿契美尼德王大流士致總督加達塔斯、褒獎其護持阿波羅聖園並斥其向聖職者徵稅的書信。波斯帝國王室行政書信的著名個案,「君王以書信規範地方宗教事務」的實例,帝國政教書信傳統的東方樣本。' }
+        
             ],
           },
         ],
