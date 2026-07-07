@@ -167,6 +167,16 @@ const PRE_CHRISTIAN_ERA: DazangEra = {
             ],
           },
           {
+            key: 'south-asian-seeds', label: '南亞基督教化種子部', label_en: 'South Asian Seeds of Christianization',
+            works: [
+          { title_zh: '梨俱吠陀（提婆‧一元讚歌）', title_orig: 'Ṛgveda — the devas and the monistic hymns (Nāsadīya, Puruṣa Sūkta)', author: '佚名（吠陀仙人 ṛṣi）', era: '約前 1500–1200', place: '古印度（旁遮普一帶）', language: '吠陀梵文', intro: '印度最古聖典,除頌讚眾提婆(deva)外,〈無有歌〉(Nāsadīya)問太初「有無未分」的一元玄思、〈原人歌〉(Puruṣa)詠宇宙自一至上存有流出,已透露超越多神的一元傾向。基督教入印時,聖經各印度語譯本取吠陀傳統的 ईश्वर(Ishvara)、परमेश्वर(Parameśvara)、देव(Deva) 譯「神」,法誇爾《印度教之冠冕》更以基督為吠陀宗教探尋的圓成。吠陀遂成南亞領受一神啟示的最深種子。(印度語聖經譯本各在近代/現代譯校藏,此處只收種子本文。)' },
+          { title_zh: '奧義書（梵‧我‧不二）', title_orig: 'The Upaniṣads — Brahman, Ātman, \'tat tvam asi\'', author: '佚名（奧義書仙人）', era: '約前 800–500（古奧義書）', place: '古印度', language: '梵文', intro: '古奧義書以「梵」(Brahman,終極實在)與「我」(Ātman)本一、「汝即彼」(tat tvam asi)為核心,並以「有‧識‧樂」(sat-cit-ānanda)狀說梵。近代印度基督徒神學家烏帕迪亞以 saccidānanda 詮釋三位一體,靜修所運動(阿彼希克塔難達、比德‧格里菲斯)更以吠檀多不二論會通基督奧秘。奧義書遂成印度基督教本土化最核心的種子。(按年代規則,商羯羅系統化的不二論屬公元 8 世紀、後於基督教,當歸中世紀外藏,不列前藏;此處僅收前基督教的奧義書本文。)' },
+          { title_zh: '薄伽梵歌（巴克提‧化身）', title_orig: 'Bhagavad Gītā — bhakti and avatāra', author: '佚名（傳毗耶娑,《摩訶婆羅多》所收）', era: '核心約前 2 世紀（成於前 2–公元 2 世紀,跨紀元邊界）', place: '古印度', language: '梵文', intro: '《歌》藉黑天(Kṛṣṇa)向阿周那自我啟示,倡「巴克提」(bhakti,愛敬奉獻之道)與「化身」(avatāra,神為救世而降生)之說。其奉獻靈修與神親自降世救人的意象,近代印度基督徒神學家屢引為承接福音的橋樑,巴克提遂成印度虔敬型基督教的種子。(年代跨紀元邊界,核心屬前基督教故列前藏;若採嚴格絕對紀年可再議。)' },
+          { title_zh: '桑迦姆泰米爾文學（Śaiva 語彙）', title_orig: 'Caṅkam Tamil literature and the Śaiva substrate', author: '佚名（桑迦姆詩人群）', era: '約前 3 世紀—公元 3 世紀 / 會通結晶於德諾比利 1600 前後', place: '古印度（泰米爾地區）', language: '古泰米爾文', intro: '桑迦姆詩歌與其後泰米爾 Śaiva 傳統所積累的神聖語彙(如 கடவுள் Kaṭavuḷ「超越者」),為耶穌會士德諾比利(17 世紀)所取:他扮 sannyasi、用泰米爾與梵語神聖詞彙傳教,以 சர்வேசுரன்(Sarvēcuraṉ)等譯神,主張基督信仰可脫西方外衣、著南亞法身。泰米爾南印傳統遂成有別於北印梵語系的另一條種子線,見證本土化宣教的深度。(德諾比利會通諸作在近代,此處只收種子語境本文。)' }
+        
+            ],
+          },
+          {
             key: 'r2-plato', label: '柏拉圖部', label_en: 'Plato',
             works: [
               { title_zh: '會飲篇', title_orig: 'Symposium (Συμπόσιον)', author: '柏拉圖', era: '約公元前4世紀（中期對話，約前385–370年）', place: '雅典', language: '古希臘文', parent: '柏拉圖對話錄', intro: '柏拉圖中期對話之一，以一場酒宴上眾人輪流頌讚愛神厄洛斯為架構，層層遞進至蘇格拉底轉述狄奧提瑪的「愛的階梯」——由愛慕個別肉體之美上升至對「美本身」這一永恆理型的觀照。其將愛慾昇華為對絕對之美與善的渴慕，深刻影響後世新柏拉圖主義與基督教神祕主義的「上升」靈修傳統，是前基督教愛論與美學形上學的母體文獻。' },
