@@ -402,7 +402,10 @@ const PRE_CHRISTIAN_ERA: DazangEra = {
           { title_zh: '勸勉篇', title_orig: 'Protrepticus (Aristotle)', author: '亞里斯多德', era: '約公元前 4 世紀', place: '雅典', language: '古希臘文', intro: '亞里斯多德勸人歸向哲學生活的勸世之作，原書佚而殘篇賴後世徵引傳世。「勸勉體」(protreptikos) 的命名之作，革利免《勸勉希臘人》書名與體裁的直接源頭，勸皈依文類的希臘祖本。' },
           { title_zh: '提勒斯殘篇', title_orig: 'The Teles Fragments (Cynic diatribes)', author: '提勒斯', era: '約公元前 3 世紀', place: '希臘（麥加拉一帶）', language: '古希臘文', intro: '現存最早的犬儒「勸世談」(diatribe) 實例，論流亡、貧窮、自足，引比昂之語以通俗哲理勸慰大眾。街頭哲學佈道體的最古標本，diatribe 文類的直接見證。' },
           { title_zh: '雅典葬禮演說傳統', title_orig: 'The Epitaphios (Funeral Oration) Tradition', author: '佚名（雅典演說傳統，伯里克利為代表）', era: '約公元前 5–4 世紀', place: '雅典', language: '古希臘文', intro: '雅典國葬中頌讚亡者、勸勉生者的公開演說傳統，以修昔底德所記伯里克利葬禮演說為典型。頌讚—勸勉合體的公共演說範式，尼撒的格列高利、安波羅修追思講章的異教前身。' },
-          { title_zh: '演說術原理', title_orig: 'Institutio Oratoria (Quintilian)', author: '昆體良', era: '約公元 95 年', place: '羅馬', language: '拉丁文', intro: '昆體良十二卷的修辭教育集大成，論演說者的養成、佈局、風格與品德（「善於言說的善人」）。羅馬修辭學的總綱，奧古斯丁《論基督教教義》卷四據以奠立基督教講道術的技術母本。' }
+          { title_zh: '演說術原理', title_orig: 'Institutio Oratoria (Quintilian)', author: '昆體良', era: '約公元 95 年', place: '羅馬', language: '拉丁文', intro: '昆體良十二卷的修辭教育集大成，論演說者的養成、佈局、風格與品德（「善於言說的善人」）。羅馬修辭學的總綱，奧古斯丁《論基督教教義》卷四據以奠立基督教講道術的技術母本。' },
+          { title_zh: '狄翁·克里索斯托講辭', title_orig: 'The Orations of Dio Chrysostom', author: '狄翁·克里索斯托', era: '公元 1–2 世紀', place: '羅馬帝國（比提尼亞／流亡各地）', language: '古希臘文', intro: '「金口」狄翁流亡期間雲遊各城、以斯多葛—犬儒道德演說勸世的講辭八十篇。雲遊哲人公開演說勸德的典範,其巡迴講道的形象與內容,是教父講壇(尤金口若望)的異教前身。' },
+          { title_zh: '穆索尼烏斯·魯弗斯講錄', title_orig: 'The Discourses of Musonius Rufus', author: '穆索尼烏斯·魯弗斯（弟子筆錄）', era: '公元 1 世紀', place: '羅馬', language: '古希臘文', intro: '「羅馬的蘇格拉底」穆索尼烏斯論婚姻、飲食、勞動與男女皆當習哲學的道德講錄。斯多葛實踐倫理的懇切勸世,其主張女子亦應受哲學教育尤為超前,與早期基督教倫理教導多有相通。' }
+        
         
             ],
           },
@@ -415,6 +418,22 @@ const PRE_CHRISTIAN_ERA: DazangEra = {
           { title_zh: '祆教普世末世論', title_orig: 'Zoroastrian Universal Eschatology (Saoshyant, Frashokereti)', author: '佚名（祆教傳統，阿維斯陀晚期至中古波斯）', era: '約公元前 1 千紀（觀念累積）', place: '古伊朗', language: '阿維斯陀語／中古波斯語', intro: '祆教關於救世主（Saoshyant）降臨、死人復活、末日火煉與世界更新（Frashōkereti）的普世末世藍圖。「訊息驅動的普世宗教」最早的範型，經第二聖殿猶太教中介深塑基督教末世論與救主期待，是宗教宣傳「以終末呼召萬民」的東方源頭。' },
           { title_zh: '犬儒巡遊傳道', title_orig: 'The Cynic Itinerant Preacher (Diogenes, Crates)', author: '佚名（犬儒傳統，第歐根尼、克拉特斯為代表）', era: '約公元前 4–3 世紀', place: '希臘世界', language: '古希臘文', intro: '犬儒哲人雲遊各城、安貧行乞、逢人針砭勸德的生活實踐，第歐根尼、克拉特斯為典型。「巡迴傳道者」人格的異教原型——雲遊、簡樸、當眾勸世，但止於勸德而不勸改宗，為福音巡迴佈道者提供了外在形象前身。' },
           { title_zh: '帝國福音語彙與皇帝崇拜', title_orig: 'Imperial euangelion and the Ruler Cult (Priene Calendar Inscription)', author: '佚名（亞細亞行省議會）', era: '公元前 9 年', place: '小亞細亞普里耶涅', language: '希臘文', intro: '普里耶涅曆法碑以「福音」(euangelion) 稱奧古斯都誕辰為「世界的好消息之始」，屬帝國崇拜的宣傳語彙。基督教「福音」一詞所挪用並顛覆的異教母語，「反向繼承」宗教宣傳詞彙的關鍵物證。' },
+
+            ],
+          },
+          {
+            key: 'indian-buddhist', label: '印度佛教勸化部', label_en: 'Indian and Buddhist Proclamation',
+            works: [
+          { title_zh: '轉法輪經（佛陀初轉法輪）', title_orig: 'Dhammacakkappavattana Sutta (The First Sermon of the Buddha)', author: '佛陀（釋迦牟尼）之教（弟子結集）', era: '約公元前 5 世紀（口傳,巴利定本較晚）', place: '古印度（鹿野苑）', language: '巴利語', intro: '佛陀成道後於鹿野苑向五比丘宣說四聖諦與八正道的初次說法,佛教「第一篇講道」。人類影響最深遠的宗教講道之一,以「初轉法輪」開一大宗教的宣化傳統,與基督教「登山寶訓」式奠基講道遙相對映。' },
+          { title_zh: '法句經', title_orig: 'Dhammapada', author: '佛陀之教（弟子結集）', era: '約公元前 3 世紀結集', place: '古印度', language: '巴利語', intro: '佛教偈頌體的道德格言集,四百餘偈教人止惡修善、調伏其心,「諸惡莫作、眾善奉行」為其綱。佛教勸化文學的巔峰,以精煉偈語傳布倫理的東方典範,譯本遍及全球,與基督教箴言—勸世傳統可資對照。' },
+          { title_zh: '本生經（佛陀前生譚）', title_orig: 'The Jātaka Tales', author: '佛教傳統（弟子結集）', era: '約公元前 3 世紀起', place: '古印度', language: '巴利語', intro: '敘佛陀前生行菩薩道、捨身濟眾的五百餘則寓言故事,寓道德教訓於敘事。佛教教化敘事的寶庫,其寓言體與西傳(如《巴拉姆與約沙法》)使佛教故事化入基督教聖傳,是勸化敘事跨宗教流轉的關鍵。' }
+        
+            ],
+          },
+          {
+            key: 'east-asian-exhortation', label: '東亞勸學部', label_en: 'East Asian Exhortation',
+            works: [
+          { title_zh: '荀子《勸學》', title_orig: 'Xunzi, \'Exhortation to Learning\' (Quan Xue)', author: '荀子（荀況）', era: '約公元前 3 世紀', place: '戰國‧中國', language: '上古漢語', intro: '荀子開篇名作,「學不可以已」「鍥而不捨,金石可鏤」勸人積善成德、化性起偽。中國勸學勸世文學的典範,以譬喻連綴激勵向學修德,與希羅 protreptic 勸勉篇東西並立。' }
         
             ],
           },
@@ -715,7 +734,10 @@ const PRE_CHRISTIAN_ERA: DazangEra = {
           { title_zh: '烏拉＝胡布魯詞彙表', title_orig: 'Urra = ḫubullu (lexical series)', author: '佚名（巴比倫抄寫學校）', era: '約公元前 2 千紀（標準版定型於前 1 千紀）', place: '巴比倫尼亞', language: '蘇美爾語—阿卡德語（雙欄對照）', intro: '二十四塊泥板的蘇美爾—阿卡德雙語詞彙大表，逐詞左蘇美爾、右阿卡德對照，涵蓋草木器物職官。人類最古的系統性雙語對照工程，翻譯與辭書技藝的共同源頭，其「逐欄對譯」正是後世對照本聖經的遠祖。' },
           { title_zh: '蘇美爾—阿卡德逐行釋文', title_orig: 'Sumerian-Akkadian Interlinear Bilinguals', author: '佚名（巴比倫、亞述抄寫者）', era: '約公元前 2 千紀', place: '美索不達米亞', language: '蘇美爾語／阿卡德語', intro: '蘇美爾語聖典（讚歌、咒文）逐行下附阿卡德語譯文的雙語抄本，蘇美爾語作為死語仍禮儀傳習、由阿卡德語釋讀。「聖典古語＋通行語逐行對譯」的最早範式，正如後世拉丁—白話對照本，是逐行釋經傳統的近東前身。' },
           { title_zh: '埃杜巴抄寫學校校勘傳統', title_orig: 'É-dubba scribal collation tradition', author: '佚名（蘇美爾—巴比倫抄寫學校）', era: '約公元前 3–1 千紀', place: '美索不達米亞', language: '蘇美爾語／阿卡德語', intro: '「泥板屋」抄寫學校的抄錄、校對與定本傳統，泥板末附抄手、母本來源與校讀題記（colophon）。文本校勘與版本題記的最古制度，亞歷山卓校勘學之前兩千年的文獻管理術。' },
-          { title_zh: '哈圖沙多語儀典與條約', title_orig: 'Hattusa Multilingual Rituals and Treaties', author: '佚名（赫梯王室檔案）', era: '約公元前 14–13 世紀', place: '赫梯（哈圖沙）', language: '赫梯語／阿卡德語／胡里語／盧維語等', intro: '赫梯王室檔案中蘇美爾—阿卡德—赫梯多語並列的詞表、儀典與國際條約。青銅時代近東多語行政與外交翻譯的實錄，多語並置文本的早期高峰。' }
+          { title_zh: '哈圖沙多語儀典與條約', title_orig: 'Hattusa Multilingual Rituals and Treaties', author: '佚名（赫梯王室檔案）', era: '約公元前 14–13 世紀', place: '赫梯（哈圖沙）', language: '赫梯語／阿卡德語／胡里語／盧維語等', intro: '赫梯王室檔案中蘇美爾—阿卡德—赫梯多語並列的詞表、儀典與國際條約。青銅時代近東多語行政與外交翻譯的實錄，多語並置文本的早期高峰。' },
+          { title_zh: '埃卜拉雙語詞表', title_orig: 'The Ebla Bilingual Vocabularies', author: '佚名（埃卜拉書記）', era: '約公元前 2300 年', place: '敘利亞埃卜拉', language: '蘇美爾語—埃卜拉語', intro: '敘利亞埃卜拉王宮檔案出土的蘇美爾語—埃卜拉語雙欄詞表,是現存最古的雙語詞典之一,早於烏拉詞彙表。人類最早的翻譯對照工具,雙語辭書傳統的源頭實物,見證青銅時代早期的跨語言知識管理。' },
+          { title_zh: '卡拉提佩腓尼—盧維雙語銘文', title_orig: 'The Karatepe Bilingual (Phoenician-Luwian)', author: '阿札提瓦達（Azatiwada）', era: '約公元前 8 世紀', place: '安納託利亞東南（卡拉提佩）', language: '腓尼基文／盧維象形文', intro: '城主阿札提瓦達以腓尼基字母文與盧維象形文對照刻寫的長篇銘文,為破譯盧維象形文的關鍵鑰匙。多語對照銘刻的重要實例,如小型羅塞塔石碑,見證字母文字與象形文字並用的過渡地帶。' }
+        
         
             ],
           },
@@ -746,6 +768,14 @@ const PRE_CHRISTIAN_ERA: DazangEra = {
           { title_zh: '烏加里特楔形字母', title_orig: 'Ugaritic Cuneiform Alphabet', author: '佚名（烏加里特書記）', era: '約公元前 13 世紀', place: '迦南（烏加里特／拉斯沙姆拉）', language: '烏加里特語', intro: '以楔形筆畫寫成的三十字母表音系統，附已知最早的字母順序（abecedary）泥板。字母原理與楔形載體的獨特結合，迦南書寫技術的實驗標本，字母順序傳統的最古實證。' },
           { title_zh: '楔形文字書寫系統', title_orig: 'The Cuneiform Writing System', author: '佚名（蘇美爾書記）', era: '約公元前 3200 年起', place: '蘇美爾（烏魯克）', language: '蘇美爾語（後承載阿卡德、赫梯、埃蘭諸語）', intro: '人類最早的完整書寫系統之一，一符多音、跨語言借用，承載近東三千年文獻。文本文明的開端技術，其一符可讀多語的特性，使雙語釋文與多語銘刻成為可能。' },
           { title_zh: '埃及聖書體與世俗體', title_orig: 'Egyptian Hieroglyphic and Demotic Scripts', author: '佚名（埃及書記，「生命之屋」per-ankh）', era: '約公元前 3200 年起', place: '古埃及', language: '古埃及語（諸階段）', intro: '聖書體、僧侶體與世俗體三階書寫並行，繕寫所「生命之屋」世代傳習抄錄。埃及文本傳承的技術體系，三體並存正是羅塞塔石碑多體對照的內在條件。' }
+
+            ],
+          },
+          {
+            key: 'east-asian-philology', label: '東亞文字與訓詁部', label_en: 'East Asian Scripts and Glossing',
+            works: [
+          { title_zh: '爾雅', title_orig: 'Erya (the earliest Chinese lexicon)', author: '佚名（傳周公、孔門後學遞增）', era: '約公元前 3 世紀成編', place: '戰國—秦漢‧中國', language: '上古漢語', intro: '中國最早的訓詁詞書,分釋詁、釋言、釋親、釋天、釋地等十九篇,以今語釋古語、以類相聚解名物。中華訓詁學與辭書之祖,「以類系詞」的東亞辭書體例源頭,後世雅學與類書皆本於此。' },
+          { title_zh: '李斯書同文（秦刻石與小篆）', title_orig: 'Li Si\'s Script Unification (Qin small seal script)', author: '李斯', era: '約公元前 221 年', place: '秦', language: '上古漢語（小篆）', intro: '秦統一後李斯奉命「書同文」,罷除六國異體、頒定小篆為正字,並撰《倉頡篇》為識字範本,泰山等秦刻石為其標準。以政令統一文字的東亞創舉,「一字一形」使廣土多語得共用一種書面文字,是漢字圈文本流通的技術前提。' }
         
             ],
           },
@@ -884,7 +914,10 @@ const PRE_CHRISTIAN_ERA: DazangEra = {
           { title_zh: '博物志', title_orig: 'Naturalis Historia (Pliny the Elder)', author: '老普林尼', era: '公元 77 年', place: '羅馬', language: '拉丁文', intro: '老普林尼三十七卷、含兩萬條目的自然百科，天文地理動植礦與人文工藝無所不包，自稱徵引兩千卷。西方現存最早的完整百科全書，中世紀至文藝復興博物知識的權威母本。' },
           { title_zh: '卡利馬科斯書目', title_orig: 'Pinakes (Callimachus)', author: '卡利馬科斯', era: '約公元前 3 世紀', place: '埃及亞歷山卓', language: '希臘文', intro: '卡利馬科斯為亞歷山卓圖書館編纂的一百二十卷分類作者書目，按文類與字母排列並附小傳。目錄學與書目學的鼻祖，一切工具書、辭典與圖書分類的遠祖。' },
           { title_zh: '阿提卡之夜', title_orig: 'Noctes Atticae (Aulus Gellius)', author: '奧盧斯‧革利烏斯', era: '約公元 2 世紀', place: '羅馬／雅典', language: '拉丁文', intro: '革利烏斯博採文法、法律、哲學、史事雜考而成的隨筆彙編，體例散而題自成篇。「雜纂—摘記」式類書的代表，教父與中世紀常引的知識雜俎母型。' },
-          { title_zh: '哲人學說彙纂', title_orig: 'Placita philosophorum (Aëtius, doxography)', author: '傳埃提烏斯', era: '約公元 1–2 世紀', place: '希臘化世界', language: '希臘文', intro: '按主題臚列各派哲人主張的「學說彙纂」（doxography），如「論本原」下列泰利斯、阿那克西曼德諸說。學說分條彙纂的體裁代表，教父引文集（catena）與異端誌「羅列諸家」手法的前身。' }
+          { title_zh: '哲人學說彙纂', title_orig: 'Placita philosophorum (Aëtius, doxography)', author: '傳埃提烏斯', era: '約公元 1–2 世紀', place: '希臘化世界', language: '希臘文', intro: '按主題臚列各派哲人主張的「學說彙纂」（doxography），如「論本原」下列泰利斯、阿那克西曼德諸說。學說分條彙纂的體裁代表，教父引文集（catena）與異端誌「羅列諸家」手法的前身。' },
+          { title_zh: '亞裡士多德《動物志》', title_orig: 'Aristotle, History of Animals', author: '亞裡士多德', era: '約公元前 4 世紀', place: '雅典', language: '古希臘文', intro: '亞裡士多德依觀察系統分類記述動物形態、習性與生殖的博物鉅著。西方系統性自然史與生物分類的奠基,「按類觀察窮舉」的科學百科母型,老普林尼《博物志》之學術先驅。' },
+          { title_zh: '忒奧弗拉斯托斯《植物誌》', title_orig: 'Theophrastus, Enquiry into Plants', author: '忒奧弗拉斯托斯', era: '約公元前 4 世紀末', place: '雅典', language: '古希臘文', intro: '亞裡士多德繼承人忒奧弗拉斯托斯系統分類記述植物的專著,西方植物學之祖。以觀察分類建立專門知識體系的典範,自然史百科傳統的另一支柱。' }
+        
         
             ],
           },
@@ -895,6 +928,16 @@ const PRE_CHRISTIAN_ERA: DazangEra = {
           { title_zh: '耶斯迦尼祿多', title_orig: 'Nirukta (Yāska)', author: '耶斯迦', era: '約公元前 5 世紀', place: '古印度', language: '梵文', intro: '耶斯迦解釋《吠陀》難字的詞源學專著，附《尼犍豆》(nighaṇṭu) 詞彙表，以語根釋義。印度詞源學（vyākaraṇa 支）的奠基，與伊西多爾《詞源》以語源解義的方法驚人平行，辭書與詞源學的東方源頭。' },
           { title_zh: '吠陀支學統', title_orig: 'Vedāṅga (the six auxiliary disciplines)', author: '佚名（婆羅門學統）', era: '約公元前 1 千紀', place: '古印度', language: '梵文', intro: '為傳習《吠陀》而立的六門輔助學科（語音、格律、文法、詞源、天文、儀軌），系統分科以護持聖典。印度「以分科學統護持經典」的體系，與希羅七藝、教父三學四藝並為經典教育的分科母型。' },
           { title_zh: '阿闥婆吠陀咒術彙編', title_orig: 'Atharvaveda (as compiled formulae)', author: '佚名（婆羅門祭司）', era: '約公元前 1200–1000 年', place: '古印度', language: '吠陀梵文', intro: '分類彙集治病、禳災、增益諸咒的吠陀本集，以功能歸類編次咒文。印度最早的功能分類彙編之一，「以類系咒」編纂法的吠陀實例，與近東咒文叢書遙相對映。' }
+
+            ],
+          },
+          {
+            key: 'chinese-compendia', label: '中國彙編與名物部', label_en: 'Chinese Compendia and Lexica',
+            works: [
+          { title_zh: '呂氏春秋', title_orig: 'Lüshi Chunqiu (Master Lü\'s Spring and Autumn Annals)', author: '呂不韋主編（門客集撰）', era: '約公元前 239 年', place: '秦', language: '上古漢語', intro: '秦相呂不韋集門客分十二紀、八覽、六論編成的百科式雜家鉅著,兼綜儒道墨法陰陽,「一字千金」傳為美談。中國最早有系統的分類彙編之一,「合眾說於一書」的類書先驅,體例宏整。' },
+          { title_zh: '淮南子', title_orig: 'Huainanzi', author: '淮南王劉安及門客', era: '約公元前 139 年', place: '西漢‧淮南', language: '上古漢語', intro: '淮南王劉安集門客以道家為宗、綜貫諸子與天文地理方術而成的鉅著,〈天文〉〈墬形〉〈時則〉諸篇尤具百科性。漢代雜家類書的高峰,以宇宙論統攝萬類知識的東亞體例代表。' },
+          { title_zh: '山海經', title_orig: 'Shanhaijing (Classic of Mountains and Seas)', author: '佚名（戰國至漢遞成）', era: '約公元前 4 世紀—公元前 1 世紀', place: '戰國—漢‧中國', language: '上古漢語', intro: '分山經、海經、大荒經,按方位臚列山川、物產、異獸、神祇與祭法的古地理博物志。中國最早的博物—神話彙編,「按方域系物」的類書體例源頭,與老普林尼《博物志》東西相映。' },
+          { title_zh: '周禮（官制彙編）', title_orig: 'Zhouli (Rites of Zhou)', author: '佚名（傳周公，戰國成編）', era: '約公元前 3 世紀成編', place: '戰國‧中國', language: '上古漢語', intro: '以天地春夏秋冬六官分繫三百餘職、備載理想官制與職掌的典制彙編。中國職官—制度分類彙編的典範,「以類系職」的行政百科,後世會要、政書之祖。' }
         
             ],
           },
