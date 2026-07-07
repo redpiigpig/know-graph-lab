@@ -158,6 +158,16 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
 - **狀態（2026-06-24 結案）**：🎉 **全 15 卷英文＋中文書目皆完成，約 663 筆**——M1/M2/M3、E1/E2/E3、O1/O2/O3、V1/V2/V3、B1/B2/B3 五系列。report 在 `scripts/data/lit_review_genesis_{<BID>}.md`(+`_zh`)，皆 dry-parse `DUP=[]` 過、commit 在 master。**書目層結案**。⚠️ 跨領域同 ref_key 一卷內只留一筆（跨卷重覆＝允許）；作者不確定寧缺。新章/新書代擬內容尚未回填 C-xxxxx。
 - **剩餘＝全文逐段中譯（選配，已交辦 Codex）**：見上「全文層」。2026-06-24 嘗試過夜跑時 Gemini/NVIDIA/Sonnet **三引擎全 429（帳號層級限流）**，故停手改交 Codex 用 `--engine haiku`（Max 獨立池）或限流退去後 `--engine sonnet --resume`。
 
+## 創生哲學叢書：新增／改章 + 對話出處回填（2026-07-07）
+
+叢書 15 卷正文＝**HTML 檔** `public/content/works/genesis/<BID>.html`（B1/E1/M1/O1/V1…）；書目 index＝`public/content/works/genesis-philosophy-books.json`（groups→books，每本有 `nChapters`）。**reader 目錄由正文 `<h2>` 自動生成**（[pages/works/[slug]/book/[bid].vue](../../../pages/works/) 用 regex 注入 `id` 建 TOC＋TTS 分章）；`nChapters` 只是封面「N 章」標籤。
+
+- **章的 HTML 骨架**（照抄既有章，別自創）：`<section class="chapter"><h2>第N章　標題</h2>` → `<div class="chapter-fable"><p>章首故事…</p><p class="fable-bridge">橋接句</p></div>` → 若干 `<h3>一、…</h3>`＋`<p>`，**每節結尾**一行 `<p class="section-source">本節主要依據對話：…</p>` → 章末 `<p class="section-source chapter-source">本章主要依據對話：…</p>` → `<section class="chapter-recap"><h3>本章摘要</h3><ul class="recap-points">…</ul><h3>論證分析圖</h3><div class="argmap"><div class="arg-premise">…</div><div class="arg-op">↓</div><div class="arg-step">…</div>…<div class="arg-conclusion">…</div></div></section>`。整章以 `</section></section>` 收（recap + chapter 兩層）。改完驗 `<section>`/`</section>` 數相等。
+- **出處＝真實 seq，嚴禁編造**：引用連結 `<a href="/ai-dialogues?seq=C-01234" class="cite-seq">C-01234</a>`。對話存**兩表** `ai_dialogues_chatgpt`(C-)／`ai_dialogues_gemini`(G-)，欄位 `seq_label, dialogue_date, title, prompt, response`。M1 這批用 **C-**（ChatGPT）。撈法：Supabase Management API `POST https://api.supabase.com/v1/projects/vloqgautkahgmqcwgfuo/database/query`，header 帶 `Authorization: Bearer $SUPABASE_ACCESS_TOKEN` **＋ `User-Agent`（不帶會被 Cloudflare 擋 403 code 1010）**；query 例 `SELECT seq_label,title FROM ai_dialogues_chatgpt WHERE (prompt||response) ~ '(聖嬰|自性|Aion|黑暗森林)' ORDER BY seq_label`。逐節按主題撈 5–6 筆，章末彙整全章去重排序。
+- **插章＝連鎖改號**：新章插在某章前 → 後續各章 `第N章` 全 +1；還要改**內文列舉**（如死亡章開頭「前六章…（第二章）…（第六章）」）、**論證圖跨章引用**（`承第五–七章`→`第五–八章`）、以及 JSON `nChapters`。cross-book 引用（別卷提到本卷第 N 章）用 `rg` 查一遍。
+- **稽核踩雷**：判斷「某概念在不在某卷」用 `rg` 時，pattern 別寫 `A\|B`——ripgrep 的 `\|` 是**字面豎線**不是「或」，會假陰性（我曾據此誤報「唯識↔預測編碼接榫不在 V3」，其實 V3 第二章早已完整）。要「或」就寫 `(A|B)` 或分開各跑一次。
+- **案例（2026-07-07）**：M1《愛的萬物論》新增**第七章「內在的聖誕：個體化作為倫理的圓滿」**（內在聖嬰＝自性誕生／膨脹之危→內在聖家涵容→內在聖誕平安→屠嬰與出埃及＝圓滿非終點、交棒卷二），死亡倫理順延**第八章**；四節＋全章 22 條 C- 出處已回填。這解掉上節「新章尚未回填 C-xxxxx」的缺口。**與 ebook skill 無關，只屬 works。**
+
 ## 版權姿態
 
 - **全文只收開放取用 / 公有領域**：JBE（Journal of Buddhist Ethics，全卷開放）、漢堡大學 buddhismuskunde PDF、blogs.dickinson.edu、聖嚴法師數位典藏、NTU 佛研、政大學術集成、towisdom / hongshi PDF、Horner 1930（PD）。
