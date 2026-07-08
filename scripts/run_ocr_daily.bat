@@ -81,6 +81,12 @@ echo --- standardize_pdf_lite --- >> "%LOGFILE%"
 "%PY%" scripts\standardize_pdf_lite.py --all --only-fresh >> "%LOGFILE%" 2>&1
 echo step5b exit=%ERRORLEVEL% >> "%LOGFILE%"
 
+REM Step 6: quality gate — 對當日動過的書重評分寫回 ebooks.quality_*（純規則零 LLM）。
+REM 記 log 不擋 bat；全館掃描與 REOCR 重轉由 KGLab-Quality-Sweep 夜間任務負責。
+echo --- quality_sweep (recent 1d) --- >> "%LOGFILE%"
+"%PY%" scripts\quality_sweep.py --recent 1 >> "%LOGFILE%" 2>&1
+echo step6 exit=%ERRORLEVEL% >> "%LOGFILE%"
+
 echo === Daily run ended %DATE% %TIME% (gemini-exit %GEMINI_EXIT%) === >> "%LOGFILE%"
 
 endlocal

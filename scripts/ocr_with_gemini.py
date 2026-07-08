@@ -85,6 +85,7 @@ CHUNKS_DIR = Path("G:/我的雲端硬碟/資料/電子書/_chunks")
 PREVIEW_LEN = 100  # 2026-07-08 200→100：DB 超量救援
 DEFAULT_MODEL = "gemini-2.5-flash"
 DEFAULT_RPM = 4  # under 10 RPM limit on flash, gentler on the service
+STAGING = False  # --staging：只寫 {id}.jsonl.new，不動 DB/R2/parsed_at（requeue_reocr gate 用）
 
 def _find_gemini_keys() -> list[str]:
     """Return ALL configured Gemini keys (in priority order, dedup'd).
@@ -158,6 +159,20 @@ def fetch_ocr_targets(sort_by_size=True):
             except Exception:
                 return float("inf")
         out.sort(key=size_of)
+    return out
+
+
+def fetch_books_by_ids(ids):
+    """按 id 直接撈書（不管 parse_error）— requeue 重轉「已 parse 但正文空白」的書用。"""
+    out = []
+    for i in range(0, len(ids), 50):
+        batch = ",".join(ids[i:i + 50])
+        r = requests.get(
+            f"{URL}/rest/v1/ebooks?select=id,title,author,file_type,file_path,parse_error"
+            f"&id=in.({batch})",
+            headers={"apikey": KEY, "Authorization": f"Bearer {KEY}"}, timeout=30)
+        r.raise_for_status()
+        out.extend(r.json())
     return out
 
 
@@ -239,10 +254,40 @@ def insert_chunk_previews(book_id, chunks):
             raise RuntimeError(f"chunk insert failed at batch_size=1, row {i}")
 
 
-def write_jsonl(book_id, chunks):
-    """Write full text to local JSONL (same shape as parse_worker). Returns path."""
+# ── Gemini 6h cooldown（跨次執行持久化）─────────────────────────
+# translate_ebook_to_zh.py 的 2-strike 規則移植：全部 key 耗盡 → 寫 cooldown 檔，
+# 6 小時內的後續排程 run 不再白打 Gemini、直接走 Haiku（一次一本）。
+_COOLDOWN_FILE = Path(__file__).parent / "state" / "ocr_gemini_cooldown.json"
+GEMINI_COOLDOWN_SECONDS = 6 * 3600
+
+
+def _gemini_cooldown_until() -> float:
+    try:
+        return json.loads(_COOLDOWN_FILE.read_text(encoding="utf-8")).get("until", 0.0)
+    except Exception:
+        return 0.0
+
+
+def _set_gemini_cooldown() -> None:
+    _COOLDOWN_FILE.parent.mkdir(parents=True, exist_ok=True)
+    until = time.time() + GEMINI_COOLDOWN_SECONDS
+    _COOLDOWN_FILE.write_text(json.dumps(
+        {"until": until, "until_str": time.strftime("%Y-%m-%d %H:%M", time.localtime(until))}),
+        encoding="utf-8")
+
+
+def _clear_gemini_cooldown() -> None:
+    try:
+        _COOLDOWN_FILE.unlink()
+    except FileNotFoundError:
+        pass
+
+
+def write_jsonl(book_id, chunks, staging=False):
+    """Write full text to local JSONL (same shape as parse_worker). Returns path.
+    staging=True 時寫 {id}.jsonl.new（requeue_reocr.py 的 validate gate 過了才 swap）。"""
     CHUNKS_DIR.mkdir(parents=True, exist_ok=True)
-    out = CHUNKS_DIR / f"{book_id}.jsonl"
+    out = CHUNKS_DIR / (f"{book_id}.jsonl.new" if staging else f"{book_id}.jsonl")
     with out.open("w", encoding="utf-8") as f:
         for i, c in enumerate(chunks):
             f.write(json.dumps({
@@ -711,6 +756,12 @@ def process_one_haiku(haiku_client, book: dict, src_path: Path, max_retries: int
                 return {"status": "fail", "error": "haiku returned 0 usable pages", "transient": False}
 
             total_chars = sum(len(c["text"]) for c in non_empty)
+            if STAGING:
+                jsonl_path = write_jsonl(book["id"], non_empty, staging=True)
+                print(f"  ✓ Haiku staged {len(non_empty)} pages -> {jsonl_path.name}")
+                for p in (ckpt_path, batch_idx_path):
+                    p.unlink(missing_ok=True)
+                return {"status": "ok", "staged": str(jsonl_path)}
             jsonl_path = write_jsonl(book["id"], non_empty)
             insert_chunk_previews(book["id"], non_empty)
 
@@ -826,6 +877,11 @@ def process_one(client, book, src_path, model, max_retries=3):
                 return {"status": "fail", "error": "model returned 0 usable pages", "transient": False}
 
             total_chars = sum(len(p["text"]) for p in non_empty)
+            if STAGING:
+                jsonl_path = write_jsonl(book["id"], non_empty, staging=True)
+                elapsed = time.time() - t_start
+                print(f"  ✓ staged {len(non_empty)} pages, {total_chars // 1000}K chars, {elapsed:.0f}s")
+                return {"status": "ok", "staged": str(jsonl_path)}
             jsonl_path = write_jsonl(book["id"], non_empty)
             insert_chunk_previews(book["id"], non_empty)
 
@@ -997,7 +1053,12 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False,
         targets = [b for b in targets if b["id"] in book_set]
         missing = book_set - {b["id"] for b in targets}
         if missing:
-            print(f"⚠ --book ids not in OCR queue (already parsed, or wrong id): {missing}", file=sys.stderr)
+            # 不在 OCR 佇列的書（已 parse 但正文空白 → requeue 重轉）按 id 直接撈
+            extra = fetch_books_by_ids(sorted(missing))
+            targets.extend(extra)
+            still = missing - {b["id"] for b in extra}
+            if still:
+                print(f"⚠ --book ids not found in ebooks: {still}", file=sys.stderr)
     if exclude:
         excl_set = set(exclude)
         targets = [b for b in targets if b["id"] not in excl_set]
@@ -1006,6 +1067,14 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False,
         print(f"Available Gemini keys: {len(API_KEYS)} (will rotate on quota)")
     if limit:
         targets = targets[:limit]
+
+    # 6h cooldown（跨排程持久化）：上一輪全部 Gemini key 耗盡 → 這輪直接 Haiku 主引擎
+    if engine == "gemini":
+        cd_until = _gemini_cooldown_until()
+        if time.time() < cd_until:
+            print(f"⏸ Gemini cooldown 生效中（至 {time.strftime('%H:%M', time.localtime(cd_until))}）"
+                  f"→ 本輪直接走 Haiku（一次一本）", flush=True)
+            engine = "haiku"
 
     if engine == "haiku":
         return _run_haiku_primary(targets, dry_run=dry_run)
@@ -1145,7 +1214,10 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False,
 
         if quota_hit:
             # All Gemini keys exhausted — fall back to Haiku for this book and the rest.
-            print(f"\n⚠ All Gemini keys exhausted. Switching to Haiku fallback (one book at a time).")
+            # 寫 6h cooldown 檔：之後 6 小時內的排程 run 不再白打 Gemini。
+            _set_gemini_cooldown()
+            print(f"\n⚠ All Gemini keys exhausted（已寫 6h cooldown）. "
+                  f"Switching to Haiku fallback (one book at a time).")
             if not _HAS_ANTHROPIC or not _HAS_FITZ:
                 missing = []
                 if not _HAS_ANTHROPIC: missing.append("anthropic")
@@ -1202,6 +1274,7 @@ def cmd_run(limit=None, model=DEFAULT_MODEL, rpm=DEFAULT_RPM, dry_run=False,
             # Successful book = reset the oversized streak so a future
             # oversized-Haiku-429 isn't paired with one from before this win.
             consecutive_oversized_quota = 0
+            _clear_gemini_cooldown()  # Gemini 路徑成功 → 解除 cooldown
         else:
             err = result["error"]
             failed.append((b["title"], err))
@@ -1256,6 +1329,9 @@ def main():
                 i += 2
             else:
                 i += 1
+        if "--staging" in args:
+            global STAGING
+            STAGING = True
         cmd_run(limit=limit, model=model, rpm=rpm, dry_run="--dry-run" in args,
                 books=books or None, exclude=exclude or None, engine=engine)
     else:
