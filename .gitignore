@@ -98,6 +98,18 @@ stores/*
 # Panikkar self-translate cache holds COPYRIGHTED source text (src fields) — never commit
 .claude/skills/ebook-collected-works/panikkar_data/
 
+# Collected-works pipeline 產出 JSON（canonical 在 DB；jung 含版權 Hull 英譯）— 本機工作檔，不進版控
+.claude/skills/ebook-collected-works/jung_data/
+.claude/skills/ebook-collected-works/mueller_data/
+
+# Script runtime 快取/進度檔（app 不引用，腳本每次執行重生）
+/data/local_inventory.json
+/data/parse_progress.txt
+/data/herald_detect_cache.json
+
+# pytest
+.pytest_cache/
+
 # Interview-book OCR transcriptions hold COPYRIGHTED book text — canonical store is the DB (lit_review_sections)
 scripts/data/huimin_liushi_ganen/
 scripts/data/lizhifu_fuchen/
