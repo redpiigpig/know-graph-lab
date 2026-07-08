@@ -10,6 +10,10 @@
           依學科收錄哲學、宗教學、神學、佛學、心理學等領域奠基學者的全集，每位學者一份學術小傳、生平年表與按年編排的完整著作目錄；
           各部著作以原文‧（譯本）‧繁中多欄逐段對照閱讀。
         </p>
+        <NuxtLink to="/transcription-progress"
+          class="inline-flex items-center gap-1.5 mt-4 text-xs text-blue-600 hover:underline">
+          🛰 轉錄與翻譯進度
+        </NuxtLink>
       </div>
 
       <!-- 依學科分組 -->

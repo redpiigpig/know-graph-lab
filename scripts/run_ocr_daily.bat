@@ -87,6 +87,12 @@ echo --- quality_sweep (recent 1d) --- >> "%LOGFILE%"
 "%PY%" scripts\quality_sweep.py --recent 1 >> "%LOGFILE%" 2>&1
 echo step6 exit=%ERRORLEVEL% >> "%LOGFILE%"
 
+REM Step 7: push transcription/translation progress JSON to c:/tmp + R2
+REM (/transcription-progress monitoring page reads it).
+echo --- push_transcription_progress --- >> "%LOGFILE%"
+"%PY%" scripts\push_transcription_progress.py >> "%LOGFILE%" 2>&1
+echo step7 exit=%ERRORLEVEL% >> "%LOGFILE%"
+
 echo === Daily run ended %DATE% %TIME% (gemini-exit %GEMINI_EXIT%) === >> "%LOGFILE%"
 
 endlocal

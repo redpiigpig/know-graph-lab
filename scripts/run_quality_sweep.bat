@@ -19,5 +19,9 @@ echo --- requeue_reocr run --limit 5 --- >> "%LOGFILE%"
 "%PY%" scripts\requeue_reocr.py run --limit 5 >> "%LOGFILE%" 2>&1
 echo requeue exit=%ERRORLEVEL% >> "%LOGFILE%"
 
+echo --- push_transcription_progress --- >> "%LOGFILE%"
+"%PY%" scripts\push_transcription_progress.py >> "%LOGFILE%" 2>&1
+echo push exit=%ERRORLEVEL% >> "%LOGFILE%"
+
 echo === Quality sweep ended %DATE% %TIME% === >> "%LOGFILE%"
 endlocal

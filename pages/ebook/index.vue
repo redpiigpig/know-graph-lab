@@ -8,6 +8,9 @@
           <span class="font-semibold text-sm">電子圖書館</span>
         </div>
         <div class="flex items-center gap-2">
+          <NuxtLink to="/transcription-progress"
+            class="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-800 hover:bg-gray-700 text-sm transition"
+            title="轉錄與翻譯進度">🛰</NuxtLink>
           <NuxtLink to="/ebook/help"
             class="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-800 hover:bg-gray-700 text-sm transition" title="使用說明">?</NuxtLink>
           <button @click="showUpload = true"
