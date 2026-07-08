@@ -32,7 +32,7 @@ except ImportError as e:
 CHECKLIST = 'data/parse_progress.txt'
 DRIVE_ROOT = 'G:/我的雲端硬碟/資料/電子書'
 CHUNKS_DIR = 'G:/我的雲端硬碟/資料/電子書/_chunks'
-PREVIEW_LEN = 200  # only first N chars stored in DB; full text stays in local JSONL
+PREVIEW_LEN = 100  # 2026-07-08 200→100：DB 超量救援  # only first N chars stored in DB; full text stays in local JSONL
 
 # ── env loading ────────────────────────────────────────────────
 def load_env():

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Re-populate ebook_chunks with 200-char preview rows so /api/ebooks/search?mode=fulltext
+Re-populate ebook_chunks with 100-char preview rows so /api/ebooks/search?mode=fulltext
 covers every parsed book (not just the standardized + OCR'd ones).
 
 Source of truth: local JSONL at G:/...電子書/_chunks/{ebook_id}.jsonl
@@ -41,7 +41,7 @@ H_GET = {"apikey": KEY, "Authorization": f"Bearer {KEY}"}
 H_INS = {**H_GET, "Content-Type": "application/json", "Prefer": "return=minimal"}
 
 CHUNKS_DIR = Path(ENV.get("EBOOK_CHUNKS_DIR") or "G:/我的雲端硬碟/資料/電子書/_chunks")
-PREVIEW_LEN = 200
+PREVIEW_LEN = 100  # 2026-07-08 200→100：DB 超量救援（free tier 500MB）
 BATCH = 100
 
 
@@ -115,7 +115,7 @@ def count_existing_chunks(ebook_id: str) -> int:
 
 
 def insert_previews(ebook_id: str, lines):
-    """Write 200-char preview rows. Deletes existing first (idempotent re-run).
+    """Write 100-char preview rows. Deletes existing first (idempotent re-run).
     Adaptive batch — on 57014 (Supabase IO timeout) shrinks the batch and retries
     instead of failing the whole book."""
     requests.delete(

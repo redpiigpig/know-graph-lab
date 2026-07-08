@@ -64,7 +64,7 @@ H = {
 }
 
 CHUNKS_DIR = Path("G:/我的雲端硬碟/資料/電子書/_chunks")
-PREVIEW_LEN = 200
+PREVIEW_LEN = 100  # 2026-07-08 200->100: DB quota rescue
 DEFAULT_MODEL = "claude-haiku-4-5-20251001"
 PAGES_PER_BATCH = 10
 DPI = 150

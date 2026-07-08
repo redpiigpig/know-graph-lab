@@ -1,5 +1,6 @@
 // GET /api/scripture/chapter?book=gen&chapter=1
 // Returns { book, chapter, verses: [{ verse, byVersion: { sblgnt: '...', wlc: '...', ... } }] }
+// 經文本體 2026-07-08 起不在 DB（超量救援）：走 Drive/R2 gz JSON，見 server/utils/bible-verses.ts。
 export default defineEventHandler(async (event) => {
   await requireAuth(event)
   const query = getQuery(event)
@@ -19,28 +20,12 @@ export default defineEventHandler(async (event) => {
   if (bookErr) throw createError({ statusCode: 500, message: bookErr.message })
   if (!bookRow) throw createError({ statusCode: 404, message: 'book not found' })
 
-  const { data: verses, error: verseErr } = await supabase
-    .from('bible_verses')
-    .select('verse, version_code, text')
-    .eq('book_code', bookCode)
-    .eq('chapter', chapter)
-    .order('verse', { ascending: true })
-  if (verseErr) throw createError({ statusCode: 500, message: verseErr.message })
-
-  // Group by verse number → { [verse]: { [version_code]: text } }
-  const byVerse = new Map<number, Record<string, string>>()
-  for (const row of (verses ?? []) as { verse: number; version_code: string; text: string }[]) {
-    if (!byVerse.has(row.verse)) byVerse.set(row.verse, {})
-    byVerse.get(row.verse)![row.version_code] = row.text
-  }
-
-  const versesOut = Array.from(byVerse.entries())
-    .sort((a, b) => a[0] - b[0])
-    .map(([verse, byVersion]) => ({ verse, byVersion }))
+  const doc = await loadBibleBook(bookCode)
+  const entries = doc?.chapters?.[String(chapter)] ?? []
 
   return {
     book: bookRow,
     chapter,
-    verses: versesOut,
+    verses: entries.map((e) => ({ verse: e.v, byVersion: e.t })),
   }
 })

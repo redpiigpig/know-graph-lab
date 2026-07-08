@@ -82,7 +82,7 @@ H = {
 }
 
 CHUNKS_DIR = Path("G:/我的雲端硬碟/資料/電子書/_chunks")
-PREVIEW_LEN = 200
+PREVIEW_LEN = 100  # 2026-07-08 200→100：DB 超量救援
 DEFAULT_MODEL = "gemini-2.5-flash"
 DEFAULT_RPM = 4  # under 10 RPM limit on flash, gentler on the service
 
