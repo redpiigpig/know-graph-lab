@@ -130,6 +130,9 @@
 
       <!-- 主內容 -->
       <div class="flex-1 min-w-0">
+        <!-- 🛰 轉錄與翻譯進度欄目（標題列常駐重點數字，點開看全貌） -->
+        <EbookTranscriptionProgressPanel dark collapsible class="mb-6" />
+
         <!-- 搜尋列 -->
         <div class="mb-6">
           <div class="flex gap-3 mb-3">
