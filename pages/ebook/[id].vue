@@ -47,6 +47,18 @@
                 : 'bg-white text-stone-600 border-stone-200 hover:border-amber-400 hover:text-amber-700']">
             <span>✏️</span><span>編輯</span>
           </button>
+          <!-- Aa 閱讀設定：字級/行距/主題，CSS 變數作用於閱讀區，localStorage 持久化 -->
+          <EbookDisplaySettings v-model="displaySettings" />
+          <!-- 🔊 朗讀本頁 — 裝置 SpeechSynthesis（Edge 神經語音免費）；換頁自動停 -->
+          <button @click="toggleReadAloud"
+            :disabled="!tts.supported.value"
+            :title="!tts.supported.value ? '此瀏覽器不支援語音合成' : tts.playing.value ? '停止朗讀' : '朗讀本頁（裝置語音）'"
+            :class="['hidden md:flex items-center gap-1 px-2 py-1 rounded-md text-xs transition border flex-shrink-0',
+              tts.playing.value
+                ? 'bg-red-100 text-red-800 border-red-300'
+                : 'bg-white text-stone-600 border-stone-200 hover:border-blue-400 hover:text-blue-700 disabled:opacity-40']">
+            <span>{{ tts.playing.value ? '⏹' : '🔊' }}</span><span>{{ tts.playing.value ? '停止' : '朗讀' }}</span>
+          </button>
           <!-- 📄 原頁／原版模式 — 即時渲染真實原檔（PDF→pdf.js 真頁；EPUB→epub.js
                原樣排版）。掃描書／版面亂的書讀真頁比讀轉錄好；對任何有原檔的書
                都當逃生口提供。 -->
@@ -134,7 +146,12 @@
       </aside>
 
       <!-- Reading area -->
-      <div class="flex-1 overflow-y-auto bg-stone-50" ref="scrollEl">
+      <div :class="['flex-1 overflow-y-auto',
+          displaySettings.theme === 'dark' ? 'ebook-theme-dark bg-stone-900'
+          : displaySettings.theme === 'sepia' ? 'ebook-theme-sepia'
+          : 'bg-stone-50']"
+        :style="{ '--ebook-font-scale': displaySettings.fontScale, '--ebook-line-height': displaySettings.lineHeight }"
+        ref="scrollEl">
         <article :class="['ebook-article mx-auto px-12 py-14 shadow-sm rounded-lg my-8 border border-stone-200',
           effectiveViewMode === 'parallel' && pageSourceOrder.length ? 'max-w-7xl' : 'max-w-4xl']">
           <div v-if="pageLoading" class="space-y-3 animate-pulse">
@@ -592,6 +609,42 @@ const isBilingualMode = computed(() => ebook.value?.display_mode === "bilingual-
 // source. Legacy "bi"/"en" values are migrated on mount. Contract +
 // helpers: lib/multilang-sources.ts.
 type ViewMode = string;
+// Aa 閱讀設定（字級/行距/主題）— 元件自己讀寫 localStorage，這裡只持有目前值
+const displaySettings = ref<{ fontScale: number; lineHeight: number; theme: 'light' | 'sepia' | 'dark' }>({
+  fontScale: 1, lineHeight: 2, theme: 'light',
+});
+
+// 🔊 朗讀：從「目前渲染的中文閱讀區 DOM」收段落（與畫面 1:1 對齊，正在唸的段落高亮）
+const tts = useReaderTts();
+let ttsEls: HTMLElement[] = [];
+function clearTtsHighlight() {
+  for (const el of ttsEls) el.classList.remove("tts-reading");
+}
+function toggleReadAloud() {
+  if (tts.playing.value) { tts.stop(); clearTtsHighlight(); return; }
+  const roots = Array.from(
+    document.querySelectorAll(".ebook-article .ebook-prose:not(.ebook-prose-en)")
+  ) as HTMLElement[];
+  ttsEls = [];
+  const texts: string[] = [];
+  for (const root of roots) {
+    for (const el of Array.from(root.children) as HTMLElement[]) {
+      const t = (el.innerText || "").trim();
+      if (!t) continue; // 與 speakQueue 的過濾同步，確保索引對齊
+      ttsEls.push(el);
+      texts.push(t);
+    }
+  }
+  tts.speakQueue(texts);
+}
+watch(tts.currentIdx, (i, prev) => {
+  if (prev !== undefined && prev >= 0 && ttsEls[prev]) ttsEls[prev].classList.remove("tts-reading");
+  if (i >= 0 && ttsEls[i]) {
+    ttsEls[i].classList.add("tts-reading");
+    ttsEls[i].scrollIntoView({ block: "center", behavior: "smooth" });
+  }
+});
+
 const viewMode = ref<ViewMode>("zh");
 // Raw localStorage value, applied once we know the chunk's source_order
 // (legacy "en" → src:<primary> needs the primary lang).
@@ -1350,6 +1403,7 @@ watch(effectiveViewMode, async () => {
 // ── Loaders ──
 async function loadPage(page: number) {
   pageLoading.value = true;
+  tts.stop(); clearTtsHighlight(); ttsEls = []; // 換頁停止朗讀（DOM 即將重建）
   const token = await getToken(); if (!token) return;
   const isFirstLoad = !ebook.value;
   const url = `/api/ebooks/${ebookId}?page=${page}${isFirstLoad ? "&includeToc=1" : ""}`;
@@ -2316,9 +2370,38 @@ useHead({ title: computed(() => ebook.value ? `${ebook.value.title} — 閱讀` 
 
 .ebook-prose {
   color: #1c1917;
-  font-size: 17px;
-  line-height: 2;
+  /* Aa 閱讀設定：字級/行距由 CSS 變數驅動（EbookDisplaySettings），預設＝原觀感 */
+  font-size: calc(17px * var(--ebook-font-scale, 1));
+  line-height: var(--ebook-line-height, 2);
   font-family: "Noto Serif TC", "Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", Georgia, serif;
+}
+
+/* 米色主題：閱讀容器與紙面同步暖化 */
+.ebook-theme-sepia { background: #f0e9d8; }
+.ebook-theme-sepia .ebook-article { background: #f9f2df; }
+
+/* 暗主題：只作用於閱讀區（工具列/側欄不變） */
+.ebook-theme-dark .ebook-article {
+  background: #292524;
+  border-color: #44403c;
+}
+.ebook-theme-dark .ebook-article::before { background: none; }
+.ebook-theme-dark .ebook-prose { color: #e7e5e4; }
+.ebook-theme-dark .ebook-prose :deep(h1),
+.ebook-theme-dark .ebook-prose :deep(h2),
+.ebook-theme-dark .ebook-prose :deep(h3),
+.ebook-theme-dark .ebook-prose :deep(h4) { color: #fafaf9; }
+.ebook-theme-dark .ebook-prose :deep(blockquote) { color: #d6d3d1; }
+
+/* 🔊 正在朗讀的段落 */
+.ebook-prose :deep(.tts-reading) {
+  background: rgba(59, 130, 246, 0.08);
+  box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.08);
+  border-radius: 0.25rem;
+}
+.ebook-theme-dark .ebook-prose :deep(.tts-reading) {
+  background: rgba(147, 197, 253, 0.12);
+  box-shadow: 0 0 0 6px rgba(147, 197, 253, 0.12);
 }
 .ebook-prose :deep(h1) {
   font-size: 2.2rem;
