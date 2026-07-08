@@ -20,6 +20,7 @@ End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL 
 - `ocr_with_gemini.py` 新增：全 key 耗盡寫 `scripts/state/ocr_gemini_cooldown.json`（6h 內排程直接走 Haiku）；`--staging`；`--book` 可按 id 撈已 parse 的空白書。
 - 排程：`KGLab-OCR-Daily-10/14/18` 已重新 Enable（bat 第 6 步＝當日增量 sweep）；新增 `KGLab-Quality-Sweep` 02:30（全館 sweep＋每晚最多重轉 5 本）。
 - 前端：`components/ebook/EbookQualityBadge.vue` 三色品質標示（書卡＋reader）。
+- **進度監視欄目 `/transcription-progress`**：重轉錄佇列（tier 分佈＋requeue 狀態機）＋全集翻譯（穆勒/SBE 逐部段落完成率）統一儀表板。資料由 `scripts/push_transcription_progress.py` 彙整（本機檔案零 DB 依賴）寫 c:/tmp＋R2 `progress/transcription.json`，兩支排程 bat 末尾自動更新；入口在 /ebook 頂欄 🛰 與 /collected-works portal。
 
 **全集/圖書館徹底分離**
 - `ebooks.collection` 欄位（`'collected-works'`＝全集卷，NULL＝圖書館）；`/api/ebooks` 列表與搜尋預設排除全集，`?collection=collected-works|all` 可切；`/ebook/:id` middleware 對全集卷 302 到 `/collected-works/:slug/:id`。backfill 腳本 `scripts/apply-ebooks-quality-collection.mjs`。
