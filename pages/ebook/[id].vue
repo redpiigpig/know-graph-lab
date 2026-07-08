@@ -16,6 +16,8 @@
           </button>
           <span class="text-sm font-medium text-stone-900 truncate">{{ ebook?.title }}</span>
           <span v-if="ebook?.author" class="text-stone-400 text-sm hidden md:inline truncate">／{{ ebook.author }}</span>
+          <!-- 轉錄品質 badge：爛書提示可切「原頁」模式讀真頁 -->
+          <EbookQualityBadge :score="ebook?.quality_score" :flags="ebook?.quality_flags" class="hidden md:inline-flex" />
         </div>
 
         <div class="flex items-center gap-2 flex-shrink-0">
