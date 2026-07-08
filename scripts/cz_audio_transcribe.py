@@ -8,7 +8,8 @@ Whisper(faster_whisper) 直接吃本機 wav；raw 存 tmp_sermon/audio/<date>_ra
 """
 import os, re, sys, json, glob, datetime
 from pathlib import Path
-sys.path.insert(0, os.path.abspath("scripts/pong-archive"))
+# pong-archive 腳本群 2026-07-08 已遷至 nonchurch-nuxt repo（pong_sermon_pipeline.transcribe 從該處 import）
+sys.path.insert(0, r"C:\Users\user\Desktop\nonchurch-nuxt\scripts\pong-archive")
 
 BASE = "pong-archive/stores/城中週報/錄音"
 OUT = Path("tmp_sermon/audio"); OUT.mkdir(parents=True, exist_ok=True)
