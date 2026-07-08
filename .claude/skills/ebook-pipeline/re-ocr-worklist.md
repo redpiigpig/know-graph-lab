@@ -1,4 +1,6 @@
-
+> 🗄️ **本清單已被 DB quality tier 取代（2026-07-08）**：跑 `python scripts/quality_sweep.py --all` 產出 `c:/tmp/quality_tiers.json`（REOCR tier 即最新重轉清單，已寫回 `ebooks.quality_score/quality_flags`），重轉由 `scripts/requeue_reocr.py`（staging + gate + ledger）與夜間 `KGLab-Quality-Sweep` 排程執行。本檔留作歷史紀錄。
+>
+> ⚙️ 引擎政策更正：統一 **Gemini 主 → NVIDIA → Haiku 救急**（2026-06-04 定案，本檔原 NVIDIA-first 說法已過時）；Vision OCR 只有 Gemini Vision → Haiku Vision（NVIDIA vision 未驗證不可用）。
 > ⚙️ **引擎政策（2026-06-04 更新）**：所有 LLM 工作一律**優先用 NVIDIA（輝達，`https://integrate.api.nvidia.com/v1`，預設文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避免 429）**，第二層 fallback 用 Gemini，**第三層救急才用 Haiku（NVIDIA→Gemini→Haiku；前兩個免費池都用罄時才動 Haiku）**。視覺類用 NVIDIA 視覺模型（如 `nvidia/llama-3.1-nemotron-nano-vl-8b-v1`）。
 
 # Re-OCR 工作清單（96 本：47 OCR-fail + 49 空白正文）

@@ -256,6 +256,7 @@
                     </span>
                     <span class="text-xs text-gray-600">{{ ebook.total_pages }} 頁</span>
                     <span class="text-xs uppercase text-gray-700">{{ ebook.file_type }}</span>
+                    <EbookQualityBadge :score="ebook.quality_score" :flags="ebook.quality_flags" compact />
                   </div>
                 </div>
               </div>

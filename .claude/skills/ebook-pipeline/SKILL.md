@@ -12,6 +12,24 @@ description: Operate the Know-Graph-Lab ebook pipeline end-to-end. Use when work
 
 End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL covers ingest, parse, OCR, standardize, DB back-fill, and reader-side features.
 
+## 2026-07-08 大改版：品質自動化＋全集隔離＋DB 超量救援
+
+**品質自動化（取代人工 audit）**
+- `scripts/quality_sweep.py`（純規則零 LLM）：全館評分寫回 `ebooks.quality_score`（0-100）/ `quality_flags`（jsonb）/ `quality_checked_at`，tier＝`REOCR / RESTANDARDIZE / FIX_TOC / FAIR / GOOD`，輸出 `c:/tmp/quality_tiers.json`。逐頁書（PER_PAGE_ONLY）豁免結構罰分。REST 被 quota 鎖時自動 fallback Management API SQL。首輪（2,202 本）：GOOD 1,535 / REOCR 274 / RESTANDARDIZE 116 / FAIR 274 / FIX_TOC 3。
+- `scripts/requeue_reocr.py`：重轉錄 orchestrator。備份 `.bak` → `ocr_with_gemini.py run --book {id} --staging`（寫 `{id}.jsonl.new`，不動 DB/R2）→ staged gate（頁碼覆蓋不退＋空白率必須改善＋字數實質成長）→ 過了才 swap＋DB previews＋R2＋重 standardize＋重評分；不過留 `.rejected`。Ledger `scripts/logs/reocr_ledger.json` 冪等續跑。
+- `ocr_with_gemini.py` 新增：全 key 耗盡寫 `scripts/state/ocr_gemini_cooldown.json`（6h 內排程直接走 Haiku）；`--staging`；`--book` 可按 id 撈已 parse 的空白書。
+- 排程：`KGLab-OCR-Daily-10/14/18` 已重新 Enable（bat 第 6 步＝當日增量 sweep）；新增 `KGLab-Quality-Sweep` 02:30（全館 sweep＋每晚最多重轉 5 本）。
+- 前端：`components/ebook/EbookQualityBadge.vue` 三色品質標示（書卡＋reader）。
+
+**全集/圖書館徹底分離**
+- `ebooks.collection` 欄位（`'collected-works'`＝全集卷，NULL＝圖書館）；`/api/ebooks` 列表與搜尋預設排除全集，`?collection=collected-works|all` 可切；`/ebook/:id` middleware 對全集卷 302 到 `/collected-works/:slug/:id`。backfill 腳本 `scripts/apply-ebooks-quality-collection.mjs`。
+
+**DB 超量救援（1,313 → 359 MB，free tier 500MB）**
+- 拆 7 支 idx_scan=0 死索引（定義備份 `database/dropped-fts-indexes-2026-07-08.sql`，含 411MB 的 ebook_chunks fts）。
+- **DB preview 改 100 字**（原 200）：`PREVIEW_LEN=100`，六支寫 preview 的 script 已同步。
+- **bible_verses 整表搬出 DB**：每卷一 gz JSON（Drive canonical `G:/…/聖經/_verses/` + R2 `bible-verses/`），`server/utils/bible-verses.ts` local-first→R2 LRU；讀經 API 已改。遷移工具 `scripts/offload_bible_verses.py`（export/upload/verify/drop）。
+
+
 ## Current state (snapshot 2026-05-22 — reader UX golden template landed on 加爾文《基督教要義》)
 
 > **Reader UX upgrade (this session)** — see new section [Reader UX golden template](#reader-ux-golden-template-2026-05-22). Validated end-to-end on Calvin's Institutes (校園書房中文版). Highlights: cover-hero title page, web-font 楷書 blockquote, English book title italic, bidirectional `[^N]` footnote anchors, parchment background, 2-level TOC (chapter + section anchors) with `<a href>` semantics, manual cover paste UI. Standardize regex updated to preserve `<sup>(N)</sup>` as `[^N]`.
@@ -383,14 +401,14 @@ Auth via `ANTHROPIC_API_KEY` or `~/.claude/.credentials.json` OAuth token. **2-s
 
 ### Scheduler
 
-Bat is a **5-step runner**: `ingest_new_books → parse_worker → ocr_with_gemini → detect_set_volumes → split_ebook_set`. Steps 4a/4b idempotent (no-op when no 套書 pending).
+Bat is a **6-step runner**: `ingest_new_books → parse_worker → ocr_with_gemini → detect_set_volumes → split_ebook_set → quality_sweep --recent 1`. Steps 4a/4b idempotent (no-op when no 套書 pending).
 
 | Component | Path |
 |---|---|
 | Bat runner | [`scripts/run_ocr_daily.bat`](../../../scripts/run_ocr_daily.bat) — logs to `scripts/logs/ocr_YYYY-MM-DD.log` |
 | Toast helper | [`scripts/notify.ps1`](../../../scripts/notify.ps1) — fires at start + on 429 |
-| Windows Task | `KGLab-OCR-Daily` |
-| Trigger | **Daily 16:00** Taipei time |
+| Windows Tasks | `KGLab-OCR-Daily-10` / `-14` / `-18`（2026-07-08 重新 Enable）＋ `KGLab-Quality-Sweep`（02:30 夜間品質維護） |
+| Trigger | **Daily 10:00 / 14:00 / 18:00** Taipei（OCR）＋ **02:30**（quality sweep + requeue） |
 | Behavior | `WakeToRun` + `StartWhenAvailable` — wakes from sleep, catches up if missed |
 | Cap | 12-hour `ExecutionTimeLimit` |
 
@@ -1043,7 +1061,7 @@ New book in z-lib/ never showed up?
 3. Read Workflow B before touching standardize.
 4. Don't re-run `standardize_ebook.py` on books with annotations.
 5. For categorized batch standardize, `--dry-run` first.
-6. Watch daily scheduler at 16:00 — log in `scripts/logs/ocr_YYYY-MM-DD.log`.
+6. Watch daily scheduler (10/14/18) — log in `scripts/logs/ocr_YYYY-MM-DD.log`；夜間品質 log 在 `scripts/logs/quality_YYYY-MM-DD.log`.
 
 ## Reader-side features tied to the pipeline
 

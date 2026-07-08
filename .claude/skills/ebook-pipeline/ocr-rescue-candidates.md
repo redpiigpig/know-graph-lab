@@ -1,3 +1,5 @@
+> 🗄️ **已被 DB quality tier 取代（2026-07-08）**：見 `quality_sweep.py`（BLANK_BODY flag / REOCR tier）。本檔留作歷史紀錄。
+
 # OCR Body Rescue Candidates (>50% tiny chunks)
 
 **Identified 2026-05-22 overnight** — books where 50%+ of chunks have <100 chars (PDF body extract failed).
