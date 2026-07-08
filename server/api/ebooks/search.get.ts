@@ -32,6 +32,7 @@ export default defineEventHandler(async (event) => {
       ? supabase
           .from("ebooks")
           .select("id, title, author, file_type, total_pages, chunk_count, category, subcategory")
+          .is("collection", null)
           .ilike("title", `%${safe}%`)
           .order("title")
           .limit(50)
@@ -40,6 +41,7 @@ export default defineEventHandler(async (event) => {
       ? supabase
           .from("ebooks")
           .select("id, title, author, file_type, total_pages, chunk_count, category, subcategory")
+          .is("collection", null)
           .ilike("author", `%${safe}%`)
           .order("title")
           .limit(50)
@@ -49,11 +51,13 @@ export default defineEventHandler(async (event) => {
           let req = supabase
             .from("ebook_chunks")
             .select(
-              "id, ebook_id, chunk_index, page_number, chapter_path, content, ebooks(title, author)"
+              "id, ebook_id, chunk_index, page_number, chapter_path, content, ebooks!inner(title, author, collection)"
             )
             .ilike("content", `%${safe}%`)
             .limit(40);
+          // 書內搜尋（指定 ebookId）不做 collection 過濾；跨館全文搜尋才排除全集
           if (ebookId) req = req.eq("ebook_id", ebookId);
+          else req = req.is("ebooks.collection", null);
           return req;
         })()
       : Promise.resolve({ data: [] as any[], error: null }),

@@ -1,10 +1,11 @@
 export default defineEventHandler(async (event) => {
   await requireAuth(event);
   const supabase = getAdminClient();
-  const { category, subcategory, tagId } = getQuery(event) as {
+  const { category, subcategory, tagId, collection } = getQuery(event) as {
     category?: string;
     subcategory?: string;
     tagId?: string;
+    collection?: string; // 未帶=圖書館(排除全集)；'collected-works'=只看全集；'all'=不過濾
   };
 
   // tagId filter: fetch the book_ids for this tag once, then narrow ebooks
@@ -28,10 +29,17 @@ export default defineEventHandler(async (event) => {
   for (let from = 0; ; from += PAGE) {
     let q = supabase
       .from("ebooks")
-      .select("id, title, author, file_type, total_pages, chunk_count, created_at, category, subcategory, books(id, title, author)")
+      .select("id, title, author, file_type, total_pages, chunk_count, created_at, category, subcategory, collection, quality_score, quality_flags, books(id, title, author)")
       .order("created_at", { ascending: false })
       .range(from, from + PAGE - 1);
 
+    if (collection === "all") {
+      // 不過濾
+    } else if (collection) {
+      q = q.eq("collection", collection);
+    } else {
+      q = q.is("collection", null);
+    }
     if (category) q = q.eq("category", category);
     if (subcategory) q = q.ilike("subcategory", `${subcategory}%`);
     if (bookIdFilter) q = q.in("book_id", bookIdFilter);

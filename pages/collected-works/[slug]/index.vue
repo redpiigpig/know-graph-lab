@@ -140,7 +140,7 @@ const RowLink = resolveComponent('NuxtLink')
 const liveChunks = ref<Record<string, number>>({})
 onMounted(async () => {
   try {
-    const data = await $fetch<any>('/api/ebooks')
+    const data = await $fetch<any>('/api/ebooks?collection=collected-works')
     const list = Array.isArray(data) ? data : data?.ebooks ?? []
     const m: Record<string, number> = {}
     for (const e of list) if (e?.id) m[e.id] = e.chunk_count ?? 0

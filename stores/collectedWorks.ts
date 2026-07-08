@@ -6,7 +6,8 @@
  *
  * - portal：/collected-works（列出所有作家）
  * - 作家 hub：/collected-works/[slug]（簡介＋肖像＋年表＋著作目錄）
- * - 單卷閱讀沿用既有 /ebook/[id] 多欄 reader（work.ebookId 連過去）
+ * - 單卷閱讀走全集專屬 reader /collected-works/[slug]/[ebookId]；
+ *   全集卷在 ebooks.collection='collected-works'，不會出現在 /ebook 圖書館
  *
  * 編輯方式：直接改本檔（沿用 stores/speech.ts、/works 的 repo-committed 模式）。
  * 肖像走 Wikimedia Commons 公有領域圖（Special:FilePath，?width= 取縮圖），不用 Supabase Storage。
@@ -34,7 +35,7 @@ export interface CwWork {
   category: string // 類別／群組（hub 內分組依據）
   languages?: string[] // 可得來源語言 code，如 ['en','de']
   status: WorkStatus
-  ebookId?: string // 已轉錄時連到 /ebook/[id]
+  ebookId?: string // 已轉錄時連到 /collected-works/[slug]/[ebookId]
   externalUrl?: string // 連到獨立 corpus／portal（如東方聖書），優先於 ebookId
   note?: string // 備註（版權、進度…）
 }
@@ -4780,5 +4781,15 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
 
   const bySlug = (slug: string) => authors.value.find((a) => a.slug === slug)
 
-  return { authors, bySlug }
+  /** ebookId → 全集 reader 路由。命中代表這本是全集卷，圖書館 reader 應 redirect 過來。 */
+  const routeByEbookId = computed(() => {
+    const map = new Map<string, string>()
+    for (const a of authors.value)
+      for (const w of a.works)
+        if (w.ebookId) map.set(w.ebookId, `/collected-works/${a.slug}/${w.ebookId}`)
+    return map
+  })
+  const routeForEbook = (ebookId: string) => routeByEbookId.value.get(ebookId) ?? null
+
+  return { authors, bySlug, routeForEbook }
 })

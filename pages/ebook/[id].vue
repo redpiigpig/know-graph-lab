@@ -718,7 +718,21 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({ middleware: "auth" });
+definePageMeta({
+  middleware: [
+    "auth",
+    // 全集卷不屬於圖書館 reader：進頁前 302 到全集專屬三欄 reader。
+    (to) => {
+      const cwRoute = useCollectedWorksStore().routeForEbook(to.params.id as string);
+      if (cwRoute) {
+        return navigateTo(
+          { path: cwRoute, query: to.query.page ? { p: to.query.page } : undefined },
+          { replace: true, redirectCode: 302 }
+        );
+      }
+    },
+  ],
+});
 
 // Multi-language parallel contract (zh + N sources). Pure helpers shared with
 // the API + translate writer. See .claude/skills/ebook-collected-works/.
@@ -774,16 +788,7 @@ const router = useRouter();
 const route = useRoute();
 const ebookId = route.params.id as string;
 
-// 全集書：若此 ebook 屬於某位 collected-works 作家，「返回」回到作家 hub 而非電子圖書館。
-const cwStore = useCollectedWorksStore();
-const backTarget = computed(() => {
-  for (const a of cwStore.authors) {
-    if (a.works.some((w) => w.ebookId === ebookId)) {
-      return { to: `/collected-works/${a.slug}`, label: `← ${a.name}` };
-    }
-  }
-  return { to: "/ebook", label: "← 書架" };
-});
+const backTarget = { to: "/ebook", label: "← 書架" };
 
 async function getToken() {
   const { data: { session } } = await supabase.auth.getSession();
