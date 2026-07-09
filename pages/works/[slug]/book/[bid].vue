@@ -133,7 +133,7 @@
             </div>
 
             <article class="book-prose bg-white rounded-2xl border border-gray-100 px-6 py-8 sm:px-12 sm:py-10"
-              v-html="html" @mouseover="onCiteOver" @mouseout="onCiteOut"></article>
+              v-html="html" @mouseover="onCiteOver" @mouseout="onCiteOut" @click="onFableSwitch"></article>
 
             <!-- prev / next book -->
             <div class="mt-8 flex items-center justify-between gap-3">
@@ -286,6 +286,39 @@ function scrollTo(id: string) {
   if (!id) return
   const el = document.getElementById(id)
   if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
+
+// ── 章首故事多變體：預設顯示第一個，「換個故事」按鈕輪換 ────────────
+// HTML 格式：.chapter-fable > .fable-variant[data-fable-title]（≥2 個才顯示按鈕；舊單一故事區塊不受影響）
+function fableLabel(fable: Element): string {
+  const vs = Array.from(fable.querySelectorAll('.fable-variant'))
+  const i = vs.findIndex(v => v.classList.contains('active'))
+  const title = (vs[i] as HTMLElement)?.dataset?.fableTitle || ''
+  return `${title}（${i + 1}/${vs.length}）`
+}
+
+function initFables() {
+  document.querySelectorAll('.book-prose .chapter-fable').forEach(fable => {
+    const vs = fable.querySelectorAll('.fable-variant')
+    if (vs.length < 2 || fable.querySelector('.fable-head')) return
+    vs.forEach((v, i) => v.classList.toggle('active', i === 0))
+    const head = document.createElement('div')
+    head.className = 'fable-head'
+    head.innerHTML = `<span class="fable-story-title"></span><button type="button" class="fable-switch">⇄ 換個故事</button>`
+    fable.prepend(head)
+    head.querySelector('.fable-story-title')!.textContent = fableLabel(fable)
+  })
+}
+
+function onFableSwitch(e: MouseEvent) {
+  const btn = (e.target as HTMLElement)?.closest?.('.fable-switch')
+  if (!btn) return
+  const fable = btn.closest('.chapter-fable')!
+  const vs = Array.from(fable.querySelectorAll('.fable-variant'))
+  const cur = vs.findIndex(v => v.classList.contains('active'))
+  vs[cur]?.classList.remove('active')
+  vs[(cur + 1) % vs.length].classList.add('active')
+  fable.querySelector('.fable-story-title')!.textContent = fableLabel(fable)
 }
 
 // ── 引用 hover 預覽 ───────────────────────────────────────────────
@@ -451,7 +484,7 @@ function chapterTextMap(): { id: string; title: string; text: string }[] {
     }
     if (!cur) cur = { id: 'ch-0', title: '', parts: [] }
     const c = el.cloneNode(true) as HTMLElement
-    c.querySelectorAll('.cite-seq, .arg-op, .section-source, .chapter-source').forEach(n => n.remove())
+    c.querySelectorAll('.cite-seq, .arg-op, .section-source, .chapter-source, .fable-head, .fable-variant:not(.active)').forEach(n => n.remove())
     const t = (c.textContent || '').replace(/[ \t]+/g, ' ').replace(/\n{2,}/g, '\n').trim()
     if (t) cur.parts.push(t)
   }
@@ -468,7 +501,7 @@ function sectionTextById(secId: string): { id: string; title: string; text: stri
   const parts: string[] = title ? [title] : []
   const clean = (el: Element) => {
     const c = el.cloneNode(true) as HTMLElement
-    c.querySelectorAll('.cite-seq, .arg-op, .section-source, .chapter-source').forEach(n => n.remove())
+    c.querySelectorAll('.cite-seq, .arg-op, .section-source, .chapter-source, .fable-head, .fable-variant:not(.active)').forEach(n => n.remove())
     return (c.textContent || '').replace(/[ \t]+/g, ' ').replace(/\n{2,}/g, '\n').trim()
   }
   let node = h.nextElementSibling
@@ -693,6 +726,7 @@ watch(() => bid.value, () => { stopSpeak(); tab.value = 'book'; load(); loadRevi
 let observer: IntersectionObserver | null = null
 watch(html, async () => {
   await nextTick()
+  initFables()
   observer?.disconnect()
   observer = new IntersectionObserver((entries) => {
     for (const e of entries) {
@@ -725,6 +759,12 @@ onBeforeUnmount(() => { observer?.disconnect(); stopSpeak() })
 .book-prose :deep(.chapter-fable) { @apply mb-8 px-5 py-4 rounded-2xl bg-amber-50/50 border border-amber-100; }
 .book-prose :deep(.chapter-fable p) { @apply text-[15px] leading-[2] text-gray-700 italic; }
 .book-prose :deep(.chapter-fable p.fable-bridge) { @apply not-italic text-gray-800 border-t border-dashed border-amber-200 pt-3 mt-3 mb-0; }
+/* 章首故事多變體：預設全隱、僅 .active 顯示；換故事按鈕列 */
+.book-prose :deep(.chapter-fable .fable-variant) { @apply hidden; }
+.book-prose :deep(.chapter-fable .fable-variant.active) { @apply block; }
+.book-prose :deep(.fable-head) { @apply flex items-center justify-between gap-2 mb-3 pb-2 border-b border-dashed border-amber-200; }
+.book-prose :deep(.fable-story-title) { @apply text-xs font-medium text-amber-700 truncate; }
+.book-prose :deep(.fable-switch) { @apply flex-shrink-0 px-2.5 py-1 rounded-lg text-xs font-medium text-amber-700 bg-amber-100/70 hover:bg-amber-200/70 transition; }
 /* 章末摘要與論證分析圖 */
 .book-prose :deep(.chapter-recap) { @apply mt-8 pt-5 border-t border-dashed border-gray-200; }
 .book-prose :deep(.chapter-recap h3) { @apply text-sm font-bold text-violet-600 uppercase tracking-widest mt-5 mb-2.5; }
