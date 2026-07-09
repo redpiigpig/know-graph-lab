@@ -20,7 +20,7 @@
 
 ## 任務 B：族譜資料正確性
 （DB 相關，鎖站期間走 Management API，或等解鎖）
-1. **wife/husband children 對齊稽核**：批次掃 biblical_people——凡 wife.children ⊄ husband.children 的列出並修（規則見記憶 feedback_wife_children_alignment）。
+1. ✅ **wife/husband children 對齊稽核（2026-07-08 完成）**：`scripts/genealogy_data_audit.py`（稽核＋--fix 分級修復，Management API）。六類檢查全歸零：懸空引用/變體引用/wife-children 對齊/spouse 互指；共修 50+ 列、新建 6 個缺 row（亦施韋/毗敦/米勒/他利亞/亞哈斯（米迦之子）/阿里斯托布魯四世）、合併以他瑪重複 row、清撒母耳母親誤植與以東王比拉誤掛子嗣。羅得亂倫群組依佈局特例刻意不動（KID_SKIP）。日後資料再髒直接重跑此腳本。
 2. **CUV2010 人名校對 Task 2 續跑**（genealogy-biblical SKILL.md 記載待續）。
 3. **傳統視角圖層資料補密**：早期教會/天主教/東方教會/拉比四視角的稀疏人物補注（走 Gemini→NVIDIA→Haiku，來源標註）。
 
