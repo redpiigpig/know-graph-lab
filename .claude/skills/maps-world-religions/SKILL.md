@@ -1,6 +1,6 @@
 ---
 name: maps-world-religions
-description: 「全球八大人文宗教界域」主題地圖工具集（/maps/world-religions）— 8 大界域 × 30 文化圈 × ~150 國家 + 歷時功能（4000 BCE → 2026）。記錄資料層（admin_0 / admin_1 50m / admin_1 10m / GADM admin_2 四層次）、配色系統、編輯模式、邊界切分邏輯、時間軸與 sphere 歷史期間資料。Use when 加新國家／文化圈／sphere/admin 細分；改配色；標籤位置調整；修 NE GeoJSON 對照 bug；填補 sphere history 資料；接歷史邊界 GeoJSON。
+description: 「全球八大人文宗教界域」主題地圖工具集（/maps/world-religions）— 8 大界域 × 48 文化圈（42 現行＋6 歷史性退場）× ~150 國家 + 歷時功能（4000 BCE → 2026）。記錄資料層（admin_0 / admin_1 50m / admin_1 10m / GADM admin_2 四層次）、配色系統、編輯模式、邊界切分邏輯、時間軸與 sphere 歷史期間資料。Use when 加新國家／文化圈／sphere/admin 細分；改配色；標籤位置調整；修 NE GeoJSON 對照 bug；填補 sphere history 資料；接歷史邊界 GeoJSON。
 ---
 
 > ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
@@ -246,10 +246,10 @@ CulturalSphere 也可在資料層硬編 `label_lnglat?: [lng, lat]` 預設位置
 | 檔案 | 用途 |
 |---|---|
 | [data/maps/historical-epochs.ts](../../../data/maps/historical-epochs.ts) | 600 年制 7 大時代 + 25+ 個次要 epoch；`epochAt(y)` / `majorEraAt(y)`。`YEAR_MIN=-4000`、`YEAR_MAX=2026`。 |
-| [data/maps/sphere-history.ts](../../../data/maps/sphere-history.ts) | `SPHERE_HISTORY: Record<sphereId, SphereHistoryEntry[]>` — 41 個文化圈全有歷史期間資料（兩河、漢地、埃及、波斯、孔雀、羅馬、奧斯曼、明清…）。 |
+| [data/maps/sphere-history.ts](../../../data/maps/sphere-history.ts) | `SPHERE_HISTORY: Record<sphereId, SphereHistoryEntry[]>` — 48 個文化圈全有歷史期間資料（兩河、漢地、埃及、波斯、孔雀、羅馬、奧斯曼、明清…；2026-07-08 實測）。 |
 | [components/maps/TimeAxis.vue](../../../components/maps/TimeAxis.vue) | 滑桿 + 公元前後切換輸入框 + 快照按鈕 + 大時代徽章。`v-model:number`。 |
-| [scripts/build_historical_layer.mjs](../../../scripts/build_historical_layer.mjs) | 預處理：讀 17 個 historical-basemaps 快照 → 過濾 + 加 sphere_id → 輸出 `historical-spheres.geojson`。內嵌 ~300 條 state-name → sphere 映射表。 |
-| `public/maps/historical-spheres.geojson` | **產出檔，5MB / 734 features**，含 17 個快照的歷史邊界。每 feature 有 `sphere_id`、`year_from`、`year_to`、`name_zh`、`name_en`。 |
+| [scripts/build_historical_layer.mjs](../../../scripts/build_historical_layer.mjs) | 預處理：讀 53 個 historical-basemaps 快照 → 過濾 + 加 sphere_id → 輸出 `historical-sphere-fills.geojson`（+ `historical-states.geojson` 給 maps-historical-borders）。內嵌 state-name → sphere 映射表。 |
+| `public/maps/historical-sphere-fills.geojson` | **產出檔，42 MB / 10,350 features**，含 53 個快照的歷史邊界（舊版 `historical-spheres.geojson` 5MB/734 features/17 快照已淘汰刪除）。每 feature 有 `sphere_id`、`year_from`、`year_to`、`name_zh`、`name_en`。 |
 
 ### 地圖渲染：兩種模式
 WorldThematicMap 依 `currentYear` 在兩模式切換：
@@ -259,20 +259,20 @@ WorldThematicMap 依 `currentYear` 在兩模式切換：
 **歷史模式**（year < 2000）：
 - admin_0 邊界當灰底（`#E5E7EB` 70% opacity）— 代表「口傳部落／非文字社會」基底
 - 跳過所有 admin_1 細節（不適用於歷史）
-- 疊加 historical-spheres.geojson 的 features，過濾 `year_from <= currentYear <= year_to`，按 `sphere_id` 對應 realm 色染色
+- 疊加 historical-sphere-fills.geojson 的 features，過濾 `year_from <= currentYear <= year_to`，按 `sphere_id` 對應 realm 色染色
 - 禁用鑽取（點 polygon 只顯示 tooltip）
 - 右上角顯示 CC BY-NC-SA attribution
 
 切換邊界時 `selectedRealm` / `selectedFeature` / `editMode` 自動重置。
 
 ### Historical-basemaps 快照
-17 個快照：bc4000, bc2000, bc1500, bc1000, bc500, bc323, bc100, 200, 500, 800, 1000, 1100, 1279, 1500, 1815, 1914, 2000。每個 feature 的 `year_to` = 下一個快照 -1，最後一個為 9999。
+53 個快照（-123000 BCE → 2010；完整年份清單見 [maps-historical-borders](../maps-historical-borders/SKILL.md) 的「Snapshot 來源」節）。每個 feature 的 `year_to` = 下一個快照 -1，最後一個為 9999。（舊版曾只用 17 個快照，2026-05 已補齊 53 個。）
 
 **重新跑預處理**：
 1. 編輯 `scripts/build_historical_layer.mjs` 內的 `MAP` 表（state-name → sphere）
 2. 確保 `C:\tmp\hbm-sample\` 有原檔（若沒有，重新從 GitHub 下載）
 3. 跑 `node scripts/build_historical_layer.mjs`
-4. 輸出寫入 `public/maps/historical-spheres.geojson`
+4. 輸出寫入 `public/maps/historical-sphere-fills.geojson`（+ `historical-states.geojson`）
 5. 腳本末會列出最常見未映射的 name，可挑選加入
 
 ### 中央界域 v2：sphere 分裂與縫合（2026-05 重構）

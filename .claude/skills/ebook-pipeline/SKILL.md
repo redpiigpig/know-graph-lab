@@ -19,7 +19,8 @@ End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL 
 - `scripts/requeue_reocr.py`：重轉錄 orchestrator。備份 `.bak` → `ocr_with_gemini.py run --book {id} --staging`（寫 `{id}.jsonl.new`，不動 DB/R2）→ staged gate（頁碼覆蓋不退＋空白率必須改善＋字數實質成長）→ 過了才 swap＋DB previews＋R2＋重 standardize＋重評分；不過留 `.rejected`。Ledger `scripts/logs/reocr_ledger.json` 冪等續跑。
 - `ocr_with_gemini.py` 新增：全 key 耗盡寫 `scripts/state/ocr_gemini_cooldown.json`（6h 內排程直接走 Haiku）；`--staging`；`--book` 可按 id 撈已 parse 的空白書。
 - 排程：`KGLab-OCR-Daily-10/14/18` 已重新 Enable（bat 第 6 步＝當日增量 sweep）；新增 `KGLab-Quality-Sweep` 02:30（全館 sweep＋每晚最多重轉 5 本）。
-- 前端：`components/ebook/EbookQualityBadge.vue` 三色品質標示（書卡＋reader）。
+- 前端：`components/ebook/EbookQualityBadge.vue` 三色品質標示（書卡＋reader 頂欄）。
+- Reader 同期新功能（2026-07-08 前後 commits）：Aa 閱讀設定（字級／行距／亮‧米‧暗三主題）＋ 🔊 裝置語音朗讀（SpeechSynthesis，免費不限量）；TOC 三份重複 markup 合一為 `components/ebook/EbookToc.vue`。
 - **進度監視欄目 `/transcription-progress`**：重轉錄佇列（tier 分佈＋requeue 狀態機）＋全集翻譯（穆勒/SBE 逐部段落完成率）統一儀表板。資料由 `scripts/push_transcription_progress.py` 彙整（本機檔案零 DB 依賴）寫 c:/tmp＋R2 `progress/transcription.json`，兩支排程 bat 末尾自動更新；入口在 /ebook 頂欄 🛰 與 /collected-works portal。
 
 **全集/圖書館徹底分離**
@@ -197,7 +198,7 @@ ebook_chunks (
   id uuid PK, ebook_id FK,
   chunk_index INT, chunk_type,   -- 'page' for PDF Plan A, 'chapter' for EPUB / PDF Plan B
   page_number, chapter_path,
-  content TEXT,                  -- ⚠ first 200 chars only (preview); full text in JSONL
+  content TEXT,                  -- ⚠ first 100 chars only (preview, 2026-07-08 起 PREVIEW_LEN=100；原 200); full text in JSONL
   char_count
 )
 GIN index on to_tsvector('simple', content)
@@ -355,11 +356,11 @@ G:/我的雲端硬碟/資料/電子書/神學/
   - G: is Drive sync mount → auto-backed up to Drive cloud
   - Configured via `EBOOK_CHUNKS_DIR` in `.env` (consumed by `nuxt.config.ts` → `runtimeConfig.ebookChunksDir`)
 - **R2 mirror**: `r2://{R2_BUCKET}/ebook-chunks/{ebook_id}.jsonl.gz` (gzipped). Read at runtime by `server/utils/ebook-chunks.ts` `loadLines()` when local file unreachable (production, Zeabur)
-- **DB previews**: `ebook_chunks.content` first 200 chars only — for fast SQL `ilike` full-text search
+- **DB previews**: `ebook_chunks.content` first 100 chars only（2026-07-08 起 `PREVIEW_LEN=100`）— for fast SQL `ilike` full-text search
 
 ## Critical constraints
 
-- **Supabase free tier 500 MB** — never reload full chunk text into DB. JSONL-on-disk + 200-char preview to DB.
+- **Supabase free tier 500 MB** — never reload full chunk text into DB. JSONL-on-disk + 100-char preview to DB（2026-07-08 起 `PREVIEW_LEN=100`）.
 - **Supabase IO budget on free tier** — bulk inserts (>1K/s) hit `57014` "canceling statement". `parse_worker.py`, `repopulate_chunk_previews.py`, `standardize_ebook.py`, `split_ebook_set.py` all use **adaptive batch sizes** (100 → 50 → 20 → 5 → 1).
 - **No Supabase Storage bucket** — user explicitly forbade it. Local files only.
 - **Service-role key in `.env`** — never hardcode.
@@ -369,7 +370,7 @@ G:/我的雲端硬碟/資料/電子書/神學/
 
 ## Workflow A — OCR scanned PDFs
 
-[`scripts/ocr_with_gemini.py`](../../../scripts/ocr_with_gemini.py) sends each scanned PDF to Gemini Vision via the Files API and gets back structured JSON `{pages: [{page, text}]}`. After OCR: write JSONL to local `_chunks/` → push gzipped to R2 → insert 200-char preview rows → mark `ebooks.parsed_at` + clear `parse_error`.
+[`scripts/ocr_with_gemini.py`](../../../scripts/ocr_with_gemini.py) sends each scanned PDF to Gemini Vision via the Files API and gets back structured JSON `{pages: [{page, text}]}`. After OCR: write JSONL to local `_chunks/` → push gzipped to R2 → insert 100-char preview rows（2026-07-08 起）→ mark `ebooks.parsed_at` + clear `parse_error`.
 
 **Rate limits**: Gemini 2.5 Flash free tier — 10 RPM, 250 RPD, 250K TPM. Default `--rpm 8`. Daily quota resets at midnight Pacific (≈ Taipei 16:00).
 
@@ -396,7 +397,7 @@ Auth via `ANTHROPIC_API_KEY` or `~/.claude/.credentials.json` OAuth token. **2-s
 
 > 連續 2 次「Gemini 跑完所有 keys 都耗盡（429 / throttle / exhausted / >quota）」→ 立刻切到 Haiku-only 模式 6 小時 → 6 小時後下一次操作再試 Gemini，成功則 streak 歸零、cooldown 解除。
 
-實作 reference：[`scripts/translate_ebook_to_zh.py`](../../../scripts/translate_ebook_to_zh.py) `gemini_with_haiku_fallback()`、`GEMINI_FAIL_STREAK_LIMIT = 2`、`GEMINI_COOLDOWN_SECONDS = 6 * 3600`。
+實作 reference：[`scripts/translate_ebook_to_zh.py`](../../../scripts/translate_ebook_to_zh.py) `gemini_with_nvidia_fallback()`（舊名 `gemini_with_haiku_fallback` 留有 back-compat alias；現行鏈為 Gemini → NVIDIA → Haiku）、`GEMINI_FAIL_STREAK_LIMIT = 2`、`GEMINI_COOLDOWN_SECONDS = 6 * 3600`。
 
 目的：避免「每個單位浪費 ~70s 重複試 4×3 keys 才 fallback」的反覆消耗。`ocr_with_gemini.py` 也應該長成這個形狀（目前是 batch-level switch，不是 cooldown）— TODO 後續對齊。
 
@@ -916,7 +917,7 @@ Field-stop char class `_FIELD_STOP = "\n│|，,；;／/（(、"` keeps regexes 
 
 #### DB previews (`ebook_chunks`)
 
-After writing JSONL + R2: DELETE existing → INSERT 200-char preview each chunk. Adaptive batch (100 → 50 → 20 → 5 → 1) to ride out 57014 timeouts on 800+ chunk books.
+After writing JSONL + R2: DELETE existing → INSERT 100-char preview each chunk（2026-07-08 起 `PREVIEW_LEN=100`）. Adaptive batch (100 → 50 → 20 → 5 → 1) to ride out 57014 timeouts on 800+ chunk books.
 
 ### Idempotency + annotation safety
 
@@ -1264,7 +1265,7 @@ Worked examples:
 
 The chunks already had `###` for subsections so they render correctly as h3 inside the parent's content.
 
-**Both recipes do**: write new JSONL atomically (`.tmp` → rename + `.bak`), DELETE all `ebook_chunks` rows, INSERT 200-char previews fresh, UPDATE `ebooks.chunk_count + total_pages`. The mtime-aware cache picks it up automatically.
+**Both recipes do**: write new JSONL atomically (`.tmp` → rename + `.bak`), DELETE all `ebook_chunks` rows, INSERT 100-char previews fresh（2026-07-08 起）, UPDATE `ebooks.chunk_count + total_pages`. The mtime-aware cache picks it up automatically.
 
 ### When to apply each recipe to other books
 

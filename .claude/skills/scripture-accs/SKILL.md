@@ -76,7 +76,7 @@ python scripts/ingest_accs_genesis.py \
   [[scripture-fathers]] 譯名決策；FATHER_FIXES 只收同一人異寫，**不碰同名異人**）。
 
 ## 測試
-`python scripts/tests/test_accs_commentary.py`（或 `pytest`）— **34 例**：節範圍解析（單節/連字/全形冒號/
+`python scripts/tests/test_accs_commentary.py`（或 `pytest`）— **44 例（2026-07-08 實收）**：節範圍解析（單節/連字/全形冒號/
 跨章夾斷/亂碼）、`parse_full_ref`/`build_rows_auto`（整本自動分章+章內 carry-forward）、教父譯名收斂、
 繁體強制（opencc s2twp）/`has_simplified`/`normalize_body`、build_rows 的 pericope/entry 排序與空 body 跳過。
 改 parser 必先補測試（user 很在意 test-first）。

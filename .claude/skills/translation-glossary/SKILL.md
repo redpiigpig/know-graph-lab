@@ -149,7 +149,7 @@ description: 「翻譯定名」通用名物中譯對照工具（/translation-glo
 
 **Tab 切換**：翻譯原則 / 人名（含聖經人物 era）/ 哲學家 / 科學家 / 歷代帝王 / 國名與城市 /
 神祇與宗教名詞 / 官制與行政區 / 神學名詞 / 地名 / 作品名 / 教派名（各領域對應上方 schema 表）。
-「官制與行政區」（`official_titles`）另有 `register`（八桶）／`admin_level`／`entity_type` 篩選。
+「官制與行政區」（`official_titles`）另有 `register`（11 桶，見上 `ADMIN_REGISTERS`）／`admin_level`／`entity_type` 篩選。
 
 > ⚠️ 早期曾用「theologians.figure_type 分流 monarch/philosopher」的權宜做法（2026-06-03 commit
 > 923e643），已被本頁頂「各領域獨立表」新架構取代並回收（figure_type 欄與相關 rows 已刪）。
@@ -238,7 +238,7 @@ python scripts/export_glossary_from_db.py
 
 ## 已知未實作 / 待擴充
 
-- ❌ **export glossary**：DB → ebook-translate `glossary.md` markdown 自動同步（目前手動雙寫）
+- ✅ **export glossary**：DB → ebook-translate `glossary.md` markdown 自動同步 — 已由 `scripts/export_glossary_from_db.py` 實作（見上「跟 ebook-translate 的串接」）
 - ❌ **新增人物 UI**：目前只能編輯，新增要直接改 master list + 重跑 seed
 - ❌ **多書差異標記**：哪本書用哪個譯名（同人不同書可能用不同譯）
 - ❌ **依書類自動切建議**：例如翻 ACCS 用新教偏好；翻天主教文獻自動切思高
@@ -255,7 +255,7 @@ python scripts/export_glossary_from_db.py
 ## See also
 
 - [[ebook-translate]] — 翻譯 pipeline，本 skill 是其譯名前置確認步驟
-- [[scripture-canon]] — `/scripture-canon` portal hub，本 skill 是其第 6 個子工具
+- [[scripture-canon]] — `/scripture-canon` portal hub（本 skill 原為其第 6 個子工具，2026-06-03 已升為首頁頂層卡、移出聖經 portal）
 - [pages/translation-glossary/index.vue](../../../pages/translation-glossary/index.vue) — UI
 - [scripts/seed_translation_glossary.py](../../../scripts/seed_translation_glossary.py) — master list + 批次填
 - [database/translation-glossary-schema.sql](../../../database/translation-glossary-schema.sql) — DDL

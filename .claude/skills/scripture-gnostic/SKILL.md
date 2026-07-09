@@ -187,7 +187,7 @@ gnostic_sections (
 [3] 抓單篇   curl -k <doc url> → parse_document() → {title, sections:[英文段…]}
         │
         ▼
-[4] 翻譯     每段英→繁中（ebook-translate 引擎：gemini→haiku fallback），術語照神學詞庫
+[4] 翻譯     每段英→繁中（ebook-translate 引擎：gemini→nvidia→haiku 三層鏈），術語照神學詞庫
         │     assert_aligned(en_sections, zh_sections)  ← 段數必須相等
         ▼
 [5] 寫 DB    upsert gnostic_documents + gnostic_sections（gnosis_en + zh 各一批，同 order_index）
@@ -196,7 +196,7 @@ gnostic_sections (
 [6] reader 驗證（英／中 兩欄逐段；列表頁分類樹）
 ```
 
-翻譯引擎 / quota 協調 / Gemini→Haiku 2-strike / OAuth refresh — **全部沿用 [[ebook-translate]]**，本 skill 不重造。
+翻譯引擎 / quota 協調 / 各層 2-strike + cooldown（Gemini→NVIDIA→Haiku）/ OAuth refresh — **全部沿用 [[ebook-translate]]**，本 skill 不重造。
 
 ### ⚠️ gnosis.org 憑證過期
 站台 HTTPS 憑證已過期，`WebFetch` 會回 `certificate has expired`。一律用 `curl -sk`（或 Python `requests` `verify=False` / `urllib` unverified context）抓 HTML。
@@ -215,7 +215,7 @@ gnostic_sections (
 | `parse_document(html)` | 單篇 → `{title, sections:[…]}`，濾 script/空段/footer chrome |
 | `align_ok` / `assert_aligned(en, zh)` | 逐段對齊 gate（段數相等否則 raise）|
 
-測試：`python -X utf8 -m pytest scripts/tests/test_gnostic_library.py -q`（20 例）。
+測試：`python -X utf8 -m pytest scripts/tests/test_gnostic_library.py -q`（38 例，2026-07-08 實收）。
 
 ---
 
@@ -240,7 +240,7 @@ gnostic_sections (
 
 ## See also
 - [scripture-canon](../scripture-canon/SKILL.md) — portal 母體；本 skill 是第 8 張卡片，reader 仿其 /apocrypha
-- [[ebook-translate]] — 翻譯引擎 / quota / Gemini-Haiku fallback（英→繁中那段）
+- [[ebook-translate]] — 翻譯引擎 / quota / Gemini→NVIDIA→Haiku 三層 fallback（英→繁中那段）
 - [[ebook-collected-works]] — 「HTML 抓取→切段→翻譯→逐段對照」同源姿態（`split_html_sections` 可參考）
 - [[translation-glossary]] — 諾斯底／神學名詞中譯（翻譯前鎖譯名）
 - [[scripture-fathers]] / `/apocrypha` — 去重對象（polemics / christian_apocrypha / dead_sea 重疊處）

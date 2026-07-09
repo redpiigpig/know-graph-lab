@@ -238,7 +238,7 @@ Date: YYYY-MM-DD
 
 ---
 
-## 已完成集數（2026-05-07）
+## 已完成集數（2026-05-07 快照，已過時）
 
 | 集數 | 標題 | 狀態 |
 |---|---|---|
@@ -246,7 +246,9 @@ Date: YYYY-MM-DD
 | 2–5 | 第二～五章 | ✅ 轉錄完成（舊 Whisper，品質差，待潤稿）|
 | 6–25 | 第六章以後 | ⏳ 待轉錄 |
 
-PPT ep01–ep29 全部已上傳 R2。DB 只有 ep01–05 有 row（其餘跑 `--all` 再建）。
+PPT ep01–ep29 全部已上傳 R2。
+
+> 📌 **2026-05-07 之後由 `scripts/overnight_qiangmian.py` 整晚自動化接手**：Phase 1＝對 DB 已完整的 Gemini 轉錄跑 Haiku 潤稿（預設 ep 3–6、8–11）；Phase 2＝缺失/截斷集先 local Whisper 轉錄再 Haiku 潤稿（預設 ep 2、7、12–25；`--polish`/`--transcribe` 可覆寫）。各集現況以 DB `video_transcripts`（project_slug=million-masks）為準，上表僅為歷史快照。
 
 ---
 
@@ -254,4 +256,4 @@ PPT ep01–ep29 全部已上傳 R2。DB 只有 ep01–05 有 row（其餘跑 `--
 
 - Gemini 2.5 Flash 有時 503（高需求）→ 等幾分鐘重試，或換 Gemini_API_Key_2/3/4
 - R2 PPT 無公開 URL → 必須透過 `/api/works/ppt-download/[id]` 端點取得 signed URL
-- 轉錄腳本使用 `Gemini_API_Key_1`（無自動 key rotation，quota 到了手動改）
+- 轉錄腳本已支援多把 `Gemini_API_Key_*` **自動輪替**（429 時自動換下一把 key；commit `590a7e3a`，見 `transcribe_qiangmian_gemini.py` 的 `GEMINI_KEYS`）

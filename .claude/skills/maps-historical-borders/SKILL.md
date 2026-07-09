@@ -1,6 +1,6 @@
 ---
 name: maps-historical-borders
-description: 「歷史國界地圖」工具集（/maps/historical-borders）— 6,853 個歷史政權從 -123,000 BCE 至今的政治國界演進地圖 + 國家資料庫列表。跨 53 個 historical-basemaps snapshots，Equal Earth 等積投影。資料層：historical-basemaps polygon + Wikidata SPARQL + 人工 STATE_DETAILS + Gemini batch 中文翻譯（2,420 條）+ rules-based 政權分類器（is_state，過濾部落／文化群）+ city-hull fine polygons（**279 polygons / 54 帝國** — 中東／中國／地中海／古波斯／古印度／神羅／美洲）+ polygon-year-overrides（43 條收窄源資料年代）。Use when 補國家詳細資料、新增 SUPPLEMENT_ZH／STATE_DETAILS／sphere 對照、新增手譯／規則／snapshot、修地圖渲染、改列表過濾、調整政權分類標準（KNOWN_STATES / KNOWN_NON_STATES）、Gemini 補翻譯、加新帝國 fine polygons。
+description: 「歷史國界地圖」工具集（/maps/historical-borders）— 6,853 個歷史政權從 -123,000 BCE 至今的政治國界演進地圖 + 國家資料庫列表。跨 53 個 historical-basemaps snapshots，Equal Earth 等積投影。資料層：historical-basemaps polygon + Wikidata SPARQL + 人工 STATE_DETAILS + Gemini batch 中文翻譯（2,420 條）+ rules-based 政權分類器（is_state，過濾部落／文化群）+ city-hull fine polygons（**230 polygons / 49 帝國** — 中東／中國／地中海／古波斯／古印度／神羅／美洲）+ polygon-year-overrides（69 條收窄源資料年代）。Use when 補國家詳細資料、新增 SUPPLEMENT_ZH／STATE_DETAILS／sphere 對照、新增手譯／規則／snapshot、修地圖渲染、改列表過濾、調整政權分類標準（KNOWN_STATES / KNOWN_NON_STATES）、Gemini 補翻譯、加新帝國 fine polygons。
 ---
 
 > ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
@@ -46,11 +46,11 @@ description: 「歷史國界地圖」工具集（/maps/historical-borders）— 
 | C. 國家骨架（含現代涵蓋） | `public/maps/state-skeleton.json` | **2,949 條 (348 KB)** | 從 historical-states.geojson 抽出 unique names |
 | D. Wikidata 主資料 | `public/maps/wikidata-states.json` | 4215 條 (~ 530 KB) | 中英文名、起始／結束年、所屬大陸、QID |
 | E. 人工撰寫詳細 | `data/maps/historical-states-db.ts` (`STATE_DETAILS`) | **277 條（5 輪 + 中國諸侯）** | 朝代、首都、宗教、人口、面積、簡介 |
-| E2. 朝代時間段標籤 | `data/maps/dynasty-labels.ts` (`DYNASTY_LABELS`) | **55 polygon × ~10 段** | 跨朝代 polygon 按年代切時期；dynastyLabelAt() 同名簡化 + 空 dynasty_zh 處理 |
-| E3. polygon 年範圍修正 | `public/maps/polygon-year-overrides.json` | **43 條** | 收窄源資料錯誤年代（Sui 619、Tang 907、Yuan 1271-1368、Sinic 限商朝期、Wu 春秋吳國 -900~-473、Achaemenid -550~-330、Sasanian 224~651、Maurya -322~-185、Aztec 1428~1521、Inca 1438~1533、HRE 962~1806 等）|
-| E4. 細粒度 polygon（city-hull） | `public/maps/fine-polygons.geojson` | **276 polygons / 54 帝國** | 中東 18（阿巴斯／伍麥亞／蒙古）+ 中國 135 + 地中海 33（羅馬到 395／拜占庭／鄂圖曼）+ 古波斯 30 + 古印度 35 + 神羅 13 + 美洲 13 |
-| E5. **OHM 真實邊界 polygon** | `public/maps/ohm-polygons.geojson` | **831 polygons / 67 政體 (6.1 MB)** | 從 OpenHistoricalMap 抓的真實歷史國界（年份分段、Douglas-Peucker 0.1° 簡化）。a) admin_level=2 共 58 個（歐洲 34 + 非歐洲 A 級 10：Mongol/Manchu 大清/Goryeo/大日本帝國/大越/Abbasid/Fatimid/Nueva España/Mutul/Kaan Dynasty；B 級 14：迦太基/蘇格蘭/挪威/葡萄牙/中世紀匈牙利/那不勒斯/莫斯科大公國/格拉納達/西法蘭克/布蘭登堡-普魯士/早期阿拉貢/East India Co/英屬印度/新法蘭西），b) admin_level=3 的 10 個 HRE Reichskreise（補 1500-1806 諸侯細節）。優先級：CHGIS > OHM > fine > source。
-| E6. **CHGIS 中國朝代真實邊界** | `public/maps/chgis-polygons.geojson` | **111 polygons / 31 朝代 (1.9 MB)** | 從 Harvard/Fudan **CHGIS V6 Time Series Prefecture Polygons**（DOI:10.7910/DVN/I0Q7SM，免費學術用）dissolve 出朝代邊界。涵蓋 -224 BCE → 1911 CE，含繁中名／拼音／簡中名。每朝代取代表性 key years（武帝極盛 -110、開元盛世 750、忽必烈 1280、永樂初 1400、乾隆極盛 1760 等）unary_union 所有 active prefectures。3,830 prefecture/府／州／路 → 111 個朝代-年 polygons。pyshp + shapely，[scripts/build_chgis_polygons.py](../../../scripts/build_chgis_polygons.py)。
+| E2. 朝代時間段標籤 | `data/maps/dynasty-labels.ts` (`DYNASTY_LABELS`) | **91 polygon × ~10 段**（2026-07-08 實測） | 跨朝代 polygon 按年代切時期；dynastyLabelAt() 同名簡化 + 空 dynasty_zh 處理 |
+| E3. polygon 年範圍修正 | `public/maps/polygon-year-overrides.json` | **69 條**（2026-07-08 實測） | 收窄源資料錯誤年代（Sui 619、Tang 907、Yuan 1271-1368、Sinic 限商朝期、Wu 春秋吳國 -900~-473、Achaemenid -550~-330、Sasanian 224~651、Maurya -322~-185、Aztec 1428~1521、Inca 1438~1533、HRE 962~1806 等）|
+| E4. 細粒度 polygon（city-hull） | `public/maps/fine-polygons.geojson` | **230 polygons / 49 帝國**（2026-07-08 實測；歐洲區改走 OHM 後部分 fine 已裁） | 原分布（裁前）：中東 18（阿巴斯／伍麥亞／蒙古）+ 中國 135 + 地中海 33（羅馬到 395／拜占庭／鄂圖曼）+ 古波斯 30 + 古印度 35 + 神羅 13 + 美洲 13 |
+| E5. **OHM 真實邊界 polygon** | `public/maps/ohm-polygons.geojson` | **781 polygons / 66 政體 (6.5 MB)**（2026-07-08 實測） | 從 OpenHistoricalMap 抓的真實歷史國界（年份分段、Douglas-Peucker 0.1° 簡化）。a) admin_level=2 共 58 個（歐洲 34 + 非歐洲 A 級 10：Mongol/Manchu 大清/Goryeo/大日本帝國/大越/Abbasid/Fatimid/Nueva España/Mutul/Kaan Dynasty；B 級 14：迦太基/蘇格蘭/挪威/葡萄牙/中世紀匈牙利/那不勒斯/莫斯科大公國/格拉納達/西法蘭克/布蘭登堡-普魯士/早期阿拉貢/East India Co/英屬印度/新法蘭西），b) admin_level=3 的 10 個 HRE Reichskreise（補 1500-1806 諸侯細節）。優先級：CHGIS > OHM > fine > source。
+| E6. **CHGIS 中國朝代真實邊界** | `public/maps/chgis-polygons.geojson` | **94 polygons / 29 朝代 (1.2 MB)**（2026-07-08 實測） | 從 Harvard/Fudan **CHGIS V6 Time Series Prefecture Polygons**（DOI:10.7910/DVN/I0Q7SM，免費學術用）dissolve 出朝代邊界。涵蓋 -224 BCE → 1911 CE，含繁中名／拼音／簡中名。每朝代取代表性 key years（武帝極盛 -110、開元盛世 750、忽必烈 1280、永樂初 1400、乾隆極盛 1760 等）unary_union 所有 active prefectures。3,830 prefecture/府／州／路 → 111 個朝代-年 polygons。pyshp + shapely，[scripts/build_chgis_polygons.py](../../../scripts/build_chgis_polygons.py)。
 | E7. **手繪 polygon** (OHM/CHGIS 無覆蓋) | `public/maps/manual-polygons.geojson` | **219 polygons / 52 帝國 (60 KB)** | 基於 Wikipedia 領土演進地圖 + 自然地理特徵手繪，每 polygon 5-25 個 (lon, lat) 頂點沿河流/山脈/海岸線。涵蓋：古波斯 4（Achaemenid/Parthia/Parthian/Sasanian 23 polys）、古印度 4（Maurya/Gupta/Delhi Sultanate/Mughal 26 polys）、美洲核心 2（Aztec/Inca 12 polys）+ 美洲擴充 9（Olmec/Zapotec/Toltec/Mixtec/Wari/Tiwanaku/Chimú/Mapuche/Powhatan）、伊斯蘭 1（Umayyad 4 polys，Iberia+北非 MultiPolygon）、中亞核心 1（Qara Khitai 4 polys）+ 中亞擴充 9（花剌子模／可薩／伏爾加保加利亞／佩切涅格／欽察／突厥／回鶻／伽色尼／塞爾柱）、中國早期 1（Zhoa 周朝 8 polys，pre-CHGIS）、非洲 13（迦納／馬利／桑海／加奈姆／博爾努-加奈姆／豪薩諸國／阿克蘇姆／馬庫拉／衣索比亞／剛果／大津巴布韋／莫諾莫塔帕／祖魯）、東南亞 9（高棉／室利佛逝／滿者伯夷／蒲甘／東吁／貢榜／瀾滄／占婆）。比 city-hull 凸包貼近真實但仍簡化（誤差 ~50-100 km）。[scripts/build_manual_polygons.mjs](../../../scripts/build_manual_polygons.mjs)。
 | F. NE 50m coastline | `public/maps/ne_50m_coastline.geojson` | 1428 LineString | 海岸線（黑線） |
 | G. NE 50m admin_0 | `public/maps/ne_50m_admin_0_countries.geojson` | 242 features | 陸地灰底 + **NAME_ZHT 中文國名（內建）** |
@@ -92,7 +92,7 @@ description: 「歷史國界地圖」工具集（/maps/historical-borders）— 
 - 依英文名 normalized key dedupe
 - skeleton + wikidata + STATE_DETAILS 三層合併
 - 最終 **6853 個獨特國家**（2949 skeleton + 4215 wikidata - 交集）
-- 已填詳細 41 個
+- 已填詳細 277 個（STATE_DETAILS，2026-07-08 實測）
 
 ---
 
@@ -177,7 +177,7 @@ interface HistoricalState extends StateSkeleton, StateDetail {
 3. **古國 polygon**：filtered by currentYear（`year_from <= y <= year_to`）+ **`polygon-classifications.json` 政權過濾**，每國 **hash-based HSL 唯一色**
 4. **海岸線**：NE coastline 黑線 0.6/transform.k
 5. **國名標籤**：centroid + 防重疊 relax，**中文優先**。`nameZhOf()` 查序：
-   1. STATE_DETAILS (41，最準)
+   1. STATE_DETAILS (277，最準)
    2. SUPPLEMENT_ZH (~80 條，HistoricalBordersMap.vue 內手譯)
    3. NE admin_0 NAME_ZHT/NAME_ZH (~315 個現代國家內建)
    4. wikidata-states.json (4117 條)
@@ -200,7 +200,7 @@ interface HistoricalState extends StateSkeleton, StateDetail {
 
 工具列（右側統計排版）：
 - **「顯示 N / 6,853 條目」** — 大字粗體主視覺
-- 「政權 X」（amber-700）／「有 polygon X」（blue-600）／「人工詳細 41」（emerald-600） — 次要灰色文字
+- 「政權 X」（amber-700）／「有 polygon X」（blue-600）／「人工詳細 277」（emerald-600） — 次要灰色文字
 
 過濾：
 - 搜尋（中英文）

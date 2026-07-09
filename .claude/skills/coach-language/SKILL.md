@@ -97,7 +97,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 - `/coach/[lang]/chat` = 對話（`?mode=qa|scenario`、`?voice=1`）
 - `/coach/[lang]/smalltalk` = 限時主題聊（3/5/10 分倒數 + 結束評分）
 - `/coach/[lang]/course` = **課程逐課複習**（**目前僅 la**：教會拉丁課，母音子音/單字/認讀/聽寫/發音五分頁，零 AI）
-- `/coach/[lang]/alphabet` = **字母教學 + 字母測驗**（**僅非英文 6 語**：de/fr/ja/grc/la/hbo）
+- `/coach/[lang]/alphabet` = **字母教學 + 字母測驗**（**非英文語言**；原 6 語 de/fr/ja/grc/la/hbo，2026-06-21 已擴至 19 語/24 書寫系統，詳見「四」）
 - `/coach/[lang]/parse` = **詞形判析（parsing）自動批改**（零 AI；grc 新約 + hbo 舊約）
 - `/coach/[lang]/compose` = **句子重組（受限寫作題型）**（零 AI；en 情境句 + grc/hbo 經文 + de/fr/la 字庫例句；ja 無詞間空白暫不支援）
 - `/coach/[lang]/grammar` = 分級文法課

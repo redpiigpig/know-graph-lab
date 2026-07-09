@@ -1,6 +1,6 @@
 ---
 name: genealogy-biblical
-description: 聖經族譜的「教會傳統」視角圖層 — 早期教會（橘色，東西方共識）／天主教（紅）／東方教會（黃）／拉比傳統（藍）。包含資料表 schema、人物清單、UI 切換與配色設計、未完成 layout 修正項目。
+description: 聖經族譜的「教會傳統」視角圖層 — 早期教會（橘色，東西方共識）／天主教（紅）／東方教會（黃）／拉比傳統（藍）。包含資料表 schema、人物清單、UI 切換與配色設計（視角 widget／卡片配色／圖例均已上線）、layout 修正紀錄（僅 Task 2 CUV2010 校對待續）。
 ---
 
 > ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
@@ -397,8 +397,8 @@ per user spec：「就約瑟和馬利亞正常生耶穌就好」(commit `b6aac84
 
 - 35 個 missing 岳父中尚有 ~20 個聖經沒寫名字（夏甲/基土拉父等）— 跳過
 - 5 個明文 FIL 沒插（如 革鄙、以倫、洗便、拉麥之妻父等次要案例）— 看用戶要不要補
-- Task 4E-2：蘇比（亞拿之姊）渲染需 sibling-via-shared-parent logic
-- Task 1：dual-spine overlap detection
+- ~~Task 4E-2：蘇比（亞拿之姊）渲染需 sibling-via-shared-parent logic~~ ✅ 2026-05-16 完成（斯多蘭 anchor + FORCE_EXPAND_NAMES 含蘇比，見上方「本次 session 完成」）
+- ~~Task 1：dual-spine overlap detection~~ ✅ 2026-05-16 結案 — 由 isInDualSpineHideZone hide zone 機制涵蓋，不需另實作（見上方「Task 1 結論」）
 - Task 2：CUV2010 剩餘章節名字校對
 - `audit_inlaws.py` parent_of map 有 name-matching false positives（拉班→利亞/拉結 連結沒接上）；script 待修
 
@@ -422,7 +422,9 @@ per user spec：「就約瑟和馬利亞正常生耶穌就好」(commit `b6aac84
 
 ## 待辦事項
 
-### Task 1: Dual spine overlap → 收進來等於旁支（之前未完成）
+### Task 1: Dual spine overlap → 收進來等於旁支（✅ 2026-05-16 結案，不需另實作）
+
+> ✅ **結案**：經 gen 44-53 截圖驗收（見上方「Task 1 結論」），hide zone（`isInDualSpineHideZone`，gen 34-73）已過濾所有非 spine 兄弟，A/B 兩列乾淨單卡無 overlap。以下原設計僅留作未來重開時參考。
 
 當主幹 A（馬太譜系，amber，右）與主幹 B（路加譜系，rose，左）視覺上會彼此遮到時，把其中一個收成 `旁支` 樣式。
 
@@ -468,7 +470,7 @@ per user spec：「就約瑟和馬利亞正常生耶穌就好」(commit `b6aac84
 
 未校對章節：1 Chr 1（156 entry，最大）、1 Chr 2、1 Chr 7、Num 26、Gen 49、Gen 30、Luke 3。
 
-**動作**：
+**動作**（🧹 c:\tmp 已依 [[feedback_tmp_cleanup]] 清空，以下提及的 verify_*.py / safe_rename.py 檔案已不存在，需依原 pattern 重寫）：
 1. 用 `c:\tmp\verify_gen36.py` 模式寫 verify_<chapter>.py
 2. WebFetch `https://rcuv.hkbs.org.hk/RCUV2/<BOOK>/<CHAPTER>/` 取人名
 3. 把 candidate diff append 到 `c:\tmp\verify_candidates.md`
@@ -513,11 +515,11 @@ per user spec：「就約瑟和馬利亞正常生耶穌就好」(commit `b6aac84
 
 **驗收**：`c:/tmp/cath-mary.png`、`c:/tmp/orth-mary.png` 都通過；biblical mode 完全不變。
 
-### Task 4: UI 改造（核心，**部分完成**）
+### Task 4: UI 改造（核心，**✅ 全部完成**，A-E 各項狀態見下）
 
 **檔案**：[components/genealogy/BiblicalSpineTree.vue](../../../components/genealogy/BiblicalSpineTree.vue)、[pages/genealogy/biblical.vue](../../../pages/genealogy/biblical.vue)、[server/api/genealogy/biblical-graph.get.ts](../../../server/api/genealogy/biblical-graph.get.ts)
 
-**A. Tradition toggle UI** ⏳ **未完成** — 在頁面右上加：
+**A. Tradition toggle UI** ✅ **已完成**（最終實作＝族譜圖浮動 view widget，6 選項：聖經／早期教會／東方／天主教／次經／拉比，URL `?view=` 同步；見 [BiblicalSpineTree.vue](../../../components/genealogy/BiblicalSpineTree.vue) `BrothersView` 區塊）— 原規劃：在頁面右上加：
 ```
 [聖經] [天主教傳統] [東方教會] [拉比傳統]
 ```
@@ -525,7 +527,7 @@ per user spec：「就約瑟和馬利亞正常生耶穌就好」(commit `b6aac84
 - 任何 mode 都顯示 biblical + early_consensus；只是再加上選定的 catholic/orthodox/rabbinic
 - 切換時更新 URL `?tradition=`（biblical.vue 已支援讀取，要加 binding 寫入）
 
-**B. Card 配色** ⏳ **未完成** — 在 [BiblicalSpineTree.vue](../../../components/genealogy/BiblicalSpineTree.vue) `cardClass`：
+**B. Card 配色** ✅ **已完成**（實際配色與下表不同：catholic 紫／orthodox 綠，見上方「配色避衝突」commit 73ff563 與元件 `cardClass` tradition border 分支）— 原規劃：在 [BiblicalSpineTree.vue](../../../components/genealogy/BiblicalSpineTree.vue) `cardClass`：
 ```vue
 const traditionColors = {
   biblical:        '',                               // 預設白底
@@ -536,18 +538,18 @@ const traditionColors = {
 }
 ```
 記得保留 spineKind 的左側 amber/rose bar（不要被 tradition 顏色蓋掉）。
-**注意**：API 目前 node `data` 沒有 expose `tradition` 欄位（只有 generation/name 等），要先在 biblical-graph.get.ts 加 `tradition: p.tradition` 到 node.data。
+**注意**：~~API 目前 node `data` 沒有 expose `tradition` 欄位~~ ✅ 已加 — [biblical-graph.get.ts](../../../server/api/genealogy/biblical-graph.get.ts) 現已輸出 `tradition` 到 node data（early_consensus view 並把 orthodox-tagged Epiphanian 人物以橘色呈現）。
 
 **C. API filter** ✅ **已完成**（commit 8f65f83）
 [server/api/genealogy/biblical-graph.get.ts](../../../server/api/genealogy/biblical-graph.get.ts) 接 `?tradition=catholic|orthodox|rabbinic`，預設 biblical only。在 server side merge JSONB（tradition_children/spouse/hide）進 children/spouse 統一視圖，pipeline mode-agnostic。
 
-**D. 圖例** ⏳ **未完成** — legend 區增加 4 個 swatch 對應 4 種 tradition 顏色 + 預設說明。
+**D. 圖例** ✅ **已完成** — legend 已有 5 個 tradition swatch（早期教會橘／天主教紫／東方綠／拉比藍／次經青，見 BiblicalSpineTree.vue template Legend 區）。
 
 **E. layout 問題**：
 - ✅ **撒羅馬（亞拿之第三夫）** + **革羅罷（亞拿之第二夫）** 渲染問題 — 本次 session 修好。`placeOne` 內擴展 wifeIds：對每個 spine wife，把她「同代且不在 rowOf」的其他配偶 append 到婚姻列尾端（Trinubium extension）。同時新增 `placedAsRowSpouse` 集合，讓 kidWife 迴圈跳過已在上排渲染過的人物，避免 革羅罷 在 gen 74 重複出現。Catholic mode 現在 gen 73 列為 `撒羅馬 — 革羅罷 — 亞拿 — 約亞敬` 連續紅婚姻線。
   - **UI 妥協**：婚姻線是一條連續線，所以 革羅罷↔撒羅馬 之間視覺上像「兩人結婚」，但實際上他們都是娶亞拿。用戶接受此妥協（清楚過完全沒卡）。
-- ⏳ **蘇比（亞拿之姊）不渲染** — 因為「兄妹」關係在現有 layout 沒有專門 logic（蘇比只是亞拿的姊妹，沒有父母 anchor）。需要加 sibling-via-shared-parent 處理 OR 直接把 蘇比 anchor 在某個 placeholder。
-- ⏳ **Orthodox mode 中間「馬利亞」card 紅色 + 來路不明** — 在 J74 馬利亞 和 撒羅米 之間出現一張紅色（看似 catholic 傳統）「馬利亞」card，但 orthodox mode API filter 應該排除 catholic 人物。需確認該 card 究竟是 馬利亞-革羅罷（tradition=biblical 應為白底）還是其他。本次未深入。
+- ✅ **蘇比（亞拿之姊）渲染** — 2026-05-16 修好：插入 斯多蘭（亞拿之父）當 anchor（掛 利未 gen 71 下），FORCE_EXPAND_NAMES 含 斯多蘭／蘇比 預設展開，整條 蘇比 → 以利沙白 → 施洗約翰 chain 可見（見上方「本次 session 完成」Task 4E-2）。
+- ✅ **Orthodox mode 中間「馬利亞」ghost card** — 2026-05-16 修好：根因是 `wifeReachOnSide` 只看 spine kid 自身 membership，改為檢查 cross-spine 配偶決定 kidWifeSide（見上方「本次 session 完成」Task 4E-3）。
 
 ### Task 5（小）：更新 dual-spine 圖例
 
@@ -584,6 +586,8 @@ node scripts/biblical-shot.mjs --focus 馬利亞 --out c:/tmp/cath-mary.png
 
 ## 相關 scripts（可直接重用）
 
+> 🧹 **c:\tmp 已依 [[feedback_tmp_cleanup]] 清空（2026-07-08 確認）**：以下 `c:\tmp\*.py` 檔案均已不存在（皆已跑過、DB 狀態已落地），僅留作 pattern／歷史紀錄；要重用需依描述重寫。`scripts/` 下的 .mjs 仍在。
+
 - `c:\tmp\safe_rename.py` — token-boundary rename（cor）
 - `c:\tmp\david_wives.py` — David's 7 wives 插入範本
 - `c:\tmp\solomon_daughters.py` — Solomon 兩女兒插入範本
@@ -605,5 +609,5 @@ node scripts/biblical-shot.mjs --focus 馬利亞 --out c:/tmp/cath-mary.png
 1. 先讀此 SKILL.md 一遍
 2. `git log --oneline -10` 看最近 commit
 3. 跑 `node scripts/biblical-shot.mjs --out c:/tmp/start.png` 取得基線
-4. 按 Task 1 → Task 2 → Task 3 → Task 4 順序做（Task 3 的 Phase 2/3 是 schema 改完後 INSERT 各 tradition 的人物；Task 4 的 UI 在 INSERT 完後做才能看到效果）
+4. Task 1（結案）／Task 3／Task 4 均已完成（見各節 ✅）；剩餘工作以 **Task 2（CUV2010 名字校對）** 為主
 5. 每完成一個 task 就 commit + push

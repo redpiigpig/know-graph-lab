@@ -33,7 +33,7 @@ description: 教父全集（Schaff ANF 10 卷 + NPNF1 14 卷 + NPNF2 14 卷 + AC
 EPUB（Drive/CCEL 來源）
     │
     ▼
-[1] translate_ebook_to_zh.py  ← 章節級 Haiku 翻譯
+[1] translate_ebook_to_zh.py  ← 章節級 LLM 翻譯（--engine auto = Gemini → NVIDIA → Haiku）
     含 [^N] refs / {{p:N}} page markers / 末尾 (N) body 腳註區
     │
     ▼
@@ -710,11 +710,11 @@ auto-push。**git 在 master 跑教父**（user 拍板；feat/coach-language 是
 5. 卡死/崩潰 → kill 該卷 python 行程 + `--resume` 重啟，partial chunks 不丟。
 6. **glossary（/translation-glossary）已被改成「各領域獨立表」新架構，由別的作業負責，教父線別碰。**
 
-### 接續佇列（NPNF2，逐卷；ID 見下方批次表保留區）
-**下一卷 → V11** `24c53ede-8787-442e-a3ba-0cd55d0effac`/
+### 接續佇列（NPNF2，逐卷；✅ 已全數完成 2026-06-12）
+**V11-V14 已全部精修上架（見「Schaff 全集 38 卷收官」節）**：
 V11 `24c53ede-8787-442e-a3ba-0cd55d0effac` / V12 大良 `02a08547-6fb5-44b2-8a59-9b1f625f3a54` /
-V13 `90b55879-7179-41d7-9f6c-f6587a3dd429` / V14 七大公會議 `63853a97-68be-441c-8dce-063ae89405c5`
-→ 再 ACCS 待補卷。**翻每卷前先 `/translation-glossary` 查該卷人物 ★建議譯名**（迦帕多家/區利羅
+V13 `90b55879-7179-41d7-9f6c-f6587a3dd429` / V14 七大公會議 `63853a97-68be-441c-8dce-063ae89405c5`。
+ACCS 已轉軌至 [[scripture-accs]]（嵌進聖經逐節閱讀器，不再整卷翻上 /fathers）。**翻每卷前先 `/translation-glossary` 查該卷人物 ★建議譯名**（迦帕多家/區利羅
 見 2026-05-29 譯名決策節）。
 
 ---

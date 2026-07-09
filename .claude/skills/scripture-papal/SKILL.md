@@ -143,7 +143,7 @@ PL 13 (Damasus+Siricius / `patrologiaecur13mign`) ／ PL 54 (Leo I / `sanctileon
 data/encyclicals/
   types.ts                  — PapalDocument / PapalDocumentVersion interface
   index.ts                  — registry + groupByCentury() + groupByPope()
-  popes-catalog.ts          — 231 位教宗（4c Sylvester I → 21c Leo XIV）
+  popes-catalog.ts          — 228 位教宗（4c Sylvester I → 21c Leo XIV；2026-07-08 實數 228 筆）
   textLoader.ts             — Vite ?raw lazy import wrapper
   paragraphParser.ts        — re-export data/creeds/paragraphParser.ts
 
@@ -159,8 +159,8 @@ pages/encyclicals/
   pope/[slug].vue           — 教宗 profile 3-tab UI（teaching / curia / message）
   century/[century].vue     — 世紀內教宗列表
 
-server/api/encyclicals/
-  list.get.ts / by-pope.get.ts
+（無 server API — pages 直接 `import ... from '~/data/encyclicals'` 走 registry + Vite ?raw；
+ 舊記載的 server/api/encyclicals/ list.get.ts / by-pope.get.ts 不存在，2026-07-08 查證）
 ```
 
 ### PapalDocument TypeScript interface

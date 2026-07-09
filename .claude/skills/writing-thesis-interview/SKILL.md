@@ -1,6 +1,6 @@
 ---
 name: writing-thesis-interview
-description: 把碩士論文口述訪談的「音檔」整理成符合 /thesis?tab=interviews 上架格式的繁體中文逐字稿。Gemini Audio 轉錄 → Claude 在對話中整理 Q&A、分節、補前言三段 → 寫入 public/content/interviews/ → 更新 stores/thesisInterviews.ts。Use when 使用者指明某位受訪者要把音檔轉成正式紀錄並上架，或要重做某位現有訪談紀錄的清理工作。
+description: 把碩士論文口述訪談的「音檔」整理成上架格式的繁體中文逐字稿（2026-06-13 起口述訪談從 /thesis 移至 /works《當代的大愛道革命》書籍計畫「口述訪談」分頁，舊 /thesis?tab=interviews 已移除）。Gemini Audio 轉錄 → Claude 在對話中整理 Q&A、分節、補前言三段 → 寫入 public/content/interviews/ → 更新 stores/thesisInterviews.ts。Use when 使用者指明某位受訪者要把音檔轉成正式紀錄並上架，或要重做某位現有訪談紀錄的清理工作。
 ---
 
 > ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
@@ -25,7 +25,7 @@ description: 把碩士論文口述訪談的「音檔」整理成符合 /thesis?t
 | [`03.26 張莉筠居士口述訪談紀錄.txt`](../../../public/content/interviews/03.26%20張莉筠居士口述訪談紀錄.txt) | 居士 (面訪) | 結尾以印順導師引言收束的範例 |
 | [`02.14 陳悅萱老師口述訪談紀錄.txt`](../../../public/content/interviews/02.14%20陳悅萱老師口述訪談紀錄.txt) | 老師 (面訪) | 8 個主題節、聚焦校務與機構流動 |
 
-> 渲染這些 txt 的程式是 [pages/thesis/interview/\[name\].vue](../../../pages/thesis/interview/[name].vue) 中的 `formatInterview()`，它認得 `筆者：` / `XX法師：` / `（一）` / `一、` 這幾個前綴。格式對了它就會渲染成清楚的 Q&A 卡片。
+> 渲染這些 txt 的程式是 [pages/works/\[slug\]/interview/\[name\].vue](../../../pages/works/[slug]/interview/[name].vue) 中的 `formatInterview()`（口述訪談 2026-06-13 從 /thesis 移到 /works 書籍計畫分頁，reader 隨之搬家；docx 下載走 `server/api/thesis/interview-docx`），它認得 `筆者：` / `XX法師：` / `（一）` / `一、` 這幾個前綴。格式對了它就會渲染成清楚的 Q&A 卡片。
 
 ## 標準格式
 
@@ -272,7 +272,7 @@ python scripts/transcribe_interview_gemini.py \
    - `filename` **不**含 `.txt`，編碼也不要事先 URL-encode（router 會處理）
    - `category` 五選一：`法師 / 學者 / 宗教對話 / 社運界 / 其他`
 
-3. **驗證**：dev server 跑著時，curl 一下 `http://localhost:3000/thesis/interview/<urlencoded-filename>`，或瀏覽器點進 `/thesis?tab=interviews` 看新項目出現。
+3. **驗證**：dev server 跑著時，curl 一下 `http://localhost:3000/works/mahaprajapati-revolution/interview/<urlencoded-filename>`，或瀏覽器點進 `/works/mahaprajapati-revolution`「口述訪談」分頁看新項目出現（口述訪談已從 /thesis 移除，舊 `?tab=interviews` 會回退到論文內容）。
 
 ### Step 6 — Commit + push
 

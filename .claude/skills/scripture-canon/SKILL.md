@@ -267,6 +267,10 @@ bible_verses (
   PRIMARY KEY (book_code, chapter, verse, version_code)
 )
 CREATE INDEX bible_verses_fts ON bible_verses USING GIN (to_tsvector('simple', text));
+-- ⚠️ 2026-07-08 DB 超量救援：bible_verses 已整表 DROP 搬出 Supabase（每卷一 gz JSON，
+-- Drive canonical `G:/…/聖經/_verses/` + R2 `bible-verses/`；讀經 API 走
+-- server/utils/bible-verses.ts local-first→R2 LRU；遷移工具 scripts/offload_bible_verses.py）。
+-- 上述 schema 僅為歷史紀錄；任何直接 REST 查 bible_verses 的腳本現已失效。
 
 bible_commentary (
   id UUID PK,
@@ -348,7 +352,7 @@ CREATE INDEX bible_commentary_verse ON bible_commentary (verse_ref);
 
 ### ✅ /scripture 上線 — **32 版本平行對照（852,840 節）**
 
-**Schema**：[database/bible-schema.sql](../../../database/bible-schema.sql) — `bible_books` (86 卷 × 8 教會 canon flags) / `bible_versions` (32 版本 + `pub_year` 欄) / `bible_verses` (book+ch+v+version PK + GIN FTS)。`display_order` 按 category 內 pub_year DESC 排（新→舊）。
+**Schema**：[database/bible-schema.sql](../../../database/bible-schema.sql) — `bible_books` (86 卷 × 8 教會 canon flags) / `bible_versions` (32 版本 + `pub_year` 欄) / `bible_verses` (book+ch+v+version PK + GIN FTS)。`display_order` 按 category 內 pub_year DESC 排（新→舊）。**⚠️ 2026-07-08 起 `bible_verses` 已搬出 DB**（file-backed：Drive `_verses/` gz + R2，經 `server/utils/bible-verses.ts` 讀取；`bible_books`/`bible_versions` 小表仍在 DB）。
 
 #### 中文 13 版（display_order 10-22）
 | code | 版本 | 年代 | 節數 | 來源 | 版權 |
@@ -1543,7 +1547,7 @@ q-peter-preaching / christian-sibyl / orphica / joseph-prayer
 - **legacy fallback**：`chapters` 為空（其餘 122 卷未重建）→ 回退舊整頁 block 呈現，不破。改完務必 `nuxt build` 跑綠。
 
 **推廣（分類進行，2026-06-10 定）**：骨架來源依文獻類型分三條路，**不能盲目一次批次**（無骨架的中文自編章號會過度切章，實測 sirach 自編→95 章 vs 實際 51 章）：
-1. **第二正典／次經**（sir/tob/jdt/wis/bar/1-2 Macc/1-2 Esdras…）→ 骨架直接取自我們自己的 **`bible_verses` 表**（KJVA/Brenton 英 + 思高中，皆已由 /scripture ingest，章:節正確）。driver `en_kind:'bible'`+`bible_book`/`bible_version`；英文以 `kjva_apoc` 入庫。**jub/eno/4ba 也在 bible_verses**。
+1. **第二正典／次經**（sir/tob/jdt/wis/bar/1-2 Macc/1-2 Esdras…）→ 骨架直接取自我們自己的 **`bible_verses` 表**（KJVA/Brenton 英 + 思高中，皆已由 /scripture ingest，章:節正確）。driver `en_kind:'bible'`+`bible_book`/`bible_version`；英文以 `kjva_apoc` 入庫。**jub/eno/4ba 也在 bible_verses**。**⚠️ 2026-07-08 bible_verses 已 DROP 搬 Drive gz + R2**：`apoc_verse_restructure.py` 的骨架讀取（`db_get('bible_verses?...')`，~line 259）現已失效；日後要再跑路 ① 需先改讀 `G:/…/聖經/_verses/` gz（或 `server/utils/bible-verses.ts` 同源檔）。
 2. **OT 偽典**（Charles APOT 有的：2 Enoch、Testaments、Jubilees、4 Ezra、2 Baruch…）→ CCEL Charles（`en_kind:'ccel-enoch'`），每卷確認 CCEL 路徑。
 3. **真斷片／Nag Hammadi／昆蘭**（無標準 versification）→ `--zh-own`（中文自編章號，可接受，無 ground truth）。
 - 旗標：`--all`(英骨架)／`--zh-own`(中文自編)／`--snapshot`(從 cct_zh 存全文快照)／`--batch-own`(對未重建卷跑 zh-own，**僅適合斷片類**)；`is_restructured()` checkpoint 跳過已完成。
@@ -1646,9 +1650,9 @@ q-peter-preaching / christian-sibyl / orphica / joseph-prayer
 >
 > **弱卷根因＝LLM key starvation，不是骨架/versification**：judith 第 1–9 章 100%、第 10 章 13/23、**第 11–16 章整章 0 節** — 後半本對齊視窗在 key 競爭下每輪 all-engines-failed、被「保留空窗」，故 align_to_convergence gain<0.01 只 2 pass 即停、卡 62% 平台。**judith 不需換 brenton/sigao 骨架**；2-macc/3-macc 同理（尾段視窗未翻）。
 >
-> **🔻 新 session 待辦（全部 gated on「key 已空」）**：整夜 coach_vocab_bank / panikkar_auto / sbe_translate(mueller) 一直搶光 NVIDIA/Gemini key，故以下都還沒做、先確認這些任務已收工再動：
-> 1. **jubilees 84→≥92**：`jubilees --zh --accumulate` 連跑 1-2 輪（route-b，CLI 可直接跑；**accumulate=True 建在現有乾淨 1098 上、絕不 accumulate=False 清空**）。
-> 2. **judith(缺ch10-16) / 2-macc / 3-macc 補尾段**：⚠ 這三卷是 deuterocanon，**走 DOC_SOURCES 動態、CLI `SLUG --zh --accumulate` 會報 `no source config`**（baruch 即如此）。要嘛 `--batch-bible --force`（重跑全 13 卷、monotonic 安全但慢、冗餘），要嘛寫精簡腳本：`import apoc_verse_restructure as D`，仿 run_batch_bible line586 設 `D.DOC_SOURCES[slug]={'en_version':env,'en_kind':'bible','bible_book':book,'bible_version':bv,'book_name':slug}`（env/bv 由 `D._pick_bible_version(book)` 取），再 `D.align_to_convergence(slug)` 多跑幾輪。bug 已修，不會再清空。
+> **🔻 新 session 待辦（2026-06-14 開列；1、2 已於 2026-06-15 完成，見上方「已修頁範圍／最終覆蓋率」節）**：
+> 1. ~~**jubilees 84→≥92**~~ ✅ 已完成（2026-06-15 Drive JSONL 全文重抓 → **97.9%**，ch21 為不可復原來源缺口＝天花板）。
+> 2. ~~**judith / 2-macc / 3-macc 補尾段**~~ ✅ 已完成（2026-06-15 範圍重建：judith **96.2%**、2-macc **99.8%**、3-macc **94.7%**）。
 > 3. **4-ezra 87.3%**（zh_verses 1802 > en 874，zh_extra 多）：查是 versification 差異還是真缺；非急。
 > 4. 別再無謂 `--batch-bible --force`（已達標卷冗餘重跑）；只針對個別弱卷收。
 > 5. **動 `apocrypha_verses.py` 前先補 test**（[[feedback_apocrypha_verse_process]]）。
@@ -1659,7 +1663,7 @@ q-peter-preaching / christian-sibyl / orphica / joseph-prayer
 ### 教訓（值得記住）
 
 - `vision_ocr_apocrypha.py` 走 page-batch（不是 PDF 全本上傳 Gemini Files API） — Flash 32K output token cap 對 350 頁書會截到 30 頁
-- `ocr_with_gemini.py` 的 PREVIEW_LEN=200 對 apocrypha 不合適 — 之後類似 reader 場景 ingest 都要記得改 full text
+- `ocr_with_gemini.py` 的 PREVIEW_LEN（當時 200；2026-07-08 起全域改 100）對 apocrypha 不合適 — 之後類似 reader 場景 ingest 都要記得改 full text
 - Vision OCR 出來的乾淨「啟示／以諾／便西拉」會 break 沿用 OCR garble 變體（默示／以諸／便古拉）的 classifier keywords — 必須兩種都加
 - Haiku 5h limit 跟 Gemini daily quota 都會擋住長 pipeline；scripts 需要 ckpt 斷點 + 2-strike abort + 過夜恢復
 
