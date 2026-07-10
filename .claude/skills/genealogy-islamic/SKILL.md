@@ -346,3 +346,7 @@ gen 23 阿蘭姆 → 24 奧達 → 25 馬齊 → 26 薩米 → 27 扎里赫
 3. 跑 script → 用 `islamic_check_state.py` 確認 row 數與 gens
 4. 視覺驗收（islamic-shot.mjs --focus 新人物）
 5. 更新本 SKILL.md（人物世系區 + scripts list）→ commit + push
+
+## 🔍 資料一致性稽核（2026-07-08）
+
+`python -X utf8 scripts/genealogy_data_audit.py --table islamic_people [--fix]` — 懸空引用/變體引用/wife-children 對齊/spouse 互指四類檢查＋Tier-1 機械修復。本日全歸零：新建 20 缺 row（卡爾巴拉烈士阿里·艾克巴爾/艾斯加爾/阿巴斯、艾布·伯克爾三子女、艾比·塔利卜諸子、伊本·歐麥爾、哈納菲耶、現代哈希姆費薩爾一世等），388→408 人。⚠️ 神學紅線寫死在腳本：爾撒無父只掛麥爾彥（ISLAMIC_KID_SKIP）；宰娜卜之子阿里（夭折）≠ 阿里·伊本·艾比·塔利卜（ISLAMIC_FALSE_FRIENDS）。

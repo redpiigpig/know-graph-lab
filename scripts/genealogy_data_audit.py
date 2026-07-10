@@ -8,8 +8,9 @@
   4. spouse 不互指：A.spouse 有 B、B.spouse 卻沒 A
 
 用法：
-  python -X utf8 scripts/genealogy_data_audit.py            # 稽核報告
-  python -X utf8 scripts/genealogy_data_audit.py --fix      # 套 Tier-1 機械修復：
+  python -X utf8 scripts/genealogy_data_audit.py                        # 稽核 biblical_people
+  python -X utf8 scripts/genealogy_data_audit.py --table islamic_people # 稽核伊斯蘭族譜（同構 schema）
+  python -X utf8 scripts/genealogy_data_audit.py --fix                  # 套 Tier-1 機械修復：
       (a) 變體引用改寫成 row 的正確全名（唯一對應才改）
       (b) spouse 互指補回
       (c) 單一丈夫的 wife.children 缺漏 → 補進 husband.children（既有 row 才補）
@@ -24,6 +25,7 @@ import urllib.request
 REF = "vloqgautkahgmqcwgfuo"
 API = f"https://api.supabase.com/v1/projects/{REF}/database/query"
 
+# 以下三組人工判斷名單只適用 biblical_people（--table 其他表時自動清空）
 # 同名不同人：base-name 對到的 row 其實是別人，引用本身是對的（缺 row），絕不可改寫
 FALSE_FRIENDS = {
     ("米迦（米非波設之子）", "亞哈斯（米迦之子）"),   # 代上8:35 便雅憫支派，≠ 猶大王亞哈斯（約坦之子）
@@ -44,6 +46,16 @@ SPOUSE_SKIP = {
 KID_SKIP = {
     ("羅得長女", "羅得"),
     ("羅得次女", "羅得"),
+}
+
+# islamic_people 專屬名單
+ISLAMIC_FALSE_FRIENDS = {
+    # 宰娜卜之子阿里（夭折的外孫）≠ 阿里·伊本·艾比·塔利卜
+    ("宰娜卜（穆聖之女）", "阿里（艾布·阿斯之子）"),
+}
+ISLAMIC_KID_SKIP = {
+    # 爾撒（耶穌）在伊斯蘭神學無父，只掛麥爾彥；優素福不得列為父
+    ("麥爾彥", "優素福（馬利亞之夫）"),
 }
 
 
@@ -103,10 +115,17 @@ def base(name):
 
 
 def main():
+    global FALSE_FRIENDS, RESOLVE_OVERRIDES, SPOUSE_SKIP, KID_SKIP
     apply_fix = "--fix" in sys.argv
+    table = sys.argv[sys.argv.index("--table") + 1] if "--table" in sys.argv else "biblical_people"
+    if table == "islamic_people":
+        FALSE_FRIENDS, RESOLVE_OVERRIDES = ISLAMIC_FALSE_FRIENDS, {}
+        SPOUSE_SKIP, KID_SKIP = set(), ISLAMIC_KID_SKIP
+    elif table != "biblical_people":
+        FALSE_FRIENDS, RESOLVE_OVERRIDES, SPOUSE_SKIP, KID_SKIP = set(), {}, set(), set()
     token = load_env()["SUPABASE_ACCESS_TOKEN"]
     rows = query(
-        "select id, name_zh, gender, spouse, children from biblical_people order by name_zh",
+        f"select id, name_zh, gender, spouse, children from {table} order by name_zh",
         token,
     )
     by_name = {r["name_zh"]: r for r in rows}
@@ -247,7 +266,7 @@ def main():
         sets = ", ".join(
             f"{col} = '" + val.replace("'", "''") + "'" for col, val in fields.items()
         )
-        sql = f"update biblical_people set {sets}, updated_at = now() where id = '{pid}'"
+        sql = f"update {table} set {sets}, updated_at = now() where id = '{pid}'"
         query(sql, token)
         print(f"  ✅ {name}: {list(fields.keys())}")
     print("完成。建議重跑本腳本確認歸零。")
