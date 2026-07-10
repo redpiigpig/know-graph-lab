@@ -1,0 +1,18 @@
+{
+  "series": "世界宗教文化導論",
+  "note": "宗教系大學通用教科書草案——配合十六週課程，以「全球八大人文宗教界域」（八大界域 × 48 文化圈，見 /maps/world-religions）取代東西方二元對立的世界宗教敘事。",
+  "groups": [
+    {
+      "branch": "十六週講義草稿",
+      "books": [
+        {
+          "id": "WR1",
+          "title": "世界宗教文化導論",
+          "subtitle": "全書十六章草稿大綱——第一部 宗教的本質與基礎（1–4）／第二部 八大界域巡禮（5–13）／第三部 宗教與當代世界（14–16）",
+          "file": "/content/works/world-religions-intro/WR1.html",
+          "nChapters": 16
+        }
+      ]
+    }
+  ]
+}
