@@ -1,6 +1,8 @@
 <template>
   <nav class="bg-white border-b border-gray-200 sticky top-0 z-40">
-    <div :class="['mx-auto px-6 h-14 flex items-center gap-3', containerClass]">
+    <!-- header 一律全寬：logo 與帳號/編輯 icon 釘在畫面左右兩側，
+         不跟各頁內容寬度（containerClass）連動 — 換頁時 icon 不再水平跳動。 -->
+    <div class="w-full px-6 h-14 flex items-center gap-3">
 
       <NuxtLink to="/" class="flex items-center gap-2.5 hover:opacity-80 transition no-underline flex-shrink-0">
         <div class="w-7 h-7 bg-blue-600 rounded-lg flex items-center justify-center text-xs font-bold text-white">K</div>
@@ -71,6 +73,7 @@ withDefaults(
     title?: string
     back?: { to: string; label: string }
     editable?: boolean
+    /** @deprecated header 已固定全寬（2026-07-11 icon 位置統一），此 prop 保留只為不動 100+ 呼叫端 */
     containerClass?: string
   }>(),
   {
