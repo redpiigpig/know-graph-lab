@@ -41,8 +41,8 @@ const books = [
   },
   {
     slug: 'sinographic-literature',
-    title: '漢字文學史',
-    subtitle: '宗教系國文講義——宗教與東亞漢字書寫圈的文學世界',
+    title: '宗教系國文講義',
+    subtitle: '漢字文學史——宗教與東亞漢字書寫圈的文學世界',
     description: '打破「中國文學史」框架的國文講義：以漢字書寫圈為單位涵蓋中日韓越台的漢文學，以佛典漢譯、大藏經、變文演藝、聖經漢譯與漢語神學為貫穿軸線。',
     emoji: '🖋️',
     color: 'amber',
