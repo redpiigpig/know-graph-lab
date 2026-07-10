@@ -120,12 +120,17 @@ def run_cmd(argv: list[str]) -> int:
 
 
 def step_ocr(bid: str) -> str:
-    """回傳 'staged' | 'quota' | 'fail'。"""
+    """回傳 'staged' | 'quota' | 'env' | 'fail'。"""
     rc = run_cmd([PY, str(SCRIPTS / "ocr_with_gemini.py"), "run",
                   "--book", bid, "--staging"])
     if (CHUNKS_DIR / f"{bid}.jsonl.new").exists():
         return "staged"
-    return "quota" if rc == 2 else "fail"
+    if rc == 2:
+        return "quota"
+    # 子行程炸掉（traceback、環境錯誤）≠ 這本書 OCR 失敗：不燒佇列，整場停
+    if rc != 0:
+        return "env"
+    return "fail"
 
 
 def swap_and_publish(bid: str) -> bool:
@@ -161,6 +166,9 @@ def process_book(led: dict, bid: str, title: str) -> str:
         r = step_ocr(bid)
         if r == "quota":
             print("  ⛔ quota — 停在 pending，明日排程續跑", flush=True)
+            return "pending"
+        if r == "env":
+            print("  ⛔ 環境錯誤（REST/相依炸掉）— 停在 pending，整場中止", flush=True)
             return "pending"
         if r == "fail":
             set_state(led, bid, "ocr_failed", title=title)
@@ -201,6 +209,13 @@ def process_book(led: dict, bid: str, title: str) -> str:
 # ── CLI ──────────────────────────────────────────────────────────────────
 
 def cmd_run(limit: int, tier: str) -> None:
+    # 前置檢查：REST 被 quota 鎖（402）時 OCR 子行程必炸，會把整批書誤標
+    # ocr_failed。環境不可用就整場跳過、ledger 原封不動，明晚再試。
+    from quality_sweep import rest_available
+    from audit_book_structure import load_env as _le
+    if not rest_available(_le()):
+        print("⛔ Supabase REST 不可用（quota 鎖定？）— 本輪跳過，佇列不動")
+        return
     tiers = json.loads(TIERS_FILE.read_text(encoding="utf-8"))
     books = [b for b in tiers["tiers"].get(tier, [])
              if "PATH_BROKEN" not in b.get("flags", [])]
