@@ -241,6 +241,21 @@
             </div>
           </div>
 
+          <!-- ── 專書初稿（報導文學改寫） ── -->
+          <div v-show="bookTab === 'draft'">
+            <div class="mb-4 flex items-start justify-between gap-3 flex-wrap">
+              <div>
+                <h2 class="text-base font-semibold text-gray-900">專書初稿</h2>
+                <p class="text-xs text-gray-500 mt-0.5 max-w-2xl leading-relaxed">{{ bookDraftConf?.note || '碩論改寫的報導文學專書初稿' }}</p>
+              </div>
+              <a v-if="bookDraftConf?.docx" :href="bookDraftConf.docx" download
+                class="text-xs font-medium px-3 py-1.5 rounded-lg border border-rose-300 text-rose-700 hover:bg-rose-50 no-underline flex-shrink-0">⬇ 下載 Word</a>
+            </div>
+            <div v-if="bookDraftLoading" class="text-gray-400 text-sm py-8 text-center">載入中⋯</div>
+            <div v-else-if="bookDraftHtml" class="book-prose bg-white rounded-2xl border border-gray-100 px-6 py-8 sm:px-10" v-html="bookDraftHtml"></div>
+            <div v-else class="text-gray-400 text-sm py-8 text-center">初稿載入失敗。</div>
+          </div>
+
           <!-- ── 碩士文稿正文 ── -->
           <div v-show="bookTab === 'thesis'">
             <div class="mb-4 flex items-start justify-between gap-3 flex-wrap">
@@ -672,7 +687,8 @@ interface MaterialGroup { label: string; count?: number; size?: number; tag?: st
 interface MaterialCategory { key: string; label: string; icon?: string; desc?: string; groups: MaterialGroup[] }
 interface ThesisChapter { id: string; title: string }
 interface ThesisConf { title?: string; note?: string; pdfKey?: string; contentBase?: string; chapters: ThesisChapter[] }
-interface Materials { book?: string; subtitle?: string; source?: string; note?: string; interviews?: boolean; thesis?: ThesisConf; totalFiles?: number; totalBytes?: number; categories: MaterialCategory[] }
+interface BookDraftConf { md: string; docx?: string; note?: string }
+interface Materials { book?: string; subtitle?: string; source?: string; note?: string; interviews?: boolean; thesis?: ThesisConf; bookDraft?: BookDraftConf; totalFiles?: number; totalBytes?: number; categories: MaterialCategory[] }
 
 const materials = ref<Materials | null>(null)
 const materialsAvailable = ref(false)
@@ -801,13 +817,14 @@ const litEntries = ref<LitEntry[]>([])
 const litLoading = ref(false)
 
 // 書籍計畫分頁（研究資料 / 碩士文稿 / 口述訪談 / 書摘與構思）
-type BookTab = 'materials' | 'thesis' | 'interviews' | 'review' | 'notes'
+type BookTab = 'materials' | 'draft' | 'thesis' | 'interviews' | 'review' | 'notes'
 const bookTab = ref<BookTab>('materials')
 const useBookTabs = computed(() => project.value?.kind !== 'paper' && !dialogueDays.value.length && materialsAvailable.value)
 const bookTabs = computed(() => {
   const tabs: { key: BookTab; label: string; badge?: string }[] = [
     { key: 'materials', label: '研究資料', badge: materials.value?.totalFiles ? String(materials.value.totalFiles) : undefined },
   ]
+  if (bookDraftConf.value) tabs.push({ key: 'draft', label: '專書初稿' })
   if (thesisConf.value) tabs.push({ key: 'thesis', label: '碩士文稿' })
   if (showInterviews.value) tabs.push({ key: 'interviews', label: '口述訪談', badge: String(interviewsStore.published.length) })
   if (litEntries.value.length) tabs.push({ key: 'review', label: '研究回顧', badge: String(litEntries.value.length) })
@@ -816,6 +833,43 @@ const bookTabs = computed(() => {
 })
 watch(bookTabs, (tabs) => { if (!tabs.some((t) => t.key === bookTab.value)) bookTab.value = 'materials' })
 watch(bookTab, (t) => { if (t === 'thesis' && !thesisHtml.value && !thesisLoading.value) loadThesisChapter(activeThesisChapter.value) })
+
+// ── 專書初稿（報導文學改寫）：md 渲染（含尾註上標／標楷體引文） ──────────
+const bookDraftConf = computed(() => materials.value?.bookDraft ?? null)
+const bookDraftHtml = ref('')
+const bookDraftLoading = ref(false)
+async function loadBookDraft() {
+  if (!bookDraftConf.value?.md) return
+  bookDraftLoading.value = true
+  try {
+    const md = await $fetch<string>(bookDraftConf.value.md, { responseType: 'text' })
+    bookDraftHtml.value = renderBookMd(md || '')
+  } catch { bookDraftHtml.value = '' } finally { bookDraftLoading.value = false }
+}
+watch(bookTab, (t) => { if (t === 'draft' && !bookDraftHtml.value && !bookDraftLoading.value) loadBookDraft() })
+
+// 專書 md 渲染：標題／粗體／標楷體引文／[^n] 尾註上標與章末尾註錨點互跳
+function renderBookMd(md: string): string {
+  const inline = (s: string) => inlineMd(s)
+    .replace(/\[\^([^\]]+)\]/g, '<sup class="bk-fn" id="bkref-$1"><a href="#bkfn-$1">$1</a></sup>')
+  const lines = md.replace(/\r\n/g, '\n').split('\n')
+  const out: string[] = []
+  for (let i = 0; i < lines.length; i++) {
+    const t = lines[i].trim()
+    if (!t || /^-{3,}$/.test(t)) { if (/^-{3,}$/.test(t)) out.push('<hr>'); continue }
+    const def = t.match(/^\[\^([^\]]+)\]:\s*(.*)$/)
+    if (def) { out.push(`<p class="bk-note" id="bkfn-${def[1]}"><a class="bk-noteid" href="#bkref-${def[1]}">${def[1]}.</a> ${inlineMd(def[2])}</p>`); continue }
+    const h = t.match(/^(#{1,6})\s+(.*)$/)
+    if (h) { const lvl = Math.min(h[1].length + 1, 6); out.push(`<h${lvl}>${inline(h[2])}</h${lvl}>`); continue }
+    if (t.startsWith('>')) {
+      const buf = [t.replace(/^>\s?/, '')]
+      while (i + 1 < lines.length && lines[i + 1].trim().startsWith('>')) { i++; buf.push(lines[i].trim().replace(/^>\s?/, '')) }
+      out.push(`<blockquote class="bk-quote">${buf.map(inline).join('<br>')}</blockquote>`); continue
+    }
+    out.push(`<p>${inline(t)}</p>`)
+  }
+  return out.join('\n')
+}
 
 // ── 研究回顧（文獻綜述）載入 ─────────────────────────────────────────
 async function loadLitReview() {
@@ -1084,6 +1138,24 @@ function onNotesUpdate(html: string) {
 .thesis-prose :deep(p.kw) { text-indent: 0; border-left: 3px solid #fda4af; padding-left: 1rem; margin: 1.2em 0; color: #374151; line-height: 1.8; }
 .thesis-prose :deep(p.ref) { text-indent: 0; padding-left: 2em; font-size: 0.78rem; color: #64748b; line-height: 1.8; }
 .thesis-prose :deep(sup) { font-size: 0.65em; color: #be123c; vertical-align: super; }
+
+/* ── 專書初稿 ── */
+.book-prose { font-family: 'Noto Serif TC', 'Source Han Serif TC', Georgia, serif; }
+.book-prose :deep(h2) { font-size: 1.3rem; font-weight: 700; text-align: center; margin: 2.4em 0 1.4em; letter-spacing: 0.08em; color: #111827; }
+.book-prose :deep(h3) { font-size: 1.05rem; font-weight: 700; margin: 2em 0 0.9em; color: #1f2937; }
+.book-prose :deep(h4) { font-size: 0.95rem; font-weight: 600; margin: 1.6em 0 0.7em; color: #374151; }
+.book-prose :deep(p) { font-size: 0.92rem; line-height: 2.05; text-indent: 2em; margin-bottom: 0.6rem; color: #1f2937; }
+.book-prose :deep(blockquote.bk-quote) {
+  font-family: 'DFKai-SB', 'BiauKai', 'Kaiti TC', 'TW-Kai', serif;
+  margin: 1.1em 1.5em; padding: 0.2em 1em;
+  border-left: 3px solid #fda4af; color: #374151;
+  font-size: 0.95rem; line-height: 2;
+}
+.book-prose :deep(sup.bk-fn) { font-size: 0.62em; vertical-align: super; }
+.book-prose :deep(sup.bk-fn a) { color: #be123c; text-decoration: none; }
+.book-prose :deep(p.bk-note) { text-indent: 0; padding-left: 2.2em; font-size: 0.78rem; color: #64748b; line-height: 1.8; margin-bottom: 0.25rem; }
+.book-prose :deep(p.bk-note .bk-noteid) { margin-left: -2.2em; margin-right: 0.5em; color: #be123c; font-weight: 600; text-decoration: none; }
+.book-prose :deep(hr) { border: none; border-top: 1px solid #f3f4f6; margin: 2.2em 0; }
 
 .paper-prose :deep(h3) { text-align: center; margin-top: 2em; }
 .paper-prose :deep(p) { text-indent: 2em; line-height: 1.95; }
