@@ -52,11 +52,12 @@
                 :x1="m.x1" :y1="m.y" :x2="m.x2" :y2="m.y"
                 stroke="#dc2626" stroke-width="2" stroke-linecap="round" />
 
-          <!-- Vertical drops (parent → child) -->
+          <!-- Vertical drops (parent → child); dashed = 利未拉特婚橋（寡媳前夫連線） -->
           <line v-for="(d, i) in cv!.drops" :key="'d'+i"
                 v-show="!d.hidden"
                 :x1="d.x" :y1="d.y1" :x2="d.x" :y2="d.y2"
                 :stroke="d.stroke || '#9ca3af'" stroke-width="1.5"
+                :stroke-dasharray="d.dashed ? '5 4' : undefined"
                 stroke-linecap="round" />
 
           <!-- Horizontal bars -->
@@ -64,6 +65,7 @@
                 v-show="!b.hidden"
                 :x1="b.x1" :y1="b.y" :x2="b.x2" :y2="b.y"
                 :stroke="b.stroke || '#9ca3af'" stroke-width="1.5"
+                :stroke-dasharray="b.dashed ? '5 4' : undefined"
                 stroke-linecap="round" />
         </svg>
 
@@ -169,6 +171,7 @@
       <div v-if="!props.rootId" class="absolute bottom-3 left-3 z-40 bg-white/95 border border-gray-200 rounded-lg p-2 text-[10px] text-gray-600 shadow-sm pointer-events-none space-y-0.5">
         <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-amber-400 rounded-full" />主幹 A：馬太譜系（猶大→所羅門→約瑟）</div>
         <div class="flex items-center gap-1.5"><span class="w-3 h-[3px] bg-rose-400 rounded-full" />主幹 B：路加譜系（猶大→拿單→馬利亞）</div>
+        <div class="flex items-center gap-1.5"><svg class="w-3 h-[3px]" viewBox="0 0 12 3"><line x1="0" y1="1.5" x2="12" y2="1.5" stroke="#dc2626" stroke-width="2" stroke-dasharray="3 2"/></svg>利未拉特婚（寡媳曾嫁其子，如她瑪⚭珥/俄南）</div>
         <div class="flex items-center gap-1.5 pt-1 mt-1 border-t border-gray-100"><span class="inline-block w-3 h-3 border border-orange-300 bg-orange-50 rounded" />早期教會傳統（東西方共識）</div>
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-purple-300 bg-purple-50 rounded" />天主教傳統</div>
         <div class="flex items-center gap-1.5"><span class="inline-block w-3 h-3 border border-emerald-300 bg-emerald-50 rounded" />東方教會傳統</div>
@@ -1813,6 +1816,33 @@ const cv = computed(() => {
             :                                   '#6b7280'
           const kidActualY = isSpKid ? rowY(rowOf.get(kid)!) : childY
           drops.push({ x: kxVal, y1: barY, y2: kidActualY, stroke: lineStroke })
+        }
+      }
+
+      // ── 利未拉特婚（寡媳）虛線橋 ──────────────────────────────────
+      // 模式：spine 妻的其他丈夫同時是 sid 的兒子（她瑪 ⚭ 珥/俄南 皆早逝，
+      // 後由公公猶大生法勒斯/謝拉 — 創 38）。前夫低一代進不了婚姻列（他們
+      // 在下方以兒子卡渲染，generation 過濾也擋掉 Trinubium 延伸），故補
+      // 虛線紅橋：妻卡底 → 前夫卡頂側，讓利未拉特敘事在圖上可見。
+      // 通用規則不寫死人名；路得/拔示巴的前夫同代、走婚姻列排序，不經此路。
+      {
+        const sidKidSet = new Set(ch.get(sid) ?? [])
+        for (const wid of wifeIds) {
+          const widLX = wifeLX.get(wid)
+          if (widLX === undefined) continue
+          const formerHusbandSons = (sp.get(wid) ?? []).filter(h => sidKidSet.has(h) && kidX.has(h))
+          for (const f of formerHusbandSons) {
+            const wCx   = widLX + NW / 2
+            const fCx   = kidX.get(f)!
+            const fTopY = rowOf.has(f) ? rowY(rowOf.get(f)!) : childY
+            const elbowY = fTopY - 8  // 貼近兒子列，低於母系 T-bar 群（bar 最深 N/(N+1) 段）
+            const stubX  = fCx + (wCx >= fCx ? NW / 4 : -NW / 4)  // 錯開他自己的 parent drop
+            drops.push({ x: wCx, y1: rowY(row) + NH, y2: elbowY, stroke: '#dc2626', dashed: true })
+            if (Math.abs(wCx - stubX) > 1) {
+              hbars.push({ x1: Math.min(wCx, stubX), x2: Math.max(wCx, stubX), y: elbowY, stroke: '#dc2626', dashed: true })
+            }
+            drops.push({ x: stubX, y1: elbowY, y2: fTopY, stroke: '#dc2626', dashed: true })
+          }
         }
       }
     }
