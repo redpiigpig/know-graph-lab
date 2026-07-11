@@ -89,6 +89,12 @@ def _find_gemini_keys() -> list[str]:
             k = piece.strip()
             if k and k not in seen:
                 seen.add(k); keys.append(k)
+    slot = os.environ.get("KGL_GEMINI_SLOT", "").strip()
+    if slot:
+        idx = int(slot) - 1
+        if idx < 0 or idx >= len(keys):
+            raise RuntimeError(f"KGL_GEMINI_SLOT={slot} but only {len(keys)} Gemini keys found")
+        return [keys[idx]]
     return keys
 
 
@@ -117,6 +123,12 @@ def _find_nvidia_keys() -> list[str]:
             k = piece.strip()
             if k and k not in seen:
                 seen.add(k); keys.append(k)
+    slot = os.environ.get("KGL_NVIDIA_SLOT", "").strip()
+    if slot:
+        idx = int(slot) - 1
+        if idx < 0 or idx >= len(keys):
+            raise RuntimeError(f"KGL_NVIDIA_SLOT={slot} but only {len(keys)} NVIDIA keys found")
+        return [keys[idx]]
     return keys
 
 
@@ -132,6 +144,10 @@ _nv_key_idx = 0
 # (also structurally correct), NOT to a paragraph-collapsing NVIDIA model.
 NVIDIA_MODELS = ["deepseek-ai/deepseek-v4-flash"]
 NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
+
+# Local Ollama engine. Uses no external API key; set OLLAMA_MODEL to override.
+OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://127.0.0.1:11434/api/chat")
+OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5:7b")
 
 # 緩慢呼叫 + 4 帳號輪換 (user 2026-06-03): 4 NVIDIA keys from 4 separate accounts,
 # each with its own daily quota. Round-robin across them so no single account is
@@ -269,6 +285,27 @@ def haiku_translate(source: str) -> str:
     # surfaced as a hard failure that kills the doc.
     return _anthropic_translate(HAIKU_MODEL, "Haiku", source,
                                 backoffs=(0, 30, 90, 180, 300, 600, 600))
+
+
+def ollama_translate(source: str) -> str:
+    """Translate via the user's local Ollama server."""
+    body = {
+        "model": OLLAMA_MODEL,
+        "stream": False,
+        "messages": [
+            {"role": "user", "content": PROMPT_TMPL.format(source=source)},
+        ],
+        "options": {
+            "temperature": 0.2,
+            "num_ctx": 8192,
+        },
+    }
+    r = requests.post(OLLAMA_URL, json=body, timeout=600)
+    r.raise_for_status()
+    text = (r.json().get("message") or {}).get("content", "")
+    if not text.strip():
+        raise RuntimeError(f"Ollama returned empty response from {OLLAMA_MODEL}")
+    return text.strip()
 
 
 MAX_CHUNK_CHARS = 20_000  # split source if larger — Sonnet 16K output cap + safety
@@ -502,7 +539,12 @@ def gemini_translate(source: str, model: str = "gemini-2.5-flash") -> str:
                 try:
                     text = data["candidates"][0]["content"]["parts"][0]["text"]
                 except (KeyError, IndexError):
-                    raise RuntimeError(f"unexpected Gemini response: {json.dumps(data)[:300]}")
+                    # gemini-2.5 偶發：200/STOP 但 thinking 吃光輸出、candidate 無 parts
+                    # —— 當作暫時性失敗，同 429 重試/輪 key，全乾自然落入 fallback 鏈
+                    print(f"  Gemini empty-parts key#{_key_idx} attempt {attempt}", file=sys.stderr, flush=True)
+                    if attempt >= 3:
+                        break
+                    continue
                 return text.strip()
             if r.status_code in (429, 502, 503, 504):
                 print(f"  Gemini {r.status_code} key#{_key_idx} attempt {attempt}", file=sys.stderr, flush=True)
