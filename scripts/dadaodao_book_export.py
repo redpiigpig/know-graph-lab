@@ -108,7 +108,7 @@ def build():
         if i > 0:
             p.insert_paragraph_before().add_run().add_break(WD_BREAK.PAGE)
 
-    # 封面頁（插到文首）
+    # 封面頁＋目次頁（插到文首）
     cover = []
     for txt, size, bold, before in [
         ('當代的大愛道革命', 26, True, 220),
@@ -128,6 +128,28 @@ def build():
     pb = doc.add_paragraph()
     pb.add_run().add_break(WD_BREAK.PAGE)
     cover.append(pb)
+    # 目次（TOC 欄位；scripts/dadaodao_pages_sync.py 會用 Word 更新出頁碼）
+    p = doc.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    r = p.add_run('目　次')
+    r.font.name = 'Times New Roman'
+    r._element.get_or_add_rPr().get_or_add_rFonts().set(qn('w:eastAsia'), KAI)
+    r.font.size = Pt(18)
+    r.font.bold = True
+    cover.append(p)
+    p = doc.add_paragraph()
+    fld = OxmlElement('w:fldSimple')
+    fld.set(qn('w:instr'), r'TOC \o "1-2" \h \z \u')
+    r_el = OxmlElement('w:r')
+    t_el = OxmlElement('w:t')
+    t_el.text = '（目次欄位：由頁數同步腳本或 Word F9 更新）'
+    r_el.append(t_el)
+    fld.append(r_el)
+    p._p.append(fld)
+    cover.append(p)
+    pb2 = doc.add_paragraph()
+    pb2.add_run().add_break(WD_BREAK.PAGE)
+    cover.append(pb2)
     body = doc.element.body
     for i, p in enumerate(cover):
         body.remove(p._element)
