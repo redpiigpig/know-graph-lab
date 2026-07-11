@@ -137,8 +137,8 @@ def build_volume(vol_title, out_name, filenames):
 
     # 封面
     for txt, size, bold, before in [
-        ('當代的大愛道革命', 22, True, 190),
-        ('口述訪談集', 22, True, 8),
+        ('人間佛教與印順學派', 22, True, 190),
+        ('訪談集', 22, True, 8),
         (vol_title, 16, False, 40),
         ('張辰瑋　訪問・整理', 13, False, 70),
     ]:
@@ -180,7 +180,7 @@ def build_volume(vol_title, out_name, filenames):
                 for r in p.runs:
                     r.font.color.rgb = RGBColor(0x66, 0x66, 0x66)
                 continue
-            if re.match(r'^[一二三四五六七八九十]+、', t):
+            if re.match(r'^[一二三四五六七八九十]+、', t) or t in ('結語', '前言'):
                 h = doc.add_heading(level=2)
                 h.paragraph_format.space_before = Pt(14)
                 add_text_with_notes(h, t, KAI, 13, bold=True)

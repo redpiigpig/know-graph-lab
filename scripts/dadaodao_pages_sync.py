@@ -140,12 +140,12 @@ def update_md_footnotes(pages, quote_pages):
         # 清掉舊的地點待核／附錄頁碼待核／先前回填的收入資訊（冪等）
         body2 = re.sub(r'【地點待核】。?', '', body)
         body2 = re.sub(r'。?全文見本書附錄【頁碼待核】。?', '', body2)
-        body2 = re.sub(r'。?收入《當代的大愛道革命‧口述訪談集》[^。]*', '', body2).rstrip('。， ')
+        body2 = re.sub(r'。?收入《(?:當代的大愛道革命‧口述訪談集|人間佛教與印順學派訪談集)》[^。]*', '', body2).rstrip('。， ')
         # 若原本沒有任何地點（逐字稿地點的 4 字視窗皆不在句中）才補
         overlap = place and any(place[i:i + 4] in body2 for i in range(max(1, len(place) - 3)))
         if place and not overlap:
             body2 += f'，{place}'
-        cite = f'。收入《當代的大愛道革命‧口述訪談集》第{info["vol_label"]}冊，頁{info["start"]}–{info["end"]}'
+        cite = f'。收入《人間佛教與印順學派訪談集》第{info["vol_label"]}冊，頁{info["start"]}–{info["end"]}'
         if fid in quote_pages:
             cite += f'，引文見頁{quote_pages[fid]}'
         n += 1
