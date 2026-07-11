@@ -45,7 +45,7 @@ description: 「歷史國界地圖」工具集（/maps/historical-borders）— 
 | B. Sphere fill polygon | `public/maps/historical-sphere-fills.geojson` | **10,350 features (42 MB)** | 文化圈著色（由 maps-world-religions 使用）— 跨 53 snapshots |
 | C. 國家骨架（含現代涵蓋） | `public/maps/state-skeleton.json` | **2,949 條 (348 KB)** | 從 historical-states.geojson 抽出 unique names |
 | D. Wikidata 主資料 | `public/maps/wikidata-states.json` | 4215 條 (~ 530 KB) | 中英文名、起始／結束年、所屬大陸、QID |
-| E. 人工撰寫詳細 | `data/maps/historical-states-db.ts` (`STATE_DETAILS`) | **277 條（5 輪 + 中國諸侯）** | 朝代、首都、宗教、人口、面積、簡介 |
+| E. 人工撰寫詳細 | `data/maps/historical-states-db.ts` (`STATE_DETAILS`) | **357 條（6 輪；2026-07-11 +80：薩法維/東羅馬/莫斯科沙皇國/察合台/克里米亞汗國/條頓騎士團/德干四蘇丹/高句麗/大和/匈奴/阿克蘇姆/迦納/加奈姆/馬雅諸條等）** | 朝代、首都、宗教、人口、面積、簡介 |
 | E2. 朝代時間段標籤 | `data/maps/dynasty-labels.ts` (`DYNASTY_LABELS`) | **91 polygon × ~10 段**（2026-07-08 實測） | 跨朝代 polygon 按年代切時期；dynastyLabelAt() 同名簡化 + 空 dynasty_zh 處理 |
 | E3. polygon 年範圍修正 | `public/maps/polygon-year-overrides.json` | **69 條**（2026-07-08 實測） | 收窄源資料錯誤年代（Sui 619、Tang 907、Yuan 1271-1368、Sinic 限商朝期、Wu 春秋吳國 -900~-473、Achaemenid -550~-330、Sasanian 224~651、Maurya -322~-185、Aztec 1428~1521、Inca 1438~1533、HRE 962~1806 等）|
 | E4. 細粒度 polygon（city-hull） | `public/maps/fine-polygons.geojson` | **230 polygons / 49 帝國**（2026-07-08 實測；歐洲區改走 OHM 後部分 fine 已裁） | 原分布（裁前）：中東 18（阿巴斯／伍麥亞／蒙古）+ 中國 135 + 地中海 33（羅馬到 395／拜占庭／鄂圖曼）+ 古波斯 30 + 古印度 35 + 神羅 13 + 美洲 13 |
@@ -495,7 +495,7 @@ TimeAxis 右上「▶ 播放」按鈕，速度可選「慢／普通／快」（2
 
 5 月 20 日大擴充：manual 77→**219 polygons / 13→52 帝國**，覆蓋這 4 區共 40 個帝國。詳見 E7 行。下個 session 不需再做這項。
 
-### A. STATE_DETAILS 繼續擴充（271 → 目標 350+）
+### A. STATE_DETAILS 繼續擴充（✅ 2026-07-11 已達 357；下一目標 420+）
 
 剩餘高頻 polygon（未填 details）— 注意這是 STATE_DETAILS（人工撰寫朝代詳細）擴充，不是 polygon 形狀：
 - 南印度殘餘土邦：Madurai／Pudukkottai／Banganapalle／Cooch Behar／Tripura／Sirohi／Jhalawar／Ramnad／Tanjore；法屬 Mahe／Karikal／Yanam

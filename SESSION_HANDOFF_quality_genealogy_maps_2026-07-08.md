@@ -26,11 +26,17 @@
 3. **傳統視角圖層資料補密**：早期教會/天主教/東方教會/拉比四視角的稀疏人物補注（走 Gemini→NVIDIA→Haiku，來源標註）。
 
 ## 任務 C：地圖邊界精度
+> ✅ **2026-07-11 查證：本任務當初的候選名單（薩珊/笈多/阿拔斯/塞爾柱/印加/馬利/桑海/高棉/滿者伯夷…）其實早在 2026-05-18/20 兩輪已全覆蓋**（fine 279 + manual 219 + OHM 781 + CHGIS 94），handoff 撰寫時漏查。真正剩的邊界工作見 maps-historical-borders SKILL.md「待補 C/D」（立陶宛大公國、凹邊 alpha-shape、DARMC 整合等長期項）。
+
+## （原任務 C 文字保留備查）
 檔案：`public/maps/fine-polygons.geojson`（現 230 polygons/49 帝國）、`public/maps/polygon-year-overrides.json`
 1. 擴充 fine polygons 帝國名單：優先補「地圖上最常被看、原始邊界最離譜」者——candidate：薩珊波斯、笈多、阿拔斯、法蒂瑪、塞爾柱、馬其頓繼業者諸國、印加/阿茲特克細化、東南亞（吳哥/滿者伯夷）、非洲（馬利/桑海/阿克蘇姆）。做法照 maps-historical-borders SKILL.md 的 city-hull 法，每帝國 3–8 個 polygon。
 2. polygon-year-overrides 再掃一輪：源資料年代過寬的政權收窄（現 69 條）。
 
 ## 任務 D：地圖政權資料品質
+> ✅ **2026-07-11 完成**：①分類器稽核零誤判（僅 3 筆全是 v2 標準刻意排除）；②可見政權中文覆蓋率 100%（補 11 條手譯，其餘缺譯全是被過濾的部落名）；③STATE_DETAILS 277→357（+80：薩法維/東羅馬/莫斯科沙皇國/察合台/德干四蘇丹/高句麗/大和/匈奴/阿克蘇姆/馬雅諸條等，realm/sphere 全合法、前身後繼對齊實存 polygon）。
+
+## （原任務 D 文字保留備查）
 1. **分類器補強**：`public/maps/polygon-classifications.json` + KNOWN_STATES/KNOWN_NON_STATES 規則——掃「被判 is_state 但實為部落/文化群」與反向漏網，批次修。
 2. **中文譯名缺口**：`polygon-names-zh.json` 對 6,853 政權掃缺，Gemini batch 補（譯名遵 /translation-glossary：王朝-民族帝國格式，見記憶 feedback_dynasty_empire_naming）。
 3. **STATE_DETAILS 充實**：高曝光政權（大帝國/中國朝代/聖經相關）優先補詳情彈窗內容。
