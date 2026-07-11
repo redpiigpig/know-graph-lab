@@ -33,7 +33,7 @@
               <NuxtLink v-if="editingSlug !== p.slug" :to="`/works/${p.slug}`"
                 class="project-card no-underline block"
                 :class="`border-${p.color}-100 hover:border-${p.color}-300 hover:shadow-${p.color}-100`">
-                <div class="flex items-start gap-4">
+                <div class="flex items-start gap-4 w-full min-w-0">
                   <div class="project-icon flex-shrink-0" :class="`bg-${p.color}-50 text-${p.color}-600`">{{ p.emoji }}</div>
                   <div class="flex-1 min-w-0">
                     <h3 class="project-title">{{ p.title }}</h3>
@@ -262,7 +262,8 @@ async function move(groupItems: Project[], idx: number, delta: number) {
 
 <style scoped>
 .project-card {
-  @apply flex items-start gap-4 p-6 rounded-2xl bg-white border-2 transition-all duration-200 hover:shadow-lg cursor-pointer;
+  /* overflow-hidden：內層 truncate/nowrap 內容不得衝出卡片邊框 */
+  @apply flex items-start gap-4 p-6 rounded-2xl bg-white border-2 transition-all duration-200 hover:shadow-lg cursor-pointer overflow-hidden;
 }
 .project-icon {
   @apply w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0;
