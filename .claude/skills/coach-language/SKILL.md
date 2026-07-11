@@ -17,6 +17,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 
 ## 📌 近期大改 progress
 
+- **2026-07-12 · 📦 FSI 離線練習包 `/coach/[lang]/offline`**（教練角色轉換：對話/寫作批改改走「匯出→外部練→回傳」，輕量練習留站上）：使用者因線上 API 不穩，決策把重 AI 的即時對話、寫作批改搬到 NotebookLM/Gemini 做。三步工作流：**① 下載 Word 練習包**（`offline/export.get.ts?kind=pack|progress`，`docx` 套件、零 AI 純讀 DB；pack＝學習者檔案(程度/ILR 對照/弱項 highlights)＋到期複習字 40＋建議新字 15(pick_vocab_bank，不標已擁有)＋今日主題輪替＋**FSI 教官指令**＋成果報告模板；progress＝30 天技能時間/等級史/記憶/近 14 日誌）→ **② 上傳 NotebookLM/Gemini 照教官指令練** → **③ 貼回成果報告**（`offline/import.post.ts`，**零 AI 確定性解析** `utils/offlineReport.ts` 的 `parseOfflineReport()`，寫 lang_activity(source=offline，報告日限近30天)/lang_progress(streak 僅當日 bump)/lang_sessions(mode=offline)/lang_messages(corrections 掛回、日誌 generate 撿得到)/lang_vocab(新字 upsert + 複習結果套 FSRS 對=4/錯=2)）。**FSI 設計要點**：採 FSI 聽說教學法 drill 循環（基礎對話 backward build-up 背誦→替換→轉換→擴展→應答→**文法短講放 drill 後**(先練後講)→引導會話→寫作應用；精熟優先於進度）＋ ILR 量表對照（CEFR/JLPT/古語量表→ILR 映射）；🚨 **不用美國中心的 FSI Category I–IV 時數表**（那是英語母語者基準）——改 `ZH_L1_NOTES` 華語母語者視角難度註記（日文＝漢字紅利非最難、歐語＝冠詞/格變化/變位為華語所無要多 drill、古典語＝閱讀目標 R 量表），教官指令明寫學生母語臺灣華語、要求華語↔目標語對比教學；voiceless 古典語自動改「朗讀＋筆譯＋詞形判析」變體。報告模板與解析器同檔（`utils/offlineReport.ts` 前後端共用，改格式兩邊永遠同步），容忍全半形/中英技能名/2–4欄單字行/→或=>；測試 `test/coach/offline-report.spec.ts`（9）。首頁綠色橫幅＋學習區磚。FSI 教材本身全公有領域（Yojik/Live Lingua 可抓），GitHub 無現成 FSI app 輪子。
 - **2026-07-01 · ⛪ 教會拉丁課程複習頁 `/coach/la/course`**（零 AI）：使用者實際在上的「教會拉丁文（一）· 羅梅洛班」課程，每週講義逐課複習。策展 `server/data/latinCourse.ts`（`LESSONS` 每課含母音/雙母音/子音拼讀規則/禮儀單字）＋端點 `course`＋五分頁（母音子音・單字・認讀・聽寫・發音跟讀）。加新課＝加一筆 `CourseLesson`。母音子音分頁：**字母本身與每個例字都是獨立朗讀鈕**（`CoursePhone.say` = 餵 it-IT TTS 的載體音節，如 c 軟音→"ce"、gn→"gna"，避免 TTS 唸成義大利字母名；缺省退第一個例字）；本頁朗讀預設 **0.75x**（🐢 慢速 0.6 不變）。詳見「四」與 [[project_church_latin_course]]。
 
 ### 2026-06-20～22（全 push master）
@@ -104,6 +105,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 - `/coach/[lang]/practice` = 技能練習 / 考試模擬 / 翻譯遊戲
 - `/coach/[lang]/review` = 單字 SRS（翻卡 / 選擇題 / 克漏字，FSRS）；另有 `/reader` 點讀、`/shadowing` 跟讀、`/writing` 寫作批改
 - `/coach/[lang]/immersion` = YouTube/文章沉浸
+- `/coach/[lang]/offline` = **📦 FSI 離線練習**（下載 Word 練習包 → NotebookLM/Gemini 練 → 貼回成果報告入庫；見「近期大改 2026-07-12」）
 - `/coach/[lang]/dashboard` = 該語言儀表板 + Gemini 用量/成本
 
 ## 二、聊天五模式（chat.post.ts 依 mode 套 prompt；人格自動輪替）
@@ -211,7 +213,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 
 ## 八、端點（`server/api/lang/*` + `server/api/devices/*`）
 
-chat / profile(get,put) / progress(get,put) / activity / dashboard / usage / assess / briefing / memory(get,regenerate) / journal(get, generate) / sessions / messages / coaches / vocab(index,generate,**categories**,review get/post,[id] patch/delete) / homework / task(generate, [id]/answer) / smalltalk(start, feedback) / content(ingest, watch, index, watch-stats) / grammar(index, lesson, done, **map, lookup**) / **alphabet** / **parse** / **compose** / daily(get, item, done) / devices(check, index, [id] patch) / **words(define, status get/post)** / **pronunciation** / **sentences(index, more)** / **writing(correct)** / **grammar-check**（LanguageTool 規則式，零 AI）。
+chat / profile(get,put) / progress(get,put) / activity / dashboard / usage / assess / briefing / memory(get,regenerate) / journal(get, generate) / sessions / messages / coaches / vocab(index,generate,**categories**,review get/post,[id] patch/delete) / homework / task(generate, [id]/answer) / smalltalk(start, feedback) / content(ingest, watch, index, watch-stats) / grammar(index, lesson, done, **map, lookup**) / **alphabet** / **parse** / **compose** / daily(get, item, done) / devices(check, index, [id] patch) / **words(define, status get/post)** / **pronunciation** / **sentences(index, more)** / **writing(correct)** / **grammar-check**（LanguageTool 規則式，零 AI）/ **offline(export GET docx 匯出, import POST 成果報告回傳；皆零 AI)**。
 
 ## 九、加語言 / 擴充
 

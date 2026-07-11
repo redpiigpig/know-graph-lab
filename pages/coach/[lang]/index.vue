@@ -61,6 +61,17 @@
         </div>
       </NuxtLink>
 
+      <!-- FSI 離線練習（API 不穩的替代模式：下載練習包 → NotebookLM/Gemini 練 → 貼回成果）-->
+      <NuxtLink :to="`/coach/${lang}/offline`" class="block bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-4 text-white hover:shadow-lg transition">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="text-sm font-bold">📦 FSI 離線練習</div>
+            <div class="text-[11px] text-white/80 mt-0.5">下載 Word 練習包 → 到 NotebookLM / Gemini 照 FSI 教官指令練 → 貼回成果自動入庫（對話、寫作批改建議走這裡）</div>
+          </div>
+          <span class="text-xl">→</span>
+        </div>
+      </NuxtLink>
+
       <!-- 功能磚 -->
       <!-- 聊天區 -->
       <div>
@@ -96,7 +107,8 @@
         <div class="text-xs font-semibold text-gray-400 mb-1.5">練習與工具</div>
         <div class="grid grid-cols-3 sm:grid-cols-6 gap-3">
           <NuxtLink v-if="lang === 'la'" :to="`/coach/${lang}/course`" class="tile">⛪<span>課程複習</span></NuxtLink>
-          <NuxtLink v-if="lang !== 'en'" :to="`/coach/${lang}/alphabet`" class="tile">🔤<span>字母教學/測驗</span></NuxtLink>
+          <NuxtLink v-if="lang === 'hbo'" :to="`/coach/${lang}/hebrew-alphabet`" class="tile">✡️<span>希伯來字母課</span></NuxtLink>
+          <NuxtLink v-else-if="lang !== 'en'" :to="`/coach/${lang}/alphabet`" class="tile">🔤<span>字母教學/測驗</span></NuxtLink>
           <NuxtLink v-if="['grc', 'hbo'].includes(lang)" :to="`/coach/${lang}/parse`" class="tile">🧩<span>詞形判析</span></NuxtLink>
           <NuxtLink v-if="['en', 'grc', 'hbo', 'de', 'fr', 'la'].includes(lang)" :to="`/coach/${lang}/compose`" class="tile">🔀<span>句子重組</span></NuxtLink>
           <NuxtLink :to="`/coach/${lang}/courses`" class="tile">🎓<span>主題教程</span></NuxtLink>
@@ -110,6 +122,7 @@
           <NuxtLink :to="`/coach/${lang}/reader`" class="tile">📖<span>點讀閱讀器</span></NuxtLink>
           <NuxtLink :to="`/coach/${lang}/shadowing`" class="tile">🗣️<span>發音跟讀</span></NuxtLink>
           <NuxtLink :to="`/coach/${lang}/writing`" class="tile">✍️<span>寫作批改</span></NuxtLink>
+          <NuxtLink :to="`/coach/${lang}/offline`" class="tile">📦<span>離線練習包</span></NuxtLink>
           <NuxtLink :to="`/coach/${lang}/dashboard`" class="tile">📊<span>儀表板</span></NuxtLink>
         </div>
       </div>
