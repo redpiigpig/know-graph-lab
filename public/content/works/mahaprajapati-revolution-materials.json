@@ -4,6 +4,11 @@
   "source": "G:\\我的雲端硬碟\\公事\\國北教\\碩士論文\\論文資料",
   "note": "研究資料依論文徵引資料的文獻類別整理：印順／昭慧／性廣三師維持作者分類，其餘按文獻類別（期刊／研討會／學位論文／雜誌會訊／法規檔案…）與主題分類。與本書主題無關、論文未徵引的基督教界白色恐怖檔案另歸「基督教與白色恐怖」類（旁及史料，可遷衛理公會研究資料）。原檔可線上下載。",
   "interviews": true,
+  "interviewVolumes": [
+    { "label": "第一冊　弘誓學院與玄奘大學", "docx": "/content/works/mahaprajapati-interviews-vol1.docx" },
+    { "label": "第二冊　印順學派的學者與僧人", "docx": "/content/works/mahaprajapati-interviews-vol2.docx" },
+    { "label": "第三冊　社會運動與宗教對話", "docx": "/content/works/mahaprajapati-interviews-vol3.docx" }
+  ],
   "bookDraft": {
     "md": "/content/works/mahaprajapati-revolution-book.md",
     "docx": "/content/works/mahaprajapati-revolution-book.docx",

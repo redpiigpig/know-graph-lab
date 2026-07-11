@@ -55,11 +55,14 @@ function formatInterview(text: string): string {
   let isFirst = true
 
   for (const line of lines) {
-    const t = line.trim()
+    let t = line.trim()
     if (!t) {
       out.push('<div class="i-gap"></div>')
       continue
     }
+
+    // 註釋標記 [n](#footnoteN)：定義在論文附錄，網頁渲染成統一上標（nonchurch 格式外觀）
+    t = t.replace(/\[(\d+)\]\(#footnote\d+\)/g, '<sup class="footnote-ref" title="註 $1（全註見碩士論文附錄）">$1</sup>')
 
     // First non-empty line → interview title
     if (isFirst) {
@@ -130,6 +133,9 @@ onMounted(async () => {
 </script>
 
 <style scoped>
+/* 註釋上標（nonchurch 格式外觀） */
+:deep(sup.footnote-ref) { font-size: 0.68em; vertical-align: super; color: #2563eb; }
+
 .interview-page {
   font-family: 'Georgia', 'Noto Serif TC', serif;
   color: #1a1a1a;

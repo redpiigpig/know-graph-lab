@@ -293,6 +293,10 @@
 
           <!-- ── 口述訪談 ── -->
           <div v-show="bookTab === 'interviews'">
+            <div v-if="materials?.interviewVolumes?.length" class="mb-4 flex items-center gap-2 flex-wrap">
+              <a v-for="v in materials.interviewVolumes" :key="v.docx" :href="v.docx" download
+                class="text-xs font-medium px-3 py-1.5 rounded-lg border border-rose-300 text-rose-700 hover:bg-rose-50 no-underline">⬇ {{ v.label }}</a>
+            </div>
             <div class="mb-5 flex items-center justify-between flex-wrap gap-3">
               <div>
                 <h2 class="text-base font-semibold text-gray-900">口述訪談紀錄</h2>
@@ -688,7 +692,8 @@ interface MaterialCategory { key: string; label: string; icon?: string; desc?: s
 interface ThesisChapter { id: string; title: string }
 interface ThesisConf { title?: string; note?: string; pdfKey?: string; contentBase?: string; chapters: ThesisChapter[] }
 interface BookDraftConf { md: string; docx?: string; note?: string }
-interface Materials { book?: string; subtitle?: string; source?: string; note?: string; interviews?: boolean; thesis?: ThesisConf; bookDraft?: BookDraftConf; totalFiles?: number; totalBytes?: number; categories: MaterialCategory[] }
+interface InterviewVolume { label: string; docx: string }
+interface Materials { book?: string; subtitle?: string; source?: string; note?: string; interviews?: boolean; interviewVolumes?: InterviewVolume[]; thesis?: ThesisConf; bookDraft?: BookDraftConf; totalFiles?: number; totalBytes?: number; categories: MaterialCategory[] }
 
 const materials = ref<Materials | null>(null)
 const materialsAvailable = ref(false)
@@ -848,17 +853,26 @@ async function loadBookDraft() {
 }
 watch(bookTab, (t) => { if (t === 'draft' && !bookDraftHtml.value && !bookDraftLoading.value) loadBookDraft() })
 
-// 專書 md 渲染：標題／粗體／標楷體引文／[^n] 尾註上標與章末尾註錨點互跳
+// 專書 md 渲染：標題／粗體／標楷體引文／[^n] 註釋——nonchurch 格式雙向互點
+// （正文上標→註釋；註釋尾「↩」→跳回原文）
 function renderBookMd(md: string): string {
   const inline = (s: string) => inlineMd(s)
-    .replace(/\[\^([^\]]+)\]/g, '<sup class="bk-fn" id="bkref-$1"><a href="#bkfn-$1">$1</a></sup>')
+    .replace(/\[\^([^\]]+)\]/g, '<sup class="footnote-ref"><a href="#footnote-$1" id="footnote-ref-$1">$1</a></sup>')
   const lines = md.replace(/\r\n/g, '\n').split('\n')
   const out: string[] = []
+  let fnOpen = false
+  const closeFn = () => { if (fnOpen) { out.push('</div>'); fnOpen = false } }
   for (let i = 0; i < lines.length; i++) {
     const t = lines[i].trim()
-    if (!t || /^-{3,}$/.test(t)) { if (/^-{3,}$/.test(t)) out.push('<hr>'); continue }
+    if (!t) continue
     const def = t.match(/^\[\^([^\]]+)\]:\s*(.*)$/)
-    if (def) { out.push(`<p class="bk-note" id="bkfn-${def[1]}"><a class="bk-noteid" href="#bkref-${def[1]}">${def[1]}.</a> ${inlineMd(def[2])}</p>`); continue }
+    if (def) {
+      if (!fnOpen) { out.push('<div class="footnotes">'); fnOpen = true }
+      out.push(`<div class="fn-item" id="footnote-${def[1]}"><span class="fn-num">${def[1]}</span><div class="fn-body">${inlineMd(def[2])}<a href="#footnote-ref-${def[1]}" class="footnote-backref">↩</a></div></div>`)
+      continue
+    }
+    closeFn()
+    if (/^-{3,}$/.test(t)) { out.push('<hr>'); continue }
     const h = t.match(/^(#{1,6})\s+(.*)$/)
     if (h) { const lvl = Math.min(h[1].length + 1, 6); out.push(`<h${lvl}>${inline(h[2])}</h${lvl}>`); continue }
     if (t.startsWith('>')) {
@@ -868,6 +882,7 @@ function renderBookMd(md: string): string {
     }
     out.push(`<p>${inline(t)}</p>`)
   }
+  closeFn()
   return out.join('\n')
 }
 
@@ -1017,9 +1032,15 @@ function renderMarkdown(md: string): string {
   return out.join('\n')
 }
 
-// ── 論文原文（.txt）內嵌渲染：沿用 /papers reader 的段落判讀（標題/小節/引用/腳註上標）──
+// ── 論文原文（.txt）內嵌渲染：段落判讀＋註釋雙向互點（nonchurch 格式）──
+// 正文 [n] → 上標連到注釋條目；注釋條目行首 [n] → 錨點＋「↩」跳回原文。
 function renderPaperText(txt: string): string {
-  const sup = (s: string) => esc(s).replace(/\[(\d+)\]/g, '<sup>[$1]</sup>')
+  const seen = new Set<string>()
+  const sup = (s: string) => esc(s).replace(/\[(\d+)\]/g, (_, n) => {
+    const idAttr = seen.has(n) ? '' : ` id="pfn-ref-${n}"`
+    seen.add(n)
+    return `<sup class="footnote-ref"><a href="#pfn-${n}"${idAttr}>${n}</a></sup>`
+  })
   const out: string[] = []
   let inRef = false
   for (const raw of txt.replace(/\r\n/g, '\n').split('\n')) {
@@ -1031,7 +1052,11 @@ function renderPaperText(txt: string): string {
     if (t === '摘要' || t === 'Abstract') { out.push(`<h3>${esc(t)}</h3>`); continue }
     if (/^關鍵字[：:]/.test(t) || /^Keywords[：:]/.test(t)) { out.push(`<p class="kw">${esc(t)}</p>`); continue }
     if (/^　　　/.test(raw)) { out.push(`<blockquote>${sup(t)}</blockquote>`); continue }
-    if (inRef) { out.push(`<p class="ref">${sup(t)}</p>`); continue }
+    if (inRef) {
+      const d = t.match(/^\[(\d+)\]\s*(.*)$/)
+      if (d) { out.push(`<div class="fn-item" id="pfn-${d[1]}"><span class="fn-num">${d[1]}</span><div class="fn-body">${esc(d[2])}<a href="#pfn-ref-${d[1]}" class="footnote-backref">↩</a></div></div>`); continue }
+      out.push(`<p class="ref">${sup(t)}</p>`); continue
+    }
     out.push(`<p>${sup(t.replace(/^　+/, ''))}</p>`)
   }
   return out.join('\n')
@@ -1151,11 +1176,24 @@ function onNotesUpdate(html: string) {
   border-left: 3px solid #fda4af; color: #374151;
   font-size: 0.95rem; line-height: 2;
 }
-.book-prose :deep(sup.bk-fn) { font-size: 0.62em; vertical-align: super; }
-.book-prose :deep(sup.bk-fn a) { color: #be123c; text-decoration: none; }
-.book-prose :deep(p.bk-note) { text-indent: 0; padding-left: 2.2em; font-size: 0.78rem; color: #64748b; line-height: 1.8; margin-bottom: 0.25rem; }
-.book-prose :deep(p.bk-note .bk-noteid) { margin-left: -2.2em; margin-right: 0.5em; color: #be123c; font-weight: 600; text-decoration: none; }
 .book-prose :deep(hr) { border: none; border-top: 1px solid #f3f4f6; margin: 2.2em 0; }
+
+/* ── 註釋（nonchurch 格式：上標↔註釋雙向互點）── 專書／論文原文共用 */
+.book-prose :deep(sup.footnote-ref),
+.doc-prose :deep(sup.footnote-ref) { font-size: 0.68em; vertical-align: super; }
+.book-prose :deep(sup.footnote-ref a),
+.doc-prose :deep(sup.footnote-ref a) { color: #2563eb; text-decoration: none; }
+.book-prose :deep(.footnotes) { margin: 1.5em 0 0.5em; border-top: 2px solid #e5e7eb; padding-top: 0.9em; }
+.book-prose :deep(.fn-item),
+.doc-prose :deep(.fn-item) { display: flex; align-items: baseline; line-height: 1.8; font-size: 0.78rem; color: #555; margin-bottom: 0.3rem; }
+.book-prose :deep(.fn-num),
+.doc-prose :deep(.fn-num) { flex-shrink: 0; width: 2.2em; text-align: right; margin-right: 0.7em; color: #2563eb; font-weight: 600; }
+.book-prose :deep(.fn-body),
+.doc-prose :deep(.fn-body) { flex: 1; text-align: justify; word-break: break-word; }
+.book-prose :deep(.footnote-backref),
+.doc-prose :deep(.footnote-backref) { text-decoration: none; color: #2563eb; margin-left: 5px; }
+.book-prose :deep(:target),
+.doc-prose :deep(:target) { background: #fef3c7; transition: background 0.6s; border-radius: 4px; }
 
 .paper-prose :deep(h3) { text-align: center; margin-top: 2em; }
 .paper-prose :deep(p) { text-indent: 2em; line-height: 1.95; }

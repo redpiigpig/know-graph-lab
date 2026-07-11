@@ -1,21 +1,43 @@
 # -*- coding: utf-8 -*-
-"""《當代的大愛道革命》全書初稿 → 網頁版 md + Word（docx）。
+"""《當代的大愛道革命》全書初稿 → 網頁版 md + Word（docx，真頁尾註）。
 
 來源：repo 根目錄《當代的大愛道革命_全書初稿.md》
-輸出：public/content/works/mahaprajapati-revolution-book.md（網頁渲染用，去工作筆記）
+輸出：public/content/works/mahaprajapati-revolution-book.md（網頁渲染用，去工作筆記，保留章末尾註清單）
       public/content/works/mahaprajapati-revolution-book.docx（下載用）
 
-Word 體例：章起新頁；訪談引文（blockquote）標楷體縮排；尾註標記上標；
-章末尾註列表小字懸掛縮排。python-docx 不支援真腳註，故依本書體例採「章末尾註」。
+Word 流程：md（去工作筆記、去「尾註（第X章）」標題）→ pandoc（[^n] 轉真正的
+Word 頁尾註，自動連續編號）→ python-docx 後處理：封面頁、章起新頁、
+標題／引文標楷體、正文新細明體與首行縮排、註腳小字。
 """
 import re
 import sys
 from pathlib import Path
 
+import pypandoc
 from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_BREAK
+from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
-from docx.shared import Cm, Pt, RGBColor
+from docx.shared import Cm, Pt
+
+
+def add_page_numbers(doc):
+    """頁尾置中頁碼（PAGE 欄位），方便確認頁數。"""
+    for sec in doc.sections:
+        p = sec.footer.paragraphs[0]
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        run = p.add_run()
+        for tag, attrs, text in [
+            ('w:fldChar', {'w:fldCharType': 'begin'}, None),
+            ('w:instrText', {'xml:space': 'preserve'}, ' PAGE '),
+            ('w:fldChar', {'w:fldCharType': 'end'}, None),
+        ]:
+            e = OxmlElement(tag)
+            for k, v in attrs.items():
+                e.set(qn(k), v)
+            if text:
+                e.text = text
+            run._element.append(e)
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / '當代的大愛道革命_全書初稿.md'
@@ -25,35 +47,20 @@ OUT_DOCX = ROOT / 'public/content/works/mahaprajapati-revolution-book.docx'
 KAI = 'DFKai-SB'      # 標楷體
 MING = 'PMingLiU'     # 新細明體（正文）
 
-FN_RE = re.compile(r'\[\^([^\]]+)\]')
-BOLD_RE = re.compile(r'(\*\*[^*]+\*\*|\[\^[^\]]+\])')
 
-
-def set_font(run, name: str, size: float | None = None, bold: bool | None = None):
-    run.font.name = name
-    run._element.get_or_add_rPr().get_or_add_rFonts().set(qn('w:eastAsia'), name)
+def style_fonts(doc, name, east, ascii_font='Times New Roman', size=None, bold=None):
+    try:
+        st = doc.styles[name]
+    except KeyError:
+        return None
+    st.font.name = ascii_font
+    rf = st.element.get_or_add_rPr().get_or_add_rFonts()
+    rf.set(qn('w:eastAsia'), east)
     if size is not None:
-        run.font.size = Pt(size)
+        st.font.size = Pt(size)
     if bold is not None:
-        run.font.bold = bold
-
-
-def add_runs(par, text: str, font: str, size: float):
-    """處理 **粗體** 與 [^n] 尾註上標。"""
-    for tok in BOLD_RE.split(text):
-        if not tok:
-            continue
-        if tok.startswith('**') and tok.endswith('**'):
-            r = par.add_run(tok[2:-2])
-            set_font(r, font, size, bold=True)
-        elif tok.startswith('[^'):
-            r = par.add_run(tok[2:-1])
-            set_font(r, font, max(size - 3, 7))
-            r.font.superscript = True
-            r.font.color.rgb = RGBColor(0x8B, 0x1A, 0x2F)
-        else:
-            r = par.add_run(tok)
-            set_font(r, font, size)
+        st.font.bold = bold
+    return st
 
 
 def build():
@@ -61,14 +68,48 @@ def build():
     cut = md.find('## 【全書初稿工作筆記】')
     if cut >= 0:
         md = md[:cut].rstrip() + '\n'
-    OUT_MD.write_text(md, encoding='utf-8')
+    OUT_MD.write_text(md, encoding='utf-8')  # 網頁版：保留章末尾註清單
 
-    doc = Document()
-    sec = doc.sections[0]
-    sec.top_margin = sec.bottom_margin = Cm(2.5)
-    sec.left_margin = sec.right_margin = Cm(2.8)
+    # Word 版：尾註標題拿掉（pandoc 會把 [^n] 定義收成頁尾註，標題會變空節）
+    word_md = re.sub(r'(?m)^###\s*尾註（[^）]*）\s*\n', '', md)
+    pypandoc.convert_text(
+        word_md, 'docx', format='markdown+footnotes',
+        outputfile=str(OUT_DOCX),
+        extra_args=['--wrap=none'],
+    )
 
-    # 封面
+    doc = Document(str(OUT_DOCX))
+
+    # 樣式：正文明體、標題與引文標楷體、註腳小字
+    for n in ('Normal', 'Body Text', 'First Paragraph'):
+        style_fonts(doc, n, MING, size=11)
+    style_fonts(doc, 'Block Text', KAI, size=11)          # 引文＝標楷體
+    style_fonts(doc, 'Footnote Text', MING, size=9)       # 頁尾註小字
+    style_fonts(doc, 'Heading 1', KAI, size=18, bold=True)
+    style_fonts(doc, 'Heading 2', KAI, size=14, bold=True)
+    style_fonts(doc, 'Heading 3', KAI, size=12, bold=True)
+    style_fonts(doc, 'Title', KAI, size=26, bold=True)
+
+    # 段落版式：正文首行縮排、引文縮排；章（Heading 1）起新頁＋置中
+    for n in ('Body Text', 'First Paragraph'):
+        st = doc.styles[n] if n in [s.name for s in doc.styles] else None
+        if st is not None:
+            st.paragraph_format.first_line_indent = Cm(0.85)
+            st.paragraph_format.line_spacing = 1.7
+    try:
+        bq = doc.styles['Block Text']
+        bq.paragraph_format.left_indent = bq.paragraph_format.right_indent = Cm(1.0)
+        bq.paragraph_format.line_spacing = 1.6
+    except KeyError:
+        pass
+    h1s = [p for p in doc.paragraphs if p.style.name == 'Heading 1']
+    for i, p in enumerate(h1s):
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        if i > 0:
+            p.insert_paragraph_before().add_run().add_break(WD_BREAK.PAGE)
+
+    # 封面頁（插到文首）
+    cover = []
     for txt, size, bold, before in [
         ('當代的大愛道革命', 26, True, 220),
         ('昭慧法師與性廣法師的人間佛教思想與實踐', 14, False, 18),
@@ -78,69 +119,29 @@ def build():
         p = doc.add_paragraph()
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         p.paragraph_format.space_before = Pt(before)
-        set_font(p.add_run(txt), KAI, size, bold)
+        r = p.add_run(txt)
+        r.font.name = 'Times New Roman'
+        r._element.get_or_add_rPr().get_or_add_rFonts().set(qn('w:eastAsia'), KAI)
+        r.font.size = Pt(size)
+        r.font.bold = bold
+        cover.append(p)
+    pb = doc.add_paragraph()
+    pb.add_run().add_break(WD_BREAK.PAGE)
+    cover.append(pb)
+    body = doc.element.body
+    for i, p in enumerate(cover):
+        body.remove(p._element)
+        body.insert(i, p._element)
 
-    first_heading = True
-    for raw in md.replace('\r\n', '\n').split('\n'):
-        t = raw.strip()
-        if not t or re.fullmatch(r'-{3,}', t):
-            continue
-        m = re.match(r'^(#{1,6})\s+(.*)$', t)
-        if m:
-            lvl, text = len(m.group(1)), m.group(2)
-            if lvl == 1:  # 章：起新頁
-                if not first_heading:
-                    doc.add_page_break()
-                else:
-                    doc.add_page_break()
-                    first_heading = False
-                p = doc.add_paragraph()
-                p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-                p.paragraph_format.space_before = Pt(36)
-                p.paragraph_format.space_after = Pt(24)
-                add_runs(p, text, KAI, 18)
-                for r in p.runs:
-                    r.font.bold = True
-            else:
-                p = doc.add_paragraph()
-                p.paragraph_format.space_before = Pt(16)
-                p.paragraph_format.space_after = Pt(8)
-                add_runs(p, text, KAI, 14 if lvl == 2 else 12)
-                for r in p.runs:
-                    r.font.bold = True
-            continue
-        m = re.match(r'^\[\^([^\]]+)\]:\s*(.*)$', t)
-        if m:  # 尾註條目：小字、懸掛縮排
-            p = doc.add_paragraph()
-            pf = p.paragraph_format
-            pf.left_indent = Cm(1.2)
-            pf.first_line_indent = Cm(-0.8)
-            pf.space_after = Pt(2)
-            pf.line_spacing = 1.15
-            r = p.add_run(f'{m.group(1)}. ')
-            set_font(r, MING, 9, bold=True)
-            add_runs(p, m.group(2), MING, 9)
-            continue
-        if t.startswith('>'):  # 引文：標楷體、縮排
-            p = doc.add_paragraph()
-            pf = p.paragraph_format
-            pf.left_indent = pf.right_indent = Cm(1.0)
-            pf.space_before = Pt(6)
-            pf.space_after = Pt(6)
-            pf.line_spacing = 1.6
-            add_runs(p, re.sub(r'^>\s?', '', t), KAI, 11)
-            continue
-        # 一般段落
-        p = doc.add_paragraph()
-        pf = p.paragraph_format
-        pf.first_line_indent = Cm(0.85)
-        pf.line_spacing = 1.7
-        pf.space_after = Pt(4)
-        add_runs(p, t, MING, 11)
+    sec = doc.sections[0]
+    sec.top_margin = sec.bottom_margin = Cm(2.5)
+    sec.left_margin = sec.right_margin = Cm(2.8)
+    add_page_numbers(doc)
+    doc.save(str(OUT_DOCX))
 
-    doc.save(OUT_DOCX)
+    n_fn = len(re.findall(r'(?m)^\[\^[^\]]+\]:', word_md))
     print(f'md   → {OUT_MD} ({OUT_MD.stat().st_size:,} bytes)')
-    print(f'docx → {OUT_DOCX} ({OUT_DOCX.stat().st_size:,} bytes)')
+    print(f'docx → {OUT_DOCX} ({OUT_DOCX.stat().st_size:,} bytes)，頁尾註 {n_fn} 條')
 
 
 if __name__ == '__main__':
