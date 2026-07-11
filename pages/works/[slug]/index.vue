@@ -815,6 +815,9 @@ function renderThesisText(txt: string): string {
 }
 
 // ── 研究回顧（文獻綜述）資料 ──────────────────────────────────────────
+// 專書初稿 manifest 設定：必須宣告在 bookTabs 之前（bookTabs 的 watch 會立即求值）
+const bookDraftConf = computed(() => materials.value?.bookDraft ?? null)
+
 // Declared BEFORE the book-tab section: bookTabs (and its watcher, which Vue
 // evaluates eagerly on setup) reads litEntries, so it must exist by then —
 // otherwise the minified build throws a TDZ error and setup() never renders.
@@ -840,7 +843,6 @@ watch(bookTabs, (tabs) => { if (!tabs.some((t) => t.key === bookTab.value)) book
 watch(bookTab, (t) => { if (t === 'thesis' && !thesisHtml.value && !thesisLoading.value) loadThesisChapter(activeThesisChapter.value) })
 
 // ── 專書初稿（報導文學改寫）：md 渲染（含尾註上標／標楷體引文） ──────────
-const bookDraftConf = computed(() => materials.value?.bookDraft ?? null)
 const bookDraftHtml = ref('')
 const bookDraftLoading = ref(false)
 async function loadBookDraft() {
