@@ -146,7 +146,8 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
-import { geoEqualEarth, geoPath, geoCentroid, geoArea, type GeoProjection } from 'd3-geo'
+import { geoEqualEarth, geoPath, geoArea, type GeoProjection } from 'd3-geo'
+import polylabel from 'polylabel'
 import { zoom as d3zoom, zoomIdentity, type ZoomBehavior } from 'd3-zoom'
 import { select } from 'd3-selection'
 import { formatYearShort } from '~/data/maps/historical-epochs'
@@ -357,11 +358,39 @@ interface StatePathItem extends PathItem {
   yearTo: number
 }
 interface LabelItem { id: string; x: number; y: number; text: string; fontSize: number }
+interface LabelCandidate extends LabelItem { areaPx: number }
 
 const landPaths = ref<PathItem[]>([])
 const statePaths = ref<StatePathItem[]>([])
 const coastPaths = ref<PathItem[]>([])
-const stateLabels = ref<LabelItem[]>([])
+// 標籤候選（依 polygon 螢幕面積 desc 排序）；實際顯示由 stateLabels computed 依縮放篩選
+const labelCandidates = ref<LabelCandidate[]>([])
+
+// 縮放量化（20% 一級）：避免每個 zoom frame 都重跑貪婪選擇
+const kQuant = computed(() =>
+  Math.pow(1.2, Math.round(Math.log(Math.max(transform.value.k, 0.4)) / Math.log(1.2)))
+)
+
+// 面積優先貪婪選擇：大國先佔位，撞到就略過（放大後門檻放寬、標籤自然浮現）。
+// 標籤永遠釘在 polylabel 錨點上，不做 push-apart 位移。
+const stateLabels = computed<LabelItem[]>(() => {
+  const k = kQuant.value
+  const placed: { x1: number; y1: number; x2: number; y2: number }[] = []
+  const out: LabelItem[] = []
+  for (const c of labelCandidates.value) {
+    const wScr = c.text.length * c.fontSize * 0.62 + 8   // 螢幕像素
+    const hScr = c.fontSize * 1.3 + 4
+    // 門檻：標籤盒螢幕面積最多為 polygon 螢幕面積的 4 倍（0.25 係數）——
+    // 稀疏時代（青銅 8 國）窄長政體照標，稠密時代靠貪婪碰撞自然限量
+    if (c.areaPx * k * k < wScr * hScr * 0.25) continue
+    const w = wScr / k, h = hScr / k                      // 換回地圖座標
+    const box = { x1: c.x - w / 2, y1: c.y - h / 2, x2: c.x + w / 2, y2: c.y + h / 2 }
+    if (placed.some(b => !(box.x2 < b.x1 || box.x1 > b.x2 || box.y2 < b.y1 || box.y1 > b.y2))) continue
+    placed.push(box)
+    out.push(c)
+  }
+  return out
+})
 
 const selectedState = ref<StatePathItem | null>(null)
 
@@ -442,14 +471,16 @@ function rebuildAll() {
     id: `coast-${i}`, d: path(f) || '',
   })).filter(p => p.d)
 
-  // Labels — 同名 polygon 去重，每組只在面積最大的 polygon 上印一個 label
+  // Labels — 同名 polygon 去重，每組只在面積最大的 polygon 上出一個「候選」；
+  // 錨點用 polylabel（最大內切圓心，凹形不出界），實際顯示交給 stateLabels computed
+  // 依縮放做面積門檻＋面積優先貪婪碰撞（詳見上方 computed）。
   // 跨朝代的 polygon（如 Egypt, Persia, England）改顯示「{朝代}（{國家}）」
   const byName = new Map<string, StateEntry[]>()
   for (const s of activeStates) {
     if (!byName.has(s.name)) byName.set(s.name, [])
     byName.get(s.name)!.push(s)
   }
-  const labels: LabelItem[] = []
+  const cands: LabelCandidate[] = []
   for (const [name, group] of byName) {
     // 找面積最大的 polygon 當 label 位置
     let best: StateEntry | null = null
@@ -461,56 +492,54 @@ function rebuildAll() {
       } catch {}
     }
     if (!best) continue
-    let c: [number, number]
-    try {
-      c = geoCentroid(best.feature)
-      if (isNaN(c[0]) || isNaN(c[1])) continue
-    } catch { continue }
-    const xy = projection(c)
-    if (!xy || isNaN(xy[0]) || isNaN(xy[1])) continue
+    const anchor = projectedAnchor(best.feature, projection)
+    if (!anchor) continue
+    let areaPx = 0
+    try { areaPx = Math.abs(path.area(best.feature)) } catch {}
+    if (!areaPx) continue
     const dynLbl = dynastyLabelAt(name, year)
-    labels.push({
+    cands.push({
       id: `lbl-${name}`,
-      x: xy[0], y: xy[1],
+      x: anchor[0], y: anchor[1],
       text: dynLbl || nameZhOf(name),
-      fontSize: 10,
+      fontSize: areaPx > 20000 ? 13 : areaPx > 5000 ? 11 : 10,
+      areaPx,
     })
   }
-  relaxLabelCollisions(labels)
-  stateLabels.value = labels
+  cands.sort((a, b) => b.areaPx - a.areaPx)
+  labelCandidates.value = cands
 }
 
-function relaxLabelCollisions(labels: LabelItem[]) {
-  if (labels.length < 2) return
-  const PADDING = 4
-  const ITER = 30
-  const widthOf = (l: LabelItem) => l.text.length * l.fontSize * 0.6
-  const heightOf = (l: LabelItem) => l.fontSize * 1.2
-  for (let iter = 0; iter < ITER; iter++) {
-    let moved = false
-    for (let i = 0; i < labels.length; i++) {
-      for (let j = i + 1; j < labels.length; j++) {
-        const a = labels[i], b = labels[j]
-        const dx = a.x - b.x
-        const dy = a.y - b.y
-        const minDx = (widthOf(a) + widthOf(b)) / 2 + PADDING
-        const minDy = (heightOf(a) + heightOf(b)) / 2 + PADDING
-        const overlapX = minDx - Math.abs(dx)
-        const overlapY = minDy - Math.abs(dy)
-        if (overlapX > 0 && overlapY > 0) {
-          if (overlapX < overlapY) {
-            const push = overlapX / 2 * (dx >= 0 ? 1 : -1)
-            a.x += push; b.x -= push
-          } else {
-            const push = overlapY / 2 * (dy >= 0 ? 1 : -1)
-            a.y += push; b.y -= push
-          }
-          moved = true
-        }
-      }
-    }
-    if (!moved) break
+// ===== 標籤錨點：最大投影外環跑 polylabel（pole of inaccessibility）=====
+function ringAreaAbs(ring: Array<[number, number]>): number {
+  let s = 0
+  for (let i = 0, n = ring.length, j = n - 1; i < n; j = i++) {
+    s += ring[j][0] * ring[i][1] - ring[i][0] * ring[j][1]
   }
+  return Math.abs(s / 2)
+}
+
+function projectedAnchor(feature: any, projection: GeoProjection): [number, number] | null {
+  const geom = feature?.geometry
+  if (!geom) return null
+  const polys: any[] = geom.type === 'Polygon' ? [geom.coordinates]
+    : geom.type === 'MultiPolygon' ? geom.coordinates : []
+  let bestRing: Array<[number, number]> | null = null
+  let bestA = -1
+  for (const poly of polys) {
+    const projected: Array<[number, number]> = []
+    for (const pt of poly[0] ?? []) {
+      const xy = projection(pt as [number, number])
+      if (xy && !isNaN(xy[0]) && !isNaN(xy[1])) projected.push([xy[0], xy[1]])
+    }
+    if (projected.length < 4) continue
+    const a = ringAreaAbs(projected)
+    if (a > bestA) { bestA = a; bestRing = projected }
+  }
+  if (!bestRing) return null
+  // 洞（inner rings）忽略：錨點落洞的機率極低，省投影成本
+  const p = polylabel([bestRing], 2)
+  return p && !isNaN(p[0]) && !isNaN(p[1]) ? [p[0], p[1]] : null
 }
 
 function onStateClick(p: StatePathItem, _ev: MouseEvent) {

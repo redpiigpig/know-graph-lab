@@ -589,3 +589,12 @@ maps-historical-borders 額外用：
 `8719571` 接 Wikidata SPARQL，370 → 4424
 `fe80628` 歷史國家資料庫 — 370 骨架 + 41 詳細 + 列表 UI
 `f0115a1` 新增「歷史國界地圖」工具 /maps/historical-borders
+
+## 🏷️ 標籤系統 v2（2026-07-11，Task E）
+
+舊制（全顯示＋push-apart 推開）已換成**縮放感知的面積優先選擇**（HistoricalBordersMap.vue）：
+- 錨點：最大投影外環跑 **polylabel**（最大內切圓心；新依賴 `polylabel@2`），取代 geoCentroid——凹形/窄長 polygon 標籤不再出界；標籤永遠釘在錨點，不做位移。
+- 顯示決策：`stateLabels` 是 computed——候選依 polygon 螢幕面積 desc 排序，貪婪佔位（撞到就略過），放大後空間變大標籤自然浮現；門檻＝標籤盒螢幕面積 ≤ polygon 螢幕面積 ×4（係數 0.25，稀疏時代如青銅 8 國照標，稠密時代靠碰撞自然限量）。
+- 縮放量化 `kQuant`（20% 一級）避免每個 zoom frame 重算；字級 tier 依面積 13/11/10，螢幕恆定大小（`fontSize / k`）。
+- 驗收數據：1501 BCE 世界視圖 6/8 標籤、1900 CE 64 標籤零重疊。視覺驗收腳本 `scripts/_map_labels_check.mjs`（本機，gitignored；登入 state 重用 `scripts/_pw_state.json`）。
+- ⚠️ dev server 服 40MB geojson 約 23s，探針別等 networkidle（正式站 CDN 無此問題）。
