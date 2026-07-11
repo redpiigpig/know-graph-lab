@@ -45,7 +45,7 @@ export default defineEventHandler(async (event) => {
   if (body.color !== undefined) updates.color = body.color.trim() || "amber";
   if (body.status !== undefined) updates.status = body.status?.trim() || null;
   if (body.content_json !== undefined) updates.content_json = body.content_json;
-  if (body.kind !== undefined) updates.kind = body.kind === "paper" ? "paper" : "book";
+  if (body.kind !== undefined) updates.kind = ["paper", "lecture"].includes(body.kind) ? body.kind : "book";
   if (body.paper_ref !== undefined) updates.paper_ref = body.paper_ref?.trim() || null;
 
   const supabase = getAdminClient();

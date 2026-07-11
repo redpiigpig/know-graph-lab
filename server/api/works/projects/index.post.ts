@@ -65,7 +65,7 @@ export default defineEventHandler(async (event) => {
       color: body.color?.trim() || "amber",
       status: body.status?.trim() || null,
       sort_order: nextOrder,
-      kind: body.kind === "paper" ? "paper" : "book",
+      kind: ["paper", "lecture"].includes(body.kind ?? "") ? body.kind : "book",
       paper_ref: body.paper_ref?.trim() || null,
     })
     .select("id, slug, title, subtitle, description, emoji, color, status, sort_order, kind, paper_ref")

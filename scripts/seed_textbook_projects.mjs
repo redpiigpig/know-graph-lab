@@ -1,5 +1,5 @@
 /**
- * 在 writing_projects 新增兩本教科書寫作計畫（kind='book'）：
+ * 在 writing_projects 新增兩本教科書寫作計畫（kind='lecture' 講義寫作分區）：
  *  1.《世界宗教文化導論》（world-religions-intro）— 八大界域架構的宗教系教科書
  *  2.《漢字文學史》（sinographic-literature）— 宗教系國文講義
  * 走 Supabase Management API（見 reference_supabase_management_api）。
@@ -35,7 +35,7 @@ const books = [
     slug: 'world-religions-intro',
     title: '世界宗教文化導論',
     subtitle: '全球八大人文宗教界域',
-    description: '宗教系大學教科書：以「六百年一時代」的分期與八大界域 × 48 文化圈為時空雙座標，取代東西方二元，從宗教定義與演化走遍全球宗教史，收於當代跨宗教對話。',
+    description: '宗教系大學教科書：以六百年時代律 × 八大界域為時空雙座標的世界宗教文化史。',
     emoji: '🌍',
     color: 'emerald',
   },
@@ -43,7 +43,7 @@ const books = [
     slug: 'sinographic-literature',
     title: '宗教系國文講義',
     subtitle: '漢字文學史——宗教與東亞漢字書寫圈的文學世界',
-    description: '打破「中國文學史」框架的國文講義：以漢字書寫圈為單位涵蓋中日韓越台的漢文學，以佛典漢譯、大藏經、變文演藝、聖經漢譯與漢語神學為貫穿軸線。',
+    description: '宗教系國文講義：以宗教為軸線、涵蓋中日韓越台漢文書寫圈的漢字文學史。',
     emoji: '🖋️',
     color: 'amber',
   },
@@ -54,7 +54,7 @@ for (const b of books) {
 INSERT INTO writing_projects (slug, title, subtitle, description, emoji, color, status, kind, sort_order)
 VALUES (
   ${q(b.slug)}, ${q(b.title)}, ${q(b.subtitle)}, ${q(b.description)},
-  ${q(b.emoji)}, ${q(b.color)}, '構思中', 'book',
+  ${q(b.emoji)}, ${q(b.color)}, '構思中', 'lecture',
   COALESCE((SELECT MAX(sort_order) FROM writing_projects), 0) + 1
 )
 ON CONFLICT (slug) DO UPDATE SET

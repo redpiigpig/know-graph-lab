@@ -59,6 +59,7 @@
                   <div class="flex items-center gap-2">
                     <select v-model="editForm.kind" class="px-2 py-1 text-xs rounded border border-gray-200 bg-white">
                       <option value="book">書籍寫作</option>
+                      <option value="lecture">講義寫作</option>
                       <option value="paper">論文寫作</option>
                     </select>
                     <select v-model="editForm.color" class="px-2 py-1 text-xs rounded border border-gray-200 bg-white">
@@ -99,6 +100,7 @@
                 <div class="flex items-center gap-2">
                   <select v-model="editForm.kind" class="px-2 py-1 text-xs rounded border border-gray-200 bg-white">
                     <option value="book">書籍寫作</option>
+                    <option value="lecture">講義寫作</option>
                     <option value="paper">論文寫作</option>
                   </select>
                   <select v-model="editForm.color" class="px-2 py-1 text-xs rounded border border-gray-200 bg-white">
@@ -145,7 +147,7 @@ interface Project {
   color: string
   status: string | null
   sort_order: number
-  kind: 'book' | 'paper'
+  kind: 'book' | 'paper' | 'lecture'
   paper_ref: string | null
 }
 
@@ -153,11 +155,12 @@ const projects = ref<Project[]>([])
 const loading = ref(true)
 const saving = ref(false)
 const editingSlug = ref<string | null>(null)
-const editForm = reactive({ slug: '', title: '', subtitle: '', description: '', emoji: '📝', color: 'amber', status: '', kind: 'book' as 'book' | 'paper', paper_ref: '' })
+const editForm = reactive({ slug: '', title: '', subtitle: '', description: '', emoji: '📝', color: 'amber', status: '', kind: 'book' as 'book' | 'paper' | 'lecture', paper_ref: '' })
 
-// 書籍寫作 first, then 論文寫作 — each preserving sort_order
+// 書籍寫作 → 講義寫作 → 論文寫作 — each preserving sort_order
 const groups = computed(() => [
-  { kind: 'book' as const, label: '書籍寫作', emoji: '📚', items: projects.value.filter(p => p.kind !== 'paper') },
+  { kind: 'book' as const, label: '書籍寫作', emoji: '📚', items: projects.value.filter(p => p.kind !== 'paper' && p.kind !== 'lecture') },
+  { kind: 'lecture' as const, label: '講義寫作', emoji: '📖', items: projects.value.filter(p => p.kind === 'lecture') },
   { kind: 'paper' as const, label: '論文寫作', emoji: '📄', items: projects.value.filter(p => p.kind === 'paper') },
 ])
 
@@ -172,9 +175,10 @@ async function load() {
 }
 onMounted(load)
 
-function startCreate(kind: 'book' | 'paper' = 'book') {
+function startCreate(kind: 'book' | 'paper' | 'lecture' = 'book') {
   editingSlug.value = '__new__'
-  Object.assign(editForm, { slug: '', title: '', subtitle: '', description: '', emoji: kind === 'paper' ? '📄' : '📝', color: kind === 'paper' ? 'teal' : 'amber', status: '構思中', kind, paper_ref: '' })
+  const emoji = kind === 'paper' ? '📄' : kind === 'lecture' ? '📖' : '📝'
+  Object.assign(editForm, { slug: '', title: '', subtitle: '', description: '', emoji, color: kind === 'paper' ? 'teal' : 'amber', status: '構思中', kind, paper_ref: '' })
 }
 
 function startEdit(p: Project) {
