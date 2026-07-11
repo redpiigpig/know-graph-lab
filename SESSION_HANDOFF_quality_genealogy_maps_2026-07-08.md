@@ -37,10 +37,9 @@
 
 ## 任務 E：地圖標籤可讀性
 檔案：`components/maps/HistoricalBordersMap.vue`（751 行）、`WorldThematicMap.vue`（1,171 行）
-1. **碰撞偵測**：標籤加 bbox 碰撞檢查，重疊時依 polygon 面積優先級隱藏小者。
-2. **縮放分級**：zoom level 決定顯示門檻（小政權標籤只在放大後出現）。
-3. **標籤位置**：改用 polylabel（最大內切圓心）取代質心，避免細長 polygon 標籤跑出界。
-4. 守則：polygon 標籤只放純國名/朝代名（記憶 feedback_map_label_clean_country_name）。
+1. ✅ **HistoricalBordersMap 完成（2026-07-11，commit 27012527）**：polylabel 錨點＋縮放感知面積優先貪婪選擇＋kQuant 量化＋字級分層。驗收 1501 BCE 6/8、1900 CE 64 標籤零重疊。細節見 maps-historical-borders SKILL.md「標籤系統 v2」。
+2. ⏳ **WorldThematicMap 未動**：其文化圈標籤是人工策展位置（~48 圈），問題型態不同——若要改，先實看有無重疊再說，勿直接套 v2。
+3. 守則：polygon 標籤只放純國名/朝代名（記憶 feedback_map_label_clean_country_name）。
 
 ## 執行順序建議
 E（標籤，純前端見效最快）→ C/D（資料策展，可平行）→ A（佈局演算法，配 snapshot 測試）→ B（等 DB 解鎖）。
