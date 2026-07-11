@@ -58,6 +58,8 @@
                 :class="tab === 'review' ? 'border-violet-500 text-violet-700' : 'border-transparent text-gray-500 hover:text-gray-800'">
                 研究回顧<span v-if="litEntries.length" class="ml-1 text-xs" :class="tab === 'review' ? 'text-violet-500' : 'text-gray-400'">{{ litEntries.length }}</span>
               </button>
+              <a v-if="bookDocxUrl" :href="bookDocxUrl" download
+                class="ml-auto mb-1 text-xs font-medium px-3 py-1.5 rounded-lg border border-violet-300 text-violet-700 hover:bg-violet-50 no-underline flex-shrink-0">⬇ 下載 Word</a>
             </div>
 
             <div v-show="tab === 'book'">
@@ -255,6 +257,8 @@ async function loadReview() {
 const curGroup = computed(() => groups.value.find(g => g.books.some(b => b.id === bid.value)) || null)
 const book = computed(() => curGroup.value?.books.find(b => b.id === bid.value) || null)
 const bookIdx = computed(() => curGroup.value?.books.findIndex(b => b.id === bid.value) ?? -1)
+// 設計排版 Word（scripts/works_series_docx.py 產出，與章節 html 同名同目錄）
+const bookDocxUrl = computed(() => book.value?.file ? book.value.file.replace(/\.html$/, '.docx') : '')
 const prevBook = computed(() => curGroup.value && bookIdx.value > 0 ? curGroup.value.books[bookIdx.value - 1] : null)
 const nextBook = computed(() => curGroup.value && bookIdx.value >= 0 && bookIdx.value < curGroup.value.books.length - 1 ? curGroup.value.books[bookIdx.value + 1] : null)
 
