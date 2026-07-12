@@ -11,6 +11,9 @@
 - 相關 skill：genealogy-biblical / genealogy-episcopal / genealogy-islamic / maps-historical-borders / maps-world-religions。
 
 ## 任務 A：族譜視覺品質（優先）
+> ✅ **2026-07-11 以「驗證取代重構」結案**。系統性截圖驗收六個熱區——大衛七妻群、雅各四妻＋12子、路得利未拉特列、猶大-她瑪、以掃區、哥轄 121 人深層展開、伊斯蘭樹主幹——**全部乾淨：零婚線交錯、零卡片重疊、間距充裕**。7/8 觀察到的視覺亂象根因是資料層 bug（互指斷鏈/drop 錯位），任務 B 修完後缺陷不再重現。不做盲目重構的理由：①無可重現缺陷；②SKILL.md 多處核心規則標「不要再改！」且有 2026-05-14 全域碰撞後處理失敗實驗（ghost 框）前例；③護欄已存在（test/genealogy 6 spec：mount＋fixtures＋collisions 檢查＋realdata snapshot，220 測試綠）。日後若使用者指出具體醜點，用 scripts/_tree_shot.mjs / _tree_expand_shot.mjs 定點截圖後針對性修。
+
+## （原任務 A 文字保留備查）
 檔案：`components/genealogy/BiblicalSpineTree.vue`（~千行手刻遞迴佈局）、`IslamicSpineTree.vue`、`EpiscopalSpineTree.vue`
 1. **子嗣 drop 一致化**：drop 一律從「婚姻線段中點」下垂。現況 wife.children 與 husband.children 不對齊時會從 husband 節點直落（視覺斷裂）。演算法端修 layoutSubtree 的 drop 起點計算；資料端見任務 B-1。
 2. **婚線避讓**：多妻（WIFE_HG=60 固定間距）與跨脊婚線交錯壓線——加簡單的線路分層/錯開（不同 y-offset 或彎折）。
@@ -44,7 +47,7 @@
 ## 任務 E：地圖標籤可讀性
 檔案：`components/maps/HistoricalBordersMap.vue`（751 行）、`WorldThematicMap.vue`（1,171 行）
 1. ✅ **HistoricalBordersMap 完成（2026-07-11，commit 27012527）**：polylabel 錨點＋縮放感知面積優先貪婪選擇＋kQuant 量化＋字級分層。驗收 1501 BCE 6/8、1900 CE 64 標籤零重疊。細節見 maps-historical-borders SKILL.md「標籤系統 v2」。
-2. ⏳ **WorldThematicMap 未動**：其文化圈標籤是人工策展位置（~48 圈），問題型態不同——若要改，先實看有無重疊再說，勿直接套 v2。
+2. ✅ **WorldThematicMap 驗證無需改動（2026-07-11）**：實測截圖八大界域層標籤零重疊、清楚易讀（scripts/_wr_check.mjs）；人工策展位置健康，不套 v2。
 3. 守則：polygon 標籤只放純國名/朝代名（記憶 feedback_map_label_clean_country_name）。
 
 ## 執行順序建議
