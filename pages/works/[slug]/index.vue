@@ -714,6 +714,13 @@ async function loadSeriesBooks() {
 }
 watch(() => project.value?.slug, loadSeriesBooks)
 
+// 講義類（kind='lecture'）單冊：卡片點進來直接進章節閱讀器，不停留在叢書卡頁
+watch([() => project.value?.kind, seriesGroups], () => {
+  if (project.value?.kind !== 'lecture') return
+  const books = seriesGroups.value.flatMap(g => g.books)
+  if (books.length === 1) navigateTo(`/works/${slug.value}/book/${books[0].id}`, { replace: true })
+})
+
 async function loadMaterials() {
   if (project.value?.kind === 'paper') { materialsAvailable.value = false; return }
   try {

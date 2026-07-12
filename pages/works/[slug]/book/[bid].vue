@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col bg-slate-50 min-h-dvh">
-    <AppHeader :title="book?.title ?? '載入中…'" :back="{ to: `/works/${slug}`, label: '創生哲學' }" container-class="max-w-5xl">
+    <AppHeader :title="book?.title ?? '載入中…'" :back="isSingleBook ? { to: '/works', label: '寫作計畫' } : { to: `/works/${slug}`, label: '創生哲學' }" container-class="max-w-5xl">
       <template #actions>
         <span v-if="book" class="text-xs text-gray-400">{{ book.nChapters }} 章</span>
       </template>
@@ -219,6 +219,8 @@ interface BookMeta { id: string; title: string; subtitle: string; file: string; 
 interface BookGroup { branch: string; books: BookMeta[] }
 
 const groups = ref<BookGroup[]>([])
+// 單冊叢書（講義類）：返回鍵直接回 /works，不回叢書卡頁（那頁會再轉回來）
+const isSingleBook = computed(() => groups.value.reduce((s, g) => s + g.books.length, 0) === 1)
 const html = ref('')
 const toc = ref<{ id: string; title: string; sections?: { id: string; title: string }[] }[]>([])
 const activeId = ref('')
