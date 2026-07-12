@@ -206,6 +206,18 @@ export default defineEventHandler(async (event) => {
   const rabbinicPC = new Set<string>()
   if (nahshonId && elimelechId) rabbinicPC.add(`${nahshonId}|${elimelechId}`)
 
+  // 拉比傳統配偶認同（僅塔木德/米大示，聖經本文無此婚配）：**只在 rabbinic view 渲染**，
+  // 明文視角完全不出現 — 故不寫進 DB spouse 欄，改在此按 view 動態注入 spouse edge。
+  //   米利暗 ＝ 以法他／阿祖巴，迦勒（希斯崙之子）之妻、戶珥之母（Sotah 11b-12a；代上 2:19）
+  //   喇合 嫁 約書亞（嫩之子），為眾先知之祖（Megillah 14b）
+  const rabbinicSpouse: Array<[string, string]> = []
+  if (view === 'rabbinic') {
+    for (const [a, b] of [['迦勒（希斯崙之子）', '米利暗'], ['約書亞（嫩之子）', '喇合']] as const) {
+      const ai = exactMap.get(a), bi = exactMap.get(b)
+      if (ai && bi) rabbinicSpouse.push([ai, bi])
+    }
+  }
+
   type Kind = 'legal' | 'biological' | 'rabbinic' | 'catholic' | 'orthodox' | 'early_consensus' | 'apocrypha'
   function relationKind(parentId: string, childId: string, childName: string): Kind {
     if (rabbinicPC.has(`${parentId}|${childId}`)) return 'rabbinic'
@@ -288,6 +300,28 @@ export default defineEventHandler(async (event) => {
         })
       }
     }
+  }
+
+  // 拉比配偶認同 edge（view=rabbinic 才注入）— 樣式同一般 spouse 紅線，但標
+  // relationKind='rabbinic' 供前端日後想改色時使用。DB 未動，明文視角無此線。
+  for (const [aId, bId] of rabbinicSpouse) {
+    const key = [aId, bId].sort().join('|')
+    const eid = `sp:${key}`
+    if (seen.has(eid)) continue
+    seen.add(eid)
+    edges.push({
+      id: eid,
+      source: aId,
+      target: bId,
+      type: 'straight',
+      style: { stroke: '#f43f5e', strokeWidth: 2 },
+      data: {
+        relationshipType: 'spouse',
+        relationKind: 'rabbinic',
+        color: '#f43f5e', strokeWidth: 2,
+        strokeDasharray: '', lineType: 'straight', dashStyleId: 'solid',
+      },
+    })
   }
 
   return { nodes, edges }
