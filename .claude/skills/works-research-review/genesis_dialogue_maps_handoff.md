@@ -1,5 +1,58 @@
 # 創生哲學 15 卷「逐節對話地圖」全量補完 — 交接（2026-06-26）
 
+---
+
+## 🔴 零之五、2026-07-15 資料層對齊 07-11 全書重寫（**接手請先讀這節**）
+
+**根本問題**：`clean_inv.json` 停在 2026-07-03，其後書本歷經五輪重構，研究資料層未跟上。
+`clean_inv` 是所有研究工具賴以對齊的 canonical 地基，它一歪，下游全歪。
+
+涉及的書本重構（皆已 push，用 `git log -S` 可查證）：
+| commit | 日期 | 影響 |
+|---|---|---|
+| `abd9739a` | 07-07 | 全叢書 主體性倫理學→創生倫理學(238)、潛意識→無意識(77) |
+| `e71c2805` | 07-08 | **wip**「去後設導引」——刪各卷導論的路線圖小節。**只做了 V2/M3/O3，V1 的「本卷的展開路徑」還在＝此工作未完成** |
+| `7b4a88ed`→`3118676f` | 07-10~11 | 哲普化重寫全叢書 137/137（**小節標題大量擴寫**） |
+| `a5e585f7` | 07-11 | 「識然」自 V1 前各卷全數移除（E1:6/E2:34/E3:84 處） |
+| `94844a16` | 07-11 | 故事原型性審查 369 審 33 換 |
+
+### 已完成（2026-07-15，commit `f4b3320b`＋`c3271da9`）
+- ✅ **標籤漂移 50 處修正**：E1 ch2/5/6/7(36處)、E3 ch2(潛意識→無意識)/ch7(識然→認識論)、B1 ch1(四然→五然)。
+  皆為「同卷同章、文獻已存在、僅標籤未跟上重構」，非重做研究。
+- ✅ **V 卷歸位 14 檔**：07-02/03 價值論重排後檔名從未更新，V1/V2/V3 整整三卷的 .md 其實是舊書內容。
+  依「所屬面向」對 canonical 做集合比對判定（全部 4/4 或 5/5 命中）：
+  V1 ch2→ch3, ch3→ch4, ch4→V2ch2, ch5→V2ch3；V2 ch1→V1ch2, ch2→V1ch8, ch3→ch6, ch4→ch5, ch5→ch7, ch6→V3ch5；
+  V3 ch3→V2ch4, ch4→ch3；M1 ch7→ch8；O2 ch6→ch9。舊 V2ch6+V3ch5 合併為新 V3ch5。
+  舊 V1ch1/V1ch6 已併入 B1 導論 → 歸檔 `scripts/data/_archive_v_pre_reorg_2026-07-02/`。
+- ✅ **clean_inv/worklist 自 HTML 重生**：118→**123 章 / 570 節**。M1 7→8；E3 補回 invch/realch＋序跋。
+- ✅ **gen_workflow.py 修兩個會白燒額度的 bug**：①路徑寫死他機家目錄 →改 `__file__` 推導；
+  ②「已完成」只看檔名 →改為比對檔內 `所屬面向` 是否過半命中該章 canonical。**舊判準正是 V1/V2/V3 被永久跳過的原因**。
+  加 `--list` 可先列待做章。
+
+**效果：標籤失效率 7.1%(37/523) → 2.7%(14/513)，錯位 0。**
+
+### ⏳ 待續
+1. **14 章仍無對話地圖**（`python -X utf8 scripts/genesis_research/gen_workflow.py --list` 可列出）：
+   M1-ch7(內在的聖誕)、O1-ch8/ch9、O2-ch6/ch7/ch8、V1-ch1/ch5/ch6/ch7/ch9、V2-ch1/ch8、V3-ch4。
+   2026-07-15 已派 7 個子代理跑其中 M1-ch7/O1-ch8/O1-ch9/O2-ch6/O2-ch7/O2-ch8/V3-ch4，
+   **成果未及 commit 即換機，需重跑**（gen_workflow 修好後不會誤跳過）。剩 V1×5、V2×2 未派。
+2. 🔴 **E2「知識的判準：從 JTB 到誠實生成論」章在書裡不存在**。
+   `d857a3ae`(07-01) commit 訊息寫「E2 加該章」，但 `--stat` 顯示**只改了 clean_inv/thesis/worklist，未動 E2.html**；
+   其後 E2.html 有 8 個 commit 也沒補。DB 中 37 筆文獻掛在該章上。
+   2026-07-15 已讓 clean_inv 對齊書本(E2=11章)，**這 37 筆的歸屬待定奪**：寫回該章（需插章＝連鎖改號）或改掛他章。
+3. **「去後設導引」(e71c2805) 未完成**：V1 導論「本卷的展開路徑」仍在，其他卷已刪。
+4. `fable_map.md` 寫 122 章，實際 **123 章**（M1 多了內在的聖誕）。
+5. **入庫全部未做**：本輪工作機無 Python、無 `.env`。ingest 讀 `SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY`
+   （**不是** SKILL.md 提的 `SUPABASE_ACCESS_TOKEN`，那是 Management API 用的）。
+   換機後補 `.env` 再跑 `ingest_all.py apply <VOL>`。
+
+### 工具（2026-07-15 新增，在 scratchpad，可重建）
+本輪的分析器邏輯：以 `public/content/works/genesis/*.html` 為唯一真相解析 h2/h3（切 `chapter-recap`、
+去 `一、` 前綴、unescape），與 `.md` 的 `所屬面向` 做集合比對。此法可重現 clean_inv，且已對 O1/V1/V3/B1/B2/B3
+六卷逐字驗證無誤——**日後任何「書本 vs 資料層」對齊都該先跑這個，別靠肉眼**。
+
+---
+
 ## ✅ 零之四、2026-07-03 全 15 卷「章首故事引子」工程（完成）
 使用者定案：**每一卷每一章都以一則相關故事開場再進行探討**（定錨：愛的公式→小王子、陰影/個體化→聖誕頌歌、召喚→佛陀出家）。
 - **總表**＝`scripts/genesis_research/fable_map.md`（122 章每章一故事＋鐵則＋插入格式）。格式＝`<div class="chapter-fable"><p>故事2-4段</p><p class="fable-bridge">橋接段</p></div>` 插在該章 `</h2>` 緊後（新章 editor-note 之前）；**不動任何 h2/h3**，clean_inv／DB 不受影響。reader 樣式在 pages/works/[slug]/book/[bid].vue `.chapter-fable`（琥珀卡、斜體敘事＋橋接段）。
