@@ -1,100 +1,117 @@
-# V2《意義、愛與神聖》第二章　虛無主義的價值論診斷 — 逐節文獻對話地圖
+# 創生哲學 V1《願然：意欲、秩序與美》逐節文獻對話地圖
 
-> 卷：V2（價值論）／本卷主張：意義的困難問題；虛無主義的價值論診斷；愛作為願然的最高運動；神聖性與空無美學；主體作為最高價值；第二軸心時代。
-> 本章＝第二章　虛無主義的價值論診斷。各小節盟友（支持）／foil（反例）／旁證（補充）對話文獻。
-
----
-
-## 哲學
-
-【Reginster, B.】（2006）〈The Affirmation of Life: Nietzsche on Overcoming Nihilism〉，《Harvard University Press》
-語言：英文
-所屬面向：願然斷裂：虛無的精確定義
-立場：支持
-摘要：本書首次系統重構尼采的虛無主義學說，將其定義為「最高價值自我貶值」後意欲與目標的崩解，並以「肯定生命／權力意志」為克服之道。此一「虛無＝價值能量斷裂、而非僅認知判斷」的界定，正面支持本節把虛無精確定義為「願然斷裂」的論證。
-> **全文**：[Harvard University Press](https://www.hup.harvard.edu/books/9780674030640)
-
-【Pratt, A.】（2024）〈Nihilism〉，《Internet Encyclopedia of Philosophy》
-語言：英文
-所屬面向：願然斷裂：虛無的精確定義
-立場：補充
-摘要：本條目梳理存在虛無主義、道德虛無主義與認識論虛無主義的分支，指出現代虛無主義核心是「目的與意義的普遍喪失感」。可為本節區辨「願然斷裂」屬價值／意欲層而非單純知識層提供標準分類旁證。
-> **全文**：[IEP: Nihilism](https://iep.utm.edu/nihilism/)
-
-【Aronson, R. / Reynolds, J.】（2022）〈Albert Camus〉，《Stanford Encyclopedia of Philosophy》
-語言：英文
-所屬面向：願然斷裂：虛無的精確定義
-立場：反例
-摘要：卡繆主張面對荒謬不必導向意義崩潰，反抗（révolte）本身即在無意義宇宙中創造價值與限度。此立場反對「最高價值失落必然＝願然斷裂」，構成本節的 foil：荒謬意識可與生命肯定共存。
-> **全文**：[SEP: Albert Camus](https://plato.stanford.edu/entries/camus/)
-
-【Metz, T.】（2023）〈The Meaning of Life〉，《Stanford Encyclopedia of Philosophy》
-語言：英文
-所屬面向：願然斷裂：虛無的精確定義
-立場：補充
-摘要：本條目分析虛無主義（悲觀論）主張：使生命有意義的條件原則上不可得。指出當代分析哲學已從「極端超自然論＋無神論」式虛無轉向溫和自然論，多數人生命仍可有部分意義。為本節界定「斷裂」的程度與條件提供當代旁證。
-> **全文**：[SEP: The Meaning of Life](https://plato.stanford.edu/entries/life-meaning/)
-
-【Lasch, C.】（1979）〈The Culture of Narcissism: American Life in an Age of Diminishing Expectations〉，《W. W. Norton》
-語言：英文
-所屬面向：後現代解構、他者臨在的消失與意欲的自戀化
-立場：支持
-摘要：拉許診斷晚期現代美國社會為病態自戀文化，「被拒的愛轉回自身成為恨」，自我耽溺侵蝕了對家庭、鄰人與群體忠誠給予的能力。直接支持本節「意欲自戀化使他者臨在消失」的價值論診斷。
-> **全文**：[The Culture of Narcissism](https://www.goodreads.com/book/show/153813.The_Culture_of_Narcissism)
-
-【Taylor, C.】（1991）〈The Malaise of Modernity / The Ethics of Authenticity〉，《Harvard University Press》
-語言：英文
-所屬面向：後現代解構、他者臨在的消失與意欲的自戀化
-立場：補充
-摘要：泰勒指出現代三大不安：意義視域喪失、工具理性獨大、政治退縮；扁平化的個人主義帶來自我耽溺與社會脫嵌，但本真性（authenticity）仍是可被救贖的道德理想。為本節「自戀化」提供更細緻的文化診斷旁證，並暗示療癒方向。
-> **全文**：[The Malaise of Modernity](https://www.goodreads.com/book/show/973962.The_Malaise_of_Modernity)
-
-【Bernstein, M. (ed.) / Critchley, S.】（2024）〈Emmanuel Levinas〉，《Stanford Encyclopedia of Philosophy》
-語言：英文
-所屬面向：價值論的療癒任務：重新召喚他者臨在
-立場：支持
-摘要：列維納斯主張倫理即第一哲學，他者的「面容」在一切反思之先課予無限責任，主體性自他者的召喚中被喚起。直接支持本節「重新召喚他者臨在」作為價值論療癒任務的核心論證。
-> **全文**：[SEP: Emmanuel Levinas](https://plato.stanford.edu/entries/levinas/)
+**卷代號**：V1　**領域**：價值論
+**本章**：第四章　美的共振生成論
+**章旨**：以「共振生成論」解消美學的客觀論／主觀論二難——美既非藏在客體背後的本質，也非純粹主觀投射，而是客體潛能性與主體意向性在「願然結構」中共振而生成的關係性事件。對應全卷主張「美的相對客觀性與文化主觀性」「真善美聖四向度階層」。
 
 ---
 
-## 心理學
+## 第一節　兩種失敗的美學：客觀論的危機與純粹主觀論的崩解
 
-【Ratcliffe, M.】（2015）〈Experiences of Depression: A Study in Phenomenology〉，《Oxford University Press》
-語言：英文
-所屬面向：激情無能與愛無能：症狀的現象學
-立場：支持
-摘要：拉特克利夫以「存在情感」（existential feeling）框架分析憂鬱，指出其核心是可能性空間的收縮——主體喪失賦予世界與計畫意義的能力，而非單純強烈負面情緒。為本節「激情無能與愛無能」的現象學描述提供第一手哲學支持。
-> **全文**：[Experiences of Depression (OUP)](https://global.oup.com/academic/product/experiences-of-depression-9780199608973)
+### 哲學
 
-【Husain, M. / Roiser, J. P.】（2018）〈Neuroscience of apathy and anhedonia: a transdiagnostic approach〉，《Nature Reviews Neuroscience》
+【Mothersill, M.】（1984）〈Beauty Restored〉，《Oxford: Clarendon Press》
 語言：英文
-所屬面向：激情無能與愛無能：症狀的現象學
+所屬面向：兩種失敗的美學：客觀論的危機與純粹主觀論的崩解
 立場：補充
-摘要：本文跨診斷整合無動機（apathy）與快感缺失（anhedonia）的神經機制，指出獎賞動機系統（多巴胺、前額—紋狀體迴路）失調導致行動發起與愉悅預期的喪失。為本節「激情無能」提供神經科學旁證，使現象學症狀對接生理基底。
-> **全文**：[Nature Reviews Neuroscience](https://doi.org/10.1038/nrn.2017.158)
+摘要：莫瑟希爾主張「品味判斷是真實可成立的判斷，但不存在品味的原理或法則」，即有美的真理卻無美的定律。此一「有真理無法則」的張力旁證本節的診斷：純客觀論（求美之法則）與純主觀論（取消美之真值）兩端皆失敗，必須走向第三條路。
+> **全文**：[Beauty Restored (OUP)](https://global.oup.com/academic/product/beauty-restored-9780198249603)
 
-【Oberleiter, S. / Stickel, P. / Pietschnig, J.】（2024）〈A Farewell to the Narcissism Epidemic? A Cross-Temporal Meta-Analysis of Global NPI Scores (1982–2023)〉，《Journal of Personality》
+【Costello, D. / Stecker, R. 等／SEP】（2024）〈Aesthetic Judgment〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：後現代解構、他者臨在的消失與意欲的自戀化
+所屬面向：兩種失敗的美學：客觀論的危機與純粹主觀論的崩解
+立場：補充
+摘要：此條目系統梳理「主觀普遍性」這一美學核心難題——審美判斷既奠基於愉悅（主觀），又主張普遍同意（客觀），兩特性彼此張力。此正是本節欲解消的二難之學界定位，旁證客觀／主觀單邊化皆無法成立。
+> **全文**：[SEP: Aesthetic Judgment](https://plato.stanford.edu/entries/aesthetic-judgment/)
+
+【Zangwill, N.】（2001）〈The Metaphysics of Beauty〉，《Ithaca, NY: Cornell University Press》
+語言：英文
+所屬面向：兩種失敗的美學：客觀論的危機與純粹主觀論的崩解
 立場：反例
-摘要：本跨時代後設分析涵蓋 1,621 樣本、逾 54 萬人 NPI 分數，發現全球自戀分數呈「負向」跨時代變化、2008 後尤降，否證「自戀流行病／Generation Me」敘事。構成本節 foil：「意欲普遍自戀化」的世代性經驗證據薄弱，診斷宜限定為文化—結構傾向而非統計事實。
-> **全文**：[Journal of Personality](https://pmc.ncbi.nlm.nih.gov/articles/PMC12224556/)
+摘要：贊威爾主張審美性質為「真實」性質，但必然依附於感性性質，且因感性性質本身依心而具一種弱客觀的審美實在論。此立場拒絕把美收編為純關係生成，對本節「客觀論已危機」的判斷構成反例——他證成了一種仍可辯護的（弱）審美客觀論。
+> **全文**：[The Metaphysics of Beauty (DOI)](https://doi.org/10.7591/9781501711350)
 
 ---
 
-## 宗教與神話
+## 第二節　美的共振生成論：客體潛能性、主體意向性與願然結構
 
-【Frankl, V. E.】（1969 / 1988）〈The Will to Meaning: Foundations and Applications of Logotherapy〉，《New American Library / Meridian》
+### 心理學
+
+【Reber, R., Schwarz, N., Winkielman, P.】（2004）〈Processing Fluency and Aesthetic Pleasure: Is Beauty in the Perceiver's Processing Experience?〉，《Personality and Social Psychology Review, 8(4), 364–382》
 語言：英文
-所屬面向：價值論的療癒任務：重新召喚他者臨在
+所屬面向：美的共振生成論：客體潛能性、主體意向性與願然結構
 立場：支持
-摘要：法蘭可指出現代普遍「存在的虛空」（existential vacuum）——空虛、無聊、無意義感；意義透過自我超越（self-transcendence）即指向自身之外的對象、使命與所愛之人而尋得。支持本節以「召喚他者臨在」為價值療癒任務，並提供臨床—靈性實作路徑。
-> **全文**：[The Will to Meaning (book review, PMC)](https://pmc.ncbi.nlm.nih.gov/articles/PMC5723930/)
+摘要：三位作者主張審美愉悅是知覺者「處理流暢度」的函數——對稱、原型性、對比等客體特徵之所以美，是因它們提升主體處理的流暢經驗。此為共振生成論提供心理學支持：美不在客體亦不在主體單方，而生成於客體潛能與主體加工的共振交界。
+> **全文**：[Reber et al. 2004 (DOI)](https://doi.org/10.1207/s15327957pspr0804_3)
 
-【Camus, A. (via Aronson/Reynolds)】（1951 / 2022）〈The Rebel / SEP: Albert Camus〉，《Gallimard / Stanford Encyclopedia of Philosophy》
+### 哲學
+
+【SEP（Aesthetic Judgment, §Response-Dependence）】（2024）〈Response-Dependence Theories of Aesthetic Value〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：價值論的療癒任務：重新召喚他者臨在
+所屬面向：美的共振生成論：客體潛能性、主體意向性與願然結構
+立場：補充
+摘要：反應依賴論主張審美性質之成立有賴於觀察者的反應——某特徵唯有在能於觀察者中喚起審美經驗時，方算審美性質。此框架旁證本節「主體意向性為美之必要環節」，與共振生成論的雙構結構同調，惟創生哲學再加入「願然結構」一維。（不同學者對反應依賴的詮釋互不相容，細節待核）
+> **全文**：[SEP: Aesthetic Judgment](https://plato.stanford.edu/entries/aesthetic-judgment/)
+
+【Zangwill, N.】（2001）〈Beauty (in The Metaphysics of Beauty)〉，《Ithaca, NY: Cornell University Press》
+語言：英文
+所屬面向：美的共振生成論：客體潛能性、主體意向性與願然結構
 立場：反例
-摘要：卡繆《反抗者》主張療癒虛無不靠召喚超越性他者，而靠人際團結中「我反抗，故我們存在」的內在限度倫理；明確拒斥任何將意義奠基於神聖／超越臨在的方案。對本節「召喚他者臨在」式療癒構成反例：意義可純由人類團結與反抗自我生成，毋須臨在維度。
-> **全文**：[SEP: Albert Camus](https://plato.stanford.edu/entries/camus/)
+摘要：贊威爾主張審美性質「必然依附感性性質」，把美的根據鎖定在客體側的感性基礎而非主客共振。此對本節「美生成於客體潛能性與主體意向性之共振」構成反例——他傾向把主體反應降為派生而非構成性環節。
+> **全文**：[The Metaphysics of Beauty (DOI)](https://doi.org/10.7591/9781501711350)
+
+---
+
+## 第三節　美的潛能與美的現實：隱匿之美的本體地位
+
+### 哲學
+
+【Choi, S., Fara, M.／SEP】（2021）〈Dispositions〉，《Stanford Encyclopedia of Philosophy》
+語言：英文
+所屬面向：美的潛能與美的現實：隱匿之美的本體地位
+立場：支持
+摘要：此條目論證傾性（如「易碎」）即使未被觸發仍真實存在——傾性內蘊一個尚未發生的顯現之指涉。此一「未顯現的力」之本體學支持本節：隱匿之美作為「美的潛能」可在無人觀照下仍具本體地位，正如易碎物未碎時仍易碎。
+> **全文**：[SEP: Dispositions](https://plato.stanford.edu/entries/dispositions/)
+
+【Hume, D.／SEP（Hume's Aesthetics）】（2024）〈Of the Standard of Taste / Hume's Aesthetics〉，《Stanford Encyclopedia of Philosophy》
+語言：英文
+所屬面向：美的潛能與美的現實：隱匿之美的本體地位
+立場：補充
+摘要：休謨把美分析為一種傾性／能力——客體在合宜條件下、對受過陶養的鑑賞者「產生愉悅之力」。此一「美即一複雜因果關係之傾性」的分析旁證本節「美的潛能 vs 美的現實」之區分：美需合宜條件方由潛能轉為現實。
+> **全文**：[SEP: Hume's Aesthetics](https://plato.stanford.edu/entries/hume-aesthetics/)
+
+【Heidegger, M.／SEP（Heidegger's Aesthetics）】（2024）〈The Origin of the Work of Art / Heidegger's Aesthetics〉，《Stanford Encyclopedia of Philosophy》
+語言：英文
+所屬面向：美的潛能與美的現實：隱匿之美的本體地位
+立場：反例
+摘要：海德格主張美是真理作為「無蔽」（aletheia）的發生，「美是真理之本質的賜予」，美乃存有自我遮蔽中的開顯事件，而非可儲存待顯的「傾性／潛能」。此非傾性化、事件化的美觀對本節以「潛能—現實」框定隱匿之美構成反例。
+> **全文**：[SEP: Heidegger's Aesthetics](https://plato.stanford.edu/entries/heidegger-aesthetics/)
+
+---
+
+## 第四節　現象即本質：關係性優先的美學論
+
+### 哲學
+
+【Sibley, F.】（1959）〈Aesthetic Concepts〉，《The Philosophical Review, 68(4), 421–450》
+語言：英文
+所屬面向：現象即本質：關係性優先的美學論
+立場：支持
+摘要：希布利論證審美概念「非條件支配」——不存在任何非審美特徵之集合可充分地保證某審美詞的應用，審美性質只能在知覺中以「品味／敏感」當場見出。此支持本節「現象即本質、關係性優先」：美不可化約為背後規則或固有屬性，而顯現於知覺關係之中。
+> **全文**：[Aesthetic Concepts (JSTOR)](https://doi.org/10.2307/2182490)
+
+### 自然科學
+
+【Lee, H., Van Geert, E., Çelen, E., Marjieh, R., van Rijn, P., Park, M., Jacoby, N.】（2025）〈Visual and Auditory Aesthetic Preferences Across Cultures〉，《arXiv:2502.14439》
+語言：英文
+所屬面向：現象即本質：關係性優先的美學論
+立場：補充
+摘要：本研究蒐集近 5,000 名受試者、跨 10 國逾 40 萬筆偏好判斷，發現對稱與曲線形偏好跨文化一致，色彩與旋律偏好則高度因文化而異，結論為審美偏好「生成於共享知覺機制與文化學習之交互」。此大規模實證旁證本節「關係性優先」：美既非純客觀亦非純主觀，而在感知者—文化關係場中生成。
+> **全文**：[arXiv:2502.14439](https://arxiv.org/abs/2502.14439)
+
+【Zangwill, N. / Pettit, P. 等（response-dependence vs realism 之辯）】（2022）〈Response-dependence and aesthetic realism: Zangwill and Pettit〉，《（學術論文，刊名細節待核）》
+語言：英文
+所屬面向：現象即本質：關係性優先的美學論
+立場：反例
+摘要：此辯論線指出反應依賴／關係論並非定論：贊威爾與佩提特各自版本的反應依賴互不相容，且有論者主張定理、證明等抽象對象具真正審美性質卻不依附感性或觀察者反應，以此抵抗關係性優先。此對本節「關係性優先」構成反例。（確切刊名與卷期細節待核）
+> **全文**：[ResearchGate 條目](https://www.researchgate.net/publication/361571054)

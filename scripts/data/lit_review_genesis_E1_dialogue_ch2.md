@@ -22,21 +22,21 @@
 
 【Politis, V.】（2021）《Plato's Essentialism: Reinterpreting the Theory of Forms》，Cambridge University Press
 語言：英文
-所屬面向：柏拉圖的本質主義轉向
+所屬面向：柏拉圖的本質主義轉向：致命的一刀
 立場：反例
 摘要：Politis 論證柏拉圖的理型「就是」本質（而非「擁有」本質），且其本質主義是論證嚴謹、融貫、可與亞里斯多德分庭抗禮的理論。這是當代為柏拉圖本質實在論辯護的有力 foil，創生哲學必須正面回應：若本質主義如此融貫，「現象即本質」何以勝出。
 > **全文**：[Cambridge University Press 書目](https://www.cambridge.org/9781108833660)
 
 【Fine, G.】（1984）〈Separation〉，《Oxford Studies in Ancient Philosophy》2, pp. 31–87
 語言：英文
-所屬面向：柏拉圖的本質主義轉向
+所屬面向：柏拉圖的本質主義轉向：致命的一刀
 立場：補充
 摘要：Fine 細究亞里斯多德指控柏拉圖「分離（separation）」理型的確切意涵——即理型可不被任何感性個例實例化而獨立存在。為本章「柏拉圖把真實安置在現象背後／彼岸」這一核心論點提供精密的文本與詮釋學旁證（後收入其 2003 年《Plato on Knowledge and Forms》第 11 章）。
 > **全文**：[PhilPapers 條目](https://philpapers.org/rec/FINS-3)
 
 【Ellis, B.】（2001）《Scientific Essentialism》，Cambridge University Press
 語言：英文
-所屬面向：柏拉圖的本質主義轉向
+所屬面向：柏拉圖的本質主義轉向：致命的一刀
 立場：反例
 摘要：Ellis 復興亞里斯多德式本質主義，主張自然種類具客觀、心靈獨立的「真實本質」（一組內在性質），且自然律奠基於此種類結構。這是當代形上學中本質實在論的強勢回潮，作為 foil 顯示「本質安置於現象之下」並非已被科學淘汰的古董，創生哲學須與之對話。（細節待核：出版年依 CUP 第一版 2001）
 > **全文**：[NDPR 書評（The Metaphysics of Scientific Realism）](https://ndpr.nd.edu/reviews/the-metaphysics-of-scientific-realism/)

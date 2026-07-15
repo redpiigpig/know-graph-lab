@@ -43,28 +43,28 @@
 
 【Ricoeur, P.】（1970）〈Freud and Philosophy: An Essay on Interpretation〉，《Yale University Press》（法文原著 1965）
 語言：英文（譯自法文）
-所屬面向：深度心理學的解釋學：佛洛伊德、榮格與潛意識如何被認識
+所屬面向：深度心理學的解釋學：佛洛伊德、榮格與無意識如何被認識
 立場：支持
 摘要：呂格爾把精神分析定位為「懷疑的解釋學」，主張潛意識不是被觀察而是被詮釋——透過對意識表層的系統性懷疑，追索被遮蔽的驅力意義。此直接支持本節「潛意識如何被認識」＝解釋學式認識而非實證觀察的核心主張。
 > **全文**：[SEP: Paul Ricoeur](https://plato.stanford.edu/entries/ricoeur/)
 
 【Grünbaum, A.】（1984）〈The Foundations of Psychoanalysis: A Philosophical Critique〉，《University of California Press》
 語言：英文
-所屬面向：深度心理學的解釋學：佛洛伊德、榮格與潛意識如何被認識
+所屬面向：深度心理學的解釋學：佛洛伊德、榮格與無意識如何被認識
 立場：反例
 摘要：格倫鮑姆同時反對兩邊：既批佛洛伊德「合拍論證」（Tally Argument）在臨床上循環無效，也駁斥哈伯瑪斯／呂格爾把精神分析重構為解釋學是逃避科學檢證。對本節構成雙重反例——潛意識若要被「認識」，解釋學進路未必比實證進路更站得住。
 > **全文**：[UC Press: The Foundations of Psychoanalysis](https://www.ucpress.edu/books/the-foundations-of-psychoanalysis/paper)
 
 【Popper, K.】（1963）〈Conjectures and Refutations: The Growth of Scientific Knowledge〉，《Routledge & Kegan Paul》
 語言：英文
-所屬面向：深度心理學的解釋學：佛洛伊德、榮格與潛意識如何被認識
+所屬面向：深度心理學的解釋學：佛洛伊德、榮格與無意識如何被認識
 立場：反例
 摘要：波普爾以可否證性劃界，判定佛洛伊德與阿德勒的深度心理學為偽科學：任何行為皆可事後被其解釋，故無風險預測、無法被否證。此為對「深度心理學能認識潛意識」最尖銳的反例，逼問其知識論資格。
 > **全文**：[SEP: Karl Popper](https://plato.stanford.edu/entries/popper/)
 
 【Wilson, T.D.】（2002）〈Strangers to Ourselves: Discovering the Adaptive Unconscious〉，《Harvard University Press》
 語言：英文
-所屬面向：深度心理學的解釋學：佛洛伊德、榮格與潛意識如何被認識
+所屬面向：深度心理學的解釋學：佛洛伊德、榮格與無意識如何被認識
 立場：補充
 摘要：威爾森提出「適應性潛意識」，主張自我之所以對己隱晦，不是佛洛伊德式壓抑，而是心智為效率而平行運作；並建議「觀察自己實際所為與他人評價」比內省更能認識自己。此旁證為深度心理學的潛意識概念提供後佛洛伊德的實證改寫版本。
 > **全文**：[Harvard University Press: Strangers to Ourselves](https://www.hup.harvard.edu/books/9780674013827)

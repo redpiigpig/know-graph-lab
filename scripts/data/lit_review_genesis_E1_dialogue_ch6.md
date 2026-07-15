@@ -40,7 +40,7 @@
 
 【Jones, J.-E.】（2012, rev. 2022）〈Locke on Real Essence〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：洛克：真實本質作為不可知微粒底層
+所屬面向：洛克：真實本質作為不可知的微粒底層
 立場：補充
 摘要：Jones 系統梳理洛克「真實本質＝事物內在但通常不可知的構造，可觀察性質依存其上」，並指出洛克認為我們無法以真實本質歸類事物，故無法獲得實體的科學知識。直接支撐本節「真實本質作為不可知底層」的文本依據，並交代 corpuscular 實在論 vs 約定論的詮釋分歧。
 > **全文**：[SEP: Locke on Real Essence](https://plato.stanford.edu/entries/real-essence/)
@@ -49,7 +49,7 @@
 
 【Kochiras, H.】（2009, rev. 2023）〈Locke's Philosophy of Science〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：洛克：真實本質作為不可知微粒底層
+所屬面向：洛克：真實本質作為不可知的微粒底層
 立場：補充
 摘要：Kochiras 闡述洛克的微粒論假說（物體由具基本性質的微小粒子構成）與其侷限，並指出人類官能無力偵測微粒、故無法達到自然哲學的 scientia，只能有概然的「感性知識」。為本節「微粒底層的不可知」提供精確的洛克微粒論與認識論限度註腳。
 > **全文**：[SEP: Locke's Philosophy of Science](https://plato.stanford.edu/entries/locke-philosophy-science/)
@@ -58,7 +58,7 @@
 
 【Tahko, T. E.】（2015）〈Natural Kind Essentialism Revisited〉，《Mind》124(495), 795–822
 語言：英文
-所屬面向：洛克：真實本質作為不可知微粒底層
+所屬面向：洛克：真實本質作為不可知的微粒底層
 立場：反例
 摘要：Tahko 主張微結構本質「並非不可知」，而是可由化學經驗探究確立必然關聯。直接與洛克「真實微粒底層永遠不可知」對立，作為 foil 顯示現代科學本質主義正是要把洛克所封存的不可知底層重新打開為可認識的本質。
 > **全文**：[Mind / DOI 10.1093/mind/fzv027](https://doi.org/10.1093/mind/fzv027)
@@ -102,7 +102,7 @@
 
 【Qu, H.; Radcliffe, E. S.】（2026）〈David Hume〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：休謨止於懷疑：經驗論的限度
+所屬面向：休謨止於懷疑：經驗論為何殺不死、也養不活
 立場：支持
 摘要：本條指出休謨採取「溫和的／學院派懷疑論」，降低信心程度並限縮探究範圍，同時其經驗論在界限內仍具建設性（人性科學、聯想原則）。直接支撐本節：休謨止於懷疑而不跨入形上學，標示經驗論「殺不死也養不活」本質的限度。（2026 新版，細節待核）
 > **全文**：[SEP: David Hume](https://plato.stanford.edu/entries/hume/)
@@ -111,7 +111,7 @@
 
 【Millican, P.】（2002）〈The Context, Aims, and Structure of Hume's First Enquiry〉，收於 P. Millican (ed.)《Reading Hume on Human Understanding》, Oxford University Press
 語言：英文
-所屬面向：休謨止於懷疑：經驗論的限度
+所屬面向：休謨止於懷疑：經驗論為何殺不死、也養不活
 立場：補充
 摘要：Millican 分析休謨《第一探究》如何宣稱自然的「終極springs與原則」對人類好奇心完全封閉，理性至多把現象化約為少數一般原因（彈性、重力、凝聚），卻無法再追問這些一般原因之因。為本節提供休謨自身對經驗論認識界限的文本與權威詮釋。
 > **全文**：[Millican 2002 (davidhume.org PDF)](https://davidhume.org/scholarship/papers/millican/2002_Chapter1.pdf)
@@ -120,7 +120,7 @@
 
 【Bird, A.; Tobin, E.】（2008, rev. 2022）〈Natural Kinds〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：休謨止於懷疑：經驗論的限度
+所屬面向：休謨止於懷疑：經驗論為何殺不死、也養不活
 立場：反例
 摘要：SEP 陳述 Kripke–Putnam 以後設必然性與 a posteriori 本質，主張科學可揭露隱藏的真實本質，正是要越過休謨止步之處去「養活」本質。作為 foil，凸顯經驗論限度之後當代形上學如何不止於懷疑而續走一步——與創生哲學「現象即本質」走法形成對照分歧。（作者署名以 SEP 最新版本頁為準，細節待核）
 > **全文**：[SEP: Natural Kinds](https://plato.stanford.edu/entries/natural-kinds/)

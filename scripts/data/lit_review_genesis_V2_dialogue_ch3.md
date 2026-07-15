@@ -1,115 +1,134 @@
-# 創生哲學 V2《意義、愛與神聖》第三章　愛作為願然的最高運動 — 逐節文獻對話地圖
+# 創生哲學 V1《願然：意欲、秩序與美》逐節文獻對話地圖
 
-> 卷代號 V2｜面向：價值論
-> 卷旨：意義的困難問題；虛無主義的價值論診斷；愛作為願然的最高運動；神聖性與空無美學；主體作為最高價值；第二軸心時代。
-> 本章旨趣：將「愛」定位為願然（意欲）的最高運動——「你值得我交託自身」的意欲；區分實然之愛 L 與應然之愛 L'；以信、望、愛為願然的三種時間性朝向；論證愛在價值階層中的最高位置。
+**卷**：V1（價值論）
+**章**：第五章　美的相對客觀性（relative objectivity）與文化主觀性（cultural subjectivity）
+**卷旨**：價值論是『願然』之學；願然與慾望（意欲的純化）；願然四象限與熵的宇宙方向性；美的共振生成論；美的相對客觀性與文化主觀性；真善美聖四向度階層。
 
 ---
 
-## 哲學
+## 第一節　審美相對客觀性：演化原型的形式沉澱
 
-### 第一小節：愛是「你值得我交託自身」的意欲
+### 自然科學
 
-【Frankfurt, H. G.】（2004）〈The Reasons of Love〉，《Princeton University Press》
+【Rhodes, G.】（2006）〈The Evolutionary Psychology of Facial Beauty〉，《Annual Review of Psychology》
 語言：英文
-所屬面向：愛是「你值得我交託自身」的意欲
+所屬面向：審美相對客觀性：演化原型的形式沉澱
 立場：支持
-摘要：法蘭克福主張愛是一種「願然的必然性」（volitional necessity），是意志對自身的自我限定，並且是「終極價值的源頭」——若無所愛，則無物對我們具有確定的內在價值。此說與本節「愛是把自身交託出去的意欲」高度同構：愛不是被動感受，而是主體意欲結構的自我奠定，故為強力盟友。
-> **全文**：[Princeton University Press](https://press.princeton.edu/books/paperback/9780691191478/the-reasons-of-love)
+摘要：本文系統回顧並後設分析平均化（averageness）、對稱性（symmetry）與性別二型性三項特徵，論證它們是「生物學基礎的美感標準」良好候選，並在男女臉孔、跨文化間皆具吸引力。直接支持本節「審美偏好有演化原型形式沉澱」之相對客觀核心。
+> **全文**：[Annual Reviews](https://doi.org/10.1146/annurev.psych.57.102904.190208)
 
-【Helm, B.】（2021）〈Love〉，《Stanford Encyclopedia of Philosophy》
+【Rhodes, G., Yoshikawa, S., Clark, A., et al.】（2001）〈Attractiveness of Facial Averageness and Symmetry in Non-Western Cultures: In Search of Biologically Based Standards of Beauty〉，《Perception》
 語言：英文
-所屬面向：愛是「你值得我交託自身」的意欲
+所屬面向：審美相對客觀性：演化原型的形式沉澱
 立場：補充
-摘要：SEP 梳理愛的四大理論，其中「賦值論」（valuing）分為「鑑賞」（appraisal，回應對象既有的價值）與「賦予」（bestowal，辛格主張愛在對象身上創造價值）兩路。本節「你值得我交託自身」恰落在鑑賞與賦予的交界——既肯認他者之值得，又以交託賦予其價值，可借此譜系定位本節命題。
-> **全文**：[plato.stanford.edu/entries/love](https://plato.stanford.edu/entries/love/)
+摘要：以中、日參與者評判同種族臉孔，發現提高平均化會提升吸引力、遠離平均則降低，且對稱化亦增吸引力。作為非西方樣本的旁證，補強審美原型「跨文化共享」之相對客觀性主張。
+> **全文**：[SAGE](https://doi.org/10.1068/p3123)
 
-【Velleman, J. D.】（1999）〈Love as a Moral Emotion〉，《Ethics 109(2): 338–374》
+### 心理學
+
+【Cook, R., et al.（Germine, L., Russell, R. 等）】（2015）〈Individual Aesthetic Preferences for Faces Are Shaped Mostly by Environments, Not Genes〉，《Current Biology》
 語言：英文
-所屬面向：愛是「你值得我交託自身」的意欲
+所屬面向：審美相對客觀性：演化原型的形式沉澱
 立場：反例
-摘要：維爾曼採康德式進路，主張愛是對他者「作為理性本性之實例」的普遍價值之敬重，而非對特定個體的偏私交託。這與本節把愛奠基於「對這一個你的自身交託」相左：維爾曼的愛指向普遍理性人格，本章的愛指向不可替換的具體他者，構成典型反例。
-> **全文**：[DOI:10.1086/233898](https://doi.org/10.1086/233898)
+摘要：以大規模雙生子研究分解臉孔審美偏好之變異來源，發現「個體間」偏好差異主要由非共享環境（個人經驗）而非基因決定。構成本節 foil：即使共享原型存在，具體偏好的高度後天可塑性挑戰「演化形式沉澱」的解釋強度。（作者排序細節待核）
+> **全文**：[Cell Press](https://doi.org/10.1016/j.cub.2015.08.048)
 
-【Lacan, J.】（1975）〈Le Séminaire XX: Encore〉，《Éditions du Seuil》
-語言：法文（細節待核：中譯／英譯版本繁多）
-所屬面向：愛是「你值得我交託自身」的意欲
-立場：反例
-摘要：拉岡名言「愛是把你所沒有的東西，給予一個並不想要它的人」，並主張「性關係並不存在」，愛只是填補關係之不可能的幻象、是對「缺」（lack）的補償。此說徹底否定「你值得我交託自身」的正向意欲結構，把交託拆解為欲望的誤認，故為強烈反例。
-> **全文**：[nosubject.com: There is no sexual relation](https://nosubject.com/There_is_no_sexual_relation)
+---
 
-### 第二小節：L 與 L'：實然之愛與應然之愛的二維張力
+## 第二節　美的文化主觀性：世代叛逆與歷史變奏
 
-【Kierkegaard, S.】（1847）〈Works of Love〉，《C. A. Reitzel（英譯 Princeton University Press, 1995）》
-語言：丹麥文（英譯）
-所屬面向：L 與 L'：實然之愛與應然之愛的二維張力
+### 自然科學
+
+【Boucherie, L., Kumar, S., Ledebur, K., Lohse, A., Sliwa, K.】（2025）〈Cultural evolution of human beauty standards〉，《arXiv preprint 2512.08861》
+語言：英文
+所屬面向：美的文化主觀性：世代叛逆與歷史變奏
 立場：支持
-摘要：齊克果主張唯有作為「應當」（命令）的愛，才永恆地擺脫變動、獲得自由——這正是本節「應然之愛 L'」的古典原型：愛不只是現實情感的有無（L），更是一種規範性朝向。其「你應當愛」的二階結構支持本章將愛拆為實然／應然兩維的張力分析。
-> **全文**：[sorenkierkegaard.org: Works of Love commentary](https://www.sorenkierkegaard.org/works-of-love.html)
+摘要：以 79 萬餘筆 25 年廣告／時尚資料，量化美感標準如何透過影響力樞紐與協作網絡擴散變遷。直接支持本節「美隨世代與歷史變奏」之文化主觀性：標準的演進是一個網絡化的歷時過程，邊緣持續產生新變異。
+> **全文**：[arXiv](https://arxiv.org/abs/2512.08861)
 
-【hooks, b.】（2000）〈All About Love: New Visions〉，《William Morrow》
-語言：英文
-所屬面向：L 與 L'：實然之愛與應然之愛的二維張力
+### 哲學
+
+【Bourdieu, P.】（1984［1979］）〈Distinction: A Social Critique of the Judgement of Taste〉，《Harvard University Press》
+語言：英文（法譯英）
+所屬面向：美的文化主觀性：世代叛逆與歷史變奏
 立場：補充
-摘要：胡克斯把愛重新定義為動詞——「為他者的靈性成長而擴展自身的意志」，是須日日實踐的倫理行動而非被動感受。此說補強本節：應然之愛 L' 不是空懸理想，而是可被選擇、被實踐、被責任化的意志，使 L→L' 的彌合具備可操作性。
-> **全文**：[bellhooksbooks.com: Love Quotes](https://bellhooksbooks.com/bell-hooks-quotes/love-quotes/)
+摘要：以法國 1960 年代實證調查論證「品味不是個人的，而是社會階級的反映」，高文化資本者設定「good taste」並以之區隔排他。作為旁證，補強美的判準深嵌於社會結構與歷史變奏，而非純然客觀。
+> **全文**：[Harvard UP](https://www.hup.harvard.edu/books/9780674212770)
 
-【Schopenhauer, A.】（1844）〈Die Metaphysik der Geschlechtsliebe（《作為意志與表象的世界》第二卷補遺）〉，《F. A. Brockhaus》
-語言：德文
-所屬面向：L 與 L'：實然之愛與應然之愛的二維張力
+### 心理學
+
+【Rhodes, G.】（2006）〈The Evolutionary Psychology of Facial Beauty〉，《Annual Review of Psychology》
+語言：英文
+所屬面向：美的文化主觀性：世代叛逆與歷史變奏
 立場：反例
-摘要：叔本華主張一切戀愛皆是「求生意志」對個體的欺騙——把僅對物種有價值者偽裝成對個體有價值，激情必在目的達成後幻滅。若實然之愛 L 本質上是物種的幻覺，則根本無「應然之愛 L'」可言。此說從根上否定 L／L' 的規範性二維結構，為強力反例。
-> **全文**：[Metaphysics of Love (Haldane 英譯 PDF)](https://pryazhnikov.wordpress.com/wp-content/uploads/2008/06/mataphysics_of_love_eng.pdf)
+摘要：本回顧主張平均、對稱、性別二型性「跨文化」一致受偏好，傾向把美錨定於生物基礎而非文化。對本節「美是文化主觀的、隨世代叛逆而變」構成 foil：若核心審美維度普世共享，純文化主觀論將被收窄。
+> **全文**：[Annual Reviews](https://doi.org/10.1146/annurev.psych.57.102904.190208)
 
-### 第三小節：信、望、愛作為願然的三種時間性朝向
+---
 
-【Pieper, J.】（1986）〈Faith, Hope, Love〉，《Ignatius Press（德文原著 1935–1972 結集）》
-語言：英文（德文原著）
-所屬面向：信、望、愛作為願然的三種時間性朝向
+## 第三節　願然共振：基頻與變奏的統一
+
+### 自然科學
+
+【Boucherie, L., Kumar, S., Ledebur, K., Lohse, A., Sliwa, K.】（2025）〈Cultural evolution of human beauty standards〉，《arXiv preprint 2512.08861》
+語言：英文
+所屬面向：願然共振：基頻與變奏的統一
 立場：支持
-摘要：皮柏將信、望、愛三超德合為一書處理，並在《論望德》中把望德置於「人作為在途者（in via）、處於生成歷程」的時間性存在中加以分析。此與本節把信、望、愛讀為願然的三種時間性朝向（過去之信託、未來之盼望、當下之愛）直接呼應，是核心盟友。
-> **全文**：[Faith Hope Love (Ignatius Press)](https://ignatius.com/faith-hope-love-fhlp/)
+摘要：研究揭示「多樣性悖論」——代表性在邊緣擴張，但中位數模特身形 25 年保持穩定（中心穩定、邊緣變異）。此「中心不動／邊緣變奏」結構，恰可作為本節「基頻穩定＋文化變奏共構同一審美共振」的實證旁證。
+> **全文**：[arXiv](https://arxiv.org/abs/2512.08861)
 
-【Marcel, G.】（1951）〈Homo Viator: Introduction to a Metaphysic of Hope〉，《Henry Regnery / Aubier》
-語言：英文（法文原著）
-所屬面向：信、望、愛作為願然的三種時間性朝向
+### 心理學
+
+【Freedberg, D., & Gallese, V.】（2007）〈Motion, Emotion and Empathy in Aesthetic Experience〉，《Trends in Cognitive Sciences》
+語言：英文
+所屬面向：願然共振：基頻與變奏的統一
 立場：補充
-摘要：馬塞爾把人定位為「在途者」（Homo Viator），望德是一種指向未來的存有論開放，須與「希望某個特定 X」的欲望、與樂觀主義嚴格區分。此為本節「望」作為願然之未來向時間性朝向提供精細的現象學支撐，補足三德時間結構中的盼望軸。
-> **全文**：[Gabriel Marcel (SEP)](https://plato.stanford.edu/entries/marcel/)
+摘要：提出審美經驗奠基於「具身模擬」——觀者透過鏡像機制模擬作品中的動作、情緒與身體感而產生共鳴。為本節「美是主客之間的共振生成」提供神經機制旁證：審美不是被動接收，而是身體層次的共振。
+> **全文**：[ScienceDirect](https://doi.org/10.1016/j.tics.2007.02.003)
 
-【Nygren, A.】（1953）〈Agape and Eros〉，《SPCK / University of Chicago Press》
-語言：英文（瑞典文原著 1930–1936）
-所屬面向：信、望、愛作為願然的三種時間性朝向
+【Reber, R., Schwarz, N., & Winkielman, P.】（2004）〈Processing Fluency and Aesthetic Pleasure: Is Beauty in the Perceiver's Processing Experience?〉，《Personality and Social Psychology Review》
+語言：英文
+所屬面向：願然共振：基頻與變奏的統一
 立場：反例
-摘要：尼格倫把愛二分為下降、非求取的神聖 agape 與上升、自我中心的 eros，並主張唯 agape 才是真正基督教之愛。此與本章將愛理解為願然之最高運動（願然本身即帶意欲／上升動勢）相牴觸：本章不接受 agape／eros 的截然二分，亦不把意欲性逐出真愛之外，故為反例。
-> **全文**：[Agape and Eros (Wikipedia 條目與書誌)](https://en.wikipedia.org/wiki/Agape_and_Eros)
+摘要：主張審美愉悅是「知覺者處理流暢度」的函數——越易處理之物越受偏好，把對稱、原型性等效應一律歸於主體內的處理動力學。對本節「主客共振生成」構成 foil：美若全在知覺者一端的流暢經驗，則「客體潛能與主體願然共振」之雙向性將被質疑。
+> **全文**：[SAGE](https://doi.org/10.1207/s15327957pspr0804_3)
 
-### 第四小節：愛作為願然的最高位置
+### 哲學
 
-【Scheler, M.】（1916）〈Ordo Amoris〉，《Gesammelte Werke X（英譯收於 Selected Philosophical Essays）》
-語言：德文
-所屬面向：愛作為願然的最高位置
+【Shusterman, R.（Stanford Encyclopedia of Philosophy）】（2025 修訂）〈Dewey's Aesthetics〉，《Stanford Encyclopedia of Philosophy》
+語言：英文
+所屬面向：願然共振：基頻與變奏的統一
+立場：補充
+摘要：闡述杜威《藝術即經驗》以「做與受（doing and undergoing）」的節律互動界定審美經驗，視之為有機體與環境互動的強化形態。為本節「共振」提供哲學旁證：美在主客交互的節律統一中生成，而非孤立客體屬性。（SEP 條目作者署名待核）
+> **全文**：[SEP](https://plato.stanford.edu/entries/dewey-aesthetics/)
+
+---
+
+## 第四節　審美判斷的重量：鑑賞力作為願然的高階展現
+
+### 哲學
+
+【Kant, I.（Stanford Encyclopedia of Philosophy: Kant's Aesthetics and Teleology）】（條目）〈Kant's Aesthetics and Teleology〉，《Stanford Encyclopedia of Philosophy》
+語言：英文
+所屬面向：審美判斷的重量：鑑賞力作為願然的高階展現
 立場：支持
-摘要：謝勒主張價值依「感官—生命—精神—神聖」成階層秩序，而此秩序由愛奠定（ordo amoris）；愛不只是情感，更是「看見並排序價值」的認知行動，把位格置於價值之巔。此與本節「愛作為願然的最高位置」高度契合：愛是價值階層的構成性頂點，是強力盟友。
-> **全文**：[Ordo amoris (Wikipedia 條目與書誌)](https://en.wikipedia.org/wiki/Ordo_amoris)
+摘要：康德主張鑑賞判斷雖基於個人愉悅之感（主觀），卻訴求對所有人有效（普遍），靠「共通感（sensus communis）」這一主觀原則調和——即「主觀普遍性」。支持本節「審美判斷具有超越個人偏好的重量」，鑑賞力是願然的高階、可要求他人認同的展現。
+> **全文**：[SEP](https://plato.stanford.edu/entries/kant-aesthetics/)
 
-【Wolf, S.】（2010）〈Meaning in Life and Why It Matters〉，《Princeton University Press》
+### 社會學／哲學
+
+【Bourdieu, P.】（1984［1979］）〈Distinction: A Social Critique of the Judgement of Taste〉，《Harvard University Press》
+語言：英文（法譯英）
+所屬面向：審美判斷的重量：鑑賞力作為願然的高階展現
+立場：反例
+摘要：論證「鑑賞力／品味」並非純粹獨立的審美能力，而是學院與家庭資本累積的效應，是區隔階級的社會武器。對本節「鑑賞力是願然高階展現、審美判斷有獨立重量」構成 foil：把判斷之「重量」還原為階級權力，質疑其規範性自主。
+> **全文**：[Harvard UP](https://www.hup.harvard.edu/books/9780674212770)
+
+### 心理學
+
+【Reber, R., Schwarz, N., & Winkielman, P.】（2004）〈Processing Fluency and Aesthetic Pleasure: Is Beauty in the Perceiver's Processing Experience?〉，《Personality and Social Psychology Review》
 語言：英文
-所屬面向：愛作為願然的最高位置
+所屬面向：審美判斷的重量：鑑賞力作為願然的高階展現
 立場：補充
-摘要：沃爾夫主張意義生於「主觀吸引遇上客觀價值」——對有客觀價值之事物的「主動而充滿愛的投入」。此為本章把愛安置於價值論最高位提供旁證：愛（主動投入）正是主觀願然與客觀價值交會處，意義由此生成，呼應 V2 全卷「意義—愛—神聖」的主軸。
-> **全文**：[Wolf, Meaning in Life (LSE 授課版 PDF)](https://personal.lse.ac.uk/ROBERT49/teaching/ph103/pdf/WolfSusanne_2010_Meaning-in-Life-and-Why-It-Matters.pdf)
-
-【Frankfurt, H. G.】（2004）〈The Reasons of Love〉，《Princeton University Press》
-語言：英文
-所屬面向：愛作為願然的最高位置
-立場：反例
-摘要：法蘭克福雖以愛為終極價值之源，卻在結論主張「最純粹的愛終究是自愛」（self-love），把愛的最高形態收歸於對自身的全心。這與本節將「最高位置」歸於對他者的願然運動（V2 後章更以主體／他者為最高價值）相反：誰是愛之頂點的承載者——自我或他者——構成關鍵分歧，故列為反例。
-> **全文**：[The Reasons of Love (NDPR 書評)](https://ndpr.nd.edu/reviews/the-reasons-of-love/)
-
-【Plato】（約前 385–370）〈Symposium（會飲篇，Diotima 之愛的階梯）〉，《古典文本（多版本）》
-語言：希臘文
-所屬面向：愛作為願然的最高位置
-立場：反例
-摘要：柏拉圖藉狄歐提瑪「愛的階梯」把愛的最高位置定為脫離具體個體、上升至「美本身」的理型，愛終究是朝向不朽與永恆理型的回歸。本章明標「柏拉圖的錯誤：愛是生成，非回歸」，主張愛之巔在共構生成而非離身上升，故會飲篇之愛論為本節直接對立的反例。
-> **全文**：[Platonic love (Wikipedia 條目與文本指引)](https://en.wikipedia.org/wiki/Platonic_love)
+摘要：以處理流暢度框架整合「早期偏好 vs 文化習得」對品味的交互影響，顯示專家因熟稔而對特定形式更流暢、更愉悅。作為旁證，補強「鑑賞力可後天養成並改變審美判斷之重量」這一高階展現的機制側面。
+> **全文**：[SAGE](https://doi.org/10.1207/s15327957pspr0804_3)

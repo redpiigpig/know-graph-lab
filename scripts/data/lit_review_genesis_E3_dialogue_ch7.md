@@ -38,7 +38,7 @@
 
 【Nagel, T.】（1986）〈The View from Nowhere〉，《Oxford University Press》
 語言：英文
-所屬面向：反身認識的完成：認識你自己作為識然入口
+所屬面向：反身認識的完成：認識你自己作為認識論的入口
 立場：支持
 摘要：內格爾論證客觀化衝動（「無所從來的觀點」）永遠無法徹底擺脫主體視角，任何實際觀點都是某人的觀點，客觀與主觀須並存。此支持「反身認識」——認識必回指認識者自身，是識然入口的哲學盟友。
 > **全文**：[The View from Nowhere (OUP)](https://global.oup.com/academic/product/the-view-from-nowhere-9780195056440)
@@ -47,7 +47,7 @@
 
 【作者不詳（Wikipedia 條目）】（古典希臘）〈Know thyself（γνῶθι σεαυτόν）〉，《Delphic Maxims / Wikipedia 概述》
 語言：英文
-所屬面向：反身認識的完成：認識你自己作為識然入口
+所屬面向：反身認識的完成：認識你自己作為認識論的入口
 立場：補充
 摘要：德爾斐箴言「認識你自己」刻於阿波羅神廟入口，從古希臘宗教、柏拉圖靈魂論到現代精神分析，一直是知識論的樞紐命令而非單純倫理格言。作為旁證，為本節「認識你自己作為識然入口」提供跨傳統的源頭定位。（原始出處為刻銘，細節待核）
 > **全文**：[Know thyself (Wikipedia)](https://en.wikipedia.org/wiki/Know_thyself)
@@ -56,7 +56,7 @@
 
 【Nisbett, R. E. & Wilson, T. D.】（1977）〈Telling More Than We Can Know: Verbal Reports on Mental Processes〉，《Psychological Review, 84(3), 231–259》
 語言：英文
-所屬面向：反身認識的完成：認識你自己作為識然入口
+所屬面向：反身認識的完成：認識你自己作為認識論的入口
 立場：反例
 摘要：尼斯貝特與威爾森實證顯示人對高階認知歷程幾乎無直接內省通道，「認識你自己」的自我報告常是事後編造的因果理論而非真實內省。此構成關鍵 foil：反身認識若天真自信便落空，提醒識然入口不可等同透明的自我透視。
 > **全文**：[Nisbett & Wilson 1977 (PDF)](https://home.csulb.edu/~cwallis/382/readings/482/nisbett%20saying%20more.pdf)

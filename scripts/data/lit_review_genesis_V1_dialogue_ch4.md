@@ -1,117 +1,155 @@
 # 創生哲學 V1《願然：意欲、秩序與美》逐節文獻對話地圖
+## 第三章　願然的四象限與熵的宇宙方向性
 
-**卷代號**：V1　**領域**：價值論
-**本章**：第四章　美的共振生成論
-**章旨**：以「共振生成論」解消美學的客觀論／主觀論二難——美既非藏在客體背後的本質，也非純粹主觀投射，而是客體潛能性與主體意向性在「願然結構」中共振而生成的關係性事件。對應全卷主張「美的相對客觀性與文化主觀性」「真善美聖四向度階層」。
+> 卷代號 V1｜領域：價值論｜卷旨：價值論是「願然」之學；願然與慾望（意欲的純化）；願然四象限與熵的宇宙方向性；美的共振生成論；美的相對客觀性與文化主觀性；真善美聖四向度階層。
+> 本章四節：意欲的兩軸；熵的宇宙方向性；健康的願然之動態調控；兩種失衡。
 
 ---
 
-## 第一節　兩種失敗的美學：客觀論的危機與純粹主觀論的崩解
+# 小節一：意欲的兩軸：從論述到象限的推導
 
-### 哲學
+## 哲學
 
-【Mothersill, M.】（1984）〈Beauty Restored〉，《Oxford: Clarendon Press》
-語言：英文
-所屬面向：兩種失敗的美學：客觀論的危機與純粹主觀論的崩解
+【Nietzsche, F.】（1872）〈Die Geburt der Tragödie（悲劇的誕生）〉，《Leipzig: E. W. Fritzsch》
+語言：英文（研究文獻）
+所屬面向：意欲的兩軸：從論述到象限的推導
 立場：補充
-摘要：莫瑟希爾主張「品味判斷是真實可成立的判斷，但不存在品味的原理或法則」，即有美的真理卻無美的定律。此一「有真理無法則」的張力旁證本節的診斷：純客觀論（求美之法則）與純主觀論（取消美之真值）兩端皆失敗，必須走向第三條路。
-> **全文**：[Beauty Restored (OUP)](https://global.oup.com/academic/product/beauty-restored-9780198249603)
+摘要：尼采以阿波羅（秩序、形式、夢的清明）對戴奧尼索斯（激情、迷醉、自他界線消融）為文化與藝術的兩極張力，真正的悲劇生於兩者的拉鋸而非任一單極。此一「秩序—激情」二元軸恰可作為「意欲兩軸」推導的古典原型，旁證象限化並非任意建構。
+> **全文**：[Philosophy Break: The Apollonian and Dionysian](https://philosophybreak.com/articles/apollonian-and-dionysian-nietzsche-on-art-and-the-psyche/)
 
-【Costello, D. / Stecker, R. 等／SEP】（2024）〈Aesthetic Judgment〉，《Stanford Encyclopedia of Philosophy》
-語言：英文
-所屬面向：兩種失敗的美學：客觀論的危機與純粹主觀論的崩解
-立場：補充
-摘要：此條目系統梳理「主觀普遍性」這一美學核心難題——審美判斷既奠基於愉悅（主觀），又主張普遍同意（客觀），兩特性彼此張力。此正是本節欲解消的二難之學界定位，旁證客觀／主觀單邊化皆無法成立。
-> **全文**：[SEP: Aesthetic Judgment](https://plato.stanford.edu/entries/aesthetic-judgment/)
-
-【Zangwill, N.】（2001）〈The Metaphysics of Beauty〉，《Ithaca, NY: Cornell University Press》
-語言：英文
-所屬面向：兩種失敗的美學：客觀論的危機與純粹主觀論的崩解
+【Schopenhauer, A.】（1818）〈Die Welt als Wille und Vorstellung（作為意志與表象的世界）〉，《Leipzig: Brockhaus》
+語言：英文（研究文獻）
+所屬面向：意欲的兩軸：從論述到象限的推導
 立場：反例
-摘要：贊威爾主張審美性質為「真實」性質，但必然依附於感性性質，且因感性性質本身依心而具一種弱客觀的審美實在論。此立場拒絕把美收編為純關係生成，對本節「客觀論已危機」的判斷構成反例——他證成了一種仍可辯護的（弱）審美客觀論。
-> **全文**：[The Metaphysics of Beauty (DOI)](https://doi.org/10.7591/9781501711350)
+摘要：叔本華主張一切自然與人都是盲目、無饜「生命意志」的表現，意欲（striving）本身即苦難之源，最高解脫是禁慾式的「意志否定」。此說把意欲化約為單一負向衝動、終點是清空意志，與本節「意欲可純化、可分軸調控且具正向結構」相反，構成 foil。
+> **全文**：[SEP: Schopenhauer](https://plato.stanford.edu/entries/schopenhauer/)
 
----
+## 心理學
 
-## 第二節　美的共振生成論：客體潛能性、主體意向性與願然結構
-
-### 心理學
-
-【Reber, R., Schwarz, N., Winkielman, P.】（2004）〈Processing Fluency and Aesthetic Pleasure: Is Beauty in the Perceiver's Processing Experience?〉，《Personality and Social Psychology Review, 8(4), 364–382》
+【Gray, J. A.】（1982/1987）〈The Neuropsychology of Anxiety; Reinforcement Sensitivity Theory〉，《Oxford University Press》
 語言：英文
-所屬面向：美的共振生成論：客體潛能性、主體意向性與願然結構
+所屬面向：意欲的兩軸：從論述到象限的推導
 立場：支持
-摘要：三位作者主張審美愉悅是知覺者「處理流暢度」的函數——對稱、原型性、對比等客體特徵之所以美，是因它們提升主體處理的流暢經驗。此為共振生成論提供心理學支持：美不在客體亦不在主體單方，而生成於客體潛能與主體加工的共振交界。
-> **全文**：[Reber et al. 2004 (DOI)](https://doi.org/10.1207/s15327957pspr0804_3)
-
-### 哲學
-
-【SEP（Aesthetic Judgment, §Response-Dependence）】（2024）〈Response-Dependence Theories of Aesthetic Value〉，《Stanford Encyclopedia of Philosophy》
-語言：英文
-所屬面向：美的共振生成論：客體潛能性、主體意向性與願然結構
-立場：補充
-摘要：反應依賴論主張審美性質之成立有賴於觀察者的反應——某特徵唯有在能於觀察者中喚起審美經驗時，方算審美性質。此框架旁證本節「主體意向性為美之必要環節」，與共振生成論的雙構結構同調，惟創生哲學再加入「願然結構」一維。（不同學者對反應依賴的詮釋互不相容，細節待核）
-> **全文**：[SEP: Aesthetic Judgment](https://plato.stanford.edu/entries/aesthetic-judgment/)
-
-【Zangwill, N.】（2001）〈Beauty (in The Metaphysics of Beauty)〉，《Ithaca, NY: Cornell University Press》
-語言：英文
-所屬面向：美的共振生成論：客體潛能性、主體意向性與願然結構
-立場：反例
-摘要：贊威爾主張審美性質「必然依附感性性質」，把美的根據鎖定在客體側的感性基礎而非主客共振。此對本節「美生成於客體潛能性與主體意向性之共振」構成反例——他傾向把主體反應降為派生而非構成性環節。
-> **全文**：[The Metaphysics of Beauty (DOI)](https://doi.org/10.7591/9781501711350)
+摘要：Gray 的強化敏感性理論提出兩套相對獨立的神經動機系統——趨近獎賞的行為激發系統（BAS）與抑制趨避的行為抑制系統（BIS）。此「激發 vs 抑制」雙軸為「意欲兩軸（激情意欲 vs 秩序意欲）」提供可操作的神經科學支撐，支持以正交雙軸而非單一連續譜來描述意欲。
+> **全文**：[Frontiers: BAS/BIS and affect](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2019.00424/full)
 
 ---
 
-## 第三節　美的潛能與美的現實：隱匿之美的本體地位
+# 小節二：熵的宇宙方向性：秩序意欲與激情意欲的物理根基
 
-### 哲學
+## 自然科學
 
-【Choi, S., Fara, M.／SEP】（2021）〈Dispositions〉，《Stanford Encyclopedia of Philosophy》
+【Prigogine, I.】（1967/1977）〈Dissipative Structures and Self-Organization in Non-Equilibrium Systems〉，《Nobel Lecture / Wiley》
 語言：英文
-所屬面向：美的潛能與美的現實：隱匿之美的本體地位
+所屬面向：熵的宇宙方向性：秩序意欲與激情意欲的物理根基
 立場：支持
-摘要：此條目論證傾性（如「易碎」）即使未被觸發仍真實存在——傾性內蘊一個尚未發生的顯現之指涉。此一「未顯現的力」之本體學支持本節：隱匿之美作為「美的潛能」可在無人觀照下仍具本體地位，正如易碎物未碎時仍易碎。
-> **全文**：[SEP: Dispositions](https://plato.stanford.edu/entries/dispositions/)
+摘要：普里高津的耗散結構理論說明遠離平衡的開放系統可藉能量流自發組織出秩序，化解「第二定律使熵增」與「生命產生有序」的表面矛盾——宇宙整體熵增、局部卻可生成結構。此為「秩序意欲有物理根基、與熵方向性共構」提供關鍵自然科學支撐。
+> **全文**：[Wikipedia: Entropy as an arrow of time](https://en.wikipedia.org/wiki/Entropy_as_an_arrow_of_time)
 
-【Hume, D.／SEP（Hume's Aesthetics）】（2024）〈Of the Standard of Taste / Hume's Aesthetics〉，《Stanford Encyclopedia of Philosophy》
+【Friston, K. J.】（2010）〈The free-energy principle: a unified brain theory?〉，《Nature Reviews Neuroscience 11, 127–138》
 語言：英文
-所屬面向：美的潛能與美的現實：隱匿之美的本體地位
+所屬面向：熵的宇宙方向性：秩序意欲與激情意欲的物理根基
 立場：補充
-摘要：休謨把美分析為一種傾性／能力——客體在合宜條件下、對受過陶養的鑑賞者「產生愉悅之力」。此一「美即一複雜因果關係之傾性」的分析旁證本節「美的潛能 vs 美的現實」之區分：美需合宜條件方由潛能轉為現實。
-> **全文**：[SEP: Hume's Aesthetics](https://plato.stanford.edu/entries/hume-aesthetics/)
+摘要：自由能原理主張生物自組織即是長期最小化「驚異」（變分自由能），任何自維持系統都內建抑制熵增、維持低熵有序態的生成模型。此把「秩序意欲」連到熱力學—貝氏推論的統一框架，旁證有序傾向不是隱喻而有物理—資訊根基。
+> **全文**：[Nature Reviews Neuroscience: nrn2787](https://www.nature.com/articles/nrn2787)
 
-【Heidegger, M.／SEP（Heidegger's Aesthetics）】（2024）〈The Origin of the Work of Art / Heidegger's Aesthetics〉，《Stanford Encyclopedia of Philosophy》
+【Lineweaver, C. H.（評）／Skene, K. R.（主張者）】（2025）〈Maximum Entropy Production Principle of Thermodynamics for the Birth and Evolution of Life〉，《Entropy / PMC12025891》
 語言：英文
-所屬面向：美的潛能與美的現實：隱匿之美的本體地位
+所屬面向：熵的宇宙方向性：秩序意欲與激情意欲的物理根基
 立場：反例
-摘要：海德格主張美是真理作為「無蔽」（aletheia）的發生，「美是真理之本質的賜予」，美乃存有自我遮蔽中的開顯事件，而非可儲存待顯的「傾性／潛能」。此非傾性化、事件化的美觀對本節以「潛能—現實」框定隱匿之美構成反例。
-> **全文**：[SEP: Heidegger's Aesthetics](https://plato.stanford.edu/entries/heidegger-aesthetics/)
+摘要：最大熵產生原理（MEPP）主張生命系統傾向以最大速率產生熵、其方向性純由耗散最大化決定，且批評者指其陷於目的論與啟發式的爭議。此把「宇宙方向性」完全歸於最大耗散（偏激情極）而非秩序生成，與本節「秩序意欲亦有物理根基」相張，且其目的論爭議警示勿把熵方向性過度形上化，構成 foil。
+> **全文**：[PMC12025891: MEPP for Life](https://pmc.ncbi.nlm.nih.gov/articles/PMC12025891/)
 
 ---
 
-## 第四節　現象即本質：關係性優先的美學論
+# 小節三：健康的願然：兩極之間的動態調控
 
-### 哲學
+## 心理學
 
-【Sibley, F.】（1959）〈Aesthetic Concepts〉，《The Philosophical Review, 68(4), 421–450》
+【Csikszentmihalyi, M.】（1990）〈Flow: The Psychology of Optimal Experience〉，《New York: Harper & Row》
 語言：英文
-所屬面向：現象即本質：關係性優先的美學論
+所屬面向：健康的願然：兩極之間的動態調控
 立場：支持
-摘要：希布利論證審美概念「非條件支配」——不存在任何非審美特徵之集合可充分地保證某審美詞的應用，審美性質只能在知覺中以「品味／敏感」當場見出。此支持本節「現象即本質、關係性優先」：美不可化約為背後規則或固有屬性，而顯現於知覺關係之中。
-> **全文**：[Aesthetic Concepts (JSTOR)](https://doi.org/10.2307/2182490)
+摘要：契克森米哈伊指出最優體驗「心流」發生於挑戰與技能高度平衡之際——挑戰過高生焦慮、技能過剩流於無聊。此「兩極之間的動態平衡帶才是最優狀態」直接支持「健康願然＝兩極之間動態調控」的命題。
+> **全文**：[PositivePsychology: Father of Flow](https://positivepsychology.com/mihaly-csikszentmihalyi-father-of-flow/)
 
-### 自然科學
+## 哲學
 
-【Lee, H., Van Geert, E., Çelen, E., Marjieh, R., van Rijn, P., Park, M., Jacoby, N.】（2025）〈Visual and Auditory Aesthetic Preferences Across Cultures〉，《arXiv:2502.14439》
-語言：英文
-所屬面向：現象即本質：關係性優先的美學論
+【Aristotle（亞里斯多德）】（c. 340 BCE）〈Nicomachean Ethics, Book II（尼各馬可倫理學‧卷二）〉，《Oxford: Clarendon (trans.)》
+語言：英文（研究文獻）
+所屬面向：健康的願然：兩極之間的動態調控
 立場：補充
-摘要：本研究蒐集近 5,000 名受試者、跨 10 國逾 40 萬筆偏好判斷，發現對稱與曲線形偏好跨文化一致，色彩與旋律偏好則高度因文化而異，結論為審美偏好「生成於共享知覺機制與文化學習之交互」。此大規模實證旁證本節「關係性優先」：美既非純客觀亦非純主觀，而在感知者—文化關係場中生成。
-> **全文**：[arXiv:2502.14439](https://arxiv.org/abs/2502.14439)
+摘要：亞里斯多德的「中道」主張每一品德皆居於過度與不及兩惡之間（如勇敢介於魯莽與怯懦），且須因時因人動態裁量、由習慣養成。此為「兩極間調控即健康」提供倫理學古典旁證，但其靜態「定點」式中庸與本節強調的「動態調控」有別。
+> **全文**：[Wikipedia: Golden mean (philosophy)](https://en.wikipedia.org/wiki/Golden_mean_(philosophy))
 
-【Zangwill, N. / Pettit, P. 等（response-dependence vs realism 之辯）】（2022）〈Response-dependence and aesthetic realism: Zangwill and Pettit〉，《（學術論文，刊名細節待核）》
+【《中庸》（Zhongyong，子思傳）】（戰國）〈中庸〉，《禮記（後獨立成經）》
+語言：中文
+所屬面向：健康的願然：兩極之間的動態調控
+立場：補充
+摘要：《中庸》以「中」（不偏不倚之平衡）合「庸」（恆常），主張喜怒哀樂發而中節謂之「和」，並以「過猶不及」誡兩端之失。此東方旁證印證「兩極間調控」為跨傳統共識，且「致中和」帶有時中、隨境調節的動態意味，較亞氏定點式中道更近本節旨趣。
+> **全文**：[Frontiers: Confucian Harmony for Mental Health](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.870828/full)
+
+## 自然科學
+
+【Langton, C. G.】（1990）〈Computation at the Edge of Chaos: Phase Transitions and Emergent Computation〉，《Physica D: Nonlinear Phenomena 42, 12–37》
 語言：英文
-所屬面向：現象即本質：關係性優先的美學論
+所屬面向：健康的願然：兩極之間的動態調控
+立場：支持
+摘要：Langton 以 λ 參數證明細胞自動機在純秩序（低 λ）與純混沌（高 λ）之間的「混沌邊緣」臨界帶（λ≈0.45–0.50）達到最大計算能力與最大複雜度。此「最優狀態恰在兩極之間的動態臨界帶」為「健康願然＝兩極間動態調控」提供強力的複雜系統科學支撐。
+> **全文**：[Langton 1990 全文 PDF](https://shinyverse.org/al4ai/papers/Langton.EdgeOfChaos.pdf)
+
+---
+
+# 小節四：兩種失衡：過度秩序的僵化與過度激情的耗散
+
+## 心理學
+
+【McEwen, B. S.】（1998）〈Stress, Adaptation, and Disease: Allostasis and Allostatic Load〉，《Annals of the New York Academy of Sciences 840, 33–44》
+語言：英文
+所屬面向：兩種失衡：過度秩序的僵化與過度激情的耗散
+立場：支持
+摘要：McEwen 的「適應負荷」模型指出，生理系統長期「過度活動或活動不足」（dysregulation）皆會把恆定調節推離常態而致病——過度反應致耗損、調控失靈則僵化。此正對應「過度激情的耗散」與「過度秩序的僵化」兩種失衡，支持以雙向失調而非單向過勞來理解病理。
+> **全文**：[McEwen 1998 (Wiley)](https://nyaspubs.onlinelibrary.wiley.com/doi/10.1111/j.1749-6632.1998.tb09546.x)
+
+【Baumeister, R. F., Vohs, K. D., & Tice, D. M.】（2007）〈The Strength Model of Self-Control〉，《Current Directions in Psychological Science 16(6), 351–355》
+語言：英文
+所屬面向：兩種失衡：過度秩序的僵化與過度激情的耗散
+立場：補充
+摘要：自我控制的「力量模型」主張意志力是一種有限且會被先前自我調控耗盡的資源（自我耗竭）。此旁證「過度秩序（持續高自控）」會把調控資源耗光而走向耗散與失控，提示僵化的過度秩序與激情耗散其實循環相生；惟近年複製爭議使其僅作旁證而非主證。
+> **全文**：[Baumeister et al. 2007 (SAGE)](https://journals.sagepub.com/doi/abs/10.1111/j.1467-8721.2007.00534.x)
+
+## 自然科學
+
+【Prigogine, I.（耗散結構框架）】（1977）〈Self-Organization in Non-Equilibrium Systems〉，《Wiley-Interscience》
+語言：英文
+所屬面向：兩種失衡：過度秩序的僵化與過度激情的耗散
 立場：反例
-摘要：此辯論線指出反應依賴／關係論並非定論：贊威爾與佩提特各自版本的反應依賴互不相容，且有論者主張定理、證明等抽象對象具真正審美性質卻不依附感性或觀察者反應，以此抵抗關係性優先。此對本節「關係性優先」構成反例。（確切刊名與卷期細節待核）
-> **全文**：[ResearchGate 條目](https://www.researchgate.net/publication/361571054)
+摘要：耗散結構理論顯示，遠離平衡的系統唯有持續的能量耗散（「激情」面）才能維持有序結構，過度趨向封閉平衡（極端秩序）反而走向最大無序的熱寂式僵死。此說明「過度秩序＝穩定」的直覺是錯的——它把僵化重新定位為一種熵災，與把激情純粹當失衡來源的單向讀法相張，構成 foil。
+> **全文**：[bactra.org: Dissipative structures](https://bactra.org/notebooks/dissipative-structures.html)
+
+## 哲學
+
+【Nietzsche, F.（Apollonian–Dionysian 失衡讀法）】（1872）〈The Birth of Tragedy（悲劇的誕生）〉，《Leipzig: E. W. Fritzsch》
+語言：英文（研究文獻）
+所屬面向：兩種失衡：過度秩序的僵化與過度激情的耗散
+立場：補充
+摘要：尼采指出純阿波羅式秩序流於僵硬冷峻的形式、純戴奧尼索斯式激情則陷於毀滅性迷醉與自我消解，唯兩者張力共構方成偉大藝術。此恰是「過度秩序的僵化／過度激情的耗散」兩種失衡的美學原型，旁證雙極失衡論。
+> **全文**：[TheCollector: Apollonian and Dionysian](https://www.thecollector.com/nietzsche-philosophy-apollonian-dionysian/)
+
+---
+
+## 來源彙整（Sources）
+- [Philosophy Break — Apollonian and Dionysian](https://philosophybreak.com/articles/apollonian-and-dionysian-nietzsche-on-art-and-the-psyche/)
+- [TheCollector — Apollonian and Dionysian](https://www.thecollector.com/nietzsche-philosophy-apollonian-dionysian/)
+- [SEP — Schopenhauer](https://plato.stanford.edu/entries/schopenhauer/)
+- [Frontiers — BAS/BIS and affect](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2019.00424/full)
+- [Wikipedia — Entropy as an arrow of time](https://en.wikipedia.org/wiki/Entropy_as_an_arrow_of_time)
+- [Nature Reviews Neuroscience — Friston 2010 (nrn2787)](https://www.nature.com/articles/nrn2787)
+- [PMC12025891 — MEPP for Life](https://pmc.ncbi.nlm.nih.gov/articles/PMC12025891/)
+- [PositivePsychology — Father of Flow](https://positivepsychology.com/mihaly-csikszentmihalyi-father-of-flow/)
+- [Wikipedia — Golden mean (philosophy)](https://en.wikipedia.org/wiki/Golden_mean_(philosophy))
+- [Frontiers — Confucian Harmony for Mental Health](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.870828/full)
+- [Langton 1990 — Computation at the Edge of Chaos (PDF)](https://shinyverse.org/al4ai/papers/Langton.EdgeOfChaos.pdf)
+- [McEwen 1998 — Allostasis and Allostatic Load (Wiley)](https://nyaspubs.onlinelibrary.wiley.com/doi/10.1111/j.1749-6632.1998.tb09546.x)
+- [Baumeister et al. 2007 — Strength Model of Self-Control (SAGE)](https://journals.sagepub.com/doi/abs/10.1111/j.1467-8721.2007.00534.x)
+- [bactra.org — Dissipative structures](https://bactra.org/notebooks/dissipative-structures.html)
