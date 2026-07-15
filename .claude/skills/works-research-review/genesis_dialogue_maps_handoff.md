@@ -32,10 +32,18 @@
 **效果：標籤失效率 7.1%(37/523) → 2.7%(14/513)，錯位 0。**
 
 ### ⏳ 待續
-1. **14 章仍無對話地圖**（`python -X utf8 scripts/genesis_research/gen_workflow.py --list` 可列出）：
-   M1-ch7(內在的聖誕)、O1-ch8/ch9、O2-ch6/ch7/ch8、V1-ch1/ch5/ch6/ch7/ch9、V2-ch1/ch8、V3-ch4。
-   2026-07-15 已派 7 個子代理跑其中 M1-ch7/O1-ch8/O1-ch9/O2-ch6/O2-ch7/O2-ch8/V3-ch4，
-   **成果未及 commit 即換機，需重跑**（gen_workflow 修好後不會誤跳過）。剩 V1×5、V2×2 未派。
+1. **對話地圖：14 章缺口已補 7 章，剩 7 章**
+   （以 `python -X utf8 scripts/genesis_research/gen_workflow.py --list` 為準，勿憑記憶）
+   - ✅ 已完成並 push（2026-07-15，commit `3e061fa6`/`157b39d1`/`a555d678`）：
+     M1-ch7(4節/20筆)、O1-ch8(4節/17筆)、O1-ch9(17筆)、O2-ch6(3節/14筆)、
+     O2-ch7(3節/14筆)、O2-ch8(3節/15筆)、V3-ch4(4節/19筆)。**共 116 筆，全部 DOI/Crossref 查證**，
+     除 M1-ch7 有 2 筆頁碼待核外無待核項；除 O1-ch9 外皆與 canonical 完全對齊。
+   - ⏳ **剩 7 章未做**：**V1-ch1、V1-ch5、V1-ch6、V1-ch7、V1-ch9、V2-ch1、V2-ch8**。
+     （V1＝《各種生死觀》導論/軸心傳統×2/現代性/結語；V2＝《美學觀》導論/鑑賞力結語）
+   - ⚠️ **O1-ch9 的對齊鍵待定奪**：該章 clean_inv `sections` 為空陣列，正文確為不分節連續行文
+     （無 h3）。代理未杜撰節名，改以**章標題字串**作 `所屬面向`。但 `reclassify_*.py` 會把
+     章級標籤視為 off-canonical。入庫前須決定：接受章標題為鍵（舊 refdb 慣例），
+     或替該章補 h3 小節後重跑。
 2. 🔴 **E2「知識的判準：從 JTB 到誠實生成論」章在書裡不存在**。
    `d857a3ae`(07-01) commit 訊息寫「E2 加該章」，但 `--stat` 顯示**只改了 clean_inv/thesis/worklist，未動 E2.html**；
    其後 E2.html 有 8 個 commit 也沒補。DB 中 37 筆文獻掛在該章上。
