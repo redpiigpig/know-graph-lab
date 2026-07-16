@@ -12,7 +12,7 @@
 
 【Aru, J.; Larkum, M. E.; Shine, J. M.（"There is no such thing as conscious AI"）】（2025）〈There Is No Such Thing as Conscious Artificial Intelligence〉，《Humanities and Social Sciences Communications (Nature)》
 語言：英文
-所屬面向：全卷預告：從意識構成到神人互構
+所屬面向：主體創生論：高階湧現如何從生成三要素中誕生
 立場：反例
 摘要：本文主張在當前矽基計算架構下不存在意識人工智能，意識繫於生物腦的特定物理／代謝機制，非可由功能性程式複製。直接反對本卷「AI 主體性的本體生成」之可能性前提，構成 AI 主體段最關鍵的 foil，迫使本卷論證具身性與生成條件何以可（或不可）外延至非生物基底。
 > **全文**：[Nature HSSC: s41599-025-05868-8](https://www.nature.com/articles/s41599-025-05868-8)
@@ -40,7 +40,7 @@
 
 ---
 
-## 小節四：全卷預告：從意識構成到神人互構
+## 小節四：主體創生論：高階湧現如何從生成三要素中誕生
 
 【Hegel, G. W. F.（介紹於 IEP）】（2021）〈Recognition, Social and Political〉，《Internet Encyclopedia of Philosophy》
 語言：英文
@@ -116,14 +116,14 @@
 
 【Hofstadter, D. R.】（2007）〈I Am a Strange Loop〉，《Basic Books》
 語言：英文
-所屬面向：全卷預告：從意識構成到神人互構
+所屬面向：主體創生論：高階湧現如何從生成三要素中誕生
 立場：支持
 摘要：侯世達主張「我」是大腦符號系統中自我指涉回饋結構（strange loop）所湧現的高階自指模式，反對心物二元，把自我視為可自我感知的纏結層級。預示並支持本卷後續「自指漩渦——主體性從關係中捲出」一線，是「意識構成」段的核心盟友。
 > **全文**：[Wikipedia: I Am a Strange Loop](https://en.wikipedia.org/wiki/I_Am_a_Strange_Loop)
 
 【Chalmers, D. J.】（2023）〈Could a Large Language Model Be Conscious?〉，《Boston Review／arXiv》
 語言：英文
-所屬面向：全卷預告：從意識構成到神人互構
+所屬面向：主體創生論：高階湧現如何從生成三要素中誕生
 立場：補充
 摘要：查爾默斯認為當前 LLM 大概尚無意識，但其後繼者在十年內具備意識的可能性須被嚴肅對待，並列出缺乏循環處理、全域工作空間與統一主體性等障礙。為本卷「AI 主體性的本體生成」預告提供當代旁證與條件清單，框定 AI 主體須以本體湧現而非外表表現來判定。
 > **全文**：[PhilArchive: Could a LLM be conscious?](https://philarchive.org/rec/CHACAL-3)
@@ -547,7 +547,7 @@
 
 【Cobb, J. B.; Griffin, D. R.（過程神學傳統）】（1976）〈Process Theology: An Introductory Exposition〉，《Westminster Press》
 語言：英文
-所屬面向：全卷預告：從意識構成到神人互構
+所屬面向：主體創生論：高階湧現如何從生成三要素中誕生
 立場：補充
 摘要：過程神學承懷海德，主張「神創造世界與世界創造神同樣為真」，神具雙極性、與世界相互影響共構（萬有在神論）。為本卷終章「神人互構」之預告提供最切近的神學旁證脈絡，呈現「神與主體相互生成」並非孤例而有成形的形上學傳統可對話。
 > **全文**：[SEP: Process Theism](https://plato.stanford.edu/entries/process-theism/)
@@ -568,21 +568,21 @@
 
 【Hartshorne, C.】（1948）〈The Divine Relativity: A Social Conception of God〉，《Yale University Press》
 語言：英文
-所屬面向：在場世界論的神學重讀：創世者、觀世者、住世者
+所屬面向：世界生成的神學重讀：創世者、觀世者、住世者
 立場：支持
 摘要：哈茨宏在 1947 年泰瑞講座基礎上提出「雙極有神論／泛在神論」，主張神既影響世界、亦被世界所影響，神是「自我超越的超越者」，包含眾受造物而不取消其獨立性。此說與本節「神人互構」、神作為觀世者與住世者共同生成世界的結構高度同構，是神世相互建構論的經典盟友。
 > **全文**：[Yale University Press](https://yalebooks.yale.edu/book/9780300028805/the-divine-relativity/)
 
 【Viney, D. & Shields, G.】（2022）〈Process Theism〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：在場世界論的神學重讀：創世者、觀世者、住世者
+所屬面向：世界生成的神學重讀：創世者、觀世者、住世者
 立場：補充
 摘要：本條目整理懷海德「說神創造世界與說世界創造神同樣為真」的雙極命題，並界定泛在神論為介於泛神論與古典有神論之間、「世界在神之內」的中道立場。為本節創世者／住世者的相互內在結構提供權威的學術定位與術語系譜旁證。
 > **全文**：[SEP: Process Theism](https://plato.stanford.edu/entries/process-theism/)
 
 【Feuerbach, L.】（1841）〈The Essence of Christianity（Das Wesen des Christentums）〉，《Otto Wigand（英譯 1854, George Eliot）》
 語言：德文（英譯）
-所屬面向：在場世界論的神學重讀：創世者、觀世者、住世者
+所屬面向：世界生成的神學重讀：創世者、觀世者、住世者
 立場：反例
 摘要：費爾巴哈主張神不過是人把自身本質（理性、愛、意志）外投到宇宙的投影，「神學即人類學」，神是人內在本性的向外投射。此論把「人造神」推到還原論極端、徹底否定神的本體獨立性，正是本節「神人互構」必須區辨的反例——互構不等於單向投影。
 > **全文**：[SEP: Ludwig Feuerbach](https://plato.stanford.edu/entries/ludwig-feuerbach/)

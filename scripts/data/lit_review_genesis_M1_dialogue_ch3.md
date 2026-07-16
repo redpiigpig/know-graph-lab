@@ -76,20 +76,20 @@
 
 ---
 
-## 第三節　潛意識作為創生潛場
+## 第三節　無意識作為創生潛場
 
 ### 心理學
 
 【Jung, C. G.】（1939 / 1959）〈Conscious, Unconscious, and Individuation〉，《Collected Works, Vol. 9i: The Archetypes and the Collective Unconscious》（Routledge）
 語言：英文
-所屬面向：潛意識作為創生潛場
+所屬面向：無意識作為創生潛場
 立場：支持
-摘要：榮格的個體化過程把個人與集體潛意識的內容帶入意識，揭顯人格之整全；用以壓抑內在聲音的能量，正是可回流為個人天職之用的創造能量。此說直接支持本節「潛意識作為創生潛場」——潛意識不是殘餘垃圾場，而是召喚與人格生成的創造性母源。
+摘要：榮格的個體化過程把個人與集體潛意識的內容帶入意識，揭顯人格之整全；用以壓抑內在聲音的能量，正是可回流為個人天職之用的創造能量。此說直接支持本節「無意識作為創生潛場」——潛意識不是殘餘垃圾場，而是召喚與人格生成的創造性母源。
 > **全文**：[The Call of a Personal Vocation – Hearing the Inner Voice](https://frithluton.com/articles/call-vocation-hearing-inner-voice/)
 
 【Kihlstrom, J. F.】（1987）〈The Cognitive Unconscious〉，《Science》237(4821): 1445–1452
 語言：英文
-所屬面向：潛意識作為創生潛場
+所屬面向：無意識作為創生潛場
 立場：補充
 摘要：基爾斯特隆以實驗認知科學重建「認知潛意識」，論證無法被意識覺察的自動化程序性知識仍能執行認知分析，並把潛意識三分為真潛意識／前意識／下意識；其後續工作更涉及孵化（incubation）與洞察的內隱認知。可作為旁證：以實證取向支持「潛意識具生產性、能默默做功」，補強本節的創生潛場觀，但其機制是去神祕化的訊息處理而非榮格的原型場。
 > **全文**：[The Cognitive Unconscious (Science, DOI)](https://doi.org/10.1126/science.3629249)
@@ -98,7 +98,7 @@
 
 【Grünbaum, A.】（1984）〈The Foundations of Psychoanalysis: A Philosophical Critique〉，《University of California Press》（Pittsburgh Series in Philosophy and History of Science）
 語言：英文
-所屬面向：潛意識作為創生潛場
+所屬面向：無意識作為創生潛場
 立場：反例
 摘要：格倫鮑姆論證精神分析作為自然科學的資格不成立：壓抑與潛意識動機的臨床證據易受暗示與自我實現預期污染，自由聯想法並未支持其潛意識理論。此為本節 foil：若深度心理學意義下的「潛意識」在認識論上根基不穩，則以潛意識為「創生潛場」的本體論主張須先回應其科學性質疑（可改援引去神祕化的認知潛意識）。
 > **全文**：[The Foundations of Psychoanalysis (Wikipedia 概覽)](https://en.wikipedia.org/wiki/The_Foundations_of_Psychoanalysis)
@@ -134,4 +134,4 @@
 
 ## 交付總結
 
-本章節數：4 節（召喚不從外部降臨／三層遞進：從離苦得樂到歷史轉化／潛意識作為創生潛場／召喚的向量性與誠實的功課）。總筆數：14 筆。立場分布：支持 5、補充 4、反例 5（每節皆 ≥1 反例且 ≥1 支持或補充）。標為「待核」：1 筆（第二節 Tay & Diener／metatheoretical critique 的年份與刊名）。
+本章節數：4 節（召喚不從外部降臨／三層遞進：從離苦得樂到歷史轉化／無意識作為創生潛場／召喚的向量性與誠實的功課）。總筆數：14 筆。立場分布：支持 5、補充 4、反例 5（每節皆 ≥1 反例且 ≥1 支持或補充）。標為「待核」：1 筆（第二節 Tay & Diener／metatheoretical critique 的年份與刊名）。

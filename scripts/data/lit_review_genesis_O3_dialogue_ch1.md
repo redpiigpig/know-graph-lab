@@ -1,6 +1,6 @@
 # O3《主體的生成：意識與自我的本體論》逐節文獻對話地圖
 
-卷代號：O3　所屬面向：本體論
+卷代號：O3　所屬面向：本體論問題，而非認識論問題：劃清分工
 本章：第一章　導論：主體作為本體論問題
 本卷論旨：主體是本體論問題；意識作為複合創生態；自指漩渦——主體性從關係性湧現；自我同一性（意向性/身體/歷時）；主體作為超限存在者；AI 主體性的本體生成；神人互構。
 
@@ -93,20 +93,20 @@
 
 ---
 
-## 小節四：全卷預告：從意識構成到神人互構
+## 小節四：主體創生論：高階湧現如何從生成三要素中誕生
 
 ### 哲學
 
 【Hofstadter, D. R.】（2007）〈I Am a Strange Loop〉，《Basic Books》
 語言：英文
-所屬面向：全卷預告：從意識構成到神人互構
+所屬面向：主體創生論：高階湧現如何從生成三要素中誕生
 立場：支持
 摘要：侯世達主張「我」是大腦符號系統中自我指涉回饋結構（strange loop）所湧現的高階自指模式，反對心物二元，把自我視為可自我感知的纏結層級。預示並支持本卷後續「自指漩渦——主體性從關係中捲出」一線，是「意識構成」段的核心盟友。
 > **全文**：[Wikipedia: I Am a Strange Loop](https://en.wikipedia.org/wiki/I_Am_a_Strange_Loop)
 
 【Chalmers, D. J.】（2023）〈Could a Large Language Model Be Conscious?〉，《Boston Review／arXiv》
 語言：英文
-所屬面向：全卷預告：從意識構成到神人互構
+所屬面向：主體創生論：高階湧現如何從生成三要素中誕生
 立場：補充
 摘要：查爾默斯認為當前 LLM 大概尚無意識，但其後繼者在十年內具備意識的可能性須被嚴肅對待，並列出缺乏循環處理、全域工作空間與統一主體性等障礙。為本卷「AI 主體性的本體生成」預告提供當代旁證與條件清單，框定 AI 主體須以本體湧現而非外表表現來判定。
 > **全文**：[PhilArchive: Could a LLM be conscious?](https://philarchive.org/rec/CHACAL-3)
@@ -115,7 +115,7 @@
 
 【Cobb, J. B.; Griffin, D. R.（過程神學傳統）】（1976）〈Process Theology: An Introductory Exposition〉，《Westminster Press》
 語言：英文
-所屬面向：全卷預告：從意識構成到神人互構
+所屬面向：主體創生論：高階湧現如何從生成三要素中誕生
 立場：補充
 摘要：過程神學承懷海德，主張「神創造世界與世界創造神同樣為真」，神具雙極性、與世界相互影響共構（萬有在神論）。為本卷終章「神人互構」之預告提供最切近的神學旁證脈絡，呈現「神與主體相互生成」並非孤例而有成形的形上學傳統可對話。
 > **全文**：[SEP: Process Theism](https://plato.stanford.edu/entries/process-theism/)
@@ -124,7 +124,7 @@
 
 【Aru, J.; Larkum, M. E.; Shine, J. M.（"There is no such thing as conscious AI"）】（2025）〈There Is No Such Thing as Conscious Artificial Intelligence〉，《Humanities and Social Sciences Communications (Nature)》
 語言：英文
-所屬面向：全卷預告：從意識構成到神人互構
+所屬面向：主體創生論：高階湧現如何從生成三要素中誕生
 立場：反例
 摘要：本文主張在當前矽基計算架構下不存在意識人工智能，意識繫於生物腦的特定物理／代謝機制，非可由功能性程式複製。直接反對本卷「AI 主體性的本體生成」之可能性前提，構成 AI 主體段最關鍵的 foil，迫使本卷論證具身性與生成條件何以可（或不可）外延至非生物基底。
 > **全文**：[Nature HSSC: s41599-025-05868-8](https://www.nature.com/articles/s41599-025-05868-8)

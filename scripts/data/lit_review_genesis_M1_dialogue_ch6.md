@@ -35,21 +35,21 @@
 
 【Jaspers, K. — 引自 Severi, C.】（2021）〈The Limits of Knowing Other Minds〉，《Social Analysis》65(1)
 語言：英文
-所屬面向：hᵢ 的邊界：他者不可全知
+所屬面向：hi 的邊界：他者不可全知
 立場：支持
 摘要：透過人類學「不透明性教義」與雅斯培「不可理解性是倫理原則而非僅認識論界限」的論述，主張他者內在心智不可被化約全知。直接支撐本節「hᵢ 有邊界、他者不可全知」的命題，並將之提升為倫理姿態。
 > **全文**：[Social Analysis 65(1)](https://www.berghahnjournals.com/view/journals/social-analysis/65/1/sa650101.xml)
 
 【Glissant, É. — 引自 PMC 論文】（2024）〈Opacity, difference and not knowing〉，《PMC / 精神醫學期刊》
 語言：英文
-所屬面向：hᵢ 的邊界：他者不可全知
+所屬面向：hi 的邊界：他者不可全知
 立場：補充
 摘要：援引葛里桑「不透明性權利」概念，主張尊重他者不可被全知正是關係倫理的條件。為本節「他者不可全知」提供當代鄰接論述：不透明非缺陷，而是關係得以維繫的前提。
 > **全文**：[PMC11503190](https://pmc.ncbi.nlm.nih.gov/articles/PMC11503190/)
 
 【Velleman, J. D.】（1999）〈Love as a Moral Emotion〉，《Ethics》109(2)
 語言：英文
-所屬面向：hᵢ 的邊界：他者不可全知
+所屬面向：hi 的邊界：他者不可全知
 立場：反例
 摘要：維爾曼主張愛是對他者「理性本性／內在價值」的**評價式**回應，乃看見並承認對方真實所是。此預設了對他者價值的可認知掌握，與本節「他者不可全知、hᵢ 有測不準邊界」形成張力，是須辯駁的對立立場。（刊名卷期據 SEP Love 引用核對）
 > **全文**：[SEP: Love（Velleman 段落）](https://plato.stanford.edu/entries/love/)
@@ -110,21 +110,21 @@
 
 【Sternberg, R. J.】（1986）〈A Triangular Theory of Love〉，《Psychological Review》93(2)
 語言：英文
-所屬面向：三個要件的共構關係與愛的公式
+所屬面向：三要件的共構關係與愛的公式
 立場：支持
 摘要：史登堡以親密、激情、承諾三成分構成愛的三角，三者不同組合生成八種愛型，且各成分比重隨關係時程變化。其「三成分共構、可圖示化」的結構與本章 hn₀／R／E 三要件共構的「愛的公式」高度同構，是最直接的心理學盟友。
 > **全文**：[Triangular Theory of Love（Hofstra PDF）](https://www.hofstra.edu/pdf/community/slzctr/stdcsl/stdcsl_triangular.pdf)
 
 【Williams, B.】（1985）〈Ethics and the Limits of Philosophy〉，《Harvard University Press》
 語言：英文
-所屬面向：三個要件的共構關係與愛的公式
+所屬面向：三要件的共構關係與愛的公式
 立場：反例
 摘要：威廉斯批判「道德體系」把倫理生活壓縮為可計算系統，主張倫理生活太凌亂而無法被任何系統理論捕捉。對「把愛形式化為公式」此一進路構成根本質疑，是本節（與全章數學化）必須正面回應的 foil。
 > **全文**：[SEP: Bernard Williams](https://plato.stanford.edu/entries/williams-bernard/)
 
 【Helm, B.】（2021）〈Love〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：三個要件的共構關係與愛的公式
+所屬面向：三要件的共構關係與愛的公式
 立場：補充
 摘要：SEP 整理愛的「穩健關注／價值賦予／關係認同」等多種構成性分析，指出各家對「愛由哪些要素構成」分歧。為本節「三要件共構」提供哲學分析的鄰接背景與分類工具。
 > **全文**：[SEP: Love](https://plato.stanford.edu/entries/love/)

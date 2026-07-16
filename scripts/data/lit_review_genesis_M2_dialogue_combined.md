@@ -203,7 +203,7 @@
 
 【Sennett, R.】（1998）〈The Corrosion of Character: The Personal Consequences of Work in the New Capitalism〉，《W. W. Norton》
 語言：英文
-所屬面向：主體性倫理學的回應：重建誠實的公共空間
+所屬面向：創生倫理學的回應：重建誠實的公共空間
 立場：支持
 摘要：森內特以民族誌記錄「彈性資本主義」如何侵蝕長期承諾、忠誠與作為認同來源的工作，導致品格(character)與信任的瓦解。此為本節提供「異化在當代工作場域的心理後果」之實證描述，支持「為何需要重建誠實／承諾的公共與職業空間」，屬盟友。
 > **全文**：[Academia.edu 全文 PDF](https://www.academia.edu/6846256/Sennett_1998_The_Corrosion_of_Character)
@@ -1006,14 +1006,14 @@
 
 【Habermas, J.】（1996）〈Between Facts and Norms: Contributions to a Discourse Theory of Law and Democracy〉，《MIT Press》（William Rehg 譯）
 語言：英文
-所屬面向：主體性倫理學的回應：重建誠實的公共空間
+所屬面向：創生倫理學的回應：重建誠實的公共空間
 立場：補充
 摘要：哈伯瑪斯在此書把溝通行動推進為審議式民主與法治理論，主張正當性來自「更佳論證的非強制力量」而非地位或權力。此與本節「以誠實的溝通重建公共空間」高度相鄰，可作為制度化路徑的對照旁證（本章以「誠實度」取代純程序理性作為差異點）。
 > **全文**：[MIT Press: Between Facts and Norms](https://mitpress.mit.edu/9780262082433/between-facts-and-norms/)
 
 【Mouffe, C.】（2000）〈Deliberative Democracy or Agonistic Pluralism?〉，《Political Science Series 72, Institute for Advanced Studies, Vienna》
 語言：英文
-所屬面向：主體性倫理學的回應：重建誠實的公共空間
+所屬面向：創生倫理學的回應：重建誠實的公共空間
 立場：反例
 摘要：墨菲主張哈伯瑪斯式審議共識否認衝突與多元，任何共識都具排除性；政治依附亦來自激情而非純理性。此對本節「以誠實溝通重建公共空間」構成 foil：若共識本身即排除，則「重建誠實公共空間」須說明它如何容納對抗(agon)而非壓平差異。
 > **全文**：[Mouffe 2000 全文 PDF（Monoskop）](https://monoskop.org/images/a/a6/Mouffe_Chantal_Deliberative_Democracy_or_Agonistic_Pluralism_2000.pdf)
@@ -1141,7 +1141,7 @@
 
 【Douzinas, C.】（2000）〈The End of Human Rights: Critical Legal Thought at the Turn of the Century〉，《Hart Publishing》
 語言：英文
-所屬面向：主體性倫理學的替代路徑：以責任取代權利
+所屬面向：創生倫理學的替代路徑：以責任取代權利
 立場：補充
 摘要：杜茲納斯以海德格、沙特與精神分析解構普遍主義與文化相對主義雙方的形上本質主義，指出人權勝利的時代弔詭地伴隨更多侵權，並以「他者倫理」重新安置權利的道德根基。其「以他者倫理超越權利語言」與本節「以責任取代權利」相鄰可對話，惟其仍欲拯救而非取消人權，立場可資對照。
 > **全文**：[PhilPapers 條目](https://philpapers.org/rec/DOUTEO-4)
@@ -1150,7 +1150,7 @@
 
 【李明輝】（2016）〈儒家後習俗責任倫理學的理念〉，《中央研究院中國文哲研究所（出版社／年份細節待核）》
 語言：中文
-所屬面向：主體性倫理學的替代路徑：以責任取代權利
+所屬面向：創生倫理學的替代路徑：以責任取代權利
 立場：補充
 摘要：李明輝接合儒家倫理與哈伯瑪斯—柯爾伯格的後習俗道德發展理論，主張儒家可重構為一種立基於人倫關係、以責任為核心的「後習俗責任倫理學」，回應其被指為宗法／父權威權的批評。此為「以責任倫理為替代框架」提供華語學界的理論旁證，與本節以責任重置權利語言相呼應。
 > **全文**：[博客來書目頁](https://www.books.com.tw/products/0010749520)

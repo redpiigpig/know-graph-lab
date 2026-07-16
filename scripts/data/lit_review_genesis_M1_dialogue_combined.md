@@ -172,18 +172,18 @@
 
 ---
 
-## 第三節　潛意識作為創生潛場
+## 第三節　無意識作為創生潛場
 
 【Jung, C. G.】（1939 / 1959）〈Conscious, Unconscious, and Individuation〉，《Collected Works, Vol. 9i: The Archetypes and the Collective Unconscious》（Routledge）
 語言：英文
-所屬面向：潛意識作為創生潛場
+所屬面向：無意識作為創生潛場
 立場：支持
-摘要：榮格的個體化過程把個人與集體潛意識的內容帶入意識，揭顯人格之整全；用以壓抑內在聲音的能量，正是可回流為個人天職之用的創造能量。此說直接支持本節「潛意識作為創生潛場」——潛意識不是殘餘垃圾場，而是召喚與人格生成的創造性母源。
+摘要：榮格的個體化過程把個人與集體潛意識的內容帶入意識，揭顯人格之整全；用以壓抑內在聲音的能量，正是可回流為個人天職之用的創造能量。此說直接支持本節「無意識作為創生潛場」——潛意識不是殘餘垃圾場，而是召喚與人格生成的創造性母源。
 > **全文**：[The Call of a Personal Vocation – Hearing the Inner Voice](https://frithluton.com/articles/call-vocation-hearing-inner-voice/)
 
 【Kihlstrom, J. F.】（1987）〈The Cognitive Unconscious〉，《Science》237(4821): 1445–1452
 語言：英文
-所屬面向：潛意識作為創生潛場
+所屬面向：無意識作為創生潛場
 立場：補充
 摘要：基爾斯特隆以實驗認知科學重建「認知潛意識」，論證無法被意識覺察的自動化程序性知識仍能執行認知分析，並把潛意識三分為真潛意識／前意識／下意識；其後續工作更涉及孵化（incubation）與洞察的內隱認知。可作為旁證：以實證取向支持「潛意識具生產性、能默默做功」，補強本節的創生潛場觀，但其機制是去神祕化的訊息處理而非榮格的原型場。
 > **全文**：[The Cognitive Unconscious (Science, DOI)](https://doi.org/10.1126/science.3629249)
@@ -211,14 +211,14 @@
 
 【Sternberg, R. J.】（1986）〈A Triangular Theory of Love〉，《Psychological Review》93(2)
 語言：英文
-所屬面向：三個要件的共構關係與愛的公式
+所屬面向：三要件的共構關係與愛的公式
 立場：支持
 摘要：史登堡以親密、激情、承諾三成分構成愛的三角，三者不同組合生成八種愛型，且各成分比重隨關係時程變化。其「三成分共構、可圖示化」的結構與本章 hn₀／R／E 三要件共構的「愛的公式」高度同構，是最直接的心理學盟友。
 > **全文**：[Triangular Theory of Love（Hofstra PDF）](https://www.hofstra.edu/pdf/community/slzctr/stdcsl/stdcsl_triangular.pdf)
 
 【Williams, B.】（1985）〈Ethics and the Limits of Philosophy〉，《Harvard University Press》
 語言：英文
-所屬面向：三個要件的共構關係與愛的公式
+所屬面向：三要件的共構關係與愛的公式
 立場：反例
 摘要：威廉斯批判「道德體系」把倫理生活壓縮為可計算系統，主張倫理生活太凌亂而無法被任何系統理論捕捉。對「把愛形式化為公式」此一進路構成根本質疑，是本節（與全章數學化）必須正面回應的 foil。
 > **全文**：[SEP: Bernard Williams](https://plato.stanford.edu/entries/williams-bernard/)
@@ -348,25 +348,25 @@
 
 ---
 
-## 小節五：主體性倫理學如何回應這些困境
+## 小節五：創生倫理學如何回應這些困境
 
 【Korsgaard, C. M.】（1996）〈The Sources of Normativity〉，Cambridge University Press
 語言：英文
-所屬面向：主體性倫理學如何回應這些困境
+所屬面向：創生倫理學如何回應這些困境
 立場：支持
 摘要：主張規範性的來源在於主體的「反思性認可」與「實踐認同」——唯有主體自我立法、自我構成，理由與義務才成立。為本節「以主體性奠基倫理」提供最直接的當代哲學盟友：倫理是主體自我生成的內在結構，而非外加。
 > **全文**：[SEP-引用 / Cambridge](https://www.cambridge.org/core/books/sources-of-normativity/5A85034A6566FDFDE374073A015CBD2A)
 
 【MacIntyre, A.】（1981）〈After Virtue: A Study in Moral Theory〉，University of Notre Dame Press
 語言：英文
-所屬面向：主體性倫理學如何回應這些困境
+所屬面向：創生倫理學如何回應這些困境
 立場：補充
 摘要：診斷啟蒙「為道德提供世俗理性辯護」的計畫失敗、淪為情緒主義，主張回到亞里斯多德式的德行、實踐與生命敘事整全性。作為旁證，與本節「重新奠基倫理」同屬建構性回應，但其解方是傳統與目的論，與本卷「主體誠實生成」路徑可對照對話。
 > **全文**：[Wikipedia: After Virtue](https://en.wikipedia.org/wiki/After_Virtue)
 
 【Parfit, D.】（2011）〈On What Matters〉，Oxford University Press
 語言：英文
-所屬面向：主體性倫理學如何回應這些困境
+所屬面向：創生倫理學如何回應這些困境
 立場：反例
 摘要：以客觀主義（objectivist）規範理論主張存在獨立於主體欲求的客觀理由，並批判一切以主體為基礎（desire-based / subjective）的倫理學。直接對立於本節「由主體性奠基」的核心策略，是主體性倫理學在元倫理層面必須回應的最強反例。
 > **全文**：[NDPR: On What Matters review](https://ndpr.nd.edu/reviews/on-what-matters-volumes-1-and-2/)
@@ -481,7 +481,7 @@
 
 【Grünbaum, A.】（1984）〈The Foundations of Psychoanalysis: A Philosophical Critique〉，《University of California Press》（Pittsburgh Series in Philosophy and History of Science）
 語言：英文
-所屬面向：潛意識作為創生潛場
+所屬面向：無意識作為創生潛場
 立場：反例
 摘要：格倫鮑姆論證精神分析作為自然科學的資格不成立：壓抑與潛意識動機的臨床證據易受暗示與自我實現預期污染，自由聯想法並未支持其潛意識理論。此為本節 foil：若深度心理學意義下的「潛意識」在認識論上根基不穩，則以潛意識為「創生潛場」的本體論主張須先回應其科學性質疑（可改援引去神祕化的認知潛意識）。
 > **全文**：[The Foundations of Psychoanalysis (Wikipedia 概覽)](https://en.wikipedia.org/wiki/The_Foundations_of_Psychoanalysis)
@@ -515,7 +515,7 @@
 
 ## 交付總結
 
-本章節數：4 節（召喚不從外部降臨／三層遞進：從離苦得樂到歷史轉化／潛意識作為創生潛場／召喚的向量性與誠實的功課）。總筆數：14 筆。立場分布：支持 5、補充 4、反例 5（每節皆 ≥1 反例且 ≥1 支持或補充）。標為「待核」：1 筆（第二節 Tay & Diener／metatheoretical critique 的年份與刊名）。
+本章節數：4 節（召喚不從外部降臨／三層遞進：從離苦得樂到歷史轉化／無意識作為創生潛場／召喚的向量性與誠實的功課）。總筆數：14 筆。立場分布：支持 5、補充 4、反例 5（每節皆 ≥1 反例且 ≥1 支持或補充）。標為「待核」：1 筆（第二節 Tay & Diener／metatheoretical critique 的年份與刊名）。
 
 【Colacicchi, G.】（2021）〈Psychology as Ethics: Reading Jung with Kant, Nietzsche and Aristotle〉，《Routledge（Philosophy and Psychoanalysis 系列）》
 語言：英文
@@ -785,21 +785,21 @@
 
 【Jaspers, K. — 引自 Severi, C.】（2021）〈The Limits of Knowing Other Minds〉，《Social Analysis》65(1)
 語言：英文
-所屬面向：hᵢ 的邊界：他者不可全知
+所屬面向：hi 的邊界：他者不可全知
 立場：支持
 摘要：透過人類學「不透明性教義」與雅斯培「不可理解性是倫理原則而非僅認識論界限」的論述，主張他者內在心智不可被化約全知。直接支撐本節「hᵢ 有邊界、他者不可全知」的命題，並將之提升為倫理姿態。
 > **全文**：[Social Analysis 65(1)](https://www.berghahnjournals.com/view/journals/social-analysis/65/1/sa650101.xml)
 
 【Glissant, É. — 引自 PMC 論文】（2024）〈Opacity, difference and not knowing〉，《PMC / 精神醫學期刊》
 語言：英文
-所屬面向：hᵢ 的邊界：他者不可全知
+所屬面向：hi 的邊界：他者不可全知
 立場：補充
 摘要：援引葛里桑「不透明性權利」概念，主張尊重他者不可被全知正是關係倫理的條件。為本節「他者不可全知」提供當代鄰接論述：不透明非缺陷，而是關係得以維繫的前提。
 > **全文**：[PMC11503190](https://pmc.ncbi.nlm.nih.gov/articles/PMC11503190/)
 
 【Velleman, J. D.】（1999）〈Love as a Moral Emotion〉，《Ethics》109(2)
 語言：英文
-所屬面向：hᵢ 的邊界：他者不可全知
+所屬面向：hi 的邊界：他者不可全知
 立場：反例
 摘要：維爾曼主張愛是對他者「理性本性／內在價值」的**評價式**回應，乃看見並承認對方真實所是。此預設了對他者價值的可認知掌握，與本節「他者不可全知、hᵢ 有測不準邊界」形成張力，是須辯駁的對立立場。（刊名卷期據 SEP Love 引用核對）
 > **全文**：[SEP: Love（Velleman 段落）](https://plato.stanford.edu/entries/love/)
@@ -949,7 +949,7 @@
 
 【顧紅亮】〈責任與他者——列維納斯的責任觀〉，華東師範大學哲學系（會議／期刊論文）
 語言：中文
-所屬面向：主體性倫理學如何回應這些困境
+所屬面向：創生倫理學如何回應這些困境
 立場：補充
 摘要：系統梳理列維納斯責任觀四命題：負責任的生活先於責任哲學、為他者之責任比為己更源始、責任與回應言說構成活的倫理對話、負責任的主體性比占有性主體性更本真。作為華語學界旁證，支撐本節「以主體—他者的承擔關係回應古典困境」。（細節待核：刊載出處與年份以原文 PDF 為準。）
 > **全文**：[sinoss.net PDF](https://www.sinoss.net/uploadfile/2010/1130/7043.pdf)

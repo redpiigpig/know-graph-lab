@@ -878,25 +878,25 @@
 摘要：索卡爾與布里克蒙批判後現代知識分子濫用科學數學概念，反對「科學理論不過是敘事或社會建構」之說。此對任何「大敘事聯盟」式的跨域整合構成反例與警戒：碎形敘事的轉譯不可滑向偽科學式的概念挪用。
 > **全文**：[Wikipedia: Fashionable Nonsense](https://en.wikipedia.org/wiki/Fashionable_Nonsense)
 
-### 〔小節四〕識然的五階段定位與後後現代的認識論謙遜
+### 〔小節四〕認識向度的五階段定位與後後現代的認識論謙遜
 
 【Peirce, C. S. / Hookway, C.】（c.1897 / 2024）〈Charles Sanders Peirce: Fallibilism〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：識然的五階段定位與後後現代的認識論謙遜
+所屬面向：認識向度的五階段定位與後後現代的認識論謙遜
 立場：支持
 摘要：皮爾士的可錯論主張無人能有絕對確定性，探究只能透過自我修正的方法逼近真理之極限，兼具認識謙卑與本體實在性。此直接支持本節「後後現代認識論謙遜」：放棄絕對基礎卻不墜入虛無相對。
 > **全文**：[SEP: Charles Sanders Peirce](https://plato.stanford.edu/entries/peirce/)
 
 【Kuhn, T. S. / Oberheim, E. & Hoyningen-Huene, P.】（2018）〈The Incommensurability of Scientific Theories〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：識然的五階段定位與後後現代的認識論謙遜
+所屬面向：認識向度的五階段定位與後後現代的認識論謙遜
 立場：反例
 摘要：詞條梳理孔恩晚期將不可通約收窄為相鄰理論分類結構的差異，競爭典範因概念與方法相異而缺乏共同量尺。此對本節「五階段可被統一定位、子語言彼此可轉譯」構成反例：若不可通約成立，跨範式的轉譯與階段定位將受嚴重限制。
 > **全文**：[SEP: The Incommensurability of Scientific Theories](https://plato.stanford.edu/entries/incommensurability/)
 
 【Lyotard, J.-F. / Aylesworth, G.】（2015）〈Postmodernism〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：識然的五階段定位與後後現代的認識論謙遜
+所屬面向：認識向度的五階段定位與後後現代的認識論謙遜
 立場：補充
 摘要：詞條總述後現代以對元敘事的不信任拒斥任何統合性知識框架。此旁證本節須面對的張力：後後現代既承接後現代的謙遜，又要在不復辟大敘事的前提下重建可定位的階段框架，定位本身即是謙遜的實踐。
 > **全文**：[SEP: Postmodernism](https://plato.stanford.edu/entries/postmodernism/)

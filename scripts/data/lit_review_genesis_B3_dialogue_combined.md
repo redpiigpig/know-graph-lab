@@ -12,7 +12,7 @@
 
 ---
 
-## 第三節（所屬面向：「上帝已死」之後的神聖語言：生成性神性）
+## 第三節（所屬面向：「上帝已死」之後的神聖語言：生成性神性
 
 【Vilenkin, A.】（1982）〈Creation of Universes from Nothing〉，《Physics Letters B》（vol. 117, 25–28）
 語言：英文
@@ -251,7 +251,7 @@
 
 ---
 
-## 第二節（所屬面向：創生與毀滅的張力：空無的倫理維度）
+## 第二節（所屬面向：創生與毀滅的張力：空無的倫理維度
 
 【Nishitani, K.】（1982 [1961]）〈Religion and Nothingness（宗教とは何か）〉，《University of California Press》
 語言：英文（日文原典）

@@ -67,21 +67,21 @@
 
 【Maturana, H. R., & Varela, F. J.】（1987）〈The Tree of Knowledge: The Biological Roots of Human Understanding〉，《Shambhala》
 語言：英文
-所屬面向：識然的展開：從心靈到社會與生命
+所屬面向：認識的展開：從心靈到社會與生命
 立場：支持
 摘要：以自創生（autopoiesis）與聖地牙哥認知理論主張「認識與生命歷程不可分」——認知不是對外在世界的再現，而是活著本身帶出（bringing forth）世界。強力支持本節把識然從心靈往下延展到生命／生物層，將「認識」奠基於生命的自我維持。
 > **全文**：[Google Books: The Tree of Knowledge](https://books.google.com/books/about/Tree_of_Knowledge.html?id=dExSNKl4RWAC)
 
 【Clark, A., & Chalmers, D.】（1998）〈The Extended Mind〉，《Analysis》58(1), 7–19
 語言：英文
-所屬面向：識然的展開：從心靈到社會與生命
+所屬面向：認識的展開：從心靈到社會與生命
 立場：補充
 摘要：延展心靈論與 4E（具身／嵌入／生成／延展）認知主張認知歷程可跨越顱骨、分佈於身體與環境之中。旁證本節「識然的展開」：認識不封閉於個體心靈，而向身體、社會與環境外溢，接應從心靈到社會與生命的層層開展。
 > **全文**：[Unfinishable Map: Embodied Cognition & the Extended Mind](https://unfinishablemap.org/concepts/embodied-cognition/)
 
 【Nagel, T.】（1974）〈What Is It Like to Be a Bat?〉，《The Philosophical Review》83(4), 435–450
 語言：英文
-所屬面向：識然的展開：從心靈到社會與生命
+所屬面向：認識的展開：從心靈到社會與生命
 立場：反例
 摘要：內格爾論證經驗的主觀性格（「作為某物是什麼樣子」）無法被任何客觀化約分析所捕捉。對「識然可順利從心靈往生命、跨物種外推」構成反例：跨物種的主觀認識存在不可通約的界限，提醒本卷外推須正視主觀性的抗拒。
 > **全文**：[PDF: What Is It Like to Be a Bat?](https://rintintin.colorado.edu/~vancecd/phil201/Nagel.pdf)

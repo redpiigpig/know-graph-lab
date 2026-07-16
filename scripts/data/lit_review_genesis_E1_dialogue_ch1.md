@@ -4,34 +4,34 @@
 
 ---
 
-## 第一節　識然：世界如何向認識主體開顯
+## 第一節　認識的向度：世界如何向認識主體開顯
 
 ### 哲學
 
 【Smith, D. W.】（2018）〈Phenomenology〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：識然：世界如何向認識主體開顯
+所屬面向：認識的向度：世界如何向認識主體開顯
 立場：支持
 摘要：胡塞爾意義下的意向性指意識總是「關於某物」的指向性，現象學專研經驗如何將世界給予主體。此條目為本節「識然＝世界向認識主體開顯」提供最直接的學理支撐，是本卷以意向性界定認識邊界的盟友。
 > **全文**：[SEP: Phenomenology](https://plato.stanford.edu/entries/phenomenology/)
 
 【Varela, F. J., Thompson, E., & Rosch, E.】（1991）〈The Embodied Mind: Cognitive Science and Human Experience〉，《MIT Press》
 語言：英文
-所屬面向：識然：世界如何向認識主體開顯
+所屬面向：認識的向度：世界如何向認識主體開顯
 立場：補充
 摘要：提出「生成（enaction）」論：認知不是既予之心對既予世界的再現，而是身體行動史中「帶出（bringing forth）」一個相互依存的世界。為「世界在認識行動中向主體開顯、而非被動接收彼岸實在」提供認知科學旁證。
 > **全文**：[MIT Press: Enaction / The Embodied Mind](https://mitpress.mit.edu/9780262526012/enaction/)
 
 【Soteriou, M.】（2020）〈The Disjunctive Theory of Perception〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：識然：世界如何向認識主體開顯
+所屬面向：認識的向度：世界如何向認識主體開顯
 立場：補充
 摘要：麥道爾（McDowell）的選言論與直接實在論主張，在順遂知覺中世界本身直接進入經驗，反對把感覺與料插在主體與世界之間的笛卡兒式中介。可作為「現象不是隔開實在的屏障、而是實在的開顯」的當代知覺哲學旁證。
 > **全文**：[SEP: The Disjunctive Theory of Perception](https://plato.stanford.edu/entries/perception-disjunctive/)
 
 【Stang, N. F.】（2022）〈Kant's Transcendental Idealism〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：識然：世界如何向認識主體開顯
+所屬面向：認識的向度：世界如何向認識主體開顯
 立場：反例
 摘要：康德嚴格區分現象（appearances）與物自身（things in themselves），主張認識僅及於現象、物自身原則上不向認識開顯。此正是本卷「識然」要驅逐的「彼岸不開顯」結構，構成本節最典型的 foil。
 > **全文**：[SEP: Kant's Transcendental Idealism](https://plato.stanford.edu/entries/kant-transcendental-idealism/)

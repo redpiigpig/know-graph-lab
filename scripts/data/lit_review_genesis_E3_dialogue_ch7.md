@@ -63,27 +63,27 @@
 
 ---
 
-## 識然通向應然：呼應卷二的誠實生成論
+## 認識通向倫理：呼應卷二的誠實生成論
 
 ### 哲學
 
 【Putnam, H.】（2002）〈The Collapse of the Fact/Value Dichotomy and Other Essays〉，《Harvard University Press》
 語言：英文
-所屬面向：識然通向應然：呼應卷二的誠實生成論
+所屬面向：認識通向倫理：呼應卷二的誠實生成論
 立場：支持
 摘要：普特南主張事實與價值「糾纏」（entanglement），科學判準（簡潔、融貫、歸納一致）本身即是價值判斷，事實客觀／價值主觀的二分為經驗論最後的教條而崩解。此直接支持「識然通向應然」——認識與價值不可截然二分。
 > **全文**：[The Collapse of the Fact/Value Dichotomy (Goodreads)](https://www.goodreads.com/book/show/193690.The_Collapse_of_the_Fact_Value_Dichotomy_and_Other_Essays)
 
 【MacIntyre, A.】（1981）〈After Virtue: A Study in Moral Theory〉，《University of Notre Dame Press》
 語言：英文
-所屬面向：識然通向應然：呼應卷二的誠實生成論
+所屬面向：認識通向倫理：呼應卷二的誠實生成論
 立場：補充
 摘要：麥金泰爾論證「不能從 is 推出 ought」的現代前提來自暗中取消人的 telos；一旦恢復功能性目的概念（如手錶「應」準時報時），事實即蘊含應然。作為旁證，為本節「識然通向應然」提供以目的論重建事實-價值橋樑的路徑。
 > **全文**：[After Virtue (Wikipedia)](https://en.wikipedia.org/wiki/After_Virtue)
 
 【Hume, D.】（1739–40）〈A Treatise of Human Nature（is–ought 段落）〉，《London: John Noon》
 語言：英文
-所屬面向：識然通向應然：呼應卷二的誠實生成論
+所屬面向：認識通向倫理：呼應卷二的誠實生成論
 立場：反例
 摘要：休謨的「休謨斷頭台」主張純描述性的事實前提無法推導出倫理或評價性結論，是「識然通向應然」的經典反例。本節須正面回應此 is–ought 鴻溝，方能為誠實生成論的價值跨越辯護。
 > **全文**：[Is–ought problem (Wikipedia)](https://en.wikipedia.org/wiki/Is%E2%80%93ought_problem)

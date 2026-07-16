@@ -12,7 +12,7 @@
 
 ---
 
-### 小節 4：本卷的深時行程：路線圖
+### 小節 4：三部曲的三層嵌套時間軸
 
 【Prigogine, I. & Nicolis, G.】（1977）〈Self-Organization in Nonequilibrium Systems: From Dissipative Structures to Order through Fluctuations〉，《Wiley / Nobel Lecture》
 語言：英文
@@ -406,14 +406,14 @@
 
 【Singer, P.】（1981）《The Expanding Circle: Ethics, Evolution, and Moral Progress》，Princeton University Press
 語言：英文
-所屬面向：本卷的深時行程：路線圖
+所屬面向：三部曲的三層嵌套時間軸
 立場：支持
 摘要：辛格描繪道德圈由家庭、社群、國族、全人類至動物逐步外擴的「路線圖」，並以理性的普遍化為外推動力。支持本卷把倫理沿尺度外推（人→動物→生態→星球→宇宙→AI）的行程設計。
 > **全文**：[Stafforini PDF](https://www.stafforini.com/docs/Singer%20-%20The%20expanding%20circle.pdf)
 
 【Crary, A. (ed.)】（2023）《The Good It Promises, the Harm It Does: Critical Essays on Effective Altruism》，Oxford University Press
 語言：英文
-所屬面向：本卷的深時行程：路線圖
+所屬面向：三部曲的三層嵌套時間軸
 立場：反例
 摘要：本文集主張長期主義／有效利他把關懷投向數兆未來者，反而排擠當下的人類與動物苦難。作為反例，提醒外推路線圖每往更大尺度推進一步，都要對「就近的義務被稀釋」保持警覺。
 > **全文**：[EA Forum 討論](https://forum.effectivealtruism.org/posts/ArqvZsNuwhMAJxEXQ/alice-crary-s-bad-criticisms-of-effective-altruism)

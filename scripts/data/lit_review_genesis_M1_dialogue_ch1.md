@@ -119,27 +119,27 @@
 
 ---
 
-## 小節五：主體性倫理學如何回應這些困境
+## 小節五：創生倫理學如何回應這些困境
 
 ## 哲學
 
 【Korsgaard, C. M.】（1996）〈The Sources of Normativity〉，Cambridge University Press
 語言：英文
-所屬面向：主體性倫理學如何回應這些困境
+所屬面向：創生倫理學如何回應這些困境
 立場：支持
 摘要：主張規範性的來源在於主體的「反思性認可」與「實踐認同」——唯有主體自我立法、自我構成，理由與義務才成立。為本節「以主體性奠基倫理」提供最直接的當代哲學盟友：倫理是主體自我生成的內在結構，而非外加。
 > **全文**：[SEP-引用 / Cambridge](https://www.cambridge.org/core/books/sources-of-normativity/5A85034A6566FDFDE374073A015CBD2A)
 
 【MacIntyre, A.】（1981）〈After Virtue: A Study in Moral Theory〉，University of Notre Dame Press
 語言：英文
-所屬面向：主體性倫理學如何回應這些困境
+所屬面向：創生倫理學如何回應這些困境
 立場：補充
 摘要：診斷啟蒙「為道德提供世俗理性辯護」的計畫失敗、淪為情緒主義，主張回到亞里斯多德式的德行、實踐與生命敘事整全性。作為旁證，與本節「重新奠基倫理」同屬建構性回應，但其解方是傳統與目的論，與本卷「主體誠實生成」路徑可對照對話。
 > **全文**：[Wikipedia: After Virtue](https://en.wikipedia.org/wiki/After_Virtue)
 
 【Parfit, D.】（2011）〈On What Matters〉，Oxford University Press
 語言：英文
-所屬面向：主體性倫理學如何回應這些困境
+所屬面向：創生倫理學如何回應這些困境
 立場：反例
 摘要：以客觀主義（objectivist）規範理論主張存在獨立於主體欲求的客觀理由，並批判一切以主體為基礎（desire-based / subjective）的倫理學。直接對立於本節「由主體性奠基」的核心策略，是主體性倫理學在元倫理層面必須回應的最強反例。
 > **全文**：[NDPR: On What Matters review](https://ndpr.nd.edu/reviews/on-what-matters-volumes-1-and-2/)
@@ -148,7 +148,7 @@
 
 【顧紅亮】〈責任與他者——列維納斯的責任觀〉，華東師範大學哲學系（會議／期刊論文）
 語言：中文
-所屬面向：主體性倫理學如何回應這些困境
+所屬面向：創生倫理學如何回應這些困境
 立場：補充
 摘要：系統梳理列維納斯責任觀四命題：負責任的生活先於責任哲學、為他者之責任比為己更源始、責任與回應言說構成活的倫理對話、負責任的主體性比占有性主體性更本真。作為華語學界旁證，支撐本節「以主體—他者的承擔關係回應古典困境」。（細節待核：刊載出處與年份以原文 PDF 為準。）
 > **全文**：[sinoss.net PDF](https://www.sinoss.net/uploadfile/2010/1130/7043.pdf)

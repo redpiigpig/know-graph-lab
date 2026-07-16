@@ -54,14 +54,14 @@
 
 【Frankfort, H.; Frankfort, H. A.; Wilson, J. A.; Jacobsen, T.; Irwin, W. A.】（1946）《The Intellectual Adventure of Ancient Man: An Essay on Speculative Thought in the Ancient Near East》，University of Chicago Press
 語言：英文
-所屬面向：先蘇與古近東的本質主義源頭
+所屬面向：柏拉圖不是最早：先蘇與古近東的源頭
 立場：補充
 摘要：本書界定古近東「神話創生式（mythopoeic）思維」具體而擬人，並指出即便早期人類「糾纏於知覺的當下，已認出某些超越現象的問題」（起源與目的）。直接支撐本章「柏拉圖不是最早；古近東宇宙論已隱含表象 vs 超越現象之真實」的更古老根，是該節核心旁證。
 > **全文**：[Internet Archive 全文](https://archive.org/details/intellectual_adventure)
 
 【Assmann, J.】（1990／英譯 2006）《Ma'at: Gerechtigkeit und Unsterblichkeit im alten Ägypten》／《Maʿat: Justice and Immortality in Ancient Egypt》
 語言：德文（有英／法譯）
-所屬面向：先蘇與古近東的本質主義源頭
+所屬面向：柏拉圖不是最早：先蘇與古近東的源頭
 立場：補充
 摘要：Assmann 闡釋古埃及「瑪特（Maʿat）」為一遍在、賦予意義的宇宙秩序——創造的形式與真理，潛伏的失序（Isfet）隨時欲突破可見世界。提供「可見現象之下／之上另有一隱秘真實秩序」的古近東宗教範例，作為本章「更古老的根」之旁證。（細節待核：英譯本書名與年份依通行版本，建議核對 University of Chicago Press / Brill 版次）
 > **全文**：[Britannica「Maat」條目（背景）](https://www.britannica.com/topic/Maat-Egyptian-goddess)
@@ -72,14 +72,14 @@
 
 【Mourelatos, A. P. D.】（1970）《The Route of Parmenides: A Study of Word, Image, and Argument in the Fragments》，Yale University Press
 語言：英文
-所屬面向：先蘇與古近東的本質主義源頭
+所屬面向：柏拉圖不是最早：先蘇與古近東的源頭
 立場：補充
 摘要：Mourelatos 主張 doxa 並非單純「假象／顯現」，而是人的觀點與臆測；並把巴門尼德描繪為以可觀察資料支撐假說的嚴謹「科學家」。為本章「巴門尼德 doxa/alētheia 二分＝表象 vs 真實的古老根」提供權威旁證，同時細緻化此二分（doxa 不全然被貶斥）。
 > **全文**：[PhilPapers / WorldCat 書目（The Route of Parmenides）](https://philpapers.org/rec/MOURTR)
 
 【Palmer, J.】（2009）《Parmenides and Presocratic Philosophy》，Oxford University Press
 語言：英文
-所屬面向：先蘇與古近東的本質主義源頭
+所屬面向：柏拉圖不是最早：先蘇與古近東的源頭
 立場：反例
 摘要：Palmer 以「模態」詮釋巴門尼德：alētheia 之路講「必然存在者」、doxa 之路講「偶然存在者」而非純粹幻象，故第二部分宇宙論為正當。此為對「巴門尼德＝表象 vs 真實之古老根」標準讀法的有力 foil：若 doxa 不被貶為幻象、二路皆有正當對象，則「本質的幽靈」未必源於巴門尼德式貶抑。
 > **全文**：[Oxford Academic 書目](https://academic.oup.com/book/9526)

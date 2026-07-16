@@ -8,25 +8,25 @@
 
 ## 宗教與神話
 
-### 所屬面向：在場世界論的神學重讀：創世者、觀世者、住世者
+### 所屬面向：世界生成的神學重讀：創世者、觀世者、住世者
 
 【Hartshorne, C.】（1948）〈The Divine Relativity: A Social Conception of God〉，《Yale University Press》
 語言：英文
-所屬面向：在場世界論的神學重讀：創世者、觀世者、住世者
+所屬面向：世界生成的神學重讀：創世者、觀世者、住世者
 立場：支持
 摘要：哈茨宏在 1947 年泰瑞講座基礎上提出「雙極有神論／泛在神論」，主張神既影響世界、亦被世界所影響，神是「自我超越的超越者」，包含眾受造物而不取消其獨立性。此說與本節「神人互構」、神作為觀世者與住世者共同生成世界的結構高度同構，是神世相互建構論的經典盟友。
 > **全文**：[Yale University Press](https://yalebooks.yale.edu/book/9780300028805/the-divine-relativity/)
 
 【Viney, D. & Shields, G.】（2022）〈Process Theism〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
-所屬面向：在場世界論的神學重讀：創世者、觀世者、住世者
+所屬面向：世界生成的神學重讀：創世者、觀世者、住世者
 立場：補充
 摘要：本條目整理懷海德「說神創造世界與說世界創造神同樣為真」的雙極命題，並界定泛在神論為介於泛神論與古典有神論之間、「世界在神之內」的中道立場。為本節創世者／住世者的相互內在結構提供權威的學術定位與術語系譜旁證。
 > **全文**：[SEP: Process Theism](https://plato.stanford.edu/entries/process-theism/)
 
 【Feuerbach, L.】（1841）〈The Essence of Christianity（Das Wesen des Christentums）〉，《Otto Wigand（英譯 1854, George Eliot）》
 語言：德文（英譯）
-所屬面向：在場世界論的神學重讀：創世者、觀世者、住世者
+所屬面向：世界生成的神學重讀：創世者、觀世者、住世者
 立場：反例
 摘要：費爾巴哈主張神不過是人把自身本質（理性、愛、意志）外投到宇宙的投影，「神學即人類學」，神是人內在本性的向外投射。此論把「人造神」推到還原論極端、徹底否定神的本體獨立性，正是本節「神人互構」必須區辨的反例——互構不等於單向投影。
 > **全文**：[SEP: Ludwig Feuerbach](https://plato.stanford.edu/entries/ludwig-feuerbach/)
