@@ -1,0 +1,103 @@
+{
+  "sees": [
+    {
+      "see_zh": "亞的斯亞貝巴（正教）",
+      "name_zh": "亞的斯亞貝巴宗主教座",
+      "name_en": "Ethiopian Orthodox Tewahedo Patriarchate",
+      "church": "衣索比亞正教會",
+      "tradition": "科普特正教",
+      "rite": "亞歷山卓禮（吉茲）",
+      "founded_year": 330,
+      "split_year": 1959,
+      "parent_see_zh": "亞歷山卓|科普特正教",
+      "location": "衣索比亞亞的斯亞貝巴",
+      "current_patriarch_zh": "宗主教阿布納·馬蒂亞斯",
+      "current_patriarch_en": "Patriarch Abune Mathias",
+      "incumbent_since": 2013,
+      "patriarchate_start_year": 1959,
+      "notes": "傳自4世紀聖弗魯門提烏斯（阿克蘇姆）；長期由科普特亞歷山卓宗主教委任埃塞俄比亞都主教，1959年獲授自主、1959設本地宗主教。非迦克墩東方正教。主教鏈部分。",
+      "sources": "衣索比亞正教會；Wikipedia Ethiopian Orthodox Tewahedo Church",
+      "bishops": [
+        {
+          "name_zh": "宗主教巴西流斯",
+          "name_en": "Patriarch Abune Basilios",
+          "succession_number": 1,
+          "start_year": 1959,
+          "end_year": 1970,
+          "status": "正統",
+          "notes": "首任衣索比亞本地宗主教。"
+        },
+        {
+          "name_zh": "宗主教馬蒂亞斯",
+          "name_en": "Patriarch Abune Mathias",
+          "succession_number": 6,
+          "start_year": 2013,
+          "end_year": null,
+          "status": "正統",
+          "notes": "現任第六任宗主教。"
+        }
+      ]
+    },
+    {
+      "see_zh": "阿斯馬拉",
+      "name_zh": "阿斯馬拉宗主教座",
+      "name_en": "Eritrean Orthodox Tewahedo Patriarchate",
+      "church": "厄立特里亞正教會",
+      "tradition": "科普特正教",
+      "rite": "亞歷山卓禮（吉茲）",
+      "founded_year": 1993,
+      "split_year": 1998,
+      "parent_see_zh": "亞歷山卓|科普特正教",
+      "location": "厄立特里亞阿斯馬拉",
+      "current_patriarch_zh": "宗主教阿布納·奇里安",
+      "current_patriarch_en": "Patriarch Abune Qerlos",
+      "incumbent_since": 2021,
+      "patriarchate_start_year": 1998,
+      "notes": "1993厄立特里亞獨立後，1998年由科普特亞歷山卓授予自主、設宗主教。非迦克墩東方正教。主教鏈部分。",
+      "sources": "厄立特里亞正教會；Wikipedia Eritrean Orthodox Tewahedo Church",
+      "bishops": []
+    },
+    {
+      "see_zh": "新朱利法",
+      "name_zh": "新朱利法（伊斯法罕）亞美尼亞教區",
+      "name_en": "Armenian Diocese of New Julfa (Isfahan)",
+      "church": "亞美尼亞使徒教會",
+      "tradition": "亞美尼亞使徒教會",
+      "rite": "亞美尼亞禮",
+      "founded_year": 1606,
+      "parent_see_zh": "埃奇米亞津|亞美尼亞使徒教會",
+      "location": "伊朗伊斯法罕新朱利法",
+      "notes": "1604-06阿拔斯一世遷亞美尼亞人至伊斯法罕新朱利法所設教區；埃奇米亞津轄下。主教鏈待補。",
+      "sources": "亞美尼亞使徒教會；Wikipedia Armenian Diocese of Isfahan",
+      "bishops": []
+    },
+    {
+      "see_zh": "德黑蘭（亞美尼亞）",
+      "name_zh": "德黑蘭亞美尼亞教區",
+      "name_en": "Armenian Diocese of Tehran",
+      "church": "亞美尼亞使徒教會",
+      "tradition": "亞美尼亞使徒教會",
+      "rite": "亞美尼亞禮",
+      "founded_year": 1945,
+      "parent_see_zh": "埃奇米亞津|亞美尼亞使徒教會",
+      "location": "伊朗德黑蘭",
+      "notes": "伊朗北部亞美尼亞人教區，埃奇米亞津轄下。主教鏈待補。",
+      "sources": "亞美尼亞使徒教會；Wikipedia Armenian Apostolic Church in Iran",
+      "bishops": []
+    },
+    {
+      "see_zh": "科塔亞姆",
+      "name_zh": "科塔亞姆（馬蘭卡拉）都主教座",
+      "name_en": "Malankara Orthodox Syrian Church (Kottayam)",
+      "church": "馬蘭卡拉正教會",
+      "tradition": "敘利亞正教",
+      "rite": "西敘利亞禮",
+      "founded_year": 1912,
+      "parent_see_zh": "馬拉巴爾|馬拉巴爾東正教",
+      "location": "印度喀拉拉科塔亞姆",
+      "notes": "1912年由安提阿宗主教在印度重立東方大公主教（Catholicos of the East）；馬蘭卡拉正教會主座 Devalokam。主教鏈待補。",
+      "sources": "馬蘭卡拉正教會；Wikipedia Malankara Orthodox Syrian Church",
+      "bishops": []
+    }
+  ]
+}
