@@ -786,6 +786,18 @@ onBeforeUnmount(() => { observer?.disconnect(); stopSpeak() })
 /* 引用編號＝可點擊連結，連到 /ai-dialogues 編號查閱 */
 .book-prose :deep(.cite-seq) { @apply font-mono text-violet-500/80 no-underline rounded px-0.5 transition-colors; }
 .book-prose :deep(.cite-seq:hover) { @apply text-violet-700 underline bg-violet-50; }
+
+/* ── 腳註（nonchurch 格式：正文上標↔章末註釋雙向互點）── 講義逐處引用 */
+.book-prose :deep(sup.footnote-ref) { font-size: 0.68em; vertical-align: super; }
+.book-prose :deep(sup.footnote-ref a) { color: #7c3aed; text-decoration: none; }
+.book-prose :deep(.footnotes) { margin: 1.75em 0 0.5em; border-top: 2px solid #e5e7eb; padding-top: 0.9em; }
+.book-prose :deep(.footnotes-title) { @apply text-sm font-bold text-violet-600 uppercase tracking-widest mb-3; }
+.book-prose :deep(.fn-item) { display: flex; align-items: baseline; line-height: 1.85; font-size: 0.8rem; color: #555; margin-bottom: 0.35rem; }
+.book-prose :deep(.fn-num) { flex-shrink: 0; width: 2.4em; text-align: right; margin-right: 0.7em; color: #7c3aed; font-weight: 600; }
+.book-prose :deep(.fn-body) { flex: 1; text-align: justify; word-break: break-word; }
+.book-prose :deep(.fn-body a) { color: #7c3aed; }
+.book-prose :deep(.footnote-backref) { text-decoration: none; color: #7c3aed; margin-left: 5px; }
+.book-prose :deep(:target) { background: #fef3c7; transition: background 0.6s; border-radius: 4px; scroll-margin-top: 1.5rem; }
 </style>
 
 <style scoped>

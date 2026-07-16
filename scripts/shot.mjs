@@ -13,7 +13,7 @@ const has = (name) => rest.includes(`--${name}`)
 
 const browser = await chromium.launch()
 const page = await browser.newPage({ viewport: { width: Number(opt('w', 1440)), height: Number(opt('h', 1100)) } })
-await page.goto(url, { waitUntil: 'networkidle', timeout: 60000 })
+await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 })
 await page.waitForTimeout(Number(opt('wait', 3000)))
 const js = opt('js', null)
 if (js) { await page.evaluate(js); await page.waitForTimeout(1500) }
