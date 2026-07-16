@@ -5,6 +5,11 @@
 $ErrorActionPreference = 'Continue'
 Set-Location 'c:\Users\user\Desktop\know-graph-lab'
 
+# 防重複：已有 ingest_accs_genesis worker 在跑（排程/手動皆算）就跳過本輪
+$running = Get-CimInstance Win32_Process -Filter "Name like '%python%'" |
+    Where-Object { $_.CommandLine -match 'ingest_accs_genesis\.py' }
+if ($running) { Write-Output "已有 ACCS worker (PID $($running[0].ProcessId)) → 跳過本輪"; exit 0 }
+
 $pdf = 'c:\tmp\古代基督信仰聖經註釋叢書6-10 書士得撒.pdf'
 $src = 'G:\我的雲端硬碟\資料\電子書\世界宗教\基督教\IVP - 古代基督信仰聖經註釋叢書 (27 冊)\古代基督信仰聖經註釋叢書6-10 書 士 得 撒.pdf'
 $stem = '古代基督信仰聖經註釋叢書6-10 書士得撒'
