@@ -9,7 +9,7 @@ import path from 'node:path'
 
 const BOOKS = [
   { slug: 'world-religions-intro', out: 'WR1.html', n: 17 },
-  { slug: 'sinographic-literature', out: 'SL1.html', n: 16 },
+  { slug: 'sinographic-literature', out: 'SL1.html', n: 17 },
 ]
 
 // WR 各章地圖（章號 → 圖檔與圖說）
