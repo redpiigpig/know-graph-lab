@@ -111,7 +111,11 @@ def main():
         if dry:
             print(f"  [see] {see_zh}|{church} parent={pid and pid[:8]} bishops={len(s.get('bishops',[]))}")
         else:
-            new = q(f"insert into episcopal_sees ({cn}) values ({cv}) returning id", token)
+            try:
+                new = q(f"insert into episcopal_sees ({cn}) values ({cv}) returning id", token)
+            except urllib.error.HTTPError as e:
+                errors.append(f"{see_zh}|{church}: insert 失敗 {e.read().decode()[:120]}")
+                continue
             sid = new[0]["id"]
             by_see.setdefault(see_zh, []).append({"id": sid, "see_zh": see_zh, "church": church, "tradition": s["tradition"]})
         ins_sees += 1
