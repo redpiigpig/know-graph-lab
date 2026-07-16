@@ -165,6 +165,90 @@
 摘要：重檢海森堡以亞里斯多德 potentia（潛能）詮釋量子態的傳統：機率波是「介於可能與實在之間」的客觀傾向，測量（外部干預）使之現實化。為本章提供另一條形上學語彙——把疊加態理解為實在的潛能態、古典值為其現實化切片，補強疊加態本體優先的論述。
 > **全文**：[doi:10.1098/rsta.2016.0390](https://doi.org/10.1098/rsta.2016.0390)
 
+【Einstein, A.】（1905）〈Zur Elektrodynamik bewegter Körper〉，《Annalen der Physik 322(10): 891–921》
+語言：德文
+所屬面向：相對論：同時性的相對與時空的關係性
+立場：支持
+摘要：狹義相對論的原始論文。愛因斯坦以相對性原理與光速不變兩條公設為起點，指出所謂「同時」並非宇宙統一給出的事實，而必須透過各參考系內部的對鐘操作來定義，因而必然隨參考系而異。絕對時間與絕對空間由此被取消——這是本節「同時性的相對」最直接的原始依據。
+> **全文**：[DOI: 10.1002/andp.19053221004](https://doi.org/10.1002/andp.19053221004)
+
+【Anderson, P. W.】（1972）〈More Is Different〉，《Science 177(4047): 393–396》
+語言：英文
+所屬面向：從量子到古典到相對論：觀測尺度生成律的完整光譜
+立場：支持
+摘要：Anderson 以對稱性破缺為樞紐論證：即使承認基本粒子層的定律為真，也不能由此重建各層級的科學——每上一個尺度都出現需要全新概念與定律的行為，化約論的成立不蘊涵「建構論」的成立。這篇諾貝爾獎得主的反化約宣言，是本節「同一存在在不同尺度上展現不同邏輯」最常被引用的科學界支持。
+> **全文**：[DOI: 10.1126/science.177.4047.393](https://doi.org/10.1126/science.177.4047.393)
+
+【Landsman, N. P.】（2007）〈Between Classical and Quantum〉，《J. Butterfield & J. Earman (eds.), Philosophy of Physics (Handbook of the Philosophy of Science), Amsterdam: Elsevier, pp. 417–553》
+語言：英文
+所屬面向：從量子到古典到相對論：觀測尺度生成律的完整光譜
+立場：補充
+摘要：本文以數學嚴格的方式盤點古典物理由量子物理浮現的三條途徑：普朗克常數趨近於零的極限、系統粒子數趨於無窮的極限，以及退相干與一致歷史。作者指出三者各有其嚴格成立的條件與失效處，沒有任何單一機制能獨力完成過渡。這為本節的「尺度光譜」提供了必要的技術補充：尺度之間的接縫，比一句「尺度不同、邏輯不同」要精細得多。
+> **全文**：[arXiv:quant-ph/0506082](https://arxiv.org/abs/quant-ph/0506082)
+
+【Weinberg, S.】（1992）〈Dreams of a Final Theory〉，《New York: Pantheon Books》
+語言：英文
+所屬面向：從量子到古典到相對論：觀測尺度生成律的完整光譜
+立場：反例
+摘要：Weinberg 以「解釋的箭頭」為核心意象，主張追問「為什麼」的鏈條在各學科中都收斂到同一方向——最終指向一套普遍的底層定律；各尺度的規律性最終都是由下而上流出的。這對本節構成正面反例：若解釋的箭頭確實收斂，則「沒有一層有資格宣稱自己是唯一底牌」便不成立，實在確實有一個地基。
+> **全文**：[Internet Archive（借閱）](https://archive.org/details/dreamsoffinalthe0000wein)
+
+【Lemaître, G.】（1927）〈Un univers homogène de masse constante et de rayon croissant rendant compte de la vitesse radiale des nébuleuses extra-galactiques〉，《Annales de la Société Scientifique de Bruxelles, A47, 49–59》
+語言：法文
+所屬面向：大霹靂與起異點：宇宙作為生成事件
+立場：支持
+摘要：勒梅特由廣義相對論導出半徑隨時間增長的均質宇宙解，並首次從星系徑向速度給出膨脹率的觀測估計。此文正是本章開場公案的原始文獻——宇宙不是早已攤開的靜態地圖，而是有一道開端、一路生長至今的歷程。其發表於讀者不多的法文期刊，兩年後才因哈伯紅移數據而被正視，亦印證章中所述的接受史。
+> **全文**：[ADS 掃描全文](https://ui.adsabs.harvard.edu/abs/1927ASSB...47...49L/abstract)
+
+【Hawking, S. W. & Penrose, R.】（1970）〈The Singularities of Gravitational Collapse and Cosmology〉，《Proceedings of the Royal Society A, 314(1519), 529–548》
+語言：英文
+所屬面向：大霹靂與起異點：宇宙作為生成事件
+立場：支持
+摘要：霍金與潘洛斯證明，在合理的能量條件與因果性假設下，時空奇異點在封閉宇宙或發生相對論性重力塌縮之處是廣義相對論的普遍後果，而非特殊對稱解的人為產物。這為本章「起異點是條件場失去可回溯性的一道邊界」提供了最強的古典物理支撐：往前追溯不是「更早的一刻」，而是理論本身的界限。
+> **全文**：[DOI: 10.1098/rspa.1970.0021](https://doi.org/10.1098/rspa.1970.0021)
+
+【Borde, A., Guth, A. H. & Vilenkin, A.】（2003）〈Inflationary Spacetimes Are Incomplete in Past Directions〉，《Physical Review Letters, 90(15), 151301》
+語言：英文
+所屬面向：大霹靂與起異點：宇宙作為生成事件
+立場：補充
+摘要：三位作者以純運動學論證指出，平均而言處於膨脹狀態的時空在類時與類光的過去方向上必然測地不完備，此結論不依賴能量條件，因而比奇異點定理更難迴避。但作者謹慎地只主張暴脹區域需要「暴脹以外的物理」來描述其過去邊界，並未斷言那就是絕對的無中生有——這正合本章「講到起異點就講到了物理能講的盡頭」的節制。
+> **全文**：[arXiv: gr-qc/0110012](https://arxiv.org/abs/gr-qc/0110012)
+
+【Ashtekar, A., Pawlowski, T. & Singh, P.】（2006）〈Quantum Nature of the Big Bang〉，《Physical Review Letters, 96(14), 141301》
+語言：英文
+所屬面向：大霹靂與起異點：宇宙作為生成事件
+立場：反例
+摘要：在迴圈量子宇宙論的均質等向模型中，作者以非微擾、背景獨立的方法數值求解漢彌頓約束，顯示量子幾何效應在普朗克尺度接手後，大霹靂奇異點被「大反彈」取代，演化甚至能確定性地穿越普朗克區。若宇宙有一個先前的收縮相，則所謂「不可回溯的起異點邊界」只是古典近似的假象，本章把起異點讀成生成的絕對邊界即失去物理依據。
+> **全文**：[arXiv: gr-qc/0602086](https://arxiv.org/abs/gr-qc/0602086)
+
+【Tryon, E. P.】（1973）〈Is the Universe a Vacuum Fluctuation?〉，《Nature, 246, 396–397》
+語言：英文
+所屬面向：真空能與宇宙的自我創生
+立場：支持
+摘要：特萊恩提出，若宇宙的總能量（含負的重力位能）為零，則整個宇宙可以是量子場論意義下的一次真空漲落，無須外部推動者即可湧現。這是「宇宙自我創生」最早的正式物理提案，與本章把真空讀成持續參與創生的當事者、而非創世後剩下的背景，屬同一思路。
+> **全文**：[DOI: 10.1038/246396a0](https://doi.org/10.1038/246396a0)
+
+【Riess, A. G. et al.】（1998）〈Observational Evidence from Supernovae for an Accelerating Universe and a Cosmological Constant〉，《The Astronomical Journal, 116(3), 1009–1038》
+語言：英文
+所屬面向：真空能與宇宙的自我創生
+立場：支持
+摘要：高紅移超新星搜索團隊以 16 顆高紅移與 34 顆鄰近 Ia 型超新星，量得宇宙膨脹正在加速，需要一個非零的宇宙常數才能解釋（與 Perlmutter 團隊共獲 2011 年諾貝爾物理獎）。這正是本章所述「愛因斯坦放錯了理由卻算對了大小」的實證轉折：真空自身攜帶的能量密度，此刻仍在推動宇宙。
+> **全文**：[arXiv: astro-ph/9805201](https://arxiv.org/abs/astro-ph/9805201)
+
+【Weinberg, S.】（1989）〈The Cosmological Constant Problem〉，《Reviews of Modern Physics, 61(1), 1–23》
+語言：英文
+所屬面向：真空能與宇宙的自我創生
+立場：補充
+摘要：溫伯格的經典綜述指出，天文觀測所得的宇宙常數比粒子物理理論估算的真空能量密度小了數十個數量級，並檢討五條可能的解決路徑（含人擇式論證）。此文替本章的真空能敘事補上關鍵的節制：我們知道真空在沸騰，卻完全算不對它該沸騰得多厲害——「宇宙靠真空能自我維持」目前仍是一個帶著巨大理論缺口的說法。
+> **全文**：[DOI: 10.1103/RevModPhys.61.1](https://doi.org/10.1103/RevModPhys.61.1)
+
+【Carter, B.】（1974）〈Large Number Coincidences and the Anthropic Principle in Cosmology〉，《IAU Symposium 63: Confrontation of Cosmological Theories with Observational Data, 291–298, Reidel》
+語言：英文
+所屬面向：宇宙的條件場：微調問題的生成論讀法
+立場：補充
+摘要：卡特在此文正式提出「人擇原理」一詞，主張宇宙學中的大數巧合可由觀察選擇效應解釋：我們的所見必然受限於我們得以存在的條件。這是本章第二個極端（人擇式套套邏輯）的原始文獻；讀原文可見卡特本人刻意把它定位為對抗過度哥白尼式假設的方法論提醒，而非設計論證——正是本章「生成論第三條讀法」必須先接住、再超越的位置。
+> **全文**：[DOI: 10.1007/978-94-010-2220-0_25](https://doi.org/10.1007/978-94-010-2220-0_25)
+
 【Zurek, W. H.】（2022）〈Decoherence and Quantum Darwinism: From Quantum Foundations to Classical Reality〉，《Cambridge University Press》
 語言：英文
 所屬面向：本卷的收束與生成的宇宙
@@ -418,6 +502,247 @@
 立場：補充
 摘要：詞條梳理量子糾纏帶來的整體論與非可分性：糾纏系統整體性質不可化約為各部分內在性質之和。此與本章反本質主義旁證相合——若連基本性質都非內在、可分的「本質」而是關係性整體，則「現象背後藏有自足本質」的理型圖式更難成立。
 > **全文**：[SEP: Holism and Nonseparability](https://plato.stanford.edu/entries/physics-holism/)
+
+【Scherk, J. & Schwarz, J. H.】（1974）〈Dual models for non-hadrons〉，《Nuclear Physics B》81, 118–144
+語言：英文
+所屬面向：弦論的本體論姿態：實體的終點、關係的起點
+立場：支持
+摘要：本文把對偶模型從強子物理重新詮釋為描述輕子、光子、規範玻色子與引力子的理論，並證明在零斜率極限下自然導出愛因斯坦重力。此即「粒子身分＝弦的振動模式」這一翻轉的原始文獻：引力子不是被外加進理論的實體，而是弦某一振動態的結果。它為本章「存有的最小單位從名詞滑向動詞」提供了物理學史上最直接的奠基文本。
+> **全文**：[DOI: 10.1016/0550-3213(74)90010-8](https://doi.org/10.1016/0550-3213%2874%2990010-8)
+
+【Ladyman, J. & Ross, D.】（2007）〈Every Thing Must Go: Metaphysics Naturalized〉，《Oxford University Press》（與 D. Spurrett、J. Collier 合著）
+語言：英文
+所屬面向：弦論的本體論姿態：實體的終點、關係的起點
+立場：支持
+摘要：本書提出「本體結構實在論」（ontic structural realism），主張世界的客觀模態結構才是本體上基礎的，物件的同一性與個體性反而依賴於關係結構，因此形上學必須放棄「世界由自立individual物件構成」的圖像。這正是本章「實體的終點、關係的起點」在當代科學哲學中最系統化的表述。它把弦論式的關係優先姿態，從物理學命題升格為一個受當代科學約束的形上學立場。
+> **全文**：[DOI: 10.1093/acprof:oso/9780199276196.001.0001](https://doi.org/10.1093/acprof:oso/9780199276196.001.0001)
+
+【Psillos, S.】（2001）〈Is Structural Realism Possible?〉，《Philosophy of Science》68(S3), S13–S24
+語言：英文
+所屬面向：弦論的本體論姿態：實體的終點、關係的起點
+立場：反例
+摘要：本文檢視通往結構實在論的「上行」與「下行」兩條路徑，質疑「只有結構可知」能否構成一個實質而可行的實在論主張。其核心詰難是：沒有 relata 就沒有 relations——結構若要有內容，就必須預設承載結構的對象，關係無法真的成為「起點」。這對本章「實體的終點、關係的起點」構成正面的哲學反例，逼問振動若無「振動者」是否仍可說。
+> **全文**：[DOI: 10.1086/392894](https://doi.org/10.1086/392894)
+
+【Rickles, D.】（2014）〈A Brief History of String Theory: From Dual Models to M-Theory〉，《Springer（The Frontiers Collection）》
+語言：英文
+所屬面向：弦論的本體論姿態：實體的終點、關係的起點
+立場：補充
+摘要：本書由量子重力史哲學者撰寫，梳理弦論四十餘年歷程：從描述強子的對偶模型，到研究者意識到其底層物理詮釋是微小振動的弦，再到 M 理論。它為本章「弦論的本體論姿態」提供必要的史學校準——振動本體論不是一開始就被構想出來的哲學宣言，而是理論在解決技術難題時逐步浮現的副產品。此一補充可避免把弦論讀成畢達哥拉斯直覺的直線延續。
+> **全文**：[DOI: 10.1007/978-3-642-45128-7](https://doi.org/10.1007/978-3-642-45128-7)
+
+---
+
+【Candelas, P., Horowitz, G. T., Strominger, A. & Witten, E.】（1985）〈Vacuum configurations for superstrings〉，《Nuclear Physics B》258, 46–74
+語言：英文
+所屬面向：額外維度與地景問題：多重真空的本體論位置
+立場：支持
+摘要：本文研究十維超弦在四維保有 N=1 超對稱的候選真空組態，確立了以卡拉比丘（Calabi–Yau）流形緊緻化額外維度的典範路線。它是本章「額外維度捲曲方式決定物理常數與粒子質量」這一敘述的原始技術來源。文中一個 E8×E8 情形導出四代費米子的 E6 規範模型，正說明捲曲方式與所得物理世界之間的對應關係。
+> **全文**：[DOI: 10.1016/0550-3213(85)90602-9](https://doi.org/10.1016/0550-3213%2885%2990602-9)
+
+【Witten, E.】（1995）〈String theory dynamics in various dimensions〉，《Nuclear Physics B》443, 85–126
+語言：英文
+所屬面向：額外維度與地景問題：多重真空的本體論位置
+立場：補充
+摘要：本文論證十一維超重力可作為十維 IIA 型超弦的低能極限，並藉異質弦與 II 型弦的對偶性統攝強耦合動力學，是第二次超弦革命與 M 理論的樞紐文獻。本章提及「M 理論版本裡是十一維」即源出於此。它同時補充了一層本章未展開的意涵：不同弦論版本互為對偶描述，「同一實在的多種說法」本身就是關係本體論的又一佐證。
+> **全文**：[arXiv: hep-th/9503124](https://arxiv.org/abs/hep-th/9503124)
+
+【Bousso, R. & Polchinski, J.】（2000）〈Quantization of four-form fluxes and dynamical neutralization of the cosmological constant〉，《Journal of High Energy Physics》2000(06), 006
+語言：英文
+所屬面向：額外維度與地景問題：多重真空的本體論位置
+立場：補充
+摘要：本文指出多重四形式通量的量子化允許值可構成足夠稠密的「離散連續統」（discretuum），並藉膜的反覆成核動力學地生成宇宙常數落在觀測範圍內的區域。這是本章「十的五百次方個真空」此一著名數量級估計的技術源頭。它補充說明了地景不是修辭上的誇張，而是由通量量子化組合數推導出的具體結構。
+> **全文**：[DOI: 10.1088/1126-6708/2000/06/006](https://doi.org/10.1088/1126-6708/2000/06/006)
+
+【Susskind, L.】（2003）〈The Anthropic Landscape of String Theory〉，《arXiv preprint (hep-th/0302219)》
+語言：英文
+所屬面向：額外維度與地景問題：多重真空的本體論位置
+立場：支持
+摘要：本文首倡「弦論地景」一詞，主張真空的多樣性大到難以想像，並據此為人擇原理背書、勾勒一套以環境多樣性為基礎的宇宙論。其結論與本章一致：不必強求理論唯一地推導出我們的宇宙，「我們恰好落在其中一個」是可接受的解釋結構。惟其安置方式訴諸人擇選擇，與本章訴諸「跨過創生閾值的生成事件」在機制上不同，可作為對照組閱讀。
+> **全文**：[arXiv: hep-th/0302219](https://arxiv.org/abs/hep-th/0302219)
+
+【Smolin, L.】（2006）〈The Trouble with Physics: The Rise of String Theory, the Fall of a Science, and What Comes Next〉，《Houghton Mifflin》
+語言：英文
+所屬面向：額外維度與地景問題：多重真空的本體論位置
+立場：反例
+摘要：本書主張弦論三十年來未產出可檢驗的預測，地景與人擇式推理不是理論的深刻結構，而是理論失效的徵候，並批評此一研究綱領的社會學封閉性。這對本章「不可唯一決定恰恰是預期中的結構」構成直接反例：在斯莫林看來，把不可決定性重新詮釋為本體論特徵，正是使理論免於否證的手法。本章若欲成立，須回應此一「重新詮釋是否等於免責」的詰問。
+> **全文**：[Internet Archive（借閱）](https://archive.org/details/troublewithphysi0000smol)
+
+---
+
+【Woit, P.】（2006）〈Not Even Wrong: The Failure of String Theory and the Search for Unity in Physical Law〉，《Basic Books》
+語言：英文
+所屬面向：萬有理論的界限：創生公式作為弱萬有理論的對照
+立場：支持
+摘要：本書論證超弦理論並未做出任何預測，而正是這種不可否證性讓它得以在學界存續並壯大，因此連「錯」都稱不上（not even wrong）。它為本章「弦論至今未等到能判定其真偽的實驗證據」提供了最著名的支撐。惟須注意其立場比本章更嚴厲：本章仍肯定弦論的本體論姿態值得認真對待，只反對將之推升為「已說盡一切」的宣告。
+> **全文**：[Internet Archive（借閱）](https://archive.org/details/notevenwrongfail0000woit)
+
+【Hossenfelder, S.】（2018）〈Lost in Math: How Beauty Leads Physics Astray〉，《Basic Books》
+語言：英文
+所屬面向：萬有理論的界限：創生公式作為弱萬有理論的對照
+立場：支持
+摘要：本書主張基礎物理四十年來停滯，根源在於「美即真」的信念已教條化到與科學客觀性衝突，超對稱、大統一等依美學判準構想的理論始終未獲觀測確認。這與本章的核心告誡完全同盟：優美本身從來不是真理的保證，只是值得追查的線索。它也替本章「愛因斯坦把數學優美與物理為真看得太近」的診斷，提供了當代物理學社群層面的實證版本。
+> **全文**：[出版社頁面](https://www.basicbooks.com/titles/sabine-hossenfelder/lost-in-math/9780465094264/)
+
+【Ellis, G. & Silk, J.】（2014）〈Scientific method: Defend the integrity of physics〉，《Nature》516(7531), 321–323
+語言：英文
+所屬面向：萬有理論的界限：創生公式作為弱萬有理論的對照
+立場：支持
+摘要：本文警告，將弦論與多重宇宙等推想性理論豁免於實驗檢驗之外，將侵蝕科學本身的完整性，並呼籲重新界定可否證性作為物理學的界線。它支持本章的收束論點：跨過「這就是萬有的真相」那一步，需要的不是更漂亮的數學，而是實際的證據。此文亦是「弦論可否證性爭論」在頂級期刊上最具代表性的公開交鋒起點。
+> **全文**：[DOI: 10.1038/516321a](https://doi.org/10.1038/516321a)
+
+【Dawid, R.】（2013）〈String Theory and the Scientific Method〉，《Cambridge University Press》
+語言：英文
+所屬面向：萬有理論的界限：創生公式作為弱萬有理論的對照
+立場：反例
+摘要：本書承認弦論在經驗上未獲確證且短期內不會，卻主張這不構成理論評價的失敗，而顯示「非經驗式理論評價」（如無替代選項論證、意外解釋連貫性）在高能物理中本就扮演正當角色。這對本章「須以實際跨過閾值的生成證據為準」構成方法論反例：若道威德成立，理性地相信弦論並不需要等待實驗。本章對萬有理論設下的節制門檻，因此必須面對「經驗確證是否為唯一門檻」的質疑。
+> **全文**：[DOI: 10.1017/CBO9781139342513](https://doi.org/10.1017/CBO9781139342513)
+
+【Barrow, J. D.】（2006）〈Gödel and Physics〉，《arXiv preprint (physics/0612253)》
+語言：英文
+所屬面向：萬有理論的界限：創生公式作為弱萬有理論的對照
+立場：反例
+摘要：本文梳理哥德爾不完備定理與物理學的關係，並明確主張：沒有理由預期不完備性會妨礙我們尋找自然律的描述，它所限制的是我們對這些定律「結果」的預測能力，而非定律本身的可完成性。這正面反駁本章「任何以有限公理封閉推演萬有的理論都難逃這道限制的陰影」之推論。本章援引哥德爾為萬有理論設界，須先處理巴羅所指出的「定律描述」與「結果預測」之區分。
+> **全文**：[arXiv: physics/0612253](https://arxiv.org/abs/physics/0612253)
+
+【Laplace, P.-S.】（1814）〈Essai philosophique sur les probabilités〉，《Paris: Courcier》
+語言：法文
+所屬面向：古典力學的實在觀：決定論宇宙及其本體論代價
+立場：反例
+摘要：本書導論提出著名的「拉普拉斯之魔」：若有一智者能在某一瞬間知悉宇宙一切粒子的位置與作用力，並具備分析這些數據的能力，則未來與過去都將如現在般攤開在它眼前。這是嚴格物理決定論的典範陳述，也是本節所要拆解的對手——它預設規律性可無條件外推至一切尺度，因而取消了「生成」的位置。拉普拉斯本人並未由力學定理證明此說，而是把它當作科學理性的自明前提來宣告。
+> **全文**：[Internet Archive（Truscott & Emory 英譯本，1902）](https://archive.org/details/philosophicaless00lapliala)
+
+【Norton, J. D.】（2008）〈The Dome: An Unexpectedly Simple Failure of Determinism〉，《Philosophy of Science 75(5): 786–798》
+語言：英文
+所屬面向：古典力學的實在觀：決定論宇宙及其本體論代價
+立場：支持
+摘要：Norton 建構了一個形狀特殊的圓頂，證明依牛頓運動定律，靜置於頂點的質點可以在任意時刻自發滑動，且不違反任何古典力學公理——決定論在牛頓力學內部就已失效。他逐一駁回「這是不完整的牛頓物理」「這不物理」「這用了不合法的理想化」等辯護。這直接支持本節論點：決定論並非古典力學的本體地基，而是特定條件下的呈現。
+> **全文**：[DOI: 10.1086/594524](https://doi.org/10.1086/594524)｜[作者 OA 版](https://sites.pitt.edu/~jdnorton/papers/DomePSA2006.pdf)
+
+【van Strien, M.】（2014）〈On the origins and foundations of Laplacian determinism〉，《Studies in History and Philosophy of Science Part A 45: 24–31》
+語言：英文
+所屬面向：古典力學的實在觀：決定論宇宙及其本體論代價
+立場：補充
+摘要：作者論證拉普拉斯 1814 年的決定論宣告並非導自其力學：微分方程解的唯一性定理當時尚未發展出來，拉普拉斯不可能、也從未證明此結果。真正的根據是普遍哲學原則——充足理由律與連續律，而這套想法源自對萊布尼茲形上學的再詮釋，在啟蒙時期的法國廣為流傳。這為本節「決定論的本體論代價」提供了關鍵的思想史補充：代價早在物理學之前就已由形上學先行支付。
+> **全文**：[DOI: 10.1016/j.shpsa.2013.12.003](https://doi.org/10.1016/j.shpsa.2013.12.003)｜[HAL 開放取用](https://hal.science/hal-01610331v1)
+
+【Earman, J.】（1986）〈A Primer on Determinism〉，《Dordrecht: D. Reidel（The Western Ontario Series in Philosophy of Science, 32）》
+語言：英文
+所屬面向：古典力學的實在觀：決定論宇宙及其本體論代價
+立場：補充
+摘要：本書是決定論問題的標準教科書級盤點，逐一檢視古典力學、狹義與廣義相對論、量子力學各自的決定論成立條件與失效樣態。Earman 的核心結論是：決定論不是一條可以整體斷言的鐵律，而是隨理論、隨時空結構逐案裁決的性質。這正好補充本節論點——決定論的適用範圍本身就是一個尺度與條件的問題。
+> **全文**：[作者 OA 全書 PDF（Univ. of Pittsburgh）](https://sites.pitt.edu/~jearman/Earman_1986PrimerOnDeterminism.pdf)
+
+---
+
+## 第二節　相對論：同時性的相對與時空的關係性
+
+> 本章立論：相對論拆掉了牛頓的絕對時空布景，「時空不是舞台，是參與者；不是容器，而是關係網絡本身」——此即生成三要素中「關係性」在最大尺度上的物理印證。以下五筆分別提供：同時性相對化的原始文獻、關係論對實體論最強的當代論證（洞穴論證）、由相對論反推出區塊宇宙／決定論的強力反例、對該反例的經典回應，以及萊布尼茲 vs 牛頓之爭的標準盤點。
+
+【Earman, J. & Norton, J.】（1987）〈What Price Spacetime Substantivalism? The Hole Story〉，《The British Journal for the Philosophy of Science 38(4): 515–525》
+語言：英文
+所屬面向：相對論：同時性的相對與時空的關係性
+立場：支持
+摘要：兩位作者把愛因斯坦的「洞穴論證」（hole argument）擴充為對時空實體論的一般性反駁：若把時空點視為獨立實體，則廣義相對論等一大類時空理論將產生極端的不確定性——即使給定最完整的邊界條件，方程式所能決定的物理狀態仍遠少於實體論者所承諾的相異狀態。這是關係論對容器式時空最鋒利的當代論證，直接支持本節「時空不是舞台而是關係網絡」的命題。
+> **全文**：[DOI: 10.1093/bjps/38.4.515](https://doi.org/10.1093/bjps/38.4.515)
+
+【Rietdijk, C. W.】（1966）〈A Rigorous Proof of Determinism Derived from the Special Theory of Relativity〉，《Philosophy of Science 33(4): 341–344》
+語言：英文
+所屬面向：相對論：同時性的相對與時空的關係性
+立場：反例
+摘要：Rietdijk 由同時性的相對出發，論證任何事件對某個可能的遠方觀察者而言都已經是「過去」，因而未來事件早已確定，決定論成立——後與 Putnam 1967 合稱「Rietdijk–Putnam 論證」，是四維論／區塊宇宙的標準依據。這對本章構成最直接的反例：本章把相對論讀成「關係性的生成」，而同一組前提卻可被推出「一切早已寫定、無所謂真正的發生」，恰恰回到第一節拉普拉斯的結論。
+> **全文**：[DOI: 10.1086/288106](https://doi.org/10.1086/288106)
+
+【Stein, H.】（1968）〈On Einstein–Minkowski Space–Time〉，《The Journal of Philosophy 65(1): 5–23》
+語言：英文
+所屬面向：相對論：同時性的相對與時空的關係性
+立場：支持
+摘要：Stein 針對 Rietdijk–Putnam 論證提出經典反駁：他們偷渡了「已確定」這一關係具有傳遞性的古典預設，而在閔可夫斯基時空中，「已生成」只能相對於個別時空點來定義，不能拼接成一張全局的「現在」切片。結論是相對論並未消滅生成，只是把生成徹底關係化。這正是本節所需的關鍵支持：拆掉絕對布景之後，撐起實在的恰恰是關係本身。
+> **全文**：[DOI: 10.2307/2024512](https://doi.org/10.2307/2024512)
+
+【Earman, J.】（1989）〈World Enough and Space-Time: Absolute versus Relational Theories of Space and Time〉，《Cambridge, MA: MIT Press》
+語言：英文
+所屬面向：相對論：同時性的相對與時空的關係性
+立場：補充
+摘要：本書是萊布尼茲—克拉克之爭（關係論 vs 實體論）從牛頓《原理》一路到廣義相對論的標準盤點，並嚴格區分了「運動的絕對／關係」與「時空本體的實體／關係」兩組常被混為一談的問題。Earman 的結論是雙方各有無法償付的代價，關係論並非不勞而獲的勝方。這對本節構成必要的節制性補充：以相對論支持關係性，須交代關係論自身尚未解決的帳。
+> **全文**：[作者 OA 全書 PDF（Univ. of Pittsburgh）](https://sites.pitt.edu/~jearman/Earman_1989WorldEnoughAndSpacetime.pdf)
+
+---
+
+## 第三節　從量子到古典到相對論：觀測尺度生成律的完整光譜
+
+> 本章立論：「沒有一層有資格宣稱自己才是唯一的底牌……尺度本身就是生成的參數，而不是把實在切割開來的裂縫」。以下五筆分別提供：古典世界由退相干篩選而生的物理機制、尺度湧現的反化約經典宣言、量子—古典過渡的技術性完整盤點，以及兩筆最強的反例——湧現與化約可相容、以及一切尺度終究收束於單一底層定律。
+
+【Butterfield, J.】（2011）〈Less is Different: Emergence and Reduction Reconciled〉，《Foundations of Physics 41(6): 1065–1135》
+語言：英文
+所屬面向：從量子到古典到相對論：觀測尺度生成律的完整光譜
+立場：反例
+摘要：Butterfield 以機率論的任意函數法、幾何學的碎形、量子理論的無窮系統超選擇、統計力學的相變四個案例，論證「湧現與化約不相容」這一廣為流傳的哲學教條是錯的：新穎且穩健的行為可以出現在化約的極限過程之中。這反駁本節的隱含前提——各尺度邏輯的差異並不足以證成「尺度是生成的參數」，差異完全可能只是極限行為的產物。
+> **全文**：[DOI: 10.1007/s10701-010-9516-1](https://doi.org/10.1007/s10701-010-9516-1)｜[arXiv:1106.0702](https://arxiv.org/abs/1106.0702)
+
+---
+
+## 統計
+
+| 節 | 筆數 | 支持 | 補充 | 反例 |
+|---|---|---|---|---|
+| 一、古典力學的實在觀：決定論宇宙及其本體論代價 | 4 | 1 | 2 | 1 |
+| 二、相對論：同時性的相對與時空的關係性 | 5 | 3 | 1 | 1 |
+| 三、從量子到古典到相對論：觀測尺度生成律的完整光譜 | 5 | 2 | 1 | 2 |
+| **合計** | **14** | **6** | **4** | **4** |
+
+- **待核筆數**：0（9 筆期刊／專書論文之作者、年份、刊名、卷期、頁碼、DOI 皆經 Crossref API 逐筆核對；5 筆專書／章節經出版社或 OA 全文核對）
+- **語言分布**：英文 12、德文 1、法文 1
+
+【Curiel, E., Visser, M. & Doboszewski, J.】（2009，2025 修訂）〈Singularities and Black Holes〉，《The Stanford Encyclopedia of Philosophy》
+語言：英文
+所屬面向：大霹靂與起異點：宇宙作為生成事件
+立場：反例
+摘要：本條目梳理奇異點的哲學爭議，指出「奇異點」根本難以被界定為時空中的一個位置或實體，並整理了與實在論相對的立場：奇異點標示的是廣義相對論描述能力的失效，而非時空真的有一道邊界，正如古典電磁學的點粒子發散並不指涉真實物理。此說直接質疑本章把起異點實體化為「條件場的一道邊界」的本體論讀法。
+> **全文**：[SEP: Singularities and Black Holes](https://plato.stanford.edu/entries/spacetime-singularities/)
+
+---
+
+## 第二節　真空能與宇宙的自我創生
+
+【Rugh, S. E. & Zinkernagel, H.】（2002）〈The Quantum Vacuum and the Cosmological Constant Problem〉，《Studies in History and Philosophy of Modern Physics, 33(4), 663–705》
+語言：英文
+所屬面向：真空能與宇宙的自我創生
+立場：反例
+摘要：兩位作者考掘宇宙常數問題的概念史，論證這個問題之所以成立，全靠一個未經檢驗的前提：量子場的零點能量是「物理上真實」的能量密度。他們指出零點能在量子場論內部可被重新定序而消去，其實在性缺乏獨立證據。若真空能未必實在，本章把「一鍋沸騰的真空」當成宇宙自我創生的當事者，便是把形式量誤讀成本體。
+> **全文**：[philsci-archive 全文 PDF](https://philsci-archive.pitt.edu/398/1/cosconstant.pdf)
+
+【Albert, D. Z.】（2012）〈On the Origin of Everything〉（書評：Krauss, L. M., *A Universe from Nothing*, Free Press, 2012），《The New York Times Sunday Book Review, 2012-03-25》
+語言：英文
+所屬面向：真空能與宇宙的自我創生
+立場：反例
+摘要：物理哲學家艾伯特批評克勞斯所謂「從無到有」的宇宙起源：相對論性量子場的真空並不是「無」，而是一種極其特定的物質配置；把物質從場中湧現說成無中生有，只是迴避了「那些場又從何而來」。這對本章第二節是直接的警告——真空能敘事可以說明宇宙如何持續自我維持，卻絲毫沒有回答「為什麼會有」，而本章結尾恰把後者交還給讀者。
+> **全文**：[NYT 書評頁](https://www.nytimes.com/2012/03/25/books/review/a-universe-from-nothing-by-lawrence-m-krauss.html)
+
+---
+
+## 第三節　宇宙的條件場：微調問題的生成論讀法
+
+【Friederich, S.】（2017，2026 修訂）〈Fine-Tuning〉，《The Stanford Encyclopedia of Philosophy》
+語言：英文
+所屬面向：宇宙的條件場：微調問題的生成論讀法
+立場：補充
+摘要：本條目系統整理微調問題的全部主要選項——設計論證、多重宇宙、新物理、自然性違反——以及各自遭遇的反駁（含反向賭徒謬誤、機率不可正規化等）。它替本章第三節提供了完整的爭議地形圖，並印證章中的判斷：「設計者」與「套套邏輯」確實是最容易把人吸過去的兩個極端，而兩者都不是唯一選項。
+> **全文**：[SEP: Fine-Tuning](https://plato.stanford.edu/entries/fine-tuning/)
+
+【Earman, J.】（1987）〈The SAP Also Rises: A Critical Examination of the Anthropic Principle〉，《American Philosophical Quarterly, 24(4), 307–317》
+語言：英文
+所屬面向：宇宙的條件場：微調問題的生成論讀法
+立場：反例
+摘要：厄爾曼逐一拆解人擇原理的各種表述，指出弱人擇原理若不加料便只是瑣碎的套套邏輯，而強人擇原理的諸種定義彼此不等值，且（如 Barrow 與 Tipler 的版本）帶有目的論色彩。這對本章是雙面的反例：它固然支持章中對套套邏輯的判決，卻也逼問本章的第三條讀法——「沒有達閾的可能從來沒機會被回頭觀看」本身就是觀察選擇效應，其解釋力恐怕不比它所要取代的說法更多。
+> **全文**：[LSE 課程用全文 PDF](https://personal.lse.ac.uk/robert49/teaching/ph201/Week14_xtra_Earman.pdf)
+
+【White, R.】（2000）〈Fine-Tuning and Multiple Universes〉，《Noûs, 34(2), 260–276》
+語言：英文
+所屬面向：宇宙的條件場：微調問題的生成論讀法
+立場：反例
+摘要：懷特論證，即使真有大量宇宙，也無法提高「這一個宇宙」適合生命的機率——由微調推論多重宇宙犯了反向賭徒謬誤（inverse gambler's fallacy）：賭場裡見到一次雙六，並不能作為「今晚已擲過很多次」的證據。此文直擊本章把我們的宇宙讀成「地景中一次恰好達閾的生成事件」的推論結構：地景就算存在，也不解釋此宇宙為何達閾。
+> **全文**：[MIT 作者自存 PDF](https://web.mit.edu/rog/www/papers/fine_tuning.pdf)
 
 【Myrvold, W.】（2022）〈Philosophical Issues in Quantum Theory〉，《Stanford Encyclopedia of Philosophy》
 語言：英文

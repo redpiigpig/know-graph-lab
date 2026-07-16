@@ -28,9 +28,6 @@
 摘要：羅薩把現代性診斷為「社會加速」導致的異化，並以「共鳴」(resonance)——主體與世界相互回應、互不化約的關係——作為異化的反面。其「共鳴 vs 異化」軸線與本節「誠實在關係場中做功 vs 被壓低」的對照相鄰可對話，屬旁證。
 > **全文**：[SciELO 重構論文（OA）](https://www.scielo.cl/scielo.php?script=sci_arttext&pid=S0719-36962020000100155)
 
-【Sahlins, M. — 此處原候選已捨棄】
-（註：原始研究中曾考慮以高貴野蠻人辯論文獻佐證，但該議題屬第五章「社會的起源」，與第九章異化主題不相干，整筆捨棄以免誤置。）
-
 【Weber, M. 著／Kalberg, S. 等論】（SEP 條目）〈Max Weber〉，《Stanford Encyclopedia of Philosophy》
 語言：英文
 所屬面向：現代性的病理：韋伯的除魅與工具理性

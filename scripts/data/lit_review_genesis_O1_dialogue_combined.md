@@ -128,6 +128,83 @@
 摘要：時間之熱力學不對稱問題的權威綜述：時間方向問題可化約為「過去假設」這一特殊低熵初始條件之爭。為本節提供問題地圖——標明「以單向耗散奠基時間」這一進路在當代物理哲學中的位置與爭點。
 > **全文**：[SEP: Thermodynamic Asymmetry in Time](https://plato.stanford.edu/entries/time-thermo/)
 
+【Wheeler, J. A.】（1983）〈Law without Law〉，《Princeton University Press（收於 J. A. Wheeler & W. H. Zurek 編, Quantum Theory and Measurement）》
+語言：英文
+所屬面向：第九章　結語：從存在者的生成到世界的生成
+立場：支持
+摘要：惠勒以延遲選擇實驗論證，觀察並非揭露既存的性質，而是參與了現象的成立——「沒有任何基本現象是現象，除非它是被觀察到的現象」，並由此提出「參與式宇宙」。此說直接支撐本章之問：跨過閾值使世界「生」出來的，是否正是觀察者的意向性介入。
+> **全文**：[Law without Law (PDF)](https://gwern.net/doc/science/physics/1983-wheeler.pdf)
+
+【Bohr, N.】（1935）〈Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?〉，《Physical Review, Vol. 48, No. 8, pp. 696–702》
+語言：英文
+所屬面向：第九章　結語：從存在者的生成到世界的生成
+立場：補充
+摘要：波耳回應 EPR，指出其「物理實在判準」一旦用於量子現象即含本質性的歧義，因為量子現象無法與界定它的整套測量安排切割開來；並以互補性主張量子力學的描述已滿足合理的完備性要求。此說為本章「觀察與被觀察不可分割」的提問提供了物理學正典的起點，但波耳停在認識論的擱置，未如本章般把它接成本體論命題。
+> **全文**：[Phys. Rev. 48, 696 (DOI)](https://doi.org/10.1103/PhysRev.48.696)
+
+【Zurek, W. H.】（2003）〈Decoherence, einselection, and the quantum origins of the classical〉，《Reviews of Modern Physics, Vol. 75, No. 3, pp. 715–775》
+語言：英文
+所屬面向：第九章　結語：從存在者的生成到世界的生成
+立場：補充
+摘要：祖瑞克論證環境對系統的持續監測會摧毀指針態之間的干涉，經由「環境誘發超選擇」（einselection）篩出穩健的經典態，說明經典世界如何從量子基底湧現。此正是本章所點名的另一個選項：不需要任何主觀旁觀者，客體與客體之間的相互作用已足以讓一個穩定的世界「生」出來。
+> **全文**：[arXiv:quant-ph/0105127](https://arxiv.org/abs/quant-ph/0105127)
+
+【Ghirardi, G. C.; Rimini, A.; Weber, T.】（1986）〈Unified dynamics for microscopic and macroscopic systems〉，《Physical Review D, Vol. 34, No. 2, pp. 470–491》
+語言：英文
+所屬面向：第九章　結語：從存在者的生成到世界的生成
+立場：補充
+摘要：GRW 提出一個修正的量子動力學模型，使波函數以極低機率自發定域化，於巨觀尺度上禁止遠距空間位置的線性疊加，從而在無觀察者的情況下給出客觀的坍縮。此模型旁證本章的框架：坍縮可以是一個實在的物理生成事件，而非僅是認識論的簿記，且不必依賴主觀意識。
+> **全文**：[Phys. Rev. D 34, 470 (DOI)](https://doi.org/10.1103/PhysRevD.34.470)
+
+【Everett, H.】（1957）〈"Relative State" Formulation of Quantum Mechanics〉，《Reviews of Modern Physics, Vol. 29, No. 3, pp. 454–462》
+語言：英文
+所屬面向：第九章　結語：從存在者的生成到世界的生成
+立場：反例
+摘要：艾弗雷特取消坍縮公設，主張波函數恆依薛丁格方程式么正演化，觀察者與被觀察系統糾纏後分支為各自的相對態。若根本沒有坍縮這回事，本章「波函數＝創生前態、坍縮＝跨過閾值的創生事件」的整套讀法便失去對象，是卷二必須正面迎戰的最強 foil。
+> **全文**：[Rev. Mod. Phys. 29, 454 (DOI)](https://doi.org/10.1103/RevModPhys.29.454)
+
+---
+
+### 第 4 節：世界的生成作為物理問題——宇宙有無開端（預告卷二）
+
+【Lemaître, G.】（1931）〈The Beginning of the World from the Point of View of Quantum Theory〉，《Nature, Vol. 127, No. 3210, p. 706》
+語言：英文
+所屬面向：第九章　結語：從存在者的生成到世界的生成
+立場：支持
+摘要：勒梅特以四百餘字提出：沿時間回溯，量子數目愈來愈少，直到宇宙全部的能量都被封裝在唯一一個量子之中；此「原初原子」經超放射性衰變而展開為膨脹的宇宙。此文首次把「世界有一個開端」正式立為物理學可處理的問題，正是本章章前寓言所指、也是本章交棒卷二的核心——世界的生成不是比喻。
+> **全文**：[Nature 127, 706 (DOI)](https://doi.org/10.1038/127706b0)
+
+【Hubble, E.】（1929）〈A relation between distance and radial velocity among extra-galactic nebulae〉，《Proceedings of the National Academy of Sciences, Vol. 15, No. 3, pp. 168–173》
+語言：英文
+所屬面向：第九章　結語：從存在者的生成到世界的生成
+立場：補充
+摘要：哈伯以造父變星測距與視向速度資料，建立星系距離與退行速度的線性關係，證實星系正彼此遠離。此觀測把「宇宙在膨脹」從方程式的一個解變成經驗事實，使勒梅特的開端假說得以從邊緣走向主流；旁證本章的方法論姿態：世界生成的問題可以、也應該被經驗檢驗。
+> **全文**：[PNAS 15(3), 168 (PMC 全文)](https://pmc.ncbi.nlm.nih.gov/articles/PMC522427/)
+
+【Hawking, S. W.; Penrose, R.】（1970）〈The singularities of gravitational collapse and cosmology〉，《Proceedings of the Royal Society A, Vol. 314, No. 1519, pp. 529–548》
+語言：英文
+所屬面向：第九章　結語：從存在者的生成到世界的生成
+立場：補充
+摘要：霍金與潘洛斯證明一個涵蓋並推廣先前結果的奇異點定理：只要滿足若干能量條件與因果性條件，且宇宙空間閉合或存在陷俘面，時空奇異點就無法避免。此定理使「宇宙有一個時間邊界」成為廣義相對論內部的結構性結論而非哲學偏好，補強本章把世界生成問題交給物理最底層去打的判斷。
+> **全文**：[Proc. R. Soc. A 314, 529 (DOI)](https://doi.org/10.1098/rspa.1970.0021)
+
+【Bondi, H.; Gold, T.】（1948）〈The Steady-State Theory of the Expanding Universe〉，《Monthly Notices of the Royal Astronomical Society, Vol. 108, No. 3, p. 252》
+語言：英文
+所屬面向：第九章　結語：從存在者的生成到世界的生成
+立場：反例
+摘要：邦迪與戈爾德以「完美宇宙學原理」（宇宙不僅空間均勻，時間上亦均勻）為演繹起點，主張宇宙雖在膨脹卻無始無終，物質持續被創生以維持平均密度恆定。此模型讓宇宙永遠處於同一狀態、根本沒有「開端」這個生成事件，正面否定本章交棒卷二的問題設定，是最強的宇宙論 foil。（同年 Hoyle 於 MNRAS 108(5), 372 提出對應的場論版本。）
+> **全文**：[MNRAS 108(3), 252 (DOI)](https://doi.org/10.1093/mnras/108.3.252)
+
+---
+
+## 統計
+
+- 節數：4（閱讀分組；clean_inv 本章 sections 為空陣列，對齊鍵一律採章標題）
+- 總筆數：17
+- 立場分布：支持 4／補充 8／反例 5
+- 每節皆滿足「至少 1 反例 + 1 支持或補充」
+- 待核：0（全部條目之作者／年份／刊名／卷期頁／DOI 均已查證；Wheeler 一文各家所引頁碼有 182–213 與 182–216 兩說，故本表不列頁碼）
+
 
 ## 哲學
 
@@ -741,3 +818,145 @@
 立場：支持
 摘要：麥克丹尼爾系統化「存在的樣態與程度」，主張基礎性、完美自然性、奠基等概念都應以「存在程度」來兌現，存在因而是可分級、可比較的分層結構。此分層框架支持本章「譜系動態性」——存在者可在不同存在程度／層級之間移動的構想。
 > **全文**：[Review of The Fragmentation of Being (PDF)](https://www.kellytrogdon.org/ewExternalFiles/fragmentation%20review.pdf)
+
+【Sider, T.】（2011）〈Writing the Book of the World〉，《Oxford University Press》
+語言：英文
+所屬面向：創生哲學的本體論意義：生成作為第一哲學
+立場：反例
+摘要：賽德主張世界本身有客觀的「結構」，形上學的核心是找到「切中關節」（carve at the joints）的基本概念，存在一種客觀正確的方式來「書寫世界之書」。這正是創生哲學要拒絕的對立面：它把基本性安置在世界自身的結構而非生成事件，等於重新聘回本章第二節要剃除的「彼岸實體」，是「生成作為第一哲學」最強的當代競爭者。
+> **全文**：[doi:10.1093/acprof:oso/9780199697908.001.0001](https://doi.org/10.1093/acprof:oso/9780199697908.001.0001)
+
+【Heidegger, M.】（1927）〈Sein und Zeit〉，《Jahrbuch für Philosophie und phänomenologische Forschung, Bd. VIII / Max Niemeyer》
+語言：德文
+所屬面向：創生哲學的本體論意義：生成作為第一哲學
+立場：反例
+摘要：海德格把基礎存有論安置在「存有的顯現」（Erscheinen）與此在的存在分析上，時間性是顯現的視域而非生成的引擎。本章明言此為「與海德格的關鍵分野」：創生哲學把顯現讀成生成過程被主體意向性照亮的那一端，因而《存有與時間》既是最重要的參照，也是「顯現／生成」路線之爭的主要對手。
+> **全文**：[Internet Archive（德文全文）](https://archive.org/details/HeideggerMartinSeinUndZeit)
+
+---
+
+## 二、經驗主義的品格：從經驗出發、可檢驗、不設先驗彼岸
+
+【James, W.】（1912）〈Essays in Radical Empiricism〉，《Longmans, Green & Co.》
+語言：英文
+所屬面向：經驗主義的品格：從經驗出發、可檢驗、不設先驗彼岸
+立場：支持
+摘要：詹姆士的徹底經驗論主張「關係與被關係之物一樣是被直接經驗到的」，經驗是連續流動的純粹經驗場，而非原子式感覺與料的堆疊。這正面支撐本章的關鍵區分：經驗不是待處理的感覺材料，而是關係性、身體性、歷時性同時到齊的生成事件第一現場——創生哲學藉此與實證主義式化約分道揚鑣。
+> **全文**：[Internet Archive（1912 Longmans 版）](https://archive.org/details/essaysinradicale0000jame)
+
+【Ayer, A. J.】（1936）〈Language, Truth and Logic〉，《Victor Gollancz》
+語言：英文
+所屬面向：經驗主義的品格：從經驗出發、可檢驗、不設先驗彼岸
+立場：反例
+摘要：艾耶爾以可檢證原則判定：命題唯有分析為真或可經驗檢證才具認知意義，形上學與神學命題一律是無意義的假命題。這是對「一套自稱經驗主義的本體論」最尖銳的挑戰——若嚴格執行檢證原則，創生哲學的本體論命題也在被清除之列；本章「不滑向實證主義式化約」的辯護必須正面通過這一關。
+> **全文**：[Internet Archive（1952 Dover 重印本）](https://archive.org/details/languagetruthlog0000ayer)
+
+【Quine, W. V.】（1951）〈Main Trends in Recent Philosophy: Two Dogmas of Empiricism〉，《The Philosophical Review, 60(1), 20–43》
+語言：英文
+所屬面向：經驗主義的品格：從經驗出發、可檢驗、不設先驗彼岸
+立場：反例
+摘要：蒯因拆解分析／綜合二分與化約論兩大教條，主張知識是一整張面對經驗法庭的信念之網，任何單一命題都可藉調整網內他處而豁免於否證。這對本章「留一扇可被經驗推翻的門」構成結構性反例：整體論意味著沒有任何裝置能被乾淨地單獨證偽，創生公式的否證入口是否真的敞開，需要更細的說明。
+> **全文**：[OA 全文（ditext）](https://www.ditext.com/quine/quine.html) ／ [doi:10.2307/2181906](https://doi.org/10.2307/2181906)
+
+【Ladyman, J. & Ross, D.】（2007）〈Every Thing Must Go: Metaphysics Naturalized〉，《Oxford University Press》
+語言：英文
+所屬面向：經驗主義的品格：從經驗出發、可檢驗、不設先驗彼岸
+立場：補充
+摘要：本書主張唯一能貢獻客觀知識的形上學，必須奠基於當代科學的實際內容，而非哲學家的先驗直覺、常識或對科學的簡化想像，並據此提出自然化形上學的嚴格判準。這與創生哲學「不從先驗公理表演繹世界、隨經驗科學新發現修訂內容」的自我定位高度同盟，可視為同一經驗主義品格在分析傳統中的平行綱領。
+> **全文**：[doi:10.1093/acprof:oso/9780199276196.001.0001](https://doi.org/10.1093/acprof:oso/9780199276196.001.0001)
+
+---
+
+## 三、理論的彈性：形式剛性＋內容彈性的開放框架
+
+【Lakatos, I.】（1970）〈Falsification and the Methodology of Scientific Research Programmes〉，《Criticism and the Growth of Knowledge (Lakatos & Musgrave eds.), Cambridge University Press, 91–196》
+語言：英文
+所屬面向：理論的彈性：形式剛性＋內容彈性的開放框架
+立場：支持
+摘要：拉卡托斯把研究綱領拆成免於否證的「硬核」與可隨反例調整的「保護帶」，並以綱領是進步或退化來理性評比，而非以單次否證判生死。這幾乎是本章「形式剛性＋內容彈性」的科學哲學對應版本，替創生公式「骨架不塌、血肉常新」提供了現成且得到公認的方法論架構與退化風險的警戒線。
+> **全文**：[doi:10.1017/CBO9781139171434.009](https://doi.org/10.1017/CBO9781139171434.009)
+
+【Carnap, R.】（1950）〈Empiricism, Semantics, and Ontology〉，《Revue Internationale de Philosophie, 4》
+語言：英文
+所屬面向：理論的彈性：形式剛性＋內容彈性的開放框架
+立場：補充
+摘要：卡納普區分框架內問題（可經驗或邏輯地回答）與框架外問題（不是真假問題，而是選擇該框架是否有用的實用抉擇），主張經驗論者可一致地接受抽象實體。這替「開放框架」的正當性提供了經典辯護：形式骨架是被選定的語言框架，其評價標準是效用而非先驗真理；創生哲學跨尺度通用性的主張，正可讀為框架選擇的實用論證。
+> **全文**：[OA PDF（CMU Carnap Project）](https://www.phil.cmu.edu/projects/carnap/editorial/latex_pdf/1950-1.pdf)
+
+【Cartwright, N.】（1999）〈The Dappled World: A Study of the Boundaries of Science〉，《Cambridge University Press》
+語言：英文
+所屬面向：理論的彈性：形式剛性＋內容彈性的開放框架
+立場：反例
+摘要：卡特賴特主張自然是「斑駁」的拼布：定律不是普遍統治的鐵則，而是需要特殊「機造」（nomological machine）安排才生成的地方性產物，科學有其邊界而非鋪滿全域。這直擊本章「跨尺度通用性／弱萬有理論骨架」的軟肋：若定律本就只在特製佈置中成立，一副號稱跨量子到社會皆適用的形式骨架，恰恰是她要質疑的那種帝國主義式普遍性。
+> **全文**：[doi:10.1017/CBO9781139167093](https://doi.org/10.1017/CBO9781139167093)
+
+---
+
+## 四、次大敘事的自我定位：簡述與互見
+
+【Lyotard, J.-F.】（1979）〈La condition postmoderne: rapport sur le savoir〉，《Les Éditions de Minuit》
+語言：法文
+所屬面向：次大敘事的自我定位：簡述與互見
+立場：反例
+摘要：李歐塔以「對後設敘事的不信任」定義後現代，主張啟蒙、進步、思辨等大敘事已失去正當化知識的能力，代之以局部的小敘事與語言遊戲的異質性。這是「次大敘事」自我定位必須直面的判官：即使自稱「次」、自稱可轉換視角，一套宣稱能接引道生／緣生／易生／梵生的生成語法座標系，在李歐塔眼中仍有復辟後設敘事之嫌。
+> **全文**：[Internet Archive（1984 Minnesota 英譯本）](https://archive.org/details/postmoderncondit00lyot) ／ [University of Minnesota Press 書目頁](https://www.upress.umn.edu/9780816611737/the-postmodern-condition/)
+
+【Massimi, M.】（2022）〈Perspectival Realism〉，《Oxford University Press》
+語言：英文
+所屬面向：次大敘事的自我定位：簡述與互見
+立場：支持
+摘要：馬西米（2023 年 Lakatos Award 得主）論證科學知識正是靠複數知識社群佔據不同科學視角而生長，視角的多元性與實在論不但相容，還是通向實在的必要條件。這是「可轉換視角」自我定位在當代科哲中最強的得獎級盟友：它示範了如何既承認視角性、又不落入相對主義，恰是創生哲學避免「淪為獨斷形上學或滑向無限相對」的雙面防線。
+> **全文**：[doi:10.1093/oso/9780197555620.001.0001](https://doi.org/10.1093/oso/9780197555620.001.0001)
+
+【Giere, R. N.】（2006）〈Scientific Perspectivism〉，《University of Chicago Press》
+語言：英文
+所屬面向：次大敘事的自我定位：簡述與互見
+立場：補充
+摘要：吉爾主張觀察與理論建構同樣是視角性的，科學描述像顏色一樣只截取實在的某些面向，且那些面向是從特定人類視角所見，而非物自身的碎片。這替「可轉換視角的次大敘事」提供了較早的定型論述，也與本卷「本體論＝認識論」的共構命題呼應：視角不是認識的缺陷，而是知識得以成立的條件。
+> **全文**：[University of Chicago Press 書目頁](https://press.uchicago.edu/ucp/books/book/chicago/S/bo4094708.html)
+
+【Sellars, W.】（1962）〈Philosophy and the Scientific Image of Man〉，《Frontiers of Science and Philosophy (Colodny ed.), University of Pittsburgh Press, 35–78》
+語言：英文
+所屬面向：次大敘事的自我定位：簡述與互見
+立場：補充
+摘要：塞拉斯區分「顯明形象」與「科學形象」兩種人在世界中的圖像，並主張哲學的任務是把二者統合為一個「綜觀視野」（synoptic vision）——理解萬事萬物在最寬泛意義上如何連貫成一體。這替「還要不要有大敘事」提供了後現代之前最體面的正面答案，可作為創生哲學自居高整合度座標紙、卻不獨占真理位置的先驅論式。
+> **全文**：[OA 全文（ditext）](https://www.ditext.com/sellars/psim.html)
+
+---
+
+## 統計
+
+- 節數：4
+- 總筆數：17
+- 立場分布：支持 5／補充 5／反例 7
+- 待核：0
+
+【Gödel, K.】（1949）〈A Remark about the Relationship between Relativity Theory and Idealistic Philosophy〉，《Open Court（收於 P. A. Schilpp 編, Albert Einstein: Philosopher-Scientist, The Library of Living Philosophers Vol. 7, pp. 557–562）》
+語言：英文
+所屬面向：第九章　結語：從存在者的生成到世界的生成
+立場：反例
+摘要：哥德爾從廣義相對論中同時性的相對、以及他自己所構造的可容許閉合類時曲線的旋轉宇宙解出發，論證客觀的時間流逝與「變化」並不存在，時間是觀念性的。若生成本身只是視角效應，則本章「生成取代顯現」的根詞便失去本體論的立足點，是全章最尖銳的物理學側 foil。
+> **全文**：[Being and Becoming in Modern Physics (SEP)](https://plato.stanford.edu/entries/spacetime-bebecome/)
+
+【Goodman, N.】（1978）〈Ways of Worldmaking〉，《Hackett Publishing Company》
+語言：英文
+所屬面向：第九章　結語：從存在者的生成到世界的生成
+立場：支持
+摘要：古德曼主張並無單一現成的世界等著被描述，而是有複數的「世界版本」，由符號系統經合成、分解、加權、排序、刪補、變形等操作「造」出來。此說正面支撐本章的關鍵一問：世界不是免費附贈的舞台，而與存在者同屬一種生成物。
+> **全文**：[Ways of Worldmaking (Internet Archive)](https://archive.org/details/waysofworldmakin00good)
+
+【Husserl, E.】（1954）〈Die Krisis der europäischen Wissenschaften und die transzendentale Phänomenologie〉，《Martinus Nijhoff（Husserliana VI, W. Biemel 編；撰於 1934–1937）》
+語言：德文
+所屬面向：第九章　結語：從存在者的生成到世界的生成
+立場：補充
+摘要：胡塞爾在第三部分展開「生活世界」（Lebenswelt）的問題性，指出伽利略式的數理自然科學把一件理念的衣裳套在生活世界之上，反使被理念化的世界冒充為唯一的實在。此說旁證本章的接榫判斷：要問「世界如何生成」，就必須先揭穿「世界一直都在那裡」這個被科學化所固化的預設。
+> **全文**：[Edmund Husserl (SEP)](https://plato.stanford.edu/entries/husserl/)
+
+【Searle, J. R.】（1995）〈The Construction of Social Reality〉，《The Free Press》
+語言：英文
+所屬面向：第九章　結語：從存在者的生成到世界的生成
+立場：反例
+摘要：瑟爾一面說明制度事實如何靠集體意向性與構成規則被造出來，一面嚴格主張這一切都奠基在不依賴人類再現而存在的「粗事實」之上，並為外在實在論作正面辯護。此立場把「被造的世界」封鎖在社會層，否認物理世界本身是生成物，正面反對本章把世界生成推到物理最底層的走法。
+> **全文**：[Social Ontology (SEP)](https://plato.stanford.edu/entries/social-ontology/)
+
+---

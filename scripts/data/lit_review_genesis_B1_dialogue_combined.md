@@ -103,21 +103,21 @@
 
 【Pseudo-Dionysius the Areopagite】（c. 5–6 世紀）〈The Mystical Theology / The Divine Names〉，《Paulist Press（Luibheid 英譯，1987）》
 語言：英文（希臘文原典）
-所屬面向：默然：四然的最後向度
+所屬面向：默然：五然的最後向度
 立場：支持
 摘要：偽狄奧尼修斯區分肯定（cataphatic）與否定（apophatic）神學，主張對終極者的否定「比肯定更真」，最終須超越一切名相與否定，進入「神聖幽暗之光」中以「不知」而知。此為本節「默然」向度的經典支持：終極存有唯能以沉默與否定逼近，正是創生哲學「存有論作為默然之學」的西方源頭。
 > **全文**：[SEP: Pseudo-Dionysius the Areopagite](https://plato.stanford.edu/entries/pseudo-dionysius-areopagite/)
 
 【Siderits, M. & Katsura, S.（Nāgārjuna 譯註）】（2013）〈Nāgārjuna's Middle Way: Mūlamadhyamakakārikā〉，《Wisdom Publications》
 語言：英文（梵文原典）
-所屬面向：默然：四然的最後向度
+所屬面向：默然：五然的最後向度
 立場：補充
 摘要：龍樹中觀以「空」（śūnyatā）否定一切自性（svabhāva），走常見與斷見之間的中道，並以四句否定使語言在終極處止息。此為本節「默然」提供東方旁證：空非虛無亦非實有，唯於言詮窮盡處默然呈現，與創生哲學「空無的本體地位＋默然向度」高度同源。
 > **全文**：[SEP: Nāgārjuna](https://plato.stanford.edu/entries/nagarjuna/)
 
 【Carnap, R.】（1932）〈The Elimination of Metaphysics Through Logical Analysis of Language（Überwindung der Metaphysik）〉，《Erkenntnis, 2》
 語言：英文（德文原典）
-所屬面向：默然：四然的最後向度
+所屬面向：默然：五然的最後向度
 立場：反例
 摘要：卡納普以「無在虛無化」（das Nichts nichtet）為例，依可檢證原則判定一切形上「無」之命題為無意義的偽陳述（pseudo-statements），主張這類話語該被邏輯分析徹底消除。此構成本節最尖銳的 foil：創生哲學欲在「默然」中正面安置不可言說者，卡納普則判此種言說根本無認知內容、應歸於沉默而非保留。
 > **全文**：[PhilPapers: The Elimination of Metaphysics](https://philpapers.org/rec/TEO)
