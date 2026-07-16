@@ -1,0 +1,172 @@
+{
+  "sees": [
+    {
+      "see_zh": "布加勒斯特",
+      "name_zh": "布加勒斯特宗主教座",
+      "name_en": "Romanian Orthodox Patriarchate of Bucharest",
+      "church": "羅馬尼亞正教會",
+      "tradition": "希臘正教",
+      "rite": "拜占庭禮",
+      "founded_year": 1359,
+      "split_year": 1885,
+      "parent_see_zh": "君士坦丁堡|東正教",
+      "location": "羅馬尼亞布加勒斯特",
+      "current_patriarch_zh": "宗主教丹尼爾",
+      "current_patriarch_en": "Patriarch Daniel (Ciobotea)",
+      "incumbent_since": 2007,
+      "patriarchate_start_year": 1925,
+      "notes": "1359年設瓦拉幾亞都主教座；1872年羅馬尼亞正教會統一，1885年獲君士坦丁堡承認自主，1925年升為宗主教區。主教鏈部分。",
+      "sources": "羅馬尼亞正教會官方；Wikipedia Romanian Orthodox Church",
+      "bishops": [
+        {"name_zh": "宗主教米隆·克里斯泰亞", "name_en": "Patriarch Miron Cristea", "succession_number": 1, "start_year": 1925, "end_year": 1939, "status": "正統", "notes": "首任羅馬尼亞正教會宗主教（1938-39兼任首相）。"},
+        {"name_zh": "宗主教尤斯蒂尼安·馬里納", "name_en": "Patriarch Justinian Marina", "succession_number": 3, "start_year": 1948, "end_year": 1977, "status": "正統", "notes": "共產時期主導教會。"},
+        {"name_zh": "宗主教丹尼爾", "name_en": "Patriarch Daniel (Ciobotea)", "succession_number": 6, "start_year": 2007, "end_year": null, "status": "正統", "notes": "現任第六任宗主教。"}
+      ]
+    },
+    {
+      "see_zh": "貝爾格勒",
+      "name_zh": "貝爾格勒宗主教座",
+      "name_en": "Serbian Orthodox Patriarchate of Belgrade",
+      "church": "塞爾維亞正教會",
+      "tradition": "希臘正教",
+      "rite": "拜占庭禮",
+      "founded_year": 1219,
+      "split_year": 1879,
+      "parent_see_zh": "君士坦丁堡|東正教",
+      "location": "塞爾維亞貝爾格勒",
+      "current_patriarch_zh": "宗主教波爾菲里耶",
+      "current_patriarch_en": "Patriarch Porfirije (Perić)",
+      "incumbent_since": 2021,
+      "patriarchate_start_year": 1346,
+      "notes": "承繼聖薩瓦1219年自主塞爾維亞教會與佩奇宗主教區傳統；1879年現代自主獲承認，1920年宗主教區復立、座駐貝爾格勒。主教鏈部分。",
+      "sources": "塞爾維亞正教會官方；Wikipedia Serbian Orthodox Church",
+      "bishops": [
+        {"name_zh": "宗主教季米特里耶", "name_en": "Patriarch Dimitrije (Pavlović)", "succession_number": 1, "start_year": 1920, "end_year": 1930, "status": "正統", "notes": "1920年統一後首任宗主教。"},
+        {"name_zh": "宗主教帕夫萊", "name_en": "Patriarch Pavle (Stojčević)", "succession_number": 44, "start_year": 1990, "end_year": 2009, "status": "正統", "notes": "南斯拉夫戰爭時期以簡樸著稱。"},
+        {"name_zh": "宗主教波爾菲里耶", "name_en": "Patriarch Porfirije (Perić)", "succession_number": 46, "start_year": 2021, "end_year": null, "status": "正統", "notes": "現任。"}
+      ]
+    },
+    {
+      "see_zh": "索非亞",
+      "name_zh": "索非亞宗主教座",
+      "name_en": "Bulgarian Orthodox Patriarchate of Sofia",
+      "church": "保加利亞正教會",
+      "tradition": "希臘正教",
+      "rite": "拜占庭禮",
+      "founded_year": 870,
+      "split_year": 1870,
+      "parent_see_zh": "君士坦丁堡|東正教",
+      "location": "保加利亞索非亞",
+      "current_patriarch_zh": "宗主教達尼伊爾",
+      "current_patriarch_en": "Patriarch Daniil (Nikolov)",
+      "incumbent_since": 2024,
+      "patriarchate_start_year": 1953,
+      "notes": "承繼870年保加利亞教會與普雷斯拉夫/奧赫里德宗主教區傳統；1870年設保加利亞督主教區，1945年獲君堡承認自主，1953年宗主教區復立。主教鏈部分。",
+      "sources": "保加利亞正教會官方；Wikipedia Bulgarian Orthodox Church",
+      "bishops": [
+        {"name_zh": "宗主教基里爾", "name_en": "Patriarch Cyril (Konstantinov)", "succession_number": 1, "start_year": 1953, "end_year": 1971, "status": "正統", "notes": "1953年復立後首任宗主教。"},
+        {"name_zh": "宗主教馬克西姆", "name_en": "Patriarch Maxim (Minkov)", "succession_number": 2, "start_year": 1971, "end_year": 2012, "status": "正統", "notes": "在位41年。"},
+        {"name_zh": "宗主教達尼伊爾", "name_en": "Patriarch Daniil (Nikolov)", "succession_number": 4, "start_year": 2024, "end_year": null, "status": "正統", "notes": "2024年當選現任宗主教。"}
+      ]
+    },
+    {
+      "see_zh": "地拉那",
+      "name_zh": "地拉那總主教座",
+      "name_en": "Autocephalous Orthodox Church of Albania (Tirana)",
+      "church": "阿爾巴尼亞正教會",
+      "tradition": "希臘正教",
+      "rite": "拜占庭禮",
+      "founded_year": 1922,
+      "split_year": 1937,
+      "parent_see_zh": "君士坦丁堡|東正教",
+      "location": "阿爾巴尼亞地拉那",
+      "current_patriarch_zh": "總主教約安",
+      "current_patriarch_en": "Archbishop John (Pelushi)",
+      "incumbent_since": 2025,
+      "notes": "1922年宣告自主，1937年獲君堡承認；共產時期遭禁，1991年後由阿納斯塔西奧斯總主教重建。主教鏈部分。",
+      "sources": "阿爾巴尼亞正教會官方；Wikipedia Orthodox Church of Albania",
+      "bishops": [
+        {"name_zh": "總主教阿納斯塔西奧斯", "name_en": "Archbishop Anastasios (Yannoulatos)", "succession_number": 1, "start_year": 1992, "end_year": 2025, "status": "正統", "notes": "重建阿爾巴尼亞正教會，2025年1月逝世。"},
+        {"name_zh": "總主教約安", "name_en": "Archbishop John (Pelushi)", "succession_number": 2, "start_year": 2025, "end_year": null, "status": "正統", "notes": "2025年繼任。"}
+      ]
+    },
+    {
+      "see_zh": "華沙（正教）",
+      "name_zh": "華沙及全波蘭都主教座",
+      "name_en": "Polish Orthodox Metropolis of Warsaw",
+      "church": "波蘭正教會",
+      "tradition": "希臘正教",
+      "rite": "拜占庭禮",
+      "founded_year": 1924,
+      "split_year": 1924,
+      "parent_see_zh": "君士坦丁堡|東正教",
+      "location": "波蘭華沙",
+      "current_patriarch_zh": "都主教薩瓦",
+      "current_patriarch_en": "Metropolitan Sawa (Hrycuniak)",
+      "incumbent_since": 1998,
+      "notes": "1924年獲君士坦丁堡承認自主（1948年莫斯科亦承認）。主教鏈部分。",
+      "sources": "波蘭正教會官方；Wikipedia Polish Orthodox Church",
+      "bishops": [
+        {"name_zh": "都主教迪奧尼西", "name_en": "Metropolitan Dionizy (Waledyński)", "succession_number": 1, "start_year": 1923, "end_year": 1948, "status": "正統", "notes": "波蘭自主教會首任都主教。"},
+        {"name_zh": "都主教薩瓦", "name_en": "Metropolitan Sawa (Hrycuniak)", "succession_number": 6, "start_year": 1998, "end_year": null, "status": "正統", "notes": "現任。"}
+      ]
+    },
+    {
+      "see_zh": "普雷紹夫",
+      "name_zh": "普雷紹夫都主教座",
+      "name_en": "Orthodox Church of the Czech Lands and Slovakia (Prešov)",
+      "church": "捷克斯洛伐克正教會",
+      "tradition": "希臘正教",
+      "rite": "拜占庭禮",
+      "founded_year": 1951,
+      "split_year": 1998,
+      "parent_see_zh": "君士坦丁堡|東正教",
+      "location": "斯洛伐克普雷紹夫",
+      "current_patriarch_zh": "都主教拉斯季斯拉夫",
+      "current_patriarch_en": "Metropolitan Rastislav (Gont)",
+      "incumbent_since": 2014,
+      "notes": "1951年由莫斯科授予自主，1998年獲君士坦丁堡承認自主。主教鏈部分。",
+      "sources": "捷克斯洛伐克正教會官方；Wikipedia Orthodox Church of the Czech Lands and Slovakia",
+      "bishops": [
+        {"name_zh": "都主教拉斯季斯拉夫", "name_en": "Metropolitan Rastislav (Gont)", "succession_number": 1, "start_year": 2014, "end_year": null, "status": "正統", "notes": "現任都主教。"}
+      ]
+    },
+    {
+      "see_zh": "聖彼得堡",
+      "name_zh": "聖彼得堡都主教座",
+      "name_en": "Metropolis of Saint Petersburg",
+      "church": "俄羅斯正教會",
+      "tradition": "希臘正教",
+      "rite": "拜占庭禮",
+      "founded_year": 1742,
+      "split_year": null,
+      "parent_see_zh": "莫斯科|東正教（俄羅斯）",
+      "location": "俄羅斯聖彼得堡",
+      "current_patriarch_zh": "都主教瓦爾索諾菲",
+      "current_patriarch_en": "Metropolitan Varsonofy (Sudakov)",
+      "incumbent_since": 2014,
+      "notes": "1742年設聖彼得堡教區，帝俄首都主教座，僅次於莫斯科。主教鏈部分。",
+      "sources": "俄羅斯正教會官方；Wikipedia Metropolis of Saint Petersburg",
+      "bishops": [
+        {"name_zh": "都主教瓦爾索諾菲", "name_en": "Metropolitan Varsonofy (Sudakov)", "succession_number": 1, "start_year": 2014, "end_year": null, "status": "正統", "notes": "現任，兼莫斯科宗主教區總務。"}
+      ]
+    },
+    {
+      "see_zh": "帕特雷",
+      "name_zh": "帕特雷都主教座",
+      "name_en": "Metropolis of Patras",
+      "church": "希臘正教會",
+      "tradition": "希臘正教",
+      "rite": "拜占庭禮",
+      "founded_year": 90,
+      "split_year": null,
+      "parent_see_zh": "雅典|東正教（希臘）",
+      "location": "希臘帕特雷",
+      "notes": "傳為使徒安得烈殉道地；今為希臘教會都主教座。主教鏈部分。",
+      "sources": "希臘正教會；Wikipedia Metropolis of Patras",
+      "bishops": [
+        {"name_zh": "都主教赫里索斯托莫斯", "name_en": "Metropolitan Chrysostomos (Sklifas)", "succession_number": 1, "start_year": 2005, "end_year": null, "status": "正統", "notes": "現任都主教。"}
+      ]
+    }
+  ]
+}
