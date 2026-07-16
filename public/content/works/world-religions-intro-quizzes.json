@@ -1,0 +1,13 @@
+{
+  "quizzes": [
+    { "id": "q01-02", "title": "第一～二章", "range": "什麼是宗教・信仰與靈性", "file": "/content/works/world-religions-intro/quizzes/q01-02.html" },
+    { "id": "q03-04", "title": "第三~四章", "range": "起源演化・分類學", "file": "/content/works/world-religions-intro/quizzes/q03-04.html" },
+    { "id": "q05-06", "title": "第五~六章", "range": "時代分期・八大界域方法論", "file": "/content/works/world-religions-intro/quizzes/q05-06.html" },
+    { "id": "q07-08", "title": "第七~八章", "range": "中央界域・東方界域", "file": "/content/works/world-religions-intro/quizzes/q07-08.html" },
+    { "id": "q09-10", "title": "第九~十章", "range": "西方界域・北方界域", "file": "/content/works/world-religions-intro/quizzes/q09-10.html" },
+    { "id": "q11-12", "title": "第十一~十二章", "range": "南方界域・亞太界域", "file": "/content/works/world-religions-intro/quizzes/q11-12.html" },
+    { "id": "q13-14", "title": "第十三~十四章", "range": "北美界域・拉美界域", "file": "/content/works/world-religions-intro/quizzes/q13-14.html" },
+    { "id": "q15-16", "title": "第十五~十六章", "range": "儀式・現代社會", "file": "/content/works/world-religions-intro/quizzes/q15-16.html" },
+    { "id": "q17", "title": "第十七章", "range": "跨宗教對話", "file": "/content/works/world-religions-intro/quizzes/q17.html" }
+  ]
+}

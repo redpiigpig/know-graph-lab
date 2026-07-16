@@ -58,6 +58,11 @@
                 :class="tab === 'review' ? 'border-violet-500 text-violet-700' : 'border-transparent text-gray-500 hover:text-gray-800'">
                 研究回顧<span v-if="litEntries.length" class="ml-1 text-xs" :class="tab === 'review' ? 'text-violet-500' : 'text-gray-400'">{{ litEntries.length }}</span>
               </button>
+              <button v-if="quizzes.length" @click="tab = 'quiz'"
+                class="px-4 py-2 text-sm font-medium border-b-2 -mb-px transition"
+                :class="tab === 'quiz' ? 'border-violet-500 text-violet-700' : 'border-transparent text-gray-500 hover:text-gray-800'">
+                小考<span class="ml-1 text-xs" :class="tab === 'quiz' ? 'text-violet-500' : 'text-gray-400'">{{ quizzes.length }}</span>
+              </button>
               <a v-if="bookDocxUrl" :href="bookDocxUrl" download
                 class="ml-auto mb-1 text-xs font-medium px-3 py-1.5 rounded-lg border border-violet-300 text-violet-700 hover:bg-violet-50 no-underline flex-shrink-0">⬇ 下載 Word</a>
             </div>
@@ -185,6 +190,32 @@
                 </section>
               </div>
             </div>
+
+            <!-- 小考卷（每兩章一張） -->
+            <div v-show="tab === 'quiz'">
+              <div class="mb-5">
+                <h2 class="text-base font-semibold text-gray-900">小考卷</h2>
+                <p class="text-xs text-gray-500 mt-0.5">每兩章一張 · 選擇題／名詞解釋／簡答申論 · 附參考答案</p>
+              </div>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <button v-for="q in quizzes" :key="q.id" @click="openQuiz(q)"
+                  class="px-3 py-1.5 text-xs rounded-lg border transition"
+                  :class="activeQuiz === q.id ? 'border-violet-400 bg-violet-50 text-violet-700 font-medium' : 'border-gray-200 text-gray-600 hover:border-violet-300 hover:text-violet-700'">
+                  {{ q.title }}
+                </button>
+              </div>
+              <div v-if="!activeQuiz" class="text-gray-400 text-sm py-12 text-center">選擇上方任一張考卷開始。</div>
+              <div v-else class="bg-white rounded-2xl border border-gray-100 px-6 py-8 sm:px-10">
+                <div class="flex justify-end mb-4">
+                  <button @click="showAnswers = !showAnswers"
+                    class="px-3 py-1.5 text-xs rounded-lg font-medium transition"
+                    :class="showAnswers ? 'bg-emerald-100 text-emerald-700 hover:bg-emerald-200' : 'bg-violet-600 text-white hover:bg-violet-700'">
+                    {{ showAnswers ? '隱藏參考答案' : '顯示參考答案' }}
+                  </button>
+                </div>
+                <div class="quiz-prose" :class="{ 'show-answers': showAnswers }" v-html="quizHtml"></div>
+              </div>
+            </div>
           </div>
         </div>
       </template>
@@ -232,9 +263,27 @@ interface LitEntry {
   venue: string | null; language: string | null; theme: string | null; dimension: string | null
   stance: string | null; abstract_zh: string | null; fulltext_url: string | null; has_fulltext: boolean
 }
-const tab = ref<'book' | 'review'>('book')
+const tab = ref<'book' | 'review' | 'quiz'>('book')
 const litEntries = ref<LitEntry[]>([])
 const litLoading = ref(false)
+
+// ── 小考卷（每兩章一張）──
+interface QuizMeta { id: string; title: string; range?: string; file: string }
+const quizzes = ref<QuizMeta[]>([])
+const activeQuiz = ref<string>('')
+const quizHtml = ref('')
+const showAnswers = ref(false)
+async function loadQuizzes() {
+  try {
+    const d = await $fetch<{ quizzes?: QuizMeta[] }>(`/content/works/${slug.value}-quizzes.json`, { responseType: 'json' })
+    quizzes.value = Array.isArray(d?.quizzes) ? d.quizzes : []
+  } catch { quizzes.value = [] }
+}
+async function openQuiz(q: QuizMeta) {
+  activeQuiz.value = q.id; showAnswers.value = false; quizHtml.value = ''
+  try { quizHtml.value = await $fetch<string>(q.file, { responseType: 'text' }) }
+  catch { quizHtml.value = '<p class="text-gray-400">考卷載入失敗。</p>' }
+}
 const LANG_LABELS: Record<string, string> = { en: '英文', zh: '中文', de: '德文', fr: '法文', ja: '日文', la: '拉丁文', grc: '希臘文', es: '西班牙文', it: '義大利文' }
 function langLabel(c: string | null) { return LANG_LABELS[c ?? ''] ?? (c || '—') }
 const litGroups = computed(() => {
@@ -703,7 +752,7 @@ async function load() {
   } catch { html.value = '' } finally { pending.value = false }
 }
 onMounted(() => {
-  load(); loadReview()
+  load(); loadReview(); loadQuizzes()
   if (typeof window !== 'undefined') {
     speech.supported = true // gemini 引擎只需 fetch + <audio>，一律可用
     speech.deviceSupported = 'speechSynthesis' in window
@@ -726,7 +775,7 @@ onMounted(() => {
     }
   }
 })
-watch(() => bid.value, () => { stopSpeak(); tab.value = 'book'; load(); loadReview() })
+watch(() => bid.value, () => { stopSpeak(); tab.value = 'book'; load(); loadReview(); loadQuizzes() })
 
 // Highlight the chapter currently in view.
 let observer: IntersectionObserver | null = null
@@ -786,6 +835,19 @@ onBeforeUnmount(() => { observer?.disconnect(); stopSpeak() })
 /* 引用編號＝可點擊連結，連到 /ai-dialogues 編號查閱 */
 .book-prose :deep(.cite-seq) { @apply font-mono text-violet-500/80 no-underline rounded px-0.5 transition-colors; }
 .book-prose :deep(.cite-seq:hover) { @apply text-violet-700 underline bg-violet-50; }
+
+/* ── 小考卷 ── */
+.quiz-prose :deep(h3) { @apply text-base font-bold text-gray-900 mt-6 mb-3; }
+.quiz-prose :deep(h4) { @apply text-sm font-semibold text-violet-600 uppercase tracking-widest mt-6 mb-2; }
+.quiz-prose :deep(p) { @apply text-[15px] leading-[1.9] text-gray-800 mb-3; }
+.quiz-prose :deep(ol) { @apply list-decimal pl-6 mb-4 space-y-3 text-[15px] leading-relaxed text-gray-800; }
+.quiz-prose :deep(ul) { @apply list-disc pl-6 mb-2 space-y-1; }
+.quiz-prose :deep(.q-options) { @apply list-none pl-2 mt-1 space-y-1 text-gray-700; }
+.quiz-prose :deep(.quiz-meta) { @apply text-xs text-gray-400 mb-4; }
+/* 參考答案預設隱藏，按鈕切換 */
+.quiz-prose :deep(.quiz-answers) { display: none; }
+.quiz-prose.show-answers :deep(.quiz-answers) { display: block; @apply mt-6 pt-5 border-t-2 border-dashed border-emerald-200; }
+.quiz-prose :deep(.quiz-answers h3) { @apply text-emerald-700; }
 
 /* ── 腳註（nonchurch 格式：正文上標↔章末註釋雙向互點）── 講義逐處引用 */
 .book-prose :deep(sup.footnote-ref) { font-size: 0.68em; vertical-align: super; }

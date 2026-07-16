@@ -1,0 +1,13 @@
+{
+  "quizzes": [
+    { "id": "q01-02", "title": "第一～二章", "range": "導論・漢字發展", "file": "/content/works/sinographic-literature/quizzes/q01-02.html" },
+    { "id": "q03-04", "title": "第三～四章", "range": "卜辭神話・經典正典化", "file": "/content/works/sinographic-literature/quizzes/q03-04.html" },
+    { "id": "q05-06", "title": "第五~六章", "range": "佛典漢譯・大藏經", "file": "/content/works/sinographic-literature/quizzes/q05-06.html" },
+    { "id": "q07-08", "title": "第七~八章", "range": "六朝・唐代", "file": "/content/works/sinographic-literature/quizzes/q07-08.html" },
+    { "id": "q09-10", "title": "第九~十章", "range": "變文・戲曲", "file": "/content/works/sinographic-literature/quizzes/q09-10.html" },
+    { "id": "q11-12", "title": "第十一~十二章", "range": "神魔小說・日本漢文學", "file": "/content/works/sinographic-literature/quizzes/q11-12.html" },
+    { "id": "q13-14", "title": "第十三~十四章", "range": "韓半島・越南漢文學", "file": "/content/works/sinographic-literature/quizzes/q13-14.html" },
+    { "id": "q15-16", "title": "第十五~十六章", "range": "台灣漢文學・聖經漢譯", "file": "/content/works/sinographic-literature/quizzes/q15-16.html" },
+    { "id": "q17", "title": "第十七章", "range": "去漢字化與漢文再生", "file": "/content/works/sinographic-literature/quizzes/q17.html" }
+  ]
+}
