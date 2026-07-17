@@ -257,8 +257,10 @@ def _gemini_generate(contents: list) -> list[dict]:
             if isinstance(e, json.JSONDecodeError):
                 print(f"    [JSON parse fail, skip] {str(e)[:80]}", file=sys.stderr)
                 return []
-            if "depleted" in msg or "prepayment" in msg or "billing" in msg:
-                _DEAD_KEYS.add(key); continue          # 餘額用罄 → 永久剔除
+            if "depleted" in msg or "prepayment" in msg:
+                _DEAD_KEYS.add(key); continue          # 真‧預付餘額用罄 → 永久剔除
+            # 註：免費層當日限額的 429 訊息含「check your plan and billing details」，
+            # 「billing」不代表餘額乾（免費 key 無餘額概念）→ 不可標死，落下面退避分支隔日恢復。
             if "429" in msg or "resource_exhausted" in msg or "quota" in msg or "rate" in msg \
                or "503" in msg or "unavailable" in msg:
                 attempts += 1
