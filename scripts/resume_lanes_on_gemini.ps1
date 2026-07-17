@@ -16,9 +16,10 @@ function Launch($cmd) {
         "Set-Location 'c:\Users\user\Desktop\know-graph-lab'; $cmd"
 }
 
-# 單例保護：已有另一個 watcher 就退
+# 單例保護：只認「-File …resume_lanes_on_gemini.ps1」啟動的真身，
+# 避免把含此字串的臨時指令（git/grep/驗證）誤判成另一個 watcher。
 $self = Get-CimInstance Win32_Process -Filter "Name='powershell.exe'" |
-    Where-Object { $_.CommandLine -match 'resume_lanes_on_gemini' -and $_.ProcessId -ne $PID }
+    Where-Object { $_.CommandLine -match '-[Ff]ile.*resume_lanes_on_gemini\.ps1' -and $_.ProcessId -ne $PID }
 if ($self) { exit 0 }
 
 Note "watcher start (Gemini 探測 + ACCS 收官偵測)"
