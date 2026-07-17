@@ -96,6 +96,24 @@ class TestSplitLongParas:
         assert out[0] == "一。" and out[-1] == "二。" and len(out) == 4
 
 
+class TestCleanZhOutput:
+    def test_strips_noise_chars(self):
+        assert ub.clean_zh_output("�曠野歡樂。") == "曠野歡樂。"
+
+    def test_strips_kana_source_echo_arrow(self):
+        out = ub.clean_zh_output("レバノンの栄えはこれに與えられん → 黎巴嫩的榮耀必賜予它。")
+        assert out == "黎巴嫩的榮耀必賜予它。"
+
+    def test_keeps_arrow_when_no_kana_on_left(self):
+        assert ub.clean_zh_output("甲 → 乙") == "甲 → 乙"
+
+    def test_heading_line_passes_through(self):
+        assert ub.clean_zh_output("## 第一講") == "## 第一講"
+
+    def test_collapses_newlines_to_one_paragraph(self):
+        assert ub.clean_zh_output("一句。\n二句。") == "一句。 二句。"
+
+
 class TestRegistry:
     def test_all_eleven_aozora_files_covered(self):
         files = [f for w in ub.REGISTRY.values() for f in w["files"]]

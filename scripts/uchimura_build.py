@@ -249,20 +249,33 @@ UCHIMURA_PROMPT_TMPL = """你是明治—大正時代日本基督教文獻的專
 {source}"""
 
 
+_KANA_RE = re.compile(r"[ぁ-んァ-ヶ]")
+
+
+def clean_zh_output(out: str) -> str:
+    """Engine output → exactly ONE zh paragraph (keep reader row counts equal).
+
+    Fixes two observed NVIDIA artifacts: stray U+FFFD/BOM noise chars, and
+    source-echo in the form 「日文原文 → 譯文」 on short lines (detected by kana
+    in the left half). A genuine `## ` heading line passes through untouched;
+    other model-added heading lines are dropped; newlines collapse to spaces."""
+    out = (out or "").replace("�", "").replace("﻿", "")
+    m = re.match(r"^(.*?)\s*→\s*(.+)$", out.strip(), re.S)
+    if m and _KANA_RE.search(m.group(1)):
+        out = m.group(2)
+    if out.strip().startswith("## "):
+        return re.sub(r"\s*\n\s*", " ", out.strip())
+    out = re.sub(r"(?m)^\s*#{1,6}\s.*$", "", out)
+    return re.sub(r"\s*\n\s*", " ", out).strip()
+
+
 def make_engine(backend: str = "auto"):
     """translate_para(ja)->zh using the unified Gemini→NVIDIA→Haiku chain from
     translate_ebook_to_zh, with the Uchimura prompt. Mirrors panikkar_build."""
     import translate_ebook_to_zh as te
     te.PROMPT_TMPL = UCHIMURA_PROMPT_TMPL
 
-    def _clean(out: str) -> str:
-        # one ja paragraph → exactly ONE zh paragraph (keep row counts equal);
-        # a genuine `## ` heading line passes through untouched.
-        out = out.replace("�", "").replace("﻿", "")  # NVIDIA 偶發雜訊字元
-        if out.strip().startswith("## "):
-            return re.sub(r"\s*\n\s*", " ", out.strip())
-        out = re.sub(r"(?m)^\s*#{1,6}\s.*$", "", out)
-        return re.sub(r"\s*\n\s*", " ", out).strip()
+    _clean = clean_zh_output
 
     def translate_para(ja: str) -> str:
         src = (ja or "").strip()
