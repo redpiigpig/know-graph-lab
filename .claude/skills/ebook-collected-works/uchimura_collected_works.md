@@ -63,10 +63,30 @@
 - **《聖書之研究》誌／《羅馬書之研究》**：只有掃描 → Gemini OCR（[[ebook-pipeline]]）→ ja＋繁中。工程大、後排。
 - 起手卷建議：**《後世への最大遺物》**（青空文庫全文、篇幅小、最著名的講演）smoke test 日→繁中管線；次選《基督信徒のなぐさめ》（處女作＋「無教會」一詞初出）。英文線起手 **Representative Men of Japan**（台日讀者熟、章節獨立五人傳好切）。
 
+## ✅ 第一波：青空文庫 11 篇（2026-07-17 啟動）
+
+**Pipeline 已建成（test-first）**：
+- 解析器 `scripts/uchimura_build.py`（+ `scripts/tests/test_uchimura_build.py` 18 例綠）：青空 XHTML cp932/utf-8 解碼、ruby 注音剝除（保 rb）、`span.notes`［＃…］注記剝除、gaiji img（`U+XXXX` alt→真字元、`※(…)`→※）、`*midashi*` 標題→分節、一行=一段、行首全形空白剝除、底本區塊排除、長段落句界切分（≤1500 字）。
+- Worker `scripts/uchimura_auto.py`（仿 panikkar_auto）：per-段 checkpoint（`uchimura_data/<slug>/secN.json`）可續傳、Gemini→NVIDIA→Haiku 鏈、≤10 段/chunk、cover+`build_section_chunk`（`sources={ja}`、`source_order=["ja"]`）→ JSONL+R2+DB previews。**跑法：repo 根目錄 `python scripts/uchimura_auto.py --run-queue`，長跑一律 PowerShell `Start-Process` 分離式，log `scripts/logs/uchimura_translate.log`**。
+- 詞庫 [uchimura_glossary.md](uchimura_glossary.md)（28 詞鎖定，PROMPT 內嵌；神→神 沿 hub 慣例）。
+- 快取 `c:/tmp/uchimura_cache/`（11 篇 XHTML＋卡片頁，節流抓於 2026-07-16，別清）。
+
+**Registry（[uchimura_registry.json](uchimura_registry.json)，命名空間 `d0000000-…`）— 11 篇 → 6 個 ebook rows**：
+
+| slug | ebook_id 尾碼 | 卷 | 篇 |
+|---|---|---|---|
+| consolations | …0001 | 基督信徒的安慰 | 55507（11 節 293 段） |
+| greatest-legacy | …0002 | 給後世的最大遺物 | 519（6 節 56 段） |
+| denmark-story | …0003 | 丹麥國的故事 | 233（1 節 40 段） |
+| how-to-read-bible | …0004 | 聖經的讀法 | 1218（1 節 39 段） |
+| job-lectures | …0005 | 約伯記講演 | 56908（41 節 346 段） |
+| short-pieces | …0006 | 雜文短篇集 | 六短篇合卷：1216/1215/1212/1214/1217/1213（6 節 92 段） |
+
+store `works[]` 六卷已填 `ebookId`＋`status: in-progress`（翻完逐卷改 done）。NVIDIA 輸出偶發 U+FFFD 雜訊字元已在 `_clean` 過濾。
+
 ## 🚀 新 session 接手清單
 
-1. 讀本檔＋[SKILL.md](SKILL.md) §B1–B4。
-2. 建 `uchimura_glossary.md`（無教會主義／不敬事件／再臨運動／聖書之研究／兩個 J…；聖經書卷名依思高/和合慣例查 [[translation-glossary]]）。
-3. 起手卷《後世への最大遺物》：青空文庫 XHTML → 切段 → `--limit 2` smoke → 全卷 → 多語 JSONL（content=繁中、sources.ja）→ R2＋DB → reader 驗證。
-4. hub works `status→done`＋填 `ebookId`（deterministic 命名空間建議 `d0000000-…`）。
-5. 商 user：《聖書之研究》357 號全誌是否入 corpus（工程大）或只收全集精華卷。
+1. 看 worker 進度：`python scripts/uchimura_auto.py --list`（或 tail `scripts/logs/uchimura_translate.log`）；斷了就重新分離式啟動 `--run-queue`（checkpoint 自動續傳）。
+2. 每卷翻完（`--list` done=True 且已 upload）→ store `status→done`；reader `/collected-works/uchimura/<ebookId>` 截圖驗證。
+3. 第二波：英文原著兩部（How I Became a Christian／Representative Men of Japan，archive.org djvu 直抽，走穆勒流程 en＋繁中）；青空「作業中」二篇（一日一生／求安録）公開後補。
+4. 商 user：《聖書之研究》357 號全誌是否入 corpus（工程大）或只收全集精華卷。

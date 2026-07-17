@@ -1,0 +1,44 @@
+{
+  "consolations": {
+    "ebook_id": "d0000000-0000-4000-8000-000000000001",
+    "title": "基督信徒的安慰",
+    "original_title": "基督信徒のなぐさめ",
+    "year": 1893,
+    "aozora_files": ["55507_72651.html"]
+  },
+  "greatest-legacy": {
+    "ebook_id": "d0000000-0000-4000-8000-000000000002",
+    "title": "給後世的最大遺物",
+    "original_title": "後世への最大遺物",
+    "year": 1897,
+    "aozora_files": ["519_43561.html"]
+  },
+  "denmark-story": {
+    "ebook_id": "d0000000-0000-4000-8000-000000000003",
+    "title": "丹麥國的故事",
+    "original_title": "デンマルク国の話",
+    "year": 1911,
+    "aozora_files": ["233_43563.html"]
+  },
+  "how-to-read-bible": {
+    "ebook_id": "d0000000-0000-4000-8000-000000000004",
+    "title": "聖經的讀法",
+    "original_title": "聖書の読方",
+    "year": 1921,
+    "aozora_files": ["1218_18404.html"]
+  },
+  "job-lectures": {
+    "ebook_id": "d0000000-0000-4000-8000-000000000005",
+    "title": "約伯記講演",
+    "original_title": "ヨブ記講演",
+    "year": 1925,
+    "aozora_files": ["56908_64142.html"]
+  },
+  "short-pieces": {
+    "ebook_id": "d0000000-0000-4000-8000-000000000006",
+    "title": "雜文短篇集",
+    "original_title": "寡婦の除夜‧寒中の木の芽 ほか短篇六篇",
+    "year": 1912,
+    "aozora_files": ["1216_19588.html", "1215_9222.html", "1212_19587.html", "1214_19590.html", "1217_19583.html", "1213_19585.html"]
+  }
+}
