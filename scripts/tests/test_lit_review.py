@@ -104,9 +104,17 @@ def test_doc_type_themes_cover_the_seven_bibliography_sections():
         lr.THEME_LABELS | lr.DOC_TYPE_LABELS | lr.SUPPLEMENT_LABELS)
     assert lr.GENESIS_THEME_LABELS.isdisjoint(
         lr.THEME_LABELS | lr.DOC_TYPE_LABELS | lr.SUPPLEMENT_LABELS | lr.BOOK_SURVEY_LABELS)
-    assert lr.SECTION_LABELS == (
+    # lecture 講義 taxonomies (世界宗教文化導論 / 宗教系國文講義) are also disjoint
+    assert lr.WORLD_RELIGIONS_LABELS.isdisjoint(
         lr.THEME_LABELS | lr.DOC_TYPE_LABELS | lr.SUPPLEMENT_LABELS
         | lr.BOOK_SURVEY_LABELS | lr.GENESIS_THEME_LABELS)
+    assert lr.SINOGRAPHIC_LABELS.isdisjoint(
+        lr.THEME_LABELS | lr.DOC_TYPE_LABELS | lr.SUPPLEMENT_LABELS
+        | lr.BOOK_SURVEY_LABELS | lr.GENESIS_THEME_LABELS | lr.WORLD_RELIGIONS_LABELS)
+    assert lr.SECTION_LABELS == (
+        lr.THEME_LABELS | lr.DOC_TYPE_LABELS | lr.SUPPLEMENT_LABELS
+        | lr.BOOK_SURVEY_LABELS | lr.GENESIS_THEME_LABELS
+        | lr.WORLD_RELIGIONS_LABELS | lr.SINOGRAPHIC_LABELS)
 
 
 def test_parse_review_report_assigns_book_survey_section_at_h2_level():

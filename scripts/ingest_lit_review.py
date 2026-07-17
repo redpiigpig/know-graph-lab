@@ -29,6 +29,7 @@ Examples:
 """
 from __future__ import annotations
 import argparse
+import hashlib
 import json
 import os
 import sys
@@ -172,7 +173,9 @@ def make_engine(engine: str):
     te.PROMPT_TMPL = LR_PROMPT_TMPL
     fn = {
         "gemini": te.gemini_with_nvidia_fallback,
+        "gemini-only": te.gemini_translate,
         "nvidia": te.nvidia_translate,
+        "ollama": lambda source: te._to_traditional(te.ollama_translate(source)),
         "sonnet": te.sonnet_translate,
         # Haiku-primary: straight to paid Max OAuth (separate quota pool from the
         # Gemini free tier), so it never contends with a concurrent Gemini run.
@@ -181,17 +184,57 @@ def make_engine(engine: str):
     return te, fn
 
 
+def shard_for(ref_key: str, shard_count: int) -> int:
+    digest = int.from_bytes(
+        hashlib.sha256(ref_key.encode("utf-8")).digest()[:8], "big")
+    return digest % shard_count
+
+
 def fetch_url(url: str) -> tuple[str, str]:
     """→ ('pdf'|'html', text). PDF parsed with PyMuPDF (page text joined by blank lines)."""
-    r = requests.get(url, timeout=120, headers=UA)
-    r.raise_for_status()
-    ctype = r.headers.get("content-type", "").lower()
+    # Archived research PDFs use the app's durable signed-download route.  Read
+    # those objects directly from R2 here; a relative app URL is not fetchable by
+    # requests and generating a temporary presigned URL would make the DB stale.
+    archived_r2 = url.startswith("/api/works/material?")
+    if archived_r2:
+        from urllib.parse import parse_qs, urlparse
+        import boto3
+        key = parse_qs(urlparse(url).query).get("key", [""])[0]
+        if not key:
+            raise ValueError(f"missing R2 key in {url}")
+        s3 = boto3.client(
+            "s3", region_name="auto", endpoint_url=os.environ["R2_ENDPOINT"],
+            aws_access_key_id=os.environ["R2_ACCESS_KEY"],
+            aws_secret_access_key=os.environ["R2_SECRET_KEY"])
+        obj = s3.get_object(Bucket=os.environ["R2_BUCKET"], Key=key)
+        content = obj["Body"].read()
+        ctype = obj.get("ContentType", "").lower()
+    else:
+        try:
+            r = requests.get(url, timeout=120, headers=UA)
+        except requests.exceptions.SSLError:
+            # Several academic OA repositories (e.g. buddhism.lib.ntu.edu.tw,
+            # repo.komazawa-u.ac.jp) serve genuine public full text behind an
+            # expired / hostname-mismatched TLS cert. The document is still OA —
+            # retry without cert verification rather than lose the source.
+            import urllib3
+            urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+            r = requests.get(url, timeout=120, headers=UA, verify=False)
+        # eScholarship's CloudFront currently rejects its PDF route for a normal
+        # browser UA while the same public OA object is served to crawler UAs.
+        if r.status_code == 403 and "escholarship.org/content/" in url:
+            r = requests.get(url, timeout=120, headers={"User-Agent": "Googlebot"})
+        r.raise_for_status()
+        content = r.content
+        ctype = r.headers.get("content-type", "").lower()
     if "pdf" in ctype or url.lower().split("?")[0].endswith(".pdf"):
         import fitz  # PyMuPDF
-        doc = fitz.open(stream=r.content, filetype="pdf")
+        doc = fitz.open(stream=content, filetype="pdf")
         text = "\n\n".join(page.get_text() for page in doc)
         doc.close()
         return "pdf", text
+    if archived_r2:
+        return "html", content.decode("utf-8", errors="replace")
     r.encoding = r.apparent_encoding or "utf-8"
     return "html", r.text
 
@@ -234,7 +277,8 @@ def translate_and_store(entry_id: int, orig: list[str], te, fn, pace: float, res
 def fetch_fulltext(project_slug: str, engine: str, resume: bool,
                    only: str | None, limit_paras: int | None,
                    limit_entries: int | None, pace: float, dry_run: bool,
-                   book_id: str = "") -> None:
+                   book_id: str = "", shard_index: int = 0,
+                   shard_count: int = 1) -> None:
     sel = "id,ref_key,title,language,fulltext_url,fulltext_status"
     q = f"project_slug=eq.{project_slug}&select={sel}&order=display_order"
     if book_id:
@@ -242,6 +286,8 @@ def fetch_fulltext(project_slug: str, engine: str, resume: bool,
     entries = rest_get("lit_review_entries", q)
     todo = []
     for e in entries:
+        if shard_for(e["ref_key"], shard_count) != shard_index:
+            continue
         if only and only not in e["ref_key"]:
             continue
         if e["language"] == "zh":
@@ -264,7 +310,8 @@ def fetch_fulltext(project_slug: str, engine: str, resume: bool,
         todo.append(e)
     if limit_entries:
         todo = todo[:limit_entries]
-    print(f"fetch-fulltext: {len(todo)} entries to process", flush=True)
+    print(f"fetch-fulltext: {len(todo)} entries to process "
+          f"[shard {shard_index + 1}/{shard_count}]", flush=True)
 
     te, fn = (None, None) if dry_run else make_engine(engine)
     consec_fail = 0
@@ -320,7 +367,8 @@ def main():
     ap.add_argument("--title", default="")
     ap.add_argument("--subtitle", default=None)
     ap.add_argument("--description", default=None)
-    ap.add_argument("--engine", default="gemini", choices=["gemini", "nvidia", "sonnet", "haiku"])
+    ap.add_argument("--engine", default="gemini",
+                    choices=["gemini", "gemini-only", "nvidia", "ollama", "sonnet", "haiku"])
     ap.add_argument("--resume", action="store_true")
     ap.add_argument("--only", default=None, help="ref_key substring filter (fetch one)")
     ap.add_argument("--limit-paras", type=int, default=None)
@@ -335,7 +383,12 @@ def main():
                     help="seed every entry as fulltext_status='unavailable' (a wholly-copyright reading list)")
     ap.add_argument("--book-id", default="",
                     help="per-volume scope within a 叢書 project (e.g. genesis 卷 'M1'); '' for normal paper/book projects")
+    ap.add_argument("--shard-index", type=int, default=0,
+                    help="zero-based stable SHA-256 shard index")
+    ap.add_argument("--shard-count", type=int, default=1)
     args = ap.parse_args()
+    if args.shard_count < 1 or not 0 <= args.shard_index < args.shard_count:
+        ap.error("require shard_count >= 1 and 0 <= shard_index < shard_count")
 
     if args.seed:
         if not args.report:
@@ -348,7 +401,8 @@ def main():
     if args.fetch_fulltext:
         fetch_fulltext(args.project, args.engine, args.resume, args.only,
                        args.limit_paras, args.limit_entries, args.pace, args.dry_run,
-                       book_id=args.book_id)
+                       book_id=args.book_id, shard_index=args.shard_index,
+                       shard_count=args.shard_count)
     if not args.seed and not args.fetch_fulltext:
         sys.exit("need --seed and/or --fetch-fulltext")
 

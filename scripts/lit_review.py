@@ -89,15 +89,49 @@ GENESIS_THEMES: list[dict] = [
 ]
 GENESIS_THEME_LABELS = {t["label"] for t in GENESIS_THEMES}
 
+
+# ── 世界宗教文化導論（lecture, book_id 'WR1'）：八大界域框架的研究回顧主題軸。
+# 對應講義章節：定義/靈性(1-2)、起源演化(3)、分類學與時代分期(4-5)、地理學方法論與
+# 八大界域提出(6)、七至十四章八大界域巡禮、實踐儀式(15)、現代社會(16)、跨宗教對話(17)。
+WORLD_RELIGIONS_THEMES: list[dict] = [
+    {"key": "wr_theory",    "label": "宗教定義、神聖與宗教學理論",           "order": 510},
+    {"key": "wr_evolution", "label": "宗教的起源、演化與認知科學",           "order": 520},
+    {"key": "wr_method",    "label": "宗教分類學與宗教地理學方法論",         "order": 530},
+    {"key": "wr_sphere1",   "label": "中央、東方與西方界域研究",             "order": 540},
+    {"key": "wr_sphere2",   "label": "北方、南方、亞太、北美與拉美界域研究", "order": 550},
+    {"key": "wr_ritual",    "label": "儀式、實踐與宗教現象學",               "order": 560},
+    {"key": "wr_modernity", "label": "宗教、現代性與世俗化",                 "order": 570},
+    {"key": "wr_dialogue",  "label": "全球化與跨宗教對話",                   "order": 580},
+]
+WORLD_RELIGIONS_LABELS = {t["label"] for t in WORLD_RELIGIONS_THEMES}
+
+
+# ── 宗教系國文講義·漢字文學史（lecture, book_id 'SL1'）：以漢字書寫圈與宗教為軸的
+# 文學史研究回顧主題軸。對應章節：框架(1)、文字學與神話卜辭(2-3)、經典正典化(4)、
+# 佛典漢譯(5)、大藏經與六朝唐中古宗教文學(6-8)、講唱變文戲曲神魔小說(9-11)、
+# 東亞漢文學日韓越台(12-15)、聖經漢譯漢語神學與近代轉型(16-17)。
+SINOGRAPHIC_THEMES: list[dict] = [
+    {"key": "sl_frame",     "label": "漢字書寫圈與文學史框架方法論", "order": 610},
+    {"key": "sl_philology", "label": "漢字文字學與經典的正典化",     "order": 620},
+    {"key": "sl_transl",    "label": "佛典漢譯與翻譯史",             "order": 630},
+    {"key": "sl_canon",     "label": "大藏經與中古宗教文學",         "order": 640},
+    {"key": "sl_perform",   "label": "講唱、變文與宗教戲曲演藝",     "order": 650},
+    {"key": "sl_eastasia",  "label": "東亞漢文學（日‧韓‧越‧台）",   "order": 660},
+    {"key": "sl_bible",     "label": "聖經漢譯、漢語神學與近代轉型", "order": 670},
+]
+SINOGRAPHIC_LABELS = {t["label"] for t in SINOGRAPHIC_THEMES}
+
 # Any header recognised as a section divider (theme assignment).
 SECTION_LABELS = (THEME_LABELS | DOC_TYPE_LABELS | SUPPLEMENT_LABELS
-                  | BOOK_SURVEY_LABELS | GENESIS_THEME_LABELS)
+                  | BOOK_SURVEY_LABELS | GENESIS_THEME_LABELS
+                  | WORLD_RELIGIONS_LABELS | SINOGRAPHIC_LABELS)
 
 
 # ── Language label (語言：英文) → ISO code ───────────────────────────────────
 _LANG_MAP = {
     "英文": "en", "中文": "zh", "德文": "de", "法文": "fr", "日文": "ja",
     "拉丁文": "la", "希臘文": "grc", "西班牙文": "es", "義大利文": "it",
+    "韓文": "ko", "越南文": "vi",
 }
 
 

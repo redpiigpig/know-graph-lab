@@ -111,7 +111,7 @@ interface Entry {
 interface Section { order_index: number; byVersion: Record<string, string> }
 
 const LANG_LABELS: Record<string, string> = {
-  en: '英文', zh: '中文', de: '德文', fr: '法文', ja: '日文',
+  en: '英文', zh: '中文', de: '德文', fr: '法文', ja: '日文', ko: '韓文', vi: '越南文',
   la: '拉丁文', grc: '希臘文', es: '西班牙文', it: '義大利文', other: '其他',
 }
 function langLabel(code: string | null) {

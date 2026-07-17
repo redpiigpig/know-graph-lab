@@ -157,7 +157,7 @@
               <div class="mb-5">
                 <h2 class="text-base font-semibold text-gray-900">研究回顧</h2>
                 <p class="text-xs text-gray-500 mt-0.5">
-                  參考資料庫 · 共 {{ litEntries.length }} 筆 · 依四領域分組（自然科學／心理學／哲學／宗教與神話）· 改寫本卷的依據
+                  參考資料庫 · 共 {{ litEntries.length }} 筆 · 依主題分組 · 改寫本卷的依據
                 </p>
               </div>
               <div v-if="litLoading" class="text-gray-400 text-sm py-8 text-center">載入中⋯</div>
@@ -284,7 +284,7 @@ async function openQuiz(q: QuizMeta) {
   try { quizHtml.value = await $fetch<string>(q.file, { responseType: 'text' }) }
   catch { quizHtml.value = '<p class="text-gray-400">考卷載入失敗。</p>' }
 }
-const LANG_LABELS: Record<string, string> = { en: '英文', zh: '中文', de: '德文', fr: '法文', ja: '日文', la: '拉丁文', grc: '希臘文', es: '西班牙文', it: '義大利文' }
+const LANG_LABELS: Record<string, string> = { en: '英文', zh: '中文', de: '德文', fr: '法文', ja: '日文', ko: '韓文', vi: '越南文', la: '拉丁文', grc: '希臘文', es: '西班牙文', it: '義大利文' }
 function langLabel(c: string | null) { return LANG_LABELS[c ?? ''] ?? (c || '—') }
 const litGroups = computed(() => {
   const g: { theme: string; items: LitEntry[] }[] = []
