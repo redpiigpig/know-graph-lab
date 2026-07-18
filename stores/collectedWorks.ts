@@ -31582,7 +31582,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1881,
           "era": "現代與當代",
-          "region": "西方（拉丁）",
+          "region": "歐陸",
           "discipline": "以演化論重構宇宙基督論的耶穌會古生物學家，「奧米加點」構想提出者",
           "fields": [
                 "演化神學",
@@ -31695,7 +31695,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1881,
           "era": "現代與當代",
-          "region": "西方（拉丁）",
+          "region": "歐陸",
           "discipline": "坎特伯里大主教，社會福音派系統神學家",
           "fields": [
                 "系統神學",
@@ -31820,7 +31820,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1884,
           "era": "現代與當代",
-          "region": "西方（拉丁）",
+          "region": "歐陸",
           "discipline": "形式批判學宗師、「非神話化」新約詮釋學的開創者",
           "fields": [
                 "新約神學",
@@ -31945,7 +31945,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1886,
           "era": "現代與當代",
-          "region": "西方（拉丁）",
+          "region": "歐陸",
           "discipline": "辯證神學／新正統主義創始人，20世紀最具影響力的新教教義神學家",
           "fields": [
                 "辯證神學",
@@ -32070,7 +32070,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1886,
           "era": "現代與當代",
-          "region": "西方（拉丁）",
+          "region": "歐陸",
           "discipline": "「關聯法」系統神學家，存在主義神學與文化神學的代表人物",
           "fields": [
                 "系統神學",
@@ -32183,7 +32183,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1904,
           "era": "現代與當代",
-          "region": "西方（拉丁）",
+          "region": "歐陸",
           "discipline": "「超驗多瑪斯主義」奠基者，梵二會議最具影響力的神學顧問",
           "fields": [
                 "超驗多瑪斯主義",
@@ -32300,7 +32300,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1904,
           "era": "現代與當代",
-          "region": "西方（拉丁）",
+          "region": "歐陸",
           "discipline": "梵二大公主義與平信徒神學奠基者，晚年獲擢升樞機的道明會神學家",
           "fields": [
                 "大公主義神學",
@@ -32417,7 +32417,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1905,
           "era": "現代與當代",
-          "region": "西方（拉丁）",
+          "region": "歐陸",
           "discipline": "「神學美學」創始人，以「榮耀」「戲劇」「邏各斯」三部曲重構整套神學的瑞士神學家",
           "fields": [
                 "神學美學",
@@ -32530,7 +32530,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1906,
           "era": "現代與當代",
-          "region": "西方（拉丁）",
+          "region": "歐陸",
           "discipline": "殉道神學家，「代價高昂的恩典」與獄中「非宗教基督教」構想提出者",
           "fields": [
                 "教會抗爭",
@@ -32655,7 +32655,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1921,
           "era": "現代與當代",
-          "region": "西方（拉丁）",
+          "region": "歐陸",
           "discipline": "英國福音派聖公會牧者，《洛桑信約》主要起草人",
           "fields": [
                 "福音派神學",
@@ -32780,7 +32780,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1922,
           "era": "現代與當代",
-          "region": "西方（拉丁）",
+          "region": "歐陸",
           "discipline": "宗教多元主義理論奠基者，宗教哲學界「哥白尼式革命」提出者",
           "fields": [
                 "宗教多元主義",
@@ -32905,7 +32905,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1926,
           "era": "現代與當代",
-          "region": "西方（拉丁）",
+          "region": "歐陸",
           "discipline": "「盼望神學」與「被釘十字架的上帝」提出者，戰後最重要的德語新教神學家之一",
           "fields": [
                 "盼望神學",
@@ -33030,7 +33030,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1928,
           "era": "現代與當代",
-          "region": "西方（拉丁）",
+          "region": "歐陸",
           "discipline": "「啟示即歷史」提出者，力求神學與現代科學理性全面對話的系統神學家",
           "fields": [
                 "啟示神學",
@@ -33143,7 +33143,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1928,
           "era": "現代與當代",
-          "region": "西方（拉丁）",
+          "region": "歐陸",
           "discipline": "「世界倫理」構想提出者，因批判教宗無誤論遭撤銷教學任命的異議神學家",
           "fields": [
                 "大公主義神學",
@@ -33284,7 +33284,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "神學",
           "sortYear": 1950,
           "era": "現代與當代",
-          "region": "西方（拉丁）",
+          "region": "歐陸",
           "discipline": "前坎特伯里大主教，教父學與三一神學學者",
           "fields": [
                 "教父學",
@@ -34868,6 +34868,966 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       ],
                       "status": "planned",
                       "note": "系統研究初代教會前三世紀宣教擴張歷程的教會史鉅著。"
+                }
+          ]
+    },
+
+
+    // ══════ 以下為 2026-07-18 大規模補齊（planned/copyright，翻譯之後排）══════
+
+    {
+          "slug": "maori-marsden",
+          "name": "毛利‧馬斯登",
+          "nameEn": "Rev. Māori Marsden",
+          "nameOriginal": "Māori Marsden",
+          "lifespan": "1924–1993",
+          "disciplineGroup": "神學",
+          "sortYear": 1924,
+          "era": "現代與當代",
+          "region": "原住民",
+          "discipline": "紐西蘭毛利聖公會牧師兼圖洪加，毛利哲學與神學經典《編織的宇宙》作者",
+          "fields": [
+                "毛利哲學",
+                "毛利神學",
+                "宇宙觀",
+                "塔布與馬納"
+          ],
+          "portraitUrl": "",
+          "portraitCredit": "（Wikimedia Commons 無公有領域肖像）",
+          "color": "indigo",
+          "emoji": "🌊",
+          "contribution": [
+                "毛利‧馬斯登牧師出身紐西蘭北島最北端 Te Aupōuri 及 Ngāi Takoto、Ngāti Wharara（屬 Ngāpuhi）等哈普（hapū）系統，是少見兼具「圖洪加」（tohunga，毛利傳統智者／祭司）身分與聖公會按立牧師雙重身分的思想家。他自傳統部落學堂（whare wānanga）習得毛利宇宙觀與宗教實踐的精深訓練，又於 1957 年於奧克蘭聖約翰學院取得神學文憑並受按立，畢生致力於在毛利傳統靈性與基督教信仰之間搭建對話橋樑，而非以其中一方取代另一方。",
+                "他最重要的思想結晶〈上帝、人與宇宙：一種毛利觀點〉（\"God, Man and Universe: A Māori View\"，收於 1975 年文集 *Te Ao Hurihuri: The World Moves On*）系統闡述毛利宇宙觀中「馬納」（mana，靈性權能）、「塔布」（tapu，神聖／禁忌）與「編織」（whatu，萬物相互交織）等核心概念，並嘗試指出其與基督教創造論、聖秩序觀念的可對話之處，是毛利神學思想史上最常被引用的奠基文本之一。",
+                "馬斯登生前著作零散發表於各文集與講稿，1993 年辭世後，紐西蘭皇家學會與 Ngā Pae o te Māramatanga 於 2003 年出版《編織的宇宙：馬斯登牧師選集》（*The Woven Universe*），由 Te Ahukaramū Charles Royal 編纂彙整，使其思想得以系統呈現，至今仍是紐西蘭大學毛利研究與神學課程的核心讀本。"
+          ],
+          "sourceNote": "1993 年辭世，未滿版權年限，著作受版權保護，暫不翻譯，僅建檔學術小傳。",
+          "timeline": [
+                {
+                      "year": "1924",
+                      "text": "生於紐西蘭北地 Awanui，屬 Te Aupōuri、Ngāi Takoto 及 Ngāpuhi 相關哈普。"
+                },
+                {
+                      "year": "1957",
+                      "text": "於奧克蘭聖約翰學院取得神學文憑，同年受按立為聖公會牧師。"
+                },
+                {
+                      "year": "1960–1963",
+                      "text": "任塔拉納基毛利牧區主任牧師。"
+                },
+                {
+                      "year": "1963–1971",
+                      "text": "任紐西蘭國防軍毛利隨軍牧師。"
+                },
+                {
+                      "year": "1975",
+                      "text": "發表〈上帝、人與宇宙：一種毛利觀點〉，收錄於文集《世界在轉動》。"
+                },
+                {
+                      "year": "1985–1987",
+                      "text": "任奧克蘭毛利宣教牧師。"
+                },
+                {
+                      "year": "1993",
+                      "text": "辭世，享壽68歲。"
+                },
+                {
+                      "year": "2003",
+                      "text": "身後文集《編織的宇宙：馬斯登牧師選集》由 Te Ahukaramū Charles Royal 編纂出版。"
+                }
+          ],
+          "works": [
+                {
+                      "title": "上帝、人與宇宙：一種毛利觀點",
+                      "titleOriginal": "God, Man and Universe: A Māori View",
+                      "year": "1975",
+                      "yearSort": 1975,
+                      "category": "毛利神學論文",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "收錄於 Michael King 編 *Te Ao Hurihuri: The World Moves On* 文集，毛利神學代表論文。"
+                },
+                {
+                      "title": "編織的宇宙：馬斯登牧師選集",
+                      "titleOriginal": "The Woven Universe: Selected Writings of Rev. Māori Marsden",
+                      "year": "2003",
+                      "yearSort": 2003,
+                      "category": "身後文集",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "Te Ahukaramū Charles Royal 編纂，紐西蘭皇家學會與 Ngā Pae o te Māramatanga 出版。"
+                }
+          ]
+    },
+    {
+          "slug": "vine-deloria-jr",
+          "name": "瓦恩‧德洛里亞",
+          "nameEn": "Vine Deloria Jr.",
+          "nameOriginal": "Vine Deloria Jr.",
+          "lifespan": "1933–2005",
+          "disciplineGroup": "神學",
+          "sortYear": 1933,
+          "era": "現代與當代",
+          "region": "原住民",
+          "discipline": "立岩蘇族學者，《上帝是紅色的》作者，美洲原住民宗教比較研究先驅",
+          "fields": [
+                "美洲原住民宗教",
+                "比較宗教學",
+                "原住民主權",
+                "政治神學"
+          ],
+          "portraitUrl": "",
+          "portraitCredit": "（Wikimedia Commons 無公有領域肖像）",
+          "color": "emerald",
+          "emoji": "🪶",
+          "contribution": [
+                "瓦恩‧德洛里亞（立岩蘇族 Standing Rock Lakota，出身洋克頓達科塔家系）出身三代印第安聖公會神職家庭，本人亦於 Augustana 神學院取得神學學位（1963），後轉赴科羅拉多大學攻讀法律，成為橫跨神學、法律、政治學與自然科學的跨領域學者。他 1969 年出版的《卡斯特為你們的罪而死：一份印第安宣言》（*Custer Died for Your Sins*）是「紅權運動」（Red Power）年代最具影響力的原住民論述，奠定其作為廿世紀美洲原住民最重要公共知識分子的地位。",
+                "1973 年的代表作《上帝是紅色的：原住民宗教觀》（*God Is Red: A Native View of Religion*）是原住民神學／宗教學的里程碑之作：德洛里亞以「空間／土地」而非基督教「時間／救贖史」為軸心，對比原住民傳統宗教與西方基督教的根本世界觀差異，並批判西方宗教將土地工具化、將原住民靈性簡化為「迷信」的殖民認識論。此書至今仍是北美原住民神學課程的核心讀本，直接啟發了廷克（Tinker）、伍德利（Woodley）等後輩神學家。",
+                "德洛里亞亦長期擔任全美印第安人大會（NCAI）執行主任，並在亞利桑那大學創立全美第一個美洲印第安研究碩士學程，被《時代》雜誌譽為「未來的神學超級巨星」。他 2005 年辭世，其思想遺產橫跨神學、法學與科學史批判三大領域。"
+          ],
+          "sourceNote": "2005 年辭世，未滿版權年限，全數著作受版權保護，暫不翻譯，僅建檔學術小傳。",
+          "timeline": [
+                {
+                      "year": "1933",
+                      "text": "生於南達科他州馬丁，出身洋克頓達科塔／立岩拉科塔印第安聖公會神職家族。"
+                },
+                {
+                      "year": "1954–1956",
+                      "text": "服役於美國海軍陸戰隊。"
+                },
+                {
+                      "year": "1963",
+                      "text": "於伊利諾州 Augustana 神學院取得神學學位。"
+                },
+                {
+                      "year": "1964–1967",
+                      "text": "任全美印第安人大會（NCAI）執行主任，成員部落數大幅擴增。"
+                },
+                {
+                      "year": "1969",
+                      "text": "出版《卡斯特為你們的罪而死：一份印第安宣言》，點燃紅權運動論述。"
+                },
+                {
+                      "year": "1970",
+                      "text": "取得科羅拉多大學法學博士學位；出版《我們說，你們聽》。"
+                },
+                {
+                      "year": "1973",
+                      "text": "出版代表作《上帝是紅色的：原住民宗教觀》。"
+                },
+                {
+                      "year": "1978–1990",
+                      "text": "任亞利桑那大學政治學教授，創立全美首個美洲印第安研究碩士學程。"
+                },
+                {
+                      "year": "1995",
+                      "text": "出版《紅色大地，白色謊言》，批判西方科學史對原住民知識的排除。"
+                },
+                {
+                      "year": "2005",
+                      "text": "辭世，享壽72歲。"
+                }
+          ],
+          "works": [
+                {
+                      "title": "卡斯特為你們的罪而死：一份印第安宣言",
+                      "titleOriginal": "Custer Died for Your Sins: An Indian Manifesto",
+                      "year": "1969",
+                      "yearSort": 1969,
+                      "category": "印第安宣言",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "紅權運動年代代表作，奠定其公共知識分子地位。"
+                },
+                {
+                      "title": "我們說，你們聽：新部落，新場域",
+                      "titleOriginal": "We Talk, You Listen: New Tribes, New Turf",
+                      "year": "1970",
+                      "yearSort": 1970,
+                      "category": "印第安宣言",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "延續對美國主流社會的批判性對話。"
+                },
+                {
+                      "title": "上帝是紅色的：原住民宗教觀",
+                      "titleOriginal": "God Is Red: A Native View of Religion",
+                      "year": "1973",
+                      "yearSort": 1973,
+                      "category": "原住民神學代表作",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "原住民神學／宗教學里程碑，1992、2003 兩度增訂再版。"
+                },
+                {
+                      "title": "現代存在的形上學",
+                      "titleOriginal": "The Metaphysics of Modern Existence",
+                      "year": "1979",
+                      "yearSort": 1979,
+                      "category": "宗教哲學",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "以原住民宇宙觀批判西方現代性形上學預設。"
+                },
+                {
+                      "title": "紅色大地，白色謊言：美洲原住民與科學迷思",
+                      "titleOriginal": "Red Earth, White Lies: Native Americans and the Myth of Scientific Fact",
+                      "year": "1995",
+                      "yearSort": 1995,
+                      "category": "科學史批判",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "質疑主流考古／科學敘事對原住民口傳知識的排除。"
+                }
+          ]
+    },
+    {
+          "slug": "tunkan-tada",
+          "name": "童春發",
+          "nameEn": "Tung Chun-fa",
+          "nameOriginal": "童春發",
+          "lifespan": "1946– ",
+          "disciplineGroup": "神學",
+          "sortYear": 1946,
+          "era": "現代與當代",
+          "region": "原住民",
+          "discipline": "排灣族神學教育家，玉山神學院前院長，台灣原住民神學教育奠基者",
+          "fields": [
+                "排灣族神學教育",
+                "原住民宣教學",
+                "比較文化研究",
+                "原住民歷史"
+          ],
+          "portraitUrl": "",
+          "portraitCredit": "（Wikimedia Commons 無公有領域肖像）",
+          "color": "stone",
+          "emoji": "🏔️",
+          "contribution": [
+                "童春發出身屏東縣瑪家鄉瑪家村達那瓦功（Tjanavakung）部落，排灣族人，1982年於美國普林斯頓神學院取得新約聖經學碩士後返台，於花蓮玉山神學院任教並曾任院長，前後在神學教育崗位服務廿五年，培育近千名原住民神學生，是台灣基督長老教會原住民神學教育體系最重要的奠基者之一。",
+                "他任內於玉神學報發表〈原住民教會宣教的反省和展望〉等論文，反省戰後以來原住民教會在宣教策略、文化認同與族群處境上的得失；他後赴日本國際基督教大學攻讀比較文化學博士，將神學訓練與人類學、語言學方法結合，進一步在東華大學創立原住民民族學院並任院長十九年，退休後獲聘為榮譽教授。",
+                "在學術寫作上，童春發亦承接官方委託撰寫《臺灣原住民史：排灣族史篇》，系統整理排灣族部落制度、傳統信仰結構與歷史變遷，是排灣族研究與原住民神學教育跨界工作的代表人物，其治學路徑體現了台灣原住民神學界「神學―文化―歷史」三重視野交織的特色。"
+          ],
+          "sourceNote": "在世學者，著作全數受版權保護，暫不翻譯，僅建檔學術小傳。",
+          "timeline": [
+                {
+                      "year": "1946",
+                      "text": "生於屏東縣瑪家鄉瑪家村達那瓦功部落，排灣族。"
+                },
+                {
+                      "year": "1976",
+                      "text": "起任教於私立玉山神學院。"
+                },
+                {
+                      "year": "1982",
+                      "text": "於美國普林斯頓神學院取得新約聖經學碩士學位。"
+                },
+                {
+                      "year": "2000",
+                      "text": "於《玉神學報》第7期發表〈原住民教會宣教的反省和展望〉，並任該期發行人。"
+                },
+                {
+                      "year": "2001",
+                      "text": "卸下玉山神學院教學職務，累計服務廿五年。"
+                },
+                {
+                      "year": "2001",
+                      "text": "出版《臺灣原住民史：排灣族史篇》。"
+                },
+                {
+                      "year": "其後",
+                      "text": "於日本國際基督教大學取得比較文化學博士學位。"
+                },
+                {
+                      "year": "其後",
+                      "text": "任東華大學原住民民族學院院長十九年，退休後獲聘榮譽教授。"
+                }
+          ],
+          "works": [
+                {
+                      "title": "原住民教會宣教的反省和展望",
+                      "titleOriginal": "原住民教會宣教的反省和展望",
+                      "year": "2000",
+                      "yearSort": 2000,
+                      "category": "原住民宣教學論文",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "copyright",
+                      "note": "刊於《玉神學報》第七期，反省原住民教會宣教策略與文化處境。"
+                },
+                {
+                      "title": "臺灣原住民史：排灣族史篇",
+                      "titleOriginal": "臺灣原住民史：排灣族史篇",
+                      "year": "2001",
+                      "yearSort": 2001,
+                      "category": "族群歷史",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "copyright",
+                      "note": "官方委託撰寫的排灣族史系統整理著作。"
+                }
+          ]
+    },
+    {
+          "slug": "george-tinker",
+          "name": "喬治‧廷克",
+          "nameEn": "George E. \"Tink\" Tinker",
+          "nameOriginal": "George E. \"Tink\" Tinker",
+          "lifespan": "1949– ",
+          "disciplineGroup": "神學",
+          "sortYear": 1949,
+          "era": "現代與當代",
+          "region": "原住民",
+          "discipline": "奧色治族解殖神學家，倡「文化滅絕」批判與美洲原住民主權神學",
+          "fields": [
+                "美洲原住民神學",
+                "解殖神學",
+                "政治神學",
+                "原住民主權"
+          ],
+          "portraitUrl": "",
+          "portraitCredit": "（Wikimedia Commons 無公有領域肖像）",
+          "color": "blue",
+          "emoji": "🦅",
+          "contribution": [
+                "喬治‧廷克（Osage Nation 奧色治族）是美國丹佛 Iliff 神學院退休教授，長年任「美洲印第安文化與宗教傳統」講座教授（1985–2017），也是當代美洲原住民神學與**解殖神學**（decolonial theology）最重要的建構者之一。他的成名作《宣教的征服：福音與美洲原住民的文化滅絕》（*Missionary Conquest*, 1993）直指十九世紀美國新教／天主教宣教機構如何以「文明化」之名系統性摧毀原住民語言、土地與宗教實踐，將宣教史寫進殖民暴力史的一環，是原住民神學界公認的奠基文本。",
+                "廷克的神學方法論不從歐洲教義框架出發，而是主張**以土地為中心**（land-based）、以部落宇宙觀（community-based cosmology）為第一原理重新想像基督教信仰；他在《靈性與抵抗》（*Spirit and Resistance*, 2004）與《美洲印第安的解放：主權神學》（*American Indian Liberation*, 2008）中進一步發展出「主權即靈性」的論證——原住民族的政治主權與其傳統宗教實踐密不可分，基督教神學若不正視土地被奪、條約被毀的歷史暴力，便無法真正談論救贖。",
+                "他也長期參與美洲印第安人運動（AIM）科羅拉多分會，並創立「四風印第安人議會」（Four Winds Indian Council）達廿五年，學術與草根行動並重，被視為北美原住民神學（Native American theology）與拉丁美洲解放神學對話的重要橋樑人物。"
+          ],
+          "sourceNote": "在世學者，著作全數受版權保護，暫不翻譯全文，僅建檔學術小傳供未來授權評估。",
+          "timeline": [
+                {
+                      "year": "1949",
+                      "text": "生於奧色治族（Osage Nation）與路德會背景家庭。"
+                },
+                {
+                      "year": "1970s",
+                      "text": "於新墨西哥高地大學（New Mexico Highlands University）取得學士學位。"
+                },
+                {
+                      "year": "1983",
+                      "text": "取得神學博士學位，投入美洲原住民神學研究。"
+                },
+                {
+                      "year": "1985",
+                      "text": "起任教於丹佛 Iliff 神學院，開設美洲印第安文化與宗教傳統課程。"
+                },
+                {
+                      "year": "1993",
+                      "text": "出版《宣教的征服：福音與美洲原住民的文化滅絕》，確立其解殖神學代表地位。"
+                },
+                {
+                      "year": "2001",
+                      "text": "與 Clara Sue Kidwell、Homer Noley 合著《美洲印第安神學》（*A Native American Theology*）。"
+                },
+                {
+                      "year": "2004",
+                      "text": "出版《靈性與抵抗：政治神學與美洲印第安解放》。"
+                },
+                {
+                      "year": "2008",
+                      "text": "出版《美洲印第安的解放：主權神學》。"
+                },
+                {
+                      "year": "2017",
+                      "text": "自 Iliff 神學院退休，獲頒榮譽教授。"
+                }
+          ],
+          "works": [
+                {
+                      "title": "宣教的征服：福音與美洲原住民的文化滅絕",
+                      "titleOriginal": "Missionary Conquest: The Gospel and Native American Cultural Genocide",
+                      "year": "1993",
+                      "yearSort": 1993,
+                      "category": "解殖神學代表作",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "系統批判宣教史與殖民文化滅絕的奠基之作，原住民神學界必讀文本。"
+                },
+                {
+                      "title": "美洲印第安神學",
+                      "titleOriginal": "A Native American Theology",
+                      "year": "2001",
+                      "yearSort": 2001,
+                      "category": "合著",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "與 Clara Sue Kidwell、Homer Noley 合著，Orbis Books 出版。"
+                },
+                {
+                      "title": "靈性與抵抗：政治神學與美洲印第安解放",
+                      "titleOriginal": "Spirit and Resistance: Political Theology and American Indian Liberation",
+                      "year": "2004",
+                      "yearSort": 2004,
+                      "category": "政治神學",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "Fortress Press 出版，發展「土地為中心」的政治神學論證。"
+                },
+                {
+                      "title": "美洲印第安的解放：主權神學",
+                      "titleOriginal": "American Indian Liberation: A Theology of Sovereignty",
+                      "year": "2008",
+                      "yearSort": 2008,
+                      "category": "主權神學",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "Orbis Books 出版，將主權論證推進為系統性神學建構。"
+                }
+          ]
+    },
+    {
+          "slug": "steven-charleston",
+          "name": "史蒂芬‧查爾斯頓",
+          "nameEn": "Steven Charleston",
+          "nameOriginal": "Steven Charleston",
+          "lifespan": "1949– ",
+          "disciplineGroup": "神學",
+          "sortYear": 1949,
+          "era": "現代與當代",
+          "region": "原住民",
+          "discipline": "喬克托族聖公會退休主教，原住民末世盼望與靈性書寫代表作家",
+          "fields": [
+                "美洲原住民神學",
+                "聖公會神學",
+                "末世盼望",
+                "靈性書寫"
+          ],
+          "portraitUrl": "",
+          "portraitCredit": "（Wikimedia Commons 無公有領域肖像）",
+          "color": "rose",
+          "emoji": "⛪",
+          "contribution": [
+                "史蒂芬‧查爾斯頓（喬克托族 Choctaw Nation）出身奧克拉荷馬州三代長老會／聖公會神職家庭，本人於 1991–1996 年任美國聖公會阿拉斯加教區主教，1999–2008 年任麻州劍橋聖公會神學院（Episcopal Divinity School）院長，是北美原住民神職人員中少見躋身宗派高層領導的代表人物。",
+                "他的神學寫作以**原住民靈性智慧與基督教盼望神學的交會**為核心，晚近作品《靈輪：一位原住民長者的沉思》（*Spirit Wheel*, 2019）、《希望的階梯》（*Ladder to the Light*, 2021）與《我們活過了世界末日：北美原住民論末世與盼望》（*We Survived the End of the World*, 2023）以原住民歷經殖民滅絕仍倖存的集體經驗，重新詮釋基督教啟示文學傳統中的「末日」與「盼望」，主張原住民族「已經歷過一次世界末日」，因此對當代生態與社會危機別具洞見。",
+                "2015 年他與衛理公會神學家 Elaine A. Robinson 合著《繞回全圓：建構原住民基督教神學》（*Coming Full Circle: Constructing Native Christian Theology*），集結多位原住民學者與長者共同建構系統性的原住民基督教教義論述，涵蓋罪、啟示、崇拜、宣教與新創造等主題，是少數具「系統神學」企圖的原住民神學合著文本。"
+          ],
+          "sourceNote": "在世聖公會主教與作家，著作全數受版權保護，暫不翻譯，僅建檔學術小傳。",
+          "timeline": [
+                {
+                      "year": "1949",
+                      "text": "生於奧克拉荷馬州，喬克托族裔，家族三代任長老會／聖公會神職。"
+                },
+                {
+                      "year": "1971",
+                      "text": "於哈特福 Trinity College 取得宗教學學士學位。"
+                },
+                {
+                      "year": "1976",
+                      "text": "於聖公會神學院（Episcopal Divinity School）取得道學碩士學位。"
+                },
+                {
+                      "year": "1991",
+                      "text": "受祝聖為美國聖公會阿拉斯加教區主教。"
+                },
+                {
+                      "year": "1996",
+                      "text": "卸任阿拉斯加教區主教。"
+                },
+                {
+                      "year": "1999",
+                      "text": "出任聖公會神學院（劍橋）院長，任職至 2008 年。"
+                },
+                {
+                      "year": "2015",
+                      "text": "與 Elaine A. Robinson 合著《繞回全圓：建構原住民基督教神學》。"
+                },
+                {
+                      "year": "2019",
+                      "text": "出版《靈輪：一位原住民長者的沉思》。"
+                },
+                {
+                      "year": "2023",
+                      "text": "出版《我們活過了世界末日：北美原住民論末世與盼望》。"
+                }
+          ],
+          "works": [
+                {
+                      "title": "繞回全圓：建構原住民基督教神學",
+                      "titleOriginal": "Coming Full Circle: Constructing Native Christian Theology",
+                      "year": "2015",
+                      "yearSort": 2015,
+                      "category": "系統神學合著",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "與 Elaine A. Robinson 合著，Fortress Press 出版，集結多位原住民學者共構教義論述。"
+                },
+                {
+                      "title": "耶穌的四次異象追尋",
+                      "titleOriginal": "The Four Vision Quests of Jesus",
+                      "year": "2015",
+                      "yearSort": 2015,
+                      "category": "靈性書寫",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "以原住民「異象追尋」傳統重讀福音書中耶穌的曠野經驗。"
+                },
+                {
+                      "title": "靈輪：一位原住民長者的沉思",
+                      "titleOriginal": "Spirit Wheel: Meditations from an Indigenous Elder",
+                      "year": "2019",
+                      "yearSort": 2019,
+                      "category": "靈性書寫",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "短篇沉思文集，融合原住民智慧與基督教靈修。"
+                },
+                {
+                      "title": "希望的階梯：一位原住民長者論盼望與勇氣",
+                      "titleOriginal": "Ladder to the Light: An Indigenous Elder's Meditations on Hope and Courage",
+                      "year": "2021",
+                      "yearSort": 2021,
+                      "category": "靈性書寫",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "以原住民長者觀點回應當代焦慮與絕望。"
+                },
+                {
+                      "title": "我們活過了世界末日：北美原住民論末世與盼望",
+                      "titleOriginal": "We Survived the End of the World: Lessons from Native America on Apocalypse and Hope",
+                      "year": "2023",
+                      "yearSort": 2023,
+                      "category": "末世神學",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "以原住民歷經殖民滅絕而倖存的經驗重構基督教末世論。"
+                }
+          ]
+    },
+    {
+          "slug": "randy-woodley",
+          "name": "蘭迪‧伍德利",
+          "nameEn": "Randy S. Woodley",
+          "nameOriginal": "Randy S. Woodley",
+          "lifespan": "1955?– ",
+          "disciplineGroup": "神學",
+          "sortYear": 1955,
+          "era": "現代與當代",
+          "region": "原住民",
+          "discipline": "切羅基裔生態神學家，「沙龍」（Shalom）原住民異象與解殖福音派代表",
+          "fields": [
+                "生態神學",
+                "沙龍／和平神學",
+                "解殖福音派",
+                "跨文化研究"
+          ],
+          "portraitUrl": "",
+          "portraitCredit": "（Wikimedia Commons 無公有領域肖像）",
+          "color": "violet",
+          "emoji": "🌾",
+          "contribution": [
+                "蘭迪‧伍德利具聯合基托瓦切羅基族（Keetoowah Cherokee）血統，自 1984 年起投身北美原住民福音事工，於 Asbury 神學院取得跨文化研究博士，長年任波特蘭神學院（George Fox 大學）跨文化與原住民研究講座教授，是當代**福音派陣營內部**推動原住民神學與生態神學對話最具代表性的聲音。",
+                "他的代表作《沙龍與受造群體：一種原住民異象》（*Shalom and the Community of Creation*, 2012）以其博士論文研究的原住民「和諧之道」（Harmony Way）概念，重新詮釋希伯來文「沙龍」（shalom）不僅是個人靈魂得救，更是人與人、人與受造界、人與造物主三重關係的整全和好；此書批判歐美基督徒言行不一致的殖民歷史，同時肯認原住民傳統中敬重長者、與自然平衡共存、重視故事敘事等美德作為神學資源。",
+                "近年他與 Bo C. Sanders 合著《解殖福音派：11:59的對話》（2020）與《原住民神學與西方世界觀》（2022），系統性挑戰福音派神學教育中未經反思的西方個人主義預設，主張唯有正視「發現主義教義」（Doctrine of Discovery）對原住民族的歷史暴力，福音派神學才能真正「解殖」。"
+          ],
+          "sourceNote": "在世學者，著作全數受版權保護，暫不翻譯，僅建檔學術小傳；出生年份未見公開確切紀錄，此處為推估。",
+          "timeline": [
+                {
+                      "year": "1955",
+                      "text": "生（確切年份未見公開紀錄，依其投身事工年資推估）。"
+                },
+                {
+                      "year": "1984",
+                      "text": "起投身北美原住民部落福音事工。"
+                },
+                {
+                      "year": "1990s",
+                      "text": "於 Eastern Seminary（今 Palmer Seminary）取得道學碩士，並受按立為牧師。"
+                },
+                {
+                      "year": "2000s",
+                      "text": "於 Asbury 神學院取得跨文化研究博士，博論研究原住民「和諧之道」。"
+                },
+                {
+                      "year": "2001",
+                      "text": "出版《活在色彩中：擁抱上帝對多族裔教會的心意》。"
+                },
+                {
+                      "year": "2012",
+                      "text": "出版代表作《沙龍與受造群體：一種原住民異象》。"
+                },
+                {
+                      "year": "2020",
+                      "text": "與 Bo C. Sanders 合著《解殖福音派：11:59的對話》。"
+                },
+                {
+                      "year": "2022",
+                      "text": "出版《受造大地重紮根：一百天與聖潔大地重新連結》與《原住民神學與西方世界觀》。"
+                },
+                {
+                      "year": "近年",
+                      "text": "自波特蘭神學院跨文化與原住民研究講座教授退休。"
+                }
+          ],
+          "works": [
+                {
+                      "title": "活在色彩中：擁抱上帝對多族裔教會的心意",
+                      "titleOriginal": "Living in Color: Embracing God's Passion for a Multiethnic Church",
+                      "year": "2001",
+                      "yearSort": 2001,
+                      "category": "跨文化教會論",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "早期多族裔教會論著作。"
+                },
+                {
+                      "title": "沙龍與受造群體：一種原住民異象",
+                      "titleOriginal": "Shalom and the Community of Creation: An Indigenous Vision",
+                      "year": "2012",
+                      "yearSort": 2012,
+                      "category": "生態與和平神學代表作",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "Eerdmans 出版，以「和諧之道」重構沙龍神學，其博士論文延伸著作。"
+                },
+                {
+                      "title": "解殖福音派：11:59的對話",
+                      "titleOriginal": "Decolonizing Evangelicalism: An 11:59pm Conversation",
+                      "year": "2020",
+                      "yearSort": 2020,
+                      "category": "解殖福音派",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "與 Bo C. Sanders 合著對話體著作。"
+                },
+                {
+                      "title": "受造大地重紮根：一百天與聖潔大地重新連結",
+                      "titleOriginal": "Becoming Rooted: One Hundred Days of Reconnecting with Sacred Earth",
+                      "year": "2022",
+                      "yearSort": 2022,
+                      "category": "生態靈修",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "百日生態靈修讀本。"
+                },
+                {
+                      "title": "原住民神學與西方世界觀：解殖化的基督教教義取徑",
+                      "titleOriginal": "Indigenous Theology and the Western Worldview: A Decolonized Approach to Christian Doctrine",
+                      "year": "2022",
+                      "yearSort": 2022,
+                      "category": "系統神學",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "與 Bo C. Sanders 合著，系統性檢討西方教義預設。"
+                }
+          ]
+    },
+    {
+          "slug": "pusin-tali",
+          "name": "布興‧大立",
+          "nameEn": "Pusin Tali",
+          "nameOriginal": "Pusin Tali",
+          "lifespan": "1955– ",
+          "disciplineGroup": "神學",
+          "sortYear": 1955,
+          "era": "現代與當代",
+          "region": "原住民",
+          "discipline": "泰雅爾族神學家，玉山神學院前院長，台灣原住民故事神學代表建構者",
+          "fields": [
+                "泰雅爾神學",
+                "故事神學",
+                "轉型正義神學",
+                "原住民處境化神學"
+          ],
+          "portraitUrl": "",
+          "portraitCredit": "（Wikimedia Commons 無公有領域肖像）",
+          "color": "cyan",
+          "emoji": "⛰️",
+          "contribution": [
+                "布興‧大立（Pusin Tali）為泰雅爾族牧師、神學家，於東南亞神學研究院取得神學博士，長年任台灣基督長老教會玉山神學院系統神學教授，並自2001年起代理、2002至2022年正式擔任院長長達廿年，是台灣原住民神學教育體系承先啟後的核心人物，也曾當選台灣基督長老教會總會議長。",
+                "他的神學方法論以「用原住民的故事，建構原住民的神學」為核心主張，代表作《寧死不屈的原住民：霧社事件的故事神學》（1995）以泰雅爾族霧社事件的集體記憶為神學素材，論證原住民苦難史本身即蘊含神學啟示，而非僅是需要被基督教教義「解釋」的歷史事件；另著有《台灣原住民族生存的神學》，處理原住民族在國家與教會雙重結構下的生存處境。",
+                "近年他在玉神學報等刊物持續發表如〈台灣原住民轉型正義的神學〉、〈多元面貌的原住民神學思考〉等論文，將故事神學進一步延伸至轉型正義、原住民族自治與教會和解等當代議題，是台灣原住民神學論述中少數兼具行政領導與學術建構雙重份量的代表人物。"
+          ],
+          "sourceNote": "在世神學家，著作與論文全數受版權保護，暫不翻譯，僅建檔學術小傳。",
+          "timeline": [
+                {
+                      "year": "1955",
+                      "text": "生，泰雅爾族。"
+                },
+                {
+                      "year": "1995",
+                      "text": "出版《寧死不屈的原住民：霧社事件的故事神學》（嘉義：信福）。"
+                },
+                {
+                      "year": "2001",
+                      "text": "起代理玉山神學院院長。"
+                },
+                {
+                      "year": "2002",
+                      "text": "正式就任玉山神學院院長，任內建構「用原住民的故事建構原住民神學」方法論。"
+                },
+                {
+                      "year": "2012",
+                      "text": "當選台灣基督長老教會總會議長。"
+                },
+                {
+                      "year": "近年",
+                      "text": "發表〈台灣原住民轉型正義的神學〉、〈多元面貌的原住民神學思考〉等論文。"
+                },
+                {
+                      "year": "2022",
+                      "text": "卸任玉山神學院院長一職，由 Walis Ukan（張秋雄）接任。"
+                }
+          ],
+          "works": [
+                {
+                      "title": "寧死不屈的原住民：霧社事件的故事神學",
+                      "titleOriginal": "寧死不屈的原住民：霧社事件的故事神學",
+                      "year": "1995",
+                      "yearSort": 1995,
+                      "category": "故事神學代表作",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "copyright",
+                      "note": "嘉義信福出版，以霧社事件集體記憶為神學建構素材。"
+                },
+                {
+                      "title": "台灣原住民族生存的神學",
+                      "titleOriginal": "台灣原住民族生存的神學",
+                      "year": "不詳",
+                      "yearSort": 2000,
+                      "category": "處境化神學",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "copyright",
+                      "note": "花蓮玉山神學院出版，處理原住民族生存處境的神學論述。"
+                },
+                {
+                      "title": "台灣原住民轉型正義的神學",
+                      "titleOriginal": "台灣原住民轉型正義的神學",
+                      "year": "不詳",
+                      "yearSort": 2015,
+                      "category": "神學論文",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "copyright",
+                      "note": "發表於相關神學研究刊物，將故事神學延伸至轉型正義議題。"
+                }
+          ]
+    },
+    {
+          "slug": "walis-ukan",
+          "name": "瓦歷斯‧烏干（張秋雄）",
+          "nameEn": "Walis Ukan",
+          "nameOriginal": "Walis Ukan",
+          "lifespan": "1965?– ",
+          "disciplineGroup": "神學",
+          "sortYear": 1965,
+          "era": "現代與當代",
+          "region": "原住民",
+          "discipline": "賽德克族牧師，玉山神學院現任院長，部落傳統哲學詮釋法倡議者",
+          "fields": [
+                "賽德克神學",
+                "聖經情境化詮釋",
+                "部落傳統哲學",
+                "原住民釋經學"
+          ],
+          "portraitUrl": "",
+          "portraitCredit": "（Wikimedia Commons 無公有領域肖像）",
+          "color": "orange",
+          "emoji": "📖",
+          "contribution": [
+                "瓦歷斯‧烏干（漢名張秋雄）為賽德克族牧師，1991年畢業於台南神學院道學碩士第29屆，長年任教於台灣基督長老教會玉山神學院，講授舊約聖經、希伯來文及「原住民部落經驗聖經詮釋法」等課程，2022年9月接任第十三任玉山神學院院長。",
+                "他提出的「部落傳統哲學詮釋法」（tribal traditional philosophy hermeneutics）主張以原住民部落自身的哲學範疇——而非移植自西方或漢人框架的概念工具——作為閱讀聖經的詮釋起點，其論文〈被遮蔽之部落傳統哲學的視界與世界：「部落傳統哲學詮釋法」在原住民部落裡閱讀聖經的實踐〉即為此方法論的代表性闡述，另著有電子書《原住民部落經驗與聖經情境化詮釋》。",
+                "他亦關注原住民傳統祖靈信仰與基督教信仰間的張力，曾撰文〈慎終追遠 畏天敬祖：一個含糊的字眼——「祖靈崇拜」〉，梳理「祖靈崇拜」一詞在原漢文化接觸中的曖昧與誤讀。就任院長後，他致力推動原住民圖書館活化、玉山文教協會與宣教教會史檔案中心等計畫，延續台灣原住民神學教育的建制化工程。"
+          ],
+          "sourceNote": "在世神學家，著作與論文全數受版權保護，暫不翻譯，僅建檔學術小傳；出生年份未見公開確切紀錄，此處依其求學經歷推估。",
+          "timeline": [
+                {
+                      "year": "1965",
+                      "text": "生（確切年份未見公開紀錄，依其求學經歷推估），賽德克族。"
+                },
+                {
+                      "year": "1987–1991",
+                      "text": "就讀台南神學院道學碩士第29屆。"
+                },
+                {
+                      "year": "2006",
+                      "text": "於《新使者》雜誌發表〈慎終追遠 畏天敬祖：一個含糊的字眼——「祖靈崇拜」〉。"
+                },
+                {
+                      "year": "近年",
+                      "text": "任玉山神學院教授，開設舊約、希伯來文與部落聖經詮釋法課程；發表〈被遮蔽之部落傳統哲學的視界與世界〉論文。"
+                },
+                {
+                      "year": "2022",
+                      "text": "9月就任台灣基督長老教會玉山神學院第十三任院長。"
+                }
+          ],
+          "works": [
+                {
+                      "title": "原住民部落經驗與聖經情境化詮釋",
+                      "titleOriginal": "原住民部落經驗與聖經情境化詮釋",
+                      "year": "不詳",
+                      "yearSort": 2015,
+                      "category": "聖經詮釋學",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "copyright",
+                      "note": "電子書形式出版，闡述以原住民部落經驗詮釋聖經的方法論。"
+                },
+                {
+                      "title": "被遮蔽之部落傳統哲學的視界與世界：「部落傳統哲學詮釋法」在原住民部落裡閱讀聖經的實踐",
+                      "titleOriginal": "被遮蔽之部落傳統哲學的視界與世界",
+                      "year": "不詳",
+                      "yearSort": 2016,
+                      "category": "神學論文",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "copyright",
+                      "note": "發表於神學研究刊物，其「部落傳統哲學詮釋法」代表論述。"
+                },
+                {
+                      "title": "慎終追遠 畏天敬祖：一個含糊的字眼——「祖靈崇拜」",
+                      "titleOriginal": "慎終追遠 畏天敬祖：一個含糊的字眼——「祖靈崇拜」",
+                      "year": "2006",
+                      "yearSort": 2006,
+                      "category": "神學論文",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "copyright",
+                      "note": "刊於《新使者》雜誌第84期，梳理祖靈崇拜一詞的曖昧性。"
+                }
+          ]
+    },
+    {
+          "slug": "kaitlin-curtice",
+          "name": "凱特琳‧柯蒂斯",
+          "nameEn": "Kaitlin B. Curtice",
+          "nameOriginal": "Kaitlin B. Curtice",
+          "lifespan": "1986?– ",
+          "disciplineGroup": "神學",
+          "sortYear": 1986,
+          "era": "現代與當代",
+          "region": "原住民",
+          "discipline": "波塔瓦托米族女性作家，原住民身分認同與基督教靈性書寫代表聲音",
+          "fields": [
+                "原住民靈性",
+                "身分認同神學",
+                "女性書寫",
+                "解殖基督教"
+          ],
+          "portraitUrl": "",
+          "portraitCredit": "（Wikimedia Commons 無公有領域肖像）",
+          "color": "sky",
+          "emoji": "🍃",
+          "contribution": [
+                "凱特琳‧柯蒂斯是波塔瓦托米公民聯盟部落（Citizen Potawatomi Nation）登記族人，父親為波塔瓦托米族、母親為白人，成長過程中長期以「可通過白人身分」（white-coded）生活，成年後才逐步尋回並重建自己的原住民身分認同，這段歷程成為她寫作的核心主題，也使她在北美當代原住民神學書寫中成為**具代表性的女性聲音**。",
+                "她 2020 年出版的《原住民：身分、歸屬與重新尋見上帝》（*Native: Identity, Belonging, and Rediscovering God*）獲喬治亞州年度作家獎（宗教類），書中交織個人身分追尋與基督教信仰反省，質問「白人化」的北美基督教如何長期抹除原住民靈性資源，並示範如何在不放棄基督教信仰的前提下，重新擁抱波塔瓦托米傳統智慧。",
+                "2023 年的《活著的抵抗：一種原住民異象，尋求日常的整全》（*Living Resistance*）進一步將個人靈性實踐擴展為系統性的社會行動倫理，主張「抵抗」本身即是一種靈性操練。柯蒂斯的寫作風格較學院神學家更貼近大眾靈修與公共書寫，是原住民神學走向廣大讀者群的重要橋樑。"
+          ],
+          "sourceNote": "在世作家，著作全數受版權保護，暫不翻譯，僅建檔學術小傳；出生年份依公開資料推估，未見官方確認。",
+          "timeline": [
+                {
+                      "year": "1986",
+                      "text": "生於奧克拉荷馬州部落醫院，父為波塔瓦托米族、母為白人（生年為推估）。"
+                },
+                {
+                      "year": "童年",
+                      "text": "隨父親任職美國印第安事務局，遷居新墨西哥州普韋布洛保留地地區。"
+                },
+                {
+                      "year": "2011",
+                      "text": "開始專職寫作生涯。"
+                },
+                {
+                      "year": "2017",
+                      "text": "出版首部著作《榮耀正在發生：在日常之處尋見神聖》。"
+                },
+                {
+                      "year": "2020",
+                      "text": "出版《原住民：身分、歸屬與重新尋見上帝》，獲喬治亞州年度作家獎（宗教類）。"
+                },
+                {
+                      "year": "2023",
+                      "text": "出版《活著的抵抗：一種原住民異象，尋求日常的整全》。"
+                }
+          ],
+          "works": [
+                {
+                      "title": "榮耀正在發生：在日常之處尋見神聖",
+                      "titleOriginal": "Glory Happening: Finding the Divine in Everyday Places",
+                      "year": "2017",
+                      "yearSort": 2017,
+                      "category": "靈修書寫",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "首部著作，日常靈修散文。"
+                },
+                {
+                      "title": "原住民：身分、歸屬與重新尋見上帝",
+                      "titleOriginal": "Native: Identity, Belonging, and Rediscovering God",
+                      "year": "2020",
+                      "yearSort": 2020,
+                      "category": "身分認同神學代表作",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "Brazos Press 出版，獲 2020 年喬治亞州年度作家獎（宗教類）。"
+                },
+                {
+                      "title": "活著的抵抗：一種原住民異象，尋求日常的整全",
+                      "titleOriginal": "Living Resistance: An Indigenous Vision for Seeking Wholeness Every Day",
+                      "year": "2023",
+                      "yearSort": 2023,
+                      "category": "靈性倫理",
+                      "languages": [
+                            "en"
+                      ],
+                      "status": "copyright",
+                      "note": "將靈性實踐擴展為社會行動倫理的近作。"
                 }
           ]
     },
