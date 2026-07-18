@@ -27,12 +27,24 @@ export interface CwTimelineEntry {
   text: string // 事件（繁中）
 }
 
+/**
+ * 文體（決定 reader 版面）。ingest／翻譯時先判定（見 scripts 的 classify_genre）：
+ * - dialogue 對話錄（講者分行）／verse 詩歌讚歌（保留詩行詩節）／aphorism 格言命題（逐條編號卡）
+ * - quaestio 經院問答（異議→反之→正解→答覆）／treatise 論著／essay 散文／lecture 講義
+ * - diary-letters 日記書信／narrative 敘事。未標＝treatise 通用版面。
+ * 內容慣例：對話錄／問答段落以 `〔角色〕內文` 起始；詩歌保留單行換行（詩行）與空行（詩節）。
+ */
+export type CwGenre =
+  | 'dialogue' | 'verse' | 'aphorism' | 'quaestio'
+  | 'treatise' | 'essay' | 'lecture' | 'diary-letters' | 'narrative'
+
 export interface CwWork {
   title: string // 繁中書名
   titleOriginal?: string // 原文書名（英／德…）
   year: string // 出版年（顯示用，可為區間）
   yearSort: number // 排序用單一年分
   category: string // 類別／群組（hub 內分組依據）
+  genre?: CwGenre // 文體（決定 reader 版面；未標＝通用）
   languages?: string[] // 可得來源語言 code，如 ['en','de']
   status: WorkStatus
   ebookId?: string // 已轉錄時連到 /collected-works/[slug]/[ebookId]

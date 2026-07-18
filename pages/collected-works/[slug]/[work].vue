@@ -91,14 +91,28 @@
                 <div v-if="row.heading" class="bg-gradient-to-r from-amber-50 to-white border-y border-amber-100 px-3 py-2 text-sm font-semibold text-stone-800">
                   {{ row.heading }}
                 </div>
-                <article v-else class="bg-white border border-stone-200 rounded-md overflow-hidden">
+                <article v-else class="bg-white border border-stone-200 rounded-md overflow-hidden"
+                  :class="isAphorism ? 'shadow-sm my-2' : ''">
+                  <!-- 對話錄講者／經院問答角色標籤列 -->
+                  <div v-if="row.lead" class="px-3 pt-2 pb-1">
+                    <span v-if="genre === 'quaestio'"
+                      class="inline-block text-[11px] font-semibold px-2 py-0.5 rounded border"
+                      :class="roleClass(row.lead)">{{ row.lead }}</span>
+                    <span v-else
+                      class="inline-block text-xs font-bold text-indigo-700 tracking-wide">{{ row.lead }}<span class="text-indigo-300"> ｜</span></span>
+                  </div>
                   <div class="grid gap-px bg-stone-100" :style="{ gridTemplateColumns: gridCols }">
                     <button
-                      class="bg-stone-50 px-1 py-3 text-[11px] font-mono font-bold text-stone-500 hover:text-blue-700 hover:bg-blue-50 flex items-start justify-center transition"
+                      class="bg-stone-50 px-1 text-[11px] font-mono font-bold text-stone-500 hover:text-blue-700 hover:bg-blue-50 flex items-start justify-center transition"
+                      :class="isAphorism ? 'py-3 text-sm text-blue-600' : 'py-3'"
                       :title="citeTitle(row.anchor)" @click="copyCite(row.anchor)">{{ row.anchor }}</button>
                     <div v-for="c in cols" :key="c.key"
-                      class="bg-white px-3 py-3 text-[0.92rem] leading-loose text-stone-800"
-                      :class="c.key === 'grc' ? 'font-[Gentium,serif]' : ''"
+                      class="bg-white px-3 py-3 text-stone-800"
+                      :class="[
+                        c.key === 'grc' ? 'font-[Gentium,serif]' : '',
+                        isVerse ? 'text-[0.92rem] leading-relaxed whitespace-pre-line pl-4 -indent-4' : 'text-[0.92rem] leading-loose',
+                        isAphorism ? 'py-4' : '',
+                      ]"
                       :lang="c.key === 'zh' ? 'zh-Hant' : c.key"
                       style="font-family: 'Noto Serif TC', 'Source Han Serif TC', serif">
                       <span v-if="cell(row, c.key)" v-html="md(cell(row, c.key))"></span>
@@ -138,6 +152,27 @@ const store = useCollectedWorksStore()
 const author = computed(() => store.bySlug(slug))
 const work = computed(() => author.value?.works.find((w) => w.ebookId === ebookId))
 const intro = computed(() => collectedWorksIntros[ebookId])
+// 文體版面：對話錄／詩歌／格言／經院問答有專屬呈現，其餘＝通用逐段版面
+const genre = computed(() => work.value?.genre ?? 'treatise')
+const isVerse = computed(() => genre.value === 'verse')
+const isAphorism = computed(() => genre.value === 'aphorism')
+const hasLead = computed(() => genre.value === 'dialogue' || genre.value === 'quaestio')
+// 經院問答角色標籤配色
+const ROLE_STYLE: Record<string, string> = {
+  異議: 'text-rose-700 bg-rose-50 border-rose-200',
+  反之: 'text-amber-700 bg-amber-50 border-amber-200',
+  正解: 'text-emerald-700 bg-emerald-50 border-emerald-200',
+  答覆: 'text-blue-700 bg-blue-50 border-blue-200',
+}
+function roleClass(label: string) {
+  const k = Object.keys(ROLE_STYLE).find((r) => label.startsWith(r))
+  return k ? ROLE_STYLE[k] : 'text-stone-600 bg-stone-50 border-stone-200'
+}
+// 解析段首 `〔角色〕內文` → { label, rest }
+function splitLead(s: string): { label: string; rest: string } {
+  const m = /^\s*〔([^〕]{1,20})〕\s*/.exec(s ?? '')
+  return m ? { label: m[1], rest: s.slice(m[0].length) } : { label: '', rest: s }
+}
 
 const page = ref(Math.max(1, Number(route.query.p) || 1))
 const jump = ref(page.value)
@@ -220,12 +255,24 @@ const rows = computed(() => {
   const zipped = zipParallel(zh, srcParas, sourceOrder.value)
   const anchors: string[] = c.anchors ?? []
   return zipped.map((r, i) => {
-    const zhText = r.zh
+    let zhText = r.zh
     const heading = /^#{1,4}\s+/.test(zhText) ? zhText.replace(/^#{1,4}\s+/, '') : null
+    // 對話錄／經院問答：段首 〔角色〕→ 抽出當標籤、各欄一併去掉前綴
+    let lead = ''
+    let cols = r.cols
+    if (hasLead.value && !heading) {
+      const z = splitLead(zhText)
+      if (z.label) {
+        lead = z.label
+        zhText = z.rest
+        cols = Object.fromEntries(Object.entries(r.cols).map(([k, v]) => [k, splitLead(v as string).rest]))
+      }
+    }
     return {
       heading,
+      lead,
       zh: zhText,
-      cols: r.cols,
+      cols,
       anchor: anchors[i] ?? (i === 0 && c.page_number != null ? String(c.page_number) : ''),
     }
   })
