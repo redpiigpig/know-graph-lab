@@ -83,7 +83,7 @@ H = {
 
 CHUNKS_DIR = Path("G:/我的雲端硬碟/資料/電子書/_chunks")
 PREVIEW_LEN = 100  # 2026-07-08 200→100：DB 超量救援
-DEFAULT_MODEL = "gemini-2.5-flash"
+DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
 DEFAULT_RPM = 4  # under 10 RPM limit on flash, gentler on the service
 STAGING = False  # --staging：只寫 {id}.jsonl.new，不動 DB/R2/parsed_at（requeue_reocr gate 用）
 

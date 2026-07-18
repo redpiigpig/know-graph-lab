@@ -13,13 +13,14 @@ Modeled on scripts/mueller_auto.py (resumable, lock, queue):
   - extract original text once (font heading-marking for born-digital PDFs;
     Gemini OCR for scanned) → panikkar_data/<slug>/orig.txt
   - split into sections (## headings) → translate each paragraph → 繁中
-    (engine chain NVIDIA→Gemini→Haiku), cached per section in secN.json
+    (engine chain Gemini→NVIDIA→Haiku, each tier 2-strike), cached per section in secN.json
   - one reader chunk per section: content=繁中 / sources.<lang>=original, equal ¶
   - cover + chunks → JSONL + R2 + DB
 
   python scripts/panikkar_auto.py --list
   python scripts/panikkar_auto.py --probe experience-of-god      # extract + 1-para translate
   python scripts/panikkar_auto.py --work experience-of-god --upload
+  python scripts/panikkar_auto.py --work rhythm-of-being --translate-only --maxparas 10 --save-every 1 --backend haiku
   python scripts/panikkar_auto.py --run-queue                    # all, resumable
 
 Copyrighted source text + my 繁中 stay in local files / DB — never printed.
@@ -137,7 +138,7 @@ def extract_original(slug: str, *, force: bool = False) -> Path:
         out.write_text(text, encoding="utf-8")
         return out
     else:  # gemini OCR (scanned)
-        pages = ocr.ocr_pdf(src, model="gemini-2.5-flash", mark_headings=True, batch=20)
+        pages = ocr.ocr_pdf(src, model=os.environ.get("GEMINI_MODEL", "gemini-flash-latest"), mark_headings=True, batch=20)
     out.write_text(ocr.pages_to_text(pages), encoding="utf-8")
     return out
 
@@ -201,36 +202,122 @@ def load_orig_sections(slug: str) -> list[dict]:
     return _split_long_paras(pb.load_en_sections(extract_original(slug)))
 
 
-def translate_work(slug: str, translate_para, *, save_every: int = 5, maxparas=None) -> None:
+def _provenance(cache: dict, zh: list, size: int) -> list:
+    engines = list(cache.get("engines") or [])
+    engines = (engines + [None] * size)[:size]
+    for i, value in enumerate(zh):
+        if value and not engines[i]:
+            engines[i] = "unknown"
+    return engines
+
+
+def translate_work(
+    slug: str,
+    translate_para,
+    *,
+    save_every: int = 5,
+    maxparas=None,
+    max_total_paras: int | None = None,
+    engine_name: str = "unknown",
+) -> int:
     secs = load_orig_sections(slug)
     lang = WORKS[slug]["lang"]
     print(f"  {slug}: {len(secs)} sections (lang={lang})", flush=True)
+    translated_total = 0
     for i, s in enumerate(secs):
+        if max_total_paras is not None and translated_total >= max_total_paras:
+            break
         cp = _sec_path(slug, i)
         cache = json.loads(cp.read_text(encoding="utf-8")) if cp.exists() else {}
         src = list(s["paras"])
         zh = cache.get("zh", [])
         zh = (zh + [None] * len(src))[:len(src)]
+        engines = _provenance(cache, zh, len(src))
         title_zh = cache.get("title_zh") or None
         todo = [j for j in range(len(src)) if not zh[j]]
         if maxparas:
             todo = todo[:maxparas]
+        if max_total_paras is not None:
+            todo = todo[:max(0, max_total_paras - translated_total)]
         if title_zh is None and s["heading"] not in ("(front)", ""):
             title_zh = translate_para(s["heading"].lstrip("# ")) or s["heading"]
+            title_engine = engine_name if title_zh != s["heading"] else "source-fallback"
         elif title_zh is None:
             title_zh = s["heading"]
+            title_engine = "source"
+        else:
+            title_engine = cache.get("title_engine") or "unknown"
+
+        def save() -> None:
+            cp.write_text(json.dumps({
+                **cache,
+                "heading": s["heading"],
+                "title_zh": title_zh,
+                "title_engine": title_engine,
+                "src": src,
+                "zh": zh,
+                "engines": engines,
+            }, ensure_ascii=False, indent=1), encoding="utf-8")
+
         for done, j in enumerate(todo, 1):
-            zh[j] = translate_para(src[j])
+            output = translate_para(src[j])
+            if output:
+                zh[j] = output
+                engines[j] = engine_name
+                translated_total += 1
             if done % save_every == 0 or done == len(todo):
-                cp.write_text(json.dumps(
-                    {"heading": s["heading"], "title_zh": title_zh, "src": src, "zh": zh},
-                    ensure_ascii=False, indent=1), encoding="utf-8")
+                save()
         if not todo:  # nothing to translate but ensure cache exists
-            cp.write_text(json.dumps(
-                {"heading": s["heading"], "title_zh": title_zh, "src": src, "zh": zh},
-                ensure_ascii=False, indent=1), encoding="utf-8")
+            save()
         filled = sum(1 for z in zh if z)
         print(f"    sec{i} 「{(title_zh or '')[:18]}」 {filled}/{len(src)}", flush=True)
+    return translated_total
+
+
+def review_local_work(
+    slug: str,
+    translate_para,
+    *,
+    engine_name: str,
+    max_total_paras: int | None = None,
+) -> int:
+    """Replace only Ollama drafts with an online translation, preserving all
+    pre-existing cloud/unknown paragraphs. Does not upload by itself."""
+    reviewed = 0
+    folder = _data_dir(slug)
+    for cp in sorted(folder.glob("sec*.json"), key=lambda p: int(p.stem[3:])):
+        cache = json.loads(cp.read_text(encoding="utf-8"))
+        src = list(cache.get("src") or [])
+        zh = (list(cache.get("zh") or []) + [None] * len(src))[:len(src)]
+        engines = _provenance(cache, zh, len(src))
+        todo = [i for i in range(len(src)) if zh[i] and engines[i] == "ollama"]
+        if max_total_paras is not None:
+            todo = todo[:max(0, max_total_paras - reviewed)]
+        for i in todo:
+            output = translate_para(src[i])
+            if output:
+                zh[i] = output
+                engines[i] = engine_name
+                reviewed += 1
+                cache.update({"zh": zh, "engines": engines})
+                cp.write_text(json.dumps(cache, ensure_ascii=False, indent=1), encoding="utf-8")
+            if max_total_paras is not None and reviewed >= max_total_paras:
+                break
+        if max_total_paras is not None and reviewed >= max_total_paras:
+            break
+    print(f"  {slug}: reviewed {reviewed} Ollama draft paragraphs via {engine_name}", flush=True)
+    return reviewed
+
+
+def count_local_drafts(slug: str) -> int:
+    count = 0
+    for cp in _data_dir(slug).glob("sec*.json"):
+        try:
+            cache = json.loads(cp.read_text(encoding="utf-8"))
+            count += sum(e == "ollama" for e in (cache.get("engines") or []))
+        except (OSError, json.JSONDecodeError):
+            continue
+    return count
 
 
 def is_done(slug: str) -> bool:
@@ -249,6 +336,15 @@ def is_done(slug: str) -> bool:
 
 
 # ── build + upload ────────────────────────────────────────────────────────────
+MAX_PARAS_PER_CHUNK = 10
+
+
+def _chunked_paras(zh: list[str], src: list[str], max_paras: int = MAX_PARAS_PER_CHUNK):
+    """Yield paragraph groups so a heading-less EPUB does not become one huge page."""
+    for start in range(0, len(zh), max_paras):
+        yield zh[start:start + max_paras], src[start:start + max_paras]
+
+
 def build_chunks(slug: str) -> list[dict]:
     w = WORKS[slug]
     pb.select_book("unknown-christ")  # neutral defaults; we pass volume explicitly
@@ -268,14 +364,24 @@ def build_chunks(slug: str) -> list[dict]:
         zh = [(z or sv) for z, sv in zip(zh, src)]  # fallback to original if a para unfilled
         if not any(zh):
             continue
-        chunk = pb.build_section_chunk(
-            chunk_index=ci, title_zh=c.get("title_zh") or s["heading"],
-            zh_paras=zh, source_paras={lang: src},
-            source_heads={lang: s["heading"].lstrip("# ").strip()},
-            source_order=[lang], volume=w["volume"], parent_volume=w["parent_volume"],
-            page_number=ci + 1)
-        chunks.append(chunk)
-        ci += 1
+        base_title = (c.get("title_zh") or s["heading"] or "").strip()
+        if base_title in ("", "(front)"):
+            base_title = w["title"]
+        source_head = s["heading"].lstrip("# ").strip()
+        if source_head in ("", "(front)"):
+            source_head = w["original_title"]
+        groups = list(_chunked_paras(zh, src))
+        for part_no, (zh_group, src_group) in enumerate(groups, start=1):
+            title = base_title if len(groups) == 1 else f"{base_title}（{part_no}）"
+            head = source_head if len(groups) == 1 else f"{source_head} ({part_no})"
+            chunk = pb.build_section_chunk(
+                chunk_index=ci, title_zh=title,
+                zh_paras=zh_group, source_paras={lang: src_group},
+                source_heads={lang: head},
+                source_order=[lang], volume=w["volume"], parent_volume=w["parent_volume"],
+                page_number=ci + 1)
+            chunks.append(chunk)
+            ci += 1
     return chunks
 
 
@@ -357,6 +463,42 @@ def run_queue():
             print(f"  ⚠ {slug} failed: {str(e)[:200]}", flush=True)
 
 
+def run_draft_queue_step(backend: str, max_total_paras: int) -> int:
+    """Fill a small number of missing paragraphs locally; never build/upload."""
+    for slug in QUEUE:
+        try:
+            if is_done(slug):
+                continue
+            engine = pb.make_engine(WORKS[slug]["lang"], backend=backend)
+            count = translate_work(
+                slug, engine, save_every=1, max_total_paras=max_total_paras,
+                engine_name=backend)
+            print(f"SUPERVISOR_RESULT job=local-draft slug={slug} translated={count}", flush=True)
+            return count
+        except Exception as exc:  # keep looking for a source that is locally available
+            print(f"  ⚠ local draft {slug} skipped: {str(exc)[:200]}", flush=True)
+    print("SUPERVISOR_RESULT job=local-draft all-done-or-unavailable translated=0", flush=True)
+    return 0
+
+
+def run_review_queue_step(backend: str, max_total_paras: int, do_upload: bool) -> int:
+    """Online-AI handoff: replace a bounded batch of Ollama drafts, then publish
+    only a work that no longer contains local drafts."""
+    for slug in QUEUE:
+        if not count_local_drafts(slug):
+            continue
+        engine = pb.make_engine(WORKS[slug]["lang"], backend=backend)
+        count = review_local_work(
+            slug, engine, engine_name=backend, max_total_paras=max_total_paras)
+        if do_upload and count_local_drafts(slug) == 0:
+            build_and_upload(slug, do_upload=True)
+        print(f"SUPERVISOR_RESULT job=online-review slug={slug} reviewed={count} "
+              f"remaining={count_local_drafts(slug)}", flush=True)
+        return count
+    print("SUPERVISOR_RESULT job=online-review no-local-drafts reviewed=0", flush=True)
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--list", action="store_true")
@@ -364,8 +506,24 @@ def main():
     ap.add_argument("--probe", type=str)
     ap.add_argument("--extract", type=str)
     ap.add_argument("--maxparas", type=int, default=None)
+    ap.add_argument("--max-total-paras", type=int, default=None,
+                    help="global paragraph budget across all sections")
+    ap.add_argument("--save-every", type=int, default=5)
+    ap.add_argument("--backend",
+                    choices=["auto", "gemini", "gemini-first", "nvidia", "haiku", "ollama"],
+                    default="auto",
+                    help="translation backend for self-translate runs; auto preserves the existing chain")
+    ap.add_argument("--translate-only", action="store_true",
+                    help="only fill sec*.json cache; do not build JSONL or upload")
     ap.add_argument("--upload", action="store_true")
     ap.add_argument("--run-queue", action="store_true")
+    ap.add_argument("--draft-queue-step", action="store_true",
+                    help="bounded local draft pass; checkpoint only, never upload")
+    ap.add_argument("--review-local", action="store_true",
+                    help="with --work: replace only provenance=ollama paragraphs")
+    ap.add_argument("--review-queue-step", action="store_true",
+                    help="bounded online review pass over provenance=ollama paragraphs")
+    ap.add_argument("--local-draft-status", action="store_true")
     args = ap.parse_args()
 
     if args.list:
@@ -376,6 +534,10 @@ def main():
             except FileNotFoundError:
                 src = "⚠ MISSING"
             print(f"  {slug:26} {w['lang']} {w['extract']:6} done={is_done(slug) if _sec_path(slug,0).exists() else False}  {src}")
+        return
+    if args.local_draft_status:
+        for slug in QUEUE:
+            print(f"{slug}\tollama_drafts={count_local_drafts(slug)}")
         return
     if args.extract:
         p = extract_original(args.extract, force=True)
@@ -392,10 +554,38 @@ def main():
               f"zh_chars={len(zh)} ok={bool(zh.strip())}")
         return
     if args.work:
+        if args.review_local:
+            if args.backend == "ollama":
+                ap.error("--review-local requires an online backend")
+            eng = pb.make_engine(WORKS[args.work]["lang"], backend=args.backend)
+            review_local_work(
+                args.work, eng, engine_name=args.backend,
+                max_total_paras=args.max_total_paras)
+            if args.upload and count_local_drafts(args.work) == 0:
+                build_and_upload(args.work, do_upload=True)
+            return
+        if args.translate_only:
+            eng = pb.make_engine(WORKS[args.work]["lang"], backend=args.backend)
+            translate_work(
+                args.work, eng, save_every=max(1, args.save_every),
+                maxparas=args.maxparas, max_total_paras=args.max_total_paras,
+                engine_name=args.backend)
+            return
         run_work(args.work, do_upload=args.upload, maxparas=args.maxparas)
         return
     if args.run_queue:
         run_queue()
+        return
+    if args.draft_queue_step:
+        if args.backend != "ollama":
+            ap.error("--draft-queue-step is restricted to --backend ollama")
+        run_draft_queue_step(args.backend, max(1, args.max_total_paras or 3))
+        return
+    if args.review_queue_step:
+        if args.backend == "ollama":
+            ap.error("--review-queue-step requires an online backend")
+        run_review_queue_step(
+            args.backend, max(1, args.max_total_paras or 10), args.upload)
         return
     ap.print_help()
 

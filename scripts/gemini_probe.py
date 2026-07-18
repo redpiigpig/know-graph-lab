@@ -8,13 +8,14 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import os
 import requests
 from dotenv import load_dotenv
 load_dotenv()
 
 import translate_ebook_to_zh as te  # noqa: E402
 
-MODEL = "gemini-2.5-flash"
+MODEL = os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
 BODY = {"contents": [{"parts": [{"text": "reply with: ok"}]}],
         "generationConfig": {"temperature": 0, "maxOutputTokens": 5}}
 

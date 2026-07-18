@@ -74,7 +74,7 @@ if not API_KEYS:
 
 SUPABASE_URL = os.environ["SUPABASE_URL"]
 SUPABASE_KEY = os.environ["SUPABASE_SERVICE_ROLE_KEY"]
-MODEL = "gemini-2.5-flash"
+MODEL = os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
 
 PROMPT = """以下是《古代基督信仰聖經註釋叢書》（Ancient Christian Commentary on Scripture，校園書房繁體中文版）**連續的一至數頁**掃描影像，內容是某卷聖經某段經文的教父註釋。請依影像順序處理，把所有頁的條目**合併成單一 JSON 陣列**輸出（跨頁未完的同一則正文要接成完整一段）。
 

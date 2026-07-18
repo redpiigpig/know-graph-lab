@@ -511,7 +511,10 @@ _PROMPT_TMPL_TAIL = """
 PROMPT_TMPL = _PROMPT_TMPL_HEAD + AUTO_PROMPT_PEOPLE + _PROMPT_TMPL_TAIL
 
 
-def gemini_translate(source: str, model: str = "gemini-2.5-flash") -> str:
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
+
+
+def gemini_translate(source: str, model: str = GEMINI_MODEL) -> str:
     global _key_idx
     if not GEMINI_KEYS:
         raise RuntimeError("no Gemini API key")
