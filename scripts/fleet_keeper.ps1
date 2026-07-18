@@ -18,10 +18,17 @@ function Ensure($label, $pat, $argv) {
     Start-Process $py -ArgumentList $argv -WindowStyle Hidden -WorkingDirectory $ROOT
 }
 
-Ensure 'jung-cw11' 'jung_cw_translate' @('-X','utf8','scripts\jung_cw_translate.py','--vol','11','--engine','auto')
-Ensure 'plato-philebus' 'plato_build' @('-X','utf8','scripts\plato_build.py','philebus','--engine','auto','--upload')
-Ensure 'panikkar-vedic' 'panikkar_auto' @('-X','utf8','scripts\panikkar_auto.py','--work','vedic-experience','--backend','gemini-first','--upload')
+# jung CW11 done (414/414); advance to CW9ii (Aion), the #2 religious-studies volume
+Ensure 'jung-cw9ii' 'jung_cw_translate' @('-X','utf8','scripts\jung_cw_translate.py','--vol','9ii','--engine','auto')
+Ensure 'philo-queue' 'plato_build|plato_run_queue' @('-X','utf8','scripts\plato_run_queue.py')
+# Panikkar last volume (vedic-experience, huge): on Haiku per user (idle Claude account).
+# When it finishes, replace this lane with Max Weber (sociology) collected works.
+Ensure 'panikkar-vedic' 'panikkar_auto' @('-X','utf8','scripts\panikkar_auto.py','--work','vedic-experience','--backend','haiku','--upload')
 Ensure 'uchimura' 'uchimura_auto' @('-X','utf8','scripts\uchimura_auto.py','--run-queue')
+# dadaodao research-materials fulltext translation (NVIDIA, 7 keys, off Claude/Gemini)
+Ensure 'dadaodao' 'dadaodao_translate' @('-X','utf8','scripts\dadaodao_translate.py','--engine','nvidia')
+# Sacred Books of the East: dedicate the (now-idle) Claude account via Haiku to remaining 5 volumes
+Ensure 'sbe-haiku' 'sbe_translate' @('-X','utf8','scripts\sbe_translate.py','--loop','--only','sbe-04-zend-avesta-1,sbe-06-quran-1,sbe-10-dhammapada,sbe-16-yi-king,sbe-22-jaina-1','--backend','haiku')
 
 # ACCS campus single-book OCR (pure Gemini Vision): only when Gemini has quota
 if (-not (Running 'accs_ocr_run|ingest_accs_genesis')) {
