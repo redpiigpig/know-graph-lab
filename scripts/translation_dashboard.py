@@ -41,20 +41,35 @@ CW_ROOT = ROOT / ".claude" / "skills" / "ebook-collected-works"
 PANIKKAR_ROOT = CW_ROOT / "panikkar_data"
 MUELLER_ROOT = CW_ROOT / "mueller_data"
 JUNG_ROOT = CW_ROOT / "jung_data"
+PLATO_BUILD = ROOT / "scripts" / "plato_build.py"
+PLATO_CACHE = Path(r"C:\tmp\plato_cache")
 LOG_ROOT = ROOT / "scripts" / "logs"
+DAZANGJING_CATALOG_ROOT = ROOT / "data" / "dazangjing" / "source-catalog"
 TMP_ROOT = Path(os.environ.get("TEMP", r"C:\tmp"))
 if Path(r"C:\tmp").exists():
     TMP_ROOT = Path(r"C:\tmp")
 
 STALE_MINUTES = 30
 PROCESS_PATTERNS = {
-    "榮格": ("jung_psychological_types_overnight.py",),
+    "榮格": (
+        "_jung_queue.py",
+        "jung_psychological_types_overnight.py",
+        "jung_bilingual_translate.py",
+        "jung_collected_papers_translate.py",
+        "jung_cw_translate.py",
+    ),
+    "哲學家全集": ("greek_overnight.py", "plato_build.py"),
     "潘尼卡": ("panikkar_auto.py", "panikkar_build.py"),
     "東方聖卷": ("sbe_translate.py",),
     "ACCS": (
         "ingest_accs_genesis.py",
         "accs_resume",
         "accs_loop",
+    ),
+    "基督教大藏經": (
+        "dazangjing_catalog_ai.py",
+        "dazangjing_catalog_curate.py",
+        "dazangjing_source_catalog.py",
     ),
 }
 
@@ -74,8 +89,6 @@ OTHER_PIPELINES = {
     "dialogue_rewrite_from_docx.py": "手稿改寫匯入",
     "fix_gnostic_quality.py": "諾斯底文獻精修",
     "ingest_gnostic.py": "諾斯底文獻轉錄",
-    "dazangjing_catalog_ai.py": "大藏經目錄整理",
-    "dazangjing_catalog_curate.py": "大藏經目錄策展",
     "ocr_interview_book.py": "研究參考書 OCR",
     "transcribe_interview_gemini.py": "論文訪談轉錄",
     "lit_review_quality_reviewer.py": "文獻翻譯品質複核",
@@ -111,6 +124,11 @@ ACCS_TARGETS = {
     ("lev", ""): 60,
     ("num", ""): 96,
     ("deu", ""): 94,
+    ("jos", ""): 142,
+    ("jdg", ""): 114,
+    ("rut", ""): 20,
+    ("1sa", ""): 194,
+    ("2sa", ""): 100,
 }
 ACCS_NAMES = {
     "gen": "創世記",
@@ -118,6 +136,28 @@ ACCS_NAMES = {
     "lev": "利未記",
     "num": "民數記",
     "deu": "申命記",
+    "jos": "約書亞記",
+    "jdg": "士師記",
+    "rut": "路得記",
+    "1sa": "撒母耳記上",
+    "2sa": "撒母耳記下",
+    # 校園版第二批（11-66）：舊約中後段
+    "1ki": "列王紀上", "2ki": "列王紀下", "1ch": "歷代志上", "2ch": "歷代志下",
+    "ezr": "以斯拉記", "neh": "尼希米記", "est": "以斯帖記",
+    "job": "約伯記", "psa": "詩篇", "pro": "箴言", "ecc": "傳道書", "sng": "雅歌",
+    "isa": "以賽亞書", "jer": "耶利米書", "lam": "耶利米哀歌",
+    "ezk": "以西結書", "dan": "但以理書",
+    "hos": "何西阿書", "jol": "約珥書", "amo": "阿摩司書", "oba": "俄巴底亞書",
+    "jon": "約拿書", "mic": "彌迦書", "nam": "那鴻書", "hab": "哈巴谷書",
+    "zep": "西番雅書", "hag": "哈該書", "zec": "撒迦利亞書", "mal": "瑪拉基書",
+    # 新約全書
+    "mat": "馬太福音", "mrk": "馬可福音", "luk": "路加福音", "jhn": "約翰福音",
+    "act": "使徒行傳", "rom": "羅馬書", "1co": "哥林多前書", "2co": "哥林多後書",
+    "gal": "加拉太書", "eph": "以弗所書", "php": "腓立比書", "col": "歌羅西書",
+    "1th": "帖撒羅尼迦前書", "2th": "帖撒羅尼迦後書", "1ti": "提摩太前書",
+    "2ti": "提摩太後書", "tit": "提多書", "phm": "腓利門書", "heb": "希伯來書",
+    "jas": "雅各書", "1pe": "彼得前書", "2pe": "彼得後書", "1jn": "約翰一書",
+    "2jn": "約翰二書", "3jn": "約翰三書", "jud": "猶大書", "rev": "啟示錄",
 }
 
 
@@ -346,6 +386,43 @@ def cloud_lane_rate_limits(
     return limited
 
 
+def cloud_lane_model_unavailable(
+        state_path: Path = CLOUD_SUPERVISOR_STATE,
+        log_dir: Path | None = None) -> dict[str, dict[str, Any]]:
+    """Return cooling lanes whose latest failure says the configured model is unavailable."""
+    if log_dir is None:
+        log_dir = ROOT / "scripts" / "logs" / "cloud-lanes"
+    try:
+        cloud = json.loads(state_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    project = str(cloud.get("project") or "genesis-philosophy")
+    unavailable: dict[str, dict[str, Any]] = {}
+    for lane_id, lane in (cloud.get("lanes") or {}).items():
+        if str(lane.get("state") or "") != "cooldown":
+            continue
+        log_path = log_dir / f"{project}_{lane_id}.log"
+        tail = _tail_text(log_path)
+        matches = list(re.finditer(r"404[^\n]*model unavailable", tail, re.IGNORECASE))
+        if not matches:
+            continue
+        last_failure = matches[-1].start()
+        last_success = max(
+            tail.rfind(" START "),
+            tail.rfind("· para "),
+            tail.rfind("\nOK "),
+            tail.rfind("\nREVISED "),
+        )
+        if last_failure < last_success:
+            continue
+        unavailable[str(lane_id)] = {
+            "state": "cooldown",
+            "next_restart_at": float(lane.get("next_restart_at") or 0),
+            "log_path": str(log_path),
+        }
+    return unavailable
+
+
 def apply_runtime_rate_limits(
         statuses: list[ApiStatus],
         limits: dict[str, dict[str, Any]] | None = None) -> list[ApiStatus]:
@@ -418,7 +495,7 @@ def active_processes() -> list[dict[str, Any]]:
     script = (
         "Get-CimInstance Win32_Process | "
         "Where-Object {$_.CommandLine} | "
-        "Select-Object ProcessId,Name,CommandLine | ConvertTo-Json -Compress"
+        "Select-Object ProcessId,Name,CommandLine,CreationDate | ConvertTo-Json -Compress"
     )
     flags = getattr(subprocess, "CREATE_NO_WINDOW", 0)
     try:
@@ -478,7 +555,8 @@ def _state(done: int, total: int, running: bool, updated: float | None,
 
 
 # ── status buckets (shared by the summary cards + their click-to-filter) ──────
-ATTENTION_STATES = ("錯誤", "疑似停滯", "待匯入/檢查", "待線上複核", "429 受限")
+ATTENTION_STATES = ("錯誤", "疑似停滯", "待匯入/檢查", "待入庫",
+                    "待線上複核", "待人工複查", "429 受限", "模型不可用")
 DONE_RETENTION_DAYS = 3  # a task finished this long ago drops off the board
 
 
@@ -486,7 +564,7 @@ def state_category(state: str) -> str:
     """Map a fine-grained state to one of the four summary buckets."""
     if state == "執行中":
         return "running"
-    if state == "完成":
+    if state in ("完成", "已入庫"):
         return "complete"
     if state in ATTENTION_STATES:
         return "attention"
@@ -507,11 +585,13 @@ def _is_junk_accs_file(name: str) -> bool:
     return bool(re.search(r"(?i)_(bad|backup|empty|old|bak)(?:_|\b)", name))
 
 
-def scan_jung(running: bool) -> list[WorkProgress]:
+def scan_jung(processes: list[dict[str, Any]]) -> list[WorkProgress]:
     rows: list[WorkProgress] = []
     if not JUNG_ROOT.exists():
         return rows
-    for status_path in sorted(JUNG_ROOT.glob("*/status.json")):
+    commands = [str(p.get("CommandLine") or "").lower() for p in processes]
+    seen: set[str] = set()
+    for status_path in sorted(JUNG_ROOT.rglob("status.json")):
         try:
             obj = json.loads(status_path.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
@@ -521,12 +601,151 @@ def scan_jung(running: bool) -> list[WorkProgress]:
         current = obj.get("current")
         err = str(obj.get("error") or "")
         updated = status_path.stat().st_mtime
+        try:
+            updated = datetime.fromisoformat(str(obj.get("updated_at"))).timestamp()
+        except (TypeError, ValueError):
+            pass
+        slug = status_path.parent.name.lower()
+        seen.add(slug)
+        direct_running = any(slug in command for command in commands)
         rows.append(WorkProgress(
             "榮格", status_path.parent.name, str(obj.get("title") or status_path.parent.name),
-            done, total, "段", _state(done, total, running, updated, error=err),
-            running, f"第 {current} 段" if current is not None else ("全部完成" if done >= total else "—"),
+            done, total, "段", _state(done, total, direct_running, updated, error=err),
+            direct_running, ("全部完成" if total > 0 and done >= total
+                             else (f"第 {current} 段" if current is not None else "—")),
             updated, str(status_path), err,
         ))
+    volumes = _literal_assignment(ROOT / "scripts" / "jung_cw_translate.py", "VOLS")
+    if isinstance(volumes, dict):
+        for volume, config in volumes.items():
+            slug = f"cw{volume}".lower()
+            if slug in seen or not isinstance(config, (list, tuple)) or not config:
+                continue
+            title = str(config[0])
+            folder = JUNG_ROOT / "cw-full" / slug
+            direct_running = any(
+                "jung_cw_translate.py" in command
+                and re.search(rf"--vol(?:=|\s+){re.escape(str(volume).lower())}(?:\s|$)",
+                              command)
+                for command in commands
+            )
+            rows.append(WorkProgress(
+                "榮格", slug, f"CW {volume}　{title}", 0, 0, "段",
+                "執行中" if direct_running else "未開始", direct_running,
+                "等待建立逐段 checkpoint",
+                _latest_mtime([folder]) if folder.exists() else None,
+                str(folder), "Hull 英譯《榮格全集》卷次",
+            ))
+    if processes and not any(row.running for row in rows):
+        incomplete = [row for row in rows if row.done < row.total]
+        if incomplete:
+            active = max(incomplete, key=lambda row: row.updated_at or 0)
+            active.running = True
+            active.state = _state(active.done, active.total, True, active.updated_at)
+    return rows
+
+
+def _greek_work_registry(path: Path = PLATO_BUILD) -> list[dict[str, str]]:
+    """Read plato_build's declarative table without importing its API clients."""
+    try:
+        tree = ast.parse(path.read_text(encoding="utf-8"))
+    except (OSError, SyntaxError):
+        return []
+    constants: dict[str, str] = {}
+    table: ast.List | ast.Tuple | None = None
+    for node in tree.body:
+        if not isinstance(node, ast.Assign) or len(node.targets) != 1:
+            continue
+        target = node.targets[0]
+        if isinstance(target, (ast.Tuple, ast.List)) and isinstance(
+                node.value, (ast.Tuple, ast.List)):
+            for name, value in zip(target.elts, node.value.elts):
+                if (isinstance(name, ast.Name) and isinstance(value, ast.Constant)
+                        and isinstance(value.value, str)):
+                    constants[name.id] = value.value
+            continue
+        if not isinstance(target, ast.Name):
+            continue
+        if isinstance(node.value, ast.Constant) and isinstance(node.value.value, str):
+            constants[target.id] = node.value.value
+        if target.id == "_TABLE" and isinstance(node.value, (ast.List, ast.Tuple)):
+            table = node.value
+    rows: list[dict[str, str]] = []
+    for item in table.elts if table else []:
+        if not isinstance(item, (ast.Tuple, ast.List)) or len(item.elts) < 8:
+            continue
+        values: list[Any] = []
+        for value in item.elts[:8]:
+            if isinstance(value, ast.Constant):
+                values.append(value.value)
+            elif isinstance(value, ast.Name):
+                values.append(constants.get(value.id))
+            else:
+                values.append(None)
+        if all(value is not None for value in values):
+            slug, author, tlg, _number, title, _original, anchor, grc_kind = values
+            rows.append({
+                "slug": str(slug), "author": str(author), "tlg": str(tlg),
+                "title": str(title), "anchor": str(anchor), "grc_kind": str(grc_kind),
+            })
+    return rows
+
+
+def _greek_source_total(work: dict[str, str], cache: Path = PLATO_CACHE) -> int:
+    author_tlg = "tlg0059" if work["author"] == "柏拉圖" else "tlg0086"
+    source = cache / (
+        f"{author_tlg}.{work['tlg']}.perseus-{work['grc_kind']}.xml")
+    text = _tail_text(source, max_bytes=10_000_000)
+    anchors: set[str] = set()
+    for attrs in re.findall(r"<milestone\b([^>]*?)/?>", text):
+        unit = re.search(r'\bunit="([^"]+)"', attrs)
+        number = re.search(r'\bn="([^"]+)"', attrs)
+        if unit and number and unit.group(1) == work["anchor"]:
+            anchors.add(number.group(1))
+    return len(anchors)
+
+
+def scan_philosopher_collections(
+        processes: list[dict[str, Any]]) -> list[WorkProgress]:
+    commands = [str(p.get("CommandLine") or "").lower() for p in processes]
+    rows: list[WorkProgress] = []
+    for work in _greek_work_registry():
+        slug = work["slug"]
+        translated_dir = PLATO_CACHE / f"{slug}_zh"
+        translated = list(translated_dir.glob("*.txt")) if translated_dir.exists() else []
+        marker = PLATO_CACHE / f"{slug}.done"
+        output = TMP_ROOT / f"plato_{slug}.jsonl"
+        explicit_done = marker.exists() or (slug == "apology" and output.exists())
+        done = len(translated)
+        total = _greek_source_total(work)
+        if explicit_done and total <= 0:
+            total = done or 1
+        if explicit_done:
+            done = max(done, total)
+        paths = translated + [p for p in (marker, output) if p.exists()]
+        updated = _latest_mtime(paths)
+        direct_running = any(
+            "plato_build.py" in command and slug in command
+            for command in commands
+        )
+        state = _state(
+            done, total, direct_running, updated, explicit_done=explicit_done)
+        current = (
+            "已完成並上架" if explicit_done
+            else (f"下一節約 {done + 1}" if done else
+                  ("來源已下載，尚未翻譯" if total else "尚未下載來源")))
+        rows.append(WorkProgress(
+            "哲學家全集", slug, f"{work['author']}｜{work['title']}",
+            done, total, "節", state, direct_running, current,
+            updated, str(translated_dir if translated_dir.exists() else PLATO_CACHE),
+            f"逐節快取 {done}；完成標記：{'有' if explicit_done else '無'}",
+        ))
+    if processes and not any(row.running for row in rows):
+        incomplete = [row for row in rows if row.state != "完成"]
+        if incomplete:
+            active = max(incomplete, key=lambda row: row.updated_at or 0)
+            active.running = True
+            active.state = _state(active.done, active.total, True, active.updated_at)
     return rows
 
 
@@ -537,13 +756,11 @@ def _checkpoint_counts(path: Path, source_key: str) -> tuple[int, int, str, int]
         return 0, 0, "checkpoint 無法解析", 0
     source = obj.get(source_key) or []
     zh = obj.get("zh") or []
-    fail = obj.get("fail") or []
     total = len(source)
     done = 0
     for idx in range(total):
         translated = idx < len(zh) and bool(str(zh[idx] or "").strip())
-        exhausted = source_key == "en" and idx < len(fail) and int(fail[idx] or 0) >= 3
-        done += int(translated or exhausted)
+        done += int(translated)
     heading = str(obj.get("title_zh") or obj.get("title") or obj.get("heading") or path.stem)
     local_drafts = sum(value == "ollama" for value in (obj.get("engines") or []))
     return done, total, heading.lstrip("# ").strip(), local_drafts
@@ -574,10 +791,7 @@ def scan_json_checkpoints(
             done += d
             total += t
             local_drafts += local
-            if group == "潘尼卡":
-                sections_ready.append(not t or d >= max(1, int(t * 0.95)))
-            else:
-                sections_ready.append(d >= t)
+            sections_ready.append(d >= t)
             if d < t and current == "尚未建立 checkpoint":
                 current = f"{path.stem}　{heading[:48]}"
             if t and d < t:
@@ -626,6 +840,10 @@ def _accs_title(code: str, filename: str) -> str:
     return title
 
 
+def _next_source_page(pages: set[int]) -> int:
+    return max(pages) + 1 if pages else 1
+
+
 def scan_accs(processes: list[dict[str, Any]]) -> list[WorkProgress]:
     rows = []
     commands = [str(p.get("CommandLine") or "").lower() for p in processes]
@@ -662,21 +880,57 @@ def scan_accs(processes: list[dict[str, Any]]) -> list[WorkProgress]:
             re.search(rf"(?:--book\s+|accs_){re.escape(code)}(?:\s|_|$)", cmd)
             for cmd in commands
         )
+        for command in commands:
+            if not re.search(rf"--book(?:=|\s+){re.escape(code)}(?:\s|$)", command):
+                continue
+            page_arg = _command_arg(command, "--pages")
+            page_match = re.fullmatch(r"(\d+)-(\d+)", page_arg)
+            if page_match:
+                total = max(total, int(page_match.group(2)) - int(page_match.group(1)) + 1)
         state = _state(done, total, direct_running, updated, explicit_done=explicit_done)
         if done >= total and total > 0 and not explicit_done:
-            state = "待匯入/檢查"
+            state = "待入庫"
+        elif explicit_done:
+            state = "已入庫"
         rows.append(WorkProgress(
             "ACCS", path.stem, _accs_title(code, path.name), done, total, "頁",
-            state, direct_running, "頁面 OCR 完成，尚無 .done" if state == "待匯入/檢查"
-            else (f"下一頁約 {min(done + 1, total)}" if done < total else "全部完成"),
-            updated, str(path), f"JSONL 解析錯誤行：{parse_errors}" if parse_errors else "",
+            state, direct_running, "OCR 完成，等待 upsert／.done" if state == "待入庫"
+            else ("已 upsert 至 accs_commentary" if state == "已入庫"
+                  else f"下一頁約 {_next_source_page(pages)}"),
+            updated, str(path),
+            (f"JSONL 解析錯誤行：{parse_errors}；" if parse_errors else "")
+            + f"入庫標記：{'有' if explicit_done else '無'}",
         ))
     if processes and not any(row.running for row in rows):
-        incomplete = [row for row in rows if row.state != "完成"]
+        incomplete = [row for row in rows
+                      if row.state != "完成" and row.updated_at is not None]
         if incomplete:
             active = max(incomplete, key=lambda r: r.updated_at or 0)
             active.running = True
             active.state = _state(active.done, active.total, True, active.updated_at)
+    # 路線圖：accs_volume_config.json 裡尚未有 checkpoint 的卷列為「待轉錄」
+    seen = set()
+    for r in rows:
+        m = re.match(r"accs_([a-z0-9]+)_", Path(r.source).name, re.I)
+        if m:
+            seen.add(m.group(1).lower())
+    try:
+        cfg_path = Path(__file__).resolve().parent / "accs_volume_config.json"
+        for vol in json.loads(cfg_path.read_text(encoding="utf-8")):
+            single = vol.get("single_book")
+            for book in vol.get("books", []):
+                if book in seen:
+                    continue
+                seen.add(book)
+                rows.append(WorkProgress(
+                    "ACCS", f"plan-{book}", _accs_title(book, ""), 0,
+                    vol.get("page_count", 0) if single else 0, "頁",
+                    "待轉錄", False,
+                    "尚未開始 OCR" if single else "多書卷合冊，待定界",
+                    None, str(cfg_path), "校園版路線圖",
+                ))
+    except (OSError, json.JSONDecodeError, KeyError, TypeError):
+        pass
     return rows
 
 
@@ -773,6 +1027,43 @@ def scan_other_work(processes: list[dict[str, Any]]) -> list[WorkProgress]:
         if project not in lit_groups and log.exists():
             rows.append(_scan_lit_review(project, [], running=False))
 
+    quality_procs = [
+        proc for proc in processes
+        if "lit_review_quality_reviewer.py" in str(proc.get("CommandLine") or "").lower()
+    ]
+    for proc in quality_procs:
+        used_pids.add(int(proc.get("ProcessId") or 0))
+    quality_ledger = ROOT / "scripts" / "state" / "lit_review_quality_ledger.jsonl"
+    if quality_ledger.exists() or quality_procs:
+        reviewed: dict[str, dict[str, Any]] = {}
+        try:
+            for raw in quality_ledger.read_text(encoding="utf-8").splitlines():
+                if not raw.strip():
+                    continue
+                try:
+                    item = json.loads(raw)
+                except json.JSONDecodeError:
+                    continue
+                key = str(item.get("key") or item.get("digest") or "").strip()
+                if key:
+                    reviewed[key] = item
+        except OSError:
+            pass
+        updated = _latest_mtime([quality_ledger])
+        last = next(reversed(reviewed.values()), {}) if reviewed else {}
+        running = bool(quality_procs)
+        counts: dict[str, int] = {}
+        for item in reviewed.values():
+            status = str(item.get("status") or "unknown")
+            counts[status] = counts.get(status, 0) + 1
+        rows.append(WorkProgress(
+            "其他工作", "lit-review-quality", "文獻翻譯品質複核",
+            len(reviewed), 0, "段", _state(len(reviewed), 0, running, updated),
+            running, str(last.get("ref_key") or "尚未產生複核記錄"),
+            updated, str(quality_ledger),
+            "；".join(f"{key} {value}" for key, value in sorted(counts.items())),
+        ))
+
     grouped: dict[tuple[str, str], list[dict[str, Any]]] = {}
     for proc in processes:
         pid = int(proc.get("ProcessId") or 0)
@@ -795,13 +1086,12 @@ def scan_other_work(processes: list[dict[str, Any]]) -> list[WorkProgress]:
 
     for (script, identity), procs in grouped.items():
         script_path = ROOT / "scripts" / script
-        updated = _latest_mtime([script_path])
         label = OTHER_PIPELINES[script]
         current = identity or "程序已啟動；等待第一個 checkpoint"
         rows.append(WorkProgress(
             "其他工作", f"{script}:{identity}", label,
-            0, 0, "項", _state(0, 0, True, updated), True, current,
-            updated, str(script_path),
+            0, 0, "項", _state(0, 0, True, None), True, current,
+            None, str(script_path),
             "；".join(f"PID {p.get('ProcessId')}" for p in procs),
         ))
     supervisor_procs = [
@@ -860,10 +1150,18 @@ def scan_other_work(processes: list[dict[str, Any]]) -> list[WorkProgress]:
         running_count = sum(
             str(item.get("state") or "").startswith("running")
             for item in lanes_obj.values())
+        cooldown_count = sum(
+            str(item.get("state") or "") == "cooldown"
+            for item in lanes_obj.values())
         rate_limits = cloud_lane_rate_limits()
+        unavailable = cloud_lane_model_unavailable()
         limited_labels = [
             lane_id.replace("-reviewer", " 品管")
             for lane_id in rate_limits
+        ]
+        unavailable_labels = [
+            lane_id.replace("-reviewer", " 品管")
+            for lane_id in unavailable
         ]
         reviewer = lanes_obj.get("gemini-4-reviewer") or {}
         updated = None
@@ -876,10 +1174,15 @@ def scan_other_work(processes: list[dict[str, Any]]) -> list[WorkProgress]:
             "其他工作", "cloud-translation-supervisor",
             "雲端翻譯池（7 初譯＋1 品管）",
             running_count, 8, "lane",
-            "429 受限" if rate_limits else ("執行中" if running else "已暫停"),
+            ("429 受限" if rate_limits else
+             "模型不可用" if unavailable else
+             "執行中" if running else "已暫停"),
             running,
-            f"{running_count}/8 lanes｜Gemini #4 品管：{reviewer.get('state', '—')}"
+            f"{running_count}/8 lanes｜冷卻 {cooldown_count}｜"
+            f"Gemini #4 品管：{reviewer.get('state', '—')}"
             + (f"｜429：{', '.join(limited_labels)}" if limited_labels else "")
+            + (f"｜模型不可用：{', '.join(unavailable_labels)}"
+               if unavailable_labels else "")
             + (f"｜Claude claim：{','.join(claims)}" if claims else ""),
             updated, str(CLOUD_SUPERVISOR_STATE),
             "Gemini #1–#3、NVIDIA #1–#4 各自固定 shard；Gemini #4 全段複核；"
@@ -889,17 +1192,145 @@ def scan_other_work(processes: list[dict[str, Any]]) -> list[WorkProgress]:
     return rows
 
 
+def _dazangjing_catalog_stats(
+        seed_path: Path, ledger_path: Path) -> tuple[int, int, int]:
+    """Return classified, valid candidate, and manual-review counts."""
+    def record_key(record: dict[str, Any]) -> str:
+        basis = "|".join(
+            str(record.get(key, ""))
+            for key in ("source", "url", "title", "author", "date")
+        )
+        return re.sub(r"\s+", " ", basis).strip().lower()
+
+    try:
+        seed = json.loads(seed_path.read_text(encoding="utf-8"))
+        seed_keys = {
+            record_key(record)
+            for record in (seed.get("records") or [])
+            if isinstance(record, dict) and str(record.get("title") or "").strip()
+        }
+    except (OSError, json.JSONDecodeError, AttributeError):
+        seed_keys = set()
+
+    latest_classified: dict[str, dict[str, Any]] = {}
+    try:
+        for raw in ledger_path.read_text(encoding="utf-8").splitlines():
+            if not raw.strip():
+                continue
+            try:
+                row = json.loads(raw)
+            except json.JSONDecodeError:
+                continue
+            if row.get("engine") == "none":
+                continue
+            key = str(row.get("record_key") or "").strip()
+            if key:
+                latest_classified[key] = row
+    except OSError:
+        pass
+    classified_keys = seed_keys & set(latest_classified)
+    manual = sum(
+        (latest_classified[key].get("classification") or {}).get("decision")
+        == "needs_manual_review"
+        for key in classified_keys
+    )
+    return len(classified_keys), len(seed_keys), manual
+
+
+def _dazangjing_catalog_counts(seed_path: Path, ledger_path: Path) -> tuple[int, int]:
+    """Compatibility wrapper returning classified and valid candidate counts."""
+    done, total, _manual = _dazangjing_catalog_stats(seed_path, ledger_path)
+    return done, total
+
+
+def scan_dazangjing(processes: list[dict[str, Any]]) -> list[WorkProgress]:
+    """Persistent source-classification rows for the Christian Dazangjing."""
+    specs = (
+        ("western", "西方館藏來源",
+         DAZANGJING_CATALOG_ROOT / "seed-records-expanded.json",
+         DAZANGJING_CATALOG_ROOT / "classified-records.jsonl"),
+        ("eastern", "東方基督教來源",
+         DAZANGJING_CATALOG_ROOT / "seed-records-eastern.json",
+         DAZANGJING_CATALOG_ROOT / "classified-records-eastern.jsonl"),
+    )
+    rows: list[WorkProgress] = []
+    commands = [
+        str(proc.get("CommandLine") or "").lower()
+        for proc in processes
+    ]
+    for key, label, seed_path, ledger_path in specs:
+        done, total, manual = _dazangjing_catalog_stats(seed_path, ledger_path)
+        running = any(
+            "dazangjing_catalog_ai.py" in cmd
+            and (("eastern" in cmd) == (key == "eastern"))
+            for cmd in commands
+        )
+        updated = _latest_mtime([seed_path, ledger_path])
+        remaining = max(0, total - done)
+        current = (
+            f"分類器執行中｜尚餘 {remaining:,} 筆"
+            if running else
+            (f"已分類；{manual:,} 筆待人工裁決" if manual else
+             "候選已全數分類" if total and done >= total else
+             f"尚餘 {remaining:,} 筆待分類")
+        )
+        state = _state(done, total, running, updated)
+        if manual and not running:
+            state = "待人工複查"
+        rows.append(WorkProgress(
+            "基督教大藏經", f"dazangjing:{key}",
+            f"來源候選分類｜{label}",
+            done, total, "筆", state, running,
+            current, updated, str(ledger_path),
+            f"候選：{seed_path.name}｜分類帳：{ledger_path.name}"
+            + (f"｜待人工裁決 {manual:,} 筆" if manual else ""),
+        ))
+
+    curate_running = any("dazangjing_catalog_curate.py" in cmd for cmd in commands)
+    for key, label, filename in (
+        ("western", "西方館藏", "curation-worklist.json"),
+        ("eastern", "東方館藏", "curation-worklist-eastern.json"),
+    ):
+        worklist = DAZANGJING_CATALOG_ROOT / filename
+        try:
+            work = json.loads(worklist.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        pending = len(work.get("new_works") or [])
+        resolved = int(work.get("in_corpus_count") or 0)
+        total = resolved + pending
+        updated = _latest_mtime([worklist])
+        running = curate_running and (
+            key == "eastern" or "eastern" not in " ".join(commands))
+        state = (
+            _state(resolved, total, running, updated)
+            if not pending else
+            "待匯入/檢查"
+        )
+        rows.append(WorkProgress(
+            "基督教大藏經", f"dazangjing:curate:{key}",
+            f"保留候選收錄去重｜{label}",
+            resolved, total, "部", state, running,
+            (f"尚有 {pending:,} 部待收錄複核"
+             if pending else "保留候選均已收錄或完成去重"),
+            updated, str(worklist),
+        ))
+    return rows
+
+
 def collect_snapshot() -> tuple[list[WorkProgress], dict[str, list[dict[str, Any]]]]:
     pan_titles, sbe_titles = registry_titles()
     processes = active_processes()
     groups = running_groups(processes)
     rows: list[WorkProgress] = []
-    rows.extend(scan_jung(bool(groups["榮格"])))
+    rows.extend(scan_jung(groups["榮格"]))
+    rows.extend(scan_philosopher_collections(groups["哲學家全集"]))
     rows.extend(scan_json_checkpoints(
         "潘尼卡", PANIKKAR_ROOT, pan_titles, groups["潘尼卡"], "src"))
     rows.extend(scan_json_checkpoints(
         "東方聖卷", MUELLER_ROOT, sbe_titles, groups["東方聖卷"], "en"))
     rows.extend(scan_accs(groups["ACCS"]))
+    rows.extend(scan_dazangjing(groups["基督教大藏經"]))
     rows.extend(scan_other_work(processes))
     return rows, groups
 
@@ -1039,7 +1470,8 @@ class Dashboard:
         self.notebook = self.ttk.Notebook(self.root)
         self.notebook.pack(fill="both", expand=True, padx=24)
         self.trees: dict[str, Any] = {}
-        for group in ("全部", "榮格", "潘尼卡", "東方聖卷", "ACCS", "其他工作"):
+        for group in ("全部", "榮格", "哲學家全集", "潘尼卡", "東方聖卷",
+                      "ACCS", "基督教大藏經", "其他工作"):
             frame = tk.Frame(self.notebook, bg=self.COLORS["panel"])
             self.notebook.add(frame, text=group)
             tree = self.ttk.Treeview(
@@ -1107,15 +1539,7 @@ class Dashboard:
 
     @staticmethod
     def _row_tag(row: WorkProgress) -> str:
-        if row.state == "執行中":
-            return "running"
-        if row.state == "完成":
-            return "complete"
-        if row.state.startswith("429"):
-            return "attention"
-        if row.state in ("錯誤", "疑似停滯", "待匯入/檢查", "待線上複核"):
-            return "attention"
-        return ""
+        return state_category(row.state)
 
     def refresh(self) -> None:
         if self.refreshing:
@@ -1196,12 +1620,15 @@ class Dashboard:
         self.refreshing = False
         self._render_trees()
 
-    def _row_visible(self, row: WorkProgress, now: float) -> bool:
+    def _row_visible(self, row: WorkProgress, now: float, group: str = "全部") -> bool:
         """Which rows show in the trees, given the active card filter and the
         3-day done-retention rule."""
         if self.filter_category is not None:
             return state_category(row.state) == self.filter_category
-        # no filter: hide tasks that finished 3+ days ago (files are kept)
+        # Collection tabs are inventories and always show every volume. Only the
+        # combined activity feed hides old completions to keep it readable.
+        if group != "全部":
+            return True
         return not is_stale_done(row.state, row.updated_at, now)
 
     def _render_trees(self) -> None:
@@ -1212,12 +1639,15 @@ class Dashboard:
             for idx, row in enumerate(self.rows):
                 if group != "全部" and row.group != group:
                     continue
-                if not self._row_visible(row, now):
+                if not self._row_visible(row, now, group):
                     if group == "全部":
                         hidden += 1
                     continue
-                pct = (f"{row.done:,} / {row.total:,} {row.unit}　{row.percent:5.1f}%"
-                       if row.total else "尚無資料")
+                pct = (
+                    f"{row.done:,} / {row.total:,} {row.unit}　{row.percent:5.1f}%"
+                    if row.total else
+                    (f"{row.done:,} {row.unit}（總數未知）" if row.done else "尚無資料")
+                )
                 state = ("● " if row.running else "○ ") + row.state
                 tree.insert("", "end", iid=f"{group}:{idx}",
                             values=(state, row.title, pct, row.current, row.updated_text),
