@@ -11399,7 +11399,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1859,
           "era": "現代與當代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "法國生命哲學家，以「綿延」重新界定時間、意識與生命的創造性演化",
           "fields": [
                 "生命哲學",
@@ -11552,7 +11552,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1859,
           "era": "現代與當代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "現象學創始人，主張「回到事物本身」，開創二十世紀歐陸哲學最重要方法論",
           "fields": [
                 "現象學",
@@ -11686,7 +11686,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1861,
           "era": "現代與當代",
-          "region": "西方",
+          "region": "英美（分析）",
           "discipline": "數學家出身的形上學家，歷程哲學創始人，主張實在由生成事件而非靜態實體構成",
           "fields": [
                 "歷程哲學",
@@ -11827,7 +11827,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1872,
           "era": "現代與當代",
-          "region": "西方",
+          "region": "英美（分析）",
           "discipline": "英國分析哲學奠基者，數理邏輯與邏輯原子論開創者，兼公共知識分子與和平運動者",
           "fields": [
                 "分析哲學",
@@ -11980,7 +11980,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1889,
           "era": "現代與當代",
-          "region": "西方",
+          "region": "英美（分析）",
           "discipline": "二十世紀最具影響力哲學家之一，前後期思想兩度革命性轉向語言哲學核心",
           "fields": [
                 "語言哲學",
@@ -12109,7 +12109,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1889,
           "era": "現代與當代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "存在哲學開創者，以「此有」分析重探存有問題，深刻形塑戰後歐陸哲學",
           "fields": [
                 "存在哲學",
@@ -12250,7 +12250,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1900,
           "era": "現代與當代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "哲學詮釋學集大成者，發展「視域融合」理論，重新界定理解的本質",
           "fields": [
                 "詮釋學",
@@ -12379,7 +12379,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1905,
           "era": "現代與當代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "法國存在主義代表人物，哲學家、小說家、劇作家與政治行動者於一身",
           "fields": [
                 "存在主義",
@@ -12520,7 +12520,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1906,
           "era": "現代與當代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "猶太裔法國哲學家，以「他者」倫理學顛覆西方存有論優先的傳統",
           "fields": [
                 "倫理學",
@@ -12649,7 +12649,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1906,
           "era": "現代與當代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "政治哲學家，以「平庸的邪惡」與極權主義分析重塑二十世紀政治思考",
           "fields": [
                 "政治哲學",
@@ -12778,7 +12778,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1908,
           "era": "現代與當代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "存在主義哲學家與女性主義理論奠基者，主張「女人不是天生的，而是形成的」",
           "fields": [
                 "存在主義",
@@ -12907,7 +12907,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1908,
           "era": "現代與當代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "身體現象學代表，以「身體主體」重構知覺、意識與世界之間的關係",
           "fields": [
                 "現象學",
@@ -13032,7 +13032,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1913,
           "era": "現代與當代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "荒謬哲學代表，小說家與哲學家身分交織，探討如何在無意義世界中活出反抗",
           "fields": [
                 "荒謬哲學",
@@ -13165,7 +13165,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1921,
           "era": "現代與當代",
-          "region": "西方",
+          "region": "英美（分析）",
           "discipline": "二十世紀最重要政治哲學家之一，以「無知之幕」重構社會契約論，復興規範政治哲學",
           "fields": [
                 "政治哲學",
@@ -13294,7 +13294,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1925,
           "era": "現代與當代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "差異哲學家，與瓜達里合著開創「根莖」「域外」等激進形上學概念",
           "fields": [
                 "差異哲學",
@@ -13435,7 +13435,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1926,
           "era": "現代與當代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "後結構主義代表，以權力／知識系譜學解析瘋狂、監獄、性等現代建制",
           "fields": [
                 "系譜學",
@@ -13576,7 +13576,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1929,
           "era": "現代與當代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "法蘭克福學派第二代代表，以溝通行動理論重建批判理論的規範基礎",
           "fields": [
                 "批判理論",
@@ -13705,7 +13705,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1930,
           "era": "現代與當代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "解構主義創始人，透過文本細讀顛覆西方形上學的在場邏各斯中心論",
           "fields": [
                 "解構主義",
@@ -13842,7 +13842,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1947,
           "era": "現代與當代",
-          "region": "西方",
+          "region": "英美（分析）",
           "discipline": "當代倫理與政治哲學家，發展「能力取向」，結合古典哲學與當代正義理論",
           "fields": [
                 "能力取向",
@@ -13971,7 +13971,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1956,
           "era": "現代與當代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "酷兒理論奠基者，以「展演性」理論重新界定性別的形成機制",
           "fields": [
                 "性別展演理論",
@@ -14967,7 +14967,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1561,
           "era": "近代",
-          "region": "西方",
+          "region": "英國",
           "discipline": "經驗主義與現代科學方法奠基者，倡「知識即力量」",
           "fields": [
                 "經驗主義",
@@ -15084,7 +15084,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1588,
           "era": "近代",
-          "region": "西方",
+          "region": "英國",
           "discipline": "社會契約論與絕對主權論奠基者，《利維坦》作者",
           "fields": [
                 "政治哲學",
@@ -15213,7 +15213,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1596,
           "era": "近代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "近代理性主義奠基者，以「我思故我在」開創主體性哲學",
           "fields": [
                 "理性主義",
@@ -15342,7 +15342,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1632,
           "era": "近代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "理性主義泛神論者，以幾何學方式論證的《倫理學》",
           "fields": [
                 "理性主義",
@@ -15467,7 +15467,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1632,
           "era": "近代",
-          "region": "西方",
+          "region": "英國",
           "discipline": "經驗主義知識論與自由主義政治哲學奠基者",
           "fields": [
                 "經驗主義",
@@ -15596,7 +15596,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1646,
           "era": "近代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "理性主義多元論者，微積分共同發明人，提出單子論",
           "fields": [
                 "理性主義",
@@ -15725,7 +15725,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1685,
           "era": "近代",
-          "region": "西方",
+          "region": "英國",
           "discipline": "主觀觀念論者，主張「存在即被感知」",
           "fields": [
                 "觀念論",
@@ -15854,7 +15854,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1706,
           "era": "近代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "啟蒙時代物理學家與自然哲學家，牛頓《原理》法譯註者",
           "fields": [
                 "自然哲學",
@@ -15967,7 +15967,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1711,
           "era": "近代",
-          "region": "西方",
+          "region": "英國",
           "discipline": "徹底經驗主義與懷疑論者，對因果性提出根本質疑",
           "fields": [
                 "經驗主義",
@@ -16112,7 +16112,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1712,
           "era": "近代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "浪漫主義先驅與激進民主政治哲學家，《社會契約論》作者",
           "fields": [
                 "政治哲學",
@@ -16253,7 +16253,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1724,
           "era": "近代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "批判哲學創立者，以哥白尼式革命調和理性主義與經驗主義",
           "fields": [
                 "批判哲學",
@@ -16398,7 +16398,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1759,
           "era": "近代",
-          "region": "西方",
+          "region": "英國",
           "discipline": "女性主義哲學先驅，《女權辯護》作者",
           "fields": [
                 "女性主義",
@@ -16527,7 +16527,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1762,
           "era": "近代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "德國觀念論奠基者，以主觀唯心論「知識學」聞名",
           "fields": [
                 "德國觀念論",
@@ -16652,7 +16652,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1770,
           "era": "近代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "德國觀念論集大成者，以辯證法建構絕對精神的歷史體系",
           "fields": [
                 "德國觀念論",
@@ -16793,7 +16793,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1775,
           "era": "近代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "德國觀念論的自然哲學與同一哲學開創者",
           "fields": [
                 "德國觀念論",
@@ -16922,7 +16922,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1788,
           "era": "近代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "意志形上學與悲觀主義哲學家，融通康德與印度思想",
           "fields": [
                 "意志形上學",
@@ -17055,7 +17055,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1806,
           "era": "近代",
-          "region": "西方",
+          "region": "英國",
           "discipline": "效益主義與自由主義集大成者，《論自由》作者",
           "fields": [
                 "效益主義",
@@ -17212,7 +17212,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1813,
           "era": "近代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "存在主義先驅，以「信仰跳躍」對抗黑格爾式體系哲學",
           "fields": [
                 "存在主義",
@@ -17369,7 +17369,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1818,
           "era": "近代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "歷史唯物論與資本主義批判創立者",
           "fields": [
                 "歷史唯物論",
@@ -17514,7 +17514,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "disciplineGroup": "哲學",
           "sortYear": 1844,
           "era": "近代",
-          "region": "西方",
+          "region": "歐陸",
           "discipline": "價值重估與權力意志哲學家，宣告「上帝已死」",
           "fields": [
                 "虛無主義批判",
