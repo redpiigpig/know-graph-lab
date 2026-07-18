@@ -139,10 +139,7 @@ scripts/heic_convert_ledger.json
 /scripts/drive_ids.json
 The Collected Works of C. G. Jung*.epub
 
-# 個人搞笑短影片（reels-piigpig）：大媒體檔不進 git，只追蹤文案與 skill
-影片/**/*.mp4
-影片/**/*.mov
-影片/**/*.MOV
+# 個人搞笑短影片（reels-piigpig）：影片檔進 git 備份；原始歌曲/中繼音檔不進（可由文案 URL 重抓，避免推原始版權音檔）
 影片/**/*.mp3
 影片/**/*.wav
 影片/**/*.webm

@@ -1,0 +1,41 @@
+﻿[Script Info]
+ScriptType: v4.00+
+PlayResX: 1280
+PlayResY: 720
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: CN,Microsoft JhengHei,52,&H00FFFFFF,&H000000FF,&H00181818,&H90000000,1,0,0,0,100,100,0,0,1,3,2,2,60,60,88,1
+Style: EN,Microsoft JhengHei,30,&H00B4F5FF,&H000000FF,&H00181818,&H90000000,0,1,0,0,100,100,0,0,1,2,1,2,60,60,48,1
+Style: SQ,Microsoft JhengHei,50,&H0032C8FF,&H000000FF,&H00101010,&H90000000,1,0,0,0,100,100,2,0,1,4,2,2,60,60,88,1
+Style: END,Microsoft JhengHei,46,&H00E1F5FF,&H000000FF,&H00303030,&H80000000,1,0,0,0,100,100,1,0,1,2,3,5,40,40,0,1
+Style: CREDIT,Microsoft JhengHei,26,&H00FFFFFF,&H000000FF,&H00202020,&H90000000,0,0,0,0,100,100,0,0,1,2,1,9,30,30,26,1
+Style: ENDen,Microsoft JhengHei,27,&H00C8E6FF,&H000000FF,&H00303030,&H80000000,0,1,0,0,100,100,0,0,1,2,2,5,40,40,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:01.10,0:00:05.65,CN,,0,0,0,,{\fad(120,120)}這隻🐷是2017年在日本石垣島買的
+Dialogue: 0,0:00:01.10,0:00:05.65,EN,,0,0,0,,{\fad(120,120)}This piggy was bought in Ishigaki, Japan back in 2017
+Dialogue: 0,0:00:05.70,0:00:07.95,CN,,0,0,0,,{\fad(120,120)}然後在九年後…
+Dialogue: 0,0:00:05.70,0:00:07.95,EN,,0,0,0,,{\fad(120,120)}Then, nine years later…
+Dialogue: 0,0:00:08.10,0:00:10.45,CN,,0,0,0,,{\fad(120,120)}他在新加坡的機場
+Dialogue: 0,0:00:08.10,0:00:10.45,EN,,0,0,0,,{\fad(120,120)}at an airport in Singapore
+Dialogue: 0,0:00:10.60,0:00:13.32,CN,,0,0,0,,{\fad(120,120)}遇見了他失散多年的兄弟
+Dialogue: 0,0:00:10.60,0:00:13.32,EN,,0,0,0,,{\fad(120,120)}he met his long-lost brother
+Dialogue: 0,0:00:13.36,0:00:14.30,SQ,,0,0,0,,{\fad(80,80)}🐷🐷🐷🐵🐵🐵🐷🐷🐷？$%#？
+Dialogue: 0,0:00:13.36,0:00:14.30,EN,,0,0,0,,{\fad(80,80)}*OINK OINK OINK ？!$%#？*
+Dialogue: 0,0:00:14.34,0:00:16.60,CN,,0,0,0,,{\fad(100,100)}你確定是兄弟嗎？
+Dialogue: 0,0:00:14.34,0:00:16.60,EN,,0,0,0,,{\fad(100,100)}Are you SURE they're brothers？
+Dialogue: 0,0:00:18.80,0:00:21.15,CN,,0,0,0,,{\fad(100,100)}你確定是兄弟嗎？
+Dialogue: 0,0:00:18.80,0:00:21.15,EN,,0,0,0,,{\fad(100,100)}You sure they're brothers？
+Dialogue: 0,0:00:21.20,0:00:23.40,CN,,0,0,0,,{\fad(100,150)}不是兒子嗎？
+Dialogue: 0,0:00:21.20,0:00:23.40,EN,,0,0,0,,{\fad(100,150)}Not his son？
+Dialogue: 0,0:00:24.45,0:00:37.50,END,,0,0,0,,{\pos(640,300)\fad(650,0)}兄弟，抱一下
+Dialogue: 0,0:00:24.70,0:00:37.50,ENDen,,0,0,0,,{\pos(640,344)\fad(850,0)}Brother… come here, let's hug
+Dialogue: 0,0:00:27.75,0:00:37.50,END,,0,0,0,,{\pos(640,398)\fad(650,0)}說說你心裡話
+Dialogue: 0,0:00:28.00,0:00:37.50,ENDen,,0,0,0,,{\pos(640,442)\fad(850,0)}Tell me what's in your heart
+Dialogue: 0,0:00:30.65,0:00:37.50,END,,0,0,0,,{\pos(640,500)\fad(650,0)}說盡這些年你的委屈，和滄桑變化
+Dialogue: 0,0:00:30.95,0:00:37.50,ENDen,,0,0,0,,{\pos(640,544)\fad(850,0)}all you've held in — the tears, the weathered years
+Dialogue: 0,0:00:24.40,0:00:37.50,CREDIT,,0,0,0,,{ad(700,400)}♪ 半噸兄弟〈兄弟抱一下〉
