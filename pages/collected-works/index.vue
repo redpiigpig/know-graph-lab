@@ -96,7 +96,7 @@ useHead({ title: '全集 — Know Graph Lab' })
 const store = useCollectedWorksStore()
 
 // 學科顯示順序；未列出的學科接在最後（按字母序），空組不顯示。
-const DISCIPLINE_ORDER = ['哲學', '社會學', '宗教學', '神學', '佛學', '心理學', '人類學']
+const DISCIPLINE_ORDER = ['哲學', '宗教學', '宗教社會學', '神學', '佛學', '心理學', '社會學', '人類學']
 
 // 依 sortYear（生年，BCE 為負）排序；缺者維持插入序、排在有值者之後
 function byYear(list: CwAuthor[]) {
