@@ -1,0 +1,388 @@
+[
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书40 太1-13.pdf",
+  "vol_key": "40a",
+  "books": [
+   "mat"
+  ],
+  "page_count": 528,
+  "single_book": true,
+  "testament": "NT",
+  "ranges": [
+   {
+    "book": "mat",
+    "pages": "1-528"
+   }
+  ],
+  "status": "ready"
+ },
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书40 太14-28.pdf",
+  "vol_key": "40b",
+  "books": [
+   "mat"
+  ],
+  "page_count": 548,
+  "single_book": true,
+  "testament": "NT",
+  "ranges": [
+   {
+    "book": "mat",
+    "pages": "1-548"
+   }
+  ],
+  "status": "ready"
+ },
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书41 可.pdf",
+  "vol_key": "41",
+  "books": [
+   "mrk"
+  ],
+  "page_count": 428,
+  "single_book": true,
+  "testament": "NT",
+  "ranges": [
+   {
+    "book": "mrk",
+    "pages": "1-428"
+   }
+  ],
+  "status": "ready"
+ },
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书42 路.pdf",
+  "vol_key": "42",
+  "books": [
+   "luk"
+  ],
+  "page_count": 736,
+  "single_book": true,
+  "testament": "NT",
+  "ranges": [
+   {
+    "book": "luk",
+    "pages": "1-736"
+   }
+  ],
+  "status": "ready"
+ },
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书43约翰福音1-10x.pdf",
+  "vol_key": "43a",
+  "books": [
+   "jhn"
+  ],
+  "page_count": 652,
+  "single_book": true,
+  "testament": "NT",
+  "ranges": [
+   {
+    "book": "jhn",
+    "pages": "1-652"
+   }
+  ],
+  "status": "ready"
+ },
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书43约翰福音11-21x.pdf",
+  "vol_key": "43b",
+  "books": [
+   "jhn"
+  ],
+  "page_count": 686,
+  "single_book": true,
+  "testament": "NT",
+  "ranges": [
+   {
+    "book": "jhn",
+    "pages": "1-686"
+   }
+  ],
+  "status": "ready"
+ },
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书44 徒.pdf",
+  "vol_key": "44",
+  "books": [
+   "act"
+  ],
+  "page_count": 606,
+  "single_book": true,
+  "testament": "NT",
+  "ranges": [
+   {
+    "book": "act",
+    "pages": "1-606"
+   }
+  ],
+  "status": "ready"
+ },
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书45 罗.pdf",
+  "vol_key": "45",
+  "books": [
+   "rom"
+  ],
+  "page_count": 627,
+  "single_book": true,
+  "testament": "NT",
+  "ranges": [
+   {
+    "book": "rom",
+    "pages": "1-627"
+   }
+  ],
+  "status": "ready"
+ },
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书58 来.pdf",
+  "vol_key": "58",
+  "books": [
+   "heb"
+  ],
+  "page_count": 478,
+  "single_book": true,
+  "testament": "NT",
+  "ranges": [
+   {
+    "book": "heb",
+    "pages": "1-478"
+   }
+  ],
+  "status": "ready"
+ },
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书66 启.pdf",
+  "vol_key": "66",
+  "books": [
+   "rev"
+  ],
+  "page_count": 748,
+  "single_book": true,
+  "testament": "NT",
+  "ranges": [
+   {
+    "book": "rev",
+    "pages": "1-748"
+   }
+  ],
+  "status": "ready"
+ },
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书46-47 林前后.pdf",
+  "vol_key": "46-47",
+  "books": [
+   "1co",
+   "2co"
+  ],
+  "page_count": 539,
+  "single_book": false,
+  "testament": "NT",
+  "ranges": null,
+  "status": "needs_boundaries"
+ },
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书48-50 加 弗 腓.pdf",
+  "vol_key": "48-50",
+  "books": [
+   "gal",
+   "eph",
+   "php"
+  ],
+  "page_count": 462,
+  "single_book": false,
+  "testament": "NT",
+  "ranges": null,
+  "status": "needs_boundaries"
+ },
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书51-57 西 贴 提 多 门.pdf",
+  "vol_key": "51-57",
+  "books": [
+   "col",
+   "1th",
+   "2th",
+   "1ti",
+   "2ti",
+   "tit",
+   "phm"
+  ],
+  "page_count": 598,
+  "single_book": false,
+  "testament": "NT",
+  "ranges": null,
+  "status": "needs_boundaries"
+ },
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书59-65 雅 彼 约一二三 犹.pdf",
+  "vol_key": "59-65",
+  "books": [
+   "jas",
+   "1pe",
+   "2pe",
+   "1jn",
+   "2jn",
+   "3jn",
+   "jud"
+  ],
+  "page_count": 432,
+  "single_book": false,
+  "testament": "NT",
+  "ranges": null,
+  "status": "needs_boundaries"
+ },
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书18 伯.pdf",
+  "vol_key": "18",
+  "books": [
+   "job"
+  ],
+  "page_count": 412,
+  "single_book": true,
+  "testament": "OT",
+  "ranges": [
+   {
+    "book": "job",
+    "pages": "1-412"
+   }
+  ],
+  "status": "ready"
+ },
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书19 诗1-50.pdf",
+  "vol_key": "19a",
+  "books": [
+   "psa"
+  ],
+  "page_count": 708,
+  "single_book": true,
+  "testament": "OT",
+  "ranges": [
+   {
+    "book": "psa",
+    "pages": "1-708"
+   }
+  ],
+  "status": "ready"
+ },
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书19 诗51-150.pdf",
+  "vol_key": "19b",
+  "books": [
+   "psa"
+  ],
+  "page_count": 760,
+  "single_book": true,
+  "testament": "OT",
+  "ranges": [
+   {
+    "book": "psa",
+    "pages": "1-760"
+   }
+  ],
+  "status": "ready"
+ },
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书23 赛1-39.pdf",
+  "vol_key": "23a",
+  "books": [
+   "isa"
+  ],
+  "page_count": 534,
+  "single_book": true,
+  "testament": "OT",
+  "ranges": [
+   {
+    "book": "isa",
+    "pages": "1-534"
+   }
+  ],
+  "status": "ready"
+ },
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书23 赛40-66.pdf",
+  "vol_key": "23b",
+  "books": [
+   "isa"
+  ],
+  "page_count": 584,
+  "single_book": true,
+  "testament": "OT",
+  "ranges": [
+   {
+    "book": "isa",
+    "pages": "1-584"
+   }
+  ],
+  "status": "ready"
+ },
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书11-17 王 代 拉 尼 斯.pdf",
+  "vol_key": "11-17",
+  "books": [
+   "1ki",
+   "2ki",
+   "1ch",
+   "2ch",
+   "ezr",
+   "neh",
+   "est"
+  ],
+  "page_count": 740,
+  "single_book": false,
+  "testament": "OT",
+  "ranges": null,
+  "status": "needs_boundaries"
+ },
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书20-22 箴 传 歌.pdf",
+  "vol_key": "20-22",
+  "books": [
+   "pro",
+   "ecc",
+   "sng"
+  ],
+  "page_count": 472,
+  "single_book": false,
+  "testament": "OT",
+  "ranges": null,
+  "status": "needs_boundaries"
+ },
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书26-27以西结书但以理书.pdf",
+  "vol_key": "26-27",
+  "books": [
+   "ezk",
+   "dan"
+  ],
+  "page_count": 612,
+  "single_book": false,
+  "testament": "OT",
+  "ranges": null,
+  "status": "needs_boundaries"
+ },
+ {
+  "pdf": "C:\\Users\\user\\Downloads\\古代基督信仰圣经注释丛书28-39 十二先知书.pdf",
+  "vol_key": "28-39",
+  "books": [
+   "hos",
+   "jol",
+   "amo",
+   "oba",
+   "jon",
+   "mic",
+   "nam",
+   "hab",
+   "zep",
+   "hag",
+   "zec",
+   "mal"
+  ],
+  "page_count": 638,
+  "single_book": false,
+  "testament": "OT",
+  "ranges": null,
+  "status": "needs_boundaries"
+ }
+]
