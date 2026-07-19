@@ -1001,6 +1001,16 @@ export const MEDIEVAL_ERA: DazangEra = {
               "language": "巴比倫亞蘭文與希伯來文",
               "parent": "巴比倫塔木德",
               "intro": "《剪除篇》論當受「剪除」（karet，天罰滅絕）之重罪及其誤犯時所需的贖罪祭。它繫聖物部，系統整理了故意與過失重罪的贖罪律法。"
+            },
+            {
+              "title_zh": "巴比倫塔木德‧替換篇",
+              "title_orig": "Talmud Bavli — Masekhet Temurah / תמורה",
+              "author": "巴比倫諸拉比學院（阿摩拉世代眾拉比）",
+              "era": "約 3–6 世紀纂輯（革馬拉），承米書拿（約 200）",
+              "place": "巴比倫蘇拉與彭貝迪塔諸拉比學院",
+              "language": "巴比倫亞蘭文與希伯來文",
+              "parent": "巴比倫塔木德",
+              "intro": "《替換篇》論以他牲替換已奉獻聖牲之律（利未記所禁）：替換的行為雖屬違誡且無效，然被替之牲與替換之牲皆成聖，須依例處置。它繫聖物部，系統整理了奉獻聖物的替換、轉讓與贖回規範，是猶太聖殿祭儀法的專篇。"
             }
           ]
         },
@@ -1293,16 +1303,6 @@ export const MEDIEVAL_ERA: DazangEra = {
           "label_en": "Heterodox & Derived-Religion Discipline",
           "desc": "卡特里派、瓦勒度派等基督教異端紀律，及德魯茲教衍生宗教的法度。",
           "works": [
-            {
-              "title_zh": "智慧書信（德魯茲法度）",
-              "title_orig": "Rasāʾil al-Ḥikma / رسائل الحكمة",
-              "author": "哈姆扎‧本‧阿里、巴哈丁‧穆克塔納等（Ḥamza ibn ʿAlī；al-Muqtanā Bahāʾ al-Dīn）",
-              "era": "11世紀（法蒂瑪哈里發哈基姆時期，c. 1017–1043）",
-              "place": "開羅（法蒂瑪王朝）",
-              "language": "阿拉伯文",
-              "extent": "全書六卷、書信逾百封",
-              "intro": "德魯茲信仰的根本聖典，由一百餘封書信輯成六卷，出於德魯茲創教群體之手，闡述其一神論教義並頒立教團的規範與紀律。其中的法度部規定信眾的義務、禁戒與社群秩序，取代常規伊斯蘭教法，是研究德魯茲這一中世紀衍生宗教之律制的唯一一手經典。"
-            },
             {
               "title_zh": "卡特里派禮儀書（奧克語慰勉禮）",
               "title_orig": "Rituel cathare (occitan)",
