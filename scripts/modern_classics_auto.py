@@ -181,7 +181,12 @@ def build(slug: str, *, limit=None, upload=True, upload_every=20) -> int:
     print(f"  ✓ {out.name}  {len(chunks)} chunks / {sum(len(c['content']) for c in chunks)} 繁中字")
     if upload:
         tcw._upload(d["ebook_id"], chunks, out)
+        (CACHE / slug / ".done").write_text("1", encoding="utf-8")  # resume marker：排程重跑跳過
     return len(chunks)
+
+
+def is_done(slug: str) -> bool:
+    return (CACHE / slug / ".done").exists()
 
 
 def main():
@@ -194,6 +199,8 @@ def main():
     for slug in order:
         if slug not in WORKS:
             print(f"[skip] 未知 slug {slug}"); continue
+        if not args.only and not args.limit and is_done(slug):
+            print(f"[done] {slug} 已完成，跳過"); continue
         for attempt in range(1, 4):
             try:
                 build(slug, limit=args.limit, upload=not args.no_upload)
