@@ -18,9 +18,11 @@ description: 教父全集（Schaff ANF 10 卷 + NPNF1 14 卷 + NPNF2 14 卷 + AC
 - **Schaff NPNF2**（Series 2）14 卷 — 東方教父（亞他那修／巴西流／貴格利…）
 - **ACCS**（IVP Ancient Christian Commentary on Scripture）27 卷
 
-對應頁面：
-- `/fathers` — 教父著作 listing，按系列分組
-- `/ebook/[id]` — 個別卷的閱讀界面
+對應頁面（**2026-07-19 起 /fathers 為獨立子站，UI/UX 與電子圖書館切開**）：
+- `/fathers` — 教父著作 listing，羊皮紙古典風，按系列分組（自訂 header，入口仍從 `/scripture-canon/christianity`）
+- `/fathers/[id]` — **專屬羊皮紙 reader**（非共用 `/ebook/[id]` 圖書館 reader）；中／對照／單一來源切換、卷→書→段三層目錄、朗讀、字級主題設定；annotations／書籤／編輯／原頁下載這些「圖書館」功能刻意不放進來以強化區隔
+- reader 與圖書館 reader 共用純渲染核心 `lib/ebook-render.ts`（escapeHtml/inlineFmt/renderMarkdown/renderTocPage/buildParallelColumns），避免兩邊 footnote／對照解析漂移
+- 資料仍走共用 `ebooks`／`ebook_chunks` 表 + `/api/ebooks/[id]` API（沒有另做 schema 遷移）
 - `/translation-glossary` — 教父翻譯詞庫（5 個 tab，249+ 神學家、159+ 名詞）
 
 🟢 **黃金模板 = ANF Vol 1**（[[anf-vol1-golden-template]]）。新 session 接手要先驗證 Vol 1 通過再開新卷。

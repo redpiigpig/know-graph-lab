@@ -1,77 +1,81 @@
 <template>
-  <div class="flex flex-col bg-slate-50 min-h-dvh">
-    <AppHeader title="教父著作" :back="{ to: '/scripture-canon/christianity', label: '經典對照' }" container-class="max-w-6xl">
-      <template #actions>
-        <span class="text-xs text-gray-400">Schaff 38 卷 / ACCS 27 卷</span>
-        <NuxtLink to="/translation-glossary" class="text-xs text-stone-600 hover:text-stone-900">📖 詞庫</NuxtLink>
-      </template>
-    </AppHeader>
+  <div class="fathers-home min-h-dvh flex flex-col">
+    <!-- Custom parchment header — independent identity, entrance still via 經典對照 -->
+    <header class="fathers-home-topbar sticky top-0 z-30">
+      <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between gap-4">
+        <div class="flex items-center gap-3 min-w-0">
+          <NuxtLink to="/scripture-canon/christianity" class="fathers-home-back flex-shrink-0">← 經典對照</NuxtLink>
+          <span class="fathers-home-sep">·</span>
+          <span class="font-semibold text-[#2a2013] truncate">✝ 教父著作</span>
+        </div>
+        <div class="flex items-center gap-3 flex-shrink-0">
+          <span class="text-xs fathers-home-muted hidden sm:inline">Schaff 38 卷 / ACCS 27 卷</span>
+          <NuxtLink to="/translation-glossary" class="fathers-home-link">📖 詞庫</NuxtLink>
+        </div>
+      </div>
+    </header>
 
-    <div class="flex-1 max-w-6xl w-full mx-auto px-6 py-8">
-      <div class="mb-6">
-        <h1 class="text-2xl font-bold text-gray-900 mb-1">✝️ 教父著作</h1>
-        <p class="text-sm text-gray-500">
-          Schaff 全集 38 卷（ANF 10 + NPNF1 14 + NPNF2 14）+ ACCS 27 卷 + 中譯。點任一卷進入閱讀界面。
+    <div class="flex-1 max-w-6xl w-full mx-auto px-6 py-10">
+      <!-- Hero -->
+      <div class="fathers-hero mb-8">
+        <div class="fathers-hero-ornament">❦</div>
+        <h1 class="fathers-hero-title">教父著作</h1>
+        <p class="fathers-hero-sub">Patristics · 前尼西亞至尼後教父</p>
+        <p class="fathers-hero-desc">
+          Schaff 全集 38 卷（ANF 10 · NPNF1 14 · NPNF2 14）＋ ACCS 27 卷，原文與逐段中譯對照。點任一卷進入閱讀界面。
         </p>
       </div>
 
       <!-- Series tabs -->
-      <div class="flex items-end gap-1 mb-5 border-b border-gray-200">
+      <div class="fathers-tabs mb-6">
         <button v-for="s in series" :key="s.key"
           @click="activeSeries = s.key"
-          :class="['px-4 py-2 text-sm font-medium transition border-b-2 -mb-px',
-                   activeSeries === s.key
-                     ? 'border-stone-800 text-stone-900'
-                     : 'border-transparent text-gray-500 hover:text-stone-700']">
+          :class="['fathers-tab', activeSeries === s.key ? 'is-on' : '']">
           {{ s.label }}
-          <span class="ml-1.5 text-xs text-gray-400">{{ booksBySeries(s.key).length }}</span>
+          <span class="fathers-tab-count">{{ booksBySeries(s.key).length }}</span>
         </button>
       </div>
 
       <!-- Filter -->
-      <div class="flex items-center gap-2 mb-5">
-        <input v-model="q" type="search" placeholder="搜尋（書名／教父名）"
-          class="text-sm px-3 py-1.5 border border-gray-300 rounded-md w-72 focus:outline-none focus:border-stone-500" />
-        <span class="text-xs text-gray-400 ml-2">
-          {{ activeSeriesObj?.subtitle }} · {{ booksBySeries(activeSeries).length }} 卷
-        </span>
+      <div class="flex items-center gap-3 mb-6 flex-wrap">
+        <input v-model="q" type="search" placeholder="搜尋（書名／教父名）" class="fathers-search" />
+        <span class="text-xs fathers-home-muted">{{ activeSeriesObj?.subtitle }} · {{ booksBySeries(activeSeries).length }} 卷</span>
       </div>
 
-      <div v-if="loading" class="text-sm text-gray-500 py-12 text-center">載入中…</div>
+      <div v-if="loading" class="text-sm fathers-home-muted py-12 text-center">載入中…</div>
 
       <template v-else>
         <section class="mb-10">
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <NuxtLink
               v-for="b in booksBySeries(activeSeries)" :key="b.id"
-              :to="`/ebook/${b.id}`"
-              class="group bg-white border border-gray-200 hover:border-stone-400 hover:shadow-sm rounded-lg p-4 transition flex flex-col gap-1"
+              :to="`/fathers/${b.id}`"
+              class="fathers-card group"
             >
-              <div class="flex items-baseline gap-2">
-                <span class="text-xs font-bold text-stone-600 tabular-nums">卷&nbsp;{{ b.vol }}</span>
-                <span v-if="b.refined" class="text-[10px] px-1.5 py-px rounded bg-emerald-100 text-emerald-700 font-medium">已精修</span>
-                <span v-else-if="b.parsed" class="text-[10px] px-1.5 py-px rounded bg-amber-100 text-amber-700 font-medium">粗譯</span>
-                <span v-else class="text-[10px] px-1.5 py-px rounded bg-gray-100 text-gray-500">未譯</span>
+              <div class="flex items-baseline gap-2 mb-1.5">
+                <span class="fathers-card-vol">卷&nbsp;{{ b.vol }}</span>
+                <span v-if="b.refined" class="fathers-badge is-refined">已精修</span>
+                <span v-else-if="b.parsed" class="fathers-badge is-rough">粗譯</span>
+                <span v-else class="fathers-badge is-none">未譯</span>
               </div>
-              <div class="text-sm font-medium text-gray-900 leading-snug group-hover:text-stone-700 line-clamp-3">{{ b.display_title }}</div>
-              <div class="text-xs text-gray-500">{{ b.chunk_count || 0 }} 章節</div>
+              <div class="fathers-card-title line-clamp-3">{{ b.display_title }}</div>
+              <div class="fathers-card-meta">{{ b.chunk_count || 0 }} 章節</div>
             </NuxtLink>
           </div>
-          <div v-if="!booksBySeries(activeSeries).length"
-            class="text-sm text-gray-400 py-12 text-center">
+          <div v-if="!booksBySeries(activeSeries).length" class="text-sm fathers-home-muted py-12 text-center">
             此系列尚無書籍
           </div>
         </section>
       </template>
 
-      <div class="mt-12 text-xs text-gray-400 leading-relaxed">
+      <div class="fathers-legend">
         <p>狀態說明：</p>
-        <ul class="mt-1 ml-4 list-disc">
+        <ul>
           <li><b class="text-emerald-700">已精修</b>：跑過完整 5 步驟 pipeline + A+B+C 三層校對，T9 cross-bleed = 0</li>
           <li><b class="text-amber-700">粗譯</b>：完成翻譯但未經 v4 pipeline 精修，章節結構可能有 bleed bug</li>
-          <li><b class="text-gray-500">未譯</b>：source 已在庫但尚未翻譯</li>
+          <li><b class="text-stone-500">未譯</b>：source 已在庫但尚未翻譯</li>
         </ul>
-        <p class="mt-3">資料源：<a href="https://ccel.org/" class="text-stone-600 hover:underline" target="_blank">CCEL (Christian Classics Ethereal Library)</a> · Schaff 編輯 · T&amp;T Clark 1885-1890 原版。</p>
+        <p class="mt-3">資料源：<a href="https://ccel.org/" target="_blank">CCEL (Christian Classics Ethereal Library)</a> · Schaff 編輯 · T&amp;T Clark 1885-1890 原版。</p>
       </div>
     </div>
   </div>
@@ -262,3 +266,72 @@ onMounted(async () => {
   loading.value = false
 })
 </script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&display=swap');
+</style>
+
+<style scoped>
+.fathers-home {
+  background:
+    radial-gradient(circle at 15% 0%, rgba(196,163,90,0.06), transparent 45%),
+    #e7dcc4;
+  color: #35291a;
+  font-family: "Noto Serif TC", "Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
+}
+.fathers-home-topbar {
+  background: linear-gradient(#f3ead4, #ece0c6);
+  border-bottom: 1px solid #cbb98f;
+  box-shadow: 0 1px 3px rgba(120,90,40,0.08);
+}
+.fathers-home-back { color: #7a5c2e; font-size: 0.875rem; transition: color .15s; }
+.fathers-home-back:hover { color: #4a3717; }
+.fathers-home-sep { color: #c4a35a; }
+.fathers-home-muted { color: #9c8a63; }
+.fathers-home-link { font-size: 12px; color: #6b4f27; transition: color .15s; }
+.fathers-home-link:hover { color: #4a3717; }
+
+/* Hero */
+.fathers-hero { text-align: center; padding: 1.5rem 0 0.5rem; }
+.fathers-hero-ornament { color: #c4a35a; font-size: 1.5rem; margin-bottom: .5rem; }
+.fathers-hero-title { font-size: 2.4rem; font-weight: 700; color: #2a2013; letter-spacing: .12em; }
+.fathers-hero-sub { color: #8a7145; font-size: .9rem; letter-spacing: .1em; margin-top: .35rem; }
+.fathers-hero-desc { color: #6b573a; font-size: .9rem; margin: 1rem auto 0; max-width: 40rem; line-height: 1.9; }
+
+/* Tabs */
+.fathers-tabs { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; border-bottom: 1px solid #d0bd93; padding-bottom: .75rem; }
+.fathers-tab {
+  padding: 6px 16px; border-radius: 9999px; font-size: 13px; font-weight: 500; color: #7a5c2e;
+  border: 1px solid transparent; transition: all .15s;
+}
+.fathers-tab:hover { color: #4a3717; background: #efe4cb; }
+.fathers-tab.is-on { background: #6b4f27; color: #f3ead4; font-weight: 600; }
+.fathers-tab-count { margin-left: 6px; font-size: 11px; opacity: .7; font-variant-numeric: tabular-nums; }
+
+/* Filter */
+.fathers-search {
+  font-size: 14px; padding: 7px 14px; border-radius: 8px; width: 18rem; max-width: 100%;
+  background: #fbf6e9; border: 1px solid #cbb98f; color: #35291a;
+}
+.fathers-search:focus { outline: none; border-color: #a9884a; }
+
+/* Cards */
+.fathers-card {
+  display: flex; flex-direction: column; background: #fbf6e9; border: 1px solid #d8c9a8; border-radius: 8px;
+  padding: 1rem 1.1rem; text-decoration: none; transition: all .18s; position: relative;
+}
+.fathers-card:hover { border-color: #a9884a; box-shadow: 0 6px 20px -8px rgba(90,64,20,0.28); transform: translateY(-1px); }
+.fathers-card-vol { font-size: 12px; font-weight: 700; color: #7a5c2e; font-variant-numeric: tabular-nums; }
+.fathers-card-title { font-size: 14.5px; font-weight: 600; color: #2a2013; line-height: 1.5; }
+.fathers-card:hover .fathers-card-title { color: #6b4f27; }
+.fathers-card-meta { font-size: 12px; color: #9c8a63; margin-top: .4rem; }
+.fathers-badge { font-size: 10px; padding: 1px 7px; border-radius: 9999px; font-weight: 600; }
+.fathers-badge.is-refined { background: #d1e7d3; color: #2f6b3a; }
+.fathers-badge.is-rough { background: #f2e3bf; color: #8a6414; }
+.fathers-badge.is-none { background: #e4d6b6; color: #8a7145; }
+
+/* Legend */
+.fathers-legend { margin-top: 3rem; font-size: 12px; color: #9c8a63; line-height: 1.8; }
+.fathers-legend ul { margin: .35rem 0 0 1.25rem; list-style: disc; }
+.fathers-legend a { color: #7a5c2e; text-decoration: underline; }
+</style>
