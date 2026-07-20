@@ -90,6 +90,36 @@ const TUKARAM_ABHANGS: DazangWork[] = Array.from({ length: 98 }, (_, index) => {
   }
 })
 
+const SALE_QURAN_SURAS: DazangWork[] = Array.from({ length: 46 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `薩爾英譯《古蘭經》第${number}章`,
+    title_orig: `The Koran (George Sale, 1734), Chapter ${number}`,
+    author: '喬治‧薩爾（譯）',
+    era: '1734 年',
+    place: '英格蘭倫敦',
+    language: '英文（譯自阿拉伯文）',
+    parent: '古蘭經：通常稱作穆罕默德的可蘭經（The Koran, Commonly Called the Alcoran of Mohammed）',
+    note: `來源：https://en.wikisource.org/wiki/Index:The_Koran_1734.pdf；初版章目第 ${number} 章`,
+    intro: `本卷是喬治‧薩爾一七三四年英譯《古蘭經》初版章目第 ${number} 章，沿用伊斯蘭經典既有的一百一十四章邊界。薩爾在長篇緒論與注釋中介紹阿拉伯、伊斯蘭教義及法制，譯文雖帶啟蒙時代歐洲視角，卻比此前轉譯本更直接面對阿拉伯文本，長期塑造英語世界的古蘭經閱讀。此處收的是這一歷史譯本的固定譯章，不把阿拉伯原典或整部譯本母題重複計數。`,
+  }
+})
+
+const OUPNEKHAT_UPANISHADS: DazangWork[] = Array.from({ length: 50 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `《奧義祕藏》拉丁譯第${number}篇`,
+    title_orig: `Oupnek'hat, Upanishad ${number}`,
+    author: '安克蒂爾-杜佩龍（由達拉‧舒科波斯譯本轉譯）',
+    era: '1801–1802 年',
+    place: '斯特拉斯堡',
+    language: '拉丁文（由波斯文轉譯梵文原典）',
+    parent: "奧義祕藏（Oupnek'hat, id est, Secretum tegendum）",
+    note: `來源：https://catalogue.bnf.fr/ark:/12148/cb30021783g；杜佩龍兩卷本所收五十篇之第 ${number} 篇`,
+    intro: `本卷是安克蒂爾-杜佩龍《奧義祕藏》兩卷本所收五十篇奧義書中的第 ${number} 篇，經十七世紀達拉‧舒科主持的波斯譯本再轉為拉丁文。這條曲折譯路不免增添波斯化解釋與語義偏差，卻首次讓歐洲讀者較大規模接觸奧義書思想，並影響十九世紀德語哲學與比較宗教。此處依杜佩龍編本的五十篇固定邊界著錄，明示間接轉譯性質，不把模糊的「東方經典初譯」合集另算一部。`,
+  }
+})
+
 // 近代基督教大藏經（按時代精神：人文主義‧宗教改革‧反改革‧宣教擴張‧敬虔與啟蒙）
 export const EARLY_MODERN_ERA: DazangEra = {
   key: 'early-modern',
@@ -1974,8 +2004,8 @@ export const EARLY_MODERN_ERA: DazangEra = {
         label_en: 'Translations of Other Scriptures',
         desc: '歐洲學者首度將伊斯蘭與東方宗教經典直譯為歐語,開比較宗教文獻之先。',
         works: [
-          { title_zh: '古蘭經', title_orig: 'The Koran, Commonly Called the Alcoran of Mohammed', author: '薩爾 (George Sale)', era: '一七三四年', place: '倫敦', language: '英文', intro: '英國東方學者薩爾直接由阿拉伯原文譯成的英文古蘭經,並附長篇「緒論」(Preliminary Discourse) 評介伊斯蘭的歷史與教義。譯文力求準確,態度遠較前人公允,長期是英語世界最權威的古蘭經譯本,亦為啟蒙時代歐洲認識伊斯蘭的主要窗口,影響極為深遠。' },
-          { title_zh: '東方宗教經典初譯', title_orig: 'Oupnek\'hat (Anquetil-Duperron) 等', author: '安克蒂爾-杜佩龍 (Abraham Hyacinthe Anquetil-Duperron) 等', era: '十八世紀末', place: '巴黎', language: '拉丁文‧法文', intro: '安克蒂爾-杜佩龍率先將祆教《阿維斯陀》與印度《奧義書》(由波斯文轉譯) 介紹入歐,其拉丁文《奧義書》譯本曾深深觸動叔本華。此類東方經典的初譯篳路藍縷、訛誤難免,卻打開了歐洲認識亞洲宗教的門徑,催生了十九世紀比較宗教與東方學的勃興。' },
+          ...SALE_QURAN_SURAS,
+          ...OUPNEKHAT_UPANISHADS,
           { title_zh: '中國哲學家孔子', title_orig: 'Confucius Sinarum Philosophus', author: '柏應理(Philippe Couplet)、殷鐸澤(Prospero Intorcetta)等', era: '1687', place: '巴黎', language: '拉丁文', intro: '由柏應理(Philippe Couplet)領銜彙整、殷鐸澤(Prospero Intorcetta)等耶穌會士數十年之力，將《大學》《中庸》《論語》譯為拉丁文並題獻法王路易十四。書前附孔子傳與中國經籍源流，是歐洲認識孔子與儒學的奠基之作，深刻塑造萊布尼茲、伏爾泰等啟蒙思想家對中國的想像，開歐洲漢學與比較宗教之先河。其「以儒詮教」的調適立場，亦預示了往後激烈的中國禮儀之爭。' },
           { title_zh: '四書拉丁譯稿', title_orig: 'Tetrabiblion Sinense de moribus (羅明堅譯稿)', author: '羅明堅(Michele Ruggieri)', era: '約 1590 年代(稿本)', place: '羅馬', language: '拉丁文', intro: '由最早入華耶穌會士之一羅明堅(Michele Ruggieri)所譯，是史上第一份《四書》的西文(拉丁文)翻譯，比刊行的《中國哲學家孔子》早近一世紀。譯稿完成後未付梓，長埋羅馬耶穌會與義大利圖書館檔案中，遲至近世方重見天日，學界始知西方接觸儒典之始遠早於前人所想，為歐洲漢學與中西經典互譯的真正開端留下珍貴的最初見證。' },
           { title_zh: '中華帝國六經', title_orig: 'Sinensis Imperii Libri Classici Sex', author: '衛方濟(François Noël)', era: '1711', place: '布拉格', language: '拉丁文', intro: '由耶穌會士衛方濟(François Noël)續譯，將六部儒家經典——含《大學》《中庸》《論語》《孟子》《孝經》與《小學》——譯為拉丁文於布拉格刊行，首度把《孟子》全帙系統地引入歐洲。其譯本與同年另刊的中國禮儀考辯相呼應，正值中國禮儀之爭白熱之際，既擴充了歐洲對儒家倫理的整體認識，亦成為當時論辯祭祖祭孔性質的重要文獻依據。' }
