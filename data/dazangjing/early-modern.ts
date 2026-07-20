@@ -150,6 +150,21 @@ const LDS_MANUSCRIPT_HISTORY_CHAPTERS: DazangWork[] = Array.from({ length: 29 },
   }
 })
 
+const SANCAI_TUHUI_JUAN: DazangWork[] = Array.from({ length: 100 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `《三才圖會》第${number}卷`,
+    title_orig: `三才圖會，卷 ${number}（Sancai Tuhui, juan ${number}）`,
+    author: '王圻、王思義',
+    era: '1607 年編成，1609 年刊行',
+    place: '明代中國上海',
+    language: '文言文',
+    parent: '三才圖會（Sancai Tuhui）',
+    note: `來源：https://ctext.org/datawiki.pl?if=zh&res=770971；全書一百零六卷之第 ${number} 卷`,
+    intro: `本卷為王圻父子《三才圖會》原編一百零六卷中的第 ${number} 卷。全書以天、地、人三才統攝天文、地理、人物、時令、宮室、器用、身體、服飾、珍寶、文史與動植物等十四門，大量圖像配合條說，呈現晚明知識世界如何分類宇宙與人事。其宗教材料兼收儒釋道、禮俗和異域傳聞，適合作為基督教類書正藏的同時代外部對照。此處依原刻本固定卷次著錄，不以後世影印冊數拆分，也不另計母本。`,
+  }
+})
+
 // 近代基督教大藏經（按時代精神：人文主義‧宗教改革‧反改革‧宣教擴張‧敬虔與啟蒙）
 export const EARLY_MODERN_ERA: DazangEra = {
   key: 'early-modern',
@@ -2993,26 +3008,15 @@ export const EARLY_MODERN_ERA: DazangEra = {
     ],
   },
   wai: {
-    summary: '收同一知識爆發年代中與正統相抗或別立的彙編傳統:啟蒙運動的批判性百科辭典,以及祕學與共濟會的體系化文獻,供對照近代「整理知識」的多重面貌。',
+    summary: '收近世非基督教文明的大型分類知識工程，以晚明《三才圖會》一百零六卷原編為核心，對照同代基督教類書如何整理宇宙、禮俗與異域宗教。',
     divisions: [
       {
-        key: 'enlightenment-encyclopedia',
-        label: '啟蒙百科部',
-        label_en: 'Enlightenment Encyclopedias',
-        desc: '啟蒙運動以理性與批判精神編纂、對宗教多持質疑的百科與辭典。',
+        key: 'non-christian-encyclopedia',
+        label: '外教百科部',
+        label_en: 'Non-Christian Encyclopedias',
+        desc: '近世非基督教文明以自身天人秩序編纂的大型百科與類書。',
         works: [
-          { title_zh: '百科全書宗教條目', title_orig: 'Encyclopédie, ou dictionnaire raisonné des sciences, des arts et des métiers', author: '德尼‧狄德羅、達朗貝爾主編', era: '1751–1772', place: '法國巴黎', language: '法文', intro: '法國啟蒙運動的旗艦工程,匯集眾多哲士以理性整理人類一切知識的大型百科。其宗教相關條目表面遵奉正統,實則以交叉參照、反諷與隱微筆法質疑教會權威、神蹟與迷信,張揚寬容與批判精神。此書屢遭查禁仍廣為流傳,被視為啟蒙思想的集中體現與動員。它呈現一種與信仰彙編截然不同的知識整理理念:以人的理性而非神的啟示為知識的最終裁準。', note: '啟蒙批判立場,置外藏供對照' },
-          { title_zh: '歷史考訂辭典', title_orig: 'Dictionnaire historique et critique', author: '皮埃爾‧培爾', era: '1697', place: '荷蘭鹿特丹', language: '法文', intro: '懷疑論者培爾編纂的批判性辭典,以人物與主題為條目,正文簡而註腳浩繁,於旁徵博引中揭露史傳的矛盾、神學的疑難與信仰的脆弱。培爾主張理性與信仰難以調和,並為良心自由與寬容辯護,其懷疑精神深刻啟發後來的啟蒙哲士。此書是近代批判史學與懷疑論的先聲,展示如何以考訂與辨偽的方法對待一切權威文本,與護教式的彙編傳統形成鮮明對立。', note: '懷疑論立場,置外藏供對照' },
-        ],
-      },
-      {
-        key: 'esoteric-masonic',
-        label: '祕學與共濟會部',
-        label_en: 'Esoteric and Masonic Works',
-        desc: '近代煉金術、玫瑰十字會與共濟會的體系化祕傳與章程文獻。',
-        works: [
-          { title_zh: '近代煉金術與玫瑰十字會文獻', title_orig: 'Fama Fraternitatis & Confessio Fraternitatis', author: '託名玫瑰十字兄弟會（傳約翰‧瓦倫丁‧安德里亞）', era: '1614–1615', place: '德意志', language: '德文／拉丁文', intro: '十七世紀初匿名流傳於德意志的玫瑰十字會宣言,宣告一個隱祕的智者兄弟會存世,掌握醫術、煉金與普世改革的奧祕知識,呼籲學者共謀人類的「普遍改革」。文本融會煉金象徵、神祕主義與宗教改革理想,雖真偽難辨,卻在歐洲掀起追尋祕密社團的熱潮,深刻影響後世祕學與共濟會傳統。此文獻呈現近代知識整理的另一支流:以隱喻與祕傳形式編織的宇宙與救贖知識。', note: '託名文獻,真實作者學界多歸安德里亞圈;置外藏供對照' },
-          { title_zh: '共濟會憲章', title_orig: 'The Constitutions of the Free-Masons', author: '詹姆斯‧安德森', era: '1723', place: '倫敦', language: '英文', intro: '蘇格蘭長老會牧師安德森受英格蘭總會所託編纂的共濟會基本章程。書中追述石匠行會的傳說源流,訂立會員的道德義務、組織規條與集會禮儀,並標舉「自然宗教」與弟兄之愛,容納不同宗派而要求信一位至高造物主。此憲章奠定近代規範性共濟會的制度基礎,流通甚廣,屢經增訂。它呈現一個以理性、道德與祕儀結合的弟兄會,如何以成文憲章整理自身,自成一支獨特的近代彙編傳統。', note: '共濟會立場,置外藏供對照' },
+          ...SANCAI_TUHUI_JUAN,
         ],
       },
     ],
