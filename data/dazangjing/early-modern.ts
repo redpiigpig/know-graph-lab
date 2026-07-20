@@ -120,6 +120,36 @@ const OUPNEKHAT_UPANISHADS: DazangWork[] = Array.from({ length: 50 }, (_, index)
   }
 })
 
+const GIBBON_DECLINE_FALL_CHAPTERS: DazangWork[] = Array.from({ length: 71 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `吉本《羅馬帝國衰亡史》第${number}章`,
+    title_orig: `The History of the Decline and Fall of the Roman Empire, Chapter ${number}`,
+    author: '愛德華‧吉本',
+    era: '1776–1789 年',
+    place: '英格蘭倫敦',
+    language: '英文',
+    parent: '羅馬帝國衰亡史（The History of the Decline and Fall of the Roman Empire）',
+    note: `來源：https://www.gutenberg.org/ebooks/25717；全書固定七十一章之第 ${number} 章`,
+    intro: `本卷為愛德華‧吉本《羅馬帝國衰亡史》固定七十一章中的第 ${number} 章。全書從安敦尼王朝寫至君士坦丁堡陷落，以古典史料、教會文獻與啟蒙時代理性批判重構羅馬和基督教世界的長期變遷。吉本對神蹟、修道與教權多持反諷立場，部分判斷已被後世修正，但仍是宗教史世俗化敘事的里程碑。此處依作者原有章界逐章著錄，不再保留六卷母本條目。`,
+  }
+})
+
+const LDS_MANUSCRIPT_HISTORY_CHAPTERS: DazangWork[] = Array.from({ length: 29 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `《後期聖徒教會史》第一卷第${number}章`,
+    title_orig: `History of the Church of Jesus Christ of Latter-day Saints, Volume 1, Chapter ${number}`,
+    author: '約瑟‧斯密口述及教會書記編纂',
+    era: '1838–1856 年稿本；1902 年羅伯茲編本',
+    place: '美國伊利諾州納府／猶他領地鹽湖城',
+    language: '英文',
+    parent: '後期聖徒教會史第一卷（History of the Church, Volume 1）',
+    note: `來源：https://www.josephsmithpapers.org/intro/introduction-to-history-1838-1856-manuscript-history-of-the-church；第一卷固定章次第 ${number} 章`,
+    intro: `本卷是《後期聖徒教會史》羅伯茲編本第一卷第 ${number} 章，其底本為約瑟‧斯密自一八三八年起口述、由書記延續至一八五六年的《教會稿本史》。正文把個人日記、啟示、會議紀錄、書信與追述編入連續教史，保存早期後期聖徒運動的自我敘事，也須留意後來編輯的改寫與拼接。此處按第一卷既有章界著錄，並分列稿本形成與二十世紀刊本年代，不把整套七卷再算一部。`,
+  }
+})
+
 // 近代基督教大藏經（按時代精神：人文主義‧宗教改革‧反改革‧宣教擴張‧敬虔與啟蒙）
 export const EARLY_MODERN_ERA: DazangEra = {
   key: 'early-modern',
@@ -1819,7 +1849,7 @@ export const EARLY_MODERN_ERA: DazangEra = {
         label_en: 'Enlightenment Critical Histories',
         desc: '啟蒙時代以理性懷疑立場重述基督教起源與發展的批判性歷史著作。',
         works: [
-          { title_zh: '羅馬帝國衰亡史', title_orig: 'The History of the Decline and Fall of the Roman Empire', author: '愛德華‧吉本（Edward Gibbon）', era: '1776–1789', place: '倫敦', language: '英文', intro: '吉本這部六卷巨著縱論羅馬自盛轉衰、終至覆亡的千餘年歷程，而其論基督教興起的兩章最為震動。他以冷峻反諷的筆調，把教會的勝利歸因於排他熱忱、來世盼望、神蹟宣稱、嚴格倫理與組織才能五項「世俗」因素，刻意淡化神意而凸顯人為。此說激怒教界卻啟發後世，把基督教放回社會史脈絡考察，是啟蒙史學以理性解構神聖敘事的經典範例。' }
+          ...GIBBON_DECLINE_FALL_CHAPTERS,
         ]
       },
       {
@@ -1828,8 +1858,7 @@ export const EARLY_MODERN_ERA: DazangEra = {
         label_en: 'Histories of New Religious Movements',
         desc: '近代源出基督教傳統的新興宗教，其自我書寫或追隨者編纂的早期歷史。',
         works: [
-          { title_zh: '摩門教早期史', title_orig: 'History of the Church of Jesus Christ of Latter-day Saints', author: '約瑟‧斯密及後繼編者（Joseph Smith et al.）', era: '1830 起', place: '美國紐約‧猶他', language: '英文', intro: '此書記述後期聖徒運動自一八三○年代在紐約州創立、屢遭驅趕，終至大舉西遷鹽湖谷的曲折歷程。內容以斯密自述的異象、金頁與摩爾門經問世為核心，續記教會建制、密蘇里與伊利諾的衝突、斯密殉難及楊百翰領眾跨越大平原。作為教派的官方自我歷史，它既是信仰見證，也是觀察十九世紀美國宗教狂熱、邊疆社會與政教張力的獨特史料。' },
-          { title_zh: '神臨證記', title_orig: 'God Passes By', author: '守基‧阿芬第（Shoghi Effendi）', era: '1944', place: '海法', language: '英文', intro: '此書為巴哈伊信仰護法者守基‧阿芬第為紀念其運動創立百年而撰，敘述自巴孛一八四四年在波斯宣道，經巴哈歐拉受啟與流放，至阿博都巴哈傳教西方與信仰建制初成的百年大事。作者以恢宏修辭把諸般迫害、流亡與擴展編織為「神聖計畫」逐步展現的敘事，既是教史也是神學詮釋。它確立了巴哈伊對自身起源的權威記憶，是理解這一近代新興宗教自我認同的核心文獻。' }
+          ...LDS_MANUSCRIPT_HISTORY_CHAPTERS,
         ]
       }
     ]
