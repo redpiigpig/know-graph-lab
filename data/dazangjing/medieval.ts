@@ -90,6 +90,36 @@ const KETTON_LATIN_QURAN_SURAS: DazangWork[] = Array.from({ length: 97 }, (_, in
   }
 })
 
+const ATTAR_SAINT_LIVES: DazangWork[] = Array.from({ length: 72 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `阿塔爾《聖者列傳》第${number}傳`,
+    title_orig: `Tadhkirat al-Awliyāʾ, Biography ${number}`,
+    author: '法里德丁‧阿塔爾',
+    era: '約 12 世紀末至 13 世紀初',
+    place: '波斯呼羅珊尼沙普爾',
+    language: '波斯文',
+    parent: '聖者列傳（Tadhkirat al-Awliyāʾ）',
+    note: `來源：https://www.iranicaonline.org/articles/tadkerat-al-awlia-2/；早期抄本第 ${number} 傳`,
+    intro: `本篇是阿塔爾《聖者列傳》早期可靠抄本所保存的第 ${number} 篇人物傳。每傳先以押韻頌詞點出聖者德性，再敘其修行、言行、神蹟與臨終語錄，把歷史記憶編織成可供蘇菲門徒效法的靈性典範。十五世紀以前的抄本以第七十二傳哈拉季作結，並有明確終卷題記，故此處只收該早期核心七十二傳，不採後世增補至九十六人的擴本；各人物傳具有自身標題與敘事邊界，可獨立著錄。`,
+  }
+})
+
+const IBN_KHALLIKAN_LIVES: DazangWork[] = Array.from({ length: 20 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `伊本‧哈利坎《名人卒傳》第${number}傳`,
+    title_orig: `Wafayāt al-aʿyān, Biography ${number}`,
+    author: '伊本‧哈利坎',
+    era: '1256–1274 年',
+    place: '大馬士革與開羅',
+    language: '阿拉伯文',
+    parent: '名人卒傳與時代子弟史（Wafayāt al-aʿyān）',
+    note: `來源：https://www.loc.gov/item/2021666171/；德‧斯蘭英譯本第 ${number} 傳`,
+    intro: `本篇為伊本‧哈利坎《名人卒傳與時代子弟史》依字母次序編排的第 ${number} 篇人物傳，公共影像可由美國國會圖書館與 Wikisource 所連德‧斯蘭四卷英譯本核讀。作者綜合生卒、師承、著作、詩文與軼事，刻意不重複先知與早期聖伴傳，轉而保存學者、詩人、官員與宗教人物的文化記憶。每傳自成題名與傳記單元，故按原書篇界著錄，而不把整部辭典另算一卷。`,
+  }
+})
+
 // 中世紀基督教大藏經（三軌斷代，按時代精神：伊斯蘭交鋒與政教權之爭）
 export const MEDIEVAL_ERA: DazangEra = {
   key: 'medieval',
@@ -2860,6 +2890,8 @@ export const MEDIEVAL_ERA: DazangEra = {
           { title_zh: '先知傳', title_orig: 'Sīrat Rasūl Allāh', author: '伊本‧伊斯哈格', era: '8 世紀', place: '阿拔斯王朝麥地那／巴格達', language: '阿拉伯文', intro: '伊本‧伊斯哈格所撰穆罕默德傳記，是伊斯蘭最早的系統先知傳，原本雖佚，經伊本‧希沙姆刪訂的版本流傳至今。書中按時序記述先知的家世、啟示、麥加受迫、遷徙麥地那與諸戰役，是穆斯林理解先知生平的根本文本，亦為研究伊斯蘭初興與七世紀阿拉伯社會的核心史料。' },
           { title_zh: '沉思錄', title_orig: 'Kitāb al-Iʿtibār', author: '烏薩瑪‧伊本‧蒙基德', era: '12 世紀', place: '敘利亞謝薩爾', language: '阿拉伯文', intro: '敘利亞貴族戰士烏薩瑪晚年所寫的回憶錄，記其一生征戰、狩獵與宮廷見聞，尤以與十字軍法蘭克人交往的軼事著稱。他以穆斯林眼光打量這些「外來蠻夷」的醫術、司法與習俗，語帶調侃而饒富人情，為十字軍時代東西方日常接觸提供了難得的對面視角，史料與文學趣味兼具。' },
           { title_zh: '歷代先知與帝王史', title_orig: 'Taʾrīkh al-Rusul wa-l-Mulūk', author: '塔巴里', era: '9–10 世紀', place: '阿拔斯王朝巴格達', language: '阿拉伯文', intro: '波斯裔學者塔巴里所撰自創世至其時代（約九一五年）的編年世界通史，卷帙浩繁。書中以「傳述鏈」逐條徵引史料，記先知、波斯薩珊諸王與伊斯蘭哈里發歷代，兼收歧異說法而並陳，是中古伊斯蘭史學的集大成之作，也是復原早期伊斯蘭史與前伊斯蘭近東史的首要文獻。' },
+          ...ATTAR_SAINT_LIVES,
+          ...IBN_KHALLIKAN_LIVES,
         ],
       },
       {
