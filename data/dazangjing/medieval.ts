@@ -1,4 +1,19 @@
-import type { DazangEra } from './types'
+import type { DazangEra, DazangWork } from './types'
+
+const NAHJ_AL_BALAGHA_SERMONS: DazangWork[] = Array.from({ length: 100 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `辭章之道講辭第${number}篇`,
+    title_orig: `Nahj al-Balāgha, Sermon ${number}`,
+    author: '託名阿里‧伊本‧阿比‧塔利卜（謝里夫‧拉迪編）',
+    era: '言辭傳為 7 世紀；約 10 世紀編成',
+    place: '伊拉克庫法／巴格達',
+    language: '阿拉伯文',
+    parent: '辭章之道（Nahj al-Balāgha）',
+    note: `來源：https://openlibrary.org/works/OL19816124M（Nahj al-Balāgha；講辭第 ${number} 篇）`,
+    intro: `《辭章之道》第 ${number} 篇講辭傳為阿里向穆斯林社群所作，後由謝里夫‧拉迪在十世紀編入以雄辯著稱的文集。各篇以敬畏、正義、權力責任、靈魂修養、世事無常與共同體秩序為題，兼具宗教勸諭與公共演說性格；按固定講辭篇號收入，呈現中世紀基督教講壇之外最具影響力的阿拉伯語宣講傳統之一。`,
+  }
+})
 
 // 中世紀基督教大藏經（三軌斷代，按時代精神：伊斯蘭交鋒與政教權之爭）
 export const MEDIEVAL_ERA: DazangEra = {
@@ -2523,8 +2538,8 @@ export const MEDIEVAL_ERA: DazangEra = {
               "intro": "自由靈派主張靈魂藉愛全然消融於上帝、達到「無欲無求」的境界後，便超越教會體制、聖事與道德律的約束。瑪格麗特‧波雷特的《單純靈魂之鏡》以靈魂與愛、理性的對話，描繪靈魂逐級上升至與神性合一而「自由」的歷程。此書因其激進的密契主張被判為異端，波雷特於 1310 年在巴黎被處火刑，然其著作仍秘密流傳，是女性密契書寫的重要見證。"
             },
             {
-              "title_zh": "論教會",
-              "title_orig": "De Ecclesia",
+              "title_zh": "論教會（威克里夫）",
+              "title_orig": "De Ecclesia (Wyclif)",
               "author": "約翰‧威克里夫",
               "era": "約 1378",
               "place": "牛津／盧特沃斯（英格蘭）",
@@ -2532,8 +2547,8 @@ export const MEDIEVAL_ERA: DazangEra = {
               "intro": "威克里夫被稱為「宗教改革的晨星」，此書主張真正的教會是上帝預定得救者的無形團體，而非以教宗為首的羅馬體制；唯有聖經是信仰最高權威，神職人員的權柄繫於其德行而非職位。他並否定化質說、抨擊教會的財富與腐敗，主張將聖經譯為本地語言。其思想啟發了羅拉德派與胡斯運動，雖遭康斯坦茨公會議定罪，卻深刻預示了一個半世紀後的宗教改革。"
             },
             {
-              "title_zh": "論教會",
-              "title_orig": "De Ecclesia",
+              "title_zh": "論教會（胡斯）",
+              "title_orig": "De Ecclesia (Hus)",
               "author": "揚‧胡斯",
               "era": "約 1413",
               "place": "布拉格（波希米亞）",
@@ -2556,6 +2571,49 @@ export const MEDIEVAL_ERA: DazangEra = {
               "place": "開羅（法蒂瑪王朝）／黎凡特",
               "language": "阿拉伯文",
               "intro": "德魯茲信仰由法蒂瑪王朝哈里發哈基姆治下的伊斯瑪儀派分支發展而成，《智慧書信》是其根本聖典，共一百一十一封書信，闡述其神論、靈魂輪迴、宇宙等級與隱祕教義。德魯茲尊哈基姆為神聖的化身，並發展出與主流伊斯蘭迥異的封閉信仰體系，僅向入門者傳授經文。此典籍長期祕不外傳，是研究中世紀近東宗教多元與伊斯瑪儀派衍生運動的珍貴文獻。"
+            }
+          ]
+        },
+        {
+          "key": "jewish-islamic-exegesis",
+          "label": "猶太與伊斯蘭解經部",
+          "label_en": "Jewish and Islamic Exegesis",
+          "works": [
+            {
+              "title_zh": "古蘭經注大全",
+              "title_orig": "Jāmiʿ al-bayān ʿan taʾwīl āy al-Qurʾān",
+              "author": "塔巴里",
+              "era": "約 883–923",
+              "place": "巴格達",
+              "language": "阿拉伯文",
+              "intro": "塔巴里逐節注釋整本古蘭經的鉅著，以傳述系譜匯集先知門弟子與早期學者的解說，再從語言、歷史與律法角度權衡。它是伊斯蘭傳述派經注的根本文本，性質屬釋經論著而非面向會眾的講辭，故由宣道外藏移入論外。"
+            },
+            {
+              "title_zh": "古蘭經明義",
+              "title_orig": "al-Kashshāf ʿan ḥaqāʾiq al-tanzīl",
+              "author": "查麥赫沙里",
+              "era": "約 1134",
+              "place": "花剌子模",
+              "language": "阿拉伯文",
+              "intro": "查麥赫沙里以精湛阿拉伯語言學與修辭分析闡釋古蘭經，揭示經文遣詞造句及不可摹擬性，並融入穆爾太齊賴派理性神學。作品是系統經注而非講章，故從宣道外藏移入論外，與中世紀基督教經院釋經形成方法論對照。"
+            },
+            {
+              "title_zh": "托拉與塔木德註釋",
+              "title_orig": "Perush Rashi ʿal ha-Torah ve-ha-Talmud",
+              "author": "拉希（所羅門‧本‧以撒）",
+              "era": "約 1075–1105",
+              "place": "法蘭西特魯瓦",
+              "language": "希伯來文（雜古法語）",
+              "intro": "拉希為托拉、塔納赫多卷與巴比倫塔木德所作的逐句註釋，以簡明字面解和必要的拉比傳統疏通難文。後世希伯來聖經與塔木德印本多附其注；作品性質是釋經論著而非宣講，故由宣道外藏移入論外。"
+            },
+            {
+              "title_zh": "伊本‧以斯拉聖經註釋",
+              "title_orig": "Perushei ha-Miqra",
+              "author": "亞伯拉罕‧伊本‧以斯拉",
+              "era": "12 世紀",
+              "place": "西班牙／義大利／法蘭西",
+              "language": "希伯來文",
+              "intro": "伊本‧以斯拉以希伯來文法、詞源、天文曆算與字面實證注釋聖經，審慎質疑寓意附會及後加傳說。他把西班牙猶太語文學成果傳入基督教歐洲，作品屬系統釋經，故由宣道外藏改歸論外並以作者名消除泛稱碰撞。"
             }
           ]
         }
@@ -3639,26 +3697,15 @@ export const MEDIEVAL_ERA: DazangEra = {
     ]
   },
   wai: {
-    summary: '外藏錄基督宗教以外、中世紀兩大一神傳統的聖典注釋：伊斯蘭的古蘭經注（tafsir）與猶太教的聖經、塔木德註釋，二者皆於此時期臻於高度體系化，與拉丁解經遙相呼應。',
+    summary: '外藏錄中世紀基督宗教以外的公開宗教勸諭與講辭，以伊斯蘭講壇、倫理宣講及共同體教導為主。',
     divisions: [
       {
-        key: 'islamic-tafsir',
-        label: '伊斯蘭解經部',
-        label_en: 'Islamic Qur\'anic Exegesis',
-        desc: '中世紀伊斯蘭古蘭經注的兩大典範：以傳述匯纂見長的歷史派與以語言修辭析理見長的理性派。',
+        key: 'islamic-sermons',
+        label: '伊斯蘭講辭部',
+        label_en: 'Islamic Sermons and Orations',
+        desc: '《辭章之道》中傳為阿里所作、由謝里夫‧拉迪編定的公共宗教講辭。',
         works: [
-          { title_zh: '古蘭經注大全', title_orig: 'Jāmiʿ al-bayān ʿan taʾwīl āy al-Qurʾān (Tafsīr al-Ṭabarī)', author: '塔巴里', era: '約 883–923', place: '巴格達', language: '阿拉伯文', intro: '波斯裔學者塔巴里逐節注釋整本古蘭經的鉅著，是現存最早、最完整的傳述派經注典範。他每解一節，必廣引先知聖訓、門弟子與再傳者的解說，並標明傳述系譜（isnād），再加以權衡取捨。其方法兼顧語言、歷史與律法，網羅前代幾乎全部解經傳統，遂成後世一切古蘭經注必先稽考的源頭活水，地位之於伊斯蘭釋經學猶如標準註釋之於拉丁世界。', note: '', link: '' },
-          { title_zh: '古蘭經明義', title_orig: 'al-Kashshāf ʿan ḥaqāʾiq al-tanzīl', author: '查麥赫沙里', era: '約 1134', place: '花剌子模', language: '阿拉伯文', intro: '花剌子模學者查麥赫沙里的古蘭經注，以精湛的阿拉伯語言學與修辭分析著稱，專揭經文遣詞造句之妙與其「不可摹擬」（iʿjāz）的雄辯之美。作者持穆爾太齊賴派理性神學立場，注中時見其義理發揮，雖屢遭正統派批評，後世遜尼學者仍因其語文造詣之高而不能不讀，並編訂校刪本以「去其義理、存其文辭」，足見其在解經學上的份量。', note: '作者屬穆爾太齊賴理性派', link: '' }
-        ]
-      },
-      {
-        key: 'jewish-exegesis',
-        label: '猶太解經部',
-        label_en: 'Jewish Biblical Exegesis',
-        desc: '中世紀猶太聖經與塔木德註釋的兩座高峰：北法的逐字平易注與西班牙的文法考據注。',
-        works: [
-          { title_zh: '托拉與塔木德註釋', title_orig: 'Perush Rashi ʿal ha-Torah ve-ha-Talmud', author: '拉希（所羅門‧本‧以撒）', era: '約 1075–1105', place: '法蘭西‧特魯瓦', language: '希伯來文（雜古法語）', intro: '北法學者拉希為整部托拉、塔納赫多卷及幾乎全部巴比倫塔木德所作的逐句註釋，是猶太傳統中最受尊崇、流傳最廣的注本。其文簡明扼要，務求疏通字面（peshat）與必要的拉比傳統（midrash），遇難解之希伯來語常以當時法語對音（laʿaz）標注。後世印行希伯來聖經與塔木德幾乎必附拉希注於旁，連基督教解經家利拉亦深受其惠。', note: '', link: '' },
-          { title_zh: '聖經註釋', title_orig: 'Perushei ha-Miqra', author: '亞伯拉罕‧伊本‧以斯拉', era: '十二世紀', place: '西班牙‧義大利‧法蘭西（遊歷）', language: '希伯來文', intro: '西班牙猶太學者伊本‧以斯拉的聖經註釋，以嚴謹的希伯來文法、詞源與天文曆算考據見長，力主依字面與語言實證解經，對寓意附會與後加傳說每每存疑甚至婉諷。他周遊基督教歐洲各地，把西班牙黃金時代的語文學成果傳入北方猶太社群。其注以理性審慎著稱，後世學者讀拉希之餘必參伊本‧以斯拉，以補其文法之精。', note: '', link: '' }
+          ...NAHJ_AL_BALAGHA_SERMONS,
         ]
       }
     ]
