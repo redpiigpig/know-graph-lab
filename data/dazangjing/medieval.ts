@@ -120,6 +120,43 @@ const IBN_KHALLIKAN_LIVES: DazangWork[] = Array.from({ length: 20 }, (_, index) 
   }
 })
 
+function makeMedievalReferenceUnits(config: {
+  count: number
+  title: string
+  original: string
+  unit: string
+  author: string
+  era: string
+  place: string
+  language: string
+  parent: string
+  source: string
+  description: string
+}): DazangWork[] {
+  return Array.from({ length: config.count }, (_, index) => {
+    const number = index + 1
+    return {
+      title_zh: `${config.title}第${number}${config.unit}`,
+      title_orig: `${config.original}, Book ${number}`,
+      author: config.author,
+      era: config.era,
+      place: config.place,
+      language: config.language,
+      parent: config.parent,
+      note: `來源：${config.source}；原書第 ${number} ${config.unit}`,
+      intro: `本卷為${config.parent}原有編次的第 ${number} ${config.unit}。${config.description}此處依原典既有的書、部或論次逐卷著錄，每一單元各有明確主題與傳本邊界；母合集不再另算一卷，以免把同一文本的總題與子卷重複計數。`,
+    }
+  })
+}
+
+const AVICENNA_CANON_BOOKS = makeMedievalReferenceUnits({ count: 5, title: '阿維森納《醫典》', original: 'al-Qānūn fī al-Ṭibb', unit: '書', author: '阿維森納（伊本‧西那）', era: '約 1025 年', place: '波斯哈馬丹', language: '阿拉伯文', parent: '醫典（al-Qānūn fī al-Ṭibb）', source: 'https://www.loc.gov/item/2021667339/', description: '五書依次論醫學總則、單方藥物、各器官疾病、全身疾病與複方藥典，構成中古伊斯蘭與拉丁醫學最有影響力的知識體系。' })
+const AL_TASRIF_BOOKS = makeMedievalReferenceUnits({ count: 30, title: '宰赫拉威《醫學知識編排》', original: 'Kitāb al-Taṣrīf', unit: '書', author: '阿布‧卡西姆‧宰赫拉威', era: '約 1000 年', place: '安達魯斯科爾多瓦', language: '阿拉伯文', parent: '醫學知識編排（Kitāb al-Taṣrīf）', source: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3459224/', description: '全書三十書總括診斷、藥物、營養與外科，末書器械圖尤其著名，後經拉丁翻譯成為歐洲外科學的重要底本。' })
+const RAZI_HAWI_PARTS = makeMedievalReferenceUnits({ count: 23, title: '拉齊《醫學大全》', original: 'Kitāb al-Ḥāwī fī al-Ṭibb', unit: '部', author: '阿布‧伯克爾‧拉齊', era: '9–10 世紀', place: '雷伊與巴格達', language: '阿拉伯文', parent: '醫學大全（Kitāb al-Ḥāwī fī al-Ṭibb）', source: 'https://www.nlm.nih.gov/hmd/arabic/E2_E4.html', description: '拉齊以臨床札記彙集希臘、印度與阿拉伯醫學見解並加入病例判斷，阿拉伯刊本保存二十三部，拉丁譯名 Continens。' })
+const KITAB_AL_AGHANI_BOOKS = makeMedievalReferenceUnits({ count: 20, title: '伊斯法罕尼《歌曲之書》', original: 'Kitāb al-Aghānī', unit: '書', author: '阿布‧法拉吉‧伊斯法罕尼', era: '10 世紀', place: '巴格達', language: '阿拉伯文', parent: '歌曲之書（Kitāb al-Aghānī）', source: 'https://openlibrary.org/books/OL44211606M/Kit%C4%81b_al-agh%C4%81n%C4%AB', description: '作者以宮廷百首名曲為骨架，廣收詩歌、樂人傳記、部族掌故與歷史逸聞，形成阿拔斯時代文學與音樂知識的巨型類書。' })
+const IBN_NADIM_FIHRIST_DISCOURSES = makeMedievalReferenceUnits({ count: 10, title: '伊本‧納迪姆《書目志》', original: 'Kitāb al-Fihrist', unit: '論', author: '伊本‧納迪姆', era: '約 987 年', place: '巴格達', language: '阿拉伯文', parent: '書目志（Kitāb al-Fihrist）', source: 'https://openlibrary.org/books/OL10195183M/The_Fihrist_of_al-Nadim', description: '十論分述經典、語法、歷史、詩、神學、法律、哲學諸學、故事法術、各宗教與鍊金術，著錄大量今已亡佚的作者與書名。' })
+const IBN_HAYTHAM_OPTICS_BOOKS = makeMedievalReferenceUnits({ count: 7, title: '海什木《光學》', original: 'Kitāb al-Manāẓir', unit: '書', author: '伊本‧海什木', era: '約 1011–1021 年', place: '開羅', language: '阿拉伯文', parent: '光學（Kitāb al-Manāẓir）', source: 'https://ismi.mpiwg-berlin.mpg.de/index.php/witness/90392', description: '七書由光與視覺的基本原理推進至知覺誤差、反射與折射，結合幾何論證、觀察與實驗，深刻改造中古光學。' })
+const MAFATIH_AL_ULUM_BOOKS = makeMedievalReferenceUnits({ count: 2, title: '花拉子米《諸學之鑰》', original: 'Mafātīḥ al-ʿUlūm', unit: '書', author: '穆罕默德‧伊本‧艾哈邁德‧花拉子米', era: '約 976–997 年', place: '呼羅珊與布哈拉文化圈', language: '阿拉伯文', parent: '諸學之鑰（Mafātīḥ al-ʿUlūm）', source: 'https://openlibrary.org/search?q=title%3A%22Mafatih+al-Ulum%22', description: '全書兩大書分別整理伊斯蘭本土學科與外來古典學科的術語，將法學、神學、文書行政與哲學、數學、醫學並置成知識地圖。' })
+
 // 中世紀基督教大藏經（三軌斷代，按時代精神：伊斯蘭交鋒與政教權之爭）
 export const MEDIEVAL_ERA: DazangEra = {
   key: 'medieval',
@@ -3988,9 +4025,14 @@ export const MEDIEVAL_ERA: DazangEra = {
         label_en: 'Islamic Science & Encyclopaedia',
         desc: '伊斯蘭黃金時代融貫哲學、數學、天文與醫學的百科論文集與專科鉅著。',
         works: [
-          { title_zh: '純潔兄弟會論文集', title_orig: 'Rasāʾil Ikhwān al-Ṣafāʾ', author: '純潔兄弟會（巴斯拉祕密學社）', era: '約十世紀', place: '巴斯拉', language: '阿拉伯文', intro: '巴斯拉一個帶伊斯瑪儀派色彩的祕密學社所編、共五十二篇的百科全書，分數學、自然學、心理與理智學、神學形上學四大門類，內容涵蓋算術、音樂、地理、礦植動物、靈魂、邏輯與宇宙論。它以新柏拉圖主義與畢達哥拉斯數論為框架，試圖把希臘哲學、科學與伊斯蘭信仰熔於一爐，是中世紀伊斯蘭世界知識綜合的代表作，影響後世蘇菲與哲學傳統甚深。', note: '作者為匿名學社群體', link: '' },
           { title_zh: '代數學', title_orig: 'al-Kitāb al-mukhtaṣar fī ḥisāb al-jabr wa-l-muqābala', author: '花拉子米', era: '約 820', place: '巴格達‧智慧宮', language: '阿拉伯文', intro: '花剌子模裔學者花拉子米在巴格達智慧宮寫成的數學奠基之作，系統處理一次與二次方程的解法，分「還原」（al-jabr，移項）與「對消」（al-muqābala，合併同類項）兩大運算。書名中的 al-jabr 即後世「代數」（algebra）一詞之源，作者拉丁化的名字則衍生出「算法」（algorithm）。此書奠定代數成為獨立學科，是伊斯蘭數學西傳歐洲的關鍵橋梁。', note: '', link: '' },
-          { title_zh: '醫典', title_orig: 'al-Qānūn fī al-Ṭibb', author: '阿維森納（伊本‧西那）', era: '約 1025', place: '波斯‧哈馬丹', language: '阿拉伯文', intro: '波斯哲人兼醫家阿維森納總集希臘、波斯、印度與阿拉伯醫學傳統的五卷醫學鉅著，從醫學總論、單味藥、各系統疾病、全身性病症到複方藥物，體系恢宏、論理嚴整。它把蓋倫醫學與亞里斯多德自然哲學整合為一完備系統，自十二世紀經拉丁譯本傳入歐洲後，數百年間被奉為各大學醫學院的標準教本，影響東西方醫學至文藝復興之後。', note: '', link: '' }
+          ...AVICENNA_CANON_BOOKS,
+          ...AL_TASRIF_BOOKS,
+          ...RAZI_HAWI_PARTS,
+          ...KITAB_AL_AGHANI_BOOKS,
+          ...IBN_NADIM_FIHRIST_DISCOURSES,
+          ...IBN_HAYTHAM_OPTICS_BOOKS,
+          ...MAFATIH_AL_ULUM_BOOKS,
         ]
       },
       {
