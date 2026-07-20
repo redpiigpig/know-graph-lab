@@ -20,7 +20,7 @@ function Ensure($label, $pat, $argv) {
 
 # jung CW11 done (414/414); advance to CW9ii (Aion), the #2 religious-studies volume
 # NVIDIA (not auto) on purpose: keep Gemini free for ACCS OCR, the only Gemini-only lane
-Ensure 'jung-cw9ii' 'jung_cw_translate' @('-X','utf8','scripts\jung_cw_translate.py','--vol','9ii','--engine','nvidia')
+Ensure 'jung-cw12' 'jung_cw_translate' @('-X','utf8','scripts\jung_cw_translate.py','--vol','12','--engine','nvidia')
 Ensure 'philo-queue' 'plato_build|plato_run_queue' @('-X','utf8','scripts\plato_run_queue.py')
 # Panikkar last volume (vedic-experience, huge): on Haiku per user (idle Claude account).
 # When it finishes, replace this lane with Max Weber (sociology) collected works.
@@ -31,12 +31,9 @@ Ensure 'dadaodao' 'dadaodao_translate' @('-X','utf8','scripts\dadaodao_translate
 # Sacred Books of the East: dedicate the (now-idle) Claude account via Haiku to remaining 5 volumes
 Ensure 'sbe-haiku' 'sbe_translate' @('-X','utf8','scripts\sbe_translate.py','--loop','--only','sbe-04-zend-avesta-1,sbe-06-quran-1,sbe-10-dhammapada,sbe-16-yi-king,sbe-22-jaina-1','--backend','haiku')
 
-# ACCS campus single-book OCR (pure Gemini Vision): only when Gemini has quota
-if (-not (Running 'accs_ocr_run|ingest_accs_genesis')) {
-    python -X utf8 scripts\gemini_probe.py *> $null
-    if ($LASTEXITCODE -eq 0) {
-        Note "Gemini has quota -> start ACCS single-book OCR (batch-4, NT first)"
-        Start-Process $py -ArgumentList @('-X','utf8','scripts\accs_ocr_run.py','--engine','gemini','--batch','4') -WindowStyle Hidden -WorkingDirectory $ROOT
-    }
-}
+# ACCS campus OCR. Matthew is finishing on Haiku (user 2026-07-20) because Gemini
+# quota keeps getting eaten by the other lanes; Haiku needs no quota gate.
+# TODO: once mat is done, switch back to the Gemini batch-4 queue for mrk/luk/... :
+#   Ensure 'accs-ocr' 'accs_ocr_run|ingest_accs_genesis' @(... '--engine','gemini','--batch','4')  [gemini-gated]
+Ensure 'accs-ocr-mat' 'accs_ocr_run|ingest_accs_genesis' @('-X','utf8','scripts\accs_ocr_run.py','--engine','haiku','--batch','1','--only','mat')
 Note "keeper tick done"
