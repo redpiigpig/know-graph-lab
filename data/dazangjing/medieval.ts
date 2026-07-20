@@ -60,6 +60,21 @@ const MACHZOR_VITRY_SECTIONS: DazangWork[] = Array.from({ length: 96 }, (_, inde
   }
 })
 
+const RUMI_DIVAN_GHAZALS: DazangWork[] = Array.from({ length: 94 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `魯米《沙姆士詩集》嘎扎勒第${number}首`,
+    title_orig: `Dīvān-e Shams-e Tabrīzī, Ghazal ${number}`,
+    author: '賈拉勒丁‧魯米',
+    era: '13 世紀中後期',
+    place: '安納托利亞科尼亞',
+    language: '波斯文（間雜阿拉伯文）',
+    parent: '沙姆士詩集／大詩集（Dīvān-e Shams／Dīvān-e Kabīr）',
+    note: `來源：https://ganjoor.net/moulavi/shams/ghazalsh/sh${number}；沿用福魯贊法爾校本篇號 ${number}`,
+    intro: `本篇是魯米《沙姆士詩集》依福魯贊法爾校本編次的第 ${number} 首嘎扎勒，公開波斯文正文可由 Ganjoor 對應篇號核讀。詩中以戀人、酒、音樂、太陽與旋舞等意象指向對神聖臨在的追尋，將對導師沙姆士的思念轉化為蘇菲道路上的愛與自我消融。嘎扎勒本身具有完整韻律、押韻與收束署名，是可獨立誦讀的詩篇；此處依既有校本號逐首著錄，而不再把整部大詩集重複算作一卷。`,
+  }
+})
+
 // 中世紀基督教大藏經（三軌斷代，按時代精神：伊斯蘭交鋒與政教權之爭）
 export const MEDIEVAL_ERA: DazangEra = {
   key: 'medieval',
@@ -3576,6 +3591,7 @@ export const MEDIEVAL_ERA: DazangEra = {
         desc: '魯米的蘇菲長篇詩、安達魯斯的抒情詩傳統，以及波斯蘇菲神祕詩。',
         works: [
           { title_zh: '瑪斯納維', title_orig: 'Mathnawī-yi Maʿnawī / مثنوی معنوی', author: '賈拉勒丁‧魯米', era: '13 世紀', place: '安那托利亞科尼亞', language: '波斯文', intro: '蘇菲大師魯米歷時多年口授、由弟子記錄的六卷長篇敘事詩，逾兩萬六千聯句，被後世尊為「波斯文的古蘭經」。全詩以雙行押韻（mathnawī）體裁，穿插寓言、軼事、聖訓與古蘭經典故，引人由表象的故事深入靈性的奧義，主題環繞靈魂對神聖之愛的渴慕、自我的消融與重歸本源。它是伊斯蘭神祕主義文學的最高成就，影響跨越波斯、土耳其與南亞諸文化。' },
+          ...RUMI_DIVAN_GHAZALS,
           { title_zh: '安達魯斯摩爾人抒情詩', title_orig: 'Muwashshaḥ wa-Zajal', author: '伊本‧古茲曼、伊本‧宰敦等', era: '11–13 世紀', place: '安達魯斯（西班牙南部）', language: '阿拉伯文（俗語結尾雜羅曼語）', intro: '中世紀伊斯蘭西班牙發展出的兩種富於音樂性的抒情詩體：穆瓦沙赫（muwashshaḥ）為多節環韻的雅言詩，末尾常綴以羅曼俗語的「下闋」（kharja）；扎吉勒（zajal）則通篇用安達魯斯方言寫成。兩者題材兼及愛情、美酒、自然與蘇菲神祕之愛，旋律優美而雅俗交融，是伊比利半島跨文化的詩樂結晶，並對歐洲遊唱詩人的抒情傳統有所啟發。' },
           { title_zh: '波斯蘇菲神祕詩', title_orig: 'Dīwān-i Ṣūfiyāna', author: '阿塔爾、薩納伊、伊拉基等', era: '12–14 世紀', place: '波斯（呼羅珊、設拉子）', language: '波斯文', intro: '哈菲茲之前的波斯蘇菲詩傳統，以薩納伊、阿塔爾、伊拉基等為代表。他們以抒情短詩（ghazal）與長篇譬喻詩（如阿塔爾的鳥語會議）表達對神聖之愛的追尋，將美酒、佳人、夜鶯與玫瑰等世俗意象轉化為靈性象徵：醉非醉於酒，乃醉於神。此一象徵體系與曖昧多義的詩語，奠定了後世哈菲茲集大成的波斯神祕抒情詩典範。' }
         ]
