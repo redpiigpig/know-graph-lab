@@ -75,6 +75,21 @@ const RUMI_DIVAN_GHAZALS: DazangWork[] = Array.from({ length: 94 }, (_, index) =
   }
 })
 
+const KETTON_LATIN_QURAN_SURAS: DazangWork[] = Array.from({ length: 97 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `凱頓拉丁古蘭經第${number}章譯文`,
+    title_orig: `Lex Mahumet pseudoprophete, Sura ${number}`,
+    author: '凱頓的羅伯特譯（可敬者彼得主持）',
+    era: '1142–1143 年',
+    place: '伊比利半島托雷多—潘普洛納翻譯圈',
+    language: '拉丁文（譯自阿拉伯文）',
+    parent: '凱頓拉丁古蘭經（Lex Mahumet pseudoprophete）',
+    note: `來源：https://digital.ub.uni-paderborn.de/eab/content/structure/8346602；古蘭經章次 ${number}`,
+    intro: `本卷是凱頓的羅伯特於一一四二至一一四三年完成之拉丁《古蘭經》所對應的第 ${number} 章譯文，屬可敬者彼得主持的克呂尼伊斯蘭文獻翻譯工程。譯者常以拉丁修辭重組句序並揉入解釋，不能等同現代逐字譯本，卻是西歐最早完整接觸阿拉伯《古蘭經》的主要媒介。此處依原典一百一十四章的既有章界著錄，來源連到一五四三年比布利安德刊本的完整數位影像，兼顧中古譯本史與原經結構。`,
+  }
+})
+
 // 中世紀基督教大藏經（三軌斷代，按時代精神：伊斯蘭交鋒與政教權之爭）
 export const MEDIEVAL_ERA: DazangEra = {
   key: 'medieval',
@@ -3056,6 +3071,7 @@ export const MEDIEVAL_ERA: DazangEra = {
         desc: '猶太傳統經本的中世紀傳本，及基督教世界對其的翻譯與摘譯。',
         works: [
           { title_zh: '塔木德拉丁文摘錄', title_orig: 'Extractiones de Talmud', author: '巴黎審查譯者群（道明會主導）', era: '約 1245', place: '巴黎', language: '拉丁文（譯自希伯來文與亞蘭文）', intro: '此為現存最早、規模最大的塔木德拉丁文摘譯，緣於 1240 年巴黎塔木德審判：教會指控塔木德含褻瀆與反基督內容，遂令學者摘譯其文以供審查，終致 1242 年巴黎當眾焚毀大批塔木德抄本。譯本初按塔木德篇目編排，後改按主題重整。它雖出於論戰與審查之惡意，卻保存了十三世紀塔木德文本的珍貴面貌，是猶太—基督教關係史與文本傳承的重要史料。', note: '出於審查論戰背景' },
+          ...KETTON_LATIN_QURAN_SURAS,
           { title_zh: '伊本‧提本家族希伯來譯本', title_orig: 'Tibbonide Hebrew Translations', author: '伊本‧提本家族（猶大、撒母耳等）', era: '12–13 世紀', place: '普羅旺斯（呂內爾／馬賽）', language: '希伯來文（譯自阿拉伯文）', intro: '伊本‧提本家族是普羅旺斯的猶太翻譯世家，將安達盧斯猶太學者以阿拉伯文寫成的哲學、語法與宗教經典譯為希伯來文，使不諳阿拉伯文的歐洲猶太社群得以承繼。撒母耳‧伊本‧提本譯邁蒙尼德《迷途指津》尤為經典，並與作者通信商榷譯法。此譯業確立了希伯來哲學術語，使阿拉伯—猶太的思想遺產轉入希伯來文傳統，深刻影響後世猶太思想與基督教希伯來學。' },
           { title_zh: '亞蘭塔古姆中世紀傳本', title_orig: 'Targumim（medieval recensions）', author: '猶太抄經與馬所拉傳統', era: '中世紀傳本（文本上溯更早）', place: '巴比倫／提比哩亞／歐洲猶太社群', language: '亞蘭文', intro: '塔古姆是希伯來聖經的亞蘭文翻譯與意譯，原為會堂誦經時供不通希伯來文者理解之用，如《翁克羅斯塔古姆》（妥拉）與《約拿單塔古姆》（先知書）。其文本雖源遠流長，現存抄本多為中世紀猶太抄經傳統所傳寫、加注母音與馬所拉符號者。這些傳本不僅是猶太釋經與禮儀的活水，其釋義傳統亦為中世紀基督教希伯來學者所參照，是聖經文本與詮釋史的重要環節。' }
         ]
