@@ -125,6 +125,21 @@ const THELEMIC_RITUALS: DazangWork[] = [
   intro: `《${titleZh}》是克勞利泰勒瑪體系中具有獨立書號與程序邊界的儀式或修持文書。正文以姿勢、方位、聖名、誦句、觀想及日常操練組織個人或團體敬拜，將西方儀式魔法、卡巴拉、埃及神祇與自稱「新劫」啟示重新編排。它是可實際履行的固定文本，而非後人泛稱的「新世紀儀式」；此處依原書號著錄，並避開《謊言之書》已收的重複章節。`,
 }))
 
+const GITANJALI_POEMS: DazangWork[] = Array.from({ length: 100 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `泰戈爾《吉檀迦利》第${number}首`,
+    title_orig: `Gitanjali: Song Offerings, Poem ${number}`,
+    author: '羅賓德拉納特‧泰戈爾（自譯）',
+    era: '1910 年孟加拉詩集；1912 年英語編本',
+    place: '英屬印度孟加拉／英格蘭倫敦',
+    language: '孟加拉文／英文自譯',
+    parent: '吉檀迦利：歌的獻禮（Gitanjali: Song Offerings）',
+    note: `來源：https://www.gutenberg.org/ebooks/7164；英語編本一百零三首之第 ${number} 首`,
+    intro: `本篇為泰戈爾一九一二年英語自譯《吉檀迦利：歌的獻禮》固定一百零三首中的第 ${number} 首。詩人從孟加拉文《吉檀迦利》及數種詩集選譯重組，以散文詩向神聖者傾訴等待、奉獻、死亡、自然、勞動與自由，既承印度虔信詩傳統，也面向全球現代讀者。此處依英語初編號取前一百首，清楚標明它是作者自譯選本而非孟加拉原集的逐首對應，不再保留無作者、無篇界的靈性文學概稱。`,
+  }
+})
+
 // 現代基督教大藏經（按時代精神：以 1910 後普世合一運動為主軸＋現代精神）
 export const MODERN_ERA: DazangEra = {
   key: 'modern',
@@ -2348,27 +2363,17 @@ export const MODERN_ERA: DazangEra = {
     ]
   },
   wai: {
-    summary: '外藏以拉斯塔法里與雷鬼神學的詩文為現代外詩主軸，記錄聖經意象如何在加勒比海被重新挪用與吟唱，旁收新興宗教靈性文學。',
+    summary: '外藏收基督教傳統之外具有固定篇號的現代宗教詩歌，以泰戈爾英語自譯《吉檀迦利》為跨文明虔信詩代表。',
     divisions: [
       {
-        key: 'rastafari-reggae',
-        label: '拉斯塔法里與雷鬼神學部',
-        label_en: 'Rastafari & Reggae Theology',
-        desc: '【現代外詩主軸】拉斯塔法里讚美詩，及雷鬼樂中的聖經神學——巴比倫與錫安意象。',
+        key: 'modern-devotional-poetry',
+        label: '現代虔信詩部',
+        label_en: 'Modern Devotional Poetry',
+        desc: '二十世紀非基督教虔信與神祕詩歌的固定篇號原典。',
         works: [
-          { title_zh: '拉斯塔法里讚美詩', title_orig: 'Rastafari Hymns / Chants', author: '拉斯塔法里運動', era: '1930年代起', place: '牙買加', language: '牙買加帕特瓦語‧英文', intro: '拉斯塔法里運動的讚美詩多改編自更正教聖詩與《詩篇》，再注入運動獨有的信念——尊海爾‧塞拉西一世為再臨的神（Jah Rastafari），視衣索比亞為應許之地。在尼亞賓基集會中，這些聖詩與鼓樂交織，徹夜吟唱，把舊約的出埃及與被擄敘事，轉化為非洲離散族裔回歸與救贖的盼望。其語言混融牙買加帕特瓦語的節奏與聖經的莊嚴，是這一融合宗教最核心的詩文傳統，也是雷鬼音樂神學的直接母體。' },
-          { title_zh: '雷鬼神學詩文(巴比倫與錫安)', title_orig: 'Reggae Theology: Babylon & Zion', author: 'Bob Marley/Burning Spear/Peter Tosh 等', era: '1970年代起', place: '牙買加', language: '牙買加帕特瓦語‧英文', intro: '雷鬼音樂是拉斯塔法里神學最廣為傳播的載體，其歌詞建構了一套「巴比倫對錫安」的二元神學：「巴比倫」象徵壓迫的西方殖民體系、警察與物質主義，「錫安」則是非洲與屬靈解放的應許之地。鮑伯‧馬利的〈出埃及〉（Exodus）、〈救贖之歌〉（Redemption Song）以出埃及與被擄歸回的舊約意象，唱出第三世界的受苦與盼望；燃燒之矛（Burning Spear）則吟誦先知般的歷史記憶。此處立為現代外詩主軸，見證聖經敘事在加勒比海如何被吟成抵抗與救贖的詩篇。' }
+          ...GITANJALI_POEMS,
         ]
       },
-      {
-        key: 'new-religious-literature',
-        label: '新興宗教文學部',
-        label_en: 'New Religious Movement Literature',
-        desc: '新世紀靈性文學。',
-        works: [
-          { title_zh: '新世紀靈性文學選', title_orig: 'New Age Spiritual Literature', author: '綜合(Eckhart Tolle/Paulo Coelho 等)', era: '二十世紀末起', place: '全球', language: '英文‧多語', intro: '新世紀靈性文學以暢銷書形式傳播一種去制度化、混融多源的靈修觀。托勒（Eckhart Tolle）的《當下的力量》倡言活在此刻、消解小我，柯艾略（Paulo Coelho）的《牧羊少年奇幻之旅》以寓言述說追隨「天命」的旅程，雜揉煉金術、蘇菲與基督教意象。這類作品常援引耶穌與聖經語句，卻置於泛靈與內在神性的框架中重新詮釋。此處收其作為外藏對照，呈現後基督教時代靈性需求如何在書市中被重新包裝與供應，及其與正統信仰的張力。' }
-        ]
-      }
     ]
   }
 },
