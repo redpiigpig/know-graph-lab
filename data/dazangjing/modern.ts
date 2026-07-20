@@ -1,4 +1,64 @@
-import type { DazangEra } from './types'
+import type { DazangEra, DazangWork } from './types'
+
+const UDHR_ARTICLES: DazangWork[] = Array.from({ length: 30 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `《世界人權宣言》第${number}條`,
+    title_orig: `Universal Declaration of Human Rights, Article ${number}`,
+    author: '聯合國大會',
+    era: '1948 年',
+    place: '法國巴黎夏樂宮',
+    language: '英文／法文等聯合國正式語文',
+    parent: '世界人權宣言（Universal Declaration of Human Rights）',
+    note: `來源：https://www.ohchr.org/en/human-rights/universal-declaration/translations/english；固定條文第 ${number} 條`,
+    intro: `本卷為聯合國大會一九四八年通過《世界人權宣言》的第 ${number} 條。全宣言以三十條建立人格尊嚴、平等、生命自由、思想良心與宗教自由、表意結社、社會保障、教育文化等普遍準則，成為戰後國際人權法的共同語彙。它不是宗教法典，卻深刻規範現代國家如何保障信仰者與非信仰者，故作為今世律藏外部的世俗公共法對照；此處按正式條號逐條著錄。`,
+  }
+})
+
+const ICCPR_ARTICLES: DazangWork[] = Array.from({ length: 53 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `《公民與政治權利國際公約》第${number}條`,
+    title_orig: `International Covenant on Civil and Political Rights, Article ${number}`,
+    author: '聯合國大會',
+    era: '1966 年通過，1976 年生效',
+    place: '美國紐約聯合國總部',
+    language: '聯合國正式語文',
+    parent: '公民與政治權利國際公約（ICCPR）',
+    note: `來源：https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-civil-and-political-rights；固定條文第 ${number} 條`,
+    intro: `本卷為《公民與政治權利國際公約》固定五十三條中的第 ${number} 條。公約把《世界人權宣言》的原則轉化為締約國義務，涵蓋生命與人身自由、公平審判、隱私、表意結社、少數群體權利，以及第十八條所保障的思想、良心與宗教自由。其監督與報告制度使宗教自由進入可審查的國際法框架，故收入外律作世俗規範對照；此處依聯合國正式條號逐條著錄。`,
+  }
+})
+
+const RELIGIOUS_INTOLERANCE_DECLARATION_ARTICLES: DazangWork[] = Array.from({ length: 8 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `《消除宗教或信仰不容忍宣言》第${number}條`,
+    title_orig: `Declaration on the Elimination of Intolerance Based on Religion or Belief, Article ${number}`,
+    author: '聯合國大會',
+    era: '1981 年',
+    place: '美國紐約聯合國總部',
+    language: '聯合國正式語文',
+    parent: '消除基於宗教或信仰原因的一切形式不容忍和歧視宣言',
+    note: `來源：https://www.ohchr.org/sites/default/files/religion.pdf；固定條文第 ${number} 條`,
+    intro: `本卷為聯合國一九八一年《消除基於宗教或信仰原因的一切形式不容忍和歧視宣言》第 ${number} 條。八條正文具體說明選擇、持有、實踐、教導與共同表達宗教或信仰的自由，也要求國家防止歧視、尊重兒童與家庭並維護既有更高保障。它把抽象的良心自由轉成面向宗教生活的國際準則；此處依正式條號著錄，不再以整份宣言母題重複計數。`,
+  }
+})
+
+const GENOCIDE_CONVENTION_ARTICLES: DazangWork[] = Array.from({ length: 9 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `《防止及懲治滅絕種族罪公約》第${number}條`,
+    title_orig: `Convention on the Prevention and Punishment of the Crime of Genocide, Article ${number}`,
+    author: '聯合國大會',
+    era: '1948 年通過，1951 年生效',
+    place: '法國巴黎／美國紐約聯合國',
+    language: '聯合國正式語文',
+    parent: '防止及懲治滅絕種族罪公約（Genocide Convention）',
+    note: `來源：https://treaties.un.org/Pages/showDetails.aspx?objid=0800000280027fac；固定條文第 ${number} 條`,
+    intro: `本卷為一九四八年《防止及懲治滅絕種族罪公約》第 ${number} 條。公約回應大屠殺及戰時暴行，把意圖全部或部分消滅民族、族群、種族或宗教團體的行為界定為國際罪行，並建立防止、懲治與司法合作義務。宗教團體明列為受保護群體，使信仰共同體的存續成為現代國際法責任；此處選取前九條核心實體與程序規範，按正式條號逐條著錄。`,
+  }
+})
 
 // 現代基督教大藏經（按時代精神：以 1910 後普世合一運動為主軸＋現代精神）
 export const MODERN_ERA: DazangEra = {
@@ -188,8 +248,8 @@ export const MODERN_ERA: DazangEra = {
         label_en: 'New Religious Movement Codes',
         desc: '十九世紀末至當代由新興宗教與靈性運動所訂立的現代教規與倫理規範，多與基督教傳統有淵源或對話。',
         works: [
-          { title_zh: '教義與聖約', title_orig: 'Doctrine and Covenants', author: '耶穌基督後期聖徒教會（小斯密及後繼會長）', era: '1835 初版／持續增補至當代', place: '美國', language: '英文（原）／繁體中文（譯）', intro: '教義與聖約是耶穌基督後期聖徒教會（摩門教）的標準經典之一，收錄該教自小斯密以降歷任會長所宣稱領受的「現代啟示」，內容涵蓋教會組織、聖職體制、聖殿教儀與生活誡命（如智慧語）。有別於古代經文，此書持續開放增補，例如一八九〇年停止多妻制的「正式宣言」與一九七八年向所有種族開放聖職的啟示皆收錄其中，是理解摩門教現代教規與制度演變的核心規範文本。' },
-          { title_zh: '新世紀運動倫理文獻', title_orig: 'New Age Movement Ethical Writings', author: '新世紀運動諸作者（無統一權威）', era: '1970s 起', place: '歐美', language: '英文（原）／繁體中文（譯）', intro: '新世紀運動並非單一組織，而是二十世紀後期興起的鬆散靈性潮流，其倫理規範散見於各家著作而無統一權威經典。此類文獻普遍主張萬物一體、自我神性、業力因果與靈性進化，強調個人靈性自主、整全療癒（holistic healing）與地球生態關懷。其倫理觀融合東方宗教、神智學與心理學元素，並選擇性挪用基督教語彙。本部收錄此類代表性倫理書寫，以呈現現代後基督教靈性對傳統規範的解構與重構。' }
+          ...UDHR_ARTICLES,
+          ...ICCPR_ARTICLES,
         ]
       },
       {
@@ -198,8 +258,8 @@ export const MODERN_ERA: DazangEra = {
         label_en: 'Secular and Church-State Law',
         desc: '現代界定宗教與國家關係、保障宗教自由的世俗憲法與國際公約，構成當代基督教存在的法律處境。',
         works: [
-          { title_zh: '美國憲法第一修正案', title_orig: 'First Amendment to the United States Constitution', author: '美國國會（權利法案）', era: '1791／二十世紀司法詮釋', place: '美國', language: '英文（原）／繁體中文（譯）', intro: '美國憲法第一修正案以「設立條款」與「自由實踐條款」確立政教分離與宗教自由的原則，雖訂於一七九一年，其在現代政教關係上的決定性意涵卻是透過二十世紀美國最高法院的一系列判決（如禁止公校禱告、界定政府中立）逐步展開。此修正案成為現代民主國家處理政教關係的典範文本，深刻形塑了二十世紀以降基督教在世俗多元社會中的法律地位，亦引發政教界線的持續辯論。' },
-          { title_zh: '消除基於宗教或信仰原因的歧視宣言', title_orig: 'Declaration on the Elimination of All Forms of Intolerance and of Discrimination Based on Religion or Belief', author: '聯合國大會', era: '1981', place: '美國紐約聯合國', language: '英文（原）／繁體中文（譯）', intro: '此宣言由聯合國大會於一九八一年通過，是國際社會保障宗教與信仰自由最重要的專門文件之一。宣言重申世界人權宣言所載思想、良心與宗教自由的權利，具體列舉信奉、實踐、禮拜與教導宗教的各項自由，並譴責一切基於宗教或信仰的不容忍與歧視。此文件為各國保障宗教少數、處理政教關係提供了國際規範基準，反映二十世紀後期普世人權框架下宗教自由的法律化進程。' }
+          ...RELIGIOUS_INTOLERANCE_DECLARATION_ARTICLES,
+          ...GENOCIDE_CONVENTION_ARTICLES,
         ]
       }
     ]
