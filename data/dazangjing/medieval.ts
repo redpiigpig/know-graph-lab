@@ -15,6 +15,36 @@ const NAHJ_AL_BALAGHA_SERMONS: DazangWork[] = Array.from({ length: 100 }, (_, in
   }
 })
 
+const CAIRO_GENIZA_TRADER_LETTERS: DazangWork[] = Array.from({ length: 80 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `開羅貯藏室商人書信第${number}封`,
+    title_orig: `Letters of Medieval Jewish Traders, Letter ${number}`,
+    author: '中世紀地中海猶太商人（S. D. Goitein 編譯）',
+    era: '11–13 世紀',
+    place: '埃及福斯塔特及地中海商路',
+    language: '猶太阿拉伯文／希伯來文',
+    parent: '中世紀猶太商人書信（Letters of Medieval Jewish Traders）',
+    note: `來源：https://books.google.com/books?id=_219BgAAQBAJ；原書第 ${number} 封`,
+    intro: `本件為戈伊泰因自開羅貯藏室獨立文書中選譯的第 ${number} 封商人書信，原件出自十一至十三世紀猶太商旅往返埃及、北非、地中海港口與印度洋航路的通信網。信中可見託運、合夥、信用、匯兌、家計與旅途風險，也保存寄件者的問候、焦慮與信仰語彙。每封信都有自身寄受關係與文書邊界，故按選集固定篇號各立一卷，不再把「開羅貯藏室文獻」這一龐大檔案概念另算作品。`,
+  }
+})
+
+const CAIRO_GENIZA_INDIA_LETTERS: DazangWork[] = Array.from({ length: 16 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `開羅貯藏室印度洋書信第${number}封`,
+    title_orig: `India Traders of the Middle Ages, Letter ${number}`,
+    author: '中世紀印度洋猶太商旅（S. D. Goitein、Mordechai A. Friedman 編）',
+    era: '11–12 世紀',
+    place: '埃及福斯塔特、亞丁與印度洋商路',
+    language: '猶太阿拉伯文／希伯來文',
+    parent: '中世紀印度商人：開羅貯藏室文書（India Traders of the Middle Ages）',
+    note: `來源：https://brill.com/display/title/11514；書信單元第 ${number} 件`,
+    intro: `本件是《中世紀印度商人》所收開羅貯藏室印度洋通信的第 ${number} 封，出自往返福斯塔特、亞丁與印度港市的猶太商旅及其家屬。內容涉及胡椒、紡織品與貴重貨物的託運結算，也常交織婚姻、疾病、失聯、海難與社群互助。編者依原件逐件刊布並保留文書號，故此處按固定書信單元獨立著錄，呈現中世紀宗教共同體如何以書函維繫跨洋信用與家庭生活。`,
+  }
+})
+
 // 中世紀基督教大藏經（三軌斷代，按時代精神：伊斯蘭交鋒與政教權之爭）
 export const MEDIEVAL_ERA: DazangEra = {
   key: 'medieval',
@@ -3180,7 +3210,8 @@ export const MEDIEVAL_ERA: DazangEra = {
         label_en: 'Jewish Correspondence',
         desc: '猶太社群的日常與商貿書信檔案，及經師對信眾的牧函回覆。',
         works: [
-          { title_zh: '開羅貯藏室文獻', title_orig: 'Cairo Geniza Documents', author: '中世紀地中海猶太社群', era: '約 10–13 世紀', place: '埃及福斯塔特', language: '猶太阿拉伯文／希伯來文', intro: '開羅本以斯拉會堂的「貯藏室」依猶太習俗存放不可隨意丟棄的帶神聖之名文書，意外保存了數十萬件中世紀文獻，含私人書信、商業契約、婚書與經師回覆。這批檔案如時光膠囊，重現地中海猶太社群橫跨埃及、北非、西西里與印度洋的商貿與家庭生活，是中世紀社會經濟史與猶太日常書信文化的無價寶藏。' },
+          ...CAIRO_GENIZA_TRADER_LETTERS,
+          ...CAIRO_GENIZA_INDIA_LETTERS,
           { title_zh: '致葉門猶太人書', title_orig: 'Iggeret Teiman', author: '邁蒙尼德', era: '約 1172 年', place: '埃及福斯塔特', language: '猶太阿拉伯文', intro: '葉門猶太社群在伊斯蘭強制改宗壓力與冒牌彌賽亞的雙重衝擊下，去信求教於大經師邁蒙尼德，他以這封公開牧函作答，安慰受迫害的同胞、駁斥假彌賽亞、勸勉堅守信仰。書信語調沉痛而堅定，兼具神學論證與牧靈關懷，是邁蒙尼德回應流散猶太人苦難處境的名篇，廣為傳抄而影響深遠。' },
         ],
       },
