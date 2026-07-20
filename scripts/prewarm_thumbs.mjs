@@ -22,7 +22,7 @@ const INDEX_PATH = path.join(REPO, "scripts", "photo_index.json");
 const CACHE_DIR = path.join(REPO, ".cache", "thumbs");
 const CURRENT_FILE_MARKER = path.join(REPO, ".cache", "_prewarm_current.txt");
 const SKIPLIST_PATH = path.join(REPO, ".cache", "_prewarm_skiplist.txt");
-const PHOTOS_PARENT = "G:/我的雲端硬碟/資料/儲存資料夾";
+const PHOTOS_PARENT = "G:/我的雲端硬碟/資料/知識圖工作室/照片";
 const LIB_FOLDERS = { chenwei: "辰瑋相片", training: "訓練相片", hongshi: "弘誓相片" };
 
 const SUPPORTED_EXTS = new Set([".jpg", ".jpeg", ".png", ".webp", ".heic", ".heif", ".avif", ".bmp"]);

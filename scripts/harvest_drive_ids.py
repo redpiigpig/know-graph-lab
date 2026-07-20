@@ -14,9 +14,9 @@ ALBUM_ROOTS = {  # album slug -> 相簿資料夾 local-title
     "hongshi": "弘誓相片",
 }
 G_ROOTS = {
-    "chenwei": r"G:\我的雲端硬碟\資料\儲存資料夾\辰瑋相片",
-    "training": r"G:\我的雲端硬碟\資料\儲存資料夾\訓練相片",
-    "hongshi": r"G:\我的雲端硬碟\資料\儲存資料夾\弘誓相片",
+    "chenwei": r"G:\我的雲端硬碟\資料\知識圖工作室\照片\辰瑋相片",
+    "training": r"G:\我的雲端硬碟\資料\知識圖工作室\照片\訓練相片",
+    "hongshi": r"G:\我的雲端硬碟\資料\知識圖工作室\照片\弘誓相片",
 }
 
 def find_db():

@@ -14,7 +14,7 @@ from pillow_heif import register_heif_opener
 register_heif_opener()
 
 C = r"C:\Users\張辰瑋的資料\辰瑋相片"
-GROOT = r"G:\我的雲端硬碟\資料\儲存資料夾\辰瑋相片"
+GROOT = r"G:\我的雲端硬碟\資料\知識圖工作室\照片\辰瑋相片"
 INDEX = r"C:\Users\user\Desktop\know-graph-lab\scripts\photo_index.json"
 LED = r"C:\tmp\chenwei_fill_ledger.json"
 LOGP = r"C:\tmp\chenwei_fill.log"

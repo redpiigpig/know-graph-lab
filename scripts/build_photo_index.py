@@ -23,7 +23,7 @@ if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
     sys.stderr.reconfigure(encoding="utf-8")
 
-PHOTOS_PARENT = Path("G:/我的雲端硬碟/資料/儲存資料夾")
+PHOTOS_PARENT = Path("G:/我的雲端硬碟/資料/知識圖工作室/照片")
 
 LIBRARIES = {
     "chenwei":  {"folder": "辰瑋相片", "layout": "year-month"},

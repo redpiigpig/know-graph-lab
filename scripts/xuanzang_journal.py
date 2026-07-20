@@ -35,7 +35,7 @@ BASE = "https://www.hcu.edu.tw"
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36"}
 HARVEST = Path(r"C:/tmp/xuanzang_journal.json")
 STAGE = Path(r"C:/tmp/xuanzang_dl"); STAGE.mkdir(parents=True, exist_ok=True)
-DRIVE = Path(r"G:\我的雲端硬碟\公事\印順學派與弘誓研究資料\玄奘佛學研究")
+DRIVE = Path(r"G:\我的雲端硬碟\資料\知識圖工作室\研究資料\印順學派與弘誓\玄奘佛學研究")
 R2_PDF = "yinshun-hongshi/玄奘佛學研究"
 R2_TXT = "yinshun-hongshi-fulltext/玄奘佛學研究"
 INDEX_OUT = Path(__file__).resolve().parents[1] / "public/content/research-data/yinshun-hongshi/xuanzang-index.json"

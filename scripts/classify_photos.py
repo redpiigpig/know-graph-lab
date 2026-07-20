@@ -31,7 +31,7 @@ if sys.platform == "win32":
 
 from PIL import Image, ExifTags
 
-PHOTOS_ROOT = Path("G:/我的雲端硬碟/資料/儲存資料夾/辰瑋相片")
+PHOTOS_ROOT = Path("G:/我的雲端硬碟/資料/知識圖工作室/照片/辰瑋相片")
 REPORT_PATH = Path(__file__).parent / "photo_classification_report.json"
 MOVE_LOG_PATH = Path(__file__).parent / "photo_move_log.jsonl"
 

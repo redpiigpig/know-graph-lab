@@ -83,7 +83,7 @@
 ## 4. 關鍵事實 / 架構
 
 - **R2**：bucket `knowgraphlab`（私有）。前綴：`dadaodao-materials/<rel>`（原檔）、`dadaodao-fulltext/<rel>.txt`（全文）、`.zh.txt`（翻譯）。`.env` 有 `R2_*`、`Gemini_API_Key_1..4`、`SUPABASE_*`、`SUPABASE_ACCESS_TOKEN`（Management API）。**無 ANTHROPIC_API_KEY** → Sonnet 走 `~/.claude/.credentials.json` OAuth（fulltext 腳本已內建 refresh）。
-- **Drive canonical**：原檔在 `G:\我的雲端硬碟\公事\國北教\碩士論文\論文資料`（5.44GB / 879 件：381 PDF＋410 JPG＋82 docx＋…）。口述訪談原始夾 `…\碩士論文\口述訪談`。論文全文/PDF 在 `…\碩士論文\`。
+- **Drive canonical**：原檔在 `G:\我的雲端硬碟\資料\知識圖工作室\研究資料\大愛道革命\論文資料`（5.44GB / 879 件：381 PDF＋410 JPG＋82 docx＋…）。口述訪談原始夾 `…\碩士論文\口述訪談`。論文全文/PDF 在 `…\碩士論文\`。
 - **頁面結構不需改**即可吃新 manifest（categories→groups→files{name,key,size}）。
 - **部署**：commit 後網站自動部署；page code 改動要等部署，DB（描述/狀態）即時。
 - **build 驗證**：`npm run build`（exit 0）；pre-push 跑 vitest 154 例。

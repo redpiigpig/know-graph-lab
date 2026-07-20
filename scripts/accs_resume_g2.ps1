@@ -9,7 +9,7 @@ $done = 'c:\tmp\accs_gen_古代基督信仰聖經註釋叢書1 創12-50.raw.done
 if (Test-Path $done) { Write-Output "ACCS 創12-50 已完成（.done 存在）→ 跳過"; exit 0 }
 
 $pdf = 'c:\tmp\古代基督信仰聖經註釋叢書1 創12-50.pdf'
-$src = 'G:\我的雲端硬碟\資料\電子書\世界宗教\基督教\IVP - 古代基督信仰聖經註釋叢書 (27 冊)\古代基督信仰聖經註釋叢書1 創12-50.pdf'
+$src = 'G:\我的雲端硬碟\資料\知識圖工作室\教父著作\基督教 - IVP - 古代基督信仰聖經註釋叢書\古代基督信仰聖經註釋叢書1 創12-50.pdf'
 
 # G: 串流碟睡眠/當掉會卸載；未掛載先啟動 Google Drive 等候。
 if (-not (Test-Path 'G:\')) {

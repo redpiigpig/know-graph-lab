@@ -38,7 +38,7 @@ export default defineNuxtConfig({
     // 聖經經文 gz JSON（bible_verses 已搬出 DB — 2026-07-08 超量救援）；
     // dev 直讀 Drive，production 由 server/utils/bible-verses.ts fallback 到 R2。
     bibleVersesDir: process.env.BIBLE_VERSES_DIR || "G:/我的雲端硬碟/資料/聖經/_verses",
-    photosRoot: process.env.PHOTOS_ROOT || "G:/我的雲端硬碟/資料/儲存資料夾/辰瑋相片",
+    photosRoot: process.env.PHOTOS_ROOT || "G:/我的雲端硬碟/資料/知識圖工作室/照片/辰瑋相片",
     // 照片來源後端：'local'＝直讀本機 G: 槽（dev 預設）；'r2'＝雲端從 R2 讀 index + 縮圖
     // （Zeabur 設 PHOTO_BACKEND=r2，原檔仍留 Drive，只有縮圖上 R2）。見 sync_photos_to_r2.mjs。
     photoBackend: process.env.PHOTO_BACKEND || "local",

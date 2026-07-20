@@ -6,7 +6,7 @@ $ErrorActionPreference = 'Continue'
 Set-Location 'c:\Users\user\Desktop\know-graph-lab'
 
 $pdf = 'c:\tmp\古代基督信仰聖經註釋叢書2-5 出利民申.pdf'
-$src = 'G:\我的雲端硬碟\資料\電子書\世界宗教\基督教\IVP - 古代基督信仰聖經註釋叢書 (27 冊)\古代基督信仰聖經註釋叢書2-5 出 利 民 申.pdf'
+$src = 'G:\我的雲端硬碟\資料\知識圖工作室\教父著作\基督教 - IVP - 古代基督信仰聖經註釋叢書\古代基督信仰聖經註釋叢書2-5 出 利 民 申.pdf'
 $stem = '古代基督信仰聖經註釋叢書2-5 出利民申'
 
 if (-not (Test-Path 'G:\')) {

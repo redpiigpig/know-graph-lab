@@ -6,7 +6,7 @@ $ErrorActionPreference = 'Continue'
 Set-Location 'c:\Users\user\Desktop\know-graph-lab'
 $done = 'c:\tmp\accs_gen_古代基督信仰聖經註釋叢書1 創12-50.raw.done'
 $pdf  = 'c:\tmp\古代基督信仰聖經註釋叢書1 創12-50.pdf'
-$src  = 'G:\我的雲端硬碟\資料\電子書\世界宗教\基督教\IVP - 古代基督信仰聖經註釋叢書 (27 冊)\古代基督信仰聖經註釋叢書1 創12-50.pdf'
+$src  = 'G:\我的雲端硬碟\資料\知識圖工作室\教父著作\基督教 - IVP - 古代基督信仰聖經註釋叢書\古代基督信仰聖經註釋叢書1 創12-50.pdf'
 $log  = 'scripts\logs\accs_gen_12-50.log'
 # 本地 PDF 不在就從 G: 複製（G: 串流長跑會卡，故只讀本地）。
 if (-not (Test-Path $pdf)) {

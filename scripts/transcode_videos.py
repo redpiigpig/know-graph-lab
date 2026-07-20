@@ -23,7 +23,7 @@ INDEX = REPO / "scripts" / "photo_index.json"
 LEDGER = REPO / "scripts" / "transcode_ledger.json"
 LOG = REPO / "scripts" / "logs" / "transcode_videos.log"
 WORK = Path("c:/tmp/transcode_work")
-PHOTOS_ROOT = Path(r"G:/我的雲端硬碟/資料/儲存資料夾")
+PHOTOS_ROOT = Path(r"G:/我的雲端硬碟/資料/知識圖工作室/照片")
 LIB_DIR = {"training": "訓練相片", "hongshi": "弘誓相片"}
 
 VID_EXT = {".mp4", ".mov", ".m4v", ".webm", ".mkv", ".avi"}

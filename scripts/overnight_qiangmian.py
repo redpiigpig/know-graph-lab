@@ -22,7 +22,7 @@ if sys.platform == "win32":
     sys.stderr.reconfigure(encoding="utf-8")
 
 REPO_DIR = Path(__file__).parent.parent
-PPT_DIR  = Path("G:/我的雲端硬碟/創作/千面上帝/宗教史讀書會")
+PPT_DIR  = Path("G:/我的雲端硬碟/資料/知識圖工作室/讀書會/千面上帝宗教史讀書會")
 TMP_DIR  = REPO_DIR / "_tmp_audio" / "qiangmian"
 TMP_DIR.mkdir(parents=True, exist_ok=True)
 

@@ -8,7 +8,7 @@ Set-Location 'c:\Users\user\Desktop\know-graph-lab'
 $done = 'c:\tmp\accs_gen_古代基督信仰聖經註釋叢書1 創1-11.raw.done'
 if (Test-Path $done) { Write-Output "ACCS 創1-11 已完成（.done 存在）→ 跳過"; exit 0 }
 
-$pdf = 'G:\我的雲端硬碟\資料\電子書\世界宗教\基督教\IVP - 古代基督信仰聖經註釋叢書 (27 冊)\古代基督信仰聖經註釋叢書1 創1-11.pdf'
+$pdf = 'G:\我的雲端硬碟\資料\知識圖工作室\教父著作\基督教 - IVP - 古代基督信仰聖經註釋叢書\古代基督信仰聖經註釋叢書1 創1-11.pdf'
 
 # G: 是 Google Drive 串流碟，睡眠/Drive 當掉會卸載，導致整夜排程空跑（2026-06-14 踩過）。
 # 自我修復：若 G: 未掛載，啟動 Google Drive 並等候最多 60 秒。

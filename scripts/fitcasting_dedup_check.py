@@ -3,7 +3,7 @@
 名字對不上(子夾=2025-11-22(N).mp4、root=FitCasting_-_…)，只靠 ffprobe 時長找疑似重複。
 只列清單、不刪。"""
 import os, subprocess, json
-G = r"G:\我的雲端硬碟\資料\儲存資料夾\訓練相片\fitcasting"
+G = r"G:\我的雲端硬碟\資料\知識圖工作室\照片\訓練相片\fitcasting"
 VID = {".mp4",".mov",".m4v",".webm",".mkv",".avi",".wmv",".mts",".m2ts",".3gp",".mpg",".mpeg"}
 
 def ffprobe_dur(p):

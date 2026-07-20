@@ -7,7 +7,7 @@
 """
 import os, json, subprocess, time, shutil
 D = r"D:\資料\fitcasting"
-G = r"G:\我的雲端硬碟\資料\儲存資料夾\訓練相片\fitcasting"
+G = r"G:\我的雲端硬碟\資料\知識圖工作室\照片\訓練相片\fitcasting"
 WORK = r"c:\tmp\fc_work"
 LED = r"c:\tmp\fitcasting_ledger.json"
 LOGP = r"c:\tmp\fitcasting.log"

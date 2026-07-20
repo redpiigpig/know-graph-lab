@@ -26,7 +26,7 @@ REPO = Path(__file__).resolve().parent.parent
 INDEX = REPO / "scripts" / "photo_index.json"
 LEDGER = REPO / "scripts" / "heic_convert_ledger.json"
 LOG = REPO / "scripts" / "logs" / "convert_heic.log"
-PHOTOS_ROOT = Path(r"G:/我的雲端硬碟/資料/儲存資料夾")
+PHOTOS_ROOT = Path(r"G:/我的雲端硬碟/資料/知識圖工作室/照片")
 LIB_DIR = {"chenwei": "辰瑋相片", "training": "訓練相片", "hongshi": "弘誓相片"}
 QUALITY = 92
 

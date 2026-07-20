@@ -14,7 +14,7 @@ import fitz
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import dadaodao_fulltext as df  # reuse .env / s3 / GEMINI_KEYS / OCR_PROMPT
 
-SRC = Path(r"G:\我的雲端硬碟\公事\印順學派與弘誓研究資料\弘誓雙月刊")
+SRC = Path(r"G:\我的雲端硬碟\資料\知識圖工作室\研究資料\印順學派與弘誓\弘誓雙月刊")
 PREFIX = "yinshun-hongshi-fulltext/弘誓雙月刊"
 
 

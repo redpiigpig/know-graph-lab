@@ -12,10 +12,13 @@
 """
 import argparse
 import base64
+from collections import Counter
 import io
 import json
 import os
+import subprocess
 import sys
+import tempfile
 import time
 from pathlib import Path
 
@@ -29,11 +32,13 @@ for _l in (ROOT_DIR / ".env").read_text(encoding="utf-8").splitlines():
         _k, _v = _l.split("=", 1)
         ENV[_k.strip()] = _v.strip().strip('"').strip("'")
 
-SRC_ROOT = Path(r"G:\我的雲端硬碟\公事\國北教\碩士論文\論文資料")
+SRC_ROOT = Path(r"G:\我的雲端硬碟\資料\知識圖工作室\研究資料\大愛道革命\論文資料")
 R2_BUCKET = ENV["R2_BUCKET"]
 TEXT_PREFIX = "dadaodao-fulltext"
 GEMINI_MODEL = "gemini-2.5-flash"
 SONNET_MODEL = "claude-sonnet-4-6"
+OLLAMA_URL = "http://127.0.0.1:11434/api/generate"
+OLLAMA_MODEL = "qwen2.5vl:7b"
 OCR_PROMPT = (
     "請完整且原樣轉錄這份文件中的所有文字內容，保留原本的段落、標題與註腳結構。"
     "只輸出文字本身，不要翻譯、不要摘要、不要加任何說明或標記。"
@@ -60,6 +65,7 @@ def _gemini_keys():
 
 GEMINI_KEYS = _gemini_keys()
 _gem_idx = 0  # round-robin start
+GEMINI_KEY_INDEX = None  # zero-based; set by --gemini-lane to isolate one claimed lane
 
 _CC_OAUTH_REFRESH_URL = "https://console.anthropic.com/v1/oauth/token"
 _CC_OAUTH_CLIENT_ID = "9d1c250a-e61b-44d9-88ed-5944d1962f5e"
@@ -116,6 +122,14 @@ def r2_exists(key):
     except Exception:
         return False
 
+def r2_existing_keys(prefix=TEXT_PREFIX):
+    """List existing transcript keys once; avoids one R2 HEAD request per source file."""
+    keys = set()
+    paginator = s3.get_paginator("list_objects_v2")
+    for page in paginator.paginate(Bucket=R2_BUCKET, Prefix=f"{prefix}/"):
+        keys.update(obj["Key"] for obj in page.get("Contents", []))
+    return keys
+
 def r2_put_text(key, text):
     s3.put_object(Bucket=R2_BUCKET, Key=key, Body=text.encode("utf-8"), ContentType="text/plain; charset=utf-8")
 
@@ -148,6 +162,37 @@ def extract_xlsx(path):
                 out.append("\t".join(cells))
     return "\n".join(out).strip()
 
+def extract_doc(path):
+    """Extract legacy binary Word .doc text through an installed Word COM server."""
+    ps = r'''
+$ErrorActionPreference = "Stop"
+$word = New-Object -ComObject Word.Application
+$word.Visible = $false
+$word.DisplayAlerts = 0
+try {
+  $doc = $word.Documents.Open($env:DADAODOC_IN, $false, $true)
+  try { $text = $doc.Content.Text }
+  finally { $doc.Close($false) }
+  [IO.File]::WriteAllText($env:DADAODOC_OUT, $text, [Text.UTF8Encoding]::new($false))
+} finally {
+  $word.Quit()
+}
+'''.strip()
+    encoded = base64.b64encode(ps.encode("utf-16le")).decode("ascii")
+    fd, out_name = tempfile.mkstemp(suffix=".txt")
+    os.close(fd)
+    try:
+        env = os.environ.copy()
+        env["DADAODOC_IN"] = str(path.resolve())
+        env["DADAODOC_OUT"] = out_name
+        subprocess.run(
+            ["powershell.exe", "-NoProfile", "-NonInteractive", "-EncodedCommand", encoded],
+            check=True, env=env, capture_output=True, timeout=120,
+        )
+        return Path(out_name).read_text(encoding="utf-8").strip()
+    finally:
+        Path(out_name).unlink(missing_ok=True)
+
 def pdf_text_layer(path):
     """Return extracted text if the PDF has a real text layer, else None."""
     import fitz
@@ -169,8 +214,9 @@ def gemini_ocr(path, mime):
     from google import genai
     from google.genai import types
     last = None
-    for off in range(len(GEMINI_KEYS)):
-        idx = (_gem_idx + off) % len(GEMINI_KEYS)
+    indices = ([GEMINI_KEY_INDEX] if GEMINI_KEY_INDEX is not None
+               else [(_gem_idx + off) % len(GEMINI_KEYS) for off in range(len(GEMINI_KEYS))])
+    for idx in indices:
         try:
             client = genai.Client(api_key=GEMINI_KEYS[idx])
             data = path.read_bytes()
@@ -201,6 +247,21 @@ def sonnet_ocr(path, mime):
     )
     return "".join(b.text for b in msg.content if getattr(b, "type", "") == "text").strip()
 
+def ollama_ocr(path, mime, model=OLLAMA_MODEL, timeout=180):
+    """Local-only vision OCR. Image bytes never leave the Ollama host."""
+    if not mime.startswith("image/"):
+        raise ValueError("Ollama vision OCR currently accepts images only")
+    body = {
+        "model": model,
+        "prompt": OCR_PROMPT,
+        "images": [base64.b64encode(path.read_bytes()).decode("ascii")],
+        "stream": False,
+        "options": {"temperature": 0.0, "num_predict": 8192},
+    }
+    r = requests.post(OLLAMA_URL, json=body, timeout=timeout)
+    r.raise_for_status()
+    return (r.json().get("response") or "").strip()
+
 class BothLimited(Exception):
     pass
 
@@ -209,9 +270,19 @@ def _sonnet_is_429(e):
 
 PACE = 1.5  # seconds between Gemini calls (set from --pace)
 
-def ocr_file(path, mime, pace=None):
+def ocr_file(path, mime, pace=None, engine="auto", ollama_model=OLLAMA_MODEL,
+             ollama_timeout=180):
     pace = PACE if pace is None else pace
     """Gemini→Sonnet；兩者皆 429 時退避重試，仍不行則 raise BothLimited。"""
+    if engine == "gemini":
+        txt = gemini_ocr(path, mime)
+        time.sleep(pace)
+        return txt, "gemini"
+    if engine == "sonnet":
+        return sonnet_ocr(path, mime), "sonnet"
+    if engine == "ollama":
+        txt = ollama_ocr(path, mime, model=ollama_model, timeout=ollama_timeout)
+        return txt, f"ollama:{ollama_model}"
     for attempt in range(4):
         try:
             txt = gemini_ocr(path, mime)
@@ -232,12 +303,15 @@ def ocr_file(path, mime, pace=None):
 # ── per-file dispatch ───────────────────────────────────────────────────────
 IMG_MIME = {".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png"}
 
-def process(path, no_ocr, ocr_only):
+def process(path, no_ocr, ocr_only, engine="auto", ollama_model=OLLAMA_MODEL,
+            ollama_timeout=180):
     ext = path.suffix.lower()
     if ext == ".docx":
         return (None if ocr_only else extract_docx(path)), "docx"
     if ext == ".xlsx":
         return (None if ocr_only else extract_xlsx(path)), "xlsx"
+    if ext == ".doc":
+        return (None if ocr_only else extract_doc(path)), "doc"
     if ext == ".pdf":
         if not ocr_only:
             t = pdf_text_layer(path)
@@ -245,12 +319,14 @@ def process(path, no_ocr, ocr_only):
                 return t, "pdf-text"
         if no_ocr:
             return None, "pdf-scan(skip)"
-        txt, eng = ocr_file(path, "application/pdf")
+        txt, eng = ocr_file(path, "application/pdf", engine=engine,
+                            ollama_model=ollama_model, ollama_timeout=ollama_timeout)
         return txt, f"pdf-ocr:{eng}"
     if ext in IMG_MIME:
         if no_ocr:
             return None, "img(skip)"
-        txt, eng = ocr_file(path, IMG_MIME[ext])
+        txt, eng = ocr_file(path, IMG_MIME[ext], engine=engine,
+                            ollama_model=ollama_model, ollama_timeout=ollama_timeout)
         return txt, f"img-ocr:{eng}"
     return None, f"unsupported:{ext}"
 
@@ -261,9 +337,23 @@ def main():
     ap.add_argument("--no-ocr", action="store_true", help="只抽免 API 文字，跳過掃描 OCR")
     ap.add_argument("--ocr-only", action="store_true", help="只跑需 OCR 的掃描檔")
     ap.add_argument("--pace", type=float, default=1.5, help="Gemini 呼叫間隔秒數")
+    ap.add_argument("--engine", choices=("auto", "gemini", "sonnet", "ollama"), default="auto",
+                    help="OCR engine; choose an explicitly free lane to avoid quota contention")
+    ap.add_argument("--ollama-model", default=OLLAMA_MODEL,
+                    help="local vision model used with --engine ollama")
+    ap.add_argument("--ollama-timeout", type=int, default=180,
+                    help="seconds allowed for one local Ollama request")
+    ap.add_argument("--local-only-dir", default="",
+                    help="write OCR text under this local directory instead of uploading to R2")
+    ap.add_argument("--gemini-lane", type=int, default=0,
+                    help="1-based Gemini key/lane; isolates OCR to one acquired lane (0 rotates all keys)")
     args = ap.parse_args()
-    global PACE
+    global PACE, GEMINI_KEY_INDEX
     PACE = args.pace
+    if args.gemini_lane:
+        if not 1 <= args.gemini_lane <= len(GEMINI_KEYS):
+            ap.error(f"--gemini-lane must be 1..{len(GEMINI_KEYS)}")
+        GEMINI_KEY_INDEX = args.gemini_lane - 1
     only = {e.strip().lstrip(".").lower() for e in args.only.split(",") if e.strip()}
 
     files = sorted(p for p in SRC_ROOT.rglob("*") if p.is_file())
@@ -271,28 +361,40 @@ def main():
     order = {".docx": 0, ".xlsx": 0, ".doc": 1, ".pdf": 2, ".jpg": 3, ".jpeg": 3, ".png": 3}
     files.sort(key=lambda p: (order.get(p.suffix.lower(), 9), p.stat().st_size))
 
+    existing = r2_existing_keys()
+    print(f"R2 existing transcripts: {len(existing)}", flush=True)
     done = skip = fail = 0
+    deferred = Counter()
     strikes = 0  # 連續「兩引擎皆配額用罄」次數；達 2 即停（過夜可重跑接續）
     for p in files:
         if only and p.suffix.lower().lstrip(".") not in only:
             continue
         rel = str(p.relative_to(SRC_ROOT)).replace("\\", "/")
         key = f"{TEXT_PREFIX}/{rel}.txt"
-        if r2_exists(key):
+        if key in existing:
             skip += 1
             continue
         try:
-            text, method = process(p, args.no_ocr, args.ocr_only)
+            text, method = process(p, args.no_ocr, args.ocr_only, args.engine,
+                                   args.ollama_model, args.ollama_timeout)
             strikes = 0
             if text is None:
+                deferred[method] += 1
                 continue  # skipped by mode (e.g. --no-ocr on scan)
             if not text.strip():
                 print(f"  ∅ empty: {rel} [{method}]", flush=True)
                 fail += 1
                 continue
-            r2_put_text(key, text)
+            if args.local_only_dir:
+                out = Path(args.local_only_dir) / Path(rel + ".txt")
+                out.parent.mkdir(parents=True, exist_ok=True)
+                out.write_text(text, encoding="utf-8")
+            else:
+                r2_put_text(key, text)
+                existing.add(key)
             done += 1
-            print(f"  ✓ {rel}  [{method}] {len(text)} chars", flush=True)
+            where = "local-only" if args.local_only_dir else "R2"
+            print(f"  ✓ {rel}  [{method}] {len(text)} chars → {where}", flush=True)
             if args.limit and done >= args.limit:
                 break
         except BothLimited:
@@ -304,7 +406,9 @@ def main():
         except Exception as e:
             fail += 1
             print(f"  ✗ {rel}: {type(e).__name__}: {str(e)[:160]}", flush=True)
-    print(f"\nDONE — transcribed {done}, skipped(exist) {skip}, failed {fail}", flush=True)
+    print(f"\nDONE — sources {len(files)}, transcribed {done}, skipped(exist) {skip}, failed {fail}", flush=True)
+    if deferred:
+        print("DEFERRED — " + ", ".join(f"{k}={v}" for k, v in sorted(deferred.items())), flush=True)
 
 if __name__ == "__main__":
     main()

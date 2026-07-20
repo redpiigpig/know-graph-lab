@@ -11,7 +11,7 @@ $running = Get-CimInstance Win32_Process -Filter "Name like '%python%'" |
 if ($running) { Write-Output "已有 ACCS worker (PID $($running[0].ProcessId)) → 跳過本輪"; exit 0 }
 
 $pdf = 'c:\tmp\古代基督信仰聖經註釋叢書6-10 書士得撒.pdf'
-$src = 'G:\我的雲端硬碟\資料\電子書\世界宗教\基督教\IVP - 古代基督信仰聖經註釋叢書 (27 冊)\古代基督信仰聖經註釋叢書6-10 書 士 得 撒.pdf'
+$src = 'G:\我的雲端硬碟\資料\知識圖工作室\教父著作\基督教 - IVP - 古代基督信仰聖經註釋叢書\古代基督信仰聖經註釋叢書6-10 書 士 得 撒.pdf'
 $stem = '古代基督信仰聖經註釋叢書6-10 書士得撒'
 
 if (-not (Test-Path 'G:\')) {

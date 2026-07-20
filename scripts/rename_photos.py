@@ -46,7 +46,7 @@ try:
 except Exception:
     HEIF_OK = False
 
-PHOTOS_PARENT = Path("G:/我的雲端硬碟/資料/儲存資料夾")
+PHOTOS_PARENT = Path("G:/我的雲端硬碟/資料/知識圖工作室/照片")
 
 # Library → 對應子資料夾
 LIBRARIES = {

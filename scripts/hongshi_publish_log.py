@@ -13,7 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = Path(r"C:/tmp/hongshi_dl/log")
-DRIVE = Path(r"G:\我的雲端硬碟\公事\印順學派與弘誓研究資料\學團日誌")
+DRIVE = Path(r"G:\我的雲端硬碟\資料\知識圖工作室\研究資料\印順學派與弘誓\學團日誌")
 OUT = ROOT / "public/content/research-data/yinshun-hongshi"
 
 

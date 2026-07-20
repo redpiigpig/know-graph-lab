@@ -2,7 +2,7 @@
 """把已下載的弘誓雙月刊 PDF 搬到 canonical Drive + 上傳 R2 + 建 index.json。
 
 來源：C:/tmp/hongshi_dl/magazine/弘誓雙月刊-NNN[-pK].pdf（hongshi_download_magazine.mjs 產出）
-canonical：G:\\我的雲端硬碟\\公事\\印順學派與弘誓研究資料\\弘誓雙月刊\\
+canonical：G:\\我的雲端硬碟\\資料\\知識圖工作室\\研究資料\\印順學派與弘誓\\弘誓雙月刊\\
 R2：yinshun-hongshi/弘誓雙月刊/<檔名>（bucket 私有，仿 dadaodao 簽名下載）
 index：public/content/research-data/yinshun-hongshi/magazine-index.json
 
@@ -24,7 +24,7 @@ for _l in (ROOT / ".env").read_text(encoding="utf-8").splitlines():
         ENV[_k.strip()] = _v.strip().strip('"').strip("'")
 
 STAGE = Path(r"C:/tmp/hongshi_dl/magazine")
-DRIVE = Path(r"G:\我的雲端硬碟\公事\印順學派與弘誓研究資料\弘誓雙月刊")
+DRIVE = Path(r"G:\我的雲端硬碟\資料\知識圖工作室\研究資料\印順學派與弘誓\弘誓雙月刊")
 HARVEST = Path(r"C:/tmp/hongshi_magazine_index.json")
 R2_PREFIX = "yinshun-hongshi/弘誓雙月刊"
 INDEX_OUT = ROOT / "public/content/research-data/yinshun-hongshi/magazine-index.json"

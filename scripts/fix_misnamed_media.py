@@ -6,7 +6,7 @@
 每個 rename 寫進 rollback log。用法：python fix_misnamed_media.py [apply]
 """
 import os, sys, json, time
-ROOT = r"G:\我的雲端硬碟\資料\儲存資料夾\辰瑋相片"
+ROOT = r"G:\我的雲端硬碟\資料\知識圖工作室\照片\辰瑋相片"
 LOG = r"C:\tmp\misnamed_media_rename_log.jsonl"
 APPLY = len(sys.argv) > 1 and sys.argv[1] == "apply"
 IMG_EXT = {".jpg", ".jpeg", ".png"}
