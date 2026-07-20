@@ -1,7 +1,7 @@
 /**
  * 即時把 /thesis?tab=interviews 的訪談紀錄打包成 .docx
  *
- * 樣式對齊 ~/Desktop/nonchurch-nuxt/stores/無境界者雜誌/04-第四期/4-4 與 4-5（人物專訪）
+ * 樣式對齊 ~/Desktop/nonchurch-nuxt/G:/我的雲端硬碟/資料/無境界者/雜誌/04-第四期/4-4 與 4-5（人物專訪）
  *   - B5 (182×257mm)、頁邊 20mm
  *   - 【口述訪談】 tag 14pt 金 #FFC000，文鼎中行書，靠右
  *   - 主標 24pt 華康中黑體 bold 左對齊

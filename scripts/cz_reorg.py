@@ -6,7 +6,7 @@
 """
 import sys, os, re, json, shutil, zipfile
 
-ROOT = os.path.abspath(r"pong-archive/stores/城中週報")
+ROOT = os.path.abspath(r"G:/我的雲端硬碟/資料/知識圖工作室/研究資料/城中教會週報")
 APPLY = "--apply" in sys.argv
 manifest = []
 

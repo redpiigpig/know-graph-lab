@@ -11,7 +11,7 @@ from pathlib import Path
 # pong-archive 腳本群 2026-07-08 已遷至 nonchurch-nuxt repo（pong_sermon_pipeline.transcribe 從該處 import）
 sys.path.insert(0, r"C:\Users\user\Desktop\nonchurch-nuxt\scripts\pong-archive")
 
-BASE = "pong-archive/stores/城中週報/錄音"
+BASE = "G:/我的雲端硬碟/資料/知識圖工作室/研究資料/城中教會週報/錄音"
 OUT = Path("tmp_sermon/audio"); OUT.mkdir(parents=True, exist_ok=True)
 NONSERMON = ("查經", "訓練", "集訓", "沙龍", "關懷怖道", "關懷佈道", "衛斯理", "傳道書",
              "耶利米哀歌", "進入世界", "以馬忤斯", "釘十字架", "part2", ".doc")

@@ -9,7 +9,7 @@ import os, sys, re, json, glob, datetime, requests
 sys.stdout.reconfigure(encoding="utf-8")
 
 APPLY = "--apply" in sys.argv
-ROOT = os.path.abspath(r"pong-archive/stores/城中週報")
+ROOT = os.path.abspath(r"G:/我的雲端硬碟/資料/知識圖工作室/研究資料/城中教會週報")
 with open(".env", encoding="utf-8") as f:
     for line in f:
         if line.strip() and not line.startswith("#") and "=" in line:

@@ -4,7 +4,7 @@
 import sys, os, re, json, glob, traceback
 sys.stdout.reconfigure(encoding='utf-8')
 
-ROOT = os.path.abspath(r"pong-archive/stores/城中週報")
+ROOT = os.path.abspath(r"G:/我的雲端硬碟/資料/知識圖工作室/研究資料/城中教會週報")
 OUT = r"c:/tmp/cz_bulletins"
 os.makedirs(OUT, exist_ok=True)
 
