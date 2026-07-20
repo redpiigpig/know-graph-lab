@@ -19,7 +19,8 @@ function Ensure($label, $pat, $argv) {
 }
 
 # jung CW11 done (414/414); advance to CW9ii (Aion), the #2 religious-studies volume
-Ensure 'jung-cw9ii' 'jung_cw_translate' @('-X','utf8','scripts\jung_cw_translate.py','--vol','9ii','--engine','auto')
+# NVIDIA (not auto) on purpose: keep Gemini free for ACCS OCR, the only Gemini-only lane
+Ensure 'jung-cw9ii' 'jung_cw_translate' @('-X','utf8','scripts\jung_cw_translate.py','--vol','9ii','--engine','nvidia')
 Ensure 'philo-queue' 'plato_build|plato_run_queue' @('-X','utf8','scripts\plato_run_queue.py')
 # Panikkar last volume (vedic-experience, huge): on Haiku per user (idle Claude account).
 # When it finishes, replace this lane with Max Weber (sociology) collected works.
