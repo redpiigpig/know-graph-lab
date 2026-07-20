@@ -90,6 +90,41 @@ const NEHRU_WORLD_HISTORY_LETTERS: DazangWork[] = Array.from({ length: 100 }, (_
   }
 })
 
+const BOOK_OF_LIES_CHAPTERS: DazangWork[] = Array.from({ length: 93 }, (_, index) => {
+  const sequence = index + 1
+  return {
+    title_zh: `克勞利《謊言之書》編次第${sequence}章`,
+    title_orig: `The Book of Lies, Sequential Chapter ${sequence}`,
+    author: '阿萊斯特‧克勞利',
+    era: '1913 年；約 1921 年自註',
+    place: '英格蘭倫敦',
+    language: '英文／希臘文及卡巴拉符號',
+    parent: '謊言之書（Liber CCCXXXIII, The Book of Lies）',
+    note: `來源：https://sacred-texts.com/oto/lib333.htm；含問號、驚嘆號頁在內九十三章的閱讀順序第 ${sequence} 章`,
+    intro: `本卷為阿萊斯特‧克勞利《謊言之書》九十三個一頁單元依閱讀順序排列的第 ${sequence} 章；原書把問號與驚嘆號頁也計作章。各章依卡巴拉數值配置詩句、悖論、祈禱、儀式或修持暗語，其中若干後來成為泰勒瑪固定禮式。此處將這套二十世紀祕教的短章視為儀式語言與修持指令的原始單元，依原編次著錄；已含於書內的星紅寶石、星藍寶石等章不再另收同文。`,
+  }
+})
+
+const THELEMIC_RITUALS: DazangWork[] = [
+  ['泰勒瑪諾斯底彌撒', 'Liber XV: The Gnostic Mass', '1913 年撰成，1918 年刊行'],
+  ['新劫規儀', 'Liber V vel Reguli', '約 1921 年'],
+  ['薩梅克書召請儀', 'Liber Samekh', '1921 年'],
+  ['太陽敬拜書', 'Liber Resh vel Helios', '1909 年'],
+  ['阿斯塔特敬神修持', 'Liber Astarte vel Berylli', '1911 年'],
+  ['修習書', 'Liber E vel Exercitiorum', '1909 年'],
+  ['手與箭書', 'Liber O vel Manus et Sagittae', '1909 年'],
+].map(([titleZh, titleOrig, era]) => ({
+  title_zh: titleZh,
+  title_orig: titleOrig,
+  author: '阿萊斯特‧克勞利',
+  era,
+  place: '英國／歐洲泰勒瑪團體',
+  language: '英文／儀式用希臘文與希伯來文',
+  parent: '泰勒瑪官方儀式與修持文書（Thelemic Libers）',
+  note: `來源：https://sacred-texts.com/oto/index.htm；固定儀式文書 ${titleOrig}`,
+  intro: `《${titleZh}》是克勞利泰勒瑪體系中具有獨立書號與程序邊界的儀式或修持文書。正文以姿勢、方位、聖名、誦句、觀想及日常操練組織個人或團體敬拜，將西方儀式魔法、卡巴拉、埃及神祇與自稱「新劫」啟示重新編排。它是可實際履行的固定文本，而非後人泛稱的「新世紀儀式」；此處依原書號著錄，並避開《謊言之書》已收的重複章節。`,
+}))
+
 // 現代基督教大藏經（按時代精神：以 1910 後普世合一運動為主軸＋現代精神）
 export const MODERN_ERA: DazangEra = {
   key: 'modern',
@@ -2154,20 +2189,12 @@ export const MODERN_ERA: DazangEra = {
         key: 'new-religious-rites',
         label: '新興宗教禮儀部',
         label_en: 'New Religious Movement Rites',
-        desc: '新世紀運動的冥想與儀式實踐。',
+        desc: '二十世紀新興祕教具有固定書號、篇次與程序的儀式及修持文本。',
         works: [
-          { title_zh: '新世紀冥想與儀式手冊', title_orig: 'New Age Meditation & Ritual', author: '新世紀運動(綜合)', era: '1970年代起', place: '美國‧西歐‧全球', language: '英文‧多語', intro: '新世紀運動（New Age）並無統一教義或經典，而是一鬆散的靈性潮流，雜揉東方禪修、瑜伽、靈媒通靈、水晶療癒、占星與西方神秘學。其「儀式」多為個人化的自我轉化操練——導引式冥想、觀想光與能量、節氣慶典與身心整合工作坊，強調「內在神性」與「意識揚升」。此處收其儀式實踐文獻作為外藏對照，呈現後基督教西方在制度宗教衰退後，如何以拼貼方式重構神聖經驗與身體儀式。' }
+          ...BOOK_OF_LIES_CHAPTERS,
+          ...THELEMIC_RITUALS,
         ]
       },
-      {
-        key: 'folk-syncretic-rites',
-        label: '民間與融合禮儀部',
-        label_en: 'Folk & Syncretic Rites',
-        desc: '拉斯塔法里 Nyabinghi 集會與雷鬼音樂中的儀式傳統。',
-        works: [
-          { title_zh: '尼亞賓基集會(Nyabinghi)儀典', title_orig: 'Nyabinghi (Binghi) Grounation', author: '拉斯塔法里運動', era: '1940年代起', place: '牙買加', language: '牙買加帕特瓦語‧英文', intro: '尼亞賓基（Nyabinghi）是拉斯塔法里運動最古老、最具儀式性的支派，其集會（grounation / groundation）以徹夜的擊鼓、吟唱聖詩與祈禱構成，鼓組分 bass、funde、repeater 三層，節奏被視為「大地的心跳」與通往至高者（Jah）的橋樑。集會中焚燒聖草、誦讀《詩篇》並讚頌海爾‧塞拉西一世為再臨的彌賽亞。此處收其作為融合非洲傳統、舊約敬拜與牙買加民間信仰的儀式體系，是雷鬼音樂的靈性母胎，亦現代外藏禮儀的鮮明案例。' }
-        ]
-      }
     ]
   }
 },
