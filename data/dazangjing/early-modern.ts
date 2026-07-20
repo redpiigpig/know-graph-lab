@@ -60,6 +60,21 @@ const VOLTAIRE_PHILOSOPHICAL_LETTERS: DazangWork[] = Array.from({ length: 24 }, 
   }
 })
 
+const BAHAULLAH_PRAYERS_MEDITATIONS: DazangWork[] = Array.from({ length: 98 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `巴哈歐拉祈禱默想第${number}篇`,
+    title_orig: `Prayers and Meditations by Bahá’u’lláh, ${number}`,
+    author: '巴哈歐拉（守基‧阿芬第編譯）',
+    era: '19 世紀啟示；1938 年編譯定序',
+    place: '巴格達、埃迪爾內與阿卡流徙時期',
+    language: '阿拉伯文／波斯文（英譯定序）',
+    parent: '巴哈歐拉祈禱與默想（Prayers and Meditations by Bahá’u’lláh）',
+    note: `來源：https://reference.bahai.org/en/t/b/PM/pm-${number}.html；官方選集羅馬數字第 ${number} 篇`,
+    intro: `本篇是巴哈伊官方文庫《巴哈歐拉祈禱與默想》固定羅馬數字編次的第 ${number} 篇，原文出自巴哈歐拉十九世紀的阿拉伯文或波斯文書寫，後由守基‧阿芬第選編英譯。內容以頌讚、懺悔、求助、療癒、考驗與靈性成長為中心，可用於個人祈禱與共同體靈修。此處依官方選集可逐篇核讀的既定邊界著錄，並把原作年代與一九三八年編譯定序分開標示，不將後世編本年代誤作禱文創作年代。`,
+  }
+})
+
 // 近代基督教大藏經（按時代精神：人文主義‧宗教改革‧反改革‧宣教擴張‧敬虔與啟蒙）
 export const EARLY_MODERN_ERA: DazangEra = {
   key: 'early-modern',
@@ -2325,7 +2340,7 @@ export const EARLY_MODERN_ERA: DazangEra = {
         desc: '十九世紀興起的新宗教所創設的聖殿、聖日與祈禱禮儀，自摩門聖殿恩道門至巴哈伊聖日。',
         works: [
           { title_zh: '聖殿恩道門儀式', title_orig: 'The Endowment', author: '史密斯（Joseph Smith）創設', era: '一八四二年起', place: '美國納府（Nauvoo）', language: '英文', intro: '耶穌基督後期聖徒教會（摩門教）於聖殿中舉行的核心儀式，由創始人史密斯於納府時期確立。恩道門以戲劇化敘事重演創造、墮落與救贖,授予信徒誓約、聖衣與通往高升的知識，並含洗禮代死等為亡者施行的代理聖禮。儀式僅於聖殿內、對符合資格者保密舉行,構成摩門救恩觀的關鍵環節。此禮體現新興宗教自創完整聖殿禮儀體系,在新教文化中另立一格的特殊性。' },
-          { title_zh: '巴哈伊祈禱與聖日', title_orig: "Bahá'í Prayers and Holy Days", author: '巴哈歐拉（Bahá’u’lláh）、阿博都巴哈（‘Abdu’l-Bahá）', era: '十九世紀後半', place: '波斯／鄂圖曼領地', language: '阿拉伯文／波斯文', intro: '巴哈伊信仰由巴哈歐拉創立，其祈禱文與聖日構成信徒靈修與群體生活的禮儀核心。每日有義務祈禱、十九日靈宴會,並訂九個工作停止的聖日,多紀念巴孛與巴哈歐拉的生平要事；信徒亦守十九日齋戒。禮儀強調人神直接相通、無神職階級、各宗教合一,反映其普世主義精神。此一禮儀體系見證十九世紀近東新興宗教如何融合伊斯蘭傳統與普世理想,另創敬拜形態。', note: '巴哈伊源出伊斯蘭文化圈，因其與亞伯拉罕諸教及十九世紀宗教更新潮流相涉,列為近代宗教禮儀之外藏旁系。' },
+          ...BAHAULLAH_PRAYERS_MEDITATIONS,
         ],
       },
       {
