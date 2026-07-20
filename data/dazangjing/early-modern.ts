@@ -1,4 +1,19 @@
-import type { DazangEra } from './types'
+import type { DazangEra, DazangWork } from './types'
+
+const SHULCHAN_ARUKH_ORACH_CHAYIM: DazangWork[] = Array.from({ length: 95 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `《備席》生活法第${number}則`,
+    title_orig: `Shulchan Arukh, Orach Chayim ${number}`,
+    author: '約瑟夫‧卡羅',
+    era: '1563 年編成，1565 年刊行',
+    place: '鄂圖曼帝國采法特／威尼斯刊行',
+    language: '希伯來文',
+    parent: '備席‧生活之道（Shulchan Arukh, Orach Chayim）',
+    note: `來源：https://www.sefaria.org/Shulchan_Arukh%2C_Orach_Chayim.${number}；固定法則號 ${number}`,
+    intro: `本條是約瑟夫‧卡羅《備席》第一部「生活之道」第 ${number} 則，Sefaria 依原書固定 siman 編次提供正文。此部把日常起居、祈禱、會堂、安息日與節期等規範整理成可直接查用的法典條目，後由伊瑟雷斯附加阿什肯納茲習俗，成為近世猶太法最具權威的實用總集。每一則均有獨立主題與條文邊界，故逐則著錄；總題不再另算，避免母本與子條重複。`,
+  }
+})
 
 // 近代基督教大藏經（按時代精神：人文主義‧宗教改革‧反改革‧宣教擴張‧敬虔與啟蒙）
 export const EARLY_MODERN_ERA: DazangEra = {
@@ -289,6 +304,15 @@ export const EARLY_MODERN_ERA: DazangEra = {
         works: [
           { title_zh: '教義和聖約(教制法度)', title_orig: 'Doctrine and Covenants (governing revelations)', author: '小約瑟‧斯密等(Joseph Smith Jr. et al.)', era: '1835', place: '美國俄亥俄州嘉德蘭', language: '英文', intro: '摩門教《教義和聖約》中規範教團組織與紀律的啟示部分。除教義內容外，本書大量篇幅以「現代啟示」形式頒定聖職層級、教會職分、什一奉獻、聚會與懲戒等制度。實為摩門教的教團法典，將約瑟‧斯密所建立的教會體制以神聖權威加以規範，是後期聖徒運動賴以組織運作的法度基礎。' },
           { title_zh: '亞格達斯經律法', title_orig: 'Kitab-i-Aqdas (laws and ordinances)', author: '巴哈歐拉(Baha\'u\'llah)', era: '約1873', place: '鄂圖曼帝國阿卡', language: '阿拉伯文', intro: '巴哈伊教《亞格達斯經》中的律法與制度部分。被尊為「至聖之書」，巴哈歐拉於其中頒定禱告、齋戒、婚姻、繼承、什一等宗教義務，並廢除舊有聖戰與神職階級，規劃「世界正義院」等行政架構。是巴哈伊教的根本法典，將巴哈歐拉的啟示落實為信仰團體的律法與治理制度。' }
+        ]
+      },
+      {
+        key: 'jewish-code',
+        label: '近世猶太法典部',
+        label_en: 'Early Modern Jewish Law',
+        desc: '約瑟夫‧卡羅《備席》依固定法則號編排的日常與禮儀法律。',
+        works: [
+          ...SHULCHAN_ARUKH_ORACH_CHAYIM,
         ]
       },
       {
