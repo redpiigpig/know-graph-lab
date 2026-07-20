@@ -75,6 +75,21 @@ const BAHAULLAH_PRAYERS_MEDITATIONS: DazangWork[] = Array.from({ length: 98 }, (
   }
 })
 
+const TUKARAM_ABHANGS: DazangWork[] = Array.from({ length: 98 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `杜卡拉姆阿邦格第${number}首`,
+    title_orig: `Tukaram Gatha, Abhanga ${number}`,
+    author: '杜卡拉姆',
+    era: '約 1608–1649 年',
+    place: '印度馬哈拉施特拉德胡',
+    language: '馬拉地文',
+    parent: '杜卡拉姆詩集（Tukaram Gatha）',
+    note: `來源：https://www.tukaram.com/english/lang_english；傳統詩集編號 ${number}（全集共 4,607 首）`,
+    intro: `本篇為馬拉地虔信詩人杜卡拉姆傳統《詩集》編次第 ${number} 首阿邦格。阿邦格是可歌唱而不斷裂的短詩形式，詩人以日常口語向維多巴傾訴悔悟、渴望、疑惑與信靠，也批判種姓驕矜、空洞儀式和宗教偽善。每首都有傳統全集中的獨立編號，可單獨誦唱與傳抄，故依原有 Gatha 次序著錄；十九世紀公版全集只作校讀來源，不把近代譯本年代誤作詩歌創作年代。`,
+  }
+})
+
 // 近代基督教大藏經（按時代精神：人文主義‧宗教改革‧反改革‧宣教擴張‧敬虔與啟蒙）
 export const EARLY_MODERN_ERA: DazangEra = {
   key: 'early-modern',
@@ -2515,7 +2530,7 @@ export const EARLY_MODERN_ERA: DazangEra = {
         label_en: 'New Religious Movements Poetry',
         desc: '十九世紀新興宗教自創的讚美詩、祈禱與詩文,以詩歌凝聚信眾、表達其獨特信念。',
         works: [
-          { title_zh: '巴哈伊讚美詩與祈禱', title_orig: "Bahá'í Hidden Words and Prayers", author: '巴哈歐拉（Bahá’u’lláh）', era: '十九世紀後半', place: '波斯／鄂圖曼領地', language: '阿拉伯文／波斯文', intro: '巴哈伊信仰創立者巴哈歐拉的詩文與祈禱,以《隱言經》最具代表,乃凝煉如珍珠的箴言詩,分阿拉伯文與波斯文兩部,傳達道德訓誨與靈魂歸向神的呼召。其文辭優美、意境深邃,兼具神祕詩與倫理教誨之美,並有大量供信徒日常誦讀的祈禱文。這些詩文承續波斯蘇菲詩歌傳統而注入普世合一的新精神,既是巴哈伊靈修的核心讀物,也見證十九世紀近東新興宗教如何以詩歌建構自身的靈性語言。', note: '巴哈伊源出伊斯蘭文化圈,因與亞伯拉罕諸教及十九世紀宗教更新潮流相涉,列為外藏旁系。' },
+          ...TUKARAM_ABHANGS,
           { title_zh: '摩門讚美詩', title_orig: 'A Collection of Sacred Hymns', author: '史密斯（Emma Smith）編', era: '一八三五年', place: '美國俄亥俄嘉德蘭（Kirtland）', language: '英文', intro: '耶穌基督後期聖徒教會（摩門教）首部聖詩集,由創始人史密斯之妻艾瑪奉命編選。詩集除採當時通行的新教聖詩外,亦收教會成員所作、表達其獨特信念的新詩,如歌頌復興、聖殿、先知與聚集錫安等主題。聖詩在摩門崇拜與群體生活中地位崇高,被視為祈禱與教導的一環。此集奠定摩門讚美詩傳統的根基,後續增補沿用至今,見證新興宗教如何藉詩歌凝聚信眾、傳遞並鞏固其特有的神學與群體認同。' },
         ],
       },
