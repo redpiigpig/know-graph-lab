@@ -121,6 +121,66 @@ const MANICHAEAN_PSALMS: DazangWork[] = Array.from({ length: 96 }, (_, index) =>
   }
 })
 
+const HEBREW_BIBLE_BOOKS_24: Array<[string, string]> = [
+  ['創世記', 'Genesis'], ['出埃及記', 'Exodus'], ['利未記', 'Leviticus'], ['民數記', 'Numbers'], ['申命記', 'Deuteronomy'],
+  ['約書亞記', 'Joshua'], ['士師記', 'Judges'], ['撒母耳記', 'Samuel'], ['列王紀', 'Kings'], ['以賽亞書', 'Isaiah'],
+  ['耶利米書', 'Jeremiah'], ['以西結書', 'Ezekiel'], ['十二小先知書', 'The Twelve'], ['詩篇', 'Psalms'], ['箴言', 'Proverbs'],
+  ['約伯記', 'Job'], ['雅歌', 'Song of Songs'], ['路得記', 'Ruth'], ['耶利米哀歌', 'Lamentations'], ['傳道書', 'Ecclesiastes'],
+  ['以斯帖記', 'Esther'], ['但以理書', 'Daniel'], ['以斯拉—尼希米記', 'Ezra–Nehemiah'], ['歷代志', 'Chronicles'],
+]
+
+function makeJewishGreekVersion(versionZh: string, versionOrig: string, translator: string, era: string): DazangWork[] {
+  return HEBREW_BIBLE_BOOKS_24.map(([bookZh, bookOrig]) => ({
+    title_zh: `${versionZh}：${bookZh}`,
+    title_orig: `${bookOrig} in the ${versionOrig}`,
+    author: translator,
+    era,
+    place: '羅馬帝國巴勒斯坦',
+    language: '希臘文（譯自希伯來文／亞蘭文）',
+    source: 'rabbinic',
+    parent: versionZh,
+    note: `來源：https://hexapla.org/（Hexapla Institute；${versionOrig} 經卷殘篇）`,
+    intro: `${versionZh}的《${bookZh}》是古代猶太人重譯希伯來聖經的逐卷單元，今主要由俄利根《六文本合參》的引文、抄本旁註與教父徵引保存。其希臘措辭既反映與七十士譯本不同的希伯來底本理解，也呈現猶太譯者面對基督徒釋經時的語文選擇；按經卷分列，便於逐卷比較古代猶太與教會譯經傳統。`,
+  }))
+}
+
+const AQUILA_BOOKS = makeJewishGreekVersion('亞居拉希臘文譯本', 'Aquila Version', '亞居拉', '約 2 世紀')
+const SYMMACHUS_BOOKS = makeJewishGreekVersion('辛馬庫希臘文譯本', 'Symmachus Version', '辛馬庫', '約 2 世紀後半')
+const THEODOTION_BOOKS = makeJewishGreekVersion('狄奧多田希臘文譯本', 'Theodotion Version', '狄奧多田', '約 2 世紀')
+
+const TARGUM_ONKELOS_BOOKS: DazangWork[] = HEBREW_BIBLE_BOOKS_24.slice(0, 5).map(([bookZh, bookOrig]) => ({
+  title_zh: `翁克羅斯塔古姆：${bookZh}`,
+  title_orig: `Targum Onkelos to ${bookOrig}`,
+  author: '翁克羅斯塔古姆傳統（佚名）',
+  era: '約 2–4 世紀定型',
+  place: '巴勒斯坦／巴比倫',
+  language: '亞蘭文（譯自希伯來文）',
+  source: 'rabbinic',
+  parent: '翁克羅斯塔古姆',
+  note: `來源：https://www.sefaria.org/texts/Tanakh/Targum/Targum%20Onkelos（${bookOrig}）`,
+  intro: `《翁克羅斯塔古姆》的《${bookZh}》是摩西五經官方亞蘭意譯傳統的一卷，供會堂中不熟希伯來文的聽眾理解經文。譯文大體貼近原文，遇見神顯、擬人語與難解律例時則以解釋性措辭處理；逐卷收入可展示拉比猶太教如何藉翻譯同時傳遞文本與詮釋，也為比較古代基督教敘利亞文譯經提供直接對照。`,
+}))
+
+const TARGUM_JONATHAN_BOOKS: Array<[string, string]> = [
+  ['約書亞記', 'Joshua'], ['士師記', 'Judges'], ['撒母耳記上', '1 Samuel'], ['撒母耳記下', '2 Samuel'], ['列王紀上', '1 Kings'], ['列王紀下', '2 Kings'],
+  ['以賽亞書', 'Isaiah'], ['耶利米書', 'Jeremiah'], ['以西結書', 'Ezekiel'], ['何西阿書', 'Hosea'], ['約珥書', 'Joel'], ['阿摩司書', 'Amos'],
+  ['俄巴底亞書', 'Obadiah'], ['約拿書', 'Jonah'], ['彌迦書', 'Micah'], ['那鴻書', 'Nahum'], ['哈巴谷書', 'Habakkuk'], ['西番雅書', 'Zephaniah'],
+  ['哈該書', 'Haggai'], ['撒迦利亞書', 'Zechariah'], ['瑪拉基書', 'Malachi'],
+]
+
+const TARGUM_JONATHAN_VOLUMES: DazangWork[] = TARGUM_JONATHAN_BOOKS.map(([bookZh, bookOrig]) => ({
+  title_zh: `約拿單塔古姆：${bookZh}`,
+  title_orig: `Targum Jonathan to ${bookOrig}`,
+  author: '約拿單塔古姆傳統（佚名）',
+  era: '約 2–4 世紀定型',
+  place: '巴勒斯坦／巴比倫',
+  language: '亞蘭文（譯自希伯來文）',
+  source: 'rabbinic',
+  parent: '約拿單先知書塔古姆',
+  note: `來源：https://www.sefaria.org/texts/Tanakh/Targum/Targum%20Jonathan（${bookOrig}）`,
+  intro: `《約拿單塔古姆》的《${bookZh}》是先知書亞蘭譯註傳統的一卷，源自會堂口譯並在古代晚期定型。譯者常把含混預言鋪陳為具體歷史或彌賽亞解釋，也以敬稱避免直接擬人化上帝；逐卷分列能保存各先知書獨立的譯釋面貌，並提供早期基督徒與拉比群體爭論預言應驗時的重要文本背景。`,
+}))
+
 // ─────────────────────────────────────────────────────────────────────────
 // 古代基督教大藏經
 //
@@ -2028,10 +2088,27 @@ export const ANCIENT_ERA: DazangEra = {
             key: 'jewish-versions', label: '猶太譯本部', label_en: 'Jewish Versions & Targums',
             works: [
               { title_zh: '七十士譯本傳奇', source: 'second-temple', intro: '前二世紀於亞歷山大以希臘文成書，託名亞里斯體亞，是譯經神話的源頭文本。書中以書信形式敘述七十二位譯士奉埃及王命翻譯妥拉、譯文神奇一致的傳說，旨在抬高七十士譯本的權威。雖屬虛構性傳奇而非信史，其反映希臘化猶太人對譯本神聖性的建構，是研究七十士起源傳統與譯經觀念的關鍵文本。', title_orig: 'Letter of Aristeas', author: '託名亞里斯體亞', era: '前 2 世紀', place: '亞歷山大', language: '希臘文', note: '譯經神話的源頭' },
-              { title_zh: '亞居拉希臘文譯本', source: 'rabbinic', intro: '二世紀亞居拉於巴勒斯坦譯成的舊約希臘文譯本，以極度直譯著稱。本譯本是猶太人為反擊基督教挪用七十士譯本而重新翻譯之作，逐字緊貼希伯來原文，犧牲流暢以求精確。作為兩約之間猶太譯經立場轉變的代表，其在校勘希伯來文本、研究古代翻譯理論與猶太基督教文本論爭上具重要的對照價值。', title_orig: 'Aquila’s Version', author: '亞居拉', era: '2 世紀', place: '巴勒斯坦', language: '希臘文', note: '猶太人反擊基督教而重譯的極度直譯本' },
-              { title_zh: '狄奧多田與辛馬庫譯本', source: 'rabbinic', intro: '二至三世紀狄奧多田與辛馬庫於巴勒斯坦分別譯成的兩部舊約希臘文重譯本。狄奧多田本對但以理書傳承尤具影響，辛馬庫本則以文辭流暢見長。二者與亞居拉本並為七十士之外的重要希臘譯本，俱收入俄利根的合參之中。作為古代多元譯經傳統的見證，其在文本校勘與翻譯風格比較研究上具參考價值。', title_orig: 'Theodotion & Symmachus', author: '狄奧多田、辛馬庫', era: '2–3 世紀', place: '巴勒斯坦', language: '希臘文', note: '另兩部重要希臘文重譯本' },
-              { title_zh: '亞蘭文塔古姆譯註', source: 'rabbinic', intro: '一至四世紀於巴勒斯坦與巴比倫形成的舊約亞蘭文意譯與註解，存於佚名抄本。本類文獻於會堂誦讀時將希伯來經文轉為亞蘭口語並夾敘夾議，其中以道（Memra）之概念尤受關注，被認為與約翰福音道成肉身的表述有思想關聯。作為猶太釋經傳統的載體，其在解經史與新約背景研究上具重要價值。', title_orig: 'Targums', author: '佚名抄本', era: '1–4 世紀', place: '巴勒斯坦／巴比倫', language: '亞蘭文', note: '將「上帝的道（Memra）」啟發約翰福音道成肉身' },
-              { title_zh: '撒馬利亞五經異讀考', source: 'rabbinic', intro: '前二世紀流傳於撒馬利亞的希伯來文摩西五經版本，存於佚名抄本。本文本在若干關鍵段落上與猶太正統馬所拉文本存在系統性差異，尤以將敬拜中心定於基利心山等改動為著。作為獨立於主流猶太傳統的古老經文見證，其在五經文本史校勘、撒馬利亞宗教研究與經文異讀比較上具重要而獨特的學術意義。', title_orig: 'Samaritan Pentateuch', author: '佚名抄本', era: '前 2 世紀', place: '撒馬利亞', language: '希伯來文', note: '撒馬利亞人修改的摩西五經關鍵段落' },
+              { title_zh: '撒馬利亞五經', source: 'rabbinic', intro: '前二世紀流傳於撒馬利亞的希伯來文摩西五經版本，存於佚名抄本。本文本在若干關鍵段落上與猶太正統馬所拉文本存在系統性差異，尤以將敬拜中心定於基利心山等讀法為著。作為獨立於主流猶太傳統的古老經文見證，其在五經文本史校勘、撒馬利亞宗教研究與經文異讀比較上具重要而獨特的學術意義。', title_orig: 'Samaritan Pentateuch', author: '撒馬利亞抄經傳統', era: '前 2 世紀起', place: '撒馬利亞', language: '撒馬利亞希伯來文', note: '來源：https://www.bl.uk/collection-items/samaritan-pentateuch' },
+            ],
+          },
+          {
+            key: 'jewish-greek-recensions', label: '猶太希臘文重譯部', label_en: 'Jewish Greek Recensions',
+            works: [
+              ...AQUILA_BOOKS,
+              ...SYMMACHUS_BOOKS,
+              ...THEODOTION_BOOKS,
+            ],
+          },
+          {
+            key: 'targum-onkelos', label: '翁克羅斯塔古姆部', label_en: 'Targum Onkelos',
+            works: [
+              ...TARGUM_ONKELOS_BOOKS,
+            ],
+          },
+          {
+            key: 'targum-jonathan', label: '約拿單塔古姆部', label_en: 'Targum Jonathan',
+            works: [
+              ...TARGUM_JONATHAN_VOLUMES,
             ],
           },
         ],
