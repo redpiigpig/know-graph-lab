@@ -3125,6 +3125,14 @@ export const MEDIEVAL_ERA: DazangEra = {
           { title_zh: '致葉門猶太人書', title_orig: 'Iggeret Teiman', author: '邁蒙尼德', era: '約 1172 年', place: '埃及福斯塔特', language: '猶太阿拉伯文', intro: '葉門猶太社群在伊斯蘭強制改宗壓力與冒牌彌賽亞的雙重衝擊下，去信求教於大經師邁蒙尼德，他以這封公開牧函作答，安慰受迫害的同胞、駁斥假彌賽亞、勸勉堅守信仰。書信語調沉痛而堅定，兼具神學論證與牧靈關懷，是邁蒙尼德回應流散猶太人苦難處境的名篇，廣為傳抄而影響深遠。' },
         ],
       },
+      {
+        key: 'pseudo-documentary-letters',
+        label: '託名公函部',
+        label_en: 'Pseudo-Documentary Letters',
+        works: [
+          { title_zh: '蘭圖盧斯書信', source: 'orthodox-apocrypha', intro: '託名羅馬總督蘭圖盧斯的偽造公文，實際約於十三至十四世紀在西方拉丁世界成書，佯稱一位彼拉多之前的猶大官員向羅馬元老院描述耶穌相貌。它雖非古代史料，卻以具體容貌敘述深刻影響晚期中世紀與近代的基督聖像；依實際成書年代移入中世紀外書函藏，作為託名公函及其接受史的代表。', title_orig: 'Letter of Lentulus', author: '佚名（託名蘭圖盧斯）', era: '約 13–14 世紀', place: '西方拉丁世界', language: '拉丁文', note: '原誤置古代；依實際成書年代移入中世紀' },
+        ],
+      },
     ],
   },
 },

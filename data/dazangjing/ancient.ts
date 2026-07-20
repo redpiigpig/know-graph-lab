@@ -73,6 +73,22 @@ const LIBANIUS_ORATIONS: DazangWork[] = Array.from({ length: 57 }, (_, index) =>
   }
 })
 
+const LIBANIUS_LETTERS: DazangWork[] = Array.from({ length: 99 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `利巴尼烏斯書信第${number}封`,
+    title_orig: `Epistula ${number} (Libanius)`,
+    author: '利巴尼烏斯',
+    era: '4 世紀',
+    place: '羅馬帝國安提阿',
+    language: '古希臘文',
+    source: 'pagan',
+    parent: '利巴尼烏斯書信集',
+    note: `來源：https://catalog.perseus.org/catalog/urn:cts:greekLit:tlg2200.tlg001（Libanius, Epistulae 1–839；第 ${number} 封）`,
+    intro: `安提阿修辭家利巴尼烏斯的第 ${number} 封標準篇號書信，屬其龐大希臘文通信集中可獨立辨識的原始函件。這些信往來於皇帝、官員、教師、學生與城市菁英之間，涉及薦舉、教育、公共事務、宗教傳統與私人情誼；它們讓讀者從外教知識人的日常網絡，對照同世紀教父以書信牧養、論辯與建構共同體的方式。`,
+  }
+})
+
 // ─────────────────────────────────────────────────────────────────────────
 // 古代基督教大藏經
 //
@@ -2158,9 +2174,9 @@ export const ANCIENT_ERA: DazangEra = {
       wai: {
         divisions: [
           {
-            key: 'pseudo-letters', label: '託名公函部', label_en: 'Pseudo-Documentary Letters',
+            key: 'late-antique-pagan-correspondence', label: '晚期古代外教書函部', label_en: 'Late Antique Pagan Correspondence',
             works: [
-              { title_zh: '蘭圖盧斯書信', source: 'orthodox-apocrypha', intro: '託名羅馬總督蘭圖盧斯的偽造公文，託古其實成於中世紀，以拉丁文寫於西方拉丁地區。佯稱出自彼拉多之前的猶大總督之手，向羅馬元老院描述耶穌的相貌儀容。是古代唯一詳述耶穌外形的文獻，雖屬後世杜撰，卻深刻影響西方聖像藝術對基督容貌的描繪。', title_orig: 'Letter of Lentulus', author: '託名蘭圖盧斯', era: '託古；中世紀成書', place: '西方（拉丁地區）', language: '拉丁文', note: '託名羅馬總督、古代唯一詳述耶穌長相的偽造公文' },
+              ...LIBANIUS_LETTERS,
             ],
           },
           {
