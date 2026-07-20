@@ -1,4 +1,77 @@
-import type { DazangEra } from './types'
+import type { DazangEra, DazangWork } from './types'
+
+const MAXIMUS_TYRE_TOPICS: Array<[string, string]> = [
+  ['柏拉圖所論的神', 'What God Is According to Plato'],
+  ['受辱是否應當報復', 'Whether Injuries Are to Be Returned'],
+  ['若有占卜，人是否仍有自主之事', 'Whether, If There Be Divination, Anything Is in Our Power'],
+  ['如何分辨諂媚者與朋友', 'How a Flatterer Is to Be Distinguished from a Friend'],
+  ['實踐生活勝於思辨生活', 'That the Practical Is the Better Life'],
+  ['思辨生活勝於實踐生活', 'That the Theoretical Is Better than the Practical Life'],
+  ['柏拉圖逐荷馬出理想國是否適當', 'Whether Plato Acted Properly in Expelling Homer from His Republic'],
+  ['蘇格拉底的愛之術', 'In What the Amatory Art of Socrates Consisted'],
+  ['再論愛', 'Again on Love'],
+  ['再論蘇格拉底的愛之術', 'Again Concerning the Amatory Art of Socrates'],
+  ['三論愛', 'Again Concerning Love'],
+  ['哲學言談之樂勝於其他言談', 'The Pleasure of Philosophic Discourses'],
+  ['軍人與農夫何者更有益於城邦：為軍人辯', 'Whether Soldiers or Husbandmen Are More Useful: For Soldiers'],
+  ['農夫比軍人更有益於城邦', 'That Husbandmen Are More Useful than Soldiers'],
+  ['與行為相稱的言談最善', 'That Those Discourses Are the Best Which Correspond to Works'],
+  ['荷馬是否自成一哲學宗派', 'If There Is a Sect in Philosophy According to Homer'],
+  ['德行是否為一門技藝', 'Whether Virtue Is an Art'],
+  ['人如何可以無憂而活', 'How a Man May Live without Sorrow'],
+  ['哲學的終極目的', 'What the End of Philosophy Is I'],
+  ['犬儒生活是否更可取', 'Whether the Life of a Cynic Is to Be Preferred'],
+  ['博雅學科是否有助於德行', 'Whether the Liberal Disciplines Contribute to Virtue'],
+  ['人能否因神聖分配而成為善人', 'Whether One May Become a Good Man through a Divine Allotment'],
+  ['善是否有大小：否定論', 'If Good Is Greater than Good: Negative'],
+  ['善是否有大小：肯定論', 'If Good Is Greater than Good: Affirmative'],
+  ['神既造善，惡從何來', 'Since Divinity Produces Good, Whence Do Evils Originate'],
+  ['蘇格拉底的守護靈是什麼', 'What the Daemon of Socrates Was'],
+  ['再論蘇格拉底的守護靈', 'Again Concerning the Daemon of Socrates'],
+  ['學習是否就是回憶', 'Whether Disciplines Are Reminiscences'],
+  ['詩人與哲人誰對諸神理解更佳', 'Whether Poets or Philosophers Conceived the Gods Better'],
+  ['祈禱是否必要', 'Whether It Is Necessary to Pray'],
+  ['論快樂：雖善而不穩定之一', 'Concerning Pleasure I'],
+  ['論快樂：雖善而不穩定之二', 'Concerning Pleasure II'],
+  ['再論快樂', 'Concerning Pleasure III'],
+  ['再論哲學的終極目的', 'What the End of Philosophy Is II'],
+  ['逆境亦能帶來益處', 'Advantage from Adverse Circumstances'],
+  ['哲人的言談適合一切題目', 'The Discourse of a Philosopher Is Adapted to Every Subject'],
+  ['人應如何對待朋友', 'How a Man Ought to Prepare Himself with Respect to a Friend'],
+  ['是否應為諸神立像', 'Whether Statues Should Be Dedicated to the Gods'],
+  ['蘇格拉底不在審判席自辯是否明智', 'Whether Socrates Did Well in Not Defending Himself'],
+  ['知識是什麼', 'What Science Is'],
+  ['身體與靈魂的疾病何者更有害', 'Whether Diseases of Body or Soul Are More Noxious'],
+]
+
+const MAXIMUS_TYRE_DISCOURSES: DazangWork[] = MAXIMUS_TYRE_TOPICS.map(([title, original], index) => ({
+  title_zh: `泰爾的馬克西母講辭第${index + 1}篇：${title}`,
+  title_orig: `Dissertation ${index + 1}: ${original}`,
+  author: '泰爾的馬克西母',
+  era: '約 2 世紀後半',
+  place: '羅馬帝國（泰爾／雅典／羅馬）',
+  language: '古希臘文',
+  source: 'pagan',
+  parent: '泰爾的馬克西母講辭四十一篇',
+  note: '來源：https://en.wikisource.org/wiki/The_Dissertations_of_Maximus_Tyrius（逐篇目錄與正文）',
+  intro: `泰爾的馬克西母以第二次智辯時期的公開講辭討論「${title}」，把中期柏拉圖主義、蘇格拉底倫理與傳統敬神實踐轉化為面向聽眾的勸諭。此篇在四十一篇標準篇號中自成單元，既反映二世紀巡迴哲人如何以演說塑造德行，也提供基督教講壇興起時同場競逐的外教宣講文本。`,
+}))
+
+const LIBANIUS_ORATIONS: DazangWork[] = Array.from({ length: 57 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `利巴尼烏斯講辭第${number}篇`,
+    title_orig: `Oration ${number} (Libanius)`,
+    author: '利巴尼烏斯',
+    era: '4 世紀',
+    place: '羅馬帝國安提阿',
+    language: '古希臘文',
+    source: 'pagan',
+    parent: '利巴尼烏斯講辭六十四篇',
+    note: `來源：https://catalog.perseus.org/catalog/urn:cts:greekLit:tlg2200.tlg004（Libanius, Orationes；第 ${number} 篇）`,
+    intro: `安提阿外教修辭家利巴尼烏斯的第 ${number} 篇標準篇號講辭，是其六十四篇傳世演說中的獨立文本。全集涵蓋皇帝頌辭、城市公共事務、教育辯護、宗教傳統與倫理勸告，直接呈現四世紀基督教化進程中希臘城邦講壇的另一種聲音；其公開說服方式亦是理解同時代教父宣講修辭的重要對照。`,
+  }
+})
 
 // ─────────────────────────────────────────────────────────────────────────
 // 古代基督教大藏經
@@ -2604,10 +2677,15 @@ export const ANCIENT_ERA: DazangEra = {
             ],
           },
           {
-            key: 'rival-cults', label: '並行密儀與傳教部', label_en: 'Rival Cults and Missions',
+            key: 'middle-platonist-exhortations', label: '中期柏拉圖勸諭部', label_en: 'Middle Platonist Exhortations',
             works: [
-              { title_zh: '摩尼普世傳教設計', title_orig: "Mani's Design of a Universal Missionary Religion", author: '摩尼', era: '3 世紀（216–274）', place: '薩珊波斯', language: '敘利亞文／中古波斯語', intro: '摩尼自覺融祆教、基督教與佛教而創普世傳教宗教，親撰七經、遣使東西、多語譯經以覆蓋天下。史上首個自覺「為普世傳教而設計」的宗教，與古代基督教並行競逐且互相滲透（奧古斯丁曾入其教九年）。列古代外藏，以見基督教同代最強勁的傳教對手與宗教宣傳自覺化的頂點。（本筆原誤置前基督教前藏「宣教前身」，依「年代決定歸屬、種子僅為標記」規則遷入古代外藏。）' },
-              { title_zh: '密特拉密儀的跨帝國傳布', title_orig: 'The Diffusion of the Mithraic Mysteries', author: '佚名（密特拉密儀傳統）', era: '約公元前 1 世紀—公元 4 世紀（羅馬期鼎盛）', place: '羅馬帝國（軍團與商路沿線）', language: '拉丁文／希臘文（多為圖像與銘刻）', intro: '源出伊朗密特拉神、於羅馬帝國期經軍團與商旅沿帝國傳布的密儀，以入教等級、共餐與屠牛聖像跨族群招徠，鼎盛於二至四世紀，與基督教在同一土壤競逐信眾。古代基督教最著名的並行密儀對手，其共餐與救贖意象常與聖餐相較。（原置前藏「宣教前身」，因所述為羅馬帝國期並行密儀而非公元前伊朗根，依年代規則遷入古代外藏。）' },
+              ...MAXIMUS_TYRE_DISCOURSES,
+            ],
+          },
+          {
+            key: 'late-antique-public-oratory', label: '晚期古代公共勸諭部', label_en: 'Late Antique Public Oratory',
+            works: [
+              ...LIBANIUS_ORATIONS,
             ],
           },
         ],
