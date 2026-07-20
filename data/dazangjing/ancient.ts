@@ -249,6 +249,34 @@ const HISTORIA_AUGUSTA_BIOGRAPHIES: DazangWork[] = HISTORIA_AUGUSTA_LIVES.map(([
   intro: `《奧古斯塔史》〈${titleZh}〉是自成篇界的皇帝或僭主傳記，屬哈德良至三世紀末諸帝系列。作品託名六位早期作者，實際約在四、五世紀之交由佚名文人編成，真實檔案、虛構文書與諷刺逸聞交錯；它反映基督教帝國形成時一位熟悉元老院傳統的作者如何重塑異教羅馬過去，故須批判使用卻不可忽略。`,
 }))
 
+function makePaganReferenceVolumes(config: {
+  titleZh: string; titleOrig: string; count: number; unitZh?: string; author: string; era: string; place: string; language: string; sourceUrl: string; focus: string
+}): DazangWork[] {
+  return Array.from({ length: config.count }, (_, index) => {
+    const number = index + 1
+    const unit = config.unitZh ?? '卷'
+    return {
+      title_zh: `${config.titleZh}第${number}${unit}`,
+      title_orig: `${config.titleOrig}, ${unit === '章' ? 'Chapter' : 'Book'} ${number}`,
+      author: config.author,
+      era: config.era,
+      place: config.place,
+      language: config.language,
+      source: 'pagan',
+      parent: config.titleZh,
+      note: `來源：${config.sourceUrl}（第 ${number} ${unit}）`,
+      intro: `${config.author}《${config.titleZh}》第 ${number} ${unit}是全集中有固定篇界的知識彙編單元，${config.focus}。此類書以摘錄、分類、問答或奇聞保存大量其他古籍已佚的材料，讓晚期古代讀者在一卷之內調度宗教、自然與人文知識；按原書卷章展開，能與基督教類書如何改寫古典知識作直接比較。`,
+    }
+  })
+}
+
+const ATHENAEUS_BOOKS = makePaganReferenceVolumes({ titleZh: '宴飲智者', titleOrig: 'Deipnosophistae', count: 15, author: '雅典奈烏斯', era: '約 2–3 世紀', place: '羅馬／瑙克拉提斯', language: '古希臘文', sourceUrl: 'https://openlibrary.org/works/OL1432306W', focus: '以宴席對話徵引飲食、祭禮、詩歌與古俗' })
+const POLLUX_BOOKS = makePaganReferenceVolumes({ titleZh: '名物辭典', titleOrig: 'Onomasticon', count: 10, author: '瑙克拉提斯的尤利烏斯‧波呂克斯', era: '約 2 世紀', place: '雅典', language: '古希臘文', sourceUrl: 'https://openlibrary.org/works/OL10686184W', focus: '按主題羅列希臘語名物、制度、技藝與祭儀詞彙' })
+const AELIAN_ANIMALS_BOOKS = makePaganReferenceVolumes({ titleZh: '動物本性志', titleOrig: 'De Natura Animalium', count: 17, author: '克勞狄‧埃利安', era: '約 2–3 世紀', place: '羅馬／普雷涅斯特', language: '古希臘文', sourceUrl: 'https://openlibrary.org/works/OL9232370W', focus: '彙集動物習性、神異故事與寓德解釋' })
+const AELIAN_MISCELLANY_BOOKS = makePaganReferenceVolumes({ titleZh: '雜史', titleOrig: 'Varia Historia', count: 14, author: '克勞狄‧埃利安', era: '約 2–3 世紀', place: '羅馬／普雷涅斯特', language: '古希臘文', sourceUrl: 'https://openlibrary.org/works/OL1724262W', focus: '編排哲人軼事、宗教奇聞、政治掌故與倫理例證' })
+const NONIUS_BOOKS = makePaganReferenceVolumes({ titleZh: '學術摘要辭典', titleOrig: 'De Compendiosa Doctrina', count: 20, author: '諾尼烏斯‧馬爾刻路斯', era: '約 4 世紀', place: '北非', language: '拉丁文', sourceUrl: 'https://openlibrary.org/works/OL5009485W', focus: '按詞義與文法分類摘錄古拉丁作家例句' })
+const SOLINUS_CHAPTERS = makePaganReferenceVolumes({ titleZh: '奇聞集', titleOrig: 'Collectanea Rerum Memorabilium', count: 20, unitZh: '章', author: '蓋烏斯‧尤利烏斯‧索利努斯', era: '約 3 世紀', place: '羅馬帝國', language: '拉丁文', sourceUrl: 'https://openlibrary.org/works/OL4526642W', focus: '逐地彙編地理、民族、動植物、寶石與怪異傳說' })
+
 // ─────────────────────────────────────────────────────────────────────────
 // 古代基督教大藏經
 //
@@ -3027,7 +3055,12 @@ export const ANCIENT_ERA: DazangEra = {
           {
             key: 'pagan-encyclopedia', label: '外教百科部', label_en: 'Pagan Encyclopedias',
             works: [
-              { title_zh: '博物志', source: 'pagan', intro: '一世紀羅馬博物學家老普林尼以拉丁文編纂的三十七卷巨著，網羅天文、地理、人類、動植物、礦物、醫藥與藝術，是羅馬世俗知識的總匯與古代百科全書的典範。作者於維蘇威火山爆發中殉於觀察。此書雖出自異教之手，其大量自然知識的精華選集仍被中世紀教會抄錄吸收，成為基督教百科著述取材的重要外教來源，故列於外藏對照。', title_orig: 'Naturalis Historia', author: '老普林尼', era: '1 世紀', place: '羅馬', language: '拉丁文', note: '羅馬世俗百科全書，精華選集被教會吸收' },
+              ...ATHENAEUS_BOOKS,
+              ...POLLUX_BOOKS,
+              ...AELIAN_ANIMALS_BOOKS,
+              ...AELIAN_MISCELLANY_BOOKS,
+              ...NONIUS_BOOKS,
+              ...SOLINUS_CHAPTERS,
             ],
           },
           {
