@@ -15,6 +15,21 @@ const SHULCHAN_ARUKH_ORACH_CHAYIM: DazangWork[] = Array.from({ length: 95 }, (_,
   }
 })
 
+const JOURNAL_OF_DISCOURSES_SERMONS: DazangWork[] = Array.from({ length: 96 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `《講論彙刊》講辭第${number}篇`,
+    title_orig: `Journal of Discourses, Discourse ${number}`,
+    author: '楊百翰、帕雷‧普拉特、約翰‧泰勒等後期聖徒領袖',
+    era: '1851–1886 年講述，1854–1886 年刊行',
+    place: '美國猶他領地鹽湖城等地',
+    language: '英文',
+    parent: '講論彙刊（Journal of Discourses）',
+    note: `來源：https://journalofdiscourses.com/；全刊順序第 ${number} 篇（另見 Wikisource 二十六卷目錄）`,
+    intro: `本篇為《講論彙刊》依二十六卷連續目錄排列的第 ${number} 篇公開講辭，出自十九世紀猶他後期聖徒領袖在會幕、總會或地方聚會的宣講。速記刊本保存救恩、聖職、聚集、家庭制度、移民建設及當時政治衝突等題材，也包含今日教團未必視為正式教義的歷史主張。各講辭都有講者、日期、場合與起訖頁碼，是可獨立核讀的宣道單元；此處按全刊次序著錄，不把二十六卷母刊另算作品。`,
+  }
+})
+
 // 近代基督教大藏經（按時代精神：人文主義‧宗教改革‧反改革‧宣教擴張‧敬虔與啟蒙）
 export const EARLY_MODERN_ERA: DazangEra = {
   key: 'early-modern',
@@ -2679,6 +2694,7 @@ export const EARLY_MODERN_ERA: DazangEra = {
         works: [
           { title_zh: '摩門教傳教冊', title_orig: 'A Voice of Warning', author: '帕雷‧普拉特', era: '1837', place: '美國紐約', language: '英文', intro: '耶穌基督後期聖徒教會早期使徒普拉特所撰的傳教手冊，是摩門教最早、流傳最廣的宣教文獻之一。書中以聖經預言為據，論證「復原的福音」與『摩門經』的權威，呼籲世人歸入新立的教會。文體仿傳統佈道而自成一系，廣供傳教士隨身使用。此冊呈現一個十九世紀美洲新興宗教如何借用基督教語彙與宣道形式，建立自身的差傳體系。', note: '後期聖徒教會自有經典，置外藏供宣道形態對照' },
           { title_zh: '巴哈伊宣道文集', title_orig: 'Tablets of Bahá’u’lláh', author: '巴哈歐拉', era: '1860s–1892', place: '波斯／鄂圖曼帝國', language: '波斯文／阿拉伯文', intro: '巴哈伊信仰創立者巴哈歐拉致眾君王、宗教領袖與信眾的書簡與宣諭結集。其宣講「諸教同源、人類一家」，自承為亞伯拉罕諸教所預期的新顯聖者，呼籲世界合一與和平。文體承襲波斯與伊斯蘭的啟示書寫傳統，兼具勸誡、訓諭與異象。此集呈現十九世紀中東一個跨亞伯拉罕傳統的新興宗教，如何以書信宣道向普世發聲。', note: '巴哈伊為獨立宗教，置外藏供宣道形態對照' },
+          ...JOURNAL_OF_DISCOURSES_SERMONS,
         ],
       },
       {
