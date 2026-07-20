@@ -483,56 +483,1041 @@ export const EARLY_MODERN_ERA: DazangEra = {
       ]
   },
   wai: {
-    summary: '外藏收近代啟蒙以降質疑、改造或另立啟示信仰的思想：自然神論與懷疑論瓦解傳統護教，理性宗教與泛神論重構神聖觀念，新興宗教神學則開出基督教傳統之外的新教義體系。',
-    divisions: [
-      {
-        key: 'deism-skepticism',
-        label: '自然神論與懷疑論部',
-        label_en: 'Deism and Skepticism',
-        desc: '啟蒙思想家以理性為尺度，否定神蹟與啟示，主張一位不干預世界的理性神，乃至懷疑宗教知識本身。',
-        works: [
-          { title_zh: '基督教並不神祕', title_orig: 'Christianity Not Mysterious', author: '約翰‧托蘭德', era: '一六九六', place: '英格蘭‧倫敦', language: '英文', intro: '愛爾蘭自然神論者托蘭德的代表作，主張真正的基督教不含任何超乎理性、違反理性的奧秘，凡稱「奧秘」者皆是後世神職人員的添加。托蘭德以洛克的理性主義為據，將啟示徹底理性化，否定一切無法理性解明的教義。此書點燃英國自然神論論戰，遭教會強烈譴責並公開焚燬，是理神論思潮的奠基文獻。' },
-          { title_zh: '基督教與創世同其久遠', title_orig: 'Christianity as Old as the Creation', author: '馬太‧廷得爾', era: '一七三〇', place: '英格蘭‧倫敦', language: '英文', intro: '被稱為「自然神論者聖經」的著作，廷得爾主張真正的宗教是與創世同其久遠的自然宗教，福音不過是對人人皆能藉理性知曉之自然律的重申。他否定特殊啟示的必要，認為一切真理皆可由理性與自然發現。此書是英國自然神論的高峰之作，激起眾多護教回應，包括巴特勒的類比論即為駁此而作。' },
-          { title_zh: '自然宗教對話錄', title_orig: 'Dialogues Concerning Natural Religion', author: '大衛‧休謨', era: '一七七九', place: '蘇格蘭‧愛丁堡', language: '英文', intro: '休謨身後出版的宗教哲學名著，藉斐羅、克里安提斯、第美亞三人對話，徹底檢視自然神學的論證。休謨假斐羅之口拆解設計論證：類比薄弱、惡的存在難解、由有限世界無法推知無限完美之神。全書論辯精彩,對自然神學的批判至今仍是宗教哲學的核心議題,深刻動搖了理性證明上帝存在的根基。' },
-          { title_zh: '論神蹟', title_orig: 'Of Miracles', author: '大衛‧休謨', era: '一七四八', place: '蘇格蘭‧愛丁堡', language: '英文', intro: '休謨人類理解研究第十章,提出反對相信神蹟的著名論證：神蹟乃對自然律的違反，而證明自然律的經驗證據遠強於任何人證；故理性人永不應僅憑見證接受神蹟為真。休謨並指出宗教神蹟見證多出於輕信、激情與虛榮。此論證對啟示宗教的歷史證據構成根本挑戰，成為近代懷疑論批判信仰的經典武器。' },
-          { title_zh: '哲學辭典宗教批判文選', title_orig: 'Dictionnaire philosophique', author: '伏爾泰', era: '一七六四', place: '法蘭西／瑞士', language: '法文', intro: '法國啟蒙領袖伏爾泰以辭典形式撰寫的批判文集，眾多條目尖銳抨擊教會的迷信、不寬容與教權專橫。伏爾泰並非無神論者而是自然神論者，信奉一位理性的造物主，卻痛恨建制宗教的偽善與迫害，高呼「鏟除卑鄙之物」。文筆機鋒犀利、嬉笑怒罵，是啟蒙時代反教權主義最具影響力的代表作。' },
-          { title_zh: '為神的理性敬拜者辯護', title_orig: 'Apologie oder Schutzschrift für die vernünftigen Verehrer Gottes', author: '赫爾曼‧塞繆爾‧雷馬魯斯', era: '一七七四至一七七八', place: '德意志‧漢堡', language: '德文', intro: '德國自然神論者雷馬魯斯生前不敢發表、由萊辛以「沃爾芬比特爾殘篇」之名陸續刊出的批判遺稿。雷馬魯斯以理性檢視聖經，否定神蹟與啟示，指耶穌乃失敗的猶太彌賽亞、復活為門徒所編造。此書開啟近代歷史耶穌的批判研究，引發德國神學界軒然大波，被視為理性主義聖經批判的先聲。' }
-        ]
-      },
-      {
-        key: 'rational-religion-pantheism',
-        label: '理性宗教與泛神論部',
-        label_en: 'Rational Religion and Pantheism',
-        desc: '斯賓諾莎、萊布尼茲、康德、黑格爾等哲人以理性重構神聖：或將神等同自然，或將宗教納入道德與精神的辯證體系。',
-        works: [
-          { title_zh: '神學政治論', title_orig: 'Tractatus Theologico-Politicus', author: '巴魯赫‧斯賓諾莎', era: '一六七〇', place: '荷蘭‧阿姆斯特丹', language: '拉丁文', intro: '斯賓諾莎匿名出版的劃時代著作，以理性批判方法考察聖經，主張聖經旨在教導順服與愛而非哲學真理，神蹟與預言當以自然解釋。書中倡言思想與信仰自由，論證國家應容許哲學探究。斯賓諾莎的泛神論將神等同於自然整體，徹底重塑神聖觀念。此書是近代聖經批判與政治自由主義的奠基文獻，當世即遭各方禁燬。' },
-          { title_zh: '神義論', title_orig: 'Essais de Théodicée', author: '哥特佛萊‧萊布尼茲', era: '一七一〇', place: '德意志‧漢諾威', language: '法文', intro: '萊布尼茲探討惡之問題的哲學名著，「神義論」一詞即由此書創立。萊布尼茲論證全善全能全知的上帝必創造「一切可能世界中最好的世界」，現世之惡乃整體完善所必需的成分。他區分形上之惡、自然之惡與道德之惡，調和神的善與惡的存在。此書是理性神學處理惡的問題的經典,後遭伏爾泰於『憨第德』中辛辣諷刺。' },
-          { title_zh: '單在理性界限內的宗教', title_orig: 'Die Religion innerhalb der Grenzen der bloßen Vernunft', author: '伊曼努爾‧康德', era: '一七九三', place: '普魯士‧柯尼斯堡', language: '德文', intro: '康德將宗教納入其道德哲學的綱領之作，主張宗教的本質在於道德，凡能在理性界限內辯護者方為真宗教。康德以哲學重釋根本惡、稱義與神國等基督教教義，將教會信仰還原為道德信仰，視耶穌為道德完善的典範。此書因觸怒普魯士當局而險遭查禁，是啟蒙理性宗教的最高表述，深刻影響後世自由派神學。' },
-          { title_zh: '宗教哲學講演錄', title_orig: 'Vorlesungen über die Philosophie der Religion', author: '黑格爾', era: '一八二一至一八三一', place: '普魯士‧柏林', language: '德文', intro: '黑格爾在柏林大學的宗教哲學講稿，由學生筆記輯成。黑格爾視宗教為絕對精神藉表象自我認識的階段，基督教為「絕對宗教」，道成肉身與三一論象徵神人合一的辯證真理。他將基督教教義轉譯為思辨哲學的概念，主張哲學與宗教同一內容而形式有別。此書深刻影響後世神學與宗教研究，亦催生左右兩派黑格爾門徒的分裂。' }
-        ]
-      },
-      {
-        key: 'new-religious-theology',
-        label: '新興宗教神學部',
-        label_en: 'New Religious Theology',
-        desc: '十九世紀興起於基督教傳統邊緣或之外的新宗教運動，發展出各自的啟示觀與神學體系。',
-        works: [
-          { title_zh: '已答之問', title_orig: 'Some Answered Questions', author: '阿博都巴哈', era: '一九〇八', place: '鄂圖曼‧阿卡', language: '波斯文', intro: '巴哈伊信仰領袖阿博都巴哈於餐桌談話中答覆西方信徒提問的輯錄，由克利福德‧巴尼夫人記錄。內容涵蓋聖經與古蘭經的詮釋、漸進啟示、靈魂與來生、進化與創造、基督與諸先知的本質等。阿博都巴哈以理性調和宗教與科學，闡發巴哈伊「諸教同源、漸進啟示」的核心教義，是該信仰最重要的教義問答著作之一。' },
-          { title_zh: '教義與聖約', title_orig: 'Doctrine and Covenants', author: '約瑟‧斯密等', era: '一八三五', place: '北美‧俄亥俄／密蘇里', language: '英文', intro: '摩門教（耶穌基督後期聖徒教會）的核心經典之一，輯錄創教者約瑟‧斯密及後繼領袖所宣稱領受的啟示。內容涉及教會組織、聖職體系、聖殿教儀、永恆婚姻與救恩計畫等獨特教義。此書與摩門經、無價珍珠並列為該教標準經典，是理解摩門神學體系的關鍵文獻，反映十九世紀美國新興宗教對基督教傳統的重大改造與擴充。' }
-        ]
-      }
-    ,
-      {
-        key: 'anti-trinitarian-radical',
-        label: '反三一與激進改革部',
-        label_en: 'Anti-Trinitarian and Radical Reformation',
-        desc: '宗教改革激進翼對尼西亞三一教義的否定，啟唯一神論與蘇西尼主義之先。',
-        works: [
-          { title_zh: '三位一體謬誤論七卷', title_orig: 'De Trinitatis erroribus libri septem', author: '塞爾維特（Michael Servetus）', era: '1531', place: '阿爾薩斯哈根諾（Hagenau）', language: '拉丁文', intro: '西班牙神學家塞爾維特（米迦勒‧塞爾韋圖斯，約 1511–1553）於 1531 年在哈根諾出版的反三位一體論著作，為宗教改革時代最激進的神學挑戰之一。全書七卷以聖經文本為據，主張尼西亞三位一體教義係希臘哲學污染之產物，耶穌非永恆的第二位格而是神性之子。此書同時觸怒天主教與改教陣營，終致塞爾維特 1553 年於日內瓦被審判火刑。本書為近代唯一神論與反尼西亞神學的奠基原典，具有不可忽略的神學史地位。' }
-        ]
-      }
+      "summary": "近代與基督教交鋒、對話、批判的他宗教哲學神學與世俗思想。歐洲自英國自然神論、法國啟蒙唯物論到德國的人本學還原與尼采的系譜學批判，形成對基督教最徹底的內部解構；猶太傳統以卡巴拉、哈西迪、猶太啟蒙與護教論戰回應；伊斯蘭世界有薩法維超越智慧學派與印度、阿拉伯的復興運動；南亞的梵社與吠檀多復興、錫蘭佛教護法論戰，以及明清中國的破邪闢邪與日本江戶排耶書，則構成非西方世界對基督教宣教最直接的思想抵抗。",
+      "divisions": [
+        {
+          "key": "deism",
+          "label": "自然神論與懷疑論部",
+          "label_en": "Deism & Scepticism",
+          "desc": "英國自然神論自赫伯特至潘恩——共同概念、祭司欺詐論、神蹟與預言的理性批判。",
+          "works": [
+            {
+              "title_zh": "基督教並不神祕",
+              "title_orig": "Christianity Not Mysterious",
+              "author": "約翰‧托蘭德",
+              "era": "一六九六",
+              "place": "英格蘭‧倫敦",
+              "language": "英文",
+              "intro": "愛爾蘭自然神論者托蘭德的代表作，主張真正的基督教不含任何超乎理性、違反理性的奧秘，凡稱「奧秘」者皆是後世神職人員的添加。托蘭德以洛克的理性主義為據，將啟示徹底理性化，否定一切無法理性解明的教義。此書點燃英國自然神論論戰，遭教會強烈譴責並公開焚燬，是理神論思潮的奠基文獻。"
+            },
+            {
+              "title_zh": "基督教與創世同其久遠",
+              "title_orig": "Christianity as Old as the Creation",
+              "author": "馬太‧廷得爾",
+              "era": "一七三〇",
+              "place": "英格蘭‧倫敦",
+              "language": "英文",
+              "intro": "被稱為「自然神論者聖經」的著作，廷得爾主張真正的宗教是與創世同其久遠的自然宗教，福音不過是對人人皆能藉理性知曉之自然律的重申。他否定特殊啟示的必要，認為一切真理皆可由理性與自然發現。此書是英國自然神論的高峰之作，激起眾多護教回應，包括巴特勒的類比論即為駁此而作。"
+            },
+            {
+              "title_zh": "自然宗教對話錄",
+              "title_orig": "Dialogues Concerning Natural Religion",
+              "author": "大衛‧休謨",
+              "era": "一七七九",
+              "place": "蘇格蘭‧愛丁堡",
+              "language": "英文",
+              "intro": "休謨身後出版的宗教哲學名著，藉斐羅、克里安提斯、第美亞三人對話，徹底檢視自然神學的論證。休謨假斐羅之口拆解設計論證：類比薄弱、惡的存在難解、由有限世界無法推知無限完美之神。全書論辯精彩,對自然神學的批判至今仍是宗教哲學的核心議題,深刻動搖了理性證明上帝存在的根基。"
+            },
+            {
+              "title_zh": "論神蹟",
+              "title_orig": "Of Miracles",
+              "author": "大衛‧休謨",
+              "era": "一七四八",
+              "place": "蘇格蘭‧愛丁堡",
+              "language": "英文",
+              "intro": "休謨人類理解研究第十章,提出反對相信神蹟的著名論證：神蹟乃對自然律的違反，而證明自然律的經驗證據遠強於任何人證；故理性人永不應僅憑見證接受神蹟為真。休謨並指出宗教神蹟見證多出於輕信、激情與虛榮。此論證對啟示宗教的歷史證據構成根本挑戰，成為近代懷疑論批判信仰的經典武器。"
+            },
+            {
+              "title_zh": "哲學辭典宗教批判文選",
+              "title_orig": "Dictionnaire philosophique",
+              "author": "伏爾泰",
+              "era": "一七六四",
+              "place": "法蘭西／瑞士",
+              "language": "法文",
+              "intro": "法國啟蒙領袖伏爾泰以辭典形式撰寫的批判文集，眾多條目尖銳抨擊教會的迷信、不寬容與教權專橫。伏爾泰並非無神論者而是自然神論者，信奉一位理性的造物主，卻痛恨建制宗教的偽善與迫害，高呼「鏟除卑鄙之物」。文筆機鋒犀利、嬉笑怒罵，是啟蒙時代反教權主義最具影響力的代表作。"
+            },
+            {
+              "title_zh": "為神的理性敬拜者辯護",
+              "title_orig": "Apologie oder Schutzschrift für die vernünftigen Verehrer Gottes",
+              "author": "赫爾曼‧塞繆爾‧雷馬魯斯",
+              "era": "一七七四至一七七八",
+              "place": "德意志‧漢堡",
+              "language": "德文",
+              "intro": "德國自然神論者雷馬魯斯生前不敢發表、由萊辛以「沃爾芬比特爾殘篇」之名陸續刊出的批判遺稿。雷馬魯斯以理性檢視聖經，否定神蹟與啟示，指耶穌乃失敗的猶太彌賽亞、復活為門徒所編造。此書開啟近代歷史耶穌的批判研究，引發德國神學界軒然大波，被視為理性主義聖經批判的先聲。"
+            },
+            {
+              "title_zh": "論真理",
+              "title_orig": "De veritate",
+              "author": "切爾伯里的赫伯特（Edward Herbert of Cherbury）",
+              "era": "一六二四（一六三三、一六四五增訂）",
+              "place": "法蘭西‧巴黎／英格蘭‧倫敦",
+              "language": "拉丁文",
+              "intro": "英國自然神論之父的認識論與宗教哲學主著，提出人心「共同概念」與普世宗教五條真理，成為自然神論的信經雛型。"
+            },
+            {
+              "title_zh": "論外邦人的宗教及其謬誤之緣由",
+              "title_orig": "De religione gentilium",
+              "author": "切爾伯里的赫伯特",
+              "era": "一六六三（遺著）",
+              "place": "荷蘭‧阿姆斯特丹",
+              "language": "拉丁文",
+              "intro": "以比較宗教方法考察異教諸民族信仰，論證各族皆保有五條共同宗教概念，謬誤出於祭司與政治操弄；近代比較宗教學先驅。"
+            },
+            {
+              "title_zh": "神蹟並不違反自然律",
+              "title_orig": "Miracles, no Violations of the Laws of Nature",
+              "author": "查爾斯‧布朗特",
+              "era": "一六八三",
+              "place": "英格蘭‧倫敦",
+              "language": "英文",
+              "intro": "取斯賓諾莎與霍布斯之說改寫，主張神蹟不過是人未識其因的自然事件；比休謨〈論神蹟〉早六十餘年。"
+            },
+            {
+              "title_zh": "大哉以弗所人的亞底米",
+              "title_orig": "Great is Diana of the Ephesians",
+              "author": "查爾斯‧布朗特",
+              "era": "一六八〇",
+              "place": "英格蘭‧倫敦",
+              "language": "英文",
+              "intro": "追溯偶像崇拜與獻祭起源，主張祭祀與神職特權皆僧侶謀利之發明，是英國「祭司欺詐論」的奠基文本。"
+            },
+            {
+              "title_zh": "自由思想論",
+              "title_orig": "A Discourse of Free-Thinking",
+              "author": "安東尼‧柯林斯（Anthony Collins）",
+              "era": "一七一三",
+              "place": "英格蘭‧倫敦",
+              "language": "英文",
+              "intro": "主張人對一切宗教命題皆有以證據自行判斷之權，指教士壟斷解釋權為真理之敵；引發本特利、斯威夫特等大規模論戰。"
+            },
+            {
+              "title_zh": "基督教之根據與理由論",
+              "title_orig": "A Discourse of the Grounds and Reasons of the Christian Religion",
+              "author": "安東尼‧柯林斯",
+              "era": "一七二四",
+              "place": "英格蘭‧倫敦",
+              "language": "英文",
+              "intro": "論證新約所引舊約預言字面上皆指當時猶太史事，惟寓意解經方能牽合於耶穌，動搖預言論證；引發數十年預言論戰。"
+            },
+            {
+              "title_zh": "救主神蹟論第一篇",
+              "title_orig": "A Discourse on the Miracles of our Saviour",
+              "author": "托馬斯‧伍爾斯頓（Thomas Woolston）",
+              "era": "一七二七",
+              "place": "英格蘭‧倫敦",
+              "language": "英文",
+              "parent": "救主神蹟論六篇",
+              "intro": "以奧利金寓意解經為據，主張福音書神蹟按字面理解則荒謬，須全作靈意解；銷量以萬計，最聳動的宗教論戰文本。"
+            },
+            {
+              "title_zh": "神蹟能力自由探究",
+              "title_orig": "A Free Inquiry into the Miraculous Powers…",
+              "author": "康耶斯‧米德爾頓（Conyers Middleton）",
+              "era": "一七四九",
+              "place": "英格蘭‧倫敦（R. Manby & H. S. Cox 出版；作者任職劍橋三一學院／大學圖書館）",
+              "language": "英文",
+              "intro": "以史學考據論證教父時代所稱神蹟毫無可信見證，引爆十八世紀最大神學論戰；出版後聲勢一度蓋過休謨一七四八年〈論神蹟〉（休謨自陳其論文被此書掩蓋），並影響吉朋，是教會史批判研究的分水嶺。"
+            },
+            {
+              "title_zh": "理性時代‧第一部",
+              "title_orig": "The Age of Reason, Part the First",
+              "author": "托馬斯‧潘恩（Thomas Paine）",
+              "era": "一七九四",
+              "place": "法蘭西‧巴黎",
+              "language": "英文",
+              "parent": "理性時代",
+              "intro": "自陳「我信仰一位神，別無其他」，肯定造物主可由自然得知，斥建制宗教為權力發明；使自然神論成為跨大西洋大眾運動。"
+            },
+            {
+              "title_zh": "人、風尚、意見與時代之特徵",
+              "title_orig": "Characteristicks of Men, Manners, Opinions, Times",
+              "author": "第三代沙夫茨伯里伯爵 安東尼‧艾希利‧庫珀（Anthony Ashley Cooper, 3rd Earl of Shaftesbury, 1671–1713）",
+              "era": "一七一一（一七一四修訂增插圖版；一七二三第三版）",
+              "place": "英格蘭‧倫敦",
+              "language": "英文",
+              "extent": "論文集三卷",
+              "intro": "沙夫茨伯里自輯的論文總集，主張人天生具有「道德感」，善惡之辨源於內在的品味與情感，不待神的賞罰或啟示律令。他以優雅的對話與隨筆文體提倡自然的宗教情操，反對狂熱與教條，開英國道德感學派之先河，並深刻影響哈奇森、休謨與蘇格蘭啟蒙的倫理學傳統。"
+            }
+          ]
+        },
+        {
+          "key": "rational-pantheism",
+          "label": "理性宗教與泛神論部",
+          "label_en": "Rational Religion & Pantheism",
+          "desc": "斯賓諾莎、萊布尼茲、康德、黑格爾——以理性重構神、惡與宗教的哲學體系。",
+          "works": [
+            {
+              "title_zh": "神學政治論",
+              "title_orig": "Tractatus Theologico-Politicus",
+              "author": "巴魯赫‧斯賓諾莎",
+              "era": "一六七〇",
+              "place": "荷蘭‧阿姆斯特丹",
+              "language": "拉丁文",
+              "intro": "斯賓諾莎匿名出版的劃時代著作，以理性批判方法考察聖經，主張聖經旨在教導順服與愛而非哲學真理，神蹟與預言當以自然解釋。書中倡言思想與信仰自由，論證國家應容許哲學探究。斯賓諾莎的泛神論將神等同於自然整體，徹底重塑神聖觀念。此書是近代聖經批判與政治自由主義的奠基文獻，當世即遭各方禁燬。"
+            },
+            {
+              "title_zh": "神義論",
+              "title_orig": "Essais de Théodicée",
+              "author": "哥特佛萊‧萊布尼茲",
+              "era": "一七一〇",
+              "place": "德意志‧漢諾威",
+              "language": "法文",
+              "intro": "萊布尼茲探討惡之問題的哲學名著，「神義論」一詞即由此書創立。萊布尼茲論證全善全能全知的上帝必創造「一切可能世界中最好的世界」，現世之惡乃整體完善所必需的成分。他區分形上之惡、自然之惡與道德之惡，調和神的善與惡的存在。此書是理性神學處理惡的問題的經典,後遭伏爾泰於『憨第德』中辛辣諷刺。"
+            },
+            {
+              "title_zh": "單在理性界限內的宗教",
+              "title_orig": "Die Religion innerhalb der Grenzen der bloßen Vernunft",
+              "author": "伊曼努爾‧康德",
+              "era": "一七九三",
+              "place": "普魯士‧柯尼斯堡",
+              "language": "德文",
+              "intro": "康德將宗教納入其道德哲學的綱領之作，主張宗教的本質在於道德，凡能在理性界限內辯護者方為真宗教。康德以哲學重釋根本惡、稱義與神國等基督教教義，將教會信仰還原為道德信仰，視耶穌為道德完善的典範。此書因觸怒普魯士當局而險遭查禁，是啟蒙理性宗教的最高表述，深刻影響後世自由派神學。"
+            },
+            {
+              "title_zh": "宗教哲學講演錄",
+              "title_orig": "Vorlesungen über die Philosophie der Religion",
+              "author": "黑格爾",
+              "era": "一八二一至一八三一",
+              "place": "普魯士‧柏林",
+              "language": "德文",
+              "intro": "黑格爾在柏林大學的宗教哲學講稿，由學生筆記輯成。黑格爾視宗教為絕對精神藉表象自我認識的階段，基督教為「絕對宗教」，道成肉身與三一論象徵神人合一的辯證真理。他將基督教教義轉譯為思辨哲學的概念，主張哲學與宗教同一內容而形式有別。此書深刻影響後世神學與宗教研究，亦催生左右兩派黑格爾門徒的分裂。"
+            },
+            {
+              "title_zh": "倫理學",
+              "title_orig": "Ethica, ordine geometrico demonstrata",
+              "author": "斯賓諾莎（Benedictus de Spinoza）",
+              "era": "一六六一至一六七五年撰；一六七七年遺著刊行",
+              "place": "尼德蘭‧海牙—阿姆斯特丹",
+              "language": "拉丁文",
+              "intro": "以幾何次序推演，主張唯一實體「神即自然」，取消位格神、神蹟與目的因；泛神論之爭與德國唯心論的共同源頭。"
+            }
+          ]
+        },
+        {
+          "key": "enlightenment-atheism",
+          "label": "啟蒙無神論與唯物論部",
+          "label_en": "Enlightenment Atheism & Materialism",
+          "desc": "法國啟蒙的唯物論與無神論——霍爾巴赫、梅利耶、拉美特利、狄德羅、盧梭的自然宗教。",
+          "works": [
+            {
+              "title_zh": "自然的體系，或物理世界與道德世界的法則",
+              "title_orig": "Système de la nature",
+              "author": "霍爾巴赫男爵（託名 Mirabaud）",
+              "era": "一七七〇",
+              "place": "倫敦（實為阿姆斯特丹／巴黎地下印行）",
+              "language": "法文",
+              "extent": "全二卷",
+              "intro": "時稱「無神論者的聖經」，以物質、運動與必然性解釋自然與人，否認靈魂不朽與第一因；遭巴黎高等法院焚燬仍風行全歐。"
+            },
+            {
+              "title_zh": "梅利耶遺書",
+              "title_orig": "Mémoire des pensées et des sentiments de Jean Meslier（Testament）",
+              "author": "讓‧梅利耶（Jean Meslier）",
+              "era": "約一七二〇年代撰成（生前秘密撰寫，一七二九年卒時遺留手稿）；伏爾泰一七六二年刊行節本，一八六四年阿姆斯特丹首次全文刊行",
+              "place": "法蘭西‧阿登地區艾特雷皮尼（舊屬香檳省，全題作「艾特雷皮尼與比伊本堂神父」）",
+              "language": "法文",
+              "extent": "手稿逾千頁；一八六四年 Rudolf Charles 版全三卷",
+              "intro": "本堂神父臨終手稿，自承終身不信，逐章駁斥啟示、神蹟與神的存在，並抨擊教會與貴族壓迫農民；歐洲第一部明確的無神論長篇著作。"
+            },
+            {
+              "title_zh": "人是機器",
+              "title_orig": "L'Homme machine",
+              "author": "拉美特利（Julien Offray de La Mettrie）",
+              "era": "一七四七年成稿，一七四八年刊行",
+              "place": "萊頓",
+              "language": "法文",
+              "intro": "以醫學經驗把笛卡兒的動物機器推至人身，主張思想是腦的功能；十八世紀機械唯物論最著名的宣言。"
+            },
+            {
+              "title_zh": "達朗貝爾之夢",
+              "title_orig": "Le Rêve de d'Alembert（含前後談話）",
+              "author": "狄德羅",
+              "era": "一七六九年成稿，一八三〇年首刊",
+              "place": "巴黎",
+              "language": "法文",
+              "extent": "三篇對話合一",
+              "intro": "三聯對話闡述一元動態唯物論：物質普遍具感受性，意識由分子組織而生；十八世紀最深刻的唯物論文獻。"
+            },
+            {
+              "title_zh": "基督教揭祕",
+              "title_orig": "Le Christianisme dévoilé",
+              "author": "霍爾巴赫（託名 Boulanger）",
+              "era": "一七六六",
+              "place": "南錫／阿姆斯特丹地下印行",
+              "language": "法文",
+              "intro": "反教系列開山之作，逐項檢討基督教教義原理與社會效果，論證其滋長狂熱、分裂與暴政。"
+            },
+            {
+              "title_zh": "論精神",
+              "title_orig": "De l'esprit",
+              "author": "愛爾維修（Claude-Adrien Helvétius）",
+              "era": "一七五八",
+              "place": "巴黎（Durand）",
+              "language": "法文",
+              "intro": "以感覺論主張德行是正確理解的自利與良好立法的產物，宗教制裁多餘；遭索邦譴責焚燬，引發最大查禁風波。"
+            },
+            {
+              "title_zh": "哲學思想錄",
+              "title_orig": "Pensées philosophiques",
+              "author": "德尼‧狄德羅（Denis Diderot）",
+              "era": "一七四六",
+              "place": "海牙（實為巴黎）",
+              "language": "法文",
+              "intro": "六十二則短章，由自然神論論證走向對啟示宗教的懷疑；出版即遭焚，是狄德羅邁向無神唯物論的第一步。"
+            },
+            {
+              "title_zh": "人類精神進步史表綱要",
+              "title_orig": "Esquisse d'un tableau historique des progrès de l'esprit humain",
+              "author": "孔多塞侯爵",
+              "era": "一七九四年成稿，一七九五年身後出版",
+              "place": "巴黎",
+              "language": "法文",
+              "intro": "把人類史分十階段，敘理性掙脫祭司與神權，預言宗教偏見終將消亡；深刻影響孔德實證主義與世俗化理論。"
+            },
+            {
+              "title_zh": "薩瓦助理司鐸的信仰告白",
+              "title_orig": "Profession de foi du vicaire savoyard",
+              "author": "盧梭（Jean-Jacques Rousseau）",
+              "era": "一七六二",
+              "place": "阿姆斯特丹／巴黎",
+              "language": "法文",
+              "parent": "愛彌兒，或論教育",
+              "intro": "以良心與內在情感為據的自然宗教，既反唯物論亦拒啟示與教會權威；導致本書遭焚、作者流亡，深刻形塑自由派新教。"
+            },
+            {
+              "title_zh": "廢墟，或帝國興衰之默想",
+              "title_orig": "Les Ruines, ou Méditation sur les révolutions des empires",
+              "author": "沃爾內（Constantin-François Volney）",
+              "era": "一七九一",
+              "place": "巴黎（一說日內瓦刊行，一七九二年巴黎 Desenne 版流通最廣）",
+              "language": "法文",
+              "intro": "於巴爾米拉廢墟冥想帝國衰亡，歸罪神權政治；末章萬國宗教大會使諸教當面對質，影響美國自然神論與比較神話學。"
+            }
+          ]
+        },
+        {
+          "key": "german-critique",
+          "label": "德國宗教批判部（青年黑格爾派與人本學無神論）",
+          "label_en": "German Religious Critique",
+          "desc": "費爾巴哈的人本學還原、鮑威爾與施特勞斯的福音書歷史批判、馬克思與施蒂納的宗教批判。",
+          "works": [
+            {
+              "title_zh": "基督教的本質",
+              "title_orig": "Das Wesen des Christenthums",
+              "author": "費爾巴哈（Ludwig Feuerbach）",
+              "era": "一八四一初版，一八四三二版",
+              "place": "德國萊比錫",
+              "language": "德文",
+              "intro": "主張神學的祕密其實是人類學，上帝是人把類本質異化投射到天上的產物；為馬克思、恩格斯的宗教批判定調。"
+            },
+            {
+              "title_zh": "被揭露的基督教",
+              "title_orig": "Das entdeckte Christenthum",
+              "author": "布魯諾‧鮑威爾",
+              "era": "一八四三",
+              "place": "瑞士蘇黎世與溫特圖爾",
+              "language": "德文",
+              "intro": "最激烈的反基督教檄文，判基督教使自我意識麻痺；印成即遭查禁銷毀，長期被視為佚書。"
+            },
+            {
+              "title_zh": "黑格爾法哲學批判導言",
+              "title_orig": "Zur Kritik der Hegel'schen Rechtsphilosophie. Einleitung",
+              "author": "卡爾‧馬克思",
+              "era": "一八四三年撰，一八四四年刊",
+              "place": "法國巴黎",
+              "language": "德文",
+              "parent": "《德法年鑑》",
+              "intro": "馬克思早期宗教批判的綱領性文獻，「宗教是人民的鴉片」名句即出於此。他承接費爾巴哈的人本學還原，宣告「對宗教的批判已經完成」，主張宗教是被壓迫者無可奈何的嘆息與虛幻慰藉，因此批判的任務須從天國轉向塵世、從神學轉向對現實社會關係與政治經濟的批判。"
+            },
+            {
+              "title_zh": "唯一者及其所有物",
+              "title_orig": "Der Einzige und sein Eigenthum",
+              "author": "馬克斯‧施蒂納",
+              "era": "一八四四",
+              "place": "德國萊比錫",
+              "language": "德文",
+              "intro": "把宗教批判推到極端：人類、理性、道德乃至類本質皆為新神；刺激馬克思寫下《德意志意識形態》長篇反駁。"
+            },
+            {
+              "title_zh": "耶穌傳——批判考訂",
+              "title_orig": "Das Leben Jesu, kritisch bearbeitet",
+              "author": "施特勞斯（David Friedrich Strauss）",
+              "era": "一八三五至一八三六",
+              "place": "德國圖賓根",
+              "language": "德文",
+              "extent": "全二卷",
+              "intro": "另立「神話」範疇，主張福音敘事是初代群體以舊約期待為模子生成的無意識神話；歷史耶穌研究的分水嶺。"
+            },
+            {
+              "title_zh": "符類福音史批判",
+              "title_orig": "Kritik der evangelischen Geschichte der Synoptiker（第一、二卷，1841；第三卷題作 Kritik der evangelischen Geschichte der Synoptiker und des Johannes，1842）",
+              "author": "布魯諾‧鮑威爾",
+              "era": "一八四一至一八四二",
+              "place": "德國萊比錫（Otto Wigand，第一、二卷）、布倫瑞克（Fr. Otto，第三卷）",
+              "language": "德文",
+              "extent": "全三卷",
+              "intro": "主張福音書是個別作者的文學創作，馬可最先虛構敘事框架，由此推出耶穌歷史性無從證立；作者因而被撤銷教職。"
+            },
+            {
+              "title_zh": "一切啟示之批判的嘗試",
+              "title_orig": "Versuch einer Kritik aller Offenbarung",
+              "author": "費希特（J. G. Fichte）",
+              "era": "一七九二初版，一七九三二版",
+              "place": "普魯士柯尼斯堡（今俄羅斯加里寧格勒）",
+              "language": "德文",
+              "intro": "以康德實踐理性為尺度追問啟示如何可能，把啟示的合法性完全繫於道德主體；初版匿名一度被誤為康德之作。"
+            }
+          ]
+        },
+        {
+          "key": "life-philosophy",
+          "label": "生命哲學與悲觀主義部",
+          "label_en": "Life-Philosophy & Pessimism",
+          "desc": "叔本華的意志形上學與尼采對基督教道德的系譜學批判。",
+          "works": [
+            {
+              "title_zh": "作為意志與表象的世界",
+              "title_orig": "Die Welt als Wille und Vorstellung",
+              "author": "叔本華（Arthur Schopenhauer）",
+              "era": "一八一九初版（一八一八年底印行、標記一八一九），一八四四增補二版",
+              "place": "德國萊比錫",
+              "language": "德文",
+              "extent": "初版一卷，二版增補為二卷",
+              "intro": "以世界為盲目意志之客體化，救贖在意志的自我否定，並取吠檀多與佛教解脫觀為典範；為十九世紀歐洲哲學正面援引印度宗教思想的代表性著作。"
+            },
+            {
+              "title_zh": "敵基督者——對基督教的詛咒",
+              "title_orig": "Der Antichrist. Fluch auf das Christenthum",
+              "author": "尼采",
+              "era": "一八八八年撰，一八九五年出版",
+              "place": "德國萊比錫／義大利都靈",
+              "language": "德文",
+              "intro": "區分耶穌其人與保羅所創的教會宗教，指後者以怨恨與罪的觀念系統性敵視生命，末以反基督教法令宣告價值重估。"
+            },
+            {
+              "title_zh": "論道德的系譜（道德譜系學）",
+              "title_orig": "Zur Genealogie der Moral. Eine Streitschrift",
+              "author": "尼采",
+              "era": "一八八七",
+              "place": "德國萊比錫",
+              "language": "德文",
+              "extent": "序言一篇＋三篇論文",
+              "intro": "分論善惡對立出於怨恨、罪疚源於債務關係、禁欲理想如何賦予苦難意義；為基督教道德提供發生學解剖。"
+            }
+          ]
+        },
+        {
+          "key": "kabbalah-hasidism",
+          "label": "猶太卡巴拉與哈西迪部",
+          "label_en": "Kabbalah & Hasidism",
+          "desc": "盧里亞派卡巴拉的流溢與輪迴之說，及東歐哈西迪運動的靈修經典。",
+          "works": [
+            {
+              "title_zh": "生命之樹",
+              "title_orig": "עץ חיים / ʻEts ḥayim",
+              "author": "哈依姆‧維塔爾",
+              "era": "約一五七三至一五九〇年撰；一七八二年科雷茨初刊",
+              "place": "采法特（撰）／科雷茨（刊）",
+              "language": "希伯來文",
+              "intro": "魯利亞卡巴拉的體系總綱，以收縮、破器、修補三環節重構神聖流溢；近世猶太神秘主義最具支配力的架構。"
+            },
+            {
+              "title_zh": "石榴園",
+              "title_orig": "פרדס רימונים / Pardes rimonim",
+              "author": "摩西‧柯多維羅",
+              "era": "一五四八年撰；一五九一至九二年刊",
+              "place": "采法特／克拉科夫",
+              "language": "希伯來文",
+              "intro": "魯利亞之前采法特卡巴拉集大成之作，分三十二門系統整理十輝耀學說，調和神之超越與流溢顯現。"
+            },
+            {
+              "title_zh": "輪迴之書",
+              "title_orig": "ספר הגלגולים / Sefer ha-Gilgulim",
+              "author": "哈依姆‧維塔爾",
+              "era": "十六世紀末撰；一六八四年法蘭克福初刊",
+              "place": "采法特／法蘭克福",
+              "language": "希伯來文",
+              "intro": "魯利亞派靈魂輪迴論專著，論靈魂之根、火花分散與附體機制，把個人命運納入宇宙修補的大敘事。"
+            },
+            {
+              "title_zh": "坦尼亞",
+              "title_orig": "ליקוטי אמרים – תניא / Liḳuṭe amarim – Tanya",
+              "author": "利亞迪的施紐爾‧扎爾曼（Shneur Zalman of Liadi, 1745–1812）",
+              "era": "一七九六年（希伯來曆五五五七年基斯流月）初刊",
+              "place": "烏克蘭‧斯拉武塔（Slavuta，首刊地）；作者駐錫地為白俄羅斯‧利奧茲納—利亞迪",
+              "language": "希伯來文",
+              "intro": "哈巴德派根本典籍，被譽為「哈西迪派的成文律法」，以中間人為修行典型並提出徹底的泛在神論。"
+            },
+            {
+              "title_zh": "其言傳於雅各",
+              "title_orig": "מגיד דבריו ליעקב / Magid devarav le-Yaʻaḳov",
+              "author": "梅茲里奇的大馬吉德‧多夫‧貝爾",
+              "era": "一七八一年科雷茨初刊",
+              "place": "波蘭—沃里尼亞‧梅茲里奇",
+              "language": "希伯來文",
+              "intro": "哈西迪派第一部系統性教義文獻，以「無」為神人相接之處，論自我消解與義人的中介職分。"
+            },
+            {
+              "title_zh": "摩哈蘭語錄",
+              "title_orig": "ליקוטי מוהר\"ן / Liḳuṭe Moharan",
+              "author": "布拉茨拉夫的納賀曼",
+              "era": "一八〇八年初刊，續編一八一一年",
+              "place": "烏克蘭‧奧斯特羅（Ostroh，卷一一八〇八初刊）／莫吉列夫（Mogilev，卷二一八一一）；著述地為布拉茨拉夫—烏曼",
+              "language": "希伯來文",
+              "intro": "以奔放象徵論信心與懷疑的辯證、孤獨傾訴與喜樂的醫治力；因正視信仰危機而屢被近代宗教心理探討援引。"
+            }
+          ]
+        },
+        {
+          "key": "jewish-philosophy-ethics",
+          "label": "猶太哲學與倫理教化部",
+          "label_en": "Jewish Philosophy & Ethical Literature",
+          "desc": "布拉格馬哈拉爾的猶太性思辨、盧扎托的靈修倫理、德羅西的歷史批判與門德爾松的猶太啟蒙。",
+          "works": [
+            {
+              "title_zh": "以色列的榮耀",
+              "title_orig": "תפארת ישראל / Tifʼeret Yiśraʼel",
+              "author": "布拉格的馬哈拉爾（Judah Loew ben Bezalel）",
+              "era": "約一五八九至一五九九年間撰於布拉格；一五九九年（希伯來曆五三五九年）威尼斯初刊",
+              "place": "撰於波希米亞‧布拉格；初刊於義大利‧威尼斯（Daniel Zanetti 印行）",
+              "language": "希伯來文",
+              "intro": "論妥拉與誡命之尊榮，闡述以色列（猶太民族）因領受妥拉而具的形上地位；以形式與質料等經院哲學語彙重釋選民觀與行誡命之理由（含「不解其因是否仍當行」之辯）。傳統上與五旬節（Shavuot）授律主題相繫。"
+            },
+            {
+              "title_zh": "以色列的永恆",
+              "title_orig": "נצח ישראל / Netsaḥ Yiśraʼel",
+              "author": "布拉格的馬哈拉爾",
+              "era": "一五九九年撰刊",
+              "place": "布拉格",
+              "language": "希伯來文",
+              "intro": "論流散與救贖，視流亡為違反自然秩序的暫時狀態，故救贖必然來到；近世猶太救贖論代表作。"
+            },
+            {
+              "title_zh": "神的大能",
+              "title_orig": "גבורות השם / Gevurot ha-Shem",
+              "author": "布拉格的馬哈拉爾",
+              "era": "一五八二年初刊",
+              "place": "布拉格／克拉科夫",
+              "language": "希伯來文",
+              "intro": "布拉格馬哈拉爾以出埃及敘事為軸心，論神蹟與自然秩序的關係。他反對邁蒙尼德一系將神蹟理性化、化約為自然現象的解釋，主張神蹟屬於比自然更高層級的實在，是神直接介入歷史的印記。書中亦闡發以色列受揀選的形上學意義，是猶太反理性主義神學的重要著作。"
+            },
+            {
+              "title_zh": "正直者之路",
+              "title_orig": "מסילת ישרים / Mesilat yesharim",
+              "author": "盧扎托（Ramḥal）",
+              "era": "一七三八年撰；一七四〇年阿姆斯特丹初刊",
+              "place": "帕多瓦—阿姆斯特丹",
+              "language": "希伯來文",
+              "intro": "逐級論謹慎至聖潔的靈修進程之書，十九世紀成為立陶宛道德運動核心讀本，至今仍是猶太倫理學第一教材。"
+            },
+            {
+              "title_zh": "主之道",
+              "title_orig": "דרך ה׳ / Derekh Adonai",
+              "author": "盧扎托（Ramḥal）",
+              "era": "十八世紀上半撰",
+              "place": "帕多瓦／阿姆斯特丹",
+              "language": "希伯來文",
+              "intro": "四部教義綱要，把卡巴拉宇宙論轉譯為可教授的系統神學；近世猶太最成功的教義綜合嘗試。"
+            },
+            {
+              "title_zh": "明眸",
+              "title_orig": "מאור עינים / Meʼor ʻenayim",
+              "author": "亞撒利雅‧德‧羅西",
+              "era": "一五七三年曼圖亞初刊",
+              "place": "義大利‧曼圖亞—費拉拉",
+              "language": "希伯來文",
+              "intro": "引斐洛、約瑟夫斯與希臘羅馬史料質疑傳統猶太紀年，把人文主義文獻批判引入猶太學術；猶太科學研究的遠祖。"
+            },
+            {
+              "title_zh": "耶路撒冷，或論宗教權力與猶太教",
+              "title_orig": "Jerusalem, oder über religiöse Macht und Judentum",
+              "author": "摩西‧門德爾松",
+              "era": "一七八三年柏林刊",
+              "place": "普魯士‧柏林",
+              "language": "德文",
+              "intro": "主張國家與教會職權分立、宗教不得強制，並界定猶太教非啟示教義而是啟示的立法；近代政教關係論述經典。"
+            }
+          ]
+        },
+        {
+          "key": "jewish-polemic",
+          "label": "猶太護教論戰部",
+          "label_en": "Jewish Anti-Christian Polemics",
+          "desc": "特羅基、莫德納、奧羅比奧等對基督教教義與經文詮釋的系統駁議。",
+          "works": [
+            {
+              "title_zh": "信仰之堅固",
+              "title_orig": "חזוק אמונה / Ḥizzuq emunah",
+              "author": "特羅基的以撒",
+              "era": "一五九三年撰；一六八一年附拉丁譯刊出",
+              "place": "立陶宛‧特拉凱",
+              "language": "希伯來文（多語譯本）",
+              "intro": "近代最具影響力的猶太反基督教護教書，作者為立陶宛卡拉派（Karaite）猶太學者；駁彌賽亞論證並指新約矛盾。一五九三年成稿，作者次年辭世後由門生約瑟‧馬林諾夫斯基編定；一六八一年由瓦根賽爾（J. C. Wagenseil）收入《撒但的火箭》(Tela Ignea Satanae) 附拉丁譯刊出，反為啟蒙作家（伏爾泰等）所用。一八五一年 Moses Mocatta 出英譯《Faith Strengthened》。"
+            },
+            {
+              "title_zh": "盾與櫓（磐楯與大盾）",
+              "title_orig": "מאמר מגן וצנה / Maʼamar Magen ve-tsinah",
+              "author": "里昂‧莫德納",
+              "era": "約一六二六年撰；一八五六年由亞伯拉罕‧蓋格於布雷斯勞首刊",
+              "place": "德國‧布雷斯勞（刊行地；撰於義大利‧威尼斯）",
+              "language": "希伯來文",
+              "intro": "莫德納對匿名之作《愚人之聲》(Kol Sakhal) 質疑口傳律法與拉比傳統的逐條駁覆，是為拉比猶太教辯護的護教之作；一八五六年蓋格刊本另附《盾與劍》(Magen va-Ḥerev) 節本與自傳《猶大生平》(Ḥayye Yehudah)。（原提案所述「批判卡巴拉、論證《光輝之書》晚出」實為莫德納另一部《獅吼》(Ari Nohem, 一六三九年撰、一八四〇年萊比錫首刊），非本書內容。）"
+            },
+            {
+              "title_zh": "以色列得雪",
+              "title_orig": "Israël vengé, ou Exposition naturelle des prophéties hébraïques que les chrétiens appliquent à Jésus, leur prétendu Messie（原作西班牙文稿 Prevenciones divinas contra la vana idolatría de las gentes，生前僅以手抄本流傳）",
+              "author": "以撒‧奧羅比奧‧德‧卡斯特羅",
+              "era": "十七世紀下半撰（作者卒於一六八七年）；一七七〇年由霍爾巴赫男爵（Baron d'Holbach）法譯刊行",
+              "place": "阿姆斯特丹（撰，一六六〇年代末至一六八七年間）／扉頁題「倫敦」一七七〇年刊行（假託地名，實際印於阿姆斯特丹—巴黎一帶）",
+              "language": "西班牙文（法譯本）",
+              "intro": "奧羅比奧‧德‧卡斯特羅出身馬蘭諾（被迫改宗者），回歸猶太教後撰此書，以嚴密的理性論證逐條反駁基督教對先知書的彌賽亞式解讀，並質疑三位一體與原罪教義。全書譯成法文後廣為流傳，反而成為十八世紀歐洲自然神論者攻擊基督教啟示的常用資源。"
+            },
+            {
+              "title_zh": "流散之井",
+              "title_orig": "באר הגולה / Beʼer ha-golah",
+              "author": "布拉格的馬哈拉爾",
+              "era": "一五九八年初刊",
+              "place": "布拉格",
+              "language": "希伯來文",
+              "intro": "為拉比傳統辯護，主張塔木德傳說屬象徵語言不可按字面理解；近世猶太護教學最具方法論意識的文本之一。"
+            }
+          ]
+        },
+        {
+          "key": "islamic-revival",
+          "label": "近代伊斯蘭思想與復興運動部",
+          "label_en": "Early-Modern Islamic Thought & Revivalism",
+          "desc": "薩法維超越智慧學派（穆拉薩德拉）、印度蘇菲改革（西爾信迪、沙阿瓦利烏拉）、瓦哈布運動與鄂圖曼思想。",
+          "works": [
+            {
+              "title_zh": "四種旅程（超越智慧論四旅）",
+              "title_orig": "al-Ḥikma al-mutaʿāliya fī al-asfār al-ʿaqliyya al-arbaʿa",
+              "author": "穆拉‧薩德拉",
+              "era": "約一六二〇—一六四〇年（歷時數十年陸續寫成，作者一六四〇年卒）",
+              "place": "波斯‧卡哈克（庫姆近郊）／設拉子",
+              "language": "阿拉伯文",
+              "intro": "以靈魂四種旅程為架構統會逍遙、光照與蘇菲，立存有先於本質、存有等級與實體運動三大命題；伊斯蘭近代最龐大的形上學體系。"
+            },
+            {
+              "title_zh": "神座智慧書",
+              "title_orig": "al-Ḥikma al-ʿarshiyya",
+              "author": "穆拉‧薩德拉",
+              "era": "十七世紀前半",
+              "place": "波斯‧設拉子",
+              "language": "阿拉伯文",
+              "intro": "穆拉‧薩德拉晚年的總結之作，分神論與末世論兩部。他以獨創的「實體運動」學說解釋靈魂在存有階序中的上升，主張復活並非肉身的復甦而是發生於「意象界」的實在事件。全書融合逍遙派哲學、照明學派與蘇菲證悟，是薩法維超越智慧學派的巔峰文本之一。"
+            },
+            {
+              "title_zh": "證知者的靈藥（諸悟道者之靈丹）",
+              "title_orig": "Iksīr al-ʿārifīn fī maʿrifat ṭarīq al-ḥaqq wa-l-yaqīn",
+              "author": "穆拉‧薩德拉（薩德爾丁‧設拉子，1571/72–1640）",
+              "era": "十七世紀前半",
+              "place": "波斯‧設拉子",
+              "language": "阿拉伯文",
+              "intro": "穆拉‧薩德拉的短篇專論，闡述人的認識如何由感官出發，經理智的抽象作用，終至神祕的直接證悟。他主張知識並非心靈對外物的被動映照，而是靈魂自身存有等級的實際提升——認識愈高，存有愈真。是理解其「知識即存有」核心命題的入門文本。"
+            },
+            {
+              "title_zh": "喚醒沉睡者",
+              "title_orig": "Īqāẓ al-nāʾimīn",
+              "author": "穆拉‧薩德拉",
+              "era": "十七世紀前半",
+              "place": "波斯‧設拉子（卒於巴斯拉；晚年在設拉子汗學院講學）",
+              "language": "阿拉伯文",
+              "intro": "穆拉‧薩德拉論存有一體（waḥdat al-wujūd）的專論，主張唯有必然存有者真實存在，萬有僅是其顯現的樣態與等級差異。全書兼具嚴格的哲學論證與蘇菲式的靈修勸誡，題名意在喚醒沉睡於多元表象中的心靈，回歸存有的唯一實在。"
+            },
+            {
+              "title_zh": "艾哈邁德‧西爾信迪書信集",
+              "title_orig": "Maktūbāt-i Imām-i Rabbānī",
+              "author": "艾哈邁德‧西爾信迪",
+              "era": "一五九九至一六二四年間",
+              "place": "蒙兀兒印度‧西爾信德",
+              "language": "波斯文（多語譯本）",
+              "extent": "三卷、書信五三六通",
+              "intro": "以「見證一體」修正伊本‧阿拉比的「存有一體」，主張證悟須以沙里亞為準繩並抨擊阿克巴的宗教折衷；南亞遜尼派復興的思想基調。"
+            },
+            {
+              "title_zh": "先知使命證成論",
+              "title_orig": "Ithbāt al-nubuwwa",
+              "author": "艾哈邁德‧西爾信迪",
+              "era": "十六世紀末至十七世紀初",
+              "place": "蒙兀兒印度‧西爾信德",
+              "language": "阿拉伯文",
+              "intro": "以阿拉伯文論證理性與哲學思辨不足以獨立達致救贖真理，故人類必須有先知；並以奇蹟與經典內證確立穆罕默德的使命與「封印先知」之終極性。作者為蒙兀兒印度納格什班迪教團領袖、被尊為「第二千年革新者」（Mujaddid Alf-i Thānī），其駁斥對象是伊斯蘭哲學家（falāsifa）與偏離教法的神祕主義詮釋，以及阿克巴時期的宗教混融政策，而非基督教啟示論。"
+            },
+            {
+              "title_zh": "始源與復歸",
+              "title_orig": "Mabdaʾ wa Maʿād",
+              "author": "艾哈邁德‧西爾信迪",
+              "era": "約一六一〇年代",
+              "place": "蒙兀兒印度‧西爾信德",
+              "language": "波斯文",
+              "intro": "西爾信迪的蘇菲形上學短論，系統陳述其著名的「見證一體」（waḥdat al-shuhūd）階序說。他修正伊本阿拉比的存有一體論，主張萬有並非真主本體的展開，而是其屬性投射的影像；證悟者所體驗的合一屬主觀見證而非客觀同一。此說成為印度蘇菲改革的思想基石。"
+            },
+            {
+              "title_zh": "真主的決定性論證",
+              "title_orig": "Ḥujjat Allāh al-Bāligha",
+              "author": "沙阿‧瓦利烏拉‧德里維",
+              "era": "十八世紀中葉",
+              "place": "蒙兀兒印度‧德里",
+              "language": "阿拉伯文（多語譯本）",
+              "intro": "闡明沙里亞律例背後的理據，立哲學人類學並逐項解釋禮拜、齋戒等制度目的；近代伊斯蘭改革主義的奠基之作。"
+            },
+            {
+              "title_zh": "祛除疑翳：論眾哈里發之統緒",
+              "title_orig": "Izālat al-khafāʾ ʿan khilāfat al-khulafāʾ",
+              "author": "沙阿‧瓦利烏拉‧德里維",
+              "era": "十八世紀中葉",
+              "place": "蒙兀兒印度‧德里",
+              "language": "波斯文",
+              "intro": "沙阿‧瓦利烏拉辨析「先知式哈里發」與「王權式哈里發」的分別，為前四位正統哈里發的統緒辯護，並回應什葉派對其正當性的質疑。他進而主張以宗教權威重整衰敗中的蒙兀兒政治秩序，是近代伊斯蘭政治神學與復興思想的關鍵文本。"
+            },
+            {
+              "title_zh": "聖訓奧義釋",
+              "title_orig": "Taʾwīl al-aḥādīth fī rumūz qiṣaṣ al-anbiyāʾ",
+              "author": "沙阿‧瓦利烏拉‧德里維（Shāh Walī Allāh al-Dihlawī, 1703–1762）",
+              "era": "十八世紀中葉",
+              "place": "蒙兀兒印度‧德里",
+              "language": "阿拉伯文",
+              "intro": "以古蘭經先知故事為線索的釋義，把先知史視為神聖教育人類的漸進歷程；其耶穌敘事處理呈現伊斯蘭的詮釋立場。"
+            },
+            {
+              "title_zh": "靈光片羽",
+              "title_orig": "Lamaḥāt",
+              "author": "沙阿‧瓦利烏拉‧德里維",
+              "era": "十八世紀中葉",
+              "place": "蒙兀兒印度‧德里",
+              "language": "阿拉伯文（附英譯）",
+              "extent": "短篇專論，常與 Saṭaʿāt 合刊",
+              "intro": "沙阿‧瓦利烏拉的蘇菲形上學短論，嘗試調和伊本阿拉比的「存有一體說」與西爾信迪的「見證一體說」兩大對立傳統，另闢折衷之路。他主張兩說所述實為同一實在的不同觀看層次，而非彼此矛盾的主張，展現其融通印度蘇菲各派的整合企圖。"
+            },
+            {
+              "title_zh": "論分歧之由的公允之言",
+              "title_orig": "al-Inṣāf fī bayān sabab al-ikhtilāf (fī al-aḥkām al-fiqhīyah)",
+              "author": "沙阿‧瓦利烏拉‧德里維",
+              "era": "十八世紀中葉",
+              "place": "蒙兀兒印度‧德里",
+              "language": "阿拉伯文",
+              "parent": "沙阿‧瓦利烏拉論集",
+              "intro": "以歷史眼光說明四大教法學派分歧源於傳承與方法之異，主張博採諸派、直溯經訓；改革思潮的方法論宣言。"
+            },
+            {
+              "title_zh": "認主獨一書",
+              "title_orig": "Kitāb al-Tawḥīd",
+              "author": "穆罕默德‧伊本‧阿卜杜勒‧瓦哈卜",
+              "era": "十八世紀（約1740年代前後）",
+              "place": "阿拉伯半島‧內志（烏萊納／胡賴米拉一帶撰成；後以迪爾伊耶為運動基地）",
+              "language": "阿拉伯文",
+              "intro": "瓦哈布運動奠基之作，嚴斥求庇聖墓、聖徒與護符為以物配主，主張回歸經訓字義；其嚴格一神論正面否定一切中保。"
+            },
+            {
+              "title_zh": "穆罕默德之道",
+              "title_orig": "al-Ṭarīqa al-Muḥammadiyya",
+              "author": "比爾吉維‧穆罕默德‧埃芬迪",
+              "era": "十六世紀後半",
+              "place": "鄂圖曼帝國‧安納托利亞比爾吉",
+              "language": "阿拉伯文",
+              "intro": "比爾吉維的倫理與教義綱要，以簡明的體例陳述信仰要義、心性諸病與矯治之道，並力斥墳墓崇敬、蘇菲的過度儀式與一切宗教創新（bidʿa），主張回歸先知的原初實踐。此書成為鄂圖曼「卡迪扎德運動」的思想旗幟，影響後世伊斯蘭改革與復興思潮甚深。"
+            },
+            {
+              "title_zh": "耶穌在印度",
+              "title_orig": "Masīḥ Hindustān Mein / Jesus in India",
+              "author": "米爾扎‧古拉姆‧艾哈邁德",
+              "era": "一八九九年著；一九〇八年刊行",
+              "place": "英屬印度‧旁遮普‧卡迪安",
+              "language": "烏爾都文（後有英譯）",
+              "intro": "主張耶穌未死於十字架而東行克什米爾終老，系統瓦解復活與升天教義；南亞穆斯林最具傳播力的反論。"
+            }
+          ]
+        },
+        {
+          "key": "south-asian-reform",
+          "label": "印度與南亞宗教改革回應部",
+          "label_en": "Indian & South Asian Religious Reform",
+          "desc": "梵社、雅利安社與吠檀多復興對基督教宣教的回應，及錫蘭佛教的護法論戰。",
+          "works": [
+            {
+              "title_zh": "耶穌的訓誡：通往平安與福樂之導",
+              "title_orig": "The Precepts of Jesus, the Guide to Peace and Happiness",
+              "author": "羅姆‧摩罕‧羅伊（Rammohun Roy）",
+              "era": "一八二〇年初版",
+              "place": "印度‧加爾各答",
+              "language": "英文（另有孟加拉文本）",
+              "extent": "本編一卷，另附三次申辯：《申辯》（An Appeal, 1820）、《再申辯》（Second Appeal, 1821）、《終申辯》（Final Appeal, 1823）",
+              "intro": "自四福音輯出耶穌的道德訓誨，略去神蹟與三一等教義，主張基督教精華在倫理；出版後引發與塞蘭坡浸信會馬士曼（Joshua Marshman）的長期公開論戰，為十九世紀初印度最著名的基督教神學公開論爭之一。"
+            },
+            {
+              "title_zh": "為《耶穌的訓誡》向基督教公眾之申辯",
+              "title_orig": "An Appeal to the Christian Public, in Defence of the \"Precepts of Jesus\"",
+              "author": "羅姆‧摩罕‧羅伊",
+              "era": "一八二〇",
+              "place": "印度‧加爾各答",
+              "language": "英文",
+              "parent": "耶穌的訓誡",
+              "intro": "羅姆‧摩罕‧羅伊回應浸信會傳教士馬士曼斥其為異端的首度答辯。他堅持自己只是把耶穌的道德教訓從教義爭議中分離出來，並純以聖經文本本身質疑三位一體的經據，主張基督的至高在於其訓誨而非其本體。是印度知識分子以基督教語彙反詰基督教的開端。"
+            },
+            {
+              "title_zh": "為《耶穌的訓誡》向基督教公眾之再申辯",
+              "title_orig": "Second Appeal…／A Treatise on Christian Doctrine",
+              "author": "羅姆‧摩罕‧羅伊",
+              "era": "一八二一（一八三四改題再刊）",
+              "place": "印度‧加爾各答（一八三四改題再刊於英國‧倫敦）",
+              "language": "英文",
+              "parent": "耶穌的訓誡",
+              "intro": "羅伊論戰的第二篇答辯，深入希伯來文與希臘文原文的釋義，逐條駁斥三位一體、基督的神性與代贖說，主張這些教義是後世附加而非耶穌本人所傳。此書使他在西方獲得廣泛注意，美國一神派尤引為同道，成為十九世紀跨宗教神學對話的先聲。"
+            },
+            {
+              "title_zh": "為《耶穌的訓誡》向基督教公眾之終申辯",
+              "title_orig": "Final Appeal to the Christian Public…",
+              "author": "羅姆‧摩罕‧羅伊",
+              "era": "一八二三（一八二八再版）",
+              "place": "印度‧加爾各答",
+              "language": "英文",
+              "parent": "耶穌的訓誡",
+              "intro": "三申辯終篇，處理約翰福音序言與道成肉身經文；因差會印刷所拒印而自設印刷所，成印度言論自主的象徵。"
+            },
+            {
+              "title_zh": "一神論者的贈禮",
+              "title_orig": "Tuhfat al-Muwahhidin",
+              "author": "羅姆‧摩罕‧羅伊",
+              "era": "約一八〇四年著；一八八四年英譯",
+              "place": "印度孟加拉‧穆爾希達巴德／加爾各答",
+              "language": "波斯文（阿拉伯文序）",
+              "intro": "以凱拉姆與理性主義工具批判一切宗教的偶像崇拜與祭司權威，主張一神信仰乃人類共通理性本能。"
+            },
+            {
+              "title_zh": "真理之光",
+              "title_orig": "Satyārth Prakāś",
+              "author": "達耶難陀‧薩拉斯瓦蒂",
+              "era": "一八七五初版；一八八二–八三修訂（作者一八八三卒後刊行）",
+              "place": "印度‧瓦拉納西（貝拿勒斯）初版；修訂本由阿傑梅爾「利他會」(Paropkarini Sabha) 傳布",
+              "language": "印地文（多語譯本）",
+              "extent": "全書十四章（samullas）；第十一章評駁印度各派、第十二章評駁順世／佛教／耆那、第十三章基督教、第十四章伊斯蘭",
+              "intro": "雅利安社綱領之作，主張回歸吠陀本典並專章評駁耆那、佛教、基督教與伊斯蘭；印度教護教復興的代表文本。"
+            },
+            {
+              "title_zh": "梵教法典",
+              "title_orig": "Brahmo Dharma",
+              "author": "提賓德羅那特‧泰戈爾",
+              "era": "一八四八至一八五〇年編成；一九二八年英譯",
+              "place": "印度‧加爾各答",
+              "language": "孟加拉文／梵文",
+              "intro": "梵社信仰與倫理手冊，捨吠陀無誤之說而以直觀良知為權威，藉以抵禦傳教士的改宗攻勢。"
+            },
+            {
+              "title_zh": "耶穌基督：歐洲與亞洲",
+              "title_orig": "Jesus Christ, Europe and Asia (亦作 Jesus Christ: Europe and Asia)",
+              "author": "凱沙布‧錢德拉‧森",
+              "era": "一八六六年五月加爾各答講演；一八六六年倫敦初刊、一八六九年加爾各答 Indian Mirror Press 版",
+              "place": "印度‧加爾各答",
+              "language": "英文",
+              "intro": "高舉耶穌為亞洲人，指斥歐洲教會以西方文化包裝福音；亞洲「非教會的基督論」最早的代表文本之一。"
+            },
+            {
+              "title_zh": "未來的教會",
+              "title_orig": "The Future Church: Being the Substance of a Lecture Delivered on the Occasion of the Thirty-ninth Anniversary of the Brahmo Samaj",
+              "author": "凱沙布‧錢德拉‧森",
+              "era": "一八六九",
+              "place": "印度‧加爾各答",
+              "language": "英文",
+              "intro": "構想超越宗派、融攝印度教虔信與基督教倫理的普世有神教會，為其後新天啟體系之先聲。"
+            },
+            {
+              "title_zh": "新天啟",
+              "title_orig": "The New Dispensation (Nava Vidhan)",
+              "author": "凱沙布‧錢德拉‧森",
+              "era": "一八七九年宣告；一八八四、一八九六年結集",
+              "place": "印度‧加爾各答",
+              "language": "英文",
+              "intro": "宣告繼舊約新約之後的第三約，主張諸宗教精華在印度合流，並設聖餐洗禮式儀節與使徒制。"
+            },
+            {
+              "title_zh": "王瑜伽",
+              "title_orig": "Raja Yoga",
+              "author": "辨喜（Swami Vivekananda）",
+              "era": "一八九六",
+              "place": "美國‧紐約",
+              "language": "英文",
+              "intro": "講稿與《瑜伽經》譯註合編，把印度修行傳統重述為可經驗驗證的宗教科學；近代印度教西傳的關鍵文本。"
+            },
+            {
+              "title_zh": "芝加哥演講集",
+              "title_orig": "Chicago Addresses",
+              "author": "辨喜",
+              "era": "一八九三年講（一九二三年結集出版）",
+              "place": "美國芝加哥（世界宗教議會）",
+              "language": "英文",
+              "intro": "辨喜在一八九三年芝加哥世界宗教議會的講詞結集。他以吠檀多的普遍主義主張諸宗教殊途同歸、真理不為一教所獨佔，並公開抗議傳教士對印度文化的貶抑與誤現。這批演說使印度教首次以自信的姿態登上世界舞台，是東方宗教反向影響西方的標誌性事件。"
+            },
+            {
+              "title_zh": "大辯論：佛教與基督教面對面（帕納杜勒論戰）",
+              "title_orig": "Buddhism and Christianity Face to Face（Panadura Vadaya）",
+              "author": "米格圖瓦特‧古納難陀長老 對辯 大衛‧德‧席爾瓦牧師與傳道員 F. S. 西里曼納；詹姆斯‧馬丁‧皮伯斯（J. M. Peebles, 1822–1922）編",
+              "era": "一八七三年八月二十六、二十八日兩日論戰；當年由《錫蘭時報》系統刊出英文摘譯，全本英文書一八七八年在美國波士頓（Colby & Rich）出版",
+              "place": "錫蘭‧帕納杜勒",
+              "language": "僧伽羅文（原辯）／英文（刊本）",
+              "intro": "兩日公開辯論的逐字記錄，就靈魂、造物主、涅槃與復活交鋒，佛教方普遍被認獲勝；促成奧爾科特等赴錫蘭並啟發達磨波羅。"
+            },
+            {
+              "title_zh": "佛教問答",
+              "title_orig": "A Buddhist Catechism",
+              "author": "亨利‧斯蒂爾‧奧爾科特",
+              "era": "一八八一年初版；作者生前持續修訂（卒於一九〇七年二月），身後仍續出至一九一五年第四十四版",
+              "place": "錫蘭‧可倫坡（初版）；後續版本多由馬德拉斯／阿迪亞爾神智學會出版",
+              "language": "英文與僧伽羅文對照初版",
+              "intro": "仿基督教要理問答體例編成的錫蘭上座部佛教入門書，供神智學會創設之佛教學校（阿難陀學院等）使用以抗衡教會學校；為「新教式佛教」與宗教形式反向挪用的典型，內容帶神智學與理性主義色彩，非傳統上座部教科書。"
+            },
+            {
+              "title_zh": "回歸正義",
+              "title_orig": "Return to Righteousness",
+              "author": "阿那伽利迦‧達磨波羅",
+              "era": "一八九〇年代至一九三〇年代文稿；一九六五年結集",
+              "place": "錫蘭／印度",
+              "language": "英文",
+              "extent": "演說、論文與書信合集一冊",
+              "intro": "達磨波羅的文集，力斥英國殖民統治與基督教傳教事業對錫蘭本土文化與佛教的侵蝕。他主張佛教是理性且合乎科學的宗教，遠勝於依賴信仰與神蹟的基督教，並終身推動收回菩提伽耶聖地。其論述奠定了南亞佛教復興與反殖民民族主義的結合。"
+            }
+          ]
+        },
+        {
+          "key": "east-asian-anti-christian",
+          "label": "東亞闢邪排耶部",
+          "label_en": "East Asian Anti-Christian Treatises",
+          "desc": "明清中國的破邪闢邪文獻與日本江戶的排耶書——以華夷之辨、綱常倫理與佛教立場駁斥天主教。",
+          "works": [
+            {
+              "title_zh": "闢邪論",
+              "title_orig": "闢邪論",
+              "author": "楊光先",
+              "era": "一六五九年（順治十六年）撰，一六六五年前後收入《不得已》刊行",
+              "place": "中國‧江南徽州府歙縣（作者籍貫）／北京（曆獄發生地）",
+              "language": "漢文",
+              "extent": "三篇（上、中、下），非獨立單行本，收入《不得已》上卷",
+              "intro": "清初攻擊耶穌會士的核心論作，指控湯若望曆算錯誤、窺伺國政，終釀曆獄；中國儒者反教論的原型文本。"
+            },
+            {
+              "title_zh": "辟邪紀實（亦作《闢邪紀實》）",
+              "title_orig": "Death Blow to Corrupt Doctrines: A Plain Statement of Facts, Published by the Gentry and People（1870 上海英譯本）",
+              "author": "託名「天下第一傷心人」編（湖南士紳集體託名，真實編者不詳）",
+              "era": "原刻約一八六一；英譯本一八七〇",
+              "place": "中國‧湖南／上海刊行",
+              "language": "漢文原本；英文譯本",
+              "intro": "晚清最具影響力的民間反教文獻之一，列舉所謂教會罪狀並附木刻插圖；1870 年在滬傳教士譯成英文出版，譯者序明言此書「大量促成近來遍傳中國、關於外僑與華人信徒的污衊謠言」，並稱其有助說明天津教案何以發生。"
+            },
+            {
+              "title_zh": "西洋紀聞",
+              "title_orig": "西洋紀聞",
+              "author": "新井白石",
+              "era": "約一七一五年撰成，一八八二年（明治十五）首刊",
+              "place": "日本‧江戶",
+              "language": "日文（和文體，非漢文訓讀體）",
+              "parent": "新井白石全集",
+              "extent": "三卷（上‧中‧下）",
+              "intro": "據審訊耶穌會士西多提所得撰成，肯定西洋天文地理器械之學而判其宗教義理淺陋；鎖國體制下最具知性誠實的排耶論述。"
+            },
+            {
+              "title_zh": "破提宇子",
+              "title_orig": "破提宇子",
+              "author": "不干齋巴鼻庵（Fabian Fucan）",
+              "era": "一六二〇",
+              "place": "日本‧長崎／肥前",
+              "language": "日文",
+              "intro": "棄教者所撰排耶書，逐條駁斥造物主、靈魂不滅與天堂地獄；出自內部人之手，東亞最具知識性的基督教批判之一。"
+            },
+            {
+              "title_zh": "妙貞問答",
+              "title_orig": "妙貞問答",
+              "author": "不干齋巴鼻庵（Fabian Fucan）",
+              "era": "一六〇五",
+              "place": "日本‧京都",
+              "language": "日文（近世和文）",
+              "parent": "切支丹書‧護教書",
+              "intro": "以兩位女性（切支丹幽貞與尼僧妙秀）問答形式寫成的三卷護教書，逐一破斥神道、儒教、佛教並陳述天主教義；原為女子修道／教理教育教材，後成為近世排耶書（含作者本人棄教後所著《破提宇子》）的直接論敵文本。"
+            },
+            {
+              "title_zh": "破吉利支丹",
+              "title_orig": "破吉利支丹",
+              "author": "鈴木正三",
+              "era": "一六六二",
+              "place": "日本‧江戶／天草",
+              "language": "日文",
+              "intro": "曹洞宗禪僧鈴木正三以佛教立場撰寫的排耶論，逐條批駁天主教的造物主教義違背因果業報之理——若萬物由一全善之神所造，何以世間有惡與苦？他並質疑基督教否定祖先祭祀有悖孝道。此書是日本禁教期佛門排耶論述的代表作，反映佛教與基督教的正面思想交鋒。"
+            },
+            {
+              "title_zh": "南蠻寺興廢記‧邪教大意（東洋文庫14）",
+              "title_orig": "南蠻寺興廢記‧邪教大意",
+              "author": "傳雪窗宗崔（雪窓宗崔）等；海老澤有道（海老沢有道）校注",
+              "era": "傳十七世紀（《南蠻寺興廢記》學界多視為近世後期偽託之作，現存寫本有慶應四年一八六八序）；校注本一九六四",
+              "place": "日本",
+              "language": "日文（近世和文）",
+              "intro": "平凡社東洋文庫第14冊，海老澤有道校注，同冊收《南蠻寺興廢記》《邪教大意》《妙貞問答》《破提宇子》四種。《邪教大意》為禁教期流通的排耶綱要；《南蠻寺興廢記》記京都南蠻寺興建與拆毀，兼具論戰與教會史料性格，惟其史實性可疑，一般視為近世後期依託之作，須作「排耶言說史料」而非信史使用。"
+            },
+            {
+              "title_zh": "聖朝破邪集",
+              "title_orig": "聖朝破邪集（破邪集）",
+              "author": "徐昌治 輯",
+              "era": "一六三九年（崇禎十二年）輯成",
+              "place": "浙江",
+              "language": "漢文",
+              "extent": "八卷",
+              "intro": "晚明反天主教文獻總集，徐昌治彙輯沈㴶「南京教案」奏疏以降的官紳與僧人闢教文字六十餘篇，含《參遠夷疏》、鍾始聲《天學初徵》《再徵》及釋氏破邪諸論。全書從華夷之辨、綱常倫理、祭祖問題與佛道立場多方駁斥利瑪竇一系的「天學」，是研究明末中西宗教衝突最集中的第一手史料，亦為東亞反基督教論述的代表作。"
+            },
+            {
+              "title_zh": "不得已",
+              "title_orig": "不得已",
+              "author": "楊光先",
+              "era": "一六六五年（康熙四年）刊",
+              "place": "北京",
+              "language": "漢文",
+              "extent": "二卷",
+              "intro": "楊光先攻擊耶穌會士湯若望與西洋曆法的論集，收〈闢邪論〉〈摘謬論〉〈選擇議〉等篇。他以「寧可使中夏無好曆法，不可使中夏有西洋人」一語著稱，指斥天主教敗壞綱常、曆法錯謬並圖謀不軌，直接促成康熙初年的曆獄，湯若望等下獄。此書是清初中西曆法與宗教衝突的關鍵文本，亦為儒者立場反教論述的典型。"
+            }
+          ]
+        },
+        {
+          "key": "new-religions",
+          "label": "新興宗教神學部",
+          "label_en": "New Religious Movements",
+          "desc": "巴哈伊與摩門等近代新興宗教的教義文獻。",
+          "works": [
+            {
+              "title_zh": "已答之問",
+              "title_orig": "Some Answered Questions",
+              "author": "阿博都巴哈",
+              "era": "一九〇八",
+              "place": "鄂圖曼‧阿卡",
+              "language": "波斯文",
+              "intro": "巴哈伊信仰領袖阿博都巴哈於餐桌談話中答覆西方信徒提問的輯錄，由克利福德‧巴尼夫人記錄。內容涵蓋聖經與古蘭經的詮釋、漸進啟示、靈魂與來生、進化與創造、基督與諸先知的本質等。阿博都巴哈以理性調和宗教與科學，闡發巴哈伊「諸教同源、漸進啟示」的核心教義，是該信仰最重要的教義問答著作之一。"
+            },
+            {
+              "title_zh": "教義與聖約",
+              "title_orig": "Doctrine and Covenants",
+              "author": "約瑟‧斯密等",
+              "era": "一八三五",
+              "place": "北美‧俄亥俄／密蘇里",
+              "language": "英文",
+              "intro": "摩門教（耶穌基督後期聖徒教會）的核心經典之一，輯錄創教者約瑟‧斯密及後繼領袖所宣稱領受的啟示。內容涉及教會組織、聖職體系、聖殿教儀、永恆婚姻與救恩計畫等獨特教義。此書與摩門經、無價珍珠並列為該教標準經典，是理解摩門神學體系的關鍵文獻，反映十九世紀美國新興宗教對基督教傳統的重大改造與擴充。"
+            }
+          ]
+        },
+        {
+          "key": "antitrinitarian",
+          "label": "反三一與激進改革部",
+          "label_en": "Antitrinitarian & Radical Reformation",
+          "desc": "塞爾維特等否定三一教義的激進改革思想。",
+          "works": [
+            {
+              "title_zh": "三位一體謬誤論七卷",
+              "title_orig": "De Trinitatis erroribus libri septem",
+              "author": "塞爾維特（Michael Servetus）",
+              "era": "1531",
+              "place": "阿爾薩斯哈根諾（Hagenau）",
+              "language": "拉丁文",
+              "intro": "西班牙神學家塞爾維特（米迦勒‧塞爾韋圖斯，約 1511–1553）於 1531 年在哈根諾出版的反三位一體論著作，為宗教改革時代最激進的神學挑戰之一。全書七卷以聖經文本為據，主張尼西亞三位一體教義係希臘哲學污染之產物，耶穌非永恆的第二位格而是神性之子。此書同時觸怒天主教與改教陣營，終致塞爾維特 1553 年於日內瓦被審判火刑。本書為近代唯一神論與反尼西亞神學的奠基原典，具有不可忽略的神學史地位。"
+            }
+          ]
+        }
       ]
-  }
+    }
 },
     {
   key: 'shizhuan',
