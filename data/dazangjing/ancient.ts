@@ -181,6 +181,74 @@ const TARGUM_JONATHAN_VOLUMES: DazangWork[] = TARGUM_JONATHAN_BOOKS.map(([bookZh
   intro: `《約拿單塔古姆》的《${bookZh}》是先知書亞蘭譯註傳統的一卷，源自會堂口譯並在古代晚期定型。譯者常把含混預言鋪陳為具體歷史或彌賽亞解釋，也以敬稱避免直接擬人化上帝；逐卷分列能保存各先知書獨立的譯釋面貌，並提供早期基督徒與拉比群體爭論預言應驗時的重要文本背景。`,
 }))
 
+const EUNAPIUS_LIVES: Array<[string, string]> = [
+  ['普羅提諾', 'Plotinus'], ['波菲利', 'Porphyry'], ['楊布里科斯', 'Iamblichus'], ['埃德西烏斯', 'Aedesius'],
+  ['索帕特', 'Sopater'], ['歐斯塔修斯', 'Eustathius'], ['索西帕特拉', 'Sosipatra'], ['以弗所的馬克西母', 'Maximus of Ephesus'],
+  ['普里斯庫斯', 'Priscus'], ['皇帝朱利安', 'Julian'], ['普羅海雷西烏斯', 'Prohaeresius'], ['埃皮法尼烏斯', 'Epiphanius'],
+  ['狄奧凡圖斯', 'Diophantus'], ['索波利斯', 'Sopolis'], ['希墨里烏斯', 'Himerius'], ['帕納西烏斯', 'Parnasius'],
+  ['利巴尼烏斯', 'Libanius'], ['阿卡基烏斯', 'Acacius'], ['寧菲狄亞努斯', 'Nymphidianus'], ['芝諾', 'Zeno'],
+  ['馬格努斯', 'Magnus'], ['奧里巴修斯', 'Oribasius'], ['伊奧尼庫斯', 'Ionicus'], ['克律桑提烏斯', 'Chrysanthius'],
+]
+
+const EUNAPIUS_BIOGRAPHIES: DazangWork[] = EUNAPIUS_LIVES.map(([nameZh, nameOrig]) => ({
+  title_zh: `歐納皮烏斯人物傳：${nameZh}`,
+  title_orig: `Life of ${nameOrig} (Eunapius)`,
+  author: '歐納皮烏斯',
+  era: '約 4 世紀末',
+  place: '羅馬帝國薩狄斯',
+  language: '古希臘文',
+  source: 'pagan',
+  parent: '哲人與智辯家列傳',
+  note: '來源：https://en.wikisource.org/wiki/Lives_of_the_Philosophers_and_Sophists',
+  intro: `歐納皮烏斯為${nameZh}所寫的獨立人物傳，收於《哲人與智辯家列傳》，由一位堅守希臘宗教的新柏拉圖派史家記錄三、四世紀思想人物的師承、旅行、教學與宗教實踐。作者常以異教觀點評論基督教皇帝與修士，使本傳不只是逸聞彙錄，也是晚期古代兩種信仰群體競逐文化記憶的第一手史傳文本。`,
+}))
+
+const PHILOSTRATUS_SOPHISTS: Array<[string, string]> = [
+  ['埃斯基涅斯', 'Aeschines'], ['尼刻特斯', 'Nicetes'], ['伊賽烏斯', 'Isaeus'], ['斯科佩利亞努斯', 'Scopelian'], ['米利都的狄奧尼修斯', 'Dionysius of Miletus'],
+  ['洛利亞努斯', 'Lollianus'], ['拜占庭的馬可', 'Marcus of Byzantium'], ['波勒蒙', 'Polemon'], ['塞孔杜斯', 'Secundus'], ['希羅德‧阿提庫斯', 'Herodes Atticus'],
+  ['狄奧多托斯', 'Theodotus'], ['阿里斯托克勒斯', 'Aristocles'], ['塞琉西亞的亞歷山大', 'Alexander of Seleucia'], ['瓦魯斯', 'Varus'], ['安提阿古斯', 'Antiochus'],
+  ['赫摩根尼', 'Hermogenes'], ['菲拉格羅斯', 'Philagros'], ['阿里斯提德', 'Aelius Aristides'], ['泰爾的哈德良', 'Hadrian of Tyre'], ['克瑞斯托斯', 'Chrestus'],
+  ['勞迪基亞的波勒蒙', 'Polemon of Laodicea'], ['保薩尼亞斯', 'Pausanias'], ['達米亞努斯', 'Damianus'], ['安提帕特', 'Antipater'], ['希波德羅摩斯', 'Hippodromus'],
+  ['菲利斯庫斯', 'Philiscus'], ['埃利安', 'Aelian'], ['赫利奧多羅斯', 'Heliodorus'], ['阿斯帕西烏斯', 'Aspasius'], ['歐沃狄亞努斯', 'Evodianus'],
+  ['魯弗斯', 'Rufus'], ['奧諾馬爾科斯', 'Onomarchus'], ['阿普西涅斯', 'Apsines'], ['尼卡戈拉斯', 'Nicagoras'], ['瑙克拉提斯的普羅克洛斯', 'Proclus of Naucratis'],
+  ['菲尼克斯', 'Phoenix'], ['雅典的阿波羅尼俄斯', 'Apollonius of Athens'], ['赫拉克利德斯', 'Heraclides'], ['歐塞比烏斯', 'Eusebius'],
+]
+
+const PHILOSTRATUS_BIOGRAPHIES: DazangWork[] = PHILOSTRATUS_SOPHISTS.map(([nameZh, nameOrig]) => ({
+  title_zh: `菲洛斯特拉托斯智辯家傳：${nameZh}`,
+  title_orig: `Life of ${nameOrig} (Philostratus, Lives of the Sophists)`,
+  author: '雅典的菲洛斯特拉托斯',
+  era: '約 230 年',
+  place: '羅馬帝國雅典／羅馬',
+  language: '古希臘文',
+  source: 'pagan',
+  parent: '智辯家列傳',
+  note: '來源：https://openlibrary.org/works/OL8298396W（Philostratus and Eunapius, The Lives of the Sophists）',
+  intro: `菲洛斯特拉托斯為${nameZh}撰寫的獨立傳記單元，收於《智辯家列傳》，記錄第二次智辯運動演說家的出身、師承、公開表演、城市聲望與門生網絡。這些人物以希臘古典教育和公共宗教儀式維繫帝國菁英文化；逐傳閱讀能具體比較異教修辭名流與同時期基督教教師、護教士及講道者如何爭取聽眾與社會權威。`,
+}))
+
+const HISTORIA_AUGUSTA_LIVES: Array<[string, string]> = [
+  ['哈德良傳', 'Hadrian'], ['埃利烏斯傳', 'Aelius'], ['安敦尼‧畢尤傳', 'Antoninus Pius'], ['馬可‧奧理略傳', 'Marcus Aurelius'], ['路奇烏斯‧維魯斯傳', 'Lucius Verus'],
+  ['阿維狄烏斯‧卡西烏斯傳', 'Avidius Cassius'], ['康茂德傳', 'Commodus'], ['佩爾蒂納克斯傳', 'Pertinax'], ['狄狄烏斯‧尤利安努斯傳', 'Didius Julianus'], ['塞普提米烏斯‧塞維魯傳', 'Septimius Severus'],
+  ['佩斯切尼烏斯‧尼格爾傳', 'Pescennius Niger'], ['克洛狄烏斯‧阿爾比努斯傳', 'Clodius Albinus'], ['卡拉卡拉傳', 'Caracalla'], ['蓋塔傳', 'Geta'], ['馬克里努斯傳', 'Macrinus'],
+  ['狄亞杜美尼安傳', 'Diadumenian'], ['埃拉伽巴路斯傳', 'Elagabalus'], ['亞歷山大‧塞維魯傳', 'Severus Alexander'], ['兩馬克西米努斯傳', 'The Two Maximini'], ['三戈爾狄安傳', 'The Three Gordians'],
+  ['馬克西穆斯與巴爾比努斯傳', 'Maximus and Balbinus'], ['瓦勒良傳', 'Valerian'], ['加里恩努斯傳', 'Gallienus'], ['三十僭主傳', 'The Thirty Tyrants'], ['克勞狄傳', 'Claudius'],
+  ['奧勒良傳', 'Aurelian'], ['塔西佗傳', 'Tacitus'], ['普羅布斯傳', 'Probus'], ['四僭主傳', 'Firmus, Saturninus, Proculus and Bonosus'], ['卡魯斯、卡里努斯與努梅里安傳', 'Carus, Carinus and Numerian'],
+]
+
+const HISTORIA_AUGUSTA_BIOGRAPHIES: DazangWork[] = HISTORIA_AUGUSTA_LIVES.map(([titleZh, subjectOrig]) => ({
+  title_zh: `《奧古斯塔史》${titleZh}`,
+  title_orig: `Historia Augusta: ${subjectOrig}`,
+  author: '佚名（託名六位傳記作者）',
+  era: '約 4 世紀末至 5 世紀初',
+  place: '羅馬帝國西部',
+  language: '拉丁文',
+  source: 'pagan',
+  parent: '奧古斯塔史',
+  note: '來源：https://openlibrary.org/works/OL42815166W（David Magie, The Scriptores Historiae Augustae）',
+  intro: `《奧古斯塔史》〈${titleZh}〉是自成篇界的皇帝或僭主傳記，屬哈德良至三世紀末諸帝系列。作品託名六位早期作者，實際約在四、五世紀之交由佚名文人編成，真實檔案、虛構文書與諷刺逸聞交錯；它反映基督教帝國形成時一位熟悉元老院傳統的作者如何重塑異教羅馬過去，故須批判使用卻不可忽略。`,
+}))
+
 // ─────────────────────────────────────────────────────────────────────────
 // 古代基督教大藏經
 //
@@ -1918,7 +1986,6 @@ export const ANCIENT_ERA: DazangEra = {
             works: [
               { title_zh: '猶太戰記', source: 'second-temple', intro: '一世紀約瑟夫斯於羅馬以希臘文撰成，親歷並記述猶太人反抗羅馬的大起義及耶路撒冷與聖殿的毀滅。作者身兼當事人與降羅馬者雙重身分，提供了戰爭現場的詳盡第一手記錄。本書是理解第二聖殿末期猶太社會、聖殿被毀及初代教會誕生背景最關鍵的史料，在猶太史與新約研究中地位無可取代。', title_orig: 'The Jewish War', author: '約瑟夫斯', era: '1 世紀', place: '羅馬', language: '希臘文', note: '反羅馬起義現場，初代教會最關鍵史料' },
               { title_zh: '猶太古史', source: 'second-temple', intro: '一世紀約瑟夫斯於羅馬以希臘文撰成，自創世敘起，貫通至羅馬統治時期的猶太民族通史。本書旨在向希羅讀者闡釋猶太歷史與律法，保存大量聖經以外的傳統、文獻與當代記述，並含若干早期基督教相關旁證。作為猶太通史的集大成之作，其在重建第二聖殿時期歷史與考訂聖經背景上具核心價值。', title_orig: 'Antiquities of the Jews', author: '約瑟夫斯', era: '1 世紀', place: '羅馬', language: '希臘文', note: '創世至羅馬統治的猶太通史' },
-              { title_zh: '猶太王國志', source: 'rabbinic', intro: '十世紀於義大利南部成書的佚名抄本，以希伯來文編纂，是希伯來文版猶太歷史的集大成之作。本書主要取材自約瑟夫斯等古典史料並加以重組改寫，記述第二聖殿時期的興衰。雖成書較晚且非一手史料，其作為中世紀猶太人重述自身古代歷史的重要文本，在猶太史學傳承與接受史研究上具參考價值。', title_orig: 'Josippon', author: '佚名抄本', era: '10 世紀', place: '義大利南部', language: '希伯來文', note: '希伯來文版猶太歷史集大成' },
             ],
           },
           {
@@ -1938,6 +2005,19 @@ export const ANCIENT_ERA: DazangEra = {
             key: 'jewish-chronology', label: '猶太編年表（編年）', label_en: 'Jewish Chronologies',
             works: [
               { title_zh: '猶太編年史', source: 'rabbinic', intro: '二世紀於巴勒斯坦成書，託名拉比約西，以希伯來文撰寫，是猶太傳統中最古老的年代學著作。本書依聖經為據，推算自創世至第二聖殿時期的歷史紀年與重大事件年代。作為拉比猶太教的標準編年框架，其長期主導猶太傳統的歷史紀年觀，在猶太年代學與聖經詮釋史研究上具奠基性地位。', title_orig: 'Seder Olam Rabbah', author: '託名拉比約西', era: '2 世紀', place: '巴勒斯坦', language: '希伯來文', note: '猶太傳統最古老的年代學' },
+            ],
+          },
+          {
+            key: 'late-antique-philosophical-biography', label: '晚期古代哲人列傳部', label_en: 'Late Antique Philosophical Biography',
+            works: [
+              ...EUNAPIUS_BIOGRAPHIES,
+              ...PHILOSTRATUS_BIOGRAPHIES,
+            ],
+          },
+          {
+            key: 'pagan-imperial-biography', label: '外教帝王傳記部', label_en: 'Pagan Imperial Biography',
+            works: [
+              ...HISTORIA_AUGUSTA_BIOGRAPHIES,
             ],
           },
         ],
