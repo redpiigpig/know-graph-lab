@@ -30,6 +30,36 @@ const JOURNAL_OF_DISCOURSES_SERMONS: DazangWork[] = Array.from({ length: 96 }, (
   }
 })
 
+const SPINOZA_CORRESPONDENCE: DazangWork[] = Array.from({ length: 74 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `斯賓諾莎往來書信第${number}封`,
+    title_orig: `Epistolae Spinozae, Letter ${number}`,
+    author: '巴魯赫‧斯賓諾莎及其通信者',
+    era: '1661–1676 年',
+    place: '荷蘭共和國阿姆斯特丹、福爾堡、海牙等地',
+    language: '拉丁文／荷蘭文',
+    parent: '斯賓諾莎往來書信（Epistolae）',
+    note: `來源：https://en.wikisource.org/wiki/Epistolae_(Spinoza)；格布哈特編號 ${number}`,
+    intro: `本件為斯賓諾莎《往來書信》格布哈特編次第 ${number} 封，收於一六七七年《遺著》傳統。通信對象包括奧爾登堡、布萊恩伯格、策恩豪斯等學者，討論實體與屬性、自由意志、惡、聖經解釋、光學與政治安全，也讓人看見思想家在審查與宗派壓力下如何斟酌公開。每封均有明確寄受者與文書邊界，故按既有書信號獨立著錄，而不把整部通信集另算一卷。`,
+  }
+})
+
+const VOLTAIRE_PHILOSOPHICAL_LETTERS: DazangWork[] = Array.from({ length: 24 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `伏爾泰《哲學書簡》第${number}封`,
+    title_orig: `Lettres philosophiques, Lettre ${number}`,
+    author: '伏爾泰',
+    era: '1733–1734 年',
+    place: '英格蘭觀察／法國魯昂刊行',
+    language: '法文／英文初版',
+    parent: '哲學書簡（Lettres philosophiques／Letters Concerning the English Nation）',
+    note: `來源：https://fr.wikisource.org/wiki/Lettres_philosophiques；初版第 ${number} 封`,
+    intro: `本篇為伏爾泰《哲學書簡》最初二十四封架構中的第 ${number} 封，源於他旅英後對貴格會、宗教寬容、議會制度、洛克、牛頓與英國文學的觀察。作者以書信體把英國經驗轉化為批評法國專制與教權的鏡面，刊行後即遭查禁焚毀。各篇在一七三三年英文版與一七三四年法文版均有明確編號和主題，故逐封著錄；後加的第二十五封帕斯卡批評不混入此初版層。`,
+  }
+})
+
 // 近代基督教大藏經（按時代精神：人文主義‧宗教改革‧反改革‧宣教擴張‧敬虔與啟蒙）
 export const EARLY_MODERN_ERA: DazangEra = {
   key: 'early-modern',
@@ -2110,7 +2140,8 @@ export const EARLY_MODERN_ERA: DazangEra = {
         label_en: 'Letters of the Enlightenment',
         desc: '啟蒙思想家假書信體針砭宗教、鼓吹寬容與理性的批判之作。',
         works: [
-          { title_zh: '哲學書簡', title_orig: 'Lettres philosophiques', author: '伏爾泰 (Voltaire)', era: '一七三四年', place: '巴黎‧倫敦', language: '法文', intro: '伏爾泰旅英後以書信體寫成之作,藉評介英國的政教、科學與思想,反襯法國的專制與教會的褊狹。書中盛讚貴格會的簡樸與英國的宗教寬容,暗諷天主教會的迷信與不容異己。此書甫出即遭查禁焚毀,卻流播甚廣,成為啟蒙運動批判宗教權威、鼓吹寬容理性的旗幟之作。' }
+          ...VOLTAIRE_PHILOSOPHICAL_LETTERS,
+          ...SPINOZA_CORRESPONDENCE,
         ]
       }
     ]
