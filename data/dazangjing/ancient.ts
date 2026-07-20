@@ -105,6 +105,22 @@ const QOLASTA_PRAYERS: DazangWork[] = Array.from({ length: 97 }, (_, index) => {
   }
 })
 
+const MANICHAEAN_PSALMS: DazangWork[] = Array.from({ length: 96 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `科普特摩尼教詩篇第${number}篇`,
+    title_orig: `Coptic Manichaean Psalm ${number}`,
+    author: '摩尼教詩人傳統（佚名）',
+    era: '約 4 世紀',
+    place: '埃及（科里斯／梅迪奈特馬迪）',
+    language: '科普特文',
+    source: 'manichaean',
+    parent: '科普特摩尼教詩篇集',
+    note: `來源：https://openlibrary.org/works/OL11881660W（C. R. C. Allberry, A Manichaean Psalm-Book；第 ${number} 篇）`,
+    intro: `科普特《摩尼教詩篇集》第 ${number} 篇是有獨立篇界的禮儀詩歌，出自梅迪奈特馬迪寫本保存的埃及摩尼教團。詩篇以光明與黑暗、靈魂受困、救贖使者、殉道記憶及歸返光明國度為反覆母題，原供聚會詠唱；按篇號展開既保留實際詩體單元，也讓這一曾與古代基督教競逐信眾的普世宗教以自身聲音進入外詩藝藏。`,
+  }
+})
+
 // ─────────────────────────────────────────────────────────────────────────
 // 古代基督教大藏經
 //
@@ -2525,11 +2541,7 @@ export const ANCIENT_ERA: DazangEra = {
           {
             key: 'manichaean-hymns', label: '摩尼教讚美詩部', label_en: 'Manichaean Psalms',
             works: [
-              { title_zh: '科普特摩尼教讚美詩集', source: 'manichaean', intro: '三至四世紀埃及流傳的科普特文摩尼教讚美詩，由摩尼教徒詠唱以頌讚光明王國、哀悼靈魂受困物質並期盼歸返光界。此詩集反映摩尼教二元宇宙觀與救贖盼望，是現存摩尼教禮儀詩歌的重要遺存。作為一度橫跨歐亞的世界性宗教文獻，它對研究摩尼教信仰實踐與古代宗教交流具關鍵意義。', title_orig: 'Coptic Manichaean Psalm-Book', author: '摩尼教徒', era: '3–4 世紀', place: '埃及', language: '科普特文', note: '光明王國的讚歌' },
-              { title_zh: '摩尼讚美詩集（科普特）', source: 'manichaean', intro: '約四世紀埃及科里斯（Medinet Madi）出土的科普特文摩尼教讚美詩集，由摩尼教團詠唱，內容歌頌光明使者、追念殉道者並抒發對光明國度的嚮往。此寫本是二十世紀考古重大發現，使學界得以直接接觸摩尼教自身的禮儀文獻，對重建這一失傳世界宗教的崇拜與神學體系具不可替代的價值。', title_orig: 'The Coptic Manichaean Psalm-Book', author: '摩尼教團', era: '約 4 世紀', place: '埃及（科里斯／Medinet Madi）', language: '科普特文' },
-              { title_zh: '湯瑪斯讚美詩', source: 'manichaean', intro: '約四世紀埃及流傳的科普特文摩尼教讚美詩，傳為摩尼門徒湯瑪斯所作，以詩歌詠唱救贖、光明與靈魂的歸返，富含神話意象。此組詩屬摩尼教讚美詩集的一部分，反映教團的詠唱傳統與二元宇宙觀。它為研究摩尼教詩歌作者群與其禮儀生活提供具名線索，是摩尼教文學中別具特色的一支。', title_orig: 'The Psalms of Thomas', author: '摩尼門徒湯瑪斯', era: '約 4 世紀', place: '埃及', language: '科普特文' },
-              { title_zh: '赫拉克利德斯讚美詩', source: 'manichaean', intro: '約四世紀埃及流傳的科普特文摩尼教讚美詩，傳為摩尼門徒赫拉克利德斯所作，題材包括對殉道與救贖的詠歎及對光明國度的頌讚。此組詩同屬摩尼教讚美詩集，文辭哀婉而虔敬。它見證摩尼教團以具名詩人創作禮儀詩歌的傳統，為理解這一世界宗教的崇拜實踐與信徒情感世界提供珍貴材料。', title_orig: 'The Psalms of Heracleides', author: '摩尼門徒赫拉克利德斯', era: '約 4 世紀', place: '埃及', language: '科普特文' },
-              { title_zh: '貝瑪讚美詩', source: 'manichaean', intro: '約四世紀埃及流傳的科普特文摩尼教讚美詩，由摩尼教團於貝瑪節（紀念摩尼殉道的年度大典）詠唱，內容追念創教者摩尼的受難並頌讚其救贖之功。此組節慶詩歌是摩尼教最重要禮儀的核心文本，生動呈現教團的殉道敬禮與年度節期，對研究摩尼教節慶與創教者崇拜具高度價值。', title_orig: 'The Bema Psalms', author: '摩尼教團', era: '約 4 世紀', place: '埃及', language: '科普特文' },
+              ...MANICHAEAN_PSALMS,
               { title_zh: '胡亞德格曼讚美詩集（帕提亞）', source: 'manichaean', intro: '約八世紀中亞吐魯番出土的帕提亞文摩尼教讚美詩集，由中亞摩尼教團詠唱，以連篇詩歌抒發靈魂受困塵世的哀歎與蒙救歸返光界的盼望。此詩集見證摩尼教東傳中亞後以伊朗語系創作的禮儀詩歌，文辭淒美。它對研究摩尼教沿絲路東漸及其在中亞的本土化具關鍵意義，是中亞宗教文獻的瑰寶。', title_orig: 'The Huyadagman and Angad Roshnan Parthian Hymn Cycles', author: '摩尼教團（中亞）', era: '約 8 世紀', place: '中亞吐魯番', language: '帕提亞文' },
               { title_zh: '下部讚', source: 'manichaean', intro: '約八世紀唐代中國敦煌流傳的中文摩尼教讚美詩卷，由漢地摩尼教團詠唱，以漢譯詩偈頌讚光明諸神並抒發救贖盼望，保留大量音譯神名。此卷是摩尼教傳入中國並漢化的直接見證，呈現外來宗教詩歌與漢語文體的融合。作為敦煌宗教文獻的重要一支，它對研究摩尼教華化與中外宗教交流具不可替代的地位。', title_orig: 'The Lower Section Hymnscroll (Hymnscroll of the Manichaean Hymns)', author: '摩尼教團（漢地）', era: '約 8 世紀', place: '唐代中國（敦煌）', language: '中文' },
             ],
