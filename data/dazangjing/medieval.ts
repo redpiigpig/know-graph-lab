@@ -45,6 +45,21 @@ const CAIRO_GENIZA_INDIA_LETTERS: DazangWork[] = Array.from({ length: 16 }, (_, 
   }
 })
 
+const MACHZOR_VITRY_SECTIONS: DazangWork[] = Array.from({ length: 96 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `維特里祈禱週期第${number}節`,
+    title_orig: `Machzor Vitry, Siman ${number}`,
+    author: '維特里的辛哈‧本‧撒母耳編',
+    era: '約 11 世紀末至 12 世紀初',
+    place: '法蘭西維特里及拉希學派圈',
+    language: '希伯來文',
+    parent: '維特里祈禱週期（Machzor Vitry）',
+    note: `來源：https://www.sefaria.org/Machzor_Vitry；Sefaria 固定節號 ${number}`,
+    intro: `本節是《維特里祈禱週期》依抄本與通行本節號排列的第 ${number} 節。全書由拉希弟子辛哈‧本‧撒母耳編成，將平日、安息日與節期禱文次序，連同祝福、餐禮、會堂規程及相關法義保存在同一禮儀週期內。各節在 Sefaria 目錄與英國圖書館抄本傳統中具有明確邊界，故逐節著錄；它既見證阿什肯納茲禮儀的早期定型，也保留中古法蘭西猶太共同體實際舉行敬拜的程序與語彙。`,
+  }
+})
+
 // 中世紀基督教大藏經（三軌斷代，按時代精神：伊斯蘭交鋒與政教權之爭）
 export const MEDIEVAL_ERA: DazangEra = {
   key: 'medieval',
@@ -3395,7 +3410,8 @@ export const MEDIEVAL_ERA: DazangEra = {
         desc: '中世紀猶太教的標準祈禱書傳本，以及逾越節家宴的哈加達禮儀。',
         works: [
           { title_zh: '阿姆蘭‧加翁祈禱書', title_orig: 'Seder Rav Amram Gaon', author: '阿姆蘭‧加翁', era: '9 世紀（中世紀傳本）', place: '巴比倫蘇拉學院', language: '希伯來文‧亞蘭文', intro: '巴比倫蘇拉學院院長（Gaon）阿姆蘭應西班牙猶太社團之請，編成史上首部完整有序的祈禱書（Siddur），按年週循環羅列日常、安息日與節期的祈禱辭，並附簡明的禮儀規矩與律法說明。此書經中世紀各地社團抄傳增補，成為猶太祈禱定型的基石，後世薩阿迪亞祈禱書與西班牙、阿什肯納茲諸禮本皆以之為母本。' },
-          { title_zh: '逾越節哈加達', title_orig: 'Haggadah shel Pesaḥ', author: '猶太傳統（中世紀編訂）', era: '中世紀本（13–15 世紀繁盛）', place: '西班牙—德意志（萊茵蘭）', language: '希伯來文‧亞蘭文', intro: '逾越節家宴（Seder）誦讀的禮儀文本，按四杯酒的次序敘述以色列出埃及的救恩故事，含「四問」、十災、讚美詩篇（Hallel）與餐後祝謝。中世紀哈加達從祈禱書中獨立成冊，並發展出華美的插圖抄本傳統（如「金色哈加達」、「薩拉耶佛哈加達」），既是家庭教育下一代的敘事腳本，也是猶太禮儀藝術的瑰寶，傳本繁多而流傳至今。' }
+          { title_zh: '逾越節哈加達', title_orig: 'Haggadah shel Pesaḥ', author: '猶太傳統（中世紀編訂）', era: '中世紀本（13–15 世紀繁盛）', place: '西班牙—德意志（萊茵蘭）', language: '希伯來文‧亞蘭文', intro: '逾越節家宴（Seder）誦讀的禮儀文本，按四杯酒的次序敘述以色列出埃及的救恩故事，含「四問」、十災、讚美詩篇（Hallel）與餐後祝謝。中世紀哈加達從祈禱書中獨立成冊，並發展出華美的插圖抄本傳統（如「金色哈加達」、「薩拉耶佛哈加達」），既是家庭教育下一代的敘事腳本，也是猶太禮儀藝術的瑰寶，傳本繁多而流傳至今。' },
+          ...MACHZOR_VITRY_SECTIONS,
         ]
       }
     ]
