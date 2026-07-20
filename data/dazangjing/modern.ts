@@ -75,6 +75,21 @@ const PROMULGATION_UNIVERSAL_PEACE_TALKS: DazangWork[] = Array.from({ length: 98
   }
 })
 
+const NEHRU_WORLD_HISTORY_LETTERS: DazangWork[] = Array.from({ length: 100 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `尼赫魯《世界史瞥見》第${number}封`,
+    title_orig: `Glimpses of World History, Letter ${number}`,
+    author: '賈瓦哈拉爾‧尼赫魯',
+    era: '1930–1933 年',
+    place: '英屬印度奈尼、巴雷利與德拉敦等監獄',
+    language: '英文',
+    parent: '世界史瞥見：獄中致女兒書（Glimpses of World History）',
+    note: `來源：https://nehruportal.nic.in/glimpses-world-history-0；全書一百九十六封之第 ${number} 封`,
+    intro: `本件為賈瓦哈拉爾‧尼赫魯一九三〇至一九三三年間在殖民監獄寫給女兒英迪拉的《世界史瞥見》第 ${number} 封。近兩百封信從古代文明寫到當代反殖民運動，並以世俗、人文與跨文明視角討論印度教、佛教、基督教、伊斯蘭及宗教與政治的交織。它既是真實父女通信，也是面向青年讀者的世界史課程；此處依書中固定信次取前一百封，不把宣言或非書信文類混入函藏。`,
+  }
+})
+
 // 現代基督教大藏經（按時代精神：以 1910 後普世合一運動為主軸＋現代精神）
 export const MODERN_ERA: DazangEra = {
   key: 'modern',
@@ -1970,27 +1985,17 @@ export const MODERN_ERA: DazangEra = {
     ]
   },
   wai: {
-    summary: '外藏收錄基督教傳統之外的新興宗教公開信與世俗思潮宣言,作為理解現代基督教所處的多元信仰與世俗化環境的旁參。',
+    summary: '外藏收錄基督教傳統之外可核讀的現代通信原典，呈現世俗、反殖民與跨文明世界觀如何藉書信傳遞。',
     divisions: [
       {
-        key: 'new-religions',
-        label: '新興宗教公開信部',
-        label_en: 'Open Letters of New Religious Movements',
-        desc: '收錄現代新興宗教領袖致世界的公開信,反映現代多元宗教景觀對基督教的挑戰與對話空間。',
+        key: 'secular-cross-cultural-letters',
+        label: '世俗跨文明書信部',
+        label_en: 'Secular and Cross-Cultural Letters',
+        desc: '收錄現代世俗與反殖民思想家以真實通信討論文明、宗教與世界史的作品。',
         works: [
-          { title_zh: '巴哈歐拉致諸王書', title_orig: 'The Summons of the Lord of Hosts (Súriy-i-Mulúk)', author: '巴哈歐拉', era: '十九世紀中葉（現代英譯刊行）', place: '鄂圖曼帝國（流放地）', language: '阿拉伯文‧波斯文（譯為英文）', intro: '巴哈伊信仰創立者巴哈歐拉在流放期間致當時各國君王與宗教領袖的一系列公開書信,宣告新時代的來臨,呼籲世界統一、消弭戰爭、實現人類大同。書信致函包括鄂圖曼蘇丹、波斯國王、教宗庇護九世與歐洲諸君主。作為新興世界宗教的根本文獻之一,它以「公開信」之體向全人類發聲,其普世和平的訴求,在現代宗教對話的脈絡中常被論及。' }
+          ...NEHRU_WORLD_HISTORY_LETTERS,
         ]
       },
-      {
-        key: 'secular-manifestos',
-        label: '世俗宣言部',
-        label_en: 'Secular Manifestos',
-        desc: '收錄現代世俗人文主義的宣言文獻,作為理解基督教在世俗化時代所面對的思想對話對象。',
-        works: [
-          { title_zh: '人文主義宣言（第一篇）', title_orig: 'Humanist Manifesto I', author: '一群美國人文主義者（雷蒙德‧布拉格起草等）', era: '1933', place: '美國', language: '英文', intro: '由三十餘位美國學者、神職人員與思想家共同簽署的宣言,提出以理性、科學與人類福祉為基礎的「宗教人文主義」,主張宇宙是自存的、人類是自然演化的產物,反對超自然神觀與來世盼望,強調在此世建立更公義的社會。此文是現代世俗人文主義運動的奠基文獻,代表二十世紀無神論與自然主義對傳統宗教的系統挑戰,是基督教護教與對話無法迴避的對象。' },
-          { title_zh: '人文主義宣言（第二篇）', title_orig: 'Humanist Manifesto II', author: '保羅‧庫爾茲、愛德溫‧威爾遜起草', era: '1973', place: '美國', language: '英文', intro: '第一篇宣言問世四十年後,在經歷二戰、極權與核武威脅之後修訂的新版宣言。它在保留世俗人文主義核心的同時,語氣更為審慎,強調人權、民主、宗教自由、世界公民意識與科技倫理,並明確與一切極權主義劃清界限。此文反映二十世紀下半葉世俗思潮的成熟與自省,持續界定著現代基督教與世俗人文主義之間既對立又對話的複雜關係。' }
-        ]
-      }
     ]
   }
 },
