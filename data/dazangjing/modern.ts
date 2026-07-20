@@ -60,6 +60,21 @@ const GENOCIDE_CONVENTION_ARTICLES: DazangWork[] = Array.from({ length: 9 }, (_,
   }
 })
 
+const PROMULGATION_UNIVERSAL_PEACE_TALKS: DazangWork[] = Array.from({ length: 98 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `《宣揚世界和平》美加講辭第${number}篇`,
+    title_orig: `The Promulgation of Universal Peace, Talk ${number}`,
+    author: '阿博都巴哈',
+    era: '1912 年講述',
+    place: '美國與加拿大巡迴講演',
+    language: '波斯文口述／英文速記',
+    parent: '宣揚世界和平（The Promulgation of Universal Peace）',
+    note: `來源：https://www.bahai.org/library/authoritative-texts/abdul-baha/promulgation-universal-peace/；官方目錄順序第 ${number} 篇`,
+    intro: `本篇為阿博都巴哈一九一二年遊歷美國與加拿大期間公開講辭的官方彙編順序第 ${number} 篇。講演面向教會、和平團體、大學、猶太會堂與私人聚會，反覆闡述人類一體、種族平等、男女平等、科學與宗教協調及世界和平。現存文字多由在場者速記後核訂，具有明確日期、地點與場合，可作獨立宣道單元；此處按權威文庫的一百餘篇目錄取前九十八篇，不另計母集。`,
+  }
+})
+
 // 現代基督教大藏經（按時代精神：以 1910 後普世合一運動為主軸＋現代精神）
 export const MODERN_ERA: DazangEra = {
   key: 'modern',
@@ -2483,29 +2498,19 @@ export const MODERN_ERA: DazangEra = {
     ]
   },
   wai: {
-    summary: '外藏旁收非正統基督宗教與世俗思潮的宣講文獻，與正藏佈道傳統互為對照。',
+    summary: '外藏旁收現代新興與衍生宗教可核讀的宣講文獻，與正藏佈道傳統互為對照。',
     divisions: [
       {
         key: 'new-religious-proselytism',
         label: '新興宗教佈道部',
         label_en: 'Proselytism of New Religious Movements',
-        desc: '十九世紀後興起之新興宗教的逐戶宣教與公開講座文宣。',
+        desc: '十九世紀後興起之新興與衍生宗教的逐戶宣教、宣教手冊與有固定場合的公開講辭。',
         works: [
           { title_zh: '逐戶傳道指南', title_orig: 'Reasoning from the Scriptures', author: '耶和華見證人守望台社', era: '一九八五年起', place: '美國紐約', language: '英文‧中文', intro: '耶和華見證人挨家挨戶傳道時所用的對話與護教手冊，按主題編排經文論據與常見質疑的應對。此宣教模式以高度組織化的逐戶探訪著稱，文宣大量翻譯流通於全球。因其基督論與正統教會相異，故列於外藏新興宗教佈道部，以供對照其宣講策略。' },
           { title_zh: '摩門教傳教士手冊', title_orig: 'Preach My Gospel', author: '耶穌基督後期聖徒教會', era: '二〇〇四年', place: '美國猶他', language: '英文‧中文', intro: '摩門教全球青年傳教士所用的標準宣教手冊，規範教導課程、邀請受洗的步驟與屬靈培育方法。其雙人結對、定期外展的傳教制度為當代新興宗教宣教之顯例。因其經典與教義逸出正統基督教範圍，故收於外藏，俾與正藏佈道文獻相互參照。' },
-          { title_zh: '新世紀靈性講座文選', title_orig: 'New Age Spirituality Lectures', author: '新世紀運動諸講者', era: '二十世紀後半', place: '歐美', language: '英文', intro: '二十世紀後半興起的新世紀運動所辦各式靈性講座與工作坊之文宣與講稿選錄，融合東方冥想、神祕主義、自我提升與身心靈療癒。其宣講雖非傳統佈道，卻以類宗教方式廣傳於現代世俗社會，作為當代靈性市場的宣傳樣態收於外藏，與基督教佈道形成對照。' }
+          ...PROMULGATION_UNIVERSAL_PEACE_TALKS,
         ]
       },
-      {
-        key: 'secular-ethical-oratory',
-        label: '世俗倫理演說部',
-        label_en: 'Secular and Ethical Oratory',
-        desc: '人本主義、無神論與世俗倫理的公共演說與宣言。',
-        works: [
-          { title_zh: '人本主義宣言', title_orig: 'Humanist Manifesto', author: '美國人本主義者協會', era: '一九三三‧一九七三‧二〇〇三年', place: '美國', language: '英文', intro: '由科學家、哲學家與倫理學者聯名發表並歷經三度修訂的世俗人本主義綱領性文件，主張以理性、科學與人類福祉取代超自然信仰為價值根基。此宣言以近乎信條的形式宣講無神論的倫理願景，是現代世俗思潮的代表文本，故收於外藏世俗倫理演說部以資對照。' },
-          { title_zh: '無神論公共演說集', title_orig: 'Lectures on Atheism', author: '英格索爾（Robert G. Ingersoll）等', era: '十九世紀末–二十世紀', place: '美國', language: '英文', intro: '「偉大的不可知論者」英格索爾及其後繼者於公開講壇所發表的反宗教演說結集，以雄辯文采抨擊教條、倡導理性與世俗道德。此類演說以講壇之姿與基督教佈道針鋒相對，構成現代信仰與世俗論辯的重要一翼，作為對照樣本收於外藏。' }
-        ]
-      }
     ]
   }
 },
