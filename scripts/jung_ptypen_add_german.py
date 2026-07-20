@@ -337,7 +337,7 @@ def build(inspect: bool, upload: bool) -> None:
         print(f"\ninspect: assembled {len(out_chunks)} chunks; sample → C:/tmp/_ptypen_sample.txt")
         return
 
-    base = Path(os.environ.get("EBOOK_CHUNKS_DIR") or r"G:/我的雲端硬碟/資料/電子書/_chunks")
+    base = Path(os.environ.get("EBOOK_CHUNKS_DIR") or r"G:/我的雲端硬碟/資料/知識圖工作室/_chunks")
     base.mkdir(parents=True, exist_ok=True)
     out = base / f"{EBID}.jsonl"
     write_jsonl(out_chunks, out)

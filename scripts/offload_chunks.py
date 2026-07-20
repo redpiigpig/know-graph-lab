@@ -5,7 +5,7 @@ Offload chunk content from Supabase to local JSONL files (one per ebook).
 Replaces ebook_chunks.content with a 200-char preview to keep DB under quota.
 
 Local layout:
-  G:\我的雲端硬碟\資料\電子書\_chunks\{ebook_id}.jsonl
+  G:\我的雲端硬碟\資料\知識圖工作室\_chunks\{ebook_id}.jsonl
     {"chunk_index": 0, "page_number": 1, "chapter_path": null, "content": "..."}
     {"chunk_index": 1, ...}
 
@@ -26,7 +26,7 @@ except ImportError:
     os.system("pip install requests -q")
     import requests
 
-CHUNKS_DIR = Path('G:/我的雲端硬碟/資料/電子書/_chunks')
+CHUNKS_DIR = Path('G:/我的雲端硬碟/資料/知識圖工作室/_chunks')
 PREVIEW_LEN = 100  # 2026-07-08 200->100: DB quota rescue
 BATCH_SIZE = 500  # chunks per fetch
 

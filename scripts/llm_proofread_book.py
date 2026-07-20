@@ -49,7 +49,7 @@ KEY = os.environ["SUPABASE_SERVICE_ROLE_KEY"]
 H_GET = {"apikey": KEY, "Authorization": f"Bearer {KEY}"}
 
 CHUNKS_DIR = Path(os.environ.get("EBOOK_CHUNKS_DIR")
-                  or r"G:\我的雲端硬碟\資料\電子書\_chunks")
+                  or r"G:\我的雲端硬碟\資料\知識圖工作室\_chunks")
 
 PROOFREAD_PROMPT = """你是電子書翻譯校對員。下面是一本繁體中文電子書的某一頁，這頁屬於：
 

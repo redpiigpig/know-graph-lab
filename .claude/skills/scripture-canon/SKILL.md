@@ -852,7 +852,7 @@ data/creeds/ecumenical-councils/
 1. **中文版** — 3-7 早期、8-18 中世紀、19 Trent (25 sessio)、20 梵一 (DF + PA) 共 44 份；vatican.va 無中文；唯一權威紙本 Denzinger（光啟 2013 / ISBN 9789575467418）
    - **進行中 2026-05-23**：用戶已下載 Denzinger 中譯 PDF（2430 頁、139MB、輔仁神學著作編譯會編譯）入庫至 [[ebook-pipeline]] 系統：
      - ebook_id: `568726d3-967e-457a-ab69-7452b21d606f`
-     - Drive 路徑：`G:/我的雲端硬碟/資料/電子書/世界宗教/基督教/教會法典與信條/輔仁神學著作編譯會，公教會之信仰與倫理教義選集.pdf`
+     - Drive 路徑：`G:/我的雲端硬碟/資料/知識圖工作室/電子圖書館/世界宗教/基督教/教會法典與信條/輔仁神學著作編譯會，公教會之信仰與倫理教義選集.pdf`
      - 雙欄拉中對照布局；Adobe Paper Capture 預 OCR 品質太差需重 Vision OCR
      - **Haiku 重 OCR 進行中**（Gemini quota 用罄）；2430 頁 × 10 頁/batch = 243 batches，預估數小時實跑
      - OCR 完成後 → 解析 DH 番號定位早期 3-7（DH 100-600）／ 中世紀 8-18（DH 600-1450）／ Trent 19（DH 1500-1900）／ 梵一 20（DH 3000-3075）對應段落，寫進 `*-chinese.txt` 完成 44 份中譯缺口
@@ -1633,7 +1633,7 @@ q-peter-preaching / christian-sibyl / orphica / joseph-prayer
 
 **5. jubilees → Drive JSONL 全文重抓（97.9%）**：
 - **根因**：第4冊 ebook `a96b524b` 的 `ebook_chunks` 只回填 200 字/頁 **preview**（restore_apocrypha_fulltext.py 對 OT4 沒生效），full-width-dash 重複本 `3f241acf` 是空殼 → 無法 raw 重建。舊 cct_zh 快照（61K 字）尾部混整冊索引垃圾、且本身缺 ch46-50（摩西敘事）。
-- **修法**：全文一直在 **Drive Vision OCR JSONL** `G:/我的雲端硬碟/資料/電子書/_chunks/{ebook_id}.jsonl`（每頁 `content` 全文，427 records）。直接讀 JSONL **p6-146**（卷七，p147 起卷八雅各天梯）重建快照＝**88,726 字**（含 ch46-50、無垃圾）→ `align_to_convergence` accumulate → **86.4%→97.9%**（補回 ch17/20/46-50；剩 ch21 一章）。
+- **修法**：全文一直在 **Drive Vision OCR JSONL** `G:/我的雲端硬碟/資料/知識圖工作室/_chunks/{ebook_id}.jsonl`（每頁 `content` 全文，427 records）。直接讀 JSONL **p6-146**（卷七，p147 起卷八雅各天梯）重建快照＝**88,726 字**（含 ch46-50、無垃圾）→ `align_to_convergence` accumulate → **86.4%→97.9%**（補回 ch17/20/46-50；剩 ch21 一章）。
 - **⚠️ 廣域隱患仍在**：第4冊整冊 ebook_chunks 未回填全文。其他用第4冊的 OT 偽典（卷八雅各天梯/卷九雅尼…）要 raw 重建前，先跑 `restore_apocrypha_fulltext.py` OT4 或直接讀該 JSONL。第5/6冊＝700+ 字/頁（完整、可 raw 重建）。
 - 重建後的 judith/2-macc/3-macc/jubilees 快照存 `_apoc_snapshots/`（gitignore，但已 force-add 作 durable source，仿 1-enoch/sirach）。
 

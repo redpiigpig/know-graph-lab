@@ -74,7 +74,7 @@ def is_volume_divider(chapter_path: str) -> bool:
 
 def run(ebook_id: str, dry_run: bool) -> None:
     load_env()
-    jsonl_dir = Path(os.environ.get("EBOOK_CHUNKS_DIR", "G:/我的雲端硬碟/資料/電子書/_chunks"))
+    jsonl_dir = Path(os.environ.get("EBOOK_CHUNKS_DIR", "G:/我的雲端硬碟/資料/知識圖工作室/_chunks"))
     jsonl_path = jsonl_dir / f"{ebook_id}.jsonl"
     if not jsonl_path.exists():
         print(f"JSONL not found: {jsonl_path}")

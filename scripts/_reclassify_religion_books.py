@@ -28,7 +28,7 @@ APPLY = "--apply" in sys.argv
 SUPABASE_URL = os.environ["SUPABASE_URL"]
 KEY = os.environ["SUPABASE_SERVICE_ROLE_KEY"]
 H = {"apikey": KEY, "Authorization": f"Bearer {KEY}"}
-DRIVE_ROOT = Path(r"G:\我的雲端硬碟\資料\電子書")
+DRIVE_ROOT = Path(r"G:\我的雲端硬碟\資料\知識圖工作室\電子圖書館")
 
 # Patterns — 順序很重要：先抓 神學 (基督教專題)，再抓單一非基督宗教，最後 fallback
 CHRISTIAN_THEOLOGY_PATTERNS = [

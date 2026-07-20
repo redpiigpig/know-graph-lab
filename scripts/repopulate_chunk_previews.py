@@ -40,7 +40,7 @@ KEY = ENV["SUPABASE_SERVICE_ROLE_KEY"]
 H_GET = {"apikey": KEY, "Authorization": f"Bearer {KEY}"}
 H_INS = {**H_GET, "Content-Type": "application/json", "Prefer": "return=minimal"}
 
-CHUNKS_DIR = Path(ENV.get("EBOOK_CHUNKS_DIR") or "G:/我的雲端硬碟/資料/電子書/_chunks")
+CHUNKS_DIR = Path(ENV.get("EBOOK_CHUNKS_DIR") or "G:/我的雲端硬碟/資料/知識圖工作室/_chunks")
 PREVIEW_LEN = 100  # 2026-07-08 200→100：DB 超量救援（free tier 500MB）
 BATCH = 100
 

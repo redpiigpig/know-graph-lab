@@ -20,7 +20,7 @@ except ImportError:
     os.system("pip install requests -q")
     import requests
 
-DRIVE_ROOT = Path('G:/我的雲端硬碟/資料/電子書')
+DRIVE_ROOT = Path('G:/我的雲端硬碟/資料/知識圖工作室/電子圖書館')
 
 # Order matters — first match wins. More specific patterns first.
 # Each rule: (regex, category)

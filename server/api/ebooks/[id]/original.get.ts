@@ -17,8 +17,8 @@ import { resolve, sep, extname } from "node:path";
 
 // Canonical Drive root for the library; only files under here may be served.
 const DRIVE_ROOTS = [
-  "G:\\我的雲端硬碟\\資料\\電子書",
-  "G:/我的雲端硬碟/資料/電子書",
+  "G:\\我的雲端硬碟\\資料\\知識圖工作室\\電子圖書館",
+  "G:/我的雲端硬碟/資料/知識圖工作室/電子圖書館",
 ];
 
 const CONTENT_TYPE: Record<string, string> = {

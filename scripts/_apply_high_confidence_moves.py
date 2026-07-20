@@ -17,7 +17,7 @@ APPLY = "--apply" in sys.argv
 SUPABASE_URL = os.environ["SUPABASE_URL"]
 KEY = os.environ["SUPABASE_SERVICE_ROLE_KEY"]
 H = {"apikey": KEY, "Authorization": f"Bearer {KEY}"}
-DRIVE_ROOT = Path(r"G:\我的雲端硬碟\資料\電子書")
+DRIVE_ROOT = Path(r"G:\我的雲端硬碟\資料\知識圖工作室\電子圖書館")
 
 # (title 完整 match, target_cat, target_sub, reason)
 MOVES = [

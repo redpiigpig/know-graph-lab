@@ -40,7 +40,7 @@ URL = os.environ["SUPABASE_URL"]
 KEY = os.environ["SUPABASE_SERVICE_ROLE_KEY"]
 H_GET = {"apikey": KEY, "Authorization": f"Bearer {KEY}"}
 
-CHUNKS_DIR = Path(os.environ.get("EBOOK_CHUNKS_DIR") or r"G:\我的雲端硬碟\資料\電子書\_chunks")
+CHUNKS_DIR = Path(os.environ.get("EBOOK_CHUNKS_DIR") or r"G:\我的雲端硬碟\資料\知識圖工作室\_chunks")
 
 # Bold/italic flag bits in PyMuPDF span dict
 FLAG_ITALIC = 1 << 1   # 2

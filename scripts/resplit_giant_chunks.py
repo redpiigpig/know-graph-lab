@@ -66,7 +66,7 @@ def fetch_oversized_books(threshold: int = GIANT_THRESHOLD) -> list[dict]:
     times out on Supabase free tier with `char_count > N` predicate."""
     from pathlib import Path
     chunks_dir = Path(os.environ.get("EBOOK_CHUNKS_DIR")
-                      or r"G:\我的雲端硬碟\資料\電子書\_chunks")
+                      or r"G:\我的雲端硬碟\資料\知識圖工作室\_chunks")
     ids = []
     for jp in chunks_dir.glob("*.jsonl"):
         try:

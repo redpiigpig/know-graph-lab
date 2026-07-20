@@ -159,7 +159,7 @@ REFERENCE 模式每卷需**英文原典＋中譯**兩檔。英文原典全在 ar
 | `55555562-5555-4555-8555-555555555555` | 存在的韻律 | 自譯（en→繁中，330/330 段，按 10 段拆 34 chunks；2026-06-25 Haiku backend 完成並上架）|
 
 ### 🔄 自譯 queue（`panikkar_auto.py`，user 2026-06-14 已喊停一次，要續跑再啟）
-- 重啟：`EBOOK_CHUNKS_DIR=G:/我的雲端硬碟/資料/電子書/_chunks python scripts/panikkar_auto.py --run-queue`。resumable（`panikkar_data/<slug>/orig.txt`+`sec{N}.json`），is_done 95% 門檻。
+- 重啟：`EBOOK_CHUNKS_DIR=G:/我的雲端硬碟/資料/知識圖工作室/_chunks python scripts/panikkar_auto.py --run-queue`。resumable（`panikkar_data/<slug>/orig.txt`+`sec{N}.json`），is_done 95% 門檻。
 - registry `WORKS` 8 卷，QUEUE 序：experience-of-god✅→rhythm-of-being✅→myth-faith-hermeneutics(義，已有大半 cache 但未 done)→pace-interculturalita→mysticism-fullness(卷I)→religion-world-body→mundanal-silencio→vedic-experience(1222pp 殿後)。
 - 引擎 `pb.make_engine(src_lang, backend=...)`（英/義/西 prompt 泛化）。`auto` 保留 NVIDIA→Gemini→Haiku；2026-06-25 Gemini 4 key 429、NVIDIA 在長段會卡，已新增 `--backend haiku` / `--translate-only` / `--save-every`，可用 Haiku 小批量安全續跑 cache。
 - `--list` 看狀態；**各卷完成補 hub**（`stores/collectedWorks.ts` 加 done+ebookId；目前宗教內對話、神的經驗、存在的韻律已 done）。

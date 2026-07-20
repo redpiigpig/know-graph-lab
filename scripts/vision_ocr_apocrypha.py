@@ -60,7 +60,7 @@ except ImportError:
 
 import subprocess
 
-CHUNKS_DIR = Path("G:/我的雲端硬碟/資料/電子書/_chunks")
+CHUNKS_DIR = Path("G:/我的雲端硬碟/資料/知識圖工作室/_chunks")
 MODEL = "gemini-2.5-flash"
 
 # Haiku CLI fallback (used when all Gemini keys quota-blocked).
@@ -90,7 +90,7 @@ BOOKS: list[dict] = [
     {'id': '12156219-cf9c-4610-a84c-5d5358c22817', 'title': '基督教典外文獻-新約篇-第3冊'},
     {'id': '677c5e16-5b19-4f9b-9499-ee44d5c3eb01', 'title': '基督教典外文獻-新約篇-第4冊'},
 ]
-BOOK_DIR = Path("G:/我的雲端硬碟/資料/電子書/世界宗教/基督教/基督教典外文獻 (10 冊)")
+BOOK_DIR = Path("G:/我的雲端硬碟/資料/知識圖工作室/電子圖書館/世界宗教/基督教/基督教典外文獻 (10 冊)")
 for b in BOOKS:
     b['path'] = BOOK_DIR / f"{b['title']}.pdf"
 

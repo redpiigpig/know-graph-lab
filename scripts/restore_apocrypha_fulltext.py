@@ -25,7 +25,7 @@ if sys.platform == "win32":
 load_dotenv()
 SUPABASE_URL = os.environ['SUPABASE_URL']
 SERVICE_KEY = os.environ['SUPABASE_SERVICE_ROLE_KEY']
-CHUNKS_DIR = Path("G:/我的雲端硬碟/資料/電子書/_chunks")
+CHUNKS_DIR = Path("G:/我的雲端硬碟/資料/知識圖工作室/_chunks")
 
 BOOKS = [
     ('OT1', 'b1fbff1b-cbf1-45b6-a9cd-cf0e9f943c57'),

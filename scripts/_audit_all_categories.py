@@ -26,7 +26,7 @@ APPLY = "--apply" in sys.argv
 SUPABASE_URL = os.environ["SUPABASE_URL"]
 KEY = os.environ["SUPABASE_SERVICE_ROLE_KEY"]
 H = {"apikey": KEY, "Authorization": f"Bearer {KEY}"}
-DRIVE_ROOT = Path(r"G:\我的雲端硬碟\資料\電子書")
+DRIVE_ROOT = Path(r"G:\我的雲端硬碟\資料\知識圖工作室\電子圖書館")
 
 # Order matters — checked top-down，first match wins
 # User 規則：基督教史/教會史/傳記 → 世界宗教/基督教；神學只收系統著作／教父原典／神學論述

@@ -52,7 +52,7 @@ DH range 修正待辦：
 | 步驟 | 狀態 | 詳細 |
 |---|---|---|
 | Drive ingest | ✅ | ebook_id `568726d3-967e-457a-ab69-7452b21d606f` |
-| Drive 路徑 | ✅ | `G:/我的雲端硬碟/資料/電子書/世界宗教/基督教/教會法典與信條/輔仁神學著作編譯會，公教會之信仰與倫理教義選集.pdf` |
+| Drive 路徑 | ✅ | `G:/我的雲端硬碟/資料/知識圖工作室/電子圖書館/世界宗教/基督教/教會法典與信條/輔仁神學著作編譯會，公教會之信仰與倫理教義選集.pdf` |
 | DB category | ✅ | `世界宗教` / sub `基督教/教會法典與信條` |
 | Main OCR（10 頁/batch）| ⚠️ | 跑完 240/243 batches 但 `max_tokens=4096` 截斷 → 801 / 2430 頁實際有內容（**fix `08ddff1` 已修為 32000**，僅這本書受影響）|
 | Tail OCR pp 2401-2430 | ✅ | 30/30 過，附錄五 新教信條 |
@@ -78,7 +78,7 @@ python -X utf8 -c "
 import json
 from pathlib import Path
 for name in ['.jsonl', '.gaps.jsonl']:
-    p = Path(r'G:\我的雲端硬碟\資料\電子書\_chunks\568726d3-967e-457a-ab69-7452b21d606f' + name)
+    p = Path(r'G:\我的雲端硬碟\資料\知識圖工作室\_chunks\568726d3-967e-457a-ab69-7452b21d606f' + name)
     if p.exists():
         with p.open(encoding='utf-8') as f:
             ok = sum(1 for l in f if l.strip() and json.loads(l).get('content', '').strip())
@@ -218,9 +218,9 @@ ALTER TABLE ebook_chunks ADD COLUMN page_numbers int[];
 
 | 檔 | 路徑 |
 |---|---|
-| 原 PDF（Drive）| `G:/我的雲端硬碟/資料/電子書/世界宗教/基督教/教會法典與信條/輔仁神學著作編譯會，公教會之信仰與倫理教義選集.pdf` |
-| Final JSONL | `G:/我的雲端硬碟/資料/電子書/_chunks/568726d3-967e-457a-ab69-7452b21d606f.jsonl` |
-| Gap-fill log | `G:/我的雲端硬碟/資料/電子書/_chunks/568726d3-967e-457a-ab69-7452b21d606f.gaps.jsonl` |
+| 原 PDF（Drive）| `G:/我的雲端硬碟/資料/知識圖工作室/電子圖書館/世界宗教/基督教/教會法典與信條/輔仁神學著作編譯會，公教會之信仰與倫理教義選集.pdf` |
+| Final JSONL | `G:/我的雲端硬碟/資料/知識圖工作室/_chunks/568726d3-967e-457a-ab69-7452b21d606f.jsonl` |
+| Gap-fill log | `G:/我的雲端硬碟/資料/知識圖工作室/_chunks/568726d3-967e-457a-ab69-7452b21d606f.gaps.jsonl` |
 | Main OCR script | `scripts/ocr_with_gemini.py`（支援 `--book ID --engine haiku` 單本）|
 | Gap-fill script | `scripts/_denzinger_gaps_ocr.py`（gitignored 因 _prefix；含 2-strike rule）|
 | Tail OCR script | `scripts/_denzinger_tail_ocr.py`（已跑完，留作參考）|

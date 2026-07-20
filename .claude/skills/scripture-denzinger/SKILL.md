@@ -10,7 +10,7 @@ description: Denzinger《公教會之信仰與倫理教義選集》(ebook_id 568
 
 書本：`ebook_id=568726d3-967e-457a-ab69-7452b21d606f`，2430 頁，display_mode=`bilingual-parallel`，reader `/ebook/568726d3-967e-457a-ab69-7452b21d606f`。
 
-PDF：`G:/我的雲端硬碟/資料/電子書/世界宗教/基督教/教會法典與信條/輔仁神學著作編譯會，公教會之信仰與倫理教義選集.pdf`。
+PDF：`G:/我的雲端硬碟/資料/知識圖工作室/電子圖書館/世界宗教/基督教/教會法典與信條/輔仁神學著作編譯會，公教會之信仰與倫理教義選集.pdf`。
 
 詳細上架歷史見 [DENZINGER_HANDOFF_2026-05-27.md](../ebook-pipeline/DENZINGER_HANDOFF_2026-05-27.md)；schema 見 [book-structure-bilingual-parallel.md](../ebook-pipeline/book-structure-bilingual-parallel.md)。
 

@@ -54,7 +54,7 @@ KEY = ENV["SUPABASE_SERVICE_ROLE_KEY"]
 H_JSON = {"apikey": KEY, "Authorization": f"Bearer {KEY}", "Content-Type": "application/json", "Prefer": "return=minimal"}
 H_GET = {"apikey": KEY, "Authorization": f"Bearer {KEY}"}
 
-CHUNKS_DIR = Path(ENV.get("EBOOK_CHUNKS_DIR") or "G:/我的雲端硬碟/資料/電子書/_chunks")
+CHUNKS_DIR = Path(ENV.get("EBOOK_CHUNKS_DIR") or "G:/我的雲端硬碟/資料/知識圖工作室/_chunks")
 PREVIEW_LEN = 100  # 2026-07-08 200→100：DB 超量救援
 
 CC = opencc.OpenCC("s2tw")  # simplified → traditional (Taiwan idioms)

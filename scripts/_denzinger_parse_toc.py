@@ -17,7 +17,7 @@ from pathlib import Path
 EBOOK_ID = "568726d3-967e-457a-ab69-7452b21d606f"
 # Locate by chapter_path label — chunk_index drifts whenever segmenter re-runs.
 TOC_CHAPTER_PATH = "詳細目錄"
-CHUNKS_DIR = Path(r"G:/我的雲端硬碟/資料/電子書/_chunks")
+CHUNKS_DIR = Path(r"G:/我的雲端硬碟/資料/知識圖工作室/_chunks")
 JSONL_PATH = CHUNKS_DIR / f"{EBOOK_ID}.jsonl"
 OUT_DIR = Path(__file__).parent / "_denzinger_toc"
 

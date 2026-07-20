@@ -15,7 +15,7 @@
 set -u
 
 BOOK_ID="568726d3-967e-457a-ab69-7452b21d606f"
-RECOLUMN="G:/我的雲端硬碟/資料/電子書/_chunks/${BOOK_ID}.recolumn.jsonl"
+RECOLUMN="G:/我的雲端硬碟/資料/知識圖工作室/_chunks/${BOOK_ID}.recolumn.jsonl"
 LOG="scripts/logs/denzinger_recolumn_2026-05-28.log"
 TARGET=967
 

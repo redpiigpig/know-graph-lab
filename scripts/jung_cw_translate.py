@@ -178,7 +178,7 @@ def assemble(vol, cfg_title: str, ebid: str, data: Path, units: list[str], *, up
         validate_multilang_chunk(c)
         out.append(c)
         ci += 1
-    base = Path(os.environ.get("EBOOK_CHUNKS_DIR") or r"G:/我的雲端硬碟/資料/電子書/_chunks")
+    base = Path(os.environ.get("EBOOK_CHUNKS_DIR") or r"G:/我的雲端硬碟/資料/知識圖工作室/_chunks")
     base.mkdir(parents=True, exist_ok=True)
     write_jsonl(out, base / f"{ebid}.jsonl")
     print(f"  assembled {len(out)} chunks", flush=True)

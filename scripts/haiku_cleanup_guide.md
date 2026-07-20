@@ -60,7 +60,7 @@ python scripts/clean_with_haiku.py run
 ## How It Works
 
 1. **Fetch books** from Supabase (751 books with chunk_count > 0)
-2. **Load JSONL chunks** from `G:/我的雲端硬碟/資料/電子書/_chunks/{book_id}.jsonl`
+2. **Load JSONL chunks** from `G:/我的雲端硬碟/資料/知識圖工作室/_chunks/{book_id}.jsonl`
 3. **Send to Haiku 4.5** with prompt: convert simplified→traditional, clean formatting
 4. **Write cleaned JSONL** back to disk with improved text
 5. **Update tracker** (optional: can add `cleaned_at` timestamp to DB)
@@ -136,8 +136,8 @@ Once cleanup is done:
 ## Troubleshooting
 
 ### "No chunks found"
-- Check that JSONL files exist in `G:/我的雲端硬碟/資料/電子書/_chunks/`
-- Run: `ls -lh G:/我的雲端硬碟/資料/電子書/_chunks/ | wc -l`
+- Check that JSONL files exist in `G:/我的雲端硬碟/資料/知識圖工作室/_chunks/`
+- Run: `ls -lh G:/我的雲端硬碟/資料/知識圖工作室/_chunks/ | wc -l`
 
 ### "API key not found"
 ```bash

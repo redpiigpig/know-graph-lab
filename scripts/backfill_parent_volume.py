@@ -36,7 +36,7 @@ H_GET = {"apikey": KEY, "Authorization": f"Bearer {KEY}"}
 H_JSON = {**H_GET, "Content-Type": "application/json", "Prefer": "return=minimal"}
 
 CHUNKS_DIR = Path(os.environ.get("EBOOK_CHUNKS_DIR")
-                  or r"G:\我的雲端硬碟\資料\電子書\_chunks")
+                  or r"G:\我的雲端硬碟\資料\知識圖工作室\_chunks")
 
 ALL_REFINED = [
     ("Vol 1", "c98d358d-7066-4691-a896-b7232707b0db"),

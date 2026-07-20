@@ -10,7 +10,7 @@ Watches the skill-local "z-lib" drop folder, and for each ebook file:
      (with a fallback rule for English Christian-studies books -> 宗教學).
   3. Inserts an `ebooks` row with category set + future Drive path as file_path.
   4. Moves the local file from z-lib/ to
-     G:/我的雲端硬碟/資料/電子書/{category}/{author}，{title}.{ext}
+     G:/我的雲端硬碟/資料/知識圖工作室/電子圖書館/{category}/{author}，{title}.{ext}
      Since G: is the Drive sync mount, the move IS the upload (sync client
      uploads in background) AND the local-delete in one filesystem rename.
 
@@ -43,7 +43,7 @@ import book_classifier
 
 
 NEW_BOOK_DIR = Path(__file__).resolve().parent.parent / "z-lib"
-DRIVE_ROOT = Path("G:/我的雲端硬碟/資料/電子書")
+DRIVE_ROOT = Path("G:/我的雲端硬碟/資料/知識圖工作室/電子圖書館")
 EBOOK_EXTS = {".pdf", ".epub", ".mobi", ".azw3", ".azw"}
 
 # Broken / truncated downloads are held here, OUT of Drive, so they never

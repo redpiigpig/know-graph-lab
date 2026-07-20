@@ -24,7 +24,7 @@ SUPABASE_URL = os.environ["SUPABASE_URL"]
 KEY = os.environ["SUPABASE_SERVICE_ROLE_KEY"]
 H = {"apikey": KEY, "Authorization": f"Bearer {KEY}"}
 
-DRIVE_ROOT = Path(r"G:\我的雲端硬碟\資料\電子書")
+DRIVE_ROOT = Path(r"G:\我的雲端硬碟\資料\知識圖工作室\電子圖書館")
 CATEGORY = "神學"  # 2026-05-18: 從宗教學提升為頂層分類，神學作為獨立學科
 
 SUBFOLDER_ANF = "Schaff - Ante-Nicene Fathers (10 vols)"

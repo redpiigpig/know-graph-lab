@@ -36,7 +36,7 @@ URL = ENV["SUPABASE_URL"]
 KEY = ENV["SUPABASE_SERVICE_ROLE_KEY"]
 H = {"apikey": KEY, "Authorization": f"Bearer {KEY}"}
 
-CHUNKS_DIR = Path("G:/我的雲端硬碟/資料/電子書/_chunks")
+CHUNKS_DIR = Path("G:/我的雲端硬碟/資料/知識圖工作室/_chunks")
 
 
 def get_haiku_clean_prompt(text: str) -> str:

@@ -39,7 +39,7 @@ H = {
     "Content-Type": "application/json",
 }
 
-CHUNKS_DIR = Path("G:/我的雲端硬碟/資料/電子書/_chunks")
+CHUNKS_DIR = Path("G:/我的雲端硬碟/資料/知識圖工作室/_chunks")
 # Haiku retired 2026-06-03 (user：haiku 全面停用) → NVIDIA NIM (OpenAI-compatible).
 NVIDIA_KEY = ENV.get("NVIDIA_API_Key_1") or ENV.get("NVIDIA_API_KEY")
 NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions"

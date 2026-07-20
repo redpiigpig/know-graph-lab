@@ -42,7 +42,7 @@ if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
     sys.stderr.reconfigure(encoding="utf-8")
 
-CHUNKS_DIR = Path("G:/我的雲端硬碟/資料/電子書/_chunks")
+CHUNKS_DIR = Path("G:/我的雲端硬碟/資料/知識圖工作室/_chunks")
 R2_PREFIX = "ebook-chunks/"
 FREE_TIER_GB = 10
 SAFETY_CEILING_GB = 9  # abort if projected total > this

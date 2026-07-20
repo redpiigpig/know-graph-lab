@@ -35,7 +35,7 @@ if sys.platform == "win32":
 SCRIPTS = Path(__file__).resolve().parent
 PY = sys.executable
 ENV = load_env()
-CHUNKS_DIR = Path(ENV.get("EBOOK_CHUNKS_DIR") or "G:/我的雲端硬碟/資料/電子書/_chunks")
+CHUNKS_DIR = Path(ENV.get("EBOOK_CHUNKS_DIR") or "G:/我的雲端硬碟/資料/知識圖工作室/_chunks")
 TIERS_FILE = Path("c:/tmp/quality_tiers.json")
 LEDGER = SCRIPTS / "logs" / "reocr_ledger.json"
 

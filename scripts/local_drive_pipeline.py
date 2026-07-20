@@ -15,7 +15,7 @@ import re
 import sys
 from pathlib import Path
 
-DRIVE_ROOT = Path('G:/我的雲端硬碟/資料/電子書')
+DRIVE_ROOT = Path('G:/我的雲端硬碟/資料/知識圖工作室/電子圖書館')
 INVENTORY_FILE = 'data/local_inventory.json'
 
 EBOOK_EXTS = {'.pdf', '.epub', '.mobi', '.azw3', '.azw'}

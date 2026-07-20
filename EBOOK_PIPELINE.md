@@ -7,7 +7,7 @@
 ## 1. 系統概覽
 
 ```
-G:\我的雲端硬碟\資料\電子書\          ← Drive Desktop 自動同步雲端
+G:\我的雲端硬碟\資料\知識圖工作室\電子圖書館\          ← Drive Desktop 自動同步雲端
 ├── 哲學\               ← 9 個主分類資料夾 + 子分類
 │   ├── 黎明，西洋哲學史\
 │   ├── 經典與解釋輯刊\
@@ -138,7 +138,7 @@ CREATE INDEX idx_ebook_chunks_fts ON ebook_chunks USING gin (to_tsvector('simple
 
 ## 4. 本地 JSONL 結構
 
-`G:/我的雲端硬碟/資料/電子書/_chunks/{ebook_id}.jsonl`，一行一 chunk：
+`G:/我的雲端硬碟/資料/知識圖工作室/_chunks/{ebook_id}.jsonl`，一行一 chunk：
 
 ```json
 {"chunk_index": 0, "chunk_type": "page", "page_number": 1, "chapter_path": null, "content": "全頁文字..."}
@@ -148,7 +148,7 @@ CREATE INDEX idx_ebook_chunks_fts ON ebook_chunks USING gin (to_tsvector('simple
 讀取範例（給前端 API 用）：
 ```ts
 const fs = await import('fs/promises');
-const lines = (await fs.readFile(`G:/我的雲端硬碟/資料/電子書/_chunks/${ebookId}.jsonl`, 'utf8')).split('\n').filter(Boolean);
+const lines = (await fs.readFile(`G:/我的雲端硬碟/資料/知識圖工作室/_chunks/${ebookId}.jsonl`, 'utf8')).split('\n').filter(Boolean);
 const targetChunk = JSON.parse(lines[chunk_index]);
 return targetChunk.content;
 ```

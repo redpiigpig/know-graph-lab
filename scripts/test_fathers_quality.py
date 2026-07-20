@@ -25,7 +25,7 @@ import validate_book_structure as vb
 import scan_translated_book as sc
 from sweep_book_quality import TERM_FIXES_BY_BOOK
 
-CHUNKS_DIR = Path(os.environ.get("EBOOK_CHUNKS_DIR") or r"G:\我的雲端硬碟\資料\電子書\_chunks")
+CHUNKS_DIR = Path(os.environ.get("EBOOK_CHUNKS_DIR") or r"G:\我的雲端硬碟\資料\知識圖工作室\_chunks")
 VUE = ROOT / "pages" / "fathers" / "index.vue"
 
 # zh 偵測

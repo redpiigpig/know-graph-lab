@@ -38,7 +38,8 @@
 - **Phase 3 ✅（2026-07-20 補完）**：教父 Schaff/ACCS 67 本先前已搬且 file_path 已更新；本次補搬 ACCS 英文 vol 12/15 兩本 epub、清掉 `電子書\世界宗教\基督教\IVP - ACCS *` 空夾，並改掉仍指舊路徑的 `accs_volume_config.json`／`accs_*.ps1`／skill 文件。
 - **Phase 4 ✅（2026-07-20 完成）**：三相簿整夾搬入 `照片\{辰瑋相片,訓練相片,弘誓相片}`（80,945 件 / ~310GB，資料夾層級 rename，Drive file ID 不變 → 照片索引／R2 縮圖不受影響）；`nuxt.config.ts photosRoot` ＋ photos-library 全部腳本／skiplist／ledger 路徑同步更新。`儲存資料夾\公事`（非 /photos 相簿）留原地。
 - **Phase 5 部分 ✅（2026-07-20）**：`創作\千面上帝\宗教史讀書會` → `讀書會\千面上帝宗教史讀書會`（29 件），qiangmian 腳本／skill 已改。**講道**（龐牧師錄音／逐字稿）與**演講**素材不在本 Drive 帳號（My Drive）內，無檔可搬，`講道\`／`演講\` 待日後新素材直接落點。
-- **Phase 6（最高，需翻譯/OCR 全停）**：`電子書\{10類}` → `電子圖書館/`、`_chunks` → `工作室\_chunks`；改 `EBOOK_CHUNKS_DIR`＋`DRIVE_ROOT`＋全 file_path。**跑中任務會寫 _chunks，必須先停排程與翻譯線再搬。**
+- **Phase 6 ✅（2026-07-20 完成）**：先停（11 個排程 Disable ＋ 21 個 python 工作程序 kill），再搬 `電子書\{10類}` → `電子圖書館\`（2,193 本）、`_chunks`（2,233 檔）→ `工作室\_chunks`，舊 `資料\電子書\` 已刪；`EBOOK_CHUNKS_DIR`／`DRIVE_ROOT`／`original.get.ts`／111 個檔案的路徑引用同步改完，`ebooks.file_path` UPDATE 1,837 筆（殘留 0），最後回復排程與艦隊。
+- **附帶（2026-07-20）**：`資料\儲存資料夾\公事` 併回 `我的雲端硬碟\公事\`（拉丁文課／大學／事工／課程／橫山 5 夾），跨夾同名同大小重複 60 檔（時間戳全一致）刪掉搬來的那份、保留原 `公事` 樹內版本，`資料\儲存資料夾\` 整個刪除。
 
 ## R2 原檔（選擇性上，user 拍板 2026-07-19）
 
