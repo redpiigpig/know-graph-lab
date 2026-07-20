@@ -25,6 +25,11 @@ description: 教父全集（Schaff ANF 10 卷 + NPNF1 14 卷 + NPNF2 14 卷 + AC
 - 資料仍走共用 `ebooks`／`ebook_chunks` 表 + `/api/ebooks/[id]` API（沒有另做 schema 遷移）
 - `/translation-glossary` — 教父翻譯詞庫（5 個 tab，249+ 神學家、159+ 名詞）
 
+> 📌 **2026-07-20 進行中**：見 repo 根目錄 [`SESSION_HANDOFF_fathers_2026-07-20.md`](../../../SESSION_HANDOFF_fathers_2026-07-20.md)。
+> 重點：① `/fathers` 已獨立成羊皮紙子站（完工）；② **「標題吞內文」排版修復未完** —— 實際 **1,455 chunk／5,776 處／全 37 卷**（不是 228，舊數字是 T2 每 chunk 只報第一個所造成的低估），工具 `scripts/fix_fathers_heading_swallow.py`，冪等可續跑，建議掛排程分批；③ T11 漏譯 537 處待查。
+>
+> 🚨 **Drive 改版**：`_chunks` 已移到 `G:\我的雲端硬碟\資料\知識圖工作室\_chunks`，repo 內 91 支腳本／102 處仍指舊路徑且**失敗時靜默跳過**（會假裝「全部修好了」）。跑任何 JSONL 腳本前先確認路徑，或設 `EBOOK_CHUNKS_DIR`。
+
 🟢 **黃金模板 = ANF Vol 1**（[[anf-vol1-golden-template]]）。新 session 接手要先驗證 Vol 1 通過再開新卷。
 
 ---
@@ -415,8 +420,8 @@ EBOOK=<new-vol-ebook-id>
 # 0. 備份原英文 JSONL，避免 dual-state bug
 # ⚠️ 必須用 mv（移走）不可用 cp！留下英文 .jsonl 後 --resume 會用 title_en 當 skip-set
 #    把全部英文 chunk 當「已完成」跳過 → 整本英文/dual-state（2026-06-04 vol32 踩過）。
-mv "G:/我的雲端硬碟/資料/電子書/_chunks/$EBOOK.jsonl" \
-   "G:/我的雲端硬碟/資料/電子書/_chunks/$EBOOK.en.bak.jsonl"
+mv "G:/我的雲端硬碟/資料/知識圖工作室/_chunks/$EBOOK.jsonl" \
+   "G:/我的雲端硬碟/資料/知識圖工作室/_chunks/$EBOOK.en.bak.jsonl"
 
 # 1. 翻譯 (~3-6h)
 nohup python -u scripts/translate_ebook_to_zh.py $EBOOK --engine auto \
