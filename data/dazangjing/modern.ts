@@ -140,6 +140,21 @@ const GITANJALI_POEMS: DazangWork[] = Array.from({ length: 100 }, (_, index) => 
   }
 })
 
+const STUDY_QURAN_SURAS: DazangWork[] = Array.from({ length: 100 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `《研究版古蘭經》英譯第${number}章`,
+    title_orig: `The Study Quran: A New Translation and Commentary, Sura ${number}`,
+    author: '賽義德‧侯賽因‧納斯爾主編；達格利、達卡克、倫巴德、魯斯托姆合譯',
+    era: '2015 年',
+    place: '美國紐約',
+    language: '英文（譯自阿拉伯文）',
+    parent: '研究版古蘭經：新譯與注釋（The Study Quran）',
+    note: `來源：https://www.harpercollins.com/products/the-study-quran-seyyed-hossein-nasr；依古蘭經固定章序第 ${number} 章`,
+    intro: `本卷為二〇一五年《研究版古蘭經》依阿拉伯原典固定章序翻譯的第 ${number} 章。譯注團隊由穆斯林學者組成，英文譯文配合遜尼、什葉與蘇菲等歷代注釋傳統，既說明語詞、啟示處境和法義，也呈現經典內部多元解讀。此處收的是一部明確現代學術譯本的獨立譯章，而非把整套東方學叢書或釋經方法當作譯作；按章著錄並保留其宗教內部詮釋立場。`,
+  }
+})
+
 // 現代基督教大藏經（按時代精神：以 1910 後普世合一運動為主軸＋現代精神）
 export const MODERN_ERA: DazangEra = {
   key: 'modern',
@@ -1869,7 +1884,7 @@ export const MODERN_ERA: DazangEra = {
     ]
   },
   wai: {
-    summary: '外藏收錄與基督教文本研究相關、但屬他宗教經典或批判學派的譯介與方法論著作，作為理解現代基督教學術處境的旁參。',
+    summary: '外藏收錄他宗教經典具有固定篇界的現代翻譯與注釋，作為普世對話與比較閱讀的文本旁參。',
     divisions: [
       {
         key: 'other-religions',
@@ -1877,21 +1892,9 @@ export const MODERN_ERA: DazangEra = {
         label_en: 'Modern Translations of Other Scriptures',
         desc: '收錄基督教學界對他宗教經典的現代學術譯介，反映宗教比較與對話的時代脈絡。',
         works: [
-          { title_zh: '古蘭經（學術譯註本）', title_orig: 'The Study Quran: A New Translation and Commentary', author: '賽義德‧侯賽因‧納斯爾主編', era: '2015', place: '美國', language: '英文（譯自阿拉伯文）', intro: '當代最具學術份量的英譯古蘭經之一，由伊斯蘭學者群在納斯爾主持下完成，逐節附上引自歷代註釋傳統的詳盡評註，並收錄多篇主題論文。雖出自穆斯林學界，此書因其嚴謹的學術體例與對話精神，成為基督教神學院宗教比較課程的重要教材，體現現代普世合一時代基督徒理解、尊重伊斯蘭經典的努力。' },
-          { title_zh: '東方聖書叢書', title_orig: 'The Sacred Books of the East', author: '馬克斯‧繆勒主編', era: '1879–1910', place: '英國‧牛津', language: '英文（譯自梵文、巴利文、波斯文、漢文、阿拉伯文等）', intro: '比較宗教學奠基者繆勒主編的鴻篇巨製，共五十卷，系統英譯印度教、佛教、瑣羅亞斯德教、伊斯蘭教、道教與儒家等東方宗教的根本經典。這套叢書首次以學術方式將東方聖典呈現於西方讀者面前，開創了現代比較宗教學，也為基督教神學提供與世界宗教對話的文本基礎，是十九世紀末至二十世紀宗教研究的里程碑。' }
+          ...STUDY_QURAN_SURAS,
         ]
       },
-      {
-        key: 'critical-exegesis',
-        label: '批判學派釋經部',
-        label_en: 'Critical Schools of Exegesis',
-        desc: '收錄歷史批判、形式批判等現代釋經方法的代表著作，是現代聖經學術方法論的旁參。',
-        works: [
-          { title_zh: '歷史批判法導論', title_orig: 'Historical Criticism of the Bible', author: '現代聖經學界（以德國學派為主）', era: '十九世紀末至二十世紀', place: '德國', language: '德文‧英文', intro: '歷史批判法是現代聖經研究的主導方法，主張將聖經置於其歷史、語言與文化處境中考察，探究文本的來源、作者、年代與寫作意圖。它涵蓋來源批判、編修批判等多種進路，深刻改變了學界對聖經成書過程的理解。雖曾引發保守派的疑慮與爭論，這套方法已成為現代神學教育的基本訓練，是理解二十世紀聖經學術走向的關鍵脈絡。' },
-          { title_zh: '形式批判與福音傳統', title_orig: 'Form Criticism and the Synoptic Tradition', author: '魯道夫‧布特曼、馬丁‧迪貝流斯', era: '1919–1921', place: '德國', language: '德文', intro: '形式批判由迪貝流斯與布特曼開創，主張福音書的素材在被寫定之前曾以口傳形式流傳，可依其「文學形式」（如神蹟故事、比喻、語錄）分類，並追溯其在早期教會生活處境中的功能。此方法將研究焦點從文本轉向口傳階段的群體，對福音書研究影響巨大，也引發關於歷史耶穌與信仰基督關係的長期神學討論。' },
-          { title_zh: '耶穌研討會與五福音書', title_orig: 'The Five Gospels: The Search for the Authentic Words of Jesus', author: '羅伯特‧方克、耶穌研討會學者群', era: '1993', place: '美國', language: '英文', intro: '耶穌研討會是1985年成立的學者團體，以投票表決方式評估福音書中耶穌話語的歷史真實性，並將多馬福音與四福音並列為「五福音書」，以紅、粉、灰、黑四色標示話語可信度。其方法與結論引發學界與教會的激烈爭議，雖屢遭批評為過度懷疑，卻凸顯了現代歷史耶穌研究的方法論張力，是二十世紀末聖經批判學最受矚目的公共事件之一。' }
-        ]
-      }
     ]
   }
 },
