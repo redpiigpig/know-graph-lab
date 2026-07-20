@@ -89,6 +89,22 @@ const LIBANIUS_LETTERS: DazangWork[] = Array.from({ length: 99 }, (_, index) => 
   }
 })
 
+const QOLASTA_PRAYERS: DazangWork[] = Array.from({ length: 97 }, (_, index) => {
+  const number = index + 1
+  return {
+    title_zh: `科拉斯塔祈禱第${number}篇`,
+    title_orig: `Qolasta Prayer ${number}`,
+    author: '曼達教祭司傳統（佚名）',
+    era: '約 3–7 世紀定型',
+    place: '下美索不達米亞',
+    language: '古典曼達文',
+    source: 'mandaean',
+    parent: '科拉斯塔（曼達教正典祈禱書）',
+    note: `來源：https://openlibrary.org/works/OL20938758W（E. S. Drower, The Canonical Prayerbook of the Mandaeans；第 ${number} 篇）`,
+    intro: `《科拉斯塔》第 ${number} 篇是曼達教正典祈禱書中有固定篇號的獨立禮文，屬祭司在洗禮、升靈禮、聖餐、潔淨或日常祝禱中誦念的傳承單元。其古典曼達文反覆呼求光明界諸靈，連結活水、白衣、聖餅與靈魂上升等象徵；逐篇收入可保存實際儀式次序，也呈現與古代基督教洗禮及喪葬禮並行的諾斯底禮儀世界。`,
+  }
+})
+
 // ─────────────────────────────────────────────────────────────────────────
 // 古代基督教大藏經
 //
@@ -2329,13 +2345,7 @@ export const ANCIENT_ERA: DazangEra = {
           {
             key: 'mandaean-liturgy', label: '曼達教禮儀部', label_en: 'Mandaean Liturgy',
             works: [
-              { title_zh: '科拉斯塔', source: 'mandaean', title_orig: 'Qolasta (Canonical Prayerbook)', author: '曼達教祭司（佚名）', era: '約 3–7 世紀', place: '下美索不達米亞', language: '曼達文', intro: '曼達教的「正典祈禱書」，收錄洗禮（masbuta）與升靈彌撒（masiqta）所用的讚美詩、祈禱文與儀軌指示，是該派禮儀生活的核心。內容含靈魂上升、潔淨、聖餐（pihta）與聖水（mambuha）等儀式文，反覆吟詠光明界諸靈名號。以曼達文寫成，禮儀傳統可溯至古代晚期，約三至七世紀定型於下美索不達米亞，至今仍為曼達祭司所用。', link: '/gnostic', },
-            ],
-          },
-          {
-            key: 'pagan-mystery-liturgy', label: '異教密儀部', label_en: 'Pagan Mystery Liturgy',
-            works: [
-              { title_zh: '密特拉禮儀文', source: 'pagan', title_orig: 'Mithras Liturgy', author: '佚名（密特拉／魔法傳統）', era: '約 2–4 世紀', place: '埃及', language: '希臘文', intro: '保存於《巴黎大魔法紙草》中的靈魂升天儀式文，引導入會者經七重天界面見光明之神與密特拉。其與密特拉密儀的確切關係雖有爭議，卻是少數存世、可一窺古代神祕宗教升天體驗的文字（該密儀主要靠雕刻與遺址傳世）。' },
+              ...QOLASTA_PRAYERS,
             ],
           },
           {
