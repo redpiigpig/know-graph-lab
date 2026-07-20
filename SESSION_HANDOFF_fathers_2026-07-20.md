@@ -114,3 +114,7 @@ grep -rn "資料.電子書" scripts/ --include=*.py   # 102 處
 ```
 
 **尚未統一修**（使用者說路徑改動是他要的，先寫交接）。建議：全部改吃 `EBOOK_CHUNKS_DIR` 環境變數 + 新預設值，並加 fail-fast，避免再出現靜默假成功。`fix_fathers_heading_swallow.py` 已照此改好，可當範本。
+
+> ✅ **2026-07-20 稍晚已處理**（commit `a06381f6`）：整個 repo 111 檔的舊路徑一次改完，現在 `grep -rn "資料.電子書" scripts/` = 0 處；排程與翻譯艦隊已停機搬檔後重接，並確認新 `_chunks` 有即時寫入（不是空轉）。
+> ✅ **吞字修復已掛排程**：`KGL_Fathers_Fix`（每 30 分）→ `scripts/fathers_fix_keeper.ps1` → 沒有 worker 在跑就續跑 `fix_fathers_heading_swallow.py --apply --no-gemini --limit 3`（冪等，中斷不留半寫壞檔）。log：`scripts/logs/fathers_fix_keeper.log`。
+> ⏳ **③ T11 漏譯核查（537 處）仍未開始**。
