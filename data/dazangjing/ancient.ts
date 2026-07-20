@@ -901,6 +901,569 @@ export const ANCIENT_ERA: DazangEra = {
       wai: {
         divisions: [
           {
+            "key": "philo-additional",
+            "label": "斐洛獨立論著部",
+            "label_en": "Additional Philonic Treatises",
+            "works": [
+              {
+                "title_zh": "論該隱後裔",
+                "title_orig": "De Posteritate Caini (On the Posterity of Cain and His Exile)",
+                "author": "亞歷山卓的斐洛",
+                "era": "約公元 20–50 年",
+                "place": "埃及亞歷山卓",
+                "language": "希臘文",
+                "intro": "此篇屬《寓意解經》系列，接續《論基路伯》與《論該隱》的線索，以創世記第四章「該隱從主面前退去」為經文核心，寓意化該隱一族的世代譜系，將其視為「自愛之靈魂」被逐離神面後所繁衍的偏差心靈型態。斐洛藉以柏拉圖式的靈魂學說與斯多亞倫理，批判以感官與詭辯為本的世界觀。此書為早期教父奧利振、安波羅修解經時常參引的資源，開啟基督教靈修對「離神／回神」的心路譜系書寫。",
+                "source": "second-temple",
+                "parent": "斐洛全集",
+                "note": "https://www.earlyjewishwritings.com/philo.html"
+              },
+              {
+                "title_zh": "論惡者常敵善者",
+                "title_orig": "Quod Deterius Potiori Insidiari Soleat (That the Worse is Wont to Attack the Better)",
+                "author": "亞歷山卓的斐洛",
+                "era": "約公元 20–50 年",
+                "place": "埃及亞歷山卓",
+                "language": "希臘文",
+                "intro": "本書寓意詮釋創世記四章 8–15 節，將該隱與亞伯視為兩種對立的靈魂傾向——自愛與愛神——的具象化。斐洛主張惡者敵善並非只是外在爭鬥，而是心中詭辯之見反覆襲擊追求真理的德行；毀損德行者最終傷害自身。他以柏拉圖靈魂三分與斯多亞道德進程融匯希伯來律法敘事，開創以「內在戰場」讀舊約的傳統，直接影響俄利根、革利免與後世修道文獻對「思念之戰」（logismoi）的心理化書寫。",
+                "source": "second-temple",
+                "parent": "斐洛全集",
+                "note": "https://www.earlyjewishwritings.com/text/philo/book7.html"
+              },
+              {
+                "title_zh": "論巨人",
+                "title_orig": "De Gigantibus (On the Giants)",
+                "author": "亞歷山卓的斐洛",
+                "era": "約公元 20–50 年",
+                "place": "埃及亞歷山卓",
+                "language": "希臘文",
+                "intro": "此書釋創世記六章 1–4 節「神子與人子」及「巨人」段落，斐洛拒絕以神話字面義理解，而將「神子」讀為天使／脫離肉身之靈魂，將「巨人」寓意為沉溺肉慾、拒絕受神靈啟迪之魂。本書與《論神不改變》原屬同一連續注釋，共同構成斐洛的天使論與靈魂論骨架。教父傳統關於天使、墮落靈魂、身體與精神之爭的辯論，多可上溯至此文本；奧利振《論本原》尤其明顯延續其靈魂觀。",
+                "source": "second-temple",
+                "parent": "斐洛全集",
+                "note": "https://en.wikipedia.org/wiki/Philo"
+              },
+              {
+                "title_zh": "論農耕",
+                "title_orig": "De Agricultura (On Husbandry)",
+                "author": "亞歷山卓的斐洛",
+                "era": "約公元 20–50 年",
+                "place": "埃及亞歷山卓",
+                "language": "希臘文",
+                "intro": "本篇取創世記九章 20 節「挪亞開始作農夫」為引，將農耕寓意為靈魂培育德行的技藝；斐洛細分「熟練農夫」與「粗獷耕者」，把靈魂陶成、慾念修剪、道德接枝等意象一併鋪陳。他援用色諾芬《經濟論》與斯多亞倫理，把希臘德行倫理轉譯進希伯來律法敘事。此靈魂農耕譬喻後為革利免、俄利根、金口若望等教父襲用於教理講道，影響長遠。",
+                "source": "second-temple",
+                "parent": "斐洛全集",
+                "note": "https://en.wikipedia.org/wiki/Philo"
+              },
+              {
+                "title_zh": "論栽種",
+                "title_orig": "De Plantatione (On Noah's Work as a Planter)",
+                "author": "亞歷山卓的斐洛",
+                "era": "約公元 20–50 年",
+                "place": "埃及亞歷山卓",
+                "language": "希臘文",
+                "intro": "與《論農耕》為姐妹篇，仍以挪亞栽葡萄園為經文起點，斐洛將整個宇宙讀為神所栽的巨樹，理性靈魂則是神在人身上栽種的天國之苗。文中詳論植樹象徵、德行成長節律、以及智者為何飲酒不醉。他綜合柏拉圖《蒂邁歐篇》的宇宙生成論與希伯來創造神學，成為後世基督教「屬靈園藝」修辭之源，並提供教父論神智慧內住之語彙庫。",
+                "source": "second-temple",
+                "parent": "斐洛全集",
+                "note": "https://en.wikipedia.org/wiki/Philo"
+              },
+              {
+                "title_zh": "論醉酒",
+                "title_orig": "De Ebrietate (On Drunkenness)",
+                "author": "亞歷山卓的斐洛",
+                "era": "約公元 20–50 年",
+                "place": "埃及亞歷山卓",
+                "language": "希臘文",
+                "intro": "斐洛以創世記挪亞醉酒為契機，區分兩種「醉」——肉體麻醉與被神靈充滿的「清醒之醉」（sobria ebrietas）。他徵引古希臘藥草學、Symposium 傳統與希伯來先知經驗，論證真正的智者能因與神合一而失自我，卻不失理性。此「清醒之醉」概念被革利免、俄利根、格里高利納齊安、奧古斯丁、以及中世紀神秘家（如聖伯爾納多）系統化，成為基督宗教靈修中「神魂超拔」語彙的鼻祖。",
+                "source": "second-temple",
+                "parent": "斐洛全集",
+                "note": "https://en.wikipedia.org/wiki/Philo"
+              },
+              {
+                "title_zh": "論戒醉",
+                "title_orig": "De Sobrietate (On Sobriety)",
+                "author": "亞歷山卓的斐洛",
+                "era": "約公元 20–50 年",
+                "place": "埃及亞歷山卓",
+                "language": "希臘文",
+                "intro": "接續《論醉酒》，斐洛注釋挪亞酒醒後對含所發之咒（創九 24 起），將「醒」寓意為靈魂由感官陶醉甦醒至神智清明的過程。全書大論長幼倫理、祝福與詛咒之寓意化、以及智者為何不老。斐洛把希臘化倫理的「節制」（sōphrosynē）嫁接進希伯來祝福神學，塑造了教父論斷「屬靈醒覺」與「靈修節制」時最常引用的骨幹敘述。",
+                "source": "second-temple",
+                "parent": "斐洛全集",
+                "note": "https://en.wikipedia.org/wiki/Philo"
+              },
+              {
+                "title_zh": "論亞伯拉罕遷徙",
+                "title_orig": "De Migratione Abrahami (On the Migration of Abraham)",
+                "author": "亞歷山卓的斐洛",
+                "era": "約公元 20–50 年",
+                "place": "埃及亞歷山卓",
+                "language": "希臘文",
+                "intro": "取創世記十二章「你要離開本地、本族、父家」的呼召，斐洛把亞伯拉罕的地理遷徙全然寓意化為靈魂三重出走——脫離身體、脫離感覺、脫離言語——以歸向神。此書是希臘化猶太思想「靈程階段論」最完整的早期形式，被俄利根與亞歷山卓學派全盤襲用作為《雅歌註釋》與《民數記講道集》靈修進階模型；西方修道傳統「離世三部曲」（renuntiatio）亦可溯源於此。",
+                "source": "second-temple",
+                "parent": "斐洛全集",
+                "note": "https://en.wikipedia.org/wiki/Philo"
+              },
+              {
+                "title_zh": "論預備教育之相聚",
+                "title_orig": "De Congressu Eruditionis Gratia (On Mating with the Preliminary Studies)",
+                "author": "亞歷山卓的斐洛",
+                "era": "約公元 20–50 年",
+                "place": "埃及亞歷山卓",
+                "language": "希臘文",
+                "intro": "本書釋亞伯拉罕納使女夏甲一段（創十六），斐洛將撒拉讀為智慧、夏甲讀為「預備學術」（enkyklios paideia，包含文法、幾何、修辭、音樂等七藝）；智者須先與夏甲同房，才能與撒拉結合。此為古代最早以聖經人物寓意化世俗人文學科與神聖智慧關係的完整論述，直接影響革利免《雜集》七藝觀、奧古斯丁《論基督教教義》，並奠定中世紀「哲學為神學婢女」教育理論的猶太—希臘化起源。",
+                "source": "second-temple",
+                "parent": "斐洛全集",
+                "note": "https://en.wikipedia.org/wiki/Philo"
+              },
+              {
+                "title_zh": "論逃避與尋見",
+                "title_orig": "De Fuga et Inventione (On Flight and Finding)",
+                "author": "亞歷山卓的斐洛",
+                "era": "約公元 20–50 年",
+                "place": "埃及亞歷山卓",
+                "language": "希臘文",
+                "intro": "以夏甲逃離撒拉、後被主使者尋回一段為線索，斐洛系統展開「逃避與尋見」的辯證：靈魂為何逃離、逃向何處、如何被神尋見。他分別討論庇護城、逃離身體、逃離神本身等三種逃避類型，並對神性隱藏（Deus absconditus）作出希臘化猶太思想中最早的深入處理。教父奧利振、格里高利尼撒、以及後來的偽狄奧尼修斯的「否定神學」（apophaticism）語彙，多從此書得養分。",
+                "source": "second-temple",
+                "parent": "斐洛全集",
+                "note": "https://en.wikipedia.org/wiki/Philo"
+              },
+              {
+                "title_zh": "論改名",
+                "title_orig": "De Mutatione Nominum (On the Change of Names)",
+                "author": "亞歷山卓的斐洛",
+                "era": "約公元 20–50 年",
+                "place": "埃及亞歷山卓",
+                "language": "希臘文",
+                "intro": "本書逐字釋創十七章亞伯蘭改為亞伯拉罕、撒萊改為撒拉之經文；斐洛把改名視作靈魂等級變化的可見標誌，並發展出一套完整的「聖名神學」：神的名不可名、可名之名皆是神在世上的「權能」（dynameis）。此書為卡帕多西亞三教父（尤其巴西流論聖名）與偽狄奧尼修斯《神聖名字論》最直接的希臘化猶太先驅，在拉丁世界則塑造了奧古斯丁對「內在言語」的分析。",
+                "source": "second-temple",
+                "parent": "斐洛全集",
+                "note": "https://en.wikipedia.org/wiki/Philo"
+              },
+              {
+                "title_zh": "論德行",
+                "title_orig": "De Virtutibus (On the Virtues)",
+                "author": "亞歷山卓的斐洛",
+                "era": "約公元 20–50 年",
+                "place": "埃及亞歷山卓",
+                "language": "希臘文",
+                "intro": "本書為《律法之陳述》壓卷之作，將摩西律的精神焠煉為四大德行——勇敢、仁慈、悔改、貴族氣質——每一德行皆從摩西五經找出「範例故事」（exempla）加以支撐。斐洛把斯多亞四樞德觀融合為希伯來聖經敘事，證明真正的貴族並非血統而是德行；此觀念直接餵養早期教會的「聖徒範例」講道傳統，並影響教父書寫殉道者傳記與修道院範例集的體裁。",
+                "source": "second-temple",
+                "parent": "斐洛全集",
+                "note": "https://www.loebclassics.com/view/LCL341/1939/volume.xml"
+              }
+            ]
+          },
+          {
+            "key": "jewish-apologetics",
+            "label": "猶太護教哲學部",
+            "label_en": "Jewish Apologetic Philosophy",
+            "works": [
+              {
+                "title_zh": "駁阿皮翁",
+                "title_orig": "Περὶ ἀρχαιότητος Ἰουδαίων λόγος (Peri Archaiotētos Ioudaiōn Logos) / Contra Apionem / Against Apion",
+                "author": "弗拉維‧約瑟夫斯（Flavius Josephus）",
+                "era": "公元 94–100 年之後（《猶太古史》完成後）",
+                "place": "羅馬",
+                "language": "希臘文",
+                "intro": "約瑟夫斯晚年在羅馬撰寫的兩卷護教論著，回應埃及希臘化文士阿皮翁及其他敵猶論者的抨擊。全書一方面以「古老即真理」的希臘化論證方式，援引埃及、腓尼基、迦勒底等民族史料證明猶太民族與律法的悠久，另方面反駁血祭誹謗、拜驢傳說等惡意流言。書中並列出希伯來聖經正典書目、勾勒摩西律法的哲學合理性，把猶太教呈現為古典意義下的「哲學宗教」，是第二聖殿末期猶太護教文獻的巔峰之作。",
+                "source": "second-temple",
+                "note": "https://www.earlyjewishwritings.com/text/josephus/apion1.html"
+              }
+            ]
+          },
+          {
+            "key": "plotinian-neoplatonism",
+            "label": "普羅提諾與波菲利部",
+            "label_en": "Plotinus and Porphyry",
+            "works": [
+              {
+                "title_zh": "論美",
+                "title_orig": "Περὶ τοῦ καλοῦ (Peri tou kalou) / On Beauty",
+                "author": "普羅提諾",
+                "era": "3 世紀",
+                "place": "羅馬",
+                "language": "希臘文",
+                "intro": "《六部九章集》第一部第六章，是普羅提諾最早、也是最具影響力的論著之一（依波菲利編年為 1 號）。此文論證美的層級：從感官所見的比例對稱之美，上升至靈魂之美，再上升至理智界的形式之美，終抵太一自身的絕對之美。奧古斯丁、假狄奧尼修斯與整個基督教神秘主義美學皆從此篇領受靈感，是柏拉圖《會飲篇》狄奧提瑪之梯的新柏拉圖式重述。",
+                "source": "pagan",
+                "parent": "九章集（Enneads）",
+                "note": "https://en.wikipedia.org/wiki/Enneads"
+              },
+              {
+                "title_zh": "駁諾斯底派",
+                "title_orig": "Πρὸς τοὺς γνωστικούς (Pros tous gnōstikous) / Against the Gnostics",
+                "author": "普羅提諾",
+                "era": "3 世紀",
+                "place": "羅馬",
+                "language": "希臘文",
+                "intro": "《六部九章集》第二部第九章，普羅提諾對當時流行於羅馬的諾斯底派（尤其瓦倫廷派與塞特派）的正面駁論。他反對他們將物質世界視為邪惡造物者所造、主張宇宙秩序美善、批評其自命得救的驕傲、譴責其對柏拉圖傳統的曲解。此篇原本可能與 III.8、V.8、V.5 合為一整篇長文（Grosstraktat），是了解 3 世紀新柏拉圖派與諾斯底主義正面交鋒的關鍵文獻。",
+                "source": "pagan",
+                "parent": "九章集（Enneads）",
+                "note": "https://en.wikipedia.org/wiki/Enneads"
+              },
+              {
+                "title_zh": "論永恆與時間",
+                "title_orig": "Περὶ αἰῶνος καὶ χρόνου (Peri aiōnos kai chronou) / On Eternity and Time",
+                "author": "普羅提諾",
+                "era": "3 世紀",
+                "place": "羅馬",
+                "language": "希臘文",
+                "intro": "《六部九章集》第三部第七章，古代論時間問題最重要的文獻之一，直接影響奧古斯丁《懺悔錄》第十一卷對時間的著名沉思。普羅提諾分辨永恆（aiōn）屬於理智界不變的生命全在，時間（chronos）則是靈魂在其生命運動中所生的形象，是永恆的活動投射。他修正亞里斯多德以運動之數界定時間的路線，回歸柏拉圖《蒂邁歐篇》「時間是永恆之動的形象」。",
+                "source": "pagan",
+                "parent": "九章集（Enneads）",
+                "note": "https://en.wikipedia.org/wiki/Enneads"
+              },
+              {
+                "title_zh": "論自然、觀照與太一",
+                "title_orig": "Περὶ φύσεως καὶ θεωρίας καὶ τοῦ ἑνός (Peri physeōs kai theōrias kai tou henos) / On Nature, Contemplation and the One",
+                "author": "普羅提諾",
+                "era": "3 世紀",
+                "place": "羅馬",
+                "language": "希臘文",
+                "intro": "《六部九章集》第三部第八章，普羅提諾最具詩意的論文之一。他大膽主張連自然（physis）本身都是一種觀照——大地萬物的生長不是盲目的機械過程，而是自然低層次的默想活動。全宇宙由高至低皆在觀照更高者：靈魂觀照理智，理智觀照太一，自然則以夢一般的沉靜觀照理智。此篇為新柏拉圖派的「觀照論宇宙觀」奠基。",
+                "source": "pagan",
+                "parent": "九章集（Enneads）",
+                "note": "https://en.wikipedia.org/wiki/Enneads"
+              },
+              {
+                "title_zh": "論靈魂的疑難（上）",
+                "title_orig": "Περὶ ψυχῆς ἀποριῶν πρῶτον (Peri psychēs aporiōn prōton) / On the Problems of the Soul I",
+                "author": "普羅提諾",
+                "era": "3 世紀",
+                "place": "羅馬",
+                "language": "希臘文",
+                "intro": "《六部九章集》第四部第三章，與 IV.4、IV.5 原為單一長篇論文，波菲利編輯時分為三卷。第一卷處理靈魂的統一性與多元性、世界靈魂與個體靈魂之關係、靈魂下降入身的成因、記憶與感覺的機制。此篇是新柏拉圖派靈魂學的奠基文本，對奧古斯丁、普羅克洛及中世紀的靈魂論影響深遠。",
+                "source": "pagan",
+                "parent": "九章集（Enneads）",
+                "note": "https://en.wikipedia.org/wiki/Enneads"
+              },
+              {
+                "title_zh": "論靈魂的疑難（中）",
+                "title_orig": "Περὶ ψυχῆς ἀποριῶν δεύτερον (Peri psychēs aporiōn deuteron) / On the Problems of the Soul II",
+                "author": "普羅提諾",
+                "era": "3 世紀",
+                "place": "羅馬",
+                "language": "希臘文",
+                "intro": "《六部九章集》第四部第四章，靈魂三部曲之中卷，探討靈魂於理智界的存在方式、靈魂在時間中的記憶與意識、天界星辰的靈魂、身體與靈魂複合體的知覺、以及植物性生命的靈魂。此卷是全六部九章集中最長者，展現普羅提諾對亞里斯多德《論靈魂》的批判性回應。",
+                "source": "pagan",
+                "parent": "九章集（Enneads）",
+                "note": "https://en.wikipedia.org/wiki/Enneads"
+              },
+              {
+                "title_zh": "論靈魂的疑難（下）",
+                "title_orig": "Περὶ ψυχῆς ἀποριῶν τρίτον (Peri psychēs aporiōn triton) / On the Problems of the Soul III",
+                "author": "普羅提諾",
+                "era": "3 世紀",
+                "place": "羅馬",
+                "language": "希臘文",
+                "intro": "《六部九章集》第四部第五章，靈魂三部曲之末卷，專論視覺的哲學問題：光是否需要介質、眼睛如何接觸遠處對象、視覺是否為某種「共感」（sympatheia）活動。普羅提諾在此拒斥斯多亞派介質論而發展一種「共感距離作用」理論，對後世光學與感官哲學史意義重大。",
+                "source": "pagan",
+                "parent": "九章集（Enneads）",
+                "note": "https://en.wikipedia.org/wiki/Enneads"
+              },
+              {
+                "title_zh": "論三本原",
+                "title_orig": "Περὶ τῶν τριῶν ἀρχικῶν ὑποστάσεων (Peri tōn triōn archikōn hypostaseōn) / On the Three Primary Hypostases",
+                "author": "普羅提諾",
+                "era": "3 世紀",
+                "place": "羅馬",
+                "language": "希臘文",
+                "intro": "《六部九章集》第五部第一章，新柏拉圖派宇宙論的教科書式綱領，正式提出三大本原（hypostaseis）：太一（To Hen）、理智（Nous）、靈魂（Psyche）的三位階等級。此篇不僅深深影響基督教三一論（尤其加帕多家教父與奧古斯丁），也是後世所有形上學層級體系的原型。普羅提諾在此篇強調三本原非孤立實體，而是流出論式的統一位階。",
+                "source": "pagan",
+                "parent": "九章集（Enneads）",
+                "note": "https://en.wikipedia.org/wiki/Enneads"
+              },
+              {
+                "title_zh": "論理智存有不在理智之外及論善",
+                "title_orig": "Ὅτι οὐκ ἔξω τοῦ νοῦ τὰ νοητά (Hoti ouk exō tou nou ta noēta) / That the Intelligibles are not Outside the Intellect, and on the Good",
+                "author": "普羅提諾",
+                "era": "3 世紀",
+                "place": "羅馬",
+                "language": "希臘文",
+                "intro": "《六部九章集》第五部第五章，普羅提諾駁斥中期柏拉圖派朗吉努斯所主張的「理型（觀念）在神心之外」的立場。他論證：理智與其所思者不可分離，理型即神心自身的自我認識。此篇為西方哲學「觀念在神心中」（ideas in mente Dei）傳統之關鍵源頭，經奧古斯丁傳入中世紀，直至萊布尼茲。",
+                "source": "pagan",
+                "parent": "九章集（Enneads）",
+                "note": "https://en.wikipedia.org/wiki/Enneads"
+              },
+              {
+                "title_zh": "論善或太一",
+                "title_orig": "Περὶ τἀγαθοῦ ἢ τοῦ ἑνός (Peri tagathou ē tou henos) / On the Good, or the One",
+                "author": "普羅提諾",
+                "era": "3 世紀",
+                "place": "羅馬",
+                "language": "希臘文",
+                "intro": "《六部九章集》最終章（第六部第九章），也是波菲利刻意置於全集壓卷者。此篇為普羅提諾神秘經驗的最高表達：太一超越一切存有、非可言說、非可思議，靈魂唯有藉「捨棄一切」（aphairesis）而合一。波菲利在《普羅提諾傳》記載老師一生四度達此合一境界。此章是負面神學（apophatic theology）之聖典，深刻影響奧古斯丁、假狄奧尼修斯、艾克哈特、Nicolas of Cusa 等神秘傳統。",
+                "source": "pagan",
+                "parent": "九章集（Enneads）",
+                "note": "https://en.wikipedia.org/wiki/Enneads"
+              },
+              {
+                "title_zh": "論戒殺食肉",
+                "title_orig": "Περὶ ἀποχῆς ἐμψύχων (Peri apochēs empsychōn) / De Abstinentia ab Esu Animalium",
+                "author": "波菲利",
+                "era": "3 世紀",
+                "place": "羅馬",
+                "language": "希臘文",
+                "intro": "波菲利寫給棄素還葷的舊識 Firmus Castricius 的四卷長書，是古代最系統的素食主義哲學論著。第一卷回應世俗反對素食的論證；第二卷駁斥血祭必要說並主張哲學家不當屠獸；第三卷論動物具理性、應納入正義考量；第四卷描述古人與各民族的素食傳統。此書為西方動物倫理學鼻祖，深遠影響 19–20 世紀動物解放運動。",
+                "source": "pagan",
+                "note": "https://en.wikipedia.org/wiki/Porphyry_(philosopher)"
+              },
+              {
+                "title_zh": "通往可思者之要語",
+                "title_orig": "Ἀφορμαὶ πρὸς τὰ νοητά (Aphormai pros ta noēta) / Sententiae ad Intelligibilia Ducentes",
+                "author": "波菲利",
+                "era": "3 世紀",
+                "place": "羅馬",
+                "language": "希臘文",
+                "intro": "波菲利以格言體寫成的 44 則短語錄，系統整理老師普羅提諾的形上學要義，可視為《六部九章集》的濃縮教學手冊。內容涵蓋物體與非物體、感覺與理智、靈魂的種類、太一之超越、諸位階的關係。作為新柏拉圖派入門教材，此書對後世普羅克洛、達馬希烏斯與伊斯蘭哲學（如阿爾法拉比、伊本‧西那的形上學）影響甚大。",
+                "source": "pagan",
+                "note": "https://plato.stanford.edu/entries/porphyry/"
+              },
+              {
+                "title_zh": "論奧德賽中之寧芙洞穴",
+                "title_orig": "Περὶ τοῦ ἐν Ὀδυσσείᾳ τῶν νυμφῶν ἄντρου (Peri tou en Odysseiai tōn nymphōn antrou) / De Antro Nympharum",
+                "author": "波菲利",
+                "era": "3 世紀",
+                "place": "羅馬",
+                "language": "希臘文",
+                "intro": "波菲利對《奧德賽》第 13 卷 102–112 行「伊薩卡的寧芙洞穴」一段所作的寓意（allegorical）解經名篇。他將荷馬詩中的洞穴解讀為感官宇宙的象徵：兩道入口分別代表靈魂的降生與返回，蜂群象徵靈魂降生於肉身。此文是古代寓意詮釋學的典範，深遠影響中世紀基督教與伊斯蘭寓意解經傳統，也是浪漫時期象徵主義的靈感源頭。",
+                "source": "pagan",
+                "note": "https://en.wikipedia.org/wiki/Porphyry_(philosopher)"
+              },
+              {
+                "title_zh": "致瑪采拉書",
+                "title_orig": "Πρὸς Μαρκέλλαν (Pros Markellan) / Ad Marcellam",
+                "author": "波菲利",
+                "era": "3 世紀",
+                "place": "羅馬",
+                "language": "希臘文",
+                "intro": "波菲利晚年遠行時寫給妻子瑪采拉（Marcella，一位七子之寡母、其夫舊友）的信。書中勸慰她堅守哲學生活，發揮節制、虔敬、對神的信靠，將婚姻視為靈魂的共同修行而非情慾之結。此書融合斯多亞與柏拉圖倫理，是古代少見的哲學家夫妻精神通信，也是新柏拉圖派實踐倫理學的重要文獻。",
+                "source": "pagan",
+                "note": "https://en.wikipedia.org/wiki/Porphyry_(philosopher)"
+              },
+              {
+                "title_zh": "取自神諭之哲學（殘篇）",
+                "title_orig": "Περὶ τῆς ἐκ λογίων φιλοσοφίας (Peri tēs ek logiōn philosophias) / De Philosophia ex Oraculis Haurienda",
+                "author": "波菲利",
+                "era": "3 世紀",
+                "place": "羅馬",
+                "language": "希臘文",
+                "intro": "波菲利早期著作，主張透過古代神諭（阿波羅、赫卡忒等）啟示可導向真理。書中收集大量神諭，並附哲學詮釋。此書早年被優西比烏《福音的準備》大量引用而得部分保存，是了解 3 世紀希臘羅馬異教神學與後期新柏拉圖派宗教實踐的關鍵殘篇。與波菲利後期《駁基督徒》的立場對照，反映他一生對宗教啟示的複雜態度。",
+                "source": "pagan",
+                "note": "https://en.wikipedia.org/wiki/Porphyry_(philosopher)"
+              }
+            ]
+          },
+          {
+            "key": "late-neoplatonism",
+            "label": "晚期新柏拉圖神學部",
+            "label_en": "Late Neoplatonic Theology",
+            "works": [
+              {
+                "title_zh": "哲學勸進辭",
+                "title_orig": "Protrepticus (Προτρεπτικὸς ἐπὶ φιλοσοφίαν, Exhortation to Philosophy)",
+                "author": "楊布里科斯 Iamblichus of Chalcis",
+                "era": "約 300 年（4 世紀初）",
+                "place": "阿帕米亞",
+                "language": "希臘文",
+                "intro": "《論畢達哥拉斯派生涯》系列第二卷，勸勉學徒進入哲學生活。書中保存了亞里斯多德失佚同名作《勸學篇》的大量斷片，並雜以柏拉圖《克里托篇》《菲多篇》等段落，是希臘勸善文學重要典範，也成為中世紀阿拉伯與拉丁世界對亞里斯多德早期思想理解的關鍵管道。",
+                "source": "pagan",
+                "note": "https://en.wikipedia.org/wiki/Iamblichus"
+              },
+              {
+                "title_zh": "論靈魂",
+                "title_orig": "De Anima (Περὶ Ψυχῆς, On the Soul)",
+                "author": "楊布里科斯 Iamblichus of Chalcis",
+                "era": "約 300–320 年（4 世紀初）",
+                "place": "阿帕米亞",
+                "language": "希臘文",
+                "intro": "楊布里科斯論靈魂性質、下降、上升與命運的專論，原書已佚，主要藉斯多柏烏斯《文選》保存的長段引文重構。書中反對普羅提諾「靈魂高處常在智性界」之說，主張靈魂全體下降入身體，並提出獨特的下降階序，是新柏拉圖主義靈魂學的重要分歧點。Finamore 與 Dillon 2002 年出版校訂英譯本。",
+                "source": "pagan",
+                "note": "https://philpapers.org/rec/FINIDA"
+              },
+              {
+                "title_zh": "神學要義",
+                "title_orig": "Elements of Theology (Στοιχείωσις θεολογική, Stoicheiosis Theologike)",
+                "author": "普羅克洛斯 Proclus Diadochus",
+                "era": "5 世紀（約 450–485）",
+                "place": "雅典",
+                "language": "希臘文",
+                "intro": "普羅克洛斯以幾何式演繹體例寫成的形上學綱要，凡二一一（或作二一七）命題，自「一」層層推繹諸神、智性、靈魂與物質。此書是新柏拉圖主義集大成之作，經敘利亞文、阿拉伯文中轉為《純善論》(Liber de causis)，深刻塑造中世紀伊斯蘭哲學與多瑪斯神學，也是黑格爾邏輯學的遠祖之一。",
+                "source": "pagan",
+                "note": "https://plato.stanford.edu/entries/proclus/"
+              },
+              {
+                "title_zh": "柏拉圖神學",
+                "title_orig": "Platonic Theology (Περὶ τῆς κατὰ Πλάτωνα θεολογίας, Peri tes kata Platona Theologias)",
+                "author": "普羅克洛斯 Proclus Diadochus",
+                "era": "5 世紀晚期（普氏晚年）",
+                "place": "雅典",
+                "language": "希臘文",
+                "intro": "普羅克洛斯晚年集大成之作，共六卷（傳原七卷），系統重構柏拉圖對話錄中的神譜學。將神祇分為「智可觀」「智可思」「智性」「超宇宙」「宇宙內」諸階，形成完整的多神階序神學。此書是異教哲學神學最後也是最精緻的建構，也是了解晚期雅典學派宗教實踐的核心文獻。",
+                "source": "pagan",
+                "note": "https://plato.stanford.edu/entries/proclus/"
+              },
+              {
+                "title_zh": "蒂邁歐篇註",
+                "title_orig": "In Platonis Timaeum Commentaria (Εἰς τὸν Τίμαιον Πλάτωνος)",
+                "author": "普羅克洛斯 Proclus Diadochus",
+                "era": "5 世紀中期",
+                "place": "雅典",
+                "language": "希臘文",
+                "intro": "普羅克洛斯對柏拉圖《蒂邁歐篇》的鉅著，現存五卷（原七卷），詳論宇宙生成、造物主（Demiurge）、世界靈魂、時間與物質。書中大量保存了先前註釋家如波菲利、楊布里科斯的失佚意見，是希臘化晚期宇宙論、神學與物理學的百科全書式作品，Thomas Taylor 首譯全五卷入英語世界。",
+                "source": "pagan",
+                "note": "https://archive.org/details/proclusontimaeus01procuoft"
+              },
+              {
+                "title_zh": "巴曼尼德斯篇註",
+                "title_orig": "In Platonis Parmenidem Commentaria (Εἰς τὸν Παρμενίδην Πλάτωνος)",
+                "author": "普羅克洛斯 Proclus Diadochus",
+                "era": "5 世紀中晚期",
+                "place": "雅典",
+                "language": "希臘文",
+                "intro": "普羅克洛斯對柏拉圖《巴曼尼德斯篇》的七卷註釋，把該對話讀為柏拉圖神學的頂點文本。書中把八重假設對應於各層存有階序，並詳論「一」的超越性、負神學與辯證法。此書為新柏拉圖主義最艱深也最影響中世紀者，藉威廉‧莫爾貝克拉丁譯本進入西方，成為艾克哈特、庫薩的尼古拉神秘神學的直接源頭。",
+                "source": "pagan",
+                "note": "https://en.wikipedia.org/wiki/Proclus"
+              },
+              {
+                "title_zh": "理想國註",
+                "title_orig": "In Platonis Rem Publicam Commentaria (Εἰς τὴν Πολιτείαν Πλάτωνος)",
+                "author": "普羅克洛斯 Proclus Diadochus",
+                "era": "5 世紀中晚期",
+                "place": "雅典",
+                "language": "希臘文",
+                "intro": "普羅克洛斯對柏拉圖《國家篇》的多篇專題論文集，非逐段註釋而係按主題（如荷馬詩學、艾爾神話、正義、統治者教育）展開。書中含最完整的古典荷馬寓意解經、對詩與哲學之爭的和解嘗試，以及對艾爾天國神話的宇宙論釋讀，是理解新柏拉圖主義文學觀與末世論的關鍵。",
+                "source": "pagan",
+                "note": "https://en.wikipedia.org/wiki/Proclus"
+              },
+              {
+                "title_zh": "克拉底魯斯篇註",
+                "title_orig": "In Platonis Cratylum Commentaria (Εἰς τὸν Κρατύλον Πλάτωνος)",
+                "author": "普羅克洛斯 Proclus Diadochus",
+                "era": "5 世紀中晚期",
+                "place": "雅典",
+                "language": "希臘文",
+                "intro": "普羅克洛斯對柏拉圖《克拉底魯斯篇》的殘存註釋（原本更長），是古代唯一保存下來的《克拉底魯斯篇》註釋。討論名稱本性、諸神之名、語言與存有的對應關係，把神名解為神能之圖像，直接影響拜占庭東方教會的神秘語言神學與偽戴奧尼修斯的神聖名相理論。",
+                "source": "pagan",
+                "note": "https://archive.org/details/proclidiadochii00pasqgoog"
+              },
+              {
+                "title_zh": "論攝理、命運與在我者",
+                "title_orig": "De Providentia et Fato et eo quod in nobis (Περὶ προνοίας καὶ εἱμαρμένης καὶ τοῦ ἐφ᾽ ἡμῖν)",
+                "author": "普羅克洛斯 Proclus Diadochus",
+                "era": "5 世紀中晚期",
+                "place": "雅典",
+                "language": "希臘文（僅存莫爾貝克拉丁譯本）",
+                "intro": "普羅克洛斯三篇「小論文」之一，回應友人 Theodore the Engineer 對命定論的疑難。書中細分神聖攝理、命運與自由意志三個層次，主張三者皆真但屬不同存有階。希臘原本佚失，僅存威廉‧莫爾貝克 1280 年前後拉丁譯本，深刻影響中世紀拉丁神學對自由意志的討論。",
+                "source": "pagan",
+                "note": "https://plato.stanford.edu/entries/proclus/"
+              },
+              {
+                "title_zh": "論惡的存在",
+                "title_orig": "De Malorum Subsistentia (Περὶ τῆς τῶν κακῶν ὑποστάσεως, On the Existence of Evils)",
+                "author": "普羅克洛斯 Proclus Diadochus",
+                "era": "5 世紀中晚期",
+                "place": "雅典",
+                "language": "希臘文（僅存莫爾貝克拉丁譯本）",
+                "intro": "普羅克洛斯三篇小論文之二，處理「惡從何來」的老問題。書中發展「側生存在」(parhypostasis) 概念，主張惡並無正面存在、只是善的失偏或副產品。此書經莫爾貝克拉丁譯本深刻影響偽戴奧尼修斯的《神名論》，並經之進入多瑪斯的惡論。",
+                "source": "pagan",
+                "note": "https://plato.stanford.edu/entries/proclus/"
+              },
+              {
+                "title_zh": "論攝理十疑",
+                "title_orig": "De Decem Dubitationibus circa Providentiam (Δέκα ἀπορίαι περὶ προνοίας)",
+                "author": "普羅克洛斯 Proclus Diadochus",
+                "era": "5 世紀中晚期",
+                "place": "雅典",
+                "language": "希臘文（僅存莫爾貝克拉丁譯本）",
+                "intro": "普羅克洛斯三篇小論文之三，逐條解決十個關於神聖攝理的疑難：如惡人得福、神為何管到具體個體、神知未來如何不奪自由等。是古代神義論最系統的討論之一，經拉丁譯本影響中世紀晚期以降的天意論與預知論爭。",
+                "source": "pagan",
+                "note": "https://plato.stanford.edu/entries/proclus/"
+              },
+              {
+                "title_zh": "論第一原理之疑難與解答",
+                "title_orig": "Ἀπορίαι καὶ λύσεις περὶ τῶν πρώτων ἀρχῶν / Aporiai kai Lyseis peri tōn Prōtōn Archōn (Problems and Solutions Concerning First Principles)",
+                "author": "達馬修斯 Damascius",
+                "era": "6 世紀初（約 515–530）",
+                "place": "雅典",
+                "language": "希臘文",
+                "intro": "雅典學派最後一任首長達馬修斯的鉅著，以疑難逐條質問普羅克洛斯的神學體系，探討「一」之上是否還有「不可言者」的絕對超越者。書中辯證極其細密、幾近解構，把新柏拉圖主義的頂點推向自我批判的極限，被視為古典異教哲學的天鵝之歌。Ruelle 1889 希臘校訂本、Westerink–Combès 1986 Budé 三卷校訂本為標準。",
+                "source": "pagan",
+                "note": "https://en.wikipedia.org/wiki/Damascius"
+              }
+            ]
+          },
+          {
+            "key": "greco-roman-religious-philosophy",
+            "label": "希臘羅馬宗教哲學部",
+            "label_en": "Greco-Roman Religious Philosophy",
+            "works": [
+              {
+                "title_zh": "農神節",
+                "title_orig": "Saturnalia",
+                "author": "Macrobius Ambrosius Theodosius 馬克羅比烏斯",
+                "era": "約 400–430 年（5 世紀初）",
+                "place": "義大利（可能羅馬或北非）",
+                "language": "拉丁文",
+                "intro": "以農神節三日筵席為框架的長篇對話，主要與談者為異教貴族圈的敘馬庫斯、普雷特克斯塔圖斯、弗拉維安等人。全書七卷討論羅馬曆法、祭祀、太陽神論、維吉爾詮釋、飲食風俗等，並在第一卷提出「諸神即太陽之諸相」的太陽神一元論——為 4 世紀末異教精英以哲學統合傳統多神教的代表方案。書中通篇不提基督教，是「最後一批異教」文化風貌的完整縮影。",
+                "source": "pagan",
+                "note": "https://en.wikipedia.org/wiki/Macrobius"
+              },
+              {
+                "title_zh": "西比奧之夢註疏",
+                "title_orig": "Commentarii in Somnium Scipionis",
+                "author": "Macrobius Ambrosius Theodosius 馬克羅比烏斯",
+                "era": "約 400–430 年（5 世紀初）",
+                "place": "義大利",
+                "language": "拉丁文",
+                "intro": "以西塞羅《國家篇》結尾的「西比奧之夢」為底本，逐句展開的新柏拉圖派宇宙論與靈魂學論疏。全書兩卷討論靈魂下降、天球音樂、七行星、宇宙尺度、夢境分類等，是中世紀西方拉丁世界最重要的柏拉圖哲學傳承管道之一。異教靈魂觀（輪迴、星辰淨化、諸神為神性層級）在此書得到系統呈現，通篇不提基督教而具強烈異教哲學色彩。",
+                "source": "pagan",
+                "note": "https://en.wikipedia.org/wiki/Macrobius"
+              },
+              {
+                "title_zh": "神話志",
+                "title_orig": "Mitologiae (Mythologiae)",
+                "author": "Fabius Planciades Fulgentius 富爾根提烏斯",
+                "era": "約 5 世紀末至 6 世紀初",
+                "place": "北非",
+                "language": "拉丁文",
+                "intro": "以蘊喻與怪誕詞源學重新詮釋古典神話的三卷寓意手冊，把普羅米修斯、雅努斯、阿波羅等神話當作道德或哲學寓言解讀。富爾根提烏斯身分或為基督徒或為異教改宗者，然其書仍以異教神譜為敘事骨幹，並發明性地創造大量詞源附會，成為中世紀寓意詮釋神話學的典範文本（後世稱其為「神話學家」）。與《解維吉爾深意》構成寓意詮釋雙璧。",
+                "source": "pagan",
+                "note": "https://en.wikipedia.org/wiki/Fabius_Planciades_Fulgentius"
+              },
+              {
+                "title_zh": "柏拉圖學說教程",
+                "title_orig": "Didaskalikos (Handbook of Platonism)",
+                "author": "Alcinous 阿爾契努斯（舊誤定為 Albinus 阿爾比努斯）",
+                "era": "2 世紀",
+                "place": "希臘東方（不詳）",
+                "language": "希臘文",
+                "intro": "中期柏拉圖派最系統的教科書，共 36 章分邏輯、物理、倫理三部分概述「柏拉圖學說」，實則融入亞里士多德邏輯、斯多噶倫理與畢達哥拉斯神數論。書中定型的柏拉圖神論（第一原理、理型、靈魂三層次）成為新柏拉圖派以前中期柏拉圖神學的權威表述，並被拜占庭、文藝復興乃至 1800 年前仍當作進入柏拉圖思想的標準門徑。",
+                "source": "pagan",
+                "note": "https://en.wikipedia.org/wiki/Alcinous_(philosopher)"
+              },
+              {
+                "title_zh": "論埃及神伊西斯與奧西里斯",
+                "title_orig": "De Iside et Osiride (On Isis and Osiris)",
+                "author": "Plutarch of Chaeronea 普魯塔克",
+                "era": "1 世紀末至 2 世紀初",
+                "place": "德爾斐（時任祭司）",
+                "language": "希臘文",
+                "intro": "《道德小品》中的宗教哲學代表作，普魯塔克呈給德爾斐女祭司克蕾亞。內容三分：埃及神話與祭儀概述、對伊西斯—奧西里斯神話的柏拉圖式哲學詮釋、對埃及聖書字與畢達哥拉斯符號的比較宗教學考察。核心主張為「一切宗教皆通達同一神聖真理」，是中期柏拉圖派宗教普世主義的宣言，也是古代比較宗教學最古老完整的文本之一。",
+                "source": "pagan",
+                "note": "https://en.wikipedia.org/wiki/De_Iside_et_Osiride"
+              },
+              {
+                "title_zh": "《提邁烏斯》註疏（拉丁譯本兼註）",
+                "title_orig": "Commentarius in Timaeum (Translation of Plato's Timaeus with Commentary)",
+                "author": "Calcidius / Chalcidius 卡爾契迪烏斯",
+                "era": "約 321 年（4 世紀初）",
+                "place": "西班牙科爾多瓦（傳為主教 Hosius 委託）",
+                "language": "拉丁文（譯自希臘）",
+                "intro": "卡爾契迪烏斯將柏拉圖《提邁烏斯》前半（至 53c）譯為拉丁文並附長篇註疏，此後八百年間為拉丁世界唯一可讀的柏拉圖大部頭作品。註疏融匯中期柏拉圖派、新畢達哥拉斯與早期新柏拉圖派材料，論及宇宙生成、世界靈魂、命運與天意、恆星與行星、質料學說，是拉丁哲學神學的橋樑文本，也是中世紀「沙特爾學派」宇宙論的祖本。",
+                "source": "pagan",
+                "note": "https://en.wikipedia.org/wiki/Calcidius"
+              }
+            ]
+          },
+          {
             key: 'r-pagan-critique', label: '外教批判部', label_en: 'Pagan Anti-Christian Polemics',
             works: [
               { title_zh: '希耶羅克勒斯《愛真理者》殘篇', title_orig: 'Sossianus Hierocles, Philalethes (The Lover of Truth / Friend of Truth)', author: '索西阿努斯‧希耶羅克勒斯', era: '約 303 年', place: '比提尼亞（尼科米底亞）', language: '希臘文', extent: '今僅存殘篇（賴優西比烏、拉克坦提烏斯轉引）', intro: '戴克里先大迫害（303 年）前夕，總督希耶羅克勒斯所撰的反基督教論戰，書名《愛真理者》。首開「以提阿納的阿波羅尼烏斯（行神蹟的異教聖人）比附耶穌」之先河，並力證聖經自相矛盾、彼得保羅乃造謊之徒。原書已佚，殘篇賴拉克坦提烏斯與該撒利亞的優西比烏《駁希耶羅克勒斯》得以保存，與塞爾蘇斯、波菲利、尤利安並列四大外教攻擊。' },
