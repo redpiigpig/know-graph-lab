@@ -18,7 +18,7 @@ function Ensure($label, $pat, $argv) {
     Start-Process $py -ArgumentList $argv -WindowStyle Hidden -WorkingDirectory $ROOT
 }
 
-# jung CW11 done (414/414); advance to CW9ii (Aion), the #2 religious-studies volume
+# jung CW11 done (414/414) and CW9ii done (164/164, 2026-07-20); now on CW12 Psychology and Alchemy
 # NVIDIA (not auto) on purpose: keep Gemini free for ACCS OCR, the only Gemini-only lane
 Ensure 'jung-cw12' 'jung_cw_translate' @('-X','utf8','scripts\jung_cw_translate.py','--vol','12','--engine','nvidia')
 Ensure 'philo-queue' 'plato_build|plato_run_queue' @('-X','utf8','scripts\plato_run_queue.py')
