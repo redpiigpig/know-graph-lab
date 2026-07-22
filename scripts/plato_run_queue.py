@@ -4,6 +4,7 @@
 已完成的（全快取）會快速 assemble+upload；未跑過的自動抓 Perseus 源翻譯。
 某部因額度乾退出即停整批（交由 fleet_keeper 重探後續傳）。
 """
+import argparse
 import subprocess
 import sys
 from pathlib import Path
@@ -22,10 +23,13 @@ WORKS = [
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--engine", default="auto")
+    args = ap.parse_args()
     for slug in WORKS:
         print(f"\n=== plato_build {slug} ===", flush=True)
         cmd = [sys.executable, "-X", "utf8", str(ROOT / "plato_build.py"),
-               slug, "--engine", "auto", "--upload"]
+               slug, "--engine", args.engine, "--upload"]
         rc = subprocess.run(cmd).returncode
         if rc != 0:
             print(f"  [bail] {slug} 退出碼 {rc}（多半額度乾或無來源）→ 停整批續傳", flush=True)
