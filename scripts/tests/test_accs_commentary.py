@@ -88,6 +88,13 @@ def test_father_variant_otiii_num_deu():
     assert normalize_father("託丟尼修") == "託名丟尼修"
 
 
+def test_father_variant_mat14_28_ocr():
+    # 太14-28 掃描的 OCR 誤認變體收斂
+    assert normalize_father("屈稜多模") == "金口若望"
+    assert normalize_father("被提亞的希拉流") == "波提亞的希拉流"
+    assert normalize_father("亞波里拿旨") == "亞波里拿留"
+
+
 def test_father_passthrough_unknown():
     assert normalize_father("愛任紐") == "愛任紐"
 

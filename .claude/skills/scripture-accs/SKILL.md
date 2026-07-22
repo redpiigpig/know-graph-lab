@@ -17,7 +17,10 @@ description: 把《古代基督信仰聖經註釋叢書》(ACCS, IVP/校園) 的
 > - **設定檔**：`scripts/accs_volume_config.json`（單書卷 ready／多書卷 needs_boundaries）。**driver `scripts/accs_ocr_run.py`**（讀設定逐卷跑 `ingest_accs_genesis`，NT 優先）。
 > - **由 `KGL_Fleet_Keeper` 排程託管**（見 [[project_fleet_keeper]]）：ACCS 走 **Gemini batch-4**、Gemini 有額度才啟動；量太大「一晚跑不完」是常態，逐日推進。
 > - **面板**：`translation_dashboard.py` 已接 config → ACCS 區塊顯示全 65 卷路線圖＋中文名。
-> - **待辦**：馬太完成後做簡體掃描轉繁的品質抽查；8 個多書卷（列王紀組/十二先知書等）待 vision 定界後才能跑。
+> - **馬太14-28 品質抽查（2026-07-22 完成）**：367 entries／110k 字。**簡→繁轉換乾淨**（s2twp 後簡體殘留 0、無過度轉換亂碼）。發現兩問題：
+>   1. **教父名 OCR 裂變**——已修：`accs_commentary.py` FATHER_FIXES 補 `屈稜多模`→金口若望(18筆)／`被提亞的希拉流`→波提亞的希拉流(2筆)／`亞波里拿旨`→亞波里拿留(1筆)，測試綠，upsert 時自動收斂。
+>   2. **7 頁斷片/catena OCR 劣化**（page 70,72,75,77,78,80,100；page 77 最糟＝63 簡體+6 亂碼，如「壹擊无损」「预承了主」「他傍傍他們」「漸給門徒」）→ **需重 OCR**，但須 Gemini 有額度。**待 Gemini 配額回**：從 `c:/tmp/accs_mat_…太14-28.raw.jsonl` 移除這 7 個 batch 記錄，再 `ingest_accs_genesis.py --book mat --pages 1-172 --resume --engine gemini`（只重跑那 7 頁）→ 完成後才 upsert（user 定調「先修再入庫」）。空 father 34 筆走既有 `accs_resolve_blank_fathers.py` 續行救援。
+> - **待辦**：Gemini 額度回→馬太14-28 重 OCR 7 頁＋upsert；8 個多書卷（列王紀組/十二先知書等）待 vision 定界後才能跑。
 
 # ACCS 教父註釋嵌入聖經閱讀器 Skill
 
