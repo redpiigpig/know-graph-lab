@@ -10,6 +10,15 @@ description: 把《古代基督信仰聖經註釋叢書》(ACCS, IVP/校園) 的
 > `ingest_accs_genesis.py` 支援 `--engine gemini|haiku|sonnet`。中文一律繁體（[[feedback_traditional_chinese_only]]）。
 > 🚨 截圖／渲染頁 ≤2000px（[[feedback_screenshot_2000px]]）。
 
+> 📊 **校園版全 66 書卷 OCR 現況（2026-07-22）**：
+> - **已入庫（11）**：創1-11、創12-50、出、利、民、申、書、士、得、撒上、撒下、**馬太1-13✅**。
+> - **進行中**：馬太14-28（driver 續跑）→ 接馬可/路加/約翰…。
+> - **待轉錄（剩 ~22 卷 / ~1.3 萬頁）**：校園簡體掃描 23 卷全在 `G:\我的雲端硬碟\資料\知識圖工作室\教父著作\基督教 - IVP - 古代基督信仰聖經註釋叢書\`（Downloads 副本已刪）。**缺 24-25 耶利米/哀歌**（未購得）。
+> - **設定檔**：`scripts/accs_volume_config.json`（單書卷 ready／多書卷 needs_boundaries）。**driver `scripts/accs_ocr_run.py`**（讀設定逐卷跑 `ingest_accs_genesis`，NT 優先）。
+> - **由 `KGL_Fleet_Keeper` 排程託管**（見 [[project_fleet_keeper]]）：ACCS 走 **Gemini batch-4**、Gemini 有額度才啟動；量太大「一晚跑不完」是常態，逐日推進。
+> - **面板**：`translation_dashboard.py` 已接 config → ACCS 區塊顯示全 65 卷路線圖＋中文名。
+> - **待辦**：馬太完成後做簡體掃描轉繁的品質抽查；8 個多書卷（列王紀組/十二先知書等）待 vision 定界後才能跑。
+
 # ACCS 教父註釋嵌入聖經閱讀器 Skill
 
 把 ACCS（27 冊）的教父釋經，以 **catena（經文段落 → 總論 → 具名教父引文）** 的原體例，
