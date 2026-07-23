@@ -8770,7 +8770,21 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                             "la"
                       ],
                       "status": "planned",
-                      "note": "西方哲學神學史上規模最宏大的綜合體系，天主教官方哲學核心文本。"
+                      "note": "西方哲學神學史上規模最宏大的綜合體系，天主教官方哲學核心文本。全書共十七冊（中華道明會譯本）逐冊轉錄中，見下。"
+                },
+                {
+                      "title": "神學大全 第一冊：論天主一體三位",
+                      "titleOriginal": "Summa Theologiae, Prima Pars, qq.1–43",
+                      "year": "1265-1274",
+                      "yearSort": 1265,
+                      "category": "神學大全（中華道明會譯本‧共十七冊）",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "done",
+                      "genre": "quaestio",
+                      ebookId: 'a9051225-0000-4000-8000-000000000001',
+                      "note": "第一集第1–43題：論聖道性質、天主存在（五路論證）、單純性、完美、善、永恆、唯一性、三位一體。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
                 },
                 {
                       "title": "駁異大全",
@@ -36009,7 +36023,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "紙草學",
         "保羅研究"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Deissmann_(cropped).jpg?width=500",
       "color": "amber",
       "emoji": "📜",
       "contribution": [
@@ -36456,7 +36470,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "新約正典",
         "古代譯本"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bruce_Metzger.JPG?width=500",
       "color": "violet",
       "emoji": "🔍",
       "contribution": [
@@ -36902,7 +36916,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "耶穌的比喻",
         "猶太—基督關係"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Amy_Jill_Levine_DEKT_2023_(cropped).jpg?width=500",
       "color": "orange",
       "emoji": "🕎",
       "contribution": [
@@ -37218,7 +37232,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "歷史耶穌",
         "復活與末世論"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/NTWright071220.jpg?width=500",
       "color": "teal",
       "emoji": "🌅",
       "contribution": [
@@ -37323,7 +37337,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "早期基督論",
         "啟示錄"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/%EB%A6%AC%EC%B2%98%EB%93%9C_%EB%B3%B4%EC%BB%B4.jpg?width=500",
       "color": "amber",
       "emoji": "👁️",
       "contribution": [
@@ -37428,7 +37442,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "以色列史",
         "閃族語文獻學"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Julius_Wellhausen_02.jpg?width=500",
       "color": "amber",
       "emoji": "📜",
       "contribution": [
@@ -37534,7 +37548,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "詩篇",
         "宗教史學派"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Gunkel.jpg?width=500",
       "color": "blue",
       "emoji": "🎼",
       "contribution": [
@@ -37867,7 +37881,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "以色列史",
         "陶器年代學"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/William_Albright_1957.jpg?width=500",
       "color": "violet",
       "emoji": "⛏️",
       "contribution": [
@@ -38212,7 +38226,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "死海古卷",
         "天主教聖經學"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Roland.png?width=500",
       "color": "cyan",
       "emoji": "📿",
       "contribution": [
@@ -38430,7 +38444,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "古文字學",
         "死海古卷"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankmoorecross.jpg?width=500",
       "color": "stone",
       "emoji": "🗿",
       "contribution": [
@@ -38866,7 +38880,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "宗派史",
         "路德宗神學"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Johannes_Laurentius_von_Mosheim.jpg?width=500",
       "color": "amber",
       "emoji": "📜",
       "contribution": [
@@ -38970,7 +38984,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "信條學",
         "普世合一運動"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Schaff_P.jpg?width=500",
       "color": "blue",
       "emoji": "📚",
       "contribution": [
@@ -39638,7 +39652,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "東正教神學",
         "文化史"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pelikan.jpg?width=500",
       "color": "cyan",
       "emoji": "✝️",
       "contribution": [
@@ -39743,7 +39757,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "基督教與古典世界",
         "早期基督教話語"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Averil_Cameron_in_Greece_(cropped).jpg?width=500",
       "color": "orange",
       "emoji": "🏛️",
       "contribution": [
@@ -39849,7 +39863,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "身體與社會",
         "宗教社會史"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Peter_Brown_Balzan_Prize_Ceremony_2011.JPG?width=500",
       "color": "stone",
       "emoji": "🌅",
       "contribution": [
@@ -40179,7 +40193,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "拿戈瑪第文獻",
         "性別與宗教"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Elaine_pagels_8315812.jpg?width=500",
       "color": "amber",
       "emoji": "📖",
       "contribution": [
@@ -40284,7 +40298,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
         "英國宗教改革",
         "克蘭默研究"
       ],
-      "portraitUrl": "",
+      "portraitUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Diarmaid_macculloch.jpg?width=500",
       "color": "blue",
       "emoji": "🕰️",
       "contribution": [
