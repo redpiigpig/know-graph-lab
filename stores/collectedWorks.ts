@@ -20199,8 +20199,22 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned",
-                      "note": "宗教社會學史上最著名的因果命題，論救恩焦慮如何催生資本主義精神"
+                      "status": "done",
+                      ebookId: "2a9a6c32-ef96-4d12-9b13-761c5daf262b",
+                      "note": "康樂、簡惠美譯（遠流新版，取最新繁體版）；宗教社會學史上最著名的因果命題"
+                },
+                {
+                      "title": "宗教社會學",
+                      "titleOriginal": "Religionssoziologie",
+                      "year": "1920",
+                      "yearSort": 1920,
+                      "category": "宗教社會學代表作",
+                      "languages": [
+                            "de"
+                      ],
+                      "status": "done",
+                      ebookId: "b89ffe1d-2fc8-4228-9e23-3f2f169b0bb9",
+                      "note": "收於《經濟與社會》的宗教社會學專章中譯"
                 },
                 {
                       "title": "中國的宗教：儒教與道教",
@@ -20211,8 +20225,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned",
-                      "note": "世界宗教經濟倫理比較系列首卷"
+                      "status": "done",
+                      ebookId: "f7733673-ee52-46d7-9d7e-5534278c1885",
+                      "note": "康樂、簡惠美譯《中國的宗教、宗教與世界》；世界宗教經濟倫理比較系列首卷"
                 },
                 {
                       "title": "印度的宗教：印度教與佛教",
@@ -20223,7 +20238,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned"
+                      "status": "done",
+                      ebookId: "028481d2-bcb4-42ac-935c-0748d1d8e6ee"
                 },
                 {
                       "title": "古猶太教",
@@ -20258,7 +20274,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned"
+                      "status": "done",
+                      ebookId: "424dc120-0bc8-410d-aa63-ae5786d250b0",
+                      "note": "李猛譯《科學作為天職》"
                 },
                 {
                       "title": "政治作為一種志業",

@@ -193,6 +193,7 @@
                     <div class="flex items-center gap-2 mt-2 flex-wrap">
                       <span v-if="b.matchType === 'title'" class="text-[10px] bg-blue-900 text-blue-300 px-1.5 py-0.5 rounded">書名</span>
                       <span v-else-if="b.matchType === 'author'" class="text-[10px] bg-purple-900 text-purple-300 px-1.5 py-0.5 rounded">作者</span>
+                      <span v-if="b.collection === 'collected-works'" class="text-[10px] bg-cyan-900 text-cyan-300 px-1.5 py-0.5 rounded">全集</span>
                       <span class="text-xs text-gray-600">{{ b.total_pages || b.chunk_count || '?' }} 段</span>
                     </div>
                   </div>
@@ -212,6 +213,7 @@
                   <span class="text-xs bg-blue-900 text-blue-300 px-2 py-0.5 rounded">{{ r.chapter_path || `第 ${r.chunk_index + 1} 段` }}</span>
                   <span class="text-xs text-gray-500">{{ r.ebooks?.title }}</span>
                   <span v-if="r.ebooks?.author" class="text-xs text-gray-600">／{{ r.ebooks.author }}</span>
+                  <span v-if="r.ebooks?.collection === 'collected-works'" class="text-[10px] bg-cyan-900 text-cyan-300 px-1.5 py-0.5 rounded">全集</span>
                 </div>
                 <p class="text-sm text-gray-300 line-clamp-3 leading-relaxed" v-html="highlightMatch(r.content)"></p>
               </NuxtLink>
