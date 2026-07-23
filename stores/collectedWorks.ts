@@ -20150,7 +20150,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                 "代表作《新教倫理與資本主義精神》（1904–05）提出宗教社會學最著名的因果命題之一：喀爾文宗「預定論」帶來的救恩焦慮，催生了入世苦行（innerweltliche Askese）的天職倫理，無意間為理性資本主義的興起提供了精神動力——這是「非預期後果」論證的典範，也開啟宗教觀念與經濟行為之間關係的長期論戰。",
                 "晚年未竟的《宗教社會學》（收於《經濟與社會》）進行大規模比較宗教研究，涵蓋儒教、印度教、古猶太教等文明，提出先知、卡里斯瑪（Charisma）、教權科層化、除魅（Entzauberung）等一系列至今仍是宗教社會學核心詞彙的概念；其「世界諸宗教的經濟倫理」比較架構，至今仍是比較宗教社會學方法論的基準點。"
           ],
-          "sourceNote": "韋伯1920年逝世，德文原著已公有領域；經典英譯（Parsons、Roth-Wittich 等）多屬版權文本。",
+          "sourceNote": "韋伯1920年逝世，德文原著全部公有領域。經典英譯多屬版權文本，惟 Talcott Parsons 的《新教倫理》英譯（1930）已於 2026 年（滿95年）進入美國公有領域，可作乾淨英文來源；本站為私人研究圖書館，受版權英譯亦可依 English-first 逐段自譯收錄。收錄引擎採 OpenRouter 免費模型（與 Gemini／NVIDIA 主鏈分流）。",
           "timeline": [
                 {
                       "year": "1864",
@@ -20259,6 +20259,18 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                             "de"
                       ],
                       "status": "planned"
+                },
+                {
+                      "title": "政治作為一種志業",
+                      "titleOriginal": "Politik als Beruf",
+                      "year": "1919",
+                      "yearSort": 1919,
+                      "category": "演講與方法論文集",
+                      "languages": [
+                            "de"
+                      ],
+                      "status": "planned",
+                      "note": "與〈學術作為志業〉並列的慕尼黑演講，提出「責任倫理／信念倫理」與國家作為壟斷正當暴力的定義"
                 }
           ]
     },

@@ -15,7 +15,7 @@ for ($i = 0; $i -lt 288; $i++) {   # 最多 ~48 小時（每 10 分一輪）
     python -X utf8 scripts\gemini_probe.py *> $null
     if ($LASTEXITCODE -eq 0) {
         Note "Gemini 有額度 → 跑 accs_ocr_run（ready 單書卷，NT 先）"
-        python -X utf8 scripts\accs_ocr_run.py --engine gemini --batch 4 *>> $log
+        python -X utf8 scripts\accs_ocr_run.py --engine gemini --batch 4 --testament NT *>> $log
         if ($LASTEXITCODE -eq 0) { Note "單書卷全批完成 → runner 收工"; break }
         Note "本輪中止（多半 Gemini 當輪額度乾）→ 10 分後重探續傳"
     }
