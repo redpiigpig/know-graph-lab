@@ -1,0 +1,138 @@
+基督宗教研究 · 全集中譯本獵表（REFERENCE-first）
+產生：2026-07-23 ｜ 來源：博客來/豆瓣/校園書房 + libgen.li 交叉查
+用途：有中譯本者→下載走 REFERENCE 轉錄（原文逐段對照、不自譯）；無中譯者→English-first 自譯
+
+==================================================================
+【A】libgen 有中譯電子檔 → 現在就能下載、走 REFERENCE
+==================================================================
+[新約研究] 布魯斯‧梅茨格（麥子格）｜《新約經文鑑別學》 康來昌（等） / 中華福音神學院出版社（華神）；另有秀威 POD 版 1981 (繁)
+    原著: The Text of the New Testament: Its Transmission, Corruption, and Restoration　libgen: 無（libgen 僅有英文原著，無中譯電子檔）
+    註: 梅茨格經文鑑別學經典的中譯，華神早年出版，作者中譯名多作『麥子格』。
+[新約研究] N. T. 賴特（湯姆‧賴特）｜《新約與神的子民》 — / 校園書房 2013 (繁)
+    原著: The New Testament and the People of God　libgen: 有pdf
+    註: 『基督教起源與上帝議題』系列第一卷；libgen 有 1 筆對應電子檔。
+[新約研究] N. T. 賴特（湯姆‧賴特）｜《神兒子的復活》 邱慕天、紀榮智、譚達峰 / 校園書房 2016 (繁)
+    原著: The Resurrection of the Son of God　libgen: 有pdf
+    註: libgen 有 PDF（標註『缺參考書目』，ISBN 9789861985121，md5 a5e5f4b9…）。
+[教會史] 拉圖雷特（賴德烈）｜《基督教在華傳教史》 雷立柏等（待核） / 道風書社（漢語基督教文化研究所） 2009 (繁)
+    原著: A History of Christian Missions in China　libgen: 有pdf
+    註: 非題列《基督教史》，但為拉圖雷特確有的中譯代表作；libgen.li 搜到 pdf。
+[教會史] 班頓（羅倫培登）｜《這是我的立場——改教先導馬丁路德傳記（修訂版）》 陸中石／古樂人（待核） / 道聲出版社／校園書房（另有天道版） 修訂版 (繁)
+    原著: Here I Stand: A Life of Martin Luther　libgen: 有pdf
+    註: 多家繁體出版社在版；libgen.li 搜「這是我的立場」有 pdf。
+[教會史] 帕利坎（雅羅斯拉夫·帕利坎）｜《基督教傳統（卷一）：大公傳統的形成》 翁紹軍（陳佐人校） / 香港漢語基督教文化研究所／道風書社  (繁)
+    原著: The Christian Tradition, Vol.1: The Emergence of the Catholic Tradition (100-600)　libgen: 有pdf
+    註: 五卷本目前中譯僅出前兩卷。
+[教會史] 帕利坎（雅羅斯拉夫·帕利坎）｜《基督教傳統（卷二）：東方基督教世界的精神》 待核 / 道風書社（博客來 0010460860）  (繁)
+    原著: The Christian Tradition, Vol.2: The Spirit of Eastern Christendom (600-1700)　libgen: 有pdf
+    註: 卷三至卷五未見中譯，待自譯。
+[教會史] 彼得·布朗｜《希波的奧古斯丁》 待核 / 社會科學文獻出版社（甲骨文）  (簡)
+    原著: Augustine of Hippo: A Biography　libgen: 有pdf
+    註: 豆瓣 25749416；最經典的奧古斯丁傳記。
+[教會史] 彼得·布朗｜《穿過針眼：財富、西羅馬帝國的衰亡和基督教會的形成，350-550年》 劉寅、包倩怡等 / 社會科學文獻出版社（甲骨文） 2021 (簡)
+    原著: Through the Eye of a Needle　libgen: 有epub
+[教會史] 岡薩雷斯（胡斯托·L.岡薩雷斯）｜《基督教史（上下卷）》 趙城藝 / 上海三聯書店 2016 (簡)
+    原著: The Story of Christianity (2 vols)　libgen: 有epub
+    註: ISBN 9787542644121；上卷初期教會到宗教改革前夕、下卷宗教改革至今。
+[教會史] 岡薩雷斯（胡斯托·L.岡薩雷斯）｜《基督教思想史（共三卷）》 陳澤民、孫漢書等 / 譯林出版社 2008／2010 (簡)
+    原著: A History of Christian Thought (3 vols)　libgen: 有epub
+    註: ISBN 9787544705233；陳澤民曾薦為中國神學院基本教材。
+[教會史] 麥卡洛克（迪爾梅德·麥卡洛克）｜《基督教史：最初的三千年》 待核 / 宗教文化出版社（後浪 Post Wave 出品） 2020 (簡)
+    原著: Christianity: The First Three Thousand Years　libgen: 有pdf
+    註: ISBN 9787518814466；另有台灣高等教育出版社簡體引進。
+
+==================================================================
+【B】有中譯本、但 libgen 查無 → 另尋來源(校園電子書/掃描)，或退回自譯
+==================================================================
+[新約研究] 布魯斯‧梅茨格（麥子格）｜《新約經文鑑別學概論》 — / 校園書房 / 華人福音出版 未確認 (繁)
+    原著: The Text of the New Testament (introductory adaptation)
+    註: 校園網路書房與 CCLM、天道等通路可見『新約經文鑑別學概論』條目，為同一領域導論性中譯；出版年待核。
+[新約研究] 雷蒙‧布朗（雷孟‧布朗）｜《若望福音及書信詮釋（簡要本）》 活水編譯小組 / 光啟文化事業（神叢 93） 約 2003 (繁)
+    原著: The Gospel and Epistles of John: A Concise Commentary（含 An Introduction to the Gospel of John 之精華）
+    註: 天主教光啟出版，濃縮布朗一生對若望文獻研究之精華。布朗代表作《新約導論》(An Introduction to the New Testament) 本身未見完整中譯。
+[新約研究] 理查‧海斯｜《基督教新約倫理學（活出群體‧十架與新造的倫理意境）》 白陳毓華 / 校園書房 2018 (繁)
+    原著: The Moral Vision of the New Testament
+    註: 海斯代表作，《今日基督教》二十世紀百大好書之一；亦有簡體版《基督教新约伦理学》(豆瓣可見)。
+[新約研究] 理查‧海斯｜《聖經倒著讀：福音書教我們的喻象讀經法》 — / 天道書樓 未確認 (繁)
+    原著: Reading Backwards: Figural Christology and the Fourfold Gospel Witness
+    註: 天道北美網路書房可見；出版年待核。
+[新約研究] N. T. 賴特（湯姆‧賴特）｜《再思保羅神學爭議》 — / 校園書房 未確認 (繁)
+    原著: What Saint Paul Really Said
+[新約研究] N. T. 賴特（湯姆‧賴特）｜《邪惡與上帝新世界》 — / 校園書房 未確認 (繁)
+    原著: Evil and the Justice of God
+[新約研究] N. T. 賴特（湯姆‧賴特）｜《純．基督教》 — / 天道書樓 未確認 (繁)
+    原著: Simply Christian
+    註: 使用者所指『簡明信仰』對應此書。
+[新約研究] N. T. 賴特（湯姆‧賴特）｜《聖經與上帝的權威》 — / 校園書房 未確認 (繁)
+    原著: Scripture and the Authority of God
+    註: 校園列為出版品。
+[新約研究] N. T. 賴特（湯姆‧賴特）｜《認識耶穌的十堂課》 — / 校園書房 未確認 (繁)
+    原著: (認識耶穌系列)
+    註: 另有《約翰福音．真是這樣？！》(友友出版)。賴特為此 13 人中中譯最豐者。
+[新約研究] 理查‧波卡姆（包衡／鮑克姆）｜《啟示錄神學》 鄧紹光 / 校園書房 2000 (繁)
+    原著: The Theology of the Book of Revelation
+    註: ISBN 9624571775，256 頁。
+[新約研究] 理查‧波卡姆（包衡／鮑克姆）｜《被釘的神：新約的獨一神論基督論》 — / 天道書樓 未確認 (繁)
+    原著: God Crucified: Monotheism and Christology in the New Testament
+    註: 天道北美網路書房可見。代表作《耶穌與目擊證人》(Jesus and the Eyewitnesses) 本身查無中譯。
+[舊約研究] 布魯格曼（Walter Brueggemann）｜《先知式的想像》 謝樂知 / 校園書房（另有天道書樓版） 2009 (繁)
+    原著: The Prophetic Imagination
+    註: 13 位學者中唯一有多部中譯本者。libgen.li 搜『布鲁格曼』只出現 Jeb Brugmann《城變》（都市研究，非本人），繁體書名亦無檔，故 libgen 無。
+[舊約研究] 布魯格曼（Walter Brueggemann）｜《詩篇靈修學》  / 天道書樓  (繁)
+    原著: Spirituality of the Psalms
+    註: 以『定向—失向—再定向』架構讀詩篇；books.com.tw 商品 0010779412。譯者出版年待補。
+[舊約研究] 布魯格曼（Walter Brueggemann）｜《讀舊約，學禱告》  / 天道書樓  (繁)
+    原著: Great Prayers of the Old Testament
+    註: 選舊約十二篇偉大禱告解析。譯者出版年待補。
+[舊約研究] 布魯格曼（Walter Brueggemann）｜《布氏舊約導論：正典與基督教的想像》  / 天道書樓  (繁)
+    原著: An Introduction to the Old Testament: The Canon and Christian Imagination
+    註: 貨號 TD1409。譯者出版年待補。
+[舊約研究] 布魯格曼（Walter Brueggemann）｜《土地神學：從聖經信仰看土地的賞賜、應許和挑戰》  / 天道書樓  (繁)
+    原著: The Land: Place as Gift, Promise, and Challenge
+    註: 譯者出版年待補。
+[教會史] 哈納克（阿道夫·馮·哈納克）｜《基督教的本質／什麼是基督教》 待核 / 簡體版（博客來書號 CN10026117，出版社與年份待確認）  (簡)
+    原著: What is Christianity? (Das Wesen des Christentums)
+    註: 與費爾巴哈(Feuerbach)同名《基督教的本質》易混淆，libgen 搜到的 epub 多為費爾巴哈本；哈納克此書中譯完整度待核。
+[教會史] 哈納克（阿道夫·馮·哈納克）｜《論馬克安：陌生上帝的福音》 朱雁冰 / 生活·讀書·新知三聯書店 2007 (簡)
+    原著: Marcion: Das Evangelium vom fremden Gott
+    註: 非題列代表作，但確證哈納克有可用中譯著作。
+[教會史] 彼得·布朗｜《古代晚期的世界》 待核 / 簡體版（出版社待確認）  (簡)
+    原著: The World of Late Antiquity, AD 150-750
+    註: 「古代晚期」研究奠基作，已有中譯。
+[教會史] 彼得·布朗｜《古代晚期的權力與勸誡：走向基督教帝國》 待核 / 社會科學文獻出版社 2020 (簡)
+    原著: Power and Persuasion in Late Antiquity
+[教會史] 威爾肯（羅伯特·路易斯·威爾肯）｜《早期基督教思想的精神：尋求上帝的面》 待核 / 中國社會科學出版社（歷史與思想研究譯叢）  (簡)
+    原著: The Spirit of Early Christian Thought: Seeking the Face of God
+    註: 題列旗艦作，確有簡體中譯；libgen.li 未搜到檔案，需另尋。
+
+==================================================================
+【C】無中譯本 → English-first 自譯（依全集自譯 pipeline）
+==================================================================
+[新約研究] 阿道夫‧戴斯曼 — 《來自古代東方之光》(Light from the Ancient East) 及其他戴斯曼著作查無任何中文譯本（繁或簡），待自譯。
+[新約研究] C. H. 多德 — 《使徒的宣講及其發展》(The Apostolic Preaching)、《國度的比喻》、《第四福音的解釋》等多德代表作均查無正式中文譯本，待自譯。
+[新約研究] 約阿希姆‧耶利米亞斯 — 《耶穌的比喻》(The Parables of Jesus)、《耶穌時代的耶路撒冷》、《新約神學》均查無中文譯本。校園書房《耶穌的比喻》(2014, ISBN 9789868394834) 為華人自編查經教材，非耶利米亞斯原著；麥種《主耶穌的比喻》亦屬他人著作。耶利米亞斯本人著作待自譯。
+[新約研究] 恩斯特‧凱澤曼 — 《羅馬書註釋》(Commentary on Romans)、《新約主題論集》等凱澤曼代表作查無中文譯本，待自譯。
+[新約研究] 馬丁‧亨格爾 — 《猶太教與希臘主義》(Judaism and Hellenism)、《十字架》等亨格爾代表作查無中文譯本，待自譯。
+[新約研究] E. P. 桑德斯 — 《保羅與巴勒斯坦猶太教》(Paul and Palestinian Judaism)、《耶穌與猶太教》、《歷史上的耶穌》(The Historical Figure of Jesus) 及牛津通識《Paul》均查無確認的中文譯本，待自譯。
+[新約研究] 艾米-吉爾‧萊文 — 《被誤解的猶太人耶穌》(The Misunderstood Jew)、《耶穌講的短篇故事》(Short Stories by Jesus)、《新約入門》等萊文著作查無中文譯本，待自譯。
+[新約研究] 詹姆斯‧鄧恩 — 《耶穌與聖靈》《使徒保羅的神學》(The Theology of Paul the Apostle)、《基督論的形成》(Christology in the Making)、《製作中的基督教／耶穌所記得的》(Jesus Remembered) 等鄧恩代表作查無確認的中文譯本，待自譯。
+[舊約研究] 威爾豪森（Julius Wellhausen） — 代表作《以色列史導論》（Prolegomena zur Geschichte Israels, 1878）及底本假說相關著作皆無正式中文譯本。中文學界僅有維基百科、聖經批判學條目與論文對其學說（四底本 J/E/D/P）的介紹與轉述，未見專書中譯。待自譯。
+[舊約研究] 貢克爾（Hermann Gunkel） — 形式批判奠基者，代表作《創世記註釋》（Genesis）與《詩篇導論》（Einleitung in die Psalmen）皆無中文譯本。中文僅見形式批判方法的二手介紹，未見專書中譯。待自譯。
+[舊約研究] 考夫曼（Yehezkel Kaufmann） — 代表作《以色列宗教史》（The Religion of Israel / Toledot ha-Emunah ha-Yisre'elit）無中文譯本；中文學界對其一神論起源論點僅零星轉述。待自譯。
+[舊約研究] 艾希羅特（Walther Eichrodt） — 代表作三卷本《舊約神學》（Theologie des Alten Testaments, 1933–1939；以「聖約」為統整中心）無中文全譯本。中文舊約神學界（如黃儀章、華爾基著作）常引述其觀點，但未見專書中譯。待自譯。
+[舊約研究] 奧爾布賴特（William F. Albright） — 聖經考古學奠基者。代表作《從石器時代到基督教：一神論及其歷史進程》（From the Stone Age to Christianity）中文僅見書名譯述與二手引用，查無正式出版之中文譯本（豆瓣、館藏、簡體學術社均無）。待自譯。
+[舊約研究] 馮‧拉德（Gerhard von Rad） — 代表作兩卷本《舊約神學》（Old Testament Theology）與《創世記註釋》（Genesis: A Commentary）皆無中文全譯本。注意：坊間簡體『魏司堅／霍志恆《聖經神學》』屬 Geerhardus Vos，非馮‧拉德；上海三聯／天道《創世記註釋（全五卷）》亦非馮‧拉德著作。中文學界（hebrewbiblesite 等）明言『舊約神學中文資源並不豐富』。待自譯。
+[舊約研究] 諾特（Martin Noth） — 代表作《申命記史》（The Deuteronomistic History）、《以色列史》（The History of Israel）、《五經傳統史》皆無中文譯本；中文導論書（如《舊約文學與神學：五經》）常引述其傳統史批判，未見專書中譯。待自譯。
+[舊約研究] 德‧沃（Roland de Vaux） — 代表作《古代以色列的制度》（Ancient Israel: Its Life and Institutions）無中文譯本（商務『漢譯世界學術名著叢書』亦未收）。待自譯。
+[舊約研究] 布賴特（John Bright） — 代表作《以色列史》（A History of Israel）為西方標準教科書，但查無中文全譯本。待自譯。
+[舊約研究] 克羅斯（Frank Moore Cross） — 代表作《迦南神話與希伯來史詩》（Canaanite Myth and Hebrew Epic）無中文譯本。待自譯。
+[舊約研究] 柴爾茲（Brevard Childs） — 正典進路（canonical approach）代表人物。《出埃及記註釋》（Exodus: A Commentary）、《舊約作為聖經的導論》（Introduction to the Old Testament as Scripture）、《新舊約聖經神學》（Biblical Theology of the Old and New Testaments）皆無中文譯本；中文僅見對其正典觀的評介文章。待自譯。
+[舊約研究] 特里布爾（Phyllis Trible） — 女性主義聖經詮釋代表。《恐怖的文本》（Texts of Terror）、《上帝與性別修辭》（God and the Rhetoric of Sexuality）無中文譯本；中文僅有《道風：基督教文化評論》第45A期（回海華，2016）等專論介紹其詮釋學。（另有日譯本《神と人間性の修辞学》，非中文。）待自譯。
+[教會史] 莫斯海姆 — 《教會史綱》(Institutes of Ecclesiastical History) 未見任何中文譯本；華人教會史教材傳統以華爾克(Walker)、雪萊(Shelley)等替代。待自譯。
+[教會史] 沙夫（斐利普·沙夫） — 八卷本《基督教會史》(History of the Christian Church) 未見完整中文譯本（坊間《基督教會史》多為 Bruce Shelley《Church History in Plain Language》劉平譯本，非沙夫）。ANF/NPNF 教父叢書為沙夫主編、原典另計。此代表作待自譯。
+[教會史] 弗蘭德（W. H. C. Frend） — 《早期教會的殉道與逼迫》(Martyrdom and Persecution in the Early Church) 與《早期教會史》(The Early Church) 均未見中文譯本。待自譯。
+[教會史] 歐文·查德威克 — 《宗教改革》(The Reformation, Pelican) 與《早期教會史》(Pelican) 未見中文譯本。待自譯。
+[教會史] 亨利·查德威克 — 《早期教會》(The Early Church, Pelican History of the Church) 與其奧古斯丁研究未見中文譯本。待自譯。
+[教會史] 卡梅倫（阿夫里爾·卡梅倫） — 《古代晚期的地中海世界》(The Mediterranean World in Late Antiquity) 與《後期羅馬帝國》(The Later Roman Empire) 未見中文譯本（勿與布勞岱爾《菲利普二世時代的地中海》混淆）。待自譯。
+
+# 統計：有中譯 14 位 / 其中 libgen 可下 12 筆 / 另尋來源 21 筆 / 無中譯待自譯 26 位
