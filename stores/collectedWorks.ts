@@ -28866,10 +28866,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "nameEn": "Elisabeth Schüssler Fiorenza",
           "nameOriginal": "Elisabeth Schüssler Fiorenza",
           "lifespan": "1938–",
-          "disciplineGroup": "神學",
+          "disciplineGroup": "基督宗教研究",
           "sortYear": 1938,
-          "era": "現代與當代",
-          "region": "北美",
+          "era": "新約研究",
           "discipline": "女性主義聖經學者，重建早期基督教婦女歷史",
           "fields": [
                 "女性主義聖經詮釋",
@@ -31983,10 +31982,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "nameEn": "Rudolf Bultmann",
           "nameOriginal": "Rudolf Bultmann",
           "lifespan": "1884–1976",
-          "disciplineGroup": "神學",
+          "disciplineGroup": "基督宗教研究",
           "sortYear": 1884,
-          "era": "現代與當代",
-          "region": "歐陸",
+          "era": "新約研究",
           "discipline": "形式批判學宗師、「非神話化」新約詮釋學的開創者",
           "fields": [
                 "新約神學",
@@ -34909,10 +34907,9 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "nameEn": "Adolf von Harnack",
           "nameOriginal": "Adolf von Harnack",
           "lifespan": "1851–1930",
-          "disciplineGroup": "神學",
+          "disciplineGroup": "基督宗教研究",
           "sortYear": 1851,
-          "era": "近代",
-          "region": "西方（拉丁）",
+          "era": "教會史",
           "discipline": "德國自由神學集大成的教義史家；主張教義乃「福音希臘化」，威廉皇帝學會首任會長",
           "fields": [
                 "教義史考證",
@@ -35996,6 +35993,4387 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "note": "將靈性實踐擴展為社會行動倫理的近作。"
                 }
           ]
+    },
+    {
+      "slug": "deissmann",
+      "name": "阿道夫‧戴斯曼",
+      "nameEn": "Adolf Deissmann",
+      "nameOriginal": "Gustav Adolf Deißmann",
+      "lifespan": "1866–1937",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1866,
+      "discipline": "以埃及紙草與希臘化題銘重讀新約希臘文，證明其為第一世紀庶民口語",
+      "fields": [
+        "新約研究",
+        "新約希臘文",
+        "紙草學",
+        "保羅研究"
+      ],
+      "portraitUrl": "",
+      "color": "amber",
+      "emoji": "📜",
+      "contribution": [
+        "戴斯曼是**新約語言學的分水嶺人物**。十九世紀學界普遍把新約希臘文視為一種受聖靈感動而自成一格的「聖經希臘文」，戴斯曼則透過大量新出土的埃及紙草文書、陶片與希臘化題銘證明：新約所用的正是希臘化時代地中海世界通行的**通俗希臘文（Koine）**，與市井小民的書信、契約、收據同一語體。這一發現徹底改寫了新約辭典學與文法學的基礎。",
+        "在《來自古代東方之光》中，他把福音書與保羅書信的字詞，一條條對照當時的紙草用例，讓新約重新落回其社會與經濟的現場。他並據此提出保羅並非書齋神學家，而是**帶著手工匠人氣息的宗教天才**，其「在基督裡（ἐν Χριστῷ）」是一種神祕契合的核心經驗，而非抽象教義。",
+        "戴斯曼開創的紙草進路，直接孕育了後來 Moulton–Milligan 的辭書工程與整個二十世紀的社會史釋經，至今仍是新約希臘文研究無法繞過的起點。"
+      ],
+      "sourceNote": "戴斯曼卒於 1937 年，主要德文著作已進入公有領域，可逐段轉錄原文並附繁中對照。",
+      "timeline": [
+        {
+          "year": "1866",
+          "text": "生於德國萊茵地區的朗根沙伊德（Langenscheid）"
+        },
+        {
+          "year": "1892",
+          "text": "出版《新約套語「在基督耶穌裡」》，奠定其保羅神祕契合研究的雛形"
+        },
+        {
+          "year": "1895",
+          "text": "《聖經研究》問世，首度以紙草證據挑戰「聖經希臘文」神話"
+        },
+        {
+          "year": "1908",
+          "text": "代表作《來自古代東方之光》出版，轟動歐洲學界"
+        },
+        {
+          "year": "1911",
+          "text": "《保羅：一幅文化與宗教史的素描》出版，重塑保羅形象"
+        },
+        {
+          "year": "1918",
+          "text": "任柏林大學新約教授，並積極投入普世教會合一運動"
+        },
+        {
+          "year": "1937",
+          "text": "於德國烏珀塔爾逝世"
+        }
+      ],
+      "works": [
+        {
+          "title": "聖經研究",
+          "titleOriginal": "Bibelstudien",
+          "year": "1895",
+          "yearSort": 1895,
+          "category": "新約希臘文與紙草",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "planned",
+          "note": "首度以紙草與題銘證據處理新約詞彙與文法"
+        },
+        {
+          "title": "來自古代東方之光",
+          "titleOriginal": "Licht vom Osten: Das Neue Testament und die neuentdeckten Texte der hellenistisch-römischen Welt",
+          "year": "1908",
+          "yearSort": 1908,
+          "category": "新約希臘文與紙草",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "planned",
+          "note": "以古代東方文書之光重新照明新約語言與世界的奠基之作"
+        },
+        {
+          "title": "保羅：一幅文化與宗教史的素描",
+          "titleOriginal": "Paulus: Eine kultur- und religionsgeschichtliche Skizze",
+          "year": "1911",
+          "yearSort": 1911,
+          "category": "保羅研究",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "planned",
+          "note": "提出保羅為手工匠人出身的宗教天才、以「在基督裡」的神祕契合為核心"
+        },
+        {
+          "title": "新約套語「在基督耶穌裡」",
+          "titleOriginal": "Die neutestamentliche Formel „in Christo Jesu\"",
+          "year": "1892",
+          "yearSort": 1892,
+          "category": "保羅研究",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "早期博士論著，開啟保羅神祕主義的語文學研究"
+        }
+      ],
+      "era": "新約研究"
+    },
+    {
+      "slug": "dodd",
+      "name": "查爾斯‧哈羅德‧多德",
+      "nameEn": "C. H. Dodd",
+      "lifespan": "1884–1973",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1884,
+      "discipline": "提出「已實現的末世論」與使徒宣講（kerygma）架構，重塑福音書與約翰研究",
+      "fields": [
+        "新約研究",
+        "歷史耶穌",
+        "約翰著作",
+        "末世論"
+      ],
+      "portraitUrl": "",
+      "color": "blue",
+      "emoji": "⏳",
+      "contribution": [
+        "多德是二十世紀英語世界最具影響力的新約學者之一，最著名的貢獻是**「已實現的末世論（realized eschatology）」**。針對史懷哲一派把耶穌講成純粹的末日先知，多德主張：在耶穌的比喻與宣講中，神的國並非只是未來的期待，而是**已經在祂的言行中臨到、在當下實現**。這一命題成為整個世紀比喻研究與福音書神學的核心議題。",
+        "他在《使徒的宣講及其發展》中重建了早期教會共同的宣講骨架（kerygma），論證新約各書卷背後有一套穩定的救恩敘事核心；在《舊約引證》中，他指出新約作者引用舊約時是以**整段脈絡而非孤立字句**為單位，開啟了後世「經文互涉」研究的先河。",
+        "晚年的《第四福音書的詮釋》與《第四福音書中的歷史傳統》，則把約翰福音從純哲學文本重新讀為蘊含獨立歷史傳統的作品，至今仍是約翰研究繞不開的里程碑。"
+      ],
+      "sourceNote": "多德卒於 1973 年，著作仍在版權期內，採原文逐段對照＋自譯繁中策略。",
+      "timeline": [
+        {
+          "year": "1884",
+          "text": "生於威爾斯的萊克瑟姆（Wrexham）"
+        },
+        {
+          "year": "1935",
+          "text": "《神國的比喻》出版，正式提出已實現的末世論"
+        },
+        {
+          "year": "1936",
+          "text": "《使徒的宣講及其發展》重建早期教會 kerygma 骨架"
+        },
+        {
+          "year": "1936",
+          "text": "任劍橋大學諾理斯–赫爾斯講座教授（首位非國教徒任此職）"
+        },
+        {
+          "year": "1952",
+          "text": "《舊約引證》提出脈絡式引經理論"
+        },
+        {
+          "year": "1953",
+          "text": "《第四福音書的詮釋》出版，重塑約翰研究"
+        },
+        {
+          "year": "1961",
+          "text": "主持《新英文聖經》新約翻譯總編工作"
+        },
+        {
+          "year": "1973",
+          "text": "逝世於英格蘭"
+        }
+      ],
+      "works": [
+        {
+          "title": "神國的比喻",
+          "titleOriginal": "The Parables of the Kingdom",
+          "year": "1935",
+          "yearSort": 1935,
+          "category": "歷史耶穌",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "以已實現的末世論重讀耶穌比喻的劃時代之作"
+        },
+        {
+          "title": "使徒的宣講及其發展",
+          "titleOriginal": "The Apostolic Preaching and Its Developments",
+          "year": "1936",
+          "yearSort": 1936,
+          "category": "新約神學",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "重建早期教會共同宣講（kerygma）的骨架"
+        },
+        {
+          "title": "舊約引證：新約神學的次結構",
+          "titleOriginal": "According to the Scriptures: The Sub-structure of New Testament Theology",
+          "year": "1952",
+          "yearSort": 1952,
+          "category": "新約神學",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "提出新約引用舊約以整段脈絡為單位的理論"
+        },
+        {
+          "title": "第四福音書的詮釋",
+          "titleOriginal": "The Interpretation of the Fourth Gospel",
+          "year": "1953",
+          "yearSort": 1953,
+          "category": "約翰著作",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "系統重讀約翰福音的思想結構與宗教背景"
+        },
+        {
+          "title": "第四福音書中的歷史傳統",
+          "titleOriginal": "Historical Tradition in the Fourth Gospel",
+          "year": "1963",
+          "yearSort": 1963,
+          "category": "約翰著作",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "論證約翰福音蘊含獨立於符類福音的歷史傳統"
+        }
+      ],
+      "era": "新約研究"
+    },
+    {
+      "slug": "jeremias",
+      "name": "約阿希姆‧耶利米亞斯",
+      "nameEn": "Joachim Jeremias",
+      "lifespan": "1900–1979",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1900,
+      "discipline": "還原比喻與聖餐言說的亞蘭原音，重建耶穌時代耶路撒冷的社會世界",
+      "fields": [
+        "新約研究",
+        "歷史耶穌",
+        "耶穌的比喻",
+        "第二聖殿猶太教"
+      ],
+      "portraitUrl": "",
+      "color": "rose",
+      "emoji": "🌾",
+      "contribution": [
+        "耶利米亞斯畢生致力於**穿透福音書的希臘文外衣、回到耶穌本人的亞蘭語言語（ipsissima vox）**。在經典之作《耶穌的比喻》中，他透過細密的傳統史分析，剝除早期教會在傳講與編輯中對比喻的層層改造，力圖還原耶穌講出這些比喻時的原始處境與鋒芒，成為二十世紀比喻研究的標竿。",
+        "他的《耶穌時代的耶路撒冷》是一部厚重的社會經濟史巨著，鉅細靡遺地重建了第二聖殿晚期耶路撒冷的祭司階層、行業、階級與潔淨制度，為理解福音書的社會脈絡奠定了不可取代的基礎。《耶穌的聖餐言說》則以語文學方法追索最後晚餐話語的閃族原型。",
+        "作為「新探索」前後德語新約學的重要橋樑，他晚年的《新約神學》第一卷《耶穌的宣講》總結了一生對歷史耶穌的信心，主張福音書傳統的核心確能上溯至耶穌本人。"
+      ],
+      "sourceNote": "耶利米亞斯卒於 1979 年，著作仍在版權期內，採德文原文逐段對照＋自譯繁中策略。",
+      "timeline": [
+        {
+          "year": "1900",
+          "text": "生於德國德勒斯登，童年隨父旅居耶路撒冷"
+        },
+        {
+          "year": "1923",
+          "text": "《耶穌時代的耶路撒冷》陸續成書，重建第二聖殿社會史"
+        },
+        {
+          "year": "1935",
+          "text": "《耶穌的聖餐言說》以語文學追索最後晚餐話語原型"
+        },
+        {
+          "year": "1947",
+          "text": "代表作《耶穌的比喻》出版，成為比喻研究標竿"
+        },
+        {
+          "year": "1949",
+          "text": "任哥廷根大學新約教授，培養大批門生"
+        },
+        {
+          "year": "1971",
+          "text": "《新約神學（卷一）：耶穌的宣講》總結歷史耶穌研究"
+        },
+        {
+          "year": "1979",
+          "text": "於哥廷根逝世"
+        }
+      ],
+      "works": [
+        {
+          "title": "耶穌的比喻",
+          "titleOriginal": "Die Gleichnisse Jesu",
+          "year": "1947",
+          "yearSort": 1947,
+          "category": "耶穌的比喻",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "以傳統史剝除教會加工、還原比喻原始處境的經典"
+        },
+        {
+          "title": "耶穌時代的耶路撒冷",
+          "titleOriginal": "Jerusalem zur Zeit Jesu",
+          "year": "1962",
+          "yearSort": 1962,
+          "category": "第二聖殿猶太教",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "重建耶穌時代耶路撒冷社會經濟結構的巨著（增訂定本）"
+        },
+        {
+          "title": "耶穌的聖餐言說",
+          "titleOriginal": "Die Abendmahlsworte Jesu",
+          "year": "1949",
+          "yearSort": 1949,
+          "category": "歷史耶穌",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "以語文學追索最後晚餐話語的閃族原型"
+        },
+        {
+          "title": "新約神學（卷一）：耶穌的宣講",
+          "titleOriginal": "Neutestamentliche Theologie, Erster Teil: Die Verkündigung Jesu",
+          "year": "1971",
+          "yearSort": 1971,
+          "category": "新約神學",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "畢生歷史耶穌研究的神學總結"
+        }
+      ],
+      "era": "新約研究"
+    },
+    {
+      "slug": "kasemann",
+      "name": "恩斯特‧凱澤曼",
+      "nameEn": "Ernst Käsemann",
+      "nameOriginal": "Ernst Käsemann",
+      "lifespan": "1906–1998",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1906,
+      "discipline": "重啟歷史耶穌「新探索」，倡「啟示文學是基督教神學之母」，激進重讀羅馬書",
+      "fields": [
+        "新約研究",
+        "歷史耶穌",
+        "保羅書信",
+        "啟示文學"
+      ],
+      "portraitUrl": "",
+      "color": "emerald",
+      "emoji": "⚡",
+      "contribution": [
+        "凱澤曼是布爾特曼最傑出、也最叛逆的學生。1953 年他發表〈歷史耶穌的問題〉，一舉**重新開啟被老師封存的歷史耶穌探索（「新探索」）**：他主張若完全切斷信仰的基督與歷史的耶穌，福音就會淪為神話，故必須在批判史學的界限內追問耶穌與宣講之間的連續性。這一演講改變了戰後新約學的走向。",
+        "他另一句名言**「啟示文學是一切基督教神學之母」**，把猶太啟示思想推到理解早期基督教的中心，強調上帝稱義的宇宙性、末世性與統治權柄，深刻塑造了後續的保羅研究與「啟示式（apocalyptic）」神學路線。",
+        "在《羅馬書釋義》中，他把保羅的「上帝的義」讀為上帝在末世重奪世界主權的**能動作為**，而非僅是個人得赦的地位，對抗任何把福音馴化為教會或體制財產的傾向。凱澤曼一生帶著抵抗精神——曾因反納粹入獄、晚年公開批判教會建制——其釋經始終燃燒著神學與政治的張力。"
+      ],
+      "sourceNote": "凱澤曼卒於 1998 年，著作仍在版權期內，採德文原文逐段對照＋自譯繁中策略。",
+      "timeline": [
+        {
+          "year": "1906",
+          "text": "生於德國波昂近郊的達爾豪森（Dahlhausen）"
+        },
+        {
+          "year": "1937",
+          "text": "因牧養抗議、反對納粹而一度被蓋世太保逮捕入獄"
+        },
+        {
+          "year": "1953",
+          "text": "發表〈歷史耶穌的問題〉，開啟歷史耶穌「新探索」"
+        },
+        {
+          "year": "1960",
+          "text": "論文集《新約主題的釋經嘗試與省思》第一卷出版"
+        },
+        {
+          "year": "1964",
+          "text": "提出「啟示文學是基督教神學之母」的著名命題"
+        },
+        {
+          "year": "1973",
+          "text": "《羅馬書釋義》出版，激進重讀「上帝的義」"
+        },
+        {
+          "year": "1998",
+          "text": "於杜賓根逝世"
+        }
+      ],
+      "works": [
+        {
+          "title": "歷史耶穌的問題",
+          "titleOriginal": "Das Problem des historischen Jesus",
+          "year": "1954",
+          "yearSort": 1954,
+          "category": "歷史耶穌",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "重啟「新探索」的劃時代演講（收於論文集）"
+        },
+        {
+          "title": "新約主題的釋經嘗試與省思",
+          "titleOriginal": "Exegetische Versuche und Besinnungen",
+          "year": "1960",
+          "yearSort": 1960,
+          "category": "新約神學",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "含多篇奠基性論文的兩卷論文集（英譯《當代新約課題》）"
+        },
+        {
+          "title": "羅馬書釋義",
+          "titleOriginal": "An die Römer",
+          "year": "1973",
+          "yearSort": 1973,
+          "category": "保羅書信",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "以啟示式進路激進重讀保羅「上帝的義」的權威註釋"
+        },
+        {
+          "title": "新約作為正典",
+          "titleOriginal": "Das Neue Testament als Kanon",
+          "year": "1970",
+          "yearSort": 1970,
+          "category": "正典與新約導論",
+          "languages": [
+            "de"
+          ],
+          "status": "copyright",
+          "note": "他主編的正典問題論文集，含其著名的正典批判立場"
+        }
+      ],
+      "era": "新約研究"
+    },
+    {
+      "slug": "metzger",
+      "name": "布魯斯‧梅茨格",
+      "nameEn": "Bruce M. Metzger",
+      "lifespan": "1914–2007",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1914,
+      "discipline": "二十世紀新約經文鑑別學泰斗，奠定希臘文新約標準版與正典形成研究",
+      "fields": [
+        "新約研究",
+        "經文鑑別學",
+        "新約正典",
+        "古代譯本"
+      ],
+      "portraitUrl": "",
+      "color": "violet",
+      "emoji": "🔍",
+      "contribution": [
+        "梅茨格是二十世紀**新約經文鑑別學（textual criticism）無可爭議的權威**。他長期主持聯合聖經公會《希臘文新約》委員會，其《希臘文新約經文評註》逐節說明委員會取捨異文的理由，成為全球神學生與譯經者案頭必備的工具書，直接塑造了今日通行的新約經文形態。",
+        "他的《新約經文：傳遞、訛誤與校勘》是這門學科最標準的入門教科書，數十年來一版再版（後與 Bart Ehrman 合修），系統梳理抄本傳統、抄寫致誤類型與校勘方法，把繁複的鈔本學整理成可教可學的體系。",
+        "在正典研究上，《新約正典的形成》廣泛考察早期教會如何在幾個世紀間逐步確認新約二十七卷的權威，兼顧歷史、文獻與神學。此外他的《新約古代譯本》開拓了對敘利亞文、科普特文、拉丁文等早期譯本的比較研究，全面奠定了現代新約文獻學的基礎。"
+      ],
+      "sourceNote": "梅茨格卒於 2007 年，著作仍在版權期內，採原文逐段對照＋自譯繁中策略。",
+      "timeline": [
+        {
+          "year": "1914",
+          "text": "生於美國賓州的密德爾敦（Middletown）"
+        },
+        {
+          "year": "1938",
+          "text": "起任教普林斯頓神學院，執教逾半世紀"
+        },
+        {
+          "year": "1964",
+          "text": "《新約經文：傳遞、訛誤與校勘》成為標準教科書"
+        },
+        {
+          "year": "1971",
+          "text": "《希臘文新約經文評註》出版，影響全球譯經"
+        },
+        {
+          "year": "1977",
+          "text": "《新約古代譯本》系統研究早期譯本傳統"
+        },
+        {
+          "year": "1987",
+          "text": "《新約正典的形成》問世"
+        },
+        {
+          "year": "1990",
+          "text": "主持《新標準修訂版》（NRSV）聖經翻譯委員會"
+        },
+        {
+          "year": "2007",
+          "text": "於美國普林斯頓逝世"
+        }
+      ],
+      "works": [
+        {
+          "title": "新約經文：傳遞、訛誤與校勘",
+          "titleOriginal": "The Text of the New Testament: Its Transmission, Corruption, and Restoration",
+          "year": "1964",
+          "yearSort": 1964,
+          "category": "經文鑑別學",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "新約經文鑑別學最通行的標準教科書"
+        },
+        {
+          "title": "希臘文新約經文評註",
+          "titleOriginal": "A Textual Commentary on the Greek New Testament",
+          "year": "1971",
+          "yearSort": 1971,
+          "category": "經文鑑別學",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "逐節說明 UBS 希臘文新約異文取捨的權威指南"
+        },
+        {
+          "title": "新約古代譯本：起源、傳遞與限制",
+          "titleOriginal": "The Early Versions of the New Testament: Their Origin, Transmission, and Limitations",
+          "year": "1977",
+          "yearSort": 1977,
+          "category": "古代譯本",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "開拓敘利亞、科普特、拉丁等早期譯本的比較研究"
+        },
+        {
+          "title": "新約正典的形成：起源、發展與意義",
+          "titleOriginal": "The Canon of the New Testament: Its Origin, Development, and Significance",
+          "year": "1987",
+          "yearSort": 1987,
+          "category": "新約正典",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "考察新約二十七卷正典逐步確立的歷程"
+        }
+      ],
+      "era": "新約研究"
+    },
+    {
+      "slug": "hengel",
+      "name": "馬丁‧亨格爾",
+      "nameEn": "Martin Hengel",
+      "nameOriginal": "Martin Hengel",
+      "lifespan": "1926–2009",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1926,
+      "discipline": "打破猶太／希臘二分，論證早期高基督論在最初數十年即已成形",
+      "fields": [
+        "新約研究",
+        "第二聖殿猶太教",
+        "早期基督論",
+        "希臘化時代"
+      ],
+      "portraitUrl": "",
+      "color": "sky",
+      "emoji": "🏛️",
+      "contribution": [
+        "亨格爾以恢弘的歷史學識**瓦解了「巴勒斯坦猶太教 vs. 希臘化猶太教」的傳統二分法**。在里程碑之作《猶太教與希臘主義》中，他論證早在耶穌之前，巴勒斯坦本身就已深度希臘化，因此不能再用「純粹閃族」與「後起希臘化」的階段來解釋基督教思想的演變。這一結論重寫了新約背景研究的地圖。",
+        "他最具爭議也最有影響力的主張是**早期高基督論的「爆炸性」形成**：在《神的兒子》等著作中，他論證把耶穌尊為神、置於敬拜核心的信仰，並非數世紀希臘化演化的產物，而是在復活後最初二十年、於猶太一神信仰內部就已迅速確立。這一路線深刻啟發了 Bauckham、Hurtado 等後起的高基督論研究。",
+        "亨格爾另著有《奮銳黨》等第二聖殿政治宗教史研究，並終生強調福音書並非匿名民間傳說的沉積，而與具名的早期見證有紮實的歷史連繫，是二十世紀後期德語新約學最博學的代表之一。"
+      ],
+      "sourceNote": "亨格爾卒於 2009 年，著作仍在版權期內，採德文原文逐段對照＋自譯繁中策略。",
+      "timeline": [
+        {
+          "year": "1926",
+          "text": "生於德國羅伊特林根（Reutlingen）"
+        },
+        {
+          "year": "1961",
+          "text": "《奮銳黨》研究第二聖殿晚期的猶太反抗運動"
+        },
+        {
+          "year": "1968",
+          "text": "起任杜賓根大學新約與古猶太教教授"
+        },
+        {
+          "year": "1969",
+          "text": "《猶太教與希臘主義》出版，打破猶太／希臘二分"
+        },
+        {
+          "year": "1975",
+          "text": "《神的兒子》論證早期高基督論的迅速形成"
+        },
+        {
+          "year": "1996",
+          "text": "與 Anna Maria Schwemer 合著保羅早期生平研究"
+        },
+        {
+          "year": "2009",
+          "text": "於杜賓根逝世"
+        }
+      ],
+      "works": [
+        {
+          "title": "猶太教與希臘主義",
+          "titleOriginal": "Judentum und Hellenismus",
+          "year": "1969",
+          "yearSort": 1969,
+          "category": "第二聖殿猶太教",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "論證巴勒斯坦本身早已希臘化、瓦解傳統二分的巨著"
+        },
+        {
+          "title": "神的兒子：基督論的興起與希臘化宗教史",
+          "titleOriginal": "Der Sohn Gottes",
+          "year": "1975",
+          "yearSort": 1975,
+          "category": "早期基督論",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "主張高基督論在復活後最初數十年即已爆炸性成形"
+        },
+        {
+          "title": "奮銳黨",
+          "titleOriginal": "Die Zeloten",
+          "year": "1961",
+          "yearSort": 1961,
+          "category": "第二聖殿猶太教",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "研究希律至第一次猶太戰爭間的猶太反抗運動"
+        },
+        {
+          "title": "十字架上的受難",
+          "titleOriginal": "Crucifixion in the Ancient World and the Folly of the Message of the Cross",
+          "year": "1977",
+          "yearSort": 1977,
+          "category": "早期基督論",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "考察古代世界釘十字架之酷刑與十架信息的顛覆性"
+        }
+      ],
+      "era": "新約研究"
+    },
+    {
+      "slug": "brown",
+      "name": "雷蒙‧布朗",
+      "nameEn": "Raymond E. Brown",
+      "lifespan": "1928–1998",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1928,
+      "discipline": "天主教史學釋經典範，約翰著作與嬰孩／受難敘事研究的集大成者",
+      "fields": [
+        "新約研究",
+        "約翰著作",
+        "歷史耶穌",
+        "新約導論"
+      ],
+      "portraitUrl": "",
+      "color": "indigo",
+      "emoji": "✝️",
+      "contribution": [
+        "布朗是二十世紀後期**天主教史學批判釋經最具代表性的巨匠**。在梵二之後，他以嚴謹的歷史批判方法治學卻不失教會信仰立場，示範了天主教學者如何在現代聖經學裡取得世界級的學術聲望，其著作跨越宗派、被新教與天主教學界共同奉為標準參考。",
+        "他在約翰研究上的成就無人能出其右：兩卷本《約翰福音》（Anchor Bible）是這卷書的權威註釋，《蒙愛門徒的群體》則據福音書與書信重建了約翰社群的歷史與分裂。其兩部千頁鉅著《彌賽亞的誕生》與《彌賽亞的死亡》，分別窮盡地考察了嬰孩敘事與受難敘事的每一節經文，成為該領域無法繞過的百科全書。",
+        "他晚年的《新約導論》以平實而全面的筆法綜覽二十七卷書的作者、年代、處境與神學，長年高踞神學院教材之列，讓一整代學生透過他認識新約。"
+      ],
+      "sourceNote": "布朗卒於 1998 年，著作仍在版權期內，採原文逐段對照＋自譯繁中策略。",
+      "timeline": [
+        {
+          "year": "1928",
+          "text": "生於美國紐約市，後入蘇爾比斯會（Sulpician）為神父"
+        },
+        {
+          "year": "1966",
+          "text": "《約翰福音（一至十二章）》Anchor Bible 註釋出版"
+        },
+        {
+          "year": "1971",
+          "text": "起任紐約協和神學院教授，成首位天主教常任教授之一"
+        },
+        {
+          "year": "1977",
+          "text": "《彌賽亞的誕生》出版，窮究嬰孩敘事"
+        },
+        {
+          "year": "1979",
+          "text": "《蒙愛門徒的群體》重建約翰社群歷史"
+        },
+        {
+          "year": "1994",
+          "text": "兩卷本《彌賽亞的死亡》問世"
+        },
+        {
+          "year": "1997",
+          "text": "《新約導論》成為神學院標準教材"
+        },
+        {
+          "year": "1998",
+          "text": "於美國加州逝世"
+        }
+      ],
+      "works": [
+        {
+          "title": "約翰福音",
+          "titleOriginal": "The Gospel According to John (Anchor Bible)",
+          "year": "1966",
+          "yearSort": 1966,
+          "category": "約翰著作",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "兩卷本 Anchor Bible 註釋，約翰福音的權威參考"
+        },
+        {
+          "title": "彌賽亞的誕生",
+          "titleOriginal": "The Birth of the Messiah",
+          "year": "1977",
+          "yearSort": 1977,
+          "category": "歷史耶穌",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "窮究馬太、路加嬰孩敘事的鉅著"
+        },
+        {
+          "title": "蒙愛門徒的群體",
+          "titleOriginal": "The Community of the Beloved Disciple",
+          "year": "1979",
+          "yearSort": 1979,
+          "category": "約翰著作",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "據約翰文獻重建其社群的歷史與分裂"
+        },
+        {
+          "title": "彌賽亞的死亡",
+          "titleOriginal": "The Death of the Messiah",
+          "year": "1994",
+          "yearSort": 1994,
+          "category": "歷史耶穌",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "逐節考察四福音受難敘事的兩卷本百科全書"
+        },
+        {
+          "title": "新約導論",
+          "titleOriginal": "An Introduction to the New Testament",
+          "year": "1997",
+          "yearSort": 1997,
+          "category": "新約導論",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "長年通用的新約各卷綜覽教材"
+        }
+      ],
+      "era": "新約研究"
+    },
+    {
+      "slug": "sanders",
+      "name": "桑德斯",
+      "nameEn": "E. P. Sanders",
+      "nameOriginal": "Ed Parish Sanders",
+      "lifespan": "1937–2022",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1937,
+      "discipline": "以「聖約律法主義」重估第二聖殿猶太教，開啟「保羅新觀」的奠基者",
+      "fields": [
+        "新約研究",
+        "保羅書信",
+        "第二聖殿猶太教",
+        "歷史耶穌"
+      ],
+      "portraitUrl": "",
+      "color": "cyan",
+      "emoji": "🔄",
+      "contribution": [
+        "桑德斯是**「保羅新觀（New Perspective on Paul）」的奠基之父**。1977 年的《保羅與巴勒斯坦猶太教》徹底翻轉了長久以來的成見：他透過大量拉比與第二聖殿文獻論證，當時的猶太教並非一套靠功德賺取救恩的「律法主義」，而是一種**「聖約律法主義（covenantal nomism）」**——人因上帝恩典之約而入救恩，守律法是回應恩典、留在約中的方式，而非賺取救恩的手段。",
+        "這一重估連帶改寫了對保羅的理解：若猶太教本非功德宗教，則保羅反對的「律法之工」就不能簡單讀為反對靠行為稱義。桑德斯主張保羅是**「從解答回推困境」**——先確信基督是救恩，才回頭斷定律法有所不足，其思想核心是「參與式的末世論」而非路德式的因信稱義。此說激發了 Dunn、Wright 等人的後續發展，也引來激烈爭辯。",
+        "他另著《耶穌與猶太教》《耶穌的歷史面貌》，堅持把耶穌牢牢放回第二聖殿猶太教的世界來理解，是二十世紀後期歷史耶穌與保羅研究的關鍵轉折人物。"
+      ],
+      "sourceNote": "桑德斯卒於 2022 年，著作仍在版權期內，採原文逐段對照＋自譯繁中策略。",
+      "timeline": [
+        {
+          "year": "1937",
+          "text": "生於美國德州的格蘭德賽（Grand Saline）"
+        },
+        {
+          "year": "1977",
+          "text": "《保羅與巴勒斯坦猶太教》出版，提出聖約律法主義"
+        },
+        {
+          "year": "1983",
+          "text": "《保羅、律法與猶太民族》進一步闡述其保羅觀"
+        },
+        {
+          "year": "1985",
+          "text": "《耶穌與猶太教》把耶穌放回猶太脈絡"
+        },
+        {
+          "year": "1990",
+          "text": "起任美國杜克大學宗教學講座教授"
+        },
+        {
+          "year": "1993",
+          "text": "《耶穌的歷史面貌》為大眾綜述其歷史耶穌研究"
+        },
+        {
+          "year": "2022",
+          "text": "於美國北卡羅來納州逝世"
+        }
+      ],
+      "works": [
+        {
+          "title": "保羅與巴勒斯坦猶太教",
+          "titleOriginal": "Paul and Palestinian Judaism",
+          "year": "1977",
+          "yearSort": 1977,
+          "category": "保羅研究",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "提出聖約律法主義、開啟保羅新觀的奠基之作"
+        },
+        {
+          "title": "保羅、律法與猶太民族",
+          "titleOriginal": "Paul, the Law, and the Jewish People",
+          "year": "1983",
+          "yearSort": 1983,
+          "category": "保羅研究",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "細部闡述保羅與律法關係的續作"
+        },
+        {
+          "title": "耶穌與猶太教",
+          "titleOriginal": "Jesus and Judaism",
+          "year": "1985",
+          "yearSort": 1985,
+          "category": "歷史耶穌",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "以聖殿行動為樞紐、把耶穌置於第二聖殿猶太教"
+        },
+        {
+          "title": "耶穌的歷史面貌",
+          "titleOriginal": "The Historical Figure of Jesus",
+          "year": "1993",
+          "yearSort": 1993,
+          "category": "歷史耶穌",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "面向大眾的歷史耶穌研究綜述"
+        }
+      ],
+      "era": "新約研究"
+    },
+    {
+      "slug": "levine",
+      "name": "艾米-吉爾‧萊文",
+      "nameEn": "Amy-Jill Levine",
+      "lifespan": "1956–",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1956,
+      "discipline": "猶太裔女性學者，堅持在第一世紀猶太脈絡中重讀耶穌、破除反猶讀經",
+      "fields": [
+        "新約研究",
+        "歷史耶穌",
+        "耶穌的比喻",
+        "猶太—基督關係"
+      ],
+      "portraitUrl": "",
+      "color": "orange",
+      "emoji": "🕎",
+      "contribution": [
+        "萊文是當代最具公共影響力的新約學者之一，也是**首位在天主教宗座聖經學院任教的猶太裔女性學者**。作為一名正統派猶太教徒卻專攻新約，她獨特的位置讓她能敏銳指出：基督教講壇與學術裡長期潛藏的**「反猶讀經」**——為了抬高耶穌而把第一世紀猶太教矮化為律法主義、父權與僵化的宗教。",
+        "在暢銷書《被誤解的猶太人耶穌》中，她堅持**耶穌是猶太人、活在猶太世界、講猶太人的話**，唯有把祂還原到第二聖殿猶太教的內部爭論，才能真正理解福音；把祂當成反對「猶太教」的人，既是壞歷史也是危險的神學。她並長期投入猶太—基督對話，致力於拆解兩千年的偏見。",
+        "《耶穌的短篇小說》以猶太釋經傳統重讀耶穌的比喻，恢復其原有的挑釁與幽默；她主編的《猶太註解版新約》更是劃時代之作，首度由猶太學者群為整部新約提供註釋，成為理解新約猶太背景的標準參考。"
+      ],
+      "sourceNote": "萊文為在世學者，著作全數在版權期內，採原文逐段對照＋自譯繁中策略。",
+      "timeline": [
+        {
+          "year": "1956",
+          "text": "生於美國麻州的北達特茅斯（North Dartmouth）"
+        },
+        {
+          "year": "1995",
+          "text": "任范德堡大學神學院新約與猶太研究教授"
+        },
+        {
+          "year": "2006",
+          "text": "《被誤解的猶太人耶穌》出版並廣受迴響"
+        },
+        {
+          "year": "2011",
+          "text": "主編《猶太註解版新約》，開創猶太學者集體註釋新約"
+        },
+        {
+          "year": "2014",
+          "text": "《耶穌的短篇小說》以猶太釋經重讀比喻"
+        },
+        {
+          "year": "2021",
+          "text": "成為首位在天主教宗座聖經學院任教的猶太女性學者"
+        }
+      ],
+      "works": [
+        {
+          "title": "被誤解的猶太人耶穌：教會與猶太耶穌的醜聞",
+          "titleOriginal": "The Misunderstood Jew: The Church and the Scandal of the Jewish Jesus",
+          "year": "2006",
+          "yearSort": 2006,
+          "category": "歷史耶穌",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "力主把耶穌還原為第一世紀猶太人、破除反猶讀經"
+        },
+        {
+          "title": "猶太註解版新約",
+          "titleOriginal": "The Jewish Annotated New Testament",
+          "year": "2011",
+          "yearSort": 2011,
+          "category": "新約導論",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "首部由猶太學者群集體註釋整部新約的劃時代作品（主編）"
+        },
+        {
+          "title": "耶穌的短篇小說：一位爭議拉比的謎樣比喻",
+          "titleOriginal": "Short Stories by Jesus: The Enigmatic Parables of a Controversial Rabbi",
+          "year": "2014",
+          "yearSort": 2014,
+          "category": "耶穌的比喻",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "以猶太釋經傳統恢復耶穌比喻的挑釁與幽默"
+        },
+        {
+          "title": "進入耶穌的受難",
+          "titleOriginal": "Entering the Passion of Jesus",
+          "year": "2018",
+          "yearSort": 2018,
+          "category": "歷史耶穌",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "面向大眾、逐日默想受難週的猶太脈絡讀本"
+        }
+      ],
+      "era": "新約研究"
+    },
+    {
+      "slug": "dunn",
+      "name": "詹姆斯‧鄧恩",
+      "nameEn": "James D. G. Dunn",
+      "lifespan": "1939–2020",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1939,
+      "discipline": "命名並推展「保羅新觀」，追溯基督論之形成與最早期口傳傳統",
+      "fields": [
+        "新約研究",
+        "保羅書信",
+        "早期基督論",
+        "歷史耶穌"
+      ],
+      "portraitUrl": "",
+      "color": "stone",
+      "emoji": "📖",
+      "contribution": [
+        "鄧恩承接桑德斯的洞見，**於 1983 年一場講座中正式鑄造「保羅新觀（The New Perspective on Paul）」一詞**，並把它發展成一套完整的釋經進路。他主張保羅所反對的「律法之工」，重點在於割禮、食物律、守節期這些**標記猶太身分、把外邦人排除在外的「界限標誌」**，而非泛指一切善行；因信稱義的核心議題因此是外邦人如何平等進入上帝子民，而非個人良心的赦罪焦慮。",
+        "在《形成中的基督論》裡，他細膩追問新約各層傳統如何一步步表達耶穌的身分，主張「道成肉身」的明確基督論主要成形於約翰福音，引發長久的學術論戰。晚年三卷本《形成中的基督教》——尤以第一卷《憶念耶穌》——則以「口傳傳統」模型重建福音書背後的傳講過程，強調傳統既穩定又靈活的特性。",
+        "他的《使徒保羅的神學》是一部厚重而系統的保羅神學總結，與《耶穌與聖靈》一同奠定了他在保羅研究與早期基督教起源領域的一流地位。"
+      ],
+      "sourceNote": "鄧恩卒於 2020 年，著作仍在版權期內，採原文逐段對照＋自譯繁中策略。",
+      "timeline": [
+        {
+          "year": "1939",
+          "text": "生於蘇格蘭的伯明罕（Birmingham），成長於格拉斯哥"
+        },
+        {
+          "year": "1975",
+          "text": "《耶穌與聖靈》研究最早期基督徒的宗教經驗"
+        },
+        {
+          "year": "1980",
+          "text": "《形成中的基督論》探討道成肉身觀念的成形"
+        },
+        {
+          "year": "1982",
+          "text": "曼森紀念講座正式提出「保羅新觀」一詞"
+        },
+        {
+          "year": "1990",
+          "text": "起任杜倫大學萊特富特神學講座教授"
+        },
+        {
+          "year": "1998",
+          "text": "《使徒保羅的神學》出版"
+        },
+        {
+          "year": "2003",
+          "text": "《憶念耶穌》以口傳傳統模型重建福音書源頭"
+        },
+        {
+          "year": "2020",
+          "text": "逝世於英格蘭"
+        }
+      ],
+      "works": [
+        {
+          "title": "耶穌與聖靈",
+          "titleOriginal": "Jesus and the Spirit",
+          "year": "1975",
+          "yearSort": 1975,
+          "category": "歷史耶穌",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "研究耶穌與最早期基督徒的宗教與靈恩經驗"
+        },
+        {
+          "title": "形成中的基督論",
+          "titleOriginal": "Christology in the Making",
+          "year": "1980",
+          "yearSort": 1980,
+          "category": "早期基督論",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "追問道成肉身基督論如何在新約各層傳統中成形"
+        },
+        {
+          "title": "使徒保羅的神學",
+          "titleOriginal": "The Theology of Paul the Apostle",
+          "year": "1998",
+          "yearSort": 1998,
+          "category": "保羅書信",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "以保羅新觀為底、系統整合保羅思想的鉅著"
+        },
+        {
+          "title": "憶念耶穌",
+          "titleOriginal": "Jesus Remembered",
+          "year": "2003",
+          "yearSort": 2003,
+          "category": "歷史耶穌",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "《形成中的基督教》卷一，以口傳傳統重建福音書源頭"
+        }
+      ],
+      "era": "新約研究"
+    },
+    {
+      "slug": "hays",
+      "name": "理查‧海斯",
+      "nameEn": "Richard B. Hays",
+      "lifespan": "1948–2025",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1948,
+      "discipline": "以文學進路揭示新約對舊約的「迴響」，重塑保羅信心與新約倫理研究",
+      "fields": [
+        "新約研究",
+        "保羅書信",
+        "經文互涉",
+        "新約倫理學"
+      ],
+      "portraitUrl": "",
+      "color": "purple",
+      "emoji": "🎼",
+      "contribution": [
+        "海斯把**文學批評的「經文互涉（intertextuality）」正式帶進新約研究**。在開創性的《保羅書信中舊約的迴響》中，他論證保羅不是零星地引用舊約字句，而是以整段以色列聖經為**共鳴箱**，藉著隱微的迴響、暗示與轉調，讓讀者在字面之下聽見更深的敘事。他提出的一套「迴響檢驗準則」，成為此後經文互涉研究的方法論標竿。",
+        "在保羅研究上，他的博士論文《耶穌基督的信實》重新點燃了 **pistis Christou** 之爭：他主張這片語應譯為「基督的信實（主格）」而非「對基督的信心（受格）」，把救恩的重心從人的信仰行動移向基督自己忠信的順服，深刻影響了後續的保羅神學辯論。",
+        "《新約的道德視野》則以敘事、群體、十字架與新造為框架，建立了一套整全的新約倫理學方法，被《今日基督教》選為二十世紀最重要的百部基督教著作之一。晚年他把迴響研究延伸到福音書（《福音書中舊約的迴響》），論證四福音同樣以舊約敘事「逆讀」基督的身分。"
+      ],
+      "sourceNote": "海斯卒於 2025 年，著作仍在版權期內，採原文逐段對照＋自譯繁中策略。",
+      "timeline": [
+        {
+          "year": "1948",
+          "text": "生於美國奧克拉荷馬市"
+        },
+        {
+          "year": "1983",
+          "text": "《耶穌基督的信實》重啟 pistis Christou 之爭"
+        },
+        {
+          "year": "1989",
+          "text": "《保羅書信中舊約的迴響》開創新約經文互涉研究"
+        },
+        {
+          "year": "1991",
+          "text": "起任教杜克神學院，後任新約講座教授與院長"
+        },
+        {
+          "year": "1996",
+          "text": "《新約的道德視野》出版，建立新約倫理學框架"
+        },
+        {
+          "year": "2016",
+          "text": "《福音書中舊約的迴響》延伸其迴響進路"
+        },
+        {
+          "year": "2025",
+          "text": "於美國田納西州納許維爾逝世"
+        }
+      ],
+      "works": [
+        {
+          "title": "耶穌基督的信實",
+          "titleOriginal": "The Faith of Jesus Christ",
+          "year": "1983",
+          "yearSort": 1983,
+          "category": "保羅書信",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "主張 pistis Christou 應讀為「基督的信實」的博士論著"
+        },
+        {
+          "title": "保羅書信中舊約的迴響",
+          "titleOriginal": "Echoes of Scripture in the Letters of Paul",
+          "year": "1989",
+          "yearSort": 1989,
+          "category": "經文互涉",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "開創新約經文互涉研究、提出迴響檢驗準則的名著"
+        },
+        {
+          "title": "新約的道德視野",
+          "titleOriginal": "The Moral Vision of the New Testament",
+          "year": "1996",
+          "yearSort": 1996,
+          "category": "新約倫理學",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "以群體、十字架、新造為框架的整全新約倫理學"
+        },
+        {
+          "title": "福音書中舊約的迴響",
+          "titleOriginal": "Echoes of Scripture in the Gospels",
+          "year": "2016",
+          "yearSort": 2016,
+          "category": "經文互涉",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "論證四福音以舊約敘事「逆讀」基督身分"
+        }
+      ],
+      "era": "新約研究"
+    },
+    {
+      "slug": "wright",
+      "name": "湯姆‧賴特",
+      "nameEn": "N. T. Wright",
+      "nameOriginal": "Nicholas Thomas Wright",
+      "lifespan": "1948–",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1948,
+      "discipline": "以宏大敘事重構基督教起源，論復活的歷史性與保羅的聖約神學",
+      "fields": [
+        "新約研究",
+        "保羅書信",
+        "歷史耶穌",
+        "復活與末世論"
+      ],
+      "portraitUrl": "",
+      "color": "teal",
+      "emoji": "🌅",
+      "contribution": [
+        "賴特是當代英語世界最多產、影響力最廣的新約學者兼公共神學家。他的畢生工程是六部曲式的巨著系列**《基督教起源與神的問題》**，企圖以一套「批判實在論」的世界觀分析，把第一世紀猶太教、耶穌、復活與保羅編織成一個連貫的歷史—神學敘事：以色列的**「被擄與歸回」故事**在基督裡達到高潮，而基督徒是這齣宇宙劇的續篇。",
+        "在《神的兒子的復活》中，他以七百頁的歷史論證主張：唯有耶穌肉身復活這一真實事件，才能充分解釋早期教會信仰的爆發與形態；復活不是隱喻，而是新創造的起點。此書使他成為當代最強力的復活歷史性辯護者。",
+        "作為「保羅新觀」的第三位主將，他在兩卷本《保羅與神的忠信》中把保羅思想重讀為對**以色列之神信實（covenant faithfulness）**的宣告，主張「神的義」即神信守聖約、藉基督與聖靈更新受造界。他同時以「賴特主教」之名為大眾寫作大量普及著作，橋接學術與教會，其觀點也持續引來福音派內部關於稱義的激辯。"
+      ],
+      "sourceNote": "賴特為在世學者，著作全數在版權期內，採原文逐段對照＋自譯繁中策略。",
+      "timeline": [
+        {
+          "year": "1948",
+          "text": "生於英格蘭諾森伯蘭的莫佩斯（Morpeth）"
+        },
+        {
+          "year": "1992",
+          "text": "《新約與神的子民》為系列開卷、鋪陳方法論"
+        },
+        {
+          "year": "1996",
+          "text": "《耶穌與神的得勝》重構歷史耶穌"
+        },
+        {
+          "year": "2003",
+          "text": "《神的兒子的復活》辯護復活的歷史性"
+        },
+        {
+          "year": "2003",
+          "text": "獲任杜倫教區主教（至 2010 年）"
+        },
+        {
+          "year": "2013",
+          "text": "兩卷本《保羅與神的忠信》出版"
+        },
+        {
+          "year": "2019",
+          "text": "任牛津大學威克利夫學院新約與早期基督教研究教授"
+        }
+      ],
+      "works": [
+        {
+          "title": "新約與神的子民",
+          "titleOriginal": "The New Testament and the People of God",
+          "year": "1992",
+          "yearSort": 1992,
+          "category": "新約導論",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "《基督教起源與神的問題》系列卷一，奠定方法論"
+        },
+        {
+          "title": "耶穌與神的得勝",
+          "titleOriginal": "Jesus and the Victory of God",
+          "year": "1996",
+          "yearSort": 1996,
+          "category": "歷史耶穌",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "系列卷二，以被擄歸回敘事重構歷史耶穌"
+        },
+        {
+          "title": "神的兒子的復活",
+          "titleOriginal": "The Resurrection of the Son of God",
+          "year": "2003",
+          "yearSort": 2003,
+          "category": "復活與末世論",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "系列卷三，七百頁論證耶穌肉身復活的歷史性"
+        },
+        {
+          "title": "保羅與神的忠信",
+          "titleOriginal": "Paul and the Faithfulness of God",
+          "year": "2013",
+          "yearSort": 2013,
+          "category": "保羅書信",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "系列卷四（兩卷本），以聖約信實重讀保羅神學"
+        }
+      ],
+      "era": "新約研究"
+    },
+    {
+      "slug": "bauckham",
+      "name": "理查‧波卡姆",
+      "nameEn": "Richard Bauckham",
+      "lifespan": "1946–",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1946,
+      "discipline": "論福音書為目擊者見證，倡「神聖身分基督論」與啟示錄的政治神學",
+      "fields": [
+        "新約研究",
+        "歷史耶穌",
+        "早期基督論",
+        "啟示錄"
+      ],
+      "portraitUrl": "",
+      "color": "amber",
+      "emoji": "👁️",
+      "contribution": [
+        "波卡姆最具震撼力的貢獻是《耶穌與目擊者》一書，直接挑戰百年來的**形式批判共識**。他主張福音書並非匿名群體歷經數十年層層加工的「傳統沉積物」，而是**緊密奠基於具名目擊者的親身見證**——福音書中反覆出現的人名正是這些見證來源的標記，符類福音成書時許多目擊者仍在世並持續擔保傳統。此書重新把「見證」立為福音書歷史可靠性的核心範疇。",
+        "在基督論上，他提出**「神聖身分基督論（Christology of divine identity）」**：早期基督徒把耶穌納入以色列獨一真神的「身分」——同享創造、同享統治、同受敬拜——而這一切都發生在嚴格的猶太一神信仰**內部**，而非違背它。這一構想（見《神被釘十字架》《以色列的神耶穌》）與亨格爾、Hurtado 一同奠定了「早期高基督論」學派。",
+        "他同時是頂尖的啟示錄詮釋者，《啟示錄神學》與《預言的高潮》把啟示錄讀為對羅馬帝國經濟與政治暴力的先知式抗議，展現了新約末世文本的社會批判鋒芒。"
+      ],
+      "sourceNote": "波卡姆為在世學者，著作全數在版權期內，採原文逐段對照＋自譯繁中策略。",
+      "timeline": [
+        {
+          "year": "1946",
+          "text": "生於英格蘭倫敦"
+        },
+        {
+          "year": "1993",
+          "text": "《啟示錄神學》與《預言的高潮》出版"
+        },
+        {
+          "year": "1998",
+          "text": "《神被釘十字架》提出神聖身分基督論"
+        },
+        {
+          "year": "1992",
+          "text": "起任聖安德魯斯大學新約研究教授"
+        },
+        {
+          "year": "2006",
+          "text": "《耶穌與目擊者》挑戰形式批判、震動學界"
+        },
+        {
+          "year": "2008",
+          "text": "《以色列的神耶穌》結集其神聖身分基督論"
+        },
+        {
+          "year": "2007",
+          "text": "《耶穌與目擊者》榮獲麥可‧拉姆西神學獎"
+        }
+      ],
+      "works": [
+        {
+          "title": "啟示錄神學",
+          "titleOriginal": "The Theology of the Book of Revelation",
+          "year": "1993",
+          "yearSort": 1993,
+          "category": "啟示錄",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "把啟示錄讀為對羅馬帝國暴力之先知抗議的精要之作"
+        },
+        {
+          "title": "神被釘十字架：一神信仰與新約中的基督論",
+          "titleOriginal": "God Crucified: Monotheism and Christology in the New Testament",
+          "year": "1998",
+          "yearSort": 1998,
+          "category": "早期基督論",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "提出神聖身分基督論、後擴充為《以色列的神耶穌》"
+        },
+        {
+          "title": "耶穌與目擊者：福音書作為目擊者見證",
+          "titleOriginal": "Jesus and the Eyewitnesses: The Gospels as Eyewitness Testimony",
+          "year": "2006",
+          "yearSort": 2006,
+          "category": "歷史耶穌",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "挑戰形式批判、主張福音書奠基於具名目擊者的名著"
+        },
+        {
+          "title": "以色列的神耶穌",
+          "titleOriginal": "Jesus and the God of Israel",
+          "year": "2008",
+          "yearSort": 2008,
+          "category": "早期基督論",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "神聖身分基督論的論文結集與擴充"
+        }
+      ],
+      "era": "新約研究"
+    },
+    {
+      "slug": "wellhausen",
+      "name": "尤利烏斯‧威爾豪森",
+      "nameEn": "Julius Wellhausen",
+      "lifespan": "1844–1918",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1844,
+      "discipline": "近代五經批判集大成者，以底本假說（JEDP）重構以色列宗教史",
+      "fields": [
+        "舊約研究",
+        "五經批判",
+        "以色列史",
+        "閃族語文獻學"
+      ],
+      "portraitUrl": "",
+      "color": "amber",
+      "emoji": "📜",
+      "contribution": [
+        "威爾豪森是近代舊約學的分水嶺人物。他在《以色列史導論》中系統整合並定型了**底本假說（Documentary Hypothesis）**，主張五經由 J（雅威典）、E（伊羅興典）、D（申命記典）、P（祭司典）四個獨立文獻依 **JEDP** 先後次序編纂而成，並將祭司典判定為被擄後的晚出材料。",
+        "他的核心方法是把文獻分層與**宗教發展史**扣連：以色列宗教由自然素樸的族長時代，經先知的倫理一神教，最終發展為被擄後律法主義的祭司體制。這套「由簡入繁、由自由入律法」的演化圖式，成為十九世紀末至二十世紀前期舊約研究的主導典範。",
+        "威爾豪森的重構長期支配學界，也激起持久的反動——從考夫曼的猶太立場反駁，到奧爾布賴特學派的考古質疑，皆以與其對話為起點。無論贊成或反對，近代舊約學幾乎都是在威爾豪森畫定的問題框架中展開。"
+      ],
+      "sourceNote": "卒於 1918 年，著作屬公有領域；德文原典可自由轉錄與翻譯。",
+      "timeline": [
+        {
+          "year": "1844",
+          "text": "生於德國哈默恩（Hameln）一牧師家庭。"
+        },
+        {
+          "year": "1872",
+          "text": "任格賴夫斯瓦爾德大學（Greifswald）舊約教授。"
+        },
+        {
+          "year": "1878",
+          "text": "出版《以色列史》第一卷，後定名《以色列史導論》，確立底本假說。"
+        },
+        {
+          "year": "1882",
+          "text": "因新約神學立場與教會張力，改任哈勒大學閃族語文學教授。"
+        },
+        {
+          "year": "1892",
+          "text": "轉任馬爾堡（Marburg）大學。"
+        },
+        {
+          "year": "1894",
+          "text": "出版《以色列與猶太史》，通論以色列全史。"
+        },
+        {
+          "year": "1918",
+          "text": "卒於哥廷根（Göttingen）。"
+        }
+      ],
+      "works": [
+        {
+          "title": "六經與歷史書之組成",
+          "titleOriginal": "Die Composition des Hexateuchs und der historischen Bücher des Alten Testaments",
+          "year": "1885",
+          "yearSort": 1885,
+          "category": "五經批判",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "逐段析論六經文獻分層，底本假說的技術性論證基礎。"
+        },
+        {
+          "title": "以色列史導論",
+          "titleOriginal": "Prolegomena zur Geschichte Israels",
+          "year": "1883",
+          "yearSort": 1883,
+          "category": "五經批判",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "planned",
+          "note": "初版名《以色列史》第一卷（1878），第二版改此名；底本假說集大成之作。"
+        },
+        {
+          "title": "以色列與猶太史",
+          "titleOriginal": "Israelitische und jüdische Geschichte",
+          "year": "1894",
+          "yearSort": 1894,
+          "category": "以色列史",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "以文獻批判成果通述以色列自族長至希臘化時代的歷史。"
+        },
+        {
+          "title": "阿拉伯異教遺存",
+          "titleOriginal": "Reste arabischen Heidentums",
+          "year": "1887",
+          "yearSort": 1887,
+          "category": "閃族宗教史",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "以前伊斯蘭阿拉伯宗教為比較材料，映照古以色列宗教型態。"
+        }
+      ],
+      "era": "舊約研究"
+    },
+    {
+      "slug": "gunkel",
+      "name": "赫爾曼‧貢克爾",
+      "nameEn": "Hermann Gunkel",
+      "lifespan": "1862–1932",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1862,
+      "discipline": "形式批判奠基者，以文類（Gattung）與生活情境重讀詩篇與創世記",
+      "fields": [
+        "舊約研究",
+        "形式批判",
+        "詩篇",
+        "宗教史學派"
+      ],
+      "portraitUrl": "",
+      "color": "blue",
+      "emoji": "🎼",
+      "contribution": [
+        "貢克爾開創了舊約研究的**形式批判（Formgeschichte / form criticism）**。他不再只問文本由哪些文獻拼成，而問每段文字屬於什麼**文類（Gattung）**、產生於怎樣的**生活情境（Sitz im Leben）**——是祭儀、審判、婚禮、還是市井說唱。這把研究焦點從書面編纂推回到口傳與社群生活的源頭。",
+        "在《詩篇導論》中，他將詩篇依文類劃分為讚美詩、個人哀歌、群體哀歌、感恩詩、君王詩等，並各自繫連於聖殿祭儀場景，徹底改寫了詩篇研究。在《創世記》註釋中，他把族長敘事讀為**傳說（Sage）**，還原其民間敘事美學與宗教想像。",
+        "身為**宗教史學派（religionsgeschichtliche Schule）**的核心成員，他在《原始時代與末世的創造與混沌》中比對巴比倫創世神話與聖經，揭示古以色列並非孤立而是浸潤於古近東共同的神話世界。他的方法經其學生（如馮‧拉德、諾特）發揚，成為二十世紀傳統史研究的方法源頭。"
+      ],
+      "sourceNote": "卒於 1932 年，著作屬公有領域；德文原典可自由轉錄與翻譯。",
+      "timeline": [
+        {
+          "year": "1862",
+          "text": "生於德國施普林格（Springe）一牧師家庭。"
+        },
+        {
+          "year": "1895",
+          "text": "出版《原始時代與末世的創造與混沌》，比較巴比倫神話與聖經。"
+        },
+        {
+          "year": "1901",
+          "text": "出版《創世記》註釋，將族長敘事讀為傳說（Sage）。"
+        },
+        {
+          "year": "1907",
+          "text": "任吉森大學（Gießen）教授。"
+        },
+        {
+          "year": "1920",
+          "text": "轉任哈勒大學（Halle）。"
+        },
+        {
+          "year": "1926",
+          "text": "出版《詩篇》註釋，奠定詩篇文類研究。"
+        },
+        {
+          "year": "1932",
+          "text": "卒於哈勒；《詩篇導論》由弟子貝格里希續成（1933）。"
+        }
+      ],
+      "works": [
+        {
+          "title": "原始時代與末世的創造與混沌",
+          "titleOriginal": "Schöpfung und Chaos in Urzeit und Endzeit",
+          "year": "1895",
+          "yearSort": 1895,
+          "category": "宗教史比較",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "以巴比倫混沌神話對照聖經創造與啟示錄，宗教史學派代表作。"
+        },
+        {
+          "title": "創世記（註釋）",
+          "titleOriginal": "Genesis",
+          "year": "1901",
+          "yearSort": 1901,
+          "category": "形式批判",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "手冊註釋系列（HKAT）名著，導論確立「傳說」文類分析。"
+        },
+        {
+          "title": "詩篇（註釋）",
+          "titleOriginal": "Die Psalmen",
+          "year": "1926",
+          "yearSort": 1926,
+          "category": "詩篇／形式批判",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "逐篇形式批判註釋，依文類與祭儀情境重排詩篇。"
+        },
+        {
+          "title": "詩篇導論",
+          "titleOriginal": "Einleitung in die Psalmen",
+          "year": "1933",
+          "yearSort": 1933,
+          "category": "詩篇／形式批判",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "系統陳述詩篇文類理論，貢克爾身後由貝格里希（Begrich）完成。"
+        },
+        {
+          "title": "舊約中的童話",
+          "titleOriginal": "Das Märchen im Alten Testament",
+          "year": "1917",
+          "yearSort": 1917,
+          "category": "形式批判",
+          "languages": [
+            "de"
+          ],
+          "status": "planned",
+          "note": "析論聖經敘事中的民間童話母題與文類。"
+        }
+      ],
+      "era": "舊約研究"
+    },
+    {
+      "slug": "kaufmann",
+      "name": "耶赫茲克爾‧考夫曼",
+      "nameEn": "Yehezkel Kaufmann",
+      "nameOriginal": "יחזקאל קויפמן",
+      "lifespan": "1889–1963",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1889,
+      "discipline": "猶太立場的舊約史大家，主張一神教原生於以色列、反威爾豪森演化論",
+      "fields": [
+        "舊約研究",
+        "以色列宗教史",
+        "一神教起源",
+        "猶太聖經學"
+      ],
+      "portraitUrl": "",
+      "color": "rose",
+      "emoji": "🕎",
+      "contribution": [
+        "考夫曼是二十世紀猶太聖經學的巍峨高峰。他以八卷希伯來文巨著《以色列宗教史》，從內部正面挑戰威爾豪森的演化圖式，主張**一神教不是被擄後晚出的產物，而是以色列宗教自源頭起的原生直覺**。",
+        "他的關鍵論證在於「以色列人根本無法真正理解偶像崇拜」——聖經對異教的描繪（拜木石、視偶像為神本身）證明作者身處一個徹底一神論的觀念世界，對多神教的內在邏輯已然陌生。由此他反推：祭司典（P）並非最晚，其律法與祭儀觀念實屬被擄前的古層，威爾豪森的年代排序應被顛倒。",
+        "考夫曼徹底重估了以色列與古近東的關係：以色列宗教與異教之間不是連續演化，而是**質的斷裂**。這一「以色列例外論」既是猶太民族精神的學術辯護，也為後來反威爾豪森的各派（含奧爾布賴特學派）提供了最有力的思想武器。其英文節譯本經格林伯格（Moshe Greenberg）之手，影響遠及英語學界。"
+      ],
+      "sourceNote": "卒於 1963 年，著作仍在版權期內；以既有中／英譯本為 REFERENCE，不自譯。",
+      "timeline": [
+        {
+          "year": "1889",
+          "text": "生於烏克蘭沃倫地區（Volhynia）一猶太家庭。"
+        },
+        {
+          "year": "1918",
+          "text": "於瑞士伯恩大學取得哲學博士。"
+        },
+        {
+          "year": "1928",
+          "text": "起陸續出版《流亡與異鄉》（Golah ve-Nekhar），論猶太民族存續。"
+        },
+        {
+          "year": "1937",
+          "text": "《以色列宗教史》首卷於耶路撒冷比亞利克研究所出版。"
+        },
+        {
+          "year": "1949",
+          "text": "任希伯來大學聖經學教授。"
+        },
+        {
+          "year": "1956",
+          "text": "《以色列宗教史》八卷全部出齊。"
+        },
+        {
+          "year": "1960",
+          "text": "格林伯格英文節譯本《以色列宗教》問世。"
+        },
+        {
+          "year": "1963",
+          "text": "卒於耶路撒冷。"
+        }
+      ],
+      "works": [
+        {
+          "title": "以色列宗教史",
+          "titleOriginal": "תולדות האמונה הישראלית",
+          "year": "1937–1956",
+          "yearSort": 1937,
+          "category": "以色列宗教史",
+          "languages": [
+            "he"
+          ],
+          "status": "copyright",
+          "note": "八卷希伯來文巨著（比亞利克研究所），一神教原生論的完整論證。"
+        },
+        {
+          "title": "以色列宗教：從起源到巴比倫被擄",
+          "titleOriginal": "The Religion of Israel: From Its Beginnings to the Babylonian Exile",
+          "year": "1960",
+          "yearSort": 1960,
+          "category": "以色列宗教史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "格林伯格（Moshe Greenberg）英文節譯本，英語學界主要入口。"
+        },
+        {
+          "title": "流亡與異鄉",
+          "titleOriginal": "גולה ונכר",
+          "year": "1929–1930",
+          "yearSort": 1929,
+          "category": "猶太民族史論",
+          "languages": [
+            "he"
+          ],
+          "status": "copyright",
+          "note": "社會學式考察猶太民族在流散中存續的宗教社會條件。"
+        },
+        {
+          "title": "約書亞記（註釋）",
+          "titleOriginal": "ספר יהושע",
+          "year": "1959",
+          "yearSort": 1959,
+          "category": "歷史書註釋",
+          "languages": [
+            "he"
+          ],
+          "status": "copyright",
+          "note": "以其宗教史立場重讀征服敘事，辯護傳統較早年代。"
+        }
+      ],
+      "era": "舊約研究"
+    },
+    {
+      "slug": "eichrodt",
+      "name": "瓦爾特‧艾希羅特",
+      "nameEn": "Walther Eichrodt",
+      "lifespan": "1890–1978",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1890,
+      "discipline": "舊約神學大家，以「盟約」為統一核心系統整合全部舊約信仰",
+      "fields": [
+        "舊約神學",
+        "盟約神學",
+        "系統性聖經神學"
+      ],
+      "portraitUrl": "",
+      "color": "emerald",
+      "emoji": "🤝",
+      "contribution": [
+        "艾希羅特是二十世紀舊約神學復興的開創者。當時舊約研究幾被歷史批判與宗教史描述壟斷，他在三卷本《舊約神學》中主張：舊約有一個貫穿全體的**內在統一結構**，而其核心便是**盟約（Bund / covenant）**——上帝與以色列立約的關係，是理解一切律法、先知、祭儀、智慧文學的樞軸。",
+        "他採取一種橫剖的**系統性進路**：不按歷史發展線性敘述，而以「上帝與子民」「上帝與世界」「上帝與個人」三大主軸，將散落的材料組織成有機整體。這與後來馮‧拉德的歷時性、傳統史進路形成著名的方法論對峙，兩人之爭定義了整個世代的舊約神學討論。",
+        "艾希羅特讓「舊約神學」重新成為一門有明確對象與方法的學科，而非歷史學的附庸。他堅持舊約自身即有神學的連貫性與規範性，這一信念深刻影響了其後所有以主題或正典為框架的聖經神學嘗試。"
+      ],
+      "sourceNote": "卒於 1978 年，著作仍在版權期內；以既有中／英譯本為 REFERENCE，不自譯。",
+      "timeline": [
+        {
+          "year": "1890",
+          "text": "生於德國格明德（Gernsbach 一帶巴登地區）。"
+        },
+        {
+          "year": "1918",
+          "text": "於埃朗根大學取得神學博士。"
+        },
+        {
+          "year": "1922",
+          "text": "任瑞士巴塞爾大學舊約與宗教史教授。"
+        },
+        {
+          "year": "1933",
+          "text": "《舊約神學》第一卷出版，以盟約為核心。"
+        },
+        {
+          "year": "1935",
+          "text": "第二、三卷陸續出版，完成三卷體系。"
+        },
+        {
+          "year": "1961",
+          "text": "英譯本問世（OTL 系列），影響英語世界。"
+        },
+        {
+          "year": "1978",
+          "text": "卒於巴塞爾。"
+        }
+      ],
+      "works": [
+        {
+          "title": "舊約神學",
+          "titleOriginal": "Theologie des Alten Testaments",
+          "year": "1933–1939",
+          "yearSort": 1933,
+          "category": "舊約神學",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "三卷本，以盟約為統一核心；二十世紀舊約神學的奠基之作。"
+        },
+        {
+          "title": "以西結書（註釋）",
+          "titleOriginal": "Der Prophet Hesekiel",
+          "year": "1965",
+          "yearSort": 1965,
+          "category": "先知書註釋",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "ATD 系列註釋，神學與歷史批判並重的先知書釋讀。"
+        },
+        {
+          "title": "以色列信仰中的上帝與世界圖像",
+          "titleOriginal": "Das Gottesbild des Alten Testaments",
+          "year": "1956",
+          "yearSort": 1956,
+          "category": "舊約神學",
+          "languages": [
+            "de"
+          ],
+          "status": "copyright",
+          "note": "專題探討舊約上帝觀的內在結構與統一性。"
+        },
+        {
+          "title": "以色列宗教史的問題",
+          "titleOriginal": "Religionsgeschichte Israels",
+          "year": "1969",
+          "yearSort": 1969,
+          "category": "以色列宗教史",
+          "languages": [
+            "de"
+          ],
+          "status": "copyright",
+          "note": "晚期通論，回應宗教史與神學進路的張力。"
+        }
+      ],
+      "era": "舊約研究"
+    },
+    {
+      "slug": "albright",
+      "name": "威廉‧F‧奧爾布賴特",
+      "nameEn": "William F. Albright",
+      "lifespan": "1891–1971",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1891,
+      "discipline": "聖經考古學泰斗，以田野與古文字學重建以色列史、對抗威爾豪森",
+      "fields": [
+        "聖經考古學",
+        "古近東古文字學",
+        "以色列史",
+        "陶器年代學"
+      ],
+      "portraitUrl": "",
+      "color": "violet",
+      "emoji": "⛏️",
+      "contribution": [
+        "奧爾布賴特是**聖經考古學**的一代宗師，被公認為將近東田野考古、陶器類型學與聖經歷史整合為一門學科的關鍵人物。他主張以地下實物與古近東文獻證據，檢驗並在許多環節上支持聖經歷史敘事的可信度，直接挑戰威爾豪森學派對族長時代與早期以色列的懷疑。",
+        "他是罕見的通才：精通古近東多種語文與古文字，在陶器斷代、地名學、迦南宗教、死海古卷古文字判讀上都有奠基性貢獻。透過巴爾坦丘（Tell Beit Mirsim）等發掘，他建立起巴勒斯坦陶器年代序列，為此後所有田野工作提供了計時骨架。",
+        "他所培育的門生與方法自成**「奧爾布賴特學派」**——布賴特、克羅斯等皆出其門下，長期主導美國聖經研究，以「考古實證＋歷史可信」路線與歐陸的文獻批判傳統分庭抗禮。儘管後來「極簡派」對其結論多所修正，奧爾布賴特把聖經研究錨定於物質證據的方向，仍是不可磨滅的遺產。"
+      ],
+      "sourceNote": "卒於 1971 年，著作仍在版權期內；以既有中／英譯本為 REFERENCE，不自譯。",
+      "timeline": [
+        {
+          "year": "1891",
+          "text": "生於智利科皮亞波（Coquimbo），傳教士之子。"
+        },
+        {
+          "year": "1916",
+          "text": "於約翰霍普金斯大學取得閃族語博士。"
+        },
+        {
+          "year": "1929",
+          "text": "任約翰霍普金斯大學教授，並主持巴爾坦丘發掘。"
+        },
+        {
+          "year": "1940",
+          "text": "出版《從石器時代到基督教》，闡述其歷史—宗教綜合觀。"
+        },
+        {
+          "year": "1948",
+          "text": "率先鑑定死海古卷古文字年代的真確性。"
+        },
+        {
+          "year": "1949",
+          "text": "出版《巴勒斯坦考古學》，普及田野方法與成果。"
+        },
+        {
+          "year": "1968",
+          "text": "出版《雅威與迦南諸神》。"
+        },
+        {
+          "year": "1971",
+          "text": "卒於美國巴爾的摩。"
+        }
+      ],
+      "works": [
+        {
+          "title": "從石器時代到基督教",
+          "titleOriginal": "From the Stone Age to Christianity",
+          "year": "1940",
+          "yearSort": 1940,
+          "category": "考古與歷史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "以考古綜觀一神教在人類文明中的演生，其思想總綱。"
+        },
+        {
+          "title": "巴勒斯坦考古學",
+          "titleOriginal": "The Archaeology of Palestine",
+          "year": "1949",
+          "yearSort": 1949,
+          "category": "考古與歷史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "面向大眾的田野考古通論，長銷經典。"
+        },
+        {
+          "title": "雅威與迦南諸神",
+          "titleOriginal": "Yahweh and the Gods of Canaan",
+          "year": "1968",
+          "yearSort": 1968,
+          "category": "迦南宗教史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "晚期綜合，論以色列宗教與迦南背景的關係。"
+        },
+        {
+          "title": "亞伯拉罕至以斯拉的聖經時代",
+          "titleOriginal": "The Biblical Period from Abraham to Ezra",
+          "year": "1963",
+          "yearSort": 1963,
+          "category": "以色列史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "以考古實證重述以色列早期至被擄歸回的歷史綱要。"
+        }
+      ],
+      "era": "舊約研究"
+    },
+    {
+      "slug": "von-rad",
+      "name": "格哈德‧馮‧拉德",
+      "nameEn": "Gerhard von Rad",
+      "lifespan": "1901–1971",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1901,
+      "discipline": "舊約神學巨匠，以傳統史方法與「以色列的救恩史敘述」重寫舊約神學",
+      "fields": [
+        "舊約神學",
+        "傳統史批判",
+        "六經",
+        "智慧文學"
+      ],
+      "portraitUrl": "",
+      "color": "sky",
+      "emoji": "📖",
+      "contribution": [
+        "馮‧拉德是二十世紀最具影響力的舊約神學家。他承接貢克爾的形式批判，發展出**傳統史（Überlieferungsgeschichte / tradition history）**方法：追蹤一段信仰告白如何從古老的口傳核心，經世代增補、重述、神學化，最終凝結為現存文本。",
+        "他的著名論點是：以色列神學的原型是一段**「小信經式的救恩史告白」**（如申二十六 5–9），敘述出埃及、曠野、賜地的救贖行動；整部六經，正是雅威典作者以這一救恩史骨架擴充編纂而成。因此舊約神學的正確體裁不是抽象的觀念系統，而是以色列**對雅威歷史作為的重述（Nacherzählung）**。",
+        "在兩卷本《舊約神學》中，他分別處理以色列的歷史傳統與先知傳統，並以救恩史的張力貫串新舊約。晚年他又以《以色列的智慧》開拓智慧文學神學。他與艾希羅特「歷時 vs 系統」的方法論之爭，界定了整個世代舊約神學的走向。"
+      ],
+      "sourceNote": "卒於 1971 年，著作仍在版權期內；以既有中／英譯本為 REFERENCE，不自譯。",
+      "timeline": [
+        {
+          "year": "1901",
+          "text": "生於德國紐倫堡。"
+        },
+        {
+          "year": "1938",
+          "text": "發表《六經的形式史問題》，提出救恩史告白假說。"
+        },
+        {
+          "year": "1949",
+          "text": "任海德堡大學舊約教授，直至退休。"
+        },
+        {
+          "year": "1951",
+          "text": "出版《古以色列的聖戰》。"
+        },
+        {
+          "year": "1957",
+          "text": "《舊約神學》第一卷（歷史傳統）出版。"
+        },
+        {
+          "year": "1960",
+          "text": "《舊約神學》第二卷（先知傳統）出版。"
+        },
+        {
+          "year": "1970",
+          "text": "出版《以色列的智慧》。"
+        },
+        {
+          "year": "1971",
+          "text": "卒於海德堡。"
+        }
+      ],
+      "works": [
+        {
+          "title": "六經的形式史問題",
+          "titleOriginal": "Das formgeschichtliche Problem des Hexateuchs",
+          "year": "1938",
+          "yearSort": 1938,
+          "category": "傳統史／五經",
+          "languages": [
+            "de"
+          ],
+          "status": "copyright",
+          "note": "提出救恩史小信經與六經編纂假說的綱領性論文。"
+        },
+        {
+          "title": "舊約神學",
+          "titleOriginal": "Theologie des Alten Testaments",
+          "year": "1957–1960",
+          "yearSort": 1957,
+          "category": "舊約神學",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "兩卷本，以救恩史重述為體裁；二十世紀舊約神學代表作。"
+        },
+        {
+          "title": "以色列的智慧",
+          "titleOriginal": "Weisheit in Israel",
+          "year": "1970",
+          "yearSort": 1970,
+          "category": "智慧文學",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "晚年開拓智慧文學神學，論經驗、秩序與敬畏。"
+        },
+        {
+          "title": "古以色列的聖戰",
+          "titleOriginal": "Der Heilige Krieg im alten Israel",
+          "year": "1951",
+          "yearSort": 1951,
+          "category": "以色列史",
+          "languages": [
+            "de"
+          ],
+          "status": "copyright",
+          "note": "考察早期以色列支派同盟的聖戰制度與神學。"
+        },
+        {
+          "title": "創世記（註釋）",
+          "titleOriginal": "Das erste Buch Mose: Genesis",
+          "year": "1949",
+          "yearSort": 1949,
+          "category": "五經註釋",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "ATD 系列名著，神學性創世記釋讀的典範。"
+        }
+      ],
+      "era": "舊約研究"
+    },
+    {
+      "slug": "noth",
+      "name": "馬丁‧諾特",
+      "nameEn": "Martin Noth",
+      "lifespan": "1902–1968",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1902,
+      "discipline": "傳統史大家，提出「申命記史觀」與早期以色列支派同盟（amphictyony）",
+      "fields": [
+        "以色列史",
+        "傳統史批判",
+        "申命記史",
+        "五經"
+      ],
+      "portraitUrl": "",
+      "color": "indigo",
+      "emoji": "🏛️",
+      "contribution": [
+        "諾特與馮‧拉德並列為傳統史學派兩大支柱。他最著名的貢獻是提出**「申命記史觀」（Deuteronomistic History）**假說：申命記、約書亞、士師、撒母耳、列王紀並非各自獨立的書卷，而是一位被擄時期的**申命記派史家**，依申命記神學（守約則興、背約則亡）統一構思、剪裁編纂的一部連續歷史巨著。",
+        "他另一影響深遠的假說是把前君王時代的以色列理解為**十二支派同盟（amphictyony）**——類比古希臘環繞聖所的宗教部族聯盟，主張各支派原以中央聖所與盟約律法鬆散結合。此說雖後遭批評，卻長期主導對士師時代社會結構的想像。",
+        "在《五經傳統史》中，他細緻重建了五經口傳主題（出埃及、賜地、族長應許等）如何逐層凝聚。他的《以色列史》則以嚴謹的批判態度重寫通史，與奧爾布賴特學派的考古樂觀主義形成鮮明對照，代表德國學派的謹嚴傳統。"
+      ],
+      "sourceNote": "卒於 1968 年，著作仍在版權期內；以既有中／英譯本為 REFERENCE，不自譯。",
+      "timeline": [
+        {
+          "year": "1902",
+          "text": "生於德國德勒斯登。"
+        },
+        {
+          "year": "1930",
+          "text": "出版《以色列十二支派體系》，提出支派同盟說。"
+        },
+        {
+          "year": "1930",
+          "text": "任柯尼斯堡大學舊約教授。"
+        },
+        {
+          "year": "1943",
+          "text": "出版《傳統史研究》，提出申命記史觀與歷代志史觀。"
+        },
+        {
+          "year": "1948",
+          "text": "出版《五經傳統史》。"
+        },
+        {
+          "year": "1950",
+          "text": "出版《以色列史》。"
+        },
+        {
+          "year": "1965",
+          "text": "任耶路撒冷德國聖地考古研究所所長。"
+        },
+        {
+          "year": "1968",
+          "text": "卒於以色列別是巴附近。"
+        }
+      ],
+      "works": [
+        {
+          "title": "以色列十二支派體系",
+          "titleOriginal": "Das System der zwölf Stämme Israels",
+          "year": "1930",
+          "yearSort": 1930,
+          "category": "以色列史",
+          "languages": [
+            "de"
+          ],
+          "status": "copyright",
+          "note": "提出支派同盟（amphictyony）模型，重構前君王時代社會。"
+        },
+        {
+          "title": "傳統史研究",
+          "titleOriginal": "Überlieferungsgeschichtliche Studien",
+          "year": "1943",
+          "yearSort": 1943,
+          "category": "申命記史",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "提出申命記史觀與歷代志史觀，傳統史學派奠基作。"
+        },
+        {
+          "title": "五經傳統史",
+          "titleOriginal": "Überlieferungsgeschichte des Pentateuch",
+          "year": "1948",
+          "yearSort": 1948,
+          "category": "五經",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "重建五經口傳主題的凝聚過程，與馮‧拉德互補。"
+        },
+        {
+          "title": "以色列史",
+          "titleOriginal": "Geschichte Israels",
+          "year": "1950",
+          "yearSort": 1950,
+          "category": "以色列史",
+          "languages": [
+            "de",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "德國學派嚴謹批判進路的以色列通史代表作。"
+        }
+      ],
+      "era": "舊約研究"
+    },
+    {
+      "slug": "de-vaux",
+      "name": "羅蘭‧德‧沃",
+      "nameEn": "Roland de Vaux",
+      "lifespan": "1903–1971",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1903,
+      "discipline": "天主教道明會考古學家，著《古代以色列的制度》、主持庫姆蘭死海古卷發掘",
+      "fields": [
+        "聖經考古學",
+        "以色列制度史",
+        "死海古卷",
+        "天主教聖經學"
+      ],
+      "portraitUrl": "",
+      "color": "cyan",
+      "emoji": "📿",
+      "contribution": [
+        "德‧沃是道明會神父、耶路撒冷**法國聖經與考古學院（École biblique）**的靈魂人物，集考古學家、歷史學家與聖經學者於一身。他的兩卷本《古代以色列的制度》系統重建了以色列的家庭、社會、政治、軍事與宗教制度，長期是該領域的標準參考書。",
+        "他最為公眾所知的角色，是**庫姆蘭（Qumran）遺址的主持發掘者**與早期死海古卷的核心研究者。他主導了昆蘭聚落的挖掘與詮釋，並統籌《猶大曠野文獻》（DJD）系列的編輯出版，把死海古卷帶入學術視野——儘管他對聚落性質（艾賽尼派社群）的解讀後來引發長期辯論。",
+        "作為天主教聖經學走向現代批判的推手，他也是《耶路撒冷聖經》（Bible de Jérusalem）的總策劃，將嚴謹的歷史批判與考古成果引入天主教聖經翻譯與註釋傳統，示範了信仰群體如何以學術方法認真面對聖經。"
+      ],
+      "sourceNote": "卒於 1971 年，著作仍在版權期內；以既有中／英／法譯本為 REFERENCE，不自譯。",
+      "timeline": [
+        {
+          "year": "1903",
+          "text": "生於法國巴黎。"
+        },
+        {
+          "year": "1929",
+          "text": "加入道明會，後赴耶路撒冷法國聖經與考古學院。"
+        },
+        {
+          "year": "1945",
+          "text": "任法國聖經與考古學院院長。"
+        },
+        {
+          "year": "1951",
+          "text": "起主持庫姆蘭遺址與周邊洞穴發掘。"
+        },
+        {
+          "year": "1956",
+          "text": "《耶路撒冷聖經》完整版問世，任總策劃。"
+        },
+        {
+          "year": "1958",
+          "text": "《古代以色列的制度》第一卷出版（第二卷 1960）。"
+        },
+        {
+          "year": "1971",
+          "text": "卒於耶路撒冷；《古代以色列史》遺著陸續出版。"
+        }
+      ],
+      "works": [
+        {
+          "title": "古代以色列的制度",
+          "titleOriginal": "Les Institutions de l'Ancien Testament",
+          "year": "1958–1960",
+          "yearSort": 1958,
+          "category": "制度史",
+          "languages": [
+            "fr",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "兩卷本，涵蓋家庭、社會、政治、軍事、宗教制度，領域標準參考。"
+        },
+        {
+          "title": "古代以色列史",
+          "titleOriginal": "Histoire ancienne d'Israël",
+          "year": "1971–1973",
+          "yearSort": 1971,
+          "category": "以色列史",
+          "languages": [
+            "fr",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "遺著兩卷，以考古與文獻批判重寫族長至定居時期的歷史。"
+        },
+        {
+          "title": "猶大曠野文獻（DJD 主編）",
+          "titleOriginal": "Discoveries in the Judaean Desert",
+          "year": "1955",
+          "yearSort": 1955,
+          "category": "死海古卷",
+          "languages": [
+            "en",
+            "fr"
+          ],
+          "status": "copyright",
+          "note": "死海古卷官方校訂出版系列，德‧沃主導早期各卷。"
+        },
+        {
+          "title": "以色列的祭祀制度（獻祭研究）",
+          "titleOriginal": "Les sacrifices de l'Ancien Testament",
+          "year": "1964",
+          "yearSort": 1964,
+          "category": "祭儀制度",
+          "languages": [
+            "fr",
+            "en"
+          ],
+          "status": "copyright",
+          "note": "專題探討以色列獻祭制度的形式與意義。"
+        }
+      ],
+      "era": "舊約研究"
+    },
+    {
+      "slug": "bright",
+      "name": "約翰‧布賴特",
+      "nameEn": "John Bright",
+      "lifespan": "1908–1995",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1908,
+      "discipline": "奧爾布賴特學派健將，以《以色列史》成為英語世界標準教科書",
+      "fields": [
+        "以色列史",
+        "聖經考古學",
+        "先知書",
+        "盟約神學"
+      ],
+      "portraitUrl": "",
+      "color": "orange",
+      "emoji": "📚",
+      "contribution": [
+        "布賴特是奧爾布賴特的高足與其學派在美國的主要傳承者。他的《以色列史》以流暢的敘事、審慎的考古論證與對歷史可信度的溫和樂觀立場，成為二十世紀後半英語神學教育中最廣為採用的**以色列史標準教科書**，數度再版、影響數代學生。",
+        "他一貫的立場是在德國文獻批判與奧爾布賴特考古實證之間尋求平衡：既接受來源批判的成果，又主張族長敘事與早期以色列傳統有堅實的歷史核心，可與古近東的物質與文獻證據互相印證。他在《近期歷史寫作中的早期以色列》中，正面回應諾特學派對早期以色列史的懷疑。",
+        "布賴特也是重要的先知書與神學詮釋者，其《耶利米書》（錨聖經註釋）與《盟約與應許》深化了盟約在以色列信仰中的中心地位。他把嚴謹學術與可讀性結合的寫作典範，使複雜的批判成果得以進入更廣的教會與課堂。"
+      ],
+      "sourceNote": "卒於 1995 年，著作仍在版權期內；以既有中／英譯本為 REFERENCE，不自譯。",
+      "timeline": [
+        {
+          "year": "1908",
+          "text": "生於美國田納西州查塔努加。"
+        },
+        {
+          "year": "1940",
+          "text": "於約翰霍普金斯大學師從奧爾布賴特取得博士。"
+        },
+        {
+          "year": "1943",
+          "text": "任維吉尼亞協和神學院希伯來文與舊約教授。"
+        },
+        {
+          "year": "1956",
+          "text": "出版《近期歷史寫作中的早期以色列》，回應諾特學派。"
+        },
+        {
+          "year": "1959",
+          "text": "出版《以色列史》，成為標準教科書。"
+        },
+        {
+          "year": "1965",
+          "text": "出版《耶利米書》（錨聖經註釋）。"
+        },
+        {
+          "year": "1976",
+          "text": "出版《盟約與應許》。"
+        },
+        {
+          "year": "1995",
+          "text": "卒於美國里奇蒙。"
+        }
+      ],
+      "works": [
+        {
+          "title": "以色列史",
+          "titleOriginal": "A History of Israel",
+          "year": "1959",
+          "yearSort": 1959,
+          "category": "以色列史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "英語世界最廣用的以色列史教科書，多次修訂再版。"
+        },
+        {
+          "title": "近期歷史寫作中的早期以色列",
+          "titleOriginal": "Early Israel in Recent History Writing",
+          "year": "1956",
+          "yearSort": 1956,
+          "category": "以色列史／方法",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "與諾特學派辯論早期以色列史的可信度與方法。"
+        },
+        {
+          "title": "耶利米書（錨聖經註釋）",
+          "titleOriginal": "Jeremiah (Anchor Bible)",
+          "year": "1965",
+          "yearSort": 1965,
+          "category": "先知書註釋",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "結合歷史批判與神學的耶利米書標準註釋。"
+        },
+        {
+          "title": "盟約與應許",
+          "titleOriginal": "Covenant and Promise",
+          "year": "1976",
+          "yearSort": 1976,
+          "category": "先知神學",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "論先知信息中盟約與應許的張力與發展。"
+        }
+      ],
+      "era": "舊約研究"
+    },
+    {
+      "slug": "cross",
+      "name": "弗蘭克‧摩爾‧克羅斯",
+      "nameEn": "Frank Moore Cross",
+      "lifespan": "1921–2012",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1921,
+      "discipline": "迦南神話與希伯來史詩、西北閃族古文字與死海古卷的一代大師",
+      "fields": [
+        "迦南宗教",
+        "希伯來詩歌",
+        "古文字學",
+        "死海古卷"
+      ],
+      "portraitUrl": "",
+      "color": "stone",
+      "emoji": "🗿",
+      "contribution": [
+        "克羅斯是奧爾布賴特之後美國聖經學界的領軍人物，長期執教哈佛。他在《迦南神話與希伯來史詩》中論證：以色列的宗教與最古老的詩歌並非憑空而生，而是深植於**迦南（烏加里特）神話與史詩傳統**——雅威信仰在與伊勒（El）、巴力（Baal）神話的張力與挪用中成形。",
+        "他是二十世紀最傑出的**西北閃族古文字學家**之一，透過字體演變序列（typology of scripts）為腓尼基、古希伯來銘文與死海古卷斷代，奠定了古文字定年的方法基準。他也是死海古卷研究與編輯的核心成員，並提出希伯來聖經文本的「地方本」（local texts）理論。",
+        "在史料批判上，他修正了諾特的申命記史觀，提出**「雙重編修說」**（約西亞時期首編、被擄時期補編）。他培育了龐大的門生群體，幾乎重塑了北美一整代的聖經與古近東研究，其學派影響延續至今。"
+      ],
+      "sourceNote": "卒於 2012 年，著作仍在版權期內；以既有中／英譯本為 REFERENCE，不自譯。",
+      "timeline": [
+        {
+          "year": "1921",
+          "text": "生於美國加州洛杉磯。"
+        },
+        {
+          "year": "1950",
+          "text": "於約翰霍普金斯大學師從奧爾布賴特取得博士。"
+        },
+        {
+          "year": "1957",
+          "text": "任哈佛大學希伯來文與東方語言教授。"
+        },
+        {
+          "year": "1958",
+          "text": "出版《昆蘭古代圖書館》，論死海古卷。"
+        },
+        {
+          "year": "1973",
+          "text": "出版《迦南神話與希伯來史詩》。"
+        },
+        {
+          "year": "1998",
+          "text": "出版《從史詩到正典》。"
+        },
+        {
+          "year": "2012",
+          "text": "卒於美國羅利（北卡羅來納州）。"
+        }
+      ],
+      "works": [
+        {
+          "title": "迦南神話與希伯來史詩",
+          "titleOriginal": "Canaanite Myth and Hebrew Epic",
+          "year": "1973",
+          "yearSort": 1973,
+          "category": "迦南宗教與詩歌",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "論以色列宗教與最古詩歌的迦南根源，代表作。"
+        },
+        {
+          "title": "昆蘭古代圖書館",
+          "titleOriginal": "The Ancient Library of Qumran",
+          "year": "1958",
+          "yearSort": 1958,
+          "category": "死海古卷",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "早期死海古卷研究的權威導論。"
+        },
+        {
+          "title": "從史詩到正典",
+          "titleOriginal": "From Epic to Canon",
+          "year": "1998",
+          "yearSort": 1998,
+          "category": "以色列宗教史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "論以色列宗教與社會從史詩傳統走向正典的歷程。"
+        },
+        {
+          "title": "古代雅威詩歌研究",
+          "titleOriginal": "Studies in Ancient Yahwistic Poetry",
+          "year": "1975",
+          "yearSort": 1975,
+          "category": "希伯來詩歌",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "與弗里德曼合著，重建最古希伯來詩歌的年代與形式。"
+        }
+      ],
+      "era": "舊約研究"
+    },
+    {
+      "slug": "childs",
+      "name": "布雷瓦德‧柴爾茲",
+      "nameEn": "Brevard Childs",
+      "lifespan": "1923–2007",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1923,
+      "discipline": "正典批判創始者，主張以「正典的最終形式」為聖經神學的解讀場域",
+      "fields": [
+        "正典批判",
+        "聖經神學",
+        "舊約導論",
+        "詮釋學"
+      ],
+      "portraitUrl": "",
+      "color": "purple",
+      "emoji": "📕",
+      "contribution": [
+        "柴爾茲是**正典批判（canonical criticism）**的開創者。面對歷史批判把聖經拆解為無數來源與階段、卻難以回答「這對信仰群體有何意義」的困境，他主張詮釋的對象應是文本被信仰群體接受、定型的**正典最終形式（final canonical form）**，而非被重建的假想原始層。",
+        "在劃時代的《作為聖經的舊約導論》中，他不按傳統來源批判編排，而逐卷探問每卷書在成為正典的過程中如何被塑形、其正典功能為何。這一「正典進路」把聖經重新錨定於信仰社群的接受史，為在批判學術與教會使用之間搭橋。",
+        "他進而在《正典脈絡中的舊約神學》與《新舊約聖經神學》中，主張舊約與新約應在同一正典整體中彼此對讀。柴爾茲的進路深刻影響了後批判時代的聖經神學、詮釋學與教會釋經，成為二十世紀後期最具原創性的方案之一。"
+      ],
+      "sourceNote": "卒於 2007 年，著作仍在版權期內；以既有中／英譯本為 REFERENCE，不自譯。",
+      "timeline": [
+        {
+          "year": "1923",
+          "text": "生於美國南卡羅來納州哥倫比亞。"
+        },
+        {
+          "year": "1955",
+          "text": "於瑞士巴塞爾大學取得博士。"
+        },
+        {
+          "year": "1958",
+          "text": "任耶魯大學神學院舊約教授。"
+        },
+        {
+          "year": "1970",
+          "text": "出版《危機中的聖經神學》，倡議正典進路。"
+        },
+        {
+          "year": "1974",
+          "text": "出版《出埃及記》（OTL 註釋）。"
+        },
+        {
+          "year": "1979",
+          "text": "出版《作為聖經的舊約導論》。"
+        },
+        {
+          "year": "1992",
+          "text": "出版《新舊約聖經神學》。"
+        },
+        {
+          "year": "2007",
+          "text": "卒於美國康乃狄克州。"
+        }
+      ],
+      "works": [
+        {
+          "title": "危機中的聖經神學",
+          "titleOriginal": "Biblical Theology in Crisis",
+          "year": "1970",
+          "yearSort": 1970,
+          "category": "聖經神學",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "診斷聖經神學運動的困境，首倡正典進路。"
+        },
+        {
+          "title": "作為聖經的舊約導論",
+          "titleOriginal": "Introduction to the Old Testament as Scripture",
+          "year": "1979",
+          "yearSort": 1979,
+          "category": "正典批判",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "逐卷以正典最終形式取代來源批判，正典進路奠基作。"
+        },
+        {
+          "title": "正典脈絡中的舊約神學",
+          "titleOriginal": "Old Testament Theology in a Canonical Context",
+          "year": "1985",
+          "yearSort": 1985,
+          "category": "舊約神學",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "以正典整體為框架建構舊約神學。"
+        },
+        {
+          "title": "新舊約聖經神學",
+          "titleOriginal": "Biblical Theology of the Old and New Testaments",
+          "year": "1992",
+          "yearSort": 1992,
+          "category": "聖經神學",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "主張兩約在同一正典中彼此對讀的成熟綜合。"
+        },
+        {
+          "title": "出埃及記（OTL 註釋）",
+          "titleOriginal": "The Book of Exodus",
+          "year": "1974",
+          "yearSort": 1974,
+          "category": "五經註釋",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "示範正典進路的實際釋經，兼採批判與神學。"
+        }
+      ],
+      "era": "舊約研究"
+    },
+    {
+      "slug": "trible",
+      "name": "菲莉絲‧特里布爾",
+      "nameEn": "Phyllis Trible",
+      "lifespan": "1932–",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1932,
+      "discipline": "女性主義修辭批判先驅，重讀聖經中的性別語言與受害女性文本",
+      "fields": [
+        "女性主義釋經",
+        "修辭批判",
+        "希伯來敘事",
+        "性別研究"
+      ],
+      "portraitUrl": "",
+      "color": "teal",
+      "emoji": "⚖️",
+      "contribution": [
+        "特里布爾是**女性主義聖經詮釋**與**修辭批判（rhetorical criticism）**的開創性人物。她師承繆倫堡（James Muilenburg）的修辭批判，強調細讀希伯來文本自身的文學結構、字詞編織與修辭動勢，並以此為工具揭示聖經性別語言中被忽視的層次。",
+        "在《上帝與性別修辭》中，她重讀創世記等文本，論證希伯來聖經對上帝的言說與人性的描繪，蘊含遠比父權傳統解讀更豐富的兩性意象，甚至有女性化的神性隱喻。她挑戰的不是聖經本身，而是壓平文本的男性中心閱讀史。",
+        "她最具震撼力的作品《恐怖的文本》，直面聖經中夏甲、他瑪、無名妾、耶弗他之女四段女性受暴敘事，拒絕輕易的救贖式和解，堅持讓這些「恐怖的文本」發聲、被記念。她示範了如何在批判與尊重之間，讓邊緣者的苦難成為釋經的正當對象，深刻影響了此後的女性主義與敘事釋經。"
+      ],
+      "sourceNote": "在世作者，著作仍在版權期內；以既有中／英譯本為 REFERENCE，不自譯。",
+      "timeline": [
+        {
+          "year": "1932",
+          "text": "生於美國維吉尼亞州里奇蒙。"
+        },
+        {
+          "year": "1963",
+          "text": "於哥倫比亞大學／協和神學院取得博士。"
+        },
+        {
+          "year": "1973",
+          "text": "發表〈神學中的父權之上〉，開女性主義釋經先聲。"
+        },
+        {
+          "year": "1978",
+          "text": "出版《上帝與性別修辭》。"
+        },
+        {
+          "year": "1984",
+          "text": "出版《恐怖的文本》。"
+        },
+        {
+          "year": "1994",
+          "text": "出版《修辭批判：脈絡、方法與約拿書》。"
+        },
+        {
+          "year": "1998",
+          "text": "任維克森林大學神學院教授。"
+        }
+      ],
+      "works": [
+        {
+          "title": "上帝與性別修辭",
+          "titleOriginal": "God and the Rhetoric of Sexuality",
+          "year": "1978",
+          "yearSort": 1978,
+          "category": "女性主義釋經",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "以修辭批判重讀聖經性別語言，發掘非父權的神性與人性意象。"
+        },
+        {
+          "title": "恐怖的文本",
+          "titleOriginal": "Texts of Terror",
+          "year": "1984",
+          "yearSort": 1984,
+          "category": "女性主義釋經",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "直面四段女性受暴敘事，拒絕廉價和解，代表作。"
+        },
+        {
+          "title": "修辭批判：脈絡、方法與約拿書",
+          "titleOriginal": "Rhetorical Criticism: Context, Method, and the Book of Jonah",
+          "year": "1994",
+          "yearSort": 1994,
+          "category": "修辭批判",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "系統陳述修辭批判方法，並以約拿書為完整範例。"
+        },
+        {
+          "title": "夏娃與亞當：創世記二至三章的女性主義讀法",
+          "titleOriginal": "Eve and Adam: Genesis 2–3 Reread",
+          "year": "1973",
+          "yearSort": 1973,
+          "category": "女性主義釋經",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "早期論文，重讀創造與墮落敘事的性別預設。"
+        }
+      ],
+      "era": "舊約研究"
+    },
+    {
+      "slug": "brueggemann",
+      "name": "沃爾特‧布魯格曼",
+      "nameEn": "Walter Brueggemann",
+      "lifespan": "1933–2025",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1933,
+      "discipline": "當代舊約神學與先知傳統詮釋大家，以「先知式想像」重釋詩篇與先知",
+      "fields": [
+        "舊約神學",
+        "先知傳統",
+        "詩篇",
+        "社會批判釋經"
+      ],
+      "portraitUrl": "",
+      "color": "amber",
+      "emoji": "🔥",
+      "contribution": [
+        "布魯格曼是二十世紀末至二十一世紀初最多產、最具影響力的舊約詮釋者，著書逾百部。他在《先知式的想像》中提出：真正的先知職事在於培育一種與主流「王朝意識」對抗的**另類想像（prophetic imagination）**——既以哀歌拆解帝國自足的幻象，又以盼望孕育新的可能，這一框架深刻塑造了當代教會的講道與社會關懷。",
+        "他的巨著《舊約神學：辯論、抗辯、倡議》以法庭「證詞」為隱喻，主張以色列對雅威的信仰不是一套穩定的教義體系，而是**核心證詞與反證詞之間持續的張力與爭辯**——包含讚美與抗議、信任與質疑。這一「對話性」進路，回應了後現代對宏大體系的懷疑，另闢舊約神學的蹊徑。",
+        "布魯格曼也是深具影響的詩篇詮釋者，其「定向—失向—再定向」（orientation–disorientation–reorientation）的詩篇分類，把哀歌的抗議與失序經驗置於信仰生活的正當核心。他兼具學術深度與牧養熱情，是連結學院、教會與公共議題的罕見橋樑。"
+      ],
+      "sourceNote": "卒於 2025 年，著作仍在版權期內；以既有中／英譯本為 REFERENCE，不自譯。",
+      "timeline": [
+        {
+          "year": "1933",
+          "text": "生於美國內布拉斯加州提爾登（Tilden）。"
+        },
+        {
+          "year": "1961",
+          "text": "於協和神學院取得神學博士。"
+        },
+        {
+          "year": "1977",
+          "text": "出版《土地》，論賜地應許的神學。"
+        },
+        {
+          "year": "1978",
+          "text": "出版《先知式的想像》。"
+        },
+        {
+          "year": "1984",
+          "text": "出版《詩篇的信息》。"
+        },
+        {
+          "year": "1997",
+          "text": "出版《舊約神學：辯論、抗辯、倡議》。"
+        },
+        {
+          "year": "2025",
+          "text": "六月五日卒於美國密西根州，享年 92 歲。"
+        }
+      ],
+      "works": [
+        {
+          "title": "先知式的想像",
+          "titleOriginal": "The Prophetic Imagination",
+          "year": "1978",
+          "yearSort": 1978,
+          "category": "先知傳統",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "論先知職事作為對抗帝國意識的另類想像，最廣為流傳之作。"
+        },
+        {
+          "title": "舊約神學：辯論、抗辯、倡議",
+          "titleOriginal": "Theology of the Old Testament: Testimony, Dispute, Advocacy",
+          "year": "1997",
+          "yearSort": 1997,
+          "category": "舊約神學",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "以法庭證詞為隱喻的對話性舊約神學鉅著。"
+        },
+        {
+          "title": "詩篇的信息",
+          "titleOriginal": "The Message of the Psalms",
+          "year": "1984",
+          "yearSort": 1984,
+          "category": "詩篇",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "以定向—失向—再定向重讀詩篇，突顯哀歌的信仰地位。"
+        },
+        {
+          "title": "土地",
+          "titleOriginal": "The Land",
+          "year": "1977",
+          "yearSort": 1977,
+          "category": "舊約神學",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "論賜地、失地與應許之地在聖經信仰中的核心張力。"
+        }
+      ],
+      "era": "舊約研究"
+    },
+    {
+      "slug": "mosheim",
+      "name": "約翰‧勞倫斯‧馮‧莫斯海姆",
+      "nameEn": "Johann Lorenz von Mosheim",
+      "lifespan": "1693–1755",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1693,
+      "discipline": "德國路德宗神學家,以批判性史料方法奠定近代教會史學,被譽為「近代教會史學之父」。",
+      "fields": [
+        "教會史",
+        "教會史學方法",
+        "宗派史",
+        "路德宗神學"
+      ],
+      "portraitUrl": "",
+      "color": "amber",
+      "emoji": "📜",
+      "contribution": [
+        "莫斯海姆是**近代教會史學的奠基者**,率先把教會史從護教式的教條敘事中解放出來,主張以**公正的史料批判與世俗史學方法**處理教會的過去。他把教會史視為一門獨立的學術學科,而非神學的附庸。",
+        "他的《教會史綱》(Institutiones Historiae Ecclesiasticae)按世紀分期、依「外部史」與「內部史」雙軸鋪陳制度、教義與異端流變,結構嚴謹、註釋詳實,成為此後一個多世紀歐洲教會史寫作的**典範教科書**,經 Maclaine 與 Murdock 兩度英譯而影響英語世界。",
+        "他同時投入君士坦丁之前早期基督徒處境的專題研究,開啟以史料考證重建原始教會社會史的路徑。"
+      ],
+      "sourceNote": "卒於 1755 年,全部著作與英譯本均屬公有領域。",
+      "timeline": [
+        {
+          "year": "1693",
+          "text": "生於德國呂北克(一說 1694)。"
+        },
+        {
+          "year": "1723",
+          "text": "任黑爾姆斯特大學神學教授。"
+        },
+        {
+          "year": "1726",
+          "text": "初版《教會史綱》(四卷本 libri IV)。"
+        },
+        {
+          "year": "1747",
+          "text": "受聘為哥廷根大學首任神學院院長兼校長。"
+        },
+        {
+          "year": "1753",
+          "text": "出版《君士坦丁大帝前基督教史論》。"
+        },
+        {
+          "year": "1755",
+          "text": "增訂《古今教會史綱》定本問世;同年逝世於哥廷根。"
+        }
+      ],
+      "works": [
+        {
+          "title": "古今教會史綱",
+          "titleOriginal": "Institutiones Historiae Ecclesiasticae Antiquae et Recentioris",
+          "year": "1755",
+          "yearSort": 1755,
+          "category": "教會通史",
+          "languages": [
+            "la",
+            "en"
+          ],
+          "status": "planned",
+          "note": "按世紀分期的教會通史定本,近代教會史教科書典範。"
+        },
+        {
+          "title": "君士坦丁大帝前基督教史論",
+          "titleOriginal": "De Rebus Christianorum ante Constantinum Magnum Commentarii",
+          "year": "1753",
+          "yearSort": 1753,
+          "category": "早期教會",
+          "languages": [
+            "la",
+            "en"
+          ],
+          "status": "planned",
+          "note": "以史料考證重建前君士坦丁時代教會的社會與制度。"
+        },
+        {
+          "title": "教會史綱(初版四卷本)",
+          "titleOriginal": "Institutionum Historiae Ecclesiasticae Libri IV",
+          "year": "1726",
+          "yearSort": 1726,
+          "category": "教會通史",
+          "languages": [
+            "la"
+          ],
+          "status": "planned",
+          "note": "後來增訂本的原型,確立外部史／內部史雙軸架構。"
+        },
+        {
+          "title": "評述聖史全書",
+          "titleOriginal": "Commentaries on the Affairs of the Christians before the Time of Constantine the Great",
+          "year": "1813",
+          "yearSort": 1813,
+          "category": "早期教會",
+          "languages": [
+            "en"
+          ],
+          "status": "planned",
+          "note": "Vidal 英譯本,英語世界研究早期教會的重要參考。"
+        }
+      ],
+      "era": "教會史"
+    },
+    {
+      "slug": "schaff",
+      "name": "腓力‧沙夫",
+      "nameEn": "Philip Schaff",
+      "nameOriginal": "Philipp Schaff",
+      "lifespan": "1819–1893",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1819,
+      "discipline": "瑞士裔美國教會史家,著八卷《基督教會史》,主編尼西亞前後教父英譯叢書。",
+      "fields": [
+        "教會史",
+        "教父學",
+        "信條學",
+        "普世合一運動"
+      ],
+      "portraitUrl": "",
+      "color": "blue",
+      "emoji": "📚",
+      "contribution": [
+        "沙夫是**英語世界教會史的集大成者**,其八卷本《基督教會史》(History of the Christian Church)自使徒時代寫至宗教改革,敘事宏闊、史料紮實,一百多年來仍是英語教會通史的標準參考。",
+        "他主持編纂了規模空前的**《尼西亞前教父》(ANF)與《尼西亞及後尼西亞教父》(NPNF)兩系列共 38 卷英譯叢書**,把希臘、拉丁教父原典系統地帶入英語讀者,是今日教父研究無可迴避的基礎文獻。",
+        "他另編《基督教信條》(The Creeds of Christendom)三卷,匯集歷代信經與教派信條原文與譯本;並推動跨宗派合一,體現其「福音派公教精神」的史觀。"
+      ],
+      "sourceNote": "卒於 1893 年,全部著作與 ANF/NPNF 叢書均屬公有領域。",
+      "timeline": [
+        {
+          "year": "1819",
+          "text": "生於瑞士庫爾。"
+        },
+        {
+          "year": "1844",
+          "text": "赴美任賓州墨瑟斯堡神學院教授。"
+        },
+        {
+          "year": "1858",
+          "text": "《使徒教會史》出版,教會通史計畫啟動。"
+        },
+        {
+          "year": "1870",
+          "text": "轉任紐約協和神學院教授。"
+        },
+        {
+          "year": "1877",
+          "text": "《基督教信條》三卷問世。"
+        },
+        {
+          "year": "1882",
+          "text": "主編 ANF／NPNF 教父英譯叢書。"
+        },
+        {
+          "year": "1893",
+          "text": "逝世於紐約。"
+        }
+      ],
+      "works": [
+        {
+          "title": "基督教會史",
+          "titleOriginal": "History of the Christian Church",
+          "year": "1858",
+          "yearSort": 1858,
+          "category": "教會通史",
+          "languages": [
+            "en"
+          ],
+          "status": "planned",
+          "note": "八卷本,英語世界教會通史的標準著作。"
+        },
+        {
+          "title": "基督教信條",
+          "titleOriginal": "The Creeds of Christendom",
+          "year": "1877",
+          "yearSort": 1877,
+          "category": "信條學",
+          "languages": [
+            "en"
+          ],
+          "status": "planned",
+          "note": "三卷,歷代信經與教派信條的權威匯編。"
+        },
+        {
+          "title": "尼西亞及後尼西亞教父(NPNF)",
+          "titleOriginal": "A Select Library of the Nicene and Post-Nicene Fathers",
+          "year": "1886",
+          "yearSort": 1886,
+          "category": "教父學",
+          "languages": [
+            "en"
+          ],
+          "status": "planned",
+          "note": "沙夫主編的教父英譯叢書,教父研究的英語基石。"
+        },
+        {
+          "title": "尼西亞前教父(ANF)",
+          "titleOriginal": "The Ante-Nicene Fathers",
+          "year": "1885",
+          "yearSort": 1885,
+          "category": "教父學",
+          "languages": [
+            "en"
+          ],
+          "status": "planned",
+          "note": "早期教父英譯十卷,與 NPNF 並列。"
+        },
+        {
+          "title": "使徒教會史",
+          "titleOriginal": "History of the Apostolic Church",
+          "year": "1853",
+          "yearSort": 1853,
+          "category": "早期教會",
+          "languages": [
+            "en"
+          ],
+          "status": "planned",
+          "note": "其教會通史計畫的起點卷。"
+        }
+      ],
+      "era": "教會史"
+    },
+    {
+      "slug": "latourette",
+      "name": "肯尼斯‧斯科特‧拉圖雷特",
+      "nameEn": "Kenneth Scott Latourette",
+      "lifespan": "1884–1968",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1884,
+      "discipline": "美國教會史家與宣教史權威,著七卷《基督教擴展史》,以全球視野重寫基督教傳播史。",
+      "fields": [
+        "宣教史",
+        "教會史",
+        "中國基督教史",
+        "全球基督教"
+      ],
+      "portraitUrl": "",
+      "color": "rose",
+      "emoji": "🌏",
+      "contribution": [
+        "拉圖雷特是**二十世紀宣教史與全球基督教史的巨擘**,其七卷本《基督教擴展史》(A History of the Expansion of Christianity)首度以「擴展與退潮」的節律,把基督教兩千年的地理傳播寫成一部完整的世界史,擺脫歐洲中心的單線敘事。",
+        "他長年任教耶魯,兼具**漢學與中國基督教史**專長,著有《早期中國基督教史》等,是英語世界研究中國教會的先驅之一。",
+        "他晚年續寫《革命時代的基督教》五卷,追蹤十九、二十世紀基督教在世界劇變中的處境,史料涵蓋全球各洲,規模罕見。"
+      ],
+      "sourceNote": "卒於 1968 年,著作仍在版權期內,採 REFERENCE/英文先行策略。",
+      "timeline": [
+        {
+          "year": "1884",
+          "text": "生於美國奧勒岡州。"
+        },
+        {
+          "year": "1910",
+          "text": "赴中國任教,染病後返美。"
+        },
+        {
+          "year": "1921",
+          "text": "任耶魯大學宣教史與東方史教授。"
+        },
+        {
+          "year": "1929",
+          "text": "《中國基督教史》出版。"
+        },
+        {
+          "year": "1937",
+          "text": "《基督教擴展史》首卷問世(至 1945 年完成七卷)。"
+        },
+        {
+          "year": "1953",
+          "text": "單卷本《基督教史》出版。"
+        },
+        {
+          "year": "1968",
+          "text": "逝世於美國。"
+        }
+      ],
+      "works": [
+        {
+          "title": "基督教擴展史",
+          "titleOriginal": "A History of the Expansion of Christianity",
+          "year": "1937",
+          "yearSort": 1937,
+          "category": "宣教史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "七卷本,以全球視野重寫基督教傳播史。"
+        },
+        {
+          "title": "基督教史",
+          "titleOriginal": "A History of Christianity",
+          "year": "1953",
+          "yearSort": 1953,
+          "category": "教會通史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "單卷通史,長銷神學院教科書。"
+        },
+        {
+          "title": "革命時代的基督教",
+          "titleOriginal": "Christianity in a Revolutionary Age",
+          "year": "1958",
+          "yearSort": 1958,
+          "category": "近代教會史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "五卷本,論十九至二十世紀基督教的全球處境。"
+        },
+        {
+          "title": "中國基督教史",
+          "titleOriginal": "A History of Christian Missions in China",
+          "year": "1929",
+          "yearSort": 1929,
+          "category": "中國基督教史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "英語世界研究中國教會的奠基之作。"
+        }
+      ],
+      "era": "教會史"
+    },
+    {
+      "slug": "bainton",
+      "name": "羅蘭‧班頓",
+      "nameEn": "Roland H. Bainton",
+      "lifespan": "1894–1984",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1894,
+      "discipline": "美國宗教改革史家,以路德傳《這是我的立場》風靡英語世界,兼治異端與宗教寬容史。",
+      "fields": [
+        "宗教改革史",
+        "路德研究",
+        "宗教寬容史",
+        "和平主義"
+      ],
+      "portraitUrl": "",
+      "color": "emerald",
+      "emoji": "⚔️",
+      "contribution": [
+        "班頓的路德傳《這是我的立場》(Here I Stand)以生動的敘事與扎實的史料,成為**二十世紀最暢銷、最具影響力的路德傳記**,把宗教改革的核心人物帶進廣大讀者的視野。",
+        "身為貴格會信徒與和平主義者,他長年關注**宗教寬容與良心自由**的歷史,《被獵的異端》(Hunted Heretic)為塞爾維特翻案、《宗教自由的旅途》梳理寬容觀念的演進。",
+        "他任教耶魯逾四十年,著述兼顧學術與普及,《十六世紀的宗教改革》等綜述至今仍是入門經典;晚年更以《宗教改革時代的女性》系列開拓女性在改教運動中的角色研究。"
+      ],
+      "sourceNote": "卒於 1984 年,著作仍在版權期內,採 REFERENCE/英文先行策略。",
+      "timeline": [
+        {
+          "year": "1894",
+          "text": "生於英格蘭,幼年隨家移居美國。"
+        },
+        {
+          "year": "1920",
+          "text": "獲耶魯博士,留校任教。"
+        },
+        {
+          "year": "1950",
+          "text": "《這是我的立場:馬丁路德傳》出版。"
+        },
+        {
+          "year": "1951",
+          "text": "《十六世紀的宗教改革》問世。"
+        },
+        {
+          "year": "1953",
+          "text": "《被獵的異端》為塞爾維特作傳。"
+        },
+        {
+          "year": "1971",
+          "text": "《宗教改革時代的女性》系列展開。"
+        },
+        {
+          "year": "1984",
+          "text": "逝世於美國康乃狄克州。"
+        }
+      ],
+      "works": [
+        {
+          "title": "這是我的立場:馬丁路德傳",
+          "titleOriginal": "Here I Stand: A Life of Martin Luther",
+          "year": "1950",
+          "yearSort": 1950,
+          "category": "宗教改革史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "二十世紀最暢銷的路德傳記。"
+        },
+        {
+          "title": "十六世紀的宗教改革",
+          "titleOriginal": "The Reformation of the Sixteenth Century",
+          "year": "1952",
+          "yearSort": 1952,
+          "category": "宗教改革史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "宗教改革綜述的入門經典。"
+        },
+        {
+          "title": "被獵的異端:塞爾維特傳",
+          "titleOriginal": "Hunted Heretic: The Life and Death of Michael Servetus",
+          "year": "1953",
+          "yearSort": 1953,
+          "category": "宗教寬容史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "為反三一論者塞爾維特翻案的名著。"
+        },
+        {
+          "title": "宗教改革時代的女性",
+          "titleOriginal": "Women of the Reformation",
+          "year": "1971",
+          "yearSort": 1971,
+          "category": "宗教改革史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "三卷系列,開拓改教運動中的女性研究。"
+        }
+      ],
+      "era": "教會史"
+    },
+    {
+      "slug": "frend",
+      "name": "威廉‧休‧克利福德‧弗蘭德",
+      "nameEn": "W. H. C. Frend",
+      "nameOriginal": "William Hugh Clifford Frend",
+      "lifespan": "1916–2005",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1916,
+      "discipline": "英國早期教會史家兼考古學家,專治北非教會、多納圖派與殉道逼迫史。",
+      "fields": [
+        "早期教會史",
+        "北非教會",
+        "多納圖派",
+        "殉道與逼迫",
+        "教會考古學"
+      ],
+      "portraitUrl": "",
+      "color": "violet",
+      "emoji": "🏺",
+      "contribution": [
+        "弗蘭德兼具**史家與考古學家**雙重身分,以田野發掘與文獻互證,重建羅馬帝國時期北非基督教的社會面貌,《多納圖派教會》把這場分裂運動放回柏柏爾社會與經濟脈絡中理解,是該領域的奠基之作。",
+        "《早期教會的殉道與逼迫》(Martyrdom and Persecution in the Early Church)追溯殉道觀念從猶太教到基督教的譜系,論證逼迫如何塑造教會的自我認同,成為此主題的標準參考。",
+        "他晚年綜合畢生研究寫成《基督教的興起》(The Rise of Christianity),以近千頁篇幅通貫前六個世紀,展現社會史與制度史並重的宏觀視野。"
+      ],
+      "sourceNote": "卒於 2005 年,著作仍在版權期內,採 REFERENCE/英文先行策略。",
+      "timeline": [
+        {
+          "year": "1916",
+          "text": "生於英格蘭。"
+        },
+        {
+          "year": "1952",
+          "text": "《多納圖派教會》出版,奠定北非教會研究。"
+        },
+        {
+          "year": "1965",
+          "text": "《早期教會的殉道與逼迫》問世。"
+        },
+        {
+          "year": "1982",
+          "text": "任格拉斯哥大學教會史教授。"
+        },
+        {
+          "year": "1984",
+          "text": "《基督教的興起》出版。"
+        },
+        {
+          "year": "1996",
+          "text": "《早期教會考古學》綜述其考古成果。"
+        },
+        {
+          "year": "2005",
+          "text": "逝世於英國。"
+        }
+      ],
+      "works": [
+        {
+          "title": "早期教會的殉道與逼迫",
+          "titleOriginal": "Martyrdom and Persecution in the Early Church",
+          "year": "1965",
+          "yearSort": 1965,
+          "category": "早期教會",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "殉道觀念史的標準著作。"
+        },
+        {
+          "title": "多納圖派教會",
+          "titleOriginal": "The Donatist Church: A Movement of Protest in Roman North Africa",
+          "year": "1952",
+          "yearSort": 1952,
+          "category": "北非教會",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "把多納圖派放回社會經濟脈絡的奠基之作。"
+        },
+        {
+          "title": "基督教的興起",
+          "titleOriginal": "The Rise of Christianity",
+          "year": "1984",
+          "yearSort": 1984,
+          "category": "早期教會",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "貫通前六世紀的宏觀綜述。"
+        },
+        {
+          "title": "早期教會",
+          "titleOriginal": "The Early Church",
+          "year": "1965",
+          "yearSort": 1965,
+          "category": "早期教會",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "普及性的早期教會通史。"
+        },
+        {
+          "title": "早期基督教考古學",
+          "titleOriginal": "The Archaeology of Early Christianity: A History",
+          "year": "1996",
+          "yearSort": 1996,
+          "category": "教會考古學",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "綜述基督教考古學的發展與方法。"
+        }
+      ],
+      "era": "教會史"
+    },
+    {
+      "slug": "owen-chadwick",
+      "name": "歐文‧查德威克",
+      "nameEn": "Owen Chadwick",
+      "lifespan": "1916–2015",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1916,
+      "discipline": "英國教會史泰斗,治宗教改革、維多利亞時代教會與世俗化,長期執掌劍橋近代史。",
+      "fields": [
+        "宗教改革史",
+        "維多利亞時代教會",
+        "世俗化",
+        "教會史方法"
+      ],
+      "portraitUrl": "",
+      "color": "sky",
+      "emoji": "⛪",
+      "contribution": [
+        "歐文‧查德威克是**二十世紀英國教會史學的領袖人物**,曾任劍橋大學欽定近代史講座教授,其著述橫跨宗教改革到十九世紀,以清朗的文筆與嚴謹的檔案功夫著稱。",
+        "兩卷本《維多利亞時代的教會》(The Victorian Church)是研究英國十九世紀教會的權威;《歐洲思想的世俗化》以吉福德講座為底,細膩追索信仰在近代歐洲退潮的思想過程,被視為世俗化研究的經典。",
+        "他為企鵝叢書撰寫的《宗教改革》(The Reformation)以一冊之力清晰勾勒改教全局,長年是英語世界最通行的入門讀本;他同時反思**教會史作為一門學科的方法與界限**。"
+      ],
+      "sourceNote": "卒於 2015 年,著作仍在版權期內,採 REFERENCE/英文先行策略。",
+      "timeline": [
+        {
+          "year": "1916",
+          "text": "生於英格蘭,為亨利‧查德威克之兄。"
+        },
+        {
+          "year": "1964",
+          "text": "為企鵝叢書撰《宗教改革》。"
+        },
+        {
+          "year": "1966",
+          "text": "《維多利亞時代的教會》首卷出版。"
+        },
+        {
+          "year": "1968",
+          "text": "任劍橋大學欽定近代史講座教授。"
+        },
+        {
+          "year": "1975",
+          "text": "《十九世紀歐洲思想的世俗化》問世。"
+        },
+        {
+          "year": "1981",
+          "text": "《教宗與歐洲革命》出版。"
+        },
+        {
+          "year": "2015",
+          "text": "逝世於英國劍橋。"
+        }
+      ],
+      "works": [
+        {
+          "title": "宗教改革",
+          "titleOriginal": "The Reformation",
+          "year": "1964",
+          "yearSort": 1964,
+          "category": "宗教改革史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "企鵝叢書名冊,英語世界通行的改教入門。"
+        },
+        {
+          "title": "維多利亞時代的教會",
+          "titleOriginal": "The Victorian Church",
+          "year": "1966",
+          "yearSort": 1966,
+          "category": "近代教會史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "兩卷本,研究英國十九世紀教會的權威。"
+        },
+        {
+          "title": "十九世紀歐洲思想的世俗化",
+          "titleOriginal": "The Secularization of the European Mind in the Nineteenth Century",
+          "year": "1975",
+          "yearSort": 1975,
+          "category": "世俗化研究",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "世俗化研究的經典,源自吉福德講座。"
+        },
+        {
+          "title": "教宗與歐洲革命",
+          "titleOriginal": "The Popes and European Revolution",
+          "year": "1981",
+          "yearSort": 1981,
+          "category": "近代教會史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "論革命時代教廷與歐洲政局的互動。"
+        }
+      ],
+      "era": "教會史"
+    },
+    {
+      "slug": "henry-chadwick",
+      "name": "亨利‧查德威克",
+      "nameEn": "Henry Chadwick",
+      "lifespan": "1920–2008",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1920,
+      "discipline": "英國早期教會史與教父學大家,專治奧利金、波愛修斯與古代晚期基督教思想。",
+      "fields": [
+        "早期教會史",
+        "教父學",
+        "奧利金研究",
+        "古代晚期"
+      ],
+      "portraitUrl": "",
+      "color": "indigo",
+      "emoji": "🕯️",
+      "contribution": [
+        "亨利‧查德威克是**英語世界最負盛名的教父學者之一**,精通希臘、拉丁教父原典,其譯註的奧利金《駁塞爾蘇斯》(Contra Celsum)至今仍是標準英譯本,展現他文本考訂與思想詮釋兼擅的功力。",
+        "為企鵝叢書撰寫的《早期教會》(The Early Church)以簡練優雅之筆勾勒前六世紀教會史,長年是英語入門的首選;晚年集大成的《古代社會中的教會》(The Church in Ancient Society)通貫希臘化到教宗大額我略時代。",
+        "他對**波愛修斯與古代晚期哲學神學**、以及普里西里安等邊緣人物的研究,拓寬了教父學的視野;身兼英國國教與研究者雙重身分,亦深度參與普世合一對話。"
+      ],
+      "sourceNote": "卒於 2008 年,著作仍在版權期內,採 REFERENCE/英文先行策略。",
+      "timeline": [
+        {
+          "year": "1920",
+          "text": "生於英格蘭,為歐文‧查德威克之弟。"
+        },
+        {
+          "year": "1953",
+          "text": "譯註奧利金《駁塞爾蘇斯》出版。"
+        },
+        {
+          "year": "1967",
+          "text": "為企鵝叢書撰《早期教會》。"
+        },
+        {
+          "year": "1979",
+          "text": "《波愛修斯》專著問世。"
+        },
+        {
+          "year": "1981",
+          "text": "任劍橋欽定神學講座教授(後轉牛津)。"
+        },
+        {
+          "year": "2001",
+          "text": "集大成之作《古代社會中的教會》出版。"
+        },
+        {
+          "year": "2008",
+          "text": "逝世於英國牛津。"
+        }
+      ],
+      "works": [
+        {
+          "title": "早期教會",
+          "titleOriginal": "The Early Church",
+          "year": "1967",
+          "yearSort": 1967,
+          "category": "早期教會",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "企鵝叢書名冊,英語世界通行的早期教會入門。"
+        },
+        {
+          "title": "古代社會中的教會",
+          "titleOriginal": "The Church in Ancient Society: From Galilee to Gregory the Great",
+          "year": "2001",
+          "yearSort": 2001,
+          "category": "早期教會",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "集大成之作,通貫前六世紀教會史。"
+        },
+        {
+          "title": "波愛修斯:邏輯、音樂、神學與哲學的慰藉",
+          "titleOriginal": "Boethius: The Consolations of Music, Logic, Theology, and Philosophy",
+          "year": "1981",
+          "yearSort": 1981,
+          "category": "古代晚期",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "研究波愛修斯思想世界的權威專著。"
+        },
+        {
+          "title": "奧利金:駁塞爾蘇斯",
+          "titleOriginal": "Origen: Contra Celsum",
+          "year": "1953",
+          "yearSort": 1953,
+          "category": "教父學",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "查德威克譯註,至今標準英譯本。"
+        },
+        {
+          "title": "阿維拉的普里西里安",
+          "titleOriginal": "Priscillian of Avila: The Occult and the Charismatic in the Early Church",
+          "year": "1976",
+          "yearSort": 1976,
+          "category": "早期教會",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "研究四世紀被判異端的邊緣人物。"
+        }
+      ],
+      "era": "教會史"
+    },
+    {
+      "slug": "pelikan",
+      "name": "亞羅斯拉夫‧帕利坎",
+      "nameEn": "Jaroslav Pelikan",
+      "lifespan": "1923–2006",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1923,
+      "discipline": "美國教義史巨匠,著五卷《基督教傳統:教義發展史》,通貫兩千年基督教教義流變。",
+      "fields": [
+        "教義史",
+        "教義發展",
+        "東正教神學",
+        "文化史"
+      ],
+      "portraitUrl": "",
+      "color": "cyan",
+      "emoji": "✝️",
+      "contribution": [
+        "帕利坎的五卷本《基督教傳統:教義發展史》(The Christian Tradition: A History of the Development of Doctrine)是**二十世紀教義史的紀念碑式著作**,以「教會所信、所教、所認」為主軸,通貫從使徒時代到現代的教義演變,兼顧東方、西方與新教三大傳統。",
+        "他以「傳統是死者的活信仰,傳統主義是活人的死信仰」一語廣為傳誦,深刻辯護傳統的**動態延續性**;《傳統的申辯》等作把教義史提升為對信仰理性的哲學省思。",
+        "他晚年以《歷世歷代的耶穌》《歷世歷代的馬利亞》等「文化史」系列,追蹤核心信仰形象在藝術與思想中的變貌;本人由信義宗歸信東正教,學術橫跨神學、歷史與比較宗教。"
+      ],
+      "sourceNote": "卒於 2006 年,著作仍在版權期內,採 REFERENCE/英文先行策略。",
+      "timeline": [
+        {
+          "year": "1923",
+          "text": "生於美國俄亥俄州,斯洛伐克移民後裔。"
+        },
+        {
+          "year": "1962",
+          "text": "任耶魯大學史特林講座教授。"
+        },
+        {
+          "year": "1971",
+          "text": "《基督教傳統》首卷《大公傳統的興起》出版。"
+        },
+        {
+          "year": "1985",
+          "text": "《歷世歷代的耶穌》問世。"
+        },
+        {
+          "year": "1989",
+          "text": "《基督教傳統》第五卷完成,全套竣工。"
+        },
+        {
+          "year": "1998",
+          "text": "由信義宗歸信東正教。"
+        },
+        {
+          "year": "2006",
+          "text": "逝世於美國康乃狄克州。"
+        }
+      ],
+      "works": [
+        {
+          "title": "基督教傳統:教義發展史",
+          "titleOriginal": "The Christian Tradition: A History of the Development of Doctrine",
+          "year": "1971",
+          "yearSort": 1971,
+          "category": "教義史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "五卷本,二十世紀教義史的紀念碑式著作。"
+        },
+        {
+          "title": "歷世歷代的耶穌",
+          "titleOriginal": "Jesus Through the Centuries: His Place in the History of Culture",
+          "year": "1985",
+          "yearSort": 1985,
+          "category": "文化史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "追蹤耶穌形象在文化中的變貌。"
+        },
+        {
+          "title": "歷世歷代的馬利亞",
+          "titleOriginal": "Mary Through the Centuries: Her Place in the History of Culture",
+          "year": "1996",
+          "yearSort": 1996,
+          "category": "文化史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "馬利亞形象的文化史。"
+        },
+        {
+          "title": "傳統的申辯",
+          "titleOriginal": "The Vindication of Tradition",
+          "year": "1984",
+          "yearSort": 1984,
+          "category": "教義史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "對傳統動態延續性的哲學省思。"
+        }
+      ],
+      "era": "教會史"
+    },
+    {
+      "slug": "averil-cameron",
+      "name": "埃弗里爾‧卡梅倫",
+      "nameEn": "Averil Cameron",
+      "lifespan": "1940–2026",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1940,
+      "discipline": "英國古代晚期與拜占庭史學泰斗,研究基督教與古典世界的交會及帝國話語。",
+      "fields": [
+        "古代晚期",
+        "拜占庭史",
+        "基督教與古典世界",
+        "早期基督教話語"
+      ],
+      "portraitUrl": "",
+      "color": "orange",
+      "emoji": "🏛️",
+      "contribution": [
+        "卡梅倫是**古代晚期與拜占庭研究的領軍學者**,曾任牛津拜占庭史教授與基布爾學院院長,以史料考訂與文化分析並重,重塑學界對三至七世紀地中海世界的理解。",
+        "《基督教與帝國話語》(Christianity and the Rhetoric of Empire)源自 Sather 講座,論證早期基督教如何借用希臘化的修辭與論述形式,建立自己的**話語權力**,是研究基督教與古典文化互動的里程碑。",
+        "她校訂並研究普羅柯比與阿加提阿斯等拜占庭史家,《六世紀的地中海世界》《拜占庭人》等作把政治、宗教與文化熔於一爐,並終生推動拜占庭研究的普及與方法反思。"
+      ],
+      "sourceNote": "卒於 2026 年,著作仍在版權期內,採 REFERENCE/英文先行策略。",
+      "timeline": [
+        {
+          "year": "1940",
+          "text": "生於英格蘭斯塔福郡里克。"
+        },
+        {
+          "year": "1985",
+          "text": "《普羅柯比與六世紀》出版。"
+        },
+        {
+          "year": "1991",
+          "text": "《基督教與帝國話語》問世。"
+        },
+        {
+          "year": "1994",
+          "text": "任牛津基布爾學院院長(至 2010)。"
+        },
+        {
+          "year": "2006",
+          "text": "《拜占庭人》出版。"
+        },
+        {
+          "year": "2024",
+          "text": "回憶錄《過渡:一位史家的自述》出版。"
+        },
+        {
+          "year": "2026",
+          "text": "逝世,享年 86 歲。"
+        }
+      ],
+      "works": [
+        {
+          "title": "基督教與帝國話語",
+          "titleOriginal": "Christianity and the Rhetoric of Empire: The Development of Christian Discourse",
+          "year": "1991",
+          "yearSort": 1991,
+          "category": "古代晚期",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "論早期基督教如何建立自身話語權力,源自 Sather 講座。"
+        },
+        {
+          "title": "六世紀的地中海世界",
+          "titleOriginal": "The Mediterranean World in Late Antiquity, AD 395–600",
+          "year": "1993",
+          "yearSort": 1993,
+          "category": "古代晚期",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "古代晚期地中海世界的標準通論。"
+        },
+        {
+          "title": "拜占庭人",
+          "titleOriginal": "The Byzantines",
+          "year": "2006",
+          "yearSort": 2006,
+          "category": "拜占庭史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "面向廣大讀者的拜占庭文明導論。"
+        },
+        {
+          "title": "普羅柯比與六世紀",
+          "titleOriginal": "Procopius and the Sixth Century",
+          "year": "1985",
+          "yearSort": 1985,
+          "category": "拜占庭史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "研究拜占庭史家普羅柯比的權威專著。"
+        }
+      ],
+      "era": "教會史"
+    },
+    {
+      "slug": "peter-brown",
+      "name": "彼得‧布朗",
+      "nameEn": "Peter Brown",
+      "lifespan": "1935–",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1935,
+      "discipline": "愛爾蘭裔史學大家,「古代晚期」概念的奠基者,著奧古斯丁傳、聖徒崇拜與身體社會史。",
+      "fields": [
+        "古代晚期",
+        "奧古斯丁研究",
+        "聖徒崇拜",
+        "身體與社會",
+        "宗教社會史"
+      ],
+      "portraitUrl": "",
+      "color": "stone",
+      "emoji": "🌅",
+      "contribution": [
+        "彼得‧布朗是**「古代晚期」(Late Antiquity)這一史學範疇的奠基者**,以《古代晚期的世界》一書,把三至八世紀從「羅馬衰亡」的敘事中解放出來,確立為一個充滿宗教與文化創造力的獨立時代,改寫了整個西方古史分期。",
+        "他的《希坡的奧古斯丁》(Augustine of Hippo)是**二十世紀最具影響力的奧古斯丁傳記**,把這位教父放回北非社會與思想脈絡中理解,細膩重建其內在世界。",
+        "《聖徒崇拜》《身體與社會》等作開創了宗教實踐與身體、禁慾的社會文化史;晚年巨著《穿過針眼》探討財富、慈善與教會制度化,展現他數十年不輟的宏觀綜合力。"
+      ],
+      "sourceNote": "在世,著作仍在版權期內,採 REFERENCE/英文先行策略。",
+      "timeline": [
+        {
+          "year": "1935",
+          "text": "生於愛爾蘭都柏林。"
+        },
+        {
+          "year": "1967",
+          "text": "《希坡的奧古斯丁》出版,奠定學術聲望。"
+        },
+        {
+          "year": "1971",
+          "text": "《古代晚期的世界》確立新史學範疇。"
+        },
+        {
+          "year": "1981",
+          "text": "《聖徒崇拜》出版。"
+        },
+        {
+          "year": "1988",
+          "text": "《身體與社會》問世。"
+        },
+        {
+          "year": "2012",
+          "text": "巨著《穿過針眼》出版。"
+        },
+        {
+          "year": "1978",
+          "text": "任教普林斯頓等名校,長期執教。"
+        }
+      ],
+      "works": [
+        {
+          "title": "希坡的奧古斯丁",
+          "titleOriginal": "Augustine of Hippo: A Biography",
+          "year": "1967",
+          "yearSort": 1967,
+          "category": "奧古斯丁研究",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "二十世紀最具影響力的奧古斯丁傳記。"
+        },
+        {
+          "title": "古代晚期的世界",
+          "titleOriginal": "The World of Late Antiquity, AD 150–750",
+          "year": "1971",
+          "yearSort": 1971,
+          "category": "古代晚期",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "確立「古代晚期」史學範疇的奠基之作。"
+        },
+        {
+          "title": "聖徒崇拜",
+          "titleOriginal": "The Cult of the Saints: Its Rise and Function in Latin Christianity",
+          "year": "1981",
+          "yearSort": 1981,
+          "category": "宗教社會史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "開創聖徒崇拜的社會文化史研究。"
+        },
+        {
+          "title": "身體與社會",
+          "titleOriginal": "The Body and Society: Men, Women, and Sexual Renunciation in Early Christianity",
+          "year": "1988",
+          "yearSort": 1988,
+          "category": "宗教社會史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "早期基督教禁慾與身體觀的社會史。"
+        },
+        {
+          "title": "穿過針眼",
+          "titleOriginal": "Through the Eye of a Needle: Wealth, the Fall of Rome, and the Making of Christianity in the West",
+          "year": "2012",
+          "yearSort": 2012,
+          "category": "古代晚期",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "論財富、慈善與西方教會制度化的晚年巨著。"
+        }
+      ],
+      "era": "教會史"
+    },
+    {
+      "slug": "wilken",
+      "name": "羅伯特‧路易斯‧威爾肯",
+      "nameEn": "Robert Louis Wilken",
+      "lifespan": "1936–",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1936,
+      "discipline": "美國早期基督教思想史家,治教父釋經與基督教思維方式,著《基督徒如何思考》。",
+      "fields": [
+        "早期基督教思想",
+        "教父釋經",
+        "基督教與希臘化文化",
+        "宗教自由史"
+      ],
+      "portraitUrl": "",
+      "color": "purple",
+      "emoji": "🧠",
+      "contribution": [
+        "威爾肯是**早期基督教思想史的權威**,《早期基督教思想的精神》(The Spirit of Early Christian Thought,中譯《基督徒如何思考》)論證教父神學並非希臘哲學的附庸,而是**紮根於聖經、禮儀與信仰經驗**的獨立思維方式,深刻扭轉了學界成見。",
+        "《羅馬人眼中的基督徒》從外部觀察者的視角,重建異教知識分子如何看待這個新興宗教,別開生面;他對教父的**聖經詮釋傳統**用力甚深,強調釋經是教父思想的核心動力。",
+        "晚年《最初千年》以全球視野寫早期基督教通史,並長期投入宗教自由的歷史與當代辯護;本人由信義宗歸信天主教,學思兼具史學深度與神學關懷。"
+      ],
+      "sourceNote": "在世,著作仍在版權期內,採 REFERENCE/英文先行策略。",
+      "timeline": [
+        {
+          "year": "1936",
+          "text": "生於美國。"
+        },
+        {
+          "year": "1984",
+          "text": "《羅馬人眼中的基督徒》出版。"
+        },
+        {
+          "year": "1985",
+          "text": "任維吉尼亞大學基督教史講座教授。"
+        },
+        {
+          "year": "2003",
+          "text": "《早期基督教思想的精神》問世。"
+        },
+        {
+          "year": "2012",
+          "text": "《最初千年:基督教全球史》出版。"
+        },
+        {
+          "year": "2019",
+          "text": "《自由頌:基督教與宗教自由的興起》出版。"
+        },
+        {
+          "year": "1994",
+          "text": "由信義宗歸信天主教。"
+        }
+      ],
+      "works": [
+        {
+          "title": "早期基督教思想的精神(基督徒如何思考)",
+          "titleOriginal": "The Spirit of Early Christian Thought: Seeking the Face of God",
+          "year": "2003",
+          "yearSort": 2003,
+          "category": "早期基督教思想",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "論教父神學是紮根聖經與信仰經驗的獨立思維。"
+        },
+        {
+          "title": "羅馬人眼中的基督徒",
+          "titleOriginal": "The Christians as the Romans Saw Them",
+          "year": "1984",
+          "yearSort": 1984,
+          "category": "早期教會",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "從異教觀察者視角重建對基督教的看法。"
+        },
+        {
+          "title": "最初千年:基督教全球史",
+          "titleOriginal": "The First Thousand Years: A Global History of Christianity",
+          "year": "2012",
+          "yearSort": 2012,
+          "category": "教會通史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "以全球視野寫早期基督教通史。"
+        },
+        {
+          "title": "自由頌:基督教與宗教自由的興起",
+          "titleOriginal": "Liberty in the Things of God: The Christian Origins of Religious Freedom",
+          "year": "2019",
+          "yearSort": 2019,
+          "category": "宗教自由史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "追溯宗教自由觀念的基督教根源。"
+        }
+      ],
+      "era": "教會史"
+    },
+    {
+      "slug": "gonzalez",
+      "name": "胡斯托‧岡薩雷斯",
+      "nameEn": "Justo L. González",
+      "nameOriginal": "Justo Luis González",
+      "lifespan": "1937–",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1937,
+      "discipline": "古巴裔拉美教會史家,著《基督教史》與《基督教思想史》,以拉美視角重讀教會歷史。",
+      "fields": [
+        "教會通史",
+        "基督教思想史",
+        "拉美神學",
+        "講道史"
+      ],
+      "portraitUrl": "",
+      "color": "teal",
+      "emoji": "🌎",
+      "contribution": [
+        "岡薩雷斯是**當代最廣為使用的教會史通俗教科書作者**,兩卷本《基督教史》(The Story of Christianity)以清晰易讀、敘事生動著稱,譯成多國語言,是全球神學院與教會的標準入門讀本。",
+        "身為古巴裔拉美學者,他自覺地從**被殖民、邊緣者與拉丁裔的視角**重讀教會史,《變化中的教會史形貌》反思史觀本身,《明日:拉美裔觀點的基督教神學》開拓了拉美處境神學。",
+        "他的三卷本《基督教思想史》(A History of Christian Thought)系統梳理教義與神學的發展,兼具學術深度與教學實用性;並長期投入西語世界的神學教育與講道史研究。"
+      ],
+      "sourceNote": "在世,著作仍在版權期內,採 REFERENCE/英文先行策略。",
+      "timeline": [
+        {
+          "year": "1937",
+          "text": "生於古巴哈瓦那。"
+        },
+        {
+          "year": "1961",
+          "text": "獲耶魯神學博士,為當時最年輕者之一。"
+        },
+        {
+          "year": "1970",
+          "text": "三卷本《基督教思想史》陸續出版。"
+        },
+        {
+          "year": "1984",
+          "text": "兩卷本《基督教史》問世。"
+        },
+        {
+          "year": "1990",
+          "text": "《明日:拉美裔觀點的基督教神學》出版。"
+        },
+        {
+          "year": "2002",
+          "text": "《變化中的教會史形貌》反思史觀。"
+        },
+        {
+          "year": "2010",
+          "text": "持續投入西語神學教育與著述。"
+        }
+      ],
+      "works": [
+        {
+          "title": "基督教史",
+          "titleOriginal": "The Story of Christianity",
+          "year": "1984",
+          "yearSort": 1984,
+          "category": "教會通史",
+          "languages": [
+            "en",
+            "es"
+          ],
+          "status": "copyright",
+          "note": "兩卷本,全球通行的教會史入門教科書。"
+        },
+        {
+          "title": "基督教思想史",
+          "titleOriginal": "A History of Christian Thought",
+          "year": "1970",
+          "yearSort": 1970,
+          "category": "基督教思想史",
+          "languages": [
+            "en",
+            "es"
+          ],
+          "status": "copyright",
+          "note": "三卷本,系統梳理教義與神學發展。"
+        },
+        {
+          "title": "明日:拉美裔觀點的基督教神學",
+          "titleOriginal": "Mañana: Christian Theology from a Hispanic Perspective",
+          "year": "1990",
+          "yearSort": 1990,
+          "category": "拉美神學",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "開拓拉美處境神學的代表作。"
+        },
+        {
+          "title": "變化中的教會史形貌",
+          "titleOriginal": "The Changing Shape of Church History",
+          "year": "2002",
+          "yearSort": 2002,
+          "category": "教會史方法",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "從邊緣者視角反思教會史書寫。"
+        }
+      ],
+      "era": "教會史"
+    },
+    {
+      "slug": "pagels",
+      "name": "伊萊恩‧帕格爾斯",
+      "nameEn": "Elaine Pagels",
+      "lifespan": "1943–",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1943,
+      "discipline": "美國宗教史家,以《諾斯底福音》聞名,研究早期基督教的多元性與正統之形成。",
+      "fields": [
+        "早期基督教",
+        "諾斯底主義",
+        "拿戈瑪第文獻",
+        "性別與宗教"
+      ],
+      "portraitUrl": "",
+      "color": "amber",
+      "emoji": "📖",
+      "contribution": [
+        "帕格爾斯的《諾斯底福音》(The Gnostic Gospels)以拿戈瑪第文獻為據,揭示早期基督教的**思想多元與內部張力**,論證「正統」是在與諾斯底等群體的鬥爭中被建構出來的,此書獲全國書評獎與美國國家圖書獎,影響遠及學界之外。",
+        "《亞當、夏娃與蛇》追索創世故事的詮釋史如何形塑西方對性、自由與罪的觀念;《撒但的起源》剖析基督教如何把「敵人」妖魔化,揭露其社會與政治後果。",
+        "身為研究早期基督教的女性學者,她長期關注**被壓抑的聲音與女性形象**,以嚴謹的文獻功夫與流暢的敘事,把學術議題帶入公共閱讀,是普林斯頓宗教學重鎮。"
+      ],
+      "sourceNote": "在世,著作仍在版權期內,採 REFERENCE/英文先行策略。",
+      "timeline": [
+        {
+          "year": "1943",
+          "text": "生於美國加州。"
+        },
+        {
+          "year": "1970",
+          "text": "獲哈佛宗教學博士。"
+        },
+        {
+          "year": "1979",
+          "text": "《諾斯底福音》出版,獲多項大獎。"
+        },
+        {
+          "year": "1982",
+          "text": "任普林斯頓大學宗教學教授。"
+        },
+        {
+          "year": "1988",
+          "text": "《亞當、夏娃與蛇》問世。"
+        },
+        {
+          "year": "1995",
+          "text": "《撒但的起源》出版。"
+        },
+        {
+          "year": "2003",
+          "text": "《超越信仰:多馬的祕密福音》出版。"
+        }
+      ],
+      "works": [
+        {
+          "title": "諾斯底福音",
+          "titleOriginal": "The Gnostic Gospels",
+          "year": "1979",
+          "yearSort": 1979,
+          "category": "諾斯底主義",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "以拿戈瑪第文獻揭示早期基督教的多元性,獲美國國家圖書獎。"
+        },
+        {
+          "title": "亞當、夏娃與蛇",
+          "titleOriginal": "Adam, Eve, and the Serpent",
+          "year": "1988",
+          "yearSort": 1988,
+          "category": "早期基督教",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "追溯創世故事詮釋史對性與罪觀的形塑。"
+        },
+        {
+          "title": "撒但的起源",
+          "titleOriginal": "The Origin of Satan",
+          "year": "1995",
+          "yearSort": 1995,
+          "category": "早期基督教",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "剖析基督教如何把敵人妖魔化。"
+        },
+        {
+          "title": "超越信仰:多馬的祕密福音",
+          "titleOriginal": "Beyond Belief: The Secret Gospel of Thomas",
+          "year": "2003",
+          "yearSort": 2003,
+          "category": "諾斯底主義",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "論多馬福音與正典形成的張力。"
+        }
+      ],
+      "era": "教會史"
+    },
+    {
+      "slug": "macculloch",
+      "name": "迪爾梅德‧麥卡洛克",
+      "nameEn": "Diarmaid MacCulloch",
+      "lifespan": "1951–",
+      "disciplineGroup": "基督宗教研究",
+      "sortYear": 1951,
+      "discipline": "英國教會史家,著《基督教史:最初三千年》與克蘭默傳,宗教改革研究的當代權威。",
+      "fields": [
+        "宗教改革史",
+        "教會通史",
+        "英國宗教改革",
+        "克蘭默研究"
+      ],
+      "portraitUrl": "",
+      "color": "blue",
+      "emoji": "🕰️",
+      "contribution": [
+        "麥卡洛克是**當代最具份量的教會史家之一**,牛津大學教會史教授,其《基督教史:最初三千年》(A History of Christianity: The First Three Thousand Years)把敘事上溯至希臘與希伯來根源,以近千頁通貫全球基督教,獲多項大獎並改編為 BBC 電視系列。",
+        "《宗教改革:歐洲分裂的年代》(Reformation: Europe's House Divided)是**當代宗教改革史的標竿之作**,以歐陸整體視野取代國別敘事,獲沃夫森歷史獎等肯定。",
+        "他的《湯瑪斯‧克蘭默傳》(Thomas Cranmer)以檔案功夫重建英國宗教改革關鍵人物,獲惠特布萊德傳記獎;晚年更以《沉默:基督教的歷史》《下半身的歷史》等主題史拓展視野。"
+      ],
+      "sourceNote": "在世,著作仍在版權期內,採 REFERENCE/英文先行策略。",
+      "timeline": [
+        {
+          "year": "1951",
+          "text": "生於英格蘭。"
+        },
+        {
+          "year": "1996",
+          "text": "《湯瑪斯‧克蘭默傳》出版,獲惠特布萊德獎。"
+        },
+        {
+          "year": "2003",
+          "text": "《宗教改革:歐洲分裂的年代》問世。"
+        },
+        {
+          "year": "1997",
+          "text": "任牛津大學教會史教授。"
+        },
+        {
+          "year": "2009",
+          "text": "《基督教史:最初三千年》出版並改編為 BBC 系列。"
+        },
+        {
+          "year": "2013",
+          "text": "《沉默:基督教的歷史》出版。"
+        },
+        {
+          "year": "2018",
+          "text": "《托馬斯‧克倫威爾傳》出版。"
+        }
+      ],
+      "works": [
+        {
+          "title": "基督教史:最初三千年",
+          "titleOriginal": "A History of Christianity: The First Three Thousand Years",
+          "year": "2009",
+          "yearSort": 2009,
+          "category": "教會通史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "上溯希臘希伯來根源的全球基督教通史,改編為 BBC 系列。"
+        },
+        {
+          "title": "宗教改革:歐洲分裂的年代",
+          "titleOriginal": "Reformation: Europe's House Divided, 1490–1700",
+          "year": "2003",
+          "yearSort": 2003,
+          "category": "宗教改革史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "以歐陸整體視野書寫,當代宗教改革史標竿。"
+        },
+        {
+          "title": "湯瑪斯‧克蘭默傳",
+          "titleOriginal": "Thomas Cranmer: A Life",
+          "year": "1996",
+          "yearSort": 1996,
+          "category": "英國宗教改革",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "重建英國改教關鍵人物,獲惠特布萊德傳記獎。"
+        },
+        {
+          "title": "沉默:基督教的歷史",
+          "titleOriginal": "Silence: A Christian History",
+          "year": "2013",
+          "yearSort": 2013,
+          "category": "教會史",
+          "languages": [
+            "en"
+          ],
+          "status": "copyright",
+          "note": "以「沉默」為主題貫穿基督教史的別開生面之作。"
+        }
+      ],
+      "era": "教會史"
     },
   ])
 

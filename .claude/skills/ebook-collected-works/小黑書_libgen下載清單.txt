@@ -1,0 +1,73 @@
+小黑書 (littleblackbook0000) 選書 → libgen 可下載清單
+來源：https://littleblackbook0000.wordpress.com/  (每集 = 一本西文聖經學術專著)
+驗證日期：2026-07-23   驗證後端：libgen.li（.bz 資料庫較小、annas-archive.li 有 JS 指紋擋，勿用）
+下載方式：libgen.li → 貼下方「搜尋詞」→ 取對應格式；EPUB 優先，其次 retail PDF。
+
+======================================================================
+【A】libgen 已驗證有檔（23 本，可直接下載）
+======================================================================
+格式/大小為當下抓到的最佳版本，實際頁面可能還有其他版本可挑。
+
+Ep1  | The Apostolic Preaching and Its Developments | C. H. Dodd | PDF ~2MB
+     搜尋詞: Dodd Apostolic Preaching Developments | 分類: 新約神學
+Ep2  | The Theme of the Pentateuch | David J. A. Clines | PDF ~4–10MB
+     搜尋詞: Clines Theme of the Pentateuch | 分類: 舊約/五經
+Ep3  | The Faith of Jesus Christ | Richard B. Hays | EPUB ~3MB
+     搜尋詞: Hays Faith of Jesus Christ | 分類: 保羅研究
+Ep4  | Paul and the Thessalonians | Abraham J. Malherbe | PDF ~8MB
+     搜尋詞: Malherbe Paul and the Thessalonians | 分類: 保羅書信
+Ep5  | Jesus' Literacy / "Jesus Writing, the Gospel of John, and Jesus' Literacy" | Chris Keith | PDF ~3MB
+     搜尋詞: Chris Keith Jesus Literacy | 分類: 約翰福音/歷史耶穌
+Ep6  | A New Approach to Textual Criticism | Tommy Wasserman & Peter Gurry | PDF ~7MB
+     搜尋詞: Wasserman Gurry New Approach Textual Criticism | 分類: 經文鑑別學
+Ep7  | The Birth of the Trinity | Matthew W. Bates | PDF ~2MB
+     搜尋詞: Matthew Bates Birth of the Trinity | 分類: 三一論/釋經
+Ep8  | The Community of the Beloved Disciple | Raymond E. Brown | PDF ~12MB
+     搜尋詞: The Community of the Beloved Disciple | 分類: 約翰福音
+Ep9  | God's Indwelling Presence | James M. Hamilton Jr. | EPUB ~1MB
+     搜尋詞: James Hamilton God's Indwelling Presence | 分類: 聖經神學
+Ep10 | Heaven and Earth in the Gospel of Matthew | Jonathan T. Pennington | PDF ~2–4MB
+     搜尋詞: Pennington Heaven and Earth Gospel of Matthew | 分類: 馬太福音
+Ep11 | The Speeches in Acts | Marion L. Soards | PDF
+     搜尋詞: Soards Speeches in Acts | 分類: 使徒行傳
+Ep12 | Where the Eagles Are Gathered | Steven L. Bridge | PDF ~11MB
+     搜尋詞: Steven Bridge Where the Eagles are Gathered | 分類: 末世論
+Ep13 | The Canaanites | Mary Ellen Buck | EPUB ~39MB
+     搜尋詞: Mary Ellen Buck Canaanites | 分類: 舊約/古代近東
+Ep14 | Salvation by Allegiance Alone | Matthew W. Bates | EPUB ~4MB
+     搜尋詞: Matthew Bates Salvation by Allegiance Alone | 分類: 保羅/救恩論
+Ep15 | Jesus and the Eyewitnesses | Richard Bauckham | PDF ~2MB / EPUB ~1MB / MOBI（有 1st & 2nd Ed）
+     搜尋詞: Bauckham Jesus and the Eyewitnesses | 分類: 新約/歷史耶穌
+Ep16 | Rudolf Bultmann: A Companion to His Theology | David W. Congdon | EPUB ~3MB
+     搜尋詞: David Congdon Rudolf Bultmann | 分類: 神學家/新約
+Ep17 | Studying the New Testament through Inscriptions | D. Clint Burnett | EPUB ~6MB
+     搜尋詞: Burnett New Testament Inscriptions | 分類: 新約/銘文學
+Ep18 | Letters from the Pillar Apostles | Darian R. Lockett | PDF
+     搜尋詞: Letters from the Pillar Apostles | 分類: 公函/正典
+Ep19 | Handbook on the New Testament Use of the Old Testament | G. K. Beale | EPUB ~1MB / PDF ~7MB
+     搜尋詞: Beale Handbook New Testament Use of Old Testament | 分類: 釋經學
+Ep22 | What Are the Gospels? | Richard A. Burridge | PDF ~8MB
+     搜尋詞: Burridge What Are the Gospels | 分類: 新約/福音書
+Ep23 | The New Testament World: Insights from Cultural Anthropology | Bruce J. Malina | PDF ~2MB
+     搜尋詞: Malina New Testament World | 分類: 新約/社會學進路
+Ep24 | The Demise of the Devil | Susan R. Garrett | PDF ~11MB
+     搜尋詞: Susan Garrett Demise of the Devil | 分類: 路加/使徒行傳
+Ep25 | The Apocalyptic Paul | Jamie Davies | PDF ~1MB
+     搜尋詞: Jamie Davies Apocalyptic Paul | 分類: 保羅/啟示文學
+
+======================================================================
+【B】libgen 查無 / 待手動確認（4 本）
+======================================================================
+Ep20 | Worship in Ancient Israel | Walter Brueggemann | ✗ libgen 未見
+      （Understanding Biblical Themes 系列小書，流通少；可再試 Anna's Archive 或校園/神學院館藏）
+Ep21 | Sanctified Vision: An Introduction to Early Christian Interpretation of the Bible
+      | John J. O'Keefe & R. R. Reno | ✗ libgen 未見（Johns Hopkins UP）
+外加 | The Birth and Death of the Pre-Markan Passion Narrative | Brandon Massey
+      | ✗ libgen 未見（Mohr Siebeck WUNT II/608, 2024, ISBN 9783161628191；太新+貴）
+外加 | 重返新約現場：從原會眾文化解讀新約 | 何善斌 | ✗（2026/02 香港基督教文藝出版社，繁中新書，尚無電子檔）
+
+======================================================================
+【備註】
+- 小黑書貼文的花俏中文標題（耶穌效應/天國崛起/被誤解的神蹟…）是他自己的科普外皮，
+  真正的書是配圖裡的西文原著；下載時以本清單的英文書名+作者為準。
+- 下載完成後交給我，走 ingest_new_books.py 轉入電子圖書館（分類見各列建議）。

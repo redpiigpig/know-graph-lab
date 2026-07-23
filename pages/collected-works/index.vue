@@ -96,7 +96,11 @@ useHead({ title: '全集 — Know Graph Lab' })
 const store = useCollectedWorksStore()
 
 // 學科顯示順序；未列出的學科接在最後（按字母序），空組不顯示。
-const DISCIPLINE_ORDER = ['哲學', '宗教學', '宗教社會學', '神學', '佛學', '心理學', '社會學', '人類學']
+const DISCIPLINE_ORDER = ['哲學', '宗教學', '宗教社會學', '神學', '基督宗教研究', '佛學', '心理學', '社會學', '人類學']
+// 某些傘狀學科的次領域（era 層）要固定順序，不依生年（如基督宗教研究：新約→舊約→教會史）
+const ERA_ORDER: Record<string, string[]> = {
+  基督宗教研究: ['新約研究', '舊約研究', '教會史'],
+}
 
 // 依 sortYear（生年，BCE 為負）排序；缺者維持插入序、排在有值者之後
 function byYear(list: CwAuthor[]) {
@@ -152,10 +156,20 @@ const grouped = computed(() => {
       sections.push({ key: discipline, showEra: false, era: '', region: '', authors: byYear(list) })
     } else {
       // 兩層：先分年代（依組內最早生年），年代內再分地域
-      for (const [era, eraList] of groupSorted(list, (a) => a.era || '其他')) {
+      let eraEntries = groupSorted(list, (a) => a.era || '其他')
+      const eraOrder = ERA_ORDER[discipline]
+      if (eraOrder)
+        eraEntries = eraEntries.sort(
+          (x, y) =>
+            (eraOrder.indexOf(x[0]) < 0 ? 99 : eraOrder.indexOf(x[0])) -
+            (eraOrder.indexOf(y[0]) < 0 ? 99 : eraOrder.indexOf(y[0])),
+        )
+      for (const [era, eraList] of eraEntries) {
         let first = true
         for (const [region, regionList] of groupSorted(eraList, (a) => a.region || '其他')) {
-          sections.push({ key: `${era}|${region}`, showEra: first, era, region, authors: byYear(regionList) })
+          // region 為 '其他'（該作家未設地域）時不顯示地域小標
+          const regionLabel = region === '其他' ? '' : region
+          sections.push({ key: `${era}|${region}`, showEra: first, era, region: regionLabel, authors: byYear(regionList) })
           first = false
         }
       }
