@@ -6233,7 +6233,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "zh"
                       ],
-                      "status": "planned",
+                      "status": "done",
+                      ebookId: "9c44fe68-fc07-4d16-82dc-16206cc0d1bf",
                       "note": "弟子輯錄王陽明語錄與書信,系統呈現致良知‧知行合一等心學核心思想"
                 },
                 {
@@ -10248,7 +10249,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "zh"
                       ],
-                      "status": "copyright",
+                      "status": "done",
+                      ebookId: "541219a1-f998-4cc6-b9bd-c4f6178a9d7b",
                       "note": "以現代學術方法系統梳理先秦至近代中國哲學發展,奠定中國哲學史作為現代學科的基本框架"
                 },
                 {
@@ -10273,7 +10275,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                             "en",
                             "zh"
                       ],
-                      "status": "copyright",
+                      "status": "done",
+                      ebookId: "b2a5e482-7d4a-4941-a064-3c15c5cd595f",
                       "note": "以英文撰寫,長期是西方學界認識中國哲學的權威入門著作"
                 }
           ]
@@ -12482,7 +12485,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "fr"
                       ],
-                      "status": "copyright",
+                      "status": "done",
+                      ebookId: "964a53ed-9c33-4b22-8420-f71e19810033",
                       "note": "通俗演講整理成書，存在主義思想最廣為流傳的入門文本。"
                 },
                 {
@@ -12728,7 +12732,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "en"
                       ],
-                      "status": "copyright",
+                      "status": "done",
+                      ebookId: "2644ef5e-0beb-4a76-9e51-255a9399f62b",
                       "note": "代表作，系統分析反猶主義、帝國主義與極權統治的歷史脈絡。"
                 },
                 {
@@ -13550,7 +13555,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "fr"
                       ],
-                      "status": "copyright",
+                      "status": "done",
+                      ebookId: "acf454b2-b7e4-4dac-8110-17f311ede2ed",
                       "note": "代表作，以全景敞視監獄分析現代規訓權力的運作機制。"
                 },
                 {
@@ -16336,7 +16342,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned",
+                      "status": "done",
+                      ebookId: "d4fd8e79-eb34-4fc7-8d6d-bb344c176995",
                       "note": "西方哲學史最重要著作之一，發動「哥白尼式革命」。"
                 },
                 {
@@ -16348,7 +16355,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned",
+                      "status": "done",
+                      ebookId: "fb318069-5f1b-48d5-a742-54fd2f28be70",
                       "note": "系統論證道德律與自由意志，深化定言令式倫理學。"
                 },
                 {
@@ -16360,7 +16368,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned",
+                      "status": "done",
+                      ebookId: "468d8b9c-b590-4e85-9833-ffb38aff0bf0",
                       "note": "論美學判斷與目的論判斷，溝通自然與自由兩領域。"
                 },
                 {
@@ -17005,7 +17014,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned",
+                      "status": "done",
+                      ebookId: "456686c5-fa18-4be3-83bd-e8029426327e",
                       "note": "代表作，主張世界的內在本質是盲目無目的的意志。"
                 },
                 {
@@ -17597,7 +17607,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned",
+                      "status": "done",
+                      ebookId: "d12116ce-35db-44b6-bcf6-8513a4633b35",
                       "note": "代表作，以先知寓言體提出超人、永恆回歸等核心思想。"
                 },
                 {
@@ -17645,7 +17656,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "de"
                       ],
-                      "status": "planned",
+                      "status": "done",
+                      ebookId: "fd5eaad7-b05e-48cd-8467-c88e89870e73",
                       "note": "精神崩潰前夕完成，以格言體濃縮批判整個西方哲學傳統。"
                 },
                 {
@@ -27494,7 +27506,8 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                             "la",
                             "en"
                       ],
-                      "status": "planned",
+                      "status": "done",
+                      ebookId: "15b729dc-32cc-409f-bce0-e6aaedd08f27",
                       "note": "回應羅馬城陷落之責難，提出地上之城與上帝之城二元史觀。"
                 },
                 {
