@@ -60,6 +60,19 @@ for (let i = 0; i < ids.length; i += 100) {
 }
 console.log(`backfill 完成：${updated}/${ids.length} 本在 DB 中被標記（其餘為尚未入庫的 placeholder id）`);
 
+// 命名空間補標：全集確定命名空間但「尚未在 store 連 ebookId」的書。
+// 主要救 SBE 東方聖書（有獨立 /sacred-books-east portal、不在 collectedWorks store，
+// store-based backfill 永遠標不到）與潘尼卡等尚未連 hub 的卷。命名空間為確定性 id 根。
+const NS_COND = `collection IS NULL AND (
+  id::text LIKE '22222222%' OR id::text LIKE '33333333%' OR id::text LIKE '55555%'
+  OR id::text LIKE 'a0000000%' OR id::text LIKE 'b0000000%' OR id::text LIKE 'c0000000%'
+  OR id::text LIKE '70000000%')`;
+const nsRows = await runSql(
+  "命名空間補標（SBE／潘尼卡等未 store-link 的全集卷）",
+  `UPDATE ebooks SET collection='collected-works' WHERE ${NS_COND} RETURNING id;`
+);
+console.log(`命名空間補標：${Array.isArray(nsRows) ? nsRows.length : 0} 本`);
+
 const verify = await runSql(
   "verify",
   `SELECT count(*) FILTER (WHERE collection='collected-works') AS cw,
