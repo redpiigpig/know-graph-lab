@@ -8,6 +8,8 @@ description: Operate the Know-Graph-Lab ebook pipeline end-to-end. Use when work
 
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session（"exceeds the dimension limit for many-image requests"）。使用者一說要傳截圖，立刻提醒先確認尺寸；推薦 Win+Shift+S 框選或縮到 ≤ 1920px。
 
+> 📐 **設計／規格文檔（2026-07-23 從 repo 根目錄移入本 skill）**：[EBOOK_PIPELINE.md](EBOOK_PIPELINE.md)（系統概覽／資料流／DB schema／JSONL 結構／解析規則）＋ [DRIVE_STUDIO_STRUCTURE.md](DRIVE_STUDIO_STRUCTURE.md)（知識圖工作室 Drive 結構對照與分階段遷移，見 [[project_drive_studio_structure]]）。
+
 # Ebook Pipeline Skill
 
 End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL covers ingest, parse, OCR, standardize, DB back-fill, and reader-side features.
