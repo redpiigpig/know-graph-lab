@@ -22,8 +22,8 @@
           <div class="project-icon bg-purple-50 text-purple-600">🎓</div>
           <div>
             <h2 class="project-title">學位論文</h2>
-            <p class="project-desc">碩士論文與學士論文全文寫作系統</p>
-            <p class="text-xs text-purple-500 mt-2">碩士 · 學士</p>
+            <p class="project-desc">博士研究計畫、碩士論文與學士論文線上閱讀</p>
+            <p class="text-xs text-purple-500 mt-2">博士計畫 · 碩士 · 學士</p>
           </div>
         </NuxtLink>
 
