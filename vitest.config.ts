@@ -12,8 +12,10 @@ export default defineVitestConfig({
     // transform is cached so the wall-clock cost is small.
     fileParallelism: false,
     // Real-data episcopal mount is heavy (300+ branches / ~4800 bishops in happy-dom);
-    // default 10s is too tight for the mount + Nuxt env hook.
-    testTimeout: 30000,
-    hookTimeout: 30000,
+    // default 10s is too tight for the mount + Nuxt env hook. stores/collectedWorks.ts
+    // has grown to 35k+ lines → cold vite transform alone is ~33s, so the Nuxt setup
+    // hook needs headroom above that.
+    testTimeout: 60000,
+    hookTimeout: 60000,
   },
 })
