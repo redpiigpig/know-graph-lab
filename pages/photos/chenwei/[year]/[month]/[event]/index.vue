@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-[#f5f1ea]">
     <AppHeader>
       <template #actions>
-        <NuxtLink :to="`/photos/chenwei/${year}`" class="text-sm text-stone-500 hover:text-stone-900 transition">← {{ year }}</NuxtLink>
+        <NuxtLink :to="`/photos/chenwei/${year}/${month}`" class="text-sm text-stone-500 hover:text-stone-900 transition">← {{ Number(month) }} 月</NuxtLink>
       </template>
     </AppHeader>
 
@@ -14,19 +14,17 @@
         <span class="mx-2">/</span>
         <NuxtLink :to="`/photos/chenwei/${year}`" class="hover:text-stone-900">{{ year }}</NuxtLink>
         <span class="mx-2">/</span>
-        <span class="text-stone-700">{{ headerLabel }}</span>
+        <NuxtLink :to="`/photos/chenwei/${year}/${month}`" class="hover:text-stone-900">{{ Number(month) }} 月</NuxtLink>
+        <span class="mx-2">/</span>
+        <span class="text-stone-700">{{ eventName }}</span>
       </nav>
 
       <header class="mb-10 flex items-end justify-between flex-wrap gap-4 border-b border-stone-300/60 pb-6">
         <div class="flex items-end gap-3">
-          <h1 v-if="isMonth" class="font-serif text-6xl text-stone-900 leading-none tracking-tight">
-            {{ Number(segment) }}<span class="text-2xl text-stone-500 ml-1">月</span>
+          <h1 class="font-serif text-5xl text-stone-900 leading-none tracking-tight flex items-center gap-3">
+            <span class="text-4xl">📁</span>{{ eventName }}
           </h1>
-          <h1 v-else class="font-serif text-5xl text-stone-900 leading-none tracking-tight flex items-center gap-3">
-            <span class="text-4xl">{{ sourceIcon }}</span>{{ headerLabel }}
-          </h1>
-          <p v-if="isMonth" class="text-stone-500 text-sm pb-2">{{ year }} ／ {{ monthName }}</p>
-          <p v-else class="text-stone-500 text-sm pb-2">{{ year }} 年</p>
+          <p class="text-stone-500 text-sm pb-2">{{ year }} ／ {{ Number(month) }} 月</p>
         </div>
         <div v-if="!loading" class="flex items-center gap-4 flex-wrap justify-end">
           <div class="text-right font-serif">
@@ -55,33 +53,11 @@
         </div>
       </header>
 
-      <!-- 月內事件夾（旅遊）卡片 -->
-      <div v-if="!loading && !errMsg && hasEvents" class="mb-8">
-        <p class="text-[10px] uppercase tracking-[0.25em] text-stone-500 mb-3">旅遊 · 事件</p>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-          <NuxtLink
-            v-for="ev in events"
-            :key="ev.name"
-            :to="`/photos/chenwei/${year}/${segment}/${encodeURIComponent(ev.name)}`"
-            class="bucket-card bucket-card--ev"
-            :title="ev.name"
-          >
-            <div class="flex items-center gap-2 min-w-0">
-              <span class="text-xl shrink-0">📁</span>
-              <span class="font-serif text-stone-800 text-base truncate">{{ ev.name }}</span>
-            </div>
-            <div class="mt-1 text-[10px] tracking-widest uppercase text-stone-700">
-              {{ ev.count.toLocaleString() }}<span class="ml-1">張</span>
-            </div>
-          </NuxtLink>
-        </div>
-      </div>
-
       <div v-if="loading" class="text-stone-400 text-sm">載入中…</div>
       <div v-else-if="errMsg" class="text-red-500 text-sm">{{ errMsg }}</div>
-      <div v-else-if="!files.length" class="py-16 text-center">
-        <div class="font-serif text-2xl text-stone-300 mb-2">— {{ hasEvents ? '此月無散照' : '空' }} —</div>
-        <div class="text-stone-500 text-sm">{{ hasEvents ? '照片都在上方事件夾內' : '這裡沒有檔案' }}</div>
+      <div v-else-if="!files.length" class="py-20 text-center">
+        <div class="font-serif text-2xl text-stone-300 mb-2">— 空 —</div>
+        <div class="text-stone-500 text-sm">這裡沒有檔案</div>
       </div>
 
       <div v-else class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
@@ -124,9 +100,6 @@
             <div class="mt-1 text-[10px] uppercase tracking-widest">{{ f.ext.replace('.', '') }}</div>
           </div>
           <span v-if="f.kind === 'video'" class="photo-tile__play" aria-hidden="true">▶</span>
-          <span class="photo-tile__badge" :title="sourceTitle(f.source)">
-            {{ tileIcon(f.kind, f.source) }}
-          </span>
           <span
             v-if="selectMode"
             class="photo-tile__check"
@@ -186,11 +159,6 @@
               class="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded text-xs shrink-0"
             >▶ 用 Google Drive 開啟（若上方無法播放請點這）</a>
           </div>
-          <div v-else-if="current.kind === 'video'" class="text-stone-300 text-center p-8">
-            <div class="text-5xl mb-2">🎬</div>
-            <div class="text-sm">{{ current.name }}</div>
-            <div class="text-xs mt-2">影片僅在本機可播放</div>
-          </div>
           <div v-else class="text-stone-400 text-center p-8">
             <div class="text-5xl mb-2">📄</div>
             <div class="text-sm">{{ current.name }}</div>
@@ -215,45 +183,23 @@ interface PhotoFile {
   size: number;
   mtime: number;
   url: string;
+  driveId?: string;
 }
 
-// r2 後端（雲端）：影片原檔不在 R2，改用 driveId 嵌 Drive 播放器（見 template）。
 const isCloud = useRuntimeConfig().public.photoBackend === "r2";
-// Drive 縮圖若被擋（iPad 第三方 cookie）就 fallback 成 🎬 占位。
 const failedThumbs = reactive(new Set<string>());
 
 const route = useRoute();
 const year = computed(() => String(route.params.year || ""));
-const segment = computed(() => String(route.params.month || ""));
-const isMonth = computed(() => /^(0[1-9]|1[0-2])$/.test(segment.value));
-const isEvent = computed(() =>
-  !isMonth.value && segment.value !== "screenshots" && segment.value !== "downloads"
-);
-const headerLabel = computed(() =>
-  isMonth.value ? `${Number(segment.value)} 月`
-  : segment.value === "screenshots" ? "截圖"
-  : segment.value === "downloads" ? "下載"
-  : decodeURIComponent(segment.value)
-);
-const sourceIcon = computed(() =>
-  segment.value === "screenshots" ? "📸"
-  : segment.value === "downloads" ? "🌐"
-  : isEvent.value ? "📁"
-  : ""
-);
+const month = computed(() => String(route.params.month || ""));
+const eventName = computed(() => decodeURIComponent(String(route.params.event || "")));
+const segment = computed(() => `${month.value}/${eventName.value}`);
 
-useHead({ title: () => `${year.value} ${headerLabel.value} — 辰瑋相片` });
-
-const MONTH_NAMES = ["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"];
-const monthName = computed(() =>
-  isMonth.value ? (MONTH_NAMES[Number(segment.value) - 1] || "") : ""
-);
+useHead({ title: () => `${eventName.value} — ${year.value}／${Number(month.value)}月 — 辰瑋相片` });
 
 const loading = ref(true);
 const errMsg = ref("");
 const files = ref<PhotoFile[]>([]);
-const events = ref<{ name: string; count: number }[]>([]);
-const hasEvents = computed(() => isMonth.value && events.value.length > 0);
 const viewerIndex = ref<number | null>(null);
 const current = computed(() => (viewerIndex.value === null ? null : files.value[viewerIndex.value] ?? null));
 
@@ -292,10 +238,6 @@ async function deleteSelected() {
       "/api/photos/delete",
       { method: "POST", body: { items } }
     );
-    const removedNames = new Set(
-      items.slice(0, r.deleted).map((it) => it.name)
-    );
-    // 簡單作法：移除所有「沒在 errors 裡」的 name；errors 中的留下
     const errorNames = new Set((r.errors || []).map((e) => (e.item as { name: string }).name));
     files.value = files.value.filter((f) => !(selected.value.has(f.name) && !errorNames.has(f.name)));
     exitSelect();
@@ -312,23 +254,8 @@ async function deleteSelected() {
 function renderableImage(ext: string) {
   return [".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif", ".bmp"].includes(ext);
 }
-/** 把原檔 signed URL 改成同 endpoint 同 sig 的 thumb URL（加寬度參數）。
- *  width ∈ {240, 480, 800, 1600} — 後端白名單。 */
 function thumbUrl(url: string, width: number): string {
   return url.replace(/\/file\?/, "/thumb?") + `&w=${width}`;
-}
-function tileIcon(kind: string, source: string) {
-  if (source === "screenshot") return "📸";
-  if (source === "download") return "🌐";
-  if (source === "event") return "📁";
-  if (kind === "video") return "🎬";
-  return "📱";
-}
-function sourceTitle(source: string) {
-  if (source === "screenshot") return "螢幕截圖";
-  if (source === "download") return "網路下載";
-  if (source === "event") return "事件資料夾";
-  return "手機／相機拍攝";
 }
 function prev() {
   if (viewerIndex.value === null) return;
@@ -359,7 +286,6 @@ function onTouchEnd(e: TouchEvent) {
   const dx = t.clientX - touchStart.x;
   const dy = t.clientY - touchStart.y;
   const dt = Date.now() - touchStart.t;
-  // 水平滑超過 50px、時間 < 600ms、水平 > 垂直 → 視為滑動
   if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) && dt < 600) {
     if (dx < 0) next(); else prev();
   }
@@ -368,11 +294,10 @@ function onTouchEnd(e: TouchEvent) {
 onMounted(async () => {
   window.addEventListener("keydown", onKey);
   try {
-    const r = await authedFetch<{ files: PhotoFile[]; events?: { name: string; count: number }[] }>(
-      `/api/photos/${year.value}/${encodeURIComponent(segment.value)}/files`
+    const r = await authedFetch<{ files: PhotoFile[] }>(
+      `/api/photos/${year.value}/${month.value}/${encodeURIComponent(eventName.value)}/files`
     );
     files.value = r.files || [];
-    events.value = r.events || [];
   } catch (e: unknown) {
     errMsg.value = (e as { message?: string })?.message ?? String(e);
   } finally {
@@ -383,24 +308,6 @@ onBeforeUnmount(() => window.removeEventListener("keydown", onKey));
 </script>
 
 <style scoped>
-.bucket-card {
-  position: relative;
-  display: block;
-  background: #f1ede4;
-  border: 1px solid rgb(214 211 209 / 0.7);
-  border-radius: 12px;
-  padding: 10px 14px 12px;
-  text-decoration: none;
-  color: inherit;
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-}
-.bucket-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 22px -14px rgba(60, 30, 0, 0.18);
-  border-color: rgb(168 162 158 / 0.9);
-}
-.bucket-card--ev { background: #f1ede4; }
-
 .photo-tile {
   position: relative;
   display: block;
@@ -419,22 +326,6 @@ onBeforeUnmount(() => window.removeEventListener("keydown", onKey));
 .photo-tile:focus-visible {
   outline: 2px solid rgb(217 119 6);
   outline-offset: 2px;
-}
-.photo-tile__badge {
-  position: absolute;
-  top: 6px;
-  right: 6px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  font-size: 12px;
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(4px);
-  border-radius: 8px;
-  z-index: 2;
-  pointer-events: none;
 }
 .photo-tile--selected {
   outline: 3px solid rgb(217 119 6);

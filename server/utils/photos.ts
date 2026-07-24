@@ -19,10 +19,11 @@ interface IndexFolderNode {
 }
 interface IndexChenweiYear {
   monthCounts: Record<string, number>;
+  monthEvents?: Record<string, { name: string; count: number }[]>; // {mm: [...]} 月份底下的事件夾
   screenshots: number;
   downloads: number;
   events: { name: string; count: number }[];
-  buckets: Record<string, IndexFile[]>; // "01".."12" | "screenshots" | "downloads" | <event>
+  buckets: Record<string, IndexFile[]>; // "01".."12" | "MM/<event>" | "screenshots" | "downloads" | <year-event>
 }
 interface IndexChenweiLib {
   totalFiles: number;
@@ -251,7 +252,16 @@ export function bucketDir(year: string, segment: Segment): string {
   }
   if (segment === "screenshots") return path.join(yearRoot, `${year}截圖`);
   if (segment === "downloads") return path.join(yearRoot, `${year}下載`);
-  // 事件資料夾：任意名稱，但必須是 yearRoot 的直接子資料夾且不能是 path traversal
+  // 月內事件夾：MM/事件名（單層巢狀，位於 {year}.{MM}/ 底下）
+  const nested = segment.match(/^(0[1-9]|1[0-2])\/(.+)$/);
+  if (nested) {
+    const [, mm, evName] = nested;
+    if (!evName || evName.includes("/") || evName.includes("\\") || evName.startsWith(".")) {
+      throw createError({ statusCode: 400, message: `Invalid segment: ${segment}` });
+    }
+    return path.join(yearRoot, `${year}.${mm}`, evName);
+  }
+  // 年層事件資料夾：任意名稱，但必須是 yearRoot 的直接子資料夾且不能是 path traversal
   if (!segment || segment.includes("/") || segment.includes("\\") || segment.startsWith(".")) {
     throw createError({ statusCode: 400, message: `Invalid segment: ${segment}` });
   }
@@ -513,24 +523,32 @@ export function listYearsFromIndex(idx: PhotoIndex):
   const out: { year: string; total: number; monthsWithPhotos: number }[] = [];
   for (const [year, yd] of Object.entries(cw.years)) {
     let total = 0;
-    let monthsWithPhotos = 0;
-    for (const c of Object.values(yd.monthCounts)) {
+    const activeMonths = new Set<string>();
+    for (const [mm, c] of Object.entries(yd.monthCounts)) {
       total += c;
-      if (c > 0) monthsWithPhotos++;
+      if (c > 0) activeMonths.add(mm);
     }
-    // 加上 screenshots / downloads / events
+    // 月內事件夾的照片也計入年總數，且該月視為「有照片」
+    for (const [mm, evs] of Object.entries(yd.monthEvents ?? {})) {
+      for (const e of evs) {
+        total += e.count;
+        if (e.count > 0) activeMonths.add(mm);
+      }
+    }
+    // 加上 screenshots / downloads / 年層 events
     total += yd.screenshots + yd.downloads;
     for (const e of yd.events) total += e.count;
-    out.push({ year, total, monthsWithPhotos });
+    out.push({ year, total, monthsWithPhotos: activeMonths.size });
   }
   out.sort((a, b) => Number(b.year) - Number(a.year));
   return out;
 }
 
-/** Chenwei 單一年份的月／截圖／下載／事件統計（給 /api/photos/[year]/months）。 */
+/** Chenwei 單一年份的月／截圖／下載／事件統計（給 /api/photos/[year]/months）。
+ *  months[].eventCount = 該月底下事件夾數；讓年份頁能標示哪些月份有事件。 */
 export function getYearMonthsFromIndex(idx: PhotoIndex, year: string):
   {
-    months: { month: string; count: number }[];
+    months: { month: string; count: number; eventCount: number }[];
     screenshots: number;
     downloads: number;
     events: { name: string; count: number }[];
@@ -540,8 +558,17 @@ export function getYearMonthsFromIndex(idx: PhotoIndex, year: string):
   if (!cw) return null;
   const yd = cw.years[year];
   if (!yd) return { months: [], screenshots: 0, downloads: 0, events: [] };
-  const months = Object.entries(yd.monthCounts)
-    .map(([month, count]) => ({ month, count }))
+  const monthEvents = yd.monthEvents ?? {};
+  const monthKeys = new Set([
+    ...Object.keys(yd.monthCounts),
+    ...Object.keys(monthEvents),
+  ]);
+  const months = [...monthKeys]
+    .map((month) => ({
+      month,
+      count: yd.monthCounts[month] ?? 0,
+      eventCount: (monthEvents[month] ?? []).length,
+    }))
     .sort((a, b) => a.month.localeCompare(b.month));
   return {
     months,
@@ -549,6 +576,17 @@ export function getYearMonthsFromIndex(idx: PhotoIndex, year: string):
     downloads: yd.downloads,
     events: yd.events.slice(),
   };
+}
+
+/** Chenwei 單一月份底下的事件夾清單（給 /api/photos/[year]/[month]/files 附帶）。 */
+export function getMonthEventsFromIndex(idx: PhotoIndex, year: string, month: string):
+  { name: string; count: number }[]
+{
+  const cw = idx.libraries.chenwei;
+  if (!cw) return [];
+  const yd = cw.years[year];
+  if (!yd) return [];
+  return (yd.monthEvents?.[month] ?? []).slice();
 }
 
 /** Chenwei 單一 segment（月份／截圖／下載／事件）的檔案清單（給 /api/photos/[year]/[month]/files）。 */

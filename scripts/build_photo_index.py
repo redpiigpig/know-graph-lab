@@ -155,6 +155,7 @@ def build_chenwei(root: Path):
         print(f"  [chenwei] {year}", flush=True)
         y = {
             "monthCounts": {},
+            "monthEvents": {},   # {mm: [{name, count}]} 月份底下的事件子資料夾
             "screenshots": 0,
             "downloads": 0,
             "events": [],
@@ -165,13 +166,25 @@ def build_chenwei(root: Path):
                 continue
             name = sub.name
             sub_path = Path(sub.path)
-            # YYYY.MM 月份
+            # YYYY.MM 月份（含月內事件子資料夾，遞迴一層）
             if len(name) == 7 and name[:4] == year and name[4] == "." and name[5:].isdigit():
                 mm = name[5:]
-                files = list_files(sub_path)
+                files = list_files(sub_path)          # 月份散照（直接子檔）
                 y["buckets"][mm] = files
                 y["monthCounts"][mm] = len(files)
                 out["totalFiles"] += len(files)
+                # 月內事件子資料夾：bucket key = "{mm}/{事件名}"
+                month_events = []
+                for ev in os.scandir(sub_path):
+                    if not ev.is_dir() or ev.name.startswith("."):
+                        continue
+                    ev_files = list_files(Path(ev.path))
+                    y["buckets"][f"{mm}/{ev.name}"] = ev_files
+                    month_events.append({"name": ev.name, "count": len(ev_files)})
+                    out["totalFiles"] += len(ev_files)
+                if month_events:
+                    month_events.sort(key=lambda e: e["name"])
+                    y["monthEvents"][mm] = month_events
                 continue
             # 截圖
             if name == f"{year}截圖":

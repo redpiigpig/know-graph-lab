@@ -32,6 +32,7 @@ import {
   summarizeLibraryFromIndex,
   listYearsFromIndex,
   getYearMonthsFromIndex,
+  getMonthEventsFromIndex,
   listFilesFromIndex,
   listLibraryFolderFromIndex,
   r2ThumbKey,
@@ -56,12 +57,14 @@ const idx = {
       years: {
         '2024': {
           monthCounts: { '01': 2, '03': 1, '07': 0 },
+          monthEvents: { '03': [{ name: '03.19旅遊', count: 2 }] },
           screenshots: 3,
           downloads: 1,
           events: [{ name: '畢業典禮', count: 4 }],
           buckets: {
             '01': [file('2024-01-01(1).jpg'), file('2024-01-02(1).jpg')],
             '03': [file('2024-03-09(1).jpg')],
+            '03/03.19旅遊': [file('2024-03-19(1).jpg'), file('2024-03-19(2).jpg')],
             screenshots: [file('S2024-01-05(1).png', 'image', '.png'), file('S2024-01-06(1).png', 'image', '.png'), file('S2024-01-07(1).png', 'image', '.png')],
             downloads: [file('D2024-02-02(1).webp', 'image', '.webp')],
             畢業典禮: [file('a.jpg'), file('b.jpg'), file('c.mp4', 'video', '.mp4'), file('d.jpg')],
@@ -210,8 +213,8 @@ describe('listYearsFromIndex (chenwei)', () => {
     const years = listYearsFromIndex(idx as any)!
     expect(years.map((y) => y.year)).toEqual(['2024', '2023']) // desc
     const y2024 = years.find((y) => y.year === '2024')!
-    expect(y2024.total).toBe(11) // (2+1+0) + 3ss + 1dl + 4event
-    expect(y2024.monthsWithPhotos).toBe(2) // 01, 03 (07 is empty)
+    expect(y2024.total).toBe(13) // (2+1+0) + 3ss + 1dl + 4event + 2 month-event(03.19旅遊)
+    expect(y2024.monthsWithPhotos).toBe(2) // 01, 03 (07 is empty; 03 already active)
     expect(years.find((y) => y.year === '2023')!.total).toBe(1)
   })
 })
@@ -220,9 +223,9 @@ describe('getYearMonthsFromIndex (chenwei)', () => {
   it('returns sorted months + segment counts', () => {
     const r = getYearMonthsFromIndex(idx as any, '2024')!
     expect(r.months).toEqual([
-      { month: '01', count: 2 },
-      { month: '03', count: 1 },
-      { month: '07', count: 0 },
+      { month: '01', count: 2, eventCount: 0 },
+      { month: '03', count: 1, eventCount: 1 }, // 03 底下有 1 個事件夾
+      { month: '07', count: 0, eventCount: 0 },
     ])
     expect(r.screenshots).toBe(3)
     expect(r.downloads).toBe(1)
@@ -232,6 +235,36 @@ describe('getYearMonthsFromIndex (chenwei)', () => {
     expect(getYearMonthsFromIndex(idx as any, '1999')).toEqual({
       months: [], screenshots: 0, downloads: 0, events: [],
     })
+  })
+})
+
+// ---- 月內事件夾（year → month → event 三層巢狀）----
+describe('month-nested events (chenwei)', () => {
+  it('getMonthEventsFromIndex lists a month\'s event folders', () => {
+    expect(getMonthEventsFromIndex(idx as any, '2024', '03')).toEqual([{ name: '03.19旅遊', count: 2 }])
+    expect(getMonthEventsFromIndex(idx as any, '2024', '01')).toEqual([]) // 無事件夾
+    expect(getMonthEventsFromIndex(idx as any, '1999', '03')).toEqual([]) // 未知年
+  })
+  it('listFilesFromIndex resolves an "MM/event" segment, tagged event + signed', () => {
+    const r = listFilesFromIndex(idx as any, '2024', '03/03.19旅遊')!
+    expect(r.map((f) => f.name)).toEqual(['2024-03-19(1).jpg', '2024-03-19(2).jpg'])
+    expect(r.every((f) => f.source === 'event')).toBe(true)
+    // 簽章 URL 內含編碼後的 m=03/03.19旅遊
+    expect(r[0]!.url).toContain(encodeURIComponent('03/03.19旅遊'))
+  })
+  it('bucketDir maps "MM/event" to {year}.{MM}/{event} on disk', () => {
+    const d = bucketDir('2024', '03/03.19旅遊')
+    expect(d).toContain('2024.03')
+    expect(d).toContain('03.19旅遊')
+  })
+  it('bucketDir rejects a nested path with traversal / bad month', () => {
+    expect(() => bucketDir('2024', '03/../etc')).toThrow()
+    expect(() => bucketDir('2024', '13/x')).toThrow() // 13 非合法月份 → 落到年層事件檢查 → 含 / 被擋
+  })
+  it('thumbCacheKey for a nested segment matches the sync-script parts', () => {
+    const parts = ['chenwei', '2024', '03/03.19旅遊', '2024-03-19(1).jpg']
+    const expected = createHash('sha256').update(parts.join('|')).digest('hex').slice(0, 32)
+    expect(thumbCacheKey(parts)).toBe(expected)
   })
 })
 

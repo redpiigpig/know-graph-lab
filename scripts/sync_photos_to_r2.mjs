@@ -181,7 +181,11 @@ async function processChenwei(idx, stats, existing) {
       if (/^(0[1-9]|1[0-2])$/.test(bucket)) folderName = `${year}.${bucket}`;
       else if (bucket === "screenshots") folderName = `${year}截圖`;
       else if (bucket === "downloads") folderName = `${year}下載`;
-      else folderName = bucket;
+      else if (/^(0[1-9]|1[0-2])\//.test(bucket)) {
+        // 月內事件夾 "MM/事件"：實體路徑為 {year}.{MM}/{事件}
+        const [mm, ...rest] = bucket.split("/");
+        folderName = path.join(`${year}.${mm}`, rest.join("/"));
+      } else folderName = bucket;
       const folder = path.join(root, `${year}相片`, folderName);
       for (const f of files) {
         await processFile(path.join(folder, f.name), ["chenwei", year, bucket, f.name], stats, existing);
