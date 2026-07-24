@@ -167,6 +167,50 @@ def _split_numbered(text: str):
     return out or [re.sub(r"\s*\n\s*", "", text)]
 
 
+# ── NVIDIA 保守 OCR 清理（逐節、cache、resumable）──────────────────────
+# 🚨 只修字形錯＋刪跑版 bleed；嚴禁改寫/增刪/翻譯句子、嚴禁動神學措辭與結構詞。
+CLEAN_SYS = (
+    "你是中文古籍 OCR 校對員，正在校對《神學大全》中譯本（中華道明會）掃描 OCR 的片段。"
+    "只准做三件事：(1) 修正明顯的 OCR 字形誤認（例：督貴→督責、皮之→反之、啞益→有益、"
+    "範圓→範圍、天玉→天主、學間→學問、己→已、刁→可）；(2) 刪除混入正文的跑版頁眉殘字、"
+    "書名頁眉、孤立頁碼與掃描雜符；(3) 修正明顯錯置的標點。"
+    "嚴禁：改寫、增補、刪節、翻譯、摘要或解釋任何句子；嚴禁改動神學論證的用詞或意義；"
+    "嚴禁刪改結構詞（質疑、反之、正解、我解答如下、釋疑）與難題／釋疑的編號。"
+    "逐字保留原文語序與內容，只輸出校對後的文字本身，不要任何前言、說明或標記。"
+)
+
+
+def _clean_dir():
+    import translate_ebook_to_zh as te
+    d = Path(te.os.environ.get("TEMP", "c:/tmp")) if False else Path("c:/tmp/aquinas_clean")
+    d.mkdir(parents=True, exist_ok=True)
+    return d
+
+
+def clean_body_nvidia(vol: int, art_idx: int, raw: str) -> str:
+    """NVIDIA 保守清理一節內文；逐節 cache 到 c:/tmp/aquinas_clean/{vol}_{art}.txt。"""
+    import translate_ebook_to_zh as te
+    cache = _clean_dir() / f"{vol:02d}_{art_idx:04d}.txt"
+    if cache.exists():
+        return cache.read_text(encoding="utf-8")
+    raw = raw.strip()
+    if len(raw) < 15:  # 太短不值得呼叫
+        cache.write_text(raw, encoding="utf-8")
+        return raw
+    try:
+        out = te.nvidia_chat(raw, max_tokens=4000, system=CLEAN_SYS, temperature=0.1)
+    except Exception as e:  # noqa: BLE001 — 失敗退回原文，別中斷整批
+        print(f"    ⚠ clean 冊{vol} 節{art_idx} 失敗，留原文: {e}", flush=True)
+        return raw
+    out = out.strip()
+    # 防呆：若模型吐掉太多（<40% 或 >180%）疑似改寫/截斷 → 退回原文
+    if not out or not (0.4 <= len(out) / max(len(raw), 1) <= 1.8):
+        print(f"    ⚠ clean 冊{vol} 節{art_idx} 長度異常({len(raw)}→{len(out)})，留原文", flush=True)
+        out = raw
+    cache.write_text(out, encoding="utf-8")
+    return out
+
+
 def build_qtitles(rows: list[dict]) -> dict[int, str]:
     """從 chunk chapter_path + 正文題目標題，建 題號→題名 對照。"""
     titles: dict[int, str] = {}
@@ -187,8 +231,8 @@ def _load_source(src_ebid: str) -> list[dict]:
     return [json.loads(l) for l in p.read_text(encoding="utf-8").splitlines() if l.strip()]
 
 
-def build_volume(vol: int):
-    """一冊 → quaestio chunks（cover + 每節一 chunk）。"""
+def build_volume(vol: int, *, clean: bool = False):
+    """一冊 → quaestio chunks（cover + 每節一 chunk）。clean=True 時逐節走 NVIDIA 保守清理。"""
     src_ebid, vol_title, vol_sub = REGISTRY[vol]
     rows = _load_source(src_ebid)
     qtitles = build_qtitles(rows)
@@ -197,6 +241,11 @@ def build_volume(vol: int):
     first = OPENER.search(full)
     body_text = full[first.start():] if first else full
     arts = split_articles(body_text)
+    if clean:
+        for k, a in enumerate(arts):
+            a["body"] = clean_body_nvidia(vol, k, a["body"])
+            if k % 20 == 0:
+                print(f"    …clean 冊{vol} {k}/{len(arts)} 節", flush=True)
 
     book = f"神學大全‧第{vol}冊 {vol_title}"
     cover = {
@@ -276,13 +325,14 @@ def main():
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--inspect", action="store_true")
     ap.add_argument("--upload", action="store_true")
+    ap.add_argument("--clean", action="store_true", help="逐節 NVIDIA 保守 OCR 清理（過夜批次）")
     a = ap.parse_args()
 
     vols = list(REGISTRY) if a.all else [a.vol] if a.vol else []
     if not vols:
         ap.error("需 --inspect --vol N / --vol N / --all")
     for v in vols:
-        chunks = build_volume(v)
+        chunks = build_volume(v, clean=a.clean)
         arts = len(chunks) - 1
         chars = sum(len(c["content"]) for c in chunks)
         print(f"[冊{v}] {REGISTRY[v][1]}: {arts} 節 chunk | {chars:,} 字 | {NEW_EBID.format(v)}", flush=True)
