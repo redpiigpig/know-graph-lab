@@ -85,8 +85,16 @@ def chinese_to_int(s: str) -> int:
 
 # ── 純函式：清理 / 切段 / 標記 ─────────────────────────────────────────
 
+# 結構標記規則修復（切段仰賴這些詞；OCR 常把「反之」誤成「皮之」→ 補回，否則 mark_zones
+# 抓不到 sed contra 區）。只收「在這部書裡不可能是正字」的無歧義結構修復，避免誤改散文。
+STRUCT_FIXES = [
+    ("皮之", "反之"),      # sed contra 標記常見誤認
+    ("正解我解答如下", "正解我解答如下"),  # placeholder（保留，日後可補正解變體）
+]
+
+
 def clean_ocr_light(text: str) -> str:
-    """輕量規則清理：純頁碼行、行首散落單數字、多餘空白。**不動逐字錯字**。"""
+    """輕量規則清理：純頁碼行、多餘空白、結構標記修復。**不動散文逐字錯字**（交給 LLM）。"""
     out = []
     for ln in text.split("\n"):
         s = ln.strip()
@@ -97,6 +105,8 @@ def clean_ocr_light(text: str) -> str:
         out.append(s)
     joined = "\n".join(out)
     joined = re.sub(r"[ \t　]+", "", joined)  # CJK 間去空白
+    for wrong, right in STRUCT_FIXES:
+        joined = joined.replace(wrong, right)
     return joined
 
 
@@ -187,8 +197,65 @@ def _clean_dir():
     return d
 
 
-def clean_body_nvidia(vol: int, art_idx: int, raw: str) -> str:
-    """NVIDIA 保守清理一節內文；逐節 cache 到 c:/tmp/aquinas_clean/{vol}_{art}.txt。"""
+OR_MODEL = "nvidia/nemotron-3-super-120b-a12b:free"
+OR_URL = "https://openrouter.ai/api/v1/chat/completions"
+
+
+def _openrouter_keys() -> list[str]:
+    import os
+    return [os.environ[f"OPENROUTER_API_Key_{i}"]
+            for i in range(1, 9) if os.environ.get(f"OPENROUTER_API_Key_{i}")]
+
+
+def _openrouter_clean_call(raw: str, ki: int = 0) -> str:
+    """OpenRouter（免費 nemotron，獨立池）保守清理一段；ki 起始 key，429/錯誤輪其餘 key。"""
+    import requests
+    keys = _openrouter_keys()
+    if not keys:
+        raise RuntimeError("no OPENROUTER_API_Key_* in env")
+    body = {"model": OR_MODEL, "temperature": 0.1,
+            "messages": [{"role": "system", "content": CLEAN_SYS},
+                         {"role": "user", "content": raw}]}
+    n = len(keys)
+    for off in range(n):
+        key = keys[(ki + off) % n]
+        try:
+            r = requests.post(OR_URL, headers={"Authorization": f"Bearer {key}"},
+                              json=body, timeout=120)
+        except Exception:  # noqa: BLE001
+            continue
+        if r.status_code == 200:
+            try:
+                return r.json()["choices"][0]["message"]["content"].strip()
+            except (KeyError, IndexError):
+                continue
+        # 429/5xx → 輪下一把 key
+    raise RuntimeError(f"all {n} OpenRouter keys failed")
+
+
+def _sonnet_clean_call(raw: str) -> str:
+    """Sonnet 保守清理一段；系統提示＝CLEAN_SYS，含 429/連線退避（共用 OAuth 帳號）。"""
+    import time as _t
+    import translate_ebook_to_zh as te
+    te._refresh_anthropic_client_if_creds_changed()
+    for attempt, wait in enumerate((0, 30, 90, 180, 300), start=1):
+        if wait:
+            _t.sleep(wait)
+        try:
+            msg = te._anthropic_client.messages.create(
+                model=te.SONNET_MODEL, max_tokens=8000, system=CLEAN_SYS,
+                messages=[{"role": "user", "content": raw}],
+            )
+            return "".join(b.text for b in msg.content if hasattr(b, "text")).strip()
+        except Exception as e:  # noqa: BLE001
+            if attempt >= 5:
+                raise
+            print(f"      sonnet retry {attempt}: {type(e).__name__}", flush=True)
+    raise RuntimeError("sonnet exhausted retries")
+
+
+def clean_body(vol: int, art_idx: int, raw: str, engine: str = "openrouter") -> str:
+    """保守清理一節內文（engine: openrouter|sonnet|nvidia）；逐節 cache＋長度防呆，resumable。"""
     import translate_ebook_to_zh as te
     cache = _clean_dir() / f"{vol:02d}_{art_idx:04d}.txt"
     if cache.exists():
@@ -198,12 +265,17 @@ def clean_body_nvidia(vol: int, art_idx: int, raw: str) -> str:
         cache.write_text(raw, encoding="utf-8")
         return raw
     try:
-        out = te.nvidia_chat(raw, max_tokens=4000, system=CLEAN_SYS, temperature=0.1)
-    except Exception as e:  # noqa: BLE001 — 失敗退回原文，別中斷整批
+        if engine == "openrouter":
+            out = _openrouter_clean_call(raw, ki=art_idx)
+        elif engine == "sonnet":
+            out = _sonnet_clean_call(raw)
+        else:
+            out = te.nvidia_chat(raw, max_tokens=4000, system=CLEAN_SYS, temperature=0.1)
+    except Exception as e:  # noqa: BLE001 — 失敗退回原文，別中斷整批（不 cache，下輪重試）
         print(f"    ⚠ clean 冊{vol} 節{art_idx} 失敗，留原文: {e}", flush=True)
         return raw
     out = out.strip()
-    # 防呆：若模型吐掉太多（<40% 或 >180%）疑似改寫/截斷 → 退回原文
+    # 防呆：吐掉太多（<40%）或膨脹（>180%）疑似改寫/截斷 → 退回原文
     if not out or not (0.4 <= len(out) / max(len(raw), 1) <= 1.8):
         print(f"    ⚠ clean 冊{vol} 節{art_idx} 長度異常({len(raw)}→{len(out)})，留原文", flush=True)
         out = raw
@@ -231,8 +303,9 @@ def _load_source(src_ebid: str) -> list[dict]:
     return [json.loads(l) for l in p.read_text(encoding="utf-8").splitlines() if l.strip()]
 
 
-def build_volume(vol: int, *, clean: bool = False):
-    """一冊 → quaestio chunks（cover + 每節一 chunk）。clean=True 時逐節走 NVIDIA 保守清理。"""
+def build_volume(vol: int, *, clean: bool = False, engine: str = "openrouter"):
+    """一冊 → quaestio chunks（cover + 每節一 chunk）。clean=True 時逐節走保守 OCR 清理
+    （openrouter 引擎走 8-key 並行）。"""
     src_ebid, vol_title, vol_sub = REGISTRY[vol]
     rows = _load_source(src_ebid)
     qtitles = build_qtitles(rows)
@@ -242,10 +315,23 @@ def build_volume(vol: int, *, clean: bool = False):
     body_text = full[first.start():] if first else full
     arts = split_articles(body_text)
     if clean:
-        for k, a in enumerate(arts):
-            a["body"] = clean_body_nvidia(vol, k, a["body"])
-            if k % 20 == 0:
-                print(f"    …clean 冊{vol} {k}/{len(arts)} 節", flush=True)
+        workers = 8 if engine == "openrouter" else 1
+        if workers > 1:
+            from concurrent.futures import ThreadPoolExecutor
+            done = [0]
+            def _do(k_a):
+                k, a = k_a
+                a["body"] = clean_body(vol, k, a["body"], engine=engine)
+                done[0] += 1
+                if done[0] % 20 == 0:
+                    print(f"    …clean({engine}) 冊{vol} {done[0]}/{len(arts)} 節", flush=True)
+            with ThreadPoolExecutor(max_workers=workers) as ex:
+                list(ex.map(_do, list(enumerate(arts))))
+        else:
+            for k, a in enumerate(arts):
+                a["body"] = clean_body(vol, k, a["body"], engine=engine)
+                if k % 20 == 0:
+                    print(f"    …clean({engine}) 冊{vol} {k}/{len(arts)} 節", flush=True)
 
     book = f"神學大全‧第{vol}冊 {vol_title}"
     cover = {
@@ -325,14 +411,17 @@ def main():
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--inspect", action="store_true")
     ap.add_argument("--upload", action="store_true")
-    ap.add_argument("--clean", action="store_true", help="逐節 NVIDIA 保守 OCR 清理（過夜批次）")
+    ap.add_argument("--clean", action="store_true", help="逐節保守 OCR 清理（過夜批次）")
+    ap.add_argument("--engine", default="openrouter",
+                    choices=["openrouter", "sonnet", "nvidia"],
+                    help="清理引擎（預設 openrouter，免費獨立池 8-key 並行）")
     a = ap.parse_args()
 
     vols = list(REGISTRY) if a.all else [a.vol] if a.vol else []
     if not vols:
         ap.error("需 --inspect --vol N / --vol N / --all")
     for v in vols:
-        chunks = build_volume(v, clean=a.clean)
+        chunks = build_volume(v, clean=a.clean, engine=a.engine)
         arts = len(chunks) - 1
         chars = sum(len(c["content"]) for c in chunks)
         print(f"[冊{v}] {REGISTRY[v][1]}: {arts} 節 chunk | {chars:,} 字 | {NEW_EBID.format(v)}", flush=True)
