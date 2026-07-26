@@ -197,7 +197,9 @@ def _clean_dir():
     return d
 
 
-OR_MODEL = "nvidia/nemotron-3-super-120b-a12b:free"
+# gemma-4-26b（指令模型、非推理）實測保守 ratio≈0.99、無思考洩漏；nemotron-super 會把
+# 英文 chain-of-thought 漏進輸出且長文鬼打牆爆量，故棄用。
+OR_MODEL = "google/gemma-4-26b-a4b-it:free"
 OR_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 
@@ -208,12 +210,14 @@ def _openrouter_keys() -> list[str]:
 
 
 def _openrouter_clean_call(raw: str, ki: int = 0) -> str:
-    """OpenRouter（免費 nemotron，獨立池）保守清理一段；ki 起始 key，429/錯誤輪其餘 key。"""
+    """OpenRouter（免費 nemotron，獨立池）保守清理一段；ki 起始 key，429/空回應輪其餘 key。
+    max_tokens 依輸入長度上限，擋模型鬼打牆爆量輸出。"""
     import requests
     keys = _openrouter_keys()
     if not keys:
         raise RuntimeError("no OPENROUTER_API_Key_* in env")
-    body = {"model": OR_MODEL, "temperature": 0.1,
+    cap = min(6000, max(400, int(len(raw) * 1.2)))  # 校對輸出約 1:1，給 1.2× 餘裕
+    body = {"model": OR_MODEL, "temperature": 0.1, "max_tokens": cap,
             "messages": [{"role": "system", "content": CLEAN_SYS},
                          {"role": "user", "content": raw}]}
     n = len(keys)
@@ -224,13 +228,16 @@ def _openrouter_clean_call(raw: str, ki: int = 0) -> str:
                               json=body, timeout=120)
         except Exception:  # noqa: BLE001
             continue
-        if r.status_code == 200:
-            try:
-                return r.json()["choices"][0]["message"]["content"].strip()
-            except (KeyError, IndexError):
-                continue
-        # 429/5xx → 輪下一把 key
-    raise RuntimeError(f"all {n} OpenRouter keys failed")
+        if r.status_code != 200:
+            continue  # 429/5xx → 輪下一把 key
+        try:
+            content = r.json()["choices"][0]["message"]["content"]
+        except (KeyError, IndexError, TypeError):
+            continue
+        if content and content.strip():
+            return content.strip()
+        # 空回應（None/空字串）→ 輪下一把 key
+    raise RuntimeError(f"all {n} OpenRouter keys failed/empty")
 
 
 def _sonnet_clean_call(raw: str) -> str:
@@ -254,9 +261,39 @@ def _sonnet_clean_call(raw: str) -> str:
     raise RuntimeError("sonnet exhausted retries")
 
 
-def clean_body(vol: int, art_idx: int, raw: str, engine: str = "openrouter") -> str:
-    """保守清理一節內文（engine: openrouter|sonnet|nvidia）；逐節 cache＋長度防呆，resumable。"""
+def _split_for_clean(raw: str, limit: int = 1400) -> list[str]:
+    """把長內文依 \\n 邊界切成 ≤limit 的塊（短輸入模型才不會鬼打牆重複）。"""
+    lines = raw.split("\n")
+    pieces, cur = [], ""
+    for ln in lines:
+        if cur and len(cur) + len(ln) + 1 > limit:
+            pieces.append(cur)
+            cur = ln
+        else:
+            cur = f"{cur}\n{ln}" if cur else ln
+    if cur:
+        pieces.append(cur)
+    return pieces
+
+
+def _clean_piece(raw: str, engine: str, ki: int) -> str:
+    """呼叫引擎清一塊，長度防呆（<40% 或 >180% 視為改寫/爆量 → 退回原塊）。回傳 (out, ok)。"""
     import translate_ebook_to_zh as te
+    if engine == "openrouter":
+        out = _openrouter_clean_call(raw, ki=ki)
+    elif engine == "sonnet":
+        out = _sonnet_clean_call(raw)
+    else:
+        out = te.nvidia_chat(raw, max_tokens=4000, system=CLEAN_SYS, temperature=0.1)
+    out = (out or "").strip()
+    if not out or not (0.4 <= len(out) / max(len(raw), 1) <= 1.8):
+        return raw, False
+    return out, True
+
+
+def clean_body(vol: int, art_idx: int, raw: str, engine: str = "openrouter") -> str:
+    """保守清理一節內文；長節先切 ≤1400 字塊逐塊清再併回（避免模型長文鬼打牆）。
+    逐節 cache＋防呆，resumable。整節若一塊都沒清成，不 cache（下輪重試）。"""
     cache = _clean_dir() / f"{vol:02d}_{art_idx:04d}.txt"
     if cache.exists():
         return cache.read_text(encoding="utf-8")
@@ -264,23 +301,21 @@ def clean_body(vol: int, art_idx: int, raw: str, engine: str = "openrouter") -> 
     if len(raw) < 15:  # 太短不值得呼叫
         cache.write_text(raw, encoding="utf-8")
         return raw
-    try:
-        if engine == "openrouter":
-            out = _openrouter_clean_call(raw, ki=art_idx)
-        elif engine == "sonnet":
-            out = _sonnet_clean_call(raw)
-        else:
-            out = te.nvidia_chat(raw, max_tokens=4000, system=CLEAN_SYS, temperature=0.1)
-    except Exception as e:  # noqa: BLE001 — 失敗退回原文，別中斷整批（不 cache，下輪重試）
-        print(f"    ⚠ clean 冊{vol} 節{art_idx} 失敗，留原文: {e}", flush=True)
-        return raw
-    out = out.strip()
-    # 防呆：吐掉太多（<40%）或膨脹（>180%）疑似改寫/截斷 → 退回原文
-    if not out or not (0.4 <= len(out) / max(len(raw), 1) <= 1.8):
-        print(f"    ⚠ clean 冊{vol} 節{art_idx} 長度異常({len(raw)}→{len(out)})，留原文", flush=True)
-        out = raw
-    cache.write_text(out, encoding="utf-8")
-    return out
+    pieces = _split_for_clean(raw) if len(raw) > 1400 else [raw]
+    outs, any_ok = [], False
+    for pi, p in enumerate(pieces):
+        try:
+            out, ok = _clean_piece(p, engine, ki=art_idx + pi)
+        except Exception as e:  # noqa: BLE001 — 失敗留原塊，別中斷整批
+            print(f"    ⚠ clean 冊{vol} 節{art_idx} 塊{pi} 失敗，留原文: {e}", flush=True)
+            out, ok = p, False
+        outs.append(out)
+        any_ok = any_ok or ok
+    result = "\n".join(outs)
+    if not any_ok and len(pieces) == 1:  # 單塊整節全失敗 → 不 cache，下輪重試
+        return result
+    cache.write_text(result, encoding="utf-8")
+    return result
 
 
 def build_qtitles(rows: list[dict]) -> dict[int, str]:
