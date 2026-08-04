@@ -1,16 +1,30 @@
-# 龐君華會督的牧養神學：從城中教會的崇拜實踐到入世的新修道主義
+# 龐君華會督的衛斯理神學實踐與「新修道主義」願景
 
-> 台灣宗教學會 2026 年會「靈性運動、療癒與諮詢」全文工作稿 v0.3
->
-> 作者：依投稿資料表
+### Bishop Kwan-Wah Pong’s Wesleyan Praxis and Vision of “New Monasticism”
+
+### 張辰瑋（通訊作者）、廖丞譽（共同作者）
+
+### Chen-Wei Chang (Corresponding Author) and Cheng-Yu Liao (Co-author)
+
+> 台灣宗教學會 2026 年會「靈性運動、療癒與諮詢」全文工作稿 v0.4
 >
 > 本稿已依「研究設計—生平三期—會督前—會督後—結論」重整，並補入《無境界者》第 9 期訪談互證、穩定網址與外文比較文獻。仍待補作反向口述史及學位論文精確頁碼，請勿視為定稿或已發表版本。
 
-## 摘要
+### 摘要
 
-本文探討龐君華會督如何把衛斯理神學轉化為牧養、崇拜、靈修與公共服務相互貫通的實踐神學。研究材料以龐君華的兩篇學位論文、〈成聖之道〉等文章、2015 至 2024 年間的講座逐字稿、城中教會二十年牧養回顧，以及《無境界者》第 9 期訪談為主。本文先將其事奉生涯分為三期：2001 年以前的早期，重點是校園工作、香港神學訓練、本土／處境神學研究與返台開拓；2001 至 2019 年在城中教會的中期，重點是把處境意識、公共神學、衛斯理成聖論與崇拜更新轉化為堂會生活；2019 年當選會督至 2026 年的晚期，則包括會督任期、卸任退休後的反思，以及新修道主義的集中倡議。本文主張，龐君華的牧養神學並非由私人靈修轉向公共服務的單線發展，而是始終嘗試整合兩組張力：私人與公共、崇拜與服務。其晚期所倡議的新修道主義，正是將個人靈修、公共崇拜、個人關懷與社會公義四個面向置於同一門徒生活規則之中。這不是離世的修道主義，而是一種在家庭、教會、職場與社會中操練敬虔及憐憫的入世修道主義。本文最後指出，這套牧養神學對中華基督教衛理公會的宗派更新、華人宗派教會的傳統轉化，以及當代主流宗派在制度、禮儀、靈性與公共責任之間重新定位，皆具有啟發性。
+龐君華會督（1958–2026）一生的神學研究與教會事奉橫跨台港兩地，是推動台灣衛理宗神學傳統在地化與靈性更新的重要人物。本文旨在梳理其牧養神學，探討他如何以「神學家牧者」的自覺，將衛斯理神學轉化為回應當代處境的崇拜、門徒培育、靈修與公共服務。研究採文獻分析與口述史互證，材料包括兩篇學位論文、生前文章與講座、城中教會牧養回顧，以及親屬與同工訪談。
 
-**關鍵詞：**龐君華、牧養神學、衛斯理神學、公共崇拜、公共神學、新修道主義
+本文依其事奉歷程分為三期：2001 年以前的早期，重點在香港神學訓練、本土／處境神學研究與返台開拓；2001 至 2019 年在城中教會的中期，重點在禮儀更新、平信徒神學教育、班會與公共服務；2019 年當選會督至 2026 年的晚期，則進一步深化靈修實踐並倡議新修道主義。本文主張，其思想不是由私人靈修單線轉向公共參與，而是始終整合私人與公共、崇拜與服務；晚期更以個人靈修、公共崇拜、個人關懷與社會公義四個面向，形成一種在家庭、教會、職場與社會中操練的入世修道主義。這套實踐對衛理公會、華人宗派教會及當代主流宗派的更新皆具啟發性。
+
+**關鍵詞：**龐君華、衛斯理神學、牧養神學、新修道主義、靈修實踐
+
+### Abstract
+
+Bishop Kwan-Wah Pong (1958–2026) pursued theological study and church ministry across Taiwan and Hong Kong and was an important figure in the contextualization and spiritual renewal of Taiwanese Methodism. This paper examines his pastoral theology and asks how, as a “pastor-theologian,” he translated Wesleyan theology into worship, discipleship, spiritual practice, and public service responsive to contemporary contexts. It combines textual analysis with oral-history corroboration, drawing on his two theses, writings and lectures, retrospective account of ministry at Taipei Wesley Methodist Church, and interviews with family members and coworkers.
+
+The study divides his ministry into three periods: before 2001, marked by theological training in Hong Kong, research in local and contextual theology, and church planting after returning to Taiwan; 2001–2019 at Taipei Wesley Methodist Church, characterized by liturgical renewal, lay theological education, class meetings, and public service; and 2019–2026, from his election as bishop through his later years, when he deepened spiritual practice and advocated new monasticism. The paper argues that Pong did not move in a linear fashion from private spirituality to public engagement. Rather, he consistently integrated the private and public, worship and service. In his later years, he articulated this integration through four dimensions—personal devotion, corporate worship, personal care, and social justice—forming a this-worldly monasticism practiced in family, church, workplace, and society. His pastoral praxis offers insights for the renewal of the Methodist Church, Chinese denominational churches, and contemporary mainline denominations.
+
+**Keywords:** Kwan-Wah Pong; Wesleyan theology; pastoral theology; new monasticism; spiritual practice
 
 ## 一、研究動機、材料、範圍與方法
 
