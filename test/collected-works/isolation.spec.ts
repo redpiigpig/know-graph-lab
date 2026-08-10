@@ -19,7 +19,10 @@ describe('collected-works isolation', () => {
   for (const a of store.authors) for (const w of a.works) if (w.ebookId) storeIds.add(w.ebookId)
 
   it('backfill regex 抽取數 = store 內實際 ebookId 數（migration 不漏標）', () => {
-    const src = readFileSync(resolve(__dirname, '../../stores/collectedWorks.ts'), 'utf8')
+    const src = [
+      '../../stores/collectedWorks.ts',
+      '../../data/requestedCollectedWorks.ts',
+    ].map((file) => readFileSync(resolve(__dirname, file), 'utf8')).join('\n')
     const regexIds = new Set([...src.matchAll(BACKFILL_RE)].map((m) => m[1]))
     expect(regexIds).toEqual(storeIds)
     expect(regexIds.size).toBeGreaterThan(300)

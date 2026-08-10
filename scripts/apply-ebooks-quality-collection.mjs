@@ -37,9 +37,15 @@ ALTER TABLE ebooks
 CREATE INDEX IF NOT EXISTS idx_ebooks_collection ON ebooks(collection) WHERE collection IS NOT NULL;
 `;
 
-const store = fs.readFileSync(path.join(process.cwd(), "stores/collectedWorks.ts"), "utf8");
-const ids = [...new Set([...store.matchAll(/ebookId:\s*['"]([0-9a-f-]{36})['"]/g)].map((m) => m[1]))];
-console.log(`stores/collectedWorks.ts 抽出 ${ids.length} 個全集 ebookId`);
+const collectedWorksSources = [
+  "stores/collectedWorks.ts",
+  "data/requestedCollectedWorks.ts",
+];
+const collectedWorksSource = collectedWorksSources
+  .map((file) => fs.readFileSync(path.join(process.cwd(), file), "utf8"))
+  .join("\n");
+const ids = [...new Set([...collectedWorksSource.matchAll(/ebookId:\s*['"]([0-9a-f-]{36})['"]/g)].map((m) => m[1]))];
+console.log(`${collectedWorksSources.join(" + ")} 抽出 ${ids.length} 個全集 ebookId`);
 
 if (DRY) {
   console.log(ids.join("\n"));
