@@ -6,7 +6,7 @@
 import { ollamaEmbed, ollamaStatus } from "~/server/utils/ollama";
 
 export default defineEventHandler(async (event) => {
-  await requireAuth(event);
+  await requireAdmin(event);
   const supabase = getAdminClient();
 
   const formData = await readMultipartFormData(event);

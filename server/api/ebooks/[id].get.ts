@@ -1,7 +1,7 @@
 import { loadChunk, loadToc } from "~/server/utils/ebook-chunks";
 
 export default defineEventHandler(async (event) => {
-  await requireAuth(event);
+  await requireAdmin(event);
   const supabase = getAdminClient();
   const id = getRouterParam(event, "id");
   const { page, includeToc } = getQuery(event) as { page?: string; includeToc?: string };

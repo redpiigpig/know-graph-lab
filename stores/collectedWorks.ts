@@ -14,6 +14,7 @@
  * 方法論與版權盡職調查見 .claude/skills/ebook-collected-works/。
  */
 import { defineStore } from 'pinia'
+import { requestedCollectedWorksAuthors } from '~/data/requestedCollectedWorks'
 
 /** 轉錄狀態 */
 export type WorkStatus =
@@ -52,6 +53,12 @@ export interface CwWork {
   note?: string // 備註（版權、進度…）
 }
 
+export interface CwSourceLink {
+  label: string
+  url: string
+  kind?: 'authority' | 'bibliography' | 'full-text' | 'rights'
+}
+
 export interface CwAuthor {
   slug: string
   name: string // 繁中全名
@@ -70,6 +77,7 @@ export interface CwAuthor {
   emoji: string
   contribution: string[] // 學術貢獻簡介（繁中，段落陣列）
   sourceNote?: string // 來源／語言策略一句話
+  sourceLinks?: CwSourceLink[] // 權威身分、書目、全文與授權依據
   timeline: CwTimelineEntry[]
   works: CwWork[]
 }
@@ -30617,38 +30625,69 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
           "name": "宋泉盛",
           "nameEn": "Choan-Seng Song",
           "nameOriginal": "宋泉盛",
-          "lifespan": "1929–",
+          "lifespan": "1929–2024",
           "disciplineGroup": "神學",
           "sortYear": 1929,
           "era": "現代與當代",
           "region": "東亞",
-          "discipline": "台灣長老教會神學家，倡「說故事神學」亞洲處境進路",
+          "discipline": "台灣長老教會牧師、亞洲處境神學與故事神學先驅",
           "fields": [
                 "亞洲處境神學",
                 "故事神學",
-                "台灣本土神學"
+                "台灣本土神學",
+                "普世運動"
           ],
           "portraitUrl": "",
           "portraitCredit": "（Wikimedia Commons 無公有領域肖像）",
           "color": "violet",
           "emoji": "📖",
           "contribution": [
-                "宋泉盛生於台灣台南，於台南神學院受神學教育，後赴英國愛丁堡大學取得神學博士，長期任教於台南神學院並曾任院長，後轉任美國紐約協和神學院、加州太平洋神學院教授，是二十世紀後半亞洲基督教神學最具國際影響力的代表人物之一，也長期投入普世教協亞洲事工。",
-                "宋泉盛主張西方系統神學的抽象命題式思維，不足以承載亞洲民眾豐富的宗教與苦難經驗，因而發展出獨具特色的**「說故事神學」**（story theology）方法，大量援用亞洲民間故事、傳說與台灣本土敘事（如二二八事件相關記憶）作為神學反思的素材，代表作《第三隻眼神學》（1979）與《叫我們的名字：從亞洲視角看故事神學》（1984）系統闡述此一方法論。他也提出「痛苦的上帝」與「受苦的基督」等意象，回應亞洲貧窮、殖民與政治暴力經驗，是台灣本土神學與亞洲處境神學接軌的關鍵橋樑人物。"
+                "宋泉盛生於台南，1958 年於愛丁堡大學取得 BD，1965 年於紐約協和神學院完成 ThD；1965–1970 年任台南神學院院長，1973–1982 年投入普世教協信仰與教制工作，後任太平洋宗教學院神學與亞洲文化教授，1997–2004 年任世界歸正教會聯盟主席。",
+                "宋泉盛發展**故事神學**與亞洲處境神學，以民間故事、受苦人民與台灣歷史記憶作為神學材料。《蓮花世界的十字架》三部曲把耶穌、上帝國與聖靈放回亞洲人民的苦難與盼望，是台灣本土神學連接亞洲及普世教會的重要橋樑。"
           ],
-          "sourceNote": "在世學者，著作均受版權保護，暫列 status=copyright。",
+          "sourceNote": "生卒與職歷以 PCT、WCC、愛丁堡大學訃聞核對；既有五書已補成十五部本人專著／論文及五部編輯文集。使用者已聲明取得相關權利方授權；全文僅供密碼保護的私人研究站使用。",
+          "sourceLinks": [
+                {
+                      "label": "PCT 紀念專文",
+                      "url": "https://newmsgr.pct.org.tw/Magazine.aspx?strISID=201&strMAGID=M2025041506041&strTID=1",
+                      "kind": "authority"
+                },
+                {
+                      "label": "WCC 生平紀念",
+                      "url": "https://www.oikoumene.org/news/wcc-gives-thanks-for-the-life-of-choan-seng-song",
+                      "kind": "authority"
+                },
+                {
+                      "label": "愛丁堡大學訃聞",
+                      "url": "https://divinity.ed.ac.uk/news-and-events/obituaries/rev-professor-choan-seng-song-1929-2024",
+                      "kind": "authority"
+                },
+                {
+                      "label": "Open Library 作者書目",
+                      "url": "https://openlibrary.org/authors/OL232082A/Choan-Seng_Song",
+                      "kind": "bibliography"
+                }
+          ],
           "timeline": [
                 {
                       "year": "1929",
-                      "text": "生於台灣台南。"
+                      "text": "10 月 19 日生於台灣台南。"
+                },
+                {
+                      "year": "1958",
+                      "text": "於愛丁堡大學取得 BD。"
                 },
                 {
                       "year": "1965",
-                      "text": "於英國愛丁堡大學取得神學博士。"
+                      "text": "於紐約協和神學院取得 ThD。"
                 },
                 {
-                      "year": "1970s",
+                      "year": "1965–1970",
                       "text": "任台南神學院院長。"
+                },
+                {
+                      "year": "1973–1982",
+                      "text": "投入普世教協信仰與教制工作。"
                 },
                 {
                       "year": "1979",
@@ -30660,15 +30699,19 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                 },
                 {
                       "year": "1984",
-                      "text": "出版《叫我們的名字：從亞洲視角看故事神學》，系統化說故事神學方法。"
+                      "text": "出版《故事神學》，系統化說故事神學方法。"
                 },
                 {
                       "year": "1990",
-                      "text": "出版《被釘十字架的民眾》。"
+                      "text": "出版《耶穌，被釘十字架的人民》，開啟《蓮花世界的十字架》三部曲。"
                 },
                 {
-                      "year": "1990s",
-                      "text": "任教美國紐約協和神學院、太平洋神學院。"
+                      "year": "1997–2004",
+                      "text": "任世界歸正教會聯盟主席。"
+                },
+                {
+                      "year": "2024",
+                      "text": "11 月 26 日辭世。"
                 }
           ],
           "works": [
@@ -30681,7 +30724,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "en"
                       ],
-                      "status": "copyright",
+                      "status": "planned",
                       "note": "代表作，提出以亞洲宗教文化視角重構神學方法。"
                 },
                 {
@@ -30693,11 +30736,11 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "en"
                       ],
-                      "status": "copyright",
+                      "status": "planned",
                       "note": "以亞洲民間敘事重塑上帝的同感與受苦意象。"
                 },
                 {
-                      "title": "叫我們的名字：從亞洲視角看故事神學",
+                      "title": "故事神學",
                       "titleOriginal": "Tell Us Our Names: Story Theology from an Asian Perspective",
                       "year": "1984",
                       "yearSort": 1984,
@@ -30705,32 +30748,177 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "languages": [
                             "en"
                       ],
-                      "status": "copyright",
+                      "status": "planned",
                       "note": "系統闡述「說故事神學」方法論的核心著作。"
                 },
                 {
-                      "title": "被釘十字架的民眾",
+                      "title": "耶穌，被釘十字架的人民",
                       "titleOriginal": "Jesus, the Crucified People",
                       "year": "1990",
                       "yearSort": 1990,
-                      "category": "基督論",
+                      "category": "蓮花世界的十字架 I／基督論",
                       "languages": [
                             "en"
                       ],
-                      "status": "copyright",
+                      "status": "planned",
                       "note": "呼應解放神學語彙，以「受苦民眾」重構基督論。"
                 },
                 {
-                      "title": "耶穌與上帝國",
+                      "title": "耶穌的上帝國",
                       "titleOriginal": "Jesus and the Reign of God",
                       "year": "1993",
                       "yearSort": 1993,
-                      "category": "基督論",
+                      "category": "蓮花世界的十字架 II／基督論",
                       "languages": [
                             "en"
                       ],
-                      "status": "copyright",
+                      "status": "planned",
                       "note": "延續故事神學方法探討上帝國主題。"
+                },
+                {
+                      "title": "在巴特與田立克神學中上帝啟示與人的宗教之關係",
+                      "titleOriginal": "The Relation of Divine Revelation and Man’s Religion in the Theologies of Karl Barth and Paul Tillich",
+                      "year": "1964/1965",
+                      "yearSort": 1964,
+                      "category": "博士論文",
+                      "languages": ["en"],
+                      "status": "planned",
+                      "note": "論文作於 1964，1965 年取得 ThD。"
+                },
+                {
+                      "title": "行動中的台灣教會：新世紀宣教運動",
+                      "titleOriginal": "The Church of Taiwan on the Move: The New Century Mission Movement",
+                      "year": "1968",
+                      "yearSort": 1968,
+                      "category": "台灣教會與宣教",
+                      "languages": ["en"],
+                      "status": "planned"
+                },
+                {
+                      "title": "基督教宣教的重建：一個亞洲的分析",
+                      "titleOriginal": "Christian Mission in Reconstruction: An Asian Analysis",
+                      "year": "1975",
+                      "yearSort": 1975,
+                      "category": "亞洲宣教學",
+                      "languages": ["en"],
+                      "status": "planned",
+                      "note": "Orbis 1977 版標 ©1975；不同副題為同一作品，不重複建卷。"
+                },
+                {
+                      "title": "孟姜女的眼淚：人民政治神學的寓言",
+                      "titleOriginal": "The Tears of Lady Meng: A Parable of People’s Political Theology",
+                      "year": "1981",
+                      "yearSort": 1981,
+                      "category": "人民政治神學",
+                      "languages": ["en"],
+                      "status": "planned"
+                },
+                {
+                      "title": "解讀人生的密碼",
+                      "titleOriginal": "Theology from the Womb of Asia",
+                      "year": "1986",
+                      "yearSort": 1986,
+                      "category": "亞洲處境神學",
+                      "languages": ["en"],
+                      "status": "planned",
+                      "note": "亦常直譯《亞洲母腹中的神學》。"
+                },
+                {
+                      "title": "與聖靈同工的耶穌",
+                      "titleOriginal": "Jesus in the Power of the Spirit",
+                      "year": "1994",
+                      "yearSort": 1994,
+                      "category": "蓮花世界的十字架 III／基督論",
+                      "languages": ["en"],
+                      "status": "planned",
+                      "note": "《蓮花世界的十字架》三部曲完結篇。"
+                },
+                {
+                      "title": "信心的探索：故事神學的邀請",
+                      "titleOriginal": "The Believing Heart: An Invitation to Story Theology",
+                      "year": "1999",
+                      "yearSort": 1999,
+                      "category": "故事神學",
+                      "languages": ["en"],
+                      "status": "planned"
+                },
+                {
+                      "title": "他們的眼睛開了：擁抱世界的故事講章",
+                      "titleOriginal": "And Their Eyes Are Opened: Story Sermons Embracing the World",
+                      "year": "2006",
+                      "yearSort": 2006,
+                      "category": "故事講章",
+                      "languages": ["en"],
+                      "status": "planned"
+                },
+                {
+                      "title": "追尋上帝的腳蹤：發現你真正所信",
+                      "titleOriginal": "Tracing the Footsteps of God: Discovering What You Really Believe",
+                      "year": "2007",
+                      "yearSort": 2007,
+                      "category": "信仰與故事神學",
+                      "languages": ["en"],
+                      "status": "planned"
+                },
+                {
+                      "title": "古早古早有故事：故事神學",
+                      "titleOriginal": "In the Beginning Were Stories, Not Texts: Story Theology",
+                      "year": "2011",
+                      "yearSort": 2011,
+                      "category": "故事神學",
+                      "languages": ["en"],
+                      "status": "planned",
+                      "note": "James Clarke 2012 為同作另一版，不重複建卷。"
+                },
+                {
+                      "title": "今日做神學",
+                      "titleOriginal": "Doing Theology Today",
+                      "year": "1976",
+                      "yearSort": 1976,
+                      "category": "編輯文集",
+                      "languages": ["en"],
+                      "status": "planned",
+                      "note": "與 Lukas Vischer 共同編輯。"
+                },
+                {
+                      "title": "今日盼望的見證",
+                      "titleOriginal": "Giving Account of the Hope Today",
+                      "year": "1976",
+                      "yearSort": 1976,
+                      "category": "WCC 信仰與教制文集",
+                      "languages": ["en"],
+                      "status": "planned",
+                      "externalUrl": "https://www.oikoumene.org/book-abstract/wccfops2087"
+                },
+                {
+                      "title": "共同走向合一",
+                      "titleOriginal": "Growing Together into Unity: Texts of Faith and Order Commission on Conciliar Fellowship",
+                      "year": "1978",
+                      "yearSort": 1978,
+                      "category": "WCC 信仰與教制文集",
+                      "languages": ["en"],
+                      "status": "planned",
+                      "externalUrl": "https://www.oikoumene.org/book-abstract/wccfops2095"
+                },
+                {
+                      "title": "在世界各地告白我們的信仰 I",
+                      "titleOriginal": "Confessing Our Faith Around the World I",
+                      "year": "1980",
+                      "yearSort": 1980,
+                      "category": "WCC 信仰與教制文集",
+                      "languages": ["en"],
+                      "status": "planned",
+                      "externalUrl": "https://www.oikoumene.org/book-abstract/wccfops2111"
+                },
+                {
+                      "title": "信仰見證：台灣獄中書信與詩",
+                      "titleOriginal": "Testimonies of Faith: Letters and Poems from Prison in Taiwan",
+                      "year": "1984",
+                      "yearSort": 1984,
+                      "category": "選編與翻譯文集",
+                      "languages": ["en", "zh"],
+                      "status": "planned",
+                      "note": "宋泉盛選編、翻譯；保留原作者角色。"
                 }
           ]
     },
@@ -40389,6 +40577,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
       ],
       "era": "教會史"
     },
+    ...requestedCollectedWorksAuthors,
   ])
 
   const bySlug = (slug: string) => authors.value.find((a) => a.slug === slug)

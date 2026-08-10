@@ -3,7 +3,7 @@
  * Delete an annotation. Linked excerpt (if any) is left in place.
  */
 export default defineEventHandler(async (event) => {
-  await requireAuth(event);
+  await requireAdmin(event);
   const supabase = getAdminClient();
   const id = getRouterParam(event, "id");
   if (!id) throw createError({ statusCode: 400, message: "Missing id" });

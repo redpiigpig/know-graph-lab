@@ -11,7 +11,7 @@
  * back-fill the rest.
  */
 export default defineEventHandler(async (event) => {
-  await requireAuth(event);
+  await requireAdmin(event);
   const supabase = getAdminClient();
   const { q, mode = "all", ebookId } = getQuery(event) as {
     q?: string;

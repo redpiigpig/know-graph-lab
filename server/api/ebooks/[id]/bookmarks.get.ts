@@ -5,7 +5,7 @@
  * whether to auto-jump on first load (handled client-side).
  */
 export default defineEventHandler(async (event) => {
-  const user = await requireAuth(event);
+  const user = await requireAdmin(event);
   const ebookId = getRouterParam(event, "id");
   if (!ebookId) throw createError({ statusCode: 400, message: "ebook id required" });
 

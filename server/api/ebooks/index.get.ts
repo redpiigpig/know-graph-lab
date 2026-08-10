@@ -1,5 +1,5 @@
 export default defineEventHandler(async (event) => {
-  await requireAuth(event);
+  await requireAdmin(event);
   const supabase = getAdminClient();
   const { category, subcategory, tagId, collection } = getQuery(event) as {
     category?: string;

@@ -5,7 +5,7 @@
  *   else  → upsert with new status
  */
 export default defineEventHandler(async (event) => {
-  const user = await requireAuth(event);
+  const user = await requireAdmin(event);
   const ebookId = getRouterParam(event, "id");
   if (!ebookId) throw createError({ statusCode: 400, message: "ebook id required" });
 

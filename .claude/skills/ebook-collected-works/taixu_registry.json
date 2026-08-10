@@ -1,0 +1,149 @@
+{
+  "TXA001": {
+    "title": "太虛大師全書編纂說明",
+    "parent_volume": "編纂資料",
+    "ebook_id": "47168443-f7c4-5e1a-89f4-88f876f32d20",
+    "sources": ["TX00na001"],
+    "official_url": "https://cbetaonline.dila.edu.tw/TXa001"
+  },
+  "TX0001": {
+    "title": "第一編 佛法總學",
+    "parent_volume": "法藏",
+    "ebook_id": "8048e039-bbc1-5cde-972e-a32f19cffad0",
+    "sources": ["TX01n0001", "TX02n0001"],
+    "official_url": "https://cbetaonline.dila.edu.tw/TX0001"
+  },
+  "TX0002": {
+    "title": "第二編 五乘共學",
+    "parent_volume": "法藏",
+    "ebook_id": "13328373-1e7b-521d-ba11-e35482ca6607",
+    "sources": ["TX03n0002"],
+    "official_url": "https://cbetaonline.dila.edu.tw/TX0002"
+  },
+  "TX0003": {
+    "title": "第三編 三乘共學",
+    "parent_volume": "法藏",
+    "ebook_id": "21037791-026c-535d-9251-4c394632dd09",
+    "sources": ["TX03n0003"],
+    "official_url": "https://cbetaonline.dila.edu.tw/TX0003"
+  },
+  "TX0004": {
+    "title": "第四編 大乘通學",
+    "parent_volume": "法藏",
+    "ebook_id": "f49bad31-01a0-520c-a015-ef8b7352b178",
+    "sources": ["TX04n0004", "TX05n0004"],
+    "official_url": "https://cbetaonline.dila.edu.tw/TX0004"
+  },
+  "TX0005": {
+    "title": "第五編 法性空慧學",
+    "parent_volume": "法藏",
+    "ebook_id": "bd45ece0-cb4b-574f-932d-47aa517031b2",
+    "sources": ["TX06n0005", "TX07n0005"],
+    "official_url": "https://cbetaonline.dila.edu.tw/TX0005"
+  },
+  "TX0006": {
+    "title": "第六編 法相唯識學",
+    "parent_volume": "法藏",
+    "ebook_id": "f4810ad6-b61f-5ce7-b00a-b6f99b5ebc54",
+    "sources": ["TX07n0006", "TX08n0006", "TX09n0006"],
+    "official_url": "https://cbetaonline.dila.edu.tw/TX0006"
+  },
+  "TX0007": {
+    "title": "第七編 法界圓覺學",
+    "parent_volume": "法藏",
+    "ebook_id": "c704b33f-090e-598d-9371-52a3e6363f1a",
+    "sources": ["TX10n0007", "TX11n0007", "TX12n0007", "TX13n0007", "TX14n0007", "TX15n0007"],
+    "official_url": "https://cbetaonline.dila.edu.tw/TX0007"
+  },
+  "TX0008": {
+    "title": "第八編 律釋",
+    "parent_volume": "制藏",
+    "ebook_id": "22112529-173b-56d2-bf55-f32c264e60f9",
+    "sources": ["TX16n0008"],
+    "official_url": "https://cbetaonline.dila.edu.tw/TX0008"
+  },
+  "TX0009": {
+    "title": "第九編 制議",
+    "parent_volume": "制藏",
+    "ebook_id": "d9636e26-45cd-5593-83df-a1843b2eadb2",
+    "sources": ["TX17n0009"],
+    "official_url": "https://cbetaonline.dila.edu.tw/TX0009"
+  },
+  "TX0010": {
+    "title": "第十編 學行",
+    "parent_volume": "制藏",
+    "ebook_id": "4c7853ac-50fb-54b3-97f3-73ebfacbbbfd",
+    "sources": ["TX18n0010"],
+    "official_url": "https://cbetaonline.dila.edu.tw/TX0010"
+  },
+  "TX0011": {
+    "title": "第十一編 真現實論宗依論",
+    "parent_volume": "論藏",
+    "ebook_id": "5deecd03-48b6-537f-97d4-399aaf0e6b3a",
+    "sources": ["TX18n0011", "TX19n0011"],
+    "official_url": "https://cbetaonline.dila.edu.tw/TX0011"
+  },
+  "TX0012": {
+    "title": "第十二編 真現實論宗體論",
+    "parent_volume": "論藏",
+    "ebook_id": "35943f38-442c-55e9-b6a8-61d0c411d362",
+    "sources": ["TX20n0012"],
+    "official_url": "https://cbetaonline.dila.edu.tw/TX0012"
+  },
+  "TX0013": {
+    "title": "第十三編 真現實論宗用論",
+    "parent_volume": "論藏",
+    "ebook_id": "48d153c7-11a4-5b70-ae32-f71a79c3562a",
+    "sources": ["TX20n0013", "TX21n0013", "TX22n0013", "TX23n0013"],
+    "official_url": "https://cbetaonline.dila.edu.tw/TX0013"
+  },
+  "TX0014": {
+    "title": "第十四編 支論",
+    "parent_volume": "論藏",
+    "ebook_id": "ec43b43b-5c2f-5470-9d4e-787983c4b00d",
+    "sources": ["TX23n0014", "TX24n0014"],
+    "official_url": "https://cbetaonline.dila.edu.tw/TX0014"
+  },
+  "TX0015": {
+    "title": "第十五編 時論",
+    "parent_volume": "雜藏",
+    "ebook_id": "cb220c60-8e88-58bd-93e3-431ee9b48b20",
+    "sources": ["TX24n0015"],
+    "official_url": "https://cbetaonline.dila.edu.tw/TX0015"
+  },
+  "TX0016": {
+    "title": "第十六編 書評",
+    "parent_volume": "雜藏",
+    "ebook_id": "4bd3050c-76f4-5a3e-b0ad-73b54e44fc4c",
+    "sources": ["TX25n0016"],
+    "official_url": "https://cbetaonline.dila.edu.tw/TX0016"
+  },
+  "TX0017": {
+    "title": "第十七編 酬對",
+    "parent_volume": "雜藏",
+    "ebook_id": "b423f434-3db8-5c23-8f72-9c4b8cc20c0d",
+    "sources": ["TX26n0017", "TX27n0017"],
+    "official_url": "https://cbetaonline.dila.edu.tw/TX0017"
+  },
+  "TX0018": {
+    "title": "第十八編 講演",
+    "parent_volume": "雜藏",
+    "ebook_id": "f671f4a6-407b-57ff-91dc-929e33a0f5d4",
+    "sources": ["TX27n0018", "TX28n0018"],
+    "official_url": "https://cbetaonline.dila.edu.tw/TX0018"
+  },
+  "TX0019": {
+    "title": "第十九編 文叢",
+    "parent_volume": "雜藏",
+    "ebook_id": "a42103d5-9a5f-54cb-84f7-c08214621a85",
+    "sources": ["TX29n0019", "TX30n0019", "TX31n0019"],
+    "official_url": "https://cbetaonline.dila.edu.tw/TX0019"
+  },
+  "TX0020": {
+    "title": "第二十編 詩存",
+    "parent_volume": "雜藏",
+    "ebook_id": "f4be2a20-014f-5d9a-897a-23ee9f86d345",
+    "sources": ["TX32n0020"],
+    "official_url": "https://cbetaonline.dila.edu.tw/TX0020"
+  }
+}

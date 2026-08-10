@@ -51,6 +51,18 @@
           <p v-if="author.sourceNote" class="mt-4 text-xs text-gray-500 leading-relaxed border-l-2 pl-3" :class="`border-${author.color}-200`">
             <span class="font-medium text-gray-600">來源與語言：</span>{{ author.sourceNote }}
           </p>
+          <div v-if="author.sourceLinks?.length" class="mt-3 flex flex-wrap gap-2">
+            <a
+              v-for="source in author.sourceLinks"
+              :key="source.url"
+              :href="source.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1 rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[11px] text-gray-600 hover:border-gray-300 hover:text-gray-900"
+            >
+              {{ source.kind === 'full-text' ? '全文' : source.kind === 'rights' ? '授權' : '來源' }} · {{ source.label }} ↗
+            </a>
+          </div>
         </div>
       </section>
 

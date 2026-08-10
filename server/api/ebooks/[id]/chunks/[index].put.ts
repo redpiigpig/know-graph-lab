@@ -28,7 +28,7 @@ interface EditBody {
 }
 
 export default defineEventHandler(async (event) => {
-  await requireAuth(event);
+  await requireAdmin(event);
   const ebookId = getRouterParam(event, "id");
   const indexStr = getRouterParam(event, "index");
   if (!ebookId || !indexStr) {

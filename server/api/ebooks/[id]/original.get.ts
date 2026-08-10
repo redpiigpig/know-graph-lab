@@ -34,7 +34,7 @@ function sanitize(name: string): string {
 }
 
 export default defineEventHandler(async (event) => {
-  await requireAuth(event);
+  await requireAdmin(event);
   const id = getRouterParam(event, "id");
   const supabase = getAdminClient();
 

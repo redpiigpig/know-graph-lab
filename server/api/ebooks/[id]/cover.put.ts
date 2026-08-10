@@ -6,7 +6,7 @@
  * user can set the cover — these are book-level metadata, not per-user.
  */
 export default defineEventHandler(async (event) => {
-  await requireAuth(event);
+  await requireAdmin(event);
   const ebookId = getRouterParam(event, "id");
   if (!ebookId) throw createError({ statusCode: 400, message: "ebook id required" });
 

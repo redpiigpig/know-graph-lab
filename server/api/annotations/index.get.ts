@@ -3,7 +3,7 @@
  * List annotations for a specific chunk (or whole book if chunkIndex omitted).
  */
 export default defineEventHandler(async (event) => {
-  await requireAuth(event);
+  await requireAdmin(event);
   const supabase = getAdminClient();
   const { ebookId, chunkIndex } = getQuery(event) as {
     ebookId?: string;

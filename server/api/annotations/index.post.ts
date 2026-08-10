@@ -7,7 +7,7 @@
  * If `save_as_excerpt: true`, also inserts an excerpts row and links via excerpt_id.
  */
 export default defineEventHandler(async (event) => {
-  await requireAuth(event);
+  await requireAdmin(event);
   const supabase = getAdminClient();
   const body = await readBody(event) as {
     ebook_id?: string;

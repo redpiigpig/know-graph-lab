@@ -9,7 +9,7 @@
  * whatever page pdf.js is showing.
  */
 export default defineEventHandler(async (event) => {
-  await requireAuth(event);
+  await requireAdmin(event);
   const id = getRouterParam(event, "id");
   const supabase = getAdminClient();
 
