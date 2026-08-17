@@ -77,7 +77,11 @@ if (LanePaused 'accs-gemini') {
         Note "Gemini has quota on $($env:GEMINI_MODEL) -> ACCS OCR queue (batch-4, NT first)"
         Launch 'accs-gemini' @('-X','utf8','scripts\accs_ocr_run.py','--engine','gemini','--batch','4')
     } else {
-        Note 'Gemini probe failed on all keys x all models; ACCS not launched'
+        # Gemini dry on every key x every model -> fall back to Sonnet (user 2026-08-17).
+        # Sonnet runs on the Claude Max OAuth token, so this costs no extra spend; ACCS
+        # keeps moving overnight instead of idling until the daily quota resets.
+        Note 'Gemini dry on all keys x all models -> ACCS OCR queue on Sonnet'
+        Launch 'accs-gemini' @('-X','utf8','scripts\accs_ocr_run.py','--engine','sonnet','--batch','4')
     }
 }
 

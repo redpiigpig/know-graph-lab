@@ -15,7 +15,8 @@ description: 把《古代基督信仰聖經註釋叢書》(ACCS, IVP/校園) 的
 > - **進行中**：馬太14-28（driver 續跑）→ 接馬可/路加/約翰…。
 > - **待轉錄（剩 ~22 卷 / ~1.3 萬頁）**：校園簡體掃描 23 卷全在 `G:\我的雲端硬碟\資料\知識圖工作室\教父著作\基督教 - IVP - 古代基督信仰聖經註釋叢書\`（Downloads 副本已刪）。**缺 24-25 耶利米/哀歌**（未購得）。
 > - **設定檔**：`scripts/accs_volume_config.json`（單書卷 ready／多書卷 needs_boundaries）。**driver `scripts/accs_ocr_run.py`**（讀設定逐卷跑 `ingest_accs_genesis`，NT 優先）。
-> - **由 `KGL_Fleet_Keeper` 排程託管**（見 [[project_fleet_keeper]]）：ACCS 走 **Gemini batch-4**、Gemini 有額度才啟動；量太大「一晚跑不完」是常態，逐日推進。
+> - **由 `KGL_Fleet_Keeper` 排程託管**（見 [[project_fleet_keeper]]）：量太大「一晚跑不完」是常態，逐日推進。**🚨 2026-08-17 起 ACCS 是 keeper 的第一條 lane 且獨佔 Gemini**（panikkar／sbe 已改 NVIDIA，它們原本掛 Gemini、45 分鐘就把 7 把 key 抽乾害 ACCS 起不來）。**引擎鏈＝Gemini（探到有額度的模型）→ 乾了自動改 Sonnet**（user 定調）：Google 免費層已砍到「每 key／每模型／每天 20 次」，但配額按模型獨立，故 `gemini_probe.py` 會輪 6 個 vision 模型找還有額度的、寫進 `state/gemini_live_model.txt`；全部乾掉才落到 `--engine sonnet`（Max OAuth，不另付費，且掃描中文品質本來就最好）。
+> - **🚨 driver 兩次連續失敗才停整批**：`accs_ocr_run.py` 原本一卷 rc≠0 就停全批，導致約翰福音額度乾之後，排在後面的希伯來書／以賽亞書永遠排不到（DB 長期 0 筆）。已改成跳過換下一卷、連續兩卷才停（[[feedback_ocr_two_strike_quota]]）。
 > - **面板**：`translation_dashboard.py` 已接 config → ACCS 區塊顯示全 65 卷路線圖＋中文名。
 > - **馬太14-28 品質抽查（2026-07-22 完成）**：367 entries／110k 字。**簡→繁轉換乾淨**（s2twp 後簡體殘留 0、無過度轉換亂碼）。發現兩問題：
 >   1. **教父名 OCR 裂變**——已修：`accs_commentary.py` FATHER_FIXES 補 `屈稜多模`→金口若望(18筆)／`被提亞的希拉流`→波提亞的希拉流(2筆)／`亞波里拿旨`→亞波里拿留(1筆)，測試綠，upsert 時自動收斂。
