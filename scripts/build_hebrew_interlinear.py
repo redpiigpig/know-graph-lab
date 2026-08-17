@@ -501,6 +501,7 @@ def main() -> None:
     parser.add_argument("--workers", type=int, default=3)
     parser.add_argument("--limit", type=int, default=0, help="只跑前 N 批（試跑用）")
     parser.add_argument("--rounds", type=int, default=6, help="未完成單元最多重跑幾輪")
+    parser.add_argument("--probe-attempts", type=int, default=24, help="試跑批次最多重試幾次")
     parser.add_argument("--stats", action="store_true", help="只報告覆蓋率，不呼叫模型")
     args = parser.parse_args()
 
@@ -525,7 +526,17 @@ def main() -> None:
     # parsing fault should surface in minutes, not after a night of retries.
     if not args.limit:
         probe = batch_units(pending, args.max_words)[0]
-        results, problems = run_batch(probe, anchor)
+        results: dict[str, dict[str, Any]] = {}
+        problems: list[str] = []
+        # An exhausted quota must not kill an unattended run before it starts:
+        # keep re-offering the probe, since the shared gate already spaces the
+        # attempts out by up to half an hour.
+        for attempt in range(1, args.probe_attempts + 1):
+            try:
+                results, problems = run_batch(probe, anchor)
+                break
+            except Exception as error:  # noqa: BLE001 - keep waiting for capacity
+                print(f"試跑第 {attempt}/{args.probe_attempts} 次未成：{type(error).__name__}", flush=True)
         if not results:
             print("試跑批次沒有產出，停止；問題如下：", flush=True)
             for line in problems[:10]:
