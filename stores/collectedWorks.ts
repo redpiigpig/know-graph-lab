@@ -8795,6 +8795,230 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
                       "note": "第一集第1–43題：論聖道性質、天主存在（五路論證）、單純性、完美、善、永恆、唯一性、三位一體。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
                 },
                 {
+                      "title": "神學大全 第二冊：論天主創造萬物",
+                      "titleOriginal": "Summa Theologiae, Prima Pars, qq.44–74",
+                      "year": "1265-1274",
+                      "yearSort": 1265,
+                      "category": "神學大全（中華道明會譯本‧共十七冊）",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "done",
+                      "genre": "quaestio",
+                      ebookId: 'a9051225-0000-4000-8000-000000000002',
+                      "note": "第一集第44–74題：論創造、天使、六日創造工程與天體。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
+                },
+                {
+                      "title": "神學大全 第三冊：論人",
+                      "titleOriginal": "Summa Theologiae, Prima Pars, qq.75–119",
+                      "year": "1265-1274",
+                      "yearSort": 1265,
+                      "category": "神學大全（中華道明會譯本‧共十七冊）",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "done",
+                      "genre": "quaestio",
+                      ebookId: 'a9051225-0000-4000-8000-000000000003',
+                      "note": "第一集第75–119題：論靈魂本質與能力、理智認識、自由意志、人的受造與繁衍。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
+                },
+                {
+                      "title": "神學大全 第四冊：論人的道德行為與情",
+                      "titleOriginal": "Summa Theologiae, Prima Secundae, qq.1–48",
+                      "year": "1265-1274",
+                      "yearSort": 1265,
+                      "category": "神學大全（中華道明會譯本‧共十七冊）",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "done",
+                      "genre": "quaestio",
+                      ebookId: 'a9051225-0000-4000-8000-000000000004',
+                      "note": "第二集第一部第1–48題：論終極目的（真福）、人性行為、意志與情感論。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
+                },
+                {
+                      "title": "神學大全 第五冊：論德性與惡習及罪",
+                      "titleOriginal": "Summa Theologiae, Prima Secundae, qq.49–89",
+                      "year": "1265-1274",
+                      "yearSort": 1265,
+                      "category": "神學大全（中華道明會譯本‧共十七冊）",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "done",
+                      "genre": "quaestio",
+                      ebookId: 'a9051225-0000-4000-8000-000000000005',
+                      "note": "第二集第一部第49–89題：論習性、德性、神恩之德、惡習與罪、原罪。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
+                },
+                {
+                      "title": "神學大全 第六冊：論法律與恩寵",
+                      "titleOriginal": "Summa Theologiae, Prima Secundae, qq.90–114",
+                      "year": "1265-1274",
+                      "yearSort": 1265,
+                      "category": "神學大全（中華道明會譯本‧共十七冊）",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "done",
+                      "genre": "quaestio",
+                      ebookId: 'a9051225-0000-4000-8000-000000000006',
+                      "note": "第二集第一部第90–114題：論永恆法、自然法、人定法、舊約新約法與恩寵。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
+                },
+                {
+                      "title": "神學大全 第七冊：論信德與望德",
+                      "titleOriginal": "Summa Theologiae, Secunda Secundae, qq.1–22",
+                      "year": "1265-1274",
+                      "yearSort": 1265,
+                      "category": "神學大全（中華道明會譯本‧共十七冊）",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "done",
+                      "genre": "quaestio",
+                      ebookId: 'a9051225-0000-4000-8000-000000000007',
+                      "note": "第二集第二部第1–22題：論信德的對象與德行、不信與異端、望德與失望。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
+                },
+                {
+                      "title": "神學大全 第八冊：論愛德",
+                      "titleOriginal": "Summa Theologiae, Secunda Secundae, qq.23–46",
+                      "year": "1265-1274",
+                      "yearSort": 1265,
+                      "category": "神學大全（中華道明會譯本‧共十七冊）",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "done",
+                      "genre": "quaestio",
+                      ebookId: 'a9051225-0000-4000-8000-000000000008',
+                      "note": "第二集第二部第23–46題：論愛德本質與次序、喜樂平安、仁慈施捨、相反愛德諸罪。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
+                },
+                {
+                      "title": "神學大全 第九冊：論智德與義德",
+                      "titleOriginal": "Summa Theologiae, Secunda Secundae, qq.47–79",
+                      "year": "1265-1274",
+                      "yearSort": 1265,
+                      "category": "神學大全（中華道明會譯本‧共十七冊）",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "done",
+                      "genre": "quaestio",
+                      ebookId: 'a9051225-0000-4000-8000-000000000009',
+                      "note": "第二集第二部第47–79題：論智德（明智）、義德總論、不義、審判與訴訟諸罪。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
+                },
+                {
+                      "title": "神學大全 第十冊：論義德之諸部分",
+                      "titleOriginal": "Summa Theologiae, Secunda Secundae, qq.80–100",
+                      "year": "1265-1274",
+                      "yearSort": 1265,
+                      "category": "神學大全（中華道明會譯本‧共十七冊）",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "done",
+                      "genre": "quaestio",
+                      ebookId: 'a9051225-0000-4000-8000-000000000010',
+                      "note": "第二集第二部第80–100題：論敬禮、祈禱、朝拜、奉獻與相反宗教德行之罪。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
+                },
+                {
+                      "title": "神學大全 第十一冊：論勇德與節德",
+                      "titleOriginal": "Summa Theologiae, Secunda Secundae, qq.101–140",
+                      "year": "1265-1274",
+                      "yearSort": 1265,
+                      "category": "神學大全（中華道明會譯本‧共十七冊）",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "done",
+                      "genre": "quaestio",
+                      ebookId: 'a9051225-0000-4000-8000-000000000011',
+                      "note": "第二集第二部第101–140題：論孝敬、感恩、真誠、勇德、殉道、堅忍與大方。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
+                },
+                {
+                      "title": "神學大全 第十二冊：論特殊恩寵、生活和身分",
+                      "titleOriginal": "Summa Theologiae, Secunda Secundae, qq.141–189",
+                      "year": "1265-1274",
+                      "yearSort": 1265,
+                      "category": "神學大全（中華道明會譯本‧共十七冊）",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "done",
+                      "genre": "quaestio",
+                      ebookId: 'a9051225-0000-4000-8000-000000000012',
+                      "note": "第二集第二部第141–189題：論節德諸部分、神恩特寵（先知、神魂超拔）、主動與默觀生活、身分與修會生活。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
+                },
+                {
+                      "title": "神學大全 第十三冊：論天主聖言之降生成人",
+                      "titleOriginal": "Summa Theologiae, Tertia Pars, qq.1–26",
+                      "year": "1265-1274",
+                      "yearSort": 1265,
+                      "category": "神學大全（中華道明會譯本‧共十七冊）",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "done",
+                      "genre": "quaestio",
+                      ebookId: 'a9051225-0000-4000-8000-000000000013',
+                      "note": "第三集第1–26題：論降生的合宜性、位格結合、基督的人性完美與中保職分。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
+                },
+                {
+                      "title": "神學大全 第十四冊：論基督的生平與救贖",
+                      "titleOriginal": "Summa Theologiae, Tertia Pars, qq.27–59",
+                      "year": "1265-1274",
+                      "yearSort": 1265,
+                      "category": "神學大全（中華道明會譯本‧共十七冊）",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "done",
+                      "genre": "quaestio",
+                      ebookId: 'a9051225-0000-4000-8000-000000000014',
+                      "note": "第三集第27–59題：論聖母、基督的生平奧蹟、苦難、死亡、復活與升天。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
+                },
+                {
+                      "title": "神學大全 第十五冊：論聖事總論與聖洗堅振",
+                      "titleOriginal": "Summa Theologiae, Tertia Pars, qq.60–90",
+                      "year": "1265-1274",
+                      "yearSort": 1265,
+                      "category": "神學大全（中華道明會譯本‧共十七冊）",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "done",
+                      "genre": "quaestio",
+                      ebookId: 'a9051225-0000-4000-8000-000000000015',
+                      "note": "第三集第60–90題：論聖事總論、聖洗、堅振、聖體聖事之論述。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
+                },
+                {
+                      "title": "神學大全 第十六冊：論聖體聖事與懺悔",
+                      "titleOriginal": "Summa Theologiae, Supplementum, qq.1–68",
+                      "year": "1265-1274",
+                      "yearSort": 1265,
+                      "category": "神學大全（中華道明會譯本‧共十七冊）",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "done",
+                      "genre": "quaestio",
+                      ebookId: 'a9051225-0000-4000-8000-000000000016',
+                      "note": "補編第1–68題：論懺悔聖事、告解、補贖、赦罪權、終傅、聖秩與婚姻。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
+                },
+                {
+                      "title": "神學大全 第十七冊：論肉身復活的問題",
+                      "titleOriginal": "Summa Theologiae, Supplementum, qq.69–99；Appendix 1–2",
+                      "year": "1265-1274",
+                      "yearSort": 1265,
+                      "category": "神學大全（中華道明會譯本‧共十七冊）",
+                      "languages": [
+                            "zh"
+                      ],
+                      "status": "done",
+                      "genre": "quaestio",
+                      ebookId: 'a9051225-0000-4000-8000-000000000017',
+                      "note": "補編第69–99題與附設1–2題：論死後靈魂、肉身復活、末日審判與世界更新。中華道明會譯本逐節轉錄，經院問答四段（異議／反之／正解／答覆）版面。"
+                },
+                {
                       "title": "駁異大全",
                       "titleOriginal": "Summa Contra Gentiles",
                       "year": "1259-1265",

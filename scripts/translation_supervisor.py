@@ -31,6 +31,7 @@ STATE_DIR = ROOT / "scripts" / "state"
 STATE_PATH = STATE_DIR / "translation_supervisor.json"
 LOCK_PATH = STATE_DIR / "translation_supervisor.lock"
 STOP_PATH = STATE_DIR / "translation_supervisor.stop"
+PAUSE_PATH = STATE_DIR / "translation_supervisor.pause"
 LOG_PATH = ROOT / "scripts" / "logs" / "translation_supervisor.log"
 WORKER_LOG = ROOT / "scripts" / "logs" / "translation_supervisor_worker.log"
 JOBS = (
@@ -115,31 +116,40 @@ def ollama_ready() -> bool:
         return False
 
 
-def _gemini_key() -> str:
+def _gemini_keys() -> list[str]:
+    """所有可用的 Gemini key（依 .env 出現順序）。單釘 key 1 會在那把耗盡時
+    誤判整個 Gemini 不可用（2026-08-17 踩到：key 1 credits depleted → 兩週零進度）。"""
+    names = {f"{base}_{n}"
+             for base in ("Gemini_API_Key", "GEMINI_API_KEY") for n in range(1, 11)}
+    keys = []
     try:
         for raw in (ROOT / ".env").read_text(encoding="utf-8").splitlines():
             line = raw.strip()
-            if "=" in line and line.split("=", 1)[0].strip() in (
-                    "Gemini_API_Key_1", "GEMINI_API_KEY_1"):
-                return line.split("=", 1)[1].strip().strip("\"'")
+            if line.startswith("#") or "=" not in line:
+                continue
+            if line.split("=", 1)[0].strip() in names:
+                v = line.split("=", 1)[1].strip().strip("\"'")
+                if v:
+                    keys.append(v)
     except OSError:
         pass
-    return ""
+    return keys
 
 
 def gemini_reachable() -> bool:
     """Cheap token-free health check: list one model. 200 → usable; 429/401/
-    offline → treat as unavailable so the cycle drafts locally instead."""
-    key = _gemini_key()
-    if not key:
-        return False
-    url = ("https://generativelanguage.googleapis.com/v1beta/models?"
-           + urllib.parse.urlencode({"key": key, "pageSize": 1}))
-    try:
-        with urllib.request.urlopen(url, timeout=6) as response:
-            return response.status == 200
-    except (OSError, urllib.error.URLError, ValueError):
-        return False
+    offline → treat as unavailable so the cycle drafts locally instead.
+    任何一把 key 通就算通（別讓單把耗盡的 key 判死整個引擎）。"""
+    for key in _gemini_keys():
+        url = ("https://generativelanguage.googleapis.com/v1beta/models?"
+               + urllib.parse.urlencode({"key": key, "pageSize": 1}))
+        try:
+            with urllib.request.urlopen(url, timeout=6) as response:
+                if response.status == 200:
+                    return True
+        except (OSError, urllib.error.URLError, ValueError):
+            continue
+    return False
 
 
 def review_engine_up() -> bool:
@@ -374,6 +384,11 @@ def main() -> None:
         STATE_DIR.mkdir(parents=True, exist_ok=True)
         STOP_PATH.write_text(now_iso(), encoding="utf-8")
         print("stop requested")
+        return
+    if PAUSE_PATH.exists():
+        write_state("paused-by-monitor", pause_file=str(PAUSE_PATH))
+        log("start skipped: persistent monitor pause")
+        print("translation supervisor paused by monitor")
         return
     if not acquire_lock():
         print("translation supervisor is already running", file=sys.stderr)
