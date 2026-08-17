@@ -679,7 +679,7 @@ def add_front_matter(document: Document, data: dict) -> None:
     document.add_heading("這一本怎麼使用", level=1)
     add_body(document, "全書五十課。每課固定收二十個詞、兩節背誦經文與一篇完整主讀文；第1–25課讀二十五章《希伯來聖經》，第26–50課讀二十五篇禱文或拉比文章。冊末另附完整逾越節 Haggadah 流程。")
     cards = [
-        ("1", "先學二十詞", "按 Pratico–Van Pelt《Basics of Biblical Hebrew》順序起步，課本範圍之後以頻率與專名延伸至一千詞。"),
+        ("1", "先學本課詞表", "第1–33課就是 BBH2 第3–35章的原章詞表，詞數依課本而定；第34–50課以頻率與專名延伸補足一千詞。"),
         ("2", "背兩節經文", "每天先聽、再讀、最後遮住中文默寫；五十課恰好一百節。"),
         ("3", "讀完整原文", "聖經正文保留 WLC 母音點與 cantillation；禱文及文章保留或明示編者附點。"),
     ]
@@ -765,7 +765,7 @@ def add_lesson_opener(document: Document, lesson: dict) -> None:
 
 
 def add_vocabulary(document: Document, lesson: dict) -> None:
-    document.add_heading("本課二十詞", level=2)
+    document.add_heading(f"本課 {len(lesson['vocabulary'])} 詞", level=2)
     table = document.add_table(rows=1, cols=5)
     widths = [9, 29, 30, 42, 31]
     set_table_geometry(table, widths)
@@ -1044,7 +1044,7 @@ def add_back_indices(document: Document, data: dict) -> None:
     heading = document.add_heading("來源與成品檢核", level=1)
     heading.paragraph_format.page_break_before = True
     for text in (
-        "50課；每課20詞；總計1,000詞。",
+        "50課；詞數依課本章次而定；總計1,000詞。",
         "每課2節背誦；總計100節。",
         "第1–25課為25個完整聖經章；第26–50課為25篇完整禱文或文章。",
         "冊末逾越節禮文按完整流程另列，不抵充25篇。",

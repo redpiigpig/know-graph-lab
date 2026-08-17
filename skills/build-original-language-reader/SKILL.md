@@ -31,7 +31,8 @@ When working in `know-graph-lab`, read `references/know-graph-lab-baseline.md`. 
    - Preserve the named textbook's verified order first.
    - Do not invent a missing textbook order.
    - Extend only by a documented corpus-frequency rule after the textbook ends.
-   - Assign exactly 20 entries to each of 50 lessons unless the frozen contract explicitly differs.
+   - Let the textbook set lesson size. While the named textbook lasts, one lesson is one textbook chapter with that chapter's real count — uneven by design. Do not slice its stream into equal quotas; that hides the progression the learner is following.
+   - Spread only the post-textbook extension evenly over the remaining lessons, and never let a fixed words-per-lesson assumption survive in validators, headings, labels or tests.
    - Preserve intentional homographs as separate lexical entries.
    - Store textbook-specific transliteration, source evidence, part of speech, frequency, and typed person/place/people/divine-name metadata.
    - Review every Traditional-Chinese gloss. Reject blanks, generic categories, English leakage, and machine placeholders.

@@ -521,6 +521,22 @@ def main() -> None:
     write_lock = threading.Lock()
     failures: list[str] = []
 
+    # Prove one batch before committing a long unattended run: a prompt or
+    # parsing fault should surface in minutes, not after a night of retries.
+    if not args.limit:
+        probe = batch_units(pending, args.max_words)[0]
+        results, problems = run_batch(probe, anchor)
+        if not results:
+            print("試跑批次沒有產出，停止；問題如下：", flush=True)
+            for line in problems[:10]:
+                print(f"  {line}", flush=True)
+            return
+        master["units"].update(results)
+        master["engine"] = _model
+        save_master(master)
+        print(f"試跑通過：{probe[0]['group']} → {len(results)}/{len(probe)} 單元", flush=True)
+        pending = [unit for unit in units if not unit_complete(master["units"].get(unit["id"]), unit)]
+
     # Rounds, not one pass: a batch that 429s or comes back malformed is retried
     # in the next round instead of silently dropping its verses from the book.
     for round_index in range(1, args.rounds + 1):

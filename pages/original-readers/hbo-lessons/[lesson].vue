@@ -40,7 +40,7 @@
           <header class="flex flex-col gap-2 border-b border-stone-200 p-5 sm:flex-row sm:items-end sm:justify-between sm:p-7">
             <div>
               <p class="text-[11px] font-bold tracking-[0.2em] text-stone-400">VOCABULARY · BBH ORDER</p>
-              <h2 class="mt-1 font-serif text-2xl font-semibold">本課20詞</h2>
+              <h2 class="mt-1 font-serif text-2xl font-semibold">本課{{ lessonData.vocabulary.length }}詞</h2>
               <p class="mt-1 text-xs leading-5 text-stone-500">完整母音、BBH課本式音標（學術轉寫，非 IPA）、繁中義與專名類型。</p>
             </div>
             <span class="w-fit rounded-full bg-violet-100 px-3 py-1 text-xs font-semibold text-violet-800">{{ lessonData.properNameCount }} 個專名／神名</span>
@@ -202,6 +202,7 @@ interface LessonDetail {
   pronunciationReferences: PronunciationReference[];
   vocabulary: VocabularyEntry[];
   memoryVerses: MemoryVerse[];
+  vocabularyCount: number;
   reading: Reading;
   previousLesson: number | null;
   nextLesson: number | null;

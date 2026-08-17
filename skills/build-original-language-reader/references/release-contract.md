@@ -8,7 +8,7 @@ Freeze deviations before extracting or laying out content.
 |---|---:|
 | Lessons | 50 |
 | Vocabulary | 1,000 unique curriculum entries |
-| Vocabulary per lesson | 20 |
+| Vocabulary per lesson | the textbook chapter's own count while the textbook lasts; an even split of the extension afterwards |
 | Memory units | 100 unique reviewed units |
 | Memory units per lesson | 2 |
 | Complete Scripture chapters | 25 |

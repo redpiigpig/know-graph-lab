@@ -288,7 +288,7 @@ export interface HebrewFullLessonSummary {
   ref: string;
   difficulty: number | null;
   genre: string;
-  vocabularyCount: 20;
+  vocabularyCount: number;
   properNameCount: number;
   memoryRefs: string[];
   readingSegmentCount: number;
@@ -426,7 +426,7 @@ function validateMasters() {
   const glossByOrdinal = new Map(reviewedGlosses.items.map((item) => [item.ordinal, item.glossZh.trim()]));
   for (let lesson = 1; lesson <= 50; lesson += 1) {
     const lessonVocabulary = vocabulary.filter((item) => item.lesson === lesson);
-    invariant(lessonVocabulary.length === 20, `第 ${lesson} 課不是 20 詞`);
+    invariant(lessonVocabulary.length > 0, `第 ${lesson} 課沒有詞彙`);
     invariant(
       lessonVocabulary.every((item, index) => item.lessonSlot === index + 1),
       `第 ${lesson} 課詞彙 slot 不連續`,
@@ -578,7 +578,7 @@ export function getHebrewFullLesson(lesson: number): HebrewFullLesson | null {
     ref: reading.ref,
     difficulty: reading.difficulty,
     genre: reading.genre,
-    vocabularyCount: 20,
+    vocabularyCount: lessonVocabulary.length,
     properNameCount: lessonVocabulary.filter((item) => item.isProperName).length,
     memoryRefs: memoryVerses.map((verse) => verse.ref),
     readingSegmentCount: reading.segmentCount,
@@ -616,7 +616,7 @@ export function getHebrewFullReaderOverview() {
   validateMasters();
   return {
     title: "希伯來文原文讀本・50課私人線上版",
-    subtitle: "每課20詞、2節背誦與1篇完整主讀文；第1–25課為完整聖經章，第26–50課為禱文與拉比文章。",
+    subtitle: "每課2節背誦與1篇完整主讀文；詞彙第1–33課即 BBH2 第3–35章原章詞表（每課詞數不等），第34–50課補足1,000詞。第1–25課讀完整聖經章，第26–50課讀禱文與拉比文章。",
     language: "hbo",
     rtl: true,
     privateUse: true,
