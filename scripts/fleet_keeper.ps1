@@ -57,7 +57,31 @@ function Ensure($label, $pat, $argv) {
     Launch $label $argv
 }
 
-# Aquinas FIRST (user 2026-08-17): Summa 17 vols, conservative OCR cleanup on the
+# ACCS FIRST (user 2026-08-17): campus ACCS OCR is the top priority and OWNS the
+# Gemini pool - every other lane is on NVIDIA/OpenRouter/local so nothing competes
+# for Gemini Vision quota. Gemini-gated: only launch when a key has quota.
+if (LanePaused 'accs-gemini') {
+    Note 'lane paused: accs-gemini'
+} elseif (-not (WorkerAlive 'accs-gemini')) {
+    Remove-Item -LiteralPath "$ROOT\scripts\state\gemini_live_model.txt" -Force -ErrorAction SilentlyContinue
+    & $py -X utf8 scripts\gemini_probe.py *> $null
+    if ($LASTEXITCODE -eq 0) {
+        # Free-tier daily quota is per MODEL (20/day/key/model as of 2026-08), so the
+        # probe reports which model still has room; pin the lane to it for this pass.
+        $liveModel = ''
+        $mf = "$ROOT\scripts\state\gemini_live_model.txt"
+        if (Test-Path -LiteralPath $mf) {
+            $liveModel = (Get-Content -LiteralPath $mf -ErrorAction SilentlyContinue | Select-Object -First 1)
+        }
+        if ($liveModel) { $env:GEMINI_MODEL = $liveModel.Trim() }
+        Note "Gemini has quota on $($env:GEMINI_MODEL) -> ACCS OCR queue (batch-4, NT first)"
+        Launch 'accs-gemini' @('-X','utf8','scripts\accs_ocr_run.py','--engine','gemini','--batch','4')
+    } else {
+        Note 'Gemini probe failed on all keys x all models; ACCS not launched'
+    }
+}
+
+# Aquinas second (user 2026-08-17): Summa 17 vols, conservative OCR cleanup on the
 # OpenRouter free pool (8 keys, own pool - does not touch Gemini/NVIDIA quota).
 # clean_body caches per article under c:\tmp\aquinas_clean, so each pass only pays
 # for what is still dirty; --upload is idempotent (upsert + replace chunks).
@@ -69,24 +93,11 @@ Ensure 'jung-queue' 'jung_cw_translate|jung_run_queue' @('-X','utf8','scripts\ju
 Ensure 'philo-queue' 'plato_build|plato_run_queue' @('-X','utf8','scripts\plato_run_queue.py','--engine','nvidia','--no-upload')
 # Panikkar last volume (vedic-experience, huge): on Haiku per user (idle Claude account).
 # When it finishes, replace this lane with Max Weber (sociology) collected works.
-Ensure 'panikkar-vedic' 'panikkar_auto' @('-X','utf8','scripts\panikkar_auto.py','--work','vedic-experience','--backend','gemini')
+# Moved off Gemini 2026-08-17 so ACCS owns the Gemini pool (see top of file).
+Ensure 'panikkar-vedic' 'panikkar_auto' @('-X','utf8','scripts\panikkar_auto.py','--work','vedic-experience','--backend','nvidia')
 # Uchimura first-wave cache is already complete; do not re-upload it on every wake.
 # Dadaodao is a separate research-materials project, outside this collected-works restart.
-# Sacred Books of the East: use the validated Gemini slot and keep output local.
-Ensure 'sbe-gemini' 'sbe_translate' @('-X','utf8','scripts\sbe_translate.py','--loop','--only','sbe-04-zend-avesta-1,sbe-06-quran-1,sbe-10-dhammapada,sbe-16-yi-king,sbe-22-jaina-1','--backend','gemini-first','--no-upload')
-
-# ACCS campus OCR — overnight priority (user 2026-07-22): Matthew done → full Gemini
-# batch-4 queue for mrk/luk/... . jung+philo moved to NVIDIA so ACCS owns Gemini.
-# Gemini-gated: only launch when a key has quota (else the driver just bails).
-if (LanePaused 'accs-gemini') {
-    Note 'lane paused: accs-gemini'
-} elseif (-not (WorkerAlive 'accs-gemini')) {
-    & $py -X utf8 scripts\gemini_probe.py *> $null
-    if ($LASTEXITCODE -eq 0) {
-        Note "Gemini has quota -> ACCS OCR queue (gemini batch-4, NT first)"
-        Launch 'accs-gemini' @('-X','utf8','scripts\accs_ocr_run.py','--engine','gemini','--batch','4')
-    } else {
-        Note 'Gemini probe failed; ACCS not launched'
-    }
-}
+# Sacred Books of the East: its five driver volumes are done locally; keep it off
+# Gemini (ACCS owns that pool) and keep output local.
+Ensure 'sbe-gemini' 'sbe_translate' @('-X','utf8','scripts\sbe_translate.py','--loop','--only','sbe-04-zend-avesta-1,sbe-06-quran-1,sbe-10-dhammapada,sbe-16-yi-king,sbe-22-jaina-1','--backend','nvidia','--no-upload')
 Note "keeper tick done"

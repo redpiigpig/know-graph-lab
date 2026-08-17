@@ -4,7 +4,11 @@
 
 預設只跑 status=ready（單書卷）；NT 優先。多書卷（needs_boundaries）待定界後另跑。
   python -X utf8 scripts/accs_ocr_run.py --engine gemini --batch 4 [--testament NT] [--only mat]
-每卷 --resume；某卷因額度乾退出即停整批（交由外層 runner 重探 Gemini 後續傳）。
+每卷 --resume。
+
+額度政策＝**兩次連續失敗才退**（使用者定調）：單卷退出非 0 先跳過換下一卷，連續兩卷都
+失敗才視為 provider 整體乾掉、停整批交給外層 runner 重探。2026-08-17 前是「一卷失敗就停
+整批」，結果約翰福音額度乾之後，排在它後面的希伯來書／以賽亞書等於永遠排不到（DB 0 筆）。
 """
 import argparse
 import json
@@ -35,6 +39,8 @@ def main():
     args = ap.parse_args()
 
     cfg = json.loads(CFG.read_text(encoding="utf-8"))
+    consecutive_fails = 0
+    skipped: list[str] = []
     for vol in cfg:
         if not args.include_multi and vol["status"] != "ready":
             continue
@@ -57,9 +63,20 @@ def main():
                 "--batch", str(args.batch), "--resume", "--sleep", "1",
             ]
             rc = subprocess.run(cmd).returncode
-            if rc != 0:
-                print(f"  [bail] {book} 退出碼 {rc}（多半額度乾）→ 停整批，待重探續傳", flush=True)
+            if rc == 0:
+                consecutive_fails = 0
+                continue
+            consecutive_fails += 1
+            skipped.append(book)
+            if consecutive_fails >= 2:
+                print(f"  [bail] {book} 退出碼 {rc}；連續 2 卷失敗＝provider 整體乾掉"
+                      f" → 停整批，待重探續傳（本批已跳過：{', '.join(skipped)}）", flush=True)
                 return 1
+            print(f"  [skip] {book} 退出碼 {rc}（多半額度乾）→ 換下一卷，"
+                  f"本卷 checkpoint 保留待續傳", flush=True)
+    if skipped:
+        print(f"\n本批跑完，跳過 {len(skipped)} 卷待續傳：{', '.join(skipped)}", flush=True)
+        return 0
     print("\n本批 OCR 全數完成或無可跑項", flush=True)
     return 0
 
