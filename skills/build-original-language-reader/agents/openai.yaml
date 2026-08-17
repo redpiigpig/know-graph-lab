@@ -1,0 +1,4 @@
+interface:
+  display_name: "原文讀本完整製作"
+  short_description: "完整製作與檢核希伯來文、希臘文及拉丁文 B5／線上私人讀本"
+  default_prompt: "Use $build-original-language-reader to build a complete private B5 original-language reader, online companion, audio manifest, and release QA."
