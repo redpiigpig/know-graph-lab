@@ -43,7 +43,13 @@ VOCAB = ROOT / "data" / "originalReaders" / "vocabulary" / "hebrew-1000.json"
 REVIEWED_GLOSSES = CACHE / "hebrew-1000-gloss-zh-reviewed.json"
 OUTPUT = CACHE / "interlinear.json"
 
+# Rate limits are per model tier on this account: Sonnet can be exhausted while
+# Haiku still answers.  Glossing runs on whichever tier is available and records
+# the engine per unit, so a later Sonnet pass can upgrade exactly the units a
+# cheaper tier produced.
 SONNET_MODELS = ("claude-sonnet-5", "claude-sonnet-4-6")
+HAIKU_MODELS = ("claude-haiku-4-5-20251001",)
+MODEL_CHAINS = {"sonnet": SONNET_MODELS, "haiku": HAIKU_MODELS}
 
 MAQQEF = "־"
 SOF_PASUQ = "׃"
@@ -235,6 +241,11 @@ PROMPT = """你在製作一本聖經希伯來文讀本的「逐詞對譯」層�
 規則：
 1. 每個詞給 1 個詞義，2–6 個中文字，取「在這個句子裡的實際意思」，不是字典裡所有義項。
 2. 詞形上的前綴要一起譯進去：וְ＝並／而、בְּ＝在…、לְ＝向…／給…、מִ＝從…、הַ＝這、כְּ＝如同、שֶׁ＝那…的。人稱字尾也要譯出來（חַסְדּוֹ＝他的慈愛、לְפָנֶיךָ＝在你面前）。
+2a. **每個詞義必須是該位置那個希伯來詞本身的意思，不可為了讓中文順而把相鄰兩詞的意思對調。**
+    例：בְּיָד חֲזָקָה 要標成「在…手中」「強大的」，不可標成「在強大的」「手」；
+    וּבִזְרוֹעַ נְטוּיָה 要標成「並用膀臂」「伸出的」。
+2b. 不要用「……」或「...」當佔位符。כִּי 就寫「因為」，不要寫「因為……的」。
+2c. 同一個詞形在整批中出現多次，詞義必須前後一致（חַסְדּוֹ 一律「他的慈愛」，不要有時寫忠誠）。
 3. 專名一律用通用中譯：יהוה＝耶和華、אֱלֹהִים＝上帝、יִשְׂרָאֵל＝以色列、יְרוּשָׁלַיִם＝耶路撒冷、מֹשֶׁה＝摩西、מִצְרַיִם＝埃及、אַבְרָהָם＝亞伯拉罕。
 4. 只用繁體中文，不可出現英文、拼音、注音或簡體字。
 5. 不要解釋、不要加註、不要標點符號當詞義。
@@ -285,6 +296,7 @@ _client_lock = threading.Lock()
 _client: anthropic.Anthropic | None = None
 _client_mtime = 0.0
 _model = SONNET_MODELS[0]
+_model_chain = SONNET_MODELS
 
 
 def _credentials_path() -> Path:
@@ -372,9 +384,9 @@ def call_model(prompt: str, backoffs: Iterable[int] = (0, 30, 90, 180, 300, 600)
             return "".join(block.text for block in message.content if hasattr(block, "text")).strip()
         except anthropic.NotFoundError:
             with _client_lock:
-                index = SONNET_MODELS.index(_model) if _model in SONNET_MODELS else 0
-                if index + 1 < len(SONNET_MODELS):
-                    _model = SONNET_MODELS[index + 1]
+                index = _model_chain.index(_model) if _model in _model_chain else 0
+                if index + 1 < len(_model_chain):
+                    _model = _model_chain[index + 1]
                     print(f"  模型改用 {_model}", flush=True)
                 else:
                     raise
@@ -412,6 +424,16 @@ def parse_response(raw: str) -> dict[str, dict[str, Any]]:
 
 
 BAD_GLOSS_RE = re.compile(r"[A-Za-z֐-׿]")
+# A medial ellipsis is legitimate (「在…手中」 glosses a prefixed noun); a
+# trailing one is the model padding a gloss it could not commit to
+# (「因為……的」), which is what must be rejected.
+FILLER_RE = re.compile(r"(?:…|\.\.\.)\s*的?$")
+MAX_GLOSS_CHARS = 10
+
+
+def normalize_gloss(value: Any) -> str:
+    """Keep the printed gloss typographically tidy: one ellipsis character."""
+    return re.sub(r"…{2,}|\.\.\.", "…", str(value).strip())
 
 
 def validate(unit: dict[str, Any], answer: dict[str, Any]) -> list[str]:
@@ -422,11 +444,15 @@ def validate(unit: dict[str, Any], answer: dict[str, Any]) -> list[str]:
     if len(glosses) != len(unit["tokens"]):
         problems.append(f"{unit['id']}：詞義數 {len(glosses)} ≠ 詞數 {len(unit['tokens'])}")
     for index, gloss in enumerate(glosses, start=1):
-        value = str(gloss).strip()
+        value = normalize_gloss(gloss)
         if not value:
             problems.append(f"{unit['id']}：第 {index} 詞義空白")
         elif BAD_GLOSS_RE.search(value):
             problems.append(f"{unit['id']}：第 {index} 詞義含英文或希伯來文「{value}」")
+        elif FILLER_RE.search(value):
+            problems.append(f"{unit['id']}：第 {index} 詞義含佔位符「{value}」")
+        elif len(value) > MAX_GLOSS_CHARS:
+            problems.append(f"{unit['id']}：第 {index} 詞義過長「{value}」")
     if unit["need_sense"] and not str(answer.get("senseZh", "")).strip():
         problems.append(f"{unit['id']}：缺整段意思")
     return problems
@@ -435,6 +461,24 @@ def validate(unit: dict[str, Any], answer: dict[str, Any]) -> list[str]:
 # --------------------------------------------------------------------------- #
 # driver
 # --------------------------------------------------------------------------- #
+
+
+def consistency_report(records: dict[str, Any]) -> None:
+    """Same printed form, different gloss.  Legitimate homographs exist, so this
+    is a review list for the release gate rather than an automatic rewrite."""
+    from collections import defaultdict
+
+    forms: dict[str, dict[str, list[str]]] = defaultdict(lambda: defaultdict(list))
+    for record in records.values():
+        for token in record.get("tokens", []):
+            forms[token["word"]][token.get("glossZh", "")].append(record["id"])
+    divergent = {word: glosses for word, glosses in forms.items() if len(glosses) > 1}
+    print(f"已標詞形 {len(forms)}，其中 {len(divergent)} 個詞形譯法不一致", flush=True)
+    for word, glosses in sorted(divergent.items(), key=lambda item: -sum(len(v) for v in item[1].values())):
+        summary = "　".join(
+            f"{gloss}×{len(units)}（{units[0]}…）" for gloss, units in sorted(glosses.items(), key=lambda kv: -len(kv[1]))
+        )
+        print(f"  {word}　{summary}", flush=True)
 
 
 def load_master() -> dict[str, Any]:
@@ -447,8 +491,10 @@ def save_master(master: dict[str, Any]) -> None:
     OUTPUT.write_text(json.dumps(master, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def unit_complete(record: dict[str, Any] | None, unit: dict[str, Any]) -> bool:
+def unit_complete(record: dict[str, Any] | None, unit: dict[str, Any], *, require_engine: str = "") -> bool:
     if not record:
+        return False
+    if require_engine and record.get("engine") != require_engine:
         return False
     tokens = record.get("tokens") or []
     if len(tokens) != len(unit["tokens"]):
@@ -478,7 +524,7 @@ def run_batch(batch: list[dict[str, Any]], anchor: str) -> tuple[dict[str, dict[
             problems.extend(issues)
             continue
         tokens = [
-            {**token, "glossZh": str(gloss).strip()}
+            {**token, "glossZh": normalize_gloss(gloss)}
             for token, gloss in zip(unit["tokens"], answer["glosses"])
         ]
         results[unit["id"]] = {
@@ -502,7 +548,13 @@ def main() -> None:
     parser.add_argument("--limit", type=int, default=0, help="只跑前 N 批（試跑用）")
     parser.add_argument("--rounds", type=int, default=6, help="未完成單元最多重跑幾輪")
     parser.add_argument("--probe-attempts", type=int, default=24, help="試跑批次最多重試幾次")
+    parser.add_argument("--model", choices=sorted(MODEL_CHAINS), default="sonnet",
+                        help="sonnet（品質優先）｜haiku（Sonnet 額度用盡時仍可跑）")
+    parser.add_argument("--upgrade", action="store_true",
+                        help="連已完成但由別的引擎產出的單元一起重跑，用來把 Haiku 那批換成 Sonnet")
     parser.add_argument("--stats", action="store_true", help="只報告覆蓋率，不呼叫模型")
+    parser.add_argument("--report", action="store_true",
+                        help="稽核：列出同一詞形在不同單元被譯得不一致者，不呼叫模型")
     args = parser.parse_args()
 
     units = collect_units()
@@ -511,10 +563,21 @@ def main() -> None:
         keys = {key.strip() for key in wanted.split(",") if key.strip()}
         units = [unit for unit in units if unit["kind"].split("_")[0] in keys]
 
+    global _model, _model_chain
+    _model_chain = MODEL_CHAINS[args.model]
+    _model = _model_chain[0]
+
     master = load_master()
-    pending = [unit for unit in units if not unit_complete(master["units"].get(unit["id"]), unit)]
+    require_engine = _model if args.upgrade else ""
+    pending = [
+        unit for unit in units
+        if not unit_complete(master["units"].get(unit["id"]), unit, require_engine=require_engine)
+    ]
     total_words = sum(len(unit["tokens"]) for unit in units)
     print(f"單元 {len(units)}／詞 {total_words}；已完成 {len(units) - len(pending)}，待處理 {len(pending)}", flush=True)
+    if args.report:
+        consistency_report(master["units"])
+        return
     if args.stats or not pending:
         return
 
@@ -545,8 +608,11 @@ def main() -> None:
         master["units"].update(results)
         master["engine"] = _model
         save_master(master)
-        print(f"試跑通過：{probe[0]['group']} → {len(results)}/{len(probe)} 單元", flush=True)
-        pending = [unit for unit in units if not unit_complete(master["units"].get(unit["id"]), unit)]
+        print(f"試跑通過（{_model}）：{probe[0]['group']} → {len(results)}/{len(probe)} 單元", flush=True)
+        pending = [
+            unit for unit in units
+            if not unit_complete(master["units"].get(unit["id"]), unit, require_engine=require_engine)
+        ]
 
     # Rounds, not one pass: a batch that 429s or comes back malformed is retried
     # in the next round instead of silently dropping its verses from the book.
@@ -573,12 +639,18 @@ def main() -> None:
                     save_master(master)
                     done += 1
                     print(f"[{done}/{len(batches)}] {batch[0]['group']} → {len(results)}/{len(batch)} 單元", flush=True)
-        pending = [unit for unit in units if not unit_complete(master["units"].get(unit["id"]), unit)]
+        pending = [
+            unit for unit in units
+            if not unit_complete(master["units"].get(unit["id"]), unit, require_engine=require_engine)
+        ]
         if not pending or args.limit:
             break
         print(f"第 {round_index} 輪結束，仍缺 {len(pending)} 單元", flush=True)
 
-    remaining = [unit for unit in units if not unit_complete(master["units"].get(unit["id"]), unit)]
+    remaining = [
+        unit for unit in units
+        if not unit_complete(master["units"].get(unit["id"]), unit, require_engine=require_engine)
+    ]
     print(f"完成：{len(units) - len(remaining)}／{len(units)}；未完成 {len(remaining)}", flush=True)
     if failures:
         print("--- 需重跑 ---", flush=True)
