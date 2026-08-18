@@ -70,15 +70,19 @@ Contract frozen 2026-08-18 — see `greek-reader-contract.md`. Verify live.
 | 25-chapter plan | `scripts/build_greek_scripture_plan.py` -> `scripture-plan.json` | done — 709 verses, 13,214 Greek words, NT 13 / LXX 6 / deuterocanon 4 / pseudepigrapha 2 |
 | Patristic loaders | `scripts/greek_patristic_sources.py` | Open Apostolic Fathers, First1KGreek TEI, repository creed files, glt.goarch.org |
 | Shared LLM client | `scripts/original_reader_llm.py` | extracted from the Hebrew interlinear so both jobs share one 429 gate |
+| Deuterocanon Chinese | `scripts/export_reader_fhl_deuterocanon.py` -> `deuterocanon-zh.json` | done — 1933 Anglican text, 4 chapters / 106 verses, verse counts match Swete exactly |
+| Missing conciliar Greek | `scripts/export_reader_creed_greek.py` -> `creeds-greek.json` | done — 381 conciliar creed, Chalcedon Ὅρος, Constantinople III Ὅρος, from Schaff vol. II on CCEL |
 
 Source cache: `output/source-cache/original-readers/greek-full/sources/{sblgnt,swete,apostolic-fathers,first1k,liturgy}`.
 
 Still open: the 25 patristic/creed/decree master, the Chrysostom liturgy appendix, the 100 memory verses, the RCUV2010 export for New Testament and LXX-canonical chapters, the deuterocanonical Chinese text, the interlinear layer, the master assembly, the web reader and the print build.
 
-Known source gaps to resolve rather than paper over:
-- `data/creeds/ecumenical-councils/02-constantinople-381.ts` carries no Greek version at all.
-- `early-06-greek.txt` (Constantinople III, 681) was never scraped.
-- `early-04-greek.txt` holds the Chalcedonian *canons*, not the Definition of Faith.
+Resolved source gaps, now covered by `creeds-greek.json` rather than by the creed files themselves:
+- `02-constantinople-381.ts` still carries no Greek; the conciliar plural text now comes from Schaff.
+- Constantinople III (681) has no Documenta Catholica Omnia Greek file at all, because the council issued no canons; its Ὅρος now comes from Schaff.
+- `early-04-greek.txt` holds the Chalcedonian *canons*; the Definition of Faith now comes from Schaff.
+
+Three extracted segments carry a `needs_review_*` status and must be reviewed before use.
 
 ## Latin continuation checkpoint
 
