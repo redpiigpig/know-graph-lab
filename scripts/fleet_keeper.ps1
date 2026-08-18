@@ -7,7 +7,27 @@ $ROOT = 'c:\Users\user\Desktop\know-graph-lab'
 Set-Location $ROOT
 $log = "$ROOT\scripts\logs\fleet_keeper.log"
 $py = 'C:\Users\user\AppData\Local\Python\bin\python.exe'
-function Note($m) { Add-Content $log ("[{0}] {1}" -f (Get-Date -Format 'MM-dd HH:mm'), $m) }
+# Never let a reader silence the keeper. A `tail -f` on the log holds a Windows share
+# lock that makes Add-Content throw, and with $ErrorActionPreference=Continue the keeper
+# kept working while writing nothing for 5 hours (2026-08-18). Open the file ourselves
+# with FileShare::ReadWrite, retry briefly, and fall back to a .alt file so the record
+# always lands somewhere.
+function Note($m) {
+    $line = "[{0}] {1}" -f (Get-Date -Format 'MM-dd HH:mm'), $m
+    foreach ($target in @($log, "$log.alt")) {
+        for ($i = 0; $i -lt 3; $i++) {
+            try {
+                $fs = New-Object System.IO.FileStream($target, [System.IO.FileMode]::Append,
+                    [System.IO.FileAccess]::Write, [System.IO.FileShare]::ReadWrite)
+                $sw = New-Object System.IO.StreamWriter($fs)
+                $sw.WriteLine($line); $sw.Flush(); $sw.Close(); $fs.Close()
+                return
+            } catch {
+                Start-Sleep -Milliseconds 200
+            }
+        }
+    }
+}
 if (Test-Path "$ROOT\scripts\state\fleet_keeper.pause") {
     Note 'keeper paused by monitor; no lanes relaunched'
     exit 0
