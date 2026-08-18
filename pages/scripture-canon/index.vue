@@ -52,6 +52,13 @@ const religions = [
     enabled: true,
   },
   {
+    path: '/scripture-canon/greco-roman',
+    icon: '🏛️',
+    title: '希臘羅馬宗教',
+    desc: '希臘羅馬大藏經 —— 廣亟十四卷 Α–Ω（神譜／列祖／祭儀法／祕儀／詩頌／箴言／神諭／啓示／論神／聖徒傳／爭辩）＋羅馬續典六卷 I–VI；自公元前 8 世紀至 529 年基督教全面取代為止',
+    enabled: true,
+  },
+  {
     path: '/scripture-canon/buddhism',
     icon: '☸️',
     title: '佛教',
