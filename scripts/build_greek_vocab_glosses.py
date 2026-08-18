@@ -34,6 +34,7 @@ CACHE = ROOT / "output" / "source-cache" / "original-readers" / "greek-full"
 OUTPUT = CACHE / "greek-1000-gloss-zh-reviewed.json"
 
 BATCH_SIZE = 20
+UNPRODUCTIVE_PASS_LIMIT = 3
 JSON_RE = re.compile(r"\{.*\}", re.S)
 GREEK_RE = re.compile(r"[Ͱ-Ͽἀ-῿]")
 LATIN_RE = re.compile(r"[A-Za-z]")
@@ -171,36 +172,60 @@ def main() -> None:
     if args.limit:
         batches = batches[: args.limit]
 
+    # The Claude Max account is shared with the overnight translation fleet, so a
+    # 429 means "wait", not "this batch is bad".  A failed batch goes back in the
+    # queue instead of being skipped, and the run only gives up after several
+    # complete passes have produced nothing at all — otherwise a busy night
+    # burns through all 50 lessons failing once each and saves no glosses.
     rejected = 0
-    for index, batch in enumerate(batches, start=1):
-        lesson = batch[0]["lesson"]
-        try:
-            answers = gloss_batch(batch)
-        except Exception as error:  # noqa: BLE001 - a failed batch is retried next run
-            print(f"  第 {index}/{len(batches)} 批（第 {lesson} 課）失敗：{error}", flush=True)
-            continue
-        accepted = 0
-        for item in batch:
-            gloss = answers[str(item["ordinal"])]
-            problem = validate(gloss, item)
-            if problem:
-                rejected += 1
-                print(f"    退回 #{item['ordinal']} {item['printedEntry']}：{problem}", flush=True)
+    pending = list(batches)
+    total = len(batches)
+    unproductive_passes = 0
+    while pending and unproductive_passes < UNPRODUCTIVE_PASS_LIMIT:
+        requeued: list[list[dict]] = []
+        progressed = False
+        for index, batch in enumerate(pending, start=1):
+            lesson = batch[0]["lesson"]
+            try:
+                answers = gloss_batch(batch)
+            except Exception as error:  # noqa: BLE001 - re-queued, not discarded
+                print(f"  第 {index}/{len(pending)} 批（第 {lesson} 課）失敗，改排隊重試：{error}", flush=True)
+                requeued.append(batch)
                 continue
-            glosses[str(item["ordinal"])] = {
-                "glossZh": gloss,
-                "lesson": item["lesson"],
-                "printedEntry": item["printedEntry"],
-                "engine": llm.current_model(),
-            }
-            accepted += 1
-        save_cache(glosses)
-        print(
-            f"  第 {index}/{len(batches)} 批（第 {lesson} 課）收 {accepted}/{len(batch)}；"
-            f"累計 {len(glosses)}／1000",
-            flush=True,
-        )
+            progressed = True
+            accepted = 0
+            for item in batch:
+                gloss = answers[str(item["ordinal"])]
+                problem = validate(gloss, item)
+                if problem:
+                    rejected += 1
+                    print(f"    退回 #{item['ordinal']} {item['printedEntry']}：{problem}", flush=True)
+                    continue
+                glosses[str(item["ordinal"])] = {
+                    "glossZh": gloss,
+                    "lesson": item["lesson"],
+                    "printedEntry": item["printedEntry"],
+                    "engine": llm.current_model(),
+                }
+                accepted += 1
+            save_cache(glosses)
+            print(
+                f"  第 {index}/{len(pending)} 批（第 {lesson} 課）收 {accepted}/{len(batch)}；"
+                f"累計 {len(glosses)}／1000",
+                flush=True,
+            )
 
+        pending = requeued
+        unproductive_passes = 0 if progressed else unproductive_passes + 1
+        if pending:
+            print(
+                f"  本輪結束，剩 {len(pending)}/{total} 批待補"
+                f"（連續 {unproductive_passes} 輪無進度）",
+                flush=True,
+            )
+
+    if pending:
+        print(f"停在剩 {len(pending)} 批：額度連續 {UNPRODUCTIVE_PASS_LIMIT} 輪都沒放出來，改天再跑即可續傳")
     print(f"結束：{len(glosses)}／1000 完成，本輪退回 {rejected} 筆")
 
 
