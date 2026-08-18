@@ -225,7 +225,8 @@ _KEY_IDX = [0]             # round-robin 指標，讓負載平均分散到各 ke
 # 🚨 一定要給 timeout：SDK 預設無限等，遇上 Google edge 抽風的連線會整支 wedge 住——
 # 2026-08-18 實測 act 卷卡在同一個 batch 49 分鐘不動、24 小時只燒 76 秒 CPU，而 fleet_keeper
 # 看到「行程還活著」就永遠不會重拉它。單位是毫秒。
-_HTTP_TIMEOUT_MS = 300_000
+# 成功的 4 頁批次約 20-60 秒；逾時設太長只是讓一條壞連線多拖幾分鐘才輪到下一把 key。
+_HTTP_TIMEOUT_MS = 120_000
 
 
 def _client(key: str):
@@ -282,6 +283,8 @@ def _gemini_generate(contents: list) -> list[dict]:
                          "connection aborted", "timed out")
             if any(t in msg for t in transient):
                 attempts += 1
+                print(f"    [retry {attempts}/{max_attempts}] {type(e).__name__}: "
+                      f"{str(e)[:90]}", flush=True)
                 time.sleep(min(5 * attempts, 30))
                 continue
             raise
