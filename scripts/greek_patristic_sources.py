@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import html
 import re
+import unicodedata
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import NamedTuple
@@ -96,6 +97,39 @@ def slice_chapters(segments: list[Segment], first: int, last: int) -> list[Segme
 # First1KGreek TEI
 # --------------------------------------------------------------------------
 
+SKIP_TAGS = {"note", "bibl", "ref", "figure", "teiHeader"}
+
+
+def _text_without_apparatus(element) -> str:
+    """Text of one division with the editor's critical apparatus left out.
+
+    First1KGreek prints the apparatus inline as ``<note type="footnote">``
+    ("6 γοῦν] οὑν d || 7 κυβισται] ..."), interleaved with the Greek.  Taking
+    ``itertext()`` swallows all of it — Gregory's twenty-seventh oration came out
+    at 9,358 words instead of roughly two and a half thousand, with editorial
+    Latin and manuscript sigla sitting inside the reading text.
+    """
+    parts: list[str] = []
+
+    def walk(node) -> None:
+        for child in node:
+            tag = child.tag.rsplit("}", 1)[-1]
+            if tag in SKIP_TAGS:
+                if child.tail:
+                    parts.append(child.tail)
+                continue
+            if child.text:
+                parts.append(child.text)
+            walk(child)
+            if child.tail:
+                parts.append(child.tail)
+
+    if element.text:
+        parts.append(element.text)
+    walk(element)
+    return "".join(parts)
+
+
 def load_first1k(filename: str, first_chapter: int = 0, last_chapter: int = 0) -> list[Segment]:
     path = FIRST1K_DIR / filename
     if not path.exists():
@@ -121,11 +155,11 @@ def load_first1k(filename: str, first_chapter: int = 0, last_chapter: int = 0) -
         sections = chapter.findall("tei:div[@subtype='section']", TEI_NS)
         if sections:
             for section in sections:
-                text = _clean("".join(section.itertext()))
+                text = _clean(_text_without_apparatus(section))
                 if text:
                     segments.append(Segment(f"{number}.{section.get('n')}", text))
         else:
-            text = _clean("".join(chapter.itertext()))
+            text = _clean(_text_without_apparatus(chapter))
             if text:
                 segments.append(Segment(str(number), text))
     if not segments:
@@ -197,7 +231,10 @@ def _goarch_text(filename: str) -> str:
     # a naive tag-to-newline conversion shatters every sentence.
     body = re.sub(r"</?(p|div|tr|table|br|h[1-6]|li)\b[^>]*>", "\n", body, flags=re.I)
     body = re.sub(r"<[^>]+>", "", body)
-    return html.unescape(body)
+    # These pages mix composed and decomposed Greek, so an anchor written as
+    # composed text silently fails to match a decomposed page and the block
+    # runs to the end of the document.  Normalise once, here.
+    return unicodedata.normalize("NFC", html.unescape(body))
 
 
 def load_goarch_block(filename: str, start_pattern: str, end_pattern: str) -> list[Segment]:
