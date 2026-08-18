@@ -222,9 +222,18 @@ _DEAD_KEYS: set = set()    # **只放 credit/額度永久乾**的 key（如 prep
 _KEY_IDX = [0]             # round-robin 指標，讓負載平均分散到各 key（避單 key 撞 RPM）
 
 
+# 🚨 一定要給 timeout：SDK 預設無限等，遇上 Google edge 抽風的連線會整支 wedge 住——
+# 2026-08-18 實測 act 卷卡在同一個 batch 49 分鐘不動、24 小時只燒 76 秒 CPU，而 fleet_keeper
+# 看到「行程還活著」就永遠不會重拉它。單位是毫秒。
+_HTTP_TIMEOUT_MS = 300_000
+
+
 def _client(key: str):
     if key not in _CLIENTS:
-        _CLIENTS[key] = genai.Client(api_key=key)
+        _CLIENTS[key] = genai.Client(
+            api_key=key,
+            http_options=types.HttpOptions(timeout=_HTTP_TIMEOUT_MS),
+        )
     return _CLIENTS[key]
 
 

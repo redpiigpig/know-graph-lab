@@ -27,12 +27,28 @@ function LanePaused($label) {
     $lane = LaneName $label
     Test-Path -LiteralPath "$ROOT\scripts\state\fleet_$lane.pause"
 }
+# A lane whose log has not advanced in this long is wedged, not working. 2026-08-18:
+# the ACCS worker sat on one Gemini call for 49 min (24h alive, 76s CPU) because the
+# SDK had no request timeout - and the keeper never relaunched it, since the process
+# was still technically alive. Liveness must mean progress, not just a live pid.
+$STALL_MINUTES = 45
 function WorkerAlive($label) {
     $lane = LaneName $label
     $pidFile = "$ROOT\scripts\state\fleet_$lane.pid"
     if (-not (Test-Path -LiteralPath $pidFile)) { return $false }
     $workerPid = (Get-Content -LiteralPath $pidFile -ErrorAction SilentlyContinue | Select-Object -First 1)
     if ($workerPid -and (Get-Process -Id ([int]$workerPid) -ErrorAction SilentlyContinue)) {
+        $out = "$ROOT\scripts\logs\fleet_$lane.out.log"
+        if (Test-Path -LiteralPath $out) {
+            $idle = ((Get-Date) - (Get-Item -LiteralPath $out).LastWriteTime).TotalMinutes
+            if ($idle -gt $STALL_MINUTES) {
+                Note ("wedged {0}: log idle {1:N0} min -> kill pid {2} and relaunch" -f $label, $idle, $workerPid)
+                # /T so the ingest/build grandchild dies too, else it keeps the pipe open.
+                & taskkill /F /T /PID $workerPid *> $null
+                Remove-Item -LiteralPath $pidFile -Force -ErrorAction SilentlyContinue
+                return $false
+            }
+        }
         return $true
     }
     Remove-Item -LiteralPath $pidFile -Force -ErrorAction SilentlyContinue
