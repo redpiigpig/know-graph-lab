@@ -230,8 +230,8 @@ def _client(key: str):
 
 def _gemini_generate(contents: list) -> list[dict]:
     """送 contents（影像 Part… + PROMPT）給 Gemini，回傳解析後 entries。
-    key round-robin；RPM/暫時性 429 退避重試（**不**標死）；只有 credit 永久乾的
-    key 才永久剔除；全部永久乾才退出。"""
+    key round-robin；任何 429/quota 立即退出並保留檢查點，不在同輪重試。
+    只有非配額的暫時性 5xx 才短暫退避。"""
     n = len(API_KEYS)
     attempts = 0
     max_attempts = n * 4
@@ -259,12 +259,21 @@ def _gemini_generate(contents: list) -> list[dict]:
                 return []
             if "depleted" in msg or "prepayment" in msg:
                 _DEAD_KEYS.add(key); continue          # 真‧預付餘額用罄 → 永久剔除
-            # 註：免費層當日限額的 429 訊息含「check your plan and billing details」，
-            # 「billing」不代表餘額乾（免費 key 無餘額概念）→ 不可標死，落下面退避分支隔日恢復。
-            if "429" in msg or "resource_exhausted" in msg or "quota" in msg or "rate" in msg \
-               or "503" in msg or "unavailable" in msg:
+            # 使用者規則：403/429/quota 一律立即停，不以換 key 或退避重試消耗請求。
+            if ("429" in msg or "resource_exhausted" in msg or "quota" in msg
+                    or "rate limit" in msg or "rate-limit" in msg):
+                raise RuntimeError(f"Gemini quota/rate-limit，依規範退出：{str(e)[:180]}") from e
+            # 暫時性網路/邊緣節點問題：503，以及 Google edge 偶發把 API 主機名解到通用
+            # 前端 IP、回一張 SAN 不含 generativelanguage 的憑證（實測 issuer 仍是 Google
+            # 的 WR2、subject=upload.video.google.com，故非中間人攔截，是路由問題）。
+            # 2026-08-17：這種 SSL 失敗曾連續打掉 18 個 batch（72 頁），因為它原本落到
+            # 下面的 raise、整批頁直接判 FAIL。比照 503 退避重試即可自行恢復。
+            transient = ("503", "unavailable", "certificate_verify_failed",
+                         "hostname mismatch", "ssl", "connection reset",
+                         "connection aborted", "timed out")
+            if any(t in msg for t in transient):
                 attempts += 1
-                time.sleep(min(5 * attempts, 30))      # RPM/暫時性 → 退避換下一把
+                time.sleep(min(5 * attempts, 30))
                 continue
             raise
     raise RuntimeError("連續 429 達上限（可能當日額度耗盡），依規範退出")
@@ -383,6 +392,19 @@ def main():
                 ckpt_fh.flush()
         except Exception as e:
             print(f"FAIL {e}", flush=True)
+            error_text = str(e).lower()
+            if any(marker in error_text for marker in (
+                "429",
+                "quota",
+                "resource_exhausted",
+                "rate-limit",
+                "rate limit",
+                "額度耗盡",
+            )):
+                ckpt_fh.close()
+                pdf.close()
+                print("  [bail] provider quota/rate-limit; checkpoint preserved", flush=True)
+                raise SystemExit(2)
             if "依規範退出" in str(e):
                 # 單頁逾時多半是 CLI 偶發卡頓（batch 1 時更明顯）：跳過該頁、續跑，
                 # 該頁留在 checkpoint 之外、下輪自動重試。只有**連續 3 次**才視為真的額度乾→退。
