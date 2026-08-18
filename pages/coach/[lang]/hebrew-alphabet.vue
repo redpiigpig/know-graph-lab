@@ -20,7 +20,7 @@
               <div class="text-xs text-indigo-200">聖經希伯來文入門 · מֵאָלֶף עַד תָּו</div>
               <h1 class="text-xl font-bold mt-1">從 Alef 到 Tav：認識希伯來字母</h1>
               <p class="text-xs text-indigo-100 mt-2 leading-relaxed max-w-2xl">
-                分六課認識由右至左的 22 個子音、5 個字尾形與常用母音點。每個例字可單獨點讀；每課最後用辨字測驗確認記憶。
+                分六課認識由右至左的 22 個子音、5 個字尾形與常用母音點。每個例字附課本式音標；每課最後用辨字測驗確認記憶。
               </p>
             </div>
             <div class="text-right shrink-0">
@@ -31,6 +31,17 @@
           <div class="h-2 bg-white/20 rounded-full mt-4 overflow-hidden">
             <div class="h-full bg-amber-300 rounded-full transition-all" :style="{ width: `${progress}%` }" />
           </div>
+        </section>
+
+        <section class="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-xs leading-6 text-amber-950">
+          <strong>發音標準：Pratico–Van Pelt《Basics of Biblical Hebrew Grammar》第二版（BBH2）</strong>
+          <p class="mt-1">
+            本課的讀音與轉寫一律依 BBH2 的<strong>聖經希伯來文</strong>系統，不使用現代以色列希伯來語發音，因此站上不提供機器語音朗讀——
+            現代語音會把 ח 與 ḵ 合併、略去 ע 的喉音、把 ק 讀成 k、把 ו 讀成 v，與課本要辨的音位正好相反。
+            要聽真人示範請用課本配套網站。
+          </p>
+          <a href="https://hebrewsyntax.org/bbh2new/" target="_blank" rel="noopener noreferrer"
+            class="inline-block mt-2 font-semibold underline decoration-amber-400 underline-offset-2">BBH2 教材配套網站 ↗</a>
         </section>
 
         <section class="flex gap-2 overflow-x-auto pb-1">
@@ -58,12 +69,13 @@
               <div dir="rtl" class="text-center text-4xl font-semibold text-gray-900 leading-none py-2">{{ letter.char }}</div>
               <div class="text-sm font-semibold text-indigo-700 mt-1">{{ letter.name }}</div>
               <div class="text-xs text-gray-500 mt-0.5">{{ letter.sound }}</div>
-              <button v-if="letter.example" type="button" @click="speakExample(letter)"
-                class="w-full flex items-center justify-between gap-2 mt-2 px-2 py-1.5 rounded-lg bg-white border border-gray-200 hover:border-indigo-300 hover:bg-indigo-50 transition"
-                :title="`朗讀 ${letter.example}`">
-                <span dir="rtl" class="text-base text-gray-800">{{ letter.example }}</span>
-                <span class="text-[11px] text-gray-400">{{ letter.gloss }} 🔊</span>
-              </button>
+              <div v-if="letter.example" class="mt-2 px-2 py-1.5 rounded-lg bg-white border border-gray-200">
+                <div class="flex items-center justify-between gap-2">
+                  <span dir="rtl" class="text-base text-gray-800">{{ letter.example }}</span>
+                  <span class="text-[11px] text-gray-400">{{ letter.gloss }}</span>
+                </div>
+                <div v-if="letter.translit" class="mt-0.5 font-serif text-[13px] text-indigo-700">{{ letter.translit }}</div>
+              </div>
             </article>
           </div>
 
@@ -123,11 +135,10 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, onUnmounted, reactive, ref } from "vue";
+import { computed, onMounted, reactive, ref } from "vue";
 import { useRoute } from "vue-router";
 import { authedFetch } from "~/composables/useAuthedFetch";
 import { useActivityTracker } from "~/composables/useActivityTracker";
-import { useSpeech } from "~/composables/useSpeech";
 
 definePageMeta({ middleware: "coach-auth" });
 
@@ -137,6 +148,7 @@ interface Letter {
   sound: string;
   example?: string;
   gloss?: string;
+  translit?: string;
 }
 interface Group { key: string; label: string; note?: string; letters: Letter[] }
 interface AlphabetSpec { language: string; title: string; intro: string; groups: Group[] }
@@ -146,7 +158,6 @@ interface Question { letter: Letter; options: Letter[] }
 const route = useRoute();
 const lang = computed(() => route.params.lang as string);
 const tracker = useActivityTracker();
-const speech = useSpeech();
 const spec = ref<AlphabetSpec | null>(null);
 const coach = ref<any>(null);
 const loading = ref(true);
@@ -193,9 +204,6 @@ function selectLesson(index: number) {
   lessonIdx.value = index;
   quiz.started = false;
   quiz.done = false;
-}
-function speakExample(letter: Letter) {
-  if (letter.example) speech.speak(letter.example, coach.value?.ttsLang || "he-IL", 0.82);
 }
 function startQuiz() {
   const letters = currentLesson.value.letters;
@@ -257,5 +265,4 @@ onMounted(async () => {
   tracker.start("hbo", "reading", "hebrew-alphabet-course");
 });
 
-onUnmounted(() => speech.stopSpeaking());
 </script>

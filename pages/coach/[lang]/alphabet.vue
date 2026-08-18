@@ -43,12 +43,12 @@
               <span v-if="g.note" class="text-[11px] text-gray-400">{{ g.note }}</span>
             </div>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
-              <button v-for="(l, i) in g.letters" :key="i" @click="speakLetter(l)"
+              <button v-for="(l, i) in g.letters" :key="i" @click="speakLetter(l)" :disabled="!canSpeakLetters"
                 class="text-left bg-slate-50 hover:bg-indigo-50 border border-gray-100 hover:border-indigo-200 rounded-xl p-2.5 transition group">
                 <div class="flex items-baseline gap-1.5" :dir="spec.rtl ? 'rtl' : 'ltr'">
                   <span class="text-2xl font-semibold text-gray-900 leading-none">{{ l.char }}</span>
                   <span v-if="l.upper && l.upper !== l.char" class="text-base text-gray-400 leading-none">{{ l.upper }}</span>
-                  <span class="ml-auto text-gray-300 group-hover:text-indigo-500 text-sm">🔊</span>
+                  <span v-if="canSpeakLetters" class="ml-auto text-gray-300 group-hover:text-indigo-500 text-sm">🔊</span>
                 </div>
                 <div class="text-[11px] text-gray-700 mt-1.5 font-medium">{{ l.name }}</div>
                 <div class="text-[11px] text-indigo-600">{{ l.sound }}</div>
@@ -97,7 +97,7 @@
               <template v-if="cur.ask === 'glyph'">
                 <div class="text-6xl font-bold text-gray-900 leading-none" :dir="spec.rtl ? 'rtl' : 'ltr'">{{ cur.letter.char }}</div>
                 <div v-if="cur.letter.upper && cur.letter.upper !== cur.letter.char" class="text-2xl text-gray-300 mt-1">{{ cur.letter.upper }}</div>
-                <button @click="speakLetter(cur.letter)" class="mt-2 text-xs text-indigo-500 hover:text-indigo-700">🔊 聽發音</button>
+                <button v-if="canSpeakLetters" @click="speakLetter(cur.letter)" class="mt-2 text-xs text-indigo-500 hover:text-indigo-700">🔊 聽發音</button>
                 <div class="text-xs text-gray-400 mt-2">這個字母的讀音是？</div>
               </template>
               <template v-else>
@@ -211,7 +211,7 @@
                   <span class="font-semibold">{{ spCur.char }} = {{ spCur.name }}（{{ spCur.sound }}）</span>
                 </p>
                 <p v-if="sp.heard" class="text-xs text-gray-400 mt-1">你唸的：「{{ sp.heard }}」</p>
-                <button @click="speakLetter(spCur)" class="mt-2 text-xs text-indigo-500 hover:text-indigo-700">🔊 聽正確發音</button>
+                <button v-if="canSpeakLetters" @click="speakLetter(spCur)" class="mt-2 text-xs text-indigo-500 hover:text-indigo-700">🔊 聽正確發音</button>
                 <div class="mt-3">
                   <button @click="nextSpeak" class="px-6 py-2 rounded-xl bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-700 transition">
                     {{ sp.idx + 1 < sp.letters.length ? '下一題 →' : '看結果' }}
@@ -296,7 +296,13 @@ function toggleGroup(key: string) {
   if (mode.value === "quiz") resetQuiz();
 }
 
+// Dead languages carry `voiceless`: the device only has a modern voice for them
+// (Hebrew/Aramaic get he-IL), and a modern reading contradicts the classical
+// pronunciation these coaches teach.  Show the letter, never fake the sound.
+const canSpeakLetters = computed(() => !coach.value?.voiceless);
+
 function speakLetter(l: AlphaLetter) {
+  if (!canSpeakLetters.value) return;
   speech.speak(l.tts || l.example || l.char, coach.value?.ttsLang || TTS[lang.value] || "en-US");
 }
 
