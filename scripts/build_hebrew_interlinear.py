@@ -244,7 +244,10 @@ PROMPT = """你在製作一本聖經希伯來文讀本的「逐詞對譯」層�
 2a. **每個詞義必須是該位置那個希伯來詞本身的意思，不可為了讓中文順而把相鄰兩詞的意思對調。**
     例：בְּיָד חֲזָקָה 要標成「在…手中」「強大的」，不可標成「在強大的」「手」；
     וּבִזְרוֹעַ נְטוּיָה 要標成「並用膀臂」「伸出的」。
-2b. 不要用「……」或「...」當佔位符。כִּי 就寫「因為」，不要寫「因為……的」。
+2b. 不要用「……」或「...」當佔位符。כִּי 就寫「因為」，不要寫「因為……的」。詞義也不可以只有一個「…」。
+2d. 沒有實義的虛詞照這樣標，不要用省略號帶過：
+    אֲשֶׁר＝那…的（或依上下文「所」「就是」）、אֵת／אֶת＝（受詞記號）、
+    הִנֵּה＝看哪、נָא＝請、לֹא＝不、אִם＝若、כֹּה＝如此。
 2c. 同一個詞形在整批中出現多次，詞義必須前後一致（חַסְדּוֹ 一律「他的慈愛」，不要有時寫忠誠）。
 3. 專名一律用通用中譯：יהוה＝耶和華、אֱלֹהִים＝上帝、יִשְׂרָאֵל＝以色列、יְרוּשָׁלַיִם＝耶路撒冷、מֹשֶׁה＝摩西、מִצְרַיִם＝埃及、אַבְרָהָם＝亞伯拉罕。
 4. 只用繁體中文，不可出現英文、拼音、注音或簡體字。
@@ -424,10 +427,10 @@ def parse_response(raw: str) -> dict[str, dict[str, Any]]:
 
 
 BAD_GLOSS_RE = re.compile(r"[A-Za-z֐-׿]")
-# A medial ellipsis is legitimate (「在…手中」 glosses a prefixed noun); a
-# trailing one is the model padding a gloss it could not commit to
-# (「因為……的」), which is what must be rejected.
-FILLER_RE = re.compile(r"(?:…|\.\.\.)\s*的?$")
+# An ellipsis inside a gloss is legitimate and often required: 「在…手中」 for a
+# prefixed noun, 「那…的」 for a relative pronoun.  Only a gloss that is *nothing
+# but* an ellipsis carries no meaning and must be sent back.
+FILLER_RE = re.compile(r"^(?:…|\.\.\.)+\s*的?$")
 MAX_GLOSS_CHARS = 10
 
 
@@ -488,7 +491,24 @@ def load_master() -> dict[str, Any]:
 
 
 def save_master(master: dict[str, Any]) -> None:
-    OUTPUT.write_text(json.dumps(master, ensure_ascii=False, indent=2), encoding="utf-8")
+    """Merge with whatever is on disk before writing.
+
+    A run holds the whole master in memory, so two runs writing blindly means
+    the slower one silently reverts the other's units — that is exactly how a
+    998/1000 pass fell back to 861.  Disk wins for units this run did not
+    produce; the write itself is atomic so a kill cannot truncate the file.
+    """
+    if OUTPUT.exists():
+        try:
+            on_disk = json.loads(OUTPUT.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            on_disk = {"units": {}}
+        merged = dict(on_disk.get("units", {}))
+        merged.update(master["units"])
+        master["units"] = merged
+    temporary = OUTPUT.with_suffix(".json.tmp")
+    temporary.write_text(json.dumps(master, ensure_ascii=False, indent=2), encoding="utf-8")
+    temporary.replace(OUTPUT)
 
 
 def unit_complete(record: dict[str, Any] | None, unit: dict[str, Any], *, require_engine: str = "") -> bool:
@@ -597,18 +617,23 @@ def main() -> None:
         for attempt in range(1, args.probe_attempts + 1):
             try:
                 results, problems = run_batch(probe, anchor)
-                break
             except Exception as error:  # noqa: BLE001 - keep waiting for capacity
                 print(f"試跑第 {attempt}/{args.probe_attempts} 次未成：{type(error).__name__}", flush=True)
-        if not results:
-            print("試跑批次沒有產出，停止；問題如下：", flush=True)
-            for line in problems[:10]:
+                continue
+            if results:
+                break
+            print(f"試跑第 {attempt}/{args.probe_attempts} 次被驗證退回：", flush=True)
+            for line in problems[:6]:
                 print(f"  {line}", flush=True)
-            return
-        master["units"].update(results)
-        master["engine"] = _model
-        save_master(master)
-        print(f"試跑通過（{_model}）：{probe[0]['group']} → {len(results)}/{len(probe)} 單元", flush=True)
+        if not results:
+            # One stubborn batch must not cancel the other 999 units; report it
+            # and let the rounds carry on, since it stays in the pending list.
+            print("試跑批次始終沒過，改為直接進入正式輪次", flush=True)
+        if results:
+            master["units"].update(results)
+            master["engine"] = _model
+            save_master(master)
+            print(f"試跑通過（{_model}）：{probe[0]['group']} → {len(results)}/{len(probe)} 單元", flush=True)
         pending = [
             unit for unit in units
             if not unit_complete(master["units"].get(unit["id"]), unit, require_engine=require_engine)
