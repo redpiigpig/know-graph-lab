@@ -284,12 +284,13 @@ def _gemini_generate(contents: list) -> list[dict]:
             # 整條 MODEL_CHAIN 都乾才是真的 provider 乾掉，才依規範退出。
             if ("429" in msg or "resource_exhausted" in msg or "quota" in msg
                     or "rate limit" in msg or "rate-limit" in msg):
-                _DRY_MODELS.add(MODEL_CHAIN[_MODEL_IDX[0]])
+                spent = MODEL_CHAIN[_MODEL_IDX[0]]
+                _DRY_MODELS.add(spent)
                 remaining = [m for m in MODEL_CHAIN if m not in _DRY_MODELS]
                 if remaining:
                     _MODEL_IDX[0] = MODEL_CHAIN.index(remaining[0])
-                    print(f"    [quota] {MODEL_CHAIN[_MODEL_IDX[0]]} 之前的模型當日額度用罄，"
-                          f"改用 {remaining[0]}（尚餘 {len(remaining)} 個）", flush=True)
+                    print(f"    [quota] {spent} 當日額度用罄，改用 {remaining[0]}"
+                          f"（尚餘 {len(remaining)} 個）", flush=True)
                     attempts += 1
                     continue
                 raise RuntimeError(
