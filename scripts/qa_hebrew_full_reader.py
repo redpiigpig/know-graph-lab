@@ -659,8 +659,11 @@ def validate_master(gate: Gate, master_path: Path, vocab_by_ordinal: dict[int, d
         memory = lesson.get("memoryVerses", [])
         all_vocab.extend(vocab)
         all_memory.extend(memory)
-        expected_ordinals = list(range((number - 1) * 20 + 1, number * 20 + 1))
-        if len(vocab) != 20 or [item.get("ordinal") for item in vocab] != expected_ordinals or len(memory) != 2:
+        # Lesson size follows the textbook chapter, so only continuity of the
+        # global ordinals is invariant, not a fixed count per lesson.
+        ordinals = [item.get("ordinal") for item in vocab]
+        contiguous = bool(ordinals) and ordinals == list(range(ordinals[0], ordinals[0] + len(ordinals)))
+        if not contiguous or len(memory) != 2:
             lesson_failures.append({"lesson": number, "vocabulary": len(vocab), "memory": len(memory)})
         reading = lesson.get("reading", {})
         kind = reading.get("kind")
@@ -680,7 +683,7 @@ def validate_master(gate: Gate, master_path: Path, vocab_by_ordinal: dict[int, d
             if not is_zh_hant_field(str(reading.get("title_zh", ""))) or not is_zh_hant_field(str(reading.get("summaryZh", ""))):
                 prayer_failures.append(f"{lesson.get('id')}:zh")
 
-    gate.expect(not lesson_failures, "master.lesson_payloads", "every lesson contains 20 contiguous vocabulary items and two memory verses", failures=lesson_failures)
+    gate.expect(not lesson_failures, "master.lesson_payloads", "every lesson contains a contiguous run of vocabulary items and two memory verses", failures=lesson_failures)
     vocab_ordinals = [item.get("ordinal") for item in all_vocab]
     gate.expect(len(all_vocab) == 1000 and vocab_ordinals == list(range(1, 1001)), "master.vocabulary", "master contains each of the 1,000 vocabulary entries exactly once", actual=len(all_vocab))
     gate.expect(not chapter_failures and reading_kinds[:25] == ["bible_chapter"] * 25, "master.bible_chapters", "lessons 1–25 contain 25 complete pointed/cantillated chapters with zh-Hant translations", failures=chapter_failures[:40])

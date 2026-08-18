@@ -115,11 +115,22 @@ def collect_units() -> list[dict[str, Any]]:
     haggadah = load(HAGGADAH)
     assembled = load(ASSEMBLED)
 
+    # The reader prints the learner-facing qere layer, while scripture-plan.json
+    # preserves the source-oriented ketiv spellings; 96 verses differ.  Gloss the
+    # text the page actually shows, or the two layers cannot be aligned at all.
     translation_by_ref: dict[str, str] = {}
+    display_by_ref: dict[str, str] = {}
     for lesson in assembled["lessons"]:
         for verse in lesson.get("reading", {}).get("verses", []) or []:
             if verse.get("translationZh"):
                 translation_by_ref[verse["ref"]] = verse["translationZh"].strip()
+            if verse.get("text"):
+                display_by_ref[verse["ref"]] = verse["text"]
+        for verse in lesson.get("memoryVerses", []) or []:
+            if verse.get("text"):
+                display_by_ref[verse["ref"]] = verse["text"]
+            if verse.get("translationZh"):
+                translation_by_ref.setdefault(verse["ref"], verse["translationZh"].strip())
 
     units: list[dict[str, Any]] = []
     seen: set[str] = set()
@@ -136,7 +147,7 @@ def collect_units() -> list[dict[str, Any]]:
                     "kind": "bible_verse",
                     "ref": verse["ref"],
                     "group": f"bible:{chapter['ref']}",
-                    "text": verse["text"],
+                    "text": display_by_ref.get(verse["ref"], verse["text"]),
                     "reference_zh": translation_by_ref.get(verse["ref"], ""),
                     "need_sense": False,
                 }
@@ -154,7 +165,7 @@ def collect_units() -> list[dict[str, Any]]:
                     "kind": "memory_verse",
                     "ref": verse["ref"],
                     "group": f"memory:{lesson['lesson']:02d}",
-                    "text": verse["text"],
+                    "text": display_by_ref.get(verse["ref"], verse["text"]),
                     "reference_zh": translation_by_ref.get(verse["ref"], ""),
                     "need_sense": False,
                 }
@@ -266,6 +277,39 @@ glosses 的數量必須**剛好等於**該單元列出的詞數。
 
 SENSE_RULE_ON = "6. 每個單元另外給一句 senseZh：整段的繁體中文意思，通順成句，忠於希伯來原文，不要加原文沒有的話。\n"
 SENSE_RULE_OFF = ""
+
+
+# A single Haggadah or Ashrei segment can run past 250 words.  Asking for one
+# gloss list that long makes the model lose count — it kept returning three
+# short — so oversized units are glossed a window at a time and reassembled.
+WINDOW_TOKENS = 60
+
+
+def build_window_prompt(
+    unit: dict[str, Any],
+    window: list[dict[str, Any]],
+    start: int,
+    is_last: bool,
+    anchor: str,
+) -> str:
+    need_sense = is_last and unit["need_sense"]
+    listing = "　".join(f"{token['ordinal']}.{token['word']}" for token in window)
+    block = "\n".join(
+        [
+            f"單元 id：{unit['id']}",
+            f"出處：{unit['ref']}",
+            f"（本段完整原文，僅供理解上下文）：{unit['text']}",
+            f"本段共 {len(unit['tokens'])} 詞；這一次只標第 {start + 1}–{start + len(window)} 詞，共 {len(window)} 個。",
+            f"逐詞：{listing}",
+            f"glosses 必須剛好 {len(window)} 個，順序與上面完全相同，不要多也不要少。",
+        ]
+    )
+    return PROMPT.format(
+        sense_rule=SENSE_RULE_ON if need_sense else SENSE_RULE_OFF,
+        sense_field=',"senseZh":"整段意思"' if need_sense else "",
+        anchor=anchor,
+        payload=block,
+    )
 
 
 def build_prompt(batch: list[dict[str, Any]], anchor: str) -> str:
@@ -422,8 +466,37 @@ def parse_response(raw: str) -> dict[str, dict[str, Any]]:
     match = JSON_RE.search(text)
     if not match:
         raise ValueError("回應不含 JSON")
-    payload = json.loads(match.group(0))
+    try:
+        payload = json.loads(match.group(0))
+    except json.JSONDecodeError:
+        # A stray quote inside one gloss should not cost the whole window.
+        # The shape we need is simple enough to recover positionally.
+        payload = salvage_payload(match.group(0))
     return {unit["id"]: unit for unit in payload.get("units", []) if unit.get("id")}
+
+
+GLOSS_ARRAY_RE = re.compile(r'"glosses"\s*:\s*\[(.*?)\]', re.S)
+SENSE_RE = re.compile(r'"senseZh"\s*:\s*"(.*?)"\s*[,}]', re.S)
+UNIT_ID_RE = re.compile(r'"id"\s*:\s*"([^"]+)"')
+
+
+def salvage_payload(text: str) -> dict[str, Any]:
+    array = GLOSS_ARRAY_RE.search(text)
+    if not array:
+        raise ValueError("回應的 JSON 無法修復")
+    glosses = [item.strip().strip('"').strip() for item in array.group(1).split('",')]
+    glosses = [gloss.strip('"').strip() for gloss in glosses if gloss.strip()]
+    unit_id = UNIT_ID_RE.search(text)
+    sense = SENSE_RE.search(text)
+    return {
+        "units": [
+            {
+                "id": unit_id.group(1) if unit_id else "",
+                "glosses": glosses,
+                "senseZh": sense.group(1) if sense else "",
+            }
+        ]
+    }
 
 
 BAD_GLOSS_RE = re.compile(r"[A-Za-z֐-׿]")
@@ -528,7 +601,86 @@ def unit_complete(record: dict[str, Any] | None, unit: dict[str, Any], *, requir
     return True
 
 
+MIN_WINDOW_TOKENS = 8
+
+
+def gloss_window(
+    unit: dict[str, Any],
+    window: list[dict[str, Any]],
+    start: int,
+    is_last: bool,
+    anchor: str,
+) -> tuple[list[str], str]:
+    """Gloss one span, halving it whenever the model loses count.
+
+    Ashrei is an acrostic full of repeated words and maqqef pairs, and the model
+    kept returning one gloss short for it however the instruction was worded.
+    A shorter list is easier to count than a better prompt is to write.
+    """
+    answers = parse_response(call_model(build_window_prompt(unit, window, start, is_last, anchor)))
+    answer = answers.get(unit["id"]) or (next(iter(answers.values())) if answers else None)
+    glosses = answer.get("glosses") if answer else None
+    if isinstance(glosses, list) and len(glosses) == len(window):
+        return [str(gloss) for gloss in glosses], str(answer.get("senseZh", "")).strip()
+    if len(window) <= MIN_WINDOW_TOKENS:
+        got = len(glosses) if isinstance(glosses, list) else "無"
+        raise ValueError(f"{unit['id']}：第 {start + 1}–{start + len(window)} 詞回了 {got} 個詞義")
+    middle = len(window) // 2
+    left, _ = gloss_window(unit, window[:middle], start, False, anchor)
+    right, sense = gloss_window(unit, window[middle:], start + middle, is_last, anchor)
+    return left + right, sense
+
+
+def run_long_unit(unit: dict[str, Any], anchor: str) -> tuple[dict[str, dict[str, Any]], list[str]]:
+    """Gloss one oversized unit window by window."""
+    tokens = unit["tokens"]
+    glosses: list[str] = []
+    sense = ""
+    for start in range(0, len(tokens), WINDOW_TOKENS):
+        window = tokens[start : start + WINDOW_TOKENS]
+        is_last = start + len(window) >= len(tokens)
+        try:
+            window_glosses, window_sense = gloss_window(unit, window, start, is_last, anchor)
+        except ValueError as error:
+            return {}, [str(error)]
+        glosses.extend(window_glosses)
+        if is_last:
+            sense = window_sense
+    answer = {"glosses": glosses, "senseZh": sense}
+    problems = validate(unit, answer)
+    if problems:
+        return {}, problems
+    return {
+        unit["id"]: {
+            "id": unit["id"],
+            "kind": unit["kind"],
+            "ref": unit["ref"],
+            "text": unit["text"],
+            "tokens": [
+                {**token, "glossZh": normalize_gloss(gloss)}
+                for token, gloss in zip(tokens, glosses)
+            ],
+            "senseZh": sense,
+            "engine": _model,
+        }
+    }, []
+
+
 def run_batch(batch: list[dict[str, Any]], anchor: str) -> tuple[dict[str, dict[str, Any]], list[str]]:
+    long_units = [unit for unit in batch if len(unit["tokens"]) > WINDOW_TOKENS]
+    if long_units:
+        results: dict[str, dict[str, Any]] = {}
+        problems: list[str] = []
+        for unit in long_units:
+            unit_results, unit_problems = run_long_unit(unit, anchor)
+            results.update(unit_results)
+            problems.extend(unit_problems)
+        rest = [unit for unit in batch if len(unit["tokens"]) <= WINDOW_TOKENS]
+        if rest:
+            rest_results, rest_problems = run_batch(rest, anchor)
+            results.update(rest_results)
+            problems.extend(rest_problems)
+        return results, problems
     prompt = build_prompt(batch, anchor)
     raw = call_model(prompt)
     answers = parse_response(raw)
