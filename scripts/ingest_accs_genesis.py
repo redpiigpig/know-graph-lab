@@ -83,6 +83,7 @@ MODEL_CHAIN = [MODEL] + [m for m in (
     "gemini-3.5-flash-lite", "gemini-3.1-flash-lite", "gemini-flash-lite-latest",
 ) if m != MODEL]
 _MODEL_IDX = [0]
+_DRY_MODELS: set = set()   # 當日配額已用罄的模型（配額按模型算，非按 provider）
 
 PROMPT = """以下是《古代基督信仰聖經註釋叢書》（Ancient Christian Commentary on Scripture，校園書房繁體中文版）**連續的一至數頁**掃描影像，內容是某卷聖經某段經文的教父註釋。請依影像順序處理，把所有頁的條目**合併成單一 JSON 陣列**輸出（跨頁未完的同一則正文要接成完整一段）。
 
@@ -277,10 +278,23 @@ def _gemini_generate(contents: list) -> list[dict]:
                 return []
             if "depleted" in msg or "prepayment" in msg:
                 _DEAD_KEYS.add(key); continue          # 真‧預付餘額用罄 → 永久剔除
-            # 使用者規則：403/429/quota 一律立即停，不以換 key 或退避重試消耗請求。
+            # 使用者規則：403/429/quota 不以換 key 或退避重試消耗請求。但免費層配額是
+            # **按模型**算的（GenerateRequestsPerDayPerProjectPerModel=20），所以「這個
+            # 模型乾了」不等於「Gemini 乾了」——把該模型記為乾、換下一個模型繼續；等到
+            # 整條 MODEL_CHAIN 都乾才是真的 provider 乾掉，才依規範退出。
             if ("429" in msg or "resource_exhausted" in msg or "quota" in msg
                     or "rate limit" in msg or "rate-limit" in msg):
-                raise RuntimeError(f"Gemini quota/rate-limit，依規範退出：{str(e)[:180]}") from e
+                _DRY_MODELS.add(MODEL_CHAIN[_MODEL_IDX[0]])
+                remaining = [m for m in MODEL_CHAIN if m not in _DRY_MODELS]
+                if remaining:
+                    _MODEL_IDX[0] = MODEL_CHAIN.index(remaining[0])
+                    print(f"    [quota] {MODEL_CHAIN[_MODEL_IDX[0]]} 之前的模型當日額度用罄，"
+                          f"改用 {remaining[0]}（尚餘 {len(remaining)} 個）", flush=True)
+                    attempts += 1
+                    continue
+                raise RuntimeError(
+                    f"Gemini 全部 {len(MODEL_CHAIN)} 個模型當日額度皆用罄，依規範退出："
+                    f"{str(e)[:150]}") from e
             # 暫時性網路/邊緣節點問題：503，以及 Google edge 偶發把 API 主機名解到通用
             # 前端 IP、回一張 SAN 不含 generativelanguage 的憑證（實測 issuer 仍是 Google
             # 的 WR2、subject=upload.video.google.com，故非中間人攔截，是路由問題）。
@@ -292,8 +306,11 @@ def _gemini_generate(contents: list) -> list[dict]:
             if any(t in msg for t in transient):
                 attempts += 1
                 # 模型過載＝換模型（換 key 沒用，配額與負載都是按模型算的）。
-                if ("503" in msg or "high demand" in msg) and len(MODEL_CHAIN) > 1:
-                    _MODEL_IDX[0] = (_MODEL_IDX[0] + 1) % len(MODEL_CHAIN)
+                usable = [m for m in MODEL_CHAIN if m not in _DRY_MODELS]
+                if ("503" in msg or "high demand" in msg) and len(usable) > 1:
+                    cur = MODEL_CHAIN[_MODEL_IDX[0]]
+                    nxt = usable[(usable.index(cur) + 1) % len(usable)] if cur in usable else usable[0]
+                    _MODEL_IDX[0] = MODEL_CHAIN.index(nxt)
                     print(f"    [retry {attempts}/{max_attempts}] 模型過載，改用 "
                           f"{MODEL_CHAIN[_MODEL_IDX[0]]}", flush=True)
                 else:
