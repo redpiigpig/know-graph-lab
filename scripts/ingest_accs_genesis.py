@@ -75,6 +75,14 @@ if not API_KEYS:
 SUPABASE_URL = os.environ["SUPABASE_URL"]
 SUPABASE_KEY = os.environ["SUPABASE_SERVICE_ROLE_KEY"]
 MODEL = os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
+# 503「this model is currently experiencing high demand」是**單一模型**在忙，不是 Gemini
+# 掛了——換一個模型就好。2026-08-18 實測 gemini-3.6-flash 每批要重試兩次才過，速度直接
+# 砍半。順序與 gemini_probe.py 的清單一致（皆實測可讀中文掃描頁）。
+MODEL_CHAIN = [MODEL] + [m for m in (
+    "gemini-3.6-flash", "gemini-flash-latest", "gemini-3-flash-preview",
+    "gemini-3.5-flash-lite", "gemini-3.1-flash-lite", "gemini-flash-lite-latest",
+) if m != MODEL]
+_MODEL_IDX = [0]
 
 PROMPT = """以下是《古代基督信仰聖經註釋叢書》（Ancient Christian Commentary on Scripture，校園書房繁體中文版）**連續的一至數頁**掃描影像，內容是某卷聖經某段經文的教父註釋。請依影像順序處理，把所有頁的條目**合併成單一 JSON 陣列**輸出（跨頁未完的同一則正文要接成完整一段）。
 
@@ -253,7 +261,7 @@ def _gemini_generate(contents: list) -> list[dict]:
         _KEY_IDX[0] += 1
         try:
             resp = _client(key).models.generate_content(
-                model=MODEL, contents=contents,
+                model=MODEL_CHAIN[_MODEL_IDX[0]], contents=contents,
                 config=types.GenerateContentConfig(
                     temperature=0.1,
                     response_mime_type="application/json",
@@ -283,8 +291,14 @@ def _gemini_generate(contents: list) -> list[dict]:
                          "connection aborted", "timed out")
             if any(t in msg for t in transient):
                 attempts += 1
-                print(f"    [retry {attempts}/{max_attempts}] {type(e).__name__}: "
-                      f"{str(e)[:90]}", flush=True)
+                # 模型過載＝換模型（換 key 沒用，配額與負載都是按模型算的）。
+                if ("503" in msg or "high demand" in msg) and len(MODEL_CHAIN) > 1:
+                    _MODEL_IDX[0] = (_MODEL_IDX[0] + 1) % len(MODEL_CHAIN)
+                    print(f"    [retry {attempts}/{max_attempts}] 模型過載，改用 "
+                          f"{MODEL_CHAIN[_MODEL_IDX[0]]}", flush=True)
+                else:
+                    print(f"    [retry {attempts}/{max_attempts}] {type(e).__name__}: "
+                          f"{str(e)[:90]}", flush=True)
                 time.sleep(min(5 * attempts, 30))
                 continue
             raise
