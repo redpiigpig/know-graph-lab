@@ -249,8 +249,9 @@ def _client(key: str):
 
 def _gemini_generate(contents: list) -> list[dict]:
     """送 contents（影像 Part… + PROMPT）給 Gemini，回傳解析後 entries。
-    key round-robin；任何 429/quota 立即退出並保留檢查點，不在同輪重試。
-    只有非配額的暫時性 5xx 才短暫退避。"""
+    key round-robin。免費層配額按**模型**計（每 key 每模型每天 20 次），故 429 只把
+    該模型記為當日乾掉、換 MODEL_CHAIN 下一個；整條鏈都乾才退出並保留檢查點。
+    503/504/SSL 等暫時性錯誤退避重試，過載（503）另外會主動換模型。"""
     n = len(API_KEYS)
     attempts = 0
     max_attempts = n * 4
@@ -301,9 +302,10 @@ def _gemini_generate(contents: list) -> list[dict]:
             # 的 WR2、subject=upload.video.google.com，故非中間人攔截，是路由問題）。
             # 2026-08-17：這種 SSL 失敗曾連續打掉 18 個 batch（72 頁），因為它原本落到
             # 下面的 raise、整批頁直接判 FAIL。比照 503 退避重試即可自行恢復。
-            transient = ("503", "unavailable", "certificate_verify_failed",
+            transient = ("503", "unavailable", "504", "deadline_exceeded",
+                         "deadline expired", "certificate_verify_failed",
                          "hostname mismatch", "ssl", "connection reset",
-                         "connection aborted", "timed out")
+                         "connection aborted", "timed out", "internal error")
             if any(t in msg for t in transient):
                 attempts += 1
                 # 模型過載＝換模型（換 key 沒用，配額與負載都是按模型算的）。
