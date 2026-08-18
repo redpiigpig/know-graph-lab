@@ -56,6 +56,25 @@ def main():
             vol_name = NAME.get(book, book)
             src_vol = f"ACCS（{vol_name}）"
             print(f"\n=== {book}  {rng['pages']}  {os.path.basename(vol['pdf'])} ===", flush=True)
+            # 來源在 Google Drive 虛擬磁碟（G:）上，Drive 崩潰／重連時整個磁碟會消失。
+            # 沒這道預檢，PyMuPDF 會對每一頁噴 "page not in document"，一卷燒掉幾百頁
+            # 才輪到兩次失敗停批（2026-08-18 實測 Drive 掛掉 → act 連噴 25 批）。
+            pdf_path = Path(vol["pdf"])
+            if not pdf_path.exists():
+                anchor_dir = Path(pdf_path.anchor)
+                mounted = anchor_dir.exists() and any(anchor_dir.iterdir())
+                if not mounted:
+                    print(f"  [bail] 來源磁碟 {pdf_path.anchor} 未掛載"
+                          f"（Google Drive 斷線？）→ 停整批，待掛回後續傳", flush=True)
+                    return 1
+                consecutive_fails += 1
+                skipped.append(book)
+                print(f"  [skip] 找不到來源 PDF {pdf_path.name} → 換下一卷", flush=True)
+                if consecutive_fails >= 2:
+                    print(f"  [bail] 連續 2 卷來源不可用 → 停整批"
+                          f"（本批已跳過：{', '.join(skipped)}）", flush=True)
+                    return 1
+                continue
             cmd = [
                 sys.executable, "-X", "utf8", str(ROOT / "ingest_accs_genesis.py"),
                 "--pdf", vol["pdf"], "--book", book, "--pages", rng["pages"],
