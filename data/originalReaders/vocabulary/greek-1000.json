@@ -174,7 +174,7 @@
     "textbookTransliteration": "egō",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "I",
     "glossZh": "",
     "strong": "G1473",
     "isProperName": false,
@@ -183,7 +183,10 @@
     "lesson": 1,
     "lessonSlot": 8,
     "lessonSource": "bbg_chapter",
-    "lessonLabel": "BBG 第 4 章"
+    "lessonLabel": "BBG 第 4 章",
+    "lexiconResolution": {
+      "glossEdition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 9,
@@ -500,18 +503,24 @@
     "textbookTransliteration": "Dauid",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "David",
     "glossZh": "",
-    "strong": "",
+    "strong": "G1138",
     "isProperName": true,
     "properNameTypes": [
       "person"
     ],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 1,
     "lessonSlot": 22,
     "lessonSource": "bbg_chapter",
-    "lessonLabel": "BBG 第 4 章"
+    "lessonLabel": "BBG 第 4 章",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "Δαυίδ",
+      "strongsLemma": "Δαυίδ",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 23,
@@ -878,16 +887,22 @@
     "textbookTransliteration": "ououk",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "no, not",
     "glossZh": "",
-    "strong": "",
+    "strong": "G3756",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 2,
     "lessonSlot": 12,
     "lessonSource": "bbg_chapter",
-    "lessonLabel": "BBG 第 6 章"
+    "lessonLabel": "BBG 第 6 章",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "οὐ",
+      "strongsLemma": "οὐ",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 39,
@@ -993,16 +1008,23 @@
     "textbookTransliteration": "eipen",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "I say, speak",
     "glossZh": "",
-    "strong": "",
+    "strong": "G3004",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 3,
     "lessonSlot": 4,
     "lessonSource": "bbg_chapter",
-    "lessonLabel": "BBG 第 7 章"
+    "lessonLabel": "BBG 第 7 章",
+    "lexiconResolution": {
+      "path": "sblgnt_form_to_lemma",
+      "matchedOn": "εἶπεν",
+      "strongsLemma": "λέγω",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)",
+      "sblgntLemma": "λέγω"
+    }
   },
   {
     "ordinal": 44,
@@ -1364,16 +1386,22 @@
     "textbookTransliteration": "ekex",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "from out, out from among, from",
     "glossZh": "",
-    "strong": "",
+    "strong": "G1537",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 4,
     "lessonSlot": 5,
     "lessonSource": "bbg_chapter",
-    "lessonLabel": "BBG 第 8 章"
+    "lessonLabel": "BBG 第 8 章",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "ἐκ",
+      "strongsLemma": "ἐκ",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 60,
@@ -1849,16 +1877,23 @@
     "textbookTransliteration": "apekrithē",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "I answer, reply",
     "glossZh": "",
-    "strong": "",
+    "strong": "G611",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 5,
     "lessonSlot": 6,
     "lessonSource": "bbg_chapter",
-    "lessonLabel": "BBG 第 9 章"
+    "lessonLabel": "BBG 第 9 章",
+    "lexiconResolution": {
+      "path": "sblgnt_form_to_lemma",
+      "matchedOn": "ἀπεκρίθη",
+      "strongsLemma": "ἀποκρίνομαι",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)",
+      "sblgntLemma": "ἀποκρίνομαι"
+    }
   },
   {
     "ordinal": 81,
@@ -2493,7 +2528,7 @@
     "textbookTransliteration": "an",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "an untranslatable word that makes a statement contingent",
     "glossZh": "",
     "strong": "G302",
     "isProperName": false,
@@ -2502,7 +2537,10 @@
     "lesson": 7,
     "lessonSlot": 2,
     "lessonSource": "bbg_chapter",
-    "lessonLabel": "BBG 第 11 章"
+    "lessonLabel": "BBG 第 11 章",
+    "lexiconResolution": {
+      "glossEdition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 109,
@@ -2723,7 +2761,7 @@
     "textbookTransliteration": "kalos",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "beautiful, good, worthy",
     "glossZh": "",
     "strong": "G2570",
     "isProperName": false,
@@ -2732,7 +2770,10 @@
     "lesson": 7,
     "lessonSlot": 12,
     "lessonSource": "bbg_chapter",
-    "lessonLabel": "BBG 第 11 章"
+    "lessonLabel": "BBG 第 11 章",
+    "lexiconResolution": {
+      "glossEdition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 119,
@@ -3875,16 +3916,22 @@
     "textbookTransliteration": "houtōs",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "thus, so, in this manner",
     "glossZh": "",
-    "strong": "",
+    "strong": "G3779",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 10,
     "lessonSlot": 13,
     "lessonSource": "bbg_chapter",
-    "lessonLabel": "BBG 第 14 章"
+    "lessonLabel": "BBG 第 14 章",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "οὕτως",
+      "strongsLemma": "οὕτως",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 169,
@@ -4381,16 +4428,22 @@
     "textbookTransliteration": "oida",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "I know, remember",
     "glossZh": "",
-    "strong": "",
+    "strong": "G1492",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 12,
     "lessonSlot": 6,
     "lessonSource": "bbg_chapter",
-    "lessonLabel": "BBG 第 17 章"
+    "lessonLabel": "BBG 第 17 章",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "οἶδα",
+      "strongsLemma": "οἶδα",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 191,
@@ -5331,16 +5384,22 @@
     "textbookTransliteration": "sōizō",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "I save, heal",
     "glossZh": "",
-    "strong": "",
+    "strong": "G4982",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 15,
     "lessonSlot": 16,
     "lessonSource": "bbg_chapter",
-    "lessonLabel": "BBG 第 20 章"
+    "lessonLabel": "BBG 第 20 章",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "σῴζω",
+      "strongsLemma": "σῴζω",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 232,
@@ -5563,16 +5622,22 @@
     "textbookTransliteration": "apothnēiskō",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "I am dying, am about to die",
     "glossZh": "",
-    "strong": "",
+    "strong": "G599",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 17,
     "lessonSlot": 1,
     "lessonSource": "bbg_chapter",
-    "lessonLabel": "BBG 第 22 章"
+    "lessonLabel": "BBG 第 22 章",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "ἀποθνῄσκω",
+      "strongsLemma": "ἀποθνῄσκω",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 242,
@@ -6207,16 +6272,22 @@
     "textbookTransliteration": "phobeomai",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "I fear, am terrified",
     "glossZh": "",
-    "strong": "",
+    "strong": "G5399",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 19,
     "lessonSlot": 7,
     "lessonSource": "bbg_chapter",
-    "lessonLabel": "BBG 第 24 章"
+    "lessonLabel": "BBG 第 24 章",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "φοβέομαι",
+      "strongsLemma": "φοβέομαι",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 270,
@@ -6669,7 +6740,7 @@
     "textbookTransliteration": "grammateus",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "a scribe, town-clerk, man of learning",
     "glossZh": "",
     "strong": "G1122",
     "isProperName": false,
@@ -6678,7 +6749,10 @@
     "lesson": 22,
     "lessonSlot": 2,
     "lessonSource": "bbg_chapter",
-    "lessonLabel": "BBG 第 28 章"
+    "lessonLabel": "BBG 第 28 章",
+    "lexiconResolution": {
+      "glossEdition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 290,
@@ -6692,16 +6766,23 @@
     "textbookTransliteration": "ephē",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "I say",
     "glossZh": "",
-    "strong": "",
+    "strong": "G5346",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 22,
     "lessonSlot": 3,
     "lessonSource": "bbg_chapter",
-    "lessonLabel": "BBG 第 28 章"
+    "lessonLabel": "BBG 第 28 章",
+    "lexiconResolution": {
+      "path": "sblgnt_form_to_lemma",
+      "matchedOn": "ἔφη",
+      "strongsLemma": "φημί",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)",
+      "sblgntLemma": "φημί"
+    }
   },
   {
     "ordinal": 291,
@@ -7198,16 +7279,22 @@
     "textbookTransliteration": "loipos",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "left, left behind, the remainder",
     "glossZh": "",
-    "strong": "",
+    "strong": "G3062",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 28,
     "lessonSlot": 3,
     "lessonSource": "bbg_chapter",
-    "lessonLabel": "BBG 第 34 章"
+    "lessonLabel": "BBG 第 34 章",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "λοιπός",
+      "strongsLemma": "λοιπός",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 313,
@@ -7228,11 +7315,18 @@
     "properNameTypes": [
       "person"
     ],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_corpus_matched",
     "lesson": 28,
     "lessonSlot": 4,
     "lessonSource": "bbg_chapter",
-    "lessonLabel": "BBG 第 34 章"
+    "lessonLabel": "BBG 第 34 章",
+    "lexiconResolution": {
+      "path": "sblgnt_lemma_no_lexicon",
+      "matchedOn": "Μωϋσῆς",
+      "strongsLemma": "",
+      "edition": "SBL Greek New Testament (ed. Michael W. Holmes), MorphGNT analysis",
+      "sblgntLemma": "Μωϋσῆς"
+    }
   },
   {
     "ordinal": 314,
@@ -7729,16 +7823,22 @@
     "textbookTransliteration": "deiknumi",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "I point out, show",
     "glossZh": "",
-    "strong": "",
+    "strong": "G1166",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 30,
     "lessonSlot": 4,
     "lessonSource": "bbg_chapter",
-    "lessonLabel": "BBG 第 36 章"
+    "lessonLabel": "BBG 第 36 章",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "δείκνυμι",
+      "strongsLemma": "δείκνυμι",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 336,
@@ -8028,7 +8128,7 @@
     "textbookTransliteration": "erēmos",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "deserted, desolate, a desert",
     "glossZh": "",
     "strong": "G2048",
     "isProperName": false,
@@ -8037,7 +8137,10 @@
     "lesson": 31,
     "lessonSlot": 8,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "glossEdition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 349,
@@ -8538,18 +8641,24 @@
     "textbookTransliteration": "Hērōidēs",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "Herod",
     "glossZh": "",
-    "strong": "",
+    "strong": "G2264",
     "isProperName": true,
     "properNameTypes": [
       "person"
     ],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 31,
     "lessonSlot": 30,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "Ἡρῴδης",
+      "strongsLemma": "Ἡρῴδης",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 371,
@@ -8726,7 +8835,7 @@
     "textbookTransliteration": "kainos",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "fresh, new",
     "glossZh": "",
     "strong": "G2537",
     "isProperName": false,
@@ -8735,7 +8844,10 @@
     "lesson": 32,
     "lessonSlot": 5,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "glossEdition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 379,
@@ -10593,16 +10705,22 @@
     "textbookTransliteration": "exestin",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "it is permitted, lawful, possible",
     "glossZh": "",
-    "strong": "",
+    "strong": "G1832",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 34,
     "lessonSlot": 20,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "ἔξεστιν",
+      "strongsLemma": "ἔξεστιν",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 460,
@@ -10915,16 +11033,22 @@
     "textbookTransliteration": "epikaleō",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "I call by an additional name, appeal to",
     "glossZh": "",
-    "strong": "",
+    "strong": "G1941",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 35,
     "lessonSlot": 1,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "ἐπικαλέω",
+      "strongsLemma": "ἐπικαλέω",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 474,
@@ -11310,16 +11434,22 @@
     "textbookTransliteration": "proskaleō",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "I summon",
     "glossZh": "",
-    "strong": "",
+    "strong": "G4341",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 35,
     "lessonSlot": 18,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "προσκαλέω",
+      "strongsLemma": "προσκαλέω",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 491,
@@ -11967,11 +12097,18 @@
     "properNameTypes": [
       "person"
     ],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_corpus_matched",
     "lesson": 36,
     "lessonSlot": 13,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "path": "sblgnt_lemma_no_lexicon",
+      "matchedOn": "Μαριάμ",
+      "strongsLemma": "",
+      "edition": "SBL Greek New Testament (ed. Michael W. Holmes), MorphGNT analysis",
+      "sblgntLemma": "Μαριάμ"
+    }
   },
   {
     "ordinal": 519,
@@ -12123,7 +12260,7 @@
     "textbookTransliteration": "ge",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "at least, indeed, really",
     "glossZh": "",
     "strong": "G1065",
     "isProperName": false,
@@ -12132,7 +12269,10 @@
     "lesson": 36,
     "lessonSlot": 20,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "glossEdition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 526,
@@ -12909,16 +13049,22 @@
     "textbookTransliteration": "henekaeneken",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "on account of",
     "glossZh": "",
-    "strong": "",
+    "strong": "G1752",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 37,
     "lessonSlot": 21,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "ἕνεκα",
+      "strongsLemma": "ἕνεκα",
+      "edition": "Strong's Greek Dictionary (1890), Open Scriptures JSON edition, CC BY-SA"
+    }
   },
   {
     "ordinal": 560,
@@ -13121,11 +13267,18 @@
     "strong": "",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_corpus_matched",
     "lesson": 37,
     "lessonSlot": 30,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "path": "sblgnt_lemma_no_lexicon",
+      "matchedOn": "πίμπλημι",
+      "strongsLemma": "",
+      "edition": "SBL Greek New Testament (ed. Michael W. Holmes), MorphGNT analysis",
+      "sblgntLemma": "πίμπλημι"
+    }
   },
   {
     "ordinal": 569,
@@ -13325,16 +13478,22 @@
     "textbookTransliteration": "zōion",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "an animal",
     "glossZh": "",
-    "strong": "",
+    "strong": "G2226",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 38,
     "lessonSlot": 6,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "ζῷον",
+      "strongsLemma": "ζῷον",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 578,
@@ -13440,16 +13599,23 @@
     "textbookTransliteration": "mimnēiskomai",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "I remember, recall",
     "glossZh": "",
-    "strong": "",
+    "strong": "G3403",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 38,
     "lessonSlot": 11,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "μιμνῄσκομαι",
+      "strongsLemma": "μιμνήσκομαι",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)",
+      "orthographyNote": "課本作 μιμνῄσκομαι，Strong 作 μιμνήσκομαι；以課本印刷形為準。"
+    }
   },
   {
     "ordinal": 583,
@@ -13670,16 +13836,22 @@
     "textbookTransliteration": "grēgoreō",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "I am awake, am vigilant, watch",
     "glossZh": "",
-    "strong": "",
+    "strong": "G1127",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 38,
     "lessonSlot": 21,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "γρηγορέω",
+      "strongsLemma": "γρηγορέω",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 593,
@@ -14093,11 +14265,18 @@
     "strong": "",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_corpus_matched",
     "lesson": 39,
     "lessonSlot": 6,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "path": "sblgnt_lemma_no_lexicon",
+      "matchedOn": "τεσσεράκοντα",
+      "strongsLemma": "",
+      "edition": "SBL Greek New Testament (ed. Michael W. Holmes), MorphGNT analysis",
+      "sblgntLemma": "τεσσεράκοντα"
+    }
   },
   {
     "ordinal": 611,
@@ -15194,16 +15373,22 @@
     "textbookTransliteration": "kreissōn",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "stronger, more excellent",
     "glossZh": "",
-    "strong": "",
+    "strong": "G2908",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 40,
     "lessonSlot": 21,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "κρείσσων",
+      "strongsLemma": "κρείσσων",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 659,
@@ -15635,16 +15820,22 @@
     "textbookTransliteration": "desmos",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "a bond, chain",
     "glossZh": "",
-    "strong": "",
+    "strong": "G1199",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 41,
     "lessonSlot": 7,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "δεσμός",
+      "strongsLemma": "δεσμός",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 678,
@@ -16187,16 +16378,23 @@
     "textbookTransliteration": "chrusous",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "golden",
     "glossZh": "",
-    "strong": "",
+    "strong": "G5552",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 41,
     "lessonSlot": 31,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "χρύσοῦς",
+      "strongsLemma": "χρυσοῦς",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)",
+      "orthographyNote": "課本作 χρύσοῦς，Strong 作 χρυσοῦς；以課本印刷形為準。"
+    }
   },
   {
     "ordinal": 702,
@@ -16603,16 +16801,22 @@
     "textbookTransliteration": "mechrimechris",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "as far as, until",
     "glossZh": "",
-    "strong": "",
+    "strong": "G3360",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 42,
     "lessonSlot": 16,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "μέχρι",
+      "strongsLemma": "μέχρι",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 720,
@@ -17440,11 +17644,18 @@
     "properNameTypes": [
       "place"
     ],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_corpus_matched",
     "lesson": 43,
     "lessonSlot": 19,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "path": "sblgnt_lemma_no_lexicon",
+      "matchedOn": "Καφαρναούμ",
+      "strongsLemma": "",
+      "edition": "SBL Greek New Testament (ed. Michael W. Holmes), MorphGNT analysis",
+      "sblgntLemma": "Καφαρναούμ"
+    }
   },
   {
     "ordinal": 756,
@@ -17734,16 +17945,22 @@
     "textbookTransliteration": "sunistēmi",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "I commend, prove, am composed of, cohere",
     "glossZh": "",
-    "strong": "",
+    "strong": "G4921",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 43,
     "lessonSlot": 32,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "συνίστημι",
+      "strongsLemma": "συνίστημι",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 769,
@@ -18150,16 +18367,22 @@
     "textbookTransliteration": "entellō",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "I give orders, command",
     "glossZh": "",
-    "strong": "",
+    "strong": "G1781",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 44,
     "lessonSlot": 17,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "path": "lexicon_variant_spelling",
+      "matchedOn": "ἐντέλλω",
+      "strongsLemma": "ἐντέλλομαι",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 787,
@@ -18173,16 +18396,22 @@
     "textbookTransliteration": "epangellomai",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "I promise, profess",
     "glossZh": "",
-    "strong": "",
+    "strong": "G1861",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 44,
     "lessonSlot": 18,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "ἐπαγγέλλομαι",
+      "strongsLemma": "ἐπαγγέλλομαι",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 788,
@@ -19076,16 +19305,22 @@
     "textbookTransliteration": "amphoteroi",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "both of two",
     "glossZh": "",
-    "strong": "",
+    "strong": "G297",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 45,
     "lessonSlot": 24,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "ἀμφότεροι",
+      "strongsLemma": "ἀμφότεροι",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 827,
@@ -19812,16 +20047,22 @@
     "textbookTransliteration": "noeō",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "I understand, consider",
     "glossZh": "",
-    "strong": "",
+    "strong": "G3539",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_verified_lexicon_pending",
+    "verification": "source_and_lexicon_matched",
     "lesson": 46,
     "lessonSlot": 23,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "path": "lexicon_headword",
+      "matchedOn": "νοέω",
+      "strongsLemma": "νοέω",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 859,
@@ -22759,7 +23000,7 @@
     "textbookTransliteration": "thanatoō",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "I put to death, subdue",
     "glossZh": "",
     "strong": "G2289",
     "isProperName": false,
@@ -22768,7 +23009,10 @@
     "lesson": 50,
     "lessonSlot": 18,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "glossEdition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 986,
@@ -22989,7 +23233,7 @@
     "textbookTransliteration": "biblos",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "a written book, roll, or volume",
     "glossZh": "",
     "strong": "G976",
     "isProperName": false,
@@ -22998,7 +23242,10 @@
     "lesson": 50,
     "lessonSlot": 28,
     "lessonSource": "mounce_frequency_extension",
-    "lessonLabel": "Mounce 頻率延伸"
+    "lessonLabel": "Mounce 頻率延伸",
+    "lexiconResolution": {
+      "glossEdition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)"
+    }
   },
   {
     "ordinal": 996,
