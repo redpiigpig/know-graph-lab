@@ -18,6 +18,8 @@ Read these files for every production run:
 
 Read the selected language section in `references/language-profiles.md`.
 
+For a Greek release in `know-graph-lab`, also read `references/greek-reader-contract.md`; it carries the frozen Mounce lesson shape, source freeze, 25-chapter allocation and release-specific stop conditions.
+
 Read `references/layout-web-audio.md` before producing DOCX, PDF, online pages, or audio.
 
 When working in `know-graph-lab`, read `references/know-graph-lab-baseline.md`. Treat all paths and counts there as checkout-specific facts that must be verified live.
