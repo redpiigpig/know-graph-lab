@@ -59,30 +59,39 @@ Rebuild DOCX/PDF and inspect every new page after the final RCUV2010 master.
 
 ## Greek continuation checkpoint
 
-Contract frozen 2026-08-18 — see `greek-reader-contract.md`. Verify live.
+Contract frozen 2026-08-18; assembled 2026-08-19. See `greek-reader-contract.md`. Verify live.
 
-| Layer | Current path | State |
+| Layer | Path | State |
 |---|---|---|
 | 50-lesson assignment | `scripts/assign_greek_lessons.py` | done — lessons 1-30 are BBG ch. 4-36 (340 words, 2-26 each), lessons 31-50 split the 660-word Mounce extension (33 each) |
-| 1,000-word master | `data/originalReaders/vocabulary/greek-1000.json` | lesson/lessonSlot/lessonSource/lessonLabel written; `glossZh` stays empty by design |
-| Traditional-Chinese gloss layer | `scripts/build_greek_vocab_glosses.py` -> `greek-1000-gloss-zh-reviewed.json` | running, resumable, cache-backed |
-| Frozen text loaders | `scripts/greek_source_texts.py` | SBLGNT (MorphGNT) + Swete 1930 word database |
-| 25-chapter plan | `scripts/build_greek_scripture_plan.py` -> `scripture-plan.json` | done — 709 verses, 13,214 Greek words, NT 13 / LXX 6 / deuterocanon 4 / pseudepigrapha 2 |
-| Patristic loaders | `scripts/greek_patristic_sources.py` | Open Apostolic Fathers, First1KGreek TEI, repository creed files, glt.goarch.org |
-| Shared LLM client | `scripts/original_reader_llm.py` | extracted from the Hebrew interlinear so both jobs share one 429 gate |
-| Deuterocanon Chinese | `scripts/export_reader_fhl_deuterocanon.py` -> `deuterocanon-zh.json` | done — 1933 Anglican text, 4 chapters / 106 verses, verse counts match Swete exactly |
-| Missing conciliar Greek | `scripts/export_reader_creed_greek.py` -> `creeds-greek.json` | done — 381 conciliar creed, Chalcedon Ὅρος, Constantinople III Ὅρος, from Schaff vol. II on CCEL |
+| 1,000-word master | `data/originalReaders/vocabulary/greek-1000.json` | done — 995 lexicon-matched, 5 corpus-matched, 0 unverified |
+| Lexicon resolution | `scripts/verify_greek_vocab_lexicon.py`, `scripts/fill_greek_vocab_glosses_en.py` | done — Strong + Dodson + SBLGNT ladder, resolution path recorded per entry |
+| Traditional-Chinese gloss layer | `scripts/build_greek_vocab_glosses.py` -> `greek-1000-gloss-zh-reviewed.json` | **blocked on quota, 0/1000**; resumable, re-queues failed batches |
+| Frozen text loaders | `scripts/greek_source_texts.py`, `scripts/greek_patristic_sources.py` | done |
+| 25 chapters | `scripts/build_greek_scripture_plan.py` -> `scripture-plan.json` | done — 707 verses, 13,214 words, NT 13 / LXX 6 / deutero 4 / pseudep 2 |
+| 25 patristic readings | `scripts/build_greek_patristic_plan.py` -> `patristic-plan.json` | done — 913 segments, 30,060 words, 16 complete / 9 excerpts |
+| Liturgy appendix | `scripts/build_greek_liturgy.py` -> `liturgy-chrysostom.json` | done — 332 steps, 26 sections, 6,772 words |
+| 100 memory verses | `scripts/select_greek_memory_verses.py` -> `memory-verses.json` | done — 2 per lesson, NT 70 / LXX 15 / deutero 10 / pseudep 5, all `pending_human_review` |
+| Deuterocanon Chinese | `scripts/export_reader_fhl_deuterocanon.py` -> `deuterocanon-zh.json` | done — 1933 Anglican, 4 chapters / 106 verses, verse counts match Swete |
+| Missing conciliar Greek | `scripts/export_reader_creed_greek.py` -> `creeds-greek.json` | done — 381 / Chalcedon / Constantinople III, from Schaff vol. II |
+| RCUV2010 Chinese | `scripts/export_reader_rcuv2010_greek.py` -> `RCUV2010.json` | done — 22 books, 90 chapters, 3,256 verses; psalm crosswalk incl. superscription offset |
+| Master assembly | `scripts/build_greek_reader_data.py` -> `greek-reader-50-lessons.json` | done — 50,046 running words; fails rather than emitting a partial master |
+| Release validation | `skills/.../validate_reader_release.py --language grc` | 20 PASS / 2 FAIL, both truthful (glosses pending, memory review pending) |
+| Web reader | `data/originalReaders/greek-full-reader.ts`, `server/api/original-readers/grc-lessons/`, `pages/original-readers/grc-lessons/` | done — overview / lesson / liturgy, authenticated + noindex |
+| Tests | `tests/greek-full-reader.test.ts` | 12 tests |
+| Interlinear | `scripts/build_greek_interlinear.py` | written, not started — 2,021 units, 50,278 glossable words, 1,281 needing a whole-segment rendering |
 
-Source cache: `output/source-cache/original-readers/greek-full/sources/{sblgnt,swete,apostolic-fathers,first1k,liturgy}`.
+Source cache: `output/source-cache/original-readers/greek-full/sources/{sblgnt,swete,apostolic-fathers,first1k,liturgy,dodson}`.
 
-Still open: the 25 patristic/creed/decree master, the Chrysostom liturgy appendix, the 100 memory verses, the RCUV2010 export for New Testament and LXX-canonical chapters, the deuterocanonical Chinese text, the interlinear layer, the master assembly, the web reader and the print build.
+Still open: the Chinese gloss layer and the interlinear layer (both quota-bound), human review of the 100 memory verses, DOCX/PDF, and audio.
 
-Resolved source gaps, now covered by `creeds-greek.json` rather than by the creed files themselves:
-- `02-constantinople-381.ts` still carries no Greek; the conciliar plural text now comes from Schaff.
-- Constantinople III (681) has no Documenta Catholica Omnia Greek file at all, because the council issued no canons; its Ὅρος now comes from Schaff.
-- `early-04-greek.txt` holds the Chalcedonian *canons*; the Definition of Faith now comes from Schaff.
-
-Three extracted segments carry a `needs_review_*` status and must be reviewed before use.
+Parsing traps this build hit, all fixed and worth remembering:
+- First1KGreek TEI prints the critical apparatus inline as `<note type="footnote">`; `itertext()` swallows it.
+- The Shepherd of Hermas numbers 5 visions + 12 mandates + 10 similitudes as 27 top-level units, not chapters.
+- glt.goarch.org mixes composed and decomposed Greek, so a composed anchor silently never matches.
+- glt.goarch.org's Paschal homily carries a dittography; a second witness was used instead.
+- Swete indexes bare apparatus sigla as their own "words", and omits Sirach 24:18/24 entirely.
+- CCEL serves decomposed Greek and sets Schaff's variant readings in the same table cell as the creed.
 
 ## Latin continuation checkpoint
 
