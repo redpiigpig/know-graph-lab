@@ -51,7 +51,23 @@ function LanePaused($label) {
 # the ACCS worker sat on one Gemini call for 49 min (24h alive, 76s CPU) because the
 # SDK had no request timeout - and the keeper never relaunched it, since the process
 # was still technically alive. Liveness must mean progress, not just a live pid.
-$STALL_MINUTES = 45
+#
+# 2026-08-19: the threshold has to match how chatty the lane is, or the guard starts
+# killing healthy work. plato_build prints one line per WORK, not per section, and each
+# section is its own NVIDIA call (timeout 600s alone) - Critias has 76 of them, so an
+# hour of silence is normal. A flat 45 min killed philo-queue five times in a day and it
+# could never finish a work. ACCS logs every batch, so it keeps the tight threshold.
+$STALL_DEFAULT = 45
+$STALL_PER_LANE = @{
+    'philo-queue'    = 180   # one log line per work; sections are individual LLM calls
+    'jung-queue'     = 180   # same shape: whole-volume translate between log lines
+    'panikkar-vedic' = 180
+    'aquinas'        = 90    # prints every 20 articles, but a cold volume can be slow
+}
+function StallLimit($label) {
+    if ($STALL_PER_LANE.ContainsKey($label)) { return $STALL_PER_LANE[$label] }
+    return $STALL_DEFAULT
+}
 function WorkerAlive($label) {
     $lane = LaneName $label
     $pidFile = "$ROOT\scripts\state\fleet_$lane.pid"
@@ -61,7 +77,7 @@ function WorkerAlive($label) {
         $out = "$ROOT\scripts\logs\fleet_$lane.out.log"
         if (Test-Path -LiteralPath $out) {
             $idle = ((Get-Date) - (Get-Item -LiteralPath $out).LastWriteTime).TotalMinutes
-            if ($idle -gt $STALL_MINUTES) {
+            if ($idle -gt (StallLimit $label)) {
                 Note ("wedged {0}: log idle {1:N0} min -> kill pid {2} and relaunch" -f $label, $idle, $workerPid)
                 # /T so the ingest/build grandchild dies too, else it keeps the pipe open.
                 & taskkill /F /T /PID $workerPid *> $null
