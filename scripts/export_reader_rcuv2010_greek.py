@@ -85,6 +85,29 @@ def psalm_crosswalk(lxx_chapter: int, lxx_verse: int | None) -> tuple[int, int |
     raise LookupError(f"詩篇 {lxx_chapter} 不在馬所拉本內（七十士第 151 篇無中譯）")
 
 
+def psalm_verse_offset(lxx_verse_count: int, mt_verse_count: int) -> tuple[int, str]:
+    """How many opening Septuagint verses are the psalm's superscription.
+
+    The Septuagint numbers a psalm's heading as verses of its own where the
+    Hebrew tradition — and the Chinese Bible following it — sets the heading
+    outside the numbering.  Septuagint psalm 50 therefore runs to 21 verses
+    where Chinese psalm 51 has 19, and its verse 20 is the Chinese verse 18.
+
+    The offset is read off the two verse counts rather than tabulated psalm by
+    psalm, which makes it self-checking: a difference outside the plausible
+    range for a heading is a mapping error, not a heading, and stops the build.
+    """
+    difference = lxx_verse_count - mt_verse_count
+    if difference == 0:
+        return 0, "節號相同（標題含在第 1 節內）"
+    if 1 <= difference <= 3:
+        return difference, f"七十士把標題算成 {difference} 節，中文本不計入"
+    raise LookupError(
+        f"七十士 {lxx_verse_count} 節對中文 {mt_verse_count} 節，差 {difference} 節，"
+        "不是標題差，須人工處理"
+    )
+
+
 def target_reference(book: str, chapter: int, verse: int | None) -> tuple[int, int | None, str]:
     if book == "Ps":
         return psalm_crosswalk(chapter, verse)
