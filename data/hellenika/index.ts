@@ -1,6 +1,7 @@
 import type { HellenCanon, HellenVolume, HellenWork } from './types'
 import { GREEK_CANON } from './greek'
 import { ROMAN_CANON } from './roman'
+import INTROS from './intros.json'
 
 export * from './types'
 export { GREEK_CANON } from './greek'
@@ -8,6 +9,22 @@ export { ROMAN_CANON } from './roman'
 
 /** 兩藏：希臘廿四卷（正藏）、羅馬六卷（續典） */
 export const CANONS: HellenCanon[] = [GREEK_CANON, ROMAN_CANON]
+
+// 條目簡介以 intros.json 覆蓋層維護（鍵＝canon:volume:division:index），
+// 由 scripts/hellenika_intro.py 逐卷補寫，載入時掛回 work 物件。
+// 這樣批次策展不必改寫 greek.ts / roman.ts 的物件字面量，diff 也乾淨。
+// 已直接寫在 .ts 裡的 intro 優先，不被覆蓋層蓋掉。
+for (const canon of CANONS) {
+  for (const volume of canon.volumes) {
+    for (const division of volume.divisions) {
+      division.works.forEach((work, i) => {
+        if (work.intro) return
+        const text = (INTROS as Record<string, string>)[`${canon.key}:${volume.key}:${division.key}:${i}`]
+        if (text) work.intro = text
+      })
+    }
+  }
+}
 
 /** 全書斷限 */
 export const TERMINUS = {

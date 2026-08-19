@@ -17,7 +17,7 @@ description: 希臘羅馬大藏經（/hellenika）的銘文與紙草取源 — �
 
 | 來源 | 網址 | 涵蓋 | 取用 |
 |---|---|---|---|
-| **CGRN** *Collection of Greek Ritual Norms* | `cgrn.ulg.ac.be` | 希臘祭儀法規 250+ 篇，**原文＋英譯＋逐條註解＋書目** | 🟢 開放取用，有穩定 ID（`CGRN 13`），**Κ 卷首選** |
+| **CGRN** *Collection of Greek Ritual Norms* | `http://cgrn.ulg.ac.be`（🚨 **只走 http**，https 連不上、`cgrn.uliege.be` 不解析） | 希臘祭儀法規 250+ 篇，**原文＋英譯＋逐條註解＋書目** | 🟢 開放取用，有穩定 ID（`CGRN 13`），**Κ 卷首選** |
 | **PHI Greek Inscriptions** | `epigraphy.packhum.org` | 幾乎全部已刊希臘銘文原文，可全文檢索 | 🟢 免費，無 API，需輕量爬（**節流，勿連續轟**） |
 | **Attic Inscriptions Online (AIO)** | `atticinscriptions.com` | 阿提卡銘文英譯＋註解 | 🟢 開放，Κ 卷雅典祭曆、Ν 卷用 |
 | **IG** *Inscriptiones Graecae* | — | 主叢書，編號權威 | 編號經 PHI 查即可，紙本不必調 |
@@ -27,6 +27,10 @@ description: 希臘羅馬大藏經（/hellenika）的銘文與紙草取源 — �
 | **DVC** Dakaris–Vokotopoulou–Christidis (2013) | — | 多多納鉛片 4,216 片 | 🔴 紙本；Lhôte (2006) 選本可補 |
 | **Trismegistos** | `trismegistos.org` | 紙草／銘文的跨庫 ID 對照 | 🟢 查 ID 用 |
 
+> 🚨 **CGRN 沒有可用的檢索 API**（2026-08-19 實測）：`wp-json/wp/v2/file` 回 404、`?s=` 回 404、`/browse/*` 是 JS 驅動抓不到條目、`admin-ajax.php` 的 action 名不在頁面裡。**編號只能人工查證**，不要為了找編號去掃號段——那正是本節禁止的連抓。
+>
+> 🚨 **編號務必驗證再存檔**。`scripts/hellenika_cgrn.py` 每筆帶 `expect` 關鍵字，抓下來比對標題與出土地，對不上就不寫檔。實例：坊間常引的「昔蘭尼淨罪法 = CGRN 181」是**錯的**，181 是埃雷索斯（Eresos）某不知名聖所的潔淨規章。這道閘擋下了一次錯存。
+>
 > 🚨 **PHI 與 CGRN 都要節流**。學術站點沒有 rate limit 公告不代表可以連抓，慢速間隔、加 UA、單次批量壓小。被封會影響整批工作，且這類站沒有替代品。（同類教訓見 [[research-data-hongshi]]。）
 
 ---
@@ -37,12 +41,12 @@ description: 希臘羅馬大藏經（/hellenika）的銘文與紙草取源 — �
 
 | 卷 | 條目 | 標準編號 | 首選來源 |
 |---|---|---|---|
-| Κ | 塞利農特淨罪法 | `SEG 43.630`；Jameson–Jordan–Kotansky (1993) 校本 | CGRN 13 |
-| Κ | 昔蘭尼淨罪法 | `SEG 9.72`；`LSS 115` | CGRN 181 |
-| Κ | 埃爾希亞祭曆 | `SEG 21.541`；`LSCG 18` | CGRN 52 |
-| Κ | 科斯祭曆與祭司法 | `LSCG 151`–156 | CGRN |
+| Κ | 塞利農特淨罪法 | `SEG 43.630`；Jameson–Jordan–Kotansky (1993) 校本 | ✅ CGRN 13 |
+| Κ | 昔蘭尼淨罪法 | `SEG 9.72`；`LSS 115` | ⏳ CGRN 編號待查證（**不是 181**）；改由 PHI 依 SEG 9.72 取 |
+| Κ | 埃爾希亞祭曆 | `SEG 21.541`；`LSCG 18` | ✅ CGRN 52 |
+| Κ | 科斯祭曆與祭司法 | `LSCG 151`–156 | ✅ CGRN 86 |
 | Κ | 尼科馬科斯曆法修訂 | `IG I³ 234`／`Agora XVI` | AIO |
-| Κ | 安達尼亞祕儀規章 | `IG V,1 1390`；`LSCG 65` | CGRN 222 |
+| Κ | 安達尼亞祕儀規章 | `IG V,1 1390`；`LSCG 65` | ✅ CGRN 222 |
 | Κ | 帝王崇拜祭儀銘文 | 分散，按城邦查 | PHI |
 | Λ | 俄耳甫斯－酒神金葉片 | Graf–Johnston 編號 1–39；Bernabé–Jiménez OF 474–496 | 紙本為主 |
 | Λ | 奧爾比亞骨片 | `SEG 28.659–661` | PHI |
@@ -151,8 +155,21 @@ description: 希臘羅馬大藏經（/hellenika）的銘文與紙草取源 — �
 
 ---
 
-## 8. 待辦
+## 8. 工具
 
-- ⏳ 40 條 `inscription` 全部尚未接原文。建議順序：**Κ 祭儀法**（CGRN 覆蓋率最高，最快見效）→ **Χ 埃庇道洛斯治癒銘文**（IG IV²,1 121–124，篇幅可控且與福音書治病敘事對讀價值最高）→ **Λ 金葉片** → **Ξ 認罪碑** → 羅馬卷 II 阿爾瓦紀錄。
+`scripts/hellenika_cgrn.py` —— CGRN 取源器。`--list` 看對照表與已抓狀態，`--fetch` 抓取。
+每篇存成 `data/hellenika/sources/cgrn/cgrn-{n}.json`，含希臘原文（Leiden 符號已依 §4 自
+`supplied`／`lost`／`line-number` 三個 CSS class 還原）、英譯、年代、出土地、載體、版面、
+書目、註解與授權聲明。預設間隔 6 秒。
+
+已取得：CGRN 13 塞利農特淨罪法、52 埃爾希亞祭曆、86 科斯祭曆、222 安達尼亞祕儀規章。
+
+---
+
+## 9. 待辦
+
+- ⏳ 昔蘭尼淨罪法的 CGRN 編號待查證（**不是 181**），或改走 PHI 依 `SEG 9.72` 取。
+- ⏳ 已取得的四篇尚未接上站內逐段對照（下一步：英譯→繁中，保留石面行號）。
+- ⏳ 其餘 36 條 `inscription` 尚未接原文。建議順序：**Κ 祭儀法**（CGRN 覆蓋率最高，最快見效）→ **Χ 埃庇道洛斯治癒銘文**（IG IV²,1 121–124，篇幅可控且與福音書治病敘事對讀價值最高）→ **Λ 金葉片** → **Ξ 認罪碑** → 羅馬卷 II 阿爾瓦紀錄。
 - ⏳ 全部條目尚未補 §2 的標準編號欄（目前編號只寫在本 skill，未進資料檔）。考慮在 `HellenWork` 加 `siglum?: string` 欄專放編號。
 - ⏳ 多多納鉛片、德爾維尼紙草需紙本校本，暫標待補。
