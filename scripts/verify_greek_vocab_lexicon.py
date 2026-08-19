@@ -257,6 +257,45 @@ def look_up(key: str, dodson, strongs):
     return None, ""
 
 
+# Five words where Mounce and the SBLGNT print the critical text's spelling and
+# the 1890 lexicons file the Textus Receptus one.  They are the same words; only
+# the editorial spelling differs, by φ↔π and α↔ε alternations that are false as
+# general rules.  So this is a table of five human-approved equivalences, not a
+# rule — the printed form stays the textbook's, and the lexicon number is
+# attached to it with the disagreement recorded.
+#
+# Approved by the user 2026-08-19: "用課本的為準".
+TEXTUS_RECEPTUS_SPELLINGS: dict[str, tuple[str, str]] = {
+    "Μωϋσῆς": ("Μωσεύς", "G3475"),
+    "Μαριάμ": ("Μαρία", "G3137"),
+    "πίμπλημι": ("πλήθω", "G4130"),
+    "τεσσεράκοντα": ("τεσσαράκοντα", "G5062"),
+    "Καφαρναούμ": ("Καπερναούμ", "G2584"),
+}
+
+
+def approved_equivalence(candidates: list[str], dodson, strongs) -> dict | None:
+    for candidate in candidates:
+        pair = TEXTUS_RECEPTUS_SPELLINGS.get(candidate)
+        if not pair:
+            continue
+        lexicon_spelling, number = pair
+        matches, edition = look_up(fold(lexicon_spelling), dodson, strongs)
+        if not matches:
+            continue
+        found = next((entry for code, entry in matches if code == number), matches[0][1])
+        return {
+            "path": "approved_textus_receptus_equivalence",
+            "matchedOn": candidate,
+            "strongsLemma": found.get("lemma", ""),
+            "strong": number,
+            "glossEn": clean_gloss(found),
+            "edition": edition,
+            "ambiguous": False,
+        }
+    return None
+
+
 def resolve(entry: dict, strongs, dodson, forms, lemmas) -> dict | None:
     candidates = headword_candidates(entry)
 
@@ -279,6 +318,9 @@ def resolve(entry: dict, strongs, dodson, forms, lemmas) -> dict | None:
                     "sblgnt_lemma", candidate, matches,
                     {"sblgntLemma": lemma, "edition": edition},
                 )
+        approved = approved_equivalence(candidates, dodson, strongs)
+        if approved:
+            return approved
         # A corpus lemma with no lexicon headword is still real evidence.
         return {
             "path": "sblgnt_lemma_no_lexicon",
@@ -365,8 +407,15 @@ def main() -> None:
             entry["lexiconResolution"]["sblgntLemma"] = answer["sblgntLemma"]
         # The printed spelling stays authoritative; a disagreement with the
         # lexicon is recorded, never corrected.
-        if fold(entry["headword"]) == fold(answer["strongsLemma"]) and \
-                entry["headword"] != answer["strongsLemma"]:
+        if answer["path"] == "approved_textus_receptus_equivalence":
+            entry["lexiconResolution"]["orthographyNote"] = (
+                f"課本作 {entry['headword']}，詞典循公認經文作 {answer['strongsLemma']}；"
+                "同一個字，以課本印刷形為準（使用者核可）。"
+            )
+        elif (
+            fold(entry["headword"]) == fold(answer["strongsLemma"])
+            and entry["headword"] != answer["strongsLemma"]
+        ):
             entry["lexiconResolution"]["orthographyNote"] = (
                 f"課本作 {entry['headword']}，Strong 作 {answer['strongsLemma']}；"
                 "以課本印刷形為準。"

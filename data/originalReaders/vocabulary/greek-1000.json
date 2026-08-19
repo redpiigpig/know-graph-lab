@@ -7308,24 +7308,24 @@
     "textbookTransliteration": "Mōusēs",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "Moseus, Moses, or Mouses (i.e. Mosheh), the Hebrew lawgiver",
     "glossZh": "",
-    "strong": "",
+    "strong": "G3475",
     "isProperName": true,
     "properNameTypes": [
       "person"
     ],
-    "verification": "source_and_corpus_matched",
+    "verification": "source_and_lexicon_matched",
     "lesson": 28,
     "lessonSlot": 4,
     "lessonSource": "bbg_chapter",
     "lessonLabel": "BBG 第 34 章",
     "lexiconResolution": {
-      "path": "sblgnt_lemma_no_lexicon",
+      "path": "approved_textus_receptus_equivalence",
       "matchedOn": "Μωϋσῆς",
-      "strongsLemma": "",
-      "edition": "SBL Greek New Testament (ed. Michael W. Holmes), MorphGNT analysis",
-      "sblgntLemma": "Μωϋσῆς"
+      "strongsLemma": "Μωσεύς",
+      "edition": "Strong's Greek Dictionary (1890), Open Scriptures JSON edition, CC BY-SA",
+      "orthographyNote": "課本作 Μωϋσῆς，詞典循公認經文作 Μωσεύς；同一個字，以課本印刷形為準（使用者核可）。"
     }
   },
   {
@@ -12090,24 +12090,24 @@
     "textbookTransliteration": "Mariam",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "Mary, Miriam",
     "glossZh": "",
-    "strong": "",
+    "strong": "G3137",
     "isProperName": true,
     "properNameTypes": [
       "person"
     ],
-    "verification": "source_and_corpus_matched",
+    "verification": "source_and_lexicon_matched",
     "lesson": 36,
     "lessonSlot": 13,
     "lessonSource": "mounce_frequency_extension",
     "lessonLabel": "Mounce 頻率延伸",
     "lexiconResolution": {
-      "path": "sblgnt_lemma_no_lexicon",
+      "path": "approved_textus_receptus_equivalence",
       "matchedOn": "Μαριάμ",
-      "strongsLemma": "",
-      "edition": "SBL Greek New Testament (ed. Michael W. Holmes), MorphGNT analysis",
-      "sblgntLemma": "Μαριάμ"
+      "strongsLemma": "Μαρία",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)",
+      "orthographyNote": "課本作 Μαριάμ，詞典循公認經文作 Μαρία；同一個字，以課本印刷形為準（使用者核可）。"
     }
   },
   {
@@ -13262,22 +13262,22 @@
     "textbookTransliteration": "pimplēmi",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "I fill",
     "glossZh": "",
-    "strong": "",
+    "strong": "G4130",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_and_corpus_matched",
+    "verification": "source_and_lexicon_matched",
     "lesson": 37,
     "lessonSlot": 30,
     "lessonSource": "mounce_frequency_extension",
     "lessonLabel": "Mounce 頻率延伸",
     "lexiconResolution": {
-      "path": "sblgnt_lemma_no_lexicon",
+      "path": "approved_textus_receptus_equivalence",
       "matchedOn": "πίμπλημι",
-      "strongsLemma": "",
-      "edition": "SBL Greek New Testament (ed. Michael W. Holmes), MorphGNT analysis",
-      "sblgntLemma": "πίμπλημι"
+      "strongsLemma": "πλήθω",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)",
+      "orthographyNote": "課本作 πίμπλημι，詞典循公認經文作 πλήθω；同一個字，以課本印刷形為準（使用者核可）。"
     }
   },
   {
@@ -14260,22 +14260,22 @@
     "textbookTransliteration": "tesserakonta",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "forty",
     "glossZh": "",
-    "strong": "",
+    "strong": "G5062",
     "isProperName": false,
     "properNameTypes": [],
-    "verification": "source_and_corpus_matched",
+    "verification": "source_and_lexicon_matched",
     "lesson": 39,
     "lessonSlot": 6,
     "lessonSource": "mounce_frequency_extension",
     "lessonLabel": "Mounce 頻率延伸",
     "lexiconResolution": {
-      "path": "sblgnt_lemma_no_lexicon",
+      "path": "approved_textus_receptus_equivalence",
       "matchedOn": "τεσσεράκοντα",
-      "strongsLemma": "",
-      "edition": "SBL Greek New Testament (ed. Michael W. Holmes), MorphGNT analysis",
-      "sblgntLemma": "τεσσεράκοντα"
+      "strongsLemma": "τεσσαράκοντα",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)",
+      "orthographyNote": "課本作 τεσσεράκοντα，詞典循公認經文作 τεσσαράκοντα；同一個字，以課本印刷形為準（使用者核可）。"
     }
   },
   {
@@ -17637,24 +17637,24 @@
     "textbookTransliteration": "Kapharnaoum",
     "transliterationSystem": "Mounce standard Erasmian",
     "transliterationStatus": "rule_generated_from_official_table",
-    "glossEn": "",
+    "glossEn": "Capernaum",
     "glossZh": "",
-    "strong": "",
+    "strong": "G2584",
     "isProperName": true,
     "properNameTypes": [
       "place"
     ],
-    "verification": "source_and_corpus_matched",
+    "verification": "source_and_lexicon_matched",
     "lesson": 43,
     "lessonSlot": 19,
     "lessonSource": "mounce_frequency_extension",
     "lessonLabel": "Mounce 頻率延伸",
     "lexiconResolution": {
-      "path": "sblgnt_lemma_no_lexicon",
+      "path": "approved_textus_receptus_equivalence",
       "matchedOn": "Καφαρναούμ",
-      "strongsLemma": "",
-      "edition": "SBL Greek New Testament (ed. Michael W. Holmes), MorphGNT analysis",
-      "sblgntLemma": "Καφαρναούμ"
+      "strongsLemma": "Καπερναούμ",
+      "edition": "John Jeffrey Dodson, Greek Lexicon (biblicalhumanities edition, CC0)",
+      "orthographyNote": "課本作 Καφαρναούμ，詞典循公認經文作 Καπερναούμ；同一個字，以課本印刷形為準（使用者核可）。"
     }
   },
   {
