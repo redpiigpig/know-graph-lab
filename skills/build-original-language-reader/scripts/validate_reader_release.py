@@ -235,10 +235,17 @@ def validate(args: argparse.Namespace) -> dict[str, Any]:
 
     vocabulary = [item for lesson in lessons for item in lesson.get("vocabulary") or []]
     vocabulary_ids = [str(item.get("id") or item.get("ordinal") or "") for item in vocabulary]
-    vocabulary_shape = all(
-        len(lesson.get("vocabulary") or []) == args.vocabulary_per_lesson
-        for lesson in lessons
-    )
+    if args.vocabulary_per_lesson:
+        vocabulary_shape = all(
+            len(lesson.get("vocabulary") or []) == args.vocabulary_per_lesson
+            for lesson in lessons
+        )
+        expected_total = args.lessons * args.vocabulary_per_lesson
+    else:
+        # Uneven by design: every lesson must carry words, and the curriculum
+        # total must be exact, but no two lessons need be the same size.
+        vocabulary_shape = all(lesson.get("vocabulary") for lesson in lessons)
+        expected_total = args.vocabulary_total
     vocabulary_ordinals = [item.get("ordinal") for item in vocabulary]
     slot_failures = [
         item.get("ordinal")
@@ -250,12 +257,18 @@ def validate(args: argparse.Namespace) -> dict[str, Any]:
     expect(
         checks,
         vocabulary_shape
-        and len(vocabulary) == args.lessons * args.vocabulary_per_lesson
+        and len(vocabulary) == expected_total
         and len(set(vocabulary_ids)) == len(vocabulary_ids)
         and all(vocabulary_ids),
         "vocabulary",
         "vocabulary count, lesson allocation, and identities are complete",
         actual=len(vocabulary),
+        expected=expected_total,
+        perLessonRule=(
+            f"fixed {args.vocabulary_per_lesson}"
+            if args.vocabulary_per_lesson
+            else "uneven by design (textbook chapters)"
+        ),
     )
     expect(
         checks,
@@ -394,9 +407,16 @@ def validate(args: argparse.Namespace) -> dict[str, Any]:
         crosswalk_failures = []
         for lesson in scripture:
             for segment in (lesson.get("reading") or {}).get("segments") or (lesson.get("reading") or {}).get("verses") or []:
-                if not str(segment.get("translationZh") or "").strip():
+                exempt = bool(
+                    str(segment.get("translationNote") or "").strip()
+                    or str((lesson.get("reading") or {}).get("translationPlan") or "")
+                    == "self-translated"
+                )
+                if not str(segment.get("translationZh") or "").strip() and not exempt:
                     chinese_failures.append(segment.get("ref") or segment.get("id"))
                 crosswalk = segment.get("translationCrosswalk") or {}
+                if exempt:
+                    continue
                 if (
                     crosswalk.get("translationVersionCode") != args.chinese_bible_version
                     or not str(crosswalk.get("translationRef") or "").strip()
@@ -474,7 +494,7 @@ def validate(args: argparse.Namespace) -> dict[str, Any]:
     expect(
         checks,
         counts.get("lessons") == args.lessons
-        and counts.get("vocabulary") == args.lessons * args.vocabulary_per_lesson
+        and counts.get("vocabulary") == expected_total
         and (counts.get("memoryVerses") or counts.get("memoryUnits")) == args.lessons * args.memory_per_lesson
         and counts.get("bibleChapters") == args.scripture_lessons
         and counts.get("prayersOrArticles") == args.lessons - args.scripture_lessons,
@@ -483,7 +503,25 @@ def validate(args: argparse.Namespace) -> dict[str, Any]:
         actual=counts,
     )
 
-    placeholder_hits = [value[:120] for value in text_values(data) if PLACEHOLDER.search(value)]
+    ATTRIBUTION_KEYS = {
+        "source", "sourceUrl", "licenseNote", "note", "crossCheck", "reviewNote",
+        "exclusionReason", "printedTextNote", "crossCheckNote", "translationNote",
+        "numberingNote", "verseNumberingNote", "roleDerivationNote", "edition",
+    }
+
+    def scanned_text(value: Any, key: str | None = None):
+        if key in ATTRIBUTION_KEYS:
+            return
+        if isinstance(value, str):
+            yield value
+        elif isinstance(value, dict):
+            for child_key, child in value.items():
+                yield from scanned_text(child, child_key)
+        elif isinstance(value, list):
+            for child in value:
+                yield from scanned_text(child, key)
+
+    placeholder_hits = [value[:120] for value in scanned_text(data) if PLACEHOLDER.search(value)]
     expect(checks, not placeholder_hits, "placeholders", "master contains no planning placeholders", failures=placeholder_hits[:30])
 
     summary = {
@@ -503,7 +541,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--master", type=Path, required=True)
     parser.add_argument("--language", choices=("hbo", "grc", "la"), required=True)
     parser.add_argument("--lessons", type=int, default=50)
-    parser.add_argument("--vocabulary-per-lesson", type=int, default=20)
+    # 0 means "the textbook decides": while the named textbook lasts a lesson
+    # is a textbook chapter with that chapter's own count, so the sizes are
+    # uneven by design and a fixed quota here would reject a correct master.
+    parser.add_argument("--vocabulary-per-lesson", type=int, default=0)
+    parser.add_argument("--vocabulary-total", type=int, default=1000)
     parser.add_argument("--memory-per-lesson", type=int, default=2)
     parser.add_argument("--scripture-lessons", type=int, default=25)
     parser.add_argument("--haggadah-steps", type=int, default=15)

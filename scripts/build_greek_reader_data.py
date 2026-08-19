@@ -167,12 +167,16 @@ def build(strict: bool = True) -> dict:
             glossed += 1 if gloss else 0
             vocabulary_rows.append(
                 {
+                    "id": f"grc-vocab-{word['ordinal']:04d}",
                     "ordinal": word["ordinal"],
+                    "lesson": word["lesson"],
+                    "lessonSlot": word["lessonSlot"],
                     "slot": word["lessonSlot"],
                     "printedEntry": word["printedEntry"],
                     "headword": word["headword"],
                     "lemma": word["lemma"],
                     "transliteration": word["textbookTransliteration"],
+                    "textbookTransliteration": word["textbookTransliteration"],
                     "glossEn": word.get("glossEn", ""),
                     "glossZh": gloss,
                     "strong": word.get("strong", ""),
@@ -194,11 +198,26 @@ def build(strict: bool = True) -> dict:
                     translation = zh_deutero.get(
                         (verse["book"], verse["chapter"], verse["verse"]), ""
                     )
-            memory_rows.append({**verse, "translationZh": translation})
+            memory_rows.append(
+                {
+                    **verse,
+                    "translationZh": translation,
+                    "matchedCount": verse.get("matchCount", 0),
+                    "selectionReason": (
+                        f"命中本課生詞 {verse.get('matchCount', 0)} 個，"
+                        f"累積已學覆蓋率 {verse.get('knownCoverage', 0)}，"
+                        f"{verse['wordCount']} 詞，比對方式 {verse['matchMethod']}"
+                    ),
+                }
+            )
 
         reading = chapters_by_lesson.get(number) or readings_by_lesson.get(number)
         if reading is None:
             problems.append(f"第 {number} 課沒有讀文")
+        elif number in chapters_by_lesson:
+            reading = {**reading, "kind": "scripture_chapter"}
+        else:
+            reading = {**reading, "kind": "patristic_reading"}
 
         lessons.append(
             {
@@ -226,12 +245,30 @@ def build(strict: bool = True) -> dict:
                 verse["translationZh"] = chinese_for(
                     chapter["osisBook"], chapter["chapter"], verse["verse"], zh, offset
                 )
+                target_chapter, target_verse = chapter["chapter"], verse["verse"]
+                if chapter["osisBook"] == "Ps":
+                    target_chapter, target_verse, _ = psalm_to_mt(
+                        chapter["chapter"], verse["verse"]
+                    )
+                    if target_verse is not None:
+                        target_verse -= offset
+                verse["translationCrosswalk"] = {
+                    "translationVersionCode": "cuv2010",
+                    "translationRef": f"{chapter['osisBook']}.{target_chapter}.{target_verse}",
+                    "translationRange": str(target_verse),
+                }
                 if not verse["translationZh"] and offset and verse["verse"] <= offset:
                     verse["translationNote"] = "七十士標題節，中文本不編號"
             elif chapter["corpus"] == "deuterocanonical":
                 verse["translationZh"] = zh_deutero.get(
                     (chapter["osisBook"], chapter["chapter"], verse["verse"]), ""
                 )
+                verse["translationCrosswalk"] = {
+                    "translationVersionCode": "cuv2010",
+                    "translationRef": f"{chapter['osisBook']}.{chapter['chapter']}.{verse['verse']}",
+                    "translationRange": str(verse["verse"]),
+                    "translationSource": "1933 年聖公會出版次經（非 RCUV）",
+                }
             else:
                 verse["translationZh"] = ""
             if (
@@ -249,6 +286,8 @@ def build(strict: bool = True) -> dict:
 
     counts = {
         "lessons": len(lessons),
+        "bibleChapters": len(scripture["chapters"]),
+        "prayersOrArticles": len(patristic["readings"]),
         "vocabulary": len(vocabulary),
         "vocabularyGlossedZh": glossed,
         "memoryVerses": len(memory["verses"]),
@@ -263,12 +302,13 @@ def build(strict: bool = True) -> dict:
         counts["scriptureWords"] + counts["patristicWords"] + counts["liturgyWords"]
     )
 
-    if glossed == 0:
-        status = "content_assembled_chinese_gloss_pending"
-    elif glossed < VOCAB_TARGET:
-        status = "content_assembled_chinese_gloss_partial"
+    if glossed < VOCAB_TARGET:
+        # "vocabulary_complete" would claim the thousand words are finished; the
+        # Chinese gloss layer is still missing, so the narrowest true state is
+        # the one before it.
+        status = "source_frozen"
     else:
-        status = "content_complete_interlinear_pending"
+        status = "content_complete_layout_pending"
 
     master = {
         "schemaVersion": "1.0.0",
@@ -289,7 +329,60 @@ def build(strict: bool = True) -> dict:
             "chinesePseudepigrapha": "自譯，逐段標「自譯」",
             "psalmNumbering": "七十士編號一律經對照表換算成馬所拉編號後才取中文",
         },
+        "printProfile": {
+            "preset": "JIS_B5_READER",
+            "trim": "JIS_B5",
+            "widthMm": 182,
+            "heightMm": 257,
+            "mirroredMargins": True,
+            "openingPattern": "recto-start",
+            "marginTopMm": 20,
+            "marginBottomMm": 22,
+            "marginInsideMm": 22,
+            "marginOutsideMm": 16,
+        },
+        "sources": {
+            "scripture": {
+                "newTestament": scripture["sources"]["newTestament"],
+                "septuagintAndBeyond": scripture["sources"]["septuagintAndBeyond"],
+            },
+            "chineseBible": {
+                "versionCode": rcuv["translation"]["versionCode"],
+                "titleZh": rcuv["translation"]["titleZh"],
+                "variant": rcuv["translation"]["variant"],
+                "publisher": rcuv["translation"]["publisher"],
+                "useScope": rcuv["translation"]["useScope"],
+                "snapshot": str(RCUV.relative_to(ROOT)).replace("\\", "/"),
+                "snapshotSha256": sha256_of(RCUV),
+            },
+            "chineseDeuterocanon": {
+                "versionCode": deutero["translation"]["versionCode"],
+                "titleZh": deutero["translation"]["titleZh"],
+                "useScope": deutero["translation"]["useScope"],
+                "snapshot": str(DEUTERO_ZH.relative_to(ROOT)).replace("\\", "/"),
+                "snapshotSha256": sha256_of(DEUTERO_ZH),
+            },
+            "patristic": {
+                "note": "逐篇記於 patristic-plan.json；使徒教父、First1KGreek、repo 信經檔與 GOARCH 四系。",
+            },
+            "vocabulary": {
+                "textbook": "William D. Mounce, Basics of Biblical Greek Grammar",
+                "snapshot": str(VOCAB.relative_to(ROOT)).replace("\\", "/"),
+                "snapshotSha256": sha256_of(VOCAB),
+            },
+        },
         "lessons": lessons,
+        "appendices": [
+            {
+                "kind": "divine-liturgy",
+                "key": "divine-liturgy-chrysostom",
+                "title": liturgy["title"],
+                "titleGrc": liturgy["titleGrc"],
+                "stepCount": liturgy["summary"]["stepCount"],
+                "sectionCount": liturgy["summary"]["sectionCount"],
+                "steps": liturgy["steps"],
+            }
+        ],
         "appendix": {
             "key": "divine-liturgy-chrysostom",
             "title": liturgy["title"],
@@ -300,6 +393,8 @@ def build(strict: bool = True) -> dict:
         },
         "audio": {
             "status": "not_recorded",
+            "recordedTrackCount": 0,
+            "tracks": [],
             "profile": "Mounce 標準 Erasmian；拜占庭讀音另立音軌，不混錄",
             "policy": "沒有真實錄音就不顯示播放鍵；TTS 不算數",
         },

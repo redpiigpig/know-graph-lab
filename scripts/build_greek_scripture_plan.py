@@ -152,9 +152,23 @@ def build_chapter(spec: dict, ordinal: int) -> dict:
     verses = sources.load_chapter(spec["osisBook"], spec["chapter"])
     metadata = sources.source_metadata(spec["osisBook"])
     verse_rows = []
+    absent_verses = []
     sigla_verses = 0
     sigla_tokens = 0
     for verse in verses:
+        # Sirach 24:18 and 24:24 are Greek II expansions that Swete's primary
+        # text does not print, so the versification allocates them a number and
+        # no words.  Emitting an empty verse would ship a blank line dressed as
+        # Scripture; the gap is recorded on the chapter instead.
+        if not "".join(token.text for token in verse.tokens).strip():
+            absent_verses.append(
+                {
+                    "verse": verse.verse,
+                    "ref": verse.ref,
+                    "note": "本節在此版本無正文（Swete 未收的增補節），故不列入讀文。",
+                }
+            )
+            continue
         display = strip_sigla(verse.text)
         had_sigla = display != verse.text
         sigla_verses += 1 if had_sigla else 0
@@ -198,6 +212,7 @@ def build_chapter(spec: dict, ordinal: int) -> dict:
         "translationPlan": TRANSLATION_POLICY[spec["corpus"]],
         "verseCount": len(verse_rows),
         "wordCount": source_words,
+        "absentVerses": absent_verses,
         "verseWithSiglaCount": sigla_verses,
         "editorialSiglaTokenCount": sigla_tokens,
         "memoryVerseNumbers": [],
