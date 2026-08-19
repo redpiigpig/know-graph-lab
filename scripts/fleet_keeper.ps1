@@ -93,6 +93,10 @@ function Ensure($label, $pat, $argv) {
     Launch $label $argv
 }
 
+# Batch size 2, not 4 (2026-08-19): four 1800px pages is a ~2.6 MB base64 payload and
+# Gemini answered 504 DEADLINE_EXCEEDED on most of them - Romans managed 16 pages in an
+# hour. Halving the batch doubles the request count but the daily ceiling (6 models x
+# 7 keys x 20) is ~840 requests, far more than these volumes need.
 # ACCS FIRST (user 2026-08-17): campus ACCS OCR is the top priority and OWNS the
 # Gemini pool - every other lane is on NVIDIA/OpenRouter/local so nothing competes
 # for Gemini Vision quota. Gemini-gated: only launch when a key has quota.
@@ -111,13 +115,13 @@ if (LanePaused 'accs-gemini') {
         }
         if ($liveModel) { $env:GEMINI_MODEL = $liveModel.Trim() }
         Note "Gemini has quota on $($env:GEMINI_MODEL) -> ACCS OCR queue (batch-4, NT first)"
-        Launch 'accs-gemini' @('-X','utf8','scripts\accs_ocr_run.py','--engine','gemini','--batch','4')
+        Launch 'accs-gemini' @('-X','utf8','scripts\accs_ocr_run.py','--engine','gemini','--batch','2')
     } else {
         # Gemini dry on every key x every model -> fall back to Sonnet (user 2026-08-17).
         # Sonnet runs on the Claude Max OAuth token, so this costs no extra spend; ACCS
         # keeps moving overnight instead of idling until the daily quota resets.
         Note 'Gemini dry on all keys x all models -> ACCS OCR queue on Sonnet'
-        Launch 'accs-gemini' @('-X','utf8','scripts\accs_ocr_run.py','--engine','sonnet','--batch','4')
+        Launch 'accs-gemini' @('-X','utf8','scripts\accs_ocr_run.py','--engine','sonnet','--batch','2')
     }
 }
 
