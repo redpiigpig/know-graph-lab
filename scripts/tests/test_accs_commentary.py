@@ -380,3 +380,22 @@ def test_build_rows_auto_skips_until_chapter_known():
     rows = build_rows_auto("gen", entries, "vol")
     assert len(rows) == 1
     assert rows[0]["chapter"] == 4
+
+
+def test_build_rows_auto_rejects_chapters_past_the_book_end():
+    """書末「引用經文索引」的行長得像經文引用，OCR 照吐；羅馬書只有 16 章，
+    ch19-28 的條目必須擋在表外（2026-08-19：實際污染了 12 筆）。"""
+    entries = [
+        {"ref": "1:1", "kind": "comment", "body": "正文", "father": "俄利根"},
+        {"ref": "16:27", "kind": "comment", "body": "末章正文", "father": "俄利根"},
+        {"ref": "19:18", "kind": "comment", "body": "索引行", "father": ""},
+        {"ref": "28:6", "kind": "comment", "body": "索引行", "father": ""},
+    ]
+    rows = build_rows_auto("rom", entries, "ACCS（羅馬書）")
+    assert [r["chapter"] for r in rows] == [1, 16]
+
+
+def test_build_rows_auto_keeps_all_chapters_for_unlisted_books():
+    """沒列在 CHAPTER_COUNTS 的書卷不設限，行為與加閘前相同。"""
+    entries = [{"ref": "99:1", "kind": "comment", "body": "x", "father": "俄利根"}]
+    assert len(build_rows_auto("zzz", entries, "vol")) == 1

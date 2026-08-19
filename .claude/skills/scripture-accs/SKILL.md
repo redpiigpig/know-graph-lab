@@ -16,6 +16,8 @@ description: 把《古代基督信仰聖經註釋叢書》(ACCS, IVP/校園) 的
 > - **待轉錄（剩 ~22 卷 / ~1.3 萬頁）**：校園簡體掃描 23 卷全在 `G:\我的雲端硬碟\資料\知識圖工作室\教父著作\基督教 - IVP - 古代基督信仰聖經註釋叢書\`（Downloads 副本已刪）。**缺 24-25 耶利米/哀歌**（未購得）。
 > - **設定檔**：`scripts/accs_volume_config.json`（單書卷 ready／多書卷 needs_boundaries）。**driver `scripts/accs_ocr_run.py`**（讀設定逐卷跑 `ingest_accs_genesis`，NT 優先）。
 > - **由 `KGL_Fleet_Keeper` 排程託管**（見 [[project_fleet_keeper]]）：量太大「一晚跑不完」是常態，逐日推進。**🚨 2026-08-17 起 ACCS 是 keeper 的第一條 lane 且獨佔 Gemini**（panikkar／sbe 已改 NVIDIA，它們原本掛 Gemini、45 分鐘就把 7 把 key 抽乾害 ACCS 起不來）。**引擎鏈＝Gemini（探到有額度的模型）→ 乾了自動改 Sonnet**（user 定調）：Google 免費層已砍到「每 key／每模型／每天 20 次」，但配額按模型獨立，故 `gemini_probe.py` 會輪 6 個 vision 模型找還有額度的、寫進 `state/gemini_live_model.txt`；全部乾掉才落到 `--engine sonnet`（Max OAuth，不另付費，且掃描中文品質本來就最好）。
+> - **🚨 書末附錄會污染正文表（2026-08-19 羅馬書）**：ACCS 每卷末尾有「教父人物小傳」「主題索引」「引用經文索引」。OCR 照樣吐 entry：小傳與主題索引因 `ref` 空或非數字會被 `build_rows_auto` 濾掉（正確），但**引用經文索引的行長得就像經文引用**（`19:18`、`28:6`，body 其實是頁碼 `285-86`），會直接混進表。羅馬書因此多了 12 筆 ch19–28 的假資料（該書只有 16 章）。已加 `CHAPTER_COUNTS` 章數閘（超出實際章數一律不進表）＋回歸測試；全 19 卷複查只有羅馬書中招，已清乾淨。**新書卷入庫後養成習慣：`select book_code, max(chapter) from accs_commentary group by 1` 對一次實際章數。**
+> - **📄 batch size 用 2 不要 4**：4 頁 1800px ≈ 2.0 MB PNG（base64 後 2.6 MB），Gemini 幾乎必回 504 DEADLINE_EXCEEDED，實測羅馬書一小時只跑 16 頁；改 `--batch 2` 後 **344 頁/小時**（21 倍），retry 從 26 次降到 3 次。額度不是瓶頸（日上限約 840 次請求），能不能在期限內跑完才是。
 > - **🚨 driver 兩次連續失敗才停整批**：`accs_ocr_run.py` 原本一卷 rc≠0 就停全批，導致約翰福音額度乾之後，排在後面的希伯來書／以賽亞書永遠排不到（DB 長期 0 筆）。已改成跳過換下一卷、連續兩卷才停（[[feedback_ocr_two_strike_quota]]）。
 > - **面板**：`translation_dashboard.py` 已接 config → ACCS 區塊顯示全 65 卷路線圖＋中文名。
 > - **馬太14-28 品質抽查（2026-07-22 完成）**：367 entries／110k 字。**簡→繁轉換乾淨**（s2twp 後簡體殘留 0、無過度轉換亂碼）。發現兩問題：

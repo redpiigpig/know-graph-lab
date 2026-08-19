@@ -299,6 +299,18 @@ def build_rows(
     return rows
 
 
+# 各書卷章數上限。ACCS 掃描本的書末附有「引用經文索引」，索引行長得就像經文引用
+# （"19:18"、"28:6"），OCR 照樣吐成 entry，於是羅馬書（只有 16 章）被灌進 ch19–ch28
+# 的假資料。用實際章數當閘，超出的一律不進表。
+CHAPTER_COUNTS: dict[str, int] = {
+    "gen": 50, "exo": 40, "lev": 27, "num": 36, "deu": 34,
+    "jos": 24, "jdg": 21, "rut": 4, "1sa": 31, "2sa": 24,
+    "job": 42, "psa": 150, "isa": 66,
+    "mat": 28, "mrk": 16, "luk": 24, "jhn": 21, "act": 28,
+    "rom": 16, "heb": 13, "rev": 22,
+}
+
+
 def build_rows_auto(
     book_code: str,
     entries: list[RawEntry],
@@ -330,6 +342,9 @@ def build_rows_auto(
             chap = last_chapter
         if chap is None:
             continue  # no chapter context yet → skip
+        max_chap = CHAPTER_COUNTS.get(book_code)
+        if max_chap is not None and chap > max_chap:
+            continue  # 書末索引誤判成經文引用 → 丟棄，別污染正文
         last_chapter = chap
 
         pericope_order.setdefault(chap, {})
