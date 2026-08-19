@@ -194,6 +194,10 @@ def translate(doc: dict, segments: list[dict]) -> int:
     if not todo:
         return 0
     table = doc.get('_names') or build_name_table(doc)
+    if not table:
+        # 沒有專名表就翻，專名必然前後不一致；悄悄翻完比翻不出來更糟，故中止本篇。
+        print('    ✗ 無專名表，本篇暫不翻譯（下一輪重試）', flush=True)
+        return 0
     doc['_names'] = table
     names = chr(10).join(f'- {k} → {v}' for k, v in sorted(table.items())) or '（無，依基礎詞庫）'
     done = 0

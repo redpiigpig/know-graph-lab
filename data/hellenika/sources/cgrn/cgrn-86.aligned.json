@@ -1,0 +1,682 @@
+{
+ "cgrn": 86,
+ "url": "http://cgrn.ulg.ac.be/file/86/",
+ "title_zh": "科斯祭曆與祭司法",
+ "title_en": "Sacrificial calendar of the city of Kos",
+ "volume": "K",
+ "date": "ca. 350 BC Justification: letterforms and context (Hallof - Bosnakis).",
+ "provenance": "Kos . Stele A was found in a garden in the town of Kos. Stele B was found in the collection of the so-called Platanistai in the town of Kos. Stele C was found in a house in the town of Kos opposite the house of the Platanistai, thus near stele B. Stele D was found in the pavement of the church of St Ioannis in the Greek cemetery, probably next to the ancient theatre. Current locations in the new storerooms of the Ephoria: A = inv. no. E398 (the stele is heavily worn and the bottom from lines 52-64 is now broken and lost); B = inv. no. E400; D = inv. no. E399. Stele C is presumed lost.",
+ "support": "A group of four fragmentary stelai or plaques of white marble, probably having formed with eight others a stele-wall or monument of some sort (so Hallof - Bosnakis). Stele A, broken above and below, with worn edges to the left and rightHeight: 99.5 cmWidth: 61 cmDepth: 19 cmAn appended inscription, Aa-b, is inscribed on the left side of stele A, with letters 1.4.Stele B, broken above, otherwise intactHeight: 54 cmWidth: 45.5 cmDepth: 14 cmStele C, broken above and to the leftHeight: 56 cmWidth: 35 cmDepth: 13.5 cmStele D, broken above and below, otherwise intactHeight: 53 cmWidth: 54.5 cmDepth: 16 cm",
+ "bibliography": "Editions here based on Hallof - Bosnakis IG XII.4 274-278. To better reflect the probable order of the calendar of Kos, as reconstructed in Bosnakis - Hallof 2005, the stelai have been reordered (Carbon) as follows: A = 278 (Batromios, month 4 on Kos); Aa = 277 (addendum to unknown month, from Kaphisios, month 3 on Kos); B = 276 (unknown month); C = 275 (unknown month); D = 274 (Karneios, last month of the calendar). This reconstruction must remain provisional, however, since it is perfectly possible that stelai B and C were placed before A (especially if B represented month 2, Pedageitnyos, see below Commentary); the new IG editions seem to reflect an uncertainty with regard to the 2005 article by the same authors and to propose Karneios as the first month of the calendar of Kos (for a demonstration that this probably cannot be the case, see Commentary below). The suggested restorations in lines D1 (καθάπερ), D19 (τ̣ὸν ὦμ̣ον̣) and 20 (τ̣[ὸς] τ[αρσ]ό̣ς) are by Carbon; see below ad loc. As usual, we do not print very fragmentary letter traces. Cf. also: von Prott LGS I 5-7; Herzog HGK 1-4; Sokolowski LSCG 151A-D; Rhodes - Osborne GHI 62 A-D; IG-online (link for no. 274; cf. also the following nos. 275-278), with the Greek text and translations into German and English. Further bibliography: Pirenne-Delforge 1996; Bosnakis - Hallof 2005; Bremmer 2005a; Feyel 2006; Georgoudi 2007; Georgoudi 2008; Gödde 2011; Paul 2013a; Naiden 2013: 85-90; Jim 2014; Georgoudi 2016; Pirenne-Delforge - Pironti 2016.",
+ "licence": "CGRN — Collection of Greek Ritual Norms (Université de Liège), 開放取用；引用請註明 CGRN 編號與網址。",
+ "names": {
+  "Stele A": "碑銘A",
+  "Stele B": "碑銘B",
+  "Stele C": "碑銘C",
+  "Stele D": "碑銘D",
+  "Batromios": "巴特羅彌俄斯月",
+  "Kaphisios": "卡菲西俄斯月",
+  "Karneios": "卡爾涅俄斯月",
+  "Pedageitnyos": "佩達蓋特尼俄斯月",
+  "Zeus Polieus": "宙斯‧波利俄斯",
+  "Zeus Machaneus": "宙斯‧馬卡涅俄斯",
+  "Dionysus Skyllitas": "戴奧尼索斯‧斯庫利塔斯",
+  "Athena Polias": "雅典娜‧波利阿斯",
+  "Athena Machanis": "雅典娜‧馬卡尼斯",
+  "Hera Argeia Eleia Basileia": "赫拉‧阿爾蓋亞‧埃萊亞‧巴西萊亞",
+  "Apollo Karneios": "阿波羅‧卡爾涅俄斯",
+  "Leukothea": "琉科忒亞",
+  "Rhea": "瑞亞",
+  "Leto": "勒托",
+  "Charites": "卡里忒斯",
+  "Heracles": "赫拉克勒斯",
+  "Hestia": "赫斯提亞",
+  "Hestia Phamia": "赫斯提亞‧法彌亞",
+  "Demeter": "得墨忒耳",
+  "Kos": "科斯",
+  "Koans": "科斯人",
+  "Pamphyloi": "帕姆費洛伊",
+  "Hylleis": "許萊斯",
+  "Dymanes": "杜馬涅斯",
+  "Pasthemidai": "帕斯特彌達伊",
+  "Nostidai": "諾斯提達伊",
+  "Nestoridai": "涅斯托里達伊",
+  "Phyleomachidai": "費勒歐馬基達伊",
+  "Alkeidai": "阿爾凱達伊",
+  "Eitea": "埃忒亞",
+  "Pyleas": "皮琉阿斯",
+  "Anaxilas": "阿那克西拉斯",
+  "Twelve Gods": "十二神",
+  "Karneia": "卡爾涅亞節",
+  "hierophylakes": "聖物守護者",
+  "archons": "執政官",
+  "hieropoioi": "祭司",
+  "heralds": "傳令官",
+  "prostatai": "主席",
+  "priest": "祭司",
+  "priestess": "女祭司",
+  "perquisite-bearer-of-the-kings": "國王賞賜執持者",
+  "incense-bearer": "持香者",
+  "aulos-player": "雙笛手",
+  "doctors": "醫師",
+  "bronze-workers": "銅匠",
+  "ceramic-workers": "陶匠",
+  "slaughterer": "屠宰者",
+  "proprietor": "畜主",
+  "chiliastys": "千人隊",
+  "Ninth": "第九區",
+  "agora": "市集",
+  "sanctuary": "聖所",
+  "altar": "祭壇",
+  "temple": "神廟",
+  "hearth": "灶",
+  "table": "桌",
+  "public building": "公共建築",
+  "olive-trees": "橄欖樹",
+  "stone": "石",
+  "wrapped offerings": "包裹祭品",
+  "round cakes": "圓餅",
+  "honey-mixture": "蜜調",
+  "mixed wine": "調酒",
+  "barley-groats": "大麥粉",
+  "wheat": "小麥",
+  "olive oil": "橄欖油",
+  "wine": "酒",
+  "honey": "蜜",
+  "cheese": "乳酪",
+  "ewe's milk cheeses": "羊乳酪",
+  "breads": "麵包",
+  "cheese-shaped": "乳酪形",
+  "cakes": "餅",
+  "drinking-cups": "飲杯",
+  "ewers": "水罐",
+  "lantern": "燈籠",
+  "kindling wood": "引火木",
+  "burning wood": "燃燒木",
+  "wood-block": "木塊",
+  "ribcage": "肋排",
+  "abdomen": "腹肉",
+  "hip": "臀",
+  "leg": "腿",
+  "skin": "皮",
+  "ears": "耳",
+  "horns": "角",
+  "hooves": "蹄",
+  "shanks": "脛",
+  "shoulder": "肩",
+  "head": "頭",
+  "meat": "肉",
+  "blood-sausage": "血腸",
+  "three-pronged spit": "三叉叉",
+  "double portion": "雙份",
+  "single portion": "單份",
+  "half-hekteus": "半赫克透斯",
+  "tetarteus": "特塔爾透斯",
+  "kotylai": "科提萊",
+  "medimnoi": "麥狄姆諾伊",
+  "choes": "科俄斯",
+  "drachmae": "德拉克馬",
+  "piglet": "小豬",
+  "male kid": "公山羊羔",
+  "she-goat": "母山羊",
+  "lamb": "羔羊",
+  "wether": "閹羊",
+  "ewe": "母羊",
+  "heifer": "小母牛",
+  "ox": "公牛",
+  "cow": "母牛",
+  "pregnant ewe": "懷孕母羊",
+  "adult wether": "成年閹羊",
+  "adult ewe": "成年母羊",
+  "selected heifer": "選定小母牛",
+  "selected ox": "選定公牛",
+  "nine oxen": "九頭公牛",
+  "three oxen": "三頭公牛",
+  "other oxen": "其他公牛",
+  "one ox": "一頭公牛",
+  "an ox": "一頭公牛",
+  "the ox": "那頭公牛",
+  "the animals": "那些動物",
+  "these animals": "這些動物",
+  "this animal": "這隻動物",
+  "these": "這些",
+  "those": "那些",
+  "the rest": "其餘",
+  "the meat": "肉",
+  "the skin": "皮",
+  "a leg": "一條腿",
+  "the legs": "腿",
+  "the ears": "耳",
+  "the horns": "角",
+  "the hooves": "蹄",
+  "the shanks": "脛",
+  "the shoulder": "肩",
+  "the head": "頭",
+  "the ribcage": "肋排",
+  "the abdomen": "腹部",
+  "the hip": "臀",
+  "the armpits": "腋",
+  "the back": "背",
+  "the viscera": "內臟",
+  "the intestines": "腸",
+  "the blood": "血",
+  "the stone": "石",
+  "the altar": "祭壇",
+  "the hearth": "灶",
+  "the temple": "神廟",
+  "the sanctuary": "聖所",
+  "the agora": "市集",
+  "the table": "桌",
+  "the public building": "公共建築",
+  "the olive-trees": "橄欖樹",
+  "the wrapped offerings": "包裹祭品",
+  "the round cakes": "圓餅",
+  "the honey-mixture": "蜜調",
+  "the mixed wine": "調酒",
+  "the barley-groats": "大麥粉",
+  "the wheat": "小麥",
+  "the olive oil": "橄欖油",
+  "the wine": "酒",
+  "the honey": "蜜",
+  "the cheese": "乳酪",
+  "the breads": "麵包",
+  "the cakes": "餅",
+  "the drinking-cups": "飲杯",
+  "the ewers": "水罐",
+  "the lantern": "燈籠",
+  "the kindling wood": "引火木",
+  "the burning wood": "燃燒木",
+  "the wood-block": "木塊",
+  "the perquisites": "賞賜",
+  "the divine portion": "神聖份",
+  "the customary portions": "慣例份",
+  "the first-offerings": "初祭",
+  "the libations": "奠酒",
+  "the proclamation": "宣告",
+  "the prayers": "祈禱",
+  "the oath": "誓言",
+  "the price": "價格",
+  "the value": "價值",
+  "the festival": "節慶",
+  "the annual seasonal rites": "年度季節祭儀",
+  "the Karneia-days": "卡爾涅亞節日",
+  "the month": "月",
+  "the day": "日",
+  "the 20th": "二十日",
+  "the 22nd": "二十二日",
+  "the 24th": "二十四日",
+  "the 25th": "二十五日",
+  "the 28th": "二十八日",
+  "the 19th": "十九日",
+  "the 10th": "十日",
+  "the 11th": "十一日",
+  "the 12th": "十二日",
+  "the [...]eenth": "第[...]日",
+  "month 4": "第四月",
+  "month 3": "第三月",
+  "month 12": "第十二月",
+  "unknown month": "未知月",
+  "Stele A (month 4, Batromios)": "碑銘A（第四月，巴特羅彌俄斯月）",
+  "Stele B (unknown month)": "碑銘B（未知月）",
+  "Stele C (unknown month)": "碑銘C（未知月）",
+  "Stele D (month 12, Karneios)": "碑銘D（第十二月，卡爾涅俄斯月）",
+  "Addendum Aa-b (month 3, Kaphisios?)": "附錄Aa-b（第三月，卡菲西俄斯月？）"
+ },
+ "segments": [
+  {
+   "face": "Stele A (month 4, Batromios)",
+   "line_from": 1,
+   "greek": "[..?....?..]Λ[.]ΑΠΟ[..?..]Τ[..?....?..]ΙΕΥ[..4..]ΥΝΤΟΙ[..4..]ΓΛΕΛ[.]ΙΣΕ[..?..[..4..]Λ[..?..]αυτας καθάπερ τοὺς ἄλλ[ο]υς θεοὺς [..?....?..]ΙΝ[..] ἱερεὺς καὶ ἱεροφύλακες καὶ ἀρχεύο[ντ]-]",
+   "en": "Stele A (month 4, Batromios) [...] just as the other gods [...] The priest, the hierophylakes, and the archons",
+   "zh": "碑銘A（第四月，巴特羅彌俄斯月）[...] 正如其他諸神 [...] 祭司、聖物守護者與執政官"
+  },
+  {
+   "face": "Stele A (month 4, Batromios)",
+   "line_from": 5,
+   "greek": "[ε]ς [κα]τὰ φυ[λ]ὰς ἰόντω, ἱεροποιοὶ δὲ καὶ τοὶ κάρυκες ἰόντω κ[α]-[τ]ὰ χιλ[ι]α[σ]τύας· βοῦς δ᾿ ἐννῆ ἐλᾶντι, βοῦν ἐξ ἐνάτας ἑκάστ[ας], [.]ΞΛ[..]Λ[.]Ιέων καὶ Πασθεμιδᾶν πράτων καὶ Νο[σ]τιδᾶν· ἐς δὲ [τ]ὰν ἀγορὰν ἐλάντω Πάμφυλοι πρᾶτοι, ἐν ἀγορᾶι δὲ συμμίσ- [γ]ονται· ὁ δὲ ἱερεὺς καθήσθω [πὰρ] τ[ὰ]ν τράπεζαν ἔχων τὰ[νσ]-]",
+   "en": "He obtains as perquisites the skin. On the 10th: to Hera Argeia Eleia Basileia a selected heifer. Let it be selected having been purchased for no less than 50 drachmae. The priest sacrifices and provides the (supplementary) sacred offerings. He obtains as perquisites the skin and a leg. Take-away (is allowed) from this (heifer). The wrapped offerings are wrapped and they are sacrificed on the hearth in the temple, along with a cake made from a half-hekteus of",
+   "zh": "他獲得皮作為賞賜。十日：獻給赫拉‧阿爾蓋亞‧埃萊亞‧巴西萊亞一頭選定小母牛。讓牠被選定，購買價格不得少於五十德拉克馬。祭司獻祭並提供（補充的）神聖祭品。他獲得皮與一條腿作為賞賜。從這（小母牛）允許外帶。包裹祭品被包裹，並在神廟中的灶上獻祭，連同用半赫克透斯"
+  },
+  {
+   "face": "Stele A (month 4, Batromios)",
+   "line_from": 10,
+   "greek": "[τ]ολὰν τὰν ἱεράν, τοὶ δὲ ἱερ[οποιοὶἑκα]τέρω τᾶς τραπέζας· Π[άμ]-[φ]υλοι δὲ ἐπελάντω βοῦ[ςτρεῖςτοὺ]ς καλλίστους, αἰ μέ[γκα] τούτωγ κριθῆι τις· αἰ δὲ [μή,Ὑλλεῖςτρ]εῖς ἐλάντω, αἰ μέγ κ[ατ]-] ούτωγ κριθῆι τις· αἰ δὲ μ[ή,Δυμᾶνεςτρ]εῖς τοὺς λοιπούς, αἰ [μέ]-] γ κα τούτωγ κριθῆι τις· αἰ [δὲμή,ἁτέρου]ς ἐλάντω ἐς τὰν ἀγ[ορ]-]",
+   "en": "wheat. No take-away from these, away from the temple. On the 11th: an ox is selected for Zeus Machaneus every other year, the one during which the Karneia-days take place, just as during Batromios the ox is selected for Zeus Polieus, and a piglet is preliminarily burned (whole), and a preliminary proclamation is made just as for (Zeus) Polieus. On the 12th: to Zeus Machaneus, three adult wethers and the ox that has been selected",
+   "zh": "小麥製成的餅。這些不得帶離神廟。十一日：每隔一年為宙斯‧馬卡涅俄斯選一頭公牛，即卡爾涅亞節日舉行的年份，正如在巴特羅彌俄斯月為宙斯‧波利俄斯選公牛一樣，並預先焚燒（整隻）小豬，並如同為（宙斯）波利俄斯一樣進行預先宣告。十二日：獻給宙斯‧馬卡涅俄斯三頭成年閹羊與已選定的公牛"
+  },
+  {
+   "face": "Stele A (month 4, Batromios)",
+   "line_from": 15,
+   "greek": "ὰν καὶ ἐπελάντω κατὰ τα[ὐτά,αἰ] μέγ κα τούτωγ κριθῆι τ[ις]· αἰ δὲ μή, τρίτον ἐπελάντω κατὰ τα[ὐ]τά· αἰ δέ κα τούτωγ κριθ[ῆι] μηδείς, ἐπικρίνοντα[ι] βοῦν ἐκ χι[λια]στύος ἑκάστας· ἐλά[σα]-] ντες δὲ τούτους συμμίσγον[ταιτο]ῖς ἄλλοις καὶ εὐθὺ[ςκρίν]-] οντι καὶ εὔχονται καὶ ἀποκαρύ[σσο]ντι· ἔπειτα ἐπελᾶντ[ιαὖ]-]",
+   "en": "every other year, the one during which the Karneia-days take place; every other year, three adult wethers. The priest of the Twelve Gods sacrifices these and provides the (supplementary) sacred offerings. He offers as a preliminary sacrifice for these (gods) at their common (altar), the things which the Phyleomachidai bring, a half-hekteus of barley-groats, a tetarteus of wine. From the ox, perquisites are given to the Phyleomachidai: the horns (or hooves), the shanks; from the sheep, the shoulder,",
+   "zh": "每隔一年，即卡爾涅亞節日舉行的年份；每隔一年，三頭成年閹羊。十二神之祭司獻祭這些並提供（補充的）神聖祭品。他為這些（神）在他們共同的（祭壇）預先獻上費勒歐馬基達伊所帶來的東西：半赫克透斯大麥粉、一特塔爾透斯酒。從公牛，賞賜給予費勒歐馬基達伊：角（或蹄）、脛；從羊，肩"
+  },
+  {
+   "face": "Stele A (month 4, Batromios)",
+   "line_from": 20,
+   "greek": "τις κατὰ ταὐτά· θύεται δέ, αἰ μέγ κα ὑποκύψει, τᾶι Ἱστίαι· θύ[ει] δὲ γερεαφόρος βασιλέων καὶ ἱερὰ παρέχει καὶ ἐπιθύει ἱερὰ ἐξ [ἡ]-] μιέκτου· γέρη δὲ λαμβάνει τὸ δέρμα καὶ τὸ σκέλος, ἱεροπο[ιοὶ] δὲ σκέλος, τὰ δὲ ἄλλα κρέα τᾶς πόλιος. τὸν δὲ κριθέντα τ[ῶι] Ζηνὶ κάρυκες ἄγοντι ἐς ἀγοράν· ἐπεὶ δέ κα ἐν τᾶι ἀγορᾶι ἔω[ν]-]",
+   "en": "from which the divine portion is cut, and [the shanks]. The priest obtains as perquisites the legs and the skins. On the same day: to Athena Machanis a selected heifer every other year, the one during which the Karneia-days take place; on the other year, (only) an adult ewe. The priestess sacrifices and is sprinkled about with sea water. No take-away from these (animals). As supplementary (supplementary) sacred offerings are given to the goddess:",
+   "zh": "從中切下神聖份，以及〔脛〕。祭司獲得腿與皮作為賞賜。同日：獻給雅典娜‧馬卡尼斯一頭選定小母牛，每隔一年，即卡爾涅亞節日舉行的年份；另一年，（僅）一隻成年母羊。女祭司獻祭並被灑上海水。這些（動物）不得外帶。作為補充（補充的）神聖祭品給予女神："
+  },
+  {
+   "face": "Stele A (month 4, Batromios)",
+   "line_from": 25,
+   "greek": "τι, ἀγορεύει οὗ κα ἦι ὁ βοῦς ἢ ἄλλος ὑπὲρ κήνου ἐνδέξιο[ς“Κ]-] ώιοις παρέχω τὸμ βοῦν, Κῶιοι δὲ τιμὰν ἀποδόντω τ⟦ΟΤ⟧ᾶι Ἱστία[ι]”. τιμώντω δὲ προστάται ὀμόσαντες παραχρῆμα· ἐπεὶ δέ κα τι[μα]-[θ]ῆι, ἀναγορευέτω ὁ κᾶρυξ ὁπόσσου κα τιμαθῆι· τουτῶ δὲ ἐλᾶντ[ιπα]-[ρ]ὰ τὰν Ἱστίαν τὰν ⟦Ο⟧ Φαμίαν καὶ Ο[...]ΤΙ· [ὁ] δὲ ἱερεὺς στέπτει καὶ [ἐπι]-]",
+   "en": "four kotylai of olive oil, a tetarteus of wine, two new ewers and three new drinking-cups. During the Karneia, the city is to purchase [a selected heifer costing not less than 50] drachmae. And this animal [...]",
+   "zh": "四科提萊橄欖油、一特塔爾透斯酒、兩個新水罐與三個新飲杯。在卡爾涅亞節期間，城邦應購買〔一頭選定小母牛，價格不少於五十〕德拉克馬。而這隻動物 [...]"
+  },
+  {
+   "face": "Stele A (month 4, Batromios)",
+   "line_from": 30,
+   "greek": "σπένδει κύλικα οἴνου κεκραμένου πρὸ τοῦ βοός· ἔπειτα ἄγοντι τ[ὸμβ]-] οῦν καὶ τὸγ καυτὸν καὶ φθόϊας ἑπτὰ καὶ μέλι καὶ στέμμα· ἐξάγο[ντ]-[ε]ς δὲ καρύσσοντι εὐφαμίαν· κηνεῖ δὲ ἐκδήσαντες τὸμ βοῦν κ[α]-[τ]άρχονται θαλλῶι καὶ δάφναι· τοὶ δὲ κά[ρυκεςκ]αρπῶντι τὸμ μὲγ χοῖ- [ρ]ογ καὶ τὰ σπλάγχνα ἐπὶ τοῦ βωμοῦ ἐπισπένδοντες μελίκρατον, ἔ[ντ]-]",
+   "en": "pours a drinking cup of mixed wine in front of the ox. Next, they lead the ox, the (offering) to be burned, seven round cakes, honey and a ribbon. After having led the offerings out, they proclaim ritual silence. After having tied the ox in this place, they make first-offerings with an olive- and a laurel-branch. The [heralds] burn the piglet and the viscera on the altar making a libation of honey-mixture and,",
+   "zh": "在公牛前奠一杯調酒。接著，他們牽出公牛、焚燒祭品、七個圓餅、蜜與一條緞帶。祭品牽出之後，他們宣告祭儀肅靜。將公牛在該處綁好之後，他們用橄欖枝與月桂枝行初祭。傳令官在祭壇上焚燒小豬與內臟，同時奠下蜜調，並"
+  },
+  {
+   "face": "Stele A (month 4, Batromios)",
+   "line_from": 35,
+   "greek": "[ερ]α δὲ ἐκπλύναντες παρὰ τὸ[μβωμὸνκα]ρπῶντι· ἐπεὶ δέ κα καρπω[θῆι] ἄποτα, ἐπισπενδέτω μελίκρατον· ὁ δὲ [κᾶρ]υξ καρυσσέτω “ἑορτάζε[νΖην]-] ὸς Πολιέως ἐνιαύτια ὡραῖα ἑορτάν”· [ἱ]ε[ρεὺς] δὲ τοῖς ἐντέροις ἐπιθυέτ[ωθ]-] ύη καὶ τοὺς φθόϊας καὶ σπονδὰς ἄ[οιν]ον καὶ κεκραμέναν καὶ στέ[μ]-] μα· τουτῶ δὲ ἰόντω πὰρ τοὺς ἱαροποι[ὸ]ς ἐς τὸ οἴκημα τὸ δαμόσιον ἱα[ρε]-]",
+   "en": "after having washed [the intestines] next to the [altar], they burn them. After they have been burned without liquid, let him add a libation of honey-mixture. Let the herald proclaim to celebrate a festival of Zeus Polieus as annual seasonal rites. Let [the priest] add to the sacrifice of the intestines: incense, the round cakes, libations, (one) [without wine] and (one of) mixed wine and a ribbon. From there, let the priest and the heralds go to the hieropoioi in the public building;",
+   "zh": "在祭壇旁洗淨腸之後，他們將其焚燒。待其無液焚燒完畢，讓他奠下蜜調。讓傳令官宣告，慶祝宙斯‧波利俄斯的節慶，作為年度季節祭儀。讓祭司在內臟的獻祭上添加：乳香、圓餅、奠酒——一份〔無酒〕與一份調酒——以及一條緞帶。從那裡，讓祭司與傳令官前往公共建築中的祭司處；"
+  },
+  {
+   "face": "Stele A (month 4, Batromios)",
+   "line_from": 40,
+   "greek": "ὺς καὶ κάρυκες, ἱαροποιοὶ δὲ ξενίζοντι τὸν ἱερῆ καὶ τὸς κάρυκας τα[ύ]-] ταν τὰν νύκτα· ἐπεὶ δέ κα σπονδὰς ποιήσωνται, αἱρέσθω ὁ ἱαρεὺς [σ]-[φ]αγῆ τῶν ἱαροποιῶν βοὸς τοῦ θυσομένου τῶι Ζηνὶ τῶι Πολιῆι καὶ προα[γο]-[ρ]ευέτω ἁγνεύεσθαι γυναικὸς καὶ ἀν[δ]ρὸς ἀντὶ νυκτός· τοὶ δὲ κάρυ[κε]-[ς] αἱρείσθω σφαγῆ τοῦ βοὸς ὅγ κα χρήιζωντι ηὑτῶν καὶ προαγορευέ[τω]",
+   "en": "the hieropoioi are to host the priest and the heralds for that night. After they have made (the) libations, let the priest choose a slaughterer from among the hieropoioi for the ox that is to be sacrificed to Zeus Polieus and let him publicly proclaim that he must keep pure from any woman or man for the night. Let the heralds select the slaughterer of the ox that they wish among their ranks and publicly proclaim [...]",
+   "zh": "祭司們要招待祭司與傳令官度過那一夜。在他們行奠酒之後，讓祭司從祭司中為將獻祭給宙斯‧波利俄斯的那頭公牛挑選一位屠宰者，並讓他公開宣告，該屠宰者當夜必須遠離任何女人或男人保持潔淨。讓傳令官在他們自己當中挑選他們所願的屠宰者，並公開宣告〔……〕"
+  },
+  {
+   "face": "Stele A (month 4, Batromios)",
+   "line_from": 45,
+   "greek": "[..]Κ[..]ΛΗΤΑΙ τῶι αἱρεθέντι κατὰ ταὐτά ⁝ τᾶι αὐτᾶι ἁμέραι· Διονύσωι [Σκ]-] υλλίται χοῖρος καὶ ἔριφος· τοῦ χοίρου οὐκ ἀποφορά· «θύει δὲ ἱερεὺς κ»[αὶἱε]-] ρὰ παρέχει· γέρη φέρει δέρμα, σκέλος ʅ ἰκάδι· βοῦς ὁ κριθεὶς θύεται Ζηνὶ Π[ο]-[λι]ῆι καὶ ἔνδορα ἐνδέρεται· ἐφ᾿ ἑστίαν θύεται ἀλφίτων ἡμίεκτον, ἄρτο[ι][δ]ύο ἐξ ἡμίεκτου, ὁ ἅτερος τυρώδης, καὶ τὰ ἔνδορα· καὶ ἐπισπένδει ὁ ἱε[ρ]-]",
+   "en": "to the one selected, in the same manner. On the same day: to Dionysus Skyllitas a piglet and a male kid. No take-away from the male piglet. The priest sacrifices and provides the [(supplementary) sacred offerings]. He takes away as perquisites the skin and a leg. On the 20th: The ox that has been selected is sacrificed to Zeus Polieus and the wrapped offerings are wrapped. On the hearth is sacrificed: a half-hekteus of barley-groats, two breads (made) from a half-hekteus (of flour), one of them \"cheese-shaped\", and the wrapped offerings. The priest adds as a libation upon these",
+   "zh": "對被選中者，以同樣方式。同日：獻給戴奧尼索斯‧斯庫利塔斯一頭小豬和一隻公山羊羔。公豬羔不得帶走。祭司獻祭並提供〔補充〕神聖祭品。他取走皮和一條腿作為賞賜。二十日：那頭被選定的公牛獻祭給宙斯‧波利俄斯，並包裹包裹祭品。在灶上獻祭：半赫克透斯大麥粉、用半赫克透斯（麵粉）做的兩個麵包，其中一個是「乳酪形」的，以及包裹祭品。祭司在這些之上奠下"
+  },
+  {
+   "face": "Stele A (month 4, Batromios)",
+   "line_from": 50,
+   "greek": "εὺς τούτοις οἴνου κρατῆρας τρεῖς· γέρη τοῦ βοὸς τῶι ἱερῆι δέρμα κ[αὶσ]-[κέ]λος, «ἱερὰ ἱαρεὺς παρέχει v {Ε} καὶ χέλυος ἥμισυ καὶ κοιλίας ἥμ[ι]»- «[συ]»· θυαφόρωι δὲ τοῦ σκέλεος «τοῦ τῶν ἱεροποιῶν» δίδοται ἀκρίσχιον, [κάρυ]-[ξιν]ώτου δίκρεας, ὑπώμαια, αἱματίου ὀβελὸς τρικώλιος, Νεστορίδαι[ς][δ]ὲ νώτου δίκρεας, ἰατροῖς κρέας, αὐλητᾶι κρέας, χαλκέων καὶ κερα[μέ]-]",
+   "en": "three kraters of wine. As perquisites to the priest from the ox (are given) the skin and a leg. The priest provides the (supplementary) sacred offerings and half the ribcage and half the abdomen. To the incense-bearer is given, from the leg for the hieropoioi, the end of the hip; [to the herald], a double portion of meat from the back, the armpits, a three-pronged spit of blood-sausage; to the Nestoridai, a double portion of meat from the back; to the doctors, a single portion of meat; to the aulos-player, a single portion of meat; to each",
+   "zh": "三缸酒。作為給祭司的公牛賞賜，是皮和一條腿。祭司提供（補充）神聖祭品，以及半個肋排和半個腹部。給持香者，從給祭司們的那條腿中，給出臀的末端；〔給傳令官〕，一份背部的雙份肉、腋、一根三叉叉的血腸；給涅斯托里達伊，一份背部的雙份肉；給醫師們，一份單份肉；給雙笛手，一份單份肉；給"
+  },
+  {
+   "face": "Stele A (month 4, Batromios)",
+   "line_from": 55,
+   "greek": "[ω]ν ἑκατέροις τὸ κεφάλαιο[ν·] «[τὰἄλ]λα κρέα τᾶς πόλιος· ταῦτα πάν[τα]» «[οὐκ] ἀποφέρεται ἐκτὸς τᾶς π[όλιος]» ⁝ τᾶι αὐτᾶι ἁμέραι· Ἀθαναίαι Πο[λι]-] άδι οἶς κυέοσα· θύει δὲ ἱερ[εὺςκαὶ] ἱερὰ παρέχει· γέρη λαμβάνει δέ[ρ]-] μα καὶ σκέλος ʅ ἐνάται με[τ᾿ἰκ]άδα· Διονύσωι Σκυλλίται χοῖρος [καὶ] ἔριφος, τοῦ χοίρου οὐκ ἀποφορά· θύει ἱερεὺς καὶ ἱερὰ παρέχει· γέρη [λ]-]",
+   "en": "of the groups of bronze-workers and ceramic-workers, a part of the head. The rest of the meat belongs to the city. All of these may not be carried out of the city. On the same day: to Athena Polias, a pregnant ewe. The priest sacrifices [and] provides the (supplementary) sacred offerings. He obtains as perquisites the skin and a leg. On the 22nd: to Dionysus Skyllitas, a piglet [and] a male kid. No take-away from the male piglet. The priest sacrifices and provides the (supplementary) sacred offerings.",
+   "zh": "銅匠與陶匠各群體，一份頭的部分。其餘的肉屬於城邦。所有這些不得帶出城外。同日：獻給雅典娜‧波利阿斯一頭懷孕母羊。祭司獻祭〔並〕提供（補充）神聖祭品。他取走皮和一條腿作為賞賜。二十二日：獻給戴奧尼索斯‧斯庫利塔斯一頭小豬〔和〕一隻公山羊羔。公豬羔不得帶走。祭司獻祭並提供（補充）神聖祭品。他取走〔……〕作為賞賜。"
+  },
+  {
+   "face": "Stele A (month 4, Batromios)",
+   "line_from": 60,
+   "greek": "αμβάνει δέρμα καὶ σκέλος ʅ ἑβδόμαι ἀνομένου· ἐσς Ἀλκηΐδας Δά[μ]-] ατρι οἶς τέλεως καὶ τελέα κυέοσα, τούτων οὐκ ἀποφορά· κύλικες κ[αι]-[ν]αὶ δύο δίδονται· θύει ἱερεὺς [καὶἱερ]ὰ παρέχει· γέρη δὲ οὔατα ʅ ἕχκτ[αι·Δι]-[ο]νύσωι Σκυλλίτα[ιχοῖροςκαὶἔριφος], τοῦ χοίρου [ο]ὐκ [ἀποφορά·θύει][ἱ]ε[ρε]ὺς κ[αὶἱερὰπαρέχει·γέρηλαμβάνειδέρμακαὶσκέλος] ..?....?..]",
+   "en": "He obtains as perquisites the skin and a leg. On the 24th: at Alkeidai, for Demeter, an adult wether and an adult pregnant ewe. No take-away from these. There give two new drinking-cups. The priest sacrifices [and] provides [the (supplementary) sacred offerings]. The perquisites are the ears. On the 25th: to Dionysus Skyllitas, [a piglet and a male kid. No take-away] from the male piglet. [The priest sacrifices and provides the (supplementary) sacred offerings. He obtains as perquisites the skin and a leg...] Addendum Aa-b (month 3, Kaphisios?) (a) From the animals sacrificed to Leukothea, take-away (is permitted) to Pyleas. (b) Three and an earthen pot. Stele B (unknown month) [...] On the 22nd: [to ... three] adult wethers. They are sacrificed by tribe, [the one] of the Hylleis by the sanctuary of Heracles, that of the Dymanes, near the property of Anaxilas, that of the Pamphyloi at Eitea,",
+   "zh": ""
+  },
+  {
+   "face": "Addenda on left side of Stele A (for month 3, Kaphisios?)",
+   "line_from": 1,
+   "greek": "vacat τῶν θυομένων τᾶι Λευκοθήε[ι]  ἀποφορὰ ἐς Πύ[λ]-] εαν. vacat τρεῖς καὶ χύτρα. vacat",
+   "en": "Stele A (month 4, Batromios) [...] just as the other gods [...] The priest, the hierophylakes, and the archons",
+   "zh": ""
+  },
+  {
+   "face": "Addenda on left side of Stele A (for month 3, Kaphisios?)",
+   "line_from": 5,
+   "greek": "",
+   "en": "He obtains as perquisites the skin. On the 10th: to Hera Argeia Eleia Basileia a selected heifer. Let it be selected having been purchased for no less than 50 drachmae. The priest sacrifices and provides the (supplementary) sacred offerings. He obtains as perquisites the skin and a leg. Take-away (is allowed) from this (heifer). The wrapped offerings are wrapped and they are sacrificed on the hearth in the temple, along with a cake made from a half-hekteus of",
+   "zh": ""
+  },
+  {
+   "face": "Addenda on left side of Stele A (for month 3, Kaphisios?)",
+   "line_from": 10,
+   "greek": "",
+   "en": "wheat. No take-away from these, away from the temple. On the 11th: an ox is selected for Zeus Machaneus every other year, the one during which the Karneia-days take place, just as during Batromios the ox is selected for Zeus Polieus, and a piglet is preliminarily burned (whole), and a preliminary proclamation is made just as for (Zeus) Polieus. On the 12th: to Zeus Machaneus, three adult wethers and the ox that has been selected",
+   "zh": ""
+  },
+  {
+   "face": "Addenda on left side of Stele A (for month 3, Kaphisios?)",
+   "line_from": 15,
+   "greek": "",
+   "en": "every other year, the one during which the Karneia-days take place; every other year, three adult wethers. The priest of the Twelve Gods sacrifices these and provides the (supplementary) sacred offerings. He offers as a preliminary sacrifice for these (gods) at their common (altar), the things which the Phyleomachidai bring, a half-hekteus of barley-groats, a tetarteus of wine. From the ox, perquisites are given to the Phyleomachidai: the horns (or hooves), the shanks; from the sheep, the shoulder,",
+   "zh": ""
+  },
+  {
+   "face": "Addenda on left side of Stele A (for month 3, Kaphisios?)",
+   "line_from": 20,
+   "greek": "",
+   "en": "from which the divine portion is cut, and [the shanks]. The priest obtains as perquisites the legs and the skins. On the same day: to Athena Machanis a selected heifer every other year, the one during which the Karneia-days take place; on the other year, (only) an adult ewe. The priestess sacrifices and is sprinkled about with sea water. No take-away from these (animals). As supplementary (supplementary) sacred offerings are given to the goddess:",
+   "zh": ""
+  },
+  {
+   "face": "Addenda on left side of Stele A (for month 3, Kaphisios?)",
+   "line_from": 25,
+   "greek": "",
+   "en": "four kotylai of olive oil, a tetarteus of wine, two new ewers and three new drinking-cups. During the Karneia, the city is to purchase [a selected heifer costing not less than 50] drachmae. And this animal [...]",
+   "zh": "橄欖油四科提萊，酒一特塔爾透斯，新水罐兩個，新飲杯三個。卡爾涅亞節期間，城邦須購買〔一頭選定小母牛，價不低於五十〕德拉克馬。而這隻動物〔……〕"
+  },
+  {
+   "face": "Addenda on left side of Stele A (for month 3, Kaphisios?)",
+   "line_from": 30,
+   "greek": "",
+   "en": "pours a drinking cup of mixed wine in front of the ox. Next, they lead the ox, the (offering) to be burned, seven round cakes, honey and a ribbon. After having led the offerings out, they proclaim ritual silence. After having tied the ox in this place, they make first-offerings with an olive- and a laurel-branch. The [heralds] burn the piglet and the viscera on the altar making a libation of honey-mixture and,",
+   "zh": "在公牛前奠一杯調酒。接著，他們牽公牛、將焚燒的祭品、七個圓餅、蜜與一條緞帶。將祭品牽出之後，他們宣告 ritual silence。將公牛繫於此地之後，他們以橄欖枝與月桂枝行初祭。〔傳令官〕在祭壇上焚燒小豬與內臟，奠蜜調，並"
+  },
+  {
+   "face": "Addenda on left side of Stele A (for month 3, Kaphisios?)",
+   "line_from": 35,
+   "greek": "",
+   "en": "after having washed [the intestines] next to the [altar], they burn them. After they have been burned without liquid, let him add a libation of honey-mixture. Let the herald proclaim to celebrate a festival of Zeus Polieus as annual seasonal rites. Let [the priest] add to the sacrifice of the intestines: incense, the round cakes, libations, (one) [without wine] and (one of) mixed wine and a ribbon. From there, let the priest and the heralds go to the hieropoioi in the public building;",
+   "zh": "在〔祭壇〕旁洗淨〔腸〕之後，他們焚燒之。在無液體焚燒之後，讓他加上蜜調奠酒。讓傳令官宣告慶祝宙斯‧波利俄斯的節慶作為年度季節祭儀。讓〔祭司〕在內臟的獻祭上加上：乳香、圓餅、奠酒、（一）〔無酒〕與（一）調酒，以及一條緞帶。從那裡，讓祭司與傳令官前往公共建築中的祭司處；"
+  },
+  {
+   "face": "Addenda on left side of Stele A (for month 3, Kaphisios?)",
+   "line_from": 40,
+   "greek": "",
+   "en": "the hieropoioi are to host the priest and the heralds for that night. After they have made (the) libations, let the priest choose a slaughterer from among the hieropoioi for the ox that is to be sacrificed to Zeus Polieus and let him publicly proclaim that he must keep pure from any woman or man for the night. Let the heralds select the slaughterer of the ox that they wish among their ranks and publicly proclaim [...]",
+   "zh": "祭司須在那夜款待祭司與傳令官。在他們行（了）奠酒之後，讓祭司從祭司中為將獻祭給宙斯‧波利俄斯的公牛挑選一位屠宰者，並讓他公開宣告，他必須在那夜對任何女人或男人保持潔淨。讓傳令官從他們中間挑選他們所願的公牛屠宰者，並公開宣告〔……〕"
+  },
+  {
+   "face": "Addenda on left side of Stele A (for month 3, Kaphisios?)",
+   "line_from": 45,
+   "greek": "",
+   "en": "to the one selected, in the same manner. On the same day: to Dionysus Skyllitas a piglet and a male kid. No take-away from the male piglet. The priest sacrifices and provides the [(supplementary) sacred offerings]. He takes away as perquisites the skin and a leg. On the 20th: The ox that has been selected is sacrificed to Zeus Polieus and the wrapped offerings are wrapped. On the hearth is sacrificed: a half-hekteus of barley-groats, two breads (made) from a half-hekteus (of flour), one of them \"cheese-shaped\", and the wrapped offerings. The priest adds as a libation upon these",
+   "zh": "對被選中者，以同樣方式。同日：獻給戴奧尼索斯‧斯庫利塔斯一頭小豬與一隻公山羊羔。公山羊羔不得帶走。祭司獻祭並提供〔（補充的）神聖祭品〕。他帶走皮與一條腿作為賞賜。二十日：被選定的公牛獻祭給宙斯‧波利俄斯，並包裹包裹祭品。在灶上獻祭：大麥粉半赫克透斯、由（麵粉）半赫克透斯（製成）的兩個麵包，其中一個「乳酪形」，以及包裹祭品。祭司在這些之上奠"
+  },
+  {
+   "face": "Addenda on left side of Stele A (for month 3, Kaphisios?)",
+   "line_from": 50,
+   "greek": "",
+   "en": "three kraters of wine. As perquisites to the priest from the ox (are given) the skin and a leg. The priest provides the (supplementary) sacred offerings and half the ribcage and half the abdomen. To the incense-bearer is given, from the leg for the hieropoioi, the end of the hip; [to the herald], a double portion of meat from the back, the armpits, a three-pronged spit of blood-sausage; to the Nestoridai, a double portion of meat from the back; to the doctors, a single portion of meat; to the aulos-player, a single portion of meat; to each",
+   "zh": "酒三克拉特爾。作為給祭司的賞賜，從公牛（給出）皮與一條腿。祭司提供（補充的）神聖祭品、半個肋排與半個腹部。給持香者，從給祭司的腿中，給出臀的末端；〔給傳令官〕，從背來的雙份肉、腋、三叉叉的血腸；給涅斯托里達伊，從背來的雙份肉；給醫師，單份肉；給雙笛手，單份肉；給每一位"
+  },
+  {
+   "face": "Addenda on left side of Stele A (for month 3, Kaphisios?)",
+   "line_from": 55,
+   "greek": "",
+   "en": "of the groups of bronze-workers and ceramic-workers, a part of the head. The rest of the meat belongs to the city. All of these may not be carried out of the city. On the same day: to Athena Polias, a pregnant ewe. The priest sacrifices [and] provides the (supplementary) sacred offerings. He obtains as perquisites the skin and a leg. On the 22nd: to Dionysus Skyllitas, a piglet [and] a male kid. No take-away from the male piglet. The priest sacrifices and provides the (supplementary) sacred offerings.",
+   "zh": ""
+  },
+  {
+   "face": "Addenda on left side of Stele A (for month 3, Kaphisios?)",
+   "line_from": 60,
+   "greek": "",
+   "en": "He obtains as perquisites the skin and a leg. On the 24th: at Alkeidai, for Demeter, an adult wether and an adult pregnant ewe. No take-away from these. There give two new drinking-cups. The priest sacrifices [and] provides [the (supplementary) sacred offerings]. The perquisites are the ears. On the 25th: to Dionysus Skyllitas, [a piglet and a male kid. No take-away] from the male piglet. [The priest sacrifices and provides the (supplementary) sacred offerings. He obtains as perquisites the skin and a leg...] Addendum Aa-b (month 3, Kaphisios?) (a) From the animals sacrificed to Leukothea, take-away (is permitted) to Pyleas. (b) Three and an earthen pot. Stele B (unknown month) [...] On the 22nd: [to ... three] adult wethers. They are sacrificed by tribe, [the one] of the Hylleis by the sanctuary of Heracles, that of the Dymanes, near the property of Anaxilas, that of the Pamphyloi at Eitea,",
+   "zh": ""
+  },
+  {
+   "face": "Stele B (unknown month)",
+   "line_from": 1,
+   "greek": "[..?....?..] ʅ ἐνάται ἐξ ἰκάδος· [..?..]σιν οἶ[εςτρεῖ]ς τέλεωι· [θύ]ονται κατὰ φυλ- [άς,ὁ] μὲν τῶν Ὑλλέων παρὰ τὸ Ἡράκλειον, ὁ δὲ τῶν Δυμά- νων παρὰ τὰ Ἀναξίλεα, ὁ δὲ τῶν Παμφύλεων ἐν Εἰτέαι",
+   "en": "Stele A (month 4, Batromios) [...] just as the other gods [...] The priest, the hierophylakes, and the archons",
+   "zh": ""
+  },
+  {
+   "face": "Stele B (unknown month)",
+   "line_from": 5,
+   "greek": "παρὰ τὸ Δαμάτριον· [ἐ]πὶ τούτων ἑκάστωι ἱερὰ οὐλομέτ- [ριο]ν, ἡμίεκτον ἑκατέρων, καὶ κύλικες καιναὶ τρεῖς ἑ- [κάσ]τωι καὶ πίναξ ἑκάστωι· ταῦτα παρέχοντι τοὶ ἱα- [ροποιοὶ] καὶ θύοντι ʅ τρίται ἀνομένου· Ἡρακλεῖ ἐς Κο- [..?..]ν ἀρὴν καυτός ⁝ τᾶι αὐτᾶι ἁμέραι· Ἡρακλεῖ",
+   "en": "He obtains as perquisites the skin. On the 10th: to Hera Argeia Eleia Basileia a selected heifer. Let it be selected having been purchased for no less than 50 drachmae. The priest sacrifices and provides the (supplementary) sacred offerings. He obtains as perquisites the skin and a leg. Take-away (is allowed) from this (heifer). The wrapped offerings are wrapped and they are sacrificed on the hearth in the temple, along with a cake made from a half-hekteus of",
+   "zh": ""
+  },
+  {
+   "face": "Stele B (unknown month)",
+   "line_from": 10,
+   "greek": "[ἐς] ..?..]σαλον βοῦς, τοῦτον θύει ὁ ἱαρεύς· τῶι δὲ [θεῶιἐφ]ίερα δίδοται κριθᾶν τρία ἡμέδιμνα καὶ σπυ- ρῶν τρεῖς τεταρτῆς καὶ μέλιτος τέτορες κοτύλ- εαι καὶ τυροὶ ὀίεοι δυώδεκα καὶ ἰπνὸς καινὸς καὶ φρ- υγάνων ἄχθος καὶ ξύλεων ἄχθος καὶ οἴνου τρία",
+   "en": "wheat. No take-away from these, away from the temple. On the 11th: an ox is selected for Zeus Machaneus every other year, the one during which the Karneia-days take place, just as during Batromios the ox is selected for Zeus Polieus, and a piglet is preliminarily burned (whole), and a preliminary proclamation is made just as for (Zeus) Polieus. On the 12th: to Zeus Machaneus, three adult wethers and the ox that has been selected",
+   "zh": ""
+  },
+  {
+   "face": "Stele B (unknown month)",
+   "line_from": 15,
+   "greek": "ἡμίχοα. vacat vacat",
+   "en": "every other year, the one during which the Karneia-days take place; every other year, three adult wethers. The priest of the Twelve Gods sacrifices these and provides the (supplementary) sacred offerings. He offers as a preliminary sacrifice for these (gods) at their common (altar), the things which the Phyleomachidai bring, a half-hekteus of barley-groats, a tetarteus of wine. From the ox, perquisites are given to the Phyleomachidai: the horns (or hooves), the shanks; from the sheep, the shoulder,",
+   "zh": ""
+  },
+  {
+   "face": "Stele B (unknown month)",
+   "line_from": 20,
+   "greek": "",
+   "en": "from which the divine portion is cut, and [the shanks]. The priest obtains as perquisites the legs and the skins. On the same day: to Athena Machanis a selected heifer every other year, the one during which the Karneia-days take place; on the other year, (only) an adult ewe. The priestess sacrifices and is sprinkled about with sea water. No take-away from these (animals). As supplementary (supplementary) sacred offerings are given to the goddess:",
+   "zh": "從中切下神聖份，以及〔脛〕。祭司獲得腿與皮作為賞賜。同一日：每逢卡爾涅亞節日舉行之年的隔年，向雅典娜‧馬卡尼斯獻一頭選定小母牛；另一年，僅獻一頭成年母羊。女祭司獻祭，並被灑上海水。這些（動物）不得帶走。作為補充（補充）神聖祭品，獻給女神："
+  },
+  {
+   "face": "Stele B (unknown month)",
+   "line_from": 25,
+   "greek": "",
+   "en": "four kotylai of olive oil, a tetarteus of wine, two new ewers and three new drinking-cups. During the Karneia, the city is to purchase [a selected heifer costing not less than 50] drachmae. And this animal [...]",
+   "zh": "四科提萊橄欖油、一特塔爾透斯酒、兩個新水罐與三個新飲杯。卡爾涅亞節期間，城邦須購買〔一頭選定小母牛，價格不得低於五十〕德拉克馬。而這隻動物〔……〕"
+  },
+  {
+   "face": "Stele B (unknown month)",
+   "line_from": 30,
+   "greek": "",
+   "en": "pours a drinking cup of mixed wine in front of the ox. Next, they lead the ox, the (offering) to be burned, seven round cakes, honey and a ribbon. After having led the offerings out, they proclaim ritual silence. After having tied the ox in this place, they make first-offerings with an olive- and a laurel-branch. The [heralds] burn the piglet and the viscera on the altar making a libation of honey-mixture and,",
+   "zh": "在公牛前奠一杯調酒。接著，他們引領公牛、要焚燒的（祭品）、七個圓餅、蜜與一條緞帶。引領祭品出來之後，他們宣告儀式靜默。將公牛綁在此處之後，他們用橄欖枝與月桂枝獻上初祭。〔傳令官〕在祭壇上焚燒小豬與內臟，奠上蜜調，並"
+  },
+  {
+   "face": "Stele B (unknown month)",
+   "line_from": 35,
+   "greek": "",
+   "en": "after having washed [the intestines] next to the [altar], they burn them. After they have been burned without liquid, let him add a libation of honey-mixture. Let the herald proclaim to celebrate a festival of Zeus Polieus as annual seasonal rites. Let [the priest] add to the sacrifice of the intestines: incense, the round cakes, libations, (one) [without wine] and (one of) mixed wine and a ribbon. From there, let the priest and the heralds go to the hieropoioi in the public building;",
+   "zh": "在〔祭壇〕旁洗淨〔腸〕之後，他們焚燒它們。它們在無液體的情況下焚燒之後，讓他加上蜜調奠酒。讓傳令官宣告，慶祝宙斯‧波利俄斯的節慶，作為年度季節祭儀。讓〔祭司〕在內臟的獻祭上加上：乳香、圓餅、奠酒、（一份）〔無酒〕與（一份）調酒，以及一條緞帶。從那裡，讓祭司與傳令官前往公共建築中的祭司處；"
+  },
+  {
+   "face": "Stele B (unknown month)",
+   "line_from": 40,
+   "greek": "",
+   "en": "the hieropoioi are to host the priest and the heralds for that night. After they have made (the) libations, let the priest choose a slaughterer from among the hieropoioi for the ox that is to be sacrificed to Zeus Polieus and let him publicly proclaim that he must keep pure from any woman or man for the night. Let the heralds select the slaughterer of the ox that they wish among their ranks and publicly proclaim [...]",
+   "zh": "祭司須接待祭司與傳令官過那一夜。他們奠酒之後，讓祭司從祭司中為將獻給宙斯‧波利俄斯的公牛挑選一名屠宰者，並公開宣告他當夜須遠離任何女人或男人保持潔淨。讓傳令官在他們之中挑選他們所願的公牛屠宰者，並公開宣告〔……〕"
+  },
+  {
+   "face": "Stele B (unknown month)",
+   "line_from": 45,
+   "greek": "",
+   "en": "to the one selected, in the same manner. On the same day: to Dionysus Skyllitas a piglet and a male kid. No take-away from the male piglet. The priest sacrifices and provides the [(supplementary) sacred offerings]. He takes away as perquisites the skin and a leg. On the 20th: The ox that has been selected is sacrificed to Zeus Polieus and the wrapped offerings are wrapped. On the hearth is sacrificed: a half-hekteus of barley-groats, two breads (made) from a half-hekteus (of flour), one of them \"cheese-shaped\", and the wrapped offerings. The priest adds as a libation upon these",
+   "zh": "對被選中者，以同樣方式。同一日：向戴奧尼索斯‧斯庫利塔斯獻一頭小豬與一隻公山羊羔。雄性小豬不得帶走。祭司獻祭並提供〔（補充）神聖祭品〕。他帶走皮與一條腿作為賞賜。二十日：那頭已被選定的公牛被獻祭給宙斯‧波利俄斯，包裹祭品被包裹。在灶上獻祭：半赫克透斯大麥粉、用半赫克透斯（麵粉）做的兩個麵包，其中一個「乳酪形」，以及包裹祭品。祭司在這些之上加上奠酒"
+  },
+  {
+   "face": "Stele B (unknown month)",
+   "line_from": 50,
+   "greek": "",
+   "en": "three kraters of wine. As perquisites to the priest from the ox (are given) the skin and a leg. The priest provides the (supplementary) sacred offerings and half the ribcage and half the abdomen. To the incense-bearer is given, from the leg for the hieropoioi, the end of the hip; [to the herald], a double portion of meat from the back, the armpits, a three-pronged spit of blood-sausage; to the Nestoridai, a double portion of meat from the back; to the doctors, a single portion of meat; to the aulos-player, a single portion of meat; to each",
+   "zh": "三缸酒。作為給祭司的賞賜，從公牛而來的（有）皮與一條腿。祭司提供（補充的）神聖祭品，以及半個肋排與半個腹部。給持香者，從給祭司們的那條腿中，臀的末端；〔給傳令官〕，一份雙份的背肉、腋、一串三叉叉的血腸；給涅斯托里達伊，一份雙份的背肉；給醫師們，一份單份的肉；給雙笛手，一份單份的肉；給每一"
+  },
+  {
+   "face": "Stele B (unknown month)",
+   "line_from": 55,
+   "greek": "",
+   "en": "of the groups of bronze-workers and ceramic-workers, a part of the head. The rest of the meat belongs to the city. All of these may not be carried out of the city. On the same day: to Athena Polias, a pregnant ewe. The priest sacrifices [and] provides the (supplementary) sacred offerings. He obtains as perquisites the skin and a leg. On the 22nd: to Dionysus Skyllitas, a piglet [and] a male kid. No take-away from the male piglet. The priest sacrifices and provides the (supplementary) sacred offerings.",
+   "zh": "個銅匠與陶匠群體，一份頭的一部分。其餘的肉屬於城邦。所有這些都不得帶出城外。同日：給雅典娜‧波利阿斯，一頭懷孕母羊。祭司獻祭〔並〕提供（補充的）神聖祭品。他獲得皮與一條腿作為賞賜。二十二日：給戴奧尼索斯‧斯庫利塔斯，一頭小豬〔與〕一隻公山羊羔。公山羊羔不得帶走。祭司獻祭並提供（補充的）神聖祭品。"
+  },
+  {
+   "face": "Stele B (unknown month)",
+   "line_from": 60,
+   "greek": "",
+   "en": "He obtains as perquisites the skin and a leg. On the 24th: at Alkeidai, for Demeter, an adult wether and an adult pregnant ewe. No take-away from these. There give two new drinking-cups. The priest sacrifices [and] provides [the (supplementary) sacred offerings]. The perquisites are the ears. On the 25th: to Dionysus Skyllitas, [a piglet and a male kid. No take-away] from the male piglet. [The priest sacrifices and provides the (supplementary) sacred offerings. He obtains as perquisites the skin and a leg...] Addendum Aa-b (month 3, Kaphisios?) (a) From the animals sacrificed to Leukothea, take-away (is permitted) to Pyleas. (b) Three and an earthen pot. Stele B (unknown month) [...] On the 22nd: [to ... three] adult wethers. They are sacrificed by tribe, [the one] of the Hylleis by the sanctuary of Heracles, that of the Dymanes, near the property of Anaxilas, that of the Pamphyloi at Eitea,",
+   "zh": "他獲得皮與一條腿作為賞賜。二十四日：在阿爾凱達伊，給得墨忒耳，一頭成年閹羊與一頭成年懷孕母羊。這些不得帶走。在那裡給兩個新的飲杯。祭司獻祭〔並〕提供〔（補充的）神聖祭品〕。賞賜是耳。二十五日：給戴奧尼索斯‧斯庫利塔斯，〔一頭小豬與一隻公山羊羔。公山羊羔不得帶走〕。〔祭司獻祭並提供（補充的）神聖祭品。他獲得皮與一條腿作為賞賜……〕附錄Aa-b（第三月，卡菲西俄斯月？）（a）從獻給琉科忒亞的那些動物，允許帶走到皮琉阿斯。（b）三與一個陶罐。碑銘B（未知月）〔……〕二十二日：〔給……三〕頭成年閹羊。他們按部族獻祭，許萊斯部族的〔那頭〕在赫拉克勒斯聖所旁，杜馬涅斯部族的那頭，在阿那克西拉斯的產業附近，帕姆費洛伊部族的那頭在埃忒亞，"
+  },
+  {
+   "face": "Stele C (unknown month)",
+   "line_from": 1,
+   "greek": "[..?....?.. [ʅ..c.4..]καιδεκάται· Ἀπόλλω[νι] ..?..[οἶςτέλεως,τούτου] ἀποφορά· θύει ἱαρεὺς καὶ ἱερὰ π[αρέχ]-[ει·γέρηλαμβάνειδ]έρμα καὶ σκέλος ⁝ τᾶι αὐτᾶι ἁμέραι· [Λατοῖοἶςτελέα,τα]ύτας ἀποφορά· ἱερὰ ἱερεὺς παρέ-",
+   "en": "Stele A (month 4, Batromios) [...] just as the other gods [...] The priest, the hierophylakes, and the archons",
+   "zh": "碑銘A（第四月，巴特羅彌俄斯月）〔……〕正如其他諸神〔……〕祭司、聖物守護者與執政官"
+  },
+  {
+   "face": "Stele C (unknown month)",
+   "line_from": 5,
+   "greek": "[χεικαὶθύειʅἐν]άται πρὸ εἰκάδος· Χάρισσιν αἴξ· vvv [..?.. [ὅ]γ κα κέλω«ν»ται τοὶ ἱαροποι[οί]· ταύτ- [αςδὲ τὸαἷμαποτ]ιρραίνει ἁ ἱέρεα τρὶς μὲμ ποτὶ τὸ[ν][βωμόν,τὸ δὲτέταρ]τον ποτὶ τὸλ λίθον τὸν ἐν ταῖς ἐλ- [αίαιςκείμενον·θ]ύοντι δὲ δύο θ«υώνα»ς ποιήσαντε[ς]",
+   "en": "He obtains as perquisites the skin. On the 10th: to Hera Argeia Eleia Basileia a selected heifer. Let it be selected having been purchased for no less than 50 drachmae. The priest sacrifices and provides the (supplementary) sacred offerings. He obtains as perquisites the skin and a leg. Take-away (is allowed) from this (heifer). The wrapped offerings are wrapped and they are sacrificed on the hearth in the temple, along with a cake made from a half-hekteus of",
+   "zh": "他獲得皮作為賞賜。十日：給赫拉‧阿爾蓋亞‧埃萊亞‧巴西萊亞一頭選定小母牛。讓牠被選定，購買價格不得低於五十德拉克馬。祭司獻祭並提供（補充的）神聖祭品。他獲得皮與一條腿作為賞賜。允許從這隻（小母牛）帶走。包裹祭品被包裹，他們在神廟中的灶上獻祭，連同一個用半赫克透斯"
+  },
+  {
+   "face": "Stele C (unknown month)",
+   "line_from": 10,
+   "greek": "[ἴσαςτῶν τεκρεῶν] καὶ τῶν σπλάγχνωγ, καὶ τὰς θυ- [ώναςτίθεντιἐπὶβ]ωμοῦ· ὅπει δὲ τᾶι Ἀσίαι ἐπιτίθεν[τι][τὰνομιζόμενα,ἐπα]ρξάμενοι καὶ τῶν σπλάγχνω[ν][τῶνἐπὶτοῦβωμοῦ] καὶ τοῦ λίθου τοῦ ἐν ταῖς ἐλα[ίαις][ἁψάμενοιὄμνυντι·σπ]λαγχνίζεται πράτιστα μὲν",
+   "en": "wheat. No take-away from these, away from the temple. On the 11th: an ox is selected for Zeus Machaneus every other year, the one during which the Karneia-days take place, just as during Batromios the ox is selected for Zeus Polieus, and a piglet is preliminarily burned (whole), and a preliminary proclamation is made just as for (Zeus) Polieus. On the 12th: to Zeus Machaneus, three adult wethers and the ox that has been selected",
+   "zh": "小麥製成的餅。這些不得帶走，離開神廟。十一日：每隔一年為宙斯‧馬卡涅俄斯選定一頭公牛，即卡爾涅亞節日舉行的那一年，正如在巴特羅彌俄斯月為宙斯‧波利俄斯選定公牛一樣，並且一頭小豬被預先（整隻）焚燒，並且一項預先宣告被作出，正如為（宙斯）波利俄斯一樣。十二日：給宙斯‧馬卡涅俄斯，三頭成年閹羊與那頭已被選定的公牛"
+  },
+  {
+   "face": "Stele C (unknown month)",
+   "line_from": 15,
+   "greek": "[τὰἐπὶβωμοῦ,εἶτατὰ] ἐπὶ τοῦ «λίθο»υ καὶ τὰ ἀπὸ τοῦ λί- [θου·] ..?.. [κερ]αΐδες καὶ τὸ δέρμα ἁγίζετ- [αι·ἱερὰἱαροποιοὶπαρέ]χοντι ʅ εἰκάδι· Ἀπόλλωνι Καρ- [νείωικαὶἈρτάμιτιοἶ]ς τέλεως καὶ τελέα· θύει ἱερ- [εὺςὁ τῶνΔυώδεκαΘε]ῶν· ἱερὰ δὲ ἱερεὺς παρέχει· γέρη",
+   "en": "every other year, the one during which the Karneia-days take place; every other year, three adult wethers. The priest of the Twelve Gods sacrifices these and provides the (supplementary) sacred offerings. He offers as a preliminary sacrifice for these (gods) at their common (altar), the things which the Phyleomachidai bring, a half-hekteus of barley-groats, a tetarteus of wine. From the ox, perquisites are given to the Phyleomachidai: the horns (or hooves), the shanks; from the sheep, the shoulder,",
+   "zh": "每隔一年，即舉行卡爾涅亞節日的那一年；每隔一年，三頭成年閹羊。十二神之祭司獻祭這些，並提供（補充的）神聖祭品。他為這些（神）在他們共同的（祭壇）作預備獻祭，即費勒歐馬基達伊所帶來的那些東西：半赫克透斯大麥粉、一特塔爾透斯酒。從公牛，賞賜給予費勒歐馬基達伊：角（或蹄）、脛；從羊，肩，"
+  },
+  {
+   "face": "Stele C (unknown month)",
+   "line_from": 20,
+   "greek": "[δὲλαμβάνειδέρμακα]ὶ σκέλος. vacat vacat",
+   "en": "from which the divine portion is cut, and [the shanks]. The priest obtains as perquisites the legs and the skins. On the same day: to Athena Machanis a selected heifer every other year, the one during which the Karneia-days take place; on the other year, (only) an adult ewe. The priestess sacrifices and is sprinkled about with sea water. No take-away from these (animals). As supplementary (supplementary) sacred offerings are given to the goddess:",
+   "zh": "從中切下神聖份，以及〔脛〕。祭司獲得腿和皮作為賞賜。同日：獻給雅典娜‧馬卡尼斯一頭選定小母牛，每隔一年，即舉行卡爾涅亞節日的那一年；另一年，（僅）一頭成年母羊。女祭司獻祭，並被灑上海水。這些（動物）不得帶走。作為（補充的）神聖祭品給予女神："
+  },
+  {
+   "face": "Stele C (unknown month)",
+   "line_from": 25,
+   "greek": "",
+   "en": "four kotylai of olive oil, a tetarteus of wine, two new ewers and three new drinking-cups. During the Karneia, the city is to purchase [a selected heifer costing not less than 50] drachmae. And this animal [...]",
+   "zh": "四科提萊橄欖油、一特塔爾透斯酒、兩個新水罐和三個新飲杯。在卡爾涅亞節期間，城邦須購買〔一頭選定小母牛，價格不低於五十〕德拉克馬。而這隻動物〔……〕"
+  },
+  {
+   "face": "Stele C (unknown month)",
+   "line_from": 30,
+   "greek": "",
+   "en": "pours a drinking cup of mixed wine in front of the ox. Next, they lead the ox, the (offering) to be burned, seven round cakes, honey and a ribbon. After having led the offerings out, they proclaim ritual silence. After having tied the ox in this place, they make first-offerings with an olive- and a laurel-branch. The [heralds] burn the piglet and the viscera on the altar making a libation of honey-mixture and,",
+   "zh": "在公牛前奠一杯調酒。接著，他們牽公牛，即要焚燒的（祭品），七個圓餅、蜜和一條緞帶。牽出祭品後，他們宣告 ritual silence。在此處拴好公牛後，他們用橄欖枝和月桂枝作初祭。〔傳令官〕在祭壇上焚燒小豬和內臟，奠蜜調，並，"
+  },
+  {
+   "face": "Stele C (unknown month)",
+   "line_from": 35,
+   "greek": "",
+   "en": "after having washed [the intestines] next to the [altar], they burn them. After they have been burned without liquid, let him add a libation of honey-mixture. Let the herald proclaim to celebrate a festival of Zeus Polieus as annual seasonal rites. Let [the priest] add to the sacrifice of the intestines: incense, the round cakes, libations, (one) [without wine] and (one of) mixed wine and a ribbon. From there, let the priest and the heralds go to the hieropoioi in the public building;",
+   "zh": "在〔祭壇〕旁洗淨〔腸〕之後，他們焚燒它們。它們在無液體的情況下被焚燒後，讓他加上蜜調奠酒。讓傳令官宣告慶祝宙斯‧波利俄斯的節慶作為年度季節祭儀。讓〔祭司〕加入內臟的獻祭：乳香、圓餅、奠酒、（一）〔無酒〕和（一）調酒，以及一條緞帶。從那裡，讓祭司和傳令官到公共建築中的祭司那裡；"
+  },
+  {
+   "face": "Stele C (unknown month)",
+   "line_from": 40,
+   "greek": "",
+   "en": "the hieropoioi are to host the priest and the heralds for that night. After they have made (the) libations, let the priest choose a slaughterer from among the hieropoioi for the ox that is to be sacrificed to Zeus Polieus and let him publicly proclaim that he must keep pure from any woman or man for the night. Let the heralds select the slaughterer of the ox that they wish among their ranks and publicly proclaim [...]",
+   "zh": "祭司須款待祭司和傳令官那一夜。他們奠酒之後，讓祭司從祭司中為將獻祭給宙斯‧波利俄斯的公牛選擇一名屠宰者，並讓他公開宣告，他那一夜必須對任何女人或男人保持潔淨。讓傳令官在他們中間選擇他們所願的公牛屠宰者，並公開宣告〔……〕"
+  },
+  {
+   "face": "Stele C (unknown month)",
+   "line_from": 45,
+   "greek": "",
+   "en": "to the one selected, in the same manner. On the same day: to Dionysus Skyllitas a piglet and a male kid. No take-away from the male piglet. The priest sacrifices and provides the [(supplementary) sacred offerings]. He takes away as perquisites the skin and a leg. On the 20th: The ox that has been selected is sacrificed to Zeus Polieus and the wrapped offerings are wrapped. On the hearth is sacrificed: a half-hekteus of barley-groats, two breads (made) from a half-hekteus (of flour), one of them \"cheese-shaped\", and the wrapped offerings. The priest adds as a libation upon these",
+   "zh": "對那頭選定的，以同樣方式。同日：向戴奧尼索斯‧斯庫利塔斯獻一頭小豬和一隻公山羊羔。公山羊羔不得帶走。祭司獻祭並提供〔補充聖祭品〕。他帶走皮和一條腿作為賞賜。二十日：那頭已被選定的公牛獻給宙斯‧波利俄斯，包裹祭品被包裹。在灶上獻祭：半赫克透斯大麥粉、兩條麵包（由半赫克透斯麵粉製成），其中一條「乳酪形」，以及包裹祭品。祭司在這些之上奠酒"
+  },
+  {
+   "face": "Stele C (unknown month)",
+   "line_from": 50,
+   "greek": "",
+   "en": "three kraters of wine. As perquisites to the priest from the ox (are given) the skin and a leg. The priest provides the (supplementary) sacred offerings and half the ribcage and half the abdomen. To the incense-bearer is given, from the leg for the hieropoioi, the end of the hip; [to the herald], a double portion of meat from the back, the armpits, a three-pronged spit of blood-sausage; to the Nestoridai, a double portion of meat from the back; to the doctors, a single portion of meat; to the aulos-player, a single portion of meat; to each",
+   "zh": "三科拉特爾酒。作為給祭司的賞賜，從公牛（給出）皮和一條腿。祭司提供（補充）聖祭品和半個肋排和半個腹部。給持香者，從給祭司的腿中，臀的末端；〔給傳令官〕，從背部取雙份肉，腋，三叉叉血腸；給涅斯托里達伊，從背部取雙份肉；給醫師，單份肉；給雙笛手，單份肉；給每"
+  },
+  {
+   "face": "Stele C (unknown month)",
+   "line_from": 55,
+   "greek": "",
+   "en": "of the groups of bronze-workers and ceramic-workers, a part of the head. The rest of the meat belongs to the city. All of these may not be carried out of the city. On the same day: to Athena Polias, a pregnant ewe. The priest sacrifices [and] provides the (supplementary) sacred offerings. He obtains as perquisites the skin and a leg. On the 22nd: to Dionysus Skyllitas, a piglet [and] a male kid. No take-away from the male piglet. The priest sacrifices and provides the (supplementary) sacred offerings.",
+   "zh": "個銅匠和陶匠群體，一份頭。其餘的肉屬於城邦。所有這些不得帶出城邦。同日：向雅典娜‧波利阿斯，獻一頭懷孕母羊。祭司獻祭〔並〕提供（補充）聖祭品。他獲得皮和一條腿作為賞賜。二十二日：向戴奧尼索斯‧斯庫利塔斯，獻一頭小豬〔和〕一隻公山羊羔。公山羊羔不得帶走。祭司獻祭並提供（補充）聖祭品。"
+  },
+  {
+   "face": "Stele C (unknown month)",
+   "line_from": 60,
+   "greek": "",
+   "en": "He obtains as perquisites the skin and a leg. On the 24th: at Alkeidai, for Demeter, an adult wether and an adult pregnant ewe. No take-away from these. There give two new drinking-cups. The priest sacrifices [and] provides [the (supplementary) sacred offerings]. The perquisites are the ears. On the 25th: to Dionysus Skyllitas, [a piglet and a male kid. No take-away] from the male piglet. [The priest sacrifices and provides the (supplementary) sacred offerings. He obtains as perquisites the skin and a leg...] Addendum Aa-b (month 3, Kaphisios?) (a) From the animals sacrificed to Leukothea, take-away (is permitted) to Pyleas. (b) Three and an earthen pot. Stele B (unknown month) [...] On the 22nd: [to ... three] adult wethers. They are sacrificed by tribe, [the one] of the Hylleis by the sanctuary of Heracles, that of the Dymanes, near the property of Anaxilas, that of the Pamphyloi at Eitea,",
+   "zh": "他獲得皮和一條腿作為賞賜。二十四日：在阿爾凱達伊，為得墨忒耳，獻一頭成年閹羊和一頭成年懷孕母羊。這些不得帶走。在那裡給兩個新的飲杯。祭司獻祭〔並〕提供〔（補充）聖祭品〕。賞賜是耳。二十五日：向戴奧尼索斯‧斯庫利塔斯，〔獻一頭小豬和一隻公山羊羔。公山羊羔〕不得帶走。〔祭司獻祭並提供（補充）聖祭品。他獲得皮和一條腿作為賞賜……〕附錄Aa-b（第三月，卡菲西俄斯月？）（a）從獻給琉科忒亞的那些動物，允許帶走到皮琉阿斯。（b）三個和一個陶罐。碑銘B（未知月）〔……〕二十二日：〔向……三〕頭成年閹羊。他們按部族獻祭，許萊斯部族的〔那頭〕在赫拉克勒斯聖所旁，杜馬涅斯部族的那頭，在阿那克西拉斯的產業附近，帕姆費洛伊部族的那頭在埃忒亞，"
+  },
+  {
+   "face": "Stele D (month Karneios)",
+   "line_from": 1,
+   "greek": "[..?....?.. [καθάπερτο]ῦ Βατρομίου· ἱερὰ [ἱαρεὺς][πα]ρέχει καὶ θύει· γέρη λαμβάνει δέρμα καὶ σκέλη ⁝ τᾶ[ιαὐτ]-] ᾶι ἁμέραι· Ῥέαι οἶς κυεῦσα καὶ ἱερὰ ὅσσαπερ τοῦ Πεδαγειτν[ύο]-] υ γέγραπται, τούτων οὐκ ἀποφορά· θύει ἱαρεὺς καὶ ἱερὰ παρέχει· [γ]-]",
+   "en": "Stele A (month 4, Batromios) [...] just as the other gods [...] The priest, the hierophylakes, and the archons",
+   "zh": "碑銘A（第四月，巴特羅彌俄斯月）〔……〕正如其他諸神〔……〕祭司、聖物守護者和執政官"
+  },
+  {
+   "face": "Stele D (month Karneios)",
+   "line_from": 5,
+   "greek": "έρη λαμβάνει δέρμα ʅ δεκάται· Ἥραι Ἀργείαι Ἑλείαι Βασιλείαι δάμ- αλις κριτά· κρινέσθω δὲ μὴ ἐλάσσονος ⟦ον⟧ ὠνημένα πεντ- ήκοντα δραχμᾶν· θύει ἱαρεὺς καὶ ἱερὰ παρέχει· γέρη λαμβά[νει] δέρμα καὶ σκέλος· ταύτας ἀποφορά· ἔνδορα ἐνδέρεται καὶ θύε[ται] ἐπὶ τᾶι ἱστίαι ἐν τῶι ναῶι τὰ ἔνδορα καὶ ἐλατὴρ ἐξ ἡμιέκτου [σπ]-]",
+   "en": "He obtains as perquisites the skin. On the 10th: to Hera Argeia Eleia Basileia a selected heifer. Let it be selected having been purchased for no less than 50 drachmae. The priest sacrifices and provides the (supplementary) sacred offerings. He obtains as perquisites the skin and a leg. Take-away (is allowed) from this (heifer). The wrapped offerings are wrapped and they are sacrificed on the hearth in the temple, along with a cake made from a half-hekteus of",
+   "zh": "他獲得皮作為賞賜。十日：向赫拉‧阿爾蓋亞‧埃萊亞‧巴西萊亞獻一頭選定小母牛。讓它被選定，購買價格不低於五十德拉克馬。祭司獻祭並提供（補充）聖祭品。他獲得皮和一條腿作為賞賜。允許從這（小母牛）帶走。包裹祭品被包裹，它們在神廟中的灶上被獻祭，連同一個由半赫克透斯"
+  },
+  {
+   "face": "Stele D (month Karneios)",
+   "line_from": 10,
+   "greek": "υρῶν· τούτων οὐκ ἐκφορὰ ἐκ τοῦ ναοῦ ʅ ἑνδεκάται· Ζηνὶ Μαχα- νῆι βοῦς κρίνεται τὸ ἅτερον ἔτος ἐφ᾿ οὗ κα ἔωντι Κ[α]ρνεῖαι, καθ[ά]-] περ τοῦ Βατρομίου τῶι Ζηνὶ τῶι Πολιῆι κρίνεται, κ[αὶ] χοῖρος προ- καυτεύεται, καὶ προκαρύσσεται καθάπερ τῶι Πολιῆι ʅ δυωδεκ- άται· Ζηνὶ Μαχανῆι οἶες τρεῖς τέλεωι καὶ βοῦς ὁ κριθεὶς τὸ",
+   "en": "wheat. No take-away from these, away from the temple. On the 11th: an ox is selected for Zeus Machaneus every other year, the one during which the Karneia-days take place, just as during Batromios the ox is selected for Zeus Polieus, and a piglet is preliminarily burned (whole), and a preliminary proclamation is made just as for (Zeus) Polieus. On the 12th: to Zeus Machaneus, three adult wethers and the ox that has been selected",
+   "zh": "小麥。這些不得從神廟帶走。十一日：為宙斯‧馬卡涅俄斯選定一頭公牛，每隔一年，即卡爾涅亞節舉行之時，正如巴特羅彌俄斯月為宙斯‧波利俄斯選定公牛一樣；並預先焚燒一頭小豬（整隻），並如同為（宙斯‧）波利俄斯一樣作出預先宣告。十二日：為宙斯‧馬卡涅俄斯獻三頭成年閹羊，以及那頭已選定的公牛"
+  },
+  {
+   "face": "Stele D (month Karneios)",
+   "line_from": 15,
+   "greek": "ἅτερον ἔτος ἐφ᾿ οὗ κα ἔωντι Καρνεῖαι, τὸ δὲ ἅτερον ἔτος οἶες τ- ρεῖς τέλεωι· ταῦτα θύει ἱαρεὺς ὁ τῶν Δυώδεκα Θεῶν, καὶ ἱερὰ π- αρέχει· τούτοις προθύεται πὰρ τὸγ κοινόν, ἃ φέροντι Φυλεομ- αχίδαι, ἀλφίτων ἡμίεκτον, οἴνου τετάρταν· γέρη δὲ Φυλεομ- αχίδαις δίδοται τοῦ βοὸς ὁπλά, τα[ρ]σός, τῶν δὲ οἴων τὸ[⟨ν⟩] ὦμον,",
+   "en": "every other year, the one during which the Karneia-days take place; every other year, three adult wethers. The priest of the Twelve Gods sacrifices these and provides the (supplementary) sacred offerings. He offers as a preliminary sacrifice for these (gods) at their common (altar), the things which the Phyleomachidai bring, a half-hekteus of barley-groats, a tetarteus of wine. From the ox, perquisites are given to the Phyleomachidai: the horns (or hooves), the shanks; from the sheep, the shoulder,",
+   "zh": "每隔一年，即卡爾涅亞節舉行之時；每隔一年，三頭成年閹羊。十二神之祭司獻祭這些，並提供（補充）神聖祭品。他為這些（神）在他們共同的（祭壇）作預先獻祭，即費勒歐馬基達伊所帶來之物：大麥粉半赫克透斯，酒一特塔爾透斯。從公牛，賞賜給予費勒歐馬基達伊：角（或蹄）、脛；從羊，肩，"
+  },
+  {
+   "face": "Stele D (month Karneios)",
+   "line_from": 20,
+   "greek": "ἐξ οὗ ἁ θεομοιρία τάμνεται καὶ τ[ὸς] τ[αρσ]ός· γέρη λαμβάνει ὁ ἱα- ρεὺς σκέλη καὶ δέρματα ⁝ τᾶι αὐτᾶι ἁμέραι· Ἀθαναίαι Μαχα[νί]-] δι δάμαλις κριτὰ τὸ ἅτερον ἔτος, ἐφ᾿ οὗ κα ἔωντι Καρνεῖα[ι,τ]-] ὸ δὲ ἅτερον ἔτος οἶς τελέα· θύει ἱάρεα καὶ ἀπορραίνεται θαλ- άσσαι· τούτων οὐκ ἀποφορά· ἐ[φ]ίερα δίδοται τᾶι θεῶι ἐλαίο-",
+   "en": "from which the divine portion is cut, and [the shanks]. The priest obtains as perquisites the legs and the skins. On the same day: to Athena Machanis a selected heifer every other year, the one during which the Karneia-days take place; on the other year, (only) an adult ewe. The priestess sacrifices and is sprinkled about with sea water. No take-away from these (animals). As supplementary (supplementary) sacred offerings are given to the goddess:",
+   "zh": "從中切下神聖份，以及〔脛〕。祭司獲得腿與皮作為賞賜。同一日：為雅典娜‧馬卡尼斯獻一頭選定小母牛，每隔一年，即卡爾涅亞節舉行之時；另一年，（僅）一頭成年母羊。女祭司獻祭，並被灑上海水。這些（動物）不得帶走。作為補充（補充）神聖祭品給予女神：橄欖油"
+  },
+  {
+   "face": "Stele D (month Karneios)",
+   "line_from": 25,
+   "greek": "υ τέτορες κοτύλεαι, οἴνου τετάρτα, πρόχοι καιναὶ δύο καὶ κύλ[ι]-] κες καιναὶ τρεῖς· τοῖ[ςδὲΚαρνεί]οις τὰμ πόλιν ὠνεῖσθαι δάμ[α]-[λινκριτὰνμὴἐλάσσονοςπεντήκοντα] δραχμᾶν· ταύταν δὲ [..?....?..]",
+   "en": "four kotylai of olive oil, a tetarteus of wine, two new ewers and three new drinking-cups. During the Karneia, the city is to purchase [a selected heifer costing not less than 50] drachmae. And this animal [...]",
+   "zh": "四科提萊，酒一特塔爾透斯，兩個新水罐與三個新飲杯。在卡爾涅亞節期間，城邦須購買〔一頭選定小母牛，價格不低於五十〕德拉克馬。而這隻動物〔……〕"
+  },
+  {
+   "face": "Stele D (month Karneios)",
+   "line_from": 30,
+   "greek": "",
+   "en": "pours a drinking cup of mixed wine in front of the ox. Next, they lead the ox, the (offering) to be burned, seven round cakes, honey and a ribbon. After having led the offerings out, they proclaim ritual silence. After having tied the ox in this place, they make first-offerings with an olive- and a laurel-branch. The [heralds] burn the piglet and the viscera on the altar making a libation of honey-mixture and,",
+   "zh": "在公牛前奠一杯調酒。接著，他們引領公牛，即那要被焚燒的（祭品），七個圓餅、蜜與一條緞帶。引領祭品出來之後，他們宣告 ritual silence。將公牛拴在此處之後，他們用橄欖枝與月桂枝作初祭。〔傳令官〕在祭壇上焚燒小豬與內臟，奠上蜜調，並，"
+  },
+  {
+   "face": "Stele D (month Karneios)",
+   "line_from": 35,
+   "greek": "",
+   "en": "after having washed [the intestines] next to the [altar], they burn them. After they have been burned without liquid, let him add a libation of honey-mixture. Let the herald proclaim to celebrate a festival of Zeus Polieus as annual seasonal rites. Let [the priest] add to the sacrifice of the intestines: incense, the round cakes, libations, (one) [without wine] and (one of) mixed wine and a ribbon. From there, let the priest and the heralds go to the hieropoioi in the public building;",
+   "zh": "在〔祭壇〕旁洗淨〔腸〕之後，他們焚燒它們。它們在無液體的情況下被焚燒之後，讓他加上蜜調奠酒。讓傳令官宣告慶祝宙斯‧波利俄斯的節慶作為年度季節祭儀。讓〔祭司〕加入內臟的獻祭：乳香、圓餅、奠酒，（一份）〔無酒〕與（一份）調酒，以及一條緞帶。從那裡，讓祭司與傳令官前往公共建築中的祭司們那裡；"
+  },
+  {
+   "face": "Stele D (month Karneios)",
+   "line_from": 40,
+   "greek": "",
+   "en": "the hieropoioi are to host the priest and the heralds for that night. After they have made (the) libations, let the priest choose a slaughterer from among the hieropoioi for the ox that is to be sacrificed to Zeus Polieus and let him publicly proclaim that he must keep pure from any woman or man for the night. Let the heralds select the slaughterer of the ox that they wish among their ranks and publicly proclaim [...]",
+   "zh": "祭司們當夜要款待祭司與傳令官。他們奠酒之後，祭司要從祭司中為那頭將獻給宙斯‧波利俄斯的公牛挑選一名屠宰者，並公開宣告他當夜須遠離任何女子或男子，保持潔淨。傳令官要在他們之中挑選他們所願的屠宰公牛者，並公開宣告〔……〕"
+  },
+  {
+   "face": "Stele D (month Karneios)",
+   "line_from": 45,
+   "greek": "",
+   "en": "to the one selected, in the same manner. On the same day: to Dionysus Skyllitas a piglet and a male kid. No take-away from the male piglet. The priest sacrifices and provides the [(supplementary) sacred offerings]. He takes away as perquisites the skin and a leg. On the 20th: The ox that has been selected is sacrificed to Zeus Polieus and the wrapped offerings are wrapped. On the hearth is sacrificed: a half-hekteus of barley-groats, two breads (made) from a half-hekteus (of flour), one of them \"cheese-shaped\", and the wrapped offerings. The priest adds as a libation upon these",
+   "zh": "對被選中者，以同樣方式。同日：獻給戴奧尼索斯‧斯庫利塔斯一頭小豬和一隻公山羊羔。公山羊羔不得帶走。祭司獻祭並提供〔補充〕神聖祭品。他取走皮和一條腿作為賞賜。二十日：那頭被選定的公牛獻給宙斯‧波利俄斯，包裹祭品被包裹起來。在灶上獻祭：半赫克透斯大麥粉、兩塊麵包（由半赫克透斯〔麵粉〕製成），其一為「乳酪形」，以及包裹祭品。祭司在這些之上添加奠酒"
+  },
+  {
+   "face": "Stele D (month Karneios)",
+   "line_from": 50,
+   "greek": "",
+   "en": "three kraters of wine. As perquisites to the priest from the ox (are given) the skin and a leg. The priest provides the (supplementary) sacred offerings and half the ribcage and half the abdomen. To the incense-bearer is given, from the leg for the hieropoioi, the end of the hip; [to the herald], a double portion of meat from the back, the armpits, a three-pronged spit of blood-sausage; to the Nestoridai, a double portion of meat from the back; to the doctors, a single portion of meat; to the aulos-player, a single portion of meat; to each",
+   "zh": "三克拉特爾酒。作為給祭司的賞賜，從公牛（得到）皮和一條腿。祭司提供（補充）神聖祭品、半個肋排和半個腹部。給持香者，從給祭司們的腿中，臀的末端；〔給傳令官〕，雙份背上的肉、腋、三叉叉血腸；給涅斯托里達伊，雙份背上的肉；給醫師們，單份肉；給雙笛手，單份肉；給每一位"
+  },
+  {
+   "face": "Stele D (month Karneios)",
+   "line_from": 55,
+   "greek": "",
+   "en": "of the groups of bronze-workers and ceramic-workers, a part of the head. The rest of the meat belongs to the city. All of these may not be carried out of the city. On the same day: to Athena Polias, a pregnant ewe. The priest sacrifices [and] provides the (supplementary) sacred offerings. He obtains as perquisites the skin and a leg. On the 22nd: to Dionysus Skyllitas, a piglet [and] a male kid. No take-away from the male piglet. The priest sacrifices and provides the (supplementary) sacred offerings.",
+   "zh": "銅匠與陶匠團體，一份頭。其餘的肉歸城邦所有。所有這些都不得帶出城外。同日：獻給雅典娜‧波利阿斯一頭懷孕母羊。祭司獻祭〔並〕提供（補充）神聖祭品。他取走皮和一條腿作為賞賜。二十二日：獻給戴奧尼索斯‧斯庫利塔斯一頭小豬〔和〕一隻公山羊羔。公山羊羔不得帶走。祭司獻祭並提供（補充）神聖祭品。"
+  },
+  {
+   "face": "Stele D (month Karneios)",
+   "line_from": 60,
+   "greek": "",
+   "en": "He obtains as perquisites the skin and a leg. On the 24th: at Alkeidai, for Demeter, an adult wether and an adult pregnant ewe. No take-away from these. There give two new drinking-cups. The priest sacrifices [and] provides [the (supplementary) sacred offerings]. The perquisites are the ears. On the 25th: to Dionysus Skyllitas, [a piglet and a male kid. No take-away] from the male piglet. [The priest sacrifices and provides the (supplementary) sacred offerings. He obtains as perquisites the skin and a leg...] Addendum Aa-b (month 3, Kaphisios?) (a) From the animals sacrificed to Leukothea, take-away (is permitted) to Pyleas. (b) Three and an earthen pot. Stele B (unknown month) [...] On the 22nd: [to ... three] adult wethers. They are sacrificed by tribe, [the one] of the Hylleis by the sanctuary of Heracles, that of the Dymanes, near the property of Anaxilas, that of the Pamphyloi at Eitea,",
+   "zh": "他取走皮和一條腿作為賞賜。二十四日：在阿爾凱達伊，獻給得墨忒耳一頭成年閹羊和一頭成年懷孕母羊。這些不得帶走。在那裡獻上兩個新的飲杯。祭司獻祭〔並〕提供〔（補充）神聖祭品〕。賞賜是耳。二十五日：獻給戴奧尼索斯‧斯庫利塔斯〔一頭小豬和一隻公山羊羔。公山羊羔不得帶走〕。〔祭司獻祭並提供（補充）神聖祭品。他取走皮和一條腿作為賞賜……〕附錄Aa-b（第三月，卡菲西俄斯月？）（a）從獻給琉科忒亞的那些動物，允許帶走到皮琉阿斯。（b）三和一個陶罐。碑銘B（未知月）〔……〕二十二日：〔獻給……三〕頭成年閹羊。他們按部族獻祭，許萊斯部族的那頭在赫拉克勒斯聖所旁，杜馬涅斯部族的那頭在阿那克西拉斯的產業附近，帕姆費洛伊部族的那頭在埃忒亞，"
+  }
+ ]
+}

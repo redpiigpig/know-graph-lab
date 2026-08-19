@@ -1,0 +1,505 @@
+{
+ "cgrn": 52,
+ "url": "http://cgrn.ulg.ac.be/file/52/",
+ "title_zh": "埃爾希亞祭曆",
+ "title_en": "Sacrificial calendar of the deme of Erchia in Attica",
+ "volume": "K",
+ "date": "ca. 375-350 BC Justification: lettering and style (Daux).",
+ "provenance": "Erchia . Found in modern Spata, in Attica. Now in the Epigraphical Museum in Athens (inv. no. 13163).",
+ "support": "A small moulded stele, broken below, and somewhat worn on the left and right sides.Height: 70 cmWidth: 44-45 cmDepth: from top to bottom, 9.5-11 cm",
+ "bibliography": "Edition here based on the first full edition of Daux 1963, with fig. 1 and pl. 13-14, with the corrections in Daux 1964: 676-677. The readings are for the most part uncontroversial. Cf. Takeuchi 2010-2013 for a new reading of line A20, adopted here (previously Πυλῶνι). Since column A is virtually complete, we have restored the total amount of drachmae in column A as its final, missing line. Cf. also: SEG 21, 541; Sokolowski LSCG 18; Le Guen-Pollet CDE 61; AIO , with another English translation and commentary. Further bibliography: Salviat 1964; Dow 1965; Jameson 1965; Mikalson 1975; Langdon 1976; Georgoudi 1994; Ekroth 2002; Humphreys 2004: 178; Pirenne-Delforge 2004; Papazarkadas 2004-2009: no. 4; Bremmer 2005a; Parker 2005a; Pirenne-Delforge 2011; Pirenne-Delforge - Pironti 2016.",
+ "licence": "CGRN — Collection of Greek Ritual Norms (Université de Liège), 開放取用；引用請註明 CGRN 編號與網址。",
+ "names": {},
+ "segments": [
+  {
+   "face": "Column Α",
+   "line_from": 1,
+   "greek": "Μεταγειτνιῶ- v νος δωδεκάτε- v ι, Ἀπόλλωνι v Λ- v υκείωι, ἐν ἄστ-",
+   "en": "Gods. The Greater Demarchy. Column Α In Metageitnion: on the 12th, to Apollo Lykeios, in the town,",
+   "zh": ""
+  },
+  {
+   "face": "Column Α",
+   "line_from": 5,
+   "greek": "v ει, οἶς, οὐ φο(ρά), Δ𐅂𐅂 v δεκάτει προτ- v έραι, Ἥραι Θελ- v χινίαι, ἐμ Πάγ- v ωι Ἐρχι(ᾶσιν), ἄρνα π-",
+   "en": "Schoinos in Erchia, a ewe, no take-away, the skin is given to the priestess, 10 dr. In Boedromion:",
+   "zh": ""
+  },
+  {
+   "face": "Column Α",
+   "line_from": 10,
+   "greek": "v αμμέλαιναν, ο- v ὐ φορά, 𐅃𐅂𐅂 vvv Βοηδρομιῶνος v τετράδι φθίν- v οντος, Νύμφαι-",
+   "en": "on the 5th, to Epops, at Erchia, a piglet, burned whole, wineless offering,",
+   "zh": ""
+  },
+  {
+   "face": "Column Α",
+   "line_from": 15,
+   "greek": "v ς, ἐμ Πάγωι Ἐρχ- v ιᾶ(σιν), οἶς, Δ vvvvv Πυανοψιῶνος τ- v ετράδι ἐπὶ δέ- v κα, Ἡρωΐναις, ἐ-",
+   "en": "3 dr.; on the 27th: to Ge, on the Hill at Erchia,",
+   "zh": ""
+  },
+  {
+   "face": "Column Α",
+   "line_from": 20,
+   "greek": "v ν Αὐλῶνι Ἐρχι(ᾶσιν), v οἶς, οὐ φορά, ἱε- v ρείαι τὸ δέρ(μα), Δ Γαμηλιῶνος ἑβ- v δόμηι ἱσταμέ-",
+   "en": "a pregnant ewe, no take-away, 10 dr. In Posideon: on the 16th, to Zeus, on the Rock at Erchia,",
+   "zh": ""
+  },
+  {
+   "face": "Column Α",
+   "line_from": 25,
+   "greek": "v νο, Κουροτρόφ- v ωι, ἐν Δελφινί- v ωι Ἐρχ(ιᾶσιν)∶ χοῖρ(ος), 𐅂𐅂𐅂. v Ἀπόλλωνι Δελ- v φινίωι, Ἐρχιᾶ(σιν),",
+   "en": "a wether, no take-away, 12 dr.; to Zeus Horios, at Erchia, a piglet,",
+   "zh": ""
+  },
+  {
+   "face": "Column Α",
+   "line_from": 30,
+   "greek": "v οἶς, Δ𐅂𐅂 vvvv v ὀγδόηι ἱσταμ- v ένου, Ἀπόλλων- v ι Ἀποτροπαίω- v ι, Ἐρχιᾶσι, πρὸ-",
+   "en": "no take-away, 3 dr. In Gamelion: on the 7th, to Apollo Lykeios,",
+   "zh": ""
+  },
+  {
+   "face": "Column Α",
+   "line_from": 35,
+   "greek": "v [ς ] Παιανιέων, v v αἴξ, Δ𐅂𐅂 vvvv Ἀνθεστηριῶνο- v ς, Διασίοις, ἐν v ἄστε[⟨ι⟩] ἐν Ἄγρας",
+   "en": "at Erchia, a wether handed over to the Pythaistai, 12 dr., no take-away; on the 8th:",
+   "zh": ""
+  },
+  {
+   "face": "Column Α",
+   "line_from": 40,
+   "greek": "v Διὶ Μιλιχίωι, v οἶς, νηφάλιος v μέχρι σπλάγχ- v [ν]ων, Δ𐅂𐅂. vvvv [Ἐ]λαφηβολιῶνο-",
+   "en": "to Apollo Nymphagetes, at Erchia, a wether goat, 12 dr.; to the Nymphs, at",
+   "zh": ""
+  },
+  {
+   "face": "Column Α",
+   "line_from": 45,
+   "greek": "v ς ἕκτηι ἐπὶ δέ- v κα, Σεμέληι, ἐπ- v ὶ τοῦ αὐτοῦ βω- v μοῦ, αἴξ, γυναι- v ξὶ παραδόσιμ-",
+   "en": "the same altar, a she-goat, 10 dr. In Thargelion: on the 4th, to Hermes, in the agora",
+   "zh": ""
+  },
+  {
+   "face": "Column Α",
+   "line_from": 50,
+   "greek": "v ος, ἱερέας τὸ δ- v έρμα, οὐ φορά, Δ [Θ]αργηλιῶνος τ- v ετράδι ἱσταμ- v ένο, Λητοῖ, ἐμ Π-",
+   "en": "at Erchia, a ram, the herald performs this sacrifice",
+   "zh": ""
+  },
+  {
+   "face": "Column Α",
+   "line_from": 55,
+   "greek": "v [υ]θίο Ἐρχιᾶσι(ν), v [α]ἴξ ∶ Δ vvvvv [Σ]κιροφοριῶνο- v ς τρίτη[⟨ι⟩] ἱσταμ- v ένου Κουροτρ-",
+   "en": "and receives perquisites like the demarch would, 10 dr.; on the 16th,",
+   "zh": ""
+  },
+  {
+   "face": "Column Α",
+   "line_from": 60,
+   "greek": "v όφωι, ἐμ πόλει v Ἐρχ(ιᾶσιν) ∶ χοῖρος, 𐅂𐅂𐅂 v Ἀθηνάαι Πολι- v άδι, ἐμ πόλει Ἐ- v ρχιᾶσι, οἶς, ἀν-",
+   "en": "to Zeus Epakrios, on Mount Hymettos, a male lamb, wineless offering, no take-away, [7 dr.]",
+   "zh": ""
+  },
+  {
+   "face": "Column Α",
+   "line_from": 65,
+   "greek": "v [τ]ίβους, Δ vvvv v [κε]φάλαιον vv [ΗΔ𐅂]",
+   "en": "In Skirophorion: [...]",
+   "zh": ""
+  },
+  {
+   "face": "Column Β",
+   "line_from": 1,
+   "greek": "Μεταγειτνιῶ- v νος δω[δεκ]άτ- v ει, ἐν Ἐλευσι(νίωι) v ἐν ἄστει, Δήμ-",
+   "en": "Gods. The Greater Demarchy. Column Α In Metageitnion: on the 12th, to Apollo Lykeios, in the town,",
+   "zh": ""
+  },
+  {
+   "face": "Column Β",
+   "line_from": 5,
+   "greek": "v ητρι, οἶς, Δ vvv v ἕκτηι ἐπὶ δέ- v κα, Κοροτρόφ- v ωι, ἐν [Ἑ]κάτης v Ἐρχιᾶσι, χοῖ-",
+   "en": "Schoinos in Erchia, a ewe, no take-away, the skin is given to the priestess, 10 dr. In Boedromion:",
+   "zh": ""
+  },
+  {
+   "face": "Column Β",
+   "line_from": 10,
+   "greek": "v ρος, 𐅂𐅂𐅂 vvvv v Ἀρτέμιδι Ἑκ- v άτει, Ἐρχιᾶ[σ]-] v ι[ν,αἴ]ξ, Δ vvvv Βο[ηδ]ρομιῶνο-",
+   "en": "on the 5th, to Epops, at Erchia, a piglet, burned whole, wineless offering,",
+   "zh": ""
+  },
+  {
+   "face": "Column Β",
+   "line_from": 15,
+   "greek": "v ς τετράδι ἱσ- v ταμένο, Βασί- v λει, Ἐρχιᾶ(σιν), ἀμ- v νὴ λευκή, ὁλό- v καυτος, νηφά-",
+   "en": "3 dr.; on the 27th: to Ge, on the Hill at Erchia,",
+   "zh": ""
+  },
+  {
+   "face": "Column Β",
+   "line_from": 20,
+   "greek": "v λιος, 𐅃𐅂𐅂 vvv v τετράδι φθί- v νοντος, ἐμ Πά- v [γ]ωι Ἐρχιᾶσι- v ν, Ἀχελώωι vv",
+   "en": "a pregnant ewe, no take-away, 10 dr. In Posideon: on the 16th, to Zeus, on the Rock at Erchia,",
+   "zh": ""
+  },
+  {
+   "face": "Column Β",
+   "line_from": 25,
+   "greek": "v οἶς, Δ𐅂𐅂 vvvv Γαμηλιῶνος v ἐνάτηι ἱστα- v μένο, Ἠροσου- v ρίοις, ἐμ πόλ-",
+   "en": "a wether, no take-away, 12 dr.; to Zeus Horios, at Erchia, a piglet,",
+   "zh": ""
+  },
+  {
+   "face": "Column Β",
+   "line_from": 30,
+   "greek": "v ει Ἐρχιᾶσι[⟨ν⟩], Ἀ- v θηνᾶι, ἀμνή, 𐅃𐅂𐅂 v τετράδι φθί- v νοντος, Κουρ- v οτρόφωι, ἐν Ἥ-",
+   "en": "no take-away, 3 dr. In Gamelion: on the 7th, to Apollo Lykeios,",
+   "zh": ""
+  },
+  {
+   "face": "Column Β",
+   "line_from": 35,
+   "greek": "v ρας Ἐρχιᾶσι, v χοῖρος, 𐅂𐅂𐅂 v v Ἥραι, Ἐρχιᾶσ- v ι[⟨ν⟩], οἶς, ἱερέαι v δέρμα, Δ vvvv",
+   "en": "at Erchia, a wether handed over to the Pythaistai, 12 dr., no take-away; on the 8th:",
+   "zh": ""
+  },
+  {
+   "face": "Column Β",
+   "line_from": 40,
+   "greek": "Μουνιχιῶνο- v ς τετράδι ἱσ- v ταμένου, Ἡρα- v κλείδαις, οἶ- v ς, Ἐρχιᾶ(σι), Δ𐅂𐅂 v οὐ φ(ορά)",
+   "en": "to Apollo Nymphagetes, at Erchia, a wether goat, 12 dr.; to the Nymphs, at",
+   "zh": ""
+  },
+  {
+   "face": "Column Β",
+   "line_from": 45,
+   "greek": "[Θ]αργηλιῶνος v τετράδι ἱστ- v αμένο, Ἀπόλλ- v ωνι Πυθίωι, Ἐ- v ρχι(ᾶσι) ∶ αἴξ, παρα-",
+   "en": "the same altar, a she-goat, 10 dr. In Thargelion: on the 4th, to Hermes, in the agora",
+   "zh": ""
+  },
+  {
+   "face": "Column Β",
+   "line_from": 50,
+   "greek": "v δόσιμος Πυθ- v αϊσταῖς, Δ𐅂𐅂 v Ἀπόλλωνι Πα- v ιῶνι, ἐμ Πάγω- v ι Ἐρχι(ᾶσιν), οἶς, Δ𐅂𐅂",
+   "en": "at Erchia, a ram, the herald performs this sacrifice",
+   "zh": ""
+  },
+  {
+   "face": "Column Β",
+   "line_from": 55,
+   "greek": "[Σ]κιροφοριῶν- v ος τρίτηι ἱσ- v ταμένο, Ἀγλα- v ύρωι ἐμ πόλε[⟨ι⟩] v Ἐρχι(ᾶσιν) ∶ οἶς, Δ v οὐ φ(ορά)",
+   "en": "and receives perquisites like the demarch would, 10 dr.; on the 16th,",
+   "zh": ""
+  },
+  {
+   "face": "Column Β",
+   "line_from": 60,
+   "greek": "v κεφάλαιον v v Η𐅃𐅂𐅂𐅂 vv",
+   "en": "to Zeus Epakrios, on Mount Hymettos, a male lamb, wineless offering, no take-away, [7 dr.]",
+   "zh": ""
+  },
+  {
+   "face": "Column Β",
+   "line_from": 65,
+   "greek": "",
+   "en": "In Skirophorion: [...]",
+   "zh": ""
+  },
+  {
+   "face": "Column Γ",
+   "line_from": 1,
+   "greek": "[Ἑ]κατομβαιῶν- v ος δεκάτει ὑ- v στέραι, Κουρ- v οτρόφωι, ἐς Σ-",
+   "en": "Gods. The Greater Demarchy. Column Α In Metageitnion: on the 12th, to Apollo Lykeios, in the town,",
+   "zh": ""
+  },
+  {
+   "face": "Column Γ",
+   "line_from": 5,
+   "greek": "v ωτιδῶν Ἐρχι(ᾶσι), v χοῖρος, οὐ φο- v ρά, 𐅂𐅂𐅂 vvvvv v Ἀρτέμιδι ἐς v Σωτιδῶν Ἐρχ-",
+   "en": "Schoinos in Erchia, a ewe, no take-away, the skin is given to the priestess, 10 dr. In Boedromion:",
+   "zh": ""
+  },
+  {
+   "face": "Column Γ",
+   "line_from": 10,
+   "greek": "v ι(ᾶσιν) ∶ αἴξ, οὐ φορά, v τὸ δέρμα κατ- v αγίζ(εσθαι) ∶ Δ vvvvv [Μ]εταγειτνιῶ- v νος δωδεκάτ-",
+   "en": "on the 5th, to Epops, at Erchia, a piglet, burned whole, wineless offering,",
+   "zh": ""
+  },
+  {
+   "face": "Column Γ",
+   "line_from": 15,
+   "greek": "v ει, Διὶ Πολιε[⟨ῖ⟩], v ἐμ πόλε[⟨ι⟩] ἐν ἄσ- v τε[⟨ι⟩], οἶς, οὐ φορ- v ά, Δ𐅂𐅂 vacat v ἕκτηι φθίνο-",
+   "en": "3 dr.; on the 27th: to Ge, on the Hill at Erchia,",
+   "zh": ""
+  },
+  {
+   "face": "Column Γ",
+   "line_from": 20,
+   "greek": "v ντος, Διὶ Ἐπω- v πετεῖ, ἐμ Πάγ- v ωι Ἐρχιᾶσι, χ- v οῖρος, ὁλόκα- v υτος, νηφάλι-",
+   "en": "a pregnant ewe, no take-away, 10 dr. In Posideon: on the 16th, to Zeus, on the Rock at Erchia,",
+   "zh": ""
+  },
+  {
+   "face": "Column Γ",
+   "line_from": 25,
+   "greek": "v ος, 𐅂𐅂𐅂 vvvvv [Β]οηδρομιῶνο- v ς τετράδι φθ- v ίνοντος, Ἀλό- v χωι, ἐμ Πάγωι",
+   "en": "a wether, no take-away, 12 dr.; to Zeus Horios, at Erchia, a piglet,",
+   "zh": ""
+  },
+  {
+   "face": "Column Γ",
+   "line_from": 30,
+   "greek": "v Ἐρχι(ᾶσιν) ∶ οἶς ∶ Δ vv [Γ]αμηλιῶνος ὀ- v γδόηι ἱσταμ- v έ(νο), Ἀπόλλωνι Ἀ- v ποτροπαίωι,",
+   "en": "no take-away, 3 dr. In Gamelion: on the 7th, to Apollo Lykeios,",
+   "zh": ""
+  },
+  {
+   "face": "Column Γ",
+   "line_from": 35,
+   "greek": "v Ἐρχιᾶσι[⟨ν⟩], αἴξ, v Πυ[θα]ϊσταῖς v παραδόσ(ιμος), Δ𐅂𐅂 v τετράδι φθί- v νοντος, Διὶ Τ-",
+   "en": "at Erchia, a wether handed over to the Pythaistai, 12 dr., no take-away; on the 8th:",
+   "zh": ""
+  },
+  {
+   "face": "Column Γ",
+   "line_from": 40,
+   "greek": "v ελείωι, ἐν Ἥρ- v ας Ἐρχ(ιᾶσιν) ∶ οἶς, Δ𐅂𐅂 [Ἀ]νθεστηριῶν- v ος δευτέραι v ἱσταμένο, Δι-",
+   "en": "to Apollo Nymphagetes, at Erchia, a wether goat, 12 dr.; to the Nymphs, at",
+   "zh": ""
+  },
+  {
+   "face": "Column Γ",
+   "line_from": 45,
+   "greek": "v ονύσωι, Ἐρχι(ᾶσιν), v ἔριφος προπ- v τόρθι(ος) ∶ 𐅃 vvvv [Μ]ονιχιῶνος δ- v εκάτει [πρ]οτ-",
+   "en": "the same altar, a she-goat, 10 dr. In Thargelion: on the 4th, to Hermes, in the agora",
+   "zh": ""
+  },
+  {
+   "face": "Column Γ",
+   "line_from": 50,
+   "greek": "v έραι, Λευκάσ- v πιδι, Ἐρχιᾶ(σιν), ο- v ἶς, νηφάλιος, v οὐ φορά, Δ𐅂𐅂 [Θ]αργηλιῶνος",
+   "en": "at Erchia, a ram, the herald performs this sacrifice",
+   "zh": ""
+  },
+  {
+   "face": "Column Γ",
+   "line_from": 55,
+   "greek": "v τετράδι ἱστ- v αμένο, Διί, ἐμ v Πάγωι, Ἐρχιᾶ(σιν), v οἶς, Δ𐅂𐅂 vvvv [Σ]κιροφοριῶν-",
+   "en": "and receives perquisites like the demarch would, 10 dr.; on the 16th,",
+   "zh": ""
+  },
+  {
+   "face": "Column Γ",
+   "line_from": 60,
+   "greek": "v ος τρίτει ἱσ- v ταμένο, Διὶ Π- v ολιε[⟨ῖ⟩], ἐμ πόλε[⟨ι⟩] v Ἐρχιᾶσι[⟨ν⟩], οἶς, v οὐ φορά, Δ𐅂𐅂",
+   "en": "to Zeus Epakrios, on Mount Hymettos, a male lamb, wineless offering, no take-away, [7 dr.]",
+   "zh": ""
+  },
+  {
+   "face": "Column Γ",
+   "line_from": 65,
+   "greek": "v ἕκτηι ἐπὶ δέ- v κα [...6...][......1 line......]",
+   "en": "In Skirophorion: [...]",
+   "zh": ""
+  },
+  {
+   "face": "Column Δ",
+   "line_from": 1,
+   "greek": "Ἑκατομβαιῶν- v ος δεκάτει ὑ- v στέραι, Κορο- v [τρ]όφωι, ἐπὶ τ-",
+   "en": "Gods. The Greater Demarchy. Column Α In Metageitnion: on the 12th, to Apollo Lykeios, in the town,",
+   "zh": ""
+  },
+  {
+   "face": "Column Δ",
+   "line_from": 5,
+   "greek": "v [ο̑] Ἄκρο Ἐρχιᾶ(σι), v χοῖρος, οὐ φο- v ρά, 𐅂𐅂𐅂 vvvvv v Ἀρτέμιδι, ἐπ- v ὶ το̑ Ἄκρο Ἐρχ-",
+   "en": "Schoinos in Erchia, a ewe, no take-away, the skin is given to the priestess, 10 dr. In Boedromion:",
+   "zh": ""
+  },
+  {
+   "face": "Column Δ",
+   "line_from": 10,
+   "greek": "v ι(ᾶσιν), αἴξ, οὐ φορ- v ά, δέρμα κατα- v ιγίζε(σθαι) ∶ Δ vvv v Μεταγειτνιῶ- v νος δωδεκάτ-",
+   "en": "on the 5th, to Epops, at Erchia, a piglet, burned whole, wineless offering,",
+   "zh": ""
+  },
+  {
+   "face": "Column Δ",
+   "line_from": 15,
+   "greek": "v ε[⟨ι⟩], Ἀθηνᾶι Πολ- v ιάδι, ἐμ πόλε[⟨ι⟩] v ἐν ἄστε[⟨ι⟩], οἶς ∶ Δ Βοηδρομιῶνο- v ς πέμπτει ἱσ-",
+   "en": "3 dr.; on the 27th: to Ge, on the Hill at Erchia,",
+   "zh": ""
+  },
+  {
+   "face": "Column Δ",
+   "line_from": 20,
+   "greek": "v ταμέ(νο) ∶ Ἔποπι, Ἐ- v ρχιᾶσι, χοῖρ- v ος, ὁλόκαυτο- v ς, νηφάλι(ος) ∶ 𐅂𐅂𐅂 v τετράδι φθί-",
+   "en": "a pregnant ewe, no take-away, 10 dr. In Posideon: on the 16th, to Zeus, on the Rock at Erchia,",
+   "zh": ""
+  },
+  {
+   "face": "Column Δ",
+   "line_from": 25,
+   "greek": "v νοντος, Ἑρμῆ- v ι, ἐμ Πάγωι Ἐρ- v χιᾶ(σι) ∶ οἶς ∶ Δ𐅂𐅂 v Γαμηλιῶνος τ- v ετράδι φθίν-",
+   "en": "a wether, no take-away, 12 dr.; to Zeus Horios, at Erchia, a piglet,",
+   "zh": ""
+  },
+  {
+   "face": "Column Δ",
+   "line_from": 30,
+   "greek": "v οντος, Ποσει- v δῶνι, ἐν Ἥρας v Ἐρχιᾶ(σιν), οἶς, Δ𐅂𐅂 Ἐλαφηβολιῶν- v ος ἕκτηι ἐπὶ",
+   "en": "no take-away, 3 dr. In Gamelion: on the 7th, to Apollo Lykeios,",
+   "zh": ""
+  },
+  {
+   "face": "Column Δ",
+   "line_from": 35,
+   "greek": "v δέκα, Διονύσ- v ωι, Ἐρχιᾶ(σιν), αἴξ, v παραδό(σιμος) ∶ γυνα- v {α}ιξί, οὐ φορά, v ἱερέαι τὸ δέ-",
+   "en": "at Erchia, a wether handed over to the Pythaistai, 12 dr., no take-away; on the 8th:",
+   "zh": ""
+  },
+  {
+   "face": "Column Δ",
+   "line_from": 40,
+   "greek": "v ρμα, Δ𐅂𐅂 v Μονιχιῶνος δ- v εκάτει ὑστέ- v ραι, Τριτοπα- v τρεῦσι, Ἐρχι(ᾶσιν),",
+   "en": "to Apollo Nymphagetes, at Erchia, a wether goat, 12 dr.; to the Nymphs, at",
+   "zh": ""
+  },
+  {
+   "face": "Column Δ",
+   "line_from": 45,
+   "greek": "v οἶς, νηφάλιο- v ς, οὐ φορά ∶ Δ𐅂𐅂 Θαργηλιῶνος v τετράδι ἱστ- v αμένο, Ἀνάκο-",
+   "en": "the same altar, a she-goat, 10 dr. In Thargelion: on the 4th, to Hermes, in the agora",
+   "zh": ""
+  },
+  {
+   "face": "Column Δ",
+   "line_from": 50,
+   "greek": "v ιν, Ἐρχιᾶσιν, v οἶς, Δ𐅂𐅂 vvvv v ἐνάτει ἐπὶ δ- v έκα, Μενεδεί- v ωι, Ἐρχιᾶσιν,",
+   "en": "at Erchia, a ram, the herald performs this sacrifice",
+   "zh": ""
+  },
+  {
+   "face": "Column Δ",
+   "line_from": 55,
+   "greek": "v οἶς, οὐ φορ(ά), Δ𐅂𐅂 Σκιροφοριῶν- v ος τρίτηι ἱσ- v ταμένο, Ποσε- v ιδῶνι, ἐμ πόλ",
+   "en": "and receives perquisites like the demarch would, 10 dr.; on the 16th,",
+   "zh": ""
+  },
+  {
+   "face": "Column Δ",
+   "line_from": 60,
+   "greek": "v ε[⟨ι⟩] Ἐρχι(ᾶσιν) ∶ οἶς ∶ Δ𐅂𐅂 v κεφάλαιον vv ΗΔ vvv",
+   "en": "to Zeus Epakrios, on Mount Hymettos, a male lamb, wineless offering, no take-away, [7 dr.]",
+   "zh": ""
+  },
+  {
+   "face": "Column Δ",
+   "line_from": 65,
+   "greek": "",
+   "en": "In Skirophorion: [...]",
+   "zh": ""
+  },
+  {
+   "face": "Column Ε",
+   "line_from": 1,
+   "greek": "Μεταγειτνι- v ῶνος ἐνάτε[⟨ι⟩] v ἐπὶ δέκα, Ἡρ- v ωΐναις, ἐπὶ",
+   "en": "Gods. The Greater Demarchy. Column Α In Metageitnion: on the 12th, to Apollo Lykeios, in the town,",
+   "zh": ""
+  },
+  {
+   "face": "Column Ε",
+   "line_from": 5,
+   "greek": "v Σχοίνωι Ἐρ- v χιᾶσι[⟨ν⟩], οἶς, ο- v ὐ φορά, ἱερέ- v αι τὸ δέρ(μα) ∶ Δ v Βοηδρομιῶν-",
+   "en": "Schoinos in Erchia, a ewe, no take-away, the skin is given to the priestess, 10 dr. In Boedromion:",
+   "zh": ""
+  },
+  {
+   "face": "Column Ε",
+   "line_from": 10,
+   "greek": "v ος πέμπτηι v ἱσταμένο, Ἐ- v ρχι(ᾶσιν) ∶ Ἔποπι, χ- v οῖρος, ὁλόκ- v αυτος, νηφά-",
+   "en": "on the 5th, to Epops, at Erchia, a piglet, burned whole, wineless offering,",
+   "zh": ""
+  },
+  {
+   "face": "Column Ε",
+   "line_from": 15,
+   "greek": "v λιος, 𐅂𐅂𐅂 v v τετράδι φθ- v ίνοντος, Γῆ- v ι ἐμ Πάγωι, Ἐ- v ρχιᾶσι[⟨ν⟩], οἶς",
+   "en": "3 dr.; on the 27th: to Ge, on the Hill at Erchia,",
+   "zh": ""
+  },
+  {
+   "face": "Column Ε",
+   "line_from": 20,
+   "greek": "v κύουσα, οὐ φ- v ορά, Δ vacat Ποσιδεῶνος v ἕκτηι ἐπὶ δ- v έκα, Διί, ἐμ Π-",
+   "en": "a pregnant ewe, no take-away, 10 dr. In Posideon: on the 16th, to Zeus, on the Rock at Erchia,",
+   "zh": ""
+  },
+  {
+   "face": "Column Ε",
+   "line_from": 25,
+   "greek": "v έτρηι Ἐρχι- v ᾶσιν, οἶς, οὐ v φορά, Δ𐅂𐅂 vv v Διὶ Ὁρίωι, Ἐ- v ρχιᾶσι, χοῖ-",
+   "en": "a wether, no take-away, 12 dr.; to Zeus Horios, at Erchia, a piglet,",
+   "zh": ""
+  },
+  {
+   "face": "Column Ε",
+   "line_from": 30,
+   "greek": "v ρος, οὐ φο(ρά) ∶ 𐅂𐅂𐅂 Γαμηλιῶνος v ἑβδόμηι ἱσ- v ταμένο, Ἀπό- v λλωνι Λυκε-",
+   "en": "no take-away, 3 dr. In Gamelion: on the 7th, to Apollo Lykeios,",
+   "zh": ""
+  },
+  {
+   "face": "Column Ε",
+   "line_from": 35,
+   "greek": "v ίωι, Ἐρχιᾶσ- v ι[⟨ν⟩], οἶς Πυθαϊ- v σταῖς παρ[α]-] v δόσιμος, Δ𐅂𐅂 `οὐ φο(ρά)´ v ὀγδόη[⟨ι⟩] ἱστα-",
+   "en": "at Erchia, a wether handed over to the Pythaistai, 12 dr., no take-away; on the 8th:",
+   "zh": ""
+  },
+  {
+   "face": "Column Ε",
+   "line_from": 40,
+   "greek": "v μένο, Ἀπόλλ- v ωνι Νυμφη[γ]-] v έτει, Ἐρχιᾶ- v σιν, αἴξ, Δ𐅂𐅂 v Νύμφαις, ἐπ-",
+   "en": "to Apollo Nymphagetes, at Erchia, a wether goat, 12 dr.; to the Nymphs, at",
+   "zh": ""
+  },
+  {
+   "face": "Column Ε",
+   "line_from": 45,
+   "greek": "v ὶ το̑ αὐτοῦ β- v ωμοῦ, αἴξ ∶ Δ v Θαργηλιῶνο- v ς τετράδι ἱ- v σταμένο, Ἐρ-",
+   "en": "the same altar, a she-goat, 10 dr. In Thargelion: on the 4th, to Hermes, in the agora",
+   "zh": ""
+  },
+  {
+   "face": "Column Ε",
+   "line_from": 50,
+   "greek": "v μῆι, ἐν ἀγορ- v ᾶι Ἐρχιᾶσι, v κριός, τούτ- v ωι ἱερεῶσθ- v αι τὸν κήρυ-",
+   "en": "at Erchia, a ram, the herald performs this sacrifice",
+   "zh": ""
+  },
+  {
+   "face": "Column Ε",
+   "line_from": 55,
+   "greek": "v κα καὶ τὰ γέ- v ρα λαμβάνε- v ν καθάπερ ὁ v δήμαρχος, Δ v ἕκτηι ἐπὶ δ-",
+   "en": "and receives perquisites like the demarch would, 10 dr.; on the 16th,",
+   "zh": ""
+  },
+  {
+   "face": "Column Ε",
+   "line_from": 60,
+   "greek": "v έκα, Διὶ Ἐπ[α]-] v κρίωι, ἐν Ὑμ- v ηττῶι, ἀρ[ήν], v νηφάλι[ος,ο]-] v ὐ φορά, [𐅃𐅂𐅂]. [v]",
+   "en": "to Zeus Epakrios, on Mount Hymettos, a male lamb, wineless offering, no take-away, [7 dr.]",
+   "zh": ""
+  },
+  {
+   "face": "Column Ε",
+   "line_from": 65,
+   "greek": "Σκιροφ[οριῶ]-] v νος [...6...][......1 line......]",
+   "en": "In Skirophorion: [...]",
+   "zh": ""
+  }
+ ]
+}

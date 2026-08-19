@@ -238,10 +238,20 @@ BANNED = ('・', '预', '这', '为了', '国', '经', '书', '关', '现', '实
 
 
 def source_blob(w: dict) -> str:
+    """可用事實的全集＝條目欄位＋prompt 裡本來就給了模型的卷／部脈絡。
+
+    只算條目欄位會誤殺：「」在中文也用來標卷名、部名與術語，不只標引語，
+    模型寫「本卷（虛空篇）……」會被當成編造引語退回。卷名、卷定位、部名、
+    聖經對位、年代跨度都是 prompt 明文給的，不算無中生有。
+    """
     k = w['work']
-    return ' '.join(str(k.get(f) or '') for f in
-                    ('title_zh', 'title_orig', 'author', 'era', 'era_narrated', 'place',
-                     'language', 'extent', 'parent', 'note', 'via', 'seealso'))
+    fields = [str(k.get(f) or '') for f in
+              ('title_zh', 'title_orig', 'author', 'era', 'era_narrated', 'place',
+               'language', 'extent', 'parent', 'note', 'via', 'seealso')]
+    fields += [str(w.get(f) or '') for f in
+               ('volume_name', 'volume_summary', 'volume_parallel', 'volume_sigil',
+                'division_label', 'division_desc', 'canon_name')]
+    return ' '.join(fields)
 
 
 def fabrication(text: str, w: dict) -> str:
