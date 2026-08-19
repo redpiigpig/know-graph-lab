@@ -399,3 +399,32 @@ def test_build_rows_auto_keeps_all_chapters_for_unlisted_books():
     """沒列在 CHAPTER_COUNTS 的書卷不設限，行為與加閘前相同。"""
     entries = [{"ref": "99:1", "kind": "comment", "body": "x", "father": "俄利根"}]
     assert len(build_rows_auto("zzz", entries, "vol")) == 1
+
+
+def test_parse_full_ref_accepts_the_dot_separator():
+    """ACCS 各卷體例不一：冒號式與句點式混用（全庫 33% 是句點式，馬太 1-13 佔 79%）。
+    只認冒號會讓 '2.10-18' 被當成「單獨第 2 節」→ 沿用上一章 → 整章跑錯位置。"""
+    assert parse_full_ref("1.1-4") == (1, 1, 4)
+    assert parse_full_ref("2.10-18") == (2, 10, 18)
+    assert parse_full_ref("13.7") == (13, 7, 7)
+    # 冒號式行為不變
+    assert parse_full_ref("1:1-4") == (1, 1, 4)
+    # 真正的裸節仍是裸節（沿用上一章）
+    assert parse_full_ref("5") == (None, 5, 5)
+
+
+def test_parse_full_ref_tolerates_a_chinese_book_prefix():
+    """OCR 有時把書卷簡稱一起吐出來（'來 2.10-18'）。"""
+    assert parse_full_ref("來 2.10-18") == (2, 10, 18)
+    assert parse_full_ref("約 3:16") == (3, 16, 16)
+
+
+def test_build_rows_auto_routes_dot_refs_to_their_own_chapter():
+    """回歸：希伯來書第 2/7/8/13 章曾整章被吸進第 1 章。"""
+    entries = [
+        {"ref": "1:1-4", "kind": "comment", "body": "一章", "father": "俄利根"},
+        {"ref": "2.10-18", "kind": "comment", "body": "二章", "father": "俄利根"},
+        {"ref": "13.7-8", "kind": "comment", "body": "十三章", "father": "俄利根"},
+    ]
+    rows = build_rows_auto("heb", entries, "ACCS（希伯來書）")
+    assert [r["chapter"] for r in rows] == [1, 2, 13]
