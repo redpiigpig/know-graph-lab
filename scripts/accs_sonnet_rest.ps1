@@ -7,6 +7,11 @@
 $ErrorActionPreference = 'Continue'
 Set-Location 'c:\Users\user\Desktop\know-graph-lab'
 $log = 'scripts\logs\accs_ot_sonnet.log'
+$pause = 'scripts\state\accs_sonnet_rest.pause'
+if (Test-Path -LiteralPath $pause) {
+    Write-Output 'ACCS Sonnet lane paused; validated Gemini lane owns OCR'
+    exit 0
+}
 
 # --- PID 鎖：同時只准一個本車道實例（Max 額度共用；防 30 分排程自我重疊 / 手動重跑撞車）。---
 # 原子 CreateNew 建鎖並寫入本進程 PID；已存在則看記錄的 PID 是否還活著（活＝跳過；死＝陳舊、接管）。

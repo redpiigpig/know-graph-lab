@@ -74,7 +74,7 @@ def gemini_keys():
 GKEYS = gemini_keys()
 NKEYS = [E[k] for k in sorted(E) if k.upper().startswith('NVIDIA_API_KEY')]
 GMODEL = 'gemini-2.5-flash'
-NURL = 'https://integrate.api.nvidia.com/v1/chat/completions'; NMODEL = 'deepseek-ai/deepseek-v4-flash'
+NURL = 'https://integrate.api.nvidia.com/v1/chat/completions'; NMODEL = 'deepseek-ai/deepseek-v4-flash-0731'
 glock = threading.Lock(); g_next = [0.0] * max(1, len(GKEYS)); n_next = [0.0] * max(1, len(NKEYS))
 
 SYS_AI = (

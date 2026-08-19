@@ -244,6 +244,8 @@ def main():
     ap.add_argument("--backend", choices=["cloud", "gemini-first", "haiku"], default="gemini-first")
     ap.add_argument("--max-total-paras", type=int, default=3)
     ap.add_argument("--upload", action="store_true")
+    ap.add_argument("--no-upload", action="store_true",
+                    help="translate/cache only; do not assemble or publish")
     ap.add_argument("--local-draft-status", action="store_true")
     args = ap.parse_args()
 
@@ -277,11 +279,12 @@ def main():
                 print(f"  ✓ {w['slug']} done — skip", flush=True)
                 continue
             trad = TRADITION.get(w["slug"], "")
-            tp = make_sbe_engine(trad)  # per-volume prompt: tradition glossary injected
+            tp = make_sbe_engine(trad, backend=args.backend)
             print(f"▶ translate {w['slug']} — {w['title']} [{trad}]", flush=True)
             ma.ingest_work(w)  # idempotent; keeps English readable + cache fresh
             ma.translate_work(w, tp)
-            ma.assemble_and_upload(w)
+            if not args.no_upload:
+                ma.assemble_and_upload(w)
 
     while True:
         try:

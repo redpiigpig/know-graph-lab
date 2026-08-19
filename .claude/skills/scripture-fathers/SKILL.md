@@ -3,7 +3,7 @@ name: scripture-fathers
 description: 教父全集（Schaff ANF 10 卷 + NPNF1 14 卷 + NPNF2 14 卷 + ACCS 27 卷）中譯／精修流程。包含 CCEL EPUB packaging 問題的特殊處理、NCX-driven consolidator、multi-h3 splitter、A+B+C 三層校對、教父翻譯詞庫對接。本 skill 從 [[ebook-translate]] 分出，專責「教父原典」這一塊；ebook-translate 留給一般電子書翻譯。Use when 翻新一卷 Schaff／ACCS、補精修舊卷、`/fathers` 頁面要新增已精修書、`/translation-glossary` 詞庫要加教父詞條、Haiku 校對教父書並 backfill 名詞、處理 cross-work bleed／footnote 格式異常。
 ---
 
-> ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
+> ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash-0731`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
 
 
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session。
@@ -464,7 +464,7 @@ PYTHONIOENCODING=utf-8 python scripts/seed_glossary_anf_vol<N>.py
 ```
 
 **關鍵提示**：
-- **預設 `--engine auto` = Gemini → NVIDIA NIM `deepseek-ai/deepseek-v4-flash` → Haiku 救急（三層，2026-06-04 統一 Gemini-first）**；每層 2-strike + 6h cooldown（連兩次掛 → 退下一層 6h 再回探）。`--engine haiku` 現為 **Haiku-first**（2026-06-05 user Max 訂閱；免費池乾就直接開 Haiku，見 [[feedback_engine_nvidia_no_haiku]]）。
+- **預設 `--engine auto` = Gemini → NVIDIA NIM `deepseek-ai/deepseek-v4-flash-0731` → Haiku 救急（三層，2026-06-04 統一 Gemini-first）**；每層 2-strike + 6h cooldown（連兩次掛 → 退下一層 6h 再回探）。`--engine haiku` 現為 **Haiku-first**（2026-06-05 user Max 訂閱；免費池乾就直接開 Haiku，見 [[feedback_engine_nvidia_no_haiku]]）。
 - 🚨 **`--resume` 用 title_en 當 skip key → title_en 大量重複的大卷會誤跳缺漏（NPNF2 V11 實證 2026-06-10）**：
   V11（塞維魯+文森+卡西安，1214 chunks）崩在 664、resume 時 `skip-set size 106`（664 chunk 只 106 unique
   title_en，章號跨作品狂重複）。resume 會把 665+ 任何 title_en 撞到前 106 的源 chunk 全跳過 → 缺數百 chunk。
@@ -690,7 +690,7 @@ auto-push。**git 在 master 跑教父**（user 拍板；feat/coach-language 是
 - 預設 **Gemini → NVIDIA → Haiku**（user 2026-06-04 統一政策「gemini 優先，然後 nvidia，最後 haiku」；見本檔頂 line 6 引擎政策 header）。
   - **Gemini**（主）4 keys，**每日太平洋午夜重置 ≈ 台灣 15:00**；撞牆退 NVIDIA。
   - **NVIDIA**（2nd）deepseek-v4-flash，**4 帳號 key round-robin + 每 key 429 cooldown 120s + 全域 6s 節流**。
-    `NVIDIA_MODELS=["deepseek-ai/deepseek-v4-flash"]`（唯一保留段落對齊 + {{p:N}}/[^N] marker 的模型；
+    `NVIDIA_MODELS=["deepseek-ai/deepseek-v4-flash-0731"]`（唯一保留段落對齊 + {{p:N}}/[^N] marker 的模型；
     qwen3-next 雖快但壓段落、毀 marker，**勿用**）。⚠️ **單帳號免費為「一次性/月 credit」非每日**，4 帳號約
     40 分鐘全耗盡，過夜不一定回血。
   - **Haiku**（3rd 救急）走 Claude Max OAuth，**前兩池都乾才動**；batch 久了 Anthropic 帳號也會 429

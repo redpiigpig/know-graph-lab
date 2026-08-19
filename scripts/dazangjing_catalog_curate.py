@@ -40,6 +40,123 @@ NOISE = re.compile(
     re.I,
 )
 
+# Cross-language / collected-edition records that cannot be matched reliably by
+# title normalization alone. Each value names the existing corpus work.
+KNOWN_CORPUS_EQUIVALENTS = {
+    "bnf|http://catalogue.bnf.fr/ark:/12148/cb34812913t|contra gentes ; de incarnatione / athanasius ; ed. and transl. by robert w. thomson,...|athanase (0295?-0373 ; saint). auteur du texte; athanase (0295?-0373 ; saint). auteur du texte|1971":
+        "Against the Heathen (Contra Gentes) / De Incarnatione",
+    "bnf|http://catalogue.bnf.fr/ark:/12148/cb30649716q|the homilies of s. john chrysostom,... on the statues or to the people of antioch / s. john chrysostom ; translated with notes... [by e. budge.]|jean chrysostome (0347?-0407 ; saint). auteur du texte|1842":
+        "Homilies on the Statues (to the People of Antioch)",
+    "bnf|http://catalogue.bnf.fr/ark:/12148/cb41411477f|johannis chrysostomi de davide et saule homiliae tres / quas edidit francesca prometea barone|jean chrysostome (0347?-0407 ; saint). auteur du texte|2008":
+        "De Davide et Saule homiliae tres",
+    "bnf|http://catalogue.bnf.fr/ark:/12148/cb306495839|the homilies of s. john chrysostom,... on the gospel of st. matthew / s. john chrysostom ; translated with notes... [by sir g. prevost]|jean chrysostome (0347?-0407 ; saint). auteur du texte|1843-1851":
+        "Homilies on the Gospel of Matthew",
+    "bnf|http://catalogue.bnf.fr/ark:/12148/cb33031558b|homélies, xxxviii-xxxix, xl, i, xlv, xli. textes introduits par dom thomas becquet, o.s.b., choisis, présentés et traduits par edmond devolver / grégoire de nazianze|grégoire de nazianze (0330?-0390? ; saint). auteur du texte|1962":
+        "Select Orations (Gregory of Nazianzus)",
+    "bnf|http://catalogue.bnf.fr/ark:/12148/cb32914665m|homélies sur l'hexaéméron...[ @ ] introduction et traduction de stanislas giet,... 2e édition revue et augmentée / basile de césarée|basile de césarée (0329?-0379 ; saint). auteur du texte|1968":
+        "The Hexaemeron (Basil of Caesarea)",
+    "bnf|http://catalogue.bnf.fr/ark:/12148/cb30001151s|gregorii barhebraei chronicon ecclesiasticum, quod... ediderunt, latinitate donarunt... joannes baptista abbeloos,... et thomas josephus lamy|barhebraeus, gregorius abū al-faraǧ (1226-1286). auteur du texte|1872-1877":
+        "Chronicon Ecclesiasticum (Bar Hebraeus)",
+    "bnf|http://catalogue.bnf.fr/ark:/12148/cb453860223|the hymns on faith / st. ephrem the syrian ; translated by jeffrey t. wickes,...|éphrem (0306?-0373 ; saint). auteur du texte|2015":
+        "Madrāšê de Fide (Ephrem)",
+    "bnf|http://catalogue.bnf.fr/ark:/12148/cb472462865|hymns on paradise / st. ephrem ; introduction and translation by sebastian brock|éphrem (0306?-0373 ; saint). auteur du texte; éphrem (0306?-0373 ; saint). auteur du texte|1990":
+        "Hymni de Paradiso (Ephrem)",
+}
+
+# Stable work-level matches across translated titles, modern editions, and
+# transliteration systems. These patterns are deliberately work-specific.
+KNOWN_CORPUS_PATTERNS = [
+    (re.compile(r"aphrahat.{0,30}demonstr|demonstrations? (?:i|ii)?\b.*aphra", re.I),
+     "Demonstrations of Aphrahat"),
+    (re.compile(r"(?:isaac|依撒格|以撒).{0,35}(?:nineveh|尼尼微|ascetic|苦修|苦行|mystic|神秘|homil)", re.I),
+     "Ascetical Homilies of Isaac of Nineveh"),
+    (re.compile(r"babai.{0,25}(?:book|liber).{0,12}(?:union|unione)|大巴貝.{0,20}(?:聯合|合一)", re.I),
+     "Liber de Unione (Babai the Great)"),
+    (re.compile(r"(?:coptic|ethiopian).{0,30}synaxarium|book of the saints of the ethiopian|科普特.{0,15}(?:聖人曆|殉道曆)|衣索匹亞.{0,15}(?:聖人曆|聖品歷|聖徒之書)", re.I),
+     "Coptic / Ethiopian Synaxarium"),
+    (re.compile(r"history of the patriarchs of the egyptian church|埃及教會宗主教史", re.I),
+     "History of the Patriarchs of Alexandria"),
+    (re.compile(r"\begeria\b|\bethérie\b|itinerarium egeriae|埃格麗雅|埃蓋莉婭", re.I),
+     "Itinerarium Egeriae"),
+    (re.compile(r"(?:book|version).{0,15}enoch|以諾書", re.I),
+     "1 Enoch"),
+    (re.compile(r"eutychii.{0,25}annal|厄提基烏斯年史", re.I),
+     "Naẓm al-Jawhar (Annals of Eutychius)"),
+    (re.compile(r"\beznik\b|ełc ałandoc|aġandoc|wider die sekten|駁異端（亞美尼亞|論天主（駁異端", re.I),
+     "Ełc Ałandocʻ (Against the Sects)"),
+    (re.compile(r"feth.?a nagast|費塔.{0,6}納加斯特", re.I),
+     "Fetḥa Nagaśt"),
+    (re.compile(r"(?:life|ḥayāt).{0,30}(?:shenoute|shinūdah)|聖安巴謝努達傳", re.I),
+     "Life of Shenoute"),
+    (re.compile(r"history of the councils|histoire des conciles|大公會議史", re.I),
+     "Tārīkh al-Majāmiʿ"),
+    (re.compile(r"(?:life|histoire|vita).{0,25}macrina|瑪克蓮娜傳", re.I),
+     "Life of Macrina"),
+    (re.compile(r"jacob of serugh.{0,35}(?:thomas|hexaemeron)|賽魯吉的雅各.{0,20}(?:多馬|六日創世)", re.I),
+     "Homilies of Jacob of Serugh"),
+    (re.compile(r"(?:lamp of the intellect|kitab misbah al-aql|理性之燈)", re.I),
+     "Kitāb Miṣbāḥ al-ʿAql"),
+    (re.compile(r"life of (?:saint )?mary of egypt|埃及聖瑪利亞傳", re.I),
+     "Life of Mary of Egypt"),
+    (re.compile(r"(?:ethiopian|éthiopien).{0,25}miracles? of mary|衣索匹亞聖母瑪利亞奇蹟", re.I),
+     "Täʾammǝra Maryam"),
+    (re.compile(r"(?:perpetua|perpetuae|百圖亞|佩爾培圖)", re.I),
+     "Passion of Perpetua and Felicity"),
+    (re.compile(r"matean oghbergut|哀嘆之書", re.I),
+     "Book of Lamentations (Gregory of Narek)"),
+    (re.compile(r"\bnarsai\b.{0,40}(?:homil|carmina)|納爾賽.{0,20}(?:講道|詩歌)|那西講道", re.I),
+     "Mēmrē of Narsai"),
+    (re.compile(r"(?:movses|moses).{0,25}(?:khoren|xoren).{0,25}(?:history|patmut)|patm(?:ut|ow)t.{0,12}hayoc|亞美尼亞人的歷史", re.I),
+     "Patmutʻiwn Hayotsʻ"),
+    (re.compile(r"(?:pachom|paḫōm).{0,30}(?:rule|kanōn|規章)", re.I),
+     "Rule of Pachomius"),
+    (re.compile(r"(?:life|vita).{0,25}melania|聖梅拉尼亞", re.I),
+     "Life of Melania the Younger"),
+    (re.compile(r"persian martyr acts|波斯殉道錄", re.I),
+     "Acts of the Persian Martyrs"),
+    (re.compile(r"(?:general epistle|tught.? e.?ndhanrakan).{0,30}(?:nerses|nersesi)|納爾謝斯.{0,12}牧函", re.I),
+     "Tʻughtʻ Endhanrakan"),
+    (re.compile(r"(?:preces.{0,20}ners|bank. cap.aw|havatov khostovanim|雅魚禱文)", re.I),
+     "Hawatov Khostovanim"),
+    (re.compile(r"(?:lament for edessa|oghb edeseay|哀嘆以德薩)", re.I),
+     "Oghb Edesioy"),
+    (re.compile(r"(?:life|vark).{0,20}mashtot|馬什托茨生平", re.I),
+     "Life of Mashtots"),
+    (re.compile(r"(?:vardan|vardanay).{0,25}(?:war|paterazm)|瓦爾丹與亞美尼亞戰爭", re.I),
+     "History of Vardan and the Armenian War"),
+    (re.compile(r"(?:durr.{0,15}tam|kostbaren perle|澄明信仰之珍珠|精粹之珠)", re.I),
+     "Ad-Durr ath-Thamīn"),
+    (re.compile(r"(?:abu|abū).{0,8}(?:qurrah|qurra).{0,35}(?:icon|著作)|阿布.{0,4}(?:庫拉|古拉).{0,20}(?:聖像|著作)", re.I),
+     "Works of Theodore Abū Qurrah"),
+    (re.compile(r"(?:veneration of the holy icons|difesa delle icone|聖像崇敬論|聖像辯護論)", re.I),
+     "Treatise on the Veneration of the Holy Icons (Abū Qurrah)"),
+    (re.compile(r"disputation between a christian and a saracen|基督徒與撒拉森人辯論", re.I),
+     "Disputatio Christiani et Saraceni"),
+    (re.compile(r"(?:nagaśt|nebābunā|nebabenā).{0,30}(?:tergwām|tiregwām)", re.I),
+     "Fetḥa Nagaśt"),
+    (re.compile(r"homélies.{0,20}(?:isaac|isaac le syrien)", re.I),
+     "Ascetical Homilies of Isaac of Nineveh"),
+    (re.compile(r"homily on the apostle thomas and the resurrection", re.I),
+     "Mēmrā on Thomas and the Resurrection"),
+    (re.compile(r"preces s\. niersis clajensis", re.I),
+     "Hawatov Khostovanim"),
+    (re.compile(r"synaxarium.{0,35}copt", re.I),
+     "Coptic Synaxarium"),
+]
+
+
+def known_corpus_pattern_hit(rows: list[dict]) -> str:
+    haystack = "\n".join(
+        f"{r.get('classification', {}).get('title_orig', '')} "
+        f"{r.get('classification', {}).get('title_zh', '')} "
+        f"{r.get('classification', {}).get('author', '')}"
+        for r in rows
+    )
+    for pattern, corpus_title in KNOWN_CORPUS_PATTERNS:
+        if pattern.search(haystack):
+            return corpus_title
+    return ""
+
 
 def unescape(s: str) -> str:
     return s.replace("\\'", "'").replace('\\"', '"').replace("\\\\", "\\")
@@ -137,7 +254,13 @@ def main() -> None:
         c0 = rows[0]["classification"]
         no = norm(c0.get("title_orig", ""))
         nz = norm_zh(c0.get("title_zh", ""))
-        hit = prefix_hit(no, c_orig) or (nz if nz in c_zh else "")
+        known_hit = next(
+            (KNOWN_CORPUS_EQUIVALENTS[r["record_key"]]
+             for r in rows if r["record_key"] in KNOWN_CORPUS_EQUIVALENTS),
+            "",
+        )
+        hit = (known_hit or known_corpus_pattern_hit(rows) or
+               prefix_hit(no, c_orig) or (nz if nz in c_zh else ""))
         entry = {"key": key, "n_editions": len(rows), "rows": rows, "corpus_hit": hit}
         (in_corpus if hit else new_groups).append(entry)
 

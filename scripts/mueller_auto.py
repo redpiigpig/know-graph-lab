@@ -315,45 +315,112 @@ def ingest_work(work: dict) -> int:
 MAX_FAIL = 3
 
 
-def translate_work(work: dict, translate_para, *, reupload_every: int = 12) -> int:
+def _translation_engines(section: dict, zh: list, size: int) -> list:
+    engines = list(section.get("engines") or [])
+    engines = (engines + [None] * size)[:size]
+    for idx, value in enumerate(zh):
+        if value and not engines[idx]:
+            engines[idx] = "unknown"
+    return engines
+
+
+def translate_work(
+    work: dict,
+    translate_para,
+    *,
+    reupload_every: int = 12,
+    max_total_paras: int | None = None,
+    engine_name: str = "unknown",
+) -> int:
     """Fill 繁中 for one already-ingested work, resumably, reading the per-section
     caches ingest_work wrote. Re-uploads every `reupload_every` sections so the
     reader shows Chinese landing incrementally (English stays as fallback).
     Segments that fail MAX_FAIL passes are marked exhausted and skipped."""
-    done = 0
+    translated = 0
     i = 0
     while sec_path(work["slug"], i).exists():
+        if max_total_paras is not None and translated >= max_total_paras:
+            break
         cp = sec_path(work["slug"], i)
         s = json.loads(cp.read_text(encoding="utf-8"))
         en = s["en"]
         zh = (s.get("zh") or [None] * len(en))[:len(en)] + [None] * (len(en) - len(s.get("zh") or []))
+        engines = _translation_engines(s, zh, len(en))
         raw_fail = s.get("fail") or []
         fail = raw_fail[:len(en)] + [0] * max(0, len(en) - len(raw_fail))
         # skip already-translated AND exhausted (dead) segments
         todo = [j for j in range(len(en)) if not (zh[j] or "").strip() and fail[j] < MAX_FAIL]
+        if max_total_paras is not None:
+            todo = todo[:max(0, max_total_paras - translated)]
         if todo:
             print(f"    {work['slug']} sec{i}「{s['title'][:36]}」 ¶={len(en)} todo={len(todo)}", flush=True)
         for k, j in enumerate(todo, 1):
             r = translate_para(en[j], "")
             if (r or "").strip():
                 zh[j] = r
+                engines[j] = engine_name
                 fail[j] = 0
+                translated += 1
             else:
                 fail[j] += 1  # count toward MAX_FAIL so we stop re-attempting dead segments
             if k % 3 == 0 or k == len(todo):
                 s["zh"] = zh
                 s["fail"] = fail
+                s["engines"] = engines
                 cp.write_text(json.dumps(s, ensure_ascii=False, indent=1), encoding="utf-8")
                 if LOCK.exists():
                     LOCK.touch()
         s["zh"] = zh
         s["fail"] = fail
+        s["engines"] = engines
         cp.write_text(json.dumps(s, ensure_ascii=False, indent=1), encoding="utf-8")
-        done += sum(1 for z in zh if z)
         i += 1
         if reupload_every and i % reupload_every == 0:
             assemble_and_upload(work)
-    return done
+    return translated
+
+
+def count_local_drafts(work: dict) -> int:
+    count = 0
+    for cp in work_dir(work["slug"]).glob("sec*.json"):
+        try:
+            section = json.loads(cp.read_text(encoding="utf-8"))
+            count += sum(value == "ollama" for value in (section.get("engines") or []))
+        except (OSError, json.JSONDecodeError):
+            continue
+    return count
+
+
+def review_local_drafts(
+    work: dict,
+    translate_para,
+    *,
+    engine_name: str,
+    max_total_paras: int | None = None,
+) -> int:
+    reviewed = 0
+    for cp in sorted(work_dir(work["slug"]).glob("sec*.json"),
+                     key=lambda p: int(p.stem[3:])):
+        section = json.loads(cp.read_text(encoding="utf-8"))
+        en = list(section.get("en") or [])
+        zh = (list(section.get("zh") or []) + [None] * len(en))[:len(en)]
+        engines = _translation_engines(section, zh, len(en))
+        todo = [i for i in range(len(en)) if zh[i] and engines[i] == "ollama"]
+        if max_total_paras is not None:
+            todo = todo[:max(0, max_total_paras - reviewed)]
+        for i in todo:
+            output = translate_para(en[i], "")
+            if (output or "").strip():
+                zh[i] = output
+                engines[i] = engine_name
+                reviewed += 1
+                section.update({"zh": zh, "engines": engines})
+                cp.write_text(json.dumps(section, ensure_ascii=False, indent=1), encoding="utf-8")
+            if max_total_paras is not None and reviewed >= max_total_paras:
+                break
+        if max_total_paras is not None and reviewed >= max_total_paras:
+            break
+    return reviewed
 
 
 def cover_chunk(work: dict) -> dict:

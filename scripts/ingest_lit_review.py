@@ -230,7 +230,16 @@ def fetch_url(url: str) -> tuple[str, str]:
     if "pdf" in ctype or url.lower().split("?")[0].endswith(".pdf"):
         import fitz  # PyMuPDF
         doc = fitz.open(stream=content, filetype="pdf")
-        text = "\n\n".join(page.get_text() for page in doc)
+        # PDF pages often contain no blank line between body paragraphs, while a
+        # copyright/running-header line at the top can make the whole page look
+        # like boilerplate.  PyMuPDF's layout blocks preserve paragraph-like
+        # units and let the downstream cleaner discard headers individually.
+        text = "\n\n".join(
+            block[4]
+            for page in doc
+            for block in page.get_text("blocks")
+            if block[4].strip()
+        )
         doc.close()
         return "pdf", text
     if archived_r2:
@@ -253,6 +262,21 @@ def upsert_one_section(entry_id: int, i: int, orig: str, zh: str) -> None:
         {"entry_id": entry_id, "version_code": "orig", "order_index": i, "text": orig, "char_count": len(orig)},
         {"entry_id": entry_id, "version_code": "zh", "order_index": i, "text": zh, "char_count": len(zh)},
     ], on_conflict="entry_id,version_code,order_index")
+
+
+def store_orig_sections(entry_id: int, orig: list[str]) -> None:
+    """Store a complete original-language text without requiring translation."""
+    rows = [
+        {"entry_id": entry_id, "version_code": "orig", "order_index": i,
+         "text": paragraph, "char_count": len(paragraph)}
+        for i, paragraph in enumerate(orig)
+    ]
+    for start in range(0, len(rows), 250):
+        rest_upsert(
+            "lit_review_sections",
+            rows[start:start + 250],
+            on_conflict="entry_id,version_code,order_index",
+        )
 
 
 def translate_and_store(entry_id: int, orig: list[str], te, fn, pace: float, resume: bool) -> int:
@@ -278,7 +302,7 @@ def fetch_fulltext(project_slug: str, engine: str, resume: bool,
                    only: str | None, limit_paras: int | None,
                    limit_entries: int | None, pace: float, dry_run: bool,
                    book_id: str = "", shard_index: int = 0,
-                   shard_count: int = 1) -> None:
+                   shard_count: int = 1, orig_only: bool = False) -> None:
     sel = "id,ref_key,title,language,fulltext_url,fulltext_status"
     q = f"project_slug=eq.{project_slug}&select={sel}&order=display_order"
     if book_id:
@@ -305,7 +329,7 @@ def fetch_fulltext(project_slug: str, engine: str, resume: bool,
         if not path:
             print(f"  ⏭ homepage URL (resolve article first): {e['ref_key']}", flush=True)
             continue
-        if resume and e["fulltext_status"] == "translated":
+        if resume and e["fulltext_status"] == "translated" and not orig_only:
             continue
         todo.append(e)
     if limit_entries:
@@ -313,7 +337,7 @@ def fetch_fulltext(project_slug: str, engine: str, resume: bool,
     print(f"fetch-fulltext: {len(todo)} entries to process "
           f"[shard {shard_index + 1}/{shard_count}]", flush=True)
 
-    te, fn = (None, None) if dry_run else make_engine(engine)
+    te, fn = (None, None) if (dry_run or orig_only) else make_engine(engine)
     consec_fail = 0
     for e in todo:
         print(f"  → {e['ref_key']}  ({e['fulltext_url']})", flush=True)
@@ -329,6 +353,13 @@ def fetch_fulltext(project_slug: str, engine: str, resume: bool,
             if dry_run:
                 continue
             orig = paras[:limit_paras] if limit_paras else paras
+            if orig_only:
+                store_orig_sections(e["id"], orig)
+                rest_patch("lit_review_entries", f"id=eq.{e['id']}",
+                           {"fulltext_status": "fetched"})
+                print(f"    ✓ stored {len(orig)} original-language paragraphs", flush=True)
+                consec_fail = 0
+                continue
             n = translate_and_store(e["id"], orig, te, fn, pace, resume)
             # fully done only when the WHOLE article is translated — never mark a
             # --limit-paras pilot 'translated' (it truncates orig, so resume would
@@ -375,6 +406,8 @@ def main():
     ap.add_argument("--limit-entries", type=int, default=None)
     ap.add_argument("--pace", type=float, default=0.0)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--orig-only", action="store_true",
+                    help="fetch and store the complete original text without translating it")
     ap.add_argument("--entries-only", action="store_true",
                     help="seed only the bibliography entries; leave the writing_project meta untouched")
     ap.add_argument("--display-offset", type=int, default=0,
@@ -402,7 +435,7 @@ def main():
         fetch_fulltext(args.project, args.engine, args.resume, args.only,
                        args.limit_paras, args.limit_entries, args.pace, args.dry_run,
                        book_id=args.book_id, shard_index=args.shard_index,
-                       shard_count=args.shard_count)
+                       shard_count=args.shard_count, orig_only=args.orig_only)
     if not args.seed and not args.fetch_fulltext:
         sys.exit("need --seed and/or --fetch-fulltext")
 

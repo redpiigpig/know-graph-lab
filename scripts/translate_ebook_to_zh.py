@@ -142,7 +142,7 @@ _nv_key_idx = 0
 #   glm-5.1 ✗ 105s (reasoning) · qwen3.5-122b ✗ timeout
 # So deepseek is the SOLE NVIDIA model; on its failure the chain falls to Gemini
 # (also structurally correct), NOT to a paragraph-collapsing NVIDIA model.
-NVIDIA_MODELS = ["deepseek-ai/deepseek-v4-flash"]
+NVIDIA_MODELS = ["deepseek-ai/deepseek-v4-flash-0731"]
 NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
 
 # Local Ollama engine. Uses no external API key; set OLLAMA_MODEL to override.

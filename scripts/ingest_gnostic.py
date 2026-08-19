@@ -114,6 +114,7 @@ def make_engine(engine: str):
         # NVIDIA) are dry or busy and we'd rather burn Max quota than idle
         # (user 2026-06-05: 「免費的沒有或被佔用了，就去開 Haiku，我有訂閱 max」).
         "haiku": te.haiku_translate,
+        "ollama": te.ollama_translate,
     }[engine]
     return te, fn
 
@@ -363,7 +364,7 @@ def main():
     ap.add_argument("--url", help="single document URL")
     ap.add_argument("--title", default="", help="document title (overrides parsed)")
     ap.add_argument("--list", action="store_true", help="list category docs and exit")
-    ap.add_argument("--engine", default="gemini", choices=["gemini", "nvidia", "sonnet", "haiku"])
+    ap.add_argument("--engine", default="gemini", choices=["gemini", "nvidia", "sonnet", "haiku", "ollama"])
     ap.add_argument("--resume", action="store_true", help="skip docs already in DB")
     ap.add_argument("--limit-docs", type=int, default=None)
     ap.add_argument("--limit-paras", type=int, default=None, help="cap paragraphs per doc (pilot)")

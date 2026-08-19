@@ -3,7 +3,7 @@ name: ebook-translate
 description: 將外文 ebook 翻譯／轉成繁體中文並入庫（reader 可讀）的完整流程。涵蓋兩條子 pipeline — (A) **英文 → 繁中（雙語入庫）**：`--engine auto`＝Gemini → NVIDIA → Haiku 三層鏈（Sonnet 4.6 仍可 `--engine sonnet` 顯式指定）章節級翻譯，原文 source_text 同步存進 JSONL，reader 提供「中／中英對照／英」三段切換；(B) **簡體 → 繁體（直接取代）**：opencc s2tw + TRAD_FIXES，不用 LLM，覆寫 content 不保留 source_text。Use when 使用者要把英文 ebook 翻成中文上架（例 ACCS Apocrypha、未中譯的 Schaff 卷）、補 ACCS 缺的中譯卷（vol 24-25 耶利米/哀歌等），或把舊有簡體書批次轉成繁體。本 skill 與 ebook-pipeline 並列：ebook-pipeline 處理 parse/OCR/standardize，本 skill 處理「外文／簡體 → 繁中」這一段。
 ---
 
-> ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
+> ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash-0731`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
 
 
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session。使用者一說要傳截圖立刻提醒先確認尺寸。
@@ -98,7 +98,7 @@ python scripts/translate_ebook_to_zh.py <ebook_id> --engine auto --resume
 
 ## 引擎選擇
 
-**預設一律 `--engine auto`** = 統一三層 fallback：**Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋節流）→ Haiku 救急**。其餘 `--engine` 選項只在特殊狀況才手動指定：
+**預設一律 `--engine auto`** = 統一三層 fallback：**Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `deepseek-ai/deepseek-v4-flash-0731`，4 把 key 輪流＋節流）→ Haiku 救急**。其餘 `--engine` 選項只在特殊狀況才手動指定：
 
 | 引擎 | 何時用 | 注意 |
 |---|---|---|

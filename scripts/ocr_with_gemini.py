@@ -120,6 +120,15 @@ def _find_gemini_keys() -> list[str]:
             k = piece.strip()
             if k and k not in seen:
                 seen.add(k); keys.append(k)
+    # Pin restarted workers to the key that passed a real generateContent
+    # probe, so a known-429 key is not retried by every OCR subprocess.
+    slot = os.environ.get("KGL_GEMINI_SLOT", "").strip()
+    if slot:
+        idx = int(slot) - 1
+        if idx < 0 or idx >= len(keys):
+            raise RuntimeError(
+                f"KGL_GEMINI_SLOT={slot} but only {len(keys)} Gemini keys found")
+        return [keys[idx]]
     return keys
 
 

@@ -16,7 +16,7 @@ def env():
     return e
 E=env()
 KEYS=[E[k] for k in sorted(E) if k.upper().startswith('NVIDIA_API_KEY')]
-URL='https://integrate.api.nvidia.com/v1/chat/completions'; MODEL='deepseek-ai/deepseek-v4-flash'
+URL='https://integrate.api.nvidia.com/v1/chat/completions'; MODEL='deepseek-ai/deepseek-v4-flash-0731'
 PER_KEY_INTERVAL=5.0; COOLDOWN_429=120.0
 _klock=threading.Lock(); _next=[0.0]*len(KEYS)
 def _pick():

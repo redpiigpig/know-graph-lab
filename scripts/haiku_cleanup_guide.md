@@ -1,5 +1,5 @@
 
-> ⚙️ **引擎政策（2026-06-04 更新）**：所有 LLM 工作一律**優先用 NVIDIA（輝達，`https://integrate.api.nvidia.com/v1`，預設文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避免 429）**，第二層 fallback 用 Gemini，**第三層救急才用 Haiku（NVIDIA→Gemini→Haiku；前兩個免費池都用罄時才動 Haiku）**。視覺類用 NVIDIA 視覺模型（如 `nvidia/llama-3.1-nemotron-nano-vl-8b-v1`）。
+> ⚙️ **引擎政策（2026-06-04 更新）**：所有 LLM 工作一律**優先用 NVIDIA（輝達，`https://integrate.api.nvidia.com/v1`，預設文字模型 `deepseek-ai/deepseek-v4-flash-0731`，4 把 key 輪流＋間隔節流避免 429）**，第二層 fallback 用 Gemini，**第三層救急才用 Haiku（NVIDIA→Gemini→Haiku；前兩個免費池都用罄時才動 Haiku）**。視覺類用 NVIDIA 視覺模型（如 `nvidia/llama-3.1-nemotron-nano-vl-8b-v1`）。
 > 🚫 本指南所述 Haiku 流程平時不用，改用 NVIDIA；Haiku 僅作最後救急（NVIDIA＋Gemini 都用罄時，見上方政策）。
 
 # 🧹 Haiku Text Cleanup: Simplified → Traditional + Format Cleaning

@@ -214,7 +214,7 @@ def assemble(vol, cfg_title: str, ebid: str, data: Path, units: list[str], *, up
 def run_vol(vol, cfg, bounds, args) -> None:
     import translate_ebook_to_zh as te
 
-    engine = {"nvidia": te.nvidia_with_gemini_fallback, "auto": te.gemini_with_nvidia_fallback,
+    engine = {"nvidia": te.nvidia_translate, "auto": te.gemini_with_nvidia_fallback,
               "haiku": te.haiku_translate}[args.engine]
     title, _start = cfg
     z = zipfile.ZipFile(EPUB)

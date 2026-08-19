@@ -1,5 +1,5 @@
 # 歷史國界 100 年級距審查（v2）
-時間：2026-05-16T09:35:35.524Z
+時間：2026-07-11T01:55:05.452Z
 資料：historical-states.geojson 9588 features → 過濾政權後 4008
 
 ## 預掃結果
@@ -475,7 +475,7 @@
     貝內文托公國 (Dutchy of Benevento)                       Emirate of Sicily (Emirate of Sicily)              英格蘭 (England)                                     
     梅里納擴張王國 (Expansionist Kingdom of Meri)             Fatimid Caliphate (Fatimid Caliphate)              Georgia (Georgia)                                 
     Ghana (Ghana)                                      加茲尼王朝 (Ghaznavid Emirate)                          哈德拉毛 (Hadramaut)                                  
-    Holy Roman Empire (Holy Roman Empire)              瓦里帝國 (Huari Empire)                                日本帝國 (Imperial Japan (Fujiwara))                  
+    Holy Roman Empire (Holy Roman Empire)              瓦里帝國 (Huari Empire)                                日本 (Imperial Japan (Fujiwara))                    
     伊斯蘭城邦 (Islamic city-states)                        Kalinga (Kalinga)                                  加涅姆 (Kanem)                                       
     Khmer Empire (Khmer Empire)                        基馬克-欽察汗國 (Kimek-Kipchak khaganate)                 Kingdom of France (Kingdom of France)             
     Kingdom of Georgia (Kingdom of Georgia)            蒲甘王國 (Kingdom of Pagan)                            Korea (Korea)                                     
@@ -506,7 +506,7 @@
     英格蘭 (England)                                      梅里納擴張王國 (Expansionist Kingdom of Meri)             Fatimid Caliphate (Fatimid Caliphate)             
     Ghana (Ghana)                                      加茲尼王朝 (Ghaznavid Emirate)                          哈德拉毛 (Hadramaut)                                  
     印度教王國 (Hindu Kingdoms)                             Holy Roman Empire (Holy Roman Empire)              瓦里帝國 (Huari Empire)                               
-    Hungary (Hungary)                                  日本帝國 (Imperial Japan (Fujiwara))                   伊斯蘭城邦 (Islamic city-states)                       
+    Hungary (Hungary)                                  日本 (Imperial Japan (Fujiwara))                     伊斯蘭城邦 (Islamic city-states)                       
     加涅姆 (Kanem)                                        喀喇汗國 (Karkhanids)                                  Khmer Empire (Khmer Empire)                       
     基輔羅斯 (Kievan Rus)                                  基輔羅斯 (Kievan Rus)                                  Kingdom of France (Kingdom of France)             
     Kingdom of Georgia (Kingdom of Georgia)            素可泰王國 (Kingdom of Sukhotai)                        Korea (Korea)                                     
@@ -540,7 +540,7 @@
     Fatimid Caliphate (Fatimid Caliphate)              Georgia (Georgia)                                  Ghana (Ghana)                                     
     加茲尼王朝 (Ghaznavid Emirate)                          Goryeo (Goryeo)                                    哈德拉毛 (Hadramaut)                                  
     Holy Roman Empire (Holy Roman Empire)              瓦里帝國 (Huari Empire)                                Hungary (Hungary)                                 
-    伊法特蘇丹國 (Ifat)                                      日本帝國 (Imperial Japan (Fujiwara))                   伊斯蘭城邦 (Islamic city-states)                       
+    伊法特蘇丹國 (Ifat)                                      日本 (Imperial Japan (Fujiwara))                     伊斯蘭城邦 (Islamic city-states)                       
     加涅姆 (Kanem)                                        Khmer Empire (Khmer Empire)                        Kingdom of France (Kingdom of France)             
     Kingdom of France (Kingdom of France)              雷昂 (León)                                          Liao (Liao)                                       
     Madagascar (Madagascar)                            馬庫拉人 (Makkura)                                     Mali (Mali)                                       
@@ -668,7 +668,7 @@
     戈爾康達 (Golkonda)                                    哈布斯堡尼德蘭 (Habsburg Netherlands)                     哈德拉毛 (Hadramaut)                                  
     豪薩諸國 (Hausa States)                                西屬伊斯帕尼奧拉 (Hispaniola (Spain))                      Holy Roman Empire (Holy Roman Empire)             
     Holy Roman Empire (Holy Roman Empire)              Inca Empire (Inca Empire)                          伊斯蘭與印度教國家 (Islamic and Hindu states)              
-    伊斯蘭城邦 (Islamic city-states)                        日本戰國時代 (Japan (Warring States))                    希瓦汗國 (Khiva Khanate)                              
+    伊斯蘭城邦 (Islamic city-states)                        日本 (Japan (Warring States))                        希瓦汗國 (Khiva Khanate)                              
     Korea (Korea)                                      蘭納 (Lan Na)                                        Laos (Laos)                                       
     盧巴人 (Luba)                                         隆達人 (Lunda)                                        Madagascar (Madagascar)                           
     馬六甲 (Malacca)                                      馬來西亞伊斯蘭邦國 (Malaysian Islamic states)               瑪雅 (Maya)                                         

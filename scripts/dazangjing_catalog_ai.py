@@ -35,7 +35,7 @@ DEFAULT_LOG = CATALOG_DIR / "catalog-loop.log"
 OLLAMA_BASE = os.environ.get("OLLAMA_BASE", "http://localhost:11434")
 OLLAMA_MODEL = os.environ.get("DAZANGJING_OLLAMA_MODEL", "qwen2.5:7b")
 GEMINI_MODEL = os.environ.get("DAZANGJING_GEMINI_MODEL", "gemini-2.5-flash")
-NVIDIA_MODEL = os.environ.get("DAZANGJING_NVIDIA_MODEL", "deepseek-ai/deepseek-v4-flash")
+NVIDIA_MODEL = os.environ.get("DAZANGJING_NVIDIA_MODEL", "deepseek-ai/deepseek-v4-flash-0731")
 NVIDIA_URL = os.environ.get("NVIDIA_BASE_URL", "https://integrate.api.nvidia.com/v1/chat/completions")
 
 

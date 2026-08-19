@@ -90,7 +90,7 @@ def upsert_zh(slug: str, order_index: int, text: str):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--engine", default="gemini",
-                    choices=["gemini", "nvidia", "sonnet", "haiku"])
+                    choices=["gemini", "nvidia", "sonnet", "haiku", "ollama"])
     ap.add_argument("--dry", action="store_true", help="detect + report, translate nothing")
     ap.add_argument("--show", type=int, default=0, help="print N flagged samples")
     ap.add_argument("--limit", type=int, default=None, help="cap sections this run")
@@ -146,6 +146,7 @@ def main():
         "nvidia": te.nvidia_translate,
         "sonnet": te.sonnet_translate,
         "haiku": te.haiku_translate,
+        "ollama": te.ollama_translate,
     }[args.engine]
 
     # --retranslate (精修): every section in scope. Default: only flagged ones.

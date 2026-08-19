@@ -17,8 +17,14 @@ $repo = Split-Path -Parent $PSScriptRoot
 $python = (Get-Command python -ErrorAction Stop).Source
 $log = 'C:\tmp\cw_translation_supervisor.log'
 $lock = 'C:\tmp\cw_translation.lock'
+$pause = Join-Path $repo 'scripts\state\cw_translation_supervisor.pause'
 
 function Log([string]$m) { Add-Content -LiteralPath $log -Encoding utf8 -Value "$(Get-Date -Format o) $m" }
+
+if (Test-Path -LiteralPath $pause) {
+    Log "paused by monitor - no modern classics pass"
+    exit 0
+}
 
 # --- PID lock guard ---
 if (Test-Path -LiteralPath $lock) {

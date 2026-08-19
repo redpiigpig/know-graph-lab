@@ -3,7 +3,7 @@ name: ebook-collected-works
 description: 「經典學者全集」的收錄流程 —— 以**學科**組織（哲學／社會學／宗教學／神學／佛學／心理學／人類學…），獨立 `/collected-works` portal（依學科分區）＋作家 hub（小傳／肖像／年表／著作目錄）＋單卷 reader。跟 [[ebook-translate]]（一般外文→繁中雙語）、[[scripture-fathers]]（公有領域教父原典）並列。四種收錄 pipeline：**多語對照**（原文＋既有譯本＋我的繁中，N 欄逐段）／**單一語言**（本即繁中的漢傳全集，零翻譯零對齊）／**REFERENCE**（已有完整第三方中譯就不重譯，原文逐段對照）／**自譯**（English-first 引擎逐段翻）。Use when 使用者要把某位學者的全集（依學科）做成 hub＋逐段對照上架、要新增作家或學科、要擴充 reader 多欄、要設計／修多語 JSONL schema、要對齊跨版本段落。各學科案例見下「§C 各學科案例」；schema／對齊／portal 基建見「§B 方法論核心」。
 ---
 
-> ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
+> ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash-0731`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
 
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：傳進對話的截圖（寬或高任一邊）超過 2000px 會直接炸掉整個 session。
 

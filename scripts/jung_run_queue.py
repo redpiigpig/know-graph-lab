@@ -21,12 +21,15 @@ VOLS = ["9ii", "11", "12", "9i", "14", "13", "5", "8", "10", "7",
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--engine", default="nvidia", choices=["nvidia", "auto", "haiku"])
+    ap.add_argument("--no-upload", action="store_true")
     args = ap.parse_args()
     for vol in VOLS:
         print(f"\n=== jung_cw_translate --vol {vol} ===", flush=True)
-        rc = subprocess.run(
-            [sys.executable, "-X", "utf8", str(ROOT / "jung_cw_translate.py"),
-             "--vol", vol, "--engine", args.engine]).returncode
+        cmd = [sys.executable, "-X", "utf8", str(ROOT / "jung_cw_translate.py"),
+               "--vol", vol, "--engine", args.engine]
+        if args.no_upload:
+            cmd.append("--no-upload")
+        rc = subprocess.run(cmd).returncode
         if rc != 0:
             print(f"  [bail] CW{vol} 退出碼 {rc}（多半額度乾）→ 停整批續傳", flush=True)
             return 1

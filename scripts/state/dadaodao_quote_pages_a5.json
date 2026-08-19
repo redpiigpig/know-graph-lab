@@ -1,0 +1,80 @@
+﻿{
+    "v2_ch3_xingguang":  {
+                             "volume":  1,
+                             "adjusted_page":  42,
+                             "physical_page":  46,
+                             "needle":  "要慢到什麼時候呢"
+                         },
+    "v2_ch3_xingguang_institution":  {
+                                         "volume":  1,
+                                         "adjusted_page":  51,
+                                         "physical_page":  55,
+                                         "needle":  "希望讓道場學院化"
+                                     },
+    "v2_ch6_huang_build":  {
+                               "volume":  1,
+                               "adjusted_page":  54,
+                               "physical_page":  58,
+                               "needle":  "我們蓋二樓的時候"
+                           },
+    "v2_ch6_huang_free":  {
+                              "volume":  1,
+                              "adjusted_page":  70,
+                              "physical_page":  74,
+                              "needle":  "在玄奘教書的人都會有一種共同感受"
+                          },
+    "v2_ch7_xingguang_action":  {
+                                    "volume":  1,
+                                    "adjusted_page":  47,
+                                    "physical_page":  51,
+                                    "needle":  "在台北街頭的觀音像前"
+                                },
+    "v2_ch7_xingguang_samadhi":  {
+                                     "volume":  1,
+                                     "adjusted_page":  48,
+                                     "physical_page":  52,
+                                     "needle":  "總結而言，解脫道的禪修"
+                                 },
+    "v2_ch1_changci":  {
+                           "volume":  2,
+                           "adjusted_page":  386,
+                           "physical_page":  202,
+                           "needle":  "當時並不知道印順導師還在"
+                       },
+    "v2_ch5_huang_meiyu":  {
+                               "volume":  3,
+                               "adjusted_page":  475,
+                               "physical_page":  65,
+                               "needle":  "法師其實也是一個不像我們印象中那樣的法師"
+                           },
+    "v2_ch5_zhu_euthanasia":  {
+                                  "volume":  3,
+                                  "adjusted_page":  527,
+                                  "physical_page":  117,
+                                  "needle":  "我要不要承擔讓他安樂死"
+                              },
+    "v2_ch5_zhu_zero_kill":  {
+                                 "volume":  3,
+                                 "adjusted_page":  528,
+                                 "physical_page":  118,
+                                 "needle":  "災難都在動物身上"
+                             },
+    "v2_ch5_arrigo":  {
+                          "volume":  3,
+                          "adjusted_page":  443,
+                          "physical_page":  33,
+                          "needle":  "她不怕被外界貼政治標籤"
+                      },
+    "v2_ch5_ye":  {
+                      "volume":  3,
+                      "adjusted_page":  539,
+                      "physical_page":  129,
+                      "needle":  "非常偉大的布施"
+                  },
+    "v2_epilogue_hong":  {
+                             "volume":  3,
+                             "adjusted_page":  487,
+                             "physical_page":  77,
+                             "needle":  "誰不反對我們"
+                         }
+}

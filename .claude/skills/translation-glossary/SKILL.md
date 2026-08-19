@@ -3,7 +3,7 @@ name: translation-glossary
 description: 「翻譯定名」通用名物中譯對照工具（/translation-glossary，**已升為首頁頂層卡、移出聖經 portal**） — 原本只有教父／神學家＋神學名詞，2026-06-03 起擴為全領域：聖經人物／教父神學家／神學名詞（神學兩表）＋哲學家／科學家／歷代帝王／國名與城市／神祇與宗教名詞（各領域新表）＋一頁翻譯原則。核心規則：按原文不按英文、沿用良好古譯／意譯、音意結合（亞歷山卓>亞歷山大城、馬爾堡>馬布爾）、名根一致（name_root：密特→密特拉/密特里達迪、塞琉→塞琉古/塞琉西亞）。Use when 翻書前鎖定任何人名／地名／神祇／帝王／哲人科學家譯名、新增領域條目、校對名根一致性、改翻譯原則頁。串 [[ebook-translate]]。2026-07-01 加「官制與行政區」分頁：外國政權官名／職務／行政區名按「朝代 register」中譯（商周/戰國秦/漢/魏晉/唐/明清…），解決「總督/行省」氾濫、無層次感；見 [offices_register_blueprint.md](offices_register_blueprint.md)。
 ---
 
-> ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
+> ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash-0731`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
 
 
 # Translation Glossary Skill（「翻譯定名」）

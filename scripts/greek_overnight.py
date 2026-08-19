@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """古希臘全集‧整夜自動化 queue — 把柏拉圖＋亞里斯多德所有可得作品逐部三欄轉錄上架。
 
-每部走 plato_build.run(slug, engine='haiku', --upload)：逐節快取（resumable）、per-work try/except
+每部走 plato_build.run(slug, engine='auto', upload=True)：逐節快取（resumable）、per-work try/except
 （一部失敗不中斷整夜）、成功寫 `<slug>.done` marker（重跑自動跳過已完成部）。整夜跑、隔夜續。
 
 用法：
@@ -17,9 +17,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import plato_build as pb  # noqa: E402  (import 時已把 sys.stdout 設成 utf-8；勿再重包＝雙包會關掉 buffer)
 
 LOG = Path("c:/tmp/greek_overnight.log")
-# NVIDIA (deepseek-v4-flash, 4-key rotation + throttle) — generous free tier，
-# 不像 Haiku(Claude Max) 那樣 bulk 撞 429。可 `--engine haiku/gemini` 覆蓋。
-ENGINE = sys.argv[sys.argv.index("--engine") + 1] if "--engine" in sys.argv else "nvidia"
+# 統一引擎政策：Gemini → NVIDIA → Haiku；可用 `--engine nvidia/haiku` 覆蓋。
+ENGINE = sys.argv[sys.argv.index("--engine") + 1] if "--engine" in sys.argv else "auto"
 
 
 def log(msg: str) -> None:
@@ -82,6 +81,7 @@ def main() -> None:
     log(f"ok={ok}")
     if fail:
         log(f"fail={fail}（重跑 greek_overnight.py 會自動續，快取不重翻）")
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

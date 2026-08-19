@@ -15,7 +15,10 @@ from __future__ import annotations
 import argparse, io, re, sys
 from pathlib import Path
 
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+except (AttributeError, ValueError):
+    pass
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import multilang_chunks as mc  # noqa: E402
 
@@ -206,7 +209,8 @@ def make_translate_fn(engine: str, slug: str):
     """逐節翻＋逐節快取（`c:/tmp/plato_cache/<slug>_zh/<id>.txt`）→ 大部中途掛掉重跑自動續。"""
     import translate_ebook_to_zh as te
     te.PROMPT_TMPL = PROMPT_TMPL
-    engine_fn = {"gemini": te.gemini_with_haiku_fallback, "haiku": te.haiku_translate,
+    engine_fn = {"auto": te.gemini_with_nvidia_fallback,
+                 "gemini": te.gemini_with_haiku_fallback, "haiku": te.haiku_translate,
                  "sonnet": te.sonnet_translate, "nvidia": te.nvidia_translate}[engine]
     cdir = CACHE / f"{slug}_zh"
     cdir.mkdir(parents=True, exist_ok=True)
@@ -243,7 +247,8 @@ def ensure_ebook_row(slug: str) -> None:
     row = {"id": d["ebook_id"], "title": f"{d['title_zh']}（希英繁三欄）",
            "author": d["author"], "author_en": d["author_en"], "file_type": "epub",
            "file_path": d["file_path"], "category": d["category"], "subcategory": d["subcategory"],
-           "original_title": d["title_orig"], "translator": "Claude（希臘直譯）", "display_mode": "standard"}
+           "original_title": d["title_orig"], "translator": "AI 輔助（希臘原文直譯）",
+           "display_mode": "standard", "collection": "collected-works"}
     requests.post(f"{te.URL}/rest/v1/ebooks", headers=te.H_JSON, json=row, timeout=30).raise_for_status()
     print(f"  ✓ inserted ebooks row {d['ebook_id']}")
 
@@ -253,6 +258,10 @@ def run(slug: str, *, engine="haiku", limit=None, upload=False) -> list[dict]:
     grc_xml, eng_xml = fetch(slug)
     grc, eng = parse_units(grc_xml, d["anchor"]), parse_units(eng_xml, d["anchor"])
     units = build_units(slug, grc, eng)
+    if not units:
+        raise RuntimeError(
+            f"[{slug}] 找不到可對齊的 {d['anchor']} 單位；停止，避免把空白封面誤標為完成"
+        )
     print(f"[{slug}] {d['author']}《{d['title_zh']}》 {len(grc)}/{len(eng)} {d['anchor']} → {len(units)} 頁"
           f"{' / eng=' + d['eng_note'] if d.get('eng_note') else ''}")
     if limit:

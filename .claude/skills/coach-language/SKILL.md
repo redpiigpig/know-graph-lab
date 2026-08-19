@@ -3,7 +3,7 @@ name: coach-language
 description: AI 語言教練（/coach）— 外語自學系統，多語言（英文 Emily / 德文 Lukas / 法文 Camille / 日文 櫻子 / 通用希臘文 Sophia / 教會拉丁文 Marcus / 聖經希伯來文 Miriam 全上線）。核心：Gemini 對話 + Web Speech 語音；每語言獨立空間（首頁/儀表板/記憶/功能各自客製）。功能含五種聊天模式（打字/口說/問答知識/情境角色/限時主題）、今日計畫（每日推薦單字測驗+5閱讀+5聽力+口說+任務）、分級文法課（CEFR/JLPT/古語言量表）、技能練習與 TOEFL/IELTS/GRE 考試模擬、翻譯遊戲、YouTube/文章沉浸（讀聽後 MCQ+討論+評分）、統整記憶庫、教練每日簡報與日誌、SRS 單字、轉寫鍵盤（希臘文打英文＝希臘字母／日文打羅馬字＝假名／希伯來文打英文＝希伯來字母 RTL）、雙 key 成本控管。Use when 改語言教練任何功能、加語言、調人設/難度/題材、改資安（OTP 登入/付費上限）、接 Gemini key、debug coach 端點或頁面。
 ---
 
-> ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
+> ⚙️ **引擎政策（2026-06-04 統一）**：所有 LLM 工作一律 **Gemini（主，4 keys 輪流）→ NVIDIA（輝達 `https://integrate.api.nvidia.com/v1`，文字模型 `deepseek-ai/deepseek-v4-flash-0731`，4 把 key 輪流＋間隔節流避 429）→ Haiku（最後救急；前兩個免費池都用罄才動）**。`translate_ebook_to_zh.py --engine auto` 預設即此鏈。視覺／OCR 類仍走 Gemini Vision／Haiku Vision（NVIDIA vision 尚未驗證）。例外：/coach 互動聊天為 NVIDIA qwen3-next 主、Gemini 後備（見 [[feedback_coach_nvidia_engine]]）。見 [[feedback_engine_nvidia_no_haiku]]。
 
 > 🚨 **截圖規則 — 絕對禁止 >2000px**：任一邊超過 2000px 會炸掉 session。
 
@@ -191,7 +191,7 @@ description: AI 語言教練（/coach）— 外語自學系統，多語言（英
 - **🔑 線上／線下 key 分離（2026-06-04）**：線上各 AI 功能（coach 全部、族譜解析、YouTube 沉浸）**只讀「線上專用」key** `NVIDIA_API_Key_OLINE_ONLY` / `Gemini_API_Key_OLINE_ONLY`（拼字 OLINE 為既定變數名，**僅在 Zeabur 設定**）。`nuxt.config.ts` 的 `nvidiaApiKeys`/`geminiApiKeys`/`geminiApiKey` 三者皆改成只讀 `_OLINE_ONLY`。本機 `.env` 刻意**不放**這兩支，`_1..4` 共享池完全留給線下批次腳本（OCR/translate/dialogues）→ 線上線下額度徹底分離。⚠️ 三支 `dialogue_*.py` 用 `startswith('NVIDIA_API_KEY')` 前綴比對撈 key，所以 `_OLINE_ONLY` 一旦留在本機 `.env` 會被當第 5 把 key 輪進去燒掉線上額度——故必須從本機移除，不能只靠命名。⚠️ 線上為「專用」模式＝**無 `_1..4` fallback**，`_OLINE_ONLY` 失效則線上 AI 全斷；換 key 或要加保險絲時改 `nuxt.config.ts`。
   - **本機 dev fallback（2026-06-05）**：`nuxt.config.ts` 改為「OLINE key 存在用 OLINE，**不存在才退到 `_1..4` 池**」。因 Zeabur 沒設 `_1..4`，線上仍只讀 OLINE（分離政策不變）；本機 dev 沒 OLINE → 自動用 `_1..4`，coach 生成/聊天/沉浸在 localhost 也能測（之前本機跑會報「尚未設定 Gemini key」就是因為兩池皆空）。
 - **主引擎＝NVIDIA NIM（2026-06-03 起）**：`server/utils/nvidia.ts` `callNvidiaFull`（OpenAI 相容、key 輪替、剝 `<think>`）。`coach-ai.ts` `coachGemini` 先試 NVIDIA → 失敗才落 Gemini。env `nvidiaApiKeys`=線上專用 `NVIDIA_API_Key_OLINE_ONLY`（見上「線上／線下 key 分離」；全部不可用才落 Gemini）、`nvidiaModel` 預設 **`qwen/qwen3-next-80b-a3b-instruct`**（繁中佳、支援 JSON、穩定）。無限量、零成本，用量記 tier=`nvidia`。
-  - ⚠️ **不要改回 `deepseek-ai/deepseek-v4-flash`**：該模型在 NVIDIA 免費層長期 429（互動式教練不可靠）；deepseek 只適合 translate 腳本那種可退避重試的批次。其餘 NVIDIA 模型（qwen3-next、llama-3.1）正常 200。
+  - ⚠️ **不要改回 `deepseek-ai/deepseek-v4-flash-0731`**：該模型在 NVIDIA 免費層長期 429（互動式教練不可靠）；deepseek 只適合 translate 腳本那種可退避重試的批次。其餘 NVIDIA 模型（qwen3-next、llama-3.1）正常 200。
   - **fileData（YouTube 等多模態 part）NVIDIA 不支援** → `coachGemini` 偵測到自動跳過走 Gemini。**∴ YouTube 沉浸一定要有 Gemini key**；缺 key 時 `content/ingest` 回明確訊息（含「伺服器偵測到 N 把 Gemini key」），並提示可改「貼上文章」（純文字走 NVIDIA）。
 - **Fallback＝Gemini**：`server/utils/gemini.ts`（callGemini/callGeminiFull + key 輪替 + usageMetadata）；`coach-ai.ts` `coachGemini`（tier 選 key + owner/budget 守門 + 用量寫 `lang_api_usage`）。
 - 預設模型 **`gemini-flash-latest`**（固定 ID 2.5-flash 免費日限 20 太低；alias 配額桶分開）。env `GEMINI_MODEL`/`GEMINI_GRADE_MODEL` 可覆寫。

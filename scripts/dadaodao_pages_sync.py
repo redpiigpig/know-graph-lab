@@ -11,6 +11,7 @@
   4. 重建專書 md/docx（pandoc 頁尾註），再用 Word 更新專書目次
 頁數紀錄存 scripts/state/dadaodao_pages.json。
 """
+import argparse
 import json
 import re
 import sys
@@ -21,13 +22,13 @@ ROOT = Path(__file__).resolve().parent.parent
 SCRIPTS = ROOT / 'scripts'
 sys.path.insert(0, str(SCRIPTS))
 
-from dadaodao_interviews_docx import VOLUMES, build_volume, SRC_DIR, OUT_DIR  # noqa: E402
+from dadaodao_interviews_docx import BODY_STARTS, VOLUMES, build_volume, SRC_DIR, OUT_DIR  # noqa: E402
 
 MD = ROOT / '當代的大愛道革命_全書初稿.md'
-STATE = SCRIPTS / 'state/dadaodao_pages.json'
+STATE = SCRIPTS / 'state/dadaodao_pages_a5.json'
 CN = ['一', '二', '三']
 
-WD_PAGE = 3      # wdActiveEndPageNumber
+WD_PAGE = 1      # wdActiveEndAdjustedPageNumber（與頁尾顯示編號一致）
 WD_STAT_PAGES = 2
 
 
@@ -77,11 +78,17 @@ def measure_with_word():
                     if title:
                         starts.append((title, p.Range.Information(WD_PAGE)))
             total = doc.ComputeStatistics(WD_STAT_PAGES)
-            totals[out_name] = total
+            last_rng = doc.Range(max(0, doc.Content.End - 2), max(0, doc.Content.End - 1))
+            body_last = last_rng.Information(WD_PAGE)
+            totals[out_name] = {
+                'physical': total,
+                'body_start': BODY_STARTS[vi],
+                'body_last': body_last,
+            }
             # 依順序對應 files（每篇一個 Heading 1）
             for idx, fname in enumerate(files):
                 start = starts[idx][1] if idx < len(starts) else None
-                end = (starts[idx + 1][1] - 1) if idx + 1 < len(starts) else total
+                end = (starts[idx + 1][1] - 1) if idx + 1 < len(starts) else body_last
                 pages[fname] = {'vol': vi + 1, 'vol_label': CN[vi], 'start': start, 'end': end}
             # 引文精確頁：此冊涵蓋的受訪者
             persons_here = {person_of(f): f for f in files}
@@ -97,7 +104,7 @@ def measure_with_word():
                     quote_pages[fid] = rng.Information(WD_PAGE)
             doc.Save()
             doc.Close()
-            print(f'{vtitle}：{total} 頁，目次已更新')
+            print(f'{vtitle}：實體 {total} 頁，正文頁碼 {BODY_STARTS[vi]}–{body_last}，目次已更新')
     finally:
         word.Quit()
     return pages, totals, quote_pages
@@ -175,14 +182,25 @@ def update_book_toc():
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--measure-only', action='store_true', help='只重排 A5、更新目次並建立頁碼表')
+    args = ap.parse_args()
     print('① 重建三冊訪談 docx（日期排序）')
-    for vtitle, out_name, files in VOLUMES:
-        build_volume(vtitle, out_name, files)
+    for vi, (vtitle, out_name, files) in enumerate(VOLUMES):
+        build_volume(vtitle, out_name, files, BODY_STARTS[vi])
     print('② Word 量頁數＋更新目次')
     pages, totals, quote_pages = measure_with_word()
     STATE.parent.mkdir(exist_ok=True)
-    STATE.write_text(json.dumps({'pages': pages, 'totals': totals, 'quote_pages': quote_pages},
+    STATE.write_text(json.dumps({
+                                'format': 'A5',
+                                'pagination': 'cover unnumbered; contents lower-roman; interviews continuous decimal 1–564',
+                                'pages': pages,
+                                'totals': totals,
+                                'quote_pages': quote_pages},
                                 ensure_ascii=False, indent=1), encoding='utf-8')
+    if args.measure_only:
+        print(f'頁碼表 → {STATE}')
+        return
     print('③ 回填專書腳註頁碼')
     update_md_footnotes(pages, quote_pages)
     print('④ 重建專書 md/docx')

@@ -444,21 +444,21 @@ def build_and_upload(slug: str, *, do_upload: bool):
 
 
 # ── queue ─────────────────────────────────────────────────────────────────────
-def run_work(slug: str, *, do_upload: bool, maxparas=None):
+def run_work(slug: str, *, do_upload: bool, maxparas=None, backend: str = "auto"):
     print(f"=== {slug} : {WORKS[slug]['title']} ===", flush=True)
-    engine = pb.make_engine(WORKS[slug]["lang"])
+    engine = pb.make_engine(WORKS[slug]["lang"], backend=backend)
     translate_work(slug, engine, maxparas=maxparas)
     build_and_upload(slug, do_upload=do_upload)
 
 
-def run_queue():
+def run_queue(backend: str = "auto"):
     for slug in QUEUE:
         try:
             if is_done(slug):
                 print(f"=== {slug}: already done, (re)building ===", flush=True)
                 build_and_upload(slug, do_upload=True)
                 continue
-            run_work(slug, do_upload=True)
+            run_work(slug, do_upload=True, backend=backend)
         except Exception as e:  # noqa: BLE001 — keep the queue going
             print(f"  ⚠ {slug} failed: {str(e)[:200]}", flush=True)
 
@@ -571,10 +571,11 @@ def main():
                 maxparas=args.maxparas, max_total_paras=args.max_total_paras,
                 engine_name=args.backend)
             return
-        run_work(args.work, do_upload=args.upload, maxparas=args.maxparas)
+        run_work(args.work, do_upload=args.upload, maxparas=args.maxparas,
+                 backend=args.backend)
         return
     if args.run_queue:
-        run_queue()
+        run_queue(args.backend)
         return
     if args.draft_queue_step:
         if args.backend != "ollama":

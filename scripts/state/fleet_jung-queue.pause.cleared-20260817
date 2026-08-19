@@ -1,0 +1,1 @@
+Paused 2026-08-09 after two consecutive zero-increment checks at CW2 282/283. Child process stayed alive without a new part; preserve checkpoint and do not relaunch automatically.

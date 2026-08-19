@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "pid": 1020,
+  "status": "batch-complete",
+  "updated_at": "2026-08-19T08:43:05+08:00",
+  "policy": "deterministic-supervisor + bounded Ollama drafts + online review gate",
+  "return_code": 0,
+  "translated": 0,
+  "duration": "2.4s",
+  "completed_job": "sbe",
+  "next_job_index": 1,
+  "local_drafts_waiting_review": 1,
+  "drafts_by_job": {
+    "panikkar": 0,
+    "sbe": 1
+  },
+  "mode": "review",
+  "idle_seconds": 878,
+  "idle_required": 0,
+  "on_ac_power": true,
+  "ollama_ready": true,
+  "review_engine_up": true,
+  "selected_job": "sbe"
+}
