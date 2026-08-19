@@ -399,12 +399,28 @@ def build_volume(vol: int, *, clean: bool = False, engine: str = "openrouter"):
     return chunks
 
 
+def _upload_fingerprint(chunks: list[dict]) -> str:
+    """整冊內容的指紋。清理是逐節 cache 的，所以絕大多數輪次產出跟上一輪一模一樣；
+    keeper 每 30 分重拉一次，沒這道比對就會把 17 冊白白重傳 R2＋DB（已重拉 24 次）。"""
+    import hashlib
+    h = hashlib.sha256()
+    for c in chunks:
+        h.update(c["content"].encode("utf-8"))
+        h.update(b"\x00")
+    return h.hexdigest()
+
+
 def _upload(vol: int, chunks: list[dict]):
     import datetime
     import requests
     import translate_ebook_to_zh as te
 
     ebid = NEW_EBID.format(vol)
+    fp_file = _clean_dir() / f".upload_fp_{vol:02d}"
+    fp = _upload_fingerprint(chunks)
+    if fp_file.exists() and fp_file.read_text(encoding="ascii").strip() == fp:
+        print(f"    = 內容未變，略過上傳（冊{vol}）", flush=True)
+        return
     _, vol_title, vol_sub = REGISTRY[vol]
     out = te.CHUNKS_DIR / f"{ebid}.jsonl"
     with out.open("w", encoding="utf-8") as f:
@@ -438,6 +454,7 @@ def _upload(vol: int, chunks: list[dict]):
     for i in range(0, len(prows), 25):
         requests.post(f"{te.URL}/rest/v1/ebook_chunks", headers=te.H_JSON, json=prows[i:i + 25], timeout=60)
     print(f"    ✓ DB ebooks+previews  chunk_count={len(chunks)}  {ebid}", flush=True)
+    fp_file.write_text(fp, encoding="ascii")   # 全數成功才記指紋
 
 
 def main():
