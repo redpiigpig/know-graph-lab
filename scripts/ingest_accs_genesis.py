@@ -260,7 +260,11 @@ def _gemini_generate(contents: list) -> list[dict]:
         live = [k for k in API_KEYS if k not in _DEAD_KEYS]
         if not live:
             raise RuntimeError("全部 Gemini key credit 永久乾，依規範退出")
-        key = live[_KEY_IDX[0] % len(live)]
+        # 已知在「當前模型」上額度用罄的 key 直接跳過——再打一次只是白費一輪 attempt，
+        # attempt 上限用完會讓整批 4 頁失敗。全都乾了才退回完整輪替（讓 429 分支去換模型）。
+        cur_model = MODEL_CHAIN[_MODEL_IDX[0]]
+        usable_keys = [k for k in live if (cur_model, k) not in _DRY_PAIRS] or live
+        key = usable_keys[_KEY_IDX[0] % len(usable_keys)]
         _KEY_IDX[0] += 1
         try:
             resp = _client(key).models.generate_content(
