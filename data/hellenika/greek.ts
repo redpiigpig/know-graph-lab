@@ -343,7 +343,7 @@ export const GREEK_CANON: HellenCanon = {
           works: [
             {
               title_zh: '塞利農特淨罪法', title_orig: 'Lex sacra from Selinous', author: '塞利農特城邦',
-              era: '約前 460 年', place: '西西里‧塞利農特', language: '古希臘文（多利安方言）', status: 'inscription',
+              era: '約前 460 年', place: '西西里‧塞利農特', language: '古希臘文（多利安方言）', status: 'inscription', link: '/hellenika/text/cgrn-13',
               note: '鉛板兩面；規定祖靈祭與殺人者的淨化程序。',
               intro: '1981 年公開的一塊鉛板，兩面各刻一部法。A 面規定對「不潔的」與「純淨的」祖靈的獻祭時程與牲品，B 面則逐步指示殺人者如何自我淨化：向外邦人或本邦人求接待、獻豬、洗滌、然後方可與人同席。這是古希臘現存最詳盡的血污淨化程序，與利未記的贖罪條例可逐條對讀。',
             },
@@ -354,10 +354,10 @@ export const GREEK_CANON: HellenCanon = {
         {
           key: 'k-calendar', label: '祭曆', label_en: 'Sacrificial Calendars',
           works: [
-            { title_zh: '埃爾希亞祭曆', title_orig: 'The Erchia sacrificial calendar', author: '阿提卡‧埃爾希亞區', era: '約前 375–350 年', place: '雅典近郊', language: '古希臘文', status: 'inscription', note: '一個村落全年的獻祭表：日期、神名、牲品、價錢、由誰主持——古代最完整的地方祭曆。' },
-            { title_zh: '科斯祭曆與祭司法', title_orig: 'The Coan sacred calendar', author: '科斯島', era: '約前 4 世紀', language: '古希臘文', status: 'inscription', note: '含祭司職位的拍賣與世襲規定，可見祭司職如何成為一種財產。' },
+            { title_zh: '埃爾希亞祭曆', title_orig: 'The Erchia sacrificial calendar', author: '阿提卡‧埃爾希亞區', era: '約前 375–350 年', place: '雅典近郊', language: '古希臘文', status: 'inscription', link: '/hellenika/text/cgrn-52', note: '一個村落全年的獻祭表：日期、神名、牲品、價錢、由誰主持——古代最完整的地方祭曆。' },
+            { title_zh: '科斯祭曆與祭司法', title_orig: 'The Coan sacred calendar', author: '科斯島', era: '約前 4 世紀', language: '古希臘文', status: 'inscription', link: '/hellenika/text/cgrn-86', note: '含祭司職位的拍賣與世襲規定，可見祭司職如何成為一種財產。' },
             { title_zh: '尼科馬科斯曆法修訂', title_orig: 'The Nikomachos recodification', author: '雅典（尼科馬科斯主持）', era: '前 410–399 年', place: '雅典', language: '古希臘文', status: 'inscription', note: '民主復辟後重新刊刻全城祭曆，並因此引發訴訟——古代唯一一場關於「祭儀該花多少錢」的公開審判。' },
-            { title_zh: '安達尼亞祕儀規章', title_orig: 'The Andania mysteries regulation', author: '美塞尼亞‧安達尼亞', era: '前 92/91 年', place: '希臘‧美塞尼亞', language: '古希臘文', status: 'inscription', note: '現存最完整的一部祕儀施行細則：職司、服裝、經費、秩序維持、罰則，一應俱全。' },
+            { title_zh: '安達尼亞祕儀規章', title_orig: 'The Andania mysteries regulation', author: '美塞尼亞‧安達尼亞', era: '前 92/91 年', place: '希臘‧美塞尼亞', language: '古希臘文', status: 'inscription', link: '/hellenika/text/cgrn-222', note: '現存最完整的一部祕儀施行細則：職司、服裝、經費、秩序維持、罰則，一應俱全。' },
           ],
         },
         {

@@ -1,0 +1,76 @@
+{
+ "cgrn": 13,
+ "url": "http://cgrn.ulg.ac.be/file/13/",
+ "title_zh": "塞利農特淨罪法",
+ "title_en": "Sacrificial (A) and purity (B) regulations on a twofold tablet from Selinous",
+ "volume": "K",
+ "date": "ca. 500-450 BC Justification: lettering and local alphabet (Jameson et al.).",
+ "provenance": "Selinous . The tablet's exact findspot is unclear: it was unearthed in an illegal excavation and acquired for some time by the J. Paul Getty Museum. The tablet is now in the Museum of the Archaeological Park of Selinous, Baglio Floro.",
+ "support": "Two faces, A and B, of a lead tablet, which was affixed to a bronze bar by means of nails. For a full description, see Jameson et al. Height: 23 cmWidth: 59.7 cmDepth: 2 mm",
+ "bibliography": "Edition here based on Lupu NGSL 27, with figs. 32-34. The first six lines of face A are not reproduced here. Line A3 contains the only somewhat intelligible line in A1-6: καταλείποντας, κατhαιγίζεν δὲ το̄̀ς hομοσεπύο̄ς. For the different reading adopted at the end of line A8, see Carbon 2015b. Original edition: Jameson et al. 1993, with drawings, photographs and rich commentary. Cf. also: Dubois IGDS II 18; Rhodes - Osborne GHI II 115. Further bibliography: Jameson 1994; Van Straten 1995: 130-131; Clinton 1996b; Georgoudi 2001; Parker 2005b; Salvo 2012; Carbon 2015b; Pirenne-Delforge 2017; Georgoudi 2017; Giangiulio 2021. See also the nearly exhaustive bibliographical lists in Lupu. Add now the articles and references cited in Iannucci et al. 2015.",
+ "licence": "CGRN — Collection of Greek Ritual Norms (Université de Liège), 開放取用；引用請註明 CGRN 編號與網址。",
+ "names": {
+  "Kotytia": "科提提亞節",
+  "Olympiad": "奧林匹亞節",
+  "Zeus Eumenes": "宙斯‧慈心者",
+  "Eumenides": "慈心女神",
+  "Zeus Meilichios": "宙斯‧和善者",
+  "Myskos": "穆斯柯斯",
+  "Polluted Tritopatres": "不潔的先祖靈",
+  "Pure Tritopatres": "潔淨的先祖靈",
+  "Euthydamos": "歐提達摩斯",
+  "elasteroi": "埃拉斯泰羅伊",
+  "Zeus": "宙斯"
+ },
+ "segments": [
+  {
+   "face": "Face A",
+   "line_from": 1,
+   "greek": "το̑ν hιαρο̑ν hα θυσία πρὸ ϙοτυτίον καὶ τᾶς ἐχεχερίας πένπ[τοι] ϝέτει hο̑ιπερ hόκα hα Ὀλυνπιὰς ποτείε το̑ι Διὶ ∶ το̑ι Εὐμενεῖ θῦμα [καὶ] ταῖς ∶ Εὐμενίδεσι ∶ τέλεον καὶ το̑ι Διὶ ∶ το̑ι Μιλιχίοι το̑ι ∶ ἐν Μύσϙο ∶ τέλεον ∶ τοῖς Τρ-",
+   "en": "The sacrifice of offerings before the Kotytia and the truce on the fifth year (i.e. every four years) when the Olympiad also takes place; to Zeus Eumenes an animal and to the Eumenides an adult animal and to Zeus Meilichios in (the sanctuary?) of Myskos an adult animal; to the",
+   "zh": "在科提提亞節之前及第五年（即每四年）的聖休戰期間的獻祭；向宙斯‧慈心者獻一頭動物，向慈心女神獻一頭成年牲，向穆斯柯斯（聖所？）中的宙斯‧和善者獻一頭成年牲；向"
+  },
+  {
+   "face": "Face A",
+   "line_from": 10,
+   "greek": "ιτοπατρεῦσι ∙ τοῖς ∙ μιαροῖς hόσπερ τοῖς hερόεσι, ϝοῖνον hυπολhεί- ψας ∙ δι’ ὀρόφο ∙ καὶ τᾶν μοιρᾶν ∙ τᾶν ἐνάταν ∙ κατακα- ίεν ∙ μίαν θυόντο θῦμα ∶ καὶ καταγιζόντο hοῖς hοσία ∙ καὶ περιρά- ναντες καταλινάντο ∶ κἔπειτα ∶ τοῖς κ[⟨α⟩]θαροῖς ∶ τέλεον θυόντο ∶ μελίκρατα hυπο- λείβον ∙ καὶ τράπεζαν καὶ κλίναν κἐνβαλέτο καθαρὸν hε̑μα καὶ στεφά-",
+   "en": "Polluted Tritopatres as to the heroes, having poured wine through the roof, of the nine portions burn one; those to whom it is religiously permitted are to sacrifice an animal and perform the consecration (burning); having sprinkled around (with water?), let them anoint (the altar?), and immediately sacrifice an adult animal to the Pure Tritopatres; pouring down honey-and-milk-mixture, a table is set out and a couch and let them throw over a pure cloth and wreaths",
+   "zh": "不潔的先祖靈，如同對待英雄一般，從屋頂澆下酒，九份中燒一份；凡依宗教禮法允許者，應獻祭一頭動物並執行焚燒獻祭；灑水（？）之後，塗抹（祭壇？），然後立即向潔淨的先祖靈獻一頭成年牲；澆下蜜與奶的混合物，擺設桌子與臥榻，鋪上潔淨的布並戴上花冠"
+  },
+  {
+   "face": "Face A",
+   "line_from": 15,
+   "greek": "νος ἐλαίας καὶ μελίκρατα ἐν καιναῖς ποτερίδε[σ]ι καὶ ∶ πλάσματα καὶ κρᾶ κἀπ- αρξάμενοι κατακαάντο καὶ καταλινάντο τὰς ποτερίδας ἐνθέντες· θυόντο hόσπερ τοῖς θεοῖς τὰ πατρο̑ια ∶ το̑ι ἐν Εὐθυδάμο ∶ Μιλιχίοι ∶ κριὸν θ[υ]-] όντο· ἔστο δὲ καὶ θῦμα πεδὰ ϝέτος θύεν· τὰ δὲ hιαρὰ τὰ δαμόσια ἐξh[⟨α⟩]ιρέτο καὶ τρά[πεζα]-] ν ∶ προθέμεν καὶ ϙολέαν καὶ τἀπὸ τᾶς τραπέζας ∶ ἀπάργματα καὶ τὀστέα κα[τα]-]",
+   "en": "and honey-and-milk-mixture in new cups and cakes and meat. Having made first-offerings, they are to burn them and perform an anointment, having put the cups on (the altar?). The ancestral sacrifices are performed as to the gods. To (Zeus) Meilichios in (the sanctuary?) of Euthydamos let them sacrifice a ram. The next year, it is also possible to sacrifice an animal. One shall take out the public sacred objects and set out a table and a thigh and burn the first-offerings from the table and the bones.",
+   "zh": "以及新杯中的蜜與奶混合物、糕餅和肉。獻上初穗之後，他們應焚燒這些並執行塗抹，將杯子放在（祭壇？）上。祖先的獻祭如同向諸神獻祭一般進行。向歐提達摩斯（聖所？）中的（宙斯‧）和善者獻一頭公羊。第二年，也可以獻一頭動物。應取出公共聖物，擺設桌子與大腿，並焚燒桌上的初穗與骨頭。"
+  },
+  {
+   "face": "Face A",
+   "line_from": 20,
+   "greek": "κᾶαι ∙ τὰ κρᾶ μἐχφερέτο · καλέτο [h]όντινα λε̑ι· ἔστο δὲ καὶ πεδὰ ϝέτ[οςϝ]-] οίϙοι θύεν ∶ σφαζόντο δὲ ∶ καὶ βο̑[νπρ]ὸ ἀγαλμάτον [...]ΔΕΣ[.....10.....]-] Ο θῦμα hότι κα προχορε̑ι τὰ πατρο̑[ια..]ΕΞΑΙ[............24............] Τ[...]ΙΤΟΙΑΠΤΟΧΟΙ τρίτοι ϝέτ[ει] Ε[..?..[....7...]ΕΥΣΥΝΒ[..?..] vacat",
+   "en": "No meat is to be carried away; one shall invite whoever one wishes. The next year (year 3), it is also possible to sacrifice in the building [...] let them slaughter a bovine in front of the statues [...] whatever sacrificial animal the ancestral customs permit [...] on the third year [...]",
+   "zh": "不得帶走肉；可邀請任何願意的人。第二年（第三年），也可以在建築物中獻祭……在雕像前宰殺一頭牛……無論祖先習俗允許何種獻祭牲……在第三年……"
+  },
+  {
+   "face": "Face B",
+   "line_from": 1,
+   "greek": "[..α]ἴ κ’ ἄνθροπος [αὐτορέκ]τα[ςἐλ]αστέρον ἀποκα[θαίρεσθ]-[αι], προειπὸν hόπο κα λε̑ι καὶ το̑ ϝέ[τ]εος hόπο κα λε̑ι καὶ [το̑ μενὸς] hοπείο κα λε̑ι καὶ ἀμέραι hοπείαι κα λ«ε̑»ι, π{ο}ροειπὸν hόπυι κα λε̑ι, καθαιρέσθο. [...hο δὲhυ]-] ποδεκόμενος ἀπονίψασθαι δότο κἀκρατίξασθαι καὶ hάλα το̑ι αὐ[το̑ρέκται]",
+   "en": "[If a] person, [a homicide] (wishes) to purify himself from elasteroi (spirits), having made a proclamation from wherever he wishes, and in whatever year he wishes, and in whatever [month] he wishes, and on whatever day he wishes, having made a proclamation in whatever direction he wishes, he shall purify himself. The one hosting him shall give [the homicide] (the necessary things) to wash himself and something to eat and salt;",
+   "zh": "若有人（殺人者）想要從埃拉斯泰羅伊（精靈）中淨罪，從他願意的地方宣告，在他願意的年份、他願意的月份、他願意的日子，向他願意方向宣告，他應淨化自己。接待他的人應給（殺人者）洗滌所需之物、食物和鹽；"
+  },
+  {
+   "face": "Face B",
+   "line_from": 5,
+   "greek": "[κ]αὶ θύσας το̑ι Δὶ χοῖρον ἐξ αὐτο̑ ἴτο καὶ περιστ{ι}ραφέσθο v καὶ ποταγορέσθο καὶ σῖτον hαιρέσθο καὶ καθευδέτο hόπε κ- α λε̑ι· αἴ τίς κα λε̑ι ξενικὸν ἒ πατρο̑ιον, ἒ ’πακουστὸν ἒ ’φορατὸν ἒ καὶ χὄντινα καθαίρεσθαι, τὸν αὐτὸν τρόπον καθαιρέσθο hόνπερ hοὐτορέκτας ἐπεί κ’ ἐλαστέρο ἀποκαθάρεται· v",
+   "en": "and having sacrificed a piglet to Zeus, he shall go away (from the one hosting him), and turn around, and he shall be spoken to, and take food, and sleep wherever he wishes. If someone wishes to purify himself with respect to a foreign or ancestral (elasteros), either heard or seen or any whatsoever, he shall purify himself in the same way as the homicide when he purifies himself from an elasteros.",
+   "zh": "向宙斯獻一頭小豬後，他應（從接待者處）離開，轉身，應有人與他說話，他應取食物，並在他願意的地方睡覺。若有人想要就外來的或祖先的（埃拉斯泰羅伊），無論是聽說的、看見的或任何其他，淨化自己，他應以與殺人者淨化埃拉斯泰羅伊相同的方式淨化自己。"
+  },
+  {
+   "face": "Face B",
+   "line_from": 10,
+   "greek": "hιαρεῖον τέλεον ἐπὶ το̑ι βομο̑ι το̑ι δαμοσίοι θύσας καθαρὸ- ς ἔστο· διορίξας hαλὶ καὶ χρυσο̑ι ἀπορανάμενος ἀπίτο· hόκα το̑ι ἐλαστέροι χρέζει θύεν, θύεν hόσπερ τοῖς v ἀθανάτοισι· σφαζέτο δ’ ἐς γᾶν. vacat vacat",
+   "en": "Having sacrificed an adult animal on the public altar, he shall be pure. Having marked a boundary with salt and having sprinkled around with a gold (vessel), he shall go away. Whenever one needs to sacrifice to the elasteros, sacrifice as to the immortals. But one shall slaughter down towards the earth.",
+   "zh": ""
+  }
+ ]
+}

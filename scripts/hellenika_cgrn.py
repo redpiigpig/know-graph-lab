@@ -86,6 +86,9 @@ def _greek(fragment: str) -> str:
     t = re.sub(r'\n\s*', '\n', t)
     # 合併相鄰方括號（同一補字被跨 span 切開）
     t = re.sub(r'\]\s*\[', '', t)
+    # supplied 有時巢狀（外層 word-container 內層 supplied），會疊成 [[…]]，收成單層
+    t = re.sub(r'\[{2,}', '[', t)
+    t = re.sub(r'\]{2,}', ']', t)
     return t.strip()
 
 
