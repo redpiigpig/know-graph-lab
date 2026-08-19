@@ -83,7 +83,8 @@ MODEL_CHAIN = [MODEL] + [m for m in (
     "gemini-3.5-flash-lite", "gemini-3.1-flash-lite", "gemini-flash-lite-latest",
 ) if m != MODEL]
 _MODEL_IDX = [0]
-_DRY_MODELS: set = set()   # 當日配額已用罄的模型（配額按模型算，非按 provider）
+_DRY_MODELS: set = set()   # 整條 key 池都乾掉的模型
+_DRY_PAIRS: set = set()    # (模型, key) 已回 429 的組合——配額是每 key 每模型各自計
 
 PROMPT = """以下是《古代基督信仰聖經註釋叢書》（Ancient Christian Commentary on Scripture，校園書房繁體中文版）**連續的一至數頁**掃描影像，內容是某卷聖經某段經文的教父註釋。請依影像順序處理，把所有頁的條目**合併成單一 JSON 陣列**輸出（跨頁未完的同一則正文要接成完整一段）。
 
@@ -286,13 +287,21 @@ def _gemini_generate(contents: list) -> list[dict]:
             if ("429" in msg or "resource_exhausted" in msg or "quota" in msg
                     or "rate limit" in msg or "rate-limit" in msg):
                 spent = MODEL_CHAIN[_MODEL_IDX[0]]
+                _DRY_PAIRS.add((spent, key))
+                attempts += 1
+                # 配額是 per project(=key) per model，所以這把 key 乾了不代表整個模型乾。
+                # 先把同一個模型的其餘 key 用完，全乾了才換模型。
+                if any((spent, k) not in _DRY_PAIRS for k in live):
+                    left = sum(1 for k in live if (spent, k) not in _DRY_PAIRS)
+                    print(f"    [quota] {spent} 這把 key 額度用罄，換下一把"
+                          f"（此模型尚餘 {left} 把）", flush=True)
+                    continue
                 _DRY_MODELS.add(spent)
                 remaining = [m for m in MODEL_CHAIN if m not in _DRY_MODELS]
                 if remaining:
                     _MODEL_IDX[0] = MODEL_CHAIN.index(remaining[0])
-                    print(f"    [quota] {spent} 當日額度用罄，改用 {remaining[0]}"
-                          f"（尚餘 {len(remaining)} 個）", flush=True)
-                    attempts += 1
+                    print(f"    [quota] {spent} 全部 {len(live)} 把 key 額度皆用罄，"
+                          f"改用 {remaining[0]}（尚餘 {len(remaining)} 個模型）", flush=True)
                     continue
                 raise RuntimeError(
                     f"Gemini 全部 {len(MODEL_CHAIN)} 個模型當日額度皆用罄，依規範退出："
