@@ -4,7 +4,7 @@
 
 輪流跑三件事，跑到待辦清空或時限到：
   A. intro 補寫（scripts/hellenika_intro.py --all）
-  B. 銘文取源（scripts/hellenika_cgrn.py，若存在）
+  B. 銘文入庫即翻譯（scripts/hellenika_align.py）
   C. 驗證＋commit＋push
 
 Gemini 額度用罄時 intro 會自動落到 NVIDIA；兩邊都乾就靜待下一輪
@@ -64,6 +64,18 @@ def count_pending() -> tuple[int, int]:
     return done, total
 
 
+def align_pending() -> tuple[int, int]:
+    """銘文逐段對照的完成度。"""
+    import glob
+    done = total = 0
+    for f in glob.glob(os.path.join(ROOT, 'data', 'hellenika', 'sources', 'cgrn',
+                                    '*.aligned.json')):
+        d = json.loads(io.open(f, encoding='utf-8').read())
+        total += len(d['segments'])
+        done += sum(1 for s in d['segments'] if s['zh'])
+    return done, total
+
+
 def git_dirty() -> bool:
     _, out = run(['git', 'status', '--porcelain', 'data/hellenika'], timeout=120)
     return bool(out.strip())
@@ -73,9 +85,11 @@ def commit(done: int, total: int) -> None:
     if not git_dirty():
         return
     run(['git', 'add', 'data/hellenika'], timeout=120)
-    msg = (f'chore(hellenika): 條目簡介補寫 {done}/{total}\n\n'
-           '由 scripts/hellenika_overnight.py 整夜批次產生，'
-           '規範見 .claude/skills/hellenika-curate/SKILL.md §1（四要件與六禁忌）。\n\n'
+    ad, at = align_pending()
+    msg = (f'chore(hellenika): 條目簡介 {done}/{total}、銘文逐段對照 {ad}/{at}\n\n'
+           '由 scripts/hellenika_overnight.py 整夜批次產生。簡介規範見 '
+           'hellenika-curate SKILL.md §1（四要件與六禁忌），銘文見 '
+           'hellenika-epigraphy SKILL.md §5（決疑體照原樣、數字照抄、逐篇專名表）。\n\n'
            'Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>')
     rc, out = run(['git', '-c', 'core.hooksPath=.githooks', 'commit', '-q', '-m', msg], timeout=1800)
     if rc != 0:
@@ -106,8 +120,9 @@ def main() -> None:
             continue
 
         done, total = count_pending()
-        if done >= total:
-            log(f'✅ intro 全數完成 {done}/{total}')
+        ad, at = align_pending()
+        if done >= total and (not at or ad >= at):
+            log(f'✅ 全數完成：簡介 {done}/{total}、銘文 {ad}/{at}')
             commit(done, total)
             break
 
@@ -119,7 +134,21 @@ def main() -> None:
 
         after, total = count_pending()
         gained = after - done
-        log(f'--- 第 {rounds} 輪產出 {gained} 筆，累計 {after}/{total} ---')
+
+        # ── 任務 B：銘文入庫即翻譯 ──
+        ad0, at = align_pending()
+        if at and ad0 < at:
+            rc, out = run([sys.executable, 'scripts/hellenika_align.py', '--all'],
+                          timeout=min(3600, max(300, deadline - time.time())))
+            tail = chr(10).join(l for l in out.splitlines()
+                                if '✓' in l or '✗' in l or '累計' in l)[-600:]
+            if tail:
+                log(tail)
+        ad1, at = align_pending()
+        gained += ad1 - ad0
+
+        log(f'--- 第 {rounds} 輪：簡介 +{after - done}、銘文 +{ad1 - ad0}，'
+            f'累計簡介 {after}/{total}、銘文 {ad1}/{at} ---')
 
         if gained > 0:
             commit(after, total)
@@ -133,7 +162,8 @@ def main() -> None:
             time.sleep(wait)
 
     done, total = count_pending()
-    log(f'=== 整夜策展結束：intro {done}/{total}，共 {rounds} 輪 ===')
+    ad, at = align_pending()
+    log(f'=== 整夜策展結束：簡介 {done}/{total}、銘文 {ad}/{at}，共 {rounds} 輪 ===')
 
 
 if __name__ == '__main__':
