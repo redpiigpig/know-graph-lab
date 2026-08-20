@@ -12,7 +12,7 @@
  "names": {
   "Hieroi": "聖職者",
   "Hierai": "聖職女",
-  "synedroi": "議事會成員",
+  "synedroi": "議會成員",
   "Apollo Karneios": "阿波羅‧卡爾涅伊俄斯",
   "Eleventh Month": "第十一月",
   "Mnasistratos": "姆納西斯特拉托斯",
@@ -20,7 +20,8 @@
   "Hermes": "赫爾墨斯",
   "Great Gods": "大神們",
   "Hagna": "哈格娜",
-  "Hippodrome": "賽馬場",
+  "Karneiasion": "卡爾涅伊翁聖所",
+  "Hippodrome": "競馬場",
   "Aigila": "埃吉拉",
   "Ten Men": "十人團",
   "gynaikonomos": "婦女監察官",
@@ -28,13 +29,12 @@
   "hierothytai": "祭獻官",
   "auletai": "笛手",
   "rhabdophoroi": "持杖者",
-  "Five": "五人團",
-  "archons": "執政官",
-  "gerousia": "長老會",
   "argyroskopos": "銀錢檢驗官",
   "epimeletes": "監督官",
   "treasurer": "司庫官",
-  "Karneiasion": "卡爾涅伊翁聖所",
+  "archons": "執政官",
+  "gerousia": "長老會",
+  "Five": "五人團",
   "Tritopatres": "先祖靈",
   "Eumenides": "慈心女神"
  },
@@ -170,84 +170,84 @@
    "line_from": 90,
    "greek": "ᾶς· v οἱ ἱεροὶ οἱ κατεσταμένοι ἐν τῶι πέμπτωι καὶ πεντηκοστῶι ἔτει ἐπιμέλειαν ἐχόντω μετὰ τοῦ ἀρχιτέκτονος, ὅπως κατασκευασ- [θ]ῆντι θησαυροὶ λίθινοι δύο κλαικτοί, καὶ χωραξάντω τὸν μὲν ἕνα εἰς τὸν ναὸν τῶν Μεγάλων Θεῶν, τὸν δ’ ἄλλον ποτὶ τᾶι κράναι, ἐν ὧι ἂν τό- πωι δοκεῖ αὐτοῖς ἀσφαλῶς ἕξειν, καὶ ἐπιθέντω κλᾶϊκας, καὶ τοῦ μὲν παρὰ τᾶι κράναι ἐχέτω τὰν ἁτέραν κλᾶϊκα Μνασίστρατος, τὰν δὲ ἄλ- λαν οἱ ἱεροί, τοῦ δὲ ἐν τῶι ναῶι ἐχόντω τὰν κλᾶϊκα οἱ ἱεροί, καὶ ἀνοιγόντω κατ’ ἐνιαυτὸν τοῖς μυστηρίοις καὶ τὸ ἐξαριθμηθὲν διάφορον ἐ- ξ ἑκατέρου τοῦ θησαυροῦ χωρὶς γράψαντες ἀνενεγκάν[τω]· ἀποδόντω δὲ καὶ Μνασιστράτωι τὸ γινόμενον αὐτ[ῶ]ι διάφορον, καθὼς ἐν τ[ῶι]",
    "en": "The hieroi appointed in the 55th year must see to it, along with the architect, that two stone lockable money-boxes are built, and they must place one in the temple of the Great Gods and the other near the fountain, in whatever place seems safe to them. And they must install keys (locking devices); for the one by the fountain, Mnasistratos is to have one key and the hieroi the other, and for the one in the temple, the hieroi are to have the key. They must open them each year at the mysteries and report the income counted out from each treasury, writing them separately. And they must give to Mnasistratos the income belonging to him, as",
-   "zh": ""
+   "zh": "第五十五年所任命之聖職者，須與建築師一同負責，使兩只可上鎖之石製銀錢箱得以建成；並須放置其一於大神們之廟中，另一於泉水旁，置於他們認為安全之處。又須安裝鑰匙（鎖具）；泉水旁之箱，姆納西斯特拉托斯持一鑰，聖職者持另一鑰；廟中之箱，則由聖職者持鑰。他們須每年於祕儀期間開啟之，並將自各銀錢箱所點算之收入呈報，分別記錄。又須將屬於姆納西斯特拉托斯之收入交予他，正如"
   },
   {
    "face": "Face A",
    "line_from": 95,
    "greek": "[δ]ιαγράμματι γέγ[ρα]πται. vv ἱεροῦ δείπνου vv· οἱ ἱεροὶ ἀπὸ τῶν θυμάτων τῶν ἀγομένων ἐν τᾶι πομπᾶι ἀφελόντες ἀφ’ ἑκάστου τὰ νόμιμ[α][μέρη] τοῖς θεοῖς [τὰλοι]πὰ κρέα καταχρησάσθωσαν εἰς τὸ ἱερὸν δεῖπνον μετὰ τᾶν ἱερᾶν καὶ παρθένων, καὶ παραλαβόντω τόν τε ἱερῆ [καὶτὰν] ἱέρεαν κ[αὶτὰ]ν ἱέρεαν τοῦ Καρνείου καὶ Μνασίστρατον v καὶ τὰν γυναῖκα [τε] καὶ τὰς γενεὰς αὐτοῦ καὶ τῶν τεχνιτᾶν τοὺς λει- [τουργή]σαντας [ἐντα]ῖς χορείαις καὶ τᾶν ὑπηρεσιᾶν τοὺς λειτουργοῦντας αὐτοῖς· καὶ εἰς τὰ λοιπὰ δαπανάματα μὴ πλεῖον ἀνάλωμα [π]οιοῦν]τες δραχμᾶν vacat ἀγορᾶς· v οἱ ἱεροὶ τόπον ἀποδειξάντω, ἐν ᾧ πραθήσεται πάντα· ὁ δὲ ἀγορανόμος ὁ ἐπὶ πόλεος ⟦επ[ι]⟧",
    "en": "it is written in the regulation. Concerning the Sacred Meal The hieroi, after removing the customary [portions] for the gods from each of the sacrificial animals led in the procession, must use the [rest] of the meat for the sacred meal, with the hierai and the maidens, and they must invite the priest [and the] priestess [and the] priestess of (Apollo) Karneios and Mnasistratos and both his wife and his children and those serving as artists in the dances and those serving as their helpers. And for the rest of the expenses they must make no greater expenditure than [...] drachmae. Concerning the Agora The hieroi must appoint a place in which all things will be sold. The agoranomos for the city",
-   "zh": ""
+   "zh": "規章中所記載者。關於聖餐：聖職者自遊行中所牽引之各贖罪牲身上，為諸神取下慣例〔份額〕之後，須將〔其餘〕肉用於聖餐，與聖職女及少女們同食；又須邀請祭司〔與〕女祭司〔與〕（阿波羅‧）卡爾涅伊俄斯之女祭司，以及姆納西斯特拉托斯，並其妻〔與〕其子女，以及擔任舞蹈藝人者與擔任其助手者。至於其餘開銷，他們不得支出超過〔……〕德拉克馬。關於市集：聖職者須指定一處，使所有物品得以販售。本市之市場監督官"
   },
   {
    "face": "Face A",
    "line_from": 100,
    "greek": "[ἐ]πιμέλ]ειαν ἐχέτω, ὅπως οἱ πωλοῦντες ἄδολα καὶ καθαρὰ πωλοῦντι καὶ χρῶνται σταθμοῖς καὶ μέτροις συμφώνοις ποτὶ τὰ δαμόσια, καὶ μὴ τασσέτω μή[τε] πόσου δεῖ πωλεῖν, μηδὲ καιρὸν τασσέτω μηδὲ πρασσέτω μηθεὶς τοὺς πωλοῦντας τοῦ τόπου μηθέν· τοὺς δὲ μὴ πω- [λοῦν]τας καθὼς γέγραπται, τοὺς μὲν δούλους μαστιγούτω, τοὺς δὲ ἐλευθέρους ζαμιούτω εἴκοσι δραχμαῖς· καὶ τὸ κρίμα ἔστω ἐπὶ τῶν ἱε- [ρῶν]. v [ὕ]δατος· v ἐχέτω δὲ ἐπιμέλειαν ὁ ἀγορανόμος καὶ περὶ τοῦ ὕδατος, ὅπως κατὰ τὸν τᾶς παναγύριος χρόνον μηθεὶς κακοποιεῖ μήτε [τὸβ]ή]λημα μήτε τοὺς ὀχετοὺς μήτε ἄν τι ἄλλο κατασκευασθεῖ ἐν τῶι ἱερῶι χάριν τοῦ ὕδατος, καὶ ὅπως, καθὼς ἂν μερισθεῖ, ῥεῖ τὸ ὕδωρ καὶ μ[η]-",
    "en": "must take care that the sellers sell things unadulterated and pure and use weights and measures that coincide with the public ones, but he must neither fix the price at which they must sell, nor set the time, and no one is to charge the sellers anything for the space. Those who do not sell as written, he must scourge if they are slaves, but fine 20 drachmae if they are free men. And the judgment must be in the presence of the hieroi. Concerning Water The agoranomos must also have responsibility for the water, so that during the time of the panegyris no one damages the sluice or the channels or anything else is constructed in the sanctuary for the sake of water, and so that the water runs just as it is allotted and",
-   "zh": ""
+   "zh": "須負責使販售者所售之物純淨無摻、潔淨，並使用與公共標準相符之秤與量器；但他既不得規定他們必須售賣之價格，亦不得規定時間，且任何人不得就場地向販售者收取任何費用。凡不按所書規定售賣者，若為奴隸，他須鞭打之；若為自由人，則罰二十德拉克馬。裁決須在聖職者面前進行。關於水：市場監督官亦須負責水之事，使在聖會期間，無人損壞水閘或水道，或為取水之故在聖所內建造任何其他設施，並使水按其分配之方式流動，且"
   },
   {
    "face": "Face A",
    "line_from": 105,
    "greek": "[θεὶςἀ]πο]κωλύει τοὺς χρωμένους· ἂν δέ τινα λαμβάνει ποιοῦντά τι τῶν κεκωλυμένων, τὸν μὲν δοῦλον μαστιγούτω, τὸν δὲ ἐλεύθερον [ζαμιούτω]εἴκοσ]ι δραχμαῖς· καὶ τὸ κρίμα ἔστω ἐπὶ τῶν ἱερῶν. v ἀλείμματος καὶ λουτροῦ· v ὁ ἀγορανόμος ἐπιμέλειαν ἐχέτω, ὅπως οἱ θέλοντες [βαλανεύε]ινἐ]ν τῶι ἱερῶι μὴ πλεῖον πράσσωντι τοὺς λουομένους δύο χαλκῶν καὶ παρέχωντι πῦρ καὶ μάκραν εὔκρατον καὶ τοῖς κατακλυ- [ζομένοιςὕ]δωρ εὔκρατον, καὶ ὅπως ὁ ἐγδεξάμενος τῶν ξύλων τὰν παροχὰν εἰς τὸ ἀλειπτήριον παρέχει ξύλα ξηρὰ καὶ ἱκανὰ τοῖς ἀλει- [φομένοις] κατ’ ἀμέραν ἀπὸ τετάρτας ὥρας ἕως ἑβδόμας· δοῦλος δὲ μηθεὶς ἀλειφέσθω· οἱ δὲ ἱεροὶ ἐγδιδό{ι}ντω τὰν παροχὰν τῶν ξύ[λ[ω]ν",
    "en": "no one hinders those using it. If he catches someone doing something prohibited, he must flog him, if a slave, or [fine] him 20 drachmae, if a free man, and the judgment must be in the presence of the hieroi. Concerning Ointments and Bath The agoranomos must take care that those wanting [to manage] the bath in the sanctuary do not charge the bathers more than two chalkoi and supply fire and a temperate communal bathtub and temperate water to those washing themselves down, and that the one contracted to supply wood to the anointing room supplies dry wood sufficient for those anointing themselves every day from the fourth hour to the seventh. No slave is to anoint himself. The hieroi contract out the furnishing of wood",
-   "zh": ""
+   "zh": "無人阻礙使用者。若他當場捉獲有人從事任何被禁止之事，若為奴隸，他須鞭打之；若為自由人，則〔罰〕二十德拉克馬；裁決須在聖職者面前進行。關於油膏與沐浴：市場監督官須負責使想要〔經營〕聖所內浴室者，向沐浴者收費不得超過兩卡爾科斯，並須供應火、一具溫度適宜之公用浴盆，以及溫度適宜之水，供沖洗身體者使用；並使承包供應塗膏室木柴者，每日自第四時至第七時，供應足夠之乾柴給塗膏者。任何奴隸不得自行塗膏。聖職者將供應木柴之事承包出去"
   },
   {
    "face": "Face A",
    "line_from": 110,
    "greek": "[τῶνεἰςτ]ὸ ἀλειπτήριον· ἂν δέ τις τῶν ἐγδεξαμένων ἢ τῶν βαλανέων μὴ ποιεῖ καθὼς γέγραπται, τὸν μὲν δοῦλον μαστιγούτω ὁ ἀγορ[α]νό- [μος,τ]ὸν δὲ ἐλεύθ[⟨ε⟩]ρον ζαμιούτω καθ’ ἕκαστον ἀδίκημα εἴκοσι δραχμαῖς· καὶ τὸ κρίμα ἔστω ἐπὶ τῶν ἱερῶν. v συνέσιος ἀναφορᾶς· v οἱ ἱε- [ροὶὅ]σα κα διοικήσωντι ἐν τᾶι παναγύρει ἢ κατακρίνωντί τινας, σύνεσιν ἀνενεγκάντω εἰς τὸ πρυτανεῖον· ἀναγραψάντω δὲ καὶ [εἰςτ]ὸν οἶκον τὸν ἐν τῶι ἱερῶι, οὓς ἂν κατακρίνωντι καὶ ἐπὶ ποίωι ἀδικήματι. v ἀντίγραφον ἔχειν τοῦ διαγράμματος· v οἱ κατεσταμέ- [νοιὥ]στε γράψαι τὸ διάγραμμα, καθὼς ἂν δοκιμασθεῖ, δόντω τοῖς νομοδείκταις ἀντίγραφον· οἱ δὲ λαβόντες ἐπιδεικνυόντω τῶι",
    "en": "to the anointing room. If any contractor or bath manager does not do as is written, the agoranomos must flog him, if a slave, or fine him, if a free man, 20 drachmae for each offence, and the judgment must be in the presence of the hieroi. Concerning the Report of the decisions The hieroi, whatever matters they administer in the panegyris or whatever judgments they impose on some people, they must report the decisions to the prytaneion. And they must also inscribe [on] the building in the sanctuary which people they sentence and for what offense. That There Be a Copy of the Regulation Those appointed to write up the regulation, just as it is approved, must give a copy to the nomodeiktai. Those receiving it",
-   "zh": ""
+   "zh": "給塗膏室。若任何承包商或浴室管理者不按所書規定行事，市場監督官須鞭打之，若為奴隸；若為自由人，則就每一項違規罰二十德拉克馬；裁決須在聖職者面前進行。關於決議之呈報：聖職者，無論他們在聖會期間管理何事，或對某些人作出何等裁決，均須將決議呈報至市政廳。他們又須將被其定罪之人及所犯何事，銘刻於聖所內之建築物上。關於規章須存有副本：被指定繕寫規章者，須按已核准之文本，將一份副本交給律法陳示官。收受者"
   },
   {
    "face": "Face A",
    "line_from": 115,
    "greek": "[χρε]ίαν ἔχοντι· καὶ ἐν τοῖς μυστηρίοις συνλειτουργούντω τοῖς ἱεροῖς καὶ ὁ κᾶρυξ καὶ αὐλητὰς καὶ μάντις καὶ ἀρχιτέκτων. [τᾶςκατα]στάσιος τῶν δέκα· οἱ δαμιοργοὶ τοῦ ἕκτου μηνὸς τᾶι δωδεκάται, πρὸ τοῦ τὸν κ[⟨λᾶ⟩]ρον τῶν ἱερῶν vv",
    "en": "must show it to one who needs it. And in the mysteries, the herald, auletes, seer, and architect must serve jointly with the hieroi. Concerning the Appointment of the Ten On the twelth of the Sixth Month, before the time of the allotment of the hieroi and the hierai takes place, the damiourgoi must allow the people a vote",
-   "zh": ""
+   "zh": "須將之出示給需要者。在祕儀期間，傳令官、笛手、預言者與建築師，須與聖職者一同供職。關於十人團之任命：第六月十二日，在聖職者與聖職女之拈鬮時間之前，民事長官須准許人民進行表決"
   },
   {
    "face": "Face A",
    "line_from": 120,
    "greek": "",
    "en": "to appoint ten men from all the citizens, not younger than 40 and",
-   "zh": ""
+   "zh": "從全體公民中任命十人，年齡不得小於四十歲，"
   },
   {
    "face": "Face A",
    "line_from": 125,
    "greek": "",
    "en": "not the same person again in the subsequent year. The archons and whoever else wishes",
-   "zh": ""
+   "zh": "次年不得再任同一人。執政官及任何其他願意者"
   },
   {
    "face": "Face A",
    "line_from": 130,
    "greek": "",
    "en": "must additionally propose those for election, nominating from those from whom it has been written that the hieroi are alloted. To those appointed, the secretary",
-   "zh": ""
+   "zh": "必須另行提出候選人，從那些已明文規定聖職者由其中抽籤選出的人中提名。被任命者，書記"
   },
   {
    "face": "Face A",
    "line_from": 135,
    "greek": "",
    "en": "of the synedroi must administer the oath which the hieroi swear. Those appointed must have supervision",
-   "zh": ""
+   "zh": "必須讓其宣讀聖職者所宣之誓。被任命者必須監督"
   },
   {
    "face": "Face A",
    "line_from": 140,
    "greek": "",
    "en": "of everything which must be celebrated in the mysteries and must see to whatever is necessary for accomplishing",
-   "zh": ""
+   "zh": "祕儀中一切必須舉行之事宜，並須料理為完成"
   },
   {
    "face": "Face A",
    "line_from": 145,
    "greek": "",
    "en": "the mysteries. They must also appoint in advance the most capable rhabdophoroi from the hieroi, and likewise also mystagogoi.",
-   "zh": ""
+   "zh": "祕儀所需之一切事務。他們還必須預先從聖職者中任命最能幹的持杖者，同樣也任命祕儀引導者。"
   },
   {
    "face": "Face A",
@@ -380,210 +380,210 @@
    "line_from": 45,
    "greek": "",
    "en": "to participate in the mysteries. About Funds The Five chosen by the people must collect the funds accruing from the mysteries. All the archons by necessity must put forth nominations, not (of) the same person twice, each having assets of no less than a talent, and the gerousia must write (next to each name) the assets of those appointed, likewise also the assets of those who nominated them. The argyroskopos must serve those collecting the funds. When the mysteries are completed, they must give an account in all matters at the first regular assembly of the synedroi, and they must deliver the record to the epimeletes immediately, writing by heading the funds accrued",
-   "zh": ""
+   "zh": "參與祕儀。關於經費。人民選出的五人團必須收取祕儀所生之經費。全體執政官必須提出提名，不得（提名）同一人兩次，每人須擁有不少於一塔蘭同之資產，長老會必須（在每個名字旁）寫下被提名者之資產，亦須寫下提名者之資產。銀錢檢驗官必須服務於收取經費者。祕儀完成時，他們必須在議會成員的第一次常務會議上就所有事項作出報告，並必須立即將紀錄交給監督官，按項目寫明所收經費。"
   },
   {
    "face": "Face B",
    "line_from": 50,
    "greek": "",
    "en": "from the purification and the entrance fee of the first-time initiates, and whatever else was accrued, and the expenditure which was made, and whatever, if anything, remains. They must pay it out immediately to the treasurer, and are to be held liable to judicial proceedings, if they are discovered doing something wrong, for a fine of double the amount and 1000 drachmae, and the judges must not reduce it at all. Those appointed in the 55th year must also pay out to Mnasistratos the funds granted [to him] by the city for the crown, 6000 drachmae. They must pay back to the treasurer whatever funds were paid out in advance by the treasurer in the [55th] year [for] the construction in the Karneiasion",
-   "zh": ""
+   "zh": "來自淨罪禮及初次入教者入門費之收入，以及其他一切收入，與所支出之費用，以及如有任何結餘。他們必須立即將其支付給司庫官，若被發現有任何不當行為，則須受司法審判，罰款為雙倍金額及一千德拉克馬，法官不得予以任何減免。第五十五年任命之人員亦必須將城市授予姆納西斯特拉托斯用於冠冕之經費六千德拉克馬支付給他。他們必須將司庫官在第五十五年為卡爾涅伊翁聖所之建造而預先支付之任何經費償還給司庫官。"
   },
   {
    "face": "Face B",
    "line_from": 55,
    "greek": "",
    "en": "or expenditures for the mysteries. [The Five] must expend the [remainder of the advanced funds] for the repairs in the Karneiasion, and if there is need of [an addition to this] revenue, they must report, writing expressly for what there is a need, and the archons and synedroi must decree that the treasurer must [give] the funds. From what is accrued from the mysteries the funds must be restored to the treasurer, and they must deliver a report to the epimeletes about what they administer and are to be held liable to judicial proceedings if they commit some wrong, just as it is written above. The treasurer must write in a supplementary account whatever remainder he receives from these (funds) for the repair of the things in the",
-   "zh": ""
+   "zh": "或祕儀之開支。〔五人團〕必須將〔預付經費之結餘〕用於卡爾涅伊翁聖所之修繕，若此項收入需要〔追加〕，他們必須報告，明確寫明需要之用途，執政官與議會成員必須下令司庫官必須〔撥付〕該經費。從祕儀所得之經費中，必須償還司庫官，他們必須就其所管理之事項向監督官提交報告，若犯有過錯，須受司法審判，正如上文所寫。司庫官必須將他從這些（經費）中收到的用於修繕卡爾涅伊翁聖所內物品之任何結餘記入補充帳目。"
   },
   {
    "face": "Face B",
    "line_from": 60,
    "greek": "",
    "en": "Karneiasion, and must not use it for anything else, until whatever funds are needed for the celebration of the mysteries are paid in full. No one is to propose a decree that these funds must be used for anything else. If so, the proposal must be void, and the proposer must be fined 2000 drachmae, and likewise the treasurer, double whatever was paid out and 2000 drachmae. And the judges must not reduce it at all, and the funds accrued from these judgments must go towards the repair of the things in the Karneiasion. When he pays in full whatever is necessary for the mysteries to be celebrated, the funds accrued from the mysteries must go towards the revenues of the city. Concerning the Supplying of Sacrificial Animals After their appointment, the hieroi,",
-   "zh": ""
+   "zh": "卡爾涅伊翁聖所，且不得挪作他用，直至慶祝祕儀所需之經費全部付清為止。任何人不得提議法令將此經費挪作他用。若有人提議，該提議必須無效，提議者須被罰款二千德拉克馬，司庫官亦同，罰款為已支付金額之雙倍及二千德拉克馬。法官不得予以任何減免，因這些判決所得之經費必須用於卡爾涅伊翁聖所內物品之修繕。當他付清慶祝祕儀所需之一切費用時，祕儀所得之經費必須歸入城市之收入。關於祭牲之供應。聖職者在任命之後，"
   },
   {
    "face": "Face B",
    "line_from": 65,
    "greek": "",
    "en": "having advertised, are to contract out the supplying of sacrificial animals which must be sacrificed and presented in the mysteries and those (sacrificial animals) for the purifications, contracting out, whether it seems expedient for all the animals to be on the same contract or on separate contracts, to the one who offers to take the least sum. It is necessary to supply the following: two white lambs before the beginning of the mysteries, a ram of healthy complexion for the purification, and three little pigs when one purifies in the theater, one hundred lambs on behalf of the first-time initiates, and in the procession, for Demeter, a pregnant sow, for the Great Gods, a two-year old heifer, a pig, for Hermes, a ram, for Apollo Karneios, a boar, and for Hagna, a sheep. And the contractor, having provided guarantors to the hieroi,",
-   "zh": ""
+   "zh": "經公告後，必須將祕儀中須獻祭及呈獻之祭牲及用於淨罪禮之（祭牲）之供應承包出去，無論是將所有祭牲置於同一契約或分開契約，視何者適宜而定，承包給願接受最低金額者。必須供應以下祭牲：祕儀開始前兩頭白色羔羊，用於淨罪禮之一頭毛色健康之公羊，在劇場行淨罪禮時三頭小豬，代表初次入教者之一百頭羔羊，在遊行中，為得墨忒耳獻一頭懷孕母豬，為大神們獻一頭兩歲母犢、一頭豬，為赫爾墨斯獻一頭公羊，為阿波羅‧卡爾涅伊俄斯獻一頭公豬，為哈格娜獻一頭綿羊。承包商在向聖職者提供擔保人之後，"
   },
   {
    "face": "Face B",
    "line_from": 70,
    "greek": "",
    "en": "must take the funds and present very holy, pure, whole animals and show them to the hieroi ten days before the mysteries. The hieroi are to put a mark on those approved, and the contractor must present the marked ones. If he does not present them for the scrutiny, the hieroi must exact from the guarantors the amount plus half, and they themselves must supply the animals and from the exacted funds recover the resulting expenditure for the animals. Concerning the Artists for the Dances The hieroi must appoint each year aulos- and kithara-players to perform in both the sacrifices and the mysteries, as many as they find who are capable, and those appointed in advance must perform",
-   "zh": ""
+   "zh": "必須領取經費，並呈獻非常神聖、潔淨、完整之動物，且在祕儀前十天將它們展示給聖職者。聖職者必須在合格者身上作標記，承包商必須呈獻已作標記者。若他未將它們呈交檢驗，聖職者必須向擔保人索取金額外加一半，他們自己必須供應動物，並從索取之經費中收回由此產生之動物開支。關於舞蹈之藝人。聖職者每年必須任命吹笛者與彈基薩拉琴者，在獻祭及祕儀中表演，人數視其所能找到之勝任者而定，先前被任命者必須表演。"
   },
   {
    "face": "Face B",
    "line_from": 75,
    "greek": "",
    "en": "for the gods. Concerning Crimes If someone in the days in which the sacrifices and the mysteries take place is caught either stealing or committing some other offense, he must be brought to the hieroi. A free man, if he is condemned, must pay back double, but a slave must be whipped and pay back double the theft, but for other offences the fine is 20 drachmae. If he does not pay immediately, the master must hand over his slave to the person damaged for working off the debt. If he does not, he is to be liable for double the amount. About Those Cutting (Wood) in the Sanctuary No one is to cut (wood) from the sacred place; and if anyone is caught, a slave must be flogged by the hieroi, but a free man must be fined as much as the hieroi decide. The one catching transgressors must bring",
-   "zh": ""
+   "zh": "為諸神。關於罪行：若有人在獻祭與祕儀舉行之際，被當場捉獲偷竊或犯下其他過錯，他必須被帶到聖職者面前。自由人若被判有罪，須加倍償還；奴隸則須受鞭打，並加倍償還所竊之物；至於其他過錯，罰款為二十德拉克馬。若他未立即支付，主人必須將他的奴隸交給受損害之人以勞役抵債。若他不這樣做，他須承擔加倍金額之責任。關於在聖所內（砍伐）木材者：任何人不得從聖地砍伐（木材）；若有人被當場捉獲，奴隸須由聖職者鞭打，自由人則須繳納聖職者所決定的罰款。捉獲違犯者之人必須將他們帶至"
   },
   {
    "face": "Face B",
    "line_from": 80,
    "greek": "",
    "en": "them to the hieroi and is to receive half (the fine). That There Be a Place of Refuge for Slaves The sanctuary must be a refuge for slaves, as the hieroi appoint the place, and no one is to harbor the fugitives or give them provisions or offer them work. Anyone acting contrary to what is written is to be liable to the master for twice the value of the slave and a fine of 500 drachmae. The priest must decide about the fugitives, whichever ones are sitting (in supplication) from our city, and whichever ones he condemns he must hand over to their masters. But if he does not hand over, the master is allowed to go away in possession (of him). About the Fountain Mnasistratos must take care of the fountain named “Hagna” by the ancient writings and",
-   "zh": ""
+   "zh": "聖職者處，並可獲得（罰款）之一半。關於為奴隸設立避難所：聖所必須作為奴隸的避難所，正如聖職者所指派的地點；任何人不得窩藏逃亡者、供給他們糧食或提供他們工作。凡違反所寫規定者，須對奴隸的主人承擔奴隸價值兩倍之責任，並處以五百德拉克馬之罰款。祭司必須裁決這些逃亡者，即那些從我們城中前來（懇求）而坐於此者；凡他判定有罪者，他必須將他們交給其主人。但若他不交出，主人有權將（他）帶走。關於水泉：姆納西斯特拉托斯必須照看那被古代文獻稱為「哈格娜」的水泉，以及"
   },
   {
    "face": "Face B",
    "line_from": 85,
    "greek": "",
    "en": "the statue located near the fountain as long as he lives, and he is to share in both the sacrifices and mysteries with the hieroi. Mnasistratos is to receive whatever those sacrificing at the fountain offer on the table and the skins of the sacrificial animals. Mnasistratos is to receive a one-third share of the income from whatever those sacrificing at the fountain offer or put into the treasury, when it is constructed. The other two portions and any dedication set up by those sacrificing are to be property of the gods. The priest and the hieroi must take care that from the funds dedications are made for the gods, whatever ones are decided by the synedroi. Concerning the Construction of Money-boxes",
-   "zh": ""
+   "zh": "位於水泉附近的雕像，終其一生；他須與聖職者一同分享獻祭與祕儀。姆納西斯特拉托斯須收取那些在水泉獻祭者所供奉於桌上的物品及祭牲的皮。當庫房建成時，姆納西斯特拉托斯須從那些在水泉獻祭者所供奉或投入庫房的收入中收取三分之一份額。其餘兩份及獻祭者所設立之任何還願奉獻，均屬諸神之財產。祭司與聖職者必須確保從這些資金中，按照議會成員所決定的項目，為諸神製作奉獻物。關於錢箱之建造："
   },
   {
    "face": "Face B",
    "line_from": 90,
    "greek": "",
    "en": "The hieroi appointed in the 55th year must see to it, along with the architect, that two stone lockable money-boxes are built, and they must place one in the temple of the Great Gods and the other near the fountain, in whatever place seems safe to them. And they must install keys (locking devices); for the one by the fountain, Mnasistratos is to have one key and the hieroi the other, and for the one in the temple, the hieroi are to have the key. They must open them each year at the mysteries and report the income counted out from each treasury, writing them separately. And they must give to Mnasistratos the income belonging to him, as",
-   "zh": ""
+   "zh": "於第五十五年任命之聖職者，必須與建築師一同負責建造兩個石製可上鎖的錢箱；他們必須將一個置於大神們的神廟中，另一個置於水泉附近，置於他們認為安全之處。他們必須安裝鑰匙（鎖具）；對於水泉旁的那個，姆納西斯特拉托斯持有一把鑰匙，聖職者持有另一把；對於神廟中的那個，聖職者持有鑰匙。他們必須每年在祕儀期間打開錢箱，並將從每個庫房清點出的收入分開記錄呈報。他們必須將屬於姆納西斯特拉托斯的收入交給他，正如"
   },
   {
    "face": "Face B",
    "line_from": 95,
    "greek": "",
    "en": "it is written in the regulation. Concerning the Sacred Meal The hieroi, after removing the customary [portions] for the gods from each of the sacrificial animals led in the procession, must use the [rest] of the meat for the sacred meal, with the hierai and the maidens, and they must invite the priest [and the] priestess [and the] priestess of (Apollo) Karneios and Mnasistratos and both his wife and his children and those serving as artists in the dances and those serving as their helpers. And for the rest of the expenses they must make no greater expenditure than [...] drachmae. Concerning the Agora The hieroi must appoint a place in which all things will be sold. The agoranomos for the city",
-   "zh": ""
+   "zh": "法規中所記載。關於神聖宴席：聖職者在從遊行中所引領的每頭祭牲中，為諸神取下慣常的〔份額〕之後，必須將〔其餘〕肉用於神聖宴席，與聖職女及少女們一同享用；他們必須邀請祭司〔與〕女祭司〔與〕（阿波羅‧）卡爾涅伊俄斯的女祭司、姆納西斯特拉托斯及其妻子與兒女、以及在舞蹈中擔任藝人者及其助手。至於其餘開銷，他們不得花費超過〔……〕德拉克馬。關於市集：聖職者必須指定一個地點，所有物品將在此出售。城市的市場監察官"
   },
   {
    "face": "Face B",
    "line_from": 100,
    "greek": "",
    "en": "must take care that the sellers sell things unadulterated and pure and use weights and measures that coincide with the public ones, but he must neither fix the price at which they must sell, nor set the time, and no one is to charge the sellers anything for the space. Those who do not sell as written, he must scourge if they are slaves, but fine 20 drachmae if they are free men. And the judgment must be in the presence of the hieroi. Concerning Water The agoranomos must also have responsibility for the water, so that during the time of the panegyris no one damages the sluice or the channels or anything else is constructed in the sanctuary for the sake of water, and so that the water runs just as it is allotted and",
-   "zh": ""
+   "zh": "必須確保賣家出售之物品純淨無摻雜，並使用與公共度量衡一致的度量衡；但他不得規定他們必須出售的價格，也不得設定時間；任何人不得向賣家收取攤位空間之費用。凡不按所寫規定出售者，若為奴隸，他須鞭打之；若為自由人，則處以二十德拉克馬之罰款。裁決必須在聖職者面前進行。關於水：市場監察官亦須負責水之事宜，以確保在節慶集會期間，無人損壞水閘、水道或聖所內為水而建造的任何其他設施，並確保水按照分配的方式流淌，且"
   },
   {
    "face": "Face B",
    "line_from": 105,
    "greek": "",
    "en": "no one hinders those using it. If he catches someone doing something prohibited, he must flog him, if a slave, or [fine] him 20 drachmae, if a free man, and the judgment must be in the presence of the hieroi. Concerning Ointments and Bath The agoranomos must take care that those wanting [to manage] the bath in the sanctuary do not charge the bathers more than two chalkoi and supply fire and a temperate communal bathtub and temperate water to those washing themselves down, and that the one contracted to supply wood to the anointing room supplies dry wood sufficient for those anointing themselves every day from the fourth hour to the seventh. No slave is to anoint himself. The hieroi contract out the furnishing of wood",
-   "zh": ""
+   "zh": "無人阻礙使用它的人。若他抓到某人做被禁止之事，若是奴隸，他必須鞭打他；若是自由人，則〔罰〕他二十德拉克馬，且判決必須在聖職者面前進行。關於油膏與沐浴：市場監督官必須注意，那些想要〔管理〕聖所中沐浴的人，不得向沐浴者收取超過兩個卡爾科斯，並須供應火、一個溫和的公共浴池，以及溫和的水給那些沖洗身體的人；且被約定供應油膏室木材的人，必須每天從第四時辰到第七時辰，供應足夠的乾柴給那些自行塗油者。任何奴隸不得自行塗油。聖職者將供應木材之事訂約外包。"
   },
   {
    "face": "Face B",
    "line_from": 110,
    "greek": "",
    "en": "to the anointing room. If any contractor or bath manager does not do as is written, the agoranomos must flog him, if a slave, or fine him, if a free man, 20 drachmae for each offence, and the judgment must be in the presence of the hieroi. Concerning the Report of the decisions The hieroi, whatever matters they administer in the panegyris or whatever judgments they impose on some people, they must report the decisions to the prytaneion. And they must also inscribe [on] the building in the sanctuary which people they sentence and for what offense. That There Be a Copy of the Regulation Those appointed to write up the regulation, just as it is approved, must give a copy to the nomodeiktai. Those receiving it",
-   "zh": ""
+   "zh": "給油膏室。若任何承包商或浴池管理者不按所寫行事，市場監督官必須鞭打他，若是奴隸；或罰他，若是自由人，每一項違規罰二十德拉克馬，且判決必須在聖職者面前進行。關於決議的報告：聖職者，無論他們在泛希臘集會中管理何事，或對某些人施加何種判決，他們必須將決議報告給市政廳。他們也必須在聖所中的建築物上刻寫，他們判決了哪些人，以及因何罪行。關於規章須有一份副本：被指定抄寫規章的人，正如它被批准的那樣，必須將一份副本交給律法展示者。接收它的人"
   },
   {
    "face": "Face B",
    "line_from": 115,
    "greek": "",
    "en": "must show it to one who needs it. And in the mysteries, the herald, auletes, seer, and architect must serve jointly with the hieroi. Concerning the Appointment of the Ten On the twelth of the Sixth Month, before the time of the allotment of the hieroi and the hierai takes place, the damiourgoi must allow the people a vote",
-   "zh": ""
+   "zh": "必須將它展示給需要的人。而在祕儀中，傳令官、笛手、預言者與建築師必須與聖職者共同服務。關於十人團的任命：在第六月的第十二日，在聖職者與聖職女的抽籤時間之前，造物官必須允許人民投票"
   },
   {
    "face": "Face B",
    "line_from": 120,
    "greek": "",
    "en": "to appoint ten men from all the citizens, not younger than 40 and",
-   "zh": ""
+   "zh": "從全體公民中任命十人，年齡不低於四十歲，且"
   },
   {
    "face": "Face B",
    "line_from": 125,
    "greek": "[δ]ὲδὶςτοὺςαὐτοὺςτ]- [ό]νγ′ἰὸνἐνιαυτόν]· [π[ο]-[τ]εισφερόντωδὲοἵτεἄρχοντεςκαὶτῶνἄλλωνὁθέλων], [εἰσ- {130]φέροντες}, [ἐξὧνγέ- γραπταιτοὺςἱεροὺςκλαροῦσθαι]· [τοὺςδὲκατασταθένταςὁ[ρ]-κιξάτωὁγραμματεὺς]",
    "en": "not the same person again in the subsequent year. The archons and whoever else wishes",
-   "zh": ""
+   "zh": "不得在隨後的一年中再次任命同一人。執政官以及任何其他願意的人"
   },
   {
    "face": "Face B",
    "line_from": 130,
    "greek": "",
    "en": "must additionally propose those for election, nominating from those from whom it has been written that the hieroi are alloted. To those appointed, the secretary",
-   "zh": ""
+   "zh": "必須另外提出那些候選人，從那些已寫明聖職者由其中抽籤的人中提名。對於被任命者，秘書"
   },
   {
    "face": "Face B",
    "line_from": 135,
    "greek": "[τῶνσυνέδρωντὸνὅρκον], [ὃνοἱἱεροὶὀμν[ύ]-οντι]· [ἐχόντωδὲοἱκα- τασταθέντεςἐπι- μέλειανπερὶπάν- {140]των}, [ὧνδεῖἐντοῖςμυσ- τηρίοιςσυντελεῖσ- θαι], [καὶφροντιζόντω], [ὅσωνχρείαἐστὶεἰςτὸἐπιτελεῖσθαιτὰ]",
    "en": "of the synedroi must administer the oath which the hieroi swear. Those appointed must have supervision",
-   "zh": ""
+   "zh": "議會成員中，必須主持聖職者所宣誓之誓詞。受任命者必須監督一切"
   },
   {
    "face": "Face B",
    "line_from": 140,
    "greek": "",
    "en": "of everything which must be celebrated in the mysteries and must see to whatever is necessary for accomplishing",
-   "zh": ""
+   "zh": "凡在祕儀中必須舉行之事物，並須留意一切為完成祕儀所必需之事。"
   },
   {
    "face": "Face B",
    "line_from": 145,
    "greek": "[μυστήρια]· [προγρα- φόντωδὲἐκτῶνἱε- ρῶνκαὶῥαβδοφόρουςτοὺςεὐθετωτάτους], [ὁμοίωςδὲκαὶμυστα- {150]γωγούς}· [τοὺςδὲσυν- λειτουργήσονταςμετὰΜνασιστρά]- [τ]ουπρογραφόντω], [ἄν[τ]ιναςεὑρίσκωντιεὐ- {155]θέτους} [ὑπάρχονταςκαὶτῶνμὴὄντωνἱε- ρῶν]· [καὶοἱπρογραφέν- τεςπειθαρχούντωκαὶἐπιτελούντω], [ὃἂν]",
    "en": "the mysteries. They must also appoint in advance the most capable rhabdophoroi from the hieroi, and likewise also mystagogoi.",
-   "zh": ""
+   "zh": "祕儀。他們亦必須預先從聖職者中任命最能幹之持杖者，同樣亦任命引導入教者。"
   },
   {
    "face": "Face B",
    "line_from": 150,
    "greek": "",
    "en": "They must summarily appoint men to perform religious services with Mnasistratos, if anyone capable is found",
-   "zh": ""
+   "zh": "他們必須簡要任命與姆納西斯特拉托斯一同執行宗教事務之人，若發現任何能勝任者，"
   },
   {
    "face": "Face B",
    "line_from": 155,
    "greek": "",
    "en": "from even those who are not hieroi. Those appointed must obey those in authority and accomplish",
-   "zh": ""
+   "zh": "即使其並非聖職者。受任命者必須服從當權者，並完成"
   },
   {
    "face": "Face B",
    "line_from": 160,
    "greek": "[προγραφῆντι]· [τὸνδὲμὴποιοῦντακατακρι- νάντωεἴκοσιδρα]- [χ]μαῖςκαὶἐγγραψάν]- [τω]εἰςτοὺςπολεμάρ- {165]χους}· [οἱδὲῥαβδοφόροιμαστιγούντω], [οὕςκαοἱδέκακελεύωντι]· [οἱδὲκατασταθέν- τεςδέκακρινόντω]",
    "en": "whatever they are assigned. They must sentence anyone not doing so to pay a 20 drachmae (fine) and register (his name) with the polemarchs.",
-   "zh": ""
+   "zh": "凡所指派之事。凡不如此行事者，他們必須判處其繳納二十德拉克馬罰金，並將其名登記於執政官處。"
   },
   {
    "face": "Face B",
    "line_from": 165,
    "greek": "",
    "en": "The rhabdophoroi must scourge anyone whom the Ten command them (to scourge). Those appointed as the Ten must decide",
-   "zh": ""
+   "zh": "持杖者必須鞭打十人團命令他們（鞭打）的任何人。被任命為十人團的人必須裁決"
   },
   {
    "face": "Face B",
    "line_from": 170,
    "greek": "[τ]ὰκ[ρίμα]ταπ[άντα]· [ἂνδὲχρείαεἶπε]-ρίτινοςδιαβούλιον[γί]-νεσθαι], [συναγόντωοἱδέκαπάντεςτοὺςἱ- {175]ερούς}, [καὶκαθὼςτοῖςπλειόνοιςδόξαι], [ἐπιτε- λείσθω]· [φορούντωδὲοἱδέκαἐντοῖςμυστηρί- οιςστρόφιονπορφύριον].",
    "en": "[all sentences]. [If there needs] to be a deliberation about something, all of the Ten must convene the sacred",
-   "zh": ""
+   "zh": "所有判決。若有需要就某事進行商議，十人團全體必須召集聖職"
   },
   {
    "face": "Face B",
    "line_from": 175,
    "greek": "",
    "en": "men, and it must be accomplished just as it is decreed by the majority. The Ten must wear a purple headband during the mysteries.",
-   "zh": ""
+   "zh": "者，且必須按照多數人所決定者執行。十人團在祕儀期間必須佩戴紫色頭帶。"
   },
   {
    "face": "Face B",
    "line_from": 180,
    "greek": "[ἀγράφων]· v [εἰδέτιναἄγραφάἐστιἐντῷδι- αγράμματιποτὶτὰντῶνμυστηρίωνκαὶτᾶνθυσιᾶνσυντέλει- {185]αν}, [βουλευέσθωσανοἱσύνεδροι], [μὴμετακι- νοῦντεςἐπὶκαταλ[ύ]-σειτῶνμυστηρίωνμ[η]-θὲντῶνκατὰτὸδιά- {190]γραμμα}· [εἰδὲμή], [τὸγραφὲνἀτελὲςἔστω]· [τὸδὲδιάγραμμακύρι- ονἔστωεἰςπάντατὸνχρόνον].",
    "en": "Concerning Unwritten Matters If some matters are not written in the regulation with regard to the celebration of the mysteries and sacrifices,",
-   "zh": ""
+   "zh": "關於未成文之事：若規章中有些事未就祕儀與獻祭之舉行而寫定，"
   },
   {
    "face": "Face B",
    "line_from": 185,
    "greek": "",
    "en": "the synedroi must deliberate, not changing any of the matters in the regulation to the detriment of the mysteries.",
-   "zh": ""
+   "zh": "議會成員必須商議，不得更改規章中任何有損祕儀之事。"
   },
   {
    "face": "Face B",
    "line_from": 190,
    "greek": "",
    "en": "Otherwise, what is written (by them) is to be void. The regulation is to be valid for all time. (translation slightly adapted from L. Gawlinski 2012)",
-   "zh": ""
+   "zh": "否則，他們所寫的（內容）應歸無效。規章應永久有效。（譯文略改自 L. Gawlinski 2012）"
   }
  ]
 }

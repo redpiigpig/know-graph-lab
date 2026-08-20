@@ -12,15 +12,17 @@
  "names": {
   "Kotytia": "科提提亞節",
   "Olympiad": "奧林匹亞節",
-  "Zeus Eumenes": "宙斯‧慈心者",
+  "Zeus Eumenes": "慈心者宙斯",
   "Eumenides": "慈心女神",
-  "Zeus Meilichios": "宙斯‧和善者",
-  "Myskos": "穆斯柯斯",
+  "Zeus Meilichios": "和善者宙斯",
+  "Myskos": "繆斯科斯",
   "Polluted Tritopatres": "不潔的先祖靈",
   "Pure Tritopatres": "潔淨的先祖靈",
-  "Euthydamos": "歐提達摩斯",
-  "elasteroi": "埃拉斯泰羅伊",
-  "Zeus": "宙斯"
+  "Meilichios": "和善者",
+  "Euthydamos": "歐梯達摩斯",
+  "Zeus": "宙斯",
+  "elasteroi": "厄剌斯忒洛斯靈",
+  "elasteros": "厄剌斯忒洛斯靈"
  },
  "segments": [
   {
