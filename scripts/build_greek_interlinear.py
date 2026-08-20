@@ -50,6 +50,9 @@ JSON_RE = re.compile(r"\{.*\}", re.S)
 TRAILING_RE = re.compile(r"^(?P<word>.*?)(?P<trailing>[·,.;:!?»\)\]]*)$")
 
 WINDOW = 24
+# A pass that produced nothing means the account is busy, not that the work is
+# bad; give up only after several such passes.
+UNPRODUCTIVE_PASS_LIMIT = 3
 
 PROMPT = """你是新約希臘文的逐詞對譯編輯。下面是一個單元裡連續 {count} 個希臘文詞，\
 請逐詞給出「在這個上下文裡」的繁體中文詞義。
@@ -289,19 +292,38 @@ def main() -> None:
     )
     print(f"單元 {len(all_units)} 個、可對譯詞 {total_tokens} 個；已完成 {len(cache)}，待補 {len(pending)}")
 
+    # A rate-limited unit goes back in the queue instead of being skipped.  With
+    # two thousand units, skipping on 429 means one busy night burns the whole
+    # list failing once each and saves nothing.
     done = failed = 0
-    for index, unit in enumerate(pending, start=1):
-        try:
-            cache[unit["id"]] = gloss_unit(unit)
-        except Exception as error:  # noqa: BLE001 - retried on the next run
-            failed += 1
-            print(f"  ✗ {index}/{len(pending)} {unit['ref']}：{error}", flush=True)
-            continue
-        done += 1
-        save_cache(cache)
-        if done % 10 == 0 or index == len(pending):
-            print(f"  {index}/{len(pending)} 完成，累計 {len(cache)}／{len(all_units)}", flush=True)
+    unproductive_passes = 0
+    while pending and unproductive_passes < UNPRODUCTIVE_PASS_LIMIT:
+        requeued: list[dict] = []
+        progressed = False
+        for index, unit in enumerate(pending, start=1):
+            try:
+                cache[unit["id"]] = gloss_unit(unit)
+            except Exception as error:  # noqa: BLE001 - re-queued, not discarded
+                failed += 1
+                requeued.append(unit)
+                print(f"  ✗ {index}/{len(pending)} {unit['ref']}：{error}", flush=True)
+                continue
+            progressed = True
+            done += 1
+            save_cache(cache)
+            if done % 10 == 0:
+                print(f"  {index}/{len(pending)} 完成，累計 {len(cache)}／{len(all_units)}", flush=True)
+        pending = requeued
+        unproductive_passes = 0 if progressed else unproductive_passes + 1
+        if pending:
+            print(
+                f"  本輪結束，剩 {len(pending)} 個單元待補"
+                f"（連續 {unproductive_passes} 輪無進度）",
+                flush=True,
+            )
 
+    if pending:
+        print(f"停在剩 {len(pending)} 個單元：額度連續 {UNPRODUCTIVE_PASS_LIMIT} 輪沒放行，改天續傳")
     print(f"結束：完成 {done}，失敗 {failed}，累計 {len(cache)}／{len(all_units)}")
 
 
