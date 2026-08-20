@@ -186,7 +186,24 @@ def build_name_table(doc: dict) -> dict:
     return table
 
 
-BATCH = 6
+BATCH = 6            # 單批段數上限
+BATCH_CHARS = 2600   # 單批英譯字數上限——長段落會讓回傳 JSON 被截斷，整批報廢
+
+
+def make_batches(todo: list[tuple[int, dict]]) -> list[list[tuple[int, dict]]]:
+    """依字數動態分批。固定段數在長段落上會撐爆回傳長度，整批 JSON 解析失敗
+    就是白跑一趟（安達尼亞祕儀規章剩下的 6 段即因此連續失敗）。"""
+    out, cur, n = [], [], 0
+    for item in todo:
+        size = len(item[1]['en'])
+        if cur and (n + size > BATCH_CHARS or len(cur) >= BATCH):
+            out.append(cur)
+            cur, n = [], 0
+        cur.append(item)
+        n += size
+    if cur:
+        out.append(cur)
+    return out
 
 
 def translate(doc: dict, segments: list[dict]) -> int:
@@ -201,8 +218,7 @@ def translate(doc: dict, segments: list[dict]) -> int:
     doc['_names'] = table
     names = chr(10).join(f'- {k} → {v}' for k, v in sorted(table.items())) or '（無，依基礎詞庫）'
     done = 0
-    for i in range(0, len(todo), BATCH):
-        chunk = todo[i:i + BATCH]
+    for chunk in make_batches(todo):
         items = '\n\n'.join(
             f"[{idx}]（{s['face']} 第 {s['line_from']} 行起）\n"
             f"英譯：{s['en']}\n"

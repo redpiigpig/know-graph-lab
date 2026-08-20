@@ -10,19 +10,18 @@
  "bibliography": "Edition here based on Lupu NGSL 27, with figs. 32-34. The first six lines of face A are not reproduced here. Line A3 contains the only somewhat intelligible line in A1-6: καταλείποντας, κατhαιγίζεν δὲ το̄̀ς hομοσεπύο̄ς. For the different reading adopted at the end of line A8, see Carbon 2015b. Original edition: Jameson et al. 1993, with drawings, photographs and rich commentary. Cf. also: Dubois IGDS II 18; Rhodes - Osborne GHI II 115. Further bibliography: Jameson 1994; Van Straten 1995: 130-131; Clinton 1996b; Georgoudi 2001; Parker 2005b; Salvo 2012; Carbon 2015b; Pirenne-Delforge 2017; Georgoudi 2017; Giangiulio 2021. See also the nearly exhaustive bibliographical lists in Lupu. Add now the articles and references cited in Iannucci et al. 2015.",
  "licence": "CGRN — Collection of Greek Ritual Norms (Université de Liège), 開放取用；引用請註明 CGRN 編號與網址。",
  "names": {
-  "Kotytia": "科提提亞節",
+  "Kotytia": "科蒂提亞節",
   "Olympiad": "奧林匹亞節",
-  "Zeus Eumenes": "慈心者宙斯",
+  "Zeus Eumenes": "宙斯‧慈心者",
   "Eumenides": "慈心女神",
-  "Zeus Meilichios": "和善者宙斯",
+  "Zeus Meilichios": "宙斯‧和善者",
   "Myskos": "繆斯科斯",
   "Polluted Tritopatres": "不潔的先祖靈",
   "Pure Tritopatres": "潔淨的先祖靈",
-  "Meilichios": "和善者",
-  "Euthydamos": "歐梯達摩斯",
+  "Euthydamos": "歐堤達摩斯",
   "Zeus": "宙斯",
-  "elasteroi": "厄剌斯忒洛斯靈",
-  "elasteros": "厄剌斯忒洛斯靈"
+  "elasteroi": "厄拉斯忒洛斯靈",
+  "elasteros": "厄拉斯忒洛斯"
  },
  "segments": [
   {
@@ -72,7 +71,7 @@
    "line_from": 10,
    "greek": "hιαρεῖον τέλεον ἐπὶ το̑ι βομο̑ι το̑ι δαμοσίοι θύσας καθαρὸ- ς ἔστο· διορίξας hαλὶ καὶ χρυσο̑ι ἀπορανάμενος ἀπίτο· hόκα το̑ι ἐλαστέροι χρέζει θύεν, θύεν hόσπερ τοῖς v ἀθανάτοισι· σφαζέτο δ’ ἐς γᾶν. vacat vacat",
    "en": "Having sacrificed an adult animal on the public altar, he shall be pure. Having marked a boundary with salt and having sprinkled around with a gold (vessel), he shall go away. Whenever one needs to sacrifice to the elasteros, sacrifice as to the immortals. But one shall slaughter down towards the earth.",
-   "zh": ""
+   "zh": "在公共祭壇上獻祭一頭成年牲之後，他便為潔淨。用鹽劃定界線並以金（器）四處灑水之後，他便離去。每當有人需要向厄拉斯忒洛斯獻祭時，便如向不死者那樣獻祭。但應朝向大地向下宰殺。"
   }
  ]
 }

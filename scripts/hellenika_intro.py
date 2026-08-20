@@ -136,7 +136,7 @@ def ask_nvidia(prompt: str) -> str:
                 headers={'Authorization': f'Bearer {key}'},
                 json={'model': NVIDIA_MODEL,
                       'messages': [{'role': 'user', 'content': prompt}],
-                      'temperature': 0.25, 'max_tokens': 3000},
+                      'temperature': 0.25, 'max_tokens': int(os.environ.get('NVIDIA_MAX_TOKENS', '8000'))},
                 timeout=float(os.environ.get('NVIDIA_TIMEOUT', '420')))
         except requests.exceptions.RequestException as e:
             print(f'    nvidia conn-err key#{_ni}: {type(e).__name__}', file=sys.stderr, flush=True)
