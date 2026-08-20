@@ -19,7 +19,7 @@ description: 希臘羅馬大藏經（/hellenika）的殘篇綴輯與敵證還原
 
 | 欄 | 內容 | 例 |
 |---|---|---|
-| `via` | 轉引來源，具名到書 | `'普羅克洛《文選》摘要'`／`'波菲利《論戒食》大段引錄'` |
+| `via` | 轉引來源，具名到書 | `'普羅克洛斯《文選》摘要'`／`'波菲利《論戒食》大段引錄'` |
 | `extent` | **原書**規模而非殘存量 | `'傳為 11 卷'`／`'原 15 卷'` |
 | `era` | 原著年代，非殘篇集出版年 | `'約前 7 世紀'` |
 
@@ -33,7 +33,7 @@ description: 希臘羅馬大藏經（/hellenika）的殘篇綴輯與敵證還原
 |---|---|---|---|
 | 史詩循環、俄耳甫斯殘篇 | Bernabé, *Poetae Epici Graeci* | **PEG** | Ε、Α |
 | 俄耳甫斯（舊編，仍常見） | Kern, *Orphicorum Fragmenta* (1922) | **OF** | Α、Λ |
-| 婦女名錄／赫西俄德殘篇 | Merkelbach–West, *Fragmenta Hesiodea* | **M–W** | Ζ |
+| 婦女名錄／赫西奧德殘篇 | Merkelbach–West, *Fragmenta Hesiodea* | **M–W** | Ζ |
 | 前蘇格拉底 | Diels–Kranz, *Die Fragmente der Vorsokratiker* | **DK** | Φ、Υ（色諾芬尼、赫拉克利特、巴門尼德、恩培多克勒） |
 | 斯多噶 | von Arnim, *Stoicorum Veterum Fragmenta* | **SVF** | Φ |
 | 早期譜系家、地方史家 | Jacoby, *Die Fragmente der griechischen Historiker* | **FGrHist** | Α（阿庫西勞 =2、費瑞居德 =3）、Ν（雅典地方史 =323a–334） |
@@ -53,14 +53,14 @@ description: 希臘羅馬大藏經（/hellenika）的殘篇綴輯與敵證還原
 
 | 譯本 | 涵蓋 | 用於 |
 |---|---|---|
-| Evelyn-White, *Hesiod, the Homeric Hymns and Homerica* (Loeb, 1914) | 赫西俄德全部＋荷馬詩頌＋**史詩循環殘篇** | Α、Β、Ε、Ζ、Ο、Π |
+| Evelyn-White, *Hesiod, the Homeric Hymns and Homerica* (Loeb, 1914) | 赫西奧德全部＋荷馬詩頌＋**史詩循環殘篇** | Α、Β、Ε、Ζ、Ο、Π |
 | Murray, *Iliad* (1924)／*Odyssey* (1919) | 荷馬 | Γ、Δ |
 | Frazer, *Apollodorus: The Library* (1921) | 書庫＋節要，註釋極豐 | Ζ、Θ |
 | Jones, *Pausanias: Description of Greece* (1918–35) | 希臘志全 10 卷 | Ξ |
 | Godley, *Herodotus* (1920–25) | 歷史全 9 卷 | Ν、Τ |
 | Oldfather, *Diodorus Siculus* (1933–) | 歷史叢書神話部 | Ξ |
 | Taylor, *The Mystical Hymns of Orpheus* (1792/1824)、*Sallust on the Gods and the World* (1793) | 俄耳甫斯詩頌、薩盧斯提烏斯 | Ο、Φ |
-| Mead, *Thrice-Greatest Hermes* (1906) | 赫爾墨斯文集 | Υ |
+| Mead, *Thrice-Greatest Hermes* (1906) | 赫密士文集 | Υ |
 | MacKenna, *Plotinus: The Enneads* (1917–30) | 九章集 | Φ |
 | W. C. Wright, *The Works of the Emperor Julian* (Loeb, 1913–23) | 尤利安全集含《駁加利利人》殘篇 | Ο、Φ、Ψ |
 | Conybeare, *Philostratus: Life of Apollonius* (1912) | 阿波羅尼烏斯傳 | Χ |

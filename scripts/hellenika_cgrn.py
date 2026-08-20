@@ -49,7 +49,7 @@ DELAY = 6.0
 # 避免編號記錯而默默存進錯的文本。
 TARGETS = [
     {'n': 13,  'zh': '塞利農特淨罪法',   'volume': 'K', 'expect': ['Selinous']},
-    {'n': 181, 'zh': '昔蘭尼淨罪法',     'volume': 'K', 'expect': ['Cyrene', 'Kyrene']},
+    {'n': 181, 'zh': '古利奈淨罪法',     'volume': 'K', 'expect': ['Cyrene', 'Kyrene']},
     {'n': 52,  'zh': '埃爾希亞祭曆',     'volume': 'K', 'expect': ['Erchia']},
     {'n': 222, 'zh': '安達尼亞祕儀規章', 'volume': 'K', 'expect': ['Andania']},
     {'n': 86,  'zh': '科斯祭曆與祭司法', 'volume': 'K', 'expect': ['Kos', 'Coan']},

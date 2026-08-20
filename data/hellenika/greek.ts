@@ -10,10 +10,10 @@ export const GREEK_CANON: HellenCanon = {
   glyph: '希',
   subtitle: '廿四卷 Α–Ω — 希臘傳統宗教的正藏',
   summary:
-    '以希臘字母 Α–Ω 立廿四卷，呼應荷馬兩部史詩的分卷制。前十四卷按文本在希臘宗教中的權威位階與成書早晚排——荷馬與赫西俄德是希臘人真正當經在讀的東西，故居首（希羅多德 2.53：「是荷馬與赫西俄德替希臘人造了神譜，給諸神定了名號、職司與形貌」）；後十卷按成書年代排，卷內亦由早到晚，數卷因此自成一部衰亡史。拉丁文獻在希臘原典已佚、或拉丁是後世唯一傳承管道時，以「續典」身分入卷對照。',
+    '以希臘字母 Α–Ω 立廿四卷，呼應荷馬兩部史詩的分卷制。前十四卷按文本在希臘宗教中的權威位階與成書早晚排——荷馬與赫西奧德是希臘人真正當經在讀的東西，故居首（希羅多德 2.53：「是荷馬與赫西奧德替希臘人造了神譜，給諸神定了名號、職司與形貌」）；後十卷按成書年代排，卷內亦由早到晚，數卷因此自成一部衰亡史。拉丁文獻在希臘原典已佚、或拉丁是後世唯一傳承管道時，以「續典」身分入卷對照。',
   enabled: true,
   parts: [
-    { key: 'p-canon', label: '本經部', label_en: 'The Scriptures', desc: '荷馬與赫西俄德——希臘人實際當經在讀的四部書，加上與之同源而僅存殘篇的史詩循環。', volumes: ['A', 'B', 'G', 'D', 'E'] },
+    { key: 'p-canon', label: '本經部', label_en: 'The Scriptures', desc: '荷馬與赫西奧德——希臘人實際當經在讀的四部書，加上與之同源而僅存殘篇的史詩循環。', volumes: ['A', 'B', 'G', 'D', 'E'] },
     { key: 'p-genealogy', label: '譜系部', label_en: 'Genealogies', desc: '列祖世系與族群的遷徙建城；相當於創世記後半與出埃及記。', volumes: ['Z', 'H'] },
     { key: 'p-hero', label: '英雄部', label_en: 'Heroes', desc: '單身英雄的功業循環與泛希臘的聯合遠征；相當於士師記與約書亞記。', volumes: ['Th', 'I'] },
     { key: 'p-cult', label: '祭儀部', label_en: 'Cult and Mystery', desc: '成文祭儀法與入教祕儀。刻意置於神話段落，仿聖經把晚出的祭司律法安置在西奈山下；兩卷材料實為前 6–2 世紀，須看時代標記。', volumes: ['K', 'L'] },
@@ -28,13 +28,13 @@ export const GREEK_CANON: HellenCanon = {
     {
       key: 'A', sigil: 'Α', name: '神譜', name_en: 'Theogony',
       parallel: '創世記 1–2', clock: 'mythic', span: '前 8 世紀 – 公元 5 世紀（異版）',
-      summary: '赫西俄德《神譜》為正文，其餘三系神譜作對觀欄並置。四版互斥，不作調和——這正是本藏經勝過任何一本「希臘神話故事集」之處。',
+      summary: '赫西奧德《神譜》為正文，其餘三系神譜作對觀欄並置。四版互斥，不作調和——這正是本藏經勝過任何一本「希臘神話故事集」之處。',
       divisions: [
         {
           key: 'a-main', label: '本文', label_en: 'The Received Theogony',
           works: [
             {
-              title_zh: '神譜', title_orig: 'Θεογονία / Theogonia', author: '赫西俄德',
+              title_zh: '神譜', title_orig: 'Θεογονία / Theogonia', author: '赫西奧德',
               era: '約前 8 世紀末至前 7 世紀初', place: '希臘‧彼奧提亞‧阿斯克拉', language: '古希臘文（六步格）',
               extent: '約 1,022 行', status: 'whole',
               note: '自混沌開篇，敘三代神權交替至宙斯確立統治。',
@@ -52,25 +52,25 @@ export const GREEK_CANON: HellenCanon = {
               era: '約前 340–320 年抄本（所註詩作更早）', place: '希臘‧馬其頓‧德爾維尼', language: '古希臘文',
               status: 'inscription',
               note: '現存最早的希臘文書卷；俄耳甫斯神譜原文＋逐行寓意註釋。',
-              intro: '1962 年出土於德爾維尼墓葬火堆的半焦紙草卷，是歐洲現存最古老的書卷。內容為一部俄耳甫斯神譜的引文與逐行寓意解經：宙斯吞下先祖的陽物（一說吞下先神本身）而重生萬有，註釋者則把諸神一一還原為氣、心智與必然。它同時見證了兩件事——希臘另有一套與赫西俄德全然不同的創世說，以及公元前五世紀已存在成熟的寓意釋經法。',
+              intro: '1962 年出土於德爾維尼墓葬火堆的半焦紙草卷，是歐洲現存最古老的書卷。內容為一部俄耳甫斯神譜的引文與逐行寓意解經：宙斯吞下先祖的陽物（一說吞下先神本身）而重生萬有，註釋者則把諸神一一還原為氣、心智與必然。它同時見證了兩件事——希臘另有一套與赫西奧德全然不同的創世說，以及公元前五世紀已存在成熟的寓意釋經法。',
             },
             {
               title_zh: '俄耳甫斯狂詩神譜', title_orig: 'Ἱεροὶ Λόγοι ἐν Ῥαψῳδίαις / Rhapsodic Theogony', author: '託名俄耳甫斯',
               era: '約公元 1–2 世紀定型（材料遠早）', language: '古希臘文', extent: '傳為 24 卷', status: 'fragment',
-              via: '達馬斯基烏斯《論第一原理》、普羅克洛註疏',
+              via: '達馬斯基烏斯《論第一原理》、普羅克洛斯註疏',
               note: '時間之神克羅諾斯生宇宙卵，法涅斯破卵而出。',
-              intro: '新柏拉圖學派所引用的俄耳甫斯神譜標準本，原書已佚，靠達馬斯基烏斯與普羅克洛的引述綴輯。以無齡的時間（Chronos）為始，生出宇宙卵，光輝雌雄同體的法涅斯（Phanes）破卵而出，為第一王；歷經夜、烏拉諾斯、克羅諾斯而至宙斯，宙斯吞法涅斯以總攝萬有，末生戴奧尼索斯而遭提坦分屍——人由提坦灰燼所造，故兼具神性與罪。此一「原罪—淨化—復歸」結構，是異教中最接近救恩論的一套神話。',
+              intro: '新柏拉圖學派所引用的俄耳甫斯神譜標準本，原書已佚，靠達馬斯基烏斯與普羅克洛斯的引述綴輯。以無齡的時間（Chronos）為始，生出宇宙卵，光輝雌雄同體的法涅斯（Phanes）破卵而出，為第一王；歷經夜、烏拉諾斯、克羅諾斯而至宙斯，宙斯吞法涅斯以總攝萬有，末生戴奧尼索斯而遭提坦分屍——人由提坦灰燼所造，故兼具神性與罪。此一「原罪—淨化—復歸」結構，是異教中最接近救恩論的一套神話。',
             },
             {
               title_zh: '七穴（諸神之穴）', title_orig: 'Ἑπτάμυχος / Heptamychos', author: '敘羅斯的費瑞居德',
               era: '約前 6 世紀中葉', place: '希臘‧敘羅斯島', language: '古希臘文（散文）', status: 'fragment',
               note: '現存最早的散文神譜；宙斯、時間、大地三永恆者並立。',
-              intro: '傳為希臘第一部散文著作。以宙斯（Zas）、時間（Chronos）與大地（Chthonie）三者本來就在、無所自來開篇，時間以自己的種子造出七穴中的諸神，宙斯化身為愛神並織就繡有大地與海洋的婚袍贈予新婦。它既不從混沌起、也不敘神權更迭，是與赫西俄德平行的另一條古老思路，並被古人視為哲學宇宙論的先聲。',
+              intro: '傳為希臘第一部散文著作。以宙斯（Zas）、時間（Chronos）與大地（Chthonie）三者本來就在、無所自來開篇，時間以自己的種子造出七穴中的諸神，宙斯化身為愛神並織就繡有大地與海洋的婚袍贈予新婦。它既不從混沌起、也不敘神權更迭，是與赫西奧德平行的另一條古老思路，並被古人視為哲學宇宙論的先聲。',
             },
             {
               title_zh: '譜系', title_orig: 'Γενεαλογίαι / Genealogiai', author: '阿爾戈斯的阿庫西勞',
               era: '約前 6 世紀末至前 5 世紀初', place: '希臘‧阿爾戈斯', language: '古希臘文（散文）', status: 'fragment',
-              note: '把赫西俄德神譜改寫成散文並加以理性化的最早嘗試。',
+              note: '把赫西奧德神譜改寫成散文並加以理性化的最早嘗試。',
             },
             {
               title_zh: '斯多噶寓意神譜', title_orig: 'Stoic allegorical theogony',
@@ -81,7 +81,7 @@ export const GREEK_CANON: HellenCanon = {
             {
               title_zh: '變形記（卷一：創世與四代說）', title_orig: 'Metamorphoses I', author: '奧維德',
               era: '公元 8 年', place: '羅馬', language: '拉丁文', track: 'latin', status: 'whole',
-              note: '四代說是赫西俄德五族說的拉丁變體；中世紀歐洲認識希臘創世全靠這條線。',
+              note: '四代說是赫西奧德五族說的拉丁變體；中世紀歐洲認識希臘創世全靠這條線。',
             },
           ],
         },
@@ -97,7 +97,7 @@ export const GREEK_CANON: HellenCanon = {
           key: 'b-main', label: '本文', label_en: 'The Ages',
           works: [
             {
-              title_zh: '工作與時日（神話段）', title_orig: 'Ἔργα καὶ Ἡμέραι / Opera et Dies', author: '赫西俄德',
+              title_zh: '工作與時日（神話段）', title_orig: 'Ἔργα καὶ Ἡμέραι / Opera et Dies', author: '赫西奧德',
               era: '約前 700 年', place: '希臘‧彼奧提亞', language: '古希臘文（六步格）',
               extent: '全詩 828 行，本卷取 1–201 行', status: 'whole',
               note: '普羅米修斯盜火、潘朵拉開甕、黃金至鐵的五族說。',
@@ -112,7 +112,7 @@ export const GREEK_CANON: HellenCanon = {
             },
             {
               title_zh: '普羅米修斯盜火諸傳', title_orig: 'The Prometheus tradition',
-              author: '赫西俄德、埃斯庫羅斯、柏拉圖《普羅塔哥拉》等', era: '前 8–4 世紀', language: '古希臘文', status: 'fragment',
+              author: '赫西奧德、埃斯庫羅斯、柏拉圖《普羅塔哥拉》等', era: '前 8–4 世紀', language: '古希臘文', status: 'fragment',
               note: '獻祭分份的欺瞞、火的竊取、人類技藝的來源三個母題。',
             },
           ],
@@ -167,14 +167,14 @@ export const GREEK_CANON: HellenCanon = {
       divisions: [
         {
           key: 'e-troy', label: '特洛伊循環', label_en: 'The Trojan Cycle',
-          desc: '主要靠普羅克洛《文選》的內容摘要傳世，另有零星引文與紙草。',
+          desc: '主要靠普羅克洛斯《文選》的內容摘要傳世，另有零星引文與紙草。',
           works: [
-            { title_zh: '賽普里亞', title_orig: 'Κύπρια / Cypria', author: '傳為賽普勒斯的斯塔西努斯', era: '約前 7 世紀', language: '古希臘文', extent: '傳為 11 卷', status: 'fragment', via: '普羅克洛《文選》摘要', parent: '史詩循環', note: '戰爭的起因：金蘋果、帕里斯的裁判、艦隊集結、伊菲革涅亞獻祭。' },
-            { title_zh: '埃塞俄比斯', title_orig: 'Αἰθιοπίς / Aethiopis', author: '傳為米利都的阿克提努斯', era: '約前 7 世紀', language: '古希臘文', extent: '傳為 5 卷', status: 'fragment', via: '普羅克洛《文選》摘要', parent: '史詩循環', note: '亞馬遜女王與衣索比亞王門農之死；阿基里斯陣亡並被接往白島。' },
-            { title_zh: '小伊利亞特', title_orig: 'Ἰλιὰς μικρά / Ilias Mikra', author: '傳為米蒂利尼的萊斯克斯', era: '約前 7 世紀', language: '古希臘文', extent: '傳為 4 卷', status: 'fragment', via: '普羅克洛《文選》摘要', parent: '史詩循環', note: '武器之爭、埃阿斯自殺、木馬的建造。' },
-            { title_zh: '伊利昂陷落', title_orig: 'Ἰλίου πέρσις / Iliou Persis', author: '傳為米利都的阿克提努斯', era: '約前 7 世紀', language: '古希臘文', extent: '傳為 2 卷', status: 'fragment', via: '普羅克洛《文選》摘要', parent: '史詩循環', note: '木馬入城、祭壇前的屠殺、卡珊德拉受辱——希臘人褻瀆神聖的總帳，是其後歸途災禍的原因。' },
-            { title_zh: '歸返', title_orig: 'Νόστοι / Nostoi', author: '傳為特羅曾的阿吉亞斯', era: '約前 7 世紀', language: '古希臘文', extent: '傳為 5 卷', status: 'fragment', via: '普羅克洛《文選》摘要', parent: '史詩循環', note: '各將領的歸途與敗亡；阿伽門農遇害。' },
-            { title_zh: '特勒戈努斯', title_orig: 'Τηλεγόνεια / Telegonia', author: '傳為昔蘭尼的歐伽蒙', era: '約前 6 世紀', language: '古希臘文', extent: '傳為 2 卷', status: 'fragment', via: '普羅克洛《文選》摘要', parent: '史詩循環', note: '奧德修斯死於己子之手，全循環於此收束。' },
+            { title_zh: '賽普里亞', title_orig: 'Κύπρια / Cypria', author: '傳為賽普勒斯的斯塔西努斯', era: '約前 7 世紀', language: '古希臘文', extent: '傳為 11 卷', status: 'fragment', via: '普羅克洛斯《文選》摘要', parent: '史詩循環', note: '戰爭的起因：金蘋果、帕里斯的裁判、艦隊集結、伊菲革涅亞獻祭。' },
+            { title_zh: '埃塞俄比斯', title_orig: 'Αἰθιοπίς / Aethiopis', author: '傳為米利都的阿克提努斯', era: '約前 7 世紀', language: '古希臘文', extent: '傳為 5 卷', status: 'fragment', via: '普羅克洛斯《文選》摘要', parent: '史詩循環', note: '亞馬遜女王與衣索比亞王門農之死；阿基里斯陣亡並被接往白島。' },
+            { title_zh: '小伊利亞特', title_orig: 'Ἰλιὰς μικρά / Ilias Mikra', author: '傳為米蒂利尼的萊斯克斯', era: '約前 7 世紀', language: '古希臘文', extent: '傳為 4 卷', status: 'fragment', via: '普羅克洛斯《文選》摘要', parent: '史詩循環', note: '武器之爭、埃阿斯自殺、木馬的建造。' },
+            { title_zh: '伊利昂陷落', title_orig: 'Ἰλίου πέρσις / Iliou Persis', author: '傳為米利都的阿克提努斯', era: '約前 7 世紀', language: '古希臘文', extent: '傳為 2 卷', status: 'fragment', via: '普羅克洛斯《文選》摘要', parent: '史詩循環', note: '木馬入城、祭壇前的屠殺、卡珊德拉受辱——希臘人褻瀆神聖的總帳，是其後歸途災禍的原因。' },
+            { title_zh: '歸返', title_orig: 'Νόστοι / Nostoi', author: '傳為特羅曾的阿吉亞斯', era: '約前 7 世紀', language: '古希臘文', extent: '傳為 5 卷', status: 'fragment', via: '普羅克洛斯《文選》摘要', parent: '史詩循環', note: '各將領的歸途與敗亡；阿伽門農遇害。' },
+            { title_zh: '特勒戈努斯', title_orig: 'Τηλεγόνεια / Telegonia', author: '傳為古利奈的歐伽蒙', era: '約前 6 世紀', language: '古希臘文', extent: '傳為 2 卷', status: 'fragment', via: '普羅克洛斯《文選》摘要', parent: '史詩循環', note: '奧德修斯死於己子之手，全循環於此收束。' },
           ],
         },
         {
@@ -205,14 +205,14 @@ export const GREEK_CANON: HellenCanon = {
           key: 'z-nations', label: '列國表', label_en: 'The Table of Nations',
           desc: '相當於創世記十章，材料實際只有一章之量，故不另立卷。',
           works: [
-            { title_zh: '希倫三子分族', title_orig: 'The genealogy of Hellen', author: '赫西俄德傳統，見於《婦女名錄》與阿波羅多洛斯', era: '前 6 世紀起', language: '古希臘文', status: 'fragment', note: '多羅斯生多利安人、埃俄羅斯生伊奧利亞人、克蘇托斯之子伊翁與阿凱俄斯生愛奧尼亞與亞該亞人——全希臘由一祖分出四族。' },
+            { title_zh: '希倫三子分族', title_orig: 'The genealogy of Hellen', author: '赫西奧德傳統，見於《婦女名錄》與阿波羅多洛斯', era: '前 6 世紀起', language: '古希臘文', status: 'fragment', note: '多羅斯生多利安人、埃俄羅斯生伊奧利亞人、克蘇托斯之子伊翁與阿凱俄斯生愛奧尼亞與亞該亞人——全希臘由一祖分出四族。' },
           ],
         },
         {
           key: 'z-catalogue', label: '婦女名錄', label_en: 'The Catalogue of Women',
           works: [
             {
-              title_zh: '婦女名錄（又名「或如是女子」）', title_orig: 'Γυναικῶν Κατάλογος / Ἠοῖαι', author: '託名赫西俄德',
+              title_zh: '婦女名錄（又名「或如是女子」）', title_orig: 'Γυναικῶν Κατάλογος / Ἠοῖαι', author: '託名赫西奧德',
               era: '約前 6 世紀', language: '古希臘文（六步格）', extent: '傳為 5 卷', status: 'fragment',
               via: '紙草殘葉與古注引文', note: '以「或如是女子……」起句，逐位列出與神交合而生英雄族的凡間女子。',
               intro: '《神譜》的續篇，把神譜接到人間：每一段以固定套語「或如是女子」開頭，敘一位凡間女子受某神眷顧而生下一族之祖，全希臘的貴族世系由此串成一張大表。它在功能上正是希臘的列祖傳——族群的合法性來自某位神親自介入的譜系。原書已佚，二十世紀以來靠俄克喜林庫斯紙草大量復原，是本卷的骨架。',
@@ -238,7 +238,7 @@ export const GREEK_CANON: HellenCanon = {
               title_zh: '書庫（神話全編）', title_orig: 'Βιβλιοθήκη / Bibliotheca', author: '託名阿波羅多洛斯',
               era: '約公元 1–2 世紀', language: '古希臘文', extent: '全 3 卷（末段殘，有《節要》補）', status: 'whole',
               note: '唯一系統性的希臘神話全編，自神譜貫穿到特洛伊歸返。',
-              intro: '古代唯一一部從創世一路寫到特洛伊歸返的希臘神話全編，體例乾淨、幾無文采，正因如此成為最可靠的譜系工具書。全書分三卷，末段在中世紀佚失，靠十四世紀發現的《節要》（Epitome）補足。要留意的是：希臘人自己並不讀它——它是羅馬時代的整理品，本藏經因此把它列在荷馬與赫西俄德之後，而非之前。',
+              intro: '古代唯一一部從創世一路寫到特洛伊歸返的希臘神話全編，體例乾淨、幾無文采，正因如此成為最可靠的譜系工具書。全書分三卷，末段在中世紀佚失，靠十四世紀發現的《節要》（Epitome）補足。要留意的是：希臘人自己並不讀它——它是羅馬時代的整理品，本藏經因此把它列在荷馬與赫西奧德之後，而非之前。',
             },
             { title_zh: '傳說集', title_orig: 'Fabulae', author: '希吉努斯', era: '公元 2 世紀', language: '拉丁文', extent: '約 300 則', track: 'latin', status: 'whole', note: '補阿波羅多洛斯佚失段落的唯一材料。' },
             { title_zh: '天文志（星座神話）', title_orig: 'De astronomia', author: '希吉努斯', era: '公元 2 世紀', language: '拉丁文', track: 'latin', status: 'whole', note: '星座的神話由來，保存大量他處不存的異說。' },
@@ -270,8 +270,8 @@ export const GREEK_CANON: HellenCanon = {
           key: 'h-ktisis', label: '建城詩', label_en: 'Foundation Poems',
           desc: '殖民建城必先請德爾菲神諭，故此類文獻同時是神諭史料。',
           works: [
-            { title_zh: '皮托競技勝利頌 四、五（昔蘭尼建城）', title_orig: 'Pythian Odes 4–5', author: '品達', era: '前 462 年', language: '古希臘文', status: 'whole', note: '巴托斯奉德爾菲神諭赴利比亞建昔蘭尼——現存最完整的建城神諭敘事。' },
-            { title_zh: '歷史‧卷四（昔蘭尼建城異說）', title_orig: 'Historiae IV', author: '希羅多德', era: '約前 440 年', language: '古希臘文', status: 'whole', note: '同一建城事件的兩個城邦版本並存，見證神諭傳說如何被各方改寫。' },
+            { title_zh: '皮托競技勝利頌 四、五（古利奈建城）', title_orig: 'Pythian Odes 4–5', author: '品達', era: '前 462 年', language: '古希臘文', status: 'whole', note: '巴托斯奉德爾菲神諭赴利比亞建古利奈——現存最完整的建城神諭敘事。' },
+            { title_zh: '歷史‧卷四（古利奈建城異說）', title_orig: 'Historiae IV', author: '希羅多德', era: '約前 440 年', language: '古希臘文', status: 'whole', note: '同一建城事件的兩個城邦版本並存，見證神諭傳說如何被各方改寫。' },
             { title_zh: '建城詩殘篇集', title_orig: 'Κτίσεις / Ktiseis', author: '諸家（阿波羅尼俄斯等）', era: '前 3 世紀', language: '古希臘文', status: 'fragment', note: '希臘化時期為各殖民城市編寫的建城起源詩，多僅存篇名與零句。' },
           ],
         },
@@ -327,7 +327,7 @@ export const GREEK_CANON: HellenCanon = {
         {
           key: 'i-hunt', label: '卡呂冬狩獵', label_en: 'The Calydonian Hunt',
           works: [
-            { title_zh: '卡呂冬野豬諸傳', title_orig: 'The Calydonian Boar', author: '綴輯（《伊利亞特》九卷、巴克基利得斯、阿波羅多洛斯）', language: '古希臘文', status: 'fragment', note: '因忘記獻祭阿爾忒彌斯而招來巨豬——漏祭必受罰的教訓文本。' },
+            { title_zh: '卡呂冬野豬諸傳', title_orig: 'The Calydonian Boar', author: '綴輯（《伊利亞特》九卷、巴克基利得斯、阿波羅多洛斯）', language: '古希臘文', status: 'fragment', note: '因忘記獻祭阿緹米絲而招來巨豬——漏祭必受罰的教訓文本。' },
           ],
         },
       ],
@@ -347,7 +347,7 @@ export const GREEK_CANON: HellenCanon = {
               note: '鉛板兩面；規定祖靈祭與殺人者的淨化程序。',
               intro: '1981 年公開的一塊鉛板，兩面各刻一部法。A 面規定對「不潔的」與「純淨的」祖靈的獻祭時程與牲品，B 面則逐步指示殺人者如何自我淨化：向外邦人或本邦人求接待、獻豬、洗滌、然後方可與人同席。這是古希臘現存最詳盡的血污淨化程序，與利未記的贖罪條例可逐條對讀。',
             },
-            { title_zh: '昔蘭尼淨罪法', title_orig: 'The Cyrene Cathartic Law', author: '昔蘭尼城邦（自稱奉阿波羅神諭）', era: '約前 4 世紀末', place: '利比亞‧昔蘭尼', language: '古希臘文', status: 'inscription', note: '什一奉獻、聖所進入資格、產婦與死屋的不潔期、對「來訪者」（幽靈）的處置。' },
+            { title_zh: '古利奈淨罪法', title_orig: 'The Cyrene Cathartic Law', author: '古利奈城邦（自稱奉阿波羅神諭）', era: '約前 4 世紀末', place: '利比亞‧古利奈', language: '古希臘文', status: 'inscription', note: '什一奉獻、聖所進入資格、產婦與死屋的不潔期、對「來訪者」（幽靈）的處置。' },
             { title_zh: '進所條例集', title_orig: 'Entry regulations (leges sacrae)', author: '各聖所', era: '前 5 – 公元 3 世紀', language: '古希臘文', status: 'inscription', note: '誰可入、須隔多久、穿什麼、不得攜入何物；散在各地神廟門柱。' },
           ],
         },
@@ -379,7 +379,7 @@ export const GREEK_CANON: HellenCanon = {
         {
           key: 'l-eleusis', label: '厄琉息斯', label_en: 'Eleusis',
           works: [
-            { title_zh: '荷馬詩頌‧致得墨忒耳', title_orig: 'Ὁμηρικὸς Ὕμνος εἰς Δημήτραν', author: '託名荷馬', era: '約前 7 世紀末', language: '古希臘文', extent: '495 行', status: 'whole', note: '厄琉息斯祕儀的創教敘事：珀耳塞福涅被劫、母神哀行、祕儀由神親授。末句明言見過者有福、未見者死後不得同分。' },
+            { title_zh: '荷馬詩頌‧致狄蜜特', title_orig: 'Ὁμηρικὸς Ὕμνος εἰς Δημήτραν', author: '託名荷馬', era: '約前 7 世紀末', language: '古希臘文', extent: '495 行', status: 'whole', note: '厄琉息斯祕儀的創教敘事：珀耳塞福涅被劫、母神哀行、祕儀由神親授。末句明言見過者有福、未見者死後不得同分。' },
             { title_zh: '厄琉息斯銘文與祭司法', title_orig: 'Eleusinian inscriptions', author: '雅典與厄琉息斯', era: '前 5 – 公元 3 世紀', language: '古希臘文', status: 'inscription', note: '聖休戰佈告、初穗奉獻令、祭司世家（歐摩爾波斯族與刻律克斯族）的職權劃分。' },
           ],
         },
@@ -504,7 +504,7 @@ export const GREEK_CANON: HellenCanon = {
     {
       key: 'O', sigil: 'Ο', name: '詩頌集', name_en: 'The Book of Hymns',
       parallel: '詩篇', clock: 'historical', span: '前 700 – 公元 450 年',
-      summary: '一千兩百年的希臘人祈禱，按年代排。從對眾神的稱謝走到普羅克洛對著已關閉的神廟呼求一位近乎獨一的神——禱詞語言的變化本身就是全書最有力的論證。',
+      summary: '一千兩百年的希臘人祈禱，按年代排。從對眾神的稱謝走到普羅克洛斯對著已關閉的神廟呼求一位近乎獨一的神——禱詞語言的變化本身就是全書最有力的論證。',
       divisions: [
         {
           key: 'o-archaic', label: '古風', label_en: 'Archaic',
@@ -512,10 +512,10 @@ export const GREEK_CANON: HellenCanon = {
             {
               title_zh: '荷馬詩頌', title_orig: 'Ὁμηρικοὶ Ὕμνοι / Homerici Hymni', author: '託名荷馬（諸家）',
               era: '約前 7 – 前 5 世紀', language: '古希臘文（六步格）', extent: '33 首', status: 'whole',
-              note: '各篇年代不一，須逐篇定位；長篇五首（得墨忒耳、阿波羅、赫爾墨斯、阿芙羅狄忒、狄奧尼索斯）自成敘事。',
-              intro: '掛荷馬之名、實出諸家之手的一組頌詩，原為史詩吟誦前的開場。宗教上的價值在於它們是「神的簡介」——每首說明一位神的出生、權能之取得與聖所之建立。致得墨忒耳一首是厄琉息斯祕儀的創教敘事，致阿波羅一首記德爾菲神諭所的建立，兩篇分別是 Λ 卷與 Τ 卷的源頭文本。本卷雖屬詩頌，其年代與權威實與 Γ、Δ 同層，導言須點明。',
+              note: '各篇年代不一，須逐篇定位；長篇五首（狄蜜特、阿波羅、赫密士、阿芙羅黛蒂、狄奧尼索斯）自成敘事。',
+              intro: '掛荷馬之名、實出諸家之手的一組頌詩，原為史詩吟誦前的開場。宗教上的價值在於它們是「神的簡介」——每首說明一位神的出生、權能之取得與聖所之建立。致狄蜜特一首是厄琉息斯祕儀的創教敘事，致阿波羅一首記德爾菲神諭所的建立，兩篇分別是 Λ 卷與 Τ 卷的源頭文本。本卷雖屬詩頌，其年代與權威實與 Γ、Δ 同層，導言須點明。',
             },
-            { title_zh: '致阿芙羅狄忒', title_orig: 'Ὕμνος εἰς Ἀφροδίτην', author: '莎孚', era: '約前 600 年', place: '萊斯博斯島', language: '古希臘文（伊奧利亞方言）', status: 'whole', note: '莎孚唯一完整傳世的詩，也是希臘個人祈禱詩的典範：呼名、追述前事、求告。' },
+            { title_zh: '致阿芙羅黛蒂', title_orig: 'Ὕμνος εἰς Ἀφροδίτην', author: '莎孚', era: '約前 600 年', place: '萊斯博斯島', language: '古希臘文（伊奧利亞方言）', status: 'whole', note: '莎孚唯一完整傳世的詩，也是希臘個人祈禱詩的典範：呼名、追述前事、求告。' },
             { title_zh: '少女歌', title_orig: 'Παρθένειον / Partheneion', author: '阿爾克曼', era: '約前 7 世紀後半', place: '斯巴達', language: '古希臘文', status: 'fragment', note: '少女歌隊為女神獻唱的儀式歌，現存最早的希臘合唱抒情詩實例。' },
           ],
         },
@@ -532,7 +532,7 @@ export const GREEK_CANON: HellenCanon = {
         {
           key: 'o-hellenistic', label: '希臘化', label_en: 'Hellenistic',
           works: [
-            { title_zh: '頌詩六首', title_orig: 'Ὕμνοι / Hymni', author: '卡利馬科斯', era: '約前 270 年', place: '亞歷山卓', language: '古希臘文', status: 'whole', note: '致宙斯、阿波羅、阿爾忒彌斯、提洛島、雅典娜浴、得墨忒耳；文人化的祭儀詩，形式仍嚴守古制。' },
+            { title_zh: '頌詩六首', title_orig: 'Ὕμνοι / Hymni', author: '卡利馬科斯', era: '約前 270 年', place: '亞歷山卓', language: '古希臘文', status: 'whole', note: '致宙斯、阿波羅、阿緹米絲、提洛島、雅典娜浴、狄蜜特；文人化的祭儀詩，形式仍嚴守古制。' },
             { title_zh: '宙斯頌', title_orig: 'Ὕμνος εἰς Δία', author: '克萊安特斯', era: '約前 250 年', language: '古希臘文', extent: '39 行', status: 'whole', note: '斯多噶學派的信仰告白：宙斯即普遍理性與律法，萬物依之而行，惡人自違而自苦。異教中最接近一神論禱文者。' },
             { title_zh: '德爾菲阿波羅頌（附樂譜）', title_orig: 'The Delphic Hymns to Apollo', author: '雅典的阿特納伊俄斯、利梅尼俄斯', era: '前 128/127 年', place: '德爾菲', language: '古希臘文', status: 'inscription', note: '刻在雅典寶庫牆上並附古希臘記譜符號，是現存最早可實際演奏的西方樂譜。' },
           ],
@@ -555,10 +555,10 @@ export const GREEK_CANON: HellenCanon = {
             { title_zh: '致太陽王', title_orig: 'Εἰς τὸν βασιλέα Ἥλιον', author: '尤利安', era: '公元 362 年 12 月', language: '古希臘文', status: 'whole', note: '皇帝親撰的太陽神學，以新柏拉圖三層結構統攝諸神——異教在制度上最後一次嘗試自我統一。' },
             { title_zh: '致眾神之母', title_orig: 'Εἰς τὴν Μητέρα τῶν θεῶν', author: '尤利安', era: '公元 362 年 3 月', language: '古希臘文', status: 'whole', note: '為庫柏勒祭儀作寓意辯護，寫成僅一夜。' },
             {
-              title_zh: '頌詩七首', title_orig: 'Ὕμνοι / Hymni', author: '普羅克洛',
+              title_zh: '頌詩七首', title_orig: 'Ὕμνοι / Hymni', author: '普羅克洛斯',
               era: '約公元 450–480 年', place: '雅典', language: '古希臘文', status: 'whole',
               note: '本卷終篇：神廟已閉，禱詞仍在。',
-              intro: '致太陽、阿芙羅狄忒、繆斯、諸神、呂基亞的阿芙羅狄忒、赫卡忒與雅努斯、雅典娜七首。寫作時雅典的神廟已陸續關閉、公開獻祭已屬非法，詩中因此幾乎不再求現世福祉，只求「引我的魂脫離幽暗、賜我光明」。與 Ο 卷開篇的荷馬詩頌並讀，一千兩百年的距離一目了然——這也是本卷按年代排序的全部用意。',
+              intro: '致太陽、阿芙羅黛蒂、繆斯、諸神、呂基亞的阿芙羅黛蒂、赫卡忒與雅努斯、雅典娜七首。寫作時雅典的神廟已陸續關閉、公開獻祭已屬非法，詩中因此幾乎不再求現世福祉，只求「引我的魂脫離幽暗、賜我光明」。與 Ο 卷開篇的荷馬詩頌並讀，一千兩百年的距離一目了然——這也是本卷按年代排序的全部用意。',
             },
           ],
         },
@@ -573,7 +573,7 @@ export const GREEK_CANON: HellenCanon = {
         {
           key: 'pi-hesiod', label: '農時勸誡', label_en: 'Works and Days',
           works: [
-            { title_zh: '工作與時日（勸誡段）', title_orig: 'Ἔργα καὶ Ἡμέραι', author: '赫西俄德', era: '約前 700 年', language: '古希臘文', extent: '取 202–828 行', status: 'whole', note: '對兄弟佩爾塞斯的訓誨：勞動、公義、農事曆、航海禁忌與吉凶日。與箴言的父訓體例同型。' },
+            { title_zh: '工作與時日（勸誡段）', title_orig: 'Ἔργα καὶ Ἡμέραι', author: '赫西奧德', era: '約前 700 年', language: '古希臘文', extent: '取 202–828 行', status: 'whole', note: '對兄弟佩爾塞斯的訓誨：勞動、公義、農事曆、航海禁忌與吉凶日。與箴言的父訓體例同型。' },
           ],
         },
         {
@@ -732,19 +732,19 @@ export const GREEK_CANON: HellenCanon = {
           key: 'u-imperial', label: '帝國期啟示文集', label_en: 'Imperial Revelation Corpora',
           works: [
             {
-              title_zh: '赫爾墨斯文集', title_orig: 'Corpus Hermeticum', author: '託名三重偉大的赫爾墨斯',
+              title_zh: '赫密士文集', title_orig: 'Corpus Hermeticum', author: '託名三重偉大的赫密士',
               era: '約公元 1–3 世紀', place: '埃及‧亞歷山卓', language: '古希臘文', extent: '18 篇（另有《阿斯克勒庇俄斯》與斯托拜俄斯殘篇）',
               status: 'whole',
               note: '首篇《牧人書》即一部完整的創世—墮落—救贖啟示。',
-              intro: '託名赫爾墨斯的一組師徒對話，內容為宇宙起源、人的墮落與藉知識（gnosis）上升復歸。首篇《牧人書》最重：至高心智以異象顯現，述光與暗分離、原人因愛自己的影像而墜入物質、以及靈魂穿越七重天脫去情慾而復歸於神。它與諾斯底文獻同源而不敵視物質，文藝復興以後被誤認為摩西同時代的埃及古智慧，深刻影響了整個歐洲祕學傳統。',
+              intro: '託名赫密士的一組師徒對話，內容為宇宙起源、人的墮落與藉知識（gnosis）上升復歸。首篇《牧人書》最重：至高心智以異象顯現，述光與暗分離、原人因愛自己的影像而墜入物質、以及靈魂穿越七重天脫去情慾而復歸於神。它與諾斯底文獻同源而不敵視物質，文藝復興以後被誤認為摩西同時代的埃及古智慧，深刻影響了整個歐洲祕學傳統。',
               link: '/gnostic',
             },
             {
               title_zh: '迦勒底神諭', title_orig: 'Λόγια Χαλδαϊκά / Oracula Chaldaica', author: '猶利安努斯父子（託名）',
               era: '約公元 2 世紀末', language: '古希臘文（六步格）', status: 'fragment',
-              via: '普羅克洛、達馬斯基烏斯、普塞洛斯引錄',
+              via: '普羅克洛斯、達馬斯基烏斯、普塞洛斯引錄',
               note: '新柏拉圖學派奉為聖經的啟示詩；召神術（theurgy）的根本典據。',
-              intro: '以六步格寫成的神諭詩殘篇，自稱得自諸神。內容為父、力、心智的三一結構、靈魂下降與上升、以及藉儀式（而非僅靠思辨）促使神明降臨的召神術。揚布利科斯以下的新柏拉圖學派把它抬到與柏拉圖對話錄同等的地位，普羅克洛甚至說若能決定哪些書留存於世，他只留《蒂邁歐》與《迦勒底神諭》。異教最後三百年的教義核心即由此出。',
+              intro: '以六步格寫成的神諭詩殘篇，自稱得自諸神。內容為父、力、心智的三一結構、靈魂下降與上升、以及藉儀式（而非僅靠思辨）促使神明降臨的召神術。楊布里科斯以下的新柏拉圖學派把它抬到與柏拉圖對話錄同等的地位，普羅克洛斯甚至說若能決定哪些書留存於世，他只留《蒂邁歐》與《迦勒底神諭》。異教最後三百年的教義核心即由此出。',
             },
             { title_zh: '密特拉禮文', title_orig: 'PGM IV.475–834', author: '佚名', era: '約公元 4 世紀', language: '古希臘文', status: 'inscription', parent: '希臘魔法紙草', note: '逐步指示如何屏息、見火門開啟、與太陽神面對面並索求不朽——現存最詳盡的升天儀軌。' },
             {
@@ -760,8 +760,8 @@ export const GREEK_CANON: HellenCanon = {
         {
           key: 'u-theurgy', label: '召神術', label_en: 'Theurgy',
           works: [
-            { title_zh: '論祕儀（答波菲利書）', title_orig: 'Περὶ μυστηρίων / De mysteriis', author: '揚布利科斯', era: '約公元 300 年', language: '古希臘文', status: 'whole', note: '主張人不能靠思辨上達於神，必須藉神所定的儀式；異教晚期由哲學轉回祭儀的分水嶺。' },
-            { title_zh: '論召神術（殘篇）', title_orig: 'Περὶ τῆς καθ᾿ Ἕλληνας ἱερατικῆς τέχνης', author: '普羅克洛', era: '公元 5 世紀', language: '古希臘文', status: 'fragment', note: '論物質中的神性印記與交感原理，是理解晚期異教「聖物觀」的關鍵短篇。' },
+            { title_zh: '論祕儀（答波菲利書）', title_orig: 'Περὶ μυστηρίων / De mysteriis', author: '楊布里科斯', era: '約公元 300 年', language: '古希臘文', status: 'whole', note: '主張人不能靠思辨上達於神，必須藉神所定的儀式；異教晚期由哲學轉回祭儀的分水嶺。' },
+            { title_zh: '論召神術（殘篇）', title_orig: 'Περὶ τῆς καθ᾿ Ἕλληνας ἱερατικῆς τέχνης', author: '普羅克洛斯', era: '公元 5 世紀', language: '古希臘文', status: 'fragment', note: '論物質中的神性印記與交感原理，是理解晚期異教「聖物觀」的關鍵短篇。' },
           ],
         },
       ],
@@ -811,7 +811,7 @@ export const GREEK_CANON: HellenCanon = {
         {
           key: 'ph-middle', label: '中期柏拉圖', label_en: 'Middle Platonism',
           works: [
-            { title_zh: '論伊西斯與奧西里斯', title_orig: 'Περὶ Ἴσιδος καὶ Ὀσίριδος', author: '普魯塔克', era: '約公元 120 年', language: '古希臘文', status: 'whole', note: '以希臘哲學解埃及神話，並提出善惡二原理說；古代比較宗教學的開山之作。' },
+            { title_zh: '論伊西斯與歐西里斯', title_orig: 'Περὶ Ἴσιδος καὶ Ὀσίριδος', author: '普魯塔克', era: '約公元 120 年', language: '古希臘文', status: 'whole', note: '以希臘哲學解埃及神話，並提出善惡二原理說；古代比較宗教學的開山之作。' },
             { title_zh: '論德爾菲的 E 字', title_orig: 'Περὶ τοῦ Εἶ τοῦ ἐν Δελφοῖς', author: '普魯塔克', era: '約公元 100 年', language: '古希臘文', status: 'whole', note: '德爾菲廟門的神祕字母 E 何解；末段以「你是」為神之名，直逼一神論。' },
             { title_zh: '論神遲罰惡', title_orig: 'Περὶ τῶν ὑπὸ τοῦ θείου βραδέως τιμωρουμένων', author: '普魯塔克', era: '公元 2 世紀初', language: '古希臘文', status: 'whole', note: '正面處理「惡人為何不立刻遭報」，末附靈魂受審異象；異教神義論的代表作。' },
             { title_zh: '講演集', title_orig: 'Διαλέξεις / Orationes', author: '推羅的馬克西姆斯', era: '公元 2 世紀後半', language: '古希臘文', extent: '41 篇', status: 'whole', note: '面向大眾的哲學佈道：該不該立神像、該不該向神禱告、何謂神——古代少見的「講章集」。' },
@@ -829,8 +829,8 @@ export const GREEK_CANON: HellenCanon = {
               intro: '五十四篇論文，由弟子波菲利按每集九篇編為六集。核心是流出說：不可名狀的「太一」滿溢而生心智，心智生靈魂，靈魂生可感世界；人可循原路內轉、超越思維而與太一合一——波菲利說老師一生有四次達到。全書幾乎不談祭儀與神話，卻為此後的異教神學、基督教神祕主義與伊斯蘭哲學共同奠基。',
             },
             { title_zh: '致馬爾克拉書', title_orig: 'Πρὸς Μαρκέλλαν / Ad Marcellam', author: '波菲利', era: '約公元 300 年', language: '古希臘文', status: 'whole', note: '寫給妻子的哲學勸勉書；「最好的敬神方式是心思潔淨」，異教靈修文學的代表。' },
-            { title_zh: '神學要義', title_orig: 'Στοιχείωσις θεολογική / Elementatio theologica', author: '普羅克洛', era: '公元 5 世紀', language: '古希臘文', extent: '211 命題', status: 'whole', note: '仿歐幾里得體例、以命題與證明寫成的形上學；經阿拉伯轉譯為《原因之書》，深刻影響經院哲學。' },
-            { title_zh: '柏拉圖神學', title_orig: 'Περὶ τῆς κατὰ Πλάτωνα θεολογίας', author: '普羅克洛', era: '公元 5 世紀', language: '古希臘文', extent: '全 6 卷', status: 'whole', note: '把希臘全部神名系統地編入形上學階序；異教神學的最終形態與集大成。' },
+            { title_zh: '神學要義', title_orig: 'Στοιχείωσις θεολογική / Elementatio theologica', author: '普羅克洛斯', era: '公元 5 世紀', language: '古希臘文', extent: '211 命題', status: 'whole', note: '仿歐幾里得體例、以命題與證明寫成的形上學；經阿拉伯轉譯為《原因之書》，深刻影響經院哲學。' },
+            { title_zh: '柏拉圖神學', title_orig: 'Περὶ τῆς κατὰ Πλάτωνα θεολογίας', author: '普羅克洛斯', era: '公元 5 世紀', language: '古希臘文', extent: '全 6 卷', status: 'whole', note: '把希臘全部神名系統地編入形上學階序；異教神學的最終形態與集大成。' },
             { title_zh: '論第一原理', title_orig: 'Περὶ ἀρχῶν / De principiis', author: '達馬斯基烏斯', era: '約公元 520 年', place: '雅典', language: '古希臘文', status: 'whole', note: '雅典學園末代園長之作，論不可言說者何以不可言說；希臘哲學的最後一部原創巨著。' },
             { title_zh: '蒂邁歐譯註', title_orig: 'Timaeus a Calcidio translatus commentarioque instructus', author: '卡爾奇迪烏斯', era: '公元 4 世紀', language: '拉丁文', track: 'latin', status: 'whole', note: '十二世紀之前西方唯一能讀到的柏拉圖創世論，中世紀宇宙觀的實際來源。' },
             { title_zh: '西庇阿之夢註', title_orig: 'Commentarii in Somnium Scipionis', author: '馬克羅比烏斯', era: '約公元 430 年', language: '拉丁文', track: 'latin', status: 'whole', note: '把新柏拉圖宇宙論與靈魂上升說傳入拉丁世界的關鍵著作。' },
@@ -867,10 +867,10 @@ export const GREEK_CANON: HellenCanon = {
               note: '全部異教文獻中最接近福音書的一部。',
               intro: '受尤利亞‧多姆娜之託所寫的一位一世紀畢達哥拉斯派聖者傳：神異降生、周遊行教、醫病驅鬼、復活少女、遠赴印度求道、面斥暴君、受審時自行消失、死後顯現向弟子證明靈魂不朽。全書與福音書的敘事結構重疊之深，使它在三世紀末就被希耶羅克勒斯拿來與基督直接比較，也因此成為此後一千七百年比較宗教爭論的中心文本。',
             },
-            { title_zh: '畢達哥拉斯傳（論畢達哥拉斯的生活方式）', title_orig: 'Περὶ τοῦ Πυθαγορείου βίου', author: '揚布利科斯', era: '約公元 300 年', language: '古希臘文', status: 'whole', note: '把畢達哥拉斯寫成教團創立者：入教考驗、緘默期、共財、戒律——異教修道生活的典範文本。' },
+            { title_zh: '畢達哥拉斯傳（論畢達哥拉斯的生活方式）', title_orig: 'Περὶ τοῦ Πυθαγορείου βίου', author: '楊布里科斯', era: '約公元 300 年', language: '古希臘文', status: 'whole', note: '把畢達哥拉斯寫成教團創立者：入教考驗、緘默期、共財、戒律——異教修道生活的典範文本。' },
             { title_zh: '普羅提諾傳', title_orig: 'Περὶ τοῦ Πλωτίνου βίου', author: '波菲利', era: '約公元 301 年', language: '古希臘文', status: 'whole', note: '弟子為師作傳並附《九章集》編纂說明；記其一生四次與太一合一，及臨終遺言「把你們裡面的神帶回宇宙的神那裡」。' },
             { title_zh: '哲學家與辯士傳', title_orig: 'Βίοι φιλοσόφων καὶ σοφιστῶν', author: '薩爾迪斯的歐納庇烏斯', era: '約公元 396 年', language: '古希臘文', status: 'whole', note: '新柏拉圖師承的群像傳，並記塞拉皮雍神廟被毀、修士取代哲人的過程——異教知識人的悲憤實錄。' },
-            { title_zh: '普羅克洛傳（論幸福）', title_orig: 'Πρόκλος ἢ Περὶ εὐδαιμονίας', author: '新普勒的馬里努斯', era: '公元 486 年', place: '雅典', language: '古希臘文', status: 'whole', note: '以德目階梯結構為師作傳，記其守齋、禱告、見神顯現與治病；異教聖徒傳的完成形態。' },
+            { title_zh: '普羅克洛斯傳（論幸福）', title_orig: 'Πρόκλος ἢ Περὶ εὐδαιμονίας', author: '新普勒的馬里努斯', era: '公元 486 年', place: '雅典', language: '古希臘文', status: 'whole', note: '以德目階梯結構為師作傳，記其守齋、禱告、見神顯現與治病；異教聖徒傳的完成形態。' },
             { title_zh: '哲學史（伊西多爾傳）', title_orig: 'Φιλόσοφος Ἱστορία', author: '達馬斯基烏斯', era: '約公元 520 年', language: '古希臘文', status: 'fragment', via: '佛提烏《書目》與《蘇達辭書》', note: '最後一代異教哲人的群像與軼事，字裡行間是一個正在消失的世界的自我記錄。Ω 卷互見。' },
           ],
         },
