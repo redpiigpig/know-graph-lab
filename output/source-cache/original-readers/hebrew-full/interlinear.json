@@ -116,7 +116,7 @@
           "ordinal": 3,
           "word": "הָאֱמֹרִ֑י",
           "trailing": "",
-          "glossZh": "這亞摩利人"
+          "glossZh": "亞摩利人"
         },
         {
           "ordinal": 4,
@@ -162,7 +162,7 @@
           "ordinal": 3,
           "word": "הַבָּשָׁ֑ן",
           "trailing": "",
-          "glossZh": "這巴珊"
+          "glossZh": "巴珊"
         },
         {
           "ordinal": 4,
@@ -438,7 +438,7 @@
           "ordinal": 3,
           "word": "הַשָּׁמָ֑יִם",
           "trailing": "",
-          "glossZh": "這天"
+          "glossZh": "天"
         },
         {
           "ordinal": 4,
@@ -1076,7 +1076,7 @@
           "ordinal": 2,
           "word": "הַ֭שָּׁמַיִם",
           "trailing": "",
-          "glossZh": "這天"
+          "glossZh": "天"
         },
         {
           "ordinal": 3,
@@ -1122,7 +1122,7 @@
           "ordinal": 2,
           "word": "הָ֭אָרֶץ",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 3,
@@ -1134,7 +1134,7 @@
           "ordinal": 4,
           "word": "הַמָּ֑יִם",
           "trailing": "",
-          "glossZh": "這水"
+          "glossZh": "水"
         },
         {
           "ordinal": 5,
@@ -1214,13 +1214,13 @@
           "ordinal": 1,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 2,
           "word": "הַ֭שֶּׁמֶשׁ",
           "trailing": "",
-          "glossZh": "這太陽"
+          "glossZh": "太陽"
         },
         {
           "ordinal": 3,
@@ -1266,13 +1266,13 @@
           "ordinal": 1,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 2,
           "word": "הַיָּרֵ֣חַ",
           "trailing": "",
-          "glossZh": "這月亮"
+          "glossZh": "月亮"
         },
         {
           "ordinal": 3,
@@ -2056,7 +2056,7 @@
           "ordinal": 4,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 5,
@@ -2550,7 +2550,7 @@
           "ordinal": 3,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 4,
@@ -2766,7 +2766,7 @@
           "ordinal": 3,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 4,
@@ -2790,7 +2790,7 @@
           "ordinal": 7,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "並與"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 8,
@@ -3042,7 +3042,7 @@
           "ordinal": 3,
           "word": "הָהָ֗רָה",
           "trailing": "",
-          "glossZh": "這山"
+          "glossZh": "山"
         },
         {
           "ordinal": 4,
@@ -3220,7 +3220,7 @@
           "ordinal": 11,
           "word": "הָרָעָ֖ב",
           "trailing": "",
-          "glossZh": "這饑荒"
+          "glossZh": "饑荒"
         },
         {
           "ordinal": 12,
@@ -3378,7 +3378,7 @@
           "ordinal": 5,
           "word": "הַמִּצְרִ֔ים",
           "trailing": "",
-          "glossZh": "這埃及人"
+          "glossZh": "埃及人"
         },
         {
           "ordinal": 6,
@@ -3542,19 +3542,19 @@
           "ordinal": 6,
           "word": "הַמִּצְרִים֙",
           "trailing": "",
-          "glossZh": "這埃及人"
+          "glossZh": "埃及人"
         },
         {
           "ordinal": 7,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 8,
           "word": "הָ֣אִשָּׁ֔ה",
           "trailing": "",
-          "glossZh": "這女人"
+          "glossZh": "女人"
         },
         {
           "ordinal": 9,
@@ -3648,7 +3648,7 @@
           "ordinal": 10,
           "word": "הָאִשָּׁ֖ה",
           "trailing": "",
-          "glossZh": "這女人"
+          "glossZh": "女人"
         },
         {
           "ordinal": 11,
@@ -3782,7 +3782,7 @@
           "ordinal": 9,
           "word": "הָאֲדָמָֽה",
           "trailing": "׃",
-          "glossZh": "這地"
+          "glossZh": "地"
         }
       ],
       "senseZh": "",
@@ -4034,13 +4034,13 @@
           "ordinal": 8,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 9,
           "word": "הָאָ֣רֶץ",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 10,
@@ -4128,7 +4128,7 @@
           "ordinal": 6,
           "word": "הַמַּ֖יִם",
           "trailing": "",
-          "glossZh": "這水"
+          "glossZh": "水"
         },
         {
           "ordinal": 7,
@@ -4210,7 +4210,7 @@
           "ordinal": 6,
           "word": "הַשָּׁמַ֔יִם",
           "trailing": "",
-          "glossZh": "這天"
+          "glossZh": "天"
         },
         {
           "ordinal": 7,
@@ -4304,7 +4304,7 @@
           "ordinal": 4,
           "word": "הַשָּׁמַ֔יִם",
           "trailing": "",
-          "glossZh": "這天"
+          "glossZh": "天"
         },
         {
           "ordinal": 5,
@@ -4322,7 +4322,7 @@
           "ordinal": 7,
           "word": "הָאָ֑רֶץ",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 8,
@@ -4362,7 +4362,7 @@
           "ordinal": 3,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 4,
@@ -4374,31 +4374,31 @@
           "ordinal": 5,
           "word": "הַמְּאֹרֹ֖ת",
           "trailing": "",
-          "glossZh": "這光體"
+          "glossZh": "光體"
         },
         {
           "ordinal": 6,
           "word": "הַגְּדֹלִ֑ים",
           "trailing": "",
-          "glossZh": "這大的"
+          "glossZh": "大的"
         },
         {
           "ordinal": 7,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 8,
           "word": "הַמָּא֤וֹר",
           "trailing": "",
-          "glossZh": "這光"
+          "glossZh": "光"
         },
         {
           "ordinal": 9,
           "word": "הַגָּדֹל֙",
           "trailing": "",
-          "glossZh": "這大的"
+          "glossZh": "大的"
         },
         {
           "ordinal": 10,
@@ -4416,19 +4416,19 @@
           "ordinal": 12,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "並與"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 13,
           "word": "הַמָּא֤וֹר",
           "trailing": "",
-          "glossZh": "這光"
+          "glossZh": "光"
         },
         {
           "ordinal": 14,
           "word": "הַקָּטֹן֙",
           "trailing": "",
-          "glossZh": "這小的"
+          "glossZh": "小的"
         },
         {
           "ordinal": 15,
@@ -4446,13 +4446,13 @@
           "ordinal": 17,
           "word": "וְאֵ֖ת",
           "trailing": "",
-          "glossZh": "並與"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 18,
           "word": "הַכּוֹכָבִֽים",
           "trailing": "׃",
-          "glossZh": "這星辰"
+          "glossZh": "星辰"
         }
       ],
       "senseZh": "",
@@ -4492,7 +4492,7 @@
           "ordinal": 5,
           "word": "הַשָּׁמָ֑יִם",
           "trailing": "",
-          "glossZh": "這天"
+          "glossZh": "天"
         },
         {
           "ordinal": 6,
@@ -4510,7 +4510,7 @@
           "ordinal": 8,
           "word": "הָאָֽרֶץ",
           "trailing": "׃",
-          "glossZh": "這地"
+          "glossZh": "地"
         }
       ],
       "senseZh": "",
@@ -4556,7 +4556,7 @@
           "ordinal": 6,
           "word": "הָא֖וֹר",
           "trailing": "",
-          "glossZh": "這光"
+          "glossZh": "光"
         },
         {
           "ordinal": 7,
@@ -4568,7 +4568,7 @@
           "ordinal": 8,
           "word": "הַחֹ֑שֶׁךְ",
           "trailing": "",
-          "glossZh": "這黑暗"
+          "glossZh": "黑暗"
         },
         {
           "ordinal": 9,
@@ -4626,7 +4626,7 @@
           "ordinal": 4,
           "word": "הַמַּ֔יִם",
           "trailing": "",
-          "glossZh": "這水"
+          "glossZh": "水"
         },
         {
           "ordinal": 5,
@@ -4668,7 +4668,7 @@
           "ordinal": 11,
           "word": "הָאָ֔רֶץ",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 12,
@@ -4692,7 +4692,7 @@
           "ordinal": 15,
           "word": "הַשָּׁמָֽיִם",
           "trailing": "׃",
-          "glossZh": "這天"
+          "glossZh": "天"
         }
       ],
       "senseZh": "",
@@ -4750,13 +4750,13 @@
           "ordinal": 8,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 9,
           "word": "הַמַּ֨יִם֙",
           "trailing": "",
-          "glossZh": "這水"
+          "glossZh": "水"
         },
         {
           "ordinal": 10,
@@ -4814,7 +4814,7 @@
           "ordinal": 4,
           "word": "הָאָ֜רֶץ",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 5,
@@ -4902,7 +4902,7 @@
           "ordinal": 3,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 4,
@@ -4914,7 +4914,7 @@
           "ordinal": 5,
           "word": "הָאָ֜רֶץ",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 6,
@@ -4926,13 +4926,13 @@
           "ordinal": 7,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "並與"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 8,
           "word": "הַבְּהֵמָה֙",
           "trailing": "",
-          "glossZh": "這牲畜"
+          "glossZh": "牲畜"
         },
         {
           "ordinal": 9,
@@ -4944,7 +4944,7 @@
           "ordinal": 10,
           "word": "וְאֵ֛ת",
           "trailing": "",
-          "glossZh": "並與"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 11,
@@ -4962,7 +4962,7 @@
           "ordinal": 13,
           "word": "הָֽאֲדָמָ֖ה",
           "trailing": "",
-          "glossZh": "這地面"
+          "glossZh": "地面"
         },
         {
           "ordinal": 14,
@@ -5026,25 +5026,25 @@
           "ordinal": 4,
           "word": "אֵ֥ת",
           "trailing": "",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 5,
           "word": "הַשָּׁמַ֖יִם",
           "trailing": "",
-          "glossZh": "這天"
+          "glossZh": "天"
         },
         {
           "ordinal": 6,
           "word": "וְאֵ֥ת",
           "trailing": "",
-          "glossZh": "並與"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 7,
           "word": "הָאָֽרֶץ",
           "trailing": "׃",
-          "glossZh": "這地"
+          "glossZh": "地"
         }
       ],
       "senseZh": "",
@@ -5138,7 +5138,7 @@
           "ordinal": 14,
           "word": "הַמָּֽיִם",
           "trailing": "׃",
-          "glossZh": "這水"
+          "glossZh": "水"
         }
       ],
       "senseZh": "",
@@ -5318,7 +5318,7 @@
           "ordinal": 6,
           "word": "הַמָּ֑יִם",
           "trailing": "",
-          "glossZh": "這水"
+          "glossZh": "水"
         },
         {
           "ordinal": 7,
@@ -5452,7 +5452,7 @@
           "ordinal": 4,
           "word": "הַמַּ֜יִם",
           "trailing": "",
-          "glossZh": "這水"
+          "glossZh": "水"
         },
         {
           "ordinal": 5,
@@ -5464,7 +5464,7 @@
           "ordinal": 6,
           "word": "הַשָּׁמַ֨יִם֙",
           "trailing": "",
-          "glossZh": "這天"
+          "glossZh": "天"
         },
         {
           "ordinal": 7,
@@ -5494,7 +5494,7 @@
           "ordinal": 11,
           "word": "הַיַּבָּשָׁ֑ה",
           "trailing": "",
-          "glossZh": "這乾地"
+          "glossZh": "乾地"
         },
         {
           "ordinal": 12,
@@ -5570,7 +5570,7 @@
           "ordinal": 9,
           "word": "הַיָּ֜ם",
           "trailing": "",
-          "glossZh": "這海"
+          "glossZh": "海"
         },
         {
           "ordinal": 10,
@@ -5582,7 +5582,7 @@
           "ordinal": 11,
           "word": "הַשָּׁמַ֗יִם",
           "trailing": "",
-          "glossZh": "這天空"
+          "glossZh": "天空"
         },
         {
           "ordinal": 12,
@@ -5658,13 +5658,13 @@
           "ordinal": 3,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 4,
           "word": "הָֽאָדָם֙",
           "trailing": "",
-          "glossZh": "這人"
+          "glossZh": "人"
         },
         {
           "ordinal": 5,
@@ -5788,7 +5788,7 @@
           "ordinal": 10,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 11,
@@ -5818,7 +5818,7 @@
           "ordinal": 15,
           "word": "הַיָּם֙",
           "trailing": "",
-          "glossZh": "這海"
+          "glossZh": "海"
         },
         {
           "ordinal": 16,
@@ -5830,7 +5830,7 @@
           "ordinal": 17,
           "word": "הַשָּׁמַ֔יִם",
           "trailing": "",
-          "glossZh": "這天空"
+          "glossZh": "天空"
         },
         {
           "ordinal": 18,
@@ -5876,7 +5876,7 @@
           "ordinal": 1,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 2,
@@ -6024,7 +6024,7 @@
           "ordinal": 16,
           "word": "הָאֲדָמָֽה",
           "trailing": "׃",
-          "glossZh": "這地面"
+          "glossZh": "地面"
         }
       ],
       "senseZh": "",
@@ -6052,7 +6052,7 @@
           "ordinal": 3,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 4,
@@ -6150,7 +6150,7 @@
           "ordinal": 2,
           "word": "אֵ֖ת",
           "trailing": "",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 3,
@@ -6610,7 +6610,7 @@
           "ordinal": 4,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 5,
@@ -6622,7 +6622,7 @@
           "ordinal": 6,
           "word": "הַחֻקִּ֣ים",
           "trailing": "",
-          "glossZh": "這律例"
+          "glossZh": "律例"
         },
         {
           "ordinal": 7,
@@ -6640,7 +6640,7 @@
           "ordinal": 9,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 10,
@@ -6676,7 +6676,7 @@
           "ordinal": 15,
           "word": "הַיָּמִ֔ים",
           "trailing": "",
-          "glossZh": "這些日子"
+          "glossZh": "日子"
         },
         {
           "ordinal": 16,
@@ -6758,7 +6758,7 @@
           "ordinal": 9,
           "word": "הַמִּצְוָ֣ה",
           "trailing": "",
-          "glossZh": "這誡命"
+          "glossZh": "誡命"
         },
         {
           "ordinal": 10,
@@ -6834,7 +6834,7 @@
           "ordinal": 5,
           "word": "הַדְּבָרִ֥ים",
           "trailing": "",
-          "glossZh": "這些話"
+          "glossZh": "話"
         },
         {
           "ordinal": 6,
@@ -7102,7 +7102,7 @@
           "ordinal": 2,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 3,
@@ -7294,7 +7294,7 @@
           "ordinal": 2,
           "word": "הָעָם֩",
           "trailing": "",
-          "glossZh": "這百姓"
+          "glossZh": "百姓"
         },
         {
           "ordinal": 3,
@@ -7306,31 +7306,31 @@
           "ordinal": 4,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 5,
           "word": "הַקּוֹלֹ֜ת",
           "trailing": "",
-          "glossZh": "這聲音"
+          "glossZh": "聲音"
         },
         {
           "ordinal": 6,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "並與"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 7,
           "word": "הַלַּפִּידִ֗ם",
           "trailing": "",
-          "glossZh": "這火焰"
+          "glossZh": "火焰"
         },
         {
           "ordinal": 8,
           "word": "וְאֵת֙",
           "trailing": "",
-          "glossZh": "並與"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 9,
@@ -7342,19 +7342,19 @@
           "ordinal": 10,
           "word": "הַשֹּׁפָ֔ר",
           "trailing": "",
-          "glossZh": "這號角"
+          "glossZh": "號角"
         },
         {
           "ordinal": 11,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "並與"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 12,
           "word": "הָהָ֖ר",
           "trailing": "",
-          "glossZh": "這山"
+          "glossZh": "山"
         },
         {
           "ordinal": 13,
@@ -7372,7 +7372,7 @@
           "ordinal": 15,
           "word": "הָעָם֙",
           "trailing": "",
-          "glossZh": "這百姓"
+          "glossZh": "百姓"
         },
         {
           "ordinal": 16,
@@ -7696,7 +7696,7 @@
           "ordinal": 14,
           "word": "הַשָּׁמַ֔יִם",
           "trailing": "",
-          "glossZh": "這天空"
+          "glossZh": "天空"
         },
         {
           "ordinal": 15,
@@ -7906,7 +7906,7 @@
           "ordinal": 4,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 5,
@@ -7948,13 +7948,13 @@
           "ordinal": 11,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 12,
           "word": "הַצֹּאן֙",
           "trailing": "",
-          "glossZh": "這羊群"
+          "glossZh": "羊群"
         },
         {
           "ordinal": 13,
@@ -7966,7 +7966,7 @@
           "ordinal": 14,
           "word": "הַמִּדְבָּ֔ר",
           "trailing": "",
-          "glossZh": "這曠野"
+          "glossZh": "曠野"
         },
         {
           "ordinal": 15,
@@ -8054,7 +8054,7 @@
           "ordinal": 8,
           "word": "הַסְּנֶ֑ה",
           "trailing": "",
-          "glossZh": "這荊棘"
+          "glossZh": "荊棘"
         },
         {
           "ordinal": 9,
@@ -8072,7 +8072,7 @@
           "ordinal": 11,
           "word": "הַסְּנֶה֙",
           "trailing": "",
-          "glossZh": "這荊棘"
+          "glossZh": "荊棘"
         },
         {
           "ordinal": 12,
@@ -8148,13 +8148,13 @@
           "ordinal": 6,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 7,
           "word": "הַמַּרְאֶ֥ה",
           "trailing": "",
-          "glossZh": "這異象"
+          "glossZh": "異象"
         },
         {
           "ordinal": 8,
@@ -8190,7 +8190,7 @@
           "ordinal": 13,
           "word": "הַסְּנֶֽה",
           "trailing": "׃",
-          "glossZh": "這荊棘"
+          "glossZh": "荊棘"
         }
       ],
       "senseZh": "",
@@ -8260,7 +8260,7 @@
           "ordinal": 10,
           "word": "הַסְּנֶ֗ה",
           "trailing": "",
-          "glossZh": "這荊棘"
+          "glossZh": "荊棘"
         },
         {
           "ordinal": 11,
@@ -8342,7 +8342,7 @@
           "ordinal": 7,
           "word": "הָאָ֣רֶץ",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 8,
@@ -8420,7 +8420,7 @@
           "ordinal": 20,
           "word": "הַֽכְּנַעֲנִי֙",
           "trailing": "",
-          "glossZh": "這迦南人"
+          "glossZh": "迦南人"
         },
         {
           "ordinal": 21,
@@ -8502,7 +8502,7 @@
           "ordinal": 7,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 8,
@@ -8614,7 +8614,7 @@
           "ordinal": 13,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 14,
@@ -8714,7 +8714,7 @@
           "ordinal": 12,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 13,
@@ -8738,7 +8738,7 @@
           "ordinal": 16,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 17,
@@ -8756,7 +8756,7 @@
           "ordinal": 19,
           "word": "הָהָ֥ר",
           "trailing": "",
-          "glossZh": "這山"
+          "glossZh": "山"
         },
         {
           "ordinal": 20,
@@ -8796,7 +8796,7 @@
           "ordinal": 4,
           "word": "הָֽאֱלֹהִ֗ים",
           "trailing": "",
-          "glossZh": "這上帝"
+          "glossZh": "上帝"
         },
         {
           "ordinal": 5,
@@ -9116,7 +9116,7 @@
           "ordinal": 3,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 4,
@@ -9224,7 +9224,7 @@
           "ordinal": 21,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "並與"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 22,
@@ -9630,7 +9630,7 @@
           "ordinal": 2,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 3,
@@ -9808,7 +9808,7 @@
           "ordinal": 17,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 18,
@@ -9836,7 +9836,7 @@
           "ordinal": 2,
           "word": "הָֽאִשָּׁ֖ה",
           "trailing": "",
-          "glossZh": "這女人"
+          "glossZh": "女人"
         },
         {
           "ordinal": 3,
@@ -9848,7 +9848,7 @@
           "ordinal": 4,
           "word": "הַנָּחָ֑שׁ",
           "trailing": "",
-          "glossZh": "這蛇"
+          "glossZh": "蛇"
         },
         {
           "ordinal": 5,
@@ -9866,7 +9866,7 @@
           "ordinal": 7,
           "word": "הַגָּ֖ן",
           "trailing": "",
-          "glossZh": "這園子"
+          "glossZh": "園子"
         },
         {
           "ordinal": 8,
@@ -9894,7 +9894,7 @@
           "ordinal": 2,
           "word": "הַנָּחָ֖שׁ",
           "trailing": "",
-          "glossZh": "這蛇"
+          "glossZh": "蛇"
         },
         {
           "ordinal": 3,
@@ -9906,7 +9906,7 @@
           "ordinal": 4,
           "word": "הָֽאִשָּׁ֑ה",
           "trailing": "",
-          "glossZh": "這女人"
+          "glossZh": "女人"
         },
         {
           "ordinal": 5,
@@ -10040,7 +10040,7 @@
           "ordinal": 2,
           "word": "הָֽאִשָּׁ֡ה",
           "trailing": "",
-          "glossZh": "這女人"
+          "glossZh": "女人"
         },
         {
           "ordinal": 3,
@@ -10058,7 +10058,7 @@
           "ordinal": 5,
           "word": "הָעֵ֨ץ",
           "trailing": "",
-          "glossZh": "這樹"
+          "glossZh": "樹"
         },
         {
           "ordinal": 6,
@@ -10100,7 +10100,7 @@
           "ordinal": 12,
           "word": "הָעֵץ֙",
           "trailing": "",
-          "glossZh": "這樹"
+          "glossZh": "樹"
         },
         {
           "ordinal": 13,
@@ -10264,7 +10264,7 @@
           "ordinal": 2,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 3,
@@ -10318,7 +10318,7 @@
           "ordinal": 11,
           "word": "הָֽאָדָ֜ם",
           "trailing": "",
-          "glossZh": "這…人"
+          "glossZh": "人"
         },
         {
           "ordinal": 12,
@@ -10360,7 +10360,7 @@
           "ordinal": 18,
           "word": "הַגָּֽן",
           "trailing": "׃",
-          "glossZh": "這…園子"
+          "glossZh": "園子"
         }
       ],
       "senseZh": "",
@@ -10400,7 +10400,7 @@
           "ordinal": 5,
           "word": "הָֽאָדָ֑ם",
           "trailing": "",
-          "glossZh": "這…人"
+          "glossZh": "人"
         },
         {
           "ordinal": 6,
@@ -10440,7 +10440,7 @@
           "ordinal": 2,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 3,
@@ -10552,13 +10552,13 @@
           "ordinal": 9,
           "word": "הָֽאִשָּׁ֔ה",
           "trailing": "",
-          "glossZh": "這…女人"
+          "glossZh": "女人"
         },
         {
           "ordinal": 10,
           "word": "הַנָּחָ֥שׁ",
           "trailing": "",
-          "glossZh": "這…蛇"
+          "glossZh": "蛇"
         },
         {
           "ordinal": 11,
@@ -10610,7 +10610,7 @@
           "ordinal": 5,
           "word": "הַנָּחָשׁ֮",
           "trailing": "",
-          "glossZh": "這…蛇"
+          "glossZh": "蛇"
         },
         {
           "ordinal": 6,
@@ -10652,7 +10652,7 @@
           "ordinal": 12,
           "word": "הַבְּהֵמָ֔ה",
           "trailing": "",
-          "glossZh": "這…牲畜"
+          "glossZh": "牲畜"
         },
         {
           "ordinal": 13,
@@ -10670,7 +10670,7 @@
           "ordinal": 15,
           "word": "הַשָּׂדֶ֑ה",
           "trailing": "",
-          "glossZh": "這…田地"
+          "glossZh": "田地"
         },
         {
           "ordinal": 16,
@@ -10758,7 +10758,7 @@
           "ordinal": 5,
           "word": "הָֽאִשָּׁ֔ה",
           "trailing": "",
-          "glossZh": "這女人"
+          "glossZh": "女人"
         },
         {
           "ordinal": 6,
@@ -10840,7 +10840,7 @@
           "ordinal": 2,
           "word": "הָאִשָּׁ֣ה",
           "trailing": "",
-          "glossZh": "這女人"
+          "glossZh": "女人"
         },
         {
           "ordinal": 3,
@@ -10970,7 +10970,7 @@
           "ordinal": 6,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 7,
@@ -10982,7 +10982,7 @@
           "ordinal": 8,
           "word": "הַשָּׂדֶֽה",
           "trailing": "׃",
-          "glossZh": "這田地"
+          "glossZh": "田地"
         }
       ],
       "senseZh": "",
@@ -11040,7 +11040,7 @@
           "ordinal": 8,
           "word": "הָ֣אֲדָמָ֔ה",
           "trailing": "",
-          "glossZh": "這地面"
+          "glossZh": "地面"
         },
         {
           "ordinal": 9,
@@ -11116,7 +11116,7 @@
           "ordinal": 2,
           "word": "הָֽאָדָ֛ם",
           "trailing": "",
-          "glossZh": "這人"
+          "glossZh": "人"
         },
         {
           "ordinal": 3,
@@ -11268,7 +11268,7 @@
           "ordinal": 5,
           "word": "הָֽאָדָם֙",
           "trailing": "",
-          "glossZh": "這人"
+          "glossZh": "人"
         },
         {
           "ordinal": 6,
@@ -11352,7 +11352,7 @@
           "ordinal": 19,
           "word": "הַֽחַיִּ֔ים",
           "trailing": "",
-          "glossZh": "這生命"
+          "glossZh": "生命"
         },
         {
           "ordinal": 20,
@@ -11398,7 +11398,7 @@
           "ordinal": 3,
           "word": "הָֽאָדָ֑ם",
           "trailing": "",
-          "glossZh": "這人"
+          "glossZh": "人"
         },
         {
           "ordinal": 4,
@@ -11434,7 +11434,7 @@
           "ordinal": 9,
           "word": "הַכְּרֻבִ֗ים",
           "trailing": "",
-          "glossZh": "這基路伯"
+          "glossZh": "基路伯"
         },
         {
           "ordinal": 10,
@@ -11452,7 +11452,7 @@
           "ordinal": 12,
           "word": "הַחֶ֨רֶב֙",
           "trailing": "",
-          "glossZh": "這刀劍"
+          "glossZh": "刀劍"
         },
         {
           "ordinal": 13,
@@ -11488,7 +11488,7 @@
           "ordinal": 18,
           "word": "הַֽחַיִּֽים",
           "trailing": "׃",
-          "glossZh": "這生命"
+          "glossZh": "生命"
         }
       ],
       "senseZh": "",
@@ -11558,7 +11558,7 @@
           "ordinal": 10,
           "word": "הַבִּקְעָ֑ה",
           "trailing": "",
-          "glossZh": "這平原"
+          "glossZh": "平原"
         },
         {
           "ordinal": 11,
@@ -11646,7 +11646,7 @@
           "ordinal": 10,
           "word": "הַבִּקְעָ֔ה",
           "trailing": "",
-          "glossZh": "這平原"
+          "glossZh": "平原"
         },
         {
           "ordinal": 11,
@@ -11710,7 +11710,7 @@
           "ordinal": 6,
           "word": "הָעֲצָמ֣וֹת",
           "trailing": "",
-          "glossZh": "這骨頭"
+          "glossZh": "骨頭"
         },
         {
           "ordinal": 7,
@@ -11786,7 +11786,7 @@
           "ordinal": 5,
           "word": "הָעֲצָמ֣וֹת",
           "trailing": "",
-          "glossZh": "這骨頭"
+          "glossZh": "骨頭"
         },
         {
           "ordinal": 6,
@@ -12398,7 +12398,7 @@
           "ordinal": 6,
           "word": "הָר֜וּחַ",
           "trailing": "",
-          "glossZh": "這靈"
+          "glossZh": "靈"
         },
         {
           "ordinal": 7,
@@ -12486,7 +12486,7 @@
           "ordinal": 5,
           "word": "הָעֲצָמ֣וֹת",
           "trailing": "",
-          "glossZh": "這些骨頭"
+          "glossZh": "骨頭"
         },
         {
           "ordinal": 6,
@@ -12752,7 +12752,7 @@
           "ordinal": 6,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 7,
@@ -13334,7 +13334,7 @@
           "ordinal": 13,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 14,
@@ -13444,7 +13444,7 @@
           "ordinal": 2,
           "word": "הַגּוֹיִ֔ם",
           "trailing": "",
-          "glossZh": "這…民族"
+          "glossZh": "民族"
         },
         {
           "ordinal": 3,
@@ -13780,7 +13780,7 @@
           "ordinal": 4,
           "word": "הַמֶּ֖לֶךְ",
           "trailing": "",
-          "glossZh": "這王"
+          "glossZh": "王"
         },
         {
           "ordinal": 5,
@@ -13844,7 +13844,7 @@
           "ordinal": 2,
           "word": "הַמֶּ֨לֶךְ֙",
           "trailing": "",
-          "glossZh": "這王"
+          "glossZh": "王"
         },
         {
           "ordinal": 3,
@@ -13862,7 +13862,7 @@
           "ordinal": 5,
           "word": "הַנָּבִ֔יא",
           "trailing": "",
-          "glossZh": "這先知"
+          "glossZh": "先知"
         },
         {
           "ordinal": 6,
@@ -13910,7 +13910,7 @@
           "ordinal": 13,
           "word": "הָֽאֱלֹהִ֔ים",
           "trailing": "",
-          "glossZh": "這上帝的"
+          "glossZh": "上帝的"
         },
         {
           "ordinal": 14,
@@ -13928,7 +13928,7 @@
           "ordinal": 16,
           "word": "הַיְרִיעָֽה",
           "trailing": "׃",
-          "glossZh": "這懸掛物"
+          "glossZh": "懸掛物"
         }
       ],
       "senseZh": "",
@@ -14138,7 +14138,7 @@
           "ordinal": 7,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 8,
@@ -14286,7 +14286,7 @@
           "ordinal": 13,
           "word": "הַנָּוֶ֔ה",
           "trailing": "",
-          "glossZh": "這牧場"
+          "glossZh": "牧場"
         },
         {
           "ordinal": 14,
@@ -14298,7 +14298,7 @@
           "ordinal": 15,
           "word": "הַצֹּ֑אן",
           "trailing": "",
-          "glossZh": "這羊群"
+          "glossZh": "羊群"
         },
         {
           "ordinal": 16,
@@ -14492,7 +14492,7 @@
           "ordinal": 6,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 7,
@@ -14732,7 +14732,7 @@
           "ordinal": 9,
           "word": "אֶֽת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 10,
@@ -14790,7 +14790,7 @@
           "ordinal": 5,
           "word": "אֵ֥ת",
           "trailing": "",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 6,
@@ -14820,7 +14820,7 @@
           "ordinal": 10,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 11,
@@ -14854,7 +14854,7 @@
           "ordinal": 3,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "(受詞記號)"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 4,
@@ -15456,7 +15456,7 @@
           "ordinal": 8,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 9,
@@ -15522,7 +15522,7 @@
           "ordinal": 19,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 20,
@@ -15546,13 +15546,13 @@
           "ordinal": 23,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 24,
           "word": "הַתְּפִלָּ֖ה",
           "trailing": "",
-          "glossZh": "這個禱告"
+          "glossZh": "個禱告"
         },
         {
           "ordinal": 25,
@@ -15604,7 +15604,7 @@
           "ordinal": 6,
           "word": "הָֽאֱלֹהִ֔ים",
           "trailing": "",
-          "glossZh": "這位神"
+          "glossZh": "位神"
         },
         {
           "ordinal": 7,
@@ -15646,13 +15646,13 @@
           "ordinal": 13,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 14,
           "word": "הַטּוֹבָ֖ה",
           "trailing": "",
-          "glossZh": "這個良善"
+          "glossZh": "個良善"
         },
         {
           "ordinal": 15,
@@ -15692,7 +15692,7 @@
           "ordinal": 4,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "(受詞記號)"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 5,
@@ -16346,7 +16346,7 @@
           "ordinal": 3,
           "word": "הָאָדָם֙",
           "trailing": "",
-          "glossZh": "這個人"
+          "glossZh": "個人"
         },
         {
           "ordinal": 4,
@@ -16434,7 +16434,7 @@
           "ordinal": 4,
           "word": "הַשָּׁ֑מֶשׁ",
           "trailing": "",
-          "glossZh": "這個太陽"
+          "glossZh": "個太陽"
         },
         {
           "ordinal": 5,
@@ -16446,7 +16446,7 @@
           "ordinal": 6,
           "word": "הַמִּשְׁפָּט֙",
           "trailing": "",
-          "glossZh": "這個判決"
+          "glossZh": "個判決"
         },
         {
           "ordinal": 7,
@@ -16470,7 +16470,7 @@
           "ordinal": 10,
           "word": "הַצֶּ֖דֶק",
           "trailing": "",
-          "glossZh": "這個公義"
+          "glossZh": "個公義"
         },
         {
           "ordinal": 11,
@@ -16516,25 +16516,25 @@
           "ordinal": 4,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 5,
           "word": "הַצַּדִּיק֙",
           "trailing": "",
-          "glossZh": "這個公義的"
+          "glossZh": "個公義的"
         },
         {
           "ordinal": 6,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "並與"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 7,
           "word": "הָ֣רָשָׁ֔ע",
           "trailing": "",
-          "glossZh": "這個邪惡的"
+          "glossZh": "個邪惡的"
         },
         {
           "ordinal": 8,
@@ -16546,7 +16546,7 @@
           "ordinal": 9,
           "word": "הָאֱלֹהִ֑ים",
           "trailing": "",
-          "glossZh": "這個上帝"
+          "glossZh": "個上帝"
         },
         {
           "ordinal": 10,
@@ -16588,7 +16588,7 @@
           "ordinal": 16,
           "word": "הַֽמַּעֲשֶׂ֖ה",
           "trailing": "",
-          "glossZh": "這個工作"
+          "glossZh": "個工作"
         },
         {
           "ordinal": 17,
@@ -16646,7 +16646,7 @@
           "ordinal": 7,
           "word": "הָאָדָ֔ם",
           "trailing": "",
-          "glossZh": "這個人"
+          "glossZh": "個人"
         },
         {
           "ordinal": 8,
@@ -16658,7 +16658,7 @@
           "ordinal": 9,
           "word": "הָאֱלֹהִ֑ים",
           "trailing": "",
-          "glossZh": "這個上帝"
+          "glossZh": "個上帝"
         },
         {
           "ordinal": 10,
@@ -16948,7 +16948,7 @@
           "ordinal": 3,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 4,
@@ -17076,7 +17076,7 @@
           "ordinal": 3,
           "word": "הַמֶּ֣לֶךְ",
           "trailing": "",
-          "glossZh": "這位王"
+          "glossZh": "位王"
         },
         {
           "ordinal": 4,
@@ -17094,7 +17094,7 @@
           "ordinal": 6,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 7,
@@ -17148,13 +17148,13 @@
           "ordinal": 15,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 16,
           "word": "הַהֵיכָֽל",
           "trailing": "׃",
-          "glossZh": "這聖殿"
+          "glossZh": "聖殿"
         }
       ],
       "senseZh": "",
@@ -17354,7 +17354,7 @@
           "ordinal": 13,
           "word": "הָאָ֖רֶץ",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 14,
@@ -17388,7 +17388,7 @@
           "ordinal": 3,
           "word": "הַסִּפִּ֔ים",
           "trailing": "",
-          "glossZh": "這些門框"
+          "glossZh": "門框"
         },
         {
           "ordinal": 4,
@@ -17400,7 +17400,7 @@
           "ordinal": 5,
           "word": "הַקּוֹרֵ֑א",
           "trailing": "",
-          "glossZh": "這聲音"
+          "glossZh": "聲音"
         },
         {
           "ordinal": 6,
@@ -17536,13 +17536,13 @@
           "ordinal": 18,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 19,
           "word": "הַמֶּ֛לֶךְ",
           "trailing": "",
-          "glossZh": "這王"
+          "glossZh": "王"
         },
         {
           "ordinal": 20,
@@ -17606,7 +17606,7 @@
           "ordinal": 5,
           "word": "הַשְּׂרָפִ֔ים",
           "trailing": "",
-          "glossZh": "這些火蛇"
+          "glossZh": "火蛇"
         },
         {
           "ordinal": 6,
@@ -17642,7 +17642,7 @@
           "ordinal": 11,
           "word": "הַמִּזְבֵּֽחַ",
           "trailing": "׃",
-          "glossZh": "這祭壇"
+          "glossZh": "祭壇"
         }
       ],
       "senseZh": "",
@@ -17952,7 +17952,7 @@
           "ordinal": 4,
           "word": "אֵ֖ת",
           "trailing": "",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 5,
@@ -18194,7 +18194,7 @@
           "ordinal": 2,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 3,
@@ -18218,7 +18218,7 @@
           "ordinal": 6,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 7,
@@ -18500,7 +18500,7 @@
           "ordinal": 3,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 4,
@@ -18914,7 +18914,7 @@
           "ordinal": 4,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 5,
@@ -18996,7 +18996,7 @@
           "ordinal": 4,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 5,
@@ -19044,7 +19044,7 @@
           "ordinal": 12,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 13,
@@ -19114,7 +19114,7 @@
           "ordinal": 5,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 6,
@@ -19150,7 +19150,7 @@
           "ordinal": 11,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "並與"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 12,
@@ -19274,7 +19274,7 @@
           "ordinal": 7,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 8,
@@ -19386,7 +19386,7 @@
           "ordinal": 13,
           "word": "הַסְּעִפִּים֒",
           "trailing": "",
-          "glossZh": "這些分支"
+          "glossZh": "分支"
         },
         {
           "ordinal": 14,
@@ -19404,7 +19404,7 @@
           "ordinal": 16,
           "word": "הָֽאֱלֹהִים֙",
           "trailing": "",
-          "glossZh": "這個神"
+          "glossZh": "個神"
         },
         {
           "ordinal": 17,
@@ -19428,7 +19428,7 @@
           "ordinal": 20,
           "word": "הַבַּ֖עַל",
           "trailing": "",
-          "glossZh": "這個巴力"
+          "glossZh": "個巴力"
         },
         {
           "ordinal": 21,
@@ -19546,7 +19546,7 @@
           "ordinal": 11,
           "word": "הַבַּ֔עַל",
           "trailing": "",
-          "glossZh": "這個巴力"
+          "glossZh": "個巴力"
         },
         {
           "ordinal": 12,
@@ -19622,7 +19622,7 @@
           "ordinal": 7,
           "word": "הַפָּ֨ר",
           "trailing": "",
-          "glossZh": "這個公牛"
+          "glossZh": "個公牛"
         },
         {
           "ordinal": 8,
@@ -19652,7 +19652,7 @@
           "ordinal": 12,
           "word": "הָ֣עֵצִ֔ים",
           "trailing": "",
-          "glossZh": "這些木頭"
+          "glossZh": "木頭"
         },
         {
           "ordinal": 13,
@@ -19688,13 +19688,13 @@
           "ordinal": 18,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 19,
           "word": "הַפָּ֣ר",
           "trailing": "",
-          "glossZh": "這個公牛"
+          "glossZh": "個公牛"
         },
         {
           "ordinal": 20,
@@ -19718,7 +19718,7 @@
           "ordinal": 23,
           "word": "הָ֣עֵצִ֔ים",
           "trailing": "",
-          "glossZh": "這些木頭"
+          "glossZh": "木頭"
         },
         {
           "ordinal": 24,
@@ -19770,7 +19770,7 @@
           "ordinal": 4,
           "word": "הַבַּ֗עַל",
           "trailing": "",
-          "glossZh": "這個巴力"
+          "glossZh": "個巴力"
         },
         {
           "ordinal": 5,
@@ -19788,7 +19788,7 @@
           "ordinal": 7,
           "word": "הַפָּ֤ר",
           "trailing": "",
-          "glossZh": "這個公牛"
+          "glossZh": "個公牛"
         },
         {
           "ordinal": 8,
@@ -20118,7 +20118,7 @@
           "ordinal": 3,
           "word": "הַֽצָּהֳרַ֔יִם",
           "trailing": "",
-          "glossZh": "這正午"
+          "glossZh": "正午"
         },
         {
           "ordinal": 4,
@@ -20142,7 +20142,7 @@
           "ordinal": 7,
           "word": "הַמִּנְחָ֑ה",
           "trailing": "",
-          "glossZh": "這禮物"
+          "glossZh": "禮物"
         },
         {
           "ordinal": 8,
@@ -20212,7 +20212,7 @@
           "ordinal": 4,
           "word": "הָעָם֙",
           "trailing": "",
-          "glossZh": "這百姓"
+          "glossZh": "百姓"
         },
         {
           "ordinal": 5,
@@ -20242,7 +20242,7 @@
           "ordinal": 9,
           "word": "הָעָ֖ם",
           "trailing": "",
-          "glossZh": "這百姓"
+          "glossZh": "百姓"
         },
         {
           "ordinal": 10,
@@ -20260,7 +20260,7 @@
           "ordinal": 12,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 13,
@@ -20388,13 +20388,13 @@
           "ordinal": 2,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 3,
           "word": "הָאֲבָנִ֛ים",
           "trailing": "",
-          "glossZh": "這些石頭"
+          "glossZh": "石頭"
         },
         {
           "ordinal": 4,
@@ -20476,13 +20476,13 @@
           "ordinal": 2,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 3,
           "word": "הָֽעֵצִ֑ים",
           "trailing": "",
-          "glossZh": "這些木頭"
+          "glossZh": "木頭"
         },
         {
           "ordinal": 4,
@@ -20494,13 +20494,13 @@
           "ordinal": 5,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 6,
           "word": "הַפָּ֔ר",
           "trailing": "",
-          "glossZh": "這公牛"
+          "glossZh": "公牛"
         },
         {
           "ordinal": 7,
@@ -20518,7 +20518,7 @@
           "ordinal": 9,
           "word": "הָעֵצִֽים",
           "trailing": "׃",
-          "glossZh": "這些木頭"
+          "glossZh": "木頭"
         }
       ],
       "senseZh": "",
@@ -20588,7 +20588,7 @@
           "ordinal": 10,
           "word": "הָעֵצִ֑ים",
           "trailing": "",
-          "glossZh": "這些木頭"
+          "glossZh": "木頭"
         },
         {
           "ordinal": 11,
@@ -20670,13 +20670,13 @@
           "ordinal": 6,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 7,
           "word": "הַתְּעָלָ֖ה",
           "trailing": "",
-          "glossZh": "這溝渠"
+          "glossZh": "溝渠"
         },
         {
           "ordinal": 8,
@@ -20716,7 +20716,7 @@
           "ordinal": 3,
           "word": "הַמִּנְחָ֗ה",
           "trailing": "",
-          "glossZh": "這晚祭"
+          "glossZh": "晚祭"
         },
         {
           "ordinal": 4,
@@ -20734,7 +20734,7 @@
           "ordinal": 6,
           "word": "הַנָּבִיא֮",
           "trailing": "",
-          "glossZh": "這先知"
+          "glossZh": "先知"
         },
         {
           "ordinal": 7,
@@ -20848,7 +20848,7 @@
           "ordinal": 25,
           "word": "הַדְּבָרִ֖ים",
           "trailing": "",
-          "glossZh": "這些話"
+          "glossZh": "話"
         },
         {
           "ordinal": 26,
@@ -20894,7 +20894,7 @@
           "ordinal": 5,
           "word": "הָעָ֣ם",
           "trailing": "",
-          "glossZh": "這百姓"
+          "glossZh": "百姓"
         },
         {
           "ordinal": 6,
@@ -20924,7 +20924,7 @@
           "ordinal": 10,
           "word": "הָאֱלֹהִ֑ים",
           "trailing": "",
-          "glossZh": "這上帝"
+          "glossZh": "上帝"
         },
         {
           "ordinal": 11,
@@ -20942,7 +20942,7 @@
           "ordinal": 13,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 14,
@@ -20982,7 +20982,7 @@
           "ordinal": 3,
           "word": "הָעָ֔ם",
           "trailing": "",
-          "glossZh": "這百姓"
+          "glossZh": "百姓"
         },
         {
           "ordinal": 4,
@@ -21024,7 +21024,7 @@
           "ordinal": 10,
           "word": "הָאֱלֹהִ֔ים",
           "trailing": "",
-          "glossZh": "這上帝"
+          "glossZh": "上帝"
         },
         {
           "ordinal": 11,
@@ -21042,7 +21042,7 @@
           "ordinal": 13,
           "word": "הָאֱלֹהִֽים",
           "trailing": "׃",
-          "glossZh": "這上帝"
+          "glossZh": "上帝"
         }
       ],
       "senseZh": "",
@@ -21082,7 +21082,7 @@
           "ordinal": 5,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 6,
@@ -21094,7 +21094,7 @@
           "ordinal": 7,
           "word": "הַבַּ֗עַל",
           "trailing": "",
-          "glossZh": "這巴力"
+          "glossZh": "巴力"
         },
         {
           "ordinal": 8,
@@ -21236,7 +21236,7 @@
           "ordinal": 10,
           "word": "הַגָּֽשֶׁם",
           "trailing": "׃",
-          "glossZh": "這雨"
+          "glossZh": "雨"
         }
       ],
       "senseZh": "",
@@ -21300,7 +21300,7 @@
           "ordinal": 9,
           "word": "הַכַּרְמֶל֙",
           "trailing": "",
-          "glossZh": "這迦密山"
+          "glossZh": "迦密山"
         },
         {
           "ordinal": 10,
@@ -21578,7 +21578,7 @@
           "ordinal": 20,
           "word": "הַגָּֽשֶׁם",
           "trailing": "׃",
-          "glossZh": "這雨"
+          "glossZh": "雨"
         }
       ],
       "senseZh": "",
@@ -21788,7 +21788,7 @@
           "ordinal": 6,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 7,
@@ -21840,7 +21840,7 @@
           "ordinal": 3,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 4,
@@ -22186,7 +22186,7 @@
           "ordinal": 3,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 4,
@@ -22216,7 +22216,7 @@
           "ordinal": 8,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 9,
@@ -22286,7 +22286,7 @@
           "ordinal": 5,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 6,
@@ -22508,7 +22508,7 @@
           "ordinal": 5,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "並與"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 6,
@@ -22572,7 +22572,7 @@
           "ordinal": 4,
           "word": "הָ֣אֱלִילִ֔ים",
           "trailing": "",
-          "glossZh": "這些虛無之物"
+          "glossZh": "虛無之物"
         },
         {
           "ordinal": 5,
@@ -22846,7 +22846,7 @@
           "ordinal": 5,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 6,
@@ -22876,13 +22876,13 @@
           "ordinal": 10,
           "word": "הַנֶּ֥פֶשׁ",
           "trailing": "",
-          "glossZh": "這個性命"
+          "glossZh": "個性命"
         },
         {
           "ordinal": 11,
           "word": "הַהִ֖וא",
           "trailing": "",
-          "glossZh": "這個"
+          "glossZh": "個"
         },
         {
           "ordinal": 12,
@@ -23116,7 +23116,7 @@
           "ordinal": 2,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 3,
@@ -23198,7 +23198,7 @@
           "ordinal": 4,
           "word": "הָאָ֗רֶץ",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 5,
@@ -23240,7 +23240,7 @@
           "ordinal": 11,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 12,
@@ -23380,7 +23380,7 @@
           "ordinal": 4,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 5,
@@ -23456,7 +23456,7 @@
           "ordinal": 4,
           "word": "הַדָּ֑ם",
           "trailing": "",
-          "glossZh": "這血"
+          "glossZh": "血"
         },
         {
           "ordinal": 5,
@@ -23532,7 +23532,7 @@
           "ordinal": 7,
           "word": "אֵ֖ת",
           "trailing": "",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 8,
@@ -23654,7 +23654,7 @@
           "ordinal": 3,
           "word": "אֶֽת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 4,
@@ -23684,7 +23684,7 @@
           "ordinal": 8,
           "word": "הָאָ֔רֶץ",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 9,
@@ -23696,7 +23696,7 @@
           "ordinal": 10,
           "word": "הָאָ֖רֶץ",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 11,
@@ -23718,7 +23718,7 @@
           "ordinal": 1,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 2,
@@ -24010,13 +24010,13 @@
           "ordinal": 5,
           "word": "הַגֵּ֣ר",
           "trailing": "׀",
-          "glossZh": "這陌生人"
+          "glossZh": "陌生人"
         },
         {
           "ordinal": 6,
           "word": "הַגָּ֣ר",
           "trailing": "",
-          "glossZh": "這陌生人"
+          "glossZh": "陌生人"
         },
         {
           "ordinal": 7,
@@ -24528,7 +24528,7 @@
           "ordinal": 8,
           "word": "הַשָּׂדֶ֑ה",
           "trailing": "",
-          "glossZh": "這…田地"
+          "glossZh": "田地"
         },
         {
           "ordinal": 9,
@@ -24564,7 +24564,7 @@
           "ordinal": 14,
           "word": "הָאַהֲבָ֖ה",
           "trailing": "",
-          "glossZh": "這…愛情"
+          "glossZh": "愛情"
         },
         {
           "ordinal": 15,
@@ -24874,7 +24874,7 @@
           "ordinal": 5,
           "word": "הַגֶּ֕שֶׁם",
           "trailing": "",
-          "glossZh": "這…雨水"
+          "glossZh": "雨水"
         },
         {
           "ordinal": 6,
@@ -24908,7 +24908,7 @@
           "ordinal": 1,
           "word": "הַנִּצָּנִים֙",
           "trailing": "",
-          "glossZh": "這些花苞"
+          "glossZh": "花苞"
         },
         {
           "ordinal": 2,
@@ -24932,7 +24932,7 @@
           "ordinal": 5,
           "word": "הַזָּמִ֖יר",
           "trailing": "",
-          "glossZh": "這歌唱"
+          "glossZh": "歌唱"
         },
         {
           "ordinal": 6,
@@ -24950,7 +24950,7 @@
           "ordinal": 8,
           "word": "הַתּ֖וֹר",
           "trailing": "",
-          "glossZh": "這斑鳩"
+          "glossZh": "斑鳩"
         },
         {
           "ordinal": 9,
@@ -25066,7 +25066,7 @@
           "ordinal": 5,
           "word": "הָרֹעֶ֖ה",
           "trailing": "",
-          "glossZh": "這牧放者"
+          "glossZh": "牧放者"
         },
         {
           "ordinal": 6,
@@ -25828,7 +25828,7 @@
           "ordinal": 10,
           "word": "אֵ֖ת",
           "trailing": "",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 11,
@@ -26050,7 +26050,7 @@
           "ordinal": 2,
           "word": "הַגּ֔וֹי",
           "trailing": "",
-          "glossZh": "這民族"
+          "glossZh": "民族"
         },
         {
           "ordinal": 3,
@@ -26138,7 +26138,7 @@
           "ordinal": 2,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 3,
@@ -26156,7 +26156,7 @@
           "ordinal": 5,
           "word": "וְאֵת֙",
           "trailing": "",
-          "glossZh": "並與"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 6,
@@ -26686,7 +26686,7 @@
           "ordinal": 10,
           "word": "הַיַּ֔עַר",
           "trailing": "",
-          "glossZh": "這樹林"
+          "glossZh": "樹林"
         },
         {
           "ordinal": 11,
@@ -26756,7 +26756,7 @@
           "ordinal": 7,
           "word": "הָעָם֙",
           "trailing": "",
-          "glossZh": "這百姓"
+          "glossZh": "百姓"
         },
         {
           "ordinal": 8,
@@ -27178,7 +27178,7 @@
           "ordinal": 6,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 7,
@@ -27436,7 +27436,7 @@
           "ordinal": 8,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "並與"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 9,
@@ -27448,7 +27448,7 @@
           "ordinal": 10,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "並與"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 11,
@@ -30044,7 +30044,7 @@
           "ordinal": 16,
           "word": "אֶֽת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 17,
@@ -30056,7 +30056,7 @@
           "ordinal": 18,
           "word": "אֵ֖ת",
           "trailing": "",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 19,
@@ -30444,7 +30444,7 @@
           "ordinal": 4,
           "word": "אֶֽת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 5,
@@ -31480,7 +31480,7 @@
           "ordinal": 4,
           "word": "הַבַּ֖ת",
           "trailing": "",
-          "glossZh": "這女子"
+          "glossZh": "女子"
         },
         {
           "ordinal": 5,
@@ -31598,13 +31598,13 @@
           "ordinal": 9,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 10,
           "word": "הַדָּבָ֣ר",
           "trailing": "",
-          "glossZh": "這個"
+          "glossZh": "個"
         },
         {
           "ordinal": 11,
@@ -31640,7 +31640,7 @@
           "ordinal": 16,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 17,
@@ -31908,7 +31908,7 @@
           "ordinal": 7,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 8,
@@ -31926,7 +31926,7 @@
           "ordinal": 10,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "並與"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 11,
@@ -32348,7 +32348,7 @@
           "ordinal": 4,
           "word": "הַמִּדָּה֙",
           "trailing": "",
-          "glossZh": "這測量"
+          "glossZh": "測量"
         },
         {
           "ordinal": 5,
@@ -32430,7 +32430,7 @@
           "ordinal": 6,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 7,
@@ -32588,7 +32588,7 @@
           "ordinal": 3,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 4,
@@ -32988,13 +32988,13 @@
           "ordinal": 6,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 7,
           "word": "הַשִּׁירָ֤ה",
           "trailing": "",
-          "glossZh": "這首歌曲"
+          "glossZh": "首歌曲"
         },
         {
           "ordinal": 8,
@@ -33736,7 +33736,7 @@
           "ordinal": 13,
           "word": "הַמָּֽיִם",
           "trailing": "׃",
-          "glossZh": "這水"
+          "glossZh": "水"
         }
       ],
       "senseZh": "",
@@ -34980,7 +34980,7 @@
           "ordinal": 6,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 7,
@@ -36368,7 +36368,7 @@
           "ordinal": 2,
           "word": "הַחַלּ֨וֹן",
           "trailing": "",
-          "glossZh": "這窗戶"
+          "glossZh": "窗戶"
         },
         {
           "ordinal": 3,
@@ -36404,7 +36404,7 @@
           "ordinal": 8,
           "word": "הָֽאֶשְׁנָ֑ב",
           "trailing": "",
-          "glossZh": "這窗格"
+          "glossZh": "窗格"
         },
         {
           "ordinal": 9,
@@ -36568,7 +36568,7 @@
           "ordinal": 8,
           "word": "הַשֶּׁ֖מֶשׁ",
           "trailing": "",
-          "glossZh": "這太陽"
+          "glossZh": "太陽"
         },
         {
           "ordinal": 9,
@@ -36586,7 +36586,7 @@
           "ordinal": 11,
           "word": "הָאָ֖רֶץ",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 12,
@@ -36732,7 +36732,7 @@
           "ordinal": 4,
           "word": "הַכּֽוֹכָבִים֙",
           "trailing": "",
-          "glossZh": "這星宿"
+          "glossZh": "星宿"
         },
         {
           "ordinal": 5,
@@ -37030,7 +37030,7 @@
           "ordinal": 6,
           "word": "הַקֵּינִ֑י",
           "trailing": "",
-          "glossZh": "這基尼人"
+          "glossZh": "基尼人"
         },
         {
           "ordinal": 7,
@@ -37382,7 +37382,7 @@
           "ordinal": 14,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 15,
@@ -37516,7 +37516,7 @@
           "ordinal": 2,
           "word": "הָאִ֨ישׁ",
           "trailing": "",
-          "glossZh": "這人"
+          "glossZh": "人"
         },
         {
           "ordinal": 3,
@@ -38190,7 +38190,7 @@
           "ordinal": 4,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 5,
@@ -38202,7 +38202,7 @@
           "ordinal": 6,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "並與"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 7,
@@ -39162,7 +39162,7 @@
           "ordinal": 2,
           "word": "הַגֶּ֗בֶר",
           "trailing": "",
-          "glossZh": "這勇士"
+          "glossZh": "勇士"
         },
         {
           "ordinal": 3,
@@ -40272,7 +40272,7 @@
           "ordinal": 11,
           "word": "הָאֶחָ֧ד",
           "trailing": "",
-          "glossZh": "這第一"
+          "glossZh": "第一"
         },
         {
           "ordinal": 12,
@@ -40318,7 +40318,7 @@
           "ordinal": 3,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 4,
@@ -40448,7 +40448,7 @@
           "ordinal": 3,
           "word": "הַמֶּ֤לֶךְ",
           "trailing": "",
-          "glossZh": "這王"
+          "glossZh": "王"
         },
         {
           "ordinal": 4,
@@ -40496,7 +40496,7 @@
           "ordinal": 11,
           "word": "הַחֹזֶ֑ה",
           "trailing": "",
-          "glossZh": "這先見"
+          "glossZh": "先見"
         },
         {
           "ordinal": 12,
@@ -41186,7 +41186,7 @@
           "ordinal": 8,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 9,
@@ -41204,7 +41204,7 @@
           "ordinal": 11,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 12,
@@ -41216,7 +41216,7 @@
           "ordinal": 13,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "並與"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 14,
@@ -41228,7 +41228,7 @@
           "ordinal": 15,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "並與"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 16,
@@ -41574,7 +41574,7 @@
           "ordinal": 5,
           "word": "הַשֶּׁ֨מֶשׁ֙",
           "trailing": "",
-          "glossZh": "這太陽"
+          "glossZh": "太陽"
         },
         {
           "ordinal": 6,
@@ -41598,7 +41598,7 @@
           "ordinal": 9,
           "word": "הַיָּרֵ֖חַ",
           "trailing": "",
-          "glossZh": "這月亮"
+          "glossZh": "月亮"
         },
         {
           "ordinal": 10,
@@ -41726,7 +41726,7 @@
           "ordinal": 1,
           "word": "הַצּוּר֙",
           "trailing": "",
-          "glossZh": "這磐石"
+          "glossZh": "磐石"
         },
         {
           "ordinal": 2,
@@ -42190,7 +42190,7 @@
           "ordinal": 9,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 10,
@@ -42424,7 +42424,7 @@
           "ordinal": 10,
           "word": "הָאָֽרֶץ",
           "trailing": "׃",
-          "glossZh": "這地"
+          "glossZh": "地"
         }
       ],
       "senseZh": "",
@@ -69376,7 +69376,7 @@
           "ordinal": 4,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "事奉"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 5,
@@ -69664,7 +69664,7 @@
           "ordinal": 6,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 7,
@@ -69706,13 +69706,13 @@
           "ordinal": 13,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 14,
           "word": "הַמַּרְאָ֖ה",
           "trailing": "",
-          "glossZh": "這異象"
+          "glossZh": "異象"
         },
         {
           "ordinal": 15,
@@ -69864,7 +69864,7 @@
           "ordinal": 5,
           "word": "הַנֶּֽגְבָּה",
           "trailing": "׃",
-          "glossZh": "這南地"
+          "glossZh": "南地"
         }
       ],
       "senseZh": "",
@@ -69938,13 +69938,13 @@
           "ordinal": 3,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 4,
           "word": "הָא֖וֹר",
           "trailing": "",
-          "glossZh": "這光"
+          "glossZh": "光"
         },
         {
           "ordinal": 5,
@@ -69980,7 +69980,7 @@
           "ordinal": 10,
           "word": "הָא֖וֹר",
           "trailing": "",
-          "glossZh": "這光"
+          "glossZh": "光"
         },
         {
           "ordinal": 11,
@@ -69992,7 +69992,7 @@
           "ordinal": 12,
           "word": "הַחֹֽשֶׁךְ",
           "trailing": "׃",
-          "glossZh": "這黑暗"
+          "glossZh": "黑暗"
         }
       ],
       "senseZh": "",
@@ -70224,7 +70224,7 @@
           "ordinal": 2,
           "word": "הַמֶּ֣לֶךְ",
           "trailing": "",
-          "glossZh": "這王"
+          "glossZh": "王"
         },
         {
           "ordinal": 3,
@@ -70414,7 +70414,7 @@
           "ordinal": 15,
           "word": "הָאָדָ֖ם",
           "trailing": "",
-          "glossZh": "這人的"
+          "glossZh": "人的"
         },
         {
           "ordinal": 16,
@@ -70478,7 +70478,7 @@
           "ordinal": 7,
           "word": "הַשָּׁמָֽיִם",
           "trailing": "׃",
-          "glossZh": "這天空"
+          "glossZh": "天空"
         }
       ],
       "senseZh": "",
@@ -70658,7 +70658,7 @@
           "ordinal": 11,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 12,
@@ -70726,7 +70726,7 @@
           "ordinal": 4,
           "word": "הַנָּבִ֑יא",
           "trailing": "",
-          "glossZh": "這先知"
+          "glossZh": "先知"
         },
         {
           "ordinal": 5,
@@ -71460,13 +71460,13 @@
           "ordinal": 3,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 4,
           "word": "הָאָ֖רֶץ",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 5,
@@ -71590,7 +71590,7 @@
           "ordinal": 7,
           "word": "אֶֽת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 8,
@@ -71636,7 +71636,7 @@
           "ordinal": 2,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 3,
@@ -71806,7 +71806,7 @@
           "ordinal": 3,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 4,
@@ -71830,7 +71830,7 @@
           "ordinal": 7,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "和"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 8,
@@ -72290,7 +72290,7 @@
           "ordinal": 14,
           "word": "הַיָּם֙",
           "trailing": "",
-          "glossZh": "這海"
+          "glossZh": "海"
         },
         {
           "ordinal": 15,
@@ -72348,7 +72348,7 @@
           "ordinal": 3,
           "word": "הַחֻקִּ֥ים",
           "trailing": "",
-          "glossZh": "這律例"
+          "glossZh": "律例"
         },
         {
           "ordinal": 4,
@@ -73502,7 +73502,7 @@
           "ordinal": 6,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 7,
@@ -73960,7 +73960,7 @@
           "ordinal": 10,
           "word": "אֵ֝֗ת",
           "trailing": "",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 11,
@@ -81324,7 +81324,7 @@
           "ordinal": 4,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "並與"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 5,
@@ -81478,7 +81478,7 @@
           "ordinal": 13,
           "word": "הַיָּ֑ם",
           "trailing": "",
-          "glossZh": "這海"
+          "glossZh": "海"
         },
         {
           "ordinal": 14,
@@ -81514,7 +81514,7 @@
           "ordinal": 19,
           "word": "הַיָּֽם",
           "trailing": "׃",
-          "glossZh": "這海"
+          "glossZh": "海"
         }
       ],
       "senseZh": "",
@@ -82068,7 +82068,7 @@
           "ordinal": 1,
           "word": "הַתְּאֵנָה֙",
           "trailing": "",
-          "glossZh": "這…無花果樹"
+          "glossZh": "無花果樹"
         },
         {
           "ordinal": 2,
@@ -82168,7 +82168,7 @@
           "ordinal": 3,
           "word": "הַסֶּ֗לַע",
           "trailing": "",
-          "glossZh": "這…磐石"
+          "glossZh": "磐石"
         },
         {
           "ordinal": 4,
@@ -82180,7 +82180,7 @@
           "ordinal": 5,
           "word": "הַמַּדְרֵגָ֔ה",
           "trailing": "",
-          "glossZh": "這…陡巖"
+          "glossZh": "陡巖"
         },
         {
           "ordinal": 6,
@@ -82286,7 +82286,7 @@
           "ordinal": 5,
           "word": "הַצְּלָלִ֑ים",
           "trailing": "",
-          "glossZh": "這…陰影"
+          "glossZh": "陰影"
         },
         {
           "ordinal": 6,
@@ -82334,7 +82334,7 @@
           "ordinal": 13,
           "word": "הָאַיָּלִ֖ים",
           "trailing": "",
-          "glossZh": "這…公鹿"
+          "glossZh": "公鹿"
         },
         {
           "ordinal": 14,
@@ -85488,7 +85488,7 @@
           "ordinal": 2,
           "word": "הָאִ֗ישׁ",
           "trailing": "",
-          "glossZh": "這個男人"
+          "glossZh": "個男人"
         },
         {
           "ordinal": 3,
@@ -85824,7 +85824,7 @@
           "ordinal": 12,
           "word": "הָאָ֖רֶץ",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 13,
@@ -85942,7 +85942,7 @@
           "ordinal": 16,
           "word": "הַנֶּ֖פֶשׁ",
           "trailing": "",
-          "glossZh": "這性命"
+          "glossZh": "性命"
         },
         {
           "ordinal": 17,
@@ -86054,7 +86054,7 @@
           "ordinal": 7,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "並他的妻子"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 8,
@@ -86066,7 +86066,7 @@
           "ordinal": 9,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "並所有"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 10,
@@ -86112,7 +86112,7 @@
           "ordinal": 3,
           "word": "הָ֠אָרֶץ",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 4,
@@ -86130,7 +86130,7 @@
           "ordinal": 6,
           "word": "הַשָּׁמַ֜יִם",
           "trailing": "",
-          "glossZh": "這天空"
+          "glossZh": "天空"
         },
         {
           "ordinal": 7,
@@ -86154,7 +86154,7 @@
           "ordinal": 10,
           "word": "הָאָ֗רֶץ",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 11,
@@ -86320,7 +86320,7 @@
           "ordinal": 15,
           "word": "הַשִּׁשִּֽׁי",
           "trailing": "׃",
-          "glossZh": "這第六"
+          "glossZh": "第六"
         }
       ],
       "senseZh": "",
@@ -86372,7 +86372,7 @@
           "ordinal": 7,
           "word": "הַמַּ֨יִם֙",
           "trailing": "",
-          "glossZh": "這水"
+          "glossZh": "水"
         },
         {
           "ordinal": 8,
@@ -86402,7 +86402,7 @@
           "ordinal": 12,
           "word": "הַמַּ֔יִם",
           "trailing": "",
-          "glossZh": "這水"
+          "glossZh": "水"
         },
         {
           "ordinal": 13,
@@ -86466,7 +86466,7 @@
           "ordinal": 4,
           "word": "הָאָ֨רֶץ֙",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 5,
@@ -86550,7 +86550,7 @@
           "ordinal": 18,
           "word": "הָאָ֑רֶץ",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 19,
@@ -86584,7 +86584,7 @@
           "ordinal": 2,
           "word": "הָאָ֜רֶץ",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 3,
@@ -86744,7 +86744,7 @@
           "ordinal": 9,
           "word": "הַֽחַיָּ֣ה",
           "trailing": "׀",
-          "glossZh": "這活動的"
+          "glossZh": "活動的"
         },
         {
           "ordinal": 10,
@@ -86768,7 +86768,7 @@
           "ordinal": 13,
           "word": "הַמַּ֜יִם",
           "trailing": "",
-          "glossZh": "這水"
+          "glossZh": "水"
         },
         {
           "ordinal": 14,
@@ -86928,7 +86928,7 @@
           "ordinal": 15,
           "word": "הָאָ֔רֶץ",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 16,
@@ -86946,7 +86946,7 @@
           "ordinal": 18,
           "word": "הָעֵ֛ץ",
           "trailing": "",
-          "glossZh": "這樹"
+          "glossZh": "樹"
         },
         {
           "ordinal": 19,
@@ -87022,13 +87022,13 @@
           "ordinal": 2,
           "word": "הַמִּצְוָ֗ה",
           "trailing": "",
-          "glossZh": "這誡命"
+          "glossZh": "誡命"
         },
         {
           "ordinal": 3,
           "word": "הַֽחֻקִּים֙",
           "trailing": "",
-          "glossZh": "這律例"
+          "glossZh": "律例"
         },
         {
           "ordinal": 4,
@@ -87412,7 +87412,7 @@
           "ordinal": 2,
           "word": "הַדְּבָרִ֣ים",
           "trailing": "",
-          "glossZh": "這些話"
+          "glossZh": "話"
         },
         {
           "ordinal": 3,
@@ -87506,7 +87506,7 @@
           "ordinal": 7,
           "word": "הָאָ֜רֶץ",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 8,
@@ -88166,7 +88166,7 @@
           "ordinal": 7,
           "word": "הַשָּׁמַ֣יִם",
           "trailing": "",
-          "glossZh": "這天空"
+          "glossZh": "天空"
         },
         {
           "ordinal": 8,
@@ -88178,7 +88178,7 @@
           "ordinal": 9,
           "word": "הָאָ֗רֶץ",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 10,
@@ -88190,7 +88190,7 @@
           "ordinal": 11,
           "word": "הַיָּם֙",
           "trailing": "",
-          "glossZh": "這海"
+          "glossZh": "海"
         },
         {
           "ordinal": 12,
@@ -88350,7 +88350,7 @@
           "ordinal": 10,
           "word": "הָאֲדָמָ֔ה",
           "trailing": "",
-          "glossZh": "這地面"
+          "glossZh": "地面"
         },
         {
           "ordinal": 11,
@@ -88444,7 +88444,7 @@
           "ordinal": 9,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "並"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 10,
@@ -88468,7 +88468,7 @@
           "ordinal": 13,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "並"
+          "glossZh": "並（受詞記號）"
         },
         {
           "ordinal": 14,
@@ -88598,7 +88598,7 @@
           "ordinal": 10,
           "word": "הַמָּק֗וֹם",
           "trailing": "",
-          "glossZh": "這個地方"
+          "glossZh": "個地方"
         },
         {
           "ordinal": 11,
@@ -88834,7 +88834,7 @@
           "ordinal": 11,
           "word": "הַלַּ֔חַץ",
           "trailing": "",
-          "glossZh": "這個壓迫"
+          "glossZh": "個壓迫"
         },
         {
           "ordinal": 12,
@@ -89918,7 +89918,7 @@
           "ordinal": 2,
           "word": "הָעֵצִ֜ים",
           "trailing": "",
-          "glossZh": "這些樹"
+          "glossZh": "樹"
         },
         {
           "ordinal": 3,
@@ -90042,7 +90042,7 @@
           "ordinal": 14,
           "word": "הַגּוֹיִ֖ם",
           "trailing": "",
-          "glossZh": "這些民族"
+          "glossZh": "民族"
         },
         {
           "ordinal": 15,
@@ -90278,7 +90278,7 @@
           "ordinal": 3,
           "word": "הָאָ֗רֶץ",
           "trailing": "",
-          "glossZh": "這地"
+          "glossZh": "地"
         },
         {
           "ordinal": 4,
@@ -90432,7 +90432,7 @@
           "ordinal": 3,
           "word": "הָֽעִנְיָ֗ן",
           "trailing": "",
-          "glossZh": "這事務"
+          "glossZh": "事務"
         },
         {
           "ordinal": 4,
@@ -90462,7 +90462,7 @@
           "ordinal": 8,
           "word": "הָאָדָ֖ם",
           "trailing": "",
-          "glossZh": "這人"
+          "glossZh": "人"
         },
         {
           "ordinal": 9,
@@ -90532,7 +90532,7 @@
           "ordinal": 8,
           "word": "הָעֹלָם֙",
           "trailing": "",
-          "glossZh": "這永遠"
+          "glossZh": "永遠"
         },
         {
           "ordinal": 9,
@@ -90574,7 +90574,7 @@
           "ordinal": 15,
           "word": "הָאָדָ֗ם",
           "trailing": "",
-          "glossZh": "這人"
+          "glossZh": "人"
         },
         {
           "ordinal": 16,
@@ -90586,7 +90586,7 @@
           "ordinal": 17,
           "word": "הַֽמַּעֲשֶׂ֛ה",
           "trailing": "",
-          "glossZh": "這工作"
+          "glossZh": "工作"
         },
         {
           "ordinal": 18,
@@ -90604,7 +90604,7 @@
           "ordinal": 20,
           "word": "הָאֱלֹהִ֖ים",
           "trailing": "",
-          "glossZh": "這上帝"
+          "glossZh": "上帝"
         },
         {
           "ordinal": 21,
@@ -90668,7 +90668,7 @@
           "ordinal": 6,
           "word": "הָאֱלֹהִים֙",
           "trailing": "",
-          "glossZh": "這上帝"
+          "glossZh": "上帝"
         },
         {
           "ordinal": 7,
@@ -91902,7 +91902,7 @@
           "ordinal": 7,
           "word": "הַבָּ֑יִת",
           "trailing": "",
-          "glossZh": "這房屋"
+          "glossZh": "房屋"
         },
         {
           "ordinal": 8,
@@ -92056,7 +92056,7 @@
           "ordinal": 18,
           "word": "הַמַּמְלָכָה֙",
           "trailing": "",
-          "glossZh": "這王國"
+          "glossZh": "王國"
         },
         {
           "ordinal": 19,
@@ -92068,7 +92068,7 @@
           "ordinal": 20,
           "word": "הַגּ֔וֹי",
           "trailing": "",
-          "glossZh": "這民族"
+          "glossZh": "民族"
         },
         {
           "ordinal": 21,
@@ -92728,7 +92728,7 @@
           "ordinal": 3,
           "word": "הַבְּרִ֡ית",
           "trailing": "",
-          "glossZh": "這約"
+          "glossZh": "約"
         },
         {
           "ordinal": 4,
@@ -92770,7 +92770,7 @@
           "ordinal": 10,
           "word": "הַיָּמִ֤ים",
           "trailing": "",
-          "glossZh": "這日子"
+          "glossZh": "日子"
         },
         {
           "ordinal": 11,
@@ -92918,13 +92918,13 @@
           "ordinal": 6,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與（受詞記號）"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 7,
           "word": "הַשְּׁבֻעָה֙",
           "trailing": "",
-          "glossZh": "這…誓言"
+          "glossZh": "誓言"
         },
         {
           "ordinal": 8,
@@ -93084,13 +93084,13 @@
           "ordinal": 10,
           "word": "אֵ֖ת",
           "trailing": "",
-          "glossZh": "(受詞記號)"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 11,
           "word": "הַדְּבָרִ֣ים",
           "trailing": "",
-          "glossZh": "這些話"
+          "glossZh": "話"
         },
         {
           "ordinal": 12,
@@ -93150,7 +93150,7 @@
           "ordinal": 21,
           "word": "הַהֵיכָ֖ל",
           "trailing": "",
-          "glossZh": "這聖殿"
+          "glossZh": "聖殿"
         },
         {
           "ordinal": 22,
@@ -93196,7 +93196,7 @@
           "ordinal": 5,
           "word": "הַיָּ֥ם",
           "trailing": "",
-          "glossZh": "這海"
+          "glossZh": "海"
         },
         {
           "ordinal": 6,
@@ -93266,7 +93266,7 @@
           "ordinal": 3,
           "word": "הָֽאָדָם֙",
           "trailing": "",
-          "glossZh": "這人類"
+          "glossZh": "人類"
         },
         {
           "ordinal": 4,
@@ -93332,7 +93332,7 @@
           "ordinal": 14,
           "word": "הֶחָמָ֖ס",
           "trailing": "",
-          "glossZh": "這強暴"
+          "glossZh": "強暴"
         },
         {
           "ordinal": 15,
@@ -93430,7 +93430,7 @@
           "ordinal": 3,
           "word": "הַשָּׁמַ֜יִם",
           "trailing": "",
-          "glossZh": "這天空"
+          "glossZh": "天空"
         },
         {
           "ordinal": 4,
@@ -93556,7 +93556,7 @@
           "ordinal": 24,
           "word": "הָאָדָֽם",
           "trailing": "׃",
-          "glossZh": "這人"
+          "glossZh": "人"
         }
       ],
       "senseZh": "",
@@ -94074,7 +94074,7 @@
           "ordinal": 3,
           "word": "הַמָּקוֹם֙",
           "trailing": "",
-          "glossZh": "這地方"
+          "glossZh": "地方"
         },
         {
           "ordinal": 4,
@@ -100482,7 +100482,7 @@
           "ordinal": 2,
           "word": "הָעָ֖ם",
           "trailing": "",
-          "glossZh": "這百姓"
+          "glossZh": "百姓"
         },
         {
           "ordinal": 3,
@@ -100512,7 +100512,7 @@
           "ordinal": 7,
           "word": "הָֽעֲרָפֶ֔ל",
           "trailing": "",
-          "glossZh": "這幽暗"
+          "glossZh": "幽暗"
         },
         {
           "ordinal": 8,
@@ -100530,7 +100530,7 @@
           "ordinal": 10,
           "word": "הָאֱלֹהִֽים",
           "trailing": "׃",
-          "glossZh": "這上帝"
+          "glossZh": "上帝"
         }
       ],
       "senseZh": "",
@@ -100988,7 +100988,7 @@
           "ordinal": 4,
           "word": "הַדָּבָ֗ר",
           "trailing": "",
-          "glossZh": "這話"
+          "glossZh": "話"
         },
         {
           "ordinal": 5,
@@ -101212,13 +101212,13 @@
           "ordinal": 3,
           "word": "הָעָ֗ם",
           "trailing": "",
-          "glossZh": "這百姓"
+          "glossZh": "百姓"
         },
         {
           "ordinal": 4,
           "word": "הָֽאֲנָשִׁ֤ים",
           "trailing": "",
-          "glossZh": "這男人"
+          "glossZh": "男人"
         },
         {
           "ordinal": 5,
@@ -101332,7 +101332,7 @@
           "ordinal": 23,
           "word": "הַתּוֹרָ֥ה",
           "trailing": "",
-          "glossZh": "這律法"
+          "glossZh": "律法"
         },
         {
           "ordinal": 24,
@@ -102072,7 +102072,7 @@
           "ordinal": 7,
           "word": "הָֽעַמִּ֔ים",
           "trailing": "",
-          "glossZh": "這…百姓"
+          "glossZh": "百姓"
         },
         {
           "ordinal": 8,
@@ -102176,7 +102176,7 @@
           "ordinal": 2,
           "word": "הַיָּשָׁ֥ר",
           "trailing": "",
-          "glossZh": "這正直的"
+          "glossZh": "正直的"
         },
         {
           "ordinal": 3,
@@ -102236,7 +102236,7 @@
           "ordinal": 12,
           "word": "הָאָ֣רֶץ",
           "trailing": "",
-          "glossZh": "這…地"
+          "glossZh": "地"
         },
         {
           "ordinal": 13,
@@ -102318,7 +102318,7 @@
           "ordinal": 7,
           "word": "הָעֵדֹ֗ת",
           "trailing": "",
-          "glossZh": "這…法度"
+          "glossZh": "法度"
         },
         {
           "ordinal": 8,
@@ -102430,7 +102430,7 @@
           "ordinal": 10,
           "word": "הָאָ֔רֶץ",
           "trailing": "",
-          "glossZh": "這…地"
+          "glossZh": "地"
         },
         {
           "ordinal": 11,
@@ -102676,7 +102676,7 @@
           "ordinal": 6,
           "word": "אֵ֛ת",
           "trailing": "",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 7,
@@ -102764,7 +102764,7 @@
           "ordinal": 6,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 7,
@@ -102870,7 +102870,7 @@
           "ordinal": 3,
           "word": "הַדָּבָר֙",
           "trailing": "",
-          "glossZh": "這話"
+          "glossZh": "話"
         },
         {
           "ordinal": 4,
@@ -102984,7 +102984,7 @@
           "ordinal": 22,
           "word": "הַדָּבָ֖ר",
           "trailing": "",
-          "glossZh": "這話"
+          "glossZh": "話"
         },
         {
           "ordinal": 23,
@@ -104176,7 +104176,7 @@
           "ordinal": 4,
           "word": "הַמֶּ֔לֶךְ",
           "trailing": "",
-          "glossZh": "這王"
+          "glossZh": "王"
         },
         {
           "ordinal": 5,

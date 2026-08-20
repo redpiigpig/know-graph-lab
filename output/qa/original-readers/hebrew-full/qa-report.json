@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-18T07:35:53.789417+00:00",
+  "generatedAt": "2026-08-20T10:53:32.350839+00:00",
   "phase": "preflight",
   "result": "PASS",
   "releaseGatePassed": true,
@@ -60,14 +60,14 @@
     {
       "path": "C:\\Users\\user\\Desktop\\know-graph-lab\\output\\original-readers\\hebrew-original-reader-50-lessons.docx",
       "exists": true,
-      "bytes": 852438,
-      "sha256": "deba7b53105dff646d378042da666a4c02c9f6c2f7dcd7d8bedc89c39d777ec6"
+      "bytes": 853322,
+      "sha256": "bbde5b90d86566ad34d0c47a8c77d0a9fb79b798548624d64c9dc118d445f133"
     },
     {
       "path": "C:\\Users\\user\\Desktop\\know-graph-lab\\output\\original-readers\\hebrew-original-reader-50-lessons.pdf",
       "exists": true,
-      "bytes": 23962371,
-      "sha256": "2ae13effe176eac8cfbab99eab7223bb622a3563e9b248c6c7e7ba26ebbd7015"
+      "bytes": 23988194,
+      "sha256": "90470a20e77ff22f81be394e51d38b008aa741bd524fe7564cc19b4db65376ef"
     }
   ],
   "checks": [
@@ -554,7 +554,7 @@
       "code": "docx.table_geometry",
       "message": "all DOCX tables use fixed, internally exact dxa geometry with tblInd",
       "details": {
-        "tables": 2398,
+        "tables": 2411,
         "failures": []
       }
     },
@@ -571,7 +571,7 @@
       "code": "pdf.page_count",
       "message": "PDF has at least 200 pages, preventing a truncated full reader",
       "details": {
-        "actual": 392
+        "actual": 391
       }
     },
     {
@@ -984,8 +984,7 @@
               388,
               389,
               390,
-              391,
-              392
+              391
             ]
           },
           {
@@ -1384,8 +1383,7 @@
               388,
               389,
               390,
-              391,
-              392
+              391
             ]
           },
           {
@@ -1784,8 +1782,7 @@
               388,
               389,
               390,
-              391,
-              392
+              391
             ]
           },
           {
@@ -2184,8 +2181,7 @@
               388,
               389,
               390,
-              391,
-              392
+              391
             ]
           },
           {
@@ -2584,8 +2580,7 @@
               388,
               389,
               390,
-              391,
-              392
+              391
             ]
           },
           {
@@ -2984,8 +2979,7 @@
               388,
               389,
               390,
-              391,
-              392
+              391
             ]
           },
           {
@@ -3384,8 +3378,7 @@
               388,
               389,
               390,
-              391,
-              392
+              391
             ]
           },
           {
@@ -3784,8 +3777,7 @@
               388,
               389,
               390,
-              391,
-              392
+              391
             ]
           },
           {
@@ -4184,8 +4176,7 @@
               388,
               389,
               390,
-              391,
-              392
+              391
             ]
           },
           {
@@ -4584,8 +4575,7 @@
               388,
               389,
               390,
-              391,
-              392
+              391
             ]
           },
           {
@@ -4984,8 +4974,7 @@
               388,
               389,
               390,
-              391,
-              392
+              391
             ]
           },
           {
@@ -5384,8 +5373,7 @@
               388,
               389,
               390,
-              391,
-              392
+              391
             ]
           },
           {
@@ -5784,8 +5772,7 @@
               388,
               389,
               390,
-              391,
-              392
+              391
             ]
           }
         ],
@@ -5822,11 +5809,11 @@
       "code": "pdf.text_layer",
       "message": "PDF has a searchable Hebrew/Traditional-Chinese text layer through the terminal matter",
       "details": {
-        "nonemptyPages": 392,
-        "pageCount": 392,
+        "nonemptyPages": 391,
+        "pageCount": 391,
         "nonemptyRatio": 1.0,
         "hebrewCharacters": 71024,
-        "cjkCharacters": 119648,
+        "cjkCharacters": 119727,
         "missingKeyTexts": []
       }
     }
