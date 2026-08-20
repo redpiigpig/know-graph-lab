@@ -9,280 +9,343 @@
  "support": "A small moulded stele, broken below, and somewhat worn on the left and right sides.Height: 70 cmWidth: 44-45 cmDepth: from top to bottom, 9.5-11 cm",
  "bibliography": "Edition here based on the first full edition of Daux 1963, with fig. 1 and pl. 13-14, with the corrections in Daux 1964: 676-677. The readings are for the most part uncontroversial. Cf. Takeuchi 2010-2013 for a new reading of line A20, adopted here (previously Πυλῶνι). Since column A is virtually complete, we have restored the total amount of drachmae in column A as its final, missing line. Cf. also: SEG 21, 541; Sokolowski LSCG 18; Le Guen-Pollet CDE 61; AIO , with another English translation and commentary. Further bibliography: Salviat 1964; Dow 1965; Jameson 1965; Mikalson 1975; Langdon 1976; Georgoudi 1994; Ekroth 2002; Humphreys 2004: 178; Pirenne-Delforge 2004; Papazarkadas 2004-2009: no. 4; Bremmer 2005a; Parker 2005a; Pirenne-Delforge 2011; Pirenne-Delforge - Pironti 2016.",
  "licence": "CGRN — Collection of Greek Ritual Norms (Université de Liège), 開放取用；引用請註明 CGRN 編號與網址。",
- "names": {},
+ "names": {
+  "Apollo": "阿波羅",
+  "Lykeios": "呂刻俄斯",
+  "Hera": "赫拉",
+  "Thelchinia": "忒爾喀尼亞",
+  "Erchia": "厄耳喀亞",
+  "Nymphs": "寧芙",
+  "Heroines": "英雄女",
+  "Kourotrophos": "庫羅特羅佛斯",
+  "Delphinion": "得爾菲尼翁",
+  "Apollo Delphinios": "阿波羅‧得爾菲尼俄斯",
+  "Apollo Apotropaios": "阿波羅‧阿波特羅派俄斯",
+  "Paianians": "派阿尼亞人",
+  "Diasia": "狄阿西亞",
+  "Agrai": "阿格萊",
+  "Zeus Meilichios": "宙斯‧和善者",
+  "Semele": "塞墨勒",
+  "Leto": "勒托",
+  "Pythios": "皮提俄斯",
+  "Athena Polias": "雅典娜‧波利阿斯",
+  "Eleusinion": "厄琉西尼翁",
+  "Demeter": "得墨忒耳",
+  "Hekate": "赫卡忒",
+  "Artemis Hekate": "阿爾忒彌斯‧赫卡忒",
+  "Basile": "巴西勒",
+  "Acheloos": "阿刻羅俄斯",
+  "Herosouria": "赫羅蘇里亞",
+  "Mounychion": "穆尼基翁月",
+  "Herakleidai": "赫拉克勒代",
+  "Apollo Pythios": "阿波羅‧皮提俄斯",
+  "Pythaistai": "皮泰斯塔伊",
+  "Apollo Paion": "阿波羅‧派翁",
+  "Aglauros": "阿格勞羅斯",
+  "Sotidai": "索提代",
+  "Zeus Polieus": "宙斯‧波利俄斯",
+  "Zeus Epopetes": "宙斯‧厄波佩忒斯",
+  "Alochos": "阿洛科斯",
+  "Zeus Teleios": "宙斯‧忒勒俄斯",
+  "Dionysus": "戴奧尼索斯",
+  "Leukaspis": "琉卡斯皮斯",
+  "Akros": "阿刻羅斯",
+  "Epops": "厄波普斯",
+  "Hermes": "赫爾墨斯",
+  "Poseidon": "波塞頓",
+  "Tritopatres": "先祖靈",
+  "Anakes": "阿那克斯",
+  "Menedeios": "墨涅得俄斯",
+  "Schoinos": "斯科伊諾斯",
+  "Ge": "蓋亞",
+  "Zeus Horios": "宙斯‧荷里俄斯",
+  "Apollo Nymphagetes": "阿波羅‧寧法革忒斯",
+  "Zeus Epakrios": "宙斯‧厄帕克里俄斯",
+  "Hymettos": "許墨托斯",
+  "Metageitnion": "墨塔革提尼翁月",
+  "Boedromion": "波厄德羅彌翁月",
+  "Pyanopsion": "皮阿諾普西翁月",
+  "Gamelion": "伽墨利翁月",
+  "Anthesterion": "安忒斯忒里翁月",
+  "Elaphebolion": "厄拉斐波利翁月",
+  "Thargelion": "塔耳革利翁月",
+  "Skirophorion": "斯基羅福里翁月",
+  "Hekatombaion": "赫卡托姆拜翁月",
+  "Posideon": "波西德翁月"
+ },
  "segments": [
   {
    "face": "Column Α",
    "line_from": 1,
    "greek": "Μεταγειτνιῶ- v νος δωδεκάτε- v ι, Ἀπόλλωνι v Λ- v υκείωι, ἐν ἄστ-",
    "en": "Gods. The Greater Demarchy. Column Α In Metageitnion: on the 12th, to Apollo Lykeios, in the town,",
-   "zh": ""
+   "zh": "諸神。大德謨政區。第 Α 欄 在墨塔革提尼翁月：十二日，獻給阿波羅‧呂刻俄斯，在城裡，"
   },
   {
    "face": "Column Α",
    "line_from": 5,
    "greek": "v ει, οἶς, οὐ φο(ρά), Δ𐅂𐅂 v δεκάτει προτ- v έραι, Ἥραι Θελ- v χινίαι, ἐμ Πάγ- v ωι Ἐρχι(ᾶσιν), ἄρνα π-",
    "en": "Schoinos in Erchia, a ewe, no take-away, the skin is given to the priestess, 10 dr. In Boedromion:",
-   "zh": ""
+   "zh": "厄耳喀亞的斯科伊諾斯，母羊一隻，不可帶離，獸皮給予女祭司，10 德拉克馬。在波厄德羅彌翁月："
   },
   {
    "face": "Column Α",
    "line_from": 10,
    "greek": "v αμμέλαιναν, ο- v ὐ φορά, 𐅃𐅂𐅂 vvv Βοηδρομιῶνος v τετράδι φθίν- v οντος, Νύμφαι-",
    "en": "on the 5th, to Epops, at Erchia, a piglet, burned whole, wineless offering,",
-   "zh": ""
+   "zh": "五日，獻給厄波普斯，在厄耳喀亞，乳豬一隻，全隻焚燒獻祭，無酒奠祭，"
   },
   {
    "face": "Column Α",
    "line_from": 15,
    "greek": "v ς, ἐμ Πάγωι Ἐρχ- v ιᾶ(σιν), οἶς, Δ vvvvv Πυανοψιῶνος τ- v ετράδι ἐπὶ δέ- v κα, Ἡρωΐναις, ἐ-",
    "en": "3 dr.; on the 27th: to Ge, on the Hill at Erchia,",
-   "zh": ""
+   "zh": "3 德拉克馬；二十七日：獻給蓋亞，在厄耳喀亞的小山丘上，"
   },
   {
    "face": "Column Α",
    "line_from": 20,
    "greek": "v ν Αὐλῶνι Ἐρχι(ᾶσιν), v οἶς, οὐ φορά, ἱε- v ρείαι τὸ δέρ(μα), Δ Γαμηλιῶνος ἑβ- v δόμηι ἱσταμέ-",
    "en": "a pregnant ewe, no take-away, 10 dr. In Posideon: on the 16th, to Zeus, on the Rock at Erchia,",
-   "zh": ""
+   "zh": "懷孕母羊一隻，不可帶離，10 德拉克馬。在波西德翁月：十六日，獻給宙斯，在厄耳喀亞的岩石上，"
   },
   {
    "face": "Column Α",
    "line_from": 25,
    "greek": "v νο, Κουροτρόφ- v ωι, ἐν Δελφινί- v ωι Ἐρχ(ιᾶσιν)∶ χοῖρ(ος), 𐅂𐅂𐅂. v Ἀπόλλωνι Δελ- v φινίωι, Ἐρχιᾶ(σιν),",
    "en": "a wether, no take-away, 12 dr.; to Zeus Horios, at Erchia, a piglet,",
-   "zh": ""
+   "zh": "閹羊一隻，不可帶離，12 德拉克馬；獻給宙斯‧荷里俄斯，在厄耳喀亞，乳豬一隻，"
   },
   {
    "face": "Column Α",
    "line_from": 30,
    "greek": "v οἶς, Δ𐅂𐅂 vvvv v ὀγδόηι ἱσταμ- v ένου, Ἀπόλλων- v ι Ἀποτροπαίω- v ι, Ἐρχιᾶσι, πρὸ-",
    "en": "no take-away, 3 dr. In Gamelion: on the 7th, to Apollo Lykeios,",
-   "zh": ""
+   "zh": "不得帶走，3德拉克馬。在伽墨利翁月：初七，獻給阿波羅‧呂刻俄斯，"
   },
   {
    "face": "Column Α",
    "line_from": 35,
    "greek": "v [ς ] Παιανιέων, v v αἴξ, Δ𐅂𐅂 vvvv Ἀνθεστηριῶνο- v ς, Διασίοις, ἐν v ἄστε[⟨ι⟩] ἐν Ἄγρας",
    "en": "at Erchia, a wether handed over to the Pythaistai, 12 dr., no take-away; on the 8th:",
-   "zh": ""
+   "zh": "於厄耳喀亞，一隻閹綿羊移交給皮泰斯塔伊，12德拉克馬，不得帶走；初八："
   },
   {
    "face": "Column Α",
    "line_from": 40,
    "greek": "v Διὶ Μιλιχίωι, v οἶς, νηφάλιος v μέχρι σπλάγχ- v [ν]ων, Δ𐅂𐅂. vvvv [Ἐ]λαφηβολιῶνο-",
    "en": "to Apollo Nymphagetes, at Erchia, a wether goat, 12 dr.; to the Nymphs, at",
-   "zh": ""
+   "zh": "獻給阿波羅‧寧法革忒斯，於厄耳喀亞，一隻閹公山羊，12德拉克馬；獻給寧芙，於"
   },
   {
    "face": "Column Α",
    "line_from": 45,
    "greek": "v ς ἕκτηι ἐπὶ δέ- v κα, Σεμέληι, ἐπ- v ὶ τοῦ αὐτοῦ βω- v μοῦ, αἴξ, γυναι- v ξὶ παραδόσιμ-",
    "en": "the same altar, a she-goat, 10 dr. In Thargelion: on the 4th, to Hermes, in the agora",
-   "zh": ""
+   "zh": "同一祭壇，一隻母山羊，10德拉克馬。在塔耳革利翁月：初四，獻給赫爾墨斯，於廣場"
   },
   {
    "face": "Column Α",
    "line_from": 50,
    "greek": "v ος, ἱερέας τὸ δ- v έρμα, οὐ φορά, Δ [Θ]αργηλιῶνος τ- v ετράδι ἱσταμ- v ένο, Λητοῖ, ἐμ Π-",
    "en": "at Erchia, a ram, the herald performs this sacrifice",
-   "zh": ""
+   "zh": "於厄耳喀亞，一隻公綿羊，傳令官執行此獻祭"
   },
   {
    "face": "Column Α",
    "line_from": 55,
    "greek": "v [υ]θίο Ἐρχιᾶσι(ν), v [α]ἴξ ∶ Δ vvvvv [Σ]κιροφοριῶνο- v ς τρίτη[⟨ι⟩] ἱσταμ- v ένου Κουροτρ-",
    "en": "and receives perquisites like the demarch would, 10 dr.; on the 16th,",
-   "zh": ""
+   "zh": "並如村長般領取祭品規費，10德拉克馬；十六日，"
   },
   {
    "face": "Column Α",
    "line_from": 60,
    "greek": "v όφωι, ἐμ πόλει v Ἐρχ(ιᾶσιν) ∶ χοῖρος, 𐅂𐅂𐅂 v Ἀθηνάαι Πολι- v άδι, ἐμ πόλει Ἐ- v ρχιᾶσι, οἶς, ἀν-",
    "en": "to Zeus Epakrios, on Mount Hymettos, a male lamb, wineless offering, no take-away, [7 dr.]",
-   "zh": ""
+   "zh": "獻給宙斯‧厄帕克里俄斯，在許墨托斯山，一隻公羔羊，無酒奠祭，不可攜離，〔7 德拉克馬〕"
   },
   {
    "face": "Column Α",
    "line_from": 65,
    "greek": "v [τ]ίβους, Δ vvvv v [κε]φάλαιον vv [ΗΔ𐅂]",
    "en": "In Skirophorion: [...]",
-   "zh": ""
+   "zh": "在斯基羅福里翁月：〔……〕"
   },
   {
    "face": "Column Β",
    "line_from": 1,
    "greek": "Μεταγειτνιῶ- v νος δω[δεκ]άτ- v ει, ἐν Ἐλευσι(νίωι) v ἐν ἄστει, Δήμ-",
    "en": "Gods. The Greater Demarchy. Column Α In Metageitnion: on the 12th, to Apollo Lykeios, in the town,",
-   "zh": ""
+   "zh": "諸神。大德謨政。欄 Α 在墨塔革提尼翁月：於12日，獻給阿波羅‧呂刻俄斯，在城內，"
   },
   {
    "face": "Column Β",
    "line_from": 5,
    "greek": "v ητρι, οἶς, Δ vvv v ἕκτηι ἐπὶ δέ- v κα, Κοροτρόφ- v ωι, ἐν [Ἑ]κάτης v Ἐρχιᾶσι, χοῖ-",
    "en": "Schoinos in Erchia, a ewe, no take-away, the skin is given to the priestess, 10 dr. In Boedromion:",
-   "zh": ""
+   "zh": "在厄耳喀亞的斯科伊諾斯，一隻母羊，不可攜離，毛皮給予女祭司，10 德拉克馬。在波厄德羅彌翁月："
   },
   {
    "face": "Column Β",
    "line_from": 10,
    "greek": "v ρος, 𐅂𐅂𐅂 vvvv v Ἀρτέμιδι Ἑκ- v άτει, Ἐρχιᾶ[σ]-] v ι[ν,αἴ]ξ, Δ vvvv Βο[ηδ]ρομιῶνο-",
    "en": "on the 5th, to Epops, at Erchia, a piglet, burned whole, wineless offering,",
-   "zh": ""
+   "zh": "於5日，獻給厄波普斯，在厄耳喀亞，一隻幼豬，全焚，無酒奠祭，"
   },
   {
    "face": "Column Β",
    "line_from": 15,
    "greek": "v ς τετράδι ἱσ- v ταμένο, Βασί- v λει, Ἐρχιᾶ(σιν), ἀμ- v νὴ λευκή, ὁλό- v καυτος, νηφά-",
    "en": "3 dr.; on the 27th: to Ge, on the Hill at Erchia,",
-   "zh": ""
+   "zh": "3 德拉克馬；於27日：獻給蓋亞，在厄耳喀亞的山丘上，"
   },
   {
    "face": "Column Β",
    "line_from": 20,
    "greek": "v λιος, 𐅃𐅂𐅂 vvv v τετράδι φθί- v νοντος, ἐμ Πά- v [γ]ωι Ἐρχιᾶσι- v ν, Ἀχελώωι vv",
    "en": "a pregnant ewe, no take-away, 10 dr. In Posideon: on the 16th, to Zeus, on the Rock at Erchia,",
-   "zh": ""
+   "zh": "一隻懷胎母羊，不得帶走，10德拉克馬。在波西德翁月：於十六日，獻給宙斯，在厄耳喀亞的岩石上，"
   },
   {
    "face": "Column Β",
    "line_from": 25,
    "greek": "v οἶς, Δ𐅂𐅂 vvvv Γαμηλιῶνος v ἐνάτηι ἱστα- v μένο, Ἠροσου- v ρίοις, ἐμ πόλ-",
    "en": "a wether, no take-away, 12 dr.; to Zeus Horios, at Erchia, a piglet,",
-   "zh": ""
+   "zh": "一隻閹公羊，不得帶走，12德拉克馬；獻給宙斯‧荷里俄斯，在厄耳喀亞，一隻小豬，"
   },
   {
    "face": "Column Β",
    "line_from": 30,
    "greek": "v ει Ἐρχιᾶσι[⟨ν⟩], Ἀ- v θηνᾶι, ἀμνή, 𐅃𐅂𐅂 v τετράδι φθί- v νοντος, Κουρ- v οτρόφωι, ἐν Ἥ-",
    "en": "no take-away, 3 dr. In Gamelion: on the 7th, to Apollo Lykeios,",
-   "zh": ""
+   "zh": "不得帶走，3德拉克馬。在伽墨利翁月：於七日，獻給阿波羅‧呂刻俄斯，"
   },
   {
    "face": "Column Β",
    "line_from": 35,
    "greek": "v ρας Ἐρχιᾶσι, v χοῖρος, 𐅂𐅂𐅂 v v Ἥραι, Ἐρχιᾶσ- v ι[⟨ν⟩], οἶς, ἱερέαι v δέρμα, Δ vvvv",
    "en": "at Erchia, a wether handed over to the Pythaistai, 12 dr., no take-away; on the 8th:",
-   "zh": ""
+   "zh": "在厄耳喀亞，一隻移交給皮泰斯塔伊的閹公羊，12德拉克馬，不得帶走；於八日："
   },
   {
    "face": "Column Β",
    "line_from": 40,
    "greek": "Μουνιχιῶνο- v ς τετράδι ἱσ- v ταμένου, Ἡρα- v κλείδαις, οἶ- v ς, Ἐρχιᾶ(σι), Δ𐅂𐅂 v οὐ φ(ορά)",
    "en": "to Apollo Nymphagetes, at Erchia, a wether goat, 12 dr.; to the Nymphs, at",
-   "zh": ""
+   "zh": "獻給阿波羅‧寧法革忒斯，在厄耳喀亞，一隻閹公山羊，12德拉克馬；獻給寧芙，在"
   },
   {
    "face": "Column Β",
    "line_from": 45,
    "greek": "[Θ]αργηλιῶνος v τετράδι ἱστ- v αμένο, Ἀπόλλ- v ωνι Πυθίωι, Ἐ- v ρχι(ᾶσι) ∶ αἴξ, παρα-",
    "en": "the same altar, a she-goat, 10 dr. In Thargelion: on the 4th, to Hermes, in the agora",
-   "zh": ""
+   "zh": "同一祭壇，一隻母山羊，10德拉克馬。在塔耳革利翁月：於四日，獻給赫爾墨斯，在市集"
   },
   {
    "face": "Column Β",
    "line_from": 50,
    "greek": "v δόσιμος Πυθ- v αϊσταῖς, Δ𐅂𐅂 v Ἀπόλλωνι Πα- v ιῶνι, ἐμ Πάγω- v ι Ἐρχι(ᾶσιν), οἶς, Δ𐅂𐅂",
    "en": "at Erchia, a ram, the herald performs this sacrifice",
-   "zh": ""
+   "zh": "在厄耳喀亞，一頭公羊，傳令官執行此獻祭"
   },
   {
    "face": "Column Β",
    "line_from": 55,
    "greek": "[Σ]κιροφοριῶν- v ος τρίτηι ἱσ- v ταμένο, Ἀγλα- v ύρωι ἐμ πόλε[⟨ι⟩] v Ἐρχι(ᾶσιν) ∶ οἶς, Δ v οὐ φ(ορά)",
    "en": "and receives perquisites like the demarch would, 10 dr.; on the 16th,",
-   "zh": ""
+   "zh": "並收取如同德馬爾科斯會收取的規費，10德拉克馬；於第十六日，"
   },
   {
    "face": "Column Β",
    "line_from": 60,
    "greek": "v κεφάλαιον v v Η𐅃𐅂𐅂𐅂 vv",
    "en": "to Zeus Epakrios, on Mount Hymettos, a male lamb, wineless offering, no take-away, [7 dr.]",
-   "zh": ""
+   "zh": "向宙斯‧厄帕克里俄斯，在許墨托斯山上，一頭公羊羔，無酒奠獻，不可帶走，〔7德拉克馬〕"
   },
   {
    "face": "Column Β",
    "line_from": 65,
    "greek": "",
    "en": "In Skirophorion: [...]",
-   "zh": ""
+   "zh": "在斯基羅福里翁月：〔……〕"
   },
   {
    "face": "Column Γ",
    "line_from": 1,
    "greek": "[Ἑ]κατομβαιῶν- v ος δεκάτει ὑ- v στέραι, Κουρ- v οτρόφωι, ἐς Σ-",
    "en": "Gods. The Greater Demarchy. Column Α In Metageitnion: on the 12th, to Apollo Lykeios, in the town,",
-   "zh": ""
+   "zh": "諸神。大德馬爾基亞。Α欄 在墨塔革提尼翁月：於第十二日，向阿波羅‧呂刻俄斯，在城中，"
   },
   {
    "face": "Column Γ",
    "line_from": 5,
    "greek": "v ωτιδῶν Ἐρχι(ᾶσι), v χοῖρος, οὐ φο- v ρά, 𐅂𐅂𐅂 vvvvv v Ἀρτέμιδι ἐς v Σωτιδῶν Ἐρχ-",
    "en": "Schoinos in Erchia, a ewe, no take-away, the skin is given to the priestess, 10 dr. In Boedromion:",
-   "zh": ""
+   "zh": "在厄耳喀亞的斯科伊諾斯，一頭母羊，不可帶走，羊皮交給女祭司，10德拉克馬。在波厄德羅彌翁月："
   },
   {
    "face": "Column Γ",
    "line_from": 10,
    "greek": "v ι(ᾶσιν) ∶ αἴξ, οὐ φορά, v τὸ δέρμα κατ- v αγίζ(εσθαι) ∶ Δ vvvvv [Μ]εταγειτνιῶ- v νος δωδεκάτ-",
    "en": "on the 5th, to Epops, at Erchia, a piglet, burned whole, wineless offering,",
-   "zh": ""
+   "zh": "五日，獻予厄波普斯，於厄耳喀亞，一頭仔豬，全燒，無酒奠祭，"
   },
   {
    "face": "Column Γ",
    "line_from": 15,
    "greek": "v ει, Διὶ Πολιε[⟨ῖ⟩], v ἐμ πόλε[⟨ι⟩] ἐν ἄσ- v τε[⟨ι⟩], οἶς, οὐ φορ- v ά, Δ𐅂𐅂 vacat v ἕκτηι φθίνο-",
    "en": "3 dr.; on the 27th: to Ge, on the Hill at Erchia,",
-   "zh": ""
+   "zh": "三德拉克馬；二十七日：獻予蓋亞，於厄耳喀亞之丘，"
   },
   {
    "face": "Column Γ",
    "line_from": 20,
    "greek": "v ντος, Διὶ Ἐπω- v πετεῖ, ἐμ Πάγ- v ωι Ἐρχιᾶσι, χ- v οῖρος, ὁλόκα- v υτος, νηφάλι-",
    "en": "a pregnant ewe, no take-away, 10 dr. In Posideon: on the 16th, to Zeus, on the Rock at Erchia,",
-   "zh": ""
+   "zh": "一頭懷孕母羊，不得取回，十德拉克馬。波西德翁月：十六日，獻予宙斯，於厄耳喀亞之岩，"
   },
   {
    "face": "Column Γ",
    "line_from": 25,
    "greek": "v ος, 𐅂𐅂𐅂 vvvvv [Β]οηδρομιῶνο- v ς τετράδι φθ- v ίνοντος, Ἀλό- v χωι, ἐμ Πάγωι",
    "en": "a wether, no take-away, 12 dr.; to Zeus Horios, at Erchia, a piglet,",
-   "zh": ""
+   "zh": "一頭閹公羊，不得取回，十二德拉克馬；獻予宙斯‧荷里俄斯，於厄耳喀亞，一頭仔豬，"
   },
   {
    "face": "Column Γ",
    "line_from": 30,
    "greek": "v Ἐρχι(ᾶσιν) ∶ οἶς ∶ Δ vv [Γ]αμηλιῶνος ὀ- v γδόηι ἱσταμ- v έ(νο), Ἀπόλλωνι Ἀ- v ποτροπαίωι,",
    "en": "no take-away, 3 dr. In Gamelion: on the 7th, to Apollo Lykeios,",
-   "zh": ""
+   "zh": "不得取回，三德拉克馬。伽墨利翁月：七日，獻予阿波羅‧呂刻俄斯，"
   },
   {
    "face": "Column Γ",
    "line_from": 35,
    "greek": "v Ἐρχιᾶσι[⟨ν⟩], αἴξ, v Πυ[θα]ϊσταῖς v παραδόσ(ιμος), Δ𐅂𐅂 v τετράδι φθί- v νοντος, Διὶ Τ-",
    "en": "at Erchia, a wether handed over to the Pythaistai, 12 dr., no take-away; on the 8th:",
-   "zh": ""
+   "zh": "於厄耳喀亞，一頭閹公羊，交予皮泰斯塔伊，十二德拉克馬，不得取回；八日："
   },
   {
    "face": "Column Γ",
    "line_from": 40,
    "greek": "v ελείωι, ἐν Ἥρ- v ας Ἐρχ(ιᾶσιν) ∶ οἶς, Δ𐅂𐅂 [Ἀ]νθεστηριῶν- v ος δευτέραι v ἱσταμένο, Δι-",
    "en": "to Apollo Nymphagetes, at Erchia, a wether goat, 12 dr.; to the Nymphs, at",
-   "zh": ""
+   "zh": "致阿波羅‧寧法革忒斯，於厄耳喀亞，一頭閹山羊，十二德拉克馬；致寧芙，於同一祭壇，一頭母山羊，十德拉克馬。在塔耳革利翁月：第四日，致赫爾墨斯，於厄耳喀亞的市集，一頭公羊，傳令官執行此獻祭，"
   },
   {
    "face": "Column Γ",
    "line_from": 45,
    "greek": "v ονύσωι, Ἐρχι(ᾶσιν), v ἔριφος προπ- v τόρθι(ος) ∶ 𐅃 vvvv [Μ]ονιχιῶνος δ- v εκάτει [πρ]οτ-",
    "en": "the same altar, a she-goat, 10 dr. In Thargelion: on the 4th, to Hermes, in the agora",
-   "zh": ""
+   "zh": "並收取如同鄉長應得之規費，十德拉克馬；第十六日，致宙斯‧厄帕克里俄斯，於許墨托斯山上，一頭公羊羔，無酒奠祭，不得帶走，〔七德拉克馬〕。"
   },
   {
    "face": "Column Γ",
    "line_from": 50,
    "greek": "v έραι, Λευκάσ- v πιδι, Ἐρχιᾶ(σιν), ο- v ἶς, νηφάλιος, v οὐ φορά, Δ𐅂𐅂 [Θ]αργηλιῶνος",
    "en": "at Erchia, a ram, the herald performs this sacrifice",
-   "zh": ""
+   "zh": "在斯基羅福里翁月：〔……〕"
   },
   {
    "face": "Column Γ",
@@ -310,84 +373,84 @@
    "line_from": 1,
    "greek": "Ἑκατομβαιῶν- v ος δεκάτει ὑ- v στέραι, Κορο- v [τρ]όφωι, ἐπὶ τ-",
    "en": "Gods. The Greater Demarchy. Column Α In Metageitnion: on the 12th, to Apollo Lykeios, in the town,",
-   "zh": ""
+   "zh": "諸神。大德瑪爾基亞。Α 欄。墨塔革提尼翁月十二日，於城中，獻予阿波羅‧呂刻俄斯，"
   },
   {
    "face": "Column Δ",
    "line_from": 5,
    "greek": "v [ο̑] Ἄκρο Ἐρχιᾶ(σι), v χοῖρος, οὐ φο- v ρά, 𐅂𐅂𐅂 vvvvv v Ἀρτέμιδι, ἐπ- v ὶ το̑ Ἄκρο Ἐρχ-",
    "en": "Schoinos in Erchia, a ewe, no take-away, the skin is given to the priestess, 10 dr. In Boedromion:",
-   "zh": ""
+   "zh": "厄耳喀亞之斯科伊諾斯，母羊一頭，不得取回，皮歸女祭司，十德拉克馬。波厄德羅彌翁月："
   },
   {
    "face": "Column Δ",
    "line_from": 10,
    "greek": "v ι(ᾶσιν), αἴξ, οὐ φορ- v ά, δέρμα κατα- v ιγίζε(σθαι) ∶ Δ vvv v Μεταγειτνιῶ- v νος δωδεκάτ-",
    "en": "on the 5th, to Epops, at Erchia, a piglet, burned whole, wineless offering,",
-   "zh": ""
+   "zh": "五日，獻予厄波普斯，於厄耳喀亞，豬仔一頭，焚燒獻祭，無酒奠酒，"
   },
   {
    "face": "Column Δ",
    "line_from": 15,
    "greek": "v ε[⟨ι⟩], Ἀθηνᾶι Πολ- v ιάδι, ἐμ πόλε[⟨ι⟩] v ἐν ἄστε[⟨ι⟩], οἶς ∶ Δ Βοηδρομιῶνο- v ς πέμπτει ἱσ-",
    "en": "3 dr.; on the 27th: to Ge, on the Hill at Erchia,",
-   "zh": ""
+   "zh": "三德拉克馬；二十七日：獻予蓋亞，於厄耳喀亞之丘，"
   },
   {
    "face": "Column Δ",
    "line_from": 20,
    "greek": "v ταμέ(νο) ∶ Ἔποπι, Ἐ- v ρχιᾶσι, χοῖρ- v ος, ὁλόκαυτο- v ς, νηφάλι(ος) ∶ 𐅂𐅂𐅂 v τετράδι φθί-",
    "en": "a pregnant ewe, no take-away, 10 dr. In Posideon: on the 16th, to Zeus, on the Rock at Erchia,",
-   "zh": ""
+   "zh": "懷孕母羊一頭，不得取回，十德拉克馬。波西德翁月：十六日，獻予宙斯，於厄耳喀亞之巖，"
   },
   {
    "face": "Column Δ",
    "line_from": 25,
    "greek": "v νοντος, Ἑρμῆ- v ι, ἐμ Πάγωι Ἐρ- v χιᾶ(σι) ∶ οἶς ∶ Δ𐅂𐅂 v Γαμηλιῶνος τ- v ετράδι φθίν-",
    "en": "a wether, no take-away, 12 dr.; to Zeus Horios, at Erchia, a piglet,",
-   "zh": ""
+   "zh": "閹公羊一頭，不得取回，十二德拉克馬；獻予宙斯‧荷里俄斯，於厄耳喀亞，豬仔一頭，"
   },
   {
    "face": "Column Δ",
    "line_from": 30,
    "greek": "v οντος, Ποσει- v δῶνι, ἐν Ἥρας v Ἐρχιᾶ(σιν), οἶς, Δ𐅂𐅂 Ἐλαφηβολιῶν- v ος ἕκτηι ἐπὶ",
    "en": "no take-away, 3 dr. In Gamelion: on the 7th, to Apollo Lykeios,",
-   "zh": ""
+   "zh": "不得帶走，3德拉克馬。伽墨利翁月：初七，獻予阿波羅‧呂刻俄斯，"
   },
   {
    "face": "Column Δ",
    "line_from": 35,
    "greek": "v δέκα, Διονύσ- v ωι, Ἐρχιᾶ(σιν), αἴξ, v παραδό(σιμος) ∶ γυνα- v {α}ιξί, οὐ φορά, v ἱερέαι τὸ δέ-",
    "en": "at Erchia, a wether handed over to the Pythaistai, 12 dr., no take-away; on the 8th:",
-   "zh": ""
+   "zh": "於厄耳喀亞，一頭閹公羊交予皮泰斯塔伊，12德拉克馬，不得帶走；初八："
   },
   {
    "face": "Column Δ",
    "line_from": 40,
    "greek": "v ρμα, Δ𐅂𐅂 v Μονιχιῶνος δ- v εκάτει ὑστέ- v ραι, Τριτοπα- v τρεῦσι, Ἐρχι(ᾶσιν),",
    "en": "to Apollo Nymphagetes, at Erchia, a wether goat, 12 dr.; to the Nymphs, at",
-   "zh": ""
+   "zh": "獻予阿波羅‧寧法革忒斯，於厄耳喀亞，一頭閹公山羊，12德拉克馬；獻予寧芙，於"
   },
   {
    "face": "Column Δ",
    "line_from": 45,
    "greek": "v οἶς, νηφάλιο- v ς, οὐ φορά ∶ Δ𐅂𐅂 Θαργηλιῶνος v τετράδι ἱστ- v αμένο, Ἀνάκο-",
    "en": "the same altar, a she-goat, 10 dr. In Thargelion: on the 4th, to Hermes, in the agora",
-   "zh": ""
+   "zh": "同一祭壇，一頭母山羊，10德拉克馬。塔耳革利翁月：初四，獻予赫爾墨斯，於市集"
   },
   {
    "face": "Column Δ",
    "line_from": 50,
    "greek": "v ιν, Ἐρχιᾶσιν, v οἶς, Δ𐅂𐅂 vvvv v ἐνάτει ἐπὶ δ- v έκα, Μενεδεί- v ωι, Ἐρχιᾶσιν,",
    "en": "at Erchia, a ram, the herald performs this sacrifice",
-   "zh": ""
+   "zh": "於厄耳喀亞，一頭公綿羊，傳令官執行此獻祭"
   },
   {
    "face": "Column Δ",
    "line_from": 55,
    "greek": "v οἶς, οὐ φορ(ά), Δ𐅂𐅂 Σκιροφοριῶν- v ος τρίτηι ἱσ- v ταμένο, Ποσε- v ιδῶνι, ἐμ πόλ",
    "en": "and receives perquisites like the demarch would, 10 dr.; on the 16th,",
-   "zh": ""
+   "zh": "並收取如同區長應得之規費，10德拉克馬；十六日，"
   },
   {
    "face": "Column Δ",
@@ -436,70 +499,70 @@
    "line_from": 20,
    "greek": "v κύουσα, οὐ φ- v ορά, Δ vacat Ποσιδεῶνος v ἕκτηι ἐπὶ δ- v έκα, Διί, ἐμ Π-",
    "en": "a pregnant ewe, no take-away, 10 dr. In Posideon: on the 16th, to Zeus, on the Rock at Erchia,",
-   "zh": ""
+   "zh": "懷孕的母羊，不得帶走，10德拉克馬。在波西德翁月：十六日，獻給宙斯，在厄耳喀亞的岩石上，"
   },
   {
    "face": "Column Ε",
    "line_from": 25,
    "greek": "v έτρηι Ἐρχι- v ᾶσιν, οἶς, οὐ v φορά, Δ𐅂𐅂 vv v Διὶ Ὁρίωι, Ἐ- v ρχιᾶσι, χοῖ-",
    "en": "a wether, no take-away, 12 dr.; to Zeus Horios, at Erchia, a piglet,",
-   "zh": ""
+   "zh": "閹公羊，不得帶走，12德拉克馬；獻給宙斯‧荷里俄斯，在厄耳喀亞，一隻小豬，"
   },
   {
    "face": "Column Ε",
    "line_from": 30,
    "greek": "v ρος, οὐ φο(ρά) ∶ 𐅂𐅂𐅂 Γαμηλιῶνος v ἑβδόμηι ἱσ- v ταμένο, Ἀπό- v λλωνι Λυκε-",
    "en": "no take-away, 3 dr. In Gamelion: on the 7th, to Apollo Lykeios,",
-   "zh": ""
+   "zh": "不得帶走，3德拉克馬。在伽墨利翁月：七日，獻給阿波羅‧呂刻俄斯，"
   },
   {
    "face": "Column Ε",
    "line_from": 35,
    "greek": "v ίωι, Ἐρχιᾶσ- v ι[⟨ν⟩], οἶς Πυθαϊ- v σταῖς παρ[α]-] v δόσιμος, Δ𐅂𐅂 `οὐ φο(ρά)´ v ὀγδόη[⟨ι⟩] ἱστα-",
    "en": "at Erchia, a wether handed over to the Pythaistai, 12 dr., no take-away; on the 8th:",
-   "zh": ""
+   "zh": "在厄耳喀亞，一隻閹公羊交給皮泰斯塔伊，12德拉克馬，不得帶走；八日："
   },
   {
    "face": "Column Ε",
    "line_from": 40,
    "greek": "v μένο, Ἀπόλλ- v ωνι Νυμφη[γ]-] v έτει, Ἐρχιᾶ- v σιν, αἴξ, Δ𐅂𐅂 v Νύμφαις, ἐπ-",
    "en": "to Apollo Nymphagetes, at Erchia, a wether goat, 12 dr.; to the Nymphs, at",
-   "zh": ""
+   "zh": "獻給阿波羅‧寧法革忒斯，在厄耳喀亞，一隻閹公山羊，12德拉克馬；獻給寧芙，在"
   },
   {
    "face": "Column Ε",
    "line_from": 45,
    "greek": "v ὶ το̑ αὐτοῦ β- v ωμοῦ, αἴξ ∶ Δ v Θαργηλιῶνο- v ς τετράδι ἱ- v σταμένο, Ἐρ-",
    "en": "the same altar, a she-goat, 10 dr. In Thargelion: on the 4th, to Hermes, in the agora",
-   "zh": ""
+   "zh": "同一座祭壇，一隻母山羊，10德拉克馬。在塔耳革利翁月：四日，獻給赫爾墨斯，在集市"
   },
   {
    "face": "Column Ε",
    "line_from": 50,
    "greek": "v μῆι, ἐν ἀγορ- v ᾶι Ἐρχιᾶσι, v κριός, τούτ- v ωι ἱερεῶσθ- v αι τὸν κήρυ-",
    "en": "at Erchia, a ram, the herald performs this sacrifice",
-   "zh": ""
+   "zh": "在厄耳喀亞，一隻公羊，傳令官執行此獻祭"
   },
   {
    "face": "Column Ε",
    "line_from": 55,
    "greek": "v κα καὶ τὰ γέ- v ρα λαμβάνε- v ν καθάπερ ὁ v δήμαρχος, Δ v ἕκτηι ἐπὶ δ-",
    "en": "and receives perquisites like the demarch would, 10 dr.; on the 16th,",
-   "zh": ""
+   "zh": "並如同鄉長那樣收取祭儀份額，10德拉克馬；於第十六日，"
   },
   {
    "face": "Column Ε",
    "line_from": 60,
    "greek": "v έκα, Διὶ Ἐπ[α]-] v κρίωι, ἐν Ὑμ- v ηττῶι, ἀρ[ήν], v νηφάλι[ος,ο]-] v ὐ φορά, [𐅃𐅂𐅂]. [v]",
    "en": "to Zeus Epakrios, on Mount Hymettos, a male lamb, wineless offering, no take-away, [7 dr.]",
-   "zh": ""
+   "zh": "獻給宙斯‧厄帕克里俄斯，在許墨托斯山上，一隻公羊羔，無酒奠祭，不得帶走，〔7德拉克馬〕"
   },
   {
    "face": "Column Ε",
    "line_from": 65,
    "greek": "Σκιροφ[οριῶ]-] v νος [...6...][......1 line......]",
    "en": "In Skirophorion: [...]",
-   "zh": ""
+   "zh": "在斯基羅福里翁月：〔……〕"
   }
  ]
 }
