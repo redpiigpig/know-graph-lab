@@ -122,7 +122,7 @@ PROMPT = """把下列古希臘祭儀銘文的英譯逐段翻成**繁體中文**�
 1. **法條體例照原樣。** 祭儀法多為「若……則……」的決疑體，中譯保留這個句式，**不要改寫成流暢散文**——那會抹掉它與利未記、與古代近東法典的可比性。
 2. **數字、份數、價錢、日期一律照抄**，不可約略化（「九份中燒一份」不可寫成「取其一部分焚燒」）。
 3. **口令與禱詞照字面譯**，不意譯、不修飾。
-4. **祭儀術語用這些定譯**：淨罪／潔淨（purification）、獻祭（sacrifice）、贖罪牲（victim）、成年牲（adult animal / téleon）、初穗（first-fruits）、還願（votive）、入教（initiation）、聖所（sanctuary）、聖域（precinct）、祭壇（altar）、聖休戰（truce）、奠酒（libation）、焚燒獻祭（burnt offering）、祭司（priest）、女祭司（priestess）、不潔（polluted / miaros）、潔淨的（pure）。
+4. **祭儀術語用這些定譯**：淨罪／潔淨（purification）、獻祭（sacrifice）、贖罪牲（victim）、成年牲（adult animal / téleon）、初穗（first-fruits / first-offerings，兩種英文說法都譯「初穗」，不要一篇譯初穗另一篇譯初祭）、還願（votive）、入教（initiation）、聖所（sanctuary）、聖域（precinct）、祭壇（altar）、聖休戰（truce）、奠酒（libation）、焚燒獻祭（burnt offering）、祭司（priest）、女祭司（priestess）、不潔（polluted / miaros）、潔淨的（pure）。
 5. **神名與人名用這些定譯**：宙斯、得墨忒耳、珀耳塞福涅、阿波羅、阿爾忒彌斯、雅典娜、赫拉、阿芙羅狄忒、戴奧尼索斯、赫爾墨斯、波塞頓、赫斯提亞、慈心女神（Eumenides）、**慈心者宙斯（Zeus Eumenes）**、**和善者宙斯（Zeus Meilichios）**、先祖靈（Tritopatres）、英雄（heroes）。宙斯的各種稱號務必彼此區分，不可兩個稱號譯成同一個名。不確定的神名音譯即可，不要創造意譯。
 6. **英譯裡的圓括號（編者補充說明）保留為中文全形括號**；方括號〔〕表示石面已缺而由編者補入，若英譯有就保留。
 7. 中間點用「‧」，全文繁體，不得出現簡體字或日文漢字寫法。
