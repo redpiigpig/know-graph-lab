@@ -9,70 +9,7 @@
  "support": "A small moulded stele, broken below, and somewhat worn on the left and right sides.Height: 70 cmWidth: 44-45 cmDepth: from top to bottom, 9.5-11 cm",
  "bibliography": "Edition here based on the first full edition of Daux 1963, with fig. 1 and pl. 13-14, with the corrections in Daux 1964: 676-677. The readings are for the most part uncontroversial. Cf. Takeuchi 2010-2013 for a new reading of line A20, adopted here (previously Πυλῶνι). Since column A is virtually complete, we have restored the total amount of drachmae in column A as its final, missing line. Cf. also: SEG 21, 541; Sokolowski LSCG 18; Le Guen-Pollet CDE 61; AIO , with another English translation and commentary. Further bibliography: Salviat 1964; Dow 1965; Jameson 1965; Mikalson 1975; Langdon 1976; Georgoudi 1994; Ekroth 2002; Humphreys 2004: 178; Pirenne-Delforge 2004; Papazarkadas 2004-2009: no. 4; Bremmer 2005a; Parker 2005a; Pirenne-Delforge 2011; Pirenne-Delforge - Pironti 2016.",
  "licence": "CGRN — Collection of Greek Ritual Norms (Université de Liège), 開放取用；引用請註明 CGRN 編號與網址。",
- "names": {
-  "Apollo": "阿波羅",
-  "Lykeios": "呂刻俄斯",
-  "Hera": "赫拉",
-  "Thelchinia": "忒爾喀尼亞",
-  "Erchia": "厄耳喀亞",
-  "Nymphs": "寧芙",
-  "Heroines": "英雄女",
-  "Kourotrophos": "庫羅特羅佛斯",
-  "Delphinion": "得爾菲尼翁",
-  "Apollo Delphinios": "阿波羅‧得爾菲尼俄斯",
-  "Apollo Apotropaios": "阿波羅‧阿波特羅派俄斯",
-  "Paianians": "派阿尼亞人",
-  "Diasia": "狄阿西亞",
-  "Agrai": "阿格萊",
-  "Zeus Meilichios": "宙斯‧和善者",
-  "Semele": "塞墨勒",
-  "Leto": "勒托",
-  "Pythios": "皮提俄斯",
-  "Athena Polias": "雅典娜‧波利阿斯",
-  "Eleusinion": "厄琉西尼翁",
-  "Demeter": "得墨忒耳",
-  "Hekate": "赫卡忒",
-  "Artemis Hekate": "阿爾忒彌斯‧赫卡忒",
-  "Basile": "巴西勒",
-  "Acheloos": "阿刻羅俄斯",
-  "Herosouria": "赫羅蘇里亞",
-  "Mounychion": "穆尼基翁月",
-  "Herakleidai": "赫拉克勒代",
-  "Apollo Pythios": "阿波羅‧皮提俄斯",
-  "Pythaistai": "皮泰斯塔伊",
-  "Apollo Paion": "阿波羅‧派翁",
-  "Aglauros": "阿格勞羅斯",
-  "Sotidai": "索提代",
-  "Zeus Polieus": "宙斯‧波利俄斯",
-  "Zeus Epopetes": "宙斯‧厄波佩忒斯",
-  "Alochos": "阿洛科斯",
-  "Zeus Teleios": "宙斯‧忒勒俄斯",
-  "Dionysus": "戴奧尼索斯",
-  "Leukaspis": "琉卡斯皮斯",
-  "Akros": "阿刻羅斯",
-  "Epops": "厄波普斯",
-  "Hermes": "赫爾墨斯",
-  "Poseidon": "波塞頓",
-  "Tritopatres": "先祖靈",
-  "Anakes": "阿那克斯",
-  "Menedeios": "墨涅得俄斯",
-  "Schoinos": "斯科伊諾斯",
-  "Ge": "蓋亞",
-  "Zeus Horios": "宙斯‧荷里俄斯",
-  "Apollo Nymphagetes": "阿波羅‧寧法革忒斯",
-  "Zeus Epakrios": "宙斯‧厄帕克里俄斯",
-  "Hymettos": "許墨托斯",
-  "Metageitnion": "墨塔革提尼翁月",
-  "Boedromion": "波厄德羅彌翁月",
-  "Pyanopsion": "皮阿諾普西翁月",
-  "Gamelion": "伽墨利翁月",
-  "Anthesterion": "安忒斯忒里翁月",
-  "Elaphebolion": "厄拉斐波利翁月",
-  "Thargelion": "塔耳革利翁月",
-  "Skirophorion": "斯基羅福里翁月",
-  "Hekatombaion": "赫卡托姆拜翁月",
-  "Posideon": "波西德翁月"
- },
+ "names": {},
  "segments": [
   {
    "face": "Column Α",
@@ -352,21 +289,21 @@
    "line_from": 55,
    "greek": "v τετράδι ἱστ- v αμένο, Διί, ἐμ v Πάγωι, Ἐρχιᾶ(σιν), v οἶς, Δ𐅂𐅂 vvvv [Σ]κιροφοριῶν-",
    "en": "and receives perquisites like the demarch would, 10 dr.; on the 16th,",
-   "zh": ""
+   "zh": "並收取像鄉長會收取的規費，10德拉克馬；於16日，"
   },
   {
    "face": "Column Γ",
    "line_from": 60,
    "greek": "v ος τρίτει ἱσ- v ταμένο, Διὶ Π- v ολιε[⟨ῖ⟩], ἐμ πόλε[⟨ι⟩] v Ἐρχιᾶσι[⟨ν⟩], οἶς, v οὐ φορά, Δ𐅂𐅂",
    "en": "to Zeus Epakrios, on Mount Hymettos, a male lamb, wineless offering, no take-away, [7 dr.]",
-   "zh": ""
+   "zh": "向宙斯‧厄帕克里俄斯，在許墨托斯山上，獻公羊羔，無酒奠祭，不得帶走，〔7德拉克馬〕"
   },
   {
    "face": "Column Γ",
    "line_from": 65,
    "greek": "v ἕκτηι ἐπὶ δέ- v κα [...6...][......1 line......]",
    "en": "In Skirophorion: [...]",
-   "zh": ""
+   "zh": "在斯基羅福里翁月：〔……〕"
   },
   {
    "face": "Column Δ",
@@ -457,42 +394,42 @@
    "line_from": 60,
    "greek": "v ε[⟨ι⟩] Ἐρχι(ᾶσιν) ∶ οἶς ∶ Δ𐅂𐅂 v κεφάλαιον vv ΗΔ vvv",
    "en": "to Zeus Epakrios, on Mount Hymettos, a male lamb, wineless offering, no take-away, [7 dr.]",
-   "zh": ""
+   "zh": "向宙斯‧厄帕克里俄斯，在許墨托斯山上，獻公羊羔，無酒奠祭，不得帶走，〔7德拉克馬〕"
   },
   {
    "face": "Column Δ",
    "line_from": 65,
    "greek": "",
    "en": "In Skirophorion: [...]",
-   "zh": ""
+   "zh": "在斯基羅福里翁月：〔……〕"
   },
   {
    "face": "Column Ε",
    "line_from": 1,
    "greek": "Μεταγειτνι- v ῶνος ἐνάτε[⟨ι⟩] v ἐπὶ δέκα, Ἡρ- v ωΐναις, ἐπὶ",
    "en": "Gods. The Greater Demarchy. Column Α In Metageitnion: on the 12th, to Apollo Lykeios, in the town,",
-   "zh": ""
+   "zh": "諸神。大鄉政。Α欄 在墨塔革提尼翁月：於12日，向阿波羅‧呂刻俄斯，在城內，"
   },
   {
    "face": "Column Ε",
    "line_from": 5,
    "greek": "v Σχοίνωι Ἐρ- v χιᾶσι[⟨ν⟩], οἶς, ο- v ὐ φορά, ἱερέ- v αι τὸ δέρ(μα) ∶ Δ v Βοηδρομιῶν-",
    "en": "Schoinos in Erchia, a ewe, no take-away, the skin is given to the priestess, 10 dr. In Boedromion:",
-   "zh": ""
+   "zh": "斯科伊諾斯在埃爾希亞，一隻母羊，不可帶走，獸皮交給女祭司，10德拉克馬。在波厄德羅彌翁月："
   },
   {
    "face": "Column Ε",
    "line_from": 10,
    "greek": "v ος πέμπτηι v ἱσταμένο, Ἐ- v ρχι(ᾶσιν) ∶ Ἔποπι, χ- v οῖρος, ὁλόκ- v αυτος, νηφά-",
    "en": "on the 5th, to Epops, at Erchia, a piglet, burned whole, wineless offering,",
-   "zh": ""
+   "zh": "初五日，獻給厄波普斯，在埃爾希亞，一隻豬仔，整隻焚燒，無酒奠祭，"
   },
   {
    "face": "Column Ε",
    "line_from": 15,
    "greek": "v λιος, 𐅂𐅂𐅂 v v τετράδι φθ- v ίνοντος, Γῆ- v ι ἐμ Πάγωι, Ἐ- v ρχιᾶσι[⟨ν⟩], οἶς",
    "en": "3 dr.; on the 27th: to Ge, on the Hill at Erchia,",
-   "zh": ""
+   "zh": "3德拉克馬；二十七日：獻給該亞，在埃爾希亞的山丘上，"
   },
   {
    "face": "Column Ε",
