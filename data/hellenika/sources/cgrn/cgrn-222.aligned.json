@@ -21,22 +21,26 @@
   "Great Gods": "大神們",
   "Hagna": "哈格娜",
   "Hippodrome": "賽馬場",
-  "Aigila": "埃吉拉",
+  "Aigila": "艾吉拉",
   "Ten Men": "十人團",
   "gynaikonomos": "婦女監察官",
   "agonothetes": "競技主持官",
   "hierothytai": "祭獻官",
   "auletai": "笛手",
-  "rhabdophoroi": "持杖者",
+  "rhabdophoroi": "持棍者",
   "Five": "五人團",
   "archons": "執政官",
-  "gerousia": "元老院",
+  "gerousia": "長老會",
   "argyroskopos": "銀錢檢驗官",
   "epimeletes": "監督官",
   "treasurer": "司庫官",
   "Karneiasion": "卡爾涅伊翁聖所",
   "Tritopatres": "先祖靈",
-  "Eumenides": "慈心女神"
+  "Eumenides": "慈心女神",
+  "Meilichios": "和善者",
+  "Eumenes": "慈心者",
+  "Katharos": "潔淨的",
+  "Miaros": "不潔的"
  },
  "segments": [
   {
@@ -107,21 +111,21 @@
    "line_from": 45,
    "greek": "μετεχέτω τῶν μυστηρίων. περὶ τῶν διαφόρων· v τὰ δὲ πίπτοντα διάφορα ἐκ τῶν μυστηρίων ἐγλεγόντω οἱ κατασταθέντες ὑπὸ τοῦ δάμου πέντε· vεἰσφερόντω δὲ οἱ ἄρχοντες ἀνάνκαι πάντες, μὴ δὶς τοὺς αὐτούς, τίμαμα ἔχοντα ἕκαστον μὴ ἔλασσον ταλάν- του, καὶ τῶν κατασταθέντων παραγραψάτω ἁ γερουσία τὸ τίμημα, ὡσαύτως δὲ καὶ τὸ τῶν εἰσενεγκάντων· τοῖς δὲ ἐγλογευόντοις τὰ διάφορα λειτουργείτω ὁ ἀργυροσκόπος· ὅταν δὲ ἐπιτελεσθεῖ τὰ μυστήρια, ἀπολογισάσθωσαν ἐμ πάντοις ἐν τᾶι πρώται συν- νόμωι συναγωγᾶι τῶν συνέδρων, καὶ γραφὰν ἀποδόντω τῶι ἐπιμεληταῖ παραχρῆμα γράφοντες ἐπ’ ὀνόματος τὰ πεπτωκότα δι[ά]-]",
    "en": "to participate in the mysteries. About Funds The Five chosen by the people must collect the funds accruing from the mysteries. All the archons by necessity must put forth nominations, not (of) the same person twice, each having assets of no less than a talent, and the gerousia must write (next to each name) the assets of those appointed, likewise also the assets of those who nominated them. The argyroskopos must serve those collecting the funds. When the mysteries are completed, they must give an account in all matters at the first regular assembly of the synedroi, and they must deliver the record to the epimeletes immediately, writing by heading the funds accrued",
-   "zh": ""
+   "zh": "參與祕儀。關於經費：由人民選出的五人團必須收取祕儀所生之經費。所有執政官必須提出提名，不得（提名）同一人兩次，每人須擁有不少於一塔蘭同之資產，長老會必須在（被提名者姓名）旁寫下其資產，同樣也寫下提名者之資產。銀錢檢驗官必須為收取經費者服務。祕儀完成時，他們必須在議會成員的第一次例會中就所有事項作出報告，並必須立即將記錄交給監督官，按標題寫明所收經費。"
   },
   {
    "face": "Face A",
    "line_from": 50,
    "greek": "φορα ἀπὸ τοῦ καθαρμοῦ, καὶ ἀπὸ τ[ῶ]ν πρωτομυστᾶν τὸ ὑποστατικόν, καὶ ἄν τι ἄλλο πέσει, καὶ τὴν γεγενημέναν ἔξοδον, καί τι ἂν εἶ λοιπόν, καὶ ἀριθμησάντω παραχρῆμα τῶι ταμίαι καὶ ἔστωσαν ὑπόμαστροι, ἄν τι εὑρίσκωνται ἀδικοῦντες, διπλασίου καὶ ἐπιτιμίου [δραχμᾶνχ[ι]λιᾶ]ν, καὶ οἱ δικαστ[αὶ] μὴ ἀφαιρούντω μηθέν· οἱ δ’ ἐν τῶι πέμπτωι καὶ πεντηκοστῶι ἔτει κατεσταμένοι ἐξοδιασάντω καὶ Μνα- [σισ]τράτωιτὸδιδόμενο[ναὐτῶι]διάφορονεἰςτὸνστέφανονὑπὸτῆς[πό]λ]εος, δραχμὰς [ἑ]ξακισ[χι]λίας, ἀπο[δ]όντω δὲ τῶι ταμίαι καὶ ὅσα κα εἶ [πρ]οεξωδιασμέναδιάφορα[ὑπ]ὸ] τοῦ ταμίου ἐ[ντῶιπέμπτωικαὶπεντηκοστῶι]ἔτε[ιεἰς]τὰκ[α]τασκευαζόμ[εν]αἐν[τῶ]ι Καρνει-",
    "en": "from the purification and the entrance fee of the first-time initiates, and whatever else was accrued, and the expenditure which was made, and whatever, if anything, remains. They must pay it out immediately to the treasurer, and are to be held liable to judicial proceedings, if they are discovered doing something wrong, for a fine of double the amount and 1000 drachmae, and the judges must not reduce it at all. Those appointed in the 55th year must also pay out to Mnasistratos the funds granted [to him] by the city for the crown, 6000 drachmae. They must pay back to the treasurer whatever funds were paid out in advance by the treasurer in the [55th] year [for] the construction in the Karneiasion",
-   "zh": ""
+   "zh": "來自淨罪之（收入）與首次入教者之入門費，以及其他任何收入，以及所花費之開支，以及如有任何剩餘。他們必須立即將其支付給司庫官，若被發現有任何不當行為，則須承擔司法訴訟之責任，罰款為雙倍金額並加一千德拉克馬，法官不得予以任何減免。於第五十五年任命之人員也必須將城市為冠冕授予姆納西斯特拉托斯的經費，六千德拉克馬，支付給他。他們必須將司庫官在（第五十）五年（為）卡爾涅伊翁聖所之建造而預先支付之任何經費償還給司庫官。"
   },
   {
    "face": "Face A",
    "line_from": 55,
    "greek": "ασίωι ἢ δαπανούμενα χάριν τῶν μυστηρίων· τὸ δὲ [λοιπὸνἐκτῶνπροεξωδιασμένωνδιαφόρων]ἐξοδιαζόντ[ωοἱπέντεεἰςτὰ]ἐπισκε[υα]-] ζόμενα ἐν τῶι Καρνειασίωι, καὶ ἄν τινος ἔτι χρεία εἶ [παρὰταύταςτὰς]π]οθόδ[ο]υς, φερόντω γράφοντες ῥη[τῶςεἰς̣] ὃ ἂν χρεία [ε]ἶ, καὶ οἱ ἄρχον- τες καὶ οἱ σύνεδροι δογματοποιείσθωσαν, ὅτι δεῖ τὸν ταμί[αν[διδόμ]εν τὰ διάφορα· ἀπὸ δὲ τῶν πιπτόντων ἐκ τῶν μυστηρίων ἀποκαθ[ι]- στάσθω τῶι ταμίαι τὰ διάφορα, καὶ ἀποδόντω γραφὰν τῶι ἐπιμελητᾶι, περὶ ὧν κα διοικήσωντι, καὶ ἔστωσαν ὑπόμαστροι, ἄν τι ἀδικήσωντι, κα- θὼς ἐπάνω γέγραπται· v ὁ δὲ ταμίας, ὅσον κα παραλάβει διάφορον λοιπὸν ἐκ τούτων, γραφέτω ἐν ὑπεχθέματι εἰς τὰν ἐπισκευὰν τῶν ἐν τ[ῶι]",
    "en": "or expenditures for the mysteries. [The Five] must expend the [remainder of the advanced funds] for the repairs in the Karneiasion, and if there is need of [an addition to this] revenue, they must report, writing expressly for what there is a need, and the archons and synedroi must decree that the treasurer must [give] the funds. From what is accrued from the mysteries the funds must be restored to the treasurer, and they must deliver a report to the epimeletes about what they administer and are to be held liable to judicial proceedings if they commit some wrong, just as it is written above. The treasurer must write in a supplementary account whatever remainder he receives from these (funds) for the repair of the things in the",
-   "zh": ""
+   "zh": "或用於祕儀之開支。〔五人團〕必須將〔預付經費之剩餘〕用於卡爾涅伊翁聖所之修繕，若對此〔收入〕有〔追加〕之需要，他們必須報告，明確寫明需要何事，執政官與議會成員必須頒令，司庫官必須〔給予〕經費。從祕儀所生之收入中，經費必須歸還給司庫官，他們必須就其管理之事向監督官提交報告，若犯下任何過錯，則須承擔司法訴訟之責任，正如上文所寫。司庫官必須將他從這些（經費）中收到的任何剩餘款項，用於修繕卡爾涅伊翁聖所內之物，記入一份補充帳目。"
   },
   {
    "face": "Face A",
