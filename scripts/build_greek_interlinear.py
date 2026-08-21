@@ -273,7 +273,7 @@ def gloss_unit(unit: dict) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="建立希臘文讀本逐詞對譯層")
-    parser.add_argument("--model", choices=sorted(llm.MODEL_CHAINS), default="sonnet")
+    parser.add_argument("--model", choices=sorted(llm.MODEL_CHAINS), default="auto")
     parser.add_argument("--group", choices=("scripture", "memory", "patristic", "liturgy"))
     parser.add_argument("--limit", type=int, default=0, help="只跑前 N 個單元（0＝全部）")
     args = parser.parse_args()

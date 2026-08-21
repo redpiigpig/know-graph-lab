@@ -147,7 +147,7 @@ def gloss_batch(batch: list[dict]) -> dict[str, str]:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="建立希臘文 1000 詞繁體中文詞義層")
-    parser.add_argument("--model", choices=sorted(llm.MODEL_CHAINS), default="sonnet")
+    parser.add_argument("--model", choices=sorted(llm.MODEL_CHAINS), default="auto")
     parser.add_argument("--limit", type=int, default=0, help="只跑前 N 批（0＝全部）")
     args = parser.parse_args()
 

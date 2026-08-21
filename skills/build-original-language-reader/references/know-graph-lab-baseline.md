@@ -83,6 +83,29 @@ Contract frozen 2026-08-18; assembled 2026-08-19. See `greek-reader-contract.md`
 
 Source cache: `output/source-cache/original-readers/greek-full/sources/{sblgnt,swete,apostolic-fathers,first1k,liturgy,dodson}`.
 
+### Engine policy for the reader's language-model layers
+
+The gloss and interlinear jobs go through `scripts/original_reader_llm.py`, which
+follows the repository's standing order: **Gemini first, then NVIDIA, then
+Anthropic Haiku as a last resort.**
+
+The first version was Anthropic-only, inherited from the Hebrew interlinear, and
+that cost seventeen hours of zero progress: the Claude Max account is shared with
+the overnight fleet — around two dozen jobs at once — so every batch sat at 429
+while seven Gemini keys and seven NVIDIA keys went untouched. A reader build has
+no business queueing behind the fleet for a tier it does not need.
+
+When a layer stops advancing, probe the tiers before touching the code:
+
+- Anthropic 429 alone means the fleet is busy; the keeper will catch up.
+- All seven Gemini keys returning 429 means the fleet is on Gemini too.
+- NVIDIA needs two checks, because its failures look alike. A bad-key POST that
+  returns 401 in a fraction of a second and a `/v1/models` listing that returns
+  200 prove the endpoint is healthy; if a real completion then hangs until the
+  read timeout, the *model* is saturated, not the account. `deepseek-v4-flash-0731`
+  behaved exactly this way on 2026-08-21 — still listed, still authorised, and
+  never answering.
+
 Still open: the Chinese gloss layer and the interlinear layer (both quota-bound), human review of the 100 memory verses, DOCX/PDF, and audio.
 
 Parsing traps this build hit, all fixed and worth remembering:

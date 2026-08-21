@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
-"""Shared Anthropic client for the original-language reader builds.
+"""Shared language-model client for the original-language reader builds.
 
-Extracted from ``build_hebrew_interlinear.py`` so the Greek gloss and
-interlinear jobs share one rate-limit gate instead of each inventing its own.
+Engine order follows the repository's standing policy: **Gemini first, then
+NVIDIA, and Anthropic Haiku only as a last resort.**
 
-The Claude Max account is shared with the interactive session and the overnight
-translation fleet, so a 429 means "everyone waits", not "this batch failed".
-One shared gate holds every worker until the window reopens, and every caller is
-expected to cache its results so a stopped run resumes instead of restarting.
+The first version of this module was Anthropic-only, inherited from the Hebrew
+interlinear.  That was a mistake: the Claude Max account is shared with the
+overnight fleet — two dozen jobs at a time — so the Greek gloss and interlinear
+layers sat at 429 for seventeen straight hours and produced nothing, while seven
+Gemini keys and seven NVIDIA keys went unused.  A reader build has no business
+queueing behind the fleet when it does not need that tier at all.
+
+Each tier is tried in turn on every call, and the engine that actually answered
+is recorded, so a cache entry always says which model produced it.
 """
 
 from __future__ import annotations
@@ -21,28 +26,57 @@ from pathlib import Path
 from typing import Iterable
 
 import anthropic
+import requests
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import translate_ebook_to_zh as engines
 
 
-SONNET_MODELS = ("claude-sonnet-5", "claude-sonnet-4-6")
+GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+GEMINI_MODEL = engines.GEMINI_MODEL
+
 HAIKU_MODELS = ("claude-haiku-4-5-20251001",)
-MODEL_CHAINS = {"sonnet": SONNET_MODELS, "haiku": HAIKU_MODELS}
+SONNET_MODELS = ("claude-sonnet-5", "claude-sonnet-4-6")
+# Kept so callers can still ask for a specific Anthropic tier explicitly; the
+# default chain does not start there.
+MODEL_CHAINS = {"auto": (), "sonnet": SONNET_MODELS, "haiku": HAIKU_MODELS}
+
+_lock = threading.Lock()
+_gemini_index = 0
+_last_engine = "gemini:" + GEMINI_MODEL
+_anthropic_chain: tuple[str, ...] = HAIKU_MODELS
+_forced_chain = ""
+
+
+def select_chain(name: str) -> str:
+    """Pick which Anthropic tier the last-resort step uses.
+
+    ``auto`` (the default) keeps the full Gemini -> NVIDIA -> Haiku order.
+    Naming a tier explicitly forces it and skips the other engines, which is
+    what an upgrade pass over already-glossed units wants.
+    """
+    global _anthropic_chain, _forced_chain
+    if name == "auto":
+        _anthropic_chain = HAIKU_MODELS
+        _forced_chain = ""
+    else:
+        _anthropic_chain = MODEL_CHAINS[name]
+        _forced_chain = name
+    return current_model()
+
+
+def current_model() -> str:
+    return _last_engine
+
+
+# --------------------------------------------------------------------------
+# Anthropic, kept for the last-resort tier
+# --------------------------------------------------------------------------
 
 _client_lock = threading.Lock()
 _client: anthropic.Anthropic | None = None
 _client_mtime = 0.0
-_model = SONNET_MODELS[0]
-_model_chain = SONNET_MODELS
-
-
-def select_chain(name: str) -> str:
-    global _model, _model_chain
-    _model_chain = MODEL_CHAINS[name]
-    _model = _model_chain[0]
-    return _model
-
-
-def current_model() -> str:
-    return _model
 
 
 def _credentials_path() -> Path:
@@ -79,76 +113,110 @@ def client() -> anthropic.Anthropic:
         return _client
 
 
-_gate_lock = threading.Lock()
-_gate_until = 0.0
-_gate_streak = 0
-GATE_WAITS = (300, 600, 900, 1200, 1800)
+def _anthropic_call(prompt: str, max_tokens: int) -> str:
+    global _client_mtime
+    last_error: Exception | None = None
+    for model in _anthropic_chain:
+        try:
+            message = client().messages.create(
+                model=model,
+                max_tokens=max_tokens,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            return "".join(block.text for block in message.content if hasattr(block, "text")).strip()
+        except anthropic.AuthenticationError as error:
+            with _client_lock:
+                _client_mtime = 0.0
+            last_error = error
+        except (anthropic.NotFoundError, anthropic.RateLimitError,
+                anthropic.APIConnectionError, anthropic.APITimeoutError) as error:
+            last_error = error
+    raise last_error or RuntimeError("no Anthropic tier configured")
 
 
-def _wait_for_gate() -> None:
-    while True:
-        with _gate_lock:
-            remaining = _gate_until - time.time()
-        if remaining <= 0:
-            return
-        time.sleep(min(remaining, 30))
+# --------------------------------------------------------------------------
+# Gemini
+# --------------------------------------------------------------------------
+
+def _gemini_call(prompt: str, max_tokens: int) -> str:
+    global _gemini_index
+    if not engines.GEMINI_KEYS:
+        raise RuntimeError("no Gemini API key")
+    body = {
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {
+            "temperature": 0.2,
+            "maxOutputTokens": max_tokens,
+            "responseMimeType": "text/plain",
+        },
+    }
+    url = GEMINI_URL.format(model=GEMINI_MODEL)
+    last = "?"
+    for _ in range(len(engines.GEMINI_KEYS)):
+        with _lock:
+            key = engines.GEMINI_KEYS[_gemini_index]
+            _gemini_index = (_gemini_index + 1) % len(engines.GEMINI_KEYS)
+        try:
+            response = requests.post(f"{url}?key={key}", json=body, timeout=180)
+        except requests.exceptions.RequestException as error:
+            last = f"conn {type(error).__name__}"
+            continue
+        if response.status_code == 200:
+            payload = response.json()
+            candidates = payload.get("candidates") or []
+            if not candidates:
+                last = "empty candidates"
+                continue
+            parts = candidates[0].get("content", {}).get("parts") or []
+            text = "".join(part.get("text", "") for part in parts).strip()
+            if text:
+                return text
+            last = "empty text"
+            continue
+        last = f"HTTP {response.status_code}"
+    raise RuntimeError(f"Gemini failed on every key (last: {last})")
 
 
-def _trip_gate() -> float:
-    global _gate_until, _gate_streak
-    with _gate_lock:
-        wait = GATE_WAITS[min(_gate_streak, len(GATE_WAITS) - 1)]
-        _gate_streak += 1
-        _gate_until = max(_gate_until, time.time() + wait)
-        return wait
-
-
-def _clear_gate() -> None:
-    global _gate_streak
-    with _gate_lock:
-        _gate_streak = 0
-
+# --------------------------------------------------------------------------
+# The chain
+# --------------------------------------------------------------------------
 
 def call_model(
     prompt: str,
     max_tokens: int = 16000,
-    backoffs: Iterable[int] = (0, 30, 90, 180, 300, 600),
+    backoffs: Iterable[int] = (0, 20, 60, 180, 300),
 ) -> str:
-    global _client_mtime, _model
-    backoffs = tuple(backoffs)
-    for attempt, wait in enumerate(backoffs, start=1):
+    """Ask the cheapest available engine, in the repository's standing order."""
+    global _last_engine
+
+    if _forced_chain:
+        text = _anthropic_call(prompt, max_tokens)
+        _last_engine = _anthropic_chain[0]
+        return text
+
+    tiers = (
+        ("gemini:" + GEMINI_MODEL, lambda: _gemini_call(prompt, max_tokens)),
+        ("nvidia:" + engines.NVIDIA_MODELS[0],
+         lambda: engines.nvidia_chat(prompt, max_tokens=min(max_tokens, 4000))),
+        (HAIKU_MODELS[0], lambda: _anthropic_call(prompt, max_tokens)),
+    )
+
+    errors: list[str] = []
+    for attempt, wait in enumerate(tuple(backoffs), start=1):
         if wait:
             time.sleep(wait)
-        _wait_for_gate()
-        try:
-            message = client().messages.create(
-                model=_model,
-                max_tokens=max_tokens,
-                messages=[{"role": "user", "content": prompt}],
-            )
-            _clear_gate()
-            return "".join(block.text for block in message.content if hasattr(block, "text")).strip()
-        except anthropic.NotFoundError:
-            with _client_lock:
-                index = _model_chain.index(_model) if _model in _model_chain else 0
-                if index + 1 < len(_model_chain):
-                    _model = _model_chain[index + 1]
-                    print(f"  模型改用 {_model}", flush=True)
-                else:
-                    raise
-        except anthropic.AuthenticationError:
-            print("  401 — 重讀 credentials.json", file=sys.stderr, flush=True)
-            with _client_lock:
-                _client_mtime = 0.0
-            if attempt >= len(backoffs):
-                raise
-        except anthropic.RateLimitError:
-            held = _trip_gate()
-            print(f"  429 額度用盡 — 全體暫停 {held // 60} 分鐘後續跑", file=sys.stderr, flush=True)
-            if attempt >= len(backoffs):
-                raise
-        except (anthropic.APIConnectionError, anthropic.APITimeoutError) as error:
-            print(f"  {type(error).__name__} 第 {attempt}/{len(backoffs)} 次", file=sys.stderr, flush=True)
-            if attempt >= len(backoffs):
-                raise
-    raise RuntimeError("重試次數用盡")
+        for label, call in tiers:
+            try:
+                text = call()
+            except Exception as error:  # noqa: BLE001 - fall through to the next tier
+                errors.append(f"{label}: {type(error).__name__} {error}")
+                continue
+            if text:
+                _last_engine = label
+                return text
+        print(
+            f"  三個引擎都沒回應（第 {attempt} 輪）：{errors[-3:]}",
+            file=sys.stderr,
+            flush=True,
+        )
+    raise RuntimeError(f"所有引擎都失敗：{errors[-3:]}")
