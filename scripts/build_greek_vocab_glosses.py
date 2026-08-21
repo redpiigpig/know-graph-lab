@@ -26,6 +26,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import original_reader_llm as llm
+from verify_greek_vocab_lexicon import clean_gloss, load_dodson
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -112,6 +113,20 @@ def validate(gloss: str, entry: dict) -> str | None:
     return None
 
 
+_dodson_by_number: dict[str, dict] = {}
+
+
+def dodson_brief(strong: str) -> str:
+    """Dodson's short definition for a Strong number, if it has one."""
+    global _dodson_by_number
+    if not _dodson_by_number:
+        for matches in load_dodson().values():
+            for number, entry in matches:
+                _dodson_by_number.setdefault(number, entry)
+    entry = _dodson_by_number.get(strong)
+    return clean_gloss(entry) if entry else ""
+
+
 def gloss_batch(batch: list[dict]) -> dict[str, str]:
     payload = json.dumps(
         [
@@ -119,7 +134,7 @@ def gloss_batch(batch: list[dict]) -> dict[str, str]:
                 "ordinal": item["ordinal"],
                 "printedEntry": item["printedEntry"],
                 "transliteration": item.get("textbookTransliteration", ""),
-                "glossEn": item.get("glossEn", ""),
+                "glossEn": dodson_brief(item.get("strong", "")) or item.get("glossEn", ""),
                 "isProperName": item.get("isProperName", False),
             }
             for item in batch

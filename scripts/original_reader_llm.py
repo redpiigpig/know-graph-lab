@@ -44,6 +44,10 @@ MODEL_CHAINS = {"auto": (), "sonnet": SONNET_MODELS, "haiku": HAIKU_MODELS}
 
 _lock = threading.Lock()
 _gemini_index = 0
+# When every Gemini key is rate-limited, sweeping all seven on the next call
+# only wastes a couple of seconds each time; sit out a while instead.
+_gemini_rested_until = 0.0
+GEMINI_COOLDOWN = 600
 _last_engine = "gemini:" + GEMINI_MODEL
 _anthropic_chain: tuple[str, ...] = HAIKU_MODELS
 _forced_chain = ""
@@ -139,9 +143,11 @@ def _anthropic_call(prompt: str, max_tokens: int) -> str:
 # --------------------------------------------------------------------------
 
 def _gemini_call(prompt: str, max_tokens: int) -> str:
-    global _gemini_index
+    global _gemini_index, _gemini_rested_until
     if not engines.GEMINI_KEYS:
         raise RuntimeError("no Gemini API key")
+    if _gemini_rested_until > time.time():
+        raise RuntimeError("Gemini resting after every key was rate-limited")
     body = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
@@ -174,7 +180,89 @@ def _gemini_call(prompt: str, max_tokens: int) -> str:
             last = "empty text"
             continue
         last = f"HTTP {response.status_code}"
+    with _lock:
+        _gemini_rested_until = time.time() + GEMINI_COOLDOWN
     raise RuntimeError(f"Gemini failed on every key (last: {last})")
+
+
+# --------------------------------------------------------------------------
+# NVIDIA
+# --------------------------------------------------------------------------
+
+NVIDIA_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
+# The house default first, then two that were verified alive when the default
+# was not.  A saturated NIM model does not fail fast: it accepts the request and
+# never answers, so a model that times out is set aside for a while instead of
+# costing every later call another read timeout.  On 2026-08-21
+# deepseek-v4-flash-0731 hung on all seven keys while both llama tiers answered
+# in under a second.
+NVIDIA_MODELS = (
+    "deepseek-ai/deepseek-v4-flash-0731",
+    "meta/llama-3.1-70b-instruct",
+)
+# llama-3.1-8b is reachable but not good enough for this work: asked for the
+# meaning of ἄγγελος it answered "從而指牧羊人", and θεός came back as
+# "神的官司".  A wrong gloss in a vocabulary list is worse than a slow one, so
+# the small tier is deliberately not in the chain.
+NVIDIA_TIMEOUT = 40
+NVIDIA_COOLDOWN = 1800
+
+_nvidia_index = 0
+_nvidia_rested: dict[str, float] = {}
+_nvidia_preferred = ""
+
+
+def _nvidia_keys() -> list[str]:
+    return list(engines.NVIDIA_KEYS)
+
+
+def _nvidia_call(prompt: str, max_tokens: int) -> tuple[str, str]:
+    """Return (model, text) from the first NVIDIA model that actually answers."""
+    global _nvidia_index, _nvidia_preferred
+    keys = _nvidia_keys()
+    if not keys:
+        raise RuntimeError("no NVIDIA API key")
+    now = time.time()
+    order = [_nvidia_preferred] if _nvidia_preferred else []
+    order += [m for m in NVIDIA_MODELS if m != _nvidia_preferred]
+    last = "?"
+    for model in order:
+        if _nvidia_rested.get(model, 0) > now:
+            continue
+        with _lock:
+            key = keys[_nvidia_index % len(keys)]
+            _nvidia_index += 1
+        try:
+            response = requests.post(
+                NVIDIA_URL,
+                headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
+                json={
+                    "model": model,
+                    "messages": [{"role": "user", "content": prompt}],
+                    "max_tokens": min(max_tokens, 4000),
+                    "temperature": 0.2,
+                },
+                timeout=NVIDIA_TIMEOUT,
+            )
+        except requests.exceptions.RequestException as error:
+            # A hang means the model is saturated; stop paying for it this run.
+            _nvidia_rested[model] = time.time() + NVIDIA_COOLDOWN
+            last = f"{model}: {type(error).__name__}"
+            continue
+        if response.status_code == 200:
+            text = response.json()["choices"][0]["message"]["content"]
+            _nvidia_preferred = model
+            return model, engines._THINK_RE.sub("", text).strip()
+        if response.status_code in (404, 410):
+            # Retired or not served here; never try it again this run.
+            _nvidia_rested[model] = time.time() + 10 ** 9
+        last = f"{model}: HTTP {response.status_code}"
+    raise RuntimeError(f"NVIDIA failed on every model (last: {last})")
+
+
+def _nvidia_labelled(prompt: str, max_tokens: int) -> tuple[str, str]:
+    model, text = _nvidia_call(prompt, max_tokens)
+    return "nvidia:" + model, text
 
 
 # --------------------------------------------------------------------------
@@ -194,22 +282,23 @@ def call_model(
         _last_engine = _anthropic_chain[0]
         return text
 
+    # Each tier reports the engine that actually answered, because the NVIDIA
+    # tier picks its own model and the cache must record the real one.
     tiers = (
-        ("gemini:" + GEMINI_MODEL, lambda: _gemini_call(prompt, max_tokens)),
-        ("nvidia:" + engines.NVIDIA_MODELS[0],
-         lambda: engines.nvidia_chat(prompt, max_tokens=min(max_tokens, 4000))),
-        (HAIKU_MODELS[0], lambda: _anthropic_call(prompt, max_tokens)),
+        ("gemini", lambda: ("gemini:" + GEMINI_MODEL, _gemini_call(prompt, max_tokens))),
+        ("nvidia", lambda: _nvidia_labelled(prompt, max_tokens)),
+        ("anthropic", lambda: (HAIKU_MODELS[0], _anthropic_call(prompt, max_tokens))),
     )
 
     errors: list[str] = []
     for attempt, wait in enumerate(tuple(backoffs), start=1):
         if wait:
             time.sleep(wait)
-        for label, call in tiers:
+        for tier, call in tiers:
             try:
-                text = call()
+                label, text = call()
             except Exception as error:  # noqa: BLE001 - fall through to the next tier
-                errors.append(f"{label}: {type(error).__name__} {error}")
+                errors.append(f"{tier}: {type(error).__name__} {error}")
                 continue
             if text:
                 _last_engine = label
