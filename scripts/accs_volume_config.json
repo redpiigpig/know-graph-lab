@@ -513,7 +513,57 @@
     "page_count": 638,
     "single_book": false,
     "testament": "OT",
-    "ranges": null,
-    "status": "needs_boundaries"
+    "ranges": [
+      {
+        "book": "hos",
+        "pages": "39-122"
+      },
+      {
+        "book": "jol",
+        "pages": "123-162"
+      },
+      {
+        "book": "amo",
+        "pages": "163-210"
+      },
+      {
+        "book": "oba",
+        "pages": "211-228"
+      },
+      {
+        "book": "jon",
+        "pages": "229-258"
+      },
+      {
+        "book": "mic",
+        "pages": "259-302"
+      },
+      {
+        "book": "nam",
+        "pages": "303-314"
+      },
+      {
+        "book": "hab",
+        "pages": "315-348"
+      },
+      {
+        "book": "zep",
+        "pages": "349-366"
+      },
+      {
+        "book": "hag",
+        "pages": "367-386"
+      },
+      {
+        "book": "zec",
+        "pages": "387-466"
+      },
+      {
+        "book": "mal",
+        "pages": "467-518"
+      }
+    ],
+    "status": "ready",
+    "note": "印刷頁碼在約拿書內部斷 2 頁：何西阿-約拿用 offset 38，彌迦起用 36。單一 offset 蓋不住本卷，勿用 accs_find_boundaries 重算覆蓋。"
   }
 ]
