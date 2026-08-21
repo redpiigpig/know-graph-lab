@@ -53,6 +53,10 @@ Write-Log "pass finished; $($stale.Count) units still below $target"
 # Rebuild the printed artifacts only once the whole book is on the target engine,
 # so a half-upgraded PDF never lands in output/.
 if ($stale.Count -eq 0) {
+    Write-Log 'applying OSHB morphology corrections'
+    # The corrector is engine-agnostic and idempotent, so it must run on the
+    # final glosses rather than on whatever an earlier pass produced.
+    & $python 'scripts/fix_hebrew_interlinear_morph.py' '--write' 2>&1 | ForEach-Object { Write-Log $_ }
     Write-Log 'rebuilding DOCX/PDF and running the release gate'
     & $python 'scripts/build_hebrew_full_reader.py' 2>&1 | ForEach-Object { Write-Log $_ }
     & 'C:\Program Files\LibreOffice\program\soffice.com' --headless --norestore --convert-to pdf `
