@@ -31,9 +31,12 @@ from pathlib import Path
 from typing import Any, Iterable
 
 import anthropic
+import requests
+from dotenv import load_dotenv
 
 
 ROOT = Path(__file__).resolve().parents[1]
+load_dotenv(dotenv_path=ROOT / ".env")
 CACHE = ROOT / "output" / "source-cache" / "original-readers" / "hebrew-full"
 SCRIPTURE_PLAN = CACHE / "scripture-plan.json"
 PRAYERS = CACHE / "prayers-articles.json"
@@ -49,7 +52,84 @@ OUTPUT = CACHE / "interlinear.json"
 # cheaper tier produced.
 SONNET_MODELS = ("claude-sonnet-5", "claude-sonnet-4-6")
 HAIKU_MODELS = ("claude-haiku-4-5-20251001",)
-MODEL_CHAINS = {"sonnet": SONNET_MODELS, "haiku": HAIKU_MODELS}
+# The fleet saturates gemini-flash-latest, but its quota is per model: at the
+# time of writing gemini-3.5-flash answered on all seven keys while every other
+# tier was 429.  Overridable, and the chain falls back to the older name.
+GEMINI_MODELS = tuple(
+    dict.fromkeys(
+        [os.environ.get("GEMINI_MODEL", "gemini-3.5-flash"), "gemini-flash-latest", "gemini-2.5-flash"]
+    )
+)
+MODEL_CHAINS = {"sonnet": SONNET_MODELS, "haiku": HAIKU_MODELS, "gemini": GEMINI_MODELS}
+
+
+def _gemini_keys() -> list[str]:
+    """Same key discovery as scripts/translate_ebook_to_zh.py: one primary name
+    plus numbered slots, comma-splittable, deduplicated in order."""
+    names = ("GEMINI_API_KEY", "Gemini_API_Key", "gemini_api_key", "GOOGLE_API_KEY")
+    raw: list[str] = []
+    for name in names:
+        value = os.environ.get(name)
+        if value:
+            raw.append(value)
+            break
+    for slot in range(1, 11):
+        for name in names:
+            value = os.environ.get(f"{name}_{slot}")
+            if value:
+                raw.append(value)
+                break
+    keys: list[str] = []
+    for entry in raw:
+        for piece in entry.split(","):
+            key = piece.strip()
+            if key and key not in keys:
+                keys.append(key)
+    return keys
+
+
+GEMINI_KEYS = _gemini_keys()
+_gemini_slot = 0
+_gemini_lock = threading.Lock()
+
+
+def call_gemini(prompt: str) -> str:
+    """Rotate through the project's Gemini keys; its quota is separate from the
+    Anthropic account, which is why this path is usable while Sonnet is dry."""
+    global _gemini_slot
+    if not GEMINI_KEYS:
+        raise RuntimeError("找不到 Gemini API key")
+    endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{_model}:generateContent"
+    body = {
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {"temperature": 0.2, "responseMimeType": "application/json"},
+    }
+    for _ in range(len(GEMINI_KEYS)):
+        with _gemini_lock:
+            key = GEMINI_KEYS[_gemini_slot]
+            slot = _gemini_slot
+        for attempt, wait in enumerate((0, 3, 12), start=1):
+            if wait:
+                time.sleep(wait)
+            try:
+                response = requests.post(f"{endpoint}?key={key}", json=body, timeout=120)
+            except requests.exceptions.RequestException as error:
+                print(f"  Gemini 連線錯誤 key#{slot} 第 {attempt} 次：{type(error).__name__}", file=sys.stderr, flush=True)
+                continue
+            if response.status_code == 200:
+                data = response.json()
+                try:
+                    return data["candidates"][0]["content"]["parts"][0]["text"].strip()
+                except (KeyError, IndexError):
+                    print(f"  Gemini 回應無內容 key#{slot} 第 {attempt} 次", file=sys.stderr, flush=True)
+                    continue
+            if response.status_code in (429, 502, 503, 504):
+                print(f"  Gemini {response.status_code} key#{slot} 第 {attempt} 次", file=sys.stderr, flush=True)
+                continue
+            raise RuntimeError(f"Gemini HTTP {response.status_code}: {response.text[:200]}")
+        with _gemini_lock:
+            _gemini_slot = (_gemini_slot + 1) % len(GEMINI_KEYS)
+    raise RuntimeError(f"{len(GEMINI_KEYS)} 把 Gemini key 全部用盡")
 
 MAQQEF = "־"
 SOF_PASUQ = "׃"
@@ -425,6 +505,8 @@ def _clear_gate() -> None:
 
 def call_model(prompt: str, backoffs: Iterable[int] = (0, 30, 90, 180, 300, 600)) -> str:
     global _client, _client_mtime, _model
+    if _model in GEMINI_MODELS:
+        return call_gemini(prompt)
     backoffs = tuple(backoffs)
     for attempt, wait in enumerate(backoffs, start=1):
         if wait:

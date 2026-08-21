@@ -1,8 +1,9 @@
 # Keep the Hebrew reader's interlinear upgrade running until it is done.
 #
-# The Sonnet tier is often rate-limited for hours at a time while the fleet and
-# the interactive session share one Claude Max account, and a background shell
-# started from a chat session dies with that session.  This keeper is idempotent:
+# Sonnet stayed rate-limited for three days straight while the fleet and the
+# interactive session shared one Claude Max account, so the upgrade engine was
+# switched to Gemini, whose quota is separate and per-model. A background shell
+# started from a chat session also dies with that session.  This keeper is idempotent:
 # it exits immediately when a pass is already running or when every unit is
 # already on the target engine, so it can be scheduled on a short interval.
 #
@@ -12,7 +13,7 @@ $ErrorActionPreference = 'Stop'
 $repo = 'c:\Users\user\Desktop\know-graph-lab'
 $python = 'python'
 $log = Join-Path $repo 'output\qa\original-readers\hebrew-full\keeper.log'
-$target = 'claude-sonnet-5'
+$target = 'gemini-3.5-flash'
 
 function Write-Log($message) {
     $stamp = (Get-Date).ToString('yyyy-MM-dd HH:mm:ss')
@@ -42,7 +43,7 @@ if ($stale.Count -eq 0) {
 }
 
 Write-Log "$($stale.Count) units still below $target; starting an upgrade pass"
-& $python 'scripts/build_hebrew_interlinear.py' '--model' 'sonnet' '--upgrade' '--workers' '2' '--rounds' '6' '--probe-attempts' '20' 2>&1 |
+& $python 'scripts/build_hebrew_interlinear.py' '--model' 'gemini' '--upgrade' '--workers' '3' '--rounds' '6' '--probe-attempts' '20' 2>&1 |
     ForEach-Object { Write-Log $_ }
 
 $master = Get-Content $masterPath -Raw -Encoding utf8 | ConvertFrom-Json
