@@ -141,7 +141,8 @@ def main() -> None:
             rc, out = run([sys.executable, 'scripts/hellenika_align.py', '--all'],
                           timeout=min(3600, max(300, deadline - time.time())))
             tail = chr(10).join(l for l in out.splitlines()
-                                if '✓' in l or '✗' in l or '累計' in l)[-600:]
+                                if '✓' in l or '✗' in l or '累計' in l
+                                or 'timeout' in l)[-600:]
             if tail:
                 log(tail)
         ad1, at = align_pending()

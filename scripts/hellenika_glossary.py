@@ -183,8 +183,15 @@ def main() -> None:
     if args.fix and mismatch:
         n = apply_fixes(mismatch)
         print(f'\n已依詞庫統一，改動 {n} 處譯文段落')
-    if args.candidates or args.check:
+    # 🚨 --check 唯讀。write_candidates 會整份覆寫，曾把人工策展過的定名對照表
+    #    連同 register 依據一起洗掉；只有明確要求 --candidates 時才重生。
+    if args.candidates:
         write_candidates(missing)
+    elif missing:
+        note = os.path.relpath(CAND_OUT, ROOT)
+        print()
+        print(f'（詞庫未收 {len(missing)} 條；要重生對照表請加 --candidates，'
+              f'注意會覆寫 {note}）')
 
 
 if __name__ == '__main__':

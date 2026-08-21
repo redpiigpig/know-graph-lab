@@ -75,6 +75,8 @@ _gi = 0
 _ni = 0
 _gcool: dict[int, float] = {}   # key index → 冷卻到期時間
 _last_nv = 0.0
+_nv_timeouts = 0                # 連續逾時次數
+_nv_open_until = 0.0            # 斷路器：在此時間之前不再試 NVIDIA
 
 
 def ask_gemini(prompt: str) -> str:
@@ -120,9 +122,11 @@ def ask_gemini(prompt: str) -> str:
 
 
 def ask_nvidia(prompt: str) -> str:
-    global _ni
+    global _ni, _nv_timeouts, _nv_open_until
     if not NVIDIA_KEYS:
         raise RuntimeError('no NVIDIA key')
+    if time.time() < _nv_open_until:
+        raise RuntimeError('NVIDIA 斷路器開啟中（連續逾時）')
     global _last_nv
     for _ in range(len(NVIDIA_KEYS)):
         key = NVIDIA_KEYS[_ni]
@@ -140,9 +144,15 @@ def ask_nvidia(prompt: str) -> str:
                 timeout=float(os.environ.get('NVIDIA_TIMEOUT', '420')))
         except requests.exceptions.RequestException as e:
             print(f'    nvidia conn-err key#{_ni}: {type(e).__name__}', file=sys.stderr, flush=True)
+            _nv_timeouts += 1
+            if _nv_timeouts >= 2:
+                _nv_open_until = time.time() + 1800
+                print('    nvidia 連續逾時 → 斷路 30 分鐘', file=sys.stderr, flush=True)
+                raise RuntimeError('NVIDIA 連續逾時，暫時停用')
             _ni = (_ni + 1) % len(NVIDIA_KEYS)
             continue
         if r.status_code == 200:
+            _nv_timeouts = 0
             return r.json()['choices'][0]['message']['content'].strip()
         print(f'    nvidia {r.status_code} key#{_ni}', file=sys.stderr, flush=True)
         _ni = (_ni + 1) % len(NVIDIA_KEYS)
@@ -150,12 +160,51 @@ def ask_nvidia(prompt: str) -> str:
     raise RuntimeError('all NVIDIA keys exhausted')
 
 
+OPENROUTER_KEYS = [v for k, v in sorted(os.environ.items())
+                   if re.fullmatch(r'openrouter_api_key_\d+', k, re.I) and v]
+OR_MODEL = os.environ.get('OPENROUTER_MODEL', 'google/gemma-4-26b-a4b-it:free')
+_oi = 0
+
+
+def ask_openrouter(prompt: str) -> str:
+    """第三層。本 repo 既有的純文字引擎（8-key 獨立池），見 aquinas_build.py。"""
+    global _oi
+    if not OPENROUTER_KEYS:
+        raise RuntimeError('no OpenRouter key')
+    for _ in range(len(OPENROUTER_KEYS)):
+        key = OPENROUTER_KEYS[_oi]
+        try:
+            r = requests.post('https://openrouter.ai/api/v1/chat/completions',
+                              headers={'Authorization': f'Bearer {key}'},
+                              json={'model': OR_MODEL, 'temperature': 0.25,
+                                    'max_tokens': 8000,
+                                    'messages': [{'role': 'user', 'content': prompt}]},
+                              timeout=300)
+        except requests.exceptions.RequestException as e:
+            print(f'    openrouter conn-err key#{_oi}: {type(e).__name__}', file=sys.stderr, flush=True)
+            _oi = (_oi + 1) % len(OPENROUTER_KEYS)
+            continue
+        if r.status_code == 200:
+            try:
+                return r.json()['choices'][0]['message']['content'].strip()
+            except (KeyError, IndexError):
+                pass
+        print(f'    openrouter {r.status_code} key#{_oi}', file=sys.stderr, flush=True)
+        _oi = (_oi + 1) % len(OPENROUTER_KEYS)
+        time.sleep(2)
+    raise RuntimeError('all OpenRouter keys exhausted')
+
+
 def ask(prompt: str) -> str:
     try:
         return ask_gemini(prompt)
     except Exception as e:  # noqa: BLE001 — 整條 Gemini 鏈乾了才降級
         print(f'  ⤷ Gemini 失敗（{e}），改走 NVIDIA', file=sys.stderr, flush=True)
+    try:
         return ask_nvidia(prompt)
+    except Exception as e:  # noqa: BLE001
+        print(f'  ⤷ NVIDIA 失敗（{e}），改走 OpenRouter', file=sys.stderr, flush=True)
+        return ask_openrouter(prompt)
 
 
 # ─────────────────────────── prompt ───────────────────────────

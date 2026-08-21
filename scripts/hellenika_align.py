@@ -125,7 +125,7 @@ PROMPT = """把下列古希臘祭儀銘文的英譯逐段翻成**繁體中文**�
 4. **祭儀術語用這些定譯**：淨罪／潔淨（purification）、獻祭（sacrifice）、贖罪牲（victim）、成年牲（adult animal / téleon）、初穗（first-fruits / first-offerings，兩種英文說法都譯「初穗」，不要一篇譯初穗另一篇譯初祭）、還願（votive）、入教（initiation）、聖所（sanctuary）、聖域（precinct）、祭壇（altar）、聖休戰（truce）、奠酒（libation）、焚燒獻祭（burnt offering）、祭司（priest）、女祭司（priestess）、不潔（polluted / miaros）、潔淨的（pure）。
 5. **城邦官職與祭儀職事依「春秋制」register 定譯**（見 translation-glossary 的「官制與行政區」頁）——希臘城邦對應春秋列國，**嚴禁用總督／行省／省長／監察官／主持官／委員會／團這類明清或現代的詞**：
    archons→執政（「執政官」已配給羅馬 consul，不可共用）、gerousia→國老會、synedroi→國老、
-   epimeletes→掌儀、agonothetes→司競、gynaikonomos→司婦、argyroskopos→校錢、treasurer→司庫、
+   epimeletes→掌儀、agonothetes→司競、gynaikonomos→司婦、argyroskopos→校錢、treasurer→司庫、agoranomos→司市（周禮司市掌市之治教政刑量度禁令）、
    hierothytai→祭祝、Hieroi→祠士、Hierai→祠女（「聖職」是基督教詞，不可用）、
    rhabdophoroi→執杖（職名不綴「者」）、auletai→吹籥者、
    五人／十人一組的官署作「五有司」「十有司」（周禮「三有司」體例，不作「五人團」）。
@@ -195,6 +195,7 @@ def build_name_table(doc: dict) -> dict:
 
 BATCH = 6            # 單批段數上限
 BATCH_CHARS = 2600   # 單批英譯字數上限——長段落會讓回傳 JSON 被截斷，整批報廢
+SOLO_CHARS = 500     # 超過這個長度的段落單獨成批
 
 
 def make_batches(todo: list[tuple[int, dict]]) -> list[list[tuple[int, dict]]]:
@@ -203,6 +204,14 @@ def make_batches(todo: list[tuple[int, dict]]) -> list[list[tuple[int, dict]]]:
     out, cur, n = [], [], 0
     for item in todo:
         size = len(item[1]['en'])
+        if size > SOLO_CHARS:
+            # 特長段落單獨送。安達尼亞末三段各 690–830 字，三段一批時 NVIDIA
+            # 一律讀取逾時（420s），七把 key 輪一遍就吃掉近一小時而毫無產出。
+            if cur:
+                out.append(cur)
+                cur, n = [], 0
+            out.append([item])
+            continue
         if cur and (n + size > BATCH_CHARS or len(cur) >= BATCH):
             out.append(cur)
             cur, n = [], 0
@@ -265,7 +274,12 @@ def process(path: str, do_translate: bool) -> None:
     if os.path.exists(out_path):
         prev = json.loads(io.open(out_path, encoding='utf-8').read())
         segments = prev['segments']
-        print(f"  ↻ {doc.get('title_zh')}：沿用既有 {len(segments)} 段", flush=True)
+        # 🚨 專名表務必沿用既有的。重建會蓋掉人工或 register 校正過的定名，
+        #    而且新舊表不一致時，後續補譯的段落會用另一套術語（實際發生過）。
+        if prev.get('names'):
+            doc['_names'] = prev['names']
+        print(f"  ↻ {doc.get('title_zh')}：沿用既有 {len(segments)} 段"
+              f"、專名表 {len(doc.get('_names') or {})} 條", flush=True)
     else:
         segments = align(doc)
         print(f"  ✓ {doc.get('title_zh')}：切出 {len(segments)} 段", flush=True)
