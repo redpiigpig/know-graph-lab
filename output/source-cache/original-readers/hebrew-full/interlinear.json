@@ -25646,7 +25646,7 @@
           "ordinal": 6,
           "word": "סְבָלָ֑ם",
           "trailing": "",
-          "glossZh": "他背負了它們"
+          "glossZh": "祂背負了它們"
         },
         {
           "ordinal": 7,
@@ -49490,7 +49490,7 @@
           "ordinal": 2,
           "word": "קִבֵּל",
           "trailing": "",
-          "glossZh": "接受"
+          "glossZh": "領受"
         },
         {
           "ordinal": 3,
@@ -49502,13 +49502,13 @@
           "ordinal": 4,
           "word": "מִסִּינַי",
           "trailing": ",",
-          "glossZh": "從西奈"
+          "glossZh": "從西奈山"
         },
         {
           "ordinal": 5,
           "word": "וּמְסָרָהּ",
           "trailing": "",
-          "glossZh": "並將其交付"
+          "glossZh": "並傳授她"
         },
         {
           "ordinal": 6,
@@ -49526,49 +49526,49 @@
           "ordinal": 8,
           "word": "לִזְקֵנִים",
           "trailing": ",",
-          "glossZh": "給長老"
+          "glossZh": "給長老們"
         },
         {
           "ordinal": 9,
           "word": "וּזְקֵנִים",
           "trailing": "",
-          "glossZh": "而長老"
+          "glossZh": "而長老們"
         },
         {
           "ordinal": 10,
           "word": "לִנְבִיאִים",
           "trailing": ",",
-          "glossZh": "給先知"
+          "glossZh": "給先知們"
         },
         {
           "ordinal": 11,
           "word": "וּנְבִיאִים",
           "trailing": "",
-          "glossZh": "而先知"
+          "glossZh": "而先知們"
         },
         {
           "ordinal": 12,
           "word": "מְסָרוּהָ",
           "trailing": "",
-          "glossZh": "將其交付"
+          "glossZh": "傳授了她"
         },
         {
           "ordinal": 13,
           "word": "לְאַנְשֵׁי",
           "trailing": "",
-          "glossZh": "給會眾的人"
+          "glossZh": "給人們"
         },
         {
           "ordinal": 14,
           "word": "כְנֶסֶת",
           "trailing": "",
-          "glossZh": "會眾"
+          "glossZh": "大會"
         },
         {
           "ordinal": 15,
           "word": "הַגְּדוֹלָה",
           "trailing": ".",
-          "glossZh": "大的"
+          "glossZh": "偉大的"
         },
         {
           "ordinal": 16,
@@ -49580,7 +49580,7 @@
           "ordinal": 17,
           "word": "אָמְרוּ",
           "trailing": "",
-          "glossZh": "說"
+          "glossZh": "說了"
         },
         {
           "ordinal": 18,
@@ -49592,19 +49592,19 @@
           "ordinal": 19,
           "word": "דְבָרִים",
           "trailing": ",",
-          "glossZh": "事物"
+          "glossZh": "話語"
         },
         {
           "ordinal": 20,
           "word": "הֱווּ",
           "trailing": "",
-          "glossZh": "要成為"
+          "glossZh": "你們要作"
         },
         {
           "ordinal": 21,
           "word": "מְתוּנִים",
           "trailing": "",
-          "glossZh": "溫和的"
+          "glossZh": "審慎的"
         },
         {
           "ordinal": 22,
@@ -49616,31 +49616,31 @@
           "ordinal": 23,
           "word": "וְהַעֲמִידוּ",
           "trailing": "",
-          "glossZh": "並樹立"
+          "glossZh": "並培育出"
         },
         {
           "ordinal": 24,
           "word": "תַלְמִידִים",
           "trailing": "",
-          "glossZh": "學生"
+          "glossZh": "門徒們"
         },
         {
           "ordinal": 25,
           "word": "הַרְבֵּה",
           "trailing": ",",
-          "glossZh": "許多"
+          "glossZh": "許多的"
         },
         {
           "ordinal": 26,
           "word": "וַעֲשׂוּ",
           "trailing": "",
-          "glossZh": "而要做"
+          "glossZh": "並製作"
         },
         {
           "ordinal": 27,
           "word": "סְיָג",
           "trailing": "",
-          "glossZh": "圍籬"
+          "glossZh": "籬笆"
         },
         {
           "ordinal": 28,
@@ -49649,8 +49649,8 @@
           "glossZh": "給律法"
         }
       ],
-      "senseZh": "摩西從西奈山接受律法，並將其交付給約書亞，約書亞交付給長老，長老交付給先知，先知將其交付給大會。他們說三件事：要在審判中溫和，樹立許多學生，並為律法做圍籬。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "摩西從西奈山領受了律法，並把它傳給約書亞，約書亞傳給長老們，長老們傳給先知們，先知們又把它傳給大議會的人。他們說了三件事：在審判中要審慎，要培育許多門徒，並要為律法築起籬笆。",
+      "engine": "gemini-3.5-flash"
     },
     "prayer:hbo-article-24-pirkei-avot-1-1-6-002": {
       "id": "prayer:hbo-article-24-pirkei-avot-1-1-6-002",
@@ -49680,25 +49680,25 @@
           "ordinal": 4,
           "word": "מִשְּׁיָרֵי",
           "trailing": "",
-          "glossZh": "從…的幸存者"
+          "glossZh": "從剩餘者"
         },
         {
           "ordinal": 5,
           "word": "כְנֶסֶת",
           "trailing": "",
-          "glossZh": "會眾"
+          "glossZh": "大會"
         },
         {
           "ordinal": 6,
           "word": "הַגְּדוֹלָה",
           "trailing": ".",
-          "glossZh": "大的"
+          "glossZh": "偉大的"
         },
         {
           "ordinal": 7,
           "word": "הוּא",
           "trailing": "",
-          "glossZh": "他"
+          "glossZh": "他自己"
         },
         {
           "ordinal": 8,
@@ -49716,7 +49716,7 @@
           "ordinal": 10,
           "word": "עַל",
           "trailing": "",
-          "glossZh": "在"
+          "glossZh": "靠著"
         },
         {
           "ordinal": 11,
@@ -49728,7 +49728,7 @@
           "ordinal": 12,
           "word": "דְבָרִים",
           "trailing": "",
-          "glossZh": "事物"
+          "glossZh": "話語"
         },
         {
           "ordinal": 13,
@@ -49740,13 +49740,13 @@
           "ordinal": 14,
           "word": "עוֹמֵד",
           "trailing": ",",
-          "glossZh": "站立"
+          "glossZh": "立足"
         },
         {
           "ordinal": 15,
           "word": "עַל",
           "trailing": "",
-          "glossZh": "在"
+          "glossZh": "靠著"
         },
         {
           "ordinal": 16,
@@ -49758,35 +49758,35 @@
           "ordinal": 17,
           "word": "וְעַל",
           "trailing": "",
-          "glossZh": "並在"
+          "glossZh": "並靠著"
         },
         {
           "ordinal": 18,
           "word": "הָעֲבוֹדָה",
           "trailing": "",
-          "glossZh": "事奉"
+          "glossZh": "敬拜"
         },
         {
           "ordinal": 19,
           "word": "וְעַל",
           "trailing": "",
-          "glossZh": "並在"
+          "glossZh": "並靠著"
         },
         {
           "ordinal": 20,
           "word": "גְּמִילוּת",
           "trailing": "",
-          "glossZh": "施行愛心"
+          "glossZh": "施予"
         },
         {
           "ordinal": 21,
           "word": "חֲסָדִים",
           "trailing": ":",
-          "glossZh": "忠誠"
+          "glossZh": "恩慈"
         }
       ],
-      "senseZh": "西緬義人是大會的幸存者之一。他常說，世界根據三件事而存立：根據律法、根據事奉，以及根據施行愛心忠誠。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "公義的西緬曾是大議會的倖存者之一。他常說：世界立足於三件事之上：靠著律法、靠著敬拜，以及靠著施予恩慈。",
+      "engine": "gemini-3.5-flash"
     },
     "prayer:hbo-article-23-mishnah-berakhot-1-1-3-002": {
       "id": "prayer:hbo-article-23-mishnah-berakhot-1-1-3-002",
@@ -50304,31 +50304,31 @@
           "ordinal": 1,
           "word": "הָאוֹמֵר",
           "trailing": ",",
-          "glossZh": "說的人"
+          "glossZh": "那說的"
         },
         {
           "ordinal": 2,
           "word": "אֶחֱטָא",
           "trailing": "",
-          "glossZh": "我會犯罪"
+          "glossZh": "我要犯罪"
         },
         {
           "ordinal": 3,
           "word": "וְאָשׁוּב",
           "trailing": ",",
-          "glossZh": "並且我會悔改"
+          "glossZh": "而我轉回"
         },
         {
           "ordinal": 4,
           "word": "אֶחֱטָא",
           "trailing": "",
-          "glossZh": "我會犯罪"
+          "glossZh": "我要犯罪"
         },
         {
           "ordinal": 5,
           "word": "וְאָשׁוּב",
           "trailing": ",",
-          "glossZh": "並且我會悔改"
+          "glossZh": "而我轉回"
         },
         {
           "ordinal": 6,
@@ -50340,13 +50340,13 @@
           "ordinal": 7,
           "word": "מַסְפִּיקִין",
           "trailing": "",
-          "glossZh": "足夠的"
+          "glossZh": "給予機會"
         },
         {
           "ordinal": 8,
           "word": "בְּיָדוֹ",
           "trailing": "",
-          "glossZh": "在他手裡"
+          "glossZh": "在他手中"
         },
         {
           "ordinal": 9,
@@ -50364,109 +50364,109 @@
           "ordinal": 11,
           "word": "אֶחֱטָא",
           "trailing": "",
-          "glossZh": "我會犯罪"
+          "glossZh": "我要犯罪"
         },
         {
           "ordinal": 12,
           "word": "וְיוֹם",
           "trailing": "",
-          "glossZh": "並且贖罪日"
+          "glossZh": "而日子"
         },
         {
           "ordinal": 13,
           "word": "הַכִּפּוּרִים",
           "trailing": "",
-          "glossZh": "這個贖罪日"
+          "glossZh": "贖罪的"
         },
         {
           "ordinal": 14,
           "word": "מְכַפֵּר",
           "trailing": ",",
-          "glossZh": "遮蓋罪"
+          "glossZh": "遮蓋"
         },
         {
           "ordinal": 15,
           "word": "אֵין",
           "trailing": "",
-          "glossZh": "不是"
+          "glossZh": "沒有"
         },
         {
           "ordinal": 16,
           "word": "יוֹם",
           "trailing": "",
-          "glossZh": "贖罪日"
+          "glossZh": "日子"
         },
         {
           "ordinal": 17,
           "word": "הַכִּפּוּרִים",
           "trailing": "",
-          "glossZh": "這個贖罪日"
+          "glossZh": "贖罪的"
         },
         {
           "ordinal": 18,
           "word": "מְכַפֵּר",
           "trailing": ".",
-          "glossZh": "遮蓋罪"
+          "glossZh": "遮蓋"
         },
         {
           "ordinal": 19,
           "word": "עֲבֵרוֹת",
           "trailing": "",
-          "glossZh": "違背"
+          "glossZh": "過犯"
         },
         {
           "ordinal": 20,
           "word": "שֶׁבֵּין",
           "trailing": "",
-          "glossZh": "那在…之間"
+          "glossZh": "那在之間"
         },
         {
           "ordinal": 21,
           "word": "אָדָם",
           "trailing": "",
-          "glossZh": "人"
+          "glossZh": "世人"
         },
         {
           "ordinal": 22,
           "word": "לַמָּקוֹם",
           "trailing": ",",
-          "glossZh": "向這地方"
+          "glossZh": "向那地方"
         },
         {
           "ordinal": 23,
           "word": "יוֹם",
           "trailing": "",
-          "glossZh": "贖罪日"
+          "glossZh": "日子"
         },
         {
           "ordinal": 24,
           "word": "הַכִּפּוּרִים",
           "trailing": "",
-          "glossZh": "這個贖罪日"
+          "glossZh": "贖罪的"
         },
         {
           "ordinal": 25,
           "word": "מְכַפֵּר",
           "trailing": ".",
-          "glossZh": "遮蓋罪"
+          "glossZh": "遮蓋"
         },
         {
           "ordinal": 26,
           "word": "עֲבֵרוֹת",
           "trailing": "",
-          "glossZh": "違背"
+          "glossZh": "過犯"
         },
         {
           "ordinal": 27,
           "word": "שֶׁבֵּין",
           "trailing": "",
-          "glossZh": "那在…之間"
+          "glossZh": "那在之間"
         },
         {
           "ordinal": 28,
           "word": "אָדָם",
           "trailing": "",
-          "glossZh": "人"
+          "glossZh": "世人"
         },
         {
           "ordinal": 29,
@@ -50478,25 +50478,25 @@
           "ordinal": 30,
           "word": "אֵין",
           "trailing": "",
-          "glossZh": "不是"
+          "glossZh": "沒有"
         },
         {
           "ordinal": 31,
           "word": "יוֹם",
           "trailing": "",
-          "glossZh": "贖罪日"
+          "glossZh": "日子"
         },
         {
           "ordinal": 32,
           "word": "הַכִּפּוּרִים",
           "trailing": "",
-          "glossZh": "這個贖罪日"
+          "glossZh": "贖罪的"
         },
         {
           "ordinal": 33,
           "word": "מְכַפֵּר",
           "trailing": ",",
-          "glossZh": "遮蓋罪"
+          "glossZh": "遮蓋"
         },
         {
           "ordinal": 34,
@@ -50508,13 +50508,13 @@
           "ordinal": 35,
           "word": "שֶׁיְּרַצֶּה",
           "trailing": "",
-          "glossZh": "他使和解"
+          "glossZh": "那他取悅"
         },
         {
           "ordinal": 36,
           "word": "אֶת",
           "trailing": "",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 37,
@@ -50526,19 +50526,19 @@
           "ordinal": 38,
           "word": "עֲבֵרוֹת",
           "trailing": "",
-          "glossZh": "違背"
+          "glossZh": "過犯"
         },
         {
           "ordinal": 39,
           "word": "שֶׁבֵּין",
           "trailing": "",
-          "glossZh": "那在…之間"
+          "glossZh": "那在之間"
         },
         {
           "ordinal": 40,
           "word": "אָדָם",
           "trailing": "",
-          "glossZh": "人"
+          "glossZh": "世人"
         },
         {
           "ordinal": 41,
@@ -50550,25 +50550,25 @@
           "ordinal": 42,
           "word": "אֵין",
           "trailing": "",
-          "glossZh": "不是"
+          "glossZh": "沒有"
         },
         {
           "ordinal": 43,
           "word": "יוֹם",
           "trailing": "",
-          "glossZh": "贖罪日"
+          "glossZh": "日子"
         },
         {
           "ordinal": 44,
           "word": "הַכִּפּוּרִים",
           "trailing": "",
-          "glossZh": "這個贖罪日"
+          "glossZh": "贖罪的"
         },
         {
           "ordinal": 45,
           "word": "מְכַפֵּר",
           "trailing": ",",
-          "glossZh": "遮蓋罪"
+          "glossZh": "遮蓋"
         },
         {
           "ordinal": 46,
@@ -50580,13 +50580,13 @@
           "ordinal": 47,
           "word": "שֶׁיְּרַצֶּה",
           "trailing": "",
-          "glossZh": "他使和解"
+          "glossZh": "那他取悅"
         },
         {
           "ordinal": 48,
           "word": "אֶת",
           "trailing": "",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 49,
@@ -50595,8 +50595,8 @@
           "glossZh": "他的同伴"
         }
       ],
-      "senseZh": "說『我會犯罪然後悔改，我會犯罪然後悔改』的人，沒有足夠的機會讓他悔改。說『我會犯罪，而贖罪日會為我遮蓋』的人，贖罪日不為他遮蓋。人與上帝之間的違背，贖罪日為他遮蓋。人與人之間的違背，贖罪日不為他遮蓋，直到他使他同伴心滿意足。人與人之間的違背，贖罪日不為他遮蓋，直到他使他同伴心滿意足。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "那說「我要犯罪而後悔改，我要犯罪而後悔改」的人，上天不會給他機會去悔改。那說「我要犯罪，而贖罪日會為我贖罪」的人，贖罪日不會為他贖罪。人與上帝之間的過犯，贖罪日可以贖罪；人與同伴之間的過犯，贖罪日不能贖罪，直到他取悅他的同伴為止。人與同伴之間的過犯，贖罪日不能贖罪，直到他取悅他的同伴為止。",
+      "engine": "gemini-3.5-flash"
     },
     "prayer:hbo-article-24-pirkei-avot-1-1-6-004": {
       "id": "prayer:hbo-article-24-pirkei-avot-1-1-6-004",
@@ -50608,55 +50608,55 @@
           "ordinal": 1,
           "word": "יוֹסֵי",
           "trailing": "",
-          "glossZh": "約西1"
+          "glossZh": "約瑟"
         },
         {
           "ordinal": 2,
           "word": "בֶן",
           "trailing": "",
-          "glossZh": "兒子"
+          "glossZh": "的兒子"
         },
         {
           "ordinal": 3,
           "word": "יוֹעֶזֶר",
           "trailing": "",
-          "glossZh": "約以謝"
+          "glossZh": "約艾謝"
         },
         {
           "ordinal": 4,
           "word": "אִישׁ",
           "trailing": "",
-          "glossZh": "男人"
+          "glossZh": "那人"
         },
         {
           "ordinal": 5,
           "word": "צְרֵדָה",
           "trailing": "",
-          "glossZh": "瑟勒達"
+          "glossZh": "撒利達"
         },
         {
           "ordinal": 6,
           "word": "וְיוֹסֵי",
           "trailing": "",
-          "glossZh": "並約西"
+          "glossZh": "並約瑟"
         },
         {
           "ordinal": 7,
           "word": "בֶן",
           "trailing": "",
-          "glossZh": "兒子"
+          "glossZh": "的兒子"
         },
         {
           "ordinal": 8,
           "word": "יוֹחָנָן",
           "trailing": "",
-          "glossZh": "約哈南"
+          "glossZh": "約哈難"
         },
         {
           "ordinal": 9,
           "word": "אִישׁ",
           "trailing": "",
-          "glossZh": "男人"
+          "glossZh": "那人"
         },
         {
           "ordinal": 10,
@@ -50668,7 +50668,7 @@
           "ordinal": 11,
           "word": "קִבְּלוּ",
           "trailing": "",
-          "glossZh": "接受"
+          "glossZh": "領受了"
         },
         {
           "ordinal": 12,
@@ -50680,31 +50680,31 @@
           "ordinal": 13,
           "word": "יוֹסֵי",
           "trailing": "",
-          "glossZh": "約西"
+          "glossZh": "約瑟"
         },
         {
           "ordinal": 14,
           "word": "בֶן",
           "trailing": "",
-          "glossZh": "兒子"
+          "glossZh": "的兒子"
         },
         {
           "ordinal": 15,
           "word": "יוֹעֶזֶר",
           "trailing": "",
-          "glossZh": "約以謝"
+          "glossZh": "約艾謝"
         },
         {
           "ordinal": 16,
           "word": "אִישׁ",
           "trailing": "",
-          "glossZh": "男人"
+          "glossZh": "那人"
         },
         {
           "ordinal": 17,
           "word": "צְרֵדָה",
           "trailing": "",
-          "glossZh": "瑟勒達"
+          "glossZh": "撒利達"
         },
         {
           "ordinal": 18,
@@ -50716,7 +50716,7 @@
           "ordinal": 19,
           "word": "יְהִי",
           "trailing": "",
-          "glossZh": "願…成為"
+          "glossZh": "願成為"
         },
         {
           "ordinal": 20,
@@ -50728,13 +50728,13 @@
           "ordinal": 21,
           "word": "בֵית",
           "trailing": "",
-          "glossZh": "房屋"
+          "glossZh": "聚集之處"
         },
         {
           "ordinal": 22,
           "word": "וַעַד",
           "trailing": "",
-          "glossZh": "並集會"
+          "glossZh": "聚會"
         },
         {
           "ordinal": 23,
@@ -50746,19 +50746,19 @@
           "ordinal": 24,
           "word": "וֶהֱוֵי",
           "trailing": "",
-          "glossZh": "並你要成為"
+          "glossZh": "並要成為"
         },
         {
           "ordinal": 25,
           "word": "מִתְאַבֵּק",
           "trailing": "",
-          "glossZh": "沾滿塵埃"
+          "glossZh": "沾貼"
         },
         {
           "ordinal": 26,
           "word": "בַּעֲפַר",
           "trailing": "",
-          "glossZh": "在塵埃中"
+          "glossZh": "在塵土中"
         },
         {
           "ordinal": 27,
@@ -50770,35 +50770,35 @@
           "ordinal": 28,
           "word": "וֶהֱוֵי",
           "trailing": "",
-          "glossZh": "並你要成為"
+          "glossZh": "並要成為"
         },
         {
           "ordinal": 29,
           "word": "שׁוֹתֶה",
           "trailing": "",
-          "glossZh": "喝"
+          "glossZh": "飲用"
         },
         {
           "ordinal": 30,
           "word": "בְצָמָא",
           "trailing": "",
-          "glossZh": "在乾渴中"
+          "glossZh": "帶著乾渴"
         },
         {
           "ordinal": 31,
           "word": "אֶת",
           "trailing": "",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 32,
           "word": "דִּבְרֵיהֶם",
           "trailing": ":",
-          "glossZh": "他們的言語"
+          "glossZh": "他們的話"
         }
       ],
-      "senseZh": "約西·本·約以謝是瑟勒達人，約西·本·約哈南是耶路撒冷人，他們接受了傳統。約西·本·約以謝是瑟勒達人說：願你的房屋成為智慧人的聚集之所，並且你要在塵埃中沾滿他們的腳塵，並且你要如渴而飲他們的言語。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "撒利達人約瑟·賓·約艾謝和耶路撒冷人約瑟·賓·約哈難從他們領受了傳承。撒利達人約瑟·賓·約艾謝說：「願你的家成為智慧人聚集之處，願你常沾貼在他們腳下的塵土中，並渴慕地飲用他們的話語。」",
+      "engine": "gemini-3.5-flash"
     },
     "prayer:hbo-article-24-pirkei-avot-1-1-6-005": {
       "id": "prayer:hbo-article-24-pirkei-avot-1-1-6-005",
@@ -50810,25 +50810,25 @@
           "ordinal": 1,
           "word": "יוֹסֵי",
           "trailing": "",
-          "glossZh": "約西"
+          "glossZh": "約瑟"
         },
         {
           "ordinal": 2,
           "word": "בֶן",
           "trailing": "",
-          "glossZh": "兒子"
+          "glossZh": "的兒子"
         },
         {
           "ordinal": 3,
           "word": "יוֹחָנָן",
           "trailing": "",
-          "glossZh": "約哈南"
+          "glossZh": "約哈難"
         },
         {
           "ordinal": 4,
           "word": "אִישׁ",
           "trailing": "",
-          "glossZh": "男人"
+          "glossZh": "那人"
         },
         {
           "ordinal": 5,
@@ -50846,7 +50846,7 @@
           "ordinal": 7,
           "word": "יְהִי",
           "trailing": "",
-          "glossZh": "願…成為"
+          "glossZh": "願成為"
         },
         {
           "ordinal": 8,
@@ -50864,25 +50864,25 @@
           "ordinal": 10,
           "word": "לִרְוָחָה",
           "trailing": ",",
-          "glossZh": "向寬闊"
+          "glossZh": "寬敞地"
         },
         {
           "ordinal": 11,
           "word": "וְיִהְיוּ",
           "trailing": "",
-          "glossZh": "並他們要成為"
+          "glossZh": "並願成為"
         },
         {
           "ordinal": 12,
           "word": "עֲנִיִּים",
           "trailing": "",
-          "glossZh": "貧窮的"
+          "glossZh": "貧窮人"
         },
         {
           "ordinal": 13,
           "word": "בְּנֵי",
           "trailing": "",
-          "glossZh": "兒子們"
+          "glossZh": "的兒子"
         },
         {
           "ordinal": 14,
@@ -50900,13 +50900,13 @@
           "ordinal": 16,
           "word": "תַּרְבֶּה",
           "trailing": "",
-          "glossZh": "增加"
+          "glossZh": "你增多"
         },
         {
           "ordinal": 17,
           "word": "שִׂיחָה",
           "trailing": "",
-          "glossZh": "說話"
+          "glossZh": "交談"
         },
         {
           "ordinal": 18,
@@ -50918,13 +50918,13 @@
           "ordinal": 19,
           "word": "הָאִשָּׁה",
           "trailing": ".",
-          "glossZh": "那女人"
+          "glossZh": "女人"
         },
         {
           "ordinal": 20,
           "word": "בְּאִשְׁתּוֹ",
           "trailing": "",
-          "glossZh": "在他的妻子"
+          "glossZh": "關於他妻子"
         },
         {
           "ordinal": 21,
@@ -50936,19 +50936,19 @@
           "ordinal": 22,
           "word": "קַל",
           "trailing": "",
-          "glossZh": "輕易的"
+          "glossZh": "輕的"
         },
         {
           "ordinal": 23,
           "word": "וָחֹמֶר",
           "trailing": "",
-          "glossZh": "並更加嚴格"
+          "glossZh": "並重的"
         },
         {
           "ordinal": 24,
           "word": "בְּאֵשֶׁת",
           "trailing": "",
-          "glossZh": "在朋友的妻子"
+          "glossZh": "關於…妻子"
         },
         {
           "ordinal": 25,
@@ -50966,7 +50966,7 @@
           "ordinal": 27,
           "word": "אָמְרוּ",
           "trailing": "",
-          "glossZh": "他們說"
+          "glossZh": "說了"
         },
         {
           "ordinal": 28,
@@ -50996,13 +50996,13 @@
           "ordinal": 32,
           "word": "מַרְבֶּה",
           "trailing": "",
-          "glossZh": "增加"
+          "glossZh": "增多"
         },
         {
           "ordinal": 33,
           "word": "שִׂיחָה",
           "trailing": "",
-          "glossZh": "說話"
+          "glossZh": "交談"
         },
         {
           "ordinal": 34,
@@ -51014,7 +51014,7 @@
           "ordinal": 35,
           "word": "הָאִשָּׁה",
           "trailing": ",",
-          "glossZh": "那女人"
+          "glossZh": "女人"
         },
         {
           "ordinal": 36,
@@ -51026,7 +51026,7 @@
           "ordinal": 37,
           "word": "רָעָה",
           "trailing": "",
-          "glossZh": "壞的"
+          "glossZh": "災禍"
         },
         {
           "ordinal": 38,
@@ -51038,13 +51038,13 @@
           "ordinal": 39,
           "word": "וּבוֹטֵל",
           "trailing": "",
-          "glossZh": "並停止"
+          "glossZh": "並荒廢"
         },
         {
           "ordinal": 40,
           "word": "מִדִּבְרֵי",
           "trailing": "",
-          "glossZh": "從律法的言語"
+          "glossZh": "從…話語"
         },
         {
           "ordinal": 41,
@@ -51056,7 +51056,7 @@
           "ordinal": 42,
           "word": "וְסוֹפוֹ",
           "trailing": "",
-          "glossZh": "並他的終局"
+          "glossZh": "並他的結局"
         },
         {
           "ordinal": 43,
@@ -51071,8 +51071,8 @@
           "glossZh": "地獄"
         }
       ],
-      "senseZh": "約西·本·約哈南是耶路撒冷人說：願你的房屋敞開，願貧窮人成為你的家人，不要與女人過多談話。關於他的妻子，他們說：這是輕易的推論，對朋友的妻子更加嚴格。由此智慧人說：凡人若與女人多言，就會給自己招致禍患，離棄律法的言語，最終承受地獄。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "耶路撒冷人約瑟·賓·約哈難說：「願你的家寬敞地敞開，願貧窮人成為你家中的成員，並不要與女人多說話。」他們說這話是指著自己的妻子，何況是別人的妻子呢？因此智慧人說：「每當人與女人多說話，就給自己帶來災禍，並荒廢了律法的話語，他的結局就是承受地獄。」",
+      "engine": "gemini-3.5-flash"
     },
     "prayer:hbo-article-24-pirkei-avot-1-1-6-006": {
       "id": "prayer:hbo-article-24-pirkei-avot-1-1-6-006",
@@ -51090,31 +51090,31 @@
           "ordinal": 2,
           "word": "בֶּן",
           "trailing": "",
-          "glossZh": "兒子"
+          "glossZh": "的兒子"
         },
         {
           "ordinal": 3,
           "word": "פְּרַחְיָה",
           "trailing": "",
-          "glossZh": "普拉克亞"
+          "glossZh": "培拉希雅"
         },
         {
           "ordinal": 4,
           "word": "וְנִתַּאי",
           "trailing": "",
-          "glossZh": "並尼達伊"
+          "glossZh": "並尼泰"
         },
         {
           "ordinal": 5,
           "word": "הָאַרְבֵּלִי",
           "trailing": "",
-          "glossZh": "阿貝利人"
+          "glossZh": "亞爾巴拉人"
         },
         {
           "ordinal": 6,
           "word": "קִבְּלוּ",
           "trailing": "",
-          "glossZh": "接受"
+          "glossZh": "領受了"
         },
         {
           "ordinal": 7,
@@ -51132,13 +51132,13 @@
           "ordinal": 9,
           "word": "בֶּן",
           "trailing": "",
-          "glossZh": "兒子"
+          "glossZh": "的兒子"
         },
         {
           "ordinal": 10,
           "word": "פְּרַחְיָה",
           "trailing": "",
-          "glossZh": "普拉克亞"
+          "glossZh": "培拉希雅"
         },
         {
           "ordinal": 11,
@@ -51150,13 +51150,13 @@
           "ordinal": 12,
           "word": "עֲשֵׂה",
           "trailing": "",
-          "glossZh": "為你做"
+          "glossZh": "建立"
         },
         {
           "ordinal": 13,
           "word": "לְךָ",
           "trailing": "",
-          "glossZh": "給你"
+          "glossZh": "為你自己"
         },
         {
           "ordinal": 14,
@@ -51168,13 +51168,13 @@
           "ordinal": 15,
           "word": "וּקְנֵה",
           "trailing": "",
-          "glossZh": "並給你取得"
+          "glossZh": "並取得"
         },
         {
           "ordinal": 16,
           "word": "לְךָ",
           "trailing": "",
-          "glossZh": "給你"
+          "glossZh": "為你自己"
         },
         {
           "ordinal": 17,
@@ -51186,19 +51186,19 @@
           "ordinal": 18,
           "word": "וֶהֱוֵי",
           "trailing": "",
-          "glossZh": "並你要成為"
+          "glossZh": "並要成為"
         },
         {
           "ordinal": 19,
           "word": "דָן",
           "trailing": "",
-          "glossZh": "審判"
+          "glossZh": "評判"
         },
         {
           "ordinal": 20,
           "word": "אֶת",
           "trailing": "",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 21,
@@ -51216,17 +51216,17 @@
           "ordinal": 23,
           "word": "לְכַף",
           "trailing": "",
-          "glossZh": "給公義的"
+          "glossZh": "往…天平盤"
         },
         {
           "ordinal": 24,
           "word": "זְכוּת",
           "trailing": ":",
-          "glossZh": "長處"
+          "glossZh": "優點"
         }
       ],
-      "senseZh": "約書亞·本·普拉克亞和尼達伊·阿貝利人接受了傳統。約書亞·本·普拉克亞說：為自己立一位老師，給自己找一位朋友，要以公義之心審判所有的人。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "約書亞·賓·培拉希雅和亞爾巴拉人尼泰從他們領受了傳承。約書亞·賓·培拉希雅說：「為你自己建立一位老師，為你自己取得一個朋友，並且要往優點的天平盤去評判每一個人。」",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-01-002": {
       "id": "haggadah:haggadah-01-002",
@@ -51238,11 +51238,11 @@
           "ordinal": 1,
           "word": "קַדֵּשׁ",
           "trailing": "",
-          "glossZh": "成聖"
+          "glossZh": "祝聖"
         }
       ],
-      "senseZh": "成聖。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "祝聖。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-01-003": {
       "id": "haggadah:haggadah-01-003",
@@ -51264,7 +51264,7 @@
         }
       ],
       "senseZh": "在安息日開始。",
-      "engine": "claude-haiku-4-5-20251001"
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-01-006": {
       "id": "haggadah:haggadah-01-006",
@@ -51276,31 +51276,31 @@
           "ordinal": 1,
           "word": "סַבְרִי",
           "trailing": "",
-          "glossZh": "諸位先生"
+          "glossZh": "請注意"
         },
         {
           "ordinal": 2,
           "word": "מָרָנָן",
           "trailing": "",
-          "glossZh": "我們的主人"
+          "glossZh": "我們的導師"
         },
         {
           "ordinal": 3,
           "word": "וְרַבָּנָן",
           "trailing": "",
-          "glossZh": "並且拉比"
+          "glossZh": "並拉比們"
         },
         {
           "ordinal": 4,
           "word": "וְרַבּוֹתַי",
           "trailing": ".",
-          "glossZh": "並且我的拉比"
+          "glossZh": "並我的先生們"
         },
         {
           "ordinal": 5,
           "word": "בָּרוּךְ",
           "trailing": "",
-          "glossZh": "蒙祝福的"
+          "glossZh": "當受稱頌的"
         },
         {
           "ordinal": 6,
@@ -51318,7 +51318,7 @@
           "ordinal": 8,
           "word": "אֱלֹהֵינוּ",
           "trailing": "",
-          "glossZh": "我們的神"
+          "glossZh": "我們的上帝"
         },
         {
           "ordinal": 9,
@@ -51330,19 +51330,19 @@
           "ordinal": 10,
           "word": "הָעוֹלָם",
           "trailing": "",
-          "glossZh": "這世界"
+          "glossZh": "世界的"
         },
         {
           "ordinal": 11,
           "word": "בּוֹרֵא",
           "trailing": "",
-          "glossZh": "創造"
+          "glossZh": "創造者"
         },
         {
           "ordinal": 12,
           "word": "פְּרִי",
           "trailing": "",
-          "glossZh": "…的果子"
+          "glossZh": "果子"
         },
         {
           "ordinal": 13,
@@ -51351,8 +51351,8 @@
           "glossZh": "葡萄樹"
         }
       ],
-      "senseZh": "諸位先生、我們的主人、拉比和我的拉比，蒙祝福的是你，耶和華，我們的神，世界的王，創造葡萄樹的果子。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "請注意，我們的導師、拉比和先生們：耶和華，我們的上帝，世界的王，你是當受稱頌的，你創造了葡萄樹的果子。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-02-001": {
       "id": "haggadah:haggadah-02-001",
@@ -51367,8 +51367,8 @@
           "glossZh": "並洗滌"
         }
       ],
-      "senseZh": "並洗滌",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "並洗手",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-02-002": {
       "id": "haggadah:haggadah-02-002",
@@ -51380,13 +51380,13 @@
           "ordinal": 1,
           "word": "\"עַל",
           "trailing": "",
-          "glossZh": "在"
+          "glossZh": "關於"
         },
         {
           "ordinal": 2,
           "word": "נְטִילַת",
           "trailing": "",
-          "glossZh": "拿取"
+          "glossZh": "洗滌"
         },
         {
           "ordinal": 3,
@@ -51395,8 +51395,8 @@
           "glossZh": "雙手"
         }
       ],
-      "senseZh": "關於拿取雙手",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "關於洗手",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-03-001": {
       "id": "haggadah:haggadah-03-001",
@@ -51408,11 +51408,11 @@
           "ordinal": 1,
           "word": "כַּרְפַּס",
           "trailing": "",
-          "glossZh": "蔬菜"
+          "glossZh": "綠色蔬菜"
         }
       ],
-      "senseZh": "蔬菜",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "綠色蔬菜",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-03-003": {
       "id": "haggadah:haggadah-03-003",
@@ -51424,13 +51424,13 @@
           "ordinal": 1,
           "word": "בָּרוּךְ",
           "trailing": "",
-          "glossZh": "被祝福的"
+          "glossZh": "當受稱頌的"
         },
         {
           "ordinal": 2,
           "word": "אַתָּה",
           "trailing": "",
-          "glossZh": "你"
+          "glossZh": "你啊"
         },
         {
           "ordinal": 3,
@@ -51442,25 +51442,25 @@
           "ordinal": 4,
           "word": "אֱלֹהֵינוּ",
           "trailing": "",
-          "glossZh": "我們的神"
+          "glossZh": "我們的上帝"
         },
         {
           "ordinal": 5,
           "word": "מֶלֶךְ",
           "trailing": "",
-          "glossZh": "王"
+          "glossZh": "君王"
         },
         {
           "ordinal": 6,
           "word": "הָעוֹלָם",
           "trailing": ",",
-          "glossZh": "這永遠"
+          "glossZh": "宇宙"
         },
         {
           "ordinal": 7,
           "word": "בּוֹרֵא",
           "trailing": "",
-          "glossZh": "創造"
+          "glossZh": "創造者"
         },
         {
           "ordinal": 8,
@@ -51472,11 +51472,11 @@
           "ordinal": 9,
           "word": "הָאֲדָמָה",
           "trailing": ".",
-          "glossZh": "這地面的"
+          "glossZh": "土地"
         }
       ],
-      "senseZh": "被祝福的是你，耶和華，我們的神，世界的王，創造地面果子的。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "耶和華我們的上帝，宇宙的王，你是當受稱頌的，你創造土地的果子。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-04-001": {
       "id": "haggadah:haggadah-04-001",
@@ -51488,11 +51488,11 @@
           "ordinal": 1,
           "word": "יַחַץ",
           "trailing": "",
-          "glossZh": "掰開"
+          "glossZh": "擘開"
         }
       ],
-      "senseZh": "掰開無酵餅。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "擘開無酵餅。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-01-008": {
       "id": "haggadah:haggadah-01-008",
@@ -52326,7 +52326,7 @@
           "ordinal": 2,
           "word": "הָיִינוּ",
           "trailing": "",
-          "glossZh": "我們是"
+          "glossZh": "我們曾是"
         },
         {
           "ordinal": 3,
@@ -52344,7 +52344,7 @@
           "ordinal": 5,
           "word": "וַיּוֹצִיאֵנוּ",
           "trailing": "",
-          "glossZh": "並且耶和華領我們出"
+          "glossZh": "並領我們出來"
         },
         {
           "ordinal": 6,
@@ -52356,7 +52356,7 @@
           "ordinal": 7,
           "word": "אֱלֹהֵינוּ",
           "trailing": "",
-          "glossZh": "我們的神"
+          "glossZh": "我們的上帝"
         },
         {
           "ordinal": 8,
@@ -52368,13 +52368,13 @@
           "ordinal": 9,
           "word": "בְּיָד",
           "trailing": "",
-          "glossZh": "在…手中"
+          "glossZh": "用手"
         },
         {
           "ordinal": 10,
           "word": "חֲזָקָה",
           "trailing": "",
-          "glossZh": "強大的"
+          "glossZh": "強壯的"
         },
         {
           "ordinal": 11,
@@ -52392,7 +52392,7 @@
           "ordinal": 13,
           "word": "וְאִלּוּ",
           "trailing": "",
-          "glossZh": "並且假若"
+          "glossZh": "而如果"
         },
         {
           "ordinal": 14,
@@ -52404,19 +52404,19 @@
           "ordinal": 15,
           "word": "הוֹצִיא",
           "trailing": "",
-          "glossZh": "領出"
+          "glossZh": "領出來"
         },
         {
           "ordinal": 16,
           "word": "הַקָּדוֹשׁ",
           "trailing": "",
-          "glossZh": "這聖潔的"
+          "glossZh": "那聖者"
         },
         {
           "ordinal": 17,
           "word": "בָּרוּךְ",
           "trailing": "",
-          "glossZh": "被祝福的"
+          "glossZh": "當受稱頌的"
         },
         {
           "ordinal": 18,
@@ -52428,13 +52428,13 @@
           "ordinal": 19,
           "word": "אֶת",
           "trailing": "",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 20,
           "word": "אֲבוֹתֵינוּ",
           "trailing": "",
-          "glossZh": "我們的父親"
+          "glossZh": "我們的祖先"
         },
         {
           "ordinal": 21,
@@ -52446,7 +52446,7 @@
           "ordinal": 22,
           "word": "הֲרֵי",
           "trailing": "",
-          "glossZh": "看哪"
+          "glossZh": "那麼"
         },
         {
           "ordinal": 23,
@@ -52458,13 +52458,13 @@
           "ordinal": 24,
           "word": "וּבָנֵינוּ",
           "trailing": "",
-          "glossZh": "並且我們的兒子"
+          "glossZh": "和我們的兒子"
         },
         {
           "ordinal": 25,
           "word": "וּבְנֵי",
           "trailing": "",
-          "glossZh": "並且…的兒子"
+          "glossZh": "和兒子"
         },
         {
           "ordinal": 26,
@@ -52476,13 +52476,13 @@
           "ordinal": 27,
           "word": "מְשֻׁעְבָּדִים",
           "trailing": "",
-          "glossZh": "被奴役"
+          "glossZh": "被奴役的"
         },
         {
           "ordinal": 28,
           "word": "הָיִינוּ",
           "trailing": "",
-          "glossZh": "我們是"
+          "glossZh": "我們曾是"
         },
         {
           "ordinal": 29,
@@ -52506,31 +52506,31 @@
           "ordinal": 32,
           "word": "כֻּלָּנוּ",
           "trailing": "",
-          "glossZh": "我們所有人"
+          "glossZh": "我們眾人"
         },
         {
           "ordinal": 33,
           "word": "חֲכָמִים",
           "trailing": "",
-          "glossZh": "聰慧的"
+          "glossZh": "聰明的"
         },
         {
           "ordinal": 34,
           "word": "כֻּלָּנוּ",
           "trailing": "",
-          "glossZh": "我們所有人"
+          "glossZh": "我們眾人"
         },
         {
           "ordinal": 35,
           "word": "נְבוֹנִים",
           "trailing": "",
-          "glossZh": "明白的"
+          "glossZh": "有智慧的"
         },
         {
           "ordinal": 36,
           "word": "כֻּלָּנוּ",
           "trailing": "",
-          "glossZh": "我們所有人"
+          "glossZh": "我們眾人"
         },
         {
           "ordinal": 37,
@@ -52542,25 +52542,25 @@
           "ordinal": 38,
           "word": "כֻּלָּנוּ",
           "trailing": "",
-          "glossZh": "我們所有人"
+          "glossZh": "我們眾人"
         },
         {
           "ordinal": 39,
           "word": "יוֹדְעִים",
           "trailing": "",
-          "glossZh": "認識"
+          "glossZh": "知道的"
         },
         {
           "ordinal": 40,
           "word": "אֶת",
           "trailing": "",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 41,
           "word": "הַתּוֹרָה",
           "trailing": "",
-          "glossZh": "這律法"
+          "glossZh": "律法"
         },
         {
           "ordinal": 42,
@@ -52578,13 +52578,13 @@
           "ordinal": 44,
           "word": "לְסַפֵּר",
           "trailing": "",
-          "glossZh": "向…講述"
+          "glossZh": "去講述"
         },
         {
           "ordinal": 45,
           "word": "בִּיצִיאַת",
           "trailing": "",
-          "glossZh": "在…出埃及"
+          "glossZh": "在出來"
         },
         {
           "ordinal": 46,
@@ -52596,25 +52596,25 @@
           "ordinal": 47,
           "word": "וְכָל",
           "trailing": "",
-          "glossZh": "並且所有"
+          "glossZh": "和所有"
         },
         {
           "ordinal": 48,
           "word": "הַמַּרְבֶּה",
           "trailing": "",
-          "glossZh": "增加講述"
+          "glossZh": "那增多的"
         },
         {
           "ordinal": 49,
           "word": "לְסַפֵּר",
           "trailing": "",
-          "glossZh": "向…講述"
+          "glossZh": "去講述"
         },
         {
           "ordinal": 50,
           "word": "בִּיצִיאַת",
           "trailing": "",
-          "glossZh": "在…出埃及"
+          "glossZh": "在出來"
         },
         {
           "ordinal": 51,
@@ -52626,7 +52626,7 @@
           "ordinal": 52,
           "word": "הֲרֵי",
           "trailing": "",
-          "glossZh": "看哪"
+          "glossZh": "那麼"
         },
         {
           "ordinal": 53,
@@ -52638,11 +52638,11 @@
           "ordinal": 54,
           "word": "מְשֻׁבָּח",
           "trailing": ".",
-          "glossZh": "被讚美的"
+          "glossZh": "當受讚美的"
         }
       ],
-      "senseZh": "我們曾是埃及法老的奴隸，耶和華我們的神用強大的手和伸出的膀臂把我們領出來。假若聖潔的、被祝福的神沒有把我們的父親從埃及領出來，看哪，我們和我們的兒子以及我們孫子的後代仍然會被奴役在埃及法老的手下。即使我們所有人都是聰慧的、明白的、年老的、認識律法的人，我們也有責任講述出埃及的事。而且凡是增加講述出埃及事蹟的，這人是受讚美的。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "我們曾在埃及作法老的奴隸，耶和華我們的上帝用大能的手和伸出來的膀臂領我們從那裡出來。如果那當受稱頌的聖者沒有領我們的祖先出埃及，那麼我們、我們的子孫和我們子孫的子孫，現在都還在埃及被法老奴役。因此，即使我們眾人都聰明、都有智慧、都年長、都明白律法，我們仍有責任講述出埃及的事蹟。而那越多講述出埃及事蹟的人，就越當受讚美。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-009": {
       "id": "haggadah:haggadah-05-009",
@@ -53160,13 +53160,13 @@
           "ordinal": 6,
           "word": "הָעֲבוֹדָה",
           "trailing": "",
-          "glossZh": "這個工作"
+          "glossZh": "工作"
         },
         {
           "ordinal": 7,
           "word": "הַזֹּאת",
           "trailing": "",
-          "glossZh": "這個"
+          "glossZh": "這"
         },
         {
           "ordinal": 8,
@@ -53184,7 +53184,7 @@
           "ordinal": 10,
           "word": "וְלֹא",
           "trailing": "",
-          "glossZh": "並且不"
+          "glossZh": "並不"
         },
         {
           "ordinal": 11,
@@ -53196,19 +53196,19 @@
           "ordinal": 12,
           "word": "וּלְפִי",
           "trailing": "",
-          "glossZh": "並且按照"
+          "glossZh": "並因著"
         },
         {
           "ordinal": 13,
           "word": "שֶׁהוֹצִיא",
           "trailing": "",
-          "glossZh": "他將自己排除出去"
+          "glossZh": "那帶出的"
         },
         {
           "ordinal": 14,
           "word": "אֶת",
           "trailing": "",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 15,
@@ -53226,25 +53226,25 @@
           "ordinal": 17,
           "word": "הַכְּלָל",
           "trailing": "",
-          "glossZh": "這個團體"
+          "glossZh": "群體"
         },
         {
           "ordinal": 18,
           "word": "כָּפַר",
           "trailing": "",
-          "glossZh": "他否認"
+          "glossZh": "否認"
         },
         {
           "ordinal": 19,
           "word": "בְּעִקָּר",
           "trailing": ".",
-          "glossZh": "在根本上"
+          "glossZh": "在基要上"
         },
         {
           "ordinal": 20,
           "word": "וְאַף",
           "trailing": "",
-          "glossZh": "並且你"
+          "glossZh": "並且"
         },
         {
           "ordinal": 21,
@@ -53256,13 +53256,13 @@
           "ordinal": 22,
           "word": "הַקְהֵה",
           "trailing": "",
-          "glossZh": "你要敲掉"
+          "glossZh": "使變鈍"
         },
         {
           "ordinal": 23,
           "word": "אֶת",
           "trailing": "",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 24,
@@ -53274,7 +53274,7 @@
           "ordinal": 25,
           "word": "וֶאֱמוֹר",
           "trailing": "",
-          "glossZh": "並且對他說"
+          "glossZh": "並說"
         },
         {
           "ordinal": 26,
@@ -53298,7 +53298,7 @@
           "ordinal": 29,
           "word": "עָשָׂה",
           "trailing": "",
-          "glossZh": "做了"
+          "glossZh": "做"
         },
         {
           "ordinal": 30,
@@ -53316,7 +53316,7 @@
           "ordinal": 32,
           "word": "בְּצֵאתִי",
           "trailing": "",
-          "glossZh": "在我出去的時候"
+          "glossZh": "在我出去時"
         },
         {
           "ordinal": 33,
@@ -53334,7 +53334,7 @@
           "ordinal": 35,
           "word": "וְלֹא",
           "trailing": "־",
-          "glossZh": "並且不"
+          "glossZh": "並不"
         },
         {
           "ordinal": 36,
@@ -53352,7 +53352,7 @@
           "ordinal": 38,
           "word": "הָיָה",
           "trailing": "",
-          "glossZh": "他曾經存在"
+          "glossZh": "是"
         },
         {
           "ordinal": 39,
@@ -53370,17 +53370,17 @@
           "ordinal": 41,
           "word": "הָיָה",
           "trailing": "",
-          "glossZh": "他曾經存在"
+          "glossZh": "是"
         },
         {
           "ordinal": 42,
           "word": "נִגְאָל",
           "trailing": ":",
-          "glossZh": "他被救贖"
+          "glossZh": "被贖回"
         }
       ],
-      "senseZh": "邪惡的兒子說什麼？他說：「這個工作對你們是什麼？」意思是給你們，而不是給他。既然他將自己排除在團體之外，他就否認了根本要義。所以你也要敲掉他的牙齒，對他說：「因著這個耶和華為我所做的，就是我從埃及出來的時候。」意思是為我，而不是為他。如果他當時在那裡，他就不會被救贖。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "邪惡的兒子會說什麼？「這工作對你們有什麼意義？」他說「你們」，表示不包括他自己。因為他把自己排除在群體之外，否認了信仰的根本。你也要使他的牙齒發酸，對他說：「這是因為耶和華在我出埃及時為我所行的事。」是「為我」，而不是「為他」；如果他當時在那裡，他就不會被贖回了。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-013": {
       "id": "haggadah:haggadah-05-013",
@@ -53428,19 +53428,19 @@
           "ordinal": 7,
           "word": "וְאָמַרְתָּ",
           "trailing": "",
-          "glossZh": "並且你說"
+          "glossZh": "並你要說"
         },
         {
           "ordinal": 8,
           "word": "אֵלָיו",
           "trailing": "",
-          "glossZh": "給他"
+          "glossZh": "到他那裡"
         },
         {
           "ordinal": 9,
           "word": "\"בְּחוֹזֶק",
           "trailing": "",
-          "glossZh": "用著強大的"
+          "glossZh": "用強盛的"
         },
         {
           "ordinal": 10,
@@ -53452,7 +53452,7 @@
           "ordinal": 11,
           "word": "הוֹצִיאָנוּ",
           "trailing": "",
-          "glossZh": "耶和華將我們領出來"
+          "glossZh": "帶我們出去"
         },
         {
           "ordinal": 12,
@@ -53470,17 +53470,17 @@
           "ordinal": 14,
           "word": "מִבֵּית",
           "trailing": "",
-          "glossZh": "從奴隸的"
+          "glossZh": "從房屋"
         },
         {
           "ordinal": 15,
           "word": "עֲבָדִים\"",
           "trailing": ".",
-          "glossZh": "家"
+          "glossZh": "奴隸"
         }
       ],
-      "senseZh": "單純的兒子說什麼？他說：「這是什麼？」你就對他說：「耶和華用強大的手將我們從埃及奴隸之家領出來。」",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "單純的兒子會說什麼？「這是什麼意思？」你要對他說：「耶和華用大能的手將我們從埃及，從為奴之家領出來。」",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-014": {
       "id": "haggadah:haggadah-05-014",
@@ -53492,7 +53492,7 @@
           "ordinal": 1,
           "word": "וְשֶׁאֵינוֹ",
           "trailing": "",
-          "glossZh": "並且那個不"
+          "glossZh": "並那不"
         },
         {
           "ordinal": 2,
@@ -53504,7 +53504,7 @@
           "ordinal": 3,
           "word": "לִשְׁאוֹל",
           "trailing": "–",
-          "glossZh": "詢問"
+          "glossZh": "去詢問"
         },
         {
           "ordinal": 4,
@@ -53528,13 +53528,13 @@
           "ordinal": 7,
           "word": "שֶׁנֶּאֱמַר",
           "trailing": ",",
-          "glossZh": "如它被說過"
+          "glossZh": "那被說的"
         },
         {
           "ordinal": 8,
           "word": "וְהִגַּדְתָּ",
           "trailing": "",
-          "glossZh": "並且你告訴"
+          "glossZh": "並你要告訴"
         },
         {
           "ordinal": 9,
@@ -53546,19 +53546,19 @@
           "ordinal": 10,
           "word": "בַּיּוֹם",
           "trailing": "",
-          "glossZh": "在這個日子"
+          "glossZh": "在日"
         },
         {
           "ordinal": 11,
           "word": "הַהוּא",
           "trailing": "",
-          "glossZh": "這個"
+          "glossZh": "那個"
         },
         {
           "ordinal": 12,
           "word": "לֵאמֹר",
           "trailing": ",",
-          "glossZh": "說"
+          "glossZh": "去說"
         },
         {
           "ordinal": 13,
@@ -53576,7 +53576,7 @@
           "ordinal": 15,
           "word": "עָשָׂה",
           "trailing": "",
-          "glossZh": "做了"
+          "glossZh": "做"
         },
         {
           "ordinal": 16,
@@ -53594,7 +53594,7 @@
           "ordinal": 18,
           "word": "בְּצֵאתִי",
           "trailing": "",
-          "glossZh": "在我出去的時候"
+          "glossZh": "在我出去時"
         },
         {
           "ordinal": 19,
@@ -53603,8 +53603,8 @@
           "glossZh": "從埃及"
         }
       ],
-      "senseZh": "那個不知道如何詢問的兒子，你要為他開啟，如經文所說：「你要在那日告訴你的兒子，說：因著這個耶和華為我所做的，就是我從埃及出來的時候。」",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "至於那不會發問的，你要主動引導他，正如經上所記：「在那日，你要告訴你的兒子說：『這是因為耶和華在我出埃及時為我所行的事。』」",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-015": {
       "id": "haggadah:haggadah-05-015",
@@ -53622,7 +53622,7 @@
           "ordinal": 2,
           "word": "מֵרֹאשׁ",
           "trailing": "",
-          "glossZh": "從月初"
+          "glossZh": "從頭"
         },
         {
           "ordinal": 3,
@@ -53634,43 +53634,43 @@
           "ordinal": 4,
           "word": "תַּלְמוּד",
           "trailing": "",
-          "glossZh": "經文說"
+          "glossZh": "教導"
         },
         {
           "ordinal": 5,
           "word": "לוֹמַר",
           "trailing": "",
-          "glossZh": "說"
+          "glossZh": "去說"
         },
         {
           "ordinal": 6,
           "word": "בַּיּוֹם",
           "trailing": "",
-          "glossZh": "在這個日子"
+          "glossZh": "在日"
         },
         {
           "ordinal": 7,
           "word": "הַהוּא",
           "trailing": ".",
-          "glossZh": "這個"
+          "glossZh": "那個"
         },
         {
           "ordinal": 8,
           "word": "אִי",
           "trailing": "",
-          "glossZh": "或者"
+          "glossZh": "若"
         },
         {
           "ordinal": 9,
           "word": "בַּיּוֹם",
           "trailing": "",
-          "glossZh": "在這個日子"
+          "glossZh": "在日"
         },
         {
           "ordinal": 10,
           "word": "הַהוּא",
           "trailing": "",
-          "glossZh": "這個"
+          "glossZh": "那個"
         },
         {
           "ordinal": 11,
@@ -53682,25 +53682,25 @@
           "ordinal": 12,
           "word": "מִבְּעוֹד",
           "trailing": "",
-          "glossZh": "從白日還存在的時候"
+          "glossZh": "從尚在"
         },
         {
           "ordinal": 13,
           "word": "יוֹם",
           "trailing": "?",
-          "glossZh": "日子"
+          "glossZh": "日"
         },
         {
           "ordinal": 14,
           "word": "תַּלְמוּד",
           "trailing": "",
-          "glossZh": "經文說"
+          "glossZh": "教導"
         },
         {
           "ordinal": 15,
           "word": "לוֹמַר",
           "trailing": "",
-          "glossZh": "說"
+          "glossZh": "去說"
         },
         {
           "ordinal": 16,
@@ -53742,7 +53742,7 @@
           "ordinal": 22,
           "word": "אֶלָּא",
           "trailing": "",
-          "glossZh": "但是"
+          "glossZh": "而是"
         },
         {
           "ordinal": 23,
@@ -53754,25 +53754,25 @@
           "ordinal": 24,
           "word": "שֶׁיֵּשׁ",
           "trailing": "",
-          "glossZh": "有"
+          "glossZh": "那有的"
         },
         {
           "ordinal": 25,
           "word": "מַצָּה",
           "trailing": "",
-          "glossZh": "無酵餅"
+          "glossZh": "甘甜"
         },
         {
           "ordinal": 26,
           "word": "וּמָרוֹר",
           "trailing": "",
-          "glossZh": "並且苦菜"
+          "glossZh": "並苦的"
         },
         {
           "ordinal": 27,
           "word": "מֻנָּחִים",
           "trailing": "",
-          "glossZh": "擺放在"
+          "glossZh": "被放置的"
         },
         {
           "ordinal": 28,
@@ -53781,8 +53781,8 @@
           "glossZh": "在你面前"
         }
       ],
-      "senseZh": "能夠從月初就說嗎？經文說「在那日」。或者是說在白日還存在時就可以說嗎？經文說「因著這個」。「因著這個」的意思不是我說要從月初開始，而是指在有無酵餅和苦菜擺放在你面前的時刻。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "有人可能以為從初一開始（就要講述），但經上說「在那日」。既然說「在那日」，有人可能以為在白天（就要開始），但經上說「因著這個」——我說「因著這個」，意思是指在無酵餅和苦菜擺在你面前的時候。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-017": {
       "id": "haggadah:haggadah-05-017",
@@ -53794,13 +53794,13 @@
           "ordinal": 1,
           "word": "וָאֶקַּח",
           "trailing": "",
-          "glossZh": "並取"
+          "glossZh": "我領了"
         },
         {
           "ordinal": 2,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "受詞記號"
         },
         {
           "ordinal": 3,
@@ -53812,7 +53812,7 @@
           "ordinal": 4,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "受詞記號"
         },
         {
           "ordinal": 5,
@@ -53824,19 +53824,19 @@
           "ordinal": 6,
           "word": "מֵעֵבֶר",
           "trailing": "",
-          "glossZh": "從…河那邊"
+          "glossZh": "從彼岸"
         },
         {
           "ordinal": 7,
           "word": "הַנָּהָר",
           "trailing": "",
-          "glossZh": "這河"
+          "glossZh": "大河"
         },
         {
           "ordinal": 8,
           "word": "וָאוֹלֵךְ",
           "trailing": "",
-          "glossZh": "並帶領"
+          "glossZh": "領他走"
         },
         {
           "ordinal": 9,
@@ -53848,7 +53848,7 @@
           "ordinal": 10,
           "word": "בְּכָל",
           "trailing": "־",
-          "glossZh": "在…所有的"
+          "glossZh": "在所有"
         },
         {
           "ordinal": 11,
@@ -53866,25 +53866,25 @@
           "ordinal": 13,
           "word": "וָאַרְבֶּה",
           "trailing": "",
-          "glossZh": "並增多"
+          "glossZh": "使增多"
         },
         {
           "ordinal": 14,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "受詞記號"
         },
         {
           "ordinal": 15,
           "word": "זַרְעוֹ",
           "trailing": "",
-          "glossZh": "他的種子"
+          "glossZh": "他的後裔"
         },
         {
           "ordinal": 16,
           "word": "וָאֶתֵּן",
           "trailing": "",
-          "glossZh": "並給予"
+          "glossZh": "並且賜給"
         },
         {
           "ordinal": 17,
@@ -53896,7 +53896,7 @@
           "ordinal": 18,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "受詞記號"
         },
         {
           "ordinal": 19,
@@ -53908,7 +53908,7 @@
           "ordinal": 20,
           "word": "וָאֶתֵּן",
           "trailing": "",
-          "glossZh": "並給予"
+          "glossZh": "並且賜給"
         },
         {
           "ordinal": 21,
@@ -53920,7 +53920,7 @@
           "ordinal": 22,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "受詞記號"
         },
         {
           "ordinal": 23,
@@ -53932,7 +53932,7 @@
           "ordinal": 24,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "並與"
+          "glossZh": "並受詞記號"
         },
         {
           "ordinal": 25,
@@ -53944,7 +53944,7 @@
           "ordinal": 26,
           "word": "וָאֶתֵּן",
           "trailing": "",
-          "glossZh": "並給予"
+          "glossZh": "並且賜給"
         },
         {
           "ordinal": 27,
@@ -53956,7 +53956,7 @@
           "ordinal": 28,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "受詞記號"
         },
         {
           "ordinal": 29,
@@ -53974,25 +53974,25 @@
           "ordinal": 31,
           "word": "לָרֶשֶׁת",
           "trailing": "",
-          "glossZh": "使…承受產業"
+          "glossZh": "去承受"
         },
         {
           "ordinal": 32,
           "word": "אֹתוֹ",
           "trailing": ",",
-          "glossZh": "他"
+          "glossZh": "它"
         },
         {
           "ordinal": 33,
           "word": "וְיַעֲקֹב",
           "trailing": "",
-          "glossZh": "並雅各"
+          "glossZh": "而雅各"
         },
         {
           "ordinal": 34,
           "word": "וּבָנָיו",
           "trailing": "",
-          "glossZh": "並他的兒子"
+          "glossZh": "和他的兒子"
         },
         {
           "ordinal": 35,
@@ -54007,8 +54007,8 @@
           "glossZh": "埃及"
         }
       ],
-      "senseZh": "我取了你們的父親亞伯拉罕從河那邊，帶領他遍歷迦南全地，增多他的種子，給他以撒，給以撒雅各和以掃，給以掃西珥山使他承受產業，雅各和他的兒子下到埃及。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "我將你們的祖先亞伯拉罕從大河那邊領出來，領他走遍迦南全地，使他的後裔增多，把以撒賜給他；又把雅各和以掃賜給以撒，把西珥山賜給以掃為業；後來雅各和他的子孫下到埃及去了。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-024": {
       "id": "haggadah:haggadah-05-024",
@@ -55268,7 +55268,7 @@
           "ordinal": 1,
           "word": "וַיּוֹצִאֵנוּ",
           "trailing": "",
-          "glossZh": "並將我們領出"
+          "glossZh": "並領我們出來"
         },
         {
           "ordinal": 2,
@@ -55298,7 +55298,7 @@
           "ordinal": 6,
           "word": "יְדֵי",
           "trailing": "",
-          "glossZh": "手中"
+          "glossZh": "…的手上"
         },
         {
           "ordinal": 7,
@@ -55322,7 +55322,7 @@
           "ordinal": 10,
           "word": "יְדֵי",
           "trailing": "",
-          "glossZh": "手中"
+          "glossZh": "…的手上"
         },
         {
           "ordinal": 11,
@@ -55346,7 +55346,7 @@
           "ordinal": 14,
           "word": "יְדֵי",
           "trailing": "",
-          "glossZh": "手中"
+          "glossZh": "…的手上"
         },
         {
           "ordinal": 15,
@@ -55364,13 +55364,13 @@
           "ordinal": 17,
           "word": "הַקָּדוֹשׁ",
           "trailing": "",
-          "glossZh": "聖潔的"
+          "glossZh": "那聖者"
         },
         {
           "ordinal": 18,
           "word": "בָּרוּךְ",
           "trailing": "",
-          "glossZh": "蒙福的"
+          "glossZh": "當受稱頌的"
         },
         {
           "ordinal": 19,
@@ -55382,31 +55382,31 @@
           "ordinal": 20,
           "word": "בִּכְבוֹדוֹ",
           "trailing": "",
-          "glossZh": "在祂的榮耀"
+          "glossZh": "以祂的榮耀"
         },
         {
           "ordinal": 21,
           "word": "וּבְעַצְמוֹ",
           "trailing": ".",
-          "glossZh": "並用祂自己"
+          "glossZh": "並以祂的自身"
         },
         {
           "ordinal": 22,
           "word": "שֶׁנֶּאֱמַר",
           "trailing": ":",
-          "glossZh": "那…說"
+          "glossZh": "正如所說的"
         },
         {
           "ordinal": 23,
           "word": "וְעָבַרְתִּי",
           "trailing": "",
-          "glossZh": "並我越過"
+          "glossZh": "我必越過"
         },
         {
           "ordinal": 24,
           "word": "בְאֶרֶץ",
           "trailing": "",
-          "glossZh": "在地"
+          "glossZh": "在…地"
         },
         {
           "ordinal": 25,
@@ -55424,13 +55424,13 @@
           "ordinal": 27,
           "word": "הַזֶּה",
           "trailing": ",",
-          "glossZh": "這"
+          "glossZh": "這一個"
         },
         {
           "ordinal": 28,
           "word": "וְהִכֵּיתִי",
           "trailing": "",
-          "glossZh": "並我擊打"
+          "glossZh": "我必擊殺"
         },
         {
           "ordinal": 29,
@@ -55448,7 +55448,7 @@
           "ordinal": 31,
           "word": "בְּאֶרֶץ",
           "trailing": "",
-          "glossZh": "在地"
+          "glossZh": "在…地"
         },
         {
           "ordinal": 32,
@@ -55466,7 +55466,7 @@
           "ordinal": 34,
           "word": "וְעַד",
           "trailing": "",
-          "glossZh": "並直到"
+          "glossZh": "直到"
         },
         {
           "ordinal": 35,
@@ -55484,7 +55484,7 @@
           "ordinal": 37,
           "word": "אֱלֹהֵי",
           "trailing": "",
-          "glossZh": "上帝"
+          "glossZh": "…的上帝"
         },
         {
           "ordinal": 38,
@@ -55496,7 +55496,7 @@
           "ordinal": 39,
           "word": "אֶעֱשֶׂה",
           "trailing": "",
-          "glossZh": "我將執行"
+          "glossZh": "我必施行"
         },
         {
           "ordinal": 40,
@@ -55517,8 +55517,8 @@
           "glossZh": "耶和華"
         }
       ],
-      "senseZh": "耶和華將我們從埃及領出。不是藉著使者,也不是藉著火蛇,也不是藉著使者,而是聖潔蒙福的他親自以他的榮耀和他自己。如經所言:我要在埃及地這個夜晚越過,在埃及地擊打所有的長子,從人到牲畜,我必在埃及的眾神上執行判決。我是耶和華。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "耶和華領我們出埃及，不是藉著使者，不是藉著火蛇，也不是藉著差役，而是那當受稱頌的聖者親自以祂的榮耀與祂的自身。正如經上所說：「在這一夜，我必越過埃及地，擊殺埃及地所有的長子，無論是人是牲畜，並要對埃及所有的神明施行審判。我是耶和華。」",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-039": {
       "id": "haggadah:haggadah-05-039",
@@ -55530,13 +55530,13 @@
           "ordinal": 1,
           "word": "וְעָבַרְתִּי",
           "trailing": "",
-          "glossZh": "並我越過"
+          "glossZh": "我必越過"
         },
         {
           "ordinal": 2,
           "word": "בְאֶרֶץ",
           "trailing": "",
-          "glossZh": "在地"
+          "glossZh": "在…地"
         },
         {
           "ordinal": 3,
@@ -55554,7 +55554,7 @@
           "ordinal": 5,
           "word": "הַזֶּה",
           "trailing": "–",
-          "glossZh": "這"
+          "glossZh": "這一個"
         },
         {
           "ordinal": 6,
@@ -55566,7 +55566,7 @@
           "ordinal": 7,
           "word": "וְלֹא",
           "trailing": "",
-          "glossZh": "並不"
+          "glossZh": "而不是"
         },
         {
           "ordinal": 8,
@@ -55578,7 +55578,7 @@
           "ordinal": 9,
           "word": "וְהִכֵּיתִי",
           "trailing": "",
-          "glossZh": "並我擊打"
+          "glossZh": "我必擊殺"
         },
         {
           "ordinal": 10,
@@ -55596,7 +55596,7 @@
           "ordinal": 12,
           "word": "בְּאֶרֶץ",
           "trailing": "־",
-          "glossZh": "在地"
+          "glossZh": "在…地"
         },
         {
           "ordinal": 13,
@@ -55614,7 +55614,7 @@
           "ordinal": 15,
           "word": "וְלֹא",
           "trailing": "",
-          "glossZh": "並不"
+          "glossZh": "而不是"
         },
         {
           "ordinal": 16,
@@ -55632,7 +55632,7 @@
           "ordinal": 18,
           "word": "אֱלֹהֵי",
           "trailing": "",
-          "glossZh": "上帝"
+          "glossZh": "…的上帝"
         },
         {
           "ordinal": 19,
@@ -55644,7 +55644,7 @@
           "ordinal": 20,
           "word": "אֶעֱשֶׂה",
           "trailing": "",
-          "glossZh": "我將執行"
+          "glossZh": "我必施行"
         },
         {
           "ordinal": 21,
@@ -55662,13 +55662,13 @@
           "ordinal": 23,
           "word": "וְלֹא",
           "trailing": "",
-          "glossZh": "並不"
+          "glossZh": "而不是"
         },
         {
           "ordinal": 24,
           "word": "הַשָּׁלִיחַ",
           "trailing": ";",
-          "glossZh": "使者"
+          "glossZh": "那使者"
         },
         {
           "ordinal": 25,
@@ -55692,13 +55692,13 @@
           "ordinal": 28,
           "word": "הוּא",
           "trailing": "",
-          "glossZh": "祂"
+          "glossZh": "就是祂"
         },
         {
           "ordinal": 29,
           "word": "וְלֹא",
           "trailing": "",
-          "glossZh": "並不"
+          "glossZh": "而不是"
         },
         {
           "ordinal": 30,
@@ -55707,8 +55707,8 @@
           "glossZh": "另一個"
         }
       ],
-      "senseZh": "我在這個夜間越過埃及地──是我而不是使者;我擊打埃及地的所有長子。是我而不是火蛇;我在埃及的眾神上執行判決。是我而不是使者;我是耶和華。我就是他,沒有別的。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "「我必在這一夜越過埃及地」——是我，而不是使者；「我必擊殺埃及地所有的長子」——是我，而不是火蛇；「並要對埃及所有的神明施行審判」——是我，而不是那差役；「我是耶和華」——是我，就是我，而不是別人。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-041": {
       "id": "haggadah:haggadah-05-041",
@@ -55732,13 +55732,13 @@
           "ordinal": 3,
           "word": "זוֹ",
           "trailing": "",
-          "glossZh": "這"
+          "glossZh": "這個"
         },
         {
           "ordinal": 4,
           "word": "הַחֶרֶב",
           "trailing": ",",
-          "glossZh": "刀劍"
+          "glossZh": "那刀劍"
         },
         {
           "ordinal": 5,
@@ -55750,25 +55750,25 @@
           "ordinal": 6,
           "word": "שֶּׁנֶּאֱמַר",
           "trailing": ":",
-          "glossZh": "那…說"
+          "glossZh": "那所說的"
         },
         {
           "ordinal": 7,
           "word": "וְחַרְבּוֹ",
           "trailing": "",
-          "glossZh": "並祂的刀"
+          "glossZh": "並祂的刀劍"
         },
         {
           "ordinal": 8,
           "word": "שְׁלוּפָה",
           "trailing": "",
-          "glossZh": "拔出的"
+          "glossZh": "拔出來的"
         },
         {
           "ordinal": 9,
           "word": "בְּיָדוֹ",
           "trailing": ",",
-          "glossZh": "在祂的手中"
+          "glossZh": "在祂手中"
         },
         {
           "ordinal": 10,
@@ -55780,7 +55780,7 @@
           "ordinal": 11,
           "word": "עַל",
           "trailing": "־",
-          "glossZh": "在"
+          "glossZh": "在…之上"
         },
         {
           "ordinal": 12,
@@ -55789,8 +55789,8 @@
           "glossZh": "耶路撒冷"
         }
       ],
-      "senseZh": "並用伸出的膀臂。這是指刀劍,如經所言:他的刀在手中拔出,伸向耶路撒冷。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "「並伸出來的膀臂」，這是指刀劍，正如經上所說：「他手裡拿著拔出來的刀，伸在耶路撒冷之上。」",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-032": {
       "id": "haggadah:haggadah-05-032",
@@ -57058,7 +57058,7 @@
           "ordinal": 1,
           "word": "וּבְמֹפְתִים",
           "trailing": ".",
-          "glossZh": "並用奇蹟"
+          "glossZh": "並用奇事"
         },
         {
           "ordinal": 2,
@@ -57070,31 +57070,31 @@
           "ordinal": 3,
           "word": "הַדָּם",
           "trailing": ",",
-          "glossZh": "這血"
+          "glossZh": "那血"
         },
         {
           "ordinal": 4,
           "word": "כְּמָה",
           "trailing": "",
-          "glossZh": "多少"
+          "glossZh": "如同"
         },
         {
           "ordinal": 5,
           "word": "שֶּׁנֶּאֱמַר",
           "trailing": ":",
-          "glossZh": "那…所說的"
+          "glossZh": "所記說的"
         },
         {
           "ordinal": 6,
           "word": "וְנָתַתִּי",
           "trailing": "",
-          "glossZh": "並我要給予"
+          "glossZh": "我必顯出"
         },
         {
           "ordinal": 7,
           "word": "מוֹפְתִים",
           "trailing": "",
-          "glossZh": "奇蹟"
+          "glossZh": "奇事"
         },
         {
           "ordinal": 8,
@@ -57109,8 +57109,8 @@
           "glossZh": "並在地上"
         }
       ],
-      "senseZh": "並用奇蹟：這是血，如多少所說的：我要給予奇蹟在天上並在地上。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "「並用奇事。」這是指血，正如經上所記：「我要在天上地下顯出奇事。」",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-046": {
       "id": "haggadah:haggadah-05-046",
@@ -57122,29 +57122,29 @@
           "ordinal": 1,
           "word": "דָּם",
           "trailing": "",
-          "glossZh": "血"
+          "glossZh": "鮮血"
         },
         {
           "ordinal": 2,
           "word": "וָאֵשׁ",
           "trailing": "",
-          "glossZh": "並火"
+          "glossZh": "和火"
         },
         {
           "ordinal": 3,
           "word": "וְתִימְרוֹת",
           "trailing": "",
-          "glossZh": "並煙柱"
+          "glossZh": "和煙柱"
         },
         {
           "ordinal": 4,
           "word": "עָשָׁן",
           "trailing": ".",
-          "glossZh": "煙"
+          "glossZh": "煙霧"
         }
       ],
-      "senseZh": "血、火和煙柱。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "血、火與煙柱。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-048": {
       "id": "haggadah:haggadah-05-048",
@@ -57156,7 +57156,7 @@
           "ordinal": 1,
           "word": "דָבָר",
           "trailing": "",
-          "glossZh": "話"
+          "glossZh": "話語"
         },
         {
           "ordinal": 2,
@@ -57168,19 +57168,19 @@
           "ordinal": 3,
           "word": "בְּיָד",
           "trailing": "",
-          "glossZh": "在手"
+          "glossZh": "用手"
         },
         {
           "ordinal": 4,
           "word": "חֲזָקָה",
           "trailing": "",
-          "glossZh": "強大的"
+          "glossZh": "強壯的"
         },
         {
           "ordinal": 5,
           "word": "שְׁתַּיִם",
           "trailing": ",",
-          "glossZh": "二"
+          "glossZh": "兩個"
         },
         {
           "ordinal": 6,
@@ -57198,53 +57198,53 @@
           "ordinal": 8,
           "word": "שְׁתַּיִם",
           "trailing": ",",
-          "glossZh": "二"
+          "glossZh": "兩個"
         },
         {
           "ordinal": 9,
           "word": "וּבְמֹרָא",
           "trailing": "",
-          "glossZh": "並用驚懼"
+          "glossZh": "並以可畏"
         },
         {
           "ordinal": 10,
           "word": "גָּדֹל",
           "trailing": "–",
-          "glossZh": "大的"
+          "glossZh": "偉大的"
         },
         {
           "ordinal": 11,
           "word": "שְׁתַּיִם",
           "trailing": ",",
-          "glossZh": "二"
+          "glossZh": "兩個"
         },
         {
           "ordinal": 12,
           "word": "וּבְאֹתוֹת",
           "trailing": "–",
-          "glossZh": "並用記號"
+          "glossZh": "並用神蹟"
         },
         {
           "ordinal": 13,
           "word": "שְׁתַּיִם",
           "trailing": ",",
-          "glossZh": "二"
+          "glossZh": "兩個"
         },
         {
           "ordinal": 14,
           "word": "וּבְמֹפְתִים",
           "trailing": "–",
-          "glossZh": "並用奇蹟"
+          "glossZh": "並用奇事"
         },
         {
           "ordinal": 15,
           "word": "שְׁתַּיִם",
           "trailing": ".",
-          "glossZh": "二"
+          "glossZh": "兩個"
         }
       ],
-      "senseZh": "另一種說法：強大的手二次，伸出的膀臂二次，大的驚懼二次，記號二次，奇蹟二次。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "另一種解釋：「大能的手」指兩樣，「伸出的膀臂」指兩樣，「大能」指兩樣，「神蹟」指兩樣，「奇事」指兩樣。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-049": {
       "id": "haggadah:haggadah-05-049",
@@ -57262,49 +57262,49 @@
           "ordinal": 2,
           "word": "עֶשֶׂר",
           "trailing": "",
-          "glossZh": "十"
+          "glossZh": "十個"
         },
         {
           "ordinal": 3,
           "word": "מַכּוֹת",
           "trailing": "",
-          "glossZh": "傷口"
+          "glossZh": "災殃"
         },
         {
           "ordinal": 4,
           "word": "שֶׁהֵבִיא",
           "trailing": "",
-          "glossZh": "那…帶來的"
+          "glossZh": "所降下的"
         },
         {
           "ordinal": 5,
           "word": "הַקָּדוֹשׁ",
           "trailing": "",
-          "glossZh": "聖潔的"
+          "glossZh": "那聖潔者"
         },
         {
           "ordinal": 6,
           "word": "בָּרוּךְ",
           "trailing": "",
-          "glossZh": "被祝福的"
+          "glossZh": "當受稱頌的"
         },
         {
           "ordinal": 7,
           "word": "הוּא",
           "trailing": "",
-          "glossZh": "祂"
+          "glossZh": "祂自己"
         },
         {
           "ordinal": 8,
           "word": "עַל",
           "trailing": "־",
-          "glossZh": "在"
+          "glossZh": "降在"
         },
         {
           "ordinal": 9,
           "word": "הַמִּצְרִים",
           "trailing": "",
-          "glossZh": "這埃及人"
+          "glossZh": "埃及人"
         },
         {
           "ordinal": 10,
@@ -57316,17 +57316,17 @@
           "ordinal": 11,
           "word": "וְאֵלוּ",
           "trailing": "",
-          "glossZh": "並這些"
+          "glossZh": "而這些"
         },
         {
           "ordinal": 12,
           "word": "הֵן",
           "trailing": ":",
-          "glossZh": "它們是"
+          "glossZh": "它們"
         }
       ],
-      "senseZh": "這些是聖潔被祝福的他在埃及人身上帶來的十個傷口，它們是：",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "這些是聖潔、當受稱頌的祂降在埃及、埃及人身上的十災，它們是：",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-051": {
       "id": "haggadah:haggadah-05-051",
@@ -57338,11 +57338,11 @@
           "ordinal": 1,
           "word": "דָּם",
           "trailing": "",
-          "glossZh": "血"
+          "glossZh": "鮮血"
         }
       ],
-      "senseZh": "血。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "血災。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-052": {
       "id": "haggadah:haggadah-05-052",
@@ -57357,8 +57357,8 @@
           "glossZh": "青蛙"
         }
       ],
-      "senseZh": "青蛙。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "蛙災。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-053": {
       "id": "haggadah:haggadah-05-053",
@@ -57370,11 +57370,11 @@
           "ordinal": 1,
           "word": "כִּנִּים",
           "trailing": "",
-          "glossZh": "蝨子"
+          "glossZh": "虱子"
         }
       ],
-      "senseZh": "蝨子。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "虱災。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-054": {
       "id": "haggadah:haggadah-05-054",
@@ -57386,11 +57386,11 @@
           "ordinal": 1,
           "word": "עָרוֹב",
           "trailing": "",
-          "glossZh": "蒼蠅"
+          "glossZh": "蠅群"
         }
       ],
-      "senseZh": "蒼蠅。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "蠅災。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-055": {
       "id": "haggadah:haggadah-05-055",
@@ -57405,8 +57405,8 @@
           "glossZh": "瘟疫"
         }
       ],
-      "senseZh": "瘟疫。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "畜疫災。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-056": {
       "id": "haggadah:haggadah-05-056",
@@ -57418,11 +57418,11 @@
           "ordinal": 1,
           "word": "שְׁחִין",
           "trailing": "",
-          "glossZh": "瘡"
+          "glossZh": "瘡疾"
         }
       ],
-      "senseZh": "瘡。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "瘡災。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-057": {
       "id": "haggadah:haggadah-05-057",
@@ -57437,8 +57437,8 @@
           "glossZh": "冰雹"
         }
       ],
-      "senseZh": "冰雹。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "雹災。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-058": {
       "id": "haggadah:haggadah-05-058",
@@ -57453,8 +57453,8 @@
           "glossZh": "蝗蟲"
         }
       ],
-      "senseZh": "蝗蟲。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "蝗災。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-059": {
       "id": "haggadah:haggadah-05-059",
@@ -57469,8 +57469,8 @@
           "glossZh": "黑暗"
         }
       ],
-      "senseZh": "黑暗。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "黑暗災。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-060": {
       "id": "haggadah:haggadah-05-060",
@@ -57482,17 +57482,17 @@
           "ordinal": 1,
           "word": "מַכַּת",
           "trailing": "",
-          "glossZh": "傷口"
+          "glossZh": "擊殺"
         },
         {
           "ordinal": 2,
           "word": "בְּכוֹרוֹת",
           "trailing": "",
-          "glossZh": "長子的"
+          "glossZh": "長子"
         }
       ],
-      "senseZh": "長子的傷口。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "擊殺長子之災。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-061": {
       "id": "haggadah:haggadah-05-061",
@@ -57516,7 +57516,7 @@
           "ordinal": 3,
           "word": "הָיָה",
           "trailing": "",
-          "glossZh": "曾是"
+          "glossZh": "曾經"
         },
         {
           "ordinal": 4,
@@ -57528,7 +57528,7 @@
           "ordinal": 5,
           "word": "בָּהֶם",
           "trailing": "",
-          "glossZh": "在它們"
+          "glossZh": "給它們"
         },
         {
           "ordinal": 6,
@@ -57540,7 +57540,7 @@
           "ordinal": 7,
           "word": "דְּצַ\"ךְ",
           "trailing": "",
-          "glossZh": "德查克"
+          "glossZh": "德查赫"
         },
         {
           "ordinal": 8,
@@ -57552,11 +57552,11 @@
           "ordinal": 9,
           "word": "בְּאַחַ\"ב",
           "trailing": ".",
-          "glossZh": "在阿恰布"
+          "glossZh": "伯阿哈卜"
         }
       ],
-      "senseZh": "拉比猶大曾給予它們記號：德查克、阿達什、在阿恰布。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "拉比猶大曾給它們編了簡稱：德查赫、阿達什、伯阿哈卜。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-066": {
       "id": "haggadah:haggadah-05-066",
@@ -58326,19 +58326,19 @@
           "ordinal": 2,
           "word": "קֵרְבָנוּ",
           "trailing": "",
-          "glossZh": "帶領我們"
+          "glossZh": "帶領我們靠近"
         },
         {
           "ordinal": 3,
           "word": "לִפְנֵי",
           "trailing": "",
-          "glossZh": "在…前面"
+          "glossZh": "在面前"
         },
         {
           "ordinal": 4,
           "word": "הַר",
           "trailing": "",
-          "glossZh": "山"
+          "glossZh": "山嶺"
         },
         {
           "ordinal": 5,
@@ -58350,7 +58350,7 @@
           "ordinal": 6,
           "word": "וְלֹא",
           "trailing": "",
-          "glossZh": "並且不"
+          "glossZh": "而沒有"
         },
         {
           "ordinal": 7,
@@ -58368,23 +58368,23 @@
           "ordinal": 9,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 10,
           "word": "הַתּוֹרָה",
           "trailing": ".",
-          "glossZh": "這律法"
+          "glossZh": "律法"
         },
         {
           "ordinal": 11,
           "word": "דַּיֵּנוּ",
           "trailing": ".",
-          "glossZh": "對我們足夠"
+          "glossZh": "對我們足夠了"
         }
       ],
-      "senseZh": "若是只帶領我們到西奈山，卻沒有給我們律法，這對我們就足夠了。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "若是祂帶領我們到西奈山前，而沒有把律法賜給我們，這對我們也就足夠了。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-078": {
       "id": "haggadah:haggadah-05-078",
@@ -58414,19 +58414,19 @@
           "ordinal": 4,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 5,
           "word": "הַתּוֹרָה",
           "trailing": "",
-          "glossZh": "這律法"
+          "glossZh": "律法"
         },
         {
           "ordinal": 6,
           "word": "וְלֹא",
           "trailing": "",
-          "glossZh": "並且不"
+          "glossZh": "而沒有"
         },
         {
           "ordinal": 7,
@@ -58444,17 +58444,17 @@
           "ordinal": 9,
           "word": "יִשְׂרָאֵל",
           "trailing": ",",
-          "glossZh": "以色列人"
+          "glossZh": "以色列"
         },
         {
           "ordinal": 10,
           "word": "דַּיֵּנוּ",
           "trailing": ".",
-          "glossZh": "對我們足夠"
+          "glossZh": "對我們足夠了"
         }
       ],
-      "senseZh": "若是給了我們律法，卻沒有帶領我們進入以色列地，這對我們就足夠了。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "若是祂把律法賜給我們，而沒有帶領我們進入以色列地，這對我們也就足夠了。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-079": {
       "id": "haggadah:haggadah-05-079",
@@ -58484,19 +58484,19 @@
           "ordinal": 4,
           "word": "יִשְׂרָאֵל",
           "trailing": "",
-          "glossZh": "以色列人"
+          "glossZh": "以色列"
         },
         {
           "ordinal": 5,
           "word": "וְלֹא",
           "trailing": "",
-          "glossZh": "並且不"
+          "glossZh": "而沒有"
         },
         {
           "ordinal": 6,
           "word": "בָנָה",
           "trailing": "",
-          "glossZh": "為我們建造"
+          "glossZh": "建造"
         },
         {
           "ordinal": 7,
@@ -58508,7 +58508,7 @@
           "ordinal": 8,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 9,
@@ -58520,17 +58520,17 @@
           "ordinal": 10,
           "word": "הַבְּחִירָה",
           "trailing": "",
-          "glossZh": "這揀選的"
+          "glossZh": "被揀選的"
         },
         {
           "ordinal": 11,
           "word": "דַּיֵּנוּ",
           "trailing": ".",
-          "glossZh": "對我們足夠"
+          "glossZh": "對我們足夠了"
         }
       ],
-      "senseZh": "若是帶領我們進入以色列地，卻沒有為我們建造揀選的殿，這對我們就足夠了。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "若是祂帶領我們進入以色列地，而沒有為我們建造聖殿，這對我們也就足夠了。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-080": {
       "id": "haggadah:haggadah-05-080",
@@ -58542,7 +58542,7 @@
           "ordinal": 1,
           "word": "עַל",
           "trailing": "",
-          "glossZh": "在"
+          "glossZh": "因著"
         },
         {
           "ordinal": 2,
@@ -58554,37 +58554,37 @@
           "ordinal": 3,
           "word": "כַּמָה",
           "trailing": "",
-          "glossZh": "多少"
+          "glossZh": "幾多"
         },
         {
           "ordinal": 4,
           "word": "וְכַּמָה",
           "trailing": ",",
-          "glossZh": "並多少"
+          "glossZh": "並幾多"
         },
         {
           "ordinal": 5,
           "word": "טוֹבָה",
           "trailing": "",
-          "glossZh": "良善"
+          "glossZh": "恩典"
         },
         {
           "ordinal": 6,
           "word": "כְפוּלָה",
           "trailing": "",
-          "glossZh": "成對的"
+          "glossZh": "雙倍的"
         },
         {
           "ordinal": 7,
           "word": "וּמְכֻפֶּלֶת",
           "trailing": "",
-          "glossZh": "並成倍的"
+          "glossZh": "並加倍的"
         },
         {
           "ordinal": 8,
           "word": "לַמָּקוֹם",
           "trailing": "",
-          "glossZh": "向這地方"
+          "glossZh": "給那地方"
         },
         {
           "ordinal": 9,
@@ -58596,7 +58596,7 @@
           "ordinal": 10,
           "word": "שֶׁהוֹצִיאָנוּ",
           "trailing": "",
-          "glossZh": "祂使我們出來"
+          "glossZh": "那領我們出的"
         },
         {
           "ordinal": 11,
@@ -58608,43 +58608,43 @@
           "ordinal": 12,
           "word": "וְעָשָׂה",
           "trailing": "",
-          "glossZh": "並在他們中"
+          "glossZh": "並施行"
         },
         {
           "ordinal": 13,
           "word": "בָהֶם",
           "trailing": "",
-          "glossZh": "在他們"
+          "glossZh": "在他們身上"
         },
         {
           "ordinal": 14,
           "word": "שְׁפָטִים",
           "trailing": ",",
-          "glossZh": "判決"
+          "glossZh": "審判"
         },
         {
           "ordinal": 15,
           "word": "וְעָשָׂה",
           "trailing": "",
-          "glossZh": "並在他們"
+          "glossZh": "並施行"
         },
         {
           "ordinal": 16,
           "word": "בֵאלֹהֵיהֶם",
           "trailing": ",",
-          "glossZh": "在他們的神"
+          "glossZh": "對他們的上帝"
         },
         {
           "ordinal": 17,
           "word": "וְהָרַג",
           "trailing": "",
-          "glossZh": "並殺死"
+          "glossZh": "並擊殺"
         },
         {
           "ordinal": 18,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 19,
@@ -58656,7 +58656,7 @@
           "ordinal": 20,
           "word": "וְנָתַן",
           "trailing": "",
-          "glossZh": "並給予"
+          "glossZh": "並賜給"
         },
         {
           "ordinal": 21,
@@ -58668,19 +58668,19 @@
           "ordinal": 22,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 23,
           "word": "מָמוֹנָם",
           "trailing": ",",
-          "glossZh": "他們的財產"
+          "glossZh": "他們的財物"
         },
         {
           "ordinal": 24,
           "word": "וְקָרַע",
           "trailing": "",
-          "glossZh": "並撕裂"
+          "glossZh": "並分裂"
         },
         {
           "ordinal": 25,
@@ -58692,31 +58692,31 @@
           "ordinal": 26,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 27,
           "word": "הַיָּם",
           "trailing": ",",
-          "glossZh": "這海"
+          "glossZh": "那海"
         },
         {
           "ordinal": 28,
           "word": "וְהֶעֱבִירָנוּ",
           "trailing": "",
-          "glossZh": "並使我們通過"
+          "glossZh": "並使我們過去"
         },
         {
           "ordinal": 29,
           "word": "בְּתוֹכוֹ",
           "trailing": "",
-          "glossZh": "在它的中間"
+          "glossZh": "在它中間"
         },
         {
           "ordinal": 30,
           "word": "בֶּחָרָבָה",
           "trailing": ",",
-          "glossZh": "用乾地"
+          "glossZh": "在乾地"
         },
         {
           "ordinal": 31,
@@ -58734,7 +58734,7 @@
           "ordinal": 33,
           "word": "בְּתוֹכוֹ",
           "trailing": ",",
-          "glossZh": "在它的中間"
+          "glossZh": "在它中間"
         },
         {
           "ordinal": 34,
@@ -58764,7 +58764,7 @@
           "ordinal": 38,
           "word": "שָׁנָה",
           "trailing": ",",
-          "glossZh": "年"
+          "glossZh": "年份"
         },
         {
           "ordinal": 39,
@@ -58776,19 +58776,19 @@
           "ordinal": 40,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 41,
           "word": "הַמָּן",
           "trailing": ",",
-          "glossZh": "這嗎哪"
+          "glossZh": "那瑪那"
         },
         {
           "ordinal": 42,
           "word": "וְנָתַן",
           "trailing": "",
-          "glossZh": "並給予"
+          "glossZh": "並賜給"
         },
         {
           "ordinal": 43,
@@ -58800,31 +58800,31 @@
           "ordinal": 44,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 45,
           "word": "הַשַּׁבָּת",
           "trailing": ",",
-          "glossZh": "這安息日"
+          "glossZh": "那安息日"
         },
         {
           "ordinal": 46,
           "word": "וְקֵרְבָנוּ",
           "trailing": "",
-          "glossZh": "並帶領我們"
+          "glossZh": "並使我們靠近"
         },
         {
           "ordinal": 47,
           "word": "לִפְנֵי",
           "trailing": "",
-          "glossZh": "在…前面"
+          "glossZh": "在面前"
         },
         {
           "ordinal": 48,
           "word": "הַר",
           "trailing": "",
-          "glossZh": "山"
+          "glossZh": "山嶺"
         },
         {
           "ordinal": 49,
@@ -58836,7 +58836,7 @@
           "ordinal": 50,
           "word": "וְנָתַן",
           "trailing": "",
-          "glossZh": "並給予"
+          "glossZh": "並賜給"
         },
         {
           "ordinal": 51,
@@ -58848,19 +58848,19 @@
           "ordinal": 52,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 53,
           "word": "הַתּוֹרָה",
           "trailing": ",",
-          "glossZh": "這律法"
+          "glossZh": "那律法"
         },
         {
           "ordinal": 54,
           "word": "וְהִכְנִיסָנוּ",
           "trailing": "",
-          "glossZh": "並帶領我們進入"
+          "glossZh": "並領我們進入"
         },
         {
           "ordinal": 55,
@@ -58872,13 +58872,13 @@
           "ordinal": 56,
           "word": "יִשְׂרָאֵל",
           "trailing": ",",
-          "glossZh": "以色列人"
+          "glossZh": "以色列"
         },
         {
           "ordinal": 57,
           "word": "וּבָנָה",
           "trailing": "",
-          "glossZh": "並為我們建造"
+          "glossZh": "並建造"
         },
         {
           "ordinal": 58,
@@ -58890,37 +58890,37 @@
           "ordinal": 59,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 60,
           "word": "בֵּית",
           "trailing": "",
-          "glossZh": "房屋"
+          "glossZh": "殿宇"
         },
         {
           "ordinal": 61,
           "word": "הַבְּחִירָה",
           "trailing": "",
-          "glossZh": "這揀選的"
+          "glossZh": "被選的"
         },
         {
           "ordinal": 62,
           "word": "לְכַפֵּר",
           "trailing": "",
-          "glossZh": "向贖罪"
+          "glossZh": "為了遮蓋"
         },
         {
           "ordinal": 63,
           "word": "עַל",
           "trailing": "־",
-          "glossZh": "在"
+          "glossZh": "為著"
         },
         {
           "ordinal": 64,
           "word": "כָּל",
           "trailing": "־",
-          "glossZh": "所有"
+          "glossZh": "所有的"
         },
         {
           "ordinal": 65,
@@ -58929,8 +58929,8 @@
           "glossZh": "我們的過犯"
         }
       ],
-      "senseZh": "就因著一件事，我們對至高者有多少倍、多少倍的良善：他使我們從埃及出來，在他們中施行判決，在他們的神中施行判決，殺死他們的長子，將他們的財產給了我們，為我們撕裂海，使我們通過它乾地，將我們的敵人淹沒在它中間，在曠野四十年供應我們的需要，用嗎哪餵養我們，給了我們安息日，帶領我們到西奈山前，給了我們律法，帶領我們進入以色列地，為我們建造了揀選的殿，為我們所有的過犯贖罪。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "並為我們建造了被選之殿，來為我們所有的過犯贖罪。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-081": {
       "id": "haggadah:haggadah-05-081",
@@ -58954,19 +58954,19 @@
           "ordinal": 3,
           "word": "הָיָה",
           "trailing": "",
-          "glossZh": "是"
+          "glossZh": "曾是"
         },
         {
           "ordinal": 4,
           "word": "אוֹמֵר",
           "trailing": ":",
-          "glossZh": "說"
+          "glossZh": "說道"
         },
         {
           "ordinal": 5,
           "word": "פֶּסַח",
           "trailing": ",",
-          "glossZh": "越過節"
+          "glossZh": "逾越節"
         },
         {
           "ordinal": 6,
@@ -58981,8 +58981,8 @@
           "glossZh": "並苦菜"
         }
       ],
-      "senseZh": "拉班迦瑪列說：逾越節、無酵餅，和苦菜。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "迦瑪列拉班常說：逾越節羔羊、無酵餅和苦菜。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-07-001": {
       "id": "haggadah:haggadah-07-001",
@@ -75286,49 +75286,49 @@
           "ordinal": 1,
           "word": "אַנְטִיגְנוֹס",
           "trailing": "",
-          "glossZh": "安提貢斯"
+          "glossZh": "安提柯"
         },
         {
           "ordinal": 2,
           "word": "אִישׁ",
           "trailing": "",
-          "glossZh": "男人"
+          "glossZh": "那人"
         },
         {
           "ordinal": 3,
           "word": "סוֹכוֹ",
           "trailing": "",
-          "glossZh": "索科的"
+          "glossZh": "梭哥"
         },
         {
           "ordinal": 4,
           "word": "קִבֵּל",
           "trailing": "",
-          "glossZh": "接受"
+          "glossZh": "領受"
         },
         {
           "ordinal": 5,
           "word": "מִשִּׁמְעוֹן",
           "trailing": "",
-          "glossZh": "從西門"
+          "glossZh": "從西緬"
         },
         {
           "ordinal": 6,
           "word": "הַצַּדִּיק",
           "trailing": ".",
-          "glossZh": "這公義的"
+          "glossZh": "公義的"
         },
         {
           "ordinal": 7,
           "word": "הוּא",
           "trailing": "",
-          "glossZh": "他"
+          "glossZh": "他自己"
         },
         {
           "ordinal": 8,
           "word": "הָיָה",
           "trailing": "",
-          "glossZh": "是"
+          "glossZh": "曾是"
         },
         {
           "ordinal": 9,
@@ -75340,13 +75340,13 @@
           "ordinal": 10,
           "word": "אַל",
           "trailing": "",
-          "glossZh": "不"
+          "glossZh": "不要"
         },
         {
           "ordinal": 11,
           "word": "תִּהְיוּ",
           "trailing": "",
-          "glossZh": "你們要是"
+          "glossZh": "你們成為"
         },
         {
           "ordinal": 12,
@@ -75358,19 +75358,19 @@
           "ordinal": 13,
           "word": "הַמְשַׁמְּשִׁין",
           "trailing": "",
-          "glossZh": "事奉的"
+          "glossZh": "那服事"
         },
         {
           "ordinal": 14,
           "word": "אֶת",
           "trailing": "",
-          "glossZh": "與"
+          "glossZh": "受詞記號"
         },
         {
           "ordinal": 15,
           "word": "הָרַב",
           "trailing": "",
-          "glossZh": "這主人"
+          "glossZh": "主人"
         },
         {
           "ordinal": 16,
@@ -75388,13 +75388,13 @@
           "ordinal": 18,
           "word": "לְקַבֵּל",
           "trailing": "",
-          "glossZh": "為了接受"
+          "glossZh": "去領受"
         },
         {
           "ordinal": 19,
           "word": "פְּרָס",
           "trailing": ",",
-          "glossZh": "報酬"
+          "glossZh": "賞賜"
         },
         {
           "ordinal": 20,
@@ -75406,7 +75406,7 @@
           "ordinal": 21,
           "word": "הֱווּ",
           "trailing": "",
-          "glossZh": "你們要是"
+          "glossZh": "你們要作"
         },
         {
           "ordinal": 22,
@@ -75418,25 +75418,25 @@
           "ordinal": 23,
           "word": "הַמְשַׁמְּשִׁין",
           "trailing": "",
-          "glossZh": "事奉的"
+          "glossZh": "那服事"
         },
         {
           "ordinal": 24,
           "word": "אֶת",
           "trailing": "",
-          "glossZh": "與"
+          "glossZh": "受詞記號"
         },
         {
           "ordinal": 25,
           "word": "הָרַב",
           "trailing": "",
-          "glossZh": "這主人"
+          "glossZh": "主人"
         },
         {
           "ordinal": 26,
           "word": "שֶׁלֹּא",
           "trailing": "",
-          "glossZh": "那沒有"
+          "glossZh": "那不"
         },
         {
           "ordinal": 27,
@@ -75454,41 +75454,41 @@
           "ordinal": 29,
           "word": "לְקַבֵּל",
           "trailing": "",
-          "glossZh": "為了接受"
+          "glossZh": "去領受"
         },
         {
           "ordinal": 30,
           "word": "פְּרָס",
           "trailing": ",",
-          "glossZh": "報酬"
+          "glossZh": "賞賜"
         },
         {
           "ordinal": 31,
           "word": "וִיהִי",
           "trailing": "",
-          "glossZh": "並要有"
+          "glossZh": "且讓"
         },
         {
           "ordinal": 32,
           "word": "מוֹרָא",
           "trailing": "",
-          "glossZh": "天上的恐懼"
+          "glossZh": "敬畏"
         },
         {
           "ordinal": 33,
           "word": "שָׁמַיִם",
           "trailing": "",
-          "glossZh": "天上的"
+          "glossZh": "諸天"
         },
         {
           "ordinal": 34,
           "word": "עֲלֵיכֶם",
           "trailing": ":",
-          "glossZh": "在你們身上"
+          "glossZh": "在你們上"
         }
       ],
-      "senseZh": "安提貢斯從公義者西門接受了索科。他說：不要像奴隸事奉主人以期獲得報酬一樣；而要像奴隸事奉主人而不期獲得報酬一樣；並且願天上的恐懼在你們身上。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "梭哥人安提柯從公義的西緬那裡領受了律法。他常說：你們不要像那些為了得到賞賜而服事主人的奴隸，倒要像那些不為了得到賞賜而服事主人的奴隸，且讓對天的敬畏常在你們身上。",
+      "engine": "gemini-3.5-flash"
     },
     "prayer:hbo-article-23-mishnah-berakhot-1-1-3-001": {
       "id": "prayer:hbo-article-23-mishnah-berakhot-1-1-3-001",
@@ -75500,25 +75500,25 @@
           "ordinal": 1,
           "word": "מֵאֵימָתַי",
           "trailing": "",
-          "glossZh": "從何時開始"
+          "glossZh": "從何時"
         },
         {
           "ordinal": 2,
           "word": "קוֹרִין",
           "trailing": "",
-          "glossZh": "誦讀"
+          "glossZh": "宣讀"
         },
         {
           "ordinal": 3,
           "word": "אֶת",
           "trailing": "",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 4,
           "word": "שְׁמַע",
           "trailing": "",
-          "glossZh": "聖經禱文"
+          "glossZh": "示瑪"
         },
         {
           "ordinal": 5,
@@ -75530,13 +75530,13 @@
           "ordinal": 6,
           "word": "מִשָּׁעָה",
           "trailing": "",
-          "glossZh": "從…時候"
+          "glossZh": "從時刻"
         },
         {
           "ordinal": 7,
           "word": "שֶׁהַכֹּהֲנִים",
           "trailing": "",
-          "glossZh": "那…祭司"
+          "glossZh": "當祭司們"
         },
         {
           "ordinal": 8,
@@ -75548,13 +75548,13 @@
           "ordinal": 9,
           "word": "לֶאֱכֹל",
           "trailing": "",
-          "glossZh": "吃"
+          "glossZh": "去吃"
         },
         {
           "ordinal": 10,
           "word": "בִּתְרוּמָתָן",
           "trailing": ",",
-          "glossZh": "他們的舉祭"
+          "glossZh": "用他們的舉祭"
         },
         {
           "ordinal": 11,
@@ -75566,13 +75566,13 @@
           "ordinal": 12,
           "word": "סוֹף",
           "trailing": "",
-          "glossZh": "末端"
+          "glossZh": "結束"
         },
         {
           "ordinal": 13,
           "word": "הָאַשְׁמוּרָה",
           "trailing": "",
-          "glossZh": "這…守更"
+          "glossZh": "夜更"
         },
         {
           "ordinal": 14,
@@ -75584,7 +75584,7 @@
           "ordinal": 15,
           "word": "דִּבְרֵי",
           "trailing": "",
-          "glossZh": "言語"
+          "glossZh": "的話"
         },
         {
           "ordinal": 16,
@@ -75602,13 +75602,13 @@
           "ordinal": 18,
           "word": "וַחֲכָמִים",
           "trailing": "",
-          "glossZh": "並…智者"
+          "glossZh": "並智者們"
         },
         {
           "ordinal": 19,
           "word": "אוֹמְרִים",
           "trailing": ",",
-          "glossZh": "說"
+          "glossZh": "說道"
         },
         {
           "ordinal": 20,
@@ -75620,7 +75620,7 @@
           "ordinal": 21,
           "word": "חֲצוֹת",
           "trailing": ".",
-          "glossZh": "午夜"
+          "glossZh": "半夜"
         },
         {
           "ordinal": 22,
@@ -75632,13 +75632,13 @@
           "ordinal": 23,
           "word": "גַּמְלִיאֵל",
           "trailing": "",
-          "glossZh": "葛馬列"
+          "glossZh": "迦瑪列"
         },
         {
           "ordinal": 24,
           "word": "אוֹמֵר",
           "trailing": ",",
-          "glossZh": "說"
+          "glossZh": "說道"
         },
         {
           "ordinal": 25,
@@ -75650,7 +75650,7 @@
           "ordinal": 26,
           "word": "שֶׁיַּעֲלֶה",
           "trailing": "",
-          "glossZh": "那…上升"
+          "glossZh": "那升起的"
         },
         {
           "ordinal": 27,
@@ -75662,103 +75662,103 @@
           "ordinal": 28,
           "word": "הַשָּׁחַר",
           "trailing": ".",
-          "glossZh": "這…黎明"
+          "glossZh": "黎明"
         },
         {
           "ordinal": 29,
           "word": "מַעֲשֶׂה",
           "trailing": "",
-          "glossZh": "事件"
+          "glossZh": "事情"
         },
         {
           "ordinal": 30,
           "word": "שֶׁבָּאוּ",
           "trailing": "",
-          "glossZh": "那…來"
+          "glossZh": "那來到的"
         },
         {
           "ordinal": 31,
           "word": "בָנָיו",
           "trailing": "",
-          "glossZh": "他的兒子"
+          "glossZh": "他的兒子們"
         },
         {
           "ordinal": 32,
           "word": "מִבֵּית",
           "trailing": "",
-          "glossZh": "從…房屋"
+          "glossZh": "從房屋"
         },
         {
           "ordinal": 33,
           "word": "הַמִּשְׁתֶּה",
           "trailing": ",",
-          "glossZh": "這…宴會"
+          "glossZh": "宴席"
         },
         {
           "ordinal": 34,
           "word": "אָמְרוּ",
           "trailing": "",
-          "glossZh": "說"
+          "glossZh": "說道"
         },
         {
           "ordinal": 35,
           "word": "לוֹ",
           "trailing": ",",
-          "glossZh": "對他"
+          "glossZh": "向他"
         },
         {
           "ordinal": 36,
           "word": "לֹא",
           "trailing": "",
-          "glossZh": "不"
+          "glossZh": "沒有"
         },
         {
           "ordinal": 37,
           "word": "קָרִינוּ",
           "trailing": "",
-          "glossZh": "誦讀"
+          "glossZh": "我們宣讀"
         },
         {
           "ordinal": 38,
           "word": "אֶת",
           "trailing": "",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 39,
           "word": "שְׁמַע",
           "trailing": ".",
-          "glossZh": "聖經禱文"
+          "glossZh": "示瑪"
         },
         {
           "ordinal": 40,
           "word": "אָמַר",
           "trailing": "",
-          "glossZh": "說"
+          "glossZh": "說道"
         },
         {
           "ordinal": 41,
           "word": "לָהֶם",
           "trailing": ",",
-          "glossZh": "對他們"
+          "glossZh": "向他們"
         },
         {
           "ordinal": 42,
           "word": "אִם",
           "trailing": "",
-          "glossZh": "若"
+          "glossZh": "若是"
         },
         {
           "ordinal": 43,
           "word": "לֹא",
           "trailing": "",
-          "glossZh": "不"
+          "glossZh": "沒有"
         },
         {
           "ordinal": 44,
           "word": "עָלָה",
           "trailing": "",
-          "glossZh": "上升"
+          "glossZh": "升起"
         },
         {
           "ordinal": 45,
@@ -75770,13 +75770,13 @@
           "ordinal": 46,
           "word": "הַשַּׁחַר",
           "trailing": ",",
-          "glossZh": "這…黎明"
+          "glossZh": "黎明"
         },
         {
           "ordinal": 47,
           "word": "חַיָּבִין",
           "trailing": "",
-          "glossZh": "被迫的"
+          "glossZh": "必須的"
         },
         {
           "ordinal": 48,
@@ -75788,13 +75788,13 @@
           "ordinal": 49,
           "word": "לִקְרוֹת",
           "trailing": ".",
-          "glossZh": "誦讀"
+          "glossZh": "去宣讀"
         },
         {
           "ordinal": 50,
           "word": "וְלֹא",
           "trailing": "",
-          "glossZh": "並…不"
+          "glossZh": "並非"
         },
         {
           "ordinal": 51,
@@ -75806,13 +75806,13 @@
           "ordinal": 52,
           "word": "בִּלְבַד",
           "trailing": ",",
-          "glossZh": "單單"
+          "glossZh": "僅僅"
         },
         {
           "ordinal": 53,
           "word": "אֶלָּא",
           "trailing": "",
-          "glossZh": "但是"
+          "glossZh": "而是"
         },
         {
           "ordinal": 54,
@@ -75830,13 +75830,13 @@
           "ordinal": 56,
           "word": "שֶּׁאָמְרוּ",
           "trailing": "",
-          "glossZh": "那…說"
+          "glossZh": "那說道的"
         },
         {
           "ordinal": 57,
           "word": "חֲכָמִים",
           "trailing": "",
-          "glossZh": "智者"
+          "glossZh": "智者們"
         },
         {
           "ordinal": 58,
@@ -75848,7 +75848,7 @@
           "ordinal": 59,
           "word": "חֲצוֹת",
           "trailing": ",",
-          "glossZh": "午夜"
+          "glossZh": "半夜"
         },
         {
           "ordinal": 60,
@@ -75866,7 +75866,7 @@
           "ordinal": 62,
           "word": "שֶׁיַּעֲלֶה",
           "trailing": "",
-          "glossZh": "那…上升"
+          "glossZh": "那升起的"
         },
         {
           "ordinal": 63,
@@ -75878,31 +75878,31 @@
           "ordinal": 64,
           "word": "הַשָּׁחַר",
           "trailing": ".",
-          "glossZh": "這…黎明"
+          "glossZh": "黎明"
         },
         {
           "ordinal": 65,
           "word": "הֶקְטֵר",
           "trailing": "",
-          "glossZh": "焚燒"
+          "glossZh": "焚燒祭物"
         },
         {
           "ordinal": 66,
           "word": "חֲלָבִים",
           "trailing": "",
-          "glossZh": "脂肪"
+          "glossZh": "脂油"
         },
         {
           "ordinal": 67,
           "word": "וְאֵבָרִים",
           "trailing": ",",
-          "glossZh": "並…肢體"
+          "glossZh": "並肢體"
         },
         {
           "ordinal": 68,
           "word": "מִצְוָתָן",
           "trailing": "",
-          "glossZh": "他們的誡命"
+          "glossZh": "其誡命"
         },
         {
           "ordinal": 69,
@@ -75914,7 +75914,7 @@
           "ordinal": 70,
           "word": "שֶׁיַּעֲלֶה",
           "trailing": "",
-          "glossZh": "那…上升"
+          "glossZh": "那升起的"
         },
         {
           "ordinal": 71,
@@ -75926,37 +75926,37 @@
           "ordinal": 72,
           "word": "הַשָּׁחַר",
           "trailing": ".",
-          "glossZh": "這…黎明"
+          "glossZh": "黎明"
         },
         {
           "ordinal": 73,
           "word": "וְכָל",
           "trailing": "",
-          "glossZh": "並…所有"
+          "glossZh": "並且所有"
         },
         {
           "ordinal": 74,
           "word": "הַנֶּאֱכָלִים",
           "trailing": "",
-          "glossZh": "被吃的"
+          "glossZh": "那被吃的"
         },
         {
           "ordinal": 75,
           "word": "לְיוֹם",
           "trailing": "",
-          "glossZh": "向…日"
+          "glossZh": "給一日"
         },
         {
           "ordinal": 76,
           "word": "אֶחָד",
           "trailing": ",",
-          "glossZh": "一"
+          "glossZh": "一個"
         },
         {
           "ordinal": 77,
           "word": "מִצְוָתָן",
           "trailing": "",
-          "glossZh": "他們的誡命"
+          "glossZh": "其誡命"
         },
         {
           "ordinal": 78,
@@ -75968,7 +75968,7 @@
           "ordinal": 79,
           "word": "שֶׁיַּעֲלֶה",
           "trailing": "",
-          "glossZh": "那…上升"
+          "glossZh": "那升起的"
         },
         {
           "ordinal": 80,
@@ -75980,19 +75980,19 @@
           "ordinal": 81,
           "word": "הַשָּׁחַר",
           "trailing": ".",
-          "glossZh": "這…黎明"
+          "glossZh": "黎明"
         },
         {
           "ordinal": 82,
           "word": "אִם",
           "trailing": "",
-          "glossZh": "若"
+          "glossZh": "若是"
         },
         {
           "ordinal": 83,
           "word": "כֵּן",
           "trailing": ",",
-          "glossZh": "確實"
+          "glossZh": "如此"
         },
         {
           "ordinal": 84,
@@ -76004,13 +76004,13 @@
           "ordinal": 85,
           "word": "אָמְרוּ",
           "trailing": "",
-          "glossZh": "說"
+          "glossZh": "說了"
         },
         {
           "ordinal": 86,
           "word": "חֲכָמִים",
           "trailing": "",
-          "glossZh": "智者"
+          "glossZh": "智慧人"
         },
         {
           "ordinal": 87,
@@ -76022,47 +76022,47 @@
           "ordinal": 88,
           "word": "חֲצוֹת",
           "trailing": ",",
-          "glossZh": "午夜"
+          "glossZh": "半夜"
         },
         {
           "ordinal": 89,
           "word": "כְּדֵי",
           "trailing": "",
-          "glossZh": "為著"
+          "glossZh": "為了"
         },
         {
           "ordinal": 90,
           "word": "לְהַרְחִיק",
           "trailing": "",
-          "glossZh": "遠離"
+          "glossZh": "使遠離"
         },
         {
           "ordinal": 91,
           "word": "אֶת",
           "trailing": "",
-          "glossZh": "與"
+          "glossZh": "（受詞記號）"
         },
         {
           "ordinal": 92,
           "word": "הָאָדָם",
           "trailing": "",
-          "glossZh": "這…人"
+          "glossZh": "那人"
         },
         {
           "ordinal": 93,
           "word": "מִן",
           "trailing": "",
-          "glossZh": "從"
+          "glossZh": "從於"
         },
         {
           "ordinal": 94,
           "word": "הָעֲבֵרָה",
           "trailing": ":",
-          "glossZh": "犯罪"
+          "glossZh": "罪過"
         }
       ],
-      "senseZh": "從何時開始在晚上誦讀聖經禱文？從祭司進入吃他們的舉祭到第一更末為止——這是拉比以利以謝的言論。而智者說，直到午夜。葛馬列拉班說，直到黎明柱子升起。發生了一個事件，他的兒子從筵宴的房屋回來，對他說：「我們沒有誦讀聖經禱文。」他對他們說：「如果黎明柱子還沒升起，你們就有誦讀的責任。」且不僅如此，凡智者所說直到午夜的誡命，其責任乃是直到黎明柱子升起。焚燒脂肪和肢體，其責任是直到黎明柱子升起。凡可在一天內食用的祭物，其責任是直到黎明柱子升起。那麼為什麼智者說直到午夜呢？為著遠離人犯罪。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "直到曙光破曉。焚燒脂油和祭肉肢體，其條例是直到曙光破曉。凡限一日吃完的祭物，其條例也是直到曙光破曉。既然如此，為什麼智慧人說『直到半夜』呢？是為了使人遠離罪過。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-008": {
       "id": "haggadah:haggadah-05-008",
@@ -76074,7 +76074,7 @@
           "ordinal": 1,
           "word": "מַעֲשֶׂה",
           "trailing": "",
-          "glossZh": "故事"
+          "glossZh": "事蹟"
         },
         {
           "ordinal": 2,
@@ -76092,7 +76092,7 @@
           "ordinal": 4,
           "word": "וְרַבִּי",
           "trailing": "",
-          "glossZh": "並拉比"
+          "glossZh": "和拉比"
         },
         {
           "ordinal": 5,
@@ -76104,7 +76104,7 @@
           "ordinal": 6,
           "word": "וְרַבִּי",
           "trailing": "",
-          "glossZh": "並拉比"
+          "glossZh": "和拉比"
         },
         {
           "ordinal": 7,
@@ -76128,67 +76128,67 @@
           "ordinal": 10,
           "word": "וְרַבִּי",
           "trailing": "",
-          "glossZh": "並拉比"
+          "glossZh": "和拉比"
         },
         {
           "ordinal": 11,
           "word": "עֲקִיבָא",
           "trailing": "",
-          "glossZh": "亞基巴"
+          "glossZh": "阿吉巴"
         },
         {
           "ordinal": 12,
           "word": "וְרַבִּי",
           "trailing": "",
-          "glossZh": "並拉比"
+          "glossZh": "和拉比"
         },
         {
           "ordinal": 13,
           "word": "טַרְפוֹן",
           "trailing": "",
-          "glossZh": "塔弗翁"
+          "glossZh": "塔爾豐"
         },
         {
           "ordinal": 14,
           "word": "שֶׁהָיוּ",
           "trailing": "",
-          "glossZh": "他們是"
+          "glossZh": "那曾是"
         },
         {
           "ordinal": 15,
           "word": "מְסֻבִּין",
           "trailing": "",
-          "glossZh": "斜靠著的"
+          "glossZh": "斜靠著坐的"
         },
         {
           "ordinal": 16,
           "word": "בִּבְנֵי",
           "trailing": "־",
-          "glossZh": "在…本尼"
+          "glossZh": "在兒子"
         },
         {
           "ordinal": 17,
           "word": "בְרַק",
           "trailing": "",
-          "glossZh": "貝拉克"
+          "glossZh": "伯拉克"
         },
         {
           "ordinal": 18,
           "word": "וְהָיוּ",
           "trailing": "",
-          "glossZh": "並他們"
+          "glossZh": "並且曾是"
         },
         {
           "ordinal": 19,
           "word": "מְסַפְּרִים",
           "trailing": "",
-          "glossZh": "講述"
+          "glossZh": "講述的"
         },
         {
           "ordinal": 20,
           "word": "בִּיצִיאַת",
           "trailing": "",
-          "glossZh": "關於…出埃及"
+          "glossZh": "在出來"
         },
         {
           "ordinal": 21,
@@ -76206,13 +76206,13 @@
           "ordinal": 23,
           "word": "אוֹתוֹ",
           "trailing": "",
-          "glossZh": "那"
+          "glossZh": "那一個"
         },
         {
           "ordinal": 24,
           "word": "הַלַּיְלָה",
           "trailing": ",",
-          "glossZh": "這夜"
+          "glossZh": "夜晚"
         },
         {
           "ordinal": 25,
@@ -76224,19 +76224,19 @@
           "ordinal": 26,
           "word": "שֶׁבָּאוּ",
           "trailing": "",
-          "glossZh": "他們來"
+          "glossZh": "那來到"
         },
         {
           "ordinal": 27,
           "word": "תַלְמִידֵיהֶם",
           "trailing": "",
-          "glossZh": "他們的門徒"
+          "glossZh": "他們的學生"
         },
         {
           "ordinal": 28,
           "word": "וְאָמְרוּ",
           "trailing": "",
-          "glossZh": "並說"
+          "glossZh": "並且說"
         },
         {
           "ordinal": 29,
@@ -76248,13 +76248,13 @@
           "ordinal": 30,
           "word": "רַבּוֹתֵינוּ",
           "trailing": "",
-          "glossZh": "我們的拉比"
+          "glossZh": "我們的拉比們"
         },
         {
           "ordinal": 31,
           "word": "הִגִּיעַ",
           "trailing": "",
-          "glossZh": "到達了"
+          "glossZh": "到了"
         },
         {
           "ordinal": 32,
@@ -76266,13 +76266,13 @@
           "ordinal": 33,
           "word": "קְרִיאַת",
           "trailing": "",
-          "glossZh": "的誦讀"
+          "glossZh": "誦讀"
         },
         {
           "ordinal": 34,
           "word": "שְׁמַע",
           "trailing": "",
-          "glossZh": "聖名"
+          "glossZh": "示瑪"
         },
         {
           "ordinal": 35,
@@ -76284,11 +76284,11 @@
           "ordinal": 36,
           "word": "שַׁחֲרִית",
           "trailing": ".",
-          "glossZh": "早晨"
+          "glossZh": "晨禱"
         }
       ],
-      "senseZh": "關於拉比以利以謝、拉比約書亞、拉比以利亞撒本亞撒利雅、拉比亞基巴和拉比塔弗翁的故事：他們在本尼貝拉克斜靠著，整夜講述出埃及，直到他們的門徒來對他們說：「我們的拉比，早晨誦讀聖名的時間已經到了。」",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "這是一個關於拉比以利以謝、拉比約書亞、拉比亞撒利雅的兒子以利亞撒、拉比阿吉巴和拉比塔爾豐的事蹟：他們在伯尼布拉克斜靠著坐，整夜講述出埃及的事蹟，直到他們的學生前來對他們說：「我們的拉比們，誦讀晨禱示瑪的時間到了。」",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-016": {
       "id": "haggadah:haggadah-05-016",
@@ -76306,67 +76306,67 @@
           "ordinal": 2,
           "word": "עוֹבְדֵי",
           "trailing": "",
-          "glossZh": "事奉…的人"
+          "glossZh": "事奉者"
         },
         {
           "ordinal": 3,
           "word": "עֲבוֹדָה",
           "trailing": "",
-          "glossZh": "事奉"
+          "glossZh": "敬拜"
         },
         {
           "ordinal": 4,
           "word": "זָרָה",
           "trailing": "",
-          "glossZh": "陌生的"
+          "glossZh": "外邦的"
         },
         {
           "ordinal": 5,
           "word": "הָיוּ",
           "trailing": "",
-          "glossZh": "是"
+          "glossZh": "曾是"
         },
         {
           "ordinal": 6,
           "word": "אֲבוֹתֵינוּ",
           "trailing": ",",
-          "glossZh": "我們的父親"
+          "glossZh": "我們的祖先"
         },
         {
           "ordinal": 7,
           "word": "וְעַכְשָׁיו",
           "trailing": "",
-          "glossZh": "而現在"
+          "glossZh": "而如今"
         },
         {
           "ordinal": 8,
           "word": "קֵרְבָנוּ",
           "trailing": "",
-          "glossZh": "使…接近"
+          "glossZh": "領我們親近"
         },
         {
           "ordinal": 9,
           "word": "הַמָּקוֹם",
           "trailing": "",
-          "glossZh": "這個地方"
+          "glossZh": "主上帝"
         },
         {
           "ordinal": 10,
           "word": "לַעֲבוֹדָתוֹ",
           "trailing": ",",
-          "glossZh": "向祂的事奉"
+          "glossZh": "祂的敬拜"
         },
         {
           "ordinal": 11,
           "word": "שֶׁנֶּאֱמַר",
           "trailing": ":",
-          "glossZh": "那…被說"
+          "glossZh": "正如所說的"
         },
         {
           "ordinal": 12,
           "word": "וַיֹאמֶר",
           "trailing": "",
-          "glossZh": "而說"
+          "glossZh": "於是說"
         },
         {
           "ordinal": 13,
@@ -76378,7 +76378,7 @@
           "ordinal": 14,
           "word": "אֶל",
           "trailing": "־",
-          "glossZh": "到"
+          "glossZh": "向"
         },
         {
           "ordinal": 15,
@@ -76390,7 +76390,7 @@
           "ordinal": 16,
           "word": "הָעָם",
           "trailing": ",",
-          "glossZh": "這個百姓"
+          "glossZh": "百姓"
         },
         {
           "ordinal": 17,
@@ -76426,31 +76426,31 @@
           "ordinal": 22,
           "word": "בְּעֵבֶר",
           "trailing": "",
-          "glossZh": "在…河的彼岸"
+          "glossZh": "在彼岸"
         },
         {
           "ordinal": 23,
           "word": "הַנָּהָר",
           "trailing": "",
-          "glossZh": "這個河"
+          "glossZh": "大河"
         },
         {
           "ordinal": 24,
           "word": "יָשְׁבוּ",
           "trailing": "",
-          "glossZh": "住"
+          "glossZh": "居住"
         },
         {
           "ordinal": 25,
           "word": "אֲבוֹתֵיכֶם",
           "trailing": "",
-          "glossZh": "你們的父親"
+          "glossZh": "你們的祖先"
         },
         {
           "ordinal": 26,
           "word": "מֵעוֹלָם",
           "trailing": ",",
-          "glossZh": "從永遠"
+          "glossZh": "自古以來"
         },
         {
           "ordinal": 27,
@@ -76462,7 +76462,7 @@
           "ordinal": 28,
           "word": "אֲבִי",
           "trailing": "",
-          "glossZh": "…的父親"
+          "glossZh": "的父親"
         },
         {
           "ordinal": 29,
@@ -76474,7 +76474,7 @@
           "ordinal": 30,
           "word": "וַאֲבִי",
           "trailing": "",
-          "glossZh": "而…的父親"
+          "glossZh": "和父親"
         },
         {
           "ordinal": 31,
@@ -76486,23 +76486,23 @@
           "ordinal": 32,
           "word": "וַיַּעַבְדוּ",
           "trailing": "",
-          "glossZh": "而事奉"
+          "glossZh": "並且事奉"
         },
         {
           "ordinal": 33,
           "word": "אֱלֹהִים",
           "trailing": "",
-          "glossZh": "上帝"
+          "glossZh": "神明"
         },
         {
           "ordinal": 34,
           "word": "אֲחֵרִים",
           "trailing": ".",
-          "glossZh": "別的"
+          "glossZh": "其他的"
         }
       ],
-      "senseZh": "起初我們的父親是事奉陌生神的，而現在上帝使我們接近他的事奉，如經上所說：約書亞對全體百姓說，耶和華以色列的上帝如此說：你們的父親從前住在約旦河那邊，包括亞伯拉罕的父親他拉和拿鶴的父親，他們事奉別的神。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "起初我們的祖先是敬拜外邦神明的，而如今主上帝領我們親近、事奉祂，正如經上所說：『約書亞對眾百姓說：耶和華—以色列的上帝如此說：古時你們的祖先，就是亞伯拉罕和拿鶴的父親他拉，住在大河那邊，事奉別的神。』",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-031": {
       "id": "haggadah:haggadah-05-031",
@@ -87990,7 +87990,7 @@
           "ordinal": 16,
           "word": "שְׁמ֖וֹ",
           "trailing": "",
-          "glossZh": "他的名字"
+          "glossZh": "祂的名字"
         },
         {
           "ordinal": 17,
@@ -95386,7 +95386,7 @@
           "ordinal": 1,
           "word": "וַיְהִי",
           "trailing": "",
-          "glossZh": "並有了"
+          "glossZh": "於是有了"
         },
         {
           "ordinal": 2,
@@ -95398,7 +95398,7 @@
           "ordinal": 3,
           "word": "וַיְהִי",
           "trailing": "",
-          "glossZh": "並有了"
+          "glossZh": "於是有了"
         },
         {
           "ordinal": 4,
@@ -95410,31 +95410,31 @@
           "ordinal": 5,
           "word": "יוֹם",
           "trailing": "",
-          "glossZh": "日子"
+          "glossZh": "日"
         },
         {
           "ordinal": 6,
           "word": "הַשִּׁשִּׁי",
           "trailing": ".",
-          "glossZh": "第六"
+          "glossZh": "第六的"
         },
         {
           "ordinal": 7,
           "word": "וַיְכֻלּוּ",
           "trailing": "",
-          "glossZh": "並完成了"
+          "glossZh": "於是完成了"
         },
         {
           "ordinal": 8,
           "word": "הַשָּׁמַיִם",
           "trailing": "",
-          "glossZh": "這天空"
+          "glossZh": "諸天"
         },
         {
           "ordinal": 9,
           "word": "וְהָאָרֶץ",
           "trailing": "",
-          "glossZh": "並這地"
+          "glossZh": "並地"
         },
         {
           "ordinal": 10,
@@ -95446,31 +95446,31 @@
           "ordinal": 11,
           "word": "צְבָאָם",
           "trailing": ".",
-          "glossZh": "它們的軍隊"
+          "glossZh": "他們的軍隊"
         },
         {
           "ordinal": 12,
           "word": "וַיְכַל",
           "trailing": "",
-          "glossZh": "並完成了"
+          "glossZh": "於是完成了"
         },
         {
           "ordinal": 13,
           "word": "אֱלֹהִים",
           "trailing": "",
-          "glossZh": "神"
+          "glossZh": "上帝"
         },
         {
           "ordinal": 14,
           "word": "בַּיּוֹם",
           "trailing": "",
-          "glossZh": "在第七日"
+          "glossZh": "在這日"
         },
         {
           "ordinal": 15,
           "word": "הַשְּׁבִיעִי",
           "trailing": "",
-          "glossZh": "這第七"
+          "glossZh": "第七的"
         },
         {
           "ordinal": 16,
@@ -95482,31 +95482,31 @@
           "ordinal": 17,
           "word": "אֲשֶׁר",
           "trailing": "",
-          "glossZh": "那…的"
+          "glossZh": "所"
         },
         {
           "ordinal": 18,
           "word": "עָשָׂה",
           "trailing": "",
-          "glossZh": "做了"
+          "glossZh": "做"
         },
         {
           "ordinal": 19,
           "word": "וַיִּשְׁבֹּת",
           "trailing": "",
-          "glossZh": "並停止了"
+          "glossZh": "於是歇息"
         },
         {
           "ordinal": 20,
           "word": "בַּיּוֹם",
           "trailing": "",
-          "glossZh": "在第七日"
+          "glossZh": "在這日"
         },
         {
           "ordinal": 21,
           "word": "הַשְּׁבִיעִי",
           "trailing": "",
-          "glossZh": "這第七"
+          "glossZh": "第七的"
         },
         {
           "ordinal": 22,
@@ -95524,25 +95524,25 @@
           "ordinal": 24,
           "word": "אֲשֶׁר",
           "trailing": "",
-          "glossZh": "那…的"
+          "glossZh": "所"
         },
         {
           "ordinal": 25,
           "word": "עָשָׂה",
           "trailing": ".",
-          "glossZh": "做了"
+          "glossZh": "做"
         },
         {
           "ordinal": 26,
           "word": "וַיְבָרֵךְ",
           "trailing": "",
-          "glossZh": "並祝福了"
+          "glossZh": "於是祝福"
         },
         {
           "ordinal": 27,
           "word": "אֱלֹהִים",
           "trailing": "",
-          "glossZh": "神"
+          "glossZh": "上帝"
         },
         {
           "ordinal": 28,
@@ -95554,19 +95554,19 @@
           "ordinal": 29,
           "word": "יוֹם",
           "trailing": "",
-          "glossZh": "日子"
+          "glossZh": "日"
         },
         {
           "ordinal": 30,
           "word": "הַשְּׁבִיעִי",
           "trailing": "",
-          "glossZh": "這第七"
+          "glossZh": "第七的"
         },
         {
           "ordinal": 31,
           "word": "וַיְקַדֵּשׁ",
           "trailing": "",
-          "glossZh": "並成聖了"
+          "glossZh": "於是祝聖"
         },
         {
           "ordinal": 32,
@@ -95584,13 +95584,13 @@
           "ordinal": 34,
           "word": "בוֹ",
           "trailing": "",
-          "glossZh": "在它裡面"
+          "glossZh": "在其中"
         },
         {
           "ordinal": 35,
           "word": "שָׁבַת",
           "trailing": "",
-          "glossZh": "停止了"
+          "glossZh": "歇息"
         },
         {
           "ordinal": 36,
@@ -95608,29 +95608,29 @@
           "ordinal": 38,
           "word": "אֲשֶׁר",
           "trailing": "",
-          "glossZh": "那…的"
+          "glossZh": "所"
         },
         {
           "ordinal": 39,
           "word": "בָּרָא",
           "trailing": "",
-          "glossZh": "創造了"
+          "glossZh": "創造"
         },
         {
           "ordinal": 40,
           "word": "אֱלֹהִים",
           "trailing": "",
-          "glossZh": "神"
+          "glossZh": "上帝"
         },
         {
           "ordinal": 41,
           "word": "לַעֲשׂוֹת",
           "trailing": ".",
-          "glossZh": "為要做"
+          "glossZh": "去做"
         }
       ],
-      "senseZh": "有了晚上，有了早晨，第六日。天空和地以及所有的軍隊都完成了。神在第七日完成了他所做的工作，在第七日停止了所有他所做的工作。神祝福第七日並成聖了它，因為在這一日神停止了所有他為要做的工作。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "有晚上，有早晨，是第六日。天地和萬象都建設好了。到第七日，上帝完成了他所造的工，就在第七日歇了他所做一切的工，安息了。上帝祝福第七日，定為聖日，因為在這日，上帝歇了他一切創造的工，安息了。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-01-007": {
       "id": "haggadah:haggadah-01-007",
@@ -95642,7 +95642,7 @@
           "ordinal": 1,
           "word": "בָּרוּךְ",
           "trailing": "",
-          "glossZh": "被祝福的"
+          "glossZh": "當受稱頌的"
         },
         {
           "ordinal": 2,
@@ -95660,7 +95660,7 @@
           "ordinal": 4,
           "word": "אֱלֹהֵינוּ",
           "trailing": "",
-          "glossZh": "我們的神"
+          "glossZh": "我們的上帝"
         },
         {
           "ordinal": 5,
@@ -95672,7 +95672,7 @@
           "ordinal": 6,
           "word": "הָעוֹלָם",
           "trailing": "",
-          "glossZh": "這世界"
+          "glossZh": "世界的"
         },
         {
           "ordinal": 7,
@@ -95684,7 +95684,7 @@
           "ordinal": 8,
           "word": "בָּחַר",
           "trailing": "",
-          "glossZh": "選擇了"
+          "glossZh": "選擇"
         },
         {
           "ordinal": 9,
@@ -95702,13 +95702,13 @@
           "ordinal": 11,
           "word": "עָם",
           "trailing": "",
-          "glossZh": "民族"
+          "glossZh": "百姓"
         },
         {
           "ordinal": 12,
           "word": "וְרוֹמְמָנוּ",
           "trailing": "",
-          "glossZh": "並高舉了我們"
+          "glossZh": "並高舉我們"
         },
         {
           "ordinal": 13,
@@ -95720,25 +95720,25 @@
           "ordinal": 14,
           "word": "לָשׁוֹן",
           "trailing": "",
-          "glossZh": "舌語"
+          "glossZh": "語言"
         },
         {
           "ordinal": 15,
           "word": "וְקִדְּשָׁנוּ",
           "trailing": "",
-          "glossZh": "並成聖了我們"
+          "glossZh": "並祝聖我們"
         },
         {
           "ordinal": 16,
           "word": "בְּמִצְוֹתָיו",
           "trailing": ".",
-          "glossZh": "在祂的誡命中"
+          "glossZh": "用祂的誡命"
         },
         {
           "ordinal": 17,
           "word": "וַתִּתֶּן",
           "trailing": "",
-          "glossZh": "並給了"
+          "glossZh": "並你給予"
         },
         {
           "ordinal": 18,
@@ -95756,43 +95756,43 @@
           "ordinal": 20,
           "word": "אֱלֹהֵינוּ",
           "trailing": "",
-          "glossZh": "我們的神"
+          "glossZh": "我們的上帝"
         },
         {
           "ordinal": 21,
           "word": "בְּאַהֲבָה",
           "trailing": "",
-          "glossZh": "在愛心中"
+          "glossZh": "在愛中"
         },
         {
           "ordinal": 22,
           "word": "מוֹעֲדִים",
           "trailing": "",
-          "glossZh": "指定的節期"
+          "glossZh": "節期"
         },
         {
           "ordinal": 23,
           "word": "לְשִׂמְחָה",
           "trailing": ",",
-          "glossZh": "為著喜樂"
+          "glossZh": "為了喜樂"
         },
         {
           "ordinal": 24,
           "word": "חַגִּים",
           "trailing": "",
-          "glossZh": "節期"
+          "glossZh": "節日"
         },
         {
           "ordinal": 25,
           "word": "וּזְמַנִּים",
           "trailing": "",
-          "glossZh": "並時節"
+          "glossZh": "並時期"
         },
         {
           "ordinal": 26,
           "word": "לְשָׂשוֹן",
           "trailing": ",",
-          "glossZh": "為著歡樂"
+          "glossZh": "為了歡欣"
         },
         {
           "ordinal": 27,
@@ -95804,7 +95804,7 @@
           "ordinal": 28,
           "word": "יוֹם",
           "trailing": "",
-          "glossZh": "日子"
+          "glossZh": "日"
         },
         {
           "ordinal": 29,
@@ -95816,7 +95816,7 @@
           "ordinal": 30,
           "word": "הַמַּצּוֹת",
           "trailing": "",
-          "glossZh": "這無酵餅"
+          "glossZh": "無酵餅的"
         },
         {
           "ordinal": 31,
@@ -95828,7 +95828,7 @@
           "ordinal": 32,
           "word": "זְמַן",
           "trailing": "",
-          "glossZh": "時節"
+          "glossZh": "時期"
         },
         {
           "ordinal": 33,
@@ -95840,25 +95840,25 @@
           "ordinal": 34,
           "word": "מִקְרָא",
           "trailing": "",
-          "glossZh": "聖潔的遇見"
+          "glossZh": "宣召"
         },
         {
           "ordinal": 35,
           "word": "קֹדֶשׁ",
           "trailing": "",
-          "glossZh": "聖潔的事物"
+          "glossZh": "聖潔的"
         },
         {
           "ordinal": 36,
           "word": "זֵכֶר",
           "trailing": "",
-          "glossZh": "記念"
+          "glossZh": "紀念"
         },
         {
           "ordinal": 37,
           "word": "לִיצִיאַת",
           "trailing": "",
-          "glossZh": "為著出埃及"
+          "glossZh": "為了出去"
         },
         {
           "ordinal": 38,
@@ -95894,7 +95894,7 @@
           "ordinal": 43,
           "word": "קִדַּשְׁתָּ",
           "trailing": "",
-          "glossZh": "你成聖了"
+          "glossZh": "你祝聖了"
         },
         {
           "ordinal": 44,
@@ -95906,13 +95906,13 @@
           "ordinal": 45,
           "word": "הָעַמִּים",
           "trailing": ",",
-          "glossZh": "民族"
+          "glossZh": "萬民"
         },
         {
           "ordinal": 46,
           "word": "וּמוֹעֲדֵי",
           "trailing": "",
-          "glossZh": "並你的指定節期"
+          "glossZh": "並節期"
         },
         {
           "ordinal": 47,
@@ -95930,17 +95930,17 @@
           "ordinal": 49,
           "word": "וּבְשָׂשוֹן",
           "trailing": "",
-          "glossZh": "並在歡樂中"
+          "glossZh": "並在歡欣中"
         },
         {
           "ordinal": 50,
           "word": "הִנְחַלְתָּנוּ",
           "trailing": ".",
-          "glossZh": "你使我們承受產業"
+          "glossZh": "你賜給我們產業"
         }
       ],
-      "senseZh": "被祝福的是你，耶和華我們的神，世界的王，你從所有民族中選擇了我們，從所有語言中高舉了我們，用他的誡命成聖了我們。耶和華我們的神以愛心賜給我們節期為著喜樂，節期和時節為著歡樂，就是這無酵餅的節日，我們自由的時節，聖潔的遇會，記念出埃及。因為你選擇了我們，從所有民族中成聖了我們，你的聖潔節期以喜樂和歡樂使我們承受產業。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "耶和華，我們的上帝，世界的王，你是當受稱頌的！你從萬民中揀選了我們，高舉我們超越萬邦，用你的誡命使我們成聖。耶和華，我們的上帝，你因著愛賜給我們喜樂的節期、歡欣的節日和時期，就是這無酵節，我們得自由的時刻，這聖會，以紀念我們出埃及的事。因為你揀選了我們，在萬民中使我們成聖，並在喜樂與歡欣中將你神聖的節期賜給我們為業。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-003": {
       "id": "haggadah:haggadah-05-003",
@@ -96486,55 +96486,55 @@
           "ordinal": 1,
           "word": "וּבְמוֹרָא",
           "trailing": "",
-          "glossZh": "並用驚恐"
+          "glossZh": "並以可畏"
         },
         {
           "ordinal": 2,
           "word": "גָּדֹל",
           "trailing": ".",
-          "glossZh": "大的"
+          "glossZh": "偉大的"
         },
         {
           "ordinal": 3,
           "word": "זוֹ",
           "trailing": "",
-          "glossZh": "這個"
+          "glossZh": "這是"
         },
         {
           "ordinal": 4,
           "word": "גִּלּוּי",
           "trailing": "",
-          "glossZh": "揭示"
+          "glossZh": "顯現"
         },
         {
           "ordinal": 5,
           "word": "שְׁכִינָה",
           "trailing": ".",
-          "glossZh": "上帝的同在"
+          "glossZh": "神聖臨在"
         },
         {
           "ordinal": 6,
           "word": "כְּמָה",
           "trailing": "",
-          "glossZh": "多少"
+          "glossZh": "如同"
         },
         {
           "ordinal": 7,
           "word": "שֶּׁנֶּאֱמַר",
           "trailing": ",",
-          "glossZh": "那…所說的"
+          "glossZh": "所記說的"
         },
         {
           "ordinal": 8,
           "word": "אוֹ",
           "trailing": "",
-          "glossZh": "或"
+          "glossZh": "或者"
         },
         {
           "ordinal": 9,
           "word": "הֲנִסָּה",
           "trailing": "",
-          "glossZh": "是否試驗"
+          "glossZh": "曾嘗試"
         },
         {
           "ordinal": 10,
@@ -96546,19 +96546,19 @@
           "ordinal": 11,
           "word": "לָבוֹא",
           "trailing": "",
-          "glossZh": "進入"
+          "glossZh": "前來"
         },
         {
           "ordinal": 12,
           "word": "לָקַחַת",
           "trailing": "",
-          "glossZh": "取出"
+          "glossZh": "去選取"
         },
         {
           "ordinal": 13,
           "word": "לוֹ",
           "trailing": "",
-          "glossZh": "給祂"
+          "glossZh": "給祂自己"
         },
         {
           "ordinal": 14,
@@ -96570,7 +96570,7 @@
           "ordinal": 15,
           "word": "מִקֶּרֶב",
           "trailing": "",
-          "glossZh": "從…中間"
+          "glossZh": "從中間"
         },
         {
           "ordinal": 16,
@@ -96588,13 +96588,13 @@
           "ordinal": 18,
           "word": "בְּאֹתֹת",
           "trailing": "",
-          "glossZh": "用記號"
+          "glossZh": "用神蹟"
         },
         {
           "ordinal": 19,
           "word": "וּבְמוֹפְתִים",
           "trailing": "",
-          "glossZh": "並用奇蹟"
+          "glossZh": "並用奇事"
         },
         {
           "ordinal": 20,
@@ -96612,7 +96612,7 @@
           "ordinal": 22,
           "word": "חֲזָקָה",
           "trailing": "",
-          "glossZh": "強大的"
+          "glossZh": "強壯的"
         },
         {
           "ordinal": 23,
@@ -96630,13 +96630,13 @@
           "ordinal": 25,
           "word": "וּבְמוֹרָאִים",
           "trailing": "",
-          "glossZh": "並用驚恐"
+          "glossZh": "並用大能"
         },
         {
           "ordinal": 26,
           "word": "גְּדוֹלִים",
           "trailing": "",
-          "glossZh": "大的"
+          "glossZh": "偉大的"
         },
         {
           "ordinal": 27,
@@ -96654,7 +96654,7 @@
           "ordinal": 29,
           "word": "עָשָׂה",
           "trailing": "",
-          "glossZh": "做"
+          "glossZh": "行作"
         },
         {
           "ordinal": 30,
@@ -96687,8 +96687,8 @@
           "glossZh": "在你眼前"
         }
       ],
-      "senseZh": "並用大驚恐——這是上帝的同在的揭示。如經上所說：「或是上帝試驗過來為他自己從一民族中間取一民族，用試驗、記號、奇蹟、戰爭、強大的手、伸出的膀臂和大驚恐，如你們的上帝耶和華在埃及為你們所做的一樣，都在你眼前。」",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "「並以大能。」這是指神聖臨在的顯現。正如經上所記：「或有上帝曾嘗試前來，用試驗、神蹟、奇事、戰爭、大能的手、伸出的膀臂和大可畏的事，從別的民族中為自己選出一個民族，如同耶和華你們的上帝在埃及、在你們眼前為你們所做的一切事嗎？」",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-043": {
       "id": "haggadah:haggadah-05-043",
@@ -96700,7 +96700,7 @@
           "ordinal": 1,
           "word": "וּבְאֹתוֹת",
           "trailing": ".",
-          "glossZh": "並用記號"
+          "glossZh": "並用神蹟"
         },
         {
           "ordinal": 2,
@@ -96712,31 +96712,31 @@
           "ordinal": 3,
           "word": "הַמַּטֶּה",
           "trailing": ",",
-          "glossZh": "杖"
+          "glossZh": "手杖"
         },
         {
           "ordinal": 4,
           "word": "כְּמָה",
           "trailing": "",
-          "glossZh": "多少"
+          "glossZh": "如同"
         },
         {
           "ordinal": 5,
           "word": "שֶּׁנֶּאֱמַר",
           "trailing": ":",
-          "glossZh": "那…所說的"
+          "glossZh": "所記說的"
         },
         {
           "ordinal": 6,
           "word": "וְאֶת",
           "trailing": "",
-          "glossZh": "並拿"
+          "glossZh": "並受詞記號"
         },
         {
           "ordinal": 7,
           "word": "הַמַּטֶּה",
           "trailing": "",
-          "glossZh": "杖"
+          "glossZh": "手杖"
         },
         {
           "ordinal": 8,
@@ -96748,7 +96748,7 @@
           "ordinal": 9,
           "word": "תִּקַּח",
           "trailing": "",
-          "glossZh": "你拿"
+          "glossZh": "你要拿取"
         },
         {
           "ordinal": 10,
@@ -96772,23 +96772,23 @@
           "ordinal": 13,
           "word": "בּוֹ",
           "trailing": "",
-          "glossZh": "它"
+          "glossZh": "用它"
         },
         {
           "ordinal": 14,
           "word": "אֶת",
           "trailing": "",
-          "glossZh": "記號"
+          "glossZh": "受詞記號"
         },
         {
           "ordinal": 15,
           "word": "הָאֹתוֹת",
           "trailing": ".",
-          "glossZh": "記號"
+          "glossZh": "神蹟"
         }
       ],
-      "senseZh": "並用記號——這是杖。如經上所說：「你要拿著這杖在你手中，用它要做這些記號。」",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "「並用神蹟。」這是指那手杖，正如經上所記：「你手裡要拿這手杖，好用它行神蹟。」",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-084": {
       "id": "haggadah:haggadah-05-084",
@@ -96800,25 +96800,25 @@
           "ordinal": 1,
           "word": "מַצָּה",
           "trailing": "",
-          "glossZh": "甘甜"
+          "glossZh": "無酵餅"
         },
         {
           "ordinal": 2,
           "word": "זוֹ",
           "trailing": "",
-          "glossZh": "這個"
+          "glossZh": "這一個"
         },
         {
           "ordinal": 3,
           "word": "שֶׁאָנוֹ",
           "trailing": "",
-          "glossZh": "那…的我們"
+          "glossZh": "那我們"
         },
         {
           "ordinal": 4,
           "word": "אוֹכְלִים",
           "trailing": ",",
-          "glossZh": "吃"
+          "glossZh": "吃著的"
         },
         {
           "ordinal": 5,
@@ -96830,13 +96830,13 @@
           "ordinal": 6,
           "word": "שׁוּם",
           "trailing": "",
-          "glossZh": "原因"
+          "glossZh": "緣故"
         },
         {
           "ordinal": 7,
           "word": "מַה",
           "trailing": "?",
-          "glossZh": "什麼？"
+          "glossZh": "什麼"
         },
         {
           "ordinal": 8,
@@ -96848,43 +96848,43 @@
           "ordinal": 9,
           "word": "שׁוּם",
           "trailing": "",
-          "glossZh": "原因"
+          "glossZh": "緣故"
         },
         {
           "ordinal": 10,
           "word": "שֶׁלֹּא",
           "trailing": "",
-          "glossZh": "那…的不"
+          "glossZh": "那不"
         },
         {
           "ordinal": 11,
           "word": "הִסְפִּיק",
           "trailing": "",
-          "glossZh": "足夠"
+          "glossZh": "來得及"
         },
         {
           "ordinal": 12,
           "word": "בְּצֵקָם",
           "trailing": "",
-          "glossZh": "在…麵糰中他們的"
+          "glossZh": "他們的麵團"
         },
         {
           "ordinal": 13,
           "word": "שֶׁל",
           "trailing": "",
-          "glossZh": "那…的"
+          "glossZh": "屬於的"
         },
         {
           "ordinal": 14,
           "word": "אֲבוֹתֵינוּ",
           "trailing": "",
-          "glossZh": "我們的父親"
+          "glossZh": "我們的祖先"
         },
         {
           "ordinal": 15,
           "word": "לְהַחֲמִיץ",
           "trailing": "",
-          "glossZh": "向…發酵"
+          "glossZh": "發酵"
         },
         {
           "ordinal": 16,
@@ -96896,49 +96896,49 @@
           "ordinal": 17,
           "word": "שֶׁנִּגְלָה",
           "trailing": "",
-          "glossZh": "那…的顯現"
+          "glossZh": "那顯現的"
         },
         {
           "ordinal": 18,
           "word": "עֲלֵיהֶם",
           "trailing": "",
-          "glossZh": "在他們身上"
+          "glossZh": "在他們之上"
         },
         {
           "ordinal": 19,
           "word": "מֶלֶךְ",
           "trailing": "",
-          "glossZh": "王"
+          "glossZh": "君王"
         },
         {
           "ordinal": 20,
           "word": "מַלְכֵי",
           "trailing": "",
-          "glossZh": "王的"
+          "glossZh": "諸王"
         },
         {
           "ordinal": 21,
           "word": "הַמְּלָכִים",
           "trailing": ",",
-          "glossZh": "這王中的王"
+          "glossZh": "萬王"
         },
         {
           "ordinal": 22,
           "word": "הַקָּדוֹשׁ",
           "trailing": "",
-          "glossZh": "這聖潔的"
+          "glossZh": "聖者"
         },
         {
           "ordinal": 23,
           "word": "בָּרוּךְ",
           "trailing": "",
-          "glossZh": "被祝福的"
+          "glossZh": "當受稱頌的"
         },
         {
           "ordinal": 24,
           "word": "הוּא",
           "trailing": ",",
-          "glossZh": "祂"
+          "glossZh": "祂自己"
         },
         {
           "ordinal": 25,
@@ -96950,37 +96950,37 @@
           "ordinal": 26,
           "word": "שֶׁנֶּאֱמַר",
           "trailing": ":",
-          "glossZh": "那…的被說"
+          "glossZh": "如所說的"
         },
         {
           "ordinal": 27,
           "word": "וַיֹּאפוּ",
           "trailing": "",
-          "glossZh": "並他們烤"
+          "glossZh": "於是他們烤"
         },
         {
           "ordinal": 28,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "（受詞記號）"
+          "glossZh": "受詞記號"
         },
         {
           "ordinal": 29,
           "word": "הַבָּצֵק",
           "trailing": "",
-          "glossZh": "這麵糰"
+          "glossZh": "麵團"
         },
         {
           "ordinal": 30,
           "word": "אֲשֶׁר",
           "trailing": "",
-          "glossZh": "那…的"
+          "glossZh": "那的"
         },
         {
           "ordinal": 31,
           "word": "הוֹצִיאוּ",
           "trailing": "",
-          "glossZh": "他們帶出"
+          "glossZh": "他們帶出來"
         },
         {
           "ordinal": 32,
@@ -96998,7 +96998,7 @@
           "ordinal": 34,
           "word": "מַצּוֹּת",
           "trailing": ",",
-          "glossZh": "甘甜"
+          "glossZh": "無酵餅"
         },
         {
           "ordinal": 35,
@@ -97010,7 +97010,7 @@
           "ordinal": 36,
           "word": "לֹא",
           "trailing": "",
-          "glossZh": "不"
+          "glossZh": "沒有"
         },
         {
           "ordinal": 37,
@@ -97028,7 +97028,7 @@
           "ordinal": 39,
           "word": "גֹרְשׁוּ",
           "trailing": "",
-          "glossZh": "他們被趕逐"
+          "glossZh": "他們被趕出"
         },
         {
           "ordinal": 40,
@@ -97040,43 +97040,43 @@
           "ordinal": 41,
           "word": "וְלֹא",
           "trailing": "",
-          "glossZh": "並不"
+          "glossZh": "並且不"
         },
         {
           "ordinal": 42,
           "word": "יָכְלוּ",
           "trailing": "",
-          "glossZh": "他們能夠"
+          "glossZh": "能夠"
         },
         {
           "ordinal": 43,
           "word": "לְהִתְמַהְמֵהַּ",
           "trailing": ",",
-          "glossZh": "向…耽擱"
+          "glossZh": "耽延"
         },
         {
           "ordinal": 44,
           "word": "וְגַם",
           "trailing": "",
-          "glossZh": "並也"
+          "glossZh": "並且也"
         },
         {
           "ordinal": 45,
           "word": "צֵדָה",
           "trailing": "",
-          "glossZh": "食物"
+          "glossZh": "糧食"
         },
         {
           "ordinal": 46,
           "word": "לֹא",
           "trailing": "",
-          "glossZh": "不"
+          "glossZh": "沒有"
         },
         {
           "ordinal": 47,
           "word": "עָשׂוּ",
           "trailing": "",
-          "glossZh": "他們做"
+          "glossZh": "他們預備"
         },
         {
           "ordinal": 48,
@@ -97085,8 +97085,8 @@
           "glossZh": "給他們"
         }
       ],
-      "senseZh": "這甘甜是我們所吃的，為什麼吃呢？因為埃及人使我們的父親在埃及所過的日子變得苦澀，如經文所說：埃及人使他們的生活因著苦工而變為苦澀，無論是泥土、磚塊，還是田間各樣的苦工，他們都被嚴酷地使役。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "我們所吃的這無酵餅，是為了什麼緣故？是因為我們祖先的麵團還來不及發酵，萬王之王、當受稱頌的聖者就向他們顯現並救贖了他們，如經上所說：『他們用從埃及帶出來的麵團烤成無酵餅，因為麵團沒有發酵；因為他們被趕出埃及，不能耽延，也沒有為自己預備任何路上的糧食。』",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-05-086": {
       "id": "haggadah:haggadah-05-086",
@@ -97712,49 +97712,49 @@
           "ordinal": 1,
           "word": "פֶּסַח",
           "trailing": "",
-          "glossZh": "越過祭"
+          "glossZh": "逾越節祭物"
         },
         {
           "ordinal": 2,
           "word": "שֶׁהָיוּ",
           "trailing": "",
-          "glossZh": "那…是"
+          "glossZh": "那當時"
         },
         {
           "ordinal": 3,
           "word": "אֲבוֹתֵינוּ",
           "trailing": "",
-          "glossZh": "我們的父親"
+          "glossZh": "我們的祖先"
         },
         {
           "ordinal": 4,
           "word": "אוֹכְלִים",
           "trailing": "",
-          "glossZh": "吃"
+          "glossZh": "吃著的"
         },
         {
           "ordinal": 5,
           "word": "בִּזְמַן",
           "trailing": "",
-          "glossZh": "在…時間"
+          "glossZh": "在當時"
         },
         {
           "ordinal": 6,
           "word": "שֶׁבֵּית",
           "trailing": "",
-          "glossZh": "那房屋"
+          "glossZh": "那殿"
         },
         {
           "ordinal": 7,
           "word": "הַמִּקְדָּשׁ",
           "trailing": "",
-          "glossZh": "這聖殿"
+          "glossZh": "聖所"
         },
         {
           "ordinal": 8,
           "word": "הָיָה",
           "trailing": "",
-          "glossZh": "是"
+          "glossZh": "曾是"
         },
         {
           "ordinal": 9,
@@ -97766,7 +97766,7 @@
           "ordinal": 10,
           "word": "עַל",
           "trailing": "",
-          "glossZh": "在"
+          "glossZh": "因為"
         },
         {
           "ordinal": 11,
@@ -97784,7 +97784,7 @@
           "ordinal": 13,
           "word": "עַל",
           "trailing": "",
-          "glossZh": "在"
+          "glossZh": "因為"
         },
         {
           "ordinal": 14,
@@ -97796,43 +97796,43 @@
           "ordinal": 15,
           "word": "שֶׁפָּסַח",
           "trailing": "",
-          "glossZh": "那…越過"
+          "glossZh": "那越過的"
         },
         {
           "ordinal": 16,
           "word": "הַקָּדוֹשׁ",
           "trailing": "",
-          "glossZh": "這聖潔的"
+          "glossZh": "聖者"
         },
         {
           "ordinal": 17,
           "word": "בָּרוּךְ",
           "trailing": "",
-          "glossZh": "被祝福的"
+          "glossZh": "當受稱頌的"
         },
         {
           "ordinal": 18,
           "word": "הוּא",
           "trailing": "",
-          "glossZh": "祂"
+          "glossZh": "祂自己"
         },
         {
           "ordinal": 19,
           "word": "עַל",
           "trailing": "",
-          "glossZh": "在"
+          "glossZh": "在之上"
         },
         {
           "ordinal": 20,
           "word": "בָּתֵּי",
           "trailing": "",
-          "glossZh": "房屋"
+          "glossZh": "諸家"
         },
         {
           "ordinal": 21,
           "word": "אֲבוֹתֵינוּ",
           "trailing": "",
-          "glossZh": "我們的父親"
+          "glossZh": "我們的祖先"
         },
         {
           "ordinal": 22,
@@ -97844,13 +97844,13 @@
           "ordinal": 23,
           "word": "שֶׁנֶּאֱמַר",
           "trailing": ":",
-          "glossZh": "那…被說"
+          "glossZh": "如所說的"
         },
         {
           "ordinal": 24,
           "word": "וַאֲמַרְתֶּם",
           "trailing": "",
-          "glossZh": "並說"
+          "glossZh": "你們要說"
         },
         {
           "ordinal": 25,
@@ -97862,13 +97862,13 @@
           "ordinal": 26,
           "word": "פֶּסַח",
           "trailing": "",
-          "glossZh": "越過祭"
+          "glossZh": "逾越節"
         },
         {
           "ordinal": 27,
           "word": "הוּא",
           "trailing": "",
-          "glossZh": "祂"
+          "glossZh": "它是"
         },
         {
           "ordinal": 28,
@@ -97880,7 +97880,7 @@
           "ordinal": 29,
           "word": "אֲשֶׁר",
           "trailing": "",
-          "glossZh": "那…的"
+          "glossZh": "那的"
         },
         {
           "ordinal": 30,
@@ -97892,25 +97892,25 @@
           "ordinal": 31,
           "word": "עַל",
           "trailing": "",
-          "glossZh": "在"
+          "glossZh": "在之上"
         },
         {
           "ordinal": 32,
           "word": "בָּתֵּי",
           "trailing": "",
-          "glossZh": "房屋"
+          "glossZh": "諸家"
         },
         {
           "ordinal": 33,
           "word": "בְנֵי",
           "trailing": "",
-          "glossZh": "兒子"
+          "glossZh": "子孫"
         },
         {
           "ordinal": 34,
           "word": "יִשְׂרָאֵל",
           "trailing": "",
-          "glossZh": "以色列人"
+          "glossZh": "以色列"
         },
         {
           "ordinal": 35,
@@ -97928,7 +97928,7 @@
           "ordinal": 37,
           "word": "אֶת",
           "trailing": "־",
-          "glossZh": "（受詞記號）"
+          "glossZh": "受詞記號"
         },
         {
           "ordinal": 38,
@@ -97940,7 +97940,7 @@
           "ordinal": 39,
           "word": "וְאֶת",
           "trailing": "־",
-          "glossZh": "並（受詞記號）"
+          "glossZh": "並受詞記號"
         },
         {
           "ordinal": 40,
@@ -97952,29 +97952,29 @@
           "ordinal": 41,
           "word": "הִצִּיל",
           "trailing": "",
-          "glossZh": "拯救"
+          "glossZh": "祂拯救"
         },
         {
           "ordinal": 42,
           "word": "וַיִּקֹּד",
           "trailing": "",
-          "glossZh": "並下拜"
+          "glossZh": "於是低頭"
         },
         {
           "ordinal": 43,
           "word": "הָעָם",
           "trailing": "",
-          "glossZh": "這百姓"
+          "glossZh": "百姓"
         },
         {
           "ordinal": 44,
           "word": "וַיִּשְׁתַּחֲווּ",
           "trailing": ".",
-          "glossZh": "並叩拜"
+          "glossZh": "並下拜"
         }
       ],
-      "senseZh": "我們的父親在聖殿存在時所吃的越過祭，是為了什麼緣故？是為了聖潔的、被祝福的主越過了我們父親在埃及的房屋，如經文所說：你們要說：這是獻給耶和華的越過祭，因為主越過了以色列人的房屋，當他擊打埃及時，拯救了我們的房屋。百姓就下拜並叩拜。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "我們祖先在聖殿還存在時所吃的逾越節祭物，是為了什麼緣故？是因為當受稱頌的聖者在埃及越過了我們祖先的房屋，如經上所說：『你們要說：這是給耶和華的逾越節祭物，當祂擊打埃及人時，祂在埃及越過了以色列子民的房屋，拯救了我們的家。』百姓於是低頭下拜。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-06-003": {
       "id": "haggadah:haggadah-06-003",
@@ -101818,7 +101818,7 @@
           "ordinal": 1,
           "word": "בְּיָד",
           "trailing": "",
-          "glossZh": "在…手中"
+          "glossZh": "用手"
         },
         {
           "ordinal": 2,
@@ -101836,19 +101836,19 @@
           "ordinal": 4,
           "word": "הַדֶּבֶר",
           "trailing": ",",
-          "glossZh": "瘟疫"
+          "glossZh": "那瘟疫"
         },
         {
           "ordinal": 5,
           "word": "כְּמָה",
           "trailing": "",
-          "glossZh": "像"
+          "glossZh": "如同"
         },
         {
           "ordinal": 6,
           "word": "שֶּׁנֶּאֱמַר",
           "trailing": ":",
-          "glossZh": "那…說"
+          "glossZh": "那所說的"
         },
         {
           "ordinal": 7,
@@ -101860,7 +101860,7 @@
           "ordinal": 8,
           "word": "יַד",
           "trailing": "־",
-          "glossZh": "手"
+          "glossZh": "…的手"
         },
         {
           "ordinal": 9,
@@ -101872,13 +101872,13 @@
           "ordinal": 10,
           "word": "הוֹיָה",
           "trailing": "",
-          "glossZh": "將是"
+          "glossZh": "臨到"
         },
         {
           "ordinal": 11,
           "word": "בְּמִקְנְךָ",
           "trailing": "",
-          "glossZh": "在…你的牲畜中"
+          "glossZh": "在你的牲畜上"
         },
         {
           "ordinal": 12,
@@ -101890,37 +101890,37 @@
           "ordinal": 13,
           "word": "בַּשָּׂדֶה",
           "trailing": ",",
-          "glossZh": "在田地中"
+          "glossZh": "在田野裡"
         },
         {
           "ordinal": 14,
           "word": "בַּסּוּסִים",
           "trailing": ",",
-          "glossZh": "在馬中"
+          "glossZh": "在馬匹上"
         },
         {
           "ordinal": 15,
           "word": "בַּחֲמֹרִים",
           "trailing": ",",
-          "glossZh": "在驢中"
+          "glossZh": "在驢子上"
         },
         {
           "ordinal": 16,
           "word": "בַּגְּמַלִים",
           "trailing": ",",
-          "glossZh": "在駱駝中"
+          "glossZh": "在駱駝上"
         },
         {
           "ordinal": 17,
           "word": "בַּבָּקָר",
           "trailing": "",
-          "glossZh": "在牛中"
+          "glossZh": "在牛群上"
         },
         {
           "ordinal": 18,
           "word": "וּבַצֹּאן",
           "trailing": ",",
-          "glossZh": "並在羊群中"
+          "glossZh": "並在羊群上"
         },
         {
           "ordinal": 19,
@@ -101941,8 +101941,8 @@
           "glossZh": "非常"
         }
       ],
-      "senseZh": "用強大的手。這是指瘟疫，正如經上所說：「看哪，耶和華的手必臨到你在田間的牲畜——馬、驢、駱駝、牛和羊，降下甚重的瘟疫。」",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "「用大能的手」，這是指瘟疫，正如經上所說：「看哪，耶和華的手臨到你在田野裡的牲畜，臨到馬、驢、駱駝、牛群和羊群，必有非常嚴重的瘟疫。」",
+      "engine": "gemini-3.5-flash"
     },
     "bible:Deut.6.12": {
       "id": "bible:Deut.6.12",
@@ -105038,7 +105038,7 @@
           "ordinal": 1,
           "word": "וְהָיָה",
           "trailing": "",
-          "glossZh": "並將要"
+          "glossZh": "而將會是"
         },
         {
           "ordinal": 2,
@@ -105062,7 +105062,7 @@
           "ordinal": 5,
           "word": "אֶל",
           "trailing": "־",
-          "glossZh": "到"
+          "glossZh": "向著"
         },
         {
           "ordinal": 6,
@@ -105104,7 +105104,7 @@
           "ordinal": 12,
           "word": "לְאַהֲבָה",
           "trailing": "",
-          "glossZh": "向…愛"
+          "glossZh": "去愛"
         },
         {
           "ordinal": 13,
@@ -105122,19 +105122,19 @@
           "ordinal": 15,
           "word": "אֱלֹהֵיכֶם",
           "trailing": "",
-          "glossZh": "你們的神"
+          "glossZh": "你們的上帝"
         },
         {
           "ordinal": 16,
           "word": "וּלְעָבְדוֹ",
           "trailing": "",
-          "glossZh": "並向…事奉祂"
+          "glossZh": "並事奉祂"
         },
         {
           "ordinal": 17,
           "word": "בְּכָל֯",
           "trailing": "־",
-          "glossZh": "在所有的"
+          "glossZh": "用所有的"
         },
         {
           "ordinal": 18,
@@ -105146,7 +105146,7 @@
           "ordinal": 19,
           "word": "וּבְכָל",
           "trailing": "־",
-          "glossZh": "並在所有的"
+          "glossZh": "並用所有的"
         },
         {
           "ordinal": 20,
@@ -105158,13 +105158,13 @@
           "ordinal": 21,
           "word": "וְנָתַתִּי",
           "trailing": "",
-          "glossZh": "並我將給予"
+          "glossZh": "我必給予"
         },
         {
           "ordinal": 22,
           "word": "מְטַר֯",
           "trailing": "־",
-          "glossZh": "雨"
+          "glossZh": "雨水"
         },
         {
           "ordinal": 23,
@@ -105176,7 +105176,7 @@
           "ordinal": 24,
           "word": "בְּעִתּוֹ֯",
           "trailing": "",
-          "glossZh": "在它的時候"
+          "glossZh": "在它按時"
         },
         {
           "ordinal": 25,
@@ -105194,13 +105194,13 @@
           "ordinal": 27,
           "word": "וְאָסַפְתָּ",
           "trailing": "",
-          "glossZh": "並我將收聚"
+          "glossZh": "你必收聚"
         },
         {
           "ordinal": 28,
           "word": "דְגָנֶֽךָ",
           "trailing": "",
-          "glossZh": "你的穀物"
+          "glossZh": "你的五穀"
         },
         {
           "ordinal": 29,
@@ -105212,19 +105212,19 @@
           "ordinal": 30,
           "word": "וְיִצְהָרֶֽךָ",
           "trailing": ":",
-          "glossZh": "並你的油"
+          "glossZh": "並你的新油"
         },
         {
           "ordinal": 31,
           "word": "וְנָתַתִּי",
           "trailing": "",
-          "glossZh": "並我將給予"
+          "glossZh": "我必給予"
         },
         {
           "ordinal": 32,
           "word": "עֵֽשֶׂב֯",
           "trailing": "",
-          "glossZh": "草"
+          "glossZh": "青草"
         },
         {
           "ordinal": 33,
@@ -105242,13 +105242,13 @@
           "ordinal": 35,
           "word": "וְאָכַלְתָּ",
           "trailing": "",
-          "glossZh": "並你將吃"
+          "glossZh": "你必吃"
         },
         {
           "ordinal": 36,
           "word": "וְשָׂבָֽעְתָּ",
           "trailing": ":",
-          "glossZh": "並你將吃飽"
+          "glossZh": "並必吃飽"
         },
         {
           "ordinal": 37,
@@ -105260,7 +105260,7 @@
           "ordinal": 38,
           "word": "לָכֶם",
           "trailing": "",
-          "glossZh": "給你們"
+          "glossZh": "為你們自己"
         },
         {
           "ordinal": 39,
@@ -105272,7 +105272,7 @@
           "ordinal": 40,
           "word": "יִ֯פְתֶּה",
           "trailing": "",
-          "glossZh": "你們的心被引偏"
+          "glossZh": "被迷惑"
         },
         {
           "ordinal": 41,
@@ -105296,37 +105296,37 @@
           "ordinal": 44,
           "word": "אֱלֹהִים֯",
           "trailing": "",
-          "glossZh": "別的神"
+          "glossZh": "上帝"
         },
         {
           "ordinal": 45,
           "word": "אֲ֯חֵרִים",
           "trailing": "",
-          "glossZh": "另外的"
+          "glossZh": "別的"
         },
         {
           "ordinal": 46,
           "word": "וְהִשְׁתַּחֲוִיתֶם",
           "trailing": "",
-          "glossZh": "並你們向他們下拜"
+          "glossZh": "並你們下拜"
         },
         {
           "ordinal": 47,
           "word": "לָהֶם",
           "trailing": ":",
-          "glossZh": "給他們"
+          "glossZh": "向他們"
         },
         {
           "ordinal": 48,
           "word": "וְחָרָה",
           "trailing": "",
-          "glossZh": "並耶和華的怒火"
+          "glossZh": "並發熱"
         },
         {
           "ordinal": 49,
           "word": "אַף",
           "trailing": "־",
-          "glossZh": "燃起"
+          "glossZh": "怒氣"
         },
         {
           "ordinal": 50,
@@ -105344,7 +105344,7 @@
           "ordinal": 52,
           "word": "וְעָצַר֯",
           "trailing": "",
-          "glossZh": "並祂將關閉"
+          "glossZh": "並祂關閉"
         },
         {
           "ordinal": 53,
@@ -105356,7 +105356,7 @@
           "ordinal": 54,
           "word": "הַשָּׁמַֽיִם",
           "trailing": "",
-          "glossZh": "天"
+          "glossZh": "諸天"
         },
         {
           "ordinal": 55,
@@ -105368,13 +105368,13 @@
           "ordinal": 56,
           "word": "יִ֯הְיֶה",
           "trailing": "",
-          "glossZh": "將有"
+          "glossZh": "將會有"
         },
         {
           "ordinal": 57,
           "word": "מָטָר",
           "trailing": "",
-          "glossZh": "雨"
+          "glossZh": "雨水"
         },
         {
           "ordinal": 58,
@@ -105392,7 +105392,7 @@
           "ordinal": 60,
           "word": "תִתֵּן",
           "trailing": "",
-          "glossZh": "將給予"
+          "glossZh": "給予"
         },
         {
           "ordinal": 61,
@@ -105404,13 +105404,13 @@
           "ordinal": 62,
           "word": "יְ֯בוּלָהּ",
           "trailing": "",
-          "glossZh": "它的出產"
+          "glossZh": "她的出產"
         },
         {
           "ordinal": 63,
           "word": "וַאֲבַדְתֶּם֯",
           "trailing": "",
-          "glossZh": "並你們將迅速滅亡"
+          "glossZh": "並你們滅亡"
         },
         {
           "ordinal": 64,
@@ -105422,19 +105422,19 @@
           "ordinal": 65,
           "word": "מֵעַל",
           "trailing": "",
-          "glossZh": "從"
+          "glossZh": "從之上"
         },
         {
           "ordinal": 66,
           "word": "הָאָֽרֶץ",
           "trailing": "",
-          "glossZh": "那美好的地"
+          "glossZh": "地"
         },
         {
           "ordinal": 67,
           "word": "הַטֹּבָה",
           "trailing": "",
-          "glossZh": "良善的"
+          "glossZh": "美好的"
         },
         {
           "ordinal": 68,
@@ -105464,7 +105464,7 @@
           "ordinal": 72,
           "word": "וְשַׂמְתֶּם֯",
           "trailing": "",
-          "glossZh": "並你們將安置"
+          "glossZh": "並你們安置"
         },
         {
           "ordinal": 73,
@@ -105476,7 +105476,7 @@
           "ordinal": 74,
           "word": "דְּבָרַי֯",
           "trailing": "",
-          "glossZh": "我的話"
+          "glossZh": "我的話語"
         },
         {
           "ordinal": 75,
@@ -105512,13 +105512,13 @@
           "ordinal": 80,
           "word": "וּקְשַׁרְתֶּם֯",
           "trailing": "",
-          "glossZh": "並你們將綁束"
+          "glossZh": "並你們綁住"
         },
         {
           "ordinal": 81,
           "word": "אֹ֯תָם",
           "trailing": "",
-          "glossZh": "它們"
+          "glossZh": "它們（受詞）"
         },
         {
           "ordinal": 82,
@@ -105542,37 +105542,37 @@
           "ordinal": 85,
           "word": "וְהָיוּ",
           "trailing": "",
-          "glossZh": "並它們將成為"
+          "glossZh": "並它們是"
         },
         {
           "ordinal": 86,
           "word": "לְטוֹטָפֹת",
           "trailing": "",
-          "glossZh": "額帶"
+          "glossZh": "作為額帶"
         },
         {
           "ordinal": 87,
           "word": "בֵּין",
           "trailing": "",
-          "glossZh": "在…之間"
+          "glossZh": "在之間"
         },
         {
           "ordinal": 88,
           "word": "עֵינֵיכֶם",
           "trailing": ":",
-          "glossZh": "你們的眼"
+          "glossZh": "你們的兩眼"
         },
         {
           "ordinal": 89,
           "word": "וְלִמַּדְתֶּם֯",
           "trailing": "",
-          "glossZh": "並你們將教導"
+          "glossZh": "並你們教導"
         },
         {
           "ordinal": 90,
           "word": "אֹ֯תָם",
           "trailing": "",
-          "glossZh": "它們"
+          "glossZh": "它們（受詞）"
         },
         {
           "ordinal": 91,
@@ -105590,13 +105590,13 @@
           "ordinal": 93,
           "word": "לְדַבֵּר",
           "trailing": "",
-          "glossZh": "向…談論"
+          "glossZh": "去說話"
         },
         {
           "ordinal": 94,
           "word": "בָּם",
           "trailing": "",
-          "glossZh": "它們"
+          "glossZh": "在它們中"
         },
         {
           "ordinal": 95,
@@ -105608,7 +105608,7 @@
           "ordinal": 96,
           "word": "בְּבֵיתֶֽךָ",
           "trailing": "",
-          "glossZh": "在你的房屋裡"
+          "glossZh": "在你的房屋"
         },
         {
           "ordinal": 97,
@@ -105638,61 +105638,61 @@
           "ordinal": 101,
           "word": "וּכְתַבְתָּם",
           "trailing": "",
-          "glossZh": "並你將書寫"
+          "glossZh": "並你書寫它們"
         },
         {
           "ordinal": 102,
           "word": "עַל",
           "trailing": "־",
-          "glossZh": "它們"
+          "glossZh": "在"
         },
         {
           "ordinal": 103,
           "word": "מְזוּזוֹת",
           "trailing": "",
-          "glossZh": "在"
+          "glossZh": "門框"
         },
         {
           "ordinal": 104,
           "word": "בֵּיתֶֽךָ",
           "trailing": "",
-          "glossZh": "門框"
+          "glossZh": "你的房屋"
         },
         {
           "ordinal": 105,
           "word": "וּבִשְׁעָרֶֽיךָ",
           "trailing": ":",
-          "glossZh": "你的房屋"
+          "glossZh": "並在你的城門"
         },
         {
           "ordinal": 106,
           "word": "לְמַֽעַן֯",
           "trailing": "",
-          "glossZh": "並在你的門"
+          "glossZh": "因著"
         },
         {
           "ordinal": 107,
           "word": "יִ֯רְבּוּ",
           "trailing": "",
-          "glossZh": "因著"
+          "glossZh": "他們增多"
         },
         {
           "ordinal": 108,
           "word": "יְמֵיכֶם",
           "trailing": "",
-          "glossZh": "你們的日子增多"
+          "glossZh": "你們的日子"
         },
         {
           "ordinal": 109,
           "word": "וִימֵי",
           "trailing": "",
-          "glossZh": "你們的日子"
+          "glossZh": "並日子的"
         },
         {
           "ordinal": 110,
           "word": "בְנֵיכֶם",
           "trailing": "",
-          "glossZh": "並你們兒子的日子"
+          "glossZh": "你們的兒子"
         },
         {
           "ordinal": 111,
@@ -105704,7 +105704,7 @@
           "ordinal": 112,
           "word": "הָאֲדָמָה",
           "trailing": "",
-          "glossZh": "地"
+          "glossZh": "地面"
         },
         {
           "ordinal": 113,
@@ -105716,7 +105716,7 @@
           "ordinal": 114,
           "word": "נִשְׁבַּע",
           "trailing": "",
-          "glossZh": "耶和華起誓"
+          "glossZh": "起誓"
         },
         {
           "ordinal": 115,
@@ -105734,7 +105734,7 @@
           "ordinal": 117,
           "word": "לָתֵת",
           "trailing": "",
-          "glossZh": "向…給予"
+          "glossZh": "去給予"
         },
         {
           "ordinal": 118,
@@ -105746,13 +105746,13 @@
           "ordinal": 119,
           "word": "כִּימֵי",
           "trailing": "",
-          "glossZh": "如同天的日子"
+          "glossZh": "如同日子的"
         },
         {
           "ordinal": 120,
           "word": "הַשָּׁמַֽיִם",
           "trailing": "",
-          "glossZh": "天"
+          "glossZh": "諸天"
         },
         {
           "ordinal": 121,
@@ -105767,8 +105767,8 @@
           "glossZh": "地"
         }
       ],
-      "senseZh": "若你們殷切聽從我今日所吩咐你們的誡命，愛你們的神耶和華並全心全性命事奉他，我必按時賜雨給你們的地，有秋雨春雨，你便能收聚你的穀物、新酒與油，也必將草賜在你的田間，你的牲畜可以吃飽。但你們要謹慎，免得你們的心被引偏，轉離去事奉別的神向他們下拜，耶和華的怒火就必向你們燃起，他必關閉天，不降雨，地也不出產，你們必快速滅亡於耶和華所給予你們那美好的地。你們要將我這些話安置在心靈上，綁束為記號在手上，作為額帶在眼間，教導你們的兒子言說這些話，無論你在家裡坐著、行走在道路上、躺下或起來時都要談論，又要將它們書寫在房屋的門框和門上，好叫你們和你們兒子的日子在地上增多，就是耶和華向你們的父親起誓要給他們的日子，如同天在地上永遠存在一樣。",
-      "engine": "claude-haiku-4-5-20251001"
+      "senseZh": "如同天在地上之日。",
+      "engine": "gemini-3.5-flash"
     },
     "haggadah:haggadah-13-002": {
       "id": "haggadah:haggadah-13-002",
@@ -108834,7 +108834,7 @@
           "ordinal": 14,
           "word": "אֱלֹהָיו",
           "trailing": ":",
-          "glossZh": "他的上帝"
+          "glossZh": "祂的上帝"
         },
         {
           "ordinal": 15,
