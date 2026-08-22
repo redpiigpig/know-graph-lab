@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "nuxt dev",
+    "_comment_dev": "Node 預設 4GB 堆積跑不動這個專案（compile 到一半 OOM，exit 134）。旗標直接交給 node 而非用 NODE_OPTIONS，因為 Windows 的 npm script 走 cmd.exe，`NODE_OPTIONS=x cmd` 那種前綴寫法不生效。",
+    "dev": "node --max-old-space-size=8192 node_modules/nuxt/bin/nuxt.mjs dev",
     "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
