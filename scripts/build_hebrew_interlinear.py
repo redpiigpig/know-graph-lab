@@ -590,7 +590,18 @@ def salvage_payload(text: str) -> dict[str, Any]:
     }
 
 
-BAD_GLOSS_RE = re.compile(r"[A-Za-z֐-׿]")
+# The model occasionally drifts out of Chinese entirely — a run produced
+# 「彼の慈愛」 (Japanese), 「並且เขา」 (Thai) and 「सारे」 (Hindi), which reached
+# the PDF as substituted Tahoma/Nirmala glyphs and tripped the font gate.
+# Reject any script that has no business in a Traditional-Chinese gloss.
+BAD_GLOSS_RE = re.compile(
+    "[A-Za-z֐-׿"      # Latin, Hebrew
+    "぀-ヿ"             # kana
+    "ऀ-ॿ"             # Devanagari
+    "฀-๿"             # Thai
+    "Ѐ-ӿ"             # Cyrillic
+    "؀-ۿ]"            # Arabic
+)
 # An ellipsis inside a gloss is legitimate and often required: 「在…手中」 for a
 # prefixed noun, 「那…的」 for a relative pronoun.  Only a gloss that is *nothing
 # but* an ellipsis carries no meaning and must be sent back.
@@ -618,6 +629,8 @@ def validate(unit: dict[str, Any], answer: dict[str, Any]) -> list[str]:
             problems.append(f"{unit['id']}：第 {index} 詞義含英文或希伯來文「{value}」")
         elif FILLER_RE.search(value):
             problems.append(f"{unit['id']}：第 {index} 詞義含佔位符「{value}」")
+        elif "(" in value or ")" in value:
+            problems.append(f"{unit['id']}：第 {index} 詞義用了半形括號「{value}」")
         elif len(value) > MAX_GLOSS_CHARS:
             problems.append(f"{unit['id']}：第 {index} 詞義過長「{value}」")
     if unit["need_sense"] and not str(answer.get("senseZh", "")).strip():
