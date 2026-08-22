@@ -4,7 +4,7 @@
 
 輪流跑三件事，跑到待辦清空或時限到：
   A. intro 補寫（scripts/hellenika_intro.py --all）
-  B. 銘文入庫即翻譯（scripts/hellenika_align.py）
+  B. 銘文入庫即翻譯（hellenika_align.py 祭儀法 ＋ hellenika_iamata.py 治癒銘文）
   C. 驗證＋commit＋push
 
 Gemini 額度用罄時 intro 會自動落到 NVIDIA；兩邊都乾就靜待下一輪
@@ -65,14 +65,15 @@ def count_pending() -> tuple[int, int]:
 
 
 def align_pending() -> tuple[int, int]:
-    """銘文逐段對照的完成度。"""
+    """銘文逐段對照的完成度（CGRN 行號式 ＋ PHI 案例式合計）。"""
     import glob
     done = total = 0
-    for f in glob.glob(os.path.join(ROOT, 'data', 'hellenika', 'sources', 'cgrn',
-                                    '*.aligned.json')):
-        d = json.loads(io.open(f, encoding='utf-8').read())
-        total += len(d['segments'])
-        done += sum(1 for s in d['segments'] if s['zh'])
+    for sub in ('cgrn', 'phi'):
+        for f in glob.glob(os.path.join(ROOT, 'data', 'hellenika', 'sources', sub,
+                                        '*.aligned.json')):
+            d = json.loads(io.open(f, encoding='utf-8').read())
+            total += len(d['segments'])
+            done += sum(1 for s in d['segments'] if s['zh'])
     return done, total
 
 
@@ -135,16 +136,20 @@ def main() -> None:
         after, total = count_pending()
         gained = after - done
 
-        # ── 任務 B：銘文入庫即翻譯 ──
+        # ── 任務 B：銘文入庫即翻譯（CGRN 祭儀法 ＋ PHI 治癒銘文）──
         ad0, at = align_pending()
         if at and ad0 < at:
-            rc, out = run([sys.executable, 'scripts/hellenika_align.py', '--all'],
-                          timeout=min(3600, max(300, deadline - time.time())))
-            tail = chr(10).join(l for l in out.splitlines()
-                                if '✓' in l or '✗' in l or '累計' in l
-                                or 'timeout' in l)[-600:]
-            if tail:
-                log(tail)
+            for script in ('scripts/hellenika_align.py', 'scripts/hellenika_iamata.py'):
+                if time.time() >= deadline:
+                    break
+                rc, out = run([sys.executable, script, '--all'],
+                              timeout=min(3600, max(300, deadline - time.time())))
+                tail = chr(10).join(l for l in out.splitlines()
+                                    if '✓' in l or '✗' in l or '累計' in l
+                                    or 'timeout' in l)[-600:]
+                if tail:
+                    log(f'[{os.path.basename(script)}]')
+                    log(tail)
         ad1, at = align_pending()
         gained += ad1 - ad0
 

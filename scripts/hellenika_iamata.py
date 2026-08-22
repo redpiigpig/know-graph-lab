@@ -41,22 +41,36 @@ SOLO_CHARS = 600
 
 
 def split_cases(doc: dict) -> list[dict]:
-    """依 (I) (II) … 切案；案前的抬頭（θεός、ἰάματα…）自成一段。"""
+    """依 (I) (II) … 切案；案前的抬頭（θεός、ἰάματα…）自成一段。
+
+    🚨 案號常出現在**行的中間**（石工不換行接著刻），此時該行在案號之前的部分
+    仍屬上一案。整行歸給新案會讓每個案界都錯一截——案 I 的結尾「三年懷胎」的
+    「懷胎」會跑到案 II 的開頭去。故在行內就地切開。
+    """
     segs: list[dict] = []
     cur = {'case': '', 'line_from': doc['lines'][0]['line'] if doc['lines'] else 0,
            'line_to': 0, 'greek': '', 'zh': ''}
+
+    def push() -> None:
+        if cur['greek'].strip():
+            segs.append(dict(cur))
+
     for l in doc['lines']:
-        m = CASE.search(l['text'])
-        if m:
-            if cur['greek'].strip():
-                segs.append(cur)
+        text, pos = l['text'], 0
+        for m in CASE.finditer(text):
+            pre = text[pos:m.start()].strip()
+            if pre:
+                cur['greek'] = (cur['greek'] + ' ' + pre).strip()
+                cur['line_to'] = l['line']
+            push()
             cur = {'case': m.group(1), 'line_from': l['line'], 'line_to': l['line'],
-                   'greek': l['text'], 'zh': ''}
-        else:
-            cur['greek'] = (cur['greek'] + ' ' + l['text']).strip()
+                   'greek': '', 'zh': ''}
+            pos = m.start()          # 案號本身留在新案開頭，便於核對
+        rest = text[pos:].strip()
+        if rest:
+            cur['greek'] = (cur['greek'] + ' ' + rest).strip()
             cur['line_to'] = l['line']
-    if cur['greek'].strip():
-        segs.append(cur)
+    push()
     for s in segs:
         s['greek'] = re.sub(r'\s+', ' ', s['greek']).strip()
     return segs
