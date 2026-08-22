@@ -76,7 +76,13 @@
                 <span>比對方式：{{ verse.matchMethod === "lemma" ? "詞位" : "字形" }}</span>
                 <span v-if="verse.reviewStatus !== 'reviewed'" class="rounded-full bg-amber-100 px-2 py-0.5 text-amber-800">待人工複核</span>
               </div>
-              <p class="greek mt-2 text-lg leading-9 break-words">{{ verse.text }}</p>
+              <p v-if="!verse.tokens?.length" class="greek mt-2 text-lg leading-9 break-words">{{ verse.text }}</p>
+              <p v-else class="mt-2 flex flex-wrap items-end gap-x-3 gap-y-2">
+                <span v-for="(token, i) in verse.tokens" :key="i" class="inline-flex flex-col items-center">
+                  <span class="greek text-lg leading-8">{{ token.word }}{{ token.trailing }}</span>
+                  <span class="text-[11px] leading-4 text-stone-500">{{ token.glossZh }}</span>
+                </span>
+              </p>
               <p v-if="verse.translationZh" class="mt-2 text-sm leading-7 text-stone-700 break-words">{{ verse.translationZh }}</p>
               <p v-else class="mt-2 text-sm text-amber-700">中譯待補</p>
             </li>
@@ -95,7 +101,13 @@
           <ol class="mt-4 space-y-3">
             <li v-for="segment in readingSegments" :key="segment.key" class="rounded-2xl border border-stone-200 bg-white p-4">
               <p class="text-[11px] font-semibold text-stone-400">{{ segment.label }}</p>
-              <p class="greek mt-1 text-lg leading-9 break-words">{{ segment.greek }}</p>
+              <p v-if="!segment.tokens.length" class="greek mt-1 text-lg leading-9 break-words">{{ segment.greek }}</p>
+              <p v-else class="mt-1 flex flex-wrap items-end gap-x-3 gap-y-2">
+                <span v-for="(token, i) in segment.tokens" :key="i" class="inline-flex flex-col items-center">
+                  <span class="greek text-lg leading-8">{{ token.word }}{{ token.trailing }}</span>
+                  <span class="text-[11px] leading-4 text-stone-500">{{ token.glossZh }}</span>
+                </span>
+              </p>
               <p v-if="segment.chinese" class="mt-2 text-sm leading-7 text-stone-700 break-words">{{ segment.chinese }}</p>
               <p v-else-if="segment.note" class="mt-2 text-xs text-stone-500">{{ segment.note }}</p>
             </li>
@@ -124,11 +136,13 @@ interface VocabularyEntry {
 }
 interface MemoryVerse {
   ref: string; corpus: string; matchMethod: string; matchCount: number;
-  text: string; translationZh: string; reviewStatus: string;
+  text: string; translationZh: string; reviewStatus: string; tokens?: Token[];
 }
+interface Token { word: string; trailing: string; glossZh: string }
 interface Segment {
   ref?: string; verse?: number; displayText?: string; sourceText?: string;
   text?: string; translationZh?: string; translationNote?: string;
+  tokens?: Token[];
 }
 interface Reading {
   kind: string; titleZh: string; titleGrc: string; source: string; wordCount: number;
@@ -180,6 +194,7 @@ const readingSegments = computed(() => {
     key: segment.ref || `${index}`,
     label: segment.ref || (segment.verse ? String(segment.verse) : `${index + 1}`),
     greek: segment.displayText || segment.text || segment.sourceText || "",
+    tokens: segment.tokens || [],
     chinese: segment.translationZh || "",
     note: segment.translationNote || "",
   }));

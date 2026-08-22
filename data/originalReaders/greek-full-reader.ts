@@ -1,5 +1,6 @@
 import masterJson from "../../output/source-cache/original-readers/greek-full/greek-reader-50-lessons.json";
 import liturgyJson from "../../output/source-cache/original-readers/greek-full/liturgy-chrysostom.json";
+import interlinearJson from "../../output/source-cache/original-readers/greek-full/interlinear.json";
 
 // The Greek master is assembled once by scripts/build_greek_reader_data.py and
 // every surface reads that one file, so this module only types and slices it.
@@ -39,10 +40,17 @@ export interface GreekMemoryVerse {
   matchCount: number;
   matchedCount: number;
   matchedTerms: string[];
+  tokens?: GreekInterlinearToken[];
   knownCoverage: number;
   memorabilityFlags: string[];
   selectionReason: string;
   reviewStatus: string;
+}
+
+export interface GreekInterlinearToken {
+  word: string;
+  trailing: string;
+  glossZh: string;
 }
 
 export interface GreekReadingSegment {
@@ -53,10 +61,12 @@ export interface GreekReadingSegment {
   translationNote?: string;
   verse?: number;
   wordCount?: number;
+  tokens?: GreekInterlinearToken[];
 }
 
 export interface GreekLessonReading {
   kind: "scripture_chapter" | "patristic_reading";
+  ordinal?: number;
   titleZh: string;
   titleGrc: string;
   difficulty: number;
@@ -165,9 +175,54 @@ function readingLabel(reading: GreekLessonReading): string {
   return reading.corpusLabel || reading.categoryLabel || "";
 }
 
+// The word-by-word layer is keyed the same way scripts/build_greek_interlinear.py
+// keys it, so a segment finds its glosses by the id the builder used and nothing
+// has to be re-tokenised here.  A segment with no entry simply shows no gloss
+// row rather than a row of blanks.
+const interlinear = (
+  interlinearJson as unknown as {
+    units: Record<string, { tokens: GreekInterlinearToken[]; translationZh?: string }>;
+  }
+).units;
+
+function attachTokens(unitId: string, segment: GreekReadingSegment): GreekReadingSegment {
+  const record = interlinear[unitId];
+  if (!record?.tokens?.length) return segment;
+  return {
+    ...segment,
+    tokens: record.tokens,
+    translationZh: segment.translationZh || record.translationZh || "",
+  };
+}
+
+function withInterlinear(lesson: GreekLesson): GreekLesson {
+  const reading = lesson.reading;
+  const isScripture = reading.kind === "scripture_chapter";
+  const rows = (isScripture ? reading.verses : reading.segments) || [];
+  const glossed = rows.map((segment) =>
+    attachTokens(
+      isScripture
+        ? `scripture:${segment.ref}`
+        : `patristic:${reading.ordinal}:${segment.ref}`,
+      segment,
+    ),
+  );
+  return {
+    ...lesson,
+    memoryVerses: lesson.memoryVerses.map((verse) => ({
+      ...verse,
+      tokens: interlinear[`memory:${verse.ref}`]?.tokens || [],
+    })),
+    reading: isScripture
+      ? { ...reading, verses: glossed }
+      : { ...reading, segments: glossed },
+  };
+}
+
 export function getGreekLesson(lesson: number): GreekLesson | null {
   if (!Number.isInteger(lesson) || lesson < 1 || lesson > master.lessons.length) return null;
-  return master.lessons.find((item) => item.lesson === lesson) ?? null;
+  const found = master.lessons.find((item) => item.lesson === lesson);
+  return found ? withInterlinear(found) : null;
 }
 
 export function listGreekLessons(): GreekLessonSummary[] {
@@ -237,6 +292,10 @@ export function getGreekLiturgy() {
     },
     summary: liturgy.summary,
     sections: liturgy.sections,
-    steps: liturgy.steps,
+    steps: liturgy.steps.map((step) => ({
+      ...step,
+      tokens: interlinear[`liturgy:${step.ordinal}`]?.tokens || [],
+      translationZh: interlinear[`liturgy:${step.ordinal}`]?.translationZh || "",
+    })),
   };
 }

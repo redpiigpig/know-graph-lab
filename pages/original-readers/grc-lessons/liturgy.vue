@@ -65,7 +65,14 @@
                 <span v-if="step.repeatCount">重複 {{ step.repeatCount }} 次</span>
                 <span class="text-stone-400" :title="step.roleEvidence">角色由排版推定</span>
               </div>
-              <p class="greek mt-2 text-lg leading-9 break-words">{{ step.displayText }}</p>
+              <p v-if="!step.tokens?.length" class="greek mt-2 text-lg leading-9 break-words">{{ step.displayText }}</p>
+              <p v-else class="mt-2 flex flex-wrap items-end gap-x-3 gap-y-2">
+                <span v-for="(token, i) in step.tokens" :key="i" class="inline-flex flex-col items-center">
+                  <span class="greek text-lg leading-8">{{ token.word }}{{ token.trailing }}</span>
+                  <span class="text-[11px] leading-4 text-stone-500">{{ token.glossZh }}</span>
+                </span>
+              </p>
+              <p v-if="step.translationZh" class="mt-2 text-sm leading-7 text-stone-700 break-words">{{ step.translationZh }}</p>
             </li>
           </ol>
         </section>
@@ -80,10 +87,12 @@
 </template>
 
 <script setup lang="ts">
+interface Token { word: string; trailing: string; glossZh: string }
 interface Step {
   ordinal: number; section: string; sectionLabel: string;
   role: string; roleLabel: string; roleEvidence: string;
   kind: string; wordCount: number; displayText: string; repeatCount?: number;
+  tokens?: Token[]; translationZh?: string;
 }
 interface Section {
   key: string; label: string; firstStep: number; lastStep: number; stepCount: number; wordCount: number;

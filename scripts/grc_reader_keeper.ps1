@@ -78,7 +78,7 @@ if ($running) {
 $glossCount = Count-Entries $glossPath 'glosses'
 if ($glossCount -lt $vocabTarget) {
     Write-Log "gloss layer at $glossCount/$vocabTarget; starting a pass"
-    Invoke-Pass 'gloss' @('scripts/build_greek_vocab_glosses.py', '--model', 'sonnet')
+    Invoke-Pass 'gloss' @('scripts/build_greek_vocab_glosses.py', '--model', 'auto')
     $glossCount = Count-Entries $glossPath 'glosses'
     Write-Log "gloss pass finished at $glossCount/$vocabTarget"
     exit 0
@@ -87,7 +87,7 @@ if ($glossCount -lt $vocabTarget) {
 $unitCount = Count-Entries $interlinearPath 'units'
 if ($unitCount -lt $unitTarget) {
     Write-Log "interlinear at $unitCount/$unitTarget units; starting a pass"
-    Invoke-Pass 'interlinear' @('scripts/build_greek_interlinear.py', '--model', 'sonnet')
+    Invoke-Pass 'interlinear' @('scripts/build_greek_interlinear.py', '--model', 'auto')
     $unitCount = Count-Entries $interlinearPath 'units'
     Write-Log "interlinear pass finished at $unitCount/$unitTarget units"
     exit 0
