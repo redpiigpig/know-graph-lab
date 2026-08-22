@@ -79,7 +79,9 @@ Contract frozen 2026-08-18; assembled 2026-08-19. See `greek-reader-contract.md`
 | Release validation | `skills/.../validate_reader_release.py --language grc` | 20 PASS / 2 FAIL, both truthful (glosses pending, memory review pending) |
 | Web reader | `data/originalReaders/greek-full-reader.ts`, `server/api/original-readers/grc-lessons/`, `pages/original-readers/grc-lessons/` | done — overview / lesson / liturgy, authenticated + noindex |
 | Tests | `tests/greek-full-reader.test.ts` | 12 tests |
-| Interlinear | `scripts/build_greek_interlinear.py` | written, not started — 2,021 units, 50,278 glossable words, 1,281 needing a whole-segment rendering |
+| Interlinear | `scripts/build_greek_interlinear.py` -> `interlinear.json` | done — 2,021/2,021 units, 50,278 glossed words, 1,281 with a whole-segment rendering |
+| Print master | `scripts/build_greek_full_reader.py` -> `output/original-readers/greek-original-reader-50-lessons.docx` | done — 763 pages, JIS B5 (515.9 x 728.5 pt), all fonts embedded, Greek set in Palatino Linotype |
+| Keeper | `scripts/grc_reader_keeper.ps1`, task `KGL_Greek_Reader_Keeper` | drove both language-model layers to completion |
 
 Source cache: `output/source-cache/original-readers/greek-full/sources/{sblgnt,swete,apostolic-fathers,first1k,liturgy,dodson}`.
 
@@ -106,7 +108,9 @@ When a layer stops advancing, probe the tiers before touching the code:
   behaved exactly this way on 2026-08-21 — still listed, still authorised, and
   never answering.
 
-Still open: the Chinese gloss layer and the interlinear layer (both quota-bound), human review of the 100 memory verses, DOCX/PDF, and audio.
+Still open: human review of the 100 memory verses (the single remaining validation failure, and one only a person can clear), and audio.
+
+The print master reuses the Hebrew builder's typesetting helpers, which means it also inherits that volume's running header and document title; `retitle()` overrides both. Without it every page of the Greek reader says it is the Hebrew one.
 
 Parsing traps this build hit, all fixed and worth remembering:
 - First1KGreek TEI prints the critical apparatus inline as `<note type="footnote">`; `itertext()` swallows it.
