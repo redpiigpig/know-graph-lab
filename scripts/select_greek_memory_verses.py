@@ -79,8 +79,12 @@ NUMERAL_RE = re.compile(r"\d")
 # A verse that is a list of names or numbers is unmemorable however well it
 # scores, and so is one that opens mid-sentence.
 LIST_MARKERS = ("υἱὸς", "υἱοῦ", "ἐγέννησεν", "ἔτη", "χιλιάδες")
+# Compile from normalised text.  Greek literals in this file are stored
+# decomposed while the verse text is normalised to NFC, so an un-normalised
+# pattern silently never matches - which is why every memorability flag came
+# back empty on the first hundred verses.
 OPENING_FORMULA_RE = re.compile(
-    r"^(καὶ )?(εἶπεν|ἐγένετο|ἀπεκρίθη|ἔφη|λέγει)", re.I
+    unicodedata.normalize("NFC", r"^(καὶ\s+)?(\S+\s+){0,2}(εἶπεν|ἐγένετο|ἀπεκρίθη|ἔφη|λέγει|ἐλάλησεν)\b")
 )
 
 
