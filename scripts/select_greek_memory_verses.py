@@ -43,6 +43,7 @@ OUTPUT = CACHE / "memory-verses.json"
 CANDIDATES_OUT = CACHE / "memory-candidates.json"
 
 LESSON_COUNT = 50
+DIVINE_FOLDED: set[str] = set()
 PER_LESSON = 2
 
 MIN_WORDS = 4
@@ -71,6 +72,7 @@ for book in PSEUDEPIGRAPHA_BOOKS:
 CORPUS_FLOORS = {"septuagint": 15, "deuterocanonical": 10, "pseudepigrapha": 5}
 
 GREEK_RE = re.compile(r"[Ͱ-Ͽἀ-῿]")
+GREEK_CAPITAL_RE = re.compile(r"[Ͱ-Ϣ᾿-῟ἈΆᾺ-ῌ]")
 # The same editorial markers the chapter plan strips: they are apparatus, not
 # Greek, and a memory verse must never be printed with them.
 SIGLA_RE = re.compile(r"[⸀⸁⸂⸃⸄⸅⸆⸇⸈⸉⸊⸋⸌⸍]")
@@ -83,6 +85,84 @@ LIST_MARKERS = ("υἱὸς", "υἱοῦ", "ἐγέννησεν", "ἔτη", "�
 # decomposed while the verse text is normalised to NFC, so an un-normalised
 # pattern silently never matches - which is why every memorability flag came
 # back empty on the first hundred verses.
+# References whose Chinese cannot be paired by verse number.  Each is a known
+# textual fact, not a gap waiting to be filled: Sirach 30-36 is transposed in the
+# Greek manuscript order Swete prints; the reader's Tobit is Sinaiticus (GII)
+# while the 1933 Anglican follows GI; and the Septuagint merges MT 9+10 and
+# splits MT 116 and 147.
+SIRACH_TRANSPOSED = range(30, 37)
+TOBIT_PAIRED_CHAPTERS = {1}
+PSALM_UNPAIRABLE = {9, 113, 114, 115, 146, 147}
+
+
+def _chinese_counts() -> dict[tuple[str, int], int]:
+    """Verse counts of the Chinese deuterocanon already exported, if any."""
+    path = CACHE / "deuterocanon-zh.json"
+    if not path.exists():
+        return {}
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    return {
+        (book["ref"].split(".")[0], book["chapter"]): book["verseCount"]
+        for book in payload["books"]
+    }
+
+
+_CHINESE_COUNTS = None
+
+
+def counts_agree(book: str, chapter: int, greek_count: int) -> bool:
+    """Whether the two editions divide this chapter the same way.
+
+    Where they do not, the verse numbers point at different text and the pair
+    would be wrong however good the Greek is, so the verse never enters the pool.
+    """
+    global _CHINESE_COUNTS
+    if _CHINESE_COUNTS is None:
+        _CHINESE_COUNTS = _chinese_counts()
+    chinese = _CHINESE_COUNTS.get((book, chapter))
+    return chinese is None or chinese == greek_count
+
+
+# Divine names are not a narrative signal - "凡事謝恩，因為這是上帝在基督耶穌裏
+# 向你們所定的旨意" is one of the best verses in the reader, and an earlier
+# version of this penalty pushed it down for containing Χριστῷ Ἰησοῦ.  Only
+# names of people and places count towards it.
+DIVINE_NAMES = {
+    "θεός",
+    "θεοῦ",
+    "θεῷ",
+    "θεόν",
+    "κύριος",
+    "κυρίου",
+    "κυρίῳ",
+    "κύριον",
+    "κύριε",
+    "χριστός",
+    "χριστοῦ",
+    "χριστῷ",
+    "χριστόν",
+    "ἰησοῦς",
+    "ἰησοῦ",
+    "ἰησοῦν",
+    "πνεῦμα",
+    "πνεύματος",
+    "πνεύματι",
+    "ὕψιστος",
+    "ὑψίστου",
+    "ὑψίστῳ",
+}
+
+
+def pairable(book: str, chapter: int) -> bool:
+    if book == "Sir":
+        return chapter not in SIRACH_TRANSPOSED
+    if book == "TobS":
+        return chapter in TOBIT_PAIRED_CHAPTERS
+    if book == "Ps":
+        return chapter not in PSALM_UNPAIRABLE
+    return True
+
+
 OPENING_FORMULA_RE = re.compile(
     unicodedata.normalize("NFC", r"^(καὶ\s+)?(\S+\s+){0,2}(εἶπεν|ἐγένετο|ἀπεκρίθη|ἔφη|λέγει|ἐλάλησεν)\b")
 )
@@ -107,6 +187,8 @@ def vocabulary_keys(entry: dict) -> set[str]:
 
 
 def verse_pool() -> list[dict]:
+    if not DIVINE_FOLDED:
+        DIVINE_FOLDED.update(fold(name) for name in DIVINE_NAMES)
     pool = []
     for book in NT_BOOKS + LXX_BOOKS + DEUTERO_BOOKS + PSEUDEPIGRAPHA_BOOKS:
         corpus = CORPUS_OF[book]
@@ -114,7 +196,16 @@ def verse_pool() -> list[dict]:
             verses = gs._sblgnt_book(book) if gs.is_new_testament(book) else gs._swete_book_cached(book)
         except (FileNotFoundError, KeyError):
             continue
+        chapter_lengths: dict[int, int] = {}
         for verse in verses:
+            chapter_lengths[verse.chapter] = chapter_lengths.get(verse.chapter, 0) + 1
+        for verse in verses:
+            if not pairable(book, verse.chapter):
+                continue
+            if corpus == "deuterocanonical" and not counts_agree(
+                book, verse.chapter, chapter_lengths[verse.chapter]
+            ):
+                continue
             tokens = [token for token in verse.tokens if GREEK_RE.search(token.text)]
             if not (MIN_WORDS <= len(tokens) <= MAX_WORDS):
                 continue
@@ -143,6 +234,19 @@ def verse_pool() -> list[dict]:
                     ),
                     "keys": keys,
                     "matchMethod": method,
+                    # A capital mid-verse usually marks a name, but it also
+                    # opens quoted speech - "αὐτῇ· Ἀγαπήσεις τὸν πλησίον σου"
+                    # is the commandment to love your neighbour, not a name.
+                    # Capitals that follow sentence or quotation punctuation
+                    # are therefore not counted.
+                    "properNames": sum(
+                        1
+                        for index, token in enumerate(tokens)
+                        if index
+                        and token.text[:1].isupper()
+                        and not tokens[index - 1].text.endswith(("·", ":", ".", ";", "—"))
+                        and fold(token.text.strip(".,·;:!?—")) not in DIVINE_FOLDED
+                    ),
                 }
             )
     return pool
@@ -164,6 +268,10 @@ def score(candidate: dict, lesson_keys: set[str], known_keys: set[str]) -> dict:
     if candidate["wordCount"] <= 5:
         flags.append("very_short")
         value -= 0.5
+    names = candidate.get("properNames", 0)
+    if names:
+        flags.append("proper_names")
+        value -= 0.7 * min(names, 3)
     if candidate["matchMethod"] == "surface":
         # Surface matching cannot see inflected forms, so an equal score means
         # a stronger verse; nudge it up rather than let lemma matching sweep.

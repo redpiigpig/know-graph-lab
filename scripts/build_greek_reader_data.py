@@ -107,13 +107,89 @@ def psalm_offset_for(book: str, chapter: int, greek_verse_count: int, rcuv: dict
     return 0, ""
 
 
-def deuterocanon_index(payload: dict) -> dict[tuple[str, int, int], str]:
+def deuterocanon_index(payload: dict) -> tuple[dict[tuple[str, int, int], str], dict[tuple[str, int], int]]:
+    """Chinese deuterocanon by reference, plus each chapter's verse count.
+
+    The count is what makes the pairing safe: the 1933 Anglican edition
+    versifies these books its own way, so a chapter is only paired verse by
+    verse when both editions agree on how many verses it has.
+    """
     index: dict[tuple[str, int, int], str] = {}
+    counts: dict[tuple[str, int], int] = {}
     for book in payload["books"]:
         osis = book["ref"].split(".")[0]
+        counts[(osis, book["chapter"])] = book["verseCount"]
         for verse in book["verses"]:
             index[(osis, book["chapter"], verse["verse"])] = verse["text"]
-    return index
+    return index, counts
+
+
+# In the Greek manuscript order that Swete prints, Sirach 30:25-33:16a and
+# 33:16b-36:10 are transposed relative to the Hebrew, Syriac and Latin order that
+# modern translations restore.  Verse numbers in that block therefore point at
+# different text in the two traditions even when the chapters have the same
+# number of verses, which is how Swete's "ὁ φοβούμενος Κύριον οὐ μὴ
+# εὐλαβηθήσεται" ended up beside the Chinese for a verse about table manners.
+SIRACH_TRANSPOSED_CHAPTERS = range(30, 37)
+
+# The reader's Tobit is the Sinaiticus recension (GII); the 1933 Anglican
+# translation follows the shorter GI / Vulgate tradition.  The two diverge in
+# content, not merely in numbering, so only the chapter whose alignment has
+# actually been checked verse by verse is paired.  Chapter 14 has the same
+# verse count in both and still says something entirely different.
+TOBIT_VERIFIED_CHAPTERS = {1}
+
+
+def deuterocanon_text(
+    book: str, chapter: int, verse: int, greek_verse_count: int, index, counts
+) -> tuple[str, str]:
+    """Return (chinese, note).  An unmatched versification yields no Chinese."""
+    if book == "TobS" and chapter not in TOBIT_VERIFIED_CHAPTERS:
+        return "", (
+            "本讀本的多比傳用西奈抄本（GII），1933 年譯本循較短的 GI／武加大傳統，"
+            "兩者內容不同傳本，節號不可互指；僅第 1 章經逐節核對後對照。"
+        )
+    if book == "Sir" and chapter in SIRACH_TRANSPOSED_CHAPTERS:
+        return "", (
+            "德訓篇 30–36 章在希臘抄本次序與復原次序之間整塊錯位，"
+            "Swete 依抄本、1933 年譯本依復原次序，節號不可互指，中譯待人工對照。"
+        )
+    chinese_count = counts.get((book, chapter))
+    if chinese_count is None:
+        return "", "1933 年聖公會本未匯入本章，中譯待補。"
+    if chinese_count != greek_verse_count:
+        return "", (
+            f"1933 年聖公會本本章 {chinese_count} 節，Swete 希臘文 {greek_verse_count} 節，"
+            "兩版分節不一致，逐節對照須人工處理，不以節號硬配。"
+        )
+    return index.get((book, chapter, verse), ""), ""
+
+
+def deutero_greek_verse_count(book: str, chapter: int) -> int:
+    """How many verses Swete prints for a deuterocanonical chapter."""
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import greek_source_texts as sources
+
+    try:
+        return len(sources.load_chapter(book, chapter))
+    except (LookupError, KeyError, FileNotFoundError):
+        return -1
+
+
+def psalm_offset_for_memory(chapter: int, rcuv: dict, scripture: dict) -> tuple[int, str]:
+    """Superscription offset for a psalm a memory verse was drawn from.
+
+    Where the Septuagint merges or splits a psalm the two editions differ by far
+    more than a heading, and no offset is correct.  Say so and withhold the
+    Chinese rather than printing a line that belongs to another verse.
+    """
+    count = deutero_greek_verse_count("Ps", chapter)
+    if count < 0:
+        return 0, ""
+    try:
+        return psalm_offset_for("Ps", chapter, count, rcuv)
+    except LookupError as error:
+        return -1, f"七十士與馬所拉本此篇分合不同，逐節對照須人工處理（{error}）。"
 
 
 def build(strict: bool = True) -> dict:
@@ -141,7 +217,11 @@ def build(strict: bool = True) -> dict:
         problems.append(f"記憶單元 {len(memory['verses'])} 節，應為 {MEMORY_TARGET}")
 
     zh = chinese_index(rcuv)
-    zh_deutero = deuterocanon_index(deutero)
+    zh_deutero, zh_deutero_counts = deuterocanon_index(deutero)
+
+    greek_counts: dict[tuple[str, int], int] = {}
+    for chapter in scripture["chapters"]:
+        greek_counts[(chapter["osisBook"], chapter["chapter"])] = chapter["verseCount"]
 
     by_lesson_vocab: dict[int, list[dict]] = {}
     for entry in vocabulary:
@@ -192,13 +272,34 @@ def build(strict: bool = True) -> dict:
             translation = verse.get("translationZh") or ""
             if not translation:
                 if verse["corpus"] in {"new-testament", "septuagint"}:
-                    translation = chinese_for(
-                        verse["book"], verse["chapter"], verse["verse"], zh
+                    # Psalms need the superscription offset as well as the
+                    # chapter crosswalk; without it the Chinese sits one verse
+                    # below the Greek for every psalm with a numbered heading.
+                    offset = 0
+                    if verse["book"] == "Ps":
+                        offset, note = psalm_offset_for_memory(
+                            verse["chapter"], rcuv, scripture
+                        )
+                        if note:
+                            verse["translationNote"] = note
+                    translation = (
+                        ""
+                        if offset < 0
+                        else chinese_for(
+                            verse["book"], verse["chapter"], verse["verse"], zh, offset
+                        )
                     )
                 elif verse["corpus"] == "deuterocanonical":
-                    translation = zh_deutero.get(
-                        (verse["book"], verse["chapter"], verse["verse"]), ""
+                    greek_count = greek_counts.get(
+                        (verse["book"], verse["chapter"]),
+                        deutero_greek_verse_count(verse["book"], verse["chapter"]),
                     )
+                    translation, note = deuterocanon_text(
+                        verse["book"], verse["chapter"], verse["verse"],
+                        greek_count, zh_deutero, zh_deutero_counts,
+                    )
+                    if note:
+                        verse["translationNote"] = note
                 if not translation:
                     unit = interlinear.get(f"memory:{verse['ref']}") or {}
                     translation = unit.get("translationZh", "")
@@ -239,15 +340,22 @@ def build(strict: bool = True) -> dict:
     # Chinese for the twenty-five chapters, verse by verse.
     chapter_zh_missing = 0
     for chapter in scripture["chapters"]:
-        offset, offset_note = psalm_offset_for(
-            chapter["osisBook"], chapter["chapter"], chapter["verseCount"], rcuv
-        )
+        try:
+            offset, offset_note = psalm_offset_for(
+                chapter["osisBook"], chapter["chapter"], chapter["verseCount"], rcuv
+            )
+        except LookupError as error:
+            offset, offset_note = -1, f"逐節對照須人工處理（{error}）。"
         if offset_note:
             chapter["verseNumberingNote"] = offset_note
         for verse in chapter["verses"]:
             if chapter["corpus"] in {"new-testament", "septuagint"}:
-                verse["translationZh"] = chinese_for(
-                    chapter["osisBook"], chapter["chapter"], verse["verse"], zh, offset
+                verse["translationZh"] = (
+                    ""
+                    if offset < 0
+                    else chinese_for(
+                        chapter["osisBook"], chapter["chapter"], verse["verse"], zh, offset
+                    )
                 )
                 target_chapter, target_verse = chapter["chapter"], verse["verse"]
                 if chapter["osisBook"] == "Ps":
@@ -261,12 +369,19 @@ def build(strict: bool = True) -> dict:
                     "translationRef": f"{chapter['osisBook']}.{target_chapter}.{target_verse}",
                     "translationRange": str(target_verse),
                 }
-                if not verse["translationZh"] and offset and verse["verse"] <= offset:
-                    verse["translationNote"] = "七十士標題節，中文本不編號"
+                if not verse["translationZh"]:
+                    if offset < 0:
+                        verse["translationNote"] = offset_note
+                    elif offset and verse["verse"] <= offset:
+                        verse["translationNote"] = "七十士標題節，中文本不編號"
             elif chapter["corpus"] == "deuterocanonical":
-                verse["translationZh"] = zh_deutero.get(
-                    (chapter["osisBook"], chapter["chapter"], verse["verse"]), ""
+                verse["translationZh"], note = deuterocanon_text(
+                    chapter["osisBook"], chapter["chapter"], verse["verse"],
+                    chapter["verseCount"] + len(chapter.get("absentVerses") or []),
+                    zh_deutero, zh_deutero_counts,
                 )
+                if note:
+                    verse["translationNote"] = note
                 verse["translationCrosswalk"] = {
                     "translationVersionCode": "cuv2010",
                     "translationRef": f"{chapter['osisBook']}.{chapter['chapter']}.{verse['verse']}",
@@ -274,7 +389,10 @@ def build(strict: bool = True) -> dict:
                     "translationSource": "1933 年聖公會出版次經（非 RCUV）",
                 }
             else:
-                verse["translationZh"] = ""
+                unit = interlinear.get(f"scripture:{verse['ref']}") or {}
+                verse["translationZh"] = unit.get("translationZh", "")
+                if verse["translationZh"]:
+                    verse["translationNote"] = "偽經無中文聖經，此為自譯。"
             if (
                 not verse["translationZh"]
                 and chapter["corpus"] != "pseudepigrapha"
