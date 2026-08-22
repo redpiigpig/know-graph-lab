@@ -95,15 +95,17 @@ export function useOriginalReaderAudio() {
     segments: OriginalReaderSegment[],
   ) {
     stop();
-    if (language === "hbo") {
-      warning.value = "為避免把現代以色列希伯來語當成聖經希伯來文，本卷不啟用裝置語音；請使用校訂音軌。";
-      return;
-    }
     if (!deviceSupported.value) {
       warning.value = "此裝置沒有可用的語音試聽功能。";
       return;
     }
-    warning.value = "裝置試聽只供定位，不代表本讀本採用的歷史發音。";
+    // The only Hebrew voice any device ships is modern Israeli, which merges ח
+    // with ḵ, drops ע and reads ק as k — exactly the contrasts BBH2 teaches.
+    // It is offered for phrasing and rhythm only, never as a pronunciation model.
+    warning.value =
+      language === "hbo"
+        ? "現代以色列語音，僅供聽出斷句與節奏；發音以 BBH2 課本音標為準。"
+        : "裝置試聽只供定位，不代表本讀本採用的歷史發音。";
     deviceQueue = segments.filter((item) => item.sourceText.trim());
     if (!deviceQueue.length) return;
     playing.value = true;

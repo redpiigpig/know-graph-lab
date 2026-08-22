@@ -109,13 +109,37 @@
               </div>
               <span class="w-fit rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-800">全文附點已核</span>
             </div>
+            <div class="mt-5 flex flex-wrap items-center gap-3 rounded-2xl border border-amber-200 bg-amber-50 p-4">
+              <button
+                type="button"
+                class="rounded-full bg-amber-700 px-4 py-2 text-sm font-semibold text-white hover:bg-amber-800 disabled:opacity-40"
+                :disabled="!audio.deviceSupported.value"
+                @click="toggleReading"
+              >{{ audio.playing.value ? "■ 停止朗讀" : "▶ 朗讀全文" }}</button>
+              <button
+                v-if="audio.playing.value"
+                type="button"
+                class="rounded-full border border-amber-300 bg-white px-4 py-2 text-sm font-semibold text-amber-900"
+                @click="audio.togglePause()"
+              >{{ audio.paused.value ? "▶ 繼續" : "❚❚ 暫停" }}</button>
+              <p class="text-xs leading-5 text-amber-950">
+                <strong>現代以色列語音</strong>，僅供聽出斷句與節奏；發音一律以 BBH2 課本音標為準，勿以此語音為發音範本。
+              </p>
+            </div>
+
             <div v-if="lessonData.reading.summaryZh" class="mt-5 rounded-2xl border border-sky-200 bg-sky-50 p-4 text-sm leading-7 text-sky-950">
               <strong>內容摘要（不是逐段翻譯）：</strong>{{ lessonData.reading.summaryZh }}
             </div>
           </header>
 
           <article class="divide-y divide-stone-200">
-            <section v-for="segment in lessonData.reading.segments" :id="segment.id" :key="segment.id" class="p-5 sm:p-7">
+            <section
+              v-for="segment in lessonData.reading.segments"
+              :id="segment.id"
+              :key="segment.id"
+              class="p-5 transition-colors sm:p-7"
+              :class="audio.currentSegmentId.value === segment.id ? 'bg-amber-50' : ''"
+            >
               <p class="mb-3 font-mono text-[11px] text-stone-400">{{ segment.ref }}</p>
               <HebrewInterlinear
                 :tokens="segment.tokens"
@@ -210,6 +234,24 @@ interface LessonDetail {
 
 const route = useRoute();
 const supabase = useSupabaseClient();
+const audio = useOriginalReaderAudio();
+
+function toggleReading() {
+  if (audio.playing.value) {
+    audio.stop();
+    return;
+  }
+  const segments = (lessonData.value?.reading.segments || []).map((segment) => ({
+    id: segment.id,
+    ordinal: segment.ordinal,
+    ref: segment.ref,
+    // Read the printed pointed text, not the source layer: the reader hears
+    // exactly the line it is looking at.
+    sourceText: segment.text,
+    translationZh: segment.translationZh,
+  }));
+  audio.playDevice("hbo", segments as never);
+}
 const lessonData = ref<LessonDetail | null>(null);
 const pending = ref(true);
 const error = ref("");
@@ -275,7 +317,10 @@ async function loadLesson() {
 }
 
 onMounted(loadLesson);
-watch(() => route.params.lesson, loadLesson);
+watch(() => route.params.lesson, () => {
+  audio.stop();
+  loadLesson();
+});
 </script>
 
 <style scoped>

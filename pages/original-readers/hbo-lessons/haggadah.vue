@@ -47,6 +47,10 @@
           </ol>
         </nav>
 
+        <p class="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-xs leading-6 text-amber-950">
+          每一步可單獨朗讀。使用的是<strong>裝置的現代以色列語音</strong>，僅供聽出斷句與節奏；發音一律以 BBH2 課本音標為準，勿以此語音為發音範本。
+        </p>
+
         <article class="mt-6 space-y-6">
           <section v-for="step in haggadah.steps" :id="`step-${step.ordinal}`" :key="step.key" class="scroll-mt-5 overflow-hidden rounded-3xl border border-stone-300 bg-[#fffdf7] shadow-sm">
             <header class="border-b border-stone-200 bg-stone-50 px-5 py-5 sm:px-7">
@@ -56,12 +60,26 @@
                   <h2 class="mt-1 font-serif text-2xl font-semibold">{{ step.titleZh }}</h2>
                   <p class="hebrew-title mt-1 text-2xl text-stone-600" dir="rtl" lang="hbo">{{ step.titleHe }}</p>
                 </div>
-                <span class="rounded-full bg-stone-200 px-2.5 py-1 text-[11px] text-stone-600">{{ step.segments.length }}段</span>
+                <div class="flex shrink-0 items-center gap-2">
+                  <button
+                    type="button"
+                    class="rounded-full bg-amber-700 px-3 py-1.5 text-xs font-semibold text-white hover:bg-amber-800 disabled:opacity-40"
+                    :disabled="!audio.deviceSupported.value"
+                    @click="toggleStep(step)"
+                  >{{ readingStep === step.key ? "■ 停止" : "▶ 朗讀本步" }}</button>
+                  <span class="rounded-full bg-stone-200 px-2.5 py-1 text-[11px] text-stone-600">{{ step.segments.length }}段</span>
+                </div>
               </div>
             </header>
 
             <div class="divide-y divide-stone-200">
-              <section v-for="segment in step.segments" :id="segment.id" :key="segment.id" class="p-5 sm:p-7">
+              <section
+                v-for="segment in step.segments"
+                :id="segment.id"
+                :key="segment.id"
+                class="p-5 transition-colors sm:p-7"
+                :class="audio.currentSegmentId.value === segment.id ? 'bg-amber-50' : ''"
+              >
                 <p class="mb-3 font-mono text-[10px] text-stone-400">{{ segment.ref }}</p>
                 <HebrewInterlinear :tokens="segment.tokens" :sense="segment.translationZh" :fallback-text="segment.text" />
               </section>
@@ -111,6 +129,31 @@ interface Haggadah {
 }
 
 const supabase = useSupabaseClient();
+const audio = useOriginalReaderAudio();
+const readingStep = ref("");
+
+function toggleStep(step: Step) {
+  if (readingStep.value === step.key) {
+    audio.stop();
+    readingStep.value = "";
+    return;
+  }
+  readingStep.value = step.key;
+  audio.playDevice(
+    "hbo",
+    step.segments.map((segment) => ({
+      id: segment.id,
+      ordinal: segment.ordinal,
+      ref: segment.ref,
+      sourceText: segment.text,
+      translationZh: segment.translationZh,
+    })) as never,
+  );
+}
+
+watch(() => audio.playing.value, (playing) => {
+  if (!playing) readingStep.value = "";
+});
 const haggadah = ref<Haggadah | null>(null);
 const pending = ref(true);
 const error = ref("");

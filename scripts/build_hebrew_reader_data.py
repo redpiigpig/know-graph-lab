@@ -577,7 +577,7 @@ def assemble() -> dict:
             "recordedTrackCount": 0,
             "profile": "biblical-masoretic-pedagogical-bbh2",
             "tracks": [],
-            "policy": "不使用現代希伯來語 TTS 冒充聖經希伯來文；校訂錄音完成前不顯示播放按鈕。",
+            "policy": "校訂錄音尚未匯入。線上朗讀使用裝置的現代以色列語音，僅供聽出斷句與節奏；發音一律以 BBH2 課本音標為準，勿以此語音為發音範本。",
         },
         "build": {
             "builder": "scripts/build_hebrew_reader_data.py",
