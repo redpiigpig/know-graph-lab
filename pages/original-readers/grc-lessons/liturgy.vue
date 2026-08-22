@@ -36,6 +36,7 @@
           <p class="rounded-2xl border border-stone-300 bg-white p-4 break-words">{{ liturgy.notes.roleDerivation }}</p>
           <p class="rounded-2xl border border-stone-300 bg-white p-4 break-words">{{ liturgy.notes.printedText }}</p>
           <p class="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-amber-900 break-words">{{ liturgy.notes.crossCheck }}</p>
+          <p v-if="audio.warning.value" class="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-amber-900 break-words">{{ audio.warning.value }}</p>
         </section>
 
         <nav class="mt-7 rounded-2xl border border-stone-300 bg-white p-4">
@@ -52,7 +53,15 @@
 
         <section v-for="section in liturgy.sections" :id="section.key" :key="section.key" class="mt-8 scroll-mt-20">
           <h2 class="font-serif text-xl font-semibold break-words">{{ section.label }}</h2>
-          <p class="mt-1 text-[11px] text-stone-500">第 {{ section.firstStep }}–{{ section.lastStep }} 段・{{ section.wordCount }} 詞</p>
+          <p class="mt-1 flex flex-wrap items-center gap-2 text-[11px] text-stone-500">
+            <span>第 {{ section.firstStep }}–{{ section.lastStep }} 段・{{ section.wordCount }} 詞</span>
+            <button
+              v-if="audio.deviceSupported.value"
+              type="button"
+              class="rounded-full border border-stone-300 px-2 py-0.5 hover:border-stone-500"
+              @click="speakSection(section.key)"
+            >朗讀本段</button>
+          </p>
           <ol class="mt-3 space-y-2">
             <li
               v-for="step in stepsOf(section.key)"
@@ -106,9 +115,19 @@ interface Liturgy {
 }
 
 const supabase = useSupabaseClient();
+// Same caveat as the lesson pages: device speech is Modern Greek and is offered
+// for orientation, never as the reader's unrecorded pronunciation track.
+const audio = useOriginalReaderAudio();
 const liturgy = ref<Liturgy | null>(null);
 const pending = ref(true);
 const error = ref("");
+
+function speakSection(sectionKey: string) {
+  audio.playDevice(
+    "grc",
+    stepsOf(sectionKey).map((step) => ({ id: String(step.ordinal), sourceText: step.displayText })) as any,
+  );
+}
 
 function stepsOf(sectionKey: string) {
   return (liturgy.value?.steps || []).filter((step) => step.section === sectionKey);

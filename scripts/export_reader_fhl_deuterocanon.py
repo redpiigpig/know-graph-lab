@@ -91,6 +91,29 @@ def parse(body: str, chapter: int) -> list[dict]:
     return verses
 
 
+def memory_chapters() -> list[dict]:
+    """Chapters the memory verses need, beyond the four read in full.
+
+    A memory verse may be drawn from anywhere in the same four books, and a
+    verse shown without its Chinese is a verse the reviewer cannot judge.
+    """
+    memory_path = ROOT / "output" / "source-cache" / "original-readers" / "greek-full" / "memory-verses.json"
+    if not memory_path.exists():
+        return []
+    by_book = {spec["ref"].split(".")[0]: spec for spec in CHAPTERS}
+    extra: dict[tuple[str, int], dict] = {}
+    for verse in json.loads(memory_path.read_text(encoding="utf-8"))["verses"]:
+        if verse["corpus"] != "deuterocanonical":
+            continue
+        base = by_book.get(verse["book"])
+        if not base or verse["chapter"] == base["chapter"]:
+            continue
+        key = (verse["book"], verse["chapter"])
+        extra.setdefault(key, {**base, "ref": f"{verse['book']}.{verse['chapter']}",
+                               "chapter": verse["chapter"]})
+    return sorted(extra.values(), key=lambda spec: (spec["fhlBook"], spec["chapter"]))
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="匯出希臘文讀本所需的 1933 聖公會次經中譯")
     parser.add_argument("--write", action="store_true", help="寫出 deuterocanon-zh.json")
@@ -98,7 +121,7 @@ def main() -> None:
 
     books = []
     total = 0
-    for spec in CHAPTERS:
+    for spec in CHAPTERS + memory_chapters():
         verses = parse(fetch(spec["fhlBook"], spec["chapter"]), spec["chapter"])
         total += len(verses)
         books.append({**spec, "verseCount": len(verses), "verses": verses})

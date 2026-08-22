@@ -127,6 +127,7 @@ def build(strict: bool = True) -> dict:
     rcuv = load(RCUV)
     deutero = load(DEUTERO_ZH)
     glosses = (load(GLOSSES, optional=True) or {}).get("glosses", {})
+    interlinear = (load(CACHE / "interlinear.json", optional=True) or {}).get("units", {})
 
     problems: list[str] = []
 
@@ -198,6 +199,9 @@ def build(strict: bool = True) -> dict:
                     translation = zh_deutero.get(
                         (verse["book"], verse["chapter"], verse["verse"]), ""
                     )
+                if not translation:
+                    unit = interlinear.get(f"memory:{verse['ref']}") or {}
+                    translation = unit.get("translationZh", "")
             memory_rows.append(
                 {
                     **verse,

@@ -75,6 +75,12 @@
                 <span>命中 {{ verse.matchCount }} 個本課生詞</span>
                 <span>比對方式：{{ verse.matchMethod === "lemma" ? "詞位" : "字形" }}</span>
                 <span v-if="verse.reviewStatus !== 'reviewed'" class="rounded-full bg-amber-100 px-2 py-0.5 text-amber-800">待人工複核</span>
+                <button
+                  v-if="audio.deviceSupported.value"
+                  type="button"
+                  class="rounded-full border border-stone-300 px-2 py-0.5 text-[11px] hover:border-stone-500"
+                  @click="speak([{ id: verse.ref, sourceText: verse.text }])"
+                >朗讀</button>
               </div>
               <p v-if="!verse.tokens?.length" class="greek mt-2 text-lg leading-9 break-words">{{ verse.text }}</p>
               <p v-else class="mt-2 flex flex-wrap items-end gap-x-3 gap-y-2">
@@ -95,6 +101,12 @@
             {{ lesson.reading.source }}
             <span v-if="lesson.reading.wordCount"> ・{{ lesson.reading.wordCount }} 詞</span>
           </p>
+          <div v-if="audio.deviceSupported.value" class="mt-2 flex flex-wrap items-center gap-2">
+            <button type="button" class="rounded-full border border-stone-300 px-3 py-1 text-xs hover:border-stone-500" @click="speakReading">朗讀全篇</button>
+            <button v-if="audio.playing.value" type="button" class="rounded-full border border-stone-300 px-3 py-1 text-xs hover:border-stone-500" @click="audio.togglePause()">{{ audio.paused.value ? "繼續" : "暫停" }}</button>
+            <button v-if="audio.playing.value" type="button" class="rounded-full border border-stone-300 px-3 py-1 text-xs hover:border-stone-500" @click="audio.stop()">停止</button>
+            <span class="text-[11px] text-amber-700">{{ audio.warning.value || "裝置語音為現代希臘語讀音，只供定位，不是本讀本採用的 Mounce Erasmian 發音。" }}</span>
+          </div>
           <p v-if="lesson.reading.numberingNote" class="mt-1 text-xs text-stone-500 break-words">{{ lesson.reading.numberingNote }}</p>
           <p v-if="lesson.reading.verseNumberingNote" class="mt-1 text-xs text-stone-500 break-words">{{ lesson.reading.verseNumberingNote }}</p>
 
@@ -158,6 +170,18 @@ interface Lesson {
 
 const route = useRoute();
 const supabase = useSupabaseClient();
+// Device speech reads Modern Greek, not the reader's Mounce Erasmian profile,
+// so it is offered as orientation only and always carries that warning.  It is
+// never presented as the reader's pronunciation track, which stays unrecorded.
+const audio = useOriginalReaderAudio();
+
+function speak(segments: { id: string; sourceText: string }[]) {
+  audio.playDevice("grc", segments as any);
+}
+
+function speakReading() {
+  speak(readingSegments.value.map((segment) => ({ id: segment.key, sourceText: segment.greek })));
+}
 const lesson = ref<Lesson | null>(null);
 const pending = ref(true);
 const error = ref("");
