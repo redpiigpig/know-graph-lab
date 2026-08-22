@@ -21,7 +21,7 @@
           <a
             :href="doc.url" target="_blank" rel="noopener"
             class="text-[11px] px-2 py-0.5 rounded bg-stone-100 text-stone-600 hover:bg-stone-200 transition"
-          >CGRN {{ doc.cgrn }} ↗</a>
+          >{{ doc.siglum }} ↗</a>
         </div>
         <div class="text-xs text-gray-400 italic break-words mb-2">{{ doc.title_en }}</div>
         <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 text-[11px] text-gray-600">
@@ -29,6 +29,12 @@
           <div v-if="doc.provenance" class="flex gap-2"><dt class="shrink-0 text-gray-400">出土地</dt><dd class="break-words">{{ doc.provenance }}</dd></div>
           <div v-if="doc.support" class="flex gap-2 sm:col-span-2"><dt class="shrink-0 text-gray-400">載體</dt><dd class="break-words">{{ doc.support }}</dd></div>
         </dl>
+      </div>
+
+      <!-- 無英譯中介的告示：這是比經由學術英譯更高的風險，讀者有權知道 -->
+      <div v-if="doc.pivot === 'none'" class="mb-4 px-3 py-2.5 bg-amber-50 border border-amber-200 rounded-lg">
+        <div class="text-[11px] font-semibold text-amber-900 mb-0.5">繁中直接譯自希臘原文</div>
+        <p class="text-[11px] text-amber-800 leading-relaxed break-words">{{ doc.pivot_note }}</p>
       </div>
 
       <!-- 欄位切換 -->
@@ -70,7 +76,9 @@
 
           <div v-else class="bg-white border border-gray-200 rounded-xl overflow-hidden">
             <div class="px-3 py-1 bg-slate-50 border-b border-gray-100 text-[10px] font-mono text-gray-400">
-              第 {{ seg.line_from }} 行起
+              <template v-if="seg.case">案 {{ seg.case }}　第 {{ seg.line_from }}–{{ seg.line_to }} 行</template>
+              <template v-else-if="!seg.case && seg.line_to">序　第 {{ seg.line_from }}–{{ seg.line_to }} 行</template>
+              <template v-else>第 {{ seg.line_from }} 行起</template>
             </div>
             <div class="grid gap-x-5 gap-y-2 px-3 py-2.5" :class="gridCls">
               <div v-if="cols.includes('greek')" class="min-w-0">
@@ -102,29 +110,33 @@
 </template>
 
 <script setup lang="ts">
-import { findAligned } from '~/data/hellenika/sources'
+import { findAligned, hasEnglish } from '~/data/hellenika/sources'
 
 definePageMeta({ middleware: 'auth' })
 
-const COLUMNS = [
+const ALL_COLUMNS = [
   { key: 'greek', label: '希臘原文' },
   { key: 'en', label: '英譯' },
   { key: 'zh', label: '繁體中文' },
-] as const
+]
 
 const route = useRoute()
 const doc = computed(() => findAligned(String(route.params.slug)))
 const translated = computed(() => doc.value?.segments.filter(s => s.zh).length ?? 0)
 const backTo = computed(() => (doc.value ? `/hellenika/greek/${doc.value.volume}` : '/hellenika'))
 
+// 無英譯中介的篇目不出英譯欄，免得整欄都是「—」
+const COLUMNS = computed(() =>
+  ALL_COLUMNS.filter(c => c.key !== 'en' || (doc.value && hasEnglish(doc.value))))
 const cols = ref<string[]>(['greek', 'en', 'zh'])
+watchEffect(() => { cols.value = COLUMNS.value.map(c => c.key) })
 const showNames = ref(false)
 
 function toggle(key: string) {
   if (cols.value.includes(key)) {
     if (cols.value.length > 1) cols.value = cols.value.filter(c => c !== key)
   } else {
-    cols.value = COLUMNS.map(c => c.key).filter(k => cols.value.includes(k) || k === key)
+    cols.value = COLUMNS.value.map(c => c.key).filter(k => cols.value.includes(k) || k === key)
   }
 }
 

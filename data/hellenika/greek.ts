@@ -851,7 +851,7 @@ export const GREEK_CANON: HellenCanon = {
             {
               title_zh: '埃庇道洛斯治癒銘文', title_orig: 'Ἰάματα / The Epidaurian Iamata',
               author: '埃庇道洛斯醫神聖所', era: '約前 350–300 年', place: '希臘‧埃庇道洛斯',
-              language: '古希臘文', extent: '現存 4 石逾 70 則', status: 'inscription',
+              language: '古希臘文', extent: '現存 4 石逾 70 則', status: 'inscription', link: '/hellenika/text/phi-28551',
               note: '古代最完整的神蹟集：某人得何病、夢見神做了什麼、醒來即癒。',
               intro: '刻在聖所大石板上的治癒紀錄，一則一案：盲人夢見神剖開眼球敷藥，醒來復明；懷胎五年的婦人夢中產子；不信的人被神當場治好並改名為「不信者」。文體固定、語氣自信，明顯是為招徠信眾而立。它與福音書的治病敘事屬同一文類，且年代早了三百年，是比較宗教研究無法迴避的一批材料。',
             },
