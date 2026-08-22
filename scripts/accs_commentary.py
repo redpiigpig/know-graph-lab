@@ -306,11 +306,21 @@ def build_rows(
 # （"19:18"、"28:6"），OCR 照樣吐成 entry，於是羅馬書（只有 16 章）被灌進 ch19–ch28
 # 的假資料。用實際章數當閘，超出的一律不進表。
 CHAPTER_COUNTS: dict[str, int] = {
+    # 舊約
     "gen": 50, "exo": 40, "lev": 27, "num": 36, "deu": 34,
     "jos": 24, "jdg": 21, "rut": 4, "1sa": 31, "2sa": 24,
-    "job": 42, "psa": 150, "isa": 66,
+    "1ki": 22, "2ki": 25, "1ch": 29, "2ch": 36,
+    "ezr": 10, "neh": 13, "est": 10,
+    "job": 42, "psa": 150, "pro": 31, "ecc": 12, "sng": 8,
+    "isa": 66, "jer": 52, "lam": 5, "ezk": 48, "dan": 12,
+    "hos": 14, "jol": 3, "amo": 9, "oba": 1, "jon": 4, "mic": 7,
+    "nam": 3, "hab": 3, "zep": 3, "hag": 2, "zec": 14, "mal": 4,
+    # 新約
     "mat": 28, "mrk": 16, "luk": 24, "jhn": 21, "act": 28,
-    "rom": 16, "heb": 13, "rev": 22,
+    "rom": 16, "1co": 16, "2co": 13, "gal": 6, "eph": 6, "php": 4,
+    "col": 4, "1th": 5, "2th": 3, "1ti": 6, "2ti": 4, "tit": 3, "phm": 1,
+    "heb": 13, "jas": 5, "1pe": 5, "2pe": 3,
+    "1jn": 5, "2jn": 1, "3jn": 1, "jud": 1, "rev": 22,
 }
 
 
@@ -332,6 +342,7 @@ def build_rows_auto(
     pericope_order: dict[int, dict[tuple[int, int], int]] = {}
     entry_counter: dict[int, dict[tuple[int, int], int]] = {}
     last_chapter = default_chapter
+    last_verses: tuple[int, int] | None = None   # 單章書用：沿用前一段節範圍
 
     for e in entries:
         body = (e.get("body") or "").strip()
@@ -341,13 +352,25 @@ def build_rows_auto(
         if parsed is None:
             continue
         chap, v1, v2 = parsed
-        if chap is None:
-            chap = last_chapter
-        if chap is None:
-            continue  # no chapter context yet → skip
         max_chap = CHAPTER_COUNTS.get(book_code)
-        if max_chap is not None and chap > max_chap:
-            continue  # 書末索引誤判成經文引用 → 丟棄，別污染正文
+        if max_chap == 1:
+            # 單章書（猶大書／約翰二三書／腓利門書／俄巴底亞書）ACCS 只印節號，所以
+            # **章一律是 1**，不能走下面「裸節沿用上一章」那條（一開頭沒有上一章會整則被丟）。
+            # OCR 常把內文引的別卷經文（如林前 3:16）誤當本段引用：帶章號的一律視為交叉
+            # 引用、沿用前一段的節範圍；裸節才是真的段落引用。
+            if chap is not None:
+                if last_verses is None:
+                    continue
+                v1, v2 = last_verses
+            chap = 1
+            last_verses = (v1, v2)
+        else:
+            if chap is None:
+                chap = last_chapter
+            if chap is None:
+                continue  # no chapter context yet → skip
+            if max_chap is not None and chap > max_chap:
+                continue  # 書末索引誤判成經文引用 → 丟棄，別污染正文
         last_chapter = chap
 
         pericope_order.setdefault(chap, {})

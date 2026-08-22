@@ -428,3 +428,23 @@ def test_build_rows_auto_routes_dot_refs_to_their_own_chapter():
     ]
     rows = build_rows_auto("heb", entries, "ACCS（希伯來書）")
     assert [r["chapter"] for r in rows] == [1, 2, 13]
+
+
+def test_single_chapter_books_keep_cross_referenced_entries_in_chapter_one():
+    """猶大書／約翰二三書／腓利門書／俄巴底亞書只有一章，ACCS 只印節號。
+    OCR 會把內文引的別卷經文（林前 3:16）誤當段落引用；那種帶章號的要沿用前一段的
+    節範圍、章固定為 1，而不是丟掉整則註釋（2026-08-22 一度誤刪 121 則真註釋）。"""
+    entries = [
+        {"ref": "3", "kind": "comment", "body": "猶 3 的註釋", "father": "俄利根"},
+        {"ref": "3:16", "kind": "comment", "body": "引了林前 3:16 的續段", "father": "俄利根"},
+        {"ref": "17-19", "kind": "comment", "body": "猶 17-19", "father": "俄利根"},
+    ]
+    rows = build_rows_auto("jud", entries, "ACCS（猶大書）")
+    assert [r["chapter"] for r in rows] == [1, 1, 1]
+    assert [(r["verse_start"], r["verse_end"]) for r in rows] == [(3, 3), (3, 3), (17, 19)]
+
+
+def test_single_chapter_book_drops_a_cross_reference_before_any_real_ref():
+    """開頭就先撞到交叉引用、還沒有可沿用的節範圍時，只能丟。"""
+    entries = [{"ref": "8:20", "kind": "comment", "body": "x", "father": "俄利根"}]
+    assert build_rows_auto("phm", entries, "vol") == []
