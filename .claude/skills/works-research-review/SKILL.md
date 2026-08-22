@@ -56,7 +56,7 @@ description: 「論文寫作」計畫的研究回顧／文獻綜述工具（/wor
 
 `/works` 的 **書籍計畫**（`kind='book'`）也能像論文計畫一樣分頁。當 `public/content/works/<slug>-materials.json` 存在時，[pages/works/[slug]/index.vue](../../../pages/works/) 顯示分頁 **研究資料 / 碩士文稿（manifest `thesis`）/ 口述訪談（`interviews:true`）/ 書摘與構思**。無 manifest 的書維持單頁筆記；dialogue 書（克里希那）維持每日對話 UI——皆不受影響（`useBookTabs = kind!=='paper' && !dialogueDays.length && materialsAvailable`）。
 
-- **檔案上 R2、線上下載**：所有研究資料原檔上傳 R2，key＝`dadaodao-materials/<相對路徑>`（bucket 私有），每件經 [server/api/works/material.get.ts](../../../server/api/works/) 簽名下載（**嚴格限定前綴**避免任意取用 bucket）。Drive 仍是 canonical（見 [[feedback_drive_canonical_storage]]），R2 是線上下載副本。
+- **檔案下載走 Drive 正本、不上 R2（2026-08 改）**：key 仍是 `dadaodao-materials/<相對路徑>`，但那是**識別碼不是儲存位置**。[server/api/works/material.get.ts](../../../server/api/works/) 先用 [research-files.ts](../../../server/utils/research-files.ts) 解到 Drive 路徑直接串流，找不到才退回 R2 簽名網址（**嚴格限定前綴**避免任意取用 bucket）。大宗掃描原檔 5.7GB 已自 R2 下架，只留 `碩士文稿/`＋`研究回顧/` 共 9.3MB 當雲端後備。Drive 是 canonical（見 [[feedback_drive_canonical_storage]]），規則見 [docs/r2-policy.md](../../../docs/r2-policy.md)。
 - **manifest schema**：`{ book, subtitle, source, note, interviews, thesis:{title,note,pdfKey,contentBase,chapters[]}, totalFiles, totalBytes, categories:[{ key,label,icon,desc, groups:[{ label, count, size, tag?, files:[{name,key,size}] }] }] }`。每個檔案都列出 `{name,key,size}`、render 成下載連結，`<details>` 折疊每組。
 - **碩士文稿分頁**：`thesis.chapters` 章節文字讀 `thesis.contentBase`（`/content/thesis/*.txt`，與 /thesis 共用），章節側欄＋`renderThesisText`，`thesis.pdfKey` 提供論文 PDF 下載。
 - **口述訪談**：沿用 `stores/thesisInterviews.ts` 的 published 清單 + `public/content/interviews/*.txt`，reader 在 [pages/works/[slug]/interview/[name].vue](../../../pages/works/)，docx 下載走 `server/api/thesis/interview-docx`。

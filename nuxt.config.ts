@@ -39,6 +39,9 @@ export default defineNuxtConfig({
     // dev 直讀 Drive，production 由 server/utils/bible-verses.ts fallback 到 R2。
     bibleVersesDir: process.env.BIBLE_VERSES_DIR || "G:/我的雲端硬碟/資料/聖經/_verses",
     photosRoot: process.env.PHOTOS_ROOT || "G:/我的雲端硬碟/資料/知識圖工作室/照片/辰瑋相片",
+    // 研究資料原檔（大愛道論文資料／印順學派與弘誓）。Drive 是正本；本機直讀 G: 槽，
+    // R2 只留雲端部署必要的小體積下載，其餘 8.5GB 掃描原檔不上 R2（見 docs/r2-policy.md）。
+    researchDataRoot: process.env.RESEARCH_DATA_ROOT || "G:/我的雲端硬碟/資料/知識圖工作室/研究資料",
     // 照片來源後端：'local'＝直讀本機 G: 槽（dev 預設）；'r2'＝雲端從 R2 讀 index + 縮圖
     // （Zeabur 設 PHOTO_BACKEND=r2，原檔仍留 Drive，只有縮圖上 R2）。見 sync_photos_to_r2.mjs。
     photoBackend: process.env.PHOTO_BACKEND || "local",

@@ -160,7 +160,7 @@
         <div class="flex-1 h-full flex items-center justify-center min-h-0 p-4" @click.self="viewerIndex = null">
           <img
             v-if="current.kind === 'image' && renderableImage(current.ext)"
-            :src="thumbUrl(current.url, 1600)"
+            :src="thumbUrl(current.url, 1024)"
             :alt="current.name"
             class="max-h-full max-w-full object-contain select-none"
             draggable="false"
@@ -313,7 +313,7 @@ function renderableImage(ext: string) {
   return [".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif", ".bmp"].includes(ext);
 }
 /** 把原檔 signed URL 改成同 endpoint 同 sig 的 thumb URL（加寬度參數）。
- *  width ∈ {240, 480, 800, 1600} — 後端白名單。 */
+ *  width ∈ {240, 480, 800, 1024} — 後端白名單。 */
 function thumbUrl(url: string, width: number): string {
   return url.replace(/\/file\?/, "/thumb?") + `&w=${width}`;
 }

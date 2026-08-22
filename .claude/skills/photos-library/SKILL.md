@@ -305,7 +305,11 @@ JSON 大致結構：
 
 **問題**：`/photos` 照片是即時從本機 `G:/…/儲存資料夾/` 讀檔串流。redpiigpig.com 部署在 **Zeabur 雲端（Linux）**，沒有 G: 槽，連 index（gitignored）都沒有 → 公開網址一張照片都看不到（結構性，非壞掉）。
 
-**方案**：比照電子書「Drive 原檔 + R2 derivatives」hybrid。**原檔留 Drive 不動（canonical）**，只把 **index + 網頁用縮圖（480w grid + 1600w lightbox）** 推到 R2；雲端從 R2 讀。看圖全程走 `/thumb` 端點（grid `thumbUrl(f.url,480)`、lightbox 1600），所以縮圖上 R2 即覆蓋整個看圖體驗。
+**方案**：比照電子書「Drive 原檔 + R2 derivatives」hybrid。**原檔留 Drive 不動（canonical）**，只把 **index + 網頁用縮圖（480w grid + 1024w lightbox）** 推到 R2；雲端從 R2 讀。看圖全程走 `/thumb` 端點（grid `thumbUrl(f.url,480)`、lightbox 1024），所以縮圖上 R2 即覆蓋整個看圖體驗。
+
+> 🚨 **燈箱是 1024 q65，不是 1600 q80**（2026-08 改）。原本 1600 q80 平均 189KB／張，76,563 張吃掉 15.8GB — 佔整個 bucket 一半以上。1024 q65 只要 31% 體積、肉眼幾乎無差。品質依寬度分級寫在 `sync_photos_to_r2.mjs` 的 `WEBP_QUALITY`。**不要再把燈箱寬度調大**，見 [docs/r2-policy.md](../../../docs/r2-policy.md)。
+
+> 🧹 縮圖會長孤兒（Drive 原檔改名／刪除後 R2 縮圖留著）。這是常態；每季跑 `python scripts/r2_reclaim.py orphans` 清。
 
 **開關**：`PHOTO_BACKEND` 環境變數 — 預設 `local`（dev 直讀 G:，零回歸）；Zeabur 設 `PHOTO_BACKEND=r2`。在 `nuxt.config` runtimeConfig（私有 `photoBackend` + `public.photoBackend` 給前端判影片占位）。
 

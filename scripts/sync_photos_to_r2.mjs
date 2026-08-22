@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Drive + R2 hybrid 同步：把 /photos 三相簿的「網頁縮圖」(480w + 1600w webp) 推到 R2，
+ * Drive + R2 hybrid 同步：把 /photos 三相簿的「網頁縮圖」(480w + 1024w webp) 推到 R2，
  * 讓 redpiigpig.com（Zeabur 雲端，無 G: 槽）也能瀏覽照片。原檔仍留 Drive（canonical）。
  *
  * 鍵與端點完全一致：
@@ -42,7 +42,7 @@ const LIB_FOLDERS = { chenwei: "辰瑋相片", training: "訓練相片", hongshi
 
 // 只同步可在 sharp 處理且雲端可顯示的圖片。HEIC/HEIF 排除（Windows sharp 無 libheif）。
 const SYNC_EXTS = new Set([".jpg", ".jpeg", ".png", ".webp", ".avif", ".bmp"]);
-const ALLOWED_WIDTHS = new Set([240, 480, 800, 1600]);
+const ALLOWED_WIDTHS = new Set([240, 480, 800, 1024]);
 const THUMB_PREFIX = "photos/thumb/";
 const INDEX_KEY = "photos/index.json";
 
@@ -78,7 +78,7 @@ const onlyLibs = argv.filter((a) => !a.startsWith("--"));
 const widthArg = argv.find((a) => a.startsWith("--widths="));
 const widths = widthArg
   ? widthArg.slice(9).split(",").map(Number).filter((w) => ALLOWED_WIDTHS.has(w))
-  : [480, 1600];
+  : [480, 1024];
 
 // ── keys（與後端 thumbCacheKey 一致）─────────────────────────────────────────
 function thumbCacheKey(parts) {
@@ -126,11 +126,14 @@ async function loadExistingKeys() {
   return set;
 }
 
+// 品質依寬度分級：縮圖牆(480)吃畫質、燈箱(1024)吃體積（1024 q65 實測約為 1600 q80 的 31%）。
+const WEBP_QUALITY = { 240: 80, 480: 80, 800: 70, 1024: 65 };
+
 async function genWebp(origPath, width) {
   return sharp(origPath, { failOn: "none" })
     .rotate()
     .resize(width, null, { fit: "inside", withoutEnlargement: true })
-    .webp({ quality: 80 })
+    .webp({ quality: WEBP_QUALITY[width] ?? 75 })
     .toBuffer();
 }
 
@@ -250,8 +253,8 @@ async function main() {
   console.log(`Images:        ${stats.total}`);
   if (DRY) {
     const objs = stats.wouldUpload;
-    // 粗估：480w ~25KB、1600w ~120KB；若兩寬都跑 → 平均 ~72KB/obj
-    const avgKB = widths.length === 2 ? 72 : widths.includes(1600) ? 120 : 25;
+    // 實測：480w ~30KB、1024w ~58KB；若兩寬都跑 → 平均 ~44KB/obj
+    const avgKB = widths.length === 2 ? 44 : widths.includes(1024) ? 58 : 30;
     console.log(`要上傳物件:    ${objs}（${widths.length} 寬 × 圖片數）`);
     console.log(`估計容量:      ~${(objs * avgKB / 1e6).toFixed(2)} GB（粗估 avg ${avgKB}KB/obj）`);
     console.log(`跳過(非圖/HEIC): ${stats.skippedExt}`);

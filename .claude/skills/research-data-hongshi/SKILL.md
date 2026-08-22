@@ -15,7 +15,7 @@ description: 「印順學派與弘誓研究資料」collection（/research-data/
 | 學團日誌 `/log` `/log/[n]` | hongshi 網頁文字 | **173 則(n=27–210)** ✅ |
 | 玄奘佛學研究學報 `/xuanzang` | **hcu.edu.tw（非 CF）** | 45 期 / **304 篇全文 ✅(100%)** |
 | 歷屆學術活動 `/meeting` `/meeting/[n]` | hongshi（經 Wayback） | **24 項** ✅（卡 `v-if=meetCount`）|
-| 福嚴會訊 `/fuyan` | 沿用 dadaodao R2 | 71 期 ✅（品質不一，舊期有雜訊）|
+| 福嚴會訊 `/fuyan` | 沿用 dadaodao 前綴（原檔在 Drive，全文在 R2） | 71 期 ✅（品質不一，舊期有雜訊）|
 
 R2 前綴：`yinshun-hongshi/<刊>/`（原檔）、`yinshun-hongshi-fulltext/<刊>/...txt`（全文）。API：`server/api/research-data/yinshun-hongshi-file.get.ts`（簽名下載）、`yinshun-hongshi-text.get.ts`（全文，pdf key→txt key）。R2 前綴限定避免任意取用。
 
@@ -27,7 +27,8 @@ R2 前綴：`yinshun-hongshi/<刊>/`（原檔）、`yinshun-hongshi-fulltext/<�
 - **限流真實且會累積成持續硬封**：整天連抓後會被**封數小時～一天**（連 40min／3h 冷卻都過不了）。平時：請求間隔 5–12s 隨機、index 回 0 → 重試＋退避、scraper auto-relaunch（headful 視窗會被誤關）。`log-page.php`／`meeting-B-page.php` 需 `Referer` 否則錯誤頁。
 - **🆘 被硬封時改走 Wayback Machine**（archive.org 非 CF）：`http://archive.org/wayback/available?url=…` 取最近快照 → `http://web.archive.org/web/<ts>id_/<url>`（`id_` raw＝無工具列原始頁）→ 純 requests。歷屆學術活動即此法（`hongshi_meeting_wayback.py`）。**限制**：PDF 與部分頁未存檔（issue 103 PDF、6 項活動頁 Wayback 沒有）。
 - **hcu.edu.tw（玄奘）不是 Cloudflare** → 純 requests（`xuanzang_journal.py`）。
-- **G: streaming mount 會中途卸載** → Drive canonical 寫入一律 best-effort try/except，R2 才是 serving store。
+- **G: streaming mount 會中途卸載** → Drive canonical 寫入一律 best-effort try/except；抓取階段先落地 `C:/tmp` staging 再搬 Drive。
+- **🚨 原檔不放 R2（2026-08 改）**：弘誓雙月刊＋玄奘佛學研究 421 檔／2.8GB 已自 R2 下架，正本只在 Drive。`yinshun-hongshi-file.get.ts` 改成 **Drive 正本 → R2 後備**（[server/utils/research-files.ts](../../../server/utils/research-files.ts)），本機跑站下載照常。全文 `yinshun-hongshi-fulltext/` 純文字仍留 R2（才 45MB）。規則見 [docs/r2-policy.md](../../../docs/r2-policy.md)。
 
 ## 抓取雷區（純函式＋測試：`scripts/hongshi.py`+test 15、`scripts/xuanzang.py`+test 8）
 - **弘誓雙月刊 PDF 檔名三變體**：`hongshi-magazine-187-DATE.pdf`／`magazine190-DATE.pdf`（無連字號）／`180hongshi-ROCDATE.pdf`（號在前）。`hongshi.magazine_issue()` 統一解析。1–79 期官網無 PDF；缺 85,177-180（源站連結 404）。

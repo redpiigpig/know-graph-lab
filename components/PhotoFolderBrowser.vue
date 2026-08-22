@@ -179,7 +179,7 @@
         <div class="flex-1 h-full flex items-center justify-center min-h-0 p-4" @click.self="viewerIndex = null">
           <img
             v-if="current.kind === 'image' && renderableImage(current.ext)"
-            :src="thumbUrl(current.url, 1600)"
+            :src="thumbUrl(current.url, 1024)"
             :alt="current.name"
             class="max-h-full max-w-full object-contain select-none"
             draggable="false"

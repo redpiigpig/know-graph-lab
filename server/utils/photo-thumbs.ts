@@ -15,7 +15,7 @@ import sharp from "sharp";
 const THUMB_CACHE_DIR = path.resolve(process.cwd(), ".cache", "thumbs");
 
 // 允許的寬度白名單（限制 enumeration、保護 cache 不爆增）
-export const ALLOWED_THUMB_WIDTHS = new Set([240, 480, 800, 1600]);
+export const ALLOWED_THUMB_WIDTHS = new Set([240, 480, 800, 1024]);
 
 export function thumbCacheKey(parts: string[]): string {
   return crypto.createHash("sha256").update(parts.join("|")).digest("hex").slice(0, 32);
