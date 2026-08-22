@@ -7,7 +7,7 @@
 
 用法： python scripts/r2_reclaim.py [orphans|thumbs|research|all] [--go]
 """
-import os, sys, json, hashlib, collections
+import os, sys, json, time, hashlib, collections
 import boto3
 from botocore.config import Config
 
@@ -42,8 +42,20 @@ def listing():
 
 def ck(parts): return hashlib.sha256("|".join(parts).encode("utf-8")).hexdigest()[:32]
 
+def get_json(key, tries=4):
+    """R2 串流讀取偶爾會中途斷（boto3 只重試 API 錯誤、不管 body 讀一半失敗）。"""
+    for attempt in range(tries):
+        try:
+            return json.loads(s3.get_object(Bucket=B, Key=key)["Body"].read())
+        except Exception as e:
+            if attempt == tries - 1:
+                raise
+            print(f"  讀 {key} 失敗（{type(e).__name__}），重試 {attempt + 2}/{tries}…", flush=True)
+            time.sleep(2 * (attempt + 1))
+
+
 def live_cachekeys():
-    idx = json.loads(s3.get_object(Bucket=B, Key="photos/index.json")["Body"].read())
+    idx = get_json("photos/index.json")
     keys = set()
     c = idx["libraries"].get("chenwei")
     if c:
