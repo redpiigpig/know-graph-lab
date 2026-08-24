@@ -21,13 +21,13 @@
   "agonothetes": "司競",
   "hierothytai": "祭祝",
   "auletai": "吹籥者",
-  "Demeter": "狄蜜特",
+  "Demeter": "得墨忒耳",
   "Hippodrome": "馬埒",
-  "Demeter at the Hippodrome": "馬埒的狄蜜特",
+  "Demeter at the Hippodrome": "馬埒的得墨忒耳",
   "Aigila": "埃吉拉",
-  "Demeter in Aigila": "埃吉拉的狄蜜特",
+  "Demeter in Aigila": "埃吉拉的得墨忒耳",
   "Ten Men": "十有司",
-  "Hermes": "赫密士",
+  "Hermes": "赫爾墨斯",
   "Great Gods": "諸大神",
   "Hagna": "至潔女神",
   "rhabdophoroi": "執杖",
@@ -86,7 +86,7 @@
    "line_from": 30,
    "greek": "χωντι, ἄγουσαι τὰ ἅρματα ἐπικείμενας κίστας ἐχούσας ἱερὰ μυστικά· εἶτεν ἁ θοιναρμόστρια ἁ εἰς Δάματρος καὶ αἱ ὑποθοιναρ- μόστριαι αἱ ἐμβεβακυῖαι, εἶτεν ἁ ἱέρεα τᾶς Δάματρος τᾶς ἐφ’ ἱπποδρόμωι, εἶτεν ἁ τᾶς ἐν Αἰγίλᾳ· ἔπειτεν αἱ ἱεραὶ κατὰ μίαν, κα- θώς κα λάχωντι, ἔπειτεν οἱ ἱεροί, καθώς κα οἱ δέκα διατάξωντι· ὁ δὲ γυναικονόμος κλαρούτω τάς τε ἱερὰς καὶ παρθένους καὶ ἐπιμέλειαν ἐχέτω, ὅπως πομπεύωντι, καθώς κα λάχωντι· ἀγέσθω δὲ ἐν τᾶι πομπᾶι καὶ τὰ θύματα, καὶ θυσάντω τᾶι μὲν Δάματρι σῦν ἐπίτοκα, Ἑρμᾶ- νι κριόν, Μεγάλοις Θεοῖς δάμαλιν, σῦν, Ἀπόλλωνι Καρνείωι κάπρον, Ἅγναι οἶν· σκανᾶν· σκανὰν δὲ μὴ ἐπιτρεπόντω οἱ ἱεροὶ μηθένα ἔχειν ἐν",
    "en": "allotted, leading the chariots with a casket set upon them containing the sacred objects. Then the female banquet-setter for (the sanctuary) of Demeter, and the assistant female banquet-setters having entered upon their office, then the priestess of Demeter at the Hippodrome, and then the (priestess of Demeter) in Aigila. Then the hierai, one by one, as allotted, then the hieroi, as the Ten Men arrange them. The gynaikonomos must allot the places of the hierai and the maidens, and is to see to it that they process as they were allotted. The sacrificial animals are also to be led in the procession, and they must sacrifice to Demeter, a pregnant sow, to Hermes, a ram, to the Great Gods, a heifer, a pig, to Apollo Karneios, a boar, and to Hagna, a sheep. Concerning Tents The hieroi must not allow anyone to have a tent in",
-   "zh": "抽籤決定，引領載有盛放聖物之箱盒的車輛。接著是狄蜜特（聖所）的女設筵人，以及已就任的助理女設筵人，接著是馬埒的狄蜜特的女祭司，然後是埃吉拉的（狄蜜特的女祭司）。然後是祠女，依抽籤結果一位接一位，然後是祠士，依十有司的安排。司婦必須為祠女與少女們抽籤分配位置，並監督她們依抽籤結果列隊行進。祭牲亦須引領於行列之中，且他們必須向狄蜜特獻祭一頭懷孕母豬，向赫密士獻祭一隻公羊，向大神獻祭一頭小母牛、一頭豬，向阿波羅‧卡爾涅伊俄斯獻祭一頭公豬，向聖潔女神獻祭一隻羊。關於帳篷　祠士不得允許任何人在"
+   "zh": "抽籤決定，引領載有盛放聖物之箱盒的車輛。接著是得墨忒耳（聖所）的女設筵人，以及已就任的助理女設筵人，接著是馬埒的得墨忒耳的女祭司，然後是埃吉拉的（得墨忒耳的女祭司）。然後是祠女，依抽籤結果一位接一位，然後是祠士，依十有司的安排。司婦必須為祠女與少女們抽籤分配位置，並監督她們依抽籤結果列隊行進。祭牲亦須引領於行列之中，且他們必須向得墨忒耳獻祭一頭懷孕母豬，向赫爾墨斯獻祭一隻公羊，向大神獻祭一頭小母牛、一頭豬，向阿波羅‧卡爾涅伊俄斯獻祭一頭公豬，向聖潔女神獻祭一隻羊。關於帳篷　祠士不得允許任何人在"
   },
   {
    "face": "Face A",
@@ -135,7 +135,7 @@
    "line_from": 65,
    "greek": "[τασ]ταθῆμεν προκαρύξαντες ἐγδόντω τὰν παροχὰν τῶν θυμάτων, ὧν δεῖ θύεσθαι καὶ παρίστασθαι ἐν τοῖς μυστηρίοις, καὶ τὰ εἰς τοὺς [καθ]αρμούς, ἐγδιδόντες, ἄν τε δοκεῖ συνφέρ[ο]ν εἶμεν [ἐπ]ὶ τὸ αὐτὸ πάντα τὰ θύματα, ἄν τε κατὰ μέρος, τῶι τὸ ἐλάχιστον ὑφισταμένωι [λά]μψεσθαι διάφορον· ἔστι δὲ ἃ δεῖ παρέχειν πρὸ τοῦ ἄρχεσθαι τῶν μυστηρίων, ἄρνας δύο λευκούς, ἐπὶ τοῦ καθαρμοῦ κριὸν εὔχρουν καί, ὅταν [ἐν] τῶι θεάτρωι καθαίρει, χοιρίσκους τρεῖς, ὑπὲρ τοὺς πρωτομύστας ἄρνας ἑκατόν, ἐν δὲ τᾶι πομπᾶι Δάματρι σῦν ἐπίτοκα, τοῖς δὲ Μεγάλοις Θεοῖς δάμαλιν διετῆ, σῦν, Ἑρμᾶνι κριόν, Ἀπόλλωνι Καρνείωι κάπρον, Ἅγναι οἶν· ὁ δὲ ἐγδεξάμενος κατεγγυεύσας ποτὶ τοὺς ἱεροὺς λα-",
    "en": "having advertised, are to contract out the supplying of sacrificial animals which must be sacrificed and presented in the mysteries and those (sacrificial animals) for the purifications, contracting out, whether it seems expedient for all the animals to be on the same contract or on separate contracts, to the one who offers to take the least sum. It is necessary to supply the following: two white lambs before the beginning of the mysteries, a ram of healthy complexion for the purification, and three little pigs when one purifies in the theater, one hundred lambs on behalf of the first-time initiates, and in the procession, for Demeter, a pregnant sow, for the Great Gods, a two-year old heifer, a pig, for Hermes, a ram, for Apollo Karneios, a boar, and for Hagna, a sheep. And the contractor, having provided guarantors to the hieroi,",
-   "zh": "應將祭牲之供應訂約外包，這些祭牲須在祕儀中獻祭並呈獻，以及那些用於淨罪之祭牲；訂約時，無論是將所有祭牲置於同一契約，或分開訂約，視何者適宜，均應交給願意接受最少金額之人。必須供應下列祭牲：祕儀開始前，兩頭白色羔羊；用於淨罪，一頭毛色健康的公羊；在劇場行淨罪禮時，三頭小豬；為首次入教者，一百頭羔羊；在遊行中，為狄蜜特，一頭懷孕的母豬；為諸大神，一頭兩歲的母犢、一頭豬；為赫密士，一頭公羊；為阿波羅‧卡爾涅伊俄斯，一頭公豬；為至潔女神，一頭綿羊。承包商在向祠士提供保證人之後，"
+   "zh": "應將祭牲之供應訂約外包，這些祭牲須在祕儀中獻祭並呈獻，以及那些用於淨罪之祭牲；訂約時，無論是將所有祭牲置於同一契約，或分開訂約，視何者適宜，均應交給願意接受最少金額之人。必須供應下列祭牲：祕儀開始前，兩頭白色羔羊；用於淨罪，一頭毛色健康的公羊；在劇場行淨罪禮時，三頭小豬；為首次入教者，一百頭羔羊；在遊行中，為得墨忒耳，一頭懷孕的母豬；為諸大神，一頭兩歲的母犢、一頭豬；為赫爾墨斯，一頭公羊；為阿波羅‧卡爾涅伊俄斯，一頭公豬；為至潔女神，一頭綿羊。承包商在向祠士提供保證人之後，"
   },
   {
    "face": "Face A",
@@ -359,7 +359,7 @@
    "line_from": 30,
    "greek": "",
    "en": "allotted, leading the chariots with a casket set upon them containing the sacred objects. Then the female banquet-setter for (the sanctuary) of Demeter, and the assistant female banquet-setters having entered upon their office, then the priestess of Demeter at the Hippodrome, and then the (priestess of Demeter) in Aigila. Then the hierai, one by one, as allotted, then the hieroi, as the Ten Men arrange them. The gynaikonomos must allot the places of the hierai and the maidens, and is to see to it that they process as they were allotted. The sacrificial animals are also to be led in the procession, and they must sacrifice to Demeter, a pregnant sow, to Hermes, a ram, to the Great Gods, a heifer, a pig, to Apollo Karneios, a boar, and to Hagna, a sheep. Concerning Tents The hieroi must not allow anyone to have a tent in",
-   "zh": "然後是狄蜜特聖所的 female banquet-setter 及其助理 female banquet-setters（已就職者），然後是馬埒的狄蜜特女祭司，然後是埃吉拉的狄蜜特女祭司。然後是祠女，按抽籤順序逐一前行，然後是祠士，按十有司的安排。司婦須為祠女與少女分配位置，並監督她們按分配的位置遊行。祭牲也須在遊行中牽引，並須向狄蜜特獻祭一頭懷孕的母豬，向赫密士獻祭一頭公羊，向諸大神獻祭一頭小母牛與一頭豬，向阿波羅‧卡爾涅伊俄斯獻祭一頭公豬，向至潔女神獻祭一頭羊。關於帳篷：祠士不得允許任何人在大於三十呎的矩形內搭建帳篷，或將獸皮或帷幕掛在帳篷周圍；在祠士劃定的區域內，非祠士不得搭建帳篷。"
+   "zh": "然後是得墨忒耳聖所的 female banquet-setter 及其助理 female banquet-setters（已就職者），然後是馬埒的得墨忒耳女祭司，然後是埃吉拉的得墨忒耳女祭司。然後是祠女，按抽籤順序逐一前行，然後是祠士，按十有司的安排。司婦須為祠女與少女分配位置，並監督她們按分配的位置遊行。祭牲也須在遊行中牽引，並須向得墨忒耳獻祭一頭懷孕的母豬，向赫爾墨斯獻祭一頭公羊，向諸大神獻祭一頭小母牛與一頭豬，向阿波羅‧卡爾涅伊俄斯獻祭一頭公豬，向至潔女神獻祭一頭羊。關於帳篷：祠士不得允許任何人在大於三十呎的矩形內搭建帳篷，或將獸皮或帷幕掛在帳篷周圍；在祠士劃定的區域內，非祠士不得搭建帳篷。"
   },
   {
    "face": "Face B",
@@ -408,7 +408,7 @@
    "line_from": 65,
    "greek": "",
    "en": "having advertised, are to contract out the supplying of sacrificial animals which must be sacrificed and presented in the mysteries and those (sacrificial animals) for the purifications, contracting out, whether it seems expedient for all the animals to be on the same contract or on separate contracts, to the one who offers to take the least sum. It is necessary to supply the following: two white lambs before the beginning of the mysteries, a ram of healthy complexion for the purification, and three little pigs when one purifies in the theater, one hundred lambs on behalf of the first-time initiates, and in the procession, for Demeter, a pregnant sow, for the Great Gods, a two-year old heifer, a pig, for Hermes, a ram, for Apollo Karneios, a boar, and for Hagna, a sheep. And the contractor, having provided guarantors to the hieroi,",
-   "zh": "經公告後，必須將祕儀中須獻祭及呈獻之祭牲及用於淨罪禮之（祭牲）之供應承包出去，無論是將所有祭牲置於同一契約或分開契約，視何者適宜而定，承包給願接受最低金額者。必須供應以下祭牲：祕儀開始前兩頭白色羔羊，用於淨罪禮之一頭毛色健康之公羊，在劇場行淨罪禮時三頭小豬，代表初次入教者之一百頭羔羊，在遊行中，為狄蜜特獻一頭懷孕母豬，為諸大神獻一頭兩歲母犢、一頭豬，為赫密士獻一頭公羊，為阿波羅‧卡爾涅伊俄斯獻一頭公豬，為至潔女神獻一頭綿羊。承包商在向祠士提供擔保人之後，"
+   "zh": "經公告後，必須將祕儀中須獻祭及呈獻之祭牲及用於淨罪禮之（祭牲）之供應承包出去，無論是將所有祭牲置於同一契約或分開契約，視何者適宜而定，承包給願接受最低金額者。必須供應以下祭牲：祕儀開始前兩頭白色羔羊，用於淨罪禮之一頭毛色健康之公羊，在劇場行淨罪禮時三頭小豬，代表初次入教者之一百頭羔羊，在遊行中，為得墨忒耳獻一頭懷孕母豬，為諸大神獻一頭兩歲母犢、一頭豬，為赫爾墨斯獻一頭公羊，為阿波羅‧卡爾涅伊俄斯獻一頭公豬，為至潔女神獻一頭綿羊。承包商在向祠士提供擔保人之後，"
   },
   {
    "face": "Face B",

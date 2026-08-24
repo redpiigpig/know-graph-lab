@@ -6,6 +6,10 @@
 是**絕對權威**（見 feedback_glossary_strict_authority）：凡表裡有的，一律照表，
 不接受本管線自譯的說法。
 
+**唯一例外見下 CORPUS_OVERRIDES**：詞庫有幾條出自聖經或通俗語境，套進希臘宗教
+語境並不合適，user 2026-08-23 定調本藏經改用中文古典學界的譯名慣例。這是
+使用者的決定，不是本管線自作主張，故明文列出並由 --fix 跳過。
+
 分工：
   · 表裡**有**的 → `--fix` 自動統一（改逐篇專名表與已譯出的譯文）
   · 表裡**沒有**的 → 只列清單交使用者定奪，**絕不自行寫進詞庫**
@@ -34,8 +38,27 @@ for _s in (sys.stdout, sys.stderr):
     except AttributeError:
         pass
 
+# ─────────────── 本藏經的譯名例外（user 2026-08-23 定調）───────────────
+# 《希臘羅馬大藏經》以**中文古典學界**的譯名慣例為準，不套用詞庫中出自聖經或
+# 通俗語境的條目。理由逐條列出，日後有人想「統一」時看得到為什麼不能統一。
+#
+# 🚨 這張表存在的意義：沒有它，任何人跑一次 --fix 就會把使用者的決定默默改回去。
+CORPUS_OVERRIDES = {
+    'hesiod':    ('赫西俄德',   '古典學界通行（商務印書館《神譜》張竹明譯本一系）'),
+    'demeter':   ('得墨忒耳',   '古典學界通行；「狄蜜特」是通俗音譯風格'),
+    'hermes':    ('赫爾墨斯',   '「赫密士」屬《赫密士文集》那一系晚期埃及—希臘的稱法，'
+                                '與奧林匹亞十二神的赫爾墨斯同名而不同脈絡'),
+    'cyrene':    ('昔蘭尼',     '「古利奈」是新約譯法（古利奈人西門，可 15:21）；'
+                                '本藏經裡它一律是古典希臘殖民城邦'),
+    'aphrodite': ('阿芙羅狄忒', '古典學界通行；「阿芙羅黛蒂」是通俗音譯風格'),
+    'artemis':   ('阿爾忒彌斯', '古典學界通行；「阿緹米絲」是通俗音譯風格'),
+    'osiris':    ('奧西里斯',   '古典學與埃及學通行'),
+    'hades':     ('哈得斯',     '古典學界通行；「黑帝斯」出自通俗與電玩語境'),
+}
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CGRN_DIR = os.path.join(ROOT, 'data', 'hellenika', 'sources', 'cgrn')
+PHI_DIR = os.path.join(ROOT, 'data', 'hellenika', 'sources', 'phi')
 CAND_OUT = os.path.join(ROOT, 'data', 'hellenika', 'glossary-candidates.md')
 
 
@@ -98,20 +121,27 @@ def lookup(en: str, gloss: dict) -> tuple[str, str] | None:
     return None
 
 
-def scan() -> tuple[list[dict], list[dict]]:
-    """回傳 (與詞庫不符者, 詞庫未收者)。"""
+def scan() -> tuple[list[dict], list[dict], list[dict]]:
+    """回傳 (與詞庫不符者, 詞庫未收者, 本藏經例外)。"""
     gloss = fetch_glossary()
-    mismatch, missing = [], []
-    for f in sorted(glob.glob(os.path.join(CGRN_DIR, '*.aligned.json'))):
+    mismatch, missing, overridden = [], [], []
+    for f in sorted(glob.glob(os.path.join(CGRN_DIR, '*.aligned.json'))
+                    + glob.glob(os.path.join(PHI_DIR, '*.aligned.json'))):
         d = json.loads(io.open(f, encoding='utf-8').read())
         for en, ours in (d.get('names') or {}).items():
+            ov = CORPUS_OVERRIDES.get(en.strip().lower())
+            if ov:
+                # 本藏經例外：以古典學譯名為準，詞庫不適用。仍檢查有沒有寫錯。
+                overridden.append({'file': f, 'title': d['title_zh'], 'en': en,
+                                   'ours': ours, 'expect': ov[0], 'why': ov[1]})
+                continue
             hit = lookup(en, gloss)
             if hit is None:
                 missing.append({'file': f, 'title': d['title_zh'], 'en': en, 'ours': ours})
             elif hit[0] != ours:
                 mismatch.append({'file': f, 'title': d['title_zh'], 'en': en,
                                  'ours': ours, 'authority': hit[0], 'table': hit[1]})
-    return mismatch, missing
+    return mismatch, missing, overridden
 
 
 def apply_fixes(mismatch: list[dict]) -> int:
@@ -173,12 +203,22 @@ def main() -> None:
         return
 
     print('拉取站上譯名表…', flush=True)
-    mismatch, missing = scan()
+    mismatch, missing, overridden = scan()
 
-    print(f'\n與詞庫不符 {len(mismatch)} 條、詞庫未收 {len(missing)} 條\n')
+    print(f'\n與詞庫不符 {len(mismatch)} 條、詞庫未收 {len(missing)} 條、'
+          f'本藏經例外 {len(overridden)} 條\n')
     for m in mismatch:
         print(f"  ✗ {m['en']}：本管線「{m['ours']}」→ 詞庫「{m['authority']}」（{m['table']}）"
               f"　［{m['title']}］")
+    seen: set[str] = set()
+    for o in overridden:
+        if o['en'] in seen:
+            continue
+        seen.add(o['en'])
+        ok = o['ours'] == o['expect']
+        print(f"  {'✓' if ok else '✗'} 〔本藏經例外〕{o['en']}：應作「{o['expect']}」"
+              + ('' if ok else f"，但檔中是「{o['ours']}」需修")
+              + f"\n      {o['why']}")
 
     if args.fix and mismatch:
         n = apply_fixes(mismatch)
