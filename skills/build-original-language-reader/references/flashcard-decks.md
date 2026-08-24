@@ -55,9 +55,18 @@ Matching runs strictest-first and refuses to guess:
    hexcode so a bad entry fails loudly. This is where the frequent core
    vocabulary lives, and where function words get their symbol —
    לֹא🚫, עַד🛑, אֲשֶׁר🔗, אֵין🕳️, לְמַ֫עַן🎯, ἵνα🎯, καί➕.
-2. **Chinese-meaning transfer** (Greek only). A Greek word whose Chinese meaning
-   a Hebrew card already carries takes that card's picture: πῦρ and אֵשׁ are both
-   「火」. Inherits the curation already done and costs nothing.
+2. **Chinese-meaning transfer**, both ways and transitive. The three decks share
+   one Traditional-Chinese gloss vocabulary, so a word whose meaning another deck
+   has already pictured takes that picture: πῦρ and אֵשׁ are both 「火」 and both
+   want the flame. Greek reads the Hebrew map, Hebrew reads the Greek map, and
+   the Greek matcher runs a second pass over its own results so volume 2 inherits
+   volume 1. Run the two matchers alternately until the counts stop moving —
+   two rounds is enough.
+
+   Keep the loop variable out of the way here. Naming it `key` shadows the
+   card's own `strong|pointed` and silently writes entries under their Chinese
+   meaning instead, which the deck builder then cannot find. The matcher now
+   asserts every key in the map resolves against the vocabulary.
 3. **Exact match on the emoji's name**, never on its tag list.
 4. **Nothing.** The card prints without a picture.
 
@@ -67,8 +76,9 @@ sweat droplets. `AMBIGUOUS_EN` additionally blocks English words whose senses
 split — "watch" the verb against the wristwatch, "bear" the verb against the
 animal — because Strong's glosses are English and English is full of them.
 
-Coverage as it stands: Hebrew 489/1000, Greek volume 1 338/1000, volume 2
-76/1000. Volume 2 is patristic vocabulary and mostly abstract. Raising coverage
+Coverage as it stands: Hebrew 579/1000, Greek volume 1 627/1000, volume 2
+293/1000, from 1,001 hand-picked overrides plus transfer. Volume 2 is patristic
+vocabulary and mostly abstract, which is why it trails. Raising coverage further
 means adding overrides, always by hand.
 
 יְהוָה is deliberately blank. Whether the Divine Name takes a picture is the
