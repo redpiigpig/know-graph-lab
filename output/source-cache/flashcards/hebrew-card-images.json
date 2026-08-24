@@ -298,6 +298,18 @@
       "source": "override",
       "glossZh": "火"
     },
+    "H1964|הֵיכָל": {
+      "hexcode": "1F3DB",
+      "file": "1F3DB.png",
+      "source": "zh_transfer",
+      "glossZh": "聖殿；宮殿"
+    },
+    "|וְ": {
+      "hexcode": "1F91D",
+      "file": "1F91D.png",
+      "source": "zh_transfer",
+      "glossZh": "和；但；又；甚至；就"
+    },
     "H2091|זָהָב": {
       "hexcode": "1F48E",
       "file": "1F48E.png",
@@ -526,6 +538,12 @@
       "source": "override",
       "glossZh": "在；於；因為；按照"
     },
+    "|עַל־דְּבַר": {
+      "hexcode": "2935",
+      "file": "2935.png",
+      "source": "zh_transfer",
+      "glossZh": "因為；由於"
+    },
     "H5973|עִם": {
       "hexcode": "1F91D",
       "file": "1F91D.png",
@@ -596,6 +614,12 @@
       "hexcode": "1F51A",
       "file": "1F51A.png",
       "source": "override",
+      "glossZh": "因此"
+    },
+    "|עַל־כֵּן": {
+      "hexcode": "1F51A",
+      "file": "1F51A.png",
+      "source": "zh_transfer",
       "glossZh": "因此"
     },
     "H3966|מְאֹד": {
@@ -700,11 +724,23 @@
       "source": "override",
       "glossZh": "血"
     },
+    "H2889|טָהוֹר": {
+      "hexcode": "1F9FC",
+      "file": "1F9FC.png",
+      "source": "zh_transfer",
+      "glossZh": "潔淨；純淨"
+    },
     "H3588|כִּי": {
       "hexcode": "2935",
       "file": "2935.png",
       "source": "override",
       "glossZh": "……的；因為；但是；除了；確實"
+    },
+    "|כִּי־אִם": {
+      "hexcode": "2194",
+      "file": "2194.png",
+      "source": "zh_transfer",
+      "glossZh": "但是；除了；只有"
     },
     "H3684|כְּסִיל": {
       "hexcode": "1F9D1",
@@ -735,6 +771,12 @@
       "file": "2753.png",
       "source": "override",
       "glossZh": "誰？"
+    },
+    "H6041|עָנִי": {
+      "hexcode": "1F573",
+      "file": "1F573.png",
+      "source": "zh_transfer",
+      "glossZh": "貧窮的；謙卑的；受苦的"
     },
     "H8081|שֶׁ֫מֶן": {
       "hexcode": "1F6E2",
@@ -873,6 +915,12 @@
       "file": "1F404.png",
       "source": "override",
       "glossZh": "牛群；牲畜"
+    },
+    "H1293|בְּרָכָה": {
+      "hexcode": "1F64C",
+      "file": "1F64C.png",
+      "source": "zh_transfer",
+      "glossZh": "祝福；禮物"
     },
     "H2005|הֵן": {
       "hexcode": "1F440",
@@ -1285,7 +1333,7 @@
     "H727|אֲרוֹן": {
       "hexcode": "26B0",
       "file": "26B0.png",
-      "source": "annotation",
+      "source": "zh_transfer",
       "glossZh": "約櫃；箱子；棺木"
     },
     "H4503|מִנְחָה": {
@@ -1573,7 +1621,7 @@
     "H6828|צָפוֹן": {
       "hexcode": "E0A0",
       "file": "E0A0.png",
-      "source": "annotation",
+      "source": "zh_transfer",
       "glossZh": "北方；北部的"
     },
     "H227|אָז": {
@@ -1654,6 +1702,12 @@
       "source": "override",
       "glossZh": "喝"
     },
+    "H8552|תָּמַם": {
+      "hexcode": "1F51A",
+      "file": "1F51A.png",
+      "source": "zh_transfer",
+      "glossZh": "完成；止息；耗盡；燒盡"
+    },
     "H3709|כַּף": {
       "hexcode": "270B",
       "file": "270B.png",
@@ -1696,6 +1750,12 @@
       "source": "override",
       "glossZh": "揭開；顯露；啟示"
     },
+    "H2891|טָהֵר": {
+      "hexcode": "1F9FC",
+      "file": "1F9FC.png",
+      "source": "zh_transfer",
+      "glossZh": "潔淨；純潔"
+    },
     "H3615|כָּלָה": {
       "hexcode": "1F51A",
       "file": "1F51A.png",
@@ -1723,7 +1783,7 @@
     "H3678|כִּסֵּא": {
       "hexcode": "1F4BA",
       "file": "1F4BA.png",
-      "source": "annotation",
+      "source": "zh_transfer",
       "glossZh": "座位；椅子；寶座"
     },
     "H4557|מִסְפָּר": {
@@ -1768,6 +1828,12 @@
       "source": "override",
       "glossZh": "殺；殺害"
     },
+    "H2895|טוֹב": {
+      "hexcode": "1F44D",
+      "file": "1F44D.png",
+      "source": "zh_transfer",
+      "glossZh": "良善；令人喜悅；歡樂；順遂"
+    },
     "H6942|קָדַשׁ": {
       "hexcode": "2728",
       "file": "2728.png",
@@ -1791,6 +1857,12 @@
       "file": "1FA93.png",
       "source": "override",
       "glossZh": "棍；杖；權杖；支派"
+    },
+    "H3282|יַ֫עַן": {
+      "hexcode": "2935",
+      "file": "2935.png",
+      "source": "zh_transfer",
+      "glossZh": "因為；由於"
     },
     "H4994|נָא": {
       "hexcode": "1F64F",
@@ -1869,6 +1941,12 @@
       "file": "E057.png",
       "source": "annotation",
       "glossZh": "嘴唇；語言；邊緣；岸邊"
+    },
+    "H270|אָחַז": {
+      "hexcode": "270A",
+      "file": "270A.png",
+      "source": "zh_transfer",
+      "glossZh": "抓住；拿取"
     },
     "H2930|טָמֵא": {
       "hexcode": "2623",
@@ -2215,7 +2293,7 @@
     "H3956|לָשׁוֹן": {
       "hexcode": "1F445",
       "file": "1F445.png",
-      "source": "annotation",
+      "source": "zh_transfer",
       "glossZh": "舌頭；語言"
     },
     "H8441|תּוֹעֵבָה": {
@@ -2257,7 +2335,7 @@
     "H4422|מָלַט": {
       "hexcode": "E247",
       "file": "E247.png",
-      "source": "annotation",
+      "source": "zh_transfer",
       "glossZh": "逃脫；逃往安全處"
     },
     "H5162|נָחַם": {
@@ -2293,7 +2371,7 @@
     "H2145|זָכָר": {
       "hexcode": "1F468",
       "file": "1F468.png",
-      "source": "annotation",
+      "source": "zh_transfer",
       "glossZh": "男人；男性"
     },
     "H2822|חֹ֫שֶׁךְ": {
@@ -2368,6 +2446,12 @@
       "source": "override",
       "glossZh": "說預言；受感說話"
     },
+    "H5027|נָבַט": {
+      "hexcode": "1F440",
+      "file": "1F440.png",
+      "source": "zh_transfer",
+      "glossZh": "觀看；注視；看哪"
+    },
     "H5462|סָגַר": {
       "hexcode": "1F512",
       "file": "1F512.png",
@@ -2389,8 +2473,20 @@
     "H1481|גּוּר": {
       "hexcode": "1F47D",
       "file": "1F47D.png",
-      "source": "annotation",
+      "source": "zh_transfer",
       "glossZh": "寄居；以外僑身分居住"
+    },
+    "H3925|לָמַד": {
+      "hexcode": "1F393",
+      "file": "1F393.png",
+      "source": "zh_transfer",
+      "glossZh": "學習；教導"
+    },
+    "H7819|שָׁחַט": {
+      "hexcode": "1F411",
+      "file": "1F411.png",
+      "source": "zh_transfer",
+      "glossZh": "宰殺"
     },
     "H269|אָחוֹת": {
       "hexcode": "1F46D",
@@ -2401,7 +2497,7 @@
     "H3671|כָּנָף": {
       "hexcode": "1FABD",
       "file": "1FABD.png",
-      "source": "annotation",
+      "source": "zh_transfer",
       "glossZh": "翅膀；邊緣；盡頭"
     },
     "H5982|עַמּוּד": {
@@ -2415,6 +2511,24 @@
       "file": "1F925.png",
       "source": "override",
       "glossZh": "謊言；欺騙；虛假"
+    },
+    "H2372|חָזָה": {
+      "hexcode": "1F440",
+      "file": "1F440.png",
+      "source": "zh_transfer",
+      "glossZh": "看見；觀看；察覺"
+    },
+    "H2470|חָלָה": {
+      "hexcode": "1F912",
+      "file": "1F912.png",
+      "source": "zh_transfer",
+      "glossZh": "軟弱；疲倦；患病"
+    },
+    "H7919|שָׂכַל": {
+      "hexcode": "1F9E9",
+      "file": "1F9E9.png",
+      "source": "zh_transfer",
+      "glossZh": "明白；領悟；使有智慧；亨通"
     },
     "H4758|מַרְאֶה": {
       "hexcode": "1F52E",
@@ -2437,7 +2551,7 @@
     "H6471|פַּ֫עַם": {
       "hexcode": "1F9B6",
       "file": "1F9B6.png",
-      "source": "annotation",
+      "source": "zh_transfer",
       "glossZh": "腳；步伐；次數"
     },
     "H5341|נָצַר": {
@@ -2464,6 +2578,30 @@
       "source": "override",
       "glossZh": "驢"
     },
+    "H5797|עֹז": {
+      "hexcode": "1F4B0",
+      "file": "1F4B0.png",
+      "source": "zh_transfer",
+      "glossZh": "力量；權能；威力"
+    },
+    "H6588|פֶּ֫שַׁע": {
+      "hexcode": "1F494",
+      "file": "1F494.png",
+      "source": "zh_transfer",
+      "glossZh": "過犯；悖逆；罪行"
+    },
+    "H8057|שִׂמְחָה": {
+      "hexcode": "1F973",
+      "file": "1F973.png",
+      "source": "zh_transfer",
+      "glossZh": "喜樂；歡欣"
+    },
+    "H8549|תָּמִים": {
+      "hexcode": "1F4CA",
+      "file": "1F4CA.png",
+      "source": "zh_transfer",
+      "glossZh": "完全；無可指摘；誠實；虔誠"
+    },
     "H2490|חָלַל": {
       "hexcode": "2623",
       "file": "2623.png",
@@ -2488,10 +2626,52 @@
       "source": "override",
       "glossZh": "投擲；扔下；拋開；丟棄"
     },
+    "H1847|דַּ֫עַת": {
+      "hexcode": "1F9E0",
+      "file": "1F9E0.png",
+      "source": "zh_transfer",
+      "glossZh": "知識；理解；能力"
+    },
+    "H1817|דֶּ֫לֶת": {
+      "hexcode": "1F6AA",
+      "file": "1F6AA.png",
+      "source": "zh_transfer",
+      "glossZh": "門"
+    },
+    "H1995|הָמוֹן": {
+      "hexcode": "1F465",
+      "file": "1F465.png",
+      "source": "zh_transfer",
+      "glossZh": "群眾；眾多；喧聲；轟鳴"
+    },
+    "H2931|טָמֵא": {
+      "hexcode": "2623",
+      "file": "2623.png",
+      "source": "zh_transfer",
+      "glossZh": "不潔淨的"
+    },
+    "H226|אוֹת": {
+      "hexcode": "2728",
+      "file": "2728.png",
+      "source": "zh_transfer",
+      "glossZh": "記號；標記；憑據"
+    },
+    "H3444|יְשׁוּעָה": {
+      "hexcode": "1F6DF",
+      "file": "1F6DF.png",
+      "source": "zh_transfer",
+      "glossZh": "救恩；幫助；拯救"
+    },
+    "H4735|מִקְנֶה": {
+      "hexcode": "1F403",
+      "file": "1F403.png",
+      "source": "zh_transfer",
+      "glossZh": "牲畜；家畜；財產"
+    },
     "H4931|מִשְׁמֶ֫רֶת": {
-      "hexcode": "1F482",
-      "file": "1F482.png",
-      "source": "annotation",
+      "hexcode": "1F6E1",
+      "file": "1F6E1.png",
+      "source": "zh_transfer",
       "glossZh": "看守；守衛；職責"
     },
     "H6862|צַר": {
@@ -2500,22 +2680,34 @@
       "source": "override",
       "glossZh": "敵手；仇敵"
     },
+    "H6924|קֶ֫דֶם": {
+      "hexcode": "1F305",
+      "file": "1F305.png",
+      "source": "zh_transfer",
+      "glossZh": "東方；古時"
+    },
+    "H7133|קָרְבָּן": {
+      "hexcode": "1F381",
+      "file": "1F381.png",
+      "source": "zh_transfer",
+      "glossZh": "禮物；供物；祭物"
+    },
     "H990|בֶּ֫טֶן": {
       "hexcode": "E313",
       "file": "E313.png",
-      "source": "annotation",
+      "source": "zh_transfer",
       "glossZh": "腹部；胃；子宮"
     },
     "H4217|מִזְרָח": {
       "hexcode": "1F305",
       "file": "1F305.png",
-      "source": "annotation",
+      "source": "zh_transfer",
       "glossZh": "東方；日出之處"
     },
     "H5795|עֵז": {
       "hexcode": "1F410",
       "file": "1F410.png",
-      "source": "annotation",
+      "source": "zh_transfer",
       "glossZh": "山羊；山羊毛"
     },
     "H6419|פָּלַל": {
@@ -2542,11 +2734,35 @@
       "source": "override",
       "glossZh": "鐵"
     },
+    "H5707|עֵד": {
+      "hexcode": "1F5E3",
+      "file": "1F5E3.png",
+      "source": "zh_transfer",
+      "glossZh": "見證人"
+    },
+    "H6869|צָרָה": {
+      "hexcode": "1F329",
+      "file": "1F329.png",
+      "source": "zh_transfer",
+      "glossZh": "患難；焦慮；困苦"
+    },
     "H7794|שׁוֹר": {
       "hexcode": "1F402",
       "file": "1F402.png",
       "source": "override",
       "glossZh": "牛；公牛；母牛"
+    },
+    "H7979|שֻׁלְחָן": {
+      "hexcode": "1F374",
+      "file": "1F374.png",
+      "source": "zh_transfer",
+      "glossZh": "桌子"
+    },
+    "H8605|תְּפִלָּה": {
+      "hexcode": "1F64F",
+      "file": "1F64F.png",
+      "source": "zh_transfer",
+      "glossZh": "禱告；禱文"
     },
     "H3212|יָלַךְ": {
       "hexcode": "1F6B6",
@@ -2665,7 +2881,7 @@
     "H738|אֲרִי": {
       "hexcode": "1F981",
       "file": "1F981.png",
-      "source": "annotation",
+      "source": "zh_transfer",
       "glossZh": "獅子"
     },
     "H5291|נַעֲרָה": {
@@ -2674,11 +2890,41 @@
       "source": "override",
       "glossZh": "女孩；少女"
     },
+    "H1077|בַּל": {
+      "hexcode": "1F6AB",
+      "file": "1F6AB.png",
+      "source": "zh_transfer",
+      "glossZh": "不；毫無；免得"
+    },
+    "H6921|קָדִים": {
+      "hexcode": "1F305",
+      "file": "1F305.png",
+      "source": "zh_transfer",
+      "glossZh": "東方；東風"
+    },
     "H953|בּוֹר": {
       "hexcode": "1F573",
       "file": "1F573.png",
-      "source": "annotation",
+      "source": "zh_transfer",
       "glossZh": "坑；井；水池；監牢"
+    },
+    "H6566|פָּרַשׂ": {
+      "hexcode": "2797",
+      "file": "2797.png",
+      "source": "zh_transfer",
+      "glossZh": "分開；分散"
+    },
+    "H6913|קֶבֶר": {
+      "hexcode": "26B0",
+      "file": "26B0.png",
+      "source": "zh_transfer",
+      "glossZh": "墳墓"
+    },
+    "H272|אֲחֻזָּה": {
+      "hexcode": "1F3E1",
+      "file": "1F3E1.png",
+      "source": "zh_transfer",
+      "glossZh": "產業；地業"
     },
     "H6743|צָלַח": {
       "hexcode": "E24F",
@@ -2686,11 +2932,35 @@
       "source": "annotation",
       "glossZh": "向前推進；亨通；成功"
     },
+    "H8610|תָּפַשׂ": {
+      "hexcode": "270A",
+      "file": "270A.png",
+      "source": "zh_transfer",
+      "glossZh": "抓住；擄獲；揮動；包覆；妄用"
+    },
     "H4043|מָגֵן": {
       "hexcode": "1F6E1",
       "file": "1F6E1.png",
       "source": "annotation",
       "glossZh": "盾牌；保護者"
+    },
+    "H8248|שָׁקָה": {
+      "hexcode": "1F964",
+      "file": "1F964.png",
+      "source": "zh_transfer",
+      "glossZh": "喝；使飲；灌溉"
+    },
+    "H1369|גְּבוּרָה": {
+      "hexcode": "1F4B0",
+      "file": "1F4B0.png",
+      "source": "zh_transfer",
+      "glossZh": "力量；勇武；勝利"
+    },
+    "H1730|דּוֹד": {
+      "hexcode": "1F495",
+      "file": "1F495.png",
+      "source": "zh_transfer",
+      "glossZh": "愛；愛情信物；愛人；朋友；叔父"
     },
     "H6160|עֲרָבָה": {
       "hexcode": "1F3DC",
@@ -2698,23 +2968,83 @@
       "source": "annotation",
       "glossZh": "荒野；亞拉巴谷地"
     },
+    "H433|אֱלוֹהַּ": {
+      "hexcode": "1F932",
+      "file": "1F932.png",
+      "source": "zh_transfer",
+      "glossZh": "神；上帝"
+    },
+    "H734|אֹרַח": {
+      "hexcode": "1F6E3",
+      "file": "1F6E3.png",
+      "source": "zh_transfer",
+      "glossZh": "道路；路徑；商隊"
+    },
+    "H5157|נָחַל": {
+      "hexcode": "1F511",
+      "file": "1F511.png",
+      "source": "zh_transfer",
+      "glossZh": "承受產業；佔有；遺贈；分配"
+    },
+    "H5715|עֵדוּת": {
+      "hexcode": "1F5E3",
+      "file": "1F5E3.png",
+      "source": "zh_transfer",
+      "glossZh": "見證；法版"
+    },
+    "H8416|תְּהִלָּה": {
+      "hexcode": "1F64C",
+      "file": "1F64C.png",
+      "source": "zh_transfer",
+      "glossZh": "讚美；頌歌"
+    },
     "H490|אַלְמָנָה": {
       "hexcode": "1F9D3",
       "file": "1F9D3.png",
       "source": "override",
       "glossZh": "寡婦；荒涼之地"
     },
+    "H2232|זָרַע": {
+      "hexcode": "1F331",
+      "file": "1F331.png",
+      "source": "zh_transfer",
+      "glossZh": "撒種；傳播；栽植；結果"
+    },
+    "H1612|גֶּפֶן": {
+      "hexcode": "1F347",
+      "file": "1F347.png",
+      "source": "zh_transfer",
+      "glossZh": "葡萄樹"
+    },
     "H8127|שֵׁן": {
       "hexcode": "1F9B7",
       "file": "1F9B7.png",
-      "source": "annotation",
+      "source": "zh_transfer",
       "glossZh": "牙齒；象牙；峭壁"
     },
     "H1581|גָּמָל": {
       "hexcode": "1F42A",
       "file": "1F42A.png",
-      "source": "annotation",
+      "source": "zh_transfer",
       "glossZh": "駱駝"
+    },
+    "H1254|בָּרָא": {
+      "hexcode": "1F6E0",
+      "file": "1F6E0.png",
+      "source": "zh_transfer",
+      "glossZh": "創造；砍伐；選擇；餵養"
+    },
+    "H2319|חָדָשׁ": {
+      "hexcode": "1F195",
+      "file": "1F195.png",
+      "source": "zh_transfer",
+      "glossZh": "新的"
+    },
+    "H4082|מְדִינָה": {
+      "hexcode": "1F5FA",
+      "file": "1F5FA.png",
+      "source": "zh_transfer",
+      "glossZh": "地區"
     },
     "H2763|חָרַם": {
       "hexcode": "1F443",
@@ -2722,17 +3052,35 @@
       "source": "annotation",
       "glossZh": "隔離；宣告歸神而毀滅；鼻子遲鈍"
     },
+    "H5668|עָבוּר": {
+      "hexcode": "2935",
+      "file": "2935.png",
+      "source": "zh_transfer",
+      "glossZh": "因為；為了；以便"
+    },
     "H6453|פֶּסַח": {
       "hexcode": "1F411",
       "file": "1F411.png",
       "source": "override",
       "glossZh": "越過；豁免；逾越節；逾越節祭牲"
     },
+    "H561|אֵמֶר": {
+      "hexcode": "1F4AC",
+      "file": "1F4AC.png",
+      "source": "zh_transfer",
+      "glossZh": "言語；所說的話"
+    },
     "H3320|יָצַב": {
       "hexcode": "1F689",
       "file": "1F689.png",
       "source": "annotation",
       "glossZh": "安置；站立；獻上；持續"
+    },
+    "H5545|סָלַח": {
+      "hexcode": "1F513",
+      "file": "1F513.png",
+      "source": "zh_transfer",
+      "glossZh": "赦免"
     },
     "H7716|שֶׂה": {
       "hexcode": "1F410",
@@ -2746,11 +3094,29 @@
       "source": "annotation",
       "glossZh": "床榻；棺架；睡眠；同房"
     },
+    "H7356|רַחַם": {
+      "hexcode": "1FAC2",
+      "file": "1FAC2.png",
+      "source": "zh_transfer",
+      "glossZh": "憐憫；子宮；少女"
+    },
     "H4186|מוֹשָׁב": {
       "hexcode": "1F4BA",
       "file": "1F4BA.png",
-      "source": "annotation",
+      "source": "zh_transfer",
       "glossZh": "座位；居所；聚會；居民"
+    },
+    "H4818|מֶרְכָּבָה": {
+      "hexcode": "1F3CE",
+      "file": "1F3CE.png",
+      "source": "zh_transfer",
+      "glossZh": "戰車"
+    },
+    "H5352|נָקָה": {
+      "hexcode": "1F9FC",
+      "file": "1F9FC.png",
+      "source": "zh_transfer",
+      "glossZh": "潔淨；使潔淨；赤裸；除滅"
     },
     "H657|אֶפֶס": {
       "hexcode": "1F9B6",
@@ -2758,16 +3124,46 @@
       "source": "annotation",
       "glossZh": "止息；地極；不再；腳踝"
     },
+    "H400|אֹכֶל": {
+      "hexcode": "1F374",
+      "file": "1F374.png",
+      "source": "zh_transfer",
+      "glossZh": "食物"
+    },
+    "H959|בָּזָה": {
+      "hexcode": "1F620",
+      "file": "1F620.png",
+      "source": "zh_transfer",
+      "glossZh": "輕視；藐視"
+    },
+    "H8394|תָּבוּן": {
+      "hexcode": "1F9E0",
+      "file": "1F9E0.png",
+      "source": "zh_transfer",
+      "glossZh": "智慧；論證；任性"
+    },
     "H3871|לוּחַ": {
       "hexcode": "E1CC",
       "file": "E1CC.png",
       "source": "annotation",
       "glossZh": "發亮的板；石板；木板；金屬板"
     },
+    "H215|אוֹר": {
+      "hexcode": "1F4A1",
+      "file": "1F4A1.png",
+      "source": "zh_transfer",
+      "glossZh": "發光；使發光；照亮"
+    },
+    "H4611|מַעֲלָל": {
+      "hexcode": "1F6E0",
+      "file": "1F6E0.png",
+      "source": "zh_transfer",
+      "glossZh": "行為；作為"
+    },
     "H914|בָּדַל": {
       "hexcode": "2797",
       "file": "2797.png",
-      "source": "annotation",
+      "source": "zh_transfer",
       "glossZh": "分開；區分；不同；選擇"
     },
     "H3658|כִּנּוֹר": {
@@ -2782,6 +3178,18 @@
       "source": "annotation",
       "glossZh": "避難所；安全；信賴；安然"
     },
+    "H582|אֱנוֹשׁ": {
+      "hexcode": "1F9D1",
+      "file": "1F9D1.png",
+      "source": "zh_transfer",
+      "glossZh": "人；眾人"
+    },
+    "H3374|יִרְאָה": {
+      "hexcode": "1F628",
+      "file": "1F628.png",
+      "source": "zh_transfer",
+      "glossZh": "恐懼；敬畏"
+    },
     "H2945|טַף": {
       "hexcode": "1F46A",
       "file": "1F46A.png",
@@ -2793,6 +3201,12 @@
       "file": "1F9D1.png",
       "source": "annotation",
       "glossZh": "喪子者；失去親人的人"
+    },
+    "H6663|צָדַק": {
+      "hexcode": "2696",
+      "file": "2696.png",
+      "source": "zh_transfer",
+      "glossZh": "稱義；使公正"
     },
     "H238|אָזַן": {
       "hexcode": "1F442",
@@ -2812,6 +3226,18 @@
       "source": "annotation",
       "glossZh": "家譜；世系；歷史"
     },
+    "H6467|פֹּעַל": {
+      "hexcode": "1F6E0",
+      "file": "1F6E0.png",
+      "source": "zh_transfer",
+      "glossZh": "行為；工作"
+    },
+    "H4393|מְלֹא": {
+      "hexcode": "1FAA3",
+      "file": "1FAA3.png",
+      "source": "zh_transfer",
+      "glossZh": "充滿；滿溢之物"
+    },
     "H2132|זַיִת": {
       "hexcode": "1FAD2",
       "file": "1FAD2.png",
@@ -2823,6 +3249,12 @@
       "file": "1F327.png",
       "source": "override",
       "glossZh": "雨；雨水"
+    },
+    "H335|אַי": {
+      "hexcode": "2753",
+      "file": "2753.png",
+      "source": "zh_transfer",
+      "glossZh": "哪裡；何處"
     },
     "H1219|בָּצַר": {
       "hexcode": "1F347",
@@ -2842,6 +3274,12 @@
       "source": "override",
       "glossZh": "星；星辰"
     },
+    "H3557|כּוּל": {
+      "hexcode": "1F9FA",
+      "file": "1F9FA.png",
+      "source": "zh_transfer",
+      "glossZh": "容納；供養"
+    },
     "H1580|גָּמַל": {
       "hexcode": "1F9D1",
       "file": "1F9D1.png",
@@ -2857,7 +3295,7 @@
     "H4013|מִבְצָר": {
       "hexcode": "1F3F0",
       "file": "1F3F0.png",
-      "source": "annotation",
+      "source": "zh_transfer",
       "glossZh": "堡壘；堅固城"
     },
     "H875|בְּאֵר": {
@@ -2866,11 +3304,65 @@
       "source": "override",
       "glossZh": "井"
     },
+    "H565|אִמְרָה": {
+      "hexcode": "1F4AC",
+      "file": "1F4AC.png",
+      "source": "zh_transfer",
+      "glossZh": "言語；諭示"
+    },
     "H7832|שָׂחַק": {
       "hexcode": "1F604",
       "file": "1F604.png",
       "source": "override",
       "glossZh": "嬉笑；戲耍"
+    },
+    "H4136|מוּל": {
+      "hexcode": "2194",
+      "file": "2194.png",
+      "source": "zh_transfer",
+      "glossZh": "對面；在…之前"
+    },
+    "H8398|תֵּבֵל": {
+      "hexcode": "1F310",
+      "file": "1F310.png",
+      "source": "zh_transfer",
+      "glossZh": "世界；大地"
+    },
+    "H3468|יֶשַׁע": {
+      "hexcode": "1F6DF",
+      "file": "1F6DF.png",
+      "source": "zh_transfer",
+      "glossZh": "拯救；救恩"
+    },
+    "H3368|יָקָר": {
+      "hexcode": "1F48E",
+      "file": "1F48E.png",
+      "source": "zh_transfer",
+      "glossZh": "寶貴的；珍貴"
+    },
+    "H6040|עֳנִי": {
+      "hexcode": "1F915",
+      "file": "1F915.png",
+      "source": "zh_transfer",
+      "glossZh": "苦難；困苦"
+    },
+    "H423|אָלָה": {
+      "hexcode": "1F5E3",
+      "file": "1F5E3.png",
+      "source": "zh_transfer",
+      "glossZh": "咒詛；誓言"
+    },
+    "H5254|נָסָה": {
+      "hexcode": "1F528",
+      "file": "1F528.png",
+      "source": "zh_transfer",
+      "glossZh": "試驗；嘗試"
+    },
+    "H3816|לְאֹם": {
+      "hexcode": "1F310",
+      "file": "1F310.png",
+      "source": "zh_transfer",
+      "glossZh": "民族；萬民"
     },
     "H4932|מִשְׁנֶה": {
       "hexcode": "E25B",
@@ -2884,6 +3376,12 @@
       "source": "annotation",
       "glossZh": "親嘴；親吻"
     },
+    "H2377|חָזוֹן": {
+      "hexcode": "1F52E",
+      "file": "1F52E.png",
+      "source": "zh_transfer",
+      "glossZh": "異象；默示"
+    },
     "H212|אוֹפָן": {
       "hexcode": "1F6DE",
       "file": "1F6DE.png",
@@ -2896,11 +3394,23 @@
       "source": "override",
       "glossZh": "大雨；陣雨"
     },
+    "H2399|חֵטְא": {
+      "hexcode": "1F494",
+      "file": "1F494.png",
+      "source": "zh_transfer",
+      "glossZh": "罪；罪過"
+    },
     "H8184|שְׂעֹרָה": {
       "hexcode": "1F33E",
       "file": "1F33E.png",
       "source": "override",
       "glossZh": "大麥"
+    },
+    "H8668|תְּשׁוּעָה": {
+      "hexcode": "1F6DF",
+      "file": "1F6DF.png",
+      "source": "zh_transfer",
+      "glossZh": "拯救；得救"
     },
     "H860|אָתוֹן": {
       "hexcode": "1FACF",
@@ -2920,17 +3430,47 @@
       "source": "annotation",
       "glossZh": "鍋；荊棘"
     },
+    "H8615|תִּקְוָה": {
+      "hexcode": "1F331",
+      "file": "1F331.png",
+      "source": "zh_transfer",
+      "glossZh": "盼望；繩索"
+    },
+    "H7045|קְלָלָה": {
+      "hexcode": "1F5E3",
+      "file": "1F5E3.png",
+      "source": "zh_transfer",
+      "glossZh": "咒詛"
+    },
+    "H3233|יְמָנִי": {
+      "hexcode": "1F449",
+      "file": "1F449.png",
+      "source": "zh_transfer",
+      "glossZh": "右邊的"
+    },
     "H3123|יוֹנָה": {
       "hexcode": "1F54A",
       "file": "1F54A.png",
       "source": "override",
       "glossZh": "鴿子"
     },
+    "H3830|לְבוּשׁ": {
+      "hexcode": "1F455",
+      "file": "1F455.png",
+      "source": "zh_transfer",
+      "glossZh": "衣服；衣裳"
+    },
     "H2474|חַלּוֹן": {
       "hexcode": "1FA9F",
       "file": "1FA9F.png",
       "source": "annotation",
       "glossZh": "窗戶"
+    },
+    "H5980|עֻמָּה": {
+      "hexcode": "27A1",
+      "file": "27A1.png",
+      "source": "zh_transfer",
+      "glossZh": "靠近；相對"
     },
     "H7416|רִמּוֹן": {
       "hexcode": "E0C4",

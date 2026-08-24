@@ -555,7 +555,14 @@ def main() -> None:
 
     assigned: dict[str, dict] = {}
     unresolved: list[str] = []
-    sources = {"override": 0, "annotation": 0, "none": 0}
+    sources = {"override": 0, "zh_transfer": 0, "annotation": 0, "none": 0}
+    greek_path = CACHE / "greek-card-images.json"
+    greek_meanings: dict[str, str] = {}
+    if greek_path.exists():
+        for record in json.loads(greek_path.read_text(encoding="utf-8"))["images"].values():
+            for key in (record["glossZh"].strip(), record["glossZh"].split("；")[0].strip()):
+                if key:
+                    greek_meanings.setdefault(key, record["hexcode"])
 
     for entry in vocab:
         key = f"{entry['strong']}|{entry['pointed']}"
@@ -569,6 +576,19 @@ def main() -> None:
                 chosen, source = found["hexcode"], "override"
             else:
                 unresolved.append(f"{entry['strong']} -> {wanted!r}")
+        if not chosen:
+            # The Greek deck is curated against the same Chinese vocabulary, so a
+            # Hebrew word whose meaning a Greek card already carries can take that
+            # card's picture — πῦρ and אֵשׁ are both 「火」.  Runs only when the Greek
+            # map exists; the two matchers enrich each other a run at a time.
+            gloss = glosses[(entry["strong"], entry["pointed"])]
+            # Not `key`: that name holds this card's own strong|pointed and
+            # shadowing it wrote 132 entries under their Chinese meaning instead.
+            for meaning in (gloss.strip(), gloss.split("；")[0].strip()):
+                hexcode = greek_meanings.get(meaning)
+                if hexcode and image_path(hexcode):
+                    chosen, source = hexcode, "zh_transfer"
+                    break
         if not chosen:
             for candidate in english_candidates(entry.get("glossEn") or ""):
                 if candidate in AMBIGUOUS_EN:
@@ -588,7 +608,8 @@ def main() -> None:
                 "glossZh": glosses[(entry["strong"], entry["pointed"])],
             }
 
-    print(f"  人工指定 {sources['override']}，本名比對 {sources['annotation']}，留空 {sources['none']}")
+    print(f"  人工指定 {sources['override']}，中文詞義轉移 {sources['zh_transfer']}，"
+          f"本名比對 {sources['annotation']}，留空 {sources['none']}")
     print(f"  有圖合計 {len(assigned)} / {len(vocab)} = {len(assigned) * 100 // len(vocab)}%")
     if unresolved:
         print(f"  ⚠ 人工指定但查無此圖：{len(unresolved)}")
