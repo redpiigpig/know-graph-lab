@@ -5,46 +5,34 @@ push the Greek work along with its own. Read
 [`greek-reader-contract.md`](greek-reader-contract.md) first; this file records
 where the work actually stands, not what it should eventually be.
 
-## Push state — read this first
+## Push state — cleared 2026-08-24
 
-Two commits are finished and **unpushed**. List them with:
-
-```
-git log --oneline origin/master..HEAD
-```
-
-You should see these two subjects (SHAs are not quoted here — they move if a
-commit is amended):
+Both commits are **on `origin/master`**, together with the earlier
+`上冊排成五十章…`:
 
 ```
-feat(grc-reader): 專名中文補到 84%，其餘照實留空
-docs(grc-reader): 改寫凍結契約為兩冊制，並補交接文件
+bb076e61 feat(grc-reader): 專名中文補到 84%，其餘照實留空
+234b90fc docs(grc-reader): 改寫凍結契約為兩冊制，並補交接文件
+3256c470 feat(grc-reader): 上冊排成五十章，並替附錄專名接上既有名冊
 ```
 
-They are on `master`, tests-clean on their own, and blocked only by the pre-push
-hook. An earlier Greek commit, `上冊排成五十章…`, is already on `origin` — the
-parallel session carried it up with one of its own pushes.
+The pre-push hook was failing on Hebrew assertions, not Greek ones: the parallel
+Hebrew session was mid-way through the same redesign — proper names to an
+appendix, lesson slots backfilled — and `tests/original-readers.test.ts` still
+described the old shape. Those assertions have been updated to the new contract
+and `tests/original-readers.test.ts` and `tests/greek-full-reader.test.ts` now
+pass 26/26 together. Nothing in the Greek data was touched to achieve it.
 
-The hook fails on three tests in `tests/original-readers.test.ts`, all of them
-under **Hebrew reader curriculum** / **complete 50-lesson Hebrew private reader**:
+Two things the Hebrew side learned that apply here, since 下冊 has the same work
+still ahead:
 
-```
-× reserves 50 consecutive BBH lessons sized by the textbook's own chapters
-    expected [ …(544) ] to have a length of 552 but got 544
-× pins BBH homographs, aleph transliteration, POS metadata, and required names
-× assembles all requested content without placeholders
-    TypeError: Cannot read properties of undefined (reading 'trim')
-```
-
-Those come from the parallel Hebrew work in this same tree — `hebrew-1000.json`
-is modified and `hebrew-proper-names.json` / `hebrew-appendix-seed.json` are new
-and untracked. The Hebrew reader is evidently having its proper names moved to an
-appendix and its lesson list backfilled, exactly as the Greek one just was, and
-its tests have not caught up. **Nothing in the Greek work touches Hebrew data.**
-`tests/greek-full-reader.test.ts` passes 12/12.
-
-So: fix or update those three Hebrew assertions, then push both. Do not use
-`--no-verify`, and do not revert the other session's files.
+- Key the Chinese gloss layer by `(lemma, form)`, never by ordinal. Lifting the
+  names renumbers the whole list, and a position-keyed layer shifts every meaning
+  by one without erroring.
+- Re-select the memory units after the vocabulary moves, and re-stamp their
+  review status. Only 51 of the Hebrew reader's 100 hand-reviewed verses still
+  fell in any lesson's candidate pool afterwards; claiming the rest were still
+  reviewed would have been false. The same will be true of the Greek 100.
 
 ## What changed, and why
 

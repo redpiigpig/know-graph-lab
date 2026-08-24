@@ -1000,54 +1000,162 @@ def add_haggadah(document: Document, haggadah: dict) -> None:
             )
 
 
-def add_back_indices(document: Document, data: dict) -> None:
-    add_label(document, "Indices", page_break_before=True)
-    document.add_heading("專名索引", level=1)
-    seen: dict[tuple, dict] = {}
-    for lesson in data["lessons"]:
-        for item in lesson["vocabulary"]:
-            if not item.get("isProperName"):
-                continue
-            key = (item["pointed"], item["glossZh"], tuple(item.get("properNameTypes", [])))
-            seen.setdefault(key, {**item, "lessons": []})["lessons"].append(lesson["lesson"])
-    table = document.add_table(rows=1, cols=5)
-    set_table_geometry(table, [30, 33, 41, 25, 12])
+def _table_header(document: Document, widths: list[float], headers: tuple[str, ...]):
+    table = document.add_table(rows=1, cols=len(headers))
+    set_table_geometry(table, widths)
     set_borders(table, outside=True, inside=True)
-    headers = ("附點專名", "BBH2 音標", "繁中義", "類型", "課")
     for index, header in enumerate(headers):
         cell = table.cell(0, index)
         shade(cell, ACCENT)
-        p = cell.paragraphs[0]
-        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        set_run_font(p.add_run(header), FONT_UI, 7, bold=True, color="FFFFFF")
+        paragraph = cell.paragraphs[0]
+        paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        set_run_font(paragraph.add_run(header), FONT_UI, 7, bold=True, color="FFFFFF")
     set_repeat_header(table.rows[0])
-    for entry in sorted(seen.values(), key=lambda item: item["ordinal"]):
-        row = table.add_row()
-        prevent_row_split(row)
-        cells = row.cells
-        values = (
-            entry["pointed"],
-            entry["textbookTransliteration"],
-            entry["glossZh"],
-            proper_name_label(entry),
-            ",".join(str(value) for value in entry["lessons"]),
-        )
-        for index, value in enumerate(values):
-            set_cell_margins(cells[index], top=45, bottom=45)
-            p = cells[index].paragraphs[0]
-            p.alignment = WD_ALIGN_PARAGRAPH.CENTER if index != 2 else WD_ALIGN_PARAGRAPH.LEFT
-            font = FONT_HEBREW if index == 0 else (FONT_TRANSLIT if index == 1 else FONT_ZH)
-            set_run_font(p.add_run(value), font, 8 if index != 0 else 10.2)
-            if index == 0:
-                set_rtl(p)
+    return table
 
+
+def _table_row(table, values: list[tuple[str, str, float]]):
+    """Append one row; each value is (text, font, size)."""
+
+    row = table.add_row()
+    prevent_row_split(row)
+    for index, (text, font, size) in enumerate(values):
+        cell = row.cells[index]
+        set_cell_margins(cell, top=45, bottom=45)
+        paragraph = cell.paragraphs[0]
+        paragraph.alignment = (
+            WD_ALIGN_PARAGRAPH.LEFT if font == FONT_ZH else WD_ALIGN_PARAGRAPH.CENTER
+        )
+        set_run_font(paragraph.add_run(text), font, size)
+        if font == FONT_HEBREW:
+            set_rtl(paragraph)
+    return row
+
+
+def _lesson_label(entry: dict) -> str:
+    lesson = entry.get("lesson")
+    return f"第{lesson}課" if lesson else "—"
+
+
+def _attestation_label(entry: dict) -> str:
+    if entry.get("attestation") == "post_biblical":
+        return "後期文獻"
+    if entry.get("formSource") == "lexicon":
+        return "詞典引用形"
+    reference = entry.get("firstOccurrence") or ""
+    frequency = entry.get("frequency")
+    return f"{reference}（{frequency}）" if reference else "—"
+
+
+def add_reference_tables(document: Document, data: dict) -> None:
+    """Render the numeral, kinship, calendar and proper-name appendix tables."""
+
+    tables = (data.get("referenceTables") or {}).get("tables") or []
+    for table in tables:
+        add_label(document, table["titleZh"], page_break_before=True)
+        add_hebrew(document, table["titleHe"], size=18, color=ACCENT, bold=True)
+        document.add_heading(table["titleZh"], level=1)
+        # These paragraphs quote Hebrew inline (בֵּית אָב, חָם／חָמוֹת), and the
+        # Chinese face has no Hebrew glyphs, so they go through the mixed-script
+        # writer rather than add_body.
+        add_mixed_script_text(document.add_paragraph(), table["intro"], FONT_ZH, 9.2)
+        for group in table["groups"]:
+            document.add_heading(group["titleZh"], level=2)
+            for caption in ("note", "source"):
+                if group.get(caption):
+                    add_mixed_script_text(
+                        document.add_paragraph(), group[caption], FONT_ZH, 8.6, color=MUTED
+                    )
+            shape = group["shape"]
+            if shape == "gender_pair":
+                grid = _table_header(
+                    document,
+                    [12, 28, 22, 28, 22, 29],
+                    ("數", "陽性形", "音標", "陰性形", "音標", "繁中"),
+                )
+                for entry in group["entries"]:
+                    _table_row(
+                        grid,
+                        [
+                            (entry["value"], FONT_UI, 8),
+                            (entry["masculine"]["pointed"], FONT_HEBREW, 11),
+                            (entry["masculine"]["transliteration"], FONT_TRANSLIT, 7.8),
+                            (entry["feminine"]["pointed"], FONT_HEBREW, 11),
+                            (entry["feminine"]["transliteration"], FONT_TRANSLIT, 7.8),
+                            (entry["glossZh"], FONT_ZH, 8.4),
+                        ],
+                    )
+            elif shape == "month":
+                grid = _table_header(
+                    document,
+                    [16, 30, 26, 30, 39],
+                    ("序位", "附點形", "音標", "繁中月名", "首見（次數）"),
+                )
+                for entry in group["entries"]:
+                    _table_row(
+                        grid,
+                        [
+                            (entry.get("order", ""), FONT_UI, 8),
+                            (entry["pointed"], FONT_HEBREW, 11),
+                            (entry["transliteration"], FONT_TRANSLIT, 7.8),
+                            (entry["glossZh"], FONT_ZH, 8.4),
+                            (_attestation_label(entry), FONT_ZH, 7.6),
+                        ],
+                    )
+            elif shape == "name":
+                grid = _table_header(
+                    document,
+                    [30, 26, 40, 30, 15],
+                    ("附點形", "音標", "繁中", "首見（次數）", "課"),
+                )
+                for entry in group["entries"]:
+                    _table_row(
+                        grid,
+                        [
+                            (entry["pointed"], FONT_HEBREW, 10.6),
+                            (entry["transliteration"], FONT_TRANSLIT, 7.6),
+                            (entry["glossZh"], FONT_ZH, 8.2),
+                            (_attestation_label(entry), FONT_ZH, 7.4),
+                            (_lesson_label(entry), FONT_UI, 7.4),
+                        ],
+                    )
+            else:
+                grid = _table_header(
+                    document,
+                    [20, 30, 26, 36, 29],
+                    ("項", "附點形", "音標", "繁中", "首見（次數）"),
+                )
+                for entry in group["entries"]:
+                    _table_row(
+                        grid,
+                        [
+                            (entry.get("value", ""), FONT_UI, 8),
+                            (entry["pointed"], FONT_HEBREW, 11),
+                            (entry["transliteration"], FONT_TRANSLIT, 7.8),
+                            (entry["glossZh"], FONT_ZH, 8.4),
+                            (_attestation_label(entry), FONT_ZH, 7.6),
+                        ],
+                    )
+            for entry in group["entries"]:
+                if not entry.get("note"):
+                    continue
+                head = entry.get("pointed") or entry.get("masculine", {}).get("pointed", "")
+                # add_body would set the whole line in the Chinese face, which has
+                # no Hebrew glyphs and silently falls back to a UI font.
+                paragraph = document.add_paragraph()
+                paragraph.paragraph_format.space_after = Pt(2)
+                add_mixed_script_text(paragraph, f"{head}　{entry['note']}", FONT_ZH, 8.0, color=MUTED)
+
+
+def add_back_indices(document: Document, data: dict) -> None:
+    add_label(document, "Colophon", page_break_before=True)
     heading = document.add_heading("來源與成品檢核", level=1)
     heading.paragraph_format.page_break_before = True
     for text in (
-        "50課；詞數依課本章次而定；總計1,000詞。",
+        "50課；每課固定20詞；總計1,000詞。",
         "每課2節背誦；總計100節。",
         "第1–25課為25個完整聖經章；第26–50課為25篇完整禱文或文章。",
-        "冊末逾越節禮文按完整流程另列，不抵充25篇。",
+        "冊末逾越節禮文按完整流程另列，不抵充25篇；其後另附數字、親屬、曆法與分類專名四張對照表。",
         "聖經希伯來文保留完整母音點與 cantillation；全部詞彙列 BBH2 課本式音標。",
         "線上音訊與紙本共用 lesson ID；正式錄音須經校訂，不以裝置TTS計入完成。",
     ):
@@ -1080,6 +1188,7 @@ def build(data: dict) -> Path:
         add_practice(document, lesson)
 
     add_haggadah(document, data["haggadah"])
+    add_reference_tables(document, data)
     add_back_indices(document, data)
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)

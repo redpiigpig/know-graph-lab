@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-24T07:23:07.387544+00:00",
+  "generatedAt": "2026-08-24T16:08:42.330696+00:00",
   "phase": "final",
   "result": "PASS",
   "releaseGatePassed": true,
   "summary": {
-    "PASS": 55,
+    "PASS": 64,
     "FAIL": 0,
     "PENDING": 0,
     "WARN": 0
@@ -24,20 +24,20 @@
     {
       "path": "C:\\Users\\user\\Desktop\\know-graph-lab\\data\\originalReaders\\vocabulary\\hebrew-1000.json",
       "exists": true,
-      "bytes": 928081,
-      "sha256": "4df814510af8214da0c043fe5c8923d3668819d6e1b80ca0181f94298a2f2dfc"
+      "bytes": 923903,
+      "sha256": "46d1cc792ae0e7c4a7bea6d378d85c26cd6d1b519ed5bb34bc5ed5c8b69f3ed1"
     },
     {
-      "path": "C:\\Users\\user\\Desktop\\know-graph-lab\\output\\source-cache\\original-readers\\hebrew-full\\hebrew-1000-gloss-zh-reviewed.json",
+      "path": "C:\\Users\\user\\Desktop\\know-graph-lab\\output\\source-cache\\original-readers\\hebrew-full\\hebrew-gloss-zh-reviewed-by-lemma.json",
       "exists": true,
-      "bytes": 81180,
-      "sha256": "ee47ad0078b38640e4e1b87bba4987c08c4e7614bf4fdca58963e282fe4eccf9"
+      "bytes": 117074,
+      "sha256": "de82dc8c3a6a63199e192129a3cb36ad270fdff7fbb6b6baf42c68797028fc38"
     },
     {
       "path": "C:\\Users\\user\\Desktop\\know-graph-lab\\output\\source-cache\\original-readers\\hebrew-full\\scripture-plan.json",
       "exists": true,
-      "bytes": 979733,
-      "sha256": "93370427f99a60c77b79844c2a82fcb97c7275694e60faec8dfd428bebe92f3f"
+      "bytes": 913980,
+      "sha256": "49464048d468d125be1e331b15c7d9807b8e63969b5cbc89c96d7a7e33e07434"
     },
     {
       "path": "C:\\Users\\user\\Desktop\\know-graph-lab\\output\\source-cache\\original-readers\\hebrew-full\\prayers-articles.json",
@@ -54,20 +54,20 @@
     {
       "path": "C:\\Users\\user\\Desktop\\know-graph-lab\\output\\source-cache\\original-readers\\hebrew-full\\hebrew-reader-50-lessons.json",
       "exists": true,
-      "bytes": 3969446,
-      "sha256": "dc4010b311577af4abaf6ea3acc8ac6245790b51ecbf84abfadfecbcf0a96ddb"
+      "bytes": 4065340,
+      "sha256": "d6129f51b3c98a21373b43f6df249698c56b48125baf76af5f7954f9638780a1"
     },
     {
       "path": "C:\\Users\\user\\Desktop\\know-graph-lab\\output\\original-readers\\hebrew-original-reader-50-lessons.docx",
       "exists": true,
-      "bytes": 849013,
-      "sha256": "0791aa7f59a1148a8cccb3d46708c29f37d11add4426630887d48d02eb0a05d4"
+      "bytes": 866897,
+      "sha256": "da6c133598ab078e002a0fabb9bcbea786530885a739d3bf631a6fa5a0f0b474"
     },
     {
       "path": "C:\\Users\\user\\Desktop\\know-graph-lab\\output\\original-readers\\hebrew-original-reader-50-lessons.pdf",
       "exists": true,
-      "bytes": 24020648,
-      "sha256": "0ec801813bdd0b856f41862606e956927769de0e79932e725f5c2da7ea228050"
+      "bytes": 24846482,
+      "sha256": "4264eb6bd560fbd13d6dad82b0174741eb6ca6b95f92b71825e8b35a188f7498"
     }
   ],
   "checks": [
@@ -81,10 +81,18 @@
     },
     {
       "status": "PASS",
-      "code": "source.glosses.ordinals",
-      "message": "reviewed zh-Hant gloss layer contains exact ordinals 1..1000",
+      "code": "source.glosses.lemma_keys",
+      "message": "reviewed zh-Hant gloss layer holds exactly 1,000 uniquely keyed lemmas",
       "details": {
         "actual": 1000
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "source.glosses.coverage",
+      "message": "every headword resolves to a reviewed Traditional-Chinese gloss",
+      "details": {
+        "failures": []
       }
     },
     {
@@ -173,7 +181,15 @@
     {
       "status": "PASS",
       "code": "source.proper_names.count",
-      "message": "proper-name inventory contains exactly 135 entries",
+      "message": "proper-name inventory contains exactly 135 entries across lessons and appendix",
+      "details": {
+        "actual": 135
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "source.proper_names.unique",
+      "message": "no proper name is listed twice",
       "details": {
         "actual": 135
       }
@@ -198,6 +214,14 @@
       "status": "PASS",
       "code": "source.proper_names.conventional_zh",
       "message": "all proper names retain conventional Traditional-Chinese biblical forms",
+      "details": {
+        "failures": []
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "source.proper_names.lifted",
+      "message": "no person, place or nation name is still taking a lesson slot",
       "details": {
         "failures": []
       }
@@ -260,7 +284,7 @@
       "code": "source.memory.vocabulary_hit_metadata",
       "message": "all 100 memory verses carry internally consistent lesson-vocabulary hit metadata",
       "details": {
-        "totalHits": 290,
+        "totalHits": 350,
         "failures": []
       }
     },
@@ -368,7 +392,7 @@
       "code": "master.memory.vocabulary_hit_metadata",
       "message": "all 100 memory verses carry internally consistent lesson-vocabulary hit metadata",
       "details": {
-        "totalHits": 290,
+        "totalHits": 350,
         "failures": []
       }
     },
@@ -391,9 +415,60 @@
     {
       "status": "PASS",
       "code": "master.proper_names",
-      "message": "master retains all 135 typed proper names",
+      "message": "master keeps only the divine names, the sabbath and the four common nouns in the lessons",
       "details": {
-        "actual": 135
+        "actual": 16
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "master.reference_tables.present",
+      "message": "master carries the numeral, kinship, calendar and proper-name tables in order",
+      "details": {
+        "actual": [
+          "hbo-appendix-numerals",
+          "hbo-appendix-kinship",
+          "hbo-appendix-calendar",
+          "hbo-appendix-proper-names"
+        ]
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "master.reference_tables.groups",
+      "message": "no appendix section is empty",
+      "details": {
+        "failures": []
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "master.reference_tables.zh_hant",
+      "message": "every appendix row carries a Traditional-Chinese meaning",
+      "details": {
+        "failures": []
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "master.reference_tables.pointing",
+      "message": "every appendix headword keeps full niqqud",
+      "details": {
+        "failures": []
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "master.reference_tables.post_biblical",
+      "message": "the five months absent from the Masoretic Text stay labelled and sourced",
+      "details": {
+        "actual": [
+          "以珥月",
+          "搭模斯月",
+          "亞布月",
+          "提斯利月",
+          "瑪西班月"
+        ]
       }
     },
     {
@@ -444,7 +519,7 @@
           "canonicalStore": "official-hkbs-with-private-r2-provenance",
           "rights": "© 香港聖經公會；私人授權使用",
           "snapshot": "output/source-cache/original-readers/hebrew-full/RCUV2010.json",
-          "snapshotSha256": "b5d04b4cc3964298426705a2d93ac3a3a0267bdc24ce2bfdbace004e953f7f51"
+          "snapshotSha256": "b7f98884d4ac967a196945c77d1c1501a18684ac49f8c66a10d61c971f3547be"
         }
       }
     },
@@ -468,11 +543,11 @@
     {
       "status": "PASS",
       "code": "source.rcuv2010.crosswalk",
-      "message": "all 614 chapter positions and 100 memory verses (705 unique MT refs) exactly match the frozen RCUV2010 crosswalk",
+      "message": "all 614 chapter positions and 100 memory verses (712 unique MT refs) exactly match the frozen RCUV2010 crosswalk",
       "details": {
         "chapterPositions": 614,
         "memoryPositions": 100,
-        "uniqueRefs": 705,
+        "uniqueRefs": 712,
         "failures": []
       }
     },
@@ -554,7 +629,7 @@
       "code": "docx.table_geometry",
       "message": "all DOCX tables use fixed, internally exact dxa geometry with tblInd",
       "details": {
-        "tables": 2426,
+        "tables": 2474,
         "failures": []
       }
     },
@@ -571,7 +646,7 @@
       "code": "pdf.page_count",
       "message": "PDF has at least 200 pages, preventing a truncated full reader",
       "details": {
-        "actual": 384
+        "actual": 395
       }
     },
     {
@@ -580,6 +655,14 @@
       "message": "every PDF page is JIS B5 182×257 mm",
       "details": {
         "failures": []
+      }
+    },
+    {
+      "status": "PASS",
+      "code": "pdf.fallback_declared_unused",
+      "message": "fallback fonts appear only as unused page resources",
+      "details": {
+        "declared": []
       }
     },
     {
@@ -977,7 +1060,18 @@
               381,
               382,
               383,
-              384
+              384,
+              385,
+              386,
+              387,
+              388,
+              389,
+              390,
+              391,
+              392,
+              393,
+              394,
+              395
             ]
           },
           {
@@ -1369,7 +1463,18 @@
               381,
               382,
               383,
-              384
+              384,
+              385,
+              386,
+              387,
+              388,
+              389,
+              390,
+              391,
+              392,
+              393,
+              394,
+              395
             ]
           },
           {
@@ -1761,7 +1866,18 @@
               381,
               382,
               383,
-              384
+              384,
+              385,
+              386,
+              387,
+              388,
+              389,
+              390,
+              391,
+              392,
+              393,
+              394,
+              395
             ]
           },
           {
@@ -2153,7 +2269,18 @@
               381,
               382,
               383,
-              384
+              384,
+              385,
+              386,
+              387,
+              388,
+              389,
+              390,
+              391,
+              392,
+              393,
+              394,
+              395
             ]
           },
           {
@@ -2545,7 +2672,18 @@
               381,
               382,
               383,
-              384
+              384,
+              385,
+              386,
+              387,
+              388,
+              389,
+              390,
+              391,
+              392,
+              393,
+              394,
+              395
             ]
           },
           {
@@ -2937,7 +3075,18 @@
               381,
               382,
               383,
-              384
+              384,
+              385,
+              386,
+              387,
+              388,
+              389,
+              390,
+              391,
+              392,
+              393,
+              394,
+              395
             ]
           },
           {
@@ -3329,7 +3478,18 @@
               381,
               382,
               383,
-              384
+              384,
+              385,
+              386,
+              387,
+              388,
+              389,
+              390,
+              391,
+              392,
+              393,
+              394,
+              395
             ]
           },
           {
@@ -3721,7 +3881,18 @@
               381,
               382,
               383,
-              384
+              384,
+              385,
+              386,
+              387,
+              388,
+              389,
+              390,
+              391,
+              392,
+              393,
+              394,
+              395
             ]
           },
           {
@@ -4113,7 +4284,18 @@
               381,
               382,
               383,
-              384
+              384,
+              385,
+              386,
+              387,
+              388,
+              389,
+              390,
+              391,
+              392,
+              393,
+              394,
+              395
             ]
           },
           {
@@ -4505,7 +4687,18 @@
               381,
               382,
               383,
-              384
+              384,
+              385,
+              386,
+              387,
+              388,
+              389,
+              390,
+              391,
+              392,
+              393,
+              394,
+              395
             ]
           },
           {
@@ -4897,7 +5090,18 @@
               381,
               382,
               383,
-              384
+              384,
+              385,
+              386,
+              387,
+              388,
+              389,
+              390,
+              391,
+              392,
+              393,
+              394,
+              395
             ]
           },
           {
@@ -5289,7 +5493,18 @@
               381,
               382,
               383,
-              384
+              384,
+              385,
+              386,
+              387,
+              388,
+              389,
+              390,
+              391,
+              392,
+              393,
+              394,
+              395
             ]
           },
           {
@@ -5681,7 +5896,18 @@
               381,
               382,
               383,
-              384
+              384,
+              385,
+              386,
+              387,
+              388,
+              389,
+              390,
+              391,
+              392,
+              393,
+              394,
+              395
             ]
           }
         ],
@@ -5718,11 +5944,11 @@
       "code": "pdf.text_layer",
       "message": "PDF has a searchable Hebrew/Traditional-Chinese text layer through the terminal matter",
       "details": {
-        "nonemptyPages": 384,
-        "pageCount": 384,
+        "nonemptyPages": 395,
+        "pageCount": 395,
         "nonemptyRatio": 1.0,
-        "hebrewCharacters": 71024,
-        "cjkCharacters": 119098,
+        "hebrewCharacters": 72050,
+        "cjkCharacters": 121055,
         "missingKeyTexts": []
       }
     }

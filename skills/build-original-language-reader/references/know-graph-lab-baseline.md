@@ -35,10 +35,14 @@ APIs must keep authentication, noindex/noarchive, private/no-store, and `Vary: A
 
 ## Current frozen Hebrew contract
 
-- 50 lessons x exactly 20 words. One running order (BBH2 chapters 3-35 = 552 words, then the 448-word frequency extension) cut into even blocks, so a lesson spans a chapter range: lesson 1 is BBH2 ch. 3, lesson 27 is ch. 31-34, lesson 28 straddles ch. 34-35 and the start of the extension, lessons 29-50 are extension only.
+- 50 lessons x exactly 20 words. One running order (BBH2 chapters 3-35, then the corpus-frequency extension) cut into even blocks, so a lesson spans a chapter range rather than being a chapter.
 - Lesson sizing is rebuilt by `scripts/assign_hebrew_lessons.py`; rerun `scripts/build_hebrew_reader_data.py` after it.
-- 552 retained BBH2 curriculum entries plus 448 frequency-extension entries; two exact duplicate textbook rows remain traceable through `sourceOrders`.
-- 100 unique reviewed WLC memory verses, two per lesson.
+- 546 retained BBH2 entries plus 454 frequency-extension entries. The BBH2 run is shorter than the textbook's 552 because 119 person/place/nation names were lifted into the appendix; the extension reaches correspondingly further down the corpus (to 32 occurrences). Two exact duplicate textbook rows remain traceable through `sourceOrders`.
+- Proper names: 119 in the appendix table, 16 still in the lessons (11 divine names/titles, the sabbath, and אָדָם / נֶגֶב / שְׁאוֹל / יְאֹר, which carry a `keptInLessons` reason). The two halves total the same 135 verified Chinese names the QA gold list freezes, now keyed by `strong|pointed`.
+- Rebuilt by `scripts/rebuild_hebrew_vocab_without_proper_names.py` (a one-shot migration; it refuses to run twice) and `scripts/build_hebrew_appendix_tables.py`.
+- Four appendix reference tables, 287 rows: numerals 38, kinship 37, calendar 35, classified proper names 177 (names cross-listed under each type they carry). Web route `/original-readers/hbo-lessons/tables`.
+- Traditional-Chinese glosses live in `hebrew-gloss-zh-reviewed-by-lemma.json`, keyed by `(strong, pointed)`. The old ordinal-keyed `hebrew-1000-gloss-zh-reviewed.json` is dead — it would misalign every meaning by one.
+- 100 unique WLC memory verses, two per lesson, **93 of them `pending_human_review`**: the vocabulary change invalidated the hand-reviewed pairing (only 51 of the old 100 still fell in any lesson's candidate pool), so the scorer re-selected. One verse (lesson 49 slot 2) matches a single lesson word because no verse in the corpus carries two of that lesson's rare words; it is labelled, not padded.
 - 25 approved complete WLC chapters, 614 source verse positions, 7,751 words.
 - 25 complete prayers/articles, 97 segments.
 - Haggadah: 15 steps, 199 segments.

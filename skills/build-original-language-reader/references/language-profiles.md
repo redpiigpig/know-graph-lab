@@ -23,6 +23,7 @@ Type persons, places, peoples/nations, and divine names/titles. Mixed-sense lemm
 - Current Traditional-Chinese parallel: 《和合本修訂版》（2010）, with variant explicit. In `know-graph-lab` the current frozen source is RCUV2（上帝版）.
 - Route Psalm superscriptions, Isaiah 9, Hosea 14, and any other observed numbering difference through one tested crosswalk.
 - Hebrew appendix: complete fifteen-step Haggadah. Preserve source text and mark editorial pointing.
+- Hebrew reference tables: numerals (gendered pairs, tens, ordinals, fractions), kinship, calendar (Canaanite and Babylonian months, festivals, time units), and the classified proper names lifted out of the lessons. Built by `scripts/build_hebrew_appendix_tables.py` from the WLC and Strong's; see the reference-table contract.
 
 ### Typography and audio
 

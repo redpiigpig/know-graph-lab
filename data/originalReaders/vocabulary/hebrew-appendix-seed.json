@@ -1,0 +1,764 @@
+{
+  "schemaVersion": "1.0.0",
+  "note": "附錄表的策展種子。每筆只寫 Strong 編號、輔音骨架與繁中義；附點形由 scripts/build_hebrew_appendix_tables.py 從 WLC 實際經文抽出，同骨架有多形時才由 pointed 指定，且該形必須在 WLC 出現過。attestation 為 post_biblical 者不在馬所拉經文內，須自行給 pointed 與 source。",
+  "tables": [
+    {
+      "id": "hbo-appendix-numerals",
+      "titleZh": "數字：基數、序數與分數",
+      "titleHe": "מִסְפָּרִים",
+      "intro": "希伯來文的基數 1–10 有陽性、陰性兩式，而且與所數名詞的性別相反：陰性名詞配陽性數詞，陽性名詞配陰性數詞。下表兩式並列，附點形取自馬所拉經文實際出現的寫法，括號內為該寫法在《希伯來聖經》中的出現次數。",
+      "groups": [
+        {
+          "id": "cardinal-1-10",
+          "titleZh": "基數 1–10",
+          "shape": "gender_pair",
+          "entries": [
+            {
+              "value": "1",
+              "strong": "H259",
+              "masculine": "אחד",
+              "feminine": "אחת",
+              "glossZh": "一"
+            },
+            {
+              "value": "2",
+              "strong": "H8147",
+              "masculine": "שנים",
+              "feminine": "שתים",
+              "glossZh": "二（雙數形）"
+            },
+            {
+              "value": "3",
+              "strong": "H7969",
+              "masculine": "שלשה",
+              "feminine": "שלש",
+              "glossZh": "三"
+            },
+            {
+              "value": "4",
+              "strong": "H702",
+              "masculine": "ארבעה",
+              "feminine": "ארבע",
+              "glossZh": "四"
+            },
+            {
+              "value": "5",
+              "strong": "H2568",
+              "masculine": "חמשה",
+              "feminine": "חמש",
+              "glossZh": "五"
+            },
+            {
+              "value": "6",
+              "strong": "H8337",
+              "masculine": "ששה",
+              "feminine": "שש",
+              "glossZh": "六"
+            },
+            {
+              "value": "7",
+              "strong": "H7651",
+              "masculine": "שבעה",
+              "feminine": "שבע",
+              "glossZh": "七"
+            },
+            {
+              "value": "8",
+              "strong": "H8083",
+              "masculine": "שמנה",
+              "masculinePointed": "שְׁמֹנָה",
+              "feminine": "שמנה",
+              "femininePointed": "שְׁמֹנֶה",
+              "glossZh": "八"
+            },
+            {
+              "value": "9",
+              "strong": "H8672",
+              "masculine": "תשעה",
+              "feminine": "תשע",
+              "femininePointed": "תֵּשַׁע",
+              "glossZh": "九",
+              "masculinePointed": "תִּשְׁעָה"
+            },
+            {
+              "value": "10",
+              "strong": "H6235",
+              "masculine": "עשרה",
+              "feminine": "עשר",
+              "glossZh": "十"
+            }
+          ]
+        },
+        {
+          "id": "cardinal-tens",
+          "titleZh": "整十與大數",
+          "shape": "single",
+          "note": "整十一律取基數的陽性複數形，不分性別。",
+          "entries": [
+            {
+              "value": "20",
+              "strong": "H6242",
+              "skeleton": "עשרים",
+              "glossZh": "二十"
+            },
+            {
+              "value": "30",
+              "strong": "H7970",
+              "skeleton": "שלשים",
+              "glossZh": "三十"
+            },
+            {
+              "value": "40",
+              "strong": "H705",
+              "skeleton": "ארבעים",
+              "glossZh": "四十"
+            },
+            {
+              "value": "50",
+              "strong": "H2572",
+              "skeleton": "חמשים",
+              "glossZh": "五十"
+            },
+            {
+              "value": "60",
+              "strong": "H8346",
+              "skeleton": "ששים",
+              "glossZh": "六十"
+            },
+            {
+              "value": "70",
+              "strong": "H7657",
+              "skeleton": "שבעים",
+              "glossZh": "七十"
+            },
+            {
+              "value": "80",
+              "strong": "H8084",
+              "skeleton": "שמנים",
+              "glossZh": "八十"
+            },
+            {
+              "value": "90",
+              "strong": "H8673",
+              "skeleton": "תשעים",
+              "glossZh": "九十"
+            },
+            {
+              "value": "100",
+              "strong": "H3967",
+              "skeleton": "מאה",
+              "glossZh": "一百"
+            },
+            {
+              "value": "1,000",
+              "strong": "H505",
+              "skeleton": "אלף",
+              "glossZh": "一千"
+            },
+            {
+              "value": "10,000",
+              "strong": "H7233",
+              "skeleton": "רבבה",
+              "glossZh": "一萬；萬數"
+            },
+            {
+              "value": "10,000",
+              "strong": "H7239",
+              "skeleton": "רבו",
+              "glossZh": "一萬（後期拼法）"
+            }
+          ]
+        },
+        {
+          "id": "ordinal",
+          "titleZh": "序數 1–10",
+          "shape": "single",
+          "note": "序數皆為形容詞，隨所修飾的名詞變化性數；第十一以上直接用基數表示。",
+          "entries": [
+            {
+              "value": "第一",
+              "strong": "H7223",
+              "skeleton": "ראשון",
+              "glossZh": "第一；首先的"
+            },
+            {
+              "value": "第二",
+              "strong": "H8145",
+              "skeleton": "שני",
+              "glossZh": "第二；再一次"
+            },
+            {
+              "value": "第三",
+              "strong": "H7992",
+              "skeleton": "שלישי",
+              "glossZh": "第三"
+            },
+            {
+              "value": "第四",
+              "strong": "H7243",
+              "skeleton": "רביעי",
+              "glossZh": "第四"
+            },
+            {
+              "value": "第五",
+              "strong": "H2549",
+              "skeleton": "חמישי",
+              "glossZh": "第五"
+            },
+            {
+              "value": "第六",
+              "strong": "H8345",
+              "skeleton": "ששי",
+              "glossZh": "第六"
+            },
+            {
+              "value": "第七",
+              "strong": "H7637",
+              "skeleton": "שביעי",
+              "glossZh": "第七"
+            },
+            {
+              "value": "第八",
+              "strong": "H8066",
+              "skeleton": "שמיני",
+              "glossZh": "第八"
+            },
+            {
+              "value": "第九",
+              "strong": "H8671",
+              "skeleton": "תשיעי",
+              "glossZh": "第九"
+            },
+            {
+              "value": "第十",
+              "strong": "H6224",
+              "skeleton": "עשירי",
+              "glossZh": "第十"
+            }
+          ]
+        },
+        {
+          "id": "fraction",
+          "titleZh": "分數",
+          "shape": "single",
+          "entries": [
+            {
+              "value": "1/2",
+              "strong": "H2677",
+              "skeleton": "חצי",
+              "glossZh": "一半；中間"
+            },
+            {
+              "value": "1/3",
+              "strong": "H7991",
+              "skeleton": "שליש",
+              "glossZh": "三分之一；量器名",
+              "note": "與「軍長、將領」同形，須看上下文分辨。"
+            },
+            {
+              "value": "1/4",
+              "strong": "H7253",
+              "skeleton": "רבע",
+              "glossZh": "四分之一；一邊"
+            },
+            {
+              "value": "1/5",
+              "strong": "H2569",
+              "skeleton": "חמש",
+              "glossZh": "五分之一"
+            },
+            {
+              "value": "1/10",
+              "strong": "H4643",
+              "skeleton": "מעשר",
+              "glossZh": "十分之一；十一奉獻"
+            },
+            {
+              "value": "1/10",
+              "strong": "H6241",
+              "skeleton": "עשרון",
+              "glossZh": "十分之一伊法（量器）"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hbo-appendix-kinship",
+      "titleZh": "親屬稱謂",
+      "titleHe": "קִרְבַת מִשְׁפָּחָה",
+      "intro": "希伯來聖經的親屬語彙以「父家」（בֵּית אָב）為軸心，姻親、家僕與有贖回之責的至近親屬都算在同一個家戶之內，因此本表把血親、姻親、世代身分與家戶成員並列。",
+      "groups": [
+        {
+          "id": "lineal",
+          "titleZh": "直系血親",
+          "shape": "single",
+          "entries": [
+            {
+              "strong": "H1",
+              "skeleton": "אב",
+              "glossZh": "父親；祖先"
+            },
+            {
+              "strong": "H517",
+              "skeleton": "אם",
+              "glossZh": "母親"
+            },
+            {
+              "strong": "H1121",
+              "skeleton": "בן",
+              "glossZh": "兒子；子孫"
+            },
+            {
+              "strong": "H1323",
+              "skeleton": "בת",
+              "glossZh": "女兒"
+            },
+            {
+              "strong": "H1060",
+              "skeleton": "בכור",
+              "glossZh": "長子；頭生的"
+            },
+            {
+              "strong": "H5220",
+              "skeleton": "נכד",
+              "glossZh": "孫子；後裔"
+            },
+            {
+              "strong": "H5209",
+              "skeleton": "נין",
+              "glossZh": "曾孫；子嗣"
+            },
+            {
+              "strong": "H2233",
+              "skeleton": "זרע",
+              "glossZh": "種子；後裔"
+            },
+            {
+              "strong": "H1755",
+              "skeleton": "דור",
+              "glossZh": "世代"
+            }
+          ]
+        },
+        {
+          "id": "collateral",
+          "titleZh": "旁系血親",
+          "shape": "single",
+          "entries": [
+            {
+              "strong": "H251",
+              "skeleton": "אח",
+              "glossZh": "兄弟；同族之人"
+            },
+            {
+              "strong": "H269",
+              "skeleton": "אחות",
+              "glossZh": "姊妹"
+            },
+            {
+              "strong": "H1730",
+              "skeleton": "דוד",
+              "glossZh": "叔伯；所愛的人"
+            },
+            {
+              "strong": "H1733",
+              "skeleton": "דודה",
+              "glossZh": "姑姑；姨母；嬸嬸",
+              "formSource": "lexicon",
+              "note": "馬所拉經文中一律帶人稱詞尾出現，無獨立形，此處採詞典引用形。"
+            }
+          ]
+        },
+        {
+          "id": "affinal",
+          "titleZh": "姻親",
+          "shape": "single",
+          "note": "希伯來文區分夫家與妻家：חָם／חָמוֹת 指丈夫的父母，חֹתֵן 指妻子的父親。",
+          "entries": [
+            {
+              "strong": "H376",
+              "skeleton": "איש",
+              "glossZh": "男人；丈夫"
+            },
+            {
+              "strong": "H802",
+              "skeleton": "אשה",
+              "glossZh": "女人；妻子"
+            },
+            {
+              "strong": "H1167",
+              "skeleton": "בעל",
+              "glossZh": "丈夫；主人"
+            },
+            {
+              "strong": "H2860",
+              "skeleton": "חתן",
+              "glossZh": "女婿；新郎"
+            },
+            {
+              "strong": "H3618",
+              "skeleton": "כלה",
+              "glossZh": "兒媳；新婦"
+            },
+            {
+              "strong": "H2524",
+              "skeleton": "חם",
+              "glossZh": "公公（丈夫的父親）",
+              "formSource": "lexicon",
+              "note": "馬所拉經文中一律帶人稱詞尾出現，無獨立形，此處採詞典引用形。"
+            },
+            {
+              "strong": "H2545",
+              "skeleton": "חמות",
+              "glossZh": "婆婆（丈夫的母親）",
+              "formSource": "lexicon",
+              "note": "馬所拉經文中一律帶人稱詞尾出現，無獨立形，此處採詞典引用形。"
+            },
+            {
+              "strong": "H2859",
+              "skeleton": "חתן",
+              "pointed": "חֹתֵן",
+              "glossZh": "岳父（妻子的父親）",
+              "note": "為動詞 חָתַן「結親」的主動分詞，作名詞用。"
+            },
+            {
+              "strong": "H2993",
+              "skeleton": "יבם",
+              "glossZh": "夫兄弟（負娶寡嫂之責者）",
+              "formSource": "lexicon",
+              "note": "馬所拉經文中一律帶人稱詞尾出現，無獨立形，此處採詞典引用形。"
+            },
+            {
+              "strong": "H2994",
+              "skeleton": "יבמת",
+              "glossZh": "寡嫂；夫兄弟之妻",
+              "formSource": "lexicon",
+              "note": "馬所拉經文中一律帶人稱詞尾出現，無獨立形，此處採詞典引用形。"
+            },
+            {
+              "strong": "H6370",
+              "skeleton": "פילגש",
+              "glossZh": "妾"
+            }
+          ]
+        },
+        {
+          "id": "household",
+          "titleZh": "家戶、身分與至近親屬",
+          "shape": "single",
+          "entries": [
+            {
+              "strong": "H1004",
+              "skeleton": "בית",
+              "glossZh": "房屋；家戶；家族"
+            },
+            {
+              "strong": "H4940",
+              "skeleton": "משפחה",
+              "glossZh": "家族；宗族"
+            },
+            {
+              "strong": "H7607",
+              "skeleton": "שאר",
+              "glossZh": "骨肉之親；血親"
+            },
+            {
+              "strong": "H1350",
+              "skeleton": "גאל",
+              "pointed": "גֹּאֵל",
+              "glossZh": "至近的親屬；救贖者",
+              "note": "為動詞 גָּאַל「贖回」的主動分詞，即律法上有權贖回族人產業與人身者。"
+            },
+            {
+              "strong": "H2205",
+              "skeleton": "זקן",
+              "glossZh": "長老；年老的"
+            },
+            {
+              "strong": "H3206",
+              "skeleton": "ילד",
+              "glossZh": "孩童；男孩"
+            },
+            {
+              "strong": "H5288",
+              "skeleton": "נער",
+              "glossZh": "少年；僕人"
+            },
+            {
+              "strong": "H5291",
+              "skeleton": "נערה",
+              "glossZh": "少女"
+            },
+            {
+              "strong": "H490",
+              "skeleton": "אלמנה",
+              "glossZh": "寡婦"
+            },
+            {
+              "strong": "H3490",
+              "skeleton": "יתום",
+              "glossZh": "孤兒"
+            },
+            {
+              "strong": "H5650",
+              "skeleton": "עבד",
+              "glossZh": "僕人；奴僕"
+            },
+            {
+              "strong": "H519",
+              "skeleton": "אמה",
+              "glossZh": "婢女"
+            },
+            {
+              "strong": "H8198",
+              "skeleton": "שפחה",
+              "glossZh": "使女"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hbo-appendix-calendar",
+      "titleZh": "曆法：月名、節期與時間單位",
+      "titleHe": "לוּחַ הַשָּׁנָה",
+      "intro": "希伯來聖經裡有三套月份稱法並存：早期以序數稱月（「二月」），王國時期留下四個迦南舊月名，被擄歸回後改用巴比倫月名。十二個巴比倫月名中只有七個出現在馬所拉經文裡，其餘五個要到米示拿以後的猶太文獻才齊備，本表據實分開標示。",
+      "groups": [
+        {
+          "id": "canaanite-months",
+          "titleZh": "迦南舊月名（馬所拉經文所存四個）",
+          "shape": "month",
+          "entries": [
+            {
+              "order": "一月",
+              "strong": "H24",
+              "skeleton": "אביב",
+              "glossZh": "亞筆月",
+              "note": "字義為「青穗」，即大麥抽穗之月；逾越節在此月。"
+            },
+            {
+              "order": "二月",
+              "strong": "H2099",
+              "skeleton": "זו",
+              "glossZh": "西弗月"
+            },
+            {
+              "order": "七月",
+              "strong": "H388",
+              "skeleton": "אתנים",
+              "glossZh": "以他念月"
+            },
+            {
+              "order": "八月",
+              "strong": "H945",
+              "skeleton": "בול",
+              "glossZh": "布勒月"
+            }
+          ]
+        },
+        {
+          "id": "babylonian-months-mt",
+          "titleZh": "巴比倫月名（見於馬所拉經文）",
+          "shape": "month",
+          "entries": [
+            {
+              "order": "一月",
+              "strong": "H5212",
+              "skeleton": "ניסן",
+              "glossZh": "尼散月"
+            },
+            {
+              "order": "三月",
+              "strong": "H5510",
+              "skeleton": "סיון",
+              "glossZh": "西彎月"
+            },
+            {
+              "order": "六月",
+              "strong": "H435",
+              "skeleton": "אלול",
+              "glossZh": "以祿月"
+            },
+            {
+              "order": "九月",
+              "strong": "H3691",
+              "skeleton": "כסלו",
+              "glossZh": "基斯流月",
+              "pointed": "כִּסְלֵיו",
+              "note": "馬所拉經文三處拼法不一（כִסְלֵו／כִּסְלֵיו／未標母音），此處取全標母音的一式。"
+            },
+            {
+              "order": "十月",
+              "strong": "H2887",
+              "skeleton": "טבת",
+              "glossZh": "提別月"
+            },
+            {
+              "order": "十一月",
+              "strong": "H7627",
+              "skeleton": "שבט",
+              "glossZh": "細罷特月"
+            },
+            {
+              "order": "十二月",
+              "strong": "H143",
+              "skeleton": "אדר",
+              "glossZh": "亞達月"
+            }
+          ]
+        },
+        {
+          "id": "babylonian-months-post",
+          "titleZh": "巴比倫月名（不見於馬所拉經文）",
+          "shape": "month",
+          "attestation": "post_biblical",
+          "source": "米示拿與後期猶太曆書所用月名；中譯依猶太曆通行譯法，非《和合本修訂版》用字。",
+          "entries": [
+            {
+              "order": "二月",
+              "pointed": "אִיָּר",
+              "glossZh": "以珥月"
+            },
+            {
+              "order": "四月",
+              "pointed": "תַּמּוּז",
+              "glossZh": "搭模斯月",
+              "note": "與以西結書 8:14 的神祇塔模斯同名，但作月名是被擄歸回後的用法。"
+            },
+            {
+              "order": "五月",
+              "pointed": "אָב",
+              "glossZh": "亞布月",
+              "note": "與「父親」אָב 同形。"
+            },
+            {
+              "order": "七月",
+              "pointed": "תִּשְׁרֵי",
+              "glossZh": "提斯利月"
+            },
+            {
+              "order": "八月",
+              "pointed": "מַרְחֶשְׁוָן",
+              "glossZh": "瑪西班月"
+            }
+          ]
+        },
+        {
+          "id": "time-units",
+          "titleZh": "時間單位",
+          "shape": "single",
+          "entries": [
+            {
+              "strong": "H3117",
+              "skeleton": "יום",
+              "glossZh": "日；白晝"
+            },
+            {
+              "strong": "H7676",
+              "skeleton": "שבת",
+              "glossZh": "安息日"
+            },
+            {
+              "strong": "H7620",
+              "skeleton": "שבוע",
+              "glossZh": "七日；一週；七年期",
+              "pointed": "שָׁבוּעַ"
+            },
+            {
+              "strong": "H2320",
+              "skeleton": "חדש",
+              "glossZh": "月份；新月"
+            },
+            {
+              "strong": "H3391",
+              "skeleton": "ירח",
+              "pointed": "יֶרַח",
+              "glossZh": "月（曆月）"
+            },
+            {
+              "strong": "H3394",
+              "skeleton": "ירח",
+              "pointed": "יָרֵחַ",
+              "glossZh": "月亮"
+            },
+            {
+              "strong": "H8141",
+              "skeleton": "שנה",
+              "glossZh": "年"
+            },
+            {
+              "strong": "H6256",
+              "skeleton": "עת",
+              "glossZh": "時候；定時"
+            },
+            {
+              "strong": "H4150",
+              "skeleton": "מועד",
+              "glossZh": "所定的節期；聚會的時候"
+            }
+          ]
+        },
+        {
+          "id": "festivals",
+          "titleZh": "節期與聖年",
+          "shape": "single",
+          "entries": [
+            {
+              "strong": "H2282",
+              "skeleton": "חג",
+              "glossZh": "節期；朝聖的節"
+            },
+            {
+              "strong": "H6453",
+              "skeleton": "פסח",
+              "glossZh": "逾越節"
+            },
+            {
+              "strong": "H4682",
+              "skeleton": "מצה",
+              "glossZh": "無酵餅；（複數）除酵節"
+            },
+            {
+              "strong": "H7620",
+              "skeleton": "שבעות",
+              "pointed": "שָׁבֻעוֹת",
+              "glossZh": "七七節（五旬節）",
+              "note": "為 שָׁבוּעַ「七日」的複數形；出埃及記 34:22、申命記 16:10 稱此節。"
+            },
+            {
+              "strong": "H5521",
+              "skeleton": "סכה",
+              "glossZh": "棚；（複數）住棚節"
+            },
+            {
+              "strong": "H8643",
+              "skeleton": "תרועה",
+              "glossZh": "吹角的響聲；吹角節"
+            },
+            {
+              "strong": "H3725",
+              "skeleton": "כפרים",
+              "glossZh": "贖罪；贖罪日"
+            },
+            {
+              "strong": "H6332",
+              "skeleton": "פורים",
+              "glossZh": "普珥日"
+            },
+            {
+              "strong": "H8059",
+              "skeleton": "שמטה",
+              "glossZh": "豁免年；安息年"
+            },
+            {
+              "strong": "H3104",
+              "skeleton": "יובל",
+              "glossZh": "禧年"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

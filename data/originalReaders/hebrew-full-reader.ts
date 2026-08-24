@@ -1,10 +1,11 @@
 import hebrewVocabularyJson from "./vocabulary/hebrew-1000.json";
 import haggadahJson from "../../output/source-cache/original-readers/hebrew-full/haggadah-full.json";
 import assembledReaderJson from "../../output/source-cache/original-readers/hebrew-full/hebrew-reader-50-lessons.json";
-import reviewedGlossesJson from "../../output/source-cache/original-readers/hebrew-full/hebrew-1000-gloss-zh-reviewed.json";
+import reviewedGlossesJson from "../../output/source-cache/original-readers/hebrew-full/hebrew-gloss-zh-reviewed-by-lemma.json";
 import prayersArticlesJson from "../../output/source-cache/original-readers/hebrew-full/prayers-articles.json";
 import scripturePlanJson from "../../output/source-cache/original-readers/hebrew-full/scripture-plan.json";
 import interlinearJson from "../../output/source-cache/original-readers/hebrew-full/interlinear.json";
+import referenceTablesJson from "../../output/source-cache/original-readers/hebrew-full/appendix-tables.json";
 
 export interface HebrewFullReaderAudioStatus {
   status: "not_recorded";
@@ -42,6 +43,9 @@ interface HebrewVocabularyEntry {
   partOfSpeech: string;
   isProperName: boolean;
   properNameTypes: string[];
+  // Set only on the few name-flagged words that stay in the lessons because they
+  // read as ordinary vocabulary; the value is the reason, in Chinese.
+  keptInLessons?: string;
   verification: string;
   languageVariety: string;
   lesson: number;
@@ -49,7 +53,8 @@ interface HebrewVocabularyEntry {
 }
 
 interface ReviewedGloss {
-  ordinal: number;
+  strong: string;
+  pointed: string;
   glossZh: string;
 }
 
@@ -202,7 +207,51 @@ interface AssembledReaderMaster {
 
 interface ReviewedGlossMaster {
   status: string;
+  keyedBy: string;
   items: ReviewedGloss[];
+}
+
+export interface HebrewReferenceTableEntry {
+  glossZh: string;
+  strong: string | null;
+  attestation: string;
+  value?: string;
+  order?: string;
+  note?: string;
+  pointed?: string;
+  transliteration?: string;
+  wlcSpellingCount?: number;
+  formSource?: string;
+  frequency?: number;
+  firstOccurrence?: string;
+  lesson?: number;
+  types?: string[];
+  masculine?: { pointed: string; transliteration: string; wlcSpellingCount: number };
+  feminine?: { pointed: string; transliteration: string; wlcSpellingCount: number };
+}
+
+export interface HebrewReferenceTableGroup {
+  id: string;
+  titleZh: string;
+  shape: string;
+  note?: string;
+  source?: string;
+  entries: HebrewReferenceTableEntry[];
+}
+
+export interface HebrewReferenceTable {
+  id: string;
+  titleZh: string;
+  titleHe: string;
+  intro: string;
+  groups: HebrewReferenceTableGroup[];
+  entryCount: number;
+}
+
+interface HebrewReferenceTableMaster {
+  note: string;
+  sources: Record<string, string>;
+  tables: HebrewReferenceTable[];
 }
 
 interface PrayerArticleMaster {
@@ -311,6 +360,7 @@ const prayersArticles = prayersArticlesJson as unknown as PrayerArticleMaster;
 const haggadah = haggadahJson as unknown as HaggadahMaster;
 const reviewedGlosses = reviewedGlossesJson as unknown as ReviewedGlossMaster;
 const vocabulary = hebrewVocabularyJson as unknown as HebrewVocabularyEntry[];
+const referenceTables = referenceTablesJson as unknown as HebrewReferenceTableMaster;
 
 interface InterlinearUnit {
   id: string;
@@ -423,16 +473,18 @@ function validateMasters() {
   invariant(haggadah.steps.length === 15, "Haggadah 不是完整十五步");
   invariant(haggadah.pointingGapCount === 0, "Haggadah 排印正文仍有附點缺口");
 
-  const glossByOrdinal = new Map(reviewedGlosses.items.map((item) => [item.ordinal, item.glossZh.trim()]));
+  const glossByLemma = new Map(
+    reviewedGlosses.items.map((item) => [`${item.strong}|${item.pointed}`, item.glossZh.trim()]),
+  );
   for (let lesson = 1; lesson <= 50; lesson += 1) {
     const lessonVocabulary = vocabulary.filter((item) => item.lesson === lesson);
-    invariant(lessonVocabulary.length > 0, `第 ${lesson} 課沒有詞彙`);
+    invariant(lessonVocabulary.length === 20, `第 ${lesson} 課不是 20 詞`);
     invariant(
       lessonVocabulary.every((item, index) => item.lessonSlot === index + 1),
       `第 ${lesson} 課詞彙 slot 不連續`,
     );
     invariant(
-      lessonVocabulary.every((item) => Boolean(glossByOrdinal.get(item.ordinal))),
+      lessonVocabulary.every((item) => Boolean(glossByLemma.get(`${item.strong}|${item.pointed}`))),
       `第 ${lesson} 課仍有空白繁中詞義`,
     );
     const memory = scripturePlan.memoryLessons.find((item) => item.lesson === lesson);
@@ -456,12 +508,21 @@ function validateMasters() {
   validated = true;
 }
 
+// Keyed by lemma, not by position: lifting the proper names out of the word
+// list renumbered every ordinal, and a position-keyed lookup would have shifted
+// all 1,000 meanings by one without any error surfacing.
 function vocabularyForLesson(lesson: number): HebrewLessonVocabularyEntry[] {
-  const glossByOrdinal = new Map(reviewedGlosses.items.map((item) => [item.ordinal, item.glossZh.trim()]));
+  const glossByLemma = new Map(
+    reviewedGlosses.items.map((item) => [`${item.strong}|${item.pointed}`, item.glossZh.trim()]),
+  );
   return vocabulary
     .filter((item) => item.lesson === lesson)
     .sort((left, right) => left.lessonSlot - right.lessonSlot)
-    .map((item) => ({ ...item, glossZh: glossByOrdinal.get(item.ordinal) || "" }));
+    .map((item) => {
+      const glossZh = glossByLemma.get(`${item.strong}|${item.pointed}`) || "";
+      invariant(glossZh, `第 ${lesson} 課的 ${item.pointed} 沒有繁中義`);
+      return { ...item, glossZh };
+    });
 }
 
 function memoryForLesson(lesson: number): HebrewMemoryVerse[] {
@@ -616,7 +677,7 @@ export function getHebrewFullReaderOverview() {
   validateMasters();
   return {
     title: "希伯來文原文讀本・50課私人線上版",
-    subtitle: "每課2節背誦與1篇完整主讀文；詞彙第1–33課即 BBH2 第3–35章原章詞表（每課詞數不等），第34–50課補足1,000詞。第1–25課讀完整聖經章，第26–50課讀禱文與拉比文章。",
+    subtitle: "每課20詞、2節背誦與1篇完整主讀文，共1,000詞；詞序依 BBH2 第3–35章，其後接語料頻率延伸。第1–25課讀完整聖經章，第26–50課讀禱文與拉比文章。人名地名等專名不佔課內詞額，另立分類專名表。",
     language: "hbo",
     rtl: true,
     privateUse: true,
@@ -640,7 +701,25 @@ export function getHebrewFullReaderOverview() {
       segmentCount: haggadah.segmentCount,
       pointingStatus: haggadah.pointingStatus,
     },
+    referenceTables: referenceTables.tables.map((table) => ({
+      id: table.id,
+      titleZh: table.titleZh,
+      titleHe: table.titleHe,
+      groupCount: table.groups.length,
+      entryCount: table.entryCount,
+      href: `/original-readers/hbo-lessons/tables#${table.id}`,
+    })),
     lessons: listHebrewFullLessons(),
+  };
+}
+
+export function getHebrewReferenceTables() {
+  validateMasters();
+  return {
+    titleZh: "附錄對照表",
+    sources: referenceTables.sources,
+    note: referenceTables.note,
+    tables: referenceTables.tables,
   };
 }
 

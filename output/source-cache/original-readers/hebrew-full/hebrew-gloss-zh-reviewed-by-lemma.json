@@ -1,0 +1,5009 @@
+{
+  "schemaVersion": "2.0.0",
+  "language": "zh-Hant",
+  "status": "editorially-reviewed-working-gloss",
+  "keyedBy": "strong+pointed",
+  "note": "以 (strong, pointed) 為鍵，詞表重編、ordinal 變動時繁中義不會錯位。1.x 版以 ordinal 為鍵，已停用。 專名移出後遞補的 119 詞繁中義為人工逐條撰寫（依 Strong 英文釋義與 BBH2 詞性），非機器產出。",
+  "items": [
+    {
+      "strong": "H120",
+      "pointed": "אָדָם",
+      "glossZh": "人；人類；亞當"
+    },
+    {
+      "strong": "H776",
+      "pointed": "אֶ֫רֶץ",
+      "glossZh": "地；土地；地面"
+    },
+    {
+      "strong": "H430",
+      "pointed": "אֱלֹהִים",
+      "glossZh": "神；上帝；神明"
+    },
+    {
+      "strong": "H1",
+      "pointed": "אָב",
+      "glossZh": "父親；祖先"
+    },
+    {
+      "strong": "H410",
+      "pointed": "אֵל",
+      "glossZh": "神；神明"
+    },
+    {
+      "strong": "H1121",
+      "pointed": "בֵּן",
+      "glossZh": "兒子"
+    },
+    {
+      "strong": "H1004",
+      "pointed": "בַּ֫יִת",
+      "glossZh": "房屋；家戶"
+    },
+    {
+      "strong": "H1697",
+      "pointed": "דָּבָר",
+      "glossZh": "話；事；物"
+    },
+    {
+      "strong": "H3117",
+      "pointed": "יוֹם",
+      "glossZh": "日"
+    },
+    {
+      "strong": "H3068",
+      "pointed": "יְהוָה",
+      "glossZh": "耶和華；主"
+    },
+    {
+      "strong": "H4428",
+      "pointed": "מֶ֫לֶךְ",
+      "glossZh": "王；君王"
+    },
+    {
+      "strong": "H5483",
+      "pointed": "סוּס",
+      "glossZh": "馬"
+    },
+    {
+      "strong": "H5650",
+      "pointed": "עֶ֫בֶד",
+      "glossZh": "奴隸；僕人"
+    },
+    {
+      "strong": "H8141",
+      "pointed": "שָׁנָה",
+      "glossZh": "年"
+    },
+    {
+      "strong": "H8034",
+      "pointed": "שֵׁם",
+      "glossZh": "名；聲望"
+    },
+    {
+      "strong": "H136",
+      "pointed": "אֲדֹנָי",
+      "glossZh": "主；我的主"
+    },
+    {
+      "strong": "H113",
+      "pointed": "אָדוֹן",
+      "glossZh": "主人；長官"
+    },
+    {
+      "strong": "H251",
+      "pointed": "אָח",
+      "glossZh": "兄弟"
+    },
+    {
+      "strong": "H251",
+      "pointed": "אַחִים",
+      "glossZh": "弟兄；兄弟（אָח 的複數）"
+    },
+    {
+      "strong": "H376",
+      "pointed": "אִישׁ",
+      "glossZh": "男人；丈夫"
+    },
+    {
+      "strong": "H376",
+      "pointed": "אֲנָשִׁים",
+      "glossZh": "男人；丈夫"
+    },
+    {
+      "strong": "H802",
+      "pointed": "אִשָּׁה",
+      "glossZh": "女人；妻子"
+    },
+    {
+      "strong": "H802",
+      "pointed": "נָשִׁים",
+      "glossZh": "女人；妻子"
+    },
+    {
+      "strong": "H1323",
+      "pointed": "בַּת",
+      "glossZh": "女兒"
+    },
+    {
+      "strong": "H1323",
+      "pointed": "בָּנוֹת",
+      "glossZh": "女兒"
+    },
+    {
+      "strong": "H1471",
+      "pointed": "גּוֹי",
+      "glossZh": "民族；百姓"
+    },
+    {
+      "strong": "H1870",
+      "pointed": "דֶּ֫רֶךְ",
+      "glossZh": "道路；路徑；旅程"
+    },
+    {
+      "strong": "H2022",
+      "pointed": "הַר",
+      "glossZh": "山"
+    },
+    {
+      "strong": "H2022",
+      "pointed": "הָרִים",
+      "glossZh": "山脈"
+    },
+    {
+      "strong": "H3548",
+      "pointed": "כֹּהֵן",
+      "glossZh": "祭司"
+    },
+    {
+      "strong": "H3820",
+      "pointed": "לֵב",
+      "glossZh": "心；意念"
+    },
+    {
+      "strong": "H3824",
+      "pointed": "לֵבָב",
+      "glossZh": "心；意念"
+    },
+    {
+      "strong": "H4325",
+      "pointed": "מַ֫יִם",
+      "glossZh": "水"
+    },
+    {
+      "strong": "H5315",
+      "pointed": "נֶ֫פֶשׁ",
+      "glossZh": "性命；生命；人；頸；喉嚨"
+    },
+    {
+      "strong": "H5030",
+      "pointed": "נָבִיא",
+      "glossZh": "先知"
+    },
+    {
+      "strong": "H5612",
+      "pointed": "סֵ֫פֶר",
+      "glossZh": "書；卷"
+    },
+    {
+      "strong": "H5869",
+      "pointed": "עַ֫יִן",
+      "glossZh": "眼；泉"
+    },
+    {
+      "strong": "H5869",
+      "pointed": "עֵינַ֫יִם",
+      "glossZh": "兩眼"
+    },
+    {
+      "strong": "H5892",
+      "pointed": "עִיר",
+      "glossZh": "城；鎮"
+    },
+    {
+      "strong": "H5892",
+      "pointed": "עָרִים",
+      "glossZh": "城；市"
+    },
+    {
+      "strong": "H6635",
+      "pointed": "צָבָא",
+      "glossZh": "軍隊；戰爭；服兵役"
+    },
+    {
+      "strong": "H6635",
+      "pointed": "צְבָאוֹת",
+      "glossZh": "軍隊；戰爭"
+    },
+    {
+      "strong": "H6963",
+      "pointed": "קוֹל",
+      "glossZh": "聲音；響聲"
+    },
+    {
+      "strong": "H7218",
+      "pointed": "רֹאשׁ",
+      "glossZh": "頭；頂；首領"
+    },
+    {
+      "strong": "H8451",
+      "pointed": "תּוֹרָה",
+      "glossZh": "律法；教訓"
+    },
+    {
+      "strong": "H1",
+      "pointed": "אָבוֹת",
+      "glossZh": "父親；祖先"
+    },
+    {
+      "strong": "H1004",
+      "pointed": "בָּֽתִּים",
+      "glossZh": "房屋"
+    },
+    {
+      "strong": "H1121",
+      "pointed": "בָּנִים",
+      "glossZh": "兒子"
+    },
+    {
+      "strong": "H3117",
+      "pointed": "יָמִים",
+      "glossZh": "日子"
+    },
+    {
+      "strong": "H784",
+      "pointed": "אֵשׁ",
+      "glossZh": "火"
+    },
+    {
+      "strong": "H1964",
+      "pointed": "הֵיכָל",
+      "glossZh": "聖殿；宮殿"
+    },
+    {
+      "strong": "",
+      "pointed": "וְ",
+      "glossZh": "和；但；又；甚至；就"
+    },
+    {
+      "strong": "H2091",
+      "pointed": "זָהָב",
+      "glossZh": "金"
+    },
+    {
+      "strong": "H2719",
+      "pointed": "חֶ֫רֶב",
+      "glossZh": "刀劍；劍"
+    },
+    {
+      "strong": "H2416",
+      "pointed": "חַי",
+      "glossZh": "活著；有生命"
+    },
+    {
+      "strong": "H2416",
+      "pointed": "חַיִּים",
+      "glossZh": "生命；一生"
+    },
+    {
+      "strong": "H3206",
+      "pointed": "יֶ֫לֶד",
+      "glossZh": "孩童；男孩；青年"
+    },
+    {
+      "strong": "H3220",
+      "pointed": "יָם",
+      "glossZh": "海"
+    },
+    {
+      "strong": "H3220",
+      "pointed": "יַמִּים",
+      "glossZh": "海；眾海"
+    },
+    {
+      "strong": "H3701",
+      "pointed": "כֶּ֫סֶף",
+      "glossZh": "銀；錢"
+    },
+    {
+      "strong": "H3541",
+      "pointed": "כֹּה",
+      "glossZh": "如此；這裡"
+    },
+    {
+      "strong": "H4725",
+      "pointed": "מָקוֹם",
+      "glossZh": "地方；位置"
+    },
+    {
+      "strong": "H4941",
+      "pointed": "מִשְׁפָּט",
+      "glossZh": "判決；決定；條例；法律；習俗；方式"
+    },
+    {
+      "strong": "H4196",
+      "pointed": "מִזְבֵּחַ",
+      "glossZh": "祭壇"
+    },
+    {
+      "strong": "H5002",
+      "pointed": "נְאֻם",
+      "glossZh": "言語；宣告；啟示"
+    },
+    {
+      "strong": "H5769",
+      "pointed": "עוֹלָם",
+      "glossZh": "永遠；久遠；古時"
+    },
+    {
+      "strong": "H6051",
+      "pointed": "עָנָן",
+      "glossZh": "雲；雲層"
+    },
+    {
+      "strong": "H7307",
+      "pointed": "רוּחַ",
+      "glossZh": "靈；風；氣息"
+    },
+    {
+      "strong": "H8269",
+      "pointed": "שַׂר",
+      "glossZh": "首長；統治者；王子"
+    },
+    {
+      "strong": "H8179",
+      "pointed": "שַׁ֫עַר",
+      "glossZh": "門"
+    },
+    {
+      "strong": "H8064",
+      "pointed": "שָׁמַ֫יִם",
+      "glossZh": "天；天空"
+    },
+    {
+      "strong": "H310",
+      "pointed": "אַחַר",
+      "glossZh": "在……之後；在……後面"
+    },
+    {
+      "strong": "H310",
+      "pointed": "אַחֲרֵי",
+      "glossZh": "在……之後；在……後面"
+    },
+    {
+      "strong": "H853",
+      "pointed": "אֵת/אֶת־",
+      "glossZh": "與；在……旁邊；限定直接受詞標記"
+    },
+    {
+      "strong": "H413",
+      "pointed": "אֶל/אֶל־",
+      "glossZh": "到；向；在；進入"
+    },
+    {
+      "strong": "H996",
+      "pointed": "בֵּין",
+      "glossZh": "在……之間"
+    },
+    {
+      "strong": "H996",
+      "pointed": "וּבֵין",
+      "glossZh": "和……之間"
+    },
+    {
+      "strong": "",
+      "pointed": "בְּ",
+      "glossZh": "在；於；與；對抗"
+    },
+    {
+      "strong": "H8432",
+      "pointed": "בְּתוֹךְ",
+      "glossZh": "中間；裡面"
+    },
+    {
+      "strong": "H8432",
+      "pointed": "תָּ֫וֶךְ",
+      "glossZh": "中間；中心"
+    },
+    {
+      "strong": "H2451",
+      "pointed": "חָכְמָה",
+      "glossZh": "智慧；技巧"
+    },
+    {
+      "strong": "",
+      "pointed": "כְּ",
+      "glossZh": "如同；像；按照"
+    },
+    {
+      "strong": "H3605",
+      "pointed": "כֹּל",
+      "glossZh": "所有；每個；每一"
+    },
+    {
+      "strong": "H3605",
+      "pointed": "כָּל־",
+      "glossZh": "所有的；每個的；每一個的"
+    },
+    {
+      "strong": "H6440",
+      "pointed": "לִפְנֵי",
+      "glossZh": "在……前面"
+    },
+    {
+      "strong": "",
+      "pointed": "לְ",
+      "glossZh": "到；向；為"
+    },
+    {
+      "strong": "H4616",
+      "pointed": "לְמַ֫עַן",
+      "glossZh": "因著；為了"
+    },
+    {
+      "strong": "H4480",
+      "pointed": "מִן / מִן־",
+      "glossZh": "從；出自"
+    },
+    {
+      "strong": "H4605",
+      "pointed": "מַ֫עַל",
+      "glossZh": "在上面；向上；頂上"
+    },
+    {
+      "strong": "H4605",
+      "pointed": "מִמַּ֫עַל",
+      "glossZh": "(從)在上面；(從)頂上"
+    },
+    {
+      "strong": "H4687",
+      "pointed": "מִצְוָה",
+      "glossZh": "誡命"
+    },
+    {
+      "strong": "H4687",
+      "pointed": "מִצְוֹת",
+      "glossZh": "誡命（מִצְוָה 的不規則複數）"
+    },
+    {
+      "strong": "H5704",
+      "pointed": "עַד",
+      "glossZh": "直到；到……為止；期間"
+    },
+    {
+      "strong": "H5921",
+      "pointed": "עַל",
+      "glossZh": "在；於；因為；按照"
+    },
+    {
+      "strong": "",
+      "pointed": "עַל־דְּבַר",
+      "glossZh": "因為；由於"
+    },
+    {
+      "strong": "H5973",
+      "pointed": "עִם",
+      "glossZh": "和；與"
+    },
+    {
+      "strong": "H6310",
+      "pointed": "פֶּה",
+      "glossZh": "口；開口"
+    },
+    {
+      "strong": "H7704",
+      "pointed": "שָׂדֶה",
+      "glossZh": "田地；牧場"
+    },
+    {
+      "strong": "H8478",
+      "pointed": "תַּ֫חַת",
+      "glossZh": "在……之下；代替"
+    },
+    {
+      "strong": "H259",
+      "pointed": "אֶחָד",
+      "glossZh": "一"
+    },
+    {
+      "strong": "H1419",
+      "pointed": "גָּדוֹל",
+      "glossZh": "大；巨大"
+    },
+    {
+      "strong": "H1800",
+      "pointed": "דַּל",
+      "glossZh": "貧窮；軟弱；需要幫助的"
+    },
+    {
+      "strong": "H2205",
+      "pointed": "זָקֵן",
+      "glossZh": "年老；長者；變老"
+    },
+    {
+      "strong": "H2450",
+      "pointed": "חָכָם",
+      "glossZh": "聰明；熟練；有經驗的"
+    },
+    {
+      "strong": "H2896",
+      "pointed": "טוֹב",
+      "glossZh": "良善；美好；令人喜悅；順遂"
+    },
+    {
+      "strong": "H3303",
+      "pointed": "יָפֶה",
+      "glossZh": "美麗"
+    },
+    {
+      "strong": "H3477",
+      "pointed": "יָשָׁר",
+      "glossZh": "正直的；公義的；平坦的；筆直的"
+    },
+    {
+      "strong": "H3651",
+      "pointed": "כֵּן",
+      "glossZh": "如此；這樣"
+    },
+    {
+      "strong": "H3651",
+      "pointed": "לָכֵן",
+      "glossZh": "因此"
+    },
+    {
+      "strong": "",
+      "pointed": "עַל־כֵּן",
+      "glossZh": "因此"
+    },
+    {
+      "strong": "H3966",
+      "pointed": "מְאֹד",
+      "glossZh": "非常；極其"
+    },
+    {
+      "strong": "H4592",
+      "pointed": "מְעַט",
+      "glossZh": "少；少量"
+    },
+    {
+      "strong": "H6258",
+      "pointed": "עַתָּה",
+      "glossZh": "現在；終於；然後"
+    },
+    {
+      "strong": "H6662",
+      "pointed": "צַדִּיק",
+      "glossZh": "公義的；正直的；無罪的"
+    },
+    {
+      "strong": "H6944",
+      "pointed": "קֹ֫דֶשׁ",
+      "glossZh": "聖潔的事物；聖潔"
+    },
+    {
+      "strong": "H6918",
+      "pointed": "קָדוֹשׁ",
+      "glossZh": "聖潔的；被分別出來的"
+    },
+    {
+      "strong": "H6996",
+      "pointed": "קָטֹן",
+      "glossZh": "小；幼小；微不足道的"
+    },
+    {
+      "strong": "H7138",
+      "pointed": "קָרוֹב",
+      "glossZh": "近；靠近的"
+    },
+    {
+      "strong": "H7186",
+      "pointed": "קָשֶׁה",
+      "glossZh": "困難；堅硬；嚴厲"
+    },
+    {
+      "strong": "H7350",
+      "pointed": "רָחוֹק",
+      "glossZh": "遙遠"
+    },
+    {
+      "strong": "H7227",
+      "pointed": "רַב",
+      "glossZh": "大；多"
+    },
+    {
+      "strong": "H7451",
+      "pointed": "רַע",
+      "glossZh": "壞的；邪惡的；惡劣的"
+    },
+    {
+      "strong": "H7563",
+      "pointed": "רָשָׁע",
+      "glossZh": "邪惡的；有罪的"
+    },
+    {
+      "strong": "H7892",
+      "pointed": "שִׁיר",
+      "glossZh": "歌曲；歌唱"
+    },
+    {
+      "strong": "H168",
+      "pointed": "אֹ֫הֶל",
+      "glossZh": "帳棚"
+    },
+    {
+      "strong": "H312",
+      "pointed": "אַחֵר",
+      "glossZh": "另一個；外來的"
+    },
+    {
+      "strong": "H349",
+      "pointed": "אֵיךְ",
+      "glossZh": "如何？"
+    },
+    {
+      "strong": "H349",
+      "pointed": "אֵיכָה",
+      "glossZh": "如何？"
+    },
+    {
+      "strong": "H505",
+      "pointed": "אֶ֫לֶף",
+      "glossZh": "千"
+    },
+    {
+      "strong": "H834",
+      "pointed": "אֲשֶׁר",
+      "glossZh": "……的；那；誰；哪一個"
+    },
+    {
+      "strong": "H834",
+      "pointed": "כַּאֲשֶׁר",
+      "glossZh": "如同；當……時"
+    },
+    {
+      "strong": "H929",
+      "pointed": "בְּהֵמָה",
+      "glossZh": "牲畜；野獸；牛羊"
+    },
+    {
+      "strong": "H1571",
+      "pointed": "גַּם",
+      "glossZh": "也；甚至"
+    },
+    {
+      "strong": "H1818",
+      "pointed": "דָּם",
+      "glossZh": "血"
+    },
+    {
+      "strong": "",
+      "pointed": "הֲ",
+      "glossZh": "疑問助詞"
+    },
+    {
+      "strong": "H2889",
+      "pointed": "טָהוֹר",
+      "glossZh": "潔淨；純淨"
+    },
+    {
+      "strong": "H3588",
+      "pointed": "כִּי",
+      "glossZh": "……的；因為；但是；除了；確實"
+    },
+    {
+      "strong": "",
+      "pointed": "כִּי־אִם",
+      "glossZh": "但是；除了；只有"
+    },
+    {
+      "strong": "H3684",
+      "pointed": "כְּסִיל",
+      "glossZh": "愚昧人；無恥的人"
+    },
+    {
+      "strong": "H4100",
+      "pointed": "לָ֫מָּה",
+      "glossZh": "為什麼？"
+    },
+    {
+      "strong": "H4100",
+      "pointed": "לָמָה",
+      "glossZh": "為什麼？"
+    },
+    {
+      "strong": "H4100",
+      "pointed": "מָה",
+      "glossZh": "什麼？"
+    },
+    {
+      "strong": "H4069",
+      "pointed": "מַדּוּעַ",
+      "glossZh": "為什麼？"
+    },
+    {
+      "strong": "H4310",
+      "pointed": "מִי",
+      "glossZh": "誰？"
+    },
+    {
+      "strong": "H6041",
+      "pointed": "עָנִי",
+      "glossZh": "貧窮的；謙卑的；受苦的"
+    },
+    {
+      "strong": "H8081",
+      "pointed": "שֶׁ֫מֶן",
+      "glossZh": "油；脂油"
+    },
+    {
+      "strong": "H8199",
+      "pointed": "שֹׁפֵט",
+      "glossZh": "審判者；士師"
+    },
+    {
+      "strong": "H589",
+      "pointed": "אֲנִי",
+      "glossZh": "我（第一人稱單數）"
+    },
+    {
+      "strong": "H595",
+      "pointed": "אָנֹכִי",
+      "glossZh": "我（第一人稱單數）"
+    },
+    {
+      "strong": "H859",
+      "pointed": "אַתָּה",
+      "glossZh": "你（第二人稱陽性單數）"
+    },
+    {
+      "strong": "H859",
+      "pointed": "אַתְּ",
+      "glossZh": "你（第二人稱陰性單數）"
+    },
+    {
+      "strong": "H1931",
+      "pointed": "הוּא",
+      "glossZh": "他；它；那個（第三人稱陽性單數）"
+    },
+    {
+      "strong": "H1931",
+      "pointed": "הִיא",
+      "glossZh": "她；它；那個（第三人稱陰性單數）"
+    },
+    {
+      "strong": "H587",
+      "pointed": "אֲנַ֫חְנוּ",
+      "glossZh": "我們（第一人稱複數）"
+    },
+    {
+      "strong": "H859",
+      "pointed": "אַתֶּם",
+      "glossZh": "你們（第二人稱陽性複數）"
+    },
+    {
+      "strong": "H859",
+      "pointed": "אַתֵּ֫נָה",
+      "glossZh": "你們（第二人稱陰性複數）"
+    },
+    {
+      "strong": "H1992",
+      "pointed": "הֵם",
+      "glossZh": "他們；那些（第三人稱陽性複數）"
+    },
+    {
+      "strong": "H1992",
+      "pointed": "הֵ֫מָּה",
+      "glossZh": "他們；那些（第三人稱陽性複數）"
+    },
+    {
+      "strong": "H2004",
+      "pointed": "הֵן",
+      "glossZh": "她們；那些；看哪；若"
+    },
+    {
+      "strong": "H2007",
+      "pointed": "הֵ֫נָּה",
+      "glossZh": "她們；那些（第三人稱陰性複數）"
+    },
+    {
+      "strong": "H2088",
+      "pointed": "זֶה",
+      "glossZh": "這個（陽性單數）"
+    },
+    {
+      "strong": "H2063",
+      "pointed": "זֹאת",
+      "glossZh": "這個（陰性單數）"
+    },
+    {
+      "strong": "H428",
+      "pointed": "אֵ֫לֶּה",
+      "glossZh": "這些（複數）"
+    },
+    {
+      "strong": "H176",
+      "pointed": "אוֹ",
+      "glossZh": "或；或者"
+    },
+    {
+      "strong": "H369",
+      "pointed": "אַ֫יִן",
+      "glossZh": "沒有；不存在"
+    },
+    {
+      "strong": "H369",
+      "pointed": "אֵין",
+      "glossZh": "沒有；不存在"
+    },
+    {
+      "strong": "H639",
+      "pointed": "אַף",
+      "glossZh": "鼻孔；鼻子；怒氣；也；甚至"
+    },
+    {
+      "strong": "H639",
+      "pointed": "אַפַּ֫יִם",
+      "glossZh": "兩個鼻孔"
+    },
+    {
+      "strong": "H1242",
+      "pointed": "בֹּ֫קֶר",
+      "glossZh": "早晨"
+    },
+    {
+      "strong": "H1241",
+      "pointed": "בָּקָר",
+      "glossZh": "牛群；牲畜"
+    },
+    {
+      "strong": "H1293",
+      "pointed": "בְּרָכָה",
+      "glossZh": "祝福；禮物"
+    },
+    {
+      "strong": "H2005",
+      "pointed": "הֵן",
+      "glossZh": "看哪；若；她們；那些"
+    },
+    {
+      "strong": "H2009",
+      "pointed": "הִנֵּה",
+      "glossZh": "看哪！"
+    },
+    {
+      "strong": "H2403",
+      "pointed": "חַטָּאת",
+      "glossZh": "罪；贖罪祭"
+    },
+    {
+      "strong": "H3426",
+      "pointed": "יֵשׁ",
+      "glossZh": "有；存在"
+    },
+    {
+      "strong": "H3426",
+      "pointed": "יֶשׁ־",
+      "glossZh": "有；存在"
+    },
+    {
+      "strong": "H3519",
+      "pointed": "כָּבוֹד",
+      "glossZh": "榮耀；光彩；尊榮；豐盛"
+    },
+    {
+      "strong": "H3627",
+      "pointed": "כְּלִי",
+      "glossZh": "器皿；工具；武器"
+    },
+    {
+      "strong": "H3899",
+      "pointed": "לֶ֫חֶם",
+      "glossZh": "餅；食物"
+    },
+    {
+      "strong": "H905",
+      "pointed": "לְבַד",
+      "glossZh": "獨自；單獨"
+    },
+    {
+      "strong": "H4940",
+      "pointed": "מִשְׁפָּחָה",
+      "glossZh": "家族；宗族"
+    },
+    {
+      "strong": "H4421",
+      "pointed": "מִלְחָמָה",
+      "glossZh": "戰爭；戰役；爭戰"
+    },
+    {
+      "strong": "H5439",
+      "pointed": "סָבִיב",
+      "glossZh": "周圍；四周；環繞"
+    },
+    {
+      "strong": "H5971",
+      "pointed": "עַם",
+      "glossZh": "百姓"
+    },
+    {
+      "strong": "H6086",
+      "pointed": "עֵץ",
+      "glossZh": "樹；木材"
+    },
+    {
+      "strong": "H68",
+      "pointed": "אֶ֫בֶן",
+      "glossZh": "石頭"
+    },
+    {
+      "strong": "H127",
+      "pointed": "אֲדָמָה",
+      "glossZh": "地面；土地；大地"
+    },
+    {
+      "strong": "H341",
+      "pointed": "אֹיֵב",
+      "glossZh": "敵人"
+    },
+    {
+      "strong": "H1320",
+      "pointed": "בָּשָׂר",
+      "glossZh": "肉身；肉；皮膚"
+    },
+    {
+      "strong": "H1285",
+      "pointed": "בְּרִית",
+      "glossZh": "約；盟約"
+    },
+    {
+      "strong": "H1366",
+      "pointed": "גְּבוּל",
+      "glossZh": "邊界；疆界；領土"
+    },
+    {
+      "strong": "H2428",
+      "pointed": "חַ֫יִל",
+      "glossZh": "力量；財富；軍隊"
+    },
+    {
+      "strong": "H2617",
+      "pointed": "חֶ֫סֶד",
+      "glossZh": "忠誠；信實；堅定的愛；慈愛"
+    },
+    {
+      "strong": "H2320",
+      "pointed": "חֹ֫דֶשׁ",
+      "glossZh": "月份；新月"
+    },
+    {
+      "strong": "H3027",
+      "pointed": "יָד",
+      "glossZh": "手；一側；權能"
+    },
+    {
+      "strong": "H3027",
+      "pointed": "יָדוֹת",
+      "glossZh": "雙手；手"
+    },
+    {
+      "strong": "H4194",
+      "pointed": "מָ֫וֶת",
+      "glossZh": "死亡；垂死"
+    },
+    {
+      "strong": "H4193",
+      "pointed": "מוֹת",
+      "glossZh": "……之死"
+    },
+    {
+      "strong": "H4294",
+      "pointed": "מַטֶּה",
+      "glossZh": "杖；棍；支派"
+    },
+    {
+      "strong": "H4057",
+      "pointed": "מִדְבָּר",
+      "glossZh": "曠野；沙漠；牧場"
+    },
+    {
+      "strong": "H5750",
+      "pointed": "עוֹד",
+      "glossZh": "再；仍然；只要"
+    },
+    {
+      "strong": "H6256",
+      "pointed": "עֵת",
+      "glossZh": "時間；時刻"
+    },
+    {
+      "strong": "H5930",
+      "pointed": "עֹלָה",
+      "glossZh": "全燔祭"
+    },
+    {
+      "strong": "H6440",
+      "pointed": "פָּנִים",
+      "glossZh": "臉；前面"
+    },
+    {
+      "strong": "H6440",
+      "pointed": "פְּנֵי",
+      "glossZh": "……的臉；……前面"
+    },
+    {
+      "strong": "H6629",
+      "pointed": "צֹאן",
+      "glossZh": "羊群；綿羊山羊群"
+    },
+    {
+      "strong": "H7272",
+      "pointed": "רֶ֫גֶל",
+      "glossZh": "腳"
+    },
+    {
+      "strong": "H1",
+      "pointed": "אֲבִי",
+      "glossZh": "……的父親"
+    },
+    {
+      "strong": "H251",
+      "pointed": "אֲחִי",
+      "glossZh": "……的兄弟"
+    },
+    {
+      "strong": "H802",
+      "pointed": "אֵ֫שֶׁת",
+      "glossZh": "……的妻子"
+    },
+    {
+      "strong": "H520",
+      "pointed": "אַמָּה",
+      "glossZh": "肘；肘尺"
+    },
+    {
+      "strong": "H517",
+      "pointed": "אֵם",
+      "glossZh": "母親"
+    },
+    {
+      "strong": "H899",
+      "pointed": "בֶּ֫גֶד",
+      "glossZh": "衣服；外衣；遮蓋物"
+    },
+    {
+      "strong": "H2233",
+      "pointed": "זֶ֫רַע",
+      "glossZh": "種子；後裔；子孫"
+    },
+    {
+      "strong": "H2691",
+      "pointed": "חָצֵר",
+      "glossZh": "院子；村莊；聚落"
+    },
+    {
+      "strong": "H3915",
+      "pointed": "לַ֫יְלָה",
+      "glossZh": "夜晚"
+    },
+    {
+      "strong": "H4150",
+      "pointed": "מוֹעֵד",
+      "glossZh": "指定的節期；會幕；會眾"
+    },
+    {
+      "strong": "H4264",
+      "pointed": "מַחֲנֶה",
+      "glossZh": "營地；軍隊"
+    },
+    {
+      "strong": "H4397",
+      "pointed": "מַלְאָךְ",
+      "glossZh": "使者；天使"
+    },
+    {
+      "strong": "H4639",
+      "pointed": "מַעֲשֶׂה",
+      "glossZh": "工作；行為；作為"
+    },
+    {
+      "strong": "H5288",
+      "pointed": "נַ֫עַר",
+      "glossZh": "男孩；青年；僕人"
+    },
+    {
+      "strong": "H5159",
+      "pointed": "נַחֲלָה",
+      "glossZh": "產業；財產；所有物"
+    },
+    {
+      "strong": "H5771",
+      "pointed": "עָוֹן",
+      "glossZh": "過犯；罪孽；罪責；罪罰"
+    },
+    {
+      "strong": "H7130",
+      "pointed": "קֶ֫רֶב",
+      "glossZh": "內部；內臟；身體"
+    },
+    {
+      "strong": "H7130",
+      "pointed": "בְּקֶ֫רֶב",
+      "glossZh": "在……中間；在……之中"
+    },
+    {
+      "strong": "H7535",
+      "pointed": "רַק",
+      "glossZh": "只有；仍然；但是；然而"
+    },
+    {
+      "strong": "H7965",
+      "pointed": "שָׁלוֹם",
+      "glossZh": "平安；福祉；完整；拯救"
+    },
+    {
+      "strong": "H8033",
+      "pointed": "שָׁם",
+      "glossZh": "那裡；那時"
+    },
+    {
+      "strong": "H8548",
+      "pointed": "תָּמִיד",
+      "glossZh": "不斷地；常常"
+    },
+    {
+      "strong": "H398",
+      "pointed": "אָכַל",
+      "glossZh": "吃；消耗"
+    },
+    {
+      "strong": "H559",
+      "pointed": "אָמַר",
+      "glossZh": "說；提及；思想"
+    },
+    {
+      "strong": "H1980",
+      "pointed": "הָלַךְ",
+      "glossZh": "去；行走；行事；離世"
+    },
+    {
+      "strong": "H1961",
+      "pointed": "הָיָה",
+      "glossZh": "是；成為；發生"
+    },
+    {
+      "strong": "H3318",
+      "pointed": "יָצָא",
+      "glossZh": "出去；出來"
+    },
+    {
+      "strong": "H3427",
+      "pointed": "יָשַׁב",
+      "glossZh": "坐下；停留；居住"
+    },
+    {
+      "strong": "H5414",
+      "pointed": "נָתַן",
+      "glossZh": "給予；安放；設立"
+    },
+    {
+      "strong": "H6213",
+      "pointed": "עָשָׂה",
+      "glossZh": "做；製造；創造"
+    },
+    {
+      "strong": "H7200",
+      "pointed": "רָאָה",
+      "glossZh": "看見；察覺；明白"
+    },
+    {
+      "strong": "H7673",
+      "pointed": "שָׁבַת",
+      "glossZh": "停止；止息；安歇"
+    },
+    {
+      "strong": "H8085",
+      "pointed": "שָׁמַע",
+      "glossZh": "聽見；聽從；明白；順服"
+    },
+    {
+      "strong": "H727",
+      "pointed": "אֲרוֹן",
+      "glossZh": "約櫃；箱子；棺木"
+    },
+    {
+      "strong": "H4503",
+      "pointed": "מִנְחָה",
+      "glossZh": "禮物；供物；貢物"
+    },
+    {
+      "strong": "H7676",
+      "pointed": "שַׁבָּת",
+      "glossZh": "安息日；安息期間"
+    },
+    {
+      "strong": "H389",
+      "pointed": "אַךְ",
+      "glossZh": "只有；確實；然而"
+    },
+    {
+      "strong": "H408",
+      "pointed": "אַל",
+      "glossZh": "不；不是"
+    },
+    {
+      "strong": "H518",
+      "pointed": "אִם",
+      "glossZh": "若；如果"
+    },
+    {
+      "strong": "H3808",
+      "pointed": "לֹא",
+      "glossZh": "不；不是"
+    },
+    {
+      "strong": "H1288",
+      "pointed": "בָּרַךְ",
+      "glossZh": "祝福"
+    },
+    {
+      "strong": "H2142",
+      "pointed": "זָכַר",
+      "glossZh": "記念；回想；提及"
+    },
+    {
+      "strong": "H2204",
+      "pointed": "זָקֵן",
+      "glossZh": "變老；年老（亦作形容詞『年老的』、名詞『長老』）"
+    },
+    {
+      "strong": "H2388",
+      "pointed": "חָזַק",
+      "glossZh": "強盛；堅定；有勇氣"
+    },
+    {
+      "strong": "H3045",
+      "pointed": "יָדַע",
+      "glossZh": "知道；認識；同房；明白"
+    },
+    {
+      "strong": "H3513",
+      "pointed": "כָּבֵד",
+      "glossZh": "沉重；得尊榮"
+    },
+    {
+      "strong": "H3789",
+      "pointed": "כָּתַב",
+      "glossZh": "書寫；登記；記錄"
+    },
+    {
+      "strong": "H4390",
+      "pointed": "מָלֵא",
+      "glossZh": "充滿；裝滿"
+    },
+    {
+      "strong": "H4427",
+      "pointed": "מָלַךְ",
+      "glossZh": "作王；統治"
+    },
+    {
+      "strong": "H4672",
+      "pointed": "מָצָא",
+      "glossZh": "找到；達到；獲得"
+    },
+    {
+      "strong": "H6485",
+      "pointed": "פָּקַד",
+      "glossZh": "留意；照管；數點；任命；眷顧"
+    },
+    {
+      "strong": "H7901",
+      "pointed": "שָׁכַב",
+      "glossZh": "躺下；同房"
+    },
+    {
+      "strong": "H7971",
+      "pointed": "שָׁלַח",
+      "glossZh": "差遣；伸出"
+    },
+    {
+      "strong": "H8104",
+      "pointed": "שָׁמַר",
+      "glossZh": "看守；守護；遵守；保護"
+    },
+    {
+      "strong": "H935",
+      "pointed": "בּוֹא",
+      "glossZh": "進入；來到"
+    },
+    {
+      "strong": "H1129",
+      "pointed": "בָּנָה",
+      "glossZh": "建造；建立家室"
+    },
+    {
+      "strong": "H3205",
+      "pointed": "יָלַד",
+      "glossZh": "生出；生育"
+    },
+    {
+      "strong": "H3372",
+      "pointed": "יָרֵא",
+      "glossZh": "敬畏；害怕"
+    },
+    {
+      "strong": "H3381",
+      "pointed": "יָרַד",
+      "glossZh": "下去；降下"
+    },
+    {
+      "strong": "H3947",
+      "pointed": "לָקַח",
+      "glossZh": "拿取；抓住；擄獲"
+    },
+    {
+      "strong": "H4191",
+      "pointed": "מוּת",
+      "glossZh": "死；死亡"
+    },
+    {
+      "strong": "H5307",
+      "pointed": "נָפַל",
+      "glossZh": "跌倒；俯伏；落在"
+    },
+    {
+      "strong": "H5375",
+      "pointed": "נָשָׂא",
+      "glossZh": "舉起；背負；承擔；除去"
+    },
+    {
+      "strong": "H5927",
+      "pointed": "עָלָה",
+      "glossZh": "上去；升上"
+    },
+    {
+      "strong": "H5674",
+      "pointed": "עָבַר",
+      "glossZh": "越過；經過；穿過"
+    },
+    {
+      "strong": "H5975",
+      "pointed": "עָמַד",
+      "glossZh": "站立；站住"
+    },
+    {
+      "strong": "H6965",
+      "pointed": "קוּם",
+      "glossZh": "起來；興起；站立"
+    },
+    {
+      "strong": "H7121",
+      "pointed": "קָרָא",
+      "glossZh": "呼叫；召集；宣告；朗讀"
+    },
+    {
+      "strong": "H7760",
+      "pointed": "שִׂים",
+      "glossZh": "安置；放置；擺設；建立"
+    },
+    {
+      "strong": "H7725",
+      "pointed": "שׁוּב",
+      "glossZh": "轉回；返回"
+    },
+    {
+      "strong": "H6311",
+      "pointed": "פֹּה",
+      "glossZh": "這裡；此處"
+    },
+    {
+      "strong": "H2421",
+      "pointed": "חָיָה",
+      "glossZh": "活著；存活；復甦；使復活"
+    },
+    {
+      "strong": "H3201",
+      "pointed": "יָכֹל",
+      "glossZh": "能夠；忍耐；得勝"
+    },
+    {
+      "strong": "H3772",
+      "pointed": "כָּרַת",
+      "glossZh": "剪除；砍下；立約"
+    },
+    {
+      "strong": "H5493",
+      "pointed": "סוּר",
+      "glossZh": "轉離；離開"
+    },
+    {
+      "strong": "H5647",
+      "pointed": "עָבַד",
+      "glossZh": "工作；服事；勞作；耕種"
+    },
+    {
+      "strong": "H6030",
+      "pointed": "עָנָה",
+      "glossZh": "回答；回應；作證；苦待；壓迫；羞辱"
+    },
+    {
+      "strong": "H241",
+      "pointed": "אֹ֫זֶן",
+      "glossZh": "耳朵"
+    },
+    {
+      "strong": "H352",
+      "pointed": "אַ֫יִל",
+      "glossZh": "公綿羊；統治者；強大的"
+    },
+    {
+      "strong": "H1368",
+      "pointed": "גִּבּוֹר",
+      "glossZh": "勇猛的；英勇的；勇士"
+    },
+    {
+      "strong": "H2077",
+      "pointed": "זֶ֫בַח",
+      "glossZh": "祭物；獻祭"
+    },
+    {
+      "strong": "H6666",
+      "pointed": "צְדָקָה",
+      "glossZh": "公義；義行；正義"
+    },
+    {
+      "strong": "H6828",
+      "pointed": "צָפוֹן",
+      "glossZh": "北方；北部的"
+    },
+    {
+      "strong": "H227",
+      "pointed": "אָז",
+      "glossZh": "那時；既然；以前"
+    },
+    {
+      "strong": "H637",
+      "pointed": "אַף",
+      "glossZh": "也；確實；甚至；鼻子；鼻孔；怒氣"
+    },
+    {
+      "strong": "H6435",
+      "pointed": "פֶּן־",
+      "glossZh": "免得；否則"
+    },
+    {
+      "strong": "H1350",
+      "pointed": "גָּאַל",
+      "glossZh": "贖回；拯救；盡至親本分；報仇"
+    },
+    {
+      "strong": "H2398",
+      "pointed": "חָטָא",
+      "glossZh": "未中目標；犯罪"
+    },
+    {
+      "strong": "H3254",
+      "pointed": "יָסַף",
+      "glossZh": "增加；繼續"
+    },
+    {
+      "strong": "H3423",
+      "pointed": "יָרַשׁ",
+      "glossZh": "承受產業；佔有；趕出；奪取產業"
+    },
+    {
+      "strong": "H3722",
+      "pointed": "כָּפַר",
+      "glossZh": "遮蓋；贖罪；施行贖罪"
+    },
+    {
+      "strong": "H5186",
+      "pointed": "נָטָה",
+      "glossZh": "鋪開；伸展；支搭帳棚"
+    },
+    {
+      "strong": "H5800",
+      "pointed": "עָזַב",
+      "glossZh": "離開；撇棄；釋放；任憑"
+    },
+    {
+      "strong": "H7126",
+      "pointed": "קָרַב",
+      "glossZh": "接近；走近"
+    },
+    {
+      "strong": "H7235",
+      "pointed": "רָבָה",
+      "glossZh": "增多；增大；增加"
+    },
+    {
+      "strong": "H8354",
+      "pointed": "שָׁתָה",
+      "glossZh": "喝"
+    },
+    {
+      "strong": "H8552",
+      "pointed": "תָּמַם",
+      "glossZh": "完成；止息；耗盡；燒盡"
+    },
+    {
+      "strong": "H3709",
+      "pointed": "כַּף",
+      "glossZh": "手；手掌；腳掌"
+    },
+    {
+      "strong": "H7453",
+      "pointed": "רֵ֫עַ",
+      "glossZh": "朋友；同伴；鄰舍"
+    },
+    {
+      "strong": "H5048",
+      "pointed": "נֶ֫גֶד",
+      "glossZh": "對面；在……前面"
+    },
+    {
+      "strong": "H6",
+      "pointed": "אָבַד",
+      "glossZh": "滅亡；消失；迷失"
+    },
+    {
+      "strong": "H157",
+      "pointed": "אָהַב",
+      "glossZh": "愛"
+    },
+    {
+      "strong": "H622",
+      "pointed": "אָסַף",
+      "glossZh": "收聚；收取；除去；毀滅"
+    },
+    {
+      "strong": "H1197",
+      "pointed": "בָּעַר",
+      "glossZh": "焚燒；燒盡"
+    },
+    {
+      "strong": "H1540",
+      "pointed": "גָּלָה",
+      "glossZh": "揭開；顯露；啟示"
+    },
+    {
+      "strong": "H2891",
+      "pointed": "טָהֵר",
+      "glossZh": "潔淨；純潔"
+    },
+    {
+      "strong": "H3615",
+      "pointed": "כָּלָה",
+      "glossZh": "完成；結束"
+    },
+    {
+      "strong": "H7311",
+      "pointed": "רוּם",
+      "glossZh": "升高；被高舉；上升"
+    },
+    {
+      "strong": "H8199",
+      "pointed": "שָׁפַט",
+      "glossZh": "審判；裁決"
+    },
+    {
+      "strong": "H571",
+      "pointed": "אֱמֶת",
+      "glossZh": "真理；信實"
+    },
+    {
+      "strong": "H3678",
+      "pointed": "כִּסֵּא",
+      "glossZh": "座位；椅子；寶座"
+    },
+    {
+      "strong": "H4557",
+      "pointed": "מִסְפָּר",
+      "glossZh": "數目；數字"
+    },
+    {
+      "strong": "H6235",
+      "pointed": "עֶ֫שֶׂר",
+      "glossZh": "十"
+    },
+    {
+      "strong": "H8121",
+      "pointed": "שֶׁ֫מֶשׁ",
+      "glossZh": "太陽"
+    },
+    {
+      "strong": "H977",
+      "pointed": "בָּחַר",
+      "glossZh": "選擇；試驗；察驗"
+    },
+    {
+      "strong": "H995",
+      "pointed": "בִּין",
+      "glossZh": "明白；察覺；思量"
+    },
+    {
+      "strong": "H1875",
+      "pointed": "דָּרַשׁ",
+      "glossZh": "尋求；查問；調查；要求"
+    },
+    {
+      "strong": "H2026",
+      "pointed": "הָרַג",
+      "glossZh": "殺；殺害"
+    },
+    {
+      "strong": "H2654",
+      "pointed": "חָפֵץ",
+      "glossZh": "喜愛；以……為樂；願意"
+    },
+    {
+      "strong": "H2895",
+      "pointed": "טוֹב",
+      "glossZh": "良善；令人喜悅；歡樂；順遂"
+    },
+    {
+      "strong": "H6942",
+      "pointed": "קָדַשׁ",
+      "glossZh": "成聖；分別為聖"
+    },
+    {
+      "strong": "H7462",
+      "pointed": "רָעָה",
+      "glossZh": "牧放；牧養；餵養"
+    },
+    {
+      "strong": "H7592",
+      "pointed": "שָׁאַל",
+      "glossZh": "詢問；求取；要求"
+    },
+    {
+      "strong": "H1167",
+      "pointed": "בַּ֫עַל",
+      "glossZh": "所有者；主人；丈夫；巴力"
+    },
+    {
+      "strong": "H7626",
+      "pointed": "שֵׁ֫בֶט",
+      "glossZh": "棍；杖；權杖；支派"
+    },
+    {
+      "strong": "H1157",
+      "pointed": "בַּ֫עַד",
+      "glossZh": "在……後面；穿過"
+    },
+    {
+      "strong": "H1157",
+      "pointed": "בְּעַד",
+      "glossZh": "在……後面；穿過"
+    },
+    {
+      "strong": "H3282",
+      "pointed": "יַ֫עַן",
+      "glossZh": "因為；由於"
+    },
+    {
+      "strong": "H4994",
+      "pointed": "נָא",
+      "glossZh": "請；現在；確實；語助詞"
+    },
+    {
+      "strong": "H982",
+      "pointed": "בָּטַח",
+      "glossZh": "信靠；有把握；倚賴"
+    },
+    {
+      "strong": "H1058",
+      "pointed": "בָּכָה",
+      "glossZh": "哭泣；為……哀哭"
+    },
+    {
+      "strong": "H3847",
+      "pointed": "לָבַשׁ",
+      "glossZh": "穿上衣服；給……穿衣；穿著"
+    },
+    {
+      "strong": "H8313",
+      "pointed": "שָׂרַף",
+      "glossZh": "燒盡；毀滅"
+    },
+    {
+      "strong": "H8314",
+      "pointed": "שָׂרָף",
+      "glossZh": "火蛇；毒蛇"
+    },
+    {
+      "strong": "H7999",
+      "pointed": "שָׁלֵם",
+      "glossZh": "完成；結束"
+    },
+    {
+      "strong": "H1755",
+      "pointed": "דּוֹר",
+      "glossZh": "世代"
+    },
+    {
+      "strong": "H2351",
+      "pointed": "חוּץ",
+      "glossZh": "外面；街道"
+    },
+    {
+      "strong": "H4399",
+      "pointed": "מְלָאכָה",
+      "glossZh": "工作；職業；服事"
+    },
+    {
+      "strong": "H6499",
+      "pointed": "פַּר",
+      "glossZh": "公牛；牛"
+    },
+    {
+      "strong": "H6607",
+      "pointed": "פֶּ֫תַח",
+      "glossZh": "開口；入口；門口"
+    },
+    {
+      "strong": "H7230",
+      "pointed": "רֹב",
+      "glossZh": "眾多；豐盛；偉大"
+    },
+    {
+      "strong": "H8193",
+      "pointed": "שָׂפָה",
+      "glossZh": "嘴唇；語言；邊緣；岸邊"
+    },
+    {
+      "strong": "H270",
+      "pointed": "אָחַז",
+      "glossZh": "抓住；拿取"
+    },
+    {
+      "strong": "H2930",
+      "pointed": "טָמֵא",
+      "glossZh": "成為不潔"
+    },
+    {
+      "strong": "H3335",
+      "pointed": "יָצַר",
+      "glossZh": "塑造；形成；創造"
+    },
+    {
+      "strong": "H5127",
+      "pointed": "נוּס",
+      "glossZh": "逃跑；逃脫"
+    },
+    {
+      "strong": "H5060",
+      "pointed": "נָגַע",
+      "glossZh": "接觸；擊打；到達"
+    },
+    {
+      "strong": "H5437",
+      "pointed": "סָבַב",
+      "glossZh": "轉向；繞行；環繞"
+    },
+    {
+      "strong": "H5608",
+      "pointed": "סָפַר",
+      "glossZh": "數算"
+    },
+    {
+      "strong": "H8055",
+      "pointed": "שָׂמַח",
+      "glossZh": "歡喜；快樂"
+    },
+    {
+      "strong": "H7665",
+      "pointed": "שָׁבַר",
+      "glossZh": "打破；粉碎"
+    },
+    {
+      "strong": "H3162",
+      "pointed": "יַחְדָּו",
+      "glossZh": "一起；同時"
+    },
+    {
+      "strong": "H3162",
+      "pointed": "יַ֫חַד",
+      "glossZh": "一起；與……一同"
+    },
+    {
+      "strong": "H3196",
+      "pointed": "יַ֫יִן",
+      "glossZh": "酒；葡萄酒"
+    },
+    {
+      "strong": "H5656",
+      "pointed": "עֲבֹדָה",
+      "glossZh": "工作；勞動；服事；敬拜"
+    },
+    {
+      "strong": "H5656",
+      "pointed": "עֲבוֹדָה",
+      "glossZh": "工作；勞動；服事；敬拜"
+    },
+    {
+      "strong": "H5712",
+      "pointed": "עֵדָה",
+      "glossZh": "會眾；集會"
+    },
+    {
+      "strong": "H1115",
+      "pointed": "בִּלְתִּי",
+      "glossZh": "不；除了"
+    },
+    {
+      "strong": "H1115",
+      "pointed": "לְבִּלְתִּי",
+      "glossZh": "不；除了"
+    },
+    {
+      "strong": "H2076",
+      "pointed": "זָבַח",
+      "glossZh": "宰殺；獻祭"
+    },
+    {
+      "strong": "H2583",
+      "pointed": "חָנָה",
+      "glossZh": "傾斜；安營；圍城"
+    },
+    {
+      "strong": "H5117",
+      "pointed": "נוּחַ",
+      "glossZh": "安歇；安頓"
+    },
+    {
+      "strong": "H5265",
+      "pointed": "נָסַע",
+      "glossZh": "拔起；起程；出發；行軍"
+    },
+    {
+      "strong": "H6437",
+      "pointed": "פָּנָה",
+      "glossZh": "轉向"
+    },
+    {
+      "strong": "H6605",
+      "pointed": "פָּתַח",
+      "glossZh": "開啟"
+    },
+    {
+      "strong": "H7291",
+      "pointed": "רָדַף",
+      "glossZh": "追趕；跟隨；逼迫"
+    },
+    {
+      "strong": "H8130",
+      "pointed": "שָׂנֵא",
+      "glossZh": "恨"
+    },
+    {
+      "strong": "H7604",
+      "pointed": "שָׁאַר",
+      "glossZh": "剩下；存留；生還"
+    },
+    {
+      "strong": "H1116",
+      "pointed": "בָּמָה",
+      "glossZh": "邱壇；高地"
+    },
+    {
+      "strong": "H2708",
+      "pointed": "חֻקָּה",
+      "glossZh": "律例；典章"
+    },
+    {
+      "strong": "H2708",
+      "pointed": "חֻקּוֹת",
+      "glossZh": "律例；典章（全寫複數）"
+    },
+    {
+      "strong": "H2708",
+      "pointed": "חֻקֹּת",
+      "glossZh": "律例；典章（缺寫複數）"
+    },
+    {
+      "strong": "H3225",
+      "pointed": "יָמִין",
+      "glossZh": "右手；南方"
+    },
+    {
+      "strong": "H4908",
+      "pointed": "מִשְׁכָּן",
+      "glossZh": "居所；帳幕"
+    },
+    {
+      "strong": "H5158",
+      "pointed": "נַ֫חַל",
+      "glossZh": "溪流；溪谷"
+    },
+    {
+      "strong": "H7458",
+      "pointed": "רָעָב",
+      "glossZh": "饑荒；飢餓"
+    },
+    {
+      "strong": "H7457",
+      "pointed": "רָעֵב",
+      "glossZh": "飢餓的"
+    },
+    {
+      "strong": "H779",
+      "pointed": "אָרַר",
+      "glossZh": "咒詛"
+    },
+    {
+      "strong": "H954",
+      "pointed": "בּוֹשׁ",
+      "glossZh": "羞愧"
+    },
+    {
+      "strong": "H1431",
+      "pointed": "גָּדַל",
+      "glossZh": "長大；強盛；富有；尊大"
+    },
+    {
+      "strong": "H2803",
+      "pointed": "חָשַׁב",
+      "glossZh": "思想；考量；籌劃；估量"
+    },
+    {
+      "strong": "H3190",
+      "pointed": "יָטַב",
+      "glossZh": "順遂；蒙悅納"
+    },
+    {
+      "strong": "H3920",
+      "pointed": "לָכַד",
+      "glossZh": "拿取；擄獲；抓住"
+    },
+    {
+      "strong": "H5066",
+      "pointed": "נָגַשׁ",
+      "glossZh": "接近；走近"
+    },
+    {
+      "strong": "H6908",
+      "pointed": "קָבַץ",
+      "glossZh": "收集；聚集；召集"
+    },
+    {
+      "strong": "H6912",
+      "pointed": "קָבַר",
+      "glossZh": "埋葬"
+    },
+    {
+      "strong": "H7931",
+      "pointed": "שָׁכַן",
+      "glossZh": "定居；居住；住在"
+    },
+    {
+      "strong": "H8210",
+      "pointed": "שָׁפַךְ",
+      "glossZh": "傾倒；灑出；流血"
+    },
+    {
+      "strong": "H2346",
+      "pointed": "חוֹמָה",
+      "glossZh": "牆；城牆"
+    },
+    {
+      "strong": "H2706",
+      "pointed": "חֹק",
+      "glossZh": "律例；指定時間；分額"
+    },
+    {
+      "strong": "H3532",
+      "pointed": "כֶּ֫בֶשׂ",
+      "glossZh": "羊羔；綿羊"
+    },
+    {
+      "strong": "H216",
+      "pointed": "אוֹר",
+      "glossZh": "光；日光；陽光"
+    },
+    {
+      "strong": "H1060",
+      "pointed": "בְּכֹר",
+      "glossZh": "長子；頭生的（缺寫）"
+    },
+    {
+      "strong": "H1060",
+      "pointed": "בְּכוֹר",
+      "glossZh": "長子；頭生的（全寫）"
+    },
+    {
+      "strong": "H2534",
+      "pointed": "חֵמָה",
+      "glossZh": "烈怒；熱氣；毒液"
+    },
+    {
+      "strong": "H2677",
+      "pointed": "חֲצִי",
+      "glossZh": "一半；中間"
+    },
+    {
+      "strong": "H3581",
+      "pointed": "כֹּחַ",
+      "glossZh": "力量；能力"
+    },
+    {
+      "strong": "H5178",
+      "pointed": "נְחֹ֫שֶׁת",
+      "glossZh": "銅；青銅"
+    },
+    {
+      "strong": "H5387",
+      "pointed": "נָשִׂיא",
+      "glossZh": "首領；領袖；王子"
+    },
+    {
+      "strong": "H6153",
+      "pointed": "עֶ֫רֶב",
+      "glossZh": "晚上；日落"
+    },
+    {
+      "strong": "H6106",
+      "pointed": "עֶ֫צֶם",
+      "glossZh": "骨頭；骨骼"
+    },
+    {
+      "strong": "H6529",
+      "pointed": "פְּרִי",
+      "glossZh": "果子；後裔"
+    },
+    {
+      "strong": "H6951",
+      "pointed": "קָהָל",
+      "glossZh": "會眾；群體；群眾"
+    },
+    {
+      "strong": "H7393",
+      "pointed": "רֶ֫כֶב",
+      "glossZh": "戰車；上磨石；戰車隊"
+    },
+    {
+      "strong": "H3956",
+      "pointed": "לָשׁוֹן",
+      "glossZh": "舌頭；語言"
+    },
+    {
+      "strong": "H8441",
+      "pointed": "תּוֹעֵבָה",
+      "glossZh": "可憎之物；厭惡之物"
+    },
+    {
+      "strong": "H539",
+      "pointed": "אָמַן",
+      "glossZh": "可靠；信實；可信"
+    },
+    {
+      "strong": "H3467",
+      "pointed": "יָשַׁע",
+      "glossZh": "獲救；得勝；蒙幫助"
+    },
+    {
+      "strong": "H3498",
+      "pointed": "יָתַר",
+      "glossZh": "剩餘；存留"
+    },
+    {
+      "strong": "H3559",
+      "pointed": "כּוּן",
+      "glossZh": "建立；堅定；預備妥當"
+    },
+    {
+      "strong": "H3898",
+      "pointed": "לָחַם",
+      "glossZh": "爭戰；交戰"
+    },
+    {
+      "strong": "H4422",
+      "pointed": "מָלַט",
+      "glossZh": "逃脫；逃往安全處"
+    },
+    {
+      "strong": "H5162",
+      "pointed": "נָחַם",
+      "glossZh": "後悔；遺憾；憐憫"
+    },
+    {
+      "strong": "H5221",
+      "pointed": "נָכָה",
+      "glossZh": "擊打；打死；毀滅；傷害"
+    },
+    {
+      "strong": "H5324",
+      "pointed": "נָצַב",
+      "glossZh": "站穩；站立"
+    },
+    {
+      "strong": "H5337",
+      "pointed": "נָצַל",
+      "glossZh": "獲救；得拯救"
+    },
+    {
+      "strong": "H5641",
+      "pointed": "סָתַר",
+      "glossZh": "隱藏；藏身"
+    },
+    {
+      "strong": "H6381",
+      "pointed": "פָּלָא",
+      "glossZh": "非凡；奇妙；太難"
+    },
+    {
+      "strong": "H7323",
+      "pointed": "רוּץ",
+      "glossZh": "奔跑"
+    },
+    {
+      "strong": "H7843",
+      "pointed": "שָׁחַת",
+      "glossZh": "敗壞；毀滅；消滅"
+    },
+    {
+      "strong": "H8045",
+      "pointed": "שָׁמַד",
+      "glossZh": "被除滅；被毀滅"
+    },
+    {
+      "strong": "H2015",
+      "pointed": "הָפַךְ",
+      "glossZh": "翻轉；推翻；毀滅"
+    },
+    {
+      "strong": "H2181",
+      "pointed": "זָנָה",
+      "glossZh": "行淫；作妓女；不忠"
+    },
+    {
+      "strong": "H2734",
+      "pointed": "חָרָה",
+      "glossZh": "發熱；發怒"
+    },
+    {
+      "strong": "H7489",
+      "pointed": "רָעַע",
+      "glossZh": "邪惡；作惡；令人不悅"
+    },
+    {
+      "strong": "H7646",
+      "pointed": "שָׂבַע",
+      "glossZh": "吃飽；喝足；滿足"
+    },
+    {
+      "strong": "H7911",
+      "pointed": "שָׁכַח",
+      "glossZh": "忘記"
+    },
+    {
+      "strong": "H8074",
+      "pointed": "שָׁמֵם",
+      "glossZh": "荒廢；無人居住；荒涼"
+    },
+    {
+      "strong": "H2145",
+      "pointed": "זָכָר",
+      "glossZh": "男人；男性"
+    },
+    {
+      "strong": "H2822",
+      "pointed": "חֹ֫שֶׁךְ",
+      "glossZh": "黑暗"
+    },
+    {
+      "strong": "H4054",
+      "pointed": "מִגְרָשׁ",
+      "glossZh": "空地；牧場"
+    },
+    {
+      "strong": "H4467",
+      "pointed": "מַמְלָכָה",
+      "glossZh": "國度；統治權；王權"
+    },
+    {
+      "strong": "H5104",
+      "pointed": "נָהָר",
+      "glossZh": "河流；溪流"
+    },
+    {
+      "strong": "H6664",
+      "pointed": "צֶ֫דֶק",
+      "glossZh": "公義；正直"
+    },
+    {
+      "strong": "H7462",
+      "pointed": "רֹעֶה",
+      "glossZh": "牧人"
+    },
+    {
+      "strong": "H1245",
+      "pointed": "בָּקַשׁ",
+      "glossZh": "尋求；搜尋；發現；要求"
+    },
+    {
+      "strong": "H1696",
+      "pointed": "דָּבַר",
+      "glossZh": "說話"
+    },
+    {
+      "strong": "H1984",
+      "pointed": "הָלַל",
+      "glossZh": "讚美；唱哈利路亞"
+    },
+    {
+      "strong": "H3034",
+      "pointed": "יָדָה",
+      "glossZh": "感謝；讚美；承認"
+    },
+    {
+      "strong": "H3680",
+      "pointed": "כָּסָה",
+      "glossZh": "遮蓋；隱藏；穿上衣服"
+    },
+    {
+      "strong": "H4116",
+      "pointed": "מָהַר",
+      "glossZh": "趕快；急速前往"
+    },
+    {
+      "strong": "H5012",
+      "pointed": "נָבָא",
+      "glossZh": "說預言；受感說話"
+    },
+    {
+      "strong": "H5027",
+      "pointed": "נָבַט",
+      "glossZh": "觀看；注視；看哪"
+    },
+    {
+      "strong": "H5462",
+      "pointed": "סָגַר",
+      "glossZh": "關閉"
+    },
+    {
+      "strong": "H6680",
+      "pointed": "צָוָה",
+      "glossZh": "吩咐；命令；囑咐"
+    },
+    {
+      "strong": "H6999",
+      "pointed": "קָטַר",
+      "glossZh": "焚燒祭物；獻燔祭"
+    },
+    {
+      "strong": "H7891",
+      "pointed": "שִׁיר",
+      "glossZh": "歌唱"
+    },
+    {
+      "strong": "H7896",
+      "pointed": "שִׁית",
+      "glossZh": "安置；放置"
+    },
+    {
+      "strong": "H8334",
+      "pointed": "שָׁרַת",
+      "glossZh": "事奉；供職；服事上帝"
+    },
+    {
+      "strong": "H1481",
+      "pointed": "גּוּר",
+      "glossZh": "寄居；以外僑身分居住"
+    },
+    {
+      "strong": "H3289",
+      "pointed": "יָעַץ",
+      "glossZh": "勸告；商議；籌劃；決定"
+    },
+    {
+      "strong": "H3925",
+      "pointed": "לָמַד",
+      "glossZh": "學習；教導"
+    },
+    {
+      "strong": "H4910",
+      "pointed": "מָשַׁל",
+      "glossZh": "統治；掌權"
+    },
+    {
+      "strong": "H4376",
+      "pointed": "מָכַר",
+      "glossZh": "出售；交付"
+    },
+    {
+      "strong": "H5826",
+      "pointed": "עָזַר",
+      "glossZh": "幫助；援助"
+    },
+    {
+      "strong": "H6031",
+      "pointed": "עָנָה",
+      "glossZh": "苦待；壓迫；羞辱；侵犯；回答；作證"
+    },
+    {
+      "strong": "H7043",
+      "pointed": "קָלַל",
+      "glossZh": "微小；微不足道；快速；宣告受咒詛"
+    },
+    {
+      "strong": "H7069",
+      "pointed": "קָנָה",
+      "glossZh": "取得；購買"
+    },
+    {
+      "strong": "H7392",
+      "pointed": "רָכַב",
+      "glossZh": "上馬；騎乘"
+    },
+    {
+      "strong": "H7819",
+      "pointed": "שָׁחַט",
+      "glossZh": "宰殺"
+    },
+    {
+      "strong": "H269",
+      "pointed": "אָחוֹת",
+      "glossZh": "姊妹；親屬；所愛的人"
+    },
+    {
+      "strong": "H3671",
+      "pointed": "כָּנָף",
+      "glossZh": "翅膀；邊緣；盡頭"
+    },
+    {
+      "strong": "H5982",
+      "pointed": "עַמּוּד",
+      "glossZh": "柱子；圓柱；帳棚柱"
+    },
+    {
+      "strong": "H8267",
+      "pointed": "שֶׁ֫קֶר",
+      "glossZh": "謊言；欺騙；虛假"
+    },
+    {
+      "strong": "H631",
+      "pointed": "אָסַר",
+      "glossZh": "捆綁；束縛；監禁"
+    },
+    {
+      "strong": "H2199",
+      "pointed": "זָעַק",
+      "glossZh": "呼喊；求救；召集"
+    },
+    {
+      "strong": "H2372",
+      "pointed": "חָזָה",
+      "glossZh": "看見；觀看；察覺"
+    },
+    {
+      "strong": "H2470",
+      "pointed": "חָלָה",
+      "glossZh": "軟弱；疲倦；患病"
+    },
+    {
+      "strong": "H2603",
+      "pointed": "חָנַן",
+      "glossZh": "施恩；恩待"
+    },
+    {
+      "strong": "H3988",
+      "pointed": "מָאַס",
+      "glossZh": "拒絕；棄絕；藐視"
+    },
+    {
+      "strong": "H5782",
+      "pointed": "עוּר",
+      "glossZh": "醒著；喚醒"
+    },
+    {
+      "strong": "H6186",
+      "pointed": "עָרַךְ",
+      "glossZh": "排列；堆放木柴；擺列戰陣"
+    },
+    {
+      "strong": "H7364",
+      "pointed": "רָחַץ",
+      "glossZh": "洗滌；沐浴"
+    },
+    {
+      "strong": "H7919",
+      "pointed": "שָׂכַל",
+      "glossZh": "明白；領悟；使有智慧；亨通"
+    },
+    {
+      "strong": "H4758",
+      "pointed": "מַרְאֶה",
+      "glossZh": "異象；景象；外貌"
+    },
+    {
+      "strong": "H5045",
+      "pointed": "נֶ֫גֶב",
+      "glossZh": "南方；尼革夫"
+    },
+    {
+      "strong": "H6083",
+      "pointed": "עָפָר",
+      "glossZh": "塵土；乾土"
+    },
+    {
+      "strong": "H6471",
+      "pointed": "פַּ֫עַם",
+      "glossZh": "腳；步伐；次數"
+    },
+    {
+      "strong": "H3885",
+      "pointed": "לִין",
+      "glossZh": "過夜；停留；居住"
+    },
+    {
+      "strong": "H4886",
+      "pointed": "מָשַׁח",
+      "glossZh": "塗抹；膏立"
+    },
+    {
+      "strong": "H4899",
+      "pointed": "מָשִׁיחַ",
+      "glossZh": "受膏者；彌賽亞"
+    },
+    {
+      "strong": "H5341",
+      "pointed": "נָצַר",
+      "glossZh": "守望；看守；保護；保全"
+    },
+    {
+      "strong": "H1616",
+      "pointed": "גֵּר",
+      "glossZh": "陌生人；寄居者；外僑"
+    },
+    {
+      "strong": "H2416",
+      "pointed": "חַיָּה",
+      "glossZh": "動物；野獸"
+    },
+    {
+      "strong": "H2459",
+      "pointed": "חֵ֫לֶב",
+      "glossZh": "肥美的；最好的部分"
+    },
+    {
+      "strong": "H2543",
+      "pointed": "חֲמוֹר",
+      "glossZh": "驢"
+    },
+    {
+      "strong": "H3499",
+      "pointed": "יֶ֫תֶר",
+      "glossZh": "剩餘；餘數；多餘"
+    },
+    {
+      "strong": "H5785",
+      "pointed": "עוֹר",
+      "glossZh": "皮膚；獸皮；皮革"
+    },
+    {
+      "strong": "H5797",
+      "pointed": "עֹז",
+      "glossZh": "力量；權能；威力"
+    },
+    {
+      "strong": "H6588",
+      "pointed": "פֶּ֫שַׁע",
+      "glossZh": "過犯；悖逆；罪行"
+    },
+    {
+      "strong": "H7097",
+      "pointed": "קָצֶה",
+      "glossZh": "末端；邊界；郊外"
+    },
+    {
+      "strong": "H8057",
+      "pointed": "שִׂמְחָה",
+      "glossZh": "喜樂；歡欣"
+    },
+    {
+      "strong": "H8549",
+      "pointed": "תָּמִים",
+      "glossZh": "完全；無可指摘；誠實；虔誠"
+    },
+    {
+      "strong": "H2490",
+      "pointed": "חָלַל",
+      "glossZh": "被玷汙；玷汙自己；褻瀆；使被玷汙；開始"
+    },
+    {
+      "strong": "H5046",
+      "pointed": "נָגַד",
+      "glossZh": "告訴；宣佈；報告；宣告；通知"
+    },
+    {
+      "strong": "H7650",
+      "pointed": "שָׁבַע",
+      "glossZh": "起誓；發誓；懇求某人"
+    },
+    {
+      "strong": "H7993",
+      "pointed": "שָׁלַךְ",
+      "glossZh": "投擲；扔下；拋開；丟棄"
+    },
+    {
+      "strong": "H1847",
+      "pointed": "דַּ֫עַת",
+      "glossZh": "知識；理解；能力"
+    },
+    {
+      "strong": "H1817",
+      "pointed": "דֶּ֫לֶת",
+      "glossZh": "門"
+    },
+    {
+      "strong": "H1995",
+      "pointed": "הָמוֹן",
+      "glossZh": "群眾；眾多；喧聲；轟鳴"
+    },
+    {
+      "strong": "H2220",
+      "pointed": "זְרוֹעַ",
+      "glossZh": "臂膀；前臂；力量；權能"
+    },
+    {
+      "strong": "H3742",
+      "pointed": "כְּרוּב",
+      "glossZh": "基路伯"
+    },
+    {
+      "strong": "H3754",
+      "pointed": "כֶּ֫רֶם",
+      "glossZh": "葡萄園"
+    },
+    {
+      "strong": "H4438",
+      "pointed": "מַלְכּוּת",
+      "glossZh": "王國；統治權；王權"
+    },
+    {
+      "strong": "H6098",
+      "pointed": "עֵצָה",
+      "glossZh": "謀略；計畫；勸告"
+    },
+    {
+      "strong": "H2491",
+      "pointed": "חָלָל",
+      "glossZh": "被刺透的；被殺的；被玷汙的"
+    },
+    {
+      "strong": "H2931",
+      "pointed": "טָמֵא",
+      "glossZh": "不潔淨的"
+    },
+    {
+      "strong": "H205",
+      "pointed": "אָוֶן",
+      "glossZh": "罪孽；邪惡；作惡者"
+    },
+    {
+      "strong": "H214",
+      "pointed": "אוֹצָר",
+      "glossZh": "財寶；寶庫；倉庫"
+    },
+    {
+      "strong": "H226",
+      "pointed": "אוֹת",
+      "glossZh": "記號；標記；憑據"
+    },
+    {
+      "strong": "H1486",
+      "pointed": "גּוֹרָל",
+      "glossZh": "籤；分；分配所得"
+    },
+    {
+      "strong": "H3444",
+      "pointed": "יְשׁוּעָה",
+      "glossZh": "救恩；幫助；拯救"
+    },
+    {
+      "strong": "H4735",
+      "pointed": "מִקְנֶה",
+      "glossZh": "牲畜；家畜；財產"
+    },
+    {
+      "strong": "H4931",
+      "pointed": "מִשְׁמֶ֫רֶת",
+      "glossZh": "看守；守衛；職責"
+    },
+    {
+      "strong": "H5061",
+      "pointed": "נֶ֫גַע",
+      "glossZh": "痕跡；災病；苦難"
+    },
+    {
+      "strong": "H6862",
+      "pointed": "צַר",
+      "glossZh": "敵手；仇敵"
+    },
+    {
+      "strong": "H6924",
+      "pointed": "קֶ֫דֶם",
+      "glossZh": "東方；古時"
+    },
+    {
+      "strong": "H7133",
+      "pointed": "קָרְבָּן",
+      "glossZh": "禮物；供物；祭物"
+    },
+    {
+      "strong": "H730",
+      "pointed": "אֶ֫רֶז",
+      "glossZh": "香柏樹"
+    },
+    {
+      "strong": "H6697",
+      "pointed": "צוּר",
+      "glossZh": "磐石；巨石"
+    },
+    {
+      "strong": "H7161",
+      "pointed": "קֶ֫רֶן",
+      "glossZh": "角；角狀突起"
+    },
+    {
+      "strong": "H7198",
+      "pointed": "קֶ֫שֶׁת",
+      "glossZh": "弓；武器"
+    },
+    {
+      "strong": "H990",
+      "pointed": "בֶּ֫טֶן",
+      "glossZh": "腹部；胃；子宮"
+    },
+    {
+      "strong": "H1892",
+      "pointed": "הֶ֫בֶל",
+      "glossZh": "虛空；徒然；氣息"
+    },
+    {
+      "strong": "H2781",
+      "pointed": "חֶרְפָּה",
+      "glossZh": "羞辱；恥辱；羞恥"
+    },
+    {
+      "strong": "H4217",
+      "pointed": "מִזְרָח",
+      "glossZh": "東方；日出之處"
+    },
+    {
+      "strong": "H4720",
+      "pointed": "מִקְדָּשׁ",
+      "glossZh": "聖所"
+    },
+    {
+      "strong": "H5775",
+      "pointed": "עוֹף",
+      "glossZh": "飛禽；鳥類；昆蟲"
+    },
+    {
+      "strong": "H5774",
+      "pointed": "עוּף",
+      "glossZh": "飛翔"
+    },
+    {
+      "strong": "H5795",
+      "pointed": "עֵז",
+      "glossZh": "山羊；山羊毛"
+    },
+    {
+      "strong": "H6419",
+      "pointed": "פָּלַל",
+      "glossZh": "禱告；代求"
+    },
+    {
+      "strong": "H7023",
+      "pointed": "קִיר",
+      "glossZh": "牆"
+    },
+    {
+      "strong": "H7782",
+      "pointed": "שׁוֹפָר",
+      "glossZh": "號角；羊角號"
+    },
+    {
+      "strong": "H1270",
+      "pointed": "בַּרְזֶל",
+      "glossZh": "鐵"
+    },
+    {
+      "strong": "H5707",
+      "pointed": "עֵד",
+      "glossZh": "見證人"
+    },
+    {
+      "strong": "H6869",
+      "pointed": "צָרָה",
+      "glossZh": "患難；焦慮；困苦"
+    },
+    {
+      "strong": "H7794",
+      "pointed": "שׁוֹר",
+      "glossZh": "牛；公牛；母牛"
+    },
+    {
+      "strong": "H7979",
+      "pointed": "שֻׁלְחָן",
+      "glossZh": "桌子"
+    },
+    {
+      "strong": "H8605",
+      "pointed": "תְּפִלָּה",
+      "glossZh": "禱告；禱文"
+    },
+    {
+      "strong": "H3212",
+      "pointed": "יָלַךְ",
+      "glossZh": "行走；往來；帶走"
+    },
+    {
+      "strong": "H8147",
+      "pointed": "שְׁנַיִם",
+      "glossZh": "二；兩個；第二；雙倍"
+    },
+    {
+      "strong": "H3967",
+      "pointed": "מֵאָה",
+      "glossZh": "一百；百倍；百分之一"
+    },
+    {
+      "strong": "H7969",
+      "pointed": "שָׁלוֹשׁ",
+      "glossZh": "三；第三；三次"
+    },
+    {
+      "strong": "H7651",
+      "pointed": "שֶׁבַע",
+      "glossZh": "七；七次；一週"
+    },
+    {
+      "strong": "H2568",
+      "pointed": "חָמֵשׁ",
+      "glossZh": "五"
+    },
+    {
+      "strong": "H6240",
+      "pointed": "עָשָׂר",
+      "glossZh": "十；第十"
+    },
+    {
+      "strong": "H702",
+      "pointed": "אַרְבַּע",
+      "glossZh": "四"
+    },
+    {
+      "strong": "H6242",
+      "pointed": "עֶשְׂרִים",
+      "glossZh": "二十；第二十"
+    },
+    {
+      "strong": "H3069",
+      "pointed": "יְהֹוִה",
+      "glossZh": "耶和華"
+    },
+    {
+      "strong": "H8337",
+      "pointed": "שֵׁשׁ",
+      "glossZh": "六；第六"
+    },
+    {
+      "strong": "H7223",
+      "pointed": "רִאשׁוֹן",
+      "glossZh": "第一；首先"
+    },
+    {
+      "strong": "H7970",
+      "pointed": "שְׁלוֹשִׁים",
+      "glossZh": "三十；第三十"
+    },
+    {
+      "strong": "H7812",
+      "pointed": "שָׁחָה",
+      "glossZh": "下拜；俯伏敬拜"
+    },
+    {
+      "strong": "H2572",
+      "pointed": "חֲמִשִּׁים",
+      "glossZh": "五十"
+    },
+    {
+      "strong": "H8145",
+      "pointed": "שֵׁנִי",
+      "glossZh": "第二；再一次"
+    },
+    {
+      "strong": "H3644",
+      "pointed": "כְּמוֹ",
+      "glossZh": "像；如同；如此"
+    },
+    {
+      "strong": "H705",
+      "pointed": "אַרְבָּעִים",
+      "glossZh": "四十"
+    },
+    {
+      "strong": "H8083",
+      "pointed": "שְׁמֹנֶה",
+      "glossZh": "八；第八"
+    },
+    {
+      "strong": "H7992",
+      "pointed": "שְׁלִישִׁי",
+      "glossZh": "第三；三分之一"
+    },
+    {
+      "strong": "H7341",
+      "pointed": "רֹחַב",
+      "glossZh": "寬度；廣闊"
+    },
+    {
+      "strong": "H7125",
+      "pointed": "קִרְאָה",
+      "glossZh": "遭遇；相逢；對面"
+    },
+    {
+      "strong": "H7637",
+      "pointed": "שְׁבִיעִי",
+      "glossZh": "第七"
+    },
+    {
+      "strong": "H753",
+      "pointed": "אֹרֶךְ",
+      "glossZh": "長度"
+    },
+    {
+      "strong": "H5676",
+      "pointed": "עֵבֶר",
+      "glossZh": "彼岸；對岸"
+    },
+    {
+      "strong": "H7657",
+      "pointed": "שִׁבְעִים",
+      "glossZh": "七十"
+    },
+    {
+      "strong": "H8255",
+      "pointed": "שֶׁקֶל",
+      "glossZh": "舍客勒；重量單位"
+    },
+    {
+      "strong": "H8002",
+      "pointed": "שֶׁלֶם",
+      "glossZh": "平安祭；酬謝祭"
+    },
+    {
+      "strong": "H3384",
+      "pointed": "יָרָה",
+      "glossZh": "流動；降雨；投擲；射擊；指教"
+    },
+    {
+      "strong": "H6285",
+      "pointed": "פֵּאָה",
+      "glossZh": "邊緣；方向；區域；盡頭"
+    },
+    {
+      "strong": "H738",
+      "pointed": "אֲרִי",
+      "glossZh": "獅子"
+    },
+    {
+      "strong": "H1168",
+      "pointed": "בַּעַל",
+      "glossZh": "巴力；腓尼基神祇"
+    },
+    {
+      "strong": "H2114",
+      "pointed": "זוּר",
+      "glossZh": "偏離；投宿；作外人；陌生；不潔；行淫"
+    },
+    {
+      "strong": "H5291",
+      "pointed": "נַעֲרָה",
+      "glossZh": "女孩；少女"
+    },
+    {
+      "strong": "H8641",
+      "pointed": "תְּרוּמָה",
+      "glossZh": "舉祭；禮物；貢物"
+    },
+    {
+      "strong": "H3240",
+      "pointed": "יָנַח",
+      "glossZh": "放置；留下；容許停留"
+    },
+    {
+      "strong": "H7998",
+      "pointed": "שָׁלָל",
+      "glossZh": "戰利品；掠物"
+    },
+    {
+      "strong": "H5542",
+      "pointed": "סֶלָה",
+      "glossZh": "細拉；樂曲休止"
+    },
+    {
+      "strong": "H3001",
+      "pointed": "יָבֵשׁ",
+      "glossZh": "羞愧；困惑；失望；乾涸；枯萎"
+    },
+    {
+      "strong": "H1077",
+      "pointed": "בַּל",
+      "glossZh": "不；毫無；免得"
+    },
+    {
+      "strong": "H2790",
+      "pointed": "חָרַשׁ",
+      "glossZh": "雕刻；耕作；製造；圖謀；沉默；不理；耳聾"
+    },
+    {
+      "strong": "H1389",
+      "pointed": "גִּבְעָה",
+      "glossZh": "小山丘"
+    },
+    {
+      "strong": "H8628",
+      "pointed": "תָּקַע",
+      "glossZh": "拍擊；吹奏；釘入；作保"
+    },
+    {
+      "strong": "H7378",
+      "pointed": "רִיב",
+      "glossZh": "爭競；爭訟；辯護"
+    },
+    {
+      "strong": "H441",
+      "pointed": "אַלּוּף",
+      "glossZh": "熟識的；朋友；馴服的；牛犢；族長"
+    },
+    {
+      "strong": "H6010",
+      "pointed": "עֵמֶק",
+      "glossZh": "谷地"
+    },
+    {
+      "strong": "H2580",
+      "pointed": "חֵן",
+      "glossZh": "恩惠；恩寵；美麗"
+    },
+    {
+      "strong": "H7495",
+      "pointed": "רָפָא",
+      "glossZh": "醫治；修補"
+    },
+    {
+      "strong": "H6921",
+      "pointed": "קָדִים",
+      "glossZh": "東方；東風"
+    },
+    {
+      "strong": "H953",
+      "pointed": "בּוֹר",
+      "glossZh": "坑；井；水池；監牢"
+    },
+    {
+      "strong": "H3603",
+      "pointed": "כִּכָּר",
+      "glossZh": "圓形地區；約旦河谷；圓餅；他連得"
+    },
+    {
+      "strong": "H6327",
+      "pointed": "פּוּץ",
+      "glossZh": "擊碎；分散"
+    },
+    {
+      "strong": "H3802",
+      "pointed": "כָּתֵף",
+      "glossZh": "肩膀；側面；側翼"
+    },
+    {
+      "strong": "H6566",
+      "pointed": "פָּרַשׂ",
+      "glossZh": "分開；分散"
+    },
+    {
+      "strong": "H7093",
+      "pointed": "קֵץ",
+      "glossZh": "末端；終結；其後"
+    },
+    {
+      "strong": "H2506",
+      "pointed": "חֵלֶק",
+      "glossZh": "光滑；分得的份"
+    },
+    {
+      "strong": "H6913",
+      "pointed": "קֶבֶר",
+      "glossZh": "墳墓"
+    },
+    {
+      "strong": "H7611",
+      "pointed": "שְׁאֵרִית",
+      "glossZh": "餘民；剩餘部分"
+    },
+    {
+      "strong": "H272",
+      "pointed": "אֲחֻזָּה",
+      "glossZh": "產業；地業"
+    },
+    {
+      "strong": "H7585",
+      "pointed": "שְׁאוֹל",
+      "glossZh": "陰間；死人之地"
+    },
+    {
+      "strong": "H1272",
+      "pointed": "בָּרַח",
+      "glossZh": "逃跑；奔逃"
+    },
+    {
+      "strong": "H5329",
+      "pointed": "נָצַח",
+      "glossZh": "卓越；監督；長存"
+    },
+    {
+      "strong": "H4853",
+      "pointed": "מַשָּׂא",
+      "glossZh": "重擔；貢物；搬運；默示；歌詠；願望"
+    },
+    {
+      "strong": "H2505",
+      "pointed": "חָלַק",
+      "glossZh": "光滑；分配；分開"
+    },
+    {
+      "strong": "H6743",
+      "pointed": "צָלַח",
+      "glossZh": "向前推進；亨通；成功"
+    },
+    {
+      "strong": "H1397",
+      "pointed": "גֶּבֶר",
+      "glossZh": "勇士；男子；人"
+    },
+    {
+      "strong": "H8610",
+      "pointed": "תָּפַשׂ",
+      "glossZh": "抓住；擄獲；揮動；包覆；妄用"
+    },
+    {
+      "strong": "H7925",
+      "pointed": "שָׁכַם",
+      "glossZh": "早起；清早出發"
+    },
+    {
+      "strong": "H3782",
+      "pointed": "כָּשַׁל",
+      "glossZh": "蹣跚；絆跌；軟弱；昏厥；跌倒"
+    },
+    {
+      "strong": "H801",
+      "pointed": "אִשָּׁה",
+      "glossZh": "火祭；祭物"
+    },
+    {
+      "strong": "H2975",
+      "pointed": "יְאֹר",
+      "glossZh": "河渠；尼羅河；底格里斯河"
+    },
+    {
+      "strong": "H5262",
+      "pointed": "נֶסֶךְ",
+      "glossZh": "奠祭；鑄造的偶像"
+    },
+    {
+      "strong": "H2472",
+      "pointed": "חֲלוֹם",
+      "glossZh": "夢"
+    },
+    {
+      "strong": "H4043",
+      "pointed": "מָגֵן",
+      "glossZh": "盾牌；保護者"
+    },
+    {
+      "strong": "H1869",
+      "pointed": "דָּרַךְ",
+      "glossZh": "踏行；行走；張弓"
+    },
+    {
+      "strong": "H7167",
+      "pointed": "קָרַע",
+      "glossZh": "撕裂；撕開；辱罵；描畫眼睛"
+    },
+    {
+      "strong": "H8198",
+      "pointed": "שִׁפְחָה",
+      "glossZh": "婢女；女奴"
+    },
+    {
+      "strong": "H1516",
+      "pointed": "גַּיְא",
+      "glossZh": "峽谷；狹谷"
+    },
+    {
+      "strong": "H8248",
+      "pointed": "שָׁקָה",
+      "glossZh": "喝；使飲；灌溉"
+    },
+    {
+      "strong": "H2256",
+      "pointed": "חֶבֶל",
+      "glossZh": "繩索；準繩；地區；產業；網羅；群體；產痛；毀滅"
+    },
+    {
+      "strong": "H1369",
+      "pointed": "גְּבוּרָה",
+      "glossZh": "力量；勇武；勝利"
+    },
+    {
+      "strong": "H2282",
+      "pointed": "חַג",
+      "glossZh": "節期；節期祭牲"
+    },
+    {
+      "strong": "H7070",
+      "pointed": "קָנֶה",
+      "glossZh": "蘆葦；量竿；杖；軸；管；莖；樑"
+    },
+    {
+      "strong": "H2342",
+      "pointed": "חוּל",
+      "glossZh": "旋轉；跳舞；受苦；生產陣痛；恐懼；等候；扭曲"
+    },
+    {
+      "strong": "H1730",
+      "pointed": "דּוֹד",
+      "glossZh": "愛；愛情信物；愛人；朋友；叔父"
+    },
+    {
+      "strong": "H681",
+      "pointed": "אֵצֶל",
+      "glossZh": "旁邊；靠近"
+    },
+    {
+      "strong": "H34",
+      "pointed": "אֶבְיוֹן",
+      "glossZh": "貧困的；窮乏的"
+    },
+    {
+      "strong": "H6160",
+      "pointed": "עֲרָבָה",
+      "glossZh": "荒野；亞拉巴谷地"
+    },
+    {
+      "strong": "H7379",
+      "pointed": "רִיב",
+      "glossZh": "爭論；爭訟"
+    },
+    {
+      "strong": "H319",
+      "pointed": "אַחֲרִית",
+      "glossZh": "結局；末後；將來；後裔"
+    },
+    {
+      "strong": "H7004",
+      "pointed": "קְטֹרֶת",
+      "glossZh": "香；香料；焚香"
+    },
+    {
+      "strong": "H2555",
+      "pointed": "חָמָס",
+      "glossZh": "強暴；不義；不義之財"
+    },
+    {
+      "strong": "H5088",
+      "pointed": "נֶדֶר",
+      "glossZh": "許願；誓願；所許之物"
+    },
+    {
+      "strong": "H433",
+      "pointed": "אֱלוֹהַּ",
+      "glossZh": "神；上帝"
+    },
+    {
+      "strong": "H734",
+      "pointed": "אֹרַח",
+      "glossZh": "道路；路徑；商隊"
+    },
+    {
+      "strong": "H8346",
+      "pointed": "שִׁשִּׁים",
+      "glossZh": "六十"
+    },
+    {
+      "strong": "H3198",
+      "pointed": "יָכַח",
+      "glossZh": "正確；爭辯；判決；證明為義；定罪"
+    },
+    {
+      "strong": "H3293",
+      "pointed": "יַעַר",
+      "glossZh": "樹叢；森林；蜂房蜜"
+    },
+    {
+      "strong": "H5193",
+      "pointed": "נָטַע",
+      "glossZh": "栽植；種植；建立"
+    },
+    {
+      "strong": "H6299",
+      "pointed": "פָּדָה",
+      "glossZh": "贖回；釋放；保全"
+    },
+    {
+      "strong": "H5157",
+      "pointed": "נָחַל",
+      "glossZh": "承受產業；佔有；遺贈；分配"
+    },
+    {
+      "strong": "H5715",
+      "pointed": "עֵדוּת",
+      "glossZh": "見證；法版"
+    },
+    {
+      "strong": "H2308",
+      "pointed": "חָדַל",
+      "glossZh": "停止；缺乏；閒置"
+    },
+    {
+      "strong": "H5553",
+      "pointed": "סֶלַע",
+      "glossZh": "巖石；堡壘"
+    },
+    {
+      "strong": "H8163",
+      "pointed": "שָׂעִיר",
+      "glossZh": "多毛的；公山羊；山羊鬼"
+    },
+    {
+      "strong": "H8672",
+      "pointed": "תֵּשַׁע",
+      "glossZh": "九；第九"
+    },
+    {
+      "strong": "H4392",
+      "pointed": "מָלֵא",
+      "glossZh": "滿的；充滿；豐滿；完全"
+    },
+    {
+      "strong": "H8416",
+      "pointed": "תְּהִלָּה",
+      "glossZh": "讚美；頌歌"
+    },
+    {
+      "strong": "H1097",
+      "pointed": "בְּלִי",
+      "glossZh": "無；沒有；尚未；不"
+    },
+    {
+      "strong": "H8077",
+      "pointed": "שְׁמָמָה",
+      "glossZh": "荒涼；驚愕"
+    },
+    {
+      "strong": "H7368",
+      "pointed": "רָחַק",
+      "glossZh": "遠離；移開"
+    },
+    {
+      "strong": "H7381",
+      "pointed": "רֵיחַ",
+      "glossZh": "氣味；香氣"
+    },
+    {
+      "strong": "H7703",
+      "pointed": "שָׁדַד",
+      "glossZh": "強大；蹂躪；毀壞"
+    },
+    {
+      "strong": "H6571",
+      "pointed": "פָּרָשׁ",
+      "glossZh": "駿馬；戰車御者；騎兵"
+    },
+    {
+      "strong": "H7521",
+      "pointed": "רָצָה",
+      "glossZh": "喜悅；悅納；償清債務"
+    },
+    {
+      "strong": "H2962",
+      "pointed": "טֶרֶם",
+      "glossZh": "尚未；以前"
+    },
+    {
+      "strong": "H134",
+      "pointed": "אֶדֶן",
+      "glossZh": "基座；柱腳"
+    },
+    {
+      "strong": "H4210",
+      "pointed": "מִזְמוֹר",
+      "glossZh": "詩篇；配樂的詩歌"
+    },
+    {
+      "strong": "H4284",
+      "pointed": "מַחֲשָׁבָה",
+      "glossZh": "巧作；器械；意念；計畫；計謀"
+    },
+    {
+      "strong": "H519",
+      "pointed": "אָמָה",
+      "glossZh": "婢女；女奴"
+    },
+    {
+      "strong": "H490",
+      "pointed": "אַלְמָנָה",
+      "glossZh": "寡婦；荒涼之地"
+    },
+    {
+      "strong": "H2389",
+      "pointed": "חָזָק",
+      "glossZh": "強壯的；剛硬的；勇猛的；強暴的"
+    },
+    {
+      "strong": "H7522",
+      "pointed": "רָצוֹן",
+      "glossZh": "喜悅；恩惠；悅納"
+    },
+    {
+      "strong": "H2232",
+      "pointed": "זָרַע",
+      "glossZh": "撒種；傳播；栽植；結果"
+    },
+    {
+      "strong": "H6466",
+      "pointed": "פָּעַל",
+      "glossZh": "行作；製作；慣行"
+    },
+    {
+      "strong": "H7243",
+      "pointed": "רְבִיעִי",
+      "glossZh": "第四；四分之一"
+    },
+    {
+      "strong": "H4060",
+      "pointed": "מִדָּה",
+      "glossZh": "尺度；長寬；量器；份額；衣服；貢物"
+    },
+    {
+      "strong": "H1612",
+      "pointed": "גֶּפֶן",
+      "glossZh": "葡萄樹"
+    },
+    {
+      "strong": "H8127",
+      "pointed": "שֵׁן",
+      "glossZh": "牙齒；象牙；峭壁"
+    },
+    {
+      "strong": "H3707",
+      "pointed": "כַּעַס",
+      "glossZh": "惹動；使憂愁；發怒；憤慨"
+    },
+    {
+      "strong": "H6817",
+      "pointed": "צָעַק",
+      "glossZh": "呼喊；宣告召集"
+    },
+    {
+      "strong": "H5999",
+      "pointed": "עָמָל",
+      "glossZh": "勞苦；辛勞；憂慮"
+    },
+    {
+      "strong": "H1581",
+      "pointed": "גָּמָל",
+      "glossZh": "駱駝"
+    },
+    {
+      "strong": "H1692",
+      "pointed": "דָּבַק",
+      "glossZh": "黏附；追趕而捕獲"
+    },
+    {
+      "strong": "H14",
+      "pointed": "אָבָה",
+      "glossZh": "喘息；順從；安然接受"
+    },
+    {
+      "strong": "H3407",
+      "pointed": "יְרִיעָה",
+      "glossZh": "懸掛物；簾幕"
+    },
+    {
+      "strong": "H5766",
+      "pointed": "עֶוֶל",
+      "glossZh": "道德上的邪惡"
+    },
+    {
+      "strong": "H1706",
+      "pointed": "דְּבַשׁ",
+      "glossZh": "蜂蜜；糖漿"
+    },
+    {
+      "strong": "H3373",
+      "pointed": "יָרֵא",
+      "glossZh": "敬畏的；虔敬的"
+    },
+    {
+      "strong": "H1254",
+      "pointed": "בָּרָא",
+      "glossZh": "創造；砍伐；選擇；餵養"
+    },
+    {
+      "strong": "H7105",
+      "pointed": "קָצִיר",
+      "glossZh": "收割；莊稼；收割期；收割者；樹枝"
+    },
+    {
+      "strong": "H6172",
+      "pointed": "עֶרְוָה",
+      "glossZh": "赤裸；羞恥；瑕疵"
+    },
+    {
+      "strong": "H4791",
+      "pointed": "מָרוֹם",
+      "glossZh": "高處；高升；高傲；在高處"
+    },
+    {
+      "strong": "H7723",
+      "pointed": "שָׁוְא",
+      "glossZh": "虛假；虛妄；災禍；詭詐；偶像；徒然"
+    },
+    {
+      "strong": "H5945",
+      "pointed": "עֶלְיוֹן",
+      "glossZh": "高處；崇高的；至高者"
+    },
+    {
+      "strong": "H5560",
+      "pointed": "סֹלֶת",
+      "glossZh": "細麵；麵粉"
+    },
+    {
+      "strong": "H2319",
+      "pointed": "חָדָשׁ",
+      "glossZh": "新的"
+    },
+    {
+      "strong": "H7442",
+      "pointed": "רָנַן",
+      "glossZh": "發出尖銳聲；歡呼"
+    },
+    {
+      "strong": "H4682",
+      "pointed": "מַצָּה",
+      "glossZh": "甘甜；無酵餅；除酵節"
+    },
+    {
+      "strong": "H6887",
+      "pointed": "צָרַר",
+      "glossZh": "受拘束；困窘"
+    },
+    {
+      "strong": "H4082",
+      "pointed": "מְדִינָה",
+      "glossZh": "地區"
+    },
+    {
+      "strong": "H2763",
+      "pointed": "חָרַם",
+      "glossZh": "隔離；宣告歸神而毀滅；鼻子遲鈍"
+    },
+    {
+      "strong": "H3332",
+      "pointed": "יָצַק",
+      "glossZh": "澆灌；傾倒；熔化；鑄造；安置；凝固"
+    },
+    {
+      "strong": "H4279",
+      "pointed": "מָחָר",
+      "glossZh": "明日；以後"
+    },
+    {
+      "strong": "H5080",
+      "pointed": "נָדַח",
+      "glossZh": "推開；驅逐；誤導；擊打；施加"
+    },
+    {
+      "strong": "H3119",
+      "pointed": "יוֹמָם",
+      "glossZh": "每日的；天天"
+    },
+    {
+      "strong": "H1234",
+      "pointed": "בָּקַע",
+      "glossZh": "劈開；撕裂；打破；敞開"
+    },
+    {
+      "strong": "H8597",
+      "pointed": "תִּפְאָרָה",
+      "glossZh": "榮美；華美；裝飾"
+    },
+    {
+      "strong": "H2865",
+      "pointed": "חָתַת",
+      "glossZh": "俯伏；擊倒；因恐懼而崩潰"
+    },
+    {
+      "strong": "H314",
+      "pointed": "אַחֲרוֹן",
+      "glossZh": "阻礙；遲後的；末後的；西方的"
+    },
+    {
+      "strong": "H5703",
+      "pointed": "עַד",
+      "glossZh": "終點；期限；持續；永久"
+    },
+    {
+      "strong": "H1945",
+      "pointed": "הוֹי",
+      "glossZh": "唉！；哦！"
+    },
+    {
+      "strong": "H4058",
+      "pointed": "מָדַד",
+      "glossZh": "拉長；測量；延伸"
+    },
+    {
+      "strong": "H7225",
+      "pointed": "רֵאשִׁית",
+      "glossZh": "起初；首先；首要；初熟之物"
+    },
+    {
+      "strong": "H7114",
+      "pointed": "קָצַר",
+      "glossZh": "割短；收割草或穀物"
+    },
+    {
+      "strong": "H8582",
+      "pointed": "תָּעָה",
+      "glossZh": "搖擺；踉蹌；迷失；使搖擺"
+    },
+    {
+      "strong": "H3526",
+      "pointed": "כָּבַס",
+      "glossZh": "踐踏；洗滌；漂布"
+    },
+    {
+      "strong": "H7175",
+      "pointed": "קֶרֶשׁ",
+      "glossZh": "石板；木板；船甲板"
+    },
+    {
+      "strong": "H6555",
+      "pointed": "פָּרַץ",
+      "glossZh": "爆發；衝破"
+    },
+    {
+      "strong": "H2008",
+      "pointed": "הֵנָּה",
+      "glossZh": "這裡；那裡；此時；彼時"
+    },
+    {
+      "strong": "H4609",
+      "pointed": "מַעֲלָה",
+      "glossZh": "上升；臺階；等級；優越；上行詩"
+    },
+    {
+      "strong": "H5381",
+      "pointed": "נָשַׂג",
+      "glossZh": "到達；達成"
+    },
+    {
+      "strong": "H1330",
+      "pointed": "בְּתוּלָה",
+      "glossZh": "童女；新婦；比喻城市或國家"
+    },
+    {
+      "strong": "H5234",
+      "pointed": "נָכַר",
+      "glossZh": "仔細察看；承認；認識；尊重；敬畏；忽視；拒絕；裝作不知"
+    },
+    {
+      "strong": "H6565",
+      "pointed": "פָּרַר",
+      "glossZh": "破壞；違反；挫敗"
+    },
+    {
+      "strong": "H1104",
+      "pointed": "בָּלַע",
+      "glossZh": "吞滅；毀滅"
+    },
+    {
+      "strong": "H4148",
+      "pointed": "מוּסָר",
+      "glossZh": "管教；責備；警告；教訓；約束"
+    },
+    {
+      "strong": "H2885",
+      "pointed": "טַבַּעַת",
+      "glossZh": "印章；圖章戒指；戒指"
+    },
+    {
+      "strong": "H3050",
+      "pointed": "יָהּ",
+      "glossZh": "耶和華的聖名「耶」"
+    },
+    {
+      "strong": "H530",
+      "pointed": "אֱמוּנָה",
+      "glossZh": "堅固；安全；忠信"
+    },
+    {
+      "strong": "H5668",
+      "pointed": "עָבוּר",
+      "glossZh": "因為；為了；以便"
+    },
+    {
+      "strong": "H6343",
+      "pointed": "פַּחַד",
+      "glossZh": "驚恐；突然的恐懼"
+    },
+    {
+      "strong": "H646",
+      "pointed": "אֵפוֹד",
+      "glossZh": "腰帶；以弗得；偶像"
+    },
+    {
+      "strong": "H5062",
+      "pointed": "נָגַף",
+      "glossZh": "推擠；用角牴；擊敗；踢撞；使患病"
+    },
+    {
+      "strong": "H4948",
+      "pointed": "מִשְׁקָל",
+      "glossZh": "重量；衡量"
+    },
+    {
+      "strong": "H1698",
+      "pointed": "דֶּבֶר",
+      "glossZh": "瘟疫"
+    },
+    {
+      "strong": "H4026",
+      "pointed": "מִגְדָּל",
+      "glossZh": "塔；講臺；花壇"
+    },
+    {
+      "strong": "H6738",
+      "pointed": "צֵל",
+      "glossZh": "蔭影；庇護"
+    },
+    {
+      "strong": "H898",
+      "pointed": "בָּגַד",
+      "glossZh": "用衣服遮蓋；暗中行事；行詭詐；搶掠"
+    },
+    {
+      "strong": "H8504",
+      "pointed": "תְּכֵלֶת",
+      "glossZh": "藍紫色染料；藍紫色布料"
+    },
+    {
+      "strong": "H6453",
+      "pointed": "פֶּסַח",
+      "glossZh": "越過；豁免；逾越節；逾越節祭牲"
+    },
+    {
+      "strong": "H1347",
+      "pointed": "גָּאוֹן",
+      "glossZh": "驕傲；威嚴；榮美"
+    },
+    {
+      "strong": "H561",
+      "pointed": "אֵמֶר",
+      "glossZh": "言語；所說的話"
+    },
+    {
+      "strong": "H6960",
+      "pointed": "קָוָה",
+      "glossZh": "捆在一起；聚集；期待"
+    },
+    {
+      "strong": "H3957",
+      "pointed": "לִשְׁכָּה",
+      "glossZh": "房間；內室"
+    },
+    {
+      "strong": "H2595",
+      "pointed": "חֲנִית",
+      "glossZh": "矛；長槍"
+    },
+    {
+      "strong": "H3320",
+      "pointed": "יָצַב",
+      "glossZh": "安置；站立；獻上；持續"
+    },
+    {
+      "strong": "H8242",
+      "pointed": "שַׂק",
+      "glossZh": "網眼；粗麻布；麻袋"
+    },
+    {
+      "strong": "H5216",
+      "pointed": "נִיר",
+      "glossZh": "燈；光"
+    },
+    {
+      "strong": "H5545",
+      "pointed": "סָלַח",
+      "glossZh": "赦免"
+    },
+    {
+      "strong": "H5038",
+      "pointed": "נְבֵלָה",
+      "glossZh": "屍體；腐肉；偶像"
+    },
+    {
+      "strong": "H1544",
+      "pointed": "גִּלּוּל",
+      "glossZh": "圓木；偶像"
+    },
+    {
+      "strong": "H4347",
+      "pointed": "מַכָּה",
+      "glossZh": "傷口；殺戮；瘟疫"
+    },
+    {
+      "strong": "H7628",
+      "pointed": "שְׁבִי",
+      "glossZh": "被擄的；俘虜；被擄；戰利品"
+    },
+    {
+      "strong": "H5564",
+      "pointed": "סָמַךְ",
+      "glossZh": "支撐；倚靠；扶持"
+    },
+    {
+      "strong": "H7706",
+      "pointed": "שַׁדַּי",
+      "glossZh": "全能者"
+    },
+    {
+      "strong": "H7617",
+      "pointed": "שָׁבָה",
+      "glossZh": "擄走；使被擄"
+    },
+    {
+      "strong": "H1644",
+      "pointed": "גָּרַשׁ",
+      "glossZh": "趕離產業；放逐；休妻"
+    },
+    {
+      "strong": "H4975",
+      "pointed": "מֹתֶן",
+      "glossZh": "腰部；腰間"
+    },
+    {
+      "strong": "H6823",
+      "pointed": "צָפָה",
+      "glossZh": "包覆；鍍上金屬"
+    },
+    {
+      "strong": "H7355",
+      "pointed": "רָחַם",
+      "glossZh": "撫愛；疼愛；憐憫"
+    },
+    {
+      "strong": "H5271",
+      "pointed": "נָעוּר",
+      "glossZh": "青春；青年時期；青年人"
+    },
+    {
+      "strong": "H7523",
+      "pointed": "רָצַח",
+      "glossZh": "摔碎；殺人；謀殺"
+    },
+    {
+      "strong": "H7716",
+      "pointed": "שֶׂה",
+      "glossZh": "羊群中的一隻；綿羊或山羊"
+    },
+    {
+      "strong": "H346",
+      "pointed": "אַיֵּה",
+      "glossZh": "哪裡？"
+    },
+    {
+      "strong": "H6113",
+      "pointed": "עָצָר",
+      "glossZh": "圍住；抑制；維持；治理；召集"
+    },
+    {
+      "strong": "H1523",
+      "pointed": "גִּיל",
+      "glossZh": "旋轉；歡喜；戰兢"
+    },
+    {
+      "strong": "H7503",
+      "pointed": "רָפָה",
+      "glossZh": "鬆弛；衰弱；放鬆"
+    },
+    {
+      "strong": "H4904",
+      "pointed": "מִשְׁכָּב",
+      "glossZh": "床榻；棺架；睡眠；同房"
+    },
+    {
+      "strong": "H6293",
+      "pointed": "פָּגַע",
+      "glossZh": "碰上；猛烈相遇；纏求"
+    },
+    {
+      "strong": "H4960",
+      "pointed": "מִשְׁתֶּה",
+      "glossZh": "飲料；飲宴；筵席"
+    },
+    {
+      "strong": "H6967",
+      "pointed": "קוֹמָה",
+      "glossZh": "高度；高處"
+    },
+    {
+      "strong": "H5237",
+      "pointed": "נׇכְרִי",
+      "glossZh": "陌生的；外邦的；異樣的；奇妙的"
+    },
+    {
+      "strong": "H817",
+      "pointed": "אָשָׁם",
+      "glossZh": "罪責；過錯；贖愆祭"
+    },
+    {
+      "strong": "H970",
+      "pointed": "בָּחוּר",
+      "glossZh": "精選的青年；青年人"
+    },
+    {
+      "strong": "H7181",
+      "pointed": "קָשַׁב",
+      "glossZh": "側耳聽；留心聽"
+    },
+    {
+      "strong": "H2549",
+      "pointed": "חֲמִישִׁי",
+      "glossZh": "第五；五分之一"
+    },
+    {
+      "strong": "H2671",
+      "pointed": "חֵץ",
+      "glossZh": "箭；傷口；上帝的霹靂；矛桿"
+    },
+    {
+      "strong": "H2167",
+      "pointed": "זָמַר",
+      "glossZh": "彈奏；歌唱；以音樂頌揚"
+    },
+    {
+      "strong": "H7356",
+      "pointed": "רַחַם",
+      "glossZh": "憐憫；子宮；少女"
+    },
+    {
+      "strong": "H835",
+      "pointed": "אֶשֶׁר",
+      "glossZh": "福樂；何等有福！"
+    },
+    {
+      "strong": "H4784",
+      "pointed": "מָרָה",
+      "glossZh": "成為苦澀；使不悅；悖逆；激怒"
+    },
+    {
+      "strong": "H194",
+      "pointed": "אוּלַי",
+      "glossZh": "若不；或許"
+    },
+    {
+      "strong": "H4186",
+      "pointed": "מוֹשָׁב",
+      "glossZh": "座位；居所；聚會；居民"
+    },
+    {
+      "strong": "H5057",
+      "pointed": "נָגִיד",
+      "glossZh": "領袖；官長；尊貴之事"
+    },
+    {
+      "strong": "H2502",
+      "pointed": "חָלַץ",
+      "glossZh": "脫去；剝除；離開；拯救；裝備；加強"
+    },
+    {
+      "strong": "H4818",
+      "pointed": "מֶרְכָּבָה",
+      "glossZh": "戰車"
+    },
+    {
+      "strong": "H5352",
+      "pointed": "נָקָה",
+      "glossZh": "潔淨；使潔淨；赤裸；除滅"
+    },
+    {
+      "strong": "H5749",
+      "pointed": "עוּד",
+      "glossZh": "重複；作證；環繞；恢復"
+    },
+    {
+      "strong": "H7194",
+      "pointed": "קָשַׁר",
+      "glossZh": "綁住；束腰；拘禁；結盟"
+    },
+    {
+      "strong": "H2296",
+      "pointed": "חָגַר",
+      "glossZh": "束上腰帶；穿戴軍裝"
+    },
+    {
+      "strong": "H657",
+      "pointed": "אֶפֶס",
+      "glossZh": "止息；地極；不再；腳踝"
+    },
+    {
+      "strong": "H7321",
+      "pointed": "רוּעַ",
+      "glossZh": "破壞；發出震耳喊聲；警報或歡呼"
+    },
+    {
+      "strong": "H2461",
+      "pointed": "חָלָב",
+      "glossZh": "奶；牛奶"
+    },
+    {
+      "strong": "H5978",
+      "pointed": "עִמָּד",
+      "glossZh": "與……一同"
+    },
+    {
+      "strong": "H7667",
+      "pointed": "שֶׁבֶר",
+      "glossZh": "破裂；毀滅；解夢"
+    },
+    {
+      "strong": "H400",
+      "pointed": "אֹכֶל",
+      "glossZh": "食物"
+    },
+    {
+      "strong": "H2029",
+      "pointed": "הָרָה",
+      "glossZh": "懷孕；受孕"
+    },
+    {
+      "strong": "H1473",
+      "pointed": "גּוֹלָה",
+      "glossZh": "流亡；被擄者"
+    },
+    {
+      "strong": "H6584",
+      "pointed": "פָּשַׁט",
+      "glossZh": "鋪展戰陣；脫衣；掠奪；剝皮"
+    },
+    {
+      "strong": "H3256",
+      "pointed": "יָסַר",
+      "glossZh": "管教；責罰；教導"
+    },
+    {
+      "strong": "H959",
+      "pointed": "בָּזָה",
+      "glossZh": "輕視；藐視"
+    },
+    {
+      "strong": "H2040",
+      "pointed": "הָרַס",
+      "glossZh": "拆毀；打碎；毀滅"
+    },
+    {
+      "strong": "H5331",
+      "pointed": "נֶצַח",
+      "glossZh": "目標；榮美；真實；信賴；常常"
+    },
+    {
+      "strong": "H575",
+      "pointed": "אָן",
+      "glossZh": "哪裡？；往哪裡？；何時？；各處"
+    },
+    {
+      "strong": "H8394",
+      "pointed": "תָּבוּן",
+      "glossZh": "智慧；論證；任性"
+    },
+    {
+      "strong": "H3871",
+      "pointed": "לוּחַ",
+      "glossZh": "發亮的板；石板；木板；金屬板"
+    },
+    {
+      "strong": "H5355",
+      "pointed": "נָקִי",
+      "glossZh": "無辜的；清白的"
+    },
+    {
+      "strong": "H4970",
+      "pointed": "מָתַי",
+      "glossZh": "時間的延續；何時"
+    },
+    {
+      "strong": "H215",
+      "pointed": "אוֹר",
+      "glossZh": "發光；使發光；照亮"
+    },
+    {
+      "strong": "H962",
+      "pointed": "בָּזַז",
+      "glossZh": "掠奪"
+    },
+    {
+      "strong": "H4611",
+      "pointed": "מַעֲלָל",
+      "glossZh": "行為；作為"
+    },
+    {
+      "strong": "H7339",
+      "pointed": "רְחֹב",
+      "glossZh": "寬度；寬闊處；廣場"
+    },
+    {
+      "strong": "H8393",
+      "pointed": "תְּבוּאָה",
+      "glossZh": "收入；出產"
+    },
+    {
+      "strong": "H7068",
+      "pointed": "קִנְאָה",
+      "glossZh": "嫉妒；妒忌"
+    },
+    {
+      "strong": "H8438",
+      "pointed": "תּוֹלָע",
+      "glossZh": "朱紅蟲；朱紅色；朱紅布"
+    },
+    {
+      "strong": "H1101",
+      "pointed": "בָּלַל",
+      "glossZh": "滿溢；調和；餵養"
+    },
+    {
+      "strong": "H5207",
+      "pointed": "נִיחוֹחַ",
+      "glossZh": "安適的；愉悅；喜樂"
+    },
+    {
+      "strong": "H8252",
+      "pointed": "שָׁקַט",
+      "glossZh": "安歇；安息"
+    },
+    {
+      "strong": "H3245",
+      "pointed": "יָסַד",
+      "glossZh": "安放；建立；一同坐下；定居；商議"
+    },
+    {
+      "strong": "H914",
+      "pointed": "בָּדַל",
+      "glossZh": "分開；區分；不同；選擇"
+    },
+    {
+      "strong": "H3658",
+      "pointed": "כִּנּוֹר",
+      "glossZh": "豎琴；琴"
+    },
+    {
+      "strong": "H4256",
+      "pointed": "מַחֲלֹקֶת",
+      "glossZh": "班次；隊伍"
+    },
+    {
+      "strong": "H5631",
+      "pointed": "סָרִיס",
+      "glossZh": "太監；侍從；朝廷官員"
+    },
+    {
+      "strong": "H4501",
+      "pointed": "מְנוֹרָה",
+      "glossZh": "燈臺"
+    },
+    {
+      "strong": "H1280",
+      "pointed": "בְּרִיחַ",
+      "glossZh": "門閂；閂"
+    },
+    {
+      "strong": "H983",
+      "pointed": "בֶּטַח",
+      "glossZh": "避難所；安全；信賴；安然"
+    },
+    {
+      "strong": "H1588",
+      "pointed": "גַּן",
+      "glossZh": "園子；花園"
+    },
+    {
+      "strong": "H5128",
+      "pointed": "נוּעַ",
+      "glossZh": "搖擺；動搖；漂流"
+    },
+    {
+      "strong": "H3176",
+      "pointed": "יָחַל",
+      "glossZh": "等候；忍耐；盼望"
+    },
+    {
+      "strong": "H582",
+      "pointed": "אֱנוֹשׁ",
+      "glossZh": "人；眾人"
+    },
+    {
+      "strong": "H3374",
+      "pointed": "יִרְאָה",
+      "glossZh": "恐懼；敬畏"
+    },
+    {
+      "strong": "H2945",
+      "pointed": "טַף",
+      "glossZh": "家族；宗族"
+    },
+    {
+      "strong": "H5422",
+      "pointed": "נָתַץ",
+      "glossZh": "拆毀"
+    },
+    {
+      "strong": "H2717",
+      "pointed": "חָרַב",
+      "glossZh": "因旱乾枯；使荒涼；毀滅；殺死"
+    },
+    {
+      "strong": "H8144",
+      "pointed": "שָׁנִי",
+      "glossZh": "朱紅蟲；朱紅色；朱紅染料"
+    },
+    {
+      "strong": "H2100",
+      "pointed": "זוּב",
+      "glossZh": "流動；患漏症；消耗；滿溢"
+    },
+    {
+      "strong": "H2723",
+      "pointed": "חׇרְבָּה",
+      "glossZh": "乾旱；荒涼"
+    },
+    {
+      "strong": "H3490",
+      "pointed": "יָתוֹם",
+      "glossZh": "喪子者；失去親人的人"
+    },
+    {
+      "strong": "H8336",
+      "pointed": "שֵׁשׁ",
+      "glossZh": "白麻布；白色大理石"
+    },
+    {
+      "strong": "H7264",
+      "pointed": "רָגַז",
+      "glossZh": "因憤怒或恐懼而顫抖"
+    },
+    {
+      "strong": "H268",
+      "pointed": "אָחוֹר",
+      "glossZh": "後部；後面；向後；西方"
+    },
+    {
+      "strong": "H2778",
+      "pointed": "חָרַף",
+      "glossZh": "脫去；揭露；訂婚；毀謗；過冬"
+    },
+    {
+      "strong": "H553",
+      "pointed": "אָמַץ",
+      "glossZh": "警醒；勇敢"
+    },
+    {
+      "strong": "H6763",
+      "pointed": "צֵלָע",
+      "glossZh": "肋骨；門扇；側面；木樑；木板"
+    },
+    {
+      "strong": "H6663",
+      "pointed": "צָדַק",
+      "glossZh": "稱義；使公正"
+    },
+    {
+      "strong": "H6586",
+      "pointed": "פָּשַׁע",
+      "glossZh": "背叛正當權柄；過犯；離道；爭吵"
+    },
+    {
+      "strong": "H3985",
+      "pointed": "מָאֵן",
+      "glossZh": "拒絕"
+    },
+    {
+      "strong": "H2550",
+      "pointed": "חָמַל",
+      "glossZh": "憐恤；愛惜"
+    },
+    {
+      "strong": "H693",
+      "pointed": "אָרַב",
+      "glossZh": "埋伏；潛伏"
+    },
+    {
+      "strong": "H2740",
+      "pointed": "חָרוֹן",
+      "glossZh": "烈怒；怒火"
+    },
+    {
+      "strong": "H238",
+      "pointed": "אָזַן",
+      "glossZh": "側耳；聆聽"
+    },
+    {
+      "strong": "H7622",
+      "pointed": "שְׁבוּת",
+      "glossZh": "被擄；被擄者；昔日繁榮"
+    },
+    {
+      "strong": "H6677",
+      "pointed": "צַוָּאר",
+      "glossZh": "後頸；頸背"
+    },
+    {
+      "strong": "H4631",
+      "pointed": "מְעָרָה",
+      "glossZh": "洞穴；山洞"
+    },
+    {
+      "strong": "H5203",
+      "pointed": "נָטַשׁ",
+      "glossZh": "捶打；擊打；驅散；推開；拒絕；準許；寬免"
+    },
+    {
+      "strong": "H160",
+      "pointed": "אַהֲבָה",
+      "glossZh": "情愛；情感"
+    },
+    {
+      "strong": "H5923",
+      "pointed": "עֹל",
+      "glossZh": "軛；比喻重擔"
+    },
+    {
+      "strong": "H842",
+      "pointed": "אֲשֵׁרָה",
+      "glossZh": "亞舍拉；腓尼基女神及其偶像"
+    },
+    {
+      "strong": "H374",
+      "pointed": "אֵיפָה",
+      "glossZh": "伊法；穀物容量單位；度量"
+    },
+    {
+      "strong": "H1589",
+      "pointed": "גָּנַב",
+      "glossZh": "偷竊；欺騙"
+    },
+    {
+      "strong": "H8047",
+      "pointed": "שַׁמָּה",
+      "glossZh": "毀滅；驚惶"
+    },
+    {
+      "strong": "H1715",
+      "pointed": "דָּגָן",
+      "glossZh": "增產；穀物"
+    },
+    {
+      "strong": "H6833",
+      "pointed": "צִפּוֹר",
+      "glossZh": "小鳥；雀鳥"
+    },
+    {
+      "strong": "H8435",
+      "pointed": "תּוֹלְדָה",
+      "glossZh": "家譜；世系；歷史"
+    },
+    {
+      "strong": "H56",
+      "pointed": "אָבַל",
+      "glossZh": "哀哭；悲歎"
+    },
+    {
+      "strong": "H6950",
+      "pointed": "קָהַל",
+      "glossZh": "召集；召聚"
+    },
+    {
+      "strong": "H4131",
+      "pointed": "מוֹט",
+      "glossZh": "搖擺；滑倒；震動；跌落"
+    },
+    {
+      "strong": "H2729",
+      "pointed": "חָרַד",
+      "glossZh": "恐懼戰慄；害怕；焦急趕快"
+    },
+    {
+      "strong": "H3515",
+      "pointed": "כָּבֵד",
+      "glossZh": "沉重的；眾多的；嚴重的；困難的；愚鈍的"
+    },
+    {
+      "strong": "H8384",
+      "pointed": "תְּאֵן",
+      "glossZh": "無花果樹；無花果"
+    },
+    {
+      "strong": "H4912",
+      "pointed": "מָשָׁל",
+      "glossZh": "箴言；比喻；格言；詩歌；講論"
+    },
+    {
+      "strong": "H2656",
+      "pointed": "חֵפֶץ",
+      "glossZh": "喜悅；願望；寶物；事情"
+    },
+    {
+      "strong": "H5148",
+      "pointed": "נָחָה",
+      "glossZh": "引導；運送；使被擄遷移"
+    },
+    {
+      "strong": "H2219",
+      "pointed": "זָרָה",
+      "glossZh": "拋散；散佈；簸揚"
+    },
+    {
+      "strong": "H1767",
+      "pointed": "דַּי",
+      "glossZh": "足夠；充分"
+    },
+    {
+      "strong": "H4751",
+      "pointed": "מַר",
+      "glossZh": "苦的；苦楚；痛苦地"
+    },
+    {
+      "strong": "H5739",
+      "pointed": "עֵדֶר",
+      "glossZh": "排列；動物的行列"
+    },
+    {
+      "strong": "H926",
+      "pointed": "בָּהַל",
+      "glossZh": "內心戰慄；突然驚慌；焦急趕快"
+    },
+    {
+      "strong": "H4820",
+      "pointed": "מִרְמָה",
+      "glossZh": "欺詐；詭詐"
+    },
+    {
+      "strong": "H2764",
+      "pointed": "חֵרֶם",
+      "glossZh": "網羅；被滅之物；毀滅"
+    },
+    {
+      "strong": "H8084",
+      "pointed": "שְׁמֹנִים",
+      "glossZh": "八十；第八十"
+    },
+    {
+      "strong": "H6467",
+      "pointed": "פֹּעַל",
+      "glossZh": "行為；工作"
+    },
+    {
+      "strong": "H998",
+      "pointed": "בִּינָה",
+      "glossZh": "理解；悟性"
+    },
+    {
+      "strong": "H5035",
+      "pointed": "נֶבֶל",
+      "glossZh": "皮袋；瓶；琴"
+    },
+    {
+      "strong": "H4393",
+      "pointed": "מְלֹא",
+      "glossZh": "充滿；滿溢之物"
+    },
+    {
+      "strong": "H3637",
+      "pointed": "כָּלַם",
+      "glossZh": "羞辱；蒙羞"
+    },
+    {
+      "strong": "H2132",
+      "pointed": "זַיִת",
+      "glossZh": "橄欖；橄欖樹"
+    },
+    {
+      "strong": "H2315",
+      "pointed": "חֶדֶר",
+      "glossZh": "內室；房間"
+    },
+    {
+      "strong": "H2436",
+      "pointed": "חֵיק",
+      "glossZh": "懷中；胸懷"
+    },
+    {
+      "strong": "H4306",
+      "pointed": "מָטַר",
+      "glossZh": "雨；雨水"
+    },
+    {
+      "strong": "H335",
+      "pointed": "אַי",
+      "glossZh": "哪裡；何處"
+    },
+    {
+      "strong": "H713",
+      "pointed": "אַרְגָּמָן",
+      "glossZh": "紫色；紫色布料"
+    },
+    {
+      "strong": "H1219",
+      "pointed": "בָּצַר",
+      "glossZh": "採收葡萄；堅固難攻"
+    },
+    {
+      "strong": "H8492",
+      "pointed": "תִּירוֹשׁ",
+      "glossZh": "新酒"
+    },
+    {
+      "strong": "H4405",
+      "pointed": "מִלָּה",
+      "glossZh": "言辭；話語"
+    },
+    {
+      "strong": "H6370",
+      "pointed": "פִּילֶגֶשׁ",
+      "glossZh": "妾"
+    },
+    {
+      "strong": "H7778",
+      "pointed": "שׁוֹעֵר",
+      "glossZh": "守門者"
+    },
+    {
+      "strong": "H1637",
+      "pointed": "גֹּרֶן",
+      "glossZh": "禾場；打穀場"
+    },
+    {
+      "strong": "H3556",
+      "pointed": "כּוֹכָב",
+      "glossZh": "星；星辰"
+    },
+    {
+      "strong": "H6239",
+      "pointed": "עֹשֶׁר",
+      "glossZh": "財富；富足"
+    },
+    {
+      "strong": "H3602",
+      "pointed": "כָּכָה",
+      "glossZh": "這樣；如此"
+    },
+    {
+      "strong": "H3557",
+      "pointed": "כּוּל",
+      "glossZh": "容納；供養"
+    },
+    {
+      "strong": "H1580",
+      "pointed": "גָּמַל",
+      "glossZh": "施行；報答；斷奶"
+    },
+    {
+      "strong": "H1364",
+      "pointed": "גָּבֹהַּ",
+      "glossZh": "高的；高聳；高傲"
+    },
+    {
+      "strong": "H7122",
+      "pointed": "קָרָא",
+      "glossZh": "迎見；遭遇"
+    },
+    {
+      "strong": "H6822",
+      "pointed": "צָפָה",
+      "glossZh": "守望；觀看"
+    },
+    {
+      "strong": "H4013",
+      "pointed": "מִבְצָר",
+      "glossZh": "堡壘；堅固城"
+    },
+    {
+      "strong": "H3950",
+      "pointed": "לָקַט",
+      "glossZh": "拾取；撿拾"
+    },
+    {
+      "strong": "H5130",
+      "pointed": "נוּף",
+      "glossZh": "搖動；搖祭"
+    },
+    {
+      "strong": "H875",
+      "pointed": "בְּאֵר",
+      "glossZh": "井"
+    },
+    {
+      "strong": "H2620",
+      "pointed": "חָסָה",
+      "glossZh": "投靠；避難"
+    },
+    {
+      "strong": "H565",
+      "pointed": "אִמְרָה",
+      "glossZh": "言語；諭示"
+    },
+    {
+      "strong": "H4581",
+      "pointed": "מָעוֹז",
+      "glossZh": "保障；避難所"
+    },
+    {
+      "strong": "H4603",
+      "pointed": "מָעַל",
+      "glossZh": "干犯；不忠"
+    },
+    {
+      "strong": "H2796",
+      "pointed": "חָרָשׁ",
+      "glossZh": "工匠"
+    },
+    {
+      "strong": "H7832",
+      "pointed": "שָׂחַק",
+      "glossZh": "嬉笑；戲耍"
+    },
+    {
+      "strong": "H4136",
+      "pointed": "מוּל",
+      "glossZh": "對面；在…之前"
+    },
+    {
+      "strong": "H8643",
+      "pointed": "תְּרוּעָה",
+      "glossZh": "吶喊；吹角聲"
+    },
+    {
+      "strong": "H4159",
+      "pointed": "מוֹפֵת",
+      "glossZh": "奇事；預兆"
+    },
+    {
+      "strong": "H6231",
+      "pointed": "עָשַׁק",
+      "glossZh": "欺壓；勒索"
+    },
+    {
+      "strong": "H8398",
+      "pointed": "תֵּבֵל",
+      "glossZh": "世界；大地"
+    },
+    {
+      "strong": "H3468",
+      "pointed": "יֶשַׁע",
+      "glossZh": "拯救；救恩"
+    },
+    {
+      "strong": "H3665",
+      "pointed": "כָּנַע",
+      "glossZh": "制伏；謙卑下來"
+    },
+    {
+      "strong": "H6696",
+      "pointed": "צוּר",
+      "glossZh": "圍困；捆綁"
+    },
+    {
+      "strong": "H3368",
+      "pointed": "יָקָר",
+      "glossZh": "寶貴的；珍貴"
+    },
+    {
+      "strong": "H6040",
+      "pointed": "עֳנִי",
+      "glossZh": "苦難；困苦"
+    },
+    {
+      "strong": "H7098",
+      "pointed": "קָצָה",
+      "glossZh": "盡頭；末端"
+    },
+    {
+      "strong": "H423",
+      "pointed": "אָלָה",
+      "glossZh": "咒詛；誓言"
+    },
+    {
+      "strong": "H7561",
+      "pointed": "רָשַׁע",
+      "glossZh": "行惡；定為有罪"
+    },
+    {
+      "strong": "H3766",
+      "pointed": "כָּרַע",
+      "glossZh": "屈膝；俯伏"
+    },
+    {
+      "strong": "H5254",
+      "pointed": "נָסָה",
+      "glossZh": "試驗；嘗試"
+    },
+    {
+      "strong": "H4900",
+      "pointed": "מָשַׁךְ",
+      "glossZh": "拉；拖延"
+    },
+    {
+      "strong": "H5236",
+      "pointed": "נֵכָר",
+      "glossZh": "外邦；外族"
+    },
+    {
+      "strong": "H5643",
+      "pointed": "סֵתֶר",
+      "glossZh": "隱密處；遮蔽"
+    },
+    {
+      "strong": "H2932",
+      "pointed": "טֻמְאָה",
+      "glossZh": "不潔淨；污穢"
+    },
+    {
+      "strong": "H4229",
+      "pointed": "מָחָה",
+      "glossZh": "塗抹；除滅"
+    },
+    {
+      "strong": "H8415",
+      "pointed": "תְּהוֹם",
+      "glossZh": "深淵"
+    },
+    {
+      "strong": "H339",
+      "pointed": "אִי",
+      "glossZh": "海島；沿海之地"
+    },
+    {
+      "strong": "H4135",
+      "pointed": "מוּל",
+      "glossZh": "行割禮"
+    },
+    {
+      "strong": "H6524",
+      "pointed": "פָּרַח",
+      "glossZh": "發芽；開花"
+    },
+    {
+      "strong": "H3816",
+      "pointed": "לְאֹם",
+      "glossZh": "民族；萬民"
+    },
+    {
+      "strong": "H4932",
+      "pointed": "מִשְׁנֶה",
+      "glossZh": "副本；雙倍；次位"
+    },
+    {
+      "strong": "H6189",
+      "pointed": "עָרֵל",
+      "glossZh": "未受割禮的"
+    },
+    {
+      "strong": "H5401",
+      "pointed": "נָשַׁק",
+      "glossZh": "親嘴；親吻"
+    },
+    {
+      "strong": "H5116",
+      "pointed": "נָוֶה",
+      "glossZh": "居所；牧場"
+    },
+    {
+      "strong": "H2377",
+      "pointed": "חָזוֹן",
+      "glossZh": "異象；默示"
+    },
+    {
+      "strong": "H212",
+      "pointed": "אוֹפָן",
+      "glossZh": "輪子"
+    },
+    {
+      "strong": "H4436",
+      "pointed": "מַלְכָּה",
+      "glossZh": "王后"
+    },
+    {
+      "strong": "H5695",
+      "pointed": "עֵגֶל",
+      "glossZh": "牛犢"
+    },
+    {
+      "strong": "H1653",
+      "pointed": "גֶּשֶׁם",
+      "glossZh": "大雨；陣雨"
+    },
+    {
+      "strong": "H5358",
+      "pointed": "נָקַם",
+      "glossZh": "報仇；伸冤"
+    },
+    {
+      "strong": "H816",
+      "pointed": "אָשַׁם",
+      "glossZh": "有罪；擔罪"
+    },
+    {
+      "strong": "H2399",
+      "pointed": "חֵטְא",
+      "glossZh": "罪；罪過"
+    },
+    {
+      "strong": "H6883",
+      "pointed": "צָרַעַת",
+      "glossZh": "痲瘋；皮膚惡疾"
+    },
+    {
+      "strong": "H2236",
+      "pointed": "זָרַק",
+      "glossZh": "灑；潑"
+    },
+    {
+      "strong": "H3618",
+      "pointed": "כַּלָּה",
+      "glossZh": "新婦；兒媳"
+    },
+    {
+      "strong": "H8184",
+      "pointed": "שְׂעֹרָה",
+      "glossZh": "大麥"
+    },
+    {
+      "strong": "H8668",
+      "pointed": "תְּשׁוּעָה",
+      "glossZh": "拯救；得救"
+    },
+    {
+      "strong": "H860",
+      "pointed": "אָתוֹן",
+      "glossZh": "母驢"
+    },
+    {
+      "strong": "H197",
+      "pointed": "אוּלָם",
+      "glossZh": "廊子；門廊"
+    },
+    {
+      "strong": "H1993",
+      "pointed": "הָמָה",
+      "glossZh": "喧嚷；騷動"
+    },
+    {
+      "strong": "H748",
+      "pointed": "אָרַךְ",
+      "glossZh": "長久；延長"
+    },
+    {
+      "strong": "H3563",
+      "pointed": "כּוֹס",
+      "glossZh": "杯"
+    },
+    {
+      "strong": "H5518",
+      "pointed": "סִיר",
+      "glossZh": "鍋；荊棘"
+    },
+    {
+      "strong": "H2623",
+      "pointed": "חָסִיד",
+      "glossZh": "虔誠的；忠信的"
+    },
+    {
+      "strong": "H1361",
+      "pointed": "גָּבַהּ",
+      "glossZh": "高升；高傲"
+    },
+    {
+      "strong": "H7107",
+      "pointed": "קָצַף",
+      "glossZh": "發怒；惱怒"
+    },
+    {
+      "strong": "H8227",
+      "pointed": "שָׁפָן",
+      "glossZh": "岩狸；沙番"
+    },
+    {
+      "strong": "H3409",
+      "pointed": "יָרֵךְ",
+      "glossZh": "大腿；腰"
+    },
+    {
+      "strong": "H1530",
+      "pointed": "גַּל",
+      "glossZh": "石堆；波浪"
+    },
+    {
+      "strong": "H6884",
+      "pointed": "צָרַף",
+      "glossZh": "熬煉；精煉"
+    },
+    {
+      "strong": "H5678",
+      "pointed": "עֶבְרָה",
+      "glossZh": "烈怒；忿怒"
+    },
+    {
+      "strong": "H6845",
+      "pointed": "צָפַן",
+      "glossZh": "隱藏；珍藏"
+    },
+    {
+      "strong": "H8615",
+      "pointed": "תִּקְוָה",
+      "glossZh": "盼望；繩索"
+    },
+    {
+      "strong": "H1416",
+      "pointed": "גְּדוּד",
+      "glossZh": "隊伍；軍隊"
+    },
+    {
+      "strong": "H3051",
+      "pointed": "יָהַב",
+      "glossZh": "給；交付"
+    },
+    {
+      "strong": "H6779",
+      "pointed": "צָמַח",
+      "glossZh": "發芽；生長"
+    },
+    {
+      "strong": "H2244",
+      "pointed": "חָבָא",
+      "glossZh": "躲藏"
+    },
+    {
+      "strong": "H7045",
+      "pointed": "קְלָלָה",
+      "glossZh": "咒詛"
+    },
+    {
+      "strong": "H2280",
+      "pointed": "חָבַשׁ",
+      "glossZh": "纏裹；包紮；備鞍"
+    },
+    {
+      "strong": "H2859",
+      "pointed": "חָתַן",
+      "glossZh": "結親；嫁娶"
+    },
+    {
+      "strong": "H3233",
+      "pointed": "יְמָנִי",
+      "glossZh": "右邊的"
+    },
+    {
+      "strong": "H7440",
+      "pointed": "רִנָּה",
+      "glossZh": "歡呼；呼求"
+    },
+    {
+      "strong": "H7065",
+      "pointed": "קָנָא",
+      "glossZh": "嫉妒；發熱心"
+    },
+    {
+      "strong": "H6654",
+      "pointed": "צַד",
+      "glossZh": "旁邊；一側"
+    },
+    {
+      "strong": "H6203",
+      "pointed": "עֹרֶף",
+      "glossZh": "頸項；背"
+    },
+    {
+      "strong": "H3123",
+      "pointed": "יוֹנָה",
+      "glossZh": "鴿子"
+    },
+    {
+      "strong": "H3830",
+      "pointed": "לְבוּשׁ",
+      "glossZh": "衣服；衣裳"
+    },
+    {
+      "strong": "H6187",
+      "pointed": "עֵרֶךְ",
+      "glossZh": "排列；估價"
+    },
+    {
+      "strong": "H6212",
+      "pointed": "עֶשֶׂב",
+      "glossZh": "蔬菜；青草"
+    },
+    {
+      "strong": "H8328",
+      "pointed": "שֶׁרֶשׁ",
+      "glossZh": "根"
+    },
+    {
+      "strong": "H6241",
+      "pointed": "עִשָּׂרוֹן",
+      "glossZh": "十分之一伊法"
+    },
+    {
+      "strong": "H5592",
+      "pointed": "סַף",
+      "glossZh": "門檻；盆"
+    },
+    {
+      "strong": "H4283",
+      "pointed": "מׇחֳרָת",
+      "glossZh": "次日；第二天"
+    },
+    {
+      "strong": "H6643",
+      "pointed": "צְבִי",
+      "glossZh": "榮美；羚羊"
+    },
+    {
+      "strong": "H2474",
+      "pointed": "חַלּוֹן",
+      "glossZh": "窗戶"
+    },
+    {
+      "strong": "H2600",
+      "pointed": "חִנָּם",
+      "glossZh": "無故；白白地"
+    },
+    {
+      "strong": "H6486",
+      "pointed": "פְּקֻדָּה",
+      "glossZh": "察看；職分；刑罰"
+    },
+    {
+      "strong": "H5980",
+      "pointed": "עֻמָּה",
+      "glossZh": "靠近；相對"
+    },
+    {
+      "strong": "H6442",
+      "pointed": "פְּנִימִי",
+      "glossZh": "內部的；裡面的"
+    },
+    {
+      "strong": "H4219",
+      "pointed": "מִזְרָק",
+      "glossZh": "碗；盤"
+    },
+    {
+      "strong": "H3243",
+      "pointed": "יָנַק",
+      "glossZh": "吮吸；哺乳"
+    },
+    {
+      "strong": "H7416",
+      "pointed": "רִמּוֹן",
+      "glossZh": "石榴"
+    }
+  ]
+}

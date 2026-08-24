@@ -8,6 +8,7 @@ import {
   getHebrewFullHaggadah,
   getHebrewFullLesson,
   getHebrewFullReaderOverview,
+  getHebrewReferenceTables,
 } from "../data/originalReaders/hebrew-full-reader";
 import type {
   OriginalReaderSelection,
@@ -96,7 +97,7 @@ describe("original-reader manifest invariants", () => {
 describe("Hebrew reader curriculum", () => {
   const hebrew = requireVolume("hbo");
 
-  it("reserves 50 consecutive BBH lessons sized by the textbook's own chapters", () => {
+  it("reserves 50 consecutive BBH lessons of twenty words each", () => {
     const lessons = hebrew.selections.filter((selection) =>
       /^hbo-vocab-\d{2}$/.test(selection.id),
     );
@@ -133,8 +134,11 @@ describe("Hebrew reader curriculum", () => {
     );
     expect(vocabularyTokens).toHaveLength(1000);
     expect(new Set(vocabularyTokens.map((token) => token.id)).size).toBe(1000);
-    expect(vocabularyTokens.filter((token) => token.sourceType === "bbh2_order")).toHaveLength(552);
-    expect(vocabularyTokens.filter((token) => token.sourceType === "reader_frequency_extension")).toHaveLength(448);
+    // The BBH2 run is shorter than the textbook's 552 because its person, place
+    // and nation names moved to the appendix; the frequency extension reaches
+    // further down the corpus by the same amount to keep the total at 1,000.
+    expect(vocabularyTokens.filter((token) => token.sourceType === "bbh2_order")).toHaveLength(546);
+    expect(vocabularyTokens.filter((token) => token.sourceType === "reader_frequency_extension")).toHaveLength(454);
     expect(vocabularyTokens.filter((token) => (token.sourceOrders?.length || 0) > 1)).toHaveLength(2);
     expect(hebrew.vocabularyCurriculum?.exactOrderingStatus).toBe("verified");
 
@@ -230,15 +234,16 @@ describe("Hebrew reader curriculum", () => {
       ).toBe(transliteration);
     }
 
-    for (const strong of ["H3389", "H4872", "H1732", "H1168", "H1390"]) {
+    // Jerusalem, Moses, David and Gibeah are appendix entries now; only divine
+    // names and titles still carry a name flag inside the lessons.
+    for (const strong of ["H3389", "H4872", "H1732", "H1390", "H7586", "H3063"]) {
+      expect(tokens.find((token) => token.strong === strong), strong).toBeUndefined();
+    }
+    for (const strong of ["H3068", "H430", "H1168", "H7706"]) {
       expect(tokens.find((token) => token.strong === strong)?.isProperName, strong).toBe(true);
     }
-    expect(tokens.find((token) => token.strong === "H7586")?.properNameTypes).toEqual(["person"]);
-    expect(tokens.find((token) => token.strong === "H1390")?.properNameTypes).toEqual(["place"]);
-    expect(tokens.find((token) => token.strong === "H3063")?.properNameTypes).toEqual([
-      "person",
-      "place",
-      "people_or_nation",
+    expect(tokens.find((token) => token.strong === "H3068")?.properNameTypes).toEqual([
+      "divine_name_or_title",
     ]);
     expect(tokens.filter((token) => !token.partOfSpeech)).toEqual([]);
     expect(tokens.filter((token) => !token.isProperName && token.properNameTypes?.length)).toEqual([]);
@@ -283,7 +288,7 @@ describe("complete 50-lesson Hebrew private reader", () => {
     for (let lessonNumber = 1; lessonNumber <= 50; lessonNumber += 1) {
       const lesson = getHebrewFullLesson(lessonNumber);
       expect(lesson, `missing full lesson ${lessonNumber}`).not.toBeNull();
-      expect(lesson?.vocabulary.length).toBeGreaterThan(0);
+      expect(lesson?.vocabulary).toHaveLength(20);
       expect(lesson?.vocabulary).toHaveLength(lesson!.vocabularyCount);
       expect(lesson?.memoryVerses).toHaveLength(2);
       expect(lesson?.reading.segments.length).toBeGreaterThan(0);
@@ -327,6 +332,73 @@ describe("complete 50-lesson Hebrew private reader", () => {
     expect(haggadah.steps).toHaveLength(15);
     expect(haggadah.steps.flatMap((step) => step.segments)).toHaveLength(199);
     expect(haggadah.steps.flatMap((step) => step.segments).every((segment) => segment.text.trim())).toBe(true);
+  });
+
+  it("keeps person, place and nation names out of the lesson vocabulary", () => {
+    // The names live in their own appendix table now, so printing them inside a
+    // lesson would repeat the same word in two places.  The exceptions are the
+    // handful that read as ordinary vocabulary — אָדָם alone occurs 552 times —
+    // and each of those carries a written reason in the data.
+    const lifted = new Set(["person", "place", "people_or_nation"]);
+    for (let lessonNumber = 1; lessonNumber <= 50; lessonNumber += 1) {
+      const duplicated = (getHebrewFullLesson(lessonNumber)?.vocabulary || []).filter(
+        (word) => (word.properNameTypes || []).some((type) => lifted.has(type)) && !word.keptInLessons,
+      );
+      expect(duplicated.map((word) => word.pointed), `第 ${lessonNumber} 課仍有專名`).toEqual([]);
+    }
+
+    const kept = Array.from({ length: 50 }, (_, index) => getHebrewFullLesson(index + 1))
+      .flatMap((lesson) => lesson?.vocabulary || [])
+      .filter((word) => word.keptInLessons);
+    expect(kept.map((word) => word.pointed).sort()).toEqual(
+      ["אָדָם", "יְאֹר", "נֶ֫גֶב", "שְׁאוֹל"].sort(),
+    );
+    expect(kept.every((word) => (word.keptInLessons || "").trim())).toBe(true);
+  });
+
+  it("publishes the numeral, kinship, calendar and proper-name tables", () => {
+    const payload = getHebrewReferenceTables();
+    expect(payload.tables.map((table) => table.id)).toEqual([
+      "hbo-appendix-numerals",
+      "hbo-appendix-kinship",
+      "hbo-appendix-calendar",
+      "hbo-appendix-proper-names",
+    ]);
+
+    payload.tables.forEach((table) => {
+      expect(table.intro.trim(), `${table.id} 缺凡例`).not.toBe("");
+      expect(table.groups.length).toBeGreaterThan(0);
+      table.groups.forEach((group) => {
+        expect(group.entries.length, `${group.id} 是空的`).toBeGreaterThan(0);
+        group.entries.forEach((entry) => {
+          expect(entry.glossZh.trim(), `${group.id} 有空白繁中義`).not.toBe("");
+          // Split on maqqef: compound names such as בֶּן־הֲדַד are two pointed
+          // words joined by it, not one unpointed word.
+          const pointed = entry.pointed || entry.masculine?.pointed || "";
+          expect(findUnpointedHebrewWords(pointed), `${pointed} 未完全標母音`).toEqual([]);
+        });
+      });
+    });
+
+    // The five Babylonian months that never appear in the Masoretic Text must
+    // stay labelled as such rather than passing as biblical words.
+    const calendar = payload.tables.find((table) => table.id === "hbo-appendix-calendar");
+    const post = calendar?.groups.find((group) => group.id === "babylonian-months-post");
+    expect(post?.entries).toHaveLength(5);
+    expect(post?.entries.every((entry) => entry.attestation === "post_biblical")).toBe(true);
+    expect(post?.source).toBeTruthy();
+
+    const names = payload.tables.find((table) => table.id === "hbo-appendix-proper-names");
+    expect(names?.groups.map((group) => group.id)).toEqual([
+      "person",
+      "place",
+      "people_or_nation",
+      "divine_name_or_title",
+      "festival_or_sacred_time",
+    ]);
+    // Divine names stay in the lessons, so their rows carry a lesson number.
+    const divine = names?.groups.find((group) => group.id === "divine_name_or_title");
+    expect(divine?.entries.every((entry) => typeof entry.lesson === "number")).toBe(true);
   });
 });
 

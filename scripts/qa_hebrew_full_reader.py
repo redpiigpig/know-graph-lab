@@ -42,7 +42,8 @@ DEFAULT_DOCX = ROOT / "output" / "original-readers" / "hebrew-original-reader-50
 DEFAULT_PDF = ROOT / "output" / "original-readers" / "hebrew-original-reader-50-lessons.pdf"
 DEFAULT_REPORT = ROOT / "output" / "qa" / "original-readers" / "hebrew-full" / "qa-report.json"
 VOCAB_PATH = ROOT / "data" / "originalReaders" / "vocabulary" / "hebrew-1000.json"
-GLOSS_PATH = CACHE / "hebrew-1000-gloss-zh-reviewed.json"
+NAMES_PATH = ROOT / "data" / "originalReaders" / "vocabulary" / "hebrew-proper-names.json"
+GLOSS_PATH = CACHE / "hebrew-gloss-zh-reviewed-by-lemma.json"
 SCRIPTURE_PATH = CACHE / "scripture-plan.json"
 PRAYERS_PATH = CACHE / "prayers-articles.json"
 HAGGADAH_PATH = CACHE / "haggadah-full.json"
@@ -94,8 +95,11 @@ GENERIC_PLACEHOLDERS = re.compile(
 )
 
 # Unambiguous simplified-only forms that should not occur in zh-Hant fields.
+# 「后」 is deliberately absent: it is a genuine traditional character (王后、
+# 皇后) that only doubles as the simplified form of 後, so banning it outright
+# rejects correct Traditional Chinese.
 SIMPLIFIED_ONLY = set(
-    "宾标语复数处为这后发进与东业国门义术词觉头万产总个开变听边导观达远冲决仅严营击获习钟龙丰划赶现应让"
+    "宾标语复数处为这发进与东业国门义术词觉头万产总个开变听边导观达远冲决仅严营击获习钟龙丰划赶现应让"
 )
 
 EXPECTED_COUNTS = {
@@ -109,44 +113,147 @@ EXPECTED_COUNTS = {
     "properNames": 135,
 }
 
-# A release-stable gold list for all proper-name headwords.  Values are
-# required fragments rather than full glosses so useful explanatory text may
-# be refined without silently changing the conventional biblical name.
-PROPER_NAME_GOLD: dict[int, tuple[str, ...]] = {
-    1: ("亞當",), 3: ("神",), 5: ("神",), 10: ("以色列",),
-    11: ("耶路撒冷",), 12: ("耶路撒冷",), 13: ("耶和華",), 14: ("埃及",),
-    15: ("摩西",), 19: ("法老",), 22: ("主",), 249: ("安息日",),
-    337: ("巴力",), 489: ("尼革夫",), 494: ("彌賽亞",), 553: ("大衛",),
-    555: ("猶大",), 559: ("掃羅",), 561: ("雅各",), 562: ("亞倫",),
-    567: ("耶和華",), 568: ("所羅門",), 569: ("非利士人",), 570: ("利未人",),
-    571: ("巴比倫",), 572: ("約書亞",), 574: ("約瑟",), 575: ("約旦河",),
-    577: ("摩押",), 578: ("以法蓮",), 579: ("亞伯拉罕",), 582: ("便雅憫",),
-    585: ("錫安",), 586: ("亞述",), 587: ("耶利米",), 588: ("瑪拿西",),
-    589: ("約押",), 590: ("伯特利",), 592: ("撒母耳",), 594: ("基列",),
-    595: ("亞蘭",), 596: ("希西家",), 597: ("押沙龍",), 599: ("撒馬利亞",),
-    600: ("以撒",), 602: ("亞捫",), 603: ("耶羅波安",), 605: ("以東",),
-    608: ("以掃",), 610: ("迦南",), 611: ("亞哈",), 615: ("亞摩利人",),
-    619: ("約沙法",), 620: ("伯利恆",), 621: ("迦勒底人",), 623: ("猶太人",),
-    624: ("巴力",), 625: ("約拿單",), 627: ("埃及人",), 633: ("迦南人",),
-    635: ("呂便",), 636: ("迦得",), 637: ("以利亞撒",), 640: ("希伯崙",),
-    641: ("以利亞",), 642: ("黎巴嫩",), 644: ("但",), 652: ("別是巴",),
-    657: ("亞比米勒",), 664: ("陰間",), 675: ("尼羅河", "底格里斯河"),
-    676: ("利未",), 679: ("西底家",), 682: ("示劍",), 683: ("押尼珥",),
-    692: ("亞伯蘭",), 693: ("巴蘭",), 701: ("巴珊",), 702: ("尼布甲尼撒",),
-    707: ("末底改",), 709: ("米甸",), 720: ("耶戶",), 722: ("亞撒",),
-    725: ("以利沙",), 730: ("約伯",), 732: ("耶利哥",), 751: ("拉班",),
-    753: ("以斯帖",), 766: ("哈曼",), 767: ("約西亞",), 768: ("撒督",),
-    780: ("拿弗他利",), 783: ("耶何耶大",), 795: ("羅波安",), 802: ("便哈達",),
-    807: ("耶",), 823: ("以實瑪利",), 824: ("亞撒利雅",), 828: ("赫人",),
-    837: ("全能者",), 838: ("約阿施",), 846: ("拉結",), 849: ("挪亞",),
-    850: ("亞薩",), 862: ("西布倫",), 866: ("大馬士革",), 871: ("西緬",),
-    872: ("約拿單",), 873: ("示每",), 888: ("亞設",), 892: ("基比亞",),
-    911: ("巴勒",), 912: ("耶西",), 913: ("拿單",), 914: ("比拿雅",),
-    916: ("伯示麥",), 920: ("推羅",), 939: ("耶布斯人",), 940: ("亞哈斯",),
-    941: ("示瑪雅",), 942: ("撒迦利亞",), 951: ("吉甲",), 958: ("亞瑪謝",),
-    960: ("俄別以東",), 964: ("亞舍拉",), 970: ("艾城",), 972: ("亞瑪力",),
-    973: ("西珥",), 974: ("基列耶琳",), 975: ("以賽亞",), 976: ("米拉利",),
-    978: ("烏利亞",), 993: ("所多瑪",), 994: ("基甸",), 996: ("希實本",),
+# A release-stable gold list for all proper-name headwords, keyed by
+# ``strong|pointed`` rather than by position: the names moved out of the lesson
+# list into their own appendix, which renumbered every ordinal.  Values are
+# required fragments rather than full glosses so useful explanatory text may be
+# refined without silently changing the conventional biblical name.
+PROPER_NAME_GOLD: dict[str, tuple[str, ...]] = {
+    "H120|אָדָם": ("亞當",),
+    "H430|אֱלֹהִים": ("神",),
+    "H410|אֵל": ("神",),
+    "H3478|יִשְׂרָאֵל": ("以色列",),
+    "H3389|יְרוּשָׁלַ֫םִ": ("耶路撒冷",),
+    "H3389|יְרוּשָׁלַ֫יִם": ("耶路撒冷",),
+    "H3068|יְהוָה": ("耶和華",),
+    "H4714|מִצְרַ֫יִם": ("埃及",),
+    "H4872|מֹשֶׁה": ("摩西",),
+    "H6547|פַּרְעֹה": ("法老",),
+    "H136|אֲדֹנָי": ("主",),
+    "H7676|שַׁבָּת": ("安息日",),
+    "H1167|בַּ֫עַל": ("巴力",),
+    "H5045|נֶ֫גֶב": ("尼革夫",),
+    "H4899|מָשִׁיחַ": ("彌賽亞",),
+    "H1732|דָּוִד": ("大衛",),
+    "H3063|יְהוּדָה": ("猶大",),
+    "H7586|שָׁאוּל": ("掃羅",),
+    "H3290|יַעֲקֹב": ("雅各",),
+    "H175|אַהֲרוֹן": ("亞倫",),
+    "H3069|יְהֹוִה": ("耶和華",),
+    "H8010|שְׁלֹמֹה": ("所羅門",),
+    "H6430|פְּלִשְׁתִּי": ("非利士人",),
+    "H3881|לֵוִיִּי": ("利未人",),
+    "H894|בָּבֶל": ("巴比倫",),
+    "H3091|יְהוֹשׁוּעַ": ("約書亞",),
+    "H3130|יוֹסֵף": ("約瑟",),
+    "H3383|יַרְדֵּן": ("約旦河",),
+    "H4124|מוֹאָב": ("摩押",),
+    "H669|אֶפְרַיִם": ("以法蓮",),
+    "H85|אַבְרָהָם": ("亞伯拉罕",),
+    "H1144|בִּנְיָמִין": ("便雅憫",),
+    "H6726|צִיּוֹן": ("錫安",),
+    "H804|אַשּׁוּר": ("亞述",),
+    "H3414|יִרְמְיָה": ("耶利米",),
+    "H4519|מְנַשֶּׁה": ("瑪拿西",),
+    "H3097|יוֹאָב": ("約押",),
+    "H1008|בֵּית־אֵל": ("伯特利",),
+    "H8050|שְׁמוּאֵל": ("撒母耳",),
+    "H1568|גִּלְעָד": ("基列",),
+    "H758|אֲרָם": ("亞蘭",),
+    "H2396|חִזְקִיָּה": ("希西家",),
+    "H53|אֲבִישָׁלוֹם": ("押沙龍",),
+    "H8111|שֹׁמְרוֹן": ("撒馬利亞",),
+    "H3327|יִצְחָק": ("以撒",),
+    "H5983|עַמּוֹן": ("亞捫",),
+    "H3379|יָרׇבְעָם": ("耶羅波安",),
+    "H123|אֱדֹם": ("以東",),
+    "H6215|עֵשָׂו": ("以掃",),
+    "H3667|כְּנַעַן": ("迦南",),
+    "H256|אַחְאָב": ("亞哈",),
+    "H567|אֱמֹרִי": ("亞摩利人",),
+    "H3092|יְהוֹשָׁפָט": ("約沙法",),
+    "H1035|בֵּית לֶחֶם": ("伯利恆",),
+    "H3778|כַּשְׂדִּי": ("迦勒底人",),
+    "H3064|יְהוּדִי": ("猶太人",),
+    "H1168|בַּעַל": ("巴力",),
+    "H3083|יְהוֹנָתָן": ("約拿單",),
+    "H4713|מִצְרִי": ("埃及人",),
+    "H3669|כְּנַעַנִי": ("迦南人",),
+    "H7205|רְאוּבֵן": ("呂便",),
+    "H1410|גָּד": ("迦得",),
+    "H499|אֶלְעָזָר": ("以利亞撒",),
+    "H2275|חֶבְרוֹן": ("希伯崙",),
+    "H452|אֵלִיָּה": ("以利亞",),
+    "H3844|לְבָנוֹן": ("黎巴嫩",),
+    "H1835|דָּן": ("但",),
+    "H884|בְּאֵר שֶׁבַע": ("別是巴",),
+    "H40|אֲבִימֶלֶךְ": ("亞比米勒",),
+    "H7585|שְׁאוֹל": ("陰間",),
+    "H2975|יְאֹר": ("尼羅河", "底格里斯河",),
+    "H3878|לֵוִי": ("利未",),
+    "H6667|צִדְקִיָּה": ("西底家",),
+    "H7927|שְׁכֶם": ("示劍",),
+    "H74|אַבְנֵר": ("押尼珥",),
+    "H87|אַבְרָם": ("亞伯蘭",),
+    "H1109|בִּלְעָם": ("巴蘭",),
+    "H1316|בָּשָׁן": ("巴珊",),
+    "H5019|נְבוּכַדְנֶאצַּר": ("尼布甲尼撒",),
+    "H4782|מׇרְדְּכַי": ("末底改",),
+    "H4080|מִדְיָן": ("米甸",),
+    "H3058|יֵהוּא": ("耶戶",),
+    "H609|אָסָא": ("亞撒",),
+    "H477|אֱלִישָׁע": ("以利沙",),
+    "H347|אִיּוֹב": ("約伯",),
+    "H3405|יְרִיחוֹ": ("耶利哥",),
+    "H3837|לָבָן": ("拉班",),
+    "H635|אֶסְתֵּר": ("以斯帖",),
+    "H2001|הָמָן": ("哈曼",),
+    "H2977|יֹאשִׁיָּה": ("約西亞",),
+    "H6659|צָדוֹק": ("撒督",),
+    "H5321|נַפְתָּלִי": ("拿弗他利",),
+    "H3077|יְהוֹיָדָע": ("耶何耶大",),
+    "H7346|רְחַבְעָם": ("羅波安",),
+    "H1130|בֶּן־הֲדַד": ("便哈達",),
+    "H3050|יָהּ": ("耶",),
+    "H3458|יִשְׁמָעֵאל": ("以實瑪利",),
+    "H5838|עֲזַרְיָה": ("亞撒利雅",),
+    "H2850|חִתִּי": ("赫人",),
+    "H7706|שַׁדַּי": ("全能者",),
+    "H3101|יוֹאָשׁ": ("約阿施",),
+    "H7354|רָחֵל": ("拉結",),
+    "H5146|נֹחַ": ("挪亞",),
+    "H623|אָסָף": ("亞薩",),
+    "H2074|זְבוּלוּן": ("西布倫",),
+    "H1834|דַּמֶּשֶׂק": ("大馬士革",),
+    "H8095|שִׁמְעוֹן": ("西緬",),
+    "H3129|יוֹנָתָן": ("約拿單",),
+    "H8096|שִׁמְעִי": ("示每",),
+    "H836|אָשֵׁר": ("亞設",),
+    "H1390|גִּבְעָה": ("基比亞",),
+    "H1111|בָּלָק": ("巴勒",),
+    "H3448|יִשַׁי": ("耶西",),
+    "H5416|נָתָן": ("拿單",),
+    "H1141|בְּנָיָה": ("比拿雅",),
+    "H1053|בֵּית שֶׁמֶשׁ": ("伯示麥",),
+    "H6865|צֹר": ("推羅",),
+    "H2983|יְבוּסִי": ("耶布斯人",),
+    "H271|אָחָז": ("亞哈斯",),
+    "H8098|שְׁמַעְיָה": ("示瑪雅",),
+    "H2148|זְכַרְיָה": ("撒迦利亞",),
+    "H1537|גִּלְגָּל": ("吉甲",),
+    "H558|אֲמַצְיָה": ("亞瑪謝",),
+    "H5654|עֹבֵד אֱדוֹם": ("俄別以東",),
+    "H842|אֲשֵׁרָה": ("亞舍拉",),
+    "H5857|עַי": ("艾城",),
+    "H6002|עֲמָלֵק": ("亞瑪力",),
+    "H8165|שֵׂעִיר": ("西珥",),
+    "H7157|קִרְיַת יְעָרִים": ("基列耶琳",),
+    "H3470|יְשַׁעְיָה": ("以賽亞",),
+    "H4847|מְרָרִי": ("米拉利",),
+    "H223|אוּרִיָּה": ("烏利亞",),
+    "H5467|סְדֹם": ("所多瑪",),
+    "H1439|גִּדְעוֹן": ("基甸",),
+    "H2809|חֶשְׁבּוֹן": ("希實本",),
 }
 
 
@@ -262,15 +369,21 @@ def validate_vocabulary_sources(gate: Gate) -> tuple[list[dict], dict[int, dict]
         "source vocabulary contains exact ordinals 1..1000",
         actual=len(vocab),
     )
+    gloss_by_lemma = {f"{item['strong']}|{item['pointed']}": item.get("glossZh", "") for item in glosses}
     gate.expect(
-        len(glosses) == 1000 and [item.get("ordinal") for item in glosses] == list(range(1, 1001)),
-        "source.glosses.ordinals",
-        "reviewed zh-Hant gloss layer contains exact ordinals 1..1000",
-        actual=len(glosses),
+        len(glosses) == 1000 and len(gloss_by_lemma) == 1000,
+        "source.glosses.lemma_keys",
+        "reviewed zh-Hant gloss layer holds exactly 1,000 uniquely keyed lemmas",
+        actual=len(gloss_by_lemma),
     )
-    gloss_by_ordinal = {int(item["ordinal"]): item.get("glossZh", "") for item in glosses}
     for item in vocab:
-        item["glossZh"] = gloss_by_ordinal.get(int(item.get("ordinal", -1)), "")
+        item["glossZh"] = gloss_by_lemma.get(f"{item['strong']}|{item['pointed']}", "")
+    gate.expect(
+        all(item["glossZh"] for item in vocab),
+        "source.glosses.coverage",
+        "every headword resolves to a reviewed Traditional-Chinese gloss",
+        failures=[item["pointed"] for item in vocab if not item["glossZh"]][:30],
+    )
     lesson_groups: dict[int, list[dict]] = {}
     for item in vocab:
         lesson_groups.setdefault(int(item.get("lesson", -1)), []).append(item)
@@ -299,19 +412,37 @@ def validate_vocabulary_sources(gate: Gate) -> tuple[list[dict], dict[int, dict]
     gate.expect(not translit_failures, "source.vocabulary.transliteration", "all 1,000 headwords have Pratico–Van Pelt BBH2 transliteration", failures=translit_failures[:30])
     gate.expect(not zh_failures, "source.vocabulary.zh_hant", "all 1,000 glosses are non-placeholder Traditional Chinese with no English leakage", failures=zh_failures[:30])
 
-    proper = [item for item in vocab if item.get("isProperName")]
-    type_failures = [item["ordinal"] for item in proper if not item.get("properNameTypes")]
+    # The inventory is now split: person/place/nation names live in the appendix
+    # file, and only divine names plus a few words that read as ordinary
+    # vocabulary stay in the lessons.  Both halves are checked together so the
+    # 135 verified Chinese names cannot be lost by moving one of them.
+    lifted_names = load_json(NAMES_PATH)["items"]
+    in_lessons = [item for item in vocab if item.get("isProperName")]
+    inventory = in_lessons + lifted_names
+    lemma_keys = {f"{item['strong']}|{item['pointed']}" for item in inventory}
+
+    type_failures = [item["pointed"] for item in inventory if not item.get("properNameTypes")]
     gold_failures: list[dict[str, Any]] = []
-    for item in proper:
-        ordinal = int(item["ordinal"])
-        expected = PROPER_NAME_GOLD.get(ordinal)
+    for item in inventory:
+        key = f"{item['strong']}|{item['pointed']}"
+        expected = PROPER_NAME_GOLD.get(key)
         gloss = item.get("glossZh", "")
         if not expected or any(fragment not in gloss for fragment in expected):
-            gold_failures.append({"ordinal": ordinal, "expected": expected, "actual": gloss})
-    gate.expect(len(proper) == 135, "source.proper_names.count", "proper-name inventory contains exactly 135 entries", actual=len(proper))
+            gold_failures.append({"lemma": key, "expected": expected, "actual": gloss})
+
+    lifted_types = {"person", "place", "people_or_nation"}
+    leaked = [
+        item["pointed"]
+        for item in in_lessons
+        if lifted_types.intersection(item.get("properNameTypes") or []) and not item.get("keptInLessons")
+    ]
+
+    gate.expect(len(inventory) == 135, "source.proper_names.count", "proper-name inventory contains exactly 135 entries across lessons and appendix", actual=len(inventory))
+    gate.expect(len(lemma_keys) == len(inventory), "source.proper_names.unique", "no proper name is listed twice", actual=len(lemma_keys))
     gate.expect(len(PROPER_NAME_GOLD) == 135, "source.proper_names.gold_count", "gold list covers all 135 proper names", actual=len(PROPER_NAME_GOLD))
     gate.expect(not type_failures, "source.proper_names.types", "every proper name records person/place/people/divine type metadata", failures=type_failures)
     gate.expect(not gold_failures, "source.proper_names.conventional_zh", "all proper names retain conventional Traditional-Chinese biblical forms", failures=gold_failures[:30])
+    gate.expect(not leaked, "source.proper_names.lifted", "no person, place or nation name is still taking a lesson slot", failures=leaked)
     return vocab, {int(item["ordinal"]): item for item in vocab}
 
 
@@ -609,13 +740,17 @@ def validate_rcuv_snapshot(gate: Gate, master: dict) -> None:
         "Traditional-Chinese source is explicitly RCUV2010 RCUV2（上帝版）",
         actual=metadata,
     )
+    # The unique-reference total is derived, not frozen: it is the union of the
+    # 25 fixed chapters and the 100 memory verses, and it shifts whenever the
+    # memory verses land inside or outside those chapters.
+    expected_unique = len({str(record["ref"]) for record in chapter_records} | {str(record["ref"]) for record in memory_records})
     gate.expect(
         len(chapter_records) == 614
         and len(memory_records) == 100
-        and len(unique_refs) == 705
+        and len(unique_refs) == expected_unique
         and not failures,
         "source.rcuv2010.crosswalk",
-        "all 614 chapter positions and 100 memory verses (705 unique MT refs) exactly match the frozen RCUV2010 crosswalk",
+        f"all 614 chapter positions and 100 memory verses ({expected_unique} unique MT refs) exactly match the frozen RCUV2010 crosswalk",
         chapterPositions=len(chapter_records),
         memoryPositions=len(memory_records),
         uniqueRefs=len(unique_refs),
@@ -628,6 +763,60 @@ def validate_rcuv_snapshot(gate: Gate, master: dict) -> None:
         failures=plan_translation_failures[:40],
     )
 
+
+
+REFERENCE_TABLE_IDS = (
+    "hbo-appendix-numerals",
+    "hbo-appendix-kinship",
+    "hbo-appendix-calendar",
+    "hbo-appendix-proper-names",
+)
+
+
+def validate_reference_tables(gate: Gate, master: dict) -> None:
+    """Check the four appendix tables the reader ships behind the Haggadah."""
+
+    payload = master.get("referenceTables") or {}
+    tables = payload.get("tables") or []
+    gate.expect(
+        tuple(table.get("id") for table in tables) == REFERENCE_TABLE_IDS,
+        "master.reference_tables.present",
+        "master carries the numeral, kinship, calendar and proper-name tables in order",
+        actual=[table.get("id") for table in tables],
+    )
+
+    empty_groups: list[str] = []
+    blank_gloss: list[str] = []
+    unpointed: list[str] = []
+    for table in tables:
+        for group in table.get("groups") or []:
+            entries = group.get("entries") or []
+            if not entries:
+                empty_groups.append(str(group.get("id")))
+            for entry in entries:
+                if not str(entry.get("glossZh", "")).strip():
+                    blank_gloss.append(f"{group.get('id')}/{entry.get('pointed', '')}")
+                pointed = entry.get("pointed") or (entry.get("masculine") or {}).get("pointed") or ""
+                if pointed and unpointed_words(pointed):
+                    unpointed.append(pointed)
+    gate.expect(not empty_groups, "master.reference_tables.groups", "no appendix section is empty", failures=empty_groups)
+    gate.expect(not blank_gloss, "master.reference_tables.zh_hant", "every appendix row carries a Traditional-Chinese meaning", failures=blank_gloss[:30])
+    gate.expect(not unpointed, "master.reference_tables.pointing", "every appendix headword keeps full niqqud", failures=unpointed[:30])
+
+    calendar = next((table for table in tables if table.get("id") == "hbo-appendix-calendar"), {})
+    post = next(
+        (group for group in calendar.get("groups") or [] if group.get("id") == "babylonian-months-post"),
+        {},
+    )
+    entries = post.get("entries") or []
+    gate.expect(
+        len(entries) == 5
+        and all(entry.get("attestation") == "post_biblical" for entry in entries)
+        and bool(str(post.get("source", "")).strip()),
+        "master.reference_tables.post_biblical",
+        "the five months absent from the Masoretic Text stay labelled and sourced",
+        actual=[entry.get("glossZh") for entry in entries],
+    )
 
 def validate_master(gate: Gate, master_path: Path, vocab_by_ordinal: dict[int, dict]) -> dict | None:
     if not master_path.exists():
@@ -699,7 +888,13 @@ def validate_master(gate: Gate, master_path: Path, vocab_by_ordinal: dict[int, d
     proper = [item for item in all_vocab if item.get("isProperName")]
     gate.expect(not translit_failures, "master.transliteration", "master retains BBH2 textbook transliteration for every vocabulary item", failures=translit_failures[:30])
     gate.expect(not zh_failures, "master.zh_hant_glosses", "master retains reviewed Traditional-Chinese glosses", failures=zh_failures[:30])
-    gate.expect(len(proper) == 135, "master.proper_names", "master retains all 135 typed proper names", actual=len(proper))
+    gate.expect(
+        len(proper) == 16,
+        "master.proper_names",
+        "master keeps only the divine names, the sabbath and the four common nouns in the lessons",
+        actual=len(proper),
+    )
+    validate_reference_tables(gate, data)
 
     counts = data.get("counts", {})
     declared_count_keys = {
@@ -827,7 +1022,10 @@ def validate_docx(gate: Gate, docx_path: Path, master: dict | None) -> None:
     key_texts = [
         "聖經希伯來文原文讀本",
         "來源與成品檢核",
-        "專名索引",
+        "分類專名表",
+        "數字：基數、序數與分數",
+        "親屬稱謂",
+        "曆法：月名、節期與時間單位",
         "第1–25課為25個完整聖經章",
         "第26–50課為25篇完整禱文或文章",
         "蒙悅納與結語",
@@ -860,6 +1058,23 @@ def _font_record(font: Any) -> tuple[str, bool, str]:
         descriptor and any(descriptor.get(key) is not None for key in ("/FontFile", "/FontFile2", "/FontFile3"))
     )
     return base, embedded, subtype
+
+
+
+def _drawn_font_names(pdf_path: Path) -> set[str]:
+    """Return the base names of fonts that actually render at least one glyph."""
+
+    try:
+        import pdfplumber
+    except ImportError:
+        return set()
+    names: set[str] = set()
+    with pdfplumber.open(pdf_path) as document:
+        for page in document.pages:
+            for character in page.chars:
+                names.add(str(character.get("fontname") or ""))
+            page.close()
+    return names
 
 
 def validate_pdf(gate: Gate, pdf_path: Path, min_pages: int) -> None:
@@ -897,10 +1112,23 @@ def validate_pdf(gate: Gate, pdf_path: Path, min_pages: int) -> None:
     gate.expect(len(pages) >= min_pages, "pdf.page_count", f"PDF has at least {min_pages} pages, preventing a truncated full reader", actual=len(pages))
     gate.expect(not size_failures, "pdf.jis_b5", "every PDF page is JIS B5 182×257 mm", failures=size_failures[:40])
 
+    drawn_font_names = _drawn_font_names(pdf_path)
     fonts = list(font_records.values())
     unembedded = [record for record in fonts if not record["embedded"]]
     font_names = [record["baseFont"] for record in fonts]
-    forbidden = [name for name in font_names if re.search(r"MSGothic|MS.?Gothic|Tahoma|Calibri", name, re.I)]
+    # A fallback font matters only if it actually renders a glyph.  LibreOffice
+    # registers Tahoma as a page resource on every page of this book without
+    # drawing a single character in it, and failing on the declaration alone
+    # blocks a release over nothing.
+    forbidden_pattern = re.compile(r"MSGothic|MS.?Gothic|Tahoma|Calibri", re.I)
+    declared_forbidden = [name for name in font_names if forbidden_pattern.search(name)]
+    forbidden = sorted({name for name in declared_forbidden if name in drawn_font_names})
+    gate.expect(
+        not (set(declared_forbidden) - set(forbidden)),
+        "pdf.fallback_declared_unused",
+        "fallback fonts appear only as unused page resources",
+        declared=sorted(set(declared_forbidden)),
+    )
     has_hebrew_font = any(re.search(r"Hebrew", name, re.I) for name in font_names)
     has_cjk_font = any(re.search(r"MingLiU|NotoSansTC|NotoSerifCJK|SourceHan|MSung|MHei", name, re.I) for name in font_names)
     gate.expect(bool(fonts) and not unembedded, "pdf.fonts_embedded", "every PDF font resource is embedded", fonts=fonts, unembedded=unembedded)
@@ -909,7 +1137,7 @@ def validate_pdf(gate: Gate, pdf_path: Path, min_pages: int) -> None:
     nonempty_pages = sum(bool(re.sub(r"\s+", "", text)) for text in extracted)
     all_text = "\n".join(extracted)
     ratio = nonempty_pages / len(pages) if pages else 0
-    key_texts = ("聖經希伯來文原文讀本", "來源與成品檢核", "專名索引", "蒙悅納與結語")
+    key_texts = ("聖經希伯來文原文讀本", "來源與成品檢核", "分類專名表", "數字：基數、序數與分數", "蒙悅納與結語")
     missing = [value for value in key_texts if value not in all_text]
     gate.expect(
         ratio >= 0.98

@@ -31,7 +31,8 @@ from rcuv2010_reader import (
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / "output" / "source-cache" / "original-readers" / "hebrew-full"
 VOCAB_PATH = ROOT / "data" / "originalReaders" / "vocabulary" / "hebrew-1000.json"
-GLOSS_PATH = CACHE / "hebrew-1000-gloss-zh-reviewed.json"
+GLOSS_PATH = CACHE / "hebrew-gloss-zh-reviewed-by-lemma.json"
+APPENDIX_TABLES_PATH = CACHE / "appendix-tables.json"
 SCRIPTURE_PATH = CACHE / "scripture-plan.json"
 CHINESE_BIBLE_PATH = CACHE / "RCUV2010.json"
 PRAYERS_PATH = CACHE / "prayers-articles.json"
@@ -428,15 +429,22 @@ def assemble() -> dict:
     scripture = load(SCRIPTURE_PATH)
     prayers = load(PRAYERS_PATH)
     haggadah = load(HAGGADAH_PATH)
+    appendix_tables = load(APPENDIX_TABLES_PATH)
     zh_index, zh_translation = chinese_bible_index(load(CHINESE_BIBLE_PATH))
 
     if len(vocabulary) != 1000 or [v["ordinal"] for v in vocabulary] != list(range(1, 1001)):
         raise ValueError("vocabulary is not exactly ordinals 1..1000")
-    if len(glosses) != 1000 or [g["ordinal"] for g in glosses] != list(range(1, 1001)):
-        raise ValueError("Chinese gloss layer is not exactly ordinals 1..1000")
-    gloss_by_ordinal = {entry["ordinal"]: entry["glossZh"].strip() for entry in glosses}
+    # Glosses are keyed by (strong, pointed) rather than by position: lifting the
+    # proper names out of the word list renumbered every ordinal, and a
+    # position-keyed layer would have silently shifted 1,000 meanings by one.
+    gloss_by_lemma = {(entry["strong"], entry["pointed"]): entry["glossZh"].strip() for entry in glosses}
+    if len(gloss_by_lemma) != len(glosses):
+        raise ValueError("Chinese gloss layer has duplicate (strong, pointed) keys")
+    missing = [entry["pointed"] for entry in vocabulary if (entry["strong"], entry["pointed"]) not in gloss_by_lemma]
+    if missing:
+        raise ValueError(f"Chinese gloss layer is missing {len(missing)} entries, e.g. {missing[:5]}")
     vocabulary = [
-        {**entry, "glossZh": gloss_by_ordinal[entry["ordinal"]]}
+        {**entry, "glossZh": gloss_by_lemma[(entry["strong"], entry["pointed"])]}
         for entry in vocabulary
     ]
     if any(not item["glossZh"] for item in vocabulary):
@@ -570,8 +578,21 @@ def assemble() -> dict:
                     len(step.get("segments", [])) for step in haggadah["steps"]
                 ),
                 "status": "editorial_pointed_complete",
-            }
+            },
+            *(
+                {
+                    "id": table["id"],
+                    "kind": "reference_table",
+                    "titleZh": table["titleZh"],
+                    "titleHe": table["titleHe"],
+                    "groupCount": len(table["groups"]),
+                    "entryCount": table["entryCount"],
+                    "status": "sourced_from_wlc_and_strongs",
+                }
+                for table in appendix_tables["tables"]
+            ),
         ],
+        "referenceTables": appendix_tables,
         "audio": {
             "status": "not_recorded",
             "recordedTrackCount": 0,

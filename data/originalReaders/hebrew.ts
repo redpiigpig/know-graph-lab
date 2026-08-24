@@ -24,7 +24,7 @@ const BBH_SOURCE: OriginalReaderSource = {
   sourceUrl: "https://hebrewsyntax.org/bbh2new/",
   versionCode: "BBH2-VOCAB-1000-PRIVATE",
   licenseNote:
-    "已由私人授權的本機詞表接入 1,000 詞：前 552 詞保留 BBH2 原始次序，後 448 詞依讀本語料頻率延伸。每詞的來源類型、課次、Strong 與核驗狀態均原樣保留。",
+    "已由私人授權的本機詞表接入 1,000 詞：前 546 詞保留 BBH2 原始次序，後 454 詞依讀本語料頻率延伸。人名、地名與民族國名不佔課內詞額，另立分類專名表，缺額依同一頻率規則往下遞補。每詞的來源類型、課次、Strong 與核驗狀態均原樣保留。",
   authorization: "private-authorized",
 };
 

@@ -22,7 +22,7 @@ import xml.etree.ElementTree as ET
 from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Iterable, Sequence
+from typing import Any, Iterable, Mapping, Sequence
 
 from rcuv2010_reader import load_rcuv_snapshot, translation_for_mt
 
@@ -767,7 +767,8 @@ def build_candidate_review(
                     "ref": verse.ref,
                     "text": verse.text,
                     "translationZh": translations.get(verse.ref) or None,
-                    "matchedLessonVocabulary": [item.public_record() for item in scored.matched],
+                    "translationZh": (translations or {}).get(verse.ref, ""),
+                "matchedLessonVocabulary": [item.public_record() for item in scored.matched],
                     "matchedCount": len(scored.matched),
                     "matchedContentCount": sum(not item.is_function for item in scored.matched),
                     "knownCoverage": round(scored.known_coverage, 4),
@@ -956,6 +957,7 @@ def select_memory_verses(
     verses: Sequence[Verse],
     lessons: dict[int, list[VocabItem]],
     plan: dict[str, Any],
+    translations: Mapping[str, str] | None = None,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], Counter[str]]:
     preferred = chapter_map(plan)
     excluded: Counter[str] = Counter()
@@ -981,6 +983,8 @@ def select_memory_verses(
         known_thresholds[verse.ref] = tuple(sorted(thresholds))
 
     ranked: dict[int, list[ScoredVerse]] = {}
+
+    relaxed: dict[int, list[ScoredVerse]] = {}
     for lesson in range(1, 51):
         by_strong: dict[str, list[VocabItem]] = {}
         by_code: dict[str, list[VocabItem]] = {}
@@ -995,7 +999,7 @@ def select_memory_verses(
                 for code in item.bound_codes:
                     by_code.setdefault(code, []).append(item)
 
-        def candidates() -> Iterable[ScoredVerse]:
+        def candidates(min_matches: int = 2) -> Iterable[ScoredVerse]:
             for verse in eligible:
                 matched_by_ordinal: dict[int, VocabItem] = {}
                 for token in verse.tokens:
@@ -1009,7 +1013,7 @@ def select_memory_verses(
                     if _phrase_matches(item, verse.tokens):
                         matched_by_ordinal[item.ordinal] = item
                 matched = sorted(matched_by_ordinal.values(), key=lambda item: item.ordinal)
-                if len(matched) < 2:
+                if len(matched) < min_matches:
                     continue
                 thresholds = known_thresholds[verse.ref]
                 coverage = bisect.bisect_right(thresholds, lesson) / len(thresholds) if thresholds else 0.0
@@ -1029,16 +1033,19 @@ def select_memory_verses(
         # the entire 20k+ verse corpus fifty times.
         ranked[lesson] = sorted(
             heapq.nsmallest(500, candidates(), key=sort_key),
-            key=lambda row: (
-                -row.score,
-                -len(row.matched),
-                -row.known_coverage,
-                abs(len(row.verse.tokens) - 13),
-                row.verse.tie_key,
-            ),
+            key=sort_key,
+        )
+        # The last lessons carry the rarest words in the curriculum, and for some
+        # of them no verse in the Hebrew Bible contains two of the twenty at
+        # once.  Rather than fail the release or quietly pad the lesson with an
+        # unrelated verse, keep a single-match tier and mark what it is.
+        relaxed[lesson] = sorted(
+            heapq.nsmallest(500, candidates(min_matches=1), key=sort_key),
+            key=sort_key,
         )
 
     used: set[str] = set()
+    single_match_lessons: set[int] = set()
     accepted_verses: list[Verse] = []
     selected: dict[int, list[ScoredVerse]] = {lesson: [] for lesson in range(1, 51)}
     # Round-robin slots stop early lessons from consuming both of a later
@@ -1058,6 +1065,10 @@ def select_memory_verses(
                 return not (proper_dependent and already_has_proper_dependent)
 
             choice = next((row for row in ranked[lesson] if acceptable(row)), None)
+            if choice is None:
+                choice = next((row for row in relaxed[lesson] if acceptable(row)), None)
+                if choice is not None:
+                    single_match_lessons.add(lesson)
             if choice is None:
                 raise ValueError(f"No unique candidate remains for lesson {lesson}")
             selected[lesson].append(choice)
@@ -1088,6 +1099,7 @@ def select_memory_verses(
                 "sourceOsisId": verse.ref,
                 "displayReading": "pointed-qere",
                 "text": verse.text,
+                "translationZh": (translations or {}).get(verse.ref, ""),
                 "matchedLessonVocabulary": [item.public_record() for item in scored.matched],
                 "matchedCount": len(scored.matched),
                 "matchedWeightedCount": round(scored.matched_weight, 2),
@@ -1220,7 +1232,12 @@ def main(argv: Sequence[str] | None = None) -> int:
         )
         print(f"wrote_candidates={args.candidate_output}")
         return 0
-    memory_lessons, flat, excluded = select_memory_verses(verses, lessons, plan)
+    # The plan file is what the web reader and the print master read memory
+    # verses from, so the Chinese has to be attached here and not only in the
+    # assembled master; without it every verse renders with a blank translation.
+    memory_lessons, flat, excluded = select_memory_verses(
+        verses, lessons, plan, load_chinese_translation(args.chinese)
+    )
     update_plan(plan, memory_lessons, flat)
     print_report(memory_lessons, len(verses), excluded)
     if args.write:

@@ -1,0 +1,4106 @@
+{
+  "schemaVersion": "1.0.0",
+  "note": "自 1000 詞課表移出的聖經專名，改由附錄「分類專名表」收錄。",
+  "items": [
+    {
+      "ordinal": 10,
+      "pointed": "יִשְׂרָאֵל",
+      "sourcePointed": "יִשְׂרָאֵל",
+      "unpointed": "ישראל",
+      "unpointedVariants": [
+        "ישראל"
+      ],
+      "textbookTransliteration": "yiśrāʾēl",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Israel",
+      "glossZh": "以色列人；以色列",
+      "sourceType": "bbh2_order",
+      "sourceChapter": 3,
+      "sourceOrder": 10,
+      "sourceOrders": [
+        10
+      ],
+      "itemKind": "lexeme",
+      "frequency": 2507,
+      "frequencyStrong": "H3478",
+      "strong": "H3478",
+      "strongs": [
+        "H3478"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person",
+        "people_or_nation"
+      ],
+      "verification": "source_and_lexicon_matched",
+      "languageVariety": "biblical_hebrew",
+      "lesson": 1,
+      "lessonSlot": 10
+    },
+    {
+      "ordinal": 11,
+      "pointed": "יְרוּשָׁלַ֫םִ",
+      "sourcePointed": "יְרוּשָׁלַ֫םִ",
+      "unpointed": "ירושלם",
+      "unpointedVariants": [
+        "ירושלם"
+      ],
+      "textbookTransliteration": "yərûšālayim",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Jerusalem",
+      "glossZh": "耶路撒冷",
+      "sourceType": "bbh2_order",
+      "sourceChapter": 3,
+      "sourceOrder": 11,
+      "sourceOrders": [
+        11
+      ],
+      "itemKind": "lexeme",
+      "frequency": 643,
+      "frequencyStrong": "H3389",
+      "strong": "H3389",
+      "strongs": [
+        "H3389"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "source_and_lexicon_matched",
+      "languageVariety": "biblical_hebrew",
+      "lesson": 1,
+      "lessonSlot": 11
+    },
+    {
+      "ordinal": 12,
+      "pointed": "יְרוּשָׁלַ֫יִם",
+      "sourcePointed": "יְרוּשָׁלַ֫יִם",
+      "unpointed": "ירושלים",
+      "unpointedVariants": [
+        "ירושלים"
+      ],
+      "textbookTransliteration": "yərûšālayim",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Jerusalem",
+      "glossZh": "耶路撒冷",
+      "sourceType": "bbh2_order",
+      "sourceChapter": 3,
+      "sourceOrder": 12,
+      "sourceOrders": [
+        12
+      ],
+      "itemKind": "lexeme",
+      "frequency": 643,
+      "frequencyStrong": "H3389",
+      "strong": "H3389",
+      "strongs": [
+        "H3389"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "source_and_lexicon_matched",
+      "languageVariety": "biblical_hebrew",
+      "lesson": 1,
+      "lessonSlot": 12
+    },
+    {
+      "ordinal": 14,
+      "pointed": "מִצְרַ֫יִם",
+      "sourcePointed": "מִצְרַ֫יִם",
+      "unpointed": "מצרים",
+      "unpointedVariants": [
+        "מצרים"
+      ],
+      "textbookTransliteration": "miṣrayim",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Egypt",
+      "glossZh": "埃及",
+      "sourceType": "bbh2_order",
+      "sourceChapter": 3,
+      "sourceOrder": 14,
+      "sourceOrders": [
+        14
+      ],
+      "itemKind": "lexeme",
+      "frequency": 635,
+      "frequencyStrong": "H4714",
+      "strong": "H4714",
+      "strongs": [
+        "H4714"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "source_and_lexicon_matched",
+      "languageVariety": "biblical_hebrew",
+      "lesson": 1,
+      "lessonSlot": 14
+    },
+    {
+      "ordinal": 15,
+      "pointed": "מֹשֶׁה",
+      "sourcePointed": "מֹשֶׁה",
+      "unpointed": "משה",
+      "unpointedVariants": [
+        "משה"
+      ],
+      "textbookTransliteration": "mōšê",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Moses",
+      "glossZh": "摩西",
+      "sourceType": "bbh2_order",
+      "sourceChapter": 3,
+      "sourceOrder": 15,
+      "sourceOrders": [
+        15
+      ],
+      "itemKind": "lexeme",
+      "frequency": 766,
+      "frequencyStrong": "H4872",
+      "strong": "H4872",
+      "strongs": [
+        "H4872"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "source_and_lexicon_matched",
+      "languageVariety": "biblical_hebrew",
+      "lesson": 1,
+      "lessonSlot": 15
+    },
+    {
+      "ordinal": 19,
+      "pointed": "פַּרְעֹה",
+      "sourcePointed": "פַּרְעֹה",
+      "unpointed": "פרעה",
+      "unpointedVariants": [
+        "פרעה"
+      ],
+      "textbookTransliteration": "parʿô",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Pharaoh",
+      "glossZh": "法老",
+      "sourceType": "bbh2_order",
+      "sourceChapter": 3,
+      "sourceOrder": 19,
+      "sourceOrders": [
+        19
+      ],
+      "itemKind": "lexeme",
+      "frequency": 268,
+      "frequencyStrong": "H6547",
+      "strong": "H6547",
+      "strongs": [
+        "H6547"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "source_and_lexicon_matched",
+      "languageVariety": "biblical_hebrew",
+      "lesson": 1,
+      "lessonSlot": 19
+    },
+    {
+      "pointed": "דָּוִד",
+      "sourcePointed": "דָּוִד",
+      "unpointed": "דוד",
+      "unpointedVariants": [
+        "דוד"
+      ],
+      "textbookTransliteration": "dāwiḏ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "David, the youngest son of Jesse",
+      "glossZh": "大衛；耶西的幼子",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 1075,
+      "frequencyStrong": "H1732",
+      "strong": "H1732",
+      "strongs": [
+        "H1732"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 553,
+      "lesson": 28,
+      "lessonSlot": 13
+    },
+    {
+      "pointed": "יְהוּדָה",
+      "sourcePointed": "יְהוּדָה",
+      "unpointed": "יהודה",
+      "unpointedVariants": [
+        "יהודה"
+      ],
+      "textbookTransliteration": "yəhûḏâ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Jehudah (or Judah), the name of five Israelites; also of the tribe descended from the first, and of its territory",
+      "glossZh": "猶大；猶大支派；猶大地",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 819,
+      "frequencyStrong": "H3063",
+      "strong": "H3063",
+      "strongs": [
+        "H3063"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person",
+        "place",
+        "people_or_nation"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 555,
+      "lesson": 28,
+      "lessonSlot": 15
+    },
+    {
+      "pointed": "שָׁאוּל",
+      "sourcePointed": "שָׁאוּל",
+      "unpointed": "שאול",
+      "unpointedVariants": [
+        "שאול"
+      ],
+      "textbookTransliteration": "šāʾûl",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Shaul, the name of an Edomite and two Israelites",
+      "glossZh": "掃羅",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 406,
+      "frequencyStrong": "H7586",
+      "strong": "H7586",
+      "strongs": [
+        "H7586"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 559,
+      "lesson": 28,
+      "lessonSlot": 19
+    },
+    {
+      "pointed": "יַעֲקֹב",
+      "sourcePointed": "יַעֲקֹב",
+      "unpointed": "יעקב",
+      "unpointedVariants": [
+        "יעקב"
+      ],
+      "textbookTransliteration": "yaʿăqōḇ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Jaakob, the Israelitish patriarch",
+      "glossZh": "雅各",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 349,
+      "frequencyStrong": "H3290",
+      "strong": "H3290",
+      "strongs": [
+        "H3290"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 561,
+      "lesson": 29,
+      "lessonSlot": 1
+    },
+    {
+      "pointed": "אַהֲרוֹן",
+      "sourcePointed": "אַהֲרוֹן",
+      "unpointed": "אהרון",
+      "unpointedVariants": [
+        "אהרון"
+      ],
+      "textbookTransliteration": "ʾahărôn",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Aharon, the brother of Moses",
+      "glossZh": "亞倫；摩西的兄弟",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 347,
+      "frequencyStrong": "H175",
+      "strong": "H175",
+      "strongs": [
+        "H175"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 562,
+      "lesson": 29,
+      "lessonSlot": 2
+    },
+    {
+      "pointed": "שְׁלֹמֹה",
+      "sourcePointed": "שְׁלֹמֹה",
+      "unpointed": "שלמה",
+      "unpointedVariants": [
+        "שלמה"
+      ],
+      "textbookTransliteration": "šəlōmô",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Shelomah, David's successor",
+      "glossZh": "所羅門；大衛的繼承者",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 293,
+      "frequencyStrong": "H8010",
+      "strong": "H8010",
+      "strongs": [
+        "H8010"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 568,
+      "lesson": 29,
+      "lessonSlot": 8
+    },
+    {
+      "pointed": "פְּלִשְׁתִּי",
+      "sourcePointed": "פְּלִשְׁתִּי",
+      "unpointed": "פלשתי",
+      "unpointedVariants": [
+        "פלשתי"
+      ],
+      "textbookTransliteration": "pəlištî",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "a Pelishtite or inhabitant of Pelesheth",
+      "glossZh": "非利士人",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 290,
+      "frequencyStrong": "H6430",
+      "strong": "H6430",
+      "strongs": [
+        "H6430"
+      ],
+      "partOfSpeech": "noun",
+      "isProperName": true,
+      "properNameTypes": [
+        "people_or_nation"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 569,
+      "lesson": 29,
+      "lessonSlot": 9
+    },
+    {
+      "pointed": "לֵוִיִּי",
+      "sourcePointed": "לֵוִיִּי",
+      "unpointed": "לויי",
+      "unpointedVariants": [
+        "לויי"
+      ],
+      "textbookTransliteration": "lēwiyyî",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "a Levite or descendant of Levi",
+      "glossZh": "利未人",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 286,
+      "frequencyStrong": "H3881",
+      "strong": "H3881",
+      "strongs": [
+        "H3881"
+      ],
+      "partOfSpeech": "noun",
+      "isProperName": true,
+      "properNameTypes": [
+        "people_or_nation"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 570,
+      "lesson": 29,
+      "lessonSlot": 10
+    },
+    {
+      "pointed": "בָּבֶל",
+      "sourcePointed": "בָּבֶל",
+      "unpointed": "בבל",
+      "unpointedVariants": [
+        "בבל"
+      ],
+      "textbookTransliteration": "bāḇel",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Babel (i.e. Babylon), including Babylonia and the Babylonian empire",
+      "glossZh": "巴別；巴比倫；巴比倫帝國",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 262,
+      "frequencyStrong": "H894",
+      "strong": "H894",
+      "strongs": [
+        "H894"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 571,
+      "lesson": 29,
+      "lessonSlot": 11
+    },
+    {
+      "pointed": "יְהוֹשׁוּעַ",
+      "sourcePointed": "יְהוֹשׁוּעַ",
+      "unpointed": "יהושוע",
+      "unpointedVariants": [
+        "יהושוע"
+      ],
+      "textbookTransliteration": "yəhôšûaʿ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Jehoshua (i.e. Joshua), the Jewish leader",
+      "glossZh": "約書亞",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 218,
+      "frequencyStrong": "H3091",
+      "strong": "H3091",
+      "strongs": [
+        "H3091"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 572,
+      "lesson": 29,
+      "lessonSlot": 12
+    },
+    {
+      "pointed": "יוֹסֵף",
+      "sourcePointed": "יוֹסֵף",
+      "unpointed": "יוסף",
+      "unpointedVariants": [
+        "יוסף"
+      ],
+      "textbookTransliteration": "yôsēp̄",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Joseph, the name of seven Israelites",
+      "glossZh": "約瑟",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 213,
+      "frequencyStrong": "H3130",
+      "strong": "H3130",
+      "strongs": [
+        "H3130"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 574,
+      "lesson": 29,
+      "lessonSlot": 14
+    },
+    {
+      "pointed": "יַרְדֵּן",
+      "sourcePointed": "יַרְדֵּן",
+      "unpointed": "ירדן",
+      "unpointedVariants": [
+        "ירדן"
+      ],
+      "textbookTransliteration": "yardēn",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Jarden, the principal river of Palestine",
+      "glossZh": "約旦河",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 183,
+      "frequencyStrong": "H3383",
+      "strong": "H3383",
+      "strongs": [
+        "H3383"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 575,
+      "lesson": 29,
+      "lessonSlot": 15
+    },
+    {
+      "pointed": "מוֹאָב",
+      "sourcePointed": "מוֹאָב",
+      "unpointed": "מואב",
+      "unpointedVariants": [
+        "מואב"
+      ],
+      "textbookTransliteration": "môʾāḇ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Moab, an incestuous son of Lot; also his territory and descendants",
+      "glossZh": "摩押；摩押地；摩押人",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 181,
+      "frequencyStrong": "H4124",
+      "strong": "H4124",
+      "strongs": [
+        "H4124"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person",
+        "place",
+        "people_or_nation"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 577,
+      "lesson": 29,
+      "lessonSlot": 17
+    },
+    {
+      "pointed": "אֶפְרַיִם",
+      "sourcePointed": "אֶפְרַיִם",
+      "unpointed": "אפרים",
+      "unpointedVariants": [
+        "אפרים"
+      ],
+      "textbookTransliteration": "ʾep̄rayim",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Ephrajim, a son of Joseph; also the tribe descended from him, and its territory",
+      "glossZh": "以法蓮；以法蓮支派；以法蓮地",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 180,
+      "frequencyStrong": "H669",
+      "strong": "H669",
+      "strongs": [
+        "H669"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place",
+        "people_or_nation",
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 578,
+      "lesson": 29,
+      "lessonSlot": 18
+    },
+    {
+      "pointed": "אַבְרָהָם",
+      "sourcePointed": "אַבְרָהָם",
+      "unpointed": "אברהם",
+      "unpointedVariants": [
+        "אברהם"
+      ],
+      "textbookTransliteration": "ʾaḇrāhām",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Abraham, the later name of Abram",
+      "glossZh": "亞伯拉罕",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 175,
+      "frequencyStrong": "H85",
+      "strong": "H85",
+      "strongs": [
+        "H85"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 579,
+      "lesson": 29,
+      "lessonSlot": 19
+    },
+    {
+      "pointed": "בִּנְיָמִין",
+      "sourcePointed": "בִּנְיָמִין",
+      "unpointed": "בנימין",
+      "unpointedVariants": [
+        "בנימין"
+      ],
+      "textbookTransliteration": "binyāmîn",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Binjamin, youngest son of Jacob; also the tribe descended from him, and its territory",
+      "glossZh": "便雅憫；便雅憫支派；便雅憫地",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 167,
+      "frequencyStrong": "H1144",
+      "strong": "H1144",
+      "strongs": [
+        "H1144"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place",
+        "people_or_nation",
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 582,
+      "lesson": 30,
+      "lessonSlot": 2
+    },
+    {
+      "pointed": "צִיּוֹן",
+      "sourcePointed": "צִיּוֹן",
+      "unpointed": "ציון",
+      "unpointedVariants": [
+        "ציון"
+      ],
+      "textbookTransliteration": "ṣîôn",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Tsijon (as a permanent capital), a mountain of Jerusalem",
+      "glossZh": "錫安；耶路撒冷的山",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 153,
+      "frequencyStrong": "H6726",
+      "strong": "H6726",
+      "strongs": [
+        "H6726"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 585,
+      "lesson": 30,
+      "lessonSlot": 5
+    },
+    {
+      "pointed": "אַשּׁוּר",
+      "sourcePointed": "אַשּׁוּר",
+      "unpointed": "אשור",
+      "unpointedVariants": [
+        "אשור"
+      ],
+      "textbookTransliteration": "ʾaššûr",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Ashshur, the second son of Shem; also his descendants and the country occupied by them (i.e. Assyria), its region and its empire",
+      "glossZh": "亞述；亞述人；亞述國",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 151,
+      "frequencyStrong": "H804",
+      "strong": "H804",
+      "strongs": [
+        "H804"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person",
+        "place",
+        "people_or_nation"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 586,
+      "lesson": 30,
+      "lessonSlot": 6
+    },
+    {
+      "pointed": "יִרְמְיָה",
+      "sourcePointed": "יִרְמְיָה",
+      "unpointed": "ירמיה",
+      "unpointedVariants": [
+        "ירמיה"
+      ],
+      "textbookTransliteration": "yirməyâ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Jirmejah, the name of eight or nine Israelites",
+      "glossZh": "耶利米",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 147,
+      "frequencyStrong": "H3414",
+      "strong": "H3414",
+      "strongs": [
+        "H3414"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 587,
+      "lesson": 30,
+      "lessonSlot": 7
+    },
+    {
+      "pointed": "מְנַשֶּׁה",
+      "sourcePointed": "מְנַשֶּׁה",
+      "unpointed": "מנשה",
+      "unpointedVariants": [
+        "מנשה"
+      ],
+      "textbookTransliteration": "mənaššê",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Menashsheh, a grandson of Jacob, also the tribe descended from him, and its territory",
+      "glossZh": "瑪拿西；瑪拿西支派；瑪拿西地",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 146,
+      "frequencyStrong": "H4519",
+      "strong": "H4519",
+      "strongs": [
+        "H4519"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person",
+        "place",
+        "people_or_nation"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 588,
+      "lesson": 30,
+      "lessonSlot": 8
+    },
+    {
+      "pointed": "יוֹאָב",
+      "sourcePointed": "יוֹאָב",
+      "unpointed": "יואב",
+      "unpointedVariants": [
+        "יואב"
+      ],
+      "textbookTransliteration": "yôʾāḇ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Joab, the name of three Israelites",
+      "glossZh": "約押",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 145,
+      "frequencyStrong": "H3097",
+      "strong": "H3097",
+      "strongs": [
+        "H3097"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 589,
+      "lesson": 30,
+      "lessonSlot": 9
+    },
+    {
+      "pointed": "בֵּית־אֵל",
+      "sourcePointed": "בֵּית־אֵל",
+      "unpointed": "ביתאל",
+      "unpointedVariants": [
+        "ביתאל"
+      ],
+      "textbookTransliteration": "bêṯ-ʾēl",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Beth-El, a place in Palestine",
+      "glossZh": "伯特利",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 144,
+      "frequencyStrong": "H1008",
+      "strong": "H1008",
+      "strongs": [
+        "H1008"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 590,
+      "lesson": 30,
+      "lessonSlot": 10
+    },
+    {
+      "pointed": "שְׁמוּאֵל",
+      "sourcePointed": "שְׁמוּאֵל",
+      "unpointed": "שמואל",
+      "unpointedVariants": [
+        "שמואל"
+      ],
+      "textbookTransliteration": "šəmûʾēl",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Shemuel, the name of three Israelites",
+      "glossZh": "撒母耳",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 140,
+      "frequencyStrong": "H8050",
+      "strong": "H8050",
+      "strongs": [
+        "H8050"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 592,
+      "lesson": 30,
+      "lessonSlot": 12
+    },
+    {
+      "pointed": "גִּלְעָד",
+      "sourcePointed": "גִּלְעָד",
+      "unpointed": "גלעד",
+      "unpointedVariants": [
+        "גלעד"
+      ],
+      "textbookTransliteration": "gilʿāḏ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Gilad, a region East of the Jordan; also the name of three Israelites",
+      "glossZh": "基列；基列地",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 134,
+      "frequencyStrong": "H1568",
+      "strong": "H1568",
+      "strongs": [
+        "H1568"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person",
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 594,
+      "lesson": 30,
+      "lessonSlot": 14
+    },
+    {
+      "pointed": "אֲרָם",
+      "sourcePointed": "אֲרָם",
+      "unpointed": "ארם",
+      "unpointedVariants": [
+        "ארם"
+      ],
+      "textbookTransliteration": "ʾărām",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Aram or Syria, and its inhabitants; also the name of the son of Shem, a grandson of Nahor, and of an Israelite",
+      "glossZh": "亞蘭；亞蘭地；亞蘭人",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 133,
+      "frequencyStrong": "H758",
+      "strong": "H758",
+      "strongs": [
+        "H758"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person",
+        "place",
+        "people_or_nation"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 595,
+      "lesson": 30,
+      "lessonSlot": 15
+    },
+    {
+      "pointed": "חִזְקִיָּה",
+      "sourcePointed": "חִזְקִיָּה",
+      "unpointed": "חזקיה",
+      "unpointedVariants": [
+        "חזקיה"
+      ],
+      "textbookTransliteration": "ḥizqiyyâ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Chizkijah, a king of Judah, also the name of two other Israelites",
+      "glossZh": "希西家",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 130,
+      "frequencyStrong": "H2396",
+      "strong": "H2396",
+      "strongs": [
+        "H2396"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 596,
+      "lesson": 30,
+      "lessonSlot": 16
+    },
+    {
+      "pointed": "אֲבִישָׁלוֹם",
+      "sourcePointed": "אֲבִישָׁלוֹם",
+      "unpointed": "אבישלום",
+      "unpointedVariants": [
+        "אבישלום"
+      ],
+      "textbookTransliteration": "ʾăḇîšālôm",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Abshalom, a son of David; also (the fuller form) a later Israelite",
+      "glossZh": "押沙龍；大衛的兒子",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 111,
+      "frequencyStrong": "H53",
+      "strong": "H53",
+      "strongs": [
+        "H53"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 597,
+      "lesson": 30,
+      "lessonSlot": 17
+    },
+    {
+      "pointed": "שֹׁמְרוֹן",
+      "sourcePointed": "שֹׁמְרוֹן",
+      "unpointed": "שמרון",
+      "unpointedVariants": [
+        "שמרון"
+      ],
+      "textbookTransliteration": "šōmərôn",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Shomeron, a place in Palestine",
+      "glossZh": "撒馬利亞",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 109,
+      "frequencyStrong": "H8111",
+      "strong": "H8111",
+      "strongs": [
+        "H8111"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 599,
+      "lesson": 30,
+      "lessonSlot": 19
+    },
+    {
+      "pointed": "יִצְחָק",
+      "sourcePointed": "יִצְחָק",
+      "unpointed": "יצחק",
+      "unpointedVariants": [
+        "יצחק"
+      ],
+      "textbookTransliteration": "yiṣḥāq",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Jitschak (or Isaac), son of Abraham",
+      "glossZh": "以撒；亞伯拉罕的兒子",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 108,
+      "frequencyStrong": "H3327",
+      "strong": "H3327",
+      "strongs": [
+        "H3327"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 600,
+      "lesson": 30,
+      "lessonSlot": 20
+    },
+    {
+      "pointed": "עַמּוֹן",
+      "sourcePointed": "עַמּוֹן",
+      "unpointed": "עמון",
+      "unpointedVariants": [
+        "עמון"
+      ],
+      "textbookTransliteration": "ʿammôn",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Ammon, a son of Lot; also his posterity and their country",
+      "glossZh": "亞捫；亞捫地；亞捫人",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 106,
+      "frequencyStrong": "H5983",
+      "strong": "H5983",
+      "strongs": [
+        "H5983"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person",
+        "place",
+        "people_or_nation"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 602,
+      "lesson": 31,
+      "lessonSlot": 2
+    },
+    {
+      "pointed": "יָרׇבְעָם",
+      "sourcePointed": "יָרׇבְעָם",
+      "unpointed": "ירבעם",
+      "unpointedVariants": [
+        "ירבעם"
+      ],
+      "textbookTransliteration": "yāroḇʿām",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Jarobam, the name of two Israelite kings",
+      "glossZh": "耶羅波安",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 104,
+      "frequencyStrong": "H3379",
+      "strong": "H3379",
+      "strongs": [
+        "H3379"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 603,
+      "lesson": 31,
+      "lessonSlot": 3
+    },
+    {
+      "pointed": "אֱדֹם",
+      "sourcePointed": "אֱדֹם",
+      "unpointed": "אדם",
+      "unpointedVariants": [
+        "אדם"
+      ],
+      "textbookTransliteration": "ʾĕḏōm",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Edom, the elder twin-brother of Jacob; hence the region (Idumaea) occupied by him",
+      "glossZh": "以東；以東地；以東人",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 100,
+      "frequencyStrong": "H123",
+      "strong": "H123",
+      "strongs": [
+        "H123"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place",
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 605,
+      "lesson": 31,
+      "lessonSlot": 5
+    },
+    {
+      "pointed": "עֵשָׂו",
+      "sourcePointed": "עֵשָׂו",
+      "unpointed": "עשו",
+      "unpointedVariants": [
+        "עשו"
+      ],
+      "textbookTransliteration": "ʿēśāw",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Esav, a son of Isaac, including his posterity",
+      "glossZh": "以掃；以掃的後裔",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 97,
+      "frequencyStrong": "H6215",
+      "strong": "H6215",
+      "strongs": [
+        "H6215"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person",
+        "people_or_nation"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 608,
+      "lesson": 31,
+      "lessonSlot": 8
+    },
+    {
+      "pointed": "כְּנַעַן",
+      "sourcePointed": "כְּנַעַן",
+      "unpointed": "כנען",
+      "unpointedVariants": [
+        "כנען"
+      ],
+      "textbookTransliteration": "kənaʿan",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Kenaan, a son a Ham; also the country inhabited by him",
+      "glossZh": "迦南；迦南地",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 94,
+      "frequencyStrong": "H3667",
+      "strong": "H3667",
+      "strongs": [
+        "H3667"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place",
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 610,
+      "lesson": 31,
+      "lessonSlot": 10
+    },
+    {
+      "pointed": "אַחְאָב",
+      "sourcePointed": "אַחְאָב",
+      "unpointed": "אחאב",
+      "unpointedVariants": [
+        "אחאב"
+      ],
+      "textbookTransliteration": "ʾaḥʾāḇ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Achab, the name of a king of Israel and of a prophet at Babylon",
+      "glossZh": "亞哈",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 93,
+      "frequencyStrong": "H256",
+      "strong": "H256",
+      "strongs": [
+        "H256"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 611,
+      "lesson": 31,
+      "lessonSlot": 11
+    },
+    {
+      "pointed": "אֱמֹרִי",
+      "sourcePointed": "אֱמֹרִי",
+      "unpointed": "אמרי",
+      "unpointedVariants": [
+        "אמרי"
+      ],
+      "textbookTransliteration": "ʾĕmōrî",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "an Emorite, one of the Canaanitish tribes",
+      "glossZh": "亞摩利人",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 87,
+      "frequencyStrong": "H567",
+      "strong": "H567",
+      "strongs": [
+        "H567"
+      ],
+      "partOfSpeech": "noun",
+      "isProperName": true,
+      "properNameTypes": [
+        "people_or_nation"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 615,
+      "lesson": 31,
+      "lessonSlot": 15
+    },
+    {
+      "pointed": "יְהוֹשָׁפָט",
+      "sourcePointed": "יְהוֹשָׁפָט",
+      "unpointed": "יהושפט",
+      "unpointedVariants": [
+        "יהושפט"
+      ],
+      "textbookTransliteration": "yəhôšāp̄āṭ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Jehoshaphat, the name of six Israelites; also of a valley near Jerusalem",
+      "glossZh": "約沙法；約沙法谷",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 84,
+      "frequencyStrong": "H3092",
+      "strong": "H3092",
+      "strongs": [
+        "H3092"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person",
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 619,
+      "lesson": 31,
+      "lessonSlot": 19
+    },
+    {
+      "pointed": "בֵּית לֶחֶם",
+      "sourcePointed": "בֵּית לֶחֶם",
+      "unpointed": "ביתלחם",
+      "unpointedVariants": [
+        "ביתלחם"
+      ],
+      "textbookTransliteration": "bêṯ leḥem",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Beth-Lechem, a place in Palestine",
+      "glossZh": "伯利恆",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 82,
+      "frequencyStrong": "H1035",
+      "strong": "H1035",
+      "strongs": [
+        "H1035"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 620,
+      "lesson": 31,
+      "lessonSlot": 20
+    },
+    {
+      "pointed": "כַּשְׂדִּי",
+      "sourcePointed": "כַּשְׂדִּי",
+      "unpointed": "כשדי",
+      "unpointedVariants": [
+        "כשדי"
+      ],
+      "textbookTransliteration": "kaśdî",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "a Kasdite, or descendant of Kesed; by implication, a Chaldaean (as if so descended); also an astrologer (as if proverbial of that people",
+      "glossZh": "迦勒底人；占星家",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 82,
+      "frequencyStrong": "H3778",
+      "strong": "H3778",
+      "strongs": [
+        "H3778"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "people_or_nation"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 621,
+      "lesson": 32,
+      "lessonSlot": 1
+    },
+    {
+      "pointed": "יְהוּדִי",
+      "sourcePointed": "יְהוּדִי",
+      "unpointed": "יהודי",
+      "unpointedVariants": [
+        "יהודי"
+      ],
+      "textbookTransliteration": "yəhûḏî",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "a Jehudite (i.e. Judaite or Jew), or descendant of Jehudah (i.e. Judah)",
+      "glossZh": "猶太人",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 81,
+      "frequencyStrong": "H3064",
+      "strong": "H3064",
+      "strongs": [
+        "H3064"
+      ],
+      "partOfSpeech": "noun",
+      "isProperName": true,
+      "properNameTypes": [
+        "people_or_nation"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 623,
+      "lesson": 32,
+      "lessonSlot": 3
+    },
+    {
+      "pointed": "יְהוֹנָתָן",
+      "sourcePointed": "יְהוֹנָתָן",
+      "unpointed": "יהונתן",
+      "unpointedVariants": [
+        "יהונתן"
+      ],
+      "textbookTransliteration": "yəhônāṯān",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Jehonathan, the name of four Israelites",
+      "glossZh": "約拿單",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 80,
+      "frequencyStrong": "H3083",
+      "strong": "H3083",
+      "strongs": [
+        "H3083"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 625,
+      "lesson": 32,
+      "lessonSlot": 5
+    },
+    {
+      "pointed": "מִצְרִי",
+      "sourcePointed": "מִצְרִי",
+      "unpointed": "מצרי",
+      "unpointedVariants": [
+        "מצרי"
+      ],
+      "textbookTransliteration": "miṣrî",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "a Mitsrite, or inhabitant of Mitsrajim",
+      "glossZh": "埃及人",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 76,
+      "frequencyStrong": "H4713",
+      "strong": "H4713",
+      "strongs": [
+        "H4713"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "people_or_nation"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 627,
+      "lesson": 32,
+      "lessonSlot": 7
+    },
+    {
+      "pointed": "כְּנַעַנִי",
+      "sourcePointed": "כְּנַעַנִי",
+      "unpointed": "כנעני",
+      "unpointedVariants": [
+        "כנעני"
+      ],
+      "textbookTransliteration": "kənaʿanî",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "a Kenaanite or inhabitant of Kenaan; by implication, a pedlar (the Canaanites standing for their neighbors the Ishmaelites, who conducted mercantile caravans)",
+      "glossZh": "迦南人；商人",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 73,
+      "frequencyStrong": "H3669",
+      "strong": "H3669",
+      "strongs": [
+        "H3669"
+      ],
+      "partOfSpeech": "noun",
+      "isProperName": true,
+      "properNameTypes": [
+        "people_or_nation"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 633,
+      "lesson": 32,
+      "lessonSlot": 13
+    },
+    {
+      "pointed": "רְאוּבֵן",
+      "sourcePointed": "רְאוּבֵן",
+      "unpointed": "ראובן",
+      "unpointedVariants": [
+        "ראובן"
+      ],
+      "textbookTransliteration": "rəʾûḇēn",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Reuben, a son of Jacob",
+      "glossZh": "呂便；雅各的兒子",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 72,
+      "frequencyStrong": "H7205",
+      "strong": "H7205",
+      "strongs": [
+        "H7205"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 635,
+      "lesson": 32,
+      "lessonSlot": 15
+    },
+    {
+      "pointed": "גָּד",
+      "sourcePointed": "גָּד",
+      "unpointed": "גד",
+      "unpointedVariants": [
+        "גד"
+      ],
+      "textbookTransliteration": "gāḏ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Gad, a son of Jacob, including his tribe and its territory; also a prophet",
+      "glossZh": "迦得；迦得支派；迦得地",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 72,
+      "frequencyStrong": "H1410",
+      "strong": "H1410",
+      "strongs": [
+        "H1410"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place",
+        "people_or_nation",
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 636,
+      "lesson": 32,
+      "lessonSlot": 16
+    },
+    {
+      "pointed": "אֶלְעָזָר",
+      "sourcePointed": "אֶלְעָזָר",
+      "unpointed": "אלעזר",
+      "unpointedVariants": [
+        "אלעזר"
+      ],
+      "textbookTransliteration": "ʾelʿāzār",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Elazar, the name of seven Israelites",
+      "glossZh": "以利亞撒",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 72,
+      "frequencyStrong": "H499",
+      "strong": "H499",
+      "strongs": [
+        "H499"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 637,
+      "lesson": 32,
+      "lessonSlot": 17
+    },
+    {
+      "pointed": "חֶבְרוֹן",
+      "sourcePointed": "חֶבְרוֹן",
+      "unpointed": "חברון",
+      "unpointedVariants": [
+        "חברון"
+      ],
+      "textbookTransliteration": "ḥeḇrôn",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Chebron, a place in Palestine, also the name of two Israelites",
+      "glossZh": "希伯崙",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 71,
+      "frequencyStrong": "H2275",
+      "strong": "H2275",
+      "strongs": [
+        "H2275"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person",
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 640,
+      "lesson": 32,
+      "lessonSlot": 20
+    },
+    {
+      "pointed": "אֵלִיָּה",
+      "sourcePointed": "אֵלִיָּה",
+      "unpointed": "אליה",
+      "unpointedVariants": [
+        "אליה"
+      ],
+      "textbookTransliteration": "ʾēliyyâ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Elijah, the name of the famous prophet and of two other Israelites",
+      "glossZh": "以利亞",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 71,
+      "frequencyStrong": "H452",
+      "strong": "H452",
+      "strongs": [
+        "H452"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 641,
+      "lesson": 33,
+      "lessonSlot": 1
+    },
+    {
+      "pointed": "לְבָנוֹן",
+      "sourcePointed": "לְבָנוֹן",
+      "unpointed": "לבנון",
+      "unpointedVariants": [
+        "לבנון"
+      ],
+      "textbookTransliteration": "ləḇānôn",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Lebanon, a mountain range in Palestine",
+      "glossZh": "黎巴嫩",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 71,
+      "frequencyStrong": "H3844",
+      "strong": "H3844",
+      "strongs": [
+        "H3844"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 642,
+      "lesson": 33,
+      "lessonSlot": 2
+    },
+    {
+      "pointed": "דָּן",
+      "sourcePointed": "דָּן",
+      "unpointed": "דן",
+      "unpointedVariants": [
+        "דן"
+      ],
+      "textbookTransliteration": "dān",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Dan, one of the sons of Jacob; also the tribe descended from him, and its territory; likewise a place in Palestine colonized by them",
+      "glossZh": "但；但支派；但地",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 70,
+      "frequencyStrong": "H1835",
+      "strong": "H1835",
+      "strongs": [
+        "H1835"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person",
+        "place",
+        "people_or_nation"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 644,
+      "lesson": 33,
+      "lessonSlot": 4
+    },
+    {
+      "pointed": "בְּאֵר שֶׁבַע",
+      "sourcePointed": "בְּאֵר שֶׁבַע",
+      "unpointed": "בארשבע",
+      "unpointedVariants": [
+        "בארשבע"
+      ],
+      "textbookTransliteration": "bəʾēr šeḇaʿ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Beer-Sheba, a place in Palestine",
+      "glossZh": "別是巴",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 68,
+      "frequencyStrong": "H884",
+      "strong": "H884",
+      "strongs": [
+        "H884"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 652,
+      "lesson": 33,
+      "lessonSlot": 12
+    },
+    {
+      "pointed": "אֲבִימֶלֶךְ",
+      "sourcePointed": "אֲבִימֶלֶךְ",
+      "unpointed": "אבימלך",
+      "unpointedVariants": [
+        "אבימלך"
+      ],
+      "textbookTransliteration": "ʾăḇîmeleḵ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Abimelek, the name of two Philistine kings and of two Israelites",
+      "glossZh": "亞比米勒",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 67,
+      "frequencyStrong": "H40",
+      "strong": "H40",
+      "strongs": [
+        "H40"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 657,
+      "lesson": 33,
+      "lessonSlot": 17
+    },
+    {
+      "pointed": "לֵוִי",
+      "sourcePointed": "לֵוִי",
+      "unpointed": "לוי",
+      "unpointedVariants": [
+        "לוי"
+      ],
+      "textbookTransliteration": "lēwî",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Levi, a son of Jacob",
+      "glossZh": "利未",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 64,
+      "frequencyStrong": "H3878",
+      "strong": "H3878",
+      "strongs": [
+        "H3878"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 676,
+      "lesson": 34,
+      "lessonSlot": 16
+    },
+    {
+      "pointed": "צִדְקִיָּה",
+      "sourcePointed": "צִדְקִיָּה",
+      "unpointed": "צדקיה",
+      "unpointedVariants": [
+        "צדקיה"
+      ],
+      "textbookTransliteration": "ṣiḏqiyyâ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Tsidkijah, the name of six Israelites",
+      "glossZh": "西底家",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 63,
+      "frequencyStrong": "H6667",
+      "strong": "H6667",
+      "strongs": [
+        "H6667"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 679,
+      "lesson": 34,
+      "lessonSlot": 19
+    },
+    {
+      "pointed": "שְׁכֶם",
+      "sourcePointed": "שְׁכֶם",
+      "unpointed": "שכם",
+      "unpointedVariants": [
+        "שכם"
+      ],
+      "textbookTransliteration": "šəḵem",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Shekem, a place in Palestine",
+      "glossZh": "示劍",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 63,
+      "frequencyStrong": "H7927",
+      "strong": "H7927",
+      "strongs": [
+        "H7927"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 682,
+      "lesson": 35,
+      "lessonSlot": 2
+    },
+    {
+      "pointed": "אַבְנֵר",
+      "sourcePointed": "אַבְנֵר",
+      "unpointed": "אבנר",
+      "unpointedVariants": [
+        "אבנר"
+      ],
+      "textbookTransliteration": "ʾaḇnēr",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Abner, an Israelite",
+      "glossZh": "押尼珥",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 63,
+      "frequencyStrong": "H74",
+      "strong": "H74",
+      "strongs": [
+        "H74"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 683,
+      "lesson": 35,
+      "lessonSlot": 3
+    },
+    {
+      "pointed": "אַבְרָם",
+      "sourcePointed": "אַבְרָם",
+      "unpointed": "אברם",
+      "unpointedVariants": [
+        "אברם"
+      ],
+      "textbookTransliteration": "ʾaḇrām",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Abram, the original name of Abraham",
+      "glossZh": "亞伯蘭",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 61,
+      "frequencyStrong": "H87",
+      "strong": "H87",
+      "strongs": [
+        "H87"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 692,
+      "lesson": 35,
+      "lessonSlot": 12
+    },
+    {
+      "pointed": "בִּלְעָם",
+      "sourcePointed": "בִּלְעָם",
+      "unpointed": "בלעם",
+      "unpointedVariants": [
+        "בלעם"
+      ],
+      "textbookTransliteration": "bilʿām",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Bilam, a Mesopotamian prophet; also a place in Palestine",
+      "glossZh": "巴蘭",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 61,
+      "frequencyStrong": "H1109",
+      "strong": "H1109",
+      "strongs": [
+        "H1109"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place",
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 693,
+      "lesson": 35,
+      "lessonSlot": 13
+    },
+    {
+      "pointed": "בָּשָׁן",
+      "sourcePointed": "בָּשָׁן",
+      "unpointed": "בשן",
+      "unpointedVariants": [
+        "בשן"
+      ],
+      "textbookTransliteration": "bāšān",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Bashan (often with the article), a region East of the Jordan",
+      "glossZh": "巴珊",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 60,
+      "frequencyStrong": "H1316",
+      "strong": "H1316",
+      "strongs": [
+        "H1316"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 701,
+      "lesson": 36,
+      "lessonSlot": 1
+    },
+    {
+      "pointed": "נְבוּכַדְנֶאצַּר",
+      "sourcePointed": "נְבוּכַדְנֶאצַּר",
+      "unpointed": "נבוכדנאצר",
+      "unpointedVariants": [
+        "נבוכדנאצר"
+      ],
+      "textbookTransliteration": "nəḇûḵaḏneʾṣṣar",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Nebukadnetstsar (or -retstsar, or -retstsor), king of Babylon",
+      "glossZh": "尼布甲尼撒；巴比倫王",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 60,
+      "frequencyStrong": "H5019",
+      "strong": "H5019",
+      "strongs": [
+        "H5019"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 702,
+      "lesson": 36,
+      "lessonSlot": 2
+    },
+    {
+      "pointed": "מׇרְדְּכַי",
+      "sourcePointed": "מׇרְדְּכַי",
+      "unpointed": "מרדכי",
+      "unpointedVariants": [
+        "מרדכי"
+      ],
+      "textbookTransliteration": "mordəḵay",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Mordecai, an Israelite",
+      "glossZh": "末底改",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 60,
+      "frequencyStrong": "H4782",
+      "strong": "H4782",
+      "strongs": [
+        "H4782"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 707,
+      "lesson": 36,
+      "lessonSlot": 7
+    },
+    {
+      "pointed": "מִדְיָן",
+      "sourcePointed": "מִדְיָן",
+      "unpointed": "מדין",
+      "unpointedVariants": [
+        "מדין"
+      ],
+      "textbookTransliteration": "miḏyān",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Midjan, a son of Abraham; also his country and (collectively) his descendants",
+      "glossZh": "米甸；米甸地；米甸人",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 59,
+      "frequencyStrong": "H4080",
+      "strong": "H4080",
+      "strongs": [
+        "H4080"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person",
+        "place",
+        "people_or_nation"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 709,
+      "lesson": 36,
+      "lessonSlot": 9
+    },
+    {
+      "pointed": "יֵהוּא",
+      "sourcePointed": "יֵהוּא",
+      "unpointed": "יהוא",
+      "unpointedVariants": [
+        "יהוא"
+      ],
+      "textbookTransliteration": "yēhûʾ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Jehu, the name of five Israelites",
+      "glossZh": "耶戶",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 58,
+      "frequencyStrong": "H3058",
+      "strong": "H3058",
+      "strongs": [
+        "H3058"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 720,
+      "lesson": 36,
+      "lessonSlot": 20
+    },
+    {
+      "pointed": "אָסָא",
+      "sourcePointed": "אָסָא",
+      "unpointed": "אסא",
+      "unpointedVariants": [
+        "אסא"
+      ],
+      "textbookTransliteration": "ʾāsāʾ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Asa, the name of a king and of a Levite",
+      "glossZh": "亞撒",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 58,
+      "frequencyStrong": "H609",
+      "strong": "H609",
+      "strongs": [
+        "H609"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 722,
+      "lesson": 37,
+      "lessonSlot": 2
+    },
+    {
+      "pointed": "אֱלִישָׁע",
+      "sourcePointed": "אֱלִישָׁע",
+      "unpointed": "אלישע",
+      "unpointedVariants": [
+        "אלישע"
+      ],
+      "textbookTransliteration": "ʾĕlîšāʿ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Elisha, the famous prophet",
+      "glossZh": "以利沙",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 58,
+      "frequencyStrong": "H477",
+      "strong": "H477",
+      "strongs": [
+        "H477"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 725,
+      "lesson": 37,
+      "lessonSlot": 5
+    },
+    {
+      "pointed": "אִיּוֹב",
+      "sourcePointed": "אִיּוֹב",
+      "unpointed": "איוב",
+      "unpointedVariants": [
+        "איוב"
+      ],
+      "textbookTransliteration": "ʾîôḇ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Ijob, the patriarch famous for his patience",
+      "glossZh": "約伯",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 58,
+      "frequencyStrong": "H347",
+      "strong": "H347",
+      "strongs": [
+        "H347"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 730,
+      "lesson": 37,
+      "lessonSlot": 10
+    },
+    {
+      "pointed": "יְרִיחוֹ",
+      "sourcePointed": "יְרִיחוֹ",
+      "unpointed": "יריחו",
+      "unpointedVariants": [
+        "יריחו"
+      ],
+      "textbookTransliteration": "yərîḥô",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Jericho or Jerecho, a place in Palestine",
+      "glossZh": "耶利哥",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 57,
+      "frequencyStrong": "H3405",
+      "strong": "H3405",
+      "strongs": [
+        "H3405"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 732,
+      "lesson": 37,
+      "lessonSlot": 12
+    },
+    {
+      "pointed": "לָבָן",
+      "sourcePointed": "לָבָן",
+      "unpointed": "לבן",
+      "unpointedVariants": [
+        "לבן"
+      ],
+      "textbookTransliteration": "lāḇān",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Laban, a Mesopotamian; also a place in the Desert",
+      "glossZh": "拉班；米所波大米人；亦為曠野一處地名",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 55,
+      "frequencyStrong": "H3837",
+      "strong": "H3837",
+      "strongs": [
+        "H3837"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person",
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 751,
+      "lesson": 38,
+      "lessonSlot": 11
+    },
+    {
+      "pointed": "אֶסְתֵּר",
+      "sourcePointed": "אֶסְתֵּר",
+      "unpointed": "אסתר",
+      "unpointedVariants": [
+        "אסתר"
+      ],
+      "textbookTransliteration": "ʾestēr",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Ester, the Jewish heroine",
+      "glossZh": "以斯帖；猶太女英雄",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 55,
+      "frequencyStrong": "H635",
+      "strong": "H635",
+      "strongs": [
+        "H635"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 753,
+      "lesson": 38,
+      "lessonSlot": 13
+    },
+    {
+      "pointed": "הָמָן",
+      "sourcePointed": "הָמָן",
+      "unpointed": "המן",
+      "unpointedVariants": [
+        "המן"
+      ],
+      "textbookTransliteration": "hāmān",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Haman, a Persian vizier",
+      "glossZh": "哈曼；波斯宰相",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 54,
+      "frequencyStrong": "H2001",
+      "strong": "H2001",
+      "strongs": [
+        "H2001"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 766,
+      "lesson": 39,
+      "lessonSlot": 6
+    },
+    {
+      "pointed": "יֹאשִׁיָּה",
+      "sourcePointed": "יֹאשִׁיָּה",
+      "unpointed": "יאשיה",
+      "unpointedVariants": [
+        "יאשיה"
+      ],
+      "textbookTransliteration": "yōʾšiyyâ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Joshijah, the name of two Israelites",
+      "glossZh": "約西亞；兩名以色列人的名字",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 53,
+      "frequencyStrong": "H2977",
+      "strong": "H2977",
+      "strongs": [
+        "H2977"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 767,
+      "lesson": 39,
+      "lessonSlot": 7
+    },
+    {
+      "pointed": "צָדוֹק",
+      "sourcePointed": "צָדוֹק",
+      "unpointed": "צדוק",
+      "unpointedVariants": [
+        "צדוק"
+      ],
+      "textbookTransliteration": "ṣāḏôq",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Tsadok, the name of eight or nine Israelites",
+      "glossZh": "撒督；多名以色列人的名字",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 53,
+      "frequencyStrong": "H6659",
+      "strong": "H6659",
+      "strongs": [
+        "H6659"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 768,
+      "lesson": 39,
+      "lessonSlot": 8
+    },
+    {
+      "pointed": "נַפְתָּלִי",
+      "sourcePointed": "נַפְתָּלִי",
+      "unpointed": "נפתלי",
+      "unpointedVariants": [
+        "נפתלי"
+      ],
+      "textbookTransliteration": "nap̄tālî",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Naphtali, a son of Jacob, with the tribe descended from him, and its territory",
+      "glossZh": "拿弗他利；雅各的兒子、其支派及地業",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 51,
+      "frequencyStrong": "H5321",
+      "strong": "H5321",
+      "strongs": [
+        "H5321"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place",
+        "people_or_nation",
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 780,
+      "lesson": 39,
+      "lessonSlot": 20
+    },
+    {
+      "pointed": "יְהוֹיָדָע",
+      "sourcePointed": "יְהוֹיָדָע",
+      "unpointed": "יהוידע",
+      "unpointedVariants": [
+        "יהוידע"
+      ],
+      "textbookTransliteration": "yəhôyāḏāʿ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Jehojada, the name of three Israelites",
+      "glossZh": "耶何耶大；三名以色列人的名字",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 51,
+      "frequencyStrong": "H3077",
+      "strong": "H3077",
+      "strongs": [
+        "H3077"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 783,
+      "lesson": 40,
+      "lessonSlot": 3
+    },
+    {
+      "pointed": "רְחַבְעָם",
+      "sourcePointed": "רְחַבְעָם",
+      "unpointed": "רחבעם",
+      "unpointedVariants": [
+        "רחבעם"
+      ],
+      "textbookTransliteration": "rəḥaḇʿām",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Rechabam, an Israelite king",
+      "glossZh": "羅波安；以色列王",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 50,
+      "frequencyStrong": "H7346",
+      "strong": "H7346",
+      "strongs": [
+        "H7346"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 795,
+      "lesson": 40,
+      "lessonSlot": 15
+    },
+    {
+      "pointed": "בֶּן־הֲדַד",
+      "sourcePointed": "בֶּן־הֲדַד",
+      "unpointed": "בןהדד",
+      "unpointedVariants": [
+        "בןהדד"
+      ],
+      "textbookTransliteration": "ben-hăḏaḏ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Ben-Hadad, the name of several Syrian kings",
+      "glossZh": "便哈達；多名亞蘭王的名字",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 50,
+      "frequencyStrong": "H1130",
+      "strong": "H1130",
+      "strongs": [
+        "H1130"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 802,
+      "lesson": 41,
+      "lessonSlot": 2
+    },
+    {
+      "pointed": "יִשְׁמָעֵאל",
+      "sourcePointed": "יִשְׁמָעֵאל",
+      "unpointed": "ישמעאל",
+      "unpointedVariants": [
+        "ישמעאל"
+      ],
+      "textbookTransliteration": "yišmāʿēʾl",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Jishmael, the name of Abraham's oldest son, and of five Israelites",
+      "glossZh": "以實瑪利；亞伯拉罕長子及五名以色列人的名字",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 48,
+      "frequencyStrong": "H3458",
+      "strong": "H3458",
+      "strongs": [
+        "H3458"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 823,
+      "lesson": 42,
+      "lessonSlot": 3
+    },
+    {
+      "pointed": "עֲזַרְיָה",
+      "sourcePointed": "עֲזַרְיָה",
+      "unpointed": "עזריה",
+      "unpointedVariants": [
+        "עזריה"
+      ],
+      "textbookTransliteration": "ʿăzaryâ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Azarjah, the name of nineteen Israelites",
+      "glossZh": "亞撒利雅；多名以色列人的名字",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 48,
+      "frequencyStrong": "H5838",
+      "strong": "H5838",
+      "strongs": [
+        "H5838"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 824,
+      "lesson": 42,
+      "lessonSlot": 4
+    },
+    {
+      "pointed": "חִתִּי",
+      "sourcePointed": "חִתִּי",
+      "unpointed": "חתי",
+      "unpointedVariants": [
+        "חתי"
+      ],
+      "textbookTransliteration": "ḥittî",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "a Chittite, or descendant of Cheth",
+      "glossZh": "赫人；赫的後裔",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 48,
+      "frequencyStrong": "H2850",
+      "strong": "H2850",
+      "strongs": [
+        "H2850"
+      ],
+      "partOfSpeech": "noun",
+      "isProperName": true,
+      "properNameTypes": [
+        "people_or_nation"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 828,
+      "lesson": 42,
+      "lessonSlot": 8
+    },
+    {
+      "pointed": "יוֹאָשׁ",
+      "sourcePointed": "יוֹאָשׁ",
+      "unpointed": "יואש",
+      "unpointedVariants": [
+        "יואש"
+      ],
+      "textbookTransliteration": "yôʾāš",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Joash, the name of six Israelites",
+      "glossZh": "約阿施；六名以色列人的名字",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 47,
+      "frequencyStrong": "H3101",
+      "strong": "H3101",
+      "strongs": [
+        "H3101"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 838,
+      "lesson": 42,
+      "lessonSlot": 18
+    },
+    {
+      "pointed": "רָחֵל",
+      "sourcePointed": "רָחֵל",
+      "unpointed": "רחל",
+      "unpointedVariants": [
+        "רחל"
+      ],
+      "textbookTransliteration": "rāḥēl",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Rachel, a wife of Jacob",
+      "glossZh": "拉結；雅各的妻子",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 47,
+      "frequencyStrong": "H7354",
+      "strong": "H7354",
+      "strongs": [
+        "H7354"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 846,
+      "lesson": 43,
+      "lessonSlot": 6
+    },
+    {
+      "pointed": "נֹחַ",
+      "sourcePointed": "נֹחַ",
+      "unpointed": "נח",
+      "unpointedVariants": [
+        "נח"
+      ],
+      "textbookTransliteration": "nōaḥ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Noach, the patriarch of the flood",
+      "glossZh": "挪亞；洪水時代的先祖",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 46,
+      "frequencyStrong": "H5146",
+      "strong": "H5146",
+      "strongs": [
+        "H5146"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 849,
+      "lesson": 43,
+      "lessonSlot": 9
+    },
+    {
+      "pointed": "אָסָף",
+      "sourcePointed": "אָסָף",
+      "unpointed": "אסף",
+      "unpointedVariants": [
+        "אסף"
+      ],
+      "textbookTransliteration": "ʾāsāp̄",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Asaph, the name of three Israelites, and of the family of the first",
+      "glossZh": "亞薩；三名以色列人的名字及其家族",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 46,
+      "frequencyStrong": "H623",
+      "strong": "H623",
+      "strongs": [
+        "H623"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person",
+        "people_or_nation"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 850,
+      "lesson": 43,
+      "lessonSlot": 10
+    },
+    {
+      "pointed": "זְבוּלוּן",
+      "sourcePointed": "זְבוּלוּן",
+      "unpointed": "זבולון",
+      "unpointedVariants": [
+        "זבולון"
+      ],
+      "textbookTransliteration": "zəḇûlûn",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Zebulon, a son of Jacob; also his territory and tribe",
+      "glossZh": "西布倫；雅各的兒子、其地業及支派",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 45,
+      "frequencyStrong": "H2074",
+      "strong": "H2074",
+      "strongs": [
+        "H2074"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place",
+        "people_or_nation",
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 862,
+      "lesson": 44,
+      "lessonSlot": 2
+    },
+    {
+      "pointed": "דַּמֶּשֶׂק",
+      "sourcePointed": "דַּמֶּשֶׂק",
+      "unpointed": "דמשק",
+      "unpointedVariants": [
+        "דמשק"
+      ],
+      "textbookTransliteration": "dammeśeq",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Damascus, a city of Syria",
+      "glossZh": "大馬士革；亞蘭的一座城",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 45,
+      "frequencyStrong": "H1834",
+      "strong": "H1834",
+      "strongs": [
+        "H1834"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 866,
+      "lesson": 44,
+      "lessonSlot": 6
+    },
+    {
+      "pointed": "שִׁמְעוֹן",
+      "sourcePointed": "שִׁמְעוֹן",
+      "unpointed": "שמעון",
+      "unpointedVariants": [
+        "שמעון"
+      ],
+      "textbookTransliteration": "šimʿôn",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Shimon, one of Jacob's sons, also the tribe descended from him",
+      "glossZh": "西緬；雅各的兒子及其支派",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 44,
+      "frequencyStrong": "H8095",
+      "strong": "H8095",
+      "strongs": [
+        "H8095"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person",
+        "people_or_nation"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 871,
+      "lesson": 44,
+      "lessonSlot": 11
+    },
+    {
+      "pointed": "יוֹנָתָן",
+      "sourcePointed": "יוֹנָתָן",
+      "unpointed": "יונתן",
+      "unpointedVariants": [
+        "יונתן"
+      ],
+      "textbookTransliteration": "yônāṯān",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Jonathan, the name of ten Israelites",
+      "glossZh": "約拿單；十名以色列人的名字",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 44,
+      "frequencyStrong": "H3129",
+      "strong": "H3129",
+      "strongs": [
+        "H3129"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 872,
+      "lesson": 44,
+      "lessonSlot": 12
+    },
+    {
+      "pointed": "שִׁמְעִי",
+      "sourcePointed": "שִׁמְעִי",
+      "unpointed": "שמעי",
+      "unpointedVariants": [
+        "שמעי"
+      ],
+      "textbookTransliteration": "šimʿî",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Shimi, the name of twenty Israelites",
+      "glossZh": "示每；多名以色列人的名字",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 44,
+      "frequencyStrong": "H8096",
+      "strong": "H8096",
+      "strongs": [
+        "H8096"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 873,
+      "lesson": 44,
+      "lessonSlot": 13
+    },
+    {
+      "pointed": "אָשֵׁר",
+      "sourcePointed": "אָשֵׁר",
+      "unpointed": "אשר",
+      "unpointedVariants": [
+        "אשר"
+      ],
+      "textbookTransliteration": "ʾāšēr",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "happy; Asher, a son of Jacob, and the tribe descended from him, with its territory; also a place in Palestine",
+      "glossZh": "有福的；亞設；雅各的兒子、其支派、地業及一處地名",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 43,
+      "frequencyStrong": "H836",
+      "strong": "H836",
+      "strongs": [
+        "H836"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place",
+        "people_or_nation",
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 888,
+      "lesson": 45,
+      "lessonSlot": 8
+    },
+    {
+      "pointed": "גִּבְעָה",
+      "sourcePointed": "גִּבְעָה",
+      "unpointed": "גבעה",
+      "unpointedVariants": [
+        "גבעה"
+      ],
+      "textbookTransliteration": "giḇʿâ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Gibah; the name of three places in Palestine",
+      "glossZh": "基比亞；三處地名",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 43,
+      "frequencyStrong": "H1390",
+      "strong": "H1390",
+      "strongs": [
+        "H1390"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 892,
+      "lesson": 45,
+      "lessonSlot": 12
+    },
+    {
+      "pointed": "בָּלָק",
+      "sourcePointed": "בָּלָק",
+      "unpointed": "בלק",
+      "unpointedVariants": [
+        "בלק"
+      ],
+      "textbookTransliteration": "bālāq",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Balak, a Moabitish king",
+      "glossZh": "巴勒；摩押王",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 43,
+      "frequencyStrong": "H1111",
+      "strong": "H1111",
+      "strongs": [
+        "H1111"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 911,
+      "lesson": 46,
+      "lessonSlot": 11
+    },
+    {
+      "pointed": "יִשַׁי",
+      "sourcePointed": "יִשַׁי",
+      "unpointed": "ישי",
+      "unpointedVariants": [
+        "ישי"
+      ],
+      "textbookTransliteration": "yišay",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Jishai, David's father",
+      "glossZh": "耶西；大衛的父親",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 42,
+      "frequencyStrong": "H3448",
+      "strong": "H3448",
+      "strongs": [
+        "H3448"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 912,
+      "lesson": 46,
+      "lessonSlot": 12
+    },
+    {
+      "pointed": "נָתָן",
+      "sourcePointed": "נָתָן",
+      "unpointed": "נתן",
+      "unpointedVariants": [
+        "נתן"
+      ],
+      "textbookTransliteration": "nāṯān",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Nathan, the name of five Israelites",
+      "glossZh": "拿單；五名以色列人的名字",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 42,
+      "frequencyStrong": "H5416",
+      "strong": "H5416",
+      "strongs": [
+        "H5416"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 913,
+      "lesson": 46,
+      "lessonSlot": 13
+    },
+    {
+      "pointed": "בְּנָיָה",
+      "sourcePointed": "בְּנָיָה",
+      "unpointed": "בניה",
+      "unpointedVariants": [
+        "בניה"
+      ],
+      "textbookTransliteration": "bənāyâ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Benajah, the name of twelve Israelites",
+      "glossZh": "比拿雅；多名以色列人的名字",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 42,
+      "frequencyStrong": "H1141",
+      "strong": "H1141",
+      "strongs": [
+        "H1141"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 914,
+      "lesson": 46,
+      "lessonSlot": 14
+    },
+    {
+      "pointed": "בֵּית שֶׁמֶשׁ",
+      "sourcePointed": "בֵּית שֶׁמֶשׁ",
+      "unpointed": "ביתשמש",
+      "unpointedVariants": [
+        "ביתשמש"
+      ],
+      "textbookTransliteration": "bêṯ šemeš",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Beth-Shemesh, a place in Palestine",
+      "glossZh": "伯示麥",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 42,
+      "frequencyStrong": "H1053",
+      "strong": "H1053",
+      "strongs": [
+        "H1053"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 916,
+      "lesson": 46,
+      "lessonSlot": 16
+    },
+    {
+      "pointed": "צֹר",
+      "sourcePointed": "צֹר",
+      "unpointed": "צר",
+      "unpointedVariants": [
+        "צר"
+      ],
+      "textbookTransliteration": "ṣōr",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Tsor, a place in Palestine",
+      "glossZh": "推羅",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 42,
+      "frequencyStrong": "H6865",
+      "strong": "H6865",
+      "strongs": [
+        "H6865"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 920,
+      "lesson": 46,
+      "lessonSlot": 20
+    },
+    {
+      "pointed": "יְבוּסִי",
+      "sourcePointed": "יְבוּסִי",
+      "unpointed": "יבוסי",
+      "unpointedVariants": [
+        "יבוסי"
+      ],
+      "textbookTransliteration": "yəḇûsî",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "a Jebusite or inhabitant of Jebus",
+      "glossZh": "耶布斯人",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 41,
+      "frequencyStrong": "H2983",
+      "strong": "H2983",
+      "strongs": [
+        "H2983"
+      ],
+      "partOfSpeech": "noun",
+      "isProperName": true,
+      "properNameTypes": [
+        "people_or_nation"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 939,
+      "lesson": 47,
+      "lessonSlot": 19
+    },
+    {
+      "pointed": "אָחָז",
+      "sourcePointed": "אָחָז",
+      "unpointed": "אחז",
+      "unpointedVariants": [
+        "אחז"
+      ],
+      "textbookTransliteration": "ʾāḥāz",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Achaz, the name of a Jewish king and of an Israelite",
+      "glossZh": "亞哈斯；一名猶大王及一名以色列人的名字",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 41,
+      "frequencyStrong": "H271",
+      "strong": "H271",
+      "strongs": [
+        "H271"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 940,
+      "lesson": 47,
+      "lessonSlot": 20
+    },
+    {
+      "pointed": "שְׁמַעְיָה",
+      "sourcePointed": "שְׁמַעְיָה",
+      "unpointed": "שמעיה",
+      "unpointedVariants": [
+        "שמעיה"
+      ],
+      "textbookTransliteration": "šəmaʿyâ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Shemajah, the name of twenty-five Israelites",
+      "glossZh": "示瑪雅；多名以色列人的名字",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 41,
+      "frequencyStrong": "H8098",
+      "strong": "H8098",
+      "strongs": [
+        "H8098"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 941,
+      "lesson": 48,
+      "lessonSlot": 1
+    },
+    {
+      "pointed": "זְכַרְיָה",
+      "sourcePointed": "זְכַרְיָה",
+      "unpointed": "זכריה",
+      "unpointedVariants": [
+        "זכריה"
+      ],
+      "textbookTransliteration": "zəḵaryâ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Zecarjah, the name of twenty-nine Israelites",
+      "glossZh": "撒迦利亞；多名以色列人的名字",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 41,
+      "frequencyStrong": "H2148",
+      "strong": "H2148",
+      "strongs": [
+        "H2148"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 942,
+      "lesson": 48,
+      "lessonSlot": 2
+    },
+    {
+      "pointed": "גִּלְגָּל",
+      "sourcePointed": "גִּלְגָּל",
+      "unpointed": "גלגל",
+      "unpointedVariants": [
+        "גלגל"
+      ],
+      "textbookTransliteration": "gilgāl",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Gilgal, the name of three places in Palestine",
+      "glossZh": "吉甲；三處地名",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 41,
+      "frequencyStrong": "H1537",
+      "strong": "H1537",
+      "strongs": [
+        "H1537"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 951,
+      "lesson": 48,
+      "lessonSlot": 11
+    },
+    {
+      "pointed": "אֲמַצְיָה",
+      "sourcePointed": "אֲמַצְיָה",
+      "unpointed": "אמציה",
+      "unpointedVariants": [
+        "אמציה"
+      ],
+      "textbookTransliteration": "ʾămaṣyâ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Amatsjah, the name of four Israelites",
+      "glossZh": "亞瑪謝；四名以色列人的名字",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 40,
+      "frequencyStrong": "H558",
+      "strong": "H558",
+      "strongs": [
+        "H558"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 958,
+      "lesson": 48,
+      "lessonSlot": 18
+    },
+    {
+      "pointed": "עֹבֵד אֱדוֹם",
+      "sourcePointed": "עֹבֵד אֱדוֹם",
+      "unpointed": "עבדאדום",
+      "unpointedVariants": [
+        "עבדאדום"
+      ],
+      "textbookTransliteration": "ʿōḇēḏ ʾĕḏôm",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Obed-Edom, the name of five Israelites",
+      "glossZh": "俄別以東；五名以色列人的名字",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 40,
+      "frequencyStrong": "H5654",
+      "strong": "H5654",
+      "strongs": [
+        "H5654"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 960,
+      "lesson": 48,
+      "lessonSlot": 20
+    },
+    {
+      "pointed": "עַי",
+      "sourcePointed": "עַי",
+      "unpointed": "עי",
+      "unpointedVariants": [
+        "עי"
+      ],
+      "textbookTransliteration": "ʿay",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Ai, Aja or Ajath, a place in Palestine",
+      "glossZh": "艾城",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 40,
+      "frequencyStrong": "H5857",
+      "strong": "H5857",
+      "strongs": [
+        "H5857"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 970,
+      "lesson": 49,
+      "lessonSlot": 10
+    },
+    {
+      "pointed": "עֲמָלֵק",
+      "sourcePointed": "עֲמָלֵק",
+      "unpointed": "עמלק",
+      "unpointedVariants": [
+        "עמלק"
+      ],
+      "textbookTransliteration": "ʿămālēq",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Amalek, a descendant of Esau; also his posterity and their country",
+      "glossZh": "亞瑪力；以掃的後裔、其族及其地",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 39,
+      "frequencyStrong": "H6002",
+      "strong": "H6002",
+      "strongs": [
+        "H6002"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person",
+        "place",
+        "people_or_nation"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 972,
+      "lesson": 49,
+      "lessonSlot": 12
+    },
+    {
+      "pointed": "שֵׂעִיר",
+      "sourcePointed": "שֵׂעִיר",
+      "unpointed": "שעיר",
+      "unpointedVariants": [
+        "שעיר"
+      ],
+      "textbookTransliteration": "śēʿîr",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Seir, a mountain of Idumaea and its aboriginal occupants, also one in Palestine",
+      "glossZh": "西珥；以東的山及其居民",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 39,
+      "frequencyStrong": "H8165",
+      "strong": "H8165",
+      "strongs": [
+        "H8165"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place",
+        "people_or_nation"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 973,
+      "lesson": 49,
+      "lessonSlot": 13
+    },
+    {
+      "pointed": "קִרְיַת יְעָרִים",
+      "sourcePointed": "קִרְיַת יְעָרִים",
+      "unpointed": "קריתיערים",
+      "unpointedVariants": [
+        "קריתיערים"
+      ],
+      "textbookTransliteration": "qiryaṯ yəʿārîm",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Kirjath-Jearim or Kirjath-Arim, a place in Palestine",
+      "glossZh": "基列耶琳",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 39,
+      "frequencyStrong": "H7157",
+      "strong": "H7157",
+      "strongs": [
+        "H7157"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 974,
+      "lesson": 49,
+      "lessonSlot": 14
+    },
+    {
+      "pointed": "יְשַׁעְיָה",
+      "sourcePointed": "יְשַׁעְיָה",
+      "unpointed": "ישעיה",
+      "unpointedVariants": [
+        "ישעיה"
+      ],
+      "textbookTransliteration": "yəšaʿyâ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Jeshajah, the name of seven Israelites",
+      "glossZh": "以賽亞；七名以色列人的名字",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 39,
+      "frequencyStrong": "H3470",
+      "strong": "H3470",
+      "strongs": [
+        "H3470"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 975,
+      "lesson": 49,
+      "lessonSlot": 15
+    },
+    {
+      "pointed": "מְרָרִי",
+      "sourcePointed": "מְרָרִי",
+      "unpointed": "מררי",
+      "unpointedVariants": [
+        "מררי"
+      ],
+      "textbookTransliteration": "mərārî",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Merari, an Israelite",
+      "glossZh": "米拉利；以色列人",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 39,
+      "frequencyStrong": "H4847",
+      "strong": "H4847",
+      "strongs": [
+        "H4847"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 976,
+      "lesson": 49,
+      "lessonSlot": 16
+    },
+    {
+      "pointed": "אוּרִיָּה",
+      "sourcePointed": "אוּרִיָּה",
+      "unpointed": "אוריה",
+      "unpointedVariants": [
+        "אוריה"
+      ],
+      "textbookTransliteration": "ʾûriyyâ",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Urijah, the name of one Hittite and five Israelites",
+      "glossZh": "烏利亞；一名赫人及五名以色列人的名字",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 39,
+      "frequencyStrong": "H223",
+      "strong": "H223",
+      "strongs": [
+        "H223"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 978,
+      "lesson": 49,
+      "lessonSlot": 18
+    },
+    {
+      "pointed": "סְדֹם",
+      "sourcePointed": "סְדֹם",
+      "unpointed": "סדם",
+      "unpointedVariants": [
+        "סדם"
+      ],
+      "textbookTransliteration": "səḏōm",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Sedom, a place near the Dead Sea",
+      "glossZh": "所多瑪；死海附近的城",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 39,
+      "frequencyStrong": "H5467",
+      "strong": "H5467",
+      "strongs": [
+        "H5467"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 993,
+      "lesson": 50,
+      "lessonSlot": 13
+    },
+    {
+      "pointed": "גִּדְעוֹן",
+      "sourcePointed": "גִּדְעוֹן",
+      "unpointed": "גדעון",
+      "unpointedVariants": [
+        "גדעון"
+      ],
+      "textbookTransliteration": "giḏʿôn",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Gidon, an Israelite",
+      "glossZh": "基甸；以色列人",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 39,
+      "frequencyStrong": "H1439",
+      "strong": "H1439",
+      "strongs": [
+        "H1439"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "person"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 994,
+      "lesson": 50,
+      "lessonSlot": 14
+    },
+    {
+      "pointed": "חֶשְׁבּוֹן",
+      "sourcePointed": "חֶשְׁבּוֹן",
+      "unpointed": "חשבון",
+      "unpointedVariants": [
+        "חשבון"
+      ],
+      "textbookTransliteration": "ḥešbôn",
+      "transliterationSystem": "Pratico-Van Pelt BBH2",
+      "transliterationStatus": "rule_generated_exception_review",
+      "glossEn": "Cheshbon, a place East of the Jordan",
+      "glossZh": "希實本；約旦河東的城",
+      "sourceType": "reader_frequency_extension",
+      "sourceChapter": null,
+      "sourceOrder": null,
+      "sourceOrders": [],
+      "itemKind": "lexeme",
+      "frequency": 38,
+      "frequencyStrong": "H2809",
+      "strong": "H2809",
+      "strongs": [
+        "H2809"
+      ],
+      "partOfSpeech": "proper_name",
+      "isProperName": true,
+      "properNameTypes": [
+        "place"
+      ],
+      "verification": "lemma_frequency_verified",
+      "languageVariety": "biblical_hebrew",
+      "ordinal": 996,
+      "lesson": 50,
+      "lessonSlot": 16
+    }
+  ]
+}
