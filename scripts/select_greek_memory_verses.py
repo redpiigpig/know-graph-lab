@@ -38,11 +38,19 @@ from verify_greek_vocab_lexicon import fold
 
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / "output" / "source-cache" / "original-readers" / "greek-full"
-VOCAB = ROOT / "data" / "originalReaders" / "vocabulary" / "greek-1000.json"
+VOCAB = ROOT / "data" / "originalReaders" / "vocabulary" / "greek-2000.json"
 OUTPUT = CACHE / "memory-verses.json"
 CANDIDATES_OUT = CACHE / "memory-candidates.json"
 
+# 上冊 only.  下冊's two sentences per lesson come from the patristic and church
+# documents, and are chosen by select_greek_memory_sentences.py.
+VOLUME = 1
 LESSON_COUNT = 50
+# Lessons 1-25 read the New Testament and 26-50 the Greek Old Testament, so a
+# memory verse is drawn from the same half's corpus as that lesson's chapter.
+# Handing lesson three a Septuagint verse would set Hebraic syntax against a
+# vocabulary list that has not left Mounce's first sixty words.
+NT_LESSON_LAST = 25
 DIVINE_FOLDED: set[str] = set()
 PER_LESSON = 2
 
@@ -53,8 +61,8 @@ MAX_WORDS = 15
 # the rest are the books the twenty-five chapters already read, so a memory
 # verse never sends the learner to an edition the reader does not carry.
 NT_BOOKS = list(gs.SBLGNT_BOOKS)
-LXX_BOOKS = ["Gen", "Exod", "Ps", "Isa"]
-DEUTERO_BOOKS = ["TobS", "Jdt", "Wis", "Sir"]
+LXX_BOOKS = ["Gen", "Exod", "Deut", "Ruth", "1Kgs", "Ps", "Prov", "Isa", "Jer", "Ezek", "Jonah"]
+DEUTERO_BOOKS = ["TobS", "Jdt", "Wis", "Sir", "2Macc"]
 PSEUDEPIGRAPHA_BOOKS = ["1En", "PssSol"]
 
 CORPUS_OF = {}
@@ -160,6 +168,16 @@ def pairable(book: str, chapter: int) -> bool:
         return chapter in TOBIT_PAIRED_CHAPTERS
     if book == "Ps":
         return chapter not in PSALM_UNPAIRABLE
+    # Everything else is asked of the one shared crosswalk rather than listed
+    # again here.  It already knows that Septuagint Jeremiah 51 is split across
+    # two Hebrew chapters and that Proverbs is reordered from 24:23 on, and a
+    # second list would be the place where the two answers drift apart.
+    from export_reader_rcuv2010_greek import target_reference
+
+    try:
+        target_reference(book, chapter, 1)
+    except LookupError:
+        return False
     return True
 
 
@@ -169,11 +187,21 @@ OPENING_FORMULA_RE = re.compile(
 
 
 def load_vocabulary() -> dict[int, list[dict]]:
-    entries = json.loads(VOCAB.read_text(encoding="utf-8"))
+    payload = json.loads(VOCAB.read_text(encoding="utf-8"))
     by_lesson: dict[int, list[dict]] = {}
-    for entry in entries:
+    for entry in payload["entries"]:
+        if entry.get("volume") != VOLUME:
+            continue
         by_lesson.setdefault(entry["lesson"], []).append(entry)
+    if sorted(by_lesson) != list(range(1, LESSON_COUNT + 1)):
+        raise ValueError(f"上冊應有 {LESSON_COUNT} 課詞彙，實得 {len(by_lesson)} 課")
     return by_lesson
+
+
+def lesson_corpora(lesson: int) -> set[str]:
+    if lesson <= NT_LESSON_LAST:
+        return {"new-testament"}
+    return {"septuagint", "deuterocanonical", "pseudepigrapha"}
 
 
 def vocabulary_keys(entry: dict) -> set[str]:
@@ -304,9 +332,12 @@ def select(by_lesson: dict[int, list[dict]], pool: list[dict]) -> tuple[list[dic
     for lesson in range(1, LESSON_COUNT + 1):
         known_keys |= lesson_key_sets[lesson]
         lesson_keys = lesson_key_sets[lesson]
+        allowed = lesson_corpora(lesson)
         scored = []
         for candidate in pool:
             if candidate["ref"] in used_refs:
+                continue
+            if candidate["corpus"] not in allowed:
                 continue
             if not candidate["keys"] & lesson_keys:
                 continue
@@ -398,9 +429,15 @@ def main() -> None:
         print(f"  ⚠ 湊不滿兩節的課次：{short}")
 
     payload = {
-        "schemaVersion": "1.0.0",
-        "language": "New Testament Greek",
+        "schemaVersion": "2.0.0",
+        "language": "Koine Greek",
         "languageCode": "grc",
+        "volume": VOLUME,
+        "volumeTitle": "上冊《新約與七十士譯本》",
+        "corpusByHalf": {
+            "1-25": "new-testament",
+            "26-50": "septuagint / deuterocanonical / pseudepigrapha",
+        },
         "target": LESSON_COUNT * PER_LESSON,
         "selected": len(chosen),
         "perLesson": PER_LESSON,

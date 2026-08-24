@@ -40,7 +40,9 @@ VARIANT = "RCUV2（上帝版）"
 
 # The reader's OSIS-style book codes mapped to the codes the official site uses.
 BOOK_CODES = {
-    "Gen": "GEN", "Exod": "EXO", "Ps": "PSA", "Isa": "ISA",
+    "Gen": "GEN", "Exod": "EXO", "Deut": "DEU", "Ruth": "RUT", "1Kgs": "1KI",
+    "Ps": "PSA", "Prov": "PRO", "Isa": "ISA", "Jer": "JER", "Ezek": "EZK",
+    "Jonah": "JON",
     "Matt": "MAT", "Mark": "MRK", "Luke": "LUK", "John": "JHN", "Acts": "ACT",
     "Rom": "ROM", "1Cor": "1CO", "2Cor": "2CO", "Gal": "GAL", "Eph": "EPH",
     "Phil": "PHP", "Col": "COL", "1Thess": "1TH", "2Thess": "2TH",
@@ -50,7 +52,9 @@ BOOK_CODES = {
 }
 
 BOOK_NAMES_ZH = {
-    "Gen": "創世記", "Exod": "出埃及記", "Ps": "詩篇", "Isa": "以賽亞書",
+    "Gen": "創世記", "Exod": "出埃及記", "Deut": "申命記", "Ruth": "路得記",
+    "1Kgs": "列王紀上", "Ps": "詩篇", "Prov": "箴言", "Isa": "以賽亞書",
+    "Jer": "耶利米書", "Ezek": "以西結書", "Jonah": "約拿書",
     "Matt": "馬太福音", "Mark": "馬可福音", "Luke": "路加福音", "John": "約翰福音",
     "Acts": "使徒行傳", "Rom": "羅馬書", "1Cor": "哥林多前書", "2Cor": "哥林多後書",
     "Gal": "加拉太書", "Eph": "以弗所書", "Phil": "腓立比書", "Col": "歌羅西書",
@@ -108,9 +112,66 @@ def psalm_verse_offset(lxx_verse_count: int, mt_verse_count: int) -> tuple[int, 
     )
 
 
+# The Septuagint's Jeremiah is a shorter, differently ordered book: the oracles
+# against the nations sit in the middle where the Hebrew puts them at the end, so
+# from chapter 26 on the two numberings part company entirely.  Only whole-chapter
+# equivalences are tabulated; the five Septuagint chapters whose material is split
+# across two Hebrew ones (25, 29, 30, 32, 51) need verse-level handling and stop
+# the build rather than being approximated.
+JEREMIAH_CHAPTERS = {
+    26: 46, 27: 50, 28: 51, 31: 48, 33: 26, 34: 27, 35: 28, 36: 29, 37: 30,
+    38: 31, 39: 32, 40: 33, 41: 34, 42: 35, 43: 36, 44: 37, 45: 38, 46: 39,
+    47: 40, 48: 41, 49: 42, 50: 43, 52: 52,
+}
+JEREMIAH_SPLIT = {25, 29, 30, 32, 51}
+
+
+def jeremiah_crosswalk(lxx_chapter: int, lxx_verse: int | None) -> tuple[int, int | None, str]:
+    if lxx_chapter <= 24:
+        return lxx_chapter, lxx_verse, "同號"
+    if lxx_chapter in JEREMIAH_SPLIT:
+        raise LookupError(
+            f"七十士耶利米書第 {lxx_chapter} 章的材料在馬所拉本分屬兩章，須逐節人工對照"
+        )
+    target = JEREMIAH_CHAPTERS.get(lxx_chapter)
+    if target is None:
+        raise LookupError(f"七十士耶利米書第 {lxx_chapter} 章沒有對照表項")
+    return target, lxx_verse, f"七十士耶利米書第 {lxx_chapter} 章＝馬所拉第 {target} 章"
+
+
+def jonah_crosswalk(lxx_chapter: int, lxx_verse: int | None) -> tuple[int, int | None, str]:
+    """七十士與希伯來本同號，中文本卻把大魚那一節算作第 1 章末節。
+
+    和合本修訂版沿英文本的分章，約拿書第 1 章有 17 節；希臘文（與希伯來文）
+    的 2:1 就是中文的 1:17，其後整章少一號。
+    """
+    if lxx_chapter != 2:
+        return lxx_chapter, lxx_verse, "同號"
+    if lxx_verse is None:
+        return 2, None, "七十士約拿書第 2 章較中文本多一節（2:1＝中文 1:17）"
+    if lxx_verse == 1:
+        return 1, 17, "七十士約拿書 2:1＝中文本 1:17"
+    return 2, lxx_verse - 1, "七十士約拿書第 2 章節號較中文本多一"
+
+
+def proverbs_crosswalk(lxx_chapter: int, lxx_verse: int | None) -> tuple[int, int | None, str]:
+    """七十士箴言自 24:23 起整段重排，章號不再與馬所拉本相當。"""
+    if lxx_chapter <= 24:
+        return lxx_chapter, lxx_verse, "同號"
+    raise LookupError(
+        f"七十士箴言第 {lxx_chapter} 章在馬所拉本的次序不同，不能按章號取中文"
+    )
+
+
 def target_reference(book: str, chapter: int, verse: int | None) -> tuple[int, int | None, str]:
     if book == "Ps":
         return psalm_crosswalk(chapter, verse)
+    if book == "Jer":
+        return jeremiah_crosswalk(chapter, verse)
+    if book == "Jonah":
+        return jonah_crosswalk(chapter, verse)
+    if book == "Prov":
+        return proverbs_crosswalk(chapter, verse)
     return chapter, verse, "同號"
 
 
@@ -171,26 +232,45 @@ def required() -> tuple[dict[str, set[int]], list[dict]]:
     memory = json.loads(MEMORY.read_text(encoding="utf-8"))
     wanted: dict[str, set[int]] = {}
     crosswalk: list[dict] = []
+    seen: set[tuple] = set()
 
     def add(book: str, chapter: int, verse: int | None, origin: str) -> None:
+        # Silently skipping an unmapped book is how 449 verses ended up with no
+        # Chinese at all: this call said nothing and the master build failed
+        # seven chapters downstream, where the cause is no longer visible.
         if book not in BOOK_CODES:
-            return
+            raise LookupError(
+                f"{origin}：{book} 不在 BOOK_CODES 對照表內，"
+                "補上該卷的官方書卷代號與中文書名後再跑"
+            )
         target_chapter, target_verse, note = target_reference(book, chapter, verse)
         wanted.setdefault(book, set()).add(target_chapter)
-        if note != "同號":
-            crosswalk.append(
-                {
-                    "origin": origin,
-                    "greekRef": f"{book}.{chapter}" + (f".{verse}" if verse else ""),
-                    "chineseRef": f"{book}.{target_chapter}"
-                    + (f".{target_verse}" if target_verse else ""),
-                    "note": note,
-                }
-            )
+        if note == "同號":
+            return
+        # One line per distinct mapping rather than per verse: a psalm would
+        # otherwise repeat the same sentence twenty times.
+        key = (origin, book, chapter, target_chapter, note)
+        if key in seen:
+            return
+        seen.add(key)
+        crosswalk.append(
+            {
+                "origin": origin,
+                "greekRef": f"{book}.{chapter}" + (f".{verse}" if verse else ""),
+                "chineseRef": f"{book}.{target_chapter}"
+                + (f".{target_verse}" if target_verse else ""),
+                "note": note,
+            }
+        )
 
+    # Per verse rather than per chapter: a crosswalk can send one Greek chapter
+    # into two Chinese ones (Septuagint Jonah 2:1 is Chinese Jonah 1:17), and a
+    # chapter-level lookup would never fetch the second of them.
     for chapter in plan["chapters"]:
-        if chapter["corpus"] in {"new-testament", "septuagint"}:
-            add(chapter["osisBook"], chapter["chapter"], None, f"章目 {chapter['ref']}")
+        if chapter["corpus"] not in {"new-testament", "septuagint"}:
+            continue
+        for verse in chapter.get("verses", []):
+            add(chapter["osisBook"], chapter["chapter"], verse["verse"], f"章目 {chapter['ref']}")
     for verse in memory["verses"]:
         if verse["corpus"] in {"new-testament", "septuagint"}:
             add(verse["book"], verse["chapter"], verse["verse"], f"記憶單元 {verse['ref']}")
