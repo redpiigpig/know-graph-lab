@@ -91,6 +91,12 @@ def lxx_pairs():
 
 def build() -> dict:
     table: dict[str, Counter] = defaultdict(Counter)
+    # Folding away accents and breathings makes ἕξ "six" indistinguishable from
+    # ἐξ "out of", and εἷς "one" from εἰς "into"; the commoner word then takes
+    # every occurrence and the other disappears from the counts entirely.  For
+    # those pairs the breathing is the whole word, so keep an exact index too and
+    # consult it before the folded one.
+    exact: dict[str, Counter] = defaultdict(Counter)
     lemma_totals: Counter = Counter()
     provenance: dict[str, set] = defaultdict(set)
     tallies = {}
@@ -102,6 +108,7 @@ def build() -> dict:
             if not key or not lemma:
                 continue
             table[key][lemma] += 1
+            exact[form][lemma] += 1
             lemma_totals[lemma] += 1
             provenance[lemma].add(name)
             count += 1
@@ -130,8 +137,14 @@ def build() -> dict:
             ),
         )
     weights = {key: dict(counts) for key, counts in table.items()}
+    exact_forms = {
+        form: [lemma for lemma, _ in counts.most_common()]
+        for form, counts in exact.items()
+        if len(table[fold(form)]) > 1        # only where folding actually loses something
+    }
     return {
         "schemaVersion": "1.0.0",
+        "exactForms": exact_forms,
         "scope": "通用希臘文（Koine）：新約與七十士譯本的編者詞位標註，不含古典希臘文分析",
         "sources": SOURCES,
         "wordsTagged": tallies,
@@ -157,6 +170,7 @@ def main() -> None:
     tagged = payload["wordsTagged"]
     print(f"  新約標註 {tagged['newTestament']} 詞次、七十士標註 {tagged['septuagint']} 詞次")
     print(f"  字形 {payload['formCount']}、通用希臘文詞位 {payload['lemmaCount']}")
+    print(f"  另存重音敏感字形 {len(payload['exactForms'])} 筆，供 ἕξ／ἐξ 這類最小對立詞辨別")
     ambiguous = sum(1 for values in payload["forms"].values() if len(values) > 1)
     print(f"  一形多位者 {ambiguous}（{ambiguous * 100 // max(payload['formCount'], 1)}%），依標註次數排序")
 

@@ -1,0 +1,6759 @@
+{
+  "schemaVersion": "1.0.0",
+  "note": "附錄不計入每課二十詞。專名以語料大小寫判定（同一詞位八成以上首字大寫），分類與中文以站上「翻譯定名」詞庫為準；詞庫未收者留空待補，不自行擬名。策展類附錄的 frequency 為本讀本所印語料中的實際出現次數，attested 為 false 者表示語料未見，供檢討是否該列。",
+  "nameThreshold": 10,
+  "appendices": [
+    {
+      "key": "names",
+      "title": "人名、地名與國族",
+      "entries": [
+        {
+          "headword": "Ἰσραήλ",
+          "lemma": "Ἰσραήλ",
+          "frequency": 2751,
+          "byCorpus": {
+            "newTestament": 68,
+            "septuagint": 2650,
+            "patristic": 33
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰησοῦς",
+          "lemma": "Ἰησοῦς",
+          "frequency": 1439,
+          "byCorpus": {
+            "newTestament": 906,
+            "septuagint": 261,
+            "patristic": 272
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Χριστοῦ",
+          "lemma": "Χριστός",
+          "frequency": 1042,
+          "byCorpus": {
+            "newTestament": 528,
+            "septuagint": 42,
+            "patristic": 472
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰούδα",
+          "lemma": "Ἰούδας",
+          "frequency": 959,
+          "byCorpus": {
+            "newTestament": 44,
+            "septuagint": 902,
+            "patristic": 13
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰερουσαλήμ",
+          "lemma": "Ἱερουσαλήμ",
+          "frequency": 835,
+          "byCorpus": {
+            "newTestament": 76,
+            "septuagint": 741,
+            "patristic": 18
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μωυσῆς",
+          "lemma": "Μωσεύς",
+          "frequency": 755,
+          "byCorpus": {
+            "septuagint": 745,
+            "patristic": 10
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Αἰγύπτου",
+          "lemma": "Αἴγυπτος",
+          "frequency": 660,
+          "byCorpus": {
+            "newTestament": 25,
+            "septuagint": 616,
+            "patristic": 19
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰακὼβ",
+          "lemma": "Ἰακώβ",
+          "frequency": 447,
+          "byCorpus": {
+            "newTestament": 27,
+            "septuagint": 392,
+            "patristic": 28
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σαοὺλ",
+          "lemma": "Σαούλ",
+          "frequency": 390,
+          "byCorpus": {
+            "newTestament": 9,
+            "septuagint": 379,
+            "patristic": 2
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰουδαίων",
+          "lemma": "Ἰουδαῖος",
+          "frequency": 380,
+          "byCorpus": {
+            "newTestament": 191,
+            "septuagint": 123,
+            "patristic": 66
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀαρὼν",
+          "lemma": "Ἀαρών",
+          "frequency": 372,
+          "byCorpus": {
+            "newTestament": 5,
+            "septuagint": 362,
+            "patristic": 5
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σαλωμὼν",
+          "lemma": "Σαλωμών",
+          "frequency": 322,
+          "byCorpus": {
+            "septuagint": 322
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Φαραὼ",
+          "lemma": "Φαραώ",
+          "frequency": 292,
+          "byCorpus": {
+            "newTestament": 5,
+            "septuagint": 284,
+            "patristic": 3
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀβραὰμ",
+          "lemma": "Ἀβραάμ",
+          "frequency": 290,
+          "byCorpus": {
+            "newTestament": 73,
+            "septuagint": 191,
+            "patristic": 26
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰωσὴφ",
+          "lemma": "Ἰωσήφ",
+          "frequency": 264,
+          "byCorpus": {
+            "newTestament": 35,
+            "septuagint": 223,
+            "patristic": 6
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βαβυλῶνος",
+          "lemma": "Βαβυλών",
+          "frequency": 257,
+          "byCorpus": {
+            "newTestament": 12,
+            "septuagint": 244,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰορδάνου",
+          "lemma": "Ἰορδάνης",
+          "frequency": 215,
+          "byCorpus": {
+            "newTestament": 15,
+            "septuagint": 199,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰωναθὰν",
+          "lemma": "Ιωναθαν",
+          "frequency": 208,
+          "byCorpus": {
+            "septuagint": 208
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἐφράιμ",
+          "lemma": "Ἐφραίμ",
+          "frequency": 202,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 199,
+            "patristic": 2
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Παῦλος",
+          "lemma": "Παῦλος",
+          "frequency": 178,
+          "byCorpus": {
+            "newTestament": 158,
+            "patristic": 20
+          },
+          "kind": "person",
+          "zh": "保羅",
+          "zhSource": "theologians"
+        },
+        {
+          "headword": "Πέτρος",
+          "lemma": "Πέτρος",
+          "frequency": 176,
+          "byCorpus": {
+            "newTestament": 156,
+            "septuagint": 13,
+            "patristic": 7
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μωὰβ",
+          "lemma": "Μωαβ",
+          "frequency": 170,
+          "byCorpus": {
+            "septuagint": 168,
+            "patristic": 2
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μανασσὴ",
+          "lemma": "Μανασσῆς",
+          "frequency": 161,
+          "byCorpus": {
+            "newTestament": 3,
+            "septuagint": 155,
+            "patristic": 3
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰωάννης",
+          "lemma": "Ἰωάννης",
+          "frequency": 159,
+          "byCorpus": {
+            "newTestament": 135,
+            "septuagint": 15,
+            "patristic": 9
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰσαὰκ",
+          "lemma": "Ἰσαάκ",
+          "frequency": 157,
+          "byCorpus": {
+            "newTestament": 20,
+            "septuagint": 121,
+            "patristic": 16
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σίμων",
+          "lemma": "Σίμων",
+          "frequency": 154,
+          "byCorpus": {
+            "newTestament": 75,
+            "septuagint": 75,
+            "patristic": 4
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μωϋσῆς",
+          "lemma": "Μωϋσῆς",
+          "frequency": 153,
+          "byCorpus": {
+            "newTestament": 79,
+            "patristic": 74
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰωὰβ",
+          "lemma": "Ιωαβ",
+          "frequency": 153,
+          "byCorpus": {
+            "septuagint": 153
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Αἰγυπτίων",
+          "lemma": "Αἰγύπτιος",
+          "frequency": 151,
+          "byCorpus": {
+            "newTestament": 5,
+            "septuagint": 133,
+            "patristic": 13
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰουδαίας",
+          "lemma": "Ἰουδαία",
+          "frequency": 149,
+          "byCorpus": {
+            "newTestament": 47,
+            "septuagint": 97,
+            "patristic": 5
+          },
+          "kind": "place",
+          "zh": "猶太",
+          "zhSource": "place_names"
+        },
+        {
+          "headword": "Σαμουὴλ",
+          "lemma": "Σαμουήλ",
+          "frequency": 149,
+          "byCorpus": {
+            "newTestament": 3,
+            "septuagint": 145,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Συρίας",
+          "lemma": "Συρία",
+          "frequency": 148,
+          "byCorpus": {
+            "newTestament": 8,
+            "septuagint": 122,
+            "patristic": 18
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀσσυρίων",
+          "lemma": "Ἀσσύριος",
+          "frequency": 140,
+          "byCorpus": {
+            "septuagint": 137,
+            "patristic": 3
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἑζεκίας",
+          "lemma": "Ἐζεκίας",
+          "frequency": 138,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 133,
+            "patristic": 3
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γαλαάδ",
+          "lemma": "Γαλαάδ",
+          "frequency": 135,
+          "byCorpus": {
+            "septuagint": 135
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σαμαρείας",
+          "lemma": "Σαμάρεια",
+          "frequency": 127,
+          "byCorpus": {
+            "newTestament": 11,
+            "septuagint": 114,
+            "patristic": 2
+          },
+          "kind": "place",
+          "zh": "撒馬利亞",
+          "zhSource": "place_names"
+        },
+        {
+          "headword": "Ἰερεμίας",
+          "lemma": "Ἱερεμίας",
+          "frequency": 121,
+          "byCorpus": {
+            "newTestament": 3,
+            "septuagint": 113,
+            "patristic": 5
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἠσαὺ",
+          "lemma": "Ἠσαῦ",
+          "frequency": 112,
+          "byCorpus": {
+            "newTestament": 3,
+            "septuagint": 108,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰεροβοὰμ",
+          "lemma": "Ιεροβοαμ",
+          "frequency": 111,
+          "byCorpus": {
+            "septuagint": 111
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀβεσσαλὼμ",
+          "lemma": "Αβεσσαλωμ",
+          "frequency": 111,
+          "byCorpus": {
+            "septuagint": 111
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀμμὼν",
+          "lemma": "Αμμων",
+          "frequency": 110,
+          "byCorpus": {
+            "septuagint": 110
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Χανάαν",
+          "lemma": "Χαναάν",
+          "frequency": 103,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 101
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Φαρισαῖοι",
+          "lemma": "Φαρισαῖος",
+          "frequency": 97,
+          "byCorpus": {
+            "newTestament": 96,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἱεροσόλυμα",
+          "lemma": "Ἱεροσόλυμα",
+          "frequency": 96,
+          "byCorpus": {
+            "newTestament": 63,
+            "septuagint": 30,
+            "patristic": 3
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀμορραίων",
+          "lemma": "Ἀμορραῖος",
+          "frequency": 93,
+          "byCorpus": {
+            "septuagint": 92,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀχαὰβ",
+          "lemma": "Αχααβ",
+          "frequency": 93,
+          "byCorpus": {
+            "septuagint": 93
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Χαλδαίων",
+          "lemma": "Χαλδαῖος",
+          "frequency": 92,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 87,
+            "patristic": 4
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Δανιὴλ",
+          "lemma": "Δανιήλ",
+          "frequency": 90,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 84,
+            "patristic": 5
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ῥουβὴν",
+          "lemma": "Ῥουβήν",
+          "frequency": 88,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 87
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ναβουχοδονοσὸρ",
+          "lemma": "Ναβουχοδονοσόρ",
+          "frequency": 88,
+          "byCorpus": {
+            "septuagint": 88
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γὰδ",
+          "lemma": "Γάδ",
+          "frequency": 80,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 78,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Δὰν",
+          "lemma": "Δαν",
+          "frequency": 79,
+          "byCorpus": {
+            "septuagint": 79
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἐλεαζὰρ",
+          "lemma": "Ἐλεάζαρ",
+          "frequency": 78,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 76
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἠσαίας",
+          "lemma": "Ἡσαΐας",
+          "frequency": 78,
+          "byCorpus": {
+            "newTestament": 22,
+            "septuagint": 33,
+            "patristic": 23
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Χεβρὼν",
+          "lemma": "Χεβρων",
+          "frequency": 76,
+          "byCorpus": {
+            "septuagint": 76
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γαλιλαίας",
+          "lemma": "Γαλιλαία",
+          "frequency": 72,
+          "byCorpus": {
+            "newTestament": 61,
+            "septuagint": 11
+          },
+          "kind": "place",
+          "zh": "加利利",
+          "zhSource": "place_names"
+        },
+        {
+          "headword": "Ἑλλήνων",
+          "lemma": "Ἕλλην",
+          "frequency": 71,
+          "byCorpus": {
+            "newTestament": 25,
+            "septuagint": 13,
+            "patristic": 33
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰωὰς",
+          "lemma": "Ιωας",
+          "frequency": 70,
+          "byCorpus": {
+            "septuagint": 69,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Χαναναίων",
+          "lemma": "Χαναναῖος",
+          "frequency": 69,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 68
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰὼβ",
+          "lemma": "Ἰώβ",
+          "frequency": 69,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 63,
+            "patristic": 5
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βάαλ",
+          "lemma": "Βάαλ",
+          "frequency": 67,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 66
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Λευεὶ",
+          "lemma": "λεύω",
+          "frequency": 67,
+          "byCorpus": {
+            "septuagint": 67
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Πιλᾶτος",
+          "lemma": "Πιλᾶτος",
+          "frequency": 66,
+          "byCorpus": {
+            "newTestament": 55,
+            "patristic": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βαλαὰμ",
+          "lemma": "Βαλαάμ",
+          "frequency": 66,
+          "byCorpus": {
+            "newTestament": 3,
+            "septuagint": 63
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀβρὰμ",
+          "lemma": "Αβραμ",
+          "frequency": 66,
+          "byCorpus": {
+            "septuagint": 66
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Δαυὶδ",
+          "lemma": "Δαυίδ",
+          "frequency": 64,
+          "byCorpus": {
+            "newTestament": 59,
+            "patristic": 5
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰωσαφὰτ",
+          "lemma": "Ἰωσαφάτ",
+          "frequency": 64,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 62
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Νῶε",
+          "lemma": "Νῶε",
+          "frequency": 63,
+          "byCorpus": {
+            "newTestament": 8,
+            "septuagint": 49,
+            "patristic": 6
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Δαμασκοῦ",
+          "lemma": "Δαμασκός",
+          "frequency": 63,
+          "byCorpus": {
+            "newTestament": 15,
+            "septuagint": 47,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βαιθήλ",
+          "lemma": "Βαιθηλ",
+          "frequency": 63,
+          "byCorpus": {
+            "septuagint": 63
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Συμεὼν",
+          "lemma": "Συμεών",
+          "frequency": 62,
+          "byCorpus": {
+            "newTestament": 7,
+            "septuagint": 54,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ῥοβοὰμ",
+          "lemma": "Ῥοβοάμ",
+          "frequency": 60,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 58
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀβεννὴρ",
+          "lemma": "Αβεννηρ",
+          "frequency": 60,
+          "byCorpus": {
+            "septuagint": 60
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ζαχαρίας",
+          "lemma": "Ζαχαρίας",
+          "frequency": 59,
+          "byCorpus": {
+            "newTestament": 11,
+            "septuagint": 47,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σάρρα",
+          "lemma": "Σάρρα",
+          "frequency": 59,
+          "byCorpus": {
+            "newTestament": 4,
+            "septuagint": 55
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Λαβὰν",
+          "lemma": "Λαβαν",
+          "frequency": 58,
+          "byCorpus": {
+            "septuagint": 57,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀζαρίας",
+          "lemma": "Ἀζαρίας",
+          "frequency": 58,
+          "byCorpus": {
+            "septuagint": 56,
+            "patristic": 2
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰδουμαίας",
+          "lemma": "Ἰδουμαία",
+          "frequency": 57,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 56
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μαδιάμ",
+          "lemma": "Μαδιάμ",
+          "frequency": 57,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 56
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀσσοὺρ",
+          "lemma": "Ασσουρ",
+          "frequency": 56,
+          "byCorpus": {
+            "septuagint": 56
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σιών",
+          "lemma": "Σιών",
+          "frequency": 55,
+          "byCorpus": {
+            "newTestament": 7,
+            "septuagint": 41,
+            "patristic": 7
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βαλὰκ",
+          "lemma": "Βαλάκ",
+          "frequency": 54,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 53
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰωρὰμ",
+          "lemma": "Ἰωράμ",
+          "frequency": 53,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 51
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀσὰ",
+          "lemma": "Ἀσά",
+          "frequency": 53,
+          "byCorpus": {
+            "septuagint": 53
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀντίοχος",
+          "lemma": "Ἀντίοχος",
+          "frequency": 53,
+          "byCorpus": {
+            "septuagint": 53
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ῥαχὴλ",
+          "lemma": "Ῥαχήλ",
+          "frequency": 52,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 50,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Τύρου",
+          "lemma": "Τύρος",
+          "frequency": 52,
+          "byCorpus": {
+            "newTestament": 11,
+            "septuagint": 41
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἐδώμ",
+          "lemma": "Εδωμ",
+          "frequency": 52,
+          "byCorpus": {
+            "septuagint": 52
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἡρῴδης",
+          "lemma": "Ἡρῴδης",
+          "frequency": 51,
+          "byCorpus": {
+            "newTestament": 43,
+            "patristic": 8
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σοδόμων",
+          "lemma": "Σόδομα",
+          "frequency": 51,
+          "byCorpus": {
+            "newTestament": 9,
+            "septuagint": 39,
+            "patristic": 3
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ναθὰν",
+          "lemma": "Νάθαν",
+          "frequency": 51,
+          "byCorpus": {
+            "septuagint": 50,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰωδᾶε",
+          "lemma": "Ιωδαε",
+          "frequency": 51,
+          "byCorpus": {
+            "septuagint": 51
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰεσσαὶ",
+          "lemma": "Ἰεσσαί",
+          "frequency": 50,
+          "byCorpus": {
+            "newTestament": 5,
+            "septuagint": 38,
+            "patristic": 7
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀμαλὴκ",
+          "lemma": "Αμαληκ",
+          "frequency": 50,
+          "byCorpus": {
+            "septuagint": 48,
+            "patristic": 2
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ζαβουλὼν",
+          "lemma": "Ζαβουλών",
+          "frequency": 49,
+          "byCorpus": {
+            "newTestament": 3,
+            "septuagint": 46
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Φίλιππος",
+          "lemma": "Φίλιππος",
+          "frequency": 49,
+          "byCorpus": {
+            "newTestament": 36,
+            "septuagint": 11,
+            "patristic": 2
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Δημήτριος",
+          "lemma": "Δημήτριος",
+          "frequency": 49,
+          "byCorpus": {
+            "newTestament": 3,
+            "septuagint": 46
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σεδεκίας",
+          "lemma": "Σεδεκίας",
+          "frequency": 49,
+          "byCorpus": {
+            "septuagint": 49
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀδὰμ",
+          "lemma": "Ἀδάμ",
+          "frequency": 47,
+          "byCorpus": {
+            "newTestament": 9,
+            "septuagint": 32,
+            "patristic": 6
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἁνανίας",
+          "lemma": "Ἀνανίας",
+          "frequency": 47,
+          "byCorpus": {
+            "newTestament": 11,
+            "septuagint": 34,
+            "patristic": 2
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γεδεὼν",
+          "lemma": "Γεδεών",
+          "frequency": 47,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 46
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Καὰθ",
+          "lemma": "Κααθ",
+          "frequency": 47,
+          "byCorpus": {
+            "septuagint": 47
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μαρίας",
+          "lemma": "Μαρία",
+          "frequency": 45,
+          "byCorpus": {
+            "newTestament": 28,
+            "septuagint": 3,
+            "patristic": 14
+          },
+          "kind": "person",
+          "zh": "馬利亞",
+          "zhSource": "theologians"
+        },
+        {
+          "headword": "Σαμψών",
+          "lemma": "Σαμψών",
+          "frequency": 45,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 44
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ὀλοφέρνου",
+          "lemma": "Ολοφέρνης",
+          "frequency": 45,
+          "byCorpus": {
+            "septuagint": 44,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Συχὲμ",
+          "lemma": "Συχέμ",
+          "frequency": 44,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 42
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Πτολεμαῖος",
+          "lemma": "Πτολεμαΐς",
+          "frequency": 44,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 42,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀσὰφ",
+          "lemma": "Ἀσάφ",
+          "frequency": 43,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 40,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀσὴρ",
+          "lemma": "Ἀσήρ",
+          "frequency": 43,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 41
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Λὼτ",
+          "lemma": "Λώτ",
+          "frequency": 43,
+          "byCorpus": {
+            "newTestament": 4,
+            "septuagint": 37,
+            "patristic": 2
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Νικάνωρ",
+          "lemma": "Νικάνωρ",
+          "frequency": 43,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 42
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Χριστιανοὶ",
+          "lemma": "Χριστιανός",
+          "frequency": 43,
+          "byCorpus": {
+            "newTestament": 3,
+            "patristic": 40
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σαδὼκ",
+          "lemma": "Σαδώκ",
+          "frequency": 42,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 40
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰάκωβον",
+          "lemma": "Ἰάκωβος",
+          "frequency": 42,
+          "byCorpus": {
+            "newTestament": 42
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μαριὰμ",
+          "lemma": "Μαριάμ",
+          "frequency": 42,
+          "byCorpus": {
+            "newTestament": 26,
+            "septuagint": 15,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Καίσαρος",
+          "lemma": "Καῖσαρ",
+          "frequency": 42,
+          "byCorpus": {
+            "newTestament": 29,
+            "patristic": 13
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Τιμόθεος",
+          "lemma": "Τιμόθεος",
+          "frequency": 42,
+          "byCorpus": {
+            "newTestament": 24,
+            "septuagint": 18
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Κόρε",
+          "lemma": "Κορέ",
+          "frequency": 42,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 41
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰσμαὴλ",
+          "lemma": "Ισμαηλ",
+          "frequency": 42,
+          "byCorpus": {
+            "septuagint": 42
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰσσαχὰρ",
+          "lemma": "Ἰσσαχάρ",
+          "frequency": 41,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 40
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Καδὴς",
+          "lemma": "Καδης",
+          "frequency": 41,
+          "byCorpus": {
+            "septuagint": 41
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Χαλὲβ",
+          "lemma": "Χαλεβ",
+          "frequency": 41,
+          "byCorpus": {
+            "septuagint": 41
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Χετταῖον",
+          "lemma": "Χετταῖος",
+          "frequency": 40,
+          "byCorpus": {
+            "septuagint": 40
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Οὐρείας",
+          "lemma": "ὄρειος",
+          "frequency": 40,
+          "byCorpus": {
+            "septuagint": 40
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γαβαὼν",
+          "lemma": "Γαβαων",
+          "frequency": 40,
+          "byCorpus": {
+            "septuagint": 40
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀμὼς",
+          "lemma": "Ἀμώς",
+          "frequency": 39,
+          "byCorpus": {
+            "newTestament": 3,
+            "septuagint": 33,
+            "patristic": 3
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἠλίας",
+          "lemma": "Ἠλίας",
+          "frequency": 39,
+          "byCorpus": {
+            "newTestament": 29,
+            "septuagint": 4,
+            "patristic": 6
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ῥεβέκκα",
+          "lemma": "Ῥεβέκκα",
+          "frequency": 38,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 34,
+            "patristic": 3
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἁλληλουιά",
+          "lemma": "ἀλληλούϊα",
+          "frequency": 38,
+          "byCorpus": {
+            "newTestament": 4,
+            "septuagint": 22,
+            "patristic": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ῥαγουὴλ",
+          "lemma": "Ῥαγουήλ",
+          "frequency": 38,
+          "byCorpus": {
+            "septuagint": 38
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἁδὲρ",
+          "lemma": "Αδερ",
+          "frequency": 38,
+          "byCorpus": {
+            "septuagint": 38
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰωνᾶς",
+          "lemma": "Ἰωνᾶς",
+          "frequency": 37,
+          "byCorpus": {
+            "newTestament": 9,
+            "septuagint": 27,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σύρος",
+          "lemma": "Σύρος",
+          "frequency": 37,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 33,
+            "patristic": 3
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἐβραίων",
+          "lemma": "Ἑβραῖος",
+          "frequency": 37,
+          "byCorpus": {
+            "newTestament": 4,
+            "septuagint": 32,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Νινευή",
+          "lemma": "Νινευΐ",
+          "frequency": 37,
+          "byCorpus": {
+            "septuagint": 37
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰεβουσαῖον",
+          "lemma": "Ιεβουσαῖος",
+          "frequency": 37,
+          "byCorpus": {
+            "septuagint": 37
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βασὰν",
+          "lemma": "Βασαν",
+          "frequency": 37,
+          "byCorpus": {
+            "septuagint": 37
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Περσῶν",
+          "lemma": "Πέρσης",
+          "frequency": 37,
+          "byCorpus": {
+            "septuagint": 36,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σηὼν",
+          "lemma": "Σηων",
+          "frequency": 35,
+          "byCorpus": {
+            "septuagint": 35
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἑσεβὼν",
+          "lemma": "Εσεβων",
+          "frequency": 35,
+          "byCorpus": {
+            "septuagint": 35
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γαί",
+          "lemma": "Γαι",
+          "frequency": 35,
+          "byCorpus": {
+            "septuagint": 35
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ναυὴ",
+          "lemma": "Ναυη",
+          "frequency": 34,
+          "byCorpus": {
+            "septuagint": 30,
+            "patristic": 4
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βηρσάβεε",
+          "lemma": "Βηρσαβεε",
+          "frequency": 34,
+          "byCorpus": {
+            "septuagint": 34
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀλέξανδρος",
+          "lemma": "Ἀλέξανδρος",
+          "frequency": 33,
+          "byCorpus": {
+            "newTestament": 6,
+            "septuagint": 27
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γέθ",
+          "lemma": "Γεθ",
+          "frequency": 33,
+          "byCorpus": {
+            "septuagint": 33
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀβιαθὰρ",
+          "lemma": "Ἀβιάθαρ",
+          "frequency": 32,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 31
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γάζης",
+          "lemma": "Γάζα",
+          "frequency": 32,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 30
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ῥώμην",
+          "lemma": "Ῥώμη",
+          "frequency": 32,
+          "byCorpus": {
+            "newTestament": 8,
+            "septuagint": 14,
+            "patristic": 10
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀσίας",
+          "lemma": "Ἀσία",
+          "frequency": 31,
+          "byCorpus": {
+            "newTestament": 18,
+            "septuagint": 8,
+            "patristic": 5
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Αἰθιόπων",
+          "lemma": "Αἰθίοψ",
+          "frequency": 31,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 28,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γαβαά",
+          "lemma": "Γαβαα",
+          "frequency": 31,
+          "byCorpus": {
+            "septuagint": 31
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀμνὼν",
+          "lemma": "Αμνων",
+          "frequency": 31,
+          "byCorpus": {
+            "septuagint": 31
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βαναίας",
+          "lemma": "Βαναιας",
+          "frequency": 31,
+          "byCorpus": {
+            "septuagint": 31
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μακκαβαῖος",
+          "lemma": "Μακκαβαῖος",
+          "frequency": 31,
+          "byCorpus": {
+            "septuagint": 31
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ῥωμαίων",
+          "lemma": "Ῥωμαῖος",
+          "frequency": 30,
+          "byCorpus": {
+            "newTestament": 12,
+            "septuagint": 13,
+            "patristic": 5
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰεφθάε",
+          "lemma": "Ἰεφθάε",
+          "frequency": 30,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 29
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Θαιμάν",
+          "lemma": "Θαιμάν",
+          "frequency": 30,
+          "byCorpus": {
+            "septuagint": 30
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γάλγαλα",
+          "lemma": "Γάλγαλα",
+          "frequency": 30,
+          "byCorpus": {
+            "septuagint": 30
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βόος",
+          "lemma": "Βόος",
+          "frequency": 29,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 28
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βαρναβᾶς",
+          "lemma": "Βαρναβᾶς",
+          "frequency": 29,
+          "byCorpus": {
+            "newTestament": 28,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σικίμων",
+          "lemma": "Σίκιμα",
+          "frequency": 29,
+          "byCorpus": {
+            "septuagint": 29
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μεμφιβόσθε",
+          "lemma": "Μεμφιβοσθε",
+          "frequency": 29,
+          "byCorpus": {
+            "septuagint": 29
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Πολύκαρπος",
+          "lemma": "πολύκαρπος",
+          "frequency": 29,
+          "byCorpus": {
+            "patristic": 29
+          },
+          "kind": "person",
+          "zh": "士每拿的坡旅甲",
+          "zhSource": "theologians"
+        },
+        {
+          "headword": "Ἀχὰζ",
+          "lemma": "Ἀχάζ",
+          "frequency": 28,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 25,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἄζωτον",
+          "lemma": "Ἄζωτος",
+          "frequency": 28,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 27
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Εὑαῖον",
+          "lemma": "Ευαῖος",
+          "frequency": 28,
+          "byCorpus": {
+            "septuagint": 28
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γεδσὼν",
+          "lemma": "Γεδσων",
+          "frequency": 28,
+          "byCorpus": {
+            "septuagint": 28
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀβιὰ",
+          "lemma": "Ἀβιά",
+          "frequency": 27,
+          "byCorpus": {
+            "newTestament": 3,
+            "septuagint": 24
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Εὐφράτην",
+          "lemma": "Εὐφράτης",
+          "frequency": 27,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 25
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἐλιὰβ",
+          "lemma": "Ελιαβ",
+          "frequency": 27,
+          "byCorpus": {
+            "septuagint": 27
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γοδολίαν",
+          "lemma": "Γοδολιας",
+          "frequency": 27,
+          "byCorpus": {
+            "septuagint": 27
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Δαρείου",
+          "lemma": "Δαρεῖος",
+          "frequency": 27,
+          "byCorpus": {
+            "septuagint": 27
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γόμορρα",
+          "lemma": "Γόμορρα",
+          "frequency": 26,
+          "byCorpus": {
+            "newTestament": 4,
+            "septuagint": 20,
+            "patristic": 2
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἑνὼχ",
+          "lemma": "Ἐνώχ",
+          "frequency": 26,
+          "byCorpus": {
+            "newTestament": 3,
+            "septuagint": 19,
+            "patristic": 4
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰωὴλ",
+          "lemma": "Ἰωήλ",
+          "frequency": 26,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 25
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Φερεζαῖον",
+          "lemma": "Φερεζαῖος",
+          "frequency": 26,
+          "byCorpus": {
+            "septuagint": 26
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀβιμέλεχ",
+          "lemma": "Αβιμελεχ",
+          "frequency": 26,
+          "byCorpus": {
+            "septuagint": 26
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Λεία",
+          "lemma": "Λεια",
+          "frequency": 26,
+          "byCorpus": {
+            "septuagint": 26
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀρνών",
+          "lemma": "Αρνων",
+          "frequency": 26,
+          "byCorpus": {
+            "septuagint": 26
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βαροὺχ",
+          "lemma": "Βαρουχ",
+          "frequency": 26,
+          "byCorpus": {
+            "septuagint": 26
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰόππην",
+          "lemma": "Ἰόππη",
+          "frequency": 25,
+          "byCorpus": {
+            "newTestament": 10,
+            "septuagint": 15
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Λυσίας",
+          "lemma": "Λυσίας",
+          "frequency": 25,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 23
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Κάιν",
+          "lemma": "Κάϊν",
+          "frequency": 25,
+          "byCorpus": {
+            "newTestament": 3,
+            "septuagint": 16,
+            "patristic": 6
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βαασὰ",
+          "lemma": "Βαασα",
+          "frequency": 25,
+          "byCorpus": {
+            "septuagint": 25
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ζοροβαβὲλ",
+          "lemma": "Ζοροβαβέλ",
+          "frequency": 24,
+          "byCorpus": {
+            "newTestament": 3,
+            "septuagint": 21
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰωανὰν",
+          "lemma": "Ἰωανάν",
+          "frequency": 24,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 23
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀντιόχειαν",
+          "lemma": "Ἀντιόχεια",
+          "frequency": 24,
+          "byCorpus": {
+            "newTestament": 18,
+            "septuagint": 2,
+            "patristic": 4
+          },
+          "kind": "place",
+          "zh": "安提阿",
+          "zhSource": "place_names"
+        },
+        {
+          "headword": "Ναβὰτ",
+          "lemma": "Ναβατ",
+          "frequency": 24,
+          "byCorpus": {
+            "septuagint": 24
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἁζαὴλ",
+          "lemma": "Αζαηλ",
+          "frequency": 24,
+          "byCorpus": {
+            "septuagint": 24
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Κύρου",
+          "lemma": "Κῦρος",
+          "frequency": 24,
+          "byCorpus": {
+            "septuagint": 23,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Φάρες",
+          "lemma": "Φαρές",
+          "frequency": 23,
+          "byCorpus": {
+            "newTestament": 3,
+            "septuagint": 20
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μεσοποταμίαν",
+          "lemma": "Μεσοποταμία",
+          "frequency": 23,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 21
+          },
+          "kind": "place",
+          "zh": "美索不達米亞",
+          "zhSource": "place_names"
+        },
+        {
+          "headword": "Καρμήλῳ",
+          "lemma": "Κάρμηλος",
+          "frequency": 23,
+          "byCorpus": {
+            "septuagint": 23
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βηθλέεμ",
+          "lemma": "Βηθλέεμ",
+          "frequency": 22,
+          "byCorpus": {
+            "newTestament": 8,
+            "septuagint": 13,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἅβελ",
+          "lemma": "Ἄβελ",
+          "frequency": 22,
+          "byCorpus": {
+            "newTestament": 4,
+            "septuagint": 13,
+            "patristic": 5
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μακεδονίαν",
+          "lemma": "Μακεδονία",
+          "frequency": 22,
+          "byCorpus": {
+            "newTestament": 22
+          },
+          "kind": "place",
+          "zh": "馬其頓",
+          "zhSource": "place_names"
+        },
+        {
+          "headword": "Ἰεζάβελ",
+          "lemma": "Ἰεζάβελ",
+          "frequency": 22,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 21
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰθαμάρ",
+          "lemma": "Ιθαμαρ",
+          "frequency": 22,
+          "byCorpus": {
+            "septuagint": 22
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ναβὰλ",
+          "lemma": "Ναβαλ",
+          "frequency": 22,
+          "byCorpus": {
+            "septuagint": 22
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ὀρνὰ",
+          "lemma": "Ορνα",
+          "frequency": 22,
+          "byCorpus": {
+            "septuagint": 22
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Τρύφων",
+          "lemma": "Τρύφων",
+          "frequency": 22,
+          "byCorpus": {
+            "septuagint": 19,
+            "patristic": 3
+          },
+          "kind": "person",
+          "zh": "特里弗",
+          "zhSource": "theologians"
+        },
+        {
+          "headword": "Ῥαμὰ",
+          "lemma": "Ῥαμᾶ",
+          "frequency": 21,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 20
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ματταθίας",
+          "lemma": "Ματταθίας",
+          "frequency": 21,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 19
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ναδὰβ",
+          "lemma": "Ναδαβ",
+          "frequency": 21,
+          "byCorpus": {
+            "septuagint": 20,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ὣρ",
+          "lemma": "Ωρ",
+          "frequency": 21,
+          "byCorpus": {
+            "septuagint": 21
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀσκάλωνα",
+          "lemma": "Ἀσκαλών",
+          "frequency": 21,
+          "byCorpus": {
+            "septuagint": 21
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀγχοὺς",
+          "lemma": "Αγχους",
+          "frequency": 21,
+          "byCorpus": {
+            "septuagint": 21
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἁδραάζαρ",
+          "lemma": "Αδρααζαρ",
+          "frequency": 21,
+          "byCorpus": {
+            "septuagint": 21
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ῥοὺθ",
+          "lemma": "Ῥούθ",
+          "frequency": 20,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 19
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σιδῶνος",
+          "lemma": "Σιδών",
+          "frequency": 20,
+          "byCorpus": {
+            "newTestament": 9,
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ναχὼρ",
+          "lemma": "Ναχώρ",
+          "frequency": 20,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 19
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ὢγ",
+          "lemma": "Ωγ",
+          "frequency": 20,
+          "byCorpus": {
+            "septuagint": 20
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μασσηφά",
+          "lemma": "Μασσηφα",
+          "frequency": 20,
+          "byCorpus": {
+            "septuagint": 20
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σαφὰν",
+          "lemma": "Σαφαν",
+          "frequency": 20,
+          "byCorpus": {
+            "septuagint": 20
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βαιθλέεμ",
+          "lemma": "Βαιθλεεμ",
+          "frequency": 20,
+          "byCorpus": {
+            "septuagint": 20
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βαιθσάμυς",
+          "lemma": "Βαιθσαμυς",
+          "frequency": 20,
+          "byCorpus": {
+            "septuagint": 20
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βακχίδης",
+          "lemma": "Βακχίδης",
+          "frequency": 20,
+          "byCorpus": {
+            "septuagint": 20
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰάσων",
+          "lemma": "Ἰάσων",
+          "frequency": 19,
+          "byCorpus": {
+            "newTestament": 5,
+            "septuagint": 14
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀκκαρὼν",
+          "lemma": "Ακκαρων",
+          "frequency": 19,
+          "byCorpus": {
+            "septuagint": 19
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μανῶε",
+          "lemma": "Μανωε",
+          "frequency": 19,
+          "byCorpus": {
+            "septuagint": 18,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μελχὸλ",
+          "lemma": "Μελχολ",
+          "frequency": 19,
+          "byCorpus": {
+            "septuagint": 19
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σαμαίας",
+          "lemma": "Σαμαίας",
+          "frequency": 19,
+          "byCorpus": {
+            "septuagint": 19
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰωαθὰμ",
+          "lemma": "Ἰωάθαμ",
+          "frequency": 18,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 16
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰεχονίας",
+          "lemma": "Ἰεχονίας",
+          "frequency": 18,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 16
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σήμ",
+          "lemma": "Σήμ",
+          "frequency": 18,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 17
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ναθαναὴλ",
+          "lemma": "Ναθαναήλ",
+          "frequency": 18,
+          "byCorpus": {
+            "newTestament": 6,
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γὼγ",
+          "lemma": "Γώγ",
+          "frequency": 18,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 17
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σάρα",
+          "lemma": "Σαρα",
+          "frequency": 18,
+          "byCorpus": {
+            "septuagint": 18
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Χωρήβ",
+          "lemma": "Χωρηβ",
+          "frequency": 18,
+          "byCorpus": {
+            "septuagint": 18
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σαρουίας",
+          "lemma": "Σαρουιας",
+          "frequency": 18,
+          "byCorpus": {
+            "septuagint": 18
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ναβουθαὶ",
+          "lemma": "Ναβουθαι",
+          "frequency": 18,
+          "byCorpus": {
+            "septuagint": 18
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σολομὼν",
+          "lemma": "Σολομών",
+          "frequency": 17,
+          "byCorpus": {
+            "newTestament": 12,
+            "septuagint": 1,
+            "patristic": 4
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀβιοὺδ",
+          "lemma": "Ἀβιούδ",
+          "frequency": 17,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 14,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Καισάρειαν",
+          "lemma": "Καισάρεια",
+          "frequency": 17,
+          "byCorpus": {
+            "newTestament": 17
+          },
+          "kind": "place",
+          "zh": "凱撒利亞",
+          "zhSource": "place_names"
+        },
+        {
+          "headword": "Ναιμὰν",
+          "lemma": "Ναιμάν",
+          "frequency": 17,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 15,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἄραβες",
+          "lemma": "Ἄραψ",
+          "frequency": 17,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 15,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἔφεσον",
+          "lemma": "Ἔφεσος",
+          "frequency": 17,
+          "byCorpus": {
+            "newTestament": 16,
+            "patristic": 1
+          },
+          "kind": "place",
+          "zh": "以弗所",
+          "zhSource": "place_names"
+        },
+        {
+          "headword": "Ἀραβίας",
+          "lemma": "Ἀραβία",
+          "frequency": 17,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 14,
+            "patristic": 1
+          },
+          "kind": "place",
+          "zh": "阿拉伯",
+          "zhSource": "place_names"
+        },
+        {
+          "headword": "Σαβὰ",
+          "lemma": "Σαβα",
+          "frequency": 17,
+          "byCorpus": {
+            "septuagint": 17
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σηλώμ",
+          "lemma": "Σηλωμ",
+          "frequency": 17,
+          "byCorpus": {
+            "septuagint": 17
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἐλκανὰ",
+          "lemma": "Ελκανα",
+          "frequency": 17,
+          "byCorpus": {
+            "septuagint": 16,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰεφοννὴ",
+          "lemma": "Ιεφοννη",
+          "frequency": 17,
+          "byCorpus": {
+            "septuagint": 17
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σηλὼ",
+          "lemma": "Σηλω",
+          "frequency": 17,
+          "byCorpus": {
+            "septuagint": 17
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Δαγὼν",
+          "lemma": "Δαγων",
+          "frequency": 17,
+          "byCorpus": {
+            "septuagint": 17
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Θημὰρ",
+          "lemma": "Θημαρ",
+          "frequency": 17,
+          "byCorpus": {
+            "septuagint": 17
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰωαχὰς",
+          "lemma": "Ιωαχας",
+          "frequency": 17,
+          "byCorpus": {
+            "septuagint": 17
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Καφαρναοὺμ",
+          "lemma": "Καφαρναούμ",
+          "frequency": 16,
+          "byCorpus": {
+            "newTestament": 16
+          },
+          "kind": "place",
+          "zh": "迦百農",
+          "zhSource": "place_names"
+        },
+        {
+          "headword": "Ἁγὰρ",
+          "lemma": "Ἄγαρ",
+          "frequency": 16,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 14
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ῥαὰβ",
+          "lemma": "Ῥαάβ",
+          "frequency": 16,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 12,
+            "patristic": 2
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Χάμ",
+          "lemma": "Χαμ",
+          "frequency": 16,
+          "byCorpus": {
+            "septuagint": 16
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἐφρὼν",
+          "lemma": "Εφρων",
+          "frequency": 16,
+          "byCorpus": {
+            "septuagint": 16
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἐφράθα",
+          "lemma": "Εφραθα",
+          "frequency": 16,
+          "byCorpus": {
+            "septuagint": 16
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰοθὸρ",
+          "lemma": "Ιοθορ",
+          "frequency": 16,
+          "byCorpus": {
+            "septuagint": 16
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἑρμᾶ",
+          "lemma": "Ερμα",
+          "frequency": 16,
+          "byCorpus": {
+            "septuagint": 4,
+            "patristic": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Νὴρ",
+          "lemma": "Νηρ",
+          "frequency": 16,
+          "byCorpus": {
+            "septuagint": 16
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀσαὴλ",
+          "lemma": "Ασαηλ",
+          "frequency": 16,
+          "byCorpus": {
+            "septuagint": 16
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἁγγαίου",
+          "lemma": "Ἁγγαῖος",
+          "frequency": 16,
+          "byCorpus": {
+            "septuagint": 15,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ὀνίαν",
+          "lemma": "Ονιας",
+          "frequency": 16,
+          "byCorpus": {
+            "septuagint": 16
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἄλκιμος",
+          "lemma": "Ἄλκιμος",
+          "frequency": 16,
+          "byCorpus": {
+            "septuagint": 15,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μενέλαος",
+          "lemma": "Μενέλαος",
+          "frequency": 16,
+          "byCorpus": {
+            "septuagint": 16
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ῥαββί",
+          "lemma": "ῥαββί",
+          "frequency": 15,
+          "byCorpus": {
+            "newTestament": 15
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Λάζαρος",
+          "lemma": "Λάζαρος",
+          "frequency": 15,
+          "byCorpus": {
+            "newTestament": 15
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Κεδρών",
+          "lemma": "Κεδρών",
+          "frequency": 15,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 14
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μήδων",
+          "lemma": "Μῆδος",
+          "frequency": 15,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 14
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Κιλικίας",
+          "lemma": "Κιλικία",
+          "frequency": 15,
+          "byCorpus": {
+            "newTestament": 8,
+            "septuagint": 6,
+            "patristic": 1
+          },
+          "kind": "place",
+          "zh": "基利家",
+          "zhSource": "place_names"
+        },
+        {
+          "headword": "Χαρράν",
+          "lemma": "Χαρράν",
+          "frequency": 15,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 13
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σινᾶ",
+          "lemma": "Σινᾶ",
+          "frequency": 15,
+          "byCorpus": {
+            "newTestament": 4,
+            "septuagint": 8,
+            "patristic": 3
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σαῦλος",
+          "lemma": "Σαῦλος",
+          "frequency": 15,
+          "byCorpus": {
+            "newTestament": 15
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ὡσῆε",
+          "lemma": "Ὡσηέ",
+          "frequency": 15,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 13,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Τίτου",
+          "lemma": "Τίτος",
+          "frequency": 15,
+          "byCorpus": {
+            "newTestament": 13,
+            "septuagint": 1,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βαρὰκ",
+          "lemma": "Βαράκ",
+          "frequency": 15,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 14
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γεργεσαῖον",
+          "lemma": "Γεργεσαῖος",
+          "frequency": 15,
+          "byCorpus": {
+            "septuagint": 15
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Αἱμὰν",
+          "lemma": "Αιμαν",
+          "frequency": 15,
+          "byCorpus": {
+            "septuagint": 15
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σοκχὼθ",
+          "lemma": "Σοκχωθ",
+          "frequency": 15,
+          "byCorpus": {
+            "septuagint": 15
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Θερσά",
+          "lemma": "Θερσα",
+          "frequency": 15,
+          "byCorpus": {
+            "septuagint": 15
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γοθολία",
+          "lemma": "Γοθολια",
+          "frequency": 15,
+          "byCorpus": {
+            "septuagint": 15
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ῥαφαὴλ",
+          "lemma": "Ῥαφαήλ",
+          "frequency": 15,
+          "byCorpus": {
+            "septuagint": 15
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βαβυλωνίας",
+          "lemma": "Βαβυλωνία",
+          "frequency": 15,
+          "byCorpus": {
+            "septuagint": 14,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βαιτυλουὰ",
+          "lemma": "Βαιτυλουα",
+          "frequency": 15,
+          "byCorpus": {
+            "septuagint": 15
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μηδίαν",
+          "lemma": "Μηδία",
+          "frequency": 15,
+          "byCorpus": {
+            "septuagint": 15
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ζάρα",
+          "lemma": "Ζαρά",
+          "frequency": 14,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 13
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σαλαθιὴλ",
+          "lemma": "Σαλαθιήλ",
+          "frequency": 14,
+          "byCorpus": {
+            "newTestament": 3,
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σαδδουκαίων",
+          "lemma": "Σαδδουκαῖος",
+          "frequency": 14,
+          "byCorpus": {
+            "newTestament": 14
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Λευὶ",
+          "lemma": "Λευΐ",
+          "frequency": 14,
+          "byCorpus": {
+            "newTestament": 7,
+            "septuagint": 7
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σιδωνίων",
+          "lemma": "Σιδώνιος",
+          "frequency": 14,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἐμμὼρ",
+          "lemma": "Ἑμμώρ",
+          "frequency": 14,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 13
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Φοινίκης",
+          "lemma": "Φοινίκη",
+          "frequency": 14,
+          "byCorpus": {
+            "newTestament": 3,
+            "septuagint": 11
+          },
+          "kind": "place",
+          "zh": "腓尼基",
+          "zhSource": "place_names"
+        },
+        {
+          "headword": "Ἀὼδ",
+          "lemma": "Αωδ",
+          "frequency": 14,
+          "byCorpus": {
+            "septuagint": 14
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀροὴρ",
+          "lemma": "Αροηρ",
+          "frequency": 14,
+          "byCorpus": {
+            "septuagint": 14
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βαναιὰ",
+          "lemma": "Βαναια",
+          "frequency": 14,
+          "byCorpus": {
+            "septuagint": 14
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ὀζά",
+          "lemma": "Οζα",
+          "frequency": 14,
+          "byCorpus": {
+            "septuagint": 14
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀχιὼρ",
+          "lemma": "Αχιωρ",
+          "frequency": 14,
+          "byCorpus": {
+            "septuagint": 14
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀραβά",
+          "lemma": "Ἀραβά",
+          "frequency": 14,
+          "byCorpus": {
+            "septuagint": 14
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰωναδὰβ",
+          "lemma": "Ιωναδαβ",
+          "frequency": 14,
+          "byCorpus": {
+            "septuagint": 14
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σαμαιὰ",
+          "lemma": "Σαμαια",
+          "frequency": 14,
+          "byCorpus": {
+            "septuagint": 14
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σαραιὰ",
+          "lemma": "Σαραιά",
+          "frequency": 14,
+          "byCorpus": {
+            "septuagint": 14
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Τωβιὰ",
+          "lemma": "Τωβια",
+          "frequency": 14,
+          "byCorpus": {
+            "septuagint": 14
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀπολλώνιος",
+          "lemma": "Ἀπολλώνιος",
+          "frequency": 14,
+          "byCorpus": {
+            "septuagint": 13,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀρὰμ",
+          "lemma": "Ἀράμ",
+          "frequency": 13,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ναζωραῖος",
+          "lemma": "Ναζωραῖος",
+          "frequency": 13,
+          "byCorpus": {
+            "newTestament": 13
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀνδρέας",
+          "lemma": "Ἀνδρέας",
+          "frequency": 13,
+          "byCorpus": {
+            "newTestament": 13
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰεριχὼ",
+          "lemma": "Ἱεριχώ",
+          "frequency": 13,
+          "byCorpus": {
+            "newTestament": 7,
+            "septuagint": 4,
+            "patristic": 2
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἅννα",
+          "lemma": "Ἄννα",
+          "frequency": 13,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ποντίου",
+          "lemma": "Πόντιος",
+          "frequency": 13,
+          "byCorpus": {
+            "newTestament": 3,
+            "patristic": 10
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἢρ",
+          "lemma": "Ἤρ",
+          "frequency": 13,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Θάρα",
+          "lemma": "Θάρα",
+          "frequency": 13,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀρφαξὰδ",
+          "lemma": "Ἀρφαξάδ",
+          "frequency": 13,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Λάμεχ",
+          "lemma": "Λάμεχ",
+          "frequency": 13,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 11,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μάρθα",
+          "lemma": "Μάρθα",
+          "frequency": 13,
+          "byCorpus": {
+            "newTestament": 13
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Φῆστος",
+          "lemma": "Φῆστος",
+          "frequency": 13,
+          "byCorpus": {
+            "newTestament": 13
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Περσίδα",
+          "lemma": "Περσίς",
+          "frequency": 13,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 11,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἁρρὰν",
+          "lemma": "Αρραν",
+          "frequency": 13,
+          "byCorpus": {
+            "septuagint": 13
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Κενέζ",
+          "lemma": "Κενεζ",
+          "frequency": 13,
+          "byCorpus": {
+            "septuagint": 13
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰδουμαῖοι",
+          "lemma": "Ιδουμαῖος",
+          "frequency": 13,
+          "byCorpus": {
+            "septuagint": 13
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γάζερ",
+          "lemma": "Γαζερ",
+          "frequency": 13,
+          "byCorpus": {
+            "septuagint": 13
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βαιθωρὼν",
+          "lemma": "Βαιθωρων",
+          "frequency": 13,
+          "byCorpus": {
+            "septuagint": 13
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀναθὼθ",
+          "lemma": "Αναθωθ",
+          "frequency": 13,
+          "byCorpus": {
+            "septuagint": 13
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Νεχαὼ",
+          "lemma": "Νεχαω",
+          "frequency": 13,
+          "byCorpus": {
+            "septuagint": 13
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἁνὰν",
+          "lemma": "Αναν",
+          "frequency": 13,
+          "byCorpus": {
+            "septuagint": 13
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βαλτασὰρ",
+          "lemma": "Βαλτασαρ",
+          "frequency": 13,
+          "byCorpus": {
+            "septuagint": 13
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σεδράχ",
+          "lemma": "Σεδραχ",
+          "frequency": 13,
+          "byCorpus": {
+            "septuagint": 13
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ναασσὼν",
+          "lemma": "Ναασσών",
+          "frequency": 12,
+          "byCorpus": {
+            "newTestament": 3,
+            "septuagint": 9
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ζεβεδαίου",
+          "lemma": "Ζεβεδαῖος",
+          "frequency": 12,
+          "byCorpus": {
+            "newTestament": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βηθανίαν",
+          "lemma": "Βηθανία",
+          "frequency": 12,
+          "byCorpus": {
+            "newTestament": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μαγδαληνὴ",
+          "lemma": "Μαγδαληνή",
+          "frequency": 12,
+          "byCorpus": {
+            "newTestament": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἐλιέζερ",
+          "lemma": "Ἐλιέζερ",
+          "frequency": 12,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σιλᾶν",
+          "lemma": "Σίλας",
+          "frequency": 12,
+          "byCorpus": {
+            "newTestament": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βοσόρ",
+          "lemma": "Βοσόρ",
+          "frequency": 12,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Αἰθιοπίας",
+          "lemma": "Αἰθιοπία",
+          "frequency": 12,
+          "byCorpus": {
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀδὰ",
+          "lemma": "Αδα",
+          "frequency": 12,
+          "byCorpus": {
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰάφεθ",
+          "lemma": "Ιαφεθ",
+          "frequency": 12,
+          "byCorpus": {
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μελχὰ",
+          "lemma": "Μελχα",
+          "frequency": 12,
+          "byCorpus": {
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Κηδάρ",
+          "lemma": "Κηδαρ",
+          "frequency": 12,
+          "byCorpus": {
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Δεββωρὰ",
+          "lemma": "Δεββωρα",
+          "frequency": 12,
+          "byCorpus": {
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰαζὴρ",
+          "lemma": "Ιαζηρ",
+          "frequency": 12,
+          "byCorpus": {
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἁερμών",
+          "lemma": "Αερμων",
+          "frequency": 12,
+          "byCorpus": {
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ὀδολλάμ",
+          "lemma": "Οδολλαμ",
+          "frequency": 12,
+          "byCorpus": {
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἁσὼρ",
+          "lemma": "Ασωρ",
+          "frequency": 12,
+          "byCorpus": {
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ῥηχὰβ",
+          "lemma": "Ρηχαβ",
+          "frequency": 12,
+          "byCorpus": {
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ζέβεε",
+          "lemma": "Ζεβεε",
+          "frequency": 12,
+          "byCorpus": {
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἁρμαθάιμ",
+          "lemma": "Αρμαθαιμ",
+          "frequency": 12,
+          "byCorpus": {
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σουβὰ",
+          "lemma": "Σουβα",
+          "frequency": 12,
+          "byCorpus": {
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ῥομελίου",
+          "lemma": "Ρομελιας",
+          "frequency": 12,
+          "byCorpus": {
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰωσεδὲκ",
+          "lemma": "Ιωσεδεκ",
+          "frequency": 12,
+          "byCorpus": {
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μισάχ",
+          "lemma": "Μισαχ",
+          "frequency": 12,
+          "byCorpus": {
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀβδεναγώ",
+          "lemma": "Αβδεναγω",
+          "frequency": 12,
+          "byCorpus": {
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἐκβατάνοις",
+          "lemma": "Ἐκβάτανα",
+          "frequency": 12,
+          "byCorpus": {
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἡλιόδωρον",
+          "lemma": "Ἡλιόδωρος",
+          "frequency": 12,
+          "byCorpus": {
+            "septuagint": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Θεοτόκου",
+          "lemma": "θεοτόκος",
+          "frequency": 12,
+          "byCorpus": {
+            "patristic": 12
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Θαμὰρ",
+          "lemma": "Θάμαρ",
+          "frequency": 11,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 10
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Θωμᾶς",
+          "lemma": "Θωμᾶς",
+          "frequency": 11,
+          "byCorpus": {
+            "newTestament": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γαλιλαῖοι",
+          "lemma": "Γαλιλαῖος",
+          "frequency": 11,
+          "byCorpus": {
+            "newTestament": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βαραββᾶν",
+          "lemma": "Βαραββᾶς",
+          "frequency": 11,
+          "byCorpus": {
+            "newTestament": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σὴθ",
+          "lemma": "Σήθ",
+          "frequency": 11,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 10
+          },
+          "kind": "deity",
+          "zh": "塞特",
+          "zhSource": "deities"
+        },
+        {
+          "headword": "Ἰσραηλῖται",
+          "lemma": "Ἰσραηλίτης",
+          "frequency": 11,
+          "byCorpus": {
+            "newTestament": 9,
+            "septuagint": 1,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀχαΐας",
+          "lemma": "Ἀχαΐα",
+          "frequency": 11,
+          "byCorpus": {
+            "newTestament": 10,
+            "septuagint": 1
+          },
+          "kind": "place",
+          "zh": "亞該亞",
+          "zhSource": "place_names"
+        },
+        {
+          "headword": "Ἀπολλῶς",
+          "lemma": "Ἀπολλῶς",
+          "frequency": 11,
+          "byCorpus": {
+            "newTestament": 10,
+            "patristic": 1
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἐφεσίων",
+          "lemma": "Ἐφέσιος",
+          "frequency": 11,
+          "byCorpus": {
+            "newTestament": 5,
+            "patristic": 6
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Φῆλιξ",
+          "lemma": "Φῆλιξ",
+          "frequency": 11,
+          "byCorpus": {
+            "newTestament": 9,
+            "patristic": 2
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀγρίππα",
+          "lemma": "Ἀγρίππας",
+          "frequency": 11,
+          "byCorpus": {
+            "newTestament": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γεράρων",
+          "lemma": "Γεραρα",
+          "frequency": 11,
+          "byCorpus": {
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἀσταρὼθ",
+          "lemma": "Ασταρωθ",
+          "frequency": 11,
+          "byCorpus": {
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Φαράν",
+          "lemma": "Φαραν",
+          "frequency": 11,
+          "byCorpus": {
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βαθουὴλ",
+          "lemma": "Βαθουηλ",
+          "frequency": 11,
+          "byCorpus": {
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Χέτ",
+          "lemma": "Χετ",
+          "frequency": 11,
+          "byCorpus": {
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βεὼρ",
+          "lemma": "Βεωρ",
+          "frequency": 11,
+          "byCorpus": {
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Φογώρ",
+          "lemma": "Φογωρ",
+          "frequency": 11,
+          "byCorpus": {
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βαρνή",
+          "lemma": "Βαρνη",
+          "frequency": 11,
+          "byCorpus": {
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ῥεμμὼν",
+          "lemma": "Ρεμμων",
+          "frequency": 11,
+          "byCorpus": {
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γεθθαίου",
+          "lemma": "Γεθθαῖος",
+          "frequency": 11,
+          "byCorpus": {
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σελμανά",
+          "lemma": "Σελμανα",
+          "frequency": 11,
+          "byCorpus": {
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ὠβήδ",
+          "lemma": "Ὠβήδ",
+          "frequency": 11,
+          "byCorpus": {
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ναὰς",
+          "lemma": "Ναας",
+          "frequency": 11,
+          "byCorpus": {
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἠλὰ",
+          "lemma": "Ηλα",
+          "frequency": 11,
+          "byCorpus": {
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σαρουιὰ",
+          "lemma": "Σαρουια",
+          "frequency": 11,
+          "byCorpus": {
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἡμὰθ",
+          "lemma": "Ημαθ",
+          "frequency": 11,
+          "byCorpus": {
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σαδδοὺκ",
+          "lemma": "Σαδδουκ",
+          "frequency": 11,
+          "byCorpus": {
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Φάκεε",
+          "lemma": "Φακεε",
+          "frequency": 11,
+          "byCorpus": {
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σόρ",
+          "lemma": "Σορ",
+          "frequency": 11,
+          "byCorpus": {
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γοργίας",
+          "lemma": "Γοργίας",
+          "frequency": 11,
+          "byCorpus": {
+            "septuagint": 11
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Κηφᾶς",
+          "lemma": "Κηφᾶς",
+          "frequency": 10,
+          "byCorpus": {
+            "newTestament": 9,
+            "patristic": 1
+          },
+          "kind": "person",
+          "zh": "磯法",
+          "zhSource": "theologians"
+        },
+        {
+          "headword": "Ὀζεὶ",
+          "lemma": "ὄζω",
+          "frequency": 10,
+          "byCorpus": {
+            "newTestament": 1,
+            "septuagint": 9
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μακεδών",
+          "lemma": "Μακεδών",
+          "frequency": 10,
+          "byCorpus": {
+            "newTestament": 5,
+            "septuagint": 5
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γάϊος",
+          "lemma": "Γάϊος",
+          "frequency": 10,
+          "byCorpus": {
+            "newTestament": 5,
+            "patristic": 5
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰουδαισμοῦ",
+          "lemma": "Ἰουδαϊσμός",
+          "frequency": 10,
+          "byCorpus": {
+            "newTestament": 2,
+            "septuagint": 4,
+            "patristic": 4
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μελχισέδεκ",
+          "lemma": "Μελχισέδεκ",
+          "frequency": 10,
+          "byCorpus": {
+            "newTestament": 8,
+            "septuagint": 2
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Καινὰν",
+          "lemma": "Καϊνάν",
+          "frequency": 10,
+          "byCorpus": {
+            "septuagint": 10
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰωβάβ",
+          "lemma": "Ιωβαβ",
+          "frequency": 10,
+          "byCorpus": {
+            "septuagint": 10
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βάλλα",
+          "lemma": "Βαλλα",
+          "frequency": 10,
+          "byCorpus": {
+            "septuagint": 10
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Αὐνάν",
+          "lemma": "Αυναν",
+          "frequency": 10,
+          "byCorpus": {
+            "septuagint": 10
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Αἰνάν",
+          "lemma": "Αιναν",
+          "frequency": 10,
+          "byCorpus": {
+            "septuagint": 10
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γέσεμ",
+          "lemma": "Γέσεμ",
+          "frequency": 10,
+          "byCorpus": {
+            "septuagint": 10
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γηρὰ",
+          "lemma": "Γηρα",
+          "frequency": 10,
+          "byCorpus": {
+            "septuagint": 10
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰσσαάρ",
+          "lemma": "Ισσααρ",
+          "frequency": 10,
+          "byCorpus": {
+            "septuagint": 10
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σαλπαὰδ",
+          "lemma": "Σαλπααδ",
+          "frequency": 10,
+          "byCorpus": {
+            "septuagint": 10
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ναβαὺ",
+          "lemma": "Ναβαυ",
+          "frequency": 10,
+          "byCorpus": {
+            "septuagint": 10
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Γάβερ",
+          "lemma": "Γαβερ",
+          "frequency": 10,
+          "byCorpus": {
+            "septuagint": 10
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ῥαμὼθ",
+          "lemma": "Ραμωθ",
+          "frequency": 10,
+          "byCorpus": {
+            "septuagint": 10
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Σεκελὰκ",
+          "lemma": "Σεκελακ",
+          "frequency": 10,
+          "byCorpus": {
+            "septuagint": 10
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Βαμὰ",
+          "lemma": "Βαμα",
+          "frequency": 10,
+          "byCorpus": {
+            "septuagint": 10
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ἰεροβάαλ",
+          "lemma": "Ιεροβααλ",
+          "frequency": 10,
+          "byCorpus": {
+            "septuagint": 10
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Ῥαψάκης",
+          "lemma": "Ῥαψάκης",
+          "frequency": 10,
+          "byCorpus": {
+            "septuagint": 10
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Νεεμίας",
+          "lemma": "Νεεμιας",
+          "frequency": 10,
+          "byCorpus": {
+            "septuagint": 10
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Μισαήλ",
+          "lemma": "Μισαηλ",
+          "frequency": 10,
+          "byCorpus": {
+            "septuagint": 8,
+            "patristic": 2
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        },
+        {
+          "headword": "Εἰρηναίου",
+          "lemma": "εἰρηναῖος",
+          "frequency": 10,
+          "byCorpus": {
+            "patristic": 10
+          },
+          "kind": "",
+          "zh": "",
+          "zhSource": ""
+        }
+      ]
+    },
+    {
+      "key": "numerals",
+      "title": "數字與度量衡",
+      "entries": [
+        {
+          "lemma": "εἷς",
+          "group": "基數",
+          "frequency": 10853,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "δύο",
+          "group": "基數",
+          "frequency": 789,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "τρεῖς",
+          "group": "基數",
+          "frequency": 418,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "τέσσαρες",
+          "group": "基數",
+          "frequency": 271,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "πέντε",
+          "group": "基數",
+          "frequency": 300,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἕξ",
+          "group": "基數",
+          "frequency": 151,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ἑπτά",
+          "group": "基數",
+          "frequency": 386,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ὀκτώ",
+          "group": "基數",
+          "frequency": 83,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἐννέα",
+          "group": "基數",
+          "frequency": 41,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "δέκα",
+          "group": "基數",
+          "frequency": 312,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἕνδεκα",
+          "group": "基數",
+          "frequency": 19,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "δώδεκα",
+          "group": "基數",
+          "frequency": 166,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "εἴκοσι",
+          "group": "基數",
+          "frequency": 258,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "τριάκοντα",
+          "group": "基數",
+          "frequency": 170,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "τεσσαράκοντα",
+          "group": "基數",
+          "frequency": 5,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "πεντήκοντα",
+          "group": "基數",
+          "frequency": 147,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἑξήκοντα",
+          "group": "基數",
+          "frequency": 73,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἑβδομήκοντα",
+          "group": "基數",
+          "frequency": 104,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ὀγδοήκοντα",
+          "group": "基數",
+          "frequency": 41,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ἐνενήκοντα",
+          "group": "基數",
+          "frequency": 23,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ἑκατόν",
+          "group": "基數",
+          "frequency": 224,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "διακόσιοι",
+          "group": "基數",
+          "frequency": 82,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "τριακόσιοι",
+          "group": "基數",
+          "frequency": 72,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "τετρακόσιοι",
+          "group": "基數",
+          "frequency": 57,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "πεντακόσιοι",
+          "group": "基數",
+          "frequency": 62,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "χίλιοι",
+          "group": "基數",
+          "frequency": 116,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "δισχίλιοι",
+          "group": "基數",
+          "frequency": 42,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "μύριοι",
+          "group": "基數",
+          "frequency": 14,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "πρῶτος",
+          "group": "序數",
+          "frequency": 472,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "δεύτερος",
+          "group": "序數",
+          "frequency": 267,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "τρίτος",
+          "group": "序數",
+          "frequency": 233,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "τέταρτος",
+          "group": "序數",
+          "frequency": 103,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "πέμπτος",
+          "group": "序數",
+          "frequency": 65,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἕκτος",
+          "group": "序數",
+          "frequency": 82,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἕβδομος",
+          "group": "序數",
+          "frequency": 132,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ὄγδοος",
+          "group": "序數",
+          "frequency": 55,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἔνατος",
+          "group": "序數",
+          "frequency": 41,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "δέκατος",
+          "group": "序數",
+          "frequency": 80,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἑνδέκατος",
+          "group": "序數",
+          "frequency": 25,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "δωδέκατος",
+          "group": "序數",
+          "frequency": 22,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ἔσχατος",
+          "group": "序數",
+          "frequency": 219,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἥμισυς",
+          "group": "倍數與分數",
+          "frequency": 142,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "δίς",
+          "group": "倍數與分數",
+          "frequency": 25,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "τρίς",
+          "group": "倍數與分數",
+          "frequency": 28,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ἑπτάκις",
+          "group": "倍數與分數",
+          "frequency": 30,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ἑβδομηκοντάκις",
+          "group": "倍數與分數",
+          "frequency": 2,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ἅπαξ",
+          "group": "倍數與分數",
+          "frequency": 63,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "πολλαπλασίων",
+          "group": "倍數與分數",
+          "frequency": 1,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "πῆχυς",
+          "group": "長度與容量",
+          "frequency": 232,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "σπιθαμή",
+          "group": "長度與容量",
+          "frequency": 9,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "δάκτυλος",
+          "group": "長度與容量",
+          "frequency": 49,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "στάδιον",
+          "group": "長度與容量",
+          "frequency": 18,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "μίλιον",
+          "group": "長度與容量",
+          "frequency": 3,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "κόρος",
+          "group": "長度與容量",
+          "frequency": 15,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "βάτος",
+          "group": "長度與容量",
+          "frequency": 18,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "μετρητής",
+          "group": "長度與容量",
+          "frequency": 4,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "χοῖνιξ",
+          "group": "長度與容量",
+          "frequency": 5,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "μόδιος",
+          "group": "長度與容量",
+          "frequency": 3,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "σάτον",
+          "group": "長度與容量",
+          "frequency": 4,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ξέστης",
+          "group": "長度與容量",
+          "frequency": 1,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "γομόρ",
+          "group": "長度與容量",
+          "frequency": 15,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "οἰφί",
+          "group": "長度與容量",
+          "frequency": 10,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "τάλαντον",
+          "group": "錢幣與重量",
+          "frequency": 73,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "μνᾶ",
+          "group": "錢幣與重量",
+          "frequency": 16,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "δηνάριον",
+          "group": "錢幣與重量",
+          "frequency": 16,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "δραχμή",
+          "group": "錢幣與重量",
+          "frequency": 9,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "στατήρ",
+          "group": "錢幣與重量",
+          "frequency": 1,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ἀσσάριον",
+          "group": "錢幣與重量",
+          "frequency": 2,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "κοδράντης",
+          "group": "錢幣與重量",
+          "frequency": 3,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "λεπτόν",
+          "group": "錢幣與重量",
+          "frequency": 2,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "σίκλος",
+          "group": "錢幣與重量",
+          "frequency": 72,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "χρυσίον",
+          "group": "錢幣與重量",
+          "frequency": 278,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἀργύριον",
+          "group": "錢幣與重量",
+          "frequency": 389,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        }
+      ]
+    },
+    {
+      "key": "kinship",
+      "title": "親屬稱謂",
+      "entries": [
+        {
+          "lemma": "πατήρ",
+          "group": "直系",
+          "frequency": 1965,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "μήτηρ",
+          "group": "直系",
+          "frequency": 363,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "υἱός",
+          "group": "直系",
+          "frequency": 5249,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "θυγάτηρ",
+          "group": "直系",
+          "frequency": 611,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "τέκνον",
+          "group": "直系",
+          "frequency": 399,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "παιδίον",
+          "group": "直系",
+          "frequency": 211,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "βρέφος",
+          "group": "直系",
+          "frequency": 14,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "γονεύς",
+          "group": "直系",
+          "frequency": 35,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "πάππος",
+          "group": "直系",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "πρόγονος",
+          "group": "直系",
+          "frequency": 5,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ἔκγονος",
+          "group": "直系",
+          "frequency": 34,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "πρωτότοκος",
+          "group": "直系",
+          "frequency": 146,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "μονογενής",
+          "group": "直系",
+          "frequency": 33,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἀδελφός",
+          "group": "旁系",
+          "frequency": 1233,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἀδελφή",
+          "group": "旁系",
+          "frequency": 147,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἀνεψιός",
+          "group": "旁系",
+          "frequency": 3,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "θεῖος",
+          "group": "旁系",
+          "frequency": 87,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "συγγενής",
+          "group": "旁系",
+          "frequency": 31,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "δίδυμος",
+          "group": "旁系",
+          "frequency": 10,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ἀνήρ",
+          "group": "姻親",
+          "frequency": 1926,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "γυνή",
+          "group": "姻親",
+          "frequency": 1145,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "νύμφη",
+          "group": "姻親",
+          "frequency": 52,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "γαμβρός",
+          "group": "姻親",
+          "frequency": 26,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "πενθερός",
+          "group": "姻親",
+          "frequency": 8,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "πενθερά",
+          "group": "姻親",
+          "frequency": 18,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "χήρα",
+          "group": "姻親",
+          "frequency": 111,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "μνηστεύω",
+          "group": "姻親",
+          "frequency": 8,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "γάμος",
+          "group": "姻親",
+          "frequency": 31,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "οἶκος",
+          "group": "族屬",
+          "frequency": 2057,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "πατριά",
+          "group": "族屬",
+          "frequency": 165,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "φυλή",
+          "group": "族屬",
+          "frequency": 426,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "γενεά",
+          "group": "族屬",
+          "frequency": 269,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "σπέρμα",
+          "group": "族屬",
+          "frequency": 320,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "γένος",
+          "group": "族屬",
+          "frequency": 161,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "συγγένεια",
+          "group": "族屬",
+          "frequency": 12,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ὀρφανός",
+          "group": "族屬",
+          "frequency": 65,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "παρθένος",
+          "group": "族屬",
+          "frequency": 168,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        }
+      ]
+    },
+    {
+      "key": "calendar",
+      "title": "曆法與節期",
+      "entries": [
+        {
+          "lemma": "ἡμέρα",
+          "group": "時辰與日夜",
+          "frequency": 2830,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "νύξ",
+          "group": "時辰與日夜",
+          "frequency": 354,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἑσπέρα",
+          "group": "時辰與日夜",
+          "frequency": 121,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "πρωΐ",
+          "group": "時辰與日夜",
+          "frequency": 197,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "μεσημβρία",
+          "group": "時辰與日夜",
+          "frequency": 28,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ὥρα",
+          "group": "時辰與日夜",
+          "frequency": 193,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "φυλακή",
+          "group": "時辰與日夜",
+          "frequency": 164,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ὄρθρος",
+          "group": "時辰與日夜",
+          "frequency": 30,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "σήμερον",
+          "group": "時辰與日夜",
+          "frequency": 324,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "αὔριον",
+          "group": "時辰與日夜",
+          "frequency": 71,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἐχθές",
+          "group": "時辰與日夜",
+          "frequency": 2,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "σάββατον",
+          "group": "週月年",
+          "frequency": 207,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἑβδομάς",
+          "group": "週月年",
+          "frequency": 22,
+          "attested": true,
+          "zh": "七重天",
+          "zhSource": "deities",
+          "inLessons": false
+        },
+        {
+          "lemma": "μήν",
+          "group": "週月年",
+          "frequency": 323,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "νουμηνία",
+          "group": "週月年",
+          "frequency": 29,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἔτος",
+          "group": "週月年",
+          "frequency": 713,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἐνιαυτός",
+          "group": "週月年",
+          "frequency": 166,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἰωβηλαῖος",
+          "group": "週月年",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "κυριακός",
+          "group": "週月年",
+          "frequency": 9,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "παρασκευή",
+          "group": "週月年",
+          "frequency": 12,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ἑορτή",
+          "group": "以色列節期",
+          "frequency": 141,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "πάσχα",
+          "group": "以色列節期",
+          "frequency": 61,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἄζυμος",
+          "group": "以色列節期",
+          "frequency": 58,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "πεντηκοστή",
+          "group": "以色列節期",
+          "frequency": 3,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "σκηνοπηγία",
+          "group": "以色列節期",
+          "frequency": 9,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ἐγκαίνια",
+          "group": "以色列節期",
+          "frequency": 1,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "νηστεία",
+          "group": "以色列節期",
+          "frequency": 53,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἐξιλασμός",
+          "group": "以色列節期",
+          "frequency": 14,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "σάλπιγξ",
+          "group": "以色列節期",
+          "frequency": 103,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἀνάστασις",
+          "group": "教會節期",
+          "frequency": 135,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "γέννησις",
+          "group": "教會節期",
+          "frequency": 2,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "θεοφάνεια",
+          "group": "教會節期",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ὑπαπαντή",
+          "group": "教會節期",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "μεταμόρφωσις",
+          "group": "教會節期",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "κοίμησις",
+          "group": "教會節期",
+          "frequency": 4,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "τεσσαρακοστή",
+          "group": "教會節期",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "Νισάν",
+          "group": "月名",
+          "frequency": 1,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "Ἀδάρ",
+          "group": "月名",
+          "frequency": 5,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "Σιβάν",
+          "group": "月名",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "Ἐλούλ",
+          "group": "月名",
+          "frequency": 1,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "Χασελεῦ",
+          "group": "月名",
+          "frequency": 7,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "Ξανθικός",
+          "group": "月名",
+          "frequency": 4,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "Δύστρος",
+          "group": "月名",
+          "frequency": 1,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "Δῖος",
+          "group": "月名",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "Ἀπελλαῖος",
+          "group": "月名",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "Πάνημος",
+          "group": "月名",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        }
+      ]
+    },
+    {
+      "key": "offices",
+      "title": "教會職分與禮儀用語",
+      "entries": [
+        {
+          "lemma": "ἀπόστολος",
+          "group": "新約職分",
+          "frequency": 142,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "προφήτης",
+          "group": "新約職分",
+          "frequency": 592,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "εὐαγγελιστής",
+          "group": "新約職分",
+          "frequency": 5,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ποιμήν",
+          "group": "新約職分",
+          "frequency": 152,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "διδάσκαλος",
+          "group": "新約職分",
+          "frequency": 96,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἐπίσκοπος",
+          "group": "新約職分",
+          "frequency": 68,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "πρεσβύτερος",
+          "group": "新約職分",
+          "frequency": 292,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "διάκονος",
+          "group": "新約職分",
+          "frequency": 59,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ὑπηρέτης",
+          "group": "新約職分",
+          "frequency": 30,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "οἰκονόμος",
+          "group": "新約職分",
+          "frequency": 21,
+          "attested": true,
+          "zh": "少府",
+          "zhSource": "official_titles",
+          "inLessons": false
+        },
+        {
+          "lemma": "ἀρχιεπίσκοπος",
+          "group": "後期職分",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "μητροπολίτης",
+          "group": "後期職分",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "πατριάρχης",
+          "group": "後期職分",
+          "frequency": 14,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἡγούμενος",
+          "group": "後期職分",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "μοναχός",
+          "group": "後期職分",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ἀναγνώστης",
+          "group": "後期職分",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ψάλτης",
+          "group": "後期職分",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ὑποδιάκονος",
+          "group": "後期職分",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ἐξορκιστής",
+          "group": "後期職分",
+          "frequency": 1,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "θυρωρός",
+          "group": "後期職分",
+          "frequency": 7,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "διακόνισσα",
+          "group": "後期職分",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "κλῆρος",
+          "group": "後期職分",
+          "frequency": 153,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "λαϊκός",
+          "group": "後期職分",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "χειροτονία",
+          "group": "按立",
+          "frequency": 2,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "χειροθεσία",
+          "group": "按立",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "χειροτονέω",
+          "group": "按立",
+          "frequency": 6,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "καθίστημι",
+          "group": "按立",
+          "frequency": 205,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "διαδοχή",
+          "group": "按立",
+          "frequency": 2,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "τάξις",
+          "group": "按立",
+          "frequency": 40,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "μυστήριον",
+          "group": "聖事",
+          "frequency": 73,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "βάπτισμα",
+          "group": "聖事",
+          "frequency": 25,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "χρῖσμα",
+          "group": "聖事",
+          "frequency": 11,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "εὐχαριστία",
+          "group": "聖事",
+          "frequency": 31,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "κοινωνία",
+          "group": "聖事",
+          "frequency": 29,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "μετάνοια",
+          "group": "聖事",
+          "frequency": 108,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἐξομολόγησις",
+          "group": "聖事",
+          "frequency": 25,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "εὐχέλαιον",
+          "group": "聖事",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "λειτουργία",
+          "group": "禮儀",
+          "frequency": 68,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "λειτουργός",
+          "group": "禮儀",
+          "frequency": 20,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἀναφορά",
+          "group": "禮儀",
+          "frequency": 4,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "προσκομιδή",
+          "group": "禮儀",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ἀνάμνησις",
+          "group": "禮儀",
+          "frequency": 13,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἐπίκλησις",
+          "group": "禮儀",
+          "frequency": 3,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ἀντίφωνον",
+          "group": "禮儀",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "συναπτή",
+          "group": "禮儀",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ἐκτενής",
+          "group": "禮儀",
+          "frequency": 3,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "τροπάριον",
+          "group": "禮儀",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "κοντάκιον",
+          "group": "禮儀",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ἀπολυτίκιον",
+          "group": "禮儀",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ἀπόλυσις",
+          "group": "禮儀",
+          "frequency": 2,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "εὐλογία",
+          "group": "禮儀",
+          "frequency": 116,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἁγιασμός",
+          "group": "禮儀",
+          "frequency": 20,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἄρτος",
+          "group": "禮儀器物與呼求",
+          "frequency": 410,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "οἶνος",
+          "group": "禮儀器物與呼求",
+          "frequency": 252,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ποτήριον",
+          "group": "禮儀器物與呼求",
+          "frequency": 73,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "δισκάριον",
+          "group": "禮儀器物與呼求",
+          "frequency": 0,
+          "attested": false,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "θυμίαμα",
+          "group": "禮儀器物與呼求",
+          "frequency": 89,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "θυσιαστήριον",
+          "group": "禮儀器物與呼求",
+          "frequency": 457,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "εἰκών",
+          "group": "禮儀器物與呼求",
+          "frequency": 102,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἀμήν",
+          "group": "禮儀器物與呼求",
+          "frequency": 212,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἀλληλούϊα",
+          "group": "禮儀器物與呼求",
+          "frequency": 38,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": false
+        },
+        {
+          "lemma": "ἐλεέω",
+          "group": "禮儀器物與呼求",
+          "frequency": 159,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "ἅγιος",
+          "group": "禮儀器物與呼求",
+          "frequency": 1287,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        },
+        {
+          "lemma": "δόξα",
+          "group": "禮儀器物與呼求",
+          "frequency": 699,
+          "attested": true,
+          "zh": "",
+          "zhSource": "",
+          "inLessons": true
+        }
+      ]
+    }
+  ]
+}

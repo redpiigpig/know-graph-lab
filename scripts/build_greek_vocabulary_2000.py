@@ -101,7 +101,7 @@ def load_koine() -> tuple[dict[str, list[str]], set[str]]:
         payload["lemmaTotals"].items(), key=lambda pair: -pair[1]
     ):
         inventory.setdefault(fold(lemma), lemma)
-    return payload["forms"], inventory
+    return (payload["forms"], payload.get("exactForms", {})), inventory
 
 def clean(token: str) -> str:
     return unicodedata.normalize("NFC", token.strip(SIGLA + ".,·;:!?()»«—'’")).strip()
@@ -184,7 +184,7 @@ def to_koine(lemma: str, koine_lemmas) -> str:
     return lemma
 
 
-def corpus_lemma_frequency(tokens, koine_forms, koine_lemmas, morpheus):
+def corpus_lemma_frequency(tokens, koine, koine_lemmas, morpheus):
     """Count lemmas in a corpus, answering in Koine.
 
     The Koine lexicon is asked first, because its answers come from editors who
@@ -202,8 +202,9 @@ def corpus_lemma_frequency(tokens, koine_forms, koine_lemmas, morpheus):
         word = clean(token)
         if not word or not GREEK_RE.search(word):
             continue
+        koine_forms, koine_exact = koine
         key = fold(word)
-        options = koine_forms.get(key)
+        options = koine_exact.get(word) or koine_forms.get(key)
         if options:
             lemma = to_koine(options[0], koine_lemmas)
             counts[lemma] += 1
@@ -288,11 +289,18 @@ def main() -> None:
     args = parser.parse_args()
 
     morpheus, pos = load_index()
-    koine_forms, koine_lemmas = load_koine()
+    (koine_forms, koine_exact), koine_lemmas = load_koine()
     mounce = json.loads(MOUNCE.read_text(encoding="utf-8"))
 
     # --- Volume I, first half: Mounce's own first five hundred --------------
-    nt_words = sorted(mounce, key=lambda item: item["ordinal"])[:NT_TARGET]
+    # Proper names live in the appendix, not in the lesson slots: a reader looks
+    # Ἡρῴδης up once, and the slot is better spent on a word that has to be
+    # recognised on sight.  The textbook still supplies every word here - the
+    # list simply reads past its names, so five hundred lessons' worth of common
+    # vocabulary now reaches Mounce's 528th entry.
+    ordered = sorted(mounce, key=lambda item: item["ordinal"])
+    nt_words = [item for item in ordered if not item.get("isProperName")][:NT_TARGET]
+    skipped = [item for item in ordered[:nt_words[-1]["ordinal"]] if item.get("isProperName")]
     taught = set()
     for item in nt_words:
         # An entry may print several spellings - "ἐκ (ἐξ)", "ἀλλά, ἀλλ'" - and a
@@ -303,11 +311,14 @@ def main() -> None:
             if piece and GREEK_RE.search(piece):
                 taught.add(fold(piece))
                 taught.add(fold(to_koine(piece, koine_lemmas)))
-    print(f"  新約 {len(nt_words)} 詞：取自 Mounce 詞表前 {NT_TARGET} 筆，沿用既有繁中詞義與音譯")
+    for item in skipped:
+        taught.add(fold(item["lemma"]))
+    print(f"  新約 {len(nt_words)} 詞：取自 Mounce 詞表（跳過 {len(skipped)} 個專名，"
+          f"取到第 {nt_words[-1]['ordinal']} 筆），沿用既有繁中詞義與音譯")
 
     def pick(name, tokens, target, report):
         counts, stats, outside, names = corpus_lemma_frequency(
-            tokens, koine_forms, koine_lemmas, morpheus
+            tokens, (koine_forms, koine_exact), koine_lemmas, morpheus
         )
         total = sum(stats.values())
         print(f"  {name}：通用希臘文詞典解出 {stats['koine'] * 100 // max(total, 1)}%，"
