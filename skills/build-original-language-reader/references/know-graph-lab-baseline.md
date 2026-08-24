@@ -123,3 +123,32 @@ Parsing traps this build hit, all fixed and worth remembering:
 ## Latin continuation checkpoint
 
 The Latin manifest is still a plan/placeholder structure rather than a completed 1,000-word, 50-lesson reader. Freeze the Latin textbook/frequency source, pronunciation profile, Vulgate edition, full readings, and rights before declaring content complete.
+
+## 希臘文讀本的語言範圍：只到通用希臘文
+
+讀本教的是通用希臘文（Koine），不是古典希臘文。這一條會被詞位還原這一步悄悄破壞，
+因為現成的希臘文形態分析器 Morpheus 涵蓋全部古希臘文，且以阿提卡方言為本位：
+問它 σου 的詞位，它答荷馬的所有格形容詞 σός；問它 ἐγένετο，它答阿提卡的 γίγνομαι。
+照單全收的話，詞表看起來像通用希臘文，詞頭卻是古典希臘文的。
+
+因此詞位還原採三層，順序不可調換：
+
+1. **通用希臘文詞典**（`scripts/build_greek_koine_lexicon.py` → `koine-lexicon.json`）。
+   由兩份編者標註語料合成：MorphGNT 的新約 137,554 詞次，CATSS/OSSP 的七十士 623,685 詞次。
+   同一字形兩邊都有標註時**以新約的詞頭為準**，因為七十士標註沿用較舊的辭典慣例
+   （εἶπεν 歸 ἔπω、σου 歸 σοῦ、χρυσοῦν 歸 χρύσεος），而課本用的是 λέγω／σύ／χρυσοῦς。
+2. **阿提卡→通用希臘文橋接**（`to_koine`）。γιγν→γιν、ττ→σσ、ρρ→ρσ、-εος→-οῦς，
+   加上補充形與異體的對照表。每一條改寫都先驗證落點確實是通用希臘文語料用過的詞位，
+   所以這張表造不出不存在的字。**比對一律用去重音的折疊字形**——寫成字面時
+   「γιγν」根本不出現在「γίγνομαι」裡，這個坑踩過一次。
+3. **Morpheus**，只查前兩層沒有的字形，且其古典分析若無通用希臘文對應、
+   又有多解時**寧可不計**，不猜。（猜出來的產物是 ὁλάω 與 πτελέα，
+   實際上是 ὅλος 和一個人名。）
+
+成效：七十士 97% 由通用希臘文詞典解出、0 個古典詞位；教父 88% ＋ Morpheus 補 6%，
+1000 詞中僅 24 個詞位不在新約與七十士的標註詞表內，且經查全是後期教會希臘文的專門詞
+（ἀσώματος、ἄτρεπτος、σύγγραμμα、ἀθεότης 之屬），非古典詞，故保留並以 `withinKoine: false` 標明。
+
+另兩個反覆出現的坑：Morpheus 詞頭一律小寫，坡旅甲與愛任紐因此混進普通形容詞，
+改以**語料本身的大小寫**判定專名（同一詞位八成以上出現時首字大寫即為專名）；
+去重時若把數種拼法用空白接成一串再只按標點切，整串會被當成一個詞，去重集合等於空的。
