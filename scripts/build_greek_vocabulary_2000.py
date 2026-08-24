@@ -34,6 +34,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import greek_source_texts as gs
 import greek_patristic_sources as ps
+from extract_original_reader_vocab_sources import transliterate_mounce
 from verify_greek_vocab_lexicon import fold
 
 
@@ -43,6 +44,12 @@ MOUNCE = ROOT / "data" / "originalReaders" / "vocabulary" / "greek-1000.json"
 LEMMA_INDEX = CACHE / "lemma-index.json"
 KOINE_LEXICON = CACHE / "koine-lexicon.json"
 OUTPUT = ROOT / "data" / "originalReaders" / "vocabulary" / "greek-2000.json"
+
+# Mounce's own list ships with his transliteration; the Septuagint and patristic
+# extensions have no textbook, so the same published Erasmian table is applied by
+# rule.  Both are labelled, so a reader can tell which is the textbook's own.
+TRANSLITERATION_SYSTEM = "Mounce standard Erasmian"
+TRANSLITERATION_STATUS = "rule_generated_from_official_table"
 
 NT_TARGET = 500
 LXX_TARGET = 500
@@ -358,6 +365,8 @@ def main() -> None:
             "lemma": word["lemma"], "printedEntry": word["printedEntry"],
             "headword": word["headword"],
             "textbookTransliteration": word["textbookTransliteration"],
+            "transliterationSystem": TRANSLITERATION_SYSTEM,
+            "transliterationStatus": TRANSLITERATION_STATUS,
             "glossEn": word.get("glossEn", ""), "glossZh": "",
             "strong": word.get("strong", ""),
             "isProperName": word.get("isProperName", False),
@@ -370,7 +379,10 @@ def main() -> None:
         entries.append({
             "ordinal": NT_TARGET + index + 1, "volume": 1, "corpus": "septuagint",
             "lemma": word["lemma"], "printedEntry": word["lemma"],
-            "headword": word["lemma"], "textbookTransliteration": "",
+            "headword": word["lemma"],
+            "textbookTransliteration": transliterate_mounce(word["lemma"]),
+            "transliterationSystem": TRANSLITERATION_SYSTEM,
+            "transliterationStatus": TRANSLITERATION_STATUS,
             "glossEn": "", "glossZh": "", "strong": "",
             "isProperName": False, "properNameTypes": [],
             "source": "Swete 七十士譯本詞頻（CATSS/OSSP 通用希臘文詞位標註）",
@@ -381,7 +393,10 @@ def main() -> None:
         entries.append({
             "ordinal": index + 1, "volume": 2, "corpus": "patristic",
             "lemma": word["lemma"], "printedEntry": word["lemma"],
-            "headword": word["lemma"], "textbookTransliteration": "",
+            "headword": word["lemma"],
+            "textbookTransliteration": transliterate_mounce(word["lemma"]),
+            "transliterationSystem": TRANSLITERATION_SYSTEM,
+            "transliterationStatus": TRANSLITERATION_STATUS,
             "glossEn": "", "glossZh": "", "strong": "",
             "isProperName": False, "properNameTypes": [],
             "source": "使徒教父＋First1KGreek＋信經＋金口若望禮儀詞頻（通用希臘文詞位標註）",

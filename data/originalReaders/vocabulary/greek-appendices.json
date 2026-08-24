@@ -6563,8 +6563,8 @@
           "group": "基數",
           "frequency": 10853,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "一；某一",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6572,8 +6572,8 @@
           "group": "基數",
           "frequency": 789,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "二；兩個",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6581,8 +6581,8 @@
           "group": "基數",
           "frequency": 418,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "三；三個",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6590,8 +6590,8 @@
           "group": "基數",
           "frequency": 271,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "四",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6599,8 +6599,8 @@
           "group": "基數",
           "frequency": 300,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "五",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6608,8 +6608,8 @@
           "group": "基數",
           "frequency": 151,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "六",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
           "inLessons": false
         },
         {
@@ -6617,8 +6617,8 @@
           "group": "基數",
           "frequency": 386,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "七",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6626,8 +6626,8 @@
           "group": "基數",
           "frequency": 83,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "八",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6635,8 +6635,8 @@
           "group": "基數",
           "frequency": 41,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "九",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
           "inLessons": false
         },
         {
@@ -6644,8 +6644,8 @@
           "group": "基數",
           "frequency": 312,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "十",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6653,8 +6653,8 @@
           "group": "基數",
           "frequency": 19,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "十一",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
           "inLessons": false
         },
         {
@@ -6662,8 +6662,8 @@
           "group": "基數",
           "frequency": 166,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "十二",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6671,8 +6671,8 @@
           "group": "基數",
           "frequency": 258,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "二十",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6680,8 +6680,8 @@
           "group": "基數",
           "frequency": 170,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "三十",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6689,8 +6689,8 @@
           "group": "基數",
           "frequency": 5,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "四十",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6698,8 +6698,8 @@
           "group": "基數",
           "frequency": 147,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "五十",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6707,8 +6707,8 @@
           "group": "基數",
           "frequency": 73,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "六十",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6716,8 +6716,8 @@
           "group": "基數",
           "frequency": 104,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "七十",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6725,8 +6725,8 @@
           "group": "基數",
           "frequency": 41,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "八十",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
           "inLessons": false
         },
         {
@@ -6734,8 +6734,8 @@
           "group": "基數",
           "frequency": 23,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "九十",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
           "inLessons": false
         },
         {
@@ -6743,8 +6743,8 @@
           "group": "基數",
           "frequency": 224,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "一百",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6752,8 +6752,8 @@
           "group": "基數",
           "frequency": 82,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "二百",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6761,8 +6761,8 @@
           "group": "基數",
           "frequency": 72,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "三百",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6770,8 +6770,8 @@
           "group": "基數",
           "frequency": 57,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "四百",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6779,8 +6779,8 @@
           "group": "基數",
           "frequency": 62,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "五百",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6788,8 +6788,8 @@
           "group": "基數",
           "frequency": 116,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "一千",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6797,8 +6797,8 @@
           "group": "基數",
           "frequency": 42,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "二千",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
           "inLessons": false
         },
         {
@@ -6806,8 +6806,8 @@
           "group": "基數",
           "frequency": 14,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "萬",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
           "inLessons": false
         },
         {
@@ -6815,8 +6815,8 @@
           "group": "序數",
           "frequency": 472,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "首先的；第一的",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6824,8 +6824,8 @@
           "group": "序數",
           "frequency": 267,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "第二的；其次",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6833,8 +6833,8 @@
           "group": "序數",
           "frequency": 233,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "第三的",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6842,8 +6842,8 @@
           "group": "序數",
           "frequency": 103,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "第四",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6851,8 +6851,8 @@
           "group": "序數",
           "frequency": 65,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "第五的",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6860,8 +6860,8 @@
           "group": "序數",
           "frequency": 82,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "第六",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6869,8 +6869,8 @@
           "group": "序數",
           "frequency": 132,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "第七的；第七",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6878,8 +6878,8 @@
           "group": "序數",
           "frequency": 55,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "第八",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6887,8 +6887,8 @@
           "group": "序數",
           "frequency": 41,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "第九",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
           "inLessons": false
         },
         {
@@ -6896,8 +6896,8 @@
           "group": "序數",
           "frequency": 80,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "第十；十分之一",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6905,8 +6905,8 @@
           "group": "序數",
           "frequency": 25,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "第十一",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
           "inLessons": false
         },
         {
@@ -6914,8 +6914,8 @@
           "group": "序數",
           "frequency": 22,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "第十二",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
           "inLessons": false
         },
         {
@@ -6923,8 +6923,8 @@
           "group": "序數",
           "frequency": 219,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "末後的；最後的",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6932,8 +6932,8 @@
           "group": "倍數與分數",
           "frequency": 142,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "一半；半數",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6941,8 +6941,8 @@
           "group": "倍數與分數",
           "frequency": 25,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "兩倍；二分之一",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
           "inLessons": false
         },
         {
@@ -6950,8 +6950,8 @@
           "group": "倍數與分數",
           "frequency": 28,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "三倍；三分之一",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
           "inLessons": false
         },
         {
@@ -6959,8 +6959,8 @@
           "group": "倍數與分數",
           "frequency": 30,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "七倍；七分之一",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
           "inLessons": false
         },
         {
@@ -6968,8 +6968,8 @@
           "group": "倍數與分數",
           "frequency": 2,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "七十倍；七十分之一",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
           "inLessons": false
         },
         {
@@ -6977,8 +6977,8 @@
           "group": "倍數與分數",
           "frequency": 63,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "一次；一次永遠",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -6986,8 +6986,8 @@
           "group": "倍數與分數",
           "frequency": 1,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "多倍；多分之一",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
           "inLessons": false
         },
         {
@@ -6995,8 +6995,8 @@
           "group": "長度與容量",
           "frequency": 232,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "肘；肘長（古代長度單位）",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7004,8 +7004,8 @@
           "group": "長度與容量",
           "frequency": 9,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "掌寬；一掌寬",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
           "inLessons": false
         },
         {
@@ -7013,8 +7013,8 @@
           "group": "長度與容量",
           "frequency": 49,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "手指；腳趾",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7022,8 +7022,8 @@
           "group": "長度與容量",
           "frequency": 18,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "競技場；路程單位",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7031,8 +7031,8 @@
           "group": "長度與容量",
           "frequency": 3,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "一千步；一千步的距離",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
           "inLessons": false
         },
         {
@@ -7040,8 +7040,8 @@
           "group": "長度與容量",
           "frequency": 15,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "一公升；一公升的容量",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
           "inLessons": false
         },
         {
@@ -7049,8 +7049,8 @@
           "group": "長度與容量",
           "frequency": 18,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "荊棘叢；荊棘",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7058,8 +7058,8 @@
           "group": "長度與容量",
           "frequency": 4,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "量器；量尺",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
           "inLessons": false
         },
         {
@@ -7067,8 +7067,8 @@
           "group": "長度與容量",
           "frequency": 5,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "一公升；一公升的容量",
+          "zhSource": "語言模型（nvidia:meta/llama-3.1-70b-instruct），待人工複核",
           "inLessons": false
         },
         {
@@ -7076,8 +7076,8 @@
           "group": "長度與容量",
           "frequency": 3,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "蒲式耳；容量單位，約8.75升",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7085,8 +7085,8 @@
           "group": "長度與容量",
           "frequency": 4,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "細麥粉；容量單位，約7.3升",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7094,8 +7094,8 @@
           "group": "長度與容量",
           "frequency": 1,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "羅馬夸脫；容量單位，約0.55升",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7103,8 +7103,8 @@
           "group": "長度與容量",
           "frequency": 15,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "歌篾；容量單位，約2.2升",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7112,8 +7112,8 @@
           "group": "長度與容量",
           "frequency": 10,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "伊法；容量單位，約22升",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7121,8 +7121,8 @@
           "group": "錢幣與重量",
           "frequency": 73,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "他連得（古代重量貨幣單位）",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7130,8 +7130,8 @@
           "group": "錢幣與重量",
           "frequency": 16,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "彌那；重量單位，約560克",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7139,8 +7139,8 @@
           "group": "錢幣與重量",
           "frequency": 16,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "得拿利；銀幣，羅馬日薪標準",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7148,8 +7148,8 @@
           "group": "錢幣與重量",
           "frequency": 9,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "銀幣；希臘貨幣單位",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7157,8 +7157,8 @@
           "group": "錢幣與重量",
           "frequency": 1,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "斯他得；金銀幣",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7166,8 +7166,8 @@
           "group": "錢幣與重量",
           "frequency": 2,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "亞斯；銅幣，羅馬小額幣",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7175,8 +7175,8 @@
           "group": "錢幣與重量",
           "frequency": 3,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "古錢；銅幣，最小面額",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7184,8 +7184,8 @@
           "group": "錢幣與重量",
           "frequency": 2,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "小錢；銅幣，最小面額",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7193,8 +7193,8 @@
           "group": "錢幣與重量",
           "frequency": 72,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "舍客勒（貨幣單位）",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7202,8 +7202,8 @@
           "group": "錢幣與重量",
           "frequency": 278,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "金製飾物",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7211,8 +7211,8 @@
           "group": "錢幣與重量",
           "frequency": 389,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "銀子；銀錢；金錢",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         }
       ]
@@ -7226,8 +7226,8 @@
           "group": "直系",
           "frequency": 1965,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "父親；天父",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7235,8 +7235,8 @@
           "group": "直系",
           "frequency": 363,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "母親",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7244,8 +7244,8 @@
           "group": "直系",
           "frequency": 5249,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "兒子、後裔",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7253,8 +7253,8 @@
           "group": "直系",
           "frequency": 611,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "女兒",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7262,8 +7262,8 @@
           "group": "直系",
           "frequency": 399,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "孩子；兒女；子孫；居民",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7271,8 +7271,8 @@
           "group": "直系",
           "frequency": 211,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "小孩；嬰孩",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7280,8 +7280,8 @@
           "group": "直系",
           "frequency": 14,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "嬰孩；幼兒",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7289,8 +7289,8 @@
           "group": "直系",
           "frequency": 35,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "父親；母親；雙親",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7298,8 +7298,8 @@
           "group": "直系",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "祖父；外祖父",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7307,8 +7307,8 @@
           "group": "直系",
           "frequency": 5,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "祖先；前人",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7316,8 +7316,8 @@
           "group": "直系",
           "frequency": 34,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "孫；後代",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7325,8 +7325,8 @@
           "group": "直系",
           "frequency": 146,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "長子；首生的",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7334,8 +7334,8 @@
           "group": "直系",
           "frequency": 33,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "獨生的；唯一的；獨生子",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7343,8 +7343,8 @@
           "group": "旁系",
           "frequency": 1233,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "兄弟",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7352,8 +7352,8 @@
           "group": "旁系",
           "frequency": 147,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "姐妹",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7361,8 +7361,8 @@
           "group": "旁系",
           "frequency": 3,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "堂兄弟；表兄弟",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7370,8 +7370,8 @@
           "group": "旁系",
           "frequency": 87,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "神聖的；神的",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7379,8 +7379,8 @@
           "group": "旁系",
           "frequency": 31,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "親戚；族人",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7388,8 +7388,8 @@
           "group": "旁系",
           "frequency": 10,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "雙胞胎；孿生兒",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7397,8 +7397,8 @@
           "group": "姻親",
           "frequency": 1926,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "男人；男性",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7406,8 +7406,8 @@
           "group": "姻親",
           "frequency": 1145,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "婦女；妻子",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7415,8 +7415,8 @@
           "group": "姻親",
           "frequency": 52,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "新婦；媳婦；女婿妻",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7424,8 +7424,8 @@
           "group": "姻親",
           "frequency": 26,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "女婿；新郎",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7433,8 +7433,8 @@
           "group": "姻親",
           "frequency": 8,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "公公；岳父",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7442,8 +7442,8 @@
           "group": "姻親",
           "frequency": 18,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "婆婆；岳母",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7451,8 +7451,8 @@
           "group": "姻親",
           "frequency": 111,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "寡婦",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7460,8 +7460,8 @@
           "group": "姻親",
           "frequency": 8,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "訂婚；許配",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7469,8 +7469,8 @@
           "group": "姻親",
           "frequency": 31,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "婚禮；婚姻",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7478,8 +7478,8 @@
           "group": "族屬",
           "frequency": 2057,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "房子；家；家人",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7487,8 +7487,8 @@
           "group": "族屬",
           "frequency": 165,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "氏族；宗族",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7496,8 +7496,8 @@
           "group": "族屬",
           "frequency": 426,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "支派；宗族；民族",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7505,8 +7505,8 @@
           "group": "族屬",
           "frequency": 269,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "世代；一代人",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7514,8 +7514,8 @@
           "group": "族屬",
           "frequency": 320,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "種子；後裔",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7523,8 +7523,8 @@
           "group": "族屬",
           "frequency": 161,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "後裔；家族；種族；類別",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7532,8 +7532,8 @@
           "group": "族屬",
           "frequency": 12,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "親屬關係；血緣",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7541,8 +7541,8 @@
           "group": "族屬",
           "frequency": 65,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "孤兒；失去雙親的",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7550,8 +7550,8 @@
           "group": "族屬",
           "frequency": 168,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "童女；未曾嫁娶的女子",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         }
       ]
@@ -7565,8 +7565,8 @@
           "group": "時辰與日夜",
           "frequency": 2830,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "日子；天",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7574,8 +7574,8 @@
           "group": "時辰與日夜",
           "frequency": 354,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "夜；夜間",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7583,8 +7583,8 @@
           "group": "時辰與日夜",
           "frequency": 121,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "傍晚；晚上",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7592,8 +7592,8 @@
           "group": "時辰與日夜",
           "frequency": 197,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "清晨；黎明",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7601,8 +7601,8 @@
           "group": "時辰與日夜",
           "frequency": 28,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "正午；中午",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7610,8 +7610,8 @@
           "group": "時辰與日夜",
           "frequency": 193,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "時辰；時候；季節",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7619,8 +7619,8 @@
           "group": "時辰與日夜",
           "frequency": 164,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "看守；監禁；監獄",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7628,8 +7628,8 @@
           "group": "時辰與日夜",
           "frequency": 30,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "清晨；黎明",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7637,8 +7637,8 @@
           "group": "時辰與日夜",
           "frequency": 324,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "今天；現在",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7646,8 +7646,8 @@
           "group": "時辰與日夜",
           "frequency": 71,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "明天",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7655,8 +7655,8 @@
           "group": "時辰與日夜",
           "frequency": 2,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "昨天；前日",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7664,8 +7664,8 @@
           "group": "週月年",
           "frequency": 207,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "安息日；一週",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7682,8 +7682,8 @@
           "group": "週月年",
           "frequency": 323,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "月份",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7691,8 +7691,8 @@
           "group": "週月年",
           "frequency": 29,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "新月；初一",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7700,8 +7700,8 @@
           "group": "週月年",
           "frequency": 713,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "年",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7709,8 +7709,8 @@
           "group": "週月年",
           "frequency": 166,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "年",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7718,8 +7718,8 @@
           "group": "週月年",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "禧年的；關於禧年的",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7727,8 +7727,8 @@
           "group": "週月年",
           "frequency": 9,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "主日的；星期日",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7736,8 +7736,8 @@
           "group": "週月年",
           "frequency": 12,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "預備日；星期五",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7745,8 +7745,8 @@
           "group": "以色列節期",
           "frequency": 141,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "節期；筵席",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7754,8 +7754,8 @@
           "group": "以色列節期",
           "frequency": 61,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "逾越節；逾越節的羊羔",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7763,8 +7763,8 @@
           "group": "以色列節期",
           "frequency": 58,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "無酵節",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7772,8 +7772,8 @@
           "group": "以色列節期",
           "frequency": 3,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "五旬節",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7781,8 +7781,8 @@
           "group": "以色列節期",
           "frequency": 9,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "住棚節",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7790,8 +7790,8 @@
           "group": "以色列節期",
           "frequency": 1,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "修殿節；獻殿節",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7799,8 +7799,8 @@
           "group": "以色列節期",
           "frequency": 53,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "禁食；齋戒",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7808,8 +7808,8 @@
           "group": "以色列節期",
           "frequency": 14,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "贖罪日",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7817,8 +7817,8 @@
           "group": "以色列節期",
           "frequency": 103,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "號筒、喇叭",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7826,8 +7826,8 @@
           "group": "教會節期",
           "frequency": 135,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "復活；起死回生",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7835,8 +7835,8 @@
           "group": "教會節期",
           "frequency": 2,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "聖誕節；基督降生節",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7844,8 +7844,8 @@
           "group": "教會節期",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "主顯節；顯現節",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7853,8 +7853,8 @@
           "group": "教會節期",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "獻主節；聖燭節",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7862,8 +7862,8 @@
           "group": "教會節期",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "變容節",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7871,8 +7871,8 @@
           "group": "教會節期",
           "frequency": 4,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "聖母瞻禮；聖母安眠節",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7880,8 +7880,8 @@
           "group": "教會節期",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "四旬期；大齋期",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7889,8 +7889,8 @@
           "group": "月名",
           "frequency": 1,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "尼散月",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7898,8 +7898,8 @@
           "group": "月名",
           "frequency": 5,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "亞達月",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7907,8 +7907,8 @@
           "group": "月名",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "西番月",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7916,8 +7916,8 @@
           "group": "月名",
           "frequency": 1,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "以祿月（猶太曆第六月，約相當於八月中至九月中）",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7925,8 +7925,8 @@
           "group": "月名",
           "frequency": 7,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "基斯利月（猶太曆第九月，約相當於十一月中至十二月中）",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7934,8 +7934,8 @@
           "group": "月名",
           "frequency": 4,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "散提古斯月（馬其頓曆第一月，約相當於三月中至四月中）",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7943,8 +7943,8 @@
           "group": "月名",
           "frequency": 1,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "迪斯特魯斯月（馬其頓曆第二月，約相當於四月中至五月中）",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7952,8 +7952,8 @@
           "group": "月名",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "迪奧斯月（馬其頓曆第八月，約相當於十月中至十一月中）",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7961,8 +7961,8 @@
           "group": "月名",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "阿佩拉奧斯月（馬其頓曆第九月，約相當於十一月中至十二月中）",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -7970,8 +7970,8 @@
           "group": "月名",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "帕尼莫斯月（馬其頓曆第十月，約相當於十二月中至一月中）",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         }
       ]
@@ -7985,8 +7985,8 @@
           "group": "新約職分",
           "frequency": 142,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "使徒；受差遣者",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -7994,8 +7994,8 @@
           "group": "新約職分",
           "frequency": 592,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "先知",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8003,8 +8003,8 @@
           "group": "新約職分",
           "frequency": 5,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "福音傳道者；四位福音書作者",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8012,8 +8012,8 @@
           "group": "新約職分",
           "frequency": 152,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "牧羊人；牧者",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8021,8 +8021,8 @@
           "group": "新約職分",
           "frequency": 96,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "教師",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8030,8 +8030,8 @@
           "group": "新約職分",
           "frequency": 68,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "監督；主教",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8039,8 +8039,8 @@
           "group": "新約職分",
           "frequency": 292,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "長老；年長的",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8048,8 +8048,8 @@
           "group": "新約職分",
           "frequency": 59,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "僕人；執事；侍者",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8057,8 +8057,8 @@
           "group": "新約職分",
           "frequency": 30,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "僕人；侍從；執事",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8075,8 +8075,8 @@
           "group": "後期職分",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "大主教；宗主教",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8084,8 +8084,8 @@
           "group": "後期職分",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "都主教；主教長",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8093,8 +8093,8 @@
           "group": "後期職分",
           "frequency": 14,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "宗主教；列祖",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8102,8 +8102,8 @@
           "group": "後期職分",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "修院院長；修士長",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8111,8 +8111,8 @@
           "group": "後期職分",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "修士；隱修士",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8120,8 +8120,8 @@
           "group": "後期職分",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "誦經員；讀經員",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8129,8 +8129,8 @@
           "group": "後期職分",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "詩班員；聖詠隊員",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8138,8 +8138,8 @@
           "group": "後期職分",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "副執事",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8147,8 +8147,8 @@
           "group": "後期職分",
           "frequency": 1,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "驅魔士；驅邪職",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8156,8 +8156,8 @@
           "group": "後期職分",
           "frequency": 7,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "門衛；聖堂守門人",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8165,8 +8165,8 @@
           "group": "後期職分",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "女執事；女傳道者",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8174,8 +8174,8 @@
           "group": "後期職分",
           "frequency": 153,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "地界；產業；籤；職分",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8183,8 +8183,8 @@
           "group": "後期職分",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "平信徒；俗人",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8192,8 +8192,8 @@
           "group": "按立",
           "frequency": 2,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "按手禮；聖職按立",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8201,8 +8201,8 @@
           "group": "按立",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "按手禮；職分按立",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8210,8 +8210,8 @@
           "group": "按立",
           "frequency": 6,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "按立；選立為神職人員",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8219,8 +8219,8 @@
           "group": "按立",
           "frequency": 205,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "設立；任命；指派；安排",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8228,8 +8228,8 @@
           "group": "按立",
           "frequency": 2,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "使徒傳承；職分相繼",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8237,8 +8237,8 @@
           "group": "按立",
           "frequency": 40,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "次序；秩序；職分",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8246,8 +8246,8 @@
           "group": "聖事",
           "frequency": 73,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "隱密之事；奧祕",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8255,8 +8255,8 @@
           "group": "聖事",
           "frequency": 25,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "洗禮；施洗",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8264,8 +8264,8 @@
           "group": "聖事",
           "frequency": 11,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "聖油；傅油聖事",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8273,8 +8273,8 @@
           "group": "聖事",
           "frequency": 31,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "感謝；謝恩",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8282,8 +8282,8 @@
           "group": "聖事",
           "frequency": 29,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "交通；相交；團契；分享",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8291,8 +8291,8 @@
           "group": "聖事",
           "frequency": 108,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "悔改；心意更新",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8300,8 +8300,8 @@
           "group": "聖事",
           "frequency": 25,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "認罪；認罪禮",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8309,8 +8309,8 @@
           "group": "聖事",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "聖油禮；傅油祈禱",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8318,8 +8318,8 @@
           "group": "禮儀",
           "frequency": 68,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "禮儀；聖禮；事奉",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8327,8 +8327,8 @@
           "group": "禮儀",
           "frequency": 20,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "事奉者；執事；侍奉者",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8336,8 +8336,8 @@
           "group": "禮儀",
           "frequency": 4,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "感恩經；奉獻經文",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8345,8 +8345,8 @@
           "group": "禮儀",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "備禮；聖餐前備禮儀式",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8354,8 +8354,8 @@
           "group": "禮儀",
           "frequency": 13,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "紀念；回憶",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8363,8 +8363,8 @@
           "group": "禮儀",
           "frequency": 3,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "祈禱；聖靈降臨祈禱（感恩祈禱中祈求聖靈降臨之部分）",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8372,8 +8372,8 @@
           "group": "禮儀",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "對經；輪唱詩句",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8381,8 +8381,8 @@
           "group": "禮儀",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "連禱；連續祈禱文",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8390,8 +8390,8 @@
           "group": "禮儀",
           "frequency": 3,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "懇切禱告；熱切祈禱",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8399,8 +8399,8 @@
           "group": "禮儀",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "短歌；聖詩短頌",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8408,8 +8408,8 @@
           "group": "禮儀",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "長頌；聖詩長歌",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8417,8 +8417,8 @@
           "group": "禮儀",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "散禮歌；禮儀結束頌詞",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8426,8 +8426,8 @@
           "group": "禮儀",
           "frequency": 2,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "散禮；禮儀結束",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8435,8 +8435,8 @@
           "group": "禮儀",
           "frequency": 116,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "祝福；讚美；恭維",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8444,8 +8444,8 @@
           "group": "禮儀",
           "frequency": 20,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "聖潔；成聖",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8453,8 +8453,8 @@
           "group": "禮儀器物與呼求",
           "frequency": 410,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "麵包；食物",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8462,8 +8462,8 @@
           "group": "禮儀器物與呼求",
           "frequency": 252,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "葡萄酒",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8471,8 +8471,8 @@
           "group": "禮儀器物與呼求",
           "frequency": 73,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "杯；酒杯",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8480,8 +8480,8 @@
           "group": "禮儀器物與呼求",
           "frequency": 0,
           "attested": false,
-          "zh": "",
-          "zhSource": "",
+          "zh": "小盤；祭餅盤",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8489,8 +8489,8 @@
           "group": "禮儀器物與呼求",
           "frequency": 89,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "香；香祭；馨香",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8498,8 +8498,8 @@
           "group": "禮儀器物與呼求",
           "frequency": 457,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "祭壇",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8507,8 +8507,8 @@
           "group": "禮儀器物與呼求",
           "frequency": 102,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "像；肖像；形象",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8516,8 +8516,8 @@
           "group": "禮儀器物與呼求",
           "frequency": 212,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "阿們；誠然；願如此成就",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8525,8 +8525,8 @@
           "group": "禮儀器物與呼求",
           "frequency": 38,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "哈利路亞；讚美主",
+          "zhSource": "語言模型（claude-haiku-4-5-20251001），待人工複核",
           "inLessons": false
         },
         {
@@ -8534,8 +8534,8 @@
           "group": "禮儀器物與呼求",
           "frequency": 159,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "憐憫；施憐憫於",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8543,8 +8543,8 @@
           "group": "禮儀器物與呼求",
           "frequency": 1287,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "聖潔的；分別為聖的",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         },
         {
@@ -8552,8 +8552,8 @@
           "group": "禮儀器物與呼求",
           "frequency": 699,
           "attested": true,
-          "zh": "",
-          "zhSource": "",
+          "zh": "榮耀；尊榮；光輝",
+          "zhSource": "課文詞義層（greek-2000-gloss-zh-by-lemma）",
           "inLessons": true
         }
       ]

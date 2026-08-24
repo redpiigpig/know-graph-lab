@@ -1,8 +1,9 @@
 # Keep the Greek reader's two language-model layers moving until they are done.
 #
-# The Chinese gloss layer (1,000 words) and the interlinear layer (2,021 units,
-# ~50,000 words) both need the Claude Max account, which the overnight fleet and
-# the interactive session share, so they spend most of their life rate-limited.
+# The Chinese gloss layer (2,000 words) and the interlinear layer (4,222 units,
+# ~105,000 words) both go through the shared engine chain, which the overnight
+# fleet and the interactive session compete for, so they spend much of their
+# life rate-limited.
 # A background shell started from a chat session dies with that session; only a
 # scheduled task survives the night.
 #
@@ -28,12 +29,12 @@ $repo = 'c:\Users\user\Desktop\know-graph-lab'
 $python = 'python'
 $cache = Join-Path $repo 'output\source-cache\original-readers\greek-full'
 $log = Join-Path $cache 'keeper.log'
-$glossPath = Join-Path $cache 'greek-1000-gloss-zh-reviewed.json'
+$glossPath = Join-Path $cache 'greek-2000-gloss-zh-by-lemma.json'
 $interlinearPath = Join-Path $cache 'interlinear.json'
-$masterPath = Join-Path $cache 'greek-reader-50-lessons.json'
+$masterPath = Join-Path $cache 'greek-reader-two-volumes.json'
 $reportPath = Join-Path $cache 'validation-report.json'
-$vocabTarget = 1000
-$unitTarget = 2021
+$vocabTarget = 2000
+$unitTarget = 4222
 
 function Write-Log($message) {
     $stamp = (Get-Date).ToString('yyyy-MM-dd HH:mm:ss')
@@ -78,7 +79,7 @@ if ($running) {
 $glossCount = Count-Entries $glossPath 'glosses'
 if ($glossCount -lt $vocabTarget) {
     Write-Log "gloss layer at $glossCount/$vocabTarget; starting a pass"
-    Invoke-Pass 'gloss' @('scripts/build_greek_vocab_glosses.py', '--model', 'auto')
+    Invoke-Pass 'gloss' @('scripts/build_greek_vocab_glosses_2000.py', '--model', 'auto')
     $glossCount = Count-Entries $glossPath 'glosses'
     Write-Log "gloss pass finished at $glossCount/$vocabTarget"
     exit 0
@@ -97,7 +98,7 @@ Write-Log 'both layers complete; rebuilding the master and revalidating'
 Invoke-Pass 'master' @('scripts/build_greek_reader_data.py', '--write')
 Invoke-Pass 'validate' @(
     'skills/build-original-language-reader/scripts/validate_reader_release.py',
-    '--master', $masterPath, '--language', 'grc', '--scripture-lessons', '25',
+    '--master', $masterPath, '--language', 'grc', '--scripture-lessons', '50',
     '--report', $reportPath
 )
 Write-Log 'done'

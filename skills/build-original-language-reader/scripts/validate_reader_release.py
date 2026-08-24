@@ -30,6 +30,7 @@ RELEASE_STATUSES = {
     "planned",
     "source_frozen",
     "vocabulary_complete",
+    "content_complete_translation_pending",
     "content_complete_layout_pending",
     "content_complete_audio_pending",
     "print_qa_passed_audio_pending",
@@ -187,8 +188,57 @@ def language_form_ok(item: dict[str, Any], language: str) -> bool:
     return bool(LATIN_LETTER.search(form))
 
 
+def select_volume(data: dict[str, Any], volume: int) -> dict[str, Any]:
+    """One volume of a multi-volume master, presented as a single-volume one.
+
+    A release may be one book or several.  Rather than teach every check about
+    volumes, the volume being validated is lifted into the shape the checks
+    already expect: its lessons become the master's lessons, its appendices join
+    the shared ones, and the counts it must satisfy are recomputed from its own
+    lessons.  A single-volume master is returned untouched.
+    """
+    volumes = data.get("volumes")
+    if not volumes:
+        if volume:
+            raise SystemExit("這份主檔沒有分冊，不要給 --volume")
+        return data
+    if not volume:
+        raise SystemExit(
+            f"這份主檔分 {len(volumes)} 冊，須指定 --volume（1–{len(volumes)}）"
+        )
+    match = next((item for item in volumes if item.get("volume") == volume), None)
+    if match is None:
+        raise SystemExit(f"主檔沒有第 {volume} 冊")
+    lessons = match.get("lessons") or []
+    scripture = sum(
+        1
+        for lesson in lessons
+        if (lesson.get("reading") or {}).get("kind") in {"bible_chapter", "scripture_chapter"}
+    )
+    vocabulary = [item for lesson in lessons for item in lesson.get("vocabulary") or []]
+    memory = [
+        item
+        for lesson in lessons
+        for item in (lesson.get("memoryUnits") or lesson.get("memoryVerses") or [])
+    ]
+    return {
+        **data,
+        "volumeTitle": match.get("title", ""),
+        "lessons": lessons,
+        "appendices": (data.get("appendices") or []) + (match.get("appendices") or []),
+        "counts": {
+            **(data.get("counts") or {}),
+            "lessons": len(lessons),
+            "vocabulary": len(vocabulary),
+            "memoryUnits": len(memory),
+            "bibleChapters": scripture,
+            "prayersOrArticles": len(lessons) - scripture,
+        },
+    }
+
+
 def validate(args: argparse.Namespace) -> dict[str, Any]:
-    data = json.loads(args.master.read_text(encoding="utf-8"))
+    data = select_volume(json.loads(args.master.read_text(encoding="utf-8")), args.volume)
     checks: list[dict[str, Any]] = []
     required_top = {
         "schemaVersion", "languageCode", "privateUse", "releaseStatus",
@@ -199,7 +249,7 @@ def validate(args: argparse.Namespace) -> dict[str, Any]:
     expect(
         checks,
         not missing_top
-        and data.get("schemaVersion") == "1.0.0"
+        and data.get("schemaVersion") in {"1.0.0", "2.0.0"}
         and data.get("languageCode") == args.language
         and data.get("privateUse") is True
         and data.get("releaseStatus") in RELEASE_STATUSES,
@@ -531,6 +581,8 @@ def validate(args: argparse.Namespace) -> dict[str, Any]:
     return {
         "result": "PASS" if summary["FAIL"] == 0 else "FAIL",
         "master": str(args.master),
+        "volume": args.volume or None,
+        "volumeTitle": data.get("volumeTitle", ""),
         "summary": summary,
         "checks": checks,
     }
@@ -551,6 +603,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--haggadah-steps", type=int, default=15)
     parser.add_argument("--chinese-bible-version", default="cuv2010")
     parser.add_argument("--chinese-bible-variant", default="RCUV2（上帝版）")
+    parser.add_argument(
+        "--volume",
+        type=int,
+        default=0,
+        help="多冊主檔要驗哪一冊；單冊主檔不要給",
+    )
     parser.add_argument("--report", type=Path)
     return parser.parse_args()
 

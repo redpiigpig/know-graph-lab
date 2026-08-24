@@ -27,7 +27,9 @@ import argparse
 import json
 import re
 import sys
+import threading
 import unicodedata
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -41,6 +43,7 @@ SCRIPTURE_PLAN = CACHE / "scripture-plan.json"
 PATRISTIC_PLAN = CACHE / "patristic-plan.json"
 LITURGY = CACHE / "liturgy-chrysostom.json"
 MEMORY = CACHE / "memory-verses.json"
+MEMORY_SENTENCES = CACHE / "memory-sentences.json"
 OUTPUT = CACHE / "interlinear.json"
 
 GREEK_RE = re.compile(r"[Ͱ-Ͽἀ-῿]")
@@ -141,6 +144,21 @@ def units() -> list[dict]:
                     "needsWholeTranslation": True,
                 }
             )
+
+    sentences = json.loads(MEMORY_SENTENCES.read_text(encoding="utf-8"))
+    for sentence in sentences["sentences"]:
+        rows.append(
+            {
+                "id": f"sentence:{sentence['ref']}",
+                "group": "sentence",
+                "ref": f"{sentence['readingTitleZh']} {sentence['segmentRef']}",
+                "text": sentence["text"],
+                # 下冊's readings have no published Chinese, so a memory sentence
+                # needs its own whole-sentence rendering as well as the row of
+                # word glosses.
+                "needsWholeTranslation": True,
+            }
+        )
 
     liturgy = json.loads(LITURGY.read_text(encoding="utf-8"))
     for step in liturgy["steps"]:
@@ -274,13 +292,46 @@ def gloss_unit(unit: dict) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser(description="建立希臘文讀本逐詞對譯層")
     parser.add_argument("--model", choices=sorted(llm.MODEL_CHAINS), default="auto")
-    parser.add_argument("--group", choices=("scripture", "memory", "patristic", "liturgy"))
+    parser.add_argument(
+        "--group", choices=("scripture", "memory", "sentence", "patristic", "liturgy")
+    )
     parser.add_argument("--limit", type=int, default=0, help="只跑前 N 個單元（0＝全部）")
+    # One unit at a time meant roughly two a minute, or eighteen hours for the
+    # remaining two thousand: almost all of that is waiting on the network, and
+    # the engine chain rotates seven Gemini keys plus the NVIDIA tier, so a
+    # handful of threads costs nothing extra and finishes overnight.
+    parser.add_argument("--workers", type=int, default=6, help="同時處理幾個單元")
     args = parser.parse_args()
 
     llm.select_chain(args.model)
     cache = load_cache()
     all_units = units()
+
+    # Renumbering 下冊's readings changed every patristic id, but not one word
+    # of their Greek.  A unit whose exact text is already glossed under another
+    # id is copied rather than paid for again.
+    by_text = {}
+    for entry in cache.values():
+        key = "".join(token["word"] + token["trailing"] for token in entry["tokens"])
+        by_text.setdefault(key, entry)
+    recovered = 0
+    for unit in all_units:
+        if unit["id"] in cache:
+            continue
+        key = "".join(
+            token["word"] + token["trailing"] for token in tokenise(unit["text"])
+        )
+        source = by_text.get(key)
+        if source is None:
+            continue
+        if unit["needsWholeTranslation"] and not source.get("translationZh"):
+            continue
+        cache[unit["id"]] = {**source, "ref": unit["ref"], "group": unit["group"]}
+        recovered += 1
+    if recovered:
+        save_cache(cache)
+        print(f"沿用字面相同的既有對譯 {recovered} 個單元", flush=True)
+
     pending = [unit for unit in all_units if unit["id"] not in cache]
     if args.group:
         pending = [unit for unit in pending if unit["group"] == args.group]
@@ -297,22 +348,34 @@ def main() -> None:
     # list failing once each and saves nothing.
     done = failed = 0
     unproductive_passes = 0
+    lock = threading.Lock()
     while pending and unproductive_passes < UNPRODUCTIVE_PASS_LIMIT:
         requeued: list[dict] = []
         progressed = False
-        for index, unit in enumerate(pending, start=1):
+        print(f"  本輪 {len(pending)} 個單元待補", flush=True)
+
+        def run(unit: dict) -> None:
+            nonlocal done, failed, progressed
             try:
-                cache[unit["id"]] = gloss_unit(unit)
+                result = gloss_unit(unit)
             except Exception as error:  # noqa: BLE001 - re-queued, not discarded
-                failed += 1
-                requeued.append(unit)
-                print(f"  ✗ {index}/{len(pending)} {unit['ref']}：{error}", flush=True)
-                continue
-            progressed = True
-            done += 1
-            save_cache(cache)
-            if done % 10 == 0:
-                print(f"  {index}/{len(pending)} 完成，累計 {len(cache)}／{len(all_units)}", flush=True)
+                with lock:
+                    failed += 1
+                    requeued.append(unit)
+                    print(f"  ✗ {unit['ref']}：{error}", flush=True)
+                return
+            with lock:
+                cache[unit["id"]] = result
+                progressed = True
+                done += 1
+                if done % 20 == 0:
+                    save_cache(cache)
+                if done % 10 == 0:
+                    print(f"  已完成 {done} 個，累計 {len(cache)}／{len(all_units)}", flush=True)
+
+        with ThreadPoolExecutor(max_workers=max(1, args.workers)) as pool:
+            list(pool.map(run, pending))
+        save_cache(cache)
         pending = requeued
         unproductive_passes = 0 if progressed else unproductive_passes + 1
         if pending:
