@@ -6,7 +6,8 @@ description: 把《古代基督信仰聖經註釋叢書》(ACCS, IVP/校園) 的
 > ⚙️ 引擎政策（2026-06-14 更新）：掃描中文 OCR 品質 **Sonnet > Gemini ≫ Haiku**。
 > Haiku Vision 對掃描中文錯字/漏字/合併嚴重（user 退過兩次），**已棄用**。
 > Gemini 品質佳但**每日額度與 jung/mueller 等並行任務共用、常乾**。
-> → 現役引擎 = **Sonnet（`--engine sonnet`，Claude Max OAuth，5h 滾動額度）**，多頁批次（`--batch`）省額度。
+> → **現役引擎鏈（2026-08-17 起）= Gemini（探到還有額度的 vision 模型）→ 全乾才落 Sonnet**。
+>   Sonnet 品質最好但慢且吃 Max 5h 窗；Gemini 快又免費，所以先用 Gemini、乾了才換。`--batch 2`（見下）。
 > `ingest_accs_genesis.py` 支援 `--engine gemini|haiku|sonnet`。中文一律繁體（[[feedback_traditional_chinese_only]]）。
 > 🚨 截圖／渲染頁 ≤2000px（[[feedback_screenshot_2000px]]）。
 
@@ -21,7 +22,7 @@ description: 把《古代基督信仰聖經註釋叢書》(ACCS, IVP/校園) 的
 > - **🚨 書末附錄會污染正文表（2026-08-19 羅馬書）**：ACCS 每卷末尾有「教父人物小傳」「主題索引」「引用經文索引」。OCR 照樣吐 entry：小傳與主題索引因 `ref` 空或非數字會被 `build_rows_auto` 濾掉（正確），但**引用經文索引的行長得就像經文引用**（`19:18`、`28:6`，body 其實是頁碼 `285-86`），會直接混進表。羅馬書因此多了 12 筆 ch19–28 的假資料（該書只有 16 章）。已加 `CHAPTER_COUNTS` 章數閘（超出實際章數一律不進表）＋回歸測試；全 19 卷複查只有羅馬書中招，已清乾淨。**新書卷入庫後養成習慣：`select book_code, max(chapter) from accs_commentary group by 1` 對一次實際章數。**
 > - **📄 batch size 用 2 不要 4**：4 頁 1800px ≈ 2.0 MB PNG（base64 後 2.6 MB），Gemini 幾乎必回 504 DEADLINE_EXCEEDED，實測羅馬書一小時只跑 16 頁；改 `--batch 2` 後 **344 頁/小時**（21 倍），retry 從 26 次降到 3 次。額度不是瓶頸（日上限約 840 次請求），能不能在期限內跑完才是。
 > - **🚨 driver 兩次連續失敗才停整批**：`accs_ocr_run.py` 原本一卷 rc≠0 就停全批，導致約翰福音額度乾之後，排在後面的希伯來書／以賽亞書永遠排不到（DB 長期 0 筆）。已改成跳過換下一卷、連續兩卷才停（[[feedback_ocr_two_strike_quota]]）。
-> - **✅ 2026-08-21：8 卷合刊全部定界，config 23 卷全 `ready`／58 個 book_code**（原本 8 卷卡在 `needs_boundaries`，那 21 個書卷永遠排不到）。工具 `scripts/accs_find_boundaries.py`：vision 讀目錄 → 讀 3–5 頁「印在紙上的頁碼」反推 offset（多數決）→ 標題頁回驗 → **回驗不過就不寫**。每卷約 5 次呼叫。🚨 **別用暴力搜 offset**（offset範圍×書數，最壞 243 次，日額度才約 840）。目錄那一次呼叫順便問出附錄（人物小傳／索引）起始頁，最後一本切在附錄前——不切的話但以理書會算成 366 頁（實際 234）。
+> - **✅ 2026-08-21：8 卷合刊全部定界，config 23 卷全 `ready`／54 個 book_code**（原本 8 卷卡在 `needs_boundaries`，那 21 個書卷永遠排不到）。工具 `scripts/accs_find_boundaries.py`：vision 讀目錄 → 讀 3–5 頁「印在紙上的頁碼」反推 offset（多數決）→ 標題頁回驗 → **回驗不過就不寫**。每卷約 5 次呼叫。🚨 **別用暴力搜 offset**（offset範圍×書數，最壞 243 次，日額度才約 840）。目錄那一次呼叫順便問出附錄（人物小傳／索引）起始頁，最後一本切在附錄前——不切的話但以理書會算成 366 頁（實際 234）。
 >   - 🚨 **標題頁回驗擋不住 offset 差 2**：書名在跨頁頁眉上都有，36 與 38 都會「通過」。真正能分辨的是**讀相鄰兩頁的印刷頁碼看連不連號**。
 >   - 🚨 **十二先知書（28-39）印刷頁碼在約拿書內部斷 2 頁**：何西阿–約拿用 offset 38、彌迦起用 36，已人工寫入並在 config 留 `note`。**別用 accs_find_boundaries 重算覆蓋這一卷**。自洽檢查法：除約拿外 11 本的「PDF 頁數」應等於「書內頁數」。
 > - **面板**：`translation_dashboard.py` 已接 config → ACCS 區塊顯示全 65 卷路線圖＋中文名。
@@ -92,7 +93,7 @@ python scripts/ingest_accs_genesis.py \
   [[scripture-fathers]] 譯名決策；FATHER_FIXES 只收同一人異寫，**不碰同名異人**）。
 
 ## 測試
-`python scripts/tests/test_accs_commentary.py`（或 `pytest`）— **44 例（2026-07-08 實收）**：節範圍解析（單節/連字/全形冒號/
+`python scripts/tests/test_accs_commentary.py`（或 `pytest`）— **52 例（2026-08-22 實收）**：節範圍解析（單節/連字/全形冒號/
 跨章夾斷/亂碼）、`parse_full_ref`/`build_rows_auto`（整本自動分章+章內 carry-forward）、教父譯名收斂、
 繁體強制（opencc s2twp）/`has_simplified`/`normalize_body`、build_rows 的 pericope/entry 排序與空 body 跳過。
 改 parser 必先補測試（user 很在意 test-first）。
