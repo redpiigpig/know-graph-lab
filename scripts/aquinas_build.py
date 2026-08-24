@@ -451,10 +451,28 @@ def _upload(vol: int, chunks: list[dict]):
         "page_number": c["page_number"], "chapter_path": c["chapter_path"],
         "content": c["content"][:200], "char_count": len(c["content"]),
     } for c in chunks]
+    # 🚨 一批是一句 SQL：一列違規整批被拒。以前這裡完全不看 status，於是每冊靜靜少掉
+    # 25 筆（封面 chunk_type='cover' 違反 CHECK，把同批 24 筆正文一起帶走）。
+    # 現在批次失敗就逐列重試，讓壞列只損失它自己，並回報實際寫入數。
+    failed = []
     for i in range(0, len(prows), 25):
-        requests.post(f"{te.URL}/rest/v1/ebook_chunks", headers=te.H_JSON, json=prows[i:i + 25], timeout=60)
-    print(f"    ✓ DB ebooks+previews  chunk_count={len(chunks)}  {ebid}", flush=True)
-    fp_file.write_text(fp, encoding="ascii")   # 全數成功才記指紋
+        batch = prows[i:i + 25]
+        r = requests.post(f"{te.URL}/rest/v1/ebook_chunks", headers=te.H_JSON, json=batch, timeout=60)
+        if r.status_code < 300:
+            continue
+        for row in batch:
+            rr = requests.post(f"{te.URL}/rest/v1/ebook_chunks", headers=te.H_JSON, json=[row], timeout=60)
+            if rr.status_code >= 300:
+                failed.append((row["chunk_index"], row["chunk_type"], rr.text[:90]))
+    written = len(prows) - len(failed)
+    if failed:
+        print(f"    ⚠ {len(failed)} 列寫不進去（其餘 {written} 列已寫入）：", flush=True)
+        for idx, typ, err in failed[:3]:
+            print(f"        index={idx} type={typ!r} {err}", flush=True)
+    print(f"    {'✓' if not failed else '△'} DB ebooks+previews  "
+          f"written={written}/{len(prows)}  {ebid}", flush=True)
+    if not failed:
+        fp_file.write_text(fp, encoding="ascii")   # 真的全數寫入才記指紋
 
 
 def main():
