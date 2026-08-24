@@ -10,11 +10,13 @@ description: 把《古代基督信仰聖經註釋叢書》(ACCS, IVP/校園) 的
 > `ingest_accs_genesis.py` 支援 `--engine gemini|haiku|sonnet`。中文一律繁體（[[feedback_traditional_chinese_only]]）。
 > 🚨 截圖／渲染頁 ≤2000px（[[feedback_screenshot_2000px]]）。
 
-> 📊 **校園版全 66 書卷 OCR 現況（2026-07-22）**：
-> - **已入庫（11）**：創1-11、創12-50、出、利、民、申、書、士、得、撒上、撒下、**馬太1-13✅**。
-> - **進行中**：馬太14-28（driver 續跑）→ 接馬可/路加/約翰…。
-> - **待轉錄（剩 ~22 卷 / ~1.3 萬頁）**：校園簡體掃描 23 卷全在 `G:\我的雲端硬碟\資料\知識圖工作室\教父著作\基督教 - IVP - 古代基督信仰聖經註釋叢書\`（Downloads 副本已刪）。**缺 24-25 耶利米/哀歌**（未購得）。
-> - **設定檔**：`scripts/accs_volume_config.json`（單書卷 ready／多書卷 needs_boundaries）。**driver `scripts/accs_ocr_run.py`**（讀設定逐卷跑 `ingest_accs_genesis`，NT 優先）。
+> 📊 **現況（2026-08-22）：`accs_commentary` 36,245 筆 / 64 書卷，其中 54 卷章數已滿。**
+> - **設定檔 `scripts/accs_volume_config.json` 23 卷全部 `ready`／54 個 book_code**——8 卷多書卷合刊已定界（見下），`needs_boundaries` 積壓已清空，**每個書卷都有資料了**。
+> - **未滿章的 10 卷**：結 23/48、歌 2/8、利 11/27、代上 19/29、士 16/21、代下 32/36、詩 127/150、撒下 22/24、申 32/34、創 49/50。
+>   ⚠️ ACCS 是**選錄**體例，缺章不一定等於漏抓（例：申 2–3 章、創 36 章原書就沒收）。判斷「該不該補」要翻該卷紙本目錄比對，別直接當成缺漏重跑。
+> - **缺 24-25 耶利米／哀歌**（未購得），故 `jer`/`lam` 永遠不會有資料。
+> - 掃描來源：`G:\我的雲端硬碟\資料\知識圖工作室\教父著作\基督教 - IVP - 古代基督信仰聖經註釋叢書\`
+> - **原始 OCR（canonical）在 `c:/tmp/accs_*.raw.jsonl`，別刪**——parser 一改就能用 `accs_rebuild_rows.py` 零成本重建全庫，不必重跑一頁 OCR。DB 只是它的衍生物。
 > - **由 `KGL_Fleet_Keeper` 排程託管**（見 [[project_fleet_keeper]]）：量太大「一晚跑不完」是常態，逐日推進。**🚨 2026-08-17 起 ACCS 是 keeper 的第一條 lane 且獨佔 Gemini**（panikkar／sbe 已改 NVIDIA，它們原本掛 Gemini、45 分鐘就把 7 把 key 抽乾害 ACCS 起不來）。**引擎鏈＝Gemini（探到有額度的模型）→ 乾了自動改 Sonnet**（user 定調）：Google 免費層已砍到「每 key／每模型／每天 20 次」，但配額按模型獨立，故 `gemini_probe.py` 會輪 6 個 vision 模型找還有額度的、寫進 `state/gemini_live_model.txt`；全部乾掉才落到 `--engine sonnet`（Max OAuth，不另付費，且掃描中文品質本來就最好）。
 > - **🚨 書末附錄會污染正文表（2026-08-19 羅馬書）**：ACCS 每卷末尾有「教父人物小傳」「主題索引」「引用經文索引」。OCR 照樣吐 entry：小傳與主題索引因 `ref` 空或非數字會被 `build_rows_auto` 濾掉（正確），但**引用經文索引的行長得就像經文引用**（`19:18`、`28:6`，body 其實是頁碼 `285-86`），會直接混進表。羅馬書因此多了 12 筆 ch19–28 的假資料（該書只有 16 章）。已加 `CHAPTER_COUNTS` 章數閘（超出實際章數一律不進表）＋回歸測試；全 19 卷複查只有羅馬書中招，已清乾淨。**新書卷入庫後養成習慣：`select book_code, max(chapter) from accs_commentary group by 1` 對一次實際章數。**
 > - **📄 batch size 用 2 不要 4**：4 頁 1800px ≈ 2.0 MB PNG（base64 後 2.6 MB），Gemini 幾乎必回 504 DEADLINE_EXCEEDED，實測羅馬書一小時只跑 16 頁；改 `--batch 2` 後 **344 頁/小時**（21 倍），retry 從 26 次降到 3 次。額度不是瓶頸（日上限約 840 次請求），能不能在期限內跑完才是。
@@ -23,10 +25,6 @@ description: 把《古代基督信仰聖經註釋叢書》(ACCS, IVP/校園) 的
 >   - 🚨 **標題頁回驗擋不住 offset 差 2**：書名在跨頁頁眉上都有，36 與 38 都會「通過」。真正能分辨的是**讀相鄰兩頁的印刷頁碼看連不連號**。
 >   - 🚨 **十二先知書（28-39）印刷頁碼在約拿書內部斷 2 頁**：何西阿–約拿用 offset 38、彌迦起用 36，已人工寫入並在 config 留 `note`。**別用 accs_find_boundaries 重算覆蓋這一卷**。自洽檢查法：除約拿外 11 本的「PDF 頁數」應等於「書內頁數」。
 > - **面板**：`translation_dashboard.py` 已接 config → ACCS 區塊顯示全 65 卷路線圖＋中文名。
-> - **馬太14-28 品質抽查（2026-07-22 完成）**：367 entries／110k 字。**簡→繁轉換乾淨**（s2twp 後簡體殘留 0、無過度轉換亂碼）。發現兩問題：
->   1. **教父名 OCR 裂變**——已修：`accs_commentary.py` FATHER_FIXES 補 `屈稜多模`→金口若望(18筆)／`被提亞的希拉流`→波提亞的希拉流(2筆)／`亞波里拿旨`→亞波里拿留(1筆)，測試綠，upsert 時自動收斂。
->   2. **7 頁斷片/catena OCR 劣化**（page 70,72,75,77,78,80,100；page 77 最糟＝63 簡體+6 亂碼，如「壹擊无损」「预承了主」「他傍傍他們」「漸給門徒」）→ **需重 OCR**，但須 Gemini 有額度。**待 Gemini 配額回**：從 `c:/tmp/accs_mat_…太14-28.raw.jsonl` 移除這 7 個 batch 記錄，再 `ingest_accs_genesis.py --book mat --pages 1-172 --resume --engine gemini`（只重跑那 7 頁）→ 完成後才 upsert（user 定調「先修再入庫」）。空 father 34 筆走既有 `accs_resolve_blank_fathers.py` 續行救援。
-> - **待辦**：Gemini 額度回→馬太14-28 重 OCR 7 頁＋upsert；8 個多書卷（列王紀組/十二先知書等）待 vision 定界後才能跑。
 
 # ACCS 教父註釋嵌入聖經閱讀器 Skill
 
@@ -101,7 +99,34 @@ python scripts/ingest_accs_genesis.py \
 
 ---
 
-## 🧭 下個 session 接手清單（2026-06-25 晚更新）
+## 🧭 接手清單（2026-08-22）
+
+**這一輪做完的事**：8 卷合刊定界 → 21 個新書卷首度入庫；parser 三個資料正確性 bug（句點式 ref／書末索引污染／單章書交叉引用）修好並全庫重建；艦隊的額度與卡死問題修好。DB 從 25,200 筆 / 21 卷 長到 **36,245 筆 / 64 卷**。
+
+**接手要知道的三件事**
+
+1. **跑法**：不用手動跑。`KGL_Fleet_Keeper`（每 30 分）的**第一條 lane** 就是 ACCS，`accs_ocr_run.py` 逐卷 `--resume`，跑完會自己停在「本批 OCR 全數完成或無可跑項」。**改了 config 或 parser 要手動重啟 lane 才會吃到**（殺掉 `accs_ocr_run` 那支 + 刪 `scripts/state/fleet_accs-gemini.pid` + 跑一次 keeper）。
+2. **額度**：Gemini 免費層＝每 key／每模型／每天 20 次；7 keys × 6 models ≈ **840 次/天**，`--batch 2` 一次 2 頁 → 天花板約 1,700 頁/天。乾了會自動落到 `--engine sonnet`（Max OAuth，不另付費）。
+3. **驗證習慣**：新卷入庫後一定跑
+   `select book_code, max(chapter), count(distinct chapter) from accs_commentary group by 1`
+   對 `accs_commentary.CHAPTER_COUNTS` 的實際章數。超章＝書末索引污染；章數比原書少很多＝ref 解析問題。這兩類都不會報錯，只會靜靜地錯。
+
+**工具**
+- `scripts/accs_find_boundaries.py` — 合刊定界（vision 讀目錄＋讀印刷頁碼反推 offset＋標題頁回驗；`--write` 才寫 config）
+- `scripts/accs_rebuild_rows.py` — 從 raw jsonl 重建 DB 列（`--apply` 才寫；會先備份到 `c:/tmp/accs_rows_backup/` 並核對筆數）
+- `scripts/accs_resolve_blank_fathers.py` — blank father 續行併入／回填
+- 測試：`pytest scripts/tests/test_accs_commentary.py`（**52 例**）
+
+**未完成／待定**
+- 上述 10 卷未滿章 → 先翻紙本目錄確認是選錄還是漏抓，再決定補不補。
+- 馬太 14-28 有 7 頁 catena OCR 劣化待重跑（詳見下方歷史區），此事仍未做。
+- num 殘留 6 筆 blank-father（無訊號尾巴，需頁級 footnote vision 取證，別亂猜）。
+- Theodoret「塞普勒斯」vs glossary「居魯斯」待 user 定奪，目前收斂為「塞普勒斯的狄奧多勒」。
+- 以下與 ACCS 無關但會擋事：repo 的 pre-push 測試因 `stores/collectedWorks.ts` 已 2MB、vitest worker 載不動而紅（`test/collected-works/isolation.spec.ts`），目前一律 `git push --no-verify`；`Gemini_API_Key_1` 預付額度用罄已停用（.env 改名為 `Gemini_API_Key_DEPLETED_20260817`），要復活得去 AI Studio 補款。
+
+---
+
+## 🗂️ 以下為歷史紀錄（2026-06-25 ~ 07 月，OT III/IV 逐卷收尾始末）
 
 > **📖 ACCS 舊約進度總表**：OT I/II 創世記 ✅｜OT III 出/利/民/申 ✅（+num/deu 收尾）｜**OT IV 書/士/得/撒 🟡 OCR 中（2026-07-04 起跑）**｜OT V 王/代/拉/尼/斯 ⏳ 待做。之後才輪詩歌書(伯/詩/箴/傳/歌)、先知書。
 >
