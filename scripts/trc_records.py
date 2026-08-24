@@ -57,8 +57,27 @@ def load(path: Path = CATALOG) -> list[dict]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+# 文獻群／合集的招牌字：命中就不是人名，是一份文件或一套叢書。
+NOT_PERSON_RX = re.compile(
+    r"Confession|Catechism|Standard|Unity|Canon|Declaration|Formula|Creed|Consensus"
+    r"|Directory|Government|Collection|Works|Library|Series|Church|Synod|Congregation"
+    r"|Testament|Bible|Scripture|Institute|Theology|Doctrine|Commentary"
+    r"|信條|信綱|信經|準則|問答|要理|教理|合集|文集|全集|叢書|選集|系列",
+    re.IGNORECASE,
+)
+
+
 def is_author_dir(name: str) -> bool:
-    """level-2 目錄是不是作者名。"""
+    """level-2 目錄是不是作者名。
+
+    只有「看起來像人名」才算：有拉丁人名、不以年份開頭（`1619 三項聯合信綱…`）、
+    且不含文獻群招牌字（`Three Forms of Unity` / `Westminster Standards` 這類
+    會誤中純拉丁名規則）。
+    """
+    if re.match(r"^\s*\d{3,4}", name):
+        return False
+    if NOT_PERSON_RX.search(name):
+        return False
     return bool(LATIN_NAME_RX.search(name))
 
 
