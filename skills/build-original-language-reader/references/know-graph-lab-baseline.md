@@ -35,7 +35,7 @@ APIs must keep authentication, noindex/noarchive, private/no-store, and `Vary: A
 
 ## Current frozen Hebrew contract
 
-- 50 lessons, 1,000 words, uneven by design: lessons 1–33 are BBH2 chapters 3–35 exactly as the textbook has them (4 to 39 words each, 552 total); lessons 34–50 split the 448-word frequency extension (26–27 each).
+- 50 lessons x exactly 20 words. One running order (BBH2 chapters 3-35 = 552 words, then the 448-word frequency extension) cut into even blocks, so a lesson spans a chapter range: lesson 1 is BBH2 ch. 3, lesson 27 is ch. 31-34, lesson 28 straddles ch. 34-35 and the start of the extension, lessons 29-50 are extension only.
 - Lesson sizing is rebuilt by `scripts/assign_hebrew_lessons.py`; rerun `scripts/build_hebrew_reader_data.py` after it.
 - 552 retained BBH2 curriculum entries plus 448 frequency-extension entries; two exact duplicate textbook rows remain traceable through `sourceOrders`.
 - 100 unique reviewed WLC memory verses, two per lesson.

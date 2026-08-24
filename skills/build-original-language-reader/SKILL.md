@@ -33,8 +33,9 @@ When working in `know-graph-lab`, read `references/know-graph-lab-baseline.md`. 
    - Preserve the named textbook's verified order first.
    - Do not invent a missing textbook order.
    - Extend only by a documented corpus-frequency rule after the textbook ends.
-   - Let the textbook set lesson size. While the named textbook lasts, one lesson is one textbook chapter with that chapter's real count — uneven by design. Do not slice its stream into equal quotas; that hides the progression the learner is following.
-   - Spread only the post-textbook extension evenly over the remaining lessons, and never let a fixed words-per-lesson assumption survive in validators, headings, labels or tests.
+   - Lesson size is a frozen per-release decision, not a default. Either shape is legitimate: a lesson may equal one textbook chapter with that chapter's real, uneven count, or the whole running order may be cut into even blocks. Freeze which one before assigning, and make every validator, heading, checklist and test agree with it.
+   - The Hebrew release is frozen at an even 50 x 20. The textbook order still governs the sequence, so a lesson spans whichever textbook chapters fall inside its block; print that span in the lesson header rather than pretending the lesson is a chapter.
+   - Whenever the shape changes, re-check the artifacts that silently encode it — memory-verse selection is keyed to lesson membership and every unit must still match its own lesson's words.
    - Preserve intentional homographs as separate lexical entries.
    - Store textbook-specific transliteration, source evidence, part of speech, frequency, and typed person/place/people/divine-name metadata.
    - Review every Traditional-Chinese gloss. Reject blanks, generic categories, English leakage, and machine placeholders.

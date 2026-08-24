@@ -8,7 +8,7 @@ Freeze deviations before extracting or laying out content.
 |---|---:|
 | Lessons | 50 |
 | Vocabulary | 1,000 unique curriculum entries |
-| Vocabulary per lesson | the textbook chapter's own count while the textbook lasts; an even split of the extension afterwards |
+| Vocabulary per lesson | frozen per release. Hebrew: exactly 20, cut from one running order (BBH2 chapters 3-35, then the frequency extension). Greek: the BBG chapter's own count while the textbook lasts, then an even split of the extension |
 | Memory units | 100 unique reviewed units |
 | Memory units per lesson | 2 |
 | Complete Scripture chapters | 25 |
