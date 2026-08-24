@@ -63,37 +63,45 @@ Rebuild DOCX/PDF and inspect every new page after the final RCUV2010 master.
 
 ## Greek continuation checkpoint
 
-Contract frozen 2026-08-18; assembled 2026-08-19. See `greek-reader-contract.md`. Verify live.
+Contract frozen 2026-08-18, curriculum re-frozen 2026-08-24, two-volume build
+completed 2026-08-25. See `greek-reader-contract.md` for what it must be and
+`greek-reader-handoff.md` for where it actually stands. Verify live.
 
-| Layer | Path | State |
-|---|---|---|
-| 50-lesson assignment | `scripts/assign_greek_lessons.py` | done — lessons 1-30 are BBG ch. 4-36 (340 words, 2-26 each), lessons 31-50 split the 660-word Mounce extension (33 each) |
-| 1,000-word master | `data/originalReaders/vocabulary/greek-1000.json` | done — 995 lexicon-matched, 5 corpus-matched, 0 unverified |
-| Lexicon resolution | `scripts/verify_greek_vocab_lexicon.py`, `scripts/fill_greek_vocab_glosses_en.py` | done — Strong + Dodson + SBLGNT ladder, resolution path recorded per entry |
-| Traditional-Chinese gloss layer | `scripts/build_greek_vocab_glosses.py` -> `greek-1000-gloss-zh-reviewed.json` | **blocked on quota, 0/1000**; resumable, re-queues failed batches |
-| Frozen text loaders | `scripts/greek_source_texts.py`, `scripts/greek_patristic_sources.py` | done |
-| 25 chapters | `scripts/build_greek_scripture_plan.py` -> `scripture-plan.json` | done — 707 verses, 13,214 words, NT 13 / LXX 6 / deutero 4 / pseudep 2 |
-| 25 patristic readings | `scripts/build_greek_patristic_plan.py` -> `patristic-plan.json` | done — 913 segments, 30,060 words, 16 complete / 9 excerpts |
-| Liturgy appendix | `scripts/build_greek_liturgy.py` -> `liturgy-chrysostom.json` | done — 332 steps, 26 sections, 6,772 words |
-| 100 memory verses | `scripts/select_greek_memory_verses.py` -> `memory-verses.json` | done — 2 per lesson, NT 70 / LXX 15 / deutero 10 / pseudep 5, all `pending_human_review` |
-| Deuterocanon Chinese | `scripts/export_reader_fhl_deuterocanon.py` -> `deuterocanon-zh.json` | done — 1933 Anglican, 4 chapters / 106 verses, verse counts match Swete |
-| Missing conciliar Greek | `scripts/export_reader_creed_greek.py` -> `creeds-greek.json` | done — 381 / Chalcedon / Constantinople III, from Schaff vol. II |
-| RCUV2010 Chinese | `scripts/export_reader_rcuv2010_greek.py` -> `RCUV2010.json` | done — 22 books, 90 chapters, 3,256 verses; psalm crosswalk incl. superscription offset |
-| Master assembly | `scripts/build_greek_reader_data.py` -> `greek-reader-50-lessons.json` | done — 50,046 running words; fails rather than emitting a partial master |
-| Release validation | `skills/.../validate_reader_release.py --language grc` | 20 PASS / 2 FAIL, both truthful (glosses pending, memory review pending) |
-| Web reader | `data/originalReaders/greek-full-reader.ts`, `server/api/original-readers/grc-lessons/`, `pages/original-readers/grc-lessons/` | done — overview / lesson / liturgy, authenticated + noindex |
-| Tests | `tests/greek-full-reader.test.ts` | 12 tests |
-| Interlinear | `scripts/build_greek_interlinear.py` -> `interlinear.json` | done — 2,021/2,021 units, 50,278 glossed words, 1,281 with a whole-segment rendering |
-| Print master | `scripts/build_greek_full_reader.py` -> `output/original-readers/greek-original-reader-50-lessons.docx` | done — 763 pages, JIS B5 (515.9 x 728.5 pt), all fonts embedded, Greek set in Palatino Linotype |
-| Keeper | `scripts/grc_reader_keeper.ps1`, task `KGL_Greek_Reader_Keeper` | drove both language-model layers to completion |
+| Layer | Path |
+|---|---|
+| 2,000-word master | `data/originalReaders/vocabulary/greek-2000.json` |
+| Appendices | `data/originalReaders/vocabulary/greek-appendices.json` |
+| Traditional-Chinese glosses | `greek-2000-gloss-zh-by-lemma.json`, keyed by lemma |
+| Koine lemma resolver | `scripts/build_greek_koine_lexicon.py` -> `koine-lexicon.json` |
+| 上冊 50 chapters | `scripts/build_greek_scripture_plan.py` -> `scripture-plan.json` |
+| 下冊 50 readings | `scripts/build_greek_patristic_plan.py` -> `patristic-plan.json` |
+| Church-document freeze | `scripts/fetch_greek_church_documents.py` -> `sources/church-documents/manifest.json` |
+| Liturgy appendix | `scripts/build_greek_liturgy.py` -> `liturgy-chrysostom.json` |
+| 200 memory units | `select_greek_memory_verses.py`, `select_greek_memory_sentences.py` |
+| Chinese Bible | `export_reader_rcuv2010_greek.py` -> `RCUV2010.json`; `export_reader_fhl_deuterocanon.py` -> `deuterocanon-zh.json` |
+| Shared numbering crosswalk | `target_reference()` in `export_reader_rcuv2010_greek.py`; the master and the selector both import it |
+| Master assembly | `scripts/build_greek_reader_data.py` -> `greek-reader-two-volumes.json` (schema 2.0.0) |
+| Release validation | `validate_reader_release.py --volume 1` / `--volume 2` |
+| Word-by-word layer | `scripts/build_greek_interlinear.py --workers 5` -> `interlinear.json` |
+| Print masters | `scripts/build_greek_full_reader.py` -> `greek-original-reader-vol1.docx`, `-vol2.docx` |
+| Web reader | `data/originalReaders/greek-full-reader.ts`, `server/api/original-readers/grc-lessons/`, `pages/original-readers/grc-lessons/`; lesson key `v1-12` |
+| Tests | `tests/greek-full-reader.test.ts` |
+| Keeper | `scripts/grc_reader_keeper.ps1`, task `KGL_Greek_Reader_Keeper` |
 
-Source cache: `output/source-cache/original-readers/greek-full/sources/{sblgnt,swete,apostolic-fathers,first1k,liturgy,dodson}`.
+Source cache: `output/source-cache/original-readers/greek-full/sources/{sblgnt,swete,apostolic-fathers,first1k,church-documents,liturgy,dodson}`.
+
+The single-volume artifacts are dead: `greek-reader-50-lessons.json`,
+`greek-1000.json`, `greek-1000-gloss-zh-reviewed.json` (ordinal-keyed, would
+shift every meaning by one), `assign_greek_lessons.py`, and the 763-page DOCX.
+Do not use any of them as evidence.
 
 ### Engine policy for the reader's language-model layers
 
 The gloss and interlinear jobs go through `scripts/original_reader_llm.py`, which
 follows the repository's standing order: **Gemini first, then NVIDIA, then
-Anthropic Haiku as a last resort.**
+Anthropic Haiku as a last resort.** The interlinear runs several units at once
+(`--workers`); one at a time managed about two units a minute, which is eighteen
+hours for a two-thousand-unit backlog, and almost all of it was network wait.
 
 The first version was Anthropic-only, inherited from the Hebrew interlinear, and
 that cost seventeen hours of zero progress: the Claude Max account is shared with
@@ -112,7 +120,7 @@ When a layer stops advancing, probe the tiers before touching the code:
   behaved exactly this way on 2026-08-21 — still listed, still authorised, and
   never answering.
 
-Still open: human review of the 100 memory verses (the single remaining validation failure, and one only a person can clear), and audio.
+Still open: human review of the 200 memory units (the single remaining validation failure in both volumes, and one only a person can clear), and audio.
 
 The print master reuses the Hebrew builder's typesetting helpers, which means it also inherits that volume's running header and document title; `retitle()` overrides both. Without it every page of the Greek reader says it is the Hebrew one.
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Typeset the New Testament Greek reader as a JIS B5 print master.
+"""Typeset the Koine Greek reader as two JIS B5 print masters, one per volume.
 
-Everything comes from ``greek-reader-50-lessons.json`` and ``interlinear.json``;
+Everything comes from ``greek-reader-two-volumes.json`` and ``interlinear.json``;
 this script only sets type.  It shares the Hebrew reader's low-level DOCX
 machinery — page geometry, styles, table helpers, run fonts — so both volumes of
 the series look like one series, and differs only where the language does:
@@ -9,9 +9,11 @@ Greek runs left to right, and its face is Palatino Linotype, which carries the
 full polytonic repertoire and installs as a conventional TrueType file that
 LibreOffice resolves without substituting.
 
-Each lesson prints its vocabulary table, its two memory verses and its whole
-reading with a Traditional-Chinese gloss under every Greek word.  The liturgy
-follows as an appendix, in celebration order, each utterance labelled with who
+Each lesson prints its vocabulary table, its two memory units and its whole
+reading with a Traditional-Chinese gloss under every Greek word.  The five
+reference tables print at the back of **both** volumes: they are a cross-index
+of the whole work, and each volume has to be usable on its own.  The liturgy
+belongs to 下冊 alone, in celebration order, each utterance labelled with who
 says it.
 """
 
@@ -66,10 +68,10 @@ from build_hebrew_full_reader import (  # noqa: E402  - shared typesetting machi
 
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / "output" / "source-cache" / "original-readers" / "greek-full"
-MASTER_PATH = CACHE / "greek-reader-50-lessons.json"
+MASTER_PATH = CACHE / "greek-reader-two-volumes.json"
 INTERLINEAR_PATH = CACHE / "interlinear.json"
 OUTPUT_DIR = ROOT / "output" / "original-readers"
-OUTPUT_PATH = OUTPUT_DIR / "greek-original-reader-50-lessons.docx"
+OUTPUT_STEM = "greek-original-reader-vol"
 
 FONT_GREEK = "Palatino Linotype"
 GREEK_METRICS = Path(r"C:\Windows\Fonts\pala.ttf")
@@ -238,14 +240,18 @@ def add_vocabulary(document: Document, lesson: dict) -> None:
 
 
 def add_memory(document: Document, lesson: dict) -> None:
-    add_label(document, "背誦　兩節")
-    for verse in lesson["memoryVerses"]:
+    kind = lesson["memoryUnits"][0].get("kind") if lesson["memoryUnits"] else "verse"
+    add_label(document, "背誦　兩句" if kind == "sentence" else "背誦　兩節")
+    for verse in lesson["memoryUnits"]:
         caption = document.add_paragraph()
         caption.paragraph_format.space_before = Pt(5)
         caption.paragraph_format.space_after = Pt(2)
         set_run_font(caption.add_run(verse["ref"]), FONT_UI, LABEL_PT, bold=True, color=ACCENT)
         set_run_font(
-            caption.add_run(f"　{verse['corpus']}　命中本課生詞 {verse['matchCount']}"),
+            caption.add_run(
+                f"　{verse.get('corpus') or verse.get('readingTitleZh') or ''}"
+                f"　命中本課生詞 {verse['matchCount']}"
+            ),
             FONT_UI, LABEL_PT, color=MUTED,
         )
         set_keep(caption, next_paragraph=True)
@@ -338,16 +344,20 @@ def add_liturgy(document: Document, liturgy: dict, interlinear: dict) -> None:
             add_plain_greek(document, step["displayText"])
 
 
-def add_front_matter(document: Document, master: dict) -> None:
+def add_front_matter(document: Document, master: dict, volume: dict) -> None:
     title = document.add_paragraph()
     title.alignment = WD_ALIGN_PARAGRAPH.CENTER
     title.paragraph_format.space_before = Pt(90)
     title.paragraph_format.space_after = Pt(6)
     add_mixed_script_text(title, master["title"], FONT_ZH, TITLE_SIZE_PT, bold=True)
+    volume_line = document.add_paragraph()
+    volume_line.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    volume_line.paragraph_format.space_after = Pt(6)
+    add_mixed_script_text(volume_line, volume["title"], FONT_ZH, H1_SIZE_PT, bold=True, color=ACCENT)
     subtitle = document.add_paragraph()
     subtitle.alignment = WD_ALIGN_PARAGRAPH.CENTER
     subtitle.paragraph_format.space_after = Pt(24)
-    add_mixed_script_text(subtitle, master["subtitle"], FONT_ZH, TRANSLATION_PT, color=MUTED)
+    add_mixed_script_text(subtitle, volume["subtitle"], FONT_ZH, TRANSLATION_PT, color=MUTED)
     textbook = document.add_paragraph()
     textbook.alignment = WD_ALIGN_PARAGRAPH.CENTER
     set_run_font(textbook.add_run(master["textbook"]), "Noto Serif", CAPTION_PT, color=MUTED)
@@ -356,58 +366,106 @@ def add_front_matter(document: Document, master: dict) -> None:
     add_label(document, "體例與來源")
     for key, value in master["textPolicy"].items():
         add_body(document, f"{key}：{value}", size=CAPTION_PT, color=INK)
-    counts = master["counts"]
+    counts = volume["counts"]
+    unit_word = "句背誦" if volume["memoryUnitKind"] == "sentence" else "節背誦"
     add_body(
         document,
-        f"五十課・{counts['vocabulary']} 詞・{counts['memoryVerses']} 節背誦・"
-        f"{counts['scriptureChapters']} 章經文・{counts['patristicReadings']} 篇教父信經教令・"
-        f"禮儀 {counts['liturgySteps']} 段；連續正文 {counts['totalRunningWords']} 詞。",
+        f"本冊五十課・{counts['vocabulary']} 詞・{counts['memoryUnits']} {unit_word}・"
+        f"{counts['readings']} 篇讀文；全書兩冊合計 {master['counts']['vocabulary']} 詞、"
+        f"{master['counts']['memoryUnits']} 則背誦、連續正文 {master['counts']['totalRunningWords']} 詞。",
         size=CAPTION_PT,
         color=MUTED,
     )
+    for half, label in volume["corpusByHalf"].items():
+        add_body(document, f"第 {half} 課：{label}", size=CAPTION_PT, color=MUTED)
     add_body(document, f"發布狀態：{master['releaseStatus']}", size=CAPTION_PT, color=MUTED)
     add_body(document, f"音訊：{master['audio']['status']}　{master['audio']['policy']}", size=CAPTION_PT, color=MUTED)
 
 
-def retitle(document: Document, master: dict) -> None:
+def add_appendix_tables(document: Document, master: dict) -> None:
+    """The five reference tables, printed at the back of both volumes.
+
+    They index the whole work rather than one volume, and a volume being read on
+    its own still needs the numerals and the kinship terms, so they are repeated
+    rather than split between the two books.
+    """
+    for table in master["appendices"]:
+        page_break(document)
+        heading = document.add_paragraph()
+        heading.paragraph_format.space_after = Pt(2)
+        set_run_font(heading.add_run("附錄"), FONT_UI, LABEL_PT, bold=True, color=ACCENT)
+        name = document.add_paragraph()
+        name.paragraph_format.space_after = Pt(6)
+        add_mixed_script_text(name, table["title"], FONT_ZH, H2_SIZE_PT, bold=True)
+        if table.get("note"):
+            add_body(document, table["note"], size=CAPTION_PT, color=MUTED)
+        for entry in table["entries"]:
+            row = document.add_paragraph()
+            row.paragraph_format.space_after = Pt(0)
+            row.paragraph_format.line_spacing = 1.25
+            set_run_font(
+                row.add_run(entry.get("headword") or entry["lemma"]),
+                FONT_GREEK, TABLE_SIZE_PT + 1.2, color=INK,
+            )
+            chinese = (entry.get("zh") or "").strip()
+            if chinese:
+                add_mixed_script_text(row, f"　{chinese}", FONT_ZH, TABLE_SIZE_PT, color=INK)
+            else:
+                # An empty cell is the honest state for a name no register
+                # covers; it is marked rather than filled with a guess.
+                set_run_font(row.add_run("　（中文待定）"), FONT_UI, CAPTION_PT, color=MUTED)
+            if entry.get("frequency"):
+                set_run_font(row.add_run(f"　{entry['frequency']}"), FONT_UI, CAPTION_PT, color=MUTED)
+
+
+def retitle(document: Document, master: dict, volume: dict) -> None:
     section = document.sections[0]
     header = section.header.paragraphs[0]
     for run in list(header.runs):
         run._element.getparent().remove(run._element)
-    set_run_font(header.add_run("新約希臘文原文讀本  ·  五十課"), FONT_UI, 7.5, color=MUTED)
+    set_run_font(
+        header.add_run(f"{master['title']}  ·  {volume['title']}"), FONT_UI, 7.5, color=MUTED
+    )
     properties = document.core_properties
-    properties.title = "新約希臘文原文讀本：五十課"
-    properties.subject = master["subtitle"]
+    properties.title = f"{master['title']}：{volume['title']}"
+    properties.subject = volume["subtitle"]
     properties.language = "grc"
 
 
-def build() -> Path:
+def build(volume_number: int) -> Path:
     master = json.loads(MASTER_PATH.read_text(encoding="utf-8"))
     interlinear = json.loads(INTERLINEAR_PATH.read_text(encoding="utf-8"))["units"]
+    volume = next((item for item in master["volumes"] if item["volume"] == volume_number), None)
+    if volume is None:
+        raise SystemExit(f"主檔沒有第 {volume_number} 冊")
 
     document = Document()
     configure(document)
     # configure() is the Hebrew volume's, so it stamps that volume's running
     # header and document title.  Retitle both, or every page of the Greek
     # reader says it is the Hebrew one.
-    retitle(document, master)
-    add_front_matter(document, master)
-    for lesson in master["lessons"]:
+    retitle(document, master, volume)
+    add_front_matter(document, master, volume)
+    for lesson in volume["lessons"]:
         add_lesson(document, lesson, interlinear)
-    appendix = master["appendices"][0]
-    liturgy = json.loads((CACHE / "liturgy-chrysostom.json").read_text(encoding="utf-8"))
-    add_liturgy(document, liturgy, interlinear)
+    if any(item["kind"] == "divine-liturgy" for item in volume["appendices"]):
+        liturgy = json.loads((CACHE / "liturgy-chrysostom.json").read_text(encoding="utf-8"))
+        add_liturgy(document, liturgy, interlinear)
+    add_appendix_tables(document, master)
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    document.save(OUTPUT_PATH)
-    return OUTPUT_PATH
+    path = OUTPUT_DIR / f"{OUTPUT_STEM}{volume_number}.docx"
+    document.save(path)
+    return path
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="排版希臘文讀本 B5 DOCX")
-    parser.parse_args()
-    path = build()
-    print(f"已寫出 {path}（{path.stat().st_size / 1_048_576:.1f} MB）")
+    parser = argparse.ArgumentParser(description="排版希臘文讀本 B5 DOCX（兩冊）")
+    parser.add_argument("--volume", type=int, choices=(1, 2), help="只排某一冊")
+    args = parser.parse_args()
+    for number in ([args.volume] if args.volume else [1, 2]):
+        path = build(number)
+        print(f"已寫出 {path}（{path.stat().st_size / 1_048_576:.1f} MB）")
 
 
 if __name__ == "__main__":

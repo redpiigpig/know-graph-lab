@@ -21,6 +21,9 @@ single-volume plan whose lesson sizes came from BBG's own chapters; that plan an
 | Ends with | the complete ordinary-time Chrysostom liturgy, in 下冊 only |
 | No liturgy in 上冊 | owner's instruction; do not reintroduce it there |
 | Builder | `scripts/build_greek_vocabulary_2000.py --write` → `data/originalReaders/vocabulary/greek-2000.json` |
+| Master | `scripts/build_greek_reader_data.py --write` → `greek-reader-two-volumes.json`, schema 2.0.0, one `volumes` entry per book |
+| Transliteration | Mounce's own for his 500; the same published Erasmian table applied by rule for the other 1,500, each labelled `rule_generated_from_official_table` |
+| Print | one JIS B5 DOCX per volume; the five reference tables print in **both**, the liturgy in 下冊 only |
 
 ### The language is Koine, and staying there takes work
 
@@ -93,9 +96,14 @@ cross-index, not a second vocabulary list. Someone looking up "the numerals" wan
 εἷς there even though lesson one taught it. Only the names are kept disjoint.
 
 Curated entries carry `attested` and the real corpus frequency, so a list that
-drifts into words the reader never meets is visible. Entries still unattested are
-Byzantine liturgical terms (τροπάριον, κοντάκιον, συναπτή) and later feasts that
-should appear once 下冊 26–50 adds its remaining Greek church documents.
+drifts into words the reader never meets is visible.
+
+All 220 curated entries carry Traditional Chinese, filled by
+`scripts/fill_greek_appendix_glosses.py --write` in two passes and in this order:
+**a word the lessons already teach keeps the lesson's own wording** (115 of them),
+and only the rest go to a language model. Otherwise the same εἷς would be glossed
+one way in lesson one and another way in the appendix. Every entry records
+`zhSource`, so which route named it stays visible.
 
 ### Naming the appendix, in priority order
 
@@ -133,8 +141,30 @@ Reached 341/405. The remaining 64 are mostly deuterocanonical (Ὀλοφέρνη
 | Traditional-Chinese deuterocanon | 1933 年聖公會出版次經（信望愛站「次經閱讀」version `c1933`） | 1933 譯本已逾著作權期間；數位化循 CBOL 版權宣告作非商業使用 |
 | Traditional-Chinese pseudepigrapha | self-translated, labelled `自譯` in every unit | editorial |
 | Creeds and council canons | `data/creeds/**` Greek versions (Schaff/DCO), plus `creeds-greek.json` for the three texts the repository lacked | as recorded per document; the Schaff additions are public domain |
+| Canon collections and hymnody | Greek Wikisource (`el.wikisource.org`): 12 canonical collections and 4 hymns, frozen with revision id, timestamp and sha256 in `sources/church-documents/manifest.json` | the canons themselves are ancient and out of copyright; the Wikisource transcription is CC BY-SA 4.0, private authorized use with attribution |
 | Apostolic and Greek Fathers | public-domain Greek editions, frozen per work | per work |
 | Divine Liturgy of St John Chrysostom | Greek liturgical text, ordinary-time (non-festal) Sunday order, frozen edition recorded per section | per edition |
+
+### One crosswalk, and it refuses rather than approximates
+
+Every Septuagint-to-Chinese reference goes through `target_reference()` in
+`scripts/export_reader_rcuv2010_greek.py`, and the master imports that same
+function rather than keeping its own copy. Four books need it:
+
+- **Psalms** — the Septuagint joins MT 9 and 10 and splits MT 116 and 147, so the
+  two numberings differ by one over most of the Psalter; the superscription
+  offset is read off the two verse counts rather than tabulated.
+- **Jeremiah** — a different book from chapter 26 on. LXX 38 is MT 31. The five
+  Septuagint chapters whose material splits across two Hebrew ones (25, 29, 30,
+  32, 51) raise `LookupError` instead of being approximated.
+- **Jonah** — 和合本修訂版 follows the English chapter break, so Septuagint Jonah
+  2:1 is Chinese 1:17 and the rest of the chapter runs one number ahead.
+- **Proverbs** — reordered from 24:23 on, so chapters past 24 are refused.
+
+A book missing from the code table used to be skipped in silence; 449 verses
+reached the master with no Chinese and the cause only surfaced seven chapters
+downstream. It now raises. The memory-verse selector asks the same crosswalk
+whether a chapter is pairable rather than keeping a second list.
 
 Rahlfs–Hanhart 1935 is *not* the frozen LXX base. The accessible digital Rahlfs is CCAT-derived and requires a signed CCAT user declaration, and Rahlfs carries no Greek 1 Enoch. Swete covers LXX, all deuterocanonical books, Psalms of Solomon and the Greek 1 Enoch in one public-domain edition. Rahlfs may be cited as a collation reference only.
 
@@ -222,11 +252,44 @@ that will not arrive is not silently promised.
 Lessons 1–25 are patristic; lessons 26–50 are Greek church documents and
 liturgical texts. Each lesson carries 20 words, 2 sentences, and one passage.
 Declared as complete short works or explicitly labelled authorized excerpts;
-never mixed silently. See `greek-patristic-plan.md` for the frozen list.
+never mixed silently.
 
-**Not yet built.** 25 readings exist (18 patristic, 7 church documents); 下冊
-needs 7 more patristic readings and 18 more Greek church documents. The two
-sentences per lesson are not selected yet.
+Built by `scripts/build_greek_patristic_plan.py --write`: **50 readings, 2,598
+segments, 72,585 words**, 34 complete works and 16 labelled excerpts.
+
+| Lessons | Category | Count |
+|---|---|---:|
+| 1–18 | 使徒教父 | 18 |
+| 19–25 | 希臘教父 | 7 |
+| 26–29 | 信經與信仰定義 | 4 |
+| 30–43 | 教規彙編 | 14 |
+| 44–50 | 禮儀文本與頌歌 | 7 |
+
+The canonical corpus is read in the order the canonical collections themselves
+put it in: the apostolic canons, then the ecumenical councils, then the local
+synods whose canons the councils ratified. Two collections are too long for one
+lesson and are labelled excerpts — Trullo 1–20 of 102, Carthage 1–20 of 133.
+
+### 下冊's two sentences per lesson
+
+上冊's memory units are verses; 下冊's readings have no verse numbers, so its
+units are **sentences**, cut from the readings on Greek sentence punctuation and
+required to stand as a sentence rather than half of one. Selected by
+`scripts/select_greek_memory_sentences.py --write`.
+
+The same half rule as 上冊: lessons 1–25 take sentences from the patristic
+readings, 26–50 from the church documents, so a unit never comes from a corpus
+the lesson has not opened. A sentence drawn from the lesson's *own* reading
+scores a bonus but is not required; 25 of the 100 came out that way.
+
+Matching resolves each printed form through the Koine lexicon before comparing.
+Comparing printed forms with dictionary headwords finds almost nothing —
+ἀναμιμνήσκωμεν is not ἀναμιμνήσκω — and the first version averaged one hit per
+sentence and left eight lessons unable to fill their two slots.
+
+**The relationship between a lesson's two sentences and its reading has not been
+put to the owner.** The rule above is this build's decision, recorded in
+`designNote` inside `memory-sentences.json`.
 
 The volume ends with the complete ordinary-time (non-festal Sunday) Divine
 Liturgy of St John Chrysostom, Greek with Traditional-Chinese parallel, kept

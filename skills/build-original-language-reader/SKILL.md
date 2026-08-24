@@ -18,7 +18,15 @@ Read these files for every production run:
 
 Read the selected language section in `references/language-profiles.md`.
 
-For a Greek release in `know-graph-lab`, also read `references/greek-reader-contract.md`; it carries the two-volume lesson shape (50 lessons of 20 words per volume), the three-layer Koine lemma resolver, the source freeze, the 50-chapter allocation for 上冊, the appendices, and release-specific stop conditions. Then read `references/greek-reader-handoff.md` for where that release actually stands, which commit is unpushed, and the traps that have already produced confident wrong answers.
+For a Latin release in `know-graph-lab`, read `references/latin-reader-contract.md`;
+it carries the two-volume lesson shape, the Collins order and why it comes from
+the back matter rather than the units, the three-register lemma precedence, the
+Studium Biblicum Chinese and the 信望愛 endpoint that answers the wrong book
+with `success`, the fifty Vulgate chapters and their ten misalignments, the fifty
+church readings with their complete/excerpt split, the ten appendices, and the
+release-specific stop conditions.
+
+For a Greek release in `know-graph-lab`, also read `references/greek-reader-contract.md`; it carries the two-volume lesson shape (50 lessons of 20 words per volume), the three-layer Koine lemma resolver, the source freeze, the 50-chapter allocation for 上冊, the 50 readings and 100 sentences of 下冊, the one numbering crosswalk that refuses rather than approximates, the appendices, and release-specific stop conditions. Then read `references/greek-reader-handoff.md` for where that release actually stands, which decisions this build took without the owner, and the traps that have already produced confident wrong answers.
 
 Read `references/layout-web-audio.md` before producing DOCX, PDF, online pages, or audio.
 
@@ -55,7 +63,7 @@ Two failures recur across languages and are worth carrying into any new reader:
    - Store textbook-specific transliteration, source evidence, part of speech, frequency, and typed person/place/people/divine-name metadata.
    - Review every Traditional-Chinese gloss. Reject blanks, generic categories, English leakage, and machine placeholders.
 5. Build immutable source-text layers and separate learner-facing display layers. Never silently overwrite ketiv, pointing, breathings, macrons, punctuation, or source orthography.
-6. Use 《和合本修訂版》（2010） for every Traditional-Chinese Bible quotation in the current project. Freeze the selected variant explicitly. Do not fall back to ChiUn/CUV1919 or another version. Route all MT/LXX/Vulgate numbering differences through one shared crosswalk.
+6. Use 《和合本修訂版》（2010） for every Traditional-Chinese Bible quotation in the current project, except the Ecclesiastical Latin release, which the owner froze to 思高譯本 on 2026-08-25 because its Latin base is the Catholic canon in Greek psalm numbering. Freeze the selected variant explicitly. Do not fall back to ChiUn/CUV1919 or another version. Route all MT/LXX/Vulgate numbering differences through one shared crosswalk.
 7. Build 100 memory units after vocabulary is fixed:
    - Generate a candidate pool using lesson-word overlap, cumulative coverage, grammatical completeness, and memorability.
    - Reject lists, fragments, near-duplicates, census material, and misleading verse-number joins.
